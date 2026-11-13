@@ -1,0 +1,478 @@
+{
+ "outcomes": {
+  "CRE.G4.CREATI.SELF_AWARENESS.a": "mention his or her name for identification and self-awareness",
+  "CRE.G4.CREATI.SELF_AWARENESS.b": "recognise his or her uniqueness as a creation of God",
+  "CRE.G4.CREATI.SELF_AWARENESS.c": "acknowledge God as the creator",
+  "CRE.G4.CREATI.SELF_AWARENESS.d": "appreciate his or her uniqueness as God’s special creation. By the end of the sub-strand, the learner should be able to",
+  "CRE.G4.CREATI.SELF_AWARENESS.a_": "identify good thoughts and feelings",
+  "CRE.G4.CREATI.SELF_AWARENESS.b_": "explain the importance of being joyful",
+  "CRE.G4.CREATI.SELF_AWARENESS.c_": "list lessons learnt from Ephesians 4:26, ϭ",
+  "CRE.G4.CREATI.SELF_AWARENESS.d_": "apply the lessons learnt to cope with emotions in day-to-day life. By the end of the sub-strand, the learner should be able to",
+  "CRE.G4.CREATI.SELF_AWARENESS.a__": "list choices they make in day-to-day life",
+  "CRE.G4.CREATI.SELF_AWARENESS.b__": "discuss results of choices they make in daily life",
+  "CRE.G4.CREATI.SELF_AWARENESS.c__": "make right choices guided by the word of God",
+  "CRE.G4.CREATI.SELF_AWARENESS.d__": "portray responsibility by making right choices. Ϯ",
+  "CRE.G4.CREATI.MY_FAMILY_FAMILY_MEMBERS.a": "name family members in the nuclear and extended family",
+  "CRE.G4.CREATI.MY_FAMILY_FAMILY_MEMBERS.b": "draw a family tree to understand relationships within the family",
+  "CRE.G4.CREATI.MY_FAMILY_FAMILY_MEMBERS.c": "explain why it is important to honour parents",
+  "CRE.G4.CREATI.MY_FAMILY_FAMILY_MEMBERS.d": "respect family members for harmonious co-existence",
+  "CRE.G4.CREATI.MY_FAMILY_FAMILY_MEMBERS.a_": "take care when alone with people of the opposite sex",
+  "CRE.G4.CREATI.MY_FAMILY_FAMILY_MEMBERS.b_": "mention ways of protecting oneself from sexual abuse",
+  "CRE.G4.CREATI.MY_FAMILY_FAMILY_MEMBERS.c_": "identify whom to report to if touched inappropriately or sexually abused",
+  "CRE.G4.CREATI.MY_FAMILY_FAMILY_MEMBERS.d_": "appreciate the body as a temple of the Holy Spirit and live a holy life",
+  "CRE.G4.CREATI.ATTRIBUTES_OF_GOD.a": "read scriptures on the attributes of God",
+  "CRE.G4.CREATI.ATTRIBUTES_OF_GOD.b": "list three attributes of God and revere Him",
+  "CRE.G4.CREATI.ATTRIBUTES_OF_GOD.c": "recognise God as a loving Father who knows them by their names",
+  "CRE.G4.THE_HO.THE_INSPIRED_WORD_OF_GOD.a": "handle the Holy Bible with respect as the inspired word of God",
+  "CRE.G4.THE_HO.THE_INSPIRED_WORD_OF_GOD.b": "identify the books in the Old and New Testament",
+  "CRE.G4.THE_HO.THE_INSPIRED_WORD_OF_GOD.c": "role play naming some books in the Bible",
+  "CRE.G4.THE_HO.THE_INSPIRED_WORD_OF_GOD.d": "recite Isaiah 49:16 and desire to read the Holy Bible always. By the end of the sub-strand",
+  "CRE.G4.THE_HO.ZACCHAEUS_THE_TAX_COLLEC.a": "retell the story of Zacchaeus",
+  "CRE.G4.THE_HO.ZACCHAEUS_THE_TAX_COLLEC.b": "recount how Zacchaeus changed his behaviour positively",
+  "CRE.G4.THE_HO.ZACCHAEUS_THE_TAX_COLLEC.c": "demonstrate integrity when using money",
+  "CRE.G4.THE_HO.ZACCHAEUS_THE_TAX_COLLEC.d": "discuss why it is important to repent sins in order to be like Christ",
+  "CRE.G4.THE_HO.BALAAM_S_DONKEY.a": "retell the story of Balaam and his donkey",
+  "CRE.G4.THE_HO.BALAAM_S_DONKEY.b": "apply the story in their lives by obeying God’s instructions",
+  "CRE.G4.THE_HO.BALAAM_S_DONKEY.c": "acquire the value of love by speaking good things about others",
+  "CRE.G4.THE_HO.BALAAM_S_DONKEY.d": "acknowledge God’s greatness by revering Him",
+  "CRE.G4.THE_HO.SAMSON_KILLS_A_LION.a": "retell the story of Samson; Judges 14: 5- 9",
+  "CRE.G4.THE_HO.SAMSON_KILLS_A_LION.b": "acknowledge God’s power in his or her life",
+  "CRE.G4.THE_HO.SAMSON_KILLS_A_LION.c": "trust in God to cope with the challenges of life",
+  "CRE.G4.THE_HO.JOSEPH_JOSEPH_INTERPRETS.a": "retell the story of Joseph",
+  "CRE.G4.THE_HO.JOSEPH_JOSEPH_INTERPRETS.a_": "retell the story of Joseph interpreting a dream, interpreting a dream",
+  "CRE.G4.THE_HO.JOSEPH_JOSEPH_INTERPRETS.b": "apply lessons learnt by",
+  "CRE.G4.THE_HO.JOSEPH_JOSEPH_INTERPRETS.b_": "apply lessons learnt by depending on God’s depending on God’s wisdom, wisdom",
+  "CRE.G4.THE_HO.JOSEPH_JOSEPH_INTERPRETS.c": "recognise that, ‘the fear of",
+  "CRE.G4.THE_HO.JOSEPH_JOSEPH_INTERPRETS.c_": "recognise that, ‘the fear of God is the beginning of God is the beginning of wisdom.’ wisdom.’",
+  "CRE.G4.THE_HO.BIBLE_STRAND_QUESTION_S_.a": "recount the call of Abraham, By the end of the sub-strand, the",
+  "CRE.G4.THE_HO.BIBLE_STRAND_QUESTION_S_.b": "obey God’s instructions in his learner should be able to",
+  "CRE.G4.THE_HO.BIBLE_STRAND_QUESTION_S_.a_": "recount the call of Abraham, or her day-to-day life",
+  "CRE.G4.THE_HO.BIBLE_STRAND_QUESTION_S_.c": "mention his or her name for",
+  "CRE.G4.THE_HO.BIBLE_STRAND_QUESTION_S_.b_": "obey God’s instructions in his self-identity, or her day-to-day life",
+  "CRE.G4.THE_HO.BIBLE_STRAND_QUESTION_S_.d": "discuss Abram’s change of",
+  "CRE.G4.THE_HO.BIBLE_STRAND_QUESTION_S_.c_": "mention his or her name for name to Abraham, self-identity",
+  "CRE.G4.THE_HO.BIBLE_STRAND_QUESTION_S_.e": "appreciate God’s blessings in",
+  "CRE.G4.THE_HO.BIBLE_STRAND_QUESTION_S_.d_": "discuss Abram’s change of his or her life. name to Abraham",
+  "CRE.G4.THE_HO.BIBLE_STRAND_QUESTION_S_.e_": "appreciate God’s blessings in his or her life",
+  "CRE.G4.THE_LI.THE_ANNUNCIATION.a": "narrate the annunciation of the Birth of Jesus Christ",
+  "CRE.G4.THE_LI.THE_ANNUNCIATION.b": "acknowledge the uniqueness of the birth of Jesus Christ",
+  "CRE.G4.THE_LI.THE_ANNUNCIATION.c": "recite Luke 1:37 and trust in God’s power",
+  "CRE.G4.THE_LI.THE_ANNUNCIATION.d": "emulate Mary the mother of Jesus and lead a holy life",
+  "CRE.G4.THE_LI.BIRTH_OF_JOHN_THE_BAPTIS.a": "retell the Birth of John the Baptist",
+  "CRE.G4.THE_LI.BIRTH_OF_JOHN_THE_BAPTIS.b": "discuss how John the Baptist prepared the way for the Messiah",
+  "CRE.G4.THE_LI.BIRTH_OF_JOHN_THE_BAPTIS.c": "appreciate the need to live a righteous life by turning away from sins. ϭε",
+  "CRE.G4.THE_LI.HEALING_OF_BLIND_BARTIMA.a": "retell the healing of blind Bartimaeus, able to",
+  "CRE.G4.THE_LI.HEALING_OF_BLIND_BARTIMA.b": "recognise the healing",
+  "CRE.G4.THE_LI.HEALING_OF_BLIND_BARTIMA.a_": "retell the healing of power of Jesus Christ in blind Bartimaeus, their lives",
+  "CRE.G4.THE_LI.HEALING_OF_BLIND_BARTIMA.b_": "recognise the healing",
+  "CRE.G4.THE_LI.HEALING_OF_BLIND_BARTIMA.c": "appreciate Jesus’ power power of Jesus Christ in over sickness and their lives, disease",
+  "CRE.G4.THE_LI.HEALING_OF_BLIND_BARTIMA.c_": "appreciate Jesus’ power",
+  "CRE.G4.THE_LI.HEALING_BY_THE_END_OF_TH.b": "outline ways of strand, the learner should showing gratitude to be able to: God in day-to-day life",
+  "CRE.G4.THE_LI.HEALING_BY_THE_END_OF_TH.a": "narrate the story of the",
+  "CRE.G4.THE_LI.HEALING_BY_THE_END_OF_TH.c": "express gratitude to 10 lepers, those who show them",
+  "CRE.G4.THE_LI.HEALING_BY_THE_END_OF_TH.b_": "outline ways of kindness, showing gratitude to",
+  "CRE.G4.THE_LI.HEALING_BY_THE_END_OF_TH.d": "appreciate the miracle God in day-to-day life, by having faith in God",
+  "CRE.G4.THE_LI.HEALING_BY_THE_END_OF_TH.c_": "express gratitude to those who are kind tp them",
+  "CRE.G4.THE_LI.HEALING_BY_THE_END_OF_TH.d_": "appreciate the miracle by having faith in God",
+  "CRE.G4.THE_LI.JESUS_RAISES_A_WIDOW_S_S.a": "retell the story of raising the widow’s be able to: son",
+  "CRE.G4.THE_LI.JESUS_RAISES_A_WIDOW_S_S.a_": "retell the story of",
+  "CRE.G4.THE_LI.JESUS_RAISES_A_WIDOW_S_S.b": "recognise God’s raising the widow’s power over life and death, son",
+  "CRE.G4.THE_LI.JESUS_RAISES_A_WIDOW_S_S.b_": "recognise God’s",
+  "CRE.G4.THE_LI.JESUS_RAISES_A_WIDOW_S_S.c": "apply lessons learnt power over life and by showing death, compassion to others",
+  "CRE.G4.THE_LI.JESUS_RAISES_A_WIDOW_S_S.c_": "apply lessons learnt",
+  "CRE.G4.THE_LI.JESUS_RAISES_A_WIDOW_S_S.d": "pray to God when by showing faced with compassion to others, challenges",
+  "CRE.G4.THE_LI.JESUS_RAISES_A_WIDOW_S_S.d_": "pray to God when faced with",
+  "CRE.G4.THE_LI.FORGIVENESS.a": "outline the importance of forgiving others",
+  "CRE.G4.THE_LI.FORGIVENESS.b": "resist vengeance as outlined in Mathew 5:39",
+  "CRE.G4.THE_LI.FORGIVENESS.c": "appreciate forgiveness by not repaying evil for evil",
+  "CRE.G4.THE_LI.HELPING_THE_NEEDY.a": "state the importance of helping the needy",
+  "CRE.G4.THE_LI.HELPING_THE_NEEDY.b": "demonstrate kindness by sharing with those in need",
+  "CRE.G4.THE_LI.HELPING_THE_NEEDY.c": "recite Mathew 5:42 and help those in need promptly. Ϯς",
+  "CRE.G4.THE_LI.PARABLE_OF_THE_LOST_COIN.a": "retell the parable of the lost coin",
+  "CRE.G4.THE_LI.PARABLE_OF_THE_LOST_COIN.b": "list lessons learnt from the parable of the lost coin",
+  "CRE.G4.THE_LI.PARABLE_OF_THE_LOST_COIN.c": "recognise God’s love for the sinner and the need to live a righteous life",
+  "CRE.G4.THE_LI.PARABLE_OF_THE_LOST_COIN.d": "appreciate God’s love and lead upright lives",
+  "CRE.G4.THE_LI.PARABLE_OF_THE_MUSTARD_S.a": "retell the parable of the mustard seed as guided by the Bible text",
+  "CRE.G4.THE_LI.PARABLE_OF_THE_MUSTARD_S.b": "describe how the kingdom of God grows from a small beginning",
+  "CRE.G4.THE_LI.PARABLE_OF_THE_MUSTARD_S.c": "explain how they contribute to the growth of the kingdom of God",
+  "CRE.G4.THE_LI.PARABLE_OF_THE_MUSTARD_S.d": "appreciate the growth of God’s kingdom by evangelising to others",
+  "CRE.G4.THE_LI.NICODEMUS_ENCOUNTER_WITH.a": "retell the story of Nicodemus’ encounter with Jesus Christ",
+  "CRE.G4.THE_LI.NICODEMUS_ENCOUNTER_WITH.b": "acknowledge that repentance of sins draws us close to Christ",
+  "CRE.G4.THE_LI.NICODEMUS_ENCOUNTER_WITH.c": "discuss the importance of baptism to Christians today",
+  "CRE.G4.THE_LI.NICODEMUS_ENCOUNTER_WITH.d": "recite John 3:16 and believe in Jesus Christ to inherit eternal life",
+  "CRE.G4.CHRIST.TRUST.a": "emulate Joseph by resisting sexual temptations as young people",
+  "CRE.G4.CHRIST.TRUST.b": "exercise assertiveness in the face of temptations/tempting situations",
+  "CRE.G4.CHRIST.TRUST.c": "identify people he/she can trust for own safety",
+  "CRE.G4.CHRIST.TRUST.d": "recite Psalm 125:1 and trust in God always",
+  "CRE.G4.CHRIST.TRUTHFULNESS_TRUTHFULNES.a": "state the importance of able to: telling the truth",
+  "CRE.G4.CHRIST.TRUTHFULNESS_TRUTHFULNES.a_": "state the importance of",
+  "CRE.G4.CHRIST.TRUTHFULNESS_TRUTHFULNES.b": "resist lying as cited in telling the truth, Proverbs 12:19",
+  "CRE.G4.CHRIST.TRUTHFULNESS_TRUTHFULNES.b_": "resist lying as cited in",
+  "CRE.G4.CHRIST.TRUTHFULNESS_TRUTHFULNES.c": "desire to always speak Proverbs 12:19, the truth according to",
+  "CRE.G4.CHRIST.TRUTHFULNESS_TRUTHFULNES.c_": "desire to always speak Ephesians 4:25. the truth according to",
+  "CRE.G4.CHRIST.OBEDIENCE_OBEDIENCE.a": "read Exodus 20:12 and state learner should be able to: the benefit of honouring",
+  "CRE.G4.CHRIST.OBEDIENCE_OBEDIENCE.a_": "read Exodus 20:12 and state parents, the benefit of honouring",
+  "CRE.G4.CHRIST.OBEDIENCE_OBEDIENCE.b": "obey parents and teachers to parents, promote harmonious co-existence",
+  "CRE.G4.CHRIST.OBEDIENCE_OBEDIENCE.b_": "obey parents and teachers to promote harmonious co-existence",
+  "CRE.G4.CHRIST.OBEDIENCE_OBEDIENCE.c": "practise responsibility by obeying school rules",
+  "CRE.G4.CHRIST.OBEDIENCE_OBEDIENCE.c_": "practise responsibility by",
+  "CRE.G4.CHRIST.OBEDIENCE_OBEDIENCE.d": "outline the results of obeying school rules, disobedience",
+  "CRE.G4.CHRIST.OBEDIENCE_OBEDIENCE.d_": "outline the results of",
+  "CRE.G4.CHRIST.OBEDIENCE_OBEDIENCE.e": "desire to exercise obedience disobedience, in day-to-day life",
+  "CRE.G4.CHRIST.OBEDIENCE_OBEDIENCE.e_": "desire to exercise obedience in day-to-day life",
+  "CRE.G4.CHRIST.LOVE_LOVE.a": "recognise that God loves children; should be able to: Matthew 19:13-15",
+  "CRE.G4.CHRIST.LOVE_LOVE.a_": "recognise that God loves children",
+  "CRE.G4.CHRIST.LOVE_LOVE.b": "demonstrate love by showing kindness Matthew 19:13-15, to others",
+  "CRE.G4.CHRIST.LOVE_LOVE.b_": "demonstrate love by showing kindness",
+  "CRE.G4.CHRIST.LOVE_LOVE.c": "appreciate God’s love by obeying His to others, teachings",
+  "CRE.G4.CHRIST.LOVE_LOVE.c_": "appreciate God’s love by obeying His teachings",
+  "CRE.G4.CHRIST.RESPONSIBILITY_PERSONAL_.a": "identify personal items and how they care for them",
+  "CRE.G4.CHRIST.RESPONSIBILITY_PERSONAL_.b": "identify school properties and how they care for them",
+  "CRE.G4.CHRIST.RESPONSIBILITY_PERSONAL_.c": "acquire responsibility by taking care of personal and school properties",
+  "CRE.G4.CHRIST.HOLINESS.a": "describe ways of glorifying God with their bodies",
+  "CRE.G4.CHRIST.HOLINESS.b": "acquire the value of holiness by keeping away from situations that lead to sin",
+  "CRE.G4.CHRIST.HOLINESS.c": "recite 1Corinthians 6:19 on the body as the temple of the Holy Spirit",
+  "CRE.G4.CHRIST.HOLINESS.d": "desire to lead holy lives free from sin",
+  "CRE.G4.THE_CH.HOUSE_OF_GOD.a": "outline lessons learnt from Matthew 21:12- 14",
+  "CRE.G4.THE_CH.HOUSE_OF_GOD.b": "participate in church activities to grow spiritually",
+  "CRE.G4.THE_CH.HOUSE_OF_GOD.c": "appreciate the church as a house of worship",
+  "CRE.G4.THE_CH.THE_EARLY_CHURCH.a": "name the disciples of Jesus Christ",
+  "CRE.G4.THE_CH.THE_EARLY_CHURCH.b": "describe how the early church was started",
+  "CRE.G4.THE_CH.THE_EARLY_CHURCH.c": "desire to turn away from sins according to Acts 2:38",
+  "CRE.G4.THE_CH.STANDING_FIRM_IN_FAITH.a": "name the city where believers were first called Christians",
+  "CRE.G4.THE_CH.STANDING_FIRM_IN_FAITH.b": "retell how Stephen was stoned for standing firm in his faith",
+  "CRE.G4.THE_CH.STANDING_FIRM_IN_FAITH.c": "list three lessons learnt from the stoning of Stephen",
+  "CRE.G4.THE_CH.STANDING_FIRM_IN_FAITH.d": "explain why they should not join ungodly groups",
+  "CRE.G4.THE_CH.STANDING_FIRM_IN_FAITH.e": "utilise the virtue of assertiveness and stand firm in faith",
+  "CRE.G4.THE_CH.THE_LORD_S_PRAYER.a": "recite the Lord’s prayer",
+  "CRE.G4.THE_CH.THE_LORD_S_PRAYER.b": "pray for parents, guardians and friends",
+  "CRE.G4.THE_CH.THE_LORD_S_PRAYER.c": "say a prayer to God every day to grow spiritually",
+  "CRE.G4.THE_CH.FRUIT_OF_THE_HOLY_SPIRIT.a": "list the fruit of the Holy Spirit; Galatians 5:22- 23",
+  "CRE.G4.THE_CH.FRUIT_OF_THE_HOLY_SPIRIT.b": "describe how they apply the fruit of the Holy Spirit in their lives",
+  "CRE.G4.THE_CH.FRUIT_OF_THE_HOLY_SPIRIT.c": "desire to be led by the Holy Spirit in their daily activities",
+  "CRE.G4.THE_CH.SELF_CONTROL.a": "ractice self-control as guided in Galatians 5:23- 25",
+  "CRE.G4.THE_CH.SELF_CONTROL.b": "make right decisions that are guided by the Holy Spirit",
+  "CRE.G4.THE_CH.SELF_CONTROL.c": "demonstrate self-control by avoiding behaviour that defiles the body",
+  "CRE.G4.THE_CH.SELF_CONTROL.d": "live Godly lives guided by the Holy Spirit",
+  "CRE.G4.MORALI.USE_OF_SOCIAL_MEDIA.a": "list digital devices used at home and school",
+  "CRE.G4.MORALI.USE_OF_SOCIAL_MEDIA.b": "discuss appropriate ways of using social media",
+  "CRE.G4.MORALI.USE_OF_SOCIAL_MEDIA.c": "apply the value of integrity when using social media",
+  "CRE.G4.MORALI.USE_OF_SOCIAL_MEDIA.d": "desire to do the right thing always even when no one is watching"
+ },
+ "skills": {
+  "CRES.G4.CREATI.SELF_AWARENESS.UNIQUE_CREATION": {
+   "forms": [
+    "what a verse says about how we are made",
+    "who made us",
+    "what makes each child special"
+   ],
+   "mastery": "Says that God made each person, that each is unique and wonderfully made (Psalm 139:13-14), that people are made in God's image (Genesis 1:27), and that being special does not mean being better than others. Evidence rule: at least four of the last five fresh questions right across at least two question forms, and no repeated pick of the same misconception."
+  },
+  "CRES.G4.CREATI.SELF_AWARENESS.FEELINGS": {
+   "forms": [
+    "a good thought or feeling",
+    "what a verse says about anger or joy",
+    "what to do with a feeling"
+   ],
+   "mastery": "Names good thoughts (sharing, helping parents, being thankful), says why joy is good, and knows that Ephesians 4:26 says not to sin in anger or let the sun go down on it, and Philippians 4:4 says to rejoice in the Lord always. Evidence rule: at least four of the last five fresh questions right across at least two question forms, and no repeated pick of the same misconception."
+  },
+  "CRES.G4.CREATI.SELF_AWARENESS.CHOICES": {
+   "forms": [
+    "which is a choice",
+    "what a choice leads to",
+    "which choice pleases God"
+   ],
+   "mastery": "Names everyday choices, says that every choice has a result for the child and others, and chooses what pleases God (honest, kind, obedient) over what friends or feelings push for. Evidence rule: at least four of the last five fresh questions right across at least two question forms, and no repeated pick of the same misconception."
+  },
+  "CRES.G4.CREATI.MY_FAMILY_FAMILY_MEMBERS.FAMILY": {
+   "forms": [
+    "who is in which family",
+    "what Ephesians 6:1-3 says",
+    "a way to honour parents"
+   ],
+   "mastery": "Tells the nuclear family (parents and children) from the extended family (grandparents, aunts, uncles, cousins), and knows that Ephesians 6:1-3 asks children to obey and honour their parents, and why. Evidence rule: at least four of the last five fresh questions right across at least two question forms, and no repeated pick of the same misconception."
+  },
+  "CRES.G4.CREATI.MY_FAMILY_FAMILY_MEMBERS.PROTECTION": {
+   "forms": [
+    "what to do in a situation",
+    "whom to tell",
+    "which gift or invitation to refuse"
+   ],
+   "mastery": "Knows the body is private, that a child says NO, goes away and tells a trusted adult (a parent, a teacher, a church leader, the chief or the Childline Kenya helpline 116) if touched wrongly or asked to keep a secret, keeps telling until someone helps, and that it is never the child's fault. Evidence rule: at least four of the last five fresh questions right across at least two question forms, and no repeated pick of the same misconception."
+  },
+  "CRES.G4.CREATI.ATTRIBUTES_OF_GOD.ATTRIBUTES": {
+   "forms": [
+    "which attribute a verse shows",
+    "what an attribute means",
+    "which sentence about God is true"
+   ],
+   "mastery": "Says that God alone made everything (Genesis 1), that God is love and a loving Father (1 John 4:7-8), and that God is holy: there is none holy like the Lord (1 Samuel 2:2). Does not say that God shares making the world or loves only good children. Evidence rule: at least four of the last five fresh questions right across at least two question forms, and no repeated pick of the same misconception."
+  },
+  "CRES.G4.THE_HO.THE_INSPIRED_WORD_OF_GOD.BIBLE_BOOKS": {
+   "forms": [
+    "which Testament a book is in",
+    "the first book",
+    "which books are the four Gospels"
+   ],
+   "mastery": "Places well-known books in the right Testament (Genesis, Exodus, Psalms, Isaiah in the Old; Matthew, Mark, Luke, John, Acts, Revelation in the New) and knows the first book of each. Evidence rule: at least four of the last five fresh questions right across at least two question forms, and no repeated pick of the same misconception."
+  },
+  "CRES.G4.THE_HO.ZACCHAEUS_THE_TAX_COLLEC.ZACCHAEUS": {
+   "forms": [
+    "recall a fact of the story",
+    "what Zacchaeus did to show he had changed",
+    "what repenting means"
+   ],
+   "mastery": "Says that Zacchaeus was a rich chief tax collector, short, who climbed a tree to see Jesus; that Jesus called him down and went to his house though the crowd grumbled; that he gave half his possessions to the poor and promised to repay four times anything taken wrongly; and that repenting means being sorry and turning from wrong. Evidence rule: at least four of the last five fresh questions right across at least two question forms, and no repeated pick of the same misconception."
+  },
+  "CRES.G4.THE_HO.BALAAM_S_DONKEY.BALAAM": {
+   "forms": [
+    "recall a fact of the story",
+    "who saw the angel first",
+    "the lesson of the story"
+   ],
+   "mastery": "Says that Balak king of Moab sent for Balaam, that God told him to say only what God told him, that the donkey saw the angel of the Lord with a drawn sword three times before Balaam did, that the Lord opened the donkey's mouth and then Balaam's eyes, and that the lesson is to obey God. Evidence rule: at least four of the last five fresh questions right across at least two question forms, and no repeated pick of the same misconception."
+  },
+  "CRES.G4.THE_HO.SAMSON_KILLS_A_LION.SAMSON": {
+   "forms": [
+    "recall a fact of the story",
+    "where the strength came from",
+    "what the story shows about God"
+   ],
+   "mastery": "Says that a young lion roared at Samson, that the Spirit of the Lord came powerfully on him, that he tore it apart with his bare hands, and that he did not tell his parents; and that the story shows God's power at work in a person. Evidence rule: at least four of the last five fresh questions right across at least two question forms, and no repeated pick of the same misconception."
+  },
+  "CRES.G4.THE_HO.JOSEPH_JOSEPH_INTERPRETS.JOSEPH_DREAM": {
+   "forms": [
+    "recall a fact of the dreams",
+    "what the dreams meant",
+    "who gave the answer"
+   ],
+   "mastery": "Says that Pharaoh sent for Joseph from prison, that he dreamed of seven fat cows eaten by seven thin cows and of seven good ears of grain swallowed by seven thin ones, that Joseph said God would give the answer, and that the dreams meant seven years of plenty followed by seven years of famine. Evidence rule: at least four of the last five fresh questions right across at least two question forms, and no repeated pick of the same misconception."
+  },
+  "CRES.G4.THE_HO.JOSEPH_JOSEPH_INTERPRETS.JOSEPH_WISDOM": {
+   "forms": [
+    "where Joseph's wisdom came from",
+    "what the fear of the Lord means",
+    "a wise choice that depends on God"
+   ],
+   "mastery": "Says that Joseph depended on God for the meaning of the dreams (Genesis 41:16), that Proverbs 1:7 says the fear of the Lord is the beginning of wisdom (knowledge), and that fearing the Lord means honouring and obeying him, not being afraid of him. Evidence rule: at least four of the last five fresh questions right across at least two question forms, and no repeated pick of the same misconception."
+  },
+  "CRES.G4.THE_HO.BIBLE_STRAND_QUESTION_S_.ABRAHAM": {
+   "forms": [
+    "recall a fact of the call",
+    "what God promised",
+    "the new name and its meaning",
+    "why Abraham obeyed"
+   ],
+   "mastery": "Says that God told Abram to leave his country for a land God would show him, with the promise of a great nation and a blessing for all peoples (12:1-3), that Abram obeyed, taking Sarai and Lot, and that God changed his name to Abraham, a father of many nations (17:5). Evidence rule: at least four of the last five fresh questions right across at least two question forms, and no repeated pick of the same misconception."
+  },
+  "CRES.G4.THE_LI.THE_ANNUNCIATION.ANNUNCIATION": {
+   "forms": [
+    "recall a fact of the story",
+    "what the angel said",
+    "what makes the birth unique"
+   ],
+   "mastery": "Says that the angel Gabriel was sent to Mary at Nazareth, that Mary was engaged to Joseph, that she was told to name her son Jesus, that the Holy Spirit would come upon her, and that for God nothing is impossible (Luke 1:37). Evidence rule: at least four of the last five fresh questions right across at least two question forms, and no repeated pick of the same misconception."
+  },
+  "CRES.G4.THE_LI.BIRTH_OF_JOHN_THE_BAPTIS.JOHN_BIRTH": {
+   "forms": [
+    "recall a fact of the story",
+    "what the angel said",
+    "how John prepared the way"
+   ],
+   "mastery": "Says that Zechariah the priest and Elizabeth had no child and were old, that an angel appeared to Zechariah in the temple and told him to name the son John, that John was born, and that he would go before the Lord to prepare his way. Evidence rule: at least four of the last five fresh questions right across at least two question forms, and no repeated pick of the same misconception."
+  },
+  "CRES.G4.THE_LI.HEALING_OF_BLIND_BARTIMA.BARTIMAEUS": {
+   "forms": [
+    "recall a fact of the story",
+    "how he showed faith",
+    "what Jesus said and did"
+   ],
+   "mastery": "Says that Bartimaeus was a blind beggar by the road near Jericho, that he called out to Jesus, Son of David, and shouted louder when told to be quiet, that Jesus called him and asked what he wanted, that Jesus said his faith had healed him, and that he followed Jesus. Evidence rule: at least four of the last five fresh questions right across at least two question forms, and no repeated pick of the same misconception."
+  },
+  "CRES.G4.THE_LI.HEALING_BY_THE_END_OF_TH.LEPERS": {
+   "forms": [
+    "recall a fact of the story",
+    "who came back",
+    "a way of showing gratitude to God"
+   ],
+   "mastery": "Says that ten men with leprosy called to Jesus, that he told them to show themselves to the priests and they were cleansed on the way, that one, a Samaritan, came back praising God and thanked Jesus, and that Jesus asked where the other nine were; and gives ways of thanking God. Evidence rule: at least four of the last five fresh questions right across at least two question forms, and no repeated pick of the same misconception."
+  },
+  "CRES.G4.THE_LI.JESUS_RAISES_A_WIDOW_S_S.WIDOW_SON": {
+   "forms": [
+    "recall a fact of the story",
+    "what the miracle shows",
+    "how to show compassion"
+   ],
+   "mastery": "Says that Jesus met a funeral at Nain for the only son of a widow, that his heart went out to her, that he touched the coffin and said \"Young man, get up\", that the young man sat up and spoke, and that it shows Jesus' power over death and his compassion; and knows John 11:25. Evidence rule: at least four of the last five fresh questions right across at least two question forms, and no repeated pick of the same misconception."
+  },
+  "CRES.G4.THE_LI.FORGIVENESS.FORGIVE": {
+   "forms": [
+    "what Matthew 5:39 teaches",
+    "a reason to forgive",
+    "what to do when wronged"
+   ],
+   "mastery": "Says that Matthew 5:39 teaches not to pay back evil with evil, gives reasons to forgive (peace, friendship, God forgives us), and knows that forgiving does not mean keeping quiet about being hurt: a child tells a trusted adult. Evidence rule: at least four of the last five fresh questions right across at least two question forms, and no repeated pick of the same misconception."
+  },
+  "CRES.G4.THE_LI.HELPING_THE_NEEDY.HELPING": {
+   "forms": [
+    "what Matthew 5:42 teaches",
+    "a way to help",
+    "a good reason to help"
+   ],
+   "mastery": "Says that Matthew 5:42 teaches giving to the one who asks, gives reasons for helping (love, God cares for the needy), and names ways a child helps at school, home and church (sharing a pencil or lunch, carrying a load, a visit). Evidence rule: at least four of the last five fresh questions right across at least two question forms, and no repeated pick of the same misconception."
+  },
+  "CRES.G4.THE_LI.PARABLE_OF_THE_LOST_COIN.COIN": {
+   "forms": [
+    "recall a fact of the parable",
+    "what the woman stands for",
+    "the lesson"
+   ],
+   "mastery": "Says that a woman with ten silver coins lost one, lit a lamp, swept the house and searched carefully until she found it, and called her friends to rejoice; and that the lesson is that God loves the sinner, searches for him and rejoices when he repents. Evidence rule: at least four of the last five fresh questions right across at least two question forms, and no repeated pick of the same misconception."
+  },
+  "CRES.G4.THE_LI.PARABLE_OF_THE_MUSTARD_S.MUSTARD": {
+   "forms": [
+    "recall a fact of the parable",
+    "what the seed and the tree stand for",
+    "how a child helps the kingdom grow"
+   ],
+   "mastery": "Says that a man planted a mustard seed in his garden, that it grew into a tree where birds perched, that God's kingdom starts small and grows, and that a child helps it grow by praying, living well and telling others. Evidence rule: at least four of the last five fresh questions right across at least two question forms, and no repeated pick of the same misconception."
+  },
+  "CRES.G4.THE_LI.NICODEMUS_ENCOUNTER_WITH.NICODEMUS": {
+   "forms": [
+    "recall a fact of the story",
+    "what Jesus told Nicodemus",
+    "what John 3:16 says"
+   ],
+   "mastery": "Says that Nicodemus was a Pharisee and a member of the ruling council who came to Jesus at night, that Jesus told him one must be born again (of water and the Spirit), that Nicodemus did not first understand, and that John 3:16 says God so loved the world that he gave his Son so that whoever believes has eternal life. Evidence rule: at least four of the last five fresh questions right across at least two question forms, and no repeated pick of the same misconception."
+  },
+  "CRES.G4.CHRIST.TRUST.JOSEPH_RESISTS": {
+   "forms": [
+    "recall a fact of the story",
+    "why Joseph refused",
+    "what to do when tempted"
+   ],
+   "mastery": "Says that Potiphar's wife tried to lead Joseph into wrong, that Joseph refused because it would be a sin against God, and that he ran out of the house leaving his cloak behind; and gives lessons (flee from temptation, fear God more than people). Evidence rule: at least four of the last five fresh questions right across at least two question forms, and no repeated pick of the same misconception."
+  },
+  "CRES.G4.CHRIST.TRUST.SAFE_PEOPLE": {
+   "forms": [
+    "whom to trust",
+    "what to do when a stranger asks",
+    "whom to report to"
+   ],
+   "mastery": "Names trusted people (parents, guardians, teachers, church leaders, the chief, police officers) and tells them from strangers, knows to refuse gifts, lifts and secrets from people who are not trusted, and to go away and tell. Evidence rule: at least four of the last five fresh questions right across at least two question forms, and no repeated pick of the same misconception."
+  },
+  "CRES.G4.CHRIST.TRUST.TRUST_GOD": {
+   "forms": [
+    "what Psalm 125:1 says",
+    "what trusting God means",
+    "a time to trust God"
+   ],
+   "mastery": "Says that Psalm 125:1 says those who trust in the Lord are like Mount Zion, which cannot be shaken but stands for ever; gives reasons to trust God (he is faithful, he cares, he is stronger than our fears) and knows that trusting God does not mean doing nothing. Evidence rule: at least four of the last five fresh questions right across at least two question forms, and no repeated pick of the same misconception."
+  },
+  "CRES.G4.CHRIST.TRUTHFULNESS_TRUTHFULNES.TRUTH": {
+   "forms": [
+    "what a verse says about truth",
+    "why tell the truth",
+    "what to do after a lie"
+   ],
+   "mastery": "Says that Proverbs 12:19 teaches that truthful lips last and a lying tongue lasts only a moment, that Ephesians 4:25 says to put away falsehood and speak truthfully because we belong to one another, and gives reasons for telling the truth and ways of overcoming lies. Evidence rule: at least four of the last five fresh questions right across at least two question forms, and no repeated pick of the same misconception."
+  },
+  "CRES.G4.CHRIST.OBEDIENCE_OBEDIENCE.OBEDIENCE": {
+   "forms": [
+    "what Exodus 20:12 says",
+    "why obey",
+    "a result of disobedience"
+   ],
+   "mastery": "Says that Exodus 20:12 tells children to honour father and mother and promises a long life in the land, gives reasons to obey parents, teachers and school rules (safety, peace, learning), and names results of disobedience (punishment, danger, lost trust). Evidence rule: at least four of the last five fresh questions right across at least two question forms, and no repeated pick of the same misconception."
+  },
+  "CRES.G4.CHRIST.LOVE_LOVE.LOVE_CHILDREN": {
+   "forms": [
+    "recall a fact of the story",
+    "what Jesus said",
+    "what the story shows"
+   ],
+   "mastery": "Says that people brought little children to Jesus to pray for them, that the disciples told them off, that Jesus said to let the children come to him and not hinder them, that the kingdom of heaven belongs to such as these, and that he placed his hands on them; and that God loves children. Evidence rule: at least four of the last five fresh questions right across at least two question forms, and no repeated pick of the same misconception."
+  },
+  "CRES.G4.CHRIST.RESPONSIBILITY_PERSONAL_.CARE_ITEMS": {
+   "forms": [
+    "which is a personal or school item",
+    "how to care for it",
+    "why care for school property"
+   ],
+   "mastery": "Names personal items (pullover, pen, exercise books, textbooks, school bag) and school property (desks, library books, latrines, tanks, trees), and says how each is cared for and why school property belongs to everyone. Evidence rule: at least four of the last five fresh questions right across at least two question forms, and no repeated pick of the same misconception."
+  },
+  "CRES.G4.CHRIST.HOLINESS.HOLINESS": {
+   "forms": [
+    "what the verse says",
+    "a way of honouring God with the body",
+    "a situation to keep away from"
+   ],
+   "mastery": "Says that 1 Corinthians 6:19-20 teaches that the body is a temple of the Holy Spirit and that we honour God with it, names ways of doing so (keeping clean, resting, avoiding drugs, using the body for good), and keeps away from places and company that lead to sin. Evidence rule: at least four of the last five fresh questions right across at least two question forms, and no repeated pick of the same misconception."
+  },
+  "CRES.G4.THE_CH.HOUSE_OF_GOD.HOUSE_OF_GOD": {
+   "forms": [
+    "recall a fact of the story",
+    "what Jesus said about the temple",
+    "a way of respecting the church"
+   ],
+   "mastery": "Says that Jesus drove out those buying and selling in the temple and overturned the tables of the money changers, said that God's house is a house of prayer, and healed the blind and lame who came to him; and gives ways of respecting the church (1 Corinthians 14:26: everything done to build up the church). Evidence rule: at least four of the last five fresh questions right across at least two question forms, and no repeated pick of the same misconception."
+  },
+  "CRES.G4.THE_CH.THE_EARLY_CHURCH.TWELVE_DISCIPLES": {
+   "forms": [
+    "which is a disciple",
+    "who the brothers were",
+    "how many disciples"
+   ],
+   "mastery": "Names disciples from Matthew 10:1-4 (Simon called Peter, Andrew, James and John sons of Zebedee, Philip, Bartholomew, Thomas, Matthew the tax collector, James son of Alphaeus, Thaddaeus, Simon the Zealot, Judas Iscariot), knows there were twelve, and does not count Paul among them. Evidence rule: at least four of the last five fresh questions right across at least two question forms, and no repeated pick of the same misconception."
+  },
+  "CRES.G4.THE_CH.THE_EARLY_CHURCH.CHURCH_BEGINS": {
+   "forms": [
+    "recall a fact of the story",
+    "what Peter told the crowd",
+    "what repenting means"
+   ],
+   "mastery": "Says that Peter preached after the Holy Spirit came, that the people asked what to do, that he said to repent and be baptised for the forgiveness of sins, that about three thousand joined that day, and that repenting means turning away from sin. Evidence rule: at least four of the last five fresh questions right across at least two question forms, and no repeated pick of the same misconception."
+  },
+  "CRES.G4.THE_CH.STANDING_FIRM_IN_FAITH.STEPHEN": {
+   "forms": [
+    "which city",
+    "recall a fact about Stephen",
+    "what lesson Stephen teaches",
+    "why avoid ungodly groups"
+   ],
+   "mastery": "Says that believers were first called Christians at Antioch, that Stephen was stoned for his faith, looked up and saw Jesus, prayed for his attackers to be forgiven, and that the lessons are to stand firm, forgive enemies and not join groups that do not follow Jesus. Evidence rule: at least four of the last five fresh questions right across at least two question forms, and no repeated pick of the same misconception."
+  },
+  "CRES.G4.THE_CH.THE_LORD_S_PRAYER.LORDS_PRAYER": {
+   "forms": [
+    "what a line of the prayer asks for",
+    "why pray every day",
+    "whom to pray for"
+   ],
+   "mastery": "Says what the lines of the Lord's Prayer ask for (God's name honoured, his kingdom, daily bread, forgiveness as we forgive, keeping from temptation), that Jesus gave it as a pattern for prayer, and gives reasons to pray daily and for others. Evidence rule: at least four of the last five fresh questions right across at least two question forms, and no repeated pick of the same misconception."
+  },
+  "CRES.G4.THE_CH.FRUIT_OF_THE_HOLY_SPIRIT.FRUIT_SPIRIT": {
+   "forms": [
+    "which is a fruit of the Spirit",
+    "which fruit fits a situation",
+    "what the verse says"
+   ],
+   "mastery": "Lists the fruit of the Holy Spirit (love, joy, peace, patience, kindness, goodness, faithfulness, gentleness, self-control), tells them from wrong behaviour, and shows which fruit fits a situation. Evidence rule: at least four of the last five fresh questions right across at least two question forms, and no repeated pick of the same misconception."
+  },
+  "CRES.G4.THE_CH.SELF_CONTROL.SELF_CONTROL": {
+   "forms": [
+    "what self-control means",
+    "which choice shows self-control",
+    "what harms the body"
+   ],
+   "mastery": "Says that self-control is a fruit of the Spirit and means choosing what is right instead of what the feeling says, that Galatians 5:25 says to keep in step with the Spirit, and avoids drugs, harmful videos and wrong behaviour that harm the body. Evidence rule: at least four of the last five fresh questions right across at least two question forms, and no repeated pick of the same misconception."
+  },
+  "CRES.G4.MORALI.USE_OF_SOCIAL_MEDIA.SOCIAL_MEDIA": {
+   "forms": [
+    "which is a digital device",
+    "what to do online",
+    "what integrity means"
+   ],
+   "mastery": "Names digital devices used at home and school (phone, tablet, computer), knows to keep passwords and home address private, never to chat with or meet strangers online, to tell a trusted adult about unsafe messages, not to pass on unkind messages, and to do right even when no one is watching. Evidence rule: at least four of the last five fresh questions right across at least two question forms, and no repeated pick of the same misconception."
+  }
+ }
+}

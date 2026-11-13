@@ -3,15 +3,15 @@
  "subject_key": "cre",
  "grade": 4,
  "source": "KICD Christian Religious Education, First Published 2017; Revised 2024 (text layer)",
- "status": "outcomes from KICD's text, word for word; skills, prerequisites and misconceptions not yet mapped",
+ "status": "outcomes from KICD's text, word for word; skills, prerequisites and misconceptions (12 Nov 2026) are proposed or draft, written offline by Claude, awaiting a CRE teacher's review. Rubrics from KICD, untouched.",
  "totals": {
   "strands": 6,
   "sub_strands": 32,
   "outcomes": 158,
   "lessons": 84,
-  "skills": 0,
-  "prerequisites": 0,
-  "misconceptions": 0
+  "skills": 39,
+  "prerequisites": 40,
+  "misconceptions": 118
  },
  "sub_strands": [
   {
@@ -141,8 +141,243 @@
      "indicator": "CRE.G4.RUBRIC.1.1"
     }
    ],
-   "skills": [],
-   "misconceptions": [],
+   "skills": [
+    {
+     "code": "CRES.G4.CREATI.SELF_AWARENESS.UNIQUE_CREATION",
+     "name": "Know that each child is God's special creation (Psalm 139:13-14, Genesis 1:27)",
+     "outcomes": [
+      "CRE.G4.CREATI.SELF_AWARENESS.b",
+      "CRE.G4.CREATI.SELF_AWARENESS.c"
+     ],
+     "mastery": "Says that God made each person, that each is unique and wonderfully made (Psalm 139:13-14), that people are made in God's image (Genesis 1:27), and that being special does not mean being better than others. Evidence rule: at least four of the last five fresh questions right across at least two question forms, and no repeated pick of the same misconception.",
+     "question_forms": [
+      "what a verse says about how we are made",
+      "who made us",
+      "what makes each child special"
+     ],
+     "thinking": [
+      "recall",
+      "reasoning"
+     ],
+     "horeb_skill_ids": [],
+     "prerequisites": [
+      {
+       "requires": "CRE.G3.CREATI.SELF_AWARENESS.a",
+       "kind": "outcome",
+       "strength": "essential",
+       "reason": "Proposed: this skill builds on it. To confirm by a CRE teacher.",
+       "status": "proposed"
+      }
+     ],
+     "status": "proposed"
+    },
+    {
+     "code": "CRES.G4.CREATI.SELF_AWARENESS.FEELINGS",
+     "name": "Name good thoughts and feelings and cope with anger as Ephesians 4:26 and Philippians 4:4 teach",
+     "outcomes": [
+      "CRE.G4.CREATI.SELF_AWARENESS.a_",
+      "CRE.G4.CREATI.SELF_AWARENESS.b_",
+      "CRE.G4.CREATI.SELF_AWARENESS.c_"
+     ],
+     "mastery": "Names good thoughts (sharing, helping parents, being thankful), says why joy is good, and knows that Ephesians 4:26 says not to sin in anger or let the sun go down on it, and Philippians 4:4 says to rejoice in the Lord always. Evidence rule: at least four of the last five fresh questions right across at least two question forms, and no repeated pick of the same misconception.",
+     "question_forms": [
+      "a good thought or feeling",
+      "what a verse says about anger or joy",
+      "what to do with a feeling"
+     ],
+     "thinking": [
+      "recall",
+      "reasoning"
+     ],
+     "horeb_skill_ids": [],
+     "prerequisites": [
+      {
+       "requires": "CRE.G3.CREATI.SELF_AWARENESS.b",
+       "kind": "outcome",
+       "strength": "essential",
+       "reason": "Proposed: this skill builds on it. To confirm by a CRE teacher.",
+       "status": "proposed"
+      }
+     ],
+     "status": "proposed"
+    },
+    {
+     "code": "CRES.G4.CREATI.SELF_AWARENESS.CHOICES",
+     "name": "Know the choices children make, their results, and how the word of God guides right choices",
+     "outcomes": [
+      "CRE.G4.CREATI.SELF_AWARENESS.a__",
+      "CRE.G4.CREATI.SELF_AWARENESS.b__",
+      "CRE.G4.CREATI.SELF_AWARENESS.c__"
+     ],
+     "mastery": "Names everyday choices, says that every choice has a result for the child and others, and chooses what pleases God (honest, kind, obedient) over what friends or feelings push for. Evidence rule: at least four of the last five fresh questions right across at least two question forms, and no repeated pick of the same misconception.",
+     "question_forms": [
+      "which is a choice",
+      "what a choice leads to",
+      "which choice pleases God"
+     ],
+     "thinking": [
+      "recall",
+      "reasoning"
+     ],
+     "horeb_skill_ids": [],
+     "prerequisites": [
+      {
+       "requires": "CRE.G3.CREATI.SELF_AWARENESS.c",
+       "kind": "outcome",
+       "strength": "essential",
+       "reason": "Proposed: this skill builds on it. To confirm by a CRE teacher.",
+       "status": "proposed"
+      }
+     ],
+     "status": "proposed"
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "CRES.G4.CREATI.SELF_AWARENESS.UNIQUE_CREATION.M_C4_UNIQ_BETTER",
+     "skill": "CRES.G4.CREATI.SELF_AWARENESS.UNIQUE_CREATION",
+     "error": "Thinks being special means being better than other people.",
+     "example": {
+      "question": "What does it mean that you are God's special creation?",
+      "wrong_answer": "You are better than other children",
+      "correct_answer": "God made you with love and no one else is exactly like you"
+     },
+     "cause": "The word special is heard as a prize or a rank.",
+     "reveals": "Offer \"You are better than other children\" beside \"God made you with love and no one else is exactly like you\" and ask the child to choose.",
+     "help": "Say that every child is special in the same way, and ask each child to name one thing that makes a classmate special.",
+     "feedback": "Everyone is God's special creation. Being special does not make you better than others, because God made them with love too.",
+     "source": "common learner error; to confirm by a CRE teacher",
+     "status": "draft"
+    },
+    {
+     "code": "CRES.G4.CREATI.SELF_AWARENESS.UNIQUE_CREATION.M_C4_UNIQ_ACCIDENT",
+     "skill": "CRES.G4.CREATI.SELF_AWARENESS.UNIQUE_CREATION",
+     "error": "Thinks a person is a chance event, without a plan or a maker.",
+     "example": {
+      "question": "According to Psalm 139:13-14, how did God make you?",
+      "wrong_answer": "By chance, with no plan",
+      "correct_answer": "He knit you together, fearfully and wonderfully made"
+     },
+     "cause": "Science lessons and talk about birth leave out God as the maker.",
+     "reveals": "Offer \"By chance, with no plan\" beside \"He knit you together, fearfully and wonderfully made\" and ask the child to choose.",
+     "help": "Read Psalm 139:13-14 slowly and ask who is doing the knitting.",
+     "feedback": "Psalm 139:13-14 says that God formed each person and that we are fearfully and wonderfully made. You were not made by chance.",
+     "source": "common learner error; to confirm by a CRE teacher",
+     "status": "draft"
+    },
+    {
+     "code": "CRES.G4.CREATI.SELF_AWARENESS.UNIQUE_CREATION.M_C4_UNIQ_FIRST_ONLY",
+     "skill": "CRES.G4.CREATI.SELF_AWARENESS.UNIQUE_CREATION",
+     "error": "Thinks God made only the first people, Adam and Eve, not each person today.",
+     "example": {
+      "question": "Who made you, according to the Bible?",
+      "wrong_answer": "God made only the first man and woman, and I came from my parents only",
+      "correct_answer": "God, who made every person in his image"
+     },
+     "cause": "The creation story is told as a story of long ago only.",
+     "reveals": "Offer \"God made only the first man and woman, and I came from my parents only\" beside \"God, who made every person in his image\" and ask the child to choose.",
+     "help": "Link Genesis 1:27 (\"God created mankind in his own image\") to Psalm 139:13 about each person.",
+     "feedback": "Genesis 1:27 says God made human beings in his image, and Psalm 139:13 says he formed each of us. God is the maker of every person, including you.",
+     "source": "common learner error; to confirm by a CRE teacher",
+     "status": "draft"
+    },
+    {
+     "code": "CRES.G4.CREATI.SELF_AWARENESS.FEELINGS.M_C4_FEEL_ANGER_SIN",
+     "skill": "CRES.G4.CREATI.SELF_AWARENESS.FEELINGS",
+     "error": "Thinks that feeling angry is itself a sin.",
+     "example": {
+      "question": "What does Ephesians 4:26 say about anger?",
+      "wrong_answer": "Never feel angry at all",
+      "correct_answer": "Do not sin when you are angry"
+     },
+     "cause": "The child hears only the warning about anger.",
+     "reveals": "Offer \"Never feel angry at all\" beside \"Do not sin when you are angry\" and ask the child to choose.",
+     "help": "Read the verse: it says \"in your anger do not sin\". Ask what the angry child can do instead of hitting or shouting.",
+     "feedback": "Ephesians 4:26 says \"in your anger do not sin\". Anger is a feeling that comes to everyone. The wrong is in what we do with it.",
+     "source": "common learner error; to confirm by a CRE teacher",
+     "status": "draft"
+    },
+    {
+     "code": "CRES.G4.CREATI.SELF_AWARENESS.FEELINGS.M_C4_FEEL_KEEP_ANGER",
+     "skill": "CRES.G4.CREATI.SELF_AWARENESS.FEELINGS",
+     "error": "Thinks you should keep anger inside until you can get even.",
+     "example": {
+      "question": "What should you do about anger, according to Ephesians 4:26?",
+      "wrong_answer": "Keep it and pay the person back later",
+      "correct_answer": "Settle it before the sun goes down"
+     },
+     "cause": "Revenge looks like justice to a hurt child.",
+     "reveals": "Offer \"Keep it and pay the person back later\" beside \"Settle it before the sun goes down\" and ask the child to choose.",
+     "help": "Role-play saying sorry or forgiving before bedtime.",
+     "feedback": "Ephesians 4:26 says do not let the sun go down while you are still angry. Settle it quickly by forgiving or talking, not by planning to pay back.",
+     "source": "common learner error; to confirm by a CRE teacher",
+     "status": "draft"
+    },
+    {
+     "code": "CRES.G4.CREATI.SELF_AWARENESS.FEELINGS.M_C4_FEEL_JOY_GOOD_TIMES",
+     "skill": "CRES.G4.CREATI.SELF_AWARENESS.FEELINGS",
+     "error": "Thinks we rejoice only when everything is going well.",
+     "example": {
+      "question": "What does Philippians 4:4 tell us to do?",
+      "wrong_answer": "Rejoice only when things go well",
+      "correct_answer": "Rejoice in the Lord always"
+     },
+     "cause": "Joy is mixed up with having what we want.",
+     "reveals": "Offer \"Rejoice only when things go well\" beside \"Rejoice in the Lord always\" and ask the child to choose.",
+     "help": "Ask whether we can be thankful to God even on a hard day, and why.",
+     "feedback": "Philippians 4:4 says \"Rejoice in the Lord always\". Our joy rests on God, who does not change, and not only on good days.",
+     "source": "common learner error; to confirm by a CRE teacher",
+     "status": "draft"
+    },
+    {
+     "code": "CRES.G4.CREATI.SELF_AWARENESS.CHOICES.M_C4_CHO_NO_RESULT",
+     "skill": "CRES.G4.CREATI.SELF_AWARENESS.CHOICES",
+     "error": "Thinks a choice has no result if nobody sees it.",
+     "example": {
+      "question": "Kamau takes a pencil that is not his and nobody sees. What is true?",
+      "wrong_answer": "There is no result because nobody saw",
+      "correct_answer": "It still has results: he did wrong and he knows it"
+     },
+     "cause": "The child links wrong only to being caught.",
+     "reveals": "Offer \"There is no result because nobody saw\" beside \"It still has results: he did wrong and he knows it\" and ask the child to choose.",
+     "help": "List the results of one choice: for the child, for the owner, and before God.",
+     "feedback": "Every choice has a result, even a secret one. Taking what is not yours is wrong whether or not anyone sees.",
+     "source": "common learner error; to confirm by a CRE teacher",
+     "status": "draft"
+    },
+    {
+     "code": "CRES.G4.CREATI.SELF_AWARENESS.CHOICES.M_C4_CHO_FRIENDS",
+     "skill": "CRES.G4.CREATI.SELF_AWARENESS.CHOICES",
+     "error": "Thinks the right choice is whatever friends are choosing.",
+     "example": {
+      "question": "Your friends tell you to skip class. How do you choose what to do?",
+      "wrong_answer": "Do what my friends do",
+      "correct_answer": "Choose what pleases God, even if my friends choose differently"
+     },
+     "cause": "Wanting to belong is stronger than wanting to be right.",
+     "reveals": "Offer \"Do what my friends do\" beside \"Choose what pleases God, even if my friends choose differently\" and ask the child to choose.",
+     "help": "Role-play a polite NO and walking to class.",
+     "feedback": "A right choice is guided by the word of God, not by what the group does. Choose to obey and attend, even when friends choose differently.",
+     "source": "common learner error; to confirm by a CRE teacher",
+     "status": "draft"
+    },
+    {
+     "code": "CRES.G4.CREATI.SELF_AWARENESS.CHOICES.M_C4_CHO_ONLY_BIG",
+     "skill": "CRES.G4.CREATI.SELF_AWARENESS.CHOICES",
+     "error": "Thinks only big decisions are choices.",
+     "example": {
+      "question": "Which of these is a choice a child makes?",
+      "wrong_answer": "Only deciding which school to attend",
+      "correct_answer": "What to say, who to play with and whether to obey"
+     },
+     "cause": "The child links choosing with grown-up decisions.",
+     "reveals": "Offer \"Only deciding which school to attend\" beside \"What to say, who to play with and whether to obey\" and ask the child to choose.",
+     "help": "Make a list of the choices in one school morning.",
+     "feedback": "We make many choices every day: what to say, whom to sit with, whether to obey. Small choices matter too.",
+     "source": "common learner error; to confirm by a CRE teacher",
+     "status": "draft"
+    }
+   ],
    "rubric_indicators": [
     "CRE.G4.RUBRIC.1.1",
     "CRE.G4.RUBRIC.1.2"
@@ -243,8 +478,164 @@
      "status": "kicd_read"
     }
    ],
-   "skills": [],
-   "misconceptions": [],
+   "skills": [
+    {
+     "code": "CRES.G4.CREATI.MY_FAMILY_FAMILY_MEMBERS.FAMILY",
+     "name": "Name members of the nuclear and extended family and say why parents are honoured (Ephesians 6:1-3)",
+     "outcomes": [
+      "CRE.G4.CREATI.MY_FAMILY_FAMILY_MEMBERS.a",
+      "CRE.G4.CREATI.MY_FAMILY_FAMILY_MEMBERS.c"
+     ],
+     "mastery": "Tells the nuclear family (parents and children) from the extended family (grandparents, aunts, uncles, cousins), and knows that Ephesians 6:1-3 asks children to obey and honour their parents, and why. Evidence rule: at least four of the last five fresh questions right across at least two question forms, and no repeated pick of the same misconception.",
+     "question_forms": [
+      "who is in which family",
+      "what Ephesians 6:1-3 says",
+      "a way to honour parents"
+     ],
+     "thinking": [
+      "recall"
+     ],
+     "horeb_skill_ids": [],
+     "prerequisites": [
+      {
+       "requires": "CRE.G3.CREATI.MY_FAMILY.a",
+       "kind": "outcome",
+       "strength": "essential",
+       "reason": "Proposed: this skill builds on it. To confirm by a CRE teacher.",
+       "status": "proposed"
+      }
+     ],
+     "status": "proposed"
+    },
+    {
+     "code": "CRES.G4.CREATI.MY_FAMILY_FAMILY_MEMBERS.PROTECTION",
+     "name": "Know how a child protects himself or herself and whom to tell if touched wrongly",
+     "outcomes": [
+      "CRE.G4.CREATI.MY_FAMILY_FAMILY_MEMBERS.a_",
+      "CRE.G4.CREATI.MY_FAMILY_FAMILY_MEMBERS.b_",
+      "CRE.G4.CREATI.MY_FAMILY_FAMILY_MEMBERS.c_"
+     ],
+     "mastery": "Knows the body is private, that a child says NO, goes away and tells a trusted adult (a parent, a teacher, a church leader, the chief or the Childline Kenya helpline 116) if touched wrongly or asked to keep a secret, keeps telling until someone helps, and that it is never the child's fault. Evidence rule: at least four of the last five fresh questions right across at least two question forms, and no repeated pick of the same misconception.",
+     "question_forms": [
+      "what to do in a situation",
+      "whom to tell",
+      "which gift or invitation to refuse"
+     ],
+     "thinking": [
+      "recall",
+      "reasoning"
+     ],
+     "horeb_skill_ids": [],
+     "prerequisites": [
+      {
+       "requires": "CRE.G3.CHRIST.TRUST.b",
+       "kind": "outcome",
+       "strength": "essential",
+       "reason": "Proposed: this skill builds on it. To confirm by a CRE teacher.",
+       "status": "proposed"
+      }
+     ],
+     "status": "proposed"
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "CRES.G4.CREATI.MY_FAMILY_FAMILY_MEMBERS.FAMILY.M_C4_FAM_NUC_EXT",
+     "skill": "CRES.G4.CREATI.MY_FAMILY_FAMILY_MEMBERS.FAMILY",
+     "error": "Mixes the nuclear and the extended family.",
+     "example": {
+      "question": "Who belongs to the extended family?",
+      "wrong_answer": "Only mother, father and children",
+      "correct_answer": "Grandparents, aunts, uncles and cousins"
+     },
+     "cause": "The two names sound alike.",
+     "reveals": "Offer \"Only mother, father and children\" beside \"Grandparents, aunts, uncles and cousins\" and ask the child to choose.",
+     "help": "Draw a small circle for the home and a bigger circle around it for relatives.",
+     "feedback": "The nuclear family is parents and their children. The extended family includes grandparents, aunts, uncles and cousins too.",
+     "source": "common learner error; to confirm by a CRE teacher",
+     "status": "draft"
+    },
+    {
+     "code": "CRES.G4.CREATI.MY_FAMILY_FAMILY_MEMBERS.FAMILY.M_C4_FAM_HOUSE_ONLY",
+     "skill": "CRES.G4.CREATI.MY_FAMILY_FAMILY_MEMBERS.FAMILY",
+     "error": "Thinks family means only the people living in the same house.",
+     "example": {
+      "question": "Who counts as your family?",
+      "wrong_answer": "Only those who live in my house",
+      "correct_answer": "Those I live with and relatives who live elsewhere"
+     },
+     "cause": "Many children see relatives rarely, and forget they are family.",
+     "reveals": "Offer \"Only those who live in my house\" beside \"Those I live with and relatives who live elsewhere\" and ask the child to choose.",
+     "help": "Ask the child to name a relative who lives far away and how they keep in touch.",
+     "feedback": "Your family includes relatives who do not live with you, such as a grandmother in the village. They are family even if you see them rarely.",
+     "source": "common learner error; to confirm by a CRE teacher",
+     "status": "draft"
+    },
+    {
+     "code": "CRES.G4.CREATI.MY_FAMILY_FAMILY_MEMBERS.FAMILY.M_C4_FAM_HONOUR_IF",
+     "skill": "CRES.G4.CREATI.MY_FAMILY_FAMILY_MEMBERS.FAMILY",
+     "error": "Thinks honouring parents is only for when they give us things or agree with us.",
+     "example": {
+      "question": "When should a child honour his parents, according to Ephesians 6:1-3?",
+      "wrong_answer": "Only when they give me what I want",
+      "correct_answer": "Always, because it is right"
+     },
+     "cause": "Honour is mixed up with a bargain.",
+     "reveals": "Offer \"Only when they give me what I want\" beside \"Always, because it is right\" and ask the child to choose.",
+     "help": "Read Ephesians 6:1-3 and note the word \"right\" and the promise at the end.",
+     "feedback": "Ephesians 6:1-3 says to obey and honour your parents because this is right, and that it brings a good life. Honour does not depend on gifts.",
+     "source": "common learner error; to confirm by a CRE teacher",
+     "status": "draft"
+    },
+    {
+     "code": "CRES.G4.CREATI.MY_FAMILY_FAMILY_MEMBERS.PROTECTION.M_C4_PRO_SECRET",
+     "skill": "CRES.G4.CREATI.MY_FAMILY_FAMILY_MEMBERS.PROTECTION",
+     "error": "Thinks a child must keep a secret when an adult asks for it.",
+     "example": {
+      "question": "An adult touches you in a way that feels wrong and says \"keep it a secret\". What should you do?",
+      "wrong_answer": "Keep the secret so I do not get in trouble",
+      "correct_answer": "Say NO, go away and tell a trusted adult"
+     },
+     "cause": "The child fears trouble or is told to be quiet.",
+     "reveals": "Offer \"Keep the secret so I do not get in trouble\" beside \"Say NO, go away and tell a trusted adult\" and ask the child to choose.",
+     "help": "Say clearly: a secret about touching is never to be kept. Practise telling a teacher or parent.",
+     "feedback": "A wrong touch is never a secret to keep. Say NO, go away and tell a trusted adult, such as a parent or teacher, or call Childline Kenya on 116.",
+     "source": "common learner error; to confirm by a CRE teacher",
+     "status": "draft"
+    },
+    {
+     "code": "CRES.G4.CREATI.MY_FAMILY_FAMILY_MEMBERS.PROTECTION.M_C4_PRO_STRANGER_ONLY",
+     "skill": "CRES.G4.CREATI.MY_FAMILY_FAMILY_MEMBERS.PROTECTION",
+     "error": "Thinks only strangers can hurt a child and that people we know are always safe.",
+     "example": {
+      "question": "Who might touch a child in a wrong way?",
+      "wrong_answer": "Only strangers",
+      "correct_answer": "Anyone, so a child must know what is not allowed and tell"
+     },
+     "cause": "Warnings about strangers hide that harm can come from known people.",
+     "reveals": "Offer \"Only strangers\" beside \"Anyone, so a child must know what is not allowed and tell\" and ask the child to choose.",
+     "help": "Teach the rule: private parts are private, whoever asks.",
+     "feedback": "Anyone can do wrong, even a person we know. The rule is that private parts are private. If anyone breaks it, say NO and tell a trusted adult.",
+     "source": "common learner error; to confirm by a CRE teacher",
+     "status": "draft"
+    },
+    {
+     "code": "CRES.G4.CREATI.MY_FAMILY_FAMILY_MEMBERS.PROTECTION.M_C4_PRO_BLAME_SELF",
+     "skill": "CRES.G4.CREATI.MY_FAMILY_FAMILY_MEMBERS.PROTECTION",
+     "error": "Thinks it is the child's fault if he or she is touched wrongly, so there is no need to tell.",
+     "example": {
+      "question": "A child was touched wrongly. Whose fault is it?",
+      "wrong_answer": "The child's fault, so she should say nothing",
+      "correct_answer": "Never the child's fault, and she should tell"
+     },
+     "cause": "Shame and fear stop a child from telling.",
+     "reveals": "Offer \"The child's fault, so she should say nothing\" beside \"Never the child's fault, and she should tell\" and ask the child to choose.",
+     "help": "Say it slowly: it is never your fault. Name the adults who will believe and help.",
+     "feedback": "It is never the child's fault. The person who touched wrongly did wrong. Tell a trusted adult, and keep telling until someone helps.",
+     "source": "common learner error; to confirm by a CRE teacher",
+     "status": "draft"
+    }
+   ],
    "rubric_indicators": [
     "CRE.G4.RUBRIC.1.1",
     "CRE.G4.RUBRIC.1.2"
@@ -304,8 +695,87 @@
      "status": "kicd_read"
     }
    ],
-   "skills": [],
-   "misconceptions": [],
+   "skills": [
+    {
+     "code": "CRES.G4.CREATI.ATTRIBUTES_OF_GOD.ATTRIBUTES",
+     "name": "Know three attributes of God: sole creator, loving Father, holy (Genesis 1, 1 John 4:7-8, 1 Samuel 2:2)",
+     "outcomes": [
+      "CRE.G4.CREATI.ATTRIBUTES_OF_GOD.a",
+      "CRE.G4.CREATI.ATTRIBUTES_OF_GOD.b",
+      "CRE.G4.CREATI.ATTRIBUTES_OF_GOD.c"
+     ],
+     "mastery": "Says that God alone made everything (Genesis 1), that God is love and a loving Father (1 John 4:7-8), and that God is holy: there is none holy like the Lord (1 Samuel 2:2). Does not say that God shares making the world or loves only good children. Evidence rule: at least four of the last five fresh questions right across at least two question forms, and no repeated pick of the same misconception.",
+     "question_forms": [
+      "which attribute a verse shows",
+      "what an attribute means",
+      "which sentence about God is true"
+     ],
+     "thinking": [
+      "recall"
+     ],
+     "horeb_skill_ids": [],
+     "prerequisites": [
+      {
+       "requires": "CRE.G3.CREATI.ADAM_AND_EVE.a",
+       "kind": "outcome",
+       "strength": "essential",
+       "reason": "Proposed: this skill builds on it. To confirm by a CRE teacher.",
+       "status": "proposed"
+      }
+     ],
+     "status": "proposed"
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "CRES.G4.CREATI.ATTRIBUTES_OF_GOD.ATTRIBUTES.M_C4_ATT_SHARED",
+     "skill": "CRES.G4.CREATI.ATTRIBUTES_OF_GOD.ATTRIBUTES",
+     "error": "Thinks God made the world together with others or that others made parts of it.",
+     "example": {
+      "question": "Who made everything, according to Genesis 1?",
+      "wrong_answer": "God and other gods together",
+      "correct_answer": "God alone"
+     },
+     "cause": "Stories from other places mention many makers.",
+     "reveals": "Offer \"God and other gods together\" beside \"God alone\" and ask the child to choose.",
+     "help": "Read Genesis 1:1 and count how many makers are named.",
+     "feedback": "Genesis 1 shows God as the sole creator. He alone made the heavens, the earth and everything in them.",
+     "source": "common learner error; to confirm by a CRE teacher",
+     "status": "draft"
+    },
+    {
+     "code": "CRES.G4.CREATI.ATTRIBUTES_OF_GOD.ATTRIBUTES.M_C4_ATT_LOVE_EARNED",
+     "skill": "CRES.G4.CREATI.ATTRIBUTES_OF_GOD.ATTRIBUTES",
+     "error": "Thinks God loves only children who are good.",
+     "example": {
+      "question": "What does 1 John 4:7-8 say about God?",
+      "wrong_answer": "God loves only the children who are always good",
+      "correct_answer": "God is love"
+     },
+     "cause": "A child learns that bad behaviour is punished and thinks love is the same.",
+     "reveals": "Offer \"God loves only the children who are always good\" beside \"God is love\" and ask the child to choose.",
+     "help": "Read \"God is love\" and ask whether love is a reward.",
+     "feedback": "1 John 4:8 says \"God is love\". He is a loving Father to every child, and his love does not depend on being good all the time.",
+     "source": "common learner error; to confirm by a CRE teacher",
+     "status": "draft"
+    },
+    {
+     "code": "CRES.G4.CREATI.ATTRIBUTES_OF_GOD.ATTRIBUTES.M_C4_ATT_HOLY_BIG",
+     "skill": "CRES.G4.CREATI.ATTRIBUTES_OF_GOD.ATTRIBUTES",
+     "error": "Thinks holy means big, old or far away.",
+     "example": {
+      "question": "What does holy mean when we say God is holy?",
+      "wrong_answer": "Very big and old",
+      "correct_answer": "Perfect and set apart, without sin"
+     },
+     "cause": "The word is not used in daily speech.",
+     "reveals": "Offer \"Very big and old\" beside \"Perfect and set apart, without sin\" and ask the child to choose.",
+     "help": "Link it to 1 Samuel 2:2: there is no one holy like the Lord.",
+     "feedback": "Holy means set apart and perfect, without any sin. 1 Samuel 2:2 says there is no one holy like the Lord.",
+     "source": "common learner error; to confirm by a CRE teacher",
+     "status": "draft"
+    }
+   ],
    "rubric_indicators": [
     "CRE.G4.RUBRIC.1.1",
     "CRE.G4.RUBRIC.1.2"
@@ -379,8 +849,85 @@
      "indicator": "CRE.G4.RUBRIC.2.1"
     }
    ],
-   "skills": [],
-   "misconceptions": [],
+   "skills": [
+    {
+     "code": "CRES.G4.THE_HO.THE_INSPIRED_WORD_OF_GOD.BIBLE_BOOKS",
+     "name": "Tell the Old Testament from the New Testament and place well-known books",
+     "outcomes": [
+      "CRE.G4.THE_HO.THE_INSPIRED_WORD_OF_GOD.b"
+     ],
+     "mastery": "Places well-known books in the right Testament (Genesis, Exodus, Psalms, Isaiah in the Old; Matthew, Mark, Luke, John, Acts, Revelation in the New) and knows the first book of each. Evidence rule: at least four of the last five fresh questions right across at least two question forms, and no repeated pick of the same misconception.",
+     "question_forms": [
+      "which Testament a book is in",
+      "the first book",
+      "which books are the four Gospels"
+     ],
+     "thinking": [
+      "recall"
+     ],
+     "horeb_skill_ids": [],
+     "prerequisites": [
+      {
+       "requires": "CRE.G3.THE_BI.THE_BIBLE_AS_THE_WORD_OF.c",
+       "kind": "outcome",
+       "strength": "essential",
+       "reason": "Proposed: this skill builds on it. To confirm by a CRE teacher.",
+       "status": "proposed"
+      }
+     ],
+     "status": "proposed"
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "CRES.G4.THE_HO.THE_INSPIRED_WORD_OF_GOD.BIBLE_BOOKS.M_C4_BK_NT_IN_OT",
+     "skill": "CRES.G4.THE_HO.THE_INSPIRED_WORD_OF_GOD.BIBLE_BOOKS",
+     "error": "Puts a New Testament book in the Old Testament.",
+     "example": {
+      "question": "Which book is in the Old Testament?",
+      "wrong_answer": "Matthew",
+      "correct_answer": "Genesis"
+     },
+     "cause": "The child knows the names but not the two parts.",
+     "reveals": "Offer \"Matthew\" beside \"Genesis\" and ask the child to choose.",
+     "help": "Draw the Bible in two halves and sort book names on cards.",
+     "feedback": "Genesis, Exodus, Psalms and Isaiah are in the Old Testament. Matthew, Mark, Luke, John, Acts and Revelation are in the New Testament.",
+     "source": "common learner error; to confirm by a CRE teacher",
+     "status": "draft"
+    },
+    {
+     "code": "CRES.G4.THE_HO.THE_INSPIRED_WORD_OF_GOD.BIBLE_BOOKS.M_C4_BK_OT_IN_NT",
+     "skill": "CRES.G4.THE_HO.THE_INSPIRED_WORD_OF_GOD.BIBLE_BOOKS",
+     "error": "Puts an Old Testament book in the New Testament.",
+     "example": {
+      "question": "Which book is in the New Testament?",
+      "wrong_answer": "Psalms",
+      "correct_answer": "Acts"
+     },
+     "cause": "The child links Psalms or Isaiah with church songs and readings.",
+     "reveals": "Offer \"Psalms\" beside \"Acts\" and ask the child to choose.",
+     "help": "Sort the cards again and say which half each belongs to.",
+     "feedback": "Psalms and Isaiah are in the Old Testament. The New Testament holds the four Gospels, Acts, the letters and Revelation.",
+     "source": "common learner error; to confirm by a CRE teacher",
+     "status": "draft"
+    },
+    {
+     "code": "CRES.G4.THE_HO.THE_INSPIRED_WORD_OF_GOD.BIBLE_BOOKS.M_C4_BK_FIRST",
+     "skill": "CRES.G4.THE_HO.THE_INSPIRED_WORD_OF_GOD.BIBLE_BOOKS",
+     "error": "Names the wrong first book of the Bible or of the New Testament.",
+     "example": {
+      "question": "Which is the first book of the Bible?",
+      "wrong_answer": "Matthew",
+      "correct_answer": "Genesis"
+     },
+     "cause": "Matthew is the first book children meet in the New Testament.",
+     "reveals": "Offer \"Matthew\" beside \"Genesis\" and ask the child to choose.",
+     "help": "Open a Bible together at the first page.",
+     "feedback": "Genesis is the first book of the Bible, and Matthew is the first book of the New Testament.",
+     "source": "common learner error; to confirm by a CRE teacher",
+     "status": "draft"
+    }
+   ],
    "rubric_indicators": [
     "CRE.G4.RUBRIC.2.1"
    ]
@@ -450,8 +997,88 @@
      "indicator": "CRE.G4.RUBRIC.2.1"
     }
    ],
-   "skills": [],
-   "misconceptions": [],
+   "skills": [
+    {
+     "code": "CRES.G4.THE_HO.ZACCHAEUS_THE_TAX_COLLEC.ZACCHAEUS",
+     "name": "Know the story of Zacchaeus (Luke 19:2-10), how he changed and what repenting means",
+     "outcomes": [
+      "CRE.G4.THE_HO.ZACCHAEUS_THE_TAX_COLLEC.a",
+      "CRE.G4.THE_HO.ZACCHAEUS_THE_TAX_COLLEC.b",
+      "CRE.G4.THE_HO.ZACCHAEUS_THE_TAX_COLLEC.d"
+     ],
+     "mastery": "Says that Zacchaeus was a rich chief tax collector, short, who climbed a tree to see Jesus; that Jesus called him down and went to his house though the crowd grumbled; that he gave half his possessions to the poor and promised to repay four times anything taken wrongly; and that repenting means being sorry and turning from wrong. Evidence rule: at least four of the last five fresh questions right across at least two question forms, and no repeated pick of the same misconception.",
+     "question_forms": [
+      "recall a fact of the story",
+      "what Zacchaeus did to show he had changed",
+      "what repenting means"
+     ],
+     "thinking": [
+      "recall",
+      "reasoning"
+     ],
+     "horeb_skill_ids": [],
+     "prerequisites": [
+      {
+       "requires": "CRE.G3.CHRIST.HONESTY.a",
+       "kind": "outcome",
+       "strength": "essential",
+       "reason": "Proposed: this skill builds on it. To confirm by a CRE teacher.",
+       "status": "proposed"
+      }
+     ],
+     "status": "proposed"
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "CRES.G4.THE_HO.ZACCHAEUS_THE_TAX_COLLEC.ZACCHAEUS.M_C4_ZAC_NUMBERS",
+     "skill": "CRES.G4.THE_HO.ZACCHAEUS_THE_TAX_COLLEC.ZACCHAEUS",
+     "error": "Mixes the amounts Zacchaeus promised.",
+     "example": {
+      "question": "What did Zacchaeus promise to give to the poor?",
+      "wrong_answer": "All that he owned",
+      "correct_answer": "Half of what he owned"
+     },
+     "cause": "The child remembers that he gave a lot, not how much.",
+     "reveals": "Offer \"All that he owned\" beside \"Half of what he owned\" and ask the child to choose.",
+     "help": "Read Luke 19:8 and underline half and four times.",
+     "feedback": "Zacchaeus promised to give half of his possessions to the poor and to pay back four times anything he had taken wrongly (Luke 19:8).",
+     "source": "common learner error; to confirm by a CRE teacher",
+     "status": "draft"
+    },
+    {
+     "code": "CRES.G4.THE_HO.ZACCHAEUS_THE_TAX_COLLEC.ZACCHAEUS.M_C4_ZAC_CROWD_GLAD",
+     "skill": "CRES.G4.THE_HO.ZACCHAEUS_THE_TAX_COLLEC.ZACCHAEUS",
+     "error": "Thinks the crowd was pleased when Jesus went to Zacchaeus' house.",
+     "example": {
+      "question": "What did the people say when Jesus went to Zacchaeus' house?",
+      "wrong_answer": "They were glad and thanked Jesus",
+      "correct_answer": "They grumbled that he went to a sinner"
+     },
+     "cause": "The child imagines a happy ending for everyone.",
+     "reveals": "Offer \"They were glad and thanked Jesus\" beside \"They grumbled that he went to a sinner\" and ask the child to choose.",
+     "help": "Read Luke 19:7 and ask why they grumbled.",
+     "feedback": "Luke 19:7 says the people grumbled that Jesus had gone to be the guest of a sinner. But Jesus came to seek and to save the lost.",
+     "source": "common learner error; to confirm by a CRE teacher",
+     "status": "draft"
+    },
+    {
+     "code": "CRES.G4.THE_HO.ZACCHAEUS_THE_TAX_COLLEC.ZACCHAEUS.M_C4_ZAC_SORRY_ONLY",
+     "skill": "CRES.G4.THE_HO.ZACCHAEUS_THE_TAX_COLLEC.ZACCHAEUS",
+     "error": "Thinks repenting means only saying sorry, with no change.",
+     "example": {
+      "question": "What does it mean to repent?",
+      "wrong_answer": "To say sorry in words and go on as before",
+      "correct_answer": "To be sorry for wrong and turn away from it"
+     },
+     "cause": "Saying sorry is quick, changing is hard.",
+     "reveals": "Offer \"To say sorry in words and go on as before\" beside \"To be sorry for wrong and turn away from it\" and ask the child to choose.",
+     "help": "Ask what Zacchaeus did that showed he meant it.",
+     "feedback": "To repent is to be sorry for wrong and turn away from it. Zacchaeus showed it by giving to the poor and repaying what he had taken.",
+     "source": "common learner error; to confirm by a CRE teacher",
+     "status": "draft"
+    }
+   ],
    "rubric_indicators": [
     "CRE.G4.RUBRIC.2.1"
    ]
@@ -521,8 +1148,87 @@
      "indicator": "CRE.G4.RUBRIC.2.1"
     }
    ],
-   "skills": [],
-   "misconceptions": [],
+   "skills": [
+    {
+     "code": "CRES.G4.THE_HO.BALAAM_S_DONKEY.BALAAM",
+     "name": "Know the story of Balaam and his donkey (Numbers 22) and why we obey God",
+     "outcomes": [
+      "CRE.G4.THE_HO.BALAAM_S_DONKEY.a",
+      "CRE.G4.THE_HO.BALAAM_S_DONKEY.b"
+     ],
+     "mastery": "Says that Balak king of Moab sent for Balaam, that God told him to say only what God told him, that the donkey saw the angel of the Lord with a drawn sword three times before Balaam did, that the Lord opened the donkey's mouth and then Balaam's eyes, and that the lesson is to obey God. Evidence rule: at least four of the last five fresh questions right across at least two question forms, and no repeated pick of the same misconception.",
+     "question_forms": [
+      "recall a fact of the story",
+      "who saw the angel first",
+      "the lesson of the story"
+     ],
+     "thinking": [
+      "recall",
+      "reasoning"
+     ],
+     "horeb_skill_ids": [],
+     "prerequisites": [
+      {
+       "requires": "CRE.G3.THE_BI.BIBLE_STORY_THE_BIG_FISH.b",
+       "kind": "outcome",
+       "strength": "essential",
+       "reason": "Proposed: this skill builds on it. To confirm by a CRE teacher.",
+       "status": "proposed"
+      }
+     ],
+     "status": "proposed"
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "CRES.G4.THE_HO.BALAAM_S_DONKEY.BALAAM.M_C4_BAL_SAW_FIRST",
+     "skill": "CRES.G4.THE_HO.BALAAM_S_DONKEY.BALAAM",
+     "error": "Thinks Balaam saw the angel first.",
+     "example": {
+      "question": "Who saw the angel of the Lord first?",
+      "wrong_answer": "Balaam",
+      "correct_answer": "The donkey"
+     },
+     "cause": "The child expects the prophet to see more than an animal.",
+     "reveals": "Offer \"Balaam\" beside \"The donkey\" and ask the child to choose.",
+     "help": "Read Numbers 22:23 and 22:31 side by side.",
+     "feedback": "The donkey saw the angel with the drawn sword first. Balaam saw him only when the Lord opened his eyes (Numbers 22:31).",
+     "source": "common learner error; to confirm by a CRE teacher",
+     "status": "draft"
+    },
+    {
+     "code": "CRES.G4.THE_HO.BALAAM_S_DONKEY.BALAAM.M_C4_BAL_CURSE_OK",
+     "skill": "CRES.G4.THE_HO.BALAAM_S_DONKEY.BALAAM",
+     "error": "Thinks God allowed Balaam to curse the Israelites.",
+     "example": {
+      "question": "What was Balaam told to do about the Israelites?",
+      "wrong_answer": "Curse them, for money",
+      "correct_answer": "Say only what God told him, and not curse them"
+     },
+     "cause": "The child follows the king's offer and forgets God's word.",
+     "reveals": "Offer \"Curse them, for money\" beside \"Say only what God told him, and not curse them\" and ask the child to choose.",
+     "help": "Read Numbers 22:12 and 22:20 aloud.",
+     "feedback": "God told Balaam not to curse the people, and to do only what he was told (Numbers 22:12, 20). Speak well of others, not ill.",
+     "source": "common learner error; to confirm by a CRE teacher",
+     "status": "draft"
+    },
+    {
+     "code": "CRES.G4.THE_HO.BALAAM_S_DONKEY.BALAAM.M_C4_BAL_STUBBORN",
+     "skill": "CRES.G4.THE_HO.BALAAM_S_DONKEY.BALAAM",
+     "error": "Thinks the donkey was stubborn and deserved to be beaten.",
+     "example": {
+      "question": "Why did the donkey turn aside and lie down?",
+      "wrong_answer": "Because she was stubborn",
+      "correct_answer": "Because she saw the angel and was protecting Balaam"
+     },
+     "cause": "Balaam's own words in the story make the donkey sound stubborn.",
+     "reveals": "Offer \"Because she was stubborn\" beside \"Because she saw the angel and was protecting Balaam\" and ask the child to choose.",
+     "help": "Read Numbers 22:33 where the angel explains.",
+     "feedback": "The donkey turned aside because she saw the angel. The angel said that if she had not, he would have killed Balaam (Numbers 22:33).",
+     "source": "common learner error; to confirm by a CRE teacher",
+     "status": "draft"
+    }
+   ],
    "rubric_indicators": [
     "CRE.G4.RUBRIC.2.1"
    ]
@@ -583,8 +1289,88 @@
      "indicator": "CRE.G4.RUBRIC.2.1"
     }
    ],
-   "skills": [],
-   "misconceptions": [],
+   "skills": [
+    {
+     "code": "CRES.G4.THE_HO.SAMSON_KILLS_A_LION.SAMSON",
+     "name": "Know how Samson killed a lion (Judges 14:5-9) and what it shows about God's power",
+     "outcomes": [
+      "CRE.G4.THE_HO.SAMSON_KILLS_A_LION.a",
+      "CRE.G4.THE_HO.SAMSON_KILLS_A_LION.b",
+      "CRE.G4.THE_HO.SAMSON_KILLS_A_LION.c"
+     ],
+     "mastery": "Says that a young lion roared at Samson, that the Spirit of the Lord came powerfully on him, that he tore it apart with his bare hands, and that he did not tell his parents; and that the story shows God's power at work in a person. Evidence rule: at least four of the last five fresh questions right across at least two question forms, and no repeated pick of the same misconception.",
+     "question_forms": [
+      "recall a fact of the story",
+      "where the strength came from",
+      "what the story shows about God"
+     ],
+     "thinking": [
+      "recall",
+      "reasoning"
+     ],
+     "horeb_skill_ids": [],
+     "prerequisites": [
+      {
+       "requires": "CRE.G3.THE_BI.BIBLE_STORY_THE_THREE_HE.b",
+       "kind": "outcome",
+       "strength": "essential",
+       "reason": "Proposed: this skill builds on it. To confirm by a CRE teacher.",
+       "status": "proposed"
+      }
+     ],
+     "status": "proposed"
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "CRES.G4.THE_HO.SAMSON_KILLS_A_LION.SAMSON.M_C4_SAM_WEAPON",
+     "skill": "CRES.G4.THE_HO.SAMSON_KILLS_A_LION.SAMSON",
+     "error": "Thinks Samson killed the lion with a weapon.",
+     "example": {
+      "question": "How did Samson kill the lion in Judges 14?",
+      "wrong_answer": "With a sword",
+      "correct_answer": "With his bare hands"
+     },
+     "cause": "Heroes in stories use weapons.",
+     "reveals": "Offer \"With a sword\" beside \"With his bare hands\" and ask the child to choose.",
+     "help": "Read Judges 14:6 and look for any weapon.",
+     "feedback": "Judges 14:6 says Samson tore the lion apart with his bare hands, with no weapon, because the Spirit of the Lord came on him.",
+     "source": "common learner error; to confirm by a CRE teacher",
+     "status": "draft"
+    },
+    {
+     "code": "CRES.G4.THE_HO.SAMSON_KILLS_A_LION.SAMSON.M_C4_SAM_OWN_STRENGTH",
+     "skill": "CRES.G4.THE_HO.SAMSON_KILLS_A_LION.SAMSON",
+     "error": "Thinks Samson was strong by himself, not by God's power.",
+     "example": {
+      "question": "Where did Samson's strength come from in this story?",
+      "wrong_answer": "From his own muscles alone",
+      "correct_answer": "From the Spirit of the Lord who came upon him"
+     },
+     "cause": "Stories about strong men credit the man.",
+     "reveals": "Offer \"From his own muscles alone\" beside \"From the Spirit of the Lord who came upon him\" and ask the child to choose.",
+     "help": "Read the words \"the Spirit of the Lord came powerfully upon him\".",
+     "feedback": "The strength came from the Spirit of the Lord, who came powerfully upon Samson. The story shows God's power.",
+     "source": "common learner error; to confirm by a CRE teacher",
+     "status": "draft"
+    },
+    {
+     "code": "CRES.G4.THE_HO.SAMSON_KILLS_A_LION.SAMSON.M_C4_SAM_TOLD",
+     "skill": "CRES.G4.THE_HO.SAMSON_KILLS_A_LION.SAMSON",
+     "error": "Thinks Samson told his parents about the lion.",
+     "example": {
+      "question": "What did Samson tell his parents about the lion?",
+      "wrong_answer": "He told them everything at once",
+      "correct_answer": "He told them nothing about it"
+     },
+     "cause": "The child expects a boy to boast of such a deed.",
+     "reveals": "Offer \"He told them everything at once\" beside \"He told them nothing about it\" and ask the child to choose.",
+     "help": "Read Judges 14:6 to the end of the verse.",
+     "feedback": "Judges 14:6 says Samson did not tell his father or mother what he had done.",
+     "source": "common learner error; to confirm by a CRE teacher",
+     "status": "draft"
+    }
+   ],
    "rubric_indicators": [
     "CRE.G4.RUBRIC.2.1"
    ]
@@ -679,8 +1465,166 @@
      "indicator": "CRE.G4.RUBRIC.2.1"
     }
    ],
-   "skills": [],
-   "misconceptions": [],
+   "skills": [
+    {
+     "code": "CRES.G4.THE_HO.JOSEPH_JOSEPH_INTERPRETS.JOSEPH_DREAM",
+     "name": "Know how Joseph interpreted Pharaoh's dreams (Genesis 41:14-24, 28-30)",
+     "outcomes": [
+      "CRE.G4.THE_HO.JOSEPH_JOSEPH_INTERPRETS.a",
+      "CRE.G4.THE_HO.JOSEPH_JOSEPH_INTERPRETS.a_"
+     ],
+     "mastery": "Says that Pharaoh sent for Joseph from prison, that he dreamed of seven fat cows eaten by seven thin cows and of seven good ears of grain swallowed by seven thin ones, that Joseph said God would give the answer, and that the dreams meant seven years of plenty followed by seven years of famine. Evidence rule: at least four of the last five fresh questions right across at least two question forms, and no repeated pick of the same misconception.",
+     "question_forms": [
+      "recall a fact of the dreams",
+      "what the dreams meant",
+      "who gave the answer"
+     ],
+     "thinking": [
+      "recall",
+      "reasoning"
+     ],
+     "horeb_skill_ids": [],
+     "prerequisites": [
+      {
+       "requires": "CRE.G3.THE_BI.BIBLE_STORY_NAAMAN_IS_HE.a",
+       "kind": "outcome",
+       "strength": "essential",
+       "reason": "Proposed: this skill builds on it. To confirm by a CRE teacher.",
+       "status": "proposed"
+      }
+     ],
+     "status": "proposed"
+    },
+    {
+     "code": "CRES.G4.THE_HO.JOSEPH_JOSEPH_INTERPRETS.JOSEPH_WISDOM",
+     "name": "Know that wisdom comes from God and what Proverbs 1:7 means by the fear of the Lord",
+     "outcomes": [
+      "CRE.G4.THE_HO.JOSEPH_JOSEPH_INTERPRETS.b",
+      "CRE.G4.THE_HO.JOSEPH_JOSEPH_INTERPRETS.b_",
+      "CRE.G4.THE_HO.JOSEPH_JOSEPH_INTERPRETS.c",
+      "CRE.G4.THE_HO.JOSEPH_JOSEPH_INTERPRETS.c_"
+     ],
+     "mastery": "Says that Joseph depended on God for the meaning of the dreams (Genesis 41:16), that Proverbs 1:7 says the fear of the Lord is the beginning of wisdom (knowledge), and that fearing the Lord means honouring and obeying him, not being afraid of him. Evidence rule: at least four of the last five fresh questions right across at least two question forms, and no repeated pick of the same misconception.",
+     "question_forms": [
+      "where Joseph's wisdom came from",
+      "what the fear of the Lord means",
+      "a wise choice that depends on God"
+     ],
+     "thinking": [
+      "recall",
+      "reasoning"
+     ],
+     "horeb_skill_ids": [],
+     "prerequisites": [
+      {
+       "requires": "CRES.G4.THE_HO.JOSEPH_JOSEPH_INTERPRETS.JOSEPH_DREAM",
+       "kind": "skill",
+       "strength": "essential",
+       "reason": "Proposed: this skill builds on it. To confirm by a CRE teacher.",
+       "status": "proposed"
+      }
+     ],
+     "status": "proposed"
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "CRES.G4.THE_HO.JOSEPH_JOSEPH_INTERPRETS.JOSEPH_DREAM.M_C4_JD_OWN_POWER",
+     "skill": "CRES.G4.THE_HO.JOSEPH_JOSEPH_INTERPRETS.JOSEPH_DREAM",
+     "error": "Thinks Joseph worked out the dream by his own cleverness.",
+     "example": {
+      "question": "Who gave the meaning of Pharaoh's dreams, according to Joseph?",
+      "wrong_answer": "Joseph, because he was clever",
+      "correct_answer": "God"
+     },
+     "cause": "Children admire clever people in stories.",
+     "reveals": "Offer \"Joseph, because he was clever\" beside \"God\" and ask the child to choose.",
+     "help": "Read Genesis 41:16: \"I cannot do it, but God will give Pharaoh the answer\".",
+     "feedback": "Joseph told Pharaoh he could not do it himself, but God would give the answer (Genesis 41:16).",
+     "source": "common learner error; to confirm by a CRE teacher",
+     "status": "draft"
+    },
+    {
+     "code": "CRES.G4.THE_HO.JOSEPH_JOSEPH_INTERPRETS.JOSEPH_DREAM.M_C4_JD_NUMBERS",
+     "skill": "CRES.G4.THE_HO.JOSEPH_JOSEPH_INTERPRETS.JOSEPH_DREAM",
+     "error": "Mixes the numbers in the dreams.",
+     "example": {
+      "question": "How many years of plenty did the seven fat cows stand for?",
+      "wrong_answer": "Three years",
+      "correct_answer": "Seven years"
+     },
+     "cause": "The child remembers the cows but not what they stood for.",
+     "reveals": "Offer \"Three years\" beside \"Seven years\" and ask the child to choose.",
+     "help": "Draw the seven fat cows and write a year under each.",
+     "feedback": "The seven fat cows and seven good ears stood for seven years of plenty. The seven thin cows stood for seven years of famine.",
+     "source": "common learner error; to confirm by a CRE teacher",
+     "status": "draft"
+    },
+    {
+     "code": "CRES.G4.THE_HO.JOSEPH_JOSEPH_INTERPRETS.JOSEPH_DREAM.M_C4_JD_REVERSED",
+     "skill": "CRES.G4.THE_HO.JOSEPH_JOSEPH_INTERPRETS.JOSEPH_DREAM",
+     "error": "Reverses what the fat and thin cows meant.",
+     "example": {
+      "question": "What did the seven thin cows eating the fat cows mean?",
+      "wrong_answer": "Seven years of plenty",
+      "correct_answer": "Seven years of famine that would swallow up the plenty"
+     },
+     "cause": "Fat sounds bad and thin sounds weak.",
+     "reveals": "Offer \"Seven years of plenty\" beside \"Seven years of famine that would swallow up the plenty\" and ask the child to choose.",
+     "help": "Draw it: fat cows are plenty, thin cows are famine.",
+     "feedback": "The seven thin cows stood for seven years of famine that would follow the seven years of plenty (Genesis 41:29-30).",
+     "source": "common learner error; to confirm by a CRE teacher",
+     "status": "draft"
+    },
+    {
+     "code": "CRES.G4.THE_HO.JOSEPH_JOSEPH_INTERPRETS.JOSEPH_WISDOM.M_C4_JW_TERROR",
+     "skill": "CRES.G4.THE_HO.JOSEPH_JOSEPH_INTERPRETS.JOSEPH_WISDOM",
+     "error": "Thinks the fear of the Lord means being terrified of God.",
+     "example": {
+      "question": "What does \"the fear of the Lord\" mean in Proverbs 1:7?",
+      "wrong_answer": "To be scared of God and hide from him",
+      "correct_answer": "To honour God and obey him"
+     },
+     "cause": "The word fear means fright in daily speech.",
+     "reveals": "Offer \"To be scared of God and hide from him\" beside \"To honour God and obey him\" and ask the child to choose.",
+     "help": "Compare with respecting a good teacher or a loving parent.",
+     "feedback": "The fear of the Lord means honouring God and obeying him because we love him. It is the beginning of wisdom (Proverbs 1:7).",
+     "source": "common learner error; to confirm by a CRE teacher",
+     "status": "draft"
+    },
+    {
+     "code": "CRES.G4.THE_HO.JOSEPH_JOSEPH_INTERPRETS.JOSEPH_WISDOM.M_C4_JW_SCHOOL_ONLY",
+     "skill": "CRES.G4.THE_HO.JOSEPH_JOSEPH_INTERPRETS.JOSEPH_WISDOM",
+     "error": "Thinks wisdom comes only from school or from age.",
+     "example": {
+      "question": "Where does true wisdom begin, according to Proverbs 1:7?",
+      "wrong_answer": "With being old and having many degrees",
+      "correct_answer": "With honouring the Lord"
+     },
+     "cause": "The child links wisdom with grown-ups and school.",
+     "reveals": "Offer \"With being old and having many degrees\" beside \"With honouring the Lord\" and ask the child to choose.",
+     "help": "Remind the child that Joseph was a young man in prison.",
+     "feedback": "Proverbs 1:7 says the fear of the Lord is the beginning of wisdom. Joseph was young and in prison, yet God gave him wisdom.",
+     "source": "common learner error; to confirm by a CRE teacher",
+     "status": "draft"
+    },
+    {
+     "code": "CRES.G4.THE_HO.JOSEPH_JOSEPH_INTERPRETS.JOSEPH_WISDOM.M_C4_JW_SELF_GLORY",
+     "skill": "CRES.G4.THE_HO.JOSEPH_JOSEPH_INTERPRETS.JOSEPH_WISDOM",
+     "error": "Thinks that a wise person should take the praise for himself.",
+     "example": {
+      "question": "Joseph was praised by Pharaoh. What did Joseph first say?",
+      "wrong_answer": "That he alone was wise",
+      "correct_answer": "That God gives the answer"
+     },
+     "cause": "Praise is pleasant and children think it belongs to the one praised.",
+     "reveals": "Offer \"That he alone was wise\" beside \"That God gives the answer\" and ask the child to choose.",
+     "help": "Read Genesis 41:16 and ask who got the credit.",
+     "feedback": "Joseph gave the credit to God (Genesis 41:16). A wise person depends on God and gives him the praise.",
+     "source": "common learner error; to confirm by a CRE teacher",
+     "status": "draft"
+    }
+   ],
    "rubric_indicators": [
     "CRE.G4.RUBRIC.2.1"
    ]
@@ -805,8 +1749,92 @@
      "indicator": "CRE.G4.RUBRIC.2.1"
     }
    ],
-   "skills": [],
-   "misconceptions": [],
+   "skills": [
+    {
+     "code": "CRES.G4.THE_HO.BIBLE_STRAND_QUESTION_S_.ABRAHAM",
+     "name": "Know the call of Abraham (Genesis 12:1-5) and the change of his name (Genesis 17:1-5)",
+     "outcomes": [
+      "CRE.G4.THE_HO.BIBLE_STRAND_QUESTION_S_.a",
+      "CRE.G4.THE_HO.BIBLE_STRAND_QUESTION_S_.a_",
+      "CRE.G4.THE_HO.BIBLE_STRAND_QUESTION_S_.b",
+      "CRE.G4.THE_HO.BIBLE_STRAND_QUESTION_S_.b_",
+      "CRE.G4.THE_HO.BIBLE_STRAND_QUESTION_S_.d",
+      "CRE.G4.THE_HO.BIBLE_STRAND_QUESTION_S_.d_"
+     ],
+     "mastery": "Says that God told Abram to leave his country for a land God would show him, with the promise of a great nation and a blessing for all peoples (12:1-3), that Abram obeyed, taking Sarai and Lot, and that God changed his name to Abraham, a father of many nations (17:5). Evidence rule: at least four of the last five fresh questions right across at least two question forms, and no repeated pick of the same misconception.",
+     "question_forms": [
+      "recall a fact of the call",
+      "what God promised",
+      "the new name and its meaning",
+      "why Abraham obeyed"
+     ],
+     "thinking": [
+      "recall",
+      "reasoning"
+     ],
+     "horeb_skill_ids": [],
+     "prerequisites": [
+      {
+       "requires": "CRE.G3.THE_BI.BIBLE_STORY_MOSES_AND_TH.a",
+       "kind": "outcome",
+       "strength": "essential",
+       "reason": "Proposed: this skill builds on it. To confirm by a CRE teacher.",
+       "status": "proposed"
+      }
+     ],
+     "status": "proposed"
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "CRES.G4.THE_HO.BIBLE_STRAND_QUESTION_S_.ABRAHAM.M_C4_ABR_KNEW_PLACE",
+     "skill": "CRES.G4.THE_HO.BIBLE_STRAND_QUESTION_S_.ABRAHAM",
+     "error": "Thinks God told Abram exactly where he was going.",
+     "example": {
+      "question": "What did God say about the land Abram would go to?",
+      "wrong_answer": "He named the exact place",
+      "correct_answer": "It was a land God would show him"
+     },
+     "cause": "The child thinks of a map and a clear destination.",
+     "reveals": "Offer \"He named the exact place\" beside \"It was a land God would show him\" and ask the child to choose.",
+     "help": "Read Genesis 12:1 and find the words \"that I will show you\".",
+     "feedback": "God told Abram to go to a land that he would show him (Genesis 12:1). Abram obeyed without knowing the way.",
+     "source": "common learner error; to confirm by a CRE teacher",
+     "status": "draft"
+    },
+    {
+     "code": "CRES.G4.THE_HO.BIBLE_STRAND_QUESTION_S_.ABRAHAM.M_C4_ABR_ALONE",
+     "skill": "CRES.G4.THE_HO.BIBLE_STRAND_QUESTION_S_.ABRAHAM",
+     "error": "Thinks Abram left alone.",
+     "example": {
+      "question": "Who went with Abram to the new land?",
+      "wrong_answer": "Nobody, he went alone",
+      "correct_answer": "Sarai his wife and Lot his nephew, with their people"
+     },
+     "cause": "The child pictures one man walking out.",
+     "reveals": "Offer \"Nobody, he went alone\" beside \"Sarai his wife and Lot his nephew, with their people\" and ask the child to choose.",
+     "help": "Read Genesis 12:4-5 and list the people named.",
+     "feedback": "Abram took Sarai his wife and Lot his nephew and the people they had gathered (Genesis 12:5).",
+     "source": "common learner error; to confirm by a CRE teacher",
+     "status": "draft"
+    },
+    {
+     "code": "CRES.G4.THE_HO.BIBLE_STRAND_QUESTION_S_.ABRAHAM.M_C4_ABR_NAME",
+     "skill": "CRES.G4.THE_HO.BIBLE_STRAND_QUESTION_S_.ABRAHAM",
+     "error": "Mixes up the old and new names or what Abraham means.",
+     "example": {
+      "question": "What did God change Abram's name to, and what does it mean?",
+      "wrong_answer": "Abraham means a great sea",
+      "correct_answer": "Abraham means father of many nations"
+     },
+     "cause": "Names and their meanings are easy to mix.",
+     "reveals": "Offer \"Abraham means a great sea\" beside \"Abraham means father of many nations\" and ask the child to choose.",
+     "help": "Read Genesis 17:5 aloud: \"I have made you a father of many nations\".",
+     "feedback": "God changed Abram to Abraham, which means father of many nations (Genesis 17:5).",
+     "source": "common learner error; to confirm by a CRE teacher",
+     "status": "draft"
+    }
+   ],
    "rubric_indicators": [
     "CRE.G4.RUBRIC.2.1"
    ]
@@ -874,8 +1902,87 @@
      "indicator": "CRE.G4.RUBRIC.3.1"
     }
    ],
-   "skills": [],
-   "misconceptions": [],
+   "skills": [
+    {
+     "code": "CRES.G4.THE_LI.THE_ANNUNCIATION.ANNUNCIATION",
+     "name": "Know the annunciation (Luke 1:26-37) and why the birth of Jesus is unique",
+     "outcomes": [
+      "CRE.G4.THE_LI.THE_ANNUNCIATION.a",
+      "CRE.G4.THE_LI.THE_ANNUNCIATION.b"
+     ],
+     "mastery": "Says that the angel Gabriel was sent to Mary at Nazareth, that Mary was engaged to Joseph, that she was told to name her son Jesus, that the Holy Spirit would come upon her, and that for God nothing is impossible (Luke 1:37). Evidence rule: at least four of the last five fresh questions right across at least two question forms, and no repeated pick of the same misconception.",
+     "question_forms": [
+      "recall a fact of the story",
+      "what the angel said",
+      "what makes the birth unique"
+     ],
+     "thinking": [
+      "recall",
+      "reasoning"
+     ],
+     "horeb_skill_ids": [],
+     "prerequisites": [
+      {
+       "requires": "CRE.G3.THE_LI.THE_BIRTH_OF_JESUS_CHRIS.b",
+       "kind": "outcome",
+       "strength": "essential",
+       "reason": "Proposed: this skill builds on it. To confirm by a CRE teacher.",
+       "status": "proposed"
+      }
+     ],
+     "status": "proposed"
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "CRES.G4.THE_LI.THE_ANNUNCIATION.ANNUNCIATION.M_C4_ANN_ZECHARIAH",
+     "skill": "CRES.G4.THE_LI.THE_ANNUNCIATION.ANNUNCIATION",
+     "error": "Mixes Gabriel's visit to Mary with his visit to Zechariah.",
+     "example": {
+      "question": "To whom did the angel Gabriel bring the news of Jesus' birth?",
+      "wrong_answer": "Zechariah in the temple",
+      "correct_answer": "Mary at Nazareth"
+     },
+     "cause": "Luke 1 tells two angel visits in a row.",
+     "reveals": "Offer \"Zechariah in the temple\" beside \"Mary at Nazareth\" and ask the child to choose.",
+     "help": "Make two columns: Zechariah and Mary, and place the facts.",
+     "feedback": "Gabriel told Mary at Nazareth that she would bear Jesus. His message to Zechariah in the temple was about the birth of John.",
+     "source": "common learner error; to confirm by a CRE teacher",
+     "status": "draft"
+    },
+    {
+     "code": "CRES.G4.THE_LI.THE_ANNUNCIATION.ANNUNCIATION.M_C4_ANN_PLACE",
+     "skill": "CRES.G4.THE_LI.THE_ANNUNCIATION.ANNUNCIATION",
+     "error": "Names the wrong town for the annunciation.",
+     "example": {
+      "question": "Where was Mary when the angel came to her?",
+      "wrong_answer": "Bethlehem",
+      "correct_answer": "Nazareth in Galilee"
+     },
+     "cause": "Jesus is born in Bethlehem, so the child puts everything there.",
+     "reveals": "Offer \"Bethlehem\" beside \"Nazareth in Galilee\" and ask the child to choose.",
+     "help": "Read Luke 1:26 and then say where Jesus was born later.",
+     "feedback": "The angel came to Mary at Nazareth in Galilee (Luke 1:26). Jesus was born later, in Bethlehem.",
+     "source": "common learner error; to confirm by a CRE teacher",
+     "status": "draft"
+    },
+    {
+     "code": "CRES.G4.THE_LI.THE_ANNUNCIATION.ANNUNCIATION.M_C4_ANN_NAME",
+     "skill": "CRES.G4.THE_LI.THE_ANNUNCIATION.ANNUNCIATION",
+     "error": "Gives the wrong name the angel told Mary to give the child.",
+     "example": {
+      "question": "What name did the angel tell Mary to give her son?",
+      "wrong_answer": "John",
+      "correct_answer": "Jesus"
+     },
+     "cause": "The names of the two babies get mixed.",
+     "reveals": "Offer \"John\" beside \"Jesus\" and ask the child to choose.",
+     "help": "Read Luke 1:31 and Luke 1:13 and compare.",
+     "feedback": "The angel told Mary to name her son Jesus (Luke 1:31). The name John was for Elizabeth's son.",
+     "source": "common learner error; to confirm by a CRE teacher",
+     "status": "draft"
+    }
+   ],
    "rubric_indicators": [
     "CRE.G4.RUBRIC.3.1"
    ]
@@ -937,8 +2044,87 @@
      "indicator": "CRE.G4.RUBRIC.3.1"
     }
    ],
-   "skills": [],
-   "misconceptions": [],
+   "skills": [
+    {
+     "code": "CRES.G4.THE_LI.BIRTH_OF_JOHN_THE_BAPTIS.JOHN_BIRTH",
+     "name": "Know the birth of John the Baptist (Luke 1:5-13, 57, 76-79) and how he prepared the way",
+     "outcomes": [
+      "CRE.G4.THE_LI.BIRTH_OF_JOHN_THE_BAPTIS.a",
+      "CRE.G4.THE_LI.BIRTH_OF_JOHN_THE_BAPTIS.b"
+     ],
+     "mastery": "Says that Zechariah the priest and Elizabeth had no child and were old, that an angel appeared to Zechariah in the temple and told him to name the son John, that John was born, and that he would go before the Lord to prepare his way. Evidence rule: at least four of the last five fresh questions right across at least two question forms, and no repeated pick of the same misconception.",
+     "question_forms": [
+      "recall a fact of the story",
+      "what the angel said",
+      "how John prepared the way"
+     ],
+     "thinking": [
+      "recall",
+      "reasoning"
+     ],
+     "horeb_skill_ids": [],
+     "prerequisites": [
+      {
+       "requires": "CRES.G4.THE_LI.THE_ANNUNCIATION.ANNUNCIATION",
+       "kind": "skill",
+       "strength": "essential",
+       "reason": "Proposed: this skill builds on it. To confirm by a CRE teacher.",
+       "status": "proposed"
+      }
+     ],
+     "status": "proposed"
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "CRES.G4.THE_LI.BIRTH_OF_JOHN_THE_BAPTIS.JOHN_BIRTH.M_C4_JB_MOTHER",
+     "skill": "CRES.G4.THE_LI.BIRTH_OF_JOHN_THE_BAPTIS.JOHN_BIRTH",
+     "error": "Mixes up the parents of John and of Jesus.",
+     "example": {
+      "question": "Who were John the Baptist's parents?",
+      "wrong_answer": "Mary and Joseph",
+      "correct_answer": "Zechariah and Elizabeth"
+     },
+     "cause": "Both births are in Luke 1.",
+     "reveals": "Offer \"Mary and Joseph\" beside \"Zechariah and Elizabeth\" and ask the child to choose.",
+     "help": "Draw two family trees for the two babies.",
+     "feedback": "John's parents were Zechariah the priest and Elizabeth (Luke 1:5). Mary and Joseph were the parents of Jesus.",
+     "source": "common learner error; to confirm by a CRE teacher",
+     "status": "draft"
+    },
+    {
+     "code": "CRES.G4.THE_LI.BIRTH_OF_JOHN_THE_BAPTIS.JOHN_BIRTH.M_C4_JB_MESSIAH",
+     "skill": "CRES.G4.THE_LI.BIRTH_OF_JOHN_THE_BAPTIS.JOHN_BIRTH",
+     "error": "Thinks John the Baptist was the Messiah.",
+     "example": {
+      "question": "What was John's work, according to Luke 1:76?",
+      "wrong_answer": "To be the Messiah",
+      "correct_answer": "To go before the Lord and prepare his way"
+     },
+     "cause": "John's fame makes the child think he was the Lord.",
+     "reveals": "Offer \"To be the Messiah\" beside \"To go before the Lord and prepare his way\" and ask the child to choose.",
+     "help": "Read Luke 1:76: \"you will go on before the Lord to prepare the way for him\".",
+     "feedback": "John was a prophet who went before the Lord to prepare the way for him (Luke 1:76). He was not the Messiah.",
+     "source": "common learner error; to confirm by a CRE teacher",
+     "status": "draft"
+    },
+    {
+     "code": "CRES.G4.THE_LI.BIRTH_OF_JOHN_THE_BAPTIS.JOHN_BIRTH.M_C4_JB_YOUNG_PARENTS",
+     "skill": "CRES.G4.THE_LI.BIRTH_OF_JOHN_THE_BAPTIS.JOHN_BIRTH",
+     "error": "Thinks Zechariah and Elizabeth were young.",
+     "example": {
+      "question": "What was true about Zechariah and Elizabeth in Luke 1:7?",
+      "wrong_answer": "They were young and had many children",
+      "correct_answer": "They had no child and were well along in years"
+     },
+     "cause": "The child expects a birth to be to a young couple.",
+     "reveals": "Offer \"They were young and had many children\" beside \"They had no child and were well along in years\" and ask the child to choose.",
+     "help": "Read Luke 1:7.",
+     "feedback": "Luke 1:7 says they had no child and were both well along in years, yet God sent them a son.",
+     "source": "common learner error; to confirm by a CRE teacher",
+     "status": "draft"
+    }
+   ],
    "rubric_indicators": [
     "CRE.G4.RUBRIC.3.1"
    ]
@@ -1027,8 +2213,91 @@
      "indicator": "CRE.G4.RUBRIC.3.1"
     }
    ],
-   "skills": [],
-   "misconceptions": [],
+   "skills": [
+    {
+     "code": "CRES.G4.THE_LI.HEALING_OF_BLIND_BARTIMA.BARTIMAEUS",
+     "name": "Know the healing of blind Bartimaeus (Mark 10:46-52) and how he showed faith",
+     "outcomes": [
+      "CRE.G4.THE_LI.HEALING_OF_BLIND_BARTIMA.a",
+      "CRE.G4.THE_LI.HEALING_OF_BLIND_BARTIMA.a_",
+      "CRE.G4.THE_LI.HEALING_OF_BLIND_BARTIMA.b",
+      "CRE.G4.THE_LI.HEALING_OF_BLIND_BARTIMA.b_",
+      "CRE.G4.THE_LI.HEALING_OF_BLIND_BARTIMA.c",
+      "CRE.G4.THE_LI.HEALING_OF_BLIND_BARTIMA.c_"
+     ],
+     "mastery": "Says that Bartimaeus was a blind beggar by the road near Jericho, that he called out to Jesus, Son of David, and shouted louder when told to be quiet, that Jesus called him and asked what he wanted, that Jesus said his faith had healed him, and that he followed Jesus. Evidence rule: at least four of the last five fresh questions right across at least two question forms, and no repeated pick of the same misconception.",
+     "question_forms": [
+      "recall a fact of the story",
+      "how he showed faith",
+      "what Jesus said and did"
+     ],
+     "thinking": [
+      "recall",
+      "reasoning"
+     ],
+     "horeb_skill_ids": [],
+     "prerequisites": [
+      {
+       "requires": "CRE.G2.THE_EA.HEALING_THE_MAN_WITH_A_W.a",
+       "kind": "outcome",
+       "strength": "essential",
+       "reason": "Proposed: this skill builds on it. To confirm by a CRE teacher.",
+       "status": "proposed"
+      }
+     ],
+     "status": "proposed"
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "CRES.G4.THE_LI.HEALING_OF_BLIND_BARTIMA.BARTIMAEUS.M_C4_BART_QUIET",
+     "skill": "CRES.G4.THE_LI.HEALING_OF_BLIND_BARTIMA.BARTIMAEUS",
+     "error": "Thinks Bartimaeus kept quiet when the crowd told him to.",
+     "example": {
+      "question": "What did Bartimaeus do when many people told him to be quiet?",
+      "wrong_answer": "He kept quiet",
+      "correct_answer": "He shouted even louder"
+     },
+     "cause": "The child expects politeness to win.",
+     "reveals": "Offer \"He kept quiet\" beside \"He shouted even louder\" and ask the child to choose.",
+     "help": "Read Mark 10:48 and find the word \"louder\".",
+     "feedback": "Mark 10:48 says Bartimaeus shouted all the more. He kept asking because he believed Jesus could help him.",
+     "source": "common learner error; to confirm by a CRE teacher",
+     "status": "draft"
+    },
+    {
+     "code": "CRES.G4.THE_LI.HEALING_OF_BLIND_BARTIMA.BARTIMAEUS.M_C4_BART_TOUCH",
+     "skill": "CRES.G4.THE_LI.HEALING_OF_BLIND_BARTIMA.BARTIMAEUS",
+     "error": "Thinks Jesus touched his eyes or used a method.",
+     "example": {
+      "question": "How did Jesus heal Bartimaeus, according to Mark 10:52?",
+      "wrong_answer": "He touched his eyes",
+      "correct_answer": "He said \"your faith has healed you\""
+     },
+     "cause": "Other healings in the Gospels use a touch.",
+     "reveals": "Offer \"He touched his eyes\" beside \"He said \"your faith has healed you\"\" and ask the child to choose.",
+     "help": "Read Mark 10:52 and look for any touching.",
+     "feedback": "In Mark 10:52 Jesus said \"Go, your faith has healed you\" and Bartimaeus received his sight at once.",
+     "source": "common learner error; to confirm by a CRE teacher",
+     "status": "draft"
+    },
+    {
+     "code": "CRES.G4.THE_LI.HEALING_OF_BLIND_BARTIMA.BARTIMAEUS.M_C4_BART_WENT_HOME",
+     "skill": "CRES.G4.THE_LI.HEALING_OF_BLIND_BARTIMA.BARTIMAEUS",
+     "error": "Thinks Bartimaeus went home after he could see.",
+     "example": {
+      "question": "What did Bartimaeus do after he could see?",
+      "wrong_answer": "Went home to his family",
+      "correct_answer": "Followed Jesus along the road"
+     },
+     "cause": "Healed people in other stories go home.",
+     "reveals": "Offer \"Went home to his family\" beside \"Followed Jesus along the road\" and ask the child to choose.",
+     "help": "Read the last words of Mark 10:52.",
+     "feedback": "Mark 10:52 says he followed Jesus along the road. He now wanted to be with Jesus.",
+     "source": "common learner error; to confirm by a CRE teacher",
+     "status": "draft"
+    }
+   ],
    "rubric_indicators": [
     "CRE.G4.RUBRIC.3.1"
    ]
@@ -1131,8 +2400,88 @@
      "indicator": "CRE.G4.RUBRIC.3.1"
     }
    ],
-   "skills": [],
-   "misconceptions": [],
+   "skills": [
+    {
+     "code": "CRES.G4.THE_LI.HEALING_BY_THE_END_OF_TH.LEPERS",
+     "name": "Know the healing of the ten lepers (Luke 17:11-19) and ways of showing gratitude to God",
+     "outcomes": [
+      "CRE.G4.THE_LI.HEALING_BY_THE_END_OF_TH.a",
+      "CRE.G4.THE_LI.HEALING_BY_THE_END_OF_TH.b",
+      "CRE.G4.THE_LI.HEALING_BY_THE_END_OF_TH.b_"
+     ],
+     "mastery": "Says that ten men with leprosy called to Jesus, that he told them to show themselves to the priests and they were cleansed on the way, that one, a Samaritan, came back praising God and thanked Jesus, and that Jesus asked where the other nine were; and gives ways of thanking God. Evidence rule: at least four of the last five fresh questions right across at least two question forms, and no repeated pick of the same misconception.",
+     "question_forms": [
+      "recall a fact of the story",
+      "who came back",
+      "a way of showing gratitude to God"
+     ],
+     "thinking": [
+      "recall",
+      "reasoning"
+     ],
+     "horeb_skill_ids": [],
+     "prerequisites": [
+      {
+       "requires": "CRE.G3.CHRIST.THANKFULNESS.a",
+       "kind": "outcome",
+       "strength": "essential",
+       "reason": "Proposed: this skill builds on it. To confirm by a CRE teacher.",
+       "status": "proposed"
+      }
+     ],
+     "status": "proposed"
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "CRES.G4.THE_LI.HEALING_BY_THE_END_OF_TH.LEPERS.M_C4_LEP_COUNT",
+     "skill": "CRES.G4.THE_LI.HEALING_BY_THE_END_OF_TH.LEPERS",
+     "error": "Thinks all ten lepers came back to thank Jesus.",
+     "example": {
+      "question": "How many of the ten lepers came back to thank Jesus?",
+      "wrong_answer": "All ten",
+      "correct_answer": "One"
+     },
+     "cause": "The child expects healed people to be thankful.",
+     "reveals": "Offer \"All ten\" beside \"One\" and ask the child to choose.",
+     "help": "Read Luke 17:15 and 17:17: \"Where are the other nine?\"",
+     "feedback": "Only one of the ten came back to thank Jesus. Jesus asked where the other nine were (Luke 17:17).",
+     "source": "common learner error; to confirm by a CRE teacher",
+     "status": "draft"
+    },
+    {
+     "code": "CRES.G4.THE_LI.HEALING_BY_THE_END_OF_TH.LEPERS.M_C4_LEP_WHO",
+     "skill": "CRES.G4.THE_LI.HEALING_BY_THE_END_OF_TH.LEPERS",
+     "error": "Thinks the one who returned was a priest or a Jew.",
+     "example": {
+      "question": "Who was the man who came back to thank Jesus?",
+      "wrong_answer": "A priest",
+      "correct_answer": "A Samaritan"
+     },
+     "cause": "The child does not know why the detail is stressed.",
+     "reveals": "Offer \"A priest\" beside \"A Samaritan\" and ask the child to choose.",
+     "help": "Read Luke 17:16: \"and he was a Samaritan\".",
+     "feedback": "The man who returned was a Samaritan (Luke 17:16). Gratitude came from a person who was seen as an outsider.",
+     "source": "common learner error; to confirm by a CRE teacher",
+     "status": "draft"
+    },
+    {
+     "code": "CRES.G4.THE_LI.HEALING_BY_THE_END_OF_TH.LEPERS.M_C4_LEP_THANKS_NEED",
+     "skill": "CRES.G4.THE_LI.HEALING_BY_THE_END_OF_TH.LEPERS",
+     "error": "Thinks we should talk to God only when we need something.",
+     "example": {
+      "question": "When should we thank God?",
+      "wrong_answer": "Only when we need help",
+      "correct_answer": "Every day, for what he gives us"
+     },
+     "cause": "Prayer is learned as asking.",
+     "reveals": "Offer \"Only when we need help\" beside \"Every day, for what he gives us\" and ask the child to choose.",
+     "help": "List five things to thank God for today.",
+     "feedback": "The Samaritan thanked God after he was healed. We thank God every day for family, food, health and life, not only when we need help.",
+     "source": "common learner error; to confirm by a CRE teacher",
+     "status": "draft"
+    }
+   ],
    "rubric_indicators": [
     "CRE.G4.RUBRIC.3.1"
    ]
@@ -1239,8 +2588,91 @@
      "indicator": "CRE.G4.RUBRIC.3.1"
     }
    ],
-   "skills": [],
-   "misconceptions": [],
+   "skills": [
+    {
+     "code": "CRES.G4.THE_LI.JESUS_RAISES_A_WIDOW_S_S.WIDOW_SON",
+     "name": "Know how Jesus raised the widow's son at Nain (Luke 7:11-16) and what it shows (John 11:25)",
+     "outcomes": [
+      "CRE.G4.THE_LI.JESUS_RAISES_A_WIDOW_S_S.a",
+      "CRE.G4.THE_LI.JESUS_RAISES_A_WIDOW_S_S.a_",
+      "CRE.G4.THE_LI.JESUS_RAISES_A_WIDOW_S_S.b",
+      "CRE.G4.THE_LI.JESUS_RAISES_A_WIDOW_S_S.b_",
+      "CRE.G4.THE_LI.JESUS_RAISES_A_WIDOW_S_S.c",
+      "CRE.G4.THE_LI.JESUS_RAISES_A_WIDOW_S_S.c_"
+     ],
+     "mastery": "Says that Jesus met a funeral at Nain for the only son of a widow, that his heart went out to her, that he touched the coffin and said \"Young man, get up\", that the young man sat up and spoke, and that it shows Jesus' power over death and his compassion; and knows John 11:25. Evidence rule: at least four of the last five fresh questions right across at least two question forms, and no repeated pick of the same misconception.",
+     "question_forms": [
+      "recall a fact of the story",
+      "what the miracle shows",
+      "how to show compassion"
+     ],
+     "thinking": [
+      "recall",
+      "reasoning"
+     ],
+     "horeb_skill_ids": [],
+     "prerequisites": [
+      {
+       "requires": "CRE.G3.THE_LI.RAISING_OF_JAIRUS_DAUGHT.a",
+       "kind": "outcome",
+       "strength": "essential",
+       "reason": "Proposed: this skill builds on it. To confirm by a CRE teacher.",
+       "status": "proposed"
+      }
+     ],
+     "status": "proposed"
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "CRES.G4.THE_LI.JESUS_RAISES_A_WIDOW_S_S.WIDOW_SON.M_C4_WID_JAIRUS",
+     "skill": "CRES.G4.THE_LI.JESUS_RAISES_A_WIDOW_S_S.WIDOW_SON",
+     "error": "Mixes the widow's son with the daughter of Jairus.",
+     "example": {
+      "question": "Who did Jesus raise at Nain?",
+      "wrong_answer": "The daughter of Jairus",
+      "correct_answer": "The only son of a widow"
+     },
+     "cause": "Both are raisings from the dead in the Gospels, and the child learned Jairus' daughter in Grade 3.",
+     "reveals": "Offer \"The daughter of Jairus\" beside \"The only son of a widow\" and ask the child to choose.",
+     "help": "Make two columns: Nain and Jairus.",
+     "feedback": "At Nain, Jesus raised the only son of a widow (Luke 7:12-15). Jairus' daughter is a different story.",
+     "source": "common learner error; to confirm by a CRE teacher",
+     "status": "draft"
+    },
+    {
+     "code": "CRES.G4.THE_LI.JESUS_RAISES_A_WIDOW_S_S.WIDOW_SON.M_C4_WID_ASKED",
+     "skill": "CRES.G4.THE_LI.JESUS_RAISES_A_WIDOW_S_S.WIDOW_SON",
+     "error": "Thinks the crowd begged Jesus to raise the son.",
+     "example": {
+      "question": "Why did Jesus raise the widow's son?",
+      "wrong_answer": "The crowd begged him to",
+      "correct_answer": "His heart went out to the widow and he had compassion"
+     },
+     "cause": "In other miracles people ask for help.",
+     "reveals": "Offer \"The crowd begged him to\" beside \"His heart went out to the widow and he had compassion\" and ask the child to choose.",
+     "help": "Read Luke 7:13.",
+     "feedback": "Luke 7:13 says that when the Lord saw her, his heart went out to her. Nobody asked him; Jesus showed compassion.",
+     "source": "common learner error; to confirm by a CRE teacher",
+     "status": "draft"
+    },
+    {
+     "code": "CRES.G4.THE_LI.JESUS_RAISES_A_WIDOW_S_S.WIDOW_SON.M_C4_WID_HUSBAND",
+     "skill": "CRES.G4.THE_LI.JESUS_RAISES_A_WIDOW_S_S.WIDOW_SON",
+     "error": "Mixes up who had died.",
+     "example": {
+      "question": "Who had died in the story of the widow at Nain?",
+      "wrong_answer": "Her husband",
+      "correct_answer": "Her only son"
+     },
+     "cause": "The word widow suggests a husband who died.",
+     "reveals": "Offer \"Her husband\" beside \"Her only son\" and ask the child to choose.",
+     "help": "Read Luke 7:12: \"the only son of his mother, and she was a widow\".",
+     "feedback": "The widow had already lost her husband. Now her only son had died (Luke 7:12). Jesus gave him back to her.",
+     "source": "common learner error; to confirm by a CRE teacher",
+     "status": "draft"
+    }
+   ],
    "rubric_indicators": [
     "CRE.G4.RUBRIC.3.1"
    ]
@@ -1300,8 +2732,87 @@
      "indicator": "CRE.G4.RUBRIC.3.1"
     }
    ],
-   "skills": [],
-   "misconceptions": [],
+   "skills": [
+    {
+     "code": "CRES.G4.THE_LI.FORGIVENESS.FORGIVE",
+     "name": "Know why we forgive and do not take revenge (Matthew 5:39)",
+     "outcomes": [
+      "CRE.G4.THE_LI.FORGIVENESS.a",
+      "CRE.G4.THE_LI.FORGIVENESS.b"
+     ],
+     "mastery": "Says that Matthew 5:39 teaches not to pay back evil with evil, gives reasons to forgive (peace, friendship, God forgives us), and knows that forgiving does not mean keeping quiet about being hurt: a child tells a trusted adult. Evidence rule: at least four of the last five fresh questions right across at least two question forms, and no repeated pick of the same misconception.",
+     "question_forms": [
+      "what Matthew 5:39 teaches",
+      "a reason to forgive",
+      "what to do when wronged"
+     ],
+     "thinking": [
+      "recall",
+      "reasoning"
+     ],
+     "horeb_skill_ids": [],
+     "prerequisites": [
+      {
+       "requires": "CRE.G3.CHRIST.FORGIVENESS.a",
+       "kind": "outcome",
+       "strength": "essential",
+       "reason": "Proposed: this skill builds on it. To confirm by a CRE teacher.",
+       "status": "proposed"
+      }
+     ],
+     "status": "proposed"
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "CRES.G4.THE_LI.FORGIVENESS.FORGIVE.M_C4_FOR_REVENGE",
+     "skill": "CRES.G4.THE_LI.FORGIVENESS.FORGIVE",
+     "error": "Thinks paying back evil with evil is fair.",
+     "example": {
+      "question": "Someone hits you. According to Matthew 5:39, what should you do?",
+      "wrong_answer": "Hit back so they learn",
+      "correct_answer": "Not pay back evil with evil"
+     },
+     "cause": "Revenge feels like fairness to a hurt child.",
+     "reveals": "Offer \"Hit back so they learn\" beside \"Not pay back evil with evil\" and ask the child to choose.",
+     "help": "Role-play walking away and telling the teacher.",
+     "feedback": "Matthew 5:39 teaches us not to pay back evil with evil. Hitting back makes two wrongs and keeps the quarrel going.",
+     "source": "common learner error; to confirm by a CRE teacher",
+     "status": "draft"
+    },
+    {
+     "code": "CRES.G4.THE_LI.FORGIVENESS.FORGIVE.M_C4_FOR_WEAK",
+     "skill": "CRES.G4.THE_LI.FORGIVENESS.FORGIVE",
+     "error": "Thinks forgiving is weakness or means letting people hurt you again and again.",
+     "example": {
+      "question": "Is forgiving a sign of weakness?",
+      "wrong_answer": "Yes, strong children hit back",
+      "correct_answer": "No, it takes strength, and you may still tell an adult"
+     },
+     "cause": "Strength is thought to be shown by fighting.",
+     "reveals": "Offer \"Yes, strong children hit back\" beside \"No, it takes strength, and you may still tell an adult\" and ask the child to choose.",
+     "help": "Say that forgiving is a choice and that telling a teacher keeps you safe.",
+     "feedback": "Forgiving takes strength. You can forgive and still tell a trusted adult if someone keeps hurting you.",
+     "source": "common learner error; to confirm by a CRE teacher",
+     "status": "draft"
+    },
+    {
+     "code": "CRES.G4.THE_LI.FORGIVENESS.FORGIVE.M_C4_FOR_FORGET",
+     "skill": "CRES.G4.THE_LI.FORGIVENESS.FORGIVE",
+     "error": "Thinks forgiving means pretending nothing happened.",
+     "example": {
+      "question": "What does it mean to forgive someone?",
+      "wrong_answer": "To pretend it never happened",
+      "correct_answer": "To let go of the wish to pay back"
+     },
+     "cause": "Forgiving and forgetting are said together.",
+     "reveals": "Offer \"To pretend it never happened\" beside \"To let go of the wish to pay back\" and ask the child to choose.",
+     "help": "Ask what changes in us when we stop planning revenge.",
+     "feedback": "To forgive is to let go of the wish to pay back and to make peace. It does not mean we pretend nothing happened.",
+     "source": "common learner error; to confirm by a CRE teacher",
+     "status": "draft"
+    }
+   ],
    "rubric_indicators": [
     "CRE.G4.RUBRIC.3.1"
    ]
@@ -1361,8 +2872,86 @@
      "indicator": "CRE.G4.RUBRIC.3.1"
     }
    ],
-   "skills": [],
-   "misconceptions": [],
+   "skills": [
+    {
+     "code": "CRES.G4.THE_LI.HELPING_THE_NEEDY.HELPING",
+     "name": "Know why and how we help people in need (Matthew 5:42)",
+     "outcomes": [
+      "CRE.G4.THE_LI.HELPING_THE_NEEDY.a"
+     ],
+     "mastery": "Says that Matthew 5:42 teaches giving to the one who asks, gives reasons for helping (love, God cares for the needy), and names ways a child helps at school, home and church (sharing a pencil or lunch, carrying a load, a visit). Evidence rule: at least four of the last five fresh questions right across at least two question forms, and no repeated pick of the same misconception.",
+     "question_forms": [
+      "what Matthew 5:42 teaches",
+      "a way to help",
+      "a good reason to help"
+     ],
+     "thinking": [
+      "recall",
+      "reasoning"
+     ],
+     "horeb_skill_ids": [],
+     "prerequisites": [
+      {
+       "requires": "CRE.G3.THE_LI.THE_GOOD_SAMARITAN.a",
+       "kind": "outcome",
+       "strength": "essential",
+       "reason": "Proposed: this skill builds on it. To confirm by a CRE teacher.",
+       "status": "proposed"
+      }
+     ],
+     "status": "proposed"
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "CRES.G4.THE_LI.HELPING_THE_NEEDY.HELPING.M_C4_HELP_RICH",
+     "skill": "CRES.G4.THE_LI.HELPING_THE_NEEDY.HELPING",
+     "error": "Thinks only people with a lot can help.",
+     "example": {
+      "question": "Who can help someone in need?",
+      "wrong_answer": "Only rich people",
+      "correct_answer": "Anyone, even with a little"
+     },
+     "cause": "Help is linked with money.",
+     "reveals": "Offer \"Only rich people\" beside \"Anyone, even with a little\" and ask the child to choose.",
+     "help": "List what a child with no money can give: time, a pencil, a kind word.",
+     "feedback": "Matthew 5:42 tells us to give to the one who asks. A child who has little can still share a pencil, lunch or time.",
+     "source": "common learner error; to confirm by a CRE teacher",
+     "status": "draft"
+    },
+    {
+     "code": "CRES.G4.THE_LI.HELPING_THE_NEEDY.HELPING.M_C4_HELP_MONEY_ONLY",
+     "skill": "CRES.G4.THE_LI.HELPING_THE_NEEDY.HELPING",
+     "error": "Thinks helping means giving money only.",
+     "example": {
+      "question": "Which of these is a way of helping a person in need?",
+      "wrong_answer": "Only giving money",
+      "correct_answer": "Sharing food, carrying a load or visiting"
+     },
+     "cause": "Adults' giving is seen as money.",
+     "reveals": "Offer \"Only giving money\" beside \"Sharing food, carrying a load or visiting\" and ask the child to choose.",
+     "help": "Make a list of ways to help at home, school and church.",
+     "feedback": "We help with food, with work, with a visit and with a kind word, as well as with money.",
+     "source": "common learner error; to confirm by a CRE teacher",
+     "status": "draft"
+    },
+    {
+     "code": "CRES.G4.THE_LI.HELPING_THE_NEEDY.HELPING.M_C4_HELP_PRAISE",
+     "skill": "CRES.G4.THE_LI.HELPING_THE_NEEDY.HELPING",
+     "error": "Thinks we help so that others will praise us.",
+     "example": {
+      "question": "Why should a Christian help the needy?",
+      "wrong_answer": "So that people will praise me",
+      "correct_answer": "Because of love for God and for others"
+     },
+     "cause": "Prizes and praise at school teach children to want a reward.",
+     "reveals": "Offer \"So that people will praise me\" beside \"Because of love for God and for others\" and ask the child to choose.",
+     "help": "Ask whether Jesus helped for praise.",
+     "feedback": "A Christian helps out of love for God and for others, and not to be praised.",
+     "source": "common learner error; to confirm by a CRE teacher",
+     "status": "draft"
+    }
+   ],
    "rubric_indicators": [
     "CRE.G4.RUBRIC.3.1"
    ]
@@ -1431,8 +3020,88 @@
      "indicator": "CRE.G4.RUBRIC.3.1"
     }
    ],
-   "skills": [],
-   "misconceptions": [],
+   "skills": [
+    {
+     "code": "CRES.G4.THE_LI.PARABLE_OF_THE_LOST_COIN.COIN",
+     "name": "Know the parable of the lost coin (Luke 15:8-10) and its lessons",
+     "outcomes": [
+      "CRE.G4.THE_LI.PARABLE_OF_THE_LOST_COIN.a",
+      "CRE.G4.THE_LI.PARABLE_OF_THE_LOST_COIN.b",
+      "CRE.G4.THE_LI.PARABLE_OF_THE_LOST_COIN.c"
+     ],
+     "mastery": "Says that a woman with ten silver coins lost one, lit a lamp, swept the house and searched carefully until she found it, and called her friends to rejoice; and that the lesson is that God loves the sinner, searches for him and rejoices when he repents. Evidence rule: at least four of the last five fresh questions right across at least two question forms, and no repeated pick of the same misconception.",
+     "question_forms": [
+      "recall a fact of the parable",
+      "what the woman stands for",
+      "the lesson"
+     ],
+     "thinking": [
+      "recall",
+      "reasoning"
+     ],
+     "horeb_skill_ids": [],
+     "prerequisites": [
+      {
+       "requires": "CRE.G3.THE_LI.THE_GOOD_SAMARITAN.a",
+       "kind": "outcome",
+       "strength": "essential",
+       "reason": "Proposed: this skill builds on it. To confirm by a CRE teacher.",
+       "status": "proposed"
+      }
+     ],
+     "status": "proposed"
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "CRES.G4.THE_LI.PARABLE_OF_THE_LOST_COIN.COIN.M_C4_COIN_NINE",
+     "skill": "CRES.G4.THE_LI.PARABLE_OF_THE_LOST_COIN.COIN",
+     "error": "Mixes the number of coins.",
+     "example": {
+      "question": "How many silver coins did the woman have before she lost one?",
+      "wrong_answer": "Nine",
+      "correct_answer": "Ten"
+     },
+     "cause": "The nine that were left are remembered.",
+     "reveals": "Offer \"Nine\" beside \"Ten\" and ask the child to choose.",
+     "help": "Read Luke 15:8: \"ten silver coins\".",
+     "feedback": "The woman had ten silver coins and lost one, so nine were left (Luke 15:8).",
+     "source": "common learner error; to confirm by a CRE teacher",
+     "status": "draft"
+    },
+    {
+     "code": "CRES.G4.THE_LI.PARABLE_OF_THE_LOST_COIN.COIN.M_C4_COIN_GAVE_UP",
+     "skill": "CRES.G4.THE_LI.PARABLE_OF_THE_LOST_COIN.COIN",
+     "error": "Thinks the woman soon gave up.",
+     "example": {
+      "question": "What did the woman do about the lost coin?",
+      "wrong_answer": "She gave up because she had nine more",
+      "correct_answer": "She lit a lamp and searched until she found it"
+     },
+     "cause": "Children give up when something is small.",
+     "reveals": "Offer \"She gave up because she had nine more\" beside \"She lit a lamp and searched until she found it\" and ask the child to choose.",
+     "help": "Read Luke 15:8 and note \"until she finds it\".",
+     "feedback": "The woman lit a lamp, swept the house and searched carefully until she found the coin. God likewise searches for the lost.",
+     "source": "common learner error; to confirm by a CRE teacher",
+     "status": "draft"
+    },
+    {
+     "code": "CRES.G4.THE_LI.PARABLE_OF_THE_LOST_COIN.COIN.M_C4_COIN_MONEY_LESSON",
+     "skill": "CRES.G4.THE_LI.PARABLE_OF_THE_LOST_COIN.COIN",
+     "error": "Reads the parable as a lesson about money.",
+     "example": {
+      "question": "What does the parable of the lost coin teach?",
+      "wrong_answer": "Count your money carefully",
+      "correct_answer": "God searches for the lost and rejoices when a sinner repents"
+     },
+     "cause": "The story is about a coin.",
+     "reveals": "Offer \"Count your money carefully\" beside \"God searches for the lost and rejoices when a sinner repents\" and ask the child to choose.",
+     "help": "Read Luke 15:10 for Jesus' own meaning.",
+     "feedback": "Jesus said there is rejoicing in heaven over one sinner who repents (Luke 15:10). The coin stands for a person God loves.",
+     "source": "common learner error; to confirm by a CRE teacher",
+     "status": "draft"
+    }
+   ],
    "rubric_indicators": [
     "CRE.G4.RUBRIC.3.1"
    ]
@@ -1503,8 +3172,88 @@
      "indicator": "CRE.G4.RUBRIC.3.1"
     }
    ],
-   "skills": [],
-   "misconceptions": [],
+   "skills": [
+    {
+     "code": "CRES.G4.THE_LI.PARABLE_OF_THE_MUSTARD_S.MUSTARD",
+     "name": "Know the parable of the mustard seed (Luke 13:18-19) and how God's kingdom grows",
+     "outcomes": [
+      "CRE.G4.THE_LI.PARABLE_OF_THE_MUSTARD_S.a",
+      "CRE.G4.THE_LI.PARABLE_OF_THE_MUSTARD_S.b",
+      "CRE.G4.THE_LI.PARABLE_OF_THE_MUSTARD_S.c"
+     ],
+     "mastery": "Says that a man planted a mustard seed in his garden, that it grew into a tree where birds perched, that God's kingdom starts small and grows, and that a child helps it grow by praying, living well and telling others. Evidence rule: at least four of the last five fresh questions right across at least two question forms, and no repeated pick of the same misconception.",
+     "question_forms": [
+      "recall a fact of the parable",
+      "what the seed and the tree stand for",
+      "how a child helps the kingdom grow"
+     ],
+     "thinking": [
+      "recall",
+      "reasoning"
+     ],
+     "horeb_skill_ids": [],
+     "prerequisites": [
+      {
+       "requires": "CRE.G3.THE_LI.THE_LITTLE_BOY_WITH_FIVE.a",
+       "kind": "outcome",
+       "strength": "essential",
+       "reason": "Proposed: this skill builds on it. To confirm by a CRE teacher.",
+       "status": "proposed"
+      }
+     ],
+     "status": "proposed"
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "CRES.G4.THE_LI.PARABLE_OF_THE_MUSTARD_S.MUSTARD.M_C4_MUS_BIG_START",
+     "skill": "CRES.G4.THE_LI.PARABLE_OF_THE_MUSTARD_S.MUSTARD",
+     "error": "Thinks God's kingdom started big and mighty.",
+     "example": {
+      "question": "How does God's kingdom begin, in the parable of the mustard seed?",
+      "wrong_answer": "With a very big and powerful start",
+      "correct_answer": "Very small, like a seed, and then it grows"
+     },
+     "cause": "People expect God's kingdom to be grand at once.",
+     "reveals": "Offer \"With a very big and powerful start\" beside \"Very small, like a seed, and then it grows\" and ask the child to choose.",
+     "help": "Plant a seed in the school compound and watch.",
+     "feedback": "Jesus said the kingdom of God is like a mustard seed that grows into a tree (Luke 13:19). It starts small and grows.",
+     "source": "common learner error; to confirm by a CRE teacher",
+     "status": "draft"
+    },
+    {
+     "code": "CRES.G4.THE_LI.PARABLE_OF_THE_MUSTARD_S.MUSTARD.M_C4_MUS_BIRDS",
+     "skill": "CRES.G4.THE_LI.PARABLE_OF_THE_MUSTARD_S.MUSTARD",
+     "error": "Misreads what the birds did.",
+     "example": {
+      "question": "What happened to the birds in the parable?",
+      "wrong_answer": "They ate the seed",
+      "correct_answer": "They perched in the branches of the tree"
+     },
+     "cause": "The child brings an idea of birds eating seed from farm life.",
+     "reveals": "Offer \"They ate the seed\" beside \"They perched in the branches of the tree\" and ask the child to choose.",
+     "help": "Read Luke 13:19.",
+     "feedback": "Luke 13:19 says the birds perched in the branches of the tree. The kingdom gives shelter to many.",
+     "source": "common learner error; to confirm by a CRE teacher",
+     "status": "draft"
+    },
+    {
+     "code": "CRES.G4.THE_LI.PARABLE_OF_THE_MUSTARD_S.MUSTARD.M_C4_MUS_ADULTS_ONLY",
+     "skill": "CRES.G4.THE_LI.PARABLE_OF_THE_MUSTARD_S.MUSTARD",
+     "error": "Thinks only pastors or adults can help the kingdom of God grow.",
+     "example": {
+      "question": "Who can help God's kingdom grow?",
+      "wrong_answer": "Only pastors and adults",
+      "correct_answer": "Every Christian, including children"
+     },
+     "cause": "Church work is seen as grown-up work.",
+     "reveals": "Offer \"Only pastors and adults\" beside \"Every Christian, including children\" and ask the child to choose.",
+     "help": "List what a child can do: pray, be kind, invite a friend to church.",
+     "feedback": "Every believer can help the kingdom grow by praying, living well and telling others about Jesus.",
+     "source": "common learner error; to confirm by a CRE teacher",
+     "status": "draft"
+    }
+   ],
    "rubric_indicators": [
     "CRE.G4.RUBRIC.3.1"
    ]
@@ -1574,8 +3323,88 @@
      "indicator": "CRE.G4.RUBRIC.3.1"
     }
    ],
-   "skills": [],
-   "misconceptions": [],
+   "skills": [
+    {
+     "code": "CRES.G4.THE_LI.NICODEMUS_ENCOUNTER_WITH.NICODEMUS",
+     "name": "Know Nicodemus' meeting with Jesus (John 3:1-5) and John 3:16",
+     "outcomes": [
+      "CRE.G4.THE_LI.NICODEMUS_ENCOUNTER_WITH.a",
+      "CRE.G4.THE_LI.NICODEMUS_ENCOUNTER_WITH.b",
+      "CRE.G4.THE_LI.NICODEMUS_ENCOUNTER_WITH.d"
+     ],
+     "mastery": "Says that Nicodemus was a Pharisee and a member of the ruling council who came to Jesus at night, that Jesus told him one must be born again (of water and the Spirit), that Nicodemus did not first understand, and that John 3:16 says God so loved the world that he gave his Son so that whoever believes has eternal life. Evidence rule: at least four of the last five fresh questions right across at least two question forms, and no repeated pick of the same misconception.",
+     "question_forms": [
+      "recall a fact of the story",
+      "what Jesus told Nicodemus",
+      "what John 3:16 says"
+     ],
+     "thinking": [
+      "recall",
+      "reasoning"
+     ],
+     "horeb_skill_ids": [],
+     "prerequisites": [
+      {
+       "requires": "CRE.G3.CHRIST.HONESTY.a",
+       "kind": "outcome",
+       "strength": "essential",
+       "reason": "Proposed: this skill builds on it. To confirm by a CRE teacher.",
+       "status": "proposed"
+      }
+     ],
+     "status": "proposed"
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "CRES.G4.THE_LI.NICODEMUS_ENCOUNTER_WITH.NICODEMUS.M_C4_NIC_DAY",
+     "skill": "CRES.G4.THE_LI.NICODEMUS_ENCOUNTER_WITH.NICODEMUS",
+     "error": "Thinks Nicodemus came to Jesus in the daytime.",
+     "example": {
+      "question": "When did Nicodemus come to Jesus?",
+      "wrong_answer": "At noon, in front of everyone",
+      "correct_answer": "At night"
+     },
+     "cause": "The child does not remember the detail.",
+     "reveals": "Offer \"At noon, in front of everyone\" beside \"At night\" and ask the child to choose.",
+     "help": "Read John 3:2.",
+     "feedback": "John 3:2 says Nicodemus came to Jesus at night. He was a Pharisee and a member of the ruling council.",
+     "source": "common learner error; to confirm by a CRE teacher",
+     "status": "draft"
+    },
+    {
+     "code": "CRES.G4.THE_LI.NICODEMUS_ENCOUNTER_WITH.NICODEMUS.M_C4_NIC_LITERAL",
+     "skill": "CRES.G4.THE_LI.NICODEMUS_ENCOUNTER_WITH.NICODEMUS",
+     "error": "Thinks Jesus meant being born a second time from a mother.",
+     "example": {
+      "question": "What did Jesus mean by \"born again\"?",
+      "wrong_answer": "To be born a second time from one's mother",
+      "correct_answer": "A new life from God by water and the Spirit"
+     },
+     "cause": "Nicodemus himself asked this in John 3:4.",
+     "reveals": "Offer \"To be born a second time from one's mother\" beside \"A new life from God by water and the Spirit\" and ask the child to choose.",
+     "help": "Read John 3:4-5 together.",
+     "feedback": "Jesus was speaking of a new life from God, being born of water and the Spirit (John 3:5). Nicodemus first thought of a second birth from a mother.",
+     "source": "common learner error; to confirm by a CRE teacher",
+     "status": "draft"
+    },
+    {
+     "code": "CRES.G4.THE_LI.NICODEMUS_ENCOUNTER_WITH.NICODEMUS.M_C4_NIC_FEW",
+     "skill": "CRES.G4.THE_LI.NICODEMUS_ENCOUNTER_WITH.NICODEMUS",
+     "error": "Thinks God loves only some people.",
+     "example": {
+      "question": "Whom does God love, according to John 3:16?",
+      "wrong_answer": "Only the Jews",
+      "correct_answer": "The whole world"
+     },
+     "cause": "The child thinks the Bible stories are about one nation.",
+     "reveals": "Offer \"Only the Jews\" beside \"The whole world\" and ask the child to choose.",
+     "help": "Read John 3:16 and underline \"world\".",
+     "feedback": "John 3:16 says God so loved the world that he gave his only Son, so that whoever believes may have eternal life.",
+     "source": "common learner error; to confirm by a CRE teacher",
+     "status": "draft"
+    }
+   ],
    "rubric_indicators": [
     "CRE.G4.RUBRIC.3.1"
    ]
@@ -1651,8 +3480,246 @@
      "indicator": "CRE.G4.RUBRIC.4.1"
     }
    ],
-   "skills": [],
-   "misconceptions": [],
+   "skills": [
+    {
+     "code": "CRES.G4.CHRIST.TRUST.JOSEPH_RESISTS",
+     "name": "Know how Joseph resisted temptation (Genesis 39:7-12)",
+     "outcomes": [
+      "CRE.G4.CHRIST.TRUST.a"
+     ],
+     "mastery": "Says that Potiphar's wife tried to lead Joseph into wrong, that Joseph refused because it would be a sin against God, and that he ran out of the house leaving his cloak behind; and gives lessons (flee from temptation, fear God more than people). Evidence rule: at least four of the last five fresh questions right across at least two question forms, and no repeated pick of the same misconception.",
+     "question_forms": [
+      "recall a fact of the story",
+      "why Joseph refused",
+      "what to do when tempted"
+     ],
+     "thinking": [
+      "recall",
+      "reasoning"
+     ],
+     "horeb_skill_ids": [],
+     "prerequisites": [
+      {
+       "requires": "CRE.G3.CHRIST.TRUST.a",
+       "kind": "outcome",
+       "strength": "essential",
+       "reason": "Proposed: this skill builds on it. To confirm by a CRE teacher.",
+       "status": "proposed"
+      }
+     ],
+     "status": "proposed"
+    },
+    {
+     "code": "CRES.G4.CHRIST.TRUST.SAFE_PEOPLE",
+     "name": "Know whom a child can trust for safety, and say NO to strangers and wrong requests",
+     "outcomes": [
+      "CRE.G4.CHRIST.TRUST.b",
+      "CRE.G4.CHRIST.TRUST.c"
+     ],
+     "mastery": "Names trusted people (parents, guardians, teachers, church leaders, the chief, police officers) and tells them from strangers, knows to refuse gifts, lifts and secrets from people who are not trusted, and to go away and tell. Evidence rule: at least four of the last five fresh questions right across at least two question forms, and no repeated pick of the same misconception.",
+     "question_forms": [
+      "whom to trust",
+      "what to do when a stranger asks",
+      "whom to report to"
+     ],
+     "thinking": [
+      "recall",
+      "reasoning"
+     ],
+     "horeb_skill_ids": [],
+     "prerequisites": [
+      {
+       "requires": "CRE.G3.CHRIST.TRUST.a",
+       "kind": "outcome",
+       "strength": "essential",
+       "reason": "Proposed: this skill builds on it. To confirm by a CRE teacher.",
+       "status": "proposed"
+      },
+      {
+       "requires": "CRE.G3.CHRIST.TRUST.b",
+       "kind": "outcome",
+       "strength": "essential",
+       "reason": "Proposed: this skill builds on it. To confirm by a CRE teacher.",
+       "status": "proposed"
+      }
+     ],
+     "status": "proposed"
+    },
+    {
+     "code": "CRES.G4.CHRIST.TRUST.TRUST_GOD",
+     "name": "Know what Psalm 125:1 says about trusting in God",
+     "outcomes": [
+      "CRE.G4.CHRIST.TRUST.d"
+     ],
+     "mastery": "Says that Psalm 125:1 says those who trust in the Lord are like Mount Zion, which cannot be shaken but stands for ever; gives reasons to trust God (he is faithful, he cares, he is stronger than our fears) and knows that trusting God does not mean doing nothing. Evidence rule: at least four of the last five fresh questions right across at least two question forms, and no repeated pick of the same misconception.",
+     "question_forms": [
+      "what Psalm 125:1 says",
+      "what trusting God means",
+      "a time to trust God"
+     ],
+     "thinking": [
+      "recall",
+      "reasoning"
+     ],
+     "horeb_skill_ids": [],
+     "prerequisites": [
+      {
+       "requires": "CRE.G3.THE_BI.BIBLE_STORY_THE_THREE_HE.c",
+       "kind": "outcome",
+       "strength": "essential",
+       "reason": "Proposed: this skill builds on it. To confirm by a CRE teacher.",
+       "status": "proposed"
+      }
+     ],
+     "status": "proposed"
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "CRES.G4.CHRIST.TRUST.JOSEPH_RESISTS.M_C4_JR_MASTER",
+     "skill": "CRES.G4.CHRIST.TRUST.JOSEPH_RESISTS",
+     "error": "Thinks Joseph refused only because he feared his master.",
+     "example": {
+      "question": "Why did Joseph refuse, according to Genesis 39:9?",
+      "wrong_answer": "He was afraid of his master",
+      "correct_answer": "It would be a sin against God"
+     },
+     "cause": "The child gives a fear of people as the reason.",
+     "reveals": "Offer \"He was afraid of his master\" beside \"It would be a sin against God\" and ask the child to choose.",
+     "help": "Read Genesis 39:9.",
+     "feedback": "Joseph said he could not do such a wicked thing and sin against God (Genesis 39:9). He feared God more than people.",
+     "source": "common learner error; to confirm by a CRE teacher",
+     "status": "draft"
+    },
+    {
+     "code": "CRES.G4.CHRIST.TRUST.JOSEPH_RESISTS.M_C4_JR_STAYED",
+     "skill": "CRES.G4.CHRIST.TRUST.JOSEPH_RESISTS",
+     "error": "Thinks Joseph stayed to argue.",
+     "example": {
+      "question": "What did Joseph do when she held on to his cloak?",
+      "wrong_answer": "He stayed to argue",
+      "correct_answer": "He left the cloak and ran out of the house"
+     },
+     "cause": "The child thinks bravery means staying.",
+     "reveals": "Offer \"He stayed to argue\" beside \"He left the cloak and ran out of the house\" and ask the child to choose.",
+     "help": "Read Genesis 39:12.",
+     "feedback": "Joseph ran out of the house, leaving his cloak behind (Genesis 39:12). Sometimes the right thing is to run away from a bad situation.",
+     "source": "common learner error; to confirm by a CRE teacher",
+     "status": "draft"
+    },
+    {
+     "code": "CRES.G4.CHRIST.TRUST.JOSEPH_RESISTS.M_C4_JR_PRIVATE",
+     "skill": "CRES.G4.CHRIST.TRUST.JOSEPH_RESISTS",
+     "error": "Thinks it is safe to do wrong when no one else is there.",
+     "example": {
+      "question": "Joseph was alone with her in the house. What was his reasoning?",
+      "wrong_answer": "No one is here, so no one will know",
+      "correct_answer": "God sees, so it is wrong even when no one else is there"
+     },
+     "cause": "Children learn that wrong is only wrong if seen.",
+     "reveals": "Offer \"No one is here, so no one will know\" beside \"God sees, so it is wrong even when no one else is there\" and ask the child to choose.",
+     "help": "Link to Genesis 39:9 and 39:11.",
+     "feedback": "Joseph knew that God sees. He refused even though no one else was in the house (Genesis 39:11).",
+     "source": "common learner error; to confirm by a CRE teacher",
+     "status": "draft"
+    },
+    {
+     "code": "CRES.G4.CHRIST.TRUST.SAFE_PEOPLE.M_C4_SP_KIND_STRANGER",
+     "skill": "CRES.G4.CHRIST.TRUST.SAFE_PEOPLE",
+     "error": "Thinks a stranger who offers sweets or a lift is safe because he is kind.",
+     "example": {
+      "question": "A stranger offers you sweets and a lift home. What should you do?",
+      "wrong_answer": "Accept, because he is kind",
+      "correct_answer": "Say NO, go away and tell a trusted adult"
+     },
+     "cause": "The child confuses kindness with safety.",
+     "reveals": "Offer \"Accept, because he is kind\" beside \"Say NO, go away and tell a trusted adult\" and ask the child to choose.",
+     "help": "Role-play a firm NO and walking to a shop, a teacher or a parent.",
+     "feedback": "A stranger who offers gifts or a lift is not safe. Say NO, go away at once and tell a parent or teacher.",
+     "source": "common learner error; to confirm by a CRE teacher",
+     "status": "draft"
+    },
+    {
+     "code": "CRES.G4.CHRIST.TRUST.SAFE_PEOPLE.M_C4_SP_ALL_ADULTS",
+     "skill": "CRES.G4.CHRIST.TRUST.SAFE_PEOPLE",
+     "error": "Thinks every adult can be trusted to take a child anywhere.",
+     "example": {
+      "question": "Which of these is a trusted person for a child?",
+      "wrong_answer": "Any adult who tells me to come",
+      "correct_answer": "My parent, my teacher or a church leader I know"
+     },
+     "cause": "Children are taught to obey adults.",
+     "reveals": "Offer \"Any adult who tells me to come\" beside \"My parent, my teacher or a church leader I know\" and ask the child to choose.",
+     "help": "List trusted people by name, and the rule that a trusted person never asks for a secret.",
+     "feedback": "Trusted people are those who care for you and are known to your family, such as parents, teachers and church leaders. Not every adult is trusted.",
+     "source": "common learner error; to confirm by a CRE teacher",
+     "status": "draft"
+    },
+    {
+     "code": "CRES.G4.CHRIST.TRUST.SAFE_PEOPLE.M_C4_SP_NO_TELL",
+     "skill": "CRES.G4.CHRIST.TRUST.SAFE_PEOPLE",
+     "error": "Thinks a child should not report because nobody will believe or help.",
+     "example": {
+      "question": "Whom can you report to if you are in danger?",
+      "wrong_answer": "No one, they will not believe me",
+      "correct_answer": "A parent, a teacher, the chief or Childline Kenya on 116"
+     },
+     "cause": "Fear and shame stop a child from reporting.",
+     "reveals": "Offer \"No one, they will not believe me\" beside \"A parent, a teacher, the chief or Childline Kenya on 116\" and ask the child to choose.",
+     "help": "Say the list aloud and practise telling.",
+     "feedback": "You can tell a parent, a teacher, a church leader, the chief or Childline Kenya on 116. Keep telling until someone helps.",
+     "source": "common learner error; to confirm by a CRE teacher",
+     "status": "draft"
+    },
+    {
+     "code": "CRES.G4.CHRIST.TRUST.TRUST_GOD.M_C4_TG_NO_TROUBLE",
+     "skill": "CRES.G4.CHRIST.TRUST.TRUST_GOD",
+     "error": "Thinks trusting God means no trouble will come.",
+     "example": {
+      "question": "What does it mean to trust in the Lord, according to Psalm 125:1?",
+      "wrong_answer": "Nothing bad will ever happen",
+      "correct_answer": "To stand firm like Mount Zion, even in trouble"
+     },
+     "cause": "The child hears trust as a promise of an easy life.",
+     "reveals": "Offer \"Nothing bad will ever happen\" beside \"To stand firm like Mount Zion, even in trouble\" and ask the child to choose.",
+     "help": "Read Psalm 125:1 and ask what Mount Zion does when the wind blows.",
+     "feedback": "Psalm 125:1 says those who trust in the Lord are like Mount Zion which cannot be shaken. Trouble may come, but God holds us.",
+     "source": "common learner error; to confirm by a CRE teacher",
+     "status": "draft"
+    },
+    {
+     "code": "CRES.G4.CHRIST.TRUST.TRUST_GOD.M_C4_TG_LAZY",
+     "skill": "CRES.G4.CHRIST.TRUST.TRUST_GOD",
+     "error": "Thinks that trusting God means doing nothing ourselves.",
+     "example": {
+      "question": "Wanjiru trusts God to help her in an exam. What fits?",
+      "wrong_answer": "She does not study, she just prays",
+      "correct_answer": "She studies and prays"
+     },
+     "cause": "Trust and work are set against each other.",
+     "reveals": "Offer \"She does not study, she just prays\" beside \"She studies and prays\" and ask the child to choose.",
+     "help": "Remind: the servants in the parable used what they had.",
+     "feedback": "Trusting God does not mean doing nothing. We do our part and trust God with the rest.",
+     "source": "common learner error; to confirm by a CRE teacher",
+     "status": "draft"
+    },
+    {
+     "code": "CRES.G4.CHRIST.TRUST.TRUST_GOD.M_C4_TG_OWN_STRENGTH",
+     "skill": "CRES.G4.CHRIST.TRUST.TRUST_GOD",
+     "error": "Thinks the strength of Mount Zion comes from us.",
+     "example": {
+      "question": "Why can those who trust in the Lord not be shaken?",
+      "wrong_answer": "Because they are strong in themselves",
+      "correct_answer": "Because God stands by them"
+     },
+     "cause": "The child thinks the verse praises human strength.",
+     "reveals": "Offer \"Because they are strong in themselves\" beside \"Because God stands by them\" and ask the child to choose.",
+     "help": "Read Psalm 125:1-2 and ask who surrounds the people.",
+     "feedback": "Psalm 125 says the Lord surrounds his people. Their firmness comes from God.",
+     "source": "common learner error; to confirm by a CRE teacher",
+     "status": "draft"
+    }
+   ],
    "rubric_indicators": [
     "CRE.G4.RUBRIC.4.1"
    ]
@@ -1743,8 +3810,89 @@
      "indicator": "CRE.G4.RUBRIC.4.1"
     }
    ],
-   "skills": [],
-   "misconceptions": [],
+   "skills": [
+    {
+     "code": "CRES.G4.CHRIST.TRUTHFULNESS_TRUTHFULNES.TRUTH",
+     "name": "Know why we always tell the truth (Proverbs 12:19, Ephesians 4:25)",
+     "outcomes": [
+      "CRE.G4.CHRIST.TRUTHFULNESS_TRUTHFULNES.a",
+      "CRE.G4.CHRIST.TRUTHFULNESS_TRUTHFULNES.a_",
+      "CRE.G4.CHRIST.TRUTHFULNESS_TRUTHFULNES.b",
+      "CRE.G4.CHRIST.TRUTHFULNESS_TRUTHFULNES.b_"
+     ],
+     "mastery": "Says that Proverbs 12:19 teaches that truthful lips last and a lying tongue lasts only a moment, that Ephesians 4:25 says to put away falsehood and speak truthfully because we belong to one another, and gives reasons for telling the truth and ways of overcoming lies. Evidence rule: at least four of the last five fresh questions right across at least two question forms, and no repeated pick of the same misconception.",
+     "question_forms": [
+      "what a verse says about truth",
+      "why tell the truth",
+      "what to do after a lie"
+     ],
+     "thinking": [
+      "recall",
+      "reasoning"
+     ],
+     "horeb_skill_ids": [],
+     "prerequisites": [
+      {
+       "requires": "CRE.G3.CHRIST.HONESTY.a",
+       "kind": "outcome",
+       "strength": "essential",
+       "reason": "Proposed: this skill builds on it. To confirm by a CRE teacher.",
+       "status": "proposed"
+      }
+     ],
+     "status": "proposed"
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "CRES.G4.CHRIST.TRUTHFULNESS_TRUTHFULNES.TRUTH.M_C4_TR_WHITE_LIE",
+     "skill": "CRES.G4.CHRIST.TRUTHFULNESS_TRUTHFULNES.TRUTH",
+     "error": "Thinks a small lie to avoid trouble is fine.",
+     "example": {
+      "question": "You broke a cup by accident. What should you say?",
+      "wrong_answer": "It was not me",
+      "correct_answer": "It was me, and I am sorry"
+     },
+     "cause": "Small lies seem harmless.",
+     "reveals": "Offer \"It was not me\" beside \"It was me, and I am sorry\" and ask the child to choose.",
+     "help": "Role-play telling the truth and the parent's kind answer.",
+     "feedback": "Ephesians 4:25 says to put away falsehood and speak truthfully. A small lie is still a lie, and telling the truth keeps trust.",
+     "source": "common learner error; to confirm by a CRE teacher",
+     "status": "draft"
+    },
+    {
+     "code": "CRES.G4.CHRIST.TRUTHFULNESS_TRUTHFULNES.TRUTH.M_C4_TR_LIE_LASTS",
+     "skill": "CRES.G4.CHRIST.TRUTHFULNESS_TRUTHFULNES.TRUTH",
+     "error": "Reverses what Proverbs 12:19 says about lying lips.",
+     "example": {
+      "question": "What does Proverbs 12:19 say?",
+      "wrong_answer": "Lying lips last for ever",
+      "correct_answer": "Truthful lips endure for ever, a lying tongue only a moment"
+     },
+     "cause": "Verses are half remembered.",
+     "reveals": "Offer \"Lying lips last for ever\" beside \"Truthful lips endure for ever, a lying tongue only a moment\" and ask the child to choose.",
+     "help": "Write it on a flash card: truth lasts, lies do not.",
+     "feedback": "Proverbs 12:19 says truthful lips endure for ever but a lying tongue lasts only a moment.",
+     "source": "common learner error; to confirm by a CRE teacher",
+     "status": "draft"
+    },
+    {
+     "code": "CRES.G4.CHRIST.TRUTHFULNESS_TRUTHFULNES.TRUTH.M_C4_TR_HIDE",
+     "skill": "CRES.G4.CHRIST.TRUTHFULNESS_TRUTHFULNES.TRUTH",
+     "error": "Thinks the truth should be hidden when it is embarrassing.",
+     "example": {
+      "question": "A child failed a test and is ashamed. What should he tell his father?",
+      "wrong_answer": "Say he did well",
+      "correct_answer": "Tell him the truth and ask for help"
+     },
+     "cause": "Shame makes a lie look easier.",
+     "reveals": "Offer \"Say he did well\" beside \"Tell him the truth and ask for help\" and ask the child to choose.",
+     "help": "Ask what the father can do once he knows.",
+     "feedback": "Ephesians 4:25 says to speak truthfully because we belong to one another. Telling the truth lets others help.",
+     "source": "common learner error; to confirm by a CRE teacher",
+     "status": "draft"
+    }
+   ],
    "rubric_indicators": [
     "CRE.G4.RUBRIC.4.1"
    ]
@@ -1865,8 +4013,91 @@
      "indicator": "CRE.G4.RUBRIC.4.1"
     }
    ],
-   "skills": [],
-   "misconceptions": [],
+   "skills": [
+    {
+     "code": "CRES.G4.CHRIST.OBEDIENCE_OBEDIENCE.OBEDIENCE",
+     "name": "Know why we obey parents, teachers and school rules (Exodus 20:12) and what disobedience leads to",
+     "outcomes": [
+      "CRE.G4.CHRIST.OBEDIENCE_OBEDIENCE.a",
+      "CRE.G4.CHRIST.OBEDIENCE_OBEDIENCE.a_",
+      "CRE.G4.CHRIST.OBEDIENCE_OBEDIENCE.b",
+      "CRE.G4.CHRIST.OBEDIENCE_OBEDIENCE.b_",
+      "CRE.G4.CHRIST.OBEDIENCE_OBEDIENCE.d",
+      "CRE.G4.CHRIST.OBEDIENCE_OBEDIENCE.d_"
+     ],
+     "mastery": "Says that Exodus 20:12 tells children to honour father and mother and promises a long life in the land, gives reasons to obey parents, teachers and school rules (safety, peace, learning), and names results of disobedience (punishment, danger, lost trust). Evidence rule: at least four of the last five fresh questions right across at least two question forms, and no repeated pick of the same misconception.",
+     "question_forms": [
+      "what Exodus 20:12 says",
+      "why obey",
+      "a result of disobedience"
+     ],
+     "thinking": [
+      "recall",
+      "reasoning"
+     ],
+     "horeb_skill_ids": [],
+     "prerequisites": [
+      {
+       "requires": "CRE.G3.CREATI.ADAM_AND_EVE.c",
+       "kind": "outcome",
+       "strength": "essential",
+       "reason": "Proposed: this skill builds on it. To confirm by a CRE teacher.",
+       "status": "proposed"
+      }
+     ],
+     "status": "proposed"
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "CRES.G4.CHRIST.OBEDIENCE_OBEDIENCE.OBEDIENCE.M_C4_OB_IF_AGREE",
+     "skill": "CRES.G4.CHRIST.OBEDIENCE_OBEDIENCE.OBEDIENCE",
+     "error": "Thinks we obey only when we agree.",
+     "example": {
+      "question": "When should a child obey his parents and teachers?",
+      "wrong_answer": "Only when I agree with them",
+      "correct_answer": "Always when it is right and safe"
+     },
+     "cause": "Obedience is treated as a choice every time.",
+     "reveals": "Offer \"Only when I agree with them\" beside \"Always when it is right and safe\" and ask the child to choose.",
+     "help": "Read Exodus 20:12 and Ephesians 6:1.",
+     "feedback": "Exodus 20:12 tells us to honour our father and mother. We obey for our own good and for peace, and not only when we agree.",
+     "source": "common learner error; to confirm by a CRE teacher",
+     "status": "draft"
+    },
+    {
+     "code": "CRES.G4.CHRIST.OBEDIENCE_OBEDIENCE.OBEDIENCE.M_C4_OB_NO_RESULT",
+     "skill": "CRES.G4.CHRIST.OBEDIENCE_OBEDIENCE.OBEDIENCE",
+     "error": "Thinks disobedience has no result if not caught.",
+     "example": {
+      "question": "What may follow disobeying school rules?",
+      "wrong_answer": "Nothing, if the teacher is not looking",
+      "correct_answer": "Trouble, danger, and lost trust"
+     },
+     "cause": "Results seem to come only with punishment.",
+     "reveals": "Offer \"Nothing, if the teacher is not looking\" beside \"Trouble, danger, and lost trust\" and ask the child to choose.",
+     "help": "List the results: danger, lost trust, punishment.",
+     "feedback": "Disobedience can bring danger, lost trust and punishment. Obedience brings peace and safety.",
+     "source": "common learner error; to confirm by a CRE teacher",
+     "status": "draft"
+    },
+    {
+     "code": "CRES.G4.CHRIST.OBEDIENCE_OBEDIENCE.OBEDIENCE.M_C4_OB_RULES_HOME",
+     "skill": "CRES.G4.CHRIST.OBEDIENCE_OBEDIENCE.OBEDIENCE",
+     "error": "Thinks obedience applies at home but not to school rules.",
+     "example": {
+      "question": "Whose instructions should a child follow at school?",
+      "wrong_answer": "Only those from my parents",
+      "correct_answer": "The teachers and the school rules"
+     },
+     "cause": "The child separates home and school.",
+     "reveals": "Offer \"Only those from my parents\" beside \"The teachers and the school rules\" and ask the child to choose.",
+     "help": "Link school rules with safe, orderly learning.",
+     "feedback": "Children should obey parents at home and teachers and school rules at school, so that learning is peaceful and safe.",
+     "source": "common learner error; to confirm by a CRE teacher",
+     "status": "draft"
+    }
+   ],
    "rubric_indicators": [
     "CRE.G4.RUBRIC.4.1"
    ]
@@ -1957,8 +4188,87 @@
      "indicator": "CRE.G4.RUBRIC.4.1"
     }
    ],
-   "skills": [],
-   "misconceptions": [],
+   "skills": [
+    {
+     "code": "CRES.G4.CHRIST.LOVE_LOVE.LOVE_CHILDREN",
+     "name": "Know how Jesus blessed the children (Matthew 19:13-15) and what it shows",
+     "outcomes": [
+      "CRE.G4.CHRIST.LOVE_LOVE.a",
+      "CRE.G4.CHRIST.LOVE_LOVE.a_"
+     ],
+     "mastery": "Says that people brought little children to Jesus to pray for them, that the disciples told them off, that Jesus said to let the children come to him and not hinder them, that the kingdom of heaven belongs to such as these, and that he placed his hands on them; and that God loves children. Evidence rule: at least four of the last five fresh questions right across at least two question forms, and no repeated pick of the same misconception.",
+     "question_forms": [
+      "recall a fact of the story",
+      "what Jesus said",
+      "what the story shows"
+     ],
+     "thinking": [
+      "recall",
+      "reasoning"
+     ],
+     "horeb_skill_ids": [],
+     "prerequisites": [
+      {
+       "requires": "CRE.G3.THE_LI.THE_LITTLE_BOY_WITH_FIVE.a",
+       "kind": "outcome",
+       "strength": "essential",
+       "reason": "Proposed: this skill builds on it. To confirm by a CRE teacher.",
+       "status": "proposed"
+      }
+     ],
+     "status": "proposed"
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "CRES.G4.CHRIST.LOVE_LOVE.LOVE_CHILDREN.M_C4_LC_DISCIPLES",
+     "skill": "CRES.G4.CHRIST.LOVE_LOVE.LOVE_CHILDREN",
+     "error": "Thinks the disciples welcomed the children.",
+     "example": {
+      "question": "What did the disciples do when people brought children to Jesus?",
+      "wrong_answer": "They welcomed the children",
+      "correct_answer": "They told the people off"
+     },
+     "cause": "The child expects the friends of Jesus to be kind.",
+     "reveals": "Offer \"They welcomed the children\" beside \"They told the people off\" and ask the child to choose.",
+     "help": "Read Matthew 19:13.",
+     "feedback": "Matthew 19:13 says the disciples rebuked those who brought the children. Jesus corrected them.",
+     "source": "common learner error; to confirm by a CRE teacher",
+     "status": "draft"
+    },
+    {
+     "code": "CRES.G4.CHRIST.LOVE_LOVE.LOVE_CHILDREN.M_C4_LC_BUSY",
+     "skill": "CRES.G4.CHRIST.LOVE_LOVE.LOVE_CHILDREN",
+     "error": "Thinks Jesus sent the children away because he was busy.",
+     "example": {
+      "question": "What did Jesus say about the children?",
+      "wrong_answer": "Send them away, I am busy",
+      "correct_answer": "Let the little children come to me"
+     },
+     "cause": "Adults are often too busy for children.",
+     "reveals": "Offer \"Send them away, I am busy\" beside \"Let the little children come to me\" and ask the child to choose.",
+     "help": "Read Matthew 19:14.",
+     "feedback": "Jesus said \"Let the little children come to me and do not hinder them, for the kingdom of heaven belongs to such as these\" (Matthew 19:14).",
+     "source": "common learner error; to confirm by a CRE teacher",
+     "status": "draft"
+    },
+    {
+     "code": "CRES.G4.CHRIST.LOVE_LOVE.LOVE_CHILDREN.M_C4_LC_NO_HANDS",
+     "skill": "CRES.G4.CHRIST.LOVE_LOVE.LOVE_CHILDREN",
+     "error": "Thinks Jesus did not bless or pray for the children.",
+     "example": {
+      "question": "What did Jesus do for the children?",
+      "wrong_answer": "Nothing, he only spoke to the adults",
+      "correct_answer": "He placed his hands on them and blessed them"
+     },
+     "cause": "The child focuses on the disciples.",
+     "reveals": "Offer \"Nothing, he only spoke to the adults\" beside \"He placed his hands on them and blessed them\" and ask the child to choose.",
+     "help": "Read Matthew 19:15.",
+     "feedback": "Matthew 19:15 says Jesus placed his hands on the children and went on from there. He loves children.",
+     "source": "common learner error; to confirm by a CRE teacher",
+     "status": "draft"
+    }
+   ],
    "rubric_indicators": [
     "CRE.G4.RUBRIC.4.1"
    ]
@@ -2017,8 +4327,87 @@
      "indicator": "CRE.G4.RUBRIC.4.1"
     }
    ],
-   "skills": [],
-   "misconceptions": [],
+   "skills": [
+    {
+     "code": "CRES.G4.CHRIST.RESPONSIBILITY_PERSONAL_.CARE_ITEMS",
+     "name": "Know personal and school items and how to look after them",
+     "outcomes": [
+      "CRE.G4.CHRIST.RESPONSIBILITY_PERSONAL_.a",
+      "CRE.G4.CHRIST.RESPONSIBILITY_PERSONAL_.b"
+     ],
+     "mastery": "Names personal items (pullover, pen, exercise books, textbooks, school bag) and school property (desks, library books, latrines, tanks, trees), and says how each is cared for and why school property belongs to everyone. Evidence rule: at least four of the last five fresh questions right across at least two question forms, and no repeated pick of the same misconception.",
+     "question_forms": [
+      "which is a personal or school item",
+      "how to care for it",
+      "why care for school property"
+     ],
+     "thinking": [
+      "recall",
+      "reasoning"
+     ],
+     "horeb_skill_ids": [],
+     "prerequisites": [
+      {
+       "requires": "CRE.G3.CHRIST.RESPONSIBILITY.a",
+       "kind": "outcome",
+       "strength": "essential",
+       "reason": "Proposed: this skill builds on it. To confirm by a CRE teacher.",
+       "status": "proposed"
+      }
+     ],
+     "status": "proposed"
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "CRES.G4.CHRIST.RESPONSIBILITY_PERSONAL_.CARE_ITEMS.M_C4_CI_NOBODY",
+     "skill": "CRES.G4.CHRIST.RESPONSIBILITY_PERSONAL_.CARE_ITEMS",
+     "error": "Thinks school property belongs to nobody, so there is no need to care for it.",
+     "example": {
+      "question": "Whose are the desks and library books at school?",
+      "wrong_answer": "Nobody's, so it does not matter",
+      "correct_answer": "The whole school's, so we all care for them"
+     },
+     "cause": "Public things seem to have no owner.",
+     "reveals": "Offer \"Nobody's, so it does not matter\" beside \"The whole school's, so we all care for them\" and ask the child to choose.",
+     "help": "Ask who would use the desk tomorrow.",
+     "feedback": "School property belongs to the whole school community. We all use it, so we all care for it.",
+     "source": "common learner error; to confirm by a CRE teacher",
+     "status": "draft"
+    },
+    {
+     "code": "CRES.G4.CHRIST.RESPONSIBILITY_PERSONAL_.CARE_ITEMS.M_C4_CI_REPLACE",
+     "skill": "CRES.G4.CHRIST.RESPONSIBILITY_PERSONAL_.CARE_ITEMS",
+     "error": "Thinks it does not matter if an item is lost because parents will buy another.",
+     "example": {
+      "question": "Your textbook is torn because you were careless. What is the best response?",
+      "wrong_answer": "It does not matter, my parents can buy another",
+      "correct_answer": "Take better care and mend it"
+     },
+     "cause": "Children do not see the cost of things.",
+     "reveals": "Offer \"It does not matter, my parents can buy another\" beside \"Take better care and mend it\" and ask the child to choose.",
+     "help": "Ask what a parent gives up to buy a book.",
+     "feedback": "Taking care of what we have shows thanks and responsibility. Things cost our parents money and work.",
+     "source": "common learner error; to confirm by a CRE teacher",
+     "status": "draft"
+    },
+    {
+     "code": "CRES.G4.CHRIST.RESPONSIBILITY_PERSONAL_.CARE_ITEMS.M_C4_CI_ONLY_PERSONAL",
+     "skill": "CRES.G4.CHRIST.RESPONSIBILITY_PERSONAL_.CARE_ITEMS",
+     "error": "Thinks only one's own items need care.",
+     "example": {
+      "question": "Which items should a child take care of?",
+      "wrong_answer": "Only my own things",
+      "correct_answer": "My own things and the school's"
+     },
+     "cause": "The child cares only about his belongings.",
+     "reveals": "Offer \"Only my own things\" beside \"My own things and the school's\" and ask the child to choose.",
+     "help": "List both kinds on the board.",
+     "feedback": "A responsible child takes care of personal items, such as a pullover and a pen, and of school property, such as desks and books.",
+     "source": "common learner error; to confirm by a CRE teacher",
+     "status": "draft"
+    }
+   ],
    "rubric_indicators": [
     "CRE.G4.RUBRIC.4.1"
    ]
@@ -2084,8 +4473,88 @@
      "indicator": "CRE.G4.RUBRIC.4.1"
     }
    ],
-   "skills": [],
-   "misconceptions": [],
+   "skills": [
+    {
+     "code": "CRES.G4.CHRIST.HOLINESS.HOLINESS",
+     "name": "Know that the body is a temple of the Holy Spirit (1 Corinthians 6:19-20) and how to honour God with it",
+     "outcomes": [
+      "CRE.G4.CHRIST.HOLINESS.a",
+      "CRE.G4.CHRIST.HOLINESS.b",
+      "CRE.G4.CHRIST.HOLINESS.c"
+     ],
+     "mastery": "Says that 1 Corinthians 6:19-20 teaches that the body is a temple of the Holy Spirit and that we honour God with it, names ways of doing so (keeping clean, resting, avoiding drugs, using the body for good), and keeps away from places and company that lead to sin. Evidence rule: at least four of the last five fresh questions right across at least two question forms, and no repeated pick of the same misconception.",
+     "question_forms": [
+      "what the verse says",
+      "a way of honouring God with the body",
+      "a situation to keep away from"
+     ],
+     "thinking": [
+      "recall",
+      "reasoning"
+     ],
+     "horeb_skill_ids": [],
+     "prerequisites": [
+      {
+       "requires": "CRE.G3.THE_CH.THE_HOLY_SPIRIT.b",
+       "kind": "outcome",
+       "strength": "essential",
+       "reason": "Proposed: this skill builds on it. To confirm by a CRE teacher.",
+       "status": "proposed"
+      }
+     ],
+     "status": "proposed"
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "CRES.G4.CHRIST.HOLINESS.HOLINESS.M_C4_HOL_MY_BODY",
+     "skill": "CRES.G4.CHRIST.HOLINESS.HOLINESS",
+     "error": "Thinks my body is mine to do what I like with.",
+     "example": {
+      "question": "What does 1 Corinthians 6:19-20 say about your body?",
+      "wrong_answer": "It is mine, to do what I want",
+      "correct_answer": "It is a temple of the Holy Spirit, so honour God with it"
+     },
+     "cause": "The child hears \"my body, my choice\" in other places.",
+     "reveals": "Offer \"It is mine, to do what I want\" beside \"It is a temple of the Holy Spirit, so honour God with it\" and ask the child to choose.",
+     "help": "Read the verse and the words \"you are not your own\".",
+     "feedback": "1 Corinthians 6:19-20 says our body is a temple of the Holy Spirit. We honour God with it by how we care for it and how we live.",
+     "source": "common learner error; to confirm by a CRE teacher",
+     "status": "draft"
+    },
+    {
+     "code": "CRES.G4.CHRIST.HOLINESS.HOLINESS.M_C4_HOL_BUILDING",
+     "skill": "CRES.G4.CHRIST.HOLINESS.HOLINESS",
+     "error": "Thinks that the temple in the verse is only the church building.",
+     "example": {
+      "question": "In 1 Corinthians 6:19, what is the temple?",
+      "wrong_answer": "The church building",
+      "correct_answer": "Your own body"
+     },
+     "cause": "The word temple is linked with a building.",
+     "reveals": "Offer \"The church building\" beside \"Your own body\" and ask the child to choose.",
+     "help": "Read the verse again: \"your bodies are temples\".",
+     "feedback": "In 1 Corinthians 6:19 the temple is our own body, where the Holy Spirit lives.",
+     "source": "common learner error; to confirm by a CRE teacher",
+     "status": "draft"
+    },
+    {
+     "code": "CRES.G4.CHRIST.HOLINESS.HOLINESS.M_C4_HOL_TEST",
+     "skill": "CRES.G4.CHRIST.HOLINESS.HOLINESS",
+     "error": "Thinks it is fine to stay in tempting places if we do not sin.",
+     "example": {
+      "question": "Your friends go to a place where children smoke. What is wise?",
+      "wrong_answer": "Go along and just watch",
+      "correct_answer": "Keep away from that place"
+     },
+     "cause": "The child trusts his own strength.",
+     "reveals": "Offer \"Go along and just watch\" beside \"Keep away from that place\" and ask the child to choose.",
+     "help": "Link with Joseph, who ran.",
+     "feedback": "To lead a holy life we keep away from places and company that lead to sin, as Joseph ran from temptation.",
+     "source": "common learner error; to confirm by a CRE teacher",
+     "status": "draft"
+    }
+   ],
    "rubric_indicators": [
     "CRE.G4.RUBRIC.4.1"
    ]
@@ -2146,8 +4615,86 @@
      "indicator": "CRE.G4.RUBRIC.5.1"
     }
    ],
-   "skills": [],
-   "misconceptions": [],
+   "skills": [
+    {
+     "code": "CRES.G4.THE_CH.HOUSE_OF_GOD.HOUSE_OF_GOD",
+     "name": "Know what Jesus did in the temple (Matthew 21:12-14) and why the church is a holy place",
+     "outcomes": [
+      "CRE.G4.THE_CH.HOUSE_OF_GOD.a"
+     ],
+     "mastery": "Says that Jesus drove out those buying and selling in the temple and overturned the tables of the money changers, said that God's house is a house of prayer, and healed the blind and lame who came to him; and gives ways of respecting the church (1 Corinthians 14:26: everything done to build up the church). Evidence rule: at least four of the last five fresh questions right across at least two question forms, and no repeated pick of the same misconception.",
+     "question_forms": [
+      "recall a fact of the story",
+      "what Jesus said about the temple",
+      "a way of respecting the church"
+     ],
+     "thinking": [
+      "recall",
+      "reasoning"
+     ],
+     "horeb_skill_ids": [],
+     "prerequisites": [
+      {
+       "requires": "CRE.G2.THE_CH.PRAYER.c",
+       "kind": "outcome",
+       "strength": "essential",
+       "reason": "Proposed: this skill builds on it. To confirm by a CRE teacher.",
+       "status": "proposed"
+      }
+     ],
+     "status": "proposed"
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "CRES.G4.THE_CH.HOUSE_OF_GOD.HOUSE_OF_GOD.M_C4_HG_DROVE_WORSHIPPERS",
+     "skill": "CRES.G4.THE_CH.HOUSE_OF_GOD.HOUSE_OF_GOD",
+     "error": "Thinks Jesus drove out the worshippers.",
+     "example": {
+      "question": "Whom did Jesus drive out of the temple?",
+      "wrong_answer": "The people praying",
+      "correct_answer": "Those buying and selling there"
+     },
+     "cause": "The child does not remember who was in the temple.",
+     "reveals": "Offer \"The people praying\" beside \"Those buying and selling there\" and ask the child to choose.",
+     "help": "Read Matthew 21:12.",
+     "feedback": "Jesus drove out those who were buying and selling in the temple courts and overturned the tables of the money changers (Matthew 21:12).",
+     "source": "common learner error; to confirm by a CRE teacher",
+     "status": "draft"
+    },
+    {
+     "code": "CRES.G4.THE_CH.HOUSE_OF_GOD.HOUSE_OF_GOD.M_C4_HG_BUSINESS_OK",
+     "skill": "CRES.G4.THE_CH.HOUSE_OF_GOD.HOUSE_OF_GOD",
+     "error": "Thinks buying and selling in the house of God is fine.",
+     "example": {
+      "question": "What did Jesus say the temple should be?",
+      "wrong_answer": "A market for trading",
+      "correct_answer": "A house of prayer"
+     },
+     "cause": "Business is part of daily life.",
+     "reveals": "Offer \"A market for trading\" beside \"A house of prayer\" and ask the child to choose.",
+     "help": "Read Matthew 21:13.",
+     "feedback": "Jesus said, \"My house will be called a house of prayer\" (Matthew 21:13). It is not a place for trade.",
+     "source": "common learner error; to confirm by a CRE teacher",
+     "status": "draft"
+    },
+    {
+     "code": "CRES.G4.THE_CH.HOUSE_OF_GOD.HOUSE_OF_GOD.M_C4_HG_SERVICE_ONLY",
+     "skill": "CRES.G4.THE_CH.HOUSE_OF_GOD.HOUSE_OF_GOD",
+     "error": "Thinks we need respect the church only during a service.",
+     "example": {
+      "question": "When should we respect the church?",
+      "wrong_answer": "Only during the service",
+      "correct_answer": "Always, because it is God's house"
+     },
+     "cause": "Respect is seen as a rule for a service.",
+     "reveals": "Offer \"Only during the service\" beside \"Always, because it is God's house\" and ask the child to choose.",
+     "help": "List ways of respecting the church every day.",
+     "feedback": "The church is a holy place, God's house, so we respect it at all times, not just during a service.",
+     "source": "common learner error; to confirm by a CRE teacher",
+     "status": "draft"
+    }
+   ],
    "rubric_indicators": [
     "CRE.G4.RUBRIC.5.1"
    ]
@@ -2210,8 +4757,162 @@
      "indicator": "CRE.G4.RUBRIC.5.1"
     }
    ],
-   "skills": [],
-   "misconceptions": [],
+   "skills": [
+    {
+     "code": "CRES.G4.THE_CH.THE_EARLY_CHURCH.TWELVE_DISCIPLES",
+     "name": "Name the twelve disciples (Matthew 10:1-4)",
+     "outcomes": [
+      "CRE.G4.THE_CH.THE_EARLY_CHURCH.a"
+     ],
+     "mastery": "Names disciples from Matthew 10:1-4 (Simon called Peter, Andrew, James and John sons of Zebedee, Philip, Bartholomew, Thomas, Matthew the tax collector, James son of Alphaeus, Thaddaeus, Simon the Zealot, Judas Iscariot), knows there were twelve, and does not count Paul among them. Evidence rule: at least four of the last five fresh questions right across at least two question forms, and no repeated pick of the same misconception.",
+     "question_forms": [
+      "which is a disciple",
+      "who the brothers were",
+      "how many disciples"
+     ],
+     "thinking": [
+      "recall"
+     ],
+     "horeb_skill_ids": [],
+     "prerequisites": [
+      {
+       "requires": "CRE.G2.THE_CH.THE_HOLY_SPIRIT.a",
+       "kind": "outcome",
+       "strength": "essential",
+       "reason": "Proposed: this skill builds on it. To confirm by a CRE teacher.",
+       "status": "proposed"
+      }
+     ],
+     "status": "proposed"
+    },
+    {
+     "code": "CRES.G4.THE_CH.THE_EARLY_CHURCH.CHURCH_BEGINS",
+     "name": "Know how the early church began (Acts 2:38-41) and what Peter told the people",
+     "outcomes": [
+      "CRE.G4.THE_CH.THE_EARLY_CHURCH.b",
+      "CRE.G4.THE_CH.THE_EARLY_CHURCH.c"
+     ],
+     "mastery": "Says that Peter preached after the Holy Spirit came, that the people asked what to do, that he said to repent and be baptised for the forgiveness of sins, that about three thousand joined that day, and that repenting means turning away from sin. Evidence rule: at least four of the last five fresh questions right across at least two question forms, and no repeated pick of the same misconception.",
+     "question_forms": [
+      "recall a fact of the story",
+      "what Peter told the crowd",
+      "what repenting means"
+     ],
+     "thinking": [
+      "recall",
+      "reasoning"
+     ],
+     "horeb_skill_ids": [],
+     "prerequisites": [
+      {
+       "requires": "CRE.G3.THE_CH.THE_HOLY_SPIRIT.a",
+       "kind": "outcome",
+       "strength": "essential",
+       "reason": "Proposed: this skill builds on it. To confirm by a CRE teacher.",
+       "status": "proposed"
+      }
+     ],
+     "status": "proposed"
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "CRES.G4.THE_CH.THE_EARLY_CHURCH.TWELVE_DISCIPLES.M_C4_TD_PAUL",
+     "skill": "CRES.G4.THE_CH.THE_EARLY_CHURCH.TWELVE_DISCIPLES",
+     "error": "Counts Paul among the twelve.",
+     "example": {
+      "question": "Who was one of the twelve disciples?",
+      "wrong_answer": "Paul",
+      "correct_answer": "Philip"
+     },
+     "cause": "Paul is a famous apostle.",
+     "reveals": "Offer \"Paul\" beside \"Philip\" and ask the child to choose.",
+     "help": "Read the list in Matthew 10:2-4 and look for Paul.",
+     "feedback": "Paul was not one of the twelve in Matthew 10:2-4. The twelve included Peter, Andrew, James, John, Philip and others.",
+     "source": "common learner error; to confirm by a CRE teacher",
+     "status": "draft"
+    },
+    {
+     "code": "CRES.G4.THE_CH.THE_EARLY_CHURCH.TWELVE_DISCIPLES.M_C4_TD_BROTHERS",
+     "skill": "CRES.G4.THE_CH.THE_EARLY_CHURCH.TWELVE_DISCIPLES",
+     "error": "Mixes who the brothers were.",
+     "example": {
+      "question": "Whose brother was Andrew?",
+      "wrong_answer": "John's",
+      "correct_answer": "Simon Peter's"
+     },
+     "cause": "Pairs of names are close in the list.",
+     "reveals": "Offer \"John's\" beside \"Simon Peter's\" and ask the child to choose.",
+     "help": "Read Matthew 10:2: \"Simon called Peter and his brother Andrew\".",
+     "feedback": "Andrew was the brother of Simon Peter. James and John were brothers, the sons of Zebedee (Matthew 10:2).",
+     "source": "common learner error; to confirm by a CRE teacher",
+     "status": "draft"
+    },
+    {
+     "code": "CRES.G4.THE_CH.THE_EARLY_CHURCH.TWELVE_DISCIPLES.M_C4_TD_COUNT",
+     "skill": "CRES.G4.THE_CH.THE_EARLY_CHURCH.TWELVE_DISCIPLES",
+     "error": "Gives the wrong number of disciples.",
+     "example": {
+      "question": "How many disciples did Jesus choose?",
+      "wrong_answer": "Seven",
+      "correct_answer": "Twelve"
+     },
+     "cause": "The child mixes with other Bible numbers.",
+     "reveals": "Offer \"Seven\" beside \"Twelve\" and ask the child to choose.",
+     "help": "Count the names in Matthew 10:2-4.",
+     "feedback": "Jesus chose twelve disciples (Matthew 10:1-4).",
+     "source": "common learner error; to confirm by a CRE teacher",
+     "status": "draft"
+    },
+    {
+     "code": "CRES.G4.THE_CH.THE_EARLY_CHURCH.CHURCH_BEGINS.M_C4_CB_WHO",
+     "skill": "CRES.G4.THE_CH.THE_EARLY_CHURCH.CHURCH_BEGINS",
+     "error": "Thinks Jesus himself preached on the day of Pentecost.",
+     "example": {
+      "question": "Who preached to the crowd in Acts 2?",
+      "wrong_answer": "Jesus",
+      "correct_answer": "Peter"
+     },
+     "cause": "Jesus is the main teacher in the Gospels.",
+     "reveals": "Offer \"Jesus\" beside \"Peter\" and ask the child to choose.",
+     "help": "Read Acts 2:14 and 2:38.",
+     "feedback": "In Acts 2 it was Peter who preached. Jesus had gone up to heaven and the Holy Spirit had come.",
+     "source": "common learner error; to confirm by a CRE teacher",
+     "status": "draft"
+    },
+    {
+     "code": "CRES.G4.THE_CH.THE_EARLY_CHURCH.CHURCH_BEGINS.M_C4_CB_NUMBER",
+     "skill": "CRES.G4.THE_CH.THE_EARLY_CHURCH.CHURCH_BEGINS",
+     "error": "Gives the wrong number who joined.",
+     "example": {
+      "question": "About how many people joined the believers that day?",
+      "wrong_answer": "Twelve",
+      "correct_answer": "Three thousand"
+     },
+     "cause": "Small numbers are more familiar to children.",
+     "reveals": "Offer \"Twelve\" beside \"Three thousand\" and ask the child to choose.",
+     "help": "Read Acts 2:41.",
+     "feedback": "About three thousand people were added that day (Acts 2:41).",
+     "source": "common learner error; to confirm by a CRE teacher",
+     "status": "draft"
+    },
+    {
+     "code": "CRES.G4.THE_CH.THE_EARLY_CHURCH.CHURCH_BEGINS.M_C4_CB_ONLY_BAPTISM",
+     "skill": "CRES.G4.THE_CH.THE_EARLY_CHURCH.CHURCH_BEGINS",
+     "error": "Thinks Acts 2:38 asks only for baptism with no change of life.",
+     "example": {
+      "question": "What did Peter tell the people to do first, in Acts 2:38?",
+      "wrong_answer": "Only to be baptised",
+      "correct_answer": "To repent, and be baptised"
+     },
+     "cause": "The child remembers the ceremony and forgets the turning.",
+     "reveals": "Offer \"Only to be baptised\" beside \"To repent, and be baptised\" and ask the child to choose.",
+     "help": "Read the verse and note the first word, repent.",
+     "feedback": "Peter said \"Repent and be baptised\". To repent is to turn away from sin.",
+     "source": "common learner error; to confirm by a CRE teacher",
+     "status": "draft"
+    }
+   ],
    "rubric_indicators": [
     "CRE.G4.RUBRIC.5.1"
    ]
@@ -2289,8 +4990,90 @@
      "indicator": "CRE.G4.RUBRIC.5.1"
     }
    ],
-   "skills": [],
-   "misconceptions": [],
+   "skills": [
+    {
+     "code": "CRES.G4.THE_CH.STANDING_FIRM_IN_FAITH.STEPHEN",
+     "name": "Know where believers were first called Christians (Acts 11:26) and how Stephen stood firm (Acts 7:54-60)",
+     "outcomes": [
+      "CRE.G4.THE_CH.STANDING_FIRM_IN_FAITH.a",
+      "CRE.G4.THE_CH.STANDING_FIRM_IN_FAITH.b",
+      "CRE.G4.THE_CH.STANDING_FIRM_IN_FAITH.c",
+      "CRE.G4.THE_CH.STANDING_FIRM_IN_FAITH.d"
+     ],
+     "mastery": "Says that believers were first called Christians at Antioch, that Stephen was stoned for his faith, looked up and saw Jesus, prayed for his attackers to be forgiven, and that the lessons are to stand firm, forgive enemies and not join groups that do not follow Jesus. Evidence rule: at least four of the last five fresh questions right across at least two question forms, and no repeated pick of the same misconception.",
+     "question_forms": [
+      "which city",
+      "recall a fact about Stephen",
+      "what lesson Stephen teaches",
+      "why avoid ungodly groups"
+     ],
+     "thinking": [
+      "recall",
+      "reasoning"
+     ],
+     "horeb_skill_ids": [],
+     "prerequisites": [
+      {
+       "requires": "CRE.G3.THE_CH.THE_HOLY_SPIRIT.a",
+       "kind": "outcome",
+       "strength": "essential",
+       "reason": "Proposed: this skill builds on it. To confirm by a CRE teacher.",
+       "status": "proposed"
+      }
+     ],
+     "status": "proposed"
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "CRES.G4.THE_CH.STANDING_FIRM_IN_FAITH.STEPHEN.M_C4_ST_REVENGE",
+     "skill": "CRES.G4.THE_CH.STANDING_FIRM_IN_FAITH.STEPHEN",
+     "error": "Thinks Stephen asked God to punish those who stoned him.",
+     "example": {
+      "question": "What did Stephen pray for those stoning him?",
+      "wrong_answer": "That God would punish them",
+      "correct_answer": "That God would not hold this sin against them"
+     },
+     "cause": "Revenge is expected of a hurt person.",
+     "reveals": "Offer \"That God would punish them\" beside \"That God would not hold this sin against them\" and ask the child to choose.",
+     "help": "Read Acts 7:60.",
+     "feedback": "Stephen prayed \"Lord, do not hold this sin against them\" (Acts 7:60). He forgave, as Jesus did.",
+     "source": "common learner error; to confirm by a CRE teacher",
+     "status": "draft"
+    },
+    {
+     "code": "CRES.G4.THE_CH.STANDING_FIRM_IN_FAITH.STEPHEN.M_C4_ST_CITY",
+     "skill": "CRES.G4.THE_CH.STANDING_FIRM_IN_FAITH.STEPHEN",
+     "error": "Names the wrong city for the first Christians.",
+     "example": {
+      "question": "In which city were believers first called Christians?",
+      "wrong_answer": "Jerusalem",
+      "correct_answer": "Antioch"
+     },
+     "cause": "Jerusalem is the city most known in Acts.",
+     "reveals": "Offer \"Jerusalem\" beside \"Antioch\" and ask the child to choose.",
+     "help": "Find Antioch on a Bible map.",
+     "feedback": "Acts 11:26 says that at Antioch the believers were first called Christians.",
+     "source": "common learner error; to confirm by a CRE teacher",
+     "status": "draft"
+    },
+    {
+     "code": "CRES.G4.THE_CH.STANDING_FIRM_IN_FAITH.STEPHEN.M_C4_ST_GROUP",
+     "skill": "CRES.G4.THE_CH.STANDING_FIRM_IN_FAITH.STEPHEN",
+     "error": "Thinks it is fine to join a group that does not follow Jesus if friends do.",
+     "example": {
+      "question": "Your friends join a group that mocks Jesus. What should you do?",
+      "wrong_answer": "Join them to fit in",
+      "correct_answer": "Politely refuse and stand firm in your faith"
+     },
+     "cause": "The wish to belong.",
+     "reveals": "Offer \"Join them to fit in\" beside \"Politely refuse and stand firm in your faith\" and ask the child to choose.",
+     "help": "Role-play a polite no.",
+     "feedback": "Stephen stood firm even when it cost him dearly. We should not join groups that do not follow Jesus, but refuse politely and stay firm.",
+     "source": "common learner error; to confirm by a CRE teacher",
+     "status": "draft"
+    }
+   ],
    "rubric_indicators": [
     "CRE.G4.RUBRIC.5.1"
    ]
@@ -2351,8 +5134,87 @@
      "indicator": "CRE.G4.RUBRIC.5.1"
     }
    ],
-   "skills": [],
-   "misconceptions": [],
+   "skills": [
+    {
+     "code": "CRES.G4.THE_CH.THE_LORD_S_PRAYER.LORDS_PRAYER",
+     "name": "Know what the Lord's Prayer (Matthew 6:9-13) asks for and why Christians pray every day",
+     "outcomes": [
+      "CRE.G4.THE_CH.THE_LORD_S_PRAYER.a",
+      "CRE.G4.THE_CH.THE_LORD_S_PRAYER.b"
+     ],
+     "mastery": "Says what the lines of the Lord's Prayer ask for (God's name honoured, his kingdom, daily bread, forgiveness as we forgive, keeping from temptation), that Jesus gave it as a pattern for prayer, and gives reasons to pray daily and for others. Evidence rule: at least four of the last five fresh questions right across at least two question forms, and no repeated pick of the same misconception.",
+     "question_forms": [
+      "what a line of the prayer asks for",
+      "why pray every day",
+      "whom to pray for"
+     ],
+     "thinking": [
+      "recall",
+      "reasoning"
+     ],
+     "horeb_skill_ids": [],
+     "prerequisites": [
+      {
+       "requires": "CRE.G3.THE_CH.PRAYER.a",
+       "kind": "outcome",
+       "strength": "essential",
+       "reason": "Proposed: this skill builds on it. To confirm by a CRE teacher.",
+       "status": "proposed"
+      }
+     ],
+     "status": "proposed"
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "CRES.G4.THE_CH.THE_LORD_S_PRAYER.LORDS_PRAYER.M_C4_LP_BREAD",
+     "skill": "CRES.G4.THE_CH.THE_LORD_S_PRAYER.LORDS_PRAYER",
+     "error": "Thinks \"daily bread\" means asking for riches or only bread.",
+     "example": {
+      "question": "What do we ask for when we pray \"Give us today our daily bread\"?",
+      "wrong_answer": "Riches for ever",
+      "correct_answer": "What we need each day"
+     },
+     "cause": "The words are taken literally.",
+     "reveals": "Offer \"Riches for ever\" beside \"What we need each day\" and ask the child to choose.",
+     "help": "Ask what a child needs each day: food, clothes, health.",
+     "feedback": "In the Lord's Prayer, \"daily bread\" means what we need each day. We ask God to provide.",
+     "source": "common learner error; to confirm by a CRE teacher",
+     "status": "draft"
+    },
+    {
+     "code": "CRES.G4.THE_CH.THE_LORD_S_PRAYER.LORDS_PRAYER.M_C4_LP_FORGIVE",
+     "skill": "CRES.G4.THE_CH.THE_LORD_S_PRAYER.LORDS_PRAYER",
+     "error": "Thinks we may ask for forgiveness without forgiving others.",
+     "example": {
+      "question": "What does the Lord's Prayer say about forgiveness?",
+      "wrong_answer": "Forgive us, and we need not forgive others",
+      "correct_answer": "Forgive us as we forgive others"
+     },
+     "cause": "The second half is left out.",
+     "reveals": "Offer \"Forgive us, and we need not forgive others\" beside \"Forgive us as we forgive others\" and ask the child to choose.",
+     "help": "Read Matthew 6:12.",
+     "feedback": "The Lord's Prayer says \"forgive us our debts as we also have forgiven our debtors\" (Matthew 6:12). We forgive others too.",
+     "source": "common learner error; to confirm by a CRE teacher",
+     "status": "draft"
+    },
+    {
+     "code": "CRES.G4.THE_CH.THE_LORD_S_PRAYER.LORDS_PRAYER.M_C4_LP_ONLY_CHURCH",
+     "skill": "CRES.G4.THE_CH.THE_LORD_S_PRAYER.LORDS_PRAYER",
+     "error": "Thinks Christians pray only at church or once a week.",
+     "example": {
+      "question": "When should we pray?",
+      "wrong_answer": "Only at church",
+      "correct_answer": "Every day, at home and anywhere"
+     },
+     "cause": "Prayer is linked with services.",
+     "reveals": "Offer \"Only at church\" beside \"Every day, at home and anywhere\" and ask the child to choose.",
+     "help": "Make a list of times: morning, meals, bedtime.",
+     "feedback": "Jesus taught us to pray. We can pray every day, at home, at school and at church.",
+     "source": "common learner error; to confirm by a CRE teacher",
+     "status": "draft"
+    }
+   ],
    "rubric_indicators": [
     "CRE.G4.RUBRIC.5.1"
    ]
@@ -2413,8 +5275,87 @@
      "indicator": "CRE.G4.RUBRIC.5.1"
     }
    ],
-   "skills": [],
-   "misconceptions": [],
+   "skills": [
+    {
+     "code": "CRES.G4.THE_CH.FRUIT_OF_THE_HOLY_SPIRIT.FRUIT_SPIRIT",
+     "name": "Know the fruit of the Holy Spirit (Galatians 5:22-23) and how to show it",
+     "outcomes": [
+      "CRE.G4.THE_CH.FRUIT_OF_THE_HOLY_SPIRIT.a",
+      "CRE.G4.THE_CH.FRUIT_OF_THE_HOLY_SPIRIT.b"
+     ],
+     "mastery": "Lists the fruit of the Holy Spirit (love, joy, peace, patience, kindness, goodness, faithfulness, gentleness, self-control), tells them from wrong behaviour, and shows which fruit fits a situation. Evidence rule: at least four of the last five fresh questions right across at least two question forms, and no repeated pick of the same misconception.",
+     "question_forms": [
+      "which is a fruit of the Spirit",
+      "which fruit fits a situation",
+      "what the verse says"
+     ],
+     "thinking": [
+      "recall",
+      "reasoning"
+     ],
+     "horeb_skill_ids": [],
+     "prerequisites": [
+      {
+       "requires": "CRE.G3.THE_CH.THE_HOLY_SPIRIT.c",
+       "kind": "outcome",
+       "strength": "essential",
+       "reason": "Proposed: this skill builds on it. To confirm by a CRE teacher.",
+       "status": "proposed"
+      }
+     ],
+     "status": "proposed"
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "CRES.G4.THE_CH.FRUIT_OF_THE_HOLY_SPIRIT.FRUIT_SPIRIT.M_C4_FR_FOOD",
+     "skill": "CRES.G4.THE_CH.FRUIT_OF_THE_HOLY_SPIRIT.FRUIT_SPIRIT",
+     "error": "Thinks the fruit of the Spirit are real fruits like mango or banana.",
+     "example": {
+      "question": "What are the fruit of the Spirit in Galatians 5:22-23?",
+      "wrong_answer": "Mangoes and bananas",
+      "correct_answer": "Love, joy, peace, patience and others"
+     },
+     "cause": "The word fruit means food to a child.",
+     "reveals": "Offer \"Mangoes and bananas\" beside \"Love, joy, peace, patience and others\" and ask the child to choose.",
+     "help": "Say that fruit here means what grows in a person's life.",
+     "feedback": "The fruit of the Spirit are qualities such as love, joy, peace, patience, kindness, goodness, faithfulness, gentleness and self-control.",
+     "source": "common learner error; to confirm by a CRE teacher",
+     "status": "draft"
+    },
+    {
+     "code": "CRES.G4.THE_CH.FRUIT_OF_THE_HOLY_SPIRIT.FRUIT_SPIRIT.M_C4_FR_BAD",
+     "skill": "CRES.G4.THE_CH.FRUIT_OF_THE_HOLY_SPIRIT.FRUIT_SPIRIT",
+     "error": "Lists a wrong behaviour as part of the fruit.",
+     "example": {
+      "question": "Which of these is a fruit of the Spirit?",
+      "wrong_answer": "Jealousy",
+      "correct_answer": "Kindness"
+     },
+     "cause": "Sorting good from bad is quick but slips.",
+     "reveals": "Offer \"Jealousy\" beside \"Kindness\" and ask the child to choose.",
+     "help": "Sort cards into fruit and not fruit.",
+     "feedback": "Kindness is a fruit of the Spirit. Jealousy and anger are not.",
+     "source": "common learner error; to confirm by a CRE teacher",
+     "status": "draft"
+    },
+    {
+     "code": "CRES.G4.THE_CH.FRUIT_OF_THE_HOLY_SPIRIT.FRUIT_SPIRIT.M_C4_FR_CHURCH_ONLY",
+     "skill": "CRES.G4.THE_CH.FRUIT_OF_THE_HOLY_SPIRIT.FRUIT_SPIRIT",
+     "error": "Thinks the fruit of the Spirit show only in church.",
+     "example": {
+      "question": "Where should the fruit of the Spirit show?",
+      "wrong_answer": "Only in church",
+      "correct_answer": "Everywhere, at home, school and church"
+     },
+     "cause": "Faith is linked with services.",
+     "reveals": "Offer \"Only in church\" beside \"Everywhere, at home, school and church\" and ask the child to choose.",
+     "help": "Give examples at a football game.",
+     "feedback": "The fruit of the Spirit show in the whole of life, at home, at school, at play and at church.",
+     "source": "common learner error; to confirm by a CRE teacher",
+     "status": "draft"
+    }
+   ],
    "rubric_indicators": [
     "CRE.G4.RUBRIC.5.1"
    ]
@@ -2483,8 +5424,88 @@
      "indicator": "CRE.G4.RUBRIC.5.1"
     }
    ],
-   "skills": [],
-   "misconceptions": [],
+   "skills": [
+    {
+     "code": "CRES.G4.THE_CH.SELF_CONTROL.SELF_CONTROL",
+     "name": "Know what self-control is (Galatians 5:23-25) and how to avoid what defiles the body",
+     "outcomes": [
+      "CRE.G4.THE_CH.SELF_CONTROL.a",
+      "CRE.G4.THE_CH.SELF_CONTROL.b",
+      "CRE.G4.THE_CH.SELF_CONTROL.c"
+     ],
+     "mastery": "Says that self-control is a fruit of the Spirit and means choosing what is right instead of what the feeling says, that Galatians 5:25 says to keep in step with the Spirit, and avoids drugs, harmful videos and wrong behaviour that harm the body. Evidence rule: at least four of the last five fresh questions right across at least two question forms, and no repeated pick of the same misconception.",
+     "question_forms": [
+      "what self-control means",
+      "which choice shows self-control",
+      "what harms the body"
+     ],
+     "thinking": [
+      "recall",
+      "reasoning"
+     ],
+     "horeb_skill_ids": [],
+     "prerequisites": [
+      {
+       "requires": "CRES.G4.THE_CH.FRUIT_OF_THE_HOLY_SPIRIT.FRUIT_SPIRIT",
+       "kind": "skill",
+       "strength": "essential",
+       "reason": "Proposed: this skill builds on it. To confirm by a CRE teacher.",
+       "status": "proposed"
+      }
+     ],
+     "status": "proposed"
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "CRES.G4.THE_CH.SELF_CONTROL.SELF_CONTROL.M_C4_SC_FEELINGS",
+     "skill": "CRES.G4.THE_CH.SELF_CONTROL.SELF_CONTROL",
+     "error": "Thinks self-control means doing whatever one feels like.",
+     "example": {
+      "question": "What is self-control?",
+      "wrong_answer": "Doing whatever I feel like",
+      "correct_answer": "Choosing what is right instead of what my feeling pushes me to do"
+     },
+     "cause": "Control is confused with freedom.",
+     "reveals": "Offer \"Doing whatever I feel like\" beside \"Choosing what is right instead of what my feeling pushes me to do\" and ask the child to choose.",
+     "help": "Role-play counting to ten when angry.",
+     "feedback": "Self-control means choosing what is right even when a feeling pushes us another way.",
+     "source": "common learner error; to confirm by a CRE teacher",
+     "status": "draft"
+    },
+    {
+     "code": "CRES.G4.THE_CH.SELF_CONTROL.SELF_CONTROL.M_C4_SC_OWN_POWER",
+     "skill": "CRES.G4.THE_CH.SELF_CONTROL.SELF_CONTROL",
+     "error": "Thinks self-control comes only from our own strength.",
+     "example": {
+      "question": "Where does self-control come from, according to Galatians 5:22-25?",
+      "wrong_answer": "Only from my own strength",
+      "correct_answer": "It is a fruit of the Holy Spirit"
+     },
+     "cause": "The word control sounds like effort.",
+     "reveals": "Offer \"Only from my own strength\" beside \"It is a fruit of the Holy Spirit\" and ask the child to choose.",
+     "help": "Read Galatians 5:23 and 5:25.",
+     "feedback": "Self-control is a fruit of the Spirit. We ask for the Spirit's help and keep in step with him (Galatians 5:25).",
+     "source": "common learner error; to confirm by a CRE teacher",
+     "status": "draft"
+    },
+    {
+     "code": "CRES.G4.THE_CH.SELF_CONTROL.SELF_CONTROL.M_C4_SC_SECRET_OK",
+     "skill": "CRES.G4.THE_CH.SELF_CONTROL.SELF_CONTROL",
+     "error": "Thinks drugs or harmful videos are fine if done in secret.",
+     "example": {
+      "question": "A friend offers you a harmful video to watch in secret. What shows self-control?",
+      "wrong_answer": "Watch it, since no one will know",
+      "correct_answer": "Refuse and keep your mind and body clean"
+     },
+     "cause": "Secrecy seems to remove the harm.",
+     "reveals": "Offer \"Watch it, since no one will know\" beside \"Refuse and keep your mind and body clean\" and ask the child to choose.",
+     "help": "Ask what harm comes even if nobody finds out.",
+     "feedback": "Things that harm the body and mind are wrong even in secret. Self-control means saying no.",
+     "source": "common learner error; to confirm by a CRE teacher",
+     "status": "draft"
+    }
+   ],
    "rubric_indicators": [
     "CRE.G4.RUBRIC.5.1"
    ]
@@ -2550,8 +5571,104 @@
      "indicator": "CRE.G4.RUBRIC.6.1"
     }
    ],
-   "skills": [],
-   "misconceptions": [],
+   "skills": [
+    {
+     "code": "CRES.G4.MORALI.USE_OF_SOCIAL_MEDIA.SOCIAL_MEDIA",
+     "name": "Name digital devices and use social media safely and with integrity",
+     "outcomes": [
+      "CRE.G4.MORALI.USE_OF_SOCIAL_MEDIA.a",
+      "CRE.G4.MORALI.USE_OF_SOCIAL_MEDIA.b",
+      "CRE.G4.MORALI.USE_OF_SOCIAL_MEDIA.c"
+     ],
+     "mastery": "Names digital devices used at home and school (phone, tablet, computer), knows to keep passwords and home address private, never to chat with or meet strangers online, to tell a trusted adult about unsafe messages, not to pass on unkind messages, and to do right even when no one is watching. Evidence rule: at least four of the last five fresh questions right across at least two question forms, and no repeated pick of the same misconception.",
+     "question_forms": [
+      "which is a digital device",
+      "what to do online",
+      "what integrity means"
+     ],
+     "thinking": [
+      "recall",
+      "reasoning"
+     ],
+     "horeb_skill_ids": [],
+     "prerequisites": [
+      {
+       "requires": "CRE.G3.CHRIST.TRUST.a",
+       "kind": "outcome",
+       "strength": "essential",
+       "reason": "Proposed: this skill builds on it. To confirm by a CRE teacher.",
+       "status": "proposed"
+      }
+     ],
+     "status": "proposed"
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "CRES.G4.MORALI.USE_OF_SOCIAL_MEDIA.SOCIAL_MEDIA.M_C4_SM_STRANGER",
+     "skill": "CRES.G4.MORALI.USE_OF_SOCIAL_MEDIA.SOCIAL_MEDIA",
+     "error": "Thinks an online stranger who is friendly can be trusted.",
+     "example": {
+      "question": "A stranger online asks to chat in private and meet. What should you do?",
+      "wrong_answer": "Chat and meet, he is friendly",
+      "correct_answer": "Not reply, and tell a parent or teacher"
+     },
+     "cause": "The child cannot tell who is really online.",
+     "reveals": "Offer \"Chat and meet, he is friendly\" beside \"Not reply, and tell a parent or teacher\" and ask the child to choose.",
+     "help": "Say that people can lie about who they are.",
+     "feedback": "People online may not be who they say. Do not chat with strangers or agree to meet them. Tell a parent or teacher.",
+     "source": "common learner error; to confirm by a CRE teacher",
+     "status": "draft"
+    },
+    {
+     "code": "CRES.G4.MORALI.USE_OF_SOCIAL_MEDIA.SOCIAL_MEDIA.M_C4_SM_PRIVATE",
+     "skill": "CRES.G4.MORALI.USE_OF_SOCIAL_MEDIA.SOCIAL_MEDIA",
+     "error": "Thinks it is safe to share passwords and the home address.",
+     "example": {
+      "question": "Which should you keep private online?",
+      "wrong_answer": "My favourite song",
+      "correct_answer": "My password and home address"
+     },
+     "cause": "Friends share things freely.",
+     "reveals": "Offer \"My favourite song\" beside \"My password and home address\" and ask the child to choose.",
+     "help": "List what a stranger could do with a password.",
+     "feedback": "Keep your password and home address private. Sharing them can let others harm you or use your account.",
+     "source": "common learner error; to confirm by a CRE teacher",
+     "status": "draft"
+    },
+    {
+     "code": "CRES.G4.MORALI.USE_OF_SOCIAL_MEDIA.SOCIAL_MEDIA.M_C4_SM_NOBODY",
+     "skill": "CRES.G4.MORALI.USE_OF_SOCIAL_MEDIA.SOCIAL_MEDIA",
+     "error": "Thinks it is fine to do wrong online if nobody will know.",
+     "example": {
+      "question": "You find a way to send an unkind joke about a classmate without your name. What shows integrity?",
+      "wrong_answer": "Send it, nobody will know",
+      "correct_answer": "Do not send it, because it would hurt"
+     },
+     "cause": "Anonymity feels like permission.",
+     "reveals": "Offer \"Send it, nobody will know\" beside \"Do not send it, because it would hurt\" and ask the child to choose.",
+     "help": "Ask whether God knows.",
+     "feedback": "Integrity means doing right even when no one is watching. An unkind message hurts whether or not your name is on it.",
+     "source": "common learner error; to confirm by a CRE teacher",
+     "status": "draft"
+    },
+    {
+     "code": "CRES.G4.MORALI.USE_OF_SOCIAL_MEDIA.SOCIAL_MEDIA.M_C4_SM_DEVICE",
+     "skill": "CRES.G4.MORALI.USE_OF_SOCIAL_MEDIA.SOCIAL_MEDIA",
+     "error": "Counts a non-digital object as a digital device.",
+     "example": {
+      "question": "Which of these is a digital device?",
+      "wrong_answer": "A pencil",
+      "correct_answer": "A mobile phone"
+     },
+     "cause": "Digital is confused with modern or useful.",
+     "reveals": "Offer \"A pencil\" beside \"A mobile phone\" and ask the child to choose.",
+     "help": "Show a phone, a tablet and a pencil and ask which needs power and a screen.",
+     "feedback": "A digital device is one such as a phone, a tablet or a computer. A pencil is not a digital device.",
+     "source": "common learner error; to confirm by a CRE teacher",
+     "status": "draft"
+    }
+   ],
    "rubric_indicators": [
     "CRE.G4.RUBRIC.6.1"
    ]
