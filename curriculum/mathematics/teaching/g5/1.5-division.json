@@ -1,0 +1,200 @@
+{
+  "sub_strand": "MATH.G5.NUMBER.DIVISION",
+  "title": "Division and combined operations",
+  "status": "draft: written 13 Nov 2026 from research round 3; shorter entries; not yet checked by a Kenyan maths teacher; not loaded by the live tutor",
+  "sources": [49, 52, 65, 73],
+  "notes": "In 2017 only 28% of Kenyan Class 5 and 6 pupils managed Class 4 division (source 65), so start with a floor check and sharing with real objects. Every division ends with a check by multiplying back. Word problems need the remainder interpreted in the story (round up for buses, give the leftover for change).",
+  "skills": [
+    {
+      "skill": "MATH.G5.NUMBER.DIVISION.DIV_3DIGIT_BY_1DIGIT",
+      "key_step": "The child shares hundreds, then tens, then ones, carrying each leftover into the next place, writing 0 in the quotient where a place cannot be shared, and keeps the remainder smaller than the divisor.",
+      "floor": {"prerequisite": "Knows division facts to 81 ÷ 9.", "question": "36 ÷ 4 =", "answer": "9"},
+      "representations": ["sharing notes and coins among people", "place value chart with sharing", "short and long division"],
+      "steps": ["Estimate.", "Share the hundreds; carry leftovers as tens.", "Share the tens; carry leftovers as ones.", "Write 0 where a place cannot be shared.", "Check: quotient x divisor + remainder."],
+      "contexts": ["sharing money among children", "packing eggs into trays", "sharing books among classes"],
+      "board": [
+        {"beat": "write", "do": "Write 618 ÷ 6 in a division frame."},
+        {"beat": "point", "do": "Point at the 1 ten.", "say": "Can 1 ten be shared among 6?"},
+        {"beat": "pause", "do": "Wait for the child to say what goes in the quotient."},
+        {"beat": "child_draws", "do": "Child finishes and checks by multiplying."}
+      ],
+      "misconceptions": [
+        {"code": "MATH.G5.NUMBER.DIVISION.DIV_3DIGIT_BY_1DIGIT.M_ZERO_QUOTIENT_DROPPED", "listen_for": ["13"], "ask": "Check: is 13 x 6 near 618?", "repair": "When a place cannot be shared, write 0 there to keep the places."},
+        {"code": "MATH.G5.NUMBER.DIVISION.DIV_3DIGIT_BY_1DIGIT.M_REMAINDER_TOO_BIG", "listen_for": ["remainder 7"], "ask": "If 7 are left over and each gets 5, can each get one more?", "repair": "The remainder must be smaller than the divisor; share again."}
+      ],
+      "checks": [
+        {"question": "618 ÷ 6", "answer": "103", "shows": "zero in the quotient"},
+        {"question": "157 ÷ 5", "answer": "31 remainder 2", "shows": "remainder smaller than divisor"}
+      ]
+    },
+    {
+      "skill": "MATH.G5.NUMBER.DIVISION.DIV_3DIGIT_BY_2DIGIT",
+      "key_step": "The child estimates each quotient digit by rounding the divisor, multiplies and subtracts, raises the digit if the remainder is still as big as the divisor, and writes a final 0 when the last step cannot divide.",
+      "floor": {"prerequisite": "Divides by a 1-digit number; multiplies by 2-digit numbers.", "question": "How many 24s in 96?", "answer": "4"},
+      "representations": ["packing items into groups of a 2-digit size", "a times list of the divisor", "long division"],
+      "steps": ["Write a short times list of the divisor (x1, x2, x5, x10).", "Estimate each digit.", "Multiply, subtract, bring down.", "If the remainder is as big as the divisor, raise the digit.", "Check by multiplying back."],
+      "contexts": ["packing 864 mangoes into crates of 24", "sharing 840 shillings among 42 pupils", "seating pupils at benches"],
+      "board": [
+        {"beat": "write", "do": "Write 864 ÷ 24 and a times list for 24 with gaps."},
+        {"beat": "child_draws", "do": "Child fills 24 x 2, x3, x4."},
+        {"beat": "pause", "do": "Wait for the child to choose the first quotient digit."}
+      ],
+      "misconceptions": [
+        {"code": "MATH.G5.NUMBER.DIVISION.DIV_3DIGIT_BY_2DIGIT.M_TRIAL_DIGIT_TOO_SMALL", "listen_for": ["remainder 30"], "ask": "Is 30 left over more than one 24?", "repair": "If the leftover is as big as the divisor, the digit is too small: raise it by one."},
+        {"code": "MATH.G5.NUMBER.DIVISION.DIV_3DIGIT_BY_2DIGIT.M_TRAILING_ZERO_DROPPED", "listen_for": ["2"], "ask": "Check: is 2 x 42 near 840?", "repair": "When the last digit brought down cannot be divided, write 0 in the quotient."}
+      ],
+      "checks": [
+        {"question": "864 ÷ 24", "answer": "36", "shows": "trial digits checked"},
+        {"question": "840 ÷ 42", "answer": "20", "shows": "final zero"}
+      ]
+    },
+    {
+      "skill": "MATH.G5.NUMBER.DIVISION.DIV_WORD_PROBLEMS",
+      "key_step": "The child recognises sharing and grouping as division, then answers what the story asks about the remainder: round up, give the leftover, or ignore it.",
+      "floor": {"prerequisite": "Divides with remainders.", "question": "250 ÷ 60 =", "answer": "4 remainder 10"},
+      "representations": ["the story acted out", "groups drawn with leftovers", "a sentence answer"],
+      "steps": ["Divide.", "Ask what the remainder means in the story.", "Round up, keep the leftover, or drop it.", "Answer in a sentence."],
+      "contexts": ["buses for a trip to Nairobi National Park", "exercise books bought with Sh 500", "mangoes packed into crates in Murang'a"],
+      "board": [
+        {"beat": "write", "do": "Write: 250 pupils; each bus carries 60. How many buses?"},
+        {"beat": "draw", "do": "Draw four full buses and 10 pupils left standing."},
+        {"beat": "point", "do": "Point at the 10 pupils.", "say": "Can these 10 stay at school?"},
+        {"beat": "pause", "do": "Wait for the child's answer."}
+      ],
+      "misconceptions": [
+        {"code": "MATH.G5.NUMBER.DIVISION.DIV_WORD_PROBLEMS.M_REMAINDER_NOT_INTERPRETED", "listen_for": ["4 buses"], "ask": "Where do the last 10 pupils sit?", "repair": "Everyone must travel, so one more bus: round up."},
+        {"code": "MATH.G5.NUMBER.DIVISION.DIV_WORD_PROBLEMS.M_KEYWORD_EACH_MEANS_MULTIPLY", "listen_for": ["each so times"], "ask": "Are we putting mangoes into crates, or making more mangoes?", "repair": "Draw the crates: putting into equal groups is division."}
+      ],
+      "checks": [
+        {"question": "250 pupils go on a trip; each bus carries 60. How many buses?", "answer": "5", "shows": "rounds up"},
+        {"question": "Akinyi has Sh 500. Books cost Sh 45 each. How much is left after buying as many as she can?", "answer": "Sh 5", "shows": "gives the leftover"}
+      ]
+    },
+    {
+      "skill": "MATH.G5.NUMBER.DIVISION.MULT_DIV_FACT_FAMILIES",
+      "key_step": "The child writes the related facts from one fact, knowing division order matters, and finds a missing dividend by multiplying.",
+      "floor": {"prerequisite": "Knows multiplication facts.", "question": "6 x 4 =", "answer": "24"},
+      "representations": ["an array of dots", "a fact family triangle", "the four facts"],
+      "steps": ["Draw an array.", "Read it as two multiplications.", "Read it as two divisions (the big number first).", "Use it to find missing numbers."],
+      "contexts": ["chairs in rows", "eggs in trays", "packets in boxes"],
+      "board": [
+        {"beat": "draw", "do": "Draw a fact triangle with 144 at the top, 24 and 6 at the corners."},
+        {"beat": "child_draws", "do": "Child writes the four facts."},
+        {"beat": "pause", "do": "Wait for the child to say which number comes first in a division."}
+      ],
+      "misconceptions": [
+        {"code": "MATH.G5.NUMBER.DIVISION.MULT_DIV_FACT_FAMILIES.M_DIVISION_COMMUTATIVE", "listen_for": ["6 ÷ 144"], "ask": "Can 6 sweets be shared so each of 144 children gets 24?", "repair": "In division the total comes first."},
+        {"code": "MATH.G5.NUMBER.DIVISION.MULT_DIV_FACT_FAMILIES.M_MISSING_DIVIDEND_DIVIDES", "listen_for": ["2"], "ask": "If 8 children each got 16, how many were shared?", "repair": "The missing total is found by multiplying."}
+      ],
+      "checks": [
+        {"question": "Given 24 x 6 = 144, write the two division facts.", "answer": "144 ÷ 6 = 24 and 144 ÷ 24 = 6", "shows": "order in division"},
+        {"question": "□ ÷ 8 = 16", "answer": "128", "shows": "multiplies for the dividend"}
+      ]
+    },
+    {
+      "skill": "MATH.G5.NUMBER.DIVISION.CHECK_DIVISION_BY_MULT",
+      "key_step": "The child checks a division by quotient x divisor + remainder and compares with the dividend.",
+      "floor": {"prerequisite": "Multiplies and adds.", "question": "31 x 5 + 2 =", "answer": "157"},
+      "representations": ["groups put back together", "the check written out", "a yes or no"],
+      "steps": ["Multiply quotient by divisor.", "Add the remainder.", "Compare with the dividend."],
+      "contexts": ["checking a sharing", "checking packing", "checking homework"],
+      "board": [
+        {"beat": "write", "do": "Write 157 ÷ 5 = 31 r 2 and the check frame __ x __ + __ = __."},
+        {"beat": "child_draws", "do": "Child fills the check."},
+        {"beat": "pause", "do": "Wait for the child to compare."}
+      ],
+      "misconceptions": [
+        {"code": "MATH.G5.NUMBER.DIVISION.CHECK_DIVISION_BY_MULT.M_CHECK_FORGETS_REMAINDER", "listen_for": ["155 so it's wrong"], "ask": "What happened to the 2 left over?", "repair": "Put the leftovers back too: add the remainder."}
+      ],
+      "checks": [
+        {"question": "Check 157 ÷ 5 = 31 r 2.", "answer": "31 x 5 + 2 = 157, so it is right", "shows": "adds the remainder"},
+        {"question": "Check 200 ÷ 7 = 28 r 4.", "answer": "28 x 7 + 4 = 200, so it is right", "shows": "full check"}
+      ]
+    },
+    {
+      "skill": "MATH.G5.NUMBER.DIVISION.DIV_BY_1000",
+      "key_step": "The child moves each digit three places to the right (the number gets smaller), writing zeros after the point where needed.",
+      "floor": {"prerequisite": "Knows tenths, hundredths, thousandths.", "question": "What is 1 thousandth as a decimal?", "answer": "0.001"},
+      "representations": ["grammes to kilogrammes", "place value chart with digits sliding right", "the decimal"],
+      "steps": ["Estimate: smaller than 1?", "Put the number in the chart.", "Slide digits three places right.", "Fill zeros after the point."],
+      "contexts": ["750 g of sugar in kg", "a 125 g packet of Royco in kg", "metres to kilometres"],
+      "board": [
+        {"beat": "write", "do": "Write 750 in a chart that extends past the point."},
+        {"beat": "predict", "do": "Ask whether 750 ÷ 1000 is more or less than 1.", "say": "More or less than one?"},
+        {"beat": "draw", "do": "Slide the digits right one place at a time, three times, counting."},
+        {"beat": "pause", "do": "Wait for the child to read the decimal."}
+      ],
+      "misconceptions": [
+        {"code": "MATH.G5.NUMBER.DIVISION.DIV_BY_1000.M_SMALLER_CANNOT_DIVIDE_BIGGER", "listen_for": ["you can't", "zero"], "ask": "Is 750 g of sugar some of a kilogramme, or none?", "repair": "Dividing a smaller number by a bigger one gives part of one: a decimal."},
+        {"code": "MATH.G5.NUMBER.DIVISION.DIV_BY_1000.M_DIV1000_MULTIPLIES", "listen_for": ["125,000"], "ask": "Does dividing make the number bigger or smaller?", "repair": "Slide right, not left: the number gets smaller."}
+      ],
+      "checks": [
+        {"question": "Mama bought 750 g of sugar. How many kg?", "answer": "0.75 kg", "shows": "smaller divided by bigger"},
+        {"question": "125 ÷ 1000", "answer": "0.125", "shows": "three places right"}
+      ]
+    },
+    {
+      "skill": "MATH.G5.NUMBER.DIVISION.ESTIMATE_QUOTIENTS",
+      "key_step": "The child rounds both numbers to the nearest ten (a divisor ending in 5 rounds up) and divides the rounded numbers mentally.",
+      "floor": {"prerequisite": "Rounds to the nearest ten; divides by multiples of ten.", "question": "600 ÷ 30 =", "answer": "20"},
+      "representations": ["rounded numbers", "a mental division", "the estimate"],
+      "steps": ["Round the dividend.", "Round the divisor.", "Divide mentally.", "Use it to check an exact answer."],
+      "contexts": ["estimating shares", "estimating trips needed", "estimating how many packets"],
+      "board": [
+        {"beat": "write", "do": "Write 598 ÷ 15 with boxes above each number."},
+        {"beat": "child_draws", "do": "Child rounds both."},
+        {"beat": "pause", "do": "Wait for the estimate."}
+      ],
+      "misconceptions": [
+        {"code": "MATH.G5.NUMBER.DIVISION.ESTIMATE_QUOTIENTS.M_ROUNDS_DIVISOR_WRONG", "listen_for": ["15 to 10"], "ask": "When the ones digit is 5, which way do we round?", "repair": "5 rounds up: 15 becomes 20."},
+        {"code": "MATH.G5.NUMBER.DIVISION.ESTIMATE_QUOTIENTS.M_ESTIMATE_COMPUTED_EXACTLY", "listen_for": ["I did long division"], "ask": "Is an estimate meant to be quick?", "repair": "Round both, then divide in your head."}
+      ],
+      "checks": [
+        {"question": "Estimate 598 ÷ 15 by rounding both to the nearest ten.", "answer": "600 ÷ 20 = 30", "shows": "rounds 15 up"},
+        {"question": "Estimate 598 ÷ 31.", "answer": "600 ÷ 30 = 20", "shows": "mental division"}
+      ]
+    },
+    {
+      "skill": "MATH.G5.NUMBER.DIVISION.ORDER_OF_OPERATIONS",
+      "key_step": "The child does multiplication and division first, working left to right between them, then addition and subtraction left to right.",
+      "floor": {"prerequisite": "Works out combined addition and subtraction left to right.", "question": "50 - 20 + 10 =", "answer": "40"},
+      "representations": ["a shopping story", "the expression with the first step circled", "the result"],
+      "steps": ["Circle multiplications and divisions; do them left to right.", "Then add and subtract left to right.", "Check with a story."],
+      "contexts": ["buying 3 loaves and a packet of milk", "sharing after buying", "a farmer's sales"],
+      "board": [
+        {"beat": "write", "do": "Write 20 + 30 ÷ 5."},
+        {"beat": "point", "do": "Point at the division.", "say": "Which part do we work out first?"},
+        {"beat": "pause", "do": "Wait for the child's working."}
+      ],
+      "misconceptions": [
+        {"code": "MATH.G5.NUMBER.DIVISION.ORDER_OF_OPERATIONS.M_LEFT_TO_RIGHT_ALL", "listen_for": ["10"], "ask": "If you have 20 shillings and get a fifth of 30 shillings, how much?", "repair": "Tell it as a story: the division is a step on its own, done first."},
+        {"code": "MATH.G5.NUMBER.DIVISION.ORDER_OF_OPERATIONS.M_MULTIPLY_BEFORE_DIVIDE", "listen_for": ["4"], "ask": "Which comes first reading left to right, ÷ or x?", "repair": "x and ÷ are equal partners: left to right."}
+      ],
+      "checks": [
+        {"question": "20 + 30 ÷ 5", "answer": "26", "shows": "division first"},
+        {"question": "48 ÷ 6 x 2", "answer": "16", "shows": "left to right between x and ÷"}
+      ]
+    },
+    {
+      "skill": "MATH.G5.NUMBER.DIVISION.COMBINED_OPS_PROBLEMS",
+      "key_step": "The child turns a multi-step story into steps (or one expression), works them in the right order, and finishes every step.",
+      "floor": {"prerequisite": "Uses the order of operations.", "question": "3 x 150 + 60 =", "answer": "510"},
+      "representations": ["the story in steps", "a bar model", "the expression and answer"],
+      "steps": ["List the steps of the story.", "Write each step or one expression.", "Work in the right order.", "Check the last step answers the question."],
+      "contexts": ["shopping and change", "sharing after buying", "harvest packed and sold"],
+      "board": [
+        {"beat": "write", "do": "Write: Wanjiku bought 3 kg of sugar at Sh 150 per kg and bread for Sh 60. She paid Sh 1,000. Change?"},
+        {"beat": "draw", "do": "Draw three step boxes."},
+        {"beat": "child_draws", "do": "Child writes one step in each box."},
+        {"beat": "pause", "do": "Wait for the final answer."}
+      ],
+      "misconceptions": [
+        {"code": "MATH.G5.NUMBER.DIVISION.COMBINED_OPS_PROBLEMS.M_STOPS_AFTER_ONE_STEP", "listen_for": ["Sh 450"], "ask": "Did the question ask the cost of the sugar?", "repair": "Read the question last line; fill every step box."}
+      ],
+      "checks": [
+        {"question": "Wanjiku bought 3 kg of sugar at Sh 150 per kg and bread for Sh 60, paying Sh 1,000. Change?", "answer": "Sh 490", "shows": "all steps"},
+        {"question": "A farmer packs 360 mangoes into crates of 24 and sells each crate for Sh 500. How much money?", "answer": "Sh 7,500", "shows": "divide then multiply"}
+      ]
+    }
+  ]
+}

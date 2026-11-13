@@ -3078,6 +3078,1373 @@ export const TEACHING_PACK_G5 = {
   "sub_strand_name": "Subtraction (up to 6 digits)",
   "status": "draft: written 13 Nov 2026 from research round 3; shorter entries; not yet checked by a Kenyan maths teacher; not loaded by the live tutor"
  },
+ "MATH.G5.NUMBER.MULTIPLICATION.MULT_3D_BY_1D": {
+  "skill": "MATH.G5.NUMBER.MULTIPLICATION.MULT_3D_BY_1D",
+  "key_step": "The child multiplies each digit by the 1-digit number, starting from the ones, and adds the carried digit after multiplying the next column, including across a zero.",
+  "floor": {
+   "prerequisite": "Knows multiplication facts to 9 x 9.",
+   "question": "8 x 4 =",
+   "answer": "32"
+  },
+  "representations": [
+   "crates of milk packets",
+   "an area rectangle split into hundreds, tens, ones",
+   "column multiplication"
+  ],
+  "steps": [
+   "Estimate.",
+   "Split the number into hundreds, tens and ones on an area picture.",
+   "Multiply each part; see the parts add up.",
+   "Column method: multiply, then add the carry.",
+   "Compare with the estimate."
+  ],
+  "contexts": [
+   "a dairy in Nyandarua packing milk",
+   "bags of maize for a school",
+   "seats in matatus"
+  ],
+  "board": [
+   {
+    "beat": "draw",
+    "do": "Draw a rectangle 4 tall and split along its length into 200, 60 and 8."
+   },
+   {
+    "beat": "predict",
+    "do": "Ask for an estimate of 268 x 4.",
+    "say": "About how much is 268 times 4?"
+   },
+   {
+    "beat": "child_draws",
+    "do": "Child writes the product inside each part."
+   },
+   {
+    "beat": "pause",
+    "do": "Wait for the child to add the parts."
+   }
+  ],
+  "misconceptions": [
+   {
+    "code": "MATH.G5.NUMBER.MULTIPLICATION.MULT_3D_BY_1D.M_ADD_CARRY_BEFORE_MULTIPLY",
+    "listen_for": [
+     "I added the carry first"
+    ],
+    "ask": "Was the carried ten part of the 6 tens, or made by the ones?",
+    "repair": "Multiply the tens first, then add the carried ten: the area picture shows the parts separately.",
+    "error": "Adds the carried digit to the next digit and then multiplies, instead of multiplying first and then adding the carry.",
+    "example": {
+     "question": "A dairy in Nyandarua fills 268 packets of milk each hour. How many packets does it fill in 4 hours? (268 × 4)",
+     "wrong_answer": "2062",
+     "correct_answer": "1072"
+    }
+   },
+   {
+    "code": "MATH.G5.NUMBER.MULTIPLICATION.MULT_3D_BY_1D.M_ZERO_DIGIT_SKIPPED",
+    "listen_for": [
+     "zero is nothing so skip"
+    ],
+    "ask": "In 305 x 6, where does the carried 3 from the ones go?",
+    "repair": "0 x 6 is 0, but the carry still lands in that column.",
+    "error": "When there is a zero inside the number, treats that column as 'nothing to do' and loses the carried digit.",
+    "example": {
+     "question": "A school buys 6 bags of maize, each 305 kg. What is the total mass? (305 × 6)",
+     "wrong_answer": "1800 kg",
+     "correct_answer": "1830 kg"
+    }
+   }
+  ],
+  "checks": [
+   {
+    "question": "268 x 4",
+    "answer": "1,072",
+    "shows": "carries after multiplying"
+   },
+   {
+    "question": "A school buys 6 bags of maize, each 305 kg. Total mass?",
+    "answer": "1,830 kg",
+    "shows": "zero inside the number"
+   }
+  ],
+  "name": "Multiply up to a 3-digit number by a 1-digit number",
+  "sub_strand": "MATH.G5.NUMBER.MULTIPLICATION",
+  "sub_strand_name": "Multiplication",
+  "status": "draft: written 13 Nov 2026 from research round 3; shorter entries; not yet checked by a Kenyan maths teacher; not loaded by the live tutor"
+ },
+ "MATH.G5.NUMBER.MULTIPLICATION.MULT_3D_BY_2D": {
+  "skill": "MATH.G5.NUMBER.MULTIPLICATION.MULT_3D_BY_2D",
+  "key_step": "The child multiplies by the ones digit, then by the tens digit as tens (writing a zero first), and adds the two rows.",
+  "floor": {
+   "prerequisite": "Multiplies a 3-digit number by a 1-digit number.",
+   "question": "243 x 6 =",
+   "answer": "1,458"
+  },
+  "representations": [
+   "an area rectangle split by 20 and 6",
+   "two partial products",
+   "the sum"
+  ],
+  "steps": [
+   "Estimate.",
+   "Split the 2-digit number into tens and ones.",
+   "Row 1: times the ones.",
+   "Row 2: times the tens, so write a zero first.",
+   "Add the rows; compare with the estimate."
+  ],
+  "contexts": [
+   "pupils on 26 buses",
+   "the cost of 23 exercise books",
+   "trays of eggs"
+  ],
+  "board": [
+   {
+    "beat": "draw",
+    "do": "Draw a rectangle for 243 x 26 split into a 20 strip and a 6 strip."
+   },
+   {
+    "beat": "point",
+    "do": "Point at the 20 strip.",
+    "say": "Is this strip 2 or 20?"
+   },
+   {
+    "beat": "pause",
+    "do": "Wait for the child to say why the zero is written."
+   },
+   {
+    "beat": "child_draws",
+    "do": "Child writes both partial products and adds."
+   }
+  ],
+  "misconceptions": [
+   {
+    "code": "MATH.G5.NUMBER.MULTIPLICATION.MULT_3D_BY_2D.M_NO_PLACEHOLDER_ZERO",
+    "listen_for": [
+     "I forgot the zero",
+     "times 2"
+    ],
+    "ask": "In 26, is the 2 worth two or twenty?",
+    "repair": "The tens row is 20 times, so it is ten times bigger: write the zero first.",
+    "error": "Multiplies by the tens digit as if it were ones, forgetting to shift one place or write the zero, so the second partial product is ten times too small.",
+    "example": {
+     "question": "243 × 26",
+     "wrong_answer": "1944",
+     "correct_answer": "6318"
+    }
+   },
+   {
+    "code": "MATH.G5.NUMBER.MULTIPLICATION.MULT_3D_BY_2D.M_MULTIPLY_LIKE_ADDITION",
+    "listen_for": [
+     "ones times ones, tens times tens"
+    ],
+    "ask": "Your estimate is about 7,000. Is 326 near it?",
+    "repair": "Every part of one number multiplies every part of the other: the area picture shows all of them.",
+    "error": "Multiplies only digits in the same column (ones by ones, tens by tens), as in column addition.",
+    "example": {
+     "question": "312 × 23",
+     "wrong_answer": "326",
+     "correct_answer": "7176"
+    }
+   }
+  ],
+  "checks": [
+   {
+    "question": "312 x 23",
+    "answer": "7,176",
+    "shows": "two partial products"
+   },
+   {
+    "question": "243 x 26",
+    "answer": "6,318",
+    "shows": "carries kept separate in each row"
+   }
+  ],
+  "name": "Multiply up to a 3-digit number by a 2-digit number",
+  "sub_strand": "MATH.G5.NUMBER.MULTIPLICATION",
+  "sub_strand_name": "Multiplication",
+  "status": "draft: written 13 Nov 2026 from research round 3; shorter entries; not yet checked by a Kenyan maths teacher; not loaded by the live tutor"
+ },
+ "MATH.G5.NUMBER.MULTIPLICATION.MULT_WORD_PROBLEMS": {
+  "skill": "MATH.G5.NUMBER.MULTIPLICATION.MULT_WORD_PROBLEMS",
+  "key_step": "The child recognises equal groups, cost per item or rate per trip as multiplication, and finishes every step of a two-step problem.",
+  "floor": {
+   "prerequisite": "Multiplies up to 3 digits by 2 digits.",
+   "question": "48 x 12 =",
+   "answer": "576"
+  },
+  "representations": [
+   "equal groups drawn",
+   "a bar split into equal parts",
+   "the calculation and a sentence"
+  ],
+  "steps": [
+   "Draw equal groups.",
+   "Write the multiplication.",
+   "Ask: is that the final answer, or is there another step?",
+   "Answer in a sentence."
+  ],
+  "contexts": [
+   "school buses to a music festival in Kisumu",
+   "sugar bought by the kg",
+   "matatu trips per day"
+  ],
+  "board": [
+   {
+    "beat": "draw",
+    "do": "Draw 3 buses with 48 dots each (as a bar split in 3 equal parts)."
+   },
+   {
+    "beat": "point",
+    "do": "Point at the equal parts.",
+    "say": "Are the groups equal? What does that tell us?"
+   },
+   {
+    "beat": "pause",
+    "do": "Wait for the child to choose the operation."
+   }
+  ],
+  "misconceptions": [
+   {
+    "code": "MATH.G5.NUMBER.MULTIPLICATION.MULT_WORD_PROBLEMS.M_ADD_INSTEAD_OF_MULTIPLY",
+    "listen_for": [
+     "48 plus 12"
+    ],
+    "ask": "If each of 12 buses carries 48, could all of them carry only 60?",
+    "repair": "Draw the equal groups: 12 groups of 48 is multiplication.",
+    "error": "Adds the two numbers in an equal-groups problem instead of multiplying them.",
+    "example": {
+     "question": "Each school bus carries 48 pupils to a music festival in Kisumu. How many pupils travel in 12 buses?",
+     "wrong_answer": "60 pupils",
+     "correct_answer": "576 pupils"
+    }
+   },
+   {
+    "code": "MATH.G5.NUMBER.MULTIPLICATION.MULT_WORD_PROBLEMS.M_STOP_AFTER_FIRST_STEP",
+    "listen_for": [
+     "Sh 2,175"
+    ],
+    "ask": "Read the last line again. Did it ask the cost or the change?",
+    "repair": "Underline the question; check if another step remains.",
+    "error": "In a two-step problem, gives the result of the multiplication as the final answer.",
+    "example": {
+     "question": "Wanjiru buys 15 kg of sugar at sh 145 per kg. She pays with sh 3,000. How much change does she get?",
+     "wrong_answer": "sh 2,175",
+     "correct_answer": "sh 825"
+    }
+   }
+  ],
+  "checks": [
+   {
+    "question": "Each bus carries 48 pupils. How many pupils travel in 12 buses?",
+    "answer": "576",
+    "shows": "equal groups"
+   },
+   {
+    "question": "Wanjiru buys 15 kg of sugar at Sh 145 per kg and pays with Sh 3,000. Change?",
+    "answer": "Sh 825",
+    "shows": "both steps"
+   }
+  ],
+  "name": "Solve real-life problems using multiplication (up to 3-digit × 2-digit)",
+  "sub_strand": "MATH.G5.NUMBER.MULTIPLICATION",
+  "sub_strand_name": "Multiplication",
+  "status": "draft: written 13 Nov 2026 from research round 3; shorter entries; not yet checked by a Kenyan maths teacher; not loaded by the live tutor"
+ },
+ "MATH.G5.NUMBER.MULTIPLICATION.ESTIMATE_PRODUCT_ROUND10": {
+  "skill": "MATH.G5.NUMBER.MULTIPLICATION.ESTIMATE_PRODUCT_ROUND10",
+  "key_step": "The child rounds each factor to the nearest ten, multiplies the non-zero digits, and attaches the right number of zeros.",
+  "floor": {
+   "prerequisite": "Rounds to the nearest ten.",
+   "question": "Round 26 to the nearest ten.",
+   "answer": "30"
+  },
+  "representations": [
+   "factors on number lines",
+   "rounded factors",
+   "the estimate"
+  ],
+  "steps": [
+   "Round each factor.",
+   "Multiply the non-zero parts.",
+   "Count and attach the zeros."
+  ],
+  "contexts": [
+   "estimating the cost of a class set of books",
+   "estimating seats in a stadium",
+   "estimating a harvest"
+  ],
+  "board": [
+   {
+    "beat": "write",
+    "do": "Write 347 x 26 with boxes above each for the rounded numbers."
+   },
+   {
+    "beat": "child_draws",
+    "do": "Child rounds each factor."
+   },
+   {
+    "beat": "pause",
+    "do": "Wait for the child to multiply and count zeros."
+   }
+  ],
+  "misconceptions": [
+   {
+    "code": "MATH.G5.NUMBER.MULTIPLICATION.ESTIMATE_PRODUCT_ROUND10.M_TRUNCATE_NOT_ROUND",
+    "listen_for": [
+     "340 times 20"
+    ],
+    "ask": "Is 26 nearer 20 or 30?",
+    "repair": "Round to the nearer ten on a number line.",
+    "error": "Always rounds down by chopping off the ones digit.",
+    "example": {
+     "question": "Estimate 347 × 26 by rounding each number to the nearest ten.",
+     "wrong_answer": "340 × 20 = 6800",
+     "correct_answer": "350 × 30 = 10,500"
+    }
+   },
+   {
+    "code": "MATH.G5.NUMBER.MULTIPLICATION.ESTIMATE_PRODUCT_ROUND10.M_ZEROS_MISCOUNTED",
+    "listen_for": [
+     "1,050"
+    ],
+    "ask": "How many zeros in 350 and 30 together?",
+    "repair": "35 x 3 = 105, then the two zeros: 10,500.",
+    "error": "Multiplies the non-zero digits correctly but attaches the wrong number of zeros.",
+    "example": {
+     "question": "Estimate 347 × 26 by rounding each number to the nearest ten.",
+     "wrong_answer": "1050",
+     "correct_answer": "10,500"
+    }
+   }
+  ],
+  "checks": [
+   {
+    "question": "Estimate 347 x 26 by rounding each to the nearest ten.",
+    "answer": "350 x 30 = 10,500",
+    "shows": "rounds and counts zeros"
+   },
+   {
+    "question": "Estimate 47 x 23 to the nearest ten.",
+    "answer": "50 x 20 = 1,000",
+    "shows": "rounds first"
+   }
+  ],
+  "name": "Estimate a product by rounding each number to the nearest ten",
+  "sub_strand": "MATH.G5.NUMBER.MULTIPLICATION",
+  "sub_strand_name": "Multiplication",
+  "status": "draft: written 13 Nov 2026 from research round 3; shorter entries; not yet checked by a Kenyan maths teacher; not loaded by the live tutor"
+ },
+ "MATH.G5.NUMBER.MULTIPLICATION.ESTIMATE_CHECK_REASONABLE": {
+  "skill": "MATH.G5.NUMBER.MULTIPLICATION.ESTIMATE_CHECK_REASONABLE",
+  "key_step": "The child compares an exact product with the estimate: close means reasonable; about ten times off means a place value slip.",
+  "floor": {
+   "prerequisite": "Estimates a product.",
+   "question": "Estimate 48 x 21.",
+   "answer": "50 x 20 = 1,000"
+  },
+  "representations": [
+   "exact and estimate side by side",
+   "a number line",
+   "the judgement"
+  ],
+  "steps": [
+   "Estimate.",
+   "Compare with the exact answer.",
+   "Close: fine. Ten times off: check the zero in the tens row."
+  ],
+  "contexts": [
+   "checking a classmate's work",
+   "checking a shop total",
+   "checking a farm calculation"
+  ],
+  "board": [
+   {
+    "beat": "write",
+    "do": "Write Amina's answer: 243 x 26 = 1,944."
+   },
+   {
+    "beat": "predict",
+    "do": "Ask for an estimate.",
+    "say": "Estimate first."
+   },
+   {
+    "beat": "pause",
+    "do": "Wait for the child to judge Amina's answer."
+   }
+  ],
+  "misconceptions": [
+   {
+    "code": "MATH.G5.NUMBER.MULTIPLICATION.ESTIMATE_CHECK_REASONABLE.M_NO_SIZE_CHECK",
+    "listen_for": [
+     "it looks right"
+    ],
+    "ask": "Is 1,944 near your estimate of about 7,500?",
+    "repair": "About four times too small: look for a missing zero in the tens row.",
+    "error": "Accepts an exact answer that is about ten times too small or too large, without comparing it to the estimate.",
+    "example": {
+     "question": "Amina worked out 243 × 26 = 1944. Is this reasonable?",
+     "wrong_answer": "Yes",
+     "correct_answer": "No: 240 × 30 = 7200, so 1944 is far too small (the correct product is 6318)"
+    }
+   },
+   {
+    "code": "MATH.G5.NUMBER.MULTIPLICATION.ESTIMATE_CHECK_REASONABLE.M_ESTIMATE_MUST_MATCH",
+    "listen_for": [
+     "1,008 isn't 1,000 so wrong"
+    ],
+    "ask": "We rounded both numbers. Should the estimate be exact?",
+    "repair": "Close is the test, not equal.",
+    "error": "Rejects a correct answer because it is not exactly equal to the estimate.",
+    "example": {
+     "question": "Juma says 48 × 21 = 1008. Use an estimate to decide if his answer is reasonable.",
+     "wrong_answer": "No, it should be 1000",
+     "correct_answer": "Yes: 50 × 20 = 1000, and 1008 is close to 1000"
+    }
+   }
+  ],
+  "checks": [
+   {
+    "question": "Juma says 48 x 21 = 1,008. Is it reasonable?",
+    "answer": "Yes; the estimate is about 1,000",
+    "shows": "close is fine"
+   },
+   {
+    "question": "Amina worked out 243 x 26 = 1,944. Reasonable?",
+    "answer": "No; the estimate is about 7,500 (240 x 30 = 7,200 or 250 x 30)",
+    "shows": "spots a size error"
+   }
+  ],
+  "name": "Use an estimate to judge whether a product is reasonable",
+  "sub_strand": "MATH.G5.NUMBER.MULTIPLICATION",
+  "sub_strand_name": "Multiplication",
+  "status": "draft: written 13 Nov 2026 from research round 3; shorter entries; not yet checked by a Kenyan maths teacher; not loaded by the live tutor"
+ },
+ "MATH.G5.NUMBER.MULTIPLICATION.MULT_PATTERN_EXTEND": {
+  "skill": "MATH.G5.NUMBER.MULTIPLICATION.MULT_PATTERN_EXTEND",
+  "key_step": "The child tests whether the pattern adds or multiplies (dividing a term by the one before), and divides backwards to find an earlier term.",
+  "floor": {
+   "prerequisite": "Knows times tables.",
+   "question": "4 x 3 =",
+   "answer": "12"
+  },
+  "representations": [
+   "a growing story",
+   "arrows labelled x3 between terms",
+   "the pattern"
+  ],
+  "steps": [
+   "Find the difference and the ratio between neighbours.",
+   "Check which holds for every pair.",
+   "Extend forwards by multiplying.",
+   "Go backwards by dividing."
+  ],
+  "contexts": [
+   "a boda boda business growing",
+   "chicks on a farm",
+   "money saved doubling"
+  ],
+  "board": [
+   {
+    "beat": "write",
+    "do": "Write 4, 12, 36, ___."
+   },
+   {
+    "beat": "point",
+    "do": "Point at 4 and 12, then 12 and 36.",
+    "say": "Is the same amount added, or is it multiplied?"
+   },
+   {
+    "beat": "pause",
+    "do": "Wait for the child's rule and next term."
+   }
+  ],
+  "misconceptions": [
+   {
+    "code": "MATH.G5.NUMBER.MULTIPLICATION.MULT_PATTERN_EXTEND.M_ADDITIVE_RULE",
+    "listen_for": [
+     "add 8"
+    ],
+    "ask": "Does adding 8 take 12 to 36?",
+    "repair": "Test the rule on every pair; times 3 fits all.",
+    "error": "Takes the difference between the first two terms as the rule and keeps adding it, missing the multiplying rule.",
+    "example": {
+     "question": "A boda boda business doubles its riders each year: 5, 10, 20, 40, __",
+     "wrong_answer": "45",
+     "correct_answer": "80"
+    }
+   },
+   {
+    "code": "MATH.G5.NUMBER.MULTIPLICATION.MULT_PATTERN_EXTEND.M_NO_REVERSE_FOR_EARLIER_TERM",
+    "listen_for": [
+     "36"
+    ],
+    "ask": "To go back a step, do we multiply or undo the multiplying?",
+    "repair": "Going backwards, divide by 3.",
+    "error": "To find a missing first term, multiplies forwards instead of dividing backwards.",
+    "example": {
+     "question": "__, 12, 36, 108",
+     "wrong_answer": "36",
+     "correct_answer": "4"
+    }
+   }
+  ],
+  "checks": [
+   {
+    "question": "4, 12, 36, ___",
+    "answer": "108",
+    "shows": "multiplying rule"
+   },
+   {
+    "question": "___, 12, 36, 108",
+    "answer": "4",
+    "shows": "divides backwards"
+   }
+  ],
+  "name": "Identify the rule and extend or complete multiplication patterns (terms not exceeding 1000)",
+  "sub_strand": "MATH.G5.NUMBER.MULTIPLICATION",
+  "sub_strand_name": "Multiplication",
+  "status": "draft: written 13 Nov 2026 from research round 3; shorter entries; not yet checked by a Kenyan maths teacher; not loaded by the live tutor"
+ },
+ "MATH.G5.NUMBER.MULTIPLICATION.MULT_PATTERN_CREATE": {
+  "skill": "MATH.G5.NUMBER.MULTIPLICATION.MULT_PATTERN_CREATE",
+  "key_step": "The child makes a pattern by multiplying the previous term by the same number each time, keeping terms under 1000, and describes the single rule.",
+  "floor": {
+   "prerequisite": "Extends multiplication patterns.",
+   "question": "Next: 3, 6, 12?",
+   "answer": "24"
+  },
+  "representations": [
+   "a story",
+   "the pattern with arrows",
+   "the rule"
+  ],
+  "steps": [
+   "Choose a start and a multiplier.",
+   "Multiply the previous term each time.",
+   "Stop before 1000.",
+   "State the rule."
+  ],
+  "contexts": [
+   "bacteria doubling in milk left out",
+   "a savings plan",
+   "chickens hatching"
+  ],
+  "board": [
+   {
+    "beat": "write",
+    "do": "Write start 5, rule multiply by 3."
+   },
+   {
+    "beat": "child_draws",
+    "do": "Child writes terms with x3 arrows."
+   },
+   {
+    "beat": "pause",
+    "do": "Wait for the child to check each step uses x3."
+   }
+  ],
+  "misconceptions": [
+   {
+    "code": "MATH.G5.NUMBER.MULTIPLICATION.MULT_PATTERN_CREATE.M_TABLE_VS_REPEATED_MULTIPLY",
+    "listen_for": [
+     "5, 10, 15"
+    ],
+    "ask": "Did you multiply the previous term, or add 5?",
+    "repair": "Each new term is the last term times 3.",
+    "error": "Asked to multiply the previous term each time, produces a times-table list (adding the same amount) instead.",
+    "example": {
+     "question": "Make a pattern of 5 numbers starting at 3. Rule: multiply the previous number by 2.",
+     "wrong_answer": "3, 6, 9, 12, 15",
+     "correct_answer": "3, 6, 12, 24, 48"
+    }
+   },
+   {
+    "code": "MATH.G5.NUMBER.MULTIPLICATION.MULT_PATTERN_CREATE.M_RULE_CHANGES_MIDWAY",
+    "listen_for": [
+     "then I added"
+    ],
+    "ask": "Is every arrow the same rule?",
+    "repair": "Label each arrow; they must all match.",
+    "error": "Creates a pattern in which the rule changes partway, mixing multiplying and adding, but describes it as a single rule.",
+    "example": {
+     "question": "Make your own multiplication pattern and write its rule.",
+     "wrong_answer": "2, 4, 8, 10, 20 — rule: multiply by 2",
+     "correct_answer": "For example 2, 4, 8, 16, 32 — rule: multiply by 2 (8 + 2 = 10 breaks the rule)"
+    }
+   }
+  ],
+  "checks": [
+   {
+    "question": "Start at 5, multiply by 3 each time. First four terms?",
+    "answer": "5, 15, 45, 135",
+    "shows": "repeated multiplying"
+   },
+   {
+    "question": "Is 2, 4, 8, 10 a multiplication pattern?",
+    "answer": "No; the rule changes at the last step",
+    "shows": "one rule"
+   }
+  ],
+  "name": "Create and describe own multiplication patterns (terms not exceeding 1000)",
+  "sub_strand": "MATH.G5.NUMBER.MULTIPLICATION",
+  "sub_strand_name": "Multiplication",
+  "status": "draft: written 13 Nov 2026 from research round 3; shorter entries; not yet checked by a Kenyan maths teacher; not loaded by the live tutor"
+ },
+ "MATH.G5.NUMBER.DIVISION.DIV_3DIGIT_BY_1DIGIT": {
+  "skill": "MATH.G5.NUMBER.DIVISION.DIV_3DIGIT_BY_1DIGIT",
+  "key_step": "The child shares hundreds, then tens, then ones, carrying each leftover into the next place, writing 0 in the quotient where a place cannot be shared, and keeps the remainder smaller than the divisor.",
+  "floor": {
+   "prerequisite": "Knows division facts to 81 ÷ 9.",
+   "question": "36 ÷ 4 =",
+   "answer": "9"
+  },
+  "representations": [
+   "sharing notes and coins among people",
+   "place value chart with sharing",
+   "short and long division"
+  ],
+  "steps": [
+   "Estimate.",
+   "Share the hundreds; carry leftovers as tens.",
+   "Share the tens; carry leftovers as ones.",
+   "Write 0 where a place cannot be shared.",
+   "Check: quotient x divisor + remainder."
+  ],
+  "contexts": [
+   "sharing money among children",
+   "packing eggs into trays",
+   "sharing books among classes"
+  ],
+  "board": [
+   {
+    "beat": "write",
+    "do": "Write 618 ÷ 6 in a division frame."
+   },
+   {
+    "beat": "point",
+    "do": "Point at the 1 ten.",
+    "say": "Can 1 ten be shared among 6?"
+   },
+   {
+    "beat": "pause",
+    "do": "Wait for the child to say what goes in the quotient."
+   },
+   {
+    "beat": "child_draws",
+    "do": "Child finishes and checks by multiplying."
+   }
+  ],
+  "misconceptions": [
+   {
+    "code": "MATH.G5.NUMBER.DIVISION.DIV_3DIGIT_BY_1DIGIT.M_ZERO_QUOTIENT_DROPPED",
+    "listen_for": [
+     "13"
+    ],
+    "ask": "Check: is 13 x 6 near 618?",
+    "repair": "When a place cannot be shared, write 0 there to keep the places.",
+    "error": "When the divisor will not go into a digit, the child skips that place instead of writing 0 in the quotient.",
+    "example": {
+     "question": "618 ÷ 6",
+     "wrong_answer": "13",
+     "correct_answer": "103"
+    }
+   },
+   {
+    "code": "MATH.G5.NUMBER.DIVISION.DIV_3DIGIT_BY_1DIGIT.M_REMAINDER_TOO_BIG",
+    "listen_for": [
+     "remainder 7"
+    ],
+    "ask": "If 7 are left over and each gets 5, can each get one more?",
+    "repair": "The remainder must be smaller than the divisor; share again.",
+    "error": "Accepts a remainder that is equal to or larger than the divisor.",
+    "example": {
+     "question": "157 ÷ 5",
+     "wrong_answer": "30 r 7",
+     "correct_answer": "31 r 2"
+    }
+   }
+  ],
+  "checks": [
+   {
+    "question": "618 ÷ 6",
+    "answer": "103",
+    "shows": "zero in the quotient"
+   },
+   {
+    "question": "157 ÷ 5",
+    "answer": "31 remainder 2",
+    "shows": "remainder smaller than divisor"
+   }
+  ],
+  "name": "Divide a 3-digit number by a 1-digit number (short and long form)",
+  "sub_strand": "MATH.G5.NUMBER.DIVISION",
+  "sub_strand_name": "Division and combined operations",
+  "status": "draft: written 13 Nov 2026 from research round 3; shorter entries; not yet checked by a Kenyan maths teacher; not loaded by the live tutor"
+ },
+ "MATH.G5.NUMBER.DIVISION.DIV_3DIGIT_BY_2DIGIT": {
+  "skill": "MATH.G5.NUMBER.DIVISION.DIV_3DIGIT_BY_2DIGIT",
+  "key_step": "The child estimates each quotient digit by rounding the divisor, multiplies and subtracts, raises the digit if the remainder is still as big as the divisor, and writes a final 0 when the last step cannot divide.",
+  "floor": {
+   "prerequisite": "Divides by a 1-digit number; multiplies by 2-digit numbers.",
+   "question": "How many 24s in 96?",
+   "answer": "4"
+  },
+  "representations": [
+   "packing items into groups of a 2-digit size",
+   "a times list of the divisor",
+   "long division"
+  ],
+  "steps": [
+   "Write a short times list of the divisor (x1, x2, x5, x10).",
+   "Estimate each digit.",
+   "Multiply, subtract, bring down.",
+   "If the remainder is as big as the divisor, raise the digit.",
+   "Check by multiplying back."
+  ],
+  "contexts": [
+   "packing 864 mangoes into crates of 24",
+   "sharing 840 shillings among 42 pupils",
+   "seating pupils at benches"
+  ],
+  "board": [
+   {
+    "beat": "write",
+    "do": "Write 864 ÷ 24 and a times list for 24 with gaps."
+   },
+   {
+    "beat": "child_draws",
+    "do": "Child fills 24 x 2, x3, x4."
+   },
+   {
+    "beat": "pause",
+    "do": "Wait for the child to choose the first quotient digit."
+   }
+  ],
+  "misconceptions": [
+   {
+    "code": "MATH.G5.NUMBER.DIVISION.DIV_3DIGIT_BY_2DIGIT.M_TRIAL_DIGIT_TOO_SMALL",
+    "listen_for": [
+     "remainder 30"
+    ],
+    "ask": "Is 30 left over more than one 24?",
+    "repair": "If the leftover is as big as the divisor, the digit is too small: raise it by one.",
+    "error": "Chooses a trial quotient digit that is too small and leaves a remainder equal to or bigger than the 2-digit divisor.",
+    "example": {
+     "question": "864 ÷ 24",
+     "wrong_answer": "35 r 24",
+     "correct_answer": "36"
+    }
+   },
+   {
+    "code": "MATH.G5.NUMBER.DIVISION.DIV_3DIGIT_BY_2DIGIT.M_TRAILING_ZERO_DROPPED",
+    "listen_for": [
+     "2"
+    ],
+    "ask": "Check: is 2 x 42 near 840?",
+    "repair": "When the last digit brought down cannot be divided, write 0 in the quotient.",
+    "error": "Leaves off the final zero of the quotient when the last digit brought down is too small to divide.",
+    "example": {
+     "question": "840 ÷ 42",
+     "wrong_answer": "2",
+     "correct_answer": "20"
+    }
+   }
+  ],
+  "checks": [
+   {
+    "question": "864 ÷ 24",
+    "answer": "36",
+    "shows": "trial digits checked"
+   },
+   {
+    "question": "840 ÷ 42",
+    "answer": "20",
+    "shows": "final zero"
+   }
+  ],
+  "name": "Divide up to a 3-digit number by a 2-digit number (long division)",
+  "sub_strand": "MATH.G5.NUMBER.DIVISION",
+  "sub_strand_name": "Division and combined operations",
+  "status": "draft: written 13 Nov 2026 from research round 3; shorter entries; not yet checked by a Kenyan maths teacher; not loaded by the live tutor"
+ },
+ "MATH.G5.NUMBER.DIVISION.DIV_WORD_PROBLEMS": {
+  "skill": "MATH.G5.NUMBER.DIVISION.DIV_WORD_PROBLEMS",
+  "key_step": "The child recognises sharing and grouping as division, then answers what the story asks about the remainder: round up, give the leftover, or ignore it.",
+  "floor": {
+   "prerequisite": "Divides with remainders.",
+   "question": "250 ÷ 60 =",
+   "answer": "4 remainder 10"
+  },
+  "representations": [
+   "the story acted out",
+   "groups drawn with leftovers",
+   "a sentence answer"
+  ],
+  "steps": [
+   "Divide.",
+   "Ask what the remainder means in the story.",
+   "Round up, keep the leftover, or drop it.",
+   "Answer in a sentence."
+  ],
+  "contexts": [
+   "buses for a trip to Nairobi National Park",
+   "exercise books bought with Sh 500",
+   "mangoes packed into crates in Murang'a"
+  ],
+  "board": [
+   {
+    "beat": "write",
+    "do": "Write: 250 pupils; each bus carries 60. How many buses?"
+   },
+   {
+    "beat": "draw",
+    "do": "Draw four full buses and 10 pupils left standing."
+   },
+   {
+    "beat": "point",
+    "do": "Point at the 10 pupils.",
+    "say": "Can these 10 stay at school?"
+   },
+   {
+    "beat": "pause",
+    "do": "Wait for the child's answer."
+   }
+  ],
+  "misconceptions": [
+   {
+    "code": "MATH.G5.NUMBER.DIVISION.DIV_WORD_PROBLEMS.M_REMAINDER_NOT_INTERPRETED",
+    "listen_for": [
+     "4 buses"
+    ],
+    "ask": "Where do the last 10 pupils sit?",
+    "repair": "Everyone must travel, so one more bus: round up.",
+    "error": "Gives the bare quotient when the context needs rounding up.",
+    "example": {
+     "question": "250 pupils are going on a trip to Nairobi National Park. Each matatu carries 14 pupils. How many matatus are needed?",
+     "wrong_answer": "17 matatus (or 17 r 12)",
+     "correct_answer": "18 matatus (250 ÷ 14 = 17 r 12, so 12 pupils need one more matatu)"
+    }
+   },
+   {
+    "code": "MATH.G5.NUMBER.DIVISION.DIV_WORD_PROBLEMS.M_KEYWORD_EACH_MEANS_MULTIPLY",
+    "listen_for": [
+     "each so times"
+    ],
+    "ask": "Are we putting mangoes into crates, or making more mangoes?",
+    "repair": "Draw the crates: putting into equal groups is division.",
+    "error": "Multiplies because the problem contains the word 'each'.",
+    "example": {
+     "question": "A farmer in Murang'a packs 360 mangoes into crates. Each crate holds 24 mangoes. How many crates does he fill?",
+     "wrong_answer": "8640 crates",
+     "correct_answer": "15 crates"
+    }
+   }
+  ],
+  "checks": [
+   {
+    "question": "250 pupils go on a trip; each bus carries 60. How many buses?",
+    "answer": "5",
+    "shows": "rounds up"
+   },
+   {
+    "question": "Akinyi has Sh 500. Books cost Sh 45 each. How much is left after buying as many as she can?",
+    "answer": "Sh 5",
+    "shows": "gives the leftover"
+   }
+  ],
+  "name": "Solve real-life division problems and interpret the remainder",
+  "sub_strand": "MATH.G5.NUMBER.DIVISION",
+  "sub_strand_name": "Division and combined operations",
+  "status": "draft: written 13 Nov 2026 from research round 3; shorter entries; not yet checked by a Kenyan maths teacher; not loaded by the live tutor"
+ },
+ "MATH.G5.NUMBER.DIVISION.MULT_DIV_FACT_FAMILIES": {
+  "skill": "MATH.G5.NUMBER.DIVISION.MULT_DIV_FACT_FAMILIES",
+  "key_step": "The child writes the related facts from one fact, knowing division order matters, and finds a missing dividend by multiplying.",
+  "floor": {
+   "prerequisite": "Knows multiplication facts.",
+   "question": "6 x 4 =",
+   "answer": "24"
+  },
+  "representations": [
+   "an array of dots",
+   "a fact family triangle",
+   "the four facts"
+  ],
+  "steps": [
+   "Draw an array.",
+   "Read it as two multiplications.",
+   "Read it as two divisions (the big number first).",
+   "Use it to find missing numbers."
+  ],
+  "contexts": [
+   "chairs in rows",
+   "eggs in trays",
+   "packets in boxes"
+  ],
+  "board": [
+   {
+    "beat": "draw",
+    "do": "Draw a fact triangle with 144 at the top, 24 and 6 at the corners."
+   },
+   {
+    "beat": "child_draws",
+    "do": "Child writes the four facts."
+   },
+   {
+    "beat": "pause",
+    "do": "Wait for the child to say which number comes first in a division."
+   }
+  ],
+  "misconceptions": [
+   {
+    "code": "MATH.G5.NUMBER.DIVISION.MULT_DIV_FACT_FAMILIES.M_DIVISION_COMMUTATIVE",
+    "listen_for": [
+     "6 ÷ 144"
+    ],
+    "ask": "Can 6 sweets be shared so each of 144 children gets 24?",
+    "repair": "In division the total comes first.",
+    "error": "Writes the numbers of a division fact in any order, as if division were commutative like multiplication.",
+    "example": {
+     "question": "Given 24 × 6 = 144, write a division fact.",
+     "wrong_answer": "6 ÷ 144 = 24",
+     "correct_answer": "144 ÷ 6 = 24 or 144 ÷ 24 = 6"
+    }
+   },
+   {
+    "code": "MATH.G5.NUMBER.DIVISION.MULT_DIV_FACT_FAMILIES.M_MISSING_DIVIDEND_DIVIDES",
+    "listen_for": [
+     "2"
+    ],
+    "ask": "If 8 children each got 16, how many were shared?",
+    "repair": "The missing total is found by multiplying.",
+    "error": "To find a missing dividend, the child divides the two given numbers instead of multiplying.",
+    "example": {
+     "question": "☐ ÷ 8 = 16",
+     "wrong_answer": "2",
+     "correct_answer": "128"
+    }
+   }
+  ],
+  "checks": [
+   {
+    "question": "Given 24 x 6 = 144, write the two division facts.",
+    "answer": "144 ÷ 6 = 24 and 144 ÷ 24 = 6",
+    "shows": "order in division"
+   },
+   {
+    "question": "□ ÷ 8 = 16",
+    "answer": "128",
+    "shows": "multiplies for the dividend"
+   }
+  ],
+  "name": "Use multiplication and division as inverse operations",
+  "sub_strand": "MATH.G5.NUMBER.DIVISION",
+  "sub_strand_name": "Division and combined operations",
+  "status": "draft: written 13 Nov 2026 from research round 3; shorter entries; not yet checked by a Kenyan maths teacher; not loaded by the live tutor"
+ },
+ "MATH.G5.NUMBER.DIVISION.CHECK_DIVISION_BY_MULT": {
+  "skill": "MATH.G5.NUMBER.DIVISION.CHECK_DIVISION_BY_MULT",
+  "key_step": "The child checks a division by quotient x divisor + remainder and compares with the dividend.",
+  "floor": {
+   "prerequisite": "Multiplies and adds.",
+   "question": "31 x 5 + 2 =",
+   "answer": "157"
+  },
+  "representations": [
+   "groups put back together",
+   "the check written out",
+   "a yes or no"
+  ],
+  "steps": [
+   "Multiply quotient by divisor.",
+   "Add the remainder.",
+   "Compare with the dividend."
+  ],
+  "contexts": [
+   "checking a sharing",
+   "checking packing",
+   "checking homework"
+  ],
+  "board": [
+   {
+    "beat": "write",
+    "do": "Write 157 ÷ 5 = 31 r 2 and the check frame __ x __ + __ = __."
+   },
+   {
+    "beat": "child_draws",
+    "do": "Child fills the check."
+   },
+   {
+    "beat": "pause",
+    "do": "Wait for the child to compare."
+   }
+  ],
+  "misconceptions": [
+   {
+    "code": "MATH.G5.NUMBER.DIVISION.CHECK_DIVISION_BY_MULT.M_CHECK_FORGETS_REMAINDER",
+    "listen_for": [
+     "155 so it's wrong"
+    ],
+    "ask": "What happened to the 2 left over?",
+    "repair": "Put the leftovers back too: add the remainder.",
+    "error": "When checking a division with a remainder, the child multiplies quotient by divisor but does not add the remainder, then decides a correct answer is wrong.",
+    "example": {
+     "question": "Is 395 ÷ 12 = 32 r 11 correct? Check by multiplying.",
+     "wrong_answer": "No, because 12 × 32 = 384, not 395",
+     "correct_answer": "Yes: 12 × 32 = 384 and 384 + 11 = 395"
+    }
+   }
+  ],
+  "checks": [
+   {
+    "question": "Check 157 ÷ 5 = 31 r 2.",
+    "answer": "31 x 5 + 2 = 157, so it is right",
+    "shows": "adds the remainder"
+   },
+   {
+    "question": "Check 200 ÷ 7 = 28 r 4.",
+    "answer": "28 x 7 + 4 = 200, so it is right",
+    "shows": "full check"
+   }
+  ],
+  "name": "Check a division by multiplying (and adding the remainder)",
+  "sub_strand": "MATH.G5.NUMBER.DIVISION",
+  "sub_strand_name": "Division and combined operations",
+  "status": "draft: written 13 Nov 2026 from research round 3; shorter entries; not yet checked by a Kenyan maths teacher; not loaded by the live tutor"
+ },
+ "MATH.G5.NUMBER.DIVISION.DIV_BY_1000": {
+  "skill": "MATH.G5.NUMBER.DIVISION.DIV_BY_1000",
+  "key_step": "The child moves each digit three places to the right (the number gets smaller), writing zeros after the point where needed.",
+  "floor": {
+   "prerequisite": "Knows tenths, hundredths, thousandths.",
+   "question": "What is 1 thousandth as a decimal?",
+   "answer": "0.001"
+  },
+  "representations": [
+   "grammes to kilogrammes",
+   "place value chart with digits sliding right",
+   "the decimal"
+  ],
+  "steps": [
+   "Estimate: smaller than 1?",
+   "Put the number in the chart.",
+   "Slide digits three places right.",
+   "Fill zeros after the point."
+  ],
+  "contexts": [
+   "750 g of sugar in kg",
+   "a 125 g packet of Royco in kg",
+   "metres to kilometres"
+  ],
+  "board": [
+   {
+    "beat": "write",
+    "do": "Write 750 in a chart that extends past the point."
+   },
+   {
+    "beat": "predict",
+    "do": "Ask whether 750 ÷ 1000 is more or less than 1.",
+    "say": "More or less than one?"
+   },
+   {
+    "beat": "draw",
+    "do": "Slide the digits right one place at a time, three times, counting."
+   },
+   {
+    "beat": "pause",
+    "do": "Wait for the child to read the decimal."
+   }
+  ],
+  "misconceptions": [
+   {
+    "code": "MATH.G5.NUMBER.DIVISION.DIV_BY_1000.M_SMALLER_CANNOT_DIVIDE_BIGGER",
+    "listen_for": [
+     "you can't",
+     "zero"
+    ],
+    "ask": "Is 750 g of sugar some of a kilogramme, or none?",
+    "repair": "Dividing a smaller number by a bigger one gives part of one: a decimal.",
+    "error": "Says a smaller number cannot be divided by a bigger one, or gives 0.",
+    "example": {
+     "question": "Mama bought 750 g of sugar. How many kilograms is that? (750 ÷ 1000)",
+     "wrong_answer": "0 kg / 'cannot be done'",
+     "correct_answer": "0.75 kg"
+    }
+   },
+   {
+    "code": "MATH.G5.NUMBER.DIVISION.DIV_BY_1000.M_DIV1000_MULTIPLIES",
+    "listen_for": [
+     "125,000"
+    ],
+    "ask": "Does dividing make the number bigger or smaller?",
+    "repair": "Slide right, not left: the number gets smaller.",
+    "error": "Adds three zeros (multiplies) instead of dividing.",
+    "example": {
+     "question": "125 ÷ 1000",
+     "wrong_answer": "125000",
+     "correct_answer": "0.125"
+    }
+   }
+  ],
+  "checks": [
+   {
+    "question": "Mama bought 750 g of sugar. How many kg?",
+    "answer": "0.75 kg",
+    "shows": "smaller divided by bigger"
+   },
+   {
+    "question": "125 ÷ 1000",
+    "answer": "0.125",
+    "shows": "three places right"
+   }
+  ],
+  "name": "Divide up to a 3-digit number by 1000 (proposed interpretation: answer as a decimal)",
+  "sub_strand": "MATH.G5.NUMBER.DIVISION",
+  "sub_strand_name": "Division and combined operations",
+  "status": "draft: written 13 Nov 2026 from research round 3; shorter entries; not yet checked by a Kenyan maths teacher; not loaded by the live tutor"
+ },
+ "MATH.G5.NUMBER.DIVISION.ESTIMATE_QUOTIENTS": {
+  "skill": "MATH.G5.NUMBER.DIVISION.ESTIMATE_QUOTIENTS",
+  "key_step": "The child rounds both numbers to the nearest ten (a divisor ending in 5 rounds up) and divides the rounded numbers mentally.",
+  "floor": {
+   "prerequisite": "Rounds to the nearest ten; divides by multiples of ten.",
+   "question": "600 ÷ 30 =",
+   "answer": "20"
+  },
+  "representations": [
+   "rounded numbers",
+   "a mental division",
+   "the estimate"
+  ],
+  "steps": [
+   "Round the dividend.",
+   "Round the divisor.",
+   "Divide mentally.",
+   "Use it to check an exact answer."
+  ],
+  "contexts": [
+   "estimating shares",
+   "estimating trips needed",
+   "estimating how many packets"
+  ],
+  "board": [
+   {
+    "beat": "write",
+    "do": "Write 598 ÷ 15 with boxes above each number."
+   },
+   {
+    "beat": "child_draws",
+    "do": "Child rounds both."
+   },
+   {
+    "beat": "pause",
+    "do": "Wait for the estimate."
+   }
+  ],
+  "misconceptions": [
+   {
+    "code": "MATH.G5.NUMBER.DIVISION.ESTIMATE_QUOTIENTS.M_ROUNDS_DIVISOR_WRONG",
+    "listen_for": [
+     "15 to 10"
+    ],
+    "ask": "When the ones digit is 5, which way do we round?",
+    "repair": "5 rounds up: 15 becomes 20.",
+    "error": "Rounds a 2-digit divisor ending in 5 (or above) down instead of up.",
+    "example": {
+     "question": "Estimate 598 ÷ 15 by rounding both numbers to the nearest ten.",
+     "wrong_answer": "600 ÷ 10 = 60",
+     "correct_answer": "600 ÷ 20 = 30"
+    }
+   },
+   {
+    "code": "MATH.G5.NUMBER.DIVISION.ESTIMATE_QUOTIENTS.M_ESTIMATE_COMPUTED_EXACTLY",
+    "listen_for": [
+     "I did long division"
+    ],
+    "ask": "Is an estimate meant to be quick?",
+    "repair": "Round both, then divide in your head.",
+    "error": "Works out the exact quotient (or rounds only one number) instead of estimating.",
+    "example": {
+     "question": "Estimate 598 ÷ 31 by rounding to the nearest ten.",
+     "wrong_answer": "19 r 9",
+     "correct_answer": "600 ÷ 30 = 20"
+    }
+   }
+  ],
+  "checks": [
+   {
+    "question": "Estimate 598 ÷ 15 by rounding both to the nearest ten.",
+    "answer": "600 ÷ 20 = 30",
+    "shows": "rounds 15 up"
+   },
+   {
+    "question": "Estimate 598 ÷ 31.",
+    "answer": "600 ÷ 30 = 20",
+    "shows": "mental division"
+   }
+  ],
+  "name": "Estimate quotients by rounding dividend and divisor to the nearest ten",
+  "sub_strand": "MATH.G5.NUMBER.DIVISION",
+  "sub_strand_name": "Division and combined operations",
+  "status": "draft: written 13 Nov 2026 from research round 3; shorter entries; not yet checked by a Kenyan maths teacher; not loaded by the live tutor"
+ },
+ "MATH.G5.NUMBER.DIVISION.ORDER_OF_OPERATIONS": {
+  "skill": "MATH.G5.NUMBER.DIVISION.ORDER_OF_OPERATIONS",
+  "key_step": "The child does multiplication and division first, working left to right between them, then addition and subtraction left to right.",
+  "floor": {
+   "prerequisite": "Works out combined addition and subtraction left to right.",
+   "question": "50 - 20 + 10 =",
+   "answer": "40"
+  },
+  "representations": [
+   "a shopping story",
+   "the expression with the first step circled",
+   "the result"
+  ],
+  "steps": [
+   "Circle multiplications and divisions; do them left to right.",
+   "Then add and subtract left to right.",
+   "Check with a story."
+  ],
+  "contexts": [
+   "buying 3 loaves and a packet of milk",
+   "sharing after buying",
+   "a farmer's sales"
+  ],
+  "board": [
+   {
+    "beat": "write",
+    "do": "Write 20 + 30 ÷ 5."
+   },
+   {
+    "beat": "point",
+    "do": "Point at the division.",
+    "say": "Which part do we work out first?"
+   },
+   {
+    "beat": "pause",
+    "do": "Wait for the child's working."
+   }
+  ],
+  "misconceptions": [
+   {
+    "code": "MATH.G5.NUMBER.DIVISION.ORDER_OF_OPERATIONS.M_LEFT_TO_RIGHT_ALL",
+    "listen_for": [
+     "10"
+    ],
+    "ask": "If you have 20 shillings and get a fifth of 30 shillings, how much?",
+    "repair": "Tell it as a story: the division is a step on its own, done first.",
+    "error": "Works every operation strictly from left to right, ignoring that × and ÷ come before + and −.",
+    "example": {
+     "question": "20 + 30 ÷ 5",
+     "wrong_answer": "10",
+     "correct_answer": "26"
+    }
+   },
+   {
+    "code": "MATH.G5.NUMBER.DIVISION.ORDER_OF_OPERATIONS.M_MULTIPLY_BEFORE_DIVIDE",
+    "listen_for": [
+     "4"
+    ],
+    "ask": "Which comes first reading left to right, ÷ or x?",
+    "repair": "x and ÷ are equal partners: left to right.",
+    "error": "Always multiplies before dividing, even when the division comes first.",
+    "example": {
+     "question": "48 ÷ 6 × 2",
+     "wrong_answer": "4",
+     "correct_answer": "16"
+    }
+   }
+  ],
+  "checks": [
+   {
+    "question": "20 + 30 ÷ 5",
+    "answer": "26",
+    "shows": "division first"
+   },
+   {
+    "question": "48 ÷ 6 x 2",
+    "answer": "16",
+    "shows": "left to right between x and ÷"
+   }
+  ],
+  "name": "Work out combined operations (+, −, ×, ÷) in the correct order",
+  "sub_strand": "MATH.G5.NUMBER.DIVISION",
+  "sub_strand_name": "Division and combined operations",
+  "status": "draft: written 13 Nov 2026 from research round 3; shorter entries; not yet checked by a Kenyan maths teacher; not loaded by the live tutor"
+ },
+ "MATH.G5.NUMBER.DIVISION.COMBINED_OPS_PROBLEMS": {
+  "skill": "MATH.G5.NUMBER.DIVISION.COMBINED_OPS_PROBLEMS",
+  "key_step": "The child turns a multi-step story into steps (or one expression), works them in the right order, and finishes every step.",
+  "floor": {
+   "prerequisite": "Uses the order of operations.",
+   "question": "3 x 150 + 60 =",
+   "answer": "510"
+  },
+  "representations": [
+   "the story in steps",
+   "a bar model",
+   "the expression and answer"
+  ],
+  "steps": [
+   "List the steps of the story.",
+   "Write each step or one expression.",
+   "Work in the right order.",
+   "Check the last step answers the question."
+  ],
+  "contexts": [
+   "shopping and change",
+   "sharing after buying",
+   "harvest packed and sold"
+  ],
+  "board": [
+   {
+    "beat": "write",
+    "do": "Write: Wanjiku bought 3 kg of sugar at Sh 150 per kg and bread for Sh 60. She paid Sh 1,000. Change?"
+   },
+   {
+    "beat": "draw",
+    "do": "Draw three step boxes."
+   },
+   {
+    "beat": "child_draws",
+    "do": "Child writes one step in each box."
+   },
+   {
+    "beat": "pause",
+    "do": "Wait for the final answer."
+   }
+  ],
+  "misconceptions": [
+   {
+    "code": "MATH.G5.NUMBER.DIVISION.COMBINED_OPS_PROBLEMS.M_STOPS_AFTER_ONE_STEP",
+    "listen_for": [
+     "Sh 450"
+    ],
+    "ask": "Did the question ask the cost of the sugar?",
+    "repair": "Read the question last line; fill every step box.",
+    "error": "Does only the first step of a multi-step problem and gives that as the answer.",
+    "example": {
+     "question": "Wanjiku bought 3 kg of sugar at Sh 150 per kg and paid with a Sh 1000 note. How much change did she get?",
+     "wrong_answer": "Sh 450",
+     "correct_answer": "Sh 550 (1000 − 3 × 150)"
+    }
+   }
+  ],
+  "checks": [
+   {
+    "question": "Wanjiku bought 3 kg of sugar at Sh 150 per kg and bread for Sh 60, paying Sh 1,000. Change?",
+    "answer": "Sh 490",
+    "shows": "all steps"
+   },
+   {
+    "question": "A farmer packs 360 mangoes into crates of 24 and sells each crate for Sh 500. How much money?",
+    "answer": "Sh 7,500",
+    "shows": "divide then multiply"
+   }
+  ],
+  "name": "Solve multi-step real-life problems using combined operations",
+  "sub_strand": "MATH.G5.NUMBER.DIVISION",
+  "sub_strand_name": "Division and combined operations",
+  "status": "draft: written 13 Nov 2026 from research round 3; shorter entries; not yet checked by a Kenyan maths teacher; not loaded by the live tutor"
+ },
  "MATH.G5.NUMBER.FRACTIONS.EQUIVALENT_FRACTIONS": {
   "skill": "MATH.G5.NUMBER.FRACTIONS.EQUIVALENT_FRACTIONS",
   "key_step": "The child says that cutting every piece into the same number of smaller pieces keeps the amount the same, so the top and the bottom are both multiplied by that number.",
@@ -5018,6 +6385,605 @@ export const TEACHING_PACK_G5 = {
   "sub_strand": "MATH.G5.NUMBER.DECIMALS",
   "sub_strand_name": "Decimals",
   "status": "draft: written 13 Nov 2026 from research round 3; not yet checked by a Kenyan maths teacher; not loaded by the live tutor"
+ },
+ "MATH.G5.NUMBER.SIMPLE_EQUATIONS.EQ_MEANING": {
+  "skill": "MATH.G5.NUMBER.SIMPLE_EQUATIONS.EQ_MEANING",
+  "key_step": "The child reads '=' as 'has the same value as' (both sides balance), tells an equation from an expression, and says a letter stands for an unknown number.",
+  "floor": {
+   "prerequisite": "Solves missing-number sentences.",
+   "question": "7 + □ = 12. What goes in the box?",
+   "answer": "5"
+  },
+  "representations": [
+   "a balance with bags of sweets",
+   "the equation under the balance",
+   "words: has the same value as"
+  ],
+  "steps": [
+   "Show a balance: both sides have the same value.",
+   "Read '=' as 'has the same value as'.",
+   "A bag of unknown sweets is a letter.",
+   "An expression has no '='; an equation does."
+  ],
+  "contexts": [
+   "sweets in bags on a balance",
+   "the cost of a pen in shillings",
+   "passengers on a matatu"
+  ],
+  "board": [
+   {
+    "beat": "draw",
+    "do": "Draw a level balance: 8 + 4 counters on the left, a box and 5 counters on the right."
+   },
+   {
+    "beat": "point",
+    "do": "Point at the level beam.",
+    "say": "What does a level beam tell us about the two sides?"
+   },
+   {
+    "beat": "pause",
+    "do": "Wait for the child to find the box."
+   }
+  ],
+  "misconceptions": [
+   {
+    "code": "MATH.G5.NUMBER.SIMPLE_EQUATIONS.EQ_MEANING.M_EQUALS_MEANS_ANSWER",
+    "listen_for": [
+     "12"
+    ],
+    "ask": "If the box is 12, is the right side 12 + 5? Does it balance?",
+    "repair": "'=' means both sides have the same value: check the balance.",
+    "error": "Reads '=' as 'now write the answer' and works left to right, ignoring what comes after the sign.",
+    "example": {
+     "question": "Fill in the box: 8 + 4 = □ + 5",
+     "wrong_answer": "12 (or 17)",
+     "correct_answer": "7"
+    }
+   },
+   {
+    "code": "MATH.G5.NUMBER.SIMPLE_EQUATIONS.EQ_MEANING.M_LETTER_AS_OBJECT",
+    "listen_for": [
+     "p is the pen"
+    ],
+    "ask": "Can you add a pen to 20 shillings?",
+    "repair": "p is a number: the cost of the pen in shillings.",
+    "error": "Thinks a letter stands for an object or a word (p = pen) instead of a number such as the cost or the count.",
+    "example": {
+     "question": "A pen costs p shillings. What does p stand for?",
+     "wrong_answer": "a pen",
+     "correct_answer": "the cost of one pen in shillings (a number)"
+    }
+   }
+  ],
+  "checks": [
+   {
+    "question": "Fill in the box: 8 + 4 = □ + 5",
+    "answer": "7",
+    "shows": "equals as balance"
+   },
+   {
+    "question": "Which is an equation: x + 7, or x + 7 = 15?",
+    "answer": "x + 7 = 15",
+    "shows": "equation has two equal sides"
+   }
+  ],
+  "name": "Understand what an equation is (equals sign as balance, letter as an unknown number)",
+  "sub_strand": "MATH.G5.NUMBER.SIMPLE_EQUATIONS",
+  "sub_strand_name": "Simple equations",
+  "status": "draft: written 13 Nov 2026 from research round 3; shorter entries; not yet checked by a Kenyan maths teacher; EQ_TWO_STEP is a proposed extension in the map; not loaded by the live tutor"
+ },
+ "MATH.G5.NUMBER.SIMPLE_EQUATIONS.EQ_FORM_ADD_SUB": {
+  "skill": "MATH.G5.NUMBER.SIMPLE_EQUATIONS.EQ_FORM_ADD_SUB",
+  "key_step": "The child writes an equation that follows the action of the story (start, change, result), with the letter where the unknown is, not the answer worked out.",
+  "floor": {
+   "prerequisite": "Knows what an equation is.",
+   "question": "Is x + 3 = 10 an equation?",
+   "answer": "Yes"
+  },
+  "representations": [
+   "the story acted out",
+   "a bar model",
+   "the equation"
+  ],
+  "steps": [
+   "Name the unknown with a letter.",
+   "Tell the story in order: start, change, result.",
+   "Write the equation in that order.",
+   "Do not solve yet."
+  ],
+  "contexts": [
+   "shillings spent",
+   "passengers on a matatu",
+   "eggs collected"
+  ],
+  "board": [
+   {
+    "beat": "write",
+    "do": "Write: Njeri had some shillings. She spent Sh 45 and had Sh 30 left."
+   },
+   {
+    "beat": "draw",
+    "do": "Draw a bar: the whole is unknown n; parts 45 and 30."
+   },
+   {
+    "beat": "pause",
+    "do": "Wait for the child to write the equation."
+   }
+  ],
+  "misconceptions": [
+   {
+    "code": "MATH.G5.NUMBER.SIMPLE_EQUATIONS.EQ_FORM_ADD_SUB.M_SUBTRACTION_ORDER_REVERSED",
+    "listen_for": [
+     "45 - n = 30"
+    ],
+    "ask": "What did Njeri start with?",
+    "repair": "Write the story in order: she started with n, then spent 45.",
+    "error": "Writes the subtraction in the order the numbers appear, not in the order of the action.",
+    "example": {
+     "question": "Njeri had some shillings. She spent sh 50 on mandazi and was left with sh 120. Let n be the number of shillings she had. Write an equation.",
+     "wrong_answer": "50 − n = 120",
+     "correct_answer": "n − 50 = 120"
+    }
+   },
+   {
+    "code": "MATH.G5.NUMBER.SIMPLE_EQUATIONS.EQ_FORM_ADD_SUB.M_WRITES_ANSWER_NOT_EQUATION",
+    "listen_for": [
+     "n = 75"
+    ],
+    "ask": "The question asks for the equation. What sentence shows the story?",
+    "repair": "Write the story as an equation first; solving is the next step.",
+    "error": "Works out the answer mentally and writes only 'p = 11' when asked to form the equation.",
+    "example": {
+     "question": "A matatu had some passengers. At Kisumu 7 more got in, making 18. Let p be the number of passengers at first. Form an equation.",
+     "wrong_answer": "p = 11",
+     "correct_answer": "p + 7 = 18"
+    }
+   }
+  ],
+  "checks": [
+   {
+    "question": "Njeri had n shillings. She spent Sh 45 and had Sh 30 left. Write the equation.",
+    "answer": "n - 45 = 30",
+    "shows": "follows the action"
+   },
+   {
+    "question": "A matatu had p passengers. At a stage 5 got on, making 16. Write the equation.",
+    "answer": "p + 5 = 16",
+    "shows": "equation, not the answer"
+   }
+  ],
+  "name": "Form a one-step equation involving addition or subtraction from a real-life situation",
+  "sub_strand": "MATH.G5.NUMBER.SIMPLE_EQUATIONS",
+  "sub_strand_name": "Simple equations",
+  "status": "draft: written 13 Nov 2026 from research round 3; shorter entries; not yet checked by a Kenyan maths teacher; EQ_TWO_STEP is a proposed extension in the map; not loaded by the live tutor"
+ },
+ "MATH.G5.NUMBER.SIMPLE_EQUATIONS.EQ_FORM_MUL_DIV": {
+  "skill": "MATH.G5.NUMBER.SIMPLE_EQUATIONS.EQ_FORM_MUL_DIV",
+  "key_step": "The child writes multiplication for equal groups or 'times as many' (with the multiplier on the right quantity) and division for sharing (total first).",
+  "floor": {
+   "prerequisite": "Forms addition and subtraction equations.",
+   "question": "Write: some number plus 4 is 9.",
+   "answer": "x + 4 = 9"
+  },
+  "representations": [
+   "equal groups or shares drawn",
+   "a bar model for times as many",
+   "the equation"
+  ],
+  "steps": [
+   "Draw the groups or the bars.",
+   "Decide multiply or divide.",
+   "Write 3b for 3 x b.",
+   "In sharing, the total comes first."
+  ],
+  "contexts": [
+   "goats and cows on a Nakuru farm",
+   "oranges shared among children",
+   "exercise books bought"
+  ],
+  "board": [
+   {
+    "beat": "write",
+    "do": "Write: a farmer has 4 times as many goats as cows. He has 36 goats."
+   },
+   {
+    "beat": "draw",
+    "do": "Draw one bar for cows (c) and four such bars for goats."
+   },
+   {
+    "beat": "pause",
+    "do": "Wait for the child to write the equation."
+   }
+  ],
+  "misconceptions": [
+   {
+    "code": "MATH.G5.NUMBER.SIMPLE_EQUATIONS.EQ_FORM_MUL_DIV.M_TIMES_AS_MANY_REVERSED",
+    "listen_for": [
+     "4 x 36"
+    ],
+    "ask": "Which animal has more, goats or cows?",
+    "repair": "The bar model: four cow-bars make the goats, so 4c = 36.",
+    "error": "Puts the multiplier on the wrong quantity in a 'times as many' statement.",
+    "example": {
+     "question": "A farmer in Nakuru has 4 times as many goats as cows. He has 24 goats. Let c be the number of cows. Write an equation.",
+     "wrong_answer": "c = 4 × 24",
+     "correct_answer": "4c = 24 (so c = 6)"
+    }
+   },
+   {
+    "code": "MATH.G5.NUMBER.SIMPLE_EQUATIONS.EQ_FORM_MUL_DIV.M_REPEATED_COST_AS_ADD",
+    "listen_for": [
+     "3 + b"
+    ],
+    "ask": "If each book costs b, what do three books cost?",
+    "repair": "b + b + b is 3 x b, written 3b.",
+    "error": "Writes 3 + b instead of 3b (3 × b) for the cost of 3 identical items.",
+    "example": {
+     "question": "3 exercise books each cost b shillings. Together they cost sh 45. Write an equation.",
+     "wrong_answer": "3 + b = 45",
+     "correct_answer": "3b = 45 (or b + b + b = 45)"
+    }
+   }
+  ],
+  "checks": [
+   {
+    "question": "A farmer has 4 times as many goats as cows. He has 36 goats. Write an equation for c cows.",
+    "answer": "4c = 36",
+    "shows": "multiplier on the right quantity"
+   },
+   {
+    "question": "Mama shared x oranges equally among 5 children; each got 3. Write the equation.",
+    "answer": "x ÷ 5 = 3",
+    "shows": "total first in sharing"
+   }
+  ],
+  "name": "Form a one-step equation involving multiplication or division from a real-life situation",
+  "sub_strand": "MATH.G5.NUMBER.SIMPLE_EQUATIONS",
+  "sub_strand_name": "Simple equations",
+  "status": "draft: written 13 Nov 2026 from research round 3; shorter entries; not yet checked by a Kenyan maths teacher; EQ_TWO_STEP is a proposed extension in the map; not loaded by the live tutor"
+ },
+ "MATH.G5.NUMBER.SIMPLE_EQUATIONS.EQ_SOLVE_ADD_SUB": {
+  "skill": "MATH.G5.NUMBER.SIMPLE_EQUATIONS.EQ_SOLVE_ADD_SUB",
+  "key_step": "The child undoes the operation (inverse) or does the same to both sides of the balance, and checks by putting the answer back.",
+  "floor": {
+   "prerequisite": "Knows addition and subtraction undo each other.",
+   "question": "If 15 + 25 = 40, what is 40 - 15?",
+   "answer": "25"
+  },
+  "representations": [
+   "a balance with a bag and counters",
+   "taking the same off both sides",
+   "the solution and check"
+  ],
+  "steps": [
+   "Show the equation on a balance.",
+   "Take the same off (or add the same to) both sides.",
+   "Read off the bag's value.",
+   "Check by substituting."
+  ],
+  "contexts": [
+   "money saved",
+   "a matatu's passengers",
+   "ages"
+  ],
+  "board": [
+   {
+    "beat": "draw",
+    "do": "Draw a balance: bag x and 15 counters on the left, 40 on the right."
+   },
+   {
+    "beat": "point",
+    "do": "Point at the 15 counters.",
+    "say": "What can we take off both sides and stay level?"
+   },
+   {
+    "beat": "pause",
+    "do": "Wait for the child to solve and check."
+   }
+  ],
+  "misconceptions": [
+   {
+    "code": "MATH.G5.NUMBER.SIMPLE_EQUATIONS.EQ_SOLVE_ADD_SUB.M_SAME_OPERATION_NOT_INVERSE",
+    "listen_for": [
+     "55"
+    ],
+    "ask": "Put 55 back in: is 55 + 15 equal to 40?",
+    "repair": "Check fails; undo the adding by taking away.",
+    "error": "Applies the operation that is in the equation instead of its inverse.",
+    "example": {
+     "question": "Solve x + 15 = 40",
+     "wrong_answer": "x = 55",
+     "correct_answer": "x = 25"
+    }
+   },
+   {
+    "code": "MATH.G5.NUMBER.SIMPLE_EQUATIONS.EQ_SOLVE_ADD_SUB.M_SUBTRACTS_FOR_X_MINUS",
+    "listen_for": [
+     "12"
+    ],
+    "ask": "If x is 12, what is 12 - 18?",
+    "repair": "Something take away 18 leaves 30, so it was 30 + 18.",
+    "error": "For x − a = b, subtracts the smaller number from the larger instead of adding.",
+    "example": {
+     "question": "Solve x − 18 = 30",
+     "wrong_answer": "x = 12",
+     "correct_answer": "x = 48"
+    }
+   }
+  ],
+  "checks": [
+   {
+    "question": "Solve x - 18 = 30.",
+    "answer": "x = 48",
+    "shows": "adds to undo subtracting"
+   },
+   {
+    "question": "Solve 50 - x = 20.",
+    "answer": "x = 30",
+    "shows": "unknown being subtracted"
+   }
+  ],
+  "name": "Solve one-step equations involving addition or subtraction",
+  "sub_strand": "MATH.G5.NUMBER.SIMPLE_EQUATIONS",
+  "sub_strand_name": "Simple equations",
+  "status": "draft: written 13 Nov 2026 from research round 3; shorter entries; not yet checked by a Kenyan maths teacher; EQ_TWO_STEP is a proposed extension in the map; not loaded by the live tutor"
+ },
+ "MATH.G5.NUMBER.SIMPLE_EQUATIONS.EQ_SOLVE_MUL_DIV": {
+  "skill": "MATH.G5.NUMBER.SIMPLE_EQUATIONS.EQ_SOLVE_MUL_DIV",
+  "key_step": "The child reads 3x as 3 times x, divides to undo multiplying and multiplies to undo dividing, and checks by substituting.",
+  "floor": {
+   "prerequisite": "Knows multiplication and division facts.",
+   "question": "If 4 x 7 = 28, what is 28 ÷ 4?",
+   "answer": "7"
+  },
+  "representations": [
+   "equal bags on a balance",
+   "the inverse written",
+   "the solution and check"
+  ],
+  "steps": [
+   "Read 4x as four bags of x.",
+   "Share both sides equally among the bags.",
+   "For x ÷ 5 = 8, five shares of 8 make x.",
+   "Check."
+  ],
+  "contexts": [
+   "packets of sweets of equal size",
+   "money shared equally",
+   "crates of soda"
+  ],
+  "board": [
+   {
+    "beat": "draw",
+    "do": "Draw a balance: four equal bags on the left, 28 counters on the right."
+   },
+   {
+    "beat": "point",
+    "do": "Point at the four bags.",
+    "say": "How can we share 28 among four bags?"
+   },
+   {
+    "beat": "pause",
+    "do": "Wait for the child to solve and check."
+   }
+  ],
+  "misconceptions": [
+   {
+    "code": "MATH.G5.NUMBER.SIMPLE_EQUATIONS.EQ_SOLVE_MUL_DIV.M_MULTIPLIES_FOR_AX",
+    "listen_for": [
+     "112"
+    ],
+    "ask": "If each bag had 112, would four bags balance 28?",
+    "repair": "Undo multiplying by dividing: share 28 among 4.",
+    "error": "Multiplies the two numbers when solving ax = b.",
+    "example": {
+     "question": "Solve 4x = 28",
+     "wrong_answer": "x = 112",
+     "correct_answer": "x = 7"
+    }
+   },
+   {
+    "code": "MATH.G5.NUMBER.SIMPLE_EQUATIONS.EQ_SOLVE_MUL_DIV.M_3X_AS_TWO_DIGIT_NUMBER",
+    "listen_for": [
+     "x is 6, thirty-six"
+    ],
+    "ask": "Does 3x mean thirty-something, or 3 times x?",
+    "repair": "Write 3x as 3 x x; three bags of x.",
+    "error": "Reads 3x as a two-digit number 'thirty-something' and fills in a digit.",
+    "example": {
+     "question": "Solve 3x = 36",
+     "wrong_answer": "x = 6",
+     "correct_answer": "x = 12"
+    }
+   }
+  ],
+  "checks": [
+   {
+    "question": "Solve 4x = 28.",
+    "answer": "x = 7",
+    "shows": "divides to undo"
+   },
+   {
+    "question": "Solve x ÷ 5 = 8.",
+    "answer": "x = 40",
+    "shows": "multiplies to undo"
+   }
+  ],
+  "name": "Solve one-step equations involving multiplication or division",
+  "sub_strand": "MATH.G5.NUMBER.SIMPLE_EQUATIONS",
+  "sub_strand_name": "Simple equations",
+  "status": "draft: written 13 Nov 2026 from research round 3; shorter entries; not yet checked by a Kenyan maths teacher; EQ_TWO_STEP is a proposed extension in the map; not loaded by the live tutor"
+ },
+ "MATH.G5.NUMBER.SIMPLE_EQUATIONS.EQ_SOLVE_IN_CONTEXT": {
+  "skill": "MATH.G5.NUMBER.SIMPLE_EQUATIONS.EQ_SOLVE_IN_CONTEXT",
+  "key_step": "The child models the story with an equation (not the numbers in story order), solves it, answers in words with a unit, and checks the answer makes sense in the story.",
+  "floor": {
+   "prerequisite": "Forms and solves one-step equations.",
+   "question": "Solve p + 5 = 16.",
+   "answer": "p = 11"
+  },
+  "representations": [
+   "the story",
+   "a bar or balance",
+   "equation, solution, sentence"
+  ],
+  "steps": [
+   "Name the unknown.",
+   "Write the equation from the story's action.",
+   "Solve.",
+   "Answer in words; check against the story."
+  ],
+  "contexts": [
+   "bunches of sukuma wiki bought",
+   "passengers on a matatu",
+   "money in a chama"
+  ],
+  "board": [
+   {
+    "beat": "write",
+    "do": "Write: 5 bunches of sukuma wiki cost Sh 100. Find the cost of one bunch."
+   },
+   {
+    "beat": "draw",
+    "do": "Draw five equal bars making 100."
+   },
+   {
+    "beat": "pause",
+    "do": "Wait for the child's equation, answer and sentence."
+   }
+  ],
+  "misconceptions": [
+   {
+    "code": "MATH.G5.NUMBER.SIMPLE_EQUATIONS.EQ_SOLVE_IN_CONTEXT.M_NO_REASONABLENESS_CHECK",
+    "listen_for": [
+     "Sh 500 each"
+    ],
+    "ask": "Can one bunch cost more than all five together?",
+    "repair": "Check every answer against the story before writing it.",
+    "error": "Accepts an answer that does not make sense in the story because they never check it against the context.",
+    "example": {
+     "question": "5 bunches of sukuma wiki cost sh 150. How much does one bunch cost?",
+     "wrong_answer": "sh 750",
+     "correct_answer": "sh 30 (5s = 150, s = 30)"
+    }
+   },
+   {
+    "code": "MATH.G5.NUMBER.SIMPLE_EQUATIONS.EQ_SOLVE_IN_CONTEXT.M_NUMBERS_IN_STORY_ORDER",
+    "listen_for": [
+     "I did the numbers in order"
+    ],
+    "ask": "Draw the story. Is the unknown the start, the change or the end?",
+    "repair": "Model the action with a bar before choosing the operation.",
+    "error": "Operates on the numbers in the order they appear, following a key word, without modelling the situation.",
+    "example": {
+     "question": "A matatu had some passengers. At Kisumu 6 got off and 9 remained. How many were in the matatu at first?",
+     "wrong_answer": "3",
+     "correct_answer": "15 (p − 6 = 9, p = 15)"
+    }
+   }
+  ],
+  "checks": [
+   {
+    "question": "5 bunches of sukuma wiki cost Sh 100. Cost of one bunch?",
+    "answer": "5b = 100, so b = Sh 20",
+    "shows": "equation, solution, unit"
+   },
+   {
+    "question": "A matatu had some passengers; 7 got off, leaving 9. How many were there at first?",
+    "answer": "p - 7 = 9, so p = 16",
+    "shows": "unknown start"
+   }
+  ],
+  "name": "Form and solve an equation to answer a real-life problem, then interpret and check",
+  "sub_strand": "MATH.G5.NUMBER.SIMPLE_EQUATIONS",
+  "sub_strand_name": "Simple equations",
+  "status": "draft: written 13 Nov 2026 from research round 3; shorter entries; not yet checked by a Kenyan maths teacher; EQ_TWO_STEP is a proposed extension in the map; not loaded by the live tutor"
+ },
+ "MATH.G5.NUMBER.SIMPLE_EQUATIONS.EQ_TWO_STEP": {
+  "skill": "MATH.G5.NUMBER.SIMPLE_EQUATIONS.EQ_TWO_STEP",
+  "key_step": "The child undoes the operations in reverse order (take away the added number first, then divide), keeping 2x and 6 separate.",
+  "floor": {
+   "prerequisite": "Solves one-step equations.",
+   "question": "Solve 2x = 14.",
+   "answer": "x = 7"
+  },
+  "representations": [
+   "a balance with two bags and loose counters",
+   "the steps written",
+   "the solution and check"
+  ],
+  "steps": [
+   "Show 2x + 6 on a balance.",
+   "Take the loose 6 off both sides first.",
+   "Share the rest between the two bags.",
+   "Check by substituting."
+  ],
+  "contexts": [
+   "2 pens and a Sh 6 rubber cost Sh 20",
+   "tickets plus a fixed fee",
+   "packets plus loose sweets"
+  ],
+  "board": [
+   {
+    "beat": "draw",
+    "do": "Draw a balance: two bags and 6 counters on the left, 20 on the right."
+   },
+   {
+    "beat": "point",
+    "do": "Point at the loose 6.",
+    "say": "What do we take off first?"
+   },
+   {
+    "beat": "pause",
+    "do": "Wait for the child's two steps."
+   }
+  ],
+  "misconceptions": [
+   {
+    "code": "MATH.G5.NUMBER.SIMPLE_EQUATIONS.EQ_TWO_STEP.M_UNDOES_IN_WRONG_ORDER",
+    "listen_for": [
+     "20 ÷ 2 first"
+    ],
+    "ask": "Are the 6 loose counters inside the bags?",
+    "repair": "Take off the loose counters first, then share what is left.",
+    "error": "Divides first and then subtracts, undoing the operations in the wrong order.",
+    "example": {
+     "question": "Solve 2x + 6 = 20",
+     "wrong_answer": "x = 4 (20 ÷ 2 = 10, then 10 − 6 = 4)",
+     "correct_answer": "x = 7 (2x = 14, x = 7)"
+    }
+   },
+   {
+    "code": "MATH.G5.NUMBER.SIMPLE_EQUATIONS.EQ_TWO_STEP.M_COMBINES_UNLIKE_TERMS",
+    "listen_for": [
+     "8x"
+    ],
+    "ask": "Is 6 loose counters the same as 6 bags?",
+    "repair": "2x and 6 are different things; keep them apart.",
+    "error": "Joins 2x + 6 into 8x before solving.",
+    "example": {
+     "question": "Solve 2x + 6 = 20",
+     "wrong_answer": "8x = 20, so x is about 2",
+     "correct_answer": "x = 7"
+    }
+   }
+  ],
+  "checks": [
+   {
+    "question": "Solve 2x + 6 = 20.",
+    "answer": "x = 7",
+    "shows": "reverse order"
+   },
+   {
+    "question": "3 tickets and a Sh 10 fee cost Sh 70. What does one ticket cost?",
+    "answer": "3t + 10 = 70, so t = Sh 20",
+    "shows": "forms and solves two steps"
+   }
+  ],
+  "name": "Form and solve two-step equations of the form ax + b = c or ax − b = c (proposed extension)",
+  "sub_strand": "MATH.G5.NUMBER.SIMPLE_EQUATIONS",
+  "sub_strand_name": "Simple equations",
+  "status": "draft: written 13 Nov 2026 from research round 3; shorter entries; not yet checked by a Kenyan maths teacher; EQ_TWO_STEP is a proposed extension in the map; not loaded by the live tutor"
  },
  "MATH.G5.MEASUR.LENGTH.KM_IDENTIFY_UNIT": {
   "skill": "MATH.G5.MEASUR.LENGTH.KM_IDENTIFY_UNIT",

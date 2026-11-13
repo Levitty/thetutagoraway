@@ -77,6 +77,10 @@ test('every skill and misconception the pack names exists in the curriculum map,
   }
 });
 
+test('every Grade 5 maths skill in the curriculum map has a pack entry', () => {
+  for (const code of skills.keys()) if (code.startsWith('MATH.G5.')) assert.ok(teachingFor(code), `no pack entry for ${code}`);
+});
+
 test('fractions cover every skill and every library misconception', () => {
   const frac = lib.sub_strands.find((s) => s.code === 'MATH.G5.NUMBER.FRACTIONS');
   for (const s of frac.skills) assert.ok(teachingFor(s.code), `no pack entry for ${s.code}`);
