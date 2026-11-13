@@ -215,14 +215,18 @@ export function checkForms(baseForms = {}) {
   for (const f of FAMILIES) { const k = f.cskill || f.skill; if (!bySkill.has(k)) bySkill.set(k, []); bySkill.get(k).push(f); }
   const ids = new Set();
   for (const f of FAMILIES) { if (ids.has(f.id)) out.push(`${f.id}: duplicate id`); ids.add(f.id); }
+  // A family draws a different case each time, so one draw can land two families on the same wording by chance (this made the check
+  // flake). Each family is drawn DRAWS times and a pair is flagged only when most draws of the two read as the same form.
+  const DRAWS = 12;
   for (const [skill, fams] of bySkill) {
-    const reps = fams.map(f => ({ f, t: formText(drawFamily(f).p) }));
+    const reps = fams.map(f => ({ f, ts: Array.from({ length: DRAWS }, () => formText(drawFamily(f).p)) }));
+    const mostly = (as, bs) => as.filter((t, k) => sameForm(t, bs[k % bs.length])).length > DRAWS / 2;
     reps.forEach((a, i) => {
       for (let j = i + 1; j < reps.length; j++) {
-        if (sameForm(a.t, reps[j].t)) out.push(`${a.f.id}: same form as ${reps[j].f.id}: "${a.t.slice(0, 80)}"`);
+        if (mostly(a.ts, reps[j].ts)) out.push(`${a.f.id}: same form as ${reps[j].f.id}: "${a.ts[0].slice(0, 80)}"`);
       }
       for (const b of baseForms[a.f.skill] || []) {
-        if (sameForm(a.t, b)) { out.push(`${a.f.id}: repeats a form ${a.f.skill} already has: "${b.slice(0, 80)}"`); break; }
+        if (a.ts.filter(t => sameForm(t, b)).length > DRAWS / 2) { out.push(`${a.f.id}: repeats a form ${a.f.skill} already has: "${b.slice(0, 80)}"`); break; }
       }
     });
   }
