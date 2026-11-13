@@ -1,0 +1,228 @@
+{
+ "outcomes": {
+  "PRE_.G8.FOUNDA.FIRE_SAFETY.a": "identify possible causes of fire outbreaks in the environment",
+  "PRE_.G8.FOUNDA.FIRE_SAFETY.b": "explain ways of preventing fire outbreaks in the environment",
+  "PRE_.G8.FOUNDA.FIRE_SAFETY.c": "extinguish fires in the environment using appropriate methods",
+  "PRE_.G8.FOUNDA.FIRE_SAFETY.d": "acknowledge the need for fire safety in day-to-day life",
+  "PRE_.G8.FOUNDA.DATA_SAFETY.a": "outline the importance of data in an electronic device",
+  "PRE_.G8.FOUNDA.DATA_SAFETY.b": "identify threats to data in an electronic device",
+  "PRE_.G8.FOUNDA.DATA_SAFETY.c": "describe ways of protecting data in an electronic device",
+  "PRE_.G8.FOUNDA.DATA_SAFETY.d": "secure data in an electronic device",
+  "PRE_.G8.FOUNDA.DATA_SAFETY.e": "acknowledge the need for data safety in day-to-day life",
+  "PRE_.G8.COMMUN.PLANE_GEOMETRY.a": "identify instruments used in drawing",
+  "PRE_.G8.COMMUN.PLANE_GEOMETRY.b": "explain the layout of a drawing environment",
+  "PRE_.G8.COMMUN.PLANE_GEOMETRY.c": "construct combined shapes applied in drawing",
+  "PRE_.G8.COMMUN.PLANE_GEOMETRY.d": "embrace the use of plane geometry in drawing",
+  "PRE_.G8.COMMUN.DIMENSIONING.a": "identify the types of dimensioning in drawing",
+  "PRE_.G8.COMMUN.DIMENSIONING.b": "draw lines used for dimensioning in drawing",
+  "PRE_.G8.COMMUN.DIMENSIONING.c": "dimension given shapes in drawings",
+  "PRE_.G8.COMMUN.DIMENSIONING.d": "embrace the importance of dimensioning in drawing",
+  "PRE_.G8.COMMUN.PLAIN_SCALE_DRAWING.a": "describe the features of a plain scale used in drawing",
+  "PRE_.G8.COMMUN.PLAIN_SCALE_DRAWING.b": "interpret a plain scale used in drawing",
+  "PRE_.G8.COMMUN.PLAIN_SCALE_DRAWING.c": "draw plane figures to a given scale",
+  "PRE_.G8.COMMUN.PLAIN_SCALE_DRAWING.d": "appreciate the use of plain scale drawing in the work environment",
+  "PRE_.G8.COMMUN.VISUAL_PROGRAMMING.a": "identify types of visual programming applications used in day-to-day life",
+  "PRE_.G8.COMMUN.VISUAL_PROGRAMMING.b": "explore the features of visual programming applications in a user environment",
+  "PRE_.G8.COMMUN.VISUAL_PROGRAMMING.c": "create instructions to solve problems using visual programming application",
+  "PRE_.G8.COMMUN.VISUAL_PROGRAMMING.d": "value the importance of visual programming in day-to-day life",
+  "PRE_.G8.MATERI.COMPOSITE_MATERIALS.a": "identify composite materials in the locality",
+  "PRE_.G8.MATERI.COMPOSITE_MATERIALS.b": "describe the composition of composite materials in the locality",
+  "PRE_.G8.MATERI.COMPOSITE_MATERIALS.c": "relate composite materials to their use in a work environment",
+  "PRE_.G8.MATERI.COMPOSITE_MATERIALS.d": "acknowledge the importance of composite materials used in the locality",
+  "PRE_.G8.MATERI.CERAMIC_MATERIALS.a": "identify common ceramic materials in the locality",
+  "PRE_.G8.MATERI.CERAMIC_MATERIALS.b": "describe the physical properties of ceramic materials in the locality",
+  "PRE_.G8.MATERI.CERAMIC_MATERIALS.c": "relate ceramic materials to their use in a work environment",
+  "PRE_.G8.MATERI.CERAMIC_MATERIALS.d": "acknowledge the importance of ceramic materials used in the locality",
+  "PRE_.G8.TOOLS_.CUTTING_TOOLS.a": "identify cutting tools used in the work environment",
+  "PRE_.G8.TOOLS_.CUTTING_TOOLS.b": "select cutting tools for given tasks in a workplace",
+  "PRE_.G8.TOOLS_.CUTTING_TOOLS.c": "use cutting tools to perform a given task",
+  "PRE_.G8.TOOLS_.CUTTING_TOOLS.d": "care for cutting tools in the work environment",
+  "PRE_.G8.TOOLS_.CUTTING_TOOLS.e": "recognise the importance of cutting tools in the work environment",
+  "PRE_.G8.TOOLS_.COMPUTER_SOFTWARE.a": "identify the categories of computer software used in a workplace",
+  "PRE_.G8.TOOLS_.COMPUTER_SOFTWARE.b": "explain the functions of different application software in the workplace",
+  "PRE_.G8.TOOLS_.COMPUTER_SOFTWARE.c": "use computer software to perform tasks in day-to-day life",
+  "PRE_.G8.TOOLS_.COMPUTER_SOFTWARE.d": "acknowledge the importance of application software in the workplace",
+  "PRE_.G8.ENTREP.BOOKKEEPING.a": "explain the importance of bookkeeping in entrepreneurship",
+  "PRE_.G8.ENTREP.BOOKKEEPING.b": "classify business transactions in bookkeeping",
+  "PRE_.G8.ENTREP.BOOKKEEPING.c": "prepare simple financial statements for a business",
+  "PRE_.G8.ENTREP.BOOKKEEPING.d": "appreciate the importance of financial records in day-to-day life",
+  "PRE_.G8.ENTREP.INCOME_AND_BUDGETING.a": "identify sources of income for an individual",
+  "PRE_.G8.ENTREP.INCOME_AND_BUDGETING.b": "explain the importance of budgeting in day-to-day life",
+  "PRE_.G8.ENTREP.INCOME_AND_BUDGETING.c": "prepare a simple budget for personal financial management",
+  "PRE_.G8.ENTREP.INCOME_AND_BUDGETING.d": "explore ethical and unethical practices in budgeting",
+  "PRE_.G8.ENTREP.INCOME_AND_BUDGETING.e": "appreciate the importance of financial planning in income management. By the end of the sub",
+  "PRE_.G8.ENTREP.OF_GOODS_AND_SERVICES.a": "explain the importance of marketing to a business",
+  "PRE_.G8.ENTREP.OF_GOODS_AND_SERVICES.b": "analyse the sources of information about the market for its potential customers",
+  "PRE_.G8.ENTREP.OF_GOODS_AND_SERVICES.c": "explore factors considered when selecting a suitable market for goods and services",
+  "PRE_.G8.ENTREP.OF_GOODS_AND_SERVICES.d": "select tools to market goods and services",
+  "PRE_.G8.ENTREP.OF_GOODS_AND_SERVICES.e": "recognise suitable markets for goods and services",
+  "PRE_.G8.ENTREP.DISTRIBUTION_OF_GOODS_AN.a": "explain the role of intermediaries in the distribution of goods and services",
+  "PRE_.G8.ENTREP.DISTRIBUTION_OF_GOODS_AN.b": "illustrate the channels for distributing different goods and services in business",
+  "PRE_.G8.ENTREP.DISTRIBUTION_OF_GOODS_AN.c": "analyse ethics in distribution of goods and services",
+  "PRE_.G8.ENTREP.DISTRIBUTION_OF_GOODS_AN.d": "value the need for distribution of goods and services in the community"
+ },
+ "skills": {
+  "PRET.G8.FOUNDA.FIRE_SAFETY.FIRE_CAUSES": {
+   "forms": [
+    "pick a cause of fire",
+    "say which is a natural and which a human cause",
+    "say what a fire needs",
+    "find the false step in a learner's reason"
+   ],
+   "mastery": "The child names causes of fire (a lit candle or match left unattended, faulty or overloaded electrical wiring, an unattended cooking fire or stove, careless disposal of cigarettes, leaking gas, children playing with matches, lightning and dry grass in the hot sun) and does not say fires have only natural causes. Evidence rule: at least four of the last five fresh questions right across at least two question forms, and no repeated pick of the same misconception."
+  },
+  "PRET.G8.FOUNDA.FIRE_SAFETY.FIRE_PREVENT": {
+   "forms": [
+    "pick the way to prevent a fire",
+    "say what to do with matches and fuel",
+    "say what to do with wiring and exits",
+    "find the false step in a learner's reason"
+   ],
+   "mastery": "The child picks ways to prevent fire (keep matches and lighters away from children, store paraffin, petrol and gas safely away from heat, never leave a stove or candle unattended, repair damaged wires, do not overload sockets, keep exits clear and have a fire drill) and does not block exits or store fuel near a stove. Evidence rule: at least four of the last five fresh questions right across at least two question forms, and no repeated pick of the same misconception."
+  },
+  "PRET.G8.FOUNDA.DATA_SAFETY.DATA_THREATS": {
+   "forms": [
+    "say why data is valuable",
+    "pick a threat to data",
+    "say what a virus does",
+    "find the false step in a learner's reason"
+   ],
+   "mastery": "The child says data (documents, photos, messages, schoolwork) is valuable because it is hard to replace and may be private, and names threats (viruses and other malware, theft or loss of the device, hackers, power failure, accidental deletion, a spoilt storage device), and does not say a virus can only come from the internet. Evidence rule: at least four of the last five fresh questions right across at least two question forms, and no repeated pick of the same misconception."
+  },
+  "PRET.G8.FOUNDA.DATA_SAFETY.DATA_PROTECT": {
+   "forms": [
+    "pick the way to protect data",
+    "say what a good password is",
+    "say what a backup is",
+    "find the false step in a learner's reason"
+   ],
+   "mastery": "The child picks ways to protect data (a strong password that is kept secret, a backup copy on another device, antivirus software kept up to date, locking the screen, not opening unknown links or attachments, keeping the device safe) and does not share a password or keep only one copy. Evidence rule: at least four of the last five fresh questions right across at least two question forms, and no repeated pick of the same misconception."
+  },
+  "PRET.G8.COMMUN.PLANE_GEOMETRY.DRAW_INSTRUMENTS": {
+   "forms": [
+    "pick the instrument for a task",
+    "say what the set square does",
+    "say what the compass does",
+    "find the false step in a learner's reason"
+   ],
+   "mastery": "The child names the T-square (draws horizontal lines), set squares of 45 and 30/60 degrees (draw upright and slanted lines), the compass (draws circles and arcs), the protractor (measures angles), the ruler (measures lengths), the drawing board, a hard pencil for fine lines and the eraser, and does not mix them up. Evidence rule: at least four of the last five fresh questions right across at least two question forms, and no repeated pick of the same misconception."
+  },
+  "PRET.G8.COMMUN.PLANE_GEOMETRY.DRAW_LAYOUT": {
+   "forms": [
+    "pick the part of the sheet",
+    "say where the title block goes",
+    "say the size of an A4 sheet",
+    "find the false step in a learner's reason"
+   ],
+   "mastery": "The child says a drawing sheet has a border (a frame drawn a little inside the edges), a title block (name, title, scale, date and sheet number) at the bottom right, a clear working area, and that A4 is 297 by 210 millimetres, and does not put the title block at the top or leave out the border. Evidence rule: at least four of the last five fresh questions right across at least two question forms, and no repeated pick of the same misconception."
+  },
+  "PRET.G8.COMMUN.DIMENSIONING.DIM_TYPES": {
+   "forms": [
+    "pick the line from its job",
+    "say where the figure is placed",
+    "pick the unit used",
+    "find the false step in a learner's reason"
+   ],
+   "mastery": "The child names the dimension line (a thin line with arrowheads showing the size), extension lines (thin lines that stretch out from the object), the leader line (points to a note), the figure (written above the dimension line), the symbols for diameter and radius, and says sizes on drawings are normally in millimetres, and does not use the object line as a dimension line. Evidence rule: at least four of the last five fresh questions right across at least two question forms, and no repeated pick of the same misconception."
+  },
+  "PRET.G8.COMMUN.DIMENSIONING.DIM_READ": {
+   "forms": [
+    "read the overall length",
+    "work out a missing dimension",
+    "work out the diameter from the radius",
+    "find the false step in a learner's reason"
+   ],
+   "mastery": "The child reads a dimension from the drawing, adds the parts to get the overall length, subtracts to find a missing part, says the diameter is twice the radius, and keeps the unit with the answer. Evidence rule: at least four of the last five fresh questions right across at least two question forms, and no repeated pick of the same misconception."
+  },
+  "PRET.G8.COMMUN.PLAIN_SCALE_DRAWING.PLAIN_SCALE": {
+   "forms": [
+    "say what a scale means",
+    "work out the real length",
+    "work out the drawing length",
+    "find the false step in a learner's reason"
+   ],
+   "mastery": "The child says a scale such as 1:50 means one unit on the drawing stands for 50 of the same unit on the real object, multiplies a drawing length by the scale to get the real length and divides a real length by the scale to get the drawing length, knows 1:1 is full size and 2:1 is an enlargement, and keeps the units. Evidence rule: at least four of the last five fresh questions right across at least two question forms, and no repeated pick of the same misconception."
+  },
+  "PRET.G8.COMMUN.VISUAL_PROGRAMMING.VISUAL_PROG": {
+   "forms": [
+    "pick a visual programming tool",
+    "pick a feature of such a tool",
+    "say what a loop or an event does",
+    "find the false step in a learner's reason"
+   ],
+   "mastery": "The child says visual programming builds programs by snapping together blocks instead of typing code, names tools such as Scratch and App Inventor, names features (a block palette, a script area, a stage with sprites, events, loops and decisions), and says a loop repeats instructions. Evidence rule: at least four of the last five fresh questions right across at least two question forms, and no repeated pick of the same misconception."
+  },
+  "PRET.G8.MATERI.COMPOSITE_MATERIALS.COMPOSITE": {
+   "forms": [
+    "pick the composite material",
+    "pick what it is made of",
+    "pick its use",
+    "find the false step in a learner's reason"
+   ],
+   "mastery": "The child says a composite material joins two or more materials to get a better one, and names concrete (cement, sand, ballast and water), reinforced concrete (concrete with steel bars), plywood (thin layers of wood glued crosswise), fibreglass (glass fibre in resin), and mud and straw bricks, with uses (buildings and slabs, furniture and boards, boat hulls and tanks, walls), and does not call concrete a single material. Evidence rule: at least four of the last five fresh questions right across at least two question forms, and no repeated pick of the same misconception."
+  },
+  "PRET.G8.MATERI.CERAMIC_MATERIALS.CERAMIC": {
+   "forms": [
+    "pick the ceramic material",
+    "pick its property",
+    "pick its use",
+    "find the false step in a learner's reason"
+   ],
+   "mastery": "The child names ceramics (clay pots, bricks, floor and wall tiles, porcelain cups and sinks, electrical insulators), says they are hard, brittle (they break or crack when hit or dropped), resist heat and corrosion and do not conduct electricity, and says tiles, bricks, sinks and insulators use these properties. Evidence rule: at least four of the last five fresh questions right across at least two question forms, and no repeated pick of the same misconception."
+  },
+  "PRET.G8.TOOLS_.CUTTING_TOOLS.CUT_TOOLS": {
+   "forms": [
+    "pick the tool for a task",
+    "pick the way to care for the tool",
+    "say what a blunt tool does",
+    "find the false step in a learner's reason"
+   ],
+   "mastery": "The child picks the hacksaw for metal, the tenon saw for wood, the coping saw for curves, the chisel for shaping wood, the plane for smoothing wood, the tin snips for sheet metal and scissors for card and cloth, and picks care (keep blades sharp and clean, oil steel blades, store with guards, carry points down) and does not use a wood saw on metal. Evidence rule: at least four of the last five fresh questions right across at least two question forms, and no repeated pick of the same misconception."
+  },
+  "PRET.G8.TOOLS_.COMPUTER_SOFTWARE.SOFTWARE": {
+   "forms": [
+    "sort the software",
+    "pick the application for a task",
+    "say what an operating system does",
+    "find the false step in a learner's reason"
+   ],
+   "mastery": "The child says system software runs the computer (an operating system such as Windows, Android or Linux), application software does a task for the user (a word processor for letters, a spreadsheet for calculations, a presentation program for slides, a browser for the web, a database for records), utility software looks after the computer (antivirus), and that software cannot be touched while hardware can. Evidence rule: at least four of the last five fresh questions right across at least two question forms, and no repeated pick of the same misconception."
+  },
+  "PRET.G8.ENTREP.BOOKKEEPING.BOOKKEEPING": {
+   "forms": [
+    "say why records matter",
+    "sort a transaction",
+    "sort cash and credit",
+    "find the false step in a learner's reason"
+   ],
+   "mastery": "The child says a business keeps records to know its income, spending, profit or loss, to plan, to pay tax and to get loans, and sorts transactions into cash (paid now) and credit (paid later), income and expenditure, and assets (what a business owns), liabilities (what it owes) and capital (what the owner put in). Evidence rule: at least four of the last five fresh questions right across at least two question forms, and no repeated pick of the same misconception."
+  },
+  "PRET.G8.ENTREP.INCOME_AND_BUDGETING.BUDGET": {
+   "forms": [
+    "pick a source of income",
+    "say why a budget matters",
+    "pick an ethical or unethical practice",
+    "find the false step in a learner's reason"
+   ],
+   "mastery": "The child names sources of income (wages or a salary, profit from a business, sales of farm produce, gifts and pocket money, interest), says a budget plans the income and spending so that needs come first and some is saved, and tells an honest budget from an unethical practice (hiding spending, using money meant for something else, borrowing without a plan to repay, cheating others). Evidence rule: at least four of the last five fresh questions right across at least two question forms, and no repeated pick of the same misconception."
+  },
+  "PRET.G8.ENTREP.OF_GOODS_AND_SERVICES.MARKETING": {
+   "forms": [
+    "say why marketing matters",
+    "pick a source of market information",
+    "pick a factor in choosing a market",
+    "pick a tool of marketing"
+   ],
+   "mastery": "The child says marketing helps a business find customers and sell, names sources of market information (asking customers, watching competitors, a survey, the internet, newspapers and radio), names factors in choosing a market (customer demand, price, location, competition, transport) and tools (a poster, radio, social media, samples, a price offer, word of mouth). Evidence rule: at least four of the last five fresh questions right across at least two question forms, and no repeated pick of the same misconception."
+  },
+  "PRET.G8.ENTREP.DISTRIBUTION_OF_GOODS_AN.DISTRIBUTION": {
+   "forms": [
+    "pick the intermediary",
+    "put the channel in order",
+    "pick the ethical practice",
+    "find the false step in a learner's reason"
+   ],
+   "mastery": "The child names intermediaries (wholesalers who sell in bulk to retailers, retailers who sell to buyers, agents who bring buyers and sellers together), puts channels in order (producer to consumer; producer to retailer to consumer; producer to wholesaler to retailer to consumer), and picks ethical practices (honest weights and measures, fair prices, safe delivery, not hoarding) over unethical ones. Evidence rule: at least four of the last five fresh questions right across at least two question forms, and no repeated pick of the same misconception."
+  }
+ }
+}

@@ -3,15 +3,15 @@
  "subject_key": "pre_technical",
  "grade": 8,
  "source": "KICD Pre-Technical Studies, First published 2023; Revised 2024 (text layer)",
- "status": "outcomes from KICD's text, word for word; skills, prerequisites and misconceptions not yet mapped",
+ "status": "outcomes from KICD's text, word for word; skills, prerequisites and misconceptions proposed (authored offline, 13 Nov 2026), awaiting teacher review",
  "totals": {
   "strands": 5,
   "sub_strands": 14,
   "outcomes": 60,
   "lessons": 120,
-  "skills": 0,
-  "prerequisites": 0,
-  "misconceptions": 0
+  "skills": 18,
+  "prerequisites": 26,
+  "misconceptions": 55
  },
  "sub_strands": [
   {
@@ -77,11 +77,170 @@
      "indicator": "PRE_.G8.RUBRIC.1.1"
     }
    ],
-   "skills": [],
-   "misconceptions": [],
+   "skills": [
+    {
+     "code": "PRET.G8.FOUNDA.FIRE_SAFETY.FIRE_CAUSES",
+     "name": "Name the causes of fire outbreaks at home, school and in the community",
+     "outcomes": [
+      "PRE_.G8.FOUNDA.FIRE_SAFETY.a"
+     ],
+     "mastery": "The child names causes of fire (a lit candle or match left unattended, faulty or overloaded electrical wiring, an unattended cooking fire or stove, careless disposal of cigarettes, leaking gas, children playing with matches, lightning and dry grass in the hot sun) and does not say fires have only natural causes. Evidence rule: at least four of the last five fresh questions right across at least two question forms, and no repeated pick of the same misconception.",
+     "question_forms": [
+      "pick a cause of fire",
+      "say which is a natural and which a human cause",
+      "say what a fire needs",
+      "find the false step in a learner's reason"
+     ],
+     "thinking": [
+      "recall",
+      "reasoning"
+     ],
+     "horeb_skill_ids": [],
+     "prerequisites": [
+      {
+       "requires": "PRET.G7.FOUNDA.SAFETY_IN_THE_IMMEDIATE_.SAFETY_THREATS",
+       "kind": "skill",
+       "reason": "Grade 7 Pre-Technical Studies taught it first. Proposed, to confirm by a teacher.",
+       "strength": "essential",
+       "status": "proposed"
+      }
+     ],
+     "leads_to": [],
+     "status": "proposed"
+    },
+    {
+     "code": "PRET.G8.FOUNDA.FIRE_SAFETY.FIRE_PREVENT",
+     "name": "Pick ways to prevent fire outbreaks",
+     "outcomes": [
+      "PRE_.G8.FOUNDA.FIRE_SAFETY.b"
+     ],
+     "mastery": "The child picks ways to prevent fire (keep matches and lighters away from children, store paraffin, petrol and gas safely away from heat, never leave a stove or candle unattended, repair damaged wires, do not overload sockets, keep exits clear and have a fire drill) and does not block exits or store fuel near a stove. Evidence rule: at least four of the last five fresh questions right across at least two question forms, and no repeated pick of the same misconception.",
+     "question_forms": [
+      "pick the way to prevent a fire",
+      "say what to do with matches and fuel",
+      "say what to do with wiring and exits",
+      "find the false step in a learner's reason"
+     ],
+     "thinking": [
+      "recall",
+      "reasoning"
+     ],
+     "horeb_skill_ids": [],
+     "prerequisites": [
+      {
+       "requires": "PRET.G8.FOUNDA.FIRE_SAFETY.FIRE_CAUSES",
+       "kind": "skill",
+       "reason": "This skill builds on it. Proposed, to confirm by a teacher.",
+       "strength": "essential",
+       "status": "proposed"
+      }
+     ],
+     "leads_to": [],
+     "status": "proposed"
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "PRET.G8.FOUNDA.FIRE_SAFETY.FIRE_CAUSES.M_PT8_FC_NATURE_ONLY",
+     "skill": "PRET.G8.FOUNDA.FIRE_SAFETY.FIRE_CAUSES",
+     "error": "Thinks fires start only from lightning or the sun.",
+     "example": {
+      "question": "Which is a common cause of fires in homes?",
+      "wrong_answer": "Only lightning",
+      "correct_answer": "A candle or stove left unattended"
+     },
+     "cause": "The child mixes up two ideas that sound alike or are taught close together.",
+     "reveals": "Offer \"Only lightning\" next to the right answer and ask the question again in a new context.",
+     "help": "List the causes of fires near your home.",
+     "feedback": "Most fires at home start from careless human acts such as an unattended candle or stove.",
+     "source": "To confirm by a teacher: a safety statement written for Grade 8.",
+     "status": "draft"
+    },
+    {
+     "code": "PRET.G8.FOUNDA.FIRE_SAFETY.FIRE_CAUSES.M_PT8_FC_WIRING",
+     "skill": "PRET.G8.FOUNDA.FIRE_SAFETY.FIRE_CAUSES",
+     "error": "Does not know faulty wiring can cause fire.",
+     "example": {
+      "question": "Which can cause an electrical fire?",
+      "wrong_answer": "A switched-off lamp",
+      "correct_answer": "Overloaded sockets or damaged wires"
+     },
+     "cause": "The child mixes up two ideas that sound alike or are taught close together.",
+     "reveals": "Offer \"A switched-off lamp\" next to the right answer and ask the question again in a new context.",
+     "help": "Look for scorch marks on a socket.",
+     "feedback": "Overloaded sockets and damaged wires get hot and can start a fire.",
+     "source": "To confirm by a teacher: a safety statement written for Grade 8.",
+     "status": "draft"
+    },
+    {
+     "code": "PRET.G8.FOUNDA.FIRE_SAFETY.FIRE_CAUSES.M_PT8_FC_FUEL",
+     "skill": "PRET.G8.FOUNDA.FIRE_SAFETY.FIRE_CAUSES",
+     "error": "Thinks stored paraffin or gas is harmless near heat.",
+     "example": {
+      "question": "Why is paraffin kept away from the stove?",
+      "wrong_answer": "It is only heavy",
+      "correct_answer": "Its vapour can catch fire"
+     },
+     "cause": "The child mixes up two ideas that sound alike or are taught close together.",
+     "reveals": "Offer \"It is only heavy\" next to the right answer and ask the question again in a new context.",
+     "help": "Ask what paraffin is for.",
+     "feedback": "Fuels burn easily, so they are stored away from heat.",
+     "source": "To confirm by a teacher: a safety statement written for Grade 8.",
+     "status": "draft"
+    },
+    {
+     "code": "PRET.G8.FOUNDA.FIRE_SAFETY.FIRE_PREVENT.M_PT8_FP_MATCHES",
+     "skill": "PRET.G8.FOUNDA.FIRE_SAFETY.FIRE_PREVENT",
+     "error": "Leaves matches where children can reach them.",
+     "example": {
+      "question": "Where should matches be kept?",
+      "wrong_answer": "On the kitchen table",
+      "correct_answer": "Out of the reach of children"
+     },
+     "cause": "The child mixes up two ideas that sound alike or are taught close together.",
+     "reveals": "Offer \"On the kitchen table\" next to the right answer and ask the question again in a new context.",
+     "help": "Walk the house and find where matches are kept.",
+     "feedback": "Matches are kept out of the reach of children.",
+     "source": "To confirm by a teacher: a safety statement written for Grade 8.",
+     "status": "draft"
+    },
+    {
+     "code": "PRET.G8.FOUNDA.FIRE_SAFETY.FIRE_PREVENT.M_PT8_FP_EXITS",
+     "skill": "PRET.G8.FOUNDA.FIRE_SAFETY.FIRE_PREVENT",
+     "error": "Blocks or locks exits.",
+     "example": {
+      "question": "Which action helps people escape from a fire?",
+      "wrong_answer": "Locking the exit door",
+      "correct_answer": "Keeping the exits clear"
+     },
+     "cause": "The child mixes up two ideas that sound alike or are taught close together.",
+     "reveals": "Offer \"Locking the exit door\" next to the right answer and ask the question again in a new context.",
+     "help": "Practise a drill.",
+     "feedback": "Exits must be clear and unlocked in a fire.",
+     "source": "To confirm by a teacher: a safety statement written for Grade 8.",
+     "status": "draft"
+    },
+    {
+     "code": "PRET.G8.FOUNDA.FIRE_SAFETY.FIRE_PREVENT.M_PT8_FP_UNATTENDED",
+     "skill": "PRET.G8.FOUNDA.FIRE_SAFETY.FIRE_PREVENT",
+     "error": "Leaves a stove or candle burning while out of the room.",
+     "example": {
+      "question": "What should you do before leaving a room with a candle?",
+      "wrong_answer": "Leave it to burn",
+      "correct_answer": "Put it out"
+     },
+     "cause": "The child mixes up two ideas that sound alike or are taught close together.",
+     "reveals": "Offer \"Leave it to burn\" next to the right answer and ask the question again in a new context.",
+     "help": "Count the times you left a candle.",
+     "feedback": "Never leave a stove or candle burning unattended.",
+     "source": "To confirm by a teacher: a safety statement written for Grade 8.",
+     "status": "draft"
+    }
+   ],
    "rubric_indicators": [
     "PRE_.G8.RUBRIC.1.1"
-   ]
+   ],
+   "authoring_notes": "Outcomes a and b are tested by questions. Outcome c (extinguish fires) is NOT done by learners: the teacher or fire officer demonstrates a blanket, sand or an extinguisher on a small safe fire, and learners only watch and say the steps. Outcome d is attitudinal. Safety wording to be confirmed by a teacher."
   },
   {
    "code": "PRE_.G8.FOUNDA.DATA_SAFETY",
@@ -153,11 +312,171 @@
      "indicator": "PRE_.G8.RUBRIC.1.1"
     }
    ],
-   "skills": [],
-   "misconceptions": [],
+   "skills": [
+    {
+     "code": "PRET.G8.FOUNDA.DATA_SAFETY.DATA_THREATS",
+     "name": "Say why data matters and name the threats to data on a device",
+     "outcomes": [
+      "PRE_.G8.FOUNDA.DATA_SAFETY.a",
+      "PRE_.G8.FOUNDA.DATA_SAFETY.b"
+     ],
+     "mastery": "The child says data (documents, photos, messages, schoolwork) is valuable because it is hard to replace and may be private, and names threats (viruses and other malware, theft or loss of the device, hackers, power failure, accidental deletion, a spoilt storage device), and does not say a virus can only come from the internet. Evidence rule: at least four of the last five fresh questions right across at least two question forms, and no repeated pick of the same misconception.",
+     "question_forms": [
+      "say why data is valuable",
+      "pick a threat to data",
+      "say what a virus does",
+      "find the false step in a learner's reason"
+     ],
+     "thinking": [
+      "recall",
+      "reasoning"
+     ],
+     "horeb_skill_ids": [],
+     "prerequisites": [
+      {
+       "requires": "PRET.G7.FOUNDA.COMPUTER_CONCEPTS.COMP_CHARS",
+       "kind": "skill",
+       "reason": "Grade 7 Pre-Technical Studies taught it first. Proposed, to confirm by a teacher.",
+       "strength": "essential",
+       "status": "proposed"
+      }
+     ],
+     "leads_to": [],
+     "status": "proposed"
+    },
+    {
+     "code": "PRET.G8.FOUNDA.DATA_SAFETY.DATA_PROTECT",
+     "name": "Pick ways to protect data on a device",
+     "outcomes": [
+      "PRE_.G8.FOUNDA.DATA_SAFETY.c"
+     ],
+     "mastery": "The child picks ways to protect data (a strong password that is kept secret, a backup copy on another device, antivirus software kept up to date, locking the screen, not opening unknown links or attachments, keeping the device safe) and does not share a password or keep only one copy. Evidence rule: at least four of the last five fresh questions right across at least two question forms, and no repeated pick of the same misconception.",
+     "question_forms": [
+      "pick the way to protect data",
+      "say what a good password is",
+      "say what a backup is",
+      "find the false step in a learner's reason"
+     ],
+     "thinking": [
+      "recall",
+      "reasoning"
+     ],
+     "horeb_skill_ids": [],
+     "prerequisites": [
+      {
+       "requires": "PRET.G8.FOUNDA.DATA_SAFETY.DATA_THREATS",
+       "kind": "skill",
+       "reason": "This skill builds on it. Proposed, to confirm by a teacher.",
+       "strength": "essential",
+       "status": "proposed"
+      }
+     ],
+     "leads_to": [],
+     "status": "proposed"
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "PRET.G8.FOUNDA.DATA_SAFETY.DATA_THREATS.M_PT8_DT_NOT_IMPORTANT",
+     "skill": "PRET.G8.FOUNDA.DATA_SAFETY.DATA_THREATS",
+     "error": "Thinks data on a device is not worth protecting.",
+     "example": {
+      "question": "Why is data worth protecting?",
+      "wrong_answer": "It is not important",
+      "correct_answer": "It is hard to replace and may be private"
+     },
+     "cause": "The child mixes up two ideas that sound alike or are taught close together.",
+     "reveals": "Offer \"It is not important\" next to the right answer and ask the question again in a new context.",
+     "help": "Ask what would be lost if your phone fell in water.",
+     "feedback": "Schoolwork, photos and messages are hard to replace and may be private.",
+     "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
+     "status": "draft"
+    },
+    {
+     "code": "PRET.G8.FOUNDA.DATA_SAFETY.DATA_THREATS.M_PT8_DT_VIRUS_ONLY",
+     "skill": "PRET.G8.FOUNDA.DATA_SAFETY.DATA_THREATS",
+     "error": "Says a virus only comes from the internet.",
+     "example": {
+      "question": "How can a virus reach a computer?",
+      "wrong_answer": "Only through the internet",
+      "correct_answer": "Through the internet, flash disks and unknown files"
+     },
+     "cause": "The child mixes up two ideas that sound alike or are taught close together.",
+     "reveals": "Offer \"Only through the internet\" next to the right answer and ask the question again in a new context.",
+     "help": "Ask how a flash disk can carry a virus.",
+     "feedback": "Viruses spread by flash disks and files as well as the internet.",
+     "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
+     "status": "draft"
+    },
+    {
+     "code": "PRET.G8.FOUNDA.DATA_SAFETY.DATA_THREATS.M_PT8_DT_THEFT",
+     "skill": "PRET.G8.FOUNDA.DATA_SAFETY.DATA_THREATS",
+     "error": "Forgets that a lost or stolen device is a threat.",
+     "example": {
+      "question": "Which is a threat to data?",
+      "wrong_answer": "A clean screen",
+      "correct_answer": "A stolen phone"
+     },
+     "cause": "The child mixes up two ideas that sound alike or are taught close together.",
+     "reveals": "Offer \"A clean screen\" next to the right answer and ask the question again in a new context.",
+     "help": "Ask what happens to the photos on a stolen phone.",
+     "feedback": "Theft or loss of a device is a threat to the data in it.",
+     "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
+     "status": "draft"
+    },
+    {
+     "code": "PRET.G8.FOUNDA.DATA_SAFETY.DATA_PROTECT.M_PT8_DP_PASSWORD_SHARE",
+     "skill": "PRET.G8.FOUNDA.DATA_SAFETY.DATA_PROTECT",
+     "error": "Shares a password with a friend.",
+     "example": {
+      "question": "What should you do with your password?",
+      "wrong_answer": "Share it with a friend",
+      "correct_answer": "Keep it secret"
+     },
+     "cause": "The child mixes up two ideas that sound alike or are taught close together.",
+     "reveals": "Offer \"Share it with a friend\" next to the right answer and ask the question again in a new context.",
+     "help": "Ask who could use your account.",
+     "feedback": "A password is kept secret.",
+     "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
+     "status": "draft"
+    },
+    {
+     "code": "PRET.G8.FOUNDA.DATA_SAFETY.DATA_PROTECT.M_PT8_DP_BACKUP",
+     "skill": "PRET.G8.FOUNDA.DATA_SAFETY.DATA_PROTECT",
+     "error": "Keeps only one copy of important files.",
+     "example": {
+      "question": "Why make a backup?",
+      "wrong_answer": "It is not needed",
+      "correct_answer": "To keep a copy if the device is lost or fails"
+     },
+     "cause": "The child mixes up two ideas that sound alike or are taught close together.",
+     "reveals": "Offer \"It is not needed\" next to the right answer and ask the question again in a new context.",
+     "help": "Ask what happens to the only copy of an essay.",
+     "feedback": "A backup is a second copy kept on another device.",
+     "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
+     "status": "draft"
+    },
+    {
+     "code": "PRET.G8.FOUNDA.DATA_SAFETY.DATA_PROTECT.M_PT8_DP_UNKNOWN_LINK",
+     "skill": "PRET.G8.FOUNDA.DATA_SAFETY.DATA_PROTECT",
+     "error": "Opens unknown links and attachments.",
+     "example": {
+      "question": "What should you do with a link from a stranger?",
+      "wrong_answer": "Open it quickly",
+      "correct_answer": "Not open it and tell an adult"
+     },
+     "cause": "The child mixes up two ideas that sound alike or are taught close together.",
+     "reveals": "Offer \"Open it quickly\" next to the right answer and ask the question again in a new context.",
+     "help": "Ask what a strange link could do.",
+     "feedback": "Unknown links can carry viruses or tricks, so do not open them.",
+     "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
+     "status": "draft"
+    }
+   ],
    "rubric_indicators": [
     "PRE_.G8.RUBRIC.1.1"
-   ]
+   ],
+   "authoring_notes": "Outcomes a, b and c are tested by questions. Outcome d (secure data on a device) is practical on a school device: set a screen lock, make a backup copy, observed by the teacher; no real password is typed into the system or shared. Outcome e is attitudinal."
   },
   {
    "code": "PRE_.G8.COMMUN.PLANE_GEOMETRY",
@@ -217,13 +536,172 @@
      "status": "kicd_read"
     }
    ],
-   "skills": [],
-   "misconceptions": [],
+   "skills": [
+    {
+     "code": "PRET.G8.COMMUN.PLANE_GEOMETRY.DRAW_INSTRUMENTS",
+     "name": "Name the instruments used in technical drawing and what each does",
+     "outcomes": [
+      "PRE_.G8.COMMUN.PLANE_GEOMETRY.a"
+     ],
+     "mastery": "The child names the T-square (draws horizontal lines), set squares of 45 and 30/60 degrees (draw upright and slanted lines), the compass (draws circles and arcs), the protractor (measures angles), the ruler (measures lengths), the drawing board, a hard pencil for fine lines and the eraser, and does not mix them up. Evidence rule: at least four of the last five fresh questions right across at least two question forms, and no repeated pick of the same misconception.",
+     "question_forms": [
+      "pick the instrument for a task",
+      "say what the set square does",
+      "say what the compass does",
+      "find the false step in a learner's reason"
+     ],
+     "thinking": [
+      "recall",
+      "reasoning"
+     ],
+     "horeb_skill_ids": [],
+     "prerequisites": [
+      {
+       "requires": "PRET.G7.COMMUN.INTRODUCTION_TO_DRAWING.DRAW_LINES",
+       "kind": "skill",
+       "reason": "Grade 7 Pre-Technical Studies taught it first. Proposed, to confirm by a teacher.",
+       "strength": "essential",
+       "status": "proposed"
+      }
+     ],
+     "leads_to": [],
+     "status": "proposed"
+    },
+    {
+     "code": "PRET.G8.COMMUN.PLANE_GEOMETRY.DRAW_LAYOUT",
+     "name": "Say how a drawing sheet is laid out",
+     "outcomes": [
+      "PRE_.G8.COMMUN.PLANE_GEOMETRY.b"
+     ],
+     "mastery": "The child says a drawing sheet has a border (a frame drawn a little inside the edges), a title block (name, title, scale, date and sheet number) at the bottom right, a clear working area, and that A4 is 297 by 210 millimetres, and does not put the title block at the top or leave out the border. Evidence rule: at least four of the last five fresh questions right across at least two question forms, and no repeated pick of the same misconception.",
+     "question_forms": [
+      "pick the part of the sheet",
+      "say where the title block goes",
+      "say the size of an A4 sheet",
+      "find the false step in a learner's reason"
+     ],
+     "thinking": [
+      "recall",
+      "reasoning"
+     ],
+     "horeb_skill_ids": [],
+     "prerequisites": [
+      {
+       "requires": "PRET.G8.COMMUN.PLANE_GEOMETRY.DRAW_INSTRUMENTS",
+       "kind": "skill",
+       "reason": "This skill builds on it. Proposed, to confirm by a teacher.",
+       "strength": "essential",
+       "status": "proposed"
+      }
+     ],
+     "leads_to": [],
+     "status": "proposed"
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "PRET.G8.COMMUN.PLANE_GEOMETRY.DRAW_INSTRUMENTS.M_PT8_DI_TOOL_MIX",
+     "skill": "PRET.G8.COMMUN.PLANE_GEOMETRY.DRAW_INSTRUMENTS",
+     "error": "Mixes up what the instruments do.",
+     "example": {
+      "question": "Which instrument draws circles?",
+      "wrong_answer": "A set square",
+      "correct_answer": "A compass"
+     },
+     "cause": "The child mixes up two ideas that sound alike or are taught close together.",
+     "reveals": "Offer \"A set square\" next to the right answer and ask the question again in a new context.",
+     "help": "Match each instrument to a job.",
+     "feedback": "The compass draws circles and arcs. The set square draws upright and slanted lines.",
+     "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
+     "status": "draft"
+    },
+    {
+     "code": "PRET.G8.COMMUN.PLANE_GEOMETRY.DRAW_INSTRUMENTS.M_PT8_DI_TSQUARE",
+     "skill": "PRET.G8.COMMUN.PLANE_GEOMETRY.DRAW_INSTRUMENTS",
+     "error": "Says the T-square measures angles.",
+     "example": {
+      "question": "What does the T-square draw?",
+      "wrong_answer": "Angles",
+      "correct_answer": "Horizontal lines"
+     },
+     "cause": "The child mixes up two ideas that sound alike or are taught close together.",
+     "reveals": "Offer \"Angles\" next to the right answer and ask the question again in a new context.",
+     "help": "Slide it along the board.",
+     "feedback": "The T-square draws horizontal lines. The protractor measures angles.",
+     "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
+     "status": "draft"
+    },
+    {
+     "code": "PRET.G8.COMMUN.PLANE_GEOMETRY.DRAW_INSTRUMENTS.M_PT8_DI_PROTRACTOR",
+     "skill": "PRET.G8.COMMUN.PLANE_GEOMETRY.DRAW_INSTRUMENTS",
+     "error": "Says the protractor measures length.",
+     "example": {
+      "question": "What does a protractor measure?",
+      "wrong_answer": "Length",
+      "correct_answer": "Angles"
+     },
+     "cause": "The child mixes up two ideas that sound alike or are taught close together.",
+     "reveals": "Offer \"Length\" next to the right answer and ask the question again in a new context.",
+     "help": "Measure a corner with it.",
+     "feedback": "A protractor measures angles. A ruler measures length.",
+     "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
+     "status": "draft"
+    },
+    {
+     "code": "PRET.G8.COMMUN.PLANE_GEOMETRY.DRAW_LAYOUT.M_PT8_DL_TITLE_TOP",
+     "skill": "PRET.G8.COMMUN.PLANE_GEOMETRY.DRAW_LAYOUT",
+     "error": "Puts the title block at the top.",
+     "example": {
+      "question": "Where is the title block of a drawing sheet?",
+      "wrong_answer": "At the top left",
+      "correct_answer": "At the bottom right"
+     },
+     "cause": "The child mixes up two ideas that sound alike or are taught close together.",
+     "reveals": "Offer \"At the top left\" next to the right answer and ask the question again in a new context.",
+     "help": "Look at a real drawing sheet.",
+     "feedback": "The title block is at the bottom right of the sheet.",
+     "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
+     "status": "draft"
+    },
+    {
+     "code": "PRET.G8.COMMUN.PLANE_GEOMETRY.DRAW_LAYOUT.M_PT8_DL_NO_BORDER",
+     "skill": "PRET.G8.COMMUN.PLANE_GEOMETRY.DRAW_LAYOUT",
+     "error": "Leaves out the border.",
+     "example": {
+      "question": "What is the border of a drawing sheet?",
+      "wrong_answer": "A frame drawn a little inside the edges",
+      "correct_answer": "A line drawn across the middle"
+     },
+     "cause": "The child mixes up two ideas that sound alike or are taught close together.",
+     "reveals": "Offer \"A frame drawn a little inside the edges\" next to the right answer and ask the question again in a new context.",
+     "help": "Draw a border on a sheet.",
+     "feedback": "The border is a frame drawn inside the edges of the sheet.",
+     "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
+     "status": "draft"
+    },
+    {
+     "code": "PRET.G8.COMMUN.PLANE_GEOMETRY.DRAW_LAYOUT.M_PT8_DL_A4",
+     "skill": "PRET.G8.COMMUN.PLANE_GEOMETRY.DRAW_LAYOUT",
+     "error": "Gives the wrong size of A4.",
+     "example": {
+      "question": "What is the size of A4?",
+      "wrong_answer": "420 by 297 millimetres",
+      "correct_answer": "297 by 210 millimetres"
+     },
+     "cause": "The child mixes up two ideas that sound alike or are taught close together.",
+     "reveals": "Offer \"420 by 297 millimetres\" next to the right answer and ask the question again in a new context.",
+     "help": "Measure a sheet of A4 paper.",
+     "feedback": "A4 is 297 by 210 millimetres.",
+     "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
+     "status": "draft"
+    }
+   ],
    "rubric_indicators": [
     "PRE_.G8.RUBRIC.2.1",
     "PRE_.G8.RUBRIC.2.2",
     "PRE_.G8.RUBRIC.2.3"
-   ]
+   ],
+   "authoring_notes": "Outcomes a and b are tested by questions. Outcome c (construct combined shapes) is drawn on a sheet with instruments and marked by the teacher against the rubric. Outcome d is attitudinal."
   },
   {
    "code": "PRE_.G8.COMMUN.DIMENSIONING",
@@ -287,13 +765,186 @@
      "status": "kicd_read"
     }
    ],
-   "skills": [],
-   "misconceptions": [],
+   "skills": [
+    {
+     "code": "PRET.G8.COMMUN.DIMENSIONING.DIM_TYPES",
+     "name": "Name the parts of dimensioning and the types of dimension",
+     "outcomes": [
+      "PRE_.G8.COMMUN.DIMENSIONING.a"
+     ],
+     "mastery": "The child names the dimension line (a thin line with arrowheads showing the size), extension lines (thin lines that stretch out from the object), the leader line (points to a note), the figure (written above the dimension line), the symbols for diameter and radius, and says sizes on drawings are normally in millimetres, and does not use the object line as a dimension line. Evidence rule: at least four of the last five fresh questions right across at least two question forms, and no repeated pick of the same misconception.",
+     "question_forms": [
+      "pick the line from its job",
+      "say where the figure is placed",
+      "pick the unit used",
+      "find the false step in a learner's reason"
+     ],
+     "thinking": [
+      "recall",
+      "reasoning"
+     ],
+     "horeb_skill_ids": [],
+     "prerequisites": [
+      {
+       "requires": "PRET.G7.COMMUN.INTRODUCTION_TO_DRAWING.DRAW_SYMBOLS",
+       "kind": "skill",
+       "reason": "Grade 7 Pre-Technical Studies taught it first. Proposed, to confirm by a teacher.",
+       "strength": "essential",
+       "status": "proposed"
+      },
+      {
+       "requires": "PRET.G8.COMMUN.PLANE_GEOMETRY.DRAW_INSTRUMENTS",
+       "kind": "skill",
+       "reason": "This skill builds on it. Proposed, to confirm by a teacher.",
+       "strength": "essential",
+       "status": "proposed"
+      }
+     ],
+     "leads_to": [],
+     "status": "proposed"
+    },
+    {
+     "code": "PRET.G8.COMMUN.DIMENSIONING.DIM_READ",
+     "name": "Read and work out dimensions of given shapes",
+     "outcomes": [
+      "PRE_.G8.COMMUN.DIMENSIONING.c"
+     ],
+     "mastery": "The child reads a dimension from the drawing, adds the parts to get the overall length, subtracts to find a missing part, says the diameter is twice the radius, and keeps the unit with the answer. Evidence rule: at least four of the last five fresh questions right across at least two question forms, and no repeated pick of the same misconception.",
+     "question_forms": [
+      "read the overall length",
+      "work out a missing dimension",
+      "work out the diameter from the radius",
+      "find the false step in a learner's reason"
+     ],
+     "thinking": [
+      "recall",
+      "reasoning"
+     ],
+     "horeb_skill_ids": [],
+     "prerequisites": [
+      {
+       "requires": "PRET.G8.COMMUN.DIMENSIONING.DIM_TYPES",
+       "kind": "skill",
+       "reason": "This skill builds on it. Proposed, to confirm by a teacher.",
+       "strength": "essential",
+       "status": "proposed"
+      },
+      {
+       "requires": "MATH.G4.MEASUR.LENGTH.M_CM_RELATION",
+       "kind": "skill",
+       "reason": "Mathematics taught the measuring, drawing or money idea first. Proposed, to confirm by a teacher.",
+       "strength": "essential",
+       "status": "proposed"
+      }
+     ],
+     "leads_to": [],
+     "status": "proposed"
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "PRET.G8.COMMUN.DIMENSIONING.DIM_TYPES.M_PT8_DM_LINE_MIX",
+     "skill": "PRET.G8.COMMUN.DIMENSIONING.DIM_TYPES",
+     "error": "Mixes the dimension line with the extension line.",
+     "example": {
+      "question": "Which line has arrowheads and shows the size?",
+      "wrong_answer": "The extension line",
+      "correct_answer": "The dimension line"
+     },
+     "cause": "The child mixes up two ideas that sound alike or are taught close together.",
+     "reveals": "Offer \"The extension line\" next to the right answer and ask the question again in a new context.",
+     "help": "Look at a dimensioned drawing.",
+     "feedback": "The dimension line has arrowheads. Extension lines stretch out from the object.",
+     "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
+     "status": "draft"
+    },
+    {
+     "code": "PRET.G8.COMMUN.DIMENSIONING.DIM_TYPES.M_PT8_DM_UNITS",
+     "skill": "PRET.G8.COMMUN.DIMENSIONING.DIM_TYPES",
+     "error": "Says drawings are dimensioned in metres.",
+     "example": {
+      "question": "In which unit are sizes normally given on a drawing?",
+      "wrong_answer": "Metres",
+      "correct_answer": "Millimetres"
+     },
+     "cause": "The child mixes up two ideas that sound alike or are taught close together.",
+     "reveals": "Offer \"Metres\" next to the right answer and ask the question again in a new context.",
+     "help": "Look at a drawing of a small part.",
+     "feedback": "Sizes on drawings are normally in millimetres.",
+     "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
+     "status": "draft"
+    },
+    {
+     "code": "PRET.G8.COMMUN.DIMENSIONING.DIM_TYPES.M_PT8_DM_OBJECT_LINE",
+     "skill": "PRET.G8.COMMUN.DIMENSIONING.DIM_TYPES",
+     "error": "Uses the object line as a dimension line.",
+     "example": {
+      "question": "Which line is thick and shows the shape?",
+      "wrong_answer": "The dimension line",
+      "correct_answer": "The object line"
+     },
+     "cause": "The child mixes up two ideas that sound alike or are taught close together.",
+     "reveals": "Offer \"The dimension line\" next to the right answer and ask the question again in a new context.",
+     "help": "Compare thick and thin lines.",
+     "feedback": "The object line is thick. The dimension line is thin.",
+     "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
+     "status": "draft"
+    },
+    {
+     "code": "PRET.G8.COMMUN.DIMENSIONING.DIM_READ.M_PT8_DR_ADD",
+     "skill": "PRET.G8.COMMUN.DIMENSIONING.DIM_READ",
+     "error": "Adds the wrong dimensions to find the overall length.",
+     "example": {
+      "question": "A part is 30 mm and 45 mm long in two sections. What is the overall length?",
+      "wrong_answer": "15 mm",
+      "correct_answer": "75 mm"
+     },
+     "cause": "The child mixes up two ideas that sound alike or are taught close together.",
+     "reveals": "Offer \"15 mm\" next to the right answer and ask the question again in a new context.",
+     "help": "Draw the sections end to end.",
+     "feedback": "Add the sections: 30 plus 45 is 75 millimetres.",
+     "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
+     "status": "draft"
+    },
+    {
+     "code": "PRET.G8.COMMUN.DIMENSIONING.DIM_READ.M_PT8_DR_DIAMETER",
+     "skill": "PRET.G8.COMMUN.DIMENSIONING.DIM_READ",
+     "error": "Says the diameter is half the radius.",
+     "example": {
+      "question": "The radius of a circle is 20 mm. What is the diameter?",
+      "wrong_answer": "10 mm",
+      "correct_answer": "40 mm"
+     },
+     "cause": "The child mixes up two ideas that sound alike or are taught close together.",
+     "reveals": "Offer \"10 mm\" next to the right answer and ask the question again in a new context.",
+     "help": "Draw a circle and a line across it.",
+     "feedback": "The diameter is twice the radius: 40 millimetres.",
+     "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
+     "status": "draft"
+    },
+    {
+     "code": "PRET.G8.COMMUN.DIMENSIONING.DIM_READ.M_PT8_DR_UNIT",
+     "skill": "PRET.G8.COMMUN.DIMENSIONING.DIM_READ",
+     "error": "Leaves out the unit.",
+     "example": {
+      "question": "What must be written with a dimension?",
+      "wrong_answer": "Nothing, just the number",
+      "correct_answer": "The number and the unit"
+     },
+     "cause": "The child mixes up two ideas that sound alike or are taught close together.",
+     "reveals": "Offer \"Nothing, just the number\" next to the right answer and ask the question again in a new context.",
+     "help": "Read a dimension and say the unit.",
+     "feedback": "A dimension needs a unit, normally millimetres.",
+     "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
+     "status": "draft"
+    }
+   ],
    "rubric_indicators": [
     "PRE_.G8.RUBRIC.2.1",
     "PRE_.G8.RUBRIC.2.2",
     "PRE_.G8.RUBRIC.2.3"
-   ]
+   ],
+   "authoring_notes": "Outcomes a and c are tested by questions. Outcome b (draw dimensioning lines) is drawn on a sheet and marked by the teacher. Outcome d is attitudinal."
   },
   {
    "code": "PRE_.G8.COMMUN.PLAIN_SCALE_DRAWING",
@@ -358,13 +1009,102 @@
      "indicator": "PRE_.G8.RUBRIC.2.3"
     }
    ],
-   "skills": [],
-   "misconceptions": [],
+   "skills": [
+    {
+     "code": "PRET.G8.COMMUN.PLAIN_SCALE_DRAWING.PLAIN_SCALE",
+     "name": "Read a scale and work out real sizes from a drawing",
+     "outcomes": [
+      "PRE_.G8.COMMUN.PLAIN_SCALE_DRAWING.a",
+      "PRE_.G8.COMMUN.PLAIN_SCALE_DRAWING.b"
+     ],
+     "mastery": "The child says a scale such as 1:50 means one unit on the drawing stands for 50 of the same unit on the real object, multiplies a drawing length by the scale to get the real length and divides a real length by the scale to get the drawing length, knows 1:1 is full size and 2:1 is an enlargement, and keeps the units. Evidence rule: at least four of the last five fresh questions right across at least two question forms, and no repeated pick of the same misconception.",
+     "question_forms": [
+      "say what a scale means",
+      "work out the real length",
+      "work out the drawing length",
+      "find the false step in a learner's reason"
+     ],
+     "thinking": [
+      "recall",
+      "reasoning"
+     ],
+     "horeb_skill_ids": [],
+     "prerequisites": [
+      {
+       "requires": "MATH.G4.MEASUR.LENGTH.M_CM_RELATION",
+       "kind": "skill",
+       "reason": "Mathematics taught the measuring, drawing or money idea first. Proposed, to confirm by a teacher.",
+       "strength": "essential",
+       "status": "proposed"
+      },
+      {
+       "requires": "PRET.G8.COMMUN.DIMENSIONING.DIM_READ",
+       "kind": "skill",
+       "reason": "This skill builds on it. Proposed, to confirm by a teacher.",
+       "strength": "essential",
+       "status": "proposed"
+      }
+     ],
+     "leads_to": [],
+     "status": "proposed"
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "PRET.G8.COMMUN.PLAIN_SCALE_DRAWING.PLAIN_SCALE.M_PT8_SC_INVERT",
+     "skill": "PRET.G8.COMMUN.PLAIN_SCALE_DRAWING.PLAIN_SCALE",
+     "error": "Says 1:50 means the drawing is bigger than the object.",
+     "example": {
+      "question": "What does a scale of 1:50 mean?",
+      "wrong_answer": "The drawing is 50 times bigger",
+      "correct_answer": "One unit on the drawing stands for 50 on the object"
+     },
+     "cause": "The child mixes up two ideas that sound alike or are taught close together.",
+     "reveals": "Offer \"The drawing is 50 times bigger\" next to the right answer and ask the question again in a new context.",
+     "help": "Draw a room on a page.",
+     "feedback": "A scale of 1:50 is a reduction: the object is 50 times bigger than the drawing.",
+     "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
+     "status": "draft"
+    },
+    {
+     "code": "PRET.G8.COMMUN.PLAIN_SCALE_DRAWING.PLAIN_SCALE.M_PT8_SC_CALC",
+     "skill": "PRET.G8.COMMUN.PLAIN_SCALE_DRAWING.PLAIN_SCALE",
+     "error": "Divides where he should multiply.",
+     "example": {
+      "question": "A line is 4 cm on a 1:50 drawing. What is the real length?",
+      "wrong_answer": "4 divided by 50",
+      "correct_answer": "4 times 50, which is 200 cm"
+     },
+     "cause": "The child mixes up two ideas that sound alike or are taught close together.",
+     "reveals": "Offer \"4 divided by 50\" next to the right answer and ask the question again in a new context.",
+     "help": "Make a scale ruler.",
+     "feedback": "Multiply the drawing length by 50: 4 times 50 is 200 centimetres.",
+     "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
+     "status": "draft"
+    },
+    {
+     "code": "PRET.G8.COMMUN.PLAIN_SCALE_DRAWING.PLAIN_SCALE.M_PT8_SC_ENLARGE",
+     "skill": "PRET.G8.COMMUN.PLAIN_SCALE_DRAWING.PLAIN_SCALE",
+     "error": "Says 2:1 is a reduction.",
+     "example": {
+      "question": "What does a scale of 2:1 mean?",
+      "wrong_answer": "A reduction",
+      "correct_answer": "An enlargement"
+     },
+     "cause": "The child mixes up two ideas that sound alike or are taught close together.",
+     "reveals": "Offer \"A reduction\" next to the right answer and ask the question again in a new context.",
+     "help": "Draw a small part twice as big.",
+     "feedback": "A scale of 2:1 makes the drawing twice as big as the object.",
+     "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
+     "status": "draft"
+    }
+   ],
    "rubric_indicators": [
     "PRE_.G8.RUBRIC.2.1",
     "PRE_.G8.RUBRIC.2.2",
     "PRE_.G8.RUBRIC.2.3"
-   ]
+   ],
+   "authoring_notes": "Outcomes a and b are tested by questions and sums. Outcome c (draw plane figures to scale) is drawn on a sheet and marked by the teacher. Outcome d is attitudinal."
   },
   {
    "code": "PRE_.G8.COMMUN.VISUAL_PROGRAMMING",
@@ -429,13 +1169,95 @@
      "status": "kicd_read"
     }
    ],
-   "skills": [],
-   "misconceptions": [],
+   "skills": [
+    {
+     "code": "PRET.G8.COMMUN.VISUAL_PROGRAMMING.VISUAL_PROG",
+     "name": "Say what visual programming is and name its features and uses",
+     "outcomes": [
+      "PRE_.G8.COMMUN.VISUAL_PROGRAMMING.a",
+      "PRE_.G8.COMMUN.VISUAL_PROGRAMMING.b"
+     ],
+     "mastery": "The child says visual programming builds programs by snapping together blocks instead of typing code, names tools such as Scratch and App Inventor, names features (a block palette, a script area, a stage with sprites, events, loops and decisions), and says a loop repeats instructions. Evidence rule: at least four of the last five fresh questions right across at least two question forms, and no repeated pick of the same misconception.",
+     "question_forms": [
+      "pick a visual programming tool",
+      "pick a feature of such a tool",
+      "say what a loop or an event does",
+      "find the false step in a learner's reason"
+     ],
+     "thinking": [
+      "recall",
+      "reasoning"
+     ],
+     "horeb_skill_ids": [],
+     "prerequisites": [
+      {
+       "requires": "PRET.G7.COMMUN.ICT_TOOLS_IN_COMMUNICATI.ICT_TOOLS",
+       "kind": "skill",
+       "reason": "Grade 7 Pre-Technical Studies taught it first. Proposed, to confirm by a teacher.",
+       "strength": "essential",
+       "status": "proposed"
+      }
+     ],
+     "leads_to": [],
+     "status": "proposed"
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "PRET.G8.COMMUN.VISUAL_PROGRAMMING.VISUAL_PROG.M_PT8_VP_TEXT",
+     "skill": "PRET.G8.COMMUN.VISUAL_PROGRAMMING.VISUAL_PROG",
+     "error": "Says visual programming means typing lines of code.",
+     "example": {
+      "question": "How are programs built in visual programming?",
+      "wrong_answer": "By typing lines of code",
+      "correct_answer": "By joining blocks"
+     },
+     "cause": "The child mixes up two ideas that sound alike or are taught close together.",
+     "reveals": "Offer \"By typing lines of code\" next to the right answer and ask the question again in a new context.",
+     "help": "Try Scratch for ten minutes.",
+     "feedback": "In visual programming, blocks snap together.",
+     "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
+     "status": "draft"
+    },
+    {
+     "code": "PRET.G8.COMMUN.VISUAL_PROGRAMMING.VISUAL_PROG.M_PT8_VP_TOOL",
+     "skill": "PRET.G8.COMMUN.VISUAL_PROGRAMMING.VISUAL_PROG",
+     "error": "Names a tool that is not a visual programming tool.",
+     "example": {
+      "question": "Which is a visual programming tool?",
+      "wrong_answer": "A calculator",
+      "correct_answer": "Scratch"
+     },
+     "cause": "The child mixes up two ideas that sound alike or are taught close together.",
+     "reveals": "Offer \"A calculator\" next to the right answer and ask the question again in a new context.",
+     "help": "Look at tools used in schools.",
+     "feedback": "Scratch and App Inventor are visual programming tools.",
+     "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
+     "status": "draft"
+    },
+    {
+     "code": "PRET.G8.COMMUN.VISUAL_PROGRAMMING.VISUAL_PROG.M_PT8_VP_LOOP",
+     "skill": "PRET.G8.COMMUN.VISUAL_PROGRAMMING.VISUAL_PROG",
+     "error": "Says a loop stops a program.",
+     "example": {
+      "question": "What does a loop do in a program?",
+      "wrong_answer": "Stops the program",
+      "correct_answer": "Repeats instructions"
+     },
+     "cause": "The child mixes up two ideas that sound alike or are taught close together.",
+     "reveals": "Offer \"Stops the program\" next to the right answer and ask the question again in a new context.",
+     "help": "Make a sprite repeat a step.",
+     "feedback": "A loop repeats instructions.",
+     "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
+     "status": "draft"
+    }
+   ],
    "rubric_indicators": [
     "PRE_.G8.RUBRIC.2.1",
     "PRE_.G8.RUBRIC.2.2",
     "PRE_.G8.RUBRIC.2.3"
-   ]
+   ],
+   "authoring_notes": "Outcomes a and b are tested by questions. Outcome c (create instructions in a visual programming tool) is practical on a school device, observed by the teacher; no learner account is made. Outcome d is attitudinal."
   },
   {
    "code": "PRE_.G8.MATERI.COMPOSITE_MATERIALS",
@@ -502,11 +1324,94 @@
      "indicator": "PRE_.G8.RUBRIC.3.1"
     }
    ],
-   "skills": [],
-   "misconceptions": [],
+   "skills": [
+    {
+     "code": "PRET.G8.MATERI.COMPOSITE_MATERIALS.COMPOSITE",
+     "name": "Say what composite materials are made of and what they are used for",
+     "outcomes": [
+      "PRE_.G8.MATERI.COMPOSITE_MATERIALS.a",
+      "PRE_.G8.MATERI.COMPOSITE_MATERIALS.b",
+      "PRE_.G8.MATERI.COMPOSITE_MATERIALS.c"
+     ],
+     "mastery": "The child says a composite material joins two or more materials to get a better one, and names concrete (cement, sand, ballast and water), reinforced concrete (concrete with steel bars), plywood (thin layers of wood glued crosswise), fibreglass (glass fibre in resin), and mud and straw bricks, with uses (buildings and slabs, furniture and boards, boat hulls and tanks, walls), and does not call concrete a single material. Evidence rule: at least four of the last five fresh questions right across at least two question forms, and no repeated pick of the same misconception.",
+     "question_forms": [
+      "pick the composite material",
+      "pick what it is made of",
+      "pick its use",
+      "find the false step in a learner's reason"
+     ],
+     "thinking": [
+      "recall",
+      "reasoning"
+     ],
+     "horeb_skill_ids": [],
+     "prerequisites": [
+      {
+       "requires": "PRET.G7.MATERI.INTRODUCTION_TO_MATERIAL.MAT_METAL_NONMETAL",
+       "kind": "skill",
+       "reason": "Grade 7 Pre-Technical Studies taught it first. Proposed, to confirm by a teacher.",
+       "strength": "essential",
+       "status": "proposed"
+      }
+     ],
+     "leads_to": [],
+     "status": "proposed"
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "PRET.G8.MATERI.COMPOSITE_MATERIALS.COMPOSITE.M_PT8_CM_SINGLE",
+     "skill": "PRET.G8.MATERI.COMPOSITE_MATERIALS.COMPOSITE",
+     "error": "Says concrete is a single material.",
+     "example": {
+      "question": "What is concrete made of?",
+      "wrong_answer": "One material only",
+      "correct_answer": "Cement, sand, ballast and water"
+     },
+     "cause": "The child mixes up two ideas that sound alike or are taught close together.",
+     "reveals": "Offer \"One material only\" next to the right answer and ask the question again in a new context.",
+     "help": "Look at what goes into the mixer.",
+     "feedback": "Concrete is a mixture of cement, sand, ballast and water.",
+     "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
+     "status": "draft"
+    },
+    {
+     "code": "PRET.G8.MATERI.COMPOSITE_MATERIALS.COMPOSITE.M_PT8_CM_PLYWOOD",
+     "skill": "PRET.G8.MATERI.COMPOSITE_MATERIALS.COMPOSITE",
+     "error": "Says plywood is one solid piece of wood.",
+     "example": {
+      "question": "How is plywood made?",
+      "wrong_answer": "From one solid piece of wood",
+      "correct_answer": "From thin layers of wood glued crosswise"
+     },
+     "cause": "The child mixes up two ideas that sound alike or are taught close together.",
+     "reveals": "Offer \"From one solid piece of wood\" next to the right answer and ask the question again in a new context.",
+     "help": "Look at the edge of a plywood board.",
+     "feedback": "Plywood is made of thin layers glued with the grain crosswise.",
+     "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
+     "status": "draft"
+    },
+    {
+     "code": "PRET.G8.MATERI.COMPOSITE_MATERIALS.COMPOSITE.M_PT8_CM_USE",
+     "skill": "PRET.G8.MATERI.COMPOSITE_MATERIALS.COMPOSITE",
+     "error": "Gives the wrong use for a composite.",
+     "example": {
+      "question": "What is reinforced concrete used for?",
+      "wrong_answer": "Making cups",
+      "correct_answer": "Making buildings and slabs"
+     },
+     "cause": "The child mixes up two ideas that sound alike or are taught close together.",
+     "reveals": "Offer \"Making cups\" next to the right answer and ask the question again in a new context.",
+     "help": "Look at a building site.",
+     "feedback": "Reinforced concrete is used in buildings, bridges and slabs.",
+     "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
+     "status": "draft"
+    }
+   ],
    "rubric_indicators": [
     "PRE_.G8.RUBRIC.3.1"
-   ]
+   ],
+   "authoring_notes": "Outcomes a, b and c are tested by questions. Outcome d is attitudinal. Which materials are composites is limited to clear cases."
   },
   {
    "code": "PRE_.G8.MATERI.CERAMIC_MATERIALS",
@@ -572,11 +1477,94 @@
      "indicator": "PRE_.G8.RUBRIC.3.1"
     }
    ],
-   "skills": [],
-   "misconceptions": [],
+   "skills": [
+    {
+     "code": "PRET.G8.MATERI.CERAMIC_MATERIALS.CERAMIC",
+     "name": "Say what ceramic materials are, their properties and uses",
+     "outcomes": [
+      "PRE_.G8.MATERI.CERAMIC_MATERIALS.a",
+      "PRE_.G8.MATERI.CERAMIC_MATERIALS.b",
+      "PRE_.G8.MATERI.CERAMIC_MATERIALS.c"
+     ],
+     "mastery": "The child names ceramics (clay pots, bricks, floor and wall tiles, porcelain cups and sinks, electrical insulators), says they are hard, brittle (they break or crack when hit or dropped), resist heat and corrosion and do not conduct electricity, and says tiles, bricks, sinks and insulators use these properties. Evidence rule: at least four of the last five fresh questions right across at least two question forms, and no repeated pick of the same misconception.",
+     "question_forms": [
+      "pick the ceramic material",
+      "pick its property",
+      "pick its use",
+      "find the false step in a learner's reason"
+     ],
+     "thinking": [
+      "recall",
+      "reasoning"
+     ],
+     "horeb_skill_ids": [],
+     "prerequisites": [
+      {
+       "requires": "PRET.G7.MATERI.NON_METALLIC_MATERIALS.NONMETAL_PROPERTIES",
+       "kind": "skill",
+       "reason": "Grade 7 Pre-Technical Studies taught it first. Proposed, to confirm by a teacher.",
+       "strength": "essential",
+       "status": "proposed"
+      }
+     ],
+     "leads_to": [],
+     "status": "proposed"
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "PRET.G8.MATERI.CERAMIC_MATERIALS.CERAMIC.M_PT8_CR_BRITTLE",
+     "skill": "PRET.G8.MATERI.CERAMIC_MATERIALS.CERAMIC",
+     "error": "Says ceramics do not break.",
+     "example": {
+      "question": "What happens when a clay pot is dropped?",
+      "wrong_answer": "It bends",
+      "correct_answer": "It breaks"
+     },
+     "cause": "The child mixes up two ideas that sound alike or are taught close together.",
+     "reveals": "Offer \"It bends\" next to the right answer and ask the question again in a new context.",
+     "help": "Tap a cup gently and a dish harder.",
+     "feedback": "Ceramics are hard but brittle, so they break when dropped.",
+     "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
+     "status": "draft"
+    },
+    {
+     "code": "PRET.G8.MATERI.CERAMIC_MATERIALS.CERAMIC.M_PT8_CR_CONDUCT",
+     "skill": "PRET.G8.MATERI.CERAMIC_MATERIALS.CERAMIC",
+     "error": "Says ceramics conduct electricity.",
+     "example": {
+      "question": "Why are ceramics used as electrical insulators?",
+      "wrong_answer": "They conduct electricity well",
+      "correct_answer": "They do not conduct electricity"
+     },
+     "cause": "The child mixes up two ideas that sound alike or are taught close together.",
+     "reveals": "Offer \"They conduct electricity well\" next to the right answer and ask the question again in a new context.",
+     "help": "Look at an insulator on a pole.",
+     "feedback": "Ceramics do not conduct electricity, so they are used as insulators.",
+     "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
+     "status": "draft"
+    },
+    {
+     "code": "PRET.G8.MATERI.CERAMIC_MATERIALS.CERAMIC.M_PT8_CR_METAL",
+     "skill": "PRET.G8.MATERI.CERAMIC_MATERIALS.CERAMIC",
+     "error": "Calls a ceramic material a metal.",
+     "example": {
+      "question": "Which is a ceramic material?",
+      "wrong_answer": "Iron",
+      "correct_answer": "A clay brick"
+     },
+     "cause": "The child mixes up two ideas that sound alike or are taught close together.",
+     "reveals": "Offer \"Iron\" next to the right answer and ask the question again in a new context.",
+     "help": "Sort objects at home.",
+     "feedback": "Bricks, tiles and clay pots are ceramics. Iron is a metal.",
+     "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
+     "status": "draft"
+    }
+   ],
    "rubric_indicators": [
     "PRE_.G8.RUBRIC.3.1"
-   ]
+   ],
+   "authoring_notes": "Outcomes a, b and c are tested by questions. Outcome d is attitudinal. A heat test is only shown by the teacher."
   },
   {
    "code": "PRE_.G8.TOOLS_.CUTTING_TOOLS",
@@ -649,11 +1637,101 @@
      "indicator": "PRE_.G8.RUBRIC.4.1"
     }
    ],
-   "skills": [],
-   "misconceptions": [],
+   "skills": [
+    {
+     "code": "PRET.G8.TOOLS_.CUTTING_TOOLS.CUT_TOOLS",
+     "name": "Choose the right cutting tool for a task and look after it",
+     "outcomes": [
+      "PRE_.G8.TOOLS_.CUTTING_TOOLS.a",
+      "PRE_.G8.TOOLS_.CUTTING_TOOLS.b",
+      "PRE_.G8.TOOLS_.CUTTING_TOOLS.d"
+     ],
+     "mastery": "The child picks the hacksaw for metal, the tenon saw for wood, the coping saw for curves, the chisel for shaping wood, the plane for smoothing wood, the tin snips for sheet metal and scissors for card and cloth, and picks care (keep blades sharp and clean, oil steel blades, store with guards, carry points down) and does not use a wood saw on metal. Evidence rule: at least four of the last five fresh questions right across at least two question forms, and no repeated pick of the same misconception.",
+     "question_forms": [
+      "pick the tool for a task",
+      "pick the way to care for the tool",
+      "say what a blunt tool does",
+      "find the false step in a learner's reason"
+     ],
+     "thinking": [
+      "recall",
+      "reasoning"
+     ],
+     "horeb_skill_ids": [],
+     "prerequisites": [
+      {
+       "requires": "PRET.G7.TOOLS_.MEASURING_AND_MARKING_OU.MEAS_TOOLS",
+       "kind": "skill",
+       "reason": "Grade 7 Pre-Technical Studies taught it first. Proposed, to confirm by a teacher.",
+       "strength": "essential",
+       "status": "proposed"
+      },
+      {
+       "requires": "PRET.G7.TOOLS_.MEASURING_AND_MARKING_OU.TOOL_CARE",
+       "kind": "skill",
+       "reason": "Grade 7 Pre-Technical Studies taught it first. Proposed, to confirm by a teacher.",
+       "strength": "essential",
+       "status": "proposed"
+      }
+     ],
+     "leads_to": [],
+     "status": "proposed"
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "PRET.G8.TOOLS_.CUTTING_TOOLS.CUT_TOOLS.M_PT8_CT_WOOD_METAL",
+     "skill": "PRET.G8.TOOLS_.CUTTING_TOOLS.CUT_TOOLS",
+     "error": "Uses a wood saw on metal.",
+     "example": {
+      "question": "Which saw cuts metal?",
+      "wrong_answer": "A tenon saw",
+      "correct_answer": "A hacksaw"
+     },
+     "cause": "The child mixes up two ideas that sound alike or are taught close together.",
+     "reveals": "Offer \"A tenon saw\" next to the right answer and ask the question again in a new context.",
+     "help": "Look at the teeth of each saw.",
+     "feedback": "A hacksaw cuts metal. A tenon saw cuts wood.",
+     "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
+     "status": "draft"
+    },
+    {
+     "code": "PRET.G8.TOOLS_.CUTTING_TOOLS.CUT_TOOLS.M_PT8_CT_PLANE",
+     "skill": "PRET.G8.TOOLS_.CUTTING_TOOLS.CUT_TOOLS",
+     "error": "Says a chisel smooths a large surface.",
+     "example": {
+      "question": "Which tool smooths a wooden board?",
+      "wrong_answer": "A chisel",
+      "correct_answer": "A plane"
+     },
+     "cause": "The child mixes up two ideas that sound alike or are taught close together.",
+     "reveals": "Offer \"A chisel\" next to the right answer and ask the question again in a new context.",
+     "help": "Try both on a scrap.",
+     "feedback": "A plane smooths wood. A chisel shapes joints.",
+     "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
+     "status": "draft"
+    },
+    {
+     "code": "PRET.G8.TOOLS_.CUTTING_TOOLS.CUT_TOOLS.M_PT8_CT_BLUNT",
+     "skill": "PRET.G8.TOOLS_.CUTTING_TOOLS.CUT_TOOLS",
+     "error": "Thinks a blunt tool is safer.",
+     "example": {
+      "question": "Why should a cutting tool be kept sharp?",
+      "wrong_answer": "A blunt tool is safer",
+      "correct_answer": "A sharp tool cuts easily and slips less"
+     },
+     "cause": "The child mixes up two ideas that sound alike or are taught close together.",
+     "reveals": "Offer \"A blunt tool is safer\" next to the right answer and ask the question again in a new context.",
+     "help": "Compare cutting with sharp and blunt scissors.",
+     "feedback": "A blunt tool needs more force and slips, so keep tools sharp.",
+     "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
+     "status": "draft"
+    }
+   ],
    "rubric_indicators": [
     "PRE_.G8.RUBRIC.4.1"
-   ]
+   ],
+   "authoring_notes": "Outcomes a, b and d are tested by questions. Outcome c (use cutting tools) is practical with the teacher watching closely: sharp tools, never alone. Outcome e is attitudinal."
   },
   {
    "code": "PRE_.G8.TOOLS_.COMPUTER_SOFTWARE",
@@ -719,11 +1797,100 @@
      "indicator": "PRE_.G8.RUBRIC.4.1"
     }
    ],
-   "skills": [],
-   "misconceptions": [],
+   "skills": [
+    {
+     "code": "PRET.G8.TOOLS_.COMPUTER_SOFTWARE.SOFTWARE",
+     "name": "Sort software into system, application and utility and say what applications do",
+     "outcomes": [
+      "PRE_.G8.TOOLS_.COMPUTER_SOFTWARE.a",
+      "PRE_.G8.TOOLS_.COMPUTER_SOFTWARE.b"
+     ],
+     "mastery": "The child says system software runs the computer (an operating system such as Windows, Android or Linux), application software does a task for the user (a word processor for letters, a spreadsheet for calculations, a presentation program for slides, a browser for the web, a database for records), utility software looks after the computer (antivirus), and that software cannot be touched while hardware can. Evidence rule: at least four of the last five fresh questions right across at least two question forms, and no repeated pick of the same misconception.",
+     "question_forms": [
+      "sort the software",
+      "pick the application for a task",
+      "say what an operating system does",
+      "find the false step in a learner's reason"
+     ],
+     "thinking": [
+      "recall",
+      "reasoning"
+     ],
+     "horeb_skill_ids": [],
+     "prerequisites": [
+      {
+       "requires": "PRET.G7.TOOLS_.COMPUTER_HARDWARE.HW_CLASSIFY",
+       "kind": "skill",
+       "reason": "Grade 7 Pre-Technical Studies taught it first. Proposed, to confirm by a teacher.",
+       "strength": "essential",
+       "status": "proposed"
+      },
+      {
+       "requires": "PRET.G7.FOUNDA.COMPUTER_CONCEPTS.COMP_CHARS",
+       "kind": "skill",
+       "reason": "Grade 7 Pre-Technical Studies taught it first. Proposed, to confirm by a teacher.",
+       "strength": "essential",
+       "status": "proposed"
+      }
+     ],
+     "leads_to": [],
+     "status": "proposed"
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "PRET.G8.TOOLS_.COMPUTER_SOFTWARE.SOFTWARE.M_PT8_SW_TOUCH",
+     "skill": "PRET.G8.TOOLS_.COMPUTER_SOFTWARE.SOFTWARE",
+     "error": "Says software can be touched.",
+     "example": {
+      "question": "Which can you touch?",
+      "wrong_answer": "Software",
+      "correct_answer": "Hardware"
+     },
+     "cause": "The child mixes up two ideas that sound alike or are taught close together.",
+     "reveals": "Offer \"Software\" next to the right answer and ask the question again in a new context.",
+     "help": "Point to the screen and the program.",
+     "feedback": "Hardware can be touched. Software is the programs.",
+     "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
+     "status": "draft"
+    },
+    {
+     "code": "PRET.G8.TOOLS_.COMPUTER_SOFTWARE.SOFTWARE.M_PT8_SW_OS",
+     "skill": "PRET.G8.TOOLS_.COMPUTER_SOFTWARE.SOFTWARE",
+     "error": "Calls an application the operating system.",
+     "example": {
+      "question": "Which is an operating system?",
+      "wrong_answer": "A word processor",
+      "correct_answer": "Windows"
+     },
+     "cause": "The child mixes up two ideas that sound alike or are taught close together.",
+     "reveals": "Offer \"A word processor\" next to the right answer and ask the question again in a new context.",
+     "help": "List programs on a computer.",
+     "feedback": "Windows, Android and Linux are operating systems. A word processor is an application.",
+     "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
+     "status": "draft"
+    },
+    {
+     "code": "PRET.G8.TOOLS_.COMPUTER_SOFTWARE.SOFTWARE.M_PT8_SW_APP",
+     "skill": "PRET.G8.TOOLS_.COMPUTER_SOFTWARE.SOFTWARE",
+     "error": "Picks the wrong application for the task.",
+     "example": {
+      "question": "Which application is used for calculations in a table?",
+      "wrong_answer": "A word processor",
+      "correct_answer": "A spreadsheet"
+     },
+     "cause": "The child mixes up two ideas that sound alike or are taught close together.",
+     "reveals": "Offer \"A word processor\" next to the right answer and ask the question again in a new context.",
+     "help": "Try the sum 12 plus 8 in a spreadsheet.",
+     "feedback": "A spreadsheet is used for tables and calculations.",
+     "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
+     "status": "draft"
+    }
+   ],
    "rubric_indicators": [
     "PRE_.G8.RUBRIC.4.1"
-   ]
+   ],
+   "authoring_notes": "Outcomes a and b are tested by questions. Outcome c (use software for a task) is practical on a school device, observed by the teacher. Outcome d is attitudinal."
   },
   {
    "code": "PRE_.G8.ENTREP.BOOKKEEPING",
@@ -791,11 +1958,100 @@
      "indicator": "PRE_.G8.RUBRIC.5.1"
     }
    ],
-   "skills": [],
-   "misconceptions": [],
+   "skills": [
+    {
+     "code": "PRET.G8.ENTREP.BOOKKEEPING.BOOKKEEPING",
+     "name": "Say why a business keeps records and classify transactions",
+     "outcomes": [
+      "PRE_.G8.ENTREP.BOOKKEEPING.a",
+      "PRE_.G8.ENTREP.BOOKKEEPING.b"
+     ],
+     "mastery": "The child says a business keeps records to know its income, spending, profit or loss, to plan, to pay tax and to get loans, and sorts transactions into cash (paid now) and credit (paid later), income and expenditure, and assets (what a business owns), liabilities (what it owes) and capital (what the owner put in). Evidence rule: at least four of the last five fresh questions right across at least two question forms, and no repeated pick of the same misconception.",
+     "question_forms": [
+      "say why records matter",
+      "sort a transaction",
+      "sort cash and credit",
+      "find the false step in a learner's reason"
+     ],
+     "thinking": [
+      "recall",
+      "reasoning"
+     ],
+     "horeb_skill_ids": [],
+     "prerequisites": [
+      {
+       "requires": "PRET.G7.ENTREP.INTRODUCTION_TO_ENTREPRE.ENT_MEANING",
+       "kind": "skill",
+       "reason": "Grade 7 Pre-Technical Studies taught it first. Proposed, to confirm by a teacher.",
+       "strength": "essential",
+       "status": "proposed"
+      },
+      {
+       "requires": "PRET.G7.ENTREP.FINANCIAL_GOALS.FIN_NUMBERS",
+       "kind": "skill",
+       "reason": "Grade 7 Pre-Technical Studies taught it first. Proposed, to confirm by a teacher.",
+       "strength": "essential",
+       "status": "proposed"
+      }
+     ],
+     "leads_to": [],
+     "status": "proposed"
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "PRET.G8.ENTREP.BOOKKEEPING.BOOKKEEPING.M_PT8_BK_BIG_ONLY",
+     "skill": "PRET.G8.ENTREP.BOOKKEEPING.BOOKKEEPING",
+     "error": "Says only big businesses keep records.",
+     "example": {
+      "question": "Which businesses should keep records?",
+      "wrong_answer": "Only big businesses",
+      "correct_answer": "Every business, big or small"
+     },
+     "cause": "The child mixes up two ideas that sound alike or are taught close together.",
+     "reveals": "Offer \"Only big businesses\" next to the right answer and ask the question again in a new context.",
+     "help": "Ask a shopkeeper how she knows her profit.",
+     "feedback": "Every business keeps records to know its income, spending and profit.",
+     "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
+     "status": "draft"
+    },
+    {
+     "code": "PRET.G8.ENTREP.BOOKKEEPING.BOOKKEEPING.M_PT8_BK_ASSET",
+     "skill": "PRET.G8.ENTREP.BOOKKEEPING.BOOKKEEPING",
+     "error": "Mixes an asset with a liability.",
+     "example": {
+      "question": "A loan owed to a supplier is...",
+      "wrong_answer": "An asset",
+      "correct_answer": "A liability"
+     },
+     "cause": "The child mixes up two ideas that sound alike or are taught close together.",
+     "reveals": "Offer \"An asset\" next to the right answer and ask the question again in a new context.",
+     "help": "An asset is owned; a liability is owed.",
+     "feedback": "What a business owes is a liability. What it owns is an asset.",
+     "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
+     "status": "draft"
+    },
+    {
+     "code": "PRET.G8.ENTREP.BOOKKEEPING.BOOKKEEPING.M_PT8_BK_CASH",
+     "skill": "PRET.G8.ENTREP.BOOKKEEPING.BOOKKEEPING",
+     "error": "Calls a credit sale a cash sale.",
+     "example": {
+      "question": "A customer takes goods and will pay next week. What is this?",
+      "wrong_answer": "A cash sale",
+      "correct_answer": "A credit sale"
+     },
+     "cause": "The child mixes up two ideas that sound alike or are taught close together.",
+     "reveals": "Offer \"A cash sale\" next to the right answer and ask the question again in a new context.",
+     "help": "Ask: was the money paid now?",
+     "feedback": "A credit sale is paid later. A cash sale is paid now.",
+     "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
+     "status": "draft"
+    }
+   ],
    "rubric_indicators": [
     "PRE_.G8.RUBRIC.5.1"
-   ]
+   ],
+   "authoring_notes": "Outcomes a and b are tested by questions. Outcome c (prepare simple financial statements) is a written task with made-up figures, marked by the teacher: the sums and statement layout are not asked here. Outcome d is attitudinal."
   },
   {
    "code": "PRE_.G8.ENTREP.INCOME_AND_BUDGETING",
@@ -870,11 +2126,101 @@
      "indicator": "PRE_.G8.RUBRIC.5.1"
     }
    ],
-   "skills": [],
-   "misconceptions": [],
+   "skills": [
+    {
+     "code": "PRET.G8.ENTREP.INCOME_AND_BUDGETING.BUDGET",
+     "name": "Name sources of income and say why and how to budget honestly",
+     "outcomes": [
+      "PRE_.G8.ENTREP.INCOME_AND_BUDGETING.a",
+      "PRE_.G8.ENTREP.INCOME_AND_BUDGETING.b",
+      "PRE_.G8.ENTREP.INCOME_AND_BUDGETING.d"
+     ],
+     "mastery": "The child names sources of income (wages or a salary, profit from a business, sales of farm produce, gifts and pocket money, interest), says a budget plans the income and spending so that needs come first and some is saved, and tells an honest budget from an unethical practice (hiding spending, using money meant for something else, borrowing without a plan to repay, cheating others). Evidence rule: at least four of the last five fresh questions right across at least two question forms, and no repeated pick of the same misconception.",
+     "question_forms": [
+      "pick a source of income",
+      "say why a budget matters",
+      "pick an ethical or unethical practice",
+      "find the false step in a learner's reason"
+     ],
+     "thinking": [
+      "recall",
+      "reasoning"
+     ],
+     "horeb_skill_ids": [],
+     "prerequisites": [
+      {
+       "requires": "PRET.G8.ENTREP.BOOKKEEPING.BOOKKEEPING",
+       "kind": "skill",
+       "reason": "This skill builds on it. Proposed, to confirm by a teacher.",
+       "strength": "essential",
+       "status": "proposed"
+      },
+      {
+       "requires": "PRET.G7.ENTREP.FINANCIAL_GOALS.FIN_NUMBERS",
+       "kind": "skill",
+       "reason": "Grade 7 Pre-Technical Studies taught it first. Proposed, to confirm by a teacher.",
+       "strength": "essential",
+       "status": "proposed"
+      }
+     ],
+     "leads_to": [],
+     "status": "proposed"
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "PRET.G8.ENTREP.INCOME_AND_BUDGETING.BUDGET.M_PT8_BU_INCOME",
+     "skill": "PRET.G8.ENTREP.INCOME_AND_BUDGETING.BUDGET",
+     "error": "Names something that is not an income.",
+     "example": {
+      "question": "Which is a source of income?",
+      "wrong_answer": "A bill",
+      "correct_answer": "A salary"
+     },
+     "cause": "The child mixes up two ideas that sound alike or are taught close together.",
+     "reveals": "Offer \"A bill\" next to the right answer and ask the question again in a new context.",
+     "help": "List what brings money in.",
+     "feedback": "A salary, business profit and sales are income. A bill is spending.",
+     "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
+     "status": "draft"
+    },
+    {
+     "code": "PRET.G8.ENTREP.INCOME_AND_BUDGETING.BUDGET.M_PT8_BU_NO_NEED",
+     "skill": "PRET.G8.ENTREP.INCOME_AND_BUDGETING.BUDGET",
+     "error": "Says a budget is not needed.",
+     "example": {
+      "question": "Why make a budget?",
+      "wrong_answer": "It is not needed",
+      "correct_answer": "To plan income and spending and save some"
+     },
+     "cause": "The child mixes up two ideas that sound alike or are taught close together.",
+     "reveals": "Offer \"It is not needed\" next to the right answer and ask the question again in a new context.",
+     "help": "Ask what happens when money runs out early.",
+     "feedback": "A budget plans spending so that needs come first and some is saved.",
+     "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
+     "status": "draft"
+    },
+    {
+     "code": "PRET.G8.ENTREP.INCOME_AND_BUDGETING.BUDGET.M_PT8_BU_UNETHICAL",
+     "skill": "PRET.G8.ENTREP.INCOME_AND_BUDGETING.BUDGET",
+     "error": "Thinks hiding spending in a budget is acceptable.",
+     "example": {
+      "question": "Which is unethical in budgeting?",
+      "wrong_answer": "Planning to save",
+      "correct_answer": "Hiding spending from the family"
+     },
+     "cause": "The child mixes up two ideas that sound alike or are taught close together.",
+     "reveals": "Offer \"Planning to save\" next to the right answer and ask the question again in a new context.",
+     "help": "Ask what honesty in money looks like.",
+     "feedback": "Hiding spending or using money meant for something else is unethical.",
+     "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
+     "status": "draft"
+    }
+   ],
    "rubric_indicators": [
     "PRE_.G8.RUBRIC.5.1"
-   ]
+   ],
+   "authoring_notes": "Outcomes a, b and d are tested by questions. Outcome c (prepare a simple budget) is a written task, private to the learner and the teacher. Outcome e is attitudinal."
   },
   {
    "code": "PRE_.G8.ENTREP.OF_GOODS_AND_SERVICES",
@@ -947,11 +2293,118 @@
      "indicator": "PRE_.G8.RUBRIC.5.1"
     }
    ],
-   "skills": [],
-   "misconceptions": [],
+   "skills": [
+    {
+     "code": "PRET.G8.ENTREP.OF_GOODS_AND_SERVICES.MARKETING",
+     "name": "Say why a business markets, where it learns about the market and how it promotes goods",
+     "outcomes": [
+      "PRE_.G8.ENTREP.OF_GOODS_AND_SERVICES.a",
+      "PRE_.G8.ENTREP.OF_GOODS_AND_SERVICES.b",
+      "PRE_.G8.ENTREP.OF_GOODS_AND_SERVICES.c",
+      "PRE_.G8.ENTREP.OF_GOODS_AND_SERVICES.d"
+     ],
+     "mastery": "The child says marketing helps a business find customers and sell, names sources of market information (asking customers, watching competitors, a survey, the internet, newspapers and radio), names factors in choosing a market (customer demand, price, location, competition, transport) and tools (a poster, radio, social media, samples, a price offer, word of mouth). Evidence rule: at least four of the last five fresh questions right across at least two question forms, and no repeated pick of the same misconception.",
+     "question_forms": [
+      "say why marketing matters",
+      "pick a source of market information",
+      "pick a factor in choosing a market",
+      "pick a tool of marketing"
+     ],
+     "thinking": [
+      "recall",
+      "reasoning"
+     ],
+     "horeb_skill_ids": [],
+     "prerequisites": [
+      {
+       "requires": "PRET.G8.ENTREP.BOOKKEEPING.BOOKKEEPING",
+       "kind": "skill",
+       "reason": "This skill builds on it. Proposed, to confirm by a teacher.",
+       "strength": "essential",
+       "status": "proposed"
+      },
+      {
+       "requires": "PRET.G7.ENTREP.INTRODUCTION_TO_ENTREPRE.ENT_MEANING",
+       "kind": "skill",
+       "reason": "Grade 7 Pre-Technical Studies taught it first. Proposed, to confirm by a teacher.",
+       "strength": "essential",
+       "status": "proposed"
+      }
+     ],
+     "leads_to": [],
+     "status": "proposed"
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "PRET.G8.ENTREP.OF_GOODS_AND_SERVICES.MARKETING.M_PT8_MK_SELLING_ONLY",
+     "skill": "PRET.G8.ENTREP.OF_GOODS_AND_SERVICES.MARKETING",
+     "error": "Says marketing is only selling at the till.",
+     "example": {
+      "question": "What does marketing do?",
+      "wrong_answer": "Only takes the money at the till",
+      "correct_answer": "Finds customers and tells them about goods"
+     },
+     "cause": "The child mixes up two ideas that sound alike or are taught close together.",
+     "reveals": "Offer \"Only takes the money at the till\" next to the right answer and ask the question again in a new context.",
+     "help": "Ask how customers hear about a new shop.",
+     "feedback": "Marketing helps a business find customers and sell.",
+     "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
+     "status": "draft"
+    },
+    {
+     "code": "PRET.G8.ENTREP.OF_GOODS_AND_SERVICES.MARKETING.M_PT8_MK_INFO",
+     "skill": "PRET.G8.ENTREP.OF_GOODS_AND_SERVICES.MARKETING",
+     "error": "Names a poor source of market information.",
+     "example": {
+      "question": "Which is a source of market information?",
+      "wrong_answer": "Guessing",
+      "correct_answer": "Asking customers or a survey"
+     },
+     "cause": "The child mixes up two ideas that sound alike or are taught close together.",
+     "reveals": "Offer \"Guessing\" next to the right answer and ask the question again in a new context.",
+     "help": "Ask what a shopkeeper asks customers.",
+     "feedback": "A survey, asking customers and watching competitors give market information.",
+     "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
+     "status": "draft"
+    },
+    {
+     "code": "PRET.G8.ENTREP.OF_GOODS_AND_SERVICES.MARKETING.M_PT8_MK_FACTOR",
+     "skill": "PRET.G8.ENTREP.OF_GOODS_AND_SERVICES.MARKETING",
+     "error": "Names a factor that does not matter in choosing a market.",
+     "example": {
+      "question": "Which is a factor in choosing a market?",
+      "wrong_answer": "The colour of the shop",
+      "correct_answer": "Customer demand and location"
+     },
+     "cause": "The child mixes up two ideas that sound alike or are taught close together.",
+     "reveals": "Offer \"The colour of the shop\" next to the right answer and ask the question again in a new context.",
+     "help": "Ask where people buy shoes.",
+     "feedback": "Demand, price, location, competition and transport matter in choosing a market.",
+     "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
+     "status": "draft"
+    },
+    {
+     "code": "PRET.G8.ENTREP.OF_GOODS_AND_SERVICES.MARKETING.M_PT8_MK_TOOL",
+     "skill": "PRET.G8.ENTREP.OF_GOODS_AND_SERVICES.MARKETING",
+     "error": "Names something that is not a marketing tool.",
+     "example": {
+      "question": "Which is a marketing tool?",
+      "wrong_answer": "A broken door",
+      "correct_answer": "A poster or a radio advert"
+     },
+     "cause": "The child mixes up two ideas that sound alike or are taught close together.",
+     "reveals": "Offer \"A broken door\" next to the right answer and ask the question again in a new context.",
+     "help": "List ways you heard about a product.",
+     "feedback": "Posters, radio, social media, samples and offers are marketing tools.",
+     "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
+     "status": "draft"
+    }
+   ],
    "rubric_indicators": [
     "PRE_.G8.RUBRIC.5.1"
-   ]
+   ],
+   "authoring_notes": "Outcomes a, b, c and d are tested by questions. Outcome e (recognise suitable markets) is a local visit or class discussion observed by the teacher."
   },
   {
    "code": "PRE_.G8.ENTREP.DISTRIBUTION_OF_GOODS_AN",
@@ -1018,11 +2471,94 @@
      "indicator": "PRE_.G8.RUBRIC.5.1"
     }
    ],
-   "skills": [],
-   "misconceptions": [],
+   "skills": [
+    {
+     "code": "PRET.G8.ENTREP.DISTRIBUTION_OF_GOODS_AN.DISTRIBUTION",
+     "name": "Say what intermediaries do, the channels of distribution and ethics in distribution",
+     "outcomes": [
+      "PRE_.G8.ENTREP.DISTRIBUTION_OF_GOODS_AN.a",
+      "PRE_.G8.ENTREP.DISTRIBUTION_OF_GOODS_AN.b",
+      "PRE_.G8.ENTREP.DISTRIBUTION_OF_GOODS_AN.c"
+     ],
+     "mastery": "The child names intermediaries (wholesalers who sell in bulk to retailers, retailers who sell to buyers, agents who bring buyers and sellers together), puts channels in order (producer to consumer; producer to retailer to consumer; producer to wholesaler to retailer to consumer), and picks ethical practices (honest weights and measures, fair prices, safe delivery, not hoarding) over unethical ones. Evidence rule: at least four of the last five fresh questions right across at least two question forms, and no repeated pick of the same misconception.",
+     "question_forms": [
+      "pick the intermediary",
+      "put the channel in order",
+      "pick the ethical practice",
+      "find the false step in a learner's reason"
+     ],
+     "thinking": [
+      "recall",
+      "reasoning"
+     ],
+     "horeb_skill_ids": [],
+     "prerequisites": [
+      {
+       "requires": "PRET.G8.ENTREP.OF_GOODS_AND_SERVICES.MARKETING",
+       "kind": "skill",
+       "reason": "This skill builds on it. Proposed, to confirm by a teacher.",
+       "strength": "essential",
+       "status": "proposed"
+      }
+     ],
+     "leads_to": [],
+     "status": "proposed"
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "PRET.G8.ENTREP.DISTRIBUTION_OF_GOODS_AN.DISTRIBUTION.M_PT8_DS_MIDDLEMAN_BAD",
+     "skill": "PRET.G8.ENTREP.DISTRIBUTION_OF_GOODS_AN.DISTRIBUTION",
+     "error": "Says intermediaries only raise the price and have no use.",
+     "example": {
+      "question": "What does a wholesaler do?",
+      "wrong_answer": "Nothing useful",
+      "correct_answer": "Buys in bulk and sells to retailers"
+     },
+     "cause": "The child mixes up two ideas that sound alike or are taught close together.",
+     "reveals": "Offer \"Nothing useful\" next to the right answer and ask the question again in a new context.",
+     "help": "Follow a bag of maize from farm to shop.",
+     "feedback": "Intermediaries bring goods from producers to buyers.",
+     "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
+     "status": "draft"
+    },
+    {
+     "code": "PRET.G8.ENTREP.DISTRIBUTION_OF_GOODS_AN.DISTRIBUTION.M_PT8_DS_CHANNEL",
+     "skill": "PRET.G8.ENTREP.DISTRIBUTION_OF_GOODS_AN.DISTRIBUTION",
+     "error": "Puts the channel in the wrong order.",
+     "example": {
+      "question": "Which is the longest channel?",
+      "wrong_answer": "Producer to consumer",
+      "correct_answer": "Producer to wholesaler to retailer to consumer"
+     },
+     "cause": "The child mixes up two ideas that sound alike or are taught close together.",
+     "reveals": "Offer \"Producer to consumer\" next to the right answer and ask the question again in a new context.",
+     "help": "Draw the chain with arrows.",
+     "feedback": "The longest channel has a wholesaler and a retailer between producer and consumer.",
+     "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
+     "status": "draft"
+    },
+    {
+     "code": "PRET.G8.ENTREP.DISTRIBUTION_OF_GOODS_AN.DISTRIBUTION.M_PT8_DS_ETHICS",
+     "skill": "PRET.G8.ENTREP.DISTRIBUTION_OF_GOODS_AN.DISTRIBUTION",
+     "error": "Thinks hoarding or cheating on weights is fine.",
+     "example": {
+      "question": "Which is ethical in distribution?",
+      "wrong_answer": "Hiding goods to raise the price",
+      "correct_answer": "Giving honest weights and fair prices"
+     },
+     "cause": "The child mixes up two ideas that sound alike or are taught close together.",
+     "reveals": "Offer \"Hiding goods to raise the price\" next to the right answer and ask the question again in a new context.",
+     "help": "Ask what a customer wants from a trader.",
+     "feedback": "Honest weights, fair prices and safe delivery are ethical. Hoarding and cheating are not.",
+     "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
+     "status": "draft"
+    }
+   ],
    "rubric_indicators": [
     "PRE_.G8.RUBRIC.5.1"
-   ]
+   ],
+   "authoring_notes": "Outcomes a, b and c are tested by questions. Outcome d is attitudinal."
   }
  ],
  "rubrics": [
