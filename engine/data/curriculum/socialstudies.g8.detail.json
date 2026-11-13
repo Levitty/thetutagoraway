@@ -1,0 +1,247 @@
+{
+ "outcomes": {
+  "SOCI.G8.SOCIAL.SELF_IMPROVEMENT.a": "describe personality traits for self-understanding",
+  "SOCI.G8.SOCIAL.SELF_IMPROVEMENT.b": "share goals for self-improvement in social life",
+  "SOCI.G8.SOCIAL.SELF_IMPROVEMENT.c": "appreciate the role of values in the development of personality traits",
+  "SOCI.G8.SOCIAL.SELF_ESTEEM_ASSESSMENT.a": "explain the contribution of self-esteem on their holistic development",
+  "SOCI.G8.SOCIAL.SELF_ESTEEM_ASSESSMENT.b": "determine effects of unhealthy self-esteem in day-to-day social lives",
+  "SOCI.G8.SOCIAL.SELF_ESTEEM_ASSESSMENT.c": "assess their self-esteem in social interactions",
+  "SOCI.G8.SOCIAL.SELF_ESTEEM_ASSESSMENT.d": "desire to improve their self- esteem for personal productivity",
+  "SOCI.G8.COMMUN.COMMUNITY_SERVICE_LEARNI.a": "identify a problem/gap in the community",
+  "SOCI.G8.COMMUN.COMMUNITY_SERVICE_LEARNI.b": "design solution(s) to the identified problem",
+  "SOCI.G8.COMMUN.COMMUNITY_SERVICE_LEARNI.c": "plan to implement the solution to the identified problem",
+  "SOCI.G8.COMMUN.COMMUNITY_SERVICE_LEARNI.d": "implement plan for solving the identified problem",
+  "SOCI.G8.COMMUN.COMMUNITY_SERVICE_LEARNI.e": "report/account on the concluded project",
+  "SOCI.G8.COMMUN.COMMUNITY_SERVICE_LEARNI.f": "appreciate the need to offer solutions to the gaps/challenges in the community",
+  "SOCI.G8.PEOPLE.SCIENTIFIC_THEORY_ABOUT_.a": "explore scientific theory about human origin",
+  "SOCI.G8.PEOPLE.SCIENTIFIC_THEORY_ABOUT_.b": "illustrate changes that took place in humans as a result of evolution",
+  "SOCI.G8.PEOPLE.SCIENTIFIC_THEORY_ABOUT_.c": "draw conclusions on origin of humanity based on the scientific theory",
+  "SOCI.G8.PEOPLE.SCIENTIFIC_THEORY_ABOUT_.d": "illustrate strategies of preservation of remains of early humans",
+  "SOCI.G8.PEOPLE.SCIENTIFIC_THEORY_ABOUT_.e": "develop reasons why Africa is considered as the cradle for humanity",
+  "SOCI.G8.PEOPLE.SCIENTIFIC_THEORY_ABOUT_.f": "recognise reasons why Africa as the cradle of humanity",
+  "SOCI.G8.PEOPLE.EARLY_CIVILISATION.a": "describe Swahili civilisation along the East African coast",
+  "SOCI.G8.PEOPLE.EARLY_CIVILISATION.b": "show how best practices from early civilisations have contributed to the modern world",
+  "SOCI.G8.PEOPLE.EARLY_CIVILISATION.c": "appreciate best practices of early civilisation to the development of the modern world",
+  "SOCI.G8.PEOPLE.TRANS_SAHARAN_SLAVE_TRAD.a": "identify factors that led to development of Trans-Saharan slave Trade in Africa",
+  "SOCI.G8.PEOPLE.TRANS_SAHARAN_SLAVE_TRAD.b": "describe organisation of Trans-Saharan slave trade in Africa",
+  "SOCI.G8.PEOPLE.TRANS_SAHARAN_SLAVE_TRAD.c": "outline effects of Trans-Saharan slave trade in Africa",
+  "SOCI.G8.PEOPLE.TRANS_SAHARAN_SLAVE_TRAD.d": "demonstrate assertiveness in promotion of social justice",
+  "SOCI.G8.PEOPLE.TRANS_SAHARAN_SLAVE_TRAD.e": "desire to promote social justice in a society",
+  "SOCI.G8.PEOPLE.POPULATION_GROWTH_IN_AFR.a": "explore causes and effects of population growth in Africa",
+  "SOCI.G8.PEOPLE.POPULATION_GROWTH_IN_AFR.b": "examine types and effects of migration in Africa",
+  "SOCI.G8.PEOPLE.POPULATION_GROWTH_IN_AFR.c": "illustrate demographic trends in Kenya",
+  "SOCI.G8.PEOPLE.POPULATION_GROWTH_IN_AFR.d": "create awareness on the effects of population growth in the community",
+  "SOCI.G8.PEOPLE.POPULATION_GROWTH_IN_AFR.e": "appreciate the impact of migration on population growth in Africa",
+  "SOCI.G8.PEOPLE.DIVERSITY_AND_INTERPERSO.a": "explore social cultural diversities in Kenya",
+  "SOCI.G8.PEOPLE.DIVERSITY_AND_INTERPERSO.b": "explain ways of building a healthy self-esteem in diverse social cultural society",
+  "SOCI.G8.PEOPLE.DIVERSITY_AND_INTERPERSO.c": "describe the impact of emotions on self and others",
+  "SOCI.G8.PEOPLE.DIVERSITY_AND_INTERPERSO.d": "manage peer pressure in a culturally diverse environment",
+  "SOCI.G8.PEOPLE.DIVERSITY_AND_INTERPERSO.e": "appreciate social cultural diversities in Kenya",
+  "SOCI.G8.PEOPLE.PEACEFUL_CONFLICT_RESOLU.a": "identify situations that lead to conflicts in the family",
+  "SOCI.G8.PEOPLE.PEACEFUL_CONFLICT_RESOLU.b": "apply peaceful ways of resolving conflicts in the family",
+  "SOCI.G8.PEOPLE.PEACEFUL_CONFLICT_RESOLU.c": "design strategies for effective communication in resolving conflicts",
+  "SOCI.G8.PEOPLE.PEACEFUL_CONFLICT_RESOLU.d": "build healthy relationships to promote peace in the family",
+  "SOCI.G8.PEOPLE.PEACEFUL_CONFLICT_RESOLU.e": "show empathy with survivors of conflicts in the family",
+  "SOCI.G8.PEOPLE.PEACEFUL_CONFLICT_RESOLU.f": "appreciate the culture of peace in a society",
+  "SOCI.G8.NATURA.MAP_READING_AND_INTERPRE.a": "interpret maps using marginal information",
+  "SOCI.G8.NATURA.MAP_READING_AND_INTERPRE.b": "calculate areas of places on a topographical map",
+  "SOCI.G8.NATURA.MAP_READING_AND_INTERPRE.c": "describe the different methods of representing physical features on topographical maps",
+  "SOCI.G8.NATURA.MAP_READING_AND_INTERPRE.d": "apply critical thinking skills in map interpretation",
+  "SOCI.G8.NATURA.MAP_READING_AND_INTERPRE.e": "value map reading and interpretation in day-to-day life",
+  "SOCI.G8.NATURA.WEATHER_AND_CLIMATE.a": "examine factors influencing climate in Africa",
+  "SOCI.G8.NATURA.WEATHER_AND_CLIMATE.b": "illustrate distribution and characteristics of major climatic regions of Africa",
+  "SOCI.G8.NATURA.WEATHER_AND_CLIMATE.c": "explore positive ways of managing disaster-related stress",
+  "SOCI.G8.NATURA.WEATHER_AND_CLIMATE.d": "apply problem-solving skills in addressing effects of climate change on the environment",
+  "SOCI.G8.NATURA.WEATHER_AND_CLIMATE.e": "recognise the effects of climate on human activities",
+  "SOCI.G8.NATURA.VEGETATION_IN_AFRICA.a": "explain factors influencing vegetation distribution in Africa",
+  "SOCI.G8.NATURA.VEGETATION_IN_AFRICA.b": "describe the characteristics of major vegetation regions of Africa on the map",
+  "SOCI.G8.NATURA.VEGETATION_IN_AFRICA.c": "locate the major vegetation regions of Africa",
+  "SOCI.G8.NATURA.VEGETATION_IN_AFRICA.d": "apply methods of conserving vegetation in the community",
+  "SOCI.G8.NATURA.VEGETATION_IN_AFRICA.e": "explore personal interests in conservation of vegetation for career exploration",
+  "SOCI.G8.NATURA.VEGETATION_IN_AFRICA.f": "appreciate vegetation conservation for environmental sustainability",
+  "SOCI.G8.NATURA.HISTORICAL_SITES_AND_MON.a": "locate selected historical sites and monuments in Africa",
+  "SOCI.G8.NATURA.HISTORICAL_SITES_AND_MON.b": "examine the importance of historical sites and monuments for the preservation of cultural heritage",
+  "SOCI.G8.NATURA.HISTORICAL_SITES_AND_MON.c": "explore ways of conserving historical sites and monuments in Africa",
+  "SOCI.G8.NATURA.HISTORICAL_SITES_AND_MON.d": "apply ways of conserving cultural heritage in community",
+  "SOCI.G8.NATURA.HISTORICAL_SITES_AND_MON.e": "desire to conserve historical sites and monuments in the locality in promoting cultural heritage",
+  "SOCI.G8.POLITI.THE_CONSTITUTION_OF_KENY.a": "explore components of the Constitution of Kenya",
+  "SOCI.G8.POLITI.THE_CONSTITUTION_OF_KENY.b": "illustrate roles of the three arms of government of Kenya in reference to the relevant chapters in the Constitution",
+  "SOCI.G8.POLITI.THE_CONSTITUTION_OF_KENY.c": "examine guiding principles of leadership and integrity in the Constitution of Kenya",
+  "SOCI.G8.POLITI.THE_CONSTITUTION_OF_KENY.d": "apply assertiveness in upholding principles of leadership and integrity in daily interactions",
+  "SOCI.G8.POLITI.THE_CONSTITUTION_OF_KENY.e": "exhibit good leadership intended in chapter six of the Constitution of Kenya",
+  "SOCI.G8.POLITI.HUMAN_RIGHTS.a": "explore how human rights can be respected and protected in the community",
+  "SOCI.G8.POLITI.HUMAN_RIGHTS.b": "describe the process of effective communication on human rights issues",
+  "SOCI.G8.POLITI.HUMAN_RIGHTS.c": "outline Children’s Rights in Kenya",
+  "SOCI.G8.POLITI.HUMAN_RIGHTS.d": "demonstrate ways in which children are protected against violation of their Rights in Kenya",
+  "SOCI.G8.POLITI.HUMAN_RIGHTS.e": "recognise responsibility of the society in protecting human rights",
+  "SOCI.G8.POLITI.CITIZENSHIP.a": "describe qualities of a global citizen in an interconnected society",
+  "SOCI.G8.POLITI.CITIZENSHIP.b": "explore ways in which Nobel Prize nominees responded to injustice situations in the society",
+  "SOCI.G8.POLITI.CITIZENSHIP.c": "explain factors for harmonious coexistence among citizens in East Africa and Africa",
+  "SOCI.G8.POLITI.CITIZENSHIP.d": "exhibit social entrepreneurship and active participation in the community for personal and social well-being",
+  "SOCI.G8.POLITI.CITIZENSHIP.e": "show empathy to personalities who volunteer to address injustices in society"
+ },
+ "skills": {
+  "SOCI.G8.SOCIAL.SELF_IMPROVEMENT.PERSONALITY": {
+   "forms": [
+    "pick the trait from a short story",
+    "tell a trait from a feeling",
+    "say how a value shapes a trait",
+    "find the false step in a learner's answer"
+   ],
+   "mastery": "The child names traits (honest, confident, shy, patient, optimistic, hardworking, impatient) from what a person does, tells a trait (how a person usually is) from a feeling (how a person is at one moment), and says values such as honesty and respect shape traits. The child does not say traits can never change. Evidence rule: at least four of the last five fresh questions right across at least two question forms, and no repeated pick of the same misconception."
+  },
+  "SOCI.G8.SOCIAL.SELF_ESTEEM_ASSESSMENT.SELF_ESTEEM": {
+   "forms": [
+    "say what self-esteem is",
+    "pick a sign of healthy self-esteem",
+    "pick an effect of low or inflated self-esteem",
+    "find the false step in a learner's answer"
+   ],
+   "mastery": "The child says self-esteem is how a person values themselves, picks signs of healthy self-esteem (trying new things, accepting mistakes, respecting others) and of unhealthy self-esteem (low: withdrawing, giving up, being bullied; inflated: boasting, looking down on others), and does not say self-esteem means boasting. Evidence rule: at least four of the last five fresh questions right across at least two question forms, and no repeated pick of the same misconception."
+  },
+  "SOCI.G8.COMMUN.COMMUNITY_SERVICE_LEARNI.CSL_STEPS": {
+   "forms": [
+    "put the steps in order",
+    "say what each step does",
+    "say why a report is written",
+    "find the false step in a learner's answer"
+   ],
+   "mastery": "The child puts the steps in order (identify a problem or gap, design a solution, plan how to carry it out, carry out the plan, report on the project), says what each step does, and does not skip planning or write the report before the work. Evidence rule: at least four of the last five fresh questions right across at least two question forms, and no repeated pick of the same misconception."
+  },
+  "SOCI.G8.PEOPLE.SCIENTIFIC_THEORY_ABOUT_.EVOLUTION": {
+   "forms": [
+    "put the early humans in order",
+    "say what changed",
+    "say what the evidence is",
+    "find the false step in a learner's answer"
+   ],
+   "mastery": "The child says the scientific theory is that humans slowly changed (evolved) over millions of years from earlier ape-like ancestors, puts the early humans in order (Australopithecus, Homo habilis, Homo erectus, Homo sapiens), names the changes (walking upright, a bigger brain, making and using tools, using fire) and the evidence (fossils and tools). The child does not say humans come from the monkeys alive today. Evidence rule: at least four of the last five fresh questions right across at least two question forms, and no repeated pick of the same misconception."
+  },
+  "SOCI.G8.PEOPLE.SCIENTIFIC_THEORY_ABOUT_.CRADLE_AFRICA": {
+   "forms": [
+    "pick a reason for Africa",
+    "pick a famous site",
+    "pick how remains are preserved",
+    "find the false step in a learner's answer"
+   ],
+   "mastery": "The child says the oldest fossils of early humans have been found in Africa, in East Africa's Rift Valley (Olduvai Gorge in Tanzania, Koobi Fora near Lake Turkana in Kenya) and elsewhere in Africa, names the Leakey family and the Turkana Boy, and picks ways to preserve remains (protected sites, careful digging, museums, labels and records, controlled storage). Evidence rule: at least four of the last five fresh questions right across at least two question forms, and no repeated pick of the same misconception."
+  },
+  "SOCI.G8.PEOPLE.EARLY_CIVILISATION.SWAHILI": {
+   "forms": [
+    "pick a Swahili city-state",
+    "say what the Swahili traded and with whom",
+    "say what the civilisation gave us",
+    "find the false step in a learner's answer"
+   ],
+   "mastery": "The child names Swahili city-states (Mombasa, Malindi, Lamu, Kilwa, Zanzibar), says the Swahili traded gold, ivory, cloth, timber and other goods by dhow with Arabia, Persia, India and China using the monsoon winds, built coral-stone houses and mosques, and gave the Kiswahili language and a coastal culture. The child does not say Kiswahili is Arabic. Evidence rule: at least four of the last five fresh questions right across at least two question forms, and no repeated pick of the same misconception."
+  },
+  "SOCI.G8.PEOPLE.TRANS_SAHARAN_SLAVE_TRAD.TRANS_SAHARAN": {
+   "forms": [
+    "pick a factor",
+    "say how it was carried out",
+    "pick an effect",
+    "find the false step in a learner's answer"
+   ],
+   "mastery": "The child says the trade crossed the Sahara by camel caravans between West and Central Africa and North Africa, names factors (a demand for labour in North Africa and beyond, raiding and wars, the camel and the desert trade routes), says caravans were led by guides and traders along routes with oases, and names effects (loss of lives, families broken, villages emptied, fear and insecurity). The child does not say the trade went by sea. Evidence rule: at least four of the last five fresh questions right across at least two question forms, and no repeated pick of the same misconception."
+  },
+  "SOCI.G8.PEOPLE.POPULATION_GROWTH_IN_AFR.POPULATION": {
+   "forms": [
+    "pick a cause of growth",
+    "pick an effect of growth",
+    "pick a type of migration",
+    "find the false step in a learner's answer"
+   ],
+   "mastery": "The child says population grows when births are more than deaths (a high birth rate, fewer deaths from better health care and food) and by people moving in, names effects (pressure on land, food, houses, schools and jobs), tells types of migration (rural-urban, between countries, forced by war or drought and by choice), and says Kenya had about 47.6 million people at the 2019 census and a young population. Evidence rule: at least four of the last five fresh questions right across at least two question forms, and no repeated pick of the same misconception."
+  },
+  "SOCI.G8.PEOPLE.DIVERSITY_AND_INTERPERSO.DIVERSITY": {
+   "forms": [
+    "pick a sign of diversity",
+    "pick the way to treat people who are different",
+    "say how to build healthy self-esteem",
+    "find the false step in a learner's answer"
+   ],
+   "mastery": "The child says Kenya has more than forty communities with their own languages, foods, dress and customs and several religions, names respect and learning about others as the way to live together, and says healthy self-esteem grows by being proud of one's own culture while respecting others. The child does not say one culture is better. Evidence rule: at least four of the last five fresh questions right across at least two question forms, and no repeated pick of the same misconception."
+  },
+  "SOCI.G8.PEOPLE.DIVERSITY_AND_INTERPERSO.PEER_PRESSURE": {
+   "forms": [
+    "say what emotions do to a person and others",
+    "pick how to refuse a pressure",
+    "pick a healthy way to handle anger",
+    "find the false step in a learner's answer"
+   ],
+   "mastery": "The child says emotions change how a person acts and how others feel (anger can hurt, joy can lift others), and picks ways to refuse peer pressure (say no clearly, give a reason, walk away, keep good friends, ask a trusted adult), and does not give in to be liked. Evidence rule: at least four of the last five fresh questions right across at least two question forms, and no repeated pick of the same misconception."
+  },
+  "SOCI.G8.PEOPLE.PEACEFUL_CONFLICT_RESOLU.FAMILY_CONFLICT": {
+   "forms": [
+    "pick a cause of conflict",
+    "pick a peaceful way to resolve it",
+    "pick a good communication habit",
+    "find the false step in a learner's answer"
+   ],
+   "mastery": "The child names causes (poverty, favouritism, disrespect, poor communication, quarrels over property or chores, alcohol), peaceful ways to resolve them (listening, calm talk, apology and forgiveness, help from an elder or counsellor) and communication habits (listening without interrupting, using I-statements, a calm voice), and does not pick shouting, silence for ever or violence. Evidence rule: at least four of the last five fresh questions right across at least two question forms, and no repeated pick of the same misconception."
+  },
+  "SOCI.G8.NATURA.MAP_READING_AND_INTERPRE.TOPO_MAPS": {
+   "forms": [
+    "pick the marginal information",
+    "calculate an area by counting squares",
+    "pick the way relief is shown",
+    "find the false step in a learner's answer"
+   ],
+   "mastery": "The child names the marginal information (title, scale, key, grid reference, north arrow, sheet number, date), calculates an area by counting grid squares (each square 1 square kilometre when the lines are 1 km apart) and picks the ways relief is shown (contours, spot heights, trigonometrical stations, form lines, hill shading and layer colours). Evidence rule: at least four of the last five fresh questions right across at least two question forms, and no repeated pick of the same misconception."
+  },
+  "SOCI.G8.NATURA.WEATHER_AND_CLIMATE.CLIMATE_AFRICA": {
+   "forms": [
+    "pick the factor for a place",
+    "pick the climatic region",
+    "say how altitude changes temperature",
+    "find the false step in a learner's answer"
+   ],
+   "mastery": "The child names the factors (latitude, altitude, distance from the sea, ocean currents, winds, relief), says temperature falls with height (about 6.5 degrees Celsius for every 1000 metres) and the equator is hot, and describes the equatorial (hot and wet all year, Congo basin), tropical savanna (wet and dry seasons), desert (hot and very dry, Sahara), Mediterranean (rain in winter, dry summer) and mountain regions. Evidence rule: at least four of the last five fresh questions right across at least two question forms, and no repeated pick of the same misconception."
+  },
+  "SOCI.G8.NATURA.VEGETATION_IN_AFRICA.VEGETATION": {
+   "forms": [
+    "pick the vegetation for a region",
+    "pick the factor",
+    "pick a conservation method",
+    "find the false step in a learner's answer"
+   ],
+   "mastery": "The child says vegetation depends on rainfall, temperature, altitude and soil, names tropical rainforest (Congo basin), savanna (grass with scattered trees, East Africa), desert vegetation (few plants, Sahara), Mediterranean shrubs and mountain vegetation in zones, and picks ways to conserve vegetation (planting trees, protecting forests, controlled grazing, agroforestry), not clearing and burning. Evidence rule: at least four of the last five fresh questions right across at least two question forms, and no repeated pick of the same misconception."
+  },
+  "SOCI.G8.NATURA.HISTORICAL_SITES_AND_MON.SITES": {
+   "forms": [
+    "pick the country of a site",
+    "say why a site is important",
+    "pick a way to conserve it",
+    "find the false step in a learner's answer"
+   ],
+   "mastery": "The child places selected sites (the Pyramids of Giza in Egypt, Great Zimbabwe in Zimbabwe, the rock-hewn churches of Lalibela in Ethiopia, Timbuktu in Mali, Fort Jesus in Mombasa and Olduvai Gorge in Tanzania), says sites show a people's history and bring visitors, and picks ways to conserve them (laws, guides, no climbing or writing on walls, repair, museums). Evidence rule: at least four of the last five fresh questions right across at least two question forms, and no repeated pick of the same misconception."
+  },
+  "SOCI.G8.POLITI.THE_CONSTITUTION_OF_KENY.CONSTITUTION": {
+   "forms": [
+    "pick the arm for a task",
+    "pick the chapter",
+    "pick a principle of leadership",
+    "find the false step in a learner's answer"
+   ],
+   "mastery": "The child says the Constitution was promulgated on 27 August 2010, has 18 chapters (the Bill of Rights is Chapter 4 and Leadership and Integrity is Chapter 6), names the three arms (the Legislature makes laws, the Executive carries them out, the Judiciary interprets them and settles disputes) and the principles of leadership (selection on merit, objectivity, selfless service, integrity, accountability, discipline). Evidence rule: at least four of the last five fresh questions right across at least two question forms, and no repeated pick of the same misconception."
+  },
+  "SOCI.G8.POLITI.HUMAN_RIGHTS.HUMAN_RIGHTS": {
+   "forms": [
+    "pick a right of the child",
+    "pick who protects a child",
+    "pick the responsible action",
+    "find the false step in a learner's answer"
+   ],
+   "mastery": "The child names rights of the child in Kenya (a name and nationality, free and compulsory basic education, health care, food and shelter, protection from abuse, neglect, child labour and harmful practices), names who protects them (parents, teachers, the chief, the police, the children's department, Childline Kenya 116) and says rights come with responsibilities. Evidence rule: at least four of the last five fresh questions right across at least two question forms, and no repeated pick of the same misconception."
+  },
+  "SOCI.G8.POLITI.CITIZENSHIP.CITIZENSHIP": {
+   "forms": [
+    "pick the quality of a global citizen",
+    "pick a member of the East African Community",
+    "pick a factor for harmony",
+    "find the false step in a learner's answer"
+   ],
+   "mastery": "The child names qualities (respect for others, care for the environment, concern for justice, being informed and taking part), says Wangari Maathai won the Nobel Peace Prize in 2004 for the Green Belt Movement, names members of the East African Community (Kenya, Uganda, Tanzania, Rwanda, Burundi, South Sudan, the Democratic Republic of the Congo and Somalia) and factors for harmony (respect, a shared language in Kiswahili, trade, peaceful talks). Evidence rule: at least four of the last five fresh questions right across at least two question forms, and no repeated pick of the same misconception."
+  }
+ }
+}

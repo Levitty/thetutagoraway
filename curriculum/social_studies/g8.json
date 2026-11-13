@@ -3,15 +3,15 @@
  "subject_key": "social_studies",
  "grade": 8,
  "source": "KICD Social Studies, First published 2023; Revised 2024 (text layer)",
- "status": "outcomes from KICD's text, word for word; skills, prerequisites and misconceptions not yet mapped",
+ "status": "outcomes from KICD's text, word for word; skills, prerequisites and misconceptions proposed (authored offline, 13 Nov 2026), awaiting teacher review. Practical, performance and attitude outcomes are listed in docs/qa/socialstudies-g8-non-question-outcomes-2026-11-13.md",
  "totals": {
   "strands": 5,
   "sub_strands": 16,
   "outcomes": 79,
   "lessons": 120,
-  "skills": 0,
-  "prerequisites": 0,
-  "misconceptions": 0
+  "skills": 18,
+  "prerequisites": 21,
+  "misconceptions": 54
  },
  "sub_strands": [
   {
@@ -68,8 +68,87 @@
      "status": "kicd_verified"
     }
    ],
-   "skills": [],
-   "misconceptions": [],
+   "skills": [
+    {
+     "code": "SOCI.G8.SOCIAL.SELF_IMPROVEMENT.PERSONALITY",
+     "name": "Describe personality traits and how values shape them",
+     "outcomes": [
+      "SOCI.G8.SOCIAL.SELF_IMPROVEMENT.a"
+     ],
+     "mastery": "The child names traits (honest, confident, shy, patient, optimistic, hardworking, impatient) from what a person does, tells a trait (how a person usually is) from a feeling (how a person is at one moment), and says values such as honesty and respect shape traits. The child does not say traits can never change. Evidence rule: at least four of the last five fresh questions right across at least two question forms, and no repeated pick of the same misconception.",
+     "question_forms": [
+      "pick the trait from a short story",
+      "tell a trait from a feeling",
+      "say how a value shapes a trait",
+      "find the false step in a learner's answer"
+     ],
+     "thinking": [
+      "recall",
+      "reasoning"
+     ],
+     "horeb_skill_ids": [],
+     "prerequisites": [
+      {
+       "requires": "SOCI.G7.SOCIAL.SELF_EXPLORATION.SE_VALUES",
+       "kind": "skill",
+       "reason": "Grade 7 Social Studies taught it first. Proposed, to confirm by a teacher.",
+       "strength": "essential",
+       "status": "proposed"
+      }
+     ],
+     "status": "proposed"
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "SOCI.G8.SOCIAL.SELF_IMPROVEMENT.PERSONALITY.M_G8_PT_TRAIT_FEELING",
+     "skill": "SOCI.G8.SOCIAL.SELF_IMPROVEMENT.PERSONALITY",
+     "error": "Says a trait and a feeling are the same.",
+     "example": {
+      "question": "Which is a personality trait?",
+      "wrong_answer": "Feeling angry today",
+      "correct_answer": "Being patient"
+     },
+     "cause": "The child mixes up two ideas that sound alike or are taught close together.",
+     "reveals": "Offer \"Feeling angry today\" next to the right answer in a new question and ask the child to choose.",
+     "help": "Ask: is it how you usually are, or how you are right now?",
+     "feedback": "A trait is how a person usually is (patient). A feeling comes and goes (angry today).",
+     "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
+     "status": "draft"
+    },
+    {
+     "code": "SOCI.G8.SOCIAL.SELF_IMPROVEMENT.PERSONALITY.M_G8_PT_TRAIT_FIXED",
+     "skill": "SOCI.G8.SOCIAL.SELF_IMPROVEMENT.PERSONALITY",
+     "error": "Says traits can never change.",
+     "example": {
+      "question": "Can a person change an unhelpful trait?",
+      "wrong_answer": "No, traits never change",
+      "correct_answer": "Yes, with effort and good habits"
+     },
+     "cause": "The child mixes up two ideas that sound alike or are taught close together.",
+     "reveals": "Offer \"No, traits never change\" next to the right answer in a new question and ask the child to choose.",
+     "help": "Ask the child about a habit they have changed.",
+     "feedback": "Traits can grow and change with effort, good values and practice.",
+     "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
+     "status": "draft"
+    },
+    {
+     "code": "SOCI.G8.SOCIAL.SELF_IMPROVEMENT.PERSONALITY.M_G8_PT_VALUE_TRAIT",
+     "skill": "SOCI.G8.SOCIAL.SELF_IMPROVEMENT.PERSONALITY",
+     "error": "Says values have no effect on a person's traits.",
+     "example": {
+      "question": "How do values shape a person?",
+      "wrong_answer": "They do not affect traits",
+      "correct_answer": "They guide how a person acts and so shape traits"
+     },
+     "cause": "The child mixes up two ideas that sound alike or are taught close together.",
+     "reveals": "Offer \"They do not affect traits\" next to the right answer in a new question and ask the child to choose.",
+     "help": "Ask what an honest value does to what a person does.",
+     "feedback": "Values guide actions, and repeated actions shape traits.",
+     "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
+     "status": "draft"
+    }
+   ],
    "rubric_indicators": [
     "SOCI.G8.RUBRIC.1.1",
     "SOCI.G8.RUBRIC.1.2"
@@ -138,8 +217,88 @@
      "status": "kicd_verified"
     }
    ],
-   "skills": [],
-   "misconceptions": [],
+   "skills": [
+    {
+     "code": "SOCI.G8.SOCIAL.SELF_ESTEEM_ASSESSMENT.SELF_ESTEEM",
+     "name": "Say what self-esteem is and the effects of healthy and unhealthy self-esteem",
+     "outcomes": [
+      "SOCI.G8.SOCIAL.SELF_ESTEEM_ASSESSMENT.a",
+      "SOCI.G8.SOCIAL.SELF_ESTEEM_ASSESSMENT.b"
+     ],
+     "mastery": "The child says self-esteem is how a person values themselves, picks signs of healthy self-esteem (trying new things, accepting mistakes, respecting others) and of unhealthy self-esteem (low: withdrawing, giving up, being bullied; inflated: boasting, looking down on others), and does not say self-esteem means boasting. Evidence rule: at least four of the last five fresh questions right across at least two question forms, and no repeated pick of the same misconception.",
+     "question_forms": [
+      "say what self-esteem is",
+      "pick a sign of healthy self-esteem",
+      "pick an effect of low or inflated self-esteem",
+      "find the false step in a learner's answer"
+     ],
+     "thinking": [
+      "recall",
+      "reasoning"
+     ],
+     "horeb_skill_ids": [],
+     "prerequisites": [
+      {
+       "requires": "SOCI.G7.SOCIAL.SELF_EXPLORATION.SE_EMOTIONS",
+       "kind": "skill",
+       "reason": "Grade 7 Social Studies taught it first. Proposed, to confirm by a teacher.",
+       "strength": "essential",
+       "status": "proposed"
+      }
+     ],
+     "status": "proposed"
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "SOCI.G8.SOCIAL.SELF_ESTEEM_ASSESSMENT.SELF_ESTEEM.M_G8_SA_PRIDE",
+     "skill": "SOCI.G8.SOCIAL.SELF_ESTEEM_ASSESSMENT.SELF_ESTEEM",
+     "error": "Says self-esteem means boasting.",
+     "example": {
+      "question": "What is self-esteem?",
+      "wrong_answer": "Boasting about yourself",
+      "correct_answer": "How you value and respect yourself"
+     },
+     "cause": "The child mixes up two ideas that sound alike or are taught close together.",
+     "reveals": "Offer \"Boasting about yourself\" next to the right answer in a new question and ask the child to choose.",
+     "help": "Ask: can a person be confident and still kind?",
+     "feedback": "Self-esteem is how you value yourself. It does not mean boasting.",
+     "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
+     "status": "draft"
+    },
+    {
+     "code": "SOCI.G8.SOCIAL.SELF_ESTEEM_ASSESSMENT.SELF_ESTEEM.M_G8_SA_LOW_NO_EFFECT",
+     "skill": "SOCI.G8.SOCIAL.SELF_ESTEEM_ASSESSMENT.SELF_ESTEEM",
+     "error": "Says low self-esteem has no effect on daily life.",
+     "example": {
+      "question": "What can low self-esteem lead to?",
+      "wrong_answer": "Nothing, it has no effect",
+      "correct_answer": "Giving up easily and staying away from others"
+     },
+     "cause": "The child mixes up two ideas that sound alike or are taught close together.",
+     "reveals": "Offer \"Nothing, it has no effect\" next to the right answer in a new question and ask the child to choose.",
+     "help": "Ask how a child who thinks they cannot do anything behaves.",
+     "feedback": "Low self-esteem can lead to giving up, staying away, and being easily bullied.",
+     "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
+     "status": "draft"
+    },
+    {
+     "code": "SOCI.G8.SOCIAL.SELF_ESTEEM_ASSESSMENT.SELF_ESTEEM.M_G8_SA_HIGH_GOOD",
+     "skill": "SOCI.G8.SOCIAL.SELF_ESTEEM_ASSESSMENT.SELF_ESTEEM",
+     "error": "Thinks too much self-esteem is always good.",
+     "example": {
+      "question": "A boy brags that he is better than everyone. What is this?",
+      "wrong_answer": "Healthy self-esteem",
+      "correct_answer": "Inflated self-esteem"
+     },
+     "cause": "The child mixes up two ideas that sound alike or are taught close together.",
+     "reveals": "Offer \"Healthy self-esteem\" next to the right answer in a new question and ask the child to choose.",
+     "help": "Ask how his classmates feel.",
+     "feedback": "Looking down on others is inflated self-esteem. Healthy self-esteem respects others too.",
+     "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
+     "status": "draft"
+    }
+   ],
    "rubric_indicators": [
     "SOCI.G8.RUBRIC.1.1",
     "SOCI.G8.RUBRIC.1.2"
@@ -224,8 +383,91 @@
      "status": "kicd_verified"
     }
    ],
-   "skills": [],
-   "misconceptions": [],
+   "skills": [
+    {
+     "code": "SOCI.G8.COMMUN.COMMUNITY_SERVICE_LEARNI.CSL_STEPS",
+     "name": "Put the steps of a community service project in order",
+     "outcomes": [
+      "SOCI.G8.COMMUN.COMMUNITY_SERVICE_LEARNI.a",
+      "SOCI.G8.COMMUN.COMMUNITY_SERVICE_LEARNI.b",
+      "SOCI.G8.COMMUN.COMMUNITY_SERVICE_LEARNI.c",
+      "SOCI.G8.COMMUN.COMMUNITY_SERVICE_LEARNI.d",
+      "SOCI.G8.COMMUN.COMMUNITY_SERVICE_LEARNI.e"
+     ],
+     "mastery": "The child puts the steps in order (identify a problem or gap, design a solution, plan how to carry it out, carry out the plan, report on the project), says what each step does, and does not skip planning or write the report before the work. Evidence rule: at least four of the last five fresh questions right across at least two question forms, and no repeated pick of the same misconception.",
+     "question_forms": [
+      "put the steps in order",
+      "say what each step does",
+      "say why a report is written",
+      "find the false step in a learner's answer"
+     ],
+     "thinking": [
+      "recall",
+      "reasoning"
+     ],
+     "horeb_skill_ids": [],
+     "prerequisites": [
+      {
+       "requires": "SOCI.G7.COMMUN.COMMUNITY_SERVICE_LEARNI.CS_STEPS",
+       "kind": "skill",
+       "reason": "Grade 7 Social Studies taught it first. Proposed, to confirm by a teacher.",
+       "strength": "essential",
+       "status": "proposed"
+      }
+     ],
+     "status": "proposed"
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "SOCI.G8.COMMUN.COMMUNITY_SERVICE_LEARNI.CSL_STEPS.M_G8_CS_ORDER",
+     "skill": "SOCI.G8.COMMUN.COMMUNITY_SERVICE_LEARNI.CSL_STEPS",
+     "error": "Puts the steps of a project in the wrong order.",
+     "example": {
+      "question": "What comes first in a community service project?",
+      "wrong_answer": "Carry out the work",
+      "correct_answer": "Identify a problem in the community"
+     },
+     "cause": "The child mixes up two ideas that sound alike or are taught close together.",
+     "reveals": "Offer \"Carry out the work\" next to the right answer in a new question and ask the child to choose.",
+     "help": "Write the steps on cards and put them in order.",
+     "feedback": "First identify the problem, then design, plan, carry out, and report.",
+     "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
+     "status": "draft"
+    },
+    {
+     "code": "SOCI.G8.COMMUN.COMMUNITY_SERVICE_LEARNI.CSL_STEPS.M_G8_CS_SKIP_PLAN",
+     "skill": "SOCI.G8.COMMUN.COMMUNITY_SERVICE_LEARNI.CSL_STEPS",
+     "error": "Skips the planning step.",
+     "example": {
+      "question": "What should be done before carrying out the solution?",
+      "wrong_answer": "Nothing, start at once",
+      "correct_answer": "Plan who does what, with what, and when"
+     },
+     "cause": "The child mixes up two ideas that sound alike or are taught close together.",
+     "reveals": "Offer \"Nothing, start at once\" next to the right answer in a new question and ask the child to choose.",
+     "help": "Ask what happens when a team starts without a plan.",
+     "feedback": "A plan says who, what, when and with what. Without it a project falls apart.",
+     "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
+     "status": "draft"
+    },
+    {
+     "code": "SOCI.G8.COMMUN.COMMUNITY_SERVICE_LEARNI.CSL_STEPS.M_G8_CS_REPORT_END",
+     "skill": "SOCI.G8.COMMUN.COMMUNITY_SERVICE_LEARNI.CSL_STEPS",
+     "error": "Says the report is written before the work.",
+     "example": {
+      "question": "When is the project report written?",
+      "wrong_answer": "Before the work begins",
+      "correct_answer": "After the work is done"
+     },
+     "cause": "The child mixes up two ideas that sound alike or are taught close together.",
+     "reveals": "Offer \"Before the work begins\" next to the right answer in a new question and ask the child to choose.",
+     "help": "Ask what a report would say if the work has not happened.",
+     "feedback": "A report tells what was done and learned, so it comes at the end.",
+     "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
+     "status": "draft"
+    }
+   ],
    "rubric_indicators": [
     "SOCI.G8.RUBRIC.2.1",
     "SOCI.G8.RUBRIC.2.2",
@@ -310,8 +552,175 @@
      "status": "kicd_verified"
     }
    ],
-   "skills": [],
-   "misconceptions": [],
+   "skills": [
+    {
+     "code": "SOCI.G8.PEOPLE.SCIENTIFIC_THEORY_ABOUT_.EVOLUTION",
+     "name": "Describe the scientific theory of human origin and the changes in early humans",
+     "outcomes": [
+      "SOCI.G8.PEOPLE.SCIENTIFIC_THEORY_ABOUT_.a",
+      "SOCI.G8.PEOPLE.SCIENTIFIC_THEORY_ABOUT_.b",
+      "SOCI.G8.PEOPLE.SCIENTIFIC_THEORY_ABOUT_.c"
+     ],
+     "mastery": "The child says the scientific theory is that humans slowly changed (evolved) over millions of years from earlier ape-like ancestors, puts the early humans in order (Australopithecus, Homo habilis, Homo erectus, Homo sapiens), names the changes (walking upright, a bigger brain, making and using tools, using fire) and the evidence (fossils and tools). The child does not say humans come from the monkeys alive today. Evidence rule: at least four of the last five fresh questions right across at least two question forms, and no repeated pick of the same misconception.",
+     "question_forms": [
+      "put the early humans in order",
+      "say what changed",
+      "say what the evidence is",
+      "find the false step in a learner's answer"
+     ],
+     "thinking": [
+      "recall",
+      "reasoning"
+     ],
+     "horeb_skill_ids": [],
+     "prerequisites": [
+      {
+       "requires": "SOCI.G7.PEOPLE.HUMAN_ORIGIN.HO_TRADITIONAL",
+       "kind": "skill",
+       "reason": "Grade 7 Social Studies taught it first. Proposed, to confirm by a teacher.",
+       "strength": "essential",
+       "status": "proposed"
+      },
+      {
+       "requires": "SOCI.G7.PEOPLE.HUMAN_ORIGIN.HO_RELIGIOUS",
+       "kind": "skill",
+       "reason": "Grade 7 Social Studies taught it first. Proposed, to confirm by a teacher.",
+       "strength": "essential",
+       "status": "proposed"
+      }
+     ],
+     "status": "proposed"
+    },
+    {
+     "code": "SOCI.G8.PEOPLE.SCIENTIFIC_THEORY_ABOUT_.CRADLE_AFRICA",
+     "name": "Say why Africa is the cradle of humanity and how early human remains are kept safe",
+     "outcomes": [
+      "SOCI.G8.PEOPLE.SCIENTIFIC_THEORY_ABOUT_.d",
+      "SOCI.G8.PEOPLE.SCIENTIFIC_THEORY_ABOUT_.e",
+      "SOCI.G8.PEOPLE.SCIENTIFIC_THEORY_ABOUT_.f"
+     ],
+     "mastery": "The child says the oldest fossils of early humans have been found in Africa, in East Africa's Rift Valley (Olduvai Gorge in Tanzania, Koobi Fora near Lake Turkana in Kenya) and elsewhere in Africa, names the Leakey family and the Turkana Boy, and picks ways to preserve remains (protected sites, careful digging, museums, labels and records, controlled storage). Evidence rule: at least four of the last five fresh questions right across at least two question forms, and no repeated pick of the same misconception.",
+     "question_forms": [
+      "pick a reason for Africa",
+      "pick a famous site",
+      "pick how remains are preserved",
+      "find the false step in a learner's answer"
+     ],
+     "thinking": [
+      "recall",
+      "reasoning"
+     ],
+     "horeb_skill_ids": [],
+     "prerequisites": [
+      {
+       "requires": "SOCI.G8.PEOPLE.SCIENTIFIC_THEORY_ABOUT_.EVOLUTION",
+       "kind": "skill",
+       "reason": "This skill builds on it. Proposed, to confirm by a teacher.",
+       "strength": "essential",
+       "status": "proposed"
+      }
+     ],
+     "status": "proposed"
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "SOCI.G8.PEOPLE.SCIENTIFIC_THEORY_ABOUT_.EVOLUTION.M_G8_EV_ORDER",
+     "skill": "SOCI.G8.PEOPLE.SCIENTIFIC_THEORY_ABOUT_.EVOLUTION",
+     "error": "Puts the early humans in the wrong order.",
+     "example": {
+      "question": "Which early human came first?",
+      "wrong_answer": "Homo sapiens",
+      "correct_answer": "Australopithecus"
+     },
+     "cause": "The child mixes up two ideas that sound alike or are taught close together.",
+     "reveals": "Offer \"Homo sapiens\" next to the right answer in a new question and ask the child to choose.",
+     "help": "Put the names on a timeline.",
+     "feedback": "The order is Australopithecus, Homo habilis, Homo erectus, Homo sapiens.",
+     "source": "To confirm by a teacher: history and the accounts of early humans and peoples are told differently by different sources; the author wrote the commonly taught version.",
+     "status": "draft"
+    },
+    {
+     "code": "SOCI.G8.PEOPLE.SCIENTIFIC_THEORY_ABOUT_.EVOLUTION.M_G8_EV_MONKEY",
+     "skill": "SOCI.G8.PEOPLE.SCIENTIFIC_THEORY_ABOUT_.EVOLUTION",
+     "error": "Says humans come from the monkeys alive today.",
+     "example": {
+      "question": "What does the scientific theory say about human origin?",
+      "wrong_answer": "Humans came from the monkeys we see today",
+      "correct_answer": "Humans and apes share earlier ancestors and changed over millions of years"
+     },
+     "cause": "The child mixes up two ideas that sound alike or are taught close together.",
+     "reveals": "Offer \"Humans came from the monkeys we see today\" next to the right answer in a new question and ask the child to choose.",
+     "help": "Ask: do your grandparents come from your cousins?",
+     "feedback": "The theory says humans and today's apes share distant ancestors. Humans did not come from living monkeys.",
+     "source": "To confirm by a teacher: history and the accounts of early humans and peoples are told differently by different sources; the author wrote the commonly taught version.",
+     "status": "draft"
+    },
+    {
+     "code": "SOCI.G8.PEOPLE.SCIENTIFIC_THEORY_ABOUT_.EVOLUTION.M_G8_EV_FAST",
+     "skill": "SOCI.G8.PEOPLE.SCIENTIFIC_THEORY_ABOUT_.EVOLUTION",
+     "error": "Says the changes happened in a short time.",
+     "example": {
+      "question": "How long did the changes take?",
+      "wrong_answer": "A few hundred years",
+      "correct_answer": "Millions of years"
+     },
+     "cause": "The child mixes up two ideas that sound alike or are taught close together.",
+     "reveals": "Offer \"A few hundred years\" next to the right answer in a new question and ask the child to choose.",
+     "help": "Show a long timeline.",
+     "feedback": "The changes took millions of years.",
+     "source": "To confirm by a teacher: history and the accounts of early humans and peoples are told differently by different sources; the author wrote the commonly taught version.",
+     "status": "draft"
+    },
+    {
+     "code": "SOCI.G8.PEOPLE.SCIENTIFIC_THEORY_ABOUT_.CRADLE_AFRICA.M_G8_CR_WHY",
+     "skill": "SOCI.G8.PEOPLE.SCIENTIFIC_THEORY_ABOUT_.CRADLE_AFRICA",
+     "error": "Says Africa is the cradle because it is the largest or the richest.",
+     "example": {
+      "question": "Why is Africa called the cradle of humanity?",
+      "wrong_answer": "Because it is the biggest continent",
+      "correct_answer": "Because the oldest fossils of early humans were found there"
+     },
+     "cause": "The child mixes up two ideas that sound alike or are taught close together.",
+     "reveals": "Offer \"Because it is the biggest continent\" next to the right answer in a new question and ask the child to choose.",
+     "help": "Ask what evidence tells us where people began.",
+     "feedback": "Africa is the cradle because the oldest human fossils have been found there.",
+     "source": "To confirm by a teacher: history and the accounts of early humans and peoples are told differently by different sources; the author wrote the commonly taught version.",
+     "status": "draft"
+    },
+    {
+     "code": "SOCI.G8.PEOPLE.SCIENTIFIC_THEORY_ABOUT_.CRADLE_AFRICA.M_G8_CR_PLACE",
+     "skill": "SOCI.G8.PEOPLE.SCIENTIFIC_THEORY_ABOUT_.CRADLE_AFRICA",
+     "error": "Puts a famous site in the wrong country.",
+     "example": {
+      "question": "Where is Olduvai Gorge?",
+      "wrong_answer": "Kenya",
+      "correct_answer": "Tanzania"
+     },
+     "cause": "The child mixes up two ideas that sound alike or are taught close together.",
+     "reveals": "Offer \"Kenya\" next to the right answer in a new question and ask the child to choose.",
+     "help": "Find the sites on a map.",
+     "feedback": "Olduvai Gorge is in Tanzania. Koobi Fora, near Lake Turkana, is in Kenya.",
+     "source": "To confirm by a teacher: history and the accounts of early humans and peoples are told differently by different sources; the author wrote the commonly taught version.",
+     "status": "draft"
+    },
+    {
+     "code": "SOCI.G8.PEOPLE.SCIENTIFIC_THEORY_ABOUT_.CRADLE_AFRICA.M_G8_CR_PRESERVE",
+     "skill": "SOCI.G8.PEOPLE.SCIENTIFIC_THEORY_ABOUT_.CRADLE_AFRICA",
+     "error": "Picks a way that would damage the remains.",
+     "example": {
+      "question": "Which helps to preserve early human remains?",
+      "wrong_answer": "Take them home to show friends",
+      "correct_answer": "Keep them in a museum with records"
+     },
+     "cause": "The child mixes up two ideas that sound alike or are taught close together.",
+     "reveals": "Offer \"Take them home to show friends\" next to the right answer in a new question and ask the child to choose.",
+     "help": "Ask what happens to a fossil handled by many hands.",
+     "feedback": "Fossils are kept in museums and protected sites with careful records.",
+     "source": "To confirm by a teacher: history and the accounts of early humans and peoples are told differently by different sources; the author wrote the commonly taught version.",
+     "status": "draft"
+    }
+   ],
    "rubric_indicators": [
     "SOCI.G8.RUBRIC.3.1",
     "SOCI.G8.RUBRIC.3.2",
@@ -384,8 +793,88 @@
      "indicator": "SOCI.G8.RUBRIC.3.8"
     }
    ],
-   "skills": [],
-   "misconceptions": [],
+   "skills": [
+    {
+     "code": "SOCI.G8.PEOPLE.EARLY_CIVILISATION.SWAHILI",
+     "name": "Describe the Swahili civilisation and what it gave to the modern world",
+     "outcomes": [
+      "SOCI.G8.PEOPLE.EARLY_CIVILISATION.a",
+      "SOCI.G8.PEOPLE.EARLY_CIVILISATION.b"
+     ],
+     "mastery": "The child names Swahili city-states (Mombasa, Malindi, Lamu, Kilwa, Zanzibar), says the Swahili traded gold, ivory, cloth, timber and other goods by dhow with Arabia, Persia, India and China using the monsoon winds, built coral-stone houses and mosques, and gave the Kiswahili language and a coastal culture. The child does not say Kiswahili is Arabic. Evidence rule: at least four of the last five fresh questions right across at least two question forms, and no repeated pick of the same misconception.",
+     "question_forms": [
+      "pick a Swahili city-state",
+      "say what the Swahili traded and with whom",
+      "say what the civilisation gave us",
+      "find the false step in a learner's answer"
+     ],
+     "thinking": [
+      "recall",
+      "reasoning"
+     ],
+     "horeb_skill_ids": [],
+     "prerequisites": [
+      {
+       "requires": "SOCI.G7.PEOPLE.EARLY_CIVILISATION.EC_CONTRIB",
+       "kind": "skill",
+       "reason": "Grade 7 Social Studies taught it first. Proposed, to confirm by a teacher.",
+       "strength": "essential",
+       "status": "proposed"
+      }
+     ],
+     "status": "proposed"
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "SOCI.G8.PEOPLE.EARLY_CIVILISATION.SWAHILI.M_G8_SW_WHERE",
+     "skill": "SOCI.G8.PEOPLE.EARLY_CIVILISATION.SWAHILI",
+     "error": "Puts a Swahili city-state in the wrong place.",
+     "example": {
+      "question": "Which of these was a Swahili city-state?",
+      "wrong_answer": "Timbuktu",
+      "correct_answer": "Kilwa"
+     },
+     "cause": "The child mixes up two ideas that sound alike or are taught close together.",
+     "reveals": "Offer \"Timbuktu\" next to the right answer in a new question and ask the child to choose.",
+     "help": "Find the coast on a map.",
+     "feedback": "Mombasa, Malindi, Lamu, Kilwa and Zanzibar were Swahili city-states on the coast. Timbuktu is in West Africa.",
+     "source": "To confirm by a teacher: history and the accounts of early humans and peoples are told differently by different sources; the author wrote the commonly taught version.",
+     "status": "draft"
+    },
+    {
+     "code": "SOCI.G8.PEOPLE.EARLY_CIVILISATION.SWAHILI.M_G8_SW_TRADE",
+     "skill": "SOCI.G8.PEOPLE.EARLY_CIVILISATION.SWAHILI",
+     "error": "Says the Swahili traded first with Europe.",
+     "example": {
+      "question": "With whom did the Swahili trade by dhow?",
+      "wrong_answer": "First with Europe",
+      "correct_answer": "With Arabia, Persia, India and China"
+     },
+     "cause": "The child mixes up two ideas that sound alike or are taught close together.",
+     "reveals": "Offer \"First with Europe\" next to the right answer in a new question and ask the child to choose.",
+     "help": "Look at the monsoon winds on a map.",
+     "feedback": "The monsoon winds carried dhows between the East African coast and Arabia, Persia, India and China.",
+     "source": "To confirm by a teacher: history and the accounts of early humans and peoples are told differently by different sources; the author wrote the commonly taught version.",
+     "status": "draft"
+    },
+    {
+     "code": "SOCI.G8.PEOPLE.EARLY_CIVILISATION.SWAHILI.M_G8_SW_LANGUAGE",
+     "skill": "SOCI.G8.PEOPLE.EARLY_CIVILISATION.SWAHILI",
+     "error": "Says Kiswahili is the Arabic language.",
+     "example": {
+      "question": "What is Kiswahili?",
+      "wrong_answer": "The Arabic language",
+      "correct_answer": "A Bantu language with some Arabic words"
+     },
+     "cause": "The child mixes up two ideas that sound alike or are taught close together.",
+     "reveals": "Offer \"The Arabic language\" next to the right answer in a new question and ask the child to choose.",
+     "help": "Ask which words are Bantu and which came from trade.",
+     "feedback": "Kiswahili is a Bantu language that took in Arabic words through trade.",
+     "source": "To confirm by a teacher: history and the accounts of early humans and peoples are told differently by different sources; the author wrote the commonly taught version.",
+     "status": "draft"
+    }
+   ],
    "rubric_indicators": [
     "SOCI.G8.RUBRIC.3.1",
     "SOCI.G8.RUBRIC.3.2",
@@ -471,8 +960,89 @@
      "indicator": "SOCI.G8.RUBRIC.3.9"
     }
    ],
-   "skills": [],
-   "misconceptions": [],
+   "skills": [
+    {
+     "code": "SOCI.G8.PEOPLE.TRANS_SAHARAN_SLAVE_TRAD.TRANS_SAHARAN",
+     "name": "Say how the Trans-Saharan slave trade began, was organised and what it did to Africa",
+     "outcomes": [
+      "SOCI.G8.PEOPLE.TRANS_SAHARAN_SLAVE_TRAD.a",
+      "SOCI.G8.PEOPLE.TRANS_SAHARAN_SLAVE_TRAD.b",
+      "SOCI.G8.PEOPLE.TRANS_SAHARAN_SLAVE_TRAD.c"
+     ],
+     "mastery": "The child says the trade crossed the Sahara by camel caravans between West and Central Africa and North Africa, names factors (a demand for labour in North Africa and beyond, raiding and wars, the camel and the desert trade routes), says caravans were led by guides and traders along routes with oases, and names effects (loss of lives, families broken, villages emptied, fear and insecurity). The child does not say the trade went by sea. Evidence rule: at least four of the last five fresh questions right across at least two question forms, and no repeated pick of the same misconception.",
+     "question_forms": [
+      "pick a factor",
+      "say how it was carried out",
+      "pick an effect",
+      "find the false step in a learner's answer"
+     ],
+     "thinking": [
+      "recall",
+      "reasoning"
+     ],
+     "horeb_skill_ids": [],
+     "prerequisites": [
+      {
+       "requires": "SOCI.G7.PEOPLE.SLAVERY_AND_SERVITUDE.SL_INDIAN",
+       "kind": "skill",
+       "reason": "Grade 7 Social Studies taught it first. Proposed, to confirm by a teacher.",
+       "strength": "essential",
+       "status": "proposed"
+      }
+     ],
+     "status": "proposed"
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "SOCI.G8.PEOPLE.TRANS_SAHARAN_SLAVE_TRAD.TRANS_SAHARAN.M_G8_TS_ROUTE",
+     "skill": "SOCI.G8.PEOPLE.TRANS_SAHARAN_SLAVE_TRAD.TRANS_SAHARAN",
+     "error": "Says the trade went by sea.",
+     "example": {
+      "question": "How did traders cross the Sahara?",
+      "wrong_answer": "By ship",
+      "correct_answer": "By camel caravans"
+     },
+     "cause": "The child mixes up two ideas that sound alike or are taught close together.",
+     "reveals": "Offer \"By ship\" next to the right answer in a new question and ask the child to choose.",
+     "help": "Ask what travels over a desert.",
+     "feedback": "The Trans-Saharan trade crossed the desert by camel caravans.",
+     "source": "To confirm by a teacher: history and the accounts of early humans and peoples are told differently by different sources; the author wrote the commonly taught version.",
+     "status": "draft"
+    },
+    {
+     "code": "SOCI.G8.PEOPLE.TRANS_SAHARAN_SLAVE_TRAD.TRANS_SAHARAN.M_G8_TS_FACTOR",
+     "skill": "SOCI.G8.PEOPLE.TRANS_SAHARAN_SLAVE_TRAD.TRANS_SAHARAN",
+     "error": "Names a factor that did not cause the trade.",
+     "example": {
+      "question": "Which factor helped the Trans-Saharan trade grow?",
+      "wrong_answer": "Railways across the desert",
+      "correct_answer": "The camel and a demand for labour in North Africa"
+     },
+     "cause": "The child mixes up two ideas that sound alike or are taught close together.",
+     "reveals": "Offer \"Railways across the desert\" next to the right answer in a new question and ask the child to choose.",
+     "help": "Ask what the traders had to cross the desert.",
+     "feedback": "The camel, the desert routes, and demand for labour helped the trade grow.",
+     "source": "To confirm by a teacher: history and the accounts of early humans and peoples are told differently by different sources; the author wrote the commonly taught version.",
+     "status": "draft"
+    },
+    {
+     "code": "SOCI.G8.PEOPLE.TRANS_SAHARAN_SLAVE_TRAD.TRANS_SAHARAN.M_G8_TS_EFFECT",
+     "skill": "SOCI.G8.PEOPLE.TRANS_SAHARAN_SLAVE_TRAD.TRANS_SAHARAN",
+     "error": "Names an effect that did not happen.",
+     "example": {
+      "question": "Which was an effect of the Trans-Saharan slave trade?",
+      "wrong_answer": "Villages grew larger and richer",
+      "correct_answer": "Families were broken and villages emptied"
+     },
+     "cause": "The child mixes up two ideas that sound alike or are taught close together.",
+     "reveals": "Offer \"Villages grew larger and richer\" next to the right answer in a new question and ask the child to choose.",
+     "help": "Ask what happens to a village when its young people are taken.",
+     "feedback": "The trade took many lives, broke families and emptied villages.",
+     "source": "To confirm by a teacher: history and the accounts of early humans and peoples are told differently by different sources; the author wrote the commonly taught version.",
+     "status": "draft"
+    }
+   ],
    "rubric_indicators": [
     "SOCI.G8.RUBRIC.3.1",
     "SOCI.G8.RUBRIC.3.2",
@@ -557,8 +1127,81 @@
      "status": "kicd_verified"
     }
    ],
-   "skills": [],
-   "misconceptions": [],
+   "skills": [
+    {
+     "code": "SOCI.G8.PEOPLE.POPULATION_GROWTH_IN_AFR.POPULATION",
+     "name": "Say the causes and effects of population growth and the types of migration in Africa",
+     "outcomes": [
+      "SOCI.G8.PEOPLE.POPULATION_GROWTH_IN_AFR.a",
+      "SOCI.G8.PEOPLE.POPULATION_GROWTH_IN_AFR.b",
+      "SOCI.G8.PEOPLE.POPULATION_GROWTH_IN_AFR.c"
+     ],
+     "mastery": "The child says population grows when births are more than deaths (a high birth rate, fewer deaths from better health care and food) and by people moving in, names effects (pressure on land, food, houses, schools and jobs), tells types of migration (rural-urban, between countries, forced by war or drought and by choice), and says Kenya had about 47.6 million people at the 2019 census and a young population. Evidence rule: at least four of the last five fresh questions right across at least two question forms, and no repeated pick of the same misconception.",
+     "question_forms": [
+      "pick a cause of growth",
+      "pick an effect of growth",
+      "pick a type of migration",
+      "find the false step in a learner's answer"
+     ],
+     "thinking": [
+      "recall",
+      "reasoning"
+     ],
+     "horeb_skill_ids": [],
+     "prerequisites": [],
+     "status": "proposed"
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "SOCI.G8.PEOPLE.POPULATION_GROWTH_IN_AFR.POPULATION.M_G8_PG_CAUSE",
+     "skill": "SOCI.G8.PEOPLE.POPULATION_GROWTH_IN_AFR.POPULATION",
+     "error": "Says a rising death rate makes the population grow.",
+     "example": {
+      "question": "Which helps the population to grow?",
+      "wrong_answer": "More deaths than births",
+      "correct_answer": "More births than deaths"
+     },
+     "cause": "The child mixes up two ideas that sound alike or are taught close together.",
+     "reveals": "Offer \"More deaths than births\" next to the right answer in a new question and ask the child to choose.",
+     "help": "Ask what happens when births are more than deaths.",
+     "feedback": "A population grows when there are more births than deaths, and when people move in.",
+     "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
+     "status": "draft"
+    },
+    {
+     "code": "SOCI.G8.PEOPLE.POPULATION_GROWTH_IN_AFR.POPULATION.M_G8_PG_MIGRATION",
+     "skill": "SOCI.G8.PEOPLE.POPULATION_GROWTH_IN_AFR.POPULATION",
+     "error": "Says migration means only moving to another country.",
+     "example": {
+      "question": "Which is a type of migration?",
+      "wrong_answer": "Only moving to another country",
+      "correct_answer": "Moving from the countryside to a town"
+     },
+     "cause": "The child mixes up two ideas that sound alike or are taught close together.",
+     "reveals": "Offer \"Only moving to another country\" next to the right answer in a new question and ask the child to choose.",
+     "help": "Ask where people in your area have moved to.",
+     "feedback": "Migration includes rural-urban movement and moving between countries, forced or by choice.",
+     "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
+     "status": "draft"
+    },
+    {
+     "code": "SOCI.G8.PEOPLE.POPULATION_GROWTH_IN_AFR.POPULATION.M_G8_PG_EFFECT",
+     "skill": "SOCI.G8.PEOPLE.POPULATION_GROWTH_IN_AFR.POPULATION",
+     "error": "Says rapid population growth only brings good things.",
+     "example": {
+      "question": "What is an effect of rapid population growth?",
+      "wrong_answer": "Plenty of jobs and land for all",
+      "correct_answer": "Pressure on land, food, houses and jobs"
+     },
+     "cause": "The child mixes up two ideas that sound alike or are taught close together.",
+     "reveals": "Offer \"Plenty of jobs and land for all\" next to the right answer in a new question and ask the child to choose.",
+     "help": "Ask how a small plot feeds a growing family.",
+     "feedback": "Rapid growth puts pressure on land, food, houses, schools and jobs.",
+     "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
+     "status": "draft"
+    }
+   ],
    "rubric_indicators": [
     "SOCI.G8.RUBRIC.3.1",
     "SOCI.G8.RUBRIC.3.2",
@@ -642,8 +1285,173 @@
      "indicator": "SOCI.G8.RUBRIC.3.6"
     }
    ],
-   "skills": [],
-   "misconceptions": [],
+   "skills": [
+    {
+     "code": "SOCI.G8.PEOPLE.DIVERSITY_AND_INTERPERSO.DIVERSITY",
+     "name": "Describe the social and cultural diversity of Kenya and how to build healthy self-esteem within it",
+     "outcomes": [
+      "SOCI.G8.PEOPLE.DIVERSITY_AND_INTERPERSO.a",
+      "SOCI.G8.PEOPLE.DIVERSITY_AND_INTERPERSO.b"
+     ],
+     "mastery": "The child says Kenya has more than forty communities with their own languages, foods, dress and customs and several religions, names respect and learning about others as the way to live together, and says healthy self-esteem grows by being proud of one's own culture while respecting others. The child does not say one culture is better. Evidence rule: at least four of the last five fresh questions right across at least two question forms, and no repeated pick of the same misconception.",
+     "question_forms": [
+      "pick a sign of diversity",
+      "pick the way to treat people who are different",
+      "say how to build healthy self-esteem",
+      "find the false step in a learner's answer"
+     ],
+     "thinking": [
+      "recall",
+      "reasoning"
+     ],
+     "horeb_skill_ids": [],
+     "prerequisites": [
+      {
+       "requires": "SOCI.G7.PEOPLE.DIVERSITY_AND_INTERPERSO.DV_FACTORS",
+       "kind": "skill",
+       "reason": "Grade 7 Social Studies taught it first. Proposed, to confirm by a teacher.",
+       "strength": "essential",
+       "status": "proposed"
+      }
+     ],
+     "status": "proposed"
+    },
+    {
+     "code": "SOCI.G8.PEOPLE.DIVERSITY_AND_INTERPERSO.PEER_PRESSURE",
+     "name": "Say how emotions affect people and how to handle peer pressure",
+     "outcomes": [
+      "SOCI.G8.PEOPLE.DIVERSITY_AND_INTERPERSO.c",
+      "SOCI.G8.PEOPLE.DIVERSITY_AND_INTERPERSO.d"
+     ],
+     "mastery": "The child says emotions change how a person acts and how others feel (anger can hurt, joy can lift others), and picks ways to refuse peer pressure (say no clearly, give a reason, walk away, keep good friends, ask a trusted adult), and does not give in to be liked. Evidence rule: at least four of the last five fresh questions right across at least two question forms, and no repeated pick of the same misconception.",
+     "question_forms": [
+      "say what emotions do to a person and others",
+      "pick how to refuse a pressure",
+      "pick a healthy way to handle anger",
+      "find the false step in a learner's answer"
+     ],
+     "thinking": [
+      "recall",
+      "reasoning"
+     ],
+     "horeb_skill_ids": [],
+     "prerequisites": [
+      {
+       "requires": "SOCI.G8.PEOPLE.DIVERSITY_AND_INTERPERSO.DIVERSITY",
+       "kind": "skill",
+       "reason": "This skill builds on it. Proposed, to confirm by a teacher.",
+       "strength": "essential",
+       "status": "proposed"
+      },
+      {
+       "requires": "SOCI.G7.SOCIAL.SELF_EXPLORATION.SE_EMOTIONS",
+       "kind": "skill",
+       "reason": "Grade 7 Social Studies taught it first. Proposed, to confirm by a teacher.",
+       "strength": "essential",
+       "status": "proposed"
+      }
+     ],
+     "status": "proposed"
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "SOCI.G8.PEOPLE.DIVERSITY_AND_INTERPERSO.DIVERSITY.M_G8_DV8_ONE_CULTURE",
+     "skill": "SOCI.G8.PEOPLE.DIVERSITY_AND_INTERPERSO.DIVERSITY",
+     "error": "Says Kenya has only one culture.",
+     "example": {
+      "question": "How many cultures does Kenya have?",
+      "wrong_answer": "Only one",
+      "correct_answer": "More than forty communities with their own cultures"
+     },
+     "cause": "The child mixes up two ideas that sound alike or are taught close together.",
+     "reveals": "Offer \"Only one\" next to the right answer in a new question and ask the child to choose.",
+     "help": "Ask the child to name three communities and a food from each.",
+     "feedback": "Kenya has more than forty communities with their own languages, foods and customs.",
+     "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
+     "status": "draft"
+    },
+    {
+     "code": "SOCI.G8.PEOPLE.DIVERSITY_AND_INTERPERSO.DIVERSITY.M_G8_DV8_BETTER",
+     "skill": "SOCI.G8.PEOPLE.DIVERSITY_AND_INTERPERSO.DIVERSITY",
+     "error": "Says one culture is better than the others.",
+     "example": {
+      "question": "How should we treat other cultures?",
+      "wrong_answer": "See ours as better than theirs",
+      "correct_answer": "Respect and learn from them"
+     },
+     "cause": "The child mixes up two ideas that sound alike or are taught close together.",
+     "reveals": "Offer \"See ours as better than theirs\" next to the right answer in a new question and ask the child to choose.",
+     "help": "Ask what we gain from learning about another culture.",
+     "feedback": "No culture is better. We respect and learn from all.",
+     "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
+     "status": "draft"
+    },
+    {
+     "code": "SOCI.G8.PEOPLE.DIVERSITY_AND_INTERPERSO.DIVERSITY.M_G8_DV8_ESTEEM",
+     "skill": "SOCI.G8.PEOPLE.DIVERSITY_AND_INTERPERSO.DIVERSITY",
+     "error": "Says healthy self-esteem means feeling better than others.",
+     "example": {
+      "question": "How does healthy self-esteem grow in a diverse society?",
+      "wrong_answer": "By feeling better than others",
+      "correct_answer": "By being proud of our own culture and respecting others"
+     },
+     "cause": "The child mixes up two ideas that sound alike or are taught close together.",
+     "reveals": "Offer \"By feeling better than others\" next to the right answer in a new question and ask the child to choose.",
+     "help": "Ask: can I be proud of my culture and still respect yours?",
+     "feedback": "Healthy self-esteem grows by being proud of yourself and respecting others.",
+     "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
+     "status": "draft"
+    },
+    {
+     "code": "SOCI.G8.PEOPLE.DIVERSITY_AND_INTERPERSO.PEER_PRESSURE.M_G8_PR_GIVE_IN",
+     "skill": "SOCI.G8.PEOPLE.DIVERSITY_AND_INTERPERSO.PEER_PRESSURE",
+     "error": "Says a person should give in to peer pressure to be liked.",
+     "example": {
+      "question": "A friend pushes you to do wrong. What should you do?",
+      "wrong_answer": "Give in to be liked",
+      "correct_answer": "Say no clearly and walk away"
+     },
+     "cause": "The child mixes up two ideas that sound alike or are taught close together.",
+     "reveals": "Offer \"Give in to be liked\" next to the right answer in a new question and ask the child to choose.",
+     "help": "Role play the refusal.",
+     "feedback": "Say no clearly, give a reason, and walk away. A real friend respects it.",
+     "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
+     "status": "draft"
+    },
+    {
+     "code": "SOCI.G8.PEOPLE.DIVERSITY_AND_INTERPERSO.PEER_PRESSURE.M_G8_PR_HIDE",
+     "skill": "SOCI.G8.PEOPLE.DIVERSITY_AND_INTERPERSO.PEER_PRESSURE",
+     "error": "Says feelings should always be hidden.",
+     "example": {
+      "question": "What should you do with a strong feeling?",
+      "wrong_answer": "Hide it for ever",
+      "correct_answer": "Name it and talk to a trusted person"
+     },
+     "cause": "The child mixes up two ideas that sound alike or are taught close together.",
+     "reveals": "Offer \"Hide it for ever\" next to the right answer in a new question and ask the child to choose.",
+     "help": "Ask who they can talk to.",
+     "feedback": "Naming a feeling and talking to a trusted person helps.",
+     "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
+     "status": "draft"
+    },
+    {
+     "code": "SOCI.G8.PEOPLE.DIVERSITY_AND_INTERPERSO.PEER_PRESSURE.M_G8_PR_ANGER",
+     "skill": "SOCI.G8.PEOPLE.DIVERSITY_AND_INTERPERSO.PEER_PRESSURE",
+     "error": "Says acting on anger at once is best.",
+     "example": {
+      "question": "What is a healthy way to handle anger?",
+      "wrong_answer": "Hit the person at once",
+      "correct_answer": "Pause, breathe and then talk calmly"
+     },
+     "cause": "The child mixes up two ideas that sound alike or are taught close together.",
+     "reveals": "Offer \"Hit the person at once\" next to the right answer in a new question and ask the child to choose.",
+     "help": "Practise a pause and a calm sentence.",
+     "feedback": "Pause, breathe and talk calmly. Acting at once can hurt.",
+     "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
+     "status": "draft"
+    }
+   ],
    "rubric_indicators": [
     "SOCI.G8.RUBRIC.3.1",
     "SOCI.G8.RUBRIC.3.2",
@@ -735,8 +1543,89 @@
      "status": "kicd_verified"
     }
    ],
-   "skills": [],
-   "misconceptions": [],
+   "skills": [
+    {
+     "code": "SOCI.G8.PEOPLE.PEACEFUL_CONFLICT_RESOLU.FAMILY_CONFLICT",
+     "name": "Say what causes family conflicts and the peaceful ways to resolve them",
+     "outcomes": [
+      "SOCI.G8.PEOPLE.PEACEFUL_CONFLICT_RESOLU.a",
+      "SOCI.G8.PEOPLE.PEACEFUL_CONFLICT_RESOLU.b",
+      "SOCI.G8.PEOPLE.PEACEFUL_CONFLICT_RESOLU.c"
+     ],
+     "mastery": "The child names causes (poverty, favouritism, disrespect, poor communication, quarrels over property or chores, alcohol), peaceful ways to resolve them (listening, calm talk, apology and forgiveness, help from an elder or counsellor) and communication habits (listening without interrupting, using I-statements, a calm voice), and does not pick shouting, silence for ever or violence. Evidence rule: at least four of the last five fresh questions right across at least two question forms, and no repeated pick of the same misconception.",
+     "question_forms": [
+      "pick a cause of conflict",
+      "pick a peaceful way to resolve it",
+      "pick a good communication habit",
+      "find the false step in a learner's answer"
+     ],
+     "thinking": [
+      "recall",
+      "reasoning"
+     ],
+     "horeb_skill_ids": [],
+     "prerequisites": [
+      {
+       "requires": "SOCI.G7.PEOPLE.PEACEFUL_COEXISTENCE.PE_RESOLVE",
+       "kind": "skill",
+       "reason": "Grade 7 Social Studies taught it first. Proposed, to confirm by a teacher.",
+       "strength": "essential",
+       "status": "proposed"
+      }
+     ],
+     "status": "proposed"
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "SOCI.G8.PEOPLE.PEACEFUL_CONFLICT_RESOLU.FAMILY_CONFLICT.M_G8_FC_WIN",
+     "skill": "SOCI.G8.PEOPLE.PEACEFUL_CONFLICT_RESOLU.FAMILY_CONFLICT",
+     "error": "Thinks the aim is to win the argument.",
+     "example": {
+      "question": "What is the aim of resolving a family conflict?",
+      "wrong_answer": "To win the argument",
+      "correct_answer": "To understand each other and make peace"
+     },
+     "cause": "The child mixes up two ideas that sound alike or are taught close together.",
+     "reveals": "Offer \"To win the argument\" next to the right answer in a new question and ask the child to choose.",
+     "help": "Ask what happens when one side wins and the other is hurt.",
+     "feedback": "The aim is peace, not winning.",
+     "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
+     "status": "draft"
+    },
+    {
+     "code": "SOCI.G8.PEOPLE.PEACEFUL_CONFLICT_RESOLU.FAMILY_CONFLICT.M_G8_FC_SILENCE",
+     "skill": "SOCI.G8.PEOPLE.PEACEFUL_CONFLICT_RESOLU.FAMILY_CONFLICT",
+     "error": "Says silence for ever is a way to resolve conflict.",
+     "example": {
+      "question": "Which is a peaceful way to resolve a conflict?",
+      "wrong_answer": "Not speaking to each other for months",
+      "correct_answer": "Talking calmly and listening"
+     },
+     "cause": "The child mixes up two ideas that sound alike or are taught close together.",
+     "reveals": "Offer \"Not speaking to each other for months\" next to the right answer in a new question and ask the child to choose.",
+     "help": "Ask how silence changes the problem.",
+     "feedback": "Talking calmly and listening resolves conflict. Silence leaves it unsolved.",
+     "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
+     "status": "draft"
+    },
+    {
+     "code": "SOCI.G8.PEOPLE.PEACEFUL_CONFLICT_RESOLU.FAMILY_CONFLICT.M_G8_FC_FIGHT",
+     "skill": "SOCI.G8.PEOPLE.PEACEFUL_CONFLICT_RESOLU.FAMILY_CONFLICT",
+     "error": "Thinks shouting or hitting solves a conflict.",
+     "example": {
+      "question": "Which is NOT a peaceful way?",
+      "wrong_answer": "Asking an elder to help",
+      "correct_answer": "Shouting and hitting"
+     },
+     "cause": "The child mixes up two ideas that sound alike or are taught close together.",
+     "reveals": "Offer \"Asking an elder to help\" next to the right answer in a new question and ask the child to choose.",
+     "help": "Ask who is hurt when people shout and hit.",
+     "feedback": "Shouting and hitting make a conflict worse.",
+     "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
+     "status": "draft"
+    }
+   ],
    "rubric_indicators": [
     "SOCI.G8.RUBRIC.3.1",
     "SOCI.G8.RUBRIC.3.2",
@@ -820,8 +1709,89 @@
      "status": "kicd_verified"
     }
    ],
-   "skills": [],
-   "misconceptions": [],
+   "skills": [
+    {
+     "code": "SOCI.G8.NATURA.MAP_READING_AND_INTERPRE.TOPO_MAPS",
+     "name": "Read the marginal information, calculate areas and name the ways relief is shown on a topographical map",
+     "outcomes": [
+      "SOCI.G8.NATURA.MAP_READING_AND_INTERPRE.a",
+      "SOCI.G8.NATURA.MAP_READING_AND_INTERPRE.b",
+      "SOCI.G8.NATURA.MAP_READING_AND_INTERPRE.c"
+     ],
+     "mastery": "The child names the marginal information (title, scale, key, grid reference, north arrow, sheet number, date), calculates an area by counting grid squares (each square 1 square kilometre when the lines are 1 km apart) and picks the ways relief is shown (contours, spot heights, trigonometrical stations, form lines, hill shading and layer colours). Evidence rule: at least four of the last five fresh questions right across at least two question forms, and no repeated pick of the same misconception.",
+     "question_forms": [
+      "pick the marginal information",
+      "calculate an area by counting squares",
+      "pick the way relief is shown",
+      "find the false step in a learner's answer"
+     ],
+     "thinking": [
+      "recall",
+      "reasoning"
+     ],
+     "horeb_skill_ids": [],
+     "prerequisites": [
+      {
+       "requires": "SOCI.G7.NATURA.MAPS_AND_MAP_WORK.MM_FEATURES",
+       "kind": "skill",
+       "reason": "Grade 7 Social Studies taught it first. Proposed, to confirm by a teacher.",
+       "strength": "essential",
+       "status": "proposed"
+      }
+     ],
+     "status": "proposed"
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "SOCI.G8.NATURA.MAP_READING_AND_INTERPRE.TOPO_MAPS.M_G8_TM_KEY",
+     "skill": "SOCI.G8.NATURA.MAP_READING_AND_INTERPRE.TOPO_MAPS",
+     "error": "Says the key shows direction.",
+     "example": {
+      "question": "What does the key (legend) of a map show?",
+      "wrong_answer": "The direction of north",
+      "correct_answer": "What the signs on the map mean"
+     },
+     "cause": "The child mixes up two ideas that sound alike or are taught close together.",
+     "reveals": "Offer \"The direction of north\" next to the right answer in a new question and ask the child to choose.",
+     "help": "Look at the key of a real map.",
+     "feedback": "The key explains the signs. The north arrow shows direction.",
+     "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
+     "status": "draft"
+    },
+    {
+     "code": "SOCI.G8.NATURA.MAP_READING_AND_INTERPRE.TOPO_MAPS.M_G8_TM_AREA",
+     "skill": "SOCI.G8.NATURA.MAP_READING_AND_INTERPRE.TOPO_MAPS",
+     "error": "Adds the numbers of squares instead of counting the area correctly.",
+     "example": {
+      "question": "A lake covers 4 grid squares by 3 grid squares of 1 square kilometre each. What is its area?",
+      "wrong_answer": "7 square kilometres",
+      "correct_answer": "12 square kilometres"
+     },
+     "cause": "The child mixes up two ideas that sound alike or are taught close together.",
+     "reveals": "Offer \"7 square kilometres\" next to the right answer in a new question and ask the child to choose.",
+     "help": "Draw the squares and count them.",
+     "feedback": "Area is length times width in squares: 4 times 3 is 12 square kilometres.",
+     "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
+     "status": "draft"
+    },
+    {
+     "code": "SOCI.G8.NATURA.MAP_READING_AND_INTERPRE.TOPO_MAPS.M_G8_TM_RELIEF",
+     "skill": "SOCI.G8.NATURA.MAP_READING_AND_INTERPRE.TOPO_MAPS",
+     "error": "Names a wrong way relief is shown.",
+     "example": {
+      "question": "Which shows relief on a topographical map?",
+      "wrong_answer": "The scale",
+      "correct_answer": "Contours"
+     },
+     "cause": "The child mixes up two ideas that sound alike or are taught close together.",
+     "reveals": "Offer \"The scale\" next to the right answer in a new question and ask the child to choose.",
+     "help": "Look at a real map for the lines that join heights.",
+     "feedback": "Contours, spot heights and hill shading show relief. The scale shows distance.",
+     "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
+     "status": "draft"
+    }
+   ],
    "rubric_indicators": [
     "SOCI.G8.RUBRIC.4.1",
     "SOCI.G8.RUBRIC.4.2",
@@ -910,8 +1880,88 @@
      "status": "kicd_verified"
     }
    ],
-   "skills": [],
-   "misconceptions": [],
+   "skills": [
+    {
+     "code": "SOCI.G8.NATURA.WEATHER_AND_CLIMATE.CLIMATE_AFRICA",
+     "name": "Say the factors that influence climate in Africa and describe its major climatic regions",
+     "outcomes": [
+      "SOCI.G8.NATURA.WEATHER_AND_CLIMATE.a",
+      "SOCI.G8.NATURA.WEATHER_AND_CLIMATE.b"
+     ],
+     "mastery": "The child names the factors (latitude, altitude, distance from the sea, ocean currents, winds, relief), says temperature falls with height (about 6.5 degrees Celsius for every 1000 metres) and the equator is hot, and describes the equatorial (hot and wet all year, Congo basin), tropical savanna (wet and dry seasons), desert (hot and very dry, Sahara), Mediterranean (rain in winter, dry summer) and mountain regions. Evidence rule: at least four of the last five fresh questions right across at least two question forms, and no repeated pick of the same misconception.",
+     "question_forms": [
+      "pick the factor for a place",
+      "pick the climatic region",
+      "say how altitude changes temperature",
+      "find the false step in a learner's answer"
+     ],
+     "thinking": [
+      "recall",
+      "reasoning"
+     ],
+     "horeb_skill_ids": [],
+     "prerequisites": [
+      {
+       "requires": "SOCI.G7.NATURA.WEATHER.WE_ELEMENTS",
+       "kind": "skill",
+       "reason": "Grade 7 Social Studies taught it first. Proposed, to confirm by a teacher.",
+       "strength": "essential",
+       "status": "proposed"
+      }
+     ],
+     "status": "proposed"
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "SOCI.G8.NATURA.WEATHER_AND_CLIMATE.CLIMATE_AFRICA.M_G8_CL_LAT",
+     "skill": "SOCI.G8.NATURA.WEATHER_AND_CLIMATE.CLIMATE_AFRICA",
+     "error": "Says only latitude affects climate.",
+     "example": {
+      "question": "Which factors affect climate?",
+      "wrong_answer": "Only latitude",
+      "correct_answer": "Latitude, altitude, distance from the sea, currents and winds"
+     },
+     "cause": "The child mixes up two ideas that sound alike or are taught close together.",
+     "reveals": "Offer \"Only latitude\" next to the right answer in a new question and ask the child to choose.",
+     "help": "Compare Nairobi and Mombasa.",
+     "feedback": "Many factors affect climate, not latitude alone.",
+     "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
+     "status": "draft"
+    },
+    {
+     "code": "SOCI.G8.NATURA.WEATHER_AND_CLIMATE.CLIMATE_AFRICA.M_G8_CL_ALT",
+     "skill": "SOCI.G8.NATURA.WEATHER_AND_CLIMATE.CLIMATE_AFRICA",
+     "error": "Says it gets hotter as you go higher.",
+     "example": {
+      "question": "What happens to temperature as you climb a mountain?",
+      "wrong_answer": "It rises",
+      "correct_answer": "It falls"
+     },
+     "cause": "The child mixes up two ideas that sound alike or are taught close together.",
+     "reveals": "Offer \"It rises\" next to the right answer in a new question and ask the child to choose.",
+     "help": "Think of the snow on Mount Kenya at the equator.",
+     "feedback": "Temperature falls about 6.5 degrees Celsius for every 1000 metres of height.",
+     "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
+     "status": "draft"
+    },
+    {
+     "code": "SOCI.G8.NATURA.WEATHER_AND_CLIMATE.CLIMATE_AFRICA.M_G8_CL_REGION",
+     "skill": "SOCI.G8.NATURA.WEATHER_AND_CLIMATE.CLIMATE_AFRICA",
+     "error": "Puts the wrong climate in a region.",
+     "example": {
+      "question": "Which climate has hot, wet weather all year?",
+      "wrong_answer": "Desert",
+      "correct_answer": "Equatorial"
+     },
+     "cause": "The child mixes up two ideas that sound alike or are taught close together.",
+     "reveals": "Offer \"Desert\" next to the right answer in a new question and ask the child to choose.",
+     "help": "Link the Congo basin with rain every day.",
+     "feedback": "The equatorial climate is hot and wet all year. The desert is hot and dry.",
+     "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
+     "status": "draft"
+    }
+   ],
    "rubric_indicators": [
     "SOCI.G8.RUBRIC.4.1",
     "SOCI.G8.RUBRIC.4.2",
@@ -1000,8 +2050,89 @@
      "status": "kicd_verified"
     }
    ],
-   "skills": [],
-   "misconceptions": [],
+   "skills": [
+    {
+     "code": "SOCI.G8.NATURA.VEGETATION_IN_AFRICA.VEGETATION",
+     "name": "Say the factors that influence vegetation and describe the major vegetation regions of Africa",
+     "outcomes": [
+      "SOCI.G8.NATURA.VEGETATION_IN_AFRICA.a",
+      "SOCI.G8.NATURA.VEGETATION_IN_AFRICA.b",
+      "SOCI.G8.NATURA.VEGETATION_IN_AFRICA.c"
+     ],
+     "mastery": "The child says vegetation depends on rainfall, temperature, altitude and soil, names tropical rainforest (Congo basin), savanna (grass with scattered trees, East Africa), desert vegetation (few plants, Sahara), Mediterranean shrubs and mountain vegetation in zones, and picks ways to conserve vegetation (planting trees, protecting forests, controlled grazing, agroforestry), not clearing and burning. Evidence rule: at least four of the last five fresh questions right across at least two question forms, and no repeated pick of the same misconception.",
+     "question_forms": [
+      "pick the vegetation for a region",
+      "pick the factor",
+      "pick a conservation method",
+      "find the false step in a learner's answer"
+     ],
+     "thinking": [
+      "recall",
+      "reasoning"
+     ],
+     "horeb_skill_ids": [],
+     "prerequisites": [
+      {
+       "requires": "SOCI.G8.NATURA.WEATHER_AND_CLIMATE.CLIMATE_AFRICA",
+       "kind": "skill",
+       "reason": "This skill builds on it. Proposed, to confirm by a teacher.",
+       "strength": "essential",
+       "status": "proposed"
+      }
+     ],
+     "status": "proposed"
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "SOCI.G8.NATURA.VEGETATION_IN_AFRICA.VEGETATION.M_G8_VG_REGION",
+     "skill": "SOCI.G8.NATURA.VEGETATION_IN_AFRICA.VEGETATION",
+     "error": "Puts the wrong vegetation in a region.",
+     "example": {
+      "question": "Which vegetation grows in the Congo basin?",
+      "wrong_answer": "Desert scrub",
+      "correct_answer": "Tropical rainforest"
+     },
+     "cause": "The child mixes up two ideas that sound alike or are taught close together.",
+     "reveals": "Offer \"Desert scrub\" next to the right answer in a new question and ask the child to choose.",
+     "help": "Link rainfall with the thickness of the trees.",
+     "feedback": "The Congo basin has hot, wet weather and tropical rainforest.",
+     "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
+     "status": "draft"
+    },
+    {
+     "code": "SOCI.G8.NATURA.VEGETATION_IN_AFRICA.VEGETATION.M_G8_VG_FACTOR",
+     "skill": "SOCI.G8.NATURA.VEGETATION_IN_AFRICA.VEGETATION",
+     "error": "Names only one factor, or a factor that does not apply.",
+     "example": {
+      "question": "Which factor affects vegetation?",
+      "wrong_answer": "The colour of the sky",
+      "correct_answer": "Rainfall"
+     },
+     "cause": "The child mixes up two ideas that sound alike or are taught close together.",
+     "reveals": "Offer \"The colour of the sky\" next to the right answer in a new question and ask the child to choose.",
+     "help": "Ask what plants need to grow.",
+     "feedback": "Rainfall, temperature, altitude and soil affect vegetation.",
+     "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
+     "status": "draft"
+    },
+    {
+     "code": "SOCI.G8.NATURA.VEGETATION_IN_AFRICA.VEGETATION.M_G8_VG_CONSERVE",
+     "skill": "SOCI.G8.NATURA.VEGETATION_IN_AFRICA.VEGETATION",
+     "error": "Picks a method that destroys vegetation.",
+     "example": {
+      "question": "Which method conserves vegetation?",
+      "wrong_answer": "Burning bushes to clear land",
+      "correct_answer": "Planting trees and protecting forests"
+     },
+     "cause": "The child mixes up two ideas that sound alike or are taught close together.",
+     "reveals": "Offer \"Burning bushes to clear land\" next to the right answer in a new question and ask the child to choose.",
+     "help": "Ask what happens to the soil when a forest is cut.",
+     "feedback": "Planting trees, protecting forests and controlled grazing conserve vegetation.",
+     "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
+     "status": "draft"
+    }
+   ],
    "rubric_indicators": [
     "SOCI.G8.RUBRIC.4.1",
     "SOCI.G8.RUBRIC.4.2",
@@ -1093,8 +2224,89 @@
      "indicator": "SOCI.G8.RUBRIC.4.3"
     }
    ],
-   "skills": [],
-   "misconceptions": [],
+   "skills": [
+    {
+     "code": "SOCI.G8.NATURA.HISTORICAL_SITES_AND_MON.SITES",
+     "name": "Name historical sites in Africa, why they matter and how to conserve them",
+     "outcomes": [
+      "SOCI.G8.NATURA.HISTORICAL_SITES_AND_MON.a",
+      "SOCI.G8.NATURA.HISTORICAL_SITES_AND_MON.b",
+      "SOCI.G8.NATURA.HISTORICAL_SITES_AND_MON.c"
+     ],
+     "mastery": "The child places selected sites (the Pyramids of Giza in Egypt, Great Zimbabwe in Zimbabwe, the rock-hewn churches of Lalibela in Ethiopia, Timbuktu in Mali, Fort Jesus in Mombasa and Olduvai Gorge in Tanzania), says sites show a people's history and bring visitors, and picks ways to conserve them (laws, guides, no climbing or writing on walls, repair, museums). Evidence rule: at least four of the last five fresh questions right across at least two question forms, and no repeated pick of the same misconception.",
+     "question_forms": [
+      "pick the country of a site",
+      "say why a site is important",
+      "pick a way to conserve it",
+      "find the false step in a learner's answer"
+     ],
+     "thinking": [
+      "recall",
+      "reasoning"
+     ],
+     "horeb_skill_ids": [],
+     "prerequisites": [
+      {
+       "requires": "SOCI.G7.NATURA.HISTORICAL_INFORMATION.HI_PRESERVE",
+       "kind": "skill",
+       "reason": "Grade 7 Social Studies taught it first. Proposed, to confirm by a teacher.",
+       "strength": "essential",
+       "status": "proposed"
+      }
+     ],
+     "status": "proposed"
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "SOCI.G8.NATURA.HISTORICAL_SITES_AND_MON.SITES.M_G8_HS_PLACE",
+     "skill": "SOCI.G8.NATURA.HISTORICAL_SITES_AND_MON.SITES",
+     "error": "Places a site in the wrong country.",
+     "example": {
+      "question": "In which country is Great Zimbabwe?",
+      "wrong_answer": "Egypt",
+      "correct_answer": "Zimbabwe"
+     },
+     "cause": "The child mixes up two ideas that sound alike or are taught close together.",
+     "reveals": "Offer \"Egypt\" next to the right answer in a new question and ask the child to choose.",
+     "help": "Find the sites on a map of Africa.",
+     "feedback": "Great Zimbabwe is in Zimbabwe. The Pyramids of Giza are in Egypt.",
+     "source": "To confirm by a teacher: history and the accounts of early humans and peoples are told differently by different sources; the author wrote the commonly taught version.",
+     "status": "draft"
+    },
+    {
+     "code": "SOCI.G8.NATURA.HISTORICAL_SITES_AND_MON.SITES.M_G8_HS_USELESS",
+     "skill": "SOCI.G8.NATURA.HISTORICAL_SITES_AND_MON.SITES",
+     "error": "Says historical sites have no use.",
+     "example": {
+      "question": "Why are historical sites important?",
+      "wrong_answer": "They have no use today",
+      "correct_answer": "They show our history and bring visitors"
+     },
+     "cause": "The child mixes up two ideas that sound alike or are taught close together.",
+     "reveals": "Offer \"They have no use today\" next to the right answer in a new question and ask the child to choose.",
+     "help": "Ask what we would lose without them.",
+     "feedback": "Sites show a people's history and attract visitors.",
+     "source": "To confirm by a teacher: history and the accounts of early humans and peoples are told differently by different sources; the author wrote the commonly taught version.",
+     "status": "draft"
+    },
+    {
+     "code": "SOCI.G8.NATURA.HISTORICAL_SITES_AND_MON.SITES.M_G8_HS_CONSERVE",
+     "skill": "SOCI.G8.NATURA.HISTORICAL_SITES_AND_MON.SITES",
+     "error": "Picks an action that damages a site.",
+     "example": {
+      "question": "How should visitors behave at a historical site?",
+      "wrong_answer": "Climb the walls and write names",
+      "correct_answer": "Follow the guide and leave things as they are"
+     },
+     "cause": "The child mixes up two ideas that sound alike or are taught close together.",
+     "reveals": "Offer \"Climb the walls and write names\" next to the right answer in a new question and ask the child to choose.",
+     "help": "Ask what happens when everyone writes on a wall.",
+     "feedback": "Visitors follow the rules and leave a site as they found it.",
+     "source": "To confirm by a teacher: history and the accounts of early humans and peoples are told differently by different sources; the author wrote the commonly taught version.",
+     "status": "draft"
+    }
+   ],
    "rubric_indicators": [
     "SOCI.G8.RUBRIC.4.1",
     "SOCI.G8.RUBRIC.4.2",
@@ -1177,8 +2389,96 @@
      "indicator": "SOCI.G8.RUBRIC.5.2"
     }
    ],
-   "skills": [],
-   "misconceptions": [],
+   "skills": [
+    {
+     "code": "SOCI.G8.POLITI.THE_CONSTITUTION_OF_KENY.CONSTITUTION",
+     "name": "Say what the Constitution of Kenya contains, the three arms of government and the principles of leadership and integrity",
+     "outcomes": [
+      "SOCI.G8.POLITI.THE_CONSTITUTION_OF_KENY.a",
+      "SOCI.G8.POLITI.THE_CONSTITUTION_OF_KENY.b",
+      "SOCI.G8.POLITI.THE_CONSTITUTION_OF_KENY.c"
+     ],
+     "mastery": "The child says the Constitution was promulgated on 27 August 2010, has 18 chapters (the Bill of Rights is Chapter 4 and Leadership and Integrity is Chapter 6), names the three arms (the Legislature makes laws, the Executive carries them out, the Judiciary interprets them and settles disputes) and the principles of leadership (selection on merit, objectivity, selfless service, integrity, accountability, discipline). Evidence rule: at least four of the last five fresh questions right across at least two question forms, and no repeated pick of the same misconception.",
+     "question_forms": [
+      "pick the arm for a task",
+      "pick the chapter",
+      "pick a principle of leadership",
+      "find the false step in a learner's answer"
+     ],
+     "thinking": [
+      "recall",
+      "reasoning"
+     ],
+     "horeb_skill_ids": [],
+     "prerequisites": [
+      {
+       "requires": "SOCI.G7.POLITI.THE_CONSTITUTION_OF_KENY.CK_IMPORTANCE",
+       "kind": "skill",
+       "reason": "Grade 7 Social Studies taught it first. Proposed, to confirm by a teacher.",
+       "strength": "essential",
+       "status": "proposed"
+      },
+      {
+       "requires": "SOCI.G7.POLITI.THE_CONSTITUTION_OF_KENY.CK_VALUES",
+       "kind": "skill",
+       "reason": "Grade 7 Social Studies taught it first. Proposed, to confirm by a teacher.",
+       "strength": "essential",
+       "status": "proposed"
+      }
+     ],
+     "status": "proposed"
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "SOCI.G8.POLITI.THE_CONSTITUTION_OF_KENY.CONSTITUTION.M_G8_CN_ARM",
+     "skill": "SOCI.G8.POLITI.THE_CONSTITUTION_OF_KENY.CONSTITUTION",
+     "error": "Gives a task to the wrong arm of government.",
+     "example": {
+      "question": "Which arm interprets the law and settles disputes?",
+      "wrong_answer": "The Legislature",
+      "correct_answer": "The Judiciary"
+     },
+     "cause": "The child mixes up two ideas that sound alike or are taught close together.",
+     "reveals": "Offer \"The Legislature\" next to the right answer in a new question and ask the child to choose.",
+     "help": "Link each arm to one verb: make, carry out, interpret.",
+     "feedback": "The Legislature makes laws, the Executive carries them out, and the Judiciary interprets them.",
+     "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
+     "status": "draft"
+    },
+    {
+     "code": "SOCI.G8.POLITI.THE_CONSTITUTION_OF_KENY.CONSTITUTION.M_G8_CN_CHAPTER",
+     "skill": "SOCI.G8.POLITI.THE_CONSTITUTION_OF_KENY.CONSTITUTION",
+     "error": "Gives the wrong chapter.",
+     "example": {
+      "question": "Which chapter is the Bill of Rights?",
+      "wrong_answer": "Chapter 6",
+      "correct_answer": "Chapter 4"
+     },
+     "cause": "The child mixes up two ideas that sound alike or are taught close together.",
+     "reveals": "Offer \"Chapter 6\" next to the right answer in a new question and ask the child to choose.",
+     "help": "Look at the table of contents.",
+     "feedback": "The Bill of Rights is Chapter 4 and Leadership and Integrity is Chapter 6.",
+     "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
+     "status": "draft"
+    },
+    {
+     "code": "SOCI.G8.POLITI.THE_CONSTITUTION_OF_KENY.CONSTITUTION.M_G8_CN_PRINCIPLE",
+     "skill": "SOCI.G8.POLITI.THE_CONSTITUTION_OF_KENY.CONSTITUTION",
+     "error": "Picks a quality that is not a principle of leadership.",
+     "example": {
+      "question": "Which is a principle of leadership and integrity?",
+      "wrong_answer": "Selection on tribe",
+      "correct_answer": "Selection on merit"
+     },
+     "cause": "The child mixes up two ideas that sound alike or are taught close together.",
+     "reveals": "Offer \"Selection on tribe\" next to the right answer in a new question and ask the child to choose.",
+     "help": "Ask what a fair leader looks for.",
+     "feedback": "Leaders are chosen on merit, and serve selflessly with integrity and accountability.",
+     "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
+     "status": "draft"
+    }
+   ],
    "rubric_indicators": [
     "SOCI.G8.RUBRIC.5.1",
     "SOCI.G8.RUBRIC.5.2",
@@ -1261,8 +2561,89 @@
      "indicator": "SOCI.G8.RUBRIC.5.3"
     }
    ],
-   "skills": [],
-   "misconceptions": [],
+   "skills": [
+    {
+     "code": "SOCI.G8.POLITI.HUMAN_RIGHTS.HUMAN_RIGHTS",
+     "name": "Outline the rights of the child in Kenya and who protects them",
+     "outcomes": [
+      "SOCI.G8.POLITI.HUMAN_RIGHTS.a",
+      "SOCI.G8.POLITI.HUMAN_RIGHTS.c",
+      "SOCI.G8.POLITI.HUMAN_RIGHTS.d"
+     ],
+     "mastery": "The child names rights of the child in Kenya (a name and nationality, free and compulsory basic education, health care, food and shelter, protection from abuse, neglect, child labour and harmful practices), names who protects them (parents, teachers, the chief, the police, the children's department, Childline Kenya 116) and says rights come with responsibilities. Evidence rule: at least four of the last five fresh questions right across at least two question forms, and no repeated pick of the same misconception.",
+     "question_forms": [
+      "pick a right of the child",
+      "pick who protects a child",
+      "pick the responsible action",
+      "find the false step in a learner's answer"
+     ],
+     "thinking": [
+      "recall",
+      "reasoning"
+     ],
+     "horeb_skill_ids": [],
+     "prerequisites": [
+      {
+       "requires": "SOCI.G7.POLITI.HUMAN_RIGHTS.HR_CLASSIFY",
+       "kind": "skill",
+       "reason": "Grade 7 Social Studies taught it first. Proposed, to confirm by a teacher.",
+       "strength": "essential",
+       "status": "proposed"
+      }
+     ],
+     "status": "proposed"
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "SOCI.G8.POLITI.HUMAN_RIGHTS.HUMAN_RIGHTS.M_G8_HR8_DUTY",
+     "skill": "SOCI.G8.POLITI.HUMAN_RIGHTS.HUMAN_RIGHTS",
+     "error": "Says rights come without responsibilities.",
+     "example": {
+      "question": "What comes with a right?",
+      "wrong_answer": "Nothing, rights are free of duties",
+      "correct_answer": "A responsibility to respect the rights of others"
+     },
+     "cause": "The child mixes up two ideas that sound alike or are taught close together.",
+     "reveals": "Offer \"Nothing, rights are free of duties\" next to the right answer in a new question and ask the child to choose.",
+     "help": "Ask what happens if everyone uses their right to noise.",
+     "feedback": "Every right comes with a responsibility to respect others' rights.",
+     "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
+     "status": "draft"
+    },
+    {
+     "code": "SOCI.G8.POLITI.HUMAN_RIGHTS.HUMAN_RIGHTS.M_G8_HR8_CHILD",
+     "skill": "SOCI.G8.POLITI.HUMAN_RIGHTS.HUMAN_RIGHTS",
+     "error": "Says only adults have rights.",
+     "example": {
+      "question": "Do children have rights in Kenya?",
+      "wrong_answer": "No, only adults",
+      "correct_answer": "Yes, such as education, health care and protection"
+     },
+     "cause": "The child mixes up two ideas that sound alike or are taught close together.",
+     "reveals": "Offer \"No, only adults\" next to the right answer in a new question and ask the child to choose.",
+     "help": "Ask the child to name a right they have.",
+     "feedback": "Children have rights, including free basic education, health care and protection.",
+     "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
+     "status": "draft"
+    },
+    {
+     "code": "SOCI.G8.POLITI.HUMAN_RIGHTS.HUMAN_RIGHTS.M_G8_HR8_REPORT",
+     "skill": "SOCI.G8.POLITI.HUMAN_RIGHTS.HUMAN_RIGHTS",
+     "error": "Says a child who is abused should keep quiet.",
+     "example": {
+      "question": "A child is being abused. What should a person do?",
+      "wrong_answer": "Keep quiet to avoid trouble",
+      "correct_answer": "Tell a trusted adult or call Childline 116"
+     },
+     "cause": "The child mixes up two ideas that sound alike or are taught close together.",
+     "reveals": "Offer \"Keep quiet to avoid trouble\" next to the right answer in a new question and ask the child to choose.",
+     "help": "Ask who they could tell.",
+     "feedback": "Report to a trusted adult, the chief, the police or call Childline Kenya 116.",
+     "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
+     "status": "draft"
+    }
+   ],
    "rubric_indicators": [
     "SOCI.G8.RUBRIC.5.1",
     "SOCI.G8.RUBRIC.5.2",
@@ -1347,8 +2728,96 @@
      "status": "kicd_verified"
     }
    ],
-   "skills": [],
-   "misconceptions": [],
+   "skills": [
+    {
+     "code": "SOCI.G8.POLITI.CITIZENSHIP.CITIZENSHIP",
+     "name": "Name the qualities of a global citizen and the ways East African citizens live in harmony",
+     "outcomes": [
+      "SOCI.G8.POLITI.CITIZENSHIP.a",
+      "SOCI.G8.POLITI.CITIZENSHIP.b",
+      "SOCI.G8.POLITI.CITIZENSHIP.c"
+     ],
+     "mastery": "The child names qualities (respect for others, care for the environment, concern for justice, being informed and taking part), says Wangari Maathai won the Nobel Peace Prize in 2004 for the Green Belt Movement, names members of the East African Community (Kenya, Uganda, Tanzania, Rwanda, Burundi, South Sudan, the Democratic Republic of the Congo and Somalia) and factors for harmony (respect, a shared language in Kiswahili, trade, peaceful talks). Evidence rule: at least four of the last five fresh questions right across at least two question forms, and no repeated pick of the same misconception.",
+     "question_forms": [
+      "pick the quality of a global citizen",
+      "pick a member of the East African Community",
+      "pick a factor for harmony",
+      "find the false step in a learner's answer"
+     ],
+     "thinking": [
+      "recall",
+      "reasoning"
+     ],
+     "horeb_skill_ids": [],
+     "prerequisites": [
+      {
+       "requires": "SOCI.G7.POLITI.CITIZENSHIP.CZ_GLOBAL",
+       "kind": "skill",
+       "reason": "Grade 7 Social Studies taught it first. Proposed, to confirm by a teacher.",
+       "strength": "essential",
+       "status": "proposed"
+      },
+      {
+       "requires": "SOCI.G7.POLITI.CITIZENSHIP.CZ_CITIZEN",
+       "kind": "skill",
+       "reason": "Grade 7 Social Studies taught it first. Proposed, to confirm by a teacher.",
+       "strength": "essential",
+       "status": "proposed"
+      }
+     ],
+     "status": "proposed"
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "SOCI.G8.POLITI.CITIZENSHIP.CITIZENSHIP.M_G8_CZ8_LOCAL",
+     "skill": "SOCI.G8.POLITI.CITIZENSHIP.CITIZENSHIP",
+     "error": "Says a global citizen cares only about their own country.",
+     "example": {
+      "question": "Which is a quality of a global citizen?",
+      "wrong_answer": "Caring only about my own country",
+      "correct_answer": "Respecting other cultures and caring for the environment"
+     },
+     "cause": "The child mixes up two ideas that sound alike or are taught close together.",
+     "reveals": "Offer \"Caring only about my own country\" next to the right answer in a new question and ask the child to choose.",
+     "help": "Ask what a river polluted upstream does downstream.",
+     "feedback": "A global citizen respects others and cares for the shared world.",
+     "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
+     "status": "draft"
+    },
+    {
+     "code": "SOCI.G8.POLITI.CITIZENSHIP.CITIZENSHIP.M_G8_CZ8_EAC",
+     "skill": "SOCI.G8.POLITI.CITIZENSHIP.CITIZENSHIP",
+     "error": "Names a country that is not in the East African Community.",
+     "example": {
+      "question": "Which country is a member of the East African Community?",
+      "wrong_answer": "Egypt",
+      "correct_answer": "Rwanda"
+     },
+     "cause": "The child mixes up two ideas that sound alike or are taught close together.",
+     "reveals": "Offer \"Egypt\" next to the right answer in a new question and ask the child to choose.",
+     "help": "Look at a map of East Africa.",
+     "feedback": "Members include Kenya, Uganda, Tanzania, Rwanda, Burundi, South Sudan, the Democratic Republic of the Congo and Somalia.",
+     "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
+     "status": "draft"
+    },
+    {
+     "code": "SOCI.G8.POLITI.CITIZENSHIP.CITIZENSHIP.M_G8_CZ8_HARMONY",
+     "skill": "SOCI.G8.POLITI.CITIZENSHIP.CITIZENSHIP",
+     "error": "Names a factor that does not help harmony.",
+     "example": {
+      "question": "Which helps citizens of East Africa live in harmony?",
+      "wrong_answer": "Looking down on other groups",
+      "correct_answer": "Respect and a shared language, Kiswahili"
+     },
+     "cause": "The child mixes up two ideas that sound alike or are taught close together.",
+     "reveals": "Offer \"Looking down on other groups\" next to the right answer in a new question and ask the child to choose.",
+     "help": "Ask what unites a market in a border town.",
+     "feedback": "Respect, trade, and a shared language such as Kiswahili help people live in harmony.",
+     "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
+     "status": "draft"
+    }
+   ],
    "rubric_indicators": [
     "SOCI.G8.RUBRIC.5.1",
     "SOCI.G8.RUBRIC.5.2",

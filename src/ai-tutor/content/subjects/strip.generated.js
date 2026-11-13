@@ -104,4 +104,7 @@ export default {
   'socialstudies_g7_e.js': 'socialstudies_g7_signed.js',
   'socialstudies_g7_f.js': 'socialstudies_g7_signed.js',
   'socialstudies_g7_g.js': 'socialstudies_g7_signed.js',
+  'socialstudies_g8_a.js': 'socialstudies_g8_signed.js',
+  'socialstudies_g8_b.js': 'socialstudies_g8_signed.js',
+  'socialstudies_g8_c.js': 'socialstudies_g8_signed.js',
 };

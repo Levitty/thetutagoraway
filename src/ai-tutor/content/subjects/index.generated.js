@@ -25,6 +25,7 @@ import socialstudies_g4 from './socialstudies_g4.js';
 import socialstudies_g5 from './socialstudies_g5.js';
 import socialstudies_g6 from './socialstudies_g6.js';
 import socialstudies_g7 from './socialstudies_g7.js';
+import socialstudies_g8 from './socialstudies_g8.js';
 export const ENTRIES = [
   agriculture_g4,
   agriculture_g5,
@@ -52,4 +53,5 @@ export const ENTRIES = [
   socialstudies_g5,
   socialstudies_g6,
   socialstudies_g7,
+  socialstudies_g8,
 ];
