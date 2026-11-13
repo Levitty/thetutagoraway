@@ -199,62 +199,62 @@ Read the question, the right answer and what a child is told after a wrong one. 
 
 Skill `SARUFI.T1_NOMINO.NOMINO`, outcome `a`, form direct, rung 1.
 
-**Q:** Chagua neno linalokamilisha sentensi. "Bibi alituletea ___ tamu."
-Options: **embe** | jana | alikuja | kubwa
+**Q:** Chagua neno linalokamilisha sentensi. "Baba amenunua ___ mpya."
+Options: jana | amelima | **gari** | nzuri
 - If a child answers "jana": "Haraka" na "jana" ni vielezi: vinaonyesha jinsi au wakati. Nomino hutaja mtu, mnyama, mahali au kitu.
-- If a child answers "alikuja": Nomino ni jina la mtu, mnyama, mahali au kitu. "Anapika" ni kitenzi, kinaonyesha kitendo.
+- If a child answers "amelima": Nomino ni jina la mtu, mnyama, mahali au kitu. "Anapika" ni kitenzi, kinaonyesha kitendo.
 
 ### kiswahili4.nomino.gap
 
 Skill `SARUFI.T1_NOMINO.NOMINO`, outcome `b`, form direct, rung 2.
 
-**Q:** Andika nomino inayokosekana: "Mama ananunua ___ sokoni."
-Answer: **mboga**
-- If a child answers "anapika": Nomino ni jina la mtu, mnyama, mahali au kitu. "Anapika" ni kitenzi, kinaonyesha kitendo.
-- If a child answers "nzuri": Nomino ni jina la kitu chenyewe. "Kubwa" ni kivumishi, kinaeleza kitu kikoje.
+**Q:** Andika nomino inayokosekana: "Nomino ni neno linalotaja ___."
+Answer: **mtu, mnyama, mahali au kitu**
+- If a child answers "kitendo": Nomino ni jina la mtu, mnyama, mahali au kitu. "Anapika" ni kitenzi, kinaonyesha kitendo.
+- If a child answers "sifa": Nomino ni jina la kitu chenyewe. "Kubwa" ni kivumishi, kinaeleza kitu kikoje.
 
 ### kiswahili4.nomino.spot
 
 Skill `SARUFI.T1_NOMINO.NOMINO`, outcome `c`, form spot, rung 3.
 
 **Q:** Mugambi aliandika sentensi nne kuhusu nomino. Moja ina kosa.
-Steps: Wanafunzi wanasoma vitabu darasani. / **Baba amenunua nzuri mpya.** / Nomino ni neno linalotaja mtu, mnyama, mahali au kitu. / Mama ananunua mboga sokoni.
+Steps: Mkulima anapanda mahindi shambani. / Tulikunywa maji baridi baada ya mchezo. / Bibi alituletea embe tamu. / **Juma anapenda kucheza mrefu uwanjani.**
 - If a child answers "Step 1": Step 1 is right. Keep checking the steps after it.
-- If a child answers "Step 3": Step 3 follows on correctly from the step before it. The mistake happens earlier.
+- If a child answers "Step 2": Step 2 is right. Keep checking the steps after it.
 
 ### kiswahili4.nomino.tambua.choose
 
 Skill `SARUFI.T1_NOMINO.NOMINO`, outcome `b`, form direct, rung 1.
 
 **Q:** Ni neno lipi ni nomino?
-Options: mzuri | anafundisha | **mwalimu** | polepole
-- If a child answers "mzuri": Nomino ni jina la kitu chenyewe. "Kubwa" ni kivumishi, kinaeleza kitu kikoje.
-- If a child answers "anafundisha": Nomino ni jina la mtu, mnyama, mahali au kitu. "Anapika" ni kitenzi, kinaonyesha kitendo.
+Options: kubwa | haraka | **kitabu** | soma
+- If a child answers "kubwa": Nomino ni jina la kitu chenyewe. "Kubwa" ni kivumishi, kinaeleza kitu kikoje.
+- If a child answers "haraka": "Haraka" na "jana" ni vielezi: vinaonyesha jinsi au wakati. Nomino hutaja mtu, mnyama, mahali au kitu.
 
 ### kiswahili4.vitenzi.choose
 
 Skill `SARUFI.T1_VITENZI.VITENZI`, outcome `a`, form direct, rung 1.
 
 **Q:** Chagua neno linalokamilisha sentensi. "Wakulima ___ mahindi shambani."
-Options: mengi | shamba | **wanapanda** | mapema
+Options: mapema | mengi | **wanapanda** | shamba
+- If a child answers "mapema": "Mapema" ni kielezi cha wakati. Kitenzi ni neno la kitendo, kama "wanapanda".
 - If a child answers "mengi": Kitenzi kinaonyesha kitendo. "Kitamu" ni kivumishi, kinaeleza chakula kikoje.
-- If a child answers "shamba": Kitenzi kinaonyesha kitendo: anacheza. "Uwanja" ni nomino, ni jina la mahali.
 
 ### kiswahili4.vitenzi.gap
 
 Skill `SARUFI.T1_VITENZI.VITENZI`, outcome `b`, form direct, rung 2.
 
-**Q:** Andika neno linalokosekana: "Mimi ___ maji kila asubuhi."
-Answer: **ninakunywa**
-- If a child answers "kikombe": Kitenzi kinaonyesha kitendo: anacheza. "Uwanja" ni nomino, ni jina la mahali.
-- If a child answers "baridi": Kitenzi kinaonyesha kitendo. "Kitamu" ni kivumishi, kinaeleza chakula kikoje.
+**Q:** Andika neno linalokosekana: "Neno linaloonyesha kinachofanyika huitwa ___."
+Answer: **kitenzi**
+- If a child answers "nomino": Kitenzi kinaonyesha kitendo: anacheza. "Uwanja" ni nomino, ni jina la mahali.
+- If a child answers "kivumishi": Kitenzi kinaonyesha kitendo. "Kitamu" ni kivumishi, kinaeleza chakula kikoje.
 
 ### kiswahili4.vitenzi.spot
 
 Skill `SARUFI.T1_VITENZI.VITENZI`, outcome `c`, form spot, rung 3.
 
-**Q:** Fatuma aliandika sentensi nne kuhusu vitenzi. Moja ina kosa.
-Steps: Neno linaloonyesha kinachofanyika huitwa kitenzi. / **Mimi baridi maji kila asubuhi.** / Kitenzi ni neno linaloonyesha kitendo. / Wakulima wanapanda mahindi shambani.
+**Q:** Mwende aliandika sentensi nne kuhusu vitenzi. Moja ina kosa.
+Steps: Wakulima wanapanda mahindi shambani. / **Mama jiko chakula jikoni.** / Mimi ninakunywa maji kila asubuhi. / Juma anacheza mpira uwanjani.
 - If a child answers "Step 1": Step 1 is right. Keep checking the steps after it.
 - If a child answers "Step 3": Step 3 follows on correctly from the step before it. The mistake happens earlier.
 
@@ -263,7 +263,7 @@ Steps: Neno linaloonyesha kinachofanyika huitwa kitenzi. / **Mimi baridi maji ki
 Skill `SARUFI.T1_VITENZI.VITENZI`, outcome `b`, form direct, rung 1.
 
 **Q:** Ni neno lipi ni kitenzi?
-Options: pamoja | **tunakula** | kitamu | chakula
+Options: pamoja | kitamu | chakula | **tunakula**
 - If a child answers "pamoja": "Mapema" ni kielezi cha wakati. Kitenzi ni neno la kitendo, kama "wanapanda".
 - If a child answers "kitamu": Kitenzi kinaonyesha kitendo. "Kitamu" ni kivumishi, kinaeleza chakula kikoje.
 
@@ -271,26 +271,26 @@ Options: pamoja | **tunakula** | kitamu | chakula
 
 Skill `SARUFI.T1_VIVUMISHI.VIVUMISHI`, outcome `a`, form direct, rung 1.
 
-**Q:** Chagua neno linalokamilisha sentensi. "Miti ___ imeota karibu na mto."
-Options: mito | mrefu | imekua | **mirefu**
-- If a child answers "mito": Kivumishi kinaeleza nomino ikoje, kama "mdogo". "Mwalimu" ni nomino.
-- If a child answers "mrefu": Kivumishi hubadilika kulingana na nomino: mtoto mdogo, watoto wadogo; kiti kikubwa, viti vikubwa.
+**Q:** Chagua neno linalokamilisha sentensi. "Kiti ___ kiko darasani."
+Options: kitabu | mkubwa | kimeanguka | **kikubwa**
+- If a child answers "kitabu": Kivumishi kinaeleza nomino ikoje, kama "mdogo". "Mwalimu" ni nomino.
+- If a child answers "mkubwa": Kivumishi hubadilika kulingana na nomino: mtoto mdogo, watoto wadogo; kiti kikubwa, viti vikubwa.
 
 ### kiswahili4.vivumishi.gap
 
 Skill `SARUFI.T1_VIVUMISHI.VIVUMISHI`, outcome `b`, form direct, rung 2.
 
-**Q:** Andika kivumishi kinachokosekana: "Mti ___ umeanguka shambani."
-Answer: **mrefu**
-- If a child answers "mkulima": Kivumishi kinaeleza nomino ikoje, kama "mdogo". "Mwalimu" ni nomino.
-- If a child answers "umekatwa": Kivumishi kinaeleza nomino ikoje: nyumba nzuri. "Inaonekana" ni kitenzi.
+**Q:** Andika kivumishi kinachokosekana: "Kiti ___ kiko darasani."
+Answer: **kikubwa**
+- If a child answers "kitabu": Kivumishi kinaeleza nomino ikoje, kama "mdogo". "Mwalimu" ni nomino.
+- If a child answers "kimeanguka": Kivumishi kinaeleza nomino ikoje: nyumba nzuri. "Inaonekana" ni kitenzi.
 
 ### kiswahili4.vivumishi.spot
 
 Skill `SARUFI.T1_VIVUMISHI.VIVUMISHI`, outcome `c`, form spot, rung 3.
 
-**Q:** Naliaka aliandika sentensi nne kuhusu vivumishi. Moja ina kosa.
-Steps: **Kiti mkubwa kiko darasani.** / Miti mirefu imeota karibu na mto. / Mtoto mdogo anacheza uwanjani. / Mwalimu mwema alitufundisha jana.
+**Q:** Chebet aliandika sentensi nne kuhusu vivumishi. Moja ina kosa.
+Steps: **Kiti kitabu kiko darasani.** / Mti mrefu umeanguka shambani. / Kivumishi ni neno linaloeleza nomino ikoje. / Nyumba nzuri ina bustani.
 - If a child answers "Step 2": Step 2 follows on correctly from the step before it. The mistake happens earlier.
 - If a child answers "Step 3": Step 3 follows on correctly from the step before it. The mistake happens earlier.
 
@@ -298,89 +298,89 @@ Steps: **Kiti mkubwa kiko darasani.** / Miti mirefu imeota karibu na mto. / Mtot
 
 Skill `SARUFI.T1_VIVUMISHI.VIVUMISHI`, outcome `b`, form direct, rung 1.
 
-**Q:** Ni neno lipi ni kivumishi: "Maembe matamu yameiva shambani."
-Options: Maembe | shambani | yameiva | **matamu**
-- If a child answers "Maembe": Kivumishi kinaeleza nomino ikoje, kama "mdogo". "Mwalimu" ni nomino.
-- If a child answers "shambani": Kivumishi kinaeleza nomino ikoje, kama "mdogo". "Mwalimu" ni nomino.
+**Q:** Ni neno lipi ni kivumishi: "Kitabu kizuri kiko mezani."
+Options: **kizuri** | kiko | Kitabu | mezani
+- If a child answers "kiko": Kivumishi kinaeleza nomino ikoje: nyumba nzuri. "Inaonekana" ni kitenzi.
+- If a child answers "Kitabu": Kivumishi kinaeleza nomino ikoje, kama "mdogo". "Mwalimu" ni nomino.
 
 ### kiswahili4.viwakilishi.choose
 
 Skill `SARUFI.T2_VIWAKILISHI.VIWAKILISHI`, outcome `a`, form direct, rung 1.
 
-**Q:** Chagua kiwakilishi kinachokamilisha sentensi. "___ wanaocheza mbali ni wanafunzi wetu."
-Options: Yule | **Wale** | Hawa | Wanafunzi
-- If a child answers "Yule": "Yeye" ni mtu mmoja. "Wao" ni watu wengi. Juma na Otieno ni wawili, kwa hiyo ni "wao".
-- If a child answers "Hawa": "Huyu" na "hawa" hutumika kwa walio karibu. "Yule" na "wale" hutumika kwa walio mbali.
+**Q:** Chagua kiwakilishi kinachokamilisha sentensi. "___ ni marafiki zangu, wamesimama karibu nami."
+Options: Wanafunzi | Wale | Huyu | **Hawa**
+- If a child answers "Wanafunzi": Kiwakilishi husimama mahali pa nomino ili tusirudie jina: "Yeye" badala ya "Wanjiru".
+- If a child answers "Wale": "Huyu" na "hawa" hutumika kwa walio karibu. "Yule" na "wale" hutumika kwa walio mbali.
 
 ### kiswahili4.viwakilishi.gap
 
 Skill `SARUFI.T2_VIWAKILISHI.VIWAKILISHI`, outcome `b`, form direct, rung 2.
 
-**Q:** Andika kiwakilishi kinachokosekana: "___ anayesimama mbali kule ni baba yangu."
-Answer: **Yule**
-- If a child answers "Baba": Kiwakilishi husimama mahali pa nomino ili tusirudie jina: "Yeye" badala ya "Wanjiru".
-- If a child answers "Huyu": "Huyu" na "hawa" hutumika kwa walio karibu. "Yule" na "wale" hutumika kwa walio mbali.
+**Q:** Andika kiwakilishi kinachokosekana: "Angalia, ___ ni mwalimu wetu, ameketi karibu nami."
+Answer: **Huyu**
+- If a child answers "Mwalimu": Kiwakilishi husimama mahali pa nomino ili tusirudie jina: "Yeye" badala ya "Wanjiru".
+- If a child answers "Yule": "Huyu" na "hawa" hutumika kwa walio karibu. "Yule" na "wale" hutumika kwa walio mbali.
 
 ### kiswahili4.viwakilishi.spot
 
 Skill `SARUFI.T2_VIWAKILISHI.VIWAKILISHI`, outcome `c`, form spot, rung 3.
 
-**Q:** Asha aliandika sentensi nne kuhusu viwakilishi. Moja ina kosa.
-Steps: Angalia, Huyu ni mwalimu wetu, ameketi karibu nami. / Yule anayesimama mbali kule ni baba yangu. / Juma na Otieno ni marafiki. Wao wanacheza pamoja. / **Yule wanaocheza mbali ni wanafunzi wetu.**
+**Q:** Cherono aliandika sentensi nne kuhusu viwakilishi. Moja ina kosa.
+Steps: Juma na Otieno ni marafiki. Wao wanacheza pamoja. / **Angalia, Mwalimu ni mwalimu wetu, ameketi karibu nami.** / Wale wanaocheza mbali ni wanafunzi wetu. / Yule anayesimama mbali kule ni baba yangu.
 - If a child answers "Step 1": Step 1 is right. Keep checking the steps after it.
-- If a child answers "Step 2": Step 2 is right. Keep checking the steps after it.
+- If a child answers "Step 3": Step 3 follows on correctly from the step before it. The mistake happens earlier.
 
 ### kiswahili4.viwakilishi.tambua.choose
 
 Skill `SARUFI.T2_VIWAKILISHI.VIWAKILISHI`, outcome `b`, form direct, rung 1.
 
-**Q:** Ni neno lipi ni kiwakilishi: "Wanafunzi wamefika. Wao wanasoma kitabu."
-Options: Wanafunzi | wamefika | **Wao** | kitabu
-- If a child answers "Wanafunzi": Kiwakilishi husimama mahali pa nomino ili tusirudie jina: "Yeye" badala ya "Wanjiru".
-- If a child answers "wamefika": Kiwakilishi husimama mahali pa nomino ili tusirudie jina: "Yeye" badala ya "Wanjiru".
+**Q:** Ni neno lipi ni kiwakilishi: "Otieno ni mwalimu. Yeye anafundisha darasani."
+Options: mwalimu | Otieno | anafundisha | **Yeye**
+- If a child answers "mwalimu": Kiwakilishi husimama mahali pa nomino ili tusirudie jina: "Yeye" badala ya "Wanjiru".
+- If a child answers "Otieno": Kiwakilishi husimama mahali pa nomino ili tusirudie jina: "Yeye" badala ya "Wanjiru".
 
 ### kiswahili4.vielezi.choose
 
 Skill `SARUFI.T2_VIELEZI.VIELEZI`, outcome `a`, form direct, rung 1.
 
-**Q:** Chagua neno linalokamilisha sentensi. "Baba alirudi nyumbani ___ jioni."
-Options: nyumba | nzuri | gari | **jana**
-- If a child answers "nyumba": "Haraka" ni kielezi cha jinsi. "Barabara" ni nomino.
-- If a child answers "nzuri": Kielezi kinaonyesha jinsi kitendo kinavyofanyika: wanaimba vizuri. "Nzuri" ni kivumishi cha nomino.
+**Q:** Chagua neno linalokamilisha sentensi. "Mtoto alikimbia ___ kuelekea nyumbani."
+Options: **haraka** | barabara | mtoto | mrefu
+- If a child answers "barabara": "Haraka" ni kielezi cha jinsi. "Barabara" ni nomino.
+- If a child answers "mtoto": "Haraka" ni kielezi cha jinsi. "Barabara" ni nomino.
 
 ### kiswahili4.vielezi.gap
 
 Skill `SARUFI.T2_VIELEZI.VIELEZI`, outcome `b`, form direct, rung 2.
 
-**Q:** Andika kielezi kinachokosekana: "Wanafunzi wanaimba ___ darasani."
-Answer: **vizuri**
-- If a child answers "nzuri": Kielezi kinaonyesha jinsi kitendo kinavyofanyika: wanaimba vizuri. "Nzuri" ni kivumishi cha nomino.
-- If a child answers "wimbo": "Haraka" ni kielezi cha jinsi. "Barabara" ni nomino.
+**Q:** Andika kielezi kinachokosekana: "Tutaenda sokoni ___ asubuhi na mapema."
+Answer: **kesho**
+- If a child answers "kubwa": Kielezi kinaonyesha jinsi kitendo kinavyofanyika: wanaimba vizuri. "Nzuri" ni kivumishi cha nomino.
+- If a child answers "soko": "Haraka" ni kielezi cha jinsi. "Barabara" ni nomino.
 
 ### kiswahili4.vielezi.spot
 
 Skill `SARUFI.T2_VIELEZI.VIELEZI`, outcome `c`, form spot, rung 3.
 
-**Q:** Njeri aliandika sentensi nne kuhusu vielezi. Moja ina kosa.
-Steps: Mama anazungumza kwa upole na jirani. / Bibi anatembea polepole kwa sababu ni mzee. / **Mtoto alikimbia mrefu kuelekea nyumbani.** / Wageni wanaishi mbali ya mji huu.
-- If a child answers "Step 1": Step 1 is right. Keep checking the steps after it.
-- If a child answers "Step 2": Step 2 is right. Keep checking the steps after it.
+**Q:** Amina aliandika sentensi nne kuhusu vielezi. Moja ina kosa.
+Steps: **Bibi anatembea mrefu kwa sababu ni mzee.** / Mtoto alikimbia haraka kuelekea nyumbani. / Wanafunzi wanaimba vizuri darasani. / Baba alirudi nyumbani jana jioni.
+- If a child answers "Step 2": Step 2 follows on correctly from the step before it. The mistake happens earlier.
+- If a child answers "Step 3": Step 3 follows on correctly from the step before it. The mistake happens earlier.
 
 ### kiswahili4.vielezi.aina.choose
 
 Skill `SARUFI.T2_VIELEZI.VIELEZI`, outcome `a`, form direct, rung 1.
 
-**Q:** Chagua jibu sahihi. "Kielezi "polepole" kinaonyesha ___."
-Options: idadi | **jinsi** | mahali | wakati
-- If a child answers "idadi": Vielezi vya wakati (jana, kesho), mahali (hapa, mbali) na jinsi (polepole, haraka) vinajibu "lini", "wapi" na "vipi".
-- If a child answers "mahali": Vielezi vya wakati (jana, kesho), mahali (hapa, mbali) na jinsi (polepole, haraka) vinajibu "lini", "wapi" na "vipi".
+**Q:** Chagua jibu sahihi. "Kielezi "hapa" kinaonyesha ___."
+Options: wakati | jinsi | **mahali** | idadi
+- If a child answers "wakati": Vielezi vya wakati (jana, kesho), mahali (hapa, mbali) na jinsi (polepole, haraka) vinajibu "lini", "wapi" na "vipi".
+- If a child answers "jinsi": Vielezi vya wakati (jana, kesho), mahali (hapa, mbali) na jinsi (polepole, haraka) vinajibu "lini", "wapi" na "vipi".
 
 ### kiswahili4.vielezi.aina.spot
 
 Skill `SARUFI.T2_VIELEZI.VIELEZI`, outcome `a`, form spot, rung 3.
 
-**Q:** Amina aliandika sentensi nne kuhusu aina za vielezi. Moja ina kosa.
-Steps: Kielezi "usiku" kinaonyesha wakati. / **Kielezi "hapa" kinaonyesha jinsi.** / Kielezi "vizuri" kinaonyesha jinsi. / Kielezi "polepole" kinaonyesha jinsi.
+**Q:** Barasa aliandika sentensi nne kuhusu aina za vielezi. Moja ina kosa.
+Steps: Kielezi "vizuri" kinaonyesha jinsi. / **Kielezi "hapa" kinaonyesha jinsi.** / Kielezi "mbali" kinaonyesha mahali. / Kielezi "haraka" kinaonyesha jinsi.
 - If a child answers "Step 1": Step 1 is right. Keep checking the steps after it.
 - If a child answers "Step 3": Step 3 follows on correctly from the step before it. The mistake happens earlier.
 
@@ -389,7 +389,7 @@ Steps: Kielezi "usiku" kinaonyesha wakati. / **Kielezi "hapa" kinaonyesha jinsi.
 Skill `SARUFI.T3_VIUNGANISHI.VIUNGANISHI`, outcome `a`, form direct, rung 1.
 
 **Q:** Chagua kiunganishi kinachofaa. "Mimi ni mdogo, ___ ninapenda kusoma."
-Options: au | ili | **lakini** | kwa sababu
+Options: **lakini** | au | ili | kwa sababu
 - If a child answers "au": Kila kiunganishi kina kazi: "lakini" kinaonyesha kinyume, "kwa sababu" kinatoa sababu, "ili" kinaonyesha kusudi, "na" kinaongeza.
 - If a child answers "ili": Kila kiunganishi kina kazi: "lakini" kinaonyesha kinyume, "kwa sababu" kinatoa sababu, "ili" kinaonyesha kusudi, "na" kinaongeza.
 
@@ -397,44 +397,44 @@ Options: au | ili | **lakini** | kwa sababu
 
 Skill `SARUFI.T3_VIUNGANISHI.VIUNGANISHI`, outcome `b`, form direct, rung 2.
 
-**Q:** Andika kiunganishi kinachokosekana: "Juma ___ Otieno ni marafiki."
-Answer: **na**
-- If a child answers "lakini": Kila kiunganishi kina kazi: "lakini" kinaonyesha kinyume, "kwa sababu" kinatoa sababu, "ili" kinaonyesha kusudi, "na" kinaongeza.
+**Q:** Andika kiunganishi kinachokosekana: "Utakunywa chai ___ maziwa?"
+Answer: **au**
+- If a child answers "ili": Kila kiunganishi kina kazi: "lakini" kinaonyesha kinyume, "kwa sababu" kinatoa sababu, "ili" kinaonyesha kusudi, "na" kinaongeza.
 - If a child answers "kwa sababu": Kila kiunganishi kina kazi: "lakini" kinaonyesha kinyume, "kwa sababu" kinatoa sababu, "ili" kinaonyesha kusudi, "na" kinaongeza.
 
 ### kiswahili4.viunganishi.spot
 
 Skill `SARUFI.T3_VIUNGANISHI.VIUNGANISHI`, outcome `c`, form spot, rung 3.
 
-**Q:** Ochieng aliandika sentensi nne kuhusu viunganishi. Moja ina kosa.
-Steps: Juma na Otieno ni marafiki. / Hatukucheza mpira kwa sababu mvua ilikuwa inanyesha. / Utakunywa chai au maziwa? / **Mama alienda sokoni kwa sababu anunue mboga.**
+**Q:** Chebet aliandika sentensi nne kuhusu viunganishi. Moja ina kosa.
+Steps: Mimi ni mdogo, lakini ninapenda kusoma. / **Mama alienda sokoni lakini anunue mboga.** / huunganisha maneno au sentensi / Alitaka kuogelea, lakini ziwa lilikuwa na mawimbi makali.
 - If a child answers "Step 1": Step 1 is right. Keep checking the steps after it.
-- If a child answers "Step 2": Step 2 is right. Keep checking the steps after it.
+- If a child answers "Step 3": Step 3 follows on correctly from the step before it. The mistake happens earlier.
 
 ### kiswahili4.viunganishi.tambua.choose
 
 Skill `SARUFI.T3_VIUNGANISHI.VIUNGANISHI`, outcome `b`, form direct, rung 1.
 
-**Q:** Ni neno lipi ni kiunganishi: "Baba alinunua mkate pia maziwa."
-Options: mkate | Baba | maziwa | **pia**
-- If a child answers "mkate": Kiunganishi huunganisha maneno au sentensi, kama "na", "lakini" na "kwa sababu". Si nomino wala kitenzi.
-- If a child answers "Baba": Kiunganishi huunganisha maneno au sentensi, kama "na", "lakini" na "kwa sababu". Si nomino wala kitenzi.
+**Q:** Ni neno lipi ni kiunganishi: "Juma na Otieno wanacheza."
+Options: **na** | Juma | wanacheza | Otieno
+- If a child answers "Juma": Kiunganishi huunganisha maneno au sentensi, kama "na", "lakini" na "kwa sababu". Si nomino wala kitenzi.
+- If a child answers "wanacheza": Kiunganishi huunganisha maneno au sentensi, kama "na", "lakini" na "kwa sababu". Si nomino wala kitenzi.
 
 ### kiswahili4.vihusishi.tambua.choose
 
 Skill `SARUFI.T3_VIHUSISHI.VIHUSISHI`, outcome `b`, form direct, rung 1.
 
-**Q:** Ni kihusishi kipi katika sentensi: "Wanafunzi wanasoma ndani ya darasa."
-Options: darasa | Wanafunzi | **ndani ya** | wanasoma
-- If a child answers "darasa": Kihusishi hueleza uhusiano wa nomino na neno lingine, kama "juu ya", "chini ya" na "ndani ya". "Meza" ni nomino.
+**Q:** Ni kihusishi kipi katika sentensi: "Wanafunzi wawili walikaa karibu na mti."
+Options: mti | Wanafunzi | **karibu na** | walikaa
+- If a child answers "mti": Kihusishi hueleza uhusiano wa nomino na neno lingine, kama "juu ya", "chini ya" na "ndani ya". "Meza" ni nomino.
 - If a child answers "Wanafunzi": Kihusishi hueleza uhusiano wa nomino na neno lingine, kama "juu ya", "chini ya" na "ndani ya". "Meza" ni nomino.
 
 ### kiswahili4.vihusishi.tambua.spot
 
 Skill `SARUFI.T3_VIHUSISHI.VIHUSISHI`, outcome `b`, form spot, rung 3.
 
-**Q:** Nyambura aliandika sentensi nne kuhusu vihusishi. Moja ina kosa.
-Steps: **meza** / chini ya / ndani ya / karibu na
+**Q:** Kiprono aliandika sentensi nne kuhusu vihusishi. Moja ina kosa.
+Steps: **kiko** / chini ya / kuliko / karibu na
 - If a child answers "Step 2": Step 2 follows on correctly from the step before it. The mistake happens earlier.
 - If a child answers "Step 3": Step 3 follows on correctly from the step before it. The mistake happens earlier.
 
@@ -442,46 +442,46 @@ Steps: **meza** / chini ya / ndani ya / karibu na
 
 Skill `SARUFI.T3_VIHUSISHI.VIHUSISHI`, outcome `c`, form direct, rung 1.
 
-**Q:** Chagua kihusishi cha "a" kinachofaa. "Milango ___ darasa imefunguliwa."
-Options: **ya** | wa | la | cha
-- If a child answers "wa": Kihusishi cha "a" hubadilika kulingana na ngeli: kitabu cha, vitabu vya, mlango wa, milango ya, jina la, majina ya, nyumba ya.
-- If a child answers "la": Kihusishi cha "a" hubadilika kulingana na ngeli: kitabu cha, vitabu vya, mlango wa, milango ya, jina la, majina ya, nyumba ya.
+**Q:** Chagua kihusishi cha "a" kinachofaa. "Mlango ___ darasa umefunguliwa."
+Options: cha | ya | la | **wa**
+- If a child answers "cha": Kihusishi cha "a" hubadilika kulingana na ngeli: kitabu cha, vitabu vya, mlango wa, milango ya, jina la, majina ya, nyumba ya.
+- If a child answers "ya": Kihusishi cha "a" hubadilika kulingana na ngeli: kitabu cha, vitabu vya, mlango wa, milango ya, jina la, majina ya, nyumba ya.
 
 ### kiswahili4.vihusishi.a.gap
 
 Skill `SARUFI.T3_VIHUSISHI.VIHUSISHI`, outcome `c`, form direct, rung 2.
 
-**Q:** Andika kihusishi kinachokosekana: "Kitabu ___ mwalimu kiko mezani."
-Answer: **cha**
-- If a child answers "wa": Kihusishi cha "a" hubadilika kulingana na ngeli: kitabu cha, vitabu vya, mlango wa, milango ya, jina la, majina ya, nyumba ya.
-- If a child answers "ya": Kihusishi cha "a" hubadilika kulingana na ngeli: kitabu cha, vitabu vya, mlango wa, milango ya, jina la, majina ya, nyumba ya.
+**Q:** Andika kihusishi kinachokosekana: "Mtoto ___ Atieno anasoma."
+Answer: **wa**
+- If a child answers "cha": Kihusishi cha "a" hubadilika kulingana na ngeli: kitabu cha, vitabu vya, mlango wa, milango ya, jina la, majina ya, nyumba ya.
+- If a child answers "la": Kihusishi cha "a" hubadilika kulingana na ngeli: kitabu cha, vitabu vya, mlango wa, milango ya, jina la, majina ya, nyumba ya.
 
 ### kiswahili4.vihusishi.a.spot
 
 Skill `SARUFI.T3_VIHUSISHI.VIHUSISHI`, outcome `c`, form spot, rung 3.
 
-**Q:** Onyango aliandika sentensi nne kuhusu kihusishi cha "a". Moja ina kosa.
-Steps: Vitabu vya mwalimu viko mezani. / Nyumba ya bibi iko kijijini. / Mlango wa darasa umefunguliwa. / **Kitabu wa mwalimu kiko mezani.**
-- If a child answers "Step 1": Step 1 is right. Keep checking the steps after it.
-- If a child answers "Step 2": Step 2 is right. Keep checking the steps after it.
+**Q:** Zawadi aliandika sentensi nne kuhusu kihusishi cha "a". Moja ina kosa.
+Steps: **Nyumba cha bibi iko kijijini.** / Jina la mtoto ni Achieng. / Milango ya darasa imefunguliwa. / Kitabu cha mwalimu kiko mezani.
+- If a child answers "Step 2": Step 2 follows on correctly from the step before it. The mistake happens earlier.
+- If a child answers "Step 3": Step 3 follows on correctly from the step before it. The mistake happens earlier.
 
 ### kiswahili4.vihusishi.mahali.choose
 
 Skill `SARUFI.T3_VIHUSISHI.VIHUSISHI`, outcome `c`, form direct, rung 2.
 
 **Q:** Chagua neno linalokamilisha sentensi. "Mizizi ya mti iko ___ ya ardhi, si juu yake."
-Options: **chini** | nje | juu | mbali
-- If a child answers "nje": "Ndani ya" na "nje ya" ni vinyume. "Juu ya" na "chini ya" ni vinyume pia.
+Options: juu | mbali | nje | **chini**
 - If a child answers "juu": "Ndani ya" na "nje ya" ni vinyume. "Juu ya" na "chini ya" ni vinyume pia.
+- If a child answers "mbali": "Ndani ya" na "nje ya" ni vinyume. "Juu ya" na "chini ya" ni vinyume pia.
 
 ### kiswahili4.vihisishi.choose
 
 Skill `SARUFI.T3_VIHISISHI.VIHISISHI`, outcome `a`, form direct, rung 1.
 
-**Q:** Chagua kihisishi kinachofaa. "Umemgonga mwenzako kwa bahati mbaya. Utasema ___!"
-Options: Karibu | Kwaheri | **Samahani** | Hongera
-- If a child answers "Karibu": Kihisishi huonyesha hisia: "Pole!" kwa huzuni, "Hongera!" kwa mafanikio, "Samahani!" ukikosea, "Karibu!" kwa mgeni.
+**Q:** Chagua kihisishi kinachofaa. "Umeona nyoka mkubwa ghafla. Utasema ___!"
+Options: Kwaheri | Karibu | Hongera | **Lo**
 - If a child answers "Kwaheri": Kihisishi huonyesha hisia: "Pole!" kwa huzuni, "Hongera!" kwa mafanikio, "Samahani!" ukikosea, "Karibu!" kwa mgeni.
+- If a child answers "Karibu": Kihisishi huonyesha hisia: "Pole!" kwa huzuni, "Hongera!" kwa mafanikio, "Samahani!" ukikosea, "Karibu!" kwa mgeni.
 
 ### kiswahili4.vihisishi.gap
 
@@ -496,8 +496,8 @@ Answer: **Pole**
 
 Skill `SARUFI.T3_VIHISISHI.VIHISISHI`, outcome `c`, form spot, rung 3.
 
-**Q:** Akinyi aliandika sentensi nne kuhusu vihisishi. Moja ina kosa.
-Steps: Umemgonga mwenzako kwa bahati mbaya. Utasema Samahani! / Mgeni amefika nyumbani kwenu. Utasema Karibu! / **Umeona nyoka mkubwa ghafla. Utasema Hongera!** / Kihisishi ni neno linaloonyesha hisia.
+**Q:** Muthoni aliandika sentensi nne kuhusu vihisishi. Moja ina kosa.
+Steps: Umeona nyoka mkubwa ghafla. Utasema Lo! / Mwenzako ameanguka na kuumia. Utasema Pole! / **Umemgonga mwenzako kwa bahati mbaya. Utasema Karibu!** / Mgeni amefika nyumbani kwenu. Utasema Karibu!
 - If a child answers "Step 1": Step 1 is right. Keep checking the steps after it.
 - If a child answers "Step 2": Step 2 is right. Keep checking the steps after it.
 
@@ -506,63 +506,63 @@ Steps: Umemgonga mwenzako kwa bahati mbaya. Utasema Samahani! / Mgeni amefika ny
 Skill `SARUFI.T3_VIHISISHI.VIHISISHI`, outcome `b`, form direct, rung 1.
 
 **Q:** Ni kihisishi kipi katika sentensi: "Lo! Nyoka ameingia nyumbani."
-Options: ameingia | **Lo** | nyumbani | Nyoka
+Options: ameingia | Nyoka | **Lo** | nyumbani
 - If a child answers "ameingia": Kihisishi kinaonyesha hisia na huandikwa pamoja na alama ya hisi (!). "Juma" ni nomino.
-- If a child answers "nyumbani": Kihisishi kinaonyesha hisia na huandikwa pamoja na alama ya hisi (!). "Juma" ni nomino.
+- If a child answers "Nyoka": Kihisishi kinaonyesha hisia na huandikwa pamoja na alama ya hisi (!). "Juma" ni nomino.
 
 ### kiswahili4.vihisishi.tambua.spot
 
 Skill `SARUFI.T3_VIHISISHI.VIHISISHI`, outcome `d`, form spot, rung 3.
 
-**Q:** Nyambura aliandika sentensi nne kuhusu vihisishi. Moja ina kosa.
-Steps: Oyee / **Mvua** / Samahani / Lo
-- If a child answers "Step 1": Step 1 is right. Keep checking the steps after it.
+**Q:** Mutua aliandika sentensi nne kuhusu vihisishi. Moja ina kosa.
+Steps: **ameanguka** / Ala / Samahani / Hongera
+- If a child answers "Step 2": Step 2 follows on correctly from the step before it. The mistake happens earlier.
 - If a child answers "Step 3": Step 3 follows on correctly from the step before it. The mistake happens earlier.
 
 ### kiswahili4.awa.upatanisho.choose
 
 Skill `SARUFI.T4_NGELI_YA_A_WA.A_WA`, outcome `a`, form direct, rung 1.
 
-**Q:** Chagua kiambishi kinachokosekana. "Paka mmoja ___meruka ukutani."
-Options: ki | **a** | wa | i
-- If a child answers "ki": Watu na wanyama wote wako katika ngeli ya A-WA: paka anaruka, ndege wanaruka.
-- If a child answers "wa": Nomino za ngeli ya A-WA hutumia a- kwa umoja na wa- kwa wingi: mtoto anaimba, watoto wanaimba.
+**Q:** Chagua kiambishi kinachokosekana. "Watoto wawili ___naimba."
+Options: a | vi | i | **wa**
+- If a child answers "a": Nomino za ngeli ya A-WA hutumia a- kwa umoja na wa- kwa wingi: mtoto anaimba, watoto wanaimba.
+- If a child answers "vi": Watu na wanyama wote wako katika ngeli ya A-WA: paka anaruka, ndege wanaruka.
 
 ### kiswahili4.awa.upatanisho.gap
 
 Skill `SARUFI.T4_NGELI_YA_A_WA.A_WA`, outcome `a`, form direct, rung 2.
 
-**Q:** Andika kiambishi kinachokosekana: "Mama yangu ___napika."
-Answer: **a**
-- If a child answers "wa": Nomino za ngeli ya A-WA hutumia a- kwa umoja na wa- kwa wingi: mtoto anaimba, watoto wanaimba.
-- If a child answers "u": Watu na wanyama wote wako katika ngeli ya A-WA: paka anaruka, ndege wanaruka.
+**Q:** Andika kiambishi kinachokosekana: "Wazazi wangu ___napika."
+Answer: **wa**
+- If a child answers "a": Nomino za ngeli ya A-WA hutumia a- kwa umoja na wa- kwa wingi: mtoto anaimba, watoto wanaimba.
+- If a child answers "i": Watu na wanyama wote wako katika ngeli ya A-WA: paka anaruka, ndege wanaruka.
 
 ### kiswahili4.awa.upatanisho.spot
 
 Skill `SARUFI.T4_NGELI_YA_A_WA.A_WA`, outcome `c`, form spot, rung 3.
 
 **Q:** Naliaka aliandika sentensi nne kuhusu ngeli ya A-WA. Moja ina kosa.
-Steps: **Mwalimu wetu linafundisha.** / Mama yangu anapika. / Watoto wawili wanaimba. / Wazazi wangu wanapika.
-- If a child answers "Step 2": Step 2 follows on correctly from the step before it. The mistake happens earlier.
-- If a child answers "Step 3": Step 3 follows on correctly from the step before it. The mistake happens earlier.
+Steps: Watoto wawili wanaimba. / Mwalimu wetu anafundisha. / Mtoto mmoja anaimba. / **Ndege watatu zimeruka juu.**
+- If a child answers "Step 1": Step 1 is right. Keep checking the steps after it.
+- If a child answers "Step 2": Step 2 is right. Keep checking the steps after it.
 
 ### kiswahili4.awa.nomino.choose
 
 Skill `SARUFI.T4_NGELI_YA_A_WA.A_WA`, outcome `b`, form direct, rung 1.
 
 **Q:** Ni nomino ipi ni ya ngeli ya A-WA?
-Options: **ndege** | embe | mwiko | kikombe
-- If a child answers "embe": Ngeli ya A-WA ni ya watu na wanyama. Kitabu ni kitu, kiko katika ngeli ya KI-VI.
-- If a child answers "mwiko": Ngeli ya A-WA ni ya watu na wanyama. Kitabu ni kitu, kiko katika ngeli ya KI-VI.
+Options: kiazi | mkate | jino | **mbwa**
+- If a child answers "kiazi": Ngeli ya A-WA ni ya watu na wanyama. Kitabu ni kitu, kiko katika ngeli ya KI-VI.
+- If a child answers "mkate": Ngeli ya A-WA ni ya watu na wanyama. Kitabu ni kitu, kiko katika ngeli ya KI-VI.
 
 ### kiswahili4.awa.wingi.choose
 
 Skill `SARUFI.T4_NGELI_YA_A_WA.A_WA`, outcome `c`, form direct, rung 1.
 
-**Q:** Chagua wingi sahihi. "Mkulima mmoja, ___ wawili."
-Options: mikulima | vikulima | mkulima | **wakulima**
-- If a child answers "mikulima": Wingi wa mtoto ni watoto, wa mwalimu ni walimu: m- hubadilika kuwa wa-.
-- If a child answers "vikulima": Wingi wa mtoto ni watoto, wa mwalimu ni walimu: m- hubadilika kuwa wa-.
+**Q:** Chagua wingi sahihi. "Mvulana mmoja, ___ wawili."
+Options: mivulana | vivulana | **wavulana** | mvulana
+- If a child answers "mivulana": Wingi wa mtoto ni watoto, wa mwalimu ni walimu: m- hubadilika kuwa wa-.
+- If a child answers "vivulana": Wingi wa mtoto ni watoto, wa mwalimu ni walimu: m- hubadilika kuwa wa-.
 
 ### kiswahili4.awa.wingi.gap
 
@@ -577,8 +577,8 @@ Answer: **watoto**
 
 Skill `SARUFI.T4_NGELI_YA_A_WA.A_WA`, outcome `c`, form spot, rung 3.
 
-**Q:** Wafula aliandika sentensi nne kuhusu wingi wa nomino za A-WA. Moja ina kosa.
-Steps: Mwanafunzi mmoja, wanafunzi wawili. / Mkulima mmoja, wakulima wawili. / Mtoto mmoja, watoto wawili. / **Mwalimu mmoja, mwalimu wawili.**
+**Q:** Naliaka aliandika sentensi nne kuhusu wingi wa nomino za A-WA. Moja ina kosa.
+Steps: Mwanafunzi mmoja, wanafunzi wawili. / Mvulana mmoja, wavulana wawili. / Mgeni mmoja, wageni wawili. / **Mwalimu mmoja, milimu wawili.**
 - If a child answers "Step 1": Step 1 is right. Keep checking the steps after it.
 - If a child answers "Step 2": Step 2 is right. Keep checking the steps after it.
 
@@ -586,26 +586,26 @@ Steps: Mwanafunzi mmoja, wanafunzi wawili. / Mkulima mmoja, wakulima wawili. / M
 
 Skill `SARUFI.T5_NGELI_YA_U_I.U_I`, outcome `a`, form direct, rung 1.
 
-**Q:** Chagua kiambishi kinachokosekana. "Mlango mmoja ___mefunguka."
-Options: wa | a | **u** | i
-- If a child answers "wa": Mti na mlango ni vitu, si watu. Vinatumia u- na i-, si a- na wa-.
+**Q:** Chagua kiambishi kinachokosekana. "Milango yote ___mefunguka."
+Options: u | **i** | a | wa
+- If a child answers "u": Wingi wa mti ni miti, na kiambishi ni i-: miti imeanguka.
 - If a child answers "a": Mti na mlango ni vitu, si watu. Vinatumia u- na i-, si a- na wa-.
 
 ### kiswahili4.ui.upatanisho.gap
 
 Skill `SARUFI.T5_NGELI_YA_U_I.U_I`, outcome `a`, form direct, rung 2.
 
-**Q:** Andika kiambishi kinachokosekana: "Mlango mmoja ___mefunguka."
-Answer: **u**
-- If a child answers "i": Nomino za U-I hutumia u- kwa umoja: mti umeanguka. Hutumia i- kwa wingi: miti imeanguka.
-- If a child answers "a": Mti na mlango ni vitu, si watu. Vinatumia u- na i-, si a- na wa-.
+**Q:** Andika kiambishi kinachokosekana: "Mikono yangu ___naumia."
+Answer: **i**
+- If a child answers "u": Wingi wa mti ni miti, na kiambishi ni i-: miti imeanguka.
+- If a child answers "wa": Mti na mlango ni vitu, si watu. Vinatumia u- na i-, si a- na wa-.
 
 ### kiswahili4.ui.upatanisho.spot
 
 Skill `SARUFI.T5_NGELI_YA_U_I.U_I`, outcome `c`, form spot, rung 3.
 
-**Q:** Baraka aliandika sentensi nne kuhusu ngeli ya U-I. Moja ina kosa.
-Steps: Mikoba mipya imeraruka. / **Mkono wangu wanaumia.** / Milango yote imefunguka. / Miti miwili imeanguka.
+**Q:** Nyambura aliandika sentensi nne kuhusu ngeli ya U-I. Moja ina kosa.
+Steps: Miti miwili imeanguka. / **Mti mmoja imeanguka.** / Mikono yangu inaumia. / Mlango mmoja umefunguka.
 - If a child answers "Step 1": Step 1 is right. Keep checking the steps after it.
 - If a child answers "Step 3": Step 3 follows on correctly from the step before it. The mistake happens earlier.
 
@@ -614,34 +614,34 @@ Steps: Mikoba mipya imeraruka. / **Mkono wangu wanaumia.** / Milango yote imefun
 Skill `SARUFI.T5_NGELI_YA_U_I.U_I`, outcome `b`, form direct, rung 1.
 
 **Q:** Ni nomino ipi ni ya ngeli ya U-I?
-Options: **mlango** | tunda | mwalimu | kiti
-- If a child answers "tunda": Mtoto ni mtu, kwa hiyo yuko A-WA. Mti ni kitu na uko U-I.
-- If a child answers "mwalimu": Mtoto ni mtu, kwa hiyo yuko A-WA. Mti ni kitu na uko U-I.
+Options: mgeni | embe | **mkono** | kikombe
+- If a child answers "mgeni": Mtoto ni mtu, kwa hiyo yuko A-WA. Mti ni kitu na uko U-I.
+- If a child answers "embe": Mtoto ni mtu, kwa hiyo yuko A-WA. Mti ni kitu na uko U-I.
 
 ### kiswahili4.ui.wingi.choose
 
 Skill `SARUFI.T5_NGELI_YA_U_I.U_I`, outcome `c`, form direct, rung 1.
 
-**Q:** Chagua wingi sahihi. "Mlango mmoja, ___ miwili."
-Options: wamlango | **milango** | mamlango | mlango
-- If a child answers "wamlango": Wingi wa nomino za U-I huanza kwa mi-: mti-miti, mlango-milango, mkono-mikono, mguu-miguu.
-- If a child answers "mamlango": Wingi wa nomino za U-I huanza kwa mi-: mti-miti, mlango-milango, mkono-mikono, mguu-miguu.
+**Q:** Chagua wingi sahihi. "Mguu mmoja, ___ miwili."
+Options: **miguu** | wamguu | mamguu | mguu
+- If a child answers "wamguu": Wingi wa nomino za U-I huanza kwa mi-: mti-miti, mlango-milango, mkono-mikono, mguu-miguu.
+- If a child answers "mamguu": Wingi wa nomino za U-I huanza kwa mi-: mti-miti, mlango-milango, mkono-mikono, mguu-miguu.
 
 ### kiswahili4.ui.wingi.gap
 
 Skill `SARUFI.T5_NGELI_YA_U_I.U_I`, outcome `c`, form direct, rung 2.
 
-**Q:** Andika wingi wa nomino: "Mguu mmoja, ___ miwili."
-Answer: **miguu**
-- If a child answers "mamguu": Wingi wa nomino za U-I huanza kwa mi-: mti-miti, mlango-milango, mkono-mikono, mguu-miguu.
-- If a child answers "wamguu": Wingi wa nomino za U-I huanza kwa mi-: mti-miti, mlango-milango, mkono-mikono, mguu-miguu.
+**Q:** Andika wingi wa nomino: "Mwiko mmoja, ___ miwili."
+Answer: **miiko**
+- If a child answers "mawiko": Wingi wa nomino za U-I huanza kwa mi-: mti-miti, mlango-milango, mkono-mikono, mguu-miguu.
+- If a child answers "wawiko": Wingi wa nomino za U-I huanza kwa mi-: mti-miti, mlango-milango, mkono-mikono, mguu-miguu.
 
 ### kiswahili4.ui.wingi.spot
 
 Skill `SARUFI.T5_NGELI_YA_U_I.U_I`, outcome `c`, form spot, rung 3.
 
-**Q:** Kamau aliandika sentensi nne kuhusu wingi wa nomino za U-I. Moja ina kosa.
-Steps: Mti mmoja, miti miwili. / **Mwiko mmoja, mwiko miwili.** / Mlango mmoja, milango miwili. / Mguu mmoja, miguu miwili.
+**Q:** Halima aliandika sentensi nne kuhusu wingi wa nomino za U-I. Moja ina kosa.
+Steps: Mwiko mmoja, miiko miwili. / **Mti mmoja, mamti miwili.** / Mlango mmoja, milango miwili. / Mkoba mmoja, mikoba miwili.
 - If a child answers "Step 1": Step 1 is right. Keep checking the steps after it.
 - If a child answers "Step 3": Step 3 follows on correctly from the step before it. The mistake happens earlier.
 
@@ -649,27 +649,27 @@ Steps: Mti mmoja, miti miwili. / **Mwiko mmoja, mwiko miwili.** / Mlango mmoja, 
 
 Skill `SARUFI.T6_NGELI_YA_LI_YA.LI_YA`, outcome `a`, form direct, rung 1.
 
-**Q:** Chagua kiambishi kinachokosekana. "Macho yangu ___naumia."
-Options: **ya** | li | ki | i
+**Q:** Chagua kiambishi kinachokosekana. "Mawe mawili ___meanguka."
+Options: li | **ya** | i | ki
 - If a child answers "li": Wingi wa jiwe ni mawe, na kiambishi ni ya-: mawe yameanguka.
-- If a child answers "ki": Nomino za LI-YA hutumia li- kwa umoja na ya- kwa wingi, si ki-, vi-, u- wala i-.
+- If a child answers "i": Nomino za LI-YA hutumia li- kwa umoja na ya- kwa wingi, si ki-, vi-, u- wala i-.
 
 ### kiswahili4.liya.upatanisho.gap
 
 Skill `SARUFI.T6_NGELI_YA_LI_YA.LI_YA`, outcome `a`, form direct, rung 2.
 
-**Q:** Andika kiambishi kinachokosekana: "Jiwe moja ___meanguka."
-Answer: **li**
-- If a child answers "ya": Nomino za LI-YA hutumia li- kwa umoja: jiwe limeanguka. Hutumia ya- kwa wingi: mawe yameanguka.
+**Q:** Andika kiambishi kinachokosekana: "Mawe mawili ___meanguka."
+Answer: **ya**
+- If a child answers "li": Wingi wa jiwe ni mawe, na kiambishi ni ya-: mawe yameanguka.
 - If a child answers "ki": Nomino za LI-YA hutumia li- kwa umoja na ya- kwa wingi, si ki-, vi-, u- wala i-.
 
 ### kiswahili4.liya.upatanisho.spot
 
 Skill `SARUFI.T6_NGELI_YA_LI_YA.LI_YA`, outcome `c`, form spot, rung 3.
 
-**Q:** Kamau aliandika sentensi nne kuhusu ngeli ya LI-YA. Moja ina kosa.
-Steps: **Macho yangu inaumia.** / Madirisha yote yamefunguka. / Matunda haya yameiva. / Dirisha moja limefunguka.
-- If a child answers "Step 2": Step 2 follows on correctly from the step before it. The mistake happens earlier.
+**Q:** Mwende aliandika sentensi nne kuhusu ngeli ya LI-YA. Moja ina kosa.
+Steps: Jiwe moja limeanguka. / **Mawe mawili imeanguka.** / Madirisha yote yamefunguka. / Matunda haya yameiva.
+- If a child answers "Step 1": Step 1 is right. Keep checking the steps after it.
 - If a child answers "Step 3": Step 3 follows on correctly from the step before it. The mistake happens earlier.
 
 ### kiswahili4.liya.nomino.choose
@@ -677,51 +677,51 @@ Steps: **Macho yangu inaumia.** / Madirisha yote yamefunguka. / Matunda haya yam
 Skill `SARUFI.T6_NGELI_YA_LI_YA.LI_YA`, outcome `b`, form direct, rung 1.
 
 **Q:** Ni nomino ipi ni ya ngeli ya LI-YA?
-Options: mkulima | **embe** | kisu | mkoba
-- If a child answers "mkulima": Kiti kiko katika ngeli ya KI-VI (viti). Jiwe liko LI-YA (mawe).
-- If a child answers "kisu": Kiti kiko katika ngeli ya KI-VI (viti). Jiwe liko LI-YA (mawe).
+Options: mgeni | kitabu | **tunda** | mlango
+- If a child answers "mgeni": Kiti kiko katika ngeli ya KI-VI (viti). Jiwe liko LI-YA (mawe).
+- If a child answers "kitabu": Kiti kiko katika ngeli ya KI-VI (viti). Jiwe liko LI-YA (mawe).
 
 ### kiswahili4.liya.wingi.choose
 
 Skill `SARUFI.T6_NGELI_YA_LI_YA.LI_YA`, outcome `c`, form direct, rung 1.
 
-**Q:** Chagua wingi sahihi. "Jina moja, ___ mawili."
-Options: vijina | **majina** | mijina | jina
-- If a child answers "vijina": Nomino za LI-YA zinazoanza na ji- hupoteza ji- katika wingi: jiwe-mawe, jicho-macho. Nyingine hupata ma-: tunda-matunda.
-- If a child answers "mijina": Nomino za LI-YA zinazoanza na ji- hupoteza ji- katika wingi: jiwe-mawe, jicho-macho. Nyingine hupata ma-: tunda-matunda.
+**Q:** Chagua wingi sahihi. "Jiwe moja, ___ matatu."
+Options: jiwe | **mawe** | majiwe | viwe
+- If a child answers "jiwe": Nomino za LI-YA zinazoanza na ji- hupoteza ji- katika wingi: jiwe-mawe, jicho-macho. Nyingine hupata ma-: tunda-matunda.
+- If a child answers "majiwe": Nomino za LI-YA zinazoanza na ji- hupoteza ji- katika wingi: jiwe-mawe, jicho-macho. Nyingine hupata ma-: tunda-matunda.
 
 ### kiswahili4.liya.wingi.gap
 
 Skill `SARUFI.T6_NGELI_YA_LI_YA.LI_YA`, outcome `c`, form direct, rung 2.
 
-**Q:** Andika wingi wa nomino: "Jina moja, ___ mawili."
-Answer: **majina**
-- If a child answers "vijina": Nomino za LI-YA zinazoanza na ji- hupoteza ji- katika wingi: jiwe-mawe, jicho-macho. Nyingine hupata ma-: tunda-matunda.
-- If a child answers "mijina": Nomino za LI-YA zinazoanza na ji- hupoteza ji- katika wingi: jiwe-mawe, jicho-macho. Nyingine hupata ma-: tunda-matunda.
+**Q:** Andika wingi wa nomino: "Jiwe moja, ___ matatu."
+Answer: **mawe**
+- If a child answers "majiwe": Nomino za LI-YA zinazoanza na ji- hupoteza ji- katika wingi: jiwe-mawe, jicho-macho. Nyingine hupata ma-: tunda-matunda.
+- If a child answers "viwe": Nomino za LI-YA zinazoanza na ji- hupoteza ji- katika wingi: jiwe-mawe, jicho-macho. Nyingine hupata ma-: tunda-matunda.
 
 ### kiswahili4.liya.wingi.spot
 
 Skill `SARUFI.T6_NGELI_YA_LI_YA.LI_YA`, outcome `c`, form spot, rung 3.
 
-**Q:** Juma aliandika sentensi nne kuhusu wingi wa nomino za LI-YA. Moja ina kosa.
-Steps: **Tunda moja, tunda mengi.** / Jina moja, majina mawili. / Jiwe moja, mawe matatu. / Dirisha moja, madirisha manne.
-- If a child answers "Step 2": Step 2 follows on correctly from the step before it. The mistake happens earlier.
-- If a child answers "Step 3": Step 3 follows on correctly from the step before it. The mistake happens earlier.
+**Q:** Mutua aliandika sentensi nne kuhusu wingi wa nomino za LI-YA. Moja ina kosa.
+Steps: Embe moja, maembe matano. / Dirisha moja, madirisha manne. / Jicho moja, macho mawili. / **Jina moja, mijina mawili.**
+- If a child answers "Step 1": Step 1 is right. Keep checking the steps after it.
+- If a child answers "Step 2": Step 2 is right. Keep checking the steps after it.
 
 ### kiswahili4.kivi.upatanisho.choose
 
 Skill `SARUFI.T7_NGELI_YA_KI_VI.KI_VI`, outcome `a`, form direct, rung 1.
 
 **Q:** Chagua kiambishi kinachokosekana. "Vitabu vyangu ___meraruka."
-Options: i | ya | ki | **vi**
-- If a child answers "i": Nomino za KI-VI hutumia ki- kwa umoja na vi- kwa wingi, si li-, ya-, u- wala i-.
+Options: ya | i | ki | **vi**
 - If a child answers "ya": Nomino za KI-VI hutumia ki- kwa umoja na vi- kwa wingi, si li-, ya-, u- wala i-.
+- If a child answers "i": Nomino za KI-VI hutumia ki- kwa umoja na vi- kwa wingi, si li-, ya-, u- wala i-.
 
 ### kiswahili4.kivi.upatanisho.gap
 
 Skill `SARUFI.T7_NGELI_YA_KI_VI.KI_VI`, outcome `a`, form direct, rung 2.
 
-**Q:** Andika kiambishi kinachokosekana: "Vikombe viwili ___mevunjika."
+**Q:** Andika kiambishi kinachokosekana: "Vitabu vyangu ___meraruka."
 Answer: **vi**
 - If a child answers "ki": Wingi wa kiti ni viti, na kiambishi ni vi-: viti vimeanguka.
 - If a child answers "ya": Nomino za KI-VI hutumia ki- kwa umoja na vi- kwa wingi, si li-, ya-, u- wala i-.
@@ -730,9 +730,9 @@ Answer: **vi**
 
 Skill `SARUFI.T7_NGELI_YA_KI_VI.KI_VI`, outcome `c`, form spot, rung 3.
 
-**Q:** Asha aliandika sentensi nne kuhusu ngeli ya KI-VI. Moja ina kosa.
-Steps: Vitabu vyangu vimeraruka. / **Viti viwili yameanguka.** / Kitabu changu kimeraruka. / Kikombe kimoja kimevunjika.
-- If a child answers "Step 1": Step 1 is right. Keep checking the steps after it.
+**Q:** Chebet aliandika sentensi nne kuhusu ngeli ya KI-VI. Moja ina kosa.
+Steps: **Kiti kimoja limeanguka.** / Viti viwili vimeanguka. / Vikombe viwili vimevunjika. / Kitabu changu kimeraruka.
+- If a child answers "Step 2": Step 2 follows on correctly from the step before it. The mistake happens earlier.
 - If a child answers "Step 3": Step 3 follows on correctly from the step before it. The mistake happens earlier.
 
 ### kiswahili4.kivi.nomino.choose
@@ -740,43 +740,43 @@ Steps: Vitabu vyangu vimeraruka. / **Viti viwili yameanguka.** / Kitabu changu k
 Skill `SARUFI.T7_NGELI_YA_KI_VI.KI_VI`, outcome `b`, form direct, rung 1.
 
 **Q:** Ni nomino ipi ni ya ngeli ya KI-VI?
-Options: embe | mkulima | **kiatu** | mkoba
-- If a child answers "embe": Kikombe-vikombe ni KI-VI. Jiwe-mawe ni LI-YA.
-- If a child answers "mkulima": Kikombe-vikombe ni KI-VI. Jiwe-mawe ni LI-YA.
+Options: jiwe | **kitabu** | mti | mtoto
+- If a child answers "jiwe": Kikombe-vikombe ni KI-VI. Jiwe-mawe ni LI-YA.
+- If a child answers "mti": Kikombe-vikombe ni KI-VI. Jiwe-mawe ni LI-YA.
 
 ### kiswahili4.kivi.wingi.choose
 
 Skill `SARUFI.T7_NGELI_YA_KI_VI.KI_VI`, outcome `c`, form direct, rung 1.
 
-**Q:** Chagua wingi sahihi. "Kiatu kimoja, ___ viwili."
-Options: kiatu | vikiatu | miatu | **viatu**
-- If a child answers "kiatu": Katika wingi, ki- hubadilika kuwa vi-: kitabu-vitabu, kiatu-viatu, kikombe-vikombe.
-- If a child answers "vikiatu": Katika wingi, ki- hubadilika kuwa vi-: kitabu-vitabu, kiatu-viatu, kikombe-vikombe.
+**Q:** Chagua wingi sahihi. "Kiti kimoja, ___ vinne."
+Options: kiti | miti | **viti** | vikiti
+- If a child answers "kiti": Katika wingi, ki- hubadilika kuwa vi-: kitabu-vitabu, kiatu-viatu, kikombe-vikombe.
+- If a child answers "miti": Katika wingi, ki- hubadilika kuwa vi-: kitabu-vitabu, kiatu-viatu, kikombe-vikombe.
 
 ### kiswahili4.kivi.wingi.gap
 
 Skill `SARUFI.T7_NGELI_YA_KI_VI.KI_VI`, outcome `c`, form direct, rung 2.
 
-**Q:** Andika wingi wa nomino: "Kitabu kimoja, ___ viwili."
-Answer: **vitabu**
-- If a child answers "vikitabu": Katika wingi, ki- hubadilika kuwa vi-: kitabu-vitabu, kiatu-viatu, kikombe-vikombe.
-- If a child answers "mitabu": Katika wingi, ki- hubadilika kuwa vi-: kitabu-vitabu, kiatu-viatu, kikombe-vikombe.
+**Q:** Andika wingi wa nomino: "Kisu kimoja, ___ viwili."
+Answer: **visu**
+- If a child answers "vikisu": Katika wingi, ki- hubadilika kuwa vi-: kitabu-vitabu, kiatu-viatu, kikombe-vikombe.
+- If a child answers "misu": Katika wingi, ki- hubadilika kuwa vi-: kitabu-vitabu, kiatu-viatu, kikombe-vikombe.
 
 ### kiswahili4.kivi.wingi.spot
 
 Skill `SARUFI.T7_NGELI_YA_KI_VI.KI_VI`, outcome `c`, form spot, rung 3.
 
-**Q:** Kiprono aliandika sentensi nne kuhusu wingi wa nomino za KI-VI. Moja ina kosa.
-Steps: **Kiti kimoja, kiti vinne.** / Kijiko kimoja, vijiko vitano. / Kisu kimoja, visu viwili. / Kiatu kimoja, viatu viwili.
-- If a child answers "Step 2": Step 2 follows on correctly from the step before it. The mistake happens earlier.
-- If a child answers "Step 3": Step 3 follows on correctly from the step before it. The mistake happens earlier.
+**Q:** Nyaboke aliandika sentensi nne kuhusu wingi wa nomino za KI-VI. Moja ina kosa.
+Steps: Kikombe kimoja, vikombe vitatu. / Kiatu kimoja, viatu viwili. / **Kitabu kimoja, vikitabu viwili.** / Kisu kimoja, visu viwili.
+- If a child answers "Step 1": Step 1 is right. Keep checking the steps after it.
+- If a child answers "Step 2": Step 2 is right. Keep checking the steps after it.
 
 ### kiswahili4.lili.upatanisho.choose
 
 Skill `SARUFI.T7_NGELI_YA_LI_LI.LI_LI`, outcome `a`, form direct, rung 1.
 
 **Q:** Chagua kiambishi kinachokosekana. "Jua ___metua jioni."
-Options: ya | i | **li** | u
+Options: **li** | ya | i | u
 - If a child answers "ya": Jua na giza ni nomino za ngeli ya LI-LI: kiambishi ni li-: jua limetoka, giza limeingia.
 - If a child answers "i": Jua na giza ni LI-LI: vinatumia li-.
 
@@ -784,7 +784,7 @@ Options: ya | i | **li** | u
 
 Skill `SARUFI.T7_NGELI_YA_LI_LI.LI_LI`, outcome `a`, form direct, rung 2.
 
-**Q:** Andika kiambishi kinachokosekana: "Giza ___metanda kijijini."
+**Q:** Andika kiambishi kinachokosekana: "Jua ___metua jioni."
 Answer: **li**
 - If a child answers "ya": Jua na giza ni nomino za ngeli ya LI-LI: kiambishi ni li-: jua limetoka, giza limeingia.
 - If a child answers "u": Jua na giza ni LI-LI: vinatumia li-.
@@ -793,8 +793,8 @@ Answer: **li**
 
 Skill `SARUFI.T7_NGELI_YA_LI_LI.LI_LI`, outcome `c`, form spot, rung 3.
 
-**Q:** Halima aliandika sentensi nne kuhusu ngeli ya LI-LI. Moja ina kosa.
-Steps: **Giza imeingia haraka.** / Jua limetoka asubuhi. / Jua linatoa joto jingi. / Giza limetanda kijijini.
+**Q:** Kamau aliandika sentensi nne kuhusu ngeli ya LI-LI. Moja ina kosa.
+Steps: **Giza imeingia haraka.** / Giza linatisha watoto wadogo. / Giza limetanda kijijini. / Jua limetua jioni.
 - If a child answers "Step 2": Step 2 follows on correctly from the step before it. The mistake happens earlier.
 - If a child answers "Step 3": Step 3 follows on correctly from the step before it. The mistake happens earlier.
 
@@ -803,123 +803,123 @@ Steps: **Giza imeingia haraka.** / Jua limetoka asubuhi. / Jua linatoa joto jing
 Skill `SARUFI.T7_NGELI_YA_LI_LI.LI_LI`, outcome `b`, form direct, rung 1.
 
 **Q:** Ni nomino ipi ni ya ngeli ya LI-LI?
-Options: **giza** | mgeni | mwiko | kijiko
-- If a child answers "mgeni": Kati ya nomino hizi, jua na giza ndizo za LI-LI. Mti uko U-I.
-- If a child answers "mwiko": Kati ya nomino hizi, jua na giza ndizo za LI-LI. Mti uko U-I.
+Options: kiatu | mkulima | **jua** | mkoba
+- If a child answers "kiatu": Kati ya nomino hizi, jua na giza ndizo za LI-LI. Mti uko U-I.
+- If a child answers "mkulima": Kati ya nomino hizi, jua na giza ndizo za LI-LI. Mti uko U-I.
 
 ### kiswahili4.mnyambuliko.choose
 
 Skill `SARUFI.T8_MNYAMBULIKO_WA_VITEN.MNYAMBULIKO`, outcome `d`, form direct, rung 1.
 
-**Q:** Chagua kitenzi kinachofaa. "Gauni ___ na fundi."
-Options: **limeshonwa** | limeshona | limeshonea
-- If a child answers "limeshona": Kauli ya kutendwa huonyesha kitu kimefanyiwa kitendo: barua imeandikwa, chai imepikwa.
-- If a child answers "limeshonea": Kutendea (-ia, -ea) ni "kwa ajili ya mtu". Kutendwa (-wa) ni "kinatendwa na mtu".
+**Q:** Chagua kitenzi kinachofaa. "Mkulima ___ mzee shamba."
+Options: anamlima | **anamlimia** | analima | analimwa
+- If a child answers "anamlima": Kauli ya kutendea huonyesha kitendo kinafanyiwa mtu: anawaandikia, anampikia, anamsomea.
+- If a child answers "analima": Kauli ya kutendea huonyesha kitendo kinafanyiwa mtu: anawaandikia, anampikia, anamsomea.
 
 ### kiswahili4.mnyambuliko.gap
 
 Skill `SARUFI.T8_MNYAMBULIKO_WA_VITEN.MNYAMBULIKO`, outcome `d`, form direct, rung 2.
 
-**Q:** Andika kitenzi kinachokosekana: "Fundi ___ Wanjiru gauni."
-Answer: **anamshonea**
-- If a child answers "anashona": Kauli ya kutendea huonyesha kitendo kinafanyiwa mtu: anawaandikia, anampikia, anamsomea.
-- If a child answers "anamshona": Kauli ya kutendea huonyesha kitendo kinafanyiwa mtu: anawaandikia, anampikia, anamsomea.
+**Q:** Andika kitenzi kinachokosekana: "Gauni ___ na fundi."
+Answer: **limeshonwa**
+- If a child answers "limeshona": Kauli ya kutendwa huonyesha kitu kimefanyiwa kitendo: barua imeandikwa, chai imepikwa.
+- If a child answers "limeshonea": Kutendea (-ia, -ea) ni "kwa ajili ya mtu". Kutendwa (-wa) ni "kinatendwa na mtu".
 
 ### kiswahili4.mnyambuliko.spot
 
 Skill `SARUFI.T8_MNYAMBULIKO_WA_VITEN.MNYAMBULIKO`, outcome `d`, form spot, rung 3.
 
-**Q:** Hassan aliandika sentensi nne kuhusu kauli za vitenzi. Moja ina kosa.
-Steps: Barua imeandikwa na mwalimu. / Fundi anamshonea Wanjiru gauni. / **Bibi anasoma mjukuu wake kitabu.** / Shamba limelimwa na wakulima wote.
+**Q:** Fatuma aliandika sentensi nne kuhusu kauli za vitenzi. Moja ina kosa.
+Steps: Gauni limeshonwa na fundi. / **Mwalimu anawaandika wanafunzi barua.** / Shamba limelimwa na wakulima wote. / Mkulima anamlimia mzee shamba.
 - If a child answers "Step 1": Step 1 is right. Keep checking the steps after it.
-- If a child answers "Step 2": Step 2 is right. Keep checking the steps after it.
+- If a child answers "Step 3": Step 3 follows on correctly from the step before it. The mistake happens earlier.
 
 ### kiswahili4.mnyambuliko.kauli.choose
 
 Skill `SARUFI.T8_MNYAMBULIKO_WA_VITEN.MNYAMBULIKO`, outcome `b`, form direct, rung 1.
 
-**Q:** Chagua kauli sahihi. "Kitenzi "anamlimia" kiko katika kauli ya ___."
-Options: **kutendea** | kutenda | kutendwa
-- If a child answers "kutenda": Kutendea (-ia, -ea) ni "kwa ajili ya mtu". Kutendwa (-wa) ni "kinatendwa na mtu".
+**Q:** Chagua kauli sahihi. "Kitenzi "analima" kiko katika kauli ya ___."
+Options: **kutenda** | kutendea | kutendwa
+- If a child answers "kutendea": Kutendea (-ia, -ea) ni "kwa ajili ya mtu". Kutendwa (-wa) ni "kinatendwa na mtu".
 - If a child answers "kutendwa": Kutendea (-ia, -ea) ni "kwa ajili ya mtu". Kutendwa (-wa) ni "kinatendwa na mtu".
 
 ### kiswahili4.mnyambuliko.kauli.gap
 
 Skill `SARUFI.T8_MNYAMBULIKO_WA_VITEN.MNYAMBULIKO`, outcome `c`, form direct, rung 2.
 
-**Q:** Andika kauli: "Kitenzi "analima" kiko katika kauli ya ___."
-Answer: **kutenda**
+**Q:** Andika kauli: "Kitenzi "kinaandikwa" kiko katika kauli ya ___."
+Answer: **kutendwa**
+- If a child answers "kutenda": Kutendea (-ia, -ea) ni "kwa ajili ya mtu". Kutendwa (-wa) ni "kinatendwa na mtu".
 - If a child answers "kutendea": Kutendea (-ia, -ea) ni "kwa ajili ya mtu". Kutendwa (-wa) ni "kinatendwa na mtu".
-- If a child answers "kutendwa": Kutendea (-ia, -ea) ni "kwa ajili ya mtu". Kutendwa (-wa) ni "kinatendwa na mtu".
 
 ### kiswahili4.mnyambuliko.kauli.spot
 
 Skill `SARUFI.T8_MNYAMBULIKO_WA_VITEN.MNYAMBULIKO`, outcome `c`, form spot, rung 3.
 
-**Q:** Wambui aliandika sentensi nne kuhusu kauli za vitenzi. Moja ina kosa.
-Steps: Kitenzi "kinaandikwa" kiko katika kauli ya kutendwa. / **Kitenzi "anaandika" kiko katika kauli ya kutendwa.** / Kitenzi "anamwandikia" kiko katika kauli ya kutendea. / Kitenzi "inapikwa" kiko katika kauli ya kutendwa.
-- If a child answers "Step 1": Step 1 is right. Keep checking the steps after it.
+**Q:** Muthoni aliandika sentensi nne kuhusu kauli za vitenzi. Moja ina kosa.
+Steps: **Kitenzi "anamlimia" kiko katika kauli ya kutendwa.** / Kitenzi "analima" kiko katika kauli ya kutenda. / Kitenzi "wanampikia" kiko katika kauli ya kutendea. / Kitenzi "wanapika" kiko katika kauli ya kutenda.
+- If a child answers "Step 2": Step 2 follows on correctly from the step before it. The mistake happens earlier.
 - If a child answers "Step 3": Step 3 follows on correctly from the step before it. The mistake happens earlier.
 
 ### kiswahili4.vinyume.nomino.choose
 
 Skill `SARUFI.T9_VINYUME_VYA_NOMINO.VINYUME_NOMINO`, outcome `c`, form direct, rung 1.
 
-**Q:** Chagua kinyume sahihi. "Kinyume cha "upendo" ni ___."
-Options: mapenzi | huruma | **chuki** | urafiki
-- If a child answers "mapenzi": "Raha" ina maana sawa na furaha. Kinyume cha furaha ni huzuni.
-- If a child answers "huruma": Kinyume ni neno lenye maana kinyume kabisa: usiku-mchana. "Jioni" iko karibu na usiku lakini si kinyume.
+**Q:** Chagua kinyume sahihi. "Kinyume cha "usiku" ni ___."
+Options: **mchana** | giza | alfajiri | jioni
+- If a child answers "giza": Kinyume ni neno lenye maana kinyume kabisa: usiku-mchana. "Jioni" iko karibu na usiku lakini si kinyume.
+- If a child answers "alfajiri": Kinyume ni neno lenye maana kinyume kabisa: usiku-mchana. "Jioni" iko karibu na usiku lakini si kinyume.
 
 ### kiswahili4.vinyume.nomino.gap
 
 Skill `SARUFI.T9_VINYUME_VYA_NOMINO.VINYUME_NOMINO`, outcome `c`, form direct, rung 2.
 
-**Q:** Andika kinyume: "Kinyume cha "amani" ni ___."
-Answer: **vita**
-- If a child answers "utulivu": "Raha" ina maana sawa na furaha. Kinyume cha furaha ni huzuni.
-- If a child answers "ushindi": Kinyume ni neno lenye maana kinyume kabisa: usiku-mchana. "Jioni" iko karibu na usiku lakini si kinyume.
+**Q:** Andika kinyume: "Kinyume cha "furaha" ni ___."
+Answer: **huzuni**
+- If a child answers "raha": "Raha" ina maana sawa na furaha. Kinyume cha furaha ni huzuni.
+- If a child answers "kicheko": Kinyume ni neno lenye maana kinyume kabisa: usiku-mchana. "Jioni" iko karibu na usiku lakini si kinyume.
 
 ### kiswahili4.vinyume.nomino.spot
 
 Skill `SARUFI.T9_VINYUME_VYA_NOMINO.VINYUME_NOMINO`, outcome `c`, form spot, rung 3.
 
-**Q:** Muthoni aliandika sentensi nne kuhusu vinyume vya nomino. Moja ina kosa.
-Steps: **Kinyume cha "upendo" ni huruma.** / Kinyume cha "amani" ni vita. / Kinyume cha "tajiri" ni maskini. / Kinyume cha "rafiki" ni adui.
-- If a child answers "Step 2": Step 2 follows on correctly from the step before it. The mistake happens earlier.
-- If a child answers "Step 3": Step 3 follows on correctly from the step before it. The mistake happens earlier.
+**Q:** Mwende aliandika sentensi nne kuhusu vinyume vya nomino. Moja ina kosa.
+Steps: Kinyume cha "amani" ni vita. / Kinyume cha "mgeni" ni mwenyeji. / **Kinyume cha "mwanga" ni nuru.** / Kinyume cha "usiku" ni mchana.
+- If a child answers "Step 1": Step 1 is right. Keep checking the steps after it.
+- If a child answers "Step 2": Step 2 is right. Keep checking the steps after it.
 
 ### kiswahili4.vinyume.jozi.choose
 
 Skill `SARUFI.T9_VINYUME_VYA_NOMINO.VINYUME_NOMINO`, outcome `b`, form direct, rung 1.
 
 **Q:** Ni jozi ipi ina maneno yenye maana kinyume?
-Options: **mwanga na giza** | jua na mwezi | taa na kibatari | mwanga na nuru
-- If a child answers "jua na mwezi": Kinyume ni neno lenye maana kinyume kabisa: usiku-mchana. "Jioni" iko karibu na usiku lakini si kinyume.
-- If a child answers "taa na kibatari": Kinyume ni neno lenye maana kinyume kabisa: usiku-mchana. "Jioni" iko karibu na usiku lakini si kinyume.
+Options: daktari na hospitali | kalamu na kitabu | haraka na upesi | **tajiri na maskini**
+- If a child answers "daktari na hospitali": Kinyume ni neno lenye maana kinyume kabisa: usiku-mchana. "Jioni" iko karibu na usiku lakini si kinyume.
+- If a child answers "kalamu na kitabu": Kinyume ni neno lenye maana kinyume kabisa: usiku-mchana. "Jioni" iko karibu na usiku lakini si kinyume.
 
 ### kiswahili4.vinyume.jozi.spot
 
 Skill `SARUFI.T9_VINYUME_VYA_NOMINO.VINYUME_NOMINO`, outcome `b`, form spot, rung 3.
 
-**Q:** Wanjiru aliandika sentensi nne kuhusu vinyume vya nomino. Moja ina kosa.
-Steps: rafiki na adui / **mwanga na nuru** / tajiri na maskini / upendo na chuki
+**Q:** Wafula aliandika sentensi nne kuhusu vinyume vya nomino. Moja ina kosa.
+Steps: amani na vita / mwanga na giza / upendo na chuki / **furaha na shangwe**
 - If a child answers "Step 1": Step 1 is right. Keep checking the steps after it.
-- If a child answers "Step 3": Step 3 follows on correctly from the step before it. The mistake happens earlier.
+- If a child answers "Step 2": Step 2 is right. Keep checking the steps after it.
 
 ### kiswahili4.nyakati.choose
 
 Skill `SARUFI.T10_NYAKATI_NA_HALI.NYAKATI`, outcome `a`, form direct, rung 1.
 
-**Q:** Chagua kiambishi kinachofaa. "Kesho, Wanjiru a___soma kitabu."
-Options: **ta** | na | li
+**Q:** Chagua kiambishi kinachofaa. "Juzi, baba a___nunua gari."
+Options: na | **li** | ta
 - If a child answers "na": Wakati uliopita unatumia -li-: jana alisoma. Uliopo -na-: sasa anasoma. Ujao -ta-: kesho atasoma.
-- If a child answers "li": -li- ni kwa yaliyotokea. -ta- ni kwa yatakayotokea.
+- If a child answers "ta": -li- ni kwa yaliyotokea. -ta- ni kwa yatakayotokea.
 
 ### kiswahili4.nyakati.gap
 
 Skill `SARUFI.T10_NYAKATI_NA_HALI.NYAKATI`, outcome `a`, form direct, rung 2.
 
-**Q:** Andika kiambishi cha wakati: "Juzi, baba a___nunua gari."
+**Q:** Andika kiambishi cha wakati: "Wiki iliyopita, sisi tu___cheza mpira."
 Answer: **li**
 - If a child answers "na": Wakati uliopita unatumia -li-: jana alisoma. Uliopo -na-: sasa anasoma. Ujao -ta-: kesho atasoma.
 - If a child answers "ta": -li- ni kwa yaliyotokea. -ta- ni kwa yatakayotokea.
@@ -928,8 +928,8 @@ Answer: **li**
 
 Skill `SARUFI.T10_NYAKATI_NA_HALI.NYAKATI`, outcome `c`, form spot, rung 3.
 
-**Q:** Akinyi aliandika sentensi nne kuhusu nyakati. Moja ina kosa.
-Steps: Jana, Juma alisoma kitabu. / **Mwaka ujao, wao walisafiri kwa ndege.** / Mwezi ujao, mimi nitaenda Mombasa. / Kesho, Wanjiru atasoma kitabu.
+**Q:** Chebet aliandika sentensi nne kuhusu nyakati. Moja ina kosa.
+Steps: Mwezi ujao, mimi nitaenda Mombasa. / **Juzi, baba ananunua gari.** / Wiki iliyopita, sisi tulicheza mpira. / Kesho, Wanjiru atasoma kitabu.
 - If a child answers "Step 1": Step 1 is right. Keep checking the steps after it.
 - If a child answers "Step 3": Step 3 follows on correctly from the step before it. The mistake happens earlier.
 
@@ -938,9 +938,9 @@ Steps: Jana, Juma alisoma kitabu. / **Mwaka ujao, wao walisafiri kwa ndege.** / 
 Skill `SARUFI.T10_NYAKATI_NA_HALI.NYAKATI`, outcome `c`, form direct, rung 1.
 
 **Q:** Chagua kitenzi sahihi. "Mwaka ujao Atieno ___ darasa la tano."
-Options: aliingia | **ataingia** | anaingia | wataingia
+Options: wataingia | aliingia | **ataingia** | anaingia
+- If a child answers "wataingia": Kitenzi kinahitaji nafsi na wakati: sisi tulisafiri, wao walisafiri, mimi nilisafiri.
 - If a child answers "aliingia": -li- ni kwa yaliyotokea. -ta- ni kwa yatakayotokea.
-- If a child answers "anaingia": Wakati uliopita unatumia -li-: jana alisoma. Uliopo -na-: sasa anasoma. Ujao -ta-: kesho atasoma.
 
 ### kiswahili4.nyakati.kitenzi.gap
 
@@ -955,98 +955,98 @@ Answer: **tutalima**
 
 Skill `SARUFI.T10_NYAKATI_NA_HALI.NYAKATI`, outcome `c`, form spot, rung 3.
 
-**Q:** Chebet aliandika sentensi nne kuhusu nyakati. Moja ina kosa.
-Steps: Sasa hivi wanafunzi wanasoma darasani. / Jana jioni mimi na Juma tulicheza mpira. / Mwaka ujao Atieno ataingia darasa la tano. / **Jana mimi nitasafiri kwa basi.**
-- If a child answers "Step 1": Step 1 is right. Keep checking the steps after it.
-- If a child answers "Step 2": Step 2 is right. Keep checking the steps after it.
+**Q:** Amina aliandika sentensi nne kuhusu nyakati. Moja ina kosa.
+Steps: **Wiki iliyopita wewe utaenda sokoni.** / Mwaka ujao Atieno ataingia darasa la tano. / Jana mimi nilisafiri kwa basi. / Jana jioni mimi na Juma tulicheza mpira.
+- If a child answers "Step 2": Step 2 follows on correctly from the step before it. The mistake happens earlier.
+- If a child answers "Step 3": Step 3 follows on correctly from the step before it. The mistake happens earlier.
 
 ### kiswahili4.nyakati.tambua.choose
 
 Skill `SARUFI.T10_NYAKATI_NA_HALI.NYAKATI`, outcome `b`, form direct, rung 1.
 
-**Q:** Kitenzi "walicheza" kiko katika wakati gani?
-Options: **uliopita** | ujao | uliopo
-- If a child answers "ujao": -li- ni kwa yaliyotokea. -ta- ni kwa yatakayotokea.
+**Q:** Kitenzi "atasoma" kiko katika wakati gani?
+Options: uliopita | uliopo | **ujao**
+- If a child answers "uliopita": -li- ni kwa yaliyotokea. -ta- ni kwa yatakayotokea.
 - If a child answers "uliopo": -li- ni kwa yaliyotokea. -ta- ni kwa yatakayotokea.
 
 ### kiswahili4.ukanushaji.choose
 
 Skill `SARUFI.T11_UKANUSHAJI.UKANUSHAJI`, outcome `c`, form direct, rung 1.
 
-**Q:** Chagua kitenzi kilichokanushwa ipasavyo. "Jana wewe ___ chakula kitamu."
-Options: hupiki | hutapika | **hukupika** | hulipika
-- If a child answers "hupiki": Ukanushaji huhifadhi wakati: uliopita hawakuimba, uliopo hawaimbi, ujao hawataimba.
-- If a child answers "hutapika": Ukanushaji huhifadhi wakati: uliopita hawakuimba, uliopo hawaimbi, ujao hawataimba.
+**Q:** Chagua kitenzi kilichokanushwa ipasavyo. "Jana Juma ___ kitabu hata kimoja."
+Options: halisoma | **hakusoma** | hasomi | hatasoma
+- If a child answers "halisoma": Wakati uliopita ukikanushwa, -li- hubadilika kuwa -ku-: alipika-hakupika.
+- If a child answers "hasomi": Ukanushaji huhifadhi wakati: uliopita hawakuimba, uliopo hawaimbi, ujao hawataimba.
 
 ### kiswahili4.ukanushaji.gap
 
 Skill `SARUFI.T11_UKANUSHAJI.UKANUSHAJI`, outcome `d`, form direct, rung 2.
 
-**Q:** Andika kitenzi kilichokanushwa: "Mimi ___ mpira sasa hivi."
-Answer: **sichezi**
-- If a child answers "sinacheza": Kukanusha wakati uliopo: -na- huondolewa na kitenzi huishia -i: nasoma-sisomi, anasoma-hasomi.
-- If a child answers "sikucheza": Ukanushaji huhifadhi wakati: uliopita hawakuimba, uliopo hawaimbi, ujao hawataimba.
+**Q:** Andika kitenzi kilichokanushwa: "Jana wewe ___ chakula kitamu."
+Answer: **hukupika**
+- If a child answers "hupiki": Ukanushaji huhifadhi wakati: uliopita hawakuimba, uliopo hawaimbi, ujao hawataimba.
+- If a child answers "hulipika": Wakati uliopita ukikanushwa, -li- hubadilika kuwa -ku-: alipika-hakupika.
 
 ### kiswahili4.ukanushaji.spot
 
 Skill `SARUFI.T11_UKANUSHAJI.UKANUSHAJI`, outcome `d`, form spot, rung 3.
 
-**Q:** Ochieng aliandika sentensi nne kuhusu ukanushaji. Moja ina kosa.
-Steps: **Jana wao hawatakimbia mbio uwanjani.** / Kesho wanafunzi hawataimba nyimbo. / Wiki ijayo sisi hatutafanya mtihani. / Sasa mama hapiki jikoni.
-- If a child answers "Step 2": Step 2 follows on correctly from the step before it. The mistake happens earlier.
-- If a child answers "Step 3": Step 3 follows on correctly from the step before it. The mistake happens earlier.
+**Q:** Naliaka aliandika sentensi nne kuhusu ukanushaji. Moja ina kosa.
+Steps: Jana wewe hukupika chakula kitamu. / Jana Juma hakusoma kitabu hata kimoja. / **Kesho wanafunzi hawakuimba nyimbo.** / Mimi sichezi mpira sasa hivi.
+- If a child answers "Step 1": Step 1 is right. Keep checking the steps after it.
+- If a child answers "Step 2": Step 2 is right. Keep checking the steps after it.
 
 ### kiswahili4.ukanushaji.sentensi.choose
 
 Skill `SARUFI.T11_UKANUSHAJI.UKANUSHAJI`, outcome `d`, form direct, rung 1.
 
 **Q:** Kanusha: "Wanafunzi wanaimba."
-Options: Wanafunzi hawakuimba. | **Wanafunzi hawaimbi.** | Wanafunzi hawanaimba. | Wanafunzi hawataimba.
-- If a child answers "Wanafunzi hawakuimba.": Ukanushaji huhifadhi wakati: uliopita hawakuimba, uliopo hawaimbi, ujao hawataimba.
+Options: **Wanafunzi hawaimbi.** | Wanafunzi hawataimba. | Wanafunzi hawanaimba. | Wanafunzi hawakuimba.
+- If a child answers "Wanafunzi hawataimba.": Ukanushaji huhifadhi wakati: uliopita hawakuimba, uliopo hawaimbi, ujao hawataimba.
 - If a child answers "Wanafunzi hawanaimba.": Kukanusha wakati uliopo: -na- huondolewa na kitenzi huishia -i: nasoma-sisomi, anasoma-hasomi.
 
 ### kiswahili4.ukanushaji.sentensi.spot
 
 Skill `SARUFI.T11_UKANUSHAJI.UKANUSHAJI`, outcome `d`, form spot, rung 3.
 
-**Q:** Mwende aliandika sentensi nne kuhusu ukanushaji. Moja ina kosa.
-Steps: **Juma hanasafiri.** / Wewe hukucheza. / Mimi sisomi. / Hatutacheza.
-- If a child answers "Step 2": Step 2 follows on correctly from the step before it. The mistake happens earlier.
-- If a child answers "Step 3": Step 3 follows on correctly from the step before it. The mistake happens earlier.
+**Q:** Wafula aliandika sentensi nne kuhusu ukanushaji. Moja ina kosa.
+Steps: Hatutacheza. / Wewe hukucheza. / Wanafunzi hawaimbi. / **Wanjiru halipika.**
+- If a child answers "Step 1": Step 1 is right. Keep checking the steps after it.
+- If a child answers "Step 2": Step 2 is right. Keep checking the steps after it.
 
 ### kiswahili4.ukanushaji.tambua.choose
 
 Skill `SARUFI.T11_UKANUSHAJI.UKANUSHAJI`, outcome `b`, form direct, rung 1.
 
 **Q:** Ni neno lipi limekanushwa?
-Options: **hawaimbi** | walimba | wataimba | wanaimba
-- If a child answers "walimba": Neno lililokanushwa linaonyesha kwamba kitendo hakifanyiki: hasomi, hakusoma, hatasoma.
-- If a child answers "wataimba": Neno lililokanushwa linaonyesha kwamba kitendo hakifanyiki: hasomi, hakusoma, hatasoma.
+Options: anasoma | **hakusoma** | atasoma | alisoma
+- If a child answers "anasoma": Neno lililokanushwa linaonyesha kwamba kitendo hakifanyiki: hasomi, hakusoma, hatasoma.
+- If a child answers "atasoma": Neno lililokanushwa linaonyesha kwamba kitendo hakifanyiki: hasomi, hakusoma, hatasoma.
 
 ### kiswahili4.ukubwa.choose
 
 Skill `SARUFI.T11_UKUBWA_WA_NOMINO.UKUBWA`, outcome `b`, form direct, rung 1.
 
-**Q:** Chagua neno sahihi. "Miji mikubwa sana huitwa ___."
-Options: vijiji | jiji | miji | **majiji**
-- If a child answers "vijiji": Ukubwa wa nomino hutumia ji-: jiti, jito, jiji. Udogo hutumia ki-: kijiti, kijito, kijiji.
-- If a child answers "jiji": Wingi wa ukubwa hutumia ma-: majiti, majito, majiji, majitu.
+**Q:** Chagua neno sahihi. "Mto mkubwa sana huitwa ___."
+Options: mto | **jito** | majito | kijito
+- If a child answers "mto": Kuonyesha ukubwa, nomino yenyewe hubadilika: mji-jiji.
+- If a child answers "majito": Wingi wa ukubwa hutumia ma-: majiti, majito, majiji, majitu.
 
 ### kiswahili4.ukubwa.gap
 
 Skill `SARUFI.T11_UKUBWA_WA_NOMINO.UKUBWA`, outcome `d`, form direct, rung 2.
 
-**Q:** Andika neno la ukubwa: "Mji mkubwa sana huitwa ___."
-Answer: **jiji**
-- If a child answers "kijiji": Ukubwa wa nomino hutumia ji-: jiti, jito, jiji. Udogo hutumia ki-: kijiti, kijito, kijiji.
-- If a child answers "mji": Kuonyesha ukubwa, nomino yenyewe hubadilika: mji-jiji.
+**Q:** Andika neno la ukubwa: "Mto mkubwa sana huitwa ___."
+Answer: **jito**
+- If a child answers "kijito": Ukubwa wa nomino hutumia ji-: jiti, jito, jiji. Udogo hutumia ki-: kijiti, kijito, kijiji.
+- If a child answers "mto": Kuonyesha ukubwa, nomino yenyewe hubadilika: mji-jiji.
 
 ### kiswahili4.ukubwa.spot
 
 Skill `SARUFI.T11_UKUBWA_WA_NOMINO.UKUBWA`, outcome `e`, form spot, rung 3.
 
-**Q:** Naliaka aliandika sentensi nne kuhusu ukubwa wa nomino. Moja ina kosa.
-Steps: Mji mkubwa sana huitwa jiji. / Mtu mkubwa sana huitwa jitu. / **Miji mikubwa sana huitwa jiji.** / Mti mkubwa sana huitwa jiti.
+**Q:** Musa aliandika sentensi nne kuhusu ukubwa wa nomino. Moja ina kosa.
+Steps: Miji mikubwa sana huitwa majiji. / Mto mkubwa sana huitwa jito. / **Mito mikubwa sana huitwa jito.** / Miti mikubwa sana huitwa majiti.
 - If a child answers "Step 1": Step 1 is right. Keep checking the steps after it.
 - If a child answers "Step 2": Step 2 is right. Keep checking the steps after it.
 
@@ -1063,10 +1063,10 @@ Options: vijiji | **majiji** | miji | jiji
 
 Skill `SARUFI.T11_UDOGO_WA_NOMINO.UDOGO`, outcome `b`, form direct, rung 1.
 
-**Q:** Chagua neno sahihi. "Mito midogo sana huitwa ___."
-Options: mito | kijito | majito | **vijito**
-- If a child answers "mito": Kuonyesha udogo, nomino yenyewe hubadilika: mto-kijito.
-- If a child answers "kijito": Wingi wa udogo hutumia vi-: vijiti, vijito, vijiji, vijitu.
+**Q:** Chagua neno sahihi. "Miti midogo sana huitwa ___."
+Options: miti | **vijiti** | majiti | kijiti
+- If a child answers "miti": Kuonyesha udogo, nomino yenyewe hubadilika: mto-kijito.
+- If a child answers "majiti": Udogo wa nomino hutumia ki-: kijiti, kijito, kijiji. Ukubwa hutumia ji-.
 
 ### kiswahili4.udogo.gap
 
@@ -1081,38 +1081,38 @@ Answer: **vijitu**
 
 Skill `SARUFI.T11_UDOGO_WA_NOMINO.UDOGO`, outcome `e`, form spot, rung 3.
 
-**Q:** Asha aliandika sentensi nne kuhusu udogo wa nomino. Moja ina kosa.
-Steps: Watu wadogo sana huitwa vijitu. / Mto mdogo sana huitwa kijito. / Miji midogo sana huitwa vijiji. / **Mti mdogo sana huitwa mti.**
-- If a child answers "Step 1": Step 1 is right. Keep checking the steps after it.
-- If a child answers "Step 2": Step 2 is right. Keep checking the steps after it.
+**Q:** Akinyi aliandika sentensi nne kuhusu udogo wa nomino. Moja ina kosa.
+Steps: **Watu wadogo sana huitwa kijitu.** / Mji mdogo sana huitwa kijiji. / Mto mdogo sana huitwa kijito. / Mti mdogo sana huitwa kijiti.
+- If a child answers "Step 2": Step 2 follows on correctly from the step before it. The mistake happens earlier.
+- If a child answers "Step 3": Step 3 follows on correctly from the step before it. The mistake happens earlier.
 
 ### kiswahili4.udogo.tambua.choose
 
 Skill `SARUFI.T11_UDOGO_WA_NOMINO.UDOGO`, outcome `c`, form direct, rung 1.
 
 **Q:** Ni neno lipi liko katika hali ya udogo (kimoja)?
-Options: miji | mji | **kijiji** | jiji
+Options: **kijiji** | miji | jiji | mji
 - If a child answers "miji": Kuonyesha udogo, nomino yenyewe hubadilika: mto-kijito.
-- If a child answers "mji": Kuonyesha udogo, nomino yenyewe hubadilika: mto-kijito.
+- If a child answers "jiji": Udogo wa nomino hutumia ki-: kijiti, kijito, kijiji. Ukubwa hutumia ji-.
 
 ### kiswahili4.msamiati.maana
 
 Skill `KUSOMA.T1_KUSOMA_KWA_UFAHAMU.MSAMIATI`, outcome `a`, form word, rung 2.
 
-> Soko la Jumamosi: Achieng aliamka mapema Jumamosi asubuhi. Mjomba wake, Mzee Otieno, alimwomba waende sokoni pamoja. Walipofika sokoni, Achieng aliona wauzaji wengi wakipanga bidhaa zao. Mjomba alinunua nyanya na vitunguu. Achieng alinunua mkungu wa ndizi kwa ajili ya bibi yake. Ghafla, mvua kubwa ilianza kunyesha, na wote wakakimbilia chini ya kibanda. Mvua ilipokoma, walirudi nyumbani wakiwa wamechoka lakini wame
-**Q:** Katika kifungu, neno "bidhaa" lina maana gani?
-Options: kazi ngumu ya kila siku | wauzaji wa sokoni | **vitu vinavyouzwa sokoni au dukani** | vitu visivyo na thamani
-- If a child answers "kazi ngumu ya kila siku": Maneno yanaweza kufanana kwa umbo na yasiwe na maana sawa. Mche ni mmea mchanga wa kupanda, si mchele.
-- If a child answers "wauzaji wa sokoni": Jaribu kila maana mahali pa neno hilo. Maana sahihi ndiyo inayofaa sentensi nzima.
+> Mvua ya Kwanza: Kwa miezi mingi, kijiji cha Baraka kilikuwa kimekauka. Mto ulikuwa na maji kidogo, na mazao yalikauka shambani. Siku moja alasiri, mawingu mazito yalitanda angani. Baraka alimwita dada yake, Neema, waweke ndoo uani. Mvua ilianza kunyesha kwa nguvu, na ndoo zote zikajaa maji. Wanakijiji walishangilia na kuimba. Baraka na Neema walikusanya maji kwa ajili ya kunywa na kumwagilia miche. Walishukuru kw
+**Q:** Katika kifungu, neno "kukauka" lina maana gani?
+Options: kunyesha mvua | kupika chakula | kukaa chini | **kuwa bila maji au unyevu**
+- If a child answers "kunyesha mvua": Maana ya neno hutegemea sentensi lilimotumika. Madonge ni vipande vilivyoshikana, si unga laini.
+- If a child answers "kupika chakula": Jaribu kila maana mahali pa neno hilo. Maana sahihi ndiyo inayofaa sentensi nzima.
 
 ### kiswahili4.msamiati.tumia.choose
 
 Skill `KUSOMA.T1_KUSOMA_KWA_UFAHAMU.MSAMIATI`, outcome `b`, form direct, rung 1.
 
-**Q:** Chagua neno linalokamilisha sentensi. "Wauzaji walipanga ___ zao mezani."
-Options: bidii | biashara | bibi | **bidhaa**
-- If a child answers "bidii": Maneno yanaweza kufanana kwa umbo na yasiwe na maana sawa. Mche ni mmea mchanga wa kupanda, si mchele.
-- If a child answers "biashara": Jaribu kila maana mahali pa neno hilo. Maana sahihi ndiyo inayofaa sentensi nzima.
+**Q:** Chagua neno linalokamilisha sentensi. "Mkulima huanza ___ miche asubuhi ili ikue."
+Options: kukata | kupanda | **kumwagilia** | kumwaga
+- If a child answers "kukata": Maana ya neno hutegemea sentensi lilimotumika. Madonge ni vipande vilivyoshikana, si unga laini.
+- If a child answers "kupanda": Jaribu kila maana mahali pa neno hilo. Maana sahihi ndiyo inayofaa sentensi nzima.
 
 ### kiswahili4.msamiati.tumia.gap
 
@@ -1127,8 +1127,8 @@ Answer: **bidhaa**
 
 Skill `KUSOMA.T1_KUSOMA_KWA_UFAHAMU.MSAMIATI`, outcome `b`, form spot, rung 3.
 
-**Q:** Barasa aliandika sentensi nne kuhusu msamiati. Moja ina kosa.
-Steps: Watoto walifurahi na kushangilia baada ya mvua kunyesha. / Mama alinunua mkungu wa ndizi sokoni. / Wakulima wanasubiri mvua kwa sababu mazao yameanza kukauka. / **Tulikimbilia chini ya mto ili tusilowe na mvua.**
+**Q:** Fatuma aliandika sentensi nne kuhusu msamiati. Moja ina kosa.
+Steps: Mama alinunua mkungu wa ndizi sokoni. / Mkulima huanza kumwagilia miche asubuhi ili ikue. / Wauzaji walipanga bidhaa zao mezani. / **Wakulima wanasubiri mvua kwa sababu mazao yameanza kukua.**
 - If a child answers "Step 1": Step 1 is right. Keep checking the steps after it.
 - If a child answers "Step 2": Step 2 is right. Keep checking the steps after it.
 
@@ -1137,20 +1137,20 @@ Steps: Watoto walifurahi na kushangilia baada ya mvua kunyesha. / Mama alinunua 
 Skill `KUSOMA.T1_KUSOMA_KWA_UFAHAMU.UFAHAMU_HADITHI`, outcome `c`, form word, rung 1.
 
 > Soko la Jumamosi: Achieng aliamka mapema Jumamosi asubuhi. Mjomba wake, Mzee Otieno, alimwomba waende sokoni pamoja. Walipofika sokoni, Achieng aliona wauzaji wengi wakipanga bidhaa zao. Mjomba alinunua nyanya na vitunguu. Achieng alinunua mkungu wa ndizi kwa ajili ya bibi yake. Ghafla, mvua kubwa ilianza kunyesha, na wote wakakimbilia chini ya kibanda. Mvua ilipokoma, walirudi nyumbani wakiwa wamechoka lakini wame
-**Q:** Achieng alimnunulia nani ndizi?
-Options: mama yake | **bibi yake** | mwalimu wake | mjomba wake
+**Q:** Nani alinunua mkungu wa ndizi?
+Options: Mzee Otieno | **Achieng** | mama yake | bibi yake
+- If a child answers "Mzee Otieno": Kifungu kinasema nani alifanya kitendo hicho. Soma sentensi hiyo tena.
 - If a child answers "mama yake": Kifungu kinasema nani alifanya kitendo hicho. Soma sentensi hiyo tena.
-- If a child answers "mwalimu wake": Kifungu kinasema nani alifanya kitendo hicho. Soma sentensi hiyo tena.
 
 ### kiswahili4.hadithi.nini
 
 Skill `KUSOMA.T1_KUSOMA_KWA_UFAHAMU.UFAHAMU_HADITHI`, outcome `c`, form word, rung 1.
 
-> Soko la Jumamosi: Achieng aliamka mapema Jumamosi asubuhi. Mjomba wake, Mzee Otieno, alimwomba waende sokoni pamoja. Walipofika sokoni, Achieng aliona wauzaji wengi wakipanga bidhaa zao. Mjomba alinunua nyanya na vitunguu. Achieng alinunua mkungu wa ndizi kwa ajili ya bibi yake. Ghafla, mvua kubwa ilianza kunyesha, na wote wakakimbilia chini ya kibanda. Mvua ilipokoma, walirudi nyumbani wakiwa wamechoka lakini wame
-**Q:** Achieng aliamka siku gani?
-Options: **Jumamosi** | Ijumaa | Jumapili | Jumatatu
-- If a child answers "Ijumaa": Jibu la swali la ufahamu liko kwenye kifungu. Tafuta sentensi inayolisema.
-- If a child answers "Jumapili": Jibu la swali la ufahamu liko kwenye kifungu. Tafuta sentensi inayolisema.
+> Mvua ya Kwanza: Kwa miezi mingi, kijiji cha Baraka kilikuwa kimekauka. Mto ulikuwa na maji kidogo, na mazao yalikauka shambani. Siku moja alasiri, mawingu mazito yalitanda angani. Baraka alimwita dada yake, Neema, waweke ndoo uani. Mvua ilianza kunyesha kwa nguvu, na ndoo zote zikajaa maji. Wanakijiji walishangilia na kuimba. Baraka na Neema walikusanya maji kwa ajili ya kunywa na kumwagilia miche. Walishukuru kw
+**Q:** Walikusanya maji kwa ajili ya nini?
+Options: kuogelea mtoni | kuosha gari | **kunywa na kumwagilia miche** | kujenga nyumba
+- If a child answers "kuogelea mtoni": Jibu la swali la ufahamu liko kwenye kifungu. Tafuta sentensi inayolisema.
+- If a child answers "kuosha gari": Jibu la swali la ufahamu liko kwenye kifungu. Tafuta sentensi inayolisema.
 
 ### kiswahili4.hadithi.andika
 
@@ -1166,90 +1166,90 @@ Answer: **alasiri**
 
 Skill `KUSOMA.T1_KUSOMA_KWA_UFAHAMU.UFAHAMU_HADITHI`, outcome `c`, form word, rung 2.
 
-> Soko la Jumamosi: Achieng aliamka mapema Jumamosi asubuhi. Mjomba wake, Mzee Otieno, alimwomba waende sokoni pamoja. Walipofika sokoni, Achieng aliona wauzaji wengi wakipanga bidhaa zao. Mjomba alinunua nyanya na vitunguu. Achieng alinunua mkungu wa ndizi kwa ajili ya bibi yake. Ghafla, mvua kubwa ilianza kunyesha, na wote wakakimbilia chini ya kibanda. Mvua ilipokoma, walirudi nyumbani wakiwa wamechoka lakini wame
-**Q:** Nani alinunua mkungu wa ndizi?
-Answer: **Achieng**
-- If a child answers "Mzee Otieno": Kifungu kinasema nani alifanya kitendo hicho. Soma sentensi hiyo tena.
+> Mvua ya Kwanza: Kwa miezi mingi, kijiji cha Baraka kilikuwa kimekauka. Mto ulikuwa na maji kidogo, na mazao yalikauka shambani. Siku moja alasiri, mawingu mazito yalitanda angani. Baraka alimwita dada yake, Neema, waweke ndoo uani. Mvua ilianza kunyesha kwa nguvu, na ndoo zote zikajaa maji. Wanakijiji walishangilia na kuimba. Baraka na Neema walikusanya maji kwa ajili ya kunywa na kumwagilia miche. Walishukuru kw
+**Q:** Baraka alimwita nani waweke ndoo uani?
+Answer: **dada yake**
+- If a child answers "mama yake": Kifungu kinasema nani alifanya kitendo hicho. Soma sentensi hiyo tena.
 - If a child answers "bibi yake": Kifungu kinasema nani alifanya kitendo hicho. Soma sentensi hiyo tena.
 
 ### kiswahili4.hadithi.ujumbe
 
 Skill `KUSOMA.T1_KUSOMA_KWA_UFAHAMU.UFAHAMU_HADITHI`, outcome `c`, form word, rung 2.
 
-> Soko la Jumamosi: Achieng aliamka mapema Jumamosi asubuhi. Mjomba wake, Mzee Otieno, alimwomba waende sokoni pamoja. Walipofika sokoni, Achieng aliona wauzaji wengi wakipanga bidhaa zao. Mjomba alinunua nyanya na vitunguu. Achieng alinunua mkungu wa ndizi kwa ajili ya bibi yake. Ghafla, mvua kubwa ilianza kunyesha, na wote wakakimbilia chini ya kibanda. Mvua ilipokoma, walirudi nyumbani wakiwa wamechoka lakini wame
-**Q:** Ujumbe mkuu wa hadithi ni upi?
-Options: Mvua hunyesha kila Jumamosi. | Nyanya na vitunguu ni vitamu. | **Kuamka mapema huleta mafanikio.** | Mjomba ni mwalimu mzuri.
-- If a child answers "Mvua hunyesha kila Jumamosi.": Ujumbe mkuu ni funzo la hadithi nzima, si jambo moja dogo ndani yake.
-- If a child answers "Nyanya na vitunguu ni vitamu.": Ujumbe mkuu ni funzo la hadithi nzima, si jambo moja dogo ndani yake.
+> Mvua ya Kwanza: Kwa miezi mingi, kijiji cha Baraka kilikuwa kimekauka. Mto ulikuwa na maji kidogo, na mazao yalikauka shambani. Siku moja alasiri, mawingu mazito yalitanda angani. Baraka alimwita dada yake, Neema, waweke ndoo uani. Mvua ilianza kunyesha kwa nguvu, na ndoo zote zikajaa maji. Wanakijiji walishangilia na kuimba. Baraka na Neema walikusanya maji kwa ajili ya kunywa na kumwagilia miche. Walishukuru kw
+**Q:** Hadithi hii inatufundisha nini?
+Options: Mawingu hutanda kila alasiri. | **Mvua ni baraka kwa wakulima na wanakijiji.** | Ndoo ni muhimu kuliko mto. | Dada na kaka hupenda kuimba.
+- If a child answers "Mawingu hutanda kila alasiri.": Ujumbe mkuu ni funzo la hadithi nzima, si jambo moja dogo ndani yake.
+- If a child answers "Ndoo ni muhimu kuliko mto.": Ujumbe mkuu ni funzo la hadithi nzima, si jambo moja dogo ndani yake.
 
 ### kiswahili4.hadithi.mpangilio
 
 Skill `KUSOMA.T1_KUSOMA_KWA_UFAHAMU.UFAHAMU_HADITHI`, outcome `c`, form steps, rung 2.
 
 > Mvua ya Kwanza: Kwa miezi mingi, kijiji cha Baraka kilikuwa kimekauka. Mto ulikuwa na maji kidogo, na mazao yalikauka shambani. Siku moja alasiri, mawingu mazito yalitanda angani. Baraka alimwita dada yake, Neema, waweke ndoo uani. Mvua ilianza kunyesha kwa nguvu, na ndoo zote zikajaa maji. Wanakijiji walishangilia na kuimba. Baraka na Neema walikusanya maji kwa ajili ya kunywa na kumwagilia miche. Walishukuru kw
-**Q:** Matukio manne ya hadithi yamechanganywa. Ni orodha ipi inaonyesha mpangilio ambao yalitokea? A Wanakijiji walishangilia na kuimba. B Mawingu mazito yalitanda angani. C Mvua ilinyesha na ndoo zikajaa. D Baraka na Neema waliweka ndoo uani.
-Options: B, D, A, C | **B, D, C, A** | A, C, D, B | A, B, D, C
-- If a child answers "B, D, A, C": Hadithi inasimulia matukio kwa mpangilio. Maneno kama "kisha" na "baadaye" husaidia.
-- If a child answers "A, C, D, B": Hadithi inasimulia matukio kwa mpangilio. Maneno kama "kisha" na "baadaye" husaidia.
+**Q:** Matukio manne ya hadithi yamechanganywa. Ni orodha ipi inaonyesha mpangilio ambao yalitokea? A Wanakijiji walishangilia na kuimba. B Baraka na Neema waliweka ndoo uani. C Mvua ilinyesha na ndoo zikajaa. D Mawingu mazito yalitanda angani.
+Options: A, D, B, C | **D, B, C, A** | D, C, B, A | A, C, B, D
+- If a child answers "A, D, B, C": Hadithi inasimulia matukio kwa mpangilio. Maneno kama "kisha" na "baadaye" husaidia.
+- If a child answers "D, C, B, A": Hadithi inasimulia matukio kwa mpangilio. Maneno kama "kisha" na "baadaye" husaidia.
 
 ### kiswahili4.makala.nini
 
 Skill `KUSOMA.T6_KUSOMA_KWA_KINA.MAKALA`, outcome `a`, form word, rung 1.
 
-> Maji Safi: Maji safi ni muhimu kwa afya yetu. Maji yasiyochemshwa yanaweza kuwa na vijidudu vinavyosababisha magonjwa kama kuhara. Ili kupata maji salama ya kunywa, tunapaswa kuyachemsha kwa dakika kumi. Kisha tuyaweke kwenye chombo kilichofunikwa ili yasichafuke tena. Pia ni muhimu kunawa mikono kwa maji na sabuni kabla ya kula. Tukifuata hatua hizi, tutaepuka magonjwa na kuwa na afya njema.
-**Q:** Ni ugonjwa upi uliotajwa kwenye makala?
-Options: surua | mafua | malaria | **kuhara**
-- If a child answers "surua": Jibu la swali la makala liko ndani ya makala. Tafuta sentensi inayolisema.
-- If a child answers "mafua": Jibu la swali la makala liko ndani ya makala. Tafuta sentensi inayolisema.
+> Kutunza Mimea Shuleni: Shule nyingi hupanda miti na maua katika uwanja wa shule. Mimea hupendeza mazingira na hutoa kivuli. Ili mimea ikue vizuri, wanafunzi huimwagilia maji kila asubuhi. Pia huondoa magugu yanayoizunguka. Mwalimu mkuu husema kwamba mimea ni rafiki wa binadamu. Kwa hiyo, kila mwanafunzi anapaswa kuitunza.
+**Q:** Nani husema mimea ni rafiki wa binadamu?
+Options: **mwalimu mkuu** | mkulima | mwanafunzi | daktari
+- If a child answers "mkulima": Jibu la swali la makala liko ndani ya makala. Tafuta sentensi inayolisema.
+- If a child answers "mwanafunzi": Soma swali tena na utafute sehemu ya makala inayolijibu.
 
 ### kiswahili4.makala.andika
 
 Skill `KUSOMA.T6_KUSOMA_KWA_KINA.MAKALA`, outcome `a`, form word, rung 2.
 
 > Maji Safi: Maji safi ni muhimu kwa afya yetu. Maji yasiyochemshwa yanaweza kuwa na vijidudu vinavyosababisha magonjwa kama kuhara. Ili kupata maji salama ya kunywa, tunapaswa kuyachemsha kwa dakika kumi. Kisha tuyaweke kwenye chombo kilichofunikwa ili yasichafuke tena. Pia ni muhimu kunawa mikono kwa maji na sabuni kabla ya kula. Tukifuata hatua hizi, tutaepuka magonjwa na kuwa na afya njema.
-**Q:** Ni ugonjwa upi uliotajwa kwenye makala?
-Answer: **kuhara**
-- If a child answers "malaria": Jibu la swali la makala liko ndani ya makala. Tafuta sentensi inayolisema.
-- If a child answers "mafua": Jibu la swali la makala liko ndani ya makala. Tafuta sentensi inayolisema.
+**Q:** Maji yachemshwe kwa muda gani?
+Answer: **dakika kumi**
+- If a child answers "dakika tano": Jibu la swali la makala liko ndani ya makala. Tafuta sentensi inayolisema.
+- If a child answers "saa moja": Jibu la swali la makala liko ndani ya makala. Tafuta sentensi inayolisema.
 
 ### kiswahili4.makala.ujumbe
 
 Skill `KUSOMA.T6_KUSOMA_KWA_KINA.MAKALA`, outcome `b`, form word, rung 2.
 
 > Maji Safi: Maji safi ni muhimu kwa afya yetu. Maji yasiyochemshwa yanaweza kuwa na vijidudu vinavyosababisha magonjwa kama kuhara. Ili kupata maji salama ya kunywa, tunapaswa kuyachemsha kwa dakika kumi. Kisha tuyaweke kwenye chombo kilichofunikwa ili yasichafuke tena. Pia ni muhimu kunawa mikono kwa maji na sabuni kabla ya kula. Tukifuata hatua hizi, tutaepuka magonjwa na kuwa na afya njema.
-**Q:** Makala hii inatufundisha nini?
-Options: Chombo kinafunikwa kwa kifuniko. | Kula ni muhimu kuliko kunywa. | Vijidudu havionekani kwa macho. | **Tuchemshe maji na tunawe mikono ili tuepuke magonjwa.**
-- If a child answers "Chombo kinafunikwa kwa kifuniko.": Ujumbe mkuu unatokana na makala nzima, si sentensi moja.
-- If a child answers "Kula ni muhimu kuliko kunywa.": Jibu la swali la makala liko ndani ya makala. Tafuta sentensi inayolisema.
+**Q:** Ni kichwa kipi kinafaa zaidi kwa makala hii?
+Options: **Umuhimu wa maji safi** | Dakika kumi | Vijidudu vya mtoni | Sabuni na mikono
+- If a child answers "Dakika kumi": Ujumbe mkuu unatokana na makala nzima, si sentensi moja.
+- If a child answers "Vijidudu vya mtoni": Ujumbe mkuu unatokana na makala nzima, si sentensi moja.
 
 ### kiswahili4.igizo.tambua
 
 Skill `KUSOMA.T8_KUSOMA_KWA_UFAHAMU.IGIZO`, outcome `b`, form direct, rung 1.
 
-**Q:** Ni kipi kati ya hivi kinatoka kwenye hadithi, si igizo?
-Options: Neema: Mvua inaanza! | **Baraka aliweka ndoo uani.** | Mwalimu: Tazameni mawingu. | Baraka: Weka ndoo uani.
-- If a child answers "Neema: Mvua inaanza!": Igizo huonyesha jina la mhusika, nukta mbili, kisha maneno anayosema. Hadithi huelezwa na msimulizi.
-- If a child answers "Mwalimu: Tazameni mawingu.": Igizo huonyesha jina la mhusika, nukta mbili, kisha maneno anayosema. Hadithi huelezwa na msimulizi.
+**Q:** Ni kipi kati ya hivi kinatoka kwenye mchezo wa kuigiza (igizo)?
+Options: Juma aliingia dukani na kusalimia. | Duka lilikuwa na watu wengi. | Mzee alimjibu kwa upole. | **Juma: Hujambo, mzee?**
+- If a child answers "Juma aliingia dukani na kusalimia.": Igizo huonyesha jina la mhusika, nukta mbili, kisha maneno anayosema. Hadithi huelezwa na msimulizi.
+- If a child answers "Duka lilikuwa na watu wengi.": Igizo huonyesha jina la mhusika, nukta mbili, kisha maneno anayosema. Hadithi huelezwa na msimulizi.
 
 ### kiswahili4.igizo.maelekezo
 
 Skill `KUSOMA.T8_KUSOMA_KWA_UFAHAMU.IGIZO`, outcome `c`, form word, rung 2.
 
 > Kwenye Duka la Mzee Juma: Mzee Juma: Karibu, mwanangu. Unataka nini leo? Atieno: Hujambo, Mzee Juma. Naomba kilo mbili za unga. Mzee Juma: (anapima unga) Hizi hapa. Ni shilingi mia mbili. Atieno: (anatoa pesa) Asante sana. Mama alisema nikusalimie. Mzee Juma: (anatabasamu) Mwambie asante. Safari njema, mwanangu.
-**Q:** "(anapima unga)" inamwonyesha muigizaji afanye nini?
-Options: atoe pesa | aseme "Karibu" | aondoke dukani | **apime unga**
-- If a child answers "atoe pesa": Jina lililo mbele ya nukta mbili ndilo la mhusika anayesema mstari huo.
-- If a child answers "aseme "Karibu"": Maelekezo ya jukwaani yako kwenye mabano. Yanamwonyesha muigizaji afanye nini, si aseme nini.
+**Q:** Ni maelekezo ya jukwaani yapi?
+Options: Naomba kilo mbili za unga. | Ni shilingi mia mbili. | Atieno: | **(anatoa pesa)**
+- If a child answers "Naomba kilo mbili za unga.": Maelekezo ya jukwaani yako kwenye mabano. Yanamwonyesha muigizaji afanye nini, si aseme nini.
+- If a child answers "Ni shilingi mia mbili.": Maelekezo ya jukwaani yako kwenye mabano. Yanamwonyesha muigizaji afanye nini, si aseme nini.
 
 ### kiswahili4.igizo.nani
 
 Skill `KUSOMA.T8_KUSOMA_KWA_UFAHAMU.IGIZO`, outcome `c`, form word, rung 1.
 
 > Kwenye Duka la Mzee Juma: Mzee Juma: Karibu, mwanangu. Unataka nini leo? Atieno: Hujambo, Mzee Juma. Naomba kilo mbili za unga. Mzee Juma: (anapima unga) Hizi hapa. Ni shilingi mia mbili. Atieno: (anatoa pesa) Asante sana. Mama alisema nikusalimie. Mzee Juma: (anatabasamu) Mwambie asante. Safari njema, mwanangu.
-**Q:** Nani alisema, "Safari njema, mwanangu"?
-Options: **Mzee Juma** | mama yake Atieno | Atieno | mteja mwingine
-- If a child answers "mama yake Atieno": Jina lililo mbele ya nukta mbili ndilo la mhusika anayesema mstari huo.
+**Q:** Nani alisema, "Hizi hapa. Ni shilingi mia mbili"?
+Options: Atieno | jirani | mama yake | **Mzee Juma**
 - If a child answers "Atieno": Jina lililo mbele ya nukta mbili ndilo la mhusika anayesema mstari huo.
+- If a child answers "jirani": Jina lililo mbele ya nukta mbili ndilo la mhusika anayesema mstari huo.
 
 ### kiswahili4.igizo.nani.andika
 
@@ -1266,45 +1266,45 @@ Answer: **Atieno**
 Skill `KUSOMA.T8_KUSOMA_KWA_UFAHAMU.IGIZO`, outcome `c`, form word, rung 1.
 
 > Kwenye Duka la Mzee Juma: Mzee Juma: Karibu, mwanangu. Unataka nini leo? Atieno: Hujambo, Mzee Juma. Naomba kilo mbili za unga. Mzee Juma: (anapima unga) Hizi hapa. Ni shilingi mia mbili. Atieno: (anatoa pesa) Asante sana. Mama alisema nikusalimie. Mzee Juma: (anatabasamu) Mwambie asante. Safari njema, mwanangu.
-**Q:** Mzee Juma alisema nini mwishoni?
-Options: Pole kwa safari. | **Safari njema, mwanangu.** | Karibu tena kesho. | Nipe pesa zangu.
-- If a child answers "Pole kwa safari.": Jibu la swali la igizo liko ndani ya igizo. Tafuta mstari unaolisema.
-- If a child answers "Karibu tena kesho.": Jibu la swali la igizo liko ndani ya igizo. Tafuta mstari unaolisema.
+**Q:** Atieno alinunua nini dukani?
+Options: mchele | mafuta | sukari | **unga**
+- If a child answers "mchele": Jibu la swali la igizo liko ndani ya igizo. Tafuta mstari unaolisema.
+- If a child answers "mafuta": Jibu la swali la igizo liko ndani ya igizo. Tafuta mstari unaolisema.
 
 ### kiswahili4.igizo.andika
 
 Skill `KUSOMA.T8_KUSOMA_KWA_UFAHAMU.IGIZO`, outcome `c`, form word, rung 2.
 
 > Kwenye Duka la Mzee Juma: Mzee Juma: Karibu, mwanangu. Unataka nini leo? Atieno: Hujambo, Mzee Juma. Naomba kilo mbili za unga. Mzee Juma: (anapima unga) Hizi hapa. Ni shilingi mia mbili. Atieno: (anatoa pesa) Asante sana. Mama alisema nikusalimie. Mzee Juma: (anatabasamu) Mwambie asante. Safari njema, mwanangu.
-**Q:** Mzee Juma alifanya nini kabla ya kutaja bei?
-Answer: **alipima unga**
-- If a child answers "alitoa pesa": Jina lililo mbele ya nukta mbili ndilo la mhusika anayesema mstari huo.
-- If a child answers "alitabasamu": Jina lililo mbele ya nukta mbili ndilo la mhusika anayesema mstari huo.
+**Q:** Unga ulikuwa wa shilingi ngapi?
+Answer: **shilingi mia mbili**
+- If a child answers "shilingi mia tano": Jibu la swali la igizo liko ndani ya igizo. Tafuta mstari unaolisema.
+- If a child answers "shilingi ishirini": Jibu la swali la igizo liko ndani ya igizo. Tafuta mstari unaolisema.
 
 ### kiswahili4.shairi.maana.choose
 
 Skill `KUSOMA.T5_KUSOMA_KWA_UFAHAMU.SHAIRI`, outcome `a`, form direct, rung 1.
 
 **Q:** Chagua neno sahihi. "Mstari mmoja wa shairi huitwa ___."
-Options: **mshororo** | aya | kichwa | ubeti
-- If a child answers "aya": Shairi lina mishororo mifupi iliyopangwa katika beti. Kifungu cha kawaida kina aya ndefu.
+Options: ubeti | kichwa | aya | **mshororo**
+- If a child answers "ubeti": Mshororo ni mstari mmoja wa shairi. Ubeti ni kundi la mishororo.
 - If a child answers "kichwa": Shairi lina mishororo mifupi iliyopangwa katika beti. Kifungu cha kawaida kina aya ndefu.
 
 ### kiswahili4.shairi.maana.gap
 
 Skill `KUSOMA.T5_KUSOMA_KWA_UFAHAMU.SHAIRI`, outcome `a`, form direct, rung 2.
 
-**Q:** Andika neno sahihi: "Shairi lina vitu viwili vikuu: mishororo na ___."
-Answer: **beti**
-- If a child answers "aya": Shairi lina mishororo mifupi iliyopangwa katika beti. Kifungu cha kawaida kina aya ndefu.
-- If a child answers "herufi": Shairi lina mishororo mifupi iliyopangwa katika beti. Kifungu cha kawaida kina aya ndefu.
+**Q:** Andika neno sahihi: "Maandishi yenye mishororo mifupi iliyopangwa katika beti huitwa ___."
+Answer: **shairi**
+- If a child answers "makala": Shairi lina mishororo mifupi iliyopangwa katika beti. Kifungu cha kawaida kina aya ndefu.
+- If a child answers "barua": Shairi lina mishororo mifupi iliyopangwa katika beti. Kifungu cha kawaida kina aya ndefu.
 
 ### kiswahili4.shairi.maana.spot
 
 Skill `KUSOMA.T5_KUSOMA_KWA_UFAHAMU.SHAIRI`, outcome `a`, form spot, rung 3.
 
-**Q:** Achieng aliandika sentensi nne kuhusu shairi. Moja ina kosa.
-Steps: **Mshororo ni sehemu ya neno.** / Kundi la mishororo katika shairi huitwa ubeti. / Mstari mmoja wa shairi huitwa mshororo. / Maandishi yenye mishororo mifupi iliyopangwa katika beti huitwa shairi.
+**Q:** Karimi aliandika sentensi nne kuhusu shairi. Moja ina kosa.
+Steps: **Mstari mmoja wa shairi huitwa kichwa.** / Mshororo ni sehemu ya ubeti. / Maandishi yenye mishororo mifupi iliyopangwa katika beti huitwa shairi. / Kundi la mishororo katika shairi huitwa ubeti.
 - If a child answers "Step 2": Step 2 follows on correctly from the step before it. The mistake happens earlier.
 - If a child answers "Step 3": Step 3 follows on correctly from the step before it. The mistake happens earlier.
 
@@ -1312,27 +1312,27 @@ Steps: **Mshororo ni sehemu ya neno.** / Kundi la mishororo katika shairi huitwa
 
 Skill `KUSOMA.T5_KUSOMA_KWA_UFAHAMU.SHAIRI`, outcome `d`, form direct, rung 1.
 
-**Q:** Ni kipi kinaonyesha kwamba maandishi ni shairi?
-Options: Yameandikwa kwa wino mweusi | Yana aya tatu ndefu | Yana picha nyingi | **Yamepangwa katika mishororo na beti**
-- If a child answers "Yameandikwa kwa wino mweusi": Shairi lina mishororo mifupi iliyopangwa katika beti. Kifungu cha kawaida kina aya ndefu.
-- If a child answers "Yana aya tatu ndefu": Shairi lina mishororo mifupi iliyopangwa katika beti. Kifungu cha kawaida kina aya ndefu.
+**Q:** Chagua jibu sahihi. "Tunaweza kutambua shairi kwa kuangalia ___."
+Options: **umbo lake la mishororo na beti** | urefu wa kichwa | jina la mwandishi | rangi ya karatasi
+- If a child answers "urefu wa kichwa": Shairi lina mishororo mifupi iliyopangwa katika beti. Kifungu cha kawaida kina aya ndefu.
+- If a child answers "jina la mwandishi": Shairi lina mishororo mifupi iliyopangwa katika beti. Kifungu cha kawaida kina aya ndefu.
 
 ### kiswahili4.shairi.hesabu
 
 Skill `KUSOMA.T5_KUSOMA_KWA_UFAHAMU.SHAIRI`, outcome `c`, form word, rung 2.
 
 > Mvua: Mvua imenyesha, kijiji kimefurahi, Mito imejaa, maji ni tele. Wakulima wanapanda, mbegu zao shambani, Tuombe baraka, mavuno yawe mengi. Watoto wanacheza, nje kwenye matope, Mama anapika, uji wa moto. Baba anaangalia, mawingu ya angani, Furaha imetanda, kote kijijini. Mvua ni zawadi, kutoka kwa Mungu, Tuitunze vizuri, maji tusipoteze. Tuyahifadhi kwa ndoo, kwa siku za jua, Shukrani kwa mvua, tunaim
-**Q:** Ubeti wa pili una mishororo mingapi?
-Options: 3 | **4** | 8 | 5
-- If a child answers "3": Ubeti ni kundi moja la mishororo. Hesabu mishororo ya ubeti huo tu.
-- If a child answers "8": Ubeti ni kundi moja la mishororo. Hesabu mishororo ya ubeti huo tu.
+**Q:** Shairi lote lina mishororo mingapi?
+Options: 11 | 24 | 13 | **12**
+- If a child answers "11": Ubeti ni kundi moja la mishororo. Hesabu mishororo ya ubeti huo tu.
+- If a child answers "24": Ubeti ni kundi moja la mishororo. Hesabu mishororo ya ubeti huo tu.
 
 ### kiswahili4.shairi.hesabu.andika
 
 Skill `KUSOMA.T5_KUSOMA_KWA_UFAHAMU.SHAIRI`, outcome `c`, form word, rung 2.
 
-> Mvua: Mvua imenyesha, kijiji kimefurahi, Mito imejaa, maji ni tele. Wakulima wanapanda, mbegu zao shambani, Tuombe baraka, mavuno yawe mengi. Watoto wanacheza, nje kwenye matope, Mama anapika, uji wa moto. Baba anaangalia, mawingu ya angani, Furaha imetanda, kote kijijini. Mvua ni zawadi, kutoka kwa Mungu, Tuitunze vizuri, maji tusipoteze. Tuyahifadhi kwa ndoo, kwa siku za jua, Shukrani kwa mvua, tunaim
-**Q:** Ubeti wa pili una mishororo mingapi?
+> Shule Yetu: Shule yetu ni nyumba, ya elimu na adabu, Walimu ni wazazi, wanaotuongoza. Tunasoma kila siku, kwa moyo wa bidii, Kesho tutakuwa, viongozi wa nchi. Darasani tunacheka, tunajifunza pamoja, Uwanjani tunacheza, kwa amani na upendo. Kila mtoto anathaminiwa, bila ubaguzi, Shule yetu ni nuru, katika kijiji chetu.
+**Q:** Ubeti wa kwanza una mishororo mingapi?
 Answer: **4**
 - If a child answers "5": Ubeti ni kundi moja la mishororo. Hesabu mishororo ya ubeti huo tu.
 - If a child answers "3": Ubeti ni kundi moja la mishororo. Hesabu mishororo ya ubeti huo tu.
@@ -1342,62 +1342,62 @@ Answer: **4**
 Skill `KUSOMA.T5_KUSOMA_KWA_UFAHAMU.SHAIRI`, outcome `c`, form word, rung 3.
 
 > Shule Yetu: Shule yetu ni nyumba, ya elimu na adabu, Walimu ni wazazi, wanaotuongoza. Tunasoma kila siku, kwa moyo wa bidii, Kesho tutakuwa, viongozi wa nchi. Darasani tunacheka, tunajifunza pamoja, Uwanjani tunacheza, kwa amani na upendo. Kila mtoto anathaminiwa, bila ubaguzi, Shule yetu ni nuru, katika kijiji chetu.
-**Q:** Mshororo wa kwanza wa ubeti wa kwanza ni upi?
-Options: Darasani tunacheka, tunajifunza pamoja, | Shule yetu ni nuru, katika kijiji chetu. | Tunasoma kila siku, kwa moyo wa bidii, | **Shule yetu ni nyumba, ya elimu na adabu,**
-- If a child answers "Darasani tunacheka, tunajifunza pamoja,": Mshororo ni mstari mmoja wa shairi. Ubeti ni kundi la mishororo.
-- If a child answers "Shule yetu ni nuru, katika kijiji chetu.": Mshororo ni mstari mmoja wa shairi. Ubeti ni kundi la mishororo.
+**Q:** Mshororo wa pili wa ubeti wa pili ni upi?
+Options: Tunasoma kila siku, kwa moyo wa bidii, | **Uwanjani tunacheza, kwa amani na upendo.** | Kila mtoto anathaminiwa, bila ubaguzi, | Walimu ni wazazi, wanaotuongoza.
+- If a child answers "Tunasoma kila siku, kwa moyo wa bidii,": Mshororo ni mstari mmoja wa shairi. Ubeti ni kundi la mishororo.
+- If a child answers "Kila mtoto anathaminiwa, bila ubaguzi,": Mshororo ni mstari mmoja wa shairi. Ubeti ni kundi la mishororo.
 
 ### kiswahili4.kamusi.choose
 
 Skill `KUSOMA.T2_KUSOMA_KWA_KINA.KAMUSI`, outcome `b`, form direct, rung 1.
 
-**Q:** Chagua neno sahihi. "Kati ya "kiti", "chungu" na "meza", neno linalokuja kwanza kwenye kamusi ni ___."
-Options: kiti | **chungu** | meza
-- If a child answers "kiti": Kamusi hupanga maneno kwa mpangilio wa alfabeti, si kwa urefu wa neno.
-- If a child answers "meza": Alfabeti huanza na a na kuishia na z. Neno lenye herufi ya mwanzo karibu na a hutangulia.
+**Q:** Chagua neno sahihi. "Kati ya "nyoka", "ndizi" na "samaki", neno linalokuja kwanza kwenye kamusi ni ___."
+Options: **ndizi** | nyoka | samaki
+- If a child answers "nyoka": Maneno yakianza kwa herufi moja, tazama herufi ya pili, kisha ya tatu.
+- If a child answers "samaki": Alfabeti huanza na a na kuishia na z. Neno lenye herufi ya mwanzo karibu na a hutangulia.
 
 ### kiswahili4.kamusi.gap
 
 Skill `KUSOMA.T2_KUSOMA_KWA_KINA.KAMUSI`, outcome `b`, form direct, rung 2.
 
-**Q:** Andika neno sahihi: "Kati ya "mkoba", "mkono" na "mkate", neno linalokuja kwanza kwenye kamusi ni ___."
-Answer: **mkate**
-- If a child answers "mkoba": Maneno yakianza kwa herufi moja, tazama herufi ya pili, kisha ya tatu.
-- If a child answers "mkono": Maneno yakianza kwa herufi moja, tazama herufi ya pili, kisha ya tatu.
+**Q:** Andika neno sahihi: "Kati ya "sufuria", "sanduku" na "sahani", neno linalokuja kwanza kwenye kamusi ni ___."
+Answer: **sahani**
+- If a child answers "sanduku": Maneno yakianza kwa herufi moja, tazama herufi ya pili, kisha ya tatu.
+- If a child answers "sufuria": Alfabeti huanza na a na kuishia na z. Neno lenye herufi ya mwanzo karibu na a hutangulia.
 
 ### kiswahili4.kamusi.spot
 
 Skill `KUSOMA.T2_KUSOMA_KWA_KINA.KAMUSI`, outcome `b`, form spot, rung 3.
 
-**Q:** Makena aliandika sentensi nne kuhusu mpangilio wa maneno kwenye kamusi. Moja ina kosa.
-Steps: **Kati ya "jembe", "kuku" na "boga", neno linalokuja kwanza kwenye kamusi ni kuku.** / Kati ya "kiti", "chungu" na "meza", neno linalokuja kwanza kwenye kamusi ni chungu. / Kati ya "mkoba", "mkono" na "mkate", neno linalokuja kwanza kwenye kamusi ni mkate. / Kati ya "sufuria", "sanduku" na "sahani", neno linalokuja kwanza kwenye kamusi ni sahani.
-- If a child answers "Step 2": Step 2 follows on correctly from the step before it. The mistake happens earlier.
-- If a child answers "Step 3": Step 3 follows on correctly from the step before it. The mistake happens earlier.
+**Q:** Barasa aliandika sentensi nne kuhusu mpangilio wa maneno kwenye kamusi. Moja ina kosa.
+Steps: Kati ya "kiti", "chungu" na "meza", neno linalokuja kwanza kwenye kamusi ni chungu. / Kati ya "sufuria", "sanduku" na "sahani", neno linalokuja kwanza kwenye kamusi ni sahani. / Kati ya "jembe", "kuku" na "boga", neno linalokuja kwanza kwenye kamusi ni boga. / **Kati ya "paka", "ubao" na "farasi", neno linalokuja kwanza kwenye kamusi ni paka.**
+- If a child answers "Step 1": Step 1 is right. Keep checking the steps after it.
+- If a child answers "Step 2": Step 2 is right. Keep checking the steps after it.
 
 ### kiswahili4.kamusi.matumizi.choose
 
 Skill `KUSOMA.T2_KUSOMA_KWA_KINA.KAMUSI`, outcome `a`, form direct, rung 1.
 
-**Q:** Chagua neno sahihi. "Kamusi ni kitabu chenye maneno na ___ zake."
-Options: picha | hadithi | **maana** | nyimbo
-- If a child answers "picha": Kamusi ni kitabu chenye maneno na maana zake, yaliyopangwa kwa mpangilio wa alfabeti.
-- If a child answers "hadithi": Kamusi ni kitabu chenye maneno na maana zake, yaliyopangwa kwa mpangilio wa alfabeti.
+**Q:** Chagua neno sahihi. "Kamusi huanza na maneno yanayoanza na herufi ___."
+Options: **a** | m | k | z
+- If a child answers "m": Alfabeti huanza na a na kuishia na z. Neno lenye herufi ya mwanzo karibu na a hutangulia.
+- If a child answers "k": Alfabeti huanza na a na kuishia na z. Neno lenye herufi ya mwanzo karibu na a hutangulia.
 
 ### kiswahili4.kamusi.matumizi.gap
 
 Skill `KUSOMA.T2_KUSOMA_KWA_KINA.KAMUSI`, outcome `a`, form direct, rung 2.
 
-**Q:** Andika neno sahihi: "Kamusi ni kitabu chenye maneno na ___ zake."
+**Q:** Andika neno sahihi: "Kamusi hutusaidia kupata ___ ya neno."
 Answer: **maana**
-- If a child answers "hadithi": Kamusi ni kitabu chenye maneno na maana zake, yaliyopangwa kwa mpangilio wa alfabeti.
 - If a child answers "picha": Kamusi ni kitabu chenye maneno na maana zake, yaliyopangwa kwa mpangilio wa alfabeti.
+- If a child answers "rangi": Kamusi ni kitabu chenye maneno na maana zake, yaliyopangwa kwa mpangilio wa alfabeti.
 
 ### kiswahili4.kamusi.matumizi.spot
 
 Skill `KUSOMA.T2_KUSOMA_KWA_KINA.KAMUSI`, outcome `a`, form spot, rung 3.
 
-**Q:** Achieng aliandika sentensi nne kuhusu kamusi. Moja ina kosa.
-Steps: Maneno kwenye kamusi yamepangwa kwa mpangilio wa alfabeti. / **Kamusi hutusaidia kupata rangi ya neno.** / Kamusi ni kitabu chenye maneno na maana zake. / Mwanafunzi hutumia kamusi kutafuta maana ya neno asilolijua.
+**Q:** Kioko aliandika sentensi nne kuhusu kamusi. Moja ina kosa.
+Steps: Maneno kwenye kamusi yamepangwa kwa mpangilio wa alfabeti. / **Kamusi hutusaidia kupata picha ya neno.** / Mwanafunzi hutumia kamusi kutafuta maana ya neno asilolijua. / Kamusi ni kitabu chenye maneno na maana zake.
 - If a child answers "Step 1": Step 1 is right. Keep checking the steps after it.
 - If a child answers "Step 3": Step 3 follows on correctly from the step before it. The mistake happens earlier.
 
@@ -1405,26 +1405,26 @@ Steps: Maneno kwenye kamusi yamepangwa kwa mpangilio wa alfabeti. / **Kamusi hut
 
 Skill `KUSOMA.T3_KUSOMA_KWA_UFASAHA.UFASAHA_VIPENGELE`, outcome `a`, form direct, rung 1.
 
-**Q:** Kasi ifaayo ya kusoma ni ipi?
-Options: Polepole sana | **Si haraka sana wala polepole sana** | Haraka sana | Kasi ya mkimbiaji
-- If a child answers "Polepole sana": Kasi ifaayo si haraka sana wala polepole sana: msikilizaji aelewe kila neno.
-- If a child answers "Haraka sana": Kasi ifaayo si haraka sana wala polepole sana: msikilizaji aelewe kila neno.
+**Q:** Ni sauti ipi inafaa kwa kusoma darasani?
+Options: Kunyamaza kabisa | **Sauti inayosikika wazi bila kupiga kelele** | Sauti ya kunong'ona | Sauti ya kupiga kelele
+- If a child answers "Kunyamaza kabisa": Alama za uakifishi zinaonyesha mahali pa kupumzika: koma kidogo, kikomo muda mrefu zaidi.
+- If a child answers "Sauti ya kunong'ona": Sauti ipasavyo inasikika wazi bila kupiga kelele wala kunong'ona.
 
 ### kiswahili4.ufasaha.sentensi.choose
 
 Skill `KUSOMA.T3_KUSOMA_KWA_UFASAHA.UFASAHA_VIPENGELE`, outcome `a`, form direct, rung 1.
 
 **Q:** Chagua sentensi sahihi kuhusu kusoma kwa ufasaha.
-Options: **Msomaji mzuri hupumzika kwenye alama za uakifishi.** | Msomaji mzuri haangalii alama za uakifishi. | Msomaji mzuri husoma bila kupumzika.
-- If a child answers "Msomaji mzuri haangalii alama za uakifishi.": Alama za uakifishi zinaonyesha mahali pa kupumzika: koma kidogo, kikomo muda mrefu zaidi.
-- If a child answers "Msomaji mzuri husoma bila kupumzika.": Alama za uakifishi zinaonyesha mahali pa kupumzika: koma kidogo, kikomo muda mrefu zaidi.
+Options: **Msomaji mzuri husoma kwa kasi ya wastani.** | Msomaji mzuri husoma kwa kasi ya kukimbia. | Msomaji mzuri husoma polepole sana.
+- If a child answers "Msomaji mzuri husoma kwa kasi ya kukimbia.": Kasi ifaayo si haraka sana wala polepole sana: msikilizaji aelewe kila neno.
+- If a child answers "Msomaji mzuri husoma polepole sana.": Kasi ifaayo si haraka sana wala polepole sana: msikilizaji aelewe kila neno.
 
 ### kiswahili4.ufasaha.sentensi.spot
 
 Skill `KUSOMA.T3_KUSOMA_KWA_UFASAHA.UFASAHA_VIPENGELE`, outcome `a`, form spot, rung 3.
 
-**Q:** Mwende aliandika sentensi nne kuhusu kusoma kwa ufasaha. Moja ina kosa.
-Steps: **Msomaji mzuri husoma polepole sana.** / Msomaji mzuri hutumia sauti inayosikika wazi. / Msomaji mzuri hupumzika kwenye alama za uakifishi. / Msomaji mzuri hupumzika muda mrefu kidogo kwenye kikomo.
+**Q:** Nekesa aliandika sentensi nne kuhusu kusoma kwa ufasaha. Moja ina kosa.
+Steps: **Msomaji mzuri hunong'ona anaposoma.** / Msomaji mzuri hutamka kila neno vizuri. / Msomaji mzuri husoma kwa kasi ya wastani. / Msomaji mzuri hupumzika muda mrefu kidogo kwenye kikomo.
 - If a child answers "Step 2": Step 2 follows on correctly from the step before it. The mistake happens earlier.
 - If a child answers "Step 3": Step 3 follows on correctly from the step before it. The mistake happens earlier.
 
@@ -1432,81 +1432,81 @@ Steps: **Msomaji mzuri husoma polepole sana.** / Msomaji mzuri hutumia sauti ina
 
 Skill `KUSOMA.T4_KUSOMA_KWA_MAPANA.USALAMA_DIJITALI`, outcome `b`, form direct, rung 2.
 
-**Q:** Unatafuta kifungu cha kusoma kwenye mtandao. Utatumia tovuti ipi?
-Options: Tovuti yoyote inayotokea kwanza | **Tovuti aliyopendekeza mwalimu** | Tovuti inayodai pesa | Tovuti isiyojulikana
-- If a child answers "Tovuti yoyote inayotokea kwanza": Tumia tovuti salama zilizopendekezwa na mwalimu au mzazi. Tovuti inayoomba nambari ya simu au pesa si salama.
-- If a child answers "Tovuti inayodai pesa": Tumia tovuti salama zilizopendekezwa na mwalimu au mzazi. Tovuti inayoomba nambari ya simu au pesa si salama.
+**Q:** Tovuti inakuomba nambari ya simu ya mama kabla ya kusoma hadithi. Ufanye nini?
+Options: Niendelee kusoma bila kujali | **Niache tovuti hiyo na nimweleze mzazi** | Niandike nambari ya uongo | Niandike nambari
+- If a child answers "Niendelee kusoma bila kujali": Tumia tovuti salama zilizopendekezwa na mwalimu au mzazi. Tovuti inayoomba nambari ya simu au pesa si salama.
+- If a child answers "Niandike nambari ya uongo": Tumia tovuti salama zilizopendekezwa na mwalimu au mzazi. Tovuti inayoomba nambari ya simu au pesa si salama.
 
 ### kiswahili4.usalama.sentensi.choose
 
 Skill `KUSOMA.T4_KUSOMA_KWA_MAPANA.USALAMA_DIJITALI`, outcome `b`, form direct, rung 1.
 
 **Q:** Chagua sentensi inayoonyesha hatua ya kiusalama.
-Options: Ninasoma kwenye tovuti inayoomba nambari yangu. | Ninaingiza maelezo yangu kwenye tovuti ya zawadi. | **Ninasoma kwenye tovuti ya shule.**
-- If a child answers "Ninasoma kwenye tovuti inayoomba nambari yangu.": Tumia tovuti salama zilizopendekezwa na mwalimu au mzazi. Tovuti inayoomba nambari ya simu au pesa si salama.
-- If a child answers "Ninaingiza maelezo yangu kwenye tovuti ya zawadi.": Tumia tovuti salama zilizopendekezwa na mwalimu au mzazi. Tovuti inayoomba nambari ya simu au pesa si salama.
+Options: Ninaandika nenosiri langu ubaoni. | **Ninaweka nenosiri langu siri.** | Ninampa rafiki nenosiri langu.
+- If a child answers "Ninaandika nenosiri langu ubaoni.": Nenosiri na maelezo kama anwani ni siri yako. Usimpe mtu mwingine, hata rafiki.
+- If a child answers "Ninampa rafiki nenosiri langu.": Nenosiri na maelezo kama anwani ni siri yako. Usimpe mtu mwingine, hata rafiki.
 
 ### kiswahili4.usalama.sentensi.spot
 
 Skill `KUSOMA.T4_KUSOMA_KWA_MAPANA.USALAMA_DIJITALI`, outcome `b`, form spot, rung 3.
 
-**Q:** Zawadi aliandika sentensi nne kuhusu usalama wa kidijitali. Moja ina kosa.
-Steps: Ninaweka nenosiri langu siri. / Ninauliza mwalimu kabla ya kupakua faili. / Ninatoka kwenye akaunti ninapomaliza. / **Ninaingiza maelezo yangu kwenye tovuti ya zawadi.**
-- If a child answers "Step 1": Step 1 is right. Keep checking the steps after it.
-- If a child answers "Step 2": Step 2 is right. Keep checking the steps after it.
+**Q:** Mugambi aliandika sentensi nne kuhusu usalama wa kidijitali. Moja ina kosa.
+Steps: **Ninampa rafiki nenosiri langu.** / Ninamwonyesha mtu mzima kiungo nisichokijua. / Ninatoka kwenye akaunti ninapomaliza. / Ninauliza mwalimu kabla ya kupakua faili.
+- If a child answers "Step 2": Step 2 follows on correctly from the step before it. The mistake happens earlier.
+- If a child answers "Step 3": Step 3 follows on correctly from the step before it. The mistake happens earlier.
 
 ### kiswahili4.maamkuzi.choose
 
 Skill `KUSIKI.T2_MAAMKUZI_NA_MAAGANO.MAAMKUZI`, outcome `a`, form direct, rung 1.
 
-**Q:** Chagua salamu au agano linalofaa. "Babu akijibu salamu ya mjukuu husema "___.""
-Options: **Marahaba** | Shikamoo | Kwaheri | Sijambo
-- If a child answers "Shikamoo": Hujambo hujibiwa kwa "Sijambo". Shikamoo hujibiwa kwa "Marahaba".
-- If a child answers "Kwaheri": Hujambo hujibiwa kwa "Sijambo". Shikamoo hujibiwa kwa "Marahaba".
+**Q:** Chagua salamu au agano linalofaa. "Mtu akikusalimia "Hujambo?", unajibu "___.""
+Options: **Sijambo** | Hujambo | Marahaba | Kwaheri
+- If a child answers "Hujambo": Hujambo hujibiwa kwa "Sijambo". Shikamoo hujibiwa kwa "Marahaba".
+- If a child answers "Marahaba": Hujambo hujibiwa kwa "Sijambo". Shikamoo hujibiwa kwa "Marahaba".
 
 ### kiswahili4.maamkuzi.gap
 
 Skill `KUSIKI.T2_MAAMKUZI_NA_MAAGANO.MAAMKUZI`, outcome `b`, form direct, rung 2.
 
-**Q:** Andika salamu au agano: "Rafiki akikuuliza "Habari yako?", unajibu "___.""
-Answer: **Nzuri**
-- If a child answers "Shikamoo": Mdogo humsalimia mkubwa kwa "Shikamoo", na mkubwa hujibu "Marahaba". "Hujambo" ni ya rika moja.
-- If a child answers "Kwaheri": Hujambo hujibiwa kwa "Sijambo". Shikamoo hujibiwa kwa "Marahaba".
+**Q:** Andika salamu au agano: "Asubuhi unamwona mwalimu na kusema "Habari za ___.""
+Answer: **asubuhi**
+- If a child answers "usiku": "Habari za asubuhi" ni ya asubuhi. "Usiku mwema" husemwa usiku kabla ya kulala.
+- If a child answers "jioni": "Habari za asubuhi" ni ya asubuhi. "Usiku mwema" husemwa usiku kabla ya kulala.
 
 ### kiswahili4.maamkuzi.spot
 
 Skill `KUSIKI.T2_MAAMKUZI_NA_MAAGANO.MAAMKUZI`, outcome `b`, form spot, rung 3.
 
 **Q:** Kamau aliandika sentensi nne kuhusu maamkuzi na maagano. Moja ina kosa.
-Steps: Unaondoka kwa rafiki yako nyumbani kwao. Unasema "Kwaheri." / **Asubuhi unamwona mwalimu na kusema "Habari za usiku."** / Mtu akikusalimia "Hujambo?", unajibu "Sijambo." / Unamsalimia babu yako kwa kusema "Shikamoo."
+Steps: Unamsalimia babu yako kwa kusema "Shikamoo." / Mgeni anapofika nyumbani kwenu, mwenyeji husema "Karibu." / Rafiki akikuuliza "Habari yako?", unajibu "Nzuri." / **Unaondoka kwa rafiki yako nyumbani kwao. Unasema "Hujambo."**
 - If a child answers "Step 1": Step 1 is right. Keep checking the steps after it.
-- If a child answers "Step 3": Step 3 follows on correctly from the step before it. The mistake happens earlier.
+- If a child answers "Step 2": Step 2 is right. Keep checking the steps after it.
 
 ### kiswahili4.vitendawili.maneno.choose
 
 Skill `KUSIKI.T3_VITENDAWILI.VITENDAWILI`, outcome `a`, form direct, rung 1.
 
 **Q:** Chagua neno sahihi. "Anayetegua kitendawili huitwa ___."
-Options: mshairi | msikilizaji | mtegaji | **mtegua**
+Options: **mtegua** | mshairi | mtegaji | msikilizaji
 - If a child answers "mshairi": Mtegaji husema "Kitendawili!" na mtegua hujibu "Tega!". Akishindwa husema "Nipe mji."
-- If a child answers "msikilizaji": Mtegaji husema "Kitendawili!" na mtegua hujibu "Tega!". Akishindwa husema "Nipe mji."
+- If a child answers "mtegaji": Mtegaji husema "Kitendawili!" na mtegua hujibu "Tega!". Akishindwa husema "Nipe mji."
 
 ### kiswahili4.vitendawili.maneno.gap
 
 Skill `KUSIKI.T3_VITENDAWILI.VITENDAWILI`, outcome `a`, form direct, rung 2.
 
-**Q:** Andika neno sahihi: "Anayetega kitendawili huitwa ___."
-Answer: **mtegaji**
-- If a child answers "mtegua": Mtegaji husema "Kitendawili!" na mtegua hujibu "Tega!". Akishindwa husema "Nipe mji."
-- If a child answers "msimulizi": Mtegaji husema "Kitendawili!" na mtegua hujibu "Tega!". Akishindwa husema "Nipe mji."
+**Q:** Andika neno sahihi: "Anayetegua kitendawili huitwa ___."
+Answer: **mtegua**
+- If a child answers "mtegaji": Mtegaji husema "Kitendawili!" na mtegua hujibu "Tega!". Akishindwa husema "Nipe mji."
+- If a child answers "msikilizaji": Mtegaji husema "Kitendawili!" na mtegua hujibu "Tega!". Akishindwa husema "Nipe mji."
 
 ### kiswahili4.vitendawili.maneno.spot
 
 Skill `KUSIKI.T3_VITENDAWILI.VITENDAWILI`, outcome `a`, form spot, rung 3.
 
-**Q:** Nyaboke aliandika sentensi nne kuhusu vitendawili. Moja ina kosa.
-Steps: Mtu anaposhindwa kutegua kitendawili husema "Nipe mji." / **Anayetegua kitendawili huitwa mtegaji.** / Anayetega kitendawili huitwa mtegaji. / Mtegaji husema "Kitendawili!" Mtegua hujibu "Tega!"
-- If a child answers "Step 1": Step 1 is right. Keep checking the steps after it.
+**Q:** Hassan aliandika sentensi nne kuhusu vitendawili. Moja ina kosa.
+Steps: **Mtegaji husema "Kitendawili!" Mtegua hujibu "Karibu!"** / Mtu anaposhindwa kutegua kitendawili husema "Nipe mji." / Mtegaji akitaka kuanza kutega husema "Kitendawili!" / Anayetegua kitendawili huitwa mtegua.
+- If a child answers "Step 2": Step 2 follows on correctly from the step before it. The mistake happens earlier.
 - If a child answers "Step 3": Step 3 follows on correctly from the step before it. The mistake happens earlier.
 
 ### kiswahili4.vitendawili.tambua.choose
@@ -1514,52 +1514,52 @@ Steps: Mtu anaposhindwa kutegua kitendawili husema "Nipe mji." / **Anayetegua ki
 Skill `KUSIKI.T3_VITENDAWILI.VITENDAWILI`, outcome `a`, form direct, rung 1.
 
 **Q:** Ni kitendawili kipi?
-Options: **Nyumba yangu haina mlango** | Samaki mkunje angali mbichi | Nyumba yetu ina milango miwili | kukata tamaa
+Options: **Nyumba yangu haina mlango** | kukata tamaa | Samaki mkunje angali mbichi | Nyumba yetu ina milango miwili
+- If a child answers "kukata tamaa": Nahau ni maneno yenye maana maalum. Kitendawili kina jibu la kutegua.
 - If a child answers "Samaki mkunje angali mbichi": Kitendawili huficha jibu na humtaka mtu kukitegua. Methali hutoa funzo.
-- If a child answers "Nyumba yetu ina milango miwili": Kitendawili hakitaji kitu moja kwa moja; hukielezea kwa fumbo.
 
 ### kiswahili4.upole.choose
 
 Skill `KUSIKI.T4_MANENO_YA_UPOLE.UPOLE`, outcome `a`, form direct, rung 1.
 
-**Q:** Chagua neno la upole linalofaa. "Unaomba maji kwa mama: "Mama, ___ maji.""
-Options: nipe | lete | **naomba** | leta
-- If a child answers "nipe": Tunapoomba kitu tunatumia "tafadhali" na "naomba", si amri.
-- If a child answers "lete": Tunapoomba kitu tunatumia "tafadhali" na "naomba", si amri.
+**Q:** Chagua neno la upole linalofaa. "Mwenzako ameumia. Utasema "___.""
+Options: Asante | **Pole** | Hongera | Karibu
+- If a child answers "Asante": "Samahani" husemwa ukikosea. "Asante" husemwa ukipewa kitu. "Pole" husemwa kwa aliyeumia.
+- If a child answers "Hongera": "Samahani" husemwa ukikosea. "Asante" husemwa ukipewa kitu. "Pole" husemwa kwa aliyeumia.
 
 ### kiswahili4.upole.gap
 
 Skill `KUSIKI.T4_MANENO_YA_UPOLE.UPOLE`, outcome `b`, form direct, rung 2.
 
-**Q:** Andika neno la upole: "Mwenzako ameumia. Utasema "___.""
-Answer: **Pole**
-- If a child answers "Asante": "Samahani" husemwa ukikosea. "Asante" husemwa ukipewa kitu. "Pole" husemwa kwa aliyeumia.
-- If a child answers "Hongera": "Samahani" husemwa ukikosea. "Asante" husemwa ukipewa kitu. "Pole" husemwa kwa aliyeumia.
+**Q:** Andika neno la upole: "Unaomba maji kwa mama: "Mama, ___ maji.""
+Answer: **naomba**
+- If a child answers "nipe": Tunapoomba kitu tunatumia "tafadhali" na "naomba", si amri.
+- If a child answers "leta": Tunapoomba kitu tunatumia "tafadhali" na "naomba", si amri.
 
 ### kiswahili4.upole.spot
 
 Skill `KUSIKI.T4_MANENO_YA_UPOLE.UPOLE`, outcome `b`, form spot, rung 3.
 
-**Q:** Kipchoge aliandika sentensi nne kuhusu maneno ya upole. Moja ina kosa.
-Steps: **Unaomba maji kwa mama: "Mama, lete maji."** / Unamwomba mwalimu ruhusa: "Mwalimu, naomba niende chooni." / Unataka kuomba kalamu kwa mwenzako. Utasema "Tafadhali, nipe kalamu." / Umemgonga mwenzako kwa bahati mbaya. Utasema "Samahani."
-- If a child answers "Step 2": Step 2 follows on correctly from the step before it. The mistake happens earlier.
-- If a child answers "Step 3": Step 3 follows on correctly from the step before it. The mistake happens earlier.
+**Q:** Fatuma aliandika sentensi nne kuhusu maneno ya upole. Moja ina kosa.
+Steps: Unataka kuomba kalamu kwa mwenzako. Utasema "Tafadhali, nipe kalamu." / Unakataa ofa kwa upole kwa kusema "Hapana, asante." / **Mtu amekupa zawadi. Utasema "Tafadhali."** / Umemgonga mwenzako kwa bahati mbaya. Utasema "Samahani."
+- If a child answers "Step 1": Step 1 is right. Keep checking the steps after it.
+- If a child answers "Step 2": Step 2 is right. Keep checking the steps after it.
 
 ### kiswahili4.upole.sentensi.choose
 
 Skill `KUSIKI.T4_MANENO_YA_UPOLE.UPOLE`, outcome `b`, form direct, rung 1.
 
 **Q:** Chagua sentensi yenye upole.
-Options: Toa kitabu! | **Tafadhali, naomba kitabu chako.** | Nipe kitabu changu!
-- If a child answers "Toa kitabu!": Tunapoomba kitu tunatumia "tafadhali" na "naomba", si amri.
-- If a child answers "Nipe kitabu changu!": Tunapoomba kitu tunatumia "tafadhali" na "naomba", si amri.
+Options: Sijali umeumia. | Acha kulia! | **Pole kwa kuumia, rafiki yangu.**
+- If a child answers "Sijali umeumia.": Tunapoomba kitu tunatumia "tafadhali" na "naomba", si amri.
+- If a child answers "Acha kulia!": Tunapoomba kitu tunatumia "tafadhali" na "naomba", si amri.
 
 ### kiswahili4.upole.sentensi.spot
 
 Skill `KUSIKI.T4_MANENO_YA_UPOLE.UPOLE`, outcome `b`, form spot, rung 3.
 
-**Q:** Barasa aliandika sentensi nne kuhusu maneno ya upole. Moja ina kosa.
-Steps: Samahani, nimechelewa. / Tafadhali, naomba kitabu chako. / **Acha kulia!** / Tafadhali, naomba maji.
+**Q:** Mwangi aliandika sentensi nne kuhusu maneno ya upole. Moja ina kosa.
+Steps: Tafadhali, naomba kitabu chako. / Naomba kuingia, mwalimu. / Samahani, nimechelewa. / **Sikuomba msaada.**
 - If a child answers "Step 1": Step 1 is right. Keep checking the steps after it.
 - If a child answers "Step 2": Step 2 is right. Keep checking the steps after it.
 
@@ -1568,43 +1568,43 @@ Steps: Samahani, nimechelewa. / Tafadhali, naomba kitabu chako. / **Acha kulia!*
 Skill `KUSIKI.T4_MANENO_YA_UPOLE.UPOLE`, outcome `a`, form direct, rung 1.
 
 **Q:** Ni sentensi ipi ina neno la upole?
-Options: **Asante sana, mwalimu.** | Kitabu changu kiko wapi? | Toka hapa. | Mwalimu ameingia.
-- If a child answers "Kitabu changu kiko wapi?": Maneno ya upole ni kama tafadhali, samahani, asante, pole na naomba.
-- If a child answers "Toka hapa.": Maneno ya upole ni kama tafadhali, samahani, asante, pole na naomba.
+Options: **Naomba maji, mama.** | Mama yuko jikoni. | Maji ni baridi. | Leta maji.
+- If a child answers "Mama yuko jikoni.": Maneno ya upole ni kama tafadhali, samahani, asante, pole na naomba.
+- If a child answers "Maji ni baridi.": Maneno ya upole ni kama tafadhali, samahani, asante, pole na naomba.
 
 ### kiswahili4.methali.maana.choose
 
 Skill `KUSIKI.T5_METHALI.METHALI`, outcome `b`, form direct, rung 2.
 
-**Q:** Methali "Samaki mkunje angali mbichi" ina maana gani?
-Options: Heshima haimaanishi kuwa mtumwa | Samaki hukunjwa akiwa mbichi | Tabia ya mtoto hutokana na malezi yake | **Mtoto afundishwe angali mdogo**
-- If a child answers "Heshima haimaanishi kuwa mtumwa": Kila methali ina funzo lake. Soma maneno yake kwa makini kabla ya kuchagua maana.
-- If a child answers "Samaki hukunjwa akiwa mbichi": Methali hutumia maneno ya picha ili kutoa funzo. Maana yake ni funzo, si maneno yenyewe.
+**Q:** Methali "Heshima si utumwa" ina maana gani?
+Options: **Kuheshimu watu hakumfanyi mtu kuwa mtumwa** | Tabia ya mtoto hutokana na malezi yake | Mtoto afundishwe angali mdogo | Watumwa hawapaswi kuheshimiwa
+- If a child answers "Tabia ya mtoto hutokana na malezi yake": Kila methali ina funzo lake. Soma maneno yake kwa makini kabla ya kuchagua maana.
+- If a child answers "Mtoto afundishwe angali mdogo": Kila methali ina funzo lake. Soma maneno yake kwa makini kabla ya kuchagua maana.
 
 ### kiswahili4.methali.kamilisha.choose
 
 Skill `KUSIKI.T5_METHALI.METHALI`, outcome `b`, form direct, rung 1.
 
-**Q:** Chagua neno linalokamilisha methali. "Mtoto umleavyo ndivyo ___."
-Options: anavyotaka | anavyoishi | **akuavyo** | apendavyo
-- If a child answers "anavyotaka": Methali husemwa kwa maneno yale yale: "Samaki mkunje angali mbichi". Tukibadilisha neno, haitambuliki.
-- If a child answers "anavyoishi": Methali husemwa kwa maneno yale yale: "Samaki mkunje angali mbichi". Tukibadilisha neno, haitambuliki.
+**Q:** Chagua neno linalokamilisha methali. "Asiyefunzwa na mamaye hufunzwa na ___."
+Options: rafiki | baba | **ulimwengu** | mwalimu
+- If a child answers "rafiki": Methali husemwa kwa maneno yale yale: "Samaki mkunje angali mbichi". Tukibadilisha neno, haitambuliki.
+- If a child answers "baba": Methali husemwa kwa maneno yale yale: "Samaki mkunje angali mbichi". Tukibadilisha neno, haitambuliki.
 
 ### kiswahili4.methali.kamilisha.gap
 
 Skill `KUSIKI.T5_METHALI.METHALI`, outcome `b`, form direct, rung 2.
 
-**Q:** Andika neno linalokosekana kwenye methali: "Samaki mkunje ___ mbichi."
-Answer: **angali**
-- If a child answers "akiwa": Methali husemwa kwa maneno yale yale: "Samaki mkunje angali mbichi". Tukibadilisha neno, haitambuliki.
-- If a child answers "bado": Methali husemwa kwa maneno yale yale: "Samaki mkunje angali mbichi". Tukibadilisha neno, haitambuliki.
+**Q:** Andika neno linalokosekana kwenye methali: "Mwana wa nyoka ni ___."
+Answer: **nyoka**
+- If a child answers "mtoto": Methali husemwa kwa maneno yale yale: "Samaki mkunje angali mbichi". Tukibadilisha neno, haitambuliki.
+- If a child answers "binadamu": Methali husemwa kwa maneno yale yale: "Samaki mkunje angali mbichi". Tukibadilisha neno, haitambuliki.
 
 ### kiswahili4.methali.kamilisha.spot
 
 Skill `KUSIKI.T5_METHALI.METHALI`, outcome `a`, form spot, rung 3.
 
-**Q:** Wambui aliandika sentensi nne kuhusu methali. Moja ina kosa.
-Steps: **Heshima si kazi.** / Mwana wa nyoka ni nyoka. / Asiyefunzwa na mamaye hufunzwa na ulimwengu. / Mtoto umleavyo ndivyo akuavyo.
+**Q:** Chebet aliandika sentensi nne kuhusu methali. Moja ina kosa.
+Steps: **Samaki mkunje akiwa mbichi.** / Mtoto umleavyo ndivyo akuavyo. / Heshima si utumwa. / Mwana wa nyoka ni nyoka.
 - If a child answers "Step 2": Step 2 follows on correctly from the step before it. The mistake happens earlier.
 - If a child answers "Step 3": Step 3 follows on correctly from the step before it. The mistake happens earlier.
 
@@ -1613,79 +1613,79 @@ Steps: **Heshima si kazi.** / Mwana wa nyoka ni nyoka. / Asiyefunzwa na mamaye h
 Skill `KUSIKI.T5_METHALI.METHALI`, outcome `a`, form direct, rung 1.
 
 **Q:** Ni methali ipi?
-Options: Mama anapika jikoni | Mama yangu ni mwalimu | Ulimwengu ni mkubwa | **Asiyefunzwa na mamaye hufunzwa na ulimwengu**
-- If a child answers "Mama anapika jikoni": Methali ni maneno machache yanayotoa funzo la maisha.
-- If a child answers "Mama yangu ni mwalimu": Methali ni maneno machache yanayotoa funzo la maisha.
+Options: **Samaki mkunje angali mbichi** | Jiko liko nje | Mvuvi alikwenda ziwani | Samaki wanaishi majini
+- If a child answers "Jiko liko nje": Methali ni maneno machache yanayotoa funzo la maisha.
+- If a child answers "Mvuvi alikwenda ziwani": Methali ni maneno machache yanayotoa funzo la maisha.
 
 ### kiswahili4.shairi.msamiati.choose
 
 Skill `KUSIKI.T6_SHAIRI.SHAIRI_MSAMIATI`, outcome `c`, form direct, rung 1.
 
-**Q:** Chagua neno sahihi. "Mtu jasiri aliyefanya kazi kubwa kwa ajili ya nchi huitwa ___."
-Options: mgeni | **shujaa** | mwoga | shuhuda
-- If a child answers "mgeni": Bendera ni kitambaa chenye rangi kinachoonyesha nchi. Wimbo wa taifa ni wimbo rasmi wa nchi.
-- If a child answers "mwoga": Amani ni hali ya utulivu bila vita. Vita ni kinyume cha amani.
+**Q:** Chagua neno sahihi. "Nchi na watu wake kwa pamoja huitwa ___."
+Options: nafaka | **taifa** | kabila | mji
+- If a child answers "nafaka": Maneno yanaweza kusikika sawa na yasiwe na maana sawa. Taifa ni nchi na watu wake.
+- If a child answers "kabila": Bendera ni kitambaa chenye rangi kinachoonyesha nchi. Wimbo wa taifa ni wimbo rasmi wa nchi.
 
 ### kiswahili4.shairi.msamiati.gap
 
 Skill `KUSIKI.T6_SHAIRI.SHAIRI_MSAMIATI`, outcome `c`, form direct, rung 2.
 
-**Q:** Andika neno sahihi: "Mtu jasiri aliyefanya kazi kubwa kwa ajili ya nchi huitwa ___."
-Answer: **shujaa**
-- If a child answers "mwoga": Amani ni hali ya utulivu bila vita. Vita ni kinyume cha amani.
-- If a child answers "mgeni": Bendera ni kitambaa chenye rangi kinachoonyesha nchi. Wimbo wa taifa ni wimbo rasmi wa nchi.
+**Q:** Andika neno sahihi: "Kitambaa chenye rangi kinachopeperushwa kuonyesha nchi huitwa ___."
+Answer: **bendera**
+- If a child answers "benki": Maneno yanaweza kusikika sawa na yasiwe na maana sawa. Taifa ni nchi na watu wake.
+- If a child answers "wimbo": Bendera ni kitambaa chenye rangi kinachoonyesha nchi. Wimbo wa taifa ni wimbo rasmi wa nchi.
 
 ### kiswahili4.shairi.msamiati.spot
 
 Skill `KUSIKI.T6_SHAIRI.SHAIRI_MSAMIATI`, outcome `c`, form spot, rung 3.
 
-**Q:** Hassan aliandika sentensi nne kuhusu msamiati wa shairi. Moja ina kosa.
-Steps: Hali ya utulivu bila vita huitwa amani. / **Nchi na watu wake kwa pamoja huitwa kabila.** / Kitambaa chenye rangi kinachopeperushwa kuonyesha nchi huitwa bendera. / Mtu jasiri aliyefanya kazi kubwa kwa ajili ya nchi huitwa shujaa.
+**Q:** Achieng aliandika sentensi nne kuhusu msamiati wa shairi. Moja ina kosa.
+Steps: Hali ya watu kushirikiana na kuwa pamoja huitwa mshikamano. / Hali ya utulivu bila vita huitwa amani. / Nchi na watu wake kwa pamoja huitwa taifa. / **Kitambaa chenye rangi kinachopeperushwa kuonyesha nchi huitwa benki.**
 - If a child answers "Step 1": Step 1 is right. Keep checking the steps after it.
-- If a child answers "Step 3": Step 3 follows on correctly from the step before it. The mistake happens earlier.
+- If a child answers "Step 2": Step 2 is right. Keep checking the steps after it.
 
 ### kiswahili4.shairi.msamiati.maana.choose
 
 Skill `KUSIKI.T6_SHAIRI.SHAIRI_MSAMIATI`, outcome `b`, form direct, rung 2.
 
-**Q:** Neno "amani" lina maana gani?
-Options: amali njema | vita na ugomvi | **utulivu bila vita** | sauti kubwa
-- If a child answers "amali njema": Maneno yanaweza kusikika sawa na yasiwe na maana sawa. Taifa ni nchi na watu wake.
-- If a child answers "vita na ugomvi": Amani ni hali ya utulivu bila vita. Vita ni kinyume cha amani.
+**Q:** Neno "mshikamano" lina maana gani?
+Options: mshahara wa mwezi | **watu kushirikiana na kuwa pamoja** | watu kugombana | mshindi wa mbio
+- If a child answers "mshahara wa mwezi": Maneno yanaweza kusikika sawa na yasiwe na maana sawa. Taifa ni nchi na watu wake.
+- If a child answers "watu kugombana": Amani ni hali ya utulivu bila vita. Vita ni kinyume cha amani.
 
 ### kiswahili4.nahau.maana.choose
 
 Skill `KUSIKI.T7_NAHAU.NAHAU`, outcome `b`, form direct, rung 2.
 
-**Q:** Nahau "kujikaza kisabuni" ina maana gani?
-Options: **kuvumilia shida bila kulalamika** | kuiba | kujikaza kwa sabuni | kuapa kusema ukweli
-- If a child answers "kuiba": Kila nahau ina maana yake. Linganisha maneno ya nahau na maana kabla ya kuchagua.
-- If a child answers "kujikaza kwa sabuni": Nahau ni maneno yenye maana tofauti na maneno yenyewe.
+**Q:** Nahau "kuvunja moyo" ina maana gani?
+Options: kuvunja kitu kilicho moyoni | kuwa jasiri | kuiba | **kumkatisha mtu tamaa na kumhuzunisha**
+- If a child answers "kuvunja kitu kilicho moyoni": Nahau ni maneno yenye maana tofauti na maneno yenyewe.
+- If a child answers "kuwa jasiri": Kila nahau ina maana yake. Linganisha maneno ya nahau na maana kabla ya kuchagua.
 
 ### kiswahili4.nahau.kamilisha.choose
 
 Skill `KUSIKI.T7_NAHAU.NAHAU`, outcome `a`, form direct, rung 1.
 
-**Q:** Chagua neno linalokamilisha nahau. "Alipopata shida nyingi, alipiga moyo ___ akaendelea kusoma."
-Options: kubwa | **konde** | mzito | mkali
-- If a child answers "kubwa": Nahau hutumia maneno yale yale: kupiga moyo konde, kujikaza kisabuni, kula kiapo, kukata tamaa.
-- If a child answers "mzito": Nahau hutumia maneno yale yale: kupiga moyo konde, kujikaza kisabuni, kula kiapo, kukata tamaa.
+**Q:** Chagua neno linalokamilisha nahau. "Mgonjwa alijikaza ___ ili asilalamike."
+Options: kimya | kisiri | **kisabuni** | kitandani
+- If a child answers "kimya": Nahau hutumia maneno yale yale: kupiga moyo konde, kujikaza kisabuni, kula kiapo, kukata tamaa.
+- If a child answers "kisiri": Nahau hutumia maneno yale yale: kupiga moyo konde, kujikaza kisabuni, kula kiapo, kukata tamaa.
 
 ### kiswahili4.nahau.kamilisha.gap
 
 Skill `KUSIKI.T7_NAHAU.NAHAU`, outcome `a`, form direct, rung 2.
 
-**Q:** Andika neno linalokosekana kwenye nahau: "Alipopata shida nyingi, alipiga moyo ___ akaendelea kusoma."
-Answer: **konde**
-- If a child answers "kubwa": Nahau hutumia maneno yale yale: kupiga moyo konde, kujikaza kisabuni, kula kiapo, kukata tamaa.
-- If a child answers "mkali": Nahau hutumia maneno yale yale: kupiga moyo konde, kujikaza kisabuni, kula kiapo, kukata tamaa.
+**Q:** Andika neno linalokosekana kwenye nahau: "Baada ya kushindwa mara tatu, hakutaka ___ tamaa."
+Answer: **kukata**
+- If a child answers "kuweka": Nahau hutumia maneno yale yale: kupiga moyo konde, kujikaza kisabuni, kula kiapo, kukata tamaa.
+- If a child answers "kupata": Nahau hutumia maneno yale yale: kupiga moyo konde, kujikaza kisabuni, kula kiapo, kukata tamaa.
 
 ### kiswahili4.nahau.kamilisha.spot
 
 Skill `KUSIKI.T7_NAHAU.NAHAU`, outcome `a`, form spot, rung 3.
 
-**Q:** Nyambura aliandika sentensi nne kuhusu nahau. Moja ina kosa.
-Steps: Mgonjwa alijikaza kisabuni ili asilalamike. / Shahidi alikula kiapo mahakamani kusema ukweli. / Baada ya kushindwa mara tatu, hakutaka kukata tamaa. / **Mwizi huyo ana mkono mzito, huiba vitu vya watu.**
+**Q:** Kipchoge aliandika sentensi nne kuhusu nahau. Moja ina kosa.
+Steps: Mgonjwa alijikaza kisabuni ili asilalamike. / Alipopata shida nyingi, alipiga moyo konde akaendelea kusoma. / **Mwizi huyo ana mkono mkubwa, huiba vitu vya watu.** / Shahidi alikula kiapo mahakamani kusema ukweli.
 - If a child answers "Step 1": Step 1 is right. Keep checking the steps after it.
 - If a child answers "Step 2": Step 2 is right. Keep checking the steps after it.
 
@@ -1694,34 +1694,34 @@ Steps: Mgonjwa alijikaza kisabuni ili asilalamike. / Shahidi alikula kiapo mahak
 Skill `KUSIKI.T7_NAHAU.NAHAU`, outcome `a`, form direct, rung 1.
 
 **Q:** Ni nahau ipi?
-Options: Mvua inanyesha | Sabuni imeisha | **kujikaza kisabuni** | Asiyefunzwa na mamaye hufunzwa na ulimwengu
-- If a child answers "Mvua inanyesha": Nahau ni kifungu kifupi chenye maana maalum. Methali ni sentensi nzima yenye funzo.
-- If a child answers "Sabuni imeisha": Nahau ni kifungu kifupi chenye maana maalum. Methali ni sentensi nzima yenye funzo.
+Options: Shule iko karibu | Mtoto umleavyo ndivyo akuavyo | **kula kiapo** | Samaki mkunje angali mbichi
+- If a child answers "Shule iko karibu": Nahau ni kifungu kifupi chenye maana maalum. Methali ni sentensi nzima yenye funzo.
+- If a child answers "Mtoto umleavyo ndivyo akuavyo": Nahau ni kifungu kifupi chenye maana maalum. Methali ni sentensi nzima yenye funzo.
 
 ### kiswahili4.visawe.choose
 
 Skill `KUSIKI.T8_VISAWE.VISAWE`, outcome `b`, form direct, rung 1.
 
-**Q:** Chagua kisawe sahihi. "Kisawe cha "rafiki" ni ___."
-Options: ndugu | **swahiba** | jirani | adui
-- If a child answers "ndugu": Kisawe kinaweza kuchukua mahali pa neno bila kubadilisha maana. Tajiri na mkwasi wana maana sawa.
-- If a child answers "jirani": Kisawe kinaweza kuchukua mahali pa neno bila kubadilisha maana. Tajiri na mkwasi wana maana sawa.
+**Q:** Chagua kisawe sahihi. "Kisawe cha "njia" ni ___."
+Options: mlango | njaa | **barabara** | kizuizi
+- If a child answers "mlango": Kisawe kinaweza kuchukua mahali pa neno bila kubadilisha maana. Tajiri na mkwasi wana maana sawa.
+- If a child answers "njaa": Maneno yanaweza kuanza kwa herufi zilezile na yasiwe na maana sawa. Kisawe cha haraka ni upesi.
 
 ### kiswahili4.visawe.gap
 
 Skill `KUSIKI.T8_VISAWE.VISAWE`, outcome `b`, form direct, rung 2.
 
-**Q:** Andika kisawe: "Kisawe cha "tajiri" ni ___."
-Answer: **mkwasi**
-- If a child answers "maskini": Kisawe ni neno lenye maana sawa. Kinyume cha furaha ni huzuni, si kisawe.
-- If a child answers "mfanyabiashara": Kisawe kinaweza kuchukua mahali pa neno bila kubadilisha maana. Tajiri na mkwasi wana maana sawa.
+**Q:** Andika kisawe: "Kisawe cha "shida" ni ___."
+Answer: **taabu**
+- If a child answers "raha": Kisawe ni neno lenye maana sawa. Kinyume cha furaha ni huzuni, si kisawe.
+- If a child answers "shindano": Maneno yanaweza kuanza kwa herufi zilezile na yasiwe na maana sawa. Kisawe cha haraka ni upesi.
 
 ### kiswahili4.visawe.spot
 
 Skill `KUSIKI.T8_VISAWE.VISAWE`, outcome `b`, form spot, rung 3.
 
-**Q:** Chebet aliandika sentensi nne kuhusu visawe. Moja ina kosa.
-Steps: Kisawe cha "kimya" ni tulivu. / **Kisawe cha "tajiri" ni mfanyabiashara.** / Kisawe cha "haraka" ni upesi. / Kisawe cha "furaha" ni raha.
+**Q:** Akinyi aliandika sentensi nne kuhusu visawe. Moja ina kosa.
+Steps: Kisawe cha "shida" ni taabu. / **Kisawe cha "furaha" ni huzuni.** / Kisawe cha "rafiki" ni swahiba. / Kisawe cha "kimya" ni tulivu.
 - If a child answers "Step 1": Step 1 is right. Keep checking the steps after it.
 - If a child answers "Step 3": Step 3 follows on correctly from the step before it. The mistake happens earlier.
 
@@ -1730,88 +1730,88 @@ Steps: Kisawe cha "kimya" ni tulivu. / **Kisawe cha "tajiri" ni mfanyabiashara.*
 Skill `KUSIKI.T8_VISAWE.VISAWE`, outcome `a`, form direct, rung 1.
 
 **Q:** Ni jozi ipi ina maneno yenye maana sawa?
-Options: **haraka na upesi** | haraka na harufu | haraka na polepole | daktari na hospitali
-- If a child answers "haraka na harufu": Maneno yanaweza kuanza kwa herufi zilezile na yasiwe na maana sawa. Kisawe cha haraka ni upesi.
-- If a child answers "haraka na polepole": Kisawe ni neno lenye maana sawa. Kinyume cha furaha ni huzuni, si kisawe.
+Options: **rafiki na swahiba** | rafiki na adui | baba na mama | rafiki na rangi
+- If a child answers "rafiki na adui": Kisawe ni neno lenye maana sawa. Kinyume cha furaha ni huzuni, si kisawe.
+- If a child answers "baba na mama": Kisawe kinaweza kuchukua mahali pa neno bila kubadilisha maana. Tajiri na mkwasi wana maana sawa.
 
 ### kiswahili4.visawe.jozi.spot
 
 Skill `KUSIKI.T8_VISAWE.VISAWE`, outcome `a`, form spot, rung 3.
 
-**Q:** Karimi aliandika sentensi nne kuhusu visawe. Moja ina kosa.
-Steps: haraka na upesi / tajiri na mkwasi / **kimya na kiini** / furaha na raha
-- If a child answers "Step 1": Step 1 is right. Keep checking the steps after it.
-- If a child answers "Step 2": Step 2 is right. Keep checking the steps after it.
+**Q:** Barasa aliandika sentensi nne kuhusu visawe. Moja ina kosa.
+Steps: **shule na darasa** / shida na taabu / haraka na upesi / rafiki na swahiba
+- If a child answers "Step 2": Step 2 follows on correctly from the step before it. The mistake happens earlier.
+- If a child answers "Step 3": Step 3 follows on correctly from the step before it. The mistake happens earlier.
 
 ### kiswahili4.mazungumzo.mazingira.choose
 
 Skill `KUSIKI.T9_MAZUNGUMZO_YA_KIMUKT.MAZUNGUMZO`, outcome `a`, form direct, rung 1.
 
 **Q:** Ni mazungumzo yapi si rasmi?
-Options: mahojiano ya kazi ofisini | **mazungumzo na rafiki uwanjani** | mkutano wa wazazi na walimu | hotuba ya mwalimu mkuu kwenye gwaride
-- If a child answers "mahojiano ya kazi ofisini": Mazungumzo yasiyo rasmi ni ya marafiki, nyumbani au wakati wa kucheza. Hotuba na mahojiano ni rasmi.
+Options: mkutano wa wazazi na walimu | hotuba ya mwalimu mkuu kwenye gwaride | mahojiano ya kazi ofisini | **mazungumzo na rafiki uwanjani**
 - If a child answers "mkutano wa wazazi na walimu": Mazungumzo yasiyo rasmi ni ya marafiki, nyumbani au wakati wa kucheza. Hotuba na mahojiano ni rasmi.
+- If a child answers "hotuba ya mwalimu mkuu kwenye gwaride": Mazungumzo yasiyo rasmi ni ya marafiki, nyumbani au wakati wa kucheza. Hotuba na mahojiano ni rasmi.
 
 ### kiswahili4.mazungumzo.maneno.choose
 
 Skill `KUSIKI.T9_MAZUNGUMZO_YA_KIMUKT.MAZUNGUMZO`, outcome `b`, form direct, rung 2.
 
-**Q:** Unamtania mwenzako uwanjani. Utasema nini?
-Options: **Wewe ni mjanja kweli!** | Mheshimiwa, nikuombe radhi. | Naomba kutoa maoni rasmi. | Hii ni hotuba yangu rasmi.
-- If a child answers "Mheshimiwa, nikuombe radhi.": Kwa rafiki tunatumia lugha ya kawaida, kama "Mambo vipi?". Hotuba hutumia lugha rasmi.
-- If a child answers "Naomba kutoa maoni rasmi.": Kwa rafiki tunatumia lugha ya kawaida, kama "Mambo vipi?". Hotuba hutumia lugha rasmi.
+**Q:** Unamwambia dada yako ulivyofurahia mchezo. Utasema nini?
+Options: Kwa niaba ya kamati, nawashukuru. | Mgeni rasmi, karibu. | **Mchezo ulikuwa mtamu sana!** | Napenda kuwashukuru wote waliohudhuria.
+- If a child answers "Kwa niaba ya kamati, nawashukuru.": Kwa rafiki tunatumia lugha ya kawaida, kama "Mambo vipi?". Hotuba hutumia lugha rasmi.
+- If a child answers "Mgeni rasmi, karibu.": Kwa rafiki tunatumia lugha ya kawaida, kama "Mambo vipi?". Hotuba hutumia lugha rasmi.
 
 ### kiswahili4.tashbihi.choose
 
 Skill `KUSIKI.T10_TASHBIHI.TASHBIHI`, outcome `b`, form direct, rung 1.
 
-**Q:** Chagua neno linalokamilisha tashbihi. "Kitu kidogo sana ni kidogo kama ___."
-Options: **sisimizi** | ndovu | mlima | kiboko
-- If a child answers "ndovu": Tashbihi hutumia ulinganisho wa kawaida: mrefu kama twiga, mnene kama kiboko, mkubwa kama ndovu.
-- If a child answers "mlima": Tashbihi hutumia ulinganisho wa kawaida: mrefu kama twiga, mnene kama kiboko, mkubwa kama ndovu.
+**Q:** Chagua neno linalokamilisha tashbihi. "Mtu mnene sana ni mnene kama ___."
+Options: **kiboko** | sungura | sindano | twiga
+- If a child answers "sungura": Tashbihi hutumia ulinganisho wa kawaida: mrefu kama twiga, mnene kama kiboko, mkubwa kama ndovu.
+- If a child answers "sindano": Tashbihi hutumia ulinganisho wa kawaida: mrefu kama twiga, mnene kama kiboko, mkubwa kama ndovu.
 
 ### kiswahili4.tashbihi.gap
 
 Skill `KUSIKI.T10_TASHBIHI.TASHBIHI`, outcome `c`, form direct, rung 2.
 
-**Q:** Andika neno linalokosekana: "Mtu mrefu sana ni mrefu kama ___."
-Answer: **twiga**
-- If a child answers "sungura": Tashbihi hutumia ulinganisho wa kawaida: mrefu kama twiga, mnene kama kiboko, mkubwa kama ndovu.
-- If a child answers "kiboko": Tashbihi hutumia ulinganisho wa kawaida: mrefu kama twiga, mnene kama kiboko, mkubwa kama ndovu.
+**Q:** Andika neno linalokosekana: "Mtu mfupi sana ni mfupi kama ___."
+Answer: **kibete**
+- If a child answers "twiga": Tashbihi hutumia ulinganisho wa kawaida: mrefu kama twiga, mnene kama kiboko, mkubwa kama ndovu.
+- If a child answers "mnazi": Tashbihi hutumia ulinganisho wa kawaida: mrefu kama twiga, mnene kama kiboko, mkubwa kama ndovu.
 
 ### kiswahili4.tashbihi.spot
 
 Skill `KUSIKI.T10_TASHBIHI.TASHBIHI`, outcome `c`, form spot, rung 3.
 
-**Q:** Makena aliandika sentensi nne kuhusu tashbihi. Moja ina kosa.
-Steps: Kitu kikubwa sana ni kikubwa kama ndovu. / Mtu mrefu sana ni mrefu kama twiga. / Kitu kidogo sana ni kidogo kama sisimizi. / **Mtu mnene sana ni mnene kama sindano.**
+**Q:** Barasa aliandika sentensi nne kuhusu tashbihi. Moja ina kosa.
+Steps: Mtu mwembamba sana ni mwembamba kama sindano. / **Mtu mnene sana ni mnene kama twiga.** / Mtu mfupi sana ni mfupi kama kibete. / Kitu kikubwa sana ni kikubwa kama ndovu.
 - If a child answers "Step 1": Step 1 is right. Keep checking the steps after it.
-- If a child answers "Step 2": Step 2 is right. Keep checking the steps after it.
+- If a child answers "Step 3": Step 3 follows on correctly from the step before it. The mistake happens earlier.
 
 ### kiswahili4.tashbihi.maana.choose
 
 Skill `KUSIKI.T10_TASHBIHI.TASHBIHI`, outcome `a`, form direct, rung 2.
 
-**Q:** "Juma ni mnene kama kiboko" maana yake nini?
-Options: **Juma ni mnene sana** | Juma anaishi mtoni | Juma anapenda kiboko | Juma ni kiboko
-- If a child answers "Juma anaishi mtoni": Tashbihi inaelezea kwa kulinganisha. "Mrefu kama twiga" ina maana mtu ni mrefu sana.
-- If a child answers "Juma anapenda kiboko": Tashbihi inaelezea kwa kulinganisha. "Mrefu kama twiga" ina maana mtu ni mrefu sana.
+**Q:** "Mwalimu wetu ni mfupi kama kibete" maana yake nini?
+Options: **Mwalimu wetu ni mfupi sana** | Mwalimu wetu anaishi na kibete | Mwalimu wetu ni kibete | Mwalimu wetu ni mrefu
+- If a child answers "Mwalimu wetu anaishi na kibete": Tashbihi inaelezea kwa kulinganisha. "Mrefu kama twiga" ina maana mtu ni mrefu sana.
+- If a child answers "Mwalimu wetu ni kibete": Tashbihi inaelezea kwa kulinganisha. "Mrefu kama twiga" ina maana mtu ni mrefu sana.
 
 ### kiswahili4.tashbihi.tambua.choose
 
 Skill `KUSIKI.T10_TASHBIHI.TASHBIHI`, outcome `a`, form direct, rung 1.
 
 **Q:** Ni tashbihi ipi?
-Options: Yeye ni sindano | Yeye ni mwembamba sana | **mwembamba kama sindano** | Sindano ni kali
-- If a child answers "Yeye ni sindano": Tashbihi hulinganisha kwa kutumia kama: mrefu kama twiga. "Yeye ni twiga" ni sitiari.
-- If a child answers "Yeye ni mwembamba sana": Tashbihi hulinganisha kwa kutumia kama: mrefu kama twiga. "Yeye ni twiga" ni sitiari.
+Options: Yeye ni mrefu sana | Yeye ni twiga | **mrefu kama twiga** | Twiga ni mnyama
+- If a child answers "Yeye ni mrefu sana": Tashbihi hulinganisha kwa kutumia kama: mrefu kama twiga. "Yeye ni twiga" ni sitiari.
+- If a child answers "Yeye ni twiga": Tashbihi hulinganisha kwa kutumia kama: mrefu kama twiga. "Yeye ni twiga" ni sitiari.
 
 ### kiswahili4.insha.kifungu.choose
 
 Skill `KUANDI.T1_INSHA_YA_WASIFU.AINA_ZA_INSHA`, outcome `a`, form direct, rung 2.
 
-**Q:** "Otieno ni mvulana mrefu na mwenye bidii. Ana macho makubwa na anapenda kusoma." Ni insha ya aina gani?
-Options: maelezo | **wasifu** | masimulizi
+**Q:** "Bibi yangu ni mpole na mkarimu. Ana nywele nyeupe na kila mtu anamheshimu." Ni insha ya aina gani?
+Options: maelezo | masimulizi | **wasifu**
 - If a child answers "maelezo": Wasifu humwelezea mtu au kitu: sura, tabia na maisha. Masimulizi husimulia matukio kwa mpangilio.
 - If a child answers "masimulizi": Wasifu humwelezea mtu au kitu: sura, tabia na maisha. Masimulizi husimulia matukio kwa mpangilio.
 
@@ -1828,73 +1828,73 @@ Options: masimulizi | **maelezo** | wasifu
 
 Skill `KUANDI.T1_INSHA_YA_WASIFU.AINA_ZA_INSHA`, outcome `a`, form direct, rung 2.
 
-**Q:** Andika aina ya insha: "Insha inayosimulia matukio kwa mpangilio huitwa insha ya ___."
-Answer: **masimulizi**
-- If a child answers "wasifu": Masimulizi husimulia mambo yaliyotokea kwa mpangilio. Wasifu huelezea jinsi mtu alivyo.
-- If a child answers "maelezo": Masimulizi husimulia mambo yaliyotokea kwa mpangilio. Wasifu huelezea jinsi mtu alivyo.
+**Q:** Andika aina ya insha: "Insha inayomwelezea mtu, sura yake na tabia yake huitwa insha ya ___."
+Answer: **wasifu**
+- If a child answers "masimulizi": Wasifu humwelezea mtu au kitu: sura, tabia na maisha. Masimulizi husimulia matukio kwa mpangilio.
+- If a child answers "maelezo": Wasifu humwelezea mtu au kitu: sura, tabia na maisha. Masimulizi husimulia matukio kwa mpangilio.
 
 ### kiswahili4.insha.maana.spot
 
 Skill `KUANDI.T1_INSHA_YA_WASIFU.AINA_ZA_INSHA`, outcome `a`, form spot, rung 3.
 
-**Q:** Hassan aliandika sentensi nne kuhusu aina za insha. Moja ina kosa.
-Steps: Insha inayoanza na "Siku moja..." na kueleza kilichotokea huitwa insha ya masimulizi. / **Insha inayosimulia matukio kwa mpangilio huitwa insha ya maelezo.** / Insha inayoeleza jinsi ya kufanya kitu huitwa insha ya maelezo. / Insha inayoeleza hatua za kupanda mche huitwa insha ya maelezo.
-- If a child answers "Step 1": Step 1 is right. Keep checking the steps after it.
+**Q:** Kamau aliandika sentensi nne kuhusu aina za insha. Moja ina kosa.
+Steps: **Insha inayoeleza hatua za kupanda mche huitwa insha ya wasifu.** / Insha inayoanza na "Siku moja..." na kueleza kilichotokea huitwa insha ya masimulizi. / Insha inayoeleza tabia na sura ya rafiki yako huitwa insha ya wasifu. / Insha inayosimulia matukio kwa mpangilio huitwa insha ya masimulizi.
+- If a child answers "Step 2": Step 2 follows on correctly from the step before it. The mistake happens earlier.
 - If a child answers "Step 3": Step 3 follows on correctly from the step before it. The mistake happens earlier.
 
 ### kiswahili4.insha.sehemu.choose
 
 Skill `KUANDI.T1_INSHA_YA_WASIFU.AINA_ZA_INSHA`, outcome `a`, form direct, rung 1.
 
-**Q:** Chagua sehemu sahihi ya insha. "Sehemu ya katikati ya insha, yenye mambo makuu, huitwa ___."
-Options: hitimisho | kichwa | **kiini** | utangulizi
-- If a child answers "hitimisho": Insha ina utangulizi mwanzoni, kiini katikati na hitimisho mwishoni.
+**Q:** Chagua sehemu sahihi ya insha. "Insha ina sehemu tatu: utangulizi, kiini na ___."
+Options: kichwa | **hitimisho** | herufi | aya
 - If a child answers "kichwa": Insha ina utangulizi mwanzoni, kiini katikati na hitimisho mwishoni.
+- If a child answers "herufi": Insha ina utangulizi mwanzoni, kiini katikati na hitimisho mwishoni.
 
 ### kiswahili4.insha.sehemu.gap
 
 Skill `KUANDI.T1_INSHA_YA_WASIFU.AINA_ZA_INSHA`, outcome `a`, form direct, rung 2.
 
-**Q:** Andika sehemu ya insha: "Sehemu ya mwisho ya insha huitwa ___."
-Answer: **hitimisho**
+**Q:** Andika sehemu ya insha: "Sehemu ya katikati ya insha, yenye mambo makuu, huitwa ___."
+Answer: **kiini**
 - If a child answers "utangulizi": Insha ina utangulizi mwanzoni, kiini katikati na hitimisho mwishoni.
-- If a child answers "kiini": Insha ina utangulizi mwanzoni, kiini katikati na hitimisho mwishoni.
+- If a child answers "hitimisho": Insha ina utangulizi mwanzoni, kiini katikati na hitimisho mwishoni.
 
 ### kiswahili4.insha.sehemu.spot
 
 Skill `KUANDI.T1_INSHA_YA_WASIFU.AINA_ZA_INSHA`, outcome `a`, form spot, rung 3.
 
-**Q:** Ochieng aliandika sentensi nne kuhusu sehemu za insha. Moja ina kosa.
-Steps: **Sehemu ya mwisho ya insha huitwa kiini.** / Insha ina sehemu tatu: utangulizi, kiini na hitimisho. / Sehemu ya kwanza ya insha huitwa utangulizi. / Sehemu ya katikati ya insha, yenye mambo makuu, huitwa kiini.
-- If a child answers "Step 2": Step 2 follows on correctly from the step before it. The mistake happens earlier.
+**Q:** Achieng aliandika sentensi nne kuhusu sehemu za insha. Moja ina kosa.
+Steps: Insha ina sehemu tatu: utangulizi, kiini na hitimisho. / **Sehemu inayomaliza insha kwa muhtasari huitwa kiini.** / Sehemu ya katikati ya insha, yenye mambo makuu, huitwa kiini. / Sehemu inayotambulisha mada ya insha huitwa utangulizi.
+- If a child answers "Step 1": Step 1 is right. Keep checking the steps after it.
 - If a child answers "Step 3": Step 3 follows on correctly from the step before it. The mistake happens earlier.
 
 ### kiswahili4.tarakilishi.sehemu.choose
 
 Skill `KUANDI.T3_KUANDIKA_KWA_TARAKIL.SEHEMU_TARAKILISHI`, outcome `a`, form direct, rung 1.
 
-**Q:** Chagua sehemu ya tarakilishi inayokamilisha sentensi. "Tunasogeza kielekezi kwa kutumia ___."
-Options: kibodi | skrini | kichapishi | **kipanya**
+**Q:** Chagua sehemu ya tarakilishi inayokamilisha sentensi. "Maandishi yetu huonekana kwenye ___."
+Options: kichapishi | kibodi | kipanya | **skrini**
+- If a child answers "kichapishi": Kibodi ina vitufe vya herufi na nambari. Kipanya husogeza kielekezi. Skrini huonyesha. Kichapishi huchapisha.
 - If a child answers "kibodi": Kibodi ina vitufe vya herufi na nambari. Kipanya husogeza kielekezi. Skrini huonyesha. Kichapishi huchapisha.
-- If a child answers "skrini": Kibodi ina vitufe vya herufi na nambari. Kipanya husogeza kielekezi. Skrini huonyesha. Kichapishi huchapisha.
 
 ### kiswahili4.tarakilishi.sehemu.gap
 
 Skill `KUANDI.T3_KUANDIKA_KWA_TARAKIL.SEHEMU_TARAKILISHI`, outcome `a`, form direct, rung 2.
 
-**Q:** Andika sehemu ya tarakilishi inayokosekana: "Tunachapisha kazi yetu kwenye karatasi kwa kutumia ___."
-Answer: **kichapishi**
+**Q:** Andika sehemu ya tarakilishi inayokosekana: "Tunasogeza kielekezi kwa kutumia ___."
+Answer: **kipanya**
 - If a child answers "kibodi": Kibodi ina vitufe vya herufi na nambari. Kipanya husogeza kielekezi. Skrini huonyesha. Kichapishi huchapisha.
-- If a child answers "kipanya": Kibodi ina vitufe vya herufi na nambari. Kipanya husogeza kielekezi. Skrini huonyesha. Kichapishi huchapisha.
+- If a child answers "skrini": Kibodi ina vitufe vya herufi na nambari. Kipanya husogeza kielekezi. Skrini huonyesha. Kichapishi huchapisha.
 
 ### kiswahili4.tarakilishi.sehemu.spot
 
 Skill `KUANDI.T3_KUANDIKA_KWA_TARAKIL.SEHEMU_TARAKILISHI`, outcome `a`, form spot, rung 3.
 
-**Q:** Njeri aliandika sentensi nne kuhusu sehemu za tarakilishi. Moja ina kosa.
-Steps: Maandishi yetu huonekana kwenye skrini. / Tunasogeza kielekezi kwa kutumia kipanya. / Tunatumia kibodi kupigia herufi na nambari. / **Tunachapisha kazi yetu kwenye karatasi kwa kutumia kibodi.**
-- If a child answers "Step 1": Step 1 is right. Keep checking the steps after it.
-- If a child answers "Step 2": Step 2 is right. Keep checking the steps after it.
+**Q:** Achieng aliandika sentensi nne kuhusu sehemu za tarakilishi. Moja ina kosa.
+Steps: **Tunatumia kichapishi kupigia herufi na nambari.** / Tunasogeza kielekezi kwa kutumia kipanya. / Ili kuacha nafasi kati ya maneno, tunabonyeza kitufe cha nafasi. / Maandishi yetu huonekana kwenye skrini.
+- If a child answers "Step 2": Step 2 follows on correctly from the step before it. The mistake happens earlier.
+- If a child answers "Step 3": Step 3 follows on correctly from the step before it. The mistake happens earlier.
 
 ### kiswahili4.tarakilishi.kazi.choose
 
@@ -1910,16 +1910,16 @@ Options: Huchapisha kwenye karatasi | **Husogeza kielekezi na kubofya** | Huonye
 Skill `KUANDI.T3_KUANDIKA_KWA_TARAKIL.UAKIFISHI`, outcome `d`, form direct, rung 1.
 
 **Q:** Chagua sentensi sahihi.
-Options: lo! Nyoka ameingia nyumbani. | Lo? Nyoka ameingia nyumbani. | **Lo! Nyoka ameingia nyumbani.** | Lo. Nyoka ameingia nyumbani.
-- If a child answers "lo! Nyoka ameingia nyumbani.": Sentensi huanza kwa herufi kubwa, na majina ya pekee pia: Wanjiru, Nairobi.
-- If a child answers "Lo? Nyoka ameingia nyumbani.": Alama ya hisi (!) huonyesha hisia kama furaha au mshangao: Hongera! Kiulizi (?) huuliza.
+Options: wanjiru alienda mombasa jana. | Wanjiru alienda mombasa jana. | **Wanjiru alienda Mombasa jana.** | Wanjiru alienda Mombasa jana
+- If a child answers "wanjiru alienda mombasa jana.": Sentensi huanza kwa herufi kubwa, na majina ya pekee pia: Wanjiru, Nairobi.
+- If a child answers "Wanjiru alienda mombasa jana.": Sentensi huanza kwa herufi kubwa, na majina ya pekee pia: Wanjiru, Nairobi.
 
 ### kiswahili4.uakifishi.spot
 
 Skill `KUANDI.T3_KUANDIKA_KWA_TARAKIL.UAKIFISHI`, outcome `d`, form spot, rung 3.
 
-**Q:** Cherono aliandika sentensi nne kuhusu alama za uakifishi. Moja ina kosa.
-Steps: Wanjiru alienda Mombasa jana. / Je, umefanya kazi yako? / Lo! Nyoka ameingia nyumbani. / **Hongera, umeshinda?**
+**Q:** Amina aliandika sentensi nne kuhusu alama za uakifishi. Moja ina kosa.
+Steps: Nilinunua maembe, machungwa na ndizi. / Lo! Nyoka ameingia nyumbani. / Hongera, umeshinda! / **Juma, Otieno na Achieng wanacheza**
 - If a child answers "Step 1": Step 1 is right. Keep checking the steps after it.
 - If a child answers "Step 2": Step 2 is right. Keep checking the steps after it.
 
@@ -1927,46 +1927,46 @@ Steps: Wanjiru alienda Mombasa jana. / Je, umefanya kazi yako? / Lo! Nyoka amein
 
 Skill `KUANDI.T3_KUANDIKA_KWA_TARAKIL.UAKIFISHI`, outcome `d`, form direct, rung 1.
 
-**Q:** Alama ya kutenganisha vitu katika orodha ni ipi?
-Options: . | ? | **,** | !
-- If a child answers ".": Koma hutenganisha vitu katika orodha: maembe, machungwa na ndizi.
-- If a child answers "?": Koma hutenganisha vitu katika orodha: maembe, machungwa na ndizi.
+**Q:** Sentensi ya swali huisha kwa alama gani?
+Options: ! | . | , | **?**
+- If a child answers "!": Alama ya hisi (!) huonyesha hisia kama furaha au mshangao: Hongera! Kiulizi (?) huuliza.
+- If a child answers ".": Sentensi ya swali huisha kwa kiulizi (?). Sentensi ya kawaida huisha kwa kikomo (.).
 
 ### kiswahili4.barua.choose
 
 Skill `KUANDI.T4_BARUA_YA_KIRAFIKI.BARUA`, outcome `a`, form direct, rung 1.
 
-**Q:** Chagua neno sahihi. "Sehemu ya barua yenye ujumbe wote huitwa ___ wa barua."
-Options: mwanzo | mwisho | kichwa | **mwili**
-- If a child answers "mwanzo": Barua ya kirafiki ina anwani ya mwandishi, tarehe, salamu, mwili, hitimisho na jina.
-- If a child answers "mwisho": Barua ya kirafiki ina anwani ya mwandishi, tarehe, salamu, mwili, hitimisho na jina.
+**Q:** Chagua neno sahihi. "Anwani ya mwandishi huandikwa upande wa ___ juu."
+Options: katikati | **kulia** | chini | kushoto
+- If a child answers "katikati": Anwani ya mwandishi huandikwa upande wa kulia juu, kisha tarehe chini yake.
+- If a child answers "chini": Anwani ya mwandishi huandikwa upande wa kulia juu, kisha tarehe chini yake.
 
 ### kiswahili4.barua.gap
 
 Skill `KUANDI.T4_BARUA_YA_KIRAFIKI.BARUA`, outcome `a`, form direct, rung 2.
 
-**Q:** Andika neno sahihi: "Salamu ya barua ya kirafiki huanza kwa neno "___" na jina la rafiki."
-Answer: **Mpendwa**
-- If a child answers "Wako": Barua ya kirafiki huanza kwa "Mpendwa..." na kuisha kwa "Rafiki yako". "Wako mtiifu" ni ya barua rasmi.
-- If a child answers "Heshima": Barua ya kirafiki huanza kwa "Mpendwa..." na kuisha kwa "Rafiki yako". "Wako mtiifu" ni ya barua rasmi.
+**Q:** Andika neno sahihi: "Anwani ya mwandishi huandikwa upande wa ___ juu."
+Answer: **kulia**
+- If a child answers "kushoto": Anwani ya mwandishi huandikwa upande wa kulia juu, kisha tarehe chini yake.
+- If a child answers "katikati": Anwani ya mwandishi huandikwa upande wa kulia juu, kisha tarehe chini yake.
 
 ### kiswahili4.barua.spot
 
 Skill `KUANDI.T4_BARUA_YA_KIRAFIKI.BARUA`, outcome `a`, form spot, rung 3.
 
-**Q:** Wafula aliandika sentensi nne kuhusu sehemu za barua ya kirafiki. Moja ina kosa.
-Steps: **Sehemu ya barua yenye ujumbe wote huitwa kichwa wa barua.** / Barua ya kirafiki huisha kwa hitimisho kisha jina la mwandishi. / Barua ya kirafiki huanza kwa anwani ya mwandishi, kisha tarehe, kisha salamu. / Salamu ya barua ya kirafiki huanza kwa neno "Mpendwa" na jina la rafiki.
-- If a child answers "Step 2": Step 2 follows on correctly from the step before it. The mistake happens earlier.
-- If a child answers "Step 3": Step 3 follows on correctly from the step before it. The mistake happens earlier.
+**Q:** Kipchoge aliandika sentensi nne kuhusu sehemu za barua ya kirafiki. Moja ina kosa.
+Steps: Salamu ya barua ya kirafiki huanza kwa neno "Mpendwa" na jina la rafiki. / Barua ya kirafiki huanza kwa anwani ya mwandishi, kisha tarehe, kisha salamu. / **Sehemu ya barua yenye ujumbe wote huitwa mwisho wa barua.** / Barua ya kirafiki huisha kwa hitimisho kisha jina la mwandishi.
+- If a child answers "Step 1": Step 1 is right. Keep checking the steps after it.
+- If a child answers "Step 2": Step 2 is right. Keep checking the steps after it.
 
 ### kiswahili4.barua.rafiki.choose
 
 Skill `KUANDI.T4_BARUA_YA_KIRAFIKI.BARUA`, outcome `a`, form direct, rung 2.
 
 **Q:** Ni hitimisho lipi linafaa barua ya kirafiki?
-Options: **Rafiki yako, Juma** | Wako mtiifu, Juma | Mheshimiwa, Juma | Wako katika ujenzi wa taifa, Juma
-- If a child answers "Wako mtiifu, Juma": Barua ya kirafiki huanza kwa "Mpendwa..." na kuisha kwa "Rafiki yako". "Wako mtiifu" ni ya barua rasmi.
-- If a child answers "Mheshimiwa, Juma": Barua ya kirafiki huanza kwa "Mpendwa..." na kuisha kwa "Rafiki yako". "Wako mtiifu" ni ya barua rasmi.
+Options: Kwa heshima kubwa, Neema | Wako mtiifu daima, Neema | Mheshimiwa mkuu, Neema | **Rafiki yako mpendwa, Neema**
+- If a child answers "Kwa heshima kubwa, Neema": Barua ya kirafiki huanza kwa "Mpendwa..." na kuisha kwa "Rafiki yako". "Wako mtiifu" ni ya barua rasmi.
+- If a child answers "Wako mtiifu daima, Neema": Barua ya kirafiki huanza kwa "Mpendwa..." na kuisha kwa "Rafiki yako". "Wako mtiifu" ni ya barua rasmi.
 
 ## How to sign a family off
 

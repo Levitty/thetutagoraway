@@ -49,7 +49,7 @@ const UZI = [
 ];
 const UZI_PL = [
   ['Wingi wa "ukuta" ni ___.', 'kuta', ['mikuta', 'M_UZI_PL_MA'], ['makuta', 'M_UZI_PL_MA'], ['ukuta', 'M_UZI_PL_MA'], 'Wingi wa ukuta ni kuta: u- inaondolewa.'],
-  ['Wingi wa "wimbo" ni ___.', 'nyimbo', ['miwimbo', 'M_UZI_PL_MA'], ['mawimbo', 'M_UZI_PL_MA'], ['wimbo', 'M_UZI_PL_MA'], 'Wingi wa wimbo ni nyimbo. Mawimbo ni wingi wa wimbi.'],
+  ['Wingi wa "wimbo" ni ___.', 'nyimbo', ['miwimbo', 'M_UZI_PL_MA'], ['mawimbo', 'M_UZI_PL_MA'], ['wimbo', 'M_UZI_PL_MA'], 'Wingi wa wimbo ni nyimbo. Mawimbi ni wingi wa wimbi.'],
   ['Wingi wa "ubao" ni ___.', 'mbao', ['mibao', 'M_UZI_PL_MA'], ['mabao', 'M_UZI_PL_MA'], ['ubao', 'M_UZI_PL_MA'], 'Wingi wa ubao ni mbao: u- hubadilika kuwa mb-.'],
   ['Wingi wa "ufunguo" ni ___.', 'funguo', ['mifunguo', 'M_UZI_PL_MA'], ['mafunguo', 'M_UZI_PL_MA'], ['ufunguo', 'M_UZI_PL_MA'], 'Wingi wa ufunguo ni funguo: u- inaondolewa.'],
   ['Wingi wa "uso" ni ___.', 'nyuso', ['miuso', 'M_UZI_PL_MA'], ['mauso', 'M_UZI_PL_MA'], ['uso', 'M_UZI_PL_MA'], 'Wingi wa uso ni nyuso: u- hubadilika kuwa nyu-.'],

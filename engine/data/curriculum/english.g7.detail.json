@@ -1,0 +1,813 @@
+{
+ "outcomes": {
+  "ENGL.G7.LISTEN.T1_CONVERSATIONAL_SKILL.a": "identify polite expressions used in the introduction of self and others",
+  "ENGL.G7.LISTEN.T1_CONVERSATIONAL_SKILL.b": "use polite expressions in the introduction of self and others in different speaking contexts",
+  "ENGL.G7.LISTEN.T1_CONVERSATIONAL_SKILL.c": "model respectful behaviour during introductions",
+  "ENGL.G7.READIN.T1_EXTENSIVE_READING_IN.a": "identify a variety of texts for independent reading",
+  "ENGL.G7.READIN.T1_EXTENSIVE_READING_IN.b": "read selected materials for information and enjoyment",
+  "ENGL.G7.READIN.T1_EXTENSIVE_READING_IN.c": "appreciate the value of independent reading in lifelong learning",
+  "ENGL.G7.GRAMMA.T1_WORD_CLASSES_NOUNS.a": "identify the different types of nouns from a print or digital text",
+  "ENGL.G7.GRAMMA.T1_WORD_CLASSES_NOUNS.b": "use different types of nouns in sentences",
+  "ENGL.G7.GRAMMA.T1_WORD_CLASSES_NOUNS.c": "appreciate the role of correct grammar in written and spoken communication",
+  "ENGL.G7.READIN.T1_INTENSIVE_READING_TR.a": "identify the main events in trickster narratives",
+  "ENGL.G7.READIN.T1_INTENSIVE_READING_TR.b": "analyse the characters in narratives",
+  "ENGL.G7.READIN.T1_INTENSIVE_READING_TR.c": "appreciate the importance of trickster narratives in the inculcation of values",
+  "ENGL.G7.WRITIN.T1_HANDWRITING_LEGIBILI.a": "describe features of legible and neat handwriting for efficient writing",
+  "ENGL.G7.WRITIN.T1_HANDWRITING_LEGIBILI.b": "write texts legibly and neatly for effective communication",
+  "ENGL.G7.WRITIN.T1_HANDWRITING_LEGIBILI.c": "acknowledge the importance of writing neatly and legibly",
+  "ENGL.G7.LISTEN.T2_ORAL_PRESENTATIONS_O.a": "outline the oral narrative performance techniques for effective delivery",
+  "ENGL.G7.LISTEN.T2_ORAL_PRESENTATIONS_O.b": "use oral narrative techniques during the performance",
+  "ENGL.G7.LISTEN.T2_ORAL_PRESENTATIONS_O.c": "appreciate the importance of performance techniques in the successful delivery of oral material",
+  "ENGL.G7.READIN.T2_INTENSIVE_READING_SI.a": "distinguish between poems and other literary genres",
+  "ENGL.G7.READIN.T2_INTENSIVE_READING_SI.b": "recite a variety of simple poems for enjoyment",
+  "ENGL.G7.READIN.T2_INTENSIVE_READING_SI.c": "collaborate in poetry recitation for enjoyment and learning",
+  "ENGL.G7.GRAMMA.T2_WORD_CLASSES_NOUNS.a": "identify count, non-count, singular, and plural nouns from a variety of texts",
+  "ENGL.G7.GRAMMA.T2_WORD_CLASSES_NOUNS.b": "use count, non-count, singular, and plural nouns in sentences",
+  "ENGL.G7.GRAMMA.T2_WORD_CLASSES_NOUNS.c": "appreciate the importance of the correct use of nouns in communication",
+  "ENGL.G7.READIN.T2_INTENSIVE_READING_CL.a": "explain the different parts that aid in previewing a book",
+  "ENGL.G7.READIN.T2_INTENSIVE_READING_CL.b": "describe the author and the setting of the text in terms of time and place",
+  "ENGL.G7.READIN.T2_INTENSIVE_READING_CL.c": "underscore the value of reading for lifelong learning",
+  "ENGL.G7.WRITIN.T2_MECHANICS_OF_WRITING.a": "recognise the full stop, exclamation mark, and question mark in texts",
+  "ENGL.G7.WRITIN.T2_MECHANICS_OF_WRITING.b": "use the full stop, exclamation mark, and question mark in sentences",
+  "ENGL.G7.WRITIN.T2_MECHANICS_OF_WRITING.c": "acknowledge the importance of punctuating sentences accurately",
+  "ENGL.G7.LISTEN.T3_LISTENING_FOR_THE_MA.a": "identify the main idea from varied descriptive texts",
+  "ENGL.G7.LISTEN.T3_LISTENING_FOR_THE_MA.b": "pick out specific information from varied descriptive texts",
+  "ENGL.G7.LISTEN.T3_LISTENING_FOR_THE_MA.c": "acknowledge the importance of listening skills in communication",
+  "ENGL.G7.READIN.T3_READING_INFORMATION_.a": "distinguish between reading for information and reading for meaning",
+  "ENGL.G7.READIN.T3_READING_INFORMATION_.b": "infer the meaning of words and phrases from varied texts",
+  "ENGL.G7.READIN.T3_READING_INFORMATION_.c": "appreciate the importance of reading for information and meaning",
+  "ENGL.G7.GRAMMA.T3_VERBS_AND_TENSE.a": "identify regular and irregular verbs in sentences",
+  "ENGL.G7.GRAMMA.T3_VERBS_AND_TENSE.b": "use regular and irregular verbs to construct sentences using the past, present, and future tenses",
+  "ENGL.G7.GRAMMA.T3_VERBS_AND_TENSE.c": "appreciate the correct use of verbs and tenses for effective communication",
+  "ENGL.G7.READIN.T3_INTENSIVE_READING_PO.a": "explain the structure of poems",
+  "ENGL.G7.READIN.T3_INTENSIVE_READING_PO.b": "analyse the structure of varied simple poems",
+  "ENGL.G7.READIN.T3_INTENSIVE_READING_PO.c": "read short poems addressing varied societal issues",
+  "ENGL.G7.READIN.T3_INTENSIVE_READING_PO.d": "appreciate the poem’s structure in communicating a message",
+  "ENGL.G7.WRITIN.T3_WRITING_NARRATIVE_PA.a": "identify the parts of a narrative paragraph",
+  "ENGL.G7.WRITIN.T3_WRITING_NARRATIVE_PA.b": "compose a narrative paragraph with the appropriate structure",
+  "ENGL.G7.WRITIN.T3_WRITING_NARRATIVE_PA.c": "acknowledge the significance of paragraphing in written communication",
+  "ENGL.G7.LISTEN.T4_LISTENING_COMPREHENS.a": "distinguish between specific and general information from a listening text",
+  "ENGL.G7.LISTEN.T4_LISTENING_COMPREHENS.b": "select specific information from a listening text",
+  "ENGL.G7.LISTEN.T4_LISTENING_COMPREHENS.c": "listen and respond to texts on leadership",
+  "ENGL.G7.LISTEN.T4_LISTENING_COMPREHENS.d": "emphasise the value of listening skills in communication",
+  "ENGL.G7.READIN.T4_INTENSIVE_READING.a": "discuss the identified reading strategies",
+  "ENGL.G7.READIN.T4_INTENSIVE_READING.b": "select main ideas and details from a variety of written texts",
+  "ENGL.G7.READIN.T4_INTENSIVE_READING.c": "acknowledge the importance of reading for main idea and details as a comprehension skill",
+  "ENGL.G7.GRAMMA.T4_VERBS_AND_TENSE.a": "identify verbs in the simple present and simple past tense in a text",
+  "ENGL.G7.GRAMMA.T4_VERBS_AND_TENSE.b": "write sentences using the simple present tense",
+  "ENGL.G7.GRAMMA.T4_VERBS_AND_TENSE.c": "write sentences using the simple past tense",
+  "ENGL.G7.GRAMMA.T4_VERBS_AND_TENSE.d": "advocate appropriate use of tense in communication",
+  "ENGL.G7.READIN.T4_INTENSIVE_READING_CL.a": "identify the main characters in a text",
+  "ENGL.G7.READIN.T4_INTENSIVE_READING_CL.b": "explain how the characters make the story flow",
+  "ENGL.G7.READIN.T4_INTENSIVE_READING_CL.c": "make predictions based on the title and the sections read",
+  "ENGL.G7.READIN.T4_INTENSIVE_READING_CL.d": "appreciate the role of characters in the class reader",
+  "ENGL.G7.WRITIN.T4_PARAGRAPHING_USING_E.a": "outline examples and incidents to include in a paragraph",
+  "ENGL.G7.WRITIN.T4_PARAGRAPHING_USING_E.b": "create a well-developed paragraph using examples and incidents",
+  "ENGL.G7.WRITIN.T4_PARAGRAPHING_USING_E.c": "appreciate the importance of well-written paragraphs in writing",
+  "ENGL.G7.LISTEN.T5_PRONUNCIATION_SOUNDS.a": "identify the consonant and vowel sounds in words",
+  "ENGL.G7.LISTEN.T5_PRONUNCIATION_SOUNDS.b": "articulate consonants and vowel sounds for oral fluency",
+  "ENGL.G7.LISTEN.T5_PRONUNCIATION_SOUNDS.c": "distinguish the meaning of words on the basis of stress",
+  "ENGL.G7.LISTEN.T5_PRONUNCIATION_SOUNDS.d": "advocate the role of correct pronunciation in communication",
+  "ENGL.G7.READIN.T5_SYNONYMS_AND_ANTONYM.a": "identify synonyms and antonyms of words from written texts",
+  "ENGL.G7.READIN.T5_SYNONYMS_AND_ANTONYM.b": "spell synonyms and antonyms correctly for writing fluency",
+  "ENGL.G7.READIN.T5_SYNONYMS_AND_ANTONYM.c": "use synonyms and antonyms in sentences",
+  "ENGL.G7.READIN.T5_SYNONYMS_AND_ANTONYM.d": "appreciate the importance of correct use of words in communication",
+  "ENGL.G7.GRAMMA.T5_COMPARATIVE_AND_SUPE.a": "identify comparative and superlative adjectives in texts",
+  "ENGL.G7.GRAMMA.T5_COMPARATIVE_AND_SUPE.b": "use comparative and superlative adjectives in communication",
+  "ENGL.G7.GRAMMA.T5_COMPARATIVE_AND_SUPE.c": "acknowledge the value of comparative and superlative forms of adjectives in communication",
+  "ENGL.G7.READIN.T5_INTENSIVE_READING_OR.a": "identify heroic characters in legends",
+  "ENGL.G7.READIN.T5_INTENSIVE_READING_OR.b": "explain the moral lessons in legends",
+  "ENGL.G7.READIN.T5_INTENSIVE_READING_OR.c": "discuss why legends are important in various communities",
+  "ENGL.G7.READIN.T5_INTENSIVE_READING_OR.d": "relate the characters in the legends to real life",
+  "ENGL.G7.WRITIN.T5_FUNCTIONAL_WRITING_F.a": "identify the parts of a friendly letter",
+  "ENGL.G7.WRITIN.T5_FUNCTIONAL_WRITING_F.b": "compose a friendly letter using the correct format",
+  "ENGL.G7.WRITIN.T5_FUNCTIONAL_WRITING_F.c": "appreciate the role of friendly letters in communication",
+  "ENGL.G7.LISTEN.T6_CONVERSATION_SKILLS.a": "identify verbal and non-verbal forms of polite interruptions",
+  "ENGL.G7.LISTEN.T6_CONVERSATION_SKILLS.b": "apply turn-taking skills in different speaking contexts",
+  "ENGL.G7.LISTEN.T6_CONVERSATION_SKILLS.c": "use verbal and non-verbal cues to interrupt a conversation politely",
+  "ENGL.G7.LISTEN.T6_CONVERSATION_SKILLS.d": "acknowledge the importance of politeness in communication",
+  "ENGL.G7.READIN.T6_READING_FLUENCY.a": "identify instances of expressive reading from a print or digital text",
+  "ENGL.G7.READIN.T6_READING_FLUENCY.b": "read a text at the right speed, accurately and with expression",
+  "ENGL.G7.READIN.T6_READING_FLUENCY.c": "appreciate the importance of reading fluency in communication",
+  "ENGL.G7.GRAMMA.T6_WORD_CLASSES_ADVERBS.a": "identify adverbs of time, place, and manner in texts",
+  "ENGL.G7.GRAMMA.T6_WORD_CLASSES_ADVERBS.b": "use adverbs of time, place, and manner in different contexts",
+  "ENGL.G7.GRAMMA.T6_WORD_CLASSES_ADVERBS.c": "acknowledge the value of adverbs of manner, time, and place in communication",
+  "ENGL.G7.READIN.T6_ORAL_LITERATURE_SONG.a": "identify repeated words and phrases in lullabies",
+  "ENGL.G7.READIN.T6_ORAL_LITERATURE_SONG.b": "use appropriate techniques when performing lullabies, pick out key messages communicated in lullabies",
+  "ENGL.G7.READIN.T6_ORAL_LITERATURE_SONG.c": "appreciate the importance of lullabies in real life",
+  "ENGL.G7.WRITIN.T6_COMMONLY_MISSPELT_WO.a": "recognise commonly misspelt words in texts",
+  "ENGL.G7.WRITIN.T6_COMMONLY_MISSPELT_WO.b": "use commonly misspelt words correctly in written texts",
+  "ENGL.G7.WRITIN.T6_COMMONLY_MISSPELT_WO.c": "value the relationship between accurate spelling and effective written communication",
+  "ENGL.G7.LISTEN.T7_LISTENING_COMPREHENS.a": "identify clues that signal details from a listening text",
+  "ENGL.G7.LISTEN.T7_LISTENING_COMPREHENS.b": "take detailed notes on a listening text",
+  "ENGL.G7.LISTEN.T7_LISTENING_COMPREHENS.c": "acknowledge the importance of listening for details",
+  "ENGL.G7.READIN.T7_INDEPENDENT_READING_.a": "identify types of information conveyed by visuals for comprehension",
+  "ENGL.G7.READIN.T7_INDEPENDENT_READING_.b": "interpret visuals for information",
+  "ENGL.G7.READIN.T7_INDEPENDENT_READING_.c": "appreciate the importance of visual interpretation skills in different texts",
+  "ENGL.G7.GRAMMA.T7_PERSONAL_AND_POSSESS.a": "distinguish between personal and possessive pronouns in sentences",
+  "ENGL.G7.GRAMMA.T7_PERSONAL_AND_POSSESS.b": "use personal and possessive pronouns in sentences appropriately",
+  "ENGL.G7.GRAMMA.T7_PERSONAL_AND_POSSESS.c": "appreciate the value of proper use of pronouns",
+  "ENGL.G7.READIN.T7_CHARACTERS_IN_CLASS_.a": "identify minor characters in a text",
+  "ENGL.G7.READIN.T7_CHARACTERS_IN_CLASS_.b": "discuss the relationships between different minor characters in the text",
+  "ENGL.G7.READIN.T7_CHARACTERS_IN_CLASS_.c": "appreciate the place of minor characters in the class reader",
+  "ENGL.G7.WRITIN.T7_COMPOSITION_THE_WRIT.a": "outline the steps in the writing process",
+  "ENGL.G7.WRITIN.T7_COMPOSITION_THE_WRIT.b": "write a narrative composition following the writing process",
+  "ENGL.G7.WRITIN.T7_COMPOSITION_THE_WRIT.c": "acknowledge the role of writing fluency in communication",
+  "ENGL.G7.LISTEN.T8_LISTENING_COMPREHENS.a": "identify the characters from a listening text",
+  "ENGL.G7.LISTEN.T8_LISTENING_COMPREHENS.b": "sequence the events in explanatory narratives",
+  "ENGL.G7.LISTEN.T8_LISTENING_COMPREHENS.c": "explain the moral lessons in an explanatory narrative",
+  "ENGL.G7.LISTEN.T8_LISTENING_COMPREHENS.d": "acknowledge the importance of listening comprehension in communication",
+  "ENGL.G7.READIN.T8_INTENSIVE_READING.a": "distinguish main ideas from supporting details from poems",
+  "ENGL.G7.READIN.T8_INTENSIVE_READING.b": "use contextual clues to infer the meaning of words and phrases in a text",
+  "ENGL.G7.READIN.T8_INTENSIVE_READING.c": "make connections between events in a poem and real life",
+  "ENGL.G7.READIN.T8_INTENSIVE_READING.d": "summarise events in a poem",
+  "ENGL.G7.READIN.T8_INTENSIVE_READING.e": "answer direct and inferential questions from poems",
+  "ENGL.G7.READIN.T8_INTENSIVE_READING.f": "acknowledge the role of intensive reading in lifelong learning",
+  "ENGL.G7.GRAMMA.T8_SIMPLE_PREPOSITIONS.a": "identify different types of prepositions",
+  "ENGL.G7.GRAMMA.T8_SIMPLE_PREPOSITIONS.b": "use prepositions in sentences",
+  "ENGL.G7.GRAMMA.T8_SIMPLE_PREPOSITIONS.c": "attest to the importance of well-formed sentences in communication",
+  "ENGL.G7.READIN.T8_INTENSIVE_READING_PO.a": "identify the human characters in a set of poems",
+  "ENGL.G7.READIN.T8_INTENSIVE_READING_PO.b": "use adjectives to describe the traits of human characters in a set of poems",
+  "ENGL.G7.READIN.T8_INTENSIVE_READING_PO.c": "appreciate the importance of human characters in poetry",
+  "ENGL.G7.WRITIN.T8_COMPOSITION_WRITING_.a": "identify steps involved in the assessment of narrative compositions",
+  "ENGL.G7.WRITIN.T8_COMPOSITION_WRITING_.b": "write narrative compositions and assess the introduction, body, and conclusion",
+  "ENGL.G7.WRITIN.T8_COMPOSITION_WRITING_.c": "appreciate the importance of assessment in improving narrative composition writing",
+  "ENGL.G7.LISTEN.T9_PRONUNCIATION_CONSON.a": "articulate correctly the consonant sounds/t/, /d/, /l/, /r/ in words",
+  "ENGL.G7.LISTEN.T9_PRONUNCIATION_CONSON.b": "articulate correctly vowel sounds /ʊ/ and /uː/ in words",
+  "ENGL.G7.LISTEN.T9_PRONUNCIATION_CONSON.c": "pronounce words correctly using stress",
+  "ENGL.G7.LISTEN.T9_PRONUNCIATION_CONSON.d": "distinguish the meaning of words based on stress",
+  "ENGL.G7.LISTEN.T9_PRONUNCIATION_CONSON.e": "acknowledge the importance of correct pronunciation in oral communication",
+  "ENGL.G7.READIN.T9_GRADE_APPROPRIATE_FI.a": "select a variety of fictional texts for extensive reading",
+  "ENGL.G7.READIN.T9_GRADE_APPROPRIATE_FI.b": "read fictional texts for information and enjoyment",
+  "ENGL.G7.READIN.T9_GRADE_APPROPRIATE_FI.c": "appreciate the importance of fiction in life",
+  "ENGL.G7.GRAMMA.T9_CONJUNCTIONS.a": "identify the conjunctions and, but and or in sentences",
+  "ENGL.G7.GRAMMA.T9_CONJUNCTIONS.b": "use and, but and or in sentences accurately",
+  "ENGL.G7.GRAMMA.T9_CONJUNCTIONS.c": "appreciate the importance of proper use of conjunctions in written and spoken contexts",
+  "ENGL.G7.READIN.T9_INTENSIVE_READING_CL.a": "explain the sequence of events in a text",
+  "ENGL.G7.READIN.T9_INTENSIVE_READING_CL.b": "make short notes on the sequence of events in a text",
+  "ENGL.G7.READIN.T9_INTENSIVE_READING_CL.c": "appreciate reading works of art for information and enjoyment",
+  "ENGL.G7.WRITIN.T9_CREATIVE_WRITING_NAR.a": "identify features of a narrative composition in creative writing",
+  "ENGL.G7.WRITIN.T9_CREATIVE_WRITING_NAR.b": "create well-written narrative compositions on a variety of topics",
+  "ENGL.G7.WRITIN.T9_CREATIVE_WRITING_NAR.c": "appreciate the importance of writing in day-to-day life",
+  "ENGL.G7.LISTEN.T10_ORAL_PRESENTATIONS_D.a": "identify occasions where speeches are presented",
+  "ENGL.G7.LISTEN.T10_ORAL_PRESENTATIONS_D.b": "apply the features of oral presentations for effective, communication",
+  "ENGL.G7.LISTEN.T10_ORAL_PRESENTATIONS_D.c": "appreciate the importance of good oral presentation skills when delivering a speech",
+  "ENGL.G7.READIN.T10_STUDY_SKILLS_NOTE_MA.a": "identify the main and supporting points in texts",
+  "ENGL.G7.READIN.T10_STUDY_SKILLS_NOTE_MA.b": "make notes from varieties of written texts",
+  "ENGL.G7.READIN.T10_STUDY_SKILLS_NOTE_MA.c": "relate note-making to effective reading",
+  "ENGL.G7.GRAMMA.T10_DETERMINERS.a": "identify articles and possessives in texts",
+  "ENGL.G7.GRAMMA.T10_DETERMINERS.b": "use articles and possessives in sentences",
+  "ENGL.G7.GRAMMA.T10_DETERMINERS.c": "acknowledge the importance of articles and possessives for effective communication",
+  "ENGL.G7.READIN.T10_CHARACTERS_AND_THEIR.a": "identify characters in monster narratives",
+  "ENGL.G7.READIN.T10_CHARACTERS_AND_THEIR.b": "explain traits of characters in given monster narratives",
+  "ENGL.G7.READIN.T10_CHARACTERS_AND_THEIR.c": "relate monster narratives to real life situations",
+  "ENGL.G7.READIN.T10_CHARACTERS_AND_THEIR.d": "appreciate the importance of monster narratives in life",
+  "ENGL.G7.WRITIN.T10_FUNCTIONAL_WRITING_P.a": "identify ways of grouping items in packing and shopping lists",
+  "ENGL.G7.WRITIN.T10_FUNCTIONAL_WRITING_P.b": "write a packing list for a specified event",
+  "ENGL.G7.WRITIN.T10_FUNCTIONAL_WRITING_P.c": "prepare a shopping list for use in a given context",
+  "ENGL.G7.WRITIN.T10_FUNCTIONAL_WRITING_P.d": "recognise the importance of preparing a shopping and packing list in their everyday lives",
+  "ENGL.G7.LISTEN.T11_INTERVIEWS.a": "identify reasons for sitting an interview",
+  "ENGL.G7.LISTEN.T11_INTERVIEWS.b": "articulate points clearly and confidently during an oral interview",
+  "ENGL.G7.LISTEN.T11_INTERVIEWS.c": "respond confidently to questions during an interview",
+  "ENGL.G7.LISTEN.T11_INTERVIEWS.d": "seek clarification during an oral presentation",
+  "ENGL.G7.LISTEN.T11_INTERVIEWS.e": "appreciate the importance of interviews in getting school placement and scholarships",
+  "ENGL.G7.READIN.T11_EXTENSIVE_READING_NO.a": "identify print or electronic non-fiction materials that are interesting to read",
+  "ENGL.G7.READIN.T11_EXTENSIVE_READING_NO.b": "read a variety of grade-appropriate non-fiction materials independently for lifelong learning",
+  "ENGL.G7.READIN.T11_EXTENSIVE_READING_NO.c": "recommend to peers suitable non-fiction materials to read for information",
+  "ENGL.G7.READIN.T11_EXTENSIVE_READING_NO.d": "acknowledge the importance of reading for enjoyment and general understanding",
+  "ENGL.G7.GRAMMA.T11_FORMATION_OF_ADJECTI.a": "recognise adjectives from a text",
+  "ENGL.G7.GRAMMA.T11_FORMATION_OF_ADJECTI.b": "construct simple sentences using the adjectives formed",
+  "ENGL.G7.GRAMMA.T11_FORMATION_OF_ADJECTI.c": "appreciate the value of proper use of adjectives",
+  "ENGL.G7.READIN.T11_INTENSIVE_READING_DI.a": "describe the characters in a given dilemma narrative",
+  "ENGL.G7.READIN.T11_INTENSIVE_READING_DI.b": "recognise a closing formula as a feature of dilemma narratives",
+  "ENGL.G7.READIN.T11_INTENSIVE_READING_DI.c": "relate the lessons learnt in the dilemma narrative to real life experiences",
+  "ENGL.G7.READIN.T11_INTENSIVE_READING_DI.d": "appreciate the lessons learnt from the dilemma narrative for literary appreciation",
+  "ENGL.G7.WRITIN.T11_SPELLING_ANTONYMS_SY.x1": "recognise antonyms, synonyms, and numbers in words from a selected text",
+  "ENGL.G7.WRITIN.T11_SPELLING_ANTONYMS_SY.x2": "use antonyms, synonyms, and numbers in words correctly in writing",
+  "ENGL.G7.WRITIN.T11_SPELLING_ANTONYMS_SY.x3": "appreciate the usage of antonyms, synonyms, and numbers in words in effective writing",
+  "ENGL.G7.LISTEN.T12_LISTENING_VIEWS_OPIN.a": "list ways of expressing views/opinions in different contexts",
+  "ENGL.G7.LISTEN.T12_LISTENING_VIEWS_OPIN.b": "use different expressions that indicate own views/opinions in a given text",
+  "ENGL.G7.LISTEN.T12_LISTENING_VIEWS_OPIN.c": "acknowledge the value of one’s views/opinions as a lifelong skill in communication",
+  "ENGL.G7.READIN.T12_INTENSIVE_READING_CO.a": "identify the main ideas in a text",
+  "ENGL.G7.READIN.T12_INTENSIVE_READING_CO.b": "use contextual clues to infer the meaning of words in a text",
+  "ENGL.G7.READIN.T12_INTENSIVE_READING_CO.c": "describe characters, ideas, or events in a text",
+  "ENGL.G7.READIN.T12_INTENSIVE_READING_CO.d": "appreciate the importance of reading comprehension in lifelong learning",
+  "ENGL.G7.GRAMMA.T12_PHRASAL_VERBS.a": "identify phrasal verbs formed from put, come and give in a given text",
+  "ENGL.G7.GRAMMA.T12_PHRASAL_VERBS.b": "use given phrasal verbs correctly in sentence construction",
+  "ENGL.G7.GRAMMA.T12_PHRASAL_VERBS.c": "acknowledge the role of phrasal verbs in communication",
+  "ENGL.G7.READIN.T12_CLASS_READER_MAIN_ID.a": "identify the main ideas in the section read in the text",
+  "ENGL.G7.READIN.T12_CLASS_READER_MAIN_ID.b": "discuss the lessons learnt from the text",
+  "ENGL.G7.READIN.T12_CLASS_READER_MAIN_ID.c": "relate the lessons learnt to real life experiences",
+  "ENGL.G7.READIN.T12_CLASS_READER_MAIN_ID.d": "appreciate the role of literature in fostering critical thinking",
+  "ENGL.G7.WRITIN.T12_THE_WRITING_PROCESS_.a": "outline the format of a dialogue",
+  "ENGL.G7.WRITIN.T12_THE_WRITING_PROCESS_.b": "apply the writing process in writing a dialogue",
+  "ENGL.G7.WRITIN.T12_THE_WRITING_PROCESS_.c": "acknowledge the importance of the writing process in acquiring good writing skills",
+  "ENGL.G7.LISTEN.T13_LISTENING_COMPREHENS.a": "identify the key issues raised in songs, addressing land travel",
+  "ENGL.G7.LISTEN.T13_LISTENING_COMPREHENS.b": "listen attentively to songs on land travel",
+  "ENGL.G7.LISTEN.T13_LISTENING_COMPREHENS.c": "use vocabulary identified from songs on land travel correctly",
+  "ENGL.G7.LISTEN.T13_LISTENING_COMPREHENS.d": "acknowledge the importance of extensive listening in communication",
+  "ENGL.G7.READIN.T13_INTENSIVE_READING_CO.a": "identify key ideas from a passage",
+  "ENGL.G7.READIN.T13_INTENSIVE_READING_CO.b": "summarise key ideas from a passage",
+  "ENGL.G7.READIN.T13_INTENSIVE_READING_CO.c": "create mental images from the events in a passage",
+  "ENGL.G7.READIN.T13_INTENSIVE_READING_CO.d": "deduce the meaning of words from context",
+  "ENGL.G7.READIN.T13_INTENSIVE_READING_CO.e": "respond to factual and inferential questions correctly from the passage",
+  "ENGL.G7.READIN.T13_INTENSIVE_READING_CO.f": "acknowledge the importance of comprehension strategies in effective reading",
+  "ENGL.G7.GRAMMA.T13_SENTENCES_SIMPLE_SEN.a": "identify simple sentences from varied texts",
+  "ENGL.G7.GRAMMA.T13_SENTENCES_SIMPLE_SEN.b": "construct simple sentences on a variety of issues",
+  "ENGL.G7.GRAMMA.T13_SENTENCES_SIMPLE_SEN.c": "advocate the importance of using a variety of sentences in communication",
+  "ENGL.G7.READIN.T13_ORAL_LITERATURE_PRAI.a": "identify the purpose and occasions for which praise songs are performed",
+  "ENGL.G7.READIN.T13_ORAL_LITERATURE_PRAI.b": "discuss the relationship between the singer and the person being praised in praise songs",
+  "ENGL.G7.READIN.T13_ORAL_LITERATURE_PRAI.c": "perform praise songs sung in their immediate environment",
+  "ENGL.G7.READIN.T13_ORAL_LITERATURE_PRAI.d": "collaborate with peers in performing the praise songs",
+  "ENGL.G7.READIN.T13_ORAL_LITERATURE_PRAI.e": "appreciate the purpose of praise songs in communication",
+  "ENGL.G7.WRITIN.T13_CREATIVE_WRITING_NAR.a": "explain the meaning of specified idioms in context",
+  "ENGL.G7.WRITIN.T13_CREATIVE_WRITING_NAR.b": "create well-written narrative compositions using the specified idioms",
+  "ENGL.G7.WRITIN.T13_CREATIVE_WRITING_NAR.c": "appreciate the role of idioms in creative writing",
+  "ENGL.G7.LISTEN.T14_CONSONANT_SOUNDS_AND.a": "identify words with the sounds /v/, /f/, /n/ and /ŋ/ from a text",
+  "ENGL.G7.LISTEN.T14_CONSONANT_SOUNDS_AND.b": "pronounce words with the sounds /v/, /f/, /n/ and /ŋ/ in sentences",
+  "ENGL.G7.LISTEN.T14_CONSONANT_SOUNDS_AND.c": "use correct intonation for yes/no and wh-questions in varied contexts",
+  "ENGL.G7.LISTEN.T14_CONSONANT_SOUNDS_AND.d": "appreciate the importance of correct pronunciation and intonation in a conversation",
+  "ENGL.G7.READIN.T14_STUDY_SKILLS_SUMMARI.a": "identify the main ideas in texts",
+  "ENGL.G7.READIN.T14_STUDY_SKILLS_SUMMARI.b": "write a summary of ideas from varied texts",
+  "ENGL.G7.READIN.T14_STUDY_SKILLS_SUMMARI.c": "appreciate the importance of summarising information in a given context",
+  "ENGL.G7.GRAMMA.T14_SUBJECT_VERB_AGREEME.a": "identify the subject and the verb in sentences",
+  "ENGL.G7.GRAMMA.T14_SUBJECT_VERB_AGREEME.b": "construct sentences ensuring subject-verb agreement",
+  "ENGL.G7.GRAMMA.T14_SUBJECT_VERB_AGREEME.c": "affirm the importance of subject-verb agreement in sentences",
+  "ENGL.G7.READIN.T14_FEATURES_OF_STYLE.a": "identify instances of dialogue, similes, and metaphors in the text",
+  "ENGL.G7.READIN.T14_FEATURES_OF_STYLE.b": "use the styles of dialogue, similes, and metaphors in guided context",
+  "ENGL.G7.READIN.T14_FEATURES_OF_STYLE.c": "appreciate the importance of style in a work of art",
+  "ENGL.G7.WRITIN.T14_DESCRIPTIVE_WRITING_.a": "identify features of a person, a thing, or a place that can be described",
+  "ENGL.G7.WRITIN.T14_DESCRIPTIVE_WRITING_.b": "write a descriptive composition on a given subject",
+  "ENGL.G7.WRITIN.T14_DESCRIPTIVE_WRITING_.c": "underscore the importance of creative writing in communication",
+  "ENGL.G7.LISTEN.T15_ORAL_REPORTS.a": "outline the organisation of an oral report of events within the classroom",
+  "ENGL.G7.LISTEN.T15_ORAL_REPORTS.b": "present an oral report on events that occur within the classroom",
+  "ENGL.G7.LISTEN.T15_ORAL_REPORTS.c": "enjoy delivering and listening to oral reports in various contexts",
+  "ENGL.G7.READIN.T15_READING_FLUENCY.a": "recognise the use of fluency strategies in the reading process",
+  "ENGL.G7.READIN.T15_READING_FLUENCY.b": "apply fluency strategies while reading",
+  "ENGL.G7.READIN.T15_READING_FLUENCY.c": "appreciate the role of reading fluency in communication",
+  "ENGL.G7.GRAMMA.T15_AFFIRMATIVE_AND_NEGA.a": "differentiate between affirmative and negative sentences in spoken and written contexts",
+  "ENGL.G7.GRAMMA.T15_AFFIRMATIVE_AND_NEGA.b": "construct affirmative and negative sentences in varied contexts",
+  "ENGL.G7.GRAMMA.T15_AFFIRMATIVE_AND_NEGA.c": "acknowledge the expressive role of sentences in effective communication",
+  "ENGL.G7.READIN.T15_POETRY.a": "identify the subject matter of a poem",
+  "ENGL.G7.READIN.T15_POETRY.b": "analyse ideas in the poem",
+  "ENGL.G7.READIN.T15_POETRY.c": "reiterate the role of poetry in passing information",
+  "ENGL.G7.WRITIN.T15_FUNCTIONAL_WRITING_N.a": "outline the format of presenting notices and posters",
+  "ENGL.G7.WRITIN.T15_FUNCTIONAL_WRITING_N.b": "design notices and posters on current issues",
+  "ENGL.G7.WRITIN.T15_FUNCTIONAL_WRITING_N.c": "acknowledge the role of notices and posters in disseminating information"
+ },
+ "skills": {
+  "ENGL.G7.LISTEN.T1_CONVERSATIONAL_SKILL.INTRO_POLITE": {
+   "forms": [
+    "choose the polite expression",
+    "fill the gap",
+    "spot the mistake"
+   ],
+   "mastery": "Chooses the polite way to introduce yourself, a friend or a visitor (May I introduce my friend, Wanjiru? Pleased to meet you), puts the person of honour first, and spots a rude or blunt turn, in 8 of 10 new items."
+  },
+  "ENGL.G7.READIN.T1_EXTENSIVE_READING_IN.SUITABLE_TEXT": {
+   "forms": [
+    "choose the book for a purpose",
+    "fiction or non-fiction",
+    "judge the relevance of a text"
+   ],
+   "mastery": "Chooses the book or text that fits what the reader needs (information, enjoyment, a topic, a level), tells fiction from non-fiction, and does not choose by the cover, the length or the title alone, in 8 of 10 new items."
+  },
+  "ENGL.G7.GRAMMA.T1_WORD_CLASSES_NOUNS.NOUN_TYPES": {
+   "forms": [
+    "choose the kind of noun",
+    "fill the gap",
+    "spot the mistake"
+   ],
+   "mastery": "Names a noun as common (river), proper (Mombasa), collective (a flock of birds) or abstract (courage), picks the collective noun that goes with a group (a swarm of bees), and writes a capital letter for a proper noun only, in 8 of 10 new items."
+  },
+  "ENGL.G7.READIN.T1_INTENSIVE_READING_TR.TRICKSTER": {
+   "forms": [
+    "choose the trickster",
+    "choose the trick or the lesson",
+    "choose what the trickster is like"
+   ],
+   "mastery": "Says that a trickster is a clever character who gets what it wants by a trick (Hare, Spider), names the trick and who is fooled, and says what the story teaches, and does not call the trickster a hero or the fooled one a trickster, in 8 of 10 new items."
+  },
+  "ENGL.G7.WRITIN.T1_HANDWRITING_LEGIBILI.HANDWRITING": {
+   "forms": [
+    "choose the feature",
+    "choose what to work on"
+   ],
+   "mastery": "Names the features of neat handwriting (letters of an even size that sit on the line, tall and short letters kept distinct, clear spaces between words, a steady slant) and says why it matters, and does not take fast, decorated or crowded writing for neat, in 8 of 10 new items."
+  },
+  "ENGL.G7.LISTEN.T2_ORAL_PRESENTATIONS_O.ORAL_TECHNIQUES": {
+   "forms": [
+    "choose the technique",
+    "choose the best way to tell this part"
+   ],
+   "mastery": "Names how a good storyteller uses the voice (loud and soft, fast and slow), pauses, gestures, face, eye contact and audience participation, and picks the technique that fits a part of a story, in 8 of 10 new items."
+  },
+  "ENGL.G7.GRAMMA.T2_WORD_CLASSES_NOUNS.COUNT_NONCOUNT": {
+   "forms": [
+    "choose the correct word",
+    "fill the gap",
+    "spot the mistake"
+   ],
+   "mastery": "Tells a count noun (chair, chairs) from a non-count noun (water, advice), uses many and a few with count nouns and much and a little with non-count nouns, and does not write advices, informations or furnitures, in 8 of 10 new items."
+  },
+  "ENGL.G7.GRAMMA.T2_WORD_CLASSES_NOUNS.PLURALS": {
+   "forms": [
+    "choose the correct word",
+    "fill the gap",
+    "spot the mistake"
+   ],
+   "mastery": "Writes the plural of nouns with the usual -s or -es, -ies after a consonant and y (baby, babies), -ves (knife, knives), the irregular plurals (child, children; man, men; tooth, teeth) and the nouns that do not change (sheep), in 8 of 10 new items."
+  },
+  "ENGL.G7.READIN.T2_INTENSIVE_READING_CL.BOOK_PARTS": {
+   "forms": [
+    "choose the part for the need",
+    "choose what the part tells you"
+   ],
+   "mastery": "Says what the cover, title page, blurb, contents page, author's note and glossary tell the reader and which part to read first to decide on a book, and does not mix them up, in 8 of 10 new items."
+  },
+  "ENGL.G7.WRITIN.T2_MECHANICS_OF_WRITING.END_MARKS": {
+   "forms": [
+    "choose the correct sentence",
+    "spot the mistake",
+    "choose the mark"
+   ],
+   "mastery": "Ends a statement with a full stop, a question with a question mark and a strong feeling or command with an exclamation mark, and does not use a question mark after a reported question, in 8 of 10 new items."
+  },
+  "ENGL.G7.READIN.T3_READING_INFORMATION_.INFO_OR_MEANING": {
+   "forms": [
+    "information or meaning",
+    "choose the way to read for the task"
+   ],
+   "mastery": "Says that reading for information is to find facts (a timetable, a notice) and reading for meaning is to understand and enjoy what the writer says (a story, a poem), and chooses which to do for a task, in 8 of 10 new items."
+  },
+  "ENGL.G7.GRAMMA.T3_VERBS_AND_TENSE.IRREGULAR_VERBS": {
+   "forms": [
+    "choose the correct form",
+    "fill the gap",
+    "spot the mistake"
+   ],
+   "mastery": "Writes the past form (went, saw, ate) and the past participle (gone, seen, eaten) of common irregular verbs, tells them from regular verbs that add -ed, and does not write goed, seen for saw or have went, in 8 of 10 new items."
+  },
+  "ENGL.G7.GRAMMA.T3_VERBS_AND_TENSE.TENSE_CHOICE": {
+   "forms": [
+    "choose the correct word",
+    "fill the gap",
+    "spot the mistake"
+   ],
+   "mastery": "Uses the time word (every day, yesterday, next week) to choose the present, past or future form, and does not write yesterday I go or tomorrow I went, in 8 of 10 new items."
+  },
+  "ENGL.G7.READIN.T3_INTENSIVE_READING_PO.POEM_STRUCTURE": {
+   "forms": [
+    "poem or prose",
+    "choose the rhyming words",
+    "choose the repeated line",
+    "count the stanzas"
+   ],
+   "mastery": "Counts the lines and the stanzas of a poem, finds the words that rhyme by sound (not spelling), the line or words that repeat (the refrain), and tells a poem from a story by its shape, in 8 of 10 new items."
+  },
+  "ENGL.G7.WRITIN.T3_WRITING_NARRATIVE_PA.NARRATIVE_PARAGRAPH": {
+   "forms": [
+    "choose the opening sentence",
+    "find the part",
+    "put the sentences in order"
+   ],
+   "mastery": "Names the parts of a narrative paragraph (the opening that sets the scene, the events in order, the closing) and tells which sentence plays which part, and which does not belong, in 8 of 10 new items."
+  },
+  "ENGL.G7.LISTEN.T4_LISTENING_COMPREHENS.SPECIFIC_GENERAL": {
+   "forms": [
+    "general or specific",
+    "choose the specific detail",
+    "type the specific detail"
+   ],
+   "mastery": "Says whether a question asks for the general idea or for a specific detail (a name, a number, a place, a time), and picks out the specific detail from a short text read to or by the learner, in 8 of 10 new items."
+  },
+  "ENGL.G7.READIN.T4_INTENSIVE_READING.READING_STRATEGIES": {
+   "forms": [
+    "choose the strategy for the purpose",
+    "name the strategy"
+   ],
+   "mastery": "Chooses skimming for a quick idea of a text, scanning for a name or number, predicting from the title and clues, and rereading with the words around a hard sentence, and names the strategy from what the reader does, in 8 of 10 new items."
+  },
+  "ENGL.G7.GRAMMA.T4_VERBS_AND_TENSE.SIMPLE_PRESENT": {
+   "forms": [
+    "choose the correct word",
+    "fill the gap",
+    "spot the mistake"
+   ],
+   "mastery": "Writes the simple present for habits and facts, adds -s or -es after he, she, it or one name (She walks, he washes), uses do not and does not with the plain verb, and does not write he walk or she do not know, in 8 of 10 new items."
+  },
+  "ENGL.G7.GRAMMA.T4_VERBS_AND_TENSE.SIMPLE_PAST": {
+   "forms": [
+    "choose the correct word",
+    "fill the gap",
+    "spot the mistake"
+   ],
+   "mastery": "Writes the simple past with -ed (with the spelling changes stopped, studied) or the irregular form, uses did not and did with the plain verb, and does not write did not went or she walkd, in 8 of 10 new items."
+  },
+  "ENGL.G7.READIN.T4_INTENSIVE_READING_CL.CHARACTER_ROLES": {
+   "forms": [
+    "choose the main character",
+    "choose a minor character",
+    "choose the role"
+   ],
+   "mastery": "Names the main character (the story is about the person) and a minor character (helps or gets in the way) from a short story, and says what the character does to move the story on, in 8 of 10 new items."
+  },
+  "ENGL.G7.READIN.T4_INTENSIVE_READING_CL.CHARACTER_TRAITS": {
+   "forms": [
+    "choose the trait",
+    "choose the evidence"
+   ],
+   "mastery": "Chooses the trait that a character's words and actions support (brave, selfish, honest, jealous), and the line that is the evidence, and does not judge from the name or one word, in 8 of 10 new items."
+  },
+  "ENGL.G7.READIN.T4_INTENSIVE_READING_CL.PREDICT": {
+   "forms": [
+    "choose the best prediction",
+    "choose the clue that supports it"
+   ],
+   "mastery": "Uses the title and the clues so far to choose the most likely next event and says which clue supports it, in 8 of 10 new passages."
+  },
+  "ENGL.G7.WRITIN.T4_PARAGRAPHING_USING_E.PARAGRAPH_EXAMPLES": {
+   "forms": [
+    "choose the supporting example",
+    "find the sentence that does not belong"
+   ],
+   "mastery": "Chooses the example or incident that supports the topic sentence, tells it from a sentence that is off the topic, and says which words introduce an example (for example, for instance), in 8 of 10 new items."
+  },
+  "ENGL.G7.GRAMMA.T5_COMPARATIVE_AND_SUPE.ADJECTIVE_DEGREES": {
+   "forms": [
+    "pick the form",
+    "fill the gap",
+    "spot the mistake",
+    "choose the correct word"
+   ],
+   "mastery": "Writes -er and -est for short adjectives, more and most for long ones, the irregular forms (good, better, best; bad, worse, worst), than with the comparative and the with the superlative, and does not write more taller or the most best, in 8 of 10 new items."
+  },
+  "ENGL.G7.READIN.T5_INTENSIVE_READING_OR.MORAL_LESSON": {
+   "forms": [
+    "choose the heroic quality",
+    "choose the lesson"
+   ],
+   "mastery": "Says what makes a character a hero in a legend (brave, wise, generous), and chooses the moral lesson of a story, not a detail and not a lesson the story does not teach, in 8 of 10 new items."
+  },
+  "ENGL.G7.WRITIN.T5_FUNCTIONAL_WRITING_F.FRIENDLY_LETTER": {
+   "forms": [
+    "choose the part and its place",
+    "choose the closing",
+    "find the mistake in a letter"
+   ],
+   "mastery": "Puts the writer's address, date, greeting, body, closing (Your friend) and name in their places, and does not use the closing of a formal letter or write the receiver's address in a friendly letter, in 8 of 10 new items."
+  },
+  "ENGL.G7.LISTEN.T6_CONVERSATION_SKILLS.POLITE_INTERRUPT": {
+   "forms": [
+    "choose the polite interruption",
+    "verbal or non-verbal",
+    "fill the gap"
+   ],
+   "mastery": "Chooses the polite way to interrupt (Excuse me, may I say something?), to wait for a turn and to give one, tells it from a rude way, and says which gestures show politeness, in 8 of 10 new items."
+  },
+  "ENGL.G7.GRAMMA.T6_WORD_CLASSES_ADVERBS.ADVERB_KINDS": {
+   "forms": [
+    "choose the kind of adverb",
+    "find the adverb",
+    "spot the mistake"
+   ],
+   "mastery": "Says whether an adverb tells when (yesterday, soon), where (here, outside) or how (slowly, carefully) an action happens, and does not name an adjective as an adverb, in 8 of 10 new items."
+  },
+  "ENGL.G7.GRAMMA.T6_WORD_CLASSES_ADVERBS.ADVERB_FORM": {
+   "forms": [
+    "choose the correct word",
+    "fill the gap",
+    "spot the mistake"
+   ],
+   "mastery": "Writes the adverb of manner (quickly, well, hard), keeps the same form for fast, hard and late, does not write good for well or hardly for hard, and puts the adverb where it makes the meaning clear, in 8 of 10 new items."
+  },
+  "ENGL.G7.WRITIN.T6_COMMONLY_MISSPELT_WO.MISSPELT_WORDS": {
+   "forms": [
+    "choose the correct word",
+    "fill the gap",
+    "spot the mistake"
+   ],
+   "mastery": "Spells words that often go wrong (because, friend, believe, beautiful, address, definitely, parliament, necessary, calendar, February) and picks the correct spelling from three that look alike, in 8 of 10 new items."
+  },
+  "ENGL.G7.READIN.T7_INDEPENDENT_READING_.VISUALS": {
+   "forms": [
+    "choose the visual for the need",
+    "read the table"
+   ],
+   "mastery": "Says what kind of information a table, a bar graph, a pie chart, a map, a diagram and a timeline give, and reads a fact from a small table or chart, and does not read a row for a column, in 8 of 10 new items."
+  },
+  "ENGL.G7.GRAMMA.T7_PERSONAL_AND_POSSESS.PERSONAL_PRONOUNS": {
+   "forms": [
+    "choose the correct word",
+    "fill the gap",
+    "spot the mistake"
+   ],
+   "mastery": "Uses the subject form (I, he, she, we, they) before a verb and the object form (me, him, her, us, them) after a verb or preposition, and does not write me and him went or between you and I, in 8 of 10 new items."
+  },
+  "ENGL.G7.GRAMMA.T7_PERSONAL_AND_POSSESS.POSSESSIVES": {
+   "forms": [
+    "choose the correct word",
+    "fill the gap",
+    "spot the mistake"
+   ],
+   "mastery": "Tells a possessive adjective before a noun (my book) from a possessive pronoun that stands alone (the book is mine), writes its (belonging) and it's (it is) correctly, and does not write her's or your's, in 8 of 10 new items."
+  },
+  "ENGL.G7.WRITIN.T7_COMPOSITION_THE_WRIT.WRITING_PROCESS": {
+   "forms": [
+    "choose the step",
+    "put the steps in order",
+    "what is done at this step"
+   ],
+   "mastery": "Names the steps (planning, drafting, revising, editing, publishing), says what is done at each and puts them in order, and does not edit before the draft is written, in 8 of 10 new items."
+  },
+  "ENGL.G7.GRAMMA.T8_SIMPLE_PREPOSITIONS.PREPOSITIONS": {
+   "forms": [
+    "choose the kind of preposition",
+    "choose the correct word",
+    "fill the gap",
+    "spot the mistake"
+   ],
+   "mastery": "Says whether a preposition shows time (at, on, in), place (beside, under) or direction (to, into, across), chooses at, on or in for times and places, and does not write at Monday or in the morning of Friday, in 8 of 10 new items."
+  },
+  "ENGL.G7.WRITIN.T8_COMPOSITION_WRITING_.ASSESS_NARRATIVE": {
+   "forms": [
+    "choose the part to check",
+    "find what needs work"
+   ],
+   "mastery": "Says which part of a narrative to check for what (the introduction for who, where and when, the body for events in order, the conclusion for how it ends), and the first step of an assessment (reading it again slowly), and finds the part that needs work, in 8 of 10 new items."
+  },
+  "ENGL.G7.LISTEN.T9_PRONUNCIATION_CONSON.SOUNDS_VOWELS": {
+   "forms": [
+    "pick the word with the same sound",
+    "find the odd one out"
+   ],
+   "mastery": "Picks the word with the short sound of put (/ʊ/) or the long sound of food (/uː/), and does not match words by spelling (look and food both have oo), in 8 of 10 new items."
+  },
+  "ENGL.G7.GRAMMA.T9_CONJUNCTIONS.CONJUNCTIONS_BASIC": {
+   "forms": [
+    "choose the correct word",
+    "fill the gap",
+    "spot the mistake"
+   ],
+   "mastery": "Uses and to add, but to show a difference and or to give a choice, and does not write but and or two joining words together, or a comma where and is needed, in 8 of 10 new items."
+  },
+  "ENGL.G7.READIN.T9_INTENSIVE_READING_CL.STORY_ORDER": {
+   "forms": [
+    "put the events in order",
+    "choose the first event",
+    "choose the last event"
+   ],
+   "mastery": "Puts four events of a story in the order they happened, using time words such as first, then, after and finally, in 8 of 10 new passages."
+  },
+  "ENGL.G7.WRITIN.T9_CREATIVE_WRITING_NAR.NARRATIVE_FEATURES": {
+   "forms": [
+    "choose the feature",
+    "narrative or other text",
+    "find what is missing"
+   ],
+   "mastery": "Names the features of a narrative (a title, characters, a setting, a problem, events in order, a ending), tells a narrative from a description or a letter, and finds the part that is missing, in 8 of 10 new items."
+  },
+  "ENGL.G7.LISTEN.T10_ORAL_PRESENTATIONS_D.SPEECH_FEATURES": {
+   "forms": [
+    "choose the occasion",
+    "choose the part of a speech",
+    "spot the mistake"
+   ],
+   "mastery": "Names the occasions for a speech (a wedding, a funeral, a school assembly, a prize day), the parts of a speech (greeting, introduction, body, conclusion, thanks) and the features of a good delivery, in 8 of 10 new items."
+  },
+  "ENGL.G7.READIN.T10_STUDY_SKILLS_NOTE_MA.NOTE_MAKING": {
+   "forms": [
+    "choose the main point",
+    "choose the best notes"
+   ],
+   "mastery": "Tells a main point from a supporting point, and chooses the notes that keep the main points in a few words (not whole sentences and not only a detail), in 8 of 10 new texts."
+  },
+  "ENGL.G7.GRAMMA.T10_DETERMINERS.ARTICLES": {
+   "forms": [
+    "choose the correct word",
+    "fill the gap",
+    "spot the mistake"
+   ],
+   "mastery": "Chooses a before a consonant sound (a university), an before a vowel sound (an hour, an egg), and the for one named or known thing, and does not use a before a vowel sound or the before a general idea, in 8 of 10 new items."
+  },
+  "ENGL.G7.WRITIN.T10_FUNCTIONAL_WRITING_P.LIST_GROUPING": {
+   "forms": [
+    "choose the heading",
+    "find the odd item",
+    "choose the list for the event"
+   ],
+   "mastery": "Puts items under the heading they belong to (food, clothes, tools, stationery), finds the item that does not belong in a group, and chooses the list that fits the event, in 8 of 10 new items."
+  },
+  "ENGL.G7.LISTEN.T11_INTERVIEWS.INTERVIEW_KNOW": {
+   "forms": [
+    "choose the reason",
+    "choose the best answer",
+    "ask for clarification"
+   ],
+   "mastery": "Names why a person sits an interview (a school place, a scholarship, a job), chooses the confident and polite answer, asks for clarification politely (Could you repeat the question?), and spots a poor answer, in 8 of 10 new items."
+  },
+  "ENGL.G7.GRAMMA.T11_FORMATION_OF_ADJECTI.ADJECTIVE_FORMATION": {
+   "forms": [
+    "choose the correct word",
+    "fill the gap",
+    "spot the mistake"
+   ],
+   "mastery": "Forms the adjective from a noun or verb with -ful, -less, -y, -ous, -al, -ive or -able (care, careful; danger, dangerous; create, creative), and keeps the spelling right (beauty, beautiful), in 8 of 10 new items."
+  },
+  "ENGL.G7.READIN.T11_INTENSIVE_READING_DI.DILEMMA": {
+   "forms": [
+    "choose the closing formula",
+    "choose the dilemma",
+    "dilemma or other story"
+   ],
+   "mastery": "Says that a dilemma narrative ends with a hard choice put to the listener (Who was right? What would you have done?), picks the closing question, and tells it from a narrative that ends with a lesson, in 8 of 10 new items."
+  },
+  "ENGL.G7.WRITIN.T11_SPELLING_ANTONYMS_SY.SYNONYMS_ANTONYMS": {
+   "forms": [
+    "choose the correct word",
+    "fill the gap",
+    "spot the mistake"
+   ],
+   "mastery": "Chooses and writes a word with the same meaning (synonym) or the opposite meaning (antonym) in a sentence, spells it correctly, and does not give a word that is related but not the same, in 8 of 10 new items."
+  },
+  "ENGL.G7.WRITIN.T11_SPELLING_ANTONYMS_SY.NUMBER_WORDS": {
+   "forms": [
+    "choose the correct spelling",
+    "choose the correct sentence",
+    "spot the mistake"
+   ],
+   "mastery": "Spells numbers in words (fourteen, forty, ninety, eighth), writes ordinals with the right ending (1st, 2nd, 3rd, 4th, 21st) and puts the hyphen in twenty-one to ninety-nine, in 8 of 10 new items."
+  },
+  "ENGL.G7.LISTEN.T12_LISTENING_VIEWS_OPIN.OPINION_PHRASES": {
+   "forms": [
+    "choose the opinion expression",
+    "view or fact",
+    "fill the gap"
+   ],
+   "mastery": "Chooses the expression that shows a view (In my opinion, I believe, I feel that, As I see it), tells a view from a fact, and agrees or disagrees politely (I see your point, but ...), in 8 of 10 new items."
+  },
+  "ENGL.G7.GRAMMA.T12_PHRASAL_VERBS.PHRASAL_PCG": {
+   "forms": [
+    "choose the meaning",
+    "fill the gap",
+    "spot the mistake",
+    "choose the correct word"
+   ],
+   "mastery": "Gives the meaning of put on, put off, put out, come across, come up with, give up, give in and give away from the sentence, and picks the right particle, not a word that only looks like it, in 8 of 10 new items."
+  },
+  "ENGL.G7.WRITIN.T12_THE_WRITING_PROCESS_.DIALOGUE_FORMAT": {
+   "forms": [
+    "choose the dialogue format",
+    "find the mistake in a dialogue"
+   ],
+   "mastery": "Puts the speaker's name, a colon and the words spoken on a new line for each turn, writes actions in brackets, and does not use quotation marks round every line of a play-style dialogue, in 8 of 10 new items."
+  },
+  "ENGL.G7.LISTEN.T13_LISTENING_COMPREHENS.TRAVEL_WORDS": {
+   "forms": [
+    "choose the correct word",
+    "fill the gap",
+    "spot the mistake"
+   ],
+   "mastery": "Chooses the right word (passenger, fare, route, junction, conductor, terminus, luggage, timetable, journey, destination) to complete a sentence about travel, and does not mix a person with a place or a thing, in 8 of 10 new items."
+  },
+  "ENGL.G7.READIN.T13_INTENSIVE_READING_CO.MAIN_IDEA": {
+   "forms": [
+    "choose the main idea",
+    "choose the best title",
+    "find the specific detail"
+   ],
+   "mastery": "Chooses the sentence or title that covers the whole passage, tells it from a detail, and finds a specific detail asked for, in 8 of 10 new passages."
+  },
+  "ENGL.G7.READIN.T13_INTENSIVE_READING_CO.SUMMARY": {
+   "forms": [
+    "choose the best summary",
+    "choose what the summary leaves out"
+   ],
+   "mastery": "Chooses the short account that has the key ideas in the right order, and does not choose one that is a single detail, a copy of the first lines or that adds something the passage does not say, in 8 of 10 new passages."
+  },
+  "ENGL.G7.READIN.T13_INTENSIVE_READING_CO.IMAGERY": {
+   "forms": [
+    "choose the line that paints a picture",
+    "choose what the picture shows"
+   ],
+   "mastery": "Picks the words of a passage that make a picture, says what the writer wants the reader to see, hear or feel, and does not pick the line that only gives a fact, in 8 of 10 new passages."
+  },
+  "ENGL.G7.READIN.T13_INTENSIVE_READING_CO.CONTEXT_CLUES": {
+   "forms": [
+    "choose the meaning",
+    "choose the clue words"
+   ],
+   "mastery": "Uses the words around an unfamiliar word to choose its meaning and says which words gave the clue, in 8 of 10 new passages."
+  },
+  "ENGL.G7.READIN.T13_INTENSIVE_READING_CO.FACTUAL_QUESTIONS": {
+   "forms": [
+    "short comprehension: choose",
+    "true, false or not stated",
+    "short comprehension: type"
+   ],
+   "mastery": "Finds an answer that is stated in the passage, tells true from false and not stated, and does not pick a detail that sits near the answer, in 8 of 10 new passages."
+  },
+  "ENGL.G7.READIN.T13_INTENSIVE_READING_CO.INFERENCE_QUESTIONS": {
+   "forms": [
+    "short comprehension: choose",
+    "stated or worked out"
+   ],
+   "mastery": "Works out what the passage does not say outright (why a character acts, how a person feels) and does not give an answer the passage contradicts or merely repeats, in 8 of 10 new passages."
+  },
+  "ENGL.G7.GRAMMA.T13_SENTENCES_SIMPLE_SEN.SIMPLE_SENTENCE": {
+   "forms": [
+    "choose the simple sentence",
+    "spot the mistake",
+    "choose the complete sentence"
+   ],
+   "mastery": "Says that a simple sentence has one subject and one verb and tells a complete thought, tells it from a fragment that has no verb or no subject, and from two sentences joined without a joining word, in 8 of 10 new items."
+  },
+  "ENGL.G7.READIN.T13_ORAL_LITERATURE_PRAI.PRAISE_SONG": {
+   "forms": [
+    "choose the purpose or occasion",
+    "choose the praise line",
+    "who is who"
+   ],
+   "mastery": "Says that a praise song honours a person (a chief, a runner, a bride) on an occasion, uses praise names and exaggeration, and tells the singer from the one praised, in 8 of 10 new items."
+  },
+  "ENGL.G7.WRITIN.T13_CREATIVE_WRITING_NAR.IDIOMS": {
+   "forms": [
+    "choose the meaning",
+    "choose the idiom for the situation",
+    "fill the gap"
+   ],
+   "mastery": "Gives the meaning of an idiom from its sentence (it is raining cats and dogs, spill the beans, a piece of cake, hit the nail on the head), and does not read it word for word, in 8 of 10 new items."
+  },
+  "ENGL.G7.LISTEN.T14_CONSONANT_SOUNDS_AND.SOUNDS_CONSONANTS": {
+   "forms": [
+    "pick the word with the same sound",
+    "find the odd one out"
+   ],
+   "mastery": "Picks the word that starts or ends with the sound named, tells /f/ from /v/ (five, fiver) and /n/ from /ŋ/ (sin, sing), and does not match by spelling, in 8 of 10 new items."
+  },
+  "ENGL.G7.GRAMMA.T14_SUBJECT_VERB_AGREEME.SV_AGREEMENT": {
+   "forms": [
+    "find the subject",
+    "choose the correct word",
+    "fill the gap",
+    "spot the mistake"
+   ],
+   "mastery": "Finds the subject and the verb of a sentence, makes the verb agree with a singular or plural subject (The boys play, the boy plays), and does not let a noun near the verb decide the agreement (The box of mangoes is heavy), in 8 of 10 new items."
+  },
+  "ENGL.G7.READIN.T14_FEATURES_OF_STYLE.STYLE": {
+   "forms": [
+    "simile or metaphor or dialogue",
+    "fill the gap",
+    "choose the correct word"
+   ],
+   "mastery": "Says that dialogue is the words characters speak, a simile compares with like or as and a metaphor says one thing is another, picks each from a short text, and completes a simile or a metaphor, in 8 of 10 new items."
+  },
+  "ENGL.G7.WRITIN.T14_DESCRIPTIVE_WRITING_.DESCRIPTIVE_FEATURES": {
+   "forms": [
+    "choose the descriptive sentence",
+    "description or narrative",
+    "choose the order"
+   ],
+   "mastery": "Names what makes writing descriptive (the five senses, adjectives and adverbs, similes, an order such as top to bottom), tells a description from a narrative, and picks the sentence with the best detail, in 8 of 10 new items."
+  },
+  "ENGL.G7.LISTEN.T15_ORAL_REPORTS.ORAL_REPORT": {
+   "forms": [
+    "choose the part",
+    "put the parts in order",
+    "choose the opening or closing"
+   ],
+   "mastery": "Puts the parts of an oral report in order (greeting, what happened, who, when and where, the end), and picks the sentence that opens or closes a report, in 8 of 10 new items."
+  },
+  "ENGL.G7.READIN.T15_READING_FLUENCY.FLUENCY_STRATEGIES": {
+   "forms": [
+    "choose the fluency strategy",
+    "which reader is fluent"
+   ],
+   "mastery": "Names how a fluent reader reads (the right speed, a changing voice for feelings, a short pause at a comma and a longer one at a full stop, words read in groups, a text read again) and tells a fluent reader from one who reads flat, too fast or word by word, in 8 of 10 new items."
+  },
+  "ENGL.G7.GRAMMA.T15_AFFIRMATIVE_AND_NEGA.NEGATIVES": {
+   "forms": [
+    "choose the negative sentence",
+    "choose the correct word",
+    "spot the mistake"
+   ],
+   "mastery": "Tells an affirmative sentence from a negative one, makes a sentence negative with do not, does not, did not, is not or cannot, and does not write a double negative (I do not have no pen), in 8 of 10 new items."
+  },
+  "ENGL.G7.READIN.T15_POETRY.POEM_MEANING": {
+   "forms": [
+    "choose the subject",
+    "choose the message",
+    "choose what the line means"
+   ],
+   "mastery": "Chooses the subject of a poem (what it is about), the message the poet wants to pass on, and the idea in a line, and does not choose a detail as the subject or an idea the poem does not hold, in 8 of 10 new items."
+  },
+  "ENGL.G7.WRITIN.T15_FUNCTIONAL_WRITING_N.NOTICE_POSTER": {
+   "forms": [
+    "choose the part",
+    "find what is missing",
+    "notice or poster"
+   ],
+   "mastery": "Names the parts of a notice (heading, what, when, where, who to see, the writer and the date) and of a poster (a big heading, a few words, a picture, the details), and finds the part that is missing, in 8 of 10 new items."
+  }
+ }
+}
