@@ -1,0 +1,160 @@
+{
+ "outcomes": {
+  "AGRI.G7.CONSER.CONTROLLING_SOIL_POLLUTI.a": "explain the causes of soil pollution in gardening",
+  "AGRI.G7.CONSER.CONTROLLING_SOIL_POLLUTI.b": "control soil pollution in the home environment",
+  "AGRI.G7.CONSER.CONTROLLING_SOIL_POLLUTI.c": "demonstrate responsibility in using safe farming practises to conserve the soil",
+  "AGRI.G7.CONSER.CONSTRUCTING_WATER_RETEN.a": "describe how surface run-off can be used in gardening",
+  "AGRI.G7.CONSER.CONSTRUCTING_WATER_RETEN.b": "construct water retention structures to conserve surface runoff",
+  "AGRI.G7.CONSER.CONSTRUCTING_WATER_RETEN.c": "adopt utilisation of surface run-off in gardening",
+  "AGRI.G7.CONSER.CONSERVING_FOOD_NUTRIENT.a": "identify ways of conserving vitamins and minerals in vegetables",
+  "AGRI.G7.CONSER.CONSERVING_FOOD_NUTRIENT.b": "conserve vitamins and minerals in vegetables",
+  "AGRI.G7.CONSER.CONSERVING_FOOD_NUTRIENT.c": "adopt conservation of vitamins and minerals in vegetables",
+  "AGRI.G7.CONSER.GROWING_TREES.a": "explain the importance of trees in conserving the environment",
+  "AGRI.G7.CONSER.GROWING_TREES.b": "plant trees to conserve the environment",
+  "AGRI.G7.CONSER.GROWING_TREES.c": "adopt tree planting as a way of conserving the environment",
+  "AGRI.G7.FOOD_P.CROP_ESTABLISHMENT.a": "determine appropriate tilth for selected planting material",
+  "AGRI.G7.FOOD_P.CROP_ESTABLISHMENT.b": "prepare a suitable tilth for establishing selected planting material",
+  "AGRI.G7.FOOD_P.CROP_ESTABLISHMENT.c": "adopt appropriate tilth in establishing a selected planting material",
+  "AGRI.G7.FOOD_P.SELECTED_CROP_MANAGEMENT.a": "explain management practises carried out on crops",
+  "AGRI.G7.FOOD_P.SELECTED_CROP_MANAGEMENT.b": "carry out management practises in crop production",
+  "AGRI.G7.FOOD_P.SELECTED_CROP_MANAGEMENT.c": "appreciate the importance of various management practises in crop production",
+  "AGRI.G7.FOOD_P.PREPARING_ANIMAL_PRODUCT.a": "explain how to prepare animal products for various purposes",
+  "AGRI.G7.FOOD_P.PREPARING_ANIMAL_PRODUCT.b": "prepare animal products for various purposes",
+  "AGRI.G7.FOOD_P.PREPARING_ANIMAL_PRODUCT.c": "embrace preparation of animal products for various purposes",
+  "AGRI.G7.FOOD_P.COOKING_FOOD.a": "describe methods of cooking different types of foods",
+  "AGRI.G7.FOOD_P.COOKING_FOOD.b": "cook food using various methods",
+  "AGRI.G7.FOOD_P.COOKING_FOOD.c": "appreciate the use of varied methods of cooking food",
+  "AGRI.G7.HYGIEN.HYGIENE_IN_REARING_ANIMA.a": "describe hygiene practises in rearing domestic animals",
+  "AGRI.G7.HYGIEN.HYGIENE_IN_REARING_ANIMA.b": "carry out hygiene practises in rearing domestic animals",
+  "AGRI.G7.HYGIEN.HYGIENE_IN_REARING_ANIMA.c": "appreciate importance of hygiene practises in rearing domestic animals",
+  "AGRI.G7.HYGIEN.LAUNDRY_LOOSE_COLOURED_I.a": "describe how to launder a loose-coloured article for hygiene purposes",
+  "AGRI.G7.HYGIEN.LAUNDRY_LOOSE_COLOURED_I.b": "launder a loose-coloured article for hygiene purposes",
+  "AGRI.G7.HYGIEN.LAUNDRY_LOOSE_COLOURED_I.c": "embrace laundering of loose-coloured articles for hygiene purposes",
+  "AGRI.G7.PRODUC.KNITTING_SKILLS.a": "describe knitting stitches used in making household articles",
+  "AGRI.G7.PRODUC.KNITTING_SKILLS.b": "knit various articles for household use",
+  "AGRI.G7.PRODUC.KNITTING_SKILLS.c": "embrace knitting skills in making household articles",
+  "AGRI.G7.PRODUC.CONSTRUCTING_FRAMED_SUSP.a": "describe a framed suspended garden for growing crops",
+  "AGRI.G7.PRODUC.CONSTRUCTING_FRAMED_SUSP.b": "construct a framed structure for a suspended garden",
+  "AGRI.G7.PRODUC.CONSTRUCTING_FRAMED_SUSP.c": "embrace the use of framed suspended gardens for growing crops",
+  "AGRI.G7.PRODUC.ADDING_VALUE_TO_CROP_PRO.a": "explain ways of adding value on crop produce",
+  "AGRI.G7.PRODUC.ADDING_VALUE_TO_CROP_PRO.b": "add value to a selected crop produce",
+  "AGRI.G7.PRODUC.ADDING_VALUE_TO_CROP_PRO.c": "appreciate the importance of value addition on crop produce",
+  "AGRI.G7.PRODUC.MAKING_HOMEMADE_SOAP.a": "identify the forms of soap used at the household level",
+  "AGRI.G7.PRODUC.MAKING_HOMEMADE_SOAP.b": "make homemade soap using natural ingredients",
+  "AGRI.G7.PRODUC.MAKING_HOMEMADE_SOAP.c": "embrace homemade soap for household use"
+ },
+ "skills": {
+  "AGRI.G7.CONSER.CONTROLLING_SOIL_POLLUTI.SOIL_POLLUTION": {
+   "forms": [
+    "pick the right answer",
+    "pick the right answer in a short story",
+    "find the false step in a learner's reason"
+   ],
+   "mastery": "The child names causes (too much fertiliser or pesticide, dumped polythene and plastic, oil spills, dumped rubbish) and controls (reduce, reuse and recycle waste, use manure, dispose of waste properly), and does not say pollution helps the soil. Evidence rule: at least four of the last five fresh questions right across at least two question forms, and no repeated pick of the same misconception."
+  },
+  "AGRI.G7.CONSER.CONSTRUCTING_WATER_RETEN.RUNOFF": {
+   "forms": [
+    "pick the right answer",
+    "pick the right answer in a short story",
+    "find the false step in a learner's reason"
+   ],
+   "mastery": "The child says surface run-off is water flowing over the ground, which can be trapped in trenches, terraces, water pans and zai pits and used for the garden, and that mulch and ridges slow it. Evidence rule: at least four of the last five fresh questions right across at least two question forms, and no repeated pick of the same misconception."
+  },
+  "AGRI.G7.CONSER.CONSERVING_FOOD_NUTRIENT.NUTRIENT_KEEP": {
+   "forms": [
+    "pick the right answer",
+    "pick the right answer in a short story",
+    "find the false step in a learner's reason"
+   ],
+   "mastery": "The child says to wash vegetables before cutting, cook them for a short time in little water with a lid on, not to peel thickly, to use the cooking water and to eat some raw, and does not say long boiling keeps vitamins. Evidence rule: at least four of the last five fresh questions right across at least two question forms, and no repeated pick of the same misconception."
+  },
+  "AGRI.G7.CONSER.GROWING_TREES.TREES_IMPORTANCE": {
+   "forms": [
+    "pick the right answer",
+    "pick the right answer in a short story",
+    "find the false step in a learner's reason"
+   ],
+   "mastery": "The child says trees give oxygen, bring rain, hold soil against erosion, give shade and shelter and wood and fruit, and make homes for birds, and do not dry up the land. Evidence rule: at least four of the last five fresh questions right across at least two question forms, and no repeated pick of the same misconception."
+  },
+  "AGRI.G7.FOOD_P.CROP_ESTABLISHMENT.TILTH": {
+   "forms": [
+    "pick the right answer",
+    "pick the right answer in a short story",
+    "find the false step in a learner's reason"
+   ],
+   "mastery": "The child says small seeds such as carrot and onion need a fine tilth, medium seeds such as beans and maize need a medium tilth and tubers and cuttings such as sweet potato need a coarse tilth. Evidence rule: at least four of the last five fresh questions right across at least two question forms, and no repeated pick of the same misconception."
+  },
+  "AGRI.G7.FOOD_P.SELECTED_CROP_MANAGEMENT.CROP_PRACTICES": {
+   "forms": [
+    "pick the right answer",
+    "pick the right answer in a short story",
+    "find the false step in a learner's reason"
+   ],
+   "mastery": "The child names weeding (removes competition), thinning (removes extra seedlings), gapping (replaces seeds that did not grow), mulching (keeps water), pruning, staking and earthing up, and says each helps the crop grow. Evidence rule: at least four of the last five fresh questions right across at least two question forms, and no repeated pick of the same misconception."
+  },
+  "AGRI.G7.FOOD_P.PREPARING_ANIMAL_PRODUCT.ANIMAL_PRODUCTS": {
+   "forms": [
+    "pick the right answer",
+    "pick the right answer in a short story",
+    "find the false step in a learner's reason"
+   ],
+   "mastery": "The child says milk is boiled or pasteurised, eggs and meat are cooked well, hands and tools are washed, and products are kept cool and covered, and that raw milk can carry germs. Evidence rule: at least four of the last five fresh questions right across at least two question forms, and no repeated pick of the same misconception."
+  },
+  "AGRI.G7.FOOD_P.COOKING_FOOD.COOKING_METHODS": {
+   "forms": [
+    "pick the right answer",
+    "pick the right answer in a short story",
+    "find the false step in a learner's reason"
+   ],
+   "mastery": "The child names boiling (in water), steaming (over steam), frying (in oil), roasting (dry heat), baking (in an oven) and stewing (slow, with liquid), and gives an example food for each; hot cooking is done only with an adult. Evidence rule: at least four of the last five fresh questions right across at least two question forms, and no repeated pick of the same misconception."
+  },
+  "AGRI.G7.HYGIEN.HYGIENE_IN_REARING_ANIMA.ANIMAL_HYGIENE": {
+   "forms": [
+    "pick the right answer",
+    "pick the right answer in a short story",
+    "find the false step in a learner's reason"
+   ],
+   "mastery": "The child names cleaning the house and removing dung, clean water and feed, vaccination, dipping or spraying, deworming, separating sick animals and washing hands after handling, and says they prevent disease. Evidence rule: at least four of the last five fresh questions right across at least two question forms, and no repeated pick of the same misconception."
+  },
+  "AGRI.G7.HYGIEN.LAUNDRY_LOOSE_COLOURED_I.LAUNDRY_COLOURS": {
+   "forms": [
+    "pick the right answer",
+    "pick the right answer in a short story",
+    "find the false step in a learner's reason"
+   ],
+   "mastery": "The child says to wash loose-coloured articles separately, in cold water, quickly, rinse well and dry in the shade, and not to soak them long or wash them with white clothes. Evidence rule: at least four of the last five fresh questions right across at least two question forms, and no repeated pick of the same misconception."
+  },
+  "AGRI.G7.PRODUC.KNITTING_SKILLS.KNITTING": {
+   "forms": [
+    "pick the right answer",
+    "pick the right answer in a short story",
+    "find the false step in a learner's reason"
+   ],
+   "mastery": "The child names knitting needles and yarn, casting on and casting off, and the knit stitch and purl stitch, and says alternating knit and purl rows makes stocking stitch. Evidence rule: at least four of the last five fresh questions right across at least two question forms, and no repeated pick of the same misconception."
+  },
+  "AGRI.G7.PRODUC.CONSTRUCTING_FRAMED_SUSP.FRAMED_GARDEN": {
+   "forms": [
+    "pick the right answer",
+    "pick the right answer in a short story",
+    "find the false step in a learner's reason"
+   ],
+   "mastery": "The child says a framed suspended garden is a frame that holds containers of soil above the ground, saves space and suits small compounds, and needs soil with manure, drainage and regular watering. Evidence rule: at least four of the last five fresh questions right across at least two question forms, and no repeated pick of the same misconception."
+  },
+  "AGRI.G7.PRODUC.ADDING_VALUE_TO_CROP_PRO.VALUE_ADDITION": {
+   "forms": [
+    "pick the right answer",
+    "pick the right answer in a short story",
+    "find the false step in a learner's reason"
+   ],
+   "mastery": "The child says value is added by cleaning, sorting, drying, grinding into flour, packaging and processing, such as tomato into sauce and mango into juice, so the produce sells for more. Evidence rule: at least four of the last five fresh questions right across at least two question forms, and no repeated pick of the same misconception."
+  },
+  "AGRI.G7.PRODUC.MAKING_HOMEMADE_SOAP.SOAP_FORMS": {
+   "forms": [
+    "pick the right answer",
+    "pick the right answer in a short story",
+    "find the false step in a learner's reason"
+   ],
+   "mastery": "The child names bar, liquid, powder and paste soap, says soap removes dirt and germs when used with water, and says that making soap involves strong chemicals and heat and is done only with a teacher. Evidence rule: at least four of the last five fresh questions right across at least two question forms, and no repeated pick of the same misconception."
+  }
+ }
+}

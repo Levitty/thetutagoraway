@@ -2,6 +2,7 @@
 import agriculture_g4 from './agriculture_g4.js';
 import agriculture_g5 from './agriculture_g5.js';
 import agriculture_g6 from './agriculture_g6.js';
+import agriculture_g7 from './agriculture_g7.js';
 import cre_g4 from './cre_g4.js';
 import cre_g5 from './cre_g5.js';
 import cre_g6 from './cre_g6.js';
@@ -35,6 +36,7 @@ export const ENTRIES = [
   agriculture_g4,
   agriculture_g5,
   agriculture_g6,
+  agriculture_g7,
   cre_g4,
   cre_g5,
   cre_g6,
