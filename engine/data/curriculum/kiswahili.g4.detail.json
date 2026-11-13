@@ -1,0 +1,536 @@
+{
+ "outcomes": {
+  "KISW.G4.KUSIKI.T1_MATAMSHI_BORA.a": "kutambua silabi zinazotokana na sauti p/b, t/d, k/g, ch/j katika maneno",
+  "KISW.G4.KUSIKI.T1_MATAMSHI_BORA.b": "kutamka silabi zinazotokana na sauti p/b, t/d, k/g, ch/j",
+  "KISW.G4.KUSIKI.T1_MATAMSHI_BORA.c": "kutamka vitanzandimi vinavyoundwa kwa silabi za sauti p/b, t/d, k/g, ch/j",
+  "KISW.G4.KUSIKI.T1_MATAMSHI_BORA.d": "kuunda vitanzandimi kutokana na sauti p/b, t/d, k/g, ch/j",
+  "KISW.G4.KUSIKI.T1_MATAMSHI_BORA.e": "kuchangamkia kukariri vitanzandimi vinavyoundwa kwa silabi za sauti zinazokaribiana kimatamshi katika kuboresha matamshi yake",
+  "KISW.G4.KUSOMA.T1_KUSOMA_KWA_UFAHAMU.a": "kutambua msamiati wa suala lengwa uliotumika katika kifungu cha hadithi ili kuimarisha ufahamu",
+  "KISW.G4.KUSOMA.T1_KUSOMA_KWA_UFAHAMU.b": "kutumia msamiati lengwa kwa usahihi katika sentensi",
+  "KISW.G4.KUSOMA.T1_KUSOMA_KWA_UFAHAMU.c": "kutoa muhtasari wa ujumbe wa kifungu cha hadithi",
+  "KISW.G4.KUSOMA.T1_KUSOMA_KWA_UFAHAMU.d": "kujenga mazoea ya usomaji bora katika maisha ya kila siku",
+  "KISW.G4.KUANDI.T1_INSHA_YA_WASIFU.a": "kutambua insha ya wasifu kwa kuzingatia muundo",
+  "KISW.G4.KUANDI.T1_INSHA_YA_WASIFU.b": "kuandika insha ya wasifu kwa kuzingatia ujumbe, mtindo na muundo ufaao",
+  "KISW.G4.KUANDI.T1_INSHA_YA_WASIFU.c": "kuchangamkia utunzi mzuri wa insha ya wasifu ili kujenga ubunifu wake",
+  "KISW.G4.SARUFI.T1_NOMINO.a": "kueleza maana ya nomino ili kuitofautisha na aina nyingine za maneno",
+  "KISW.G4.SARUFI.T1_NOMINO.b": "kutambua nomino katika kundi la maneno na sentensi",
+  "KISW.G4.SARUFI.T1_NOMINO.c": "kutumia nomino kwa njia sahihi katika sentensi",
+  "KISW.G4.SARUFI.T1_NOMINO.d": "kuonea fahari matumizi ya nomino katika mawasiliano",
+  "KISW.G4.SARUFI.T1_VITENZI.a": "kueleza maana ya vitenzi ili kuvitofautisha na aina nyingine za maneno",
+  "KISW.G4.SARUFI.T1_VITENZI.b": "kutambua vitenzi katika kundi la maneno na sentensi",
+  "KISW.G4.SARUFI.T1_VITENZI.c": "kutumia vitenzi ipasavyo katika mawasiliano",
+  "KISW.G4.SARUFI.T1_VITENZI.d": "kuonea fahari matumizi ya vitenzi katika mawasiliano",
+  "KISW.G4.SARUFI.T1_VIVUMISHI.a": "kueleza maana ya kivumishi ili kukitofautisha na aina nyingine za maneno",
+  "KISW.G4.SARUFI.T1_VIVUMISHI.b": "kutambua vivumishi katika kundi la maneno na sentensi",
+  "KISW.G4.SARUFI.T1_VIVUMISHI.c": "kutumia vivumishi ipasavyo katika sentensi na kifungu",
+  "KISW.G4.SARUFI.T1_VIVUMISHI.d": "kuonea fahari matumizi ya vivumishi katika sentensi",
+  "KISW.G4.KUSIKI.T2_MAAMKUZI_NA_MAAGANO.a": "kutambua aina mbalimbali za maamkuzi na maagano katika mawasiliano",
+  "KISW.G4.KUSIKI.T2_MAAMKUZI_NA_MAAGANO.b": "kueleza maamkuzi na maagano yanayotumika katika miktadha mbalimbali",
+  "KISW.G4.KUSIKI.T2_MAAMKUZI_NA_MAAGANO.c": "kutumia aina mbalimbali za maamkuzi na maagano katika mawasiliano",
+  "KISW.G4.KUSIKI.T2_MAAMKUZI_NA_MAAGANO.d": "kuchangamkia maamkuzi na maagano katika mahusiano",
+  "KISW.G4.KUSOMA.T2_KUSOMA_KWA_KINA.a": "kueleza maana ya kamusi ili kuitofautisha na vitabu vingine",
+  "KISW.G4.KUSOMA.T2_KUSOMA_KWA_KINA.b": "kutumia kamusi ipasavyo kutafuta maana za maneno asiyoyajua ili kukuza msamiati wake",
+  "KISW.G4.KUSOMA.T2_KUSOMA_KWA_KINA.c": "kuchangamkia umuhimu wa kamusi katika kukuza msamiati wake",
+  "KISW.G4.KUANDI.T2_INSHA_YA_MASIMULIZI.a": "kutambua insha ya masimulizi kwa kuzingatia muundo",
+  "KISW.G4.KUANDI.T2_INSHA_YA_MASIMULIZI.b": "kuandika insha ya masimulizi inayozingatia mada, ujumbe, mtindo na muundo ufaao",
+  "KISW.G4.KUANDI.T2_INSHA_YA_MASIMULIZI.c": "kuchangamkia utunzi mzuri wa insha ya masimulizi ili kukuza ubunifu wake",
+  "KISW.G4.SARUFI.T2_VIWAKILISHI.a": "kueleza maana ya kiwakilishi ili kukibainisha",
+  "KISW.G4.SARUFI.T2_VIWAKILISHI.b": "kutambua viwakilishi katika kundi la maneno na sentensi",
+  "KISW.G4.SARUFI.T2_VIWAKILISHI.c": "kutumia viwakilishi ipasavyo katika sentensi",
+  "KISW.G4.SARUFI.T2_VIWAKILISHI.d": "kuonea fahari matumizi ya viwakilishi katika mawasiliano",
+  "KISW.G4.SARUFI.T2_VIELEZI.a": "kueleza maana ya kielezi ili kukibainisha",
+  "KISW.G4.SARUFI.T2_VIELEZI.b": "kutambua vielezi katika kundi la maneno na sentensi",
+  "KISW.G4.SARUFI.T2_VIELEZI.c": "kutumia vielezi ipasavyo katika mawasiliano",
+  "KISW.G4.SARUFI.T2_VIELEZI.d": "kuonea fahari matumizi ya vielezi katika sentensi",
+  "KISW.G4.KUSIKI.T3_VITENDAWILI.a": "kutambua vitendawili kwenye matini",
+  "KISW.G4.KUSIKI.T3_VITENDAWILI.b": "kutega na kutegua vitendawili ili kukuza uwazaji kina",
+  "KISW.G4.KUSIKI.T3_VITENDAWILI.c": "kuchangamkia matumizi ya vitendawili maishani",
+  "KISW.G4.KUSOMA.T3_KUSOMA_KWA_UFASAHA.a": "kujadili vipengele vya kuzingatia katika kusoma kwa ufasaha",
+  "KISW.G4.KUSOMA.T3_KUSOMA_KWA_UFASAHA.b": "kusoma kifungu cha hadithi kwa kuzingatia matamshi bora",
+  "KISW.G4.KUSOMA.T3_KUSOMA_KWA_UFASAHA.c": "kusoma kifungu cha hadithi kwa kuzingatia kiwango kifaacho cha sauti",
+  "KISW.G4.KUSOMA.T3_KUSOMA_KWA_UFASAHA.d": "kusoma kifungu cha hadithi kwa kuzingatia kasi ifaayo",
+  "KISW.G4.KUSOMA.T3_KUSOMA_KWA_UFASAHA.e": "kusoma kifungu cha hadithi kwa kuambatanisha ishara zifaazo",
+  "KISW.G4.KUSOMA.T3_KUSOMA_KWA_UFASAHA.f": "kuchangamkia kusoma kwa ufasaha ili kufanikisha mawasiliano",
+  "KISW.G4.KUANDI.T3_KUANDIKA_KWA_TARAKIL.a": "kutambua sehemu mbalimbali za tarakilishi zinazotumika kupigia chapa",
+  "KISW.G4.KUANDI.T3_KUANDIKA_KWA_TARAKIL.b": "kufungua na kufunga tarakilishi ili kuandika kazi na kuihifadhi",
+  "KISW.G4.KUANDI.T3_KUANDIKA_KWA_TARAKIL.c": "kuandika suala lengwa kwa kutumia tarakilishi",
+  "KISW.G4.KUANDI.T3_KUANDIKA_KWA_TARAKIL.d": "kuhariri kazi yake kwa kuzingatia uakifishaji ufaao",
+  "KISW.G4.KUANDI.T3_KUANDIKA_KWA_TARAKIL.e": "kuhifadhi kazi aliyoiandika kwenye tarakilishi",
+  "KISW.G4.KUANDI.T3_KUANDIKA_KWA_TARAKIL.f": "kujenga mazoea ya kuandika kwa kutumia tarakilishi na kuhifadhi kazi yake ya maandishi",
+  "KISW.G4.SARUFI.T3_VIUNGANISHI.a": "kueleza maana ya kiunganishi ili kukibainisha",
+  "KISW.G4.SARUFI.T3_VIUNGANISHI.b": "kutambua viunganishi katika kundi la maneno na sentensi",
+  "KISW.G4.SARUFI.T3_VIUNGANISHI.c": "kutumia viunganishi kwa njia sahihi katika mawasiliano",
+  "KISW.G4.SARUFI.T3_VIUNGANISHI.d": "kuonea fahari matumizi ya viunganishi katika sentensi",
+  "KISW.G4.SARUFI.T3_VIHUSISHI.a": "kueleza maana ya kihusishi ili kukibainisha",
+  "KISW.G4.SARUFI.T3_VIHUSISHI.b": "kutambua vihusishi katika kundi la maneno na sentensi",
+  "KISW.G4.SARUFI.T3_VIHUSISHI.c": "kutumia vihusishi ipasavyo katika sentensi",
+  "KISW.G4.SARUFI.T3_VIHUSISHI.d": "kuonea fahari matumizi ya vihusishi katika mawasiliano",
+  "KISW.G4.SARUFI.T3_VIHISISHI.a": "kueleza maana ya kihisishi ili kukibainisha",
+  "KISW.G4.SARUFI.T3_VIHISISHI.b": "kutambua vihisishi katika kundi la maneno na sentensi",
+  "KISW.G4.SARUFI.T3_VIHISISHI.c": "kutumia vihisishi ipasavyo katika sentensi",
+  "KISW.G4.SARUFI.T3_VIHISISHI.d": "kuonea fahari matumizi ya vihisishi katika miktadha mbalimbali",
+  "KISW.G4.KUSIKI.T4_MANENO_YA_UPOLE.a": "kutambua maneno ya upole yanayotumiwa katika mawasiliano",
+  "KISW.G4.KUSIKI.T4_MANENO_YA_UPOLE.b": "kutumia maneno ya upole katika mawasiliano",
+  "KISW.G4.KUSIKI.T4_MANENO_YA_UPOLE.c": "kuthamini matumizi ya maneno ya upole katika mawasiliano",
+  "KISW.G4.KUSOMA.T4_KUSOMA_KWA_MAPANA.a": "kutambua na kufungua faili iliyo na kifungu cha kusoma",
+  "KISW.G4.KUSOMA.T4_KUSOMA_KWA_MAPANA.b": "kutambua na kuzingatia hatua za kiusalama katika matumizi ya vifaa vya kidijitali",
+  "KISW.G4.KUSOMA.T4_KUSOMA_KWA_MAPANA.c": "kusakura matini kwenye tovuti salama ili kupata vifungu vya kusoma vyenye suala lengwa",
+  "KISW.G4.KUSOMA.T4_KUSOMA_KWA_MAPANA.d": "kutumia vifaa vya kidijitali kwa urahisi kupata matini yanayolengwa",
+  "KISW.G4.KUSOMA.T4_KUSOMA_KWA_MAPANA.e": "kuchangamkia matumizi ya vifaa vya kidijitali katika kutafuta na kusoma ujumbe ili kuimarisha maarifa yake",
+  "KISW.G4.KUANDI.T4_BARUA_YA_KIRAFIKI.a": "kutambua barua ya kirafiki kwa kuzingatia muundo wake",
+  "KISW.G4.KUANDI.T4_BARUA_YA_KIRAFIKI.b": "kujadili umuhimu wa barua ya kirafiki katika mawasiliano",
+  "KISW.G4.KUANDI.T4_BARUA_YA_KIRAFIKI.c": "kuandika barua ya kirafiki inayozingatia mada kwa kufuata kanuni zifaazo",
+  "KISW.G4.KUANDI.T4_BARUA_YA_KIRAFIKI.d": "kuchangamkia utunzi wa barua ya kirafiki katika mawasiliano",
+  "KISW.G4.SARUFI.T4_NGELI_YA_A_WA.a": "kutambua viambishi vya upatanisho wa kisarufi wa ngeli ya A-WA",
+  "KISW.G4.SARUFI.T4_NGELI_YA_A_WA.b": "kutambua nomino katika ngeli ya A-WA ili kuzitofautisha na nomino katika ngeli nyingine",
+  "KISW.G4.SARUFI.T4_NGELI_YA_A_WA.c": "kutunga sentensi akitumia nomino za ngeli ya A-WA katika umoja na wingi akizingatia upatanisho wa kisarufi",
+  "KISW.G4.SARUFI.T4_NGELI_YA_A_WA.d": "kuchangamkia kutumia nomino za ngeli ya A-WA katika mawasiliano",
+  "KISW.G4.KUSIKI.T5_METHALI.a": "kutambua methali zinazohusu malezi katika matini tofautitofauti",
+  "KISW.G4.KUSIKI.T5_METHALI.b": "kueleza maana za methali kuhusu malezi",
+  "KISW.G4.KUSIKI.T5_METHALI.c": "kutumia methali zinazohusu malezi katika mawasiliano",
+  "KISW.G4.KUSIKI.T5_METHALI.d": "kuchangamkia matumizi ya methali katika miktadha mbalimbali",
+  "KISW.G4.KUSOMA.T5_KUSOMA_KWA_UFAHAMU.a": "kueleza maana ya shairi, ubeti na mshororo ili kuvibainisha",
+  "KISW.G4.KUSOMA.T5_KUSOMA_KWA_UFAHAMU.b": "kusoma shairi kwa ufasaha kwa kuzingatia ujumbe",
+  "KISW.G4.KUSOMA.T5_KUSOMA_KWA_UFAHAMU.c": "kutambua beti na mishororo katika shairi",
+  "KISW.G4.KUSOMA.T5_KUSOMA_KWA_UFAHAMU.d": "kutambua shairi kutokana na umbo lake",
+  "KISW.G4.KUSOMA.T5_KUSOMA_KWA_UFAHAMU.e": "kufurahia kutumia lugha ya ushairi anapozungumzia ushairi",
+  "KISW.G4.KUANDI.T5_INSHA_YA_MAELEZO.a": "kutambua vifungu vya maelezo katika matini",
+  "KISW.G4.KUANDI.T5_INSHA_YA_MAELEZO.b": "kuandika insha ya maelezo kwa kufuata kanuni zifaazo",
+  "KISW.G4.KUANDI.T5_INSHA_YA_MAELEZO.c": "kuchangamkia utunzi mzuri wa insha ya maelezo ili kujenga ubunifu wake",
+  "KISW.G4.SARUFI.T5_NGELI_YA_U_I.a": "kutambua viambishi vya upatanisho wa kisarufi wa ngeli ya U-I",
+  "KISW.G4.SARUFI.T5_NGELI_YA_U_I.b": "kutambua nomino katika ngeli ya U-I ili kuzitofautisha na nomino katika ngeli nyingine",
+  "KISW.G4.SARUFI.T5_NGELI_YA_U_I.c": "kuunda sentensi akitumia nomino za ngeli ya U-I, katika umoja na wingi akizingatia upatanisho wa kisarufi",
+  "KISW.G4.SARUFI.T5_NGELI_YA_U_I.d": "kuchangamkia kutumia nomino za ngeli ya U-I katika mawasiliano",
+  "KISW.G4.KUSIKI.T6_SHAIRI.a": "kukariri au kuimba shairi kwa kuzingatia matamshi na mahadhi mbalimbali",
+  "KISW.G4.KUSIKI.T6_SHAIRI.b": "kueleza maana ya msamiati uliotumiwa katika shairi",
+  "KISW.G4.KUSIKI.T6_SHAIRI.c": "kutumia msamiati uliotumiwa katika shairi ili kuboresha mawasiliano",
+  "KISW.G4.KUSIKI.T6_SHAIRI.d": "kueleza ujumbe wa shairi ili kudhihirisha ufahamu wake",
+  "KISW.G4.KUSIKI.T6_SHAIRI.e": "kuchangamkia ushairi kama njia ya kujieleza kwa ufasaha",
+  "KISW.G4.KUSOMA.T6_KUSOMA_KWA_KINA.a": "kusoma makala kwa kuzingatia vipengele mbalimbali vinavyoyajenga",
+  "KISW.G4.KUSOMA.T6_KUSOMA_KWA_KINA.b": "kusoma na kutambua umuhimu wa ujumbe wa makala husika",
+  "KISW.G4.KUSOMA.T6_KUSOMA_KWA_KINA.c": "kufurahia kusoma makala mbalimbali ili kukuza ufahamu",
+  "KISW.G4.KUANDI.T6_INSHA_YA_WASIFU.a": "kutambua insha ya wasifu kwa kuzingatia muundo",
+  "KISW.G4.KUANDI.T6_INSHA_YA_WASIFU.b": "kuandika insha ya wasifu kwa kufuata kanuni zifaazo akizingatia vivumishi na vielezi kujenga picha dhahiri ya anachokielezea",
+  "KISW.G4.KUANDI.T6_INSHA_YA_WASIFU.c": "kuchangamkia utunzi mzuri wa insha ya wasifu ili kukuza ubunifu",
+  "KISW.G4.SARUFI.T6_NGELI_YA_LI_YA.a": "kutambua viambishi vya upatanisho wa kisarufi wa ngeli ya LI-YA",
+  "KISW.G4.SARUFI.T6_NGELI_YA_LI_YA.b": "kutambua nomino katika ngeli ya LI -YA ili kuzitofautisha na nomino katika ngeli nyingine",
+  "KISW.G4.SARUFI.T6_NGELI_YA_LI_YA.c": "kuunda sentensi akitumia nomino za ngeli ya LI-YA, katika umoja na wingi akizingatia upatanisho wa kisarufi",
+  "KISW.G4.SARUFI.T6_NGELI_YA_LI_YA.d": "kuchangamkia kutumia nomino za ngeli ya LI-YA katika mawasiliano",
+  "KISW.G4.KUSIKI.T7_NAHAU.a": "kutambua nahau za maadili na uraia katika matini mbalimbali",
+  "KISW.G4.KUSIKI.T7_NAHAU.b": "kutambua maana za nahau mbalimbali za maadili na uraia katika mazungumzo",
+  "KISW.G4.KUSIKI.T7_NAHAU.c": "kutumia nahau za maadili na uraia katika mawasiliano",
+  "KISW.G4.KUSIKI.T7_NAHAU.d": "kuthamini matumizi ya nahau za maadili na uraia katika mawasiliano",
+  "KISW.G4.KUSOMA.T7_KUSOMA_KWA_MAPANA.a": "kutambua matini ya aina mbalimbali ya kusoma na kuchagua yanayomvutia",
+  "KISW.G4.KUSOMA.T7_KUSOMA_KWA_MAPANA.b": "kusoma matini aliyochagua ili kufaidi ujumbe na lugha iliyotumiwa",
+  "KISW.G4.KUSOMA.T7_KUSOMA_KWA_MAPANA.c": "kufurahia usomaji wa aina mbalimbali za matini",
+  "KISW.G4.KUANDI.T7_INSHA_YA_MAELEZO.a": "kutambua insha ya maelezo katika matini",
+  "KISW.G4.KUANDI.T7_INSHA_YA_MAELEZO.b": "kuandika insha ya maelezo kwa kufuata kanuni zifaazo",
+  "KISW.G4.KUANDI.T7_INSHA_YA_MAELEZO.c": "kuchangamkia utunzi mzuri wa insha ya maelezo ili kukuza ubunifu",
+  "KISW.G4.SARUFI.T7_NGELI_YA_KI_VI.a": "kutambua viambishi vya upatanisho wa kisarufi wa ngeli ya KI-VI",
+  "KISW.G4.SARUFI.T7_NGELI_YA_KI_VI.b": "kutambua nomino katika ngeli ya KI-VI ili kuzitofautisha na nomino katika ngeli nyingine",
+  "KISW.G4.SARUFI.T7_NGELI_YA_KI_VI.c": "kutumia nomino za ngeli ya KI-VI katika umoja na wingi akizingatia upatanisho wa kisarufi",
+  "KISW.G4.SARUFI.T7_NGELI_YA_KI_VI.d": "kuchangamkia kutumia nomino za ngeli ya KI-VI katika mawasiliano",
+  "KISW.G4.SARUFI.T7_NGELI_YA_LI_LI.a": "kutambua viambishi vya upatanisho wa kisarufi wa ngeli ya LI-LI",
+  "KISW.G4.SARUFI.T7_NGELI_YA_LI_LI.b": "kutambua nomino katika ngeli ya LI-LI ili kuzitofautisha na nomino katika ngeli nyingine",
+  "KISW.G4.SARUFI.T7_NGELI_YA_LI_LI.c": "kuunda sentensi akitumia nomino za ngeli ya LI-LI, katika umoja na wingi akizingatia upatanisho wa kisarufi",
+  "KISW.G4.SARUFI.T7_NGELI_YA_LI_LI.d": "kuchangamkia kutumia nomino za ngeli ya LI-LI katika mawasiliano",
+  "KISW.G4.KUSIKI.T8_VISAWE.a": "kueleza maana ya kisawe ili kukibainisha",
+  "KISW.G4.KUSIKI.T8_VISAWE.b": "kutambua maneno mawili yenye maana sawa katika matini",
+  "KISW.G4.KUSIKI.T8_VISAWE.c": "kutumia visawe ifaavyo katika mawasiliano",
+  "KISW.G4.KUSIKI.T8_VISAWE.d": "kuthamini matumizi ya visawe katika mawasiliano",
+  "KISW.G4.KUSOMA.T8_KUSOMA_KWA_UFAHAMU.a": "kueleza maana ya mchezo wa kuigiza, mhusika na maelekezo",
+  "KISW.G4.KUSOMA.T8_KUSOMA_KWA_UFAHAMU.b": "kutambua mchezo wa kuigiza katika matini",
+  "KISW.G4.KUSOMA.T8_KUSOMA_KWA_UFAHAMU.c": "kutambua wahusika na maelekezo katika mchezo mfupi wa kuigiza",
+  "KISW.G4.KUSOMA.T8_KUSOMA_KWA_UFAHAMU.d": "kusoma mchezo mfupi wa kuigiza kwa ufasaha kwa kuzingatia ujumbe",
+  "KISW.G4.KUSOMA.T8_KUSOMA_KWA_UFAHAMU.e": "kufurahia kusoma michezo na kuiigiza",
+  "KISW.G4.KUANDI.T8_INSHA_YA_MASIMULIZI.a": "kutambua insha ya masimulizi kwa kuzingatia muundo",
+  "KISW.G4.KUANDI.T8_INSHA_YA_MASIMULIZI.b": "kuandika insha ya masimulizi kwa kufuata kanuni zifaazo",
+  "KISW.G4.KUANDI.T8_INSHA_YA_MASIMULIZI.c": "kuchangamkia utunzi mzuri wa insha ya masimulizi ili kujenga ubunifu wake",
+  "KISW.G4.SARUFI.T8_MNYAMBULIKO_WA_VITEN.a": "kueleza maana ya mnyambuliko wa vitenzi ili kuubainisha",
+  "KISW.G4.SARUFI.T8_MNYAMBULIKO_WA_VITEN.b": "kueleza maana ya kauli za kutenda, kutendea na kutendwa ili kuzitofautisha",
+  "KISW.G4.SARUFI.T8_MNYAMBULIKO_WA_VITEN.c": "kutambua vitenzi katika kauli za kutenda, kutendea na kutendwa katika matini",
+  "KISW.G4.SARUFI.T8_MNYAMBULIKO_WA_VITEN.d": "kutumia vitenzi katika kauli za kutenda, kutendea na kutendwa ipasavyo anapowasiliana",
+  "KISW.G4.SARUFI.T8_MNYAMBULIKO_WA_VITEN.e": "kuchangamkia matumizi ya vitenzi katika kauli za kutenda, kutendea na kutendwa kwenye mawasiliano",
+  "KISW.G4.KUSIKI.T9_MAZUNGUMZO_YA_KIMUKT.a": "kutambua miktadha ya mawasiliano isiyo rasmi",
+  "KISW.G4.KUSIKI.T9_MAZUNGUMZO_YA_KIMUKT.b": "kutumia lugha ipasavyo katika miktadha isiyo rasmi",
+  "KISW.G4.KUSIKI.T9_MAZUNGUMZO_YA_KIMUKT.c": "kuchangamkia matumizi ya lugha katika miktadha isiyo rasmi",
+  "KISW.G4.KUSOMA.T9_KUSOMA_KWA_MAPANA.a": "kutambua matini za kusoma za aina mbalimbali na kuchagua zinazomvutia",
+  "KISW.G4.KUSOMA.T9_KUSOMA_KWA_MAPANA.b": "kusoma matini aliyochagua ili kufaidi ujumbe na lugha iliyotumiwa",
+  "KISW.G4.KUSOMA.T9_KUSOMA_KWA_MAPANA.c": "kufurahia usomaji wa aina mbalimbali za matini ili kupanua mawazo yake",
+  "KISW.G4.KUANDI.T9_INSHA_YA_MAELEZO.a": "kutambua insha ya maelezo katika matini",
+  "KISW.G4.KUANDI.T9_INSHA_YA_MAELEZO.b": "kuandika insha ya maelezo kwa kufuata kanuni zifaazo",
+  "KISW.G4.KUANDI.T9_INSHA_YA_MAELEZO.c": "kuchangamkia utunzi wa insha ya maelezo ili kujenga ubunifu wake",
+  "KISW.G4.SARUFI.T9_VINYUME_VYA_NOMINO.a": "kueleza maana ya kinyume cha nomino ili kukibainisha",
+  "KISW.G4.SARUFI.T9_VINYUME_VYA_NOMINO.b": "kutambua vinyume vya nomino katika matini",
+  "KISW.G4.SARUFI.T9_VINYUME_VYA_NOMINO.c": "kutumia vinyume vya nomino ipasavyo katika matini",
+  "KISW.G4.SARUFI.T9_VINYUME_VYA_NOMINO.d": "kuchangamkia matumizi ya vinyume vya nomino katika mawasiliano ya kila siku",
+  "KISW.G4.KUSIKI.T10_TASHBIHI.a": "kueleza maana ya tashbihi ili kuibainisha",
+  "KISW.G4.KUSIKI.T10_TASHBIHI.b": "kutambua tashbihi za kimo na umbo katika matini",
+  "KISW.G4.KUSIKI.T10_TASHBIHI.c": "kutumia tashbihi za kimo na umbo kwa usahihi katika matini",
+  "KISW.G4.KUSIKI.T10_TASHBIHI.d": "kufurahia matumizi ya tashbihi za kimo na umbo katika mawasiliano",
+  "KISW.G4.KUSOMA.T10_KUSOMA_KIDIJITALI.a": "kutambua na kuzingatia hatua za kiusalama katika matumizi ya vifaa vya kidijitali",
+  "KISW.G4.KUSOMA.T10_KUSOMA_KIDIJITALI.b": "kutambua na kufungua faili iliyo na kifungu cha kusoma ili kuimarisha umilisi wake wa kutumia tarakilishi",
+  "KISW.G4.KUSOMA.T10_KUSOMA_KIDIJITALI.c": "kusakura matini kwenye tovuti salama ili kupata vifungu vya kusoma vyenye suala lengwa",
+  "KISW.G4.KUSOMA.T10_KUSOMA_KIDIJITALI.d": "kusoma matini lengwa ili kupata ujumbe",
+  "KISW.G4.KUSOMA.T10_KUSOMA_KIDIJITALI.e": "kuchangamkia matumizi ya vifaa vya kidijitali katika kutafuta na kusoma ujumbe ili kuimarisha maarifa yake",
+  "KISW.G4.KUANDI.T10_INSHA_YA_MASIMULIZI.a": "kutambua insha ya masimulizi kwa kuzingatia ujumbe, mtindo na muundo",
+  "KISW.G4.KUANDI.T10_INSHA_YA_MASIMULIZI.b": "kuandika insha ya masimulizi kwa kufuata kanuni zifaazo",
+  "KISW.G4.KUANDI.T10_INSHA_YA_MASIMULIZI.c": "kuchangamkia utunzi mzuri wa insha ya masimulizi ili kujenga ubunifu wake",
+  "KISW.G4.SARUFI.T10_NYAKATI_NA_HALI.a": "kutambua viambishi vya wakati uliopita, uliopo na ujao kwenye vitenzi",
+  "KISW.G4.SARUFI.T10_NYAKATI_NA_HALI.b": "kutambua vitenzi katika wakati uliopita, uliopo na ujao kwenye matini",
+  "KISW.G4.SARUFI.T10_NYAKATI_NA_HALI.c": "kutunga sentensi akitumia vitenzi katika wakati uliopita, uliopo na ujao",
+  "KISW.G4.SARUFI.T10_NYAKATI_NA_HALI.d": "kufurahia zoezi la kutunga sentensi akiwa na wenzake",
+  "KISW.G4.KUSIKI.T11_MASIMULIZI.a": "kusikiliza masimulizi kwa kuzingatia ujumbe",
+  "KISW.G4.KUSIKI.T11_MASIMULIZI.b": "kusimulia tungo kwa kuzingatia mada, ubunifu na usanifu wa lugha mbele ya wenzake",
+  "KISW.G4.KUSIKI.T11_MASIMULIZI.c": "kutumia ishara zifaazo ili kuimarisha masimulizi yake",
+  "KISW.G4.KUSIKI.T11_MASIMULIZI.d": "kuchangamkia masimulizi katika mazingira mbalimbali",
+  "KISW.G4.KUSOMA.T11_KUSOMA_KWA_UFASAHA.a": "kutambua vipengele vya kuzingatia katika kusoma kwa ufasaha",
+  "KISW.G4.KUSOMA.T11_KUSOMA_KWA_UFASAHA.b": "kusoma kifungu cha hadithi kwa kuzingatia matamshi bora",
+  "KISW.G4.KUSOMA.T11_KUSOMA_KWA_UFASAHA.c": "kusoma kifungu cha hadithi kwa kuzingatia kiwango kifaacho cha sauti",
+  "KISW.G4.KUSOMA.T11_KUSOMA_KWA_UFASAHA.d": "kusoma kifungu cha hadithi kwa kuzingatia kasi ifaayo",
+  "KISW.G4.KUSOMA.T11_KUSOMA_KWA_UFASAHA.e": "kusoma kifungu cha hadithi kwa kuambatanisha ishara zifaazo",
+  "KISW.G4.KUSOMA.T11_KUSOMA_KWA_UFASAHA.f": "kuchangamkia kusoma kwa ufasaha ili kufanikisha mawasiliano",
+  "KISW.G4.KUANDI.T11_BARUA_YA_KIRAFIKI.a": "kutambua barua ya kirafiki kwa kuzingatia muundo",
+  "KISW.G4.KUANDI.T11_BARUA_YA_KIRAFIKI.b": "kuandika barua ya kirafiki kwa kuzingatia ujumbe, mtindo na muundo ufaao",
+  "KISW.G4.KUANDI.T11_BARUA_YA_KIRAFIKI.c": "kuchangamkia umuhimu wa barua katika mawasiliano",
+  "KISW.G4.SARUFI.T11_UKANUSHAJI.a": "kueleza maana ya ukanushaji ili kuubainisha",
+  "KISW.G4.SARUFI.T11_UKANUSHAJI.b": "kutambua maneno yaliyokanushwa katika wakati uliopita, uliopo na ujao",
+  "KISW.G4.SARUFI.T11_UKANUSHAJI.c": "kutambua viambishi vya nafsi na wakati uliopita, uliopo na ujao katika maneno",
+  "KISW.G4.SARUFI.T11_UKANUSHAJI.d": "kukanusha sentensi kwa kuzingatia nafsi na wakati uliopita, uliopo na ujao",
+  "KISW.G4.SARUFI.T11_UKANUSHAJI.e": "kuchangamkia ukanushaji wa vitenzi katika mawasiliano",
+  "KISW.G4.SARUFI.T11_UKUBWA_WA_NOMINO.a": "kueleza maana ya ukubwa wa nomino ili kuubainisha",
+  "KISW.G4.SARUFI.T11_UKUBWA_WA_NOMINO.b": "kutambua nomino zinazoanza kwa herufi m- na zenye mzizi wa silabi moja",
+  "KISW.G4.SARUFI.T11_UKUBWA_WA_NOMINO.c": "kutambua nomino katika hali ya ukubwa",
+  "KISW.G4.SARUFI.T11_UKUBWA_WA_NOMINO.d": "kubadilisha nomino kutoka hali wastani kuwa katika hali ya ukubwa",
+  "KISW.G4.SARUFI.T11_UKUBWA_WA_NOMINO.e": "kutumia nomino katika hali ya ukubwa kwenye sentensi",
+  "KISW.G4.SARUFI.T11_UKUBWA_WA_NOMINO.f": "kufurahia kutumia nomino katika hali ya ukubwa kwa usahihi ili kuimarisha mawasiliano",
+  "KISW.G4.SARUFI.T11_UDOGO_WA_NOMINO.a": "kueleza maana ya udogo wa nomino ili kuubainisha",
+  "KISW.G4.SARUFI.T11_UDOGO_WA_NOMINO.b": "kutambua nomino zinazoanza kwa herufi m- na zenye mzizi wa silabi moja",
+  "KISW.G4.SARUFI.T11_UDOGO_WA_NOMINO.c": "kutambua nomino katika hali ya udogo",
+  "KISW.G4.SARUFI.T11_UDOGO_WA_NOMINO.d": "kubadilisha nomino katika hali ya wastani kuwa katika hali ya udogo",
+  "KISW.G4.SARUFI.T11_UDOGO_WA_NOMINO.e": "kutumia nomino katika hali ya udogo kwenye sentensi",
+  "KISW.G4.SARUFI.T11_UDOGO_WA_NOMINO.f": "kufurahia kutumia nomino katika hali ya udogo ili kuimarisha mawasiliano"
+ },
+ "skills": {
+  "KISW.G4.KUSOMA.T1_KUSOMA_KWA_UFAHAMU.MSAMIATI": {
+   "forms": [
+    "choose the meaning",
+    "fill the gap",
+    "spot the mistake"
+   ],
+   "mastery": "Gives the meaning of a word from the sentence it is in and picks the word that fits a gap in a sentence, without choosing a look-alike, a nearby or an opposite word, in 8 of 10 new items."
+  },
+  "KISW.G4.KUSOMA.T1_KUSOMA_KWA_UFAHAMU.UFAHAMU_HADITHI": {
+   "forms": [
+    "choose from a passage",
+    "type a short answer",
+    "put events in order"
+   ],
+   "mastery": "Answers who, what and which questions from a short story, puts four events in order, and gives the main message, without choosing a detail for the message or an answer from outside the story, in 8 of 10 new questions."
+  },
+  "KISW.G4.KUANDI.T1_INSHA_YA_WASIFU.AINA_ZA_INSHA": {
+   "forms": [
+    "choose the kind",
+    "fill the gap",
+    "spot the mistake"
+   ],
+   "mastery": "Names the kind of insha from a short text (wasifu describes a person or thing, masimulizi tells what happened in order, maelezo explains) and the part of an insha (utangulizi, kiini, hitimisho), in 8 of 10 new items."
+  },
+  "KISW.G4.SARUFI.T1_NOMINO.NOMINO": {
+   "forms": [
+    "choose the noun",
+    "fill the gap",
+    "spot the mistake"
+   ],
+   "mastery": "Picks the noun (the name of a person, animal, place or thing) from a group of words and a sentence, and fills a gap with a noun, without choosing a verb, an adjective or an adverb, in 8 of 10 new items."
+  },
+  "KISW.G4.SARUFI.T1_VITENZI.VITENZI": {
+   "forms": [
+    "choose the verb",
+    "fill the gap",
+    "spot the mistake"
+   ],
+   "mastery": "Picks the verb (the word for what someone or something does) from a group of words and a sentence, and fills a gap with a verb, without choosing a noun, an adjective or an adverb, in 8 of 10 new items."
+  },
+  "KISW.G4.SARUFI.T1_VIVUMISHI.VIVUMISHI": {
+   "forms": [
+    "choose the adjective",
+    "fill the gap",
+    "spot the mistake"
+   ],
+   "mastery": "Picks the adjective (the word that tells more about a noun) and uses the form that agrees with the noun (mtoto mdogo, watoto wadogo, kiti kikubwa), without choosing a noun or a verb, in 8 of 10 new items."
+  },
+  "KISW.G4.KUSIKI.T2_MAAMKUZI_NA_MAAGANO.MAAMKUZI": {
+   "forms": [
+    "choose the greeting",
+    "fill the gap",
+    "spot the mistake"
+   ],
+   "mastery": "Picks the greeting or farewell that fits the person and the time (hujambo-sijambo, shikamoo-marahaba, habari za asubuhi, kwaheri, usiku mwema), without giving the greeting back as the reply, in 8 of 10 new situations. Using them aloud is a teacher's check."
+  },
+  "KISW.G4.KUSOMA.T2_KUSOMA_KWA_KINA.KAMUSI": {
+   "forms": [
+    "choose the first word",
+    "fill the gap",
+    "spot the mistake"
+   ],
+   "mastery": "Puts words in the order of the alphabet (using the second and third letters when the first match) and says what a dictionary is for, in 8 of 10 new items."
+  },
+  "KISW.G4.SARUFI.T2_VIWAKILISHI.VIWAKILISHI": {
+   "forms": [
+    "choose the pronoun",
+    "fill the gap",
+    "spot the mistake"
+   ],
+   "mastery": "Picks the pronoun (the word that stands in place of a noun: yeye, wao, sisi, huyu, hawa, yule, wale) that fits the person, number and nearness, without repeating the noun or choosing another word, in 8 of 10 new items."
+  },
+  "KISW.G4.SARUFI.T2_VIELEZI.VIELEZI": {
+   "forms": [
+    "choose the adverb",
+    "fill the gap",
+    "spot the mistake"
+   ],
+   "mastery": "Picks the adverb (the word that tells how, when or where something is done: polepole, jana, shuleni) and says which of the three it tells, without choosing an adjective or a noun, in 8 of 10 new items."
+  },
+  "KISW.G4.KUSIKI.T3_VITENDAWILI.VITENDAWILI": {
+   "forms": [
+    "choose the riddle",
+    "fill the gap",
+    "spot the mistake"
+   ],
+   "mastery": "Tells a kitendawili from a methali, a nahau and an ordinary sentence, gives the opening words of riddling (Kitendawili! Tega!), and the answer to a known riddle, in 8 of 10 new items. Telling and guessing aloud is a teacher's check."
+  },
+  "KISW.G4.KUSOMA.T3_KUSOMA_KWA_UFASAHA.UFASAHA_VIPENGELE": {
+   "forms": [
+    "choose what a good reader does",
+    "choose the sentence",
+    "spot the mistake"
+   ],
+   "mastery": "Names what a fluent reader does (good pronunciation, a fitting voice, a fitting speed, a rest at the marks, signs that fit), without taking fast or loud for good, in 8 of 10 new items. Reading aloud itself is for a teacher to hear."
+  },
+  "KISW.G4.KUANDI.T3_KUANDIKA_KWA_TARAKIL.SEHEMU_TARAKILISHI": {
+   "forms": [
+    "choose the part",
+    "fill the gap",
+    "spot the mistake"
+   ],
+   "mastery": "Names the part of a computer for typing and showing (kibodi, kipanya, skrini, kichapishi, the space key) and what each one does, in 8 of 10 new items. Using the computer is a practical task."
+  },
+  "KISW.G4.KUANDI.T3_KUANDIKA_KWA_TARAKIL.UAKIFISHI": {
+   "forms": [
+    "choose the correct sentence",
+    "fill the gap",
+    "spot the mistake"
+   ],
+   "mastery": "Chooses the sentence with the right capital letter, kikomo (full stop), kiulizi (question mark), koma and alama ya hisi (!), and finds the one mistake in a short note, in 8 of 10 new sentences."
+  },
+  "KISW.G4.SARUFI.T3_VIUNGANISHI.VIUNGANISHI": {
+   "forms": [
+    "choose the joining word",
+    "fill the gap",
+    "spot the mistake"
+   ],
+   "mastery": "Picks the joining word (na, pia, kwa sababu, lakini, ili, au) that fits the meaning of two parts of a sentence, without choosing a noun or a verb or a joining word of another meaning, in 8 of 10 new items."
+  },
+  "KISW.G4.SARUFI.T3_VIHUSISHI.VIHUSISHI": {
+   "forms": [
+    "choose the relating word",
+    "fill the gap",
+    "spot the mistake"
+   ],
+   "mastery": "Picks the relating word (juu ya, chini ya, ndani ya, nje ya, karibu na, mbali na, kwa, kuliko) in a sentence, and chooses the -a of agreement (cha, vya, wa, ya, la) that matches the noun, in 8 of 10 new items."
+  },
+  "KISW.G4.SARUFI.T3_VIHISISHI.VIHISISHI": {
+   "forms": [
+    "choose the exclamation",
+    "fill the gap",
+    "spot the mistake"
+   ],
+   "mastery": "Picks the exclamation that fits the feeling in the situation (pole, hongera, samahani, karibu, lo) and picks the exclamation from a sentence, with the exclamation mark, without choosing a noun or a verb, in 8 of 10 new items."
+  },
+  "KISW.G4.KUSIKI.T4_MANENO_YA_UPOLE.UPOLE": {
+   "forms": [
+    "choose the polite sentence",
+    "fill the gap",
+    "spot the mistake"
+   ],
+   "mastery": "Picks the polite word or sentence (tafadhali, samahani, asante, pole, naomba) for the situation, and does not choose a command, in 8 of 10 new items. Using them aloud is a teacher's check."
+  },
+  "KISW.G4.KUSOMA.T4_KUSOMA_KWA_MAPANA.USALAMA_DIJITALI": {
+   "forms": [
+    "choose the safe step",
+    "choose the safe sentence",
+    "spot the mistake"
+   ],
+   "mastery": "Picks the safe step for a phone, tablet or computer (keep the password secret, show an adult an unknown link, give no home address to a stranger, log out, use a safe site) and not the risky one, in 8 of 10 new situations."
+  },
+  "KISW.G4.KUANDI.T4_BARUA_YA_KIRAFIKI.BARUA": {
+   "forms": [
+    "choose the part",
+    "fill the gap",
+    "spot the mistake"
+   ],
+   "mastery": "Names the parts of a friendly letter in their order (anwani ya mwandishi, tarehe, salamu, mwili, hitimisho, jina) and what each holds, in 8 of 10 new items. Writing the letter is composition marking."
+  },
+  "KISW.G4.SARUFI.T4_NGELI_YA_A_WA.A_WA": {
+   "forms": [
+    "choose the prefix",
+    "fill the gap",
+    "spot the mistake"
+   ],
+   "mastery": "Knows that people and animals are in A-WA, gives a- for one and wa- for many (mtoto anacheza, watoto wanacheza), and makes the plural noun (mwalimu-walimu), in 8 of 10 new items."
+  },
+  "KISW.G4.KUSIKI.T5_METHALI.METHALI": {
+   "forms": [
+    "choose the methali",
+    "choose the meaning",
+    "fill the gap"
+   ],
+   "mastery": "Tells a methali about upbringing from other sayings, gives what it means, and completes it, without taking it word for word or giving the meaning of another methali, in 8 of 10 new items. Using it aloud is a teacher's check."
+  },
+  "KISW.G4.KUSOMA.T5_KUSOMA_KWA_UFAHAMU.SHAIRI": {
+   "forms": [
+    "choose the word",
+    "fill the gap",
+    "count in a poem"
+   ],
+   "mastery": "Says what a shairi, an ubeti and a mshororo are, counts the beti and the mishororo in a short poem, and tells a poem from a paragraph by its shape, in 8 of 10 new items."
+  },
+  "KISW.G4.SARUFI.T5_NGELI_YA_U_I.U_I": {
+   "forms": [
+    "choose the prefix",
+    "fill the gap",
+    "spot the mistake"
+   ],
+   "mastery": "Knows nouns that belong to U-I (mti, mlango, mkono, mkoba, mguu), gives u- for one and i- for many, and makes the plural noun (mti-miti), without using the prefix of people, in 8 of 10 new items."
+  },
+  "KISW.G4.KUSIKI.T6_SHAIRI.SHAIRI_MSAMIATI": {
+   "forms": [
+    "choose the meaning",
+    "fill the gap",
+    "spot the mistake"
+   ],
+   "mastery": "Gives the meaning of the words of a poem about the nation (bendera, taifa, uhuru, shujaa, mshikamano, amani) and uses them in a sentence, without choosing a look-alike or an opposite word, in 8 of 10 new items. Reciting is a teacher's check."
+  },
+  "KISW.G4.KUSOMA.T6_KUSOMA_KWA_KINA.MAKALA": {
+   "forms": [
+    "choose from an article",
+    "type a short answer",
+    "choose the message"
+   ],
+   "mastery": "Answers questions about a short article (makala) from what it says, and gives its main message, without choosing a detail for the message or an answer from outside the article, in 8 of 10 new questions."
+  },
+  "KISW.G4.SARUFI.T6_NGELI_YA_LI_YA.LI_YA": {
+   "forms": [
+    "choose the prefix",
+    "fill the gap",
+    "spot the mistake"
+   ],
+   "mastery": "Knows nouns that belong to LI-YA (jiwe, jicho, tunda, embe, dirisha, jina), gives li- for one and ya- for many, and makes the plural noun with ma- (jiwe-mawe, tunda-matunda), in 8 of 10 new items."
+  },
+  "KISW.G4.KUSIKI.T7_NAHAU.NAHAU": {
+   "forms": [
+    "choose the nahau",
+    "choose the meaning",
+    "fill the gap"
+   ],
+   "mastery": "Tells a nahau from other sayings and gives what it means (kupiga moyo konde, kujikaza kisabuni, kula kiapo, kukata tamaa), without taking it word for word, in 8 of 10 new items. Using it aloud is a teacher's check."
+  },
+  "KISW.G4.SARUFI.T7_NGELI_YA_KI_VI.KI_VI": {
+   "forms": [
+    "choose the prefix",
+    "fill the gap",
+    "spot the mistake"
+   ],
+   "mastery": "Knows nouns that belong to KI-VI (kitabu, kiti, kikombe, kisu, kiatu), gives ki- for one and vi- for many, and makes the plural noun (kitabu-vitabu, kiatu-viatu), in 8 of 10 new items."
+  },
+  "KISW.G4.SARUFI.T7_NGELI_YA_LI_LI.LI_LI": {
+   "forms": [
+    "choose the prefix",
+    "fill the gap",
+    "spot the mistake"
+   ],
+   "mastery": "Knows the nouns the design gives for LI-LI (jua, giza), whose noun has the same form for one and for many, and uses li- with them (jua limetoka, giza limeingia), without using the prefix of another class, in 8 of 10 new items."
+  },
+  "KISW.G4.KUSIKI.T8_VISAWE.VISAWE": {
+   "forms": [
+    "choose the synonym",
+    "fill the gap",
+    "spot the mistake"
+   ],
+   "mastery": "Picks the word with the same meaning (haraka-upesi, shida-taabu, furaha-raha) and does not choose a look-alike, an opposite or a related word, in 8 of 10 new items. Using visawe aloud is a teacher's check."
+  },
+  "KISW.G4.KUSOMA.T8_KUSOMA_KWA_UFAHAMU.IGIZO": {
+   "forms": [
+    "choose the form",
+    "choose from the play",
+    "type a short answer"
+   ],
+   "mastery": "Tells a short play (igizo) from a story by its shape (the name of the speaker, a colon, the words said), names the speaker of a line, and finds the stage direction in brackets, in 8 of 10 new items."
+  },
+  "KISW.G4.SARUFI.T8_MNYAMBULIKO_WA_VITEN.MNYAMBULIKO": {
+   "forms": [
+    "choose the verb form",
+    "fill the gap",
+    "spot the mistake"
+   ],
+   "mastery": "Tells the three verb forms apart (kutenda: andika, kutendea: andikia, done for someone, kutendwa: andikwa, done to the thing) and picks the one a sentence needs, in 8 of 10 new items."
+  },
+  "KISW.G4.KUSIKI.T9_MAZUNGUMZO_YA_KIMUKT.MAZUNGUMZO": {
+   "forms": [
+    "choose the setting",
+    "choose the words",
+    "spot the mistake"
+   ],
+   "mastery": "Tells an informal setting (with a friend, at play, at home) from a formal one (a speech, an interview, a meeting) and picks the words that fit it, in 8 of 10 new items. Using them aloud is a teacher's check."
+  },
+  "KISW.G4.SARUFI.T9_VINYUME_VYA_NOMINO.VINYUME_NOMINO": {
+   "forms": [
+    "choose the opposite",
+    "fill the gap",
+    "spot the mistake"
+   ],
+   "mastery": "Gives the true opposite of a noun (usiku-mchana, rafiki-adui, furaha-huzuni, tajiri-maskini) and does not choose a related word or a word of the same meaning, in 8 of 10 new items."
+  },
+  "KISW.G4.KUSIKI.T10_TASHBIHI.TASHBIHI": {
+   "forms": [
+    "choose the simile",
+    "fill the gap",
+    "choose the meaning"
+   ],
+   "mastery": "Gives the usual comparison for height, size and shape (mrefu kama twiga, mnene kama kiboko, mkubwa kama ndovu) and says it is a simile because of kama, without taking it word for word, in 8 of 10 new items. Using it aloud is a teacher's check."
+  },
+  "KISW.G4.SARUFI.T10_NYAKATI_NA_HALI.NYAKATI": {
+   "forms": [
+    "choose the verb",
+    "fill the gap",
+    "spot the mistake"
+   ],
+   "mastery": "Uses -li- for what happened before (jana alisoma), -na- for now (anasoma) and -ta- for what will happen (atasoma), following the time word, and gives the right person prefix, in 8 of 10 new items."
+  },
+  "KISW.G4.SARUFI.T11_UKANUSHAJI.UKANUSHAJI": {
+   "forms": [
+    "choose the negative",
+    "fill the gap",
+    "spot the mistake"
+   ],
+   "mastery": "Makes the negative of a verb in the past (hakusoma), present (hasomi) and future (hatasoma) for the person, and tells a negative from a positive verb, without only adding ha- or keeping the tense marker, in 8 of 10 new items."
+  },
+  "KISW.G4.SARUFI.T11_UKUBWA_WA_NOMINO.UKUBWA": {
+   "forms": [
+    "choose the form",
+    "fill the gap",
+    "spot the mistake"
+   ],
+   "mastery": "Gives the big form (ji-) of the m- nouns with a one-syllable root (mti-jiti, mto-jito, mji-jiji, mtu-jitu) for one and for many (majiti), and does not keep the noun, use ki-, or give one for many, in 8 of 10 new items."
+  },
+  "KISW.G4.SARUFI.T11_UDOGO_WA_NOMINO.UDOGO": {
+   "forms": [
+    "choose the form",
+    "fill the gap",
+    "spot the mistake"
+   ],
+   "mastery": "Gives the small form (ki-) of the m- nouns with a one-syllable root (mti-kijiti, mto-kijito, mji-kijiji, mtu-kijitu) for one and for many (vijiti), and does not keep the noun, use ji-, or give one for many, in 8 of 10 new items."
+  }
+ }
+}
