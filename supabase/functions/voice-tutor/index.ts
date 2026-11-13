@@ -38890,7 +38890,7 @@ var FAMILIES50 = [
   fam8("map.rd.scale", `${EM}MAP_READING`, "word", 2, choose14([
     ["A map says 1 cm stands for 10 km. Two towns are 4 cm apart. How far apart are they on the ground?", "40 km", [["4 km", "M_EM_SCALE_IGNORE"], ["14 km", "M_EM_SCALE_IGNORE"], ["400 km", "M_EM_SCALE_IGNORE"]], "Each centimetre is 10 km, so 4 cm is 4 times 10 km, which is 40 km."],
     ["On a map, 1 cm stands for 5 km. A learner measures 6 cm between two schools. How far apart are the schools on the ground?", "30 km", [["6 km", "M_EM_SCALE_IGNORE"], ["11 km", "M_EM_SCALE_IGNORE"], ["300 km", "M_EM_SCALE_IGNORE"]], "6 cm times 5 km is 30 km."],
-    ["The scale of a map says 1 cm stands for 20 km. The distance on the map from Nairobi to Nakuru is 3 cm. What is the distance on the ground?", "60 km", [["3 km", "M_EM_SCALE_IGNORE"], ["23 km", "M_EM_SCALE_IGNORE"], ["600 km", "M_EM_SCALE_IGNORE"]], "3 cm times 20 km is 60 km."],
+    ["The scale of a map says 1 cm stands for 20 km. Two towns on the map are 3 cm apart. What is the distance on the ground?", "60 km", [["3 km", "M_EM_SCALE_IGNORE"], ["23 km", "M_EM_SCALE_IGNORE"], ["600 km", "M_EM_SCALE_IGNORE"]], "3 cm times 20 km is 60 km."],
     ["A map has the scale 1 cm to 2 km. Achieng's home is 7 cm from the river on the map. How far is it on the ground?", "14 km", [["7 km", "M_EM_SCALE_IGNORE"], ["9 km", "M_EM_SCALE_IGNORE"], ["140 km", "M_EM_SCALE_IGNORE"]], "7 cm times 2 km is 14 km."],
     ["On a map of Kenya, 1 cm stands for 50 km. Two lakes are 5 cm apart. How far apart are the lakes on the ground?", "250 km", [["5 km", "M_EM_SCALE_IGNORE"], ["55 km", "M_EM_SCALE_IGNORE"], ["2,500 km", "M_EM_SCALE_IGNORE"]], "5 cm times 50 km is 250 km."]
   ], { h: ["Find how many kilometres 1 cm stands for.", "Multiply the centimetres on the map by that number."], s1: "Use the scale: ground distance is map distance times the scale." })),
@@ -38933,16 +38933,16 @@ var FAMILIES50 = [
     ["Which of these is a lake in Kenya?", "Lake Naivasha", [["Tana", "M_PF_TYPE_MIX"], ["Aberdare", "M_PF_TYPE_MIX"], ["Elgon", "M_PF_TYPE_MIX"]], "Lake Naivasha is in the Rift Valley. The Tana is a river, and the Aberdare and Elgon are mountains."]
   ], { h: ["Think about whether the water stands still or flows.", "Lakes hold water, rivers flow, mountains are high ground."], s1: "Find what kind of feature the name tells you." })),
   fam8("pf.spot", `${PF}FEATURE_NAMES`, "spot", 3, spot14([
-    ["Juma says Mount Kilimanjaro is the highest mountain in Kenya. Which step has the mistake?", [["Step 1: Juma has seen Kilimanjaro from Amboseli.", true], ["Step 2: He decides the mountain must be inside Kenya.", false], ["Step 3: He writes that it is the highest in Kenya.", true]], "Mount Kilimanjaro stands in Tanzania. Mount Kenya, at 5,199 metres, is Kenya's highest mountain.", "M_PF_KILIMANJARO"],
-    ["Chebet says Lake Turkana is a river. Which step has the mistake?", [["Step 1: Chebet reads the name Lake Turkana.", true], ["Step 2: She decides that all water in Kenya flows.", false], ["Step 3: She writes that it is a river.", true]], "A lake is water with land all round it. Lake Turkana is a lake, not a river.", "M_PF_TYPE_MIX"],
-    ["Otieno says the Tana is a lake because it has much water. Which step has the mistake?", [["Step 1: Otieno sees that the Tana has a lot of water.", true], ["Step 2: He decides that a lot of water means a lake.", false], ["Step 3: He writes that the Tana is a lake.", true]], "The Tana flows in a line to the Indian Ocean, so it is a river.", "M_PF_TYPE_MIX"],
-    ["Wanjiru says Mount Elgon is a lake. Which step has the mistake?", [["Step 1: Wanjiru finds Mount Elgon on the map.", true], ["Step 2: She decides every Kenyan feature with a name is a lake.", false], ["Step 3: She writes that it is a lake.", true]], 'The word "Mount" tells us it is a mountain. Lakes have the word "Lake".', "M_PF_TYPE_MIX"]
+    ["Juma says Mount Kilimanjaro is the highest mountain in Kenya. Which step has the mistake?", [["Step 1: Juma has seen Kilimanjaro from Amboseli.", true], ["Step 2: He decides the mountain must be inside Kenya.", false], ["Step 3: He writes his answer.", true]], "Mount Kilimanjaro stands in Tanzania. Mount Kenya, at 5,199 metres, is Kenya's highest mountain.", "M_PF_KILIMANJARO"],
+    ["Chebet says Lake Turkana is a river. Which step has the mistake?", [["Step 1: Chebet reads the name Lake Turkana.", true], ["Step 2: She decides that all water in Kenya flows.", false], ["Step 3: She writes her answer.", true]], "A lake is water with land all round it. Lake Turkana is a lake, not a river.", "M_PF_TYPE_MIX"],
+    ["Otieno says the Tana is a lake because it has much water. Which step has the mistake?", [["Step 1: Otieno sees that the Tana has a lot of water.", true], ["Step 2: He decides that a lot of water means a lake.", false], ["Step 3: He writes his answer.", true]], "The Tana flows in a line to the Indian Ocean, so it is a river.", "M_PF_TYPE_MIX"],
+    ["Wanjiru says Mount Elgon is a lake. Which step has the mistake?", [["Step 1: Wanjiru finds Mount Elgon on the map.", true], ["Step 2: She decides every Kenyan feature with a name is a lake.", false], ["Step 3: She writes her answer.", true]], 'The word "Mount" tells us it is a mountain. Lakes have the word "Lake".', "M_PF_TYPE_MIX"]
   ], { h: ["Which step says something that is not true?", "Use the word in the name: Lake, River or Mount."], s1: "Check each step against what you know about Kenya's features." })),
   // ---------------------------------------------------------------- FEATURE_WHERE
   fam8("pw.where", `${PF}FEATURE_WHERE`, "direct", 1, choose14([
     ["In which part of Kenya is Lake Victoria?", "The west", [["The east", "M_PF_REGION_MIX"], ["The north-east", "M_PF_REGION_MIX"], ["The south-east", "M_PF_REGION_MIX"]], "Lake Victoria lies in the west, shared with Uganda and Tanzania."],
     ["In which part of Kenya is Lake Turkana?", "The north-west", [["The south", "M_PF_REGION_MIX"], ["The south-east", "M_PF_REGION_MIX"], ["The centre", "M_PF_REGION_MIX"]], "Lake Turkana is in the dry north-west."],
-    ["Where is Mount Kenya?", "In the central highlands", [["On the coast", "M_PF_REGION_MIX"], ["In the far west", "M_PF_REGION_MIX"], ["In the north-east", "M_PF_REGION_MIX"]], "Mount Kenya stands in the central highlands, on the equator."],
+    ["Where is Mount Kenya?", "In the central highlands", [["On the coast", "M_PF_REGION_MIX"], ["In the far west", "M_PF_REGION_MIX"], ["In the north-east", "M_PF_REGION_MIX"]], "Mount Kenya stands in the central highlands, close to the equator."],
     ["Where is the Indian Ocean coast of Kenya?", "In the south-east", [["In the west", "M_PF_REGION_MIX"], ["In the north-west", "M_PF_REGION_MIX"], ["In the centre", "M_PF_REGION_MIX"]], "The coast is in the south-east, along the Indian Ocean."],
     ["In which direction does the Great Rift Valley run through Kenya?", "North to south", [["East to west", "M_PF_RIFT_DIRECTION"], ["Along the coast", "M_PF_RIFT_DIRECTION"], ["South-east to north-west", "M_PF_RIFT_DIRECTION"]], "The Rift Valley runs north to south, from Lake Turkana towards Lake Magadi."]
   ], { h: ["Link each feature to a neighbour or a side of Kenya.", "Lake Victoria is next to Uganda. The ocean is on the east side."], s1: "Picture a map of Kenya and find the feature." })),
@@ -39052,7 +39052,7 @@ var FAMILIES50 = [
     ["Which description fits the Lake Victoria area?", "Warm with rain in most months", [["Very dry all year", "M_WC_HUMID_DRY"], ["Cold with snow", "M_WC_EQUATOR_HOT"], ["Hot with almost no rain", "M_WC_HUMID_DRY"]], "The Lake Victoria area is warm and gets rain in most months."]
   ], { h: ["Think about the temperature and the rainfall of each region.", "Humid means damp air."], s1: "Match the description to the region." })),
   fam8("ct.why", `${WC2}CLIMATE_REGION_TRAITS`, "why", 2, choose14([
-    ["Mount Kenya is on the equator but has snow at the top. Why is it cold there?", "The air gets cooler as you go higher", [["It is not really on the equator", "M_WC_EQUATOR_HOT"], ["The sun does not shine there", "M_WC_EQUATOR_HOT"], ["It is near the sea", "M_WC_EQUATOR_HOT"]], "Air gets cooler with height, even on the equator."],
+    ["Mount Kenya is close to the equator but has snow at the top. Why is it cold there?", "The air gets cooler as you go higher", [["It is not really on the equator", "M_WC_EQUATOR_HOT"], ["The sun does not shine there", "M_WC_EQUATOR_HOT"], ["It is near the sea", "M_WC_EQUATOR_HOT"]], "Air gets cooler with height, even on the equator."],
     ["Nyeri is high up. Why is it cooler than Mombasa on the coast?", "High places have cooler air", [["Nyeri is nearer the sea", "M_WC_EQUATOR_HOT"], ["Nyeri is far from the equator", "M_WC_EQUATOR_HOT"], ["Nyeri has no sun", "M_WC_EQUATOR_HOT"]], "Nyeri is high above sea level, so the air is cooler."],
     ["Njeri says the coast feels sticky because the air is humid. What does humid mean?", "The air holds a lot of water vapour", [["The air is very dry", "M_WC_HUMID_DRY"], ["The wind is strong", "M_WC_HUMID_DRY"], ["The air is cold", "M_WC_HUMID_DRY"]], "Humid air holds a lot of water vapour, so it feels damp and sticky."],
     ["Why can farmers near Mount Kenya grow crops that need steady rain?", "The highlands get reliable rain", [["The highlands are very dry", "M_WC_HUMID_DRY"], ["The highlands are hot all year", "M_WC_EQUATOR_HOT"], ["The highlands get no wind", "M_WC_HUMID_DRY"]], "The highlands have reliable rain, which suits many crops."],
@@ -39243,9 +39243,9 @@ var FAMILIES51 = [
   ], { h: ["Draw the chart from the top down.", "Head, deputy, senior teachers, class teachers, learners and prefects."], s1: "Place each person one level below the one above." })),
   fam8("as.spot", `${SA2}ADMIN_STRUCTURE`, "spot", 3, spot14([
     ["Juma draws a school chart. He says the deputy is above the headteacher. Which step has the mistake?", [["Step 1: Juma knows the school has a headteacher and a deputy.", true], ["Step 2: He puts the deputy above the headteacher.", false], ["Step 3: He puts the class teachers below.", true]], "The headteacher is at the top. The deputy comes directly under the head.", "M_SA_ORDER_REVERSED"],
-    ["Amina says prefects are above teachers. Which step has the mistake?", [["Step 1: Amina sees prefects help keep order.", true], ["Step 2: She decides prefects are above teachers.", false], ["Step 3: She draws prefects at the top.", true]], "Prefects are learners. They report to teachers, so they come below them.", "M_SA_PREFECT_ABOVE"],
-    ["Kamau says class teachers report to prefects. Which step has the mistake?", [["Step 1: Kamau sees that prefects help teachers.", true], ["Step 2: He decides class teachers report to prefects.", false], ["Step 3: He draws an arrow from teachers to prefects.", true]], "Prefects report to teachers. The order is head, deputy, teachers, then learners and prefects.", "M_SA_PREFECT_ABOVE"],
-    ["Wairimu says the headteacher is below the class teachers on the chart. Which step has the mistake?", [["Step 1: Wairimu knows class teachers work with learners daily.", true], ["Step 2: She decides the head is below them.", false], ["Step 3: She draws the head at the bottom.", true]], "The headteacher is at the top of the staff chart.", "M_SA_ORDER_REVERSED"]
+    ["Amina says prefects are above teachers. Which step has the mistake?", [["Step 1: Amina sees prefects help keep order.", true], ["Step 2: She decides prefects are above teachers.", false], ["Step 3: She draws the chart.", true]], "Prefects are learners. They report to teachers, so they come below them.", "M_SA_PREFECT_ABOVE"],
+    ["Kamau says class teachers report to prefects. Which step has the mistake?", [["Step 1: Kamau sees that prefects help teachers.", true], ["Step 2: He decides class teachers report to prefects.", false], ["Step 3: He draws the chart.", true]], "Prefects report to teachers. The order is head, deputy, teachers, then learners and prefects.", "M_SA_PREFECT_ABOVE"],
+    ["Wairimu says the headteacher is below the class teachers on the chart. Which step has the mistake?", [["Step 1: Wairimu knows class teachers work with learners daily.", true], ["Step 2: She decides the head is below them.", false], ["Step 3: She draws the chart.", true]], "The headteacher is at the top of the staff chart.", "M_SA_ORDER_REVERSED"]
   ], { h: ["Which step says the wrong order?", "The head is at the top. The learners are at the bottom."], s1: "Check the order step by step." })),
   // ---------------------------------------------------------------- RESOURCE_TYPES
   fam8("rt.which", `${RK}RESOURCE_TYPES`, "direct", 1, choose14([
@@ -39425,35 +39425,35 @@ var FAMILIES52 = [
       "Amboseli",
       [["Samburu", "M_WT_PLACE_MIX"], ["Lake Nakuru", "M_WT_PLACE_MIX"], ["Maasai Mara", "M_WT_PLACE_MIX"]],
       "Amboseli is in Kajiado, near the Tanzania border.",
-      { t: { head: ["Park", "Known for", "Place"], rows: [["Amboseli", "Elephants", "South, near Tanzania"], ["Samburu", "Grevy's zebra", "North, in Isiolo"], ["Lake Nakuru", "Flamingos", "Rift Valley"], ["Maasai Mara", "Wildebeest", "Narok"]] } }
+      { t: { head: ["Park", "Known for", "Place"], rows: [["Amboseli", "Elephants", "South, near Tanzania"], ["Samburu", "Grevy's zebra", "North, near Isiolo"], ["Lake Nakuru", "Flamingos", "Rift Valley"], ["Maasai Mara", "Wildebeest", "Narok"]] } }
     ],
     [
       "In the table, which park has the Grevy's zebra and lies in the north?",
       "Samburu",
       [["Amboseli", "M_WT_PLACE_MIX"], ["Maasai Mara", "M_WT_PLACE_MIX"], ["Lake Nakuru", "M_WT_PLACE_MIX"]],
-      "Samburu is in Isiolo County in the north.",
-      { t: { head: ["Park", "Known for", "Place"], rows: [["Amboseli", "Elephants", "South, near Tanzania"], ["Samburu", "Grevy's zebra", "North, in Isiolo"], ["Lake Nakuru", "Flamingos", "Rift Valley"], ["Maasai Mara", "Wildebeest", "Narok"]] } }
+      "Samburu is in northern Kenya, near Isiolo.",
+      { t: { head: ["Park", "Known for", "Place"], rows: [["Amboseli", "Elephants", "South, near Tanzania"], ["Samburu", "Grevy's zebra", "North, near Isiolo"], ["Lake Nakuru", "Flamingos", "Rift Valley"], ["Maasai Mara", "Wildebeest", "Narok"]] } }
     ],
     [
       "Which park in the table is found in the Rift Valley and has flamingos?",
       "Lake Nakuru",
       [["Samburu", "M_WT_ANIMAL_MIX"], ["Amboseli", "M_WT_ANIMAL_MIX"], ["Maasai Mara", "M_WT_ANIMAL_MIX"]],
       "Lake Nakuru National Park is in the Rift Valley.",
-      { t: { head: ["Park", "Known for", "Place"], rows: [["Amboseli", "Elephants", "South, near Tanzania"], ["Samburu", "Grevy's zebra", "North, in Isiolo"], ["Lake Nakuru", "Flamingos", "Rift Valley"], ["Maasai Mara", "Wildebeest", "Narok"]] } }
+      { t: { head: ["Park", "Known for", "Place"], rows: [["Amboseli", "Elephants", "South, near Tanzania"], ["Samburu", "Grevy's zebra", "North, near Isiolo"], ["Lake Nakuru", "Flamingos", "Rift Valley"], ["Maasai Mara", "Wildebeest", "Narok"]] } }
     ],
     [
       "Which place in the table is a park in a city?",
       "Nairobi National Park",
       [["Tsavo", "M_WT_PLACE_MIX"], ["Samburu", "M_WT_PLACE_MIX"], ["Amboseli", "M_WT_PLACE_MIX"]],
       "Nairobi National Park lies next to Nairobi city.",
-      { t: { head: ["Park", "Where it is"], rows: [["Nairobi National Park", "Next to Nairobi city"], ["Tsavo", "South-east, large park"], ["Samburu", "North, in Isiolo"], ["Amboseli", "South, near Tanzania"]] } }
+      { t: { head: ["Park", "Where it is"], rows: [["Nairobi National Park", "Next to Nairobi city"], ["Tsavo", "South-east, large park"], ["Samburu", "North, near Isiolo"], ["Amboseli", "South, near Tanzania"]] } }
     ],
     [
       "Which tourist attraction in the table is found at the coast?",
       "Diani Beach",
       [["Maasai Mara", "M_WT_PLACE_MIX"], ["Samburu", "M_WT_PLACE_MIX"], ["Lake Nakuru", "M_WT_PLACE_MIX"]],
       "Diani Beach is on the south coast.",
-      { t: { head: ["Attraction", "Where it is"], rows: [["Diani Beach", "South coast"], ["Maasai Mara", "Narok"], ["Samburu", "Isiolo, north"], ["Lake Nakuru", "Rift Valley"]] } }
+      { t: { head: ["Attraction", "Where it is"], rows: [["Diani Beach", "South coast"], ["Maasai Mara", "Narok"], ["Samburu", "North, near Isiolo"], ["Lake Nakuru", "Rift Valley"]] } }
     ]
   ], { h: ["Read the row with the clue.", "Match the park, the animal and the place."], s1: "Read each row of the table." }), "b"),
   // ---------------------------------------------------------------- TOURISM_ECONOMY
@@ -39477,7 +39477,7 @@ var FAMILIES52 = [
     ["How did people move goods before roads and lorries?", "They carried loads on heads and backs", [["They did not move any goods", "M_TR_WALK_NOT_TRANSPORT"], ["They used aeroplanes to move them", "M_TR_EARLY_MODERN_MIX"], ["They used trains to move them", "M_TR_EARLY_MODERN_MIX"]], "Carrying loads on heads and backs was an early means of transport."],
     ["Which animal was used to carry goods in dry northern Kenya?", "The camel", [["The elephant", "M_TR_EARLY_MODERN_MIX"], ["The lion", "M_TR_EARLY_MODERN_MIX"], ["The hippo", "M_TR_EARLY_MODERN_MIX"]], "Camels can travel far with little water."],
     ["Which early means of transport was used on Lake Victoria and the coast?", "A canoe or dhow", [["A lorry", "M_TR_EARLY_MODERN_MIX"], ["A bus", "M_TR_EARLY_MODERN_MIX"], ["A train", "M_TR_EARLY_MODERN_MIX"]], "Canoes and dhows moved people and goods on water."],
-    ["Long lines of porters and traders carrying goods over long distances were called what?", "Caravans", [["Trains", "M_TR_EARLY_MODERN_MIX"], ["Convoys of lorries", "M_TR_EARLY_MODERN_MIX"], ["Fleets of planes", "M_TR_EARLY_MODERN_MIX"]], "Caravans carried goods such as salt, cloth and ivory."]
+    ["Long lines of porters and traders carrying goods over long distances were called what?", "Caravans", [["Trains", "M_TR_EARLY_MODERN_MIX"], ["Convoys of lorries", "M_TR_EARLY_MODERN_MIX"], ["Fleets of planes", "M_TR_EARLY_MODERN_MIX"]], "Caravans carried goods such as salt, cloth and beads."]
   ], { h: ["Which would a person have used before engines?", "People, animals, canoes and dhows."], s1: "Think of the way things moved before engines." })),
   fam8("et.sort", `${TR}EARLY_TRANSPORT`, "table", 2, choose14([
     [
@@ -39686,10 +39686,10 @@ var FAMILIES53 = [
     ["Who made decisions in most Kenyan communities in the past?", "A council of elders", [["One foreign ruler", "M_EG_KING_ALL"], ["No one", "M_EG_NO_GOVT"], ["Only children", "M_EG_NO_GOVT"]], "Most decisions were made by councils of elders."]
   ], { h: ["Communities had leaders and rules long before colonial rule.", "Most ruled through councils of elders, not kings."], s1: "Recall how communities governed themselves." })),
   fam8("ef.spot", `${EG}EARLY_FORMS`, "spot", 3, spot14([
-    ["Juma says Kenyans had no government before colonial rule. Which step has the mistake?", [["Step 1: Juma knows the colonial government started later.", true], ["Step 2: He decides that nobody ruled before it.", false], ["Step 3: He writes that there was no government.", true]], "Communities had councils of elders, age-sets and other leaders long before colonial rule.", "M_EG_NO_GOVT"],
-    ["Amina says every Kenyan community had a king. Which step has the mistake?", [["Step 1: Amina has heard of the Wanga king.", true], ["Step 2: She decides all communities had a king.", false], ["Step 3: She writes that every community had one.", true]], "Only some, such as the Wanga, had a king. Most had councils of elders.", "M_EG_KING_ALL"],
-    ["Kamau says the laibon ruled the Maasai alone like a king. Which step has the mistake?", [["Step 1: Kamau knows the laibon was an important leader.", true], ["Step 2: He decides the laibon made every decision alone.", false], ["Step 3: He writes that the laibon was a king.", true]], "The laibon gave spiritual guidance. Elders and age-sets made decisions.", "M_EG_ONE_RULER"],
-    ["Wanjiru says that the Njuri Ncheke was a Maasai council. Which step has the mistake?", [["Step 1: Wanjiru knows the Njuri Ncheke is a council of elders.", true], ["Step 2: She decides it belongs to the Maasai.", false], ["Step 3: She writes it is a Maasai council.", true]], "The Njuri Ncheke is the council of elders of the Ameru.", "M_EG_NO_GOVT"]
+    ["Juma says Kenyans had no government before colonial rule. Which step has the mistake?", [["Step 1: Juma knows the colonial government started later.", true], ["Step 2: He decides that nobody ruled before it.", false], ["Step 3: He writes his answer.", true]], "Communities had councils of elders, age-sets and other leaders long before colonial rule.", "M_EG_NO_GOVT"],
+    ["Amina says every Kenyan community had a king. Which step has the mistake?", [["Step 1: Amina has heard of the Wanga king.", true], ["Step 2: She decides all communities had a king.", false], ["Step 3: She writes her answer.", true]], "Only some, such as the Wanga, had a king. Most had councils of elders.", "M_EG_KING_ALL"],
+    ["Kamau says the laibon ruled the Maasai alone like a king. Which step has the mistake?", [["Step 1: Kamau knows the laibon was an important leader.", true], ["Step 2: He decides the laibon made every decision alone.", false], ["Step 3: He writes his answer.", true]], "The laibon gave spiritual guidance. Elders and age-sets made decisions.", "M_EG_ONE_RULER"],
+    ["Wanjiru says that the Njuri Ncheke was a Maasai council. Which step has the mistake?", [["Step 1: Wanjiru knows the Njuri Ncheke is a council of elders.", true], ["Step 2: She decides it belongs to the Maasai.", false], ["Step 3: She writes her answer.", true]], "The Njuri Ncheke is the council of elders of the Ameru.", "M_EG_NO_GOVT"]
   ], { h: ["Which step says something that is not true?", "Think about how communities governed themselves."], s1: "Check each step against what you know." })),
   // ---------------------------------------------------------------- MAASAI_AMERU
   fam8("ma.which", `${EG}MAASAI_AMERU`, "direct", 1, choose14([
@@ -39925,10 +39925,10 @@ var FAMILIES53 = [
     ["Which of these is a democracy?", "People choose their leaders by voting", [["A leader keeps power for life without elections", "M_DM_NOT_DEMOCRACY"], ["One person decides everything", "M_DM_NOT_DEMOCRACY"], ["The strongest takes over", "M_DM_NOT_DEMOCRACY"]], "In a democracy people choose their leaders."]
   ], { h: ["Did each person decide, or did chosen people decide?", "Democracy means people choose their leaders."], s1: "Ask who made the decision." })),
   fam8("dt.spot", `${DM}TYPES`, "spot", 3, spot14([
-    ["Juma says that a class vote by raising hands is representative democracy. Which step has the mistake?", [["Step 1: Juma sees every learner raising a hand.", true], ["Step 2: He decides that is representative democracy.", false], ["Step 3: He writes that learners elected a leader.", true]], "When every person votes, it is direct democracy.", "M_DM_TYPE_MIX"],
-    ["Amina says that voting for a Member of Parliament is direct democracy. Which step has the mistake?", [["Step 1: Amina sees voters choosing a person.", true], ["Step 2: She decides that is direct democracy.", false], ["Step 3: She writes that voters decide every law themselves.", true]], "Voters choose a person to decide for them. This is representative democracy.", "M_DM_TYPE_MIX"],
-    ["Wafula says a leader who rules for life without elections is a democrat. Which step has the mistake?", [["Step 1: Wafula sees a leader with a lot of power.", true], ["Step 2: He decides that makes him a democrat.", false], ["Step 3: He writes that the country is a democracy.", true]], "In a democracy, people choose their leaders by voting.", "M_DM_NOT_DEMOCRACY"],
-    ["Njeri says a school where the head picks the prefects alone has an election. Which step has the mistake?", [["Step 1: Njeri sees the head choosing prefects.", true], ["Step 2: She decides this is an election.", false], ["Step 3: She writes that learners voted.", true]], "An election needs the learners to vote.", "M_DM_NOT_DEMOCRACY"]
+    ["Juma says that a class vote by raising hands is representative democracy. Which step has the mistake?", [["Step 1: Juma sees every learner raising a hand.", true], ["Step 2: He decides that is representative democracy.", false], ["Step 3: He writes his answer.", true]], "When every person votes, it is direct democracy.", "M_DM_TYPE_MIX"],
+    ["Amina says that voting for a Member of Parliament is direct democracy. Which step has the mistake?", [["Step 1: Amina sees voters choosing a person.", true], ["Step 2: She decides that is direct democracy.", false], ["Step 3: She writes her answer.", true]], "Voters choose a person to decide for them. This is representative democracy.", "M_DM_TYPE_MIX"],
+    ["Wafula says a leader who rules for life without elections is a democrat. Which step has the mistake?", [["Step 1: Wafula sees a leader with a lot of power.", true], ["Step 2: He decides that makes him a democrat.", false], ["Step 3: He writes his answer.", true]], "In a democracy, people choose their leaders by voting.", "M_DM_NOT_DEMOCRACY"],
+    ["Njeri says a school where the head picks the prefects alone has an election. Which step has the mistake?", [["Step 1: Njeri sees the head choosing prefects.", true], ["Step 2: She decides this is an election.", false], ["Step 3: She writes her answer.", true]], "An election needs the learners to vote.", "M_DM_NOT_DEMOCRACY"]
   ], { h: ["Which step says something that is not true?", "Direct: everyone votes. Representative: elected leaders decide."], s1: "Check each step against the meaning of democracy." })),
   // ---------------------------------------------------------------- BENEFITS_PRACTICE
   fam8("db.which", `${DM}BENEFITS_PRACTICE`, "direct", 1, choose14([
