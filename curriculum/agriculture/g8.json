@@ -3,15 +3,15 @@
  "subject_key": "agriculture",
  "grade": 8,
  "source": "KICD Agriculture, First published 2023; Revised 2024 (text layer)",
- "status": "outcomes from KICD's text, word for word; skills, prerequisites and misconceptions not yet mapped",
+ "status": "outcomes from KICD's text, word for word; skills, prerequisites and misconceptions proposed (authored offline, 13 Nov 2026), awaiting an Agriculture teacher's review",
  "totals": {
   "strands": 4,
   "sub_strands": 12,
   "outcomes": 41,
   "lessons": 120,
-  "skills": 0,
-  "prerequisites": 0,
-  "misconceptions": 0
+  "skills": 14,
+  "prerequisites": 4,
+  "misconceptions": 42
  },
  "sub_strands": [
   {
@@ -64,8 +64,78 @@
      "status": "kicd_verified"
     }
    ],
-   "skills": [],
-   "misconceptions": [],
+   "skills": [
+    {
+     "code": "AGRI.G8.CONSER.SOIL_CONSERVATION_MEASUR.SOIL_CONSERVE",
+     "name": "Name methods of soil conservation",
+     "outcomes": [
+      "AGRI.G8.CONSER.SOIL_CONSERVATION_MEASUR.a"
+     ],
+     "mastery": "The child names terracing (steps on a slope), contour farming, mulching, cover crops, planting trees and strip cropping, and says they slow water and wind so soil is not carried away. Evidence rule: at least four of the last five fresh questions right across at least two question forms, and no repeated pick of the same misconception.",
+     "question_forms": [
+      "pick the right answer",
+      "pick the right answer in a short story",
+      "find the false step in a learner's reason"
+     ],
+     "thinking": [
+      "recall",
+      "reasoning"
+     ],
+     "horeb_skill_ids": [],
+     "prerequisites": [],
+     "status": "proposed"
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "AGRI.G8.CONSER.SOIL_CONSERVATION_MEASUR.SOIL_CONSERVE.M_AG8_SC_TERRACE",
+     "skill": "AGRI.G8.CONSER.SOIL_CONSERVATION_MEASUR.SOIL_CONSERVE",
+     "error": "Thinks terraces speed up erosion.",
+     "example": {
+      "question": "What does terracing do on a slope?",
+      "wrong_answer": "Speeds up the water",
+      "correct_answer": "Slows the water and holds soil"
+     },
+     "cause": "The child mixes up two rules that are taught close together.",
+     "reveals": "Offer \"Speeds up the water\" next to the right answer and ask the question again in a new situation.",
+     "help": "Terraces slow water and hold soil.",
+     "feedback": "Terraces slow water and hold soil.",
+     "source": "To confirm by an Agriculture teacher: a common classroom error, not traced to a study by the author.",
+     "status": "draft"
+    },
+    {
+     "code": "AGRI.G8.CONSER.SOIL_CONSERVATION_MEASUR.SOIL_CONSERVE.M_AG8_SC_MULCH",
+     "skill": "AGRI.G8.CONSER.SOIL_CONSERVATION_MEASUR.SOIL_CONSERVE",
+     "error": "Thinks mulch bares the soil.",
+     "example": {
+      "question": "What does mulch do to soil?",
+      "wrong_answer": "Leaves it bare",
+      "correct_answer": "Covers and protects it"
+     },
+     "cause": "The child mixes up two rules that are taught close together.",
+     "reveals": "Offer \"Leaves it bare\" next to the right answer and ask the question again in a new situation.",
+     "help": "Mulch covers and protects soil.",
+     "feedback": "Mulch covers and protects soil.",
+     "source": "To confirm by an Agriculture teacher: a common classroom error, not traced to a study by the author.",
+     "status": "draft"
+    },
+    {
+     "code": "AGRI.G8.CONSER.SOIL_CONSERVATION_MEASUR.SOIL_CONSERVE.M_AG8_SC_CONTOUR",
+     "skill": "AGRI.G8.CONSER.SOIL_CONSERVATION_MEASUR.SOIL_CONSERVE",
+     "error": "Ploughs up and down the slope.",
+     "example": {
+      "question": "How should crops be planted on a slope?",
+      "wrong_answer": "Up and down the slope",
+      "correct_answer": "Along the contour"
+     },
+     "cause": "The child mixes up two rules that are taught close together.",
+     "reveals": "Offer \"Up and down the slope\" next to the right answer and ask the question again in a new situation.",
+     "help": "Plant along the contour.",
+     "feedback": "Plant along the contour.",
+     "source": "To confirm by an Agriculture teacher: a common classroom error, not traced to a study by the author.",
+     "status": "draft"
+    }
+   ],
    "rubric_indicators": [
     "AGRI.G8.RUBRIC.1.1",
     "AGRI.G8.RUBRIC.1.2",
@@ -122,8 +192,86 @@
      "status": "kicd_verified"
     }
    ],
-   "skills": [],
-   "misconceptions": [],
+   "skills": [
+    {
+     "code": "AGRI.G8.CONSER.WATER_HARVESTING_AND_STO.WATER_STORE",
+     "name": "Say how harvested water is stored safely for home use",
+     "outcomes": [
+      "AGRI.G8.CONSER.WATER_HARVESTING_AND_STO.a"
+     ],
+     "mastery": "The child says harvested water is stored in clean covered tanks, drums and jerricans so it stays free of dirt and mosquitoes, and is treated by boiling or a purifier before drinking. Evidence rule: at least four of the last five fresh questions right across at least two question forms, and no repeated pick of the same misconception.",
+     "question_forms": [
+      "pick the right answer",
+      "pick the right answer in a short story",
+      "find the false step in a learner's reason"
+     ],
+     "thinking": [
+      "recall",
+      "reasoning"
+     ],
+     "horeb_skill_ids": [],
+     "prerequisites": [
+      {
+       "requires": "AGRI.G8.CONSER.SOIL_CONSERVATION_MEASUR.SOIL_CONSERVE",
+       "kind": "skill",
+       "strength": "essential",
+       "reason": "Proposed: this skill builds on it. To confirm by an Agriculture teacher.",
+       "status": "proposed"
+      }
+     ],
+     "status": "proposed"
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "AGRI.G8.CONSER.WATER_HARVESTING_AND_STO.WATER_STORE.M_AG8_WS_COVER",
+     "skill": "AGRI.G8.CONSER.WATER_HARVESTING_AND_STO.WATER_STORE",
+     "error": "Leaves water open.",
+     "example": {
+      "question": "How should stored water be kept?",
+      "wrong_answer": "Uncovered",
+      "correct_answer": "In a clean, covered container"
+     },
+     "cause": "The child mixes up two rules that are taught close together.",
+     "reveals": "Offer \"Uncovered\" next to the right answer and ask the question again in a new situation.",
+     "help": "Keep water covered.",
+     "feedback": "Keep water covered.",
+     "source": "To confirm by an Agriculture teacher: a common classroom error, not traced to a study by the author.",
+     "status": "draft"
+    },
+    {
+     "code": "AGRI.G8.CONSER.WATER_HARVESTING_AND_STO.WATER_STORE.M_AG8_WS_TREAT",
+     "skill": "AGRI.G8.CONSER.WATER_HARVESTING_AND_STO.WATER_STORE",
+     "error": "Drinks harvested water untreated.",
+     "example": {
+      "question": "What should be done before drinking harvested water?",
+      "wrong_answer": "Nothing",
+      "correct_answer": "Boil or purify it"
+     },
+     "cause": "The child mixes up two rules that are taught close together.",
+     "reveals": "Offer \"Nothing\" next to the right answer and ask the question again in a new situation.",
+     "help": "Boil or purify before drinking.",
+     "feedback": "Boil or purify before drinking.",
+     "source": "To confirm by an Agriculture teacher: a common classroom error, not traced to a study by the author.",
+     "status": "draft"
+    },
+    {
+     "code": "AGRI.G8.CONSER.WATER_HARVESTING_AND_STO.WATER_STORE.M_AG8_WS_MOSQUITO",
+     "skill": "AGRI.G8.CONSER.WATER_HARVESTING_AND_STO.WATER_STORE",
+     "error": "Ignores mosquitoes.",
+     "example": {
+      "question": "Why must water tanks be covered?",
+      "wrong_answer": "To warm the water",
+      "correct_answer": "To keep out dirt and mosquitoes"
+     },
+     "cause": "The child mixes up two rules that are taught close together.",
+     "reveals": "Offer \"To warm the water\" next to the right answer and ask the question again in a new situation.",
+     "help": "Covers keep out dirt and mosquitoes.",
+     "feedback": "Covers keep out dirt and mosquitoes.",
+     "source": "To confirm by an Agriculture teacher: a common classroom error, not traced to a study by the author.",
+     "status": "draft"
+    }
+   ],
    "rubric_indicators": [
     "AGRI.G8.RUBRIC.1.1",
     "AGRI.G8.RUBRIC.1.2",
@@ -180,8 +328,78 @@
      "status": "kicd_verified"
     }
    ],
-   "skills": [],
-   "misconceptions": [],
+   "skills": [
+    {
+     "code": "AGRI.G8.FOOD_P.KITCHEN_AND_BACKYARD_GAR.KITCHEN_GARDEN",
+     "name": "Explain the role of a kitchen and backyard garden",
+     "outcomes": [
+      "AGRI.G8.FOOD_P.KITCHEN_AND_BACKYARD_GAR.a"
+     ],
+     "mastery": "The child says a kitchen garden near the house gives fresh vegetables and herbs, saves money, uses little space and waste water, and grows crops such as sukuma wiki, spinach, onions and tomatoes. Evidence rule: at least four of the last five fresh questions right across at least two question forms, and no repeated pick of the same misconception.",
+     "question_forms": [
+      "pick the right answer",
+      "pick the right answer in a short story",
+      "find the false step in a learner's reason"
+     ],
+     "thinking": [
+      "recall",
+      "reasoning"
+     ],
+     "horeb_skill_ids": [],
+     "prerequisites": [],
+     "status": "proposed"
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "AGRI.G8.FOOD_P.KITCHEN_AND_BACKYARD_GAR.KITCHEN_GARDEN.M_AG8_KG_SPACE",
+     "skill": "AGRI.G8.FOOD_P.KITCHEN_AND_BACKYARD_GAR.KITCHEN_GARDEN",
+     "error": "Thinks it needs a large farm.",
+     "example": {
+      "question": "Where is a kitchen garden kept?",
+      "wrong_answer": "On a distant large farm",
+      "correct_answer": "Near the house"
+     },
+     "cause": "The child mixes up two rules that are taught close together.",
+     "reveals": "Offer \"On a distant large farm\" next to the right answer and ask the question again in a new situation.",
+     "help": "A kitchen garden is near the house.",
+     "feedback": "A kitchen garden is near the house.",
+     "source": "To confirm by an Agriculture teacher: a common classroom error, not traced to a study by the author.",
+     "status": "draft"
+    },
+    {
+     "code": "AGRI.G8.FOOD_P.KITCHEN_AND_BACKYARD_GAR.KITCHEN_GARDEN.M_AG8_KG_CROP",
+     "skill": "AGRI.G8.FOOD_P.KITCHEN_AND_BACKYARD_GAR.KITCHEN_GARDEN",
+     "error": "Names a poor crop.",
+     "example": {
+      "question": "Which crop suits a kitchen garden?",
+      "wrong_answer": "Timber trees",
+      "correct_answer": "Sukuma wiki"
+     },
+     "cause": "The child mixes up two rules that are taught close together.",
+     "reveals": "Offer \"Timber trees\" next to the right answer and ask the question again in a new situation.",
+     "help": "Sukuma wiki suits a kitchen garden.",
+     "feedback": "Sukuma wiki suits a kitchen garden.",
+     "source": "To confirm by an Agriculture teacher: a common classroom error, not traced to a study by the author.",
+     "status": "draft"
+    },
+    {
+     "code": "AGRI.G8.FOOD_P.KITCHEN_AND_BACKYARD_GAR.KITCHEN_GARDEN.M_AG8_KG_MONEY",
+     "skill": "AGRI.G8.FOOD_P.KITCHEN_AND_BACKYARD_GAR.KITCHEN_GARDEN",
+     "error": "Thinks it costs more.",
+     "example": {
+      "question": "How does a kitchen garden help a family?",
+      "wrong_answer": "It costs a lot more",
+      "correct_answer": "It saves money on vegetables"
+     },
+     "cause": "The child mixes up two rules that are taught close together.",
+     "reveals": "Offer \"It costs a lot more\" next to the right answer and ask the question again in a new situation.",
+     "help": "It saves money.",
+     "feedback": "It saves money.",
+     "source": "To confirm by an Agriculture teacher: a common classroom error, not traced to a study by the author.",
+     "status": "draft"
+    }
+   ],
    "rubric_indicators": [
     "AGRI.G8.RUBRIC.2.1",
     "AGRI.G8.RUBRIC.2.2",
@@ -244,8 +462,78 @@
      "status": "kicd_verified"
     }
    ],
-   "skills": [],
-   "misconceptions": [],
+   "skills": [
+    {
+     "code": "AGRI.G8.FOOD_P.POULTRY_REARING_IN_A_FOL.POULTRY_FOLD",
+     "name": "Describe a fold in poultry rearing",
+     "outcomes": [
+      "AGRI.G8.FOOD_P.POULTRY_REARING_IN_A_FOL.a"
+     ],
+     "mastery": "The child says a fold is a light movable pen that is moved to fresh ground, protects birds from predators and rain, spreads manure and keeps the birds clean. Evidence rule: at least four of the last five fresh questions right across at least two question forms, and no repeated pick of the same misconception.",
+     "question_forms": [
+      "pick the right answer",
+      "pick the right answer in a short story",
+      "find the false step in a learner's reason"
+     ],
+     "thinking": [
+      "recall",
+      "reasoning"
+     ],
+     "horeb_skill_ids": [],
+     "prerequisites": [],
+     "status": "proposed"
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "AGRI.G8.FOOD_P.POULTRY_REARING_IN_A_FOL.POULTRY_FOLD.M_AG8_PF_MOVE",
+     "skill": "AGRI.G8.FOOD_P.POULTRY_REARING_IN_A_FOL.POULTRY_FOLD",
+     "error": "Thinks the fold stays fixed.",
+     "example": {
+      "question": "What is special about a fold?",
+      "wrong_answer": "It is never moved",
+      "correct_answer": "It is moved to fresh ground"
+     },
+     "cause": "The child mixes up two rules that are taught close together.",
+     "reveals": "Offer \"It is never moved\" next to the right answer and ask the question again in a new situation.",
+     "help": "A fold is moved.",
+     "feedback": "A fold is moved.",
+     "source": "To confirm by an Agriculture teacher: a common classroom error, not traced to a study by the author.",
+     "status": "draft"
+    },
+    {
+     "code": "AGRI.G8.FOOD_P.POULTRY_REARING_IN_A_FOL.POULTRY_FOLD.M_AG8_PF_PROTECT",
+     "skill": "AGRI.G8.FOOD_P.POULTRY_REARING_IN_A_FOL.POULTRY_FOLD",
+     "error": "Thinks a fold does not protect.",
+     "example": {
+      "question": "What does a fold protect birds from?",
+      "wrong_answer": "Nothing",
+      "correct_answer": "Predators and rain"
+     },
+     "cause": "The child mixes up two rules that are taught close together.",
+     "reveals": "Offer \"Nothing\" next to the right answer and ask the question again in a new situation.",
+     "help": "A fold protects from predators.",
+     "feedback": "A fold protects from predators.",
+     "source": "To confirm by an Agriculture teacher: a common classroom error, not traced to a study by the author.",
+     "status": "draft"
+    },
+    {
+     "code": "AGRI.G8.FOOD_P.POULTRY_REARING_IN_A_FOL.POULTRY_FOLD.M_AG8_PF_MANURE",
+     "skill": "AGRI.G8.FOOD_P.POULTRY_REARING_IN_A_FOL.POULTRY_FOLD",
+     "error": "Thinks manure is wasted.",
+     "example": {
+      "question": "What happens to the manure from a fold?",
+      "wrong_answer": "It is wasted",
+      "correct_answer": "It is spread on the ground"
+     },
+     "cause": "The child mixes up two rules that are taught close together.",
+     "reveals": "Offer \"It is wasted\" next to the right answer and ask the question again in a new situation.",
+     "help": "Manure is spread.",
+     "feedback": "Manure is spread.",
+     "source": "To confirm by an Agriculture teacher: a common classroom error, not traced to a study by the author.",
+     "status": "draft"
+    }
+   ],
    "rubric_indicators": [
     "AGRI.G8.RUBRIC.2.1",
     "AGRI.G8.RUBRIC.2.2",
@@ -306,8 +594,86 @@
      "status": "kicd_verified"
     }
    ],
-   "skills": [],
-   "misconceptions": [],
+   "skills": [
+    {
+     "code": "AGRI.G8.FOOD_P.CROP_PEST_AND_DISEASE_CO.PEST_DISEASE",
+     "name": "Name pests and diseases of vegetables and how to control them",
+     "outcomes": [
+      "AGRI.G8.FOOD_P.CROP_PEST_AND_DISEASE_CO.a"
+     ],
+     "mastery": "The child names aphids, cutworms and caterpillars as pests and blight, wilt and damping off as diseases of vegetables, and names controls (hand-picking, crop rotation, clean tools and spacing). Evidence rule: at least four of the last five fresh questions right across at least two question forms, and no repeated pick of the same misconception.",
+     "question_forms": [
+      "pick the right answer",
+      "pick the right answer in a short story",
+      "find the false step in a learner's reason"
+     ],
+     "thinking": [
+      "recall",
+      "reasoning"
+     ],
+     "horeb_skill_ids": [],
+     "prerequisites": [
+      {
+       "requires": "AGRI.G8.FOOD_P.KITCHEN_AND_BACKYARD_GAR.KITCHEN_GARDEN",
+       "kind": "skill",
+       "strength": "essential",
+       "reason": "Proposed: this skill builds on it. To confirm by an Agriculture teacher.",
+       "status": "proposed"
+      }
+     ],
+     "status": "proposed"
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "AGRI.G8.FOOD_P.CROP_PEST_AND_DISEASE_CO.PEST_DISEASE.M_AG8_PD_PEST",
+     "skill": "AGRI.G8.FOOD_P.CROP_PEST_AND_DISEASE_CO.PEST_DISEASE",
+     "error": "Mixes pests and diseases.",
+     "example": {
+      "question": "Which is a pest of vegetables?",
+      "wrong_answer": "Blight",
+      "correct_answer": "Aphids"
+     },
+     "cause": "The child mixes up two rules that are taught close together.",
+     "reveals": "Offer \"Blight\" next to the right answer and ask the question again in a new situation.",
+     "help": "Aphids are pests.",
+     "feedback": "Aphids are pests.",
+     "source": "To confirm by an Agriculture teacher: a common classroom error, not traced to a study by the author.",
+     "status": "draft"
+    },
+    {
+     "code": "AGRI.G8.FOOD_P.CROP_PEST_AND_DISEASE_CO.PEST_DISEASE.M_AG8_PD_DISEASE",
+     "skill": "AGRI.G8.FOOD_P.CROP_PEST_AND_DISEASE_CO.PEST_DISEASE",
+     "error": "Mixes diseases and pests.",
+     "example": {
+      "question": "Which is a disease of vegetables?",
+      "wrong_answer": "Aphids",
+      "correct_answer": "Blight"
+     },
+     "cause": "The child mixes up two rules that are taught close together.",
+     "reveals": "Offer \"Aphids\" next to the right answer and ask the question again in a new situation.",
+     "help": "Blight is a disease.",
+     "feedback": "Blight is a disease.",
+     "source": "To confirm by an Agriculture teacher: a common classroom error, not traced to a study by the author.",
+     "status": "draft"
+    },
+    {
+     "code": "AGRI.G8.FOOD_P.CROP_PEST_AND_DISEASE_CO.PEST_DISEASE.M_AG8_PD_CONTROL",
+     "skill": "AGRI.G8.FOOD_P.CROP_PEST_AND_DISEASE_CO.PEST_DISEASE",
+     "error": "Names a harmful control.",
+     "example": {
+      "question": "Which helps to control pests?",
+      "wrong_answer": "Leaving weeds to grow",
+      "correct_answer": "Crop rotation"
+     },
+     "cause": "The child mixes up two rules that are taught close together.",
+     "reveals": "Offer \"Leaving weeds to grow\" next to the right answer and ask the question again in a new situation.",
+     "help": "Crop rotation helps.",
+     "feedback": "Crop rotation helps.",
+     "source": "To confirm by an Agriculture teacher: a common classroom error, not traced to a study by the author.",
+     "status": "draft"
+    }
+   ],
    "rubric_indicators": [
     "AGRI.G8.RUBRIC.2.1",
     "AGRI.G8.RUBRIC.2.2",
@@ -375,8 +741,156 @@
      "status": "kicd_verified"
     }
    ],
-   "skills": [],
-   "misconceptions": [],
+   "skills": [
+    {
+     "code": "AGRI.G8.FOOD_P.PREPARATION_OF_ANIMAL_PR.FISH_PROCESS",
+     "name": "Say why and how fresh fish is processed",
+     "outcomes": [
+      "AGRI.G8.FOOD_P.PREPARATION_OF_ANIMAL_PR.a",
+      "AGRI.G8.FOOD_P.PREPARATION_OF_ANIMAL_PR.b"
+     ],
+     "mastery": "The child says fish is scaled, gutted, washed and then dried, salted, smoked or fried so it lasts longer, and that clean hands, tools and water keep it safe; knives are used only with a teacher. Evidence rule: at least four of the last five fresh questions right across at least two question forms, and no repeated pick of the same misconception.",
+     "question_forms": [
+      "pick the right answer",
+      "pick the right answer in a short story",
+      "find the false step in a learner's reason"
+     ],
+     "thinking": [
+      "recall",
+      "reasoning"
+     ],
+     "horeb_skill_ids": [],
+     "prerequisites": [],
+     "status": "proposed"
+    },
+    {
+     "code": "AGRI.G8.FOOD_P.PREPARATION_OF_ANIMAL_PR.POULTRY_DRESS",
+     "name": "Say why and how a poultry carcass is dressed",
+     "outcomes": [
+      "AGRI.G8.FOOD_P.PREPARATION_OF_ANIMAL_PR.a",
+      "AGRI.G8.FOOD_P.PREPARATION_OF_ANIMAL_PR.c"
+     ],
+     "mastery": "The child says dressing is done after slaughter and bleeding, then scalding, plucking, removing the insides and washing and chilling the carcass, to give clean meat; it is done only with a teacher and kindly. Evidence rule: at least four of the last five fresh questions right across at least two question forms, and no repeated pick of the same misconception.",
+     "question_forms": [
+      "pick the right answer",
+      "pick the right answer in a short story",
+      "find the false step in a learner's reason"
+     ],
+     "thinking": [
+      "recall",
+      "reasoning"
+     ],
+     "horeb_skill_ids": [],
+     "prerequisites": [
+      {
+       "requires": "AGRI.G8.FOOD_P.PREPARATION_OF_ANIMAL_PR.FISH_PROCESS",
+       "kind": "skill",
+       "strength": "essential",
+       "reason": "Proposed: this skill builds on it. To confirm by an Agriculture teacher.",
+       "status": "proposed"
+      }
+     ],
+     "status": "proposed"
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "AGRI.G8.FOOD_P.PREPARATION_OF_ANIMAL_PR.FISH_PROCESS.M_AG8_FP_ORDER",
+     "skill": "AGRI.G8.FOOD_P.PREPARATION_OF_ANIMAL_PR.FISH_PROCESS",
+     "error": "Dries fish before gutting.",
+     "example": {
+      "question": "What is done first to fresh fish?",
+      "wrong_answer": "Drying it whole",
+      "correct_answer": "Scaling and gutting"
+     },
+     "cause": "The child mixes up two rules that are taught close together.",
+     "reveals": "Offer \"Drying it whole\" next to the right answer and ask the question again in a new situation.",
+     "help": "Scale and gut first.",
+     "feedback": "Scale and gut first.",
+     "source": "To confirm by an Agriculture teacher: a common classroom error, not traced to a study by the author.",
+     "status": "draft"
+    },
+    {
+     "code": "AGRI.G8.FOOD_P.PREPARATION_OF_ANIMAL_PR.FISH_PROCESS.M_AG8_FP_METHOD",
+     "skill": "AGRI.G8.FOOD_P.PREPARATION_OF_ANIMAL_PR.FISH_PROCESS",
+     "error": "Names a harmful method.",
+     "example": {
+      "question": "Which makes fish last longer?",
+      "wrong_answer": "Leaving it in the sun uncovered",
+      "correct_answer": "Drying or smoking"
+     },
+     "cause": "The child mixes up two rules that are taught close together.",
+     "reveals": "Offer \"Leaving it in the sun uncovered\" next to the right answer and ask the question again in a new situation.",
+     "help": "Drying or smoking helps.",
+     "feedback": "Drying or smoking helps.",
+     "source": "To confirm by an Agriculture teacher: a common classroom error, not traced to a study by the author.",
+     "status": "draft"
+    },
+    {
+     "code": "AGRI.G8.FOOD_P.PREPARATION_OF_ANIMAL_PR.FISH_PROCESS.M_AG8_FP_SAFE",
+     "skill": "AGRI.G8.FOOD_P.PREPARATION_OF_ANIMAL_PR.FISH_PROCESS",
+     "error": "Lets children use knives alone.",
+     "example": {
+      "question": "Who uses the knife to gut fish at school?",
+      "wrong_answer": "Any learner alone",
+      "correct_answer": "The teacher"
+     },
+     "cause": "The child mixes up two rules that are taught close together.",
+     "reveals": "Offer \"Any learner alone\" next to the right answer and ask the question again in a new situation.",
+     "help": "The teacher uses the knife.",
+     "feedback": "The teacher uses the knife.",
+     "source": "To confirm by an Agriculture teacher: a common classroom error, not traced to a study by the author.",
+     "status": "draft"
+    },
+    {
+     "code": "AGRI.G8.FOOD_P.PREPARATION_OF_ANIMAL_PR.POULTRY_DRESS.M_AG8_PD_ORDER",
+     "skill": "AGRI.G8.FOOD_P.PREPARATION_OF_ANIMAL_PR.POULTRY_DRESS",
+     "error": "Plucks before bleeding.",
+     "example": {
+      "question": "Which comes first in dressing a bird?",
+      "wrong_answer": "Plucking",
+      "correct_answer": "Slaughter and bleeding"
+     },
+     "cause": "The child mixes up two rules that are taught close together.",
+     "reveals": "Offer \"Plucking\" next to the right answer and ask the question again in a new situation.",
+     "help": "Bleeding comes before plucking.",
+     "feedback": "Bleeding comes before plucking.",
+     "source": "To confirm by an Agriculture teacher: a common classroom error, not traced to a study by the author.",
+     "status": "draft"
+    },
+    {
+     "code": "AGRI.G8.FOOD_P.PREPARATION_OF_ANIMAL_PR.POULTRY_DRESS.M_AG8_PD_SCALD",
+     "skill": "AGRI.G8.FOOD_P.PREPARATION_OF_ANIMAL_PR.POULTRY_DRESS",
+     "error": "Skips scalding.",
+     "example": {
+      "question": "What is done to loosen feathers?",
+      "wrong_answer": "Scalding in hot water",
+      "correct_answer": "Rubbing with soil"
+     },
+     "cause": "The child mixes up two rules that are taught close together.",
+     "reveals": "Offer \"Scalding in hot water\" next to the right answer and ask the question again in a new situation.",
+     "help": "Scalding loosens feathers.",
+     "feedback": "Scalding loosens feathers.",
+     "source": "To confirm by an Agriculture teacher: a common classroom error, not traced to a study by the author.",
+     "status": "draft"
+    },
+    {
+     "code": "AGRI.G8.FOOD_P.PREPARATION_OF_ANIMAL_PR.POULTRY_DRESS.M_AG8_PD_SAFE",
+     "skill": "AGRI.G8.FOOD_P.PREPARATION_OF_ANIMAL_PR.POULTRY_DRESS",
+     "error": "Lets children slaughter.",
+     "example": {
+      "question": "Who slaughters poultry at school?",
+      "wrong_answer": "Any learner alone",
+      "correct_answer": "The teacher"
+     },
+     "cause": "The child mixes up two rules that are taught close together.",
+     "reveals": "Offer \"Any learner alone\" next to the right answer and ask the question again in a new situation.",
+     "help": "The teacher does it.",
+     "feedback": "The teacher does it.",
+     "source": "To confirm by an Agriculture teacher: a common classroom error, not traced to a study by the author.",
+     "status": "draft"
+    }
+   ],
    "rubric_indicators": [
     "AGRI.G8.RUBRIC.2.1",
     "AGRI.G8.RUBRIC.2.2",
@@ -443,8 +957,156 @@
      "status": "kicd_verified"
     }
    ],
-   "skills": [],
-   "misconceptions": [],
+   "skills": [
+    {
+     "code": "AGRI.G8.FOOD_P.PRESERVING_ANIMAL_PRODUC.MILK_PRESERVE",
+     "name": "Say how milk is preserved at home",
+     "outcomes": [
+      "AGRI.G8.FOOD_P.PRESERVING_ANIMAL_PRODUC.a",
+      "AGRI.G8.FOOD_P.PRESERVING_ANIMAL_PRODUC.c"
+     ],
+     "mastery": "The child says fresh milk is kept longer by boiling, cooling, fermenting (such as into yoghurt or mursik) or drying, and that clean containers and cool storage help. Evidence rule: at least four of the last five fresh questions right across at least two question forms, and no repeated pick of the same misconception.",
+     "question_forms": [
+      "pick the right answer",
+      "pick the right answer in a short story",
+      "find the false step in a learner's reason"
+     ],
+     "thinking": [
+      "recall",
+      "reasoning"
+     ],
+     "horeb_skill_ids": [],
+     "prerequisites": [],
+     "status": "proposed"
+    },
+    {
+     "code": "AGRI.G8.FOOD_P.PRESERVING_ANIMAL_PRODUC.MEAT_PRESERVE",
+     "name": "Say how meat is preserved at home",
+     "outcomes": [
+      "AGRI.G8.FOOD_P.PRESERVING_ANIMAL_PRODUC.a",
+      "AGRI.G8.FOOD_P.PRESERVING_ANIMAL_PRODUC.b"
+     ],
+     "mastery": "The child says meat is kept longer by drying, salting, smoking and freezing, which slow or stop germs, and that raw meat must be kept cold and covered. Evidence rule: at least four of the last five fresh questions right across at least two question forms, and no repeated pick of the same misconception.",
+     "question_forms": [
+      "pick the right answer",
+      "pick the right answer in a short story",
+      "find the false step in a learner's reason"
+     ],
+     "thinking": [
+      "recall",
+      "reasoning"
+     ],
+     "horeb_skill_ids": [],
+     "prerequisites": [
+      {
+       "requires": "AGRI.G8.FOOD_P.PRESERVING_ANIMAL_PRODUC.MILK_PRESERVE",
+       "kind": "skill",
+       "strength": "essential",
+       "reason": "Proposed: this skill builds on it. To confirm by an Agriculture teacher.",
+       "status": "proposed"
+      }
+     ],
+     "status": "proposed"
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "AGRI.G8.FOOD_P.PRESERVING_ANIMAL_PRODUC.MILK_PRESERVE.M_AG8_MP_BOIL",
+     "skill": "AGRI.G8.FOOD_P.PRESERVING_ANIMAL_PRODUC.MILK_PRESERVE",
+     "error": "Thinks raw milk lasts longest.",
+     "example": {
+      "question": "How can milk be kept longer?",
+      "wrong_answer": "By leaving it raw in the sun",
+      "correct_answer": "By boiling and cooling it"
+     },
+     "cause": "The child mixes up two rules that are taught close together.",
+     "reveals": "Offer \"By leaving it raw in the sun\" next to the right answer and ask the question again in a new situation.",
+     "help": "Boil and cool milk.",
+     "feedback": "Boil and cool milk.",
+     "source": "To confirm by an Agriculture teacher: a common classroom error, not traced to a study by the author.",
+     "status": "draft"
+    },
+    {
+     "code": "AGRI.G8.FOOD_P.PRESERVING_ANIMAL_PRODUC.MILK_PRESERVE.M_AG8_MP_FERMENT",
+     "skill": "AGRI.G8.FOOD_P.PRESERVING_ANIMAL_PRODUC.MILK_PRESERVE",
+     "error": "Thinks fermenting spoils milk.",
+     "example": {
+      "question": "Which preserves milk by fermenting?",
+      "wrong_answer": "Boiling dry",
+      "correct_answer": "Making yoghurt"
+     },
+     "cause": "The child mixes up two rules that are taught close together.",
+     "reveals": "Offer \"Boiling dry\" next to the right answer and ask the question again in a new situation.",
+     "help": "Yoghurt is fermented milk.",
+     "feedback": "Yoghurt is fermented milk.",
+     "source": "To confirm by an Agriculture teacher: a common classroom error, not traced to a study by the author.",
+     "status": "draft"
+    },
+    {
+     "code": "AGRI.G8.FOOD_P.PRESERVING_ANIMAL_PRODUC.MILK_PRESERVE.M_AG8_MP_CONTAINER",
+     "skill": "AGRI.G8.FOOD_P.PRESERVING_ANIMAL_PRODUC.MILK_PRESERVE",
+     "error": "Uses dirty containers.",
+     "example": {
+      "question": "How should milk be stored?",
+      "wrong_answer": "In a dirty can",
+      "correct_answer": "In a clean, covered container"
+     },
+     "cause": "The child mixes up two rules that are taught close together.",
+     "reveals": "Offer \"In a dirty can\" next to the right answer and ask the question again in a new situation.",
+     "help": "Use clean covered containers.",
+     "feedback": "Use clean covered containers.",
+     "source": "To confirm by an Agriculture teacher: a common classroom error, not traced to a study by the author.",
+     "status": "draft"
+    },
+    {
+     "code": "AGRI.G8.FOOD_P.PRESERVING_ANIMAL_PRODUC.MEAT_PRESERVE.M_AG8_ME_DRY",
+     "skill": "AGRI.G8.FOOD_P.PRESERVING_ANIMAL_PRODUC.MEAT_PRESERVE",
+     "error": "Thinks drying spoils meat.",
+     "example": {
+      "question": "Which method preserves meat?",
+      "wrong_answer": "Leaving it wet in the sun",
+      "correct_answer": "Drying it"
+     },
+     "cause": "The child mixes up two rules that are taught close together.",
+     "reveals": "Offer \"Leaving it wet in the sun\" next to the right answer and ask the question again in a new situation.",
+     "help": "Drying preserves meat.",
+     "feedback": "Drying preserves meat.",
+     "source": "To confirm by an Agriculture teacher: a common classroom error, not traced to a study by the author.",
+     "status": "draft"
+    },
+    {
+     "code": "AGRI.G8.FOOD_P.PRESERVING_ANIMAL_PRODUC.MEAT_PRESERVE.M_AG8_ME_COLD",
+     "skill": "AGRI.G8.FOOD_P.PRESERVING_ANIMAL_PRODUC.MEAT_PRESERVE",
+     "error": "Leaves raw meat warm.",
+     "example": {
+      "question": "How should raw meat be kept?",
+      "wrong_answer": "Warm and uncovered",
+      "correct_answer": "Cold and covered"
+     },
+     "cause": "The child mixes up two rules that are taught close together.",
+     "reveals": "Offer \"Warm and uncovered\" next to the right answer and ask the question again in a new situation.",
+     "help": "Keep raw meat cold and covered.",
+     "feedback": "Keep raw meat cold and covered.",
+     "source": "To confirm by an Agriculture teacher: a common classroom error, not traced to a study by the author.",
+     "status": "draft"
+    },
+    {
+     "code": "AGRI.G8.FOOD_P.PRESERVING_ANIMAL_PRODUC.MEAT_PRESERVE.M_AG8_ME_SALT",
+     "skill": "AGRI.G8.FOOD_P.PRESERVING_ANIMAL_PRODUC.MEAT_PRESERVE",
+     "error": "Thinks salt spoils meat.",
+     "example": {
+      "question": "What does salting do to meat?",
+      "wrong_answer": "Spoils it faster",
+      "correct_answer": "Helps it last longer"
+     },
+     "cause": "The child mixes up two rules that are taught close together.",
+     "reveals": "Offer \"Spoils it faster\" next to the right answer and ask the question again in a new situation.",
+     "help": "Salting helps meat last.",
+     "feedback": "Salting helps meat last.",
+     "source": "To confirm by an Agriculture teacher: a common classroom error, not traced to a study by the author.",
+     "status": "draft"
+    }
+   ],
    "rubric_indicators": [
     "AGRI.G8.RUBRIC.2.1",
     "AGRI.G8.RUBRIC.2.2",
@@ -508,8 +1170,79 @@
      "status": "kicd_verified"
     }
    ],
-   "skills": [],
-   "misconceptions": [],
+   "skills": [
+    {
+     "code": "AGRI.G8.FOOD_P.COOKING_PREPARING_A_BALA.BALANCED_MEAL",
+     "name": "Name the food groups and the factors in planning a balanced meal",
+     "outcomes": [
+      "AGRI.G8.FOOD_P.COOKING_PREPARING_A_BALA.a",
+      "AGRI.G8.FOOD_P.COOKING_PREPARING_A_BALA.c"
+     ],
+     "mastery": "The child says a balanced meal has energy foods (ugali, rice), body-building foods (beans, fish, meat), protective foods (vegetables, fruits) and water, and the cost, age, health and the foods in season are considered. Evidence rule: at least four of the last five fresh questions right across at least two question forms, and no repeated pick of the same misconception.",
+     "question_forms": [
+      "pick the right answer",
+      "pick the right answer in a short story",
+      "find the false step in a learner's reason"
+     ],
+     "thinking": [
+      "recall",
+      "reasoning"
+     ],
+     "horeb_skill_ids": [],
+     "prerequisites": [],
+     "status": "proposed"
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "AGRI.G8.FOOD_P.COOKING_PREPARING_A_BALA.BALANCED_MEAL.M_AG8_BM_ENERGY",
+     "skill": "AGRI.G8.FOOD_P.COOKING_PREPARING_A_BALA.BALANCED_MEAL",
+     "error": "Calls beans an energy food.",
+     "example": {
+      "question": "Which is an energy food?",
+      "wrong_answer": "Beans",
+      "correct_answer": "Ugali"
+     },
+     "cause": "The child mixes up two rules that are taught close together.",
+     "reveals": "Offer \"Beans\" next to the right answer and ask the question again in a new situation.",
+     "help": "Ugali gives energy.",
+     "feedback": "Ugali gives energy.",
+     "source": "To confirm by an Agriculture teacher: a common classroom error, not traced to a study by the author.",
+     "status": "draft"
+    },
+    {
+     "code": "AGRI.G8.FOOD_P.COOKING_PREPARING_A_BALA.BALANCED_MEAL.M_AG8_BM_PROTEIN",
+     "skill": "AGRI.G8.FOOD_P.COOKING_PREPARING_A_BALA.BALANCED_MEAL",
+     "error": "Calls ugali body-building.",
+     "example": {
+      "question": "Which is a body-building food?",
+      "wrong_answer": "Ugali",
+      "correct_answer": "Beans"
+     },
+     "cause": "The child mixes up two rules that are taught close together.",
+     "reveals": "Offer \"Ugali\" next to the right answer and ask the question again in a new situation.",
+     "help": "Beans build the body.",
+     "feedback": "Beans build the body.",
+     "source": "To confirm by an Agriculture teacher: a common classroom error, not traced to a study by the author.",
+     "status": "draft"
+    },
+    {
+     "code": "AGRI.G8.FOOD_P.COOKING_PREPARING_A_BALA.BALANCED_MEAL.M_AG8_BM_PROTECT",
+     "skill": "AGRI.G8.FOOD_P.COOKING_PREPARING_A_BALA.BALANCED_MEAL",
+     "error": "Calls sugar protective.",
+     "example": {
+      "question": "Which is a protective food?",
+      "wrong_answer": "Sugar",
+      "correct_answer": "Vegetables"
+     },
+     "cause": "The child mixes up two rules that are taught close together.",
+     "reveals": "Offer \"Sugar\" next to the right answer and ask the question again in a new situation.",
+     "help": "Vegetables protect the body.",
+     "feedback": "Vegetables protect the body.",
+     "source": "To confirm by an Agriculture teacher: a common classroom error, not traced to a study by the author.",
+     "status": "draft"
+    }
+   ],
    "rubric_indicators": [
     "AGRI.G8.RUBRIC.2.1",
     "AGRI.G8.RUBRIC.2.2",
@@ -568,8 +1301,78 @@
      "status": "kicd_verified"
     }
    ],
-   "skills": [],
-   "misconceptions": [],
+   "skills": [
+    {
+     "code": "AGRI.G8.HYGIEN.CLEANING_THE_KITCHEN.KITCHEN_CLEAN",
+     "name": "Name routine cleaning practices in a kitchen",
+     "outcomes": [
+      "AGRI.G8.HYGIEN.CLEANING_THE_KITCHEN.a"
+     ],
+     "mastery": "The child names washing dishes, wiping surfaces, sweeping, disposing of waste and cleaning the sink every day, and cleaning the cooker and shelves each week, and keeping raw meat apart from vegetables. Evidence rule: at least four of the last five fresh questions right across at least two question forms, and no repeated pick of the same misconception.",
+     "question_forms": [
+      "pick the right answer",
+      "pick the right answer in a short story",
+      "find the false step in a learner's reason"
+     ],
+     "thinking": [
+      "recall",
+      "reasoning"
+     ],
+     "horeb_skill_ids": [],
+     "prerequisites": [],
+     "status": "proposed"
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "AGRI.G8.HYGIEN.CLEANING_THE_KITCHEN.KITCHEN_CLEAN.M_AG8_KC_DAILY",
+     "skill": "AGRI.G8.HYGIEN.CLEANING_THE_KITCHEN.KITCHEN_CLEAN",
+     "error": "Cleans the kitchen once a year.",
+     "example": {
+      "question": "How often are dishes washed?",
+      "wrong_answer": "Once a year",
+      "correct_answer": "Every day"
+     },
+     "cause": "The child mixes up two rules that are taught close together.",
+     "reveals": "Offer \"Once a year\" next to the right answer and ask the question again in a new situation.",
+     "help": "Wash dishes every day.",
+     "feedback": "Wash dishes every day.",
+     "source": "To confirm by an Agriculture teacher: a common classroom error, not traced to a study by the author.",
+     "status": "draft"
+    },
+    {
+     "code": "AGRI.G8.HYGIEN.CLEANING_THE_KITCHEN.KITCHEN_CLEAN.M_AG8_KC_RAW",
+     "skill": "AGRI.G8.HYGIEN.CLEANING_THE_KITCHEN.KITCHEN_CLEAN",
+     "error": "Mixes raw meat and vegetables.",
+     "example": {
+      "question": "How should raw meat be kept from vegetables?",
+      "wrong_answer": "Mixed together",
+      "correct_answer": "Kept apart"
+     },
+     "cause": "The child mixes up two rules that are taught close together.",
+     "reveals": "Offer \"Mixed together\" next to the right answer and ask the question again in a new situation.",
+     "help": "Keep raw meat apart.",
+     "feedback": "Keep raw meat apart.",
+     "source": "To confirm by an Agriculture teacher: a common classroom error, not traced to a study by the author.",
+     "status": "draft"
+    },
+    {
+     "code": "AGRI.G8.HYGIEN.CLEANING_THE_KITCHEN.KITCHEN_CLEAN.M_AG8_KC_WASTE",
+     "skill": "AGRI.G8.HYGIEN.CLEANING_THE_KITCHEN.KITCHEN_CLEAN",
+     "error": "Leaves waste in the kitchen.",
+     "example": {
+      "question": "What should be done with kitchen waste?",
+      "wrong_answer": "Left under the table",
+      "correct_answer": "Disposed of properly"
+     },
+     "cause": "The child mixes up two rules that are taught close together.",
+     "reveals": "Offer \"Left under the table\" next to the right answer and ask the question again in a new situation.",
+     "help": "Dispose of waste properly.",
+     "feedback": "Dispose of waste properly.",
+     "source": "To confirm by an Agriculture teacher: a common classroom error, not traced to a study by the author.",
+     "status": "draft"
+    }
+   ],
    "rubric_indicators": [
     "AGRI.G8.RUBRIC.3.1",
     "AGRI.G8.RUBRIC.3.2",
@@ -633,8 +1436,78 @@
      "status": "kicd_verified"
     }
    ],
-   "skills": [],
-   "misconceptions": [],
+   "skills": [
+    {
+     "code": "AGRI.G8.PRODUC.SEWING_SKILLS_CONSTRUCTI.SEAMS",
+     "name": "Name seams used in making household items",
+     "outcomes": [
+      "AGRI.G8.PRODUC.SEWING_SKILLS_CONSTRUCTI.a"
+     ],
+     "mastery": "The child says a plain seam joins two pieces with a row of stitching, a French seam encloses the raw edges so they do not fray, and that seams are used for pillow cases, curtains and table cloths. Evidence rule: at least four of the last five fresh questions right across at least two question forms, and no repeated pick of the same misconception.",
+     "question_forms": [
+      "pick the right answer",
+      "pick the right answer in a short story",
+      "find the false step in a learner's reason"
+     ],
+     "thinking": [
+      "recall",
+      "reasoning"
+     ],
+     "horeb_skill_ids": [],
+     "prerequisites": [],
+     "status": "proposed"
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "AGRI.G8.PRODUC.SEWING_SKILLS_CONSTRUCTI.SEAMS.M_AG8_SM_PLAIN",
+     "skill": "AGRI.G8.PRODUC.SEWING_SKILLS_CONSTRUCTI.SEAMS",
+     "error": "Gives the wrong description of a plain seam.",
+     "example": {
+      "question": "What is a plain seam?",
+      "wrong_answer": "Two edges glued",
+      "correct_answer": "Two pieces joined with a row of stitches"
+     },
+     "cause": "The child mixes up two rules that are taught close together.",
+     "reveals": "Offer \"Two edges glued\" next to the right answer and ask the question again in a new situation.",
+     "help": "A plain seam is one row of stitches.",
+     "feedback": "A plain seam is one row of stitches.",
+     "source": "To confirm by an Agriculture teacher: a common classroom error, not traced to a study by the author.",
+     "status": "draft"
+    },
+    {
+     "code": "AGRI.G8.PRODUC.SEWING_SKILLS_CONSTRUCTI.SEAMS.M_AG8_SM_FRENCH",
+     "skill": "AGRI.G8.PRODUC.SEWING_SKILLS_CONSTRUCTI.SEAMS",
+     "error": "Says a French seam leaves raw edges.",
+     "example": {
+      "question": "What does a French seam do?",
+      "wrong_answer": "Leaves raw edges showing",
+      "correct_answer": "Encloses the raw edges"
+     },
+     "cause": "The child mixes up two rules that are taught close together.",
+     "reveals": "Offer \"Leaves raw edges showing\" next to the right answer and ask the question again in a new situation.",
+     "help": "A French seam encloses raw edges.",
+     "feedback": "A French seam encloses raw edges.",
+     "source": "To confirm by an Agriculture teacher: a common classroom error, not traced to a study by the author.",
+     "status": "draft"
+    },
+    {
+     "code": "AGRI.G8.PRODUC.SEWING_SKILLS_CONSTRUCTI.SEAMS.M_AG8_SM_USE",
+     "skill": "AGRI.G8.PRODUC.SEWING_SKILLS_CONSTRUCTI.SEAMS",
+     "error": "Gives seams a wrong use.",
+     "example": {
+      "question": "Where are seams used?",
+      "wrong_answer": "Only in walls",
+      "correct_answer": "In pillow cases and curtains"
+     },
+     "cause": "The child mixes up two rules that are taught close together.",
+     "reveals": "Offer \"Only in walls\" next to the right answer and ask the question again in a new situation.",
+     "help": "Seams join cloth items.",
+     "feedback": "Seams join cloth items.",
+     "source": "To confirm by an Agriculture teacher: a common classroom error, not traced to a study by the author.",
+     "status": "draft"
+    }
+   ],
    "rubric_indicators": [
     "AGRI.G8.RUBRIC.4.1",
     "AGRI.G8.RUBRIC.4.2",
@@ -692,8 +1565,78 @@
      "status": "kicd_verified"
     }
    ],
-   "skills": [],
-   "misconceptions": [],
+   "skills": [
+    {
+     "code": "AGRI.G8.PRODUC.CONSTRUCTING_INNOVATIVE_.WATERERS",
+     "name": "Explain the challenges of animal waterers and how an innovative one helps",
+     "outcomes": [
+      "AGRI.G8.PRODUC.CONSTRUCTING_INNOVATIVE_.a"
+     ],
+     "mastery": "The child says open troughs get dirty, spill and lose water, and that a waterer made from a bottle or jerrican that lets out only a little water keeps it clean and saves water. Evidence rule: at least four of the last five fresh questions right across at least two question forms, and no repeated pick of the same misconception.",
+     "question_forms": [
+      "pick the right answer",
+      "pick the right answer in a short story",
+      "find the false step in a learner's reason"
+     ],
+     "thinking": [
+      "recall",
+      "reasoning"
+     ],
+     "horeb_skill_ids": [],
+     "prerequisites": [],
+     "status": "proposed"
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "AGRI.G8.PRODUC.CONSTRUCTING_INNOVATIVE_.WATERERS.M_AG8_WA_OPEN",
+     "skill": "AGRI.G8.PRODUC.CONSTRUCTING_INNOVATIVE_.WATERERS",
+     "error": "Thinks open troughs stay clean.",
+     "example": {
+      "question": "What is a problem of open troughs?",
+      "wrong_answer": "They stay perfectly clean",
+      "correct_answer": "They get dirty and spill"
+     },
+     "cause": "The child mixes up two rules that are taught close together.",
+     "reveals": "Offer \"They stay perfectly clean\" next to the right answer and ask the question again in a new situation.",
+     "help": "Open troughs get dirty and spill.",
+     "feedback": "Open troughs get dirty and spill.",
+     "source": "To confirm by an Agriculture teacher: a common classroom error, not traced to a study by the author.",
+     "status": "draft"
+    },
+    {
+     "code": "AGRI.G8.PRODUC.CONSTRUCTING_INNOVATIVE_.WATERERS.M_AG8_WA_SAVE",
+     "skill": "AGRI.G8.PRODUC.CONSTRUCTING_INNOVATIVE_.WATERERS",
+     "error": "Thinks innovation wastes water.",
+     "example": {
+      "question": "How does an innovative waterer help?",
+      "wrong_answer": "It wastes water",
+      "correct_answer": "It saves water"
+     },
+     "cause": "The child mixes up two rules that are taught close together.",
+     "reveals": "Offer \"It wastes water\" next to the right answer and ask the question again in a new situation.",
+     "help": "It saves water.",
+     "feedback": "It saves water.",
+     "source": "To confirm by an Agriculture teacher: a common classroom error, not traced to a study by the author.",
+     "status": "draft"
+    },
+    {
+     "code": "AGRI.G8.PRODUC.CONSTRUCTING_INNOVATIVE_.WATERERS.M_AG8_WA_MATERIAL",
+     "skill": "AGRI.G8.PRODUC.CONSTRUCTING_INNOVATIVE_.WATERERS",
+     "error": "Names an unsuitable material.",
+     "example": {
+      "question": "Which can make a simple waterer?",
+      "wrong_answer": "A heavy stone",
+      "correct_answer": "A clean plastic bottle"
+     },
+     "cause": "The child mixes up two rules that are taught close together.",
+     "reveals": "Offer \"A heavy stone\" next to the right answer and ask the question again in a new situation.",
+     "help": "A clean bottle can be used.",
+     "feedback": "A clean bottle can be used.",
+     "source": "To confirm by an Agriculture teacher: a common classroom error, not traced to a study by the author.",
+     "status": "draft"
+    }
+   ],
    "rubric_indicators": [
     "AGRI.G8.RUBRIC.4.1",
     "AGRI.G8.RUBRIC.4.2",
@@ -750,8 +1693,78 @@
      "status": "kicd_verified"
     }
    ],
-   "skills": [],
-   "misconceptions": [],
+   "skills": [
+    {
+     "code": "AGRI.G8.PRODUC.ICT_SUPPORT_SERVICES.ICT_SERVICES",
+     "name": "Describe support services reached through ICT",
+     "outcomes": [
+      "AGRI.G8.PRODUC.ICT_SUPPORT_SERVICES.a"
+     ],
+     "mastery": "The child names eCitizen, M-Pesa, online lessons, farm advice and weather SMS as services reached through a phone or computer, and says they are used safely with a trusted adult. Evidence rule: at least four of the last five fresh questions right across at least two question forms, and no repeated pick of the same misconception.",
+     "question_forms": [
+      "pick the right answer",
+      "pick the right answer in a short story",
+      "find the false step in a learner's reason"
+     ],
+     "thinking": [
+      "recall",
+      "reasoning"
+     ],
+     "horeb_skill_ids": [],
+     "prerequisites": [],
+     "status": "proposed"
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "AGRI.G8.PRODUC.ICT_SUPPORT_SERVICES.ICT_SERVICES.M_AG8_IS_SERVICE",
+     "skill": "AGRI.G8.PRODUC.ICT_SUPPORT_SERVICES.ICT_SERVICES",
+     "error": "Names a non-ICT service.",
+     "example": {
+      "question": "Which service is reached through ICT?",
+      "wrong_answer": "A bus ride",
+      "correct_answer": "eCitizen"
+     },
+     "cause": "The child mixes up two rules that are taught close together.",
+     "reveals": "Offer \"A bus ride\" next to the right answer and ask the question again in a new situation.",
+     "help": "eCitizen is an ICT service.",
+     "feedback": "eCitizen is an ICT service.",
+     "source": "To confirm by an Agriculture teacher: a common classroom error, not traced to a study by the author.",
+     "status": "draft"
+    },
+    {
+     "code": "AGRI.G8.PRODUC.ICT_SUPPORT_SERVICES.ICT_SERVICES.M_AG8_IS_WEATHER",
+     "skill": "AGRI.G8.PRODUC.ICT_SUPPORT_SERVICES.ICT_SERVICES",
+     "error": "Thinks weather SMS is useless to farmers.",
+     "example": {
+      "question": "How can a weather SMS help a farmer?",
+      "wrong_answer": "It cannot help",
+      "correct_answer": "It tells when rain is likely"
+     },
+     "cause": "The child mixes up two rules that are taught close together.",
+     "reveals": "Offer \"It cannot help\" next to the right answer and ask the question again in a new situation.",
+     "help": "It helps plan farm work.",
+     "feedback": "It helps plan farm work.",
+     "source": "To confirm by an Agriculture teacher: a common classroom error, not traced to a study by the author.",
+     "status": "draft"
+    },
+    {
+     "code": "AGRI.G8.PRODUC.ICT_SUPPORT_SERVICES.ICT_SERVICES.M_AG8_IS_SAFE",
+     "skill": "AGRI.G8.PRODUC.ICT_SUPPORT_SERVICES.ICT_SERVICES",
+     "error": "Shares passwords.",
+     "example": {
+      "question": "What should you do with your password?",
+      "wrong_answer": "Share it",
+      "correct_answer": "Keep it private"
+     },
+     "cause": "The child mixes up two rules that are taught close together.",
+     "reveals": "Offer \"Share it\" next to the right answer and ask the question again in a new situation.",
+     "help": "Keep passwords private.",
+     "feedback": "Keep passwords private.",
+     "source": "To confirm by an Agriculture teacher: a common classroom error, not traced to a study by the author.",
+     "status": "draft"
+    }
+   ],
    "rubric_indicators": [
     "AGRI.G8.RUBRIC.4.1",
     "AGRI.G8.RUBRIC.4.2",

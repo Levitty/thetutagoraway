@@ -1,0 +1,159 @@
+{
+ "outcomes": {
+  "AGRI.G8.CONSER.SOIL_CONSERVATION_MEASUR.a": "describe methods of soil conservation in agricultural environment",
+  "AGRI.G8.CONSER.SOIL_CONSERVATION_MEASUR.b": "carry out soil conservation activities in the environment",
+  "AGRI.G8.CONSER.SOIL_CONSERVATION_MEASUR.c": "demonstrate caring attitude towards soil in the environment",
+  "AGRI.G8.CONSER.WATER_HARVESTING_AND_STO.a": "discuss ways of storing harvested water for domestic use",
+  "AGRI.G8.CONSER.WATER_HARVESTING_AND_STO.b": "take part in harvesting and storing water in the school for domestic use",
+  "AGRI.G8.CONSER.WATER_HARVESTING_AND_STO.c": "show responsibility in harvesting and storing water for domestic use",
+  "AGRI.G8.FOOD_P.KITCHEN_AND_BACKYARD_GAR.a": "explain the role of kitchen and backyard garden in food production",
+  "AGRI.G8.FOOD_P.KITCHEN_AND_BACKYARD_GAR.b": "establish a kitchen and backyard garden for food production",
+  "AGRI.G8.FOOD_P.KITCHEN_AND_BACKYARD_GAR.c": "adopt the use of kitchen and backyard garden for food production",
+  "AGRI.G8.FOOD_P.POULTRY_REARING_IN_A_FOL.a": "describe a fold in poultry rearing",
+  "AGRI.G8.FOOD_P.POULTRY_REARING_IN_A_FOL.b": "construct a fold for rearing poultry",
+  "AGRI.G8.FOOD_P.POULTRY_REARING_IN_A_FOL.c": "rear poultry in a fold",
+  "AGRI.G8.FOOD_P.POULTRY_REARING_IN_A_FOL.d": "show responsibility in rearing of poultry",
+  "AGRI.G8.FOOD_P.CROP_PEST_AND_DISEASE_CO.a": "identify vegetable crops attacked by pests and diseases",
+  "AGRI.G8.FOOD_P.CROP_PEST_AND_DISEASE_CO.b": "control pests and diseases on vegetable crops",
+  "AGRI.G8.FOOD_P.CROP_PEST_AND_DISEASE_CO.c": "acknowledge importance of controlling pests and diseases in vegetable production",
+  "AGRI.G8.FOOD_P.PREPARATION_OF_ANIMAL_PR.a": "explain the importance of processing fish and dressing poultry carcass",
+  "AGRI.G8.FOOD_P.PREPARATION_OF_ANIMAL_PR.b": "process fresh fish for various purposes",
+  "AGRI.G8.FOOD_P.PREPARATION_OF_ANIMAL_PR.c": "dress poultry carcass for various purposes",
+  "AGRI.G8.FOOD_P.PREPARATION_OF_ANIMAL_PR.d": "uphold ethical and safety practices in preparation of animal products",
+  "AGRI.G8.FOOD_P.PRESERVING_ANIMAL_PRODUC.a": "explain the importance of preserving milk and meat at household level",
+  "AGRI.G8.FOOD_P.PRESERVING_ANIMAL_PRODUC.b": "preserve meat to prolong shelf life at household level",
+  "AGRI.G8.FOOD_P.PRESERVING_ANIMAL_PRODUC.c": "preserve milk to prolong shelf life at household level",
+  "AGRI.G8.FOOD_P.PRESERVING_ANIMAL_PRODUC.d": "embrace the use of various methods to preserve animal products at household level",
+  "AGRI.G8.FOOD_P.COOKING_PREPARING_A_BALA.a": "explain factors to consider in preparing a balanced meal",
+  "AGRI.G8.FOOD_P.COOKING_PREPARING_A_BALA.b": "prepare a balanced meal for healthy living",
+  "AGRI.G8.FOOD_P.COOKING_PREPARING_A_BALA.c": "use various styles to present the meal",
+  "AGRI.G8.FOOD_P.COOKING_PREPARING_A_BALA.d": "adopt the use of a balanced meal in the day to day life",
+  "AGRI.G8.HYGIEN.CLEANING_THE_KITCHEN.a": "explain the routine cleaning practices of a kitchen",
+  "AGRI.G8.HYGIEN.CLEANING_THE_KITCHEN.b": "carry out cleaning of a kitchen to maintain hygiene",
+  "AGRI.G8.HYGIEN.CLEANING_THE_KITCHEN.c": "appreciate the importance of a clean kitchen for healthy living",
+  "AGRI.G8.PRODUC.SEWING_SKILLS_CONSTRUCTI.a": "identify types of seams used in making household items",
+  "AGRI.G8.PRODUC.SEWING_SKILLS_CONSTRUCTI.b": "make samples of seams on a piece of cloth",
+  "AGRI.G8.PRODUC.SEWING_SKILLS_CONSTRUCTI.c": "construct a household item using seams",
+  "AGRI.G8.PRODUC.SEWING_SKILLS_CONSTRUCTI.d": "appreciate the use of seam in making household items",
+  "AGRI.G8.PRODUC.CONSTRUCTING_INNOVATIVE_.a": "explain challenges with animal waterers used in the community",
+  "AGRI.G8.PRODUC.CONSTRUCTING_INNOVATIVE_.b": "design and construct an innovative waterer for water conservation",
+  "AGRI.G8.PRODUC.CONSTRUCTING_INNOVATIVE_.c": "appreciate use of innovative waterers in animal rearing",
+  "AGRI.G8.PRODUC.ICT_SUPPORT_SERVICES.a": "describe support services that can be accessed through use of ICT",
+  "AGRI.G8.PRODUC.ICT_SUPPORT_SERVICES.b": "access support services using ICT",
+  "AGRI.G8.PRODUC.ICT_SUPPORT_SERVICES.c": "show responsibility in use of ICT in accessing support services"
+ },
+ "skills": {
+  "AGRI.G8.CONSER.SOIL_CONSERVATION_MEASUR.SOIL_CONSERVE": {
+   "forms": [
+    "pick the right answer",
+    "pick the right answer in a short story",
+    "find the false step in a learner's reason"
+   ],
+   "mastery": "The child names terracing (steps on a slope), contour farming, mulching, cover crops, planting trees and strip cropping, and says they slow water and wind so soil is not carried away. Evidence rule: at least four of the last five fresh questions right across at least two question forms, and no repeated pick of the same misconception."
+  },
+  "AGRI.G8.CONSER.WATER_HARVESTING_AND_STO.WATER_STORE": {
+   "forms": [
+    "pick the right answer",
+    "pick the right answer in a short story",
+    "find the false step in a learner's reason"
+   ],
+   "mastery": "The child says harvested water is stored in clean covered tanks, drums and jerricans so it stays free of dirt and mosquitoes, and is treated by boiling or a purifier before drinking. Evidence rule: at least four of the last five fresh questions right across at least two question forms, and no repeated pick of the same misconception."
+  },
+  "AGRI.G8.FOOD_P.KITCHEN_AND_BACKYARD_GAR.KITCHEN_GARDEN": {
+   "forms": [
+    "pick the right answer",
+    "pick the right answer in a short story",
+    "find the false step in a learner's reason"
+   ],
+   "mastery": "The child says a kitchen garden near the house gives fresh vegetables and herbs, saves money, uses little space and waste water, and grows crops such as sukuma wiki, spinach, onions and tomatoes. Evidence rule: at least four of the last five fresh questions right across at least two question forms, and no repeated pick of the same misconception."
+  },
+  "AGRI.G8.FOOD_P.POULTRY_REARING_IN_A_FOL.POULTRY_FOLD": {
+   "forms": [
+    "pick the right answer",
+    "pick the right answer in a short story",
+    "find the false step in a learner's reason"
+   ],
+   "mastery": "The child says a fold is a light movable pen that is moved to fresh ground, protects birds from predators and rain, spreads manure and keeps the birds clean. Evidence rule: at least four of the last five fresh questions right across at least two question forms, and no repeated pick of the same misconception."
+  },
+  "AGRI.G8.FOOD_P.CROP_PEST_AND_DISEASE_CO.PEST_DISEASE": {
+   "forms": [
+    "pick the right answer",
+    "pick the right answer in a short story",
+    "find the false step in a learner's reason"
+   ],
+   "mastery": "The child names aphids, cutworms and caterpillars as pests and blight, wilt and damping off as diseases of vegetables, and names controls (hand-picking, crop rotation, clean tools and spacing). Evidence rule: at least four of the last five fresh questions right across at least two question forms, and no repeated pick of the same misconception."
+  },
+  "AGRI.G8.FOOD_P.PREPARATION_OF_ANIMAL_PR.FISH_PROCESS": {
+   "forms": [
+    "pick the right answer",
+    "pick the right answer in a short story",
+    "find the false step in a learner's reason"
+   ],
+   "mastery": "The child says fish is scaled, gutted, washed and then dried, salted, smoked or fried so it lasts longer, and that clean hands, tools and water keep it safe; knives are used only with a teacher. Evidence rule: at least four of the last five fresh questions right across at least two question forms, and no repeated pick of the same misconception."
+  },
+  "AGRI.G8.FOOD_P.PREPARATION_OF_ANIMAL_PR.POULTRY_DRESS": {
+   "forms": [
+    "pick the right answer",
+    "pick the right answer in a short story",
+    "find the false step in a learner's reason"
+   ],
+   "mastery": "The child says dressing is done after slaughter and bleeding, then scalding, plucking, removing the insides and washing and chilling the carcass, to give clean meat; it is done only with a teacher and kindly. Evidence rule: at least four of the last five fresh questions right across at least two question forms, and no repeated pick of the same misconception."
+  },
+  "AGRI.G8.FOOD_P.PRESERVING_ANIMAL_PRODUC.MILK_PRESERVE": {
+   "forms": [
+    "pick the right answer",
+    "pick the right answer in a short story",
+    "find the false step in a learner's reason"
+   ],
+   "mastery": "The child says fresh milk is kept longer by boiling, cooling, fermenting (such as into yoghurt or mursik) or drying, and that clean containers and cool storage help. Evidence rule: at least four of the last five fresh questions right across at least two question forms, and no repeated pick of the same misconception."
+  },
+  "AGRI.G8.FOOD_P.PRESERVING_ANIMAL_PRODUC.MEAT_PRESERVE": {
+   "forms": [
+    "pick the right answer",
+    "pick the right answer in a short story",
+    "find the false step in a learner's reason"
+   ],
+   "mastery": "The child says meat is kept longer by drying, salting, smoking and freezing, which slow or stop germs, and that raw meat must be kept cold and covered. Evidence rule: at least four of the last five fresh questions right across at least two question forms, and no repeated pick of the same misconception."
+  },
+  "AGRI.G8.FOOD_P.COOKING_PREPARING_A_BALA.BALANCED_MEAL": {
+   "forms": [
+    "pick the right answer",
+    "pick the right answer in a short story",
+    "find the false step in a learner's reason"
+   ],
+   "mastery": "The child says a balanced meal has energy foods (ugali, rice), body-building foods (beans, fish, meat), protective foods (vegetables, fruits) and water, and the cost, age, health and the foods in season are considered. Evidence rule: at least four of the last five fresh questions right across at least two question forms, and no repeated pick of the same misconception."
+  },
+  "AGRI.G8.HYGIEN.CLEANING_THE_KITCHEN.KITCHEN_CLEAN": {
+   "forms": [
+    "pick the right answer",
+    "pick the right answer in a short story",
+    "find the false step in a learner's reason"
+   ],
+   "mastery": "The child names washing dishes, wiping surfaces, sweeping, disposing of waste and cleaning the sink every day, and cleaning the cooker and shelves each week, and keeping raw meat apart from vegetables. Evidence rule: at least four of the last five fresh questions right across at least two question forms, and no repeated pick of the same misconception."
+  },
+  "AGRI.G8.PRODUC.SEWING_SKILLS_CONSTRUCTI.SEAMS": {
+   "forms": [
+    "pick the right answer",
+    "pick the right answer in a short story",
+    "find the false step in a learner's reason"
+   ],
+   "mastery": "The child says a plain seam joins two pieces with a row of stitching, a French seam encloses the raw edges so they do not fray, and that seams are used for pillow cases, curtains and table cloths. Evidence rule: at least four of the last five fresh questions right across at least two question forms, and no repeated pick of the same misconception."
+  },
+  "AGRI.G8.PRODUC.CONSTRUCTING_INNOVATIVE_.WATERERS": {
+   "forms": [
+    "pick the right answer",
+    "pick the right answer in a short story",
+    "find the false step in a learner's reason"
+   ],
+   "mastery": "The child says open troughs get dirty, spill and lose water, and that a waterer made from a bottle or jerrican that lets out only a little water keeps it clean and saves water. Evidence rule: at least four of the last five fresh questions right across at least two question forms, and no repeated pick of the same misconception."
+  },
+  "AGRI.G8.PRODUC.ICT_SUPPORT_SERVICES.ICT_SERVICES": {
+   "forms": [
+    "pick the right answer",
+    "pick the right answer in a short story",
+    "find the false step in a learner's reason"
+   ],
+   "mastery": "The child names eCitizen, M-Pesa, online lessons, farm advice and weather SMS as services reached through a phone or computer, and says they are used safely with a trusted adult. Evidence rule: at least four of the last five fresh questions right across at least two question forms, and no repeated pick of the same misconception."
+  }
+ }
+}
