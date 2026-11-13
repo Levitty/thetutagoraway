@@ -3,15 +3,15 @@
  "subject_key": "english",
  "grade": 9,
  "source": "KICD English Language, First published in 2024 (text layer)",
- "status": "outcomes from KICD's text, word for word; skills, prerequisites and misconceptions not yet mapped",
+ "status": "outcomes from KICD's text, word for word; skills, prerequisites and misconceptions proposed (authored offline, 13 Nov 2026), awaiting a Kenyan English teacher's review",
  "totals": {
   "strands": 5,
   "sub_strands": 75,
   "outcomes": 251,
   "lessons": 146,
-  "skills": 0,
-  "prerequisites": 0,
-  "misconceptions": 0
+  "skills": 22,
+  "prerequisites": 1,
+  "misconceptions": 66
  },
  "sub_strands": [
   {
@@ -225,8 +225,79 @@
      "status": "kicd_verified"
     }
    ],
-   "skills": [],
-   "misconceptions": [],
+   "skills": [
+    {
+     "code": "ENGL.G9.GRAMMA.T1_GENDER_NEUTRAL_LANGU.GENDER_NEUTRAL",
+     "name": "Replace gender-biased words with gender-neutral ones",
+     "outcomes": [
+      "ENGL.G9.GRAMMA.T1_GENDER_NEUTRAL_LANGU.a",
+      "ENGL.G9.GRAMMA.T1_GENDER_NEUTRAL_LANGU.b"
+     ],
+     "mastery": "The child spots gender-biased words (chairman, policeman, fireman, waitress, mankind) and picks neutral ones (chairperson, police officer, firefighter, server, humankind), and says a job word should not assume the sex of the worker. Evidence rule: at least four of the last five fresh questions right across at least two question forms, and no repeated pick of the same misconception.",
+     "question_forms": [
+      "pick the right answer",
+      "pick the right answer in a short story",
+      "find the false step in a learner's reason"
+     ],
+     "thinking": [
+      "recall",
+      "reasoning"
+     ],
+     "horeb_skill_ids": [],
+     "prerequisites": [],
+     "status": "proposed"
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "ENGL.G9.GRAMMA.T1_GENDER_NEUTRAL_LANGU.GENDER_NEUTRAL.M_EN9_GN_CHAIRMAN",
+     "skill": "ENGL.G9.GRAMMA.T1_GENDER_NEUTRAL_LANGU.GENDER_NEUTRAL",
+     "error": "Keeps chairman for any chair.",
+     "example": {
+      "question": "Which is gender-neutral?",
+      "wrong_answer": "chairman",
+      "correct_answer": "chairperson"
+     },
+     "cause": "The child mixes up two rules that are taught close together.",
+     "reveals": "Offer \"chairman\" next to the right answer and ask the question again in a new situation.",
+     "help": "Chairperson does not assume the sex of the chair.",
+     "feedback": "Chairperson does not assume the sex of the chair.",
+     "source": "To confirm by a Kenyan English teacher: a common classroom error, not traced to a study by the author.",
+     "status": "draft"
+    },
+    {
+     "code": "ENGL.G9.GRAMMA.T1_GENDER_NEUTRAL_LANGU.GENDER_NEUTRAL.M_EN9_GN_POLICE",
+     "skill": "ENGL.G9.GRAMMA.T1_GENDER_NEUTRAL_LANGU.GENDER_NEUTRAL",
+     "error": "Keeps policeman for any officer.",
+     "example": {
+      "question": "Which is gender-neutral?",
+      "wrong_answer": "policeman",
+      "correct_answer": "police officer"
+     },
+     "cause": "The child mixes up two rules that are taught close together.",
+     "reveals": "Offer \"policeman\" next to the right answer and ask the question again in a new situation.",
+     "help": "Police officer fits a man or a woman.",
+     "feedback": "Police officer fits a man or a woman.",
+     "source": "To confirm by a Kenyan English teacher: a common classroom error, not traced to a study by the author.",
+     "status": "draft"
+    },
+    {
+     "code": "ENGL.G9.GRAMMA.T1_GENDER_NEUTRAL_LANGU.GENDER_NEUTRAL.M_EN9_GN_MANKIND",
+     "skill": "ENGL.G9.GRAMMA.T1_GENDER_NEUTRAL_LANGU.GENDER_NEUTRAL",
+     "error": "Keeps mankind.",
+     "example": {
+      "question": "Which is gender-neutral?",
+      "wrong_answer": "mankind",
+      "correct_answer": "humankind"
+     },
+     "cause": "The child mixes up two rules that are taught close together.",
+     "reveals": "Offer \"mankind\" next to the right answer and ask the question again in a new situation.",
+     "help": "Humankind includes everyone.",
+     "feedback": "Humankind includes everyone.",
+     "source": "To confirm by a Kenyan English teacher: a common classroom error, not traced to a study by the author.",
+     "status": "draft"
+    }
+   ],
    "rubric_indicators": [
     "ENGL.G9.RUBRIC.3.1",
     "ENGL.G9.RUBRIC.3.2",
@@ -574,8 +645,79 @@
      "status": "kicd_verified"
     }
    ],
-   "skills": [],
-   "misconceptions": [],
+   "skills": [
+    {
+     "code": "ENGL.G9.GRAMMA.T2_NOUNS_AND_QUANTIFIER.QUANTIFIERS",
+     "name": "Use quantifiers with count and non-count nouns",
+     "outcomes": [
+      "ENGL.G9.GRAMMA.T2_NOUNS_AND_QUANTIFIER.a",
+      "ENGL.G9.GRAMMA.T2_NOUNS_AND_QUANTIFIER.b"
+     ],
+     "mastery": "The child uses many, few and a number of with count nouns, much and little with non-count nouns, and some, a lot of and plenty of with both; he sorts nouns (books, chairs: count; water, advice: non-count). Evidence rule: at least four of the last five fresh questions right across at least two question forms, and no repeated pick of the same misconception.",
+     "question_forms": [
+      "pick the right answer",
+      "pick the right answer in a short story",
+      "find the false step in a learner's reason"
+     ],
+     "thinking": [
+      "recall",
+      "reasoning"
+     ],
+     "horeb_skill_ids": [],
+     "prerequisites": [],
+     "status": "proposed"
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "ENGL.G9.GRAMMA.T2_NOUNS_AND_QUANTIFIER.QUANTIFIERS.M_EN9_QT_MUCH",
+     "skill": "ENGL.G9.GRAMMA.T2_NOUNS_AND_QUANTIFIER.QUANTIFIERS",
+     "error": "Uses much with count nouns.",
+     "example": {
+      "question": "Which is correct: ___ chairs?",
+      "wrong_answer": "much",
+      "correct_answer": "many"
+     },
+     "cause": "The child mixes up two rules that are taught close together.",
+     "reveals": "Offer \"much\" next to the right answer and ask the question again in a new situation.",
+     "help": "Use many with count nouns such as chairs.",
+     "feedback": "Use many with count nouns such as chairs.",
+     "source": "To confirm by a Kenyan English teacher: a common classroom error, not traced to a study by the author.",
+     "status": "draft"
+    },
+    {
+     "code": "ENGL.G9.GRAMMA.T2_NOUNS_AND_QUANTIFIER.QUANTIFIERS.M_EN9_QT_MANY",
+     "skill": "ENGL.G9.GRAMMA.T2_NOUNS_AND_QUANTIFIER.QUANTIFIERS",
+     "error": "Uses many with non-count nouns.",
+     "example": {
+      "question": "Which is correct: ___ water?",
+      "wrong_answer": "many",
+      "correct_answer": "much"
+     },
+     "cause": "The child mixes up two rules that are taught close together.",
+     "reveals": "Offer \"many\" next to the right answer and ask the question again in a new situation.",
+     "help": "Use much with non-count nouns such as water.",
+     "feedback": "Use much with non-count nouns such as water.",
+     "source": "To confirm by a Kenyan English teacher: a common classroom error, not traced to a study by the author.",
+     "status": "draft"
+    },
+    {
+     "code": "ENGL.G9.GRAMMA.T2_NOUNS_AND_QUANTIFIER.QUANTIFIERS.M_EN9_QT_FEW",
+     "skill": "ENGL.G9.GRAMMA.T2_NOUNS_AND_QUANTIFIER.QUANTIFIERS",
+     "error": "Mixes few and little.",
+     "example": {
+      "question": "Which is correct: a ___ of milk?",
+      "wrong_answer": "few",
+      "correct_answer": "little"
+     },
+     "cause": "The child mixes up two rules that are taught close together.",
+     "reveals": "Offer \"few\" next to the right answer and ask the question again in a new situation.",
+     "help": "Use little with non-count nouns such as milk.",
+     "feedback": "Use little with non-count nouns such as milk.",
+     "source": "To confirm by a Kenyan English teacher: a common classroom error, not traced to a study by the author.",
+     "status": "draft"
+    }
+   ],
    "rubric_indicators": [
     "ENGL.G9.RUBRIC.3.1",
     "ENGL.G9.RUBRIC.3.2",
@@ -703,8 +845,79 @@
      "status": "kicd_verified"
     }
    ],
-   "skills": [],
-   "misconceptions": [],
+   "skills": [
+    {
+     "code": "ENGL.G9.WRITIN.T2_MECHANICS_OF_WRITING.QUOTES_BRACKETS",
+     "name": "Use double quotation marks and brackets",
+     "outcomes": [
+      "ENGL.G9.WRITIN.T2_MECHANICS_OF_WRITING.a",
+      "ENGL.G9.WRITIN.T2_MECHANICS_OF_WRITING.b"
+     ],
+     "mastery": "The child puts the exact words spoken inside double quotation marks, and puts extra information or an explanation inside brackets, and does not use brackets for speech. Evidence rule: at least four of the last five fresh questions right across at least two question forms, and no repeated pick of the same misconception.",
+     "question_forms": [
+      "pick the right answer",
+      "pick the right answer in a short story",
+      "find the false step in a learner's reason"
+     ],
+     "thinking": [
+      "recall",
+      "reasoning"
+     ],
+     "horeb_skill_ids": [],
+     "prerequisites": [],
+     "status": "proposed"
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "ENGL.G9.WRITIN.T2_MECHANICS_OF_WRITING.QUOTES_BRACKETS.M_EN9_QB_BRACKET",
+     "skill": "ENGL.G9.WRITIN.T2_MECHANICS_OF_WRITING.QUOTES_BRACKETS",
+     "error": "Uses brackets for speech.",
+     "example": {
+      "question": "What goes in double quotation marks?",
+      "wrong_answer": "Extra explanations",
+      "correct_answer": "The exact words spoken"
+     },
+     "cause": "The child mixes up two rules that are taught close together.",
+     "reveals": "Offer \"Extra explanations\" next to the right answer and ask the question again in a new situation.",
+     "help": "Quotation marks hold the exact words spoken.",
+     "feedback": "Quotation marks hold the exact words spoken.",
+     "source": "To confirm by a Kenyan English teacher: a common classroom error, not traced to a study by the author.",
+     "status": "draft"
+    },
+    {
+     "code": "ENGL.G9.WRITIN.T2_MECHANICS_OF_WRITING.QUOTES_BRACKETS.M_EN9_QB_EXTRA",
+     "skill": "ENGL.G9.WRITIN.T2_MECHANICS_OF_WRITING.QUOTES_BRACKETS",
+     "error": "Uses quotation marks for extra information.",
+     "example": {
+      "question": "What goes in brackets?",
+      "wrong_answer": "The exact words spoken",
+      "correct_answer": "Extra information"
+     },
+     "cause": "The child mixes up two rules that are taught close together.",
+     "reveals": "Offer \"The exact words spoken\" next to the right answer and ask the question again in a new situation.",
+     "help": "Brackets hold extra information.",
+     "feedback": "Brackets hold extra information.",
+     "source": "To confirm by a Kenyan English teacher: a common classroom error, not traced to a study by the author.",
+     "status": "draft"
+    },
+    {
+     "code": "ENGL.G9.WRITIN.T2_MECHANICS_OF_WRITING.QUOTES_BRACKETS.M_EN9_QB_END",
+     "skill": "ENGL.G9.WRITIN.T2_MECHANICS_OF_WRITING.QUOTES_BRACKETS",
+     "error": "Puts the full stop outside the speech.",
+     "example": {
+      "question": "Which is punctuated correctly?",
+      "wrong_answer": "She said, \"I am ready\".",
+      "correct_answer": "She said, \"I am ready.\""
+     },
+     "cause": "The child mixes up two rules that are taught close together.",
+     "reveals": "Offer \"She said, \"I am ready\".\" next to the right answer and ask the question again in a new situation.",
+     "help": "The full stop goes inside the closing quotation marks.",
+     "feedback": "The full stop goes inside the closing quotation marks.",
+     "source": "To confirm by a Kenyan English teacher: a common classroom error, not traced to a study by the author.",
+     "status": "draft"
+    }
+   ],
    "rubric_indicators": [
     "ENGL.G9.RUBRIC.4.1",
     "ENGL.G9.RUBRIC.4.2",
@@ -910,8 +1123,79 @@
      "status": "kicd_verified"
     }
    ],
-   "skills": [],
-   "misconceptions": [],
+   "skills": [
+    {
+     "code": "ENGL.G9.GRAMMA.T3_MODAL_AUXILIARIES.MODALS",
+     "name": "Use modal auxiliaries to show ability, permission, possibility and duty",
+     "outcomes": [
+      "ENGL.G9.GRAMMA.T3_MODAL_AUXILIARIES.a",
+      "ENGL.G9.GRAMMA.T3_MODAL_AUXILIARIES.b"
+     ],
+     "mastery": "The child says can and could show ability, may and might permission or possibility, must and should duty or advice, and that a modal is followed by the base verb. Evidence rule: at least four of the last five fresh questions right across at least two question forms, and no repeated pick of the same misconception.",
+     "question_forms": [
+      "pick the right answer",
+      "pick the right answer in a short story",
+      "find the false step in a learner's reason"
+     ],
+     "thinking": [
+      "recall",
+      "reasoning"
+     ],
+     "horeb_skill_ids": [],
+     "prerequisites": [],
+     "status": "proposed"
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "ENGL.G9.GRAMMA.T3_MODAL_AUXILIARIES.MODALS.M_EN9_MD_ABILITY",
+     "skill": "ENGL.G9.GRAMMA.T3_MODAL_AUXILIARIES.MODALS",
+     "error": "Uses must for ability.",
+     "example": {
+      "question": "Which shows ability?",
+      "wrong_answer": "must",
+      "correct_answer": "can"
+     },
+     "cause": "The child mixes up two rules that are taught close together.",
+     "reveals": "Offer \"must\" next to the right answer and ask the question again in a new situation.",
+     "help": "Can shows ability.",
+     "feedback": "Can shows ability.",
+     "source": "To confirm by a Kenyan English teacher: a common classroom error, not traced to a study by the author.",
+     "status": "draft"
+    },
+    {
+     "code": "ENGL.G9.GRAMMA.T3_MODAL_AUXILIARIES.MODALS.M_EN9_MD_DUTY",
+     "skill": "ENGL.G9.GRAMMA.T3_MODAL_AUXILIARIES.MODALS",
+     "error": "Uses can for duty.",
+     "example": {
+      "question": "Which shows duty?",
+      "wrong_answer": "can",
+      "correct_answer": "must"
+     },
+     "cause": "The child mixes up two rules that are taught close together.",
+     "reveals": "Offer \"can\" next to the right answer and ask the question again in a new situation.",
+     "help": "Must shows duty.",
+     "feedback": "Must shows duty.",
+     "source": "To confirm by a Kenyan English teacher: a common classroom error, not traced to a study by the author.",
+     "status": "draft"
+    },
+    {
+     "code": "ENGL.G9.GRAMMA.T3_MODAL_AUXILIARIES.MODALS.M_EN9_MD_BASE",
+     "skill": "ENGL.G9.GRAMMA.T3_MODAL_AUXILIARIES.MODALS",
+     "error": "Uses a modal with to plus verb.",
+     "example": {
+      "question": "Which is correct?",
+      "wrong_answer": "She can to swim.",
+      "correct_answer": "She can swim."
+     },
+     "cause": "The child mixes up two rules that are taught close together.",
+     "reveals": "Offer \"She can to swim.\" next to the right answer and ask the question again in a new situation.",
+     "help": "A modal is followed by the base verb with no to.",
+     "feedback": "A modal is followed by the base verb with no to.",
+     "source": "To confirm by a Kenyan English teacher: a common classroom error, not traced to a study by the author.",
+     "status": "draft"
+    }
+   ],
    "rubric_indicators": [
     "ENGL.G9.RUBRIC.3.1",
     "ENGL.G9.RUBRIC.3.2",
@@ -979,8 +1263,79 @@
      "status": "kicd_verified"
     }
    ],
-   "skills": [],
-   "misconceptions": [],
+   "skills": [
+    {
+     "code": "ENGL.G9.READIN.T3_POEMS_STRUCTURE.POEM_FEATURES",
+     "name": "Describe the structure of a poem and personification",
+     "outcomes": [
+      "ENGL.G9.READIN.T3_POEMS_STRUCTURE.a",
+      "ENGL.G9.READIN.T3_POEMS_STRUCTURE.b"
+     ],
+     "mastery": "The child says a poem is made of lines grouped in stanzas, that rhyme is repeated end sounds, and that personification gives human actions or feelings to a thing, as in \"the wind whispered\". Evidence rule: at least four of the last five fresh questions right across at least two question forms, and no repeated pick of the same misconception.",
+     "question_forms": [
+      "pick the right answer",
+      "pick the right answer in a short story",
+      "find the false step in a learner's reason"
+     ],
+     "thinking": [
+      "recall",
+      "reasoning"
+     ],
+     "horeb_skill_ids": [],
+     "prerequisites": [],
+     "status": "proposed"
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "ENGL.G9.READIN.T3_POEMS_STRUCTURE.POEM_FEATURES.M_EN9_PF_STANZA",
+     "skill": "ENGL.G9.READIN.T3_POEMS_STRUCTURE.POEM_FEATURES",
+     "error": "Calls a stanza a line.",
+     "example": {
+      "question": "What is a stanza?",
+      "wrong_answer": "One line of a poem",
+      "correct_answer": "A group of lines"
+     },
+     "cause": "The child mixes up two rules that are taught close together.",
+     "reveals": "Offer \"One line of a poem\" next to the right answer and ask the question again in a new situation.",
+     "help": "A stanza is a group of lines.",
+     "feedback": "A stanza is a group of lines.",
+     "source": "To confirm by a Kenyan English teacher: a common classroom error, not traced to a study by the author.",
+     "status": "draft"
+    },
+    {
+     "code": "ENGL.G9.READIN.T3_POEMS_STRUCTURE.POEM_FEATURES.M_EN9_PF_RHYME",
+     "skill": "ENGL.G9.READIN.T3_POEMS_STRUCTURE.POEM_FEATURES",
+     "error": "Says rhyme is the same first sound.",
+     "example": {
+      "question": "What is rhyme?",
+      "wrong_answer": "Same beginning sound",
+      "correct_answer": "Repeated end sounds"
+     },
+     "cause": "The child mixes up two rules that are taught close together.",
+     "reveals": "Offer \"Same beginning sound\" next to the right answer and ask the question again in a new situation.",
+     "help": "Rhyme is repeated end sounds.",
+     "feedback": "Rhyme is repeated end sounds.",
+     "source": "To confirm by a Kenyan English teacher: a common classroom error, not traced to a study by the author.",
+     "status": "draft"
+    },
+    {
+     "code": "ENGL.G9.READIN.T3_POEMS_STRUCTURE.POEM_FEATURES.M_EN9_PF_PERSON",
+     "skill": "ENGL.G9.READIN.T3_POEMS_STRUCTURE.POEM_FEATURES",
+     "error": "Confuses personification with simile.",
+     "example": {
+      "question": "Which is personification?",
+      "wrong_answer": "as brave as a lion",
+      "correct_answer": "the wind whispered"
+     },
+     "cause": "The child mixes up two rules that are taught close together.",
+     "reveals": "Offer \"as brave as a lion\" next to the right answer and ask the question again in a new situation.",
+     "help": "Personification gives human actions to a thing.",
+     "feedback": "Personification gives human actions to a thing.",
+     "source": "To confirm by a Kenyan English teacher: a common classroom error, not traced to a study by the author.",
+     "status": "draft"
+    }
+   ],
    "rubric_indicators": [
     "ENGL.G9.RUBRIC.2.1",
     "ENGL.G9.RUBRIC.2.2",
@@ -1047,8 +1402,78 @@
      "status": "kicd_verified"
     }
    ],
-   "skills": [],
-   "misconceptions": [],
+   "skills": [
+    {
+     "code": "ENGL.G9.WRITIN.T3_STRUCTURE_OF_A_PARAG.PARAGRAPH",
+     "name": "Name the characteristics of a well-formed paragraph",
+     "outcomes": [
+      "ENGL.G9.WRITIN.T3_STRUCTURE_OF_A_PARAG.a"
+     ],
+     "mastery": "The child says a good paragraph has a topic sentence, supporting sentences, unity (one idea), coherence (ideas in order, joined by linking words) and a closing sentence. Evidence rule: at least four of the last five fresh questions right across at least two question forms, and no repeated pick of the same misconception.",
+     "question_forms": [
+      "pick the right answer",
+      "pick the right answer in a short story",
+      "find the false step in a learner's reason"
+     ],
+     "thinking": [
+      "recall",
+      "reasoning"
+     ],
+     "horeb_skill_ids": [],
+     "prerequisites": [],
+     "status": "proposed"
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "ENGL.G9.WRITIN.T3_STRUCTURE_OF_A_PARAG.PARAGRAPH.M_EN9_PA_TOPIC",
+     "skill": "ENGL.G9.WRITIN.T3_STRUCTURE_OF_A_PARAG.PARAGRAPH",
+     "error": "Puts the topic sentence anywhere.",
+     "example": {
+      "question": "Which sentence states the main idea?",
+      "wrong_answer": "The supporting sentence",
+      "correct_answer": "The topic sentence"
+     },
+     "cause": "The child mixes up two rules that are taught close together.",
+     "reveals": "Offer \"The supporting sentence\" next to the right answer and ask the question again in a new situation.",
+     "help": "The topic sentence states the main idea.",
+     "feedback": "The topic sentence states the main idea.",
+     "source": "To confirm by a Kenyan English teacher: a common classroom error, not traced to a study by the author.",
+     "status": "draft"
+    },
+    {
+     "code": "ENGL.G9.WRITIN.T3_STRUCTURE_OF_A_PARAG.PARAGRAPH.M_EN9_PA_UNITY",
+     "skill": "ENGL.G9.WRITIN.T3_STRUCTURE_OF_A_PARAG.PARAGRAPH",
+     "error": "Mixes many ideas.",
+     "example": {
+      "question": "What is unity in a paragraph?",
+      "wrong_answer": "Many different ideas",
+      "correct_answer": "One main idea"
+     },
+     "cause": "The child mixes up two rules that are taught close together.",
+     "reveals": "Offer \"Many different ideas\" next to the right answer and ask the question again in a new situation.",
+     "help": "Unity means one main idea.",
+     "feedback": "Unity means one main idea.",
+     "source": "To confirm by a Kenyan English teacher: a common classroom error, not traced to a study by the author.",
+     "status": "draft"
+    },
+    {
+     "code": "ENGL.G9.WRITIN.T3_STRUCTURE_OF_A_PARAG.PARAGRAPH.M_EN9_PA_COHERENCE",
+     "skill": "ENGL.G9.WRITIN.T3_STRUCTURE_OF_A_PARAG.PARAGRAPH",
+     "error": "Thinks coherence is length.",
+     "example": {
+      "question": "What is coherence?",
+      "wrong_answer": "A very long paragraph",
+      "correct_answer": "Ideas in order joined by linking words"
+     },
+     "cause": "The child mixes up two rules that are taught close together.",
+     "reveals": "Offer \"A very long paragraph\" next to the right answer and ask the question again in a new situation.",
+     "help": "Coherence means ideas flow in order.",
+     "feedback": "Coherence means ideas flow in order.",
+     "source": "To confirm by a Kenyan English teacher: a common classroom error, not traced to a study by the author.",
+     "status": "draft"
+    }
+   ],
    "rubric_indicators": [
     "ENGL.G9.RUBRIC.4.1",
     "ENGL.G9.RUBRIC.4.2",
@@ -1266,8 +1691,79 @@
      "status": "kicd_verified"
     }
    ],
-   "skills": [],
-   "misconceptions": [],
+   "skills": [
+    {
+     "code": "ENGL.G9.GRAMMA.T4_PRESENT_AND_PAST_PER.PERFECT",
+     "name": "Tell the present perfect from the past perfect",
+     "outcomes": [
+      "ENGL.G9.GRAMMA.T4_PRESENT_AND_PAST_PER.a",
+      "ENGL.G9.GRAMMA.T4_PRESENT_AND_PAST_PER.b"
+     ],
+     "mastery": "The child says the present perfect is have or has plus the past participle (She has finished) and the past perfect is had plus the past participle (She had finished before I came). Evidence rule: at least four of the last five fresh questions right across at least two question forms, and no repeated pick of the same misconception.",
+     "question_forms": [
+      "pick the right answer",
+      "pick the right answer in a short story",
+      "find the false step in a learner's reason"
+     ],
+     "thinking": [
+      "recall",
+      "reasoning"
+     ],
+     "horeb_skill_ids": [],
+     "prerequisites": [],
+     "status": "proposed"
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "ENGL.G9.GRAMMA.T4_PRESENT_AND_PAST_PER.PERFECT.M_EN9_PE_PRESENT",
+     "skill": "ENGL.G9.GRAMMA.T4_PRESENT_AND_PAST_PER.PERFECT",
+     "error": "Uses had for the present perfect.",
+     "example": {
+      "question": "Which is present perfect?",
+      "wrong_answer": "She had finished.",
+      "correct_answer": "She has finished."
+     },
+     "cause": "The child mixes up two rules that are taught close together.",
+     "reveals": "Offer \"She had finished.\" next to the right answer and ask the question again in a new situation.",
+     "help": "Present perfect uses have or has.",
+     "feedback": "Present perfect uses have or has.",
+     "source": "To confirm by a Kenyan English teacher: a common classroom error, not traced to a study by the author.",
+     "status": "draft"
+    },
+    {
+     "code": "ENGL.G9.GRAMMA.T4_PRESENT_AND_PAST_PER.PERFECT.M_EN9_PE_PAST",
+     "skill": "ENGL.G9.GRAMMA.T4_PRESENT_AND_PAST_PER.PERFECT",
+     "error": "Uses has for the past perfect.",
+     "example": {
+      "question": "Which is past perfect?",
+      "wrong_answer": "She has finished before I came.",
+      "correct_answer": "She had finished before I came."
+     },
+     "cause": "The child mixes up two rules that are taught close together.",
+     "reveals": "Offer \"She has finished before I came.\" next to the right answer and ask the question again in a new situation.",
+     "help": "Past perfect uses had.",
+     "feedback": "Past perfect uses had.",
+     "source": "To confirm by a Kenyan English teacher: a common classroom error, not traced to a study by the author.",
+     "status": "draft"
+    },
+    {
+     "code": "ENGL.G9.GRAMMA.T4_PRESENT_AND_PAST_PER.PERFECT.M_EN9_PE_PARTICIPLE",
+     "skill": "ENGL.G9.GRAMMA.T4_PRESENT_AND_PAST_PER.PERFECT",
+     "error": "Uses the simple past after has.",
+     "example": {
+      "question": "Which is correct?",
+      "wrong_answer": "She has went home.",
+      "correct_answer": "She has gone home."
+     },
+     "cause": "The child mixes up two rules that are taught close together.",
+     "reveals": "Offer \"She has went home.\" next to the right answer and ask the question again in a new situation.",
+     "help": "Use the past participle after has.",
+     "feedback": "Use the past participle after has.",
+     "source": "To confirm by a Kenyan English teacher: a common classroom error, not traced to a study by the author.",
+     "status": "draft"
+    }
+   ],
    "rubric_indicators": [
     "ENGL.G9.RUBRIC.3.1",
     "ENGL.G9.RUBRIC.3.2",
@@ -1631,8 +2127,79 @@
      "status": "kicd_verified"
     }
    ],
-   "skills": [],
-   "misconceptions": [],
+   "skills": [
+    {
+     "code": "ENGL.G9.GRAMMA.T5_ORDER_OF_ADJECTIVES.ADJ_ORDER",
+     "name": "Put adjectives in the correct order",
+     "outcomes": [
+      "ENGL.G9.GRAMMA.T5_ORDER_OF_ADJECTIVES.a",
+      "ENGL.G9.GRAMMA.T5_ORDER_OF_ADJECTIVES.b"
+     ],
+     "mastery": "The child says adjectives go in the order opinion, size, age, colour, origin, material, so we say \"a lovely small old brown wooden box\". Evidence rule: at least four of the last five fresh questions right across at least two question forms, and no repeated pick of the same misconception.",
+     "question_forms": [
+      "pick the right answer",
+      "pick the right answer in a short story",
+      "find the false step in a learner's reason"
+     ],
+     "thinking": [
+      "recall",
+      "reasoning"
+     ],
+     "horeb_skill_ids": [],
+     "prerequisites": [],
+     "status": "proposed"
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "ENGL.G9.GRAMMA.T5_ORDER_OF_ADJECTIVES.ADJ_ORDER.M_EN9_AO_COLOUR",
+     "skill": "ENGL.G9.GRAMMA.T5_ORDER_OF_ADJECTIVES.ADJ_ORDER",
+     "error": "Puts colour before size.",
+     "example": {
+      "question": "Which order is correct?",
+      "wrong_answer": "a red big ball",
+      "correct_answer": "a big red ball"
+     },
+     "cause": "The child mixes up two rules that are taught close together.",
+     "reveals": "Offer \"a red big ball\" next to the right answer and ask the question again in a new situation.",
+     "help": "Size comes before colour.",
+     "feedback": "Size comes before colour.",
+     "source": "To confirm by a Kenyan English teacher: a common classroom error, not traced to a study by the author.",
+     "status": "draft"
+    },
+    {
+     "code": "ENGL.G9.GRAMMA.T5_ORDER_OF_ADJECTIVES.ADJ_ORDER.M_EN9_AO_OPINION",
+     "skill": "ENGL.G9.GRAMMA.T5_ORDER_OF_ADJECTIVES.ADJ_ORDER",
+     "error": "Puts opinion last.",
+     "example": {
+      "question": "Which order is correct?",
+      "wrong_answer": "a wooden lovely box",
+      "correct_answer": "a lovely wooden box"
+     },
+     "cause": "The child mixes up two rules that are taught close together.",
+     "reveals": "Offer \"a wooden lovely box\" next to the right answer and ask the question again in a new situation.",
+     "help": "Opinion comes before material.",
+     "feedback": "Opinion comes before material.",
+     "source": "To confirm by a Kenyan English teacher: a common classroom error, not traced to a study by the author.",
+     "status": "draft"
+    },
+    {
+     "code": "ENGL.G9.GRAMMA.T5_ORDER_OF_ADJECTIVES.ADJ_ORDER.M_EN9_AO_AGE",
+     "skill": "ENGL.G9.GRAMMA.T5_ORDER_OF_ADJECTIVES.ADJ_ORDER",
+     "error": "Puts age after colour.",
+     "example": {
+      "question": "Which order is correct?",
+      "wrong_answer": "a brown old dog",
+      "correct_answer": "an old brown dog"
+     },
+     "cause": "The child mixes up two rules that are taught close together.",
+     "reveals": "Offer \"a brown old dog\" next to the right answer and ask the question again in a new situation.",
+     "help": "Age comes before colour.",
+     "feedback": "Age comes before colour.",
+     "source": "To confirm by a Kenyan English teacher: a common classroom error, not traced to a study by the author.",
+     "status": "draft"
+    }
+   ],
    "rubric_indicators": [
     "ENGL.G9.RUBRIC.3.1",
     "ENGL.G9.RUBRIC.3.2",
@@ -1769,8 +2336,78 @@
      "status": "kicd_verified"
     }
    ],
-   "skills": [],
-   "misconceptions": [],
+   "skills": [
+    {
+     "code": "ENGL.G9.WRITIN.T5_LETTER_OF_APPLICATIO.LETTER_APPLICATION",
+     "name": "Name the parts of a letter of application",
+     "outcomes": [
+      "ENGL.G9.WRITIN.T5_LETTER_OF_APPLICATIO.a"
+     ],
+     "mastery": "The child names the writer's address, date, receiver's address, salutation (Dear Sir or Madam), subject line, body, subscription (Yours faithfully) and signature, and says Yours faithfully goes with Dear Sir or Madam. Evidence rule: at least four of the last five fresh questions right across at least two question forms, and no repeated pick of the same misconception.",
+     "question_forms": [
+      "pick the right answer",
+      "pick the right answer in a short story",
+      "find the false step in a learner's reason"
+     ],
+     "thinking": [
+      "recall",
+      "reasoning"
+     ],
+     "horeb_skill_ids": [],
+     "prerequisites": [],
+     "status": "proposed"
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "ENGL.G9.WRITIN.T5_LETTER_OF_APPLICATIO.LETTER_APPLICATION.M_EN9_LA_CLOSE",
+     "skill": "ENGL.G9.WRITIN.T5_LETTER_OF_APPLICATIO.LETTER_APPLICATION",
+     "error": "Uses Yours sincerely with Sir or Madam.",
+     "example": {
+      "question": "Which closing goes with Dear Sir or Madam?",
+      "wrong_answer": "Yours sincerely",
+      "correct_answer": "Yours faithfully"
+     },
+     "cause": "The child mixes up two rules that are taught close together.",
+     "reveals": "Offer \"Yours sincerely\" next to the right answer and ask the question again in a new situation.",
+     "help": "Yours faithfully goes with Dear Sir or Madam.",
+     "feedback": "Yours faithfully goes with Dear Sir or Madam.",
+     "source": "To confirm by a Kenyan English teacher: a common classroom error, not traced to a study by the author.",
+     "status": "draft"
+    },
+    {
+     "code": "ENGL.G9.WRITIN.T5_LETTER_OF_APPLICATIO.LETTER_APPLICATION.M_EN9_LA_SUBJECT",
+     "skill": "ENGL.G9.WRITIN.T5_LETTER_OF_APPLICATIO.LETTER_APPLICATION",
+     "error": "Leaves out the subject line.",
+     "example": {
+      "question": "Which part states what the letter is about?",
+      "wrong_answer": "The signature",
+      "correct_answer": "The subject line"
+     },
+     "cause": "The child mixes up two rules that are taught close together.",
+     "reveals": "Offer \"The signature\" next to the right answer and ask the question again in a new situation.",
+     "help": "The subject line states what the letter is about.",
+     "feedback": "The subject line states what the letter is about.",
+     "source": "To confirm by a Kenyan English teacher: a common classroom error, not traced to a study by the author.",
+     "status": "draft"
+    },
+    {
+     "code": "ENGL.G9.WRITIN.T5_LETTER_OF_APPLICATIO.LETTER_APPLICATION.M_EN9_LA_ADDRESS",
+     "skill": "ENGL.G9.WRITIN.T5_LETTER_OF_APPLICATIO.LETTER_APPLICATION",
+     "error": "Puts the sender's address at the bottom.",
+     "example": {
+      "question": "Where does the writer's address go?",
+      "wrong_answer": "At the bottom",
+      "correct_answer": "At the top"
+     },
+     "cause": "The child mixes up two rules that are taught close together.",
+     "reveals": "Offer \"At the bottom\" next to the right answer and ask the question again in a new situation.",
+     "help": "The writer's address goes at the top.",
+     "feedback": "The writer's address goes at the top.",
+     "source": "To confirm by a Kenyan English teacher: a common classroom error, not traced to a study by the author.",
+     "status": "draft"
+    }
+   ],
    "rubric_indicators": [
     "ENGL.G9.RUBRIC.4.1",
     "ENGL.G9.RUBRIC.4.2",
@@ -1978,8 +2615,79 @@
      "status": "kicd_verified"
     }
    ],
-   "skills": [],
-   "misconceptions": [],
+   "skills": [
+    {
+     "code": "ENGL.G9.GRAMMA.T6_COMPARISON_OF_ADVERB.ADVERB_DEGREES",
+     "name": "Use the degrees of comparison of adverbs",
+     "outcomes": [
+      "ENGL.G9.GRAMMA.T6_COMPARISON_OF_ADVERB.a",
+      "ENGL.G9.GRAMMA.T6_COMPARISON_OF_ADVERB.b"
+     ],
+     "mastery": "The child says the positive (fast), comparative (faster, more carefully) and superlative (fastest, most carefully) and that long adverbs take more and most. Evidence rule: at least four of the last five fresh questions right across at least two question forms, and no repeated pick of the same misconception.",
+     "question_forms": [
+      "pick the right answer",
+      "pick the right answer in a short story",
+      "find the false step in a learner's reason"
+     ],
+     "thinking": [
+      "recall",
+      "reasoning"
+     ],
+     "horeb_skill_ids": [],
+     "prerequisites": [],
+     "status": "proposed"
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "ENGL.G9.GRAMMA.T6_COMPARISON_OF_ADVERB.ADVERB_DEGREES.M_EN9_AD_MORE",
+     "skill": "ENGL.G9.GRAMMA.T6_COMPARISON_OF_ADVERB.ADVERB_DEGREES",
+     "error": "Uses -er with long adverbs.",
+     "example": {
+      "question": "Which is correct?",
+      "wrong_answer": "carefullier",
+      "correct_answer": "more carefully"
+     },
+     "cause": "The child mixes up two rules that are taught close together.",
+     "reveals": "Offer \"carefullier\" next to the right answer and ask the question again in a new situation.",
+     "help": "Long adverbs take more and most.",
+     "feedback": "Long adverbs take more and most.",
+     "source": "To confirm by a Kenyan English teacher: a common classroom error, not traced to a study by the author.",
+     "status": "draft"
+    },
+    {
+     "code": "ENGL.G9.GRAMMA.T6_COMPARISON_OF_ADVERB.ADVERB_DEGREES.M_EN9_AD_SUPER",
+     "skill": "ENGL.G9.GRAMMA.T6_COMPARISON_OF_ADVERB.ADVERB_DEGREES",
+     "error": "Uses the comparative for the superlative.",
+     "example": {
+      "question": "Who ran ___ of all?",
+      "wrong_answer": "faster",
+      "correct_answer": "fastest"
+     },
+     "cause": "The child mixes up two rules that are taught close together.",
+     "reveals": "Offer \"faster\" next to the right answer and ask the question again in a new situation.",
+     "help": "Use the superlative when comparing three or more.",
+     "feedback": "Use the superlative when comparing three or more.",
+     "source": "To confirm by a Kenyan English teacher: a common classroom error, not traced to a study by the author.",
+     "status": "draft"
+    },
+    {
+     "code": "ENGL.G9.GRAMMA.T6_COMPARISON_OF_ADVERB.ADVERB_DEGREES.M_EN9_AD_THAN",
+     "skill": "ENGL.G9.GRAMMA.T6_COMPARISON_OF_ADVERB.ADVERB_DEGREES",
+     "error": "Uses the positive with than.",
+     "example": {
+      "question": "Which is correct?",
+      "wrong_answer": "She sings well than I do.",
+      "correct_answer": "She sings better than I do."
+     },
+     "cause": "The child mixes up two rules that are taught close together.",
+     "reveals": "Offer \"She sings well than I do.\" next to the right answer and ask the question again in a new situation.",
+     "help": "Use the comparative with than.",
+     "feedback": "Use the comparative with than.",
+     "source": "To confirm by a Kenyan English teacher: a common classroom error, not traced to a study by the author.",
+     "status": "draft"
+    }
+   ],
    "rubric_indicators": [
     "ENGL.G9.RUBRIC.3.1",
     "ENGL.G9.RUBRIC.3.2",
@@ -2119,8 +2827,79 @@
      "status": "kicd_verified"
     }
    ],
-   "skills": [],
-   "misconceptions": [],
+   "skills": [
+    {
+     "code": "ENGL.G9.WRITIN.T6_MECHANICS_OF_WRITING.SPELLING",
+     "name": "Tell homophones and homonyms and spell commonly misspelt words",
+     "outcomes": [
+      "ENGL.G9.WRITIN.T6_MECHANICS_OF_WRITING.a",
+      "ENGL.G9.WRITIN.T6_MECHANICS_OF_WRITING.b"
+     ],
+     "mastery": "The child says homophones sound alike but differ in spelling and meaning (their and there), homonyms share spelling and sound (bank), and spells words such as separate, necessary, beginning and committee. Evidence rule: at least four of the last five fresh questions right across at least two question forms, and no repeated pick of the same misconception.",
+     "question_forms": [
+      "pick the right answer",
+      "pick the right answer in a short story",
+      "find the false step in a learner's reason"
+     ],
+     "thinking": [
+      "recall",
+      "reasoning"
+     ],
+     "horeb_skill_ids": [],
+     "prerequisites": [],
+     "status": "proposed"
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "ENGL.G9.WRITIN.T6_MECHANICS_OF_WRITING.SPELLING.M_EN9_SG_HOMOPHONE",
+     "skill": "ENGL.G9.WRITIN.T6_MECHANICS_OF_WRITING.SPELLING",
+     "error": "Mixes their and there.",
+     "example": {
+      "question": "Which is correct: ___ books are on the table.",
+      "wrong_answer": "There",
+      "correct_answer": "Their"
+     },
+     "cause": "The child mixes up two rules that are taught close together.",
+     "reveals": "Offer \"There\" next to the right answer and ask the question again in a new situation.",
+     "help": "Their shows belonging.",
+     "feedback": "Their shows belonging.",
+     "source": "To confirm by a Kenyan English teacher: a common classroom error, not traced to a study by the author.",
+     "status": "draft"
+    },
+    {
+     "code": "ENGL.G9.WRITIN.T6_MECHANICS_OF_WRITING.SPELLING.M_EN9_SG_SEPARATE",
+     "skill": "ENGL.G9.WRITIN.T6_MECHANICS_OF_WRITING.SPELLING",
+     "error": "Misspells separate.",
+     "example": {
+      "question": "Which is spelt correctly?",
+      "wrong_answer": "seperate",
+      "correct_answer": "separate"
+     },
+     "cause": "The child mixes up two rules that are taught close together.",
+     "reveals": "Offer \"seperate\" next to the right answer and ask the question again in a new situation.",
+     "help": "Separate has \"par\" in the middle.",
+     "feedback": "Separate has \"par\" in the middle.",
+     "source": "To confirm by a Kenyan English teacher: a common classroom error, not traced to a study by the author.",
+     "status": "draft"
+    },
+    {
+     "code": "ENGL.G9.WRITIN.T6_MECHANICS_OF_WRITING.SPELLING.M_EN9_SG_COMMITTEE",
+     "skill": "ENGL.G9.WRITIN.T6_MECHANICS_OF_WRITING.SPELLING",
+     "error": "Misspells committee.",
+     "example": {
+      "question": "Which is spelt correctly?",
+      "wrong_answer": "comitee",
+      "correct_answer": "committee"
+     },
+     "cause": "The child mixes up two rules that are taught close together.",
+     "reveals": "Offer \"comitee\" next to the right answer and ask the question again in a new situation.",
+     "help": "Committee has double m, double t and double e.",
+     "feedback": "Committee has double m, double t and double e.",
+     "source": "To confirm by a Kenyan English teacher: a common classroom error, not traced to a study by the author.",
+     "status": "draft"
+    }
+   ],
    "rubric_indicators": [
     "ENGL.G9.RUBRIC.4.1",
     "ENGL.G9.RUBRIC.4.2",
@@ -2330,8 +3109,79 @@
      "status": "kicd_read"
     }
    ],
-   "skills": [],
-   "misconceptions": [],
+   "skills": [
+    {
+     "code": "ENGL.G9.GRAMMA.T7_RELATIVE_PRONOUNS_IN.RELATIVE_PRONOUNS",
+     "name": "Use relative and interrogative pronouns",
+     "outcomes": [
+      "ENGL.G9.GRAMMA.T7_RELATIVE_PRONOUNS_IN.a",
+      "ENGL.G9.GRAMMA.T7_RELATIVE_PRONOUNS_IN.b"
+     ],
+     "mastery": "The child says who and whom refer to people, which to things and animals, whose to belonging, that to people or things, and that who, what, which and whose also start questions. Evidence rule: at least four of the last five fresh questions right across at least two question forms, and no repeated pick of the same misconception.",
+     "question_forms": [
+      "pick the right answer",
+      "pick the right answer in a short story",
+      "find the false step in a learner's reason"
+     ],
+     "thinking": [
+      "recall",
+      "reasoning"
+     ],
+     "horeb_skill_ids": [],
+     "prerequisites": [],
+     "status": "proposed"
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "ENGL.G9.GRAMMA.T7_RELATIVE_PRONOUNS_IN.RELATIVE_PRONOUNS.M_EN9_RP_WHICH",
+     "skill": "ENGL.G9.GRAMMA.T7_RELATIVE_PRONOUNS_IN.RELATIVE_PRONOUNS",
+     "error": "Uses who for things.",
+     "example": {
+      "question": "The book ___ I read was long.",
+      "wrong_answer": "who",
+      "correct_answer": "which"
+     },
+     "cause": "The child mixes up two rules that are taught close together.",
+     "reveals": "Offer \"who\" next to the right answer and ask the question again in a new situation.",
+     "help": "Use which for things.",
+     "feedback": "Use which for things.",
+     "source": "To confirm by a Kenyan English teacher: a common classroom error, not traced to a study by the author.",
+     "status": "draft"
+    },
+    {
+     "code": "ENGL.G9.GRAMMA.T7_RELATIVE_PRONOUNS_IN.RELATIVE_PRONOUNS.M_EN9_RP_WHOSE",
+     "skill": "ENGL.G9.GRAMMA.T7_RELATIVE_PRONOUNS_IN.RELATIVE_PRONOUNS",
+     "error": "Uses who for belonging.",
+     "example": {
+      "question": "The girl ___ bag was lost cried.",
+      "wrong_answer": "who",
+      "correct_answer": "whose"
+     },
+     "cause": "The child mixes up two rules that are taught close together.",
+     "reveals": "Offer \"who\" next to the right answer and ask the question again in a new situation.",
+     "help": "Whose shows belonging.",
+     "feedback": "Whose shows belonging.",
+     "source": "To confirm by a Kenyan English teacher: a common classroom error, not traced to a study by the author.",
+     "status": "draft"
+    },
+    {
+     "code": "ENGL.G9.GRAMMA.T7_RELATIVE_PRONOUNS_IN.RELATIVE_PRONOUNS.M_EN9_RP_WHO",
+     "skill": "ENGL.G9.GRAMMA.T7_RELATIVE_PRONOUNS_IN.RELATIVE_PRONOUNS",
+     "error": "Uses which for people.",
+     "example": {
+      "question": "The man ___ helped us is kind.",
+      "wrong_answer": "which",
+      "correct_answer": "who"
+     },
+     "cause": "The child mixes up two rules that are taught close together.",
+     "reveals": "Offer \"which\" next to the right answer and ask the question again in a new situation.",
+     "help": "Use who for people.",
+     "feedback": "Use who for people.",
+     "source": "To confirm by a Kenyan English teacher: a common classroom error, not traced to a study by the author.",
+     "status": "draft"
+    }
+   ],
    "rubric_indicators": [
     "ENGL.G9.RUBRIC.3.1",
     "ENGL.G9.RUBRIC.3.2",
@@ -2664,8 +3514,79 @@
      "status": "kicd_verified"
     }
    ],
-   "skills": [],
-   "misconceptions": [],
+   "skills": [
+    {
+     "code": "ENGL.G9.GRAMMA.T8_COMPLEX_PREPOSITIONS.COMPLEX_PREPS",
+     "name": "Use complex prepositions",
+     "outcomes": [
+      "ENGL.G9.GRAMMA.T8_COMPLEX_PREPOSITIONS.a",
+      "ENGL.G9.GRAMMA.T8_COMPLEX_PREPOSITIONS.b"
+     ],
+     "mastery": "The child names complex prepositions of two or three words (because of, in front of, instead of, in spite of, according to, on behalf of) and uses them correctly. Evidence rule: at least four of the last five fresh questions right across at least two question forms, and no repeated pick of the same misconception.",
+     "question_forms": [
+      "pick the right answer",
+      "pick the right answer in a short story",
+      "find the false step in a learner's reason"
+     ],
+     "thinking": [
+      "recall",
+      "reasoning"
+     ],
+     "horeb_skill_ids": [],
+     "prerequisites": [],
+     "status": "proposed"
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "ENGL.G9.GRAMMA.T8_COMPLEX_PREPOSITIONS.COMPLEX_PREPS.M_EN9_CP_BECAUSE",
+     "skill": "ENGL.G9.GRAMMA.T8_COMPLEX_PREPOSITIONS.COMPLEX_PREPS",
+     "error": "Uses because without of before a noun.",
+     "example": {
+      "question": "We stayed in ___ the rain.",
+      "wrong_answer": "because",
+      "correct_answer": "because of"
+     },
+     "cause": "The child mixes up two rules that are taught close together.",
+     "reveals": "Offer \"because\" next to the right answer and ask the question again in a new situation.",
+     "help": "Because of is followed by a noun.",
+     "feedback": "Because of is followed by a noun.",
+     "source": "To confirm by a Kenyan English teacher: a common classroom error, not traced to a study by the author.",
+     "status": "draft"
+    },
+    {
+     "code": "ENGL.G9.GRAMMA.T8_COMPLEX_PREPOSITIONS.COMPLEX_PREPS.M_EN9_CP_INSTEAD",
+     "skill": "ENGL.G9.GRAMMA.T8_COMPLEX_PREPOSITIONS.COMPLEX_PREPS",
+     "error": "Uses instead without of.",
+     "example": {
+      "question": "She took tea ___ coffee.",
+      "wrong_answer": "instead",
+      "correct_answer": "instead of"
+     },
+     "cause": "The child mixes up two rules that are taught close together.",
+     "reveals": "Offer \"instead\" next to the right answer and ask the question again in a new situation.",
+     "help": "Instead of is followed by a noun.",
+     "feedback": "Instead of is followed by a noun.",
+     "source": "To confirm by a Kenyan English teacher: a common classroom error, not traced to a study by the author.",
+     "status": "draft"
+    },
+    {
+     "code": "ENGL.G9.GRAMMA.T8_COMPLEX_PREPOSITIONS.COMPLEX_PREPS.M_EN9_CP_ACCORDING",
+     "skill": "ENGL.G9.GRAMMA.T8_COMPLEX_PREPOSITIONS.COMPLEX_PREPS",
+     "error": "Uses according with from.",
+     "example": {
+      "question": "It happened ___ the report.",
+      "wrong_answer": "according from",
+      "correct_answer": "according to"
+     },
+     "cause": "The child mixes up two rules that are taught close together.",
+     "reveals": "Offer \"according from\" next to the right answer and ask the question again in a new situation.",
+     "help": "Use according to.",
+     "feedback": "Use according to.",
+     "source": "To confirm by a Kenyan English teacher: a common classroom error, not traced to a study by the author.",
+     "status": "draft"
+    }
+   ],
    "rubric_indicators": [
     "ENGL.G9.RUBRIC.3.1",
     "ENGL.G9.RUBRIC.3.2",
@@ -3017,8 +3938,79 @@
      "status": "kicd_verified"
     }
    ],
-   "skills": [],
-   "misconceptions": [],
+   "skills": [
+    {
+     "code": "ENGL.G9.GRAMMA.T9_CONJUNCTIONS_CORRELA.CORRELATIVE",
+     "name": "Use correlative conjunctions in pairs",
+     "outcomes": [
+      "ENGL.G9.GRAMMA.T9_CONJUNCTIONS_CORRELA.a",
+      "ENGL.G9.GRAMMA.T9_CONJUNCTIONS_CORRELA.b"
+     ],
+     "mastery": "The child pairs either with or, neither with nor, both with and, not only with but also, and whether with or. Evidence rule: at least four of the last five fresh questions right across at least two question forms, and no repeated pick of the same misconception.",
+     "question_forms": [
+      "pick the right answer",
+      "pick the right answer in a short story",
+      "find the false step in a learner's reason"
+     ],
+     "thinking": [
+      "recall",
+      "reasoning"
+     ],
+     "horeb_skill_ids": [],
+     "prerequisites": [],
+     "status": "proposed"
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "ENGL.G9.GRAMMA.T9_CONJUNCTIONS_CORRELA.CORRELATIVE.M_EN9_CO_EITHER",
+     "skill": "ENGL.G9.GRAMMA.T9_CONJUNCTIONS_CORRELA.CORRELATIVE",
+     "error": "Pairs either with nor.",
+     "example": {
+      "question": "Either you ___ I will go.",
+      "wrong_answer": "nor",
+      "correct_answer": "or"
+     },
+     "cause": "The child mixes up two rules that are taught close together.",
+     "reveals": "Offer \"nor\" next to the right answer and ask the question again in a new situation.",
+     "help": "Either goes with or.",
+     "feedback": "Either goes with or.",
+     "source": "To confirm by a Kenyan English teacher: a common classroom error, not traced to a study by the author.",
+     "status": "draft"
+    },
+    {
+     "code": "ENGL.G9.GRAMMA.T9_CONJUNCTIONS_CORRELA.CORRELATIVE.M_EN9_CO_NEITHER",
+     "skill": "ENGL.G9.GRAMMA.T9_CONJUNCTIONS_CORRELA.CORRELATIVE",
+     "error": "Pairs neither with or.",
+     "example": {
+      "question": "Neither tea ___ coffee is ready.",
+      "wrong_answer": "or",
+      "correct_answer": "nor"
+     },
+     "cause": "The child mixes up two rules that are taught close together.",
+     "reveals": "Offer \"or\" next to the right answer and ask the question again in a new situation.",
+     "help": "Neither goes with nor.",
+     "feedback": "Neither goes with nor.",
+     "source": "To confirm by a Kenyan English teacher: a common classroom error, not traced to a study by the author.",
+     "status": "draft"
+    },
+    {
+     "code": "ENGL.G9.GRAMMA.T9_CONJUNCTIONS_CORRELA.CORRELATIVE.M_EN9_CO_NOTONLY",
+     "skill": "ENGL.G9.GRAMMA.T9_CONJUNCTIONS_CORRELA.CORRELATIVE",
+     "error": "Pairs not only with and.",
+     "example": {
+      "question": "Not only tall ___ also strong.",
+      "wrong_answer": "and",
+      "correct_answer": "but"
+     },
+     "cause": "The child mixes up two rules that are taught close together.",
+     "reveals": "Offer \"and\" next to the right answer and ask the question again in a new situation.",
+     "help": "Not only goes with but also.",
+     "feedback": "Not only goes with but also.",
+     "source": "To confirm by a Kenyan English teacher: a common classroom error, not traced to a study by the author.",
+     "status": "draft"
+    }
+   ],
    "rubric_indicators": [
     "ENGL.G9.RUBRIC.3.1",
     "ENGL.G9.RUBRIC.3.2",
@@ -3154,8 +4146,78 @@
      "status": "kicd_verified"
     }
    ],
-   "skills": [],
-   "misconceptions": [],
+   "skills": [
+    {
+     "code": "ENGL.G9.WRITIN.T9_NARRATIVE_COMPOSITIO.NARRATIVE_ELEMENTS",
+     "name": "Name the elements of a narrative composition",
+     "outcomes": [
+      "ENGL.G9.WRITIN.T9_NARRATIVE_COMPOSITIO.a"
+     ],
+     "mastery": "The child names characters, setting, plot (beginning, complication, climax, resolution) and theme, and says background information makes a story believable. Evidence rule: at least four of the last five fresh questions right across at least two question forms, and no repeated pick of the same misconception.",
+     "question_forms": [
+      "pick the right answer",
+      "pick the right answer in a short story",
+      "find the false step in a learner's reason"
+     ],
+     "thinking": [
+      "recall",
+      "reasoning"
+     ],
+     "horeb_skill_ids": [],
+     "prerequisites": [],
+     "status": "proposed"
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "ENGL.G9.WRITIN.T9_NARRATIVE_COMPOSITIO.NARRATIVE_ELEMENTS.M_EN9_NE_SETTING",
+     "skill": "ENGL.G9.WRITIN.T9_NARRATIVE_COMPOSITIO.NARRATIVE_ELEMENTS",
+     "error": "Says setting is the people.",
+     "example": {
+      "question": "What is the setting?",
+      "wrong_answer": "The people in the story",
+      "correct_answer": "The time and place"
+     },
+     "cause": "The child mixes up two rules that are taught close together.",
+     "reveals": "Offer \"The people in the story\" next to the right answer and ask the question again in a new situation.",
+     "help": "Setting is time and place.",
+     "feedback": "Setting is time and place.",
+     "source": "To confirm by a Kenyan English teacher: a common classroom error, not traced to a study by the author.",
+     "status": "draft"
+    },
+    {
+     "code": "ENGL.G9.WRITIN.T9_NARRATIVE_COMPOSITIO.NARRATIVE_ELEMENTS.M_EN9_NE_PLOT",
+     "skill": "ENGL.G9.WRITIN.T9_NARRATIVE_COMPOSITIO.NARRATIVE_ELEMENTS",
+     "error": "Says plot is the title.",
+     "example": {
+      "question": "What is the plot?",
+      "wrong_answer": "The title of the story",
+      "correct_answer": "The order of events"
+     },
+     "cause": "The child mixes up two rules that are taught close together.",
+     "reveals": "Offer \"The title of the story\" next to the right answer and ask the question again in a new situation.",
+     "help": "The plot is the order of events.",
+     "feedback": "The plot is the order of events.",
+     "source": "To confirm by a Kenyan English teacher: a common classroom error, not traced to a study by the author.",
+     "status": "draft"
+    },
+    {
+     "code": "ENGL.G9.WRITIN.T9_NARRATIVE_COMPOSITIO.NARRATIVE_ELEMENTS.M_EN9_NE_CLIMAX",
+     "skill": "ENGL.G9.WRITIN.T9_NARRATIVE_COMPOSITIO.NARRATIVE_ELEMENTS",
+     "error": "Says climax is the ending.",
+     "example": {
+      "question": "What is the climax?",
+      "wrong_answer": "The last line",
+      "correct_answer": "The most exciting point"
+     },
+     "cause": "The child mixes up two rules that are taught close together.",
+     "reveals": "Offer \"The last line\" next to the right answer and ask the question again in a new situation.",
+     "help": "The climax is the most exciting point.",
+     "feedback": "The climax is the most exciting point.",
+     "source": "To confirm by a Kenyan English teacher: a common classroom error, not traced to a study by the author.",
+     "status": "draft"
+    }
+   ],
    "rubric_indicators": [
     "ENGL.G9.RUBRIC.4.1",
     "ENGL.G9.RUBRIC.4.2",
@@ -3351,8 +4413,79 @@
      "status": "kicd_verified"
     }
    ],
-   "skills": [],
-   "misconceptions": [],
+   "skills": [
+    {
+     "code": "ENGL.G9.GRAMMA.T10_DETERMINERS_NUMERALS.DETERMINERS_NUM",
+     "name": "Use numerals and ordinals as determiners",
+     "outcomes": [
+      "ENGL.G9.GRAMMA.T10_DETERMINERS_NUMERALS.a",
+      "ENGL.G9.GRAMMA.T10_DETERMINERS_NUMERALS.b"
+     ],
+     "mastery": "The child says cardinal numbers (two, ten) count and ordinal numbers (second, tenth) give position, and both come before the noun. Evidence rule: at least four of the last five fresh questions right across at least two question forms, and no repeated pick of the same misconception.",
+     "question_forms": [
+      "pick the right answer",
+      "pick the right answer in a short story",
+      "find the false step in a learner's reason"
+     ],
+     "thinking": [
+      "recall",
+      "reasoning"
+     ],
+     "horeb_skill_ids": [],
+     "prerequisites": [],
+     "status": "proposed"
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "ENGL.G9.GRAMMA.T10_DETERMINERS_NUMERALS.DETERMINERS_NUM.M_EN9_DN_ORDINAL",
+     "skill": "ENGL.G9.GRAMMA.T10_DETERMINERS_NUMERALS.DETERMINERS_NUM",
+     "error": "Uses a cardinal for position.",
+     "example": {
+      "question": "Which shows position?",
+      "wrong_answer": "five",
+      "correct_answer": "fifth"
+     },
+     "cause": "The child mixes up two rules that are taught close together.",
+     "reveals": "Offer \"five\" next to the right answer and ask the question again in a new situation.",
+     "help": "Ordinals show position.",
+     "feedback": "Ordinals show position.",
+     "source": "To confirm by a Kenyan English teacher: a common classroom error, not traced to a study by the author.",
+     "status": "draft"
+    },
+    {
+     "code": "ENGL.G9.GRAMMA.T10_DETERMINERS_NUMERALS.DETERMINERS_NUM.M_EN9_DN_CARDINAL",
+     "skill": "ENGL.G9.GRAMMA.T10_DETERMINERS_NUMERALS.DETERMINERS_NUM",
+     "error": "Uses an ordinal for counting.",
+     "example": {
+      "question": "Which shows how many?",
+      "wrong_answer": "fifth",
+      "correct_answer": "five"
+     },
+     "cause": "The child mixes up two rules that are taught close together.",
+     "reveals": "Offer \"fifth\" next to the right answer and ask the question again in a new situation.",
+     "help": "Cardinals show how many.",
+     "feedback": "Cardinals show how many.",
+     "source": "To confirm by a Kenyan English teacher: a common classroom error, not traced to a study by the author.",
+     "status": "draft"
+    },
+    {
+     "code": "ENGL.G9.GRAMMA.T10_DETERMINERS_NUMERALS.DETERMINERS_NUM.M_EN9_DN_ORDER",
+     "skill": "ENGL.G9.GRAMMA.T10_DETERMINERS_NUMERALS.DETERMINERS_NUM",
+     "error": "Puts the determiner after the noun.",
+     "example": {
+      "question": "Which is correct?",
+      "wrong_answer": "books three",
+      "correct_answer": "three books"
+     },
+     "cause": "The child mixes up two rules that are taught close together.",
+     "reveals": "Offer \"books three\" next to the right answer and ask the question again in a new situation.",
+     "help": "A determiner comes before the noun.",
+     "feedback": "A determiner comes before the noun.",
+     "source": "To confirm by a Kenyan English teacher: a common classroom error, not traced to a study by the author.",
+     "status": "draft"
+    }
+   ],
    "rubric_indicators": [
     "ENGL.G9.RUBRIC.3.1",
     "ENGL.G9.RUBRIC.3.2",
@@ -3693,8 +4826,79 @@
      "status": "kicd_verified"
     }
    ],
-   "skills": [],
-   "misconceptions": [],
+   "skills": [
+    {
+     "code": "ENGL.G9.GRAMMA.T11_WORD_CLASSES_NOUNS.NOUNS_FORMED",
+     "name": "Form nouns from verbs and from other nouns",
+     "outcomes": [
+      "ENGL.G9.GRAMMA.T11_WORD_CLASSES_NOUNS.a",
+      "ENGL.G9.GRAMMA.T11_WORD_CLASSES_NOUNS.b"
+     ],
+     "mastery": "The child forms nouns from verbs (decide to decision, teach to teacher, move to movement) and from other nouns (child to childhood, friend to friendship). Evidence rule: at least four of the last five fresh questions right across at least two question forms, and no repeated pick of the same misconception.",
+     "question_forms": [
+      "pick the right answer",
+      "pick the right answer in a short story",
+      "find the false step in a learner's reason"
+     ],
+     "thinking": [
+      "recall",
+      "reasoning"
+     ],
+     "horeb_skill_ids": [],
+     "prerequisites": [],
+     "status": "proposed"
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "ENGL.G9.GRAMMA.T11_WORD_CLASSES_NOUNS.NOUNS_FORMED.M_EN9_NF_DECIDE",
+     "skill": "ENGL.G9.GRAMMA.T11_WORD_CLASSES_NOUNS.NOUNS_FORMED",
+     "error": "Gives the wrong noun for decide.",
+     "example": {
+      "question": "The noun from decide is...",
+      "wrong_answer": "decider",
+      "correct_answer": "decision"
+     },
+     "cause": "The child mixes up two rules that are taught close together.",
+     "reveals": "Offer \"decider\" next to the right answer and ask the question again in a new situation.",
+     "help": "The noun from decide is decision.",
+     "feedback": "The noun from decide is decision.",
+     "source": "To confirm by a Kenyan English teacher: a common classroom error, not traced to a study by the author.",
+     "status": "draft"
+    },
+    {
+     "code": "ENGL.G9.GRAMMA.T11_WORD_CLASSES_NOUNS.NOUNS_FORMED.M_EN9_NF_FRIEND",
+     "skill": "ENGL.G9.GRAMMA.T11_WORD_CLASSES_NOUNS.NOUNS_FORMED",
+     "error": "Gives the wrong noun for friend.",
+     "example": {
+      "question": "The noun formed from friend is...",
+      "wrong_answer": "friendly",
+      "correct_answer": "friendship"
+     },
+     "cause": "The child mixes up two rules that are taught close together.",
+     "reveals": "Offer \"friendly\" next to the right answer and ask the question again in a new situation.",
+     "help": "Friendship is the noun formed from friend.",
+     "feedback": "Friendship is the noun formed from friend.",
+     "source": "To confirm by a Kenyan English teacher: a common classroom error, not traced to a study by the author.",
+     "status": "draft"
+    },
+    {
+     "code": "ENGL.G9.GRAMMA.T11_WORD_CLASSES_NOUNS.NOUNS_FORMED.M_EN9_NF_CHILD",
+     "skill": "ENGL.G9.GRAMMA.T11_WORD_CLASSES_NOUNS.NOUNS_FORMED",
+     "error": "Gives the wrong noun for child.",
+     "example": {
+      "question": "The noun formed from child is...",
+      "wrong_answer": "childish",
+      "correct_answer": "childhood"
+     },
+     "cause": "The child mixes up two rules that are taught close together.",
+     "reveals": "Offer \"childish\" next to the right answer and ask the question again in a new situation.",
+     "help": "Childhood is the noun formed from child.",
+     "feedback": "Childhood is the noun formed from child.",
+     "source": "To confirm by a Kenyan English teacher: a common classroom error, not traced to a study by the author.",
+     "status": "draft"
+    }
+   ],
    "rubric_indicators": [
     "ENGL.G9.RUBRIC.3.1",
     "ENGL.G9.RUBRIC.3.2",
@@ -3822,8 +5026,78 @@
      "status": "kicd_read"
     }
    ],
-   "skills": [],
-   "misconceptions": [],
+   "skills": [
+    {
+     "code": "ENGL.G9.WRITIN.T11_MECHANICS_OF_WRITING.ABBREVIATIONS",
+     "name": "Write common abbreviations and acronyms in full",
+     "outcomes": [
+      "ENGL.G9.WRITIN.T11_MECHANICS_OF_WRITING.b"
+     ],
+     "mastery": "The child gives the full form of common abbreviations and acronyms such as e.g. (for example), i.e. (that is), etc. (and so on), UN (United Nations), WHO (World Health Organisation) and ICT (information and communication technology). Evidence rule: at least four of the last five fresh questions right across at least two question forms, and no repeated pick of the same misconception.",
+     "question_forms": [
+      "pick the right answer",
+      "pick the right answer in a short story",
+      "find the false step in a learner's reason"
+     ],
+     "thinking": [
+      "recall",
+      "reasoning"
+     ],
+     "horeb_skill_ids": [],
+     "prerequisites": [],
+     "status": "proposed"
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "ENGL.G9.WRITIN.T11_MECHANICS_OF_WRITING.ABBREVIATIONS.M_EN9_AB_EG",
+     "skill": "ENGL.G9.WRITIN.T11_MECHANICS_OF_WRITING.ABBREVIATIONS",
+     "error": "Mixes e.g. and i.e.",
+     "example": {
+      "question": "What does e.g. mean?",
+      "wrong_answer": "that is",
+      "correct_answer": "for example"
+     },
+     "cause": "The child mixes up two rules that are taught close together.",
+     "reveals": "Offer \"that is\" next to the right answer and ask the question again in a new situation.",
+     "help": "e.g. means for example.",
+     "feedback": "e.g. means for example.",
+     "source": "To confirm by a Kenyan English teacher: a common classroom error, not traced to a study by the author.",
+     "status": "draft"
+    },
+    {
+     "code": "ENGL.G9.WRITIN.T11_MECHANICS_OF_WRITING.ABBREVIATIONS.M_EN9_AB_ETC",
+     "skill": "ENGL.G9.WRITIN.T11_MECHANICS_OF_WRITING.ABBREVIATIONS",
+     "error": "Gives the wrong meaning of etc.",
+     "example": {
+      "question": "What does etc. mean?",
+      "wrong_answer": "for example",
+      "correct_answer": "and so on"
+     },
+     "cause": "The child mixes up two rules that are taught close together.",
+     "reveals": "Offer \"for example\" next to the right answer and ask the question again in a new situation.",
+     "help": "etc. means and so on.",
+     "feedback": "etc. means and so on.",
+     "source": "To confirm by a Kenyan English teacher: a common classroom error, not traced to a study by the author.",
+     "status": "draft"
+    },
+    {
+     "code": "ENGL.G9.WRITIN.T11_MECHANICS_OF_WRITING.ABBREVIATIONS.M_EN9_AB_UN",
+     "skill": "ENGL.G9.WRITIN.T11_MECHANICS_OF_WRITING.ABBREVIATIONS",
+     "error": "Gives the wrong full form of UN.",
+     "example": {
+      "question": "What does UN stand for?",
+      "wrong_answer": "Universal Nations",
+      "correct_answer": "United Nations"
+     },
+     "cause": "The child mixes up two rules that are taught close together.",
+     "reveals": "Offer \"Universal Nations\" next to the right answer and ask the question again in a new situation.",
+     "help": "UN stands for United Nations.",
+     "feedback": "UN stands for United Nations.",
+     "source": "To confirm by a Kenyan English teacher: a common classroom error, not traced to a study by the author.",
+     "status": "draft"
+    }
+   ],
    "rubric_indicators": [
     "ENGL.G9.RUBRIC.4.1",
     "ENGL.G9.RUBRIC.4.2",
@@ -4028,8 +5302,79 @@
      "status": "kicd_verified"
     }
    ],
-   "skills": [],
-   "misconceptions": [],
+   "skills": [
+    {
+     "code": "ENGL.G9.GRAMMA.T12_PHRASAL_VERBS.PHRASAL_VERBS",
+     "name": "Know phrasal verbs of break, hang, run and turn",
+     "outcomes": [
+      "ENGL.G9.GRAMMA.T12_PHRASAL_VERBS.a",
+      "ENGL.G9.GRAMMA.T12_PHRASAL_VERBS.b"
+     ],
+     "mastery": "The child knows break down (stop working), break out (start suddenly), hang on (wait), hang up (end a call), run out of (have no more), run into (meet by chance), turn up (arrive), turn down (refuse). Evidence rule: at least four of the last five fresh questions right across at least two question forms, and no repeated pick of the same misconception.",
+     "question_forms": [
+      "pick the right answer",
+      "pick the right answer in a short story",
+      "find the false step in a learner's reason"
+     ],
+     "thinking": [
+      "recall",
+      "reasoning"
+     ],
+     "horeb_skill_ids": [],
+     "prerequisites": [],
+     "status": "proposed"
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "ENGL.G9.GRAMMA.T12_PHRASAL_VERBS.PHRASAL_VERBS.M_EN9_PV_BREAKDOWN",
+     "skill": "ENGL.G9.GRAMMA.T12_PHRASAL_VERBS.PHRASAL_VERBS",
+     "error": "Takes break down literally.",
+     "example": {
+      "question": "The car broke down. It...",
+      "wrong_answer": "was smashed",
+      "correct_answer": "stopped working"
+     },
+     "cause": "The child mixes up two rules that are taught close together.",
+     "reveals": "Offer \"was smashed\" next to the right answer and ask the question again in a new situation.",
+     "help": "Break down means stop working.",
+     "feedback": "Break down means stop working.",
+     "source": "To confirm by a Kenyan English teacher: a common classroom error, not traced to a study by the author.",
+     "status": "draft"
+    },
+    {
+     "code": "ENGL.G9.GRAMMA.T12_PHRASAL_VERBS.PHRASAL_VERBS.M_EN9_PV_RUNOUT",
+     "skill": "ENGL.G9.GRAMMA.T12_PHRASAL_VERBS.PHRASAL_VERBS",
+     "error": "Takes run out of literally.",
+     "example": {
+      "question": "We ran out of sugar. We...",
+      "wrong_answer": "ran away from sugar",
+      "correct_answer": "had no more sugar"
+     },
+     "cause": "The child mixes up two rules that are taught close together.",
+     "reveals": "Offer \"ran away from sugar\" next to the right answer and ask the question again in a new situation.",
+     "help": "Run out of means have no more.",
+     "feedback": "Run out of means have no more.",
+     "source": "To confirm by a Kenyan English teacher: a common classroom error, not traced to a study by the author.",
+     "status": "draft"
+    },
+    {
+     "code": "ENGL.G9.GRAMMA.T12_PHRASAL_VERBS.PHRASAL_VERBS.M_EN9_PV_TURNUP",
+     "skill": "ENGL.G9.GRAMMA.T12_PHRASAL_VERBS.PHRASAL_VERBS",
+     "error": "Takes turn up literally.",
+     "example": {
+      "question": "He turned up late. He...",
+      "wrong_answer": "turned around",
+      "correct_answer": "arrived"
+     },
+     "cause": "The child mixes up two rules that are taught close together.",
+     "reveals": "Offer \"turned around\" next to the right answer and ask the question again in a new situation.",
+     "help": "Turn up means arrive.",
+     "feedback": "Turn up means arrive.",
+     "source": "To confirm by a Kenyan English teacher: a common classroom error, not traced to a study by the author.",
+     "status": "draft"
+    }
+   ],
    "rubric_indicators": [
     "ENGL.G9.RUBRIC.3.1",
     "ENGL.G9.RUBRIC.3.2",
@@ -4360,8 +5705,80 @@
      "status": "kicd_verified"
     }
    ],
-   "skills": [],
-   "misconceptions": [],
+   "skills": [
+    {
+     "code": "ENGL.G9.GRAMMA.T13_SENTENCES_COMPLEX_SE.SUBORDINATING",
+     "name": "Use subordinating conjunctions in complex sentences",
+     "outcomes": [
+      "ENGL.G9.GRAMMA.T13_SENTENCES_COMPLEX_SE.a",
+      "ENGL.G9.GRAMMA.T13_SENTENCES_COMPLEX_SE.b",
+      "ENGL.G9.GRAMMA.T13_SENTENCES_COMPLEX_SE.c"
+     ],
+     "mastery": "The child picks because (reason), although (contrast), if and unless (condition), when and while (time) and since, and says a complex sentence has a main clause and a subordinate clause. Evidence rule: at least four of the last five fresh questions right across at least two question forms, and no repeated pick of the same misconception.",
+     "question_forms": [
+      "pick the right answer",
+      "pick the right answer in a short story",
+      "find the false step in a learner's reason"
+     ],
+     "thinking": [
+      "recall",
+      "reasoning"
+     ],
+     "horeb_skill_ids": [],
+     "prerequisites": [],
+     "status": "proposed"
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "ENGL.G9.GRAMMA.T13_SENTENCES_COMPLEX_SE.SUBORDINATING.M_EN9_SC_ALTHOUGH",
+     "skill": "ENGL.G9.GRAMMA.T13_SENTENCES_COMPLEX_SE.SUBORDINATING",
+     "error": "Uses because for contrast.",
+     "example": {
+      "question": "We played ___ it rained.",
+      "wrong_answer": "because",
+      "correct_answer": "although"
+     },
+     "cause": "The child mixes up two rules that are taught close together.",
+     "reveals": "Offer \"because\" next to the right answer and ask the question again in a new situation.",
+     "help": "Although shows contrast.",
+     "feedback": "Although shows contrast.",
+     "source": "To confirm by a Kenyan English teacher: a common classroom error, not traced to a study by the author.",
+     "status": "draft"
+    },
+    {
+     "code": "ENGL.G9.GRAMMA.T13_SENTENCES_COMPLEX_SE.SUBORDINATING.M_EN9_SC_BECAUSE",
+     "skill": "ENGL.G9.GRAMMA.T13_SENTENCES_COMPLEX_SE.SUBORDINATING",
+     "error": "Uses although for reason.",
+     "example": {
+      "question": "He was late ___ he missed the bus.",
+      "wrong_answer": "although",
+      "correct_answer": "because"
+     },
+     "cause": "The child mixes up two rules that are taught close together.",
+     "reveals": "Offer \"although\" next to the right answer and ask the question again in a new situation.",
+     "help": "Because shows a reason.",
+     "feedback": "Because shows a reason.",
+     "source": "To confirm by a Kenyan English teacher: a common classroom error, not traced to a study by the author.",
+     "status": "draft"
+    },
+    {
+     "code": "ENGL.G9.GRAMMA.T13_SENTENCES_COMPLEX_SE.SUBORDINATING.M_EN9_SC_UNLESS",
+     "skill": "ENGL.G9.GRAMMA.T13_SENTENCES_COMPLEX_SE.SUBORDINATING",
+     "error": "Uses if for unless.",
+     "example": {
+      "question": "___ you study, you will fail.",
+      "wrong_answer": "If",
+      "correct_answer": "Unless"
+     },
+     "cause": "The child mixes up two rules that are taught close together.",
+     "reveals": "Offer \"If\" next to the right answer and ask the question again in a new situation.",
+     "help": "Unless means if not.",
+     "feedback": "Unless means if not.",
+     "source": "To confirm by a Kenyan English teacher: a common classroom error, not traced to a study by the author.",
+     "status": "draft"
+    }
+   ],
    "rubric_indicators": [
     "ENGL.G9.RUBRIC.3.1",
     "ENGL.G9.RUBRIC.3.2",
@@ -4706,8 +6123,88 @@
      "status": "kicd_verified"
     }
    ],
-   "skills": [],
-   "misconceptions": [],
+   "skills": [
+    {
+     "code": "ENGL.G9.GRAMMA.T14_SENTENCES_DIRECT_AND.DIRECT_INDIRECT",
+     "name": "Change direct speech into indirect speech",
+     "outcomes": [
+      "ENGL.G9.GRAMMA.T14_SENTENCES_DIRECT_AND.a",
+      "ENGL.G9.GRAMMA.T14_SENTENCES_DIRECT_AND.b",
+      "ENGL.G9.GRAMMA.T14_SENTENCES_DIRECT_AND.c"
+     ],
+     "mastery": "The child says direct speech gives the exact words in quotation marks and indirect speech reports them without quotation marks, with tense and pronouns changed (am becomes was, now becomes then). Evidence rule: at least four of the last five fresh questions right across at least two question forms, and no repeated pick of the same misconception.",
+     "question_forms": [
+      "pick the right answer",
+      "pick the right answer in a short story",
+      "find the false step in a learner's reason"
+     ],
+     "thinking": [
+      "recall",
+      "reasoning"
+     ],
+     "horeb_skill_ids": [],
+     "prerequisites": [
+      {
+       "requires": "ENGL.G9.WRITIN.T2_MECHANICS_OF_WRITING.QUOTES_BRACKETS",
+       "kind": "skill",
+       "strength": "essential",
+       "reason": "Proposed: this skill builds on it. To confirm by a Kenyan English teacher.",
+       "status": "proposed"
+      }
+     ],
+     "status": "proposed"
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "ENGL.G9.GRAMMA.T14_SENTENCES_DIRECT_AND.DIRECT_INDIRECT.M_EN9_DI_QUOTE",
+     "skill": "ENGL.G9.GRAMMA.T14_SENTENCES_DIRECT_AND.DIRECT_INDIRECT",
+     "error": "Keeps quotation marks in indirect speech.",
+     "example": {
+      "question": "Which is indirect speech?",
+      "wrong_answer": "She said, \"I am ill.\"",
+      "correct_answer": "She said that she was ill."
+     },
+     "cause": "The child mixes up two rules that are taught close together.",
+     "reveals": "Offer \"She said, \"I am ill.\"\" next to the right answer and ask the question again in a new situation.",
+     "help": "Indirect speech has no quotation marks.",
+     "feedback": "Indirect speech has no quotation marks.",
+     "source": "To confirm by a Kenyan English teacher: a common classroom error, not traced to a study by the author.",
+     "status": "draft"
+    },
+    {
+     "code": "ENGL.G9.GRAMMA.T14_SENTENCES_DIRECT_AND.DIRECT_INDIRECT.M_EN9_DI_TENSE",
+     "skill": "ENGL.G9.GRAMMA.T14_SENTENCES_DIRECT_AND.DIRECT_INDIRECT",
+     "error": "Does not change the tense.",
+     "example": {
+      "question": "She said, \"I am ill.\" In indirect speech:",
+      "wrong_answer": "She said that she is ill.",
+      "correct_answer": "She said that she was ill."
+     },
+     "cause": "The child mixes up two rules that are taught close together.",
+     "reveals": "Offer \"She said that she is ill.\" next to the right answer and ask the question again in a new situation.",
+     "help": "Am becomes was.",
+     "feedback": "Am becomes was.",
+     "source": "To confirm by a Kenyan English teacher: a common classroom error, not traced to a study by the author.",
+     "status": "draft"
+    },
+    {
+     "code": "ENGL.G9.GRAMMA.T14_SENTENCES_DIRECT_AND.DIRECT_INDIRECT.M_EN9_DI_PRONOUN",
+     "skill": "ENGL.G9.GRAMMA.T14_SENTENCES_DIRECT_AND.DIRECT_INDIRECT",
+     "error": "Does not change the pronoun.",
+     "example": {
+      "question": "He said, \"I like tea.\" In indirect speech:",
+      "wrong_answer": "He said that I liked tea.",
+      "correct_answer": "He said that he liked tea."
+     },
+     "cause": "The child mixes up two rules that are taught close together.",
+     "reveals": "Offer \"He said that I liked tea.\" next to the right answer and ask the question again in a new situation.",
+     "help": "I becomes he.",
+     "feedback": "I becomes he.",
+     "source": "To confirm by a Kenyan English teacher: a common classroom error, not traced to a study by the author.",
+     "status": "draft"
+    }
+   ],
    "rubric_indicators": [
     "ENGL.G9.RUBRIC.3.1",
     "ENGL.G9.RUBRIC.3.2",
@@ -5088,8 +6585,79 @@
      "status": "kicd_verified"
     }
    ],
-   "skills": [],
-   "misconceptions": [],
+   "skills": [
+    {
+     "code": "ENGL.G9.GRAMMA.T15_SENTENCES_1_IMPERATI.EXCLAM_IMPERATIVE",
+     "name": "Punctuate imperative and exclamatory sentences",
+     "outcomes": [
+      "ENGL.G9.GRAMMA.T15_SENTENCES_1_IMPERATI.a",
+      "ENGL.G9.GRAMMA.T15_SENTENCES_1_IMPERATI.b"
+     ],
+     "mastery": "The child says an imperative gives a command or request and ends with a full stop or exclamation mark, and an exclamatory sentence shows strong feeling and ends with an exclamation mark. Evidence rule: at least four of the last five fresh questions right across at least two question forms, and no repeated pick of the same misconception.",
+     "question_forms": [
+      "pick the right answer",
+      "pick the right answer in a short story",
+      "find the false step in a learner's reason"
+     ],
+     "thinking": [
+      "recall",
+      "reasoning"
+     ],
+     "horeb_skill_ids": [],
+     "prerequisites": [],
+     "status": "proposed"
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "ENGL.G9.GRAMMA.T15_SENTENCES_1_IMPERATI.EXCLAM_IMPERATIVE.M_EN9_EI_MARK",
+     "skill": "ENGL.G9.GRAMMA.T15_SENTENCES_1_IMPERATI.EXCLAM_IMPERATIVE",
+     "error": "Ends an exclamation with a question mark.",
+     "example": {
+      "question": "Which is punctuated correctly?",
+      "wrong_answer": "What a lovely day?",
+      "correct_answer": "What a lovely day!"
+     },
+     "cause": "The child mixes up two rules that are taught close together.",
+     "reveals": "Offer \"What a lovely day?\" next to the right answer and ask the question again in a new situation.",
+     "help": "An exclamation ends with an exclamation mark.",
+     "feedback": "An exclamation ends with an exclamation mark.",
+     "source": "To confirm by a Kenyan English teacher: a common classroom error, not traced to a study by the author.",
+     "status": "draft"
+    },
+    {
+     "code": "ENGL.G9.GRAMMA.T15_SENTENCES_1_IMPERATI.EXCLAM_IMPERATIVE.M_EN9_EI_COMMAND",
+     "skill": "ENGL.G9.GRAMMA.T15_SENTENCES_1_IMPERATI.EXCLAM_IMPERATIVE",
+     "error": "Calls a command a question.",
+     "example": {
+      "question": "Which is an imperative?",
+      "wrong_answer": "Are you coming?",
+      "correct_answer": "Close the door."
+     },
+     "cause": "The child mixes up two rules that are taught close together.",
+     "reveals": "Offer \"Are you coming?\" next to the right answer and ask the question again in a new situation.",
+     "help": "An imperative gives a command.",
+     "feedback": "An imperative gives a command.",
+     "source": "To confirm by a Kenyan English teacher: a common classroom error, not traced to a study by the author.",
+     "status": "draft"
+    },
+    {
+     "code": "ENGL.G9.GRAMMA.T15_SENTENCES_1_IMPERATI.EXCLAM_IMPERATIVE.M_EN9_EI_STOP",
+     "skill": "ENGL.G9.GRAMMA.T15_SENTENCES_1_IMPERATI.EXCLAM_IMPERATIVE",
+     "error": "Ends a command with a question mark.",
+     "example": {
+      "question": "Which is punctuated correctly?",
+      "wrong_answer": "Sit down?",
+      "correct_answer": "Sit down."
+     },
+     "cause": "The child mixes up two rules that are taught close together.",
+     "reveals": "Offer \"Sit down?\" next to the right answer and ask the question again in a new situation.",
+     "help": "A command ends with a full stop or exclamation mark.",
+     "feedback": "A command ends with a full stop or exclamation mark.",
+     "source": "To confirm by a Kenyan English teacher: a common classroom error, not traced to a study by the author.",
+     "status": "draft"
+    }
+   ],
    "rubric_indicators": [
     "ENGL.G9.RUBRIC.3.1",
     "ENGL.G9.RUBRIC.3.2",

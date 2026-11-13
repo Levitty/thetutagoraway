@@ -55,6 +55,8 @@ export default {
   'english_g7_write.js': 'english_g7_signed.js',
   'english_g8_lang.js': 'english_g8_signed.js',
   'english_g8_write.js': 'english_g8_signed.js',
+  'english_g9_a.js': 'english_g9_signed.js',
+  'english_g9_b.js': 'english_g9_signed.js',
   'integratedscience_g7_a.js': 'integratedscience_g7_signed.js',
   'integratedscience_g7_b.js': 'integratedscience_g7_signed.js',
   'integratedscience_g7_c.js': 'integratedscience_g7_signed.js',

@@ -35,8 +35,8 @@ test('the bank holds the science families (as before) and not the English ones; 
   assert.deepEqual(GRADE_FAMILIES.slice(0, sci.length), sci);   // first in the grade bank, as SCIENCE_G5 was
   assert.equal(FAMILIES.filter(f => f.subject === 'science').length, 84);
   assert.equal(FAMILIES.filter(f => f.subject === 'english').length, 0);
-  assert.deepEqual(familiesOutsideBank().filter(f => f.subject === 'english'), [...entryFor('english', 4).families, ...entryFor('english', 5).families, ...entryFor('english', 6).families, ...entryFor('english', 7).families, ...entryFor('english', 8).families]);   // Grade 4, Grade 6 and Grade 7 English joined Grade 5 on 12 Nov 2026
-  assert.deepEqual(ENGLISH_FAMILIES, [...entryFor('english', 4).families, ...entryFor('english', 5).families, ...entryFor('english', 6).families, ...entryFor('english', 7).families, ...entryFor('english', 8).families]);
+  assert.deepEqual(familiesOutsideBank().filter(f => f.subject === 'english'), [...entryFor('english', 4).families, ...entryFor('english', 5).families, ...entryFor('english', 6).families, ...entryFor('english', 7).families, ...entryFor('english', 8).families, ...entryFor('english', 9).families]);   // Grade 4, Grade 6 and Grade 7 English joined Grade 5 on 12 Nov 2026
+  assert.deepEqual(ENGLISH_FAMILIES, [...entryFor('english', 4).families, ...entryFor('english', 5).families, ...entryFor('english', 6).families, ...entryFor('english', 7).families, ...entryFor('english', 8).families, ...entryFor('english', 9).families]);
 });
 
 test('every entry is complete and every family sits in its own entry', async () => {
@@ -72,7 +72,7 @@ test('the practice engine reads its subjects from the registry', () => {
   assert.deepEqual(Object.keys(SUBJECT_DEFS).slice(0, 2), ['science', 'english']);
   assert.equal(SUBJECT_DEFS.science.description, 'Science and Technology for Grades 4, 5, 6 from the CBC design');   // Grade 4 joined Grade 5 on 12 Nov 2026, Grade 6 after it
   assert.equal(Object.keys(subjectDef('science').map).length, 93);   // 33 skills in Grade 5, 25 in Grade 4 and 35 in Grade 6
-  assert.equal(Object.keys(subjectDef('english').map).length, 236);   // 41 skills in Grade 5, 52 in Grade 4, 50 in Grade 6, 71 in Grade 7 and 22 in Grade 8
+  assert.equal(Object.keys(subjectDef('english').map).length, 258);   // 41 skills in Grade 5, 52 in Grade 4, 50 in Grade 6, 71 in Grade 7, 22 in Grade 8 and 22 in Grade 9
 });
 
 test('the phone-bundle list names every family file and its signed list', async () => {

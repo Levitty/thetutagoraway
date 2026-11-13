@@ -1,0 +1,433 @@
+{
+ "outcomes": {
+  "ENGL.G9.LISTEN.T1_POLITE_LANGUAGE.a": "outline words and phrases used to express euphemism",
+  "ENGL.G9.LISTEN.T1_POLITE_LANGUAGE.b": "use euphemism to show politeness in communication",
+  "ENGL.G9.LISTEN.T1_POLITE_LANGUAGE.c": "conduct a debate while adhering to conventions of polite language",
+  "ENGL.G9.LISTEN.T1_POLITE_LANGUAGE.d": "acknowledge the importance of politeness in communication",
+  "ENGL.G9.READIN.T1_INDEPENDENT_READING_.a": "select reading materials from digital or non-digital sources",
+  "ENGL.G9.READIN.T1_INDEPENDENT_READING_.b": "read grade appropriate materials for lifelong learning",
+  "ENGL.G9.READIN.T1_INDEPENDENT_READING_.c": "create a reading log for monitoring reading activities",
+  "ENGL.G9.READIN.T1_INDEPENDENT_READING_.d": "recommend to peers suitable fiction and non-fiction materials to read",
+  "ENGL.G9.GRAMMA.T1_GENDER_NEUTRAL_LANGU.a": "identify gender biased words and phrases in oral and written texts",
+  "ENGL.G9.GRAMMA.T1_GENDER_NEUTRAL_LANGU.b": "use gender neutral words and phrases in sentences",
+  "ENGL.G9.GRAMMA.T1_GENDER_NEUTRAL_LANGU.c": "acknowledge the importance of gender sensitivity in communication",
+  "ENGL.G9.READIN.T1_PLAY_STRUCTURE_AND_S.a": "describe the structure and setting of a play",
+  "ENGL.G9.READIN.T1_PLAY_STRUCTURE_AND_S.b": "analyse the acts and scenes of a play for literary appreciation",
+  "ENGL.G9.READIN.T1_PLAY_STRUCTURE_AND_S.c": "recognise the role of literary appreciation in critical thinking",
+  "ENGL.G9.WRITIN.T1_LEGIBILITY_AND_NEATN.a": "identify sections of a piece of writing that require breaking of words and indentation",
+  "ENGL.G9.WRITIN.T1_LEGIBILITY_AND_NEATN.b": "indent paragraphs when writing a composition",
+  "ENGL.G9.WRITIN.T1_LEGIBILITY_AND_NEATN.c": "create a neat and legible text",
+  "ENGL.G9.WRITIN.T1_LEGIBILITY_AND_NEATN.d": "appreciate the importance of legibility and neatness in written communication",
+  "ENGL.G9.LISTEN.T2_ORAL_LITERATURE_SHOR.a": "identify the characteristics of riddles, tongue twisters and proverbs",
+  "ENGL.G9.LISTEN.T2_ORAL_LITERATURE_SHOR.b": "explain the functions of riddles, tongue twisters and proverbs",
+  "ENGL.G9.LISTEN.T2_ORAL_LITERATURE_SHOR.c": "perform riddles, tongue twisters and proverbs",
+  "ENGL.G9.LISTEN.T2_ORAL_LITERATURE_SHOR.d": "appreciate the importance of short forms in fostering fluency in communication",
+  "ENGL.G9.READIN.T2_INTENSIVE_READING_SI.a": "identify basic aspects of style such as repetition and rhyme in a poem",
+  "ENGL.G9.READIN.T2_INTENSIVE_READING_SI.b": "describe the functions of rhyme and repetition in a poem",
+  "ENGL.G9.READIN.T2_INTENSIVE_READING_SI.c": "appreciate the role of repetition and rhyme in a poem",
+  "ENGL.G9.GRAMMA.T2_NOUNS_AND_QUANTIFIER.a": "use quantifiers in sentence",
+  "ENGL.G9.GRAMMA.T2_NOUNS_AND_QUANTIFIER.b": "categorise count and non-count nouns in oral and written texts",
+  "ENGL.G9.GRAMMA.T2_NOUNS_AND_QUANTIFIER.c": "acknowledge the importance of quantifiers in oral and written communication",
+  "ENGL.G9.READIN.T2_INTENSIVE_READING_PL.a": "describe the sequence of events in a play",
+  "ENGL.G9.READIN.T2_INTENSIVE_READING_PL.b": "relate the events in a play to real life experiences",
+  "ENGL.G9.READIN.T2_INTENSIVE_READING_PL.c": "acknowledge the importance of a plot in a literary work",
+  "ENGL.G9.WRITIN.T2_MECHANICS_OF_WRITING.a": "identify the double quotation marks and the bracket in a text",
+  "ENGL.G9.WRITIN.T2_MECHANICS_OF_WRITING.b": "use the double quotation marks and the bracket in written texts",
+  "ENGL.G9.WRITIN.T2_MECHANICS_OF_WRITING.c": "appreciate the role of the double quotation marks and the bracket in written texts",
+  "ENGL.G9.LISTEN.T3_LISTENING_COMPREHENS.a": "identify the main idea and specific details from an argumentative text",
+  "ENGL.G9.LISTEN.T3_LISTENING_COMPREHENS.b": "listen for the main idea and specific information (details) in an argumentative text",
+  "ENGL.G9.LISTEN.T3_LISTENING_COMPREHENS.c": "acknowledge the need for comprehension in communication",
+  "ENGL.G9.READIN.T3_READING_FOR_INFORMAT.a": "infer the meaning of words, phrases and sentences from the context",
+  "ENGL.G9.READIN.T3_READING_FOR_INFORMAT.b": "make connections between events in a text and real life situations",
+  "ENGL.G9.READIN.T3_READING_FOR_INFORMAT.c": "value the need to comprehend the information in written texts",
+  "ENGL.G9.GRAMMA.T3_MODAL_AUXILIARIES.a": "identify modal auxiliaries in a passage",
+  "ENGL.G9.GRAMMA.T3_MODAL_AUXILIARIES.b": "use modal auxiliaries in sentences to express different moods",
+  "ENGL.G9.GRAMMA.T3_MODAL_AUXILIARIES.c": "value the importance of using modal auxiliaries in communication",
+  "ENGL.G9.READIN.T3_POEMS_STRUCTURE.a": "describe the structure of a poem",
+  "ENGL.G9.READIN.T3_POEMS_STRUCTURE.b": "analyse the use of personification in a poem",
+  "ENGL.G9.READIN.T3_POEMS_STRUCTURE.c": "create a poem based on a topic of interest",
+  "ENGL.G9.READIN.T3_POEMS_STRUCTURE.d": "appreciate the reading of poetry for enjoyment",
+  "ENGL.G9.WRITIN.T3_STRUCTURE_OF_A_PARAG.a": "outline the four characteristics of a well formed paragraph",
+  "ENGL.G9.WRITIN.T3_STRUCTURE_OF_A_PARAG.b": "create a paragraph that is well developed, coherent and unified",
+  "ENGL.G9.WRITIN.T3_STRUCTURE_OF_A_PARAG.c": "acknowledge the need for concise paragraphs in written communication",
+  "ENGL.G9.LISTEN.T4_SELECTIVE_LISTENING.a": "select required information from a listening text",
+  "ENGL.G9.LISTEN.T4_SELECTIVE_LISTENING.b": "make judgement on the message in the listening text",
+  "ENGL.G9.LISTEN.T4_SELECTIVE_LISTENING.c": "advocate the need for selective listening in various contexts",
+  "ENGL.G9.READIN.T4_INTENSIVE_READING.a": "predict events in a reading text",
+  "ENGL.G9.READIN.T4_INTENSIVE_READING.b": "outline the key events in a text",
+  "ENGL.G9.READIN.T4_INTENSIVE_READING.c": "answer direct and inferential questions for comprehension",
+  "ENGL.G9.READIN.T4_INTENSIVE_READING.d": "infer the meaning of new words and phrases using contextual clues",
+  "ENGL.G9.READIN.T4_INTENSIVE_READING.e": "relate the characters, events and places in the text to real life",
+  "ENGL.G9.READIN.T4_INTENSIVE_READING.f": "appreciate the importance of intensive reading in lifelong learning",
+  "ENGL.G9.GRAMMA.T4_PRESENT_AND_PAST_PER.a": "distinguish the present and past perfect aspect in sentences",
+  "ENGL.G9.GRAMMA.T4_PRESENT_AND_PAST_PER.b": "use present and past perfect aspect in sentences",
+  "ENGL.G9.GRAMMA.T4_PRESENT_AND_PAST_PER.c": "appreciate the importance of using tense in sentences",
+  "ENGL.G9.READIN.T4_PLAY_IDENTIFICATION_.a": "identify the characters in a play",
+  "ENGL.G9.READIN.T4_PLAY_IDENTIFICATION_.b": "use appropriate adjectives to describe the characters",
+  "ENGL.G9.READIN.T4_PLAY_IDENTIFICATION_.c": "describe the actions of the characters using appropriate adverbs",
+  "ENGL.G9.READIN.T4_PLAY_IDENTIFICATION_.d": "value the need to describe people and situations appropriately",
+  "ENGL.G9.WRITIN.T4_NARRATIVE_AND_DESCRI.a": "highlight the qualities of a well formed paragraph",
+  "ENGL.G9.WRITIN.T4_NARRATIVE_AND_DESCRI.b": "write narrative and descriptive paragraphs",
+  "ENGL.G9.WRITIN.T4_NARRATIVE_AND_DESCRI.c": "use the first person and second person in narrative and descriptive paragraphs",
+  "ENGL.G9.WRITIN.T4_NARRATIVE_AND_DESCRI.d": "value the need for well formed paragraphs in written communication",
+  "ENGL.G9.LISTEN.T5_PRONUNCIATION.a": "pronounce the semi vowels /j/ /w/ and the diphthongs /aɪ/ and /eɪ/ words with clarity",
+  "ENGL.G9.LISTEN.T5_PRONUNCIATION.b": "apply stress on content and function words appropriately for speech clarity",
+  "ENGL.G9.LISTEN.T5_PRONUNCIATION.c": "appreciate the importance of correct pronunciation in communication",
+  "ENGL.G9.READIN.T5_REFERENCE_MATERIALS_.a": "outline various types of reference materials and their uses",
+  "ENGL.G9.READIN.T5_REFERENCE_MATERIALS_.b": "use the dictionary, thesaurus and subject specific encyclopaedia to check the meaning and usage of words",
+  "ENGL.G9.READIN.T5_REFERENCE_MATERIALS_.c": "conduct research on a topic of interest using the dictionary, thesaurus and encyclopaedia",
+  "ENGL.G9.READIN.T5_REFERENCE_MATERIALS_.d": "acknowledge the value of reference materials in research",
+  "ENGL.G9.GRAMMA.T5_ORDER_OF_ADJECTIVES.a": "identify various types of adjectives in texts",
+  "ENGL.G9.GRAMMA.T5_ORDER_OF_ADJECTIVES.b": "use the correct order of adjectives in oral and written texts",
+  "ENGL.G9.GRAMMA.T5_ORDER_OF_ADJECTIVES.c": "appreciate the role of order of adjectives in communication for clarity",
+  "ENGL.G9.READIN.T5_PLAY_STYLE_CLASS_REA.a": "identify the features of style used in a play with examples",
+  "ENGL.G9.READIN.T5_PLAY_STYLE_CLASS_REA.b": "relate the stylistic features to the message in a play",
+  "ENGL.G9.READIN.T5_PLAY_STYLE_CLASS_REA.c": "value the role of varied styles in reinforcing the message in a play",
+  "ENGL.G9.WRITIN.T5_LETTER_OF_APPLICATIO.a": "identify the components of a letter of application",
+  "ENGL.G9.WRITIN.T5_LETTER_OF_APPLICATIO.b": "write a letter of application for placement at Senior School using all the components",
+  "ENGL.G9.WRITIN.T5_LETTER_OF_APPLICATIO.c": "advocate the need to adhere to the format of formal letter writing",
+  "ENGL.G9.LISTEN.T6_CONVERSATIONAL_SKILL.a": "identify words and phrases used during negotiations",
+  "ENGL.G9.LISTEN.T6_CONVERSATIONAL_SKILL.b": "use verbal and non-verbal cues during negotiations",
+  "ENGL.G9.LISTEN.T6_CONVERSATIONAL_SKILL.c": "acknowledge the importance of negotiation skills in communication",
+  "ENGL.G9.READIN.T6_READING_FLUENCY.a": "outline ways of enhancing fluency in reading",
+  "ENGL.G9.READIN.T6_READING_FLUENCY.b": "read a text at the right speed, accurately and with expression for effective communication",
+  "ENGL.G9.READIN.T6_READING_FLUENCY.c": "acknowledge the role of reading fluently in extensive reading",
+  "ENGL.G9.GRAMMA.T6_COMPARISON_OF_ADVERB.a": "identify the degrees of comparison in adverbs",
+  "ENGL.G9.GRAMMA.T6_COMPARISON_OF_ADVERB.b": "use positive, comparative and superlative degrees of adverbs in sentences",
+  "ENGL.G9.GRAMMA.T6_COMPARISON_OF_ADVERB.c": "appreciate the importance of the correct usage of adverbs",
+  "ENGL.G9.READIN.T6_INTENSIVE_READING_PL.a": "identify the themes in a play or a section of a play",
+  "ENGL.G9.READIN.T6_INTENSIVE_READING_PL.b": "analyse the themes in a play",
+  "ENGL.G9.READIN.T6_INTENSIVE_READING_PL.c": "relate the themes in a play to real life",
+  "ENGL.G9.READIN.T6_INTENSIVE_READING_PL.d": "appreciate the role of literary appreciation in the development of critical thinking skills",
+  "ENGL.G9.WRITIN.T6_MECHANICS_OF_WRITING.a": "recognise homonyms, homophones, double consonants and double vowels in written texts",
+  "ENGL.G9.WRITIN.T6_MECHANICS_OF_WRITING.b": "spell commonly misspelt words for writing fluency",
+  "ENGL.G9.WRITIN.T6_MECHANICS_OF_WRITING.c": "value the importance of correct spelling in written communication",
+  "ENGL.G9.LISTEN.T7_LISTENING_COMPREHENS.a": "select the main idea from a listening passage",
+  "ENGL.G9.LISTEN.T7_LISTENING_COMPREHENS.b": "respond to questions based on the listening passage",
+  "ENGL.G9.LISTEN.T7_LISTENING_COMPREHENS.c": "acknowledge the importance of attentive listening",
+  "ENGL.G9.READIN.T7_INTENSIVE_READING_IN.a": "distinguish between reading for interpretation and reading for evaluation of information",
+  "ENGL.G9.READIN.T7_INTENSIVE_READING_IN.b": "interpret a reading text for lifelong learning",
+  "ENGL.G9.READIN.T7_INTENSIVE_READING_IN.c": "summarise information in a reading text",
+  "ENGL.G9.READIN.T7_INTENSIVE_READING_IN.d": "appreciate the role of correct interpretation and evaluation of a text in learning",
+  "ENGL.G9.GRAMMA.T7_RELATIVE_PRONOUNS_IN.a": "recognise relative and interrogative pronouns in a text",
+  "ENGL.G9.GRAMMA.T7_RELATIVE_PRONOUNS_IN.b": "use relative and interrogative pronouns in sentences",
+  "ENGL.G9.GRAMMA.T7_RELATIVE_PRONOUNS_IN.c": "acknowledge the value of relative and interrogative pronouns in communication",
+  "ENGL.G9.READIN.T7_INTENSIVE_READING_PL.a": "identify the characters in a play for deeper understanding",
+  "ENGL.G9.READIN.T7_INTENSIVE_READING_PL.b": "analyse the characters in a play and their relationship",
+  "ENGL.G9.READIN.T7_INTENSIVE_READING_PL.c": "value the role of literary appreciation in developing critical thinking",
+  "ENGL.G9.WRITIN.T7_THE_WRITING_PROCESS.a": "outline the stages of the writing process",
+  "ENGL.G9.WRITIN.T7_THE_WRITING_PROCESS.b": "create a composition, story or poem following the steps of the writing process",
+  "ENGL.G9.WRITIN.T7_THE_WRITING_PROCESS.c": "advocate the need for creativity in life",
+  "ENGL.G9.LISTEN.T8_ORAL_POETRY.a": "interpret oral poems on varied issues",
+  "ENGL.G9.LISTEN.T8_ORAL_POETRY.b": "perform an oral poem using performance techniques",
+  "ENGL.G9.LISTEN.T8_ORAL_POETRY.c": "acknowledge the role of oral poetry in the preservation of our cultural heritage",
+  "ENGL.G9.READIN.T8_READING_FOR_INTERPRE.a": "identify the point of view in a poem",
+  "ENGL.G9.READIN.T8_READING_FOR_INTERPRE.b": "analyse the point of view in a poem",
+  "ENGL.G9.READIN.T8_READING_FOR_INTERPRE.c": "acknowledge the importance of the point of view in the understanding of a poem",
+  "ENGL.G9.GRAMMA.T8_COMPLEX_PREPOSITIONS.a": "recognise complex prepositions in texts",
+  "ENGL.G9.GRAMMA.T8_COMPLEX_PREPOSITIONS.b": "use complex prepositions in sentences",
+  "ENGL.G9.GRAMMA.T8_COMPLEX_PREPOSITIONS.c": "appreciate the role of prepositions in oral and written communication",
+  "ENGL.G9.READIN.T8_POETRY_CHARACTERS.a": "identify the persona and other participants in a poem",
+  "ENGL.G9.READIN.T8_POETRY_CHARACTERS.b": "analyse the character of the speaker (persona) and the other participants in a poem",
+  "ENGL.G9.READIN.T8_POETRY_CHARACTERS.c": "acknowledge the importance of characters in literary appreciation",
+  "ENGL.G9.WRITIN.T8_ASSESSING_WRITING.a": "identify the qualities of a well written composition",
+  "ENGL.G9.WRITIN.T8_ASSESSING_WRITING.b": "write a composition related to the theme",
+  "ENGL.G9.WRITIN.T8_ASSESSING_WRITING.c": "assess a composition against a predesigned criteria",
+  "ENGL.G9.WRITIN.T8_ASSESSING_WRITING.d": "value the need for clarity and cohesion in written communication",
+  "ENGL.G9.LISTEN.T9_DIPHTHONGS_AND_SENTE.a": "identify words with the diphthongs /aʊ/ and /ʊə/ in a text",
+  "ENGL.G9.LISTEN.T9_DIPHTHONGS_AND_SENTE.b": "use emphatic stress in words to convey meanings",
+  "ENGL.G9.LISTEN.T9_DIPHTHONGS_AND_SENTE.c": "advocate the need for accurate pronunciation in oral communication",
+  "ENGL.G9.READIN.T9_EXTENSIVE_READING_GR.a": "select a reading text from a collection of books or the library",
+  "ENGL.G9.READIN.T9_EXTENSIVE_READING_GR.b": "read a text for information and enjoyment",
+  "ENGL.G9.READIN.T9_EXTENSIVE_READING_GR.c": "appreciate the role of extensive reading in lifelong learning",
+  "ENGL.G9.GRAMMA.T9_CONJUNCTIONS_CORRELA.a": "identify correlative conjunctions in texts",
+  "ENGL.G9.GRAMMA.T9_CONJUNCTIONS_CORRELA.b": "use correlative conjunctions in sentences",
+  "ENGL.G9.GRAMMA.T9_CONJUNCTIONS_CORRELA.c": "appreciate use of correlative conjunctions for effective communication",
+  "ENGL.G9.READIN.T9_PLAY_STYLE_CLASS_REA.a": "identify features of style used in a play",
+  "ENGL.G9.READIN.T9_PLAY_STYLE_CLASS_REA.b": "relate features of style to the meaning of a play",
+  "ENGL.G9.READIN.T9_PLAY_STYLE_CLASS_REA.c": "acknowledge the importance of stylistic features in literary appreciation",
+  "ENGL.G9.WRITIN.T9_NARRATIVE_COMPOSITIO.a": "identify the elements of a narrative composition",
+  "ENGL.G9.WRITIN.T9_NARRATIVE_COMPOSITIO.b": "use the elements of a narrative composition in a story",
+  "ENGL.G9.WRITIN.T9_NARRATIVE_COMPOSITIO.c": "appreciate the role of background information in the creation of credible stories",
+  "ENGL.G9.LISTEN.T10_IMPROMPTU_SPEECHES.a": "outline the procedure for preparing for an impromptu speech",
+  "ENGL.G9.LISTEN.T10_IMPROMPTU_SPEECHES.b": "make an impromptu speech on a selected topic",
+  "ENGL.G9.LISTEN.T10_IMPROMPTU_SPEECHES.c": "acknowledge the importance of excellent presentation skills in speech delivery",
+  "ENGL.G9.READIN.T10_NOTE_MAKING.a": "identify main points or ideas in an argumentative passage",
+  "ENGL.G9.READIN.T10_NOTE_MAKING.b": "make notes from an argumentative passage",
+  "ENGL.G9.READIN.T10_NOTE_MAKING.c": "value the importance of note making while reading for pleasure or academic purposes",
+  "ENGL.G9.GRAMMA.T10_DETERMINERS_NUMERALS.a": "identify numerals and ordinals used as determiners in a text",
+  "ENGL.G9.GRAMMA.T10_DETERMINERS_NUMERALS.b": "use numerals and ordinals as determiners in sentences",
+  "ENGL.G9.GRAMMA.T10_DETERMINERS_NUMERALS.c": "appreciate the need for well -formed sentences in communication",
+  "ENGL.G9.READIN.T10_PLAY_PROJECT.a": "identify simple props and costumes that create mood and atmosphere",
+  "ENGL.G9.READIN.T10_PLAY_PROJECT.b": "present dramatised parts of a play to an audience",
+  "ENGL.G9.READIN.T10_PLAY_PROJECT.c": "acknowledge the effectiveness of the performance in delivering the play’s message",
+  "ENGL.G9.WRITIN.T10_FILLING_FORMS_APPLIC.a": "recognise bursary and scholarship application forms from a list of forms",
+  "ENGL.G9.WRITIN.T10_FILLING_FORMS_APPLIC.b": "fill in bursary and scholarship application forms while adhering to conventions",
+  "ENGL.G9.WRITIN.T10_FILLING_FORMS_APPLIC.c": "value the importance of giving accurate and sufficient information in forms",
+  "ENGL.G9.LISTEN.T11_CONVERSATION_SKILLS_.a": "outline preparations undertaken by an interviewer and interviewee before a job interview",
+  "ENGL.G9.LISTEN.T11_CONVERSATION_SKILLS_.b": "ask and answer appropriate questions in mock job interviews",
+  "ENGL.G9.LISTEN.T11_CONVERSATION_SKILLS_.c": "recognise excellent interview skills as a positive step towards getting a job",
+  "ENGL.G9.READIN.T11_EXTENSIVE_READING_FI.a": "distinguish between fiction and non-fiction reading materials",
+  "ENGL.G9.READIN.T11_EXTENSIVE_READING_FI.b": "select and read grade appropriate fiction materials",
+  "ENGL.G9.READIN.T11_EXTENSIVE_READING_FI.c": "keep a portfolio of the subject matter",
+  "ENGL.G9.READIN.T11_EXTENSIVE_READING_FI.d": "appreciate the importance of reading fiction for exposure",
+  "ENGL.G9.GRAMMA.T11_WORD_CLASSES_NOUNS.a": "identify nouns formed from verbs and other nouns from a text",
+  "ENGL.G9.GRAMMA.T11_WORD_CLASSES_NOUNS.b": "use nouns formed from verbs and other nouns in sentences",
+  "ENGL.G9.GRAMMA.T11_WORD_CLASSES_NOUNS.c": "acknowledge the necessity of forming words from other word classes in the process of communication",
+  "ENGL.G9.READIN.T11_GRADE_APPROPRIATE_PL.a": "identify and illustrate the lessons learnt from a play",
+  "ENGL.G9.READIN.T11_GRADE_APPROPRIATE_PL.b": "relate the lessons learnt to real life experiences",
+  "ENGL.G9.READIN.T11_GRADE_APPROPRIATE_PL.c": "perceive plays as sources of life lessons and entertainment",
+  "ENGL.G9.WRITIN.T11_MECHANICS_OF_WRITING.a": "spell words for effective communication",
+  "ENGL.G9.WRITIN.T11_MECHANICS_OF_WRITING.b": "write common abbreviations and acronyms in full",
+  "ENGL.G9.WRITIN.T11_MECHANICS_OF_WRITING.c": "appreciate the importance of abbreviations and acronyms in writing. • write a paragraph on how to make savings from income generating activities containing words to be abbreviated, • assess the correctness of the paragraph in groups",
+  "ENGL.G9.LISTEN.T12_LISTENING_TO_RESPOND.a": "identify words and expressions used to describe their feelings towards a poem",
+  "ENGL.G9.LISTEN.T12_LISTENING_TO_RESPOND.b": "express their feelings towards the subject matter of a poem",
+  "ENGL.G9.LISTEN.T12_LISTENING_TO_RESPOND.c": "value the importance of poem recitation for effective communication",
+  "ENGL.G9.READIN.T12_INTENSIVE_READING_CO.a": "identify clues in the passage from which conclusions can be drawn",
+  "ENGL.G9.READIN.T12_INTENSIVE_READING_CO.b": "infer information and meaning of words and expressions from a passage",
+  "ENGL.G9.READIN.T12_INTENSIVE_READING_CO.c": "summarise ideas in a passage",
+  "ENGL.G9.READIN.T12_INTENSIVE_READING_CO.d": "apply the skills of making inferences and drawing conclusions in independent reading",
+  "ENGL.G9.GRAMMA.T12_PHRASAL_VERBS.a": "identify phrasal verbs formed from break, hang, run and turn in texts",
+  "ENGL.G9.GRAMMA.T12_PHRASAL_VERBS.b": "use the given phrasal verbs in sentences of their own",
+  "ENGL.G9.GRAMMA.T12_PHRASAL_VERBS.c": "value the importance of using phrasal verbs in spoken and written communication",
+  "ENGL.G9.READIN.T12_PLAY_CHARACTERISATIO.a": "outline the clues for identifying traits of different characters in a play",
+  "ENGL.G9.READIN.T12_PLAY_CHARACTERISATIO.b": "use the clues to describe the characters in a play",
+  "ENGL.G9.READIN.T12_PLAY_CHARACTERISATIO.c": "appreciate the role of characterisation in determining virtues and vices in the society",
+  "ENGL.G9.WRITIN.T12_THE_WRITING_PROCESS_.a": "outline the different stages of the writing process",
+  "ENGL.G9.WRITIN.T12_THE_WRITING_PROCESS_.b": "apply the writing process in creating a dialogue on a relevant theme",
+  "ENGL.G9.WRITIN.T12_THE_WRITING_PROCESS_.c": "emphasise the importance of each of the stages in the writing process in crafting flawless dialogues",
+  "ENGL.G9.LISTEN.T13_EXTENSIVE_LISTENING_.a": "identify the issue addressed by the different speeches listened to",
+  "ENGL.G9.LISTEN.T13_EXTENSIVE_LISTENING_.b": "take notes on the points made by the different speakers on the issue",
+  "ENGL.G9.LISTEN.T13_EXTENSIVE_LISTENING_.c": "acknowledge the importance of getting information from varied sources",
+  "ENGL.G9.READIN.T13_INTENSIVE_READING_VI.a": "identify mental images created from a read passage",
+  "ENGL.G9.READIN.T13_INTENSIVE_READING_VI.b": "summarise what a passage is about",
+  "ENGL.G9.READIN.T13_INTENSIVE_READING_VI.c": "appreciate the role of visualising and summarising in enhancing understanding of a text",
+  "ENGL.G9.GRAMMA.T13_SENTENCES_COMPLEX_SE.a": "identify subordinating conjunctions in sentences",
+  "ENGL.G9.GRAMMA.T13_SENTENCES_COMPLEX_SE.b": "construct complex sentences using subordinating conjunctions learnt",
+  "ENGL.G9.GRAMMA.T13_SENTENCES_COMPLEX_SE.c": "correct disjointed sentences using the rule of subordinating conjunctions",
+  "ENGL.G9.READIN.T13_GRADE_APPROPRIATE_PL.a": "identify the styles of humour and monologue in a play",
+  "ENGL.G9.READIN.T13_GRADE_APPROPRIATE_PL.b": "dramatise instances of humour and monologue in a play",
+  "ENGL.G9.READIN.T13_GRADE_APPROPRIATE_PL.c": "acknowledge the role of humour and monologue in enriching a literary work",
+  "ENGL.G9.WRITIN.T13_CREATIVE_WRITING_IDI.a": "explain the meaning of given idioms in different contexts",
+  "ENGL.G9.WRITIN.T13_CREATIVE_WRITING_IDI.b": "use a variety of idioms in writing narrative compositions",
+  "ENGL.G9.WRITIN.T13_CREATIVE_WRITING_IDI.c": "encourage peers to use idioms appropriately in speech and writing",
+  "ENGL.G9.LISTEN.T14_INTONATION_IN_SENTEN.a": "write the correct form of question tags in sentences",
+  "ENGL.G9.LISTEN.T14_INTONATION_IN_SENTEN.b": "apply question tags appropriately in communication",
+  "ENGL.G9.LISTEN.T14_INTONATION_IN_SENTEN.c": "compose sentences using question tags correctly",
+  "ENGL.G9.LISTEN.T14_INTONATION_IN_SENTEN.d": "appreciate the importance of question tags and correct intonation in communication",
+  "ENGL.G9.READIN.T14_SUMMARISING_ARGUMENT.a": "pick out the main points discussed in a text",
+  "ENGL.G9.READIN.T14_SUMMARISING_ARGUMENT.b": "organise an outline of points into a coherent whole",
+  "ENGL.G9.READIN.T14_SUMMARISING_ARGUMENT.c": "summarise a text correctly in their own words",
+  "ENGL.G9.READIN.T14_SUMMARISING_ARGUMENT.d": "realise the importance of good summary writing skills",
+  "ENGL.G9.GRAMMA.T14_SENTENCES_DIRECT_AND.a": "differentiate between direct and indirect speech",
+  "ENGL.G9.GRAMMA.T14_SENTENCES_DIRECT_AND.b": "convert direct speech into indirect speech",
+  "ENGL.G9.GRAMMA.T14_SENTENCES_DIRECT_AND.c": "use the correct punctuation marks in direct speech",
+  "ENGL.G9.GRAMMA.T14_SENTENCES_DIRECT_AND.d": "apply direct and indirect speech correctly in communication",
+  "ENGL.G9.READIN.T14_INTENSIVE_READING_PL.a": "identify the characters in a play",
+  "ENGL.G9.READIN.T14_INTENSIVE_READING_PL.b": "discuss the various themes in a play",
+  "ENGL.G9.READIN.T14_INTENSIVE_READING_PL.c": "relate the characters and themes to real life",
+  "ENGL.G9.READIN.T14_INTENSIVE_READING_PL.d": "participate in a stage performance of a play",
+  "ENGL.G9.READIN.T14_INTENSIVE_READING_PL.e": "appreciate the beauty of performance of a literary text",
+  "ENGL.G9.WRITIN.T14_DESCRIPTIVE_WRITING_.a": "use the correct writing process to write a composition",
+  "ENGL.G9.WRITIN.T14_DESCRIPTIVE_WRITING_.b": "spell words correctly in composition writing",
+  "ENGL.G9.WRITIN.T14_DESCRIPTIVE_WRITING_.c": "apply the five senses in writing descriptive compositions",
+  "ENGL.G9.WRITIN.T14_DESCRIPTIVE_WRITING_.d": "display creativity and imagination in composition writing",
+  "ENGL.G9.WRITIN.T14_DESCRIPTIVE_WRITING_.e": "recognise the importance of creativity in writing",
+  "ENGL.G9.LISTEN.T15_ORAL_REPORTS_NEWS_RO.a": "read a short report within a specified number of minutes",
+  "ENGL.G9.LISTEN.T15_ORAL_REPORTS_NEWS_RO.b": "analyse a recorded grade appropriate oral news report",
+  "ENGL.G9.LISTEN.T15_ORAL_REPORTS_NEWS_RO.c": "apply the features of oral presentations for effective communication",
+  "ENGL.G9.LISTEN.T15_ORAL_REPORTS_NEWS_RO.d": "appreciate the importance of fluency in news report",
+  "ENGL.G9.READIN.T15_READING_FLUENCY.a": "preview a text while ignoring unknown words",
+  "ENGL.G9.READIN.T15_READING_FLUENCY.b": "make predictions about the characters, events and the message in a given text",
+  "ENGL.G9.READIN.T15_READING_FLUENCY.c": "skim a text to get the gist",
+  "ENGL.G9.READIN.T15_READING_FLUENCY.d": "scan a text to obtain specific information",
+  "ENGL.G9.READIN.T15_READING_FLUENCY.e": "advocate the role of reading fluency in communication",
+  "ENGL.G9.GRAMMA.T15_SENTENCES_1_IMPERATI.a": "identify instances where the two types of sentences are used correctly in printed handouts or online texts",
+  "ENGL.G9.GRAMMA.T15_SENTENCES_1_IMPERATI.b": "punctuate given texts by use of the appropriate punctuation marks",
+  "ENGL.G9.GRAMMA.T15_SENTENCES_1_IMPERATI.c": "appreciate the use of exclamatory and imperative sentences in spoken language",
+  "ENGL.G9.READIN.T15_INTENSIVE_READING_PO.a": "explain why it is important to relate ideas learnt in poems to real life",
+  "ENGL.G9.READIN.T15_INTENSIVE_READING_PO.b": "relate ideas in poems on tourist attraction sites to real life",
+  "ENGL.G9.READIN.T15_INTENSIVE_READING_PO.c": "acknowledge the need to relate ideas in poems to real life",
+  "ENGL.G9.WRITIN.T15_EMAILS.a": "identify the key elements of an email",
+  "ENGL.G9.WRITIN.T15_EMAILS.b": "apply the elements in writing an email",
+  "ENGL.G9.WRITIN.T15_EMAILS.c": "appreciate the importance of writing emails"
+ },
+ "skills": {
+  "ENGL.G9.GRAMMA.T1_GENDER_NEUTRAL_LANGU.GENDER_NEUTRAL": {
+   "forms": [
+    "pick the right answer",
+    "pick the right answer in a short story",
+    "find the false step in a learner's reason"
+   ],
+   "mastery": "The child spots gender-biased words (chairman, policeman, fireman, waitress, mankind) and picks neutral ones (chairperson, police officer, firefighter, server, humankind), and says a job word should not assume the sex of the worker. Evidence rule: at least four of the last five fresh questions right across at least two question forms, and no repeated pick of the same misconception."
+  },
+  "ENGL.G9.GRAMMA.T2_NOUNS_AND_QUANTIFIER.QUANTIFIERS": {
+   "forms": [
+    "pick the right answer",
+    "pick the right answer in a short story",
+    "find the false step in a learner's reason"
+   ],
+   "mastery": "The child uses many, few and a number of with count nouns, much and little with non-count nouns, and some, a lot of and plenty of with both; he sorts nouns (books, chairs: count; water, advice: non-count). Evidence rule: at least four of the last five fresh questions right across at least two question forms, and no repeated pick of the same misconception."
+  },
+  "ENGL.G9.WRITIN.T2_MECHANICS_OF_WRITING.QUOTES_BRACKETS": {
+   "forms": [
+    "pick the right answer",
+    "pick the right answer in a short story",
+    "find the false step in a learner's reason"
+   ],
+   "mastery": "The child puts the exact words spoken inside double quotation marks, and puts extra information or an explanation inside brackets, and does not use brackets for speech. Evidence rule: at least four of the last five fresh questions right across at least two question forms, and no repeated pick of the same misconception."
+  },
+  "ENGL.G9.GRAMMA.T3_MODAL_AUXILIARIES.MODALS": {
+   "forms": [
+    "pick the right answer",
+    "pick the right answer in a short story",
+    "find the false step in a learner's reason"
+   ],
+   "mastery": "The child says can and could show ability, may and might permission or possibility, must and should duty or advice, and that a modal is followed by the base verb. Evidence rule: at least four of the last five fresh questions right across at least two question forms, and no repeated pick of the same misconception."
+  },
+  "ENGL.G9.READIN.T3_POEMS_STRUCTURE.POEM_FEATURES": {
+   "forms": [
+    "pick the right answer",
+    "pick the right answer in a short story",
+    "find the false step in a learner's reason"
+   ],
+   "mastery": "The child says a poem is made of lines grouped in stanzas, that rhyme is repeated end sounds, and that personification gives human actions or feelings to a thing, as in \"the wind whispered\". Evidence rule: at least four of the last five fresh questions right across at least two question forms, and no repeated pick of the same misconception."
+  },
+  "ENGL.G9.WRITIN.T3_STRUCTURE_OF_A_PARAG.PARAGRAPH": {
+   "forms": [
+    "pick the right answer",
+    "pick the right answer in a short story",
+    "find the false step in a learner's reason"
+   ],
+   "mastery": "The child says a good paragraph has a topic sentence, supporting sentences, unity (one idea), coherence (ideas in order, joined by linking words) and a closing sentence. Evidence rule: at least four of the last five fresh questions right across at least two question forms, and no repeated pick of the same misconception."
+  },
+  "ENGL.G9.GRAMMA.T4_PRESENT_AND_PAST_PER.PERFECT": {
+   "forms": [
+    "pick the right answer",
+    "pick the right answer in a short story",
+    "find the false step in a learner's reason"
+   ],
+   "mastery": "The child says the present perfect is have or has plus the past participle (She has finished) and the past perfect is had plus the past participle (She had finished before I came). Evidence rule: at least four of the last five fresh questions right across at least two question forms, and no repeated pick of the same misconception."
+  },
+  "ENGL.G9.GRAMMA.T5_ORDER_OF_ADJECTIVES.ADJ_ORDER": {
+   "forms": [
+    "pick the right answer",
+    "pick the right answer in a short story",
+    "find the false step in a learner's reason"
+   ],
+   "mastery": "The child says adjectives go in the order opinion, size, age, colour, origin, material, so we say \"a lovely small old brown wooden box\". Evidence rule: at least four of the last five fresh questions right across at least two question forms, and no repeated pick of the same misconception."
+  },
+  "ENGL.G9.WRITIN.T5_LETTER_OF_APPLICATIO.LETTER_APPLICATION": {
+   "forms": [
+    "pick the right answer",
+    "pick the right answer in a short story",
+    "find the false step in a learner's reason"
+   ],
+   "mastery": "The child names the writer's address, date, receiver's address, salutation (Dear Sir or Madam), subject line, body, subscription (Yours faithfully) and signature, and says Yours faithfully goes with Dear Sir or Madam. Evidence rule: at least four of the last five fresh questions right across at least two question forms, and no repeated pick of the same misconception."
+  },
+  "ENGL.G9.GRAMMA.T6_COMPARISON_OF_ADVERB.ADVERB_DEGREES": {
+   "forms": [
+    "pick the right answer",
+    "pick the right answer in a short story",
+    "find the false step in a learner's reason"
+   ],
+   "mastery": "The child says the positive (fast), comparative (faster, more carefully) and superlative (fastest, most carefully) and that long adverbs take more and most. Evidence rule: at least four of the last five fresh questions right across at least two question forms, and no repeated pick of the same misconception."
+  },
+  "ENGL.G9.WRITIN.T6_MECHANICS_OF_WRITING.SPELLING": {
+   "forms": [
+    "pick the right answer",
+    "pick the right answer in a short story",
+    "find the false step in a learner's reason"
+   ],
+   "mastery": "The child says homophones sound alike but differ in spelling and meaning (their and there), homonyms share spelling and sound (bank), and spells words such as separate, necessary, beginning and committee. Evidence rule: at least four of the last five fresh questions right across at least two question forms, and no repeated pick of the same misconception."
+  },
+  "ENGL.G9.GRAMMA.T7_RELATIVE_PRONOUNS_IN.RELATIVE_PRONOUNS": {
+   "forms": [
+    "pick the right answer",
+    "pick the right answer in a short story",
+    "find the false step in a learner's reason"
+   ],
+   "mastery": "The child says who and whom refer to people, which to things and animals, whose to belonging, that to people or things, and that who, what, which and whose also start questions. Evidence rule: at least four of the last five fresh questions right across at least two question forms, and no repeated pick of the same misconception."
+  },
+  "ENGL.G9.GRAMMA.T8_COMPLEX_PREPOSITIONS.COMPLEX_PREPS": {
+   "forms": [
+    "pick the right answer",
+    "pick the right answer in a short story",
+    "find the false step in a learner's reason"
+   ],
+   "mastery": "The child names complex prepositions of two or three words (because of, in front of, instead of, in spite of, according to, on behalf of) and uses them correctly. Evidence rule: at least four of the last five fresh questions right across at least two question forms, and no repeated pick of the same misconception."
+  },
+  "ENGL.G9.GRAMMA.T9_CONJUNCTIONS_CORRELA.CORRELATIVE": {
+   "forms": [
+    "pick the right answer",
+    "pick the right answer in a short story",
+    "find the false step in a learner's reason"
+   ],
+   "mastery": "The child pairs either with or, neither with nor, both with and, not only with but also, and whether with or. Evidence rule: at least four of the last five fresh questions right across at least two question forms, and no repeated pick of the same misconception."
+  },
+  "ENGL.G9.WRITIN.T9_NARRATIVE_COMPOSITIO.NARRATIVE_ELEMENTS": {
+   "forms": [
+    "pick the right answer",
+    "pick the right answer in a short story",
+    "find the false step in a learner's reason"
+   ],
+   "mastery": "The child names characters, setting, plot (beginning, complication, climax, resolution) and theme, and says background information makes a story believable. Evidence rule: at least four of the last five fresh questions right across at least two question forms, and no repeated pick of the same misconception."
+  },
+  "ENGL.G9.GRAMMA.T10_DETERMINERS_NUMERALS.DETERMINERS_NUM": {
+   "forms": [
+    "pick the right answer",
+    "pick the right answer in a short story",
+    "find the false step in a learner's reason"
+   ],
+   "mastery": "The child says cardinal numbers (two, ten) count and ordinal numbers (second, tenth) give position, and both come before the noun. Evidence rule: at least four of the last five fresh questions right across at least two question forms, and no repeated pick of the same misconception."
+  },
+  "ENGL.G9.GRAMMA.T11_WORD_CLASSES_NOUNS.NOUNS_FORMED": {
+   "forms": [
+    "pick the right answer",
+    "pick the right answer in a short story",
+    "find the false step in a learner's reason"
+   ],
+   "mastery": "The child forms nouns from verbs (decide to decision, teach to teacher, move to movement) and from other nouns (child to childhood, friend to friendship). Evidence rule: at least four of the last five fresh questions right across at least two question forms, and no repeated pick of the same misconception."
+  },
+  "ENGL.G9.WRITIN.T11_MECHANICS_OF_WRITING.ABBREVIATIONS": {
+   "forms": [
+    "pick the right answer",
+    "pick the right answer in a short story",
+    "find the false step in a learner's reason"
+   ],
+   "mastery": "The child gives the full form of common abbreviations and acronyms such as e.g. (for example), i.e. (that is), etc. (and so on), UN (United Nations), WHO (World Health Organisation) and ICT (information and communication technology). Evidence rule: at least four of the last five fresh questions right across at least two question forms, and no repeated pick of the same misconception."
+  },
+  "ENGL.G9.GRAMMA.T12_PHRASAL_VERBS.PHRASAL_VERBS": {
+   "forms": [
+    "pick the right answer",
+    "pick the right answer in a short story",
+    "find the false step in a learner's reason"
+   ],
+   "mastery": "The child knows break down (stop working), break out (start suddenly), hang on (wait), hang up (end a call), run out of (have no more), run into (meet by chance), turn up (arrive), turn down (refuse). Evidence rule: at least four of the last five fresh questions right across at least two question forms, and no repeated pick of the same misconception."
+  },
+  "ENGL.G9.GRAMMA.T13_SENTENCES_COMPLEX_SE.SUBORDINATING": {
+   "forms": [
+    "pick the right answer",
+    "pick the right answer in a short story",
+    "find the false step in a learner's reason"
+   ],
+   "mastery": "The child picks because (reason), although (contrast), if and unless (condition), when and while (time) and since, and says a complex sentence has a main clause and a subordinate clause. Evidence rule: at least four of the last five fresh questions right across at least two question forms, and no repeated pick of the same misconception."
+  },
+  "ENGL.G9.GRAMMA.T14_SENTENCES_DIRECT_AND.DIRECT_INDIRECT": {
+   "forms": [
+    "pick the right answer",
+    "pick the right answer in a short story",
+    "find the false step in a learner's reason"
+   ],
+   "mastery": "The child says direct speech gives the exact words in quotation marks and indirect speech reports them without quotation marks, with tense and pronouns changed (am becomes was, now becomes then). Evidence rule: at least four of the last five fresh questions right across at least two question forms, and no repeated pick of the same misconception."
+  },
+  "ENGL.G9.GRAMMA.T15_SENTENCES_1_IMPERATI.EXCLAM_IMPERATIVE": {
+   "forms": [
+    "pick the right answer",
+    "pick the right answer in a short story",
+    "find the false step in a learner's reason"
+   ],
+   "mastery": "The child says an imperative gives a command or request and ends with a full stop or exclamation mark, and an exclamatory sentence shows strong feeling and ends with an exclamation mark. Evidence rule: at least four of the last five fresh questions right across at least two question forms, and no repeated pick of the same misconception."
+  }
+ }
+}
