@@ -181,12 +181,12 @@ const KAMUSI = [
   ['Kati ya "ua", "ardhi" na "wali", neno linalokuja kwanza kwenye kamusi ni ___.', 'ardhi', ['ua', 'M_KAM_LENGTH'], ['wali', 'M_KAM_REVERSE'], 'Herufi ya kwanza ya ardhi ni a, na a huja kabla ya u na w.'],
   ['Kati ya "mto", "kalamu" na "zulia", neno linalokuja kwanza kwenye kamusi ni ___.', 'kalamu', ['mto', 'M_KAM_LENGTH'], ['zulia', 'M_KAM_REVERSE'], 'Herufi ya kwanza ya kalamu ni k, na k huja kabla ya m na z.'],
   ['Kati ya "tai", "hospitali" na "wimbo", neno linalokuja kwanza kwenye kamusi ni ___.', 'hospitali', ['tai', 'M_KAM_LENGTH'], ['wimbo', 'M_KAM_REVERSE'], 'Herufi ya kwanza ya hospitali ni h, na h huja kabla ya t na w.'],
-  ['Kati ya "samaki", "sahani" na "sufuria", neno linalokuja kwanza kwenye kamusi ni ___.', 'sahani', ['samaki', 'M_KAM_FIRST_ONLY'], ['sufuria', 'M_KAM_FIRST_ONLY'], 'Maneno yote yanaanza na s. Herufi ya pili: h huja kabla ya m na u, kwa hiyo sahani inakuja kwanza.'],
+  ['Kati ya "samaki", "sahani" na "sufuria", neno linalokuja kwanza kwenye kamusi ni ___.', 'sahani', ['samaki', 'M_KAM_FIRST_ONLY'], ['sufuria', 'M_KAM_FIRST_ONLY'], 'Maneno yote yanaanza na s. Samaki na sahani zinaendelea na a, lakini sufuria inaendelea na u, na u huja baada ya a. Kati ya samaki na sahani, h huja kabla ya m, kwa hiyo sahani inakuja kwanza.'],
   ['Kati ya "mkono", "mguu" na "mwili", neno linalokuja kwanza kwenye kamusi ni ___.', 'mguu', ['mkono', 'M_KAM_FIRST_ONLY'], ['mwili', 'M_KAM_FIRST_ONLY'], 'Maneno yote yanaanza na m. Herufi ya pili: g huja kabla ya k na w, kwa hiyo mguu unakuja kwanza.'],
   ['Kati ya "kitabu", "kikombe" na "kiti", neno linalokuja kwanza kwenye kamusi ni ___.', 'kikombe', ['kitabu', 'M_KAM_FIRST_ONLY'], ['kiti', 'M_KAM_FIRST_ONLY'], 'Maneno yote yanaanza na ki. Herufi ya tatu: k huja kabla ya t, kwa hiyo kikombe kinakuja kwanza.'],
   ['Kati ya "panga", "pamba" na "pesa", neno linalokuja kwanza kwenye kamusi ni ___.', 'pamba', ['panga', 'M_KAM_FIRST_ONLY'], ['pesa', 'M_KAM_FIRST_ONLY'], 'Maneno yote yanaanza na p. Herufi ya pili: a huja kabla ya e. Kisha m huja kabla ya n, kwa hiyo pamba inakuja kwanza.'],
   ['Kati ya "baba", "mto" na "zeze", neno linalokuja mwisho kwenye kamusi ni ___.', 'zeze', ['baba', 'M_KAM_REVERSE'], ['mto', 'M_KAM_LENGTH'], 'Herufi ya kwanza ya zeze ni z, na z ndiyo ya mwisho katika alfabeti kati ya b, m na z.'],
-  ['Kati ya "samaki", "sahani" na "sufuria", neno linalokuja mwisho kwenye kamusi ni ___.', 'sufuria', ['sahani', 'M_KAM_REVERSE'], ['samaki', 'M_KAM_FIRST_ONLY'], 'Maneno yote yanaanza na s. Herufi ya pili: u huja baada ya h na m, kwa hiyo sufuria inakuja mwisho.'],
+  ['Kati ya "samaki", "sahani" na "sufuria", neno linalokuja mwisho kwenye kamusi ni ___.', 'sufuria', ['sahani', 'M_KAM_REVERSE'], ['samaki', 'M_KAM_FIRST_ONLY'], 'Maneno yote yanaanza na s. Samaki na sahani zinaendelea na a, lakini sufuria inaendelea na u, na u huja baada ya a, kwa hiyo sufuria inakuja mwisho.'],
 ];
 
 const UFS = [

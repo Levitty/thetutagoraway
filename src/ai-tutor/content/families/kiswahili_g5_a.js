@@ -36,7 +36,7 @@ const KAWAIDA = [
   ['Kuku walikuwa wanakula ___ uani.', 'mahindi', ['Kisumu', 'M_KAWAIDA_NAME'], ['wanakula', 'M_KAWAIDA_NOT_NOUN'], ['wengi', 'M_KAWAIDA_NOT_NOUN'], 'Mahindi ni nomino ya kawaida: jina la aina ya chakula.'],
   ['Baba alinunua ___ kubwa sokoni.', 'sufuria', ['Hassan', 'M_KAWAIDA_NAME'], ['alinunua', 'M_KAWAIDA_NOT_NOUN'], ['kubwa', 'M_KAWAIDA_NOT_NOUN'], 'Sufuria ni jina la jumla la aina ya chombo cha kupikia.'],
   ['___ wetu hufundisha Kiswahili.', 'Mwalimu', ['Atieno', 'M_KAWAIDA_NAME'], ['hufundisha', 'M_KAWAIDA_NOT_NOUN'], ['vizuri', 'M_KAWAIDA_NOT_NOUN'], 'Mwalimu ni nomino ya kawaida: jina la jumla la watu wanaofundisha.'],
-  ['Tulikaa chini ya ___ kubwa wakati wa mapumziko.', 'mti', ['Nyeri', 'M_KAWAIDA_NAME'], ['tulikaa', 'M_KAWAIDA_NOT_NOUN'], ['chini', 'M_KAWAIDA_NOT_NOUN'], 'Mti ni nomino ya kawaida: jina la jumla la miti yote.'],
+  ['Tulikaa chini ya ___ mkubwa wakati wa mapumziko.', 'mti', ['Nyeri', 'M_KAWAIDA_NAME'], ['tulikaa', 'M_KAWAIDA_NOT_NOUN'], ['chini', 'M_KAWAIDA_NOT_NOUN'], 'Mti ni nomino ya kawaida: jina la jumla la miti yote.'],
   ['Mkulima alipanda ___ shambani.', 'mbegu', ['Mwangi', 'M_KAWAIDA_NAME'], ['alipanda', 'M_KAWAIDA_NOT_NOUN'], ['vizuri', 'M_KAWAIDA_NOT_NOUN'], 'Mbegu ni nomino ya kawaida: jina la jumla la kitu kinachopandwa.'],
 ];
 
@@ -80,8 +80,8 @@ const MAKUNDI = [
 // ---------------------------------------------------------------- nomino ambata
 const AMBATA = [
   ['Mtoto anayesoma shuleni ni ___.', 'mwanafunzi', ['mwalimu', 'M_AMBATA_SIMPLE'], ['mwana funzi', 'M_AMBATA_SPLIT'], ['mzazi', 'M_AMBATA_SIMPLE'], 'Mwanafunzi ni nomino ambata: mwana + funzi, limeandikwa kama neno moja.'],
-  ['Mtu anayeandika habari kwa ajili ya gazeti ni ___.', 'mwanahabari', ['mwandishi', 'M_AMBATA_SIMPLE'], ['mwana habari', 'M_AMBATA_SPLIT'], ['mhariri', 'M_AMBATA_SIMPLE'], 'Mwanahabari ni nomino ambata: mwana + habari.'],
-  ['Mtu anayeshiriki michezo kama mpira ni ___.', 'mwanamichezo', ['mchezaji', 'M_AMBATA_SIMPLE'], ['mwana michezo', 'M_AMBATA_SPLIT'], ['mshindi', 'M_AMBATA_SIMPLE'], 'Mwanamichezo ni nomino ambata: mwana + michezo.'],
+  ['Mtu anayeandika habari kwa ajili ya gazeti ni ___.', 'mwanahabari', ['msomaji', 'M_AMBATA_SIMPLE'], ['mwana habari', 'M_AMBATA_SPLIT'], ['mhariri', 'M_AMBATA_SIMPLE'], 'Mwanahabari ni nomino ambata: mwana + habari.'],
+  ['Mtu anayeshiriki michezo kama mpira ni ___.', 'mwanamichezo', ['mtazamaji', 'M_AMBATA_SIMPLE'], ['mwana michezo', 'M_AMBATA_SPLIT'], ['mshindi', 'M_AMBATA_SIMPLE'], 'Mwanamichezo ni nomino ambata: mwana + michezo.'],
   ['Mtu anayesomea masuala ya sayansi ni ___.', 'mwanasayansi', ['daktari', 'M_AMBATA_SIMPLE'], ['mwana sayansi', 'M_AMBATA_SPLIT'], ['mkulima', 'M_AMBATA_SIMPLE'], 'Mwanasayansi ni nomino ambata: mwana + sayansi.'],
   ['Mtu anayeishi kijijini ni ___.', 'mwanakijiji', ['mkulima', 'M_AMBATA_SIMPLE'], ['mwana kijiji', 'M_AMBATA_SPLIT'], ['jirani', 'M_AMBATA_SIMPLE'], 'Mwanakijiji ni nomino ambata: mwana + kijiji.'],
   ['Mtu mzima wa jinsia ya kike ni ___.', 'mwanamke', ['msichana', 'M_AMBATA_SIMPLE'], ['mwana mke', 'M_AMBATA_SPLIT'], ['binti', 'M_AMBATA_SIMPLE'], 'Mwanamke ni nomino ambata: mwana + mke.'],

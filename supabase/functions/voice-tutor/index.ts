@@ -29145,7 +29145,7 @@ var KAWAIDA = [
   ["Kuku walikuwa wanakula ___ uani.", "mahindi", ["Kisumu", "M_KAWAIDA_NAME"], ["wanakula", "M_KAWAIDA_NOT_NOUN"], ["wengi", "M_KAWAIDA_NOT_NOUN"], "Mahindi ni nomino ya kawaida: jina la aina ya chakula."],
   ["Baba alinunua ___ kubwa sokoni.", "sufuria", ["Hassan", "M_KAWAIDA_NAME"], ["alinunua", "M_KAWAIDA_NOT_NOUN"], ["kubwa", "M_KAWAIDA_NOT_NOUN"], "Sufuria ni jina la jumla la aina ya chombo cha kupikia."],
   ["___ wetu hufundisha Kiswahili.", "Mwalimu", ["Atieno", "M_KAWAIDA_NAME"], ["hufundisha", "M_KAWAIDA_NOT_NOUN"], ["vizuri", "M_KAWAIDA_NOT_NOUN"], "Mwalimu ni nomino ya kawaida: jina la jumla la watu wanaofundisha."],
-  ["Tulikaa chini ya ___ kubwa wakati wa mapumziko.", "mti", ["Nyeri", "M_KAWAIDA_NAME"], ["tulikaa", "M_KAWAIDA_NOT_NOUN"], ["chini", "M_KAWAIDA_NOT_NOUN"], "Mti ni nomino ya kawaida: jina la jumla la miti yote."],
+  ["Tulikaa chini ya ___ mkubwa wakati wa mapumziko.", "mti", ["Nyeri", "M_KAWAIDA_NAME"], ["tulikaa", "M_KAWAIDA_NOT_NOUN"], ["chini", "M_KAWAIDA_NOT_NOUN"], "Mti ni nomino ya kawaida: jina la jumla la miti yote."],
   ["Mkulima alipanda ___ shambani.", "mbegu", ["Mwangi", "M_KAWAIDA_NAME"], ["alipanda", "M_KAWAIDA_NOT_NOUN"], ["vizuri", "M_KAWAIDA_NOT_NOUN"], "Mbegu ni nomino ya kawaida: jina la jumla la kitu kinachopandwa."]
 ];
 var WINGI = [
@@ -29181,8 +29181,8 @@ var MAKUNDI = [
 ];
 var AMBATA = [
   ["Mtoto anayesoma shuleni ni ___.", "mwanafunzi", ["mwalimu", "M_AMBATA_SIMPLE"], ["mwana funzi", "M_AMBATA_SPLIT"], ["mzazi", "M_AMBATA_SIMPLE"], "Mwanafunzi ni nomino ambata: mwana + funzi, limeandikwa kama neno moja."],
-  ["Mtu anayeandika habari kwa ajili ya gazeti ni ___.", "mwanahabari", ["mwandishi", "M_AMBATA_SIMPLE"], ["mwana habari", "M_AMBATA_SPLIT"], ["mhariri", "M_AMBATA_SIMPLE"], "Mwanahabari ni nomino ambata: mwana + habari."],
-  ["Mtu anayeshiriki michezo kama mpira ni ___.", "mwanamichezo", ["mchezaji", "M_AMBATA_SIMPLE"], ["mwana michezo", "M_AMBATA_SPLIT"], ["mshindi", "M_AMBATA_SIMPLE"], "Mwanamichezo ni nomino ambata: mwana + michezo."],
+  ["Mtu anayeandika habari kwa ajili ya gazeti ni ___.", "mwanahabari", ["msomaji", "M_AMBATA_SIMPLE"], ["mwana habari", "M_AMBATA_SPLIT"], ["mhariri", "M_AMBATA_SIMPLE"], "Mwanahabari ni nomino ambata: mwana + habari."],
+  ["Mtu anayeshiriki michezo kama mpira ni ___.", "mwanamichezo", ["mtazamaji", "M_AMBATA_SIMPLE"], ["mwana michezo", "M_AMBATA_SPLIT"], ["mshindi", "M_AMBATA_SIMPLE"], "Mwanamichezo ni nomino ambata: mwana + michezo."],
   ["Mtu anayesomea masuala ya sayansi ni ___.", "mwanasayansi", ["daktari", "M_AMBATA_SIMPLE"], ["mwana sayansi", "M_AMBATA_SPLIT"], ["mkulima", "M_AMBATA_SIMPLE"], "Mwanasayansi ni nomino ambata: mwana + sayansi."],
   ["Mtu anayeishi kijijini ni ___.", "mwanakijiji", ["mkulima", "M_AMBATA_SIMPLE"], ["mwana kijiji", "M_AMBATA_SPLIT"], ["jirani", "M_AMBATA_SIMPLE"], "Mwanakijiji ni nomino ambata: mwana + kijiji."],
   ["Mtu mzima wa jinsia ya kike ni ___.", "mwanamke", ["msichana", "M_AMBATA_SIMPLE"], ["mwana mke", "M_AMBATA_SPLIT"], ["binti", "M_AMBATA_SIMPLE"], "Mwanamke ni nomino ambata: mwana + mke."],
@@ -29269,7 +29269,7 @@ var UZI = [
 ];
 var UZI_PL = [
   ['Wingi wa "ukuta" ni ___.', "kuta", ["mikuta", "M_UZI_PL_MA"], ["makuta", "M_UZI_PL_MA"], ["ukuta", "M_UZI_PL_MA"], "Wingi wa ukuta ni kuta: u- inaondolewa."],
-  ['Wingi wa "wimbo" ni ___.', "nyimbo", ["miwimbo", "M_UZI_PL_MA"], ["mawimbo", "M_UZI_PL_MA"], ["wimbo", "M_UZI_PL_MA"], "Wingi wa wimbo ni nyimbo. Mawimbo ni wingi wa wimbi."],
+  ['Wingi wa "wimbo" ni ___.', "nyimbo", ["miwimbo", "M_UZI_PL_MA"], ["mawimbo", "M_UZI_PL_MA"], ["wimbo", "M_UZI_PL_MA"], "Wingi wa wimbo ni nyimbo. Mawimbi ni wingi wa wimbi."],
   ['Wingi wa "ubao" ni ___.', "mbao", ["mibao", "M_UZI_PL_MA"], ["mabao", "M_UZI_PL_MA"], ["ubao", "M_UZI_PL_MA"], "Wingi wa ubao ni mbao: u- hubadilika kuwa mb-."],
   ['Wingi wa "ufunguo" ni ___.', "funguo", ["mifunguo", "M_UZI_PL_MA"], ["mafunguo", "M_UZI_PL_MA"], ["ufunguo", "M_UZI_PL_MA"], "Wingi wa ufunguo ni funguo: u- inaondolewa."],
   ['Wingi wa "uso" ni ___.', "nyuso", ["miuso", "M_UZI_PL_MA"], ["mauso", "M_UZI_PL_MA"], ["uso", "M_UZI_PL_MA"], "Wingi wa uso ni nyuso: u- hubadilika kuwa nyu-."],
@@ -29358,16 +29358,16 @@ var VIN_USE = [
   ["Alifunika chungu cha chai ili kisipoe, kisha baadaye akaanza ___ ili anywe chai.", "kukifunua", ["kukifunika", "M_VIN_SYNONYM"], ["kutokifunika", "M_VIN_NEGATE"], ["kukifunikua", "M_VIN_WRONG_SUFFIX"], "Kinyume cha kufunika ni kufunua."]
 ];
 var NYK = [
-  ["Kila asubuhi Juma ___ maji.", "hunywa", ["anahunywa", "M_NYK_HU_SUBJECT"], ["anakunywa", "M_NYK_NA_HABIT"], ["alikunywa", "M_NYK_NA_HABIT"], "Kila asubuhi ni mazoea. Hali ya mazoea hutumia hu- bila kiambishi cha mtu: Juma hunywa maji."],
-  ["Kila Jumamosi Wanjiru ___ nguo.", "hufua", ["anahufua", "M_NYK_HU_SUBJECT"], ["anafua", "M_NYK_NA_HABIT"], ["alifua", "M_NYK_NA_HABIT"], "Kila Jumamosi ni mazoea: Wanjiru hufua nguo."],
-  ["Wakulima ___ mapema kila siku.", "huamka", ["wanahuamka", "M_NYK_HU_SUBJECT"], ["wanaamka", "M_NYK_NA_HABIT"], ["waliamka", "M_NYK_NA_HABIT"], "Kila siku ni mazoea: wakulima huamka mapema."],
-  ["Mama ___ chakula jioni kila siku.", "hupika", ["anahupika", "M_NYK_HU_SUBJECT"], ["anapika", "M_NYK_NA_HABIT"], ["alipika", "M_NYK_NA_HABIT"], "Kila siku ni mazoea: mama hupika chakula jioni."],
-  ["Wanafunzi ___ shuleni saa mbili kila siku ya juma.", "hufika", ["wanahufika", "M_NYK_HU_SUBJECT"], ["wanafika", "M_NYK_NA_HABIT"], ["walifika", "M_NYK_NA_HABIT"], "Kila siku ya juma ni mazoea: wanafunzi hufika shuleni saa mbili."],
-  ["Bibi ___ hadithi kila jioni.", "husimulia", ["anahusimulia", "M_NYK_HU_SUBJECT"], ["anasimulia", "M_NYK_NA_HABIT"], ["alisimulia", "M_NYK_NA_HABIT"], "Kila jioni ni mazoea: bibi husimulia hadithi."],
-  ["Mama ___ kupika chakula; kiko tayari.", "amemaliza", ["alimaliza", "M_NYK_ME_PAST"], ["atamaliza", "M_NYK_ME_PAST"], ["anamaliza", "M_NYK_NA_HABIT"], "Chakula kiko tayari sasa. Hali timilifu hutumia -me-: amemaliza."],
-  ["Wanafunzi ___ kazi yao ya nyumbani; wanaweza kucheza sasa.", "wamemaliza", ["walimaliza", "M_NYK_ME_PAST"], ["watamaliza", "M_NYK_ME_PAST"], ["wanamaliza", "M_NYK_NA_HABIT"], "Kazi imekamilika na matokeo yapo sasa. Hali timilifu: wamemaliza."],
-  ["Mvua ___; ardhi imelowa.", "imenyesha", ["ilinyesha", "M_NYK_ME_PAST"], ["itanyesha", "M_NYK_ME_PAST"], ["inanyesha", "M_NYK_NA_HABIT"], "Ardhi imelowa sasa kwa sababu mvua imenyesha. Hali timilifu hutumia -me-."],
-  ["Baba ___ nyumbani; yuko sebuleni.", "amefika", ["alifika", "M_NYK_ME_PAST"], ["atafika", "M_NYK_ME_PAST"], ["anafika", "M_NYK_NA_HABIT"], "Baba yuko sebuleni sasa, kwa hiyo amefika: hali timilifu."]
+  ["Kila asubuhi Juma ___ maji (mazoea).", "hunywa", ["anahunywa", "M_NYK_HU_SUBJECT"], ["anakunywa", "M_NYK_NA_HABIT"], ["alikunywa", "M_NYK_NA_HABIT"], "Kila asubuhi ni mazoea. Hali ya mazoea hutumia hu- bila kiambishi cha mtu: Juma hunywa maji."],
+  ["Kila Jumamosi Wanjiru ___ nguo (mazoea).", "hufua", ["anahufua", "M_NYK_HU_SUBJECT"], ["anafua", "M_NYK_NA_HABIT"], ["alifua", "M_NYK_NA_HABIT"], "Kila Jumamosi ni mazoea: Wanjiru hufua nguo."],
+  ["Wakulima ___ mapema kila siku (mazoea).", "huamka", ["wanahuamka", "M_NYK_HU_SUBJECT"], ["wanaamka", "M_NYK_NA_HABIT"], ["waliamka", "M_NYK_NA_HABIT"], "Kila siku ni mazoea: wakulima huamka mapema."],
+  ["Mama ___ chakula jioni kila siku (mazoea).", "hupika", ["anahupika", "M_NYK_HU_SUBJECT"], ["anapika", "M_NYK_NA_HABIT"], ["alipika", "M_NYK_NA_HABIT"], "Kila siku ni mazoea: mama hupika chakula jioni."],
+  ["Wanafunzi ___ shuleni saa mbili kila siku ya juma (mazoea).", "hufika", ["wanahufika", "M_NYK_HU_SUBJECT"], ["wanafika", "M_NYK_NA_HABIT"], ["walifika", "M_NYK_NA_HABIT"], "Kila siku ya juma ni mazoea: wanafunzi hufika shuleni saa mbili."],
+  ["Bibi ___ hadithi kila jioni (mazoea).", "husimulia", ["anahusimulia", "M_NYK_HU_SUBJECT"], ["anasimulia", "M_NYK_NA_HABIT"], ["alisimulia", "M_NYK_NA_HABIT"], "Kila jioni ni mazoea: bibi husimulia hadithi."],
+  ["Mama ___ kupika chakula; kiko tayari (hali timilifu).", "amemaliza", ["alimaliza", "M_NYK_ME_PAST"], ["atamaliza", "M_NYK_ME_PAST"], ["anamaliza", "M_NYK_NA_HABIT"], "Chakula kiko tayari sasa. Hali timilifu hutumia -me-: amemaliza."],
+  ["Wanafunzi ___ kazi yao ya nyumbani; wanaweza kucheza sasa (hali timilifu).", "wamemaliza", ["walimaliza", "M_NYK_ME_PAST"], ["watamaliza", "M_NYK_ME_PAST"], ["wanamaliza", "M_NYK_NA_HABIT"], "Kazi imekamilika na matokeo yapo sasa. Hali timilifu: wamemaliza."],
+  ["Mvua ___; ardhi imelowa (hali timilifu).", "imenyesha", ["ilinyesha", "M_NYK_ME_PAST"], ["itanyesha", "M_NYK_ME_PAST"], ["inanyesha", "M_NYK_NA_HABIT"], "Ardhi imelowa sasa kwa sababu mvua imenyesha. Hali timilifu hutumia -me-."],
+  ["Baba ___ nyumbani; yuko sebuleni (hali timilifu).", "amefika", ["alifika", "M_NYK_ME_PAST"], ["atafika", "M_NYK_ME_PAST"], ["anafika", "M_NYK_NA_HABIT"], "Baba yuko sebuleni sasa, kwa hiyo amefika: hali timilifu."]
 ];
 var NEG2 = [
   ["Ninasoma kitabu. Ukanushaji: ___ kitabu.", "sisomi", ["sinasoma", "M_NEG_SI_ONLY"], ["nisisomi", "M_NEG_PERSON"], ["sikusoma", "M_NEG_WRONG_TENSE"], "Wakati uliopo hukanushwa bila -na-: ninasoma - sisomi."],
@@ -29593,12 +29593,12 @@ var KAMUSI = [
   ['Kati ya "ua", "ardhi" na "wali", neno linalokuja kwanza kwenye kamusi ni ___.', "ardhi", ["ua", "M_KAM_LENGTH"], ["wali", "M_KAM_REVERSE"], "Herufi ya kwanza ya ardhi ni a, na a huja kabla ya u na w."],
   ['Kati ya "mto", "kalamu" na "zulia", neno linalokuja kwanza kwenye kamusi ni ___.', "kalamu", ["mto", "M_KAM_LENGTH"], ["zulia", "M_KAM_REVERSE"], "Herufi ya kwanza ya kalamu ni k, na k huja kabla ya m na z."],
   ['Kati ya "tai", "hospitali" na "wimbo", neno linalokuja kwanza kwenye kamusi ni ___.', "hospitali", ["tai", "M_KAM_LENGTH"], ["wimbo", "M_KAM_REVERSE"], "Herufi ya kwanza ya hospitali ni h, na h huja kabla ya t na w."],
-  ['Kati ya "samaki", "sahani" na "sufuria", neno linalokuja kwanza kwenye kamusi ni ___.', "sahani", ["samaki", "M_KAM_FIRST_ONLY"], ["sufuria", "M_KAM_FIRST_ONLY"], "Maneno yote yanaanza na s. Herufi ya pili: h huja kabla ya m na u, kwa hiyo sahani inakuja kwanza."],
+  ['Kati ya "samaki", "sahani" na "sufuria", neno linalokuja kwanza kwenye kamusi ni ___.', "sahani", ["samaki", "M_KAM_FIRST_ONLY"], ["sufuria", "M_KAM_FIRST_ONLY"], "Maneno yote yanaanza na s. Samaki na sahani zinaendelea na a, lakini sufuria inaendelea na u, na u huja baada ya a. Kati ya samaki na sahani, h huja kabla ya m, kwa hiyo sahani inakuja kwanza."],
   ['Kati ya "mkono", "mguu" na "mwili", neno linalokuja kwanza kwenye kamusi ni ___.', "mguu", ["mkono", "M_KAM_FIRST_ONLY"], ["mwili", "M_KAM_FIRST_ONLY"], "Maneno yote yanaanza na m. Herufi ya pili: g huja kabla ya k na w, kwa hiyo mguu unakuja kwanza."],
   ['Kati ya "kitabu", "kikombe" na "kiti", neno linalokuja kwanza kwenye kamusi ni ___.', "kikombe", ["kitabu", "M_KAM_FIRST_ONLY"], ["kiti", "M_KAM_FIRST_ONLY"], "Maneno yote yanaanza na ki. Herufi ya tatu: k huja kabla ya t, kwa hiyo kikombe kinakuja kwanza."],
   ['Kati ya "panga", "pamba" na "pesa", neno linalokuja kwanza kwenye kamusi ni ___.', "pamba", ["panga", "M_KAM_FIRST_ONLY"], ["pesa", "M_KAM_FIRST_ONLY"], "Maneno yote yanaanza na p. Herufi ya pili: a huja kabla ya e. Kisha m huja kabla ya n, kwa hiyo pamba inakuja kwanza."],
   ['Kati ya "baba", "mto" na "zeze", neno linalokuja mwisho kwenye kamusi ni ___.', "zeze", ["baba", "M_KAM_REVERSE"], ["mto", "M_KAM_LENGTH"], "Herufi ya kwanza ya zeze ni z, na z ndiyo ya mwisho katika alfabeti kati ya b, m na z."],
-  ['Kati ya "samaki", "sahani" na "sufuria", neno linalokuja mwisho kwenye kamusi ni ___.', "sufuria", ["sahani", "M_KAM_REVERSE"], ["samaki", "M_KAM_FIRST_ONLY"], "Maneno yote yanaanza na s. Herufi ya pili: u huja baada ya h na m, kwa hiyo sufuria inakuja mwisho."]
+  ['Kati ya "samaki", "sahani" na "sufuria", neno linalokuja mwisho kwenye kamusi ni ___.', "sufuria", ["sahani", "M_KAM_REVERSE"], ["samaki", "M_KAM_FIRST_ONLY"], "Maneno yote yanaanza na s. Samaki na sahani zinaendelea na a, lakini sufuria inaendelea na u, na u huja baada ya a, kwa hiyo sufuria inakuja mwisho."]
 ];
 var UFS = [
   ["Ni nini kinachoonyesha kusoma kwa ufasaha?", "Kusoma kwa kasi ifaayo, matamshi bora na sauti ipasavyo", ["Kusoma haraka iwezekanavyo", "M_UFS_SPEED"], ["Kusoma kwa sauti kubwa kuliko wote", "M_UFS_LOUD"], ["Kusoma bila kusimama kwenye alama", "M_UFS_IGNORE_MARKS"], "Kusoma kwa ufasaha ni kusoma kwa kasi ifaayo, matamshi bora na sauti ipasavyo, huku ukizingatia alama."],

@@ -50,16 +50,16 @@ const VIN_USE = [
 
 // ---------------------------------------------------------------- hali ya mazoea (hu-) na hali timilifu (-me-)
 const NYK = [
-  ['Kila asubuhi Juma ___ maji.', 'hunywa', ['anahunywa', 'M_NYK_HU_SUBJECT'], ['anakunywa', 'M_NYK_NA_HABIT'], ['alikunywa', 'M_NYK_NA_HABIT'], 'Kila asubuhi ni mazoea. Hali ya mazoea hutumia hu- bila kiambishi cha mtu: Juma hunywa maji.'],
-  ['Kila Jumamosi Wanjiru ___ nguo.', 'hufua', ['anahufua', 'M_NYK_HU_SUBJECT'], ['anafua', 'M_NYK_NA_HABIT'], ['alifua', 'M_NYK_NA_HABIT'], 'Kila Jumamosi ni mazoea: Wanjiru hufua nguo.'],
-  ['Wakulima ___ mapema kila siku.', 'huamka', ['wanahuamka', 'M_NYK_HU_SUBJECT'], ['wanaamka', 'M_NYK_NA_HABIT'], ['waliamka', 'M_NYK_NA_HABIT'], 'Kila siku ni mazoea: wakulima huamka mapema.'],
-  ['Mama ___ chakula jioni kila siku.', 'hupika', ['anahupika', 'M_NYK_HU_SUBJECT'], ['anapika', 'M_NYK_NA_HABIT'], ['alipika', 'M_NYK_NA_HABIT'], 'Kila siku ni mazoea: mama hupika chakula jioni.'],
-  ['Wanafunzi ___ shuleni saa mbili kila siku ya juma.', 'hufika', ['wanahufika', 'M_NYK_HU_SUBJECT'], ['wanafika', 'M_NYK_NA_HABIT'], ['walifika', 'M_NYK_NA_HABIT'], 'Kila siku ya juma ni mazoea: wanafunzi hufika shuleni saa mbili.'],
-  ['Bibi ___ hadithi kila jioni.', 'husimulia', ['anahusimulia', 'M_NYK_HU_SUBJECT'], ['anasimulia', 'M_NYK_NA_HABIT'], ['alisimulia', 'M_NYK_NA_HABIT'], 'Kila jioni ni mazoea: bibi husimulia hadithi.'],
-  ['Mama ___ kupika chakula; kiko tayari.', 'amemaliza', ['alimaliza', 'M_NYK_ME_PAST'], ['atamaliza', 'M_NYK_ME_PAST'], ['anamaliza', 'M_NYK_NA_HABIT'], 'Chakula kiko tayari sasa. Hali timilifu hutumia -me-: amemaliza.'],
-  ['Wanafunzi ___ kazi yao ya nyumbani; wanaweza kucheza sasa.', 'wamemaliza', ['walimaliza', 'M_NYK_ME_PAST'], ['watamaliza', 'M_NYK_ME_PAST'], ['wanamaliza', 'M_NYK_NA_HABIT'], 'Kazi imekamilika na matokeo yapo sasa. Hali timilifu: wamemaliza.'],
-  ['Mvua ___; ardhi imelowa.', 'imenyesha', ['ilinyesha', 'M_NYK_ME_PAST'], ['itanyesha', 'M_NYK_ME_PAST'], ['inanyesha', 'M_NYK_NA_HABIT'], 'Ardhi imelowa sasa kwa sababu mvua imenyesha. Hali timilifu hutumia -me-.'],
-  ['Baba ___ nyumbani; yuko sebuleni.', 'amefika', ['alifika', 'M_NYK_ME_PAST'], ['atafika', 'M_NYK_ME_PAST'], ['anafika', 'M_NYK_NA_HABIT'], 'Baba yuko sebuleni sasa, kwa hiyo amefika: hali timilifu.'],
+  ['Kila asubuhi Juma ___ maji (mazoea).', 'hunywa', ['anahunywa', 'M_NYK_HU_SUBJECT'], ['anakunywa', 'M_NYK_NA_HABIT'], ['alikunywa', 'M_NYK_NA_HABIT'], 'Kila asubuhi ni mazoea. Hali ya mazoea hutumia hu- bila kiambishi cha mtu: Juma hunywa maji.'],
+  ['Kila Jumamosi Wanjiru ___ nguo (mazoea).', 'hufua', ['anahufua', 'M_NYK_HU_SUBJECT'], ['anafua', 'M_NYK_NA_HABIT'], ['alifua', 'M_NYK_NA_HABIT'], 'Kila Jumamosi ni mazoea: Wanjiru hufua nguo.'],
+  ['Wakulima ___ mapema kila siku (mazoea).', 'huamka', ['wanahuamka', 'M_NYK_HU_SUBJECT'], ['wanaamka', 'M_NYK_NA_HABIT'], ['waliamka', 'M_NYK_NA_HABIT'], 'Kila siku ni mazoea: wakulima huamka mapema.'],
+  ['Mama ___ chakula jioni kila siku (mazoea).', 'hupika', ['anahupika', 'M_NYK_HU_SUBJECT'], ['anapika', 'M_NYK_NA_HABIT'], ['alipika', 'M_NYK_NA_HABIT'], 'Kila siku ni mazoea: mama hupika chakula jioni.'],
+  ['Wanafunzi ___ shuleni saa mbili kila siku ya juma (mazoea).', 'hufika', ['wanahufika', 'M_NYK_HU_SUBJECT'], ['wanafika', 'M_NYK_NA_HABIT'], ['walifika', 'M_NYK_NA_HABIT'], 'Kila siku ya juma ni mazoea: wanafunzi hufika shuleni saa mbili.'],
+  ['Bibi ___ hadithi kila jioni (mazoea).', 'husimulia', ['anahusimulia', 'M_NYK_HU_SUBJECT'], ['anasimulia', 'M_NYK_NA_HABIT'], ['alisimulia', 'M_NYK_NA_HABIT'], 'Kila jioni ni mazoea: bibi husimulia hadithi.'],
+  ['Mama ___ kupika chakula; kiko tayari (hali timilifu).', 'amemaliza', ['alimaliza', 'M_NYK_ME_PAST'], ['atamaliza', 'M_NYK_ME_PAST'], ['anamaliza', 'M_NYK_NA_HABIT'], 'Chakula kiko tayari sasa. Hali timilifu hutumia -me-: amemaliza.'],
+  ['Wanafunzi ___ kazi yao ya nyumbani; wanaweza kucheza sasa (hali timilifu).', 'wamemaliza', ['walimaliza', 'M_NYK_ME_PAST'], ['watamaliza', 'M_NYK_ME_PAST'], ['wanamaliza', 'M_NYK_NA_HABIT'], 'Kazi imekamilika na matokeo yapo sasa. Hali timilifu: wamemaliza.'],
+  ['Mvua ___; ardhi imelowa (hali timilifu).', 'imenyesha', ['ilinyesha', 'M_NYK_ME_PAST'], ['itanyesha', 'M_NYK_ME_PAST'], ['inanyesha', 'M_NYK_NA_HABIT'], 'Ardhi imelowa sasa kwa sababu mvua imenyesha. Hali timilifu hutumia -me-.'],
+  ['Baba ___ nyumbani; yuko sebuleni (hali timilifu).', 'amefika', ['alifika', 'M_NYK_ME_PAST'], ['atafika', 'M_NYK_ME_PAST'], ['anafika', 'M_NYK_NA_HABIT'], 'Baba yuko sebuleni sasa, kwa hiyo amefika: hali timilifu.'],
 ];
 
 // ---------------------------------------------------------------- ukanushaji wa viambishi vya nafsi na wakati
