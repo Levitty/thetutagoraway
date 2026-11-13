@@ -86,7 +86,7 @@ export const FAMILIES = [
   fam('water.test.which', `${WA}MULCH_TEST`, 'direct', 1, choose([
     Q('In a fair test of mulching, what should be the same in both beds?', 'The crop, the soil and the amount of water', ['The amount of mulch|TEST_UNFAIR', 'Whether there is mulch|TEST_UNFAIR', 'The colour of the mulch|TEST_UNFAIR'], 'Only the mulch should differ.'),
     Q('After a week of sun, which bed stays damp longer?', 'The mulched bed', ['The bare bed|TEST_RESULT', 'Both dry at the same speed|TEST_RESULT', 'The bare bed, since it gets more sun|TEST_RESULT'], 'Mulch shades the soil and slows drying.'),
-    Q('Which of these can be used as mulch?', 'Dry grass', ['Stones only|TEST_UNFAIR', 'Fresh cement|TEST_UNFAIR', 'A plastic bag|TEST_UNFAIR'], 'Dry grass, maize stalks and banana leaves make good mulch.'),
+    Q('Which of these can be used as mulch?', 'Dry grass', ['Broken glass|TEST_UNFAIR', 'Fresh cement|TEST_UNFAIR', 'Tin lids|TEST_UNFAIR'], 'Dry grass, maize stalks and banana leaves make good mulch.'),
     Q('How can a learner check how damp the soil is?', 'Dig a finger deep and feel it', ['Look at the colour of the sky|TEST_RESULT', 'Smell the air|TEST_RESULT', 'Count the leaves|TEST_RESULT'], 'Feeling the soil a finger deep tells how damp it is.'),
     Q('Why is only one thing changed in a fair test?', 'So we know what caused the difference', ['So the test takes more time|TEST_UNFAIR', 'So both beds look the same|TEST_UNFAIR', 'So the mulch grows faster|TEST_UNFAIR'], 'If two things change we cannot tell which caused the result.'),
   ], { h: ['A fair test changes only one thing.', 'Feel the soil a finger deep in each bed.'], s1: 'Change only the mulch.' })),

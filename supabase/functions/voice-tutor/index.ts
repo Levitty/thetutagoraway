@@ -10137,7 +10137,7 @@ var FAMILIES5 = [
   fam2("water.test.which", `${WA2}MULCH_TEST`, "direct", 1, choose2([
     Q2("In a fair test of mulching, what should be the same in both beds?", "The crop, the soil and the amount of water", ["The amount of mulch|TEST_UNFAIR", "Whether there is mulch|TEST_UNFAIR", "The colour of the mulch|TEST_UNFAIR"], "Only the mulch should differ."),
     Q2("After a week of sun, which bed stays damp longer?", "The mulched bed", ["The bare bed|TEST_RESULT", "Both dry at the same speed|TEST_RESULT", "The bare bed, since it gets more sun|TEST_RESULT"], "Mulch shades the soil and slows drying."),
-    Q2("Which of these can be used as mulch?", "Dry grass", ["Stones only|TEST_UNFAIR", "Fresh cement|TEST_UNFAIR", "A plastic bag|TEST_UNFAIR"], "Dry grass, maize stalks and banana leaves make good mulch."),
+    Q2("Which of these can be used as mulch?", "Dry grass", ["Broken glass|TEST_UNFAIR", "Fresh cement|TEST_UNFAIR", "Tin lids|TEST_UNFAIR"], "Dry grass, maize stalks and banana leaves make good mulch."),
     Q2("How can a learner check how damp the soil is?", "Dig a finger deep and feel it", ["Look at the colour of the sky|TEST_RESULT", "Smell the air|TEST_RESULT", "Count the leaves|TEST_RESULT"], "Feeling the soil a finger deep tells how damp it is."),
     Q2("Why is only one thing changed in a fair test?", "So we know what caused the difference", ["So the test takes more time|TEST_UNFAIR", "So both beds look the same|TEST_UNFAIR", "So the mulch grows faster|TEST_UNFAIR"], "If two things change we cannot tell which caused the result.")
   ], { h: ["A fair test changes only one thing.", "Feel the soil a finger deep in each bed."], s1: "Change only the mulch." })),
@@ -10295,7 +10295,7 @@ var FAMILIES6 = [
     Q2("Kamau puts the sacks of maize on the floor against the wall. What may happen?", "Damp and rats may get in", ["Nothing, it is the best place|PRACT_GROUND", "The sacks will get heavier|PRACT_GROUND", "The maize will grow|PRACT_GROUND"], "A raised platform away from the wall is better."),
     Q2("Wangui closes her tin of damp beans tightly and puts it away. What is likely?", "The beans will grow mould", ["The beans will keep for years|PRACT_SEAL_EARLY", "The beans will dry by themselves|PRACT_SEAL_EARLY", "The beans will turn to ash|PRACT_SEAL_EARLY"], "Seal only fully dry beans."),
     Q2("The school stores maize for porridge. What is the best plan?", "Dry it, use clean sacks on a platform and check often", ["Store it damp on the floor|PRACT_GROUND", "Seal damp maize in drums|PRACT_SEAL_EARLY", "Leave it in the rain|PRACT_SEAL_EARLY"], "Dry, raised and checked."),
-    Q2("Otieno finds mould on some stored maize. What should he do?", "Remove the bad grain and dry the rest again", ["Eat it all at once|PRACT_DRYNESS", "Add water to the maize|PRACT_SEAL_EARLY", "Seal it tighter|PRACT_SEAL_EARLY"], "Mouldy grain can make people ill. Remove it.")
+    Q2("Otieno finds mould on some stored maize. What should he do?", "Remove the bad grain and dry the rest again", ["Eat it all at once|PRACT_DRYNESS", "Add water to the maize|PRACT_SEAL_EARLY", "Seal it tighter|PRACT_SEAL_EARLY"], "Mouldy grain can make people ill. Remove it and do not eat it or feed it to animals.")
   ], { h: ["Where does the damp or the pest get in?", "Dry grain, raised sacks, clean mat, check often."], s1: "Find what spoiled or would spoil the grain." }))
 ];
 
@@ -10504,7 +10504,7 @@ var FAMILIES8 = [
     Q2("Kamau uses boiling water for a coloured shirt and the dye runs. What went wrong?", "The water was too hot for the colour", ["The water was too cool|CARE_HOT", "The soap was too mild|CARE_HOT", "The shirt was too dry|CARE_HOT"], "Use cool or warm water."),
     Q2("Njeri irons a soaking wet cotton shirt on a cool setting. What should she change?", "Use a hot iron when it is slightly damp", ["Use a cooler iron still|CARE_IRON", "Iron it while it is dripping|CARE_IRON", "Do not iron cotton at all|CARE_IRON"], "Cotton needs heat and a little dampness."),
     Q2("Hassan's mother dries the white sheets in the sun. Why?", "The sun keeps them bright", ["The sun colours them blue|CARE_SUN", "The sun makes them smaller|CARE_SUN", "The sun washes them again|CARE_SUN"], "Sunshine whitens cotton."),
-    Q2("Which of these fast coloured items should be washed apart from whites?", "A new red dress", ["A white towel|CARE_HOT", "A white sock|CARE_HOT", "A cream blouse|CARE_HOT"], "Coloured clothes should be washed apart from white ones.")
+    Q2("Which of these should be washed apart from the white clothes?", "A new red dress", ["A white towel|CARE_HOT", "A white sock|CARE_HOT", "A cream blouse|CARE_HOT"], "Coloured clothes should be washed apart from white ones.")
   ], { h: ["What did the cloth need?", "Coloured: cool water, shade. White: sun. Cotton: hot iron, slightly damp."], s1: "Match the care to the cloth." })),
   // ---------------------------------------------------------------- STITCH_TYPES
   fam2("re.st.which", `${RE}STITCH_TYPES`, "direct", 1, choose2([
@@ -10560,7 +10560,7 @@ var FAMILIES8 = [
   ], { h: ["How much ground does the garden need?", "Vertical: upwards, little ground. Horizontal: flat on the ground."], s1: "Think about space." })),
   // ---------------------------------------------------------------- GARDEN_BUILD
   fam2("ga.bu.which", `${GA}GARDEN_BUILD`, "direct", 1, choose2([
-    Q2("Which crop suits a sack garden?", "Kale", ["Maize|GBUILD_ANY_CROP", "Cassava|GBUILD_ANY_CROP", "Sweet potato|GBUILD_ANY_CROP"], "Small crops with shallow roots grow well in a sack."),
+    Q2("Which crop suits a sack garden?", "Kale", ["Maize|GBUILD_ANY_CROP", "Cassava|GBUILD_ANY_CROP", "Sugarcane|GBUILD_ANY_CROP"], "Small crops with shallow roots grow well in a sack."),
     Q2("Why is a column of stones placed in the middle of a sack garden?", "To let water reach the lower soil", ["For decoration only|GBUILD_DRAIN", "To make the sack heavier|GBUILD_DRAIN", "To keep the kale from growing|GBUILD_DRAIN"], "The stones spread water through the sack."),
     Q2("How often does a sack garden need water?", "Regularly, through the stone column", ["Never, the sack keeps it|GBUILD_NO_WATER", "Only once a year|GBUILD_NO_WATER", "Only when it is cold|GBUILD_NO_WATER"], "It dries quickly and needs regular watering."),
     Q2("What is made in plastic bottles before planting?", "Small holes for drainage", ["No holes at all|GBUILD_DRAIN", "Large holes in the base|GBUILD_DRAIN", "A hole for the seeds only|GBUILD_DRAIN"], "Extra water must be able to drain out."),
