@@ -99,7 +99,7 @@
       "steps": ["Two 500 ml packets fill a 1 l bottle.", "Four 250 ml cups fill it too.", "State 1 l = 1 000 ml.", "Half and quarter litres in ml."],
       "contexts": ["milk packets", "a 1 l bottle of water", "a cup of tea"],
       "board": [
-        {"beat": "draw", "do": "Draw a 1 l bottle; pour two milk packets into it, one at a time.", "say": "Two 500 ml packets."},
+        {"beat": "draw", "do": "Draw a 1 l bottle; pour two milk packets into it, one at a time.", "say": "I pour in two milk packets."},
         {"beat": "pause", "do": "Wait for the child to say how much the bottle holds in ml."},
         {"beat": "draw", "do": "Draw the bottle again split into four equal parts."},
         {"beat": "child_draws", "do": "Child writes the ml in each quarter."}

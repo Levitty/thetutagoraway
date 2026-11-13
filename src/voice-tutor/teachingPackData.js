@@ -5833,7 +5833,7 @@ export const TEACHING_PACK_G5 = {
    {
     "beat": "draw",
     "do": "Draw a 1 l bottle; pour two milk packets into it, one at a time.",
-    "say": "Two 500 ml packets."
+    "say": "I pour in two milk packets."
    },
    {
     "beat": "pause",
