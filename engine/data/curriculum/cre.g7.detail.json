@@ -1,0 +1,268 @@
+{
+ "outcomes": {
+  "CRE.G7.OVERVI.IMPORTANCE_OF_STUDYING_C.a": "analyse the importance of learning Christian Religious Education",
+  "CRE.G7.OVERVI.IMPORTANCE_OF_STUDYING_C.b": "discuss how Christian Religious Education promotes sound moral and religious values",
+  "CRE.G7.OVERVI.IMPORTANCE_OF_STUDYING_C.c": "compile five values needed to foster responsible living",
+  "CRE.G7.OVERVI.IMPORTANCE_OF_STUDYING_C.d": "apply the values acquired in their daily interactions",
+  "CRE.G7.OVERVI.IMPORTANCE_OF_STUDYING_C.e": "appreciate the learning of Christian Religious Education by living responsibly",
+  "CRE.G7.CREATI.ACCOUNTS_OF_CREATION.a": "narrate the biblical accounts of creation",
+  "CRE.G7.CREATI.ACCOUNTS_OF_CREATION.b": "discuss the similarities and differences between the two accounts of creation",
+  "CRE.G7.CREATI.ACCOUNTS_OF_CREATION.c": "identify five attributes of God from the creation accounts",
+  "CRE.G7.CREATI.ACCOUNTS_OF_CREATION.d": "value God’s creation by conserving the environment",
+  "CRE.G7.CREATI.STEWARDSHIP_OVER_CREATIO.a": "explain the biblical responsibilities given to human beings over creation",
+  "CRE.G7.CREATI.STEWARDSHIP_OVER_CREATIO.b": "discuss ways they can protect animals, fish, and birds",
+  "CRE.G7.CREATI.STEWARDSHIP_OVER_CREATIO.c": "practise good stewardship by taking care of animals, fish, and birds",
+  "CRE.G7.CREATI.STEWARDSHIP_OVER_CREATIO.d": "appreciate God’s creation by conserving the environment",
+  "CRE.G7.CREATI.RESPONSIBILITY_OVER_PLAN.a": "describe the biblical responsibilities given to human beings over plants",
+  "CRE.G7.CREATI.RESPONSIBILITY_OVER_PLAN.b": "apply the biblical teachings acquired to conserve the environment",
+  "CRE.G7.CREATI.RESPONSIBILITY_OVER_PLAN.c": "discuss how responsible use of plants contribute to economic growth",
+  "CRE.G7.CREATI.RESPONSIBILITY_OVER_PLAN.d": "choose an income generating crop and plant it at home or school",
+  "CRE.G7.CREATI.RESPONSIBILITY_OVER_PLAN.e": "desire to contribute to a healthy ecosystem",
+  "CRE.G7.CREATI.USE_OF_NATURAL_RESOURCES.a": "explain ways in which human beings use and misuse natural resources",
+  "CRE.G7.CREATI.USE_OF_NATURAL_RESOURCES.b": "explore the effects of misusing natural resources",
+  "CRE.G7.CREATI.USE_OF_NATURAL_RESOURCES.c": "discuss Biblical teachings on good use of natural resources",
+  "CRE.G7.CREATI.USE_OF_NATURAL_RESOURCES.d": "conserve the environment as responsible citizens",
+  "CRE.G7.THE_BI.FUNCTIONS_OF_THE_BIBLE.a": "explain the importance of the Bible in the society today",
+  "CRE.G7.THE_BI.FUNCTIONS_OF_THE_BIBLE.b": "describe how the Bible promotes holistic growth",
+  "CRE.G7.THE_BI.FUNCTIONS_OF_THE_BIBLE.c": "analyse how God’s Word inspires different services among Christians today",
+  "CRE.G7.THE_BI.FUNCTIONS_OF_THE_BIBLE.d": "appreciate the Bible as the inspired Word of God",
+  "CRE.G7.THE_BI.DIVISIONS_OF_THE_BIBLE.a": "identify the two divisions of the Bible",
+  "CRE.G7.THE_BI.DIVISIONS_OF_THE_BIBLE.b": "categorize the books in the Old and New Testament",
+  "CRE.G7.THE_BI.DIVISIONS_OF_THE_BIBLE.c": "appreciate the Bible for reflective learning and living",
+  "CRE.G7.THE_BI.BIBLE_TRANSLATION.a": "identify versions of the Bible used today",
+  "CRE.G7.THE_BI.BIBLE_TRANSLATION.b": "discuss reasons for translating the Bible into local languages",
+  "CRE.G7.THE_BI.BIBLE_TRANSLATION.c": "describe the translation of the Bible from the original languages to local languages",
+  "CRE.G7.THE_BI.BIBLE_TRANSLATION.d": "examine the social and economic effects of translating the Bible into local languages",
+  "CRE.G7.THE_BI.BIBLE_TRANSLATION.e": "appreciate the work of Bible translation in Kenya",
+  "CRE.G7.THE_BI.LEADERSHIP_IN_ISRAEL.a": "describe how God prepared Moses for leadership in Israel",
+  "CRE.G7.THE_BI.LEADERSHIP_IN_ISRAEL.b": "identify the roles played by Moses during the Exodus",
+  "CRE.G7.THE_BI.LEADERSHIP_IN_ISRAEL.c": "outline leadership qualities they can emulate from Moses",
+  "CRE.G7.THE_BI.LEADERSHIP_IN_ISRAEL.d": "apply leadership qualities learnt from Moses in their daily lives",
+  "CRE.G7.THE_BI.LEADERSHIP_IN_ISRAEL.e": "choose leaders of integrity to foster stable governments",
+  "CRE.G7.THE_BI.LEADERSHIP_IN_ISRAEL.f": "value responsibility by choosing credible leaders",
+  "CRE.G7.THE_EA.PROPHECIES_ABOUT_THE_MES.a": "outline the Old Testament prophecies about the Messiah",
+  "CRE.G7.THE_EA.PROPHECIES_ABOUT_THE_MES.b": "elaborate the fulfilment of the Old Testament prophecies about the Messiah",
+  "CRE.G7.THE_EA.PROPHECIES_ABOUT_THE_MES.c": "value the fulfillment of the Old Testament prophecies",
+  "CRE.G7.THE_EA.JOHN_THE_BAPTIST.a": "elaborate the annunciation and birth of John the Baptist",
+  "CRE.G7.THE_EA.JOHN_THE_BAPTIST.b": "relate the birth of John the Baptist to the coming of the Messiah",
+  "CRE.G7.THE_EA.JOHN_THE_BAPTIST.c": "interpret John’s description of the Messiah in Luke 3:16 and John 1:29-30",
+  "CRE.G7.THE_EA.JOHN_THE_BAPTIST.d": "discuss the message of John the Baptist in Luke 3:7-18",
+  "CRE.G7.THE_EA.JOHN_THE_BAPTIST.e": "apply values acquired from the teachings of John the Baptist in daily life",
+  "CRE.G7.THE_EA.JOHN_THE_BAPTIST.f": "desire to live a morally upright life",
+  "CRE.G7.THE_EA.THE_BIRTH_AND_CHILDHOOD_.a": "elaborate the annunciation and birth of Jesus Christ",
+  "CRE.G7.THE_EA.THE_BIRTH_AND_CHILDHOOD_.b": "describe the dedication of baby Jesus",
+  "CRE.G7.THE_EA.THE_BIRTH_AND_CHILDHOOD_.c": "relate the dedication of Jesus to similar practises in the church today",
+  "CRE.G7.THE_EA.THE_BIRTH_AND_CHILDHOOD_.d": "narrate the story of Jesus Christ in the Temple",
+  "CRE.G7.THE_EA.THE_BIRTH_AND_CHILDHOOD_.e": "identify values learnt from the birth and childhood of Jesus Christ",
+  "CRE.G7.THE_EA.THE_BIRTH_AND_CHILDHOOD_.f": "acknowledge the gift of our Saviour by celebrating His birth",
+  "CRE.G7.THE_CH.SELECTED_FORMS_OF_WORSHI.a": "outline the teachings on praise and thanks giving from the scriptures provided",
+  "CRE.G7.THE_CH.SELECTED_FORMS_OF_WORSHI.b": "discuss the importance of prayer and fasting",
+  "CRE.G7.THE_CH.SELECTED_FORMS_OF_WORSHI.c": "explain teachings on prayer and fasting from the scriptures provided",
+  "CRE.G7.THE_CH.SELECTED_FORMS_OF_WORSHI.d": "practise the teachings of Jesus Christ on prayer and fasting",
+  "CRE.G7.THE_CH.SELECTED_FORMS_OF_WORSHI.e": "take part in different forms of worship at home, church and in school",
+  "CRE.G7.THE_CH.SELECTED_FORMS_OF_WORSHI.f": "pray to God always to grow spiritually",
+  "CRE.G7.THE_CH.ROLE_OF_THE_CHURCH_IN_ED.a": "appraise the contribution of the Church towards education and health",
+  "CRE.G7.THE_CH.ROLE_OF_THE_CHURCH_IN_ED.b": "identify barriers to effective Church mission work in Kenya today",
+  "CRE.G7.THE_CH.ROLE_OF_THE_CHURCH_IN_ED.c": "recommend solutions to barriers hindering effective mission work",
+  "CRE.G7.THE_CH.ROLE_OF_THE_CHURCH_IN_ED.d": "appreciate the contribution of the Church in education and health",
+  "CRE.G7.CHRIST.HUMAN_SEXUALITY.a": "explain the meaning of human sexuality for holistic development",
+  "CRE.G7.CHRIST.HUMAN_SEXUALITY.b": "discuss healthy and unhealthy relationships for responsible living",
+  "CRE.G7.CHRIST.HUMAN_SEXUALITY.c": "discuss the circumstances that lead to unhealthy relationships",
+  "CRE.G7.CHRIST.HUMAN_SEXUALITY.d": "outline the consequences of engaging in sex before marriage",
+  "CRE.G7.CHRIST.HUMAN_SEXUALITY.e": "compile values and life skills needed to avoid irresponsible sexual behaviour",
+  "CRE.G7.CHRIST.HUMAN_SEXUALITY.f": "utilize values and life skills acquired to form healthy relationships",
+  "CRE.G7.CHRIST.CHRISTIAN_MARRIAGE_AND_F.a": "discuss the biblical teachings on marriage and family",
+  "CRE.G7.CHRIST.CHRISTIAN_MARRIAGE_AND_F.b": "explain ways the church promotes values among young people before marriage",
+  "CRE.G7.CHRIST.CHRISTIAN_MARRIAGE_AND_F.c": "identify values needed to maintain stability in families",
+  "CRE.G7.CHRIST.CHRISTIAN_MARRIAGE_AND_F.d": "appreciate the family as a sacred institution ordained by God",
+  "CRE.G7.CHRIST.ALCOHOL_DRUGS_AND_SUBSTA.a": "identify drugs commonly abused by youths in Kenya today",
+  "CRE.G7.CHRIST.ALCOHOL_DRUGS_AND_SUBSTA.b": "discuss reasons why young people abuse drugs today",
+  "CRE.G7.CHRIST.ALCOHOL_DRUGS_AND_SUBSTA.c": "explore the effects of alcohol, drugs and substance abuse on an individual and the family",
+  "CRE.G7.CHRIST.ALCOHOL_DRUGS_AND_SUBSTA.d": "read the scriptures provided on the effects of alcohol, drug and substance abuse",
+  "CRE.G7.CHRIST.ALCOHOL_DRUGS_AND_SUBSTA.e": "recommend values and life skills needed to stay free from alcohol, drug and substance abuse",
+  "CRE.G7.CHRIST.ALCOHOL_DRUGS_AND_SUBSTA.f": "utilise values and life- skills acquired to live an alcohol, drug and substance-free life",
+  "CRE.G7.CHRIST.GAMBLING.a": "identify types of gambling in Kenya today",
+  "CRE.G7.CHRIST.GAMBLING.b": "discuss five causes of gambling",
+  "CRE.G7.CHRIST.GAMBLING.c": "outline teachings on money and wealth from the scriptures provided",
+  "CRE.G7.CHRIST.GAMBLING.d": "examine the effects of gambling on individuals and families",
+  "CRE.G7.CHRIST.GAMBLING.e": "outline teachings on true riches from the scriptures provided",
+  "CRE.G7.CHRIST.GAMBLING.f": "utilize acquired skills and moral values to live a gambling free life",
+  "CRE.G7.CHRIST.SOCIAL_MEDIA.a": "identify different social media platforms used by young people today",
+  "CRE.G7.CHRIST.SOCIAL_MEDIA.b": "describe ways of using social media responsibly",
+  "CRE.G7.CHRIST.SOCIAL_MEDIA.c": "examine ways in which social media is misused today",
+  "CRE.G7.CHRIST.SOCIAL_MEDIA.d": "discuss ways they should respond to cyberbullying",
+  "CRE.G7.CHRIST.SOCIAL_MEDIA.e": "recommend values and life skills needed for responsible use of social media",
+  "CRE.G7.CHRIST.SOCIAL_MEDIA.f": "apply Christian values as they use different social media platforms",
+  "CRE.G7.CHRIST.SOCIAL_MEDIA.g": "desire to use social media responsibly"
+ },
+ "skills": {
+  "CRES.G7.OVERVI.IMPORTANCE_OF_STUDYING_C.CRE_VALUE": {
+   "forms": [
+    "pick the right answer",
+    "pick the right answer in a short story",
+    "find the false step in a learner's reason"
+   ],
+   "mastery": "The child says CRE helps people know God, grow in values such as honesty, respect, love and responsibility, and live well with others. Evidence rule: at least four of the last five fresh questions right across at least two question forms, and no repeated pick of the same misconception."
+  },
+  "CRES.G7.CREATI.ACCOUNTS_OF_CREATION.CREATION_TWO": {
+   "forms": [
+    "pick the right answer",
+    "pick the right answer in a short story",
+    "find the false step in a learner's reason"
+   ],
+   "mastery": "The child says the first account (Genesis 1) has God creating in six days and resting on the seventh, with human beings made last in God's image, and the second (Genesis 2) has the man formed from the dust and given life by God's breath and placed in the garden of Eden; and names attributes of God (powerful, creator, good, caring, orderly). Evidence rule: at least four of the last five fresh questions right across at least two question forms, and no repeated pick of the same misconception."
+  },
+  "CRES.G7.CREATI.STEWARDSHIP_OVER_CREATIO.STEWARD_ANIMALS": {
+   "forms": [
+    "pick the right answer",
+    "pick the right answer in a short story",
+    "find the false step in a learner's reason"
+   ],
+   "mastery": "The child says God gave people the duty to rule over and care for animals, fish and birds (Genesis 1:26-28), and names ways to protect them (not hunting illegally, not polluting water, leaving nests, giving shelter and food). Evidence rule: at least four of the last five fresh questions right across at least two question forms, and no repeated pick of the same misconception."
+  },
+  "CRES.G7.CREATI.RESPONSIBILITY_OVER_PLAN.STEWARD_PLANTS": {
+   "forms": [
+    "pick the right answer",
+    "pick the right answer in a short story",
+    "find the false step in a learner's reason"
+   ],
+   "mastery": "The child says God gave plants for food and asked people to work and take care of the garden (Genesis 1:29 and 2:15), and says caring for plants (planting trees, not cutting without replacing) protects the land and can bring income. Evidence rule: at least four of the last five fresh questions right across at least two question forms, and no repeated pick of the same misconception."
+  },
+  "CRES.G7.CREATI.USE_OF_NATURAL_RESOURCES.RESOURCES_USE": {
+   "forms": [
+    "pick the right answer",
+    "pick the right answer in a short story",
+    "find the false step in a learner's reason"
+   ],
+   "mastery": "The child names uses (water for drinking and farming, soil for crops) and misuse (polluting rivers, wasting water, cutting trees without replanting) and the effects (drought, soil erosion, hunger, disease), and says the Bible calls for careful use. Evidence rule: at least four of the last five fresh questions right across at least two question forms, and no repeated pick of the same misconception."
+  },
+  "CRES.G7.THE_BI.FUNCTIONS_OF_THE_BIBLE.BIBLE_FUNCTIONS": {
+   "forms": [
+    "pick the right answer",
+    "pick the right answer in a short story",
+    "find the false step in a learner's reason"
+   ],
+   "mastery": "The child says the Bible teaches about God, guides how to live, comforts and gives hope, and says Christians use it in worship, teaching, prayer and service. Evidence rule: at least four of the last five fresh questions right across at least two question forms, and no repeated pick of the same misconception."
+  },
+  "CRES.G7.THE_BI.DIVISIONS_OF_THE_BIBLE.BIBLE_DIVISIONS": {
+   "forms": [
+    "pick the right answer",
+    "pick the right answer in a short story",
+    "find the false step in a learner's reason"
+   ],
+   "mastery": "The child says the Bible has two divisions, the Old Testament (39 books) and the New Testament (27 books), says Genesis and Psalms are in the Old, and Matthew and Romans are in the New. Evidence rule: at least four of the last five fresh questions right across at least two question forms, and no repeated pick of the same misconception."
+  },
+  "CRES.G7.THE_BI.BIBLE_TRANSLATION.BIBLE_TRANSLATION": {
+   "forms": [
+    "pick the right answer",
+    "pick the right answer in a short story",
+    "find the false step in a learner's reason"
+   ],
+   "mastery": "The child says the Old Testament was first written mostly in Hebrew and the New Testament in Greek, that the Bible is translated so people can read it in their own language, and that translation helps reading, education and unity. Evidence rule: at least four of the last five fresh questions right across at least two question forms, and no repeated pick of the same misconception."
+  },
+  "CRES.G7.THE_BI.LEADERSHIP_IN_ISRAEL.MOSES_PREPARED": {
+   "forms": [
+    "pick the right answer",
+    "pick the right answer in a short story",
+    "find the false step in a learner's reason"
+   ],
+   "mastery": "The child says baby Moses was saved in a basket and brought up in Pharaoh's palace (Exodus 2), that God called him at the burning bush (Exodus 3), that Aaron helped him speak, and that he led the Israelites out of Egypt through the Red Sea at the Exodus. Evidence rule: at least four of the last five fresh questions right across at least two question forms, and no repeated pick of the same misconception."
+  },
+  "CRES.G7.THE_BI.LEADERSHIP_IN_ISRAEL.MOSES_QUALITIES": {
+   "forms": [
+    "pick the right answer",
+    "pick the right answer in a short story",
+    "find the false step in a learner's reason"
+   ],
+   "mastery": "The child names qualities seen in Moses (obedience to God, humility, courage, patience, prayerfulness, caring for the people) and says leaders of integrity are honest and fair. Evidence rule: at least four of the last five fresh questions right across at least two question forms, and no repeated pick of the same misconception."
+  },
+  "CRES.G7.THE_EA.PROPHECIES_ABOUT_THE_MES.MESSIAH_PROPHECY": {
+   "forms": [
+    "pick the right answer",
+    "pick the right answer in a short story",
+    "find the false step in a learner's reason"
+   ],
+   "mastery": "The child says Micah 5:2 foretold the Messiah's birth in Bethlehem, Isaiah 7:14 that a virgin would bear a son called Immanuel, and Isaiah 9:6 names Him Prince of Peace, and that Christians say Jesus fulfilled them. Evidence rule: at least four of the last five fresh questions right across at least two question forms, and no repeated pick of the same misconception."
+  },
+  "CRES.G7.THE_EA.JOHN_THE_BAPTIST.JOHN_BAPTIST": {
+   "forms": [
+    "pick the right answer",
+    "pick the right answer in a short story",
+    "find the false step in a learner's reason"
+   ],
+   "mastery": "The child says the angel Gabriel told Zechariah that Elizabeth would bear a son called John, that John prepared the way for the Messiah, and that he told people to repent and to share, collect no more tax than was due and not to take by force or accuse falsely (Luke 3:7-14). Evidence rule: at least four of the last five fresh questions right across at least two question forms, and no repeated pick of the same misconception."
+  },
+  "CRES.G7.THE_EA.THE_BIRTH_AND_CHILDHOOD_.JESUS_BIRTH": {
+   "forms": [
+    "pick the right answer",
+    "pick the right answer in a short story",
+    "find the false step in a learner's reason"
+   ],
+   "mastery": "The child says the angel Gabriel told Mary she would bear Jesus, that Jesus was born in Bethlehem and laid in a manger, that shepherds were told by angels, and that Jesus was dedicated at the Temple in Jerusalem where Simeon and Anna blessed Him (Luke 2). Evidence rule: at least four of the last five fresh questions right across at least two question forms, and no repeated pick of the same misconception."
+  },
+  "CRES.G7.THE_EA.THE_BIRTH_AND_CHILDHOOD_.JESUS_TEMPLE": {
+   "forms": [
+    "pick the right answer",
+    "pick the right answer in a short story",
+    "find the false step in a learner's reason"
+   ],
+   "mastery": "The child says that at twelve Jesus stayed in the Temple in Jerusalem after the Passover feast, that his parents found him after three days among the teachers, that He said He must be in His Father's house, and that He then went home and obeyed them (Luke 2:41-52). Evidence rule: at least four of the last five fresh questions right across at least two question forms, and no repeated pick of the same misconception."
+  },
+  "CRES.G7.THE_CH.SELECTED_FORMS_OF_WORSHI.WORSHIP_FORMS": {
+   "forms": [
+    "pick the right answer",
+    "pick the right answer in a short story",
+    "find the false step in a learner's reason"
+   ],
+   "mastery": "The child says praise and thanksgiving honour God for who He is and what He has done (Psalm 100), prayer is talking with God (Matthew 6:9-13), and fasting is going without food for a time to draw near to God (Matthew 6:16-18), and that Jesus taught to pray and fast without showing off. Evidence rule: at least four of the last five fresh questions right across at least two question forms, and no repeated pick of the same misconception."
+  },
+  "CRES.G7.THE_CH.ROLE_OF_THE_CHURCH_IN_ED.CHURCH_SERVICE": {
+   "forms": [
+    "pick the right answer",
+    "pick the right answer in a short story",
+    "find the false step in a learner's reason"
+   ],
+   "mastery": "The child says churches started many schools, hospitals and clinics in Kenya, and names barriers to mission work (poverty, lack of workers, long distances, differences of belief and conflict) and ways to answer them (giving, training, working together, prayer). Evidence rule: at least four of the last five fresh questions right across at least two question forms, and no repeated pick of the same misconception."
+  },
+  "CRES.G7.CHRIST.HUMAN_SEXUALITY.SEXUALITY_BASICS": {
+   "forms": [
+    "pick the right answer",
+    "pick the right answer in a short story",
+    "find the false step in a learner's reason"
+   ],
+   "mastery": "The child says human sexuality is part of who we are as male and female, and is to be handled with respect; names healthy relationships (respect, honesty, trust, kindness) and unhealthy ones (pressure, secrecy, force, insults); and says a child who feels unsafe tells a trusted adult. Evidence rule: at least four of the last five fresh questions right across at least two question forms, and no repeated pick of the same misconception."
+  },
+  "CRES.G7.CHRIST.CHRISTIAN_MARRIAGE_AND_F.MARRIAGE_FAMILY": {
+   "forms": [
+    "pick the right answer",
+    "pick the right answer in a short story",
+    "find the false step in a learner's reason"
+   ],
+   "mastery": "The child says the Bible teaches that God made marriage as a lasting union of a man and a woman (Genesis 2:24), and names values that keep a family stable (love, respect, forgiveness, honesty, sharing duties). Evidence rule: at least four of the last five fresh questions right across at least two question forms, and no repeated pick of the same misconception."
+  },
+  "CRES.G7.CHRIST.ALCOHOL_DRUGS_AND_SUBSTA.DRUGS_ABUSE": {
+   "forms": [
+    "pick the right answer",
+    "pick the right answer in a short story",
+    "find the false step in a learner's reason"
+   ],
+   "mastery": "The child names commonly abused drugs in Kenya (alcohol, bhang, miraa, tobacco), reasons young people try them (peer pressure, curiosity, stress), effects (poor health, poor school work, family conflict), and says to refuse, give reasons and talk to a trusted adult. Evidence rule: at least four of the last five fresh questions right across at least two question forms, and no repeated pick of the same misconception."
+  },
+  "CRES.G7.CHRIST.GAMBLING.GAMBLING": {
+   "forms": [
+    "pick the right answer",
+    "pick the right answer in a short story",
+    "find the false step in a learner's reason"
+   ],
+   "mastery": "The child names types of gambling (betting on games, lotteries, casinos), causes (wanting quick money, peer pressure, advertising) and effects (debt, lost money, family quarrels), and says the Bible teaches to work honestly and that true riches are not money alone (1 Timothy 6:10). Evidence rule: at least four of the last five fresh questions right across at least two question forms, and no repeated pick of the same misconception."
+  },
+  "CRES.G7.CHRIST.SOCIAL_MEDIA.SOCIAL_MEDIA": {
+   "forms": [
+    "pick the right answer",
+    "pick the right answer in a short story",
+    "find the false step in a learner's reason"
+   ],
+   "mastery": "The child names platforms (WhatsApp, Facebook, TikTok, YouTube), responsible habits (kind words, privacy, not sharing others' pictures, time limits), misuse (cyberbullying, false news, sharing private information), and says to save the message, not reply in anger and tell a trusted adult. Evidence rule: at least four of the last five fresh questions right across at least two question forms, and no repeated pick of the same misconception."
+  }
+ }
+}
