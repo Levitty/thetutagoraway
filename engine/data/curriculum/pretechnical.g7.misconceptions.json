@@ -12,7 +12,11 @@
   "help": "List the five strands and one activity from each.",
   "feedback": "Pre-Technical Studies also covers safety, drawing, materials, computers and entrepreneurship, not only tools.",
   "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
-  "status": "draft"
+  "status": "draft",
+  "review": {
+   "mark": "plausible, to confirm by a teacher",
+   "note": "A slip a Kenyan Grade 7 learner could plausibly make. No source and no homework count; a Pre-Technical Studies teacher should say whether it comes up in class."
+  }
  },
  "PRET.G7.FOUNDA.INTRODUCTION_TO_PRE_TECH.PT_INTRO.M_PI_BOYS": {
   "skill": "PRET.G7.FOUNDA.INTRODUCTION_TO_PRE_TECH.PT_INTRO",
@@ -27,7 +31,11 @@
   "help": "Name a woman who uses it: a tailor, an engineer, a salon owner, a farmer with a pump.",
   "feedback": "Everybody uses it: girls and boys, in homes, shops, farms, offices and workshops.",
   "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
-  "status": "draft"
+  "status": "draft",
+  "review": {
+   "mark": "plausible, to confirm by a teacher",
+   "note": "A slip a Kenyan Grade 7 learner could plausibly make. No source and no homework count; a Pre-Technical Studies teacher should say whether it comes up in class."
+  }
  },
  "PRET.G7.FOUNDA.INTRODUCTION_TO_PRE_TECH.PT_INTRO.M_PI_SCHOOL_ONLY": {
   "skill": "PRET.G7.FOUNDA.INTRODUCTION_TO_PRE_TECH.PT_INTRO",
@@ -42,7 +50,11 @@
   "help": "List what happens at home: cooking safely, mending a chair, a phone, a budget.",
   "feedback": "Safety, tools, drawings and small businesses are part of daily life everywhere.",
   "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
-  "status": "draft"
+  "status": "draft",
+  "review": {
+   "mark": "plausible, to confirm by a teacher",
+   "note": "A slip a Kenyan Grade 7 learner could plausibly make. No source and no homework count; a Pre-Technical Studies teacher should say whether it comes up in class."
+  }
  },
  "PRET.G7.FOUNDA.SAFETY_IN_THE_IMMEDIATE_.SAFETY_THREATS.M_ST_SLIP_TRIP": {
   "skill": "PRET.G7.FOUNDA.SAFETY_IN_THE_IMMEDIATE_.SAFETY_THREATS",
@@ -57,7 +69,11 @@
   "help": "A slip is sliding on a smooth or wet surface; a trip is catching the foot on something.",
   "feedback": "A slip happens on a wet or smooth floor. A trip happens when the foot catches on something in the way.",
   "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
-  "status": "draft"
+  "status": "draft",
+  "review": {
+   "mark": "plausible, to confirm by a teacher",
+   "note": "A slip a Kenyan Grade 7 learner could plausibly make. No source and no homework count; a Pre-Technical Studies teacher should say whether it comes up in class."
+  }
  },
  "PRET.G7.FOUNDA.SAFETY_IN_THE_IMMEDIATE_.SAFETY_THREATS.M_ST_FIRE_STOVE": {
   "skill": "PRET.G7.FOUNDA.SAFETY_IN_THE_IMMEDIATE_.SAFETY_THREATS",
@@ -72,7 +88,11 @@
   "help": "List five ways a fire can start in a house or a workshop.",
   "feedback": "Faulty wires, overloaded sockets, hot oil and sparks can all start a fire, not only a big flame.",
   "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
-  "status": "draft"
+  "status": "draft",
+  "review": {
+   "mark": "plausible, to confirm by a teacher",
+   "note": "A slip a Kenyan Grade 7 learner could plausibly make. No source and no homework count; a Pre-Technical Studies teacher should say whether it comes up in class."
+  }
  },
  "PRET.G7.FOUNDA.SAFETY_IN_THE_IMMEDIATE_.SAFETY_THREATS.M_ST_DEVICE_THIEF": {
   "skill": "PRET.G7.FOUNDA.SAFETY_IN_THE_IMMEDIATE_.SAFETY_THREATS",
@@ -87,7 +107,11 @@
   "help": "Ask what happens to a computer in a flood, in lightning or when the power surges.",
   "feedback": "Theft, floods, fire and hardware failure can all harm a device.",
   "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
-  "status": "draft"
+  "status": "draft",
+  "review": {
+   "mark": "plausible, to confirm by a teacher",
+   "note": "A slip a Kenyan Grade 7 learner could plausibly make. No source and no homework count; a Pre-Technical Studies teacher should say whether it comes up in class."
+  }
  },
  "PRET.G7.FOUNDA.SAFETY_IN_THE_IMMEDIATE_.SAFETY_THREATS.M_ST_ROAD_DRIVER": {
   "skill": "PRET.G7.FOUNDA.SAFETY_IN_THE_IMMEDIATE_.SAFETY_THREATS",
@@ -102,7 +126,11 @@
   "help": "List who is on a road outside the school gate.",
   "feedback": "Walkers, riders and passengers are at risk too, near the school gate as well as on highways.",
   "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
-  "status": "draft"
+  "status": "draft",
+  "review": {
+   "mark": "doubtful",
+   "why": "Trap option. Unlikely that a child thinks only drivers on highways are hurt in road crashes."
+  }
  },
  "PRET.G7.FOUNDA.SAFETY_IN_THE_IMMEDIATE_.SAFETY_ONLINE.M_SO_LOOKS_REAL": {
   "skill": "PRET.G7.FOUNDA.SAFETY_IN_THE_IMMEDIATE_.SAFETY_ONLINE",
@@ -117,7 +145,11 @@
   "help": "Show that anybody can copy a logo. Real companies never ask for a PIN.",
   "feedback": "Phishing messages copy real logos. Nobody real asks for your PIN or password.",
   "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
-  "status": "draft"
+  "status": "draft",
+  "review": {
+   "mark": "plausible, to confirm by a teacher",
+   "note": "A slip a Kenyan Grade 7 learner could plausibly make. No source and no homework count; a Pre-Technical Studies teacher should say whether it comes up in class."
+  }
  },
  "PRET.G7.FOUNDA.SAFETY_IN_THE_IMMEDIATE_.SAFETY_ONLINE.M_SO_ACCEPT_STRANGER": {
   "skill": "PRET.G7.FOUNDA.SAFETY_IN_THE_IMMEDIATE_.SAFETY_ONLINE",
@@ -132,7 +164,11 @@
   "help": "Ask: would you give a stranger at the gate your home address?",
   "feedback": "Do not accept a stranger. Tell a trusted adult about the request.",
   "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
-  "status": "draft"
+  "status": "draft",
+  "review": {
+   "mark": "plausible, to confirm by a teacher",
+   "note": "A slip a Kenyan Grade 7 learner could plausibly make. No source and no homework count; a Pre-Technical Studies teacher should say whether it comes up in class."
+  }
  },
  "PRET.G7.FOUNDA.SAFETY_IN_THE_IMMEDIATE_.SAFETY_ONLINE.M_SO_BULLY_JOKE": {
   "skill": "PRET.G7.FOUNDA.SAFETY_IN_THE_IMMEDIATE_.SAFETY_ONLINE",
@@ -147,7 +183,11 @@
   "help": "Ask how a nasty message to you would feel; a message can be kept and shared.",
   "feedback": "Cyberbullying hurts like bullying in person. Tell a trusted adult.",
   "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
-  "status": "draft"
+  "status": "draft",
+  "review": {
+   "mark": "plausible, to confirm by a teacher",
+   "note": "A slip a Kenyan Grade 7 learner could plausibly make. No source and no homework count; a Pre-Technical Studies teacher should say whether it comes up in class."
+  }
  },
  "PRET.G7.FOUNDA.SAFETY_IN_THE_IMMEDIATE_.SAFETY_ONLINE.M_SO_IMPERSONATE": {
   "skill": "PRET.G7.FOUNDA.SAFETY_IN_THE_IMMEDIATE_.SAFETY_ONLINE",
@@ -162,7 +202,11 @@
   "help": "A nickname is open and harmless; impersonation pretends to be a real person to trick others.",
   "feedback": "Impersonation is pretending to be another real person, usually to trick people.",
   "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
-  "status": "draft"
+  "status": "draft",
+  "review": {
+   "mark": "plausible, to confirm by a teacher",
+   "note": "A slip a Kenyan Grade 7 learner could plausibly make. No source and no homework count; a Pre-Technical Studies teacher should say whether it comes up in class."
+  }
  },
  "PRET.G7.FOUNDA.SAFETY_IN_THE_IMMEDIATE_.SAFETY_ONLINE.M_SO_HACK_EXPERT": {
   "skill": "PRET.G7.FOUNDA.SAFETY_IN_THE_IMMEDIATE_.SAFETY_ONLINE",
@@ -177,7 +221,11 @@
   "help": "Ask what a thief would want from a child's social media account.",
   "feedback": "Anyone can be hacked. Strong passwords and careful clicking protect you.",
   "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
-  "status": "draft"
+  "status": "draft",
+  "review": {
+   "mark": "plausible, to confirm by a teacher",
+   "note": "A slip a Kenyan Grade 7 learner could plausibly make. No source and no homework count; a Pre-Technical Studies teacher should say whether it comes up in class."
+  }
  },
  "PRET.G7.FOUNDA.SAFETY_IN_THE_IMMEDIATE_.SAFETY_RULES.M_SR_RUSH": {
   "skill": "PRET.G7.FOUNDA.SAFETY_IN_THE_IMMEDIATE_.SAFETY_RULES",
@@ -192,7 +240,11 @@
   "help": "Ask what happens to a hand that hurries near a saw.",
   "feedback": "Rushing causes accidents. Work carefully and follow the steps.",
   "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
-  "status": "draft"
+  "status": "draft",
+  "review": {
+   "mark": "plausible, to confirm by a teacher",
+   "note": "A slip a Kenyan Grade 7 learner could plausibly make. No source and no homework count; a Pre-Technical Studies teacher should say whether it comes up in class."
+  }
  },
  "PRET.G7.FOUNDA.SAFETY_IN_THE_IMMEDIATE_.SAFETY_RULES.M_SR_NO_REPORT": {
   "skill": "PRET.G7.FOUNDA.SAFETY_IN_THE_IMMEDIATE_.SAFETY_RULES",
@@ -207,7 +259,11 @@
   "help": "A cut can be dirty; the teacher can also fix what caused it.",
   "feedback": "Always tell the teacher about an injury, however small.",
   "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
-  "status": "draft"
+  "status": "draft",
+  "review": {
+   "mark": "plausible, to confirm by a teacher",
+   "note": "A slip a Kenyan Grade 7 learner could plausibly make. No source and no homework count; a Pre-Technical Studies teacher should say whether it comes up in class."
+  }
  },
  "PRET.G7.FOUNDA.SAFETY_IN_THE_IMMEDIATE_.SAFETY_RULES.M_SR_LOOSE": {
   "skill": "PRET.G7.FOUNDA.SAFETY_IN_THE_IMMEDIATE_.SAFETY_RULES",
@@ -222,7 +278,11 @@
   "help": "Show how a loose sleeve could be caught by a moving part.",
   "feedback": "Hair and loose clothes can be caught by moving parts. Tie hair back.",
   "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
-  "status": "draft"
+  "status": "draft",
+  "review": {
+   "mark": "plausible, to confirm by a teacher",
+   "note": "A slip a Kenyan Grade 7 learner could plausibly make. No source and no homework count; a Pre-Technical Studies teacher should say whether it comes up in class."
+  }
  },
  "PRET.G7.FOUNDA.SAFETY_IN_THE_IMMEDIATE_.SAFETY_RULES.M_SR_TOOLS_FLOOR": {
   "skill": "PRET.G7.FOUNDA.SAFETY_IN_THE_IMMEDIATE_.SAFETY_RULES",
@@ -237,7 +297,11 @@
   "help": "Ask who might step on a tool left in a walkway.",
   "feedback": "Tools left about cause trips and cuts. Put them back in their place.",
   "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
-  "status": "draft"
+  "status": "draft",
+  "review": {
+   "mark": "plausible, to confirm by a teacher",
+   "note": "A slip a Kenyan Grade 7 learner could plausibly make. No source and no homework count; a Pre-Technical Studies teacher should say whether it comes up in class."
+  }
  },
  "PRET.G7.FOUNDA.COMPUTER_CONCEPTS.COMP_CHARS.M_CC_DATA_INFO": {
   "skill": "PRET.G7.FOUNDA.COMPUTER_CONCEPTS.COMP_CHARS",
@@ -252,7 +316,11 @@
   "help": "Data is raw; information is data made useful by processing.",
   "feedback": "Data is raw facts. Information is data that has been processed so it means something.",
   "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
-  "status": "draft"
+  "status": "draft",
+  "review": {
+   "mark": "plausible, to confirm by a teacher",
+   "note": "A slip a Kenyan Grade 7 learner could plausibly make. No source and no homework count; a Pre-Technical Studies teacher should say whether it comes up in class."
+  }
  },
  "PRET.G7.FOUNDA.COMPUTER_CONCEPTS.COMP_CHARS.M_CC_ALWAYS_RIGHT": {
   "skill": "PRET.G7.FOUNDA.COMPUTER_CONCEPTS.COMP_CHARS",
@@ -267,7 +335,11 @@
   "help": "A computer is exact in its sums; it cannot know your typing was wrong.",
   "feedback": "A computer is accurate at the working, but wrong input gives wrong output.",
   "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
-  "status": "draft"
+  "status": "draft",
+  "review": {
+   "mark": "plausible, to confirm by a teacher",
+   "note": "A slip a Kenyan Grade 7 learner could plausibly make. No source and no homework count; a Pre-Technical Studies teacher should say whether it comes up in class."
+  }
  },
  "PRET.G7.FOUNDA.COMPUTER_CONCEPTS.COMP_CHARS.M_CC_TIRED": {
   "skill": "PRET.G7.FOUNDA.COMPUTER_CONCEPTS.COMP_CHARS",
@@ -282,7 +354,11 @@
   "help": "A person tires; a computer repeats the same work without losing care.",
   "feedback": "Diligence means it works for long hours without tiring or losing care.",
   "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
-  "status": "draft"
+  "status": "draft",
+  "review": {
+   "mark": "plausible, to confirm by a teacher",
+   "note": "A slip a Kenyan Grade 7 learner could plausibly make. No source and no homework count; a Pre-Technical Studies teacher should say whether it comes up in class."
+  }
  },
  "PRET.G7.FOUNDA.COMPUTER_CONCEPTS.COMP_CHARS.M_CC_THINKS": {
   "skill": "PRET.G7.FOUNDA.COMPUTER_CONCEPTS.COMP_CHARS",
@@ -297,7 +373,11 @@
   "help": "Ask what a computer does with no program.",
   "feedback": "A computer follows the instructions it is given. It does not think for itself.",
   "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
-  "status": "draft"
+  "status": "draft",
+  "review": {
+   "mark": "plausible, to confirm by a teacher",
+   "note": "A slip a Kenyan Grade 7 learner could plausibly make. No source and no homework count; a Pre-Technical Studies teacher should say whether it comes up in class."
+  }
  },
  "PRET.G7.FOUNDA.COMPUTER_CONCEPTS.COMP_CHARS.M_CC_ONE_JOB": {
   "skill": "PRET.G7.FOUNDA.COMPUTER_CONCEPTS.COMP_CHARS",
@@ -312,7 +392,11 @@
   "help": "List what a laptop does: write, draw, play, calculate.",
   "feedback": "Versatility is doing many different kinds of jobs.",
   "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
-  "status": "draft"
+  "status": "draft",
+  "review": {
+   "mark": "plausible, to confirm by a teacher",
+   "note": "A slip a Kenyan Grade 7 learner could plausibly make. No source and no homework count; a Pre-Technical Studies teacher should say whether it comes up in class."
+  }
  },
  "PRET.G7.FOUNDA.COMPUTER_CONCEPTS.COMP_CLASSIFY.M_CL_PHONE_NOT": {
   "skill": "PRET.G7.FOUNDA.COMPUTER_CONCEPTS.COMP_CLASSIFY",
@@ -327,7 +411,11 @@
   "help": "A phone takes input, processes, stores and gives output.",
   "feedback": "A smartphone is a small computer: it takes input, processes, stores and gives output.",
   "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
-  "status": "draft"
+  "status": "draft",
+  "review": {
+   "mark": "plausible, to confirm by a teacher",
+   "note": "A slip a Kenyan Grade 7 learner could plausibly make. No source and no homework count; a Pre-Technical Studies teacher should say whether it comes up in class."
+  }
  },
  "PRET.G7.FOUNDA.COMPUTER_CONCEPTS.COMP_CLASSIFY.M_CL_MICRO_SMALL": {
   "skill": "PRET.G7.FOUNDA.COMPUTER_CONCEPTS.COMP_CLASSIFY",
@@ -342,7 +430,11 @@
   "help": "Order them from biggest: super, mainframe, mini, micro.",
   "feedback": "The order from biggest is super, mainframe, mini and micro. A laptop is a micro computer.",
   "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
-  "status": "draft"
+  "status": "draft",
+  "review": {
+   "mark": "plausible, to confirm by a teacher",
+   "note": "A slip a Kenyan Grade 7 learner could plausibly make. No source and no homework count; a Pre-Technical Studies teacher should say whether it comes up in class."
+  }
  },
  "PRET.G7.FOUNDA.COMPUTER_CONCEPTS.COMP_CLASSIFY.M_CL_ANALOGUE_OLD": {
   "skill": "PRET.G7.FOUNDA.COMPUTER_CONCEPTS.COMP_CLASSIFY",
@@ -357,7 +449,11 @@
   "help": "A petrol pump meter reads a flow, not digits alone.",
   "feedback": "Analogue computers work with continuous quantities, such as temperature, speed or flow.",
   "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
-  "status": "draft"
+  "status": "draft",
+  "review": {
+   "mark": "plausible, to confirm by a teacher",
+   "note": "A slip a Kenyan Grade 7 learner could plausibly make. No source and no homework count; a Pre-Technical Studies teacher should say whether it comes up in class."
+  }
  },
  "PRET.G7.FOUNDA.COMPUTER_CONCEPTS.COMP_CLASSIFY.M_CL_SPECIAL_WEAK": {
   "skill": "PRET.G7.FOUNDA.COMPUTER_CONCEPTS.COMP_CLASSIFY",
@@ -372,7 +468,11 @@
   "help": "It is built for one job and does it well.",
   "feedback": "A special-purpose computer is built for one job. General-purpose computers do many jobs.",
   "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
-  "status": "draft"
+  "status": "draft",
+  "review": {
+   "mark": "plausible, to confirm by a teacher",
+   "note": "A slip a Kenyan Grade 7 learner could plausibly make. No source and no homework count; a Pre-Technical Studies teacher should say whether it comes up in class."
+  }
  },
  "PRET.G7.COMMUN.INTRODUCTION_TO_DRAWING.DRAW_PURPOSE.M_DP_ARTISTS_ONLY": {
   "skill": "PRET.G7.COMMUN.INTRODUCTION_TO_DRAWING.DRAW_PURPOSE",
@@ -387,7 +487,11 @@
   "help": "Ask how a builder tells workers the plan of a house.",
   "feedback": "Builders, tailors and engineers all use drawings to share plans.",
   "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
-  "status": "draft"
+  "status": "draft",
+  "review": {
+   "mark": "plausible, to confirm by a teacher",
+   "note": "A slip a Kenyan Grade 7 learner could plausibly make. No source and no homework count; a Pre-Technical Studies teacher should say whether it comes up in class."
+  }
  },
  "PRET.G7.COMMUN.INTRODUCTION_TO_DRAWING.DRAW_PURPOSE.M_DP_WORDS_BETTER": {
   "skill": "PRET.G7.COMMUN.INTRODUCTION_TO_DRAWING.DRAW_PURPOSE",
@@ -402,7 +506,11 @@
   "help": "Describe a door hinge in words, then draw it.",
   "feedback": "A drawing shows shape, size and parts that words describe badly.",
   "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
-  "status": "draft"
+  "status": "draft",
+  "review": {
+   "mark": "plausible, to confirm by a teacher",
+   "note": "A slip a Kenyan Grade 7 learner could plausibly make. No source and no homework count; a Pre-Technical Studies teacher should say whether it comes up in class."
+  }
  },
  "PRET.G7.COMMUN.INTRODUCTION_TO_DRAWING.DRAW_PURPOSE.M_DP_TECH_PRETTY": {
   "skill": "PRET.G7.COMMUN.INTRODUCTION_TO_DRAWING.DRAW_PURPOSE",
@@ -417,7 +525,11 @@
   "help": "Compare a painting of a house with its building plan.",
   "feedback": "A technical drawing gives exact shape and size by rules so a worker can make the thing.",
   "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
-  "status": "draft"
+  "status": "draft",
+  "review": {
+   "mark": "plausible, to confirm by a teacher",
+   "note": "A slip a Kenyan Grade 7 learner could plausibly make. No source and no homework count; a Pre-Technical Studies teacher should say whether it comes up in class."
+  }
  },
  "PRET.G7.COMMUN.INTRODUCTION_TO_DRAWING.DRAW_PURPOSE.M_DP_ART_NO_RULES": {
   "skill": "PRET.G7.COMMUN.INTRODUCTION_TO_DRAWING.DRAW_PURPOSE",
@@ -432,7 +544,11 @@
   "help": "A plan for a table must have sizes; a drawing of a sunset need not.",
   "feedback": "An artistic drawing shows feeling or beauty. A technical drawing uses rules and exact sizes.",
   "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
-  "status": "draft"
+  "status": "draft",
+  "review": {
+   "mark": "plausible, to confirm by a teacher",
+   "note": "A slip a Kenyan Grade 7 learner could plausibly make. No source and no homework count; a Pre-Technical Studies teacher should say whether it comes up in class."
+  }
  },
  "PRET.G7.COMMUN.INTRODUCTION_TO_DRAWING.DRAW_LINES.M_DL_HIDDEN_CHAIN": {
   "skill": "PRET.G7.COMMUN.INTRODUCTION_TO_DRAWING.DRAW_LINES",
@@ -447,7 +563,11 @@
   "help": "Dashed has equal short dashes; chain has long and short dashes.",
   "feedback": "Hidden detail is shown by a dashed line. A chain line shows centres.",
   "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
-  "status": "draft"
+  "status": "draft",
+  "review": {
+   "mark": "plausible, to confirm by a teacher",
+   "note": "A slip a Kenyan Grade 7 learner could plausibly make. No source and no homework count; a Pre-Technical Studies teacher should say whether it comes up in class."
+  }
  },
  "PRET.G7.COMMUN.INTRODUCTION_TO_DRAWING.DRAW_LINES.M_DL_CENTRE_DASHED": {
   "skill": "PRET.G7.COMMUN.INTRODUCTION_TO_DRAWING.DRAW_LINES",
@@ -462,7 +582,11 @@
   "help": "Chain means long-short-long.",
   "feedback": "A chain line (long and short dashes) marks centres. Dashed lines show hidden detail.",
   "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
-  "status": "draft"
+  "status": "draft",
+  "review": {
+   "mark": "plausible, to confirm by a teacher",
+   "note": "A slip a Kenyan Grade 7 learner could plausibly make. No source and no homework count; a Pre-Technical Studies teacher should say whether it comes up in class."
+  }
  },
  "PRET.G7.COMMUN.INTRODUCTION_TO_DRAWING.DRAW_LINES.M_DL_DIM_THICK": {
   "skill": "PRET.G7.COMMUN.INTRODUCTION_TO_DRAWING.DRAW_LINES",
@@ -477,7 +601,11 @@
   "help": "Thick lines are for the outline; dimension lines must not hide it.",
   "feedback": "Dimension lines are thin continuous lines. The outline is thick.",
   "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
-  "status": "draft"
+  "status": "draft",
+  "review": {
+   "mark": "plausible, to confirm by a teacher",
+   "note": "A slip a Kenyan Grade 7 learner could plausibly make. No source and no homework count; a Pre-Technical Studies teacher should say whether it comes up in class."
+  }
  },
  "PRET.G7.COMMUN.INTRODUCTION_TO_DRAWING.DRAW_LINES.M_DL_OUTLINE_THIN": {
   "skill": "PRET.G7.COMMUN.INTRODUCTION_TO_DRAWING.DRAW_LINES",
@@ -492,7 +620,11 @@
   "help": "The outline must stand out from the thin working lines.",
   "feedback": "The outline and visible edges are thick continuous lines.",
   "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
-  "status": "draft"
+  "status": "draft",
+  "review": {
+   "mark": "plausible, to confirm by a teacher",
+   "note": "A slip a Kenyan Grade 7 learner could plausibly make. No source and no homework count; a Pre-Technical Studies teacher should say whether it comes up in class."
+  }
  },
  "PRET.G7.COMMUN.INTRODUCTION_TO_DRAWING.DRAW_SYMBOLS.M_DS_R_DIAM": {
   "skill": "PRET.G7.COMMUN.INTRODUCTION_TO_DRAWING.DRAW_SYMBOLS",
@@ -507,7 +639,11 @@
   "help": "Diameter is across the whole circle; radius is half of it.",
   "feedback": "R stands for radius. Diameter is shown by the symbol ⌀.",
   "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
-  "status": "draft"
+  "status": "draft",
+  "review": {
+   "mark": "plausible, to confirm by a teacher",
+   "note": "A slip a Kenyan Grade 7 learner could plausibly make. No source and no homework count; a Pre-Technical Studies teacher should say whether it comes up in class."
+  }
  },
  "PRET.G7.COMMUN.INTRODUCTION_TO_DRAWING.DRAW_SYMBOLS.M_DS_PERP_PARALLEL": {
   "skill": "PRET.G7.COMMUN.INTRODUCTION_TO_DRAWING.DRAW_SYMBOLS",
@@ -522,7 +658,11 @@
   "help": "Draw two lines at a right angle: the symbol is those two lines.",
   "feedback": "The symbol ⊥ means perpendicular, at a right angle.",
   "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
-  "status": "draft"
+  "status": "draft",
+  "review": {
+   "mark": "plausible, to confirm by a teacher",
+   "note": "A slip a Kenyan Grade 7 learner could plausibly make. No source and no homework count; a Pre-Technical Studies teacher should say whether it comes up in class."
+  }
  },
  "PRET.G7.COMMUN.INTRODUCTION_TO_DRAWING.DRAW_SYMBOLS.M_DS_ID_OD": {
   "skill": "PRET.G7.COMMUN.INTRODUCTION_TO_DRAWING.DRAW_SYMBOLS",
@@ -537,7 +677,11 @@
   "help": "Measure a pipe across the outside, then across the hole.",
   "feedback": "O/D is outside diameter. I/D is inside diameter.",
   "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
-  "status": "draft"
+  "status": "draft",
+  "review": {
+   "mark": "plausible, to confirm by a teacher",
+   "note": "A slip a Kenyan Grade 7 learner could plausibly make. No source and no homework count; a Pre-Technical Studies teacher should say whether it comes up in class."
+  }
  },
  "PRET.G7.COMMUN.INTRODUCTION_TO_DRAWING.DRAW_SYMBOLS.M_DS_AF_AC": {
   "skill": "PRET.G7.COMMUN.INTRODUCTION_TO_DRAWING.DRAW_SYMBOLS",
@@ -552,7 +696,11 @@
   "help": "A/F is spanner size: from one flat side to the opposite.",
   "feedback": "A/F is across flats, side to side. A/C is across corners.",
   "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
-  "status": "draft"
+  "status": "draft",
+  "review": {
+   "mark": "plausible, to confirm by a teacher",
+   "note": "A slip a Kenyan Grade 7 learner could plausibly make. No source and no homework count; a Pre-Technical Studies teacher should say whether it comes up in class."
+  }
  },
  "PRET.G7.COMMUN.FREE_HAND_SKETCHING.SKETCH_PRINCIPLES.M_SP_RULER": {
   "skill": "PRET.G7.COMMUN.FREE_HAND_SKETCHING.SKETCH_PRINCIPLES",
@@ -567,7 +715,11 @@
   "help": "Free-hand means the hand alone.",
   "feedback": "Free-hand sketching is done without a ruler or compass.",
   "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
-  "status": "draft"
+  "status": "draft",
+  "review": {
+   "mark": "plausible, to confirm by a teacher",
+   "note": "A slip a Kenyan Grade 7 learner could plausibly make. No source and no homework count; a Pre-Technical Studies teacher should say whether it comes up in class."
+  }
  },
  "PRET.G7.COMMUN.FREE_HAND_SKETCHING.SKETCH_PRINCIPLES.M_SP_PRESS_FIRST": {
   "skill": "PRET.G7.COMMUN.FREE_HAND_SKETCHING.SKETCH_PRINCIPLES",
@@ -582,7 +734,11 @@
   "help": "Light lines can be corrected and firmed up.",
   "feedback": "Start light. Firm up the correct lines later.",
   "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
-  "status": "draft"
+  "status": "draft",
+  "review": {
+   "mark": "plausible, to confirm by a teacher",
+   "note": "A slip a Kenyan Grade 7 learner could plausibly make. No source and no homework count; a Pre-Technical Studies teacher should say whether it comes up in class."
+  }
  },
  "PRET.G7.COMMUN.FREE_HAND_SKETCHING.SKETCH_PRINCIPLES.M_SP_ERASER": {
   "skill": "PRET.G7.COMMUN.FREE_HAND_SKETCHING.SKETCH_PRINCIPLES",
@@ -597,7 +753,11 @@
   "help": "Overlapping light lines are part of sketching.",
   "feedback": "Light lines let you correct without much rubbing out.",
   "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
-  "status": "draft"
+  "status": "draft",
+  "review": {
+   "mark": "plausible, to confirm by a teacher",
+   "note": "A slip a Kenyan Grade 7 learner could plausibly make. No source and no homework count; a Pre-Technical Studies teacher should say whether it comes up in class."
+  }
  },
  "PRET.G7.COMMUN.FREE_HAND_SKETCHING.SKETCH_PRINCIPLES.M_SP_PROPORTION": {
   "skill": "PRET.G7.COMMUN.FREE_HAND_SKETCHING.SKETCH_PRINCIPLES",
@@ -612,7 +772,11 @@
   "help": "Get height to width right before details.",
   "feedback": "Look at the whole shape and proportions first. Add detail last.",
   "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
-  "status": "draft"
+  "status": "draft",
+  "review": {
+   "mark": "plausible, to confirm by a teacher",
+   "note": "A slip a Kenyan Grade 7 learner could plausibly make. No source and no homework count; a Pre-Technical Studies teacher should say whether it comes up in class."
+  }
  },
  "PRET.G7.COMMUN.FREE_HAND_SKETCHING.SKETCH_TECHNIQUES.M_SK_HATCH_DOTS": {
   "skill": "PRET.G7.COMMUN.FREE_HAND_SKETCHING.SKETCH_TECHNIQUES",
@@ -627,7 +791,11 @@
   "help": "Dots are stippling; parallel lines are hatching.",
   "feedback": "Hatching is shading with parallel lines. Dots are stippling.",
   "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
-  "status": "draft"
+  "status": "draft",
+  "review": {
+   "mark": "plausible, to confirm by a teacher",
+   "note": "A slip a Kenyan Grade 7 learner could plausibly make. No source and no homework count; a Pre-Technical Studies teacher should say whether it comes up in class."
+  }
  },
  "PRET.G7.COMMUN.FREE_HAND_SKETCHING.SKETCH_TECHNIQUES.M_SK_CROSS_HATCH": {
   "skill": "PRET.G7.COMMUN.FREE_HAND_SKETCHING.SKETCH_TECHNIQUES",
@@ -642,7 +810,11 @@
   "help": "It is hatching, then hatching again across the first lines.",
   "feedback": "Cross-hatching is two sets of lines crossing each other, for darker shade.",
   "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
-  "status": "draft"
+  "status": "draft",
+  "review": {
+   "mark": "plausible, to confirm by a teacher",
+   "note": "A slip a Kenyan Grade 7 learner could plausibly make. No source and no homework count; a Pre-Technical Studies teacher should say whether it comes up in class."
+  }
  },
  "PRET.G7.COMMUN.FREE_HAND_SKETCHING.SKETCH_TECHNIQUES.M_SK_BOX_CIRCLE": {
   "skill": "PRET.G7.COMMUN.FREE_HAND_SKETCHING.SKETCH_TECHNIQUES",
@@ -657,7 +829,11 @@
   "help": "The box method puts the object in a box. A hand compass pivots.",
   "feedback": "The hand compass method draws arcs and circles. The box method draws a light box round an object.",
   "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
-  "status": "draft"
+  "status": "draft",
+  "review": {
+   "mark": "plausible, to confirm by a teacher",
+   "note": "A slip a Kenyan Grade 7 learner could plausibly make. No source and no homework count; a Pre-Technical Studies teacher should say whether it comes up in class."
+  }
  },
  "PRET.G7.COMMUN.FREE_HAND_SKETCHING.SKETCH_TECHNIQUES.M_SK_CENTRE_ANY": {
   "skill": "PRET.G7.COMMUN.FREE_HAND_SKETCHING.SKETCH_TECHNIQUES",
@@ -672,7 +848,11 @@
   "help": "Fold the paper in half: do both sides match?",
   "feedback": "The centreline method suits symmetrical objects, the same on both sides of a centre line.",
   "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
-  "status": "draft"
+  "status": "draft",
+  "review": {
+   "mark": "plausible, to confirm by a teacher",
+   "note": "A slip a Kenyan Grade 7 learner could plausibly make. No source and no homework count; a Pre-Technical Studies teacher should say whether it comes up in class."
+  }
  },
  "PRET.G7.COMMUN.ICT_TOOLS_IN_COMMUNICATI.ICT_TOOLS.M_IT_ALL_FREE": {
   "skill": "PRET.G7.COMMUN.ICT_TOOLS_IN_COMMUNICATI.ICT_TOOLS",
@@ -687,7 +867,11 @@
   "help": "Ask what your parent buys for the phone each month.",
   "feedback": "Calls, data and devices cost money. Airtime or data is needed.",
   "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
-  "status": "draft"
+  "status": "draft",
+  "review": {
+   "mark": "plausible, to confirm by a teacher",
+   "note": "A slip a Kenyan Grade 7 learner could plausibly make. No source and no homework count; a Pre-Technical Studies teacher should say whether it comes up in class."
+  }
  },
  "PRET.G7.COMMUN.ICT_TOOLS_IN_COMMUNICATI.ICT_TOOLS.M_IT_SMS_NET": {
   "skill": "PRET.G7.COMMUN.ICT_TOOLS_IN_COMMUNICATI.ICT_TOOLS",
@@ -702,7 +886,11 @@
   "help": "An SMS travels on the phone network.",
   "feedback": "An SMS uses the phone network. A video conference needs an internet link.",
   "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
-  "status": "draft"
+  "status": "draft",
+  "review": {
+   "mark": "plausible, to confirm by a teacher",
+   "note": "A slip a Kenyan Grade 7 learner could plausibly make. No source and no homework count; a Pre-Technical Studies teacher should say whether it comes up in class."
+  }
  },
  "PRET.G7.COMMUN.ICT_TOOLS_IN_COMMUNICATI.ICT_TOOLS.M_IT_EMAIL_LIVE": {
   "skill": "PRET.G7.COMMUN.ICT_TOOLS_IN_COMMUNICATI.ICT_TOOLS",
@@ -717,7 +905,11 @@
   "help": "Email is written and read later.",
   "feedback": "Video conferencing shows and sounds both ways live. Email sends written messages and files.",
   "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
-  "status": "draft"
+  "status": "draft",
+  "review": {
+   "mark": "plausible, to confirm by a teacher",
+   "note": "A slip a Kenyan Grade 7 learner could plausibly make. No source and no homework count; a Pre-Technical Studies teacher should say whether it comes up in class."
+  }
  },
  "PRET.G7.COMMUN.ICT_TOOLS_IN_COMMUNICATI.ICT_TOOLS.M_IT_SOCIAL_FUN": {
   "skill": "PRET.G7.COMMUN.ICT_TOOLS_IN_COMMUNICATI.ICT_TOOLS",
@@ -732,7 +924,11 @@
   "help": "Ask how a seller shows photos to buyers.",
   "feedback": "Social networking shares messages and pictures with many people, including customers.",
   "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
-  "status": "draft"
+  "status": "draft",
+  "review": {
+   "mark": "plausible, to confirm by a teacher",
+   "note": "A slip a Kenyan Grade 7 learner could plausibly make. No source and no homework count; a Pre-Technical Studies teacher should say whether it comes up in class."
+  }
  },
  "PRET.G7.MATERI.INTRODUCTION_TO_MATERIAL.MAT_METAL_NONMETAL.M_MM_SHINY": {
   "skill": "PRET.G7.MATERI.INTRODUCTION_TO_MATERIAL.MAT_METAL_NONMETAL",
@@ -747,7 +943,11 @@
   "help": "Glass shines but does not carry electricity or stick to a magnet.",
   "feedback": "Glass shines but is non-metallic.",
   "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
-  "status": "draft"
+  "status": "draft",
+  "review": {
+   "mark": "plausible, to confirm by a teacher",
+   "note": "A slip a Kenyan Grade 7 learner could plausibly make. No source and no homework count; a Pre-Technical Studies teacher should say whether it comes up in class."
+  }
  },
  "PRET.G7.MATERI.INTRODUCTION_TO_MATERIAL.MAT_METAL_NONMETAL.M_MM_HARD_METAL": {
   "skill": "PRET.G7.MATERI.INTRODUCTION_TO_MATERIAL.MAT_METAL_NONMETAL",
@@ -762,7 +962,11 @@
   "help": "Stone is hard and heavy but is not a metal.",
   "feedback": "Stone is hard but is non-metallic.",
   "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
-  "status": "draft"
+  "status": "draft",
+  "review": {
+   "mark": "plausible, to confirm by a teacher",
+   "note": "A slip a Kenyan Grade 7 learner could plausibly make. No source and no homework count; a Pre-Technical Studies teacher should say whether it comes up in class."
+  }
  },
  "PRET.G7.MATERI.INTRODUCTION_TO_MATERIAL.MAT_METAL_NONMETAL.M_MM_PRODUCT": {
   "skill": "PRET.G7.MATERI.INTRODUCTION_TO_MATERIAL.MAT_METAL_NONMETAL",
@@ -777,7 +981,11 @@
   "help": "A material is what a thing is made from.",
   "feedback": "A chair is a product. Wood is a material it is made from.",
   "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
-  "status": "draft"
+  "status": "draft",
+  "review": {
+   "mark": "plausible, to confirm by a teacher",
+   "note": "A slip a Kenyan Grade 7 learner could plausibly make. No source and no homework count; a Pre-Technical Studies teacher should say whether it comes up in class."
+  }
  },
  "PRET.G7.MATERI.INTRODUCTION_TO_MATERIAL.MAT_SUSTAINABLE.M_MS_WASTE_OK": {
   "skill": "PRET.G7.MATERI.INTRODUCTION_TO_MATERIAL.MAT_SUSTAINABLE",
@@ -792,7 +1000,11 @@
   "help": "Trees take years to grow.",
   "feedback": "Plan to waste less and use offcuts, even when materials are plentiful.",
   "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
-  "status": "draft"
+  "status": "draft",
+  "review": {
+   "mark": "plausible, to confirm by a teacher",
+   "note": "A slip a Kenyan Grade 7 learner could plausibly make. No source and no homework count; a Pre-Technical Studies teacher should say whether it comes up in class."
+  }
  },
  "PRET.G7.MATERI.INTRODUCTION_TO_MATERIAL.MAT_SUSTAINABLE.M_MS_BURN_OFFCUTS": {
   "skill": "PRET.G7.MATERI.INTRODUCTION_TO_MATERIAL.MAT_SUSTAINABLE",
@@ -807,7 +1019,11 @@
   "help": "Jua kali workers melt and reshape scrap into new things.",
   "feedback": "Scrap metal can be recycled into new products. Burning plastics also harms the air.",
   "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
-  "status": "draft"
+  "status": "draft",
+  "review": {
+   "mark": "plausible, to confirm by a teacher",
+   "note": "A slip a Kenyan Grade 7 learner could plausibly make. No source and no homework count; a Pre-Technical Studies teacher should say whether it comes up in class."
+  }
  },
  "PRET.G7.MATERI.INTRODUCTION_TO_MATERIAL.MAT_SUSTAINABLE.M_MS_NEW_ONLY": {
   "skill": "PRET.G7.MATERI.INTRODUCTION_TO_MATERIAL.MAT_SUSTAINABLE",
@@ -822,7 +1038,11 @@
   "help": "Repairing saves materials and money.",
   "feedback": "Repair and reuse saves materials. Buy new only when needed.",
   "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
-  "status": "draft"
+  "status": "draft",
+  "review": {
+   "mark": "plausible, to confirm by a teacher",
+   "note": "A slip a Kenyan Grade 7 learner could plausibly make. No source and no homework count; a Pre-Technical Studies teacher should say whether it comes up in class."
+  }
  },
  "PRET.G7.MATERI.METALLIC_MATERIALS.METAL_TYPES.M_MT_ALU_STEEL": {
   "skill": "PRET.G7.MATERI.METALLIC_MATERIALS.METAL_TYPES",
@@ -837,7 +1057,11 @@
   "help": "Steel sticks to a magnet; aluminium does not.",
   "feedback": "Aluminium is light and silvery and does not stick to a magnet. Steel does.",
   "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
-  "status": "draft"
+  "status": "draft",
+  "review": {
+   "mark": "plausible, to confirm by a teacher",
+   "note": "A slip a Kenyan Grade 7 learner could plausibly make. No source and no homework count; a Pre-Technical Studies teacher should say whether it comes up in class."
+  }
  },
  "PRET.G7.MATERI.METALLIC_MATERIALS.METAL_TYPES.M_MT_COPPER_COLOUR": {
   "skill": "PRET.G7.MATERI.METALLIC_MATERIALS.METAL_TYPES",
@@ -852,7 +1076,11 @@
   "help": "Look at an electric wire with the plastic stripped off.",
   "feedback": "Copper is reddish-brown.",
   "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
-  "status": "draft"
+  "status": "draft",
+  "review": {
+   "mark": "plausible, to confirm by a teacher",
+   "note": "A slip a Kenyan Grade 7 learner could plausibly make. No source and no homework count; a Pre-Technical Studies teacher should say whether it comes up in class."
+  }
  },
  "PRET.G7.MATERI.METALLIC_MATERIALS.METAL_TYPES.M_MT_MAGNET_ALL": {
   "skill": "PRET.G7.MATERI.METALLIC_MATERIALS.METAL_TYPES",
@@ -867,7 +1095,11 @@
   "help": "Try a magnet on a sufuria and a nail.",
   "feedback": "Only iron and steel stick to a magnet. Aluminium and copper do not.",
   "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
-  "status": "draft"
+  "status": "draft",
+  "review": {
+   "mark": "plausible, to confirm by a teacher",
+   "note": "A slip a Kenyan Grade 7 learner could plausibly make. No source and no homework count; a Pre-Technical Studies teacher should say whether it comes up in class."
+  }
  },
  "PRET.G7.MATERI.METALLIC_MATERIALS.METAL_PROPERTIES.M_MP_ALL_MAGNETIC": {
   "skill": "PRET.G7.MATERI.METALLIC_MATERIALS.METAL_PROPERTIES",
@@ -882,7 +1114,11 @@
   "help": "Test a coin, a nail and foil with a magnet.",
   "feedback": "Only iron and steel are magnetic. Copper and aluminium are not.",
   "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
-  "status": "draft"
+  "status": "draft",
+  "review": {
+   "mark": "plausible, to confirm by a teacher",
+   "note": "A slip a Kenyan Grade 7 learner could plausibly make. No source and no homework count; a Pre-Technical Studies teacher should say whether it comes up in class."
+  }
  },
  "PRET.G7.MATERI.METALLIC_MATERIALS.METAL_PROPERTIES.M_MP_ALL_RUST": {
   "skill": "PRET.G7.MATERI.METALLIC_MATERIALS.METAL_PROPERTIES",
@@ -897,7 +1133,11 @@
   "help": "Rust is the red-brown flaking on iron and steel.",
   "feedback": "Rust forms on iron and steel. Copper and aluminium do not rust like iron.",
   "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
-  "status": "draft"
+  "status": "draft",
+  "review": {
+   "mark": "plausible, to confirm by a teacher",
+   "note": "A slip a Kenyan Grade 7 learner could plausibly make. No source and no homework count; a Pre-Technical Studies teacher should say whether it comes up in class."
+  }
  },
  "PRET.G7.MATERI.METALLIC_MATERIALS.METAL_PROPERTIES.M_MP_NO_HEAT": {
   "skill": "PRET.G7.MATERI.METALLIC_MATERIALS.METAL_PROPERTIES",
@@ -912,7 +1152,11 @@
   "help": "Touch a metal spoon in hot water.",
   "feedback": "Metals conduct heat well, so a pan has a plastic or wooden handle.",
   "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
-  "status": "draft"
+  "status": "draft",
+  "review": {
+   "mark": "plausible, to confirm by a teacher",
+   "note": "A slip a Kenyan Grade 7 learner could plausibly make. No source and no homework count; a Pre-Technical Studies teacher should say whether it comes up in class."
+  }
  },
  "PRET.G7.MATERI.METALLIC_MATERIALS.METAL_PROPERTIES.M_MP_BRITTLE": {
   "skill": "PRET.G7.MATERI.METALLIC_MATERIALS.METAL_PROPERTIES",
@@ -927,7 +1171,11 @@
   "help": "A jua kali worker hammers a hot piece of steel into a shape.",
   "feedback": "Metals can be hammered into sheets and drawn into wire, unlike brittle glass.",
   "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
-  "status": "draft"
+  "status": "draft",
+  "review": {
+   "mark": "plausible, to confirm by a teacher",
+   "note": "A slip a Kenyan Grade 7 learner could plausibly make. No source and no homework count; a Pre-Technical Studies teacher should say whether it comes up in class."
+  }
  },
  "PRET.G7.MATERI.METALLIC_MATERIALS.METAL_USES.M_MU_WIRE_STEEL": {
   "skill": "PRET.G7.MATERI.METALLIC_MATERIALS.METAL_USES",
@@ -942,7 +1190,11 @@
   "help": "Copper conducts electricity very well.",
   "feedback": "Copper is used for electric wire because it conducts electricity well.",
   "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
-  "status": "draft"
+  "status": "draft",
+  "review": {
+   "mark": "plausible, to confirm by a teacher",
+   "note": "A slip a Kenyan Grade 7 learner could plausibly make. No source and no homework count; a Pre-Technical Studies teacher should say whether it comes up in class."
+  }
  },
  "PRET.G7.MATERI.METALLIC_MATERIALS.METAL_USES.M_MU_ALU_HEAVY": {
   "skill": "PRET.G7.MATERI.METALLIC_MATERIALS.METAL_USES",
@@ -957,7 +1209,11 @@
   "help": "Aluminium is light and spreads heat.",
   "feedback": "A sufuria is aluminium because it is light and conducts heat.",
   "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
-  "status": "draft"
+  "status": "draft",
+  "review": {
+   "mark": "plausible, to confirm by a teacher",
+   "note": "A slip a Kenyan Grade 7 learner could plausibly make. No source and no homework count; a Pre-Technical Studies teacher should say whether it comes up in class."
+  }
  },
  "PRET.G7.MATERI.METALLIC_MATERIALS.METAL_USES.M_MU_PROPERTY_SWAP": {
   "skill": "PRET.G7.MATERI.METALLIC_MATERIALS.METAL_USES",
@@ -972,7 +1228,11 @@
   "help": "A jembe digs hard ground.",
   "feedback": "Steel is hard and strong, so it suits a jembe, a panga and nails.",
   "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
-  "status": "draft"
+  "status": "draft",
+  "review": {
+   "mark": "plausible, to confirm by a teacher",
+   "note": "A slip a Kenyan Grade 7 learner could plausibly make. No source and no homework count; a Pre-Technical Studies teacher should say whether it comes up in class."
+  }
  },
  "PRET.G7.MATERI.NON_METALLIC_MATERIALS.NONMETAL_CLASS.M_NC_SYNTH_FAKE": {
   "skill": "PRET.G7.MATERI.NON_METALLIC_MATERIALS.NONMETAL_CLASS",
@@ -987,7 +1247,11 @@
   "help": "Nylon and plastic are real materials made in factories.",
   "feedback": "Synthetic means made by people from chemicals. It does not mean fake.",
   "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
-  "status": "draft"
+  "status": "draft",
+  "review": {
+   "mark": "plausible, to confirm by a teacher",
+   "note": "A slip a Kenyan Grade 7 learner could plausibly make. No source and no homework count; a Pre-Technical Studies teacher should say whether it comes up in class."
+  }
  },
  "PRET.G7.MATERI.NON_METALLIC_MATERIALS.NONMETAL_CLASS.M_NC_NATURAL_UNMADE": {
   "skill": "PRET.G7.MATERI.NON_METALLIC_MATERIALS.NONMETAL_CLASS",
@@ -1002,7 +1266,11 @@
   "help": "Natural means the source: plants, animals or the ground.",
   "feedback": "Natural describes where a material comes from. Wood is still natural when shaped.",
   "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
-  "status": "draft"
+  "status": "draft",
+  "review": {
+   "mark": "plausible, to confirm by a teacher",
+   "note": "A slip a Kenyan Grade 7 learner could plausibly make. No source and no homework count; a Pre-Technical Studies teacher should say whether it comes up in class."
+  }
  },
  "PRET.G7.MATERI.NON_METALLIC_MATERIALS.NONMETAL_CLASS.M_NC_PLASTIC_NATURAL": {
   "skill": "PRET.G7.MATERI.NON_METALLIC_MATERIALS.NONMETAL_CLASS",
@@ -1017,7 +1285,11 @@
   "help": "Plastic is made in factories from chemicals.",
   "feedback": "Plastic is synthetic. Cotton, wool and wood are natural.",
   "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
-  "status": "draft"
+  "status": "draft",
+  "review": {
+   "mark": "plausible, to confirm by a teacher",
+   "note": "A slip a Kenyan Grade 7 learner could plausibly make. No source and no homework count; a Pre-Technical Studies teacher should say whether it comes up in class."
+  }
  },
  "PRET.G7.MATERI.NON_METALLIC_MATERIALS.NONMETAL_CLASS.M_NC_WOOL_SYNTH": {
   "skill": "PRET.G7.MATERI.NON_METALLIC_MATERIALS.NONMETAL_CLASS",
@@ -1032,7 +1304,11 @@
   "help": "Wool comes from sheep; nylon is made from chemicals.",
   "feedback": "Nylon is synthetic. Wool and cotton are natural.",
   "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
-  "status": "draft"
+  "status": "draft",
+  "review": {
+   "mark": "plausible, to confirm by a teacher",
+   "note": "A slip a Kenyan Grade 7 learner could plausibly make. No source and no homework count; a Pre-Technical Studies teacher should say whether it comes up in class."
+  }
  },
  "PRET.G7.MATERI.NON_METALLIC_MATERIALS.NONMETAL_PROPERTIES.M_NP_ALL_BURN": {
   "skill": "PRET.G7.MATERI.NON_METALLIC_MATERIALS.NONMETAL_PROPERTIES",
@@ -1047,7 +1323,11 @@
   "help": "Bricks and tiles are baked in a very hot kiln.",
   "feedback": "Stone and clay products do not burn. Wood and paper do.",
   "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
-  "status": "draft"
+  "status": "draft",
+  "review": {
+   "mark": "plausible, to confirm by a teacher",
+   "note": "A slip a Kenyan Grade 7 learner could plausibly make. No source and no homework count; a Pre-Technical Studies teacher should say whether it comes up in class."
+  }
  },
  "PRET.G7.MATERI.NON_METALLIC_MATERIALS.NONMETAL_PROPERTIES.M_NP_PLASTIC_HEAT": {
   "skill": "PRET.G7.MATERI.NON_METALLIC_MATERIALS.NONMETAL_PROPERTIES",
@@ -1062,7 +1342,11 @@
   "help": "Plastic cups lose shape in hot water.",
   "feedback": "Plastics soften and melt in heat. Metals and ceramics do not.",
   "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
-  "status": "draft"
+  "status": "draft",
+  "review": {
+   "mark": "plausible, to confirm by a teacher",
+   "note": "A slip a Kenyan Grade 7 learner could plausibly make. No source and no homework count; a Pre-Technical Studies teacher should say whether it comes up in class."
+  }
  },
  "PRET.G7.MATERI.NON_METALLIC_MATERIALS.NONMETAL_PROPERTIES.M_NP_HARD_UNBREAKABLE": {
   "skill": "PRET.G7.MATERI.NON_METALLIC_MATERIALS.NONMETAL_PROPERTIES",
@@ -1077,7 +1361,11 @@
   "help": "Drop a glass cup and a plastic one.",
   "feedback": "Glass is hard but brittle, so it breaks. Hardness is not the same as toughness.",
   "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
-  "status": "draft"
+  "status": "draft",
+  "review": {
+   "mark": "plausible, to confirm by a teacher",
+   "note": "A slip a Kenyan Grade 7 learner could plausibly make. No source and no homework count; a Pre-Technical Studies teacher should say whether it comes up in class."
+  }
  },
  "PRET.G7.MATERI.NON_METALLIC_MATERIALS.NONMETAL_PROPERTIES.M_NP_RUBBER_CONDUCT": {
   "skill": "PRET.G7.MATERI.NON_METALLIC_MATERIALS.NONMETAL_PROPERTIES",
@@ -1092,7 +1380,11 @@
   "help": "Rubber and plastic cover wires.",
   "feedback": "Rubber does not carry electricity, so it protects.",
   "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
-  "status": "draft"
+  "status": "draft",
+  "review": {
+   "mark": "plausible, to confirm by a teacher",
+   "note": "A slip a Kenyan Grade 7 learner could plausibly make. No source and no homework count; a Pre-Technical Studies teacher should say whether it comes up in class."
+  }
  },
  "PRET.G7.MATERI.NON_METALLIC_MATERIALS.NONMETAL_USES.M_NU_GLASS_HANDLE": {
   "skill": "PRET.G7.MATERI.NON_METALLIC_MATERIALS.NONMETAL_USES",
@@ -1107,7 +1399,11 @@
   "help": "A water tank must not rust or break when knocked.",
   "feedback": "Plastic is light, waterproof and does not rust, so it suits a tank.",
   "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
-  "status": "draft"
+  "status": "draft",
+  "review": {
+   "mark": "doubtful",
+   "why": "Trap option. Unlikely that a child picks glass for a handle."
+  }
  },
  "PRET.G7.MATERI.NON_METALLIC_MATERIALS.NONMETAL_USES.M_NU_WOOD_ANY": {
   "skill": "PRET.G7.MATERI.NON_METALLIC_MATERIALS.NONMETAL_USES",
@@ -1122,7 +1418,11 @@
   "help": "A tile must not burn or soak up water.",
   "feedback": "Ceramic tiles are hard, waterproof and do not burn.",
   "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
-  "status": "draft"
+  "status": "draft",
+  "review": {
+   "mark": "plausible, to confirm by a teacher",
+   "note": "A slip a Kenyan Grade 7 learner could plausibly make. No source and no homework count; a Pre-Technical Studies teacher should say whether it comes up in class."
+  }
  },
  "PRET.G7.MATERI.NON_METALLIC_MATERIALS.NONMETAL_USES.M_NU_CEMENT": {
   "skill": "PRET.G7.MATERI.NON_METALLIC_MATERIALS.NONMETAL_USES",
@@ -1137,7 +1437,11 @@
   "help": "Cement sets hard when mixed with water and sand.",
   "feedback": "Cement is mixed with sand and water to join blocks or make concrete.",
   "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
-  "status": "draft"
+  "status": "draft",
+  "review": {
+   "mark": "plausible, to confirm by a teacher",
+   "note": "A slip a Kenyan Grade 7 learner could plausibly make. No source and no homework count; a Pre-Technical Studies teacher should say whether it comes up in class."
+  }
  },
  "PRET.G7.TOOLS_.MEASURING_AND_MARKING_OU.MEAS_TOOLS.M_MV_VOLT_AMP": {
   "skill": "PRET.G7.TOOLS_.MEASURING_AND_MARKING_OU.MEAS_TOOLS",
@@ -1152,7 +1456,11 @@
   "help": "Volts go with the voltmeter, amperes with the ammeter.",
   "feedback": "A voltmeter measures voltage. An ammeter measures current.",
   "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
-  "status": "draft"
+  "status": "draft",
+  "review": {
+   "mark": "plausible, to confirm by a teacher",
+   "note": "A slip a Kenyan Grade 7 learner could plausibly make. No source and no homework count; a Pre-Technical Studies teacher should say whether it comes up in class."
+  }
  },
  "PRET.G7.TOOLS_.MEASURING_AND_MARKING_OU.MEAS_TOOLS.M_MV_BALANCE_LEN": {
   "skill": "PRET.G7.TOOLS_.MEASURING_AND_MARKING_OU.MEAS_TOOLS",
@@ -1167,7 +1475,11 @@
   "help": "A balance compares masses.",
   "feedback": "A weighing balance measures mass.",
   "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
-  "status": "draft"
+  "status": "draft",
+  "review": {
+   "mark": "doubtful",
+   "why": "Trap option. A Grade 7 learner is unlikely to think a balance measures length."
+  }
  },
  "PRET.G7.TOOLS_.MEASURING_AND_MARKING_OU.MEAS_TOOLS.M_MV_STOPWATCH": {
   "skill": "PRET.G7.TOOLS_.MEASURING_AND_MARKING_OU.MEAS_TOOLS",
@@ -1182,7 +1494,11 @@
   "help": "It shows seconds and parts of seconds.",
   "feedback": "A stopwatch measures time.",
   "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
-  "status": "draft"
+  "status": "draft",
+  "review": {
+   "mark": "plausible, to confirm by a teacher",
+   "note": "A slip a Kenyan Grade 7 learner could plausibly make. No source and no homework count; a Pre-Technical Studies teacher should say whether it comes up in class."
+  }
  },
  "PRET.G7.TOOLS_.MEASURING_AND_MARKING_OU.MEAS_TOOLS.M_MV_RULER_ALL": {
   "skill": "PRET.G7.TOOLS_.MEASURING_AND_MARKING_OU.MEAS_TOOLS",
@@ -1197,7 +1513,11 @@
   "help": "A steel rule is short and stiff; a tape is long and flexible.",
   "feedback": "A tape measure measures long lengths. A steel rule suits short ones.",
   "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
-  "status": "draft"
+  "status": "draft",
+  "review": {
+   "mark": "plausible, to confirm by a teacher",
+   "note": "A slip a Kenyan Grade 7 learner could plausibly make. No source and no homework count; a Pre-Technical Studies teacher should say whether it comes up in class."
+  }
  },
  "PRET.G7.TOOLS_.MEASURING_AND_MARKING_OU.MARK_TOOLS.M_MK_PUNCH_HOLE": {
   "skill": "PRET.G7.TOOLS_.MEASURING_AND_MARKING_OU.MARK_TOOLS",
@@ -1212,7 +1532,11 @@
   "help": "The dent guides the drill bit.",
   "feedback": "A dot punch makes a small dent to mark where to drill.",
   "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
-  "status": "draft"
+  "status": "draft",
+  "review": {
+   "mark": "plausible, to confirm by a teacher",
+   "note": "A slip a Kenyan Grade 7 learner could plausibly make. No source and no homework count; a Pre-Technical Studies teacher should say whether it comes up in class."
+  }
  },
  "PRET.G7.TOOLS_.MEASURING_AND_MARKING_OU.MARK_TOOLS.M_MK_DIVIDER_CUT": {
   "skill": "PRET.G7.TOOLS_.MEASURING_AND_MARKING_OU.MARK_TOOLS",
@@ -1227,7 +1551,11 @@
   "help": "It has two points like a compass.",
   "feedback": "A divider marks circles, arcs and equal distances. It does not cut.",
   "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
-  "status": "draft"
+  "status": "draft",
+  "review": {
+   "mark": "doubtful",
+   "why": "Trap option. A divider has two points like a compass; unlikely to be taken for a cutting tool."
+  }
  },
  "PRET.G7.TOOLS_.MEASURING_AND_MARKING_OU.MARK_TOOLS.M_MK_SQUARE_LENGTH": {
   "skill": "PRET.G7.TOOLS_.MEASURING_AND_MARKING_OU.MARK_TOOLS",
@@ -1242,7 +1570,11 @@
   "help": "The corner is 90 degrees.",
   "feedback": "A try-square checks and marks right angles.",
   "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
-  "status": "draft"
+  "status": "draft",
+  "review": {
+   "mark": "plausible, to confirm by a teacher",
+   "note": "A slip a Kenyan Grade 7 learner could plausibly make. No source and no homework count; a Pre-Technical Studies teacher should say whether it comes up in class."
+  }
  },
  "PRET.G7.TOOLS_.MEASURING_AND_MARKING_OU.MARK_TOOLS.M_MK_PENCIL_METAL": {
   "skill": "PRET.G7.TOOLS_.MEASURING_AND_MARKING_OU.MARK_TOOLS",
@@ -1257,7 +1589,11 @@
   "help": "A pencil line on steel is thick and rubs off.",
   "feedback": "A scriber scratches a fine lasting line on metal.",
   "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
-  "status": "draft"
+  "status": "draft",
+  "review": {
+   "mark": "plausible, to confirm by a teacher",
+   "note": "A slip a Kenyan Grade 7 learner could plausibly make. No source and no homework count; a Pre-Technical Studies teacher should say whether it comes up in class."
+  }
  },
  "PRET.G7.TOOLS_.MEASURING_AND_MARKING_OU.TOOL_CHOOSE.M_TC_TAPE_ALL": {
   "skill": "PRET.G7.TOOLS_.MEASURING_AND_MARKING_OU.TOOL_CHOOSE",
@@ -1272,7 +1608,11 @@
   "help": "A tape is too thick to grip a small round part.",
   "feedback": "Callipers measure the diameter of small round parts most exactly.",
   "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
-  "status": "draft"
+  "status": "draft",
+  "review": {
+   "mark": "plausible, to confirm by a teacher",
+   "note": "A slip a Kenyan Grade 7 learner could plausibly make. No source and no homework count; a Pre-Technical Studies teacher should say whether it comes up in class."
+  }
  },
  "PRET.G7.TOOLS_.MEASURING_AND_MARKING_OU.TOOL_CHOOSE.M_TC_NEAREST": {
   "skill": "PRET.G7.TOOLS_.MEASURING_AND_MARKING_OU.TOOL_CHOOSE",
@@ -1287,7 +1627,11 @@
   "help": "The right tool gives a better result.",
   "feedback": "Choose the tool made for the job, such as a try-square for a right angle.",
   "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
-  "status": "draft"
+  "status": "draft",
+  "review": {
+   "mark": "doubtful",
+   "why": "A behaviour option (using what is near), not a belief about measuring."
+  }
  },
  "PRET.G7.TOOLS_.MEASURING_AND_MARKING_OU.TOOL_CHOOSE.M_TC_PRECISION": {
   "skill": "PRET.G7.TOOLS_.MEASURING_AND_MARKING_OU.TOOL_CHOOSE",
@@ -1302,7 +1646,11 @@
   "help": "A finer line gives a more accurate cut.",
   "feedback": "A finer line means a more accurate cut, so the right tool matters.",
   "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
-  "status": "draft"
+  "status": "draft",
+  "review": {
+   "mark": "plausible, to confirm by a teacher",
+   "note": "A slip a Kenyan Grade 7 learner could plausibly make. No source and no homework count; a Pre-Technical Studies teacher should say whether it comes up in class."
+  }
  },
  "PRET.G7.TOOLS_.MEASURING_AND_MARKING_OU.TOOL_CARE.M_CT_NO_OIL": {
   "skill": "PRET.G7.TOOLS_.MEASURING_AND_MARKING_OU.TOOL_CARE",
@@ -1317,7 +1665,11 @@
   "help": "Steel rusts in damp air.",
   "feedback": "Wipe tools dry and oil them lightly so they do not rust.",
   "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
-  "status": "draft"
+  "status": "draft",
+  "review": {
+   "mark": "plausible, to confirm by a teacher",
+   "note": "A slip a Kenyan Grade 7 learner could plausibly make. No source and no homework count; a Pre-Technical Studies teacher should say whether it comes up in class."
+  }
  },
  "PRET.G7.TOOLS_.MEASURING_AND_MARKING_OU.TOOL_CARE.M_CT_HAMMER": {
   "skill": "PRET.G7.TOOLS_.MEASURING_AND_MARKING_OU.TOOL_CARE",
@@ -1332,7 +1684,11 @@
   "help": "A bent rule gives wrong readings.",
   "feedback": "Do not use measuring tools as levers or hammers. They bend and lose accuracy.",
   "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
-  "status": "draft"
+  "status": "draft",
+  "review": {
+   "mark": "plausible, to confirm by a teacher",
+   "note": "A slip a Kenyan Grade 7 learner could plausibly make. No source and no homework count; a Pre-Technical Studies teacher should say whether it comes up in class."
+  }
  },
  "PRET.G7.TOOLS_.MEASURING_AND_MARKING_OU.TOOL_CARE.M_CT_HEAP": {
   "skill": "PRET.G7.TOOLS_.MEASURING_AND_MARKING_OU.TOOL_CARE",
@@ -1347,7 +1703,11 @@
   "help": "Points and edges get damaged in a heap.",
   "feedback": "Put tools back in their place so points and edges are not damaged.",
   "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
-  "status": "draft"
+  "status": "draft",
+  "review": {
+   "mark": "doubtful",
+   "why": "A behaviour option (throwing tools in a heap), not a belief. Do not report it as a misconception."
+  }
  },
  "PRET.G7.TOOLS_.MEASURING_AND_MARKING_OU.TOOL_CARE.M_CT_POINTS_OPEN": {
   "skill": "PRET.G7.TOOLS_.MEASURING_AND_MARKING_OU.TOOL_CARE",
@@ -1362,7 +1722,11 @@
   "help": "A point can hurt a hand and be blunted.",
   "feedback": "Cover sharp points so they do not hurt you or become blunt.",
   "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
-  "status": "draft"
+  "status": "draft",
+  "review": {
+   "mark": "doubtful",
+   "why": "A behaviour option, not a belief about how tools work."
+  }
  },
  "PRET.G7.TOOLS_.COMPUTER_HARDWARE.HW_CLASSIFY.M_HW_PRINTER_IN": {
   "skill": "PRET.G7.TOOLS_.COMPUTER_HARDWARE.HW_CLASSIFY",
@@ -1377,7 +1741,11 @@
   "help": "Input sends data in; output gives results out.",
   "feedback": "A printer is an output device. It gives hardcopy on paper.",
   "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
-  "status": "draft"
+  "status": "draft",
+  "review": {
+   "mark": "plausible, to confirm by a teacher",
+   "note": "A slip a Kenyan Grade 7 learner could plausibly make. No source and no homework count; a Pre-Technical Studies teacher should say whether it comes up in class."
+  }
  },
  "PRET.G7.TOOLS_.COMPUTER_HARDWARE.HW_CLASSIFY.M_HW_MONITOR_HARD": {
   "skill": "PRET.G7.TOOLS_.COMPUTER_HARDWARE.HW_CLASSIFY",
@@ -1392,7 +1760,11 @@
   "help": "Softcopy is on a screen or sound, hardcopy on paper.",
   "feedback": "A monitor gives softcopy. A printer gives hardcopy.",
   "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
-  "status": "draft"
+  "status": "draft",
+  "review": {
+   "mark": "plausible, to confirm by a teacher",
+   "note": "A slip a Kenyan Grade 7 learner could plausibly make. No source and no homework count; a Pre-Technical Studies teacher should say whether it comes up in class."
+  }
  },
  "PRET.G7.TOOLS_.COMPUTER_HARDWARE.HW_CLASSIFY.M_HW_SCANNER_OUT": {
   "skill": "PRET.G7.TOOLS_.COMPUTER_HARDWARE.HW_CLASSIFY",
@@ -1407,7 +1779,11 @@
   "help": "Data goes in: input.",
   "feedback": "A scanner is an input device because it sends data in.",
   "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
-  "status": "draft"
+  "status": "draft",
+  "review": {
+   "mark": "plausible, to confirm by a teacher",
+   "note": "A slip a Kenyan Grade 7 learner could plausibly make. No source and no homework count; a Pre-Technical Studies teacher should say whether it comes up in class."
+  }
  },
  "PRET.G7.TOOLS_.COMPUTER_HARDWARE.HW_CLASSIFY.M_HW_STORAGE_INPUT": {
   "skill": "PRET.G7.TOOLS_.COMPUTER_HARDWARE.HW_CLASSIFY",
@@ -1422,7 +1798,11 @@
   "help": "Storage keeps data for later.",
   "feedback": "A flash disk is a storage device. It keeps data for later.",
   "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
-  "status": "draft"
+  "status": "draft",
+  "review": {
+   "mark": "plausible, to confirm by a teacher",
+   "note": "A slip a Kenyan Grade 7 learner could plausibly make. No source and no homework count; a Pre-Technical Studies teacher should say whether it comes up in class."
+  }
  },
  "PRET.G7.ENTREP.INTRODUCTION_TO_ENTREPRE.ENT_MEANING.M_EM_ALL_WORKERS": {
   "skill": "PRET.G7.ENTREP.INTRODUCTION_TO_ENTREPRE.ENT_MEANING",
@@ -1437,7 +1817,11 @@
   "help": "An employee works for someone else's business.",
   "feedback": "An entrepreneur starts and runs a business and takes the risk. An employee works for someone else.",
   "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
-  "status": "draft"
+  "status": "draft",
+  "review": {
+   "mark": "plausible, to confirm by a teacher",
+   "note": "A slip a Kenyan Grade 7 learner could plausibly make. No source and no homework count; a Pre-Technical Studies teacher should say whether it comes up in class."
+  }
  },
  "PRET.G7.ENTREP.INTRODUCTION_TO_ENTREPRE.ENT_MEANING.M_EM_RICH_ONLY": {
   "skill": "PRET.G7.ENTREP.INTRODUCTION_TO_ENTREPRE.ENT_MEANING",
@@ -1452,7 +1836,11 @@
   "help": "Many businesses start from small savings, such as a mandazi stall.",
   "feedback": "Anyone with an idea, effort and a plan can start small.",
   "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
-  "status": "draft"
+  "status": "draft",
+  "review": {
+   "mark": "plausible, to confirm by a teacher",
+   "note": "A slip a Kenyan Grade 7 learner could plausibly make. No source and no homework count; a Pre-Technical Studies teacher should say whether it comes up in class."
+  }
  },
  "PRET.G7.ENTREP.INTRODUCTION_TO_ENTREPRE.ENT_MEANING.M_EM_OWNER_ONLY": {
   "skill": "PRET.G7.ENTREP.INTRODUCTION_TO_ENTREPRE.ENT_MEANING",
@@ -1467,7 +1855,11 @@
   "help": "Count the workers and customers.",
   "feedback": "Businesses give jobs, goods and services and pay taxes, so the community gains.",
   "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
-  "status": "draft"
+  "status": "draft",
+  "review": {
+   "mark": "plausible, to confirm by a teacher",
+   "note": "A slip a Kenyan Grade 7 learner could plausibly make. No source and no homework count; a Pre-Technical Studies teacher should say whether it comes up in class."
+  }
  },
  "PRET.G7.ENTREP.INTRODUCTION_TO_ENTREPRE.ENT_QUALITIES.M_EQ_GAMBLE": {
   "skill": "PRET.G7.ENTREP.INTRODUCTION_TO_ENTREPRE.ENT_QUALITIES",
@@ -1482,7 +1874,11 @@
   "help": "Add up the costs and the chance of success first.",
   "feedback": "A calculated risk is taken after thinking about costs and the chance of success.",
   "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
-  "status": "draft"
+  "status": "draft",
+  "review": {
+   "mark": "plausible, to confirm by a teacher",
+   "note": "A slip a Kenyan Grade 7 learner could plausibly make. No source and no homework count; a Pre-Technical Studies teacher should say whether it comes up in class."
+  }
  },
  "PRET.G7.ENTREP.INTRODUCTION_TO_ENTREPRE.ENT_QUALITIES.M_EQ_GIVE_UP": {
   "skill": "PRET.G7.ENTREP.INTRODUCTION_TO_ENTREPRE.ENT_QUALITIES",
@@ -1497,7 +1893,11 @@
   "help": "Many businesses learn from early mistakes.",
   "feedback": "A determined entrepreneur learns from failure and tries again.",
   "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
-  "status": "draft"
+  "status": "draft",
+  "review": {
+   "mark": "doubtful",
+   "why": "A behaviour option (giving up), not a belief. Do not report it as a misconception."
+  }
  },
  "PRET.G7.ENTREP.INTRODUCTION_TO_ENTREPRE.ENT_QUALITIES.M_EQ_LUCK": {
   "skill": "PRET.G7.ENTREP.INTRODUCTION_TO_ENTREPRE.ENT_QUALITIES",
@@ -1512,7 +1912,11 @@
   "help": "Ask what a trader does before sunrise.",
   "feedback": "Hard work, honesty and planning matter more than luck.",
   "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
-  "status": "draft"
+  "status": "draft",
+  "review": {
+   "mark": "plausible, to confirm by a teacher",
+   "note": "A slip a Kenyan Grade 7 learner could plausibly make. No source and no homework count; a Pre-Technical Studies teacher should say whether it comes up in class."
+  }
  },
  "PRET.G7.ENTREP.INTRODUCTION_TO_ENTREPRE.ENT_QUALITIES.M_EQ_CHEAT": {
   "skill": "PRET.G7.ENTREP.INTRODUCTION_TO_ENTREPRE.ENT_QUALITIES",
@@ -1527,7 +1931,11 @@
   "help": "Customers do not return after being cheated.",
   "feedback": "Honesty keeps customers. Cheating loses them.",
   "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
-  "status": "draft"
+  "status": "draft",
+  "review": {
+   "mark": "doubtful",
+   "why": "Trap option. A child is unlikely to say cheating customers is clever."
+  }
  },
  "PRET.G7.ENTREP.INTRODUCTION_TO_ENTREPRE.ENT_IDEAS.M_EI_CAPITAL_FIRST": {
   "skill": "PRET.G7.ENTREP.INTRODUCTION_TO_ENTREPRE.ENT_IDEAS",
@@ -1542,7 +1950,11 @@
   "help": "Many businesses start small and grow.",
   "feedback": "A good idea that meets a need comes first. Money can start small.",
   "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
-  "status": "draft"
+  "status": "draft",
+  "review": {
+   "mark": "plausible, to confirm by a teacher",
+   "note": "A slip a Kenyan Grade 7 learner could plausibly make. No source and no homework count; a Pre-Technical Studies teacher should say whether it comes up in class."
+  }
  },
  "PRET.G7.ENTREP.INTRODUCTION_TO_ENTREPRE.ENT_IDEAS.M_EI_NEW_ONLY": {
   "skill": "PRET.G7.ENTREP.INTRODUCTION_TO_ENTREPRE.ENT_IDEAS",
@@ -1557,7 +1969,11 @@
   "help": "Many shops sell better service, not new goods.",
   "feedback": "Improving on what others do is a good source of ideas.",
   "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
-  "status": "draft"
+  "status": "draft",
+  "review": {
+   "mark": "plausible, to confirm by a teacher",
+   "note": "A slip a Kenyan Grade 7 learner could plausibly make. No source and no homework count; a Pre-Technical Studies teacher should say whether it comes up in class."
+  }
  },
  "PRET.G7.ENTREP.INTRODUCTION_TO_ENTREPRE.ENT_IDEAS.M_EI_COPY_EXACT": {
   "skill": "PRET.G7.ENTREP.INTRODUCTION_TO_ENTREPRE.ENT_IDEAS",
@@ -1572,7 +1988,11 @@
   "help": "A second identical kiosk shares the same customers.",
   "feedback": "Look for a need not yet met rather than copying exactly.",
   "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
-  "status": "draft"
+  "status": "draft",
+  "review": {
+   "mark": "plausible, to confirm by a teacher",
+   "note": "A slip a Kenyan Grade 7 learner could plausibly make. No source and no homework count; a Pre-Technical Studies teacher should say whether it comes up in class."
+  }
  },
  "PRET.G7.ENTREP.INTRODUCTION_TO_ENTREPRE.ENT_IDEAS.M_EI_WASTE": {
   "skill": "PRET.G7.ENTREP.INTRODUCTION_TO_ENTREPRE.ENT_IDEAS",
@@ -1587,7 +2007,11 @@
   "help": "Jua kali workers turn old tyres into sandals.",
   "feedback": "Waste can be reused or recycled into products that sell.",
   "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
-  "status": "draft"
+  "status": "draft",
+  "review": {
+   "mark": "plausible, to confirm by a teacher",
+   "note": "A slip a Kenyan Grade 7 learner could plausibly make. No source and no homework count; a Pre-Technical Studies teacher should say whether it comes up in class."
+  }
  },
  "PRET.G7.ENTREP.UNIT.UNIT_LOCATION.M_UL_TOWN_ALWAYS": {
   "skill": "PRET.G7.ENTREP.UNIT.UNIT_LOCATION",
@@ -1602,7 +2026,11 @@
   "help": "Ask where the maize is and who carries it.",
   "feedback": "A posho mill is best near its customers and power, not always in town.",
   "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
-  "status": "draft"
+  "status": "draft",
+  "review": {
+   "mark": "plausible, to confirm by a teacher",
+   "note": "A slip a Kenyan Grade 7 learner could plausibly make. No source and no homework count; a Pre-Technical Studies teacher should say whether it comes up in class."
+  }
  },
  "PRET.G7.ENTREP.UNIT.UNIT_LOCATION.M_UL_CHEAP_ONLY": {
   "skill": "PRET.G7.ENTREP.UNIT.UNIT_LOCATION",
@@ -1617,7 +2045,11 @@
   "help": "Customers matter more than rent.",
   "feedback": "Cheap rent does not help if customers do not come. Consider customers, power, safety and more.",
   "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
-  "status": "draft"
+  "status": "draft",
+  "review": {
+   "mark": "plausible, to confirm by a teacher",
+   "note": "A slip a Kenyan Grade 7 learner could plausibly make. No source and no homework count; a Pre-Technical Studies teacher should say whether it comes up in class."
+  }
  },
  "PRET.G7.ENTREP.UNIT.UNIT_LOCATION.M_UL_ANYWHERE": {
   "skill": "PRET.G7.ENTREP.UNIT.UNIT_LOCATION",
@@ -1632,7 +2064,11 @@
   "help": "A salon needs water and power.",
   "feedback": "Place matters. Customers, power, water and safety all count.",
   "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
-  "status": "draft"
+  "status": "draft",
+  "review": {
+   "mark": "plausible, to confirm by a teacher",
+   "note": "A slip a Kenyan Grade 7 learner could plausibly make. No source and no homework count; a Pre-Technical Studies teacher should say whether it comes up in class."
+  }
  },
  "PRET.G7.ENTREP.UNIT.UNIT_SIZE.M_US_BIGGER_BETTER": {
   "skill": "PRET.G7.ENTREP.UNIT.UNIT_SIZE",
@@ -1647,7 +2083,11 @@
   "help": "A big workshop with no orders loses money.",
   "feedback": "Size should match capital, market, skills and space.",
   "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
-  "status": "draft"
+  "status": "draft",
+  "review": {
+   "mark": "plausible, to confirm by a teacher",
+   "note": "A slip a Kenyan Grade 7 learner could plausibly make. No source and no homework count; a Pre-Technical Studies teacher should say whether it comes up in class."
+  }
  },
  "PRET.G7.ENTREP.UNIT.UNIT_SIZE.M_US_WISH_ONLY": {
   "skill": "PRET.G7.ENTREP.UNIT.UNIT_SIZE",
@@ -1662,7 +2102,11 @@
   "help": "Ask what happens when the money runs out.",
   "feedback": "Capital, market, materials, labour and the law all limit size.",
   "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
-  "status": "draft"
+  "status": "draft",
+  "review": {
+   "mark": "plausible, to confirm by a teacher",
+   "note": "A slip a Kenyan Grade 7 learner could plausibly make. No source and no homework count; a Pre-Technical Studies teacher should say whether it comes up in class."
+  }
  },
  "PRET.G7.ENTREP.UNIT.UNIT_SIZE.M_US_NO_MARKET": {
   "skill": "PRET.G7.ENTREP.UNIT.UNIT_SIZE",
@@ -1677,7 +2121,11 @@
   "help": "The bakery sells only what customers buy.",
   "feedback": "The size of the market limits the size of the business.",
   "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
-  "status": "draft"
+  "status": "draft",
+  "review": {
+   "mark": "plausible, to confirm by a teacher",
+   "note": "A slip a Kenyan Grade 7 learner could plausibly make. No source and no homework count; a Pre-Technical Studies teacher should say whether it comes up in class."
+  }
  },
  "PRET.G7.ENTREP.FINANCIAL_GOALS.FIN_GOALS.M_FI_RICH_ONLY": {
   "skill": "PRET.G7.ENTREP.FINANCIAL_GOALS.FIN_GOALS",
@@ -1692,7 +2140,11 @@
   "help": "A child saving for a shoe has a goal.",
   "feedback": "Everyone who handles money, even a little, gains from goals.",
   "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
-  "status": "draft"
+  "status": "draft",
+  "review": {
+   "mark": "plausible, to confirm by a teacher",
+   "note": "A slip a Kenyan Grade 7 learner could plausibly make. No source and no homework count; a Pre-Technical Studies teacher should say whether it comes up in class."
+  }
  },
  "PRET.G7.ENTREP.FINANCIAL_GOALS.FIN_GOALS.M_FI_WISH": {
   "skill": "PRET.G7.ENTREP.FINANCIAL_GOALS.FIN_GOALS",
@@ -1707,7 +2159,11 @@
   "help": "A wish says \"I want\"; a goal says how and when.",
   "feedback": "A goal has a plan, an amount and a date. A wish does not.",
   "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
-  "status": "draft"
+  "status": "draft",
+  "review": {
+   "mark": "plausible, to confirm by a teacher",
+   "note": "A slip a Kenyan Grade 7 learner could plausibly make. No source and no homework count; a Pre-Technical Studies teacher should say whether it comes up in class."
+  }
  },
  "PRET.G7.ENTREP.FINANCIAL_GOALS.FIN_GOALS.M_FI_WANTS_FIRST": {
   "skill": "PRET.G7.ENTREP.FINANCIAL_GOALS.FIN_GOALS",
@@ -1722,7 +2178,11 @@
   "help": "Needs first, then wants.",
   "feedback": "Needs come before wants when money is limited.",
   "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
-  "status": "draft"
+  "status": "draft",
+  "review": {
+   "mark": "plausible, to confirm by a teacher",
+   "note": "A slip a Kenyan Grade 7 learner could plausibly make. No source and no homework count; a Pre-Technical Studies teacher should say whether it comes up in class."
+  }
  },
  "PRET.G7.ENTREP.FINANCIAL_GOALS.FIN_GOALS.M_FI_NO_TIME": {
   "skill": "PRET.G7.ENTREP.FINANCIAL_GOALS.FIN_GOALS",
@@ -1737,7 +2197,11 @@
   "help": "More time means smaller savings each week.",
   "feedback": "Income, cost and time decide how soon a goal can be reached.",
   "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
-  "status": "draft"
+  "status": "draft",
+  "review": {
+   "mark": "plausible, to confirm by a teacher",
+   "note": "A slip a Kenyan Grade 7 learner could plausibly make. No source and no homework count; a Pre-Technical Studies teacher should say whether it comes up in class."
+  }
  },
  "PRET.G7.ENTREP.FINANCIAL_GOALS.FIN_SMART.M_SM_LETTERS": {
   "skill": "PRET.G7.ENTREP.FINANCIAL_GOALS.FIN_SMART",
@@ -1752,7 +2216,11 @@
   "help": "S, M, A, R, T: Specific, Measurable, Achievable, Realistic, Time-bound.",
   "feedback": "SMART means Specific, Measurable, Achievable, Realistic and Time-bound.",
   "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
-  "status": "draft"
+  "status": "draft",
+  "review": {
+   "mark": "plausible, to confirm by a teacher",
+   "note": "A slip a Kenyan Grade 7 learner could plausibly make. No source and no homework count; a Pre-Technical Studies teacher should say whether it comes up in class."
+  }
  },
  "PRET.G7.ENTREP.FINANCIAL_GOALS.FIN_SMART.M_SM_VAGUE": {
   "skill": "PRET.G7.ENTREP.FINANCIAL_GOALS.FIN_SMART",
@@ -1767,7 +2235,11 @@
   "help": "Ask: how much, how, by when?",
   "feedback": "A SMART goal names an amount, a way and a date.",
   "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
-  "status": "draft"
+  "status": "draft",
+  "review": {
+   "mark": "plausible, to confirm by a teacher",
+   "note": "A slip a Kenyan Grade 7 learner could plausibly make. No source and no homework count; a Pre-Technical Studies teacher should say whether it comes up in class."
+  }
  },
  "PRET.G7.ENTREP.FINANCIAL_GOALS.FIN_SMART.M_SM_NUMBER_ENOUGH": {
   "skill": "PRET.G7.ENTREP.FINANCIAL_GOALS.FIN_SMART",
@@ -1782,7 +2254,11 @@
   "help": "Weekly income decides what is realistic.",
   "feedback": "A number is not enough. The goal must also be achievable and realistic.",
   "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
-  "status": "draft"
+  "status": "draft",
+  "review": {
+   "mark": "plausible, to confirm by a teacher",
+   "note": "A slip a Kenyan Grade 7 learner could plausibly make. No source and no homework count; a Pre-Technical Studies teacher should say whether it comes up in class."
+  }
  },
  "PRET.G7.ENTREP.FINANCIAL_GOALS.FIN_NUMBERS.M_FN_SELL_PROFIT": {
   "skill": "PRET.G7.ENTREP.FINANCIAL_GOALS.FIN_NUMBERS",
@@ -1797,7 +2273,11 @@
   "help": "Profit is what is left after paying for the goods.",
   "feedback": "Profit is selling price minus buying price.",
   "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
-  "status": "draft"
+  "status": "draft",
+  "review": {
+   "mark": "plausible, to confirm by a teacher",
+   "note": "A slip a Kenyan Grade 7 learner could plausibly make. No source and no homework count; a Pre-Technical Studies teacher should say whether it comes up in class."
+  }
  },
  "PRET.G7.ENTREP.FINANCIAL_GOALS.FIN_NUMBERS.M_FN_ADD_WEEKS": {
   "skill": "PRET.G7.ENTREP.FINANCIAL_GOALS.FIN_NUMBERS",
@@ -1812,7 +2292,11 @@
   "help": "Count the 100s in 1,200.",
   "feedback": "Divide the goal by the amount saved each week.",
   "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
-  "status": "draft"
+  "status": "draft",
+  "review": {
+   "mark": "plausible, to confirm by a teacher",
+   "note": "A slip a Kenyan Grade 7 learner could plausibly make. No source and no homework count; a Pre-Technical Studies teacher should say whether it comes up in class."
+  }
  },
  "PRET.G7.ENTREP.FINANCIAL_GOALS.FIN_NUMBERS.M_FN_ONE_ITEM": {
   "skill": "PRET.G7.ENTREP.FINANCIAL_GOALS.FIN_NUMBERS",
@@ -1827,7 +2311,11 @@
   "help": "Multiply the profit on one by the number sold.",
   "feedback": "Total profit is profit on one item times the number sold.",
   "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
-  "status": "draft"
+  "status": "draft",
+  "review": {
+   "mark": "plausible, to confirm by a teacher",
+   "note": "A slip a Kenyan Grade 7 learner could plausibly make. No source and no homework count; a Pre-Technical Studies teacher should say whether it comes up in class."
+  }
  },
  "PRET.G7.ENTREP.FINANCIAL_GOALS.FIN_NUMBERS.M_FN_BUY_SELL": {
   "skill": "PRET.G7.ENTREP.FINANCIAL_GOALS.FIN_NUMBERS",
@@ -1842,6 +2330,10 @@
   "help": "Selling price is the bigger number when there is a profit.",
   "feedback": "Profit is selling price minus buying price.",
   "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
-  "status": "draft"
+  "status": "draft",
+  "review": {
+   "mark": "plausible, to confirm by a teacher",
+   "note": "A slip a Kenyan Grade 7 learner could plausibly make. No source and no homework count; a Pre-Technical Studies teacher should say whether it comes up in class."
+  }
  }
 }
