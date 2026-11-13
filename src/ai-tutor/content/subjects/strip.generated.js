@@ -56,4 +56,11 @@ export default {
   'socialstudies_g6_d.js': 'socialstudies_g6_signed.js',
   'socialstudies_g6_e.js': 'socialstudies_g6_signed.js',
   'socialstudies_g6_f.js': 'socialstudies_g6_signed.js',
+  'socialstudies_g7_a.js': 'socialstudies_g7_signed.js',
+  'socialstudies_g7_b.js': 'socialstudies_g7_signed.js',
+  'socialstudies_g7_c.js': 'socialstudies_g7_signed.js',
+  'socialstudies_g7_d.js': 'socialstudies_g7_signed.js',
+  'socialstudies_g7_e.js': 'socialstudies_g7_signed.js',
+  'socialstudies_g7_f.js': 'socialstudies_g7_signed.js',
+  'socialstudies_g7_g.js': 'socialstudies_g7_signed.js',
 };
