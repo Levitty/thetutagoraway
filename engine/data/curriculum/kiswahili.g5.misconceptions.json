@@ -12,7 +12,11 @@
   "help": "Read the sentence around the word and think what is being done.",
   "feedback": "Maana ya neno hutokana na sentensi lilimo, si na jinsi linavyofanana na neno lingine.",
   "source": "common learner error; to confirm by a native Kiswahili teacher",
-  "status": "draft"
+  "status": "draft",
+  "review": {
+   "mark": "plausible, to confirm by a teacher",
+   "note": "Own judgement: believable for a Kenyan Grade 5 learner, but we have no source or homework count. A native Kiswahili teacher should say whether children really make this slip."
+  }
  },
  "KISW.G5.KUSOMA.T1_KUSOMA_KWA_UFAHAMU.MSAMIATI.M_MSA_NEARBY": {
   "skill": "KISW.G5.KUSOMA.T1_KUSOMA_KWA_UFAHAMU.MSAMIATI",
@@ -27,7 +31,11 @@
   "help": "Go back to the exact sentence with the word.",
   "feedback": "Rudi kwenye sentensi lenyewe lenye neno hilo. Maana inatoka hapo, si kutoka sentensi ya karibu.",
   "source": "common learner error; to confirm by a native Kiswahili teacher",
-  "status": "draft"
+  "status": "draft",
+  "review": {
+   "mark": "plausible, to confirm by a teacher",
+   "note": "Own judgement: believable for a Kenyan Grade 5 learner, but we have no source or homework count. A native Kiswahili teacher should say whether children really make this slip."
+  }
  },
  "KISW.G5.KUSOMA.T1_KUSOMA_KWA_UFAHAMU.MSAMIATI.M_MSA_OPPOSITE": {
   "skill": "KISW.G5.KUSOMA.T1_KUSOMA_KWA_UFAHAMU.MSAMIATI",
@@ -42,7 +50,11 @@
   "help": "Does the word mean the same thing as your choice?",
   "feedback": "Kinyume cha neno si maana yake. Soma tena sentensi.",
   "source": "common learner error; to confirm by a native Kiswahili teacher",
-  "status": "draft"
+  "status": "draft",
+  "review": {
+   "mark": "doubtful",
+   "why": "A trap option: a Grade 5 child who has met the term would not say this."
+  }
  },
  "KISW.G5.KUSOMA.T1_KUSOMA_KWA_UFAHAMU.UFAHAMU_HADITHI.M_UFA_WRONG_PERSON": {
   "skill": "KISW.G5.KUSOMA.T1_KUSOMA_KWA_UFAHAMU.UFAHAMU_HADITHI",
@@ -57,7 +69,11 @@
   "help": "Find the sentence with the action and see who did it.",
   "feedback": "Rudi kwenye kifungu uone ni nani hasa alifanya kitendo hicho.",
   "source": "common learner error; to confirm by a native Kiswahili teacher",
-  "status": "draft"
+  "status": "draft",
+  "review": {
+   "mark": "doubtful",
+   "why": "A trap option: a Grade 5 child who has met the term would not say this."
+  }
  },
  "KISW.G5.KUSOMA.T1_KUSOMA_KWA_UFAHAMU.UFAHAMU_HADITHI.M_UFA_OUTSIDE": {
   "skill": "KISW.G5.KUSOMA.T1_KUSOMA_KWA_UFAHAMU.UFAHAMU_HADITHI",
@@ -72,7 +88,11 @@
   "help": "Underline the answer in the passage.",
   "feedback": "Jibu liko katika kifungu. Tumia kilichoandikwa, si kile unachokijua kutoka nyumbani.",
   "source": "common learner error; to confirm by a native Kiswahili teacher",
-  "status": "draft"
+  "status": "draft",
+  "review": {
+   "mark": "common in the literature",
+   "source": "Raphael (1982, 1986), question-answer relationships, The Reading Teacher 36 and 39: children answer from what they know instead of from the text."
+  }
  },
  "KISW.G5.KUSOMA.T1_KUSOMA_KWA_UFAHAMU.UFAHAMU_HADITHI.M_UFA_DETAIL_AS_MAIN": {
   "skill": "KISW.G5.KUSOMA.T1_KUSOMA_KWA_UFAHAMU.UFAHAMU_HADITHI",
@@ -87,7 +107,11 @@
   "help": "Ask \"Hadithi nzima inatufundisha nini?\"",
   "feedback": "Ujumbe mkuu ni funzo la hadithi nzima, si jambo moja dogo ndani yake.",
   "source": "common learner error; to confirm by a native Kiswahili teacher",
-  "status": "draft"
+  "status": "draft",
+  "review": {
+   "mark": "plausible, to confirm by a teacher",
+   "note": "Own judgement: believable for a Kenyan Grade 5 learner, but we have no source or homework count. A native Kiswahili teacher should say whether children really make this slip."
+  }
  },
  "KISW.G5.KUSOMA.T1_KUSOMA_KWA_UFAHAMU.UFAHAMU_HADITHI.M_UFA_ORDER": {
   "skill": "KISW.G5.KUSOMA.T1_KUSOMA_KWA_UFAHAMU.UFAHAMU_HADITHI",
@@ -102,7 +126,11 @@
   "help": "Find each event in the story and see which came first.",
   "feedback": "Matukio hupangwa kwa jinsi yalivyotokea katika hadithi. Soma tena kila tukio.",
   "source": "common learner error; to confirm by a native Kiswahili teacher",
-  "status": "draft"
+  "status": "draft",
+  "review": {
+   "mark": "plausible, to confirm by a teacher",
+   "note": "Own judgement: believable for a Kenyan Grade 5 learner, but we have no source or homework count. A native Kiswahili teacher should say whether children really make this slip."
+  }
  },
  "KISW.G5.KUSOMA.T1_KUSOMA_KWA_UFAHAMU.UFAHAMU_HADITHI.M_UFA_DETAIL_MIX": {
   "skill": "KISW.G5.KUSOMA.T1_KUSOMA_KWA_UFAHAMU.UFAHAMU_HADITHI",
@@ -117,7 +145,11 @@
   "help": "Find the exact sentence with the action in the passage.",
   "feedback": "Kifungu kinataja vitu vingi. Rudi kwenye sentensi sahihi ujue jibu linalolingana na swali.",
   "source": "common learner error; to confirm by a native Kiswahili teacher",
-  "status": "draft"
+  "status": "draft",
+  "review": {
+   "mark": "plausible, to confirm by a teacher",
+   "note": "Own judgement: believable for a Kenyan Grade 5 learner, but we have no source or homework count. A native Kiswahili teacher should say whether children really make this slip."
+  }
  },
  "KISW.G5.KUANDI.T1_INSHA_YA_WASIFU.AINA_ZA_INSHA.M_INS_WASIFU_STORY": {
   "skill": "KISW.G5.KUANDI.T1_INSHA_YA_WASIFU.AINA_ZA_INSHA",
@@ -132,7 +164,11 @@
   "help": "Ask whether the text tells what happened in order, or tells who someone is.",
   "feedback": "Insha ya wasifu humwelezea mtu: sura yake, tabia yake na maisha yake. Masimulizi husimulia matukio.",
   "source": "common learner error; to confirm by a native Kiswahili teacher",
-  "status": "draft"
+  "status": "draft",
+  "review": {
+   "mark": "plausible, to confirm by a teacher",
+   "note": "Own judgement: believable for a Kenyan Grade 5 learner, but we have no source or homework count. A native Kiswahili teacher should say whether children really make this slip."
+  }
  },
  "KISW.G5.KUANDI.T1_INSHA_YA_WASIFU.AINA_ZA_INSHA.M_INS_MAELEZO_STORY": {
   "skill": "KISW.G5.KUANDI.T1_INSHA_YA_WASIFU.AINA_ZA_INSHA",
@@ -147,7 +183,11 @@
   "help": "Ask whether the writer says \"what happened\" or \"how to do it\".",
   "feedback": "Insha ya maelezo hueleza jambo au jinsi ya kufanya kitu. Masimulizi husimulia tukio lililotokea.",
   "source": "common learner error; to confirm by a native Kiswahili teacher",
-  "status": "draft"
+  "status": "draft",
+  "review": {
+   "mark": "plausible, to confirm by a teacher",
+   "note": "Own judgement: believable for a Kenyan Grade 5 learner, but we have no source or homework count. A native Kiswahili teacher should say whether children really make this slip."
+  }
  },
  "KISW.G5.KUANDI.T1_INSHA_YA_WASIFU.AINA_ZA_INSHA.M_INS_STORY_WASIFU": {
   "skill": "KISW.G5.KUANDI.T1_INSHA_YA_WASIFU.AINA_ZA_INSHA",
@@ -162,7 +202,11 @@
   "help": "Does the text tell events in order?",
   "feedback": "Masimulizi husimulia matukio kwa mpangilio. Wasifu humwelezea mtu mwenyewe.",
   "source": "common learner error; to confirm by a native Kiswahili teacher",
-  "status": "draft"
+  "status": "draft",
+  "review": {
+   "mark": "plausible, to confirm by a teacher",
+   "note": "Own judgement: believable for a Kenyan Grade 5 learner, but we have no source or homework count. A native Kiswahili teacher should say whether children really make this slip."
+  }
  },
  "KISW.G5.SARUFI.T1_AINA_ZA_NOMINO.PEKEE.M_PEKEE_GENERAL": {
   "skill": "KISW.G5.SARUFI.T1_AINA_ZA_NOMINO.PEKEE",
@@ -177,7 +221,11 @@
   "help": "Ask \"Kuna mito mingi, mto huu unaitwa nani?\" Names point to one only.",
   "feedback": "Neno hilo ni jina la jumla la kitu cha aina hiyo. Nomino ya pekee ni jina la kipekee, kama Tana au Nairobi.",
   "source": "common learner error; to confirm by a native Kiswahili teacher",
-  "status": "draft"
+  "status": "draft",
+  "review": {
+   "mark": "plausible, to confirm by a teacher",
+   "note": "Own judgement: believable for a Kenyan Grade 5 learner, but we have no source or homework count. A native Kiswahili teacher should say whether children really make this slip."
+  }
  },
  "KISW.G5.SARUFI.T1_AINA_ZA_NOMINO.PEKEE.M_PEKEE_ROLE": {
   "skill": "KISW.G5.SARUFI.T1_AINA_ZA_NOMINO.PEKEE",
@@ -192,7 +240,11 @@
   "help": "Many people can be called mwalimu. A name belongs to one person.",
   "feedback": "Mwalimu ni cheo au kazi, na watu wengi wanaweza kuwa walimu. Jina la mtu, kama Kamau, ndiyo nomino ya pekee.",
   "source": "common learner error; to confirm by a native Kiswahili teacher",
-  "status": "draft"
+  "status": "draft",
+  "review": {
+   "mark": "plausible, to confirm by a teacher",
+   "note": "Own judgement: believable for a Kenyan Grade 5 learner, but we have no source or homework count. A native Kiswahili teacher should say whether children really make this slip."
+  }
  },
  "KISW.G5.SARUFI.T1_AINA_ZA_NOMINO.PEKEE.M_PEKEE_START": {
   "skill": "KISW.G5.SARUFI.T1_AINA_ZA_NOMINO.PEKEE",
@@ -207,7 +259,11 @@
   "help": "Every sentence starts with a capital. Ask which word is the name of one person or place.",
   "feedback": "Kila sentensi huanza kwa herufi kubwa, hata kama neno la kwanza ni nomino ya kawaida. Tafuta jina la mtu au mahali.",
   "source": "English or mother-tongue influence on Kiswahili (to confirm by a native Kiswahili teacher)",
-  "status": "draft"
+  "status": "draft",
+  "review": {
+   "mark": "plausible, to confirm by a teacher",
+   "note": "Own judgement: believable for a Kenyan Grade 5 learner, but we have no source or homework count. A native Kiswahili teacher should say whether children really make this slip."
+  }
  },
  "KISW.G5.SARUFI.T1_AINA_ZA_NOMINO_2.KAWAIDA.M_KAWAIDA_NAME": {
   "skill": "KISW.G5.SARUFI.T1_AINA_ZA_NOMINO_2.KAWAIDA",
@@ -222,7 +278,11 @@
   "help": "Ask which word could name many buses, not one named person or place.",
   "feedback": "Juma na Mombasa ni majina ya pekee. Nomino ya kawaida ni jina la jumla la aina ya kitu au mtu, kama basi.",
   "source": "common learner error; to confirm by a native Kiswahili teacher",
-  "status": "draft"
+  "status": "draft",
+  "review": {
+   "mark": "plausible, to confirm by a teacher",
+   "note": "Own judgement: believable for a Kenyan Grade 5 learner, but we have no source or homework count. A native Kiswahili teacher should say whether children really make this slip."
+  }
  },
  "KISW.G5.SARUFI.T1_AINA_ZA_NOMINO_2.KAWAIDA.M_KAWAIDA_NOT_NOUN": {
   "skill": "KISW.G5.SARUFI.T1_AINA_ZA_NOMINO_2.KAWAIDA",
@@ -237,7 +297,11 @@
   "help": "Ask \"Ninaweza kusema huyu ni nani au hiki ni nini?\"",
   "feedback": "Neno hilo si nomino. Nomino hutaja mtu, mahali, mnyama au kitu. Kitenzi hutaja kitendo, na kivumishi huelezea nomino.",
   "source": "English or mother-tongue influence on Kiswahili (to confirm by a native Kiswahili teacher)",
-  "status": "draft"
+  "status": "draft",
+  "review": {
+   "mark": "plausible, to confirm by a teacher",
+   "note": "Own judgement: believable for a Kenyan Grade 5 learner, but we have no source or homework count. A native Kiswahili teacher should say whether children really make this slip."
+  }
  },
  "KISW.G5.KUSOMA.T2_KUSOMA_KWA_KINA.KAMUSI.M_KAM_LENGTH": {
   "skill": "KISW.G5.KUSOMA.T2_KUSOMA_KWA_KINA.KAMUSI",
@@ -252,7 +316,11 @@
   "help": "Say the alphabet and look at the first letter.",
   "feedback": "Kamusi hupanga maneno kwa herufi za alfabeti, si kwa urefu wa neno.",
   "source": "common learner error; to confirm by a native Kiswahili teacher",
-  "status": "draft"
+  "status": "draft",
+  "review": {
+   "mark": "doubtful",
+   "why": "A trap option: a Grade 5 child who has met the term would not say this."
+  }
  },
  "KISW.G5.KUSOMA.T2_KUSOMA_KWA_KINA.KAMUSI.M_KAM_FIRST_ONLY": {
   "skill": "KISW.G5.KUSOMA.T2_KUSOMA_KWA_KINA.KAMUSI",
@@ -267,7 +335,11 @@
   "help": "When the first letters match, look at the second letter.",
   "feedback": "Maneno yanapoanza kwa herufi moja, tazama herufi ya pili, kisha ya tatu: sahani huja kabla ya samaki.",
   "source": "common learner error; to confirm by a native Kiswahili teacher",
-  "status": "draft"
+  "status": "draft",
+  "review": {
+   "mark": "plausible, to confirm by a teacher",
+   "note": "Own judgement: believable for a Kenyan Grade 5 learner, but we have no source or homework count. A native Kiswahili teacher should say whether children really make this slip."
+  }
  },
  "KISW.G5.KUSOMA.T2_KUSOMA_KWA_KINA.KAMUSI.M_KAM_REVERSE": {
   "skill": "KISW.G5.KUSOMA.T2_KUSOMA_KWA_KINA.KAMUSI",
@@ -282,7 +354,11 @@
   "help": "A comes first and Z comes last.",
   "feedback": "Alfabeti huanza na A na kuishia na Z. Neno la mwisho kwenye kamusi huanza na herufi ya mwisho zaidi.",
   "source": "common learner error; to confirm by a native Kiswahili teacher",
-  "status": "draft"
+  "status": "draft",
+  "review": {
+   "mark": "doubtful",
+   "why": "A trap option: a Grade 5 child who has met the term would not say this."
+  }
  },
  "KISW.G5.SARUFI.T2_AINA_ZA_NOMINO.WINGI.M_WINGI_UNCHANGED": {
   "skill": "KISW.G5.SARUFI.T2_AINA_ZA_NOMINO.WINGI",
@@ -297,7 +373,11 @@
   "help": "Ask which part of the word shows \"many\".",
   "feedback": "Wingi wa nomino nyingi hubadilisha mwanzo wa neno, si mwisho. Kitabu kimoja, vitabu viwili.",
   "source": "English or mother-tongue influence on Kiswahili (to confirm by a native Kiswahili teacher)",
-  "status": "draft"
+  "status": "draft",
+  "review": {
+   "mark": "plausible, to confirm by a teacher",
+   "note": "Own judgement: believable for a Kenyan Grade 5 learner, but we have no source or homework count. A native Kiswahili teacher should say whether children really make this slip."
+  }
  },
  "KISW.G5.SARUFI.T2_AINA_ZA_NOMINO.WINGI.M_WINGI_WRONG_PREFIX": {
   "skill": "KISW.G5.SARUFI.T2_AINA_ZA_NOMINO.WINGI",
@@ -312,7 +392,11 @@
   "help": "Ask \"Mtoto ni mtu au kitu?\" People take wa-, things like kitabu take vi-.",
   "feedback": "Kiambishi cha wingi hutegemea ngeli ya nomino. Watu hupewa wa- (watoto), na vitu kama kitabu hupewa vi- (vitabu).",
   "source": "common learner error; to confirm by a native Kiswahili teacher",
-  "status": "draft"
+  "status": "draft",
+  "review": {
+   "mark": "common in the literature",
+   "source": "Deen (2005), The Acquisition of Swahili (John Benjamins): children use the wrong noun-class prefix."
+  }
  },
  "KISW.G5.SARUFI.T2_AINA_ZA_NOMINO.WINGI.M_WINGI_DOUBLE": {
   "skill": "KISW.G5.SARUFI.T2_AINA_ZA_NOMINO.WINGI",
@@ -327,7 +411,11 @@
   "help": "Say the word aloud and ask if one prefix is not enough.",
   "feedback": "Nomino ina kiambishi kimoja cha wingi tu. Mti mmoja, miti miwili.",
   "source": "common learner error; to confirm by a native Kiswahili teacher",
-  "status": "draft"
+  "status": "draft",
+  "review": {
+   "mark": "plausible, to confirm by a teacher",
+   "note": "Own judgement: believable for a Kenyan Grade 5 learner, but we have no source or homework count. A native Kiswahili teacher should say whether children really make this slip."
+  }
  },
  "KISW.G5.SARUFI.T2_AINA_ZA_NOMINO_2.VITENZI_JINA.M_VJ_NO_KU": {
   "skill": "KISW.G5.SARUFI.T2_AINA_ZA_NOMINO_2.VITENZI_JINA",
@@ -342,7 +430,11 @@
   "help": "Ask which word can start the sentence like a noun (it begins with ku-).",
   "feedback": "Nomino ya kitenzi-jina huanza na ku-: kusoma, kucheza, kulima. Shina la kitenzi peke yake haliwezi kuwa nomino hapa.",
   "source": "common learner error; to confirm by a native Kiswahili teacher",
-  "status": "draft"
+  "status": "draft",
+  "review": {
+   "mark": "plausible, to confirm by a teacher",
+   "note": "Own judgement: believable for a Kenyan Grade 5 learner, but we have no source or homework count. A native Kiswahili teacher should say whether children really make this slip."
+  }
  },
  "KISW.G5.SARUFI.T2_AINA_ZA_NOMINO_2.VITENZI_JINA.M_VJ_CONJUGATED": {
   "skill": "KISW.G5.SARUFI.T2_AINA_ZA_NOMINO_2.VITENZI_JINA",
@@ -357,7 +449,11 @@
   "help": "Ask whether the word says who is doing it and when.",
   "feedback": "Anasoma ni kitenzi chenye mtu na wakati. Kitenzi-jina ni kusoma, kinachotumika kama nomino bila mtu wala wakati.",
   "source": "common learner error; to confirm by a native Kiswahili teacher",
-  "status": "draft"
+  "status": "draft",
+  "review": {
+   "mark": "plausible, to confirm by a teacher",
+   "note": "Own judgement: believable for a Kenyan Grade 5 learner, but we have no source or homework count. A native Kiswahili teacher should say whether children really make this slip."
+  }
  },
  "KISW.G5.SARUFI.T2_AINA_ZA_NOMINO_2.VITENZI_JINA.M_VJ_DOER": {
   "skill": "KISW.G5.SARUFI.T2_AINA_ZA_NOMINO_2.VITENZI_JINA",
@@ -372,7 +468,11 @@
   "help": "Ask whether the gap names the action or the person who does it.",
   "feedback": "Msomaji ni mtu anayesoma. Kitenzi-jina hutaja kitendo chenyewe: kusoma.",
   "source": "common learner error; to confirm by a native Kiswahili teacher",
-  "status": "draft"
+  "status": "draft",
+  "review": {
+   "mark": "plausible, to confirm by a teacher",
+   "note": "Own judgement: believable for a Kenyan Grade 5 learner, but we have no source or homework count. A native Kiswahili teacher should say whether children really make this slip."
+  }
  },
  "KISW.G5.KUSIKI.T3_VITENDAWILI.VITENDAWILI.M_VIT_METHALI": {
   "skill": "KISW.G5.KUSIKI.T3_VITENDAWILI.VITENDAWILI",
@@ -387,7 +487,11 @@
   "help": "A riddle asks a hidden question and waits for the answer.",
   "feedback": "Kitendawili huficha jibu na humtaka mtu kukitegua. Methali hutoa funzo.",
   "source": "common learner error; to confirm by a native Kiswahili teacher",
-  "status": "draft"
+  "status": "draft",
+  "review": {
+   "mark": "plausible, to confirm by a teacher",
+   "note": "Own judgement: believable for a Kenyan Grade 5 learner, but we have no source or homework count. A native Kiswahili teacher should say whether children really make this slip."
+  }
  },
  "KISW.G5.KUSIKI.T3_VITENDAWILI.VITENDAWILI.M_VIT_NAHAU": {
   "skill": "KISW.G5.KUSIKI.T3_VITENDAWILI.VITENDAWILI",
@@ -402,7 +506,11 @@
   "help": "Can you guess an answer to it?",
   "feedback": "Nahau ni maneno yenye maana maalum. Kitendawili huuliza kwa mafumbo na kina jibu la kutegua.",
   "source": "common learner error; to confirm by a native Kiswahili teacher",
-  "status": "draft"
+  "status": "draft",
+  "review": {
+   "mark": "plausible, to confirm by a teacher",
+   "note": "Own judgement: believable for a Kenyan Grade 5 learner, but we have no source or homework count. A native Kiswahili teacher should say whether children really make this slip."
+  }
  },
  "KISW.G5.KUSIKI.T3_VITENDAWILI.VITENDAWILI.M_VIT_PLAIN": {
   "skill": "KISW.G5.KUSIKI.T3_VITENDAWILI.VITENDAWILI",
@@ -417,7 +525,11 @@
   "help": "Does the text name the thing, or hide it?",
   "feedback": "Kitendawili hakitaji kitu moja kwa moja; hukielezea kwa fumbo. Sentensi ya kawaida inataja wazi.",
   "source": "common learner error; to confirm by a native Kiswahili teacher",
-  "status": "draft"
+  "status": "draft",
+  "review": {
+   "mark": "doubtful",
+   "why": "A trap option: a Grade 5 child who has met the term would not say this."
+  }
  },
  "KISW.G5.KUSIKI.T3_VITENDAWILI.VITENDAWILI.M_VIT_WRONG_ANSWER": {
   "skill": "KISW.G5.KUSIKI.T3_VITENDAWILI.VITENDAWILI",
@@ -432,7 +544,11 @@
   "help": "Test each answer against every part of the riddle.",
   "feedback": "Jibu la kitendawili lazima lilingane na kila sehemu yake. Hiyo si jibu sahihi.",
   "source": "common learner error; to confirm by a native Kiswahili teacher",
-  "status": "draft"
+  "status": "draft",
+  "review": {
+   "mark": "plausible, to confirm by a teacher",
+   "note": "Own judgement: believable for a Kenyan Grade 5 learner, but we have no source or homework count. A native Kiswahili teacher should say whether children really make this slip."
+  }
  },
  "KISW.G5.KUSOMA.T3_KUSOMA_KWA_UFASAHA.UFASAHA_VIPENGELE.M_UFS_SPEED": {
   "skill": "KISW.G5.KUSOMA.T3_KUSOMA_KWA_UFASAHA.UFASAHA_VIPENGELE",
@@ -447,7 +563,11 @@
   "help": "Ask whether the listener can follow every word.",
   "feedback": "Kusoma kwa ufasaha si kusoma haraka sana. Kasi ifaayo ni ya wastani, ili msikilizaji aelewe kila neno.",
   "source": "common learner error; to confirm by a native Kiswahili teacher",
-  "status": "draft"
+  "status": "draft",
+  "review": {
+   "mark": "plausible, to confirm by a teacher",
+   "note": "Own judgement: believable for a Kenyan Grade 5 learner, but we have no source or homework count. A native Kiswahili teacher should say whether children really make this slip."
+  }
  },
  "KISW.G5.KUSOMA.T3_KUSOMA_KWA_UFASAHA.UFASAHA_VIPENGELE.M_UFS_LOUD": {
   "skill": "KISW.G5.KUSOMA.T3_KUSOMA_KWA_UFASAHA.UFASAHA_VIPENGELE",
@@ -462,7 +582,11 @@
   "help": "Ask whether the voice is clear and comfortable to listen to.",
   "feedback": "Sauti ipasavyo ni ile inayosikika wazi bila kupiga kelele wala kunong'ona.",
   "source": "common learner error; to confirm by a native Kiswahili teacher",
-  "status": "draft"
+  "status": "draft",
+  "review": {
+   "mark": "plausible, to confirm by a teacher",
+   "note": "Own judgement: believable for a Kenyan Grade 5 learner, but we have no source or homework count. A native Kiswahili teacher should say whether children really make this slip."
+  }
  },
  "KISW.G5.KUSOMA.T3_KUSOMA_KWA_UFASAHA.UFASAHA_VIPENGELE.M_UFS_IGNORE_MARKS": {
   "skill": "KISW.G5.KUSOMA.T3_KUSOMA_KWA_UFASAHA.UFASAHA_VIPENGELE",
@@ -477,7 +601,11 @@
   "help": "Read the sentence aloud and listen to where the voice rests.",
   "feedback": "Alama za uakifishi zinatuonyesha mahali pa kupumzika: kidogo kwenye koma na kwa muda mrefu zaidi kwenye kikomo.",
   "source": "common learner error; to confirm by a native Kiswahili teacher",
-  "status": "draft"
+  "status": "draft",
+  "review": {
+   "mark": "plausible, to confirm by a teacher",
+   "note": "Own judgement: believable for a Kenyan Grade 5 learner, but we have no source or homework count. A native Kiswahili teacher should say whether children really make this slip."
+  }
  },
  "KISW.G5.KUANDI.T3_KUANDIKA_KWA_TARAKIL.SEHEMU_TARAKILISHI.M_TAR_MIX_PARTS": {
   "skill": "KISW.G5.KUANDI.T3_KUANDIKA_KWA_TARAKIL.SEHEMU_TARAKILISHI",
@@ -492,7 +620,11 @@
   "help": "Which part has keys with letters?",
   "feedback": "Kibodi ina vitufe vya herufi vya kupigia chapa. Kipanya hutumika kusogeza kielekezi, na skrini huonyesha kilichoandikwa.",
   "source": "common learner error; to confirm by a native Kiswahili teacher",
-  "status": "draft"
+  "status": "draft",
+  "review": {
+   "mark": "plausible, to confirm by a teacher",
+   "note": "Own judgement: believable for a Kenyan Grade 5 learner, but we have no source or homework count. A native Kiswahili teacher should say whether children really make this slip."
+  }
  },
  "KISW.G5.KUANDI.T3_KUANDIKA_KWA_TARAKIL.SEHEMU_TARAKILISHI.M_TAR_FUNCTION": {
   "skill": "KISW.G5.KUANDI.T3_KUANDIKA_KWA_TARAKIL.SEHEMU_TARAKILISHI",
@@ -507,7 +639,11 @@
   "help": "A kichapishi prints on paper.",
   "feedback": "Kichapishi huchapisha kwenye karatasi. Skrini ndiyo huonyesha maandishi.",
   "source": "common learner error; to confirm by a native Kiswahili teacher",
-  "status": "draft"
+  "status": "draft",
+  "review": {
+   "mark": "plausible, to confirm by a teacher",
+   "note": "Own judgement: believable for a Kenyan Grade 5 learner, but we have no source or homework count. A native Kiswahili teacher should say whether children really make this slip."
+  }
  },
  "KISW.G5.SARUFI.T3_AINA_ZA_NOMINO.MAKUNDI.M_MAK_WRONG_GROUP": {
   "skill": "KISW.G5.SARUFI.T3_AINA_ZA_NOMINO.MAKUNDI",
@@ -522,7 +658,11 @@
   "help": "Ask \"Kundi hili ni la nini?\" and think of the usual word.",
   "feedback": "Kila kundi lina jina lake la kawaida: umati wa watu, jeshi la askari, msafara wa magari, mkungu wa ndizi, tita la kuni.",
   "source": "common learner error; to confirm by a native Kiswahili teacher",
-  "status": "draft"
+  "status": "draft",
+  "review": {
+   "mark": "plausible, to confirm by a teacher",
+   "note": "Own judgement: believable for a Kenyan Grade 5 learner, but we have no source or homework count. A native Kiswahili teacher should say whether children really make this slip."
+  }
  },
  "KISW.G5.SARUFI.T3_AINA_ZA_NOMINO.MAKUNDI.M_MAK_SINGLE": {
   "skill": "KISW.G5.SARUFI.T3_AINA_ZA_NOMINO.MAKUNDI",
@@ -537,7 +677,11 @@
   "help": "Ask whether the gap names one or many.",
   "feedback": "Nomino ya kundi hutaja wengi kwa pamoja, kama umati wa watu. \"Mtu\" ni mmoja tu.",
   "source": "common learner error; to confirm by a native Kiswahili teacher",
-  "status": "draft"
+  "status": "draft",
+  "review": {
+   "mark": "doubtful",
+   "why": "A trap option: a Grade 5 child who has met the term would not say this."
+  }
  },
  "KISW.G5.SARUFI.T3_AINA_ZA_NOMINO_2.AMBATA.M_AMBATA_SIMPLE": {
   "skill": "KISW.G5.SARUFI.T3_AINA_ZA_NOMINO_2.AMBATA",
@@ -552,7 +696,11 @@
   "help": "Ask whether the word is two words joined, such as mwana + funzi.",
   "feedback": "Nomino ambata huundwa kwa kuunganisha maneno mawili, kama mwana + funzi = mwanafunzi. Mwalimu si ambata.",
   "source": "common learner error; to confirm by a native Kiswahili teacher",
-  "status": "draft"
+  "status": "draft",
+  "review": {
+   "mark": "plausible, to confirm by a teacher",
+   "note": "Own judgement: believable for a Kenyan Grade 5 learner, but we have no source or homework count. A native Kiswahili teacher should say whether children really make this slip."
+  }
  },
  "KISW.G5.SARUFI.T3_AINA_ZA_NOMINO_2.AMBATA.M_AMBATA_SPLIT": {
   "skill": "KISW.G5.SARUFI.T3_AINA_ZA_NOMINO_2.AMBATA",
@@ -567,7 +715,11 @@
   "help": "Say it as one word and write it as one word.",
   "feedback": "Nomino ambata huandikwa kama neno moja: mwanafunzi, si \"mwana funzi\".",
   "source": "English or mother-tongue influence on Kiswahili (to confirm by a native Kiswahili teacher)",
-  "status": "draft"
+  "status": "draft",
+  "review": {
+   "mark": "plausible, to confirm by a teacher",
+   "note": "Own judgement: believable for a Kenyan Grade 5 learner, but we have no source or homework count. A native Kiswahili teacher should say whether children really make this slip."
+  }
  },
  "KISW.G5.SARUFI.T3_AINA_ZA_NOMINO_3.DHAHANIA.M_DHA_CONCRETE": {
   "skill": "KISW.G5.SARUFI.T3_AINA_ZA_NOMINO_3.DHAHANIA",
@@ -582,7 +734,11 @@
   "help": "Ask \"Ninaweza kuishika kwa mkono?\" If yes, it is not dhahania.",
   "feedback": "Kitabu kinaweza kushikwa kwa mkono. Nomino ya dhahania haishikiki: ni wazo au hisia, kama upendo.",
   "source": "common learner error; to confirm by a native Kiswahili teacher",
-  "status": "draft"
+  "status": "draft",
+  "review": {
+   "mark": "plausible, to confirm by a teacher",
+   "note": "Own judgement: believable for a Kenyan Grade 5 learner, but we have no source or homework count. A native Kiswahili teacher should say whether children really make this slip."
+  }
  },
  "KISW.G5.SARUFI.T3_AINA_ZA_NOMINO_3.DHAHANIA.M_DHA_VERB": {
   "skill": "KISW.G5.SARUFI.T3_AINA_ZA_NOMINO_3.DHAHANIA",
@@ -597,7 +753,11 @@
   "help": "Ask which word can follow \"wa\" like a name of a feeling.",
   "feedback": "Kupenda ni kitenzi. Nomino ya dhahania inayotokana nacho ni upendo.",
   "source": "common learner error; to confirm by a native Kiswahili teacher",
-  "status": "draft"
+  "status": "draft",
+  "review": {
+   "mark": "plausible, to confirm by a teacher",
+   "note": "Own judgement: believable for a Kenyan Grade 5 learner, but we have no source or homework count. A native Kiswahili teacher should say whether children really make this slip."
+  }
  },
  "KISW.G5.SARUFI.T3_AINA_ZA_NOMINO_3.DHAHANIA.M_DHA_PERSON": {
   "skill": "KISW.G5.SARUFI.T3_AINA_ZA_NOMINO_3.DHAHANIA",
@@ -612,7 +772,11 @@
   "help": "Ask \"Ni mtu au ni tabia?\"",
   "feedback": "Mkarimu ni mtu mwenye tabia hiyo. Nomino ya dhahania ni ukarimu, yaani tabia yenyewe.",
   "source": "common learner error; to confirm by a native Kiswahili teacher",
-  "status": "draft"
+  "status": "draft",
+  "review": {
+   "mark": "plausible, to confirm by a teacher",
+   "note": "Own judgement: believable for a Kenyan Grade 5 learner, but we have no source or homework count. A native Kiswahili teacher should say whether children really make this slip."
+  }
  },
  "KISW.G5.SARUFI.T3_UAKIFISHI.UAKIFISHI.M_UAK_NO_CAPITAL": {
   "skill": "KISW.G5.SARUFI.T3_UAKIFISHI.UAKIFISHI",
@@ -627,7 +791,11 @@
   "help": "Look at the first letter of the sentence and of every name.",
   "feedback": "Sentensi huanza kwa herufi kubwa, na majina ya watu na mahali pia huandikwa kwa herufi kubwa.",
   "source": "common learner error; to confirm by a native Kiswahili teacher",
-  "status": "draft"
+  "status": "draft",
+  "review": {
+   "mark": "plausible, to confirm by a teacher",
+   "note": "Own judgement: believable for a Kenyan Grade 5 learner, but we have no source or homework count. A native Kiswahili teacher should say whether children really make this slip."
+  }
  },
  "KISW.G5.SARUFI.T3_UAKIFISHI.UAKIFISHI.M_UAK_WRONG_MARK": {
   "skill": "KISW.G5.SARUFI.T3_UAKIFISHI.UAKIFISHI",
@@ -642,7 +810,11 @@
   "help": "Say it aloud: does your voice go up as if you ask?",
   "feedback": "Swali humalizika kwa kiulizi (?). Sentensi ya kawaida humalizika kwa kikomo (.).",
   "source": "common learner error; to confirm by a native Kiswahili teacher",
-  "status": "draft"
+  "status": "draft",
+  "review": {
+   "mark": "plausible, to confirm by a teacher",
+   "note": "Own judgement: believable for a Kenyan Grade 5 learner, but we have no source or homework count. A native Kiswahili teacher should say whether children really make this slip."
+  }
  },
  "KISW.G5.SARUFI.T3_UAKIFISHI.UAKIFISHI.M_UAK_NO_COMMA": {
   "skill": "KISW.G5.SARUFI.T3_UAKIFISHI.UAKIFISHI",
@@ -657,7 +829,11 @@
   "help": "Where would you pause when you read the list aloud?",
   "feedback": "Koma hutenganisha vitu katika orodha. Weka koma baada ya kila kitu isipokuwa kabla ya \"na\" ya mwisho.",
   "source": "common learner error; to confirm by a native Kiswahili teacher",
-  "status": "draft"
+  "status": "draft",
+  "review": {
+   "mark": "plausible, to confirm by a teacher",
+   "note": "Own judgement: believable for a Kenyan Grade 5 learner, but we have no source or homework count. A native Kiswahili teacher should say whether children really make this slip."
+  }
  },
  "KISW.G5.SARUFI.T3_UAKIFISHI.UAKIFISHI.M_UAK_CAPITAL_COMMON": {
   "skill": "KISW.G5.SARUFI.T3_UAKIFISHI.UAKIFISHI",
@@ -672,7 +848,11 @@
   "help": "Ask whether the word is the name of one person or place.",
   "feedback": "Herufi kubwa hutumika mwanzo wa sentensi na kwa majina ya pekee tu. Nomino ya kawaida katikati ya sentensi huandikwa kwa herufi ndogo.",
   "source": "English or mother-tongue influence on Kiswahili (to confirm by a native Kiswahili teacher)",
-  "status": "draft"
+  "status": "draft",
+  "review": {
+   "mark": "plausible, to confirm by a teacher",
+   "note": "Own judgement: believable for a Kenyan Grade 5 learner, but we have no source or homework count. A native Kiswahili teacher should say whether children really make this slip."
+  }
  },
  "KISW.G5.KUSIKI.T4_MANENO_YA_HESHIMA_NA.HESHIMA.M_HES_SIDE": {
   "skill": "KISW.G5.KUSIKI.T4_MANENO_YA_HESHIMA_NA.HESHIMA",
@@ -687,7 +867,11 @@
   "help": "Shangazi is a woman (the father's sister); mjomba is a man (the mother's brother).",
   "feedback": "Dada ya baba ni shangazi. Kaka wa mama ni mjomba.",
   "source": "common learner error; to confirm by a native Kiswahili teacher",
-  "status": "draft"
+  "status": "draft",
+  "review": {
+   "mark": "plausible, to confirm by a teacher",
+   "note": "Own judgement: believable for a Kenyan Grade 5 learner, but we have no source or homework count. A native Kiswahili teacher should say whether children really make this slip."
+  }
  },
  "KISW.G5.KUSIKI.T4_MANENO_YA_HESHIMA_NA.HESHIMA.M_HES_GREETING": {
   "skill": "KISW.G5.KUSIKI.T4_MANENO_YA_HESHIMA_NA.HESHIMA",
@@ -702,7 +886,11 @@
   "help": "The younger person greets first; the elder replies.",
   "feedback": "Mdogo humsalimia mkubwa kwa \"shikamoo\", na mkubwa hujibu \"marahaba\".",
   "source": "common learner error; to confirm by a native Kiswahili teacher",
-  "status": "draft"
+  "status": "draft",
+  "review": {
+   "mark": "plausible, to confirm by a teacher",
+   "note": "Own judgement: believable for a Kenyan Grade 5 learner, but we have no source or homework count. A native Kiswahili teacher should say whether children really make this slip."
+  }
  },
  "KISW.G5.KUSIKI.T4_MANENO_YA_HESHIMA_NA.HESHIMA.M_HES_COUSIN": {
   "skill": "KISW.G5.KUSIKI.T4_MANENO_YA_HESHIMA_NA.HESHIMA",
@@ -717,7 +905,11 @@
   "help": "A cousin is binamu.",
   "feedback": "Mtoto wa shangazi au mjomba ni binamu, si kaka wala dada.",
   "source": "common learner error; to confirm by a native Kiswahili teacher",
-  "status": "draft"
+  "status": "draft",
+  "review": {
+   "mark": "plausible, to confirm by a teacher",
+   "note": "Own judgement: believable for a Kenyan Grade 5 learner, but we have no source or homework count. A native Kiswahili teacher should say whether children really make this slip."
+  }
  },
  "KISW.G5.KUSOMA.T4_KUSOMA_KWA_MAPANA.USALAMA_DIJITALI.M_DIG_SHARE": {
   "skill": "KISW.G5.KUSOMA.T4_KUSOMA_KWA_MAPANA.USALAMA_DIJITALI",
@@ -732,7 +924,11 @@
   "help": "Ask who can use your account if they have the password.",
   "feedback": "Nenosiri ni siri yako. Usimpe mtu mwingine, hata rafiki, ila mzazi au mlezi.",
   "source": "common learner error; to confirm by a native Kiswahili teacher",
-  "status": "draft"
+  "status": "draft",
+  "review": {
+   "mark": "plausible, to confirm by a teacher",
+   "note": "Own judgement: believable for a Kenyan Grade 5 learner, but we have no source or homework count. A native Kiswahili teacher should say whether children really make this slip."
+  }
  },
  "KISW.G5.KUSOMA.T4_KUSOMA_KWA_MAPANA.USALAMA_DIJITALI.M_DIG_LINK": {
   "skill": "KISW.G5.KUSOMA.T4_KUSOMA_KWA_MAPANA.USALAMA_DIJITALI",
@@ -747,7 +943,11 @@
   "help": "Ask who sent it and whether you asked for it.",
   "feedback": "Viungo kutoka kwa watu usiowajua vinaweza kuwa hatari. Mwonyeshe mtu mzima kabla ya kuvifungua.",
   "source": "common learner error; to confirm by a native Kiswahili teacher",
-  "status": "draft"
+  "status": "draft",
+  "review": {
+   "mark": "plausible, to confirm by a teacher",
+   "note": "Own judgement: believable for a Kenyan Grade 5 learner, but we have no source or homework count. A native Kiswahili teacher should say whether children really make this slip."
+  }
  },
  "KISW.G5.KUSOMA.T4_KUSOMA_KWA_MAPANA.USALAMA_DIJITALI.M_DIG_UNSAFE_SITE": {
   "skill": "KISW.G5.KUSOMA.T4_KUSOMA_KWA_MAPANA.USALAMA_DIJITALI",
@@ -762,7 +962,11 @@
   "help": "Ask whether the site needs your personal details to read.",
   "feedback": "Tumia tovuti salama zilizopendekezwa na mwalimu au mzazi, na usitoe maelezo yako binafsi.",
   "source": "common learner error; to confirm by a native Kiswahili teacher",
-  "status": "draft"
+  "status": "draft",
+  "review": {
+   "mark": "plausible, to confirm by a teacher",
+   "note": "Own judgement: believable for a Kenyan Grade 5 learner, but we have no source or homework count. A native Kiswahili teacher should say whether children really make this slip."
+  }
  },
  "KISW.G5.KUANDI.T4_BARUAPEPE.BARUAPEPE.M_BAR_LETTER_FORM": {
   "skill": "KISW.G5.KUANDI.T4_BARUAPEPE.BARUAPEPE",
@@ -777,7 +981,11 @@
   "help": "In an email, the address goes in a box at the top.",
   "feedback": "Baruapepe ina sehemu ya \"Kwa\" kwa anwani ya mpokeaji, na sehemu ya mada. Si kama barua ya karatasi yenye anwani kona.",
   "source": "common learner error; to confirm by a native Kiswahili teacher",
-  "status": "draft"
+  "status": "draft",
+  "review": {
+   "mark": "plausible, to confirm by a teacher",
+   "note": "Own judgement: believable for a Kenyan Grade 5 learner, but we have no source or homework count. A native Kiswahili teacher should say whether children really make this slip."
+  }
  },
  "KISW.G5.KUANDI.T4_BARUAPEPE.BARUAPEPE.M_BAR_NO_SUBJECT": {
   "skill": "KISW.G5.KUANDI.T4_BARUAPEPE.BARUAPEPE",
@@ -792,7 +1000,11 @@
   "help": "The subject is a short title, like a heading.",
   "feedback": "Mada ni kichwa kifupi cha baruapepe. Ujumbe wote huandikwa katika mwili wa baruapepe.",
   "source": "common learner error; to confirm by a native Kiswahili teacher",
-  "status": "draft"
+  "status": "draft",
+  "review": {
+   "mark": "plausible, to confirm by a teacher",
+   "note": "Own judgement: believable for a Kenyan Grade 5 learner, but we have no source or homework count. A native Kiswahili teacher should say whether children really make this slip."
+  }
  },
  "KISW.G5.KUANDI.T4_BARUAPEPE.BARUAPEPE.M_BAR_ORDER": {
   "skill": "KISW.G5.KUANDI.T4_BARUAPEPE.BARUAPEPE",
@@ -807,7 +1019,11 @@
   "help": "Salamu begins it; the name ends it.",
   "feedback": "Mpangilio wa baruapepe: anayepokea, mada, salamu, ujumbe, hitimisho, jina la mwandishi.",
   "source": "common learner error; to confirm by a native Kiswahili teacher",
-  "status": "draft"
+  "status": "draft",
+  "review": {
+   "mark": "plausible, to confirm by a teacher",
+   "note": "Own judgement: believable for a Kenyan Grade 5 learner, but we have no source or homework count. A native Kiswahili teacher should say whether children really make this slip."
+  }
  },
  "KISW.G5.SARUFI.T4_NGELI_YA_I_ZI.I_ZI.M_IZI_SG_ZI": {
   "skill": "KISW.G5.SARUFI.T4_NGELI_YA_I_ZI.I_ZI",
@@ -822,7 +1038,11 @@
   "help": "Count: is it one or many?",
   "feedback": "Nyumba moja ni umoja. Kiambishi cha umoja cha ngeli ya I-ZI ni i-: nyumba imeanguka.",
   "source": "common learner error; to confirm by a native Kiswahili teacher",
-  "status": "draft"
+  "status": "draft",
+  "review": {
+   "mark": "plausible, to confirm by a teacher",
+   "note": "Own judgement: believable for a Kenyan Grade 5 learner, but we have no source or homework count. A native Kiswahili teacher should say whether children really make this slip."
+  }
  },
  "KISW.G5.SARUFI.T4_NGELI_YA_I_ZI.I_ZI.M_IZI_PL_I": {
   "skill": "KISW.G5.SARUFI.T4_NGELI_YA_I_ZI.I_ZI",
@@ -837,7 +1057,11 @@
   "help": "Look at the other words: nyingi, mbili. They say many.",
   "feedback": "Nomino za I-ZI zina umbo moja katika umoja na wingi. Maneno mengine ya sentensi, kama \"nyingi\", yanaonyesha ni wingi, kwa hiyo tunatumia zi-.",
   "source": "common learner error; to confirm by a native Kiswahili teacher",
-  "status": "draft"
+  "status": "draft",
+  "review": {
+   "mark": "plausible, to confirm by a teacher",
+   "note": "Own judgement: believable for a Kenyan Grade 5 learner, but we have no source or homework count. A native Kiswahili teacher should say whether children really make this slip."
+  }
  },
  "KISW.G5.SARUFI.T4_NGELI_YA_I_ZI.I_ZI.M_IZI_KI_VI": {
   "skill": "KISW.G5.SARUFI.T4_NGELI_YA_I_ZI.I_ZI",
@@ -852,7 +1076,11 @@
   "help": "Ask \"Meza inapatana na kitabu au na nyumba?\"",
   "feedback": "Si kila kitu hutumia ki-/vi-. Meza, nyumba na barabara ni za ngeli ya I-ZI, kwa hiyo wingi hutumia zi-.",
   "source": "common learner error; to confirm by a native Kiswahili teacher",
-  "status": "draft"
+  "status": "draft",
+  "review": {
+   "mark": "plausible, to confirm by a teacher",
+   "note": "Own judgement: believable for a Kenyan Grade 5 learner, but we have no source or homework count. A native Kiswahili teacher should say whether children really make this slip."
+  }
  },
  "KISW.G5.SARUFI.T4_NGELI_YA_I_ZI.I_ZI.M_IZI_ADD_MA": {
   "skill": "KISW.G5.SARUFI.T4_NGELI_YA_I_ZI.I_ZI",
@@ -867,7 +1095,11 @@
   "help": "Ask whether this noun has a different plural form.",
   "feedback": "Nomino za I-ZI haziongezi kiambishi katika wingi. Tunabadilisha viambishi vya upatanisho: nyumba zote ni kubwa.",
   "source": "common learner error; to confirm by a native Kiswahili teacher",
-  "status": "draft"
+  "status": "draft",
+  "review": {
+   "mark": "plausible, to confirm by a teacher",
+   "note": "Own judgement: believable for a Kenyan Grade 5 learner, but we have no source or homework count. A native Kiswahili teacher should say whether children really make this slip."
+  }
  },
  "KISW.G5.KUSIKI.T5_METHALI.METHALI.M_MET_LITERAL": {
   "skill": "KISW.G5.KUSIKI.T5_METHALI.METHALI",
@@ -882,7 +1114,11 @@
   "help": "Ask what lesson the methali teaches.",
   "feedback": "Methali haisemi maana yake wazi. Mchumia juani hulia kivulini ina maana kwamba anayefanya kazi kwa bidii atapumzika na kufurahia matunda yake.",
   "source": "common learner error; to confirm by a native Kiswahili teacher",
-  "status": "draft"
+  "status": "draft",
+  "review": {
+   "mark": "plausible, to confirm by a teacher",
+   "note": "Own judgement: believable for a Kenyan Grade 5 learner, but we have no source or homework count. A native Kiswahili teacher should say whether children really make this slip."
+  }
  },
  "KISW.G5.KUSIKI.T5_METHALI.METHALI.M_MET_WRONG_LESSON": {
   "skill": "KISW.G5.KUSIKI.T5_METHALI.METHALI",
@@ -897,7 +1133,11 @@
   "help": "Ask what the words say about little and little.",
   "feedback": "Kila methali ina funzo lake. Haba na haba hujaza kibaba inafundisha kwamba kidogo kidogo hujaza.",
   "source": "common learner error; to confirm by a native Kiswahili teacher",
-  "status": "draft"
+  "status": "draft",
+  "review": {
+   "mark": "plausible, to confirm by a teacher",
+   "note": "Own judgement: believable for a Kenyan Grade 5 learner, but we have no source or homework count. A native Kiswahili teacher should say whether children really make this slip."
+  }
  },
  "KISW.G5.KUSIKI.T5_METHALI.METHALI.M_MET_WRONG_END": {
   "skill": "KISW.G5.KUSIKI.T5_METHALI.METHALI",
@@ -912,7 +1152,11 @@
   "help": "Say the whole methali again from the beginning.",
   "feedback": "Methali hubaki jinsi ilivyo. Mwisho sahihi ni kibaba: haba na haba hujaza kibaba.",
   "source": "common learner error; to confirm by a native Kiswahili teacher",
-  "status": "draft"
+  "status": "draft",
+  "review": {
+   "mark": "plausible, to confirm by a teacher",
+   "note": "Own judgement: believable for a Kenyan Grade 5 learner, but we have no source or homework count. A native Kiswahili teacher should say whether children really make this slip."
+  }
  },
  "KISW.G5.KUSOMA.T5_KUSOMA_KWA_UFAHAMU.SHAIRI.M_SHA_COUNT_WORDS": {
   "skill": "KISW.G5.KUSOMA.T5_KUSOMA_KWA_UFAHAMU.SHAIRI",
@@ -927,7 +1171,11 @@
   "help": "Clap each sound: ma-ma-a-ni-pi-ka.",
   "feedback": "Mizani ni silabi, yaani sehemu za sauti. Hesabu silabi (ma-ma a-na-pi-ka), si maneno.",
   "source": "common learner error; to confirm by a native Kiswahili teacher",
-  "status": "draft"
+  "status": "draft",
+  "review": {
+   "mark": "plausible, to confirm by a teacher",
+   "note": "Own judgement: believable for a Kenyan Grade 5 learner, but we have no source or homework count. A native Kiswahili teacher should say whether children really make this slip."
+  }
  },
  "KISW.G5.KUSOMA.T5_KUSOMA_KWA_UFAHAMU.SHAIRI.M_SHA_COUNT_LETTERS": {
   "skill": "KISW.G5.KUSOMA.T5_KUSOMA_KWA_UFAHAMU.SHAIRI",
@@ -942,7 +1190,11 @@
   "help": "Count vowels: each vowel starts a new silabi in Kiswahili.",
   "feedback": "Mizani si herufi. Kwa kawaida kila irabu huanza silabi: ne-nda shu-le ni mizani 5.",
   "source": "common learner error; to confirm by a native Kiswahili teacher",
-  "status": "draft"
+  "status": "draft",
+  "review": {
+   "mark": "plausible, to confirm by a teacher",
+   "note": "Own judgement: believable for a Kenyan Grade 5 learner, but we have no source or homework count. A native Kiswahili teacher should say whether children really make this slip."
+  }
  },
  "KISW.G5.KUSOMA.T5_KUSOMA_KWA_UFAHAMU.SHAIRI.M_SHA_VINA_START": {
   "skill": "KISW.G5.KUSOMA.T5_KUSOMA_KWA_UFAHAMU.SHAIRI",
@@ -957,7 +1209,11 @@
   "help": "Vina are the endings that sound alike.",
   "feedback": "Vina ni sauti za mwisho zinazofanana katika mishororo. Tazama mwisho wa kila mshororo.",
   "source": "common learner error; to confirm by a native Kiswahili teacher",
-  "status": "draft"
+  "status": "draft",
+  "review": {
+   "mark": "plausible, to confirm by a teacher",
+   "note": "Own judgement: believable for a Kenyan Grade 5 learner, but we have no source or homework count. A native Kiswahili teacher should say whether children really make this slip."
+  }
  },
  "KISW.G5.KUSOMA.T5_KUSOMA_KWA_UFAHAMU.SHAIRI.M_SHA_VINA_WORD": {
   "skill": "KISW.G5.KUSOMA.T5_KUSOMA_KWA_UFAHAMU.SHAIRI",
@@ -972,7 +1228,11 @@
   "help": "Say both endings aloud and listen to the last sounds.",
   "feedback": "Vina ni sauti za mwisho zinazofanana, si neno lilelile. Shambani na nyumbani zina vina -ani.",
   "source": "common learner error; to confirm by a native Kiswahili teacher",
-  "status": "draft"
+  "status": "draft",
+  "review": {
+   "mark": "plausible, to confirm by a teacher",
+   "note": "Own judgement: believable for a Kenyan Grade 5 learner, but we have no source or homework count. A native Kiswahili teacher should say whether children really make this slip."
+  }
  },
  "KISW.G5.KUSOMA.T5_KUSOMA_KWA_UFAHAMU.SHAIRI.M_SHA_MISCOUNT": {
   "skill": "KISW.G5.KUSOMA.T5_KUSOMA_KWA_UFAHAMU.SHAIRI",
@@ -987,7 +1247,11 @@
   "help": "Clap each vowel: bi-di-i has three.",
   "feedback": "Kila irabu ni silabi tofauti: bidii ni bi-di-i, yaani mizani 3. Hesabu kila irabu.",
   "source": "common learner error; to confirm by a native Kiswahili teacher",
-  "status": "draft"
+  "status": "draft",
+  "review": {
+   "mark": "plausible, to confirm by a teacher",
+   "note": "Own judgement: believable for a Kenyan Grade 5 learner, but we have no source or homework count. A native Kiswahili teacher should say whether children really make this slip."
+  }
  },
  "KISW.G5.SARUFI.T5_NGELI_YA_U_ZI.U_ZI.M_UZI_PL_MA": {
   "skill": "KISW.G5.SARUFI.T5_NGELI_YA_U_ZI.U_ZI",
@@ -1002,7 +1266,11 @@
   "help": "Ask whether you hear \"mi\" in a plural of ukuta in the house.",
   "feedback": "Katika ngeli ya U-ZI, tunaondoa u- au kubadili herufi za mwanzo: ukuta - kuta, wimbo - nyimbo, ubao - mbao.",
   "source": "common learner error; to confirm by a native Kiswahili teacher",
-  "status": "draft"
+  "status": "draft",
+  "review": {
+   "mark": "plausible, to confirm by a teacher",
+   "note": "Own judgement: believable for a Kenyan Grade 5 learner, but we have no source or homework count. A native Kiswahili teacher should say whether children really make this slip."
+  }
  },
  "KISW.G5.SARUFI.T5_NGELI_YA_U_ZI.U_ZI.M_UZI_AGR_I": {
   "skill": "KISW.G5.SARUFI.T5_NGELI_YA_U_ZI.U_ZI",
@@ -1017,7 +1285,11 @@
   "help": "Does the plural noun have mi- (like miti) or not?",
   "feedback": "Wingi wa nomino za U-ZI hupatana na zi-: kuta zimeanguka. Mi- ni ya ngeli nyingine, kama miti.",
   "source": "common learner error; to confirm by a native Kiswahili teacher",
-  "status": "draft"
+  "status": "draft",
+  "review": {
+   "mark": "plausible, to confirm by a teacher",
+   "note": "Own judgement: believable for a Kenyan Grade 5 learner, but we have no source or homework count. A native Kiswahili teacher should say whether children really make this slip."
+  }
  },
  "KISW.G5.SARUFI.T5_NGELI_YA_U_ZI.U_ZI.M_UZI_AGR_SG": {
   "skill": "KISW.G5.SARUFI.T5_NGELI_YA_U_ZI.U_ZI",
@@ -1032,7 +1304,11 @@
   "help": "Look at the first letter of the noun: it often gives the prefix.",
   "feedback": "Umoja wa ngeli ya U-ZI hupatana na u-: ukuta umeanguka.",
   "source": "common learner error; to confirm by a native Kiswahili teacher",
-  "status": "draft"
+  "status": "draft",
+  "review": {
+   "mark": "plausible, to confirm by a teacher",
+   "note": "Own judgement: believable for a Kenyan Grade 5 learner, but we have no source or homework count. A native Kiswahili teacher should say whether children really make this slip."
+  }
  },
  "KISW.G5.SARUFI.T6_NGELI_YA_U_YA.U_YA.M_UYA_AGR_ZI": {
   "skill": "KISW.G5.SARUFI.T6_NGELI_YA_U_YA.U_YA",
@@ -1047,7 +1323,11 @@
   "help": "Does the plural noun begin with ma-?",
   "feedback": "Nomino za U-YA zina wingi wenye ma-, na zinapatana na ya-: manyoya yameanguka.",
   "source": "common learner error; to confirm by a native Kiswahili teacher",
-  "status": "draft"
+  "status": "draft",
+  "review": {
+   "mark": "plausible, to confirm by a teacher",
+   "note": "Own judgement: believable for a Kenyan Grade 5 learner, but we have no source or homework count. A native Kiswahili teacher should say whether children really make this slip."
+  }
  },
  "KISW.G5.SARUFI.T6_NGELI_YA_U_YA.U_YA.M_UYA_PL_FORM": {
   "skill": "KISW.G5.SARUFI.T6_NGELI_YA_U_YA.U_YA",
@@ -1062,7 +1342,11 @@
   "help": "Say \"manyoya mengi\", not \"minyoya\".",
   "feedback": "Wingi wa nomino za U-YA huundwa kwa ma-: unyoya - manyoya, ugonjwa - magonjwa, uchungu - machungu.",
   "source": "common learner error; to confirm by a native Kiswahili teacher",
-  "status": "draft"
+  "status": "draft",
+  "review": {
+   "mark": "plausible, to confirm by a teacher",
+   "note": "Own judgement: believable for a Kenyan Grade 5 learner, but we have no source or homework count. A native Kiswahili teacher should say whether children really make this slip."
+  }
  },
  "KISW.G5.SARUFI.T6_NGELI_YA_U_YA.U_YA.M_UYA_SG_WRONG": {
   "skill": "KISW.G5.SARUFI.T6_NGELI_YA_U_YA.U_YA",
@@ -1077,7 +1361,11 @@
   "help": "One illness: u- as in ugonjwa.",
   "feedback": "Umoja wa ngeli ya U-YA hupatana na u-: ugonjwa umepona.",
   "source": "common learner error; to confirm by a native Kiswahili teacher",
-  "status": "draft"
+  "status": "draft",
+  "review": {
+   "mark": "plausible, to confirm by a teacher",
+   "note": "Own judgement: believable for a Kenyan Grade 5 learner, but we have no source or homework count. A native Kiswahili teacher should say whether children really make this slip."
+  }
  },
  "KISW.G5.KUSIKI.T7_NAHAU.NAHAU.M_NAH_LITERAL": {
   "skill": "KISW.G5.KUSIKI.T7_NAHAU.NAHAU",
@@ -1092,7 +1380,11 @@
   "help": "Ask whether anyone really cuts tamaa.",
   "feedback": "Nahau ina maana tofauti na maneno yake. \"Kukata tamaa\" ni kuacha kuwa na matumaini.",
   "source": "common learner error; to confirm by a native Kiswahili teacher",
-  "status": "draft"
+  "status": "draft",
+  "review": {
+   "mark": "common in the literature",
+   "source": "Cacciari and Levorato (1989), How children understand idioms in discourse, Journal of Child Language 16: idioms are read word for word."
+  }
  },
  "KISW.G5.KUSIKI.T7_NAHAU.NAHAU.M_NAH_WRONG_MEANING": {
   "skill": "KISW.G5.KUSIKI.T7_NAHAU.NAHAU",
@@ -1107,7 +1399,11 @@
   "help": "Ask what experience chumvi stands for.",
   "feedback": "Kila nahau ina maana yake. \"Kula chumvi\" ni kuwa na uzoefu wa miaka mingi.",
   "source": "common learner error; to confirm by a native Kiswahili teacher",
-  "status": "draft"
+  "status": "draft",
+  "review": {
+   "mark": "plausible, to confirm by a teacher",
+   "note": "Own judgement: believable for a Kenyan Grade 5 learner, but we have no source or homework count. A native Kiswahili teacher should say whether children really make this slip."
+  }
  },
  "KISW.G5.KUSIKI.T7_NAHAU.NAHAU.M_NAH_WRONG_WORD": {
   "skill": "KISW.G5.KUSIKI.T7_NAHAU.NAHAU",
@@ -1122,7 +1418,11 @@
   "help": "Recite the whole nahau.",
   "feedback": "Nahau hazibadiliki: kukata tamaa, kupiga moyo konde. Neno moja likibadilika, maana hupotea.",
   "source": "common learner error; to confirm by a native Kiswahili teacher",
-  "status": "draft"
+  "status": "draft",
+  "review": {
+   "mark": "plausible, to confirm by a teacher",
+   "note": "Own judgement: believable for a Kenyan Grade 5 learner, but we have no source or homework count. A native Kiswahili teacher should say whether children really make this slip."
+  }
  },
  "KISW.G5.SARUFI.T7_NGELI_YA_KU_KU.KU_KU.M_KUKU_AGR_A": {
   "skill": "KISW.G5.SARUFI.T7_NGELI_YA_KU_KU.KU_KU",
@@ -1137,7 +1437,11 @@
   "help": "The first word is kusoma, which begins with ku-.",
   "feedback": "Nomino za KU-KU hupatana na ku-: kusoma kunapendeza. A- ni ya mtu mmoja.",
   "source": "common learner error; to confirm by a native Kiswahili teacher",
-  "status": "draft"
+  "status": "draft",
+  "review": {
+   "mark": "plausible, to confirm by a teacher",
+   "note": "Own judgement: believable for a Kenyan Grade 5 learner, but we have no source or homework count. A native Kiswahili teacher should say whether children really make this slip."
+  }
  },
  "KISW.G5.SARUFI.T7_NGELI_YA_KU_KU.KU_KU.M_KUKU_AGR_U": {
   "skill": "KISW.G5.SARUFI.T7_NGELI_YA_KU_KU.KU_KU",
@@ -1152,7 +1456,11 @@
   "help": "Say the sentence with the prefix that is the same as the noun starts with.",
   "feedback": "Kitenzi-jina hupatana na ku-, kama kinavyoanza: kucheza kunafurahisha.",
   "source": "common learner error; to confirm by a native Kiswahili teacher",
-  "status": "draft"
+  "status": "draft",
+  "review": {
+   "mark": "plausible, to confirm by a teacher",
+   "note": "Own judgement: believable for a Kenyan Grade 5 learner, but we have no source or homework count. A native Kiswahili teacher should say whether children really make this slip."
+  }
  },
  "KISW.G5.SARUFI.T7_NGELI_YA_KU_KU.KU_KU.M_KUKU_PLURAL": {
   "skill": "KISW.G5.SARUFI.T7_NGELI_YA_KU_KU.KU_KU",
@@ -1167,7 +1475,11 @@
   "help": "Ask whether you can say \"makusoma\".",
   "feedback": "Nomino za KU-KU hazina wingi tofauti. Kusoma hubaki kusoma.",
   "source": "common learner error; to confirm by a native Kiswahili teacher",
-  "status": "draft"
+  "status": "draft",
+  "review": {
+   "mark": "plausible, to confirm by a teacher",
+   "note": "Own judgement: believable for a Kenyan Grade 5 learner, but we have no source or homework count. A native Kiswahili teacher should say whether children really make this slip."
+  }
  },
  "KISW.G5.KUSIKI.T8_VISAWE.VISAWE.M_VIS_OPPOSITE": {
   "skill": "KISW.G5.KUSIKI.T8_VISAWE.VISAWE",
@@ -1182,7 +1494,11 @@
   "help": "Ask whether the two words mean the same.",
   "feedback": "Visawe ni maneno yenye maana sawa. Furaha na huzuni ni vinyume, si visawe.",
   "source": "common learner error; to confirm by a native Kiswahili teacher",
-  "status": "draft"
+  "status": "draft",
+  "review": {
+   "mark": "plausible, to confirm by a teacher",
+   "note": "Own judgement: believable for a Kenyan Grade 5 learner, but we have no source or homework count. A native Kiswahili teacher should say whether children really make this slip."
+  }
  },
  "KISW.G5.KUSIKI.T8_VISAWE.VISAWE.M_VIS_RELATED": {
   "skill": "KISW.G5.KUSIKI.T8_VISAWE.VISAWE",
@@ -1197,7 +1513,11 @@
   "help": "Could you swap the two words in a sentence and keep the same meaning?",
   "feedback": "Neno linalohusiana na jingine si lazima liwe na maana sawa nalo. Kisawe cha huzuni ni simanzi.",
   "source": "common learner error; to confirm by a native Kiswahili teacher",
-  "status": "draft"
+  "status": "draft",
+  "review": {
+   "mark": "plausible, to confirm by a teacher",
+   "note": "Own judgement: believable for a Kenyan Grade 5 learner, but we have no source or homework count. A native Kiswahili teacher should say whether children really make this slip."
+  }
  },
  "KISW.G5.KUSIKI.T8_VISAWE.VISAWE.M_VIS_LOOKALIKE": {
   "skill": "KISW.G5.KUSIKI.T8_VISAWE.VISAWE",
@@ -1212,7 +1532,11 @@
   "help": "Say what each word means.",
   "feedback": "Maneno yanaweza kuanza kwa herufi zilezile na yasiwe na maana sawa. Kisawe cha haraka ni upesi.",
   "source": "common learner error; to confirm by a native Kiswahili teacher",
-  "status": "draft"
+  "status": "draft",
+  "review": {
+   "mark": "plausible, to confirm by a teacher",
+   "note": "Own judgement: believable for a Kenyan Grade 5 learner, but we have no source or homework count. A native Kiswahili teacher should say whether children really make this slip."
+  }
  },
  "KISW.G5.KUSOMA.T8_KUSOMA_KWA_UFAHAMU.IGIZO.M_IGI_STAGE_AS_SPEECH": {
   "skill": "KISW.G5.KUSOMA.T8_KUSOMA_KWA_UFAHAMU.IGIZO",
@@ -1227,7 +1551,11 @@
   "help": "Brackets tell the actor what to do, not what to say.",
   "feedback": "Maneno yaliyo kwenye mabano ni maelekezo ya kitendo, si maneno ya mhusika. Hayasomwi kama mazungumzo.",
   "source": "common learner error; to confirm by a native Kiswahili teacher",
-  "status": "draft"
+  "status": "draft",
+  "review": {
+   "mark": "plausible, to confirm by a teacher",
+   "note": "Own judgement: believable for a Kenyan Grade 5 learner, but we have no source or homework count. A native Kiswahili teacher should say whether children really make this slip."
+  }
  },
  "KISW.G5.KUSOMA.T8_KUSOMA_KWA_UFAHAMU.IGIZO.M_IGI_STORY": {
   "skill": "KISW.G5.KUSOMA.T8_KUSOMA_KWA_UFAHAMU.IGIZO",
@@ -1242,7 +1570,11 @@
   "help": "Look for the speaker names with a colon.",
   "feedback": "Igizo huonyesha jina la mhusika, nukta mbili, kisha maneno anayosema. Hadithi huelezwa na msimulizi.",
   "source": "common learner error; to confirm by a native Kiswahili teacher",
-  "status": "draft"
+  "status": "draft",
+  "review": {
+   "mark": "doubtful",
+   "why": "A trap option: a Grade 5 child who has met the term would not say this."
+  }
  },
  "KISW.G5.KUSOMA.T8_KUSOMA_KWA_UFAHAMU.IGIZO.M_IGI_WRONG_SPEAKER": {
   "skill": "KISW.G5.KUSOMA.T8_KUSOMA_KWA_UFAHAMU.IGIZO",
@@ -1257,7 +1589,11 @@
   "help": "Find the line and read the name before it.",
   "feedback": "Jina lililo mbele ya nukta mbili ndilo la mtu anayesema maneno yaliyofuata.",
   "source": "common learner error; to confirm by a native Kiswahili teacher",
-  "status": "draft"
+  "status": "draft",
+  "review": {
+   "mark": "doubtful",
+   "why": "A trap option: a Grade 5 child who has met the term would not say this."
+  }
  },
  "KISW.G5.KUSOMA.T8_KUSOMA_KWA_UFAHAMU.IGIZO.M_IGI_DETAIL": {
   "skill": "KISW.G5.KUSOMA.T8_KUSOMA_KWA_UFAHAMU.IGIZO",
@@ -1272,7 +1608,11 @@
   "help": "Find the line where it is said.",
   "feedback": "Rudi kwenye igizo na utafute mstari unaotaja jibu.",
   "source": "common learner error; to confirm by a native Kiswahili teacher",
-  "status": "draft"
+  "status": "draft",
+  "review": {
+   "mark": "doubtful",
+   "why": "A trap option: a Grade 5 child who has met the term would not say this."
+  }
  },
  "KISW.G5.KUSOMA.T8_KUSOMA_KWA_UFAHAMU.IGIZO.M_IGI_VOCAB": {
   "skill": "KISW.G5.KUSOMA.T8_KUSOMA_KWA_UFAHAMU.IGIZO",
@@ -1287,7 +1627,11 @@
   "help": "Read the line where the word is used and think who goes with whom.",
   "feedback": "Maana ya neno hutokana na mstari lilimotumika katika igizo. Soma mstari huo tena.",
   "source": "common learner error; to confirm by a native Kiswahili teacher",
-  "status": "draft"
+  "status": "draft",
+  "review": {
+   "mark": "doubtful",
+   "why": "A trap option: a Grade 5 child who has met the term would not say this."
+  }
  },
  "KISW.G5.SARUFI.T8_MNYAMBULIKO_WA_VITEN.MNYAMBULIKO.M_MNY_MIX_FORMS": {
   "skill": "KISW.G5.SARUFI.T8_MNYAMBULIKO_WA_VITEN.MNYAMBULIKO",
@@ -1302,7 +1646,11 @@
   "help": "Ask: is someone helped, or can the thing simply be done?",
   "feedback": "Kutendeka huonyesha kitu kinaweza kutendwa au kinatendeka chenyewe, kama kuvunjika. Kutendewa huonyesha kitendo kimefanyiwa mtu, kama kupikiwa.",
   "source": "common learner error; to confirm by a native Kiswahili teacher",
-  "status": "draft"
+  "status": "draft",
+  "review": {
+   "mark": "plausible, to confirm by a teacher",
+   "note": "Own judgement: believable for a Kenyan Grade 5 learner, but we have no source or homework count. A native Kiswahili teacher should say whether children really make this slip."
+  }
  },
  "KISW.G5.SARUFI.T8_MNYAMBULIKO_WA_VITEN.MNYAMBULIKO.M_MNY_TENDANA_ONE": {
   "skill": "KISW.G5.SARUFI.T8_MNYAMBULIKO_WA_VITEN.MNYAMBULIKO",
@@ -1317,7 +1665,11 @@
   "help": "Ask whether they do it to each other.",
   "feedback": "Kutendana huonyesha watu wawili au zaidi wanafanyiana kitendo kimoja: kusalimiana, kupendana, kusaidiana.",
   "source": "common learner error; to confirm by a native Kiswahili teacher",
-  "status": "draft"
+  "status": "draft",
+  "review": {
+   "mark": "plausible, to confirm by a teacher",
+   "note": "Own judgement: believable for a Kenyan Grade 5 learner, but we have no source or homework count. A native Kiswahili teacher should say whether children really make this slip."
+  }
  },
  "KISW.G5.SARUFI.T8_MNYAMBULIKO_WA_VITEN.MNYAMBULIKO.M_MNY_NO_CHANGE": {
   "skill": "KISW.G5.SARUFI.T8_MNYAMBULIKO_WA_VITEN.MNYAMBULIKO",
@@ -1332,7 +1684,11 @@
   "help": "Ask whom the action is done for or by.",
   "feedback": "Hapa kitenzi lazima kibadilike kwa kiambishi ili kuonyesha kinachotokea: mama alipikiwa chakula.",
   "source": "common learner error; to confirm by a native Kiswahili teacher",
-  "status": "draft"
+  "status": "draft",
+  "review": {
+   "mark": "plausible, to confirm by a teacher",
+   "note": "Own judgement: believable for a Kenyan Grade 5 learner, but we have no source or homework count. A native Kiswahili teacher should say whether children really make this slip."
+  }
  },
  "KISW.G5.SARUFI.T9_VINYUME_VYA_VITENZI.VINYUME.M_VIN_NEGATE": {
   "skill": "KISW.G5.SARUFI.T9_VINYUME_VYA_VITENZI.VINYUME",
@@ -1347,7 +1703,11 @@
   "help": "Is there one word that means the reverse action?",
   "feedback": "Kinyume cha kitenzi ni kitenzi kingine chenye maana ya kutengua kitendo, kama kufunga - kufungua. Si \"kutofunga\".",
   "source": "common learner error; to confirm by a native Kiswahili teacher",
-  "status": "draft"
+  "status": "draft",
+  "review": {
+   "mark": "plausible, to confirm by a teacher",
+   "note": "Own judgement: believable for a Kenyan Grade 5 learner, but we have no source or homework count. A native Kiswahili teacher should say whether children really make this slip."
+  }
  },
  "KISW.G5.SARUFI.T9_VINYUME_VYA_VITENZI.VINYUME.M_VIN_WRONG_SUFFIX": {
   "skill": "KISW.G5.SARUFI.T9_VINYUME_VYA_VITENZI.VINYUME",
@@ -1362,7 +1722,11 @@
   "help": "Say the word aloud: does it exist?",
   "feedback": "Vitenzi vingine vinabadilika kwa njia tofauti. Kinyume cha kuvaa ni kuvua.",
   "source": "common learner error; to confirm by a native Kiswahili teacher",
-  "status": "draft"
+  "status": "draft",
+  "review": {
+   "mark": "plausible, to confirm by a teacher",
+   "note": "Own judgement: believable for a Kenyan Grade 5 learner, but we have no source or homework count. A native Kiswahili teacher should say whether children really make this slip."
+  }
  },
  "KISW.G5.SARUFI.T9_VINYUME_VYA_VITENZI.VINYUME.M_VIN_SYNONYM": {
   "skill": "KISW.G5.SARUFI.T9_VINYUME_VYA_VITENZI.VINYUME",
@@ -1377,7 +1741,11 @@
   "help": "Does the word mean the same, or the other way round?",
   "feedback": "Kinyume kina maana ya upande wa pili. Kuingia na kutoka ni vinyume.",
   "source": "common learner error; to confirm by a native Kiswahili teacher",
-  "status": "draft"
+  "status": "draft",
+  "review": {
+   "mark": "plausible, to confirm by a teacher",
+   "note": "Own judgement: believable for a Kenyan Grade 5 learner, but we have no source or homework count. A native Kiswahili teacher should say whether children really make this slip."
+  }
  },
  "KISW.G5.KUSIKI.T10_TASHBIHI.TASHBIHI.M_TASH_WRONG_ANIMAL": {
   "skill": "KISW.G5.KUSIKI.T10_TASHBIHI.TASHBIHI",
@@ -1392,7 +1760,11 @@
   "help": "Which animal do we say is fierce?",
   "feedback": "Tashbihi hutumia ulinganisho wa kawaida: mkali kama simba, mwoga kama sungura, mpole kama kondoo.",
   "source": "common learner error; to confirm by a native Kiswahili teacher",
-  "status": "draft"
+  "status": "draft",
+  "review": {
+   "mark": "plausible, to confirm by a teacher",
+   "note": "Own judgement: believable for a Kenyan Grade 5 learner, but we have no source or homework count. A native Kiswahili teacher should say whether children really make this slip."
+  }
  },
  "KISW.G5.KUSIKI.T10_TASHBIHI.TASHBIHI.M_TASH_NO_KAMA": {
   "skill": "KISW.G5.KUSIKI.T10_TASHBIHI.TASHBIHI",
@@ -1407,7 +1779,11 @@
   "help": "A simile has the word kama or mithili ya.",
   "feedback": "Tashbihi hulinganisha kwa kutumia kama au mithili ya: mkali kama simba. Kusema \"yeye ni simba\" ni sitiari.",
   "source": "common learner error; to confirm by a native Kiswahili teacher",
-  "status": "draft"
+  "status": "draft",
+  "review": {
+   "mark": "plausible, to confirm by a teacher",
+   "note": "Own judgement: believable for a Kenyan Grade 5 learner, but we have no source or homework count. A native Kiswahili teacher should say whether children really make this slip."
+  }
  },
  "KISW.G5.KUSIKI.T10_TASHBIHI.TASHBIHI.M_TASH_LITERAL": {
   "skill": "KISW.G5.KUSIKI.T10_TASHBIHI.TASHBIHI",
@@ -1422,7 +1798,11 @@
   "help": "Ask what behaviour the animal stands for.",
   "feedback": "Tashbihi inaelezea tabia kwa kulinganisha. \"Mwoga kama sungura\" ina maana mtu ana hofu sana.",
   "source": "common learner error; to confirm by a native Kiswahili teacher",
-  "status": "draft"
+  "status": "draft",
+  "review": {
+   "mark": "doubtful",
+   "why": "A trap option: a Grade 5 child who has met the term would not say this."
+  }
  },
  "KISW.G5.SARUFI.T10_NYAKATI_NA_HALI.MAZOEA_TIMILIFU.M_NYK_HU_SUBJECT": {
   "skill": "KISW.G5.SARUFI.T10_NYAKATI_NA_HALI.MAZOEA_TIMILIFU",
@@ -1437,7 +1817,11 @@
   "help": "Say \"Juma hunywa maji\" aloud: does hu- already stand for the person?",
   "feedback": "Katika hali ya mazoea, hu- hubeba wakati na hakuna kiambishi cha mtu: Juma hunywa maji.",
   "source": "English or mother-tongue influence on Kiswahili (to confirm by a native Kiswahili teacher)",
-  "status": "draft"
+  "status": "draft",
+  "review": {
+   "mark": "plausible, to confirm by a teacher",
+   "note": "Own judgement: believable for a Kenyan Grade 5 learner, but we have no source or homework count. A native Kiswahili teacher should say whether children really make this slip."
+  }
  },
  "KISW.G5.SARUFI.T10_NYAKATI_NA_HALI.MAZOEA_TIMILIFU.M_NYK_ME_PAST": {
   "skill": "KISW.G5.SARUFI.T10_NYAKATI_NA_HALI.MAZOEA_TIMILIFU",
@@ -1452,7 +1836,11 @@
   "help": "Ask whether the action is finished now, with a result you can see.",
   "feedback": "-me- huonyesha kitendo kimekamilika na matokeo yake yapo sasa. -li- huonyesha kitendo cha zamani kilichopita.",
   "source": "common learner error; to confirm by a native Kiswahili teacher",
-  "status": "draft"
+  "status": "draft",
+  "review": {
+   "mark": "plausible, to confirm by a teacher",
+   "note": "Own judgement: believable for a Kenyan Grade 5 learner, but we have no source or homework count. A native Kiswahili teacher should say whether children really make this slip."
+  }
  },
  "KISW.G5.SARUFI.T10_NYAKATI_NA_HALI.MAZOEA_TIMILIFU.M_NYK_NA_HABIT": {
   "skill": "KISW.G5.SARUFI.T10_NYAKATI_NA_HALI.MAZOEA_TIMILIFU",
@@ -1467,7 +1855,11 @@
   "help": "Does it happen every time, or only now?",
   "feedback": "Kitendo kinachofanyika kila mara huandikwa kwa hu-: Wanjiru hufua nguo.",
   "source": "common learner error; to confirm by a native Kiswahili teacher",
-  "status": "draft"
+  "status": "draft",
+  "review": {
+   "mark": "plausible, to confirm by a teacher",
+   "note": "Own judgement: believable for a Kenyan Grade 5 learner, but we have no source or homework count. A native Kiswahili teacher should say whether children really make this slip."
+  }
  },
  "KISW.G5.SARUFI.T11_UKANUSHAJI.UKANUSHAJI.M_NEG_SI_ONLY": {
   "skill": "KISW.G5.SARUFI.T11_UKANUSHAJI.UKANUSHAJI",
@@ -1482,7 +1874,11 @@
   "help": "Ask whether the verb itself changes its beginning.",
   "feedback": "Kitenzi kinakanushwa kwa kubadili kiambishi cha mtu na wakati ndani yake, si kwa kuweka \"si\" mbele. Ninasoma - sisomi.",
   "source": "English or mother-tongue influence on Kiswahili (to confirm by a native Kiswahili teacher)",
-  "status": "draft"
+  "status": "draft",
+  "review": {
+   "mark": "plausible, to confirm by a teacher",
+   "note": "Own judgement: believable for a Kenyan Grade 5 learner, but we have no source or homework count. A native Kiswahili teacher should say whether children really make this slip."
+  }
  },
  "KISW.G5.SARUFI.T11_UKANUSHAJI.UKANUSHAJI.M_NEG_KEEP_TENSE": {
   "skill": "KISW.G5.SARUFI.T11_UKANUSHAJI.UKANUSHAJI",
@@ -1497,7 +1893,11 @@
   "help": "Ask which letters replace -me- in the negative.",
   "feedback": "Katika ukanusho, -me- hubadilika kuwa -ja-: amesoma - hajasoma. -li- hubadilika kuwa -ku-: alisoma - hakusoma.",
   "source": "common learner error; to confirm by a native Kiswahili teacher",
-  "status": "draft"
+  "status": "draft",
+  "review": {
+   "mark": "plausible, to confirm by a teacher",
+   "note": "Own judgement: believable for a Kenyan Grade 5 learner, but we have no source or homework count. A native Kiswahili teacher should say whether children really make this slip."
+  }
  },
  "KISW.G5.SARUFI.T11_UKANUSHAJI.UKANUSHAJI.M_NEG_PERSON": {
   "skill": "KISW.G5.SARUFI.T11_UKANUSHAJI.UKANUSHAJI",
@@ -1512,7 +1912,11 @@
   "help": "Ask what the negative of ninasoma starts with (si-), and of tutasoma (hatu-).",
   "feedback": "Viambishi vya nafsi hubadilika katika ukanusho: ni- - si-, u- - hu-, a- - ha-, tu- - hatu-, m- - ham-, wa- - hawa-.",
   "source": "common learner error; to confirm by a native Kiswahili teacher",
-  "status": "draft"
+  "status": "draft",
+  "review": {
+   "mark": "plausible, to confirm by a teacher",
+   "note": "Own judgement: believable for a Kenyan Grade 5 learner, but we have no source or homework count. A native Kiswahili teacher should say whether children really make this slip."
+  }
  },
  "KISW.G5.SARUFI.T11_UKANUSHAJI.UKANUSHAJI.M_NEG_KEEP_NA": {
   "skill": "KISW.G5.SARUFI.T11_UKANUSHAJI.UKANUSHAJI",
@@ -1527,7 +1931,11 @@
   "help": "Say the negative aloud: does it have -na-?",
   "feedback": "Wakati uliopo hukanushwa bila -na-, na kitenzi humalizika kwa -i: anasoma - hasomi.",
   "source": "common learner error; to confirm by a native Kiswahili teacher",
-  "status": "draft"
+  "status": "draft",
+  "review": {
+   "mark": "plausible, to confirm by a teacher",
+   "note": "Own judgement: believable for a Kenyan Grade 5 learner, but we have no source or homework count. A native Kiswahili teacher should say whether children really make this slip."
+  }
  },
  "KISW.G5.SARUFI.T11_UKANUSHAJI.UKANUSHAJI.M_NEG_WRONG_TENSE": {
   "skill": "KISW.G5.SARUFI.T11_UKANUSHAJI.UKANUSHAJI",
@@ -1542,7 +1950,11 @@
   "help": "Ask which tense the positive sentence is in, and which negative marks it.",
   "feedback": "Ukanusho wa kila wakati una kiambishi chake: -na- hukanushwa bila kiambishi (hasomi), -me- huwa -ja- (hajasoma), -li- huwa -ku- (hakusoma), -ta- hubaki -ta- (hatasoma).",
   "source": "common learner error; to confirm by a native Kiswahili teacher",
-  "status": "draft"
+  "status": "draft",
+  "review": {
+   "mark": "plausible, to confirm by a teacher",
+   "note": "Own judgement: believable for a Kenyan Grade 5 learner, but we have no source or homework count. A native Kiswahili teacher should say whether children really make this slip."
+  }
  },
  "KISW.G5.SARUFI.T11_UKUBWA_NA_UDOGO_WA_N.UKUBWA_M.M_UKM_SWAP": {
   "skill": "KISW.G5.SARUFI.T11_UKUBWA_NA_UDOGO_WA_N.UKUBWA_M",
@@ -1557,7 +1969,11 @@
   "help": "Ki- is the prefix of kijiji, kitoto, kijiko: small things.",
   "feedback": "Ki- huonyesha udogo (kitoto, kijiji) na ji- huonyesha ukubwa (jitoto, jiji).",
   "source": "common learner error; to confirm by a native Kiswahili teacher",
-  "status": "draft"
+  "status": "draft",
+  "review": {
+   "mark": "plausible, to confirm by a teacher",
+   "note": "Own judgement: believable for a Kenyan Grade 5 learner, but we have no source or homework count. A native Kiswahili teacher should say whether children really make this slip."
+  }
  },
  "KISW.G5.SARUFI.T11_UKUBWA_NA_UDOGO_WA_N.UKUBWA_M.M_UKM_KEEP_M": {
   "skill": "KISW.G5.SARUFI.T11_UKUBWA_NA_UDOGO_WA_N.UKUBWA_M",
@@ -1572,7 +1988,11 @@
   "help": "Take away the m- of mtoto, then add ji-.",
   "feedback": "M- ya mwanzo huondolewa kabla ya kuongeza kiambishi cha ukubwa au udogo: mtoto - jitoto, kitoto.",
   "source": "common learner error; to confirm by a native Kiswahili teacher",
-  "status": "draft"
+  "status": "draft",
+  "review": {
+   "mark": "plausible, to confirm by a teacher",
+   "note": "Own judgement: believable for a Kenyan Grade 5 learner, but we have no source or homework count. A native Kiswahili teacher should say whether children really make this slip."
+  }
  },
  "KISW.G5.SARUFI.T11_UKUBWA_NA_UDOGO_WA_N.UKUBWA_M.M_UKM_ONE_SYLLABLE": {
   "skill": "KISW.G5.SARUFI.T11_UKUBWA_NA_UDOGO_WA_N.UKUBWA_M",
@@ -1587,7 +2007,11 @@
   "help": "Say the word kijiji aloud: where is the ji?",
   "feedback": "Nomino zenye shina la silabi moja zinaongeza ji- kabla ya ki-: mji - kijiji, mto - kijito, mti - kijiti.",
   "source": "common learner error; to confirm by a native Kiswahili teacher",
-  "status": "draft"
+  "status": "draft",
+  "review": {
+   "mark": "plausible, to confirm by a teacher",
+   "note": "Own judgement: believable for a Kenyan Grade 5 learner, but we have no source or homework count. A native Kiswahili teacher should say whether children really make this slip."
+  }
  },
  "KISW.G5.SARUFI.T11_UKUBWA_NA_UDOGO_WA_N_2.UKUBWA_N.M_UKN_KEEP_N": {
   "skill": "KISW.G5.SARUFI.T11_UKUBWA_NA_UDOGO_WA_N_2.UKUBWA_N",
@@ -1602,7 +2026,11 @@
   "help": "Say \"jumba la ghorofa\", not \"jinyumba\".",
   "feedback": "Nomino za n- hubadilika kwa kuondoa sauti ya mwanzo: nyumba - jumba, kijumba. Baadhi huongeza ji- (mbwa - jibwa).",
   "source": "common learner error; to confirm by a native Kiswahili teacher",
-  "status": "draft"
+  "status": "draft",
+  "review": {
+   "mark": "plausible, to confirm by a teacher",
+   "note": "Own judgement: believable for a Kenyan Grade 5 learner, but we have no source or homework count. A native Kiswahili teacher should say whether children really make this slip."
+  }
  },
  "KISW.G5.SARUFI.T11_UKUBWA_NA_UDOGO_WA_N_2.UKUBWA_N.M_UKN_SWAP": {
   "skill": "KISW.G5.SARUFI.T11_UKUBWA_NA_UDOGO_WA_N_2.UKUBWA_N",
@@ -1617,6 +2045,10 @@
   "help": "Ki- is small: kijumba is a hut.",
   "feedback": "Ki- huonyesha udogo: kijumba. Ukubwa huonyeshwa na ji- au umbo la pekee kama jumba.",
   "source": "common learner error; to confirm by a native Kiswahili teacher",
-  "status": "draft"
+  "status": "draft",
+  "review": {
+   "mark": "plausible, to confirm by a teacher",
+   "note": "Own judgement: believable for a Kenyan Grade 5 learner, but we have no source or homework count. A native Kiswahili teacher should say whether children really make this slip."
+  }
  }
 }
