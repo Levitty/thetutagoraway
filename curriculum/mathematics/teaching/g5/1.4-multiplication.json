@@ -2,156 +2,549 @@
   "sub_strand": "MATH.G5.NUMBER.MULTIPLICATION",
   "title": "Multiplication",
   "status": "draft: written 13 Nov 2026 from research round 3; shorter entries; not yet checked by a Kenyan maths teacher; not loaded by the live tutor",
-  "sources": [49, 52, 65, 73],
+  "sources": [
+    49,
+    52,
+    65,
+    73
+  ],
   "notes": "Many Kenyan Grade 5 pupils are still unsure of times-table facts (source 65), so the floor check matters here. The area picture (a rectangle split into hundreds, tens and ones) explains why the column method works and why the tens row needs a zero.",
   "skills": [
     {
       "skill": "MATH.G5.NUMBER.MULTIPLICATION.MULT_3D_BY_1D",
       "key_step": "The child multiplies each digit by the 1-digit number, starting from the ones, and adds the carried digit after multiplying the next column, including across a zero.",
-      "floor": {"prerequisite": "Knows multiplication facts to 9 x 9.", "question": "8 x 4 =", "answer": "32"},
-      "representations": ["crates of milk packets", "an area rectangle split into hundreds, tens, ones", "column multiplication"],
-      "steps": ["Estimate.", "Split the number into hundreds, tens and ones on an area picture.", "Multiply each part; see the parts add up.", "Column method: multiply, then add the carry.", "Compare with the estimate."],
-      "contexts": ["a dairy in Nyandarua packing milk", "bags of maize for a school", "seats in matatus"],
+      "floor": {
+        "prerequisite": "Knows multiplication facts to 9 x 9.",
+        "question": "8 x 4 =",
+        "answer": "32"
+      },
+      "representations": [
+        "crates of milk packets",
+        "an area rectangle split into hundreds, tens, ones",
+        "column multiplication"
+      ],
+      "steps": [
+        "Estimate.",
+        "Split the number into hundreds, tens and ones on an area picture.",
+        "Multiply each part; see the parts add up.",
+        "Column method: multiply, then add the carry.",
+        "Compare with the estimate."
+      ],
+      "contexts": [
+        "a dairy in Nyandarua packing milk",
+        "bags of maize for a school",
+        "seats in matatus"
+      ],
       "board": [
-        {"beat": "draw", "do": "Draw a rectangle 4 tall and split along its length into 200, 60 and 8."},
-        {"beat": "predict", "do": "Ask for an estimate of 268 x 4.", "say": "About how much is 268 times 4?"},
-        {"beat": "child_draws", "do": "Child writes the product inside each part."},
-        {"beat": "pause", "do": "Wait for the child to add the parts."}
+        {
+          "beat": "draw",
+          "do": "Draw a rectangle 4 tall and split along its length into 200, 60 and 8."
+        },
+        {
+          "beat": "predict",
+          "do": "Ask for an estimate of 268 x 4.",
+          "say": "About how much is 268 times 4?"
+        },
+        {
+          "beat": "child_draws",
+          "do": "Child writes the product inside each part."
+        },
+        {
+          "beat": "pause",
+          "do": "Wait for the child to add the parts."
+        }
       ],
       "misconceptions": [
-        {"code": "MATH.G5.NUMBER.MULTIPLICATION.MULT_3D_BY_1D.M_ADD_CARRY_BEFORE_MULTIPLY", "listen_for": ["I added the carry first"], "ask": "Was the carried ten part of the 6 tens, or made by the ones?", "repair": "Multiply the tens first, then add the carried ten: the area picture shows the parts separately."},
-        {"code": "MATH.G5.NUMBER.MULTIPLICATION.MULT_3D_BY_1D.M_ZERO_DIGIT_SKIPPED", "listen_for": ["zero is nothing so skip"], "ask": "In 305 x 6, where does the carried 3 from the ones go?", "repair": "0 x 6 is 0, but the carry still lands in that column."}
+        {
+          "code": "MATH.G5.NUMBER.MULTIPLICATION.MULT_3D_BY_1D.M_ADD_CARRY_BEFORE_MULTIPLY",
+          "listen_for": [
+            "I added the carry first"
+          ],
+          "ask": "Was the carried ten part of the 6 tens, or made by the ones?",
+          "repair": "Multiply the tens first, then add the carried ten: the area picture shows the parts separately."
+        },
+        {
+          "code": "MATH.G5.NUMBER.MULTIPLICATION.MULT_3D_BY_1D.M_ZERO_DIGIT_SKIPPED",
+          "listen_for": [
+            "zero is nothing so skip"
+          ],
+          "ask": "In 305 x 6, where does the carried 3 from the ones go?",
+          "repair": "0 x 6 is 0, but the carry still lands in that column."
+        },
+        {
+          "code": "MATH.G5.NUMBER.MULTIPLICATION.MULT_3D_BY_1D.M_DROP_CARRY",
+          "listen_for": [
+            "842"
+          ],
+          "ask": "Your estimate is about 1,000. Is 842 close?",
+          "repair": "Write each carry small above the next column and add it after multiplying."
+        },
+        {
+          "code": "MATH.G5.NUMBER.MULTIPLICATION.MULT_3D_BY_1D.M_WRITE_WHOLE_COLUMN_PRODUCTS",
+          "listen_for": [
+            "82432"
+          ],
+          "ask": "Is 82,432 near 268 x 4?",
+          "repair": "One digit per column: regroup the tens of each product into the next column."
+        }
       ],
       "checks": [
-        {"question": "268 x 4", "answer": "1,072", "shows": "carries after multiplying"},
-        {"question": "A school buys 6 bags of maize, each 305 kg. Total mass?", "answer": "1,830 kg", "shows": "zero inside the number"}
+        {
+          "question": "268 x 4",
+          "answer": "1,072",
+          "shows": "carries after multiplying"
+        },
+        {
+          "question": "A school buys 6 bags of maize, each 305 kg. Total mass?",
+          "answer": "1,830 kg",
+          "shows": "zero inside the number"
+        }
       ]
     },
     {
       "skill": "MATH.G5.NUMBER.MULTIPLICATION.MULT_3D_BY_2D",
       "key_step": "The child multiplies by the ones digit, then by the tens digit as tens (writing a zero first), and adds the two rows.",
-      "floor": {"prerequisite": "Multiplies a 3-digit number by a 1-digit number.", "question": "243 x 6 =", "answer": "1,458"},
-      "representations": ["an area rectangle split by 20 and 6", "two partial products", "the sum"],
-      "steps": ["Estimate.", "Split the 2-digit number into tens and ones.", "Row 1: times the ones.", "Row 2: times the tens, so write a zero first.", "Add the rows; compare with the estimate."],
-      "contexts": ["pupils on 26 buses", "the cost of 23 exercise books", "trays of eggs"],
+      "floor": {
+        "prerequisite": "Multiplies a 3-digit number by a 1-digit number.",
+        "question": "243 x 6 =",
+        "answer": "1,458"
+      },
+      "representations": [
+        "an area rectangle split by 20 and 6",
+        "two partial products",
+        "the sum"
+      ],
+      "steps": [
+        "Estimate.",
+        "Split the 2-digit number into tens and ones.",
+        "Row 1: times the ones.",
+        "Row 2: times the tens, so write a zero first.",
+        "Add the rows; compare with the estimate."
+      ],
+      "contexts": [
+        "pupils on 26 buses",
+        "the cost of 23 exercise books",
+        "trays of eggs"
+      ],
       "board": [
-        {"beat": "draw", "do": "Draw a rectangle for 243 x 26 split into a 20 strip and a 6 strip."},
-        {"beat": "point", "do": "Point at the 20 strip.", "say": "Is this strip 2 or 20?"},
-        {"beat": "pause", "do": "Wait for the child to say why the zero is written."},
-        {"beat": "child_draws", "do": "Child writes both partial products and adds."}
+        {
+          "beat": "draw",
+          "do": "Draw a rectangle for 243 x 26 split into a 20 strip and a 6 strip."
+        },
+        {
+          "beat": "point",
+          "do": "Point at the 20 strip.",
+          "say": "Is this strip 2 or 20?"
+        },
+        {
+          "beat": "pause",
+          "do": "Wait for the child to say why the zero is written."
+        },
+        {
+          "beat": "child_draws",
+          "do": "Child writes both partial products and adds."
+        }
       ],
       "misconceptions": [
-        {"code": "MATH.G5.NUMBER.MULTIPLICATION.MULT_3D_BY_2D.M_NO_PLACEHOLDER_ZERO", "listen_for": ["I forgot the zero", "times 2"], "ask": "In 26, is the 2 worth two or twenty?", "repair": "The tens row is 20 times, so it is ten times bigger: write the zero first."},
-        {"code": "MATH.G5.NUMBER.MULTIPLICATION.MULT_3D_BY_2D.M_MULTIPLY_LIKE_ADDITION", "listen_for": ["ones times ones, tens times tens"], "ask": "Your estimate is about 7,000. Is 326 near it?", "repair": "Every part of one number multiplies every part of the other: the area picture shows all of them."}
+        {
+          "code": "MATH.G5.NUMBER.MULTIPLICATION.MULT_3D_BY_2D.M_NO_PLACEHOLDER_ZERO",
+          "listen_for": [
+            "I forgot the zero",
+            "times 2"
+          ],
+          "ask": "In 26, is the 2 worth two or twenty?",
+          "repair": "The tens row is 20 times, so it is ten times bigger: write the zero first."
+        },
+        {
+          "code": "MATH.G5.NUMBER.MULTIPLICATION.MULT_3D_BY_2D.M_MULTIPLY_LIKE_ADDITION",
+          "listen_for": [
+            "ones times ones, tens times tens"
+          ],
+          "ask": "Your estimate is about 7,000. Is 326 near it?",
+          "repair": "Every part of one number multiplies every part of the other: the area picture shows all of them."
+        },
+        {
+          "code": "MATH.G5.NUMBER.MULTIPLICATION.MULT_3D_BY_2D.M_CARRIES_MIXED_BETWEEN_ROWS",
+          "listen_for": [
+            "8418"
+          ],
+          "ask": "Did you clear the carries before the tens row?",
+          "repair": "Cross out the first row's carries before starting the second row."
+        }
       ],
       "checks": [
-        {"question": "312 x 23", "answer": "7,176", "shows": "two partial products"},
-        {"question": "243 x 26", "answer": "6,318", "shows": "carries kept separate in each row"}
+        {
+          "question": "312 x 23",
+          "answer": "7,176",
+          "shows": "two partial products"
+        },
+        {
+          "question": "243 x 26",
+          "answer": "6,318",
+          "shows": "carries kept separate in each row"
+        }
       ]
     },
     {
       "skill": "MATH.G5.NUMBER.MULTIPLICATION.MULT_WORD_PROBLEMS",
       "key_step": "The child recognises equal groups, cost per item or rate per trip as multiplication, and finishes every step of a two-step problem.",
-      "floor": {"prerequisite": "Multiplies up to 3 digits by 2 digits.", "question": "48 x 12 =", "answer": "576"},
-      "representations": ["equal groups drawn", "a bar split into equal parts", "the calculation and a sentence"],
-      "steps": ["Draw equal groups.", "Write the multiplication.", "Ask: is that the final answer, or is there another step?", "Answer in a sentence."],
-      "contexts": ["school buses to a music festival in Kisumu", "sugar bought by the kg", "matatu trips per day"],
+      "floor": {
+        "prerequisite": "Multiplies up to 3 digits by 2 digits.",
+        "question": "48 x 12 =",
+        "answer": "576"
+      },
+      "representations": [
+        "equal groups drawn",
+        "a bar split into equal parts",
+        "the calculation and a sentence"
+      ],
+      "steps": [
+        "Draw equal groups.",
+        "Write the multiplication.",
+        "Ask: is that the final answer, or is there another step?",
+        "Answer in a sentence."
+      ],
+      "contexts": [
+        "school buses to a music festival in Kisumu",
+        "sugar bought by the kg",
+        "matatu trips per day"
+      ],
       "board": [
-        {"beat": "draw", "do": "Draw 3 buses with 48 dots each (as a bar split in 3 equal parts)."},
-        {"beat": "point", "do": "Point at the equal parts.", "say": "Are the groups equal? What does that tell us?"},
-        {"beat": "pause", "do": "Wait for the child to choose the operation."}
+        {
+          "beat": "draw",
+          "do": "Draw 3 buses with 48 dots each (as a bar split in 3 equal parts)."
+        },
+        {
+          "beat": "point",
+          "do": "Point at the equal parts.",
+          "say": "Are the groups equal? What does that tell us?"
+        },
+        {
+          "beat": "pause",
+          "do": "Wait for the child to choose the operation."
+        }
       ],
       "misconceptions": [
-        {"code": "MATH.G5.NUMBER.MULTIPLICATION.MULT_WORD_PROBLEMS.M_ADD_INSTEAD_OF_MULTIPLY", "listen_for": ["48 plus 12"], "ask": "If each of 12 buses carries 48, could all of them carry only 60?", "repair": "Draw the equal groups: 12 groups of 48 is multiplication."},
-        {"code": "MATH.G5.NUMBER.MULTIPLICATION.MULT_WORD_PROBLEMS.M_STOP_AFTER_FIRST_STEP", "listen_for": ["Sh 2,175"], "ask": "Read the last line again. Did it ask the cost or the change?", "repair": "Underline the question; check if another step remains."}
+        {
+          "code": "MATH.G5.NUMBER.MULTIPLICATION.MULT_WORD_PROBLEMS.M_ADD_INSTEAD_OF_MULTIPLY",
+          "listen_for": [
+            "48 plus 12"
+          ],
+          "ask": "If each of 12 buses carries 48, could all of them carry only 60?",
+          "repair": "Draw the equal groups: 12 groups of 48 is multiplication."
+        },
+        {
+          "code": "MATH.G5.NUMBER.MULTIPLICATION.MULT_WORD_PROBLEMS.M_STOP_AFTER_FIRST_STEP",
+          "listen_for": [
+            "Sh 2,175"
+          ],
+          "ask": "Read the last line again. Did it ask the cost or the change?",
+          "repair": "Underline the question; check if another step remains."
+        }
       ],
       "checks": [
-        {"question": "Each bus carries 48 pupils. How many pupils travel in 12 buses?", "answer": "576", "shows": "equal groups"},
-        {"question": "Wanjiru buys 15 kg of sugar at Sh 145 per kg and pays with Sh 3,000. Change?", "answer": "Sh 825", "shows": "both steps"}
+        {
+          "question": "Each bus carries 48 pupils. How many pupils travel in 12 buses?",
+          "answer": "576",
+          "shows": "equal groups"
+        },
+        {
+          "question": "Wanjiru buys 15 kg of sugar at Sh 145 per kg and pays with Sh 3,000. Change?",
+          "answer": "Sh 825",
+          "shows": "both steps"
+        }
       ]
     },
     {
       "skill": "MATH.G5.NUMBER.MULTIPLICATION.ESTIMATE_PRODUCT_ROUND10",
       "key_step": "The child rounds each factor to the nearest ten, multiplies the non-zero digits, and attaches the right number of zeros.",
-      "floor": {"prerequisite": "Rounds to the nearest ten.", "question": "Round 26 to the nearest ten.", "answer": "30"},
-      "representations": ["factors on number lines", "rounded factors", "the estimate"],
-      "steps": ["Round each factor.", "Multiply the non-zero parts.", "Count and attach the zeros."],
-      "contexts": ["estimating the cost of a class set of books", "estimating seats in a stadium", "estimating a harvest"],
+      "floor": {
+        "prerequisite": "Rounds to the nearest ten.",
+        "question": "Round 26 to the nearest ten.",
+        "answer": "30"
+      },
+      "representations": [
+        "factors on number lines",
+        "rounded factors",
+        "the estimate"
+      ],
+      "steps": [
+        "Round each factor.",
+        "Multiply the non-zero parts.",
+        "Count and attach the zeros."
+      ],
+      "contexts": [
+        "estimating the cost of a class set of books",
+        "estimating seats in a stadium",
+        "estimating a harvest"
+      ],
       "board": [
-        {"beat": "write", "do": "Write 347 x 26 with boxes above each for the rounded numbers."},
-        {"beat": "child_draws", "do": "Child rounds each factor."},
-        {"beat": "pause", "do": "Wait for the child to multiply and count zeros."}
+        {
+          "beat": "write",
+          "do": "Write 347 x 26 with boxes above each for the rounded numbers."
+        },
+        {
+          "beat": "child_draws",
+          "do": "Child rounds each factor."
+        },
+        {
+          "beat": "pause",
+          "do": "Wait for the child to multiply and count zeros."
+        }
       ],
       "misconceptions": [
-        {"code": "MATH.G5.NUMBER.MULTIPLICATION.ESTIMATE_PRODUCT_ROUND10.M_TRUNCATE_NOT_ROUND", "listen_for": ["340 times 20"], "ask": "Is 26 nearer 20 or 30?", "repair": "Round to the nearer ten on a number line."},
-        {"code": "MATH.G5.NUMBER.MULTIPLICATION.ESTIMATE_PRODUCT_ROUND10.M_ZEROS_MISCOUNTED", "listen_for": ["1,050"], "ask": "How many zeros in 350 and 30 together?", "repair": "35 x 3 = 105, then the two zeros: 10,500."}
+        {
+          "code": "MATH.G5.NUMBER.MULTIPLICATION.ESTIMATE_PRODUCT_ROUND10.M_TRUNCATE_NOT_ROUND",
+          "listen_for": [
+            "340 times 20"
+          ],
+          "ask": "Is 26 nearer 20 or 30?",
+          "repair": "Round to the nearer ten on a number line."
+        },
+        {
+          "code": "MATH.G5.NUMBER.MULTIPLICATION.ESTIMATE_PRODUCT_ROUND10.M_ZEROS_MISCOUNTED",
+          "listen_for": [
+            "1,050"
+          ],
+          "ask": "How many zeros in 350 and 30 together?",
+          "repair": "35 x 3 = 105, then the two zeros: 10,500."
+        },
+        {
+          "code": "MATH.G5.NUMBER.MULTIPLICATION.ESTIMATE_PRODUCT_ROUND10.M_EXACT_THEN_ROUND",
+          "listen_for": [
+            "1,080"
+          ],
+          "ask": "Is an estimate meant to be quick?",
+          "repair": "Round each factor first, then multiply in your head."
+        }
       ],
       "checks": [
-        {"question": "Estimate 347 x 26 by rounding each to the nearest ten.", "answer": "350 x 30 = 10,500", "shows": "rounds and counts zeros"},
-        {"question": "Estimate 47 x 23 to the nearest ten.", "answer": "50 x 20 = 1,000", "shows": "rounds first"}
+        {
+          "question": "Estimate 347 x 26 by rounding each to the nearest ten.",
+          "answer": "350 x 30 = 10,500",
+          "shows": "rounds and counts zeros"
+        },
+        {
+          "question": "Estimate 47 x 23 to the nearest ten.",
+          "answer": "50 x 20 = 1,000",
+          "shows": "rounds first"
+        }
       ]
     },
     {
       "skill": "MATH.G5.NUMBER.MULTIPLICATION.ESTIMATE_CHECK_REASONABLE",
       "key_step": "The child compares an exact product with the estimate: close means reasonable; about ten times off means a place value slip.",
-      "floor": {"prerequisite": "Estimates a product.", "question": "Estimate 48 x 21.", "answer": "50 x 20 = 1,000"},
-      "representations": ["exact and estimate side by side", "a number line", "the judgement"],
-      "steps": ["Estimate.", "Compare with the exact answer.", "Close: fine. Ten times off: check the zero in the tens row."],
-      "contexts": ["checking a classmate's work", "checking a shop total", "checking a farm calculation"],
+      "floor": {
+        "prerequisite": "Estimates a product.",
+        "question": "Estimate 48 x 21.",
+        "answer": "50 x 20 = 1,000"
+      },
+      "representations": [
+        "exact and estimate side by side",
+        "a number line",
+        "the judgement"
+      ],
+      "steps": [
+        "Estimate.",
+        "Compare with the exact answer.",
+        "Close: fine. Ten times off: check the zero in the tens row."
+      ],
+      "contexts": [
+        "checking a classmate's work",
+        "checking a shop total",
+        "checking a farm calculation"
+      ],
       "board": [
-        {"beat": "write", "do": "Write Amina's answer: 243 x 26 = 1,944."},
-        {"beat": "predict", "do": "Ask for an estimate.", "say": "Estimate first."},
-        {"beat": "pause", "do": "Wait for the child to judge Amina's answer."}
+        {
+          "beat": "write",
+          "do": "Write Amina's answer: 243 x 26 = 1,944."
+        },
+        {
+          "beat": "predict",
+          "do": "Ask for an estimate.",
+          "say": "Estimate first."
+        },
+        {
+          "beat": "pause",
+          "do": "Wait for the child to judge Amina's answer."
+        }
       ],
       "misconceptions": [
-        {"code": "MATH.G5.NUMBER.MULTIPLICATION.ESTIMATE_CHECK_REASONABLE.M_NO_SIZE_CHECK", "listen_for": ["it looks right"], "ask": "Is 1,944 near your estimate of about 7,500?", "repair": "About four times too small: look for a missing zero in the tens row."},
-        {"code": "MATH.G5.NUMBER.MULTIPLICATION.ESTIMATE_CHECK_REASONABLE.M_ESTIMATE_MUST_MATCH", "listen_for": ["1,008 isn't 1,000 so wrong"], "ask": "We rounded both numbers. Should the estimate be exact?", "repair": "Close is the test, not equal."}
+        {
+          "code": "MATH.G5.NUMBER.MULTIPLICATION.ESTIMATE_CHECK_REASONABLE.M_NO_SIZE_CHECK",
+          "listen_for": [
+            "it looks right"
+          ],
+          "ask": "Is 1,944 near your estimate of about 7,500?",
+          "repair": "About four times too small: look for a missing zero in the tens row."
+        },
+        {
+          "code": "MATH.G5.NUMBER.MULTIPLICATION.ESTIMATE_CHECK_REASONABLE.M_ESTIMATE_MUST_MATCH",
+          "listen_for": [
+            "1,008 isn't 1,000 so wrong"
+          ],
+          "ask": "We rounded both numbers. Should the estimate be exact?",
+          "repair": "Close is the test, not equal."
+        }
       ],
       "checks": [
-        {"question": "Juma says 48 x 21 = 1,008. Is it reasonable?", "answer": "Yes; the estimate is about 1,000", "shows": "close is fine"},
-        {"question": "Amina worked out 243 x 26 = 1,944. Reasonable?", "answer": "No; the estimate is about 7,500 (240 x 30 = 7,200 or 250 x 30)", "shows": "spots a size error"}
+        {
+          "question": "Juma says 48 x 21 = 1,008. Is it reasonable?",
+          "answer": "Yes; the estimate is about 1,000",
+          "shows": "close is fine"
+        },
+        {
+          "question": "Amina worked out 243 x 26 = 1,944. Reasonable?",
+          "answer": "No; the estimate is about 7,500 (240 x 30 = 7,200 or 250 x 30)",
+          "shows": "spots a size error"
+        }
       ]
     },
     {
       "skill": "MATH.G5.NUMBER.MULTIPLICATION.MULT_PATTERN_EXTEND",
       "key_step": "The child tests whether the pattern adds or multiplies (dividing a term by the one before), and divides backwards to find an earlier term.",
-      "floor": {"prerequisite": "Knows times tables.", "question": "4 x 3 =", "answer": "12"},
-      "representations": ["a growing story", "arrows labelled x3 between terms", "the pattern"],
-      "steps": ["Find the difference and the ratio between neighbours.", "Check which holds for every pair.", "Extend forwards by multiplying.", "Go backwards by dividing."],
-      "contexts": ["a boda boda business growing", "chicks on a farm", "money saved doubling"],
+      "floor": {
+        "prerequisite": "Knows times tables.",
+        "question": "4 x 3 =",
+        "answer": "12"
+      },
+      "representations": [
+        "a growing story",
+        "arrows labelled x3 between terms",
+        "the pattern"
+      ],
+      "steps": [
+        "Find the difference and the ratio between neighbours.",
+        "Check which holds for every pair.",
+        "Extend forwards by multiplying.",
+        "Go backwards by dividing."
+      ],
+      "contexts": [
+        "a boda boda business growing",
+        "chicks on a farm",
+        "money saved doubling"
+      ],
       "board": [
-        {"beat": "write", "do": "Write 4, 12, 36, ___."},
-        {"beat": "point", "do": "Point at 4 and 12, then 12 and 36.", "say": "Is the same amount added, or is it multiplied?"},
-        {"beat": "pause", "do": "Wait for the child's rule and next term."}
+        {
+          "beat": "write",
+          "do": "Write 4, 12, 36, ___."
+        },
+        {
+          "beat": "point",
+          "do": "Point at 4 and 12, then 12 and 36.",
+          "say": "Is the same amount added, or is it multiplied?"
+        },
+        {
+          "beat": "pause",
+          "do": "Wait for the child's rule and next term."
+        }
       ],
       "misconceptions": [
-        {"code": "MATH.G5.NUMBER.MULTIPLICATION.MULT_PATTERN_EXTEND.M_ADDITIVE_RULE", "listen_for": ["add 8"], "ask": "Does adding 8 take 12 to 36?", "repair": "Test the rule on every pair; times 3 fits all."},
-        {"code": "MATH.G5.NUMBER.MULTIPLICATION.MULT_PATTERN_EXTEND.M_NO_REVERSE_FOR_EARLIER_TERM", "listen_for": ["36"], "ask": "To go back a step, do we multiply or undo the multiplying?", "repair": "Going backwards, divide by 3."}
+        {
+          "code": "MATH.G5.NUMBER.MULTIPLICATION.MULT_PATTERN_EXTEND.M_ADDITIVE_RULE",
+          "listen_for": [
+            "add 8"
+          ],
+          "ask": "Does adding 8 take 12 to 36?",
+          "repair": "Test the rule on every pair; times 3 fits all."
+        },
+        {
+          "code": "MATH.G5.NUMBER.MULTIPLICATION.MULT_PATTERN_EXTEND.M_NO_REVERSE_FOR_EARLIER_TERM",
+          "listen_for": [
+            "36"
+          ],
+          "ask": "To go back a step, do we multiply or undo the multiplying?",
+          "repair": "Going backwards, divide by 3."
+        },
+        {
+          "code": "MATH.G5.NUMBER.MULTIPLICATION.MULT_PATTERN_EXTEND.M_ALWAYS_DOUBLE",
+          "listen_for": [
+            "72"
+          ],
+          "ask": "Is 12 double 4?",
+          "repair": "Test the rule on every pair; 4 to 12 is times 3."
+        }
       ],
       "checks": [
-        {"question": "4, 12, 36, ___", "answer": "108", "shows": "multiplying rule"},
-        {"question": "___, 12, 36, 108", "answer": "4", "shows": "divides backwards"}
+        {
+          "question": "4, 12, 36, ___",
+          "answer": "108",
+          "shows": "multiplying rule"
+        },
+        {
+          "question": "___, 12, 36, 108",
+          "answer": "4",
+          "shows": "divides backwards"
+        }
       ]
     },
     {
       "skill": "MATH.G5.NUMBER.MULTIPLICATION.MULT_PATTERN_CREATE",
       "key_step": "The child makes a pattern by multiplying the previous term by the same number each time, keeping terms under 1000, and describes the single rule.",
-      "floor": {"prerequisite": "Extends multiplication patterns.", "question": "Next: 3, 6, 12?", "answer": "24"},
-      "representations": ["a story", "the pattern with arrows", "the rule"],
-      "steps": ["Choose a start and a multiplier.", "Multiply the previous term each time.", "Stop before 1000.", "State the rule."],
-      "contexts": ["bacteria doubling in milk left out", "a savings plan", "chickens hatching"],
+      "floor": {
+        "prerequisite": "Extends multiplication patterns.",
+        "question": "Next: 3, 6, 12?",
+        "answer": "24"
+      },
+      "representations": [
+        "a story",
+        "the pattern with arrows",
+        "the rule"
+      ],
+      "steps": [
+        "Choose a start and a multiplier.",
+        "Multiply the previous term each time.",
+        "Stop before 1000.",
+        "State the rule."
+      ],
+      "contexts": [
+        "bacteria doubling in milk left out",
+        "a savings plan",
+        "chickens hatching"
+      ],
       "board": [
-        {"beat": "write", "do": "Write start 5, rule multiply by 3."},
-        {"beat": "child_draws", "do": "Child writes terms with x3 arrows."},
-        {"beat": "pause", "do": "Wait for the child to check each step uses x3."}
+        {
+          "beat": "write",
+          "do": "Write start 5, rule multiply by 3."
+        },
+        {
+          "beat": "child_draws",
+          "do": "Child writes terms with x3 arrows."
+        },
+        {
+          "beat": "pause",
+          "do": "Wait for the child to check each step uses x3."
+        }
       ],
       "misconceptions": [
-        {"code": "MATH.G5.NUMBER.MULTIPLICATION.MULT_PATTERN_CREATE.M_TABLE_VS_REPEATED_MULTIPLY", "listen_for": ["5, 10, 15"], "ask": "Did you multiply the previous term, or add 5?", "repair": "Each new term is the last term times 3."},
-        {"code": "MATH.G5.NUMBER.MULTIPLICATION.MULT_PATTERN_CREATE.M_RULE_CHANGES_MIDWAY", "listen_for": ["then I added"], "ask": "Is every arrow the same rule?", "repair": "Label each arrow; they must all match."}
+        {
+          "code": "MATH.G5.NUMBER.MULTIPLICATION.MULT_PATTERN_CREATE.M_TABLE_VS_REPEATED_MULTIPLY",
+          "listen_for": [
+            "5, 10, 15"
+          ],
+          "ask": "Did you multiply the previous term, or add 5?",
+          "repair": "Each new term is the last term times 3."
+        },
+        {
+          "code": "MATH.G5.NUMBER.MULTIPLICATION.MULT_PATTERN_CREATE.M_RULE_CHANGES_MIDWAY",
+          "listen_for": [
+            "then I added"
+          ],
+          "ask": "Is every arrow the same rule?",
+          "repair": "Label each arrow; they must all match."
+        }
       ],
       "checks": [
-        {"question": "Start at 5, multiply by 3 each time. First four terms?", "answer": "5, 15, 45, 135", "shows": "repeated multiplying"},
-        {"question": "Is 2, 4, 8, 10 a multiplication pattern?", "answer": "No; the rule changes at the last step", "shows": "one rule"}
+        {
+          "question": "Start at 5, multiply by 3 each time. First four terms?",
+          "answer": "5, 15, 45, 135",
+          "shows": "repeated multiplying"
+        },
+        {
+          "question": "Is 2, 4, 8, 10 a multiplication pattern?",
+          "answer": "No; the rule changes at the last step",
+          "shows": "one rule"
+        }
       ]
     }
   ]

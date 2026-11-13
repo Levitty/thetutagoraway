@@ -2,178 +2,618 @@
   "sub_strand": "MATH.G5.NUMBER.ADDITION",
   "title": "Addition (up to 6 digits)",
   "status": "draft: written 13 Nov 2026 from research round 3; shorter entries; not yet checked by a Kenyan maths teacher; not loaded by the live tutor",
-  "sources": [49, 52, 73],
+  "sources": [
+    49,
+    52,
+    73
+  ],
   "notes": "Column addition errors are almost all place value errors: lining up from the left, losing the carry, zeros. Money notes and a place value chart are the pictures. Estimate first in every sum (source 49) so the child has their own check; for word problems, a bar model helps most when the words point to the wrong operation (source 73).",
   "skills": [
     {
       "skill": "MATH.G5.NUMBER.ADDITION.ADD_NO_REGROUP_UP_TO_THREE",
       "key_step": "The child lines numbers up from the right (ones under ones) and adds each column, writing 0 where a column totals 0.",
-      "floor": {"prerequisite": "Names places up to hundred thousands.", "question": "In 25,103, which digit is in the ones place?", "answer": "3"},
-      "representations": ["shilling notes and coins by value", "place value chart with columns", "column sum"],
-      "steps": ["Estimate.", "Write each number in the chart, ones in the ones column.", "Add each column from the right.", "Compare with the estimate."],
-      "contexts": ["money collected at a harambee on three days", "bags of maize from three farms", "votes in three wards"],
+      "floor": {
+        "prerequisite": "Names places up to hundred thousands.",
+        "question": "In 25,103, which digit is in the ones place?",
+        "answer": "3"
+      },
+      "representations": [
+        "shilling notes and coins by value",
+        "place value chart with columns",
+        "column sum"
+      ],
+      "steps": [
+        "Estimate.",
+        "Write each number in the chart, ones in the ones column.",
+        "Add each column from the right.",
+        "Compare with the estimate."
+      ],
+      "contexts": [
+        "money collected at a harambee on three days",
+        "bags of maize from three farms",
+        "votes in three wards"
+      ],
       "board": [
-        {"beat": "draw", "do": "Draw a place value chart; write 412,301 and 25,103 into it, the second number filled from the right, slowly."},
-        {"beat": "point", "do": "Point at the ones column.", "say": "Which digits sit in the ones column?"},
-        {"beat": "pause", "do": "Wait for the child's answer."},
-        {"beat": "child_draws", "do": "Child adds each column."}
+        {
+          "beat": "draw",
+          "do": "Draw a place value chart; write 412,301 and 25,103 into it, the second number filled from the right, slowly."
+        },
+        {
+          "beat": "point",
+          "do": "Point at the ones column.",
+          "say": "Which digits sit in the ones column?"
+        },
+        {
+          "beat": "pause",
+          "do": "Wait for the child's answer."
+        },
+        {
+          "beat": "child_draws",
+          "do": "Child adds each column."
+        }
       ],
       "misconceptions": [
-        {"code": "MATH.G5.NUMBER.ADDITION.ADD_NO_REGROUP_UP_TO_THREE.M_LEFT_ALIGN", "listen_for": ["I started from the left"], "ask": "Is the 2 in 25,103 worth ten thousands or hundred thousands?", "repair": "Line up from the right in the chart so each digit sits under its place."},
-        {"code": "MATH.G5.NUMBER.ADDITION.ADD_NO_REGROUP_UP_TO_THREE.M_ZERO_ANNIHILATES", "listen_for": ["zero makes zero"], "ask": "If you have 3 shillings and add 0 shillings, how many do you have?", "repair": "Adding nothing keeps what you had: 3 + 0 = 3."}
+        {
+          "code": "MATH.G5.NUMBER.ADDITION.ADD_NO_REGROUP_UP_TO_THREE.M_LEFT_ALIGN",
+          "listen_for": [
+            "I started from the left"
+          ],
+          "ask": "Is the 2 in 25,103 worth ten thousands or hundred thousands?",
+          "repair": "Line up from the right in the chart so each digit sits under its place."
+        },
+        {
+          "code": "MATH.G5.NUMBER.ADDITION.ADD_NO_REGROUP_UP_TO_THREE.M_ZERO_ANNIHILATES",
+          "listen_for": [
+            "zero makes zero"
+          ],
+          "ask": "If you have 3 shillings and add 0 shillings, how many do you have?",
+          "repair": "Adding nothing keeps what you had: 3 + 0 = 3."
+        }
       ],
       "checks": [
-        {"question": "230,104 + 405,032", "answer": "635,136", "shows": "zeros added correctly"},
-        {"question": "412,301 + 25,103 + 1,042", "answer": "438,446", "shows": "right-aligned columns"}
+        {
+          "question": "230,104 + 405,032",
+          "answer": "635,136",
+          "shows": "zeros added correctly"
+        },
+        {
+          "question": "412,301 + 25,103 + 1,042",
+          "answer": "438,446",
+          "shows": "right-aligned columns"
+        }
       ]
     },
     {
       "skill": "MATH.G5.NUMBER.ADDITION.ADD_DOUBLE_REGROUP_TWO",
       "key_step": "The child writes the ones digit of a column total and carries the ten into the next column, then adds it there, even when that column then reaches ten again.",
-      "floor": {"prerequisite": "Adds with one regrouping.", "question": "58 + 75 =", "answer": "133"},
-      "representations": ["ten 1-shilling coins exchanged for a 10-shilling coin", "column sum with small carried digits", "the total"],
-      "steps": ["Estimate.", "Add the ones; ten or more: carry one ten.", "Add the next column with the carry; carry again if needed.", "Compare with the estimate."],
-      "contexts": ["school fees collected in two terms", "visitors to a national park in two months", "a farmer's two harvests in kg"],
+      "floor": {
+        "prerequisite": "Adds with one regrouping.",
+        "question": "58 + 75 =",
+        "answer": "133"
+      },
+      "representations": [
+        "ten 1-shilling coins exchanged for a 10-shilling coin",
+        "column sum with small carried digits",
+        "the total"
+      ],
+      "steps": [
+        "Estimate.",
+        "Add the ones; ten or more: carry one ten.",
+        "Add the next column with the carry; carry again if needed.",
+        "Compare with the estimate."
+      ],
+      "contexts": [
+        "school fees collected in two terms",
+        "visitors to a national park in two months",
+        "a farmer's two harvests in kg"
+      ],
       "board": [
-        {"beat": "write", "do": "Write 246,358 + 312,475 in columns."},
-        {"beat": "point", "do": "Point at 8 and 5.", "say": "Add the ones. What do you do with the ten?"},
-        {"beat": "pause", "do": "Wait for the child to write 3 and carry 1."},
-        {"beat": "child_draws", "do": "Child continues, writing each carry above the next column."}
+        {
+          "beat": "write",
+          "do": "Write 246,358 + 312,475 in columns."
+        },
+        {
+          "beat": "point",
+          "do": "Point at 8 and 5.",
+          "say": "Add the ones. What do you do with the ten?"
+        },
+        {
+          "beat": "pause",
+          "do": "Wait for the child to write 3 and carry 1."
+        },
+        {
+          "beat": "child_draws",
+          "do": "Child continues, writing each carry above the next column."
+        }
       ],
       "misconceptions": [
-        {"code": "MATH.G5.NUMBER.ADDITION.ADD_DOUBLE_REGROUP_TWO.M_NO_CARRY_WRITE_ALL", "listen_for": ["13 under the ones"], "ask": "Your estimate was about 560,000. Is your answer near that?", "repair": "Only one digit fits in a column; ten ones become one ten, carried."},
-        {"code": "MATH.G5.NUMBER.ADDITION.ADD_DOUBLE_REGROUP_TWO.M_DROP_CARRY", "listen_for": ["558,723"], "ask": "Where did the ten from the ones column go?", "repair": "Write the carried 1 small above the next column and add it in."}
+        {
+          "code": "MATH.G5.NUMBER.ADDITION.ADD_DOUBLE_REGROUP_TWO.M_NO_CARRY_WRITE_ALL",
+          "listen_for": [
+            "13 under the ones"
+          ],
+          "ask": "Your estimate was about 560,000. Is your answer near that?",
+          "repair": "Only one digit fits in a column; ten ones become one ten, carried."
+        },
+        {
+          "code": "MATH.G5.NUMBER.ADDITION.ADD_DOUBLE_REGROUP_TWO.M_DROP_CARRY",
+          "listen_for": [
+            "558,723"
+          ],
+          "ask": "Where did the ten from the ones column go?",
+          "repair": "Write the carried 1 small above the next column and add it in."
+        },
+        {
+          "code": "MATH.G5.NUMBER.ADDITION.ADD_DOUBLE_REGROUP_TWO.M_CARRY_MAKES_TEN",
+          "listen_for": [
+            "I wrote 0 and didn't carry"
+          ],
+          "ask": "The column made ten with the carry. What do we do with ten?",
+          "repair": "Ten in any column regroups: write 0 and carry 1."
+        }
       ],
       "checks": [
-        {"question": "246,358 + 312,475", "answer": "558,833", "shows": "double regrouping"},
-        {"question": "235,247 + 140,155", "answer": "375,402", "shows": "carry that makes a column ten"}
+        {
+          "question": "246,358 + 312,475",
+          "answer": "558,833",
+          "shows": "double regrouping"
+        },
+        {
+          "question": "235,247 + 140,155",
+          "answer": "375,402",
+          "shows": "carry that makes a column ten"
+        }
       ]
     },
     {
       "skill": "MATH.G5.NUMBER.ADDITION.ADD_IN_SITUATIONS",
       "key_step": "The child picks out only the quantities the question combines, writes them in figures with zeros, and adds.",
-      "floor": {"prerequisite": "Adds 6-digit numbers.", "question": "Write 'two hundred and five thousand' in figures.", "answer": "205,000"},
-      "representations": ["the story", "a bar model with parts and a whole", "the sum and a sentence answer"],
-      "steps": ["Read; underline what the question asks.", "Draw a bar: parts and whole.", "Choose only the needed numbers.", "Add; answer in a sentence."],
-      "contexts": ["a matatu Sacco's earnings over two months", "trees planted by a county", "money raised at a harambee"],
+      "floor": {
+        "prerequisite": "Adds 6-digit numbers.",
+        "question": "Write 'two hundred and five thousand' in figures.",
+        "answer": "205,000"
+      },
+      "representations": [
+        "the story",
+        "a bar model with parts and a whole",
+        "the sum and a sentence answer"
+      ],
+      "steps": [
+        "Read; underline what the question asks.",
+        "Draw a bar: parts and whole.",
+        "Choose only the needed numbers.",
+        "Add; answer in a sentence."
+      ],
+      "contexts": [
+        "a matatu Sacco's earnings over two months",
+        "trees planted by a county",
+        "money raised at a harambee"
+      ],
       "board": [
-        {"beat": "write", "do": "Write the story: a Sacco with 15 matatus earned Sh 213,400 in January and Sh 198,750 in February. How much in both months?"},
-        {"beat": "draw", "do": "Draw a bar with two parts and a brace over the whole."},
-        {"beat": "point", "do": "Point at 15.", "say": "Is the number of matatus part of the money?"},
-        {"beat": "pause", "do": "Wait for the child to choose the two amounts."}
+        {
+          "beat": "write",
+          "do": "Write the story: a Sacco with 15 matatus earned Sh 213,400 in January and Sh 198,750 in February. How much in both months?"
+        },
+        {
+          "beat": "draw",
+          "do": "Draw a bar with two parts and a brace over the whole."
+        },
+        {
+          "beat": "point",
+          "do": "Point at 15.",
+          "say": "Is the number of matatus part of the money?"
+        },
+        {
+          "beat": "pause",
+          "do": "Wait for the child to choose the two amounts."
+        }
       ],
       "misconceptions": [
-        {"code": "MATH.G5.NUMBER.ADDITION.ADD_IN_SITUATIONS.M_ADD_ALL_NUMBERS", "listen_for": ["plus 15"], "ask": "Is 15 matatus an amount of shillings?", "repair": "Put only shillings on the bar; the 15 is extra information."},
-        {"code": "MATH.G5.NUMBER.ADDITION.ADD_IN_SITUATIONS.M_KEYWORD_ADD", "listen_for": ["it says received so add"], "ask": "Draw the bar. Is the number we want the whole or a part?", "repair": "The bar shows a missing part, so subtract, whatever the words say."}
+        {
+          "code": "MATH.G5.NUMBER.ADDITION.ADD_IN_SITUATIONS.M_ADD_ALL_NUMBERS",
+          "listen_for": [
+            "plus 15"
+          ],
+          "ask": "Is 15 matatus an amount of shillings?",
+          "repair": "Put only shillings on the bar; the 15 is extra information."
+        },
+        {
+          "code": "MATH.G5.NUMBER.ADDITION.ADD_IN_SITUATIONS.M_KEYWORD_ADD",
+          "listen_for": [
+            "it says received so add"
+          ],
+          "ask": "Draw the bar. Is the number we want the whole or a part?",
+          "repair": "The bar shows a missing part, so subtract, whatever the words say."
+        },
+        {
+          "code": "MATH.G5.NUMBER.ADDITION.ADD_IN_SITUATIONS.M_WORDS_TO_FIGURES_ZEROS",
+          "listen_for": [
+            "20,450"
+          ],
+          "ask": "Read 20,450 aloud. Is it two hundred and four thousand and fifty?",
+          "repair": "Write the thousands part, then three boxes; zeros in empty boxes."
+        }
       ],
       "checks": [
-        {"question": "A Sacco with 15 matatus earned Sh 213,400 in January and Sh 198,750 in February. Total for both months?", "answer": "Sh 412,150", "shows": "ignores the 15"},
-        {"question": "A county planted two hundred and five thousand trees in March and forty thousand and sixty in April. Total?", "answer": "245,060 trees", "shows": "words to figures with zeros"}
+        {
+          "question": "A Sacco with 15 matatus earned Sh 213,400 in January and Sh 198,750 in February. Total for both months?",
+          "answer": "Sh 412,150",
+          "shows": "ignores the 15"
+        },
+        {
+          "question": "A county planted two hundred and five thousand trees in March and forty thousand and sixty in April. Total?",
+          "answer": "245,060 trees",
+          "shows": "words to figures with zeros"
+        }
       ]
     },
     {
       "skill": "MATH.G5.NUMBER.ADDITION.ESTIMATE_SUM_NEAREST_100",
       "key_step": "The child rounds each number to the nearest hundred by the tens digit, then adds the rounded numbers.",
-      "floor": {"prerequisite": "Rounds to the nearest hundred.", "question": "Round 4,367 to the nearest hundred.", "answer": "4,400"},
-      "representations": ["number lines between hundreds", "rounded numbers", "the estimate"],
-      "steps": ["Round each number by its tens digit.", "Bridge carefully (4,960 becomes 5,000).", "Add the rounded numbers."],
-      "contexts": ["estimating a shop bill", "estimating people at two events", "estimating total distance"],
+      "floor": {
+        "prerequisite": "Rounds to the nearest hundred.",
+        "question": "Round 4,367 to the nearest hundred.",
+        "answer": "4,400"
+      },
+      "representations": [
+        "number lines between hundreds",
+        "rounded numbers",
+        "the estimate"
+      ],
+      "steps": [
+        "Round each number by its tens digit.",
+        "Bridge carefully (4,960 becomes 5,000).",
+        "Add the rounded numbers."
+      ],
+      "contexts": [
+        "estimating a shop bill",
+        "estimating people at two events",
+        "estimating total distance"
+      ],
       "board": [
-        {"beat": "write", "do": "Write 4,367 + 2,851 with an empty box above each for its rounded value."},
-        {"beat": "child_draws", "do": "Child writes each rounded number."},
-        {"beat": "pause", "do": "Wait for the estimate."}
+        {
+          "beat": "write",
+          "do": "Write 4,367 + 2,851 with an empty box above each for its rounded value."
+        },
+        {
+          "beat": "child_draws",
+          "do": "Child writes each rounded number."
+        },
+        {
+          "beat": "pause",
+          "do": "Wait for the estimate."
+        }
       ],
       "misconceptions": [
-        {"code": "MATH.G5.NUMBER.ADDITION.ESTIMATE_SUM_NEAREST_100.M_ROUND_BY_TRUNCATING", "listen_for": ["4,300 and 2,800"], "ask": "On a number line, is 4,367 nearer 4,300 or 4,400?", "repair": "Rounding goes to the nearer hundred; 6 tens is past halfway."},
-        {"code": "MATH.G5.NUMBER.ADDITION.ESTIMATE_SUM_NEAREST_100.M_ROUND_BRIDGE", "listen_for": ["4,1000"], "ask": "What hundred comes after 4,900?", "repair": "Count on along the line: 4,900 then 5,000."}
+        {
+          "code": "MATH.G5.NUMBER.ADDITION.ESTIMATE_SUM_NEAREST_100.M_ROUND_BY_TRUNCATING",
+          "listen_for": [
+            "4,300 and 2,800"
+          ],
+          "ask": "On a number line, is 4,367 nearer 4,300 or 4,400?",
+          "repair": "Rounding goes to the nearer hundred; 6 tens is past halfway."
+        },
+        {
+          "code": "MATH.G5.NUMBER.ADDITION.ESTIMATE_SUM_NEAREST_100.M_ROUND_BRIDGE",
+          "listen_for": [
+            "4,1000"
+          ],
+          "ask": "What hundred comes after 4,900?",
+          "repair": "Count on along the line: 4,900 then 5,000."
+        },
+        {
+          "code": "MATH.G5.NUMBER.ADDITION.ESTIMATE_SUM_NEAREST_100.M_CHAIN_ROUNDING",
+          "listen_for": [
+            "3,500"
+          ],
+          "ask": "Which digit decides rounding to the nearest hundred?",
+          "repair": "Only the tens digit decides: 3,449 is before the halfway, so 3,400."
+        }
       ],
       "checks": [
-        {"question": "Estimate 4,367 + 2,851 by rounding each to the nearest hundred.", "answer": "4,400 + 2,900 = 7,300", "shows": "rounds each by the tens digit"},
-        {"question": "Estimate 4,960 + 3,215 to the nearest hundred.", "answer": "5,000 + 3,200 = 8,200", "shows": "bridges"}
+        {
+          "question": "Estimate 4,367 + 2,851 by rounding each to the nearest hundred.",
+          "answer": "4,400 + 2,900 = 7,300",
+          "shows": "rounds each by the tens digit"
+        },
+        {
+          "question": "Estimate 4,960 + 3,215 to the nearest hundred.",
+          "answer": "5,000 + 3,200 = 8,200",
+          "shows": "bridges"
+        }
       ]
     },
     {
       "skill": "MATH.G5.NUMBER.ADDITION.ESTIMATE_SUM_NEAREST_1000",
       "key_step": "The child rounds each number to the nearest thousand by the hundreds digit, keeps the zeros, and adds.",
-      "floor": {"prerequisite": "Rounds to the nearest thousand.", "question": "Round 23,640 to the nearest thousand.", "answer": "24,000"},
-      "representations": ["number line between thousands", "rounded numbers with zeros", "the estimate"],
-      "steps": ["Look at the hundreds digit.", "Round each number.", "Keep the zeros.", "Add."],
-      "contexts": ["estimating money for a school trip", "estimating crowd sizes", "estimating a harvest"],
+      "floor": {
+        "prerequisite": "Rounds to the nearest thousand.",
+        "question": "Round 23,640 to the nearest thousand.",
+        "answer": "24,000"
+      },
+      "representations": [
+        "number line between thousands",
+        "rounded numbers with zeros",
+        "the estimate"
+      ],
+      "steps": [
+        "Look at the hundreds digit.",
+        "Round each number.",
+        "Keep the zeros.",
+        "Add."
+      ],
+      "contexts": [
+        "estimating money for a school trip",
+        "estimating crowd sizes",
+        "estimating a harvest"
+      ],
       "board": [
-        {"beat": "write", "do": "Write 46,409 + 31,750."},
-        {"beat": "point", "do": "Point at the hundreds digit of each.", "say": "Which digit decides for the nearest thousand?"},
-        {"beat": "pause", "do": "Wait for the child to round both and add."}
+        {
+          "beat": "write",
+          "do": "Write 46,409 + 31,750."
+        },
+        {
+          "beat": "point",
+          "do": "Point at the hundreds digit of each.",
+          "say": "Which digit decides for the nearest thousand?"
+        },
+        {
+          "beat": "pause",
+          "do": "Wait for the child to round both and add."
+        }
       ],
       "misconceptions": [
-        {"code": "MATH.G5.NUMBER.ADDITION.ESTIMATE_SUM_NEAREST_1000.M_DECIDE_BY_LAST_DIGIT", "listen_for": ["the 9 rounds it up"], "ask": "Which place are we rounding to, and which digit is just to its right?", "repair": "Only the digit right after the thousands decides."},
-        {"code": "MATH.G5.NUMBER.ADDITION.ESTIMATE_SUM_NEAREST_1000.M_DROP_ZEROS_ROUNDED", "listen_for": ["129 plus 205"], "ask": "Is 129 near 128,700?", "repair": "Rounding keeps the size: write the zeros."}
+        {
+          "code": "MATH.G5.NUMBER.ADDITION.ESTIMATE_SUM_NEAREST_1000.M_DECIDE_BY_LAST_DIGIT",
+          "listen_for": [
+            "the 9 rounds it up"
+          ],
+          "ask": "Which place are we rounding to, and which digit is just to its right?",
+          "repair": "Only the digit right after the thousands decides."
+        },
+        {
+          "code": "MATH.G5.NUMBER.ADDITION.ESTIMATE_SUM_NEAREST_1000.M_DROP_ZEROS_ROUNDED",
+          "listen_for": [
+            "129 plus 205"
+          ],
+          "ask": "Is 129 near 128,700?",
+          "repair": "Rounding keeps the size: write the zeros."
+        },
+        {
+          "code": "MATH.G5.NUMBER.ADDITION.ESTIMATE_SUM_NEAREST_1000.M_WRONG_ROUNDING_PLACE",
+          "listen_for": [
+            "23,600"
+          ],
+          "ask": "Which place does 'nearest thousand' ask for?",
+          "repair": "Underline the thousands first; zeros after it."
+        }
       ],
       "checks": [
-        {"question": "Estimate 46,409 + 31,750 to the nearest thousand.", "answer": "46,000 + 32,000 = 78,000", "shows": "uses the hundreds digit"},
-        {"question": "Estimate 128,700 + 205,300 to the nearest thousand.", "answer": "129,000 + 205,000 = 334,000", "shows": "keeps the zeros"}
+        {
+          "question": "Estimate 46,409 + 31,750 to the nearest thousand.",
+          "answer": "46,000 + 32,000 = 78,000",
+          "shows": "uses the hundreds digit"
+        },
+        {
+          "question": "Estimate 128,700 + 205,300 to the nearest thousand.",
+          "answer": "129,000 + 205,000 = 334,000",
+          "shows": "keeps the zeros"
+        }
       ]
     },
     {
       "skill": "MATH.G5.NUMBER.ADDITION.ESTIMATE_TO_CHECK_SUM",
       "key_step": "The child compares an exact sum with an estimate and judges it reasonable if it is close (not equal), and suspicious if it is far off.",
-      "floor": {"prerequisite": "Estimates a sum.", "question": "Estimate 386,450 + 207,380 to the nearest thousand.", "answer": "386,000 + 207,000 = 593,000"},
-      "representations": ["an exact answer and an estimate side by side", "a number line showing both", "a judgement"],
-      "steps": ["Estimate.", "Place the exact answer and the estimate on a line.", "Close means reasonable; far means check again."],
-      "contexts": ["checking a shop bill", "checking a classmate's homework", "checking a fundraising total"],
+      "floor": {
+        "prerequisite": "Estimates a sum.",
+        "question": "Estimate 386,450 + 207,380 to the nearest thousand.",
+        "answer": "386,000 + 207,000 = 593,000"
+      },
+      "representations": [
+        "an exact answer and an estimate side by side",
+        "a number line showing both",
+        "a judgement"
+      ],
+      "steps": [
+        "Estimate.",
+        "Place the exact answer and the estimate on a line.",
+        "Close means reasonable; far means check again."
+      ],
+      "contexts": [
+        "checking a shop bill",
+        "checking a classmate's homework",
+        "checking a fundraising total"
+      ],
       "board": [
-        {"beat": "write", "do": "Write Wanjiru's answer: 386,450 + 207,380 = 493,830."},
-        {"beat": "predict", "do": "Ask for an estimate before judging.", "say": "Estimate first. About how much?"},
-        {"beat": "pause", "do": "Wait for the child to compare and judge."}
+        {
+          "beat": "write",
+          "do": "Write Wanjiru's answer: 386,450 + 207,380 = 493,830."
+        },
+        {
+          "beat": "predict",
+          "do": "Ask for an estimate before judging.",
+          "say": "Estimate first. About how much?"
+        },
+        {
+          "beat": "pause",
+          "do": "Wait for the child to compare and judge."
+        }
       ],
       "misconceptions": [
-        {"code": "MATH.G5.NUMBER.ADDITION.ESTIMATE_TO_CHECK_SUM.M_NO_SENSE_CHECK", "listen_for": ["it looks fine"], "ask": "Is 493,830 near your estimate?", "repair": "100,000 apart is too far: something went wrong. Always compare."},
-        {"code": "MATH.G5.NUMBER.ADDITION.ESTIMATE_TO_CHECK_SUM.M_EXACT_MUST_EQUAL_ESTIMATE", "listen_for": ["it's not the same so wrong"], "ask": "Did we round the numbers to make the estimate?", "repair": "An estimate is close, not exact; small differences are expected."}
+        {
+          "code": "MATH.G5.NUMBER.ADDITION.ESTIMATE_TO_CHECK_SUM.M_NO_SENSE_CHECK",
+          "listen_for": [
+            "it looks fine"
+          ],
+          "ask": "Is 493,830 near your estimate?",
+          "repair": "100,000 apart is too far: something went wrong. Always compare."
+        },
+        {
+          "code": "MATH.G5.NUMBER.ADDITION.ESTIMATE_TO_CHECK_SUM.M_EXACT_MUST_EQUAL_ESTIMATE",
+          "listen_for": [
+            "it's not the same so wrong"
+          ],
+          "ask": "Did we round the numbers to make the estimate?",
+          "repair": "An estimate is close, not exact; small differences are expected."
+        }
       ],
       "checks": [
-        {"question": "Wanjiru worked out 386,450 + 207,380 = 493,830. Is it reasonable?", "answer": "No; the estimate is about 593,000", "shows": "spots a far-off answer"},
-        {"question": "The estimate is 593,000 and the exact answer is 593,830. Wrong?", "answer": "No; it is close, so reasonable", "shows": "close, not equal"}
+        {
+          "question": "Wanjiru worked out 386,450 + 207,380 = 493,830. Is it reasonable?",
+          "answer": "No; the estimate is about 593,000",
+          "shows": "spots a far-off answer"
+        },
+        {
+          "question": "The estimate is 593,000 and the exact answer is 593,830. Wrong?",
+          "answer": "No; it is close, so reasonable",
+          "shows": "close, not equal"
+        }
       ]
     },
     {
       "skill": "MATH.G5.NUMBER.ADDITION.ADD_PATTERN_EXTEND",
       "key_step": "The child finds the step between neighbouring terms and adds it to get the next or missing terms, regrouping across places.",
-      "floor": {"prerequisite": "Adds 6-digit numbers.", "question": "What is added each time: 10, 20, 30, 40?", "answer": "10"},
-      "representations": ["a savings story", "jumps on a number line", "the pattern"],
-      "steps": ["Find the difference between two neighbours.", "Check it with another pair.", "Add the step for the next term.", "For the nth term, count the jumps (n - 1)."],
-      "contexts": ["a chama saving the same each month", "a cooperative's savings", "a school's growing library"],
+      "floor": {
+        "prerequisite": "Adds 6-digit numbers.",
+        "question": "What is added each time: 10, 20, 30, 40?",
+        "answer": "10"
+      },
+      "representations": [
+        "a savings story",
+        "jumps on a number line",
+        "the pattern"
+      ],
+      "steps": [
+        "Find the difference between two neighbours.",
+        "Check it with another pair.",
+        "Add the step for the next term.",
+        "For the nth term, count the jumps (n - 1)."
+      ],
+      "contexts": [
+        "a chama saving the same each month",
+        "a cooperative's savings",
+        "a school's growing library"
+      ],
       "board": [
-        {"beat": "write", "do": "Write 450,000, 475,000, ___, 525,000."},
-        {"beat": "draw", "do": "Draw jumps between the first two terms."},
-        {"beat": "pause", "do": "Wait for the child to find the step and the missing term."}
+        {
+          "beat": "write",
+          "do": "Write 450,000, 475,000, ___, 525,000."
+        },
+        {
+          "beat": "draw",
+          "do": "Draw jumps between the first two terms."
+        },
+        {
+          "beat": "pause",
+          "do": "Wait for the child to find the step and the missing term."
+        }
       ],
       "misconceptions": [
-        {"code": "MATH.G5.NUMBER.ADDITION.ADD_PATTERN_EXTEND.M_PATTERN_NON_ADJACENT_STEP", "listen_for": ["75,000"], "ask": "Are 450,000 and 525,000 next to each other?", "repair": "Find the step from two neighbours."},
-        {"code": "MATH.G5.NUMBER.ADDITION.ADD_PATTERN_EXTEND.M_PATTERN_OFF_BY_ONE", "listen_for": ["I added it 5 times for month 5"], "ask": "How many jumps from month 1 to month 5?", "repair": "Draw the months and count the jumps between them: four."}
+        {
+          "code": "MATH.G5.NUMBER.ADDITION.ADD_PATTERN_EXTEND.M_PATTERN_NON_ADJACENT_STEP",
+          "listen_for": [
+            "75,000"
+          ],
+          "ask": "Are 450,000 and 525,000 next to each other?",
+          "repair": "Find the step from two neighbours."
+        },
+        {
+          "code": "MATH.G5.NUMBER.ADDITION.ADD_PATTERN_EXTEND.M_PATTERN_OFF_BY_ONE",
+          "listen_for": [
+            "I added it 5 times for month 5"
+          ],
+          "ask": "How many jumps from month 1 to month 5?",
+          "repair": "Draw the months and count the jumps between them: four."
+        },
+        {
+          "code": "MATH.G5.NUMBER.ADDITION.ADD_PATTERN_EXTEND.M_PATTERN_BRIDGE_DROP",
+          "listen_for": [
+            "241,600"
+          ],
+          "ask": "Is the pattern going up or down? Is 241,600 bigger?",
+          "repair": "Nine thousand plus two thousand is eleven thousand: regroup into the ten thousands."
+        }
       ],
       "checks": [
-        {"question": "Fill in: 450,000, 475,000, ___, 525,000.", "answer": "500,000", "shows": "step from neighbours"},
-        {"question": "A cooperative had Sh 100,000 in month 1 and saves Sh 25,000 more each month. How much in month 5?", "answer": "Sh 200,000", "shows": "n - 1 jumps"}
+        {
+          "question": "Fill in: 450,000, 475,000, ___, 525,000.",
+          "answer": "500,000",
+          "shows": "step from neighbours"
+        },
+        {
+          "question": "A cooperative had Sh 100,000 in month 1 and saves Sh 25,000 more each month. How much in month 5?",
+          "answer": "Sh 200,000",
+          "shows": "n - 1 jumps"
+        }
       ]
     },
     {
       "skill": "MATH.G5.NUMBER.ADDITION.ADD_PATTERN_CREATE",
       "key_step": "The child makes a pattern by adding the same value each time and states the rule by the value added (add 10,000), not by a digit change.",
-      "floor": {"prerequisite": "Extends an addition pattern.", "question": "Next: 20,000, 30,000, 40,000?", "answer": "50,000"},
-      "representations": ["a chama contribution story", "the pattern written out", "the rule in words"],
-      "steps": ["Choose a start and a step.", "Add the step each time, regrouping.", "State the rule as the value added.", "Check each step is the same size."],
-      "contexts": ["a chama adding the same each month", "a water tank filling", "a farm adding trees each year"],
+      "floor": {
+        "prerequisite": "Extends an addition pattern.",
+        "question": "Next: 20,000, 30,000, 40,000?",
+        "answer": "50,000"
+      },
+      "representations": [
+        "a chama contribution story",
+        "the pattern written out",
+        "the rule in words"
+      ],
+      "steps": [
+        "Choose a start and a step.",
+        "Add the step each time, regrouping.",
+        "State the rule as the value added.",
+        "Check each step is the same size."
+      ],
+      "contexts": [
+        "a chama adding the same each month",
+        "a water tank filling",
+        "a farm adding trees each year"
+      ],
       "board": [
-        {"beat": "write", "do": "Write a start, 96,000, and a rule, add 2,000."},
-        {"beat": "child_draws", "do": "Child writes the next four terms."},
-        {"beat": "pause", "do": "Wait for the child to check the step across 100,000."}
+        {
+          "beat": "write",
+          "do": "Write a start, 96,000, and a rule, add 2,000."
+        },
+        {
+          "beat": "child_draws",
+          "do": "Child writes the next four terms."
+        },
+        {
+          "beat": "pause",
+          "do": "Wait for the child to check the step across 100,000."
+        }
       ],
       "misconceptions": [
-        {"code": "MATH.G5.NUMBER.ADDITION.ADD_PATTERN_CREATE.M_RULE_AS_DIGIT_CHANGE", "listen_for": ["add 1"], "ask": "The digit went up by 1, but what is that 1 worth?", "repair": "Say the rule with the place value: add 10,000."},
-        {"code": "MATH.G5.NUMBER.ADDITION.ADD_PATTERN_CREATE.M_PATTERN_RULE_DRIFT", "listen_for": ["100,000 then 101,000"], "ask": "Subtract each pair. Are the steps all the same?", "repair": "Check every step; regroup carefully at 100,000."}
+        {
+          "code": "MATH.G5.NUMBER.ADDITION.ADD_PATTERN_CREATE.M_RULE_AS_DIGIT_CHANGE",
+          "listen_for": [
+            "add 1"
+          ],
+          "ask": "The digit went up by 1, but what is that 1 worth?",
+          "repair": "Say the rule with the place value: add 10,000."
+        },
+        {
+          "code": "MATH.G5.NUMBER.ADDITION.ADD_PATTERN_CREATE.M_PATTERN_RULE_DRIFT",
+          "listen_for": [
+            "100,000 then 101,000"
+          ],
+          "ask": "Subtract each pair. Are the steps all the same?",
+          "repair": "Check every step; regroup carefully at 100,000."
+        }
       ],
       "checks": [
-        {"question": "Start at 96,000 and add 2,000 each time. Write four terms.", "answer": "98,000, 100,000, 102,000, 104,000", "shows": "constant step across a boundary"},
-        {"question": "What is the rule: 20,000, 30,000, 40,000?", "answer": "Add 10,000", "shows": "rule by value"}
+        {
+          "question": "Start at 96,000 and add 2,000 each time. Write four terms.",
+          "answer": "98,000, 100,000, 102,000, 104,000",
+          "shows": "constant step across a boundary"
+        },
+        {
+          "question": "What is the rule: 20,000, 30,000, 40,000?",
+          "answer": "Add 10,000",
+          "shows": "rule by value"
+        }
       ]
     }
   ]

@@ -72,7 +72,8 @@ export function renderDoc({ sources, pack }) {
   out.push('');
   out.push('GENERATED from the HOREB repo (`curriculum/mathematics/teaching/g5/*.json`) by `node scripts/build-teaching-pack.mjs --doc <this file>`. Edit the JSON, not this page.');
   out.push('');
-  out.push(`Research round 3, 13 Nov 2026 night. ${covered} of the ${total} Grade 5 skills in the curriculum map have an entry. Fractions come first and are written in full; the other strands are shorter. Nothing here has been checked by a Kenyan maths teacher yet, and the live tutor does not load it.`);
+  const nMis = Object.values(pack).reduce((n, e) => n + e.misconceptions.length, 0);
+  out.push(`Research round 3, 13 Nov 2026 night. ${covered} of the ${total} Grade 5 skills in the curriculum map have an entry, covering ${nMis} misconceptions from the library. Fractions come first and are written in full; the other strands are shorter. Nothing here has been checked by a Kenyan maths teacher yet, and the live tutor does not load it.`);
   out.push('');
   out.push('How to read an entry:');
   out.push('- **Key step**: the step the child must say or draw. The tutor never says it first (playbook round 3, R3-3).');

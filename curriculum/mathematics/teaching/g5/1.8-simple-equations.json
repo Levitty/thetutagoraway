@@ -2,154 +2,538 @@
   "sub_strand": "MATH.G5.NUMBER.SIMPLE_EQUATIONS",
   "title": "Simple equations",
   "status": "draft: written 13 Nov 2026 from research round 3; shorter entries; not yet checked by a Kenyan maths teacher; EQ_TWO_STEP is a proposed extension in the map; not loaded by the live tutor",
-  "sources": [52, 73],
+  "sources": [
+    52,
+    73
+  ],
   "notes": "The equals sign as a balance is the key picture: children who read '=' as 'write the answer' cannot solve equations. A beam balance (or a see-saw) on the board, with a bag of unknown sweets, carries every skill. Letters stand for numbers, never for objects (p is the cost of a pen, not the pen).",
   "skills": [
     {
       "skill": "MATH.G5.NUMBER.SIMPLE_EQUATIONS.EQ_MEANING",
       "key_step": "The child reads '=' as 'has the same value as' (both sides balance), tells an equation from an expression, and says a letter stands for an unknown number.",
-      "floor": {"prerequisite": "Solves missing-number sentences.", "question": "7 + □ = 12. What goes in the box?", "answer": "5"},
-      "representations": ["a balance with bags of sweets", "the equation under the balance", "words: has the same value as"],
-      "steps": ["Show a balance: both sides have the same value.", "Read '=' as 'has the same value as'.", "A bag of unknown sweets is a letter.", "An expression has no '='; an equation does."],
-      "contexts": ["sweets in bags on a balance", "the cost of a pen in shillings", "passengers on a matatu"],
+      "floor": {
+        "prerequisite": "Solves missing-number sentences.",
+        "question": "7 + □ = 12. What goes in the box?",
+        "answer": "5"
+      },
+      "representations": [
+        "a balance with bags of sweets",
+        "the equation under the balance",
+        "words: has the same value as"
+      ],
+      "steps": [
+        "Show a balance: both sides have the same value.",
+        "Read '=' as 'has the same value as'.",
+        "A bag of unknown sweets is a letter.",
+        "An expression has no '='; an equation does."
+      ],
+      "contexts": [
+        "sweets in bags on a balance",
+        "the cost of a pen in shillings",
+        "passengers on a matatu"
+      ],
       "board": [
-        {"beat": "draw", "do": "Draw a level balance: 8 + 4 counters on the left, a box and 5 counters on the right."},
-        {"beat": "point", "do": "Point at the level beam.", "say": "What does a level beam tell us about the two sides?"},
-        {"beat": "pause", "do": "Wait for the child to find the box."}
+        {
+          "beat": "draw",
+          "do": "Draw a level balance: 8 + 4 counters on the left, a box and 5 counters on the right."
+        },
+        {
+          "beat": "point",
+          "do": "Point at the level beam.",
+          "say": "What does a level beam tell us about the two sides?"
+        },
+        {
+          "beat": "pause",
+          "do": "Wait for the child to find the box."
+        }
       ],
       "misconceptions": [
-        {"code": "MATH.G5.NUMBER.SIMPLE_EQUATIONS.EQ_MEANING.M_EQUALS_MEANS_ANSWER", "listen_for": ["12"], "ask": "If the box is 12, is the right side 12 + 5? Does it balance?", "repair": "'=' means both sides have the same value: check the balance."},
-        {"code": "MATH.G5.NUMBER.SIMPLE_EQUATIONS.EQ_MEANING.M_LETTER_AS_OBJECT", "listen_for": ["p is the pen"], "ask": "Can you add a pen to 20 shillings?", "repair": "p is a number: the cost of the pen in shillings."}
+        {
+          "code": "MATH.G5.NUMBER.SIMPLE_EQUATIONS.EQ_MEANING.M_EQUALS_MEANS_ANSWER",
+          "listen_for": [
+            "12"
+          ],
+          "ask": "If the box is 12, is the right side 12 + 5? Does it balance?",
+          "repair": "'=' means both sides have the same value: check the balance."
+        },
+        {
+          "code": "MATH.G5.NUMBER.SIMPLE_EQUATIONS.EQ_MEANING.M_LETTER_AS_OBJECT",
+          "listen_for": [
+            "p is the pen"
+          ],
+          "ask": "Can you add a pen to 20 shillings?",
+          "repair": "p is a number: the cost of the pen in shillings."
+        },
+        {
+          "code": "MATH.G5.NUMBER.SIMPLE_EQUATIONS.EQ_MEANING.M_EXPRESSION_IS_EQUATION",
+          "listen_for": [
+            "x + 7"
+          ],
+          "ask": "Where is the equals sign in x + 7?",
+          "repair": "An equation says two things balance, so it needs '='."
+        }
       ],
       "checks": [
-        {"question": "Fill in the box: 8 + 4 = □ + 5", "answer": "7", "shows": "equals as balance"},
-        {"question": "Which is an equation: x + 7, or x + 7 = 15?", "answer": "x + 7 = 15", "shows": "equation has two equal sides"}
+        {
+          "question": "Fill in the box: 8 + 4 = □ + 5",
+          "answer": "7",
+          "shows": "equals as balance"
+        },
+        {
+          "question": "Which is an equation: x + 7, or x + 7 = 15?",
+          "answer": "x + 7 = 15",
+          "shows": "equation has two equal sides"
+        }
       ]
     },
     {
       "skill": "MATH.G5.NUMBER.SIMPLE_EQUATIONS.EQ_FORM_ADD_SUB",
       "key_step": "The child writes an equation that follows the action of the story (start, change, result), with the letter where the unknown is, not the answer worked out.",
-      "floor": {"prerequisite": "Knows what an equation is.", "question": "Is x + 3 = 10 an equation?", "answer": "Yes"},
-      "representations": ["the story acted out", "a bar model", "the equation"],
-      "steps": ["Name the unknown with a letter.", "Tell the story in order: start, change, result.", "Write the equation in that order.", "Do not solve yet."],
-      "contexts": ["shillings spent", "passengers on a matatu", "eggs collected"],
+      "floor": {
+        "prerequisite": "Knows what an equation is.",
+        "question": "Is x + 3 = 10 an equation?",
+        "answer": "Yes"
+      },
+      "representations": [
+        "the story acted out",
+        "a bar model",
+        "the equation"
+      ],
+      "steps": [
+        "Name the unknown with a letter.",
+        "Tell the story in order: start, change, result.",
+        "Write the equation in that order.",
+        "Do not solve yet."
+      ],
+      "contexts": [
+        "shillings spent",
+        "passengers on a matatu",
+        "eggs collected"
+      ],
       "board": [
-        {"beat": "write", "do": "Write: Njeri had some shillings. She spent Sh 45 and had Sh 30 left."},
-        {"beat": "draw", "do": "Draw a bar: the whole is unknown n; parts 45 and 30."},
-        {"beat": "pause", "do": "Wait for the child to write the equation."}
+        {
+          "beat": "write",
+          "do": "Write: Njeri had some shillings. She spent Sh 45 and had Sh 30 left."
+        },
+        {
+          "beat": "draw",
+          "do": "Draw a bar: the whole is unknown n; parts 45 and 30."
+        },
+        {
+          "beat": "pause",
+          "do": "Wait for the child to write the equation."
+        }
       ],
       "misconceptions": [
-        {"code": "MATH.G5.NUMBER.SIMPLE_EQUATIONS.EQ_FORM_ADD_SUB.M_SUBTRACTION_ORDER_REVERSED", "listen_for": ["45 - n = 30"], "ask": "What did Njeri start with?", "repair": "Write the story in order: she started with n, then spent 45."},
-        {"code": "MATH.G5.NUMBER.SIMPLE_EQUATIONS.EQ_FORM_ADD_SUB.M_WRITES_ANSWER_NOT_EQUATION", "listen_for": ["n = 75"], "ask": "The question asks for the equation. What sentence shows the story?", "repair": "Write the story as an equation first; solving is the next step."}
+        {
+          "code": "MATH.G5.NUMBER.SIMPLE_EQUATIONS.EQ_FORM_ADD_SUB.M_SUBTRACTION_ORDER_REVERSED",
+          "listen_for": [
+            "45 - n = 30"
+          ],
+          "ask": "What did Njeri start with?",
+          "repair": "Write the story in order: she started with n, then spent 45."
+        },
+        {
+          "code": "MATH.G5.NUMBER.SIMPLE_EQUATIONS.EQ_FORM_ADD_SUB.M_WRITES_ANSWER_NOT_EQUATION",
+          "listen_for": [
+            "n = 75"
+          ],
+          "ask": "The question asks for the equation. What sentence shows the story?",
+          "repair": "Write the story as an equation first; solving is the next step."
+        },
+        {
+          "code": "MATH.G5.NUMBER.SIMPLE_EQUATIONS.EQ_FORM_ADD_SUB.M_KEYWORD_MORE_MEANS_ADD",
+          "listen_for": [
+            "a - 6 = 15"
+          ],
+          "ask": "Who has more eggs, Otieno or Akinyi?",
+          "repair": "Draw two bars: Akinyi's plus 6 equals Otieno's, so a + 6 = 15."
+        }
       ],
       "checks": [
-        {"question": "Njeri had n shillings. She spent Sh 45 and had Sh 30 left. Write the equation.", "answer": "n - 45 = 30", "shows": "follows the action"},
-        {"question": "A matatu had p passengers. At a stage 5 got on, making 16. Write the equation.", "answer": "p + 5 = 16", "shows": "equation, not the answer"}
+        {
+          "question": "Njeri had n shillings. She spent Sh 45 and had Sh 30 left. Write the equation.",
+          "answer": "n - 45 = 30",
+          "shows": "follows the action"
+        },
+        {
+          "question": "A matatu had p passengers. At a stage 5 got on, making 16. Write the equation.",
+          "answer": "p + 5 = 16",
+          "shows": "equation, not the answer"
+        }
       ]
     },
     {
       "skill": "MATH.G5.NUMBER.SIMPLE_EQUATIONS.EQ_FORM_MUL_DIV",
       "key_step": "The child writes multiplication for equal groups or 'times as many' (with the multiplier on the right quantity) and division for sharing (total first).",
-      "floor": {"prerequisite": "Forms addition and subtraction equations.", "question": "Write: some number plus 4 is 9.", "answer": "x + 4 = 9"},
-      "representations": ["equal groups or shares drawn", "a bar model for times as many", "the equation"],
-      "steps": ["Draw the groups or the bars.", "Decide multiply or divide.", "Write 3b for 3 x b.", "In sharing, the total comes first."],
-      "contexts": ["goats and cows on a Nakuru farm", "oranges shared among children", "exercise books bought"],
+      "floor": {
+        "prerequisite": "Forms addition and subtraction equations.",
+        "question": "Write: some number plus 4 is 9.",
+        "answer": "x + 4 = 9"
+      },
+      "representations": [
+        "equal groups or shares drawn",
+        "a bar model for times as many",
+        "the equation"
+      ],
+      "steps": [
+        "Draw the groups or the bars.",
+        "Decide multiply or divide.",
+        "Write 3b for 3 x b.",
+        "In sharing, the total comes first."
+      ],
+      "contexts": [
+        "goats and cows on a Nakuru farm",
+        "oranges shared among children",
+        "exercise books bought"
+      ],
       "board": [
-        {"beat": "write", "do": "Write: a farmer has 4 times as many goats as cows. He has 36 goats."},
-        {"beat": "draw", "do": "Draw one bar for cows (c) and four such bars for goats."},
-        {"beat": "pause", "do": "Wait for the child to write the equation."}
+        {
+          "beat": "write",
+          "do": "Write: a farmer has 4 times as many goats as cows. He has 36 goats."
+        },
+        {
+          "beat": "draw",
+          "do": "Draw one bar for cows (c) and four such bars for goats."
+        },
+        {
+          "beat": "pause",
+          "do": "Wait for the child to write the equation."
+        }
       ],
       "misconceptions": [
-        {"code": "MATH.G5.NUMBER.SIMPLE_EQUATIONS.EQ_FORM_MUL_DIV.M_TIMES_AS_MANY_REVERSED", "listen_for": ["4 x 36"], "ask": "Which animal has more, goats or cows?", "repair": "The bar model: four cow-bars make the goats, so 4c = 36."},
-        {"code": "MATH.G5.NUMBER.SIMPLE_EQUATIONS.EQ_FORM_MUL_DIV.M_REPEATED_COST_AS_ADD", "listen_for": ["3 + b"], "ask": "If each book costs b, what do three books cost?", "repair": "b + b + b is 3 x b, written 3b."}
+        {
+          "code": "MATH.G5.NUMBER.SIMPLE_EQUATIONS.EQ_FORM_MUL_DIV.M_TIMES_AS_MANY_REVERSED",
+          "listen_for": [
+            "4 x 36"
+          ],
+          "ask": "Which animal has more, goats or cows?",
+          "repair": "The bar model: four cow-bars make the goats, so 4c = 36."
+        },
+        {
+          "code": "MATH.G5.NUMBER.SIMPLE_EQUATIONS.EQ_FORM_MUL_DIV.M_REPEATED_COST_AS_ADD",
+          "listen_for": [
+            "3 + b"
+          ],
+          "ask": "If each book costs b, what do three books cost?",
+          "repair": "b + b + b is 3 x b, written 3b."
+        },
+        {
+          "code": "MATH.G5.NUMBER.SIMPLE_EQUATIONS.EQ_FORM_MUL_DIV.M_SHARING_ORDER_REVERSED",
+          "listen_for": [
+            "5 ÷ x"
+          ],
+          "ask": "What is being shared: the oranges or the children?",
+          "repair": "The total being shared comes first: x ÷ 5."
+        }
       ],
       "checks": [
-        {"question": "A farmer has 4 times as many goats as cows. He has 36 goats. Write an equation for c cows.", "answer": "4c = 36", "shows": "multiplier on the right quantity"},
-        {"question": "Mama shared x oranges equally among 5 children; each got 3. Write the equation.", "answer": "x ÷ 5 = 3", "shows": "total first in sharing"}
+        {
+          "question": "A farmer has 4 times as many goats as cows. He has 36 goats. Write an equation for c cows.",
+          "answer": "4c = 36",
+          "shows": "multiplier on the right quantity"
+        },
+        {
+          "question": "Mama shared x oranges equally among 5 children; each got 3. Write the equation.",
+          "answer": "x ÷ 5 = 3",
+          "shows": "total first in sharing"
+        }
       ]
     },
     {
       "skill": "MATH.G5.NUMBER.SIMPLE_EQUATIONS.EQ_SOLVE_ADD_SUB",
       "key_step": "The child undoes the operation (inverse) or does the same to both sides of the balance, and checks by putting the answer back.",
-      "floor": {"prerequisite": "Knows addition and subtraction undo each other.", "question": "If 15 + 25 = 40, what is 40 - 15?", "answer": "25"},
-      "representations": ["a balance with a bag and counters", "taking the same off both sides", "the solution and check"],
-      "steps": ["Show the equation on a balance.", "Take the same off (or add the same to) both sides.", "Read off the bag's value.", "Check by substituting."],
-      "contexts": ["money saved", "a matatu's passengers", "ages"],
+      "floor": {
+        "prerequisite": "Knows addition and subtraction undo each other.",
+        "question": "If 15 + 25 = 40, what is 40 - 15?",
+        "answer": "25"
+      },
+      "representations": [
+        "a balance with a bag and counters",
+        "taking the same off both sides",
+        "the solution and check"
+      ],
+      "steps": [
+        "Show the equation on a balance.",
+        "Take the same off (or add the same to) both sides.",
+        "Read off the bag's value.",
+        "Check by substituting."
+      ],
+      "contexts": [
+        "money saved",
+        "a matatu's passengers",
+        "ages"
+      ],
       "board": [
-        {"beat": "draw", "do": "Draw a balance: bag x and 15 counters on the left, 40 on the right."},
-        {"beat": "point", "do": "Point at the 15 counters.", "say": "What can we take off both sides and stay level?"},
-        {"beat": "pause", "do": "Wait for the child to solve and check."}
+        {
+          "beat": "draw",
+          "do": "Draw a balance: bag x and 15 counters on the left, 40 on the right."
+        },
+        {
+          "beat": "point",
+          "do": "Point at the 15 counters.",
+          "say": "What can we take off both sides and stay level?"
+        },
+        {
+          "beat": "pause",
+          "do": "Wait for the child to solve and check."
+        }
       ],
       "misconceptions": [
-        {"code": "MATH.G5.NUMBER.SIMPLE_EQUATIONS.EQ_SOLVE_ADD_SUB.M_SAME_OPERATION_NOT_INVERSE", "listen_for": ["55"], "ask": "Put 55 back in: is 55 + 15 equal to 40?", "repair": "Check fails; undo the adding by taking away."},
-        {"code": "MATH.G5.NUMBER.SIMPLE_EQUATIONS.EQ_SOLVE_ADD_SUB.M_SUBTRACTS_FOR_X_MINUS", "listen_for": ["12"], "ask": "If x is 12, what is 12 - 18?", "repair": "Something take away 18 leaves 30, so it was 30 + 18."}
+        {
+          "code": "MATH.G5.NUMBER.SIMPLE_EQUATIONS.EQ_SOLVE_ADD_SUB.M_SAME_OPERATION_NOT_INVERSE",
+          "listen_for": [
+            "55"
+          ],
+          "ask": "Put 55 back in: is 55 + 15 equal to 40?",
+          "repair": "Check fails; undo the adding by taking away."
+        },
+        {
+          "code": "MATH.G5.NUMBER.SIMPLE_EQUATIONS.EQ_SOLVE_ADD_SUB.M_SUBTRACTS_FOR_X_MINUS",
+          "listen_for": [
+            "12"
+          ],
+          "ask": "If x is 12, what is 12 - 18?",
+          "repair": "Something take away 18 leaves 30, so it was 30 + 18."
+        },
+        {
+          "code": "MATH.G5.NUMBER.SIMPLE_EQUATIONS.EQ_SOLVE_ADD_SUB.M_UNKNOWN_SUBTRACTED_TREATED_AS_X_MINUS",
+          "listen_for": [
+            "70"
+          ],
+          "ask": "Put 70 back: is 50 - 70 equal to 20?",
+          "repair": "50 take away something leaves 20, so the something is 50 - 20."
+        }
       ],
       "checks": [
-        {"question": "Solve x - 18 = 30.", "answer": "x = 48", "shows": "adds to undo subtracting"},
-        {"question": "Solve 50 - x = 20.", "answer": "x = 30", "shows": "unknown being subtracted"}
+        {
+          "question": "Solve x - 18 = 30.",
+          "answer": "x = 48",
+          "shows": "adds to undo subtracting"
+        },
+        {
+          "question": "Solve 50 - x = 20.",
+          "answer": "x = 30",
+          "shows": "unknown being subtracted"
+        }
       ]
     },
     {
       "skill": "MATH.G5.NUMBER.SIMPLE_EQUATIONS.EQ_SOLVE_MUL_DIV",
       "key_step": "The child reads 3x as 3 times x, divides to undo multiplying and multiplies to undo dividing, and checks by substituting.",
-      "floor": {"prerequisite": "Knows multiplication and division facts.", "question": "If 4 x 7 = 28, what is 28 ÷ 4?", "answer": "7"},
-      "representations": ["equal bags on a balance", "the inverse written", "the solution and check"],
-      "steps": ["Read 4x as four bags of x.", "Share both sides equally among the bags.", "For x ÷ 5 = 8, five shares of 8 make x.", "Check."],
-      "contexts": ["packets of sweets of equal size", "money shared equally", "crates of soda"],
+      "floor": {
+        "prerequisite": "Knows multiplication and division facts.",
+        "question": "If 4 x 7 = 28, what is 28 ÷ 4?",
+        "answer": "7"
+      },
+      "representations": [
+        "equal bags on a balance",
+        "the inverse written",
+        "the solution and check"
+      ],
+      "steps": [
+        "Read 4x as four bags of x.",
+        "Share both sides equally among the bags.",
+        "For x ÷ 5 = 8, five shares of 8 make x.",
+        "Check."
+      ],
+      "contexts": [
+        "packets of sweets of equal size",
+        "money shared equally",
+        "crates of soda"
+      ],
       "board": [
-        {"beat": "draw", "do": "Draw a balance: four equal bags on the left, 28 counters on the right."},
-        {"beat": "point", "do": "Point at the four bags.", "say": "How can we share 28 among four bags?"},
-        {"beat": "pause", "do": "Wait for the child to solve and check."}
+        {
+          "beat": "draw",
+          "do": "Draw a balance: four equal bags on the left, 28 counters on the right."
+        },
+        {
+          "beat": "point",
+          "do": "Point at the four bags.",
+          "say": "How can we share 28 among four bags?"
+        },
+        {
+          "beat": "pause",
+          "do": "Wait for the child to solve and check."
+        }
       ],
       "misconceptions": [
-        {"code": "MATH.G5.NUMBER.SIMPLE_EQUATIONS.EQ_SOLVE_MUL_DIV.M_MULTIPLIES_FOR_AX", "listen_for": ["112"], "ask": "If each bag had 112, would four bags balance 28?", "repair": "Undo multiplying by dividing: share 28 among 4."},
-        {"code": "MATH.G5.NUMBER.SIMPLE_EQUATIONS.EQ_SOLVE_MUL_DIV.M_3X_AS_TWO_DIGIT_NUMBER", "listen_for": ["x is 6, thirty-six"], "ask": "Does 3x mean thirty-something, or 3 times x?", "repair": "Write 3x as 3 x x; three bags of x."}
+        {
+          "code": "MATH.G5.NUMBER.SIMPLE_EQUATIONS.EQ_SOLVE_MUL_DIV.M_MULTIPLIES_FOR_AX",
+          "listen_for": [
+            "112"
+          ],
+          "ask": "If each bag had 112, would four bags balance 28?",
+          "repair": "Undo multiplying by dividing: share 28 among 4."
+        },
+        {
+          "code": "MATH.G5.NUMBER.SIMPLE_EQUATIONS.EQ_SOLVE_MUL_DIV.M_3X_AS_TWO_DIGIT_NUMBER",
+          "listen_for": [
+            "x is 6, thirty-six"
+          ],
+          "ask": "Does 3x mean thirty-something, or 3 times x?",
+          "repair": "Write 3x as 3 x x; three bags of x."
+        },
+        {
+          "code": "MATH.G5.NUMBER.SIMPLE_EQUATIONS.EQ_SOLVE_MUL_DIV.M_DIVIDES_FOR_X_DIV",
+          "listen_for": [
+            "1 remainder 3",
+            "3"
+          ],
+          "ask": "If x shared among 5 gives 8 each, how many were there?",
+          "repair": "Undo dividing by multiplying: 5 x 8."
+        }
       ],
       "checks": [
-        {"question": "Solve 4x = 28.", "answer": "x = 7", "shows": "divides to undo"},
-        {"question": "Solve x ÷ 5 = 8.", "answer": "x = 40", "shows": "multiplies to undo"}
+        {
+          "question": "Solve 4x = 28.",
+          "answer": "x = 7",
+          "shows": "divides to undo"
+        },
+        {
+          "question": "Solve x ÷ 5 = 8.",
+          "answer": "x = 40",
+          "shows": "multiplies to undo"
+        }
       ]
     },
     {
       "skill": "MATH.G5.NUMBER.SIMPLE_EQUATIONS.EQ_SOLVE_IN_CONTEXT",
       "key_step": "The child models the story with an equation (not the numbers in story order), solves it, answers in words with a unit, and checks the answer makes sense in the story.",
-      "floor": {"prerequisite": "Forms and solves one-step equations.", "question": "Solve p + 5 = 16.", "answer": "p = 11"},
-      "representations": ["the story", "a bar or balance", "equation, solution, sentence"],
-      "steps": ["Name the unknown.", "Write the equation from the story's action.", "Solve.", "Answer in words; check against the story."],
-      "contexts": ["bunches of sukuma wiki bought", "passengers on a matatu", "money in a chama"],
+      "floor": {
+        "prerequisite": "Forms and solves one-step equations.",
+        "question": "Solve p + 5 = 16.",
+        "answer": "p = 11"
+      },
+      "representations": [
+        "the story",
+        "a bar or balance",
+        "equation, solution, sentence"
+      ],
+      "steps": [
+        "Name the unknown.",
+        "Write the equation from the story's action.",
+        "Solve.",
+        "Answer in words; check against the story."
+      ],
+      "contexts": [
+        "bunches of sukuma wiki bought",
+        "passengers on a matatu",
+        "money in a chama"
+      ],
       "board": [
-        {"beat": "write", "do": "Write: 5 bunches of sukuma wiki cost Sh 100. Find the cost of one bunch."},
-        {"beat": "draw", "do": "Draw five equal bars making 100."},
-        {"beat": "pause", "do": "Wait for the child's equation, answer and sentence."}
+        {
+          "beat": "write",
+          "do": "Write: 5 bunches of sukuma wiki cost Sh 100. Find the cost of one bunch."
+        },
+        {
+          "beat": "draw",
+          "do": "Draw five equal bars making 100."
+        },
+        {
+          "beat": "pause",
+          "do": "Wait for the child's equation, answer and sentence."
+        }
       ],
       "misconceptions": [
-        {"code": "MATH.G5.NUMBER.SIMPLE_EQUATIONS.EQ_SOLVE_IN_CONTEXT.M_NO_REASONABLENESS_CHECK", "listen_for": ["Sh 500 each"], "ask": "Can one bunch cost more than all five together?", "repair": "Check every answer against the story before writing it."},
-        {"code": "MATH.G5.NUMBER.SIMPLE_EQUATIONS.EQ_SOLVE_IN_CONTEXT.M_NUMBERS_IN_STORY_ORDER", "listen_for": ["I did the numbers in order"], "ask": "Draw the story. Is the unknown the start, the change or the end?", "repair": "Model the action with a bar before choosing the operation."}
+        {
+          "code": "MATH.G5.NUMBER.SIMPLE_EQUATIONS.EQ_SOLVE_IN_CONTEXT.M_NO_REASONABLENESS_CHECK",
+          "listen_for": [
+            "Sh 500 each"
+          ],
+          "ask": "Can one bunch cost more than all five together?",
+          "repair": "Check every answer against the story before writing it."
+        },
+        {
+          "code": "MATH.G5.NUMBER.SIMPLE_EQUATIONS.EQ_SOLVE_IN_CONTEXT.M_NUMBERS_IN_STORY_ORDER",
+          "listen_for": [
+            "I did the numbers in order"
+          ],
+          "ask": "Draw the story. Is the unknown the start, the change or the end?",
+          "repair": "Model the action with a bar before choosing the operation."
+        }
       ],
       "checks": [
-        {"question": "5 bunches of sukuma wiki cost Sh 100. Cost of one bunch?", "answer": "5b = 100, so b = Sh 20", "shows": "equation, solution, unit"},
-        {"question": "A matatu had some passengers; 7 got off, leaving 9. How many were there at first?", "answer": "p - 7 = 9, so p = 16", "shows": "unknown start"}
+        {
+          "question": "5 bunches of sukuma wiki cost Sh 100. Cost of one bunch?",
+          "answer": "5b = 100, so b = Sh 20",
+          "shows": "equation, solution, unit"
+        },
+        {
+          "question": "A matatu had some passengers; 7 got off, leaving 9. How many were there at first?",
+          "answer": "p - 7 = 9, so p = 16",
+          "shows": "unknown start"
+        }
       ]
     },
     {
       "skill": "MATH.G5.NUMBER.SIMPLE_EQUATIONS.EQ_TWO_STEP",
       "key_step": "The child undoes the operations in reverse order (take away the added number first, then divide), keeping 2x and 6 separate.",
-      "floor": {"prerequisite": "Solves one-step equations.", "question": "Solve 2x = 14.", "answer": "x = 7"},
-      "representations": ["a balance with two bags and loose counters", "the steps written", "the solution and check"],
-      "steps": ["Show 2x + 6 on a balance.", "Take the loose 6 off both sides first.", "Share the rest between the two bags.", "Check by substituting."],
-      "contexts": ["2 pens and a Sh 6 rubber cost Sh 20", "tickets plus a fixed fee", "packets plus loose sweets"],
+      "floor": {
+        "prerequisite": "Solves one-step equations.",
+        "question": "Solve 2x = 14.",
+        "answer": "x = 7"
+      },
+      "representations": [
+        "a balance with two bags and loose counters",
+        "the steps written",
+        "the solution and check"
+      ],
+      "steps": [
+        "Show 2x + 6 on a balance.",
+        "Take the loose 6 off both sides first.",
+        "Share the rest between the two bags.",
+        "Check by substituting."
+      ],
+      "contexts": [
+        "2 pens and a Sh 6 rubber cost Sh 20",
+        "tickets plus a fixed fee",
+        "packets plus loose sweets"
+      ],
       "board": [
-        {"beat": "draw", "do": "Draw a balance: two bags and 6 counters on the left, 20 on the right."},
-        {"beat": "point", "do": "Point at the loose 6.", "say": "What do we take off first?"},
-        {"beat": "pause", "do": "Wait for the child's two steps."}
+        {
+          "beat": "draw",
+          "do": "Draw a balance: two bags and 6 counters on the left, 20 on the right."
+        },
+        {
+          "beat": "point",
+          "do": "Point at the loose 6.",
+          "say": "What do we take off first?"
+        },
+        {
+          "beat": "pause",
+          "do": "Wait for the child's two steps."
+        }
       ],
       "misconceptions": [
-        {"code": "MATH.G5.NUMBER.SIMPLE_EQUATIONS.EQ_TWO_STEP.M_UNDOES_IN_WRONG_ORDER", "listen_for": ["20 ÷ 2 first"], "ask": "Are the 6 loose counters inside the bags?", "repair": "Take off the loose counters first, then share what is left."},
-        {"code": "MATH.G5.NUMBER.SIMPLE_EQUATIONS.EQ_TWO_STEP.M_COMBINES_UNLIKE_TERMS", "listen_for": ["8x"], "ask": "Is 6 loose counters the same as 6 bags?", "repair": "2x and 6 are different things; keep them apart."}
+        {
+          "code": "MATH.G5.NUMBER.SIMPLE_EQUATIONS.EQ_TWO_STEP.M_UNDOES_IN_WRONG_ORDER",
+          "listen_for": [
+            "20 ÷ 2 first"
+          ],
+          "ask": "Are the 6 loose counters inside the bags?",
+          "repair": "Take off the loose counters first, then share what is left."
+        },
+        {
+          "code": "MATH.G5.NUMBER.SIMPLE_EQUATIONS.EQ_TWO_STEP.M_COMBINES_UNLIKE_TERMS",
+          "listen_for": [
+            "8x"
+          ],
+          "ask": "Is 6 loose counters the same as 6 bags?",
+          "repair": "2x and 6 are different things; keep them apart."
+        }
       ],
       "checks": [
-        {"question": "Solve 2x + 6 = 20.", "answer": "x = 7", "shows": "reverse order"},
-        {"question": "3 tickets and a Sh 10 fee cost Sh 70. What does one ticket cost?", "answer": "3t + 10 = 70, so t = Sh 20", "shows": "forms and solves two steps"}
+        {
+          "question": "Solve 2x + 6 = 20.",
+          "answer": "x = 7",
+          "shows": "reverse order"
+        },
+        {
+          "question": "3 tickets and a Sh 10 fee cost Sh 70. What does one ticket cost?",
+          "answer": "3t + 10 = 70, so t = Sh 20",
+          "shows": "forms and solves two steps"
+        }
       ]
     }
   ]

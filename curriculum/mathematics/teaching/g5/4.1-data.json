@@ -612,6 +612,14 @@
           ],
           "ask": "Did those 12 choose tea, or not?",
           "repair": "Did not choose tea = everyone minus the tea row."
+        },
+        {
+          "code": "MATH.G5.DATA_H.DATA_REPRESENTATION.COMPARE_TOTAL_FREQUENCIES.M_TOTAL_IS_ROWS",
+          "listen_for": [
+            "4"
+          ],
+          "ask": "Were only 4 learners asked?",
+          "repair": "Altogether means add every frequency."
         }
       ],
       "checks": [
@@ -681,6 +689,14 @@
           ],
           "ask": "Who did we ask?",
           "repair": "The data is about this class only."
+        },
+        {
+          "code": "MATH.G5.DATA_H.DATA_REPRESENTATION.INFER_FROM_FREQUENCY_TABLE.M_OPINION_OVER_DATA",
+          "listen_for": [
+            "mango is sweetest"
+          ],
+          "ask": "What did the learners choose most?",
+          "repair": "The decision comes from the table, not from what we like."
         }
       ],
       "checks": [

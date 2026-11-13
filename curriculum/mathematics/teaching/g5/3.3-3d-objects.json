@@ -2,91 +2,331 @@
   "sub_strand": "MATH.G5.GEOMET.3_D_OBJECTS",
   "title": "3-D objects",
   "status": "draft: written 13 Nov 2026 from research round 3; shorter entries; not yet checked by a Kenyan maths teacher; not loaded by the live tutor",
-  "sources": [52],
+  "sources": [
+    52
+  ],
   "notes": "Use objects every Kenyan child knows: a dice, a matchbox, a tin of Kimbo or cooking fat, a football, a round hut roof (a cone, not a pyramid). Show objects turned and in different sizes, because children recognise shapes only in their usual position.",
   "skills": [
     {
       "skill": "MATH.G5.GEOMET.3_D_OBJECTS.NAME_3D_OBJECTS",
       "key_step": "The child names cubes, cuboids, cylinders, spheres and pyramids by their features, whatever their size, material or position.",
-      "floor": {"prerequisite": "Names flat shapes (square, rectangle, circle, triangle).", "question": "What flat shape is the face of a dice?", "answer": "A square"},
-      "representations": ["real objects", "drawings in different positions", "names"],
-      "steps": ["Sort real objects into groups by shape.", "Name each group.", "Turn objects: a tin on its side, a pyramid on its point.", "Compare a cube (all faces square) with a cuboid."],
-      "contexts": ["a dice", "a brick", "a tin of Kimbo", "a football", "a water tank"],
+      "floor": {
+        "prerequisite": "Names flat shapes (square, rectangle, circle, triangle).",
+        "question": "What flat shape is the face of a dice?",
+        "answer": "A square"
+      },
+      "representations": [
+        "real objects",
+        "drawings in different positions",
+        "names"
+      ],
+      "steps": [
+        "Sort real objects into groups by shape.",
+        "Name each group.",
+        "Turn objects: a tin on its side, a pyramid on its point.",
+        "Compare a cube (all faces square) with a cuboid."
+      ],
+      "contexts": [
+        "a dice",
+        "a brick",
+        "a tin of Kimbo",
+        "a football",
+        "a water tank"
+      ],
       "board": [
-        {"beat": "draw", "do": "Draw a tin standing, then the same tin lying on its side."},
-        {"beat": "predict", "do": "Ask whether the lying tin is still the same shape.", "say": "Is it still the same shape?"},
-        {"beat": "pause", "do": "Wait for the child to name it and say why."}
+        {
+          "beat": "draw",
+          "do": "Draw a tin standing, then the same tin lying on its side."
+        },
+        {
+          "beat": "predict",
+          "do": "Ask whether the lying tin is still the same shape.",
+          "say": "Is it still the same shape?"
+        },
+        {
+          "beat": "pause",
+          "do": "Wait for the child to name it and say why."
+        }
       ],
       "misconceptions": [
-        {"code": "MATH.G5.GEOMET.3_D_OBJECTS.NAME_3D_OBJECTS.M_EVERY_BOX_IS_CUBE", "listen_for": ["a cube"], "ask": "Are all the faces of a brick the same square?", "repair": "A cube has six equal square faces; a box with rectangles is a cuboid."},
-        {"code": "MATH.G5.GEOMET.3_D_OBJECTS.NAME_3D_OBJECTS.M_POINTED_MEANS_PYRAMID", "listen_for": ["the hut roof is a pyramid"], "ask": "Does the hut roof have flat triangle faces, or a curved surface?", "repair": "A pyramid has flat faces and a flat base with straight sides; a round roof is a cone."}
+        {
+          "code": "MATH.G5.GEOMET.3_D_OBJECTS.NAME_3D_OBJECTS.M_EVERY_BOX_IS_CUBE",
+          "listen_for": [
+            "a cube"
+          ],
+          "ask": "Are all the faces of a brick the same square?",
+          "repair": "A cube has six equal square faces; a box with rectangles is a cuboid."
+        },
+        {
+          "code": "MATH.G5.GEOMET.3_D_OBJECTS.NAME_3D_OBJECTS.M_POINTED_MEANS_PYRAMID",
+          "listen_for": [
+            "the hut roof is a pyramid"
+          ],
+          "ask": "Does the hut roof have flat triangle faces, or a curved surface?",
+          "repair": "A pyramid has flat faces and a flat base with straight sides; a round roof is a cone."
+        },
+        {
+          "code": "MATH.G5.GEOMET.3_D_OBJECTS.NAME_3D_OBJECTS.M_PROTOTYPE_ORIENTATION",
+          "listen_for": [
+            "it's a rectangle now"
+          ],
+          "ask": "Stand the tin up again. Did its shape change?",
+          "repair": "Turning an object does not change what it is."
+        },
+        {
+          "code": "MATH.G5.GEOMET.3_D_OBJECTS.NAME_3D_OBJECTS.M_SIZE_CHANGES_SHAPE",
+          "listen_for": [
+            "the tank is bigger"
+          ],
+          "ask": "Do both have two flat circles and a curved side?",
+          "repair": "Shape is about faces and surfaces, not size or material."
+        }
       ],
       "checks": [
-        {"question": "Is a building brick a cube or a cuboid?", "answer": "A cuboid", "shows": "cube versus cuboid"},
-        {"question": "A tin of Kimbo is lying on its side. What 3-D object is it?", "answer": "A cylinder", "shows": "position does not change shape"}
+        {
+          "question": "Is a building brick a cube or a cuboid?",
+          "answer": "A cuboid",
+          "shows": "cube versus cuboid"
+        },
+        {
+          "question": "A tin of Kimbo is lying on its side. What 3-D object is it?",
+          "answer": "A cylinder",
+          "shows": "position does not change shape"
+        }
       ]
     },
     {
       "skill": "MATH.G5.GEOMET.3_D_OBJECTS.DESCRIBE_3D_FEATURES",
       "key_step": "The child describes surfaces (flat, curved, both), corners and edges, and whether an object rolls, slides or both.",
-      "floor": {"prerequisite": "Names the five objects.", "question": "Name an object shaped like a ball.", "answer": "A football (a sphere)"},
-      "representations": ["objects handled or drawn", "a table of features", "the description"],
-      "steps": ["Feel surfaces: flat or curved.", "Count corners, including the base of a pyramid.", "Test rolling and sliding."],
-      "contexts": ["a tin of cooking fat", "a football", "a matchbox", "a model pyramid"],
+      "floor": {
+        "prerequisite": "Names the five objects.",
+        "question": "Name an object shaped like a ball.",
+        "answer": "A football (a sphere)"
+      },
+      "representations": [
+        "objects handled or drawn",
+        "a table of features",
+        "the description"
+      ],
+      "steps": [
+        "Feel surfaces: flat or curved.",
+        "Count corners, including the base of a pyramid.",
+        "Test rolling and sliding."
+      ],
+      "contexts": [
+        "a tin of cooking fat",
+        "a football",
+        "a matchbox",
+        "a model pyramid"
+      ],
       "board": [
-        {"beat": "draw", "do": "Draw a square-based pyramid; highlight the top point."},
-        {"beat": "count", "do": "Child counts all corners, the board marking each.", "say": "Count every corner, top and bottom."},
-        {"beat": "pause", "do": "Wait for the total."}
+        {
+          "beat": "draw",
+          "do": "Draw a square-based pyramid; highlight the top point."
+        },
+        {
+          "beat": "count",
+          "do": "Child counts all corners, the board marking each.",
+          "say": "Count every corner, top and bottom."
+        },
+        {
+          "beat": "pause",
+          "do": "Wait for the total."
+        }
       ],
       "misconceptions": [
-        {"code": "MATH.G5.GEOMET.3_D_OBJECTS.DESCRIBE_3D_FEATURES.M_PYRAMID_ONE_CORNER", "listen_for": ["one corner"], "ask": "Are there corners at the bottom too?", "repair": "Count the base corners as well: four plus the top."},
-        {"code": "MATH.G5.GEOMET.3_D_OBJECTS.DESCRIBE_3D_FEATURES.M_CYLINDER_SURFACES", "listen_for": ["all curved"], "ask": "Can a tin stand on its end? What is that end like?", "repair": "A cylinder has two flat ends and one curved surface."}
+        {
+          "code": "MATH.G5.GEOMET.3_D_OBJECTS.DESCRIBE_3D_FEATURES.M_PYRAMID_ONE_CORNER",
+          "listen_for": [
+            "one corner"
+          ],
+          "ask": "Are there corners at the bottom too?",
+          "repair": "Count the base corners as well: four plus the top."
+        },
+        {
+          "code": "MATH.G5.GEOMET.3_D_OBJECTS.DESCRIBE_3D_FEATURES.M_CYLINDER_SURFACES",
+          "listen_for": [
+            "all curved"
+          ],
+          "ask": "Can a tin stand on its end? What is that end like?",
+          "repair": "A cylinder has two flat ends and one curved surface."
+        },
+        {
+          "code": "MATH.G5.GEOMET.3_D_OBJECTS.DESCRIBE_3D_FEATURES.M_ONLY_BALLS_ROLL",
+          "listen_for": [
+            "only the football"
+          ],
+          "ask": "Lay the tin on its side and push it. What happens?",
+          "repair": "Anything with a curved surface can roll; a tin rolls on its side and slides on its end."
+        }
       ],
       "checks": [
-        {"question": "How many corners does a square-based pyramid have?", "answer": "5", "shows": "counts base corners"},
-        {"question": "Which can roll: a football, a tin of milk, a matchbox?", "answer": "The football and the tin", "shows": "curved surfaces roll"}
+        {
+          "question": "How many corners does a square-based pyramid have?",
+          "answer": "5",
+          "shows": "counts base corners"
+        },
+        {
+          "question": "Which can roll: a football, a tin of milk, a matchbox?",
+          "answer": "The football and the tin",
+          "shows": "curved surfaces roll"
+        }
       ]
     },
     {
       "skill": "MATH.G5.GEOMET.3_D_OBJECTS.2D_VS_3D",
       "key_step": "The child uses flat-shape names for flat shapes and solid names for solid objects, and explains that any real object, however thin, is 3-D.",
-      "floor": {"prerequisite": "Names flat shapes and 3-D objects.", "question": "What flat shape is a drawn circle?", "answer": "A circle"},
-      "representations": ["real objects beside their outlines", "a drawing beside an object", "the right names"],
-      "steps": ["Put a ball beside a drawn circle.", "Name each.", "Discuss a coin and a chapati: thin, but you can hold them, so 3-D."],
-      "contexts": ["an orange", "a five-shilling coin", "a chapati", "a dice"],
+      "floor": {
+        "prerequisite": "Names flat shapes and 3-D objects.",
+        "question": "What flat shape is a drawn circle?",
+        "answer": "A circle"
+      },
+      "representations": [
+        "real objects beside their outlines",
+        "a drawing beside an object",
+        "the right names"
+      ],
+      "steps": [
+        "Put a ball beside a drawn circle.",
+        "Name each.",
+        "Discuss a coin and a chapati: thin, but you can hold them, so 3-D."
+      ],
+      "contexts": [
+        "an orange",
+        "a five-shilling coin",
+        "a chapati",
+        "a dice"
+      ],
       "board": [
-        {"beat": "draw", "do": "Draw a flat circle beside a shaded ball."},
-        {"beat": "point", "do": "Point at each.", "say": "Which one could you hold?"},
-        {"beat": "pause", "do": "Wait for the names."}
+        {
+          "beat": "draw",
+          "do": "Draw a flat circle beside a shaded ball."
+        },
+        {
+          "beat": "point",
+          "do": "Point at each.",
+          "say": "Which one could you hold?"
+        },
+        {
+          "beat": "pause",
+          "do": "Wait for the names."
+        }
       ],
       "misconceptions": [
-        {"code": "MATH.G5.GEOMET.3_D_OBJECTS.2D_VS_3D.M_PLANE_NAME_FOR_SOLID", "listen_for": ["a circle"], "ask": "Can you hold a circle drawn on paper the way you hold an orange?", "repair": "A circle is flat; a ball shape you can hold is a sphere."},
-        {"code": "MATH.G5.GEOMET.3_D_OBJECTS.2D_VS_3D.M_THIN_OBJECT_IS_2D", "listen_for": ["the coin is a circle"], "ask": "Can you stack coins? Does a stack have height?", "repair": "Every coin has a little thickness, so it is 3-D (a very short cylinder)."}
+        {
+          "code": "MATH.G5.GEOMET.3_D_OBJECTS.2D_VS_3D.M_PLANE_NAME_FOR_SOLID",
+          "listen_for": [
+            "a circle"
+          ],
+          "ask": "Can you hold a circle drawn on paper the way you hold an orange?",
+          "repair": "A circle is flat; a ball shape you can hold is a sphere."
+        },
+        {
+          "code": "MATH.G5.GEOMET.3_D_OBJECTS.2D_VS_3D.M_THIN_OBJECT_IS_2D",
+          "listen_for": [
+            "the coin is a circle"
+          ],
+          "ask": "Can you stack coins? Does a stack have height?",
+          "repair": "Every coin has a little thickness, so it is 3-D (a very short cylinder)."
+        }
       ],
       "checks": [
-        {"question": "What 3-D object is an orange?", "answer": "A sphere", "shows": "solid name"},
-        {"question": "Is a five-shilling coin 2-D or 3-D?", "answer": "3-D; it has thickness", "shows": "thin objects are 3-D"}
+        {
+          "question": "What 3-D object is an orange?",
+          "answer": "A sphere",
+          "shows": "solid name"
+        },
+        {
+          "question": "Is a five-shilling coin 2-D or 3-D?",
+          "answer": "3-D; it has thickness",
+          "shows": "thin objects are 3-D"
+        }
       ]
     },
     {
       "skill": "MATH.G5.GEOMET.3_D_OBJECTS.2D_FACES_IN_3D",
       "key_step": "The child names the flat faces of each object, including hidden ones, and knows curved surfaces are not faces.",
-      "floor": {"prerequisite": "Describes flat and curved surfaces.", "question": "Is the side of a tin flat or curved?", "answer": "Curved"},
-      "representations": ["tracing round faces of real objects", "objects unfolded (nets)", "the list of faces"],
-      "steps": ["Trace round each flat face of a box on paper.", "Count hidden faces too.", "Pyramid: triangles and a square base.", "Cylinder: two circles; the curved side is not a face."],
-      "contexts": ["a cube-shaped box", "a tin of Kimbo", "a model pyramid", "a football"],
+      "floor": {
+        "prerequisite": "Describes flat and curved surfaces.",
+        "question": "Is the side of a tin flat or curved?",
+        "answer": "Curved"
+      },
+      "representations": [
+        "tracing round faces of real objects",
+        "objects unfolded (nets)",
+        "the list of faces"
+      ],
+      "steps": [
+        "Trace round each flat face of a box on paper.",
+        "Count hidden faces too.",
+        "Pyramid: triangles and a square base.",
+        "Cylinder: two circles; the curved side is not a face."
+      ],
+      "contexts": [
+        "a cube-shaped box",
+        "a tin of Kimbo",
+        "a model pyramid",
+        "a football"
+      ],
       "board": [
-        {"beat": "draw", "do": "Draw a cube box; unfold it slowly into its net, one face at a time."},
-        {"beat": "count", "do": "Child counts the squares as they unfold."},
-        {"beat": "pause", "do": "Wait for the total and the shape name."}
+        {
+          "beat": "draw",
+          "do": "Draw a cube box; unfold it slowly into its net, one face at a time."
+        },
+        {
+          "beat": "count",
+          "do": "Child counts the squares as they unfold."
+        },
+        {
+          "beat": "pause",
+          "do": "Wait for the total and the shape name."
+        }
       ],
       "misconceptions": [
-        {"code": "MATH.G5.GEOMET.3_D_OBJECTS.2D_FACES_IN_3D.M_VISIBLE_FACES_ONLY", "listen_for": ["3 squares"], "ask": "What about the bottom and the back?", "repair": "Unfold the box: every face appears, hidden ones too."},
-        {"code": "MATH.G5.GEOMET.3_D_OBJECTS.2D_FACES_IN_3D.M_PYRAMID_ALL_TRIANGLES", "listen_for": ["triangles only"], "ask": "What does the pyramid stand on?", "repair": "Lift the pyramid in the drawing: the base is a square."}
+        {
+          "code": "MATH.G5.GEOMET.3_D_OBJECTS.2D_FACES_IN_3D.M_VISIBLE_FACES_ONLY",
+          "listen_for": [
+            "3 squares"
+          ],
+          "ask": "What about the bottom and the back?",
+          "repair": "Unfold the box: every face appears, hidden ones too."
+        },
+        {
+          "code": "MATH.G5.GEOMET.3_D_OBJECTS.2D_FACES_IN_3D.M_PYRAMID_ALL_TRIANGLES",
+          "listen_for": [
+            "triangles only"
+          ],
+          "ask": "What does the pyramid stand on?",
+          "repair": "Lift the pyramid in the drawing: the base is a square."
+        },
+        {
+          "code": "MATH.G5.GEOMET.3_D_OBJECTS.2D_FACES_IN_3D.M_SPHERE_HAS_CIRCLE_FACE",
+          "listen_for": [
+            "a circle"
+          ],
+          "ask": "Can a football stand flat on a table?",
+          "repair": "A sphere has no flat face; its outline looks round but every part is curved."
+        },
+        {
+          "code": "MATH.G5.GEOMET.3_D_OBJECTS.2D_FACES_IN_3D.M_CYLINDER_SIDE_RECTANGLE_FACE",
+          "listen_for": [
+            "and a rectangle"
+          ],
+          "ask": "Is the side of the tin flat?",
+          "repair": "The side is curved, so it is not a face; only the two circles are flat."
+        }
       ],
       "checks": [
-        {"question": "Mwangi traces every face of a cube-shaped box. How many squares?", "answer": "6", "shows": "hidden faces"},
-        {"question": "What flat shapes are found on a tin of Kimbo?", "answer": "Two circles", "shows": "curved surface is not a face"}
+        {
+          "question": "Mwangi traces every face of a cube-shaped box. How many squares?",
+          "answer": "6",
+          "shows": "hidden faces"
+        },
+        {
+          "question": "What flat shapes are found on a tin of Kimbo?",
+          "answer": "Two circles",
+          "shows": "curved surface is not a face"
+        }
       ]
     }
   ]

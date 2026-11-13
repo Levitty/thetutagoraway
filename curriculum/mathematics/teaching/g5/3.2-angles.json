@@ -2,135 +2,488 @@
   "sub_strand": "MATH.G5.GEOMET.ANGLES",
   "title": "Angles",
   "status": "draft: written 13 Nov 2026 from research round 3; shorter entries; protractor work needs the rendering engine's protractor figure (phase 2); not loaded by the live tutor",
-  "sources": [52, 66, 71],
+  "sources": [
+    52,
+    66,
+    71
+  ],
   "notes": "Children judge an angle by the length of its arms or the gap between the tips, read the wrong protractor scale, and do not line up the zero line (source 71). Teach angle as an amount of turn first (a door opening, a clock hand), estimate against a right angle before every measurement, and only then the protractor.",
   "skills": [
     {
       "skill": "MATH.G5.GEOMET.ANGLES.TURNS_AS_ANGLES",
       "key_step": "The child links quarter, half, three-quarter and full turns to 90°, 180°, 270° and 360°, measuring how far something turned from where it started.",
-      "floor": {"prerequisite": "Knows quarter, half and three-quarter turns (Grade 4).", "question": "Stand facing the door, make a half turn. Which way do you face?", "answer": "The opposite way"},
-      "representations": ["the child turning their body", "a clock hand sweeping", "turns labelled in degrees"],
-      "steps": ["Turn the body in quarters.", "A full turn is 360°.", "Halve and quarter it.", "Measure turns on a clock from the start position."],
-      "contexts": ["a door opening", "a clock's minute hand", "a matatu turning at a junction"],
+      "floor": {
+        "prerequisite": "Knows quarter, half and three-quarter turns (Grade 4).",
+        "question": "Stand facing the door, make a half turn. Which way do you face?",
+        "answer": "The opposite way"
+      },
+      "representations": [
+        "the child turning their body",
+        "a clock hand sweeping",
+        "turns labelled in degrees"
+      ],
+      "steps": [
+        "Turn the body in quarters.",
+        "A full turn is 360°.",
+        "Halve and quarter it.",
+        "Measure turns on a clock from the start position."
+      ],
+      "contexts": [
+        "a door opening",
+        "a clock's minute hand",
+        "a matatu turning at a junction"
+      ],
       "board": [
-        {"beat": "draw", "do": "Draw a clock face and the minute hand at 12; sweep it a quarter turn slowly to 3."},
-        {"beat": "predict", "do": "Ask how many degrees a full turn would be and then this quarter.", "say": "A full turn is 360 degrees. What is this quarter?"},
-        {"beat": "pause", "do": "Wait for the child's answer and reason."}
+        {
+          "beat": "draw",
+          "do": "Draw a clock face and the minute hand at 12; sweep it a quarter turn slowly to 3."
+        },
+        {
+          "beat": "predict",
+          "do": "Ask how many degrees a full turn would be and then this quarter.",
+          "say": "A full turn is 360 degrees. What is this quarter?"
+        },
+        {
+          "beat": "pause",
+          "do": "Wait for the child's answer and reason."
+        }
       ],
       "misconceptions": [
-        {"code": "MATH.G5.GEOMET.ANGLES.TURNS_AS_ANGLES.M_FULL_TURN_100", "listen_for": ["50 degrees", "25 degrees"], "ask": "How many degrees in a full turn?", "repair": "A full turn is 360°, not 100. Halve it, then halve again."},
-        {"code": "MATH.G5.GEOMET.ANGLES.TURNS_AS_ANGLES.M_TURN_FROM_TOP", "listen_for": ["it's at 6 so half"], "ask": "Where did the hand start?", "repair": "Measure from the start, not from 12: 3 to 6 is a quarter turn."}
+        {
+          "code": "MATH.G5.GEOMET.ANGLES.TURNS_AS_ANGLES.M_FULL_TURN_100",
+          "listen_for": [
+            "50 degrees",
+            "25 degrees"
+          ],
+          "ask": "How many degrees in a full turn?",
+          "repair": "A full turn is 360°, not 100. Halve it, then halve again."
+        },
+        {
+          "code": "MATH.G5.GEOMET.ANGLES.TURNS_AS_ANGLES.M_TURN_FROM_TOP",
+          "listen_for": [
+            "it's at 6 so half"
+          ],
+          "ask": "Where did the hand start?",
+          "repair": "Measure from the start, not from 12: 3 to 6 is a quarter turn."
+        },
+        {
+          "code": "MATH.G5.GEOMET.ANGLES.TURNS_AS_ANGLES.M_SAME_END_SAME_ANGLE",
+          "listen_for": [
+            "both 90"
+          ],
+          "ask": "Who turned further, Otieno or Akinyi?",
+          "repair": "Facing the same way is not the same turn: count the quarter turns each made."
+        }
       ],
       "checks": [
-        {"question": "How many degrees does a half turn make?", "answer": "180°", "shows": "half of 360"},
-        {"question": "The minute hand moves from 3 to 6. What turn and what angle?", "answer": "A quarter turn, 90°", "shows": "measures from the start"}
+        {
+          "question": "How many degrees does a half turn make?",
+          "answer": "180°",
+          "shows": "half of 360"
+        },
+        {
+          "question": "The minute hand moves from 3 to 6. What turn and what angle?",
+          "answer": "A quarter turn, 90°",
+          "shows": "measures from the start"
+        }
       ]
     },
     {
       "skill": "MATH.G5.GEOMET.ANGLES.DEGREE_AS_UNIT",
       "key_step": "The child explains that angle size is the amount of turn between the arms, not the length of the arms or the gap between their tips.",
-      "floor": {"prerequisite": "Knows angles as turns.", "question": "A door opens a little or a lot. Which is the bigger angle?", "answer": "A lot"},
-      "representations": ["a paper wedge as a unit angle", "the same angle with long and short arms", "degrees"],
-      "steps": ["Compare angles with a paper wedge: how many wedges fit?", "Draw the same angle with long and short arms; fit the wedge.", "Name the degree as a tiny standard wedge."],
-      "contexts": ["scissors opened", "a door opening", "a roof's slope"],
+      "floor": {
+        "prerequisite": "Knows angles as turns.",
+        "question": "A door opens a little or a lot. Which is the bigger angle?",
+        "answer": "A lot"
+      },
+      "representations": [
+        "a paper wedge as a unit angle",
+        "the same angle with long and short arms",
+        "degrees"
+      ],
+      "steps": [
+        "Compare angles with a paper wedge: how many wedges fit?",
+        "Draw the same angle with long and short arms; fit the wedge.",
+        "Name the degree as a tiny standard wedge."
+      ],
+      "contexts": [
+        "scissors opened",
+        "a door opening",
+        "a roof's slope"
+      ],
       "board": [
-        {"beat": "draw", "do": "Draw two equal angles, one with long arms, one with short arms."},
-        {"beat": "predict", "do": "Ask which angle is bigger before testing.", "say": "Which angle is bigger?"},
-        {"beat": "child_draws", "do": "Child places the same paper wedge in each."},
-        {"beat": "pause", "do": "Wait for the child to say what they found."}
+        {
+          "beat": "draw",
+          "do": "Draw two equal angles, one with long arms, one with short arms."
+        },
+        {
+          "beat": "predict",
+          "do": "Ask which angle is bigger before testing.",
+          "say": "Which angle is bigger?"
+        },
+        {
+          "beat": "child_draws",
+          "do": "Child places the same paper wedge in each."
+        },
+        {
+          "beat": "pause",
+          "do": "Wait for the child to say what they found."
+        }
       ],
       "misconceptions": [
-        {"code": "MATH.G5.GEOMET.ANGLES.DEGREE_AS_UNIT.M_LONGER_ARMS_BIGGER", "listen_for": ["longer arms", "P is bigger"], "ask": "If I rub out the ends of the long arms, does the opening change?", "repair": "Shorten the arms on the board: the turn stays. Angle is the turn."},
-        {"code": "MATH.G5.GEOMET.ANGLES.DEGREE_AS_UNIT.M_GAP_BETWEEN_ENDS", "listen_for": ["the ends are further apart"], "ask": "Make both arms the same length. Which opens wider?", "repair": "Compare openings at the corner, not at the tips."}
+        {
+          "code": "MATH.G5.GEOMET.ANGLES.DEGREE_AS_UNIT.M_LONGER_ARMS_BIGGER",
+          "listen_for": [
+            "longer arms",
+            "P is bigger"
+          ],
+          "ask": "If I rub out the ends of the long arms, does the opening change?",
+          "repair": "Shorten the arms on the board: the turn stays. Angle is the turn."
+        },
+        {
+          "code": "MATH.G5.GEOMET.ANGLES.DEGREE_AS_UNIT.M_GAP_BETWEEN_ENDS",
+          "listen_for": [
+            "the ends are further apart"
+          ],
+          "ask": "Make both arms the same length. Which opens wider?",
+          "repair": "Compare openings at the corner, not at the tips."
+        }
       ],
       "checks": [
-        {"question": "Angle P is 40° with 8 cm arms. Angle Q is 40° with 2 cm arms. Which is bigger?", "answer": "Neither; they are equal", "shows": "arm length does not matter"},
-        {"question": "Angle A is 60° with long arms; angle B is 80° with short arms. Which is bigger?", "answer": "Angle B", "shows": "turn, not tip gap"}
+        {
+          "question": "Angle P is 40° with 8 cm arms. Angle Q is 40° with 2 cm arms. Which is bigger?",
+          "answer": "Neither; they are equal",
+          "shows": "arm length does not matter"
+        },
+        {
+          "question": "Angle A is 60° with long arms; angle B is 80° with short arms. Which is bigger?",
+          "answer": "Angle B",
+          "shows": "turn, not tip gap"
+        }
       ]
     },
     {
       "skill": "MATH.G5.GEOMET.ANGLES.READ_PROTRACTOR_BOTH_SCALES",
       "key_step": "The child chooses the scale that starts at 0 on the baseline arm, checks the reading against an estimate (more or less than 90°), and counts small marks as 1° each.",
-      "floor": {"prerequisite": "Knows a right angle is 90°.", "question": "Is a sharp corner more or less than 90°?", "answer": "Less"},
-      "representations": ["a protractor drawn large with two scales", "the arm on 0 highlighted", "the reading"],
-      "steps": ["Estimate first: smaller or bigger than a right angle?", "Find which scale has 0 on the baseline arm.", "Follow that scale to the other arm.", "Check against the estimate."],
-      "contexts": ["the angle of a roof", "a ladder against a wall", "scissors"],
+      "floor": {
+        "prerequisite": "Knows a right angle is 90°.",
+        "question": "Is a sharp corner more or less than 90°?",
+        "answer": "Less"
+      },
+      "representations": [
+        "a protractor drawn large with two scales",
+        "the arm on 0 highlighted",
+        "the reading"
+      ],
+      "steps": [
+        "Estimate first: smaller or bigger than a right angle?",
+        "Find which scale has 0 on the baseline arm.",
+        "Follow that scale to the other arm.",
+        "Check against the estimate."
+      ],
+      "contexts": [
+        "the angle of a roof",
+        "a ladder against a wall",
+        "scissors"
+      ],
       "board": [
-        {"beat": "draw", "do": "Draw a protractor on an angle, one arm through the right-hand 0, the other passing 50 on the outer scale and 130 on the inner."},
-        {"beat": "predict", "do": "Ask whether the angle is more or less than a right angle.", "say": "More or less than a right angle?"},
-        {"beat": "point", "do": "Point at the 0 where the baseline arm sits.", "say": "Which scale starts at this 0?"},
-        {"beat": "pause", "do": "Wait for the child to read along that scale."}
+        {
+          "beat": "draw",
+          "do": "Draw a protractor on an angle, one arm through the right-hand 0, the other passing 50 on the outer scale and 130 on the inner."
+        },
+        {
+          "beat": "predict",
+          "do": "Ask whether the angle is more or less than a right angle.",
+          "say": "More or less than a right angle?"
+        },
+        {
+          "beat": "point",
+          "do": "Point at the 0 where the baseline arm sits.",
+          "say": "Which scale starts at this 0?"
+        },
+        {
+          "beat": "pause",
+          "do": "Wait for the child to read along that scale."
+        }
       ],
       "misconceptions": [
-        {"code": "MATH.G5.GEOMET.ANGLES.READ_PROTRACTOR_BOTH_SCALES.M_WRONG_SCALE", "listen_for": ["130"], "ask": "Your estimate said less than a right angle. Does 130 fit?", "repair": "Start from the 0 under the baseline arm and follow that scale."},
-        {"code": "MATH.G5.GEOMET.ANGLES.READ_PROTRACTOR_BOTH_SCALES.M_SMALL_MARK_AS_TEN", "listen_for": ["90"], "ask": "How many small marks between 70 and 80?", "repair": "Ten marks share ten degrees: each is 1°."}
+        {
+          "code": "MATH.G5.GEOMET.ANGLES.READ_PROTRACTOR_BOTH_SCALES.M_WRONG_SCALE",
+          "listen_for": [
+            "130"
+          ],
+          "ask": "Your estimate said less than a right angle. Does 130 fit?",
+          "repair": "Start from the 0 under the baseline arm and follow that scale."
+        },
+        {
+          "code": "MATH.G5.GEOMET.ANGLES.READ_PROTRACTOR_BOTH_SCALES.M_SMALL_MARK_AS_TEN",
+          "listen_for": [
+            "90"
+          ],
+          "ask": "How many small marks between 70 and 80?",
+          "repair": "Ten marks share ten degrees: each is 1°."
+        },
+        {
+          "code": "MATH.G5.GEOMET.ANGLES.READ_PROTRACTOR_BOTH_SCALES.M_COUNT_MARKS_BACKWARDS",
+          "listen_for": [
+            "37"
+          ],
+          "ask": "Going from 40 towards 50, do the numbers go up or down?",
+          "repair": "Count on from 40 in the direction of 50."
+        }
       ],
       "checks": [
-        {"question": "One arm lies through the 0 on the right; the other passes 50 on that scale and 130 on the other. What is the angle?", "answer": "50°", "shows": "the scale from 0 on the baseline"},
-        {"question": "On the right scale the arm is 2 small marks past 70. Angle?", "answer": "72°", "shows": "small marks are 1°"}
+        {
+          "question": "One arm lies through the 0 on the right; the other passes 50 on that scale and 130 on the other. What is the angle?",
+          "answer": "50°",
+          "shows": "the scale from 0 on the baseline"
+        },
+        {
+          "question": "On the right scale the arm is 2 small marks past 70. Angle?",
+          "answer": "72°",
+          "shows": "small marks are 1°"
+        }
       ]
     },
     {
       "skill": "MATH.G5.GEOMET.ANGLES.MEASURE_WITH_PROTRACTOR",
       "key_step": "The child puts the centre point on the vertex and the 0° line along one arm (turning the protractor if needed), extends short arms, then reads the scale from that 0.",
-      "floor": {"prerequisite": "Reads a protractor already placed.", "question": "Which scale do you read?", "answer": "The one with 0 on the baseline arm"},
-      "representations": ["a protractor being placed", "vertex and baseline highlighted", "the reading"],
-      "steps": ["Estimate.", "Centre on the vertex.", "0° line along one arm, not the protractor edge.", "Extend arms if short.", "Read from the 0; compare with the estimate."],
-      "contexts": ["angles in a triangle", "a roof truss", "a road junction"],
+      "floor": {
+        "prerequisite": "Reads a protractor already placed.",
+        "question": "Which scale do you read?",
+        "answer": "The one with 0 on the baseline arm"
+      },
+      "representations": [
+        "a protractor being placed",
+        "vertex and baseline highlighted",
+        "the reading"
+      ],
+      "steps": [
+        "Estimate.",
+        "Centre on the vertex.",
+        "0° line along one arm, not the protractor edge.",
+        "Extend arms if short.",
+        "Read from the 0; compare with the estimate."
+      ],
+      "contexts": [
+        "angles in a triangle",
+        "a roof truss",
+        "a road junction"
+      ],
       "board": [
-        {"beat": "draw", "do": "Draw angle ABC with short arms and a protractor beside it."},
-        {"beat": "child_draws", "do": "Child moves the protractor so the centre is on B and extends the arms."},
-        {"beat": "pause", "do": "Wait for the child's reading and comparison with an estimate."}
+        {
+          "beat": "draw",
+          "do": "Draw angle ABC with short arms and a protractor beside it."
+        },
+        {
+          "beat": "child_draws",
+          "do": "Child moves the protractor so the centre is on B and extends the arms."
+        },
+        {
+          "beat": "pause",
+          "do": "Wait for the child's reading and comparison with an estimate."
+        }
       ],
       "misconceptions": [
-        {"code": "MATH.G5.GEOMET.ANGLES.MEASURE_WITH_PROTRACTOR.M_CENTRE_OFF_VERTEX", "listen_for": ["about 45"], "ask": "Where is the protractor's centre dot, and where is the corner?", "repair": "Centre dot exactly on the corner, then read again."},
-        {"code": "MATH.G5.GEOMET.ANGLES.MEASURE_WITH_PROTRACTOR.M_SHORT_ARMS_GUESS", "listen_for": ["about 50, it doesn't reach"], "ask": "Can we make the arms longer?", "repair": "Extend the arms with a ruler until they cross the scale."}
+        {
+          "code": "MATH.G5.GEOMET.ANGLES.MEASURE_WITH_PROTRACTOR.M_CENTRE_OFF_VERTEX",
+          "listen_for": [
+            "about 45"
+          ],
+          "ask": "Where is the protractor's centre dot, and where is the corner?",
+          "repair": "Centre dot exactly on the corner, then read again."
+        },
+        {
+          "code": "MATH.G5.GEOMET.ANGLES.MEASURE_WITH_PROTRACTOR.M_SHORT_ARMS_GUESS",
+          "listen_for": [
+            "about 50, it doesn't reach"
+          ],
+          "ask": "Can we make the arms longer?",
+          "repair": "Extend the arms with a ruler until they cross the scale."
+        },
+        {
+          "code": "MATH.G5.GEOMET.ANGLES.MEASURE_WITH_PROTRACTOR.M_EDGE_NOT_BASELINE",
+          "listen_for": [
+            "66"
+          ],
+          "ask": "Where is the 0 line on this protractor, the edge or a line above it?",
+          "repair": "Line up the 0° line, not the plastic edge."
+        },
+        {
+          "code": "MATH.G5.GEOMET.ANGLES.MEASURE_WITH_PROTRACTOR.M_READ_SECOND_ARM_ONLY",
+          "listen_for": [
+            "80"
+          ],
+          "ask": "Is either arm on the 0 line?",
+          "repair": "Turn the protractor so one arm lies on 0, or subtract the two readings."
+        }
       ],
       "checks": [
-        {"question": "What two things must line up before you read a protractor?", "answer": "The centre on the vertex and the 0° line along one arm", "shows": "placement"},
-        {"question": "A 35° angle has arms only 1 cm long. What do you do first?", "answer": "Extend the arms so they reach the scale", "shows": "no guessing"}
+        {
+          "question": "What two things must line up before you read a protractor?",
+          "answer": "The centre on the vertex and the 0° line along one arm",
+          "shows": "placement"
+        },
+        {
+          "question": "A 35° angle has arms only 1 cm long. What do you do first?",
+          "answer": "Extend the arms so they reach the scale",
+          "shows": "no guessing"
+        }
       ]
     },
     {
       "skill": "MATH.G5.GEOMET.ANGLES.MEASURE_ANGLES_IN_CONTEXT",
       "key_step": "The child measures angles in shapes and drawings of real objects, writes the unit °, and checks each reading is reasonable for how the angle looks.",
-      "floor": {"prerequisite": "Measures an angle with a protractor.", "question": "What unit do we write after an angle?", "answer": "Degrees (°)"},
-      "representations": ["a drawn roof, ladder, triangle", "the angles marked with arcs", "readings with °"],
-      "steps": ["Mark the angle with an arc.", "Estimate: acute, right or obtuse?", "Measure; write °.", "Check against the estimate."],
-      "contexts": ["a roof truss", "a ladder against a wall", "a triangular flag"],
+      "floor": {
+        "prerequisite": "Measures an angle with a protractor.",
+        "question": "What unit do we write after an angle?",
+        "answer": "Degrees (°)"
+      },
+      "representations": [
+        "a drawn roof, ladder, triangle",
+        "the angles marked with arcs",
+        "readings with °"
+      ],
+      "steps": [
+        "Mark the angle with an arc.",
+        "Estimate: acute, right or obtuse?",
+        "Measure; write °.",
+        "Check against the estimate."
+      ],
+      "contexts": [
+        "a roof truss",
+        "a ladder against a wall",
+        "a triangular flag"
+      ],
       "board": [
-        {"beat": "draw", "do": "Draw a ladder against a wall and mark the angle with the ground."},
-        {"beat": "predict", "do": "Ask whether it is sharp, square or wide.", "say": "Sharp, square or wide?"},
-        {"beat": "pause", "do": "Wait for the child's measurement with its unit."}
+        {
+          "beat": "draw",
+          "do": "Draw a ladder against a wall and mark the angle with the ground."
+        },
+        {
+          "beat": "predict",
+          "do": "Ask whether it is sharp, square or wide.",
+          "say": "Sharp, square or wide?"
+        },
+        {
+          "beat": "pause",
+          "do": "Wait for the child's measurement with its unit."
+        }
       ],
       "misconceptions": [
-        {"code": "MATH.G5.GEOMET.ANGLES.MEASURE_ANGLES_IN_CONTEXT.M_NO_DEGREE_UNIT", "listen_for": ["65 cm"], "ask": "Is the angle a length?", "repair": "Angles are turns, measured in degrees (°)."},
-        {"code": "MATH.G5.GEOMET.ANGLES.MEASURE_ANGLES_IN_CONTEXT.M_BIGGER_SHAPE_BIGGER_ANGLES", "listen_for": ["the big roof has bigger angles"], "ask": "If I photocopy the roof larger, does its slope change?", "repair": "Same shape, bigger size: the turn at each corner is the same."}
+        {
+          "code": "MATH.G5.GEOMET.ANGLES.MEASURE_ANGLES_IN_CONTEXT.M_NO_DEGREE_UNIT",
+          "listen_for": [
+            "65 cm"
+          ],
+          "ask": "Is the angle a length?",
+          "repair": "Angles are turns, measured in degrees (°)."
+        },
+        {
+          "code": "MATH.G5.GEOMET.ANGLES.MEASURE_ANGLES_IN_CONTEXT.M_BIGGER_SHAPE_BIGGER_ANGLES",
+          "listen_for": [
+            "the big roof has bigger angles"
+          ],
+          "ask": "If I photocopy the roof larger, does its slope change?",
+          "repair": "Same shape, bigger size: the turn at each corner is the same."
+        },
+        {
+          "code": "MATH.G5.GEOMET.ANGLES.MEASURE_ANGLES_IN_CONTEXT.M_NO_REASONABLENESS_CHECK",
+          "listen_for": [
+            "150"
+          ],
+          "ask": "Is that corner sharp or wide?",
+          "repair": "Estimate first; a sharp corner is less than 90°, so read the other scale."
+        }
       ],
       "checks": [
-        {"question": "A small roof drawing has a top angle of 100°. A larger drawing of the same roof?", "answer": "Also 100°", "shows": "size does not change angles"},
-        {"question": "You measure a sharp corner of a triangle as 140°. What should you do?", "answer": "Check again: a sharp corner is less than 90°, so the wrong scale was probably read", "shows": "reasonableness check"}
+        {
+          "question": "A small roof drawing has a top angle of 100°. A larger drawing of the same roof?",
+          "answer": "Also 100°",
+          "shows": "size does not change angles"
+        },
+        {
+          "question": "You measure a sharp corner of a triangle as 140°. What should you do?",
+          "answer": "Check again: a sharp corner is less than 90°, so the wrong scale was probably read",
+          "shows": "reasonableness check"
+        }
       ]
     },
     {
       "skill": "MATH.G5.GEOMET.ANGLES.ANGLES_IN_ENVIRONMENT",
       "key_step": "The child finds angles as openings between two arms in fixed objects and in turning objects, including tilted right angles.",
-      "floor": {"prerequisite": "Knows what an angle is.", "question": "Show an angle with your two arms.", "answer": "Any opening between the arms"},
-      "representations": ["objects at school and home", "drawings with arcs showing openings", "named angles"],
-      "steps": ["Find angles in fixed things (window, roof, junction).", "Find angles made by turning (door, scissors, clock).", "Find right angles that are tilted."],
-      "contexts": ["a tilted signboard at a bus stop", "a classroom door", "a pair of scissors", "a road junction"],
+      "floor": {
+        "prerequisite": "Knows what an angle is.",
+        "question": "Show an angle with your two arms.",
+        "answer": "Any opening between the arms"
+      },
+      "representations": [
+        "objects at school and home",
+        "drawings with arcs showing openings",
+        "named angles"
+      ],
+      "steps": [
+        "Find angles in fixed things (window, roof, junction).",
+        "Find angles made by turning (door, scissors, clock).",
+        "Find right angles that are tilted."
+      ],
+      "contexts": [
+        "a tilted signboard at a bus stop",
+        "a classroom door",
+        "a pair of scissors",
+        "a road junction"
+      ],
       "board": [
-        {"beat": "draw", "do": "Draw a tilted square signboard, an open door seen from above, and open scissors."},
-        {"beat": "child_draws", "do": "Child marks the angle in each with an arc."},
-        {"beat": "pause", "do": "Wait for the child to say which is a right angle."}
+        {
+          "beat": "draw",
+          "do": "Draw a tilted square signboard, an open door seen from above, and open scissors."
+        },
+        {
+          "beat": "child_draws",
+          "do": "Child marks the angle in each with an arc."
+        },
+        {
+          "beat": "pause",
+          "do": "Wait for the child to say which is a right angle."
+        }
       ],
       "misconceptions": [
-        {"code": "MATH.G5.GEOMET.ANGLES.ANGLES_IN_ENVIRONMENT.M_RIGHT_ANGLE_ONLY_UPRIGHT", "listen_for": ["no, it's tilted"], "ask": "Put the square-corner checker on the tilted corner. Does it fit?", "repair": "Turning the sign does not change its corners."},
-        {"code": "MATH.G5.GEOMET.ANGLES.ANGLES_IN_ENVIRONMENT.M_NO_ANGLE_IN_MOVEMENT", "listen_for": ["there are no lines"], "ask": "Where was the door, and where is it now?", "repair": "Draw the door's start and end positions: the turn between them is the angle."}
+        {
+          "code": "MATH.G5.GEOMET.ANGLES.ANGLES_IN_ENVIRONMENT.M_RIGHT_ANGLE_ONLY_UPRIGHT",
+          "listen_for": [
+            "no, it's tilted"
+          ],
+          "ask": "Put the square-corner checker on the tilted corner. Does it fit?",
+          "repair": "Turning the sign does not change its corners."
+        },
+        {
+          "code": "MATH.G5.GEOMET.ANGLES.ANGLES_IN_ENVIRONMENT.M_NO_ANGLE_IN_MOVEMENT",
+          "listen_for": [
+            "there are no lines"
+          ],
+          "ask": "Where was the door, and where is it now?",
+          "repair": "Draw the door's start and end positions: the turn between them is the angle."
+        },
+        {
+          "code": "MATH.G5.GEOMET.ANGLES.ANGLES_IN_ENVIRONMENT.M_ANGLE_IS_THE_CORNER_POINT",
+          "listen_for": [
+            "the screw"
+          ],
+          "ask": "If you open the scissors wider, does the screw change?",
+          "repair": "The angle is the opening between the blades, shown by an arc."
+        }
       ],
       "checks": [
-        {"question": "A square signboard hangs tilted. Is the angle at its corner a right angle?", "answer": "Yes", "shows": "tilted right angles"},
-        {"question": "A door opens a quarter turn. What angle does it make with the frame?", "answer": "90°, a right angle", "shows": "angles in movement"}
+        {
+          "question": "A square signboard hangs tilted. Is the angle at its corner a right angle?",
+          "answer": "Yes",
+          "shows": "tilted right angles"
+        },
+        {
+          "question": "A door opens a quarter turn. What angle does it make with the frame?",
+          "answer": "90°, a right angle",
+          "shows": "angles in movement"
+        }
       ]
     }
   ]

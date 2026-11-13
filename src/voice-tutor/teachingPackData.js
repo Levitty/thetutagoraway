@@ -81,6 +81,21 @@ export const TEACHING_PACK_G5 = {
      "wrong_answer": "Ten thousands",
      "correct_answer": "Hundred thousands"
     }
+   },
+   {
+    "code": "MATH.G5.NUMBER.WHOLE_NUMBERS.PLACE_VALUE_HTH.M_PV_MISCOUNT_PLACES",
+    "listen_for": [
+     "ten thousands",
+     "I counted from the left"
+    ],
+    "ask": "Which end do we start naming places from?",
+    "repair": "Name places from the ones, leftwards, touching each column: ones, tens, hundreds, thousands, ten thousands, hundred thousands.",
+    "error": "Counts places wrongly in six-digit numbers, often naming the place one too low.",
+    "example": {
+     "question": "What is the place value of 2 in 203,415?",
+     "wrong_answer": "Ten thousands",
+     "correct_answer": "Hundred thousands"
+    }
    }
   ],
   "checks": [
@@ -177,6 +192,20 @@ export const TEACHING_PACK_G5 = {
      "question": "Write the number: 400,000 + 5,000 + 30 + 2",
      "wrong_answer": "4,532",
      "correct_answer": "405,032"
+    }
+   },
+   {
+    "code": "MATH.G5.NUMBER.WHOLE_NUMBERS.TOTAL_VALUE_HTH.M_TV_WRONG_NUMBER_OF_ZEROS",
+    "listen_for": [
+     "600,000"
+    ],
+    "ask": "How many digits come after the 6 in 162,450?",
+    "repair": "Count the places to the right of the digit: that is how many zeros its value has.",
+    "error": "Adds the wrong number of zeros, for example making the total value as long as the whole number.",
+    "example": {
+     "question": "What is the total value of 6 in 162,450?",
+     "wrong_answer": "600,000",
+     "correct_answer": "60,000"
     }
    }
   ],
@@ -364,6 +393,20 @@ export const TEACHING_PACK_G5 = {
      "question": "Write 'thirty thousand, four hundred and six' in symbols.",
      "wrong_answer": "30,46",
      "correct_answer": "30,406"
+    }
+   },
+   {
+    "code": "MATH.G5.NUMBER.WHOLE_NUMBERS.WORDS_TO_SYMBOLS.M_SYMBOLS_TEEN_TY",
+    "listen_for": [
+     "70,000"
+    ],
+    "ask": "Is seventeen the same as seventy?",
+    "repair": "Say both aloud and write them: seventeen is 17, seventy is 70. Then add 'thousand'.",
+    "error": "Confuses 'teen' and 'ty' numbers in the thousands.",
+    "example": {
+     "question": "Write 'seventeen thousand' in symbols.",
+     "wrong_answer": "70,000",
+     "correct_answer": "17,000"
     }
    }
   ],
@@ -639,6 +682,20 @@ export const TEACHING_PACK_G5 = {
      "wrong_answer": "234",
      "correct_answer": "23,400"
     }
+   },
+   {
+    "code": "MATH.G5.NUMBER.WHOLE_NUMBERS.ROUND_NEAREST_HUNDRED.M_ROUND_DOWN_DECREASES_DIGIT",
+    "listen_for": [
+     "45,500"
+    ],
+    "ask": "On the number line, which hundreds is 45,620 between?",
+    "repair": "Rounding down goes to the hundred below on the line, 45,600; the hundreds digit stays.",
+    "error": "When rounding down, makes the hundreds digit one smaller.",
+    "example": {
+     "question": "Round 45,620 to the nearest hundred.",
+     "wrong_answer": "45,500",
+     "correct_answer": "45,600"
+    }
    }
   ],
   "checks": [
@@ -729,6 +786,20 @@ export const TEACHING_PACK_G5 = {
      "question": "Round 36,500 to the nearest thousand.",
      "wrong_answer": "36,000",
      "correct_answer": "37,000"
+    }
+   },
+   {
+    "code": "MATH.G5.NUMBER.WHOLE_NUMBERS.ROUND_NEAREST_THOUSAND.M_ROUND_WRONG_PLACE",
+    "listen_for": [
+     "72,500"
+    ],
+    "ask": "Which place does 'nearest thousand' ask for?",
+    "repair": "Underline the thousands digit first; everything after it becomes zero.",
+    "error": "Rounds to the nearest hundred when asked for the nearest thousand.",
+    "example": {
+     "question": "Round 72,480 to the nearest thousand.",
+     "wrong_answer": "72,500",
+     "correct_answer": "72,000"
     }
    }
   ],
@@ -914,6 +985,20 @@ export const TEACHING_PACK_G5 = {
      "wrong_answer": "10 only",
      "correct_answer": "2, 5 and 10"
     }
+   },
+   {
+    "code": "MATH.G5.NUMBER.WHOLE_NUMBERS.DIVISIBLE_BY_5_AND_10.M_DIV10_ANY_ZERO",
+    "listen_for": [
+     "it has a zero"
+    ],
+    "ask": "Where must the zero be for tens to fit exactly?",
+    "repair": "Only the ones digit decides. Count in tens: every multiple ends in 0.",
+    "error": "Thinks a number is divisible by 10 if it has a 0 anywhere in it.",
+    "example": {
+     "question": "Is 1,205 divisible by 10?",
+     "wrong_answer": "Yes",
+     "correct_answer": "No, the ones digit is 5, not 0"
+    }
    }
   ],
   "checks": [
@@ -1095,6 +1180,20 @@ export const TEACHING_PACK_G5 = {
      "wrong_answer": "2, 4",
      "correct_answer": "1, 2, 4"
     }
+   },
+   {
+    "code": "MATH.G5.NUMBER.WHOLE_NUMBERS.COMMON_FACTORS.M_FACTORS_INCOMPLETE",
+    "listen_for": [
+     "1, 2, 3"
+    ],
+    "ask": "Did you try 4, 5 and 6 for 24?",
+    "repair": "List factor pairs in order from 1 until they meet, so none is missed.",
+    "error": "Misses some factor pairs when listing, so loses common factors.",
+    "example": {
+     "question": "List the common factors of 18 and 24.",
+     "wrong_answer": "1, 2, 3",
+     "correct_answer": "1, 2, 3, 6"
+    }
    }
   ],
   "checks": [
@@ -1181,6 +1280,20 @@ export const TEACHING_PACK_G5 = {
      "question": "Find the GCD of 24 and 36.",
      "wrong_answer": "2",
      "correct_answer": "12"
+    }
+   },
+   {
+    "code": "MATH.G5.NUMBER.WHOLE_NUMBERS.HCF_GCD.M_HCF_SMALLER_NUMBER",
+    "listen_for": [
+     "8"
+    ],
+    "ask": "Does 8 go into 12 exactly?",
+    "repair": "The HCF must divide both; list the common factors and pick the highest.",
+    "error": "Assumes the smaller number is always the HCF.",
+    "example": {
+     "question": "Find the HCF of 8 and 12.",
+     "wrong_answer": "8",
+     "correct_answer": "4"
     }
    }
   ],
@@ -1442,6 +1555,20 @@ export const TEACHING_PACK_G5 = {
      "question": "Find the LCM of 3 and 9.",
      "wrong_answer": "3",
      "correct_answer": "9"
+    }
+   },
+   {
+    "code": "MATH.G5.NUMBER.WHOLE_NUMBERS.LCM.M_LCM_GIVES_HCF",
+    "listen_for": [
+     "2"
+    ],
+    "ask": "Is 2 a multiple of 6?",
+    "repair": "A multiple is at least as big as the number. List multiples, not factors.",
+    "error": "Gives the HCF, or a common factor, as the LCM.",
+    "example": {
+     "question": "Find the LCM of 6 and 8.",
+     "wrong_answer": "2",
+     "correct_answer": "24"
     }
    }
   ],
@@ -1710,6 +1837,20 @@ export const TEACHING_PACK_G5 = {
      "wrong_answer": "558,723",
      "correct_answer": "558,833"
     }
+   },
+   {
+    "code": "MATH.G5.NUMBER.ADDITION.ADD_DOUBLE_REGROUP_TWO.M_CARRY_MAKES_TEN",
+    "listen_for": [
+     "I wrote 0 and didn't carry"
+    ],
+    "ask": "The column made ten with the carry. What do we do with ten?",
+    "repair": "Ten in any column regroups: write 0 and carry 1.",
+    "error": "When a column totals 9 before the carry, the child decides 'no regrouping here', adds the carried 1, writes 0, and does not carry again.",
+    "example": {
+     "question": "235,247 + 140,155",
+     "wrong_answer": "375,302",
+     "correct_answer": "375,402"
+    }
    }
   ],
   "checks": [
@@ -1800,6 +1941,20 @@ export const TEACHING_PACK_G5 = {
      "wrong_answer": "Sh 863,800",
      "correct_answer": "Sh 373,200"
     }
+   },
+   {
+    "code": "MATH.G5.NUMBER.ADDITION.ADD_IN_SITUATIONS.M_WORDS_TO_FIGURES_ZEROS",
+    "listen_for": [
+     "20,450"
+    ],
+    "ask": "Read 20,450 aloud. Is it two hundred and four thousand and fifty?",
+    "repair": "Write the thousands part, then three boxes; zeros in empty boxes.",
+    "error": "Leaves out place-holder zeros when changing a number in words into figures, then adds the wrong number.",
+    "example": {
+     "question": "A county planted two hundred and four thousand and fifty trees in March and 112,306 trees in April. How many trees were planted altogether?",
+     "wrong_answer": "132,756 (wrote 20,450)",
+     "correct_answer": "316,356 trees (204,050 + 112,306)"
+    }
    }
   ],
   "checks": [
@@ -1883,6 +2038,20 @@ export const TEACHING_PACK_G5 = {
      "question": "Estimate 4,960 + 3,215 by rounding each number to the nearest hundred.",
      "wrong_answer": "4,000 + 3,200 = 7,200",
      "correct_answer": "5,000 + 3,200 = 8,200"
+    }
+   },
+   {
+    "code": "MATH.G5.NUMBER.ADDITION.ESTIMATE_SUM_NEAREST_100.M_CHAIN_ROUNDING",
+    "listen_for": [
+     "3,500"
+    ],
+    "ask": "Which digit decides rounding to the nearest hundred?",
+    "repair": "Only the tens digit decides: 3,449 is before the halfway, so 3,400.",
+    "error": "Rounds in steps from the ones digit upwards, so a number like 3,449 becomes 3,450 and then 3,500.",
+    "example": {
+     "question": "Estimate 3,449 + 1,620 by rounding each number to the nearest hundred.",
+     "wrong_answer": "3,500 + 1,600 = 5,100",
+     "correct_answer": "3,400 + 1,600 = 5,000"
     }
    }
   ],
@@ -1969,6 +2138,20 @@ export const TEACHING_PACK_G5 = {
      "question": "Estimate 128,700 + 205,300 by rounding each number to the nearest thousand.",
      "wrong_answer": "334",
      "correct_answer": "129,000 + 205,000 = 334,000"
+    }
+   },
+   {
+    "code": "MATH.G5.NUMBER.ADDITION.ESTIMATE_SUM_NEAREST_1000.M_WRONG_ROUNDING_PLACE",
+    "listen_for": [
+     "23,600"
+    ],
+    "ask": "Which place does 'nearest thousand' ask for?",
+    "repair": "Underline the thousands first; zeros after it.",
+    "error": "Rounds to the nearest hundred when the question asks for the nearest thousand.",
+    "example": {
+     "question": "Estimate 23,640 + 15,280 by rounding each number to the nearest thousand.",
+     "wrong_answer": "23,600 + 15,300 = 38,900",
+     "correct_answer": "24,000 + 15,000 = 39,000"
     }
    }
   ],
@@ -2139,6 +2322,20 @@ export const TEACHING_PACK_G5 = {
      "question": "A co-operative had Sh 100,000 in month 1 and saves Sh 25,000 more each month. How much does it have in month 5?",
      "wrong_answer": "Sh 225,000",
      "correct_answer": "Sh 200,000"
+    }
+   },
+   {
+    "code": "MATH.G5.NUMBER.ADDITION.ADD_PATTERN_EXTEND.M_PATTERN_BRIDGE_DROP",
+    "listen_for": [
+     "241,600"
+    ],
+    "ask": "Is the pattern going up or down? Is 241,600 bigger?",
+    "repair": "Nine thousand plus two thousand is eleven thousand: regroup into the ten thousands.",
+    "error": "When the step makes a digit go past 9, the child writes only part of the new digit total and does not regroup into the next place.",
+    "example": {
+     "question": "Find the next number: 245,600, 247,600, 249,600, ___",
+     "wrong_answer": "241,600",
+     "correct_answer": "251,600"
     }
    }
   ],
@@ -2314,6 +2511,20 @@ export const TEACHING_PACK_G5 = {
      "question": "658,947 − 258,543",
      "wrong_answer": "444",
      "correct_answer": "400,404"
+    }
+   },
+   {
+    "code": "MATH.G5.NUMBER.SUBTRACTION.SUB_6DIGIT_NO_REGROUP.M_MISALIGN_COLUMNS",
+    "listen_for": [
+     "161,662"
+    ],
+    "ask": "Is the 3 in 3,241 worth thousands or hundred thousands?",
+    "repair": "Right-align in the chart before subtracting.",
+    "error": "Lines the numbers up on the left instead of by place value when the subtrahend has fewer digits.",
+    "example": {
+     "question": "485,762 − 3,241",
+     "wrong_answer": "161,662",
+     "correct_answer": "482,521"
     }
    }
   ],
@@ -2671,6 +2882,34 @@ export const TEACHING_PACK_G5 = {
      "question": "Round 239,962 to the nearest hundred.",
      "wrong_answer": "239,000",
      "correct_answer": "240,000"
+    }
+   },
+   {
+    "code": "MATH.G5.NUMBER.SUBTRACTION.ROUND_NEAREST_100_1000.M_ROUND_KEEPS_TAIL",
+    "listen_for": [
+     "46,482"
+    ],
+    "ask": "After rounding to the nearest hundred, what are the tens and ones?",
+    "repair": "Everything to the right of the rounding place becomes zero.",
+    "error": "Changes the rounding digit correctly but leaves the digits to its right unchanged.",
+    "example": {
+     "question": "Round 46,382 to the nearest hundred.",
+     "wrong_answer": "46,482",
+     "correct_answer": "46,400"
+    }
+   },
+   {
+    "code": "MATH.G5.NUMBER.SUBTRACTION.ROUND_NEAREST_100_1000.M_ROUND_FIVE_DOWN",
+    "listen_for": [
+     "73,000"
+    ],
+    "ask": "Exactly halfway: which way do we agree to go?",
+    "repair": "Tell the convention: halfway rounds up.",
+    "error": "Rounds down when the deciding digit is exactly 5.",
+    "example": {
+     "question": "Round 73,500 to the nearest thousand.",
+     "wrong_answer": "73,000",
+     "correct_answer": "74,000"
     }
    }
   ],
@@ -3059,6 +3298,20 @@ export const TEACHING_PACK_G5 = {
      "wrong_answer": "55,000; 50,000; 40,000; 35,000",
      "correct_answer": "55,000; 50,000; 45,000; 40,000"
     }
+   },
+   {
+    "code": "MATH.G5.NUMBER.SUBTRACTION.SUB_PATTERN_CREATE.M_PATTERN_PAST_ZERO",
+    "listen_for": [
+     "20,000 after 10,000"
+    ],
+    "ask": "Can you take 30,000 from 10,000 and have something left?",
+    "repair": "The pattern stops when the next step would go below zero.",
+    "error": "Keeps a pattern going after the next step would go below zero, by subtracting the smaller number from the larger.",
+    "example": {
+     "question": "Start at 100,000 and subtract 30,000 each time. Write as many terms as you can.",
+     "wrong_answer": "100,000; 70,000; 40,000; 10,000; 20,000",
+     "correct_answer": "100,000; 70,000; 40,000; 10,000 (stop: 30,000 cannot be taken from 10,000 in whole numbers)"
+    }
    }
   ],
   "checks": [
@@ -3149,6 +3402,34 @@ export const TEACHING_PACK_G5 = {
      "question": "A school buys 6 bags of maize, each 305 kg. What is the total mass? (305 × 6)",
      "wrong_answer": "1800 kg",
      "correct_answer": "1830 kg"
+    }
+   },
+   {
+    "code": "MATH.G5.NUMBER.MULTIPLICATION.MULT_3D_BY_1D.M_DROP_CARRY",
+    "listen_for": [
+     "842"
+    ],
+    "ask": "Your estimate is about 1,000. Is 842 close?",
+    "repair": "Write each carry small above the next column and add it after multiplying.",
+    "error": "Writes only the ones digit of each column's product and forgets the carried digits.",
+    "example": {
+     "question": "268 × 4",
+     "wrong_answer": "842",
+     "correct_answer": "1072"
+    }
+   },
+   {
+    "code": "MATH.G5.NUMBER.MULTIPLICATION.MULT_3D_BY_1D.M_WRITE_WHOLE_COLUMN_PRODUCTS",
+    "listen_for": [
+     "82432"
+    ],
+    "ask": "Is 82,432 near 268 x 4?",
+    "repair": "One digit per column: regroup the tens of each product into the next column.",
+    "error": "Writes the full product of every column side by side without regrouping.",
+    "example": {
+     "question": "268 × 4",
+     "wrong_answer": "82432",
+     "correct_answer": "1072"
     }
    }
   ],
@@ -3241,6 +3522,20 @@ export const TEACHING_PACK_G5 = {
      "question": "312 × 23",
      "wrong_answer": "326",
      "correct_answer": "7176"
+    }
+   },
+   {
+    "code": "MATH.G5.NUMBER.MULTIPLICATION.MULT_3D_BY_2D.M_CARRIES_MIXED_BETWEEN_ROWS",
+    "listen_for": [
+     "8418"
+    ],
+    "ask": "Did you clear the carries before the tens row?",
+    "repair": "Cross out the first row's carries before starting the second row.",
+    "error": "Uses the carried digits left over from the ones row when working the tens row.",
+    "example": {
+     "question": "243 × 26",
+     "wrong_answer": "8418",
+     "correct_answer": "6318"
     }
    }
   ],
@@ -3412,6 +3707,20 @@ export const TEACHING_PACK_G5 = {
      "wrong_answer": "1050",
      "correct_answer": "10,500"
     }
+   },
+   {
+    "code": "MATH.G5.NUMBER.MULTIPLICATION.ESTIMATE_PRODUCT_ROUND10.M_EXACT_THEN_ROUND",
+    "listen_for": [
+     "1,080"
+    ],
+    "ask": "Is an estimate meant to be quick?",
+    "repair": "Round each factor first, then multiply in your head.",
+    "error": "Works out the exact product first and then rounds the answer, instead of rounding the numbers being multiplied.",
+    "example": {
+     "question": "Estimate 47 × 23 by rounding each number to the nearest ten.",
+     "wrong_answer": "1080",
+     "correct_answer": "50 × 20 = 1000"
+    }
    }
   ],
   "checks": [
@@ -3582,6 +3891,20 @@ export const TEACHING_PACK_G5 = {
      "question": "__, 12, 36, 108",
      "wrong_answer": "36",
      "correct_answer": "4"
+    }
+   },
+   {
+    "code": "MATH.G5.NUMBER.MULTIPLICATION.MULT_PATTERN_EXTEND.M_ALWAYS_DOUBLE",
+    "listen_for": [
+     "72"
+    ],
+    "ask": "Is 12 double 4?",
+    "repair": "Test the rule on every pair; 4 to 12 is times 3.",
+    "error": "Assumes any growing pattern is 'doubling'.",
+    "example": {
+     "question": "4, 12, 36, __",
+     "wrong_answer": "72",
+     "correct_answer": "108"
     }
    }
   ],
@@ -3759,6 +4082,20 @@ export const TEACHING_PACK_G5 = {
      "wrong_answer": "30 r 7",
      "correct_answer": "31 r 2"
     }
+   },
+   {
+    "code": "MATH.G5.NUMBER.DIVISION.DIV_3DIGIT_BY_1DIGIT.M_SHORT_DIV_NO_CARRY",
+    "listen_for": [
+     "210"
+    ],
+    "ask": "Check: is 210 x 4 equal to 852?",
+    "repair": "Carry each leftover into the next digit, written small in front of it.",
+    "error": "In short division the child drops the remainder from one digit instead of carrying it to the next digit.",
+    "example": {
+     "question": "852 ÷ 4 (short form)",
+     "wrong_answer": "210",
+     "correct_answer": "213"
+    }
    }
   ],
   "checks": [
@@ -3934,6 +4271,20 @@ export const TEACHING_PACK_G5 = {
      "question": "A farmer in Murang'a packs 360 mangoes into crates. Each crate holds 24 mangoes. How many crates does he fill?",
      "wrong_answer": "8640 crates",
      "correct_answer": "15 crates"
+    }
+   },
+   {
+    "code": "MATH.G5.NUMBER.DIVISION.DIV_WORD_PROBLEMS.M_GIVES_QUOTIENT_NOT_REMAINDER",
+    "listen_for": [
+     "Sh 11"
+    ],
+    "ask": "Does the question ask how many books or how much money is left?",
+    "repair": "Underline the question; the leftover is the remainder.",
+    "error": "Answers with the quotient when the question asks what is left over.",
+    "example": {
+     "question": "Akinyi has Sh 500. Exercise books cost Sh 45 each. She buys as many as she can. How much money is left?",
+     "wrong_answer": "Sh 11",
+     "correct_answer": "Sh 5 (500 ÷ 45 = 11 r 5)"
     }
    }
   ],
@@ -4181,6 +4532,20 @@ export const TEACHING_PACK_G5 = {
      "wrong_answer": "125000",
      "correct_answer": "0.125"
     }
+   },
+   {
+    "code": "MATH.G5.NUMBER.DIVISION.DIV_BY_1000.M_DIV1000_DECIMAL_PLACES",
+    "listen_for": [
+     "0.45 kg"
+    ],
+    "ask": "Is 45 g almost half a kilogramme?",
+    "repair": "Slide three places right in the chart; an empty tenths place gets a zero: 0.045.",
+    "error": "Places the decimal point after moving only two places, or ignores the missing place holder, when the number has fewer than three digits.",
+    "example": {
+     "question": "A packet of Royco weighs 45 g. Write its mass in kg (45 ÷ 1000).",
+     "wrong_answer": "0.45 kg",
+     "correct_answer": "0.045 kg"
+    }
    }
   ],
   "checks": [
@@ -4351,6 +4716,20 @@ export const TEACHING_PACK_G5 = {
      "wrong_answer": "4",
      "correct_answer": "16"
     }
+   },
+   {
+    "code": "MATH.G5.NUMBER.DIVISION.ORDER_OF_OPERATIONS.M_ADD_BEFORE_SUBTRACT",
+    "listen_for": [
+     "20"
+    ],
+    "ask": "Tell it as a purse story in order. What do you have?",
+    "repair": "Addition and subtraction are equal partners: left to right.",
+    "error": "Applies BODMAS letter order literally, doing all additions before any subtraction.",
+    "example": {
+     "question": "50 − 20 + 10",
+     "wrong_answer": "20",
+     "correct_answer": "40"
+    }
    }
   ],
   "checks": [
@@ -4425,6 +4804,20 @@ export const TEACHING_PACK_G5 = {
      "question": "Wanjiku bought 3 kg of sugar at Sh 150 per kg and paid with a Sh 1000 note. How much change did she get?",
      "wrong_answer": "Sh 450",
      "correct_answer": "Sh 550 (1000 − 3 × 150)"
+    }
+   },
+   {
+    "code": "MATH.G5.NUMBER.DIVISION.COMBINED_OPS_PROBLEMS.M_EXPRESSION_ORDER_SCRAMBLED",
+    "listen_for": [
+     "I went left to right"
+    ],
+    "ask": "In your expression, which step happens first in the story?",
+    "repair": "Write each step of the story in order, then work them in that order.",
+    "error": "Writes a correct expression for the story but then evaluates it left to right, or writes the operations in the order the numbers appear rather than the order of the story.",
+    "example": {
+     "question": "Write and work out an expression: a teacher shares 120 pencils equally among 4 groups, then each group gives away 6 pencils. How many pencils does each group have now?",
+     "wrong_answer": "120 ÷ (4 − 6), or 120 ÷ 4 − 6 worked as 120 ÷ (−2), giving no answer",
+     "correct_answer": "120 ÷ 4 − 6 = 30 − 6 = 24 pencils"
     }
    }
   ],
@@ -6367,6 +6760,34 @@ export const TEACHING_PACK_G5 = {
      "wrong_answer": "32 g",
      "correct_answer": "3200 g"
     }
+   },
+   {
+    "code": "MATH.G5.NUMBER.DECIMALS.DEC_MULT_1000.M_WRONG_NUMBER_OF_PLACES",
+    "listen_for": [
+     "37.5"
+    ],
+    "ask": "How many zeros does 1000 have?",
+    "repair": "Three zeros, three slides. Count the slides aloud.",
+    "error": "Moves the digits the wrong number of places, often two.",
+    "example": {
+     "question": "0.375 × 1000 =",
+     "wrong_answer": "37.5",
+     "correct_answer": "375"
+    }
+   },
+   {
+    "code": "MATH.G5.NUMBER.DECIMALS.DEC_MULT_1000.M_MOVES_WRONG_WAY",
+    "listen_for": [
+     "0.0046"
+    ],
+    "ask": "Does multiplying by 1000 make the number bigger or smaller?",
+    "repair": "Estimate first: bigger. Slide the digits left.",
+    "error": "Moves the digits to the right, making the number smaller.",
+    "example": {
+     "question": "4.6 × 1000 =",
+     "wrong_answer": "0.0046",
+     "correct_answer": "4600"
+    }
    }
   ],
   "checks": [
@@ -6453,6 +6874,20 @@ export const TEACHING_PACK_G5 = {
      "wrong_answer": "a pen",
      "correct_answer": "the cost of one pen in shillings (a number)"
     }
+   },
+   {
+    "code": "MATH.G5.NUMBER.SIMPLE_EQUATIONS.EQ_MEANING.M_EXPRESSION_IS_EQUATION",
+    "listen_for": [
+     "x + 7"
+    ],
+    "ask": "Where is the equals sign in x + 7?",
+    "repair": "An equation says two things balance, so it needs '='.",
+    "error": "Calls an expression such as x + 7 an equation, or does not see that an equation must contain '=' with two equal sides.",
+    "example": {
+     "question": "Which is an equation? A: x + 7   B: x + 7 = 15   C: 15",
+     "wrong_answer": "A",
+     "correct_answer": "B"
+    }
    }
   ],
   "checks": [
@@ -6538,6 +6973,20 @@ export const TEACHING_PACK_G5 = {
      "wrong_answer": "p = 11",
      "correct_answer": "p + 7 = 18"
     }
+   },
+   {
+    "code": "MATH.G5.NUMBER.SIMPLE_EQUATIONS.EQ_FORM_ADD_SUB.M_KEYWORD_MORE_MEANS_ADD",
+    "listen_for": [
+     "a - 6 = 15"
+    ],
+    "ask": "Who has more eggs, Otieno or Akinyi?",
+    "repair": "Draw two bars: Akinyi's plus 6 equals Otieno's, so a + 6 = 15.",
+    "error": "Sees 'more' and adds the given numbers, or writes the opposite operation, instead of modelling the comparison.",
+    "example": {
+     "question": "Otieno has 15 eggs. That is 6 more than Akinyi has. Let a be the number of eggs Akinyi has. Write an equation.",
+     "wrong_answer": "a − 6 = 15 (or a = 15 + 6)",
+     "correct_answer": "a + 6 = 15 (so a = 9)"
+    }
    }
   ],
   "checks": [
@@ -6622,6 +7071,20 @@ export const TEACHING_PACK_G5 = {
      "question": "3 exercise books each cost b shillings. Together they cost sh 45. Write an equation.",
      "wrong_answer": "3 + b = 45",
      "correct_answer": "3b = 45 (or b + b + b = 45)"
+    }
+   },
+   {
+    "code": "MATH.G5.NUMBER.SIMPLE_EQUATIONS.EQ_FORM_MUL_DIV.M_SHARING_ORDER_REVERSED",
+    "listen_for": [
+     "5 ÷ x"
+    ],
+    "ask": "What is being shared: the oranges or the children?",
+    "repair": "The total being shared comes first: x ÷ 5.",
+    "error": "Writes the divisor first in an equal-sharing equation.",
+    "example": {
+     "question": "Mama bought x oranges and shared them equally among 5 children. Each child got 6. Write an equation.",
+     "wrong_answer": "5 ÷ x = 6",
+     "correct_answer": "x ÷ 5 = 6 (so x = 30)"
     }
    }
   ],
@@ -6709,6 +7172,20 @@ export const TEACHING_PACK_G5 = {
      "wrong_answer": "x = 12",
      "correct_answer": "x = 48"
     }
+   },
+   {
+    "code": "MATH.G5.NUMBER.SIMPLE_EQUATIONS.EQ_SOLVE_ADD_SUB.M_UNKNOWN_SUBTRACTED_TREATED_AS_X_MINUS",
+    "listen_for": [
+     "70"
+    ],
+    "ask": "Put 70 back: is 50 - 70 equal to 20?",
+    "repair": "50 take away something leaves 20, so the something is 50 - 20.",
+    "error": "Solves a − x = b by adding, as if it were x − a = b.",
+    "example": {
+     "question": "Solve 50 − x = 20",
+     "wrong_answer": "x = 70",
+     "correct_answer": "x = 30"
+    }
    }
   ],
   "checks": [
@@ -6794,6 +7271,21 @@ export const TEACHING_PACK_G5 = {
      "question": "Solve 3x = 36",
      "wrong_answer": "x = 6",
      "correct_answer": "x = 12"
+    }
+   },
+   {
+    "code": "MATH.G5.NUMBER.SIMPLE_EQUATIONS.EQ_SOLVE_MUL_DIV.M_DIVIDES_FOR_X_DIV",
+    "listen_for": [
+     "1 remainder 3",
+     "3"
+    ],
+    "ask": "If x shared among 5 gives 8 each, how many were there?",
+    "repair": "Undo dividing by multiplying: 5 x 8.",
+    "error": "For x ÷ a = b, divides b by a (or subtracts) instead of multiplying.",
+    "example": {
+     "question": "Solve x ÷ 5 = 8",
+     "wrong_answer": "1 remainder 3 (or 3)",
+     "correct_answer": "x = 40"
     }
    }
   ],
@@ -7509,6 +8001,20 @@ export const TEACHING_PACK_G5 = {
      "wrong_answer": "305 m",
      "correct_answer": "5 km 300 m (5 300 m)"
     }
+   },
+   {
+    "code": "MATH.G5.MEASUR.LENGTH.ADD_KM_M.M_ADD_REGROUP_AT_100",
+    "listen_for": [
+     "4 km 20 m"
+    ],
+    "ask": "Is 120 m a kilometre?",
+    "repair": "Regroup only at 1 000 m; 120 m stays in the metres column.",
+    "error": "The child regroups when the metres reach 100, as they did with metres and centimetres in Grade 4.",
+    "example": {
+     "question": "2 km 70 m + 1 km 50 m",
+     "wrong_answer": "4 km 20 m",
+     "correct_answer": "3 km 120 m"
+    }
    }
   ],
   "checks": [
@@ -7600,6 +8106,20 @@ export const TEACHING_PACK_G5 = {
      "question": "5 km 200 m − 2 km 650 m",
      "wrong_answer": "3 km 550 m",
      "correct_answer": "2 km 550 m"
+    }
+   },
+   {
+    "code": "MATH.G5.MEASUR.LENGTH.SUBTRACT_KM_M.M_SUB_EXCHANGE_100",
+    "listen_for": [
+     "2 km 70 m"
+    ],
+    "ask": "How many metres is 1 km?",
+    "repair": "Exchange 1 km for 1 000 m. Check by adding back.",
+    "error": "When exchanging, the child turns 1 km into 100 m instead of 1 000 m.",
+    "example": {
+     "question": "4 km 50 m − 1 km 80 m",
+     "wrong_answer": "2 km 70 m",
+     "correct_answer": "2 km 970 m"
     }
    }
   ],
@@ -7879,6 +8399,20 @@ export const TEACHING_PACK_G5 = {
      "wrong_answer": "1 cm²",
      "correct_answer": "4 cm²"
     }
+   },
+   {
+    "code": "MATH.G5.MEASUR.AREA.CM2_UNIT_MEANING.M_CM_FOR_AREA",
+    "listen_for": [
+     "12 cm"
+    ],
+    "ask": "Is the answer a length or a number of squares?",
+    "repair": "Area counts squares: cm².",
+    "error": "Writes area in cm (a length unit) instead of cm².",
+    "example": {
+     "question": "A rectangle is 4 cm long and 3 cm wide. What is its area?",
+     "wrong_answer": "12 cm",
+     "correct_answer": "12 cm²"
+    }
    }
   ],
   "checks": [
@@ -7965,6 +8499,21 @@ export const TEACHING_PACK_G5 = {
      "question": "A rectangle on 1 cm grid paper is 5 squares long and 3 squares wide. Find its area.",
      "wrong_answer": "24 cm² (6 lines × 4 lines)",
      "correct_answer": "15 cm²"
+    }
+   },
+   {
+    "code": "MATH.G5.MEASUR.AREA.AREA_COVER_AND_COUNT.M_GAPS_OVERLAPS",
+    "listen_for": [
+     "4 cm²",
+     "8 cm²"
+    ],
+    "ask": "Are there gaps between your squares, or squares on top of each other?",
+    "repair": "Squares edge to edge, inside the shape, no gaps, no overlaps.",
+    "error": "Leaves gaps between cut-outs or lets them overlap or hang over the edge, then counts them.",
+    "example": {
+     "question": "Cover a postage stamp 3 cm by 2 cm with 1 cm squares. What is its area?",
+     "wrong_answer": "4 cm² (squares spaced out with gaps) or 8 cm² (overlapping)",
+     "correct_answer": "6 cm²"
     }
    }
   ],
@@ -8228,6 +8777,20 @@ export const TEACHING_PACK_G5 = {
      "wrong_answer": "12 cm²",
      "correct_answer": "36 cm²"
     }
+   },
+   {
+    "code": "MATH.G5.MEASUR.AREA.AREA_RECT_SQUARE_CALC.M_MULTIPLY_ALL_SIDES",
+    "listen_for": [
+     "225"
+    ],
+    "ask": "How many 1 cm squares fit in one row? How many rows?",
+    "repair": "Area uses length and width once each: 5 x 3.",
+    "error": "Multiplies all four labelled side lengths together.",
+    "example": {
+     "question": "A rectangle has its sides labelled 5 cm, 3 cm, 5 cm and 3 cm. Find its area.",
+     "wrong_answer": "225 cm²",
+     "correct_answer": "15 cm²"
+    }
    }
   ],
   "checks": [
@@ -8405,6 +8968,20 @@ export const TEACHING_PACK_G5 = {
      "wrong_answer": "The iron cube",
      "correct_answer": "They take up the same space: each is 1 cm³."
     }
+   },
+   {
+    "code": "MATH.G5.MEASUR.VOLUME.CM3_UNIT_IDENTIFY.M_CM3_WRONG_UNIT",
+    "listen_for": [
+     "24 cm²"
+    ],
+    "ask": "Are we covering a surface or filling a space?",
+    "repair": "Filling space is counted in cubes: cm³.",
+    "error": "The child writes volume in cm or cm² instead of cm³.",
+    "example": {
+     "question": "Wanjiru builds a box shape using 24 cubes, each with edges of 1 cm. What is its volume?",
+     "wrong_answer": "24 cm²",
+     "correct_answer": "24 cm³"
+    }
    }
   ],
   "checks": [
@@ -8495,6 +9072,20 @@ export const TEACHING_PACK_G5 = {
      "question": "A picture shows a cuboid made of 1 cm cubes. It is 3 cubes long, 2 cubes wide and 2 cubes high. What is its volume?",
      "wrong_answer": "16 cm³ (6 + 6 + 4 squares on the front, top and side)",
      "correct_answer": "12 cm³"
+    }
+   },
+   {
+    "code": "MATH.G5.MEASUR.VOLUME.VOLUME_COUNT_CM3_CUBES.M_NO_CONSERVATION_VOLUME",
+    "listen_for": [
+     "the taller one"
+    ],
+    "ask": "Did Otieno add or remove any cubes?",
+    "repair": "Same cubes, same space: count them in both shapes.",
+    "error": "The child thinks the same cubes take up more space when arranged taller or longer.",
+    "example": {
+     "question": "Otieno uses 12 cubes to make a cuboid 6 cm long, 2 cm wide and 1 cm high. He rebuilds the same 12 cubes into one 3 cm long, 2 cm wide and 2 cm high. Which has the greater volume?",
+     "wrong_answer": "The taller one",
+     "correct_answer": "They are equal: both are 12 cm³."
     }
    }
   ],
@@ -9019,6 +9610,20 @@ export const TEACHING_PACK_G5 = {
      "question": "A nurse gives a child one spoon of cough syrup. Is the dose 5 ml or 5 l?",
      "wrong_answer": "5 l",
      "correct_answer": "5 ml"
+    }
+   },
+   {
+    "code": "MATH.G5.MEASUR.CAPACITY.ML_IDENTIFY_UNIT.M_MASS_LABEL_AS_CAPACITY",
+    "listen_for": [
+     "500 g"
+    ],
+    "ask": "Do we pour sugar into a jug to measure it?",
+    "repair": "g is for weighing; ml is for liquids we pour.",
+    "error": "Treats any number on a package label as capacity, including grams.",
+    "example": {
+     "question": "Which label shows capacity: '500 g' on a sugar packet, '500 ml' on a milk packet, or '50 cm' on a ruler?",
+     "wrong_answer": "500 g",
+     "correct_answer": "500 ml"
     }
    }
   ],
@@ -9633,6 +10238,20 @@ export const TEACHING_PACK_G5 = {
      "wrong_answer": "302 ml",
      "correct_answer": "2 l 300 ml (2 300 ml)"
     }
+   },
+   {
+    "code": "MATH.G5.MEASUR.CAPACITY.ADD_L_ML.M_COLUMNS_MISALIGNED",
+    "listen_for": [
+     "3 l 700 ml"
+    ],
+    "ask": "Is the 4 in 45 ml worth tens or hundreds of ml?",
+    "repair": "Line up ml by place: write 45 ml as 045 ml.",
+    "error": "Lines up the ml digits from the left instead of by place value.",
+    "example": {
+     "question": "3 l 250 ml + 45 ml",
+     "wrong_answer": "3 l 700 ml",
+     "correct_answer": "3 l 295 ml"
+    }
    }
   ],
   "checks": [
@@ -9723,6 +10342,20 @@ export const TEACHING_PACK_G5 = {
      "question": "A 5 l jerrycan of water is full. Otieno uses 350 ml to wash his hands. How much water is left?",
      "wrong_answer": "345 ml",
      "correct_answer": "4 l 650 ml"
+    }
+   },
+   {
+    "code": "MATH.G5.MEASUR.CAPACITY.SUBTRACT_L_ML.M_BORROW_100",
+    "listen_for": [
+     "2 l 50 ml"
+    ],
+    "ask": "How many ml is 1 litre?",
+    "repair": "Exchange 1 l for 1 000 ml, then subtract; check by adding back.",
+    "error": "Regroups 1 l as 100 ml when subtracting.",
+    "example": {
+     "question": "4 l 30 ml − 1 l 80 ml",
+     "wrong_answer": "2 l 50 ml",
+     "correct_answer": "2 l 950 ml"
     }
    }
   ],
@@ -9815,6 +10448,20 @@ export const TEACHING_PACK_G5 = {
      "wrong_answer": "9 l 800 ml",
      "correct_answer": "7 l 800 ml"
     }
+   },
+   {
+    "code": "MATH.G5.MEASUR.CAPACITY.MULTIPLY_L_ML.M_MULT_REGROUP_AT_100",
+    "listen_for": [
+     "18 l"
+    ],
+    "ask": "Is 1 400 ml fourteen litres?",
+    "repair": "1 000 ml make a litre: 1 400 ml is 1 l 400 ml.",
+    "error": "Turns the ml product into litres by dividing by 100.",
+    "example": {
+     "question": "1 l 350 ml × 4",
+     "wrong_answer": "18 l (treats 1 400 ml as 14 l)",
+     "correct_answer": "5 l 400 ml"
+    }
    }
   ],
   "checks": [
@@ -9899,6 +10546,20 @@ export const TEACHING_PACK_G5 = {
      "question": "6 l 300 ml of water is poured equally into 3 buckets. How much is in each bucket?",
      "wrong_answer": "2 l 300 ml",
      "correct_answer": "2 l 100 ml"
+    }
+   },
+   {
+    "code": "MATH.G5.MEASUR.CAPACITY.DIVIDE_L_ML.M_REMAINDER_AS_100ML",
+    "listen_for": [
+     "2 l 250 ml"
+    ],
+    "ask": "How many ml is the leftover litre?",
+    "repair": "1 l = 1 000 ml: 1 000 + 400 = 1 400, half is 700.",
+    "error": "Converts the remaining litre to 100 ml instead of 1 000 ml.",
+    "example": {
+     "question": "5 l 400 ml ÷ 2",
+     "wrong_answer": "2 l 250 ml",
+     "correct_answer": "2 l 700 ml"
     }
    }
   ],
@@ -10330,6 +10991,20 @@ export const TEACHING_PACK_G5 = {
      "wrong_answer": "The bag of cotton wool",
      "correct_answer": "The stone (check on a balance)"
     }
+   },
+   {
+    "code": "MATH.G5.MEASUR.MASS.MASS_ESTIMATE_GRAMMES.M_CHANGE_ESTIMATE",
+    "listen_for": [
+     "I changed my estimate"
+    ],
+    "ask": "Is an estimate wrong if it is close?",
+    "repair": "Keep both: the estimate shows your thinking; the gap shows how close you got.",
+    "error": "Rubs out the estimate after measuring so it matches, believing an estimate is 'wrong' unless exact.",
+    "example": {
+     "question": "Kamau estimated a bar of soap at 200 g and measured 180 g. What should he record?",
+     "wrong_answer": "Estimate 180 g, measured 180 g",
+     "correct_answer": "Estimate 200 g, measured 180 g (a good estimate, 20 g off)"
+    }
    }
   ],
   "checks": [
@@ -10415,6 +11090,20 @@ export const TEACHING_PACK_G5 = {
      "question": "Which is heavier: 500 g of beans or 2 kg of rice?",
      "wrong_answer": "500 g of beans, because 500 is bigger than 2",
      "correct_answer": "2 kg of rice (2 kg = 2000 g)"
+    }
+   },
+   {
+    "code": "MATH.G5.MEASUR.MASS.MASS_KG_G_RELATIONSHIP.M_HALF_QUARTER_MIXUP",
+    "listen_for": [
+     "2"
+    ],
+    "ask": "What is half of 1 000 g? And a quarter?",
+    "repair": "Halve 1 000 for 500 g, halve again for 250 g; four 250 g make 1 kg.",
+    "error": "Confuses ½ kg and ¼ kg in grammes, for example thinking 250 g is half a kilogramme.",
+    "example": {
+     "question": "How many 250 g packets of tea leaves make 1 kg?",
+     "wrong_answer": "2",
+     "correct_answer": "4"
     }
    }
   ],
@@ -10590,6 +11279,20 @@ export const TEACHING_PACK_G5 = {
      "wrong_answer": "42 kg 50 g",
      "correct_answer": "4 kg 250 g"
     }
+   },
+   {
+    "code": "MATH.G5.MEASUR.MASS.MASS_CONVERT_G_TO_KG.M_DROP_ZERO_IN_GRAMMES",
+    "listen_for": [
+     "3 kg 5 g"
+    ],
+    "ask": "Read all three digits after your line.",
+    "repair": "The gramme part is three digits: 050 is 50 g.",
+    "error": "Loses or misplaces a zero in the gramme part when converting.",
+    "example": {
+     "question": "Write 3050 g in kg and g.",
+     "wrong_answer": "3 kg 5 g",
+     "correct_answer": "3 kg 50 g"
+    }
    }
   ],
   "checks": [
@@ -10676,6 +11379,20 @@ export const TEACHING_PACK_G5 = {
      "wrong_answer": "253 kg",
      "correct_answer": "3 kg 250 g (3250 g)"
     }
+   },
+   {
+    "code": "MATH.G5.MEASUR.MASS.MASS_ADD_KG_G.M_ADD_REGROUP_AT_100",
+    "listen_for": [
+     "4 kg 20 g"
+    ],
+    "ask": "Is 120 g a kilogramme?",
+    "repair": "Regroup only at 1 000 g.",
+    "error": "Regroups into a kilogramme as soon as the grammes pass 100.",
+    "example": {
+     "question": "2 kg 70 g + 1 kg 50 g",
+     "wrong_answer": "4 kg 20 g",
+     "correct_answer": "3 kg 120 g"
+    }
    }
   ],
   "checks": [
@@ -10761,6 +11478,20 @@ export const TEACHING_PACK_G5 = {
      "question": "Juma had 3 kg of sugar and used 400 g. How much remains?",
      "wrong_answer": "3 kg 600 g",
      "correct_answer": "2 kg 600 g"
+    }
+   },
+   {
+    "code": "MATH.G5.MEASUR.MASS.MASS_SUBTRACT_KG_G.M_SUB_BORROW_100",
+    "listen_for": [
+     "2 kg 70 g"
+    ],
+    "ask": "How many grammes is 1 kg?",
+    "repair": "Exchange 1 kg for 1 000 g; check by adding back.",
+    "error": "Exchanges 1 kg for 100 g instead of 1000 g.",
+    "example": {
+     "question": "4 kg 50 g − 1 kg 80 g",
+     "wrong_answer": "2 kg 70 g",
+     "correct_answer": "2 kg 970 g"
     }
    }
   ],
@@ -10932,6 +11663,20 @@ export const TEACHING_PACK_G5 = {
      "question": "2 kg of groundnuts are shared equally among 8 children in Kisumu. What mass does each child get?",
      "wrong_answer": "4 kg",
      "correct_answer": "250 g"
+    }
+   },
+   {
+    "code": "MATH.G5.MEASUR.MASS.MASS_DIVIDE_KG_G.M_DIV_REMAINDER_AS_100",
+    "listen_for": [
+     "1 kg 125 g"
+    ],
+    "ask": "How many grammes is the leftover 3 kg?",
+    "repair": "Each leftover kg is 1 000 g; check by multiplying back.",
+    "error": "Changes the leftover kilogrammes into hundreds of grammes instead of thousands.",
+    "example": {
+     "question": "7 kg 200 g ÷ 4",
+     "wrong_answer": "1 kg 125 g",
+     "correct_answer": "1 kg 800 g"
     }
    }
   ],
@@ -11503,6 +12248,20 @@ export const TEACHING_PACK_G5 = {
      "wrong_answer": "2 min 5 s (or 2 min 50 s), from 2.5",
      "correct_answer": "2 min 30 s"
     }
+   },
+   {
+    "code": "MATH.G5.MEASUR.TIME.CONVERT_SEC_TO_MIN.M_CONVERT_WRONG_DIRECTION",
+    "listen_for": [
+     "7200 minutes"
+    ],
+    "ask": "A minute is longer than a second. More minutes or fewer?",
+    "repair": "Bigger unit, fewer of them: take away sixties (divide by 60).",
+    "error": "The child multiplies by 60 when converting seconds to minutes.",
+    "example": {
+     "question": "Convert 120 seconds to minutes.",
+     "wrong_answer": "7200 minutes",
+     "correct_answer": "2 minutes"
+    }
    }
   ],
   "checks": [
@@ -11592,6 +12351,20 @@ export const TEACHING_PACK_G5 = {
      "wrong_answer": "3 min 90 s",
      "correct_answer": "4 min 30 s"
     }
+   },
+   {
+    "code": "MATH.G5.MEASUR.TIME.ADD_MIN_SEC.M_ADD_CARRY_LOST",
+    "listen_for": [
+     "5 min 15 s"
+    ],
+    "ask": "Where did the minute from the 75 seconds go?",
+    "repair": "Write the carried minute above the minutes column and add it.",
+    "error": "The child changes the extra seconds correctly but forgets to add the carried minute to the minutes.",
+    "example": {
+     "question": "3 min 45 s + 2 min 30 s = ?",
+     "wrong_answer": "5 min 15 s",
+     "correct_answer": "6 min 15 s"
+    }
    }
   ],
   "checks": [
@@ -11675,6 +12448,20 @@ export const TEACHING_PACK_G5 = {
     "example": {
      "question": "5 min 20 s − 2 min 45 s = ?",
      "wrong_answer": "3 min 35 s",
+     "correct_answer": "2 min 35 s"
+    }
+   },
+   {
+    "code": "MATH.G5.MEASUR.TIME.SUBTRACT_MIN_SEC.M_SUB_SMALLER_FROM_LARGER",
+    "listen_for": [
+     "3 min 25 s"
+    ],
+    "ask": "Add your answer to 2 min 45 s. Do you get 5 min 20 s?",
+    "repair": "The check fails; exchange 1 minute for 60 seconds.",
+    "error": "In the seconds column, the child subtracts the smaller number from the larger, whichever row it is in.",
+    "example": {
+     "question": "Wanjiru ran the race in 5 min 20 s and Otieno in 2 min 45 s. How much longer did Wanjiru take?",
+     "wrong_answer": "3 min 25 s",
      "correct_answer": "2 min 35 s"
     }
    }
@@ -11762,6 +12549,20 @@ export const TEACHING_PACK_G5 = {
      "wrong_answer": "7 min 20 s",
      "correct_answer": "8 min"
     }
+   },
+   {
+    "code": "MATH.G5.MEASUR.TIME.MULTIPLY_MIN_SEC.M_MULT_NO_REGROUP",
+    "listen_for": [
+     "6 min 75 s"
+    ],
+    "ask": "Is 75 seconds more than a minute?",
+    "repair": "Regroup 60 seconds as a minute.",
+    "error": "The child multiplies each part but leaves 60 or more seconds unregrouped.",
+    "example": {
+     "question": "It takes 2 min 25 s to fry one batch of mandazi. How long do 3 batches take?",
+     "wrong_answer": "6 min 75 s",
+     "correct_answer": "7 min 15 s"
+    }
    }
   ],
   "checks": [
@@ -11845,6 +12646,20 @@ export const TEACHING_PACK_G5 = {
      "question": "7 min 30 s ÷ 2 = ?",
      "wrong_answer": "3 min 20 s (from 10 + 30 = 40, then 40 ÷ 2)",
      "correct_answer": "3 min 45 s (60 + 30 = 90, then 90 ÷ 2 = 45)"
+    }
+   },
+   {
+    "code": "MATH.G5.MEASUR.TIME.DIVIDE_MIN_SEC.M_DIV_ONE_PART_ONLY",
+    "listen_for": [
+     "3 min 40 s"
+    ],
+    "ask": "Did each lap take all 40 seconds?",
+    "repair": "Both parts are shared; check by multiplying back.",
+    "error": "The child divides only the minutes, or only the seconds, and leaves the other part unchanged.",
+    "example": {
+     "question": "A runner at Kasarani completes 2 laps in 6 min 40 s at a steady pace. How long is one lap?",
+     "wrong_answer": "3 min 40 s",
+     "correct_answer": "3 min 20 s"
     }
    }
   ],
@@ -11932,6 +12747,20 @@ export const TEACHING_PACK_G5 = {
      "question": "Otieno has 500 shillings. He writes: sugar, bread, milk. Is this a complete budget?",
      "wrong_answer": "Yes",
      "correct_answer": "No. It needs the cost of each item, the total, and the money available (500 shillings) to compare with."
+    }
+   },
+   {
+    "code": "MATH.G5.MEASUR.MONEY.BUDGET_MEANING.M_BUDGET_ONLY_FOR_GOVERNMENT",
+    "listen_for": [
+     "only the government"
+    ],
+    "ask": "Could a plan help you make 100 shillings last the week?",
+    "repair": "A budget is any plan for known money, big or small.",
+    "error": "Believes budgets are only for governments, businesses or adults with a lot of money.",
+    "example": {
+     "question": "Does a child with 100 shillings pocket money need a budget?",
+     "wrong_answer": "No, budgets are only for the government and big businesses.",
+     "correct_answer": "Yes. Anyone with money to spend can plan how to use it, even 100 shillings."
     }
    }
   ],
@@ -12103,6 +12932,20 @@ export const TEACHING_PACK_G5 = {
      "wrong_answer": "69 shillings",
      "correct_answer": "4 × 65 = 260 shillings"
     }
+   },
+   {
+    "code": "MATH.G5.MEASUR.MONEY.BUDGET_ITEM_COSTS.M_FORGET_CARRY",
+    "listen_for": [
+     "205"
+    ],
+    "ask": "Is 5 x 45 near 5 x 50?",
+    "repair": "Estimate, then add the carried ten after multiplying the tens.",
+    "error": "Forgets to add the carried ten when multiplying a 2-digit price by a 1-digit quantity.",
+    "example": {
+     "question": "5 exercise books cost 45 shillings each. What is the total cost?",
+     "wrong_answer": "205 shillings",
+     "correct_answer": "225 shillings, because 5 × 45 = 200 + 25."
+    }
    }
   ],
   "checks": [
@@ -12193,6 +13036,34 @@ export const TEACHING_PACK_G5 = {
      "wrong_answer": "1,870 shillings",
      "correct_answer": "1,000 − 870 = 130 shillings"
     }
+   },
+   {
+    "code": "MATH.G5.MEASUR.MONEY.BUDGET_TOTAL_BALANCE.M_SMALLER_FROM_LARGER",
+    "listen_for": [
+     "365"
+    ],
+    "ask": "Add your balance to 1,265. Do you get 1,500?",
+    "repair": "Exchange across the zeros; check by adding back.",
+    "error": "In column subtraction, takes the smaller digit from the larger in each column instead of exchanging, especially across zeros.",
+    "example": {
+     "question": "Money available: 1,500 shillings. Total: 1,265 shillings. Find the balance.",
+     "wrong_answer": "365 shillings",
+     "correct_answer": "235 shillings"
+    }
+   },
+   {
+    "code": "MATH.G5.MEASUR.MONEY.BUDGET_TOTAL_BALANCE.M_SHORTFALL_IGNORED",
+    "listen_for": [
+     "balance 60"
+    ],
+    "ask": "Is 560 more or less than 500?",
+    "repair": "If the total is more than the money, there is a shortfall, not a balance: drop a want.",
+    "error": "When the total is more than the money available, reverses the subtraction and reports a 'balance' instead of noticing the shortfall.",
+    "example": {
+     "question": "Halima has 500 shillings. Her budget total is 560 shillings. Can she buy everything?",
+     "wrong_answer": "Yes, her balance is 60 shillings.",
+     "correct_answer": "No. She is short by 560 − 500 = 60 shillings, so she must remove or reduce an item, starting with wants."
+    }
    }
   ],
   "checks": [
@@ -12277,6 +13148,20 @@ export const TEACHING_PACK_G5 = {
      "question": "Why does the government collect taxes?",
      "wrong_answer": "It does not need to, because it can print as much money as it wants.",
      "correct_answer": "To pay for public services such as roads, public schools, hospitals, security and the salaries of teachers and nurses."
+    }
+   },
+   {
+    "code": "MATH.G5.MEASUR.MONEY.TAX_MEANING.M_TAX_KEPT_BY_SHOP",
+    "listen_for": [
+     "the supermarket"
+    ],
+    "ask": "Who builds the road to the supermarket?",
+    "repair": "The shop collects VAT and passes it to KRA for public services.",
+    "error": "Believes the tax shown on a receipt is kept by the shop as extra profit.",
+    "example": {
+     "question": "A supermarket receipt shows 'VAT 80.00'. Who gets this money in the end?",
+     "wrong_answer": "The supermarket",
+     "correct_answer": "The government. The shop collects it from the customer and pays it to KRA."
     }
    }
   ],
@@ -12448,6 +13333,20 @@ export const TEACHING_PACK_G5 = {
      "question": "Putting money into your bank account is called a ______.",
      "wrong_answer": "withdrawal",
      "correct_answer": "deposit"
+    }
+   },
+   {
+    "code": "MATH.G5.MEASUR.MONEY.BANK_SERVICES.M_BANK_KEEPS_SAME_NOTES",
+    "listen_for": [
+     "the same note"
+    ],
+    "ask": "Is a 1,000-shilling note worth the same as any other 1,000-shilling note?",
+    "repair": "The bank keeps the amount, not the paper; it lends some and pays it back.",
+    "error": "Believes the bank keeps each customer's exact notes in a box with their name, to be given back later.",
+    "example": {
+     "question": "Mwangi deposits one 1,000-shilling note. When he withdraws 1,000 shillings, must he get the same note back?",
+     "wrong_answer": "Yes, the bank keeps his note in a box with his name on it.",
+     "correct_answer": "No. The bank records 1,000 shillings in his account; he can be given any notes or coins worth 1,000 shillings."
     }
    }
   ],
@@ -12624,6 +13523,20 @@ export const TEACHING_PACK_G5 = {
      "wrong_answer": "No, saving is only for people with a lot of money.",
      "correct_answer": "Yes. If he saves 10 shillings a day, he has 10 × 7 = 70 shillings after one week."
     }
+   },
+   {
+    "code": "MATH.G5.MEASUR.MONEY.SAVING_FACTORS.M_HOME_AS_SAFE_AS_BANK",
+    "listen_for": [
+     "under the bed"
+    ],
+    "ask": "What could happen to a tin at home?",
+    "repair": "Home money can be lost, stolen or spent; a bank or SACCO keeps it safe.",
+    "error": "Thinks keeping savings at home, such as in a tin or under a mattress, is as safe as a bank or SACCO.",
+    "example": {
+     "question": "Where is the safest place to keep 5,000 shillings saved for school fees?",
+     "wrong_answer": "In a tin under the bed",
+     "correct_answer": "In a bank or SACCO account, because it is protected from theft, fire and spending on impulse, and may earn interest."
+    }
    }
   ],
   "checks": [
@@ -12710,6 +13623,20 @@ export const TEACHING_PACK_G5 = {
      "question": "A ladder leans against the wall of a classroom. Is the ladder horizontal, vertical or neither?",
      "wrong_answer": "Vertical",
      "correct_answer": "Neither, it is slanting"
+    }
+   },
+   {
+    "code": "MATH.G5.GEOMET.LINES.IDENTIFY_HORIZONTAL_VERTICAL.M_HV_TILTED_SHAPE",
+    "listen_for": [
+     "2"
+    ],
+    "ask": "Hold the plumb line beside the diamond's sides. Are any upright?",
+    "repair": "A tilted square has slanting sides: none is horizontal or vertical.",
+    "error": "Thinks the sides of a square or rectangle are always horizontal and vertical, even when the shape is drawn tilted.",
+    "example": {
+     "question": "A square is drawn turned so it stands on one corner (like a diamond). How many of its sides are horizontal?",
+     "wrong_answer": "2",
+     "correct_answer": "0, all four sides are slanting"
     }
    }
   ],
@@ -12886,6 +13813,34 @@ export const TEACHING_PACK_G5 = {
      "wrong_answer": "Yes, because they meet",
      "correct_answer": "No, they meet at an angle smaller than a right angle"
     }
+   },
+   {
+    "code": "MATH.G5.GEOMET.LINES.IDENTIFY_PERPENDICULAR.M_PERP_MUST_CROSS",
+    "listen_for": [
+     "they only touch"
+    ],
+    "ask": "Does the square-corner checker fit the book's corner?",
+    "repair": "Meeting at a right angle is enough; lines need not cross.",
+    "error": "Thinks perpendicular lines must cross through each other, so rejects an L or T shape.",
+    "example": {
+     "question": "Are two edges meeting at the corner of an exercise book perpendicular?",
+     "wrong_answer": "No, they only touch at the end, they do not cross",
+     "correct_answer": "Yes, they meet at a right angle"
+    }
+   },
+   {
+    "code": "MATH.G5.GEOMET.LINES.IDENTIFY_PERPENDICULAR.M_PERP_BY_EYE",
+    "listen_for": [
+     "it looks square"
+    ],
+    "ask": "Does the set square corner fit with no gap?",
+    "repair": "Check with the set square, not by eye.",
+    "error": "Judges by eye and accepts angles that are near but not equal to a right angle.",
+    "example": {
+     "question": "Two lines meet at an angle slightly less than a right angle (a set square corner does not fit; there is a gap). Are they perpendicular?",
+     "wrong_answer": "Yes",
+     "correct_answer": "No, the angle is not a right angle"
+    }
    }
   ],
   "checks": [
@@ -12976,6 +13931,20 @@ export const TEACHING_PACK_G5 = {
      "wrong_answer": "A line through M slanting at about 45° to XY",
      "correct_answer": "A line through M at a right angle to XY, drawn along the edge next to the square corner"
     }
+   },
+   {
+    "code": "MATH.G5.GEOMET.LINES.DRAW_PERPENDICULAR.M_DRAWPERP_MISSES_POINT",
+    "listen_for": [
+     "near Q"
+    ],
+    "ask": "Does your line go through Q?",
+    "repair": "Put the set square corner exactly on Q before drawing.",
+    "error": "Draws a line at a right angle to the given line but not through the marked point.",
+    "example": {
+     "question": "Draw a line perpendicular to line CD through point Q, which is 3 cm from C on CD.",
+     "wrong_answer": "A perpendicular line meeting CD 1 cm away from Q",
+     "correct_answer": "A perpendicular line passing exactly through Q"
+    }
    }
   ],
   "checks": [
@@ -13060,6 +14029,20 @@ export const TEACHING_PACK_G5 = {
      "question": "One horizontal line is 3 cm long. Another horizontal line 2 cm below it is 7 cm long and starts further to the right. Are they parallel?",
      "wrong_answer": "No, because they are not the same length",
      "correct_answer": "Yes, they stay the same distance apart and would never meet"
+    }
+   },
+   {
+    "code": "MATH.G5.GEOMET.LINES.IDENTIFY_PARALLEL.M_PAR_ONLY_HORIZONTAL",
+    "listen_for": [
+     "they are slanting"
+    ],
+    "ask": "Is the gap between the ruler's edges the same all along?",
+    "repair": "Same gap all along is the test, whatever the slant.",
+    "error": "Recognises only pairs of horizontal lines as parallel and rejects vertical or slanting pairs.",
+    "example": {
+     "question": "Are the two slanting edges of a ruler laid diagonally across a desk parallel?",
+     "wrong_answer": "No, they are not lying flat across the page",
+     "correct_answer": "Yes, the two long edges of a ruler are always the same distance apart"
     }
    }
   ],
@@ -13150,6 +14133,20 @@ export const TEACHING_PACK_G5 = {
      "wrong_answer": "A horizontal line below MN",
      "correct_answer": "A line below or above MN with exactly the same downward slope"
     }
+   },
+   {
+    "code": "MATH.G5.GEOMET.LINES.DRAW_PARALLEL.M_DRAWPAR_SLANT_MEASURE",
+    "listen_for": [
+     "I measured along the ruler"
+    ],
+    "ask": "Is your ruler at a right angle to PQ?",
+    "repair": "Measure the gap at right angles, using the set square.",
+    "error": "Measures the distance between the lines along a slant instead of at right angles, so the gap is smaller than asked.",
+    "example": {
+     "question": "Draw a line parallel to the horizontal line PQ and 4 cm from it.",
+     "wrong_answer": "The ruler is held slanting and 4 cm is marked along it, giving lines only about 3 cm apart",
+     "correct_answer": "Distance measured straight up from PQ at a right angle, so the lines are 4 cm apart"
+    }
    }
   ],
   "checks": [
@@ -13236,6 +14233,20 @@ export const TEACHING_PACK_G5 = {
      "question": "The minute hand moves from 3 to 6. What fraction of a turn is that, and what angle?",
      "wrong_answer": "A half turn, 180°",
      "correct_answer": "A quarter turn, 90°"
+    }
+   },
+   {
+    "code": "MATH.G5.GEOMET.ANGLES.TURNS_AS_ANGLES.M_SAME_END_SAME_ANGLE",
+    "listen_for": [
+     "both 90"
+    ],
+    "ask": "Who turned further, Otieno or Akinyi?",
+    "repair": "Facing the same way is not the same turn: count the quarter turns each made.",
+    "error": "Believes a quarter turn anticlockwise and a three-quarter turn clockwise are the same angle because the child ends facing the same way.",
+    "example": {
+     "question": "Otieno faces north and makes a three-quarter turn clockwise. Akinyi faces north and makes a quarter turn anticlockwise. Did they turn through the same angle?",
+     "wrong_answer": "Yes, both turned 90°.",
+     "correct_answer": "No. Both end facing west, but Otieno turned 270° and Akinyi turned 90°."
     }
    }
   ],
@@ -13418,6 +14429,20 @@ export const TEACHING_PACK_G5 = {
      "wrong_answer": "90°",
      "correct_answer": "72°"
     }
+   },
+   {
+    "code": "MATH.G5.GEOMET.ANGLES.READ_PROTRACTOR_BOTH_SCALES.M_COUNT_MARKS_BACKWARDS",
+    "listen_for": [
+     "37"
+    ],
+    "ask": "Going from 40 towards 50, do the numbers go up or down?",
+    "repair": "Count on from 40 in the direction of 50.",
+    "error": "Counts the small degree marks in the wrong direction from a labelled number.",
+    "example": {
+     "question": "Using the scale that starts at 0 on the baseline arm, the other arm is 3 small marks past 40, on the way to 50. What is the angle?",
+     "wrong_answer": "37°",
+     "correct_answer": "43°"
+    }
    }
   ],
   "checks": [
@@ -13503,6 +14528,34 @@ export const TEACHING_PACK_G5 = {
      "question": "Measure the 35° angle drawn with arms only 1 cm long.",
      "wrong_answer": "About 50° (a guess)",
      "correct_answer": "35°, after extending the arms with a ruler"
+    }
+   },
+   {
+    "code": "MATH.G5.GEOMET.ANGLES.MEASURE_WITH_PROTRACTOR.M_EDGE_NOT_BASELINE",
+    "listen_for": [
+     "66"
+    ],
+    "ask": "Where is the 0 line on this protractor, the edge or a line above it?",
+    "repair": "Line up the 0° line, not the plastic edge.",
+    "error": "Lines the bottom edge of the protractor up with the arm instead of the 0° baseline, which on many protractors sits above the edge.",
+    "example": {
+     "question": "Measure angle ABC, which is 70°.",
+     "wrong_answer": "A reading a few degrees out, e.g. 66°",
+     "correct_answer": "70°"
+    }
+   },
+   {
+    "code": "MATH.G5.GEOMET.ANGLES.MEASURE_WITH_PROTRACTOR.M_READ_SECOND_ARM_ONLY",
+    "listen_for": [
+     "80"
+    ],
+    "ask": "Is either arm on the 0 line?",
+    "repair": "Turn the protractor so one arm lies on 0, or subtract the two readings.",
+    "error": "When neither arm is horizontal, keeps the protractor straight and reads only where the upper arm crosses the scale.",
+    "example": {
+     "question": "With the protractor held level, one arm crosses the scale at 20 and the other at 80 (same scale). What is the angle?",
+     "wrong_answer": "80°",
+     "correct_answer": "60°"
     }
    }
   ],
@@ -13590,6 +14643,20 @@ export const TEACHING_PACK_G5 = {
      "wrong_answer": "200°",
      "correct_answer": "100°"
     }
+   },
+   {
+    "code": "MATH.G5.GEOMET.ANGLES.MEASURE_ANGLES_IN_CONTEXT.M_NO_REASONABLENESS_CHECK",
+    "listen_for": [
+     "150"
+    ],
+    "ask": "Is that corner sharp or wide?",
+    "repair": "Estimate first; a sharp corner is less than 90°, so read the other scale.",
+    "error": "Accepts a measurement that contradicts what the angle obviously looks like, for example recording an obtuse value for a sharp corner.",
+    "example": {
+     "question": "Measure the sharp corner of a triangular scarf drawing (true size 30°).",
+     "wrong_answer": "150°",
+     "correct_answer": "30°"
+    }
    }
   ],
   "checks": [
@@ -13674,6 +14741,20 @@ export const TEACHING_PACK_G5 = {
      "question": "A classroom door opens a quarter turn. What angle does it make with the closed position?",
      "wrong_answer": "There is no angle.",
      "correct_answer": "90°, a right angle"
+    }
+   },
+   {
+    "code": "MATH.G5.GEOMET.ANGLES.ANGLES_IN_ENVIRONMENT.M_ANGLE_IS_THE_CORNER_POINT",
+    "listen_for": [
+     "the screw"
+    ],
+    "ask": "If you open the scissors wider, does the screw change?",
+    "repair": "The angle is the opening between the blades, shown by an arc.",
+    "error": "Thinks the angle is the corner point itself rather than the amount of opening between two arms.",
+    "example": {
+     "question": "Show the angle made by an opened pair of scissors.",
+     "wrong_answer": "Points only to the screw where the blades join.",
+     "correct_answer": "Shows the opening between the two blades, which meet at the screw (the vertex)."
     }
    }
   ],
@@ -13763,6 +14844,34 @@ export const TEACHING_PACK_G5 = {
      "wrong_answer": "Yes, it is pointed.",
      "correct_answer": "No. A pyramid has flat triangular faces meeting at a point and a flat base with straight sides; the hut roof has a curved surface and a circular base."
     }
+   },
+   {
+    "code": "MATH.G5.GEOMET.3_D_OBJECTS.NAME_3D_OBJECTS.M_PROTOTYPE_ORIENTATION",
+    "listen_for": [
+     "it's a rectangle now"
+    ],
+    "ask": "Stand the tin up again. Did its shape change?",
+    "repair": "Turning an object does not change what it is.",
+    "error": "Recognises an object only in its usual position. For example, they do not recognise a cylinder lying on its side or a pyramid standing on its point.",
+    "example": {
+     "question": "A tin of Kimbo is lying on its side on the table. What 3-D object is it?",
+     "wrong_answer": "It is not a cylinder now / a rectangle",
+     "correct_answer": "It is still a cylinder; turning an object does not change its shape."
+    }
+   },
+   {
+    "code": "MATH.G5.GEOMET.3_D_OBJECTS.NAME_3D_OBJECTS.M_SIZE_CHANGES_SHAPE",
+    "listen_for": [
+     "the tank is bigger"
+    ],
+    "ask": "Do both have two flat circles and a curved side?",
+    "repair": "Shape is about faces and surfaces, not size or material.",
+    "error": "Thinks objects of very different size, colour or material cannot be the same shape.",
+    "example": {
+     "question": "Is a plastic water tank the same 3-D object as a tin of milk?",
+     "wrong_answer": "No, the tank is much bigger.",
+     "correct_answer": "Yes, both are cylinders: two flat circular ends and a curved surface."
+    }
    }
   ],
   "checks": [
@@ -13848,6 +14957,20 @@ export const TEACHING_PACK_G5 = {
      "question": "Describe the surfaces of a tin of cooking fat.",
      "wrong_answer": "It is round, so all its surfaces are curved.",
      "correct_answer": "It has two flat circular surfaces (top and bottom) and one curved surface around the side."
+    }
+   },
+   {
+    "code": "MATH.G5.GEOMET.3_D_OBJECTS.DESCRIBE_3D_FEATURES.M_ONLY_BALLS_ROLL",
+    "listen_for": [
+     "only the football"
+    ],
+    "ask": "Lay the tin on its side and push it. What happens?",
+    "repair": "Anything with a curved surface can roll; a tin rolls on its side and slides on its end.",
+    "error": "Believes only a sphere can roll, or that an object either rolls or slides but cannot do both.",
+    "example": {
+     "question": "Which of these can roll: a football, a tin of milk, a matchbox?",
+     "wrong_answer": "Only the football",
+     "correct_answer": "The football and the tin. The tin rolls on its curved surface and can also slide or stand on its flat ends."
     }
    }
   ],
@@ -14020,6 +15143,34 @@ export const TEACHING_PACK_G5 = {
      "question": "What 2-D shapes are the faces of a square-based pyramid?",
      "wrong_answer": "Triangles only",
      "correct_answer": "Four triangles and one square (the base)."
+    }
+   },
+   {
+    "code": "MATH.G5.GEOMET.3_D_OBJECTS.2D_FACES_IN_3D.M_SPHERE_HAS_CIRCLE_FACE",
+    "listen_for": [
+     "a circle"
+    ],
+    "ask": "Can a football stand flat on a table?",
+    "repair": "A sphere has no flat face; its outline looks round but every part is curved.",
+    "error": "Says a sphere has a circle as a face because its outline looks like a circle.",
+    "example": {
+     "question": "Which 2-D shape is a flat face of a football?",
+     "wrong_answer": "A circle",
+     "correct_answer": "None. A sphere has one curved surface and no flat face (its outline only looks like a circle)."
+    }
+   },
+   {
+    "code": "MATH.G5.GEOMET.3_D_OBJECTS.2D_FACES_IN_3D.M_CYLINDER_SIDE_RECTANGLE_FACE",
+    "listen_for": [
+     "and a rectangle"
+    ],
+    "ask": "Is the side of the tin flat?",
+    "repair": "The side is curved, so it is not a face; only the two circles are flat.",
+    "error": "Says a cylinder has a rectangle face because its side view looks like a rectangle.",
+    "example": {
+     "question": "What flat shapes are found on a tin of Kimbo?",
+     "wrong_answer": "Two circles and a rectangle",
+     "correct_answer": "Two circles; the side is a curved surface, not a flat rectangle."
     }
    }
   ],
@@ -14778,6 +15929,20 @@ export const TEACHING_PACK_G5 = {
      "wrong_answer": "12",
      "correct_answer": "18 (30 − 12, or 8 + 6 + 4)"
     }
+   },
+   {
+    "code": "MATH.G5.DATA_H.DATA_REPRESENTATION.COMPARE_TOTAL_FREQUENCIES.M_TOTAL_IS_ROWS",
+    "listen_for": [
+     "4"
+    ],
+    "ask": "Were only 4 learners asked?",
+    "repair": "Altogether means add every frequency.",
+    "error": "Gives the number of categories, or a single frequency, when asked how many were surveyed altogether.",
+    "example": {
+     "question": "Favourite drinks: tea 12, uji 8, milk 6, juice 4. How many learners were asked?",
+     "wrong_answer": "4",
+     "correct_answer": "30 (12 + 8 + 6 + 4)"
+    }
    }
   ],
   "checks": [
@@ -14862,6 +16027,20 @@ export const TEACHING_PACK_G5 = {
      "question": "In a survey of one Grade 5 class of 30, football was chosen by 12 learners, more than any other game. Which statement does the table support? A: All children in Kenya prefer football. B: In this class, more learners chose football than any other game.",
      "wrong_answer": "A",
      "correct_answer": "B. The data are only about this class."
+    }
+   },
+   {
+    "code": "MATH.G5.DATA_H.DATA_REPRESENTATION.INFER_FROM_FREQUENCY_TABLE.M_OPINION_OVER_DATA",
+    "listen_for": [
+     "mango is sweetest"
+    ],
+    "ask": "What did the learners choose most?",
+    "repair": "The decision comes from the table, not from what we like.",
+    "error": "Makes a decision from personal preference instead of from the data in the table.",
+    "example": {
+     "question": "The canteen asked 30 learners for their favourite fruit: banana 11, mango 9, orange 6, pawpaw 4. Which fruit should the canteen buy most of?",
+     "wrong_answer": "Mango, because it is the sweetest.",
+     "correct_answer": "Banana, because the most learners (11) chose it."
     }
    }
   ],
