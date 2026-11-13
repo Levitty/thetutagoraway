@@ -1,0 +1,135 @@
+{
+ "outcomes": {
+  "AGRI.G6.CONSER.CONTROLLING_SOIL_EROSION.a": "describe types of soil erosion in the environment",
+  "AGRI.G6.CONSER.CONTROLLING_SOIL_EROSION.b": "control soil erosion in the environment",
+  "AGRI.G6.CONSER.CONTROLLING_SOIL_EROSION.c": "appreciate importance of conserving soil",
+  "AGRI.G6.CONSER.CONSERVING_WATER.a": "identify types of seedbeds that conserve soil moisture",
+  "AGRI.G6.CONSER.CONSERVING_WATER.b": "prepare different types of seedbeds that conserve soil moisture",
+  "AGRI.G6.CONSER.CONSERVING_WATER.c": "appreciate importance of conserving moisture in a seedbed to increase chances of plants growth",
+  "AGRI.G6.CONSER.CONSERVING_WILD_ANIMALS.a": "identify deterrents that can keep off wild animals from crop and domestic animals",
+  "AGRI.G6.CONSER.CONSERVING_WILD_ANIMALS.b": "establish deterrents to keep off wild animals from destroying crops and domestic animals",
+  "AGRI.G6.CONSER.CONSERVING_WILD_ANIMALS.c": "acknowledge the importance of deterrents in conserving wild animals",
+  "AGRI.G6.FOOD_P.REARING_SMALL_DOMESTIC_A.a": "explain routine practices in rearing of small domestic animals",
+  "AGRI.G6.FOOD_P.REARING_SMALL_DOMESTIC_A.b": "rear small domestic animals used as sources of food",
+  "AGRI.G6.FOOD_P.REARING_SMALL_DOMESTIC_A.c": "embrace the rearing of small domestic animals used as sources of food",
+  "AGRI.G6.FOOD_P.PRESERVING_CROP_PRODUCTS.a": "describe how to preserve crop produce at home",
+  "AGRI.G6.FOOD_P.PRESERVING_CROP_PRODUCTS.b": "preserve crop produce using drying method",
+  "AGRI.G6.FOOD_P.PRESERVING_CROP_PRODUCTS.c": "adopt preservation crop produce to reduce food wastage",
+  "AGRI.G6.FOOD_P.COOKING_FOOD.a": "describe different methods of cooking",
+  "AGRI.G6.FOOD_P.COOKING_FOOD.b": "cook food using, different methods",
+  "AGRI.G6.FOOD_P.COOKING_FOOD.c": "embrace different methods of cooking in food production",
+  "AGRI.G6.HYGIEN.GOOD_GROOMING.a": "describe practices that enhance body cleanliness",
+  "AGRI.G6.HYGIEN.GOOD_GROOMING.b": "practice body cleanliness as a healthy habit",
+  "AGRI.G6.HYGIEN.GOOD_GROOMING.c": "recognise importance of body cleanliness as a hygienic practice",
+  "AGRI.G6.HYGIEN.LAUNDRY_STAIN_REMOVAL.a": "identify common stains on clothing and household articles",
+  "AGRI.G6.HYGIEN.LAUNDRY_STAIN_REMOVAL.b": "remove common stains from clothing and household articles",
+  "AGRI.G6.HYGIEN.LAUNDRY_STAIN_REMOVAL.c": "adopt stain removal for personal hygiene",
+  "AGRI.G6.PRODUC.CROCHETING_STITCHES.a": "identify crocheting stitches in making household articles",
+  "AGRI.G6.PRODUC.CROCHETING_STITCHES.b": "use crocheting stitches to make a household articles",
+  "AGRI.G6.PRODUC.CROCHETING_STITCHES.c": "adopt the use of crocheting stiches in making household articles",
+  "AGRI.G6.PRODUC.CONSTRUCTING_MOIST_BED_G.a": "explain the meaning of moist bed garden",
+  "AGRI.G6.PRODUC.CONSTRUCTING_MOIST_BED_G.b": "construct a moist bed garden for growing a selected crop",
+  "AGRI.G6.PRODUC.CONSTRUCTING_MOIST_BED_G.c": "embrace the use of moist bed garden in growing crops"
+ },
+ "skills": {
+  "AGRI.G6.CONSER.CONTROLLING_SOIL_EROSION.EROSION_TYPES": {
+   "forms": [
+    "name the type from its description",
+    "say which type is the most harmful",
+    "pick a cause",
+    "find the false step in a learner's answer"
+   ],
+   "mastery": "The child names splash erosion (raindrops knock soil loose), sheet erosion (a thin layer is washed away evenly), rill erosion (small channels cut in the soil) and gully erosion (deep channels), and names causes (heavy rain, bare ground, cutting trees, overgrazing, ploughing up and down a slope). The child does not say a gully is a thin layer. Evidence rule: at least four of the last five fresh questions right across at least two question forms, and no repeated pick of the same misconception."
+  },
+  "AGRI.G6.CONSER.CONTROLLING_SOIL_EROSION.EROSION_CONTROL": {
+   "forms": [
+    "pick the control for a site",
+    "say why a control works",
+    "say which action makes erosion worse",
+    "find the false step in a learner's plan"
+   ],
+   "mastery": "The child names ways to control erosion (terraces and contour ploughing across the slope, planting trees, grass or cover crops, mulching, grass strips, closing a gully with stones and planting it), says each works by slowing the water or holding the soil, and does not plough up and down a slope or leave it bare. This is the knowledge half of outcome b; doing it is practical. Evidence rule: at least four of the last five fresh questions right across at least two question forms, and no repeated pick of the same misconception."
+  },
+  "AGRI.G6.CONSER.CONSERVING_WATER.SEEDBEDS": {
+   "forms": [
+    "pick the bed for a dry place",
+    "pick the bed for a wet place",
+    "say what mulch does",
+    "find the false step in a learner's plan"
+   ],
+   "mastery": "The child says a sunken bed (a bed dug below the ground level) holds water and suits a dry place, that a raised bed drains fast and suits a very wet place, that a flat bed lies between the two, and that mulch (dry grass or leaves on the bed) keeps the soil moist. Preparing a seedbed is practical. Evidence rule: at least four of the last five fresh questions right across at least two question forms, and no repeated pick of the same misconception."
+  },
+  "AGRI.G6.CONSER.CONSERVING_WILD_ANIMALS.DETERRENTS": {
+   "forms": [
+    "pick the deterrent for an animal",
+    "say why a deterrent works",
+    "say why the animal is not killed",
+    "find the false step in a learner's plan"
+   ],
+   "mastery": "The child picks a deterrent that keeps the animal away without killing it (a scarecrow or shiny strips for birds, a beehive fence, a chilli fence or a trench for elephants, a thorn or live fence, noise from a tin or a guard dog), says wild animals must be kept away and not killed, and does not pick poison or a snare. Setting a deterrent up is practical. Evidence rule: at least four of the last five fresh questions right across at least two question forms, and no repeated pick of the same misconception."
+  },
+  "AGRI.G6.FOOD_P.REARING_SMALL_DOMESTIC_A.SMALL_ANIMALS": {
+   "forms": [
+    "pick the routine job",
+    "say how often a job is done",
+    "say what a sick animal needs",
+    "find the false step in a learner's plan"
+   ],
+   "mastery": "The child says daily jobs are feeding on proper feed, giving clean water, and checking each animal, that the house is cleaned and kept dry, that animals are vaccinated and dewormed as advised, that a sick animal is separated and the adult or animal health worker is told, and that records are kept. The child does not say any scraps will do or that water is optional. Evidence rule: at least four of the last five fresh questions right across at least two question forms, and no repeated pick of the same misconception."
+  },
+  "AGRI.G6.FOOD_P.PRESERVING_CROP_PRODUCTS.PRESERVE": {
+   "forms": [
+    "put the drying steps in order",
+    "pick the way to store it",
+    "say why dry food keeps",
+    "find the false step in a learner's plan"
+   ],
+   "mastery": "The child puts the steps of drying in order (sort and wash, cut if big, spread thin on a clean raised tray in the sun, turn it, cover from dust and rain, store when crisp or hard), says dry food keeps because germs and moulds need water to grow, and that dry produce is stored in clean, dry, closed containers off the floor. Evidence rule: at least four of the last five fresh questions right across at least two question forms, and no repeated pick of the same misconception."
+  },
+  "AGRI.G6.FOOD_P.COOKING_FOOD.COOKING_METHODS": {
+   "forms": [
+    "pick the method for a food",
+    "say what the method uses to cook",
+    "say which method needs oil",
+    "find the false step in a learner's answer"
+   ],
+   "mastery": "The child says boiling cooks in water (githeri, ugali, eggs), steaming cooks in the steam above the water, frying cooks in oil (shallow for chapati, deep for mandazi), roasting cooks with dry heat (maize on a fire) and baking cooks in an oven, and does not use water for frying. Evidence rule: at least four of the last five fresh questions right across at least two question forms, and no repeated pick of the same misconception."
+  },
+  "AGRI.G6.HYGIEN.GOOD_GROOMING.BODY_CLEANLINESS": {
+   "forms": [
+    "pick the practice and how often",
+    "say why a practice matters",
+    "say what not to share",
+    "find the false step in a learner's answer"
+   ],
+   "mastery": "The child says a bath with soap every day, washing hands with soap after the toilet and before eating, brushing the teeth twice a day, keeping the nails short and clean, washing the hair, and wearing clean clothes, give reasons (they stop germs and smell), and says towels, toothbrushes and combs are not shared. Evidence rule: at least four of the last five fresh questions right across at least two question forms, and no repeated pick of the same misconception."
+  },
+  "AGRI.G6.HYGIEN.LAUNDRY_STAIN_REMOVAL.STAINS": {
+   "forms": [
+    "name the stain from its look",
+    "pick how to treat the stain",
+    "say what not to do",
+    "find the false step in a learner's answer"
+   ],
+   "mastery": "The child names common stains (ink, tea, grease or oil, blood, mud, fruit juice, rust) and picks a gentle first treatment (cold water and soap for blood, soap and warm water for grease, let mud dry and brush it off before washing, lemon juice and salt with sun for rust), and does not rub hard, use hot water on blood or pour harsh chemicals on cloth. Evidence rule: at least four of the last five fresh questions right across at least two question forms, and no repeated pick of the same misconception."
+  },
+  "AGRI.G6.PRODUC.CROCHETING_STITCHES.CROCHET": {
+   "forms": [
+    "name the stitch",
+    "say which stitch comes first",
+    "pick the tool",
+    "find the false step in a learner's answer"
+   ],
+   "mastery": "The child says crocheting uses one crochet hook and yarn (not two needles), that the chain stitch is the base and begins every piece, that the slip stitch joins, that the single crochet is short and the double crochet taller, and names articles made (a doily, a table mat, a coaster, a small bag). Crocheting is practical. Evidence rule: at least four of the last five fresh questions right across at least two question forms, and no repeated pick of the same misconception."
+  },
+  "AGRI.G6.PRODUC.CONSTRUCTING_MOIST_BED_G.MOIST_BED": {
+   "forms": [
+    "say what a moist bed garden is",
+    "put the building steps in order",
+    "pick the site",
+    "find the false step in a learner's plan"
+   ],
+   "mastery": "The child says a moist bed garden is a sunken bed with layers of dry plant matter and manure under the topsoil and mulch on top, which holds water so that vegetables such as kale and spinach grow in dry times, puts the steps in order (choose a site near water, dig, add layers, add topsoil, plant, mulch, water), and does not say it is a raised bed. Building it is practical. Evidence rule: at least four of the last five fresh questions right across at least two question forms, and no repeated pick of the same misconception."
+  }
+ }
+}
