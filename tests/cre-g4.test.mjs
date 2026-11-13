@@ -54,7 +54,7 @@ test('78 families: every skill has two or more, ids start cre4., all are draft a
     assert.ok(f.id.startsWith('cre4.') && f.cskill.startsWith('CRES.G4.'), f.id);
     assert.ok(f.reviewed === false && isOn(f) === false, `${f.id} is on for children without a sign-off`);
   }
-  assert.equal(entriesOf('cre').length, 2, 'Grades 4 and 5 are both registered');
+  assert.ok(entriesOf('cre').length >= 2, 'Grades 4 and 5 are both registered (later grades may be added)');
 });
 
 test('every wrong option names a library misconception and the text is British, with no emoji or em dash', () => {

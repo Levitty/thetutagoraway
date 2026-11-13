@@ -1,0 +1,323 @@
+{
+ "outcomes": {
+  "CRE.G6.CREATI.MY_PURPOSE.a": "discuss how they use their God-given talents and abilities",
+  "CRE.G6.CREATI.MY_PURPOSE.b": "explain biblical teachings on the use of talents and abilities",
+  "CRE.G6.CREATI.MY_PURPOSE.c": "identify values required to nurture talents and abilities",
+  "CRE.G6.CREATI.MY_PURPOSE.d": "utilise God-given talents and abilities to serve others. By the end of the sub-strand, the learner should be",
+  "CRE.G6.CREATI.MARRIAGE_AND_FAMILY.a": "explain the biblical teachings on marriage and family",
+  "CRE.G6.CREATI.MARRIAGE_AND_FAMILY.b": "discuss the negative results of early marriage",
+  "CRE.G6.CREATI.MARRIAGE_AND_FAMILY.c": "identify values needed to avoid early marriage",
+  "CRE.G6.CREATI.MARRIAGE_AND_FAMILY.d": "desire to uphold Christian values to avoid early marriage. By the end of the sub strand",
+  "CRE.G6.CREATI.LEISURE.a": "describe the biblical teaching on God’s rest",
+  "CRE.G6.CREATI.LEISURE.b": "explain biblical teachings on good use of leisure",
+  "CRE.G6.CREATI.LEISURE.c": "describe how youths misuse leisure time today",
+  "CRE.G6.CREATI.LEISURE.d": "identify values needed for appropriate use of leisure time",
+  "CRE.G6.CREATI.LEISURE.e": "desire to use leisure time responsibly",
+  "CRE.G6.THE_BI.INSPIRED_WORD_OF_GOD.a": "explain why the Bible is the inspired word of God",
+  "CRE.G6.THE_BI.INSPIRED_WORD_OF_GOD.b": "name three authors who wrote the Bible",
+  "CRE.G6.THE_BI.INSPIRED_WORD_OF_GOD.c": "discuss reasons that led to translation of the Bible into local languages",
+  "CRE.G6.THE_BI.INSPIRED_WORD_OF_GOD.d": "outline the advantages of translating the Bible into local languages",
+  "CRE.G6.THE_BI.INSPIRED_WORD_OF_GOD.e": "read the Bible always to get spiritual nourishment",
+  "CRE.G6.THE_BI.THE_TEN_COMMANDMENTS.a": "outline the Ten Commandments and their importance",
+  "CRE.G6.THE_BI.THE_TEN_COMMANDMENTS.b": "identify values and life skills in the Ten Commandments",
+  "CRE.G6.THE_BI.THE_TEN_COMMANDMENTS.c": "outline lessons learnt from the Ten Commandments",
+  "CRE.G6.THE_BI.THE_TEN_COMMANDMENTS.d": "appreciate the importance of obeying the Ten Commandments. Specific Learning Outcomes Suggested Learning Experiences Suggested",
+  "CRE.G6.THE_BI.BIBLE_STORIES_SAMSON_DEF.a": "retell the story of Samson as guided by the scriptures",
+  "CRE.G6.THE_BI.BIBLE_STORIES_SAMSON_DEF.b": "outline ways Christians depend on God to overcome challenges in life",
+  "CRE.G6.THE_BI.BIBLE_STORIES_SAMSON_DEF.c": "list lessons learnt from the story of Samson",
+  "CRE.G6.THE_BI.BIBLE_STORIES_SAMSON_DEF.d": "depend on God in day-to-day life",
+  "CRE.G6.THE_BI.FAITH_IN_GOD_ELISHA.a": "describe how Elisha recovered the axe head",
+  "CRE.G6.THE_BI.FAITH_IN_GOD_ELISHA.b": "exercise faith in God to overcome challenges in life",
+  "CRE.G6.THE_BI.FAITH_IN_GOD_ELISHA.c": "trust in God’spower when faced with challenges",
+  "CRE.G6.THE_BI.JACOB_WRESTLES_AN_ANGEL.a": "narrate the story of Jacob as guided by the scriptures",
+  "CRE.G6.THE_BI.JACOB_WRESTLES_AN_ANGEL.b": "outline lessons learnt from the story of Jacob",
+  "CRE.G6.THE_BI.JACOB_WRESTLES_AN_ANGEL.c": "identify values learnt from the story of Jacob",
+  "CRE.G6.THE_BI.JACOB_WRESTLES_AN_ANGEL.d": "emulate Jacob by being persistent in prayer",
+  "CRE.G6.THE_LI.THE_CALL_OF_DISCIPLES.a": "retell the call of the first disciples as guided by the scriptures",
+  "CRE.G6.THE_LI.THE_CALL_OF_DISCIPLES.b": "state how different people are called to serve God today",
+  "CRE.G6.THE_LI.THE_CALL_OF_DISCIPLES.c": "serve God in his or her daily life to grow spiritually",
+  "CRE.G6.THE_LI.THE_TEMPTATIONS_OF_JESUS.a": "narrate how Jesus Christ was tempted in the wilderness",
+  "CRE.G6.THE_LI.THE_TEMPTATIONS_OF_JESUS.b": "identify temptations they face as young people today",
+  "CRE.G6.THE_LI.THE_TEMPTATIONS_OF_JESUS.c": "desire to overcome temptations in day-to-day life",
+  "CRE.G6.THE_LI.MIRACLES_OF_JESUS_CHRIST.a": "narrate the healing of the Roman officer’s servant",
+  "CRE.G6.THE_LI.MIRACLES_OF_JESUS_CHRIST.b": "discuss lessons learnt from the healing of the Roman officer’s servant",
+  "CRE.G6.THE_LI.MIRACLES_OF_JESUS_CHRIST.c": "emulate Jesus Christ’s example by praying for the sick",
+  "CRE.G6.THE_LI.MIRACLE_OF_HEALING.a": "describe the miracle of healing the bleeding woman",
+  "CRE.G6.THE_LI.MIRACLE_OF_HEALING.b": "identify different ways the church and government help the sick in society",
+  "CRE.G6.THE_LI.MIRACLE_OF_HEALING.c": "outline lessons learnt from the miracle of healing the bleeding woman",
+  "CRE.G6.THE_LI.MIRACLE_OF_HEALING.d": "appreciate the healing power of Jesus Christ in their lives",
+  "CRE.G6.THE_LI.RAISING_LAZARUS_FROM_THE.a": "describe the miracle of raising Lazarus from the dead",
+  "CRE.G6.THE_LI.RAISING_LAZARUS_FROM_THE.b": "outline lessons learnt from the miracle of raising Lazarus from the dead",
+  "CRE.G6.THE_LI.RAISING_LAZARUS_FROM_THE.c": "appreciate God’s power over sickness and death",
+  "CRE.G6.THE_LI.THE_HIDDEN_TREASURE.a": "retell the parable of the hidden treasure",
+  "CRE.G6.THE_LI.THE_HIDDEN_TREASURE.b": "outline lessons learnt from the parable of the hidden treasure",
+  "CRE.G6.THE_LI.THE_HIDDEN_TREASURE.c": "be partakers of the Kingdom of God by committing their lives to Christ",
+  "CRE.G6.THE_LI.THE_RICH_MAN_AND_LAZARUS.a": "describe the parable of the rich man and Lazarus",
+  "CRE.G6.THE_LI.THE_RICH_MAN_AND_LAZARUS.b": "discuss lessons learnt from the parable of the rich man and Lazarus",
+  "CRE.G6.THE_LI.THE_RICH_MAN_AND_LAZARUS.c": "live responsibly as God-fearing Christians",
+  "CRE.G6.THE_CH.APOSTLES_CREED.a": "recite the Apostles’ creed to affirm their faith in Christ",
+  "CRE.G6.THE_CH.APOSTLES_CREED.b": "outline the teachings outlined in the Apostle’s Creed",
+  "CRE.G6.THE_CH.APOSTLES_CREED.c": "discuss the importance of the Apostles’ Creed to Christians today",
+  "CRE.G6.THE_CH.APOSTLES_CREED.d": "list the three persons of the Holy Trinity",
+  "CRE.G6.THE_CH.APOSTLES_CREED.e": "recognise the value of the Holy Trinity in their lives",
+  "CRE.G6.THE_CH.STANDING_FIRM_IN_FAITH_A.a": "describe the suffering faced by the Apostles according to 2 Corinthians 6:3-7",
+  "CRE.G6.THE_CH.STANDING_FIRM_IN_FAITH_A.b": "identify values/virtues in the life of Apostle Paul",
+  "CRE.G6.THE_CH.STANDING_FIRM_IN_FAITH_A.c": "apply values from the life of Apostle Paul in day-to-day life",
+  "CRE.G6.THE_CH.STANDING_FIRM_IN_FAITH_A.d": "stand firm in the Christian faith in the face of persecution",
+  "CRE.G6.THE_CH.CHURCH_UNITY.a": "explain the meaning of Church unity",
+  "CRE.G6.THE_CH.CHURCH_UNITY.b": "explain the biblical teachings on Church unity",
+  "CRE.G6.THE_CH.CHURCH_UNITY.c": "describe ways in which Church unity fosters harmonious living",
+  "CRE.G6.THE_CH.CHURCH_UNITY.d": "desire to live harmoniously with each other",
+  "CRE.G6.CHRIST.FRIENDSHIP_FORMATION.a": "discuss the importance of having good friends",
+  "CRE.G6.CHRIST.FRIENDSHIP_FORMATION.b": "outline biblical teachings on friendship formation",
+  "CRE.G6.CHRIST.FRIENDSHIP_FORMATION.c": "desire to walk with morally upright friends",
+  "CRE.G6.CHRIST.HUMAN_SEXUALITY_7_LESSON.a": "describe biblical teachings on responsible sexual behaviour",
+  "CRE.G6.CHRIST.HUMAN_SEXUALITY_7_LESSON.b": "outline the causes of irresponsible sexual behaviour among the youth",
+  "CRE.G6.CHRIST.HUMAN_SEXUALITY_7_LESSON.c": "identify values and life skills required to avoid irresponsible sexual behaviour",
+  "CRE.G6.CHRIST.HUMAN_SEXUALITY_7_LESSON.d": "respect his or her body as the temple of the Holy Spirit",
+  "CRE.G6.CHRIST.SANCTITY_OF_LIFE.a": "identify practices that violate the right to life in society today",
+  "CRE.G6.CHRIST.SANCTITY_OF_LIFE.b": "outline the effects of violating the right to life",
+  "CRE.G6.CHRIST.SANCTITY_OF_LIFE.c": "explain Christian teachings on sanctity of life",
+  "CRE.G6.CHRIST.SANCTITY_OF_LIFE.d": "list virtues that young people should practise to protect life",
+  "CRE.G6.CHRIST.SANCTITY_OF_LIFE.e": "acknowledge that life is a gift from God",
+  "CRE.G6.CHRIST.ALCOHOL_DRUGS_AND_SUBSTA.a": "explain Christian teachings on the dangers of alcohol, drugs and substance abuse",
+  "CRE.G6.CHRIST.ALCOHOL_DRUGS_AND_SUBSTA.b": "outline strategies used by Christians to prevent alcohol, drugs and substance abuse",
+  "CRE.G6.CHRIST.ALCOHOL_DRUGS_AND_SUBSTA.c": "analyse the measures taken by government agencies to fight drug trafficking and abuse",
+  "CRE.G6.CHRIST.ALCOHOL_DRUGS_AND_SUBSTA.d": "utilise Christian values and life skills to avoid alcohol, drugs and substance abuse"
+ },
+ "skills": {
+  "CRES.G6.CREATI.MY_PURPOSE.TALENTS": {
+   "forms": [
+    "what the verse says",
+    "where a talent comes from",
+    "a value that grows a talent"
+   ],
+   "mastery": "Says that God filled Bezalel with the Spirit of God, with wisdom, understanding, knowledge and skill for craftwork (Exodus 31:3), that the body has many parts with different work (Romans 12:4), that talents are God's gift to be used to serve others, and names values that grow a talent (practice, patience, discipline, humility). Does not say talents are only for showing off. Evidence rule: at least four of the last five fresh questions right across at least two question forms, and no repeated pick of the same misconception."
+  },
+  "CRES.G6.CREATI.MARRIAGE_AND_FAMILY.MARRIAGE_BIBLE": {
+   "forms": [
+    "recall a fact of the passage",
+    "what the verse says about leaving and joining",
+    "why marriage is for adults"
+   ],
+   "mastery": "Says that God made the woman from the man's rib while he slept, that the man said she was bone of his bones, and that a man leaves his father and mother, is joined to his wife and the two become one. Does not say the woman was made from dust. Evidence rule: at least four of the last five fresh questions right across at least two question forms, and no repeated pick of the same misconception."
+  },
+  "CRES.G6.CREATI.MARRIAGE_AND_FAMILY.EARLY_MARRIAGE": {
+   "forms": [
+    "a result of early marriage",
+    "a value that helps",
+    "who to tell"
+   ],
+   "mastery": "Gives results of early marriage (leaving school, early pregnancy and its health risks, poverty, violence, losing childhood), says that in Kenya the law sets 18 as the age to marry, names values that help (patience, self-control, respect, responsibility, courage to say no) and who to tell (a parent, a teacher, the chief, a children's officer, Childline Kenya 116). Evidence rule: at least four of the last five fresh questions right across at least two question forms, and no repeated pick of the same misconception."
+  },
+  "CRES.G6.CREATI.LEISURE.LEISURE_REST": {
+   "forms": [
+    "what God did on the seventh day",
+    "why rest is good",
+    "what the verse warns"
+   ],
+   "mastery": "Says that God finished his work, rested on the seventh day, blessed it and made it holy, that rest is a gift and not a sign of tiredness, and that 1 Timothy 5:13 warns against idleness that leads to gossip and meddling. Does not say that leisure means doing nothing. Evidence rule: at least four of the last five fresh questions right across at least two question forms, and no repeated pick of the same misconception."
+  },
+  "CRES.G6.CREATI.LEISURE.LEISURE_USE": {
+   "forms": [
+    "good use or misuse",
+    "a value for leisure",
+    "what to do with free time"
+   ],
+   "mastery": "Gives good uses of free time (play, sport, reading, helping at home, church activities, a hobby, visiting the sick), misuses by young people (drugs and alcohol, gambling, too much phone or television, idle gossip, bad company) and values for good use (self-control, responsibility, time management, honesty). Evidence rule: at least four of the last five fresh questions right across at least two question forms, and no repeated pick of the same misconception."
+  },
+  "CRES.G6.THE_BI.INSPIRED_WORD_OF_GOD.INSPIRED": {
+   "forms": [
+    "what 2 Timothy 3:16-17 says",
+    "what inspired means",
+    "an author of a book of the Bible"
+   ],
+   "mastery": "Says that all Scripture is God-breathed and useful for teaching, rebuking, correcting and training in righteousness (2 Timothy 3:16-17), that people wrote what God inspired, and names three authors (for example Moses, David, Paul). Does not say the Bible has one author. Evidence rule: at least four of the last five fresh questions right across at least two question forms, and no repeated pick of the same misconception."
+  },
+  "CRES.G6.THE_BI.INSPIRED_WORD_OF_GOD.TRANSLATION": {
+   "forms": [
+    "a reason for translation",
+    "an advantage of reading in your language",
+    "which statement is false"
+   ],
+   "mastery": "Gives reasons for translating the Bible (so people can read and understand it in their own language, to spread the gospel, to keep the language alive, to read at home and in small groups) and advantages (better understanding, more people read it, it strengthens faith, it helps teaching), and does not say translation changes God's message. Evidence rule: at least four of the last five fresh questions right across at least two question forms, and no repeated pick of the same misconception."
+  },
+  "CRES.G6.THE_BI.THE_TEN_COMMANDMENTS.TEN_OUTLINE": {
+   "forms": [
+    "which command is in the list",
+    "which is not",
+    "which command a situation breaks"
+   ],
+   "mastery": "Says that the Ten Commandments (Exodus 20:3-17) call for no other gods, no idols, honouring God's name, keeping a day of rest, honouring father and mother, and not killing, committing adultery, stealing, giving false witness or coveting; does not add laws from elsewhere (such as tithes) and does not number them. Evidence rule: at least four of the last five fresh questions right across at least two question forms, and no repeated pick of the same misconception."
+  },
+  "CRES.G6.THE_BI.THE_TEN_COMMANDMENTS.TEN_VALUES": {
+   "forms": [
+    "which value goes with a command",
+    "what a lesson from a command is",
+    "what a situation shows"
+   ],
+   "mastery": "Links a command to the value it teaches (honouring parents: respect; not stealing: honesty; not giving false witness: truthfulness; not coveting: contentment; not killing: respect for life; a day of rest: self-control and worship) and says that the commands guide how we treat God and other people. Evidence rule: at least four of the last five fresh questions right across at least two question forms, and no repeated pick of the same misconception."
+  },
+  "CRES.G6.THE_BI.BIBLE_STORIES_SAMSON_DEF.SAMSON": {
+   "forms": [
+    "recall a fact of the story",
+    "where his strength came from",
+    "a lesson from the story"
+   ],
+   "mastery": "Says that when the Philistines shouted at him the Spirit of the Lord came on Samson with power, the ropes on his arms fell off like burnt flax, that he took a fresh jawbone of a donkey and killed a thousand men, and that his strength came from the Lord. Gives lessons (depend on God, God gives strength for hard times). Evidence rule: at least four of the last five fresh questions right across at least two question forms, and no repeated pick of the same misconception."
+  },
+  "CRES.G6.THE_BI.FAITH_IN_GOD_ELISHA.ELISHA": {
+   "forms": [
+    "recall a fact of the story",
+    "what Elisha did",
+    "a lesson about faith"
+   ],
+   "mastery": "Says that the prophets were cutting trees by the Jordan, that the axe head fell into the water and was borrowed, that Elisha asked where it fell, cut a stick and threw it in, that the iron floated and the man picked it up. Gives lessons (take problems to God, God cares about small needs, faith). Evidence rule: at least four of the last five fresh questions right across at least two question forms, and no repeated pick of the same misconception."
+  },
+  "CRES.G6.THE_BI.JACOB_WRESTLES_AN_ANGEL.JACOB": {
+   "forms": [
+    "recall a fact of the story",
+    "what Jacob asked",
+    "a lesson from the story"
+   ],
+   "mastery": "Says that Jacob sent his family across the Jabbok and was left alone, that a man wrestled with him until daybreak, wrenched his hip, that Jacob said \"I will not let you go unless you bless me\", that his name was changed to Israel and he named the place Peniel. Gives lessons (persist in prayer, God blesses faith). Evidence rule: at least four of the last five fresh questions right across at least two question forms, and no repeated pick of the same misconception."
+  },
+  "CRES.G6.THE_LI.THE_CALL_OF_DISCIPLES.DISCIPLES": {
+   "forms": [
+    "recall a fact of the call",
+    "what Jesus said",
+    "how people are called today"
+   ],
+   "mastery": "Says that Jesus saw Simon and Andrew fishing and said \"Follow me, and I will make you fishers of men\", that they left their nets, that he called James and John who left their father Zebedee, and that people today are called in many ways (as teachers, nurses, pastors, parents, helpers). Evidence rule: at least four of the last five fresh questions right across at least two question forms, and no repeated pick of the same misconception."
+  },
+  "CRES.G6.THE_LI.THE_TEMPTATIONS_OF_JESUS.TEMPTATIONS": {
+   "forms": [
+    "recall a temptation",
+    "how Jesus answered",
+    "a temptation young people meet"
+   ],
+   "mastery": "Says that Jesus fasted forty days, that the devil tempted him to turn a stone to bread, to worship him for the kingdoms, and to throw himself from the temple, that Jesus answered each time with Scripture and did not give in, and names temptations young people meet (cheating, lying, bad company, drugs) and ways to resist (pray, use God's word, ask for help). Evidence rule: at least four of the last five fresh questions right across at least two question forms, and no repeated pick of the same misconception."
+  },
+  "CRES.G6.THE_LI.MIRACLES_OF_JESUS_CHRIST.ROMAN_OFFICER": {
+   "forms": [
+    "recall a fact of the healing",
+    "what the officer said",
+    "a lesson from the story"
+   ],
+   "mastery": "Says that a Roman officer in Capernaum asked Jesus to heal his paralysed servant, that he said he was not worthy to have Jesus come under his roof and that Jesus need only speak, that Jesus was amazed at his faith, and that the servant was healed at that hour. Gives lessons (faith, humility, care for others) and praying for the sick. Evidence rule: at least four of the last five fresh questions right across at least two question forms, and no repeated pick of the same misconception."
+  },
+  "CRES.G6.THE_LI.MIRACLE_OF_HEALING.BLEEDING_WOMAN": {
+   "forms": [
+    "recall a fact of the healing",
+    "what Jesus said to her",
+    "who helps the sick"
+   ],
+   "mastery": "Says that the woman had bled for twelve years and spent all she had on doctors, that she touched the edge of Jesus' cloak and was healed at once, that Jesus asked who touched him and told her \"Your faith has healed you\", and names ways the church (hospitals and clinics, prayer, visiting) and the government (hospitals, clinics, vaccination, health insurance) help the sick. Evidence rule: at least four of the last five fresh questions right across at least two question forms, and no repeated pick of the same misconception."
+  },
+  "CRES.G6.THE_LI.RAISING_LAZARUS_FROM_THE.LAZARUS_RAISED": {
+   "forms": [
+    "recall a fact of the miracle",
+    "what Jesus said and did",
+    "a lesson from the miracle"
+   ],
+   "mastery": "Says that Mary fell at Jesus' feet, that Jesus wept, that Lazarus had been in the tomb four days behind a stone, that Jesus prayed and called \"Lazarus, come out!\" and the dead man came out bound in cloth. Gives lessons (Jesus has power over death, Jesus cares, trust God in sorrow). Evidence rule: at least four of the last five fresh questions right across at least two question forms, and no repeated pick of the same misconception."
+  },
+  "CRES.G6.THE_LI.THE_HIDDEN_TREASURE.HIDDEN_TREASURE": {
+   "forms": [
+    "recall a fact of the parable",
+    "what the treasure stands for",
+    "a lesson from the parable"
+   ],
+   "mastery": "Says that a man found treasure hidden in a field, hid it again, and in his joy sold everything he had and bought the field, and that Jesus said the kingdom of heaven is like this. Gives the lesson (the kingdom of God is worth more than anything). Does not say the lesson is about getting rich. Evidence rule: at least four of the last five fresh questions right across at least two question forms, and no repeated pick of the same misconception."
+  },
+  "CRES.G6.THE_LI.THE_RICH_MAN_AND_LAZARUS.RICH_MAN": {
+   "forms": [
+    "recall a fact of the parable",
+    "what the rich man did wrong",
+    "a lesson from the parable"
+   ],
+   "mastery": "Says that a rich man feasted every day while the beggar Lazarus lay at his gate covered with sores, that both died, that Lazarus was carried to Abraham and the rich man was in torment, that a great chasm lay between them, and that the rich man asked that his brothers be warned. Gives lessons (share with the poor, do not ignore need). Does not mix this Lazarus with the Lazarus of John 11. Evidence rule: at least four of the last five fresh questions right across at least two question forms, and no repeated pick of the same misconception."
+  },
+  "CRES.G6.THE_CH.APOSTLES_CREED.CREED_TEACHING": {
+   "forms": [
+    "what the creed says",
+    "which line is not in the creed",
+    "why Christians say it"
+   ],
+   "mastery": "Says that the creed begins \"I believe in God the Father Almighty, maker of heaven and earth\", that it says Jesus Christ was born of the Virgin Mary, suffered under Pontius Pilate, was crucified, died and was buried, rose on the third day, ascended and will come to judge, that it also speaks of the Holy Spirit, the forgiveness of sins and life everlasting, and that Christians say it to affirm their faith. Does not say the creed is a book of the Bible. Evidence rule: at least four of the last five fresh questions right across at least two question forms, and no repeated pick of the same misconception."
+  },
+  "CRES.G6.THE_CH.APOSTLES_CREED.TRINITY": {
+   "forms": [
+    "name the three persons",
+    "which person does what",
+    "which is false"
+   ],
+   "mastery": "Names the Father, the Son and the Holy Spirit as the three persons of the Trinity (one God, not three gods), and links each with what the Bible says: the Father as creator, the Son as saviour, the Holy Spirit as helper and comforter. Evidence rule: at least four of the last five fresh questions right across at least two question forms, and no repeated pick of the same misconception."
+  },
+  "CRES.G6.THE_CH.STANDING_FIRM_IN_FAITH_A.PAUL_SUFFERING": {
+   "forms": [
+    "what the apostles suffered",
+    "a virtue Paul showed",
+    "how to stand firm"
+   ],
+   "mastery": "Lists what the apostles went through in 2 Corinthians 6:3-7 (troubles, hardships, distress, beatings, prison, riots, hard work, sleepless nights, hunger) and the virtues Paul showed (purity, understanding, patience, kindness, sincere love, truthful speech), and applies one to a situation. Does not say suffering means God is angry. Evidence rule: at least four of the last five fresh questions right across at least two question forms, and no repeated pick of the same misconception."
+  },
+  "CRES.G6.THE_CH.CHURCH_UNITY.CHURCH_UNITY": {
+   "forms": [
+    "what a verse teaches",
+    "what unity is",
+    "how unity helps"
+   ],
+   "mastery": "Says that church unity is believers being one in Christ and working together in love; that 1 Corinthians 12:12 compares the church to one body with many parts, that Galatians 3:28 says all are one in Christ whatever their tribe, status or sex, and that Jesus said \"I will build my church\" (Matthew 16:18); and gives ways unity helps people live in peace. Does not say unity means everyone being the same. Evidence rule: at least four of the last five fresh questions right across at least two question forms, and no repeated pick of the same misconception."
+  },
+  "CRES.G6.CHRIST.FRIENDSHIP_FORMATION.FRIENDSHIP": {
+   "forms": [
+    "what the verse says",
+    "a quality of a good friend",
+    "what to do about a friend who leads you astray"
+   ],
+   "mastery": "Says that bad company corrupts good character (1 Corinthians 15:33), that the one who walks with the wise grows wise and the companion of fools suffers harm (Proverbs 13:20-21), that gossip and a violent person separate friends and lead others astray (Proverbs 16:28-29), and gives qualities of a good friend (honest, kind, respectful, helps you do right). Evidence rule: at least four of the last five fresh questions right across at least two question forms, and no repeated pick of the same misconception."
+  },
+  "CRES.G6.CHRIST.HUMAN_SEXUALITY_7_LESSON.SEXUALITY_BIBLE": {
+   "forms": [
+    "what the verse says",
+    "why the body is respected",
+    "what a responsible choice is"
+   ],
+   "mastery": "Says that temptation begins when we are drawn by our own desire (James 1:14-16), that the Bible teaches self-control and waiting for marriage, that the body is the temple of the Holy Spirit (1 Corinthians 6:19) and should be respected, and does not say that being tempted is itself a sin. Evidence rule: at least four of the last five fresh questions right across at least two question forms, and no repeated pick of the same misconception."
+  },
+  "CRES.G6.CHRIST.HUMAN_SEXUALITY_7_LESSON.SEXUALITY_SKILLS": {
+   "forms": [
+    "a cause",
+    "a value or life skill that helps",
+    "what to do in a risky situation"
+   ],
+   "mastery": "Gives causes (peer pressure, harmful content on phones and television, idleness, poverty and gifts offered for favours, alcohol and drugs, too little guidance), and the values and life skills that help (self-control, assertiveness, decision-making, refusing and walking away, talking to a parent or trusted adult), and does not say that accepting gifts for favours is harmless. Evidence rule: at least four of the last five fresh questions right across at least two question forms, and no repeated pick of the same misconception."
+  },
+  "CRES.G6.CHRIST.SANCTITY_OF_LIFE.SANCTITY_LIFE": {
+   "forms": [
+    "what a verse teaches",
+    "which practice violates life",
+    "an effect",
+    "a virtue that protects life"
+   ],
+   "mastery": "Says that life is a gift from God, that Exodus 20:13 says \"You shall not murder\" and Jesus taught that anger and hatred also harm (Matthew 5:21-22), names practices that violate the right to life (murder, mob justice, child abuse and neglect, drink-driving, harmful bullying), their effects (grief, orphans, broken families, prison) and virtues that protect life (love, forgiveness, patience, respect, self-control). Evidence rule: at least four of the last five fresh questions right across at least two question forms, and no repeated pick of the same misconception."
+  },
+  "CRES.G6.CHRIST.ALCOHOL_DRUGS_AND_SUBSTA.DRUGS_BIBLE": {
+   "forms": [
+    "what the verse says",
+    "which is a misused substance",
+    "a danger of misuse"
+   ],
+   "mastery": "Says that Ephesians 5:18 tells Christians not to get drunk but to be filled with the Spirit and Hosea 4:11 says wine takes away understanding, names substances young people misuse (alcohol, bhang, miraa, cigarettes, glue, petrol), tells misuse from medicine taken as a health worker directs, and gives dangers (poor health, failing school, quarrels, crime, addiction). Evidence rule: at least four of the last five fresh questions right across at least two question forms, and no repeated pick of the same misconception."
+  },
+  "CRES.G6.CHRIST.ALCOHOL_DRUGS_AND_SUBSTA.DRUGS_PREVENT": {
+   "forms": [
+    "a strategy",
+    "what an agency does",
+    "how to say no"
+   ],
+   "mastery": "Names Christian strategies (prayer, counselling, church youth programmes, caring for those who struggle, rehabilitation), names what government agencies do (NACADA campaigns against alcohol and drug abuse, the police and courts act against traffickers, laws control drugs), and gives ways a child says no (refuse firmly, walk away, give a reason, tell an adult). Evidence rule: at least four of the last five fresh questions right across at least two question forms, and no repeated pick of the same misconception."
+  }
+ }
+}

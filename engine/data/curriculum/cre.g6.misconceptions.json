@@ -1,0 +1,1292 @@
+{
+ "CRES.G6.CREATI.MY_PURPOSE.TALENTS.M_TAL6_SOURCE": {
+  "skill": "CRES.G6.CREATI.MY_PURPOSE.TALENTS",
+  "error": "Says talents come from luck or from oneself alone.",
+  "example": {
+   "question": "Where do talents and abilities come from?",
+   "wrong_answer": "From luck",
+   "correct_answer": "From God"
+  },
+  "cause": "The child answers from a general idea or a nearby story and does not go back to what the passage says.",
+  "reveals": "Offer \"From luck\" beside \"From God\" and ask the child to choose.",
+  "help": "Ask the child to find the line in the passage the question names and read it aloud before choosing.",
+  "feedback": "Exodus 31:3 says God gave Bezalel his skill. Talents are gifts from God.",
+  "source": "The learner reads the passage loosely or mixes it with a similar Bible story (to confirm by a CRE teacher)",
+  "status": "draft"
+ },
+ "CRES.G6.CREATI.MY_PURPOSE.TALENTS.M_TAL6_SHOW": {
+  "skill": "CRES.G6.CREATI.MY_PURPOSE.TALENTS",
+  "error": "Says a talent is for showing off or for oneself only.",
+  "example": {
+   "question": "What are talents given for?",
+   "wrong_answer": "To show off",
+   "correct_answer": "To serve others"
+  },
+  "cause": "The child answers from a general idea or a nearby story and does not go back to what the passage says.",
+  "reveals": "Offer \"To show off\" beside \"To serve others\" and ask the child to choose.",
+  "help": "Ask the child to find the line in the passage the question names and read it aloud before choosing.",
+  "feedback": "Romans 12:4 shows that each part of the body serves the whole. Talents are for serving others.",
+  "source": "The learner reads the passage loosely or mixes it with a similar Bible story (to confirm by a CRE teacher)",
+  "status": "draft"
+ },
+ "CRES.G6.CREATI.MY_PURPOSE.TALENTS.M_TAL6_VERSE": {
+  "skill": "CRES.G6.CREATI.MY_PURPOSE.TALENTS",
+  "error": "Mixes what Exodus 31:3 and Romans 12:4 say.",
+  "example": {
+   "question": "Which verse says the body has many parts with different work?",
+   "wrong_answer": "Exodus 31:3",
+   "correct_answer": "Romans 12:4"
+  },
+  "cause": "The child answers from a general idea or a nearby story and does not go back to what the passage says.",
+  "reveals": "Offer \"Exodus 31:3\" beside \"Romans 12:4\" and ask the child to choose.",
+  "help": "Ask the child to find the line in the passage the question names and read it aloud before choosing.",
+  "feedback": "Romans 12:4 compares us to one body with many parts. Exodus 31:3 is about God filling Bezalel with skill.",
+  "source": "The learner reads the passage loosely or mixes it with a similar Bible story (to confirm by a CRE teacher)",
+  "status": "draft"
+ },
+ "CRES.G6.CREATI.MARRIAGE_AND_FAMILY.MARRIAGE_BIBLE.M_MAR6_ORIGIN": {
+  "skill": "CRES.G6.CREATI.MARRIAGE_AND_FAMILY.MARRIAGE_BIBLE",
+  "error": "Says God made the woman from dust or from clay.",
+  "example": {
+   "question": "What did God use to make the woman (Genesis 2:21-22)?",
+   "wrong_answer": "The dust of the ground",
+   "correct_answer": "A rib taken from the man"
+  },
+  "cause": "The child answers from a general idea or a nearby story and does not go back to what the passage says.",
+  "reveals": "Offer \"The dust of the ground\" beside \"A rib taken from the man\" and ask the child to choose.",
+  "help": "Ask the child to find the line in the passage the question names and read it aloud before choosing.",
+  "feedback": "Genesis 2:21-22 says God took one of the man's ribs and made the woman.",
+  "source": "The learner reads the passage loosely or mixes it with a similar Bible story (to confirm by a CRE teacher)",
+  "status": "draft"
+ },
+ "CRES.G6.CREATI.MARRIAGE_AND_FAMILY.MARRIAGE_BIBLE.M_MAR6_LEAVE": {
+  "skill": "CRES.G6.CREATI.MARRIAGE_AND_FAMILY.MARRIAGE_BIBLE",
+  "error": "Says a man stays in his parents' home when he marries.",
+  "example": {
+   "question": "What does Genesis 2:24 say a man does when he marries?",
+   "wrong_answer": "He stays with his parents",
+   "correct_answer": "He leaves his father and mother and is joined to his wife"
+  },
+  "cause": "The child answers from a general idea or a nearby story and does not go back to what the passage says.",
+  "reveals": "Offer \"He stays with his parents\" beside \"He leaves his father and mother and is joined to his wife\" and ask the child to choose.",
+  "help": "Ask the child to find the line in the passage the question names and read it aloud before choosing.",
+  "feedback": "Genesis 2:24 says a man leaves his father and mother and is united to his wife.",
+  "source": "The learner reads the passage loosely or mixes it with a similar Bible story (to confirm by a CRE teacher)",
+  "status": "draft"
+ },
+ "CRES.G6.CREATI.MARRIAGE_AND_FAMILY.MARRIAGE_BIBLE.M_MAR6_SLEEP": {
+  "skill": "CRES.G6.CREATI.MARRIAGE_AND_FAMILY.MARRIAGE_BIBLE",
+  "error": "Mixes the details of the sleep and the rib.",
+  "example": {
+   "question": "What did God do before he took the rib?",
+   "wrong_answer": "He woke the man",
+   "correct_answer": "He put the man into a deep sleep"
+  },
+  "cause": "The child answers from a general idea or a nearby story and does not go back to what the passage says.",
+  "reveals": "Offer \"He woke the man\" beside \"He put the man into a deep sleep\" and ask the child to choose.",
+  "help": "Ask the child to find the line in the passage the question names and read it aloud before choosing.",
+  "feedback": "Genesis 2:21 says God caused the man to fall into a deep sleep.",
+  "source": "The learner reads the passage loosely or mixes it with a similar Bible story (to confirm by a CRE teacher)",
+  "status": "draft"
+ },
+ "CRES.G6.CREATI.MARRIAGE_AND_FAMILY.EARLY_MARRIAGE.M_EM6_BENEFIT": {
+  "skill": "CRES.G6.CREATI.MARRIAGE_AND_FAMILY.EARLY_MARRIAGE",
+  "error": "Thinks early marriage helps a girl or her family.",
+  "example": {
+   "question": "What is a result of early marriage for a girl?",
+   "wrong_answer": "She has a better future",
+   "correct_answer": "She may leave school and face health risks"
+  },
+  "cause": "The child answers from a general idea or a nearby story and does not go back to what the passage says.",
+  "reveals": "Offer \"She has a better future\" beside \"She may leave school and face health risks\" and ask the child to choose.",
+  "help": "Ask the child to find the line in the passage the question names and read it aloud before choosing.",
+  "feedback": "Early marriage often ends school, brings early pregnancy and its risks, and deepens poverty.",
+  "source": "The learner reads the passage loosely or mixes it with a similar Bible story (to confirm by a CRE teacher)",
+  "status": "draft"
+ },
+ "CRES.G6.CREATI.MARRIAGE_AND_FAMILY.EARLY_MARRIAGE.M_EM6_RIGHT": {
+  "skill": "CRES.G6.CREATI.MARRIAGE_AND_FAMILY.EARLY_MARRIAGE",
+  "error": "Thinks parents may decide a child's marriage.",
+  "example": {
+   "question": "In Kenya at what age may a person marry?",
+   "wrong_answer": "14 years",
+   "correct_answer": "18 years"
+  },
+  "cause": "The child answers from a general idea or a nearby story and does not go back to what the passage says.",
+  "reveals": "Offer \"14 years\" beside \"18 years\" and ask the child to choose.",
+  "help": "Ask the child to find the line in the passage the question names and read it aloud before choosing.",
+  "feedback": "The law in Kenya says a person must be 18 to marry.",
+  "source": "The learner reads the passage loosely or mixes it with a similar Bible story (to confirm by a CRE teacher)",
+  "status": "draft"
+ },
+ "CRES.G6.CREATI.MARRIAGE_AND_FAMILY.EARLY_MARRIAGE.M_EM6_KEEP_QUIET": {
+  "skill": "CRES.G6.CREATI.MARRIAGE_AND_FAMILY.EARLY_MARRIAGE",
+  "error": "Thinks a child at risk should keep quiet.",
+  "example": {
+   "question": "A girl is told she will be married next month. What should she do?",
+   "wrong_answer": "Keep quiet to respect her elders",
+   "correct_answer": "Tell a teacher, the chief or Childline 116"
+  },
+  "cause": "The child answers from a general idea or a nearby story and does not go back to what the passage says.",
+  "reveals": "Offer \"Keep quiet to respect her elders\" beside \"Tell a teacher, the chief or Childline 116\" and ask the child to choose.",
+  "help": "Ask the child to find the line in the passage the question names and read it aloud before choosing.",
+  "feedback": "A child at risk should tell a safe adult. Help is available, including Childline Kenya 116.",
+  "source": "The learner reads the passage loosely or mixes it with a similar Bible story (to confirm by a CRE teacher)",
+  "status": "draft"
+ },
+ "CRES.G6.CREATI.LEISURE.LEISURE_REST.M_LEI6_TIRED": {
+  "skill": "CRES.G6.CREATI.LEISURE.LEISURE_REST",
+  "error": "Says God rested because he was tired.",
+  "example": {
+   "question": "Why did God rest on the seventh day (Genesis 2:2-3)?",
+   "wrong_answer": "He was tired",
+   "correct_answer": "He had finished his work, and he blessed the day and made it holy"
+  },
+  "cause": "The child answers from a general idea or a nearby story and does not go back to what the passage says.",
+  "reveals": "Offer \"He was tired\" beside \"He had finished his work, and he blessed the day and made it holy\" and ask the child to choose.",
+  "help": "Ask the child to find the line in the passage the question names and read it aloud before choosing.",
+  "feedback": "Genesis 2:2-3 says God finished his work, rested, blessed the day and made it holy.",
+  "source": "The learner reads the passage loosely or mixes it with a similar Bible story (to confirm by a CRE teacher)",
+  "status": "draft"
+ },
+ "CRES.G6.CREATI.LEISURE.LEISURE_REST.M_LEI6_IDLE": {
+  "skill": "CRES.G6.CREATI.LEISURE.LEISURE_REST",
+  "error": "Says leisure means doing nothing.",
+  "example": {
+   "question": "What does 1 Timothy 5:13 warn against?",
+   "wrong_answer": "Resting at all",
+   "correct_answer": "Idleness that leads to gossip and meddling"
+  },
+  "cause": "The child answers from a general idea or a nearby story and does not go back to what the passage says.",
+  "reveals": "Offer \"Resting at all\" beside \"Idleness that leads to gossip and meddling\" and ask the child to choose.",
+  "help": "Ask the child to find the line in the passage the question names and read it aloud before choosing.",
+  "feedback": "1 Timothy 5:13 warns against idleness that leads to gossip and meddling. Rest itself is good.",
+  "source": "The learner reads the passage loosely or mixes it with a similar Bible story (to confirm by a CRE teacher)",
+  "status": "draft"
+ },
+ "CRES.G6.CREATI.LEISURE.LEISURE_REST.M_LEI6_DAY": {
+  "skill": "CRES.G6.CREATI.LEISURE.LEISURE_REST",
+  "error": "Gives the wrong day God rested.",
+  "example": {
+   "question": "On which day did God rest (Genesis 2:2)?",
+   "wrong_answer": "The sixth day",
+   "correct_answer": "The seventh day"
+  },
+  "cause": "The child answers from a general idea or a nearby story and does not go back to what the passage says.",
+  "reveals": "Offer \"The sixth day\" beside \"The seventh day\" and ask the child to choose.",
+  "help": "Ask the child to find the line in the passage the question names and read it aloud before choosing.",
+  "feedback": "Genesis 2:2 says God rested on the seventh day.",
+  "source": "The learner reads the passage loosely or mixes it with a similar Bible story (to confirm by a CRE teacher)",
+  "status": "draft"
+ },
+ "CRES.G6.CREATI.LEISURE.LEISURE_USE.M_LEI6_MISUSE": {
+  "skill": "CRES.G6.CREATI.LEISURE.LEISURE_USE",
+  "error": "Thinks drugs, gambling or too much phone time are fine ways to use free time.",
+  "example": {
+   "question": "Which is a good use of free time?",
+   "wrong_answer": "Gambling with friends",
+   "correct_answer": "Reading or helping at home"
+  },
+  "cause": "The child answers from a general idea or a nearby story and does not go back to what the passage says.",
+  "reveals": "Offer \"Gambling with friends\" beside \"Reading or helping at home\" and ask the child to choose.",
+  "help": "Ask the child to find the line in the passage the question names and read it aloud before choosing.",
+  "feedback": "Gambling, drugs and endless phone time waste time and can harm. Reading, sport and helping are good uses.",
+  "source": "The learner reads the passage loosely or mixes it with a similar Bible story (to confirm by a CRE teacher)",
+  "status": "draft"
+ },
+ "CRES.G6.CREATI.LEISURE.LEISURE_USE.M_LEI6_NO_LIMIT": {
+  "skill": "CRES.G6.CREATI.LEISURE.LEISURE_USE",
+  "error": "Thinks free time has no limits or no value.",
+  "example": {
+   "question": "Which value helps a youth use leisure well?",
+   "wrong_answer": "Doing whatever pleases the group",
+   "correct_answer": "Self-control"
+  },
+  "cause": "The child answers from a general idea or a nearby story and does not go back to what the passage says.",
+  "reveals": "Offer \"Doing whatever pleases the group\" beside \"Self-control\" and ask the child to choose.",
+  "help": "Ask the child to find the line in the passage the question names and read it aloud before choosing.",
+  "feedback": "Self-control and responsibility help us use free time well.",
+  "source": "The learner reads the passage loosely or mixes it with a similar Bible story (to confirm by a CRE teacher)",
+  "status": "draft"
+ },
+ "CRES.G6.THE_BI.INSPIRED_WORD_OF_GOD.INSPIRED.M_INS6_ONE": {
+  "skill": "CRES.G6.THE_BI.INSPIRED_WORD_OF_GOD.INSPIRED",
+  "error": "Says the Bible has one author.",
+  "example": {
+   "question": "How many authors does the Bible have?",
+   "wrong_answer": "One person wrote all of it",
+   "correct_answer": "Many people wrote it, inspired by God"
+  },
+  "cause": "The child answers from a general idea or a nearby story and does not go back to what the passage says.",
+  "reveals": "Offer \"One person wrote all of it\" beside \"Many people wrote it, inspired by God\" and ask the child to choose.",
+  "help": "Ask the child to find the line in the passage the question names and read it aloud before choosing.",
+  "feedback": "Many people, such as Moses, David and Paul, wrote the books of the Bible as God inspired them.",
+  "source": "The learner reads the passage loosely or mixes it with a similar Bible story (to confirm by a CRE teacher)",
+  "status": "draft"
+ },
+ "CRES.G6.THE_BI.INSPIRED_WORD_OF_GOD.INSPIRED.M_INS6_HUMAN": {
+  "skill": "CRES.G6.THE_BI.INSPIRED_WORD_OF_GOD.INSPIRED",
+  "error": "Says the Bible is only human writing.",
+  "example": {
+   "question": "What does 2 Timothy 3:16 say about Scripture?",
+   "wrong_answer": "It is only the ideas of wise men",
+   "correct_answer": "It is God-breathed"
+  },
+  "cause": "The child answers from a general idea or a nearby story and does not go back to what the passage says.",
+  "reveals": "Offer \"It is only the ideas of wise men\" beside \"It is God-breathed\" and ask the child to choose.",
+  "help": "Ask the child to find the line in the passage the question names and read it aloud before choosing.",
+  "feedback": "2 Timothy 3:16 says all Scripture is God-breathed.",
+  "source": "The learner reads the passage loosely or mixes it with a similar Bible story (to confirm by a CRE teacher)",
+  "status": "draft"
+ },
+ "CRES.G6.THE_BI.INSPIRED_WORD_OF_GOD.INSPIRED.M_INS6_USE": {
+  "skill": "CRES.G6.THE_BI.INSPIRED_WORD_OF_GOD.INSPIRED",
+  "error": "Gives a wrong use of Scripture from 2 Timothy 3:16-17.",
+  "example": {
+   "question": "What is Scripture useful for (2 Timothy 3:16)?",
+   "wrong_answer": "Winning arguments and making money",
+   "correct_answer": "Teaching, correcting and training in righteousness"
+  },
+  "cause": "The child answers from a general idea or a nearby story and does not go back to what the passage says.",
+  "reveals": "Offer \"Winning arguments and making money\" beside \"Teaching, correcting and training in righteousness\" and ask the child to choose.",
+  "help": "Ask the child to find the line in the passage the question names and read it aloud before choosing.",
+  "feedback": "2 Timothy 3:16 says Scripture is useful for teaching, rebuking, correcting and training in righteousness.",
+  "source": "The learner reads the passage loosely or mixes it with a similar Bible story (to confirm by a CRE teacher)",
+  "status": "draft"
+ },
+ "CRES.G6.THE_BI.INSPIRED_WORD_OF_GOD.TRANSLATION.M_TRA6_CHANGE": {
+  "skill": "CRES.G6.THE_BI.INSPIRED_WORD_OF_GOD.TRANSLATION",
+  "error": "Says translation changes God's message.",
+  "example": {
+   "question": "Does translating the Bible change its message?",
+   "wrong_answer": "Yes, it makes a new message",
+   "correct_answer": "No, it puts the same message into another language"
+  },
+  "cause": "The child answers from a general idea or a nearby story and does not go back to what the passage says.",
+  "reveals": "Offer \"Yes, it makes a new message\" beside \"No, it puts the same message into another language\" and ask the child to choose.",
+  "help": "Ask the child to find the line in the passage the question names and read it aloud before choosing.",
+  "feedback": "Translators carry the same message into a new language so that more people can understand.",
+  "source": "The learner reads the passage loosely or mixes it with a similar Bible story (to confirm by a CRE teacher)",
+  "status": "draft"
+ },
+ "CRES.G6.THE_BI.INSPIRED_WORD_OF_GOD.TRANSLATION.M_TRA6_ENGLISH": {
+  "skill": "CRES.G6.THE_BI.INSPIRED_WORD_OF_GOD.TRANSLATION",
+  "error": "Thinks only English or the language of the church leaders is good enough.",
+  "example": {
+   "question": "Why translate the Bible into local languages?",
+   "wrong_answer": "Because only English is not holy",
+   "correct_answer": "So people can understand it in their own language"
+  },
+  "cause": "The child answers from a general idea or a nearby story and does not go back to what the passage says.",
+  "reveals": "Offer \"Because only English is not holy\" beside \"So people can understand it in their own language\" and ask the child to choose.",
+  "help": "Ask the child to find the line in the passage the question names and read it aloud before choosing.",
+  "feedback": "People understand best in the language of the heart. That is why the Bible is translated.",
+  "source": "The learner reads the passage loosely or mixes it with a similar Bible story (to confirm by a CRE teacher)",
+  "status": "draft"
+ },
+ "CRES.G6.THE_BI.INSPIRED_WORD_OF_GOD.TRANSLATION.M_TRA6_COST": {
+  "skill": "CRES.G6.THE_BI.INSPIRED_WORD_OF_GOD.TRANSLATION",
+  "error": "Names a wrong advantage of translation.",
+  "example": {
+   "question": "Which is an advantage of reading the Bible in your own language?",
+   "wrong_answer": "It makes the Bible shorter",
+   "correct_answer": "You understand it better and more people can read it"
+  },
+  "cause": "The child answers from a general idea or a nearby story and does not go back to what the passage says.",
+  "reveals": "Offer \"It makes the Bible shorter\" beside \"You understand it better and more people can read it\" and ask the child to choose.",
+  "help": "Ask the child to find the line in the passage the question names and read it aloud before choosing.",
+  "feedback": "The advantage is better understanding and more readers, not a shorter Bible.",
+  "source": "The learner reads the passage loosely or mixes it with a similar Bible story (to confirm by a CRE teacher)",
+  "status": "draft"
+ },
+ "CRES.G6.THE_BI.THE_TEN_COMMANDMENTS.TEN_OUTLINE.M_TEN6_OTHER_LAW": {
+  "skill": "CRES.G6.THE_BI.THE_TEN_COMMANDMENTS.TEN_OUTLINE",
+  "error": "Adds a law from another part of the Bible (such as tithes) to the Ten Commandments.",
+  "example": {
+   "question": "Which is one of the Ten Commandments?",
+   "wrong_answer": "Give a tenth of your harvest",
+   "correct_answer": "Honour your father and your mother"
+  },
+  "cause": "The child answers from a general idea or a nearby story and does not go back to what the passage says.",
+  "reveals": "Offer \"Give a tenth of your harvest\" beside \"Honour your father and your mother\" and ask the child to choose.",
+  "help": "Ask the child to find the line in the passage the question names and read it aloud before choosing.",
+  "feedback": "The command to honour parents is in Exodus 20. Giving a tenth is a different law.",
+  "source": "The learner reads the passage loosely or mixes it with a similar Bible story (to confirm by a CRE teacher)",
+  "status": "draft"
+ },
+ "CRES.G6.THE_BI.THE_TEN_COMMANDMENTS.TEN_OUTLINE.M_TEN6_INVENTED": {
+  "skill": "CRES.G6.THE_BI.THE_TEN_COMMANDMENTS.TEN_OUTLINE",
+  "error": "Names a rule that is not in the Ten Commandments.",
+  "example": {
+   "question": "Which is not in the Ten Commandments?",
+   "wrong_answer": "You shall not steal",
+   "correct_answer": "Pray three times a day"
+  },
+  "cause": "The child answers from a general idea or a nearby story and does not go back to what the passage says.",
+  "reveals": "Offer \"You shall not steal\" beside \"Pray three times a day\" and ask the child to choose.",
+  "help": "Ask the child to find the line in the passage the question names and read it aloud before choosing.",
+  "feedback": "The Ten Commandments in Exodus 20:3-17 do not set the number of daily prayers.",
+  "source": "The learner reads the passage loosely or mixes it with a similar Bible story (to confirm by a CRE teacher)",
+  "status": "draft"
+ },
+ "CRES.G6.THE_BI.THE_TEN_COMMANDMENTS.TEN_OUTLINE.M_TEN6_WRONG_MATCH": {
+  "skill": "CRES.G6.THE_BI.THE_TEN_COMMANDMENTS.TEN_OUTLINE",
+  "error": "Matches a situation to the wrong command.",
+  "example": {
+   "question": "Otieno takes a pen that is not his. Which command does that break?",
+   "wrong_answer": "You shall not give false witness",
+   "correct_answer": "You shall not steal"
+  },
+  "cause": "The child answers from a general idea or a nearby story and does not go back to what the passage says.",
+  "reveals": "Offer \"You shall not give false witness\" beside \"You shall not steal\" and ask the child to choose.",
+  "help": "Ask the child to find the line in the passage the question names and read it aloud before choosing.",
+  "feedback": "Taking what belongs to someone else breaks the command not to steal.",
+  "source": "The learner reads the passage loosely or mixes it with a similar Bible story (to confirm by a CRE teacher)",
+  "status": "draft"
+ },
+ "CRES.G6.THE_BI.THE_TEN_COMMANDMENTS.TEN_VALUES.M_TEN6_VALUE": {
+  "skill": "CRES.G6.THE_BI.THE_TEN_COMMANDMENTS.TEN_VALUES",
+  "error": "Links a command to the wrong value.",
+  "example": {
+   "question": "Which value does \"honour your father and your mother\" teach?",
+   "wrong_answer": "Honesty",
+   "correct_answer": "Respect"
+  },
+  "cause": "The child answers from a general idea or a nearby story and does not go back to what the passage says.",
+  "reveals": "Offer \"Honesty\" beside \"Respect\" and ask the child to choose.",
+  "help": "Ask the child to find the line in the passage the question names and read it aloud before choosing.",
+  "feedback": "Honouring parents teaches respect.",
+  "source": "The learner reads the passage loosely or mixes it with a similar Bible story (to confirm by a CRE teacher)",
+  "status": "draft"
+ },
+ "CRES.G6.THE_BI.THE_TEN_COMMANDMENTS.TEN_VALUES.M_TEN6_RELIGIOUS_ONLY": {
+  "skill": "CRES.G6.THE_BI.THE_TEN_COMMANDMENTS.TEN_VALUES",
+  "error": "Thinks the commands are only about worship.",
+  "example": {
+   "question": "The Ten Commandments guide how we treat...",
+   "wrong_answer": "God only",
+   "correct_answer": "God and other people"
+  },
+  "cause": "The child answers from a general idea or a nearby story and does not go back to what the passage says.",
+  "reveals": "Offer \"God only\" beside \"God and other people\" and ask the child to choose.",
+  "help": "Ask the child to find the line in the passage the question names and read it aloud before choosing.",
+  "feedback": "Some commands are about God and some about how we treat other people.",
+  "source": "The learner reads the passage loosely or mixes it with a similar Bible story (to confirm by a CRE teacher)",
+  "status": "draft"
+ },
+ "CRES.G6.THE_BI.BIBLE_STORIES_SAMSON_DEF.SAMSON.M_SAM6_OWN": {
+  "skill": "CRES.G6.THE_BI.BIBLE_STORIES_SAMSON_DEF.SAMSON",
+  "error": "Says Samson's strength came from himself.",
+  "example": {
+   "question": "What gave Samson power against the Philistines (Judges 15:14)?",
+   "wrong_answer": "His own muscles",
+   "correct_answer": "The Spirit of the Lord came on him"
+  },
+  "cause": "The child answers from a general idea or a nearby story and does not go back to what the passage says.",
+  "reveals": "Offer \"His own muscles\" beside \"The Spirit of the Lord came on him\" and ask the child to choose.",
+  "help": "Ask the child to find the line in the passage the question names and read it aloud before choosing.",
+  "feedback": "Judges 15:14 says the Spirit of the Lord came on him in power.",
+  "source": "The learner reads the passage loosely or mixes it with a similar Bible story (to confirm by a CRE teacher)",
+  "status": "draft"
+ },
+ "CRES.G6.THE_BI.BIBLE_STORIES_SAMSON_DEF.SAMSON.M_SAM6_WEAPON": {
+  "skill": "CRES.G6.THE_BI.BIBLE_STORIES_SAMSON_DEF.SAMSON",
+  "error": "Names the wrong weapon.",
+  "example": {
+   "question": "What did Samson use to strike the Philistines (Judges 15:15)?",
+   "wrong_answer": "A sword",
+   "correct_answer": "The jawbone of a donkey"
+  },
+  "cause": "The child answers from a general idea or a nearby story and does not go back to what the passage says.",
+  "reveals": "Offer \"A sword\" beside \"The jawbone of a donkey\" and ask the child to choose.",
+  "help": "Ask the child to find the line in the passage the question names and read it aloud before choosing.",
+  "feedback": "Judges 15:15 says he found a fresh jawbone of a donkey.",
+  "source": "The learner reads the passage loosely or mixes it with a similar Bible story (to confirm by a CRE teacher)",
+  "status": "draft"
+ },
+ "CRES.G6.THE_BI.BIBLE_STORIES_SAMSON_DEF.SAMSON.M_SAM6_NUMBER": {
+  "skill": "CRES.G6.THE_BI.BIBLE_STORIES_SAMSON_DEF.SAMSON",
+  "error": "Gives the wrong number of men killed.",
+  "example": {
+   "question": "How many men did Samson kill with it (Judges 15:15)?",
+   "wrong_answer": "One hundred",
+   "correct_answer": "One thousand"
+  },
+  "cause": "The child answers from a general idea or a nearby story and does not go back to what the passage says.",
+  "reveals": "Offer \"One hundred\" beside \"One thousand\" and ask the child to choose.",
+  "help": "Ask the child to find the line in the passage the question names and read it aloud before choosing.",
+  "feedback": "Judges 15:15 says he killed a thousand men.",
+  "source": "The learner reads the passage loosely or mixes it with a similar Bible story (to confirm by a CRE teacher)",
+  "status": "draft"
+ },
+ "CRES.G6.THE_BI.FAITH_IN_GOD_ELISHA.ELISHA.M_ELI6_SWIM": {
+  "skill": "CRES.G6.THE_BI.FAITH_IN_GOD_ELISHA.ELISHA",
+  "error": "Says Elisha dived to get the axe head.",
+  "example": {
+   "question": "How was the axe head recovered (2 Kings 6:6)?",
+   "wrong_answer": "Elisha dived in and found it",
+   "correct_answer": "Elisha threw in a stick and the iron floated"
+  },
+  "cause": "The child answers from a general idea or a nearby story and does not go back to what the passage says.",
+  "reveals": "Offer \"Elisha dived in and found it\" beside \"Elisha threw in a stick and the iron floated\" and ask the child to choose.",
+  "help": "Ask the child to find the line in the passage the question names and read it aloud before choosing.",
+  "feedback": "2 Kings 6:6 says Elisha cut a stick, threw it in and the iron floated.",
+  "source": "The learner reads the passage loosely or mixes it with a similar Bible story (to confirm by a CRE teacher)",
+  "status": "draft"
+ },
+ "CRES.G6.THE_BI.FAITH_IN_GOD_ELISHA.ELISHA.M_ELI6_OWNER": {
+  "skill": "CRES.G6.THE_BI.FAITH_IN_GOD_ELISHA.ELISHA",
+  "error": "Says the axe belonged to Elisha.",
+  "example": {
+   "question": "Whose axe head fell into the water (2 Kings 6:5)?",
+   "wrong_answer": "Elisha's",
+   "correct_answer": "A prophet's who had borrowed it"
+  },
+  "cause": "The child answers from a general idea or a nearby story and does not go back to what the passage says.",
+  "reveals": "Offer \"Elisha's\" beside \"A prophet's who had borrowed it\" and ask the child to choose.",
+  "help": "Ask the child to find the line in the passage the question names and read it aloud before choosing.",
+  "feedback": "2 Kings 6:5 says the man cried out, \"It was borrowed!\"",
+  "source": "The learner reads the passage loosely or mixes it with a similar Bible story (to confirm by a CRE teacher)",
+  "status": "draft"
+ },
+ "CRES.G6.THE_BI.FAITH_IN_GOD_ELISHA.ELISHA.M_ELI6_SMALL": {
+  "skill": "CRES.G6.THE_BI.FAITH_IN_GOD_ELISHA.ELISHA",
+  "error": "Thinks God cares only about big problems.",
+  "example": {
+   "question": "What does the story teach about small problems?",
+   "wrong_answer": "God cares only about big problems",
+   "correct_answer": "We can take even small needs to God"
+  },
+  "cause": "The child answers from a general idea or a nearby story and does not go back to what the passage says.",
+  "reveals": "Offer \"God cares only about big problems\" beside \"We can take even small needs to God\" and ask the child to choose.",
+  "help": "Ask the child to find the line in the passage the question names and read it aloud before choosing.",
+  "feedback": "God cared about a borrowed axe head. We can take small needs to him.",
+  "source": "The learner reads the passage loosely or mixes it with a similar Bible story (to confirm by a CRE teacher)",
+  "status": "draft"
+ },
+ "CRES.G6.THE_BI.JACOB_WRESTLES_AN_ANGEL.JACOB.M_JAC6_WON": {
+  "skill": "CRES.G6.THE_BI.JACOB_WRESTLES_AN_ANGEL.JACOB",
+  "error": "Says Jacob won by being stronger.",
+  "example": {
+   "question": "Why was Jacob blessed (Genesis 32:26-29)?",
+   "wrong_answer": "He was stronger than the man",
+   "correct_answer": "He held on and asked for a blessing"
+  },
+  "cause": "The child answers from a general idea or a nearby story and does not go back to what the passage says.",
+  "reveals": "Offer \"He was stronger than the man\" beside \"He held on and asked for a blessing\" and ask the child to choose.",
+  "help": "Ask the child to find the line in the passage the question names and read it aloud before choosing.",
+  "feedback": "Jacob was blessed because he refused to let go until he was blessed, not because he was stronger.",
+  "source": "The learner reads the passage loosely or mixes it with a similar Bible story (to confirm by a CRE teacher)",
+  "status": "draft"
+ },
+ "CRES.G6.THE_BI.JACOB_WRESTLES_AN_ANGEL.JACOB.M_JAC6_NAME": {
+  "skill": "CRES.G6.THE_BI.JACOB_WRESTLES_AN_ANGEL.JACOB",
+  "error": "Gives the wrong new name.",
+  "example": {
+   "question": "What new name did Jacob receive (Genesis 32:28)?",
+   "wrong_answer": "Isaac",
+   "correct_answer": "Israel"
+  },
+  "cause": "The child answers from a general idea or a nearby story and does not go back to what the passage says.",
+  "reveals": "Offer \"Isaac\" beside \"Israel\" and ask the child to choose.",
+  "help": "Ask the child to find the line in the passage the question names and read it aloud before choosing.",
+  "feedback": "Genesis 32:28 says his name was changed to Israel.",
+  "source": "The learner reads the passage loosely or mixes it with a similar Bible story (to confirm by a CRE teacher)",
+  "status": "draft"
+ },
+ "CRES.G6.THE_BI.JACOB_WRESTLES_AN_ANGEL.JACOB.M_JAC6_PLACE": {
+  "skill": "CRES.G6.THE_BI.JACOB_WRESTLES_AN_ANGEL.JACOB",
+  "error": "Gives the wrong place or river.",
+  "example": {
+   "question": "Which river did Jacob's family cross (Genesis 32:22)?",
+   "wrong_answer": "The Jordan",
+   "correct_answer": "The Jabbok"
+  },
+  "cause": "The child answers from a general idea or a nearby story and does not go back to what the passage says.",
+  "reveals": "Offer \"The Jordan\" beside \"The Jabbok\" and ask the child to choose.",
+  "help": "Ask the child to find the line in the passage the question names and read it aloud before choosing.",
+  "feedback": "Genesis 32:22 says they crossed the ford of the Jabbok.",
+  "source": "The learner reads the passage loosely or mixes it with a similar Bible story (to confirm by a CRE teacher)",
+  "status": "draft"
+ },
+ "CRES.G6.THE_LI.THE_CALL_OF_DISCIPLES.DISCIPLES.M_DIS6_JOB": {
+  "skill": "CRES.G6.THE_LI.THE_CALL_OF_DISCIPLES.DISCIPLES",
+  "error": "Gives the wrong job of the first disciples.",
+  "example": {
+   "question": "What were Simon and Andrew doing when Jesus called them (Mark 1:16)?",
+   "wrong_answer": "Collecting taxes",
+   "correct_answer": "Casting a net into the sea"
+  },
+  "cause": "The child answers from a general idea or a nearby story and does not go back to what the passage says.",
+  "reveals": "Offer \"Collecting taxes\" beside \"Casting a net into the sea\" and ask the child to choose.",
+  "help": "Ask the child to find the line in the passage the question names and read it aloud before choosing.",
+  "feedback": "Mark 1:16 says they were fishermen casting a net.",
+  "source": "The learner reads the passage loosely or mixes it with a similar Bible story (to confirm by a CRE teacher)",
+  "status": "draft"
+ },
+ "CRES.G6.THE_LI.THE_CALL_OF_DISCIPLES.DISCIPLES.M_DIS6_WORDS": {
+  "skill": "CRES.G6.THE_LI.THE_CALL_OF_DISCIPLES.DISCIPLES",
+  "error": "Gives the wrong words of Jesus.",
+  "example": {
+   "question": "What did Jesus say to Simon and Andrew?",
+   "wrong_answer": "\"Come and rest\"",
+   "correct_answer": "\"Follow me, and I will make you fishers of men\""
+  },
+  "cause": "The child answers from a general idea or a nearby story and does not go back to what the passage says.",
+  "reveals": "Offer \"\"Come and rest\"\" beside \"\"Follow me, and I will make you fishers of men\"\" and ask the child to choose.",
+  "help": "Ask the child to find the line in the passage the question names and read it aloud before choosing.",
+  "feedback": "Mark 1:17 records \"Follow me, and I will make you fishers of men\".",
+  "source": "The learner reads the passage loosely or mixes it with a similar Bible story (to confirm by a CRE teacher)",
+  "status": "draft"
+ },
+ "CRES.G6.THE_LI.THE_CALL_OF_DISCIPLES.DISCIPLES.M_DIS6_ONLY_CLERGY": {
+  "skill": "CRES.G6.THE_LI.THE_CALL_OF_DISCIPLES.DISCIPLES",
+  "error": "Thinks only pastors are called.",
+  "example": {
+   "question": "Who is called to serve God today?",
+   "wrong_answer": "Only pastors and priests",
+   "correct_answer": "People in many kinds of work and roles"
+  },
+  "cause": "The child answers from a general idea or a nearby story and does not go back to what the passage says.",
+  "reveals": "Offer \"Only pastors and priests\" beside \"People in many kinds of work and roles\" and ask the child to choose.",
+  "help": "Ask the child to find the line in the passage the question names and read it aloud before choosing.",
+  "feedback": "God calls people to serve him as teachers, nurses, parents, farmers and pastors.",
+  "source": "The learner reads the passage loosely or mixes it with a similar Bible story (to confirm by a CRE teacher)",
+  "status": "draft"
+ },
+ "CRES.G6.THE_LI.THE_TEMPTATIONS_OF_JESUS.TEMPTATIONS.M_TEM6_GAVE_IN": {
+  "skill": "CRES.G6.THE_LI.THE_TEMPTATIONS_OF_JESUS.TEMPTATIONS",
+  "error": "Says Jesus gave in to one temptation.",
+  "example": {
+   "question": "How did Jesus respond to the devil (Luke 4:1-13)?",
+   "wrong_answer": "He gave in to the second temptation",
+   "correct_answer": "He answered each time with Scripture and did not give in"
+  },
+  "cause": "The child answers from a general idea or a nearby story and does not go back to what the passage says.",
+  "reveals": "Offer \"He gave in to the second temptation\" beside \"He answered each time with Scripture and did not give in\" and ask the child to choose.",
+  "help": "Ask the child to find the line in the passage the question names and read it aloud before choosing.",
+  "feedback": "Jesus did not give in. He answered with Scripture.",
+  "source": "The learner reads the passage loosely or mixes it with a similar Bible story (to confirm by a CRE teacher)",
+  "status": "draft"
+ },
+ "CRES.G6.THE_LI.THE_TEMPTATIONS_OF_JESUS.TEMPTATIONS.M_TEM6_FIRST": {
+  "skill": "CRES.G6.THE_LI.THE_TEMPTATIONS_OF_JESUS.TEMPTATIONS",
+  "error": "Mixes the first temptation.",
+  "example": {
+   "question": "What was the first temptation (Luke 4:3)?",
+   "wrong_answer": "To jump from the temple",
+   "correct_answer": "To turn a stone into bread"
+  },
+  "cause": "The child answers from a general idea or a nearby story and does not go back to what the passage says.",
+  "reveals": "Offer \"To jump from the temple\" beside \"To turn a stone into bread\" and ask the child to choose.",
+  "help": "Ask the child to find the line in the passage the question names and read it aloud before choosing.",
+  "feedback": "Luke 4:3 says the devil first told Jesus to turn a stone into bread.",
+  "source": "The learner reads the passage loosely or mixes it with a similar Bible story (to confirm by a CRE teacher)",
+  "status": "draft"
+ },
+ "CRES.G6.THE_LI.THE_TEMPTATIONS_OF_JESUS.TEMPTATIONS.M_TEM6_ALONE": {
+  "skill": "CRES.G6.THE_LI.THE_TEMPTATIONS_OF_JESUS.TEMPTATIONS",
+  "error": "Thinks a young person should face temptation alone.",
+  "example": {
+   "question": "What can a young person do when tempted to cheat?",
+   "wrong_answer": "Give in so as not to look weak",
+   "correct_answer": "Pray, remember God's word and ask a trusted adult"
+  },
+  "cause": "The child answers from a general idea or a nearby story and does not go back to what the passage says.",
+  "reveals": "Offer \"Give in so as not to look weak\" beside \"Pray, remember God's word and ask a trusted adult\" and ask the child to choose.",
+  "help": "Ask the child to find the line in the passage the question names and read it aloud before choosing.",
+  "feedback": "Jesus used God's word. We can pray, remember the word and ask for help.",
+  "source": "The learner reads the passage loosely or mixes it with a similar Bible story (to confirm by a CRE teacher)",
+  "status": "draft"
+ },
+ "CRES.G6.THE_LI.MIRACLES_OF_JESUS_CHRIST.ROMAN_OFFICER.M_ROM6_WHO": {
+  "skill": "CRES.G6.THE_LI.MIRACLES_OF_JESUS_CHRIST.ROMAN_OFFICER",
+  "error": "Says the sick one was the officer's son or daughter.",
+  "example": {
+   "question": "Who was sick in Matthew 8:6?",
+   "wrong_answer": "His son",
+   "correct_answer": "His servant"
+  },
+  "cause": "The child answers from a general idea or a nearby story and does not go back to what the passage says.",
+  "reveals": "Offer \"His son\" beside \"His servant\" and ask the child to choose.",
+  "help": "Ask the child to find the line in the passage the question names and read it aloud before choosing.",
+  "feedback": "Matthew 8:6 says the officer's servant was paralysed.",
+  "source": "The learner reads the passage loosely or mixes it with a similar Bible story (to confirm by a CRE teacher)",
+  "status": "draft"
+ },
+ "CRES.G6.THE_LI.MIRACLES_OF_JESUS_CHRIST.ROMAN_OFFICER.M_ROM6_WENT": {
+  "skill": "CRES.G6.THE_LI.MIRACLES_OF_JESUS_CHRIST.ROMAN_OFFICER",
+  "error": "Says Jesus went to the house to heal.",
+  "example": {
+   "question": "How was the servant healed (Matthew 8:8-13)?",
+   "wrong_answer": "Jesus went to the house and laid hands on him",
+   "correct_answer": "Jesus spoke the word and he was healed at that hour"
+  },
+  "cause": "The child answers from a general idea or a nearby story and does not go back to what the passage says.",
+  "reveals": "Offer \"Jesus went to the house and laid hands on him\" beside \"Jesus spoke the word and he was healed at that hour\" and ask the child to choose.",
+  "help": "Ask the child to find the line in the passage the question names and read it aloud before choosing.",
+  "feedback": "The officer said Jesus need only say the word, and the servant was healed that hour.",
+  "source": "The learner reads the passage loosely or mixes it with a similar Bible story (to confirm by a CRE teacher)",
+  "status": "draft"
+ },
+ "CRES.G6.THE_LI.MIRACLES_OF_JESUS_CHRIST.ROMAN_OFFICER.M_ROM6_FAITH": {
+  "skill": "CRES.G6.THE_LI.MIRACLES_OF_JESUS_CHRIST.ROMAN_OFFICER",
+  "error": "Says Jesus rebuked the officer.",
+  "example": {
+   "question": "What did Jesus say about the officer's faith?",
+   "wrong_answer": "It was too small",
+   "correct_answer": "He had not found such great faith in Israel"
+  },
+  "cause": "The child answers from a general idea or a nearby story and does not go back to what the passage says.",
+  "reveals": "Offer \"It was too small\" beside \"He had not found such great faith in Israel\" and ask the child to choose.",
+  "help": "Ask the child to find the line in the passage the question names and read it aloud before choosing.",
+  "feedback": "Matthew 8:10 says Jesus was amazed and said he had not found such great faith.",
+  "source": "The learner reads the passage loosely or mixes it with a similar Bible story (to confirm by a CRE teacher)",
+  "status": "draft"
+ },
+ "CRES.G6.THE_LI.MIRACLE_OF_HEALING.BLEEDING_WOMAN.M_BLE6_DOCTORS": {
+  "skill": "CRES.G6.THE_LI.MIRACLE_OF_HEALING.BLEEDING_WOMAN",
+  "error": "Says the doctors healed the woman.",
+  "example": {
+   "question": "Who healed the bleeding woman (Luke 8:43-48)?",
+   "wrong_answer": "The doctors",
+   "correct_answer": "Jesus, when she touched his cloak in faith"
+  },
+  "cause": "The child answers from a general idea or a nearby story and does not go back to what the passage says.",
+  "reveals": "Offer \"The doctors\" beside \"Jesus, when she touched his cloak in faith\" and ask the child to choose.",
+  "help": "Ask the child to find the line in the passage the question names and read it aloud before choosing.",
+  "feedback": "Luke 8:43 says she had spent all on doctors and none could heal her. Jesus healed her.",
+  "source": "The learner reads the passage loosely or mixes it with a similar Bible story (to confirm by a CRE teacher)",
+  "status": "draft"
+ },
+ "CRES.G6.THE_LI.MIRACLE_OF_HEALING.BLEEDING_WOMAN.M_BLE6_YEARS": {
+  "skill": "CRES.G6.THE_LI.MIRACLE_OF_HEALING.BLEEDING_WOMAN",
+  "error": "Gives the wrong number of years.",
+  "example": {
+   "question": "For how long had she been bleeding (Luke 8:43)?",
+   "wrong_answer": "Seven years",
+   "correct_answer": "Twelve years"
+  },
+  "cause": "The child answers from a general idea or a nearby story and does not go back to what the passage says.",
+  "reveals": "Offer \"Seven years\" beside \"Twelve years\" and ask the child to choose.",
+  "help": "Ask the child to find the line in the passage the question names and read it aloud before choosing.",
+  "feedback": "Luke 8:43 says she had bled for twelve years.",
+  "source": "The learner reads the passage loosely or mixes it with a similar Bible story (to confirm by a CRE teacher)",
+  "status": "draft"
+ },
+ "CRES.G6.THE_LI.MIRACLE_OF_HEALING.BLEEDING_WOMAN.M_BLE6_WORDS": {
+  "skill": "CRES.G6.THE_LI.MIRACLE_OF_HEALING.BLEEDING_WOMAN",
+  "error": "Gives the wrong words of Jesus.",
+  "example": {
+   "question": "What did Jesus tell her (Luke 8:48)?",
+   "wrong_answer": "\"You are not worthy\"",
+   "correct_answer": "\"Daughter, your faith has healed you; go in peace\""
+  },
+  "cause": "The child answers from a general idea or a nearby story and does not go back to what the passage says.",
+  "reveals": "Offer \"\"You are not worthy\"\" beside \"\"Daughter, your faith has healed you; go in peace\"\" and ask the child to choose.",
+  "help": "Ask the child to find the line in the passage the question names and read it aloud before choosing.",
+  "feedback": "Luke 8:48 records \"Daughter, your faith has healed you. Go in peace.\"",
+  "source": "The learner reads the passage loosely or mixes it with a similar Bible story (to confirm by a CRE teacher)",
+  "status": "draft"
+ },
+ "CRES.G6.THE_LI.MIRACLE_OF_HEALING.BLEEDING_WOMAN.M_BLE6_HELP": {
+  "skill": "CRES.G6.THE_LI.MIRACLE_OF_HEALING.BLEEDING_WOMAN",
+  "error": "Names a wrong helper of the sick.",
+  "example": {
+   "question": "Who helps the sick today?",
+   "wrong_answer": "Only the church",
+   "correct_answer": "Both the church and the government, with hospitals and clinics"
+  },
+  "cause": "The child answers from a general idea or a nearby story and does not go back to what the passage says.",
+  "reveals": "Offer \"Only the church\" beside \"Both the church and the government, with hospitals and clinics\" and ask the child to choose.",
+  "help": "Ask the child to find the line in the passage the question names and read it aloud before choosing.",
+  "feedback": "The church and the government both run hospitals and clinics and care for the sick.",
+  "source": "The learner reads the passage loosely or mixes it with a similar Bible story (to confirm by a CRE teacher)",
+  "status": "draft"
+ },
+ "CRES.G6.THE_LI.RAISING_LAZARUS_FROM_THE.LAZARUS_RAISED.M_LAZ6_WEPT": {
+  "skill": "CRES.G6.THE_LI.RAISING_LAZARUS_FROM_THE.LAZARUS_RAISED",
+  "error": "Says Jesus did not weep or was angry.",
+  "example": {
+   "question": "What did Jesus do when he saw Mary weeping (John 11:35)?",
+   "wrong_answer": "He was angry with her",
+   "correct_answer": "Jesus wept"
+  },
+  "cause": "The child answers from a general idea or a nearby story and does not go back to what the passage says.",
+  "reveals": "Offer \"He was angry with her\" beside \"Jesus wept\" and ask the child to choose.",
+  "help": "Ask the child to find the line in the passage the question names and read it aloud before choosing.",
+  "feedback": "John 11:35, the shortest verse, says Jesus wept.",
+  "source": "The learner reads the passage loosely or mixes it with a similar Bible story (to confirm by a CRE teacher)",
+  "status": "draft"
+ },
+ "CRES.G6.THE_LI.RAISING_LAZARUS_FROM_THE.LAZARUS_RAISED.M_LAZ6_DAYS": {
+  "skill": "CRES.G6.THE_LI.RAISING_LAZARUS_FROM_THE.LAZARUS_RAISED",
+  "error": "Gives the wrong number of days.",
+  "example": {
+   "question": "For how many days had Lazarus been in the tomb (John 11:39)?",
+   "wrong_answer": "One day",
+   "correct_answer": "Four days"
+  },
+  "cause": "The child answers from a general idea or a nearby story and does not go back to what the passage says.",
+  "reveals": "Offer \"One day\" beside \"Four days\" and ask the child to choose.",
+  "help": "Ask the child to find the line in the passage the question names and read it aloud before choosing.",
+  "feedback": "John 11:39 says he had been dead four days.",
+  "source": "The learner reads the passage loosely or mixes it with a similar Bible story (to confirm by a CRE teacher)",
+  "status": "draft"
+ },
+ "CRES.G6.THE_LI.RAISING_LAZARUS_FROM_THE.LAZARUS_RAISED.M_LAZ6_WORDS": {
+  "skill": "CRES.G6.THE_LI.RAISING_LAZARUS_FROM_THE.LAZARUS_RAISED",
+  "error": "Gives the wrong words of Jesus.",
+  "example": {
+   "question": "What did Jesus call out at the tomb (John 11:43)?",
+   "wrong_answer": "\"Lazarus, wake up and eat\"",
+   "correct_answer": "\"Lazarus, come out!\""
+  },
+  "cause": "The child answers from a general idea or a nearby story and does not go back to what the passage says.",
+  "reveals": "Offer \"\"Lazarus, wake up and eat\"\" beside \"\"Lazarus, come out!\"\" and ask the child to choose.",
+  "help": "Ask the child to find the line in the passage the question names and read it aloud before choosing.",
+  "feedback": "John 11:43 records \"Lazarus, come out!\"",
+  "source": "The learner reads the passage loosely or mixes it with a similar Bible story (to confirm by a CRE teacher)",
+  "status": "draft"
+ },
+ "CRES.G6.THE_LI.THE_HIDDEN_TREASURE.HIDDEN_TREASURE.M_HID6_RICH": {
+  "skill": "CRES.G6.THE_LI.THE_HIDDEN_TREASURE.HIDDEN_TREASURE",
+  "error": "Says the parable is about getting rich.",
+  "example": {
+   "question": "What is the lesson of the hidden treasure (Matthew 13:44)?",
+   "wrong_answer": "How to get rich quickly",
+   "correct_answer": "The kingdom of heaven is worth more than everything else"
+  },
+  "cause": "The child answers from a general idea or a nearby story and does not go back to what the passage says.",
+  "reveals": "Offer \"How to get rich quickly\" beside \"The kingdom of heaven is worth more than everything else\" and ask the child to choose.",
+  "help": "Ask the child to find the line in the passage the question names and read it aloud before choosing.",
+  "feedback": "The treasure stands for the kingdom of heaven, worth more than anything we own.",
+  "source": "The learner reads the passage loosely or mixes it with a similar Bible story (to confirm by a CRE teacher)",
+  "status": "draft"
+ },
+ "CRES.G6.THE_LI.THE_HIDDEN_TREASURE.HIDDEN_TREASURE.M_HID6_KEEP": {
+  "skill": "CRES.G6.THE_LI.THE_HIDDEN_TREASURE.HIDDEN_TREASURE",
+  "error": "Says the man kept everything he had.",
+  "example": {
+   "question": "What did the man do after finding the treasure?",
+   "wrong_answer": "He kept what he had and took the treasure",
+   "correct_answer": "He sold all he had and bought the field"
+  },
+  "cause": "The child answers from a general idea or a nearby story and does not go back to what the passage says.",
+  "reveals": "Offer \"He kept what he had and took the treasure\" beside \"He sold all he had and bought the field\" and ask the child to choose.",
+  "help": "Ask the child to find the line in the passage the question names and read it aloud before choosing.",
+  "feedback": "Matthew 13:44 says he sold all he had and bought the field.",
+  "source": "The learner reads the passage loosely or mixes it with a similar Bible story (to confirm by a CRE teacher)",
+  "status": "draft"
+ },
+ "CRES.G6.THE_LI.THE_HIDDEN_TREASURE.HIDDEN_TREASURE.M_HID6_PLACE": {
+  "skill": "CRES.G6.THE_LI.THE_HIDDEN_TREASURE.HIDDEN_TREASURE",
+  "error": "Gives the wrong place for the treasure.",
+  "example": {
+   "question": "Where was the treasure hidden (Matthew 13:44)?",
+   "wrong_answer": "In a house",
+   "correct_answer": "In a field"
+  },
+  "cause": "The child answers from a general idea or a nearby story and does not go back to what the passage says.",
+  "reveals": "Offer \"In a house\" beside \"In a field\" and ask the child to choose.",
+  "help": "Ask the child to find the line in the passage the question names and read it aloud before choosing.",
+  "feedback": "Matthew 13:44 says the treasure was hidden in a field.",
+  "source": "The learner reads the passage loosely or mixes it with a similar Bible story (to confirm by a CRE teacher)",
+  "status": "draft"
+ },
+ "CRES.G6.THE_LI.THE_RICH_MAN_AND_LAZARUS.RICH_MAN.M_RIC6_WEALTH": {
+  "skill": "CRES.G6.THE_LI.THE_RICH_MAN_AND_LAZARUS.RICH_MAN",
+  "error": "Says the rich man was punished only for being rich.",
+  "example": {
+   "question": "Why was the rich man in torment (Luke 16:19-25)?",
+   "wrong_answer": "Only because he was rich",
+   "correct_answer": "Because he ignored the beggar at his gate"
+  },
+  "cause": "The child answers from a general idea or a nearby story and does not go back to what the passage says.",
+  "reveals": "Offer \"Only because he was rich\" beside \"Because he ignored the beggar at his gate\" and ask the child to choose.",
+  "help": "Ask the child to find the line in the passage the question names and read it aloud before choosing.",
+  "feedback": "The parable condemns the rich man for ignoring the needy Lazarus.",
+  "source": "The learner reads the passage loosely or mixes it with a similar Bible story (to confirm by a CRE teacher)",
+  "status": "draft"
+ },
+ "CRES.G6.THE_LI.THE_RICH_MAN_AND_LAZARUS.RICH_MAN.M_RIC6_SAME": {
+  "skill": "CRES.G6.THE_LI.THE_RICH_MAN_AND_LAZARUS.RICH_MAN",
+  "error": "Mixes this Lazarus with the Lazarus raised in John 11.",
+  "example": {
+   "question": "Which Lazarus lay at the rich man's gate?",
+   "wrong_answer": "The brother of Mary and Martha",
+   "correct_answer": "A beggar in a parable of Jesus"
+  },
+  "cause": "The child answers from a general idea or a nearby story and does not go back to what the passage says.",
+  "reveals": "Offer \"The brother of Mary and Martha\" beside \"A beggar in a parable of Jesus\" and ask the child to choose.",
+  "help": "Ask the child to find the line in the passage the question names and read it aloud before choosing.",
+  "feedback": "In the parable Lazarus is a beggar. The Lazarus of John 11 was the brother of Mary and Martha.",
+  "source": "The learner reads the passage loosely or mixes it with a similar Bible story (to confirm by a CRE teacher)",
+  "status": "draft"
+ },
+ "CRES.G6.THE_LI.THE_RICH_MAN_AND_LAZARUS.RICH_MAN.M_RIC6_CHASM": {
+  "skill": "CRES.G6.THE_LI.THE_RICH_MAN_AND_LAZARUS.RICH_MAN",
+  "error": "Gives the wrong detail of the chasm or the request.",
+  "example": {
+   "question": "What lay between the rich man and Lazarus (Luke 16:26)?",
+   "wrong_answer": "A river",
+   "correct_answer": "A great chasm"
+  },
+  "cause": "The child answers from a general idea or a nearby story and does not go back to what the passage says.",
+  "reveals": "Offer \"A river\" beside \"A great chasm\" and ask the child to choose.",
+  "help": "Ask the child to find the line in the passage the question names and read it aloud before choosing.",
+  "feedback": "Luke 16:26 says a great chasm had been fixed between them.",
+  "source": "The learner reads the passage loosely or mixes it with a similar Bible story (to confirm by a CRE teacher)",
+  "status": "draft"
+ },
+ "CRES.G6.THE_CH.APOSTLES_CREED.CREED_TEACHING.M_CRE6_OTHER": {
+  "skill": "CRES.G6.THE_CH.APOSTLES_CREED.CREED_TEACHING",
+  "error": "Thinks a statement that is not in the creed is part of it.",
+  "example": {
+   "question": "Which line is in the Apostles' Creed?",
+   "wrong_answer": "He was born in Rome",
+   "correct_answer": "Born of the Virgin Mary"
+  },
+  "cause": "The child answers from a general idea or a nearby story and does not go back to what the passage says.",
+  "reveals": "Offer \"He was born in Rome\" beside \"Born of the Virgin Mary\" and ask the child to choose.",
+  "help": "Ask the child to find the line in the passage the question names and read it aloud before choosing.",
+  "feedback": "The creed says Jesus was born of the Virgin Mary.",
+  "source": "The learner reads the passage loosely or mixes it with a similar Bible story (to confirm by a CRE teacher)",
+  "status": "draft"
+ },
+ "CRES.G6.THE_CH.APOSTLES_CREED.CREED_TEACHING.M_CRE6_BIBLE": {
+  "skill": "CRES.G6.THE_CH.APOSTLES_CREED.CREED_TEACHING",
+  "error": "Says the creed is a book of the Bible.",
+  "example": {
+   "question": "What is the Apostles' Creed?",
+   "wrong_answer": "A book of the Bible",
+   "correct_answer": "A statement of Christian belief"
+  },
+  "cause": "The child answers from a general idea or a nearby story and does not go back to what the passage says.",
+  "reveals": "Offer \"A book of the Bible\" beside \"A statement of Christian belief\" and ask the child to choose.",
+  "help": "Ask the child to find the line in the passage the question names and read it aloud before choosing.",
+  "feedback": "The creed is a short statement of Christian belief. It is not a book of the Bible.",
+  "source": "The learner reads the passage loosely or mixes it with a similar Bible story (to confirm by a CRE teacher)",
+  "status": "draft"
+ },
+ "CRES.G6.THE_CH.APOSTLES_CREED.CREED_TEACHING.M_CRE6_ORDER": {
+  "skill": "CRES.G6.THE_CH.APOSTLES_CREED.CREED_TEACHING",
+  "error": "Mixes who creates and who judges.",
+  "example": {
+   "question": "Who does the creed call maker of heaven and earth?",
+   "wrong_answer": "Jesus Christ",
+   "correct_answer": "God the Father Almighty"
+  },
+  "cause": "The child answers from a general idea or a nearby story and does not go back to what the passage says.",
+  "reveals": "Offer \"Jesus Christ\" beside \"God the Father Almighty\" and ask the child to choose.",
+  "help": "Ask the child to find the line in the passage the question names and read it aloud before choosing.",
+  "feedback": "The creed begins with God the Father Almighty, maker of heaven and earth.",
+  "source": "The learner reads the passage loosely or mixes it with a similar Bible story (to confirm by a CRE teacher)",
+  "status": "draft"
+ },
+ "CRES.G6.THE_CH.APOSTLES_CREED.TRINITY.M_TRI6_THREE_GODS": {
+  "skill": "CRES.G6.THE_CH.APOSTLES_CREED.TRINITY",
+  "error": "Says the Trinity is three gods.",
+  "example": {
+   "question": "The Holy Trinity is...",
+   "wrong_answer": "Three different gods",
+   "correct_answer": "One God in three persons"
+  },
+  "cause": "The child answers from a general idea or a nearby story and does not go back to what the passage says.",
+  "reveals": "Offer \"Three different gods\" beside \"One God in three persons\" and ask the child to choose.",
+  "help": "Ask the child to find the line in the passage the question names and read it aloud before choosing.",
+  "feedback": "Christians believe in one God, Father, Son and Holy Spirit.",
+  "source": "The learner reads the passage loosely or mixes it with a similar Bible story (to confirm by a CRE teacher)",
+  "status": "draft"
+ },
+ "CRES.G6.THE_CH.APOSTLES_CREED.TRINITY.M_TRI6_MEMBER": {
+  "skill": "CRES.G6.THE_CH.APOSTLES_CREED.TRINITY",
+  "error": "Names a wrong member of the Trinity.",
+  "example": {
+   "question": "Which is the third person of the Holy Trinity?",
+   "wrong_answer": "The archangel Michael",
+   "correct_answer": "The Holy Spirit"
+  },
+  "cause": "The child answers from a general idea or a nearby story and does not go back to what the passage says.",
+  "reveals": "Offer \"The archangel Michael\" beside \"The Holy Spirit\" and ask the child to choose.",
+  "help": "Ask the child to find the line in the passage the question names and read it aloud before choosing.",
+  "feedback": "The three persons are the Father, the Son and the Holy Spirit.",
+  "source": "The learner reads the passage loosely or mixes it with a similar Bible story (to confirm by a CRE teacher)",
+  "status": "draft"
+ },
+ "CRES.G6.THE_CH.APOSTLES_CREED.TRINITY.M_TRI6_ROLE": {
+  "skill": "CRES.G6.THE_CH.APOSTLES_CREED.TRINITY",
+  "error": "Mixes what each person does.",
+  "example": {
+   "question": "Who is called the creator, in the creed?",
+   "wrong_answer": "The Holy Spirit",
+   "correct_answer": "God the Father"
+  },
+  "cause": "The child answers from a general idea or a nearby story and does not go back to what the passage says.",
+  "reveals": "Offer \"The Holy Spirit\" beside \"God the Father\" and ask the child to choose.",
+  "help": "Ask the child to find the line in the passage the question names and read it aloud before choosing.",
+  "feedback": "The Father is the creator, the Son is the saviour, and the Holy Spirit is the helper.",
+  "source": "The learner reads the passage loosely or mixes it with a similar Bible story (to confirm by a CRE teacher)",
+  "status": "draft"
+ },
+ "CRES.G6.THE_CH.STANDING_FIRM_IN_FAITH_A.PAUL_SUFFERING.M_PAU6_PUNISH": {
+  "skill": "CRES.G6.THE_CH.STANDING_FIRM_IN_FAITH_A.PAUL_SUFFERING",
+  "error": "Says the apostles suffered because God was angry.",
+  "example": {
+   "question": "Why did the apostles suffer (2 Corinthians 6:3-7)?",
+   "wrong_answer": "God was angry with them",
+   "correct_answer": "They served Christ and were not stopped by hardship"
+  },
+  "cause": "The child answers from a general idea or a nearby story and does not go back to what the passage says.",
+  "reveals": "Offer \"God was angry with them\" beside \"They served Christ and were not stopped by hardship\" and ask the child to choose.",
+  "help": "Ask the child to find the line in the passage the question names and read it aloud before choosing.",
+  "feedback": "Paul listed these hardships as part of faithful service, not as punishment.",
+  "source": "The learner reads the passage loosely or mixes it with a similar Bible story (to confirm by a CRE teacher)",
+  "status": "draft"
+ },
+ "CRES.G6.THE_CH.STANDING_FIRM_IN_FAITH_A.PAUL_SUFFERING.M_PAU6_LIST": {
+  "skill": "CRES.G6.THE_CH.STANDING_FIRM_IN_FAITH_A.PAUL_SUFFERING",
+  "error": "Names something that is not in the list of hardships.",
+  "example": {
+   "question": "Which is in Paul's list of hardships?",
+   "wrong_answer": "Wealth and comfort",
+   "correct_answer": "Beatings and imprisonment"
+  },
+  "cause": "The child answers from a general idea or a nearby story and does not go back to what the passage says.",
+  "reveals": "Offer \"Wealth and comfort\" beside \"Beatings and imprisonment\" and ask the child to choose.",
+  "help": "Ask the child to find the line in the passage the question names and read it aloud before choosing.",
+  "feedback": "2 Corinthians 6:5 lists beatings, imprisonments, riots, hard work, sleepless nights and hunger.",
+  "source": "The learner reads the passage loosely or mixes it with a similar Bible story (to confirm by a CRE teacher)",
+  "status": "draft"
+ },
+ "CRES.G6.THE_CH.STANDING_FIRM_IN_FAITH_A.PAUL_SUFFERING.M_PAU6_VIRTUE": {
+  "skill": "CRES.G6.THE_CH.STANDING_FIRM_IN_FAITH_A.PAUL_SUFFERING",
+  "error": "Names a quality that is not one of Paul's virtues.",
+  "example": {
+   "question": "Which virtue does Paul name (2 Corinthians 6:6)?",
+   "wrong_answer": "Pride",
+   "correct_answer": "Patience and kindness"
+  },
+  "cause": "The child answers from a general idea or a nearby story and does not go back to what the passage says.",
+  "reveals": "Offer \"Pride\" beside \"Patience and kindness\" and ask the child to choose.",
+  "help": "Ask the child to find the line in the passage the question names and read it aloud before choosing.",
+  "feedback": "2 Corinthians 6:6 names purity, understanding, patience, kindness and sincere love.",
+  "source": "The learner reads the passage loosely or mixes it with a similar Bible story (to confirm by a CRE teacher)",
+  "status": "draft"
+ },
+ "CRES.G6.THE_CH.CHURCH_UNITY.CHURCH_UNITY.M_UNI6_SAME": {
+  "skill": "CRES.G6.THE_CH.CHURCH_UNITY.CHURCH_UNITY",
+  "error": "Says unity means everyone is the same.",
+  "example": {
+   "question": "What does unity in the church mean?",
+   "wrong_answer": "Everyone is exactly the same",
+   "correct_answer": "Different people working together as one in Christ"
+  },
+  "cause": "The child answers from a general idea or a nearby story and does not go back to what the passage says.",
+  "reveals": "Offer \"Everyone is exactly the same\" beside \"Different people working together as one in Christ\" and ask the child to choose.",
+  "help": "Ask the child to find the line in the passage the question names and read it aloud before choosing.",
+  "feedback": "1 Corinthians 12:12 says one body has many different parts. Unity is not sameness.",
+  "source": "The learner reads the passage loosely or mixes it with a similar Bible story (to confirm by a CRE teacher)",
+  "status": "draft"
+ },
+ "CRES.G6.THE_CH.CHURCH_UNITY.CHURCH_UNITY.M_UNI6_BUILDING": {
+  "skill": "CRES.G6.THE_CH.CHURCH_UNITY.CHURCH_UNITY",
+  "error": "Says the church is only a building.",
+  "example": {
+   "question": "In Matthew 16:18 Jesus says \"I will build my...\"",
+   "wrong_answer": "Hall",
+   "correct_answer": "Church"
+  },
+  "cause": "The child answers from a general idea or a nearby story and does not go back to what the passage says.",
+  "reveals": "Offer \"Hall\" beside \"Church\" and ask the child to choose.",
+  "help": "Ask the child to find the line in the passage the question names and read it aloud before choosing.",
+  "feedback": "Jesus said \"I will build my church\", which means his people, not only a building.",
+  "source": "The learner reads the passage loosely or mixes it with a similar Bible story (to confirm by a CRE teacher)",
+  "status": "draft"
+ },
+ "CRES.G6.THE_CH.CHURCH_UNITY.CHURCH_UNITY.M_UNI6_RANK": {
+  "skill": "CRES.G6.THE_CH.CHURCH_UNITY.CHURCH_UNITY",
+  "error": "Thinks some people are more important in Christ.",
+  "example": {
+   "question": "What does Galatians 3:28 say about tribe or status?",
+   "wrong_answer": "Some are more important than others",
+   "correct_answer": "All are one in Christ Jesus"
+  },
+  "cause": "The child answers from a general idea or a nearby story and does not go back to what the passage says.",
+  "reveals": "Offer \"Some are more important than others\" beside \"All are one in Christ Jesus\" and ask the child to choose.",
+  "help": "Ask the child to find the line in the passage the question names and read it aloud before choosing.",
+  "feedback": "Galatians 3:28 says all are one in Christ Jesus.",
+  "source": "The learner reads the passage loosely or mixes it with a similar Bible story (to confirm by a CRE teacher)",
+  "status": "draft"
+ },
+ "CRES.G6.CHRIST.FRIENDSHIP_FORMATION.FRIENDSHIP.M_FRI6_POPULAR": {
+  "skill": "CRES.G6.CHRIST.FRIENDSHIP_FORMATION.FRIENDSHIP",
+  "error": "Chooses friends by popularity or wealth.",
+  "example": {
+   "question": "What makes a good friend?",
+   "wrong_answer": "Being popular and rich",
+   "correct_answer": "Being honest, kind and helping you do right"
+  },
+  "cause": "The child answers from a general idea or a nearby story and does not go back to what the passage says.",
+  "reveals": "Offer \"Being popular and rich\" beside \"Being honest, kind and helping you do right\" and ask the child to choose.",
+  "help": "Ask the child to find the line in the passage the question names and read it aloud before choosing.",
+  "feedback": "A good friend is honest, kind and helps you do right.",
+  "source": "The learner reads the passage loosely or mixes it with a similar Bible story (to confirm by a CRE teacher)",
+  "status": "draft"
+ },
+ "CRES.G6.CHRIST.FRIENDSHIP_FORMATION.FRIENDSHIP.M_FRI6_BAD": {
+  "skill": "CRES.G6.CHRIST.FRIENDSHIP_FORMATION.FRIENDSHIP",
+  "error": "Thinks bad company cannot change you.",
+  "example": {
+   "question": "What does 1 Corinthians 15:33 say?",
+   "wrong_answer": "Bad company does not change a person",
+   "correct_answer": "Bad company corrupts good character"
+  },
+  "cause": "The child answers from a general idea or a nearby story and does not go back to what the passage says.",
+  "reveals": "Offer \"Bad company does not change a person\" beside \"Bad company corrupts good character\" and ask the child to choose.",
+  "help": "Ask the child to find the line in the passage the question names and read it aloud before choosing.",
+  "feedback": "1 Corinthians 15:33 warns that bad company corrupts good character.",
+  "source": "The learner reads the passage loosely or mixes it with a similar Bible story (to confirm by a CRE teacher)",
+  "status": "draft"
+ },
+ "CRES.G6.CHRIST.FRIENDSHIP_FORMATION.FRIENDSHIP.M_FRI6_GOSSIP": {
+  "skill": "CRES.G6.CHRIST.FRIENDSHIP_FORMATION.FRIENDSHIP",
+  "error": "Thinks gossip is harmless to friendship.",
+  "example": {
+   "question": "What does Proverbs 16:28 say a gossip does?",
+   "wrong_answer": "Brings friends closer",
+   "correct_answer": "Separates close friends"
+  },
+  "cause": "The child answers from a general idea or a nearby story and does not go back to what the passage says.",
+  "reveals": "Offer \"Brings friends closer\" beside \"Separates close friends\" and ask the child to choose.",
+  "help": "Ask the child to find the line in the passage the question names and read it aloud before choosing.",
+  "feedback": "Proverbs 16:28 says a gossip separates close friends.",
+  "source": "The learner reads the passage loosely or mixes it with a similar Bible story (to confirm by a CRE teacher)",
+  "status": "draft"
+ },
+ "CRES.G6.CHRIST.HUMAN_SEXUALITY_7_LESSON.SEXUALITY_BIBLE.M_SEX6_BODY": {
+  "skill": "CRES.G6.CHRIST.HUMAN_SEXUALITY_7_LESSON.SEXUALITY_BIBLE",
+  "error": "Thinks the body is only one's own to use as one pleases.",
+  "example": {
+   "question": "Why should we respect our bodies (1 Corinthians 6:19)?",
+   "wrong_answer": "We can do what we like with them",
+   "correct_answer": "The body is the temple of the Holy Spirit"
+  },
+  "cause": "The child answers from a general idea or a nearby story and does not go back to what the passage says.",
+  "reveals": "Offer \"We can do what we like with them\" beside \"The body is the temple of the Holy Spirit\" and ask the child to choose.",
+  "help": "Ask the child to find the line in the passage the question names and read it aloud before choosing.",
+  "feedback": "1 Corinthians 6:19 says the body is a temple of the Holy Spirit.",
+  "source": "The learner reads the passage loosely or mixes it with a similar Bible story (to confirm by a CRE teacher)",
+  "status": "draft"
+ },
+ "CRES.G6.CHRIST.HUMAN_SEXUALITY_7_LESSON.SEXUALITY_BIBLE.M_SEX6_TEMPT": {
+  "skill": "CRES.G6.CHRIST.HUMAN_SEXUALITY_7_LESSON.SEXUALITY_BIBLE",
+  "error": "Thinks being tempted is itself a sin.",
+  "example": {
+   "question": "When does temptation lead to sin (James 1:14-15)?",
+   "wrong_answer": "The moment a person is tempted",
+   "correct_answer": "When desire is allowed to grow and is acted on"
+  },
+  "cause": "The child answers from a general idea or a nearby story and does not go back to what the passage says.",
+  "reveals": "Offer \"The moment a person is tempted\" beside \"When desire is allowed to grow and is acted on\" and ask the child to choose.",
+  "help": "Ask the child to find the line in the passage the question names and read it aloud before choosing.",
+  "feedback": "James 1:14-15 says desire gives birth to sin when it is acted on. Being tempted is not itself a sin.",
+  "source": "The learner reads the passage loosely or mixes it with a similar Bible story (to confirm by a CRE teacher)",
+  "status": "draft"
+ },
+ "CRES.G6.CHRIST.HUMAN_SEXUALITY_7_LESSON.SEXUALITY_BIBLE.M_SEX6_SECRET": {
+  "skill": "CRES.G6.CHRIST.HUMAN_SEXUALITY_7_LESSON.SEXUALITY_BIBLE",
+  "error": "Thinks a problem should be kept secret from adults.",
+  "example": {
+   "question": "A child is troubled about growing up. What is wise?",
+   "wrong_answer": "Hide it from every adult",
+   "correct_answer": "Talk to a parent or trusted adult"
+  },
+  "cause": "The child answers from a general idea or a nearby story and does not go back to what the passage says.",
+  "reveals": "Offer \"Hide it from every adult\" beside \"Talk to a parent or trusted adult\" and ask the child to choose.",
+  "help": "Ask the child to find the line in the passage the question names and read it aloud before choosing.",
+  "feedback": "A trusted adult can help. Hiding a worry makes it harder.",
+  "source": "The learner reads the passage loosely or mixes it with a similar Bible story (to confirm by a CRE teacher)",
+  "status": "draft"
+ },
+ "CRES.G6.CHRIST.HUMAN_SEXUALITY_7_LESSON.SEXUALITY_SKILLS.M_SEX6_PRESSURE": {
+  "skill": "CRES.G6.CHRIST.HUMAN_SEXUALITY_7_LESSON.SEXUALITY_SKILLS",
+  "error": "Thinks peer pressure should be obeyed.",
+  "example": {
+   "question": "A friend pushes you to do wrong. What do you do?",
+   "wrong_answer": "Give in so as to stay in the group",
+   "correct_answer": "Say no firmly and walk away"
+  },
+  "cause": "The child answers from a general idea or a nearby story and does not go back to what the passage says.",
+  "reveals": "Offer \"Give in so as to stay in the group\" beside \"Say no firmly and walk away\" and ask the child to choose.",
+  "help": "Ask the child to find the line in the passage the question names and read it aloud before choosing.",
+  "feedback": "Assertiveness and refusal skills help a young person say no.",
+  "source": "The learner reads the passage loosely or mixes it with a similar Bible story (to confirm by a CRE teacher)",
+  "status": "draft"
+ },
+ "CRES.G6.CHRIST.HUMAN_SEXUALITY_7_LESSON.SEXUALITY_SKILLS.M_SEX6_GIFT": {
+  "skill": "CRES.G6.CHRIST.HUMAN_SEXUALITY_7_LESSON.SEXUALITY_SKILLS",
+  "error": "Thinks gifts for favours are harmless.",
+  "example": {
+   "question": "An older person offers gifts in return for favours. What is right?",
+   "wrong_answer": "Accept, it is only a gift",
+   "correct_answer": "Refuse and tell a trusted adult"
+  },
+  "cause": "The child answers from a general idea or a nearby story and does not go back to what the passage says.",
+  "reveals": "Offer \"Accept, it is only a gift\" beside \"Refuse and tell a trusted adult\" and ask the child to choose.",
+  "help": "Ask the child to find the line in the passage the question names and read it aloud before choosing.",
+  "feedback": "Gifts offered for favours are a trap. Refuse and tell a trusted adult.",
+  "source": "The learner reads the passage loosely or mixes it with a similar Bible story (to confirm by a CRE teacher)",
+  "status": "draft"
+ },
+ "CRES.G6.CHRIST.HUMAN_SEXUALITY_7_LESSON.SEXUALITY_SKILLS.M_SEX6_CAUSE": {
+  "skill": "CRES.G6.CHRIST.HUMAN_SEXUALITY_7_LESSON.SEXUALITY_SKILLS",
+  "error": "Names a wrong cause.",
+  "example": {
+   "question": "Which can lead a young person into irresponsible behaviour?",
+   "wrong_answer": "Staying busy with school and sport",
+   "correct_answer": "Peer pressure and too little guidance"
+  },
+  "cause": "The child answers from a general idea or a nearby story and does not go back to what the passage says.",
+  "reveals": "Offer \"Staying busy with school and sport\" beside \"Peer pressure and too little guidance\" and ask the child to choose.",
+  "help": "Ask the child to find the line in the passage the question names and read it aloud before choosing.",
+  "feedback": "Peer pressure, harmful content, idleness and too little guidance are causes.",
+  "source": "The learner reads the passage loosely or mixes it with a similar Bible story (to confirm by a CRE teacher)",
+  "status": "draft"
+ },
+ "CRES.G6.CHRIST.SANCTITY_OF_LIFE.SANCTITY_LIFE.M_SAN6_OWN": {
+  "skill": "CRES.G6.CHRIST.SANCTITY_OF_LIFE.SANCTITY_LIFE",
+  "error": "Thinks a life is one's own to take or harm.",
+  "example": {
+   "question": "Where does life come from?",
+   "wrong_answer": "From ourselves alone",
+   "correct_answer": "It is a gift from God"
+  },
+  "cause": "The child answers from a general idea or a nearby story and does not go back to what the passage says.",
+  "reveals": "Offer \"From ourselves alone\" beside \"It is a gift from God\" and ask the child to choose.",
+  "help": "Ask the child to find the line in the passage the question names and read it aloud before choosing.",
+  "feedback": "Life is a gift from God, so we protect it.",
+  "source": "The learner reads the passage loosely or mixes it with a similar Bible story (to confirm by a CRE teacher)",
+  "status": "draft"
+ },
+ "CRES.G6.CHRIST.SANCTITY_OF_LIFE.SANCTITY_LIFE.M_SAN6_MOB": {
+  "skill": "CRES.G6.CHRIST.SANCTITY_OF_LIFE.SANCTITY_LIFE",
+  "error": "Thinks mob justice is acceptable.",
+  "example": {
+   "question": "A crowd catches a thief and wants to beat him. What is right?",
+   "wrong_answer": "Join in, he deserves it",
+   "correct_answer": "Hand him to the police, since life must be protected"
+  },
+  "cause": "The child answers from a general idea or a nearby story and does not go back to what the passage says.",
+  "reveals": "Offer \"Join in, he deserves it\" beside \"Hand him to the police, since life must be protected\" and ask the child to choose.",
+  "help": "Ask the child to find the line in the passage the question names and read it aloud before choosing.",
+  "feedback": "Mob justice violates the right to life. Hand a suspect to the police.",
+  "source": "The learner reads the passage loosely or mixes it with a similar Bible story (to confirm by a CRE teacher)",
+  "status": "draft"
+ },
+ "CRES.G6.CHRIST.SANCTITY_OF_LIFE.SANCTITY_LIFE.M_SAN6_ANGER": {
+  "skill": "CRES.G6.CHRIST.SANCTITY_OF_LIFE.SANCTITY_LIFE",
+  "error": "Thinks only physical killing matters, not hatred.",
+  "example": {
+   "question": "What does Jesus teach about anger (Matthew 5:21-22)?",
+   "wrong_answer": "Anger is harmless",
+   "correct_answer": "Anger and hatred also harm and must be dealt with"
+  },
+  "cause": "The child answers from a general idea or a nearby story and does not go back to what the passage says.",
+  "reveals": "Offer \"Anger is harmless\" beside \"Anger and hatred also harm and must be dealt with\" and ask the child to choose.",
+  "help": "Ask the child to find the line in the passage the question names and read it aloud before choosing.",
+  "feedback": "In Matthew 5:21-22 Jesus teaches that anger toward a brother is also serious.",
+  "source": "The learner reads the passage loosely or mixes it with a similar Bible story (to confirm by a CRE teacher)",
+  "status": "draft"
+ },
+ "CRES.G6.CHRIST.ALCOHOL_DRUGS_AND_SUBSTA.DRUGS_BIBLE.M_DRU6_MEDICINE": {
+  "skill": "CRES.G6.CHRIST.ALCOHOL_DRUGS_AND_SUBSTA.DRUGS_BIBLE",
+  "error": "Thinks all medicine is drug abuse.",
+  "example": {
+   "question": "Which is drug abuse?",
+   "wrong_answer": "Taking medicine as the doctor directs",
+   "correct_answer": "Sniffing glue"
+  },
+  "cause": "The child answers from a general idea or a nearby story and does not go back to what the passage says.",
+  "reveals": "Offer \"Taking medicine as the doctor directs\" beside \"Sniffing glue\" and ask the child to choose.",
+  "help": "Ask the child to find the line in the passage the question names and read it aloud before choosing.",
+  "feedback": "Medicine taken as a health worker directs is not abuse. Sniffing glue is.",
+  "source": "The learner reads the passage loosely or mixes it with a similar Bible story (to confirm by a CRE teacher)",
+  "status": "draft"
+ },
+ "CRES.G6.CHRIST.ALCOHOL_DRUGS_AND_SUBSTA.DRUGS_BIBLE.M_DRU6_TRY": {
+  "skill": "CRES.G6.CHRIST.ALCOHOL_DRUGS_AND_SUBSTA.DRUGS_BIBLE",
+  "error": "Thinks trying once is harmless.",
+  "example": {
+   "question": "What is true of trying a harmful drug once?",
+   "wrong_answer": "It is harmless",
+   "correct_answer": "It can start an addiction"
+  },
+  "cause": "The child answers from a general idea or a nearby story and does not go back to what the passage says.",
+  "reveals": "Offer \"It is harmless\" beside \"It can start an addiction\" and ask the child to choose.",
+  "help": "Ask the child to find the line in the passage the question names and read it aloud before choosing.",
+  "feedback": "Trying once can lead to addiction.",
+  "source": "The learner reads the passage loosely or mixes it with a similar Bible story (to confirm by a CRE teacher)",
+  "status": "draft"
+ },
+ "CRES.G6.CHRIST.ALCOHOL_DRUGS_AND_SUBSTA.DRUGS_BIBLE.M_DRU6_VERSE": {
+  "skill": "CRES.G6.CHRIST.ALCOHOL_DRUGS_AND_SUBSTA.DRUGS_BIBLE",
+  "error": "Mixes what Ephesians 5:18 and Hosea 4:11 say.",
+  "example": {
+   "question": "What does Ephesians 5:18 say?",
+   "wrong_answer": "Drink wine with joy",
+   "correct_answer": "Do not get drunk on wine, but be filled with the Spirit"
+  },
+  "cause": "The child answers from a general idea or a nearby story and does not go back to what the passage says.",
+  "reveals": "Offer \"Drink wine with joy\" beside \"Do not get drunk on wine, but be filled with the Spirit\" and ask the child to choose.",
+  "help": "Ask the child to find the line in the passage the question names and read it aloud before choosing.",
+  "feedback": "Ephesians 5:18 says do not get drunk, but be filled with the Spirit.",
+  "source": "The learner reads the passage loosely or mixes it with a similar Bible story (to confirm by a CRE teacher)",
+  "status": "draft"
+ },
+ "CRES.G6.CHRIST.ALCOHOL_DRUGS_AND_SUBSTA.DRUGS_PREVENT.M_DRP6_AGENCY": {
+  "skill": "CRES.G6.CHRIST.ALCOHOL_DRUGS_AND_SUBSTA.DRUGS_PREVENT",
+  "error": "Names the wrong agency or institution.",
+  "example": {
+   "question": "Which authority runs campaigns against alcohol and drug abuse?",
+   "wrong_answer": "The National Examinations Council",
+   "correct_answer": "NACADA"
+  },
+  "cause": "The child answers from a general idea or a nearby story and does not go back to what the passage says.",
+  "reveals": "Offer \"The National Examinations Council\" beside \"NACADA\" and ask the child to choose.",
+  "help": "Ask the child to find the line in the passage the question names and read it aloud before choosing.",
+  "feedback": "NACADA is the National Authority for the Campaign Against Alcohol and Drug Abuse.",
+  "source": "The learner reads the passage loosely or mixes it with a similar Bible story (to confirm by a CRE teacher)",
+  "status": "draft"
+ },
+ "CRES.G6.CHRIST.ALCOHOL_DRUGS_AND_SUBSTA.DRUGS_PREVENT.M_DRP6_HIDE": {
+  "skill": "CRES.G6.CHRIST.ALCOHOL_DRUGS_AND_SUBSTA.DRUGS_PREVENT",
+  "error": "Thinks a person who abuses drugs should be hidden or abandoned.",
+  "example": {
+   "question": "A friend is addicted to drugs. What is the Christian response?",
+   "wrong_answer": "Avoid him and tell no one",
+   "correct_answer": "Support him and help him find a counsellor"
+  },
+  "cause": "The child answers from a general idea or a nearby story and does not go back to what the passage says.",
+  "reveals": "Offer \"Avoid him and tell no one\" beside \"Support him and help him find a counsellor\" and ask the child to choose.",
+  "help": "Ask the child to find the line in the passage the question names and read it aloud before choosing.",
+  "feedback": "Christians care for those who struggle and help them get counselling and treatment.",
+  "source": "The learner reads the passage loosely or mixes it with a similar Bible story (to confirm by a CRE teacher)",
+  "status": "draft"
+ },
+ "CRES.G6.CHRIST.ALCOHOL_DRUGS_AND_SUBSTA.DRUGS_PREVENT.M_DRP6_SAYNO": {
+  "skill": "CRES.G6.CHRIST.ALCOHOL_DRUGS_AND_SUBSTA.DRUGS_PREVENT",
+  "error": "Thinks saying no is rude or weak.",
+  "example": {
+   "question": "A friend offers you cigarettes. What do you do?",
+   "wrong_answer": "Accept so as not to look weak",
+   "correct_answer": "Refuse firmly, walk away and tell an adult"
+  },
+  "cause": "The child answers from a general idea or a nearby story and does not go back to what the passage says.",
+  "reveals": "Offer \"Accept so as not to look weak\" beside \"Refuse firmly, walk away and tell an adult\" and ask the child to choose.",
+  "help": "Ask the child to find the line in the passage the question names and read it aloud before choosing.",
+  "feedback": "Saying no firmly takes courage. Walk away and tell an adult.",
+  "source": "The learner reads the passage loosely or mixes it with a similar Bible story (to confirm by a CRE teacher)",
+  "status": "draft"
+ }
+}
