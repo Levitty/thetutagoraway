@@ -3,15 +3,15 @@
  "subject_key": "kiswahili",
  "grade": 7,
  "source": "KICD English Language, not printed (text layer)",
- "status": "outcomes from KICD's text, word for word; skills, prerequisites and misconceptions not yet mapped",
+ "status": "outcomes from KICD's text, word for word; skills, prerequisites and misconceptions proposed (authored offline, 13 Nov 2026), awaiting a native Kiswahili teacher's review",
  "totals": {
   "strands": 4,
   "sub_strands": 60,
   "outcomes": 256,
   "lessons": 120,
-  "skills": 0,
-  "prerequisites": 0,
-  "misconceptions": 0
+  "skills": 21,
+  "prerequisites": 16,
+  "misconceptions": 63
  },
  "sub_strands": [
   {
@@ -237,8 +237,79 @@
      "indicator": "KISW.G7.RUBRIC.3.1"
     }
    ],
-   "skills": [],
-   "misconceptions": [],
+   "skills": [
+    {
+     "code": "KISW.G7.KUANDI.T1_VIAKIFISHI.HERUFI_KUBWA",
+     "name": "Tumia herufi kubwa na kikomo",
+     "outcomes": [
+      "KISW.G7.KUANDI.T1_VIAKIFISHI.a",
+      "KISW.G7.KUANDI.T1_VIAKIFISHI.b"
+     ],
+     "mastery": "Mtoto hutumia herufi kubwa mwanzoni mwa sentensi na kwa majina ya pekee, na kikomo (.) mwishoni mwa sentensi ya kawaida. Evidence rule: at least four of the last five fresh questions right across at least two question forms, and no repeated pick of the same misconception.",
+     "question_forms": [
+      "chagua jibu sahihi",
+      "chagua jibu katika hadithi fupi",
+      "tafuta hatua yenye kosa"
+     ],
+     "thinking": [
+      "recall",
+      "reasoning"
+     ],
+     "horeb_skill_ids": [],
+     "prerequisites": [],
+     "status": "proposed"
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "KISW.G7.KUANDI.T1_VIAKIFISHI.HERUFI_KUBWA.M_KS7_HK_JINA",
+     "skill": "KISW.G7.KUANDI.T1_VIAKIFISHI.HERUFI_KUBWA",
+     "error": "Does not capitalise a name.",
+     "example": {
+      "question": "Ni sentensi ipi imeandikwa sawa?",
+      "wrong_answer": "tuliona nairobi jana.",
+      "correct_answer": "Tuliona Nairobi jana."
+     },
+     "cause": "The child mixes up two rules that are taught close together.",
+     "reveals": "Offer \"tuliona nairobi jana.\" next to the right answer and ask the question again in a new sentence.",
+     "help": "Sentensi huanza kwa herufi kubwa, na majina ya pekee pia.",
+     "feedback": "Sentensi huanza kwa herufi kubwa, na majina ya pekee pia.",
+     "source": "To confirm by a native Kiswahili teacher: a common classroom error, not traced to a study by the author.",
+     "status": "draft"
+    },
+    {
+     "code": "KISW.G7.KUANDI.T1_VIAKIFISHI.HERUFI_KUBWA.M_KS7_HK_KIKOMO",
+     "skill": "KISW.G7.KUANDI.T1_VIAKIFISHI.HERUFI_KUBWA",
+     "error": "Leaves out the full stop.",
+     "example": {
+      "question": "Sentensi ya kawaida huisha kwa nini?",
+      "wrong_answer": "kiulizi",
+      "correct_answer": "kikomo"
+     },
+     "cause": "The child mixes up two rules that are taught close together.",
+     "reveals": "Offer \"kiulizi\" next to the right answer and ask the question again in a new sentence.",
+     "help": "Sentensi ya kawaida huisha kwa kikomo (.).",
+     "feedback": "Sentensi ya kawaida huisha kwa kikomo (.).",
+     "source": "To confirm by a native Kiswahili teacher: a common classroom error, not traced to a study by the author.",
+     "status": "draft"
+    },
+    {
+     "code": "KISW.G7.KUANDI.T1_VIAKIFISHI.HERUFI_KUBWA.M_KS7_HK_KATIKATI",
+     "skill": "KISW.G7.KUANDI.T1_VIAKIFISHI.HERUFI_KUBWA",
+     "error": "Capitalises words in the middle for no reason.",
+     "example": {
+      "question": "Ni sentensi ipi ina herufi kubwa isiyofaa?",
+      "wrong_answer": "Mama alinunua Mkate.",
+      "correct_answer": "Mama alinunua mkate."
+     },
+     "cause": "The child mixes up two rules that are taught close together.",
+     "reveals": "Offer \"Mama alinunua Mkate.\" next to the right answer and ask the question again in a new sentence.",
+     "help": "Herufi kubwa si kwa nomino ya kawaida katikati ya sentensi.",
+     "feedback": "Herufi kubwa si kwa nomino ya kawaida katikati ya sentensi.",
+     "source": "To confirm by a native Kiswahili teacher: a common classroom error, not traced to a study by the author.",
+     "status": "draft"
+    }
+   ],
    "rubric_indicators": [
     "KISW.G7.RUBRIC.3.1",
     "KISW.G7.RUBRIC.3.2",
@@ -312,8 +383,80 @@
      "indicator": "KISW.G7.RUBRIC.4.1"
     }
    ],
-   "skills": [],
-   "misconceptions": [],
+   "skills": [
+    {
+     "code": "KISW.G7.SARUFI.T1_AINA_ZA_NOMINO.NOMINO_PEKEE",
+     "name": "Tambua nomino za pekee na za kawaida",
+     "outcomes": [
+      "KISW.G7.SARUFI.T1_AINA_ZA_NOMINO.a",
+      "KISW.G7.SARUFI.T1_AINA_ZA_NOMINO.b",
+      "KISW.G7.SARUFI.T1_AINA_ZA_NOMINO.c"
+     ],
+     "mastery": "Mtoto hutambua nomino ya pekee (jina la mtu, mahali au kitu kimoja mahususi) na nomino ya kawaida (jina la jumla), na huandika ya pekee kwa herufi kubwa. Evidence rule: at least four of the last five fresh questions right across at least two question forms, and no repeated pick of the same misconception.",
+     "question_forms": [
+      "chagua jibu sahihi",
+      "chagua jibu katika hadithi fupi",
+      "tafuta hatua yenye kosa"
+     ],
+     "thinking": [
+      "recall",
+      "reasoning"
+     ],
+     "horeb_skill_ids": [],
+     "prerequisites": [],
+     "status": "proposed"
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "KISW.G7.SARUFI.T1_AINA_ZA_NOMINO.NOMINO_PEKEE.M_KS7_NP_KAWAIDA_KUBWA",
+     "skill": "KISW.G7.SARUFI.T1_AINA_ZA_NOMINO.NOMINO_PEKEE",
+     "error": "Writes a common noun with a capital letter.",
+     "example": {
+      "question": "Ni nomino ipi ni ya pekee?",
+      "wrong_answer": "mji",
+      "correct_answer": "Kisumu"
+     },
+     "cause": "The child mixes up two rules that are taught close together.",
+     "reveals": "Offer \"mji\" next to the right answer and ask the question again in a new sentence.",
+     "help": "Nomino ya pekee ni jina mahususi la mtu au mahali, kama Kisumu.",
+     "feedback": "Nomino ya pekee ni jina mahususi la mtu au mahali, kama Kisumu.",
+     "source": "To confirm by a native Kiswahili teacher: a common classroom error, not traced to a study by the author.",
+     "status": "draft"
+    },
+    {
+     "code": "KISW.G7.SARUFI.T1_AINA_ZA_NOMINO.NOMINO_PEKEE.M_KS7_NP_PEKEE_NDOGO",
+     "skill": "KISW.G7.SARUFI.T1_AINA_ZA_NOMINO.NOMINO_PEKEE",
+     "error": "Writes a proper noun with a small letter.",
+     "example": {
+      "question": "Nomino ya pekee huandikwa kwa herufi gani mwanzoni?",
+      "wrong_answer": "Herufi ndogo",
+      "correct_answer": "Herufi kubwa"
+     },
+     "cause": "The child mixes up two rules that are taught close together.",
+     "reveals": "Offer \"Herufi ndogo\" next to the right answer and ask the question again in a new sentence.",
+     "help": "Nomino ya pekee huanza kwa herufi kubwa.",
+     "feedback": "Nomino ya pekee huanza kwa herufi kubwa.",
+     "source": "To confirm by a native Kiswahili teacher: a common classroom error, not traced to a study by the author.",
+     "status": "draft"
+    },
+    {
+     "code": "KISW.G7.SARUFI.T1_AINA_ZA_NOMINO.NOMINO_PEKEE.M_KS7_NP_JINA_JUMLA",
+     "skill": "KISW.G7.SARUFI.T1_AINA_ZA_NOMINO.NOMINO_PEKEE",
+     "error": "Thinks a general name like mwalimu is a proper noun.",
+     "example": {
+      "question": "Ni nomino ipi ni ya kawaida?",
+      "wrong_answer": "Wanjiru",
+      "correct_answer": "kijiji"
+     },
+     "cause": "The child mixes up two rules that are taught close together.",
+     "reveals": "Offer \"Wanjiru\" next to the right answer and ask the question again in a new sentence.",
+     "help": "Nomino ya kawaida ni jina la jumla, kama kijiji.",
+     "feedback": "Nomino ya kawaida ni jina la jumla, kama kijiji.",
+     "source": "To confirm by a native Kiswahili teacher: a common classroom error, not traced to a study by the author.",
+     "status": "draft"
+    }
+   ],
    "rubric_indicators": [
     "KISW.G7.RUBRIC.4.1",
     "KISW.G7.RUBRIC.4.2",
@@ -547,8 +690,87 @@
      "indicator": "KISW.G7.RUBRIC.3.3"
     }
    ],
-   "skills": [],
-   "misconceptions": [],
+   "skills": [
+    {
+     "code": "KISW.G7.KUANDI.T2_BARUA_YA_KIRAFIKI_YA.BARUA_MWALIKO",
+     "name": "Tambua muundo wa barua ya kirafiki ya mwaliko",
+     "outcomes": [
+      "KISW.G7.KUANDI.T2_BARUA_YA_KIRAFIKI_YA.a",
+      "KISW.G7.KUANDI.T2_BARUA_YA_KIRAFIKI_YA.c"
+     ],
+     "mastery": "Mtoto hutambua vipengele vya barua ya kirafiki (anwani, tarehe, salamu, ujumbe, hitimisho, jina) na umuhimu wa mwaliko. Evidence rule: at least four of the last five fresh questions right across at least two question forms, and no repeated pick of the same misconception.",
+     "question_forms": [
+      "chagua jibu sahihi",
+      "chagua jibu katika hadithi fupi",
+      "tafuta hatua yenye kosa"
+     ],
+     "thinking": [
+      "recall",
+      "reasoning"
+     ],
+     "horeb_skill_ids": [],
+     "prerequisites": [
+      {
+       "requires": "KISW.G7.KUANDI.T1_VIAKIFISHI.HERUFI_KUBWA",
+       "kind": "skill",
+       "strength": "essential",
+       "reason": "Proposed: this skill builds on it. To confirm by a native Kiswahili teacher.",
+       "status": "proposed"
+      }
+     ],
+     "status": "proposed"
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "KISW.G7.KUANDI.T2_BARUA_YA_KIRAFIKI_YA.BARUA_MWALIKO.M_KS7_BM_HITIMISHO",
+     "skill": "KISW.G7.KUANDI.T2_BARUA_YA_KIRAFIKI_YA.BARUA_MWALIKO",
+     "error": "Puts the closing line first.",
+     "example": {
+      "question": "Barua ya kirafiki huanza kwa nini?",
+      "wrong_answer": "jina la mwandishi",
+      "correct_answer": "anwani ya mwandishi na tarehe"
+     },
+     "cause": "The child mixes up two rules that are taught close together.",
+     "reveals": "Offer \"jina la mwandishi\" next to the right answer and ask the question again in a new sentence.",
+     "help": "Barua huanza kwa anwani na tarehe, huisha kwa hitimisho na jina.",
+     "feedback": "Barua huanza kwa anwani na tarehe, huisha kwa hitimisho na jina.",
+     "source": "To confirm by a native Kiswahili teacher: a common classroom error, not traced to a study by the author.",
+     "status": "draft"
+    },
+    {
+     "code": "KISW.G7.KUANDI.T2_BARUA_YA_KIRAFIKI_YA.BARUA_MWALIKO.M_KS7_BM_SALAMU",
+     "skill": "KISW.G7.KUANDI.T2_BARUA_YA_KIRAFIKI_YA.BARUA_MWALIKO",
+     "error": "Uses a formal greeting in a friendly letter.",
+     "example": {
+      "question": "Ni salamu ipi inafaa barua ya kirafiki?",
+      "wrong_answer": "Mkuu wa Shule",
+      "correct_answer": "Mpendwa rafiki yangu"
+     },
+     "cause": "The child mixes up two rules that are taught close together.",
+     "reveals": "Offer \"Mkuu wa Shule\" next to the right answer and ask the question again in a new sentence.",
+     "help": "Barua ya kirafiki huanza kwa salamu ya kirafiki.",
+     "feedback": "Barua ya kirafiki huanza kwa salamu ya kirafiki.",
+     "source": "To confirm by a native Kiswahili teacher: a common classroom error, not traced to a study by the author.",
+     "status": "draft"
+    },
+    {
+     "code": "KISW.G7.KUANDI.T2_BARUA_YA_KIRAFIKI_YA.BARUA_MWALIKO.M_KS7_BM_UMUHIMU",
+     "skill": "KISW.G7.KUANDI.T2_BARUA_YA_KIRAFIKI_YA.BARUA_MWALIKO",
+     "error": "Does not know why an invitation is written.",
+     "example": {
+      "question": "Mwaliko huandikwa kwa nini?",
+      "wrong_answer": "kumkaripia mtu",
+      "correct_answer": "kumwita mtu kwenye tukio"
+     },
+     "cause": "The child mixes up two rules that are taught close together.",
+     "reveals": "Offer \"kumkaripia mtu\" next to the right answer and ask the question again in a new sentence.",
+     "help": "Mwaliko humwita mtu kwenye tukio.",
+     "feedback": "Mwaliko humwita mtu kwenye tukio.",
+     "source": "To confirm by a native Kiswahili teacher: a common classroom error, not traced to a study by the author.",
+     "status": "draft"
+    }
+   ],
    "rubric_indicators": [
     "KISW.G7.RUBRIC.3.1",
     "KISW.G7.RUBRIC.3.2",
@@ -615,8 +837,87 @@
      "indicator": "KISW.G7.RUBRIC.4.1"
     }
    ],
-   "skills": [],
-   "misconceptions": [],
+   "skills": [
+    {
+     "code": "KISW.G7.SARUFI.T2_AINA_ZA_NOMINO.NOMINO_MAKUNDI",
+     "name": "Tambua nomino za makundi na za dhahania",
+     "outcomes": [
+      "KISW.G7.SARUFI.T2_AINA_ZA_NOMINO.a",
+      "KISW.G7.SARUFI.T2_AINA_ZA_NOMINO.b"
+     ],
+     "mastery": "Mtoto hutambua nomino za makundi (kundi la viumbe au vitu, k.m. kikosi, jeshi) na za dhahania (mambo yasiyoshikika, k.m. upendo, furaha). Evidence rule: at least four of the last five fresh questions right across at least two question forms, and no repeated pick of the same misconception.",
+     "question_forms": [
+      "chagua jibu sahihi",
+      "chagua jibu katika hadithi fupi",
+      "tafuta hatua yenye kosa"
+     ],
+     "thinking": [
+      "recall",
+      "reasoning"
+     ],
+     "horeb_skill_ids": [],
+     "prerequisites": [
+      {
+       "requires": "KISW.G7.SARUFI.T1_AINA_ZA_NOMINO.NOMINO_PEKEE",
+       "kind": "skill",
+       "strength": "essential",
+       "reason": "Proposed: this skill builds on it. To confirm by a native Kiswahili teacher.",
+       "status": "proposed"
+      }
+     ],
+     "status": "proposed"
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "KISW.G7.SARUFI.T2_AINA_ZA_NOMINO.NOMINO_MAKUNDI.M_KS7_NM_MOJA",
+     "skill": "KISW.G7.SARUFI.T2_AINA_ZA_NOMINO.NOMINO_MAKUNDI",
+     "error": "Thinks a collective noun names one thing.",
+     "example": {
+      "question": "Ni nomino ipi ni ya makundi?",
+      "wrong_answer": "mwanafunzi",
+      "correct_answer": "kikosi"
+     },
+     "cause": "The child mixes up two rules that are taught close together.",
+     "reveals": "Offer \"mwanafunzi\" next to the right answer and ask the question again in a new sentence.",
+     "help": "Nomino ya makundi hutaja kundi la viumbe au vitu, kama kikosi.",
+     "feedback": "Nomino ya makundi hutaja kundi la viumbe au vitu, kama kikosi.",
+     "source": "To confirm by a native Kiswahili teacher: a common classroom error, not traced to a study by the author.",
+     "status": "draft"
+    },
+    {
+     "code": "KISW.G7.SARUFI.T2_AINA_ZA_NOMINO.NOMINO_MAKUNDI.M_KS7_NM_SHIKIKA",
+     "skill": "KISW.G7.SARUFI.T2_AINA_ZA_NOMINO.NOMINO_MAKUNDI",
+     "error": "Thinks an abstract noun can be touched.",
+     "example": {
+      "question": "Ni nomino ipi ni ya dhahania?",
+      "wrong_answer": "meza",
+      "correct_answer": "upendo"
+     },
+     "cause": "The child mixes up two rules that are taught close together.",
+     "reveals": "Offer \"meza\" next to the right answer and ask the question again in a new sentence.",
+     "help": "Nomino ya dhahania haishikiki, kama upendo.",
+     "feedback": "Nomino ya dhahania haishikiki, kama upendo.",
+     "source": "To confirm by a native Kiswahili teacher: a common classroom error, not traced to a study by the author.",
+     "status": "draft"
+    },
+    {
+     "code": "KISW.G7.SARUFI.T2_AINA_ZA_NOMINO.NOMINO_MAKUNDI.M_KS7_NM_KUNDI_DHAHANIA",
+     "skill": "KISW.G7.SARUFI.T2_AINA_ZA_NOMINO.NOMINO_MAKUNDI",
+     "error": "Mixes collective and abstract nouns.",
+     "example": {
+      "question": "Neno jeshi ni nomino ya aina gani?",
+      "wrong_answer": "dhahania",
+      "correct_answer": "makundi"
+     },
+     "cause": "The child mixes up two rules that are taught close together.",
+     "reveals": "Offer \"dhahania\" next to the right answer and ask the question again in a new sentence.",
+     "help": "Jeshi ni kundi la askari, kwa hiyo ni nomino ya makundi.",
+     "feedback": "Jeshi ni kundi la askari, kwa hiyo ni nomino ya makundi.",
+     "source": "To confirm by a native Kiswahili teacher: a common classroom error, not traced to a study by the author.",
+     "status": "draft"
+    }
+   ],
    "rubric_indicators": [
     "KISW.G7.RUBRIC.4.1",
     "KISW.G7.RUBRIC.4.2",
@@ -702,8 +1003,80 @@
      "indicator": "KISW.G7.RUBRIC.1.4"
     }
    ],
-   "skills": [],
-   "misconceptions": [],
+   "skills": [
+    {
+     "code": "KISW.G7.KUSIKI.T3_TANZU_ZA_FASIHI.FASIHI_TANZU",
+     "name": "Eleza maana ya fasihi na tanzu zake",
+     "outcomes": [
+      "KISW.G7.KUSIKI.T3_TANZU_ZA_FASIHI.a",
+      "KISW.G7.KUSIKI.T3_TANZU_ZA_FASIHI.b",
+      "KISW.G7.KUSIKI.T3_TANZU_ZA_FASIHI.c"
+     ],
+     "mastery": "Mtoto hueleza fasihi, hutambua fasihi simulizi (kutumia mdomo) na andishi (kuandikwa), na hutambua tanzu kama hadithi, methali na ushairi. Evidence rule: at least four of the last five fresh questions right across at least two question forms, and no repeated pick of the same misconception.",
+     "question_forms": [
+      "chagua jibu sahihi",
+      "chagua jibu katika hadithi fupi",
+      "tafuta hatua yenye kosa"
+     ],
+     "thinking": [
+      "recall",
+      "reasoning"
+     ],
+     "horeb_skill_ids": [],
+     "prerequisites": [],
+     "status": "proposed"
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "KISW.G7.KUSIKI.T3_TANZU_ZA_FASIHI.FASIHI_TANZU.M_KS7_FT_SIMULIZI",
+     "skill": "KISW.G7.KUSIKI.T3_TANZU_ZA_FASIHI.FASIHI_TANZU",
+     "error": "Thinks oral literature is written.",
+     "example": {
+      "question": "Fasihi simulizi hupitishwa kwa njia gani?",
+      "wrong_answer": "kwa maandishi",
+      "correct_answer": "kwa mdomo"
+     },
+     "cause": "The child mixes up two rules that are taught close together.",
+     "reveals": "Offer \"kwa maandishi\" next to the right answer and ask the question again in a new sentence.",
+     "help": "Fasihi simulizi hupitishwa kwa mdomo.",
+     "feedback": "Fasihi simulizi hupitishwa kwa mdomo.",
+     "source": "To confirm by a native Kiswahili teacher: a common classroom error, not traced to a study by the author.",
+     "status": "draft"
+    },
+    {
+     "code": "KISW.G7.KUSIKI.T3_TANZU_ZA_FASIHI.FASIHI_TANZU.M_KS7_FT_ANDISHI",
+     "skill": "KISW.G7.KUSIKI.T3_TANZU_ZA_FASIHI.FASIHI_TANZU",
+     "error": "Thinks written literature is spoken.",
+     "example": {
+      "question": "Fasihi andishi hupitishwa kwa njia gani?",
+      "wrong_answer": "kwa mdomo",
+      "correct_answer": "kwa maandishi"
+     },
+     "cause": "The child mixes up two rules that are taught close together.",
+     "reveals": "Offer \"kwa mdomo\" next to the right answer and ask the question again in a new sentence.",
+     "help": "Fasihi andishi huandikwa.",
+     "feedback": "Fasihi andishi huandikwa.",
+     "source": "To confirm by a native Kiswahili teacher: a common classroom error, not traced to a study by the author.",
+     "status": "draft"
+    },
+    {
+     "code": "KISW.G7.KUSIKI.T3_TANZU_ZA_FASIHI.FASIHI_TANZU.M_KS7_FT_TANZU",
+     "skill": "KISW.G7.KUSIKI.T3_TANZU_ZA_FASIHI.FASIHI_TANZU",
+     "error": "Names a non-literature item as a tanzu.",
+     "example": {
+      "question": "Ni tanzu ipi ya fasihi simulizi?",
+      "wrong_answer": "barua rasmi",
+      "correct_answer": "methali"
+     },
+     "cause": "The child mixes up two rules that are taught close together.",
+     "reveals": "Offer \"barua rasmi\" next to the right answer and ask the question again in a new sentence.",
+     "help": "Methali ni tanzu ya fasihi simulizi.",
+     "feedback": "Methali ni tanzu ya fasihi simulizi.",
+     "source": "To confirm by a native Kiswahili teacher: a common classroom error, not traced to a study by the author.",
+     "status": "draft"
+    }
+   ],
    "rubric_indicators": [
     "KISW.G7.RUBRIC.1.1",
     "KISW.G7.RUBRIC.1.2",
@@ -915,8 +1288,87 @@
      "indicator": "KISW.G7.RUBRIC.4.1"
     }
    ],
-   "skills": [],
-   "misconceptions": [],
+   "skills": [
+    {
+     "code": "KISW.G7.SARUFI.T3_AINA_ZA_NOMINO.NOMINO_WINGI",
+     "name": "Tambua nomino za wingi na vitenzi-jina",
+     "outcomes": [
+      "KISW.G7.SARUFI.T3_AINA_ZA_NOMINO.a",
+      "KISW.G7.SARUFI.T3_AINA_ZA_NOMINO.b"
+     ],
+     "mastery": "Mtoto hutambua nomino za wingi (maji, mafuta) na kitenzi-jina (kuimba, kusoma) kinachoanza kwa ku-. Evidence rule: at least four of the last five fresh questions right across at least two question forms, and no repeated pick of the same misconception.",
+     "question_forms": [
+      "chagua jibu sahihi",
+      "chagua jibu katika hadithi fupi",
+      "tafuta hatua yenye kosa"
+     ],
+     "thinking": [
+      "recall",
+      "reasoning"
+     ],
+     "horeb_skill_ids": [],
+     "prerequisites": [
+      {
+       "requires": "KISW.G7.SARUFI.T1_AINA_ZA_NOMINO.NOMINO_PEKEE",
+       "kind": "skill",
+       "strength": "essential",
+       "reason": "Proposed: this skill builds on it. To confirm by a native Kiswahili teacher.",
+       "status": "proposed"
+      }
+     ],
+     "status": "proposed"
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "KISW.G7.SARUFI.T3_AINA_ZA_NOMINO.NOMINO_WINGI.M_KS7_NW_KITENZI_JINA",
+     "skill": "KISW.G7.SARUFI.T3_AINA_ZA_NOMINO.NOMINO_WINGI",
+     "error": "Does not know the ku- verbal noun.",
+     "example": {
+      "question": "Ni kitenzi-jina kipi?",
+      "wrong_answer": "mwimbaji",
+      "correct_answer": "kuimba"
+     },
+     "cause": "The child mixes up two rules that are taught close together.",
+     "reveals": "Offer \"mwimbaji\" next to the right answer and ask the question again in a new sentence.",
+     "help": "Kitenzi-jina huanza kwa ku-, kama kuimba.",
+     "feedback": "Kitenzi-jina huanza kwa ku-, kama kuimba.",
+     "source": "To confirm by a native Kiswahili teacher: a common classroom error, not traced to a study by the author.",
+     "status": "draft"
+    },
+    {
+     "code": "KISW.G7.SARUFI.T3_AINA_ZA_NOMINO.NOMINO_WINGI.M_KS7_NW_MAJI_MOJA",
+     "skill": "KISW.G7.SARUFI.T3_AINA_ZA_NOMINO.NOMINO_WINGI",
+     "error": "Treats maji as singular.",
+     "example": {
+      "question": "Ni nomino ipi ya wingi?",
+      "wrong_answer": "kiti",
+      "correct_answer": "maji"
+     },
+     "cause": "The child mixes up two rules that are taught close together.",
+     "reveals": "Offer \"kiti\" next to the right answer and ask the question again in a new sentence.",
+     "help": "Maji ni nomino ya wingi; haina umoja.",
+     "feedback": "Maji ni nomino ya wingi; haina umoja.",
+     "source": "To confirm by a native Kiswahili teacher: a common classroom error, not traced to a study by the author.",
+     "status": "draft"
+    },
+    {
+     "code": "KISW.G7.SARUFI.T3_AINA_ZA_NOMINO.NOMINO_WINGI.M_KS7_NW_KUSOMA",
+     "skill": "KISW.G7.SARUFI.T3_AINA_ZA_NOMINO.NOMINO_WINGI",
+     "error": "Calls the verbal noun a main verb only.",
+     "example": {
+      "question": "Neno kusoma katika \"Kusoma ni muhimu\" ni nini?",
+      "wrong_answer": "kitenzi kikuu",
+      "correct_answer": "kitenzi-jina"
+     },
+     "cause": "The child mixes up two rules that are taught close together.",
+     "reveals": "Offer \"kitenzi kikuu\" next to the right answer and ask the question again in a new sentence.",
+     "help": "Hapa kusoma ni jina la jambo, kwa hiyo ni kitenzi-jina.",
+     "feedback": "Hapa kusoma ni jina la jambo, kwa hiyo ni kitenzi-jina.",
+     "source": "To confirm by a native Kiswahili teacher: a common classroom error, not traced to a study by the author.",
+     "status": "draft"
+    }
+   ],
    "rubric_indicators": [
     "KISW.G7.RUBRIC.4.1",
     "KISW.G7.RUBRIC.4.2",
@@ -1251,8 +1703,79 @@
      "indicator": "KISW.G7.RUBRIC.4.2"
     }
    ],
-   "skills": [],
-   "misconceptions": [],
+   "skills": [
+    {
+     "code": "KISW.G7.SARUFI.T4_NYAKATI_NA_HALI.NYAKATI_MSINGI",
+     "name": "Tambua wakati uliopo, uliopita na ujao",
+     "outcomes": [
+      "KISW.G7.SARUFI.T4_NYAKATI_NA_HALI.a",
+      "KISW.G7.SARUFI.T4_NYAKATI_NA_HALI.b"
+     ],
+     "mastery": "Mtoto hutambua kiambishi -na- (uliopo), -li- (uliopita) na -ta- (ujao), na hutumia wakati unaofaa. Evidence rule: at least four of the last five fresh questions right across at least two question forms, and no repeated pick of the same misconception.",
+     "question_forms": [
+      "chagua jibu sahihi",
+      "chagua jibu katika hadithi fupi",
+      "tafuta hatua yenye kosa"
+     ],
+     "thinking": [
+      "recall",
+      "reasoning"
+     ],
+     "horeb_skill_ids": [],
+     "prerequisites": [],
+     "status": "proposed"
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "KISW.G7.SARUFI.T4_NYAKATI_NA_HALI.NYAKATI_MSINGI.M_KS7_NY_LI",
+     "skill": "KISW.G7.SARUFI.T4_NYAKATI_NA_HALI.NYAKATI_MSINGI",
+     "error": "Mixes the markers -li- and -ta-.",
+     "example": {
+      "question": "Katika \"Juma alicheza jana\", wakati ni upi?",
+      "wrong_answer": "ujao",
+      "correct_answer": "uliopita"
+     },
+     "cause": "The child mixes up two rules that are taught close together.",
+     "reveals": "Offer \"ujao\" next to the right answer and ask the question again in a new sentence.",
+     "help": "Kiambishi -li- huonyesha wakati uliopita.",
+     "feedback": "Kiambishi -li- huonyesha wakati uliopita.",
+     "source": "To confirm by a native Kiswahili teacher: a common classroom error, not traced to a study by the author.",
+     "status": "draft"
+    },
+    {
+     "code": "KISW.G7.SARUFI.T4_NYAKATI_NA_HALI.NYAKATI_MSINGI.M_KS7_NY_NA",
+     "skill": "KISW.G7.SARUFI.T4_NYAKATI_NA_HALI.NYAKATI_MSINGI",
+     "error": "Thinks -na- is past.",
+     "example": {
+      "question": "Katika \"Mama anapika sasa\", wakati ni upi?",
+      "wrong_answer": "uliopita",
+      "correct_answer": "uliopo"
+     },
+     "cause": "The child mixes up two rules that are taught close together.",
+     "reveals": "Offer \"uliopita\" next to the right answer and ask the question again in a new sentence.",
+     "help": "Kiambishi -na- huonyesha wakati uliopo.",
+     "feedback": "Kiambishi -na- huonyesha wakati uliopo.",
+     "source": "To confirm by a native Kiswahili teacher: a common classroom error, not traced to a study by the author.",
+     "status": "draft"
+    },
+    {
+     "code": "KISW.G7.SARUFI.T4_NYAKATI_NA_HALI.NYAKATI_MSINGI.M_KS7_NY_TA",
+     "skill": "KISW.G7.SARUFI.T4_NYAKATI_NA_HALI.NYAKATI_MSINGI",
+     "error": "Thinks -ta- is present.",
+     "example": {
+      "question": "Katika \"Tutasafiri kesho\", wakati ni upi?",
+      "wrong_answer": "uliopo",
+      "correct_answer": "ujao"
+     },
+     "cause": "The child mixes up two rules that are taught close together.",
+     "reveals": "Offer \"uliopo\" next to the right answer and ask the question again in a new sentence.",
+     "help": "Kiambishi -ta- huonyesha wakati ujao.",
+     "feedback": "Kiambishi -ta- huonyesha wakati ujao.",
+     "source": "To confirm by a native Kiswahili teacher: a common classroom error, not traced to a study by the author.",
+     "status": "draft"
+    }
+   ],
    "rubric_indicators": [
     "KISW.G7.RUBRIC.4.1",
     "KISW.G7.RUBRIC.4.2",
@@ -1562,8 +2085,87 @@
      "indicator": "KISW.G7.RUBRIC.4.2"
     }
    ],
-   "skills": [],
-   "misconceptions": [],
+   "skills": [
+    {
+     "code": "KISW.G7.SARUFI.T5_NYAKATI_NA_HALI.NYAKATI_KUENDELEA",
+     "name": "Tambua uliopita hali ya kuendelea na ujao hali ya kuendelea",
+     "outcomes": [
+      "KISW.G7.SARUFI.T5_NYAKATI_NA_HALI.a",
+      "KISW.G7.SARUFI.T5_NYAKATI_NA_HALI.b"
+     ],
+     "mastery": "Mtoto hutambua alikuwa akisoma (uliopita hali ya kuendelea) na atakuwa akisoma (ujao hali ya kuendelea). Evidence rule: at least four of the last five fresh questions right across at least two question forms, and no repeated pick of the same misconception.",
+     "question_forms": [
+      "chagua jibu sahihi",
+      "chagua jibu katika hadithi fupi",
+      "tafuta hatua yenye kosa"
+     ],
+     "thinking": [
+      "recall",
+      "reasoning"
+     ],
+     "horeb_skill_ids": [],
+     "prerequisites": [
+      {
+       "requires": "KISW.G7.SARUFI.T4_NYAKATI_NA_HALI.NYAKATI_MSINGI",
+       "kind": "skill",
+       "strength": "essential",
+       "reason": "Proposed: this skill builds on it. To confirm by a native Kiswahili teacher.",
+       "status": "proposed"
+      }
+     ],
+     "status": "proposed"
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "KISW.G7.SARUFI.T5_NYAKATI_NA_HALI.NYAKATI_KUENDELEA.M_KS7_NK_AKISOMA",
+     "skill": "KISW.G7.SARUFI.T5_NYAKATI_NA_HALI.NYAKATI_KUENDELEA",
+     "error": "Uses the past continuous for a future event.",
+     "example": {
+      "question": "Ni sentensi ipi iko katika ujao hali ya kuendelea?",
+      "wrong_answer": "Alikuwa akisoma jana",
+      "correct_answer": "Atakuwa akisoma kesho"
+     },
+     "cause": "The child mixes up two rules that are taught close together.",
+     "reveals": "Offer \"Alikuwa akisoma jana\" next to the right answer and ask the question again in a new sentence.",
+     "help": "Ujao hali ya kuendelea hutumia atakuwa akisoma.",
+     "feedback": "Ujao hali ya kuendelea hutumia atakuwa akisoma.",
+     "source": "To confirm by a native Kiswahili teacher: a common classroom error, not traced to a study by the author.",
+     "status": "draft"
+    },
+    {
+     "code": "KISW.G7.SARUFI.T5_NYAKATI_NA_HALI.NYAKATI_KUENDELEA.M_KS7_NK_ALIKUWA",
+     "skill": "KISW.G7.SARUFI.T5_NYAKATI_NA_HALI.NYAKATI_KUENDELEA",
+     "error": "Thinks alikuwa means a finished act.",
+     "example": {
+      "question": "Alikuwa akipika humaanisha nini?",
+      "wrong_answer": "Alimaliza kupika",
+      "correct_answer": "Alikuwa katikati ya kupika wakati huo"
+     },
+     "cause": "The child mixes up two rules that are taught close together.",
+     "reveals": "Offer \"Alimaliza kupika\" next to the right answer and ask the question again in a new sentence.",
+     "help": "Alikuwa akipika ni uliopita hali ya kuendelea: tendo lilikuwa likiendelea.",
+     "feedback": "Alikuwa akipika ni uliopita hali ya kuendelea: tendo lilikuwa likiendelea.",
+     "source": "To confirm by a native Kiswahili teacher: a common classroom error, not traced to a study by the author.",
+     "status": "draft"
+    },
+    {
+     "code": "KISW.G7.SARUFI.T5_NYAKATI_NA_HALI.NYAKATI_KUENDELEA.M_KS7_NK_PAST_SIMPLE",
+     "skill": "KISW.G7.SARUFI.T5_NYAKATI_NA_HALI.NYAKATI_KUENDELEA",
+     "error": "Does not tell the simple past from the continuous.",
+     "example": {
+      "question": "Ni sentensi ipi ni uliopita hali ya kuendelea?",
+      "wrong_answer": "Alisoma jana",
+      "correct_answer": "Walikuwa wakicheza uwanjani"
+     },
+     "cause": "The child mixes up two rules that are taught close together.",
+     "reveals": "Offer \"Alisoma jana\" next to the right answer and ask the question again in a new sentence.",
+     "help": "Walikuwa wakicheza ni uliopita hali ya kuendelea.",
+     "feedback": "Walikuwa wakicheza ni uliopita hali ya kuendelea.",
+     "source": "To confirm by a native Kiswahili teacher: a common classroom error, not traced to a study by the author.",
+     "status": "draft"
+    }
+   ],
    "rubric_indicators": [
     "KISW.G7.RUBRIC.4.1",
     "KISW.G7.RUBRIC.4.2",
@@ -1870,8 +2472,87 @@
      "indicator": "KISW.G7.RUBRIC.4.1"
     }
    ],
-   "skills": [],
-   "misconceptions": [],
+   "skills": [
+    {
+     "code": "KISW.G7.SARUFI.T6_VITENZI.VITENZI_VIKUU",
+     "name": "Tambua vitenzi vikuu na visaidizi",
+     "outcomes": [
+      "KISW.G7.SARUFI.T6_VITENZI.a",
+      "KISW.G7.SARUFI.T6_VITENZI.b"
+     ],
+     "mastery": "Mtoto hutambua kitenzi kikuu (hubeba tendo) na kisaidizi (hutangulia kikuu na kusaidia, k.m. alikuwa, atakuwa). Evidence rule: at least four of the last five fresh questions right across at least two question forms, and no repeated pick of the same misconception.",
+     "question_forms": [
+      "chagua jibu sahihi",
+      "chagua jibu katika hadithi fupi",
+      "tafuta hatua yenye kosa"
+     ],
+     "thinking": [
+      "recall",
+      "reasoning"
+     ],
+     "horeb_skill_ids": [],
+     "prerequisites": [
+      {
+       "requires": "KISW.G7.SARUFI.T4_NYAKATI_NA_HALI.NYAKATI_MSINGI",
+       "kind": "skill",
+       "strength": "essential",
+       "reason": "Proposed: this skill builds on it. To confirm by a native Kiswahili teacher.",
+       "status": "proposed"
+      }
+     ],
+     "status": "proposed"
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "KISW.G7.SARUFI.T6_VITENZI.VITENZI_VIKUU.M_KS7_VV_KISAIDIZI_KUU",
+     "skill": "KISW.G7.SARUFI.T6_VITENZI.VITENZI_VIKUU",
+     "error": "Calls the helping verb the main verb.",
+     "example": {
+      "question": "Katika \"Alikuwa akisoma\", kitenzi kikuu ni kipi?",
+      "wrong_answer": "alikuwa",
+      "correct_answer": "akisoma"
+     },
+     "cause": "The child mixes up two rules that are taught close together.",
+     "reveals": "Offer \"alikuwa\" next to the right answer and ask the question again in a new sentence.",
+     "help": "Kitenzi kikuu hubeba tendo: akisoma.",
+     "feedback": "Kitenzi kikuu hubeba tendo: akisoma.",
+     "source": "To confirm by a native Kiswahili teacher: a common classroom error, not traced to a study by the author.",
+     "status": "draft"
+    },
+    {
+     "code": "KISW.G7.SARUFI.T6_VITENZI.VITENZI_VIKUU.M_KS7_VV_KUU_KISAIDIZI",
+     "skill": "KISW.G7.SARUFI.T6_VITENZI.VITENZI_VIKUU",
+     "error": "Calls the main verb the helping verb.",
+     "example": {
+      "question": "Katika \"Atakuwa akifanya kazi\", kitenzi kisaidizi ni kipi?",
+      "wrong_answer": "akifanya",
+      "correct_answer": "atakuwa"
+     },
+     "cause": "The child mixes up two rules that are taught close together.",
+     "reveals": "Offer \"akifanya\" next to the right answer and ask the question again in a new sentence.",
+     "help": "Kitenzi kisaidizi hutangulia kikuu: atakuwa.",
+     "feedback": "Kitenzi kisaidizi hutangulia kikuu: atakuwa.",
+     "source": "To confirm by a native Kiswahili teacher: a common classroom error, not traced to a study by the author.",
+     "status": "draft"
+    },
+    {
+     "code": "KISW.G7.SARUFI.T6_VITENZI.VITENZI_VIKUU.M_KS7_VV_SENTENSI",
+     "skill": "KISW.G7.SARUFI.T6_VITENZI.VITENZI_VIKUU",
+     "error": "Thinks a sentence has only one verb word.",
+     "example": {
+      "question": "Katika \"Walikuwa wakicheza\", kuna vitenzi vingapi?",
+      "wrong_answer": "kimoja",
+      "correct_answer": "viwili: walikuwa na wakicheza"
+     },
+     "cause": "The child mixes up two rules that are taught close together.",
+     "reveals": "Offer \"kimoja\" next to the right answer and ask the question again in a new sentence.",
+     "help": "Sentensi hii ina kisaidizi na kikuu.",
+     "feedback": "Sentensi hii ina kisaidizi na kikuu.",
+     "source": "To confirm by a native Kiswahili teacher: a common classroom error, not traced to a study by the author.",
+     "status": "draft"
+    }
+   ],
    "rubric_indicators": [
     "KISW.G7.RUBRIC.4.1",
     "KISW.G7.RUBRIC.4.2",
@@ -2016,8 +2697,79 @@
      "status": "kicd_verified"
     }
    ],
-   "skills": [],
-   "misconceptions": [],
+   "skills": [
+    {
+     "code": "KISW.G7.KUSOMA.T7_UFUPISHO.UFUPISHO",
+     "name": "Eleza maana ya ufupisho na habari kuu",
+     "outcomes": [
+      "KISW.G7.KUSOMA.T7_UFUPISHO.a",
+      "KISW.G7.KUSOMA.T7_UFUPISHO.b"
+     ],
+     "mastery": "Mtoto hueleza ufupisho (kutoa habari kuu bila kupoteza maana) na hutambua habari kuu ya aya. Evidence rule: at least four of the last five fresh questions right across at least two question forms, and no repeated pick of the same misconception.",
+     "question_forms": [
+      "chagua jibu sahihi",
+      "chagua jibu katika hadithi fupi",
+      "tafuta hatua yenye kosa"
+     ],
+     "thinking": [
+      "recall",
+      "reasoning"
+     ],
+     "horeb_skill_ids": [],
+     "prerequisites": [],
+     "status": "proposed"
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "KISW.G7.KUSOMA.T7_UFUPISHO.UFUPISHO.M_KS7_UF_NAKALA",
+     "skill": "KISW.G7.KUSOMA.T7_UFUPISHO.UFUPISHO",
+     "error": "Thinks a summary copies the passage.",
+     "example": {
+      "question": "Ufupisho ni nini?",
+      "wrong_answer": "kunakili habari yote",
+      "correct_answer": "kutoa habari kuu kwa ufupi"
+     },
+     "cause": "The child mixes up two rules that are taught close together.",
+     "reveals": "Offer \"kunakili habari yote\" next to the right answer and ask the question again in a new sentence.",
+     "help": "Ufupisho ni kutoa habari kuu bila kupoteza maana.",
+     "feedback": "Ufupisho ni kutoa habari kuu bila kupoteza maana.",
+     "source": "To confirm by a native Kiswahili teacher: a common classroom error, not traced to a study by the author.",
+     "status": "draft"
+    },
+    {
+     "code": "KISW.G7.KUSOMA.T7_UFUPISHO.UFUPISHO.M_KS7_UF_MAANA",
+     "skill": "KISW.G7.KUSOMA.T7_UFUPISHO.UFUPISHO",
+     "error": "Thinks a summary may change the meaning.",
+     "example": {
+      "question": "Ufupisho unapaswa kuwa vipi?",
+      "wrong_answer": "upoteze maana ya habari",
+      "correct_answer": "uhifadhi maana ya habari"
+     },
+     "cause": "The child mixes up two rules that are taught close together.",
+     "reveals": "Offer \"upoteze maana ya habari\" next to the right answer and ask the question again in a new sentence.",
+     "help": "Ufupisho huhifadhi maana ya habari.",
+     "feedback": "Ufupisho huhifadhi maana ya habari.",
+     "source": "To confirm by a native Kiswahili teacher: a common classroom error, not traced to a study by the author.",
+     "status": "draft"
+    },
+    {
+     "code": "KISW.G7.KUSOMA.T7_UFUPISHO.UFUPISHO.M_KS7_UF_HABARI_KUU",
+     "skill": "KISW.G7.KUSOMA.T7_UFUPISHO.UFUPISHO",
+     "error": "Picks a detail as the main idea.",
+     "example": {
+      "question": "Habari kuu ya aya ni ipi?",
+      "wrong_answer": "mfano mdogo uliotolewa",
+      "correct_answer": "wazo kuu la aya nzima"
+     },
+     "cause": "The child mixes up two rules that are taught close together.",
+     "reveals": "Offer \"mfano mdogo uliotolewa\" next to the right answer and ask the question again in a new sentence.",
+     "help": "Habari kuu ni wazo kuu la aya nzima.",
+     "feedback": "Habari kuu ni wazo kuu la aya nzima.",
+     "source": "To confirm by a native Kiswahili teacher: a common classroom error, not traced to a study by the author.",
+     "status": "draft"
+    }
+   ],
    "rubric_indicators": [
     "KISW.G7.RUBRIC.2.1",
     "KISW.G7.RUBRIC.2.2",
@@ -2161,8 +2913,87 @@
      "indicator": "KISW.G7.RUBRIC.4.1"
     }
    ],
-   "skills": [],
-   "misconceptions": [],
+   "skills": [
+    {
+     "code": "KISW.G7.SARUFI.T7_VITENZI_VISHIRIKISHI.VISHIRIKISHI",
+     "name": "Tambua na utumie vitenzi vishirikishi",
+     "outcomes": [
+      "KISW.G7.SARUFI.T7_VITENZI_VISHIRIKISHI.a",
+      "KISW.G7.SARUFI.T7_VITENZI_VISHIRIKISHI.b"
+     ],
+     "mastery": "Mtoto hutambua kitenzi kishirikishi (ni, si, yuko, wako, ndiye, ndio) na hukitumia sentensi. Evidence rule: at least four of the last five fresh questions right across at least two question forms, and no repeated pick of the same misconception.",
+     "question_forms": [
+      "chagua jibu sahihi",
+      "chagua jibu katika hadithi fupi",
+      "tafuta hatua yenye kosa"
+     ],
+     "thinking": [
+      "recall",
+      "reasoning"
+     ],
+     "horeb_skill_ids": [],
+     "prerequisites": [
+      {
+       "requires": "KISW.G7.SARUFI.T6_VITENZI.VITENZI_VIKUU",
+       "kind": "skill",
+       "strength": "essential",
+       "reason": "Proposed: this skill builds on it. To confirm by a native Kiswahili teacher.",
+       "status": "proposed"
+      }
+     ],
+     "status": "proposed"
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "KISW.G7.SARUFI.T7_VITENZI_VISHIRIKISHI.VISHIRIKISHI.M_KS7_VS_NI_SI",
+     "skill": "KISW.G7.SARUFI.T7_VITENZI_VISHIRIKISHI.VISHIRIKISHI",
+     "error": "Mixes ni and si.",
+     "example": {
+      "question": "Ni kitenzi kishirikishi kipi cha kukanusha?",
+      "wrong_answer": "ni",
+      "correct_answer": "si"
+     },
+     "cause": "The child mixes up two rules that are taught close together.",
+     "reveals": "Offer \"ni\" next to the right answer and ask the question again in a new sentence.",
+     "help": "Si ni kishirikishi cha kukanusha; ni cha kuthibitisha.",
+     "feedback": "Si ni kishirikishi cha kukanusha; ni cha kuthibitisha.",
+     "source": "To confirm by a native Kiswahili teacher: a common classroom error, not traced to a study by the author.",
+     "status": "draft"
+    },
+    {
+     "code": "KISW.G7.SARUFI.T7_VITENZI_VISHIRIKISHI.VISHIRIKISHI.M_KS7_VS_YUKO",
+     "skill": "KISW.G7.SARUFI.T7_VITENZI_VISHIRIKISHI.VISHIRIKISHI",
+     "error": "Uses yuko for a plural subject.",
+     "example": {
+      "question": "Kamilisha: Wanafunzi ___ darasani.",
+      "wrong_answer": "yuko",
+      "correct_answer": "wako"
+     },
+     "cause": "The child mixes up two rules that are taught close together.",
+     "reveals": "Offer \"yuko\" next to the right answer and ask the question again in a new sentence.",
+     "help": "Wanafunzi ni wengi, kwa hiyo tunasema wako.",
+     "feedback": "Wanafunzi ni wengi, kwa hiyo tunasema wako.",
+     "source": "To confirm by a native Kiswahili teacher: a common classroom error, not traced to a study by the author.",
+     "status": "draft"
+    },
+    {
+     "code": "KISW.G7.SARUFI.T7_VITENZI_VISHIRIKISHI.VISHIRIKISHI.M_KS7_VS_SIO",
+     "skill": "KISW.G7.SARUFI.T7_VITENZI_VISHIRIKISHI.VISHIRIKISHI",
+     "error": "Does not know that si- is negative.",
+     "example": {
+      "question": "Neno sio katika \"Huyu sio mwalimu\" linaonyesha nini?",
+      "wrong_answer": "kuthibitisha",
+      "correct_answer": "kukanusha"
+     },
+     "cause": "The child mixes up two rules that are taught close together.",
+     "reveals": "Offer \"kuthibitisha\" next to the right answer and ask the question again in a new sentence.",
+     "help": "Sio ni kishirikishi cha kukanusha.",
+     "feedback": "Sio ni kishirikishi cha kukanusha.",
+     "source": "To confirm by a native Kiswahili teacher: a common classroom error, not traced to a study by the author.",
+     "status": "draft"
+    }
+   ],
    "rubric_indicators": [
     "KISW.G7.RUBRIC.4.1",
     "KISW.G7.RUBRIC.4.2",
@@ -2403,8 +3234,87 @@
      "status": "kicd_verified"
     }
    ],
-   "skills": [],
-   "misconceptions": [],
+   "skills": [
+    {
+     "code": "KISW.G7.KUANDI.T8_VIAKIFISHI.KIULIZI_KOMA",
+     "name": "Tumia kiulizi na koma",
+     "outcomes": [
+      "KISW.G7.KUANDI.T8_VIAKIFISHI.a",
+      "KISW.G7.KUANDI.T8_VIAKIFISHI.b"
+     ],
+     "mastery": "Mtoto hutumia kiulizi (?) mwishoni mwa swali na koma (,) kutenganisha vitu katika orodha na baada ya salamu au kiunganishi. Evidence rule: at least four of the last five fresh questions right across at least two question forms, and no repeated pick of the same misconception.",
+     "question_forms": [
+      "chagua jibu sahihi",
+      "chagua jibu katika hadithi fupi",
+      "tafuta hatua yenye kosa"
+     ],
+     "thinking": [
+      "recall",
+      "reasoning"
+     ],
+     "horeb_skill_ids": [],
+     "prerequisites": [
+      {
+       "requires": "KISW.G7.KUANDI.T1_VIAKIFISHI.HERUFI_KUBWA",
+       "kind": "skill",
+       "strength": "essential",
+       "reason": "Proposed: this skill builds on it. To confirm by a native Kiswahili teacher.",
+       "status": "proposed"
+      }
+     ],
+     "status": "proposed"
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "KISW.G7.KUANDI.T8_VIAKIFISHI.KIULIZI_KOMA.M_KS7_KK_KIKOMO",
+     "skill": "KISW.G7.KUANDI.T8_VIAKIFISHI.KIULIZI_KOMA",
+     "error": "Ends a question with a full stop.",
+     "example": {
+      "question": "Swali huisha kwa nini?",
+      "wrong_answer": "kikomo",
+      "correct_answer": "kiulizi"
+     },
+     "cause": "The child mixes up two rules that are taught close together.",
+     "reveals": "Offer \"kikomo\" next to the right answer and ask the question again in a new sentence.",
+     "help": "Swali huisha kwa kiulizi (?).",
+     "feedback": "Swali huisha kwa kiulizi (?).",
+     "source": "To confirm by a native Kiswahili teacher: a common classroom error, not traced to a study by the author.",
+     "status": "draft"
+    },
+    {
+     "code": "KISW.G7.KUANDI.T8_VIAKIFISHI.KIULIZI_KOMA.M_KS7_KK_KOMA",
+     "skill": "KISW.G7.KUANDI.T8_VIAKIFISHI.KIULIZI_KOMA",
+     "error": "Does not use the comma in a list.",
+     "example": {
+      "question": "Ni sentensi ipi ina koma sahihi?",
+      "wrong_answer": "Nilinunua, mkate maziwa na sukari.",
+      "correct_answer": "Nilinunua mkate, maziwa na sukari."
+     },
+     "cause": "The child mixes up two rules that are taught close together.",
+     "reveals": "Offer \"Nilinunua, mkate maziwa na sukari.\" next to the right answer and ask the question again in a new sentence.",
+     "help": "Koma hutenganisha vitu katika orodha.",
+     "feedback": "Koma hutenganisha vitu katika orodha.",
+     "source": "To confirm by a native Kiswahili teacher: a common classroom error, not traced to a study by the author.",
+     "status": "draft"
+    },
+    {
+     "code": "KISW.G7.KUANDI.T8_VIAKIFISHI.KIULIZI_KOMA.M_KS7_KK_SALAMU",
+     "skill": "KISW.G7.KUANDI.T8_VIAKIFISHI.KIULIZI_KOMA",
+     "error": "Omits the comma after a greeting word.",
+     "example": {
+      "question": "Ni salamu ipi ina koma?",
+      "wrong_answer": "Mpendwa rafiki yangu",
+      "correct_answer": "Mpendwa rafiki yangu,"
+     },
+     "cause": "The child mixes up two rules that are taught close together.",
+     "reveals": "Offer \"Mpendwa rafiki yangu\" next to the right answer and ask the question again in a new sentence.",
+     "help": "Salamu ya barua huishia kwa koma.",
+     "feedback": "Salamu ya barua huishia kwa koma.",
+     "source": "To confirm by a native Kiswahili teacher: a common classroom error, not traced to a study by the author.",
+     "status": "draft"
+    }
+   ],
    "rubric_indicators": [
     "KISW.G7.RUBRIC.3.1",
     "KISW.G7.RUBRIC.3.2",
@@ -2480,8 +3390,88 @@
      "indicator": "KISW.G7.RUBRIC.4.4"
     }
    ],
-   "skills": [],
-   "misconceptions": [],
+   "skills": [
+    {
+     "code": "KISW.G7.SARUFI.T8_NGELI_NA_UPATANISHO_.NGELI_AWA_UI",
+     "name": "Tumia ngeli za A-WA na U-I na upatanisho wa kisarufi",
+     "outcomes": [
+      "KISW.G7.SARUFI.T8_NGELI_NA_UPATANISHO_.a",
+      "KISW.G7.SARUFI.T8_NGELI_NA_UPATANISHO_.b",
+      "KISW.G7.SARUFI.T8_NGELI_NA_UPATANISHO_.c"
+     ],
+     "mastery": "Mtoto hutambua nomino za A-WA (mtu, mtoto, mnyama: wa-) na U-I (mti, mlima: mi-) na hutumia viambishi vya upatanisho (a-/wa-, u-/i-). Evidence rule: at least four of the last five fresh questions right across at least two question forms, and no repeated pick of the same misconception.",
+     "question_forms": [
+      "chagua jibu sahihi",
+      "chagua jibu katika hadithi fupi",
+      "tafuta hatua yenye kosa"
+     ],
+     "thinking": [
+      "recall",
+      "reasoning"
+     ],
+     "horeb_skill_ids": [],
+     "prerequisites": [
+      {
+       "requires": "KISW.G7.SARUFI.T1_AINA_ZA_NOMINO.NOMINO_PEKEE",
+       "kind": "skill",
+       "strength": "essential",
+       "reason": "Proposed: this skill builds on it. To confirm by a native Kiswahili teacher.",
+       "status": "proposed"
+      }
+     ],
+     "status": "proposed"
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "KISW.G7.SARUFI.T8_NGELI_NA_UPATANISHO_.NGELI_AWA_UI.M_KS7_GA_MTI_AWA",
+     "skill": "KISW.G7.SARUFI.T8_NGELI_NA_UPATANISHO_.NGELI_AWA_UI",
+     "error": "Puts mti in A-WA.",
+     "example": {
+      "question": "Mti ni wa ngeli gani?",
+      "wrong_answer": "A-WA",
+      "correct_answer": "U-I"
+     },
+     "cause": "The child mixes up two rules that are taught close together.",
+     "reveals": "Offer \"A-WA\" next to the right answer and ask the question again in a new sentence.",
+     "help": "Mti ni wa ngeli ya U-I; wingi wake ni miti.",
+     "feedback": "Mti ni wa ngeli ya U-I; wingi wake ni miti.",
+     "source": "To confirm by a native Kiswahili teacher: a common classroom error, not traced to a study by the author.",
+     "status": "draft"
+    },
+    {
+     "code": "KISW.G7.SARUFI.T8_NGELI_NA_UPATANISHO_.NGELI_AWA_UI.M_KS7_GA_MTOTO_UI",
+     "skill": "KISW.G7.SARUFI.T8_NGELI_NA_UPATANISHO_.NGELI_AWA_UI",
+     "error": "Puts mtoto in U-I.",
+     "example": {
+      "question": "Mtoto ni wa ngeli gani?",
+      "wrong_answer": "U-I",
+      "correct_answer": "A-WA"
+     },
+     "cause": "The child mixes up two rules that are taught close together.",
+     "reveals": "Offer \"U-I\" next to the right answer and ask the question again in a new sentence.",
+     "help": "Mtoto ni mtu, kwa hiyo ni wa ngeli ya A-WA.",
+     "feedback": "Mtoto ni mtu, kwa hiyo ni wa ngeli ya A-WA.",
+     "source": "To confirm by a native Kiswahili teacher: a common classroom error, not traced to a study by the author.",
+     "status": "draft"
+    },
+    {
+     "code": "KISW.G7.SARUFI.T8_NGELI_NA_UPATANISHO_.NGELI_AWA_UI.M_KS7_GA_UPATANISHO",
+     "skill": "KISW.G7.SARUFI.T8_NGELI_NA_UPATANISHO_.NGELI_AWA_UI",
+     "error": "Uses the wrong agreement prefix.",
+     "example": {
+      "question": "Chagua sentensi sahihi.",
+      "wrong_answer": "Mti unakua na mtoto anakua zinakua",
+      "correct_answer": "Mti unakua na watoto wanakua"
+     },
+     "cause": "The child mixes up two rules that are taught close together.",
+     "reveals": "Offer \"Mti unakua na mtoto anakua zinakua\" next to the right answer and ask the question again in a new sentence.",
+     "help": "A-WA: a-, wa-. U-I: u-, i-.",
+     "feedback": "A-WA: a-, wa-. U-I: u-, i-.",
+     "source": "To confirm by a native Kiswahili teacher: a common classroom error, not traced to a study by the author.",
+     "status": "draft"
+    }
+   ],
    "rubric_indicators": [
     "KISW.G7.RUBRIC.4.1",
     "KISW.G7.RUBRIC.4.2",
@@ -2777,8 +3767,88 @@
      "indicator": "KISW.G7.RUBRIC.4.4"
     }
    ],
-   "skills": [],
-   "misconceptions": [],
+   "skills": [
+    {
+     "code": "KISW.G7.SARUFI.T9_NGELI_NA_UPATANISHO_.NGELI_KIVI_LIYA",
+     "name": "Tumia ngeli za KI-VI na LI-YA na upatanisho wa kisarufi",
+     "outcomes": [
+      "KISW.G7.SARUFI.T9_NGELI_NA_UPATANISHO_.a",
+      "KISW.G7.SARUFI.T9_NGELI_NA_UPATANISHO_.b",
+      "KISW.G7.SARUFI.T9_NGELI_NA_UPATANISHO_.c"
+     ],
+     "mastery": "Mtoto hutambua nomino za KI-VI (kitabu: vi-) na LI-YA (jiwe: ma-) na hutumia viambishi vya upatanisho (ki-/vi-, li-/ya-). Evidence rule: at least four of the last five fresh questions right across at least two question forms, and no repeated pick of the same misconception.",
+     "question_forms": [
+      "chagua jibu sahihi",
+      "chagua jibu katika hadithi fupi",
+      "tafuta hatua yenye kosa"
+     ],
+     "thinking": [
+      "recall",
+      "reasoning"
+     ],
+     "horeb_skill_ids": [],
+     "prerequisites": [
+      {
+       "requires": "KISW.G7.SARUFI.T8_NGELI_NA_UPATANISHO_.NGELI_AWA_UI",
+       "kind": "skill",
+       "strength": "essential",
+       "reason": "Proposed: this skill builds on it. To confirm by a native Kiswahili teacher.",
+       "status": "proposed"
+      }
+     ],
+     "status": "proposed"
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "KISW.G7.SARUFI.T9_NGELI_NA_UPATANISHO_.NGELI_KIVI_LIYA.M_KS7_GK_KITABU",
+     "skill": "KISW.G7.SARUFI.T9_NGELI_NA_UPATANISHO_.NGELI_KIVI_LIYA",
+     "error": "Puts kitabu in LI-YA.",
+     "example": {
+      "question": "Kitabu ni cha ngeli gani?",
+      "wrong_answer": "LI-YA",
+      "correct_answer": "KI-VI"
+     },
+     "cause": "The child mixes up two rules that are taught close together.",
+     "reveals": "Offer \"LI-YA\" next to the right answer and ask the question again in a new sentence.",
+     "help": "Kitabu ni cha ngeli ya KI-VI; wingi wake ni vitabu.",
+     "feedback": "Kitabu ni cha ngeli ya KI-VI; wingi wake ni vitabu.",
+     "source": "To confirm by a native Kiswahili teacher: a common classroom error, not traced to a study by the author.",
+     "status": "draft"
+    },
+    {
+     "code": "KISW.G7.SARUFI.T9_NGELI_NA_UPATANISHO_.NGELI_KIVI_LIYA.M_KS7_GK_JIWE",
+     "skill": "KISW.G7.SARUFI.T9_NGELI_NA_UPATANISHO_.NGELI_KIVI_LIYA",
+     "error": "Puts jiwe in KI-VI.",
+     "example": {
+      "question": "Jiwe ni la ngeli gani?",
+      "wrong_answer": "KI-VI",
+      "correct_answer": "LI-YA"
+     },
+     "cause": "The child mixes up two rules that are taught close together.",
+     "reveals": "Offer \"KI-VI\" next to the right answer and ask the question again in a new sentence.",
+     "help": "Jiwe ni la ngeli ya LI-YA; wingi wake ni mawe.",
+     "feedback": "Jiwe ni la ngeli ya LI-YA; wingi wake ni mawe.",
+     "source": "To confirm by a native Kiswahili teacher: a common classroom error, not traced to a study by the author.",
+     "status": "draft"
+    },
+    {
+     "code": "KISW.G7.SARUFI.T9_NGELI_NA_UPATANISHO_.NGELI_KIVI_LIYA.M_KS7_GK_UPATANISHO",
+     "skill": "KISW.G7.SARUFI.T9_NGELI_NA_UPATANISHO_.NGELI_KIVI_LIYA",
+     "error": "Uses the wrong agreement prefix.",
+     "example": {
+      "question": "Chagua sentensi sahihi.",
+      "wrong_answer": "Kitabu kimeanguka na vitabu limeanguka",
+      "correct_answer": "Kitabu kimeanguka na vitabu vimeanguka"
+     },
+     "cause": "The child mixes up two rules that are taught close together.",
+     "reveals": "Offer \"Kitabu kimeanguka na vitabu limeanguka\" next to the right answer and ask the question again in a new sentence.",
+     "help": "KI-VI: ki-, vi-. LI-YA: li-, ya-.",
+     "feedback": "KI-VI: ki-, vi-. LI-YA: li-, ya-.",
+     "source": "To confirm by a native Kiswahili teacher: a common classroom error, not traced to a study by the author.",
+     "status": "draft"
+    }
+   ],
    "rubric_indicators": [
     "KISW.G7.RUBRIC.4.1",
     "KISW.G7.RUBRIC.4.2",
@@ -3031,8 +4101,87 @@
      "status": "kicd_verified"
     }
    ],
-   "skills": [],
-   "misconceptions": [],
+   "skills": [
+    {
+     "code": "KISW.G7.KUANDI.T10_BARUA_RASMI_YA_KUOMB.BARUA_MSAMAHA",
+     "name": "Tambua muundo wa barua rasmi ya kuomba msamaha",
+     "outcomes": [
+      "KISW.G7.KUANDI.T10_BARUA_RASMI_YA_KUOMB.a",
+      "KISW.G7.KUANDI.T10_BARUA_RASMI_YA_KUOMB.c"
+     ],
+     "mastery": "Mtoto hutambua vipengele vya barua rasmi (anwani mbili, tarehe, salamu rasmi, kichwa, ujumbe, hitimisho) na lugha ya heshima. Evidence rule: at least four of the last five fresh questions right across at least two question forms, and no repeated pick of the same misconception.",
+     "question_forms": [
+      "chagua jibu sahihi",
+      "chagua jibu katika hadithi fupi",
+      "tafuta hatua yenye kosa"
+     ],
+     "thinking": [
+      "recall",
+      "reasoning"
+     ],
+     "horeb_skill_ids": [],
+     "prerequisites": [
+      {
+       "requires": "KISW.G7.KUANDI.T2_BARUA_YA_KIRAFIKI_YA.BARUA_MWALIKO",
+       "kind": "skill",
+       "strength": "essential",
+       "reason": "Proposed: this skill builds on it. To confirm by a native Kiswahili teacher.",
+       "status": "proposed"
+      }
+     ],
+     "status": "proposed"
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "KISW.G7.KUANDI.T10_BARUA_RASMI_YA_KUOMB.BARUA_MSAMAHA.M_KS7_BS_ANWANI",
+     "skill": "KISW.G7.KUANDI.T10_BARUA_RASMI_YA_KUOMB.BARUA_MSAMAHA",
+     "error": "Gives one address in a formal letter.",
+     "example": {
+      "question": "Barua rasmi ina anwani ngapi?",
+      "wrong_answer": "moja",
+      "correct_answer": "mbili: ya mwandishi na ya mwandikiwa"
+     },
+     "cause": "The child mixes up two rules that are taught close together.",
+     "reveals": "Offer \"moja\" next to the right answer and ask the question again in a new sentence.",
+     "help": "Barua rasmi ina anwani mbili.",
+     "feedback": "Barua rasmi ina anwani mbili.",
+     "source": "To confirm by a native Kiswahili teacher: a common classroom error, not traced to a study by the author.",
+     "status": "draft"
+    },
+    {
+     "code": "KISW.G7.KUANDI.T10_BARUA_RASMI_YA_KUOMB.BARUA_MSAMAHA.M_KS7_BS_KICHWA",
+     "skill": "KISW.G7.KUANDI.T10_BARUA_RASMI_YA_KUOMB.BARUA_MSAMAHA",
+     "error": "Leaves out the heading of a formal letter.",
+     "example": {
+      "question": "Barua rasmi huwa na nini kabla ya ujumbe?",
+      "wrong_answer": "hakuna kitu",
+      "correct_answer": "kichwa cha barua"
+     },
+     "cause": "The child mixes up two rules that are taught close together.",
+     "reveals": "Offer \"hakuna kitu\" next to the right answer and ask the question again in a new sentence.",
+     "help": "Barua rasmi ina kichwa cha barua.",
+     "feedback": "Barua rasmi ina kichwa cha barua.",
+     "source": "To confirm by a native Kiswahili teacher: a common classroom error, not traced to a study by the author.",
+     "status": "draft"
+    },
+    {
+     "code": "KISW.G7.KUANDI.T10_BARUA_RASMI_YA_KUOMB.BARUA_MSAMAHA.M_KS7_BS_LUGHA",
+     "skill": "KISW.G7.KUANDI.T10_BARUA_RASMI_YA_KUOMB.BARUA_MSAMAHA",
+     "error": "Uses slang in a formal letter.",
+     "example": {
+      "question": "Lugha ya barua rasmi ni ipi?",
+      "wrong_answer": "ya mtaani",
+      "correct_answer": "ya heshima na sanifu"
+     },
+     "cause": "The child mixes up two rules that are taught close together.",
+     "reveals": "Offer \"ya mtaani\" next to the right answer and ask the question again in a new sentence.",
+     "help": "Barua rasmi hutumia lugha ya heshima na sanifu.",
+     "feedback": "Barua rasmi hutumia lugha ya heshima na sanifu.",
+     "source": "To confirm by a native Kiswahili teacher: a common classroom error, not traced to a study by the author.",
+     "status": "draft"
+    }
+   ],
    "rubric_indicators": [
     "KISW.G7.RUBRIC.3.1",
     "KISW.G7.RUBRIC.3.2",
@@ -3106,8 +4255,88 @@
      "indicator": "KISW.G7.RUBRIC.4.4"
     }
    ],
-   "skills": [],
-   "misconceptions": [],
+   "skills": [
+    {
+     "code": "KISW.G7.SARUFI.T10_VINYUME.VINYUME",
+     "name": "Eleza na tumia vinyume vya nomino na vivumishi",
+     "outcomes": [
+      "KISW.G7.SARUFI.T10_VINYUME.a",
+      "KISW.G7.SARUFI.T10_VINYUME.b",
+      "KISW.G7.SARUFI.T10_VINYUME.c"
+     ],
+     "mastery": "Mtoto hueleza kinyume cha neno (neno lenye maana kinyume) na hutambua vinyume vya nomino na vivumishi. Evidence rule: at least four of the last five fresh questions right across at least two question forms, and no repeated pick of the same misconception.",
+     "question_forms": [
+      "chagua jibu sahihi",
+      "chagua jibu katika hadithi fupi",
+      "tafuta hatua yenye kosa"
+     ],
+     "thinking": [
+      "recall",
+      "reasoning"
+     ],
+     "horeb_skill_ids": [],
+     "prerequisites": [
+      {
+       "requires": "KISW.G7.SARUFI.T1_AINA_ZA_NOMINO.NOMINO_PEKEE",
+       "kind": "skill",
+       "strength": "essential",
+       "reason": "Proposed: this skill builds on it. To confirm by a native Kiswahili teacher.",
+       "status": "proposed"
+      }
+     ],
+     "status": "proposed"
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "KISW.G7.SARUFI.T10_VINYUME.VINYUME.M_KS7_VN_MAANA",
+     "skill": "KISW.G7.SARUFI.T10_VINYUME.VINYUME",
+     "error": "Thinks an antonym is a synonym.",
+     "example": {
+      "question": "Kinyume cha neno ni nini?",
+      "wrong_answer": "Neno lenye maana sawa",
+      "correct_answer": "Neno lenye maana kinyume"
+     },
+     "cause": "The child mixes up two rules that are taught close together.",
+     "reveals": "Offer \"Neno lenye maana sawa\" next to the right answer and ask the question again in a new sentence.",
+     "help": "Kinyume cha neno ni neno lenye maana kinyume, kama kubwa na dogo.",
+     "feedback": "Kinyume cha neno ni neno lenye maana kinyume, kama kubwa na dogo.",
+     "source": "To confirm by a native Kiswahili teacher: a common classroom error, not traced to a study by the author.",
+     "status": "draft"
+    },
+    {
+     "code": "KISW.G7.SARUFI.T10_VINYUME.VINYUME.M_KS7_VN_KIVUMISHI",
+     "skill": "KISW.G7.SARUFI.T10_VINYUME.VINYUME",
+     "error": "Gives the wrong antonym of an adjective.",
+     "example": {
+      "question": "Kinyume cha mrefu ni kipi?",
+      "wrong_answer": "mnene",
+      "correct_answer": "mfupi"
+     },
+     "cause": "The child mixes up two rules that are taught close together.",
+     "reveals": "Offer \"mnene\" next to the right answer and ask the question again in a new sentence.",
+     "help": "Kinyume cha mrefu ni mfupi.",
+     "feedback": "Kinyume cha mrefu ni mfupi.",
+     "source": "To confirm by a native Kiswahili teacher: a common classroom error, not traced to a study by the author.",
+     "status": "draft"
+    },
+    {
+     "code": "KISW.G7.SARUFI.T10_VINYUME.VINYUME.M_KS7_VN_NOMINO",
+     "skill": "KISW.G7.SARUFI.T10_VINYUME.VINYUME",
+     "error": "Gives the wrong antonym of a noun.",
+     "example": {
+      "question": "Kinyume cha mchana ni kipi?",
+      "wrong_answer": "asubuhi",
+      "correct_answer": "usiku"
+     },
+     "cause": "The child mixes up two rules that are taught close together.",
+     "reveals": "Offer \"asubuhi\" next to the right answer and ask the question again in a new sentence.",
+     "help": "Kinyume cha mchana ni usiku.",
+     "feedback": "Kinyume cha mchana ni usiku.",
+     "source": "To confirm by a native Kiswahili teacher: a common classroom error, not traced to a study by the author.",
+     "status": "draft"
+    }
+   ],
    "rubric_indicators": [
     "KISW.G7.RUBRIC.4.1",
     "KISW.G7.RUBRIC.4.2",
@@ -3416,8 +4645,87 @@
      "indicator": "KISW.G7.RUBRIC.4.5"
     }
    ],
-   "skills": [],
-   "misconceptions": [],
+   "skills": [
+    {
+     "code": "KISW.G7.SARUFI.T11_MNYAMBULIKO_WA_VITEN.KAULI",
+     "name": "Tambua kauli za kutenda, kutendea na kutendwa",
+     "outcomes": [
+      "KISW.G7.SARUFI.T11_MNYAMBULIKO_WA_VITEN.a",
+      "KISW.G7.SARUFI.T11_MNYAMBULIKO_WA_VITEN.b"
+     ],
+     "mastery": "Mtoto hutambua kutenda (pika), kutendea (pikia) na kutendwa (pikwa) na hutumia kitenzi katika kauli inayofaa. Evidence rule: at least four of the last five fresh questions right across at least two question forms, and no repeated pick of the same misconception.",
+     "question_forms": [
+      "chagua jibu sahihi",
+      "chagua jibu katika hadithi fupi",
+      "tafuta hatua yenye kosa"
+     ],
+     "thinking": [
+      "recall",
+      "reasoning"
+     ],
+     "horeb_skill_ids": [],
+     "prerequisites": [
+      {
+       "requires": "KISW.G7.SARUFI.T4_NYAKATI_NA_HALI.NYAKATI_MSINGI",
+       "kind": "skill",
+       "strength": "essential",
+       "reason": "Proposed: this skill builds on it. To confirm by a native Kiswahili teacher.",
+       "status": "proposed"
+      }
+     ],
+     "status": "proposed"
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "KISW.G7.SARUFI.T11_MNYAMBULIKO_WA_VITEN.KAULI.M_KS7_KA_KUTENDEA",
+     "skill": "KISW.G7.SARUFI.T11_MNYAMBULIKO_WA_VITEN.KAULI",
+     "error": "Confuses kutendea with kutendwa.",
+     "example": {
+      "question": "Ni kitenzi kipi katika kauli ya kutendea?",
+      "wrong_answer": "pikwa",
+      "correct_answer": "pikia"
+     },
+     "cause": "The child mixes up two rules that are taught close together.",
+     "reveals": "Offer \"pikwa\" next to the right answer and ask the question again in a new sentence.",
+     "help": "Kutendea huonyesha kwa ajili ya nani, kama pikia.",
+     "feedback": "Kutendea huonyesha kwa ajili ya nani, kama pikia.",
+     "source": "To confirm by a native Kiswahili teacher: a common classroom error, not traced to a study by the author.",
+     "status": "draft"
+    },
+    {
+     "code": "KISW.G7.SARUFI.T11_MNYAMBULIKO_WA_VITEN.KAULI.M_KS7_KA_KUTENDWA",
+     "skill": "KISW.G7.SARUFI.T11_MNYAMBULIKO_WA_VITEN.KAULI",
+     "error": "Does not know the passive.",
+     "example": {
+      "question": "Ni kitenzi kipi katika kauli ya kutendwa?",
+      "wrong_answer": "pikia",
+      "correct_answer": "pikwa"
+     },
+     "cause": "The child mixes up two rules that are taught close together.",
+     "reveals": "Offer \"pikia\" next to the right answer and ask the question again in a new sentence.",
+     "help": "Kutendwa huonyesha anayepokea tendo, kama pikwa.",
+     "feedback": "Kutendwa huonyesha anayepokea tendo, kama pikwa.",
+     "source": "To confirm by a native Kiswahili teacher: a common classroom error, not traced to a study by the author.",
+     "status": "draft"
+    },
+    {
+     "code": "KISW.G7.SARUFI.T11_MNYAMBULIKO_WA_VITEN.KAULI.M_KS7_KA_KUTENDA",
+     "skill": "KISW.G7.SARUFI.T11_MNYAMBULIKO_WA_VITEN.KAULI",
+     "error": "Calls the base form a different voice.",
+     "example": {
+      "question": "Ni kitenzi kipi katika kauli ya kutenda?",
+      "wrong_answer": "pikwa",
+      "correct_answer": "pika"
+     },
+     "cause": "The child mixes up two rules that are taught close together.",
+     "reveals": "Offer \"pikwa\" next to the right answer and ask the question again in a new sentence.",
+     "help": "Kutenda ni umbo la kawaida, kama pika.",
+     "feedback": "Kutenda ni umbo la kawaida, kama pika.",
+     "source": "To confirm by a native Kiswahili teacher: a common classroom error, not traced to a study by the author.",
+     "status": "draft"
+    }
+   ],
    "rubric_indicators": [
     "KISW.G7.RUBRIC.4.1",
     "KISW.G7.RUBRIC.4.2",
@@ -3722,8 +5030,88 @@
      "indicator": "KISW.G7.RUBRIC.4.6"
     }
    ],
-   "skills": [],
-   "misconceptions": [],
+   "skills": [
+    {
+     "code": "KISW.G7.SARUFI.T12_AINA_ZA_SENTENSI.SENTENSI",
+     "name": "Tofautisha sentensi sahili na ambatano",
+     "outcomes": [
+      "KISW.G7.SARUFI.T12_AINA_ZA_SENTENSI.a",
+      "KISW.G7.SARUFI.T12_AINA_ZA_SENTENSI.b",
+      "KISW.G7.SARUFI.T12_AINA_ZA_SENTENSI.c"
+     ],
+     "mastery": "Mtoto hutambua sentensi sahili (wazo moja) na ambatano (mawazo mawili au zaidi yaliyounganishwa kwa kiunganishi). Evidence rule: at least four of the last five fresh questions right across at least two question forms, and no repeated pick of the same misconception.",
+     "question_forms": [
+      "chagua jibu sahihi",
+      "chagua jibu katika hadithi fupi",
+      "tafuta hatua yenye kosa"
+     ],
+     "thinking": [
+      "recall",
+      "reasoning"
+     ],
+     "horeb_skill_ids": [],
+     "prerequisites": [
+      {
+       "requires": "KISW.G7.SARUFI.T6_VITENZI.VITENZI_VIKUU",
+       "kind": "skill",
+       "strength": "essential",
+       "reason": "Proposed: this skill builds on it. To confirm by a native Kiswahili teacher.",
+       "status": "proposed"
+      }
+     ],
+     "status": "proposed"
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "KISW.G7.SARUFI.T12_AINA_ZA_SENTENSI.SENTENSI.M_KS7_ST_AMBATANO_MOJA",
+     "skill": "KISW.G7.SARUFI.T12_AINA_ZA_SENTENSI.SENTENSI",
+     "error": "Thinks a compound sentence has one idea.",
+     "example": {
+      "question": "Sentensi ambatano ina nini?",
+      "wrong_answer": "Wazo moja tu",
+      "correct_answer": "Mawazo mawili au zaidi yaliyounganishwa"
+     },
+     "cause": "The child mixes up two rules that are taught close together.",
+     "reveals": "Offer \"Wazo moja tu\" next to the right answer and ask the question again in a new sentence.",
+     "help": "Sentensi ambatano huunganisha mawazo mawili au zaidi.",
+     "feedback": "Sentensi ambatano huunganisha mawazo mawili au zaidi.",
+     "source": "To confirm by a native Kiswahili teacher: a common classroom error, not traced to a study by the author.",
+     "status": "draft"
+    },
+    {
+     "code": "KISW.G7.SARUFI.T12_AINA_ZA_SENTENSI.SENTENSI.M_KS7_ST_KIUNGANISHI",
+     "skill": "KISW.G7.SARUFI.T12_AINA_ZA_SENTENSI.SENTENSI",
+     "error": "Does not see the conjunction.",
+     "example": {
+      "question": "Ni sentensi ipi ni ambatano?",
+      "wrong_answer": "Mama anapika.",
+      "correct_answer": "Mama anapika na baba analima."
+     },
+     "cause": "The child mixes up two rules that are taught close together.",
+     "reveals": "Offer \"Mama anapika.\" next to the right answer and ask the question again in a new sentence.",
+     "help": "Kiunganishi na huunganisha mawazo mawili.",
+     "feedback": "Kiunganishi na huunganisha mawazo mawili.",
+     "source": "To confirm by a native Kiswahili teacher: a common classroom error, not traced to a study by the author.",
+     "status": "draft"
+    },
+    {
+     "code": "KISW.G7.SARUFI.T12_AINA_ZA_SENTENSI.SENTENSI.M_KS7_ST_SAHILI_NYINGI",
+     "skill": "KISW.G7.SARUFI.T12_AINA_ZA_SENTENSI.SENTENSI",
+     "error": "Calls a long simple sentence compound.",
+     "example": {
+      "question": "Ni sentensi ipi ni sahili?",
+      "wrong_answer": "Alikuja lakini aliondoka.",
+      "correct_answer": "Mtoto mwerevu anasoma kitabu kikubwa."
+     },
+     "cause": "The child mixes up two rules that are taught close together.",
+     "reveals": "Offer \"Alikuja lakini aliondoka.\" next to the right answer and ask the question again in a new sentence.",
+     "help": "Sentensi sahili ina wazo moja, hata ikiwa ndefu.",
+     "feedback": "Sentensi sahili ina wazo moja, hata ikiwa ndefu.",
+     "source": "To confirm by a native Kiswahili teacher: a common classroom error, not traced to a study by the author.",
+     "status": "draft"
+    }
+   ],
    "rubric_indicators": [
     "KISW.G7.RUBRIC.4.1",
     "KISW.G7.RUBRIC.4.2",
@@ -4021,8 +5409,87 @@
      "indicator": "KISW.G7.RUBRIC.4.7"
     }
    ],
-   "skills": [],
-   "misconceptions": [],
+   "skills": [
+    {
+     "code": "KISW.G7.SARUFI.T13_UKANUSHAJI_KWA_KUZIN.UKANUSHAJI",
+     "name": "Kanusha sentensi katika nyakati tatu",
+     "outcomes": [
+      "KISW.G7.SARUFI.T13_UKANUSHAJI_KWA_KUZIN.c",
+      "KISW.G7.SARUFI.T13_UKANUSHAJI_KWA_KUZIN.d"
+     ],
+     "mastery": "Mtoto hukanusha sentensi katika wakati uliopo (hasomi), uliopita (hakusoma) na ujao (hatasoma). Evidence rule: at least four of the last five fresh questions right across at least two question forms, and no repeated pick of the same misconception.",
+     "question_forms": [
+      "chagua jibu sahihi",
+      "chagua jibu katika hadithi fupi",
+      "tafuta hatua yenye kosa"
+     ],
+     "thinking": [
+      "recall",
+      "reasoning"
+     ],
+     "horeb_skill_ids": [],
+     "prerequisites": [
+      {
+       "requires": "KISW.G7.SARUFI.T4_NYAKATI_NA_HALI.NYAKATI_MSINGI",
+       "kind": "skill",
+       "strength": "essential",
+       "reason": "Proposed: this skill builds on it. To confirm by a native Kiswahili teacher.",
+       "status": "proposed"
+      }
+     ],
+     "status": "proposed"
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "KISW.G7.SARUFI.T13_UKANUSHAJI_KWA_KUZIN.UKANUSHAJI.M_KS7_UK_ULIOPO",
+     "skill": "KISW.G7.SARUFI.T13_UKANUSHAJI_KWA_KUZIN.UKANUSHAJI",
+     "error": "Negates the present with ha-ku-.",
+     "example": {
+      "question": "Kanusha: Anasoma.",
+      "wrong_answer": "Hakusoma",
+      "correct_answer": "Hasomi"
+     },
+     "cause": "The child mixes up two rules that are taught close together.",
+     "reveals": "Offer \"Hakusoma\" next to the right answer and ask the question again in a new sentence.",
+     "help": "Ukanushaji wa uliopo ni hasomi.",
+     "feedback": "Ukanushaji wa uliopo ni hasomi.",
+     "source": "To confirm by a native Kiswahili teacher: a common classroom error, not traced to a study by the author.",
+     "status": "draft"
+    },
+    {
+     "code": "KISW.G7.SARUFI.T13_UKANUSHAJI_KWA_KUZIN.UKANUSHAJI.M_KS7_UK_ULIOPITA",
+     "skill": "KISW.G7.SARUFI.T13_UKANUSHAJI_KWA_KUZIN.UKANUSHAJI",
+     "error": "Negates the past without -ku-.",
+     "example": {
+      "question": "Kanusha: Alisoma.",
+      "wrong_answer": "Hasomi",
+      "correct_answer": "Hakusoma"
+     },
+     "cause": "The child mixes up two rules that are taught close together.",
+     "reveals": "Offer \"Hasomi\" next to the right answer and ask the question again in a new sentence.",
+     "help": "Ukanushaji wa uliopita ni hakusoma.",
+     "feedback": "Ukanushaji wa uliopita ni hakusoma.",
+     "source": "To confirm by a native Kiswahili teacher: a common classroom error, not traced to a study by the author.",
+     "status": "draft"
+    },
+    {
+     "code": "KISW.G7.SARUFI.T13_UKANUSHAJI_KWA_KUZIN.UKANUSHAJI.M_KS7_UK_UJAO",
+     "skill": "KISW.G7.SARUFI.T13_UKANUSHAJI_KWA_KUZIN.UKANUSHAJI",
+     "error": "Negates the future wrongly.",
+     "example": {
+      "question": "Kanusha: Atasoma.",
+      "wrong_answer": "Hakusoma",
+      "correct_answer": "Hatasoma"
+     },
+     "cause": "The child mixes up two rules that are taught close together.",
+     "reveals": "Offer \"Hakusoma\" next to the right answer and ask the question again in a new sentence.",
+     "help": "Ukanushaji wa ujao ni hatasoma.",
+     "feedback": "Ukanushaji wa ujao ni hatasoma.",
+     "source": "To confirm by a native Kiswahili teacher: a common classroom error, not traced to a study by the author.",
+     "status": "draft"
+    }
+   ],
    "rubric_indicators": [
     "KISW.G7.RUBRIC.4.1",
     "KISW.G7.RUBRIC.4.2",
@@ -4329,8 +5796,88 @@
      "indicator": "KISW.G7.RUBRIC.4.8"
     }
    ],
-   "skills": [],
-   "misconceptions": [],
+   "skills": [
+    {
+     "code": "KISW.G7.SARUFI.T14_UKUBWA_WA_NOMINO.UKUBWA",
+     "name": "Tambua nomino katika hali ya ukubwa",
+     "outcomes": [
+      "KISW.G7.SARUFI.T14_UKUBWA_WA_NOMINO.a",
+      "KISW.G7.SARUFI.T14_UKUBWA_WA_NOMINO.b",
+      "KISW.G7.SARUFI.T14_UKUBWA_WA_NOMINO.c"
+     ],
+     "mastery": "Mtoto hutambua hali ya ukubwa (jibwa, jitu, jumba), viambishi vya ji- na ma- vya ukubwa, na hutumia nomino ipasavyo. Evidence rule: at least four of the last five fresh questions right across at least two question forms, and no repeated pick of the same misconception.",
+     "question_forms": [
+      "chagua jibu sahihi",
+      "chagua jibu katika hadithi fupi",
+      "tafuta hatua yenye kosa"
+     ],
+     "thinking": [
+      "recall",
+      "reasoning"
+     ],
+     "horeb_skill_ids": [],
+     "prerequisites": [
+      {
+       "requires": "KISW.G7.SARUFI.T1_AINA_ZA_NOMINO.NOMINO_PEKEE",
+       "kind": "skill",
+       "strength": "essential",
+       "reason": "Proposed: this skill builds on it. To confirm by a native Kiswahili teacher.",
+       "status": "proposed"
+      }
+     ],
+     "status": "proposed"
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "KISW.G7.SARUFI.T14_UKUBWA_WA_NOMINO.UKUBWA.M_KS7_UB_UDOGO",
+     "skill": "KISW.G7.SARUFI.T14_UKUBWA_WA_NOMINO.UKUBWA",
+     "error": "Mixes augmentative and diminutive.",
+     "example": {
+      "question": "Jibwa ni nini?",
+      "wrong_answer": "mbwa mdogo",
+      "correct_answer": "mbwa mkubwa"
+     },
+     "cause": "The child mixes up two rules that are taught close together.",
+     "reveals": "Offer \"mbwa mdogo\" next to the right answer and ask the question again in a new sentence.",
+     "help": "Jibwa ni mbwa mkubwa: hali ya ukubwa.",
+     "feedback": "Jibwa ni mbwa mkubwa: hali ya ukubwa.",
+     "source": "To confirm by a native Kiswahili teacher: a common classroom error, not traced to a study by the author.",
+     "status": "draft"
+    },
+    {
+     "code": "KISW.G7.SARUFI.T14_UKUBWA_WA_NOMINO.UKUBWA.M_KS7_UB_KIAMBISHI",
+     "skill": "KISW.G7.SARUFI.T14_UKUBWA_WA_NOMINO.UKUBWA",
+     "error": "Does not know the ji- prefix.",
+     "example": {
+      "question": "Ni kiambishi kipi cha ukubwa?",
+      "wrong_answer": "ki-",
+      "correct_answer": "ji-"
+     },
+     "cause": "The child mixes up two rules that are taught close together.",
+     "reveals": "Offer \"ki-\" next to the right answer and ask the question again in a new sentence.",
+     "help": "Kiambishi cha ukubwa ni ji-, kama jitu.",
+     "feedback": "Kiambishi cha ukubwa ni ji-, kama jitu.",
+     "source": "To confirm by a native Kiswahili teacher: a common classroom error, not traced to a study by the author.",
+     "status": "draft"
+    },
+    {
+     "code": "KISW.G7.SARUFI.T14_UKUBWA_WA_NOMINO.UKUBWA.M_KS7_UB_JUMBA",
+     "skill": "KISW.G7.SARUFI.T14_UKUBWA_WA_NOMINO.UKUBWA",
+     "error": "Does not know jumba.",
+     "example": {
+      "question": "Jumba ni nini?",
+      "wrong_answer": "nyumba ndogo",
+      "correct_answer": "nyumba kubwa"
+     },
+     "cause": "The child mixes up two rules that are taught close together.",
+     "reveals": "Offer \"nyumba ndogo\" next to the right answer and ask the question again in a new sentence.",
+     "help": "Jumba ni nyumba kubwa.",
+     "feedback": "Jumba ni nyumba kubwa.",
+     "source": "To confirm by a native Kiswahili teacher: a common classroom error, not traced to a study by the author.",
+     "status": "draft"
+    }
+   ],
    "rubric_indicators": [
     "KISW.G7.RUBRIC.4.1",
     "KISW.G7.RUBRIC.4.2",
@@ -4636,8 +6183,88 @@
      "indicator": "KISW.G7.RUBRIC.4.9"
     }
    ],
-   "skills": [],
-   "misconceptions": [],
+   "skills": [
+    {
+     "code": "KISW.G7.SARUFI.T15_USEMI_HALISI_NA_USEM.USEMI",
+     "name": "Badilisha usemi halisi kuwa usemi wa taarifa",
+     "outcomes": [
+      "KISW.G7.SARUFI.T15_USEMI_HALISI_NA_USEM.a",
+      "KISW.G7.SARUFI.T15_USEMI_HALISI_NA_USEM.b",
+      "KISW.G7.SARUFI.T15_USEMI_HALISI_NA_USEM.c"
+     ],
+     "mastery": "Mtoto hutambua usemi halisi (maneno ya msemaji kwa alama za usemi) na wa taarifa, na hubadilisha mtu na wakati ipasavyo. Evidence rule: at least four of the last five fresh questions right across at least two question forms, and no repeated pick of the same misconception.",
+     "question_forms": [
+      "chagua jibu sahihi",
+      "chagua jibu katika hadithi fupi",
+      "tafuta hatua yenye kosa"
+     ],
+     "thinking": [
+      "recall",
+      "reasoning"
+     ],
+     "horeb_skill_ids": [],
+     "prerequisites": [
+      {
+       "requires": "KISW.G7.SARUFI.T4_NYAKATI_NA_HALI.NYAKATI_MSINGI",
+       "kind": "skill",
+       "strength": "essential",
+       "reason": "Proposed: this skill builds on it. To confirm by a native Kiswahili teacher.",
+       "status": "proposed"
+      }
+     ],
+     "status": "proposed"
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "KISW.G7.SARUFI.T15_USEMI_HALISI_NA_USEM.USEMI.M_KS7_US_MTU",
+     "skill": "KISW.G7.SARUFI.T15_USEMI_HALISI_NA_USEM.USEMI",
+     "error": "Keeps \"mimi\" in reported speech.",
+     "example": {
+      "question": "Badilisha: Juma alisema, \"Mimi nitaenda.\" (usemi wa taarifa)",
+      "wrong_answer": "Juma alisema kwamba mimi nitaenda.",
+      "correct_answer": "Juma alisema kwamba atakwenda."
+     },
+     "cause": "The child mixes up two rules that are taught close together.",
+     "reveals": "Offer \"Juma alisema kwamba mimi nitaenda.\" next to the right answer and ask the question again in a new sentence.",
+     "help": "Katika usemi wa taarifa mtu hubadilika: mimi huwa yeye.",
+     "feedback": "Katika usemi wa taarifa mtu hubadilika: mimi huwa yeye.",
+     "source": "To confirm by a native Kiswahili teacher: a common classroom error, not traced to a study by the author.",
+     "status": "draft"
+    },
+    {
+     "code": "KISW.G7.SARUFI.T15_USEMI_HALISI_NA_USEM.USEMI.M_KS7_US_ALAMA",
+     "skill": "KISW.G7.SARUFI.T15_USEMI_HALISI_NA_USEM.USEMI",
+     "error": "Keeps quotation marks in reported speech.",
+     "example": {
+      "question": "Ni usemi upi ni wa taarifa?",
+      "wrong_answer": "Juma alisema, \"Nitakuja.\"",
+      "correct_answer": "Juma alisema kwamba atakuja."
+     },
+     "cause": "The child mixes up two rules that are taught close together.",
+     "reveals": "Offer \"Juma alisema, \"Nitakuja.\"\" next to the right answer and ask the question again in a new sentence.",
+     "help": "Usemi wa taarifa hauna alama za usemi.",
+     "feedback": "Usemi wa taarifa hauna alama za usemi.",
+     "source": "To confirm by a native Kiswahili teacher: a common classroom error, not traced to a study by the author.",
+     "status": "draft"
+    },
+    {
+     "code": "KISW.G7.SARUFI.T15_USEMI_HALISI_NA_USEM.USEMI.M_KS7_US_WAKATI",
+     "skill": "KISW.G7.SARUFI.T15_USEMI_HALISI_NA_USEM.USEMI",
+     "error": "Does not change the tense.",
+     "example": {
+      "question": "Usemi halisi una nini?",
+      "wrong_answer": "Maneno ya msemaji bila alama",
+      "correct_answer": "Maneno kamili ya msemaji katika alama za usemi"
+     },
+     "cause": "The child mixes up two rules that are taught close together.",
+     "reveals": "Offer \"Maneno ya msemaji bila alama\" next to the right answer and ask the question again in a new sentence.",
+     "help": "Usemi halisi ni maneno kamili ya msemaji katika alama za usemi.",
+     "feedback": "Usemi halisi ni maneno kamili ya msemaji katika alama za usemi.",
+     "source": "To confirm by a native Kiswahili teacher: a common classroom error, not traced to a study by the author.",
+     "status": "draft"
+    }
+   ],
    "rubric_indicators": [
     "KISW.G7.RUBRIC.4.1",
     "KISW.G7.RUBRIC.4.2",

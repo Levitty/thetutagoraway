@@ -1,0 +1,430 @@
+{
+ "outcomes": {
+  "KISW.G7.KUSIKI.T1_KUSIKILIZA_NA_KUJIBU.a": "kutambua vipengele vya kuzingatia katika usikilizaji wa mazungumzo",
+  "KISW.G7.KUSIKI.T1_KUSIKILIZA_NA_KUJIBU.b": "kutambua vipengele vya kuzingatia katika kujibu mazungumzo",
+  "KISW.G7.KUSIKI.T1_KUSIKILIZA_NA_KUJIBU.c": "kutumia vipengele vifaavyo katika kusikiliza na kujibu mazungumzo",
+  "KISW.G7.KUSIKI.T1_KUSIKILIZA_NA_KUJIBU.d": "kuchangamkia kushiriki mazungumzo katika miktadha mbalimbali",
+  "KISW.G7.KUSOMA.T1_KUSOMA_KWA_UFAHAMU.a": "kudondoa habari mahususi katika kifungu cha simulizi",
+  "KISW.G7.KUSOMA.T1_KUSOMA_KWA_UFAHAMU.b": "kupanga matukio yanavyofuatana katika kifungu cha simulizi",
+  "KISW.G7.KUSOMA.T1_KUSOMA_KWA_UFAHAMU.c": "kufanya utabiri na ufasiri kutokana na kifungu cha simulizi",
+  "KISW.G7.KUSOMA.T1_KUSOMA_KWA_UFAHAMU.d": "kueleza msamiati katika kifungu cha simulizi",
+  "KISW.G7.KUSOMA.T1_KUSOMA_KWA_UFAHAMU.e": "kuchangamkia kusoma vifungu vya simulizi ili kukuza uelewa wa habari",
+  "KISW.G7.KUANDI.T1_VIAKIFISHI.a": "kutambua herufi kubwa na kikomo katika matini",
+  "KISW.G7.KUANDI.T1_VIAKIFISHI.b": "kueleza matumizi ya herufi kubwa na kikomo katika matini",
+  "KISW.G7.KUANDI.T1_VIAKIFISHI.c": "kutumia herufi kubwa na kikomo ipasavyo katika matini",
+  "KISW.G7.KUANDI.T1_VIAKIFISHI.d": "kuonea fahari matumizi ya herufi kubwa na kikomo katika matini ili kufanikisha mawasiliano",
+  "KISW.G7.SARUFI.T1_AINA_ZA_NOMINO.a": "kutambua nomino za pekee na za kawaida katika matini",
+  "KISW.G7.SARUFI.T1_AINA_ZA_NOMINO.b": "kutambua aina za nomino za pekee katika matini",
+  "KISW.G7.SARUFI.T1_AINA_ZA_NOMINO.c": "kutumia nomino za pekee na za kawaida ipasavyo katika matini",
+  "KISW.G7.SARUFI.T1_AINA_ZA_NOMINO.d": "kuchangamkia matumizi ya nomino za pekee na za kawaida katika matini ili kufanikisha mawasiliano",
+  "KISW.G7.KUSIKI.T2_KUSIKILIZA_KWA_KINA.a": "kutambua sauti /dh/ na /th/ katika silabi na maneno",
+  "KISW.G7.KUSIKI.T2_KUSIKILIZA_KWA_KINA.b": "kutamka sauti /dh/ na /th/ ipasavyo katika silabi na maneno",
+  "KISW.G7.KUSIKI.T2_KUSIKILIZA_KWA_KINA.c": "kutumia maneno yenye sauti /dh/ na /th/ katika sentensi ili kuyatofautisha kimaana",
+  "KISW.G7.KUSIKI.T2_KUSIKILIZA_KWA_KINA.d": "kuonea fahari matamshi bora ya sauti /dh/ na /th/ katika mazungumzo",
+  "KISW.G7.KUSOMA.T2_KUSOMA_KWA_MAPANA.a": "kueleza ujumbe wa matini aliyosoma",
+  "KISW.G7.KUSOMA.T2_KUSOMA_KWA_MAPANA.b": "kutambua msamiati uliotumiwa katika matini ya kujichagulia",
+  "KISW.G7.KUSOMA.T2_KUSOMA_KWA_MAPANA.c": "kutumia ipasavyo msamiati uliotumiwa katika matini aliyosoma",
+  "KISW.G7.KUSOMA.T2_KUSOMA_KWA_MAPANA.d": "kujenga mazoea ya kusoma matini za miktadha mbalimbali ili kupanua mawanda ya fikra",
+  "KISW.G7.KUANDI.T2_BARUA_YA_KIRAFIKI_YA.a": "kueleza umuhimu wa barua ya kirafiki ya kutoa mwaliko",
+  "KISW.G7.KUANDI.T2_BARUA_YA_KIRAFIKI_YA.b": "kutambua ujumbe katika barua ya kirafiki ya kutoa mwaliko",
+  "KISW.G7.KUANDI.T2_BARUA_YA_KIRAFIKI_YA.c": "kutambua vipengele vya kimuundo vya barua ya kirafiki ya kutoa mwaliko",
+  "KISW.G7.KUANDI.T2_BARUA_YA_KIRAFIKI_YA.d": "kuandika barua ya kirafiki ya kutoa mwaliko kwa kuzingatia ujumbe, lugha na muundo ufaao",
+  "KISW.G7.KUANDI.T2_BARUA_YA_KIRAFIKI_YA.e": "kufurahia uandishi wa barua ya kirafiki ya kutoa mwaliko ili kufanikisha mawasiliano",
+  "KISW.G7.SARUFI.T2_AINA_ZA_NOMINO.a": "kutambua nomino za makundi na za dhahania katika matini",
+  "KISW.G7.SARUFI.T2_AINA_ZA_NOMINO.b": "kutumia nomino za makundi na za dhahania ifaavyo katika matini",
+  "KISW.G7.SARUFI.T2_AINA_ZA_NOMINO.c": "kuchangamkia kutumia nomino za makundi na za dhahania katika mawasiliano",
+  "KISW.G7.KUSIKI.T3_TANZU_ZA_FASIHI.a": "kueleza maana ya fasihi ili kuipambanua",
+  "KISW.G7.KUSIKI.T3_TANZU_ZA_FASIHI.b": "kujadili sifa za tanzu za fasihi",
+  "KISW.G7.KUSIKI.T3_TANZU_ZA_FASIHI.c": "kutambua aina za tungo za fasihi simulizi na fasihi andishi katika matini",
+  "KISW.G7.KUSIKI.T3_TANZU_ZA_FASIHI.d": "kuwasilisha utungo wa fasihi anaoujua",
+  "KISW.G7.KUSIKI.T3_TANZU_ZA_FASIHI.e": "kufurahia kushiriki katika uwasilishaji wa fasihi simulizi na fasihi andishi ili kujenga ufasaha wa lugha na fasihi",
+  "KISW.G7.KUSOMA.T3_KUSOMA_KWA_KINA.a": "kueleza maana ya novela ili kuipambanua",
+  "KISW.G7.KUSOMA.T3_KUSOMA_KWA_KINA.b": "kujadili sifa za novela kama utanzu wa fasihi andishi",
+  "KISW.G7.KUSOMA.T3_KUSOMA_KWA_KINA.c": "kuchangamkia usomaji wa novela ili kukuza stadi ya kusoma",
+  "KISW.G7.KUANDI.T3_INSHA_ZA_KUBUNI.a": "kuteua mada na ujumbe wa kuandikia insha ya kubuni",
+  "KISW.G7.KUANDI.T3_INSHA_ZA_KUBUNI.b": "kujadili vidokezo kulingana na mada ya kuandikia insha ya kubuni",
+  "KISW.G7.KUANDI.T3_INSHA_ZA_KUBUNI.c": "kuandika vidokezo vyenye ujumbe unaolingana na mada ya insha ya kubuni",
+  "KISW.G7.KUANDI.T3_INSHA_ZA_KUBUNI.d": "kuandika insha ya kubuni inayozingatia vidokezo vilivyoandaliwa",
+  "KISW.G7.KUANDI.T3_INSHA_ZA_KUBUNI.e": "kufurahia kuandaa vidokezo vyenye ujumbe unaolingana na mada ya insha",
+  "KISW.G7.SARUFI.T3_AINA_ZA_NOMINO.a": "kutambua nomino za wingi na za vitenzi-jina katika matini",
+  "KISW.G7.SARUFI.T3_AINA_ZA_NOMINO.b": "kutumia nomino za wingi na za vitenzi-jina ipasavyo katika matini",
+  "KISW.G7.SARUFI.T3_AINA_ZA_NOMINO.c": "kufurahia matumizi ya nomino za wingi na za vitenzi-jina katika mawasiliano",
+  "KISW.G7.KUSIKI.T4_NYIMBO.a": "kueleza maana ya nyimbo za watoto na bembelezi",
+  "KISW.G7.KUSIKI.T4_NYIMBO.b": "kujadili sifa za nyimbo za watoto na bembelezi",
+  "KISW.G7.KUSIKI.T4_NYIMBO.c": "kujadili mitindo ya uwasilishaji wa nyimbo za watoto na bembelezi",
+  "KISW.G7.KUSIKI.T4_NYIMBO.d": "kuwasilisha nyimbo za watoto na bembelezi kwa kuzingatia uwasilishaji ufaao",
+  "KISW.G7.KUSIKI.T4_NYIMBO.e": "kuchangamkia uwasilishaji wa nyimbo za watoto na bembelezi ili kukuza ubunifu",
+  "KISW.G7.KUSOMA.T4_KUSOMA_KWA_UFASAHA.a": "kusoma kifungu kwa kuzingatia matamshi bora",
+  "KISW.G7.KUSOMA.T4_KUSOMA_KWA_UFASAHA.b": "kusoma kifungu kwa kasi ifaayo",
+  "KISW.G7.KUSOMA.T4_KUSOMA_KWA_UFASAHA.c": "kusoma kifungu kwa kutumia sauti ipasavyo",
+  "KISW.G7.KUSOMA.T4_KUSOMA_KWA_UFASAHA.d": "kusoma kifungu kwa kuambatanisha ishara zifaazo",
+  "KISW.G7.KUSOMA.T4_KUSOMA_KWA_UFASAHA.e": "kuridhia kusoma makala kwa kuzingatia vipengele vinavyofanikisha mawasiliano",
+  "KISW.G7.KUANDI.T4_INSHA_ZA_KUBUNI.a": "kutambua lugha ya kiubunifu katika insha za masimulizi",
+  "KISW.G7.KUANDI.T4_INSHA_ZA_KUBUNI.b": "kujadili umuhimu wa lugha ya kiubunifu katika insha za masimulizi",
+  "KISW.G7.KUANDI.T4_INSHA_ZA_KUBUNI.c": "kubainisha wahusika na mandhari katika insha za masimulizi",
+  "KISW.G7.KUANDI.T4_INSHA_ZA_KUBUNI.d": "kujadili umuhimu wa wahusika na mandhari katika insha za masimulizi",
+  "KISW.G7.KUANDI.T4_INSHA_ZA_KUBUNI.e": "kuandika insha ya masimulizi akizingatia lugha, wahusika na mandhari ifaavyo",
+  "KISW.G7.KUANDI.T4_INSHA_ZA_KUBUNI.f": "kufurahia kuandika insha ya masimulizi akizingatia lugha, wahusika na mandhari ifaavyo ili kukuza ubunifu",
+  "KISW.G7.SARUFI.T4_NYAKATI_NA_HALI.a": "kubainisha vitenzi vilivyo katika wakati uliopo, uliopita na ujao katika matini",
+  "KISW.G7.SARUFI.T4_NYAKATI_NA_HALI.b": "kutumia wakati uliopo, uliopita na ujao ifaavyo katika matini",
+  "KISW.G7.SARUFI.T4_NYAKATI_NA_HALI.c": "kuchangamkia kutumia wakati uliopo, uliopita na ujao ifaavyo ili kuboresha mawasiliano",
+  "KISW.G7.KUSIKI.T5_MAZUNGUMZO_MAHUSUSI.a": "kutambua maamkuzi na maagano ya nyakati mbalimbali za siku",
+  "KISW.G7.KUSIKI.T5_MAZUNGUMZO_MAHUSUSI.b": "kutambua majibu ya maamkuzi na maagano ya nyakati mbalimbali za siku",
+  "KISW.G7.KUSIKI.T5_MAZUNGUMZO_MAHUSUSI.c": "kutambua maamkuzi yanayotumiwa na makundi mbalimbali ya kijamii pamoja na majibu ya maamkuzi hayo",
+  "KISW.G7.KUSIKI.T5_MAZUNGUMZO_MAHUSUSI.d": "kutumia maamkuzi na maagano mwafaka katika miktadha mbalimbali",
+  "KISW.G7.KUSIKI.T5_MAZUNGUMZO_MAHUSUSI.e": "kujenga mazoea ya kutumia maamkuzi na maagano mwafaka katika maisha ya kila siku ili kufanikisha mahusiano",
+  "KISW.G7.KUSOMA.T5_KUSOMA_KWA_UFAHAMU.a": "kudondoa habari mahususi katika kifungu cha ufahamu",
+  "KISW.G7.KUSOMA.T5_KUSOMA_KWA_UFAHAMU.b": "kueleza habari za kifungu cha ufahamu kwa ufupi",
+  "KISW.G7.KUSOMA.T5_KUSOMA_KWA_UFAHAMU.c": "kueleza maana ya msamiati kulingana na muktadha wa kifungu cha ufahamu",
+  "KISW.G7.KUSOMA.T5_KUSOMA_KWA_UFAHAMU.d": "kuchangamkia kusoma kwa ufahamu ili kukuza uelewa wa habari",
+  "KISW.G7.KUANDI.T5_INSHA_YA_MAELEKEZO.a": "kueleza maana ya insha ya maelekezo",
+  "KISW.G7.KUANDI.T5_INSHA_YA_MAELEKEZO.b": "kutambua aina za insha za maelekezo",
+  "KISW.G7.KUANDI.T5_INSHA_YA_MAELEKEZO.c": "kujadili sifa za insha ya maelekezo",
+  "KISW.G7.KUANDI.T5_INSHA_YA_MAELEKEZO.d": "kuandaa mpangilio wa hatua za insha ya maelekezo",
+  "KISW.G7.KUANDI.T5_INSHA_YA_MAELEKEZO.e": "kuandika insha ya maelekezo akizingatia vipengele muhimu vya insha ya maelekezo",
+  "KISW.G7.KUANDI.T5_INSHA_YA_MAELEKEZO.f": "kufurahia kuandika insha ya maelekezo akizingatia vipengele vyake muhimu ili kufanikisha mawasiliano",
+  "KISW.G7.SARUFI.T5_NYAKATI_NA_HALI.a": "kubainisha vitenzi vilivyo katika wakati uliopita hali ya kuendelea na ujao hali ya kuendelea katika matini",
+  "KISW.G7.SARUFI.T5_NYAKATI_NA_HALI.b": "kutumia wakati uliopita hali ya kuendelea na ujao hali ya kuendelea ifaavyo katika matini",
+  "KISW.G7.SARUFI.T5_NYAKATI_NA_HALI.c": "kuchangamkia kutumia wakati uliopita hali ya kuendelea na ujao hali ya kuendelea ifaavyo ili kuboresha mawasiliano",
+  "KISW.G7.KUSIKI.T6_KUSIKILIZA_KWA_KUFAS.a": "kueleza kwa usahihi masuala yanayozungumziwa katika matini ya kusikiliza",
+  "KISW.G7.KUSIKI.T6_KUSIKILIZA_KWA_KUFAS.b": "kufasiri habari katika matini ya kusikiliza",
+  "KISW.G7.KUSIKI.T6_KUSIKILIZA_KWA_KUFAS.c": "kueleza maana ya msamiati kama ulivyotumika katika matini ya kusikiliza",
+  "KISW.G7.KUSIKI.T6_KUSIKILIZA_KWA_KUFAS.d": "kutabiri kitakachotokea katika matini kwa kurejelea vidokezo katika matini ya kusikiliza",
+  "KISW.G7.KUSIKI.T6_KUSIKILIZA_KWA_KUFAS.e": "kufurahia kufasiri matini za kusikiliza ili kukuza stadi ya kusikiliza",
+  "KISW.G7.KUSOMA.T6_KUSOMA_KWA_KINA.a": "kueleza dhana za maudhui na dhamira katika fasihi",
+  "KISW.G7.KUSOMA.T6_KUSOMA_KWA_KINA.b": "kujadili maudhui katika novela",
+  "KISW.G7.KUSOMA.T6_KUSOMA_KWA_KINA.c": "kujadili dhamira katika novela",
+  "KISW.G7.KUSOMA.T6_KUSOMA_KWA_KINA.d": "kutoa muhtasari wa dhamira na maudhui kuhusu novela",
+  "KISW.G7.KUSOMA.T6_KUSOMA_KWA_KINA.e": "kujenga mazoea ya usomaji wa kazi za fasihi katika maisha ya kila siku",
+  "KISW.G7.KUANDI.T6_INSHA_ZA_KUBUNI.a": "kubuni anwani inayooana na kisa atakachosimulia kutokana na picha katika matini",
+  "KISW.G7.KUANDI.T6_INSHA_ZA_KUBUNI.b": "kutoa maelezo dhahiri kuhusu matukio katika picha kwenye matini",
+  "KISW.G7.KUANDI.T6_INSHA_ZA_KUBUNI.c": "kuandika kisa chenye maelezo dhahiri kutokana na picha katika matini",
+  "KISW.G7.KUANDI.T6_INSHA_ZA_KUBUNI.d": "kufurahia kusimulia kisa kutokana na picha ili kukuza ubunifu",
+  "KISW.G7.SARUFI.T6_VITENZI.a": "kutambua vitenzi vikuu na visaidizi katika matini",
+  "KISW.G7.SARUFI.T6_VITENZI.b": "kutumia vitenzi vikuu na visaidizi ipasavyo katika matini",
+  "KISW.G7.SARUFI.T6_VITENZI.c": "kuchangamkia kutumia vitenzi vikuu na visaidizi ipasavyo katika mawasiliano",
+  "KISW.G7.KUSIKI.T7_KUSIKILIZA_KWA_UFAHA.a": "kutambua ujumbe katika ufahamu wa kusikiliza",
+  "KISW.G7.KUSIKI.T7_KUSIKILIZA_KWA_UFAHA.b": "kueleza maana ya msamiati ulio katika ufahamu wa kusikiliza",
+  "KISW.G7.KUSIKI.T7_KUSIKILIZA_KWA_UFAHA.c": "kufasiri ujumbe kutokana na ufahamu wa kusikiliza",
+  "KISW.G7.KUSIKI.T7_KUSIKILIZA_KWA_UFAHA.d": "kuchangamkia kushiriki katika kusikiliza kwa ufahamu ili kukuza stadi ya kusikiliza kwa ufahamu",
+  "KISW.G7.KUSOMA.T7_UFUPISHO.a": "kueleza maana ya ufupisho ili kuupambanua",
+  "KISW.G7.KUSOMA.T7_UFUPISHO.b": "kutambua habari kuu za aya na kuzieleza kwa usahihi katika sentensi moja",
+  "KISW.G7.KUSOMA.T7_UFUPISHO.c": "kufupisha kifungu akizingatia mpangilio ufaao wa habari kutokana na matini",
+  "KISW.G7.KUSOMA.T7_UFUPISHO.d": "kufurahia kufupisha habari kwa usahihi katika mawasiliano ya kila siku",
+  "KISW.G7.KUANDI.T7_INSHA_ZA_KUBUNI.a": "kueleza maana ya insha ya maelezo",
+  "KISW.G7.KUANDI.T7_INSHA_ZA_KUBUNI.b": "kutambua msamiati ufaao katika kutoa maelezo",
+  "KISW.G7.KUANDI.T7_INSHA_ZA_KUBUNI.c": "kutambua umuhimu wa msamiati ufaao katika insha ya maelezo",
+  "KISW.G7.KUANDI.T7_INSHA_ZA_KUBUNI.d": "kutumia msamiati ufaao kwa ufasaha katika kuandika insha ya maelezo",
+  "KISW.G7.KUANDI.T7_INSHA_ZA_KUBUNI.e": "kufurahia kuandika insha za maelezo ili kujenga stadi ya kuandika",
+  "KISW.G7.SARUFI.T7_VITENZI_VISHIRIKISHI.a": "kutambua vitenzi vishirikishi katika matini",
+  "KISW.G7.SARUFI.T7_VITENZI_VISHIRIKISHI.b": "kutumia vitenzi vishirikishi katika matini",
+  "KISW.G7.SARUFI.T7_VITENZI_VISHIRIKISHI.c": "kuonea fahari matumizi ya vitenzi vishirikishi katika sentensi na vifungu",
+  "KISW.G7.KUSIKI.T8_KUZUNGUMZA_ILI_KUPAS.a": "kueleza maana ya kuzungumza ili kupasha habari ili kutofautisha na aina nyingine za uzungumzaji",
+  "KISW.G7.KUSIKI.T8_KUZUNGUMZA_ILI_KUPAS.b": "kutambua aina za uzungumzaji wa kupasha habari",
+  "KISW.G7.KUSIKI.T8_KUZUNGUMZA_ILI_KUPAS.c": "kujadili vipengele vya kuzingatia katika kuzungumza ili kupasha habari",
+  "KISW.G7.KUSIKI.T8_KUZUNGUMZA_ILI_KUPAS.d": "kupasha habari kwa kutumia vipengele vifaavyo",
+  "KISW.G7.KUSIKI.T8_KUZUNGUMZA_ILI_KUPAS.e": "kuchangamkia kupasha habari mbalimbali ili kufanikisha mawasiliano",
+  "KISW.G7.KUSOMA.T8_KUSOMA_KWA_KINA.a": "kueleza maana ya mandhari na ploti katika fasihi",
+  "KISW.G7.KUSOMA.T8_KUSOMA_KWA_KINA.b": "kutambua mandhari mbalimbali na ploti ya novela",
+  "KISW.G7.KUSOMA.T8_KUSOMA_KWA_KINA.c": "kueleza umuhimu wa mandhari na ploti ya novela",
+  "KISW.G7.KUSOMA.T8_KUSOMA_KWA_KINA.d": "kuandika maelezo mafupi kuhusu mandhari na ploti ya novela aliyosoma",
+  "KISW.G7.KUSOMA.T8_KUSOMA_KWA_KINA.e": "kuchangamkia nafasi ya mandhari na ploti katika kazi ya fasihi",
+  "KISW.G7.KUANDI.T8_VIAKIFISHI.a": "kutambua matumizi ya kiulizi na koma katika matini",
+  "KISW.G7.KUANDI.T8_VIAKIFISHI.b": "kutumia kiulizi na koma ipasavyo katika matini",
+  "KISW.G7.KUANDI.T8_VIAKIFISHI.c": "kufurahia matumizi bora ya kiulizi na koma katika matini",
+  "KISW.G7.SARUFI.T8_NGELI_NA_UPATANISHO_.a": "kutambua viambishi vya upatanisho wa kisarufi vya ngeli ya A-WA na U-I katika sentensi",
+  "KISW.G7.SARUFI.T8_NGELI_NA_UPATANISHO_.b": "kutambua nomino za ngeli ya A-WA na U-I katika matini",
+  "KISW.G7.SARUFI.T8_NGELI_NA_UPATANISHO_.c": "kutumia nomino za ngeli ya A-WA na U-I katika matini kwa kuzingatia upatanisho ufaao wa kisarufi",
+  "KISW.G7.SARUFI.T8_NGELI_NA_UPATANISHO_.d": "kuchangamkia kutumia nomino za ngeli ya A-WA na U-I katika matini",
+  "KISW.G7.KUSIKI.T9_KUSIKILIZA_KWA_KINA.a": "kutambua sauti /d/ na /nd/ katika silabi na maneno",
+  "KISW.G7.KUSIKI.T9_KUSIKILIZA_KWA_KINA.b": "kutamka sauti /d/ na /nd/ ipasavyo ili kuzitofautisha kimatamshi katika silabi na maneno",
+  "KISW.G7.KUSIKI.T9_KUSIKILIZA_KWA_KINA.c": "kuchangamkia matamshi bora ya sauti /d/ na /nd/ katika mazungumzo ya kawaida ili kufanikisha mawasiliano",
+  "KISW.G7.KUSOMA.T9_KUSOMA_KWA_UFAHAMU.a": "kudondoa habari mahususi katika kifungu cha ufahamu cha kushawishi",
+  "KISW.G7.KUSOMA.T9_KUSOMA_KWA_UFAHAMU.b": "kueleza maana ya msamiati na vifungu vya maneno katika kifungu cha ufahamu cha kushawishi",
+  "KISW.G7.KUSOMA.T9_KUSOMA_KWA_UFAHAMU.c": "kueleza habari za kifungu cha ufahamu cha kushawishi kwa ufupi",
+  "KISW.G7.KUSOMA.T9_KUSOMA_KWA_UFAHAMU.d": "kuchangamkia usomaji wa kifungu cha ufahamu cha kushawishi ili kukuza uelewa wa habari",
+  "KISW.G7.KUANDI.T9_INSHA_ZA_KUBUNI.a": "kutambua vipengele vinavyozingatiwa kujenga wazo katika insha ya masimulizi",
+  "KISW.G7.KUANDI.T9_INSHA_ZA_KUBUNI.b": "kueleza vipengele vinavyojenga wazo katika insha ya masimulizi",
+  "KISW.G7.KUANDI.T9_INSHA_ZA_KUBUNI.c": "kuandika insha ya masimulizi akikuza wazo katika aya ipasavyo",
+  "KISW.G7.KUANDI.T9_INSHA_ZA_KUBUNI.d": "kufurahia utunzi wa insha za masimulizi zenye mpangilio mzuri wa wazo",
+  "KISW.G7.SARUFI.T9_NGELI_NA_UPATANISHO_.a": "kutambua viambishi vya upatanisho wa kisarufi vya ngeli ya KI-VI na LI-YA katika sentensi",
+  "KISW.G7.SARUFI.T9_NGELI_NA_UPATANISHO_.b": "kutambua nomino za ngeli ya KI-VI na LI-YA katika matini",
+  "KISW.G7.SARUFI.T9_NGELI_NA_UPATANISHO_.c": "kutumia nomino za ngeli ya KI-VI na LI-YA katika matini kwa kuzingatia upatanisho ufaao wa kisarufi",
+  "KISW.G7.SARUFI.T9_NGELI_NA_UPATANISHO_.d": "kuchangamkia kutumia nomino za ngeli ya KI-VI na LI-YA katika matini",
+  "KISW.G7.KUSIKI.T10_NYIMBO.a": "kueleza maana ya nyimbo za kazi na za dini ili kuzibainisha",
+  "KISW.G7.KUSIKI.T10_NYIMBO.b": "kutambua mazingira ambapo nyimbo za kazi na za dini huimbwa",
+  "KISW.G7.KUSIKI.T10_NYIMBO.c": "kueleza ujumbe katika nyimbo za kazi na za dini",
+  "KISW.G7.KUSIKI.T10_NYIMBO.d": "kuwasilisha nyimbo za kazi na za dini kwa kuzingatia hisia na ishara za mwili",
+  "KISW.G7.KUSIKI.T10_NYIMBO.e": "kuchangamkia nyimbo za kazi na za dini kama vipera vya fasihi simulizi",
+  "KISW.G7.KUSOMA.T10_KUSOMA_KWA_KINA.a": "kutambua wahusika katika novela",
+  "KISW.G7.KUSOMA.T10_KUSOMA_KWA_KINA.b": "kujadili sifa za wahusika katika novela",
+  "KISW.G7.KUSOMA.T10_KUSOMA_KWA_KINA.c": "kueleza uhusiano kati ya wahusika katika novela",
+  "KISW.G7.KUSOMA.T10_KUSOMA_KWA_KINA.d": "kuandika muhtasari wa sifa za wahusika katika novela",
+  "KISW.G7.KUSOMA.T10_KUSOMA_KWA_KINA.e": "kujadili mafunzo yanayotokana na matendo ya wahusika katika novela",
+  "KISW.G7.KUSOMA.T10_KUSOMA_KWA_KINA.f": "kujenga mazoea ya usomaji wa kazi za kifasihi katika maisha ya kila siku",
+  "KISW.G7.KUANDI.T10_BARUA_RASMI_YA_KUOMB.a": "kueleza umuhimu wa barua rasmi ya kuomba msamaha",
+  "KISW.G7.KUANDI.T10_BARUA_RASMI_YA_KUOMB.b": "kutambua ujumbe katika barua rasmi ya kuomba msamaha",
+  "KISW.G7.KUANDI.T10_BARUA_RASMI_YA_KUOMB.c": "kutambua vipengele vya kimuundo vya barua rasmi ya kuomba msamaha",
+  "KISW.G7.KUANDI.T10_BARUA_RASMI_YA_KUOMB.d": "kuandika barua rasmi ya kuomba msamaha kwa kuzingatia ujumbe, muundo na lugha ifaayo",
+  "KISW.G7.KUANDI.T10_BARUA_RASMI_YA_KUOMB.e": "kufurahia kujieleza kwa njia ifaayo kupitia kwa barua",
+  "KISW.G7.SARUFI.T10_VINYUME.a": "kueleza dhana ya kinyume cha maneno",
+  "KISW.G7.SARUFI.T10_VINYUME.b": "kutambua vinyume vya nomino na vivumishi katika matini",
+  "KISW.G7.SARUFI.T10_VINYUME.c": "kutumia vinyume vya nomino na vivumishi katika matini",
+  "KISW.G7.SARUFI.T10_VINYUME.d": "kuchangamkia kutumia vinyume vya nomino na vivumishi katika mawasiliano",
+  "KISW.G7.KUSIKI.T11_KUZUNGUMZA_KWA_KUAMB.a": "kueleza maana ya kuzungumza kwa kuambatani-sha na vitendo au ishara",
+  "KISW.G7.KUSIKI.T11_KUZUNGUMZA_KWA_KUAMB.b": "kutambua umuhimu wa kuzungumza kwa kuambatanisha na vitendo au ishara",
+  "KISW.G7.KUSIKI.T11_KUZUNGUMZA_KWA_KUAMB.c": "kujadili vitendo au ishara vya kuambatanisha na mazungumzo",
+  "KISW.G7.KUSIKI.T11_KUZUNGUMZA_KWA_KUAMB.d": "kutoa mazungumzo kwa kuyaambatanisha na vitendo au ishara zifaazo",
+  "KISW.G7.KUSIKI.T11_KUZUNGUMZA_KWA_KUAMB.e": "kujenga mazoea ya kuzungumza kwa kuambatanisha na vitendo au ishara ili kufanikisha mawasiliano",
+  "KISW.G7.KUSOMA.T11_KUSOMA_KWA_MAPANA.a": "kueleza ujumbe wa matini ya kujichagulia",
+  "KISW.G7.KUSOMA.T11_KUSOMA_KWA_MAPANA.b": "kutambua msamiati uliotumiwa katika matini ya kujichagulia",
+  "KISW.G7.KUSOMA.T11_KUSOMA_KWA_MAPANA.c": "kutumia ipasavyo msamiati aliosoma katika matini ya kujichagulia",
+  "KISW.G7.KUSOMA.T11_KUSOMA_KWA_MAPANA.d": "kutoa muhtasari wa matini ya kujichagulia aliyosoma",
+  "KISW.G7.KUSOMA.T11_KUSOMA_KWA_MAPANA.e": "kujenga mazoea ya kusoma matini mbalimbali katika maisha ya kila siku",
+  "KISW.G7.KUANDI.T11_INSHA_ZA_KUBUNI.a": "kutambua vipengele vya mpangilio wa insha ya maelezo",
+  "KISW.G7.KUANDI.T11_INSHA_ZA_KUBUNI.b": "kueleza mpangilio wa insha ya maelezo",
+  "KISW.G7.KUANDI.T11_INSHA_ZA_KUBUNI.c": "kuandika insha ya maelezo inayozingatia mpangilio ufaao wa maelezo",
+  "KISW.G7.KUANDI.T11_INSHA_ZA_KUBUNI.d": "kufurahia kuandika insha za maelezo katika maisha ya kila siku akizingatia mpangilio ufaao wa maelezo",
+  "KISW.G7.SARUFI.T11_MNYAMBULIKO_WA_VITEN.a": "kutambua kauli ya kutenda, kutendea na kutendwa katika vitenzi",
+  "KISW.G7.SARUFI.T11_MNYAMBULIKO_WA_VITEN.b": "kutumia vitenzi katika kauli ya kutenda, kutendea na kutendwa ipasavyo",
+  "KISW.G7.SARUFI.T11_MNYAMBULIKO_WA_VITEN.c": "kuchangamkia kutumia ipasavyo vitenzi katika kauli ya kutenda, kutendea na kutendwa ili kujenga ufasaha wa lugha",
+  "KISW.G7.KUSIKI.T12_KUSIKILIZA_KWA_MAKIN.a": "kutambua hoja muhimu katika habari aliyosikiliza",
+  "KISW.G7.KUSIKI.T12_KUSIKILIZA_KWA_MAKIN.b": "kuwasilisha hoja muhimu katika habari",
+  "KISW.G7.KUSIKI.T12_KUSIKILIZA_KWA_MAKIN.c": "kujenga mazoea ya kutambua hoja katika habari anayosikiliza ili kuimarisha usikilizaji wa makini",
+  "KISW.G7.KUSOMA.T12_KUSOMA_KWA_UFASAHA.a": "kusoma kifungu kwa kuzingatia matamshi bora",
+  "KISW.G7.KUSOMA.T12_KUSOMA_KWA_UFASAHA.b": "kusoma kifungu kwa kasi ifaayo",
+  "KISW.G7.KUSOMA.T12_KUSOMA_KWA_UFASAHA.c": "kusoma kifungu kwa kutumia sauti ipasavyo",
+  "KISW.G7.KUSOMA.T12_KUSOMA_KWA_UFASAHA.d": "kusoma kifungu kwa kuambatanisha ishara zifaazo",
+  "KISW.G7.KUSOMA.T12_KUSOMA_KWA_UFASAHA.e": "kuridhia kusoma makala kwa kuzingatia vipengele vinavyofanikisha mawasiliano",
+  "KISW.G7.KUANDI.T12_HOTUBA_YA_KUPASHA_HA.a": "kueleza maana ya hotuba ya kupasha habari",
+  "KISW.G7.KUANDI.T12_HOTUBA_YA_KUPASHA_HA.b": "kutambua hotuba ya kupasha habari katika matini",
+  "KISW.G7.KUANDI.T12_HOTUBA_YA_KUPASHA_HA.c": "kueleza ujumbe, lugha na muundo wa hotuba ya kupasha habari",
+  "KISW.G7.KUANDI.T12_HOTUBA_YA_KUPASHA_HA.d": "kuandika hotuba ya kupasha habari kwa kuzingatia ujumbe, lugha na muundo ufaao",
+  "KISW.G7.KUANDI.T12_HOTUBA_YA_KUPASHA_HA.e": "kuchangamkia nafasi ya hotuba ya kupasha habari katika mawasiliano",
+  "KISW.G7.SARUFI.T12_AINA_ZA_SENTENSI.a": "kueleza maana ya sentensi sahili na ambatano",
+  "KISW.G7.SARUFI.T12_AINA_ZA_SENTENSI.b": "kutambua sentensi sahili na ambatano katika matini",
+  "KISW.G7.SARUFI.T12_AINA_ZA_SENTENSI.c": "kutunga sentensi sahili na ambatano ipasavyo",
+  "KISW.G7.SARUFI.T12_AINA_ZA_SENTENSI.d": "kuchangamkia matumizi ya sentensi sahili na ambatano katika mawasiliano",
+  "KISW.G7.KUSIKI.T13_WAHUSIKA_KATIKA_NYIM.a": "kutambua wahusika katika wimbo",
+  "KISW.G7.KUSIKI.T13_WAHUSIKA_KATIKA_NYIM.b": "kuchambua wahusika katika wimbo",
+  "KISW.G7.KUSIKI.T13_WAHUSIKA_KATIKA_NYIM.c": "kueleza mafunzo kutokana na wahusika katika wimbo",
+  "KISW.G7.KUSIKI.T13_WAHUSIKA_KATIKA_NYIM.d": "kufurahia kushiriki katika uchanganuzi wa wahusika katika nyimbo",
+  "KISW.G7.KUSOMA.T13_KUSOMA_KWA_KINA.a": "kueleza maana ya mbinu za lugha katika fasihi",
+  "KISW.G7.KUSOMA.T13_KUSOMA_KWA_KINA.b": "kutambua mbinu za lugha katika novela",
+  "KISW.G7.KUSOMA.T13_KUSOMA_KWA_KINA.c": "kueleza umuhimu wa mbinu za lugha zilizotumiwa katika novela",
+  "KISW.G7.KUSOMA.T13_KUSOMA_KWA_KINA.d": "kufurahia kuchanganua matumizi ya mbinu za lugha katika fasihi",
+  "KISW.G7.KUANDI.T13_INSHA_ZA_KUBUNI.a": "kutambua mambo ya kimsingi katika uandishi wa insha ya maelezo",
+  "KISW.G7.KUANDI.T13_INSHA_ZA_KUBUNI.b": "kuandika insha ya maelezo inayodhihirisha sifa za mtu",
+  "KISW.G7.KUANDI.T13_INSHA_ZA_KUBUNI.c": "kuchangamkia kutoa maelezo kamilifu kuhusu kitu au jambo",
+  "KISW.G7.SARUFI.T13_UKANUSHAJI_KWA_KUZIN.a": "kueleza maana ya ukanushaji",
+  "KISW.G7.SARUFI.T13_UKANUSHAJI_KWA_KUZIN.b": "kutambua wakati uliopita, uliopo na ujao katika matini",
+  "KISW.G7.SARUFI.T13_UKANUSHAJI_KWA_KUZIN.c": "kutambua ukanushaji kwa kuzingatia wakati uliopita, uliopo na ujao katika matini",
+  "KISW.G7.SARUFI.T13_UKANUSHAJI_KWA_KUZIN.d": "kutumia ipasavyo hali ya ukanushaji wa wakati uliopita, uliopo na ujao katika matini",
+  "KISW.G7.SARUFI.T13_UKANUSHAJI_KWA_KUZIN.e": "kuchangamkia kukanusha sentensi katika wakati uliopita, uliopo na ujao ili kukuza mawasiliano",
+  "KISW.G7.KUSIKI.T14_LUGHA_KATIKA_NYIMBO.a": "kutambua vipengele vya lugha vinavyotumika katika nyimbo",
+  "KISW.G7.KUSIKI.T14_LUGHA_KATIKA_NYIMBO.b": "kujadili umuhimu wa vipengele vya lugha vinavyotumika katika nyimbo teule",
+  "KISW.G7.KUSIKI.T14_LUGHA_KATIKA_NYIMBO.c": "kuonea fahari uchanganuzi wa lugha katika nyimbo kama utungo wa fasihi simulizi",
+  "KISW.G7.KUSOMA.T14_KUSOMA_KWA_UFAHAMU.a": "kudondoa habari mahususi katika kifungu cha mjadala",
+  "KISW.G7.KUSOMA.T14_KUSOMA_KWA_UFAHAMU.b": "kutambua msamiati mpya katika kifungu cha mjadala",
+  "KISW.G7.KUSOMA.T14_KUSOMA_KWA_UFAHAMU.c": "kuandika habari za kifungu cha mjadala kwa ufupi",
+  "KISW.G7.KUSOMA.T14_KUSOMA_KWA_UFAHAMU.d": "kuchambua mitazamo katika kifungu cha mjadala",
+  "KISW.G7.KUSOMA.T14_KUSOMA_KWA_UFAHAMU.e": "kuridhia kusoma kwa ufahamu ili kukuza uelewa wa habari",
+  "KISW.G7.KUANDI.T14_INSHA_YA_MAELEKEZO.a": "kutambua aina za insha za maelekezo",
+  "KISW.G7.KUANDI.T14_INSHA_YA_MAELEKEZO.b": "kujadili sifa za insha ya maelekezo",
+  "KISW.G7.KUANDI.T14_INSHA_YA_MAELEKEZO.c": "kuandaa mpangilio wa hatua za insha ya maelekezo",
+  "KISW.G7.KUANDI.T14_INSHA_YA_MAELEKEZO.d": "kuandika insha ya maelekezo akizingatia vipengele muhimu vya insha ya maelekezo",
+  "KISW.G7.KUANDI.T14_INSHA_YA_MAELEKEZO.e": "kufurahia kutoa maelekezo ifaavyo katika maisha ya kila siku akizingatia anwani na mpangilio ufaao wa hatua",
+  "KISW.G7.SARUFI.T14_UKUBWA_WA_NOMINO.a": "kutambua nomino katika hali ya ukubwa katika matini",
+  "KISW.G7.SARUFI.T14_UKUBWA_WA_NOMINO.b": "kutambua viambishi vya ukubwa katika nomino",
+  "KISW.G7.SARUFI.T14_UKUBWA_WA_NOMINO.c": "kutumia nomino katika hali ya ukubwa ipasavyo",
+  "KISW.G7.SARUFI.T14_UKUBWA_WA_NOMINO.d": "kuchangamkia kutumia nomino katika hali ya ukubwa katika sentensi",
+  "KISW.G7.KUSIKI.T15_KUSIKILIZA_HABARI_NA.a": "kutambua masuala katika matini aliyosikiliza",
+  "KISW.G7.KUSIKI.T15_KUSIKILIZA_HABARI_NA.b": "kutambua msamiati wa suala lengwa katika matini aliyosikiliza",
+  "KISW.G7.KUSIKI.T15_KUSIKILIZA_HABARI_NA.c": "kutabiri yatakayotokea katika matini kutokana na vidokezo alivyosikia katika habari",
+  "KISW.G7.KUSIKI.T15_KUSIKILIZA_HABARI_NA.d": "kueleza maana za msamiati wa suala lengwa kama ulivyotumiwa katika matini aliyosikiliza",
+  "KISW.G7.KUSIKI.T15_KUSIKILIZA_HABARI_NA.e": "kuchangamkia kushiriki katika kusikiliza kwa ufahamu ili kukuza stadi ya kusikiliza",
+  "KISW.G7.KUSOMA.T15_UFUPISHO.a": "kueleza kwa usahihi ujumbe wa aya za matini kwa sentensi mojamoja",
+  "KISW.G7.KUSOMA.T15_UFUPISHO.b": "kueleza kwa usahihi ujumbe wa aya zote za matini kwa aya moja",
+  "KISW.G7.KUSOMA.T15_UFUPISHO.c": "kuandika ufupisho unaozingatia mtazamo wa matini ya kufupishwa",
+  "KISW.G7.KUSOMA.T15_UFUPISHO.d": "kufurahia kufupisha ujumbe kwa usahihi katika miktadha mbalimbali",
+  "KISW.G7.KUANDI.T15_KUANDIKA_KIDIJITALI.a": "kutambua ujumbe unaoafiki baruapepe kwa rafiki",
+  "KISW.G7.KUANDI.T15_KUANDIKA_KIDIJITALI.b": "kutambua vipengele vya kimuundo vya baruapepe kwa rafiki",
+  "KISW.G7.KUANDI.T15_KUANDIKA_KIDIJITALI.c": "kutumia lugha inayofaa katika uandishi wa baruapepe kwa rafiki",
+  "KISW.G7.KUANDI.T15_KUANDIKA_KIDIJITALI.d": "kuandika baruapepe kwa rafiki kwa kuzingatia ujumbe, lugha na muundo ufaao",
+  "KISW.G7.KUANDI.T15_KUANDIKA_KIDIJITALI.e": "kujenga mazoea ya kuwasiliana kwa kuandika baruapepe kwa rafiki",
+  "KISW.G7.SARUFI.T15_USEMI_HALISI_NA_USEM.a": "kueleza maana za usemi halisi na usemi wa taarifa",
+  "KISW.G7.SARUFI.T15_USEMI_HALISI_NA_USEM.b": "kutambua kanuni za kubadilisha usemi halisi kuwa usemi wa taarifa",
+  "KISW.G7.SARUFI.T15_USEMI_HALISI_NA_USEM.c": "kutumia usemi halisi na usemi wa taarifa ifaavyo",
+  "KISW.G7.SARUFI.T15_USEMI_HALISI_NA_USEM.d": "kuchangamkia matumizi ya usemi halisi na usemi wa taarifa katika mawasiliano"
+ },
+ "skills": {
+  "KISW.G7.KUANDI.T1_VIAKIFISHI.HERUFI_KUBWA": {
+   "forms": [
+    "chagua jibu sahihi",
+    "chagua jibu katika hadithi fupi",
+    "tafuta hatua yenye kosa"
+   ],
+   "mastery": "Mtoto hutumia herufi kubwa mwanzoni mwa sentensi na kwa majina ya pekee, na kikomo (.) mwishoni mwa sentensi ya kawaida. Evidence rule: at least four of the last five fresh questions right across at least two question forms, and no repeated pick of the same misconception."
+  },
+  "KISW.G7.SARUFI.T1_AINA_ZA_NOMINO.NOMINO_PEKEE": {
+   "forms": [
+    "chagua jibu sahihi",
+    "chagua jibu katika hadithi fupi",
+    "tafuta hatua yenye kosa"
+   ],
+   "mastery": "Mtoto hutambua nomino ya pekee (jina la mtu, mahali au kitu kimoja mahususi) na nomino ya kawaida (jina la jumla), na huandika ya pekee kwa herufi kubwa. Evidence rule: at least four of the last five fresh questions right across at least two question forms, and no repeated pick of the same misconception."
+  },
+  "KISW.G7.KUANDI.T2_BARUA_YA_KIRAFIKI_YA.BARUA_MWALIKO": {
+   "forms": [
+    "chagua jibu sahihi",
+    "chagua jibu katika hadithi fupi",
+    "tafuta hatua yenye kosa"
+   ],
+   "mastery": "Mtoto hutambua vipengele vya barua ya kirafiki (anwani, tarehe, salamu, ujumbe, hitimisho, jina) na umuhimu wa mwaliko. Evidence rule: at least four of the last five fresh questions right across at least two question forms, and no repeated pick of the same misconception."
+  },
+  "KISW.G7.SARUFI.T2_AINA_ZA_NOMINO.NOMINO_MAKUNDI": {
+   "forms": [
+    "chagua jibu sahihi",
+    "chagua jibu katika hadithi fupi",
+    "tafuta hatua yenye kosa"
+   ],
+   "mastery": "Mtoto hutambua nomino za makundi (kundi la viumbe au vitu, k.m. kikosi, jeshi) na za dhahania (mambo yasiyoshikika, k.m. upendo, furaha). Evidence rule: at least four of the last five fresh questions right across at least two question forms, and no repeated pick of the same misconception."
+  },
+  "KISW.G7.KUSIKI.T3_TANZU_ZA_FASIHI.FASIHI_TANZU": {
+   "forms": [
+    "chagua jibu sahihi",
+    "chagua jibu katika hadithi fupi",
+    "tafuta hatua yenye kosa"
+   ],
+   "mastery": "Mtoto hueleza fasihi, hutambua fasihi simulizi (kutumia mdomo) na andishi (kuandikwa), na hutambua tanzu kama hadithi, methali na ushairi. Evidence rule: at least four of the last five fresh questions right across at least two question forms, and no repeated pick of the same misconception."
+  },
+  "KISW.G7.SARUFI.T3_AINA_ZA_NOMINO.NOMINO_WINGI": {
+   "forms": [
+    "chagua jibu sahihi",
+    "chagua jibu katika hadithi fupi",
+    "tafuta hatua yenye kosa"
+   ],
+   "mastery": "Mtoto hutambua nomino za wingi (maji, mafuta) na kitenzi-jina (kuimba, kusoma) kinachoanza kwa ku-. Evidence rule: at least four of the last five fresh questions right across at least two question forms, and no repeated pick of the same misconception."
+  },
+  "KISW.G7.SARUFI.T4_NYAKATI_NA_HALI.NYAKATI_MSINGI": {
+   "forms": [
+    "chagua jibu sahihi",
+    "chagua jibu katika hadithi fupi",
+    "tafuta hatua yenye kosa"
+   ],
+   "mastery": "Mtoto hutambua kiambishi -na- (uliopo), -li- (uliopita) na -ta- (ujao), na hutumia wakati unaofaa. Evidence rule: at least four of the last five fresh questions right across at least two question forms, and no repeated pick of the same misconception."
+  },
+  "KISW.G7.SARUFI.T5_NYAKATI_NA_HALI.NYAKATI_KUENDELEA": {
+   "forms": [
+    "chagua jibu sahihi",
+    "chagua jibu katika hadithi fupi",
+    "tafuta hatua yenye kosa"
+   ],
+   "mastery": "Mtoto hutambua alikuwa akisoma (uliopita hali ya kuendelea) na atakuwa akisoma (ujao hali ya kuendelea). Evidence rule: at least four of the last five fresh questions right across at least two question forms, and no repeated pick of the same misconception."
+  },
+  "KISW.G7.SARUFI.T6_VITENZI.VITENZI_VIKUU": {
+   "forms": [
+    "chagua jibu sahihi",
+    "chagua jibu katika hadithi fupi",
+    "tafuta hatua yenye kosa"
+   ],
+   "mastery": "Mtoto hutambua kitenzi kikuu (hubeba tendo) na kisaidizi (hutangulia kikuu na kusaidia, k.m. alikuwa, atakuwa). Evidence rule: at least four of the last five fresh questions right across at least two question forms, and no repeated pick of the same misconception."
+  },
+  "KISW.G7.KUSOMA.T7_UFUPISHO.UFUPISHO": {
+   "forms": [
+    "chagua jibu sahihi",
+    "chagua jibu katika hadithi fupi",
+    "tafuta hatua yenye kosa"
+   ],
+   "mastery": "Mtoto hueleza ufupisho (kutoa habari kuu bila kupoteza maana) na hutambua habari kuu ya aya. Evidence rule: at least four of the last five fresh questions right across at least two question forms, and no repeated pick of the same misconception."
+  },
+  "KISW.G7.SARUFI.T7_VITENZI_VISHIRIKISHI.VISHIRIKISHI": {
+   "forms": [
+    "chagua jibu sahihi",
+    "chagua jibu katika hadithi fupi",
+    "tafuta hatua yenye kosa"
+   ],
+   "mastery": "Mtoto hutambua kitenzi kishirikishi (ni, si, yuko, wako, ndiye, ndio) na hukitumia sentensi. Evidence rule: at least four of the last five fresh questions right across at least two question forms, and no repeated pick of the same misconception."
+  },
+  "KISW.G7.KUANDI.T8_VIAKIFISHI.KIULIZI_KOMA": {
+   "forms": [
+    "chagua jibu sahihi",
+    "chagua jibu katika hadithi fupi",
+    "tafuta hatua yenye kosa"
+   ],
+   "mastery": "Mtoto hutumia kiulizi (?) mwishoni mwa swali na koma (,) kutenganisha vitu katika orodha na baada ya salamu au kiunganishi. Evidence rule: at least four of the last five fresh questions right across at least two question forms, and no repeated pick of the same misconception."
+  },
+  "KISW.G7.SARUFI.T8_NGELI_NA_UPATANISHO_.NGELI_AWA_UI": {
+   "forms": [
+    "chagua jibu sahihi",
+    "chagua jibu katika hadithi fupi",
+    "tafuta hatua yenye kosa"
+   ],
+   "mastery": "Mtoto hutambua nomino za A-WA (mtu, mtoto, mnyama: wa-) na U-I (mti, mlima: mi-) na hutumia viambishi vya upatanisho (a-/wa-, u-/i-). Evidence rule: at least four of the last five fresh questions right across at least two question forms, and no repeated pick of the same misconception."
+  },
+  "KISW.G7.SARUFI.T9_NGELI_NA_UPATANISHO_.NGELI_KIVI_LIYA": {
+   "forms": [
+    "chagua jibu sahihi",
+    "chagua jibu katika hadithi fupi",
+    "tafuta hatua yenye kosa"
+   ],
+   "mastery": "Mtoto hutambua nomino za KI-VI (kitabu: vi-) na LI-YA (jiwe: ma-) na hutumia viambishi vya upatanisho (ki-/vi-, li-/ya-). Evidence rule: at least four of the last five fresh questions right across at least two question forms, and no repeated pick of the same misconception."
+  },
+  "KISW.G7.KUANDI.T10_BARUA_RASMI_YA_KUOMB.BARUA_MSAMAHA": {
+   "forms": [
+    "chagua jibu sahihi",
+    "chagua jibu katika hadithi fupi",
+    "tafuta hatua yenye kosa"
+   ],
+   "mastery": "Mtoto hutambua vipengele vya barua rasmi (anwani mbili, tarehe, salamu rasmi, kichwa, ujumbe, hitimisho) na lugha ya heshima. Evidence rule: at least four of the last five fresh questions right across at least two question forms, and no repeated pick of the same misconception."
+  },
+  "KISW.G7.SARUFI.T10_VINYUME.VINYUME": {
+   "forms": [
+    "chagua jibu sahihi",
+    "chagua jibu katika hadithi fupi",
+    "tafuta hatua yenye kosa"
+   ],
+   "mastery": "Mtoto hueleza kinyume cha neno (neno lenye maana kinyume) na hutambua vinyume vya nomino na vivumishi. Evidence rule: at least four of the last five fresh questions right across at least two question forms, and no repeated pick of the same misconception."
+  },
+  "KISW.G7.SARUFI.T11_MNYAMBULIKO_WA_VITEN.KAULI": {
+   "forms": [
+    "chagua jibu sahihi",
+    "chagua jibu katika hadithi fupi",
+    "tafuta hatua yenye kosa"
+   ],
+   "mastery": "Mtoto hutambua kutenda (pika), kutendea (pikia) na kutendwa (pikwa) na hutumia kitenzi katika kauli inayofaa. Evidence rule: at least four of the last five fresh questions right across at least two question forms, and no repeated pick of the same misconception."
+  },
+  "KISW.G7.SARUFI.T12_AINA_ZA_SENTENSI.SENTENSI": {
+   "forms": [
+    "chagua jibu sahihi",
+    "chagua jibu katika hadithi fupi",
+    "tafuta hatua yenye kosa"
+   ],
+   "mastery": "Mtoto hutambua sentensi sahili (wazo moja) na ambatano (mawazo mawili au zaidi yaliyounganishwa kwa kiunganishi). Evidence rule: at least four of the last five fresh questions right across at least two question forms, and no repeated pick of the same misconception."
+  },
+  "KISW.G7.SARUFI.T13_UKANUSHAJI_KWA_KUZIN.UKANUSHAJI": {
+   "forms": [
+    "chagua jibu sahihi",
+    "chagua jibu katika hadithi fupi",
+    "tafuta hatua yenye kosa"
+   ],
+   "mastery": "Mtoto hukanusha sentensi katika wakati uliopo (hasomi), uliopita (hakusoma) na ujao (hatasoma). Evidence rule: at least four of the last five fresh questions right across at least two question forms, and no repeated pick of the same misconception."
+  },
+  "KISW.G7.SARUFI.T14_UKUBWA_WA_NOMINO.UKUBWA": {
+   "forms": [
+    "chagua jibu sahihi",
+    "chagua jibu katika hadithi fupi",
+    "tafuta hatua yenye kosa"
+   ],
+   "mastery": "Mtoto hutambua hali ya ukubwa (jibwa, jitu, jumba), viambishi vya ji- na ma- vya ukubwa, na hutumia nomino ipasavyo. Evidence rule: at least four of the last five fresh questions right across at least two question forms, and no repeated pick of the same misconception."
+  },
+  "KISW.G7.SARUFI.T15_USEMI_HALISI_NA_USEM.USEMI": {
+   "forms": [
+    "chagua jibu sahihi",
+    "chagua jibu katika hadithi fupi",
+    "tafuta hatua yenye kosa"
+   ],
+   "mastery": "Mtoto hutambua usemi halisi (maneno ya msemaji kwa alama za usemi) na wa taarifa, na hubadilisha mtu na wakati ipasavyo. Evidence rule: at least four of the last five fresh questions right across at least two question forms, and no repeated pick of the same misconception."
+  }
+ }
+}
