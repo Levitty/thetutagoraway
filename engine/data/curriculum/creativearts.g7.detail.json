@@ -1,0 +1,231 @@
+{
+ "outcomes": {
+  "CREA.G7.FOUNDA.INTRODUCTION_TO_CREATIVE.a": "describe categories of Creative Arts and Sports",
+  "CREA.G7.FOUNDA.INTRODUCTION_TO_CREATIVE.b": "outline the relationships among the categories of Creative Arts and Sports",
+  "CREA.G7.FOUNDA.INTRODUCTION_TO_CREATIVE.c": "make a collage on the categories of the Creative Arts and Sports",
+  "CREA.G7.FOUNDA.INTRODUCTION_TO_CREATIVE.d": "appreciate the categories of Creative Arts and Sports",
+  "CREA.G7.FOUNDA.COMPONENTS_OF_CREATIVE_A.a": "describe elements of a story",
+  "CREA.G7.FOUNDA.COMPONENTS_OF_CREATIVE_A.b": "perform activities demonstrating the components of fitness",
+  "CREA.G7.FOUNDA.COMPONENTS_OF_CREATIVE_A.c": "write note values on a treble staff",
+  "CREA.G7.FOUNDA.COMPONENTS_OF_CREATIVE_A.d": "name pitches on treble staff",
+  "CREA.G7.FOUNDA.COMPONENTS_OF_CREATIVE_A.e": "group music notes in 2 time, 4",
+  "CREA.G7.FOUNDA.COMPONENTS_OF_CREATIVE_A.f": "appreciate the components of Creative Arts and Sports",
+  "CREA.G7.CREATI.DRAWING_AND_PAINTING.a": "explain balance in a picture",
+  "CREA.G7.CREATI.DRAWING_AND_PAINTING.b": "draw a picture to apply balance",
+  "CREA.G7.CREATI.DRAWING_AND_PAINTING.c": "analyse cool and warm colours for colour temperature",
+  "CREA.G7.CREATI.DRAWING_AND_PAINTING.d": "paint a scenery based on colour temperature",
+  "CREA.G7.CREATI.DRAWING_AND_PAINTING.e": "appreciate own and others' pictorial composition",
+  "CREA.G7.CREATI.RHYTHM.a": "outline factors to consider in creating a rhythmic pattern in simple time",
+  "CREA.G7.CREATI.RHYTHM.b": "compose a four- bar rhythmic pattern in 2 time, 4",
+  "CREA.G7.CREATI.RHYTHM.c": "write rhythmic patterns in 2 on monotone from 4 dictation",
+  "CREA.G7.CREATI.RHYTHM.d": "sight read rhythmic patterns on monotone",
+  "CREA.G7.CREATI.RHYTHM.e": "appreciate rhythmic patterns created by self and others",
+  "CREA.G7.CREATI.JAVELIN_AND_SCULPTURE.a": "identify materials for carving in sculpture",
+  "CREA.G7.CREATI.JAVELIN_AND_SCULPTURE.b": "carve a javelin according to the right specification",
+  "CREA.G7.CREATI.JAVELIN_AND_SCULPTURE.c": "decorate the javelin using appropriate techniques",
+  "CREA.G7.CREATI.JAVELIN_AND_SCULPTURE.d": "perform a javelin throw following the throwing phases",
+  "CREA.G7.CREATI.JAVELIN_AND_SCULPTURE.e": "appreciate each other's carved javelin and effort in throwing the javelin",
+  "CREA.G7.CREATI.MELODY.a": "outline the qualities of a good melody",
+  "CREA.G7.CREATI.MELODY.b": "compose a four-bar melody in C major",
+  "CREA.G7.CREATI.MELODY.c": "perform created pieces of music in C major",
+  "CREA.G7.CREATI.MELODY.d": "enjoy creating melodies in C major",
+  "CREA.G7.CREATI.HANDBALL.a": "describe passing, dribbling and jump shot in Handball game",
+  "CREA.G7.CREATI.HANDBALL.b": "perform the passing skills in Handball",
+  "CREA.G7.CREATI.HANDBALL.c": "execute dribbling in Handball for skill acquisition",
+  "CREA.G7.CREATI.HANDBALL.d": "execute jump shot in Handball for enjoyment",
+  "CREA.G7.CREATI.HANDBALL.e": "appreciate each other's efforts in playing Handball game",
+  "CREA.G7.CREATI.DESCANT_RECORDER.a": "outline factors to consider in interpreting melodies on staff notation",
+  "CREA.G7.CREATI.DESCANT_RECORDER.b": "sight read simple melodies on descant recorder from staff notation",
+  "CREA.G7.CREATI.DESCANT_RECORDER.c": "play a piece in C major on a descant recorder",
+  "CREA.G7.CREATI.DESCANT_RECORDER.d": "perform simple melodies on a descant recorder observing performance directions",
+  "CREA.G7.CREATI.DESCANT_RECORDER.e": "appreciate playing music in C major on the descant recorder",
+  "CREA.G7.CREATI.STORYTELLING_AND_ANIMATI.a": "describe techniques used in storytelling",
+  "CREA.G7.CREATI.STORYTELLING_AND_ANIMATI.b": "explain qualities of a good flipbook",
+  "CREA.G7.CREATI.STORYTELLING_AND_ANIMATI.c": "compose a 3 to 5- minute story addressing an issue in society",
+  "CREA.G7.CREATI.STORYTELLING_AND_ANIMATI.d": "create a flipbook animation for storytelling",
+  "CREA.G7.CREATI.STORYTELLING_AND_ANIMATI.e": "perform a 3 to 5- minute story before an audience",
+  "CREA.G7.CREATI.STORYTELLING_AND_ANIMATI.f": "realise storytelling as a means of communication",
+  "CREA.G7.CREATI.FOOTBALL.a": "execute trapping skill in football",
+  "CREA.G7.CREATI.FOOTBALL.b": "perform dribbling skill in football",
+  "CREA.G7.CREATI.FOOTBALL.c": "execute shooting skill in football",
+  "CREA.G7.CREATI.FOOTBALL.d": "make improvised crayons for drawing",
+  "CREA.G7.CREATI.FOOTBALL.e": "create a pictorial composition using crayon etching inspired by football game",
+  "CREA.G7.CREATI.FOOTBALL.f": "value team effort in a football game and crayon etched drawing",
+  "CREA.G7.CREATI.KENYAN_FOLK_SONGS.a": "classify folk songs in Kenyan communities",
+  "CREA.G7.CREATI.KENYAN_FOLK_SONGS.b": "perform a folksong from a Kenyan community with appropriate techniques",
+  "CREA.G7.CREATI.KENYAN_FOLK_SONGS.c": "appreciate folk songs performance as means of cultural preservation",
+  "CREA.G7.CREATI.INDIGENOUS_KENYAN_CRAFT.a": "discuss function of jewellery in Kenyan communities",
+  "CREA.G7.CREATI.INDIGENOUS_KENYAN_CRAFT.b": "identify materials for beadwork in the local environment",
+  "CREA.G7.CREATI.INDIGENOUS_KENYAN_CRAFT.c": "make beaded jewellery inspired by patriotism for Kenya",
+  "CREA.G7.CREATI.INDIGENOUS_KENYAN_CRAFT.d": "sing a patriotic song adorned in beaded jewellery inspired by patriotism",
+  "CREA.G7.CREATI.INDIGENOUS_KENYAN_CRAFT.e": "recognise beadwork as an indigenous Kenyan craft",
+  "CREA.G7.CREATI.SWIMMING.a": "describe different ways of water entry in a pool",
+  "CREA.G7.CREATI.SWIMMING.b": "perform a crouch dive into the swimming pool",
+  "CREA.G7.CREATI.SWIMMING.c": "execute a water entry skill using a pencil dive",
+  "CREA.G7.CREATI.SWIMMING.d": "perform backstroke skill in swimming for skill development",
+  "CREA.G7.CREATI.SWIMMING.e": "appreciate own and others’ effort in executing backstroke skill",
+  "CREA.G7.CREATI.KENYAN_INDIGENOUS_GAMES.a": "identify types of indigenous rope games played in Kenya",
+  "CREA.G7.CREATI.KENYAN_INDIGENOUS_GAMES.b": "perform different indigenous rope games for skill acquisition",
+  "CREA.G7.CREATI.KENYAN_INDIGENOUS_GAMES.c": "perform indigenous rope skipping to a musical rhythm for enjoyment",
+  "CREA.G7.CREATI.KENYAN_INDIGENOUS_GAMES.d": "appreciate the role played by indigenous rope skipping games for fitness and health",
+  "CREA.G7.APPREC.ANALYSIS_OF_CREATIVE_ART.a": "examine the spirit of sports values for clean sports",
+  "CREA.G7.APPREC.ANALYSIS_OF_CREATIVE_ART.b": "analyse a folk song from a Kenyan community",
+  "CREA.G7.APPREC.ANALYSIS_OF_CREATIVE_ART.c": "analyse a storytelling performance",
+  "CREA.G7.APPREC.ANALYSIS_OF_CREATIVE_ART.d": "make portfolio for showcase",
+  "CREA.G7.APPREC.ANALYSIS_OF_CREATIVE_ART.e": "appreciate the role of analysis in Creative Arts and Sports"
+ },
+ "skills": {
+  "CREA.G7.FOUNDA.INTRODUCTION_TO_CREATIVE.CA_CATEGORIES": {
+   "forms": [
+    "pick the right answer",
+    "pick the right answer in a short story",
+    "find the false step in a learner's reason"
+   ],
+   "mastery": "The child names the categories (art and craft, music, physical education and sports, and performing arts such as drama and dance) and says they work together, for example music with dance and drama. Evidence rule: at least four of the last five fresh questions right across at least two question forms, and no repeated pick of the same misconception."
+  },
+  "CREA.G7.FOUNDA.COMPONENTS_OF_CREATIVE_A.STORY_ELEMENTS": {
+   "forms": [
+    "pick the right answer",
+    "pick the right answer in a short story",
+    "find the false step in a learner's reason"
+   ],
+   "mastery": "The child names characters, setting, plot and theme as elements of a story, and says the setting is where and when it happens. Evidence rule: at least four of the last five fresh questions right across at least two question forms, and no repeated pick of the same misconception."
+  },
+  "CREA.G7.FOUNDA.COMPONENTS_OF_CREATIVE_A.FITNESS_COMPONENTS": {
+   "forms": [
+    "pick the right answer",
+    "pick the right answer in a short story",
+    "find the false step in a learner's reason"
+   ],
+   "mastery": "The child names health-related components (cardiovascular endurance, muscular strength, muscular endurance, flexibility, body composition) and skill-related ones (agility, balance, coordination, power, speed, reaction time). Evidence rule: at least four of the last five fresh questions right across at least two question forms, and no repeated pick of the same misconception."
+  },
+  "CREA.G7.FOUNDA.COMPONENTS_OF_CREATIVE_A.NOTE_VALUES": {
+   "forms": [
+    "pick the right answer",
+    "pick the right answer in a short story",
+    "find the false step in a learner's reason"
+   ],
+   "mastery": "The child says a semibreve is 4 beats, a minim 2, a crotchet 1 and a quaver half a beat, and that a bar in 2 time (two crotchet beats) holds the value of two crotchets. Evidence rule: at least four of the last five fresh questions right across at least two question forms, and no repeated pick of the same misconception."
+  },
+  "CREA.G7.FOUNDA.COMPONENTS_OF_CREATIVE_A.TREBLE_PITCHES": {
+   "forms": [
+    "pick the right answer",
+    "pick the right answer in a short story",
+    "find the false step in a learner's reason"
+   ],
+   "mastery": "The child says the lines of the treble staff from the bottom are E G B D F and the spaces are F A C E, and names a note by its place. Evidence rule: at least four of the last five fresh questions right across at least two question forms, and no repeated pick of the same misconception."
+  },
+  "CREA.G7.CREATI.DRAWING_AND_PAINTING.BALANCE": {
+   "forms": [
+    "pick the right answer",
+    "pick the right answer in a short story",
+    "find the false step in a learner's reason"
+   ],
+   "mastery": "The child says balance is the even spread of visual weight in a picture, and names symmetrical (both sides alike), asymmetrical (different but equal in weight) and radial (spreading from the centre) balance. Evidence rule: at least four of the last five fresh questions right across at least two question forms, and no repeated pick of the same misconception."
+  },
+  "CREA.G7.CREATI.DRAWING_AND_PAINTING.COLOUR_TEMP": {
+   "forms": [
+    "pick the right answer",
+    "pick the right answer in a short story",
+    "find the false step in a learner's reason"
+   ],
+   "mastery": "The child says red, orange and yellow are warm colours (like fire and sun) and blue, green and violet are cool (like water and sky), and says warm colours seem to come forward. Evidence rule: at least four of the last five fresh questions right across at least two question forms, and no repeated pick of the same misconception."
+  },
+  "CREA.G7.CREATI.RHYTHM.RHYTHM_FACTORS": {
+   "forms": [
+    "pick the right answer",
+    "pick the right answer in a short story",
+    "find the false step in a learner's reason"
+   ],
+   "mastery": "The child says a rhythm pattern depends on the time signature, the number of bars, the note values and rests, and that the beats in each bar must add up. Evidence rule: at least four of the last five fresh questions right across at least two question forms, and no repeated pick of the same misconception."
+  },
+  "CREA.G7.CREATI.JAVELIN_AND_SCULPTURE.JAVELIN": {
+   "forms": [
+    "pick the right answer",
+    "pick the right answer in a short story",
+    "find the false step in a learner's reason"
+   ],
+   "mastery": "The child names carving materials (soft wood, bamboo) and the throwing phases in order (grip and carry, approach run, cross-step, delivery, recovery), and says a javelin is thrown only with a teacher in a cleared field. Evidence rule: at least four of the last five fresh questions right across at least two question forms, and no repeated pick of the same misconception."
+  },
+  "CREA.G7.CREATI.MELODY.MELODY_QUALITIES": {
+   "forms": [
+    "pick the right answer",
+    "pick the right answer in a short story",
+    "find the false step in a learner's reason"
+   ],
+   "mastery": "The child says a good melody has a clear shape, uses steps and some leaps, repeats a phrase, and ends on the home note C in C major. Evidence rule: at least four of the last five fresh questions right across at least two question forms, and no repeated pick of the same misconception."
+  },
+  "CREA.G7.CREATI.HANDBALL.HANDBALL": {
+   "forms": [
+    "pick the right answer",
+    "pick the right answer in a short story",
+    "find the false step in a learner's reason"
+   ],
+   "mastery": "The child says handball is played with the hands, a team has seven players with one goalkeeper, a player may take three steps and hold the ball for three seconds, dribbles by bouncing, and in a jump shot throws while in the air. Evidence rule: at least four of the last five fresh questions right across at least two question forms, and no repeated pick of the same misconception."
+  },
+  "CREA.G7.CREATI.DESCANT_RECORDER.RECORDER_FACTORS": {
+   "forms": [
+    "pick the right answer",
+    "pick the right answer in a short story",
+    "find the false step in a learner's reason"
+   ],
+   "mastery": "The child names the clef, key signature, time signature, note values, rests, dynamics and tempo as things to check before playing. Evidence rule: at least four of the last five fresh questions right across at least two question forms, and no repeated pick of the same misconception."
+  },
+  "CREA.G7.CREATI.STORYTELLING_AND_ANIMATI.STORY_TECHNIQUES": {
+   "forms": [
+    "pick the right answer",
+    "pick the right answer in a short story",
+    "find the false step in a learner's reason"
+   ],
+   "mastery": "The child names voice variation, gestures, facial expression, pauses and audience participation, and says a good flipbook has many drawings that change a little each time, in the same place on each page. Evidence rule: at least four of the last five fresh questions right across at least two question forms, and no repeated pick of the same misconception."
+  },
+  "CREA.G7.CREATI.FOOTBALL.FOOTBALL_SKILLS": {
+   "forms": [
+    "pick the right answer",
+    "pick the right answer in a short story",
+    "find the false step in a learner's reason"
+   ],
+   "mastery": "The child says trapping stops and controls the ball, dribbling keeps the ball close while moving, shooting sends it at the goal, a team has eleven players, and crayon etching scratches a top dark layer to show colours beneath. Evidence rule: at least four of the last five fresh questions right across at least two question forms, and no repeated pick of the same misconception."
+  },
+  "CREA.G7.CREATI.KENYAN_FOLK_SONGS.FOLK_SONGS": {
+   "forms": [
+    "pick the right answer",
+    "pick the right answer in a short story",
+    "find the false step in a learner's reason"
+   ],
+   "mastery": "The child names kinds of folk songs (lullabies, work songs, wedding songs, initiation songs, war songs, funeral songs, children's play songs) and what each is sung for. Evidence rule: at least four of the last five fresh questions right across at least two question forms, and no repeated pick of the same misconception."
+  },
+  "CREA.G7.CREATI.INDIGENOUS_KENYAN_CRAFT.BEADWORK": {
+   "forms": [
+    "pick the right answer",
+    "pick the right answer in a short story",
+    "find the false step in a learner's reason"
+   ],
+   "mastery": "The child says jewellery decorates, shows identity and status, and marks ceremonies, and names materials for beadwork (beads, thread, wire, needle, leather). Evidence rule: at least four of the last five fresh questions right across at least two question forms, and no repeated pick of the same misconception."
+  },
+  "CREA.G7.CREATI.SWIMMING.SWIMMING": {
+   "forms": [
+    "pick the right answer",
+    "pick the right answer in a short story",
+    "find the false step in a learner's reason"
+   ],
+   "mastery": "The child says water entry may be feet first or by a dive, that in a pencil dive the body is straight with feet first, that in a crouch dive the body is crouched on the pool edge, and that in backstroke the swimmer lies on the back with alternate arm strokes and a flutter kick; swimming is only with a lifeguard. Evidence rule: at least four of the last five fresh questions right across at least two question forms, and no repeated pick of the same misconception."
+  },
+  "CREA.G7.CREATI.KENYAN_INDIGENOUS_GAMES.ROPE_GAMES": {
+   "forms": [
+    "pick the right answer",
+    "pick the right answer in a short story",
+    "find the false step in a learner's reason"
+   ],
+   "mastery": "The child names rope skipping, tug of war and rope jumping, and says rope games build fitness, coordination and teamwork. Evidence rule: at least four of the last five fresh questions right across at least two question forms, and no repeated pick of the same misconception."
+  },
+  "CREA.G7.APPREC.ANALYSIS_OF_CREATIVE_ART.SPORTS_VALUES": {
+   "forms": [
+    "pick the right answer",
+    "pick the right answer in a short story",
+    "find the false step in a learner's reason"
+   ],
+   "mastery": "The child names fair play, honesty, respect, teamwork and discipline as the spirit of clean sport, and says cheating and drugs spoil sport. Evidence rule: at least four of the last five fresh questions right across at least two question forms, and no repeated pick of the same misconception."
+  }
+ }
+}

@@ -1,0 +1,857 @@
+{
+ "CREA.G7.FOUNDA.INTRODUCTION_TO_CREATIVE.CA_CATEGORIES.M_CA7_CC_ONE_ONLY": {
+  "skill": "CREA.G7.FOUNDA.INTRODUCTION_TO_CREATIVE.CA_CATEGORIES",
+  "error": "Thinks the categories are separate.",
+  "example": {
+   "question": "How do music and dance relate?",
+   "wrong_answer": "They never go together",
+   "correct_answer": "They often work together"
+  },
+  "cause": "The child mixes up two rules that are taught close together.",
+  "reveals": "Offer \"They never go together\" next to the right answer and ask the question again in a new situation.",
+  "help": "Music and dance often work together.",
+  "feedback": "Music and dance often work together.",
+  "source": "To confirm by a Creative Arts and Sports teacher: a common classroom error, not traced to a study by the author.",
+  "status": "draft"
+ },
+ "CREA.G7.FOUNDA.INTRODUCTION_TO_CREATIVE.CA_CATEGORIES.M_CA7_CC_SPORT": {
+  "skill": "CREA.G7.FOUNDA.INTRODUCTION_TO_CREATIVE.CA_CATEGORIES",
+  "error": "Leaves sports out of the arts.",
+  "example": {
+   "question": "Which is a category of Creative Arts and Sports?",
+   "wrong_answer": "Mathematics",
+   "correct_answer": "Physical education and sports"
+  },
+  "cause": "The child mixes up two rules that are taught close together.",
+  "reveals": "Offer \"Mathematics\" next to the right answer and ask the question again in a new situation.",
+  "help": "Physical education and sports is a category.",
+  "feedback": "Physical education and sports is a category.",
+  "source": "To confirm by a Creative Arts and Sports teacher: a common classroom error, not traced to a study by the author.",
+  "status": "draft"
+ },
+ "CREA.G7.FOUNDA.INTRODUCTION_TO_CREATIVE.CA_CATEGORIES.M_CA7_CC_ARTS": {
+  "skill": "CREA.G7.FOUNDA.INTRODUCTION_TO_CREATIVE.CA_CATEGORIES",
+  "error": "Thinks only painting is art.",
+  "example": {
+   "question": "Which is art and craft?",
+   "wrong_answer": "Playing football",
+   "correct_answer": "Making a collage"
+  },
+  "cause": "The child mixes up two rules that are taught close together.",
+  "reveals": "Offer \"Playing football\" next to the right answer and ask the question again in a new situation.",
+  "help": "A collage is art and craft.",
+  "feedback": "A collage is art and craft.",
+  "source": "To confirm by a Creative Arts and Sports teacher: a common classroom error, not traced to a study by the author.",
+  "status": "draft"
+ },
+ "CREA.G7.FOUNDA.COMPONENTS_OF_CREATIVE_A.STORY_ELEMENTS.M_CA7_SE_SETTING": {
+  "skill": "CREA.G7.FOUNDA.COMPONENTS_OF_CREATIVE_A.STORY_ELEMENTS",
+  "error": "Says setting is the people.",
+  "example": {
+   "question": "What is the setting of a story?",
+   "wrong_answer": "The people in it",
+   "correct_answer": "Where and when it happens"
+  },
+  "cause": "The child mixes up two rules that are taught close together.",
+  "reveals": "Offer \"The people in it\" next to the right answer and ask the question again in a new situation.",
+  "help": "The setting is the place and time.",
+  "feedback": "The setting is the place and time.",
+  "source": "To confirm by a Creative Arts and Sports teacher: a common classroom error, not traced to a study by the author.",
+  "status": "draft"
+ },
+ "CREA.G7.FOUNDA.COMPONENTS_OF_CREATIVE_A.STORY_ELEMENTS.M_CA7_SE_CHARACTER": {
+  "skill": "CREA.G7.FOUNDA.COMPONENTS_OF_CREATIVE_A.STORY_ELEMENTS",
+  "error": "Says characters are the place.",
+  "example": {
+   "question": "Who are the characters?",
+   "wrong_answer": "The place of the story",
+   "correct_answer": "The people or animals in it"
+  },
+  "cause": "The child mixes up two rules that are taught close together.",
+  "reveals": "Offer \"The place of the story\" next to the right answer and ask the question again in a new situation.",
+  "help": "Characters are the people or animals in the story.",
+  "feedback": "Characters are the people or animals in the story.",
+  "source": "To confirm by a Creative Arts and Sports teacher: a common classroom error, not traced to a study by the author.",
+  "status": "draft"
+ },
+ "CREA.G7.FOUNDA.COMPONENTS_OF_CREATIVE_A.STORY_ELEMENTS.M_CA7_SE_PLOT": {
+  "skill": "CREA.G7.FOUNDA.COMPONENTS_OF_CREATIVE_A.STORY_ELEMENTS",
+  "error": "Says plot is the title.",
+  "example": {
+   "question": "What is the plot?",
+   "wrong_answer": "The title of the story",
+   "correct_answer": "The order of events"
+  },
+  "cause": "The child mixes up two rules that are taught close together.",
+  "reveals": "Offer \"The title of the story\" next to the right answer and ask the question again in a new situation.",
+  "help": "The plot is the order of events.",
+  "feedback": "The plot is the order of events.",
+  "source": "To confirm by a Creative Arts and Sports teacher: a common classroom error, not traced to a study by the author.",
+  "status": "draft"
+ },
+ "CREA.G7.FOUNDA.COMPONENTS_OF_CREATIVE_A.FITNESS_COMPONENTS.M_CA7_FC_AGILITY": {
+  "skill": "CREA.G7.FOUNDA.COMPONENTS_OF_CREATIVE_A.FITNESS_COMPONENTS",
+  "error": "Mixes agility with flexibility.",
+  "example": {
+   "question": "Which is the ability to change direction quickly?",
+   "wrong_answer": "Flexibility",
+   "correct_answer": "Agility"
+  },
+  "cause": "The child mixes up two rules that are taught close together.",
+  "reveals": "Offer \"Flexibility\" next to the right answer and ask the question again in a new situation.",
+  "help": "Agility is changing direction quickly.",
+  "feedback": "Agility is changing direction quickly.",
+  "source": "To confirm by a Creative Arts and Sports teacher: a common classroom error, not traced to a study by the author.",
+  "status": "draft"
+ },
+ "CREA.G7.FOUNDA.COMPONENTS_OF_CREATIVE_A.FITNESS_COMPONENTS.M_CA7_FC_FLEX": {
+  "skill": "CREA.G7.FOUNDA.COMPONENTS_OF_CREATIVE_A.FITNESS_COMPONENTS",
+  "error": "Mixes flexibility with strength.",
+  "example": {
+   "question": "Which is the range of movement at a joint?",
+   "wrong_answer": "Strength",
+   "correct_answer": "Flexibility"
+  },
+  "cause": "The child mixes up two rules that are taught close together.",
+  "reveals": "Offer \"Strength\" next to the right answer and ask the question again in a new situation.",
+  "help": "Flexibility is the range of movement at a joint.",
+  "feedback": "Flexibility is the range of movement at a joint.",
+  "source": "To confirm by a Creative Arts and Sports teacher: a common classroom error, not traced to a study by the author.",
+  "status": "draft"
+ },
+ "CREA.G7.FOUNDA.COMPONENTS_OF_CREATIVE_A.FITNESS_COMPONENTS.M_CA7_FC_ENDURANCE": {
+  "skill": "CREA.G7.FOUNDA.COMPONENTS_OF_CREATIVE_A.FITNESS_COMPONENTS",
+  "error": "Mixes endurance with speed.",
+  "example": {
+   "question": "Which is lasting a long time without tiring?",
+   "wrong_answer": "Speed",
+   "correct_answer": "Endurance"
+  },
+  "cause": "The child mixes up two rules that are taught close together.",
+  "reveals": "Offer \"Speed\" next to the right answer and ask the question again in a new situation.",
+  "help": "Endurance is lasting a long time without tiring.",
+  "feedback": "Endurance is lasting a long time without tiring.",
+  "source": "To confirm by a Creative Arts and Sports teacher: a common classroom error, not traced to a study by the author.",
+  "status": "draft"
+ },
+ "CREA.G7.FOUNDA.COMPONENTS_OF_CREATIVE_A.NOTE_VALUES.M_CA7_NV_MINIM": {
+  "skill": "CREA.G7.FOUNDA.COMPONENTS_OF_CREATIVE_A.NOTE_VALUES",
+  "error": "Gives the wrong beats for a minim.",
+  "example": {
+   "question": "How many beats is a minim?",
+   "wrong_answer": "1",
+   "correct_answer": "2"
+  },
+  "cause": "The child mixes up two rules that are taught close together.",
+  "reveals": "Offer \"1\" next to the right answer and ask the question again in a new situation.",
+  "help": "A minim is 2 beats.",
+  "feedback": "A minim is 2 beats.",
+  "source": "To confirm by a Creative Arts and Sports teacher: a common classroom error, not traced to a study by the author.",
+  "status": "draft"
+ },
+ "CREA.G7.FOUNDA.COMPONENTS_OF_CREATIVE_A.NOTE_VALUES.M_CA7_NV_SEMIBREVE": {
+  "skill": "CREA.G7.FOUNDA.COMPONENTS_OF_CREATIVE_A.NOTE_VALUES",
+  "error": "Gives the wrong beats for a semibreve.",
+  "example": {
+   "question": "How many beats is a semibreve?",
+   "wrong_answer": "2",
+   "correct_answer": "4"
+  },
+  "cause": "The child mixes up two rules that are taught close together.",
+  "reveals": "Offer \"2\" next to the right answer and ask the question again in a new situation.",
+  "help": "A semibreve is 4 beats.",
+  "feedback": "A semibreve is 4 beats.",
+  "source": "To confirm by a Creative Arts and Sports teacher: a common classroom error, not traced to a study by the author.",
+  "status": "draft"
+ },
+ "CREA.G7.FOUNDA.COMPONENTS_OF_CREATIVE_A.NOTE_VALUES.M_CA7_NV_BAR": {
+  "skill": "CREA.G7.FOUNDA.COMPONENTS_OF_CREATIVE_A.NOTE_VALUES",
+  "error": "Gives the wrong total for a bar in 2 time.",
+  "example": {
+   "question": "In 2 time, a bar holds how many crotchet beats?",
+   "wrong_answer": "4",
+   "correct_answer": "2"
+  },
+  "cause": "The child mixes up two rules that are taught close together.",
+  "reveals": "Offer \"4\" next to the right answer and ask the question again in a new situation.",
+  "help": "A bar in 2 time holds 2 crotchet beats.",
+  "feedback": "A bar in 2 time holds 2 crotchet beats.",
+  "source": "To confirm by a Creative Arts and Sports teacher: a common classroom error, not traced to a study by the author.",
+  "status": "draft"
+ },
+ "CREA.G7.FOUNDA.COMPONENTS_OF_CREATIVE_A.TREBLE_PITCHES.M_CA7_TP_LINES": {
+  "skill": "CREA.G7.FOUNDA.COMPONENTS_OF_CREATIVE_A.TREBLE_PITCHES",
+  "error": "Gives the spaces for the lines.",
+  "example": {
+   "question": "What are the lines of the treble staff from the bottom?",
+   "wrong_answer": "F A C E",
+   "correct_answer": "E G B D F"
+  },
+  "cause": "The child mixes up two rules that are taught close together.",
+  "reveals": "Offer \"F A C E\" next to the right answer and ask the question again in a new situation.",
+  "help": "The lines are E G B D F.",
+  "feedback": "The lines are E G B D F.",
+  "source": "To confirm by a Creative Arts and Sports teacher: a common classroom error, not traced to a study by the author.",
+  "status": "draft"
+ },
+ "CREA.G7.FOUNDA.COMPONENTS_OF_CREATIVE_A.TREBLE_PITCHES.M_CA7_TP_SPACES": {
+  "skill": "CREA.G7.FOUNDA.COMPONENTS_OF_CREATIVE_A.TREBLE_PITCHES",
+  "error": "Gives the lines for the spaces.",
+  "example": {
+   "question": "What are the spaces of the treble staff from the bottom?",
+   "wrong_answer": "E G B D F",
+   "correct_answer": "F A C E"
+  },
+  "cause": "The child mixes up two rules that are taught close together.",
+  "reveals": "Offer \"E G B D F\" next to the right answer and ask the question again in a new situation.",
+  "help": "The spaces are F A C E.",
+  "feedback": "The spaces are F A C E.",
+  "source": "To confirm by a Creative Arts and Sports teacher: a common classroom error, not traced to a study by the author.",
+  "status": "draft"
+ },
+ "CREA.G7.FOUNDA.COMPONENTS_OF_CREATIVE_A.TREBLE_PITCHES.M_CA7_TP_FIRST": {
+  "skill": "CREA.G7.FOUNDA.COMPONENTS_OF_CREATIVE_A.TREBLE_PITCHES",
+  "error": "Names the wrong first line.",
+  "example": {
+   "question": "Which note is on the bottom line of the treble staff?",
+   "wrong_answer": "F",
+   "correct_answer": "E"
+  },
+  "cause": "The child mixes up two rules that are taught close together.",
+  "reveals": "Offer \"F\" next to the right answer and ask the question again in a new situation.",
+  "help": "The bottom line is E.",
+  "feedback": "The bottom line is E.",
+  "source": "To confirm by a Creative Arts and Sports teacher: a common classroom error, not traced to a study by the author.",
+  "status": "draft"
+ },
+ "CREA.G7.CREATI.DRAWING_AND_PAINTING.BALANCE.M_CA7_BL_SYM": {
+  "skill": "CREA.G7.CREATI.DRAWING_AND_PAINTING.BALANCE",
+  "error": "Does not know symmetrical.",
+  "example": {
+   "question": "What is symmetrical balance?",
+   "wrong_answer": "Both sides are different",
+   "correct_answer": "Both sides are alike"
+  },
+  "cause": "The child mixes up two rules that are taught close together.",
+  "reveals": "Offer \"Both sides are different\" next to the right answer and ask the question again in a new situation.",
+  "help": "Symmetrical balance has both sides alike.",
+  "feedback": "Symmetrical balance has both sides alike.",
+  "source": "To confirm by a Creative Arts and Sports teacher: a common classroom error, not traced to a study by the author.",
+  "status": "draft"
+ },
+ "CREA.G7.CREATI.DRAWING_AND_PAINTING.BALANCE.M_CA7_BL_MEANING": {
+  "skill": "CREA.G7.CREATI.DRAWING_AND_PAINTING.BALANCE",
+  "error": "Thinks balance is about size only.",
+  "example": {
+   "question": "What is balance in a picture?",
+   "wrong_answer": "Making everything the same colour",
+   "correct_answer": "Spreading visual weight evenly"
+  },
+  "cause": "The child mixes up two rules that are taught close together.",
+  "reveals": "Offer \"Making everything the same colour\" next to the right answer and ask the question again in a new situation.",
+  "help": "Balance is the even spread of visual weight.",
+  "feedback": "Balance is the even spread of visual weight.",
+  "source": "To confirm by a Creative Arts and Sports teacher: a common classroom error, not traced to a study by the author.",
+  "status": "draft"
+ },
+ "CREA.G7.CREATI.DRAWING_AND_PAINTING.BALANCE.M_CA7_BL_RADIAL": {
+  "skill": "CREA.G7.CREATI.DRAWING_AND_PAINTING.BALANCE",
+  "error": "Does not know radial.",
+  "example": {
+   "question": "What is radial balance?",
+   "wrong_answer": "Items spread from the centre",
+   "correct_answer": "Items in a straight line"
+  },
+  "cause": "The child mixes up two rules that are taught close together.",
+  "reveals": "Offer \"Items spread from the centre\" next to the right answer and ask the question again in a new situation.",
+  "help": "Radial balance spreads from the centre.",
+  "feedback": "Radial balance spreads from the centre.",
+  "source": "To confirm by a Creative Arts and Sports teacher: a common classroom error, not traced to a study by the author.",
+  "status": "draft"
+ },
+ "CREA.G7.CREATI.DRAWING_AND_PAINTING.COLOUR_TEMP.M_CA7_CT_WARM": {
+  "skill": "CREA.G7.CREATI.DRAWING_AND_PAINTING.COLOUR_TEMP",
+  "error": "Puts blue among warm colours.",
+  "example": {
+   "question": "Which is a warm colour?",
+   "wrong_answer": "Blue",
+   "correct_answer": "Orange"
+  },
+  "cause": "The child mixes up two rules that are taught close together.",
+  "reveals": "Offer \"Blue\" next to the right answer and ask the question again in a new situation.",
+  "help": "Red, orange and yellow are warm.",
+  "feedback": "Red, orange and yellow are warm.",
+  "source": "To confirm by a Creative Arts and Sports teacher: a common classroom error, not traced to a study by the author.",
+  "status": "draft"
+ },
+ "CREA.G7.CREATI.DRAWING_AND_PAINTING.COLOUR_TEMP.M_CA7_CT_COOL": {
+  "skill": "CREA.G7.CREATI.DRAWING_AND_PAINTING.COLOUR_TEMP",
+  "error": "Puts red among cool colours.",
+  "example": {
+   "question": "Which is a cool colour?",
+   "wrong_answer": "Red",
+   "correct_answer": "Blue"
+  },
+  "cause": "The child mixes up two rules that are taught close together.",
+  "reveals": "Offer \"Red\" next to the right answer and ask the question again in a new situation.",
+  "help": "Blue, green and violet are cool.",
+  "feedback": "Blue, green and violet are cool.",
+  "source": "To confirm by a Creative Arts and Sports teacher: a common classroom error, not traced to a study by the author.",
+  "status": "draft"
+ },
+ "CREA.G7.CREATI.DRAWING_AND_PAINTING.COLOUR_TEMP.M_CA7_CT_FEEL": {
+  "skill": "CREA.G7.CREATI.DRAWING_AND_PAINTING.COLOUR_TEMP",
+  "error": "Mixes the feeling of warm and cool.",
+  "example": {
+   "question": "Which colours remind us of the sun and fire?",
+   "wrong_answer": "Cool colours",
+   "correct_answer": "Warm colours"
+  },
+  "cause": "The child mixes up two rules that are taught close together.",
+  "reveals": "Offer \"Cool colours\" next to the right answer and ask the question again in a new situation.",
+  "help": "Warm colours remind us of sun and fire.",
+  "feedback": "Warm colours remind us of sun and fire.",
+  "source": "To confirm by a Creative Arts and Sports teacher: a common classroom error, not traced to a study by the author.",
+  "status": "draft"
+ },
+ "CREA.G7.CREATI.RHYTHM.RHYTHM_FACTORS.M_CA7_RF_BEATS": {
+  "skill": "CREA.G7.CREATI.RHYTHM.RHYTHM_FACTORS",
+  "error": "Thinks beats need not add up.",
+  "example": {
+   "question": "In a bar of 2 time, the notes must add up to...",
+   "wrong_answer": "Any number of beats",
+   "correct_answer": "Two crotchet beats"
+  },
+  "cause": "The child mixes up two rules that are taught close together.",
+  "reveals": "Offer \"Any number of beats\" next to the right answer and ask the question again in a new situation.",
+  "help": "The notes in each bar add up to the time signature.",
+  "feedback": "The notes in each bar add up to the time signature.",
+  "source": "To confirm by a Creative Arts and Sports teacher: a common classroom error, not traced to a study by the author.",
+  "status": "draft"
+ },
+ "CREA.G7.CREATI.RHYTHM.RHYTHM_FACTORS.M_CA7_RF_FACTOR": {
+  "skill": "CREA.G7.CREATI.RHYTHM.RHYTHM_FACTORS",
+  "error": "Names a non-factor.",
+  "example": {
+   "question": "Which is a factor in making a rhythm?",
+   "wrong_answer": "The colour of the paper",
+   "correct_answer": "The time signature"
+  },
+  "cause": "The child mixes up two rules that are taught close together.",
+  "reveals": "Offer \"The colour of the paper\" next to the right answer and ask the question again in a new situation.",
+  "help": "The time signature is a factor.",
+  "feedback": "The time signature is a factor.",
+  "source": "To confirm by a Creative Arts and Sports teacher: a common classroom error, not traced to a study by the author.",
+  "status": "draft"
+ },
+ "CREA.G7.CREATI.RHYTHM.RHYTHM_FACTORS.M_CA7_RF_BARS": {
+  "skill": "CREA.G7.CREATI.RHYTHM.RHYTHM_FACTORS",
+  "error": "Gives the wrong count of bars.",
+  "example": {
+   "question": "How many bars are in a four-bar pattern?",
+   "wrong_answer": "Two",
+   "correct_answer": "Four"
+  },
+  "cause": "The child mixes up two rules that are taught close together.",
+  "reveals": "Offer \"Two\" next to the right answer and ask the question again in a new situation.",
+  "help": "A four-bar pattern has four bars.",
+  "feedback": "A four-bar pattern has four bars.",
+  "source": "To confirm by a Creative Arts and Sports teacher: a common classroom error, not traced to a study by the author.",
+  "status": "draft"
+ },
+ "CREA.G7.CREATI.JAVELIN_AND_SCULPTURE.JAVELIN.M_CA7_JV_MATERIAL": {
+  "skill": "CREA.G7.CREATI.JAVELIN_AND_SCULPTURE.JAVELIN",
+  "error": "Names an unsuitable carving material.",
+  "example": {
+   "question": "Which material suits carving a javelin?",
+   "wrong_answer": "Iron",
+   "correct_answer": "Soft wood"
+  },
+  "cause": "The child mixes up two rules that are taught close together.",
+  "reveals": "Offer \"Iron\" next to the right answer and ask the question again in a new situation.",
+  "help": "Soft wood or bamboo is carved.",
+  "feedback": "Soft wood or bamboo is carved.",
+  "source": "To confirm by a Creative Arts and Sports teacher: a common classroom error, not traced to a study by the author.",
+  "status": "draft"
+ },
+ "CREA.G7.CREATI.JAVELIN_AND_SCULPTURE.JAVELIN.M_CA7_JV_PHASE": {
+  "skill": "CREA.G7.CREATI.JAVELIN_AND_SCULPTURE.JAVELIN",
+  "error": "Puts delivery before approach.",
+  "example": {
+   "question": "Which phase comes first in a javelin throw?",
+   "wrong_answer": "Delivery",
+   "correct_answer": "Grip and carry"
+  },
+  "cause": "The child mixes up two rules that are taught close together.",
+  "reveals": "Offer \"Delivery\" next to the right answer and ask the question again in a new situation.",
+  "help": "The grip and carry come first, then the approach run.",
+  "feedback": "The grip and carry come first, then the approach run.",
+  "source": "To confirm by a Creative Arts and Sports teacher: a common classroom error, not traced to a study by the author.",
+  "status": "draft"
+ },
+ "CREA.G7.CREATI.JAVELIN_AND_SCULPTURE.JAVELIN.M_CA7_JV_SAFETY": {
+  "skill": "CREA.G7.CREATI.JAVELIN_AND_SCULPTURE.JAVELIN",
+  "error": "Says a javelin may be thrown anywhere.",
+  "example": {
+   "question": "Where is a javelin thrown?",
+   "wrong_answer": "Anywhere among people",
+   "correct_answer": "Only in a cleared field with a teacher"
+  },
+  "cause": "The child mixes up two rules that are taught close together.",
+  "reveals": "Offer \"Anywhere among people\" next to the right answer and ask the question again in a new situation.",
+  "help": "A javelin is thrown only in a cleared field with a teacher.",
+  "feedback": "A javelin is thrown only in a cleared field with a teacher.",
+  "source": "To confirm by a Creative Arts and Sports teacher: a common classroom error, not traced to a study by the author.",
+  "status": "draft"
+ },
+ "CREA.G7.CREATI.MELODY.MELODY_QUALITIES.M_CA7_MQ_HOME": {
+  "skill": "CREA.G7.CREATI.MELODY.MELODY_QUALITIES",
+  "error": "Ends a melody on any note.",
+  "example": {
+   "question": "On which note does a melody in C major end?",
+   "wrong_answer": "G",
+   "correct_answer": "C"
+  },
+  "cause": "The child mixes up two rules that are taught close together.",
+  "reveals": "Offer \"G\" next to the right answer and ask the question again in a new situation.",
+  "help": "A melody in C major ends on C.",
+  "feedback": "A melody in C major ends on C.",
+  "source": "To confirm by a Creative Arts and Sports teacher: a common classroom error, not traced to a study by the author.",
+  "status": "draft"
+ },
+ "CREA.G7.CREATI.MELODY.MELODY_QUALITIES.M_CA7_MQ_SHAPE": {
+  "skill": "CREA.G7.CREATI.MELODY.MELODY_QUALITIES",
+  "error": "Thinks a melody has no shape.",
+  "example": {
+   "question": "Which is a quality of a good melody?",
+   "wrong_answer": "No pattern at all",
+   "correct_answer": "A clear shape with steps and leaps"
+  },
+  "cause": "The child mixes up two rules that are taught close together.",
+  "reveals": "Offer \"No pattern at all\" next to the right answer and ask the question again in a new situation.",
+  "help": "A good melody has a clear shape.",
+  "feedback": "A good melody has a clear shape.",
+  "source": "To confirm by a Creative Arts and Sports teacher: a common classroom error, not traced to a study by the author.",
+  "status": "draft"
+ },
+ "CREA.G7.CREATI.MELODY.MELODY_QUALITIES.M_CA7_MQ_REPEAT": {
+  "skill": "CREA.G7.CREATI.MELODY.MELODY_QUALITIES",
+  "error": "Thinks repetition is wrong.",
+  "example": {
+   "question": "Why repeat a phrase in a melody?",
+   "wrong_answer": "To make it harder to sing",
+   "correct_answer": "To make it easy to remember"
+  },
+  "cause": "The child mixes up two rules that are taught close together.",
+  "reveals": "Offer \"To make it harder to sing\" next to the right answer and ask the question again in a new situation.",
+  "help": "Repetition makes a melody easy to remember.",
+  "feedback": "Repetition makes a melody easy to remember.",
+  "source": "To confirm by a Creative Arts and Sports teacher: a common classroom error, not traced to a study by the author.",
+  "status": "draft"
+ },
+ "CREA.G7.CREATI.HANDBALL.HANDBALL.M_CA7_HB_PLAYERS": {
+  "skill": "CREA.G7.CREATI.HANDBALL.HANDBALL",
+  "error": "Gives the wrong number of players.",
+  "example": {
+   "question": "How many players are in a handball team, with the goalkeeper?",
+   "wrong_answer": "Eleven",
+   "correct_answer": "Seven"
+  },
+  "cause": "The child mixes up two rules that are taught close together.",
+  "reveals": "Offer \"Eleven\" next to the right answer and ask the question again in a new situation.",
+  "help": "A handball team has seven players.",
+  "feedback": "A handball team has seven players.",
+  "source": "To confirm by a Creative Arts and Sports teacher: a common classroom error, not traced to a study by the author.",
+  "status": "draft"
+ },
+ "CREA.G7.CREATI.HANDBALL.HANDBALL.M_CA7_HB_HANDS": {
+  "skill": "CREA.G7.CREATI.HANDBALL.HANDBALL",
+  "error": "Says handball is played with the feet.",
+  "example": {
+   "question": "How is handball played?",
+   "wrong_answer": "With the feet",
+   "correct_answer": "With the hands"
+  },
+  "cause": "The child mixes up two rules that are taught close together.",
+  "reveals": "Offer \"With the feet\" next to the right answer and ask the question again in a new situation.",
+  "help": "Handball is played with the hands.",
+  "feedback": "Handball is played with the hands.",
+  "source": "To confirm by a Creative Arts and Sports teacher: a common classroom error, not traced to a study by the author.",
+  "status": "draft"
+ },
+ "CREA.G7.CREATI.HANDBALL.HANDBALL.M_CA7_HB_STEPS": {
+  "skill": "CREA.G7.CREATI.HANDBALL.HANDBALL",
+  "error": "Gives the wrong number of steps.",
+  "example": {
+   "question": "How many steps may a player take with the ball?",
+   "wrong_answer": "Ten",
+   "correct_answer": "Three"
+  },
+  "cause": "The child mixes up two rules that are taught close together.",
+  "reveals": "Offer \"Ten\" next to the right answer and ask the question again in a new situation.",
+  "help": "A player may take three steps with the ball.",
+  "feedback": "A player may take three steps with the ball.",
+  "source": "To confirm by a Creative Arts and Sports teacher: a common classroom error, not traced to a study by the author.",
+  "status": "draft"
+ },
+ "CREA.G7.CREATI.DESCANT_RECORDER.RECORDER_FACTORS.M_CA7_RC_FACTOR": {
+  "skill": "CREA.G7.CREATI.DESCANT_RECORDER.RECORDER_FACTORS",
+  "error": "Names a non-factor.",
+  "example": {
+   "question": "What should you check before playing a melody?",
+   "wrong_answer": "The colour of the recorder",
+   "correct_answer": "The time signature and key"
+  },
+  "cause": "The child mixes up two rules that are taught close together.",
+  "reveals": "Offer \"The colour of the recorder\" next to the right answer and ask the question again in a new situation.",
+  "help": "Check the time signature and key.",
+  "feedback": "Check the time signature and key.",
+  "source": "To confirm by a Creative Arts and Sports teacher: a common classroom error, not traced to a study by the author.",
+  "status": "draft"
+ },
+ "CREA.G7.CREATI.DESCANT_RECORDER.RECORDER_FACTORS.M_CA7_RC_REST": {
+  "skill": "CREA.G7.CREATI.DESCANT_RECORDER.RECORDER_FACTORS",
+  "error": "Says a rest means play louder.",
+  "example": {
+   "question": "What does a rest mean?",
+   "wrong_answer": "Play louder",
+   "correct_answer": "Be silent for its length"
+  },
+  "cause": "The child mixes up two rules that are taught close together.",
+  "reveals": "Offer \"Play louder\" next to the right answer and ask the question again in a new situation.",
+  "help": "A rest is a silence.",
+  "feedback": "A rest is a silence.",
+  "source": "To confirm by a Creative Arts and Sports teacher: a common classroom error, not traced to a study by the author.",
+  "status": "draft"
+ },
+ "CREA.G7.CREATI.DESCANT_RECORDER.RECORDER_FACTORS.M_CA7_RC_TEMPO": {
+  "skill": "CREA.G7.CREATI.DESCANT_RECORDER.RECORDER_FACTORS",
+  "error": "Mixes tempo and dynamics.",
+  "example": {
+   "question": "Which tells how fast to play?",
+   "wrong_answer": "Dynamics",
+   "correct_answer": "Tempo"
+  },
+  "cause": "The child mixes up two rules that are taught close together.",
+  "reveals": "Offer \"Dynamics\" next to the right answer and ask the question again in a new situation.",
+  "help": "Tempo tells how fast to play.",
+  "feedback": "Tempo tells how fast to play.",
+  "source": "To confirm by a Creative Arts and Sports teacher: a common classroom error, not traced to a study by the author.",
+  "status": "draft"
+ },
+ "CREA.G7.CREATI.STORYTELLING_AND_ANIMATI.STORY_TECHNIQUES.M_CA7_ST_VOICE": {
+  "skill": "CREA.G7.CREATI.STORYTELLING_AND_ANIMATI.STORY_TECHNIQUES",
+  "error": "Thinks a storyteller must keep one flat voice.",
+  "example": {
+   "question": "Which is a storytelling technique?",
+   "wrong_answer": "Using one flat voice",
+   "correct_answer": "Varying the voice"
+  },
+  "cause": "The child mixes up two rules that are taught close together.",
+  "reveals": "Offer \"Using one flat voice\" next to the right answer and ask the question again in a new situation.",
+  "help": "Storytellers vary their voice.",
+  "feedback": "Storytellers vary their voice.",
+  "source": "To confirm by a Creative Arts and Sports teacher: a common classroom error, not traced to a study by the author.",
+  "status": "draft"
+ },
+ "CREA.G7.CREATI.STORYTELLING_AND_ANIMATI.STORY_TECHNIQUES.M_CA7_ST_FLIP": {
+  "skill": "CREA.G7.CREATI.STORYTELLING_AND_ANIMATI.STORY_TECHNIQUES",
+  "error": "Says a flipbook has one picture.",
+  "example": {
+   "question": "What does a good flipbook have?",
+   "wrong_answer": "One picture",
+   "correct_answer": "Many pictures that change a little"
+  },
+  "cause": "The child mixes up two rules that are taught close together.",
+  "reveals": "Offer \"One picture\" next to the right answer and ask the question again in a new situation.",
+  "help": "A flipbook has many pictures that change a little each time.",
+  "feedback": "A flipbook has many pictures that change a little each time.",
+  "source": "To confirm by a Creative Arts and Sports teacher: a common classroom error, not traced to a study by the author.",
+  "status": "draft"
+ },
+ "CREA.G7.CREATI.STORYTELLING_AND_ANIMATI.STORY_TECHNIQUES.M_CA7_ST_AUDIENCE": {
+  "skill": "CREA.G7.CREATI.STORYTELLING_AND_ANIMATI.STORY_TECHNIQUES",
+  "error": "Thinks the audience must stay silent.",
+  "example": {
+   "question": "How can a storyteller involve the audience?",
+   "wrong_answer": "Never let them speak",
+   "correct_answer": "Ask them to join in"
+  },
+  "cause": "The child mixes up two rules that are taught close together.",
+  "reveals": "Offer \"Never let them speak\" next to the right answer and ask the question again in a new situation.",
+  "help": "Storytellers invite the audience to join in.",
+  "feedback": "Storytellers invite the audience to join in.",
+  "source": "To confirm by a Creative Arts and Sports teacher: a common classroom error, not traced to a study by the author.",
+  "status": "draft"
+ },
+ "CREA.G7.CREATI.FOOTBALL.FOOTBALL_SKILLS.M_CA7_FS_TRAP": {
+  "skill": "CREA.G7.CREATI.FOOTBALL.FOOTBALL_SKILLS",
+  "error": "Mixes trapping and shooting.",
+  "example": {
+   "question": "What is trapping?",
+   "wrong_answer": "Kicking at the goal",
+   "correct_answer": "Stopping and controlling the ball"
+  },
+  "cause": "The child mixes up two rules that are taught close together.",
+  "reveals": "Offer \"Kicking at the goal\" next to the right answer and ask the question again in a new situation.",
+  "help": "Trapping is stopping and controlling the ball.",
+  "feedback": "Trapping is stopping and controlling the ball.",
+  "source": "To confirm by a Creative Arts and Sports teacher: a common classroom error, not traced to a study by the author.",
+  "status": "draft"
+ },
+ "CREA.G7.CREATI.FOOTBALL.FOOTBALL_SKILLS.M_CA7_FS_DRIBBLE": {
+  "skill": "CREA.G7.CREATI.FOOTBALL.FOOTBALL_SKILLS",
+  "error": "Says dribbling is passing.",
+  "example": {
+   "question": "What is dribbling?",
+   "wrong_answer": "Passing to a friend",
+   "correct_answer": "Keeping the ball close while moving"
+  },
+  "cause": "The child mixes up two rules that are taught close together.",
+  "reveals": "Offer \"Passing to a friend\" next to the right answer and ask the question again in a new situation.",
+  "help": "Dribbling keeps the ball close while moving.",
+  "feedback": "Dribbling keeps the ball close while moving.",
+  "source": "To confirm by a Creative Arts and Sports teacher: a common classroom error, not traced to a study by the author.",
+  "status": "draft"
+ },
+ "CREA.G7.CREATI.FOOTBALL.FOOTBALL_SKILLS.M_CA7_FS_ETCH": {
+  "skill": "CREA.G7.CREATI.FOOTBALL.FOOTBALL_SKILLS",
+  "error": "Does not know crayon etching.",
+  "example": {
+   "question": "How is crayon etching made?",
+   "wrong_answer": "By painting over water",
+   "correct_answer": "By scratching a dark top layer"
+  },
+  "cause": "The child mixes up two rules that are taught close together.",
+  "reveals": "Offer \"By painting over water\" next to the right answer and ask the question again in a new situation.",
+  "help": "Crayon etching scratches a top layer to show colours.",
+  "feedback": "Crayon etching scratches a top layer to show colours.",
+  "source": "To confirm by a Creative Arts and Sports teacher: a common classroom error, not traced to a study by the author.",
+  "status": "draft"
+ },
+ "CREA.G7.CREATI.KENYAN_FOLK_SONGS.FOLK_SONGS.M_CA7_FO_LULLABY": {
+  "skill": "CREA.G7.CREATI.KENYAN_FOLK_SONGS.FOLK_SONGS",
+  "error": "Says a lullaby is a war song.",
+  "example": {
+   "question": "What is a lullaby for?",
+   "wrong_answer": "Going to war",
+   "correct_answer": "Putting a baby to sleep"
+  },
+  "cause": "The child mixes up two rules that are taught close together.",
+  "reveals": "Offer \"Going to war\" next to the right answer and ask the question again in a new situation.",
+  "help": "A lullaby puts a baby to sleep.",
+  "feedback": "A lullaby puts a baby to sleep.",
+  "source": "To confirm by a Creative Arts and Sports teacher: a common classroom error, not traced to a study by the author.",
+  "status": "draft"
+ },
+ "CREA.G7.CREATI.KENYAN_FOLK_SONGS.FOLK_SONGS.M_CA7_FO_WORK": {
+  "skill": "CREA.G7.CREATI.KENYAN_FOLK_SONGS.FOLK_SONGS",
+  "error": "Says a work song is for sleeping.",
+  "example": {
+   "question": "When is a work song sung?",
+   "wrong_answer": "At bedtime",
+   "correct_answer": "While working"
+  },
+  "cause": "The child mixes up two rules that are taught close together.",
+  "reveals": "Offer \"At bedtime\" next to the right answer and ask the question again in a new situation.",
+  "help": "A work song is sung while working.",
+  "feedback": "A work song is sung while working.",
+  "source": "To confirm by a Creative Arts and Sports teacher: a common classroom error, not traced to a study by the author.",
+  "status": "draft"
+ },
+ "CREA.G7.CREATI.KENYAN_FOLK_SONGS.FOLK_SONGS.M_CA7_FO_FUNERAL": {
+  "skill": "CREA.G7.CREATI.KENYAN_FOLK_SONGS.FOLK_SONGS",
+  "error": "Mixes funeral with wedding songs.",
+  "example": {
+   "question": "Which song is sung at a funeral?",
+   "wrong_answer": "A wedding song",
+   "correct_answer": "A dirge"
+  },
+  "cause": "The child mixes up two rules that are taught close together.",
+  "reveals": "Offer \"A wedding song\" next to the right answer and ask the question again in a new situation.",
+  "help": "A dirge is a funeral song.",
+  "feedback": "A dirge is a funeral song.",
+  "source": "To confirm by a Creative Arts and Sports teacher: a common classroom error, not traced to a study by the author.",
+  "status": "draft"
+ },
+ "CREA.G7.CREATI.INDIGENOUS_KENYAN_CRAFT.BEADWORK.M_CA7_BW_MATERIAL": {
+  "skill": "CREA.G7.CREATI.INDIGENOUS_KENYAN_CRAFT.BEADWORK",
+  "error": "Names an unsuitable material.",
+  "example": {
+   "question": "Which is a material for beadwork?",
+   "wrong_answer": "Cement",
+   "correct_answer": "Thread and beads"
+  },
+  "cause": "The child mixes up two rules that are taught close together.",
+  "reveals": "Offer \"Cement\" next to the right answer and ask the question again in a new situation.",
+  "help": "Beadwork uses beads and thread.",
+  "feedback": "Beadwork uses beads and thread.",
+  "source": "To confirm by a Creative Arts and Sports teacher: a common classroom error, not traced to a study by the author.",
+  "status": "draft"
+ },
+ "CREA.G7.CREATI.INDIGENOUS_KENYAN_CRAFT.BEADWORK.M_CA7_BW_FUNCTION": {
+  "skill": "CREA.G7.CREATI.INDIGENOUS_KENYAN_CRAFT.BEADWORK",
+  "error": "Says jewellery only decorates.",
+  "example": {
+   "question": "What does jewellery show in Kenyan communities?",
+   "wrong_answer": "Nothing at all",
+   "correct_answer": "Identity, status and ceremonies"
+  },
+  "cause": "The child mixes up two rules that are taught close together.",
+  "reveals": "Offer \"Nothing at all\" next to the right answer and ask the question again in a new situation.",
+  "help": "Jewellery shows identity, status and ceremonies.",
+  "feedback": "Jewellery shows identity, status and ceremonies.",
+  "source": "To confirm by a Creative Arts and Sports teacher: a common classroom error, not traced to a study by the author.",
+  "status": "draft"
+ },
+ "CREA.G7.CREATI.INDIGENOUS_KENYAN_CRAFT.BEADWORK.M_CA7_BW_TOOL": {
+  "skill": "CREA.G7.CREATI.INDIGENOUS_KENYAN_CRAFT.BEADWORK",
+  "error": "Names a wrong tool.",
+  "example": {
+   "question": "Which tool is used for beading?",
+   "wrong_answer": "A hammer",
+   "correct_answer": "A needle"
+  },
+  "cause": "The child mixes up two rules that are taught close together.",
+  "reveals": "Offer \"A hammer\" next to the right answer and ask the question again in a new situation.",
+  "help": "A needle is used for beading.",
+  "feedback": "A needle is used for beading.",
+  "source": "To confirm by a Creative Arts and Sports teacher: a common classroom error, not traced to a study by the author.",
+  "status": "draft"
+ },
+ "CREA.G7.CREATI.SWIMMING.SWIMMING.M_CA7_SM_PENCIL": {
+  "skill": "CREA.G7.CREATI.SWIMMING.SWIMMING",
+  "error": "Mixes pencil dive and crouch dive.",
+  "example": {
+   "question": "In a pencil dive, how does the body enter the water?",
+   "wrong_answer": "Head first with arms apart",
+   "correct_answer": "Feet first, body straight"
+  },
+  "cause": "The child mixes up two rules that are taught close together.",
+  "reveals": "Offer \"Head first with arms apart\" next to the right answer and ask the question again in a new situation.",
+  "help": "In a pencil dive the body is straight, feet first.",
+  "feedback": "In a pencil dive the body is straight, feet first.",
+  "source": "To confirm by a Creative Arts and Sports teacher: a common classroom error, not traced to a study by the author.",
+  "status": "draft"
+ },
+ "CREA.G7.CREATI.SWIMMING.SWIMMING.M_CA7_SM_BACK": {
+  "skill": "CREA.G7.CREATI.SWIMMING.SWIMMING",
+  "error": "Says backstroke is on the front.",
+  "example": {
+   "question": "In backstroke the swimmer lies on...",
+   "wrong_answer": "The front",
+   "correct_answer": "The back"
+  },
+  "cause": "The child mixes up two rules that are taught close together.",
+  "reveals": "Offer \"The front\" next to the right answer and ask the question again in a new situation.",
+  "help": "In backstroke the swimmer lies on the back.",
+  "feedback": "In backstroke the swimmer lies on the back.",
+  "source": "To confirm by a Creative Arts and Sports teacher: a common classroom error, not traced to a study by the author.",
+  "status": "draft"
+ },
+ "CREA.G7.CREATI.SWIMMING.SWIMMING.M_CA7_SM_SAFETY": {
+  "skill": "CREA.G7.CREATI.SWIMMING.SWIMMING",
+  "error": "Says swimming alone is fine.",
+  "example": {
+   "question": "When should a learner swim?",
+   "wrong_answer": "Alone at any time",
+   "correct_answer": "With a lifeguard or teacher"
+  },
+  "cause": "The child mixes up two rules that are taught close together.",
+  "reveals": "Offer \"Alone at any time\" next to the right answer and ask the question again in a new situation.",
+  "help": "Swim only with a lifeguard or teacher.",
+  "feedback": "Swim only with a lifeguard or teacher.",
+  "source": "To confirm by a Creative Arts and Sports teacher: a common classroom error, not traced to a study by the author.",
+  "status": "draft"
+ },
+ "CREA.G7.CREATI.KENYAN_INDIGENOUS_GAMES.ROPE_GAMES.M_CA7_RG_NAME": {
+  "skill": "CREA.G7.CREATI.KENYAN_INDIGENOUS_GAMES.ROPE_GAMES",
+  "error": "Names a non-rope game.",
+  "example": {
+   "question": "Which is a rope game?",
+   "wrong_answer": "Football",
+   "correct_answer": "Tug of war"
+  },
+  "cause": "The child mixes up two rules that are taught close together.",
+  "reveals": "Offer \"Football\" next to the right answer and ask the question again in a new situation.",
+  "help": "Tug of war is a rope game.",
+  "feedback": "Tug of war is a rope game.",
+  "source": "To confirm by a Creative Arts and Sports teacher: a common classroom error, not traced to a study by the author.",
+  "status": "draft"
+ },
+ "CREA.G7.CREATI.KENYAN_INDIGENOUS_GAMES.ROPE_GAMES.M_CA7_RG_BENEFIT": {
+  "skill": "CREA.G7.CREATI.KENYAN_INDIGENOUS_GAMES.ROPE_GAMES",
+  "error": "Says rope games make people less fit.",
+  "example": {
+   "question": "What do rope games build?",
+   "wrong_answer": "Weak muscles",
+   "correct_answer": "Fitness and coordination"
+  },
+  "cause": "The child mixes up two rules that are taught close together.",
+  "reveals": "Offer \"Weak muscles\" next to the right answer and ask the question again in a new situation.",
+  "help": "Rope games build fitness and coordination.",
+  "feedback": "Rope games build fitness and coordination.",
+  "source": "To confirm by a Creative Arts and Sports teacher: a common classroom error, not traced to a study by the author.",
+  "status": "draft"
+ },
+ "CREA.G7.CREATI.KENYAN_INDIGENOUS_GAMES.ROPE_GAMES.M_CA7_RG_SKIP": {
+  "skill": "CREA.G7.CREATI.KENYAN_INDIGENOUS_GAMES.ROPE_GAMES",
+  "error": "Says skipping is done sitting.",
+  "example": {
+   "question": "How is rope skipping done?",
+   "wrong_answer": "Sitting down",
+   "correct_answer": "Jumping over the rope"
+  },
+  "cause": "The child mixes up two rules that are taught close together.",
+  "reveals": "Offer \"Sitting down\" next to the right answer and ask the question again in a new situation.",
+  "help": "In skipping one jumps over the rope.",
+  "feedback": "In skipping one jumps over the rope.",
+  "source": "To confirm by a Creative Arts and Sports teacher: a common classroom error, not traced to a study by the author.",
+  "status": "draft"
+ },
+ "CREA.G7.APPREC.ANALYSIS_OF_CREATIVE_ART.SPORTS_VALUES.M_CA7_SV_CHEAT": {
+  "skill": "CREA.G7.APPREC.ANALYSIS_OF_CREATIVE_ART.SPORTS_VALUES",
+  "error": "Thinks cheating is part of sport.",
+  "example": {
+   "question": "Which spoils clean sport?",
+   "wrong_answer": "Fair play",
+   "correct_answer": "Cheating"
+  },
+  "cause": "The child mixes up two rules that are taught close together.",
+  "reveals": "Offer \"Fair play\" next to the right answer and ask the question again in a new situation.",
+  "help": "Cheating spoils sport.",
+  "feedback": "Cheating spoils sport.",
+  "source": "To confirm by a Creative Arts and Sports teacher: a common classroom error, not traced to a study by the author.",
+  "status": "draft"
+ },
+ "CREA.G7.APPREC.ANALYSIS_OF_CREATIVE_ART.SPORTS_VALUES.M_CA7_SV_VALUE": {
+  "skill": "CREA.G7.APPREC.ANALYSIS_OF_CREATIVE_ART.SPORTS_VALUES",
+  "error": "Names a bad value.",
+  "example": {
+   "question": "Which is a value of clean sport?",
+   "wrong_answer": "Cheating",
+   "correct_answer": "Fair play"
+  },
+  "cause": "The child mixes up two rules that are taught close together.",
+  "reveals": "Offer \"Cheating\" next to the right answer and ask the question again in a new situation.",
+  "help": "Fair play is a value of clean sport.",
+  "feedback": "Fair play is a value of clean sport.",
+  "source": "To confirm by a Creative Arts and Sports teacher: a common classroom error, not traced to a study by the author.",
+  "status": "draft"
+ },
+ "CREA.G7.APPREC.ANALYSIS_OF_CREATIVE_ART.SPORTS_VALUES.M_CA7_SV_TEAM": {
+  "skill": "CREA.G7.APPREC.ANALYSIS_OF_CREATIVE_ART.SPORTS_VALUES",
+  "error": "Thinks only winning matters.",
+  "example": {
+   "question": "What matters in a team game?",
+   "wrong_answer": "Only winning",
+   "correct_answer": "Teamwork and respect"
+  },
+  "cause": "The child mixes up two rules that are taught close together.",
+  "reveals": "Offer \"Only winning\" next to the right answer and ask the question again in a new situation.",
+  "help": "Teamwork and respect matter in a team game.",
+  "feedback": "Teamwork and respect matter in a team game.",
+  "source": "To confirm by a Creative Arts and Sports teacher: a common classroom error, not traced to a study by the author.",
+  "status": "draft"
+ }
+}
