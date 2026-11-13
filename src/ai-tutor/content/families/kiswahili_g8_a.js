@@ -1,0 +1,218 @@
+// ============================================================================
+// KISWAHILI GRADE 8, SARUFI A (11 skills): viwakilishi, hali ya mazoea na timilifu, uliopita na ujao timilifu, vivumishi, alama za mtajo
+// na mshazari, hisi na ritifaa, ngeli za I-ZI, U-U na U-YA. Written offline from the KICD design through the curriculum map. Every wrong
+// answer names the library misconception it reveals. All stay reviewed:false until a native Kiswahili teacher signs them off.
+// ============================================================================
+import { S } from './kiswahili_g8_lib.js';
+
+export const FAMILIES = [
+  ...S('vn', 'SARUFI.T1_VIWAKILISHI.', 'VIW_NAFSI', ['VN_NAFSI', 'VN_ONYESHI', 'VN_IDADI'], ['Mimi, wewe, yeye, sisi, ninyi, wao ni viwakilishi vya nafsi.', 'Huyu, huyo na yule huonyesha; wawili na watatu ni vya idadi.'], [
+    ['Ni kiwakilishi kipi cha nafsi ya kwanza wingi?', 'sisi', 'wao', 'ninyi', 'mimi'],
+    ['Ni kiwakilishi kipi cha kuonyesha mtu aliye karibu?', 'huyu', 'yule', 'wao', 'ninyi'],
+    ['Ni kiwakilishi kipi cha idadi?', 'wawili', 'huyu', 'wewe', 'sisi'],
+    ['Ni kiwakilishi kipi cha nafsi ya pili umoja?', 'wewe', 'yeye', 'sisi', 'wao'],
+    ['Ni kiwakilishi kipi cha nafsi ya tatu wingi?', 'wao', 'sisi', 'mimi', 'wewe'],
+  ], [
+    ['Wanafunzi walifika mapema. ___ walikaa mbele. Chagua kiwakilishi cha nafsi ya tatu wingi.', 'Wao', 'Sisi', 'Mimi', 'Wewe'],
+    ['Mama anaonyesha mtoto aliye karibu naye. Anasema "___ ni mwanangu." Chagua kiwakilishi.', 'Huyu', 'Yule', 'Wao', 'Sisi'],
+    ['Watoto watatu walicheza. "___ walishinda." Chagua kiwakilishi cha idadi.', 'Watatu', 'Huyu', 'Wewe', 'Sisi'],
+    ['Juma anajizungumzia. Anasema "___ ninapenda mpira." Chagua kiwakilishi.', 'Mimi', 'Yeye', 'Wao', 'Sisi'],
+    ['Mwalimu anasema na wanafunzi wawili. Anasema "___ mlifanya vizuri." Chagua kiwakilishi.', 'Ninyi', 'Wao', 'Sisi', 'Mimi'],
+  ], [
+    ['Ni hatua ipi ina kosa?', 'Hatua 1: Sisi huonyesha mimi na wengine.', 'Hatua 2: Ni nafsi ya kwanza.', 'Hatua 3: Kwa hiyo sisi ni nafsi ya tatu.', 'Sisi ni nafsi ya kwanza wingi.', 0],
+    ['Ni hatua ipi ina kosa?', 'Hatua 1: Huyu humwonyesha aliye karibu.', 'Hatua 2: Yule humwonyesha aliye mbali.', 'Hatua 3: Kwa hiyo huyu humwonyesha aliye mbali.', 'Huyu humwonyesha aliye karibu.', 1],
+    ['Ni hatua ipi ina kosa?', 'Hatua 1: Wawili ni idadi.', 'Hatua 2: Hutumika badala ya nomino.', 'Hatua 3: Kwa hiyo wawili ni kiwakilishi cha kuonyesha.', 'Wawili ni kiwakilishi cha idadi.', 2],
+    ['Ni hatua ipi ina kosa?', 'Hatua 1: Wewe humsemesha mtu.', 'Hatua 2: Ni nafsi ya pili.', 'Hatua 3: Kwa hiyo wewe ni nafsi ya tatu.', 'Wewe ni nafsi ya pili.', 2],
+    ['Ni hatua ipi ina kosa?', 'Hatua 1: Wao huhusu watu wengi wengine.', 'Hatua 2: Ni nafsi ya tatu.', 'Hatua 3: Kwa hiyo wao ni nafsi ya kwanza.', 'Wao ni nafsi ya tatu wingi.', 2],
+  ], ['a', 'b']),
+  ...S('vu', 'SARUFI.T2_VIWAKILISHI.', 'VIW_ULIZI', ['VU_ULIZA', 'VU_NINI', 'VU_SIFA'], ['Nani huuliza kuhusu mtu; nini huuliza kuhusu kitu.', 'Kiwakilishi cha sifa husimama badala ya nomino.'], [
+    ['Ni kiwakilishi kipi kinauliza kuhusu mtu?', 'nani', 'yeye', 'sisi', 'wao'],
+    ['Ni kiwakilishi kipi kinauliza kuhusu kitu?', 'nini', 'nani', 'yeye', 'sisi'],
+    ['Katika "Mrefu amefika", mrefu ni nini?', 'kiwakilishi cha sifa', 'kivumishi', 'kitenzi', 'kielezi'],
+    ['Ni kiwakilishi kiulizi kipi kinauliza idadi?', 'ngapi', 'nani', 'nini', 'yule'],
+    ['Ni neno lipi ni kiwakilishi kiulizi?', 'lipi', 'huyu', 'wao', 'mimi'],
+  ], [
+    ['Mama anauliza kuhusu mtu aliyebisha mlangoni. Anasema "___ amefika?" Chagua kiulizi.', 'Nani', 'Nini', 'Yeye', 'Wao'],
+    ['Baba anauliza kuhusu kitu kilicho mezani. Anasema "___ kiko mezani?" Chagua kiulizi.', 'Nini', 'Nani', 'Yeye', 'Wao'],
+    ['Katika "Mwema anapendwa", mwema ni nini?', 'kiwakilishi cha sifa', 'kivumishi', 'kitenzi', 'kielezi'],
+    ['Mwalimu anauliza idadi ya wanafunzi. Anasema "Wako ___?" Chagua kiulizi.', 'ngapi', 'nani', 'nini', 'yule'],
+    ['Mama anauliza kuhusu chaguo. Anasema "Unataka ___?" Chagua kiulizi.', 'lipi', 'huyu', 'wao', 'mimi'],
+  ], [
+    ['Ni hatua ipi ina kosa?', 'Hatua 1: Viulizi huuliza maswali.', 'Hatua 2: Nani huuliza kuhusu mtu.', 'Hatua 3: Kwa hiyo nani huuliza kuhusu kitu.', 'Nani huuliza kuhusu mtu.', 2],
+    ['Ni hatua ipi ina kosa?', 'Hatua 1: Nini huuliza kuhusu kitu.', 'Hatua 2: Ni kiwakilishi kiulizi.', 'Hatua 3: Kwa hiyo nini huuliza kuhusu mtu.', 'Nini huuliza kuhusu kitu.', 2],
+    ['Ni hatua ipi ina kosa?', 'Hatua 1: Kiwakilishi hutumika badala ya nomino.', 'Hatua 2: Mrefu katika "Mrefu amefika" linasimama badala ya nomino.', 'Hatua 3: Kwa hiyo ni kitenzi.', 'Ni kiwakilishi cha sifa.', 2],
+    ['Ni hatua ipi ina kosa?', 'Hatua 1: Ngapi huuliza idadi.', 'Hatua 2: Ni kiulizi.', 'Hatua 3: Kwa hiyo ngapi huuliza mtu.', 'Ngapi huuliza idadi.', 2],
+    ['Ni hatua ipi ina kosa?', 'Hatua 1: Lipi huuliza chaguo.', 'Hatua 2: Ni kiulizi.', 'Hatua 3: Kwa hiyo lipi ni kiwakilishi cha nafsi.', 'Lipi ni kiwakilishi kiulizi.', 2],
+  ], ['a', 'a']),
+  ...S('vm', 'SARUFI.T3_VIWAKILISHI.', 'VIW_MILIKISHI', ['VM_MILIKI', 'VM_SISITIZI', 'VM_UPATANISHO'], ['Changu, chake na chetu ni vimilikishi; mwenyewe ni kisisitizi.', 'Kimilikishi hupatana na nomino.'], [
+    ['Ni kiwakilishi kimilikishi kipi?', 'changu', 'mwenyewe', 'wenyewe', 'nani'],
+    ['Ni kiwakilishi kisisitizi kipi?', 'mwenyewe', 'changu', 'chake', 'chetu'],
+    ['Kamilisha: kitabu ___ (changu/wangu)', 'changu', 'wangu', 'langu', 'yangu'],
+    ['Kamilisha: nyumba ___ (yake/chake)', 'yake', 'chake', 'wake', 'lake'],
+    ['Ni neno lipi ni kisisitizi?', 'wenyewe', 'wetu', 'wako', 'wake'],
+  ], [
+    ['Achieng anasema kitabu ni chake. Anasema "Kitabu ___." Chagua kimilikishi.', 'changu', 'mwenyewe', 'wenyewe', 'nani'],
+    ['Juma anasisitiza kuwa yeye ndiye alifanya kazi. Anasema "Mimi ___ nilifanya." Chagua kisisitizi.', 'mwenyewe', 'changu', 'chake', 'chetu'],
+    ['Watoto wanasema kikombe ni chao. Wanasema "Kikombe ___." Chagua kimilikishi.', 'chetu', 'mwenyewe', 'wenyewe', 'changu'],
+    ['Mama anasisitiza kuwa wao ndio walipika. Anasema "Wao ___ walipika." Chagua kisisitizi.', 'wenyewe', 'mwenyewe', 'changu', 'chetu'],
+    ['Kamilisha: nyumba ___ (yake/chake)', 'yake', 'chake', 'wake', 'lake'],
+  ], [
+    ['Ni hatua ipi ina kosa?', 'Hatua 1: Changu huonyesha umiliki.', 'Hatua 2: Ni kimilikishi.', 'Hatua 3: Kwa hiyo changu ni kisisitizi.', 'Changu ni kimilikishi.', 0],
+    ['Ni hatua ipi ina kosa?', 'Hatua 1: Mwenyewe husisitiza mtu.', 'Hatua 2: Ni kisisitizi.', 'Hatua 3: Kwa hiyo mwenyewe ni kimilikishi.', 'Mwenyewe ni kisisitizi.', 1],
+    ['Ni hatua ipi ina kosa?', 'Hatua 1: Kimilikishi hupatana na nomino.', 'Hatua 2: Kitabu hupatana na changu.', 'Hatua 3: Kwa hiyo tunasema "kitabu wangu".', 'Tunasema "kitabu changu".', 2],
+    ['Ni hatua ipi ina kosa?', 'Hatua 1: Nyumba huchukua yake.', 'Hatua 2: Ni kimilikishi.', 'Hatua 3: Kwa hiyo tunasema "nyumba chake".', 'Tunasema "nyumba yake".', 2],
+    ['Ni hatua ipi ina kosa?', 'Hatua 1: Wenyewe husisitiza watu wengi.', 'Hatua 2: Ni kisisitizi.', 'Hatua 3: Kwa hiyo wenyewe huonyesha umiliki.', 'Wenyewe husisitiza.', 2],
+  ], ['a', 'b']),
+  ...S('mt', 'SARUFI.T4_NYAKATI_NA_HALI.', 'MAZOEA_TIMILIFU', ['MT_HU', 'MT_ME', 'MT_LI'], ['Hu- huonyesha mazoea; -me- huonyesha tendo lililokamilika.', '-li- ni wakati uliopita rahisi.'], [
+    ['Katika "Huenda sokoni kila siku", hali ni ipi?', 'ya mazoea', 'timilifu', 'ya kuendelea', 'ya amri'],
+    ['Katika "Amefika", hali ni ipi?', 'timilifu', 'ya mazoea', 'ya kuendelea', 'ya amri'],
+    ['Katika "Alifika", ni hali gani?', 'wakati uliopita rahisi', 'timilifu', 'ya mazoea', 'ya amri'],
+    ['Ni kiambishi kipi cha hali ya mazoea?', 'hu-', '-me-', '-li-', '-ta-'],
+    ['Ni kiambishi kipi cha hali timilifu?', '-me-', 'hu-', '-li-', '-ta-'],
+  ], [
+    ['Baba huamka mapema kila siku. Hali ya "huamka" ni ipi?', 'ya mazoea', 'timilifu', 'ya kuendelea', 'ya amri'],
+    ['Mama amemaliza kupika sasa. Hali ya "amemaliza" ni ipi?', 'timilifu', 'ya mazoea', 'ya kuendelea', 'ya amri'],
+    ['Wanafunzi walifika jana. Hali ya "walifika" ni ipi?', 'wakati uliopita rahisi', 'timilifu', 'ya mazoea', 'ya amri'],
+    ['Wekesa hucheza mpira kila Jumamosi. Ni neno lipi linaonyesha mazoea?', 'hucheza', 'Wekesa', 'mpira', 'Jumamosi'],
+    ['Njeri ameshaandika barua. Ni neno lipi linaonyesha timilifu?', 'ameshaandika', 'Njeri', 'barua', 'yeye'],
+  ], [
+    ['Ni hatua ipi ina kosa?', 'Hatua 1: Hu- hutumika kwa mazoea.', 'Hatua 2: Mfano ni "huenda".', 'Hatua 3: Kwa hiyo hu- huonyesha tendo lililokamilika.', 'Hu- huonyesha mazoea.', 2],
+    ['Ni hatua ipi ina kosa?', 'Hatua 1: -me- huonyesha tendo lililokamilika.', 'Hatua 2: Mfano ni "amefika".', 'Hatua 3: Kwa hiyo -me- huonyesha mazoea.', '-me- huonyesha timilifu.', 2],
+    ['Ni hatua ipi ina kosa?', 'Hatua 1: "Alifika" lina -li-.', 'Hatua 2: Linaonyesha tendo la zamani.', 'Hatua 3: Kwa hiyo ni hali timilifu.', 'Ni wakati uliopita rahisi.', 2],
+    ['Ni hatua ipi ina kosa?', 'Hatua 1: Mazoea hurudiwa.', 'Hatua 2: Hu- hutumika.', 'Hatua 3: Kwa hiyo "huenda" ni tendo la mara moja tu.', '"Huenda" ni tendo la mazoea.', 2],
+    ['Ni hatua ipi ina kosa?', 'Hatua 1: Timilifu huonyesha kukamilika.', 'Hatua 2: Hutumia -me-.', 'Hatua 3: Kwa hiyo hutumia hu-.', 'Hutumia -me-.', 2],
+  ], ['a', 'b']),
+  ...S('tw', 'SARUFI.T5_NYAKATI_NA_HALI.', 'TIMILIFU_WAKATI', ['TW_PAST', 'TW_FUT', 'TW_SIMPLE'], ['Alikuwa amefika ni uliopita timilifu; atakuwa amefika ni ujao timilifu.', 'Alifika ni wakati rahisi, si timilifu.'], [
+    ['Ni sentensi ipi iko katika uliopita timilifu?', 'Alikuwa amefika', 'Atakuwa amefika', 'Alifika', 'Anafika'],
+    ['Ni sentensi ipi iko katika ujao timilifu?', 'Atakuwa amefika', 'Alikuwa amefika', 'Alifika', 'Anafika'],
+    ['Ni sentensi ipi ni timilifu?', 'Alikuwa amefika jana', 'Alifika jana', 'Alicheza jana', 'Anacheza jana'],
+    ['Alikuwa amepika humaanisha nini?', 'Alikuwa amemaliza kupika wakati huo', 'Atapika kesho', 'Hupika kila siku', 'Hapiki'],
+    ['Atakuwa ameandika humaanisha nini?', 'Atakuwa amemaliza kuandika wakati huo', 'Alikuwa akiandika', 'Huandika kila siku', 'Haandiki'],
+  ], [
+    ['Jana saa nne mimi ___ nimemaliza kazi. Chagua kitenzi sahihi.', 'nilikuwa', 'nitakuwa', 'ninakuwa', 'hukuwa'],
+    ['Kesho saa sita wao ___ wamefika. Chagua kitenzi sahihi.', 'watakuwa', 'walikuwa', 'wanakuwa', 'hawakuwa'],
+    ['Wakati wa chakula, mama alikuwa amepika. Hali ya "alikuwa amepika" ni ipi?', 'uliopita timilifu', 'ujao timilifu', 'ya mazoea', 'ya amri'],
+    ['Wakati wa mtihani kesho, tutakuwa tumesoma. Hali ya "tutakuwa tumesoma" ni ipi?', 'ujao timilifu', 'uliopita timilifu', 'ya mazoea', 'ya amri'],
+    ['Ni sentensi ipi inaonyesha tendo lililokuwa limekamilika zamani?', 'Alikuwa amelala', 'Atakuwa amelala', 'Analala', 'Hulala'],
+  ], [
+    ['Ni hatua ipi ina kosa?', 'Hatua 1: "Alikuwa amefika" lina alikuwa na ame-.', 'Hatua 2: Tendo lilikamilika zamani.', 'Hatua 3: Kwa hiyo ni ujao timilifu.', 'Ni uliopita timilifu.', 2],
+    ['Ni hatua ipi ina kosa?', 'Hatua 1: "Atakuwa amefika" lina atakuwa na ame-.', 'Hatua 2: Tendo litakamilika baadaye.', 'Hatua 3: Kwa hiyo ni uliopita timilifu.', 'Ni ujao timilifu.', 2],
+    ['Ni hatua ipi ina kosa?', 'Hatua 1: "Alifika" lina -li- tu.', 'Hatua 2: Halina alikuwa.', 'Hatua 3: Kwa hiyo ni uliopita timilifu.', 'Ni wakati uliopita rahisi.', 2],
+    ['Ni hatua ipi ina kosa?', 'Hatua 1: Timilifu hutumia ame-.', 'Hatua 2: Pia hutumia kisaidizi.', 'Hatua 3: Kwa hiyo hutumia hu-.', 'Hutumia ame- na kisaidizi.', 2],
+    ['Ni hatua ipi ina kosa?', 'Hatua 1: Ujao timilifu hutumia atakuwa.', 'Hatua 2: Pia hutumia ame-.', 'Hatua 3: Kwa hiyo hutumia alikuwa.', 'Hutumia atakuwa.', 2],
+  ], ['a', 'b', 'c']),
+  ...S('vv', 'SARUFI.T6_VIVUMISHI.', 'VIVUMISHI_SIFA', ['VS_SIFA', 'VS_ASHIRIA', 'VS_NAFASI'], ['Mzuri ni sifa; huyu ni kuashiria.', 'Kivumishi hufuata nomino.'], [
+    ['Ni kivumishi gani cha sifa miongoni mwa hivi?', 'mzuri', 'huyu', 'yule', 'hizi'],
+    ['Ni kivumishi gani cha kuashiria miongoni mwa hivi?', 'huyu', 'mzuri', 'mrefu', 'mkali'],
+    ['Ni kifungu kipi cha maneno kimepangwa sawa?', 'Mtoto mzuri', 'Mzuri mtoto', 'Mtoto mzuri huyu mtoto', 'Mzuri huyu'],
+    ['Ni kivumishi kipi cha sifa katika orodha hii?', 'refu', 'hizi', 'yule', 'huo'],
+    ['Ni kivumishi kipi cha kuashiria katika orodha hii?', 'huo', 'refu', 'jema', 'zuri'],
+  ], [
+    ['Katika "mtoto mzuri", mzuri ni nini?', 'kivumishi cha sifa', 'kivumishi cha kuashiria', 'kitenzi', 'kielezi'],
+    ['Katika "kitabu hiki", hiki ni nini?', 'kivumishi cha kuashiria', 'kivumishi cha sifa', 'kitenzi', 'kielezi'],
+    ['Ni sentensi ipi imepangwa sawa?', 'Mti mrefu umeanguka.', 'Mrefu mti umeanguka.', 'Umeanguka mti mrefu mrefu.', 'Mti umeanguka mrefu.'],
+    ['Katika "nyumba ile", ile ni nini?', 'kivumishi cha kuashiria', 'kivumishi cha sifa', 'kitenzi', 'kielezi'],
+    ['Katika "mwalimu mkali", mkali ni nini?', 'kivumishi cha sifa', 'kivumishi cha kuashiria', 'kitenzi', 'kielezi'],
+  ], [
+    ['Ni hatua ipi ina kosa?', 'Hatua 1: Mzuri hueleza nomino.', 'Hatua 2: Ni kivumishi.', 'Hatua 3: Kwa hiyo mzuri ni kivumishi cha kuashiria.', 'Mzuri ni cha sifa.', 2],
+    ['Ni hatua ipi ina kosa?', 'Hatua 1: Huyu humwonyesha mtu.', 'Hatua 2: Ni kivumishi.', 'Hatua 3: Kwa hiyo huyu ni kivumishi cha sifa.', 'Huyu ni cha kuashiria.', 2],
+    ['Ni hatua ipi ina kosa?', 'Hatua 1: Kivumishi hufuata nomino.', 'Hatua 2: "Mtoto mzuri" ni sahihi.', 'Hatua 3: Kwa hiyo "mzuri mtoto" ni sahihi pia.', 'Kivumishi hufuata nomino.', 2],
+    ['Ni hatua ipi ina kosa?', 'Hatua 1: Kivumishi cha kuashiria huonyesha nomino.', 'Hatua 2: Hizi ni kivumishi cha kuashiria.', 'Hatua 3: Kwa hiyo hizi ni cha sifa.', 'Hizi ni cha kuashiria.', 2],
+    ['Ni hatua ipi ina kosa?', 'Hatua 1: Mrefu hueleza urefu.', 'Hatua 2: Ni kivumishi.', 'Hatua 3: Kwa hiyo mrefu huonyesha nomino.', 'Mrefu ni cha sifa.', 2],
+  ], ['a', 'a']),
+  ...S('vk', 'SARUFI.T7_VIVUMISHI.', 'VIVUMISHI_MILIKI', ['VK_MILIKI', 'VK_IDADI', 'VK_NAFASI'], ['Wangu ni kimilikishi; watatu ni cha idadi.', 'Kivumishi hufuata nomino.'], [
+    ['Ni kivumishi gani kimilikishi miongoni mwa hivi?', 'wangu', 'wawili', 'watatu', 'wengi'],
+    ['Ni kivumishi gani cha idadi miongoni mwa hivi?', 'watatu', 'wangu', 'wake', 'wetu'],
+    ['Ni kifungu kipi cha maneno kimepangwa sawa?', 'Watoto wawili', 'Wawili watoto', 'Watoto watoto wawili', 'Wawili wawili'],
+    ['Ni kivumishi kipi kimilikishi katika orodha hii?', 'wake', 'wawili', 'watano', 'sita'],
+    ['Ni kivumishi kipi cha idadi katika orodha hii?', 'wawili', 'wao', 'wetu', 'wako'],
+  ], [
+    ['Katika "kitabu changu", changu ni nini?', 'kivumishi kimilikishi', 'kivumishi cha idadi', 'kitenzi', 'kielezi'],
+    ['Katika "watoto watatu", watatu ni nini?', 'kivumishi cha idadi', 'kivumishi kimilikishi', 'kitenzi', 'kielezi'],
+    ['Ni sentensi ipi imepangwa sawa?', 'Nilinunua vitabu vitatu.', 'Nilinunua vitatu vitabu.', 'Vitatu nilinunua vitabu.', 'Nilinunua vitabu vitatu vitabu.'],
+    ['Katika "nyumba yake", yake ni nini?', 'kivumishi kimilikishi', 'kivumishi cha idadi', 'kitenzi', 'kielezi'],
+    ['Katika "walimu wawili", wawili ni nini?', 'kivumishi cha idadi', 'kivumishi kimilikishi', 'kitenzi', 'kielezi'],
+  ], [
+    ['Ni hatua ipi ina kosa?', 'Hatua 1: Wangu huonyesha umiliki.', 'Hatua 2: Ni kimilikishi.', 'Hatua 3: Kwa hiyo wangu ni cha idadi.', 'Wangu ni kimilikishi.', 0],
+    ['Ni hatua ipi ina kosa?', 'Hatua 1: Watatu huonyesha idadi.', 'Hatua 2: Ni kivumishi.', 'Hatua 3: Kwa hiyo watatu ni kimilikishi.', 'Watatu ni cha idadi.', 1],
+    ['Ni hatua ipi ina kosa?', 'Hatua 1: Kivumishi hufuata nomino.', 'Hatua 2: "Watoto wawili" ni sahihi.', 'Hatua 3: Kwa hiyo "wawili watoto" ni sahihi pia.', 'Kivumishi hufuata nomino.', 2],
+    ['Ni hatua ipi ina kosa?', 'Hatua 1: Yake huonyesha umiliki.', 'Hatua 2: Ni kivumishi kimilikishi.', 'Hatua 3: Kwa hiyo yake ni cha idadi.', 'Yake ni kimilikishi.', 2],
+    ['Ni hatua ipi ina kosa?', 'Hatua 1: Wawili huonyesha idadi.', 'Hatua 2: Ni kivumishi.', 'Hatua 3: Kwa hiyo wawili ni kimilikishi.', 'Wawili ni cha idadi.', 2],
+  ], ['a', 'a']),
+  ...S('mm', 'KUANDI.T8_VIAKIFISHI.', 'MTAJO_MSHAZARI', ['MM_MTAJO', 'MM_MSHAZARI', 'MM_TAREHE'], ['Alama za mtajo hunukuu; mshazari hutenga machaguo na hutumika katika tarehe.', 'Mshazari ni alama ya kufyeka (/).'], [
+    ['Ni alama ipi hunukuu maneno halisi ya mtu?', 'alama za mtajo', 'mshazari', 'koma', 'kikomo'],
+    ['Ni alama ipi hutenga machaguo kama ama/au?', 'mshazari', 'koma', 'kikomo', 'kiulizi'],
+    ['Ni tarehe ipi imeandikwa kwa mshazari?', '12/11/2026', '12.11.2026', '12-11-2026', '12,11,2026'],
+    ['Ni alama ipi hutumika kwa kichwa cha kitabu kinachonukuliwa?', 'alama za mtajo', 'mshazari', 'kiulizi', 'hisi'],
+    ['Ni neno lipi lina mshazari?', 'mwanafunzi/mwalimu', 'mwanafunzi mwalimu', 'mwanafunzi, mwalimu', 'mwanafunzi. mwalimu'],
+  ], [
+    ['Mama alisema, "Njoo hapa." Ni alama zipi zimeshikilia maneno yake?', 'alama za mtajo', 'mshazari', 'koma', 'kikomo'],
+    ['Kwenye fomu kuna "mwanafunzi/mwalimu" ya kuchagua. Alama ya kutenga ni ipi?', 'mshazari', 'koma', 'kikomo', 'kiulizi'],
+    ['Njeri anaandika tarehe 5 Mei 2027 kwa tarakimu. Ni ipi sahihi?', '5/5/2027', '5.5.2027', '5-5-2027', '5,5,2027'],
+    ['Juma anataja kitabu "Kinjeketile" katika insha. Alama ipi huzunguka kichwa?', 'alama za mtajo', 'mshazari', 'kiulizi', 'hisi'],
+    ['Ni sentensi ipi ina alama za mtajo sahihi?', 'Baba alisema, "Nimechoka."', 'Baba alisema / Nimechoka.', 'Baba alisema, Nimechoka.', 'Baba alisema (Nimechoka).'],
+  ], [
+    ['Ni hatua ipi ina kosa?', 'Hatua 1: Maneno halisi hunukuliwa.', 'Hatua 2: Hutumia alama za mtajo.', 'Hatua 3: Kwa hiyo hutumia mshazari.', 'Hutumia alama za mtajo.', 2],
+    ['Ni hatua ipi ina kosa?', 'Hatua 1: Machaguo hutengwa.', 'Hatua 2: Mshazari hutenga.', 'Hatua 3: Kwa hiyo koma hutenga machaguo.', 'Mshazari hutenga machaguo.', 2],
+    ['Ni hatua ipi ina kosa?', 'Hatua 1: Tarehe huandikwa kwa tarakimu.', 'Hatua 2: Mshazari hutenga siku, mwezi na mwaka.', 'Hatua 3: Kwa hiyo tunaandika 12.11.2026 kwa mshazari.', 'Tunaandika 12/11/2026.', 2],
+    ['Ni hatua ipi ina kosa?', 'Hatua 1: Vichwa vya vitabu hutajwa.', 'Hatua 2: Alama za mtajo huvizunguka.', 'Hatua 3: Kwa hiyo mshazari huvizunguka.', 'Alama za mtajo huvizunguka.', 2],
+    ['Ni hatua ipi ina kosa?', 'Hatua 1: Alama za mtajo huja kwa jozi.', 'Hatua 2: Moja hufungua, nyingine hufunga.', 'Hatua 3: Kwa hiyo moja inatosha.', 'Zinahitajika zote mbili.', 2],
+  ], ['a', 'b']),
+  ...S('hr', 'KUANDI.T1_VIAKIFISHI.', 'HISI_RITIFAA', ['HR_HISI', 'HR_RITIFAA', 'HR_AMRI'], ['Sentensi ya mshangao huisha kwa hisi (!); ng\'ombe huandikwa kwa ritifaa.', 'Amri kali huisha kwa hisi.'], [
+    ['Sentensi ya mshangao huisha kwa nini?', 'alama ya hisi', 'kikomo', 'kiulizi', 'koma'],
+    ['Ni neno lipi limeandikwa sawa?', 'ng\'ombe', 'ngombe', 'ng ombe', 'ngo\'mbe'],
+    ['Amri kali huisha kwa nini?', 'alama ya hisi', 'kiulizi', 'koma', 'kikomo'],
+    ['Ni neno lipi limeandikwa sawa?', 'ng\'ambo', 'ngambo', 'ng ambo', 'nga\'mbo'],
+    ['Ni sentensi ipi imeandikwa sawa?', 'Hodi! Nani yuko ndani?', 'Hodi? Nani yuko ndani!', 'Hodi. Nani yuko ndani,', 'Hodi, Nani yuko ndani.'],
+  ], [
+    ['Mtoto anashangazwa na mvua kubwa. Atasema "Mvua kubwa ___" Chagua alama.', '!', '.', '?', ','],
+    ['Mkulima anaandika neno la mnyama anayetoa maziwa. Ni lipi sahihi?', 'ng\'ombe', 'ngombe', 'ng ombe', 'ngo\'mbe'],
+    ['Mama anasema kwa nguvu "Simama" kwa mtoto aliye hatarini. Atatumia alama ipi mwishoni?', '!', '?', ',', ':'],
+    ['Mwalimu anaandika neno kwa upande mwingine wa bahari. Ni lipi sahihi?', 'ng\'ambo', 'ngambo', 'ng ambo', 'nga\'mbo'],
+    ['Mgeni anagonga mlango. Atasema "Hodi___" Chagua alama ya kawaida.', '!', '.', '?', ','],
+  ], [
+    ['Ni hatua ipi ina kosa?', 'Hatua 1: Mshangao huonyesha hisia kali.', 'Hatua 2: Huisha kwa hisi.', 'Hatua 3: Kwa hiyo huisha kwa kikomo.', 'Huisha kwa alama ya hisi.', 2],
+    ['Ni hatua ipi ina kosa?', 'Hatua 1: Ng\'ombe ni mnyama.', 'Hatua 2: Huandikwa kwa ritifaa.', 'Hatua 3: Kwa hiyo huandikwa "ngombe".', 'Huandikwa "ng\'ombe".', 2],
+    ['Ni hatua ipi ina kosa?', 'Hatua 1: Amri kali hutolewa kwa nguvu.', 'Hatua 2: Huisha kwa hisi.', 'Hatua 3: Kwa hiyo huisha kwa kiulizi.', 'Huisha kwa hisi.', 2],
+    ['Ni hatua ipi ina kosa?', 'Hatua 1: Ritifaa ni alama ya (\').', 'Hatua 2: Hutumika katika ng\'ambo.', 'Hatua 3: Kwa hiyo haitumiki kamwe.', 'Hutumika katika maneno kama ng\'ambo.', 2],
+    ['Ni hatua ipi ina kosa?', 'Hatua 1: Hodi ni salamu.', 'Hatua 2: Inaweza kuwa na hisi.', 'Hatua 3: Kwa hiyo haiwezi kuwa na hisi.', 'Inaweza kuwa na hisi.', 2],
+  ], ['a', 'b']),
+  ...S('gi', 'SARUFI.T8_NGELI_NA_UPATANISHO_.', 'NGELI_IZI', ['GI_UMOJA', 'GI_WINGI', 'GI_NOMINO'], ['I-ZI: umoja i-, wingi zi-.', 'Nyumba, meza na ndege ni za I-ZI.'], [
+    ['Chagua sentensi sahihi ya umoja kuhusu nyumba.', 'Nyumba inapendeza.', 'Nyumba zinapendeza.', 'Nyumba wanapendeza.', 'Nyumba yanapendeza.'],
+    ['Chagua sentensi sahihi ya wingi kuhusu nyumba.', 'Nyumba zinapendeza.', 'Nyumba inapendeza.', 'Nyumba linapendeza.', 'Nyumba kinapendeza.'],
+    ['Ni nomino ipi ni ya ngeli ya I-ZI?', 'meza', 'mtoto', 'kitabu', 'jiwe'],
+    ['Chagua sentensi sahihi ya umoja kuhusu meza.', 'Meza imevunjika.', 'Meza zimevunjika.', 'Meza limevunjika.', 'Meza kimevunjika.'],
+    ['Chagua sentensi sahihi ya wingi kuhusu ndege.', 'Ndege zinaruka.', 'Ndege inaruka.', 'Ndege wanaruka.', 'Ndege yanaruka.'],
+  ], [
+    ['Nyumba ___ nzuri. Chagua kiambishi cha upatanisho kwa umoja.', 'i', 'zi', 'wa', 'ya'],
+    ['Nyumba ___ nzuri. Chagua kiambishi cha upatanisho kwa wingi.', 'zi', 'i', 'wa', 'ya'],
+    ['Ni neno lipi ni la ngeli ya I-ZI?', 'ndege', 'mtoto', 'kitabu', 'jicho'],
+    ['Meza ___ vunjika. Chagua kiambishi kwa wingi.', 'zi', 'i', 'wa', 'ya'],
+    ['Barua ___ fika. Chagua kiambishi kwa umoja.', 'i', 'zi', 'wa', 'ya'],
+  ], [
+    ['Ni hatua ipi ina kosa?', 'Hatua 1: Nyumba ni wa I-ZI.', 'Hatua 2: Umoja hutumia i-.', 'Hatua 3: Kwa hiyo tunasema "Nyumba zinapendeza" kwa umoja.', 'Tunasema "Nyumba inapendeza".', 2],
+    ['Ni hatua ipi ina kosa?', 'Hatua 1: Wingi wa I-ZI hutumia zi-.', 'Hatua 2: Meza ni wingi hapa.', 'Hatua 3: Kwa hiyo tunasema "Meza imevunjika".', 'Tunasema "Meza zimevunjika".', 2],
+    ['Ni hatua ipi ina kosa?', 'Hatua 1: Ndege huruka.', 'Hatua 2: Ni nomino ya I-ZI.', 'Hatua 3: Kwa hiyo ni ya A-WA.', 'Ndege ni ya I-ZI.', 2],
+    ['Ni hatua ipi ina kosa?', 'Hatua 1: I-ZI huchukua i- na zi-.', 'Hatua 2: Barua ni ya I-ZI.', 'Hatua 3: Kwa hiyo tunasema "Barua wamefika".', 'Tunasema "Barua imefika" au "Barua zimefika".', 2],
+    ['Ni hatua ipi ina kosa?', 'Hatua 1: Meza ni ya I-ZI.', 'Hatua 2: Umoja ni meza.', 'Hatua 3: Kwa hiyo tunasema "Meza zimevunjika" kwa umoja.', 'Tunasema "Meza imevunjika".', 2],
+  ], ['a', 'b', 'c']),
+  ...S('gu', 'SARUFI.T9_NGELI_NA_UPATANISHO_.', 'NGELI_UU_UYA', ['GU_UJI', 'GU_UGONJWA', 'GU_NOMINO'], ['U-U: uji umeiva. U-YA: ugonjwa unaumiza, magonjwa yanaumiza.', 'Uji, ugali, unga na upendo ni za U-U.'], [
+    ['Chagua sentensi sahihi kuhusu uji.', 'Uji umeiva.', 'Uji kimeiva.', 'Uji limeiva.', 'Uji wameiva.'],
+    ['Chagua sentensi sahihi ya wingi kuhusu magonjwa.', 'Magonjwa yanaumiza.', 'Magonjwa unaumiza.', 'Magonjwa kinaumiza.', 'Magonjwa wanaumiza.'],
+    ['Ni nomino ipi ni ya ngeli ya U-U?', 'ugali', 'kitabu', 'mtoto', 'nyumba'],
+    ['Chagua sentensi sahihi kuhusu ugali.', 'Ugali umeiva.', 'Ugali kimeiva.', 'Ugali limeiva.', 'Ugali wameiva.'],
+    ['Chagua sentensi sahihi ya umoja kuhusu ugonjwa.', 'Ugonjwa unaumiza.', 'Ugonjwa yanaumiza.', 'Ugonjwa kinaumiza.', 'Ugonjwa wanaumiza.'],
+  ], [
+    ['Uji ___ meiva. Chagua kiambishi sahihi.', 'u', 'ki', 'li', 'wa'],
+    ['Magonjwa ___ naumiza. Chagua kiambishi sahihi kwa wingi.', 'ya', 'u', 'ki', 'wa'],
+    ['Ni neno lipi ni la ngeli ya U-U?', 'unga', 'kitabu', 'mtoto', 'nyumba'],
+    ['Upendo ___ meenea. Chagua kiambishi sahihi.', 'u', 'ki', 'li', 'wa'],
+    ['Ugonjwa ___ naumiza. Chagua kiambishi sahihi kwa umoja.', 'u', 'ya', 'ki', 'wa'],
+  ], [
+    ['Ni hatua ipi ina kosa?', 'Hatua 1: Uji ni wa U-U.', 'Hatua 2: Hutumia u-.', 'Hatua 3: Kwa hiyo tunasema "Uji kimeiva".', 'Tunasema "Uji umeiva".', 2],
+    ['Ni hatua ipi ina kosa?', 'Hatua 1: Magonjwa ni wingi wa ugonjwa.', 'Hatua 2: Hutumia ya-.', 'Hatua 3: Kwa hiyo tunasema "Magonjwa unaumiza".', 'Tunasema "Magonjwa yanaumiza".', 2],
+    ['Ni hatua ipi ina kosa?', 'Hatua 1: Ugali ni wa U-U.', 'Hatua 2: Hauna wingi.', 'Hatua 3: Kwa hiyo ni wa KI-VI.', 'Ugali ni wa U-U.', 2],
+    ['Ni hatua ipi ina kosa?', 'Hatua 1: Ugonjwa ni wa U-YA.', 'Hatua 2: Umoja hutumia u-.', 'Hatua 3: Kwa hiyo tunasema "Ugonjwa yanaumiza".', 'Tunasema "Ugonjwa unaumiza".', 2],
+    ['Ni hatua ipi ina kosa?', 'Hatua 1: Upendo ni wa U-U.', 'Hatua 2: Hutumia u-.', 'Hatua 3: Kwa hiyo tunasema "Upendo limeenea".', 'Tunasema "Upendo umeenea".', 2],
+  ], ['a', 'b', 'c']),
+];
