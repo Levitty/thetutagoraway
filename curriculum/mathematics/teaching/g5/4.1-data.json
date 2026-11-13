@@ -1,0 +1,700 @@
+{
+  "sub_strand": "MATH.G5.DATA_H.DATA_REPRESENTATION",
+  "title": "Data (collecting, tallying, frequency tables)",
+  "status": "draft: written 13 Nov 2026 from research round 3; shorter entries; not yet checked by a Kenyan maths teacher; not loaded by the live tutor",
+  "sources": [
+    52,
+    66
+  ],
+  "notes": "Data work is best done with real data the child collects (favourite drinks, vehicles passing the gate). For a voice tutor, the child can tally on the board while the tutor reads a list slowly. The common errors are bookkeeping ones (skipping, double counting, a tally gate of six), so the habit to teach is checking the total.",
+  "skills": [
+    {
+      "skill": "MATH.G5.DATA_H.DATA_REPRESENTATION.PLAN_DATA_COLLECTION",
+      "key_step": "The child chooses a question, clear categories that do not overlap (plus 'other'), and a method.",
+      "floor": {
+        "prerequisite": "Sorts objects into groups.",
+        "question": "Sort: mango, tea, banana, milk into two groups.",
+        "answer": "Fruits and drinks"
+      },
+      "representations": [
+        "a real question about the class",
+        "a category list",
+        "a plan"
+      ],
+      "steps": [
+        "Pick a question.",
+        "List categories; check each item fits exactly one.",
+        "Add 'other'.",
+        "Decide how to record."
+      ],
+      "contexts": [
+        "vehicles passing the school gate",
+        "favourite foods",
+        "learners' ages"
+      ],
+      "board": [
+        {
+          "beat": "write",
+          "do": "Write Wanjiru's categories: car, matatu, vehicle, boda boda."
+        },
+        {
+          "beat": "point",
+          "do": "Point at 'vehicle'.",
+          "say": "Where would a matatu go?"
+        },
+        {
+          "beat": "pause",
+          "do": "Wait for the child to spot the overlap and fix it."
+        }
+      ],
+      "misconceptions": [
+        {
+          "code": "MATH.G5.DATA_H.DATA_REPRESENTATION.PLAN_DATA_COLLECTION.M_OVERLAPPING_CATEGORIES",
+          "listen_for": [
+            "it's fine"
+          ],
+          "ask": "Could one matatu be counted in two groups?",
+          "repair": "Each item must fit one group only; remove or rename the overlapping one."
+        },
+        {
+          "code": "MATH.G5.DATA_H.DATA_REPRESENTATION.PLAN_DATA_COLLECTION.M_DATA_ONLY_NUMBERS",
+          "listen_for": [
+            "colours aren't data"
+          ],
+          "ask": "Can we count how many learners like each colour?",
+          "repair": "Data is any information we collect; words can be counted too."
+        }
+      ],
+      "checks": [
+        {
+          "question": "Categories: car, matatu, vehicle, boda boda. What is wrong?",
+          "answer": "'Vehicle' overlaps all the others",
+          "shows": "non-overlapping categories"
+        },
+        {
+          "question": "Can favourite foods be collected as data?",
+          "answer": "Yes",
+          "shows": "data need not be numbers"
+        }
+      ]
+    },
+    {
+      "skill": "MATH.G5.DATA_H.DATA_REPRESENTATION.COLLECT_DATA_30",
+      "key_step": "The child records every observation once (repeats included) and checks the count equals the number observed.",
+      "floor": {
+        "prerequisite": "Counts to 30 reliably.",
+        "question": "Count these 12 marks.",
+        "answer": "12"
+      },
+      "representations": [
+        "asking classmates",
+        "a record list",
+        "the check of the total"
+      ],
+      "steps": [
+        "Record each answer as it comes, repeats included.",
+        "Count the records.",
+        "Check the count equals the people asked."
+      ],
+      "contexts": [
+        "favourite drinks of 30 classmates",
+        "vehicles passing in 15 minutes",
+        "shoe sizes"
+      ],
+      "board": [
+        {
+          "beat": "write",
+          "do": "Write Juma's record: tea 12, uji 9, milk 7, juice 5, and 'asked 30'."
+        },
+        {
+          "beat": "point",
+          "do": "Point at each number in turn while the child adds.",
+          "say": "Add them up as I point."
+        },
+        {
+          "beat": "pause",
+          "do": "Wait for the child to add the record and compare with 30."
+        },
+        {
+          "beat": "write",
+          "do": "Write the child's total beside 30 with a box for = or not equal."
+        }
+      ],
+      "misconceptions": [
+        {
+          "code": "MATH.G5.DATA_H.DATA_REPRESENTATION.COLLECT_DATA_30.M_DOUBLE_COUNTING",
+          "listen_for": [
+            "it's fine"
+          ],
+          "ask": "Add Juma's numbers. Do they make 30?",
+          "repair": "The total must equal the number asked; 33 means someone was counted twice."
+        },
+        {
+          "code": "MATH.G5.DATA_H.DATA_REPRESENTATION.COLLECT_DATA_30.M_DISTINCT_VALUES_ONLY",
+          "listen_for": [
+            "3, 4, 5, 6"
+          ],
+          "ask": "How many learners told you size 4?",
+          "repair": "Write every answer, even repeats; one mark per learner."
+        }
+      ],
+      "checks": [
+        {
+          "question": "Juma asked 30 classmates and recorded tea 12, uji 9, milk 7, juice 5. What is wrong?",
+          "answer": "That totals 33, not 30",
+          "shows": "checks the total"
+        },
+        {
+          "question": "Atieno asked 30 learners their shoe size and wrote 3, 4, 5, 6. What is missing?",
+          "answer": "How many learners gave each size",
+          "shows": "every observation recorded"
+        }
+      ]
+    },
+    {
+      "skill": "MATH.G5.DATA_H.DATA_REPRESENTATION.DRAW_RECORDING_TABLE",
+      "key_step": "The child draws a ruled table with a title and column headings, and keeps each entry in its own row.",
+      "floor": {
+        "prerequisite": "Draws straight lines with a ruler.",
+        "question": "What goes at the top of a column?",
+        "answer": "A heading"
+      },
+      "representations": [
+        "data given aloud",
+        "a ruled table",
+        "the finished table"
+      ],
+      "steps": [
+        "Write a title.",
+        "Draw columns with headings.",
+        "One row per item; check pairs."
+      ],
+      "contexts": [
+        "names and ages",
+        "fruit sold at a stall",
+        "vehicles counted"
+      ],
+      "board": [
+        {
+          "beat": "draw",
+          "do": "Draw an empty two-column table with blank headings."
+        },
+        {
+          "beat": "child_draws",
+          "do": "Child adds a title and headings, then enters: Otieno 11, Akinyi 10."
+        },
+        {
+          "beat": "pause",
+          "do": "Wait for the child to read a row back."
+        }
+      ],
+      "misconceptions": [
+        {
+          "code": "MATH.G5.DATA_H.DATA_REPRESENTATION.DRAW_RECORDING_TABLE.M_TABLE_NO_HEADINGS",
+          "listen_for": [
+            "everyone knows"
+          ],
+          "ask": "A visitor reads 'Mango 7'. Seven what?",
+          "repair": "Headings and a title tell a reader what the numbers mean."
+        },
+        {
+          "code": "MATH.G5.DATA_H.DATA_REPRESENTATION.DRAW_RECORDING_TABLE.M_ROW_MISALIGNMENT",
+          "listen_for": [
+            "Akinyi is 11"
+          ],
+          "ask": "Read Otieno's row aloud. Is his age next to his name?",
+          "repair": "Use a ruler along the row when writing."
+        }
+      ],
+      "checks": [
+        {
+          "question": "Achieng's table says 'Mango | 7'. What does it need so a visitor understands?",
+          "answer": "A title and column headings (e.g. Fruit | Number sold)",
+          "shows": "headings"
+        },
+        {
+          "question": "Record: Otieno is 11, Akinyi is 10. How many rows of data?",
+          "answer": "2",
+          "shows": "one row per item"
+        }
+      ]
+    },
+    {
+      "skill": "MATH.G5.DATA_H.DATA_REPRESENTATION.DRAW_TALLY_GROUPS",
+      "key_step": "The child draws tallies in gates of five (four upright strokes and a fifth across) and then single strokes.",
+      "floor": {
+        "prerequisite": "Counts in fives.",
+        "question": "Count in fives to 30.",
+        "answer": "5, 10, 15, 20, 25, 30"
+      },
+      "representations": [
+        "strokes drawn one at a time",
+        "gates of five",
+        "the number"
+      ],
+      "steps": [
+        "Draw four upright strokes.",
+        "The fifth crosses them: a gate.",
+        "Start a new gate after each five."
+      ],
+      "contexts": [
+        "counting matatus",
+        "votes for class prefect",
+        "goals in a match"
+      ],
+      "board": [
+        {
+          "beat": "draw",
+          "do": "Draw four upright strokes slowly, counting, then the fifth across.",
+          "say": "One, two, three, four, and the fifth closes the gate."
+        },
+        {
+          "beat": "child_draws",
+          "do": "Child draws tallies for 7."
+        },
+        {
+          "beat": "pause",
+          "do": "Wait for the child to count their strokes."
+        }
+      ],
+      "misconceptions": [
+        {
+          "code": "MATH.G5.DATA_H.DATA_REPRESENTATION.DRAW_TALLY_GROUPS.M_GATE_SIX_STROKES",
+          "listen_for": [
+            "five then across"
+          ],
+          "ask": "Count every stroke in your gate, the crossing one too.",
+          "repair": "The crossing stroke is the fifth: four up, one across."
+        },
+        {
+          "code": "MATH.G5.DATA_H.DATA_REPRESENTATION.DRAW_TALLY_GROUPS.M_NO_GROUPING",
+          "listen_for": [
+            "I just drew lines"
+          ],
+          "ask": "How quickly can you count 13 single lines?",
+          "repair": "Gates of five let us count in fives."
+        }
+      ],
+      "checks": [
+        {
+          "question": "Show 7 using tally marks. How many strokes in the gate?",
+          "answer": "One gate of five (four up, one across) and two strokes",
+          "shows": "gate of five"
+        },
+        {
+          "question": "Show 13 using tally marks.",
+          "answer": "Two gates and three strokes",
+          "shows": "grouping"
+        }
+      ]
+    },
+    {
+      "skill": "MATH.G5.DATA_H.DATA_REPRESENTATION.TALLY_RAW_DATA",
+      "key_step": "The child makes one tally per observation against its category, ticking off each item in the list so nothing is skipped or repeated.",
+      "floor": {
+        "prerequisite": "Draws tally gates.",
+        "question": "Draw 6 in tallies.",
+        "answer": "One gate and one stroke"
+      },
+      "representations": [
+        "a raw list",
+        "the list with ticks",
+        "tallies by category"
+      ],
+      "steps": [
+        "Tick each item as you tally it.",
+        "One stroke per item, never the value.",
+        "Count the tallies against the list length."
+      ],
+      "contexts": [
+        "drinks chosen by learners",
+        "shoe sizes",
+        "vehicles"
+      ],
+      "board": [
+        {
+          "beat": "write",
+          "do": "Write a list: tea, uji, tea, milk, tea, uji, milk, tea, uji, tea, and three category rows."
+        },
+        {
+          "beat": "child_draws",
+          "do": "Child ticks each word and tallies it."
+        },
+        {
+          "beat": "pause",
+          "do": "Wait for the child to check the total tallies against 10."
+        }
+      ],
+      "misconceptions": [
+        {
+          "code": "MATH.G5.DATA_H.DATA_REPRESENTATION.TALLY_RAW_DATA.M_TALLY_SKIP_OR_REPEAT",
+          "listen_for": [
+            "I lost my place"
+          ],
+          "ask": "How many words in the list, and how many tallies?",
+          "repair": "Tick each word as you go, then check the totals match."
+        },
+        {
+          "code": "MATH.G5.DATA_H.DATA_REPRESENTATION.TALLY_RAW_DATA.M_TALLY_THE_VALUE",
+          "listen_for": [
+            "four strokes for size 4"
+          ],
+          "ask": "How many learners does one stroke stand for?",
+          "repair": "One stroke per learner, whatever their shoe size."
+        }
+      ],
+      "checks": [
+        {
+          "question": "Tally: tea, uji, tea, milk, tea, uji, milk, tea, uji, tea. How many teas?",
+          "answer": "5",
+          "shows": "one stroke per item"
+        },
+        {
+          "question": "Shoe sizes 4, 5, 4, 6, 5, 4. How many strokes for size 4?",
+          "answer": "3",
+          "shows": "not the value"
+        }
+      ]
+    },
+    {
+      "skill": "MATH.G5.DATA_H.DATA_REPRESENTATION.TALLY_TO_FREQUENCY",
+      "key_step": "The child counts each gate as five and counts on the single strokes.",
+      "floor": {
+        "prerequisite": "Counts in fives.",
+        "question": "5, 10, then add 2?",
+        "answer": "12"
+      },
+      "representations": [
+        "tally marks",
+        "gates circled",
+        "the number"
+      ],
+      "steps": [
+        "Ring each gate.",
+        "Count the gates in fives.",
+        "Count on the single strokes.",
+        "Check by counting every stroke once."
+      ],
+      "contexts": [
+        "votes counted",
+        "vehicles",
+        "goals"
+      ],
+      "board": [
+        {
+          "beat": "draw",
+          "do": "Draw two gates and two strokes."
+        },
+        {
+          "beat": "count",
+          "do": "Child counts in fives over the gates, then ones.",
+          "say": "Count the gates in fives."
+        },
+        {
+          "beat": "pause",
+          "do": "Wait for the total."
+        }
+      ],
+      "misconceptions": [
+        {
+          "code": "MATH.G5.DATA_H.DATA_REPRESENTATION.TALLY_TO_FREQUENCY.M_GATE_READ_AS_FOUR",
+          "listen_for": [
+            "10",
+            "four in each"
+          ],
+          "ask": "Count every stroke in one gate, the crossing one too.",
+          "repair": "A gate is five strokes; the cross is the fifth."
+        }
+      ],
+      "checks": [
+        {
+          "question": "Two gates and two strokes. What number?",
+          "answer": "12",
+          "shows": "gate is five"
+        },
+        {
+          "question": "Four gates and one stroke. What number?",
+          "answer": "21",
+          "shows": "counting in fives"
+        }
+      ]
+    },
+    {
+      "skill": "MATH.G5.DATA_H.DATA_REPRESENTATION.PREPARE_FREQUENCY_TABLE",
+      "key_step": "The child makes one row per category with tally and frequency columns, and checks the total frequency equals the number of items.",
+      "floor": {
+        "prerequisite": "Tallies raw data.",
+        "question": "Tallies show one gate and one stroke. Frequency?",
+        "answer": "6"
+      },
+      "representations": [
+        "raw data",
+        "a table: category, tally, frequency",
+        "the total check"
+      ],
+      "steps": [
+        "List categories once each.",
+        "Tally the data.",
+        "Write frequencies.",
+        "Add them; compare with the number collected."
+      ],
+      "contexts": [
+        "ages of learners",
+        "favourite fruit",
+        "vehicles"
+      ],
+      "board": [
+        {
+          "beat": "write",
+          "do": "Write ages 10, 11, 10, 10, 12, 11 and an empty three-column table."
+        },
+        {
+          "beat": "child_draws",
+          "do": "Child fills one row per age."
+        },
+        {
+          "beat": "pause",
+          "do": "Wait for the child to check the total is 6."
+        }
+      ],
+      "misconceptions": [
+        {
+          "code": "MATH.G5.DATA_H.DATA_REPRESENTATION.PREPARE_FREQUENCY_TABLE.M_ROW_PER_OBSERVATION",
+          "listen_for": [
+            "six rows"
+          ],
+          "ask": "How many different ages are there?",
+          "repair": "One row per category; the tallies show how many."
+        },
+        {
+          "code": "MATH.G5.DATA_H.DATA_REPRESENTATION.PREPARE_FREQUENCY_TABLE.M_FREQ_TOTAL_UNCHECKED",
+          "listen_for": [
+            "done"
+          ],
+          "ask": "Do your frequencies add up to the number of learners?",
+          "repair": "Always add the frequency column and compare."
+        }
+      ],
+      "checks": [
+        {
+          "question": "Ages 10, 11, 10, 10, 12, 11. How many rows does the table need?",
+          "answer": "3 (ages 10, 11, 12)",
+          "shows": "one row per category"
+        },
+        {
+          "question": "Data from 30 learners; frequencies add to 28. What does that tell you?",
+          "answer": "Two learners were missed",
+          "shows": "total check"
+        }
+      ]
+    },
+    {
+      "skill": "MATH.G5.DATA_H.DATA_REPRESENTATION.READ_FREQUENCY_TABLE",
+      "key_step": "The child tells the category (value) from the frequency (how many) and finds the most common by the largest frequency.",
+      "floor": {
+        "prerequisite": "Reads a table row.",
+        "question": "Tea: 12. What does 12 mean?",
+        "answer": "12 learners chose tea"
+      },
+      "representations": [
+        "a frequency table",
+        "the two columns highlighted",
+        "answers in sentences"
+      ],
+      "steps": [
+        "Point to the category column and the frequency column.",
+        "Answer which-category and how-many questions.",
+        "Most common: largest frequency."
+      ],
+      "contexts": [
+        "learners' ages",
+        "shoe sizes",
+        "favourite drinks"
+      ],
+      "board": [
+        {
+          "beat": "write",
+          "do": "Write a table: size 3: 5, size 4: 12, size 5: 8, size 6: 3."
+        },
+        {
+          "beat": "point",
+          "do": "Point at the two columns.",
+          "say": "Which column tells how many learners?"
+        },
+        {
+          "beat": "pause",
+          "do": "Wait for the child to find the most common size."
+        }
+      ],
+      "misconceptions": [
+        {
+          "code": "MATH.G5.DATA_H.DATA_REPRESENTATION.READ_FREQUENCY_TABLE.M_BIGGEST_LABEL_IS_MOST",
+          "listen_for": [
+            "size 6"
+          ],
+          "ask": "How many learners wear size 6?",
+          "repair": "Most common means most learners: look at the frequency column."
+        },
+        {
+          "code": "MATH.G5.DATA_H.DATA_REPRESENTATION.READ_FREQUENCY_TABLE.M_VALUE_VS_FREQUENCY",
+          "listen_for": [
+            "14 years old"
+          ],
+          "ask": "Is 14 an age or a number of learners?",
+          "repair": "Say each row as a sentence: 14 learners are 11 years old."
+        }
+      ],
+      "checks": [
+        {
+          "question": "Size 3: 5 learners; size 4: 12; size 5: 8; size 6: 3. Most common size?",
+          "answer": "Size 4",
+          "shows": "largest frequency"
+        },
+        {
+          "question": "Age 10: 9 learners; age 11: 14 learners. What age are most learners?",
+          "answer": "11",
+          "shows": "value versus frequency"
+        }
+      ]
+    },
+    {
+      "skill": "MATH.G5.DATA_H.DATA_REPRESENTATION.COMPARE_TOTAL_FREQUENCIES",
+      "key_step": "The child chooses the operation the question needs: subtract for how many more, add all for how many altogether, total minus one for how many did not.",
+      "floor": {
+        "prerequisite": "Adds and subtracts to 30.",
+        "question": "12 - 9 =",
+        "answer": "3"
+      },
+      "representations": [
+        "a frequency table",
+        "a bar sketch comparing two rows",
+        "answers in sentences"
+      ],
+      "steps": [
+        "Read the question word.",
+        "Sketch two bars for 'how many more'.",
+        "Add all rows for 'altogether'.",
+        "Total minus the row for 'did not choose'."
+      ],
+      "contexts": [
+        "matatus and boda bodas passing",
+        "favourite drinks",
+        "games played"
+      ],
+      "board": [
+        {
+          "beat": "draw",
+          "do": "Draw two bars: matatus 12, boda bodas 9, lined up at the left."
+        },
+        {
+          "beat": "point",
+          "do": "Point at the part of the longer bar that sticks out.",
+          "say": "How many more is this part?"
+        },
+        {
+          "beat": "pause",
+          "do": "Wait for the child's answer."
+        }
+      ],
+      "misconceptions": [
+        {
+          "code": "MATH.G5.DATA_H.DATA_REPRESENTATION.COMPARE_TOTAL_FREQUENCIES.M_HOW_MANY_MORE_ADD",
+          "listen_for": [
+            "21"
+          ],
+          "ask": "Can there be 21 more matatus when only 12 passed?",
+          "repair": "How many more is the extra bit of the longer bar: subtract."
+        },
+        {
+          "code": "MATH.G5.DATA_H.DATA_REPRESENTATION.COMPARE_TOTAL_FREQUENCIES.M_NOT_CHOOSING_MISREAD",
+          "listen_for": [
+            "12"
+          ],
+          "ask": "Did those 12 choose tea, or not?",
+          "repair": "Did not choose tea = everyone minus the tea row."
+        }
+      ],
+      "checks": [
+        {
+          "question": "12 matatus and 9 boda bodas passed. How many more matatus?",
+          "answer": "3",
+          "shows": "subtracts"
+        },
+        {
+          "question": "Tea 12, uji 8, milk 6, juice 4. How many did not choose tea?",
+          "answer": "18",
+          "shows": "total minus one row"
+        }
+      ]
+    },
+    {
+      "skill": "MATH.G5.DATA_H.DATA_REPRESENTATION.INFER_FROM_FREQUENCY_TABLE",
+      "key_step": "The child makes conclusions and decisions from the numbers in the table (not opinion), and only about the group that was asked.",
+      "floor": {
+        "prerequisite": "Reads a frequency table.",
+        "question": "Banana 11, mango 9. Which is more popular?",
+        "answer": "Banana"
+      },
+      "representations": [
+        "a frequency table",
+        "true or false statements",
+        "a decision with a reason"
+      ],
+      "steps": [
+        "Judge statements true or false with a reason from the table.",
+        "Make a decision for the canteen from the data.",
+        "Say who the data is about."
+      ],
+      "contexts": [
+        "the school canteen choosing fruit",
+        "a class's favourite games",
+        "a sports day plan"
+      ],
+      "board": [
+        {
+          "beat": "write",
+          "do": "Write: football 12, netball 8, volleyball 6, athletics 4 (30 learners) and the statement 'More than half chose football'."
+        },
+        {
+          "beat": "point",
+          "do": "Point at the football row and then at the number of learners asked.",
+          "say": "How many learners were asked altogether?"
+        },
+        {
+          "beat": "pause",
+          "do": "Wait for the child to say true or false with a reason."
+        }
+      ],
+      "misconceptions": [
+        {
+          "code": "MATH.G5.DATA_H.DATA_REPRESENTATION.INFER_FROM_FREQUENCY_TABLE.M_MOST_POPULAR_IS_MAJORITY",
+          "listen_for": [
+            "true, it's the most"
+          ],
+          "ask": "What is half of 30?",
+          "repair": "Most popular is not the same as more than half: 12 is less than 15."
+        },
+        {
+          "code": "MATH.G5.DATA_H.DATA_REPRESENTATION.INFER_FROM_FREQUENCY_TABLE.M_OVERGENERALISE",
+          "listen_for": [
+            "all children in Kenya"
+          ],
+          "ask": "Who did we ask?",
+          "repair": "The data is about this class only."
+        }
+      ],
+      "checks": [
+        {
+          "question": "Football 12, netball 8, volleyball 6, athletics 4, from 30 learners. True or false: more than half chose football?",
+          "answer": "False; 12 is less than 15",
+          "shows": "most is not majority"
+        },
+        {
+          "question": "Canteen survey: banana 11, mango 9, orange 6, pawpaw 4. Which fruit should it buy most of, and why?",
+          "answer": "Banana, because most learners chose it",
+          "shows": "decision from data"
+        }
+      ]
+    }
+  ]
+}

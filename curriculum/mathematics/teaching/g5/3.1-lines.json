@@ -1,0 +1,138 @@
+{
+  "sub_strand": "MATH.G5.GEOMET.LINES",
+  "title": "Lines (horizontal, vertical, perpendicular, parallel)",
+  "status": "draft: written 13 Nov 2026 from research round 3; shorter entries; drawing skills need the rendering engine's ruler and set square tools; not loaded by the live tutor",
+  "sources": [52, 66, 71],
+  "notes": "Geometry is named as weak in KNEC's 2023 report (source 66). Children learn these words from upright examples only, so every skill shows tilted cases too. Drawing skills need the child to draw on the board; the tutor watches and asks about what was drawn rather than drawing it.",
+  "skills": [
+    {
+      "skill": "MATH.G5.GEOMET.LINES.IDENTIFY_HORIZONTAL_VERTICAL",
+      "key_step": "The child names lines as horizontal (level, like the horizon), vertical (upright, like a plumb line) or neither, including slanting lines and the sides of tilted shapes.",
+      "floor": {"prerequisite": "Knows straight lines.", "question": "Point to something straight in the room.", "answer": "Any straight edge"},
+      "representations": ["objects in the classroom: table top, door frame, flag pole, a leaning ladder", "a plumb line (string with a stone)", "lines drawn at different slants"],
+      "steps": ["Show the horizon and a plumb line.", "Sort real edges: level, upright, neither.", "Include a leaning ladder and a tilted square.", "Use the words."],
+      "contexts": ["a flag pole at assembly", "a table top", "a ladder against a wall", "a diamond-shaped road sign"],
+      "board": [
+        {"beat": "draw", "do": "Draw a horizon line, a hanging plumb line, and a leaning ladder."},
+        {"beat": "point", "do": "Point at each line.", "say": "Which word fits this line?"},
+        {"beat": "pause", "do": "Wait for the child's choice for each."}
+      ],
+      "misconceptions": [
+        {"code": "MATH.G5.GEOMET.LINES.IDENTIFY_HORIZONTAL_VERTICAL.M_HV_SWAP_NAMES", "listen_for": ["the table top is vertical"], "ask": "Which word sounds like horizon?", "repair": "Horizontal goes like the horizon; vertical stands like a flag pole."},
+        {"code": "MATH.G5.GEOMET.LINES.IDENTIFY_HORIZONTAL_VERTICAL.M_HV_SLANT_COUNTS", "listen_for": ["the ladder is vertical"], "ask": "Does the ladder hang straight like the plumb line?", "repair": "Hold the plumb line beside the ladder: a slant is neither."}
+      ],
+      "checks": [
+        {"question": "A ladder leans against a wall. Is it horizontal, vertical or neither?", "answer": "Neither", "shows": "slant is neither"},
+        {"question": "A square stands on one corner like a diamond. Are its sides horizontal or vertical?", "answer": "Neither; they are slanting", "shows": "tilted shapes"}
+      ]
+    },
+    {
+      "skill": "MATH.G5.GEOMET.LINES.DRAW_HORIZONTAL_VERTICAL",
+      "key_step": "The child draws level and upright lines with a ruler against a guide (page edge, grid or set square), measuring from 0.",
+      "floor": {"prerequisite": "Measures with a ruler.", "question": "Where do you start measuring on a ruler?", "answer": "At 0"},
+      "representations": ["a ruler against the page edge", "grid paper", "the drawn line checked"],
+      "steps": ["Keep the book straight.", "Use the grid or page edge as a guide.", "Start at 0, draw to the length.", "Check with the grid."],
+      "contexts": ["drawing a table on a chart", "a flag pole in a drawing", "lines in an exercise book"],
+      "board": [
+        {"beat": "draw", "do": "Draw a grid and a ruler with 0 marked bold."},
+        {"beat": "child_draws", "do": "Child draws a vertical line 6 cm long on the grid."},
+        {"beat": "pause", "do": "Wait, then ask how the child checked it is upright and 6 cm."}
+      ],
+      "misconceptions": [
+        {"code": "MATH.G5.GEOMET.LINES.DRAW_HORIZONTAL_VERTICAL.M_RULER_FROM_ONE", "listen_for": ["from the 1"], "ask": "If you start at 1 and stop at 8, how many centimetres is that?", "repair": "Count the spaces from 1 to 8: seven. Start at 0."},
+        {"code": "MATH.G5.GEOMET.LINES.DRAW_HORIZONTAL_VERTICAL.M_DRAW_HV_DRIFT", "listen_for": ["I did it by eye"], "ask": "Does your line follow the grid line next to it?", "repair": "Lay the ruler along a grid line or the page edge."}
+      ],
+      "checks": [
+        {"question": "Draw a horizontal line 8 cm long. Where do you start on the ruler?", "answer": "At 0, drawing to 8", "shows": "measuring from 0"},
+        {"question": "How can you check a line is vertical on grid paper?", "answer": "It runs along or beside an upright grid line", "shows": "uses a guide"}
+      ]
+    },
+    {
+      "skill": "MATH.G5.GEOMET.LINES.IDENTIFY_PERPENDICULAR",
+      "key_step": "The child recognises perpendicular lines as meeting or crossing at a right angle, checked with a set square or paper corner, whatever the tilt and whether they cross, touch (L, T) or not.",
+      "floor": {"prerequisite": "Recognises a right angle (a square corner).", "question": "Is the corner of a book a square corner?", "answer": "Yes"},
+      "representations": ["corners of books and windows", "L, T, + and X shapes, some tilted", "a folded-paper right angle as a checker"],
+      "steps": ["Make a right-angle checker by folding paper twice.", "Test L, T, + shapes, then tilted ones.", "Test a V and an X that are not square.", "Say the rule: meet at a right angle."],
+      "contexts": ["the corner of an exercise book", "a window frame", "two roads crossing at a junction"],
+      "board": [
+        {"beat": "draw", "do": "Draw an L, a tilted +, a V and an X with a slant."},
+        {"beat": "predict", "do": "Ask which pairs are perpendicular before testing.", "say": "Guess which pairs meet at a square corner."},
+        {"beat": "child_draws", "do": "Child places the right-angle checker on each."},
+        {"beat": "pause", "do": "Wait for the child to say which passed."}
+      ],
+      "misconceptions": [
+        {"code": "MATH.G5.GEOMET.LINES.IDENTIFY_PERPENDICULAR.M_PERP_MUST_BE_UPRIGHT", "listen_for": ["it's tilted so no"], "ask": "Turn the page. Does the corner change?", "repair": "Rotate the drawing: the right angle stays. Tilt does not matter."},
+        {"code": "MATH.G5.GEOMET.LINES.IDENTIFY_PERPENDICULAR.M_PERP_ANY_CROSSING", "listen_for": ["they meet so yes"], "ask": "Does your square-corner checker fit inside the V?", "repair": "Meeting is not enough; the corner must be square."}
+      ],
+      "checks": [
+        {"question": "Are the two lines in a letter V perpendicular?", "answer": "No; they meet but not at a right angle", "shows": "meeting is not enough"},
+        {"question": "Are two edges meeting at the corner of an exercise book perpendicular?", "answer": "Yes; they meet at a right angle", "shows": "touching counts (L shape)"}
+      ]
+    },
+    {
+      "skill": "MATH.G5.GEOMET.LINES.DRAW_PERPENDICULAR",
+      "key_step": "The child places one short edge of the set square along the given line at the point and draws along the other short edge, through the point, whatever the line's slope.",
+      "floor": {"prerequisite": "Identifies perpendicular lines.", "question": "What angle do perpendicular lines make?", "answer": "A right angle"},
+      "representations": ["a set square on a line", "the line drawn slanting", "the new line checked"],
+      "steps": ["Find the right-angle corner of the set square.", "Put one short edge along the line, corner at the point.", "Draw along the other short edge.", "Check with the checker."],
+      "contexts": ["drawing a T-junction on a map", "a goalpost meeting the crossbar", "a shelf on a wall"],
+      "board": [
+        {"beat": "draw", "do": "Draw a slanting line AB with a point P."},
+        {"beat": "point", "do": "Point at the right-angle corner of a drawn set square.", "say": "Which corner of the set square do we use?"},
+        {"beat": "child_draws", "do": "Child places the set square and draws the line through P."},
+        {"beat": "pause", "do": "Wait, then ask how the child knows it is perpendicular."}
+      ],
+      "misconceptions": [
+        {"code": "MATH.G5.GEOMET.LINES.DRAW_PERPENDICULAR.M_DRAWPERP_ALWAYS_VERTICAL", "listen_for": ["straight up"], "ask": "Put the checker on your corner. Is it square?", "repair": "Perpendicular is to the line, not to the page: lay the set square edge along AB."},
+        {"code": "MATH.G5.GEOMET.LINES.DRAW_PERPENDICULAR.M_SETSQUARE_WRONG_EDGE", "listen_for": ["I used the long side"], "ask": "Which edges of the set square meet at the square corner?", "repair": "Only the two short edges make the right angle."}
+      ],
+      "checks": [
+        {"question": "Line AB slopes upwards. How do you draw a perpendicular through P on AB?", "answer": "Set square short edge along AB, corner at P, draw along the other short edge", "shows": "works on a slant"},
+        {"question": "Which part of the set square makes the right angle?", "answer": "The corner where the two short edges meet", "shows": "correct edge"}
+      ]
+    },
+    {
+      "skill": "MATH.G5.GEOMET.LINES.IDENTIFY_PARALLEL",
+      "key_step": "The child recognises parallel lines as staying the same distance apart all along and never meeting, whatever their length, position or slant.",
+      "floor": {"prerequisite": "Knows straight lines and measuring distance.", "question": "Do railway lines ever meet?", "answer": "No"},
+      "representations": ["railway lines, ruler edges, lines in a book", "pairs drawn: different lengths, slanting, closing in", "measuring the gap at two places"],
+      "steps": ["Look at railway lines and book lines.", "Measure the gap at two places.", "Test pairs of different lengths, slanting pairs, and pairs that close in."],
+      "contexts": ["railway lines of the SGR", "the edges of a ruler", "lines in an exercise book", "a zebra crossing"],
+      "board": [
+        {"beat": "draw", "do": "Draw three pairs: different lengths but same gap; slanting with same gap; closing in."},
+        {"beat": "child_draws", "do": "Child measures the gap at both ends of each pair."},
+        {"beat": "pause", "do": "Wait for the child to say which pairs are parallel."}
+      ],
+      "misconceptions": [
+        {"code": "MATH.G5.GEOMET.LINES.IDENTIFY_PARALLEL.M_PAR_NOT_MEETING_YET", "listen_for": ["they don't touch"], "ask": "If we make both lines longer, what happens?", "repair": "Extend the lines on the board until they meet. Same gap all along is the test."},
+        {"code": "MATH.G5.GEOMET.LINES.IDENTIFY_PARALLEL.M_PAR_SAME_LENGTH", "listen_for": ["one is longer so no"], "ask": "Is the gap the same at both ends?", "repair": "Length does not matter; the gap does."}
+      ],
+      "checks": [
+        {"question": "Two lines are 4 cm apart at one end and 2 cm at the other. Parallel?", "answer": "No; the gap changes so they would meet", "shows": "same-gap test"},
+        {"question": "Are the two edges of a ruler laid slanting across a desk parallel?", "answer": "Yes", "shows": "slant does not matter"}
+      ]
+    },
+    {
+      "skill": "MATH.G5.GEOMET.LINES.DRAW_PARALLEL",
+      "key_step": "The child marks the required distance at right angles in two places (or slides a set square along a ruler) and joins the marks, following the same slant.",
+      "floor": {"prerequisite": "Draws perpendicular lines.", "question": "How do you measure the distance between two lines?", "answer": "At right angles to them"},
+      "representations": ["set square sliding along a ruler", "two right-angle marks", "the new line"],
+      "steps": ["At two places, draw a short perpendicular and mark the distance.", "Join the two marks.", "Check the gap at a third place."],
+      "contexts": ["drawing a road with two edges", "lines for a chart", "a railway on a map"],
+      "board": [
+        {"beat": "draw", "do": "Draw a slanting line MN."},
+        {"beat": "point", "do": "Point at two places along MN.", "say": "How many places will you measure from?"},
+        {"beat": "child_draws", "do": "Child marks the distance at two places and joins them."},
+        {"beat": "pause", "do": "Wait for the child to check the gap at a third place."}
+      ],
+      "misconceptions": [
+        {"code": "MATH.G5.GEOMET.LINES.DRAW_PARALLEL.M_DRAWPAR_ONE_MEASURE", "listen_for": ["I measured once"], "ask": "Measure the gap at the other end. Is it the same?", "repair": "Two marks fix a line; one mark lets it drift."},
+        {"code": "MATH.G5.GEOMET.LINES.DRAW_PARALLEL.M_DRAWPAR_IGNORES_DIRECTION", "listen_for": ["I drew it straight across"], "ask": "Does your new line slope the same way as MN?", "repair": "Parallel lines share the same slant; mark two points and join them."}
+      ],
+      "checks": [
+        {"question": "How do you draw a line parallel to AB and 3 cm away?", "answer": "Mark 3 cm at right angles at two places, then join the marks", "shows": "two measures at right angles"},
+        {"question": "Line MN slopes down to the right. Which way must its parallel slope?", "answer": "Down to the right too", "shows": "same direction"}
+      ]
+    }
+  ]
+}

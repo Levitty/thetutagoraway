@@ -9147,6 +9147,2245 @@ export const TEACHING_PACK_G5 = {
   "sub_strand": "MATH.G5.MEASUR.MONEY",
   "sub_strand_name": "Money (budgets, tax, banks, transfers, saving)",
   "status": "draft: written 13 Nov 2026 from research round 3; shorter entries; prices are examples only and need a Kenyan teacher's check; not loaded by the live tutor"
+ },
+ "MATH.G5.GEOMET.LINES.IDENTIFY_HORIZONTAL_VERTICAL": {
+  "skill": "MATH.G5.GEOMET.LINES.IDENTIFY_HORIZONTAL_VERTICAL",
+  "key_step": "The child names lines as horizontal (level, like the horizon), vertical (upright, like a plumb line) or neither, including slanting lines and the sides of tilted shapes.",
+  "floor": {
+   "prerequisite": "Knows straight lines.",
+   "question": "Point to something straight in the room.",
+   "answer": "Any straight edge"
+  },
+  "representations": [
+   "objects in the classroom: table top, door frame, flag pole, a leaning ladder",
+   "a plumb line (string with a stone)",
+   "lines drawn at different slants"
+  ],
+  "steps": [
+   "Show the horizon and a plumb line.",
+   "Sort real edges: level, upright, neither.",
+   "Include a leaning ladder and a tilted square.",
+   "Use the words."
+  ],
+  "contexts": [
+   "a flag pole at assembly",
+   "a table top",
+   "a ladder against a wall",
+   "a diamond-shaped road sign"
+  ],
+  "board": [
+   {
+    "beat": "draw",
+    "do": "Draw a horizon line, a hanging plumb line, and a leaning ladder."
+   },
+   {
+    "beat": "point",
+    "do": "Point at each line.",
+    "say": "Which word fits this line?"
+   },
+   {
+    "beat": "pause",
+    "do": "Wait for the child's choice for each."
+   }
+  ],
+  "misconceptions": [
+   {
+    "code": "MATH.G5.GEOMET.LINES.IDENTIFY_HORIZONTAL_VERTICAL.M_HV_SWAP_NAMES",
+    "listen_for": [
+     "the table top is vertical"
+    ],
+    "ask": "Which word sounds like horizon?",
+    "repair": "Horizontal goes like the horizon; vertical stands like a flag pole.",
+    "error": "Mixes up the words, calling level lines vertical and upright lines horizontal.",
+    "example": {
+     "question": "Is the top edge of the teacher's table a horizontal or a vertical line?",
+     "wrong_answer": "Vertical",
+     "correct_answer": "Horizontal"
+    }
+   },
+   {
+    "code": "MATH.G5.GEOMET.LINES.IDENTIFY_HORIZONTAL_VERTICAL.M_HV_SLANT_COUNTS",
+    "listen_for": [
+     "the ladder is vertical"
+    ],
+    "ask": "Does the ladder hang straight like the plumb line?",
+    "repair": "Hold the plumb line beside the ladder: a slant is neither.",
+    "error": "Calls a steep slanting line vertical or a gently slanting line horizontal, not seeing 'neither' as an option.",
+    "example": {
+     "question": "A ladder leans against the wall of a classroom. Is the ladder horizontal, vertical or neither?",
+     "wrong_answer": "Vertical",
+     "correct_answer": "Neither, it is slanting"
+    }
+   }
+  ],
+  "checks": [
+   {
+    "question": "A ladder leans against a wall. Is it horizontal, vertical or neither?",
+    "answer": "Neither",
+    "shows": "slant is neither"
+   },
+   {
+    "question": "A square stands on one corner like a diamond. Are its sides horizontal or vertical?",
+    "answer": "Neither; they are slanting",
+    "shows": "tilted shapes"
+   }
+  ],
+  "name": "Identify horizontal and vertical lines",
+  "sub_strand": "MATH.G5.GEOMET.LINES",
+  "sub_strand_name": "Lines (horizontal, vertical, perpendicular, parallel)",
+  "status": "draft: written 13 Nov 2026 from research round 3; shorter entries; drawing skills need the rendering engine's ruler and set square tools; not loaded by the live tutor"
+ },
+ "MATH.G5.GEOMET.LINES.DRAW_HORIZONTAL_VERTICAL": {
+  "skill": "MATH.G5.GEOMET.LINES.DRAW_HORIZONTAL_VERTICAL",
+  "key_step": "The child draws level and upright lines with a ruler against a guide (page edge, grid or set square), measuring from 0.",
+  "floor": {
+   "prerequisite": "Measures with a ruler.",
+   "question": "Where do you start measuring on a ruler?",
+   "answer": "At 0"
+  },
+  "representations": [
+   "a ruler against the page edge",
+   "grid paper",
+   "the drawn line checked"
+  ],
+  "steps": [
+   "Keep the book straight.",
+   "Use the grid or page edge as a guide.",
+   "Start at 0, draw to the length.",
+   "Check with the grid."
+  ],
+  "contexts": [
+   "drawing a table on a chart",
+   "a flag pole in a drawing",
+   "lines in an exercise book"
+  ],
+  "board": [
+   {
+    "beat": "draw",
+    "do": "Draw a grid and a ruler with 0 marked bold."
+   },
+   {
+    "beat": "child_draws",
+    "do": "Child draws a vertical line 6 cm long on the grid."
+   },
+   {
+    "beat": "pause",
+    "do": "Wait, then ask how the child checked it is upright and 6 cm."
+   }
+  ],
+  "misconceptions": [
+   {
+    "code": "MATH.G5.GEOMET.LINES.DRAW_HORIZONTAL_VERTICAL.M_RULER_FROM_ONE",
+    "listen_for": [
+     "from the 1"
+    ],
+    "ask": "If you start at 1 and stop at 8, how many centimetres is that?",
+    "repair": "Count the spaces from 1 to 8: seven. Start at 0.",
+    "error": "Starts measuring from the 1 cm mark or the end of the ruler, not from 0, so the line is the wrong length.",
+    "example": {
+     "question": "Draw a horizontal line 8 cm long.",
+     "wrong_answer": "A line drawn from the 1 mark to the 8 mark, which is only 7 cm long",
+     "correct_answer": "A line drawn from the 0 mark to the 8 mark, 8 cm long"
+    }
+   },
+   {
+    "code": "MATH.G5.GEOMET.LINES.DRAW_HORIZONTAL_VERTICAL.M_DRAW_HV_DRIFT",
+    "listen_for": [
+     "I did it by eye"
+    ],
+    "ask": "Does your line follow the grid line next to it?",
+    "repair": "Lay the ruler along a grid line or the page edge.",
+    "error": "Draws a 'vertical' or 'horizontal' line by eye that slopes noticeably, often with the book turned at an angle.",
+    "example": {
+     "question": "Draw a vertical line 6 cm long on plain paper.",
+     "wrong_answer": "A 6 cm line that leans to the right, about 1 cm further across at the top than at the bottom",
+     "correct_answer": "A 6 cm line parallel to the side edge of the page, running straight up and down"
+    }
+   }
+  ],
+  "checks": [
+   {
+    "question": "Draw a horizontal line 8 cm long. Where do you start on the ruler?",
+    "answer": "At 0, drawing to 8",
+    "shows": "measuring from 0"
+   },
+   {
+    "question": "How can you check a line is vertical on grid paper?",
+    "answer": "It runs along or beside an upright grid line",
+    "shows": "uses a guide"
+   }
+  ],
+  "name": "Draw horizontal and vertical lines",
+  "sub_strand": "MATH.G5.GEOMET.LINES",
+  "sub_strand_name": "Lines (horizontal, vertical, perpendicular, parallel)",
+  "status": "draft: written 13 Nov 2026 from research round 3; shorter entries; drawing skills need the rendering engine's ruler and set square tools; not loaded by the live tutor"
+ },
+ "MATH.G5.GEOMET.LINES.IDENTIFY_PERPENDICULAR": {
+  "skill": "MATH.G5.GEOMET.LINES.IDENTIFY_PERPENDICULAR",
+  "key_step": "The child recognises perpendicular lines as meeting or crossing at a right angle, checked with a set square or paper corner, whatever the tilt and whether they cross, touch (L, T) or not.",
+  "floor": {
+   "prerequisite": "Recognises a right angle (a square corner).",
+   "question": "Is the corner of a book a square corner?",
+   "answer": "Yes"
+  },
+  "representations": [
+   "corners of books and windows",
+   "L, T, + and X shapes, some tilted",
+   "a folded-paper right angle as a checker"
+  ],
+  "steps": [
+   "Make a right-angle checker by folding paper twice.",
+   "Test L, T, + shapes, then tilted ones.",
+   "Test a V and an X that are not square.",
+   "Say the rule: meet at a right angle."
+  ],
+  "contexts": [
+   "the corner of an exercise book",
+   "a window frame",
+   "two roads crossing at a junction"
+  ],
+  "board": [
+   {
+    "beat": "draw",
+    "do": "Draw an L, a tilted +, a V and an X with a slant."
+   },
+   {
+    "beat": "predict",
+    "do": "Ask which pairs are perpendicular before testing.",
+    "say": "Guess which pairs meet at a square corner."
+   },
+   {
+    "beat": "child_draws",
+    "do": "Child places the right-angle checker on each."
+   },
+   {
+    "beat": "pause",
+    "do": "Wait for the child to say which passed."
+   }
+  ],
+  "misconceptions": [
+   {
+    "code": "MATH.G5.GEOMET.LINES.IDENTIFY_PERPENDICULAR.M_PERP_MUST_BE_UPRIGHT",
+    "listen_for": [
+     "it's tilted so no"
+    ],
+    "ask": "Turn the page. Does the corner change?",
+    "repair": "Rotate the drawing: the right angle stays. Tilt does not matter.",
+    "error": "Only accepts perpendicular lines when one is horizontal and the other vertical, and rejects tilted pairs that meet at a right angle.",
+    "example": {
+     "question": "Two straight paths cross like a letter X, and a set square fits exactly into each corner. Are the paths perpendicular?",
+     "wrong_answer": "No, because neither path is straight up or across",
+     "correct_answer": "Yes, they meet at right angles"
+    }
+   },
+   {
+    "code": "MATH.G5.GEOMET.LINES.IDENTIFY_PERPENDICULAR.M_PERP_ANY_CROSSING",
+    "listen_for": [
+     "they meet so yes"
+    ],
+    "ask": "Does your square-corner checker fit inside the V?",
+    "repair": "Meeting is not enough; the corner must be square.",
+    "error": "Thinks any two lines that cross or meet are perpendicular.",
+    "example": {
+     "question": "Are the two lines in the letter V perpendicular?",
+     "wrong_answer": "Yes, because they meet",
+     "correct_answer": "No, they meet at an angle smaller than a right angle"
+    }
+   }
+  ],
+  "checks": [
+   {
+    "question": "Are the two lines in a letter V perpendicular?",
+    "answer": "No; they meet but not at a right angle",
+    "shows": "meeting is not enough"
+   },
+   {
+    "question": "Are two edges meeting at the corner of an exercise book perpendicular?",
+    "answer": "Yes; they meet at a right angle",
+    "shows": "touching counts (L shape)"
+   }
+  ],
+  "name": "Identify perpendicular lines",
+  "sub_strand": "MATH.G5.GEOMET.LINES",
+  "sub_strand_name": "Lines (horizontal, vertical, perpendicular, parallel)",
+  "status": "draft: written 13 Nov 2026 from research round 3; shorter entries; drawing skills need the rendering engine's ruler and set square tools; not loaded by the live tutor"
+ },
+ "MATH.G5.GEOMET.LINES.DRAW_PERPENDICULAR": {
+  "skill": "MATH.G5.GEOMET.LINES.DRAW_PERPENDICULAR",
+  "key_step": "The child places one short edge of the set square along the given line at the point and draws along the other short edge, through the point, whatever the line's slope.",
+  "floor": {
+   "prerequisite": "Identifies perpendicular lines.",
+   "question": "What angle do perpendicular lines make?",
+   "answer": "A right angle"
+  },
+  "representations": [
+   "a set square on a line",
+   "the line drawn slanting",
+   "the new line checked"
+  ],
+  "steps": [
+   "Find the right-angle corner of the set square.",
+   "Put one short edge along the line, corner at the point.",
+   "Draw along the other short edge.",
+   "Check with the checker."
+  ],
+  "contexts": [
+   "drawing a T-junction on a map",
+   "a goalpost meeting the crossbar",
+   "a shelf on a wall"
+  ],
+  "board": [
+   {
+    "beat": "draw",
+    "do": "Draw a slanting line AB with a point P."
+   },
+   {
+    "beat": "point",
+    "do": "Point at the right-angle corner of a drawn set square.",
+    "say": "Which corner of the set square do we use?"
+   },
+   {
+    "beat": "child_draws",
+    "do": "Child places the set square and draws the line through P."
+   },
+   {
+    "beat": "pause",
+    "do": "Wait, then ask how the child knows it is perpendicular."
+   }
+  ],
+  "misconceptions": [
+   {
+    "code": "MATH.G5.GEOMET.LINES.DRAW_PERPENDICULAR.M_DRAWPERP_ALWAYS_VERTICAL",
+    "listen_for": [
+     "straight up"
+    ],
+    "ask": "Put the checker on your corner. Is it square?",
+    "repair": "Perpendicular is to the line, not to the page: lay the set square edge along AB.",
+    "error": "Draws a vertical line through the point even when the given line is slanting.",
+    "example": {
+     "question": "Line AB slopes upwards from left to right. Draw a line through point P on AB that is perpendicular to AB.",
+     "wrong_answer": "A line straight up and down the page through P",
+     "correct_answer": "A line through P that makes a right angle with AB, so it slopes upwards from right to left"
+    }
+   },
+   {
+    "code": "MATH.G5.GEOMET.LINES.DRAW_PERPENDICULAR.M_SETSQUARE_WRONG_EDGE",
+    "listen_for": [
+     "I used the long side"
+    ],
+    "ask": "Which edges of the set square meet at the square corner?",
+    "repair": "Only the two short edges make the right angle.",
+    "error": "Places the long sloping edge of the set square on the line, so the drawn line makes a 45° or 60° angle, not a right angle.",
+    "example": {
+     "question": "Using a set square, draw a line perpendicular to the horizontal line XY at point M.",
+     "wrong_answer": "A line through M slanting at about 45° to XY",
+     "correct_answer": "A line through M at a right angle to XY, drawn along the edge next to the square corner"
+    }
+   }
+  ],
+  "checks": [
+   {
+    "question": "Line AB slopes upwards. How do you draw a perpendicular through P on AB?",
+    "answer": "Set square short edge along AB, corner at P, draw along the other short edge",
+    "shows": "works on a slant"
+   },
+   {
+    "question": "Which part of the set square makes the right angle?",
+    "answer": "The corner where the two short edges meet",
+    "shows": "correct edge"
+   }
+  ],
+  "name": "Draw perpendicular lines",
+  "sub_strand": "MATH.G5.GEOMET.LINES",
+  "sub_strand_name": "Lines (horizontal, vertical, perpendicular, parallel)",
+  "status": "draft: written 13 Nov 2026 from research round 3; shorter entries; drawing skills need the rendering engine's ruler and set square tools; not loaded by the live tutor"
+ },
+ "MATH.G5.GEOMET.LINES.IDENTIFY_PARALLEL": {
+  "skill": "MATH.G5.GEOMET.LINES.IDENTIFY_PARALLEL",
+  "key_step": "The child recognises parallel lines as staying the same distance apart all along and never meeting, whatever their length, position or slant.",
+  "floor": {
+   "prerequisite": "Knows straight lines and measuring distance.",
+   "question": "Do railway lines ever meet?",
+   "answer": "No"
+  },
+  "representations": [
+   "railway lines, ruler edges, lines in a book",
+   "pairs drawn: different lengths, slanting, closing in",
+   "measuring the gap at two places"
+  ],
+  "steps": [
+   "Look at railway lines and book lines.",
+   "Measure the gap at two places.",
+   "Test pairs of different lengths, slanting pairs, and pairs that close in."
+  ],
+  "contexts": [
+   "railway lines of the SGR",
+   "the edges of a ruler",
+   "lines in an exercise book",
+   "a zebra crossing"
+  ],
+  "board": [
+   {
+    "beat": "draw",
+    "do": "Draw three pairs: different lengths but same gap; slanting with same gap; closing in."
+   },
+   {
+    "beat": "child_draws",
+    "do": "Child measures the gap at both ends of each pair."
+   },
+   {
+    "beat": "pause",
+    "do": "Wait for the child to say which pairs are parallel."
+   }
+  ],
+  "misconceptions": [
+   {
+    "code": "MATH.G5.GEOMET.LINES.IDENTIFY_PARALLEL.M_PAR_NOT_MEETING_YET",
+    "listen_for": [
+     "they don't touch"
+    ],
+    "ask": "If we make both lines longer, what happens?",
+    "repair": "Extend the lines on the board until they meet. Same gap all along is the test.",
+    "error": "Calls two lines parallel just because they do not touch on the page, even when they are getting closer together.",
+    "example": {
+     "question": "Two lines are 4 cm apart at the left end and 2 cm apart at the right end. Are they parallel?",
+     "wrong_answer": "Yes, they do not meet",
+     "correct_answer": "No, the gap is getting smaller, so they would meet if extended"
+    }
+   },
+   {
+    "code": "MATH.G5.GEOMET.LINES.IDENTIFY_PARALLEL.M_PAR_SAME_LENGTH",
+    "listen_for": [
+     "one is longer so no"
+    ],
+    "ask": "Is the gap the same at both ends?",
+    "repair": "Length does not matter; the gap does.",
+    "error": "Thinks parallel lines must be the same length and lined up exactly opposite each other.",
+    "example": {
+     "question": "One horizontal line is 3 cm long. Another horizontal line 2 cm below it is 7 cm long and starts further to the right. Are they parallel?",
+     "wrong_answer": "No, because they are not the same length",
+     "correct_answer": "Yes, they stay the same distance apart and would never meet"
+    }
+   }
+  ],
+  "checks": [
+   {
+    "question": "Two lines are 4 cm apart at one end and 2 cm at the other. Parallel?",
+    "answer": "No; the gap changes so they would meet",
+    "shows": "same-gap test"
+   },
+   {
+    "question": "Are the two edges of a ruler laid slanting across a desk parallel?",
+    "answer": "Yes",
+    "shows": "slant does not matter"
+   }
+  ],
+  "name": "Identify parallel lines",
+  "sub_strand": "MATH.G5.GEOMET.LINES",
+  "sub_strand_name": "Lines (horizontal, vertical, perpendicular, parallel)",
+  "status": "draft: written 13 Nov 2026 from research round 3; shorter entries; drawing skills need the rendering engine's ruler and set square tools; not loaded by the live tutor"
+ },
+ "MATH.G5.GEOMET.LINES.DRAW_PARALLEL": {
+  "skill": "MATH.G5.GEOMET.LINES.DRAW_PARALLEL",
+  "key_step": "The child marks the required distance at right angles in two places (or slides a set square along a ruler) and joins the marks, following the same slant.",
+  "floor": {
+   "prerequisite": "Draws perpendicular lines.",
+   "question": "How do you measure the distance between two lines?",
+   "answer": "At right angles to them"
+  },
+  "representations": [
+   "set square sliding along a ruler",
+   "two right-angle marks",
+   "the new line"
+  ],
+  "steps": [
+   "At two places, draw a short perpendicular and mark the distance.",
+   "Join the two marks.",
+   "Check the gap at a third place."
+  ],
+  "contexts": [
+   "drawing a road with two edges",
+   "lines for a chart",
+   "a railway on a map"
+  ],
+  "board": [
+   {
+    "beat": "draw",
+    "do": "Draw a slanting line MN."
+   },
+   {
+    "beat": "point",
+    "do": "Point at two places along MN.",
+    "say": "How many places will you measure from?"
+   },
+   {
+    "beat": "child_draws",
+    "do": "Child marks the distance at two places and joins them."
+   },
+   {
+    "beat": "pause",
+    "do": "Wait for the child to check the gap at a third place."
+   }
+  ],
+  "misconceptions": [
+   {
+    "code": "MATH.G5.GEOMET.LINES.DRAW_PARALLEL.M_DRAWPAR_ONE_MEASURE",
+    "listen_for": [
+     "I measured once"
+    ],
+    "ask": "Measure the gap at the other end. Is it the same?",
+    "repair": "Two marks fix a line; one mark lets it drift.",
+    "error": "Measures the required distance at only one point, then draws the new line by eye, so the lines are not parallel.",
+    "example": {
+     "question": "Draw a line parallel to line AB and 3 cm away from it.",
+     "wrong_answer": "A line 3 cm from AB at one end but 4 cm away at the other end",
+     "correct_answer": "A line exactly 3 cm from AB at every point, found by marking 3 cm at two places or sliding a set square along a ruler"
+    }
+   },
+   {
+    "code": "MATH.G5.GEOMET.LINES.DRAW_PARALLEL.M_DRAWPAR_IGNORES_DIRECTION",
+    "listen_for": [
+     "I drew it straight across"
+    ],
+    "ask": "Does your new line slope the same way as MN?",
+    "repair": "Parallel lines share the same slant; mark two points and join them.",
+    "error": "Draws a horizontal line under a slanting given line instead of a line that follows the same slant.",
+    "example": {
+     "question": "Line MN slopes downwards from left to right. Draw a line parallel to MN.",
+     "wrong_answer": "A horizontal line below MN",
+     "correct_answer": "A line below or above MN with exactly the same downward slope"
+    }
+   }
+  ],
+  "checks": [
+   {
+    "question": "How do you draw a line parallel to AB and 3 cm away?",
+    "answer": "Mark 3 cm at right angles at two places, then join the marks",
+    "shows": "two measures at right angles"
+   },
+   {
+    "question": "Line MN slopes down to the right. Which way must its parallel slope?",
+    "answer": "Down to the right too",
+    "shows": "same direction"
+   }
+  ],
+  "name": "Draw parallel lines",
+  "sub_strand": "MATH.G5.GEOMET.LINES",
+  "sub_strand_name": "Lines (horizontal, vertical, perpendicular, parallel)",
+  "status": "draft: written 13 Nov 2026 from research round 3; shorter entries; drawing skills need the rendering engine's ruler and set square tools; not loaded by the live tutor"
+ },
+ "MATH.G5.GEOMET.ANGLES.TURNS_AS_ANGLES": {
+  "skill": "MATH.G5.GEOMET.ANGLES.TURNS_AS_ANGLES",
+  "key_step": "The child links quarter, half, three-quarter and full turns to 90°, 180°, 270° and 360°, measuring how far something turned from where it started.",
+  "floor": {
+   "prerequisite": "Knows quarter, half and three-quarter turns (Grade 4).",
+   "question": "Stand facing the door, make a half turn. Which way do you face?",
+   "answer": "The opposite way"
+  },
+  "representations": [
+   "the child turning their body",
+   "a clock hand sweeping",
+   "turns labelled in degrees"
+  ],
+  "steps": [
+   "Turn the body in quarters.",
+   "A full turn is 360°.",
+   "Halve and quarter it.",
+   "Measure turns on a clock from the start position."
+  ],
+  "contexts": [
+   "a door opening",
+   "a clock's minute hand",
+   "a matatu turning at a junction"
+  ],
+  "board": [
+   {
+    "beat": "draw",
+    "do": "Draw a clock face and the minute hand at 12; sweep it a quarter turn slowly to 3."
+   },
+   {
+    "beat": "predict",
+    "do": "Ask how many degrees a full turn would be and then this quarter.",
+    "say": "A full turn is 360 degrees. What is this quarter?"
+   },
+   {
+    "beat": "pause",
+    "do": "Wait for the child's answer and reason."
+   }
+  ],
+  "misconceptions": [
+   {
+    "code": "MATH.G5.GEOMET.ANGLES.TURNS_AS_ANGLES.M_FULL_TURN_100",
+    "listen_for": [
+     "50 degrees",
+     "25 degrees"
+    ],
+    "ask": "How many degrees in a full turn?",
+    "repair": "A full turn is 360°, not 100. Halve it, then halve again.",
+    "error": "Assumes a full turn is 100 degrees, so a quarter turn is 25° and a half turn is 50°.",
+    "example": {
+     "question": "How many degrees does a half turn make?",
+     "wrong_answer": "50°",
+     "correct_answer": "180°"
+    }
+   },
+   {
+    "code": "MATH.G5.GEOMET.ANGLES.TURNS_AS_ANGLES.M_TURN_FROM_TOP",
+    "listen_for": [
+     "it's at 6 so half"
+    ],
+    "ask": "Where did the hand start?",
+    "repair": "Measure from the start, not from 12: 3 to 6 is a quarter turn.",
+    "error": "Judges the turn by where the hand ends up on the clock face rather than how far it moved from its start.",
+    "example": {
+     "question": "The minute hand moves from 3 to 6. What fraction of a turn is that, and what angle?",
+     "wrong_answer": "A half turn, 180°",
+     "correct_answer": "A quarter turn, 90°"
+    }
+   }
+  ],
+  "checks": [
+   {
+    "question": "How many degrees does a half turn make?",
+    "answer": "180°",
+    "shows": "half of 360"
+   },
+   {
+    "question": "The minute hand moves from 3 to 6. What turn and what angle?",
+    "answer": "A quarter turn, 90°",
+    "shows": "measures from the start"
+   }
+  ],
+  "name": "Relating quarter, half, three-quarter and full turns to angles",
+  "sub_strand": "MATH.G5.GEOMET.ANGLES",
+  "sub_strand_name": "Angles",
+  "status": "draft: written 13 Nov 2026 from research round 3; shorter entries; protractor work needs the rendering engine's protractor figure (phase 2); not loaded by the live tutor"
+ },
+ "MATH.G5.GEOMET.ANGLES.DEGREE_AS_UNIT": {
+  "skill": "MATH.G5.GEOMET.ANGLES.DEGREE_AS_UNIT",
+  "key_step": "The child explains that angle size is the amount of turn between the arms, not the length of the arms or the gap between their tips.",
+  "floor": {
+   "prerequisite": "Knows angles as turns.",
+   "question": "A door opens a little or a lot. Which is the bigger angle?",
+   "answer": "A lot"
+  },
+  "representations": [
+   "a paper wedge as a unit angle",
+   "the same angle with long and short arms",
+   "degrees"
+  ],
+  "steps": [
+   "Compare angles with a paper wedge: how many wedges fit?",
+   "Draw the same angle with long and short arms; fit the wedge.",
+   "Name the degree as a tiny standard wedge."
+  ],
+  "contexts": [
+   "scissors opened",
+   "a door opening",
+   "a roof's slope"
+  ],
+  "board": [
+   {
+    "beat": "draw",
+    "do": "Draw two equal angles, one with long arms, one with short arms."
+   },
+   {
+    "beat": "predict",
+    "do": "Ask which angle is bigger before testing.",
+    "say": "Which angle is bigger?"
+   },
+   {
+    "beat": "child_draws",
+    "do": "Child places the same paper wedge in each."
+   },
+   {
+    "beat": "pause",
+    "do": "Wait for the child to say what they found."
+   }
+  ],
+  "misconceptions": [
+   {
+    "code": "MATH.G5.GEOMET.ANGLES.DEGREE_AS_UNIT.M_LONGER_ARMS_BIGGER",
+    "listen_for": [
+     "longer arms",
+     "P is bigger"
+    ],
+    "ask": "If I rub out the ends of the long arms, does the opening change?",
+    "repair": "Shorten the arms on the board: the turn stays. Angle is the turn.",
+    "error": "Thinks an angle with longer arms is a bigger angle.",
+    "example": {
+     "question": "Angle P is 40° with arms 8 cm long. Angle Q is 40° with arms 2 cm long. Which angle is bigger?",
+     "wrong_answer": "Angle P",
+     "correct_answer": "They are equal; both are 40°."
+    }
+   },
+   {
+    "code": "MATH.G5.GEOMET.ANGLES.DEGREE_AS_UNIT.M_GAP_BETWEEN_ENDS",
+    "listen_for": [
+     "the ends are further apart"
+    ],
+    "ask": "Make both arms the same length. Which opens wider?",
+    "repair": "Compare openings at the corner, not at the tips.",
+    "error": "Judges angle size by the distance between the tips of the arms.",
+    "example": {
+     "question": "Angle A is 60° with arms 5 cm long; angle B is 80° with arms 1 cm long. Which is bigger?",
+     "wrong_answer": "Angle A, because its arm ends are further apart",
+     "correct_answer": "Angle B (80° is greater than 60°)"
+    }
+   }
+  ],
+  "checks": [
+   {
+    "question": "Angle P is 40° with 8 cm arms. Angle Q is 40° with 2 cm arms. Which is bigger?",
+    "answer": "Neither; they are equal",
+    "shows": "arm length does not matter"
+   },
+   {
+    "question": "Angle A is 60° with long arms; angle B is 80° with short arms. Which is bigger?",
+    "answer": "Angle B",
+    "shows": "turn, not tip gap"
+   }
+  ],
+  "name": "Understanding the degree as the unit for measuring the size of an angle",
+  "sub_strand": "MATH.G5.GEOMET.ANGLES",
+  "sub_strand_name": "Angles",
+  "status": "draft: written 13 Nov 2026 from research round 3; shorter entries; protractor work needs the rendering engine's protractor figure (phase 2); not loaded by the live tutor"
+ },
+ "MATH.G5.GEOMET.ANGLES.READ_PROTRACTOR_BOTH_SCALES": {
+  "skill": "MATH.G5.GEOMET.ANGLES.READ_PROTRACTOR_BOTH_SCALES",
+  "key_step": "The child chooses the scale that starts at 0 on the baseline arm, checks the reading against an estimate (more or less than 90°), and counts small marks as 1° each.",
+  "floor": {
+   "prerequisite": "Knows a right angle is 90°.",
+   "question": "Is a sharp corner more or less than 90°?",
+   "answer": "Less"
+  },
+  "representations": [
+   "a protractor drawn large with two scales",
+   "the arm on 0 highlighted",
+   "the reading"
+  ],
+  "steps": [
+   "Estimate first: smaller or bigger than a right angle?",
+   "Find which scale has 0 on the baseline arm.",
+   "Follow that scale to the other arm.",
+   "Check against the estimate."
+  ],
+  "contexts": [
+   "the angle of a roof",
+   "a ladder against a wall",
+   "scissors"
+  ],
+  "board": [
+   {
+    "beat": "draw",
+    "do": "Draw a protractor on an angle, one arm through the right-hand 0, the other passing 50 on the outer scale and 130 on the inner."
+   },
+   {
+    "beat": "predict",
+    "do": "Ask whether the angle is more or less than a right angle.",
+    "say": "More or less than a right angle?"
+   },
+   {
+    "beat": "point",
+    "do": "Point at the 0 where the baseline arm sits.",
+    "say": "Which scale starts at this 0?"
+   },
+   {
+    "beat": "pause",
+    "do": "Wait for the child to read along that scale."
+   }
+  ],
+  "misconceptions": [
+   {
+    "code": "MATH.G5.GEOMET.ANGLES.READ_PROTRACTOR_BOTH_SCALES.M_WRONG_SCALE",
+    "listen_for": [
+     "130"
+    ],
+    "ask": "Your estimate said less than a right angle. Does 130 fit?",
+    "repair": "Start from the 0 under the baseline arm and follow that scale.",
+    "error": "Reads the scale that does not start at 0 on the baseline arm, giving 180° minus the true angle.",
+    "example": {
+     "question": "One arm lies along the baseline through the 0 on the right. The other arm passes the marks labelled 60 and 120. What is the angle?",
+     "wrong_answer": "120°",
+     "correct_answer": "60°"
+    }
+   },
+   {
+    "code": "MATH.G5.GEOMET.ANGLES.READ_PROTRACTOR_BOTH_SCALES.M_SMALL_MARK_AS_TEN",
+    "listen_for": [
+     "90"
+    ],
+    "ask": "How many small marks between 70 and 80?",
+    "repair": "Ten marks share ten degrees: each is 1°.",
+    "error": "Treats each small mark as more than 1°, for example as 10° or as 5°.",
+    "example": {
+     "question": "On the correct scale the arm is 2 small marks past 70, on the way to 80. What is the angle?",
+     "wrong_answer": "90°",
+     "correct_answer": "72°"
+    }
+   }
+  ],
+  "checks": [
+   {
+    "question": "One arm lies through the 0 on the right; the other passes 50 on that scale and 130 on the other. What is the angle?",
+    "answer": "50°",
+    "shows": "the scale from 0 on the baseline"
+   },
+   {
+    "question": "On the right scale the arm is 2 small marks past 70. Angle?",
+    "answer": "72°",
+    "shows": "small marks are 1°"
+   }
+  ],
+  "name": "Reading a protractor's inner and outer scales in both directions",
+  "sub_strand": "MATH.G5.GEOMET.ANGLES",
+  "sub_strand_name": "Angles",
+  "status": "draft: written 13 Nov 2026 from research round 3; shorter entries; protractor work needs the rendering engine's protractor figure (phase 2); not loaded by the live tutor"
+ },
+ "MATH.G5.GEOMET.ANGLES.MEASURE_WITH_PROTRACTOR": {
+  "skill": "MATH.G5.GEOMET.ANGLES.MEASURE_WITH_PROTRACTOR",
+  "key_step": "The child puts the centre point on the vertex and the 0° line along one arm (turning the protractor if needed), extends short arms, then reads the scale from that 0.",
+  "floor": {
+   "prerequisite": "Reads a protractor already placed.",
+   "question": "Which scale do you read?",
+   "answer": "The one with 0 on the baseline arm"
+  },
+  "representations": [
+   "a protractor being placed",
+   "vertex and baseline highlighted",
+   "the reading"
+  ],
+  "steps": [
+   "Estimate.",
+   "Centre on the vertex.",
+   "0° line along one arm, not the protractor edge.",
+   "Extend arms if short.",
+   "Read from the 0; compare with the estimate."
+  ],
+  "contexts": [
+   "angles in a triangle",
+   "a roof truss",
+   "a road junction"
+  ],
+  "board": [
+   {
+    "beat": "draw",
+    "do": "Draw angle ABC with short arms and a protractor beside it."
+   },
+   {
+    "beat": "child_draws",
+    "do": "Child moves the protractor so the centre is on B and extends the arms."
+   },
+   {
+    "beat": "pause",
+    "do": "Wait for the child's reading and comparison with an estimate."
+   }
+  ],
+  "misconceptions": [
+   {
+    "code": "MATH.G5.GEOMET.ANGLES.MEASURE_WITH_PROTRACTOR.M_CENTRE_OFF_VERTEX",
+    "listen_for": [
+     "about 45"
+    ],
+    "ask": "Where is the protractor's centre dot, and where is the corner?",
+    "repair": "Centre dot exactly on the corner, then read again.",
+    "error": "Places the protractor's centre point somewhere along an arm rather than exactly on the vertex.",
+    "example": {
+     "question": "Measure angle PQR, which is 50°.",
+     "wrong_answer": "An inaccurate reading, e.g. 45° or 56°",
+     "correct_answer": "50°"
+    }
+   },
+   {
+    "code": "MATH.G5.GEOMET.ANGLES.MEASURE_WITH_PROTRACTOR.M_SHORT_ARMS_GUESS",
+    "listen_for": [
+     "about 50, it doesn't reach"
+    ],
+    "ask": "Can we make the arms longer?",
+    "repair": "Extend the arms with a ruler until they cross the scale.",
+    "error": "When the arms are too short to reach the scale, guesses the reading instead of extending the arms.",
+    "example": {
+     "question": "Measure the 35° angle drawn with arms only 1 cm long.",
+     "wrong_answer": "About 50° (a guess)",
+     "correct_answer": "35°, after extending the arms with a ruler"
+    }
+   }
+  ],
+  "checks": [
+   {
+    "question": "What two things must line up before you read a protractor?",
+    "answer": "The centre on the vertex and the 0° line along one arm",
+    "shows": "placement"
+   },
+   {
+    "question": "A 35° angle has arms only 1 cm long. What do you do first?",
+    "answer": "Extend the arms so they reach the scale",
+    "shows": "no guessing"
+   }
+  ],
+  "name": "Positioning a protractor and measuring a given angle",
+  "sub_strand": "MATH.G5.GEOMET.ANGLES",
+  "sub_strand_name": "Angles",
+  "status": "draft: written 13 Nov 2026 from research round 3; shorter entries; protractor work needs the rendering engine's protractor figure (phase 2); not loaded by the live tutor"
+ },
+ "MATH.G5.GEOMET.ANGLES.MEASURE_ANGLES_IN_CONTEXT": {
+  "skill": "MATH.G5.GEOMET.ANGLES.MEASURE_ANGLES_IN_CONTEXT",
+  "key_step": "The child measures angles in shapes and drawings of real objects, writes the unit °, and checks each reading is reasonable for how the angle looks.",
+  "floor": {
+   "prerequisite": "Measures an angle with a protractor.",
+   "question": "What unit do we write after an angle?",
+   "answer": "Degrees (°)"
+  },
+  "representations": [
+   "a drawn roof, ladder, triangle",
+   "the angles marked with arcs",
+   "readings with °"
+  ],
+  "steps": [
+   "Mark the angle with an arc.",
+   "Estimate: acute, right or obtuse?",
+   "Measure; write °.",
+   "Check against the estimate."
+  ],
+  "contexts": [
+   "a roof truss",
+   "a ladder against a wall",
+   "a triangular flag"
+  ],
+  "board": [
+   {
+    "beat": "draw",
+    "do": "Draw a ladder against a wall and mark the angle with the ground."
+   },
+   {
+    "beat": "predict",
+    "do": "Ask whether it is sharp, square or wide.",
+    "say": "Sharp, square or wide?"
+   },
+   {
+    "beat": "pause",
+    "do": "Wait for the child's measurement with its unit."
+   }
+  ],
+  "misconceptions": [
+   {
+    "code": "MATH.G5.GEOMET.ANGLES.MEASURE_ANGLES_IN_CONTEXT.M_NO_DEGREE_UNIT",
+    "listen_for": [
+     "65 cm"
+    ],
+    "ask": "Is the angle a length?",
+    "repair": "Angles are turns, measured in degrees (°).",
+    "error": "Records an angle as a bare number or in centimetres.",
+    "example": {
+     "question": "Measure the angle between the ladder and the ground in the drawing.",
+     "wrong_answer": "65 cm",
+     "correct_answer": "65°"
+    }
+   },
+   {
+    "code": "MATH.G5.GEOMET.ANGLES.MEASURE_ANGLES_IN_CONTEXT.M_BIGGER_SHAPE_BIGGER_ANGLES",
+    "listen_for": [
+     "the big roof has bigger angles"
+    ],
+    "ask": "If I photocopy the roof larger, does its slope change?",
+    "repair": "Same shape, bigger size: the turn at each corner is the same.",
+    "error": "Thinks that drawing a shape larger, or showing a bigger picture of a roof, makes its angles bigger.",
+    "example": {
+     "question": "A small drawing of a roof has a top angle of 100°. A larger drawing of the same roof is twice as big. What is its top angle?",
+     "wrong_answer": "200°",
+     "correct_answer": "100°"
+    }
+   }
+  ],
+  "checks": [
+   {
+    "question": "A small roof drawing has a top angle of 100°. A larger drawing of the same roof?",
+    "answer": "Also 100°",
+    "shows": "size does not change angles"
+   },
+   {
+    "question": "You measure a sharp corner of a triangle as 140°. What should you do?",
+    "answer": "Check again: a sharp corner is less than 90°, so the wrong scale was probably read",
+    "shows": "reasonableness check"
+   }
+  ],
+  "name": "Measuring and recording angles in degrees in shapes, diagrams and objects",
+  "sub_strand": "MATH.G5.GEOMET.ANGLES",
+  "sub_strand_name": "Angles",
+  "status": "draft: written 13 Nov 2026 from research round 3; shorter entries; protractor work needs the rendering engine's protractor figure (phase 2); not loaded by the live tutor"
+ },
+ "MATH.G5.GEOMET.ANGLES.ANGLES_IN_ENVIRONMENT": {
+  "skill": "MATH.G5.GEOMET.ANGLES.ANGLES_IN_ENVIRONMENT",
+  "key_step": "The child finds angles as openings between two arms in fixed objects and in turning objects, including tilted right angles.",
+  "floor": {
+   "prerequisite": "Knows what an angle is.",
+   "question": "Show an angle with your two arms.",
+   "answer": "Any opening between the arms"
+  },
+  "representations": [
+   "objects at school and home",
+   "drawings with arcs showing openings",
+   "named angles"
+  ],
+  "steps": [
+   "Find angles in fixed things (window, roof, junction).",
+   "Find angles made by turning (door, scissors, clock).",
+   "Find right angles that are tilted."
+  ],
+  "contexts": [
+   "a tilted signboard at a bus stop",
+   "a classroom door",
+   "a pair of scissors",
+   "a road junction"
+  ],
+  "board": [
+   {
+    "beat": "draw",
+    "do": "Draw a tilted square signboard, an open door seen from above, and open scissors."
+   },
+   {
+    "beat": "child_draws",
+    "do": "Child marks the angle in each with an arc."
+   },
+   {
+    "beat": "pause",
+    "do": "Wait for the child to say which is a right angle."
+   }
+  ],
+  "misconceptions": [
+   {
+    "code": "MATH.G5.GEOMET.ANGLES.ANGLES_IN_ENVIRONMENT.M_RIGHT_ANGLE_ONLY_UPRIGHT",
+    "listen_for": [
+     "no, it's tilted"
+    ],
+    "ask": "Put the square-corner checker on the tilted corner. Does it fit?",
+    "repair": "Turning the sign does not change its corners.",
+    "error": "Recognises a right angle only when its arms are horizontal and vertical.",
+    "example": {
+     "question": "A square signboard at a Nairobi bus stop hangs tilted. Is the angle at its corner a right angle?",
+     "wrong_answer": "No, it is slanting.",
+     "correct_answer": "Yes, it is still a right angle (90°)."
+    }
+   },
+   {
+    "code": "MATH.G5.GEOMET.ANGLES.ANGLES_IN_ENVIRONMENT.M_NO_ANGLE_IN_MOVEMENT",
+    "listen_for": [
+     "there are no lines"
+    ],
+    "ask": "Where was the door, and where is it now?",
+    "repair": "Draw the door's start and end positions: the turn between them is the angle.",
+    "error": "Does not see that a turning object, such as a door or a clock hand, makes an angle, because no lines are drawn.",
+    "example": {
+     "question": "A classroom door opens a quarter turn. What angle does it make with the closed position?",
+     "wrong_answer": "There is no angle.",
+     "correct_answer": "90°, a right angle"
+    }
+   }
+  ],
+  "checks": [
+   {
+    "question": "A square signboard hangs tilted. Is the angle at its corner a right angle?",
+    "answer": "Yes",
+    "shows": "tilted right angles"
+   },
+   {
+    "question": "A door opens a quarter turn. What angle does it make with the frame?",
+    "answer": "90°, a right angle",
+    "shows": "angles in movement"
+   }
+  ],
+  "name": "Identifying angles and their uses in the environment",
+  "sub_strand": "MATH.G5.GEOMET.ANGLES",
+  "sub_strand_name": "Angles",
+  "status": "draft: written 13 Nov 2026 from research round 3; shorter entries; protractor work needs the rendering engine's protractor figure (phase 2); not loaded by the live tutor"
+ },
+ "MATH.G5.GEOMET.3_D_OBJECTS.NAME_3D_OBJECTS": {
+  "skill": "MATH.G5.GEOMET.3_D_OBJECTS.NAME_3D_OBJECTS",
+  "key_step": "The child names cubes, cuboids, cylinders, spheres and pyramids by their features, whatever their size, material or position.",
+  "floor": {
+   "prerequisite": "Names flat shapes (square, rectangle, circle, triangle).",
+   "question": "What flat shape is the face of a dice?",
+   "answer": "A square"
+  },
+  "representations": [
+   "real objects",
+   "drawings in different positions",
+   "names"
+  ],
+  "steps": [
+   "Sort real objects into groups by shape.",
+   "Name each group.",
+   "Turn objects: a tin on its side, a pyramid on its point.",
+   "Compare a cube (all faces square) with a cuboid."
+  ],
+  "contexts": [
+   "a dice",
+   "a brick",
+   "a tin of Kimbo",
+   "a football",
+   "a water tank"
+  ],
+  "board": [
+   {
+    "beat": "draw",
+    "do": "Draw a tin standing, then the same tin lying on its side."
+   },
+   {
+    "beat": "predict",
+    "do": "Ask whether the lying tin is still the same shape.",
+    "say": "Is it still the same shape?"
+   },
+   {
+    "beat": "pause",
+    "do": "Wait for the child to name it and say why."
+   }
+  ],
+  "misconceptions": [
+   {
+    "code": "MATH.G5.GEOMET.3_D_OBJECTS.NAME_3D_OBJECTS.M_EVERY_BOX_IS_CUBE",
+    "listen_for": [
+     "a cube"
+    ],
+    "ask": "Are all the faces of a brick the same square?",
+    "repair": "A cube has six equal square faces; a box with rectangles is a cuboid.",
+    "error": "Calls any box-shaped object a cube, or cannot tell a cube from a cuboid.",
+    "example": {
+     "question": "Wanjiku has a building brick. Is it a cube or a cuboid?",
+     "wrong_answer": "A cube",
+     "correct_answer": "A cuboid, because its faces are not all equal squares; some faces are long rectangles."
+    }
+   },
+   {
+    "code": "MATH.G5.GEOMET.3_D_OBJECTS.NAME_3D_OBJECTS.M_POINTED_MEANS_PYRAMID",
+    "listen_for": [
+     "the hut roof is a pyramid"
+    ],
+    "ask": "Does the hut roof have flat triangle faces, or a curved surface?",
+    "repair": "A pyramid has flat faces and a flat base with straight sides; a round roof is a cone.",
+    "error": "Calls any object with a point at the top a pyramid, including cones such as an ice-cream cone or a round hut roof.",
+    "example": {
+     "question": "Is the roof of a round grass-thatched hut a pyramid?",
+     "wrong_answer": "Yes, it is pointed.",
+     "correct_answer": "No. A pyramid has flat triangular faces meeting at a point and a flat base with straight sides; the hut roof has a curved surface and a circular base."
+    }
+   }
+  ],
+  "checks": [
+   {
+    "question": "Is a building brick a cube or a cuboid?",
+    "answer": "A cuboid",
+    "shows": "cube versus cuboid"
+   },
+   {
+    "question": "A tin of Kimbo is lying on its side. What 3-D object is it?",
+    "answer": "A cylinder",
+    "shows": "position does not change shape"
+   }
+  ],
+  "name": "Recognise and name cubes, cuboids, cylinders, spheres and pyramids in the environment",
+  "sub_strand": "MATH.G5.GEOMET.3_D_OBJECTS",
+  "sub_strand_name": "3-D objects",
+  "status": "draft: written 13 Nov 2026 from research round 3; shorter entries; not yet checked by a Kenyan maths teacher; not loaded by the live tutor"
+ },
+ "MATH.G5.GEOMET.3_D_OBJECTS.DESCRIBE_3D_FEATURES": {
+  "skill": "MATH.G5.GEOMET.3_D_OBJECTS.DESCRIBE_3D_FEATURES",
+  "key_step": "The child describes surfaces (flat, curved, both), corners and edges, and whether an object rolls, slides or both.",
+  "floor": {
+   "prerequisite": "Names the five objects.",
+   "question": "Name an object shaped like a ball.",
+   "answer": "A football (a sphere)"
+  },
+  "representations": [
+   "objects handled or drawn",
+   "a table of features",
+   "the description"
+  ],
+  "steps": [
+   "Feel surfaces: flat or curved.",
+   "Count corners, including the base of a pyramid.",
+   "Test rolling and sliding."
+  ],
+  "contexts": [
+   "a tin of cooking fat",
+   "a football",
+   "a matchbox",
+   "a model pyramid"
+  ],
+  "board": [
+   {
+    "beat": "draw",
+    "do": "Draw a square-based pyramid; highlight the top point."
+   },
+   {
+    "beat": "count",
+    "do": "Child counts all corners, the board marking each.",
+    "say": "Count every corner, top and bottom."
+   },
+   {
+    "beat": "pause",
+    "do": "Wait for the total."
+   }
+  ],
+  "misconceptions": [
+   {
+    "code": "MATH.G5.GEOMET.3_D_OBJECTS.DESCRIBE_3D_FEATURES.M_PYRAMID_ONE_CORNER",
+    "listen_for": [
+     "one corner"
+    ],
+    "ask": "Are there corners at the bottom too?",
+    "repair": "Count the base corners as well: four plus the top.",
+    "error": "Counts only the top point of a pyramid as a corner and ignores the corners of the base.",
+    "example": {
+     "question": "How many corners does a square-based pyramid have?",
+     "wrong_answer": "1",
+     "correct_answer": "5 (one at the top and four around the square base)"
+    }
+   },
+   {
+    "code": "MATH.G5.GEOMET.3_D_OBJECTS.DESCRIBE_3D_FEATURES.M_CYLINDER_SURFACES",
+    "listen_for": [
+     "all curved"
+    ],
+    "ask": "Can a tin stand on its end? What is that end like?",
+    "repair": "A cylinder has two flat ends and one curved surface.",
+    "error": "Describes a cylinder as having only curved surfaces (or only flat ones), missing that it has both.",
+    "example": {
+     "question": "Describe the surfaces of a tin of cooking fat.",
+     "wrong_answer": "It is round, so all its surfaces are curved.",
+     "correct_answer": "It has two flat circular surfaces (top and bottom) and one curved surface around the side."
+    }
+   }
+  ],
+  "checks": [
+   {
+    "question": "How many corners does a square-based pyramid have?",
+    "answer": "5",
+    "shows": "counts base corners"
+   },
+   {
+    "question": "Which can roll: a football, a tin of milk, a matchbox?",
+    "answer": "The football and the tin",
+    "shows": "curved surfaces roll"
+   }
+  ],
+  "name": "Describe 3-D objects by their surfaces, corners and behaviour",
+  "sub_strand": "MATH.G5.GEOMET.3_D_OBJECTS",
+  "sub_strand_name": "3-D objects",
+  "status": "draft: written 13 Nov 2026 from research round 3; shorter entries; not yet checked by a Kenyan maths teacher; not loaded by the live tutor"
+ },
+ "MATH.G5.GEOMET.3_D_OBJECTS.2D_VS_3D": {
+  "skill": "MATH.G5.GEOMET.3_D_OBJECTS.2D_VS_3D",
+  "key_step": "The child uses flat-shape names for flat shapes and solid names for solid objects, and explains that any real object, however thin, is 3-D.",
+  "floor": {
+   "prerequisite": "Names flat shapes and 3-D objects.",
+   "question": "What flat shape is a drawn circle?",
+   "answer": "A circle"
+  },
+  "representations": [
+   "real objects beside their outlines",
+   "a drawing beside an object",
+   "the right names"
+  ],
+  "steps": [
+   "Put a ball beside a drawn circle.",
+   "Name each.",
+   "Discuss a coin and a chapati: thin, but you can hold them, so 3-D."
+  ],
+  "contexts": [
+   "an orange",
+   "a five-shilling coin",
+   "a chapati",
+   "a dice"
+  ],
+  "board": [
+   {
+    "beat": "draw",
+    "do": "Draw a flat circle beside a shaded ball."
+   },
+   {
+    "beat": "point",
+    "do": "Point at each.",
+    "say": "Which one could you hold?"
+   },
+   {
+    "beat": "pause",
+    "do": "Wait for the names."
+   }
+  ],
+  "misconceptions": [
+   {
+    "code": "MATH.G5.GEOMET.3_D_OBJECTS.2D_VS_3D.M_PLANE_NAME_FOR_SOLID",
+    "listen_for": [
+     "a circle"
+    ],
+    "ask": "Can you hold a circle drawn on paper the way you hold an orange?",
+    "repair": "A circle is flat; a ball shape you can hold is a sphere.",
+    "error": "Uses the name of a flat shape for a solid object, such as 'circle' for a ball or 'square' for a dice.",
+    "example": {
+     "question": "What 3-D object is an orange?",
+     "wrong_answer": "A circle",
+     "correct_answer": "A sphere. A circle is a flat shape; an orange is solid and round all over."
+    }
+   },
+   {
+    "code": "MATH.G5.GEOMET.3_D_OBJECTS.2D_VS_3D.M_THIN_OBJECT_IS_2D",
+    "listen_for": [
+     "the coin is a circle"
+    ],
+    "ask": "Can you stack coins? Does a stack have height?",
+    "repair": "Every coin has a little thickness, so it is 3-D (a very short cylinder).",
+    "error": "Thinks a thin real object, such as a coin, a chapati or a sheet of paper, is a 2-D shape.",
+    "example": {
+     "question": "Is a five-shilling coin a 2-D shape or a 3-D object?",
+     "wrong_answer": "2-D, it is a circle.",
+     "correct_answer": "3-D. It is a very short cylinder with some thickness; its flat faces are circles."
+    }
+   }
+  ],
+  "checks": [
+   {
+    "question": "What 3-D object is an orange?",
+    "answer": "A sphere",
+    "shows": "solid name"
+   },
+   {
+    "question": "Is a five-shilling coin 2-D or 3-D?",
+    "answer": "3-D; it has thickness",
+    "shows": "thin objects are 3-D"
+   }
+  ],
+  "name": "Distinguish 2-D shapes from 3-D objects",
+  "sub_strand": "MATH.G5.GEOMET.3_D_OBJECTS",
+  "sub_strand_name": "3-D objects",
+  "status": "draft: written 13 Nov 2026 from research round 3; shorter entries; not yet checked by a Kenyan maths teacher; not loaded by the live tutor"
+ },
+ "MATH.G5.GEOMET.3_D_OBJECTS.2D_FACES_IN_3D": {
+  "skill": "MATH.G5.GEOMET.3_D_OBJECTS.2D_FACES_IN_3D",
+  "key_step": "The child names the flat faces of each object, including hidden ones, and knows curved surfaces are not faces.",
+  "floor": {
+   "prerequisite": "Describes flat and curved surfaces.",
+   "question": "Is the side of a tin flat or curved?",
+   "answer": "Curved"
+  },
+  "representations": [
+   "tracing round faces of real objects",
+   "objects unfolded (nets)",
+   "the list of faces"
+  ],
+  "steps": [
+   "Trace round each flat face of a box on paper.",
+   "Count hidden faces too.",
+   "Pyramid: triangles and a square base.",
+   "Cylinder: two circles; the curved side is not a face."
+  ],
+  "contexts": [
+   "a cube-shaped box",
+   "a tin of Kimbo",
+   "a model pyramid",
+   "a football"
+  ],
+  "board": [
+   {
+    "beat": "draw",
+    "do": "Draw a cube box; unfold it slowly into its net, one face at a time."
+   },
+   {
+    "beat": "count",
+    "do": "Child counts the squares as they unfold."
+   },
+   {
+    "beat": "pause",
+    "do": "Wait for the total and the shape name."
+   }
+  ],
+  "misconceptions": [
+   {
+    "code": "MATH.G5.GEOMET.3_D_OBJECTS.2D_FACES_IN_3D.M_VISIBLE_FACES_ONLY",
+    "listen_for": [
+     "3 squares"
+    ],
+    "ask": "What about the bottom and the back?",
+    "repair": "Unfold the box: every face appears, hidden ones too.",
+    "error": "When working from a picture, considers only the faces that can be seen and forgets the hidden ones.",
+    "example": {
+     "question": "Mwangi traces round every face of a cube-shaped box on paper. How many squares does he draw?",
+     "wrong_answer": "3",
+     "correct_answer": "6"
+    }
+   },
+   {
+    "code": "MATH.G5.GEOMET.3_D_OBJECTS.2D_FACES_IN_3D.M_PYRAMID_ALL_TRIANGLES",
+    "listen_for": [
+     "triangles only"
+    ],
+    "ask": "What does the pyramid stand on?",
+    "repair": "Lift the pyramid in the drawing: the base is a square.",
+    "error": "Says all the faces of a square-based pyramid are triangles and forgets the square base.",
+    "example": {
+     "question": "What 2-D shapes are the faces of a square-based pyramid?",
+     "wrong_answer": "Triangles only",
+     "correct_answer": "Four triangles and one square (the base)."
+    }
+   }
+  ],
+  "checks": [
+   {
+    "question": "Mwangi traces every face of a cube-shaped box. How many squares?",
+    "answer": "6",
+    "shows": "hidden faces"
+   },
+   {
+    "question": "What flat shapes are found on a tin of Kimbo?",
+    "answer": "Two circles",
+    "shows": "curved surface is not a face"
+   }
+  ],
+  "name": "Identify and describe the 2-D shapes that form the flat faces of 3-D objects",
+  "sub_strand": "MATH.G5.GEOMET.3_D_OBJECTS",
+  "sub_strand_name": "3-D objects",
+  "status": "draft: written 13 Nov 2026 from research round 3; shorter entries; not yet checked by a Kenyan maths teacher; not loaded by the live tutor"
+ },
+ "MATH.G5.DATA_H.DATA_REPRESENTATION.PLAN_DATA_COLLECTION": {
+  "skill": "MATH.G5.DATA_H.DATA_REPRESENTATION.PLAN_DATA_COLLECTION",
+  "key_step": "The child chooses a question, clear categories that do not overlap (plus 'other'), and a method.",
+  "floor": {
+   "prerequisite": "Sorts objects into groups.",
+   "question": "Sort: mango, tea, banana, milk into two groups.",
+   "answer": "Fruits and drinks"
+  },
+  "representations": [
+   "a real question about the class",
+   "a category list",
+   "a plan"
+  ],
+  "steps": [
+   "Pick a question.",
+   "List categories; check each item fits exactly one.",
+   "Add 'other'.",
+   "Decide how to record."
+  ],
+  "contexts": [
+   "vehicles passing the school gate",
+   "favourite foods",
+   "learners' ages"
+  ],
+  "board": [
+   {
+    "beat": "write",
+    "do": "Write Wanjiru's categories: car, matatu, vehicle, boda boda."
+   },
+   {
+    "beat": "point",
+    "do": "Point at 'vehicle'.",
+    "say": "Where would a matatu go?"
+   },
+   {
+    "beat": "pause",
+    "do": "Wait for the child to spot the overlap and fix it."
+   }
+  ],
+  "misconceptions": [
+   {
+    "code": "MATH.G5.DATA_H.DATA_REPRESENTATION.PLAN_DATA_COLLECTION.M_OVERLAPPING_CATEGORIES",
+    "listen_for": [
+     "it's fine"
+    ],
+    "ask": "Could one matatu be counted in two groups?",
+    "repair": "Each item must fit one group only; remove or rename the overlapping one.",
+    "error": "Chooses categories where one includes another, so some items fit two categories.",
+    "example": {
+     "question": "Wanjiru will record vehicles passing the school gate using these categories: car, matatu, vehicle, motorcycle. What is wrong with her categories?",
+     "wrong_answer": "Nothing is wrong.",
+     "correct_answer": "'Vehicle' includes all the others, so a matatu could be recorded under 'matatu' or 'vehicle'. She should replace 'vehicle' with separate types such as lorry, bicycle or 'other'."
+    }
+   },
+   {
+    "code": "MATH.G5.DATA_H.DATA_REPRESENTATION.PLAN_DATA_COLLECTION.M_DATA_ONLY_NUMBERS",
+    "listen_for": [
+     "colours aren't data"
+    ],
+    "ask": "Can we count how many learners like each colour?",
+    "repair": "Data is any information we collect; words can be counted too.",
+    "error": "Thinks only numbers count as data, so rejects information such as colours, foods or types of vehicle.",
+    "example": {
+     "question": "Which of these can be collected as data? A: the shoe sizes of 30 learners. B: the favourite foods of 30 learners. C: both A and B.",
+     "wrong_answer": "A only",
+     "correct_answer": "C. Favourite foods are data too: we count how many learners chose each food."
+    }
+   }
+  ],
+  "checks": [
+   {
+    "question": "Categories: car, matatu, vehicle, boda boda. What is wrong?",
+    "answer": "'Vehicle' overlaps all the others",
+    "shows": "non-overlapping categories"
+   },
+   {
+    "question": "Can favourite foods be collected as data?",
+    "answer": "Yes",
+    "shows": "data need not be numbers"
+   }
+  ],
+  "name": "Plan a data collection: choose a question, categories and a method",
+  "sub_strand": "MATH.G5.DATA_H.DATA_REPRESENTATION",
+  "sub_strand_name": "Data (collecting, tallying, frequency tables)",
+  "status": "draft: written 13 Nov 2026 from research round 3; shorter entries; not yet checked by a Kenyan maths teacher; not loaded by the live tutor"
+ },
+ "MATH.G5.DATA_H.DATA_REPRESENTATION.COLLECT_DATA_30": {
+  "skill": "MATH.G5.DATA_H.DATA_REPRESENTATION.COLLECT_DATA_30",
+  "key_step": "The child records every observation once (repeats included) and checks the count equals the number observed.",
+  "floor": {
+   "prerequisite": "Counts to 30 reliably.",
+   "question": "Count these 12 marks.",
+   "answer": "12"
+  },
+  "representations": [
+   "asking classmates",
+   "a record list",
+   "the check of the total"
+  ],
+  "steps": [
+   "Record each answer as it comes, repeats included.",
+   "Count the records.",
+   "Check the count equals the people asked."
+  ],
+  "contexts": [
+   "favourite drinks of 30 classmates",
+   "vehicles passing in 15 minutes",
+   "shoe sizes"
+  ],
+  "board": [
+   {
+    "beat": "write",
+    "do": "Write Juma's record: tea 12, uji 9, milk 7, juice 5, and 'asked 30'."
+   },
+   {
+    "beat": "point",
+    "do": "Point at each number in turn while the child adds.",
+    "say": "Add them up as I point."
+   },
+   {
+    "beat": "pause",
+    "do": "Wait for the child to add the record and compare with 30."
+   },
+   {
+    "beat": "write",
+    "do": "Write the child's total beside 30 with a box for = or not equal."
+   }
+  ],
+  "misconceptions": [
+   {
+    "code": "MATH.G5.DATA_H.DATA_REPRESENTATION.COLLECT_DATA_30.M_DOUBLE_COUNTING",
+    "listen_for": [
+     "it's fine"
+    ],
+    "ask": "Add Juma's numbers. Do they make 30?",
+    "repair": "The total must equal the number asked; 33 means someone was counted twice.",
+    "error": "Records some people or items twice, or misses some, and does not check the total against the number observed.",
+    "example": {
+     "question": "Juma asked his 30 classmates their favourite drink. He recorded: tea 12, uji 9, milk 8, juice 6. Is his record correct?",
+     "wrong_answer": "Yes, it is correct.",
+     "correct_answer": "No. 12 + 9 + 8 + 6 = 35, but only 30 learners were asked, so some answers were recorded more than once."
+    }
+   },
+   {
+    "code": "MATH.G5.DATA_H.DATA_REPRESENTATION.COLLECT_DATA_30.M_DISTINCT_VALUES_ONLY",
+    "listen_for": [
+     "3, 4, 5, 6"
+    ],
+    "ask": "How many learners told you size 4?",
+    "repair": "Write every answer, even repeats; one mark per learner.",
+    "error": "Writes each different value only once instead of recording every observation, so repeated values are lost.",
+    "example": {
+     "question": "Atieno asked 30 learners their shoe size and wrote down: 3, 4, 5, 6. What has gone wrong?",
+     "wrong_answer": "Nothing is wrong. Those are the sizes.",
+     "correct_answer": "She has recorded only the different sizes. She needs 30 entries, one for each learner (for example 4, 5, 4, 3, 5, ...), so that she can count how many learners wear each size."
+    }
+   }
+  ],
+  "checks": [
+   {
+    "question": "Juma asked 30 classmates and recorded tea 12, uji 9, milk 7, juice 5. What is wrong?",
+    "answer": "That totals 33, not 30",
+    "shows": "checks the total"
+   },
+   {
+    "question": "Atieno asked 30 learners their shoe size and wrote 3, 4, 5, 6. What is missing?",
+    "answer": "How many learners gave each size",
+    "shows": "every observation recorded"
+   }
+  ],
+  "name": "Collect and record about 30 observations from a real-life situation",
+  "sub_strand": "MATH.G5.DATA_H.DATA_REPRESENTATION",
+  "sub_strand_name": "Data (collecting, tallying, frequency tables)",
+  "status": "draft: written 13 Nov 2026 from research round 3; shorter entries; not yet checked by a Kenyan maths teacher; not loaded by the live tutor"
+ },
+ "MATH.G5.DATA_H.DATA_REPRESENTATION.DRAW_RECORDING_TABLE": {
+  "skill": "MATH.G5.DATA_H.DATA_REPRESENTATION.DRAW_RECORDING_TABLE",
+  "key_step": "The child draws a ruled table with a title and column headings, and keeps each entry in its own row.",
+  "floor": {
+   "prerequisite": "Draws straight lines with a ruler.",
+   "question": "What goes at the top of a column?",
+   "answer": "A heading"
+  },
+  "representations": [
+   "data given aloud",
+   "a ruled table",
+   "the finished table"
+  ],
+  "steps": [
+   "Write a title.",
+   "Draw columns with headings.",
+   "One row per item; check pairs."
+  ],
+  "contexts": [
+   "names and ages",
+   "fruit sold at a stall",
+   "vehicles counted"
+  ],
+  "board": [
+   {
+    "beat": "draw",
+    "do": "Draw an empty two-column table with blank headings."
+   },
+   {
+    "beat": "child_draws",
+    "do": "Child adds a title and headings, then enters: Otieno 11, Akinyi 10."
+   },
+   {
+    "beat": "pause",
+    "do": "Wait for the child to read a row back."
+   }
+  ],
+  "misconceptions": [
+   {
+    "code": "MATH.G5.DATA_H.DATA_REPRESENTATION.DRAW_RECORDING_TABLE.M_TABLE_NO_HEADINGS",
+    "listen_for": [
+     "everyone knows"
+    ],
+    "ask": "A visitor reads 'Mango 7'. Seven what?",
+    "repair": "Headings and a title tell a reader what the numbers mean.",
+    "error": "Draws a table without a title or column headings, so a reader cannot tell what the entries mean.",
+    "example": {
+     "question": "Achieng's table has two rows: 'Mango | 7' and 'Orange | 4'. A visitor asks, '7 what?' What should Achieng add?",
+     "wrong_answer": "Nothing. The numbers are clear.",
+     "correct_answer": "A title such as 'Favourite fruits of Grade 5 learners', and the column headings 'Fruit' and 'Number of learners'."
+    }
+   },
+   {
+    "code": "MATH.G5.DATA_H.DATA_REPRESENTATION.DRAW_RECORDING_TABLE.M_ROW_MISALIGNMENT",
+    "listen_for": [
+     "Akinyi is 11"
+    ],
+    "ask": "Read Otieno's row aloud. Is his age next to his name?",
+    "repair": "Use a ruler along the row when writing.",
+    "error": "Writes an entry in the row next to the one it belongs to, so values are paired with the wrong names or categories.",
+    "example": {
+     "question": "Record in a 'Name | Age' table: Otieno is 11, Akinyi is 10, Baraka is 12.",
+     "wrong_answer": "Otieno | 10, Akinyi | 12, Baraka | (blank). The ages have slipped up one row.",
+     "correct_answer": "Otieno | 11, Akinyi | 10, Baraka | 12"
+    }
+   }
+  ],
+  "checks": [
+   {
+    "question": "Achieng's table says 'Mango | 7'. What does it need so a visitor understands?",
+    "answer": "A title and column headings (e.g. Fruit | Number sold)",
+    "shows": "headings"
+   },
+   {
+    "question": "Record: Otieno is 11, Akinyi is 10. How many rows of data?",
+    "answer": "2",
+    "shows": "one row per item"
+   }
+  ],
+  "name": "Draw a table to record data",
+  "sub_strand": "MATH.G5.DATA_H.DATA_REPRESENTATION",
+  "sub_strand_name": "Data (collecting, tallying, frequency tables)",
+  "status": "draft: written 13 Nov 2026 from research round 3; shorter entries; not yet checked by a Kenyan maths teacher; not loaded by the live tutor"
+ },
+ "MATH.G5.DATA_H.DATA_REPRESENTATION.DRAW_TALLY_GROUPS": {
+  "skill": "MATH.G5.DATA_H.DATA_REPRESENTATION.DRAW_TALLY_GROUPS",
+  "key_step": "The child draws tallies in gates of five (four upright strokes and a fifth across) and then single strokes.",
+  "floor": {
+   "prerequisite": "Counts in fives.",
+   "question": "Count in fives to 30.",
+   "answer": "5, 10, 15, 20, 25, 30"
+  },
+  "representations": [
+   "strokes drawn one at a time",
+   "gates of five",
+   "the number"
+  ],
+  "steps": [
+   "Draw four upright strokes.",
+   "The fifth crosses them: a gate.",
+   "Start a new gate after each five."
+  ],
+  "contexts": [
+   "counting matatus",
+   "votes for class prefect",
+   "goals in a match"
+  ],
+  "board": [
+   {
+    "beat": "draw",
+    "do": "Draw four upright strokes slowly, counting, then the fifth across.",
+    "say": "One, two, three, four, and the fifth closes the gate."
+   },
+   {
+    "beat": "child_draws",
+    "do": "Child draws tallies for 7."
+   },
+   {
+    "beat": "pause",
+    "do": "Wait for the child to count their strokes."
+   }
+  ],
+  "misconceptions": [
+   {
+    "code": "MATH.G5.DATA_H.DATA_REPRESENTATION.DRAW_TALLY_GROUPS.M_GATE_SIX_STROKES",
+    "listen_for": [
+     "five then across"
+    ],
+    "ask": "Count every stroke in your gate, the crossing one too.",
+    "repair": "The crossing stroke is the fifth: four up, one across.",
+    "error": "Draws five upright strokes and then a crossing stroke, so each 'gate' actually stands for six.",
+    "example": {
+     "question": "Show 7 using tally marks.",
+     "wrong_answer": "[|||||/] || (five upright strokes plus a crossing stroke, then two more; this is 8)",
+     "correct_answer": "[||||/] || (four upright strokes crossed by a fifth, then two strokes)"
+    }
+   },
+   {
+    "code": "MATH.G5.DATA_H.DATA_REPRESENTATION.DRAW_TALLY_GROUPS.M_NO_GROUPING",
+    "listen_for": [
+     "I just drew lines"
+    ],
+    "ask": "How quickly can you count 13 single lines?",
+    "repair": "Gates of five let us count in fives.",
+    "error": "Draws a long row of single strokes without making groups of five, which makes counting slow and leads to mistakes.",
+    "example": {
+     "question": "Show 13 using tally marks.",
+     "wrong_answer": "||||||||||||| (13 separate strokes)",
+     "correct_answer": "[||||/] [||||/] |||"
+    }
+   }
+  ],
+  "checks": [
+   {
+    "question": "Show 7 using tally marks. How many strokes in the gate?",
+    "answer": "One gate of five (four up, one across) and two strokes",
+    "shows": "gate of five"
+   },
+   {
+    "question": "Show 13 using tally marks.",
+    "answer": "Two gates and three strokes",
+    "shows": "grouping"
+   }
+  ],
+  "name": "Show a number as tally marks in groups of five",
+  "sub_strand": "MATH.G5.DATA_H.DATA_REPRESENTATION",
+  "sub_strand_name": "Data (collecting, tallying, frequency tables)",
+  "status": "draft: written 13 Nov 2026 from research round 3; shorter entries; not yet checked by a Kenyan maths teacher; not loaded by the live tutor"
+ },
+ "MATH.G5.DATA_H.DATA_REPRESENTATION.TALLY_RAW_DATA": {
+  "skill": "MATH.G5.DATA_H.DATA_REPRESENTATION.TALLY_RAW_DATA",
+  "key_step": "The child makes one tally per observation against its category, ticking off each item in the list so nothing is skipped or repeated.",
+  "floor": {
+   "prerequisite": "Draws tally gates.",
+   "question": "Draw 6 in tallies.",
+   "answer": "One gate and one stroke"
+  },
+  "representations": [
+   "a raw list",
+   "the list with ticks",
+   "tallies by category"
+  ],
+  "steps": [
+   "Tick each item as you tally it.",
+   "One stroke per item, never the value.",
+   "Count the tallies against the list length."
+  ],
+  "contexts": [
+   "drinks chosen by learners",
+   "shoe sizes",
+   "vehicles"
+  ],
+  "board": [
+   {
+    "beat": "write",
+    "do": "Write a list: tea, uji, tea, milk, tea, uji, milk, tea, uji, tea, and three category rows."
+   },
+   {
+    "beat": "child_draws",
+    "do": "Child ticks each word and tallies it."
+   },
+   {
+    "beat": "pause",
+    "do": "Wait for the child to check the total tallies against 10."
+   }
+  ],
+  "misconceptions": [
+   {
+    "code": "MATH.G5.DATA_H.DATA_REPRESENTATION.TALLY_RAW_DATA.M_TALLY_SKIP_OR_REPEAT",
+    "listen_for": [
+     "I lost my place"
+    ],
+    "ask": "How many words in the list, and how many tallies?",
+    "repair": "Tick each word as you go, then check the totals match.",
+    "error": "Loses their place in the raw list, so some items are not tallied and others are tallied twice.",
+    "example": {
+     "question": "Tally these drinks: tea, uji, tea, milk, tea, uji, milk, tea, uji, tea.",
+     "wrong_answer": "tea ||||, uji |||, milk || (only 9 marks; one tea was missed)",
+     "correct_answer": "tea [||||/] (5), uji ||| (3), milk || (2). The total is 10, the same as the number of items in the list."
+    }
+   },
+   {
+    "code": "MATH.G5.DATA_H.DATA_REPRESENTATION.TALLY_RAW_DATA.M_TALLY_THE_VALUE",
+    "listen_for": [
+     "four strokes for size 4"
+    ],
+    "ask": "How many learners does one stroke stand for?",
+    "repair": "One stroke per learner, whatever their shoe size.",
+    "error": "With numerical data, draws as many strokes as the value itself (for example 4 strokes for shoe size 4) instead of one stroke per learner.",
+    "example": {
+     "question": "Shoe sizes: 4, 5, 4, 6, 5, 4. Draw the tally for size 4.",
+     "wrong_answer": "[||||/] [||||/] || (12 strokes: four for each of the three 4s)",
+     "correct_answer": "||| (3 strokes, because three learners wear size 4)"
+    }
+   }
+  ],
+  "checks": [
+   {
+    "question": "Tally: tea, uji, tea, milk, tea, uji, milk, tea, uji, tea. How many teas?",
+    "answer": "5",
+    "shows": "one stroke per item"
+   },
+   {
+    "question": "Shoe sizes 4, 5, 4, 6, 5, 4. How many strokes for size 4?",
+    "answer": "3",
+    "shows": "not the value"
+   }
+  ],
+  "name": "Tally collected data into categories",
+  "sub_strand": "MATH.G5.DATA_H.DATA_REPRESENTATION",
+  "sub_strand_name": "Data (collecting, tallying, frequency tables)",
+  "status": "draft: written 13 Nov 2026 from research round 3; shorter entries; not yet checked by a Kenyan maths teacher; not loaded by the live tutor"
+ },
+ "MATH.G5.DATA_H.DATA_REPRESENTATION.TALLY_TO_FREQUENCY": {
+  "skill": "MATH.G5.DATA_H.DATA_REPRESENTATION.TALLY_TO_FREQUENCY",
+  "key_step": "The child counts each gate as five and counts on the single strokes.",
+  "floor": {
+   "prerequisite": "Counts in fives.",
+   "question": "5, 10, then add 2?",
+   "answer": "12"
+  },
+  "representations": [
+   "tally marks",
+   "gates circled",
+   "the number"
+  ],
+  "steps": [
+   "Ring each gate.",
+   "Count the gates in fives.",
+   "Count on the single strokes.",
+   "Check by counting every stroke once."
+  ],
+  "contexts": [
+   "votes counted",
+   "vehicles",
+   "goals"
+  ],
+  "board": [
+   {
+    "beat": "draw",
+    "do": "Draw two gates and two strokes."
+   },
+   {
+    "beat": "count",
+    "do": "Child counts in fives over the gates, then ones.",
+    "say": "Count the gates in fives."
+   },
+   {
+    "beat": "pause",
+    "do": "Wait for the total."
+   }
+  ],
+  "misconceptions": [
+   {
+    "code": "MATH.G5.DATA_H.DATA_REPRESENTATION.TALLY_TO_FREQUENCY.M_GATE_READ_AS_FOUR",
+    "listen_for": [
+     "10",
+     "four in each"
+    ],
+    "ask": "Count every stroke in one gate, the crossing one too.",
+    "repair": "A gate is five strokes; the cross is the fifth.",
+    "error": "Counts a gate as 4, counting only the upright strokes and ignoring the crossing stroke.",
+    "example": {
+     "question": "What number do these tallies show? [||||/] [||||/] ||",
+     "wrong_answer": "10",
+     "correct_answer": "12 (5 + 5 + 2)"
+    }
+   }
+  ],
+  "checks": [
+   {
+    "question": "Two gates and two strokes. What number?",
+    "answer": "12",
+    "shows": "gate is five"
+   },
+   {
+    "question": "Four gates and one stroke. What number?",
+    "answer": "21",
+    "shows": "counting in fives"
+   }
+  ],
+  "name": "Convert tally marks to frequencies",
+  "sub_strand": "MATH.G5.DATA_H.DATA_REPRESENTATION",
+  "sub_strand_name": "Data (collecting, tallying, frequency tables)",
+  "status": "draft: written 13 Nov 2026 from research round 3; shorter entries; not yet checked by a Kenyan maths teacher; not loaded by the live tutor"
+ },
+ "MATH.G5.DATA_H.DATA_REPRESENTATION.PREPARE_FREQUENCY_TABLE": {
+  "skill": "MATH.G5.DATA_H.DATA_REPRESENTATION.PREPARE_FREQUENCY_TABLE",
+  "key_step": "The child makes one row per category with tally and frequency columns, and checks the total frequency equals the number of items.",
+  "floor": {
+   "prerequisite": "Tallies raw data.",
+   "question": "Tallies show one gate and one stroke. Frequency?",
+   "answer": "6"
+  },
+  "representations": [
+   "raw data",
+   "a table: category, tally, frequency",
+   "the total check"
+  ],
+  "steps": [
+   "List categories once each.",
+   "Tally the data.",
+   "Write frequencies.",
+   "Add them; compare with the number collected."
+  ],
+  "contexts": [
+   "ages of learners",
+   "favourite fruit",
+   "vehicles"
+  ],
+  "board": [
+   {
+    "beat": "write",
+    "do": "Write ages 10, 11, 10, 10, 12, 11 and an empty three-column table."
+   },
+   {
+    "beat": "child_draws",
+    "do": "Child fills one row per age."
+   },
+   {
+    "beat": "pause",
+    "do": "Wait for the child to check the total is 6."
+   }
+  ],
+  "misconceptions": [
+   {
+    "code": "MATH.G5.DATA_H.DATA_REPRESENTATION.PREPARE_FREQUENCY_TABLE.M_ROW_PER_OBSERVATION",
+    "listen_for": [
+     "six rows"
+    ],
+    "ask": "How many different ages are there?",
+    "repair": "One row per category; the tallies show how many.",
+    "error": "Makes a new row for each observation, each with frequency 1, instead of one row per category.",
+    "example": {
+     "question": "Prepare a frequency table for these ages: 10, 11, 10, 10, 12, 11.",
+     "wrong_answer": "Six rows: 10 | 1, 11 | 1, 10 | 1, 10 | 1, 12 | 1, 11 | 1",
+     "correct_answer": "Three rows: Age 10 | 3, Age 11 | 2, Age 12 | 1. The total is 6."
+    }
+   },
+   {
+    "code": "MATH.G5.DATA_H.DATA_REPRESENTATION.PREPARE_FREQUENCY_TABLE.M_FREQ_TOTAL_UNCHECKED",
+    "listen_for": [
+     "done"
+    ],
+    "ask": "Do your frequencies add up to the number of learners?",
+    "repair": "Always add the frequency column and compare.",
+    "error": "Completes the frequency table without checking that the total frequency equals the number of items collected.",
+    "example": {
+     "question": "Data were collected from 30 learners. The frequencies in the table are 8, 11, 6 and 4. Is the table complete?",
+     "wrong_answer": "Yes",
+     "correct_answer": "No. 8 + 11 + 6 + 4 = 29, so one learner is missing. The tallies should be checked again."
+    }
+   }
+  ],
+  "checks": [
+   {
+    "question": "Ages 10, 11, 10, 10, 12, 11. How many rows does the table need?",
+    "answer": "3 (ages 10, 11, 12)",
+    "shows": "one row per category"
+   },
+   {
+    "question": "Data from 30 learners; frequencies add to 28. What does that tell you?",
+    "answer": "Two learners were missed",
+    "shows": "total check"
+   }
+  ],
+  "name": "Prepare a frequency table",
+  "sub_strand": "MATH.G5.DATA_H.DATA_REPRESENTATION",
+  "sub_strand_name": "Data (collecting, tallying, frequency tables)",
+  "status": "draft: written 13 Nov 2026 from research round 3; shorter entries; not yet checked by a Kenyan maths teacher; not loaded by the live tutor"
+ },
+ "MATH.G5.DATA_H.DATA_REPRESENTATION.READ_FREQUENCY_TABLE": {
+  "skill": "MATH.G5.DATA_H.DATA_REPRESENTATION.READ_FREQUENCY_TABLE",
+  "key_step": "The child tells the category (value) from the frequency (how many) and finds the most common by the largest frequency.",
+  "floor": {
+   "prerequisite": "Reads a table row.",
+   "question": "Tea: 12. What does 12 mean?",
+   "answer": "12 learners chose tea"
+  },
+  "representations": [
+   "a frequency table",
+   "the two columns highlighted",
+   "answers in sentences"
+  ],
+  "steps": [
+   "Point to the category column and the frequency column.",
+   "Answer which-category and how-many questions.",
+   "Most common: largest frequency."
+  ],
+  "contexts": [
+   "learners' ages",
+   "shoe sizes",
+   "favourite drinks"
+  ],
+  "board": [
+   {
+    "beat": "write",
+    "do": "Write a table: size 3: 5, size 4: 12, size 5: 8, size 6: 3."
+   },
+   {
+    "beat": "point",
+    "do": "Point at the two columns.",
+    "say": "Which column tells how many learners?"
+   },
+   {
+    "beat": "pause",
+    "do": "Wait for the child to find the most common size."
+   }
+  ],
+  "misconceptions": [
+   {
+    "code": "MATH.G5.DATA_H.DATA_REPRESENTATION.READ_FREQUENCY_TABLE.M_BIGGEST_LABEL_IS_MOST",
+    "listen_for": [
+     "size 6"
+    ],
+    "ask": "How many learners wear size 6?",
+    "repair": "Most common means most learners: look at the frequency column.",
+    "error": "Picks the category with the largest label, or the last row, as the most common instead of the one with the highest frequency.",
+    "example": {
+     "question": "Shoe size 3: 5 learners. Size 4: 12 learners. Size 5: 9 learners. Size 6: 4 learners. Which size is worn by the most learners?",
+     "wrong_answer": "Size 6",
+     "correct_answer": "Size 4 (12 learners)"
+    }
+   },
+   {
+    "code": "MATH.G5.DATA_H.DATA_REPRESENTATION.READ_FREQUENCY_TABLE.M_VALUE_VS_FREQUENCY",
+    "listen_for": [
+     "14 years old"
+    ],
+    "ask": "Is 14 an age or a number of learners?",
+    "repair": "Say each row as a sentence: 14 learners are 11 years old.",
+    "error": "With numerical categories, gives the frequency when the question asks for the value, or gives the value when it asks for the frequency.",
+    "example": {
+     "question": "Age 10: 9 learners. Age 11: 14 learners. Age 12: 7 learners. Which age is the most common?",
+     "wrong_answer": "14",
+     "correct_answer": "11 years (14 learners are aged 11)"
+    }
+   }
+  ],
+  "checks": [
+   {
+    "question": "Size 3: 5 learners; size 4: 12; size 5: 8; size 6: 3. Most common size?",
+    "answer": "Size 4",
+    "shows": "largest frequency"
+   },
+   {
+    "question": "Age 10: 9 learners; age 11: 14 learners. What age are most learners?",
+    "answer": "11",
+    "shows": "value versus frequency"
+   }
+  ],
+  "name": "Read information directly from a frequency table",
+  "sub_strand": "MATH.G5.DATA_H.DATA_REPRESENTATION",
+  "sub_strand_name": "Data (collecting, tallying, frequency tables)",
+  "status": "draft: written 13 Nov 2026 from research round 3; shorter entries; not yet checked by a Kenyan maths teacher; not loaded by the live tutor"
+ },
+ "MATH.G5.DATA_H.DATA_REPRESENTATION.COMPARE_TOTAL_FREQUENCIES": {
+  "skill": "MATH.G5.DATA_H.DATA_REPRESENTATION.COMPARE_TOTAL_FREQUENCIES",
+  "key_step": "The child chooses the operation the question needs: subtract for how many more, add all for how many altogether, total minus one for how many did not.",
+  "floor": {
+   "prerequisite": "Adds and subtracts to 30.",
+   "question": "12 - 9 =",
+   "answer": "3"
+  },
+  "representations": [
+   "a frequency table",
+   "a bar sketch comparing two rows",
+   "answers in sentences"
+  ],
+  "steps": [
+   "Read the question word.",
+   "Sketch two bars for 'how many more'.",
+   "Add all rows for 'altogether'.",
+   "Total minus the row for 'did not choose'."
+  ],
+  "contexts": [
+   "matatus and boda bodas passing",
+   "favourite drinks",
+   "games played"
+  ],
+  "board": [
+   {
+    "beat": "draw",
+    "do": "Draw two bars: matatus 12, boda bodas 9, lined up at the left."
+   },
+   {
+    "beat": "point",
+    "do": "Point at the part of the longer bar that sticks out.",
+    "say": "How many more is this part?"
+   },
+   {
+    "beat": "pause",
+    "do": "Wait for the child's answer."
+   }
+  ],
+  "misconceptions": [
+   {
+    "code": "MATH.G5.DATA_H.DATA_REPRESENTATION.COMPARE_TOTAL_FREQUENCIES.M_HOW_MANY_MORE_ADD",
+    "listen_for": [
+     "21"
+    ],
+    "ask": "Can there be 21 more matatus when only 12 passed?",
+    "repair": "How many more is the extra bit of the longer bar: subtract.",
+    "error": "Adds the two frequencies when asked 'how many more'.",
+    "example": {
+     "question": "In 15 minutes, 12 matatus and 9 boda bodas passed the school. How many more matatus than boda bodas passed?",
+     "wrong_answer": "21",
+     "correct_answer": "3 (12 − 9)"
+    }
+   },
+   {
+    "code": "MATH.G5.DATA_H.DATA_REPRESENTATION.COMPARE_TOTAL_FREQUENCIES.M_NOT_CHOOSING_MISREAD",
+    "listen_for": [
+     "12"
+    ],
+    "ask": "Did those 12 choose tea, or not?",
+    "repair": "Did not choose tea = everyone minus the tea row.",
+    "error": "When asked how many did NOT choose a category, gives that category's own frequency.",
+    "example": {
+     "question": "Favourite drinks: tea 12, uji 8, milk 6, juice 4. How many learners did not choose tea?",
+     "wrong_answer": "12",
+     "correct_answer": "18 (30 − 12, or 8 + 6 + 4)"
+    }
+   }
+  ],
+  "checks": [
+   {
+    "question": "12 matatus and 9 boda bodas passed. How many more matatus?",
+    "answer": "3",
+    "shows": "subtracts"
+   },
+   {
+    "question": "Tea 12, uji 8, milk 6, juice 4. How many did not choose tea?",
+    "answer": "18",
+    "shows": "total minus one row"
+   }
+  ],
+  "name": "Compare and combine frequencies from a table",
+  "sub_strand": "MATH.G5.DATA_H.DATA_REPRESENTATION",
+  "sub_strand_name": "Data (collecting, tallying, frequency tables)",
+  "status": "draft: written 13 Nov 2026 from research round 3; shorter entries; not yet checked by a Kenyan maths teacher; not loaded by the live tutor"
+ },
+ "MATH.G5.DATA_H.DATA_REPRESENTATION.INFER_FROM_FREQUENCY_TABLE": {
+  "skill": "MATH.G5.DATA_H.DATA_REPRESENTATION.INFER_FROM_FREQUENCY_TABLE",
+  "key_step": "The child makes conclusions and decisions from the numbers in the table (not opinion), and only about the group that was asked.",
+  "floor": {
+   "prerequisite": "Reads a frequency table.",
+   "question": "Banana 11, mango 9. Which is more popular?",
+   "answer": "Banana"
+  },
+  "representations": [
+   "a frequency table",
+   "true or false statements",
+   "a decision with a reason"
+  ],
+  "steps": [
+   "Judge statements true or false with a reason from the table.",
+   "Make a decision for the canteen from the data.",
+   "Say who the data is about."
+  ],
+  "contexts": [
+   "the school canteen choosing fruit",
+   "a class's favourite games",
+   "a sports day plan"
+  ],
+  "board": [
+   {
+    "beat": "write",
+    "do": "Write: football 12, netball 8, volleyball 6, athletics 4 (30 learners) and the statement 'More than half chose football'."
+   },
+   {
+    "beat": "point",
+    "do": "Point at the football row and then at the number of learners asked.",
+    "say": "How many learners were asked altogether?"
+   },
+   {
+    "beat": "pause",
+    "do": "Wait for the child to say true or false with a reason."
+   }
+  ],
+  "misconceptions": [
+   {
+    "code": "MATH.G5.DATA_H.DATA_REPRESENTATION.INFER_FROM_FREQUENCY_TABLE.M_MOST_POPULAR_IS_MAJORITY",
+    "listen_for": [
+     "true, it's the most"
+    ],
+    "ask": "What is half of 30?",
+    "repair": "Most popular is not the same as more than half: 12 is less than 15.",
+    "error": "Thinks that the most popular category must have been chosen by more than half of the group.",
+    "example": {
+     "question": "Favourite games of 30 learners: football 12, netball 8, volleyball 6, athletics 4. True or false: more than half of the learners chose football.",
+     "wrong_answer": "True, because football is the most popular.",
+     "correct_answer": "False. Half of 30 is 15, and 12 is less than 15. Football is the most chosen game, but most learners (18) chose something else."
+    }
+   },
+   {
+    "code": "MATH.G5.DATA_H.DATA_REPRESENTATION.INFER_FROM_FREQUENCY_TABLE.M_OVERGENERALISE",
+    "listen_for": [
+     "all children in Kenya"
+    ],
+    "ask": "Who did we ask?",
+    "repair": "The data is about this class only.",
+    "error": "Applies a conclusion from one class to everyone, for example all children in Kenya.",
+    "example": {
+     "question": "In a survey of one Grade 5 class of 30, football was chosen by 12 learners, more than any other game. Which statement does the table support? A: All children in Kenya prefer football. B: In this class, more learners chose football than any other game.",
+     "wrong_answer": "A",
+     "correct_answer": "B. The data are only about this class."
+    }
+   }
+  ],
+  "checks": [
+   {
+    "question": "Football 12, netball 8, volleyball 6, athletics 4, from 30 learners. True or false: more than half chose football?",
+    "answer": "False; 12 is less than 15",
+    "shows": "most is not majority"
+   },
+   {
+    "question": "Canteen survey: banana 11, mango 9, orange 6, pawpaw 4. Which fruit should it buy most of, and why?",
+    "answer": "Banana, because most learners chose it",
+    "shows": "decision from data"
+   }
+  ],
+  "name": "Draw conclusions and make decisions from a frequency table",
+  "sub_strand": "MATH.G5.DATA_H.DATA_REPRESENTATION",
+  "sub_strand_name": "Data (collecting, tallying, frequency tables)",
+  "status": "draft: written 13 Nov 2026 from research round 3; shorter entries; not yet checked by a Kenyan maths teacher; not loaded by the live tutor"
  }
 };
 export default TEACHING_PACK_G5;
