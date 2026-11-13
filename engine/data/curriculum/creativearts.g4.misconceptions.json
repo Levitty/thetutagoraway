@@ -12,7 +12,11 @@
   "help": "Ask: do you hit it, pluck it or blow it? Sort five instruments by that one question.",
   "feedback": "A percussion instrument makes its sound when it is hit, shaken or scraped. The nyatiti is a string instrument: its strings are plucked.",
   "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
-  "status": "draft"
+  "status": "draft",
+  "review": {
+   "mark": "plausible, to confirm by a teacher",
+   "note": "Own judgement: believable for a Kenyan child of this age, but we have no source or homework count. A teacher who knows the class should say whether children really hold it."
+  }
  },
  "CREA.G4.CREATI.PERCUSSION_MUSICAL_INSTR.ID.M_CA4_PC_WIND_AS_PERC": {
   "skill": "CREA.G4.CREATI.PERCUSSION_MUSICAL_INSTR.ID",
@@ -27,7 +31,11 @@
   "help": "Ask who makes the sound: the breath, a plucking finger or a hit?",
   "feedback": "A percussion instrument is hit, shaken or scraped. The nzumari is a wind instrument: it is blown.",
   "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
-  "status": "draft"
+  "status": "draft",
+  "review": {
+   "mark": "plausible, to confirm by a teacher",
+   "note": "Own judgement: believable for a Kenyan child of this age, but we have no source or homework count. A teacher who knows the class should say whether children really hold it."
+  }
  },
  "CREA.G4.CREATI.PERCUSSION_MUSICAL_INSTR.ID.M_CA4_PC_KAYAMBA_HIT": {
   "skill": "CREA.G4.CREATI.PERCUSSION_MUSICAL_INSTR.ID",
@@ -42,7 +50,11 @@
   "help": "Shake a tin of seeds and listen: the seeds hit the walls and make the sound.",
   "feedback": "The kayamba is a shaker: the player shakes it so the seeds inside rattle. Not all percussion is hit with sticks.",
   "source": "To confirm by a teacher: communities and instrument names as used in the KICD teacher guide and local practice.",
-  "status": "draft"
+  "status": "draft",
+  "review": {
+   "mark": "plausible, to confirm by a teacher",
+   "note": "Own judgement: believable for a Kenyan child of this age, but we have no source or homework count. A teacher who knows the class should say whether children really hold it."
+  }
  },
  "CREA.G4.CREATI.PERCUSSION_MUSICAL_INSTR.ID.M_CA4_PC_COMMUNITY": {
   "skill": "CREA.G4.CREATI.PERCUSSION_MUSICAL_INSTR.ID",
@@ -57,7 +69,11 @@
   "help": "Use a map of Kenya and a recording of isukuti to link the sound to the Luhya of western Kenya.",
   "feedback": "The isukuti is a drum of the Luhya people of western Kenya. The kayamba belongs to the coast.",
   "source": "To confirm by a teacher: communities and instrument names as used in the KICD teacher guide and local practice.",
-  "status": "draft"
+  "status": "draft",
+  "review": {
+   "mark": "plausible, to confirm by a teacher",
+   "note": "Own judgement: believable for a Kenyan child of this age, but we have no source or homework count. A teacher who knows the class should say whether children really hold it."
+  }
  },
  "CREA.G4.CREATI.PERCUSSION_MUSICAL_INSTR.CLASSIFY.M_CA4_PC_LOUD_MELODIC": {
   "skill": "CREA.G4.CREATI.PERCUSSION_MUSICAL_INSTR.CLASSIFY",
@@ -72,7 +88,11 @@
   "help": "Play one drum hard and soft: the note does not change. Then play a xylophone bar by bar.",
   "feedback": "Melodic means the instrument can play different notes so it can play a tune. Loudness does not decide it.",
   "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
-  "status": "draft"
+  "status": "draft",
+  "review": {
+   "mark": "plausible, to confirm by a teacher",
+   "note": "Own judgement: believable for a Kenyan child of this age, but we have no source or homework count. A teacher who knows the class should say whether children really hold it."
+  }
  },
  "CREA.G4.CREATI.PERCUSSION_MUSICAL_INSTR.CLASSIFY.M_CA4_PC_ALL_MELODIC": {
   "skill": "CREA.G4.CREATI.PERCUSSION_MUSICAL_INSTR.CLASSIFY",
@@ -87,7 +107,11 @@
   "help": "Shake the kayamba and try to hum a tune with it. Then do the same on tuned bars.",
   "feedback": "A non-melodic instrument makes sounds without different notes, so it cannot play a tune by itself. A kayamba is non-melodic.",
   "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
-  "status": "draft"
+  "status": "draft",
+  "review": {
+   "mark": "plausible, to confirm by a teacher",
+   "note": "Own judgement: believable for a Kenyan child of this age, but we have no source or homework count. A teacher who knows the class should say whether children really hold it."
+  }
  },
  "CREA.G4.CREATI.PERCUSSION_MUSICAL_INSTR.CLASSIFY.M_CA4_PC_NONMEL_MEANS": {
   "skill": "CREA.G4.CREATI.PERCUSSION_MUSICAL_INSTR.CLASSIFY",
@@ -102,7 +126,11 @@
   "help": "Play a non-melodic shaker in a rhythm: it sounds good but has one sound.",
   "feedback": "Non-melodic does not mean bad. It means the instrument does not play different notes for a tune. It is still good for rhythm.",
   "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
-  "status": "draft"
+  "status": "draft",
+  "review": {
+   "mark": "plausible, to confirm by a teacher",
+   "note": "Own judgement: believable for a Kenyan child of this age, but we have no source or homework count. A teacher who knows the class should say whether children really hold it."
+  }
  },
  "CREA.G4.CREATI.PERCUSSION_MUSICAL_INSTR.DRUMPARTS.M_CA4_PC_SHELL_SOUND": {
   "skill": "CREA.G4.CREATI.PERCUSSION_MUSICAL_INSTR.DRUMPARTS",
@@ -117,7 +145,11 @@
   "help": "Lay a few grains on the skin and tap it: the grains jump. Touch the shell: it hardly moves.",
   "feedback": "The skin vibrates when it is hit and that makes the sound. The shell holds the air and makes the sound fuller.",
   "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
-  "status": "draft"
+  "status": "draft",
+  "review": {
+   "mark": "plausible, to confirm by a teacher",
+   "note": "Own judgement: believable for a Kenyan child of this age, but we have no source or homework count. A teacher who knows the class should say whether children really hold it."
+  }
  },
  "CREA.G4.CREATI.PERCUSSION_MUSICAL_INSTR.DRUMPARTS.M_CA4_PC_LOOSE_HIGHER": {
   "skill": "CREA.G4.CREATI.PERCUSSION_MUSICAL_INSTR.DRUMPARTS",
@@ -132,7 +164,11 @@
   "help": "Tap a plastic sheet held loose and then held tight over a bowl.",
   "feedback": "A tighter skin vibrates faster, so the sound is higher. A looser skin gives a lower sound.",
   "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
-  "status": "draft"
+  "status": "draft",
+  "review": {
+   "mark": "plausible, to confirm by a teacher",
+   "note": "Own judgement: believable for a Kenyan child of this age, but we have no source or homework count. A teacher who knows the class should say whether children really hold it."
+  }
  },
  "CREA.G4.CREATI.PERCUSSION_MUSICAL_INSTR.DRUMPARTS.M_CA4_PC_BIG_HIGHER": {
   "skill": "CREA.G4.CREATI.PERCUSSION_MUSICAL_INSTR.DRUMPARTS",
@@ -147,7 +183,11 @@
   "help": "Hit a small and a big tin and listen: the big one sounds lower.",
   "feedback": "A bigger drum has a bigger skin, which vibrates more slowly, so the sound is lower.",
   "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
-  "status": "draft"
+  "status": "draft",
+  "review": {
+   "mark": "plausible, to confirm by a teacher",
+   "note": "Own judgement: believable for a Kenyan child of this age, but we have no source or homework count. A teacher who knows the class should say whether children really hold it."
+  }
  },
  "CREA.G4.CREATI.PERCUSSION_MUSICAL_INSTR.DRUMPARTS.M_CA4_PC_STICK_SOUND": {
   "skill": "CREA.G4.CREATI.PERCUSSION_MUSICAL_INSTR.DRUMPARTS",
@@ -162,7 +202,11 @@
   "help": "Hit the stick on the floor: only a small tap. Hit it on the drum: a big sound.",
   "feedback": "The stick only hits the skin. The skin then vibrates and makes the sound.",
   "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
-  "status": "draft"
+  "status": "draft",
+  "review": {
+   "mark": "plausible, to confirm by a teacher",
+   "note": "Own judgement: believable for a Kenyan child of this age, but we have no source or homework count. A teacher who knows the class should say whether children really hold it."
+  }
  },
  "CREA.G4.CREATI.PERCUSSION_MUSICAL_INSTR.CHARCOAL.M_CA4_PC_BURN_AIR": {
   "skill": "CREA.G4.CREATI.PERCUSSION_MUSICAL_INSTR.CHARCOAL",
@@ -177,7 +221,11 @@
   "help": "Show wood char in a tin with a tight lid: it stays black and in shape because little air gets in.",
   "feedback": "Charcoal is made by burning twigs with very little air. Open flames turn them to ash. An adult does the burning step.",
   "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
-  "status": "draft"
+  "status": "draft",
+  "review": {
+   "mark": "plausible, to confirm by a teacher",
+   "note": "Own judgement: believable for a Kenyan child of this age, but we have no source or homework count. A teacher who knows the class should say whether children really hold it."
+  }
  },
  "CREA.G4.CREATI.PERCUSSION_MUSICAL_INSTR.CHARCOAL.M_CA4_PC_USE_HOT": {
   "skill": "CREA.G4.CREATI.PERCUSSION_MUSICAL_INSTR.CHARCOAL",
@@ -192,7 +240,11 @@
   "help": "Say: hot charcoal burns the skin and stays hot inside for a long time.",
   "feedback": "Charcoal stays hot for a long time. Let it cool fully before touching it. An adult handles the fire.",
   "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
-  "status": "draft"
+  "status": "draft",
+  "review": {
+   "mark": "plausible, to confirm by a teacher",
+   "note": "Own judgement: believable for a Kenyan child of this age, but we have no source or homework count. A teacher who knows the class should say whether children really hold it."
+  }
  },
  "CREA.G4.CREATI.PERCUSSION_MUSICAL_INSTR.CHARCOAL.M_CA4_PC_SMUDGE_ERASE": {
   "skill": "CREA.G4.CREATI.PERCUSSION_MUSICAL_INSTR.CHARCOAL",
@@ -207,7 +259,11 @@
   "help": "Draw a dark patch and rub it with a finger: it spreads into a soft shade.",
   "feedback": "Smudging spreads the charcoal to make soft shades. That is how tonal value (light and dark) is made.",
   "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
-  "status": "draft"
+  "status": "draft",
+  "review": {
+   "mark": "plausible, to confirm by a teacher",
+   "note": "Own judgement: believable for a Kenyan child of this age, but we have no source or homework count. A teacher who knows the class should say whether children really hold it."
+  }
  },
  "CREA.G4.CREATI.PERCUSSION_MUSICAL_INSTR.CHARCOAL.M_CA4_PC_LIGHT_HARD": {
   "skill": "CREA.G4.CREATI.PERCUSSION_MUSICAL_INSTR.CHARCOAL",
@@ -222,7 +278,11 @@
   "help": "Make three strokes with light, medium and hard pressure and compare.",
   "feedback": "More pressure puts more charcoal on the paper, so the area is darker. Less pressure gives a lighter shade.",
   "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
-  "status": "draft"
+  "status": "draft",
+  "review": {
+   "mark": "plausible, to confirm by a teacher",
+   "note": "Own judgement: believable for a Kenyan child of this age, but we have no source or homework count. A teacher who knows the class should say whether children really hold it."
+  }
  },
  "CREA.G4.CREATI.NETBALL.PASSES.M_CA4_NB_CHEST_BOUNCE": {
   "skill": "CREA.G4.CREATI.NETBALL.PASSES",
@@ -237,7 +297,11 @@
   "help": "Hold the ball at the chest, push out and say chest. Lift above the head and say over.",
   "feedback": "A chest pass starts with the ball at the chest and both hands pushing it out. An overhead pass starts above the head.",
   "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
-  "status": "draft"
+  "status": "draft",
+  "review": {
+   "mark": "plausible, to confirm by a teacher",
+   "note": "Own judgement: believable for a Kenyan child of this age, but we have no source or homework count. A teacher who knows the class should say whether children really hold it."
+  }
  },
  "CREA.G4.CREATI.NETBALL.PASSES.M_CA4_NB_ONE_HAND": {
   "skill": "CREA.G4.CREATI.NETBALL.PASSES",
@@ -252,7 +316,11 @@
   "help": "Try catching a ball with one hand and with two hands and see which is steadier.",
   "feedback": "In netball the skills in this unit use two hands: a double-handed catch and two-handed passes, so the ball is safer.",
   "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
-  "status": "draft"
+  "status": "draft",
+  "review": {
+   "mark": "plausible, to confirm by a teacher",
+   "note": "Own judgement: believable for a Kenyan child of this age, but we have no source or homework count. A teacher who knows the class should say whether children really hold it."
+  }
  },
  "CREA.G4.CREATI.NETBALL.PASSES.M_CA4_NB_EYES_AWAY": {
   "skill": "CREA.G4.CREATI.NETBALL.PASSES",
@@ -267,7 +335,11 @@
   "help": "Roll a soft ball and catch it, first looking at it and then looking away.",
   "feedback": "A catcher keeps eyes on the ball with fingers spread and hands ready, and brings it in to the chest.",
   "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
-  "status": "draft"
+  "status": "draft",
+  "review": {
+   "mark": "plausible, to confirm by a teacher",
+   "note": "Own judgement: believable for a Kenyan child of this age, but we have no source or homework count. A teacher who knows the class should say whether children really hold it."
+  }
  },
  "CREA.G4.CREATI.NETBALL.PASSES.M_CA4_NB_STIFF_ARMS": {
   "skill": "CREA.G4.CREATI.NETBALL.PASSES",
@@ -282,7 +354,11 @@
   "help": "Catch a soft ball with straight arms and with bending arms.",
   "feedback": "Reaching out and then giving with the ball, bending the arms, keeps the ball from bouncing out of the hands.",
   "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
-  "status": "draft"
+  "status": "draft",
+  "review": {
+   "mark": "plausible, to confirm by a teacher",
+   "note": "Own judgement: believable for a Kenyan child of this age, but we have no source or homework count. A teacher who knows the class should say whether children really hold it."
+  }
  },
  "CREA.G4.CREATI.NETBALL.MACRAME.M_CA4_NB_MAC_SEW": {
   "skill": "CREA.G4.CREATI.NETBALL.MACRAME",
@@ -297,7 +373,11 @@
   "help": "Tie two strings in an overhand knot and show it holds with no needle or glue.",
   "feedback": "Macramé is made by tying knots in cords. It needs no needle and no glue.",
   "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
-  "status": "draft"
+  "status": "draft",
+  "review": {
+   "mark": "plausible, to confirm by a teacher",
+   "note": "Own judgement: believable for a Kenyan child of this age, but we have no source or homework count. A teacher who knows the class should say whether children really hold it."
+  }
  },
  "CREA.G4.CREATI.NETBALL.MACRAME.M_CA4_NB_MAC_LOOSE": {
   "skill": "CREA.G4.CREATI.NETBALL.MACRAME",
@@ -312,7 +392,11 @@
   "help": "Make one tight and one loose knot, pull both and see which holds.",
   "feedback": "Pull each knot tight so it holds and the ball keeps its shape.",
   "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
-  "status": "draft"
+  "status": "draft",
+  "review": {
+   "mark": "plausible, to confirm by a teacher",
+   "note": "Own judgement: believable for a Kenyan child of this age, but we have no source or homework count. A teacher who knows the class should say whether children really hold it."
+  }
  },
  "CREA.G4.CREATI.NETBALL.MACRAME.M_CA4_NB_MAC_HARD_CORE": {
   "skill": "CREA.G4.CREATI.NETBALL.MACRAME",
@@ -327,7 +411,11 @@
   "help": "Say: a netball is light. A stone could hurt a friend.",
   "feedback": "Pack old cloth or paper inside. It is light and safe. A stone can hurt a person.",
   "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
-  "status": "draft"
+  "status": "draft",
+  "review": {
+   "mark": "plausible, to confirm by a teacher",
+   "note": "Own judgement: believable for a Kenyan child of this age, but we have no source or homework count. A teacher who knows the class should say whether children really hold it."
+  }
  },
  "CREA.G4.CREATI.PAINTING_AND_MONTAGE.COLOURS.M_CA4_PM_GREEN_PRIMARY": {
   "skill": "CREA.G4.CREATI.PAINTING_AND_MONTAGE.COLOURS",
@@ -342,7 +430,11 @@
   "help": "Mix blue and yellow paint and get green: a colour that can be mixed is not primary.",
   "feedback": "Primary colours are red, yellow and blue: they cannot be made by mixing. Green is made from blue and yellow.",
   "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
-  "status": "draft"
+  "status": "draft",
+  "review": {
+   "mark": "plausible, to confirm by a teacher",
+   "note": "Own judgement: believable for a Kenyan child of this age, but we have no source or homework count. A teacher who knows the class should say whether children really hold it."
+  }
  },
  "CREA.G4.CREATI.PAINTING_AND_MONTAGE.COLOURS.M_CA4_PM_BLACK_PRIMARY": {
   "skill": "CREA.G4.CREATI.PAINTING_AND_MONTAGE.COLOURS",
@@ -357,7 +449,11 @@
   "help": "Say: black and white change tone but are not on the colour wheel.",
   "feedback": "Black and white are not primary colours. They are used to make colours darker or lighter.",
   "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
-  "status": "draft"
+  "status": "draft",
+  "review": {
+   "mark": "plausible, to confirm by a teacher",
+   "note": "Own judgement: believable for a Kenyan child of this age, but we have no source or homework count. A teacher who knows the class should say whether children really hold it."
+  }
  },
  "CREA.G4.CREATI.PAINTING_AND_MONTAGE.COLOURS.M_CA4_PM_ORANGE_PRIMARY": {
   "skill": "CREA.G4.CREATI.PAINTING_AND_MONTAGE.COLOURS",
@@ -372,7 +468,11 @@
   "help": "Mix red and yellow to make orange and say: made by mixing, so secondary.",
   "feedback": "A secondary colour is made by mixing two primaries. Orange is made from red and yellow.",
   "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
-  "status": "draft"
+  "status": "draft",
+  "review": {
+   "mark": "plausible, to confirm by a teacher",
+   "note": "Own judgement: believable for a Kenyan child of this age, but we have no source or homework count. A teacher who knows the class should say whether children really hold it."
+  }
  },
  "CREA.G4.CREATI.PAINTING_AND_MONTAGE.MIX.M_CA4_PM_RED_BLUE_GREEN": {
   "skill": "CREA.G4.CREATI.PAINTING_AND_MONTAGE.MIX",
@@ -387,7 +487,11 @@
   "help": "Mix each pair on paper and write the result: red and blue gives purple.",
   "feedback": "Red and blue make purple. Blue and yellow make green. Red and yellow make orange.",
   "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
-  "status": "draft"
+  "status": "draft",
+  "review": {
+   "mark": "plausible, to confirm by a teacher",
+   "note": "Own judgement: believable for a Kenyan child of this age, but we have no source or homework count. A teacher who knows the class should say whether children really hold it."
+  }
  },
  "CREA.G4.CREATI.PAINTING_AND_MONTAGE.MIX.M_CA4_PM_RED_YELLOW_PURPLE": {
   "skill": "CREA.G4.CREATI.PAINTING_AND_MONTAGE.MIX",
@@ -402,7 +506,11 @@
   "help": "Mix red and yellow paint and watch orange appear.",
   "feedback": "Red and yellow make orange, like a ripe mango.",
   "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
-  "status": "draft"
+  "status": "draft",
+  "review": {
+   "mark": "plausible, to confirm by a teacher",
+   "note": "Own judgement: believable for a Kenyan child of this age, but we have no source or homework count. A teacher who knows the class should say whether children really hold it."
+  }
  },
  "CREA.G4.CREATI.PAINTING_AND_MONTAGE.MIX.M_CA4_PM_YELLOW_BLUE_ORANGE": {
   "skill": "CREA.G4.CREATI.PAINTING_AND_MONTAGE.MIX",
@@ -417,7 +525,11 @@
   "help": "Mix blue and yellow paint and watch the leaf colour appear.",
   "feedback": "Blue and yellow make green, like leaves.",
   "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
-  "status": "draft"
+  "status": "draft",
+  "review": {
+   "mark": "plausible, to confirm by a teacher",
+   "note": "Own judgement: believable for a Kenyan child of this age, but we have no source or homework count. A teacher who knows the class should say whether children really hold it."
+  }
  },
  "CREA.G4.CREATI.PAINTING_AND_MONTAGE.VALUE.M_CA4_PM_BLACK_LIGHTER": {
   "skill": "CREA.G4.CREATI.PAINTING_AND_MONTAGE.VALUE",
@@ -432,7 +544,11 @@
   "help": "Add a little black and then a little white to green paint on paper and compare.",
   "feedback": "Adding black makes a darker tone. Adding white makes a lighter tone.",
   "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
-  "status": "draft"
+  "status": "draft",
+  "review": {
+   "mark": "plausible, to confirm by a teacher",
+   "note": "Own judgement: believable for a Kenyan child of this age, but we have no source or homework count. A teacher who knows the class should say whether children really hold it."
+  }
  },
  "CREA.G4.CREATI.PAINTING_AND_MONTAGE.VALUE.M_CA4_PM_VALUE_NAME": {
   "skill": "CREA.G4.CREATI.PAINTING_AND_MONTAGE.VALUE",
@@ -447,7 +563,11 @@
   "help": "Show light blue and dark blue: same colour name, different value.",
   "feedback": "Colour value means how light or dark a colour is.",
   "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
-  "status": "draft"
+  "status": "draft",
+  "review": {
+   "mark": "doubtful",
+   "why": "A slip of recall (a fact the lesson states), more a trap option than a held belief."
+  }
  },
  "CREA.G4.CREATI.PAINTING_AND_MONTAGE.VALUE.M_CA4_PM_WHITE_DULL": {
   "skill": "CREA.G4.CREATI.PAINTING_AND_MONTAGE.VALUE",
@@ -462,7 +582,11 @@
   "help": "Make a strip from orange to light orange and ask: is it still orange?",
   "feedback": "Adding white makes a lighter tone of the same colour. That is how a value scale is made.",
   "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
-  "status": "draft"
+  "status": "draft",
+  "review": {
+   "mark": "plausible, to confirm by a teacher",
+   "note": "Own judgement: believable for a Kenyan child of this age, but we have no source or homework count. A teacher who knows the class should say whether children really hold it."
+  }
  },
  "CREA.G4.CREATI.PAINTING_AND_MONTAGE.VALUE.M_CA4_PM_SCALE_ORDER": {
   "skill": "CREA.G4.CREATI.PAINTING_AND_MONTAGE.VALUE",
@@ -477,7 +601,11 @@
   "help": "Cut the strip into steps and arrange it from the lightest to the darkest.",
   "feedback": "A value scale changes a little at a time from light to dark, in order.",
   "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
-  "status": "draft"
+  "status": "draft",
+  "review": {
+   "mark": "doubtful",
+   "why": "A slip of recall (a fact the lesson states), more a trap option than a held belief."
+  }
  },
  "CREA.G4.CREATI.PAINTING_AND_MONTAGE.MONTAGE.M_CA4_PM_MONT_PAINT": {
   "skill": "CREA.G4.CREATI.PAINTING_AND_MONTAGE.MONTAGE",
@@ -492,7 +620,11 @@
   "help": "Bring old magazines and cut and paste a small picture.",
   "feedback": "A montage is made of many cut-out pictures pasted on a theme. It is not painted.",
   "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
-  "status": "draft"
+  "status": "draft",
+  "review": {
+   "mark": "doubtful",
+   "why": "Children would not say this; a trap option."
+  }
  },
  "CREA.G4.CREATI.PAINTING_AND_MONTAGE.MONTAGE.M_CA4_PM_MONT_GAPS": {
   "skill": "CREA.G4.CREATI.PAINTING_AND_MONTAGE.MONTAGE",
@@ -507,7 +639,11 @@
   "help": "Place the pieces apart and then overlapping and compare.",
   "feedback": "In a montage the pieces overlap so the picture is full and has no gaps.",
   "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
-  "status": "draft"
+  "status": "draft",
+  "review": {
+   "mark": "plausible, to confirm by a teacher",
+   "note": "Own judgement: believable for a Kenyan child of this age, but we have no source or homework count. A teacher who knows the class should say whether children really hold it."
+  }
  },
  "CREA.G4.CREATI.PAINTING_AND_MONTAGE.MONTAGE.M_CA4_PM_MONT_RANDOM": {
   "skill": "CREA.G4.CREATI.PAINTING_AND_MONTAGE.MONTAGE",
@@ -522,7 +658,11 @@
   "help": "Ask: does the picture tell about the theme?",
   "feedback": "A montage has one theme and all the pictures show it.",
   "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
-  "status": "draft"
+  "status": "draft",
+  "review": {
+   "mark": "doubtful",
+   "why": "Children would not say this; a trap option."
+  }
  },
  "CREA.G4.CREATI.PAINTING_AND_MONTAGE.MONTAGE.M_CA4_PM_MONT_MESSY": {
   "skill": "CREA.G4.CREATI.PAINTING_AND_MONTAGE.MONTAGE",
@@ -537,7 +677,11 @@
   "help": "Compare a neat and a messy montage side by side.",
   "feedback": "A neat montage has clean cut edges and little glue showing.",
   "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
-  "status": "draft"
+  "status": "draft",
+  "review": {
+   "mark": "doubtful",
+   "why": "Children would not say this; a trap option."
+  }
  },
  "CREA.G4.CREATI.RHYTHM.VALUES.M_CA4_RH_QUAVER_LONGER": {
   "skill": "CREA.G4.CREATI.RHYTHM.VALUES",
@@ -552,7 +696,11 @@
   "help": "Clap one crotchet, then clap two quick claps in the same beat.",
   "feedback": "A pair of quavers lasts one beat together. Each quaver is half a beat.",
   "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
-  "status": "draft"
+  "status": "draft",
+  "review": {
+   "mark": "plausible, to confirm by a teacher",
+   "note": "Own judgement: believable for a Kenyan child of this age, but we have no source or homework count. A teacher who knows the class should say whether children really hold it."
+  }
  },
  "CREA.G4.CREATI.RHYTHM.VALUES.M_CA4_RH_REST_SKIP": {
   "skill": "CREA.G4.CREATI.RHYTHM.VALUES",
@@ -567,7 +715,11 @@
   "help": "Clap taa, rest, taa while counting 1 2 3 out loud.",
   "feedback": "A rest is silence that is still counted. A crotchet rest is one silent beat.",
   "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
-  "status": "draft"
+  "status": "draft",
+  "review": {
+   "mark": "plausible, to confirm by a teacher",
+   "note": "Own judgement: believable for a Kenyan child of this age, but we have no source or homework count. A teacher who knows the class should say whether children really hold it."
+  }
  },
  "CREA.G4.CREATI.RHYTHM.VALUES.M_CA4_RH_REST_SOUND": {
   "skill": "CREA.G4.CREATI.RHYTHM.VALUES",
@@ -582,7 +734,11 @@
   "help": "Clap the pattern and hold open hands at the rest.",
   "feedback": "A rest is a silence. It is counted but not played or sung.",
   "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
-  "status": "draft"
+  "status": "draft",
+  "review": {
+   "mark": "plausible, to confirm by a teacher",
+   "note": "Own judgement: believable for a Kenyan child of this age, but we have no source or homework count. A teacher who knows the class should say whether children really hold it."
+  }
  },
  "CREA.G4.CREATI.RHYTHM.VALUES.M_CA4_RH_QUAVER_REST_FULL": {
   "skill": "CREA.G4.CREATI.RHYTHM.VALUES",
@@ -597,7 +753,11 @@
   "help": "Match each rest to the note of the same length.",
   "feedback": "A rest lasts as long as its note. A quaver is half a beat, so a quaver rest is half a beat.",
   "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
-  "status": "draft"
+  "status": "draft",
+  "review": {
+   "mark": "plausible, to confirm by a teacher",
+   "note": "Own judgement: believable for a Kenyan child of this age, but we have no source or homework count. A teacher who knows the class should say whether children really hold it."
+  }
  },
  "CREA.G4.CREATI.RHYTHM.NAMES.M_CA4_RH_TATE_TWO_BEATS": {
   "skill": "CREA.G4.CREATI.RHYTHM.NAMES",
@@ -612,7 +772,11 @@
   "help": "Say ta-te as you tap one beat once.",
   "feedback": "Ta-te has two quick sounds that fit into one beat.",
   "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
-  "status": "draft"
+  "status": "draft",
+  "review": {
+   "mark": "plausible, to confirm by a teacher",
+   "note": "Own judgement: believable for a Kenyan child of this age, but we have no source or homework count. A teacher who knows the class should say whether children really hold it."
+  }
  },
  "CREA.G4.CREATI.RHYTHM.NAMES.M_CA4_RH_TAA_PAIR": {
   "skill": "CREA.G4.CREATI.RHYTHM.NAMES",
@@ -627,7 +791,11 @@
   "help": "Say taa slowly and ta-te quickly and tap the beats.",
   "feedback": "Taa is one sound for one beat (a crotchet). Ta-te is two sounds in one beat (a pair of quavers).",
   "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
-  "status": "draft"
+  "status": "draft",
+  "review": {
+   "mark": "plausible, to confirm by a teacher",
+   "note": "Own judgement: believable for a Kenyan child of this age, but we have no source or homework count. A teacher who knows the class should say whether children really hold it."
+  }
  },
  "CREA.G4.CREATI.RHYTHM.NAMES.M_CA4_RH_REST_TAA": {
   "skill": "CREA.G4.CREATI.RHYTHM.NAMES",
@@ -642,7 +810,11 @@
   "help": "Chant taa, rest, taa and hold the rest in silence.",
   "feedback": "A rest is silent, so no name is said aloud.",
   "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
-  "status": "draft"
+  "status": "draft",
+  "review": {
+   "mark": "doubtful",
+   "why": "Children would not say this; a trap option."
+  }
  },
  "CREA.G4.CREATI.RHYTHM.RHQUAL.M_CA4_RH_ALL_SAME": {
   "skill": "CREA.G4.CREATI.RHYTHM.RHQUAL",
@@ -657,7 +829,11 @@
   "help": "Clap both and ask which is more interesting.",
   "feedback": "Variation means mixing different note values, which makes a pattern interesting.",
   "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
-  "status": "draft"
+  "status": "draft",
+  "review": {
+   "mark": "doubtful",
+   "why": "A convention of the lesson rather than a belief children hold."
+  }
  },
  "CREA.G4.CREATI.RHYTHM.RHQUAL.M_CA4_RH_NO_REPEAT": {
   "skill": "CREA.G4.CREATI.RHYTHM.RHQUAL",
@@ -672,7 +848,11 @@
   "help": "Clap a tune that repeats a short part and ask if it is easy to remember.",
   "feedback": "Repetition means repeating part of a pattern so people can remember it.",
   "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
-  "status": "draft"
+  "status": "draft",
+  "review": {
+   "mark": "doubtful",
+   "why": "A convention of the lesson rather than a belief children hold."
+  }
  },
  "CREA.G4.CREATI.RHYTHM.RHQUAL.M_CA4_RH_END_SHORT": {
   "skill": "CREA.G4.CREATI.RHYTHM.RHQUAL",
@@ -687,7 +867,11 @@
   "help": "Clap one ending on a short sound and one on a long sound.",
   "feedback": "A good pattern ends on a long note, so it sounds finished.",
   "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
-  "status": "draft"
+  "status": "draft",
+  "review": {
+   "mark": "doubtful",
+   "why": "A convention of the lesson rather than a belief children hold."
+  }
  },
  "CREA.G4.CREATI.RHYTHM.LETTERING.M_CA4_RH_G_ASC": {
   "skill": "CREA.G4.CREATI.RHYTHM.LETTERING",
@@ -702,7 +886,11 @@
   "help": "Write the letters on a ruled line and see which go below it.",
   "feedback": "A descender goes below the line. The letters g, j, p, q and y have descenders.",
   "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
-  "status": "draft"
+  "status": "draft",
+  "review": {
+   "mark": "plausible, to confirm by a teacher",
+   "note": "Own judgement: believable for a Kenyan child of this age, but we have no source or homework count. A teacher who knows the class should say whether children really hold it."
+  }
  },
  "CREA.G4.CREATI.RHYTHM.LETTERING.M_CA4_RH_B_DESC": {
   "skill": "CREA.G4.CREATI.RHYTHM.LETTERING",
@@ -717,7 +905,11 @@
   "help": "Draw a line and write b above and p below it.",
   "feedback": "An ascender goes up above the main body. The letters b, d, h, k and l have ascenders.",
   "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
-  "status": "draft"
+  "status": "draft",
+  "review": {
+   "mark": "plausible, to confirm by a teacher",
+   "note": "Own judgement: believable for a Kenyan child of this age, but we have no source or homework count. A teacher who knows the class should say whether children really hold it."
+  }
  },
  "CREA.G4.CREATI.RHYTHM.LETTERING.M_CA4_RH_ALL_ASC": {
   "skill": "CREA.G4.CREATI.RHYTHM.LETTERING",
@@ -732,7 +924,11 @@
   "help": "Write the word \"ace\" and look for letters that go neither up nor down.",
   "feedback": "The letters a, c, e, o, s and others stay in the main body, so they have neither.",
   "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
-  "status": "draft"
+  "status": "draft",
+  "review": {
+   "mark": "doubtful",
+   "why": "Children would not say this; a trap option."
+  }
  },
  "CREA.G4.CREATI.MELODY.SOLFA.M_CA4_ML_M_LOWEST": {
   "skill": "CREA.G4.CREATI.MELODY.SOLFA",
@@ -747,7 +943,11 @@
   "help": "Sing d r m going up and show with the hand.",
   "feedback": "The order from low to high is d r m. D is the lowest and m is the highest.",
   "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
-  "status": "draft"
+  "status": "draft",
+  "review": {
+   "mark": "plausible, to confirm by a teacher",
+   "note": "Own judgement: believable for a Kenyan child of this age, but we have no source or homework count. A teacher who knows the class should say whether children really hold it."
+  }
  },
  "CREA.G4.CREATI.MELODY.SOLFA.M_CA4_ML_D_HIGHEST": {
   "skill": "CREA.G4.CREATI.MELODY.SOLFA",
@@ -762,7 +962,11 @@
   "help": "Sing d first and then climb to m.",
   "feedback": "The first syllable sung is not always the highest. In d r m, m is highest.",
   "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
-  "status": "draft"
+  "status": "draft",
+  "review": {
+   "mark": "plausible, to confirm by a teacher",
+   "note": "Own judgement: believable for a Kenyan child of this age, but we have no source or homework count. A teacher who knows the class should say whether children really hold it."
+  }
  },
  "CREA.G4.CREATI.MELODY.SOLFA.M_CA4_ML_ORDER_MIX": {
   "skill": "CREA.G4.CREATI.MELODY.SOLFA",
@@ -777,7 +981,11 @@
   "help": "Sing d r m slowly and point to steps on a stair.",
   "feedback": "From low to high the order is d, r, m.",
   "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
-  "status": "draft"
+  "status": "draft",
+  "review": {
+   "mark": "doubtful",
+   "why": "A slip of recall (a fact the lesson states), more a trap option than a held belief."
+  }
  },
  "CREA.G4.CREATI.MELODY.SOLFA.M_CA4_ML_END_ANY": {
   "skill": "CREA.G4.CREATI.MELODY.SOLFA",
@@ -792,7 +1000,11 @@
   "help": "Sing d r m r then stop on r and then on d: which sounds finished?",
   "feedback": "D is the home note. A melody sounds finished when it ends on d.",
   "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
-  "status": "draft"
+  "status": "draft",
+  "review": {
+   "mark": "plausible, to confirm by a teacher",
+   "note": "Own judgement: believable for a Kenyan child of this age, but we have no source or homework count. A teacher who knows the class should say whether children really hold it."
+  }
  },
  "CREA.G4.CREATI.MELODY.SIGNS.M_CA4_ML_SIGN_DOWN": {
   "skill": "CREA.G4.CREATI.MELODY.SIGNS",
@@ -807,7 +1019,11 @@
   "help": "Sing d r m and raise your hand for each step.",
   "feedback": "The hand is held higher as the pitch gets higher.",
   "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
-  "status": "draft"
+  "status": "draft",
+  "review": {
+   "mark": "plausible, to confirm by a teacher",
+   "note": "Own judgement: believable for a Kenyan child of this age, but we have no source or homework count. A teacher who knows the class should say whether children really hold it."
+  }
  },
  "CREA.G4.CREATI.MELODY.SIGNS.M_CA4_ML_SIGN_MIX": {
   "skill": "CREA.G4.CREATI.MELODY.SIGNS",
@@ -822,7 +1038,11 @@
   "help": "Show each sign three times saying the syllable.",
   "feedback": "D is a closed fist held low, r is a hand sloping upward, m is a flat hand with the palm down held higher.",
   "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
-  "status": "draft"
+  "status": "draft",
+  "review": {
+   "mark": "plausible, to confirm by a teacher",
+   "note": "Own judgement: believable for a Kenyan child of this age, but we have no source or homework count. A teacher who knows the class should say whether children really hold it."
+  }
  },
  "CREA.G4.CREATI.MELODY.SIGNS.M_CA4_ML_M_FIST": {
   "skill": "CREA.G4.CREATI.MELODY.SIGNS",
@@ -837,7 +1057,11 @@
   "help": "Show a fist for d and a flat hand for m, saying the sounds.",
   "feedback": "M is a flat hand with the palm down. D is a closed fist.",
   "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
-  "status": "draft"
+  "status": "draft",
+  "review": {
+   "mark": "doubtful",
+   "why": "A slip of recall (a fact the lesson states), more a trap option than a held belief."
+  }
  },
  "CREA.G4.CREATI.MELODY.MELQUAL.M_CA4_ML_ONE_SYLLABLE": {
   "skill": "CREA.G4.CREATI.MELODY.MELQUAL",
@@ -852,7 +1076,11 @@
   "help": "Sing both and ask which is more interesting.",
   "feedback": "Variation means using different syllables and lengths.",
   "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
-  "status": "draft"
+  "status": "draft",
+  "review": {
+   "mark": "doubtful",
+   "why": "Children would not say this; a trap option."
+  }
  },
  "CREA.G4.CREATI.MELODY.MELQUAL.M_CA4_ML_END_NOT_D": {
   "skill": "CREA.G4.CREATI.MELODY.MELQUAL",
@@ -867,7 +1095,11 @@
   "help": "Sing the melody ending on m and on d and compare.",
   "feedback": "A good melody ends on d, the home note.",
   "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
-  "status": "draft"
+  "status": "draft",
+  "review": {
+   "mark": "doubtful",
+   "why": "A convention of the lesson rather than a belief children hold."
+  }
  },
  "CREA.G4.CREATI.MELODY.MELQUAL.M_CA4_ML_STEP_JUMPS": {
   "skill": "CREA.G4.CREATI.MELODY.MELQUAL",
@@ -882,7 +1114,11 @@
   "help": "Walk stairs one by one and sing d r m.",
   "feedback": "Stepwise motion is moving to the next syllable, like walking up stairs one step at a time.",
   "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
-  "status": "draft"
+  "status": "draft",
+  "review": {
+   "mark": "plausible, to confirm by a teacher",
+   "note": "Own judgement: believable for a Kenyan child of this age, but we have no source or homework count. A teacher who knows the class should say whether children really hold it."
+  }
  },
  "CREA.G4.CREATI.MELODY.CLAY.M_CA4_ML_CLAY_DRY": {
   "skill": "CREA.G4.CREATI.MELODY.CLAY",
@@ -897,7 +1133,11 @@
   "help": "Try to bend a dry clay lump and a damp one.",
   "feedback": "Clay is shaped while damp and soft. Keep it under a damp cloth.",
   "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
-  "status": "draft"
+  "status": "draft",
+  "review": {
+   "mark": "plausible, to confirm by a teacher",
+   "note": "Own judgement: believable for a Kenyan child of this age, but we have no source or homework count. A teacher who knows the class should say whether children really hold it."
+  }
  },
  "CREA.G4.CREATI.MELODY.CLAY.M_CA4_ML_CLAY_COIL": {
   "skill": "CREA.G4.CREATI.MELODY.CLAY",
@@ -912,7 +1152,11 @@
   "help": "Roll one and flatten the other.",
   "feedback": "A slab is a flat piece. A coil is clay rolled into a long snake.",
   "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
-  "status": "draft"
+  "status": "draft",
+  "review": {
+   "mark": "plausible, to confirm by a teacher",
+   "note": "Own judgement: believable for a Kenyan child of this age, but we have no source or homework count. A teacher who knows the class should say whether children really hold it."
+  }
  },
  "CREA.G4.CREATI.MELODY.CLAY.M_CA4_ML_CLAY_STONES": {
   "skill": "CREA.G4.CREATI.MELODY.CLAY",
@@ -927,7 +1171,11 @@
   "help": "Squeeze clay with a small stone in it and see it crack.",
   "feedback": "Remove stones and knead the clay so it is smooth and does not crack.",
   "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
-  "status": "draft"
+  "status": "draft",
+  "review": {
+   "mark": "doubtful",
+   "why": "Children would not say this; a trap option."
+  }
  },
  "CREA.G4.CREATI.MELODY.CLAY.M_CA4_ML_CLAY_GLUE": {
   "skill": "CREA.G4.CREATI.MELODY.CLAY",
@@ -942,7 +1190,11 @@
   "help": "Join two pieces with a little water and press.",
   "feedback": "Clay pieces are joined with a little water and pressed together.",
   "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
-  "status": "draft"
+  "status": "draft",
+  "review": {
+   "mark": "doubtful",
+   "why": "Children would not say this; a trap option."
+  }
  },
  "CREA.G4.PERFOR.ATHLETICS.STARTS.M_CA4_AT_COMMANDS_ORDER": {
   "skill": "CREA.G4.PERFOR.ATHLETICS.STARTS",
@@ -957,7 +1209,11 @@
   "help": "Practise the three commands in a line.",
   "feedback": "The order is On your marks, Set, Go.",
   "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
-  "status": "draft"
+  "status": "draft",
+  "review": {
+   "mark": "plausible, to confirm by a teacher",
+   "note": "Own judgement: believable for a Kenyan child of this age, but we have no source or homework count. A teacher who knows the class should say whether children really hold it."
+  }
  },
  "CREA.G4.PERFOR.ATHLETICS.STARTS.M_CA4_AT_SET_HIPS": {
   "skill": "CREA.G4.PERFOR.ATHLETICS.STARTS",
@@ -972,7 +1228,11 @@
   "help": "Show the position at Set and ask where the weight is.",
   "feedback": "At Set the hips are raised and the weight goes forward, ready to push.",
   "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
-  "status": "draft"
+  "status": "draft",
+  "review": {
+   "mark": "plausible, to confirm by a teacher",
+   "note": "Own judgement: believable for a Kenyan child of this age, but we have no source or homework count. A teacher who knows the class should say whether children really hold it."
+  }
  },
  "CREA.G4.PERFOR.ATHLETICS.STARTS.M_CA4_AT_ELONG_CLOSE": {
   "skill": "CREA.G4.PERFOR.ATHLETICS.STARTS",
@@ -987,7 +1247,11 @@
   "help": "Mark the foot places in the sand for each start.",
   "feedback": "In the elongated start the feet are placed furthest apart. Medium starts have them closer.",
   "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
-  "status": "draft"
+  "status": "draft",
+  "review": {
+   "mark": "plausible, to confirm by a teacher",
+   "note": "Own judgement: believable for a Kenyan child of this age, but we have no source or homework count. A teacher who knows the class should say whether children really hold it."
+  }
  },
  "CREA.G4.PERFOR.ATHLETICS.STARTS.M_CA4_AT_LOOK_BACK": {
   "skill": "CREA.G4.PERFOR.ATHLETICS.STARTS",
@@ -1002,7 +1266,11 @@
   "help": "Say: you race your own lane.",
   "feedback": "The runner looks down and ahead and stays focused on the lane.",
   "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
-  "status": "draft"
+  "status": "draft",
+  "review": {
+   "mark": "plausible, to confirm by a teacher",
+   "note": "Own judgement: believable for a Kenyan child of this age, but we have no source or homework count. A teacher who knows the class should say whether children really hold it."
+  }
  },
  "CREA.G4.PERFOR.ATHLETICS.SPRINT.M_CA4_AT_ARMS_ACROSS": {
   "skill": "CREA.G4.PERFOR.ATHLETICS.SPRINT",
@@ -1017,7 +1285,11 @@
   "help": "Run slowly with arms across and with arms forward and back.",
   "feedback": "Arms are bent and swing forward and back, not across the body.",
   "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
-  "status": "draft"
+  "status": "draft",
+  "review": {
+   "mark": "plausible, to confirm by a teacher",
+   "note": "Own judgement: believable for a Kenyan child of this age, but we have no source or homework count. A teacher who knows the class should say whether children really hold it."
+  }
  },
  "CREA.G4.PERFOR.ATHLETICS.SPRINT.M_CA4_AT_HEELS": {
   "skill": "CREA.G4.PERFOR.ATHLETICS.SPRINT",
@@ -1032,7 +1304,11 @@
   "help": "Run on the heels for a few steps and feel the slowing.",
   "feedback": "Sprinters run on the balls of the feet.",
   "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
-  "status": "draft"
+  "status": "draft",
+  "review": {
+   "mark": "plausible, to confirm by a teacher",
+   "note": "Own judgement: believable for a Kenyan child of this age, but we have no source or homework count. A teacher who knows the class should say whether children really hold it."
+  }
  },
  "CREA.G4.PERFOR.ATHLETICS.SPRINT.M_CA4_AT_STOP_LINE": {
   "skill": "CREA.G4.PERFOR.ATHLETICS.SPRINT",
@@ -1047,7 +1323,11 @@
   "help": "Run to a line and run through it.",
   "feedback": "Run through the finish line without slowing.",
   "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
-  "status": "draft"
+  "status": "draft",
+  "review": {
+   "mark": "plausible, to confirm by a teacher",
+   "note": "Own judgement: believable for a Kenyan child of this age, but we have no source or homework count. A teacher who knows the class should say whether children really hold it."
+  }
  },
  "CREA.G4.PERFOR.ATHLETICS.SPRINT.M_CA4_AT_LOOK_DOWN": {
   "skill": "CREA.G4.PERFOR.ATHLETICS.SPRINT",
@@ -1062,7 +1342,11 @@
   "help": "Run looking ahead and notice the body stay straight.",
   "feedback": "Look ahead, with the head up.",
   "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
-  "status": "draft"
+  "status": "draft",
+  "review": {
+   "mark": "plausible, to confirm by a teacher",
+   "note": "Own judgement: believable for a Kenyan child of this age, but we have no source or homework count. A teacher who knows the class should say whether children really hold it."
+  }
  },
  "CREA.G4.PERFOR.ATHLETICS.FLAG.M_CA4_AT_FLAG_ORDER": {
   "skill": "CREA.G4.PERFOR.ATHLETICS.FLAG",
@@ -1077,7 +1361,11 @@
   "help": "Colour the stripes in order and check with a real flag.",
   "feedback": "The Kenyan flag has black at the top, then red, then green, with thin white lines between.",
   "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
-  "status": "draft"
+  "status": "draft",
+  "review": {
+   "mark": "plausible, to confirm by a teacher",
+   "note": "Own judgement: believable for a Kenyan child of this age, but we have no source or homework count. A teacher who knows the class should say whether children really hold it."
+  }
  },
  "CREA.G4.PERFOR.ATHLETICS.FLAG.M_CA4_AT_FLAG_MEANING": {
   "skill": "CREA.G4.PERFOR.ATHLETICS.FLAG",
@@ -1092,7 +1380,11 @@
   "help": "Match each colour to its meaning on a card.",
   "feedback": "Black stands for the people, red for the blood shed for freedom, green for the land and white for peace.",
   "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
-  "status": "draft"
+  "status": "draft",
+  "review": {
+   "mark": "plausible, to confirm by a teacher",
+   "note": "Own judgement: believable for a Kenyan child of this age, but we have no source or homework count. A teacher who knows the class should say whether children really hold it."
+  }
  },
  "CREA.G4.PERFOR.ATHLETICS.FLAG.M_CA4_AT_FLAG_WHY": {
   "skill": "CREA.G4.PERFOR.ATHLETICS.FLAG",
@@ -1107,7 +1399,11 @@
   "help": "Ask where the flag flies and what it stands for.",
   "feedback": "The flag stands for the country and shows love of country and unity.",
   "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
-  "status": "draft"
+  "status": "draft",
+  "review": {
+   "mark": "doubtful",
+   "why": "Children would not say this; a trap option."
+  }
  },
  "CREA.G4.PERFOR.GYMNASTICS.BALANCES.M_CA4_GY_CRAB_DOWN": {
   "skill": "CREA.G4.PERFOR.GYMNASTICS.BALANCES",
@@ -1122,7 +1418,11 @@
   "help": "Sit down, put hands behind and lift the hips: the tummy faces up.",
   "feedback": "In a crab balance the tummy faces up with the hips lifted.",
   "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
-  "status": "draft"
+  "status": "draft",
+  "review": {
+   "mark": "plausible, to confirm by a teacher",
+   "note": "Own judgement: believable for a Kenyan child of this age, but we have no source or homework count. A teacher who knows the class should say whether children really hold it."
+  }
  },
  "CREA.G4.PERFOR.GYMNASTICS.BALANCES.M_CA4_GY_ROLL_HEAD": {
   "skill": "CREA.G4.PERFOR.GYMNASTICS.BALANCES",
@@ -1137,7 +1437,11 @@
   "help": "Lie down and roll to the side with the body straight.",
   "feedback": "A side roll goes sideways along the mat with the body straight, not over the head.",
   "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
-  "status": "draft"
+  "status": "draft",
+  "review": {
+   "mark": "plausible, to confirm by a teacher",
+   "note": "Own judgement: believable for a Kenyan child of this age, but we have no source or homework count. A teacher who knows the class should say whether children really hold it."
+  }
  },
  "CREA.G4.PERFOR.GYMNASTICS.BALANCES.M_CA4_GY_ROLL_BENT": {
   "skill": "CREA.G4.PERFOR.GYMNASTICS.BALANCES",
@@ -1152,7 +1456,11 @@
   "help": "Roll once straight and once curled and compare.",
   "feedback": "Keep the body long and straight with arms above the head and legs together.",
   "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
-  "status": "draft"
+  "status": "draft",
+  "review": {
+   "mark": "plausible, to confirm by a teacher",
+   "note": "Own judgement: believable for a Kenyan child of this age, but we have no source or homework count. A teacher who knows the class should say whether children really hold it."
+  }
  },
  "CREA.G4.PERFOR.GYMNASTICS.BALANCES.M_CA4_GY_CRAB_RUSH": {
   "skill": "CREA.G4.PERFOR.GYMNASTICS.BALANCES",
@@ -1167,7 +1475,11 @@
   "help": "Hold and count three together.",
   "feedback": "A balance is held still for a count of three.",
   "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
-  "status": "draft"
+  "status": "draft",
+  "review": {
+   "mark": "plausible, to confirm by a teacher",
+   "note": "Own judgement: believable for a Kenyan child of this age, but we have no source or homework count. A teacher who knows the class should say whether children really hold it."
+  }
  },
  "CREA.G4.PERFOR.GYMNASTICS.GYMSAFE.M_CA4_GY_NO_WARMUP": {
   "skill": "CREA.G4.PERFOR.GYMNASTICS.GYMSAFE",
@@ -1182,7 +1494,11 @@
   "help": "Say: a cold muscle can be hurt easily.",
   "feedback": "A warm-up makes the body ready and prevents injury.",
   "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
-  "status": "draft"
+  "status": "draft",
+  "review": {
+   "mark": "plausible, to confirm by a teacher",
+   "note": "Own judgement: believable for a Kenyan child of this age, but we have no source or homework count. A teacher who knows the class should say whether children really hold it."
+  }
  },
  "CREA.G4.PERFOR.GYMNASTICS.GYMSAFE.M_CA4_GY_HARD_GROUND": {
   "skill": "CREA.G4.PERFOR.GYMNASTICS.GYMSAFE",
@@ -1197,7 +1513,11 @@
   "help": "Say: a fall on stones hurts, on a mat it does not.",
   "feedback": "Use a mat or soft, cleared ground with no stones.",
   "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
-  "status": "draft"
+  "status": "draft",
+  "review": {
+   "mark": "doubtful",
+   "why": "Children would not say this; a trap option."
+  }
  },
  "CREA.G4.PERFOR.GYMNASTICS.GYMSAFE.M_CA4_GY_PAIN_GO_ON": {
   "skill": "CREA.G4.PERFOR.GYMNASTICS.GYMSAFE",
@@ -1212,7 +1532,11 @@
   "help": "Say: telling is brave and keeps you from a worse injury.",
   "feedback": "Stop and tell the teacher if a part hurts.",
   "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
-  "status": "draft"
+  "status": "draft",
+  "review": {
+   "mark": "plausible, to confirm by a teacher",
+   "note": "Own judgement: believable for a Kenyan child of this age, but we have no source or homework count. A teacher who knows the class should say whether children really hold it."
+  }
  },
  "CREA.G4.PERFOR.SONGS.TYPES.M_CA4_SG_SACRED_PATRIOTIC": {
   "skill": "CREA.G4.PERFOR.SONGS.TYPES",
@@ -1227,7 +1551,11 @@
   "help": "Ask: who is the song about, God or the country?",
   "feedback": "A sacred song is about worship. A patriotic song is about loving the country.",
   "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
-  "status": "draft"
+  "status": "draft",
+  "review": {
+   "mark": "plausible, to confirm by a teacher",
+   "note": "Own judgement: believable for a Kenyan child of this age, but we have no source or homework count. A teacher who knows the class should say whether children really hold it."
+  }
  },
  "CREA.G4.PERFOR.SONGS.TYPES.M_CA4_SG_TOPICAL_ANY": {
   "skill": "CREA.G4.PERFOR.SONGS.TYPES",
@@ -1242,7 +1570,11 @@
   "help": "List issues people talk about now, and match a song to one.",
   "feedback": "A topical song is about an issue people are talking about now, like hygiene or road safety.",
   "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
-  "status": "draft"
+  "status": "draft",
+  "review": {
+   "mark": "doubtful",
+   "why": "Children would not say this; a trap option."
+  }
  },
  "CREA.G4.PERFOR.SONGS.TYPES.M_CA4_SG_PATRIOTIC_LOVE": {
   "skill": "CREA.G4.PERFOR.SONGS.TYPES",
@@ -1257,7 +1589,11 @@
   "help": "Link patriot to the word country (patria).",
   "feedback": "A patriotic song is about loving and serving the country.",
   "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
-  "status": "draft"
+  "status": "draft",
+  "review": {
+   "mark": "doubtful",
+   "why": "Children would not say this; a trap option."
+  }
  },
  "CREA.G4.PERFOR.SONGS.PERFTERMS.M_CA4_SG_TEMPO_LOUD": {
   "skill": "CREA.G4.PERFOR.SONGS.PERFTERMS",
@@ -1272,7 +1608,11 @@
   "help": "Sing a song fast and slow, then loud and soft.",
   "feedback": "Tempo is speed. Dynamics are loud or soft.",
   "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
-  "status": "draft"
+  "status": "draft",
+  "review": {
+   "mark": "plausible, to confirm by a teacher",
+   "note": "Own judgement: believable for a Kenyan child of this age, but we have no source or homework count. A teacher who knows the class should say whether children really hold it."
+  }
  },
  "CREA.G4.PERFOR.SONGS.PERFTERMS.M_CA4_SG_DYNAMICS_FAST": {
   "skill": "CREA.G4.PERFOR.SONGS.PERFTERMS",
@@ -1287,7 +1627,11 @@
   "help": "Sing the same line loud then soft.",
   "feedback": "Dynamics are how loud or soft the song is.",
   "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
-  "status": "draft"
+  "status": "draft",
+  "review": {
+   "mark": "plausible, to confirm by a teacher",
+   "note": "Own judgement: believable for a Kenyan child of this age, but we have no source or homework count. A teacher who knows the class should say whether children really hold it."
+  }
  },
  "CREA.G4.PERFOR.SONGS.PERFTERMS.M_CA4_SG_UNISON_PARTS": {
   "skill": "CREA.G4.PERFOR.SONGS.PERFTERMS",
@@ -1302,7 +1646,11 @@
   "help": "Sing a line all together, then in two groups, and name each.",
   "feedback": "Unison means singing the same notes together at the same time.",
   "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
-  "status": "draft"
+  "status": "draft",
+  "review": {
+   "mark": "plausible, to confirm by a teacher",
+   "note": "Own judgement: believable for a Kenyan child of this age, but we have no source or homework count. A teacher who knows the class should say whether children really hold it."
+  }
  },
  "CREA.G4.PERFOR.SONGS.PERFTERMS.M_CA4_SG_PITCH_SPEED": {
   "skill": "CREA.G4.PERFOR.SONGS.PERFTERMS",
@@ -1317,7 +1665,11 @@
   "help": "Sing a high and a low note.",
   "feedback": "Pitch is how high or low a sound is.",
   "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
-  "status": "draft"
+  "status": "draft",
+  "review": {
+   "mark": "plausible, to confirm by a teacher",
+   "note": "Own judgement: believable for a Kenyan child of this age, but we have no source or homework count. A teacher who knows the class should say whether children really hold it."
+  }
  },
  "CREA.G4.PERFOR.SONGS.EAC.M_CA4_SG_EAC_SIT": {
   "skill": "CREA.G4.PERFOR.SONGS.EAC",
@@ -1332,7 +1684,11 @@
   "help": "Say: an anthem is a song of respect.",
   "feedback": "Stand straight and still and sing with respect.",
   "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
-  "status": "draft"
+  "status": "draft",
+  "review": {
+   "mark": "plausible, to confirm by a teacher",
+   "note": "Own judgement: believable for a Kenyan child of this age, but we have no source or homework count. A teacher who knows the class should say whether children really hold it."
+  }
  },
  "CREA.G4.PERFOR.SONGS.EAC.M_CA4_SG_EAC_PARTS": {
   "skill": "CREA.G4.PERFOR.SONGS.EAC",
@@ -1347,7 +1703,11 @@
   "help": "Sing it together and sing a round to compare.",
   "feedback": "The East African Community anthem is sung in unison.",
   "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
-  "status": "draft"
+  "status": "draft",
+  "review": {
+   "mark": "doubtful",
+   "why": "A convention of the lesson rather than a belief children hold."
+  }
  },
  "CREA.G4.PERFOR.SONGS.EAC.M_CA4_SG_EAC_MESSAGE": {
   "skill": "CREA.G4.PERFOR.SONGS.EAC",
@@ -1362,7 +1722,11 @@
   "help": "Name the countries of East Africa on a map and say they sing it together.",
   "feedback": "It is about East Africa, asking God to bless it and give peace and unity.",
   "source": "To confirm by a teacher: communities and instrument names as used in the KICD teacher guide and local practice.",
-  "status": "draft"
+  "status": "draft",
+  "review": {
+   "mark": "doubtful",
+   "why": "A slip of recall (a fact the lesson states), more a trap option than a held belief."
+  }
  },
  "CREA.G4.PERFOR.SONGS.FOLKTYPES.M_CA4_SG_FOLK_FUNERAL_WORK": {
   "skill": "CREA.G4.PERFOR.SONGS.FOLKTYPES",
@@ -1377,7 +1741,11 @@
   "help": "Ask: when is it sung, and what is happening?",
   "feedback": "Songs sung while farming, grinding or harvesting are work songs.",
   "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
-  "status": "draft"
+  "status": "draft",
+  "review": {
+   "mark": "doubtful",
+   "why": "A slip of recall (a fact the lesson states), more a trap option than a held belief."
+  }
  },
  "CREA.G4.PERFOR.SONGS.FOLKTYPES.M_CA4_SG_FOLK_NAMING": {
   "skill": "CREA.G4.PERFOR.SONGS.FOLKTYPES",
@@ -1392,7 +1760,11 @@
   "help": "Ask: who is being celebrated?",
   "feedback": "A naming song welcomes a new baby.",
   "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
-  "status": "draft"
+  "status": "draft",
+  "review": {
+   "mark": "doubtful",
+   "why": "A slip of recall (a fact the lesson states), more a trap option than a held belief."
+  }
  },
  "CREA.G4.PERFOR.SONGS.FOLKTYPES.M_CA4_SG_FOLK_ALL_SAME": {
   "skill": "CREA.G4.PERFOR.SONGS.FOLKTYPES",
@@ -1407,7 +1779,11 @@
   "help": "Listen to songs from two communities.",
   "feedback": "Each community has its own folk songs, in its own language.",
   "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
-  "status": "draft"
+  "status": "draft",
+  "review": {
+   "mark": "plausible, to confirm by a teacher",
+   "note": "Own judgement: believable for a Kenyan child of this age, but we have no source or homework count. A teacher who knows the class should say whether children really hold it."
+  }
  },
  "CREA.G4.PERFOR.PHOTOGRAPHY.DEVICES.M_CA4_PH_TV_CAMERA": {
   "skill": "CREA.G4.PERFOR.PHOTOGRAPHY.DEVICES",
@@ -1422,7 +1798,11 @@
   "help": "Sort devices by whether they have a lens.",
   "feedback": "A device that takes photographs has a lens. A television shows pictures but does not take them.",
   "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
-  "status": "draft"
+  "status": "draft",
+  "review": {
+   "mark": "doubtful",
+   "why": "A slip of recall (a fact the lesson states), more a trap option than a held belief."
+  }
  },
  "CREA.G4.PERFOR.PHOTOGRAPHY.DEVICES.M_CA4_PH_NO_ASK": {
   "skill": "CREA.G4.PERFOR.PHOTOGRAPHY.DEVICES",
@@ -1437,7 +1817,11 @@
   "help": "Ask: how would you feel if someone photographed you without asking?",
   "feedback": "Ask permission before photographing a person.",
   "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
-  "status": "draft"
+  "status": "draft",
+  "review": {
+   "mark": "plausible, to confirm by a teacher",
+   "note": "Own judgement: believable for a Kenyan child of this age, but we have no source or homework count. A teacher who knows the class should say whether children really hold it."
+  }
  },
  "CREA.G4.PERFOR.PHOTOGRAPHY.DEVICES.M_CA4_PH_CARELESS": {
   "skill": "CREA.G4.PERFOR.PHOTOGRAPHY.DEVICES",
@@ -1452,7 +1836,11 @@
   "help": "Show a smudged lens photo and a clean one.",
   "feedback": "Hold a device with both hands and keep the lens clean and dry.",
   "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
-  "status": "draft"
+  "status": "draft",
+  "review": {
+   "mark": "plausible, to confirm by a teacher",
+   "note": "Own judgement: believable for a Kenyan child of this age, but we have no source or homework count. A teacher who knows the class should say whether children really hold it."
+  }
  },
  "CREA.G4.PERFOR.PHOTOGRAPHY.ELEMENTS.M_CA4_PH_SUN_BEHIND_SUBJECT": {
   "skill": "CREA.G4.PERFOR.PHOTOGRAPHY.ELEMENTS",
@@ -1467,7 +1855,11 @@
   "help": "Take two photos, one each way, and compare the faces.",
   "feedback": "Keep the sun behind the photographer so the light falls on the subject.",
   "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
-  "status": "draft"
+  "status": "draft",
+  "review": {
+   "mark": "plausible, to confirm by a teacher",
+   "note": "Own judgement: believable for a Kenyan child of this age, but we have no source or homework count. A teacher who knows the class should say whether children really hold it."
+  }
  },
  "CREA.G4.PERFOR.PHOTOGRAPHY.ELEMENTS.M_CA4_PH_CENTRE_SMALL": {
   "skill": "CREA.G4.PERFOR.PHOTOGRAPHY.ELEMENTS",
@@ -1482,7 +1874,11 @@
   "help": "Take a photo close up and from far and compare.",
   "feedback": "The centre of interest is the main thing and should be clear, not tiny.",
   "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
-  "status": "draft"
+  "status": "draft",
+  "review": {
+   "mark": "plausible, to confirm by a teacher",
+   "note": "Own judgement: believable for a Kenyan child of this age, but we have no source or homework count. A teacher who knows the class should say whether children really hold it."
+  }
  },
  "CREA.G4.PERFOR.PHOTOGRAPHY.ELEMENTS.M_CA4_PH_CENTRE_MEANING": {
   "skill": "CREA.G4.PERFOR.PHOTOGRAPHY.ELEMENTS",
@@ -1497,7 +1893,11 @@
   "help": "Ask: what do you want people to look at?",
   "feedback": "The centre of interest is the main thing the photograph is about.",
   "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
-  "status": "draft"
+  "status": "draft",
+  "review": {
+   "mark": "plausible, to confirm by a teacher",
+   "note": "Own judgement: believable for a Kenyan child of this age, but we have no source or homework count. A teacher who knows the class should say whether children really hold it."
+  }
  },
  "CREA.G4.PERFOR.DESCANT_RECORDER.RECPARTS.M_CA4_DR_PARTS_BLOW": {
   "skill": "CREA.G4.PERFOR.DESCANT_RECORDER.RECPARTS",
@@ -1512,7 +1912,11 @@
   "help": "Hold a recorder and point to the mouthpiece.",
   "feedback": "The player blows into the mouthpiece on the head joint.",
   "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
-  "status": "draft"
+  "status": "draft",
+  "review": {
+   "mark": "doubtful",
+   "why": "A slip of recall (a fact the lesson states), more a trap option than a held belief."
+  }
  },
  "CREA.G4.PERFOR.DESCANT_RECORDER.RECPARTS.M_CA4_DR_PARTS_HOLES": {
   "skill": "CREA.G4.PERFOR.DESCANT_RECORDER.RECPARTS",
@@ -1527,7 +1931,11 @@
   "help": "Name the joints while placing fingers.",
   "feedback": "Most finger holes are on the middle joint.",
   "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
-  "status": "draft"
+  "status": "draft",
+  "review": {
+   "mark": "doubtful",
+   "why": "A slip of recall (a fact the lesson states), more a trap option than a held belief."
+  }
  },
  "CREA.G4.PERFOR.DESCANT_RECORDER.RECPARTS.M_CA4_DR_PARTS_NAMES": {
   "skill": "CREA.G4.PERFOR.DESCANT_RECORDER.RECPARTS",
@@ -1542,7 +1950,11 @@
   "help": "Name them from top to bottom: head, middle, foot.",
   "feedback": "From top to bottom: head joint, middle joint, foot joint.",
   "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
-  "status": "draft"
+  "status": "draft",
+  "review": {
+   "mark": "plausible, to confirm by a teacher",
+   "note": "Own judgement: believable for a Kenyan child of this age, but we have no source or homework count. A teacher who knows the class should say whether children really hold it."
+  }
  },
  "CREA.G4.PERFOR.DESCANT_RECORDER.CARE.M_CA4_DR_HOT_WATER": {
   "skill": "CREA.G4.PERFOR.DESCANT_RECORDER.CARE",
@@ -1557,7 +1969,11 @@
   "help": "Say: hot water can bend the plastic.",
   "feedback": "Use clean warm (not hot) water and dry it.",
   "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
-  "status": "draft"
+  "status": "draft",
+  "review": {
+   "mark": "doubtful",
+   "why": "Children would not say this; a trap option."
+  }
  },
  "CREA.G4.PERFOR.DESCANT_RECORDER.CARE.M_CA4_DR_SHARE": {
   "skill": "CREA.G4.PERFOR.DESCANT_RECORDER.CARE",
@@ -1572,7 +1988,11 @@
   "help": "Link to sharing a cup.",
   "feedback": "Clean the mouthpiece before someone else uses it.",
   "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
-  "status": "draft"
+  "status": "draft",
+  "review": {
+   "mark": "plausible, to confirm by a teacher",
+   "note": "Own judgement: believable for a Kenyan child of this age, but we have no source or homework count. A teacher who knows the class should say whether children really hold it."
+  }
  },
  "CREA.G4.PERFOR.DESCANT_RECORDER.CARE.M_CA4_DR_STORE": {
   "skill": "CREA.G4.PERFOR.DESCANT_RECORDER.CARE",
@@ -1587,7 +2007,11 @@
   "help": "Show a bent recorder from heat.",
   "feedback": "Keep it dry, in a bag or case, away from heat.",
   "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
-  "status": "draft"
+  "status": "draft",
+  "review": {
+   "mark": "plausible, to confirm by a teacher",
+   "note": "Own judgement: believable for a Kenyan child of this age, but we have no source or homework count. A teacher who knows the class should say whether children really hold it."
+  }
  },
  "CREA.G4.PERFOR.DESCANT_RECORDER.NOTES.M_CA4_DR_MORE_HIGHER": {
   "skill": "CREA.G4.PERFOR.DESCANT_RECORDER.NOTES",
@@ -1602,7 +2026,11 @@
   "help": "Play B A G and watch the fingers go down.",
   "feedback": "More holes covered gives a lower note, so G is the lowest of the three.",
   "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
-  "status": "draft"
+  "status": "draft",
+  "review": {
+   "mark": "plausible, to confirm by a teacher",
+   "note": "Own judgement: believable for a Kenyan child of this age, but we have no source or homework count. A teacher who knows the class should say whether children really hold it."
+  }
  },
  "CREA.G4.PERFOR.DESCANT_RECORDER.NOTES.M_CA4_DR_FINGERS_MIX": {
   "skill": "CREA.G4.PERFOR.DESCANT_RECORDER.NOTES",
@@ -1617,7 +2045,11 @@
   "help": "Make a chart: B one, A two, G three.",
   "feedback": "B uses the thumb and one finger, A the thumb and two fingers, G the thumb and three fingers.",
   "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
-  "status": "draft"
+  "status": "draft",
+  "review": {
+   "mark": "plausible, to confirm by a teacher",
+   "note": "Own judgement: believable for a Kenyan child of this age, but we have no source or homework count. A teacher who knows the class should say whether children really hold it."
+  }
  },
  "CREA.G4.PERFOR.DESCANT_RECORDER.NOTES.M_CA4_DR_ORDER": {
   "skill": "CREA.G4.PERFOR.DESCANT_RECORDER.NOTES",
@@ -1632,7 +2064,11 @@
   "help": "Play them and listen.",
   "feedback": "From low to high: G, A, B.",
   "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
-  "status": "draft"
+  "status": "draft",
+  "review": {
+   "mark": "plausible, to confirm by a teacher",
+   "note": "Own judgement: believable for a Kenyan child of this age, but we have no source or homework count. A teacher who knows the class should say whether children really hold it."
+  }
  },
  "CREA.G4.PERFOR.DESCANT_RECORDER.TECHNIQUE.M_CA4_DR_BLOW_HARD": {
   "skill": "CREA.G4.PERFOR.DESCANT_RECORDER.TECHNIQUE",
@@ -1647,7 +2083,11 @@
   "help": "Blow gently and hard and compare.",
   "feedback": "Blow gently and steadily. Hard blowing makes a squeak.",
   "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
-  "status": "draft"
+  "status": "draft",
+  "review": {
+   "mark": "plausible, to confirm by a teacher",
+   "note": "Own judgement: believable for a Kenyan child of this age, but we have no source or homework count. A teacher who knows the class should say whether children really hold it."
+  }
  },
  "CREA.G4.PERFOR.DESCANT_RECORDER.TECHNIQUE.M_CA4_DR_TIP_FINGERS": {
   "skill": "CREA.G4.PERFOR.DESCANT_RECORDER.TECHNIQUE",
@@ -1662,7 +2102,11 @@
   "help": "Press a pad and a tip on a hole and see the leak.",
   "feedback": "Cover the hole fully with the soft pad of the finger.",
   "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
-  "status": "draft"
+  "status": "draft",
+  "review": {
+   "mark": "plausible, to confirm by a teacher",
+   "note": "Own judgement: believable for a Kenyan child of this age, but we have no source or homework count. A teacher who knows the class should say whether children really hold it."
+  }
  },
  "CREA.G4.PERFOR.DESCANT_RECORDER.TECHNIQUE.M_CA4_DR_SLOUCH": {
   "skill": "CREA.G4.PERFOR.DESCANT_RECORDER.TECHNIQUE",
@@ -1677,7 +2121,11 @@
   "help": "Try breathing slouched and tall.",
   "feedback": "Sit or stand tall so the breath flows.",
   "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
-  "status": "draft"
+  "status": "draft",
+  "review": {
+   "mark": "doubtful",
+   "why": "Children would not say this; a trap option."
+  }
  },
  "CREA.G4.PERFOR.SWIMMING.SAFETY.M_CA4_SW_DIVE_SHALLOW": {
   "skill": "CREA.G4.PERFOR.SWIMMING.SAFETY",
@@ -1692,7 +2140,11 @@
   "help": "Say: the bottom is close.",
   "feedback": "Enter feet first. Never dive into shallow water.",
   "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
-  "status": "draft"
+  "status": "draft",
+  "review": {
+   "mark": "plausible, to confirm by a teacher",
+   "note": "Own judgement: believable for a Kenyan child of this age, but we have no source or homework count. A teacher who knows the class should say whether children really hold it."
+  }
  },
  "CREA.G4.PERFOR.SWIMMING.SAFETY.M_CA4_SW_RUN_SIDE": {
   "skill": "CREA.G4.PERFOR.SWIMMING.SAFETY",
@@ -1707,7 +2159,11 @@
   "help": "Say: the floor is wet and slippery.",
   "feedback": "Walk on the pool side. It is wet and slippery.",
   "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
-  "status": "draft"
+  "status": "draft",
+  "review": {
+   "mark": "plausible, to confirm by a teacher",
+   "note": "Own judgement: believable for a Kenyan child of this age, but we have no source or homework count. A teacher who knows the class should say whether children really hold it."
+  }
  },
  "CREA.G4.PERFOR.SWIMMING.SAFETY.M_CA4_SW_ALONE": {
   "skill": "CREA.G4.PERFOR.SWIMMING.SAFETY",
@@ -1722,7 +2178,11 @@
   "help": "Say: accidents are sudden.",
   "feedback": "Never swim alone. Always have a teacher or lifeguard watching.",
   "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
-  "status": "draft"
+  "status": "draft",
+  "review": {
+   "mark": "plausible, to confirm by a teacher",
+   "note": "Own judgement: believable for a Kenyan child of this age, but we have no source or homework count. A teacher who knows the class should say whether children really hold it."
+  }
  },
  "CREA.G4.PERFOR.SWIMMING.SAFETY.M_CA4_SW_PUSH": {
   "skill": "CREA.G4.PERFOR.SWIMMING.SAFETY",
@@ -1737,7 +2197,11 @@
   "help": "Say: they may hit the edge or not swim.",
   "feedback": "Never push others at the pool.",
   "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
-  "status": "draft"
+  "status": "draft",
+  "review": {
+   "mark": "doubtful",
+   "why": "Children would not say this; a trap option."
+  }
  },
  "CREA.G4.PERFOR.SWIMMING.FLOAT.M_CA4_SW_MUSHROOM_STRETCH": {
   "skill": "CREA.G4.PERFOR.SWIMMING.FLOAT",
@@ -1752,7 +2216,11 @@
   "help": "Curl up like a mushroom.",
   "feedback": "In a mushroom float the knees are hugged to the chest.",
   "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
-  "status": "draft"
+  "status": "draft",
+  "review": {
+   "mark": "doubtful",
+   "why": "A slip of recall (a fact the lesson states), more a trap option than a held belief."
+  }
  },
  "CREA.G4.PERFOR.SWIMMING.FLOAT.M_CA4_SW_SUPINE_FACE": {
   "skill": "CREA.G4.PERFOR.SWIMMING.FLOAT",
@@ -1767,7 +2235,11 @@
   "help": "Lie on the back and look up.",
   "feedback": "In a back float the body is face up and ears are in the water.",
   "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
-  "status": "draft"
+  "status": "draft",
+  "review": {
+   "mark": "doubtful",
+   "why": "A slip of recall (a fact the lesson states), more a trap option than a held belief."
+  }
  },
  "CREA.G4.PERFOR.SWIMMING.FLOAT.M_CA4_SW_GLIDE_ARMS": {
   "skill": "CREA.G4.PERFOR.SWIMMING.FLOAT",
@@ -1782,7 +2254,11 @@
   "help": "Glide with arms ahead and by the sides.",
   "feedback": "In a glide the arms are stretched ahead, body straight and legs together.",
   "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
-  "status": "draft"
+  "status": "draft",
+  "review": {
+   "mark": "doubtful",
+   "why": "A slip of recall (a fact the lesson states), more a trap option than a held belief."
+  }
  },
  "CREA.G4.PERFOR.SWIMMING.FLOAT.M_CA4_SW_TENSE": {
   "skill": "CREA.G4.PERFOR.SWIMMING.FLOAT",
@@ -1797,7 +2273,11 @@
   "help": "Relax and float.",
   "feedback": "Staying relaxed helps you float.",
   "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
-  "status": "draft"
+  "status": "draft",
+  "review": {
+   "mark": "plausible, to confirm by a teacher",
+   "note": "Own judgement: believable for a Kenyan child of this age, but we have no source or homework count. A teacher who knows the class should say whether children really hold it."
+  }
  },
  "CREA.G4.PERFOR.SWIMMING.ANIMAL.M_CA4_SW_FROG_CRAWL": {
   "skill": "CREA.G4.PERFOR.SWIMMING.ANIMAL",
@@ -1812,7 +2292,11 @@
   "help": "Do both and say the animal.",
   "feedback": "The crab walk is on hands and feet with the tummy up. The frog jump is a squat and leap.",
   "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
-  "status": "draft"
+  "status": "draft",
+  "review": {
+   "mark": "doubtful",
+   "why": "A slip of recall (a fact the lesson states), more a trap option than a held belief."
+  }
  },
  "CREA.G4.PERFOR.SWIMMING.ANIMAL.M_CA4_SW_GAME_BUILDS": {
   "skill": "CREA.G4.PERFOR.SWIMMING.ANIMAL",
@@ -1827,7 +2311,11 @@
   "help": "Feel which muscles work.",
   "feedback": "The frog jump builds leg strength.",
   "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
-  "status": "draft"
+  "status": "draft",
+  "review": {
+   "mark": "doubtful",
+   "why": "A slip of recall (a fact the lesson states), more a trap option than a held belief."
+  }
  },
  "CREA.G4.PERFOR.SWIMMING.ANIMAL.M_CA4_SW_GAME_NEW": {
   "skill": "CREA.G4.PERFOR.SWIMMING.ANIMAL",
@@ -1842,7 +2330,11 @@
   "help": "Ask grandparents which games they played.",
   "feedback": "Animal games are indigenous and were played for fun and fitness.",
   "source": "To confirm by a teacher: communities and instrument names as used in the KICD teacher guide and local practice.",
-  "status": "draft"
+  "status": "draft",
+  "review": {
+   "mark": "doubtful",
+   "why": "A slip of recall (a fact the lesson states), more a trap option than a held belief."
+  }
  },
  "CREA.G4.APPREC.ANALYSIS_OF_CREATIVE_ART.CONCEPT.M_CA4_AP_COPY": {
   "skill": "CREA.G4.APPREC.ANALYSIS_OF_CREATIVE_ART.CONCEPT",
@@ -1857,7 +2349,11 @@
   "help": "Look at a picture and say two good things.",
   "feedback": "Appreciation is looking carefully and thinking about what is good in a work.",
   "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
-  "status": "draft"
+  "status": "draft",
+  "review": {
+   "mark": "doubtful",
+   "why": "Children would not say this; a trap option."
+  }
  },
  "CREA.G4.APPREC.ANALYSIS_OF_CREATIVE_ART.CONCEPT.M_CA4_AP_ONLY_FAULT": {
   "skill": "CREA.G4.APPREC.ANALYSIS_OF_CREATIVE_ART.CONCEPT",
@@ -1872,7 +2368,11 @@
   "help": "Practise two good things and one idea.",
   "feedback": "Good feedback says what is good and gives one idea in a kind way.",
   "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
-  "status": "draft"
+  "status": "draft",
+  "review": {
+   "mark": "plausible, to confirm by a teacher",
+   "note": "Own judgement: believable for a Kenyan child of this age, but we have no source or homework count. A teacher who knows the class should say whether children really hold it."
+  }
  },
  "CREA.G4.APPREC.ANALYSIS_OF_CREATIVE_ART.CONCEPT.M_CA4_AP_TOUCH": {
   "skill": "CREA.G4.APPREC.ANALYSIS_OF_CREATIVE_ART.CONCEPT",
@@ -1887,7 +2387,11 @@
   "help": "Ask: what if everyone touches?",
   "feedback": "Do not touch the works. Look quietly and respect the maker.",
   "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
-  "status": "draft"
+  "status": "draft",
+  "review": {
+   "mark": "plausible, to confirm by a teacher",
+   "note": "Own judgement: believable for a Kenyan child of this age, but we have no source or homework count. A teacher who knows the class should say whether children really hold it."
+  }
  },
  "CREA.G4.APPREC.ANALYSIS_OF_CREATIVE_ART.PORTFOLIO.M_CA4_AP_PORT_ANY": {
   "skill": "CREA.G4.APPREC.ANALYSIS_OF_CREATIVE_ART.PORTFOLIO",
@@ -1902,7 +2406,11 @@
   "help": "Choose best works together.",
   "feedback": "A portfolio shows a learner's best works and how they grow.",
   "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
-  "status": "draft"
+  "status": "draft",
+  "review": {
+   "mark": "doubtful",
+   "why": "Children would not say this; a trap option."
+  }
  },
  "CREA.G4.APPREC.ANALYSIS_OF_CREATIVE_ART.PORTFOLIO.M_CA4_AP_PORT_BUY": {
   "skill": "CREA.G4.APPREC.ANALYSIS_OF_CREATIVE_ART.PORTFOLIO",
@@ -1917,7 +2425,11 @@
   "help": "Make one from cardboard.",
   "feedback": "Use locally available things such as cardboard.",
   "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
-  "status": "draft"
+  "status": "draft",
+  "review": {
+   "mark": "doubtful",
+   "why": "Children would not say this; a trap option."
+  }
  },
  "CREA.G4.APPREC.ANALYSIS_OF_CREATIVE_ART.PORTFOLIO.M_CA4_AP_PORT_LABEL": {
   "skill": "CREA.G4.APPREC.ANALYSIS_OF_CREATIVE_ART.PORTFOLIO",
@@ -1932,7 +2444,11 @@
   "help": "Mix two works with no labels.",
   "feedback": "Label each work with name and date.",
   "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
-  "status": "draft"
+  "status": "draft",
+  "review": {
+   "mark": "doubtful",
+   "why": "Children would not say this; a trap option."
+  }
  },
  "CREA.G4.APPREC.ANALYSIS_OF_CREATIVE_ART.ANTHEM.M_CA4_AP_KNA_VERSES": {
   "skill": "CREA.G4.APPREC.ANALYSIS_OF_CREATIVE_ART.ANTHEM",
@@ -1947,7 +2463,11 @@
   "help": "Count the verses on a printed copy.",
   "feedback": "The Kenya National Anthem has three verses.",
   "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
-  "status": "draft"
+  "status": "draft",
+  "review": {
+   "mark": "doubtful",
+   "why": "A slip of recall (a fact the lesson states), more a trap option than a held belief."
+  }
  },
  "CREA.G4.APPREC.ANALYSIS_OF_CREATIVE_ART.ANTHEM.M_CA4_AP_KNA_SING": {
   "skill": "CREA.G4.APPREC.ANALYSIS_OF_CREATIVE_ART.ANTHEM",
@@ -1962,7 +2482,11 @@
   "help": "Say: respect for the country.",
   "feedback": "Stand straight and still and sing with respect.",
   "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
-  "status": "draft"
+  "status": "draft",
+  "review": {
+   "mark": "doubtful",
+   "why": "A slip of recall (a fact the lesson states), more a trap option than a held belief."
+  }
  },
  "CREA.G4.APPREC.ANALYSIS_OF_CREATIVE_ART.ANTHEM.M_CA4_AP_KNA_WHAT": {
   "skill": "CREA.G4.APPREC.ANALYSIS_OF_CREATIVE_ART.ANTHEM",
@@ -1977,7 +2501,11 @@
   "help": "Read the words together.",
   "feedback": "It is a prayer asking God to bless Kenya and keep peace and unity.",
   "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
-  "status": "draft"
+  "status": "draft",
+  "review": {
+   "mark": "doubtful",
+   "why": "A slip of recall (a fact the lesson states), more a trap option than a held belief."
+  }
  },
  "CREA.G4.APPREC.ANALYSIS_OF_CREATIVE_ART.FOLKPERF.M_CA4_AP_SOLOIST_ALL": {
   "skill": "CREA.G4.APPREC.ANALYSIS_OF_CREATIVE_ART.FOLKPERF",
@@ -1992,7 +2520,11 @@
   "help": "Sing a call and response and name the roles.",
   "feedback": "The soloist is the one singer who leads. The others answer.",
   "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
-  "status": "draft"
+  "status": "draft",
+  "review": {
+   "mark": "doubtful",
+   "why": "A slip of recall (a fact the lesson states), more a trap option than a held belief."
+  }
  },
  "CREA.G4.APPREC.ANALYSIS_OF_CREATIVE_ART.FOLKPERF.M_CA4_AP_SINGERS_PLAY": {
   "skill": "CREA.G4.APPREC.ANALYSIS_OF_CREATIVE_ART.FOLKPERF",
@@ -2007,7 +2539,11 @@
   "help": "Name the roles on a card.",
   "feedback": "Instrumentalists play the instruments. Singers sing.",
   "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
-  "status": "draft"
+  "status": "draft",
+  "review": {
+   "mark": "doubtful",
+   "why": "A slip of recall (a fact the lesson states), more a trap option than a held belief."
+  }
  },
  "CREA.G4.APPREC.ANALYSIS_OF_CREATIVE_ART.FOLKPERF.M_CA4_AP_MESSAGE": {
   "skill": "CREA.G4.APPREC.ANALYSIS_OF_CREATIVE_ART.FOLKPERF",
@@ -2022,6 +2558,10 @@
   "help": "Ask: what are the words about?",
   "feedback": "The message is what the words say.",
   "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
-  "status": "draft"
+  "status": "draft",
+  "review": {
+   "mark": "plausible, to confirm by a teacher",
+   "note": "Own judgement: believable for a Kenyan child of this age, but we have no source or homework count. A teacher who knows the class should say whether children really hold it."
+  }
  }
 }
