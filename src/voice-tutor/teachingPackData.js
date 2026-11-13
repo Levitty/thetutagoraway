@@ -2,6 +2,1553 @@
 // misconception library in curriculum/mathematics/g5.json. Edit the JSON, then: node scripts/build-teaching-pack.mjs
 // Research round 3 (13 Nov 2026). DRAFT: not checked by a Kenyan maths teacher, not loaded by the live tutor.
 export const TEACHING_PACK_G5 = {
+ "MATH.G5.NUMBER.WHOLE_NUMBERS.PLACE_VALUE_HTH": {
+  "skill": "MATH.G5.NUMBER.WHOLE_NUMBERS.PLACE_VALUE_HTH",
+  "key_step": "The child names the place of a digit by counting the places from the ones, leftwards, including places that hold a zero.",
+  "floor": {
+   "prerequisite": "Names places up to ten thousands (Grade 4).",
+   "question": "In 4,825, which digit is in the hundreds place?",
+   "answer": "8"
+  },
+  "representations": [
+   "bundles of sticks or money notes (1, 10, 100, 1,000 shilling values)",
+   "place value chart with labelled columns",
+   "the number written with a gap between thousands and hundreds"
+  ],
+  "steps": [
+   "Build a four-digit number on the chart and read each column name aloud.",
+   "Add the ten thousands and hundred thousands columns; the child says the pattern (each place ten times the one on its right).",
+   "Name places in six-digit numbers, starting from the ones.",
+   "Include zeros: the zero holds its place.",
+   "Reverse: given a place, the child says which digit is in it."
+  ],
+  "contexts": [
+   "the price of a plot of land in shillings",
+   "the number of people at a county show",
+   "a school's total bus distance in a year"
+  ],
+  "board": [
+   {
+    "beat": "draw",
+    "do": "Draw a six-column place value chart; label the columns from the right, one at a time, saying each name.",
+    "say": "Ones, tens, hundreds. Watch the names grow."
+   },
+   {
+    "beat": "write",
+    "do": "Write 374,512 into the chart, one digit per column, from the left."
+   },
+   {
+    "beat": "point",
+    "do": "Point at the 7 and hold.",
+    "say": "Which column is this digit in?"
+   },
+   {
+    "beat": "pause",
+    "do": "Wait for the child to name the column."
+   },
+   {
+    "beat": "child_draws",
+    "do": "Child circles the digit in the hundred thousands place."
+   }
+  ],
+  "misconceptions": [
+   {
+    "code": "MATH.G5.NUMBER.WHOLE_NUMBERS.PLACE_VALUE_HTH.M_PV_GIVES_TOTAL_VALUE",
+    "listen_for": [
+     "seventy thousand",
+     "it is worth 70,000"
+    ],
+    "ask": "What is the name of the column the 7 sits in? And what is the 7 worth?",
+    "repair": "Ask for both in one go: the column name is the place value, the worth is the total value. The child says both aloud for two more digits.",
+    "error": "Gives the total value when asked for the place value.",
+    "example": {
+     "question": "What is the place value of 7 in 374,512?",
+     "wrong_answer": "70,000",
+     "correct_answer": "Ten thousands"
+    }
+   },
+   {
+    "code": "MATH.G5.NUMBER.WHOLE_NUMBERS.PLACE_VALUE_HTH.M_PV_SKIPS_ZERO",
+    "listen_for": [
+     "the zero doesn't count",
+     "I didn't count the nought"
+    ],
+    "ask": "Put 305,214 in the chart. Which column holds the zero?",
+    "repair": "Every digit gets a column, zeros too. The child counts columns from the ones with a finger, zero included.",
+    "error": "Ignores a zero digit when counting places, shifting every digit to its left.",
+    "example": {
+     "question": "What is the place value of 3 in 305,214?",
+     "wrong_answer": "Ten thousands",
+     "correct_answer": "Hundred thousands"
+    }
+   }
+  ],
+  "checks": [
+   {
+    "question": "What is the place value of 2 in 203,415?",
+    "answer": "Hundred thousands",
+    "shows": "counts all six places, past the zero"
+   },
+   {
+    "question": "In 608,391, which digit is in the ten thousands place?",
+    "answer": "0",
+    "shows": "names a zero as holding a place"
+   }
+  ],
+  "name": "Place value of digits up to hundreds of thousands",
+  "sub_strand": "MATH.G5.NUMBER.WHOLE_NUMBERS",
+  "sub_strand_name": "Whole numbers",
+  "status": "draft: written 13 Nov 2026 from research round 3; shorter than fractions; not yet checked by a Kenyan maths teacher; not loaded by the live tutor"
+ },
+ "MATH.G5.NUMBER.WHOLE_NUMBERS.TOTAL_VALUE_HTH": {
+  "skill": "MATH.G5.NUMBER.WHOLE_NUMBERS.TOTAL_VALUE_HTH",
+  "key_step": "The child multiplies the digit by the value of its place (8 in the ten thousands is 8 x 10,000 = 80,000) and rebuilds a number from total values with zeros in empty places.",
+  "floor": {
+   "prerequisite": "Names the place of a digit up to hundred thousands.",
+   "question": "In 487,306, what is the place of the 8?",
+   "answer": "Ten thousands"
+  },
+  "representations": [
+   "money notes: eight ten-thousand bundles",
+   "place value chart",
+   "expanded form written as a sum"
+  ],
+  "steps": [
+   "Find the place first, then say what the digit is worth.",
+   "Write the worth with the right number of zeros: count places to the right of the digit.",
+   "Write a whole number in expanded form.",
+   "Rebuild a number from total values, using the chart so empty places get a zero."
+  ],
+  "contexts": [
+   "shillings in bundles of notes",
+   "the number of bags of maize stored in a county depot",
+   "votes counted in a ward"
+  ],
+  "board": [
+   {
+    "beat": "write",
+    "do": "Write 487,306 in the chart."
+   },
+   {
+    "beat": "point",
+    "do": "Point at the 8, then slowly sweep along the places to its right, counting them.",
+    "say": "Count the places after the 8."
+   },
+   {
+    "beat": "count",
+    "do": "Child counts the four places to the right.",
+    "say": "Count with your finger."
+   },
+   {
+    "beat": "pause",
+    "do": "Wait for the child to say the worth of the 8."
+   },
+   {
+    "beat": "write",
+    "do": "Write 400,000 + __ + 7,000 + 300 + 6 with a gap for the child."
+   }
+  ],
+  "misconceptions": [
+   {
+    "code": "MATH.G5.NUMBER.WHOLE_NUMBERS.TOTAL_VALUE_HTH.M_TV_FACE_VALUE",
+    "listen_for": [
+     "eight",
+     "it's just 8"
+    ],
+    "ask": "If the 8 were eight shilling coins, would the number be 487,306 shillings?",
+    "repair": "Use money: the 8 is in the ten thousands, so it is eight bundles of ten thousand. The child says the worth.",
+    "error": "Gives the digit itself as its total value.",
+    "example": {
+     "question": "What is the total value of 8 in 487,306?",
+     "wrong_answer": "8",
+     "correct_answer": "80,000"
+    }
+   },
+   {
+    "code": "MATH.G5.NUMBER.WHOLE_NUMBERS.TOTAL_VALUE_HTH.M_TV_COMPOSE_DROPS_ZEROS",
+    "listen_for": [
+     "four five three two",
+     "4,532"
+    ],
+    "ask": "Put 400,000 + 5,000 + 30 + 2 in the chart. Which columns are empty?",
+    "repair": "Fill the chart column by column; every empty column gets a zero. The child reads the number aloud to check.",
+    "error": "When building a number from total values, writes the non-zero digits side by side and leaves out empty places.",
+    "example": {
+     "question": "Write the number: 400,000 + 5,000 + 30 + 2",
+     "wrong_answer": "4,532",
+     "correct_answer": "405,032"
+    }
+   }
+  ],
+  "checks": [
+   {
+    "question": "What is the total value of 6 in 162,450?",
+    "answer": "60,000",
+    "shows": "right number of zeros"
+   },
+   {
+    "question": "Write the number: 300,000 + 2,000 + 50 + 8.",
+    "answer": "302,058",
+    "shows": "zeros in empty places when rebuilding"
+   }
+  ],
+  "name": "Total value of digits and expanded form up to hundreds of thousands",
+  "sub_strand": "MATH.G5.NUMBER.WHOLE_NUMBERS",
+  "sub_strand_name": "Whole numbers",
+  "status": "draft: written 13 Nov 2026 from research round 3; shorter than fractions; not yet checked by a Kenyan maths teacher; not loaded by the live tutor"
+ },
+ "MATH.G5.NUMBER.WHOLE_NUMBERS.NUMBERS_TO_WORDS": {
+  "skill": "MATH.G5.NUMBER.WHOLE_NUMBERS.NUMBERS_TO_WORDS",
+  "key_step": "The child reads the thousands group as a number on its own, says 'thousand', then reads the last three digits, with zeros silent.",
+  "floor": {
+   "prerequisite": "Writes numbers up to 9,999 in words.",
+   "question": "Say 4,507 in words.",
+   "answer": "Four thousand, five hundred and seven"
+  },
+  "representations": [
+   "a number said aloud",
+   "the number split at the comma into two groups",
+   "number words written out"
+  ],
+  "steps": [
+   "Split the number at the comma into the thousands group and the rest.",
+   "Read the thousands group as a two-digit number, then say 'thousand'.",
+   "Read the last three digits; a zero is silent.",
+   "Write the words; check the spelling of forty and ninety."
+  ],
+  "contexts": [
+   "writing an amount on a school fees receipt",
+   "a cheque or M-Pesa amount read aloud",
+   "the number of learners in a county"
+  ],
+  "board": [
+   {
+    "beat": "write",
+    "do": "Write 40,507 large."
+   },
+   {
+    "beat": "draw",
+    "do": "Draw a line through the comma, splitting it into 40 and 507.",
+    "say": "Two groups. Read the first group."
+   },
+   {
+    "beat": "pause",
+    "do": "Wait for the child to read 40 and add 'thousand'."
+   },
+   {
+    "beat": "point",
+    "do": "Point at the zero in 507.",
+    "say": "Do we say anything for this zero?"
+   },
+   {
+    "beat": "child_draws",
+    "do": "Child writes the words under the number."
+   }
+  ],
+  "misconceptions": [
+   {
+    "code": "MATH.G5.NUMBER.WHOLE_NUMBERS.NUMBERS_TO_WORDS.M_WORDS_OMITS_THOUSAND_GROUP",
+    "listen_for": [
+     "four thousand five hundred",
+     "four thousand"
+    ],
+    "ask": "Read only the first group, 40. Then how many thousands?",
+    "repair": "Split at the comma and read the thousands group as a whole number. The child checks by comparing 4,507 and 40,507 on the chart.",
+    "error": "Reads a five-digit number with a zero wrongly, dropping or shrinking the thousands part.",
+    "example": {
+     "question": "Write 40,507 in words.",
+     "wrong_answer": "four thousand five hundred and seven",
+     "correct_answer": "forty thousand, five hundred and seven"
+    }
+   },
+   {
+    "code": "MATH.G5.NUMBER.WHOLE_NUMBERS.NUMBERS_TO_WORDS.M_WORDS_SPELLING_TY",
+    "listen_for": [
+     "f-o-u-r-t-y"
+    ],
+    "ask": "Spell forty for me. Is there a u?",
+    "repair": "Write four and forty one above the other; the u falls away. Check ninety keeps its e.",
+    "error": "Misspells common tens words, especially 'forty' and 'ninety'.",
+    "example": {
+     "question": "Write 45,090 in words.",
+     "wrong_answer": "fourty-five thousand and ninty",
+     "correct_answer": "forty-five thousand and ninety"
+    }
+   }
+  ],
+  "checks": [
+   {
+    "question": "Write 70,016 in words.",
+    "answer": "Seventy thousand and sixteen",
+    "shows": "zeros silent, thousands group read whole"
+   },
+   {
+    "question": "Write 45,090 in words.",
+    "answer": "Forty-five thousand and ninety",
+    "shows": "spelling of forty and ninety"
+   }
+  ],
+  "name": "Write numbers up to tens of thousands in words",
+  "sub_strand": "MATH.G5.NUMBER.WHOLE_NUMBERS",
+  "sub_strand_name": "Whole numbers",
+  "status": "draft: written 13 Nov 2026 from research round 3; shorter than fractions; not yet checked by a Kenyan maths teacher; not loaded by the live tutor"
+ },
+ "MATH.G5.NUMBER.WHOLE_NUMBERS.WORDS_TO_SYMBOLS": {
+  "skill": "MATH.G5.NUMBER.WHOLE_NUMBERS.WORDS_TO_SYMBOLS",
+  "key_step": "The child writes the thousands part, then fills exactly three places after the comma, putting zeros in places the words do not mention.",
+  "floor": {
+   "prerequisite": "Writes numbers up to 9,999 in symbols.",
+   "question": "Write 'two thousand and five' in figures.",
+   "answer": "2,005"
+  },
+  "representations": [
+   "number words read aloud",
+   "three empty boxes after the comma",
+   "the number in figures"
+  ],
+  "steps": [
+   "Write the thousands part, then a comma.",
+   "Draw three boxes for hundreds, tens and ones.",
+   "Fill the boxes the words mention; zeros in the rest.",
+   "Read the number back aloud to check it matches the words."
+  ],
+  "contexts": [
+   "a price heard on the radio",
+   "a school's number of books read out by the head teacher",
+   "a distance announced on a road sign"
+  ],
+  "board": [
+   {
+    "beat": "write",
+    "do": "Write 'twelve thousand and five' in words."
+   },
+   {
+    "beat": "draw",
+    "do": "Draw 12, a comma, then three empty boxes, slowly, labelling them H, T, O.",
+    "say": "After the comma there are always three places."
+   },
+   {
+    "beat": "child_draws",
+    "do": "Child fills the boxes."
+   },
+   {
+    "beat": "pause",
+    "do": "Wait for the child to read the number back aloud."
+   }
+  ],
+  "misconceptions": [
+   {
+    "code": "MATH.G5.NUMBER.WHOLE_NUMBERS.WORDS_TO_SYMBOLS.M_SYMBOLS_WRITE_AS_HEARD",
+    "listen_for": [
+     "12,000 then 5",
+     "one two zero zero zero five"
+    ],
+    "ask": "How many places come after the comma in a number?",
+    "repair": "Use the three boxes after the comma. The child reads 12,0005 aloud and hears it is not twelve thousand and five.",
+    "error": "Writes each spoken part as its own numeral and joins them together.",
+    "example": {
+     "question": "Write 'twelve thousand and five' in symbols.",
+     "wrong_answer": "12,0005",
+     "correct_answer": "12,005"
+    }
+   },
+   {
+    "code": "MATH.G5.NUMBER.WHOLE_NUMBERS.WORDS_TO_SYMBOLS.M_SYMBOLS_MISSING_PLACEHOLDER",
+    "listen_for": [
+     "30,46"
+    ],
+    "ask": "Read 30,46 aloud. Does it sound like thirty thousand, four hundred and six?",
+    "repair": "Three boxes again: the tens box is empty so it gets a zero.",
+    "error": "Leaves out zeros for places not mentioned in the words.",
+    "example": {
+     "question": "Write 'thirty thousand, four hundred and six' in symbols.",
+     "wrong_answer": "30,46",
+     "correct_answer": "30,406"
+    }
+   }
+  ],
+  "checks": [
+   {
+    "question": "Write 'sixty thousand and forty' in figures.",
+    "answer": "60,040",
+    "shows": "zeros in unmentioned places"
+   },
+   {
+    "question": "Write 'seventeen thousand, three hundred' in figures.",
+    "answer": "17,300",
+    "shows": "teen versus ty and trailing zeros"
+   }
+  ],
+  "name": "Write numbers given in words in symbols (up to tens of thousands)",
+  "sub_strand": "MATH.G5.NUMBER.WHOLE_NUMBERS",
+  "sub_strand_name": "Whole numbers",
+  "status": "draft: written 13 Nov 2026 from research round 3; shorter than fractions; not yet checked by a Kenyan maths teacher; not loaded by the live tutor"
+ },
+ "MATH.G5.NUMBER.WHOLE_NUMBERS.COMPARE_NUMBERS": {
+  "skill": "MATH.G5.NUMBER.WHOLE_NUMBERS.COMPARE_NUMBERS",
+  "key_step": "The child first compares how many digits each number has, then compares place by place from the left until the digits differ.",
+  "floor": {
+   "prerequisite": "Compares numbers up to 9,999.",
+   "question": "Which is greater, 3,800 or 3,080?",
+   "answer": "3,800"
+  },
+  "representations": [
+   "two prices to choose between",
+   "the two numbers lined up in a place value chart",
+   "the symbol < or >"
+  ],
+  "steps": [
+   "Count the digits: more digits means greater.",
+   "Same number of digits: compare from the left, place by place.",
+   "Stop at the first place that differs.",
+   "Write the symbol: the open side faces the greater number; read it aloud."
+  ],
+  "contexts": [
+   "two plots of land priced in shillings",
+   "two schools' enrolment",
+   "two towns' populations"
+  ],
+  "board": [
+   {
+    "beat": "write",
+    "do": "Write 9,876 above 12,345, lined up on the right."
+   },
+   {
+    "beat": "predict",
+    "do": "Ask which is greater before anything else.",
+    "say": "Guess first. Which is greater?"
+   },
+   {
+    "beat": "count",
+    "do": "Child counts the digits in each number."
+   },
+   {
+    "beat": "pause",
+    "do": "Wait for the child to decide and say why."
+   }
+  ],
+  "misconceptions": [
+   {
+    "code": "MATH.G5.NUMBER.WHOLE_NUMBERS.COMPARE_NUMBERS.M_COMPARE_FIRST_DIGIT_ONLY",
+    "listen_for": [
+     "9 is bigger than 1",
+     "nine thousand is more"
+    ],
+    "ask": "Read both numbers aloud. Which one has ten thousands?",
+    "repair": "Line them up on the right in the chart. The longer number has a digit in a bigger place.",
+    "error": "Compares the first digits without checking how many digits each number has.",
+    "example": {
+     "question": "Which is greater: 9,876 or 12,345?",
+     "wrong_answer": "9,876",
+     "correct_answer": "12,345"
+    }
+   },
+   {
+    "code": "MATH.G5.NUMBER.WHOLE_NUMBERS.COMPARE_NUMBERS.M_COMPARE_SYMBOL_DIRECTION",
+    "listen_for": [
+     "the arrow points to the big one"
+    ],
+    "ask": "Read your sentence aloud: 45,210 is less than 45,120?",
+    "repair": "The open side faces the greater number. The child reads the symbol aloud as 'is greater than' or 'is less than' every time.",
+    "error": "Knows which number is bigger but writes the comparison symbol the wrong way round.",
+    "example": {
+     "question": "Fill in > or <: 45,210 ___ 45,120",
+     "wrong_answer": "<",
+     "correct_answer": ">"
+    }
+   }
+  ],
+  "checks": [
+   {
+    "question": "Fill in > or <: 45,210 ___ 45,120.",
+    "answer": ">",
+    "shows": "compares at the hundreds and writes the symbol the right way"
+   },
+   {
+    "question": "Which is greater: 8,999 or 10,001? Why?",
+    "answer": "10,001, because it has ten thousands",
+    "shows": "counts digits first"
+   }
+  ],
+  "name": "Compare two numbers up to tens of thousands",
+  "sub_strand": "MATH.G5.NUMBER.WHOLE_NUMBERS",
+  "sub_strand_name": "Whole numbers",
+  "status": "draft: written 13 Nov 2026 from research round 3; shorter than fractions; not yet checked by a Kenyan maths teacher; not loaded by the live tutor"
+ },
+ "MATH.G5.NUMBER.WHOLE_NUMBERS.ORDER_NUMBERS": {
+  "skill": "MATH.G5.NUMBER.WHOLE_NUMBERS.ORDER_NUMBERS",
+  "key_step": "The child compares by the highest place first, moving right only when the digits match, and checks the direction asked for.",
+  "floor": {
+   "prerequisite": "Compares two numbers up to 99,999.",
+   "question": "Which is smaller, 47,158 or 47,581?",
+   "answer": "47,158"
+  },
+  "representations": [
+   "number cards",
+   "numbers lined up in a chart",
+   "a list with arrows"
+  ],
+  "steps": [
+   "Say what the order words mean: increasing is smallest first.",
+   "Line the numbers up on the right.",
+   "Compare the highest place; sort; move right only for ties.",
+   "Read the final list aloud to check the direction."
+  ],
+  "contexts": [
+   "ordering schools by number of learners",
+   "ordering matatu fares",
+   "ordering heights of mountains in Kenya in metres"
+  ],
+  "board": [
+   {
+    "beat": "write",
+    "do": "Write 47,815; 47,158; 47,581 lined up on the right."
+   },
+   {
+    "beat": "point",
+    "do": "Point down the ten thousands column, then the thousands column.",
+    "say": "Are these the same?"
+   },
+   {
+    "beat": "pause",
+    "do": "Wait for the child to say which column is first to differ."
+   },
+   {
+    "beat": "child_draws",
+    "do": "Child writes the numbers in increasing order."
+   }
+  ],
+  "misconceptions": [
+   {
+    "code": "MATH.G5.NUMBER.WHOLE_NUMBERS.ORDER_NUMBERS.M_ORDER_LAST_DIGIT",
+    "listen_for": [
+     "one is the smallest at the end",
+     "I looked at the last number"
+    ],
+    "ask": "Which column do we look at after the thousands?",
+    "repair": "Move one column at a time from the left. The child says the column name before comparing.",
+    "error": "When the leading digits are the same, sorts by the ones digit instead of the next highest place.",
+    "example": {
+     "question": "Arrange in increasing order: 47,815; 47,158; 47,581",
+     "wrong_answer": "47,581; 47,815; 47,158",
+     "correct_answer": "47,158; 47,581; 47,815"
+    }
+   },
+   {
+    "code": "MATH.G5.NUMBER.WHOLE_NUMBERS.ORDER_NUMBERS.M_ORDER_DIRECTION_CONFUSED",
+    "listen_for": [
+     "decreasing starts small"
+    ],
+    "ask": "Before you write: smallest first, or largest first?",
+    "repair": "Picture steps: increasing goes up. The child says the first word aloud before writing.",
+    "error": "Arranges numbers in increasing order when decreasing is asked, or the reverse.",
+    "example": {
+     "question": "Arrange in decreasing order: 34,500; 34,050; 35,400",
+     "wrong_answer": "34,050; 34,500; 35,400",
+     "correct_answer": "35,400; 34,500; 34,050"
+    }
+   }
+  ],
+  "checks": [
+   {
+    "question": "Arrange in decreasing order: 34,500; 34,050; 35,400.",
+    "answer": "35,400; 34,500; 34,050",
+    "shows": "direction and place-by-place comparison"
+   },
+   {
+    "question": "Arrange in increasing order: 9,990; 10,100; 9,099.",
+    "answer": "9,099; 9,990; 10,100",
+    "shows": "different numbers of digits"
+   }
+  ],
+  "name": "Arrange numbers up to tens of thousands in increasing and decreasing order",
+  "sub_strand": "MATH.G5.NUMBER.WHOLE_NUMBERS",
+  "sub_strand_name": "Whole numbers",
+  "status": "draft: written 13 Nov 2026 from research round 3; shorter than fractions; not yet checked by a Kenyan maths teacher; not loaded by the live tutor"
+ },
+ "MATH.G5.NUMBER.WHOLE_NUMBERS.ROUND_NEAREST_HUNDRED": {
+  "skill": "MATH.G5.NUMBER.WHOLE_NUMBERS.ROUND_NEAREST_HUNDRED",
+  "key_step": "The child finds the two hundreds the number lies between and decides which is nearer by looking only at the tens digit.",
+  "floor": {
+   "prerequisite": "Rounds to the nearest ten.",
+   "question": "Round 47 to the nearest ten.",
+   "answer": "50"
+  },
+  "representations": [
+   "a road with distance markers",
+   "a number line between two hundreds with the halfway mark",
+   "the rounded number"
+  ],
+  "steps": [
+   "Find the hundred below and the hundred above.",
+   "Mark the halfway point (the fifty).",
+   "Look only at the tens digit: below 5 goes down, 5 or more goes up.",
+   "Replace the tens and ones with zeros; keep every other digit in its place.",
+   "Handle the carry (39,960 becomes 40,000)."
+  ],
+  "contexts": [
+   "about how many people came to a harambee",
+   "an estimate of a school's bill",
+   "the number of trees planted on a hill"
+  ],
+  "board": [
+   {
+    "beat": "draw",
+    "do": "Draw a number line from 23,400 to 23,500 with a longer tick at 23,450.",
+    "say": "23,449 lives between these two hundreds."
+   },
+   {
+    "beat": "child_draws",
+    "do": "Child marks where 23,449 goes."
+   },
+   {
+    "beat": "point",
+    "do": "Point at the halfway tick and the child's mark.",
+    "say": "Which end is nearer?"
+   },
+   {
+    "beat": "pause",
+    "do": "Wait for the child to round and say why."
+   }
+  ],
+  "misconceptions": [
+   {
+    "code": "MATH.G5.NUMBER.WHOLE_NUMBERS.ROUND_NEAREST_HUNDRED.M_ROUND_CHAIN_ROUNDING",
+    "listen_for": [
+     "9 rounds the 4 up, then the 4 becomes 5"
+    ],
+    "ask": "Which digit decides rounding to the nearest hundred?",
+    "repair": "Only the tens digit decides. Put the number on the line: 23,449 is before the halfway mark.",
+    "error": "Rounds in steps from the ones upward, so a rounding-up carries forward wrongly.",
+    "example": {
+     "question": "Round 23,449 to the nearest hundred.",
+     "wrong_answer": "23,500",
+     "correct_answer": "23,400"
+    }
+   },
+   {
+    "code": "MATH.G5.NUMBER.WHOLE_NUMBERS.ROUND_NEAREST_HUNDRED.M_ROUND_DROPS_DIGITS",
+    "listen_for": [
+     "234"
+    ],
+    "ask": "Is 234 near 23,449?",
+    "repair": "Rounding keeps the size: the cut places become zeros. The child reads both numbers aloud.",
+    "error": "Removes the digits after the rounding place instead of replacing them with zeros.",
+    "example": {
+     "question": "Round 23,449 to the nearest hundred.",
+     "wrong_answer": "234",
+     "correct_answer": "23,400"
+    }
+   }
+  ],
+  "checks": [
+   {
+    "question": "Round 45,620 to the nearest hundred.",
+    "answer": "45,600",
+    "shows": "rounds down without changing the hundreds digit"
+   },
+   {
+    "question": "Round 39,960 to the nearest hundred.",
+    "answer": "40,000",
+    "shows": "carries into the next places"
+   }
+  ],
+  "name": "Round off numbers up to tens of thousands to the nearest hundred",
+  "sub_strand": "MATH.G5.NUMBER.WHOLE_NUMBERS",
+  "sub_strand_name": "Whole numbers",
+  "status": "draft: written 13 Nov 2026 from research round 3; shorter than fractions; not yet checked by a Kenyan maths teacher; not loaded by the live tutor"
+ },
+ "MATH.G5.NUMBER.WHOLE_NUMBERS.ROUND_NEAREST_THOUSAND": {
+  "skill": "MATH.G5.NUMBER.WHOLE_NUMBERS.ROUND_NEAREST_THOUSAND",
+  "key_step": "The child finds the two thousands the number lies between and decides by the hundreds digit, rounding up at exactly 5.",
+  "floor": {
+   "prerequisite": "Rounds to the nearest hundred.",
+   "question": "Round 3,460 to the nearest hundred.",
+   "answer": "3,500"
+  },
+  "representations": [
+   "distances between towns",
+   "a number line between two thousands",
+   "the rounded number"
+  ],
+  "steps": [
+   "Find the thousand below and above.",
+   "Mark the halfway (the five hundred).",
+   "Look at the hundreds digit; 5 or more goes up.",
+   "Zeros after the thousands; regroup a 9 that rounds up."
+  ],
+  "contexts": [
+   "the road distance from Nairobi to a county town, in km",
+   "about how many shillings a school trip costs",
+   "about how many people live in a sub-county"
+  ],
+  "board": [
+   {
+    "beat": "draw",
+    "do": "Draw a number line from 59,000 to 60,000 with a longer tick at 59,500."
+   },
+   {
+    "beat": "child_draws",
+    "do": "Child marks 59,650."
+   },
+   {
+    "beat": "point",
+    "do": "Point at the 60,000 end, slowly.",
+    "say": "What comes after 59 thousand?"
+   },
+   {
+    "beat": "pause",
+    "do": "Wait for the child to say the rounded number."
+   }
+  ],
+  "misconceptions": [
+   {
+    "code": "MATH.G5.NUMBER.WHOLE_NUMBERS.ROUND_NEAREST_THOUSAND.M_ROUND_NO_REGROUP",
+    "listen_for": [
+     "five ten thousand",
+     "510,000"
+    ],
+    "ask": "Read 510,000 aloud. Is it near 59,650?",
+    "repair": "On the line, the thousand after 59,000 is 60,000. Ten thousands regroup like ten ones make a ten.",
+    "error": "When rounding up from a 9, writes '10' inside the number instead of regrouping into the next place.",
+    "example": {
+     "question": "Round 59,650 to the nearest thousand.",
+     "wrong_answer": "510,000",
+     "correct_answer": "60,000"
+    }
+   },
+   {
+    "code": "MATH.G5.NUMBER.WHOLE_NUMBERS.ROUND_NEAREST_THOUSAND.M_ROUND_FIVE_DOWN",
+    "listen_for": [
+     "it's in the middle so down"
+    ],
+    "ask": "When the number is exactly halfway, which way do we agree to go?",
+    "repair": "Tell the convention (a name, not a reason): halfway rounds up. The child rounds three halfway numbers.",
+    "error": "Rounds down when the deciding digit is exactly 5.",
+    "example": {
+     "question": "Round 36,500 to the nearest thousand.",
+     "wrong_answer": "36,000",
+     "correct_answer": "37,000"
+    }
+   }
+  ],
+  "checks": [
+   {
+    "question": "Round 36,500 to the nearest thousand.",
+    "answer": "37,000",
+    "shows": "rounds up at exactly halfway"
+   },
+   {
+    "question": "Round 72,480 to the nearest thousand.",
+    "answer": "72,000",
+    "shows": "uses the hundreds digit, not the tens"
+   }
+  ],
+  "name": "Round off numbers up to tens of thousands to the nearest thousand",
+  "sub_strand": "MATH.G5.NUMBER.WHOLE_NUMBERS",
+  "sub_strand_name": "Whole numbers",
+  "status": "draft: written 13 Nov 2026 from research round 3; shorter than fractions; not yet checked by a Kenyan maths teacher; not loaded by the live tutor"
+ },
+ "MATH.G5.NUMBER.WHOLE_NUMBERS.DIVISIBLE_BY_2": {
+  "skill": "MATH.G5.NUMBER.WHOLE_NUMBERS.DIVISIBLE_BY_2",
+  "key_step": "The child looks only at the ones digit and says why: the tens, hundreds and more are always made of twos.",
+  "floor": {
+   "prerequisite": "Knows even and odd numbers up to 100.",
+   "question": "Is 14 even or odd?",
+   "answer": "Even"
+  },
+  "representations": [
+   "counters paired up",
+   "a hundred square with even numbers shaded",
+   "the rule on the ones digit"
+  ],
+  "steps": [
+   "Pair counters for small numbers: none left over means divisible by 2.",
+   "Shade even numbers on a hundred square; the child spots the ones-digit pattern.",
+   "The child says why only the ones digit matters (tens split evenly).",
+   "Use the rule on big numbers."
+  ],
+  "contexts": [
+   "sharing exercise books between two classes",
+   "pairs of shoes in a shop",
+   "learners standing in pairs for assembly"
+  ],
+  "board": [
+   {
+    "beat": "draw",
+    "do": "Draw 14 dots and ring them in pairs one ring at a time."
+   },
+   {
+    "beat": "pause",
+    "do": "Wait for the child to say whether any dot is left."
+   },
+   {
+    "beat": "write",
+    "do": "Write 4,567 and 3,450 with a box under each for yes or no."
+   },
+   {
+    "beat": "point",
+    "do": "Point at the ones digit of each number.",
+    "say": "Which digit do we check?"
+   }
+  ],
+  "misconceptions": [
+   {
+    "code": "MATH.G5.NUMBER.WHOLE_NUMBERS.DIVISIBLE_BY_2.M_DIV2_WRONG_DIGIT",
+    "listen_for": [
+     "yes because 4 is even",
+     "it starts with 4"
+    ],
+    "ask": "If we share 4,567 counters in pairs, which digit tells us about the leftover one?",
+    "repair": "Thousands, hundreds and tens always pair up exactly. Only the ones can leave one over.",
+    "error": "Decides divisibility by 2 from the first digit or any even digit, not the ones digit.",
+    "example": {
+     "question": "Is 4,567 divisible by 2?",
+     "wrong_answer": "Yes, because 4 is even",
+     "correct_answer": "No, the ones digit 7 is odd"
+    }
+   },
+   {
+    "code": "MATH.G5.NUMBER.WHOLE_NUMBERS.DIVISIBLE_BY_2.M_DIV2_ZERO_NOT_EVEN",
+    "listen_for": [
+     "zero is not even",
+     "nothing to share"
+    ],
+    "ask": "Share 10 counters in pairs. Any left over?",
+    "repair": "Count by twos on the hundred square: 10, 20, 30 are all there.",
+    "error": "Thinks a number ending in 0 is not divisible by 2.",
+    "example": {
+     "question": "Is 3,450 divisible by 2?",
+     "wrong_answer": "No",
+     "correct_answer": "Yes, it ends in 0, so 3,450 ÷ 2 = 1,725"
+    }
+   }
+  ],
+  "checks": [
+   {
+    "question": "Is 7,390 divisible by 2? How do you know?",
+    "answer": "Yes; the ones digit is 0",
+    "shows": "ones digit only, zero counts"
+   },
+   {
+    "question": "Is 2,583 divisible by 2?",
+    "answer": "No; the ones digit is 3",
+    "shows": "ignores the even first digit"
+   }
+  ],
+  "name": "Apply the divisibility test for 2",
+  "sub_strand": "MATH.G5.NUMBER.WHOLE_NUMBERS",
+  "sub_strand_name": "Whole numbers",
+  "status": "draft: written 13 Nov 2026 from research round 3; shorter than fractions; not yet checked by a Kenyan maths teacher; not loaded by the live tutor"
+ },
+ "MATH.G5.NUMBER.WHOLE_NUMBERS.DIVISIBLE_BY_5_AND_10": {
+  "skill": "MATH.G5.NUMBER.WHOLE_NUMBERS.DIVISIBLE_BY_5_AND_10",
+  "key_step": "The child checks the ones digit (0 or 5 for 5; 0 for 10) and notices that every number divisible by 10 is also divisible by 2 and 5.",
+  "floor": {
+   "prerequisite": "Counts in fives and tens.",
+   "question": "Count in fives from 35 to 60.",
+   "answer": "35, 40, 45, 50, 55, 60"
+  },
+  "representations": [
+   "5-shilling and 10-shilling coins",
+   "a hundred square shaded in fives and tens",
+   "the rules on the ones digit"
+  ],
+  "steps": [
+   "Count in fives and tens on a hundred square; the child spots the ones digits.",
+   "State both rules from the pattern.",
+   "Check a number against all three tests (2, 5, 10).",
+   "The child explains why a multiple of 10 passes all three."
+  ],
+  "contexts": [
+   "paying with 5 shilling coins only",
+   "packing mandazi in bags of 5",
+   "bundles of 10 exercise books"
+  ],
+  "board": [
+   {
+    "beat": "draw",
+    "do": "Draw the top three rows of a hundred square; shade fives one colour and tens a second colour, one at a time."
+   },
+   {
+    "beat": "predict",
+    "do": "Ask which ones digits will be shaded before finishing.",
+    "say": "Guess the next shaded number."
+   },
+   {
+    "beat": "pause",
+    "do": "Wait for the child to state the patterns."
+   },
+   {
+    "beat": "write",
+    "do": "Write 7,350 with three boxes: 2, 5, 10."
+   }
+  ],
+  "misconceptions": [
+   {
+    "code": "MATH.G5.NUMBER.WHOLE_NUMBERS.DIVISIBLE_BY_5_AND_10.M_DIV5_ONLY_ENDS_5",
+    "listen_for": [
+     "it doesn't end in 5",
+     "no because 0"
+    ],
+    "ask": "Count in fives from 0. Is 10 on the list?",
+    "repair": "On the hundred square, every multiple of 10 is also shaded for 5.",
+    "error": "Thinks only numbers ending in 5 are divisible by 5.",
+    "example": {
+     "question": "Is 2,340 divisible by 5?",
+     "wrong_answer": "No",
+     "correct_answer": "Yes, it ends in 0, so 2,340 ÷ 5 = 468"
+    }
+   },
+   {
+    "code": "MATH.G5.NUMBER.WHOLE_NUMBERS.DIVISIBLE_BY_5_AND_10.M_DIV_TESTS_EXCLUSIVE",
+    "listen_for": [
+     "10 only",
+     "it can only be one"
+    ],
+    "ask": "Can 7,350 people be put in pairs? In fives?",
+    "repair": "Test each divisor separately. Tens are made of twos and fives, so a multiple of 10 passes all three.",
+    "error": "Treats divisibility by 2, 5 and 10 as separate categories, so a number can belong to only one.",
+    "example": {
+     "question": "Which of 2, 5 and 10 divide 7,350 exactly?",
+     "wrong_answer": "10 only",
+     "correct_answer": "2, 5 and 10"
+    }
+   }
+  ],
+  "checks": [
+   {
+    "question": "Which of 2, 5 and 10 divide 2,340 exactly?",
+    "answer": "All three",
+    "shows": "tests are not exclusive"
+   },
+   {
+    "question": "Is 1,205 divisible by 10? By 5?",
+    "answer": "Not by 10; yes by 5",
+    "shows": "ones digit, not any zero"
+   }
+  ],
+  "name": "Apply the divisibility tests for 5 and 10",
+  "sub_strand": "MATH.G5.NUMBER.WHOLE_NUMBERS",
+  "sub_strand_name": "Whole numbers",
+  "status": "draft: written 13 Nov 2026 from research round 3; shorter than fractions; not yet checked by a Kenyan maths teacher; not loaded by the live tutor"
+ },
+ "MATH.G5.NUMBER.WHOLE_NUMBERS.DIVISIBILITY_PROBLEMS": {
+  "skill": "MATH.G5.NUMBER.WHOLE_NUMBERS.DIVISIBILITY_PROBLEMS",
+  "key_step": "The child picks the divisor the story needs, applies its test, and answers 'exactly, with none left over' rather than whether division is possible.",
+  "floor": {
+   "prerequisite": "Knows the tests for 2, 5 and 10.",
+   "question": "Is 485 divisible by 5?",
+   "answer": "Yes"
+  },
+  "representations": [
+   "the story acted out with counters",
+   "a bar split into equal groups",
+   "the test written beside the number"
+  ],
+  "steps": [
+   "Read the story; the child says what is being shared or packed and into how many.",
+   "Choose the test.",
+   "Apply it and say yes or no for 'none left over'.",
+   "Answer in a sentence about the story."
+  ],
+  "contexts": [
+   "bananas shared between two classes in Kakamega",
+   "mandazi packed in bags of 5",
+   "shillings changed into 10 shilling coins"
+  ],
+  "board": [
+   {
+    "beat": "write",
+    "do": "Write the story number large: 485 mandazi, bags of 5."
+   },
+   {
+    "beat": "point",
+    "do": "Point at 'bags of 5'.",
+    "say": "Which test does this story need?"
+   },
+   {
+    "beat": "pause",
+    "do": "Wait for the child to choose the test."
+   },
+   {
+    "beat": "child_draws",
+    "do": "Child circles the ones digit and writes yes or no."
+   }
+  ],
+  "misconceptions": [
+   {
+    "code": "MATH.G5.NUMBER.WHOLE_NUMBERS.DIVISIBILITY_PROBLEMS.M_DIVPROB_DIVIDE_ANYWAY",
+    "listen_for": [
+     "yes, 617 and a half",
+     "you can divide anything"
+    ],
+    "ask": "Can a class get half a banana and be fair to the rest? The story says none left over.",
+    "repair": "Act it out: the question is about leftovers, not about dividing. The child rereads the words 'with none left over'.",
+    "error": "Answers 'yes' because the number can be divided, ignoring the 'none left over' condition.",
+    "example": {
+     "question": "A Kakamega school has 1,235 bananas. Can they be shared equally between 2 classes with none left over?",
+     "wrong_answer": "Yes, each class gets 617 and a half",
+     "correct_answer": "No. 1,235 ends in 5 (odd), so 1 banana is left over."
+    }
+   },
+   {
+    "code": "MATH.G5.NUMBER.WHOLE_NUMBERS.DIVISIBILITY_PROBLEMS.M_DIVPROB_5_NEEDS_0",
+    "listen_for": [
+     "it doesn't end in 0"
+    ],
+    "ask": "Which test is for 5, and which is for 10?",
+    "repair": "Say the story's number of the group aloud first, then choose the matching test.",
+    "error": "Applies the test for 10 when the problem needs the test for 5.",
+    "example": {
+     "question": "Mama Wanjiku has 485 mandazi. Can she pack them in bags of 5 with none left?",
+     "wrong_answer": "No, because 485 does not end in 0",
+     "correct_answer": "Yes, it ends in 5, so she fills 97 bags"
+    }
+   }
+  ],
+  "checks": [
+   {
+    "question": "A school has 1,236 books to share equally between 2 libraries with none left. Can it be done?",
+    "answer": "Yes; 6 is even",
+    "shows": "test for 2 in context"
+   },
+   {
+    "question": "Can 3,455 shillings be paid exactly in 10 shilling coins?",
+    "answer": "No; it ends in 5, not 0",
+    "shows": "chooses the test for 10"
+   }
+  ],
+  "name": "Use divisibility tests of 2, 5 and 10 in real-life problems",
+  "sub_strand": "MATH.G5.NUMBER.WHOLE_NUMBERS",
+  "sub_strand_name": "Whole numbers",
+  "status": "draft: written 13 Nov 2026 from research round 3; shorter than fractions; not yet checked by a Kenyan maths teacher; not loaded by the live tutor"
+ },
+ "MATH.G5.NUMBER.WHOLE_NUMBERS.COMMON_FACTORS": {
+  "skill": "MATH.G5.NUMBER.WHOLE_NUMBERS.COMMON_FACTORS",
+  "key_step": "The child lists factors in pairs that multiply to the number, starting with 1 and the number, and stops when the pairs meet.",
+  "floor": {
+   "prerequisite": "Knows multiplication facts to 10 x 10.",
+   "question": "What is 3 x 6?",
+   "answer": "18"
+  },
+  "representations": [
+   "counters arranged in rectangles",
+   "factor pairs as rainbows",
+   "the two lists with common factors circled"
+  ],
+  "steps": [
+   "Arrange 12 counters in every possible rectangle; each rectangle is a factor pair.",
+   "List pairs from 1 upwards: 1 x 12, 2 x 6, 3 x 4.",
+   "Stop when the pairs meet.",
+   "List both numbers' factors and circle the common ones."
+  ],
+  "contexts": [
+   "arranging chairs in equal rows for a parents' meeting",
+   "packing 18 oranges and 24 mangoes into equal bags"
+  ],
+  "board": [
+   {
+    "beat": "draw",
+    "do": "Draw 12 dots as one long row, then as 2 rows of 6, one row at a time."
+   },
+   {
+    "beat": "predict",
+    "do": "Ask for another rectangle before drawing it.",
+    "say": "What other rectangle can 12 make?"
+   },
+   {
+    "beat": "child_draws",
+    "do": "Child draws 3 rows of 4."
+   },
+   {
+    "beat": "write",
+    "do": "Write the factor pairs as rainbows, leaving the middle for the child."
+   }
+  ],
+  "misconceptions": [
+   {
+    "code": "MATH.G5.NUMBER.WHOLE_NUMBERS.COMMON_FACTORS.M_FACTORS_AS_MULTIPLES",
+    "listen_for": [
+     "12, 24, 36",
+     "the times table of 12"
+    ],
+    "ask": "Can 12 counters make a row of 24?",
+    "repair": "Factors fit inside the number; multiples are bigger. Use the rectangles: every side is a factor.",
+    "error": "Lists multiples when asked for factors.",
+    "example": {
+     "question": "List the factors of 12.",
+     "wrong_answer": "12, 24, 36, 48",
+     "correct_answer": "1, 2, 3, 4, 6, 12"
+    }
+   },
+   {
+    "code": "MATH.G5.NUMBER.WHOLE_NUMBERS.COMMON_FACTORS.M_FACTORS_MISS_1_AND_SELF",
+    "listen_for": [
+     "2 and 4"
+    ],
+    "ask": "Can 8 counters make one long row?",
+    "repair": "The long row is always a rectangle: 1 and the number are always factors.",
+    "error": "Leaves out 1 and the number itself from the factor list.",
+    "example": {
+     "question": "List the common factors of 8 and 12.",
+     "wrong_answer": "2, 4",
+     "correct_answer": "1, 2, 4"
+    }
+   }
+  ],
+  "checks": [
+   {
+    "question": "List the common factors of 18 and 24.",
+    "answer": "1, 2, 3, 6",
+    "shows": "complete factor pairs"
+   },
+   {
+    "question": "List all the factors of 20.",
+    "answer": "1, 2, 4, 5, 10, 20",
+    "shows": "pairs from 1 and the number itself"
+   }
+  ],
+  "name": "List factors and identify common factors",
+  "sub_strand": "MATH.G5.NUMBER.WHOLE_NUMBERS",
+  "sub_strand_name": "Whole numbers",
+  "status": "draft: written 13 Nov 2026 from research round 3; shorter than fractions; not yet checked by a Kenyan maths teacher; not loaded by the live tutor"
+ },
+ "MATH.G5.NUMBER.WHOLE_NUMBERS.HCF_GCD": {
+  "skill": "MATH.G5.NUMBER.WHOLE_NUMBERS.HCF_GCD",
+  "key_step": "The child lists the common factors and picks the largest, and says that HCF and GCD name the same number.",
+  "floor": {
+   "prerequisite": "Lists factors and common factors.",
+   "question": "List the factors of 12.",
+   "answer": "1, 2, 3, 4, 6, 12"
+  },
+  "representations": [
+   "two factor lists with common factors circled",
+   "a Venn of factors",
+   "the largest circled factor"
+  ],
+  "steps": [
+   "List each number's factors.",
+   "Circle the common ones.",
+   "Pick the highest.",
+   "Check it divides both exactly."
+  ],
+  "contexts": [
+   "cutting two lengths of timber into the longest equal pieces",
+   "packing two kinds of fruit into identical bags"
+  ],
+  "board": [
+   {
+    "beat": "write",
+    "do": "Write the factors of 12 and of 18 in two rows."
+   },
+   {
+    "beat": "child_draws",
+    "do": "Child circles the factors in both lists."
+   },
+   {
+    "beat": "pause",
+    "do": "Wait for the child to pick the highest and say why."
+   }
+  ],
+  "misconceptions": [
+   {
+    "code": "MATH.G5.NUMBER.WHOLE_NUMBERS.HCF_GCD.M_HCF_GIVES_LCM_OR_PRODUCT",
+    "listen_for": [
+     "36",
+     "I multiplied",
+     "216"
+    ],
+    "ask": "Is 36 a factor of 12? Can a factor be bigger than the number?",
+    "repair": "A factor fits inside both numbers. The HCF can never be bigger than the smaller number.",
+    "error": "Gives the LCM or the product of the numbers as the HCF.",
+    "example": {
+     "question": "Find the HCF of 12 and 18.",
+     "wrong_answer": "36",
+     "correct_answer": "6"
+    }
+   },
+   {
+    "code": "MATH.G5.NUMBER.WHOLE_NUMBERS.HCF_GCD.M_HCF_ANY_COMMON",
+    "listen_for": [
+     "2",
+     "2 goes into both"
+    ],
+    "ask": "Is 2 the highest number that goes into both?",
+    "repair": "List all common factors before choosing; the H means highest.",
+    "error": "Gives a common factor that is not the highest, often the first one found.",
+    "example": {
+     "question": "Find the GCD of 24 and 36.",
+     "wrong_answer": "2",
+     "correct_answer": "12"
+    }
+   }
+  ],
+  "checks": [
+   {
+    "question": "Find the GCD of 24 and 36.",
+    "answer": "12",
+    "shows": "highest, not the first common factor"
+   },
+   {
+    "question": "Find the HCF of 8 and 12.",
+    "answer": "4",
+    "shows": "not the smaller number"
+   }
+  ],
+  "name": "Determine the HCF (GCD) of two or three numbers",
+  "sub_strand": "MATH.G5.NUMBER.WHOLE_NUMBERS",
+  "sub_strand_name": "Whole numbers",
+  "status": "draft: written 13 Nov 2026 from research round 3; shorter than fractions; not yet checked by a Kenyan maths teacher; not loaded by the live tutor"
+ },
+ "MATH.G5.NUMBER.WHOLE_NUMBERS.HCF_PROBLEMS": {
+  "skill": "MATH.G5.NUMBER.WHOLE_NUMBERS.HCF_PROBLEMS",
+  "key_step": "The child recognises a 'largest equal pieces, nothing left over' story, uses the HCF, and answers the quantity asked (size of a piece or number of pieces).",
+  "floor": {
+   "prerequisite": "Finds the HCF of two numbers.",
+   "question": "HCF of 24 and 36?",
+   "answer": "12"
+  },
+  "representations": [
+   "two ribbons drawn as bars",
+   "the bars cut into equal pieces",
+   "the HCF and the question asked"
+  ],
+  "steps": [
+   "Draw both lengths.",
+   "Ask: largest equal piece that fits both with nothing left?",
+   "Find the HCF.",
+   "Reread the question: size, or how many?"
+  ],
+  "contexts": [
+   "a Kisumu tailor cutting ribbons",
+   "a carpenter cutting timber for desks",
+   "packing pencils and rubbers into identical packs"
+  ],
+  "board": [
+   {
+    "beat": "draw",
+    "do": "Draw a 24 m bar above a 36 m bar."
+   },
+   {
+    "beat": "predict",
+    "do": "Ask the child to guess a piece length that fits both.",
+    "say": "Guess a length that fits both ribbons."
+   },
+   {
+    "beat": "child_draws",
+    "do": "Child marks equal pieces on both bars."
+   },
+   {
+    "beat": "pause",
+    "do": "Wait for the child to find the longest that works."
+   }
+  ],
+  "misconceptions": [
+   {
+    "code": "MATH.G5.NUMBER.WHOLE_NUMBERS.HCF_PROBLEMS.M_HCFPROB_USES_LCM",
+    "listen_for": [
+     "72",
+     "the LCM"
+    ],
+    "ask": "Can a piece 72 m long be cut from a 24 m ribbon?",
+    "repair": "Pieces cut from something must be smaller than it: a factor, not a multiple.",
+    "error": "Uses the LCM in a 'largest equal pieces' problem.",
+    "example": {
+     "question": "A tailor in Kisumu has ribbons 24 m and 36 m long. She cuts both into equal pieces, as long as possible, with nothing left. How long is each piece?",
+     "wrong_answer": "72 m",
+     "correct_answer": "12 m"
+    }
+   },
+   {
+    "code": "MATH.G5.NUMBER.WHOLE_NUMBERS.HCF_PROBLEMS.M_HCFPROB_WRONG_QUANTITY",
+    "listen_for": [
+     "5 pieces"
+    ],
+    "ask": "Read the last line of the question. Does it ask how long, or how many?",
+    "repair": "Underline the question word before answering.",
+    "error": "Gives the number of pieces when the size of a piece was asked, or the reverse.",
+    "example": {
+     "question": "Same ribbons (24 m and 36 m) cut into the longest equal pieces. How long is each piece?",
+     "wrong_answer": "5 pieces",
+     "correct_answer": "12 m (which makes 2 + 3 = 5 pieces)"
+    }
+   }
+  ],
+  "checks": [
+   {
+    "question": "Ribbons of 24 m and 36 m are cut into the longest equal pieces with none left. How long is each piece?",
+    "answer": "12 m",
+    "shows": "HCF and the right quantity"
+   },
+   {
+    "question": "30 oranges and 45 mangoes are packed into identical bags, as many bags as possible, nothing left. How many bags?",
+    "answer": "15",
+    "shows": "HCF as number of groups"
+   }
+  ],
+  "name": "Solve real-life problems using HCF/GCD",
+  "sub_strand": "MATH.G5.NUMBER.WHOLE_NUMBERS",
+  "sub_strand_name": "Whole numbers",
+  "status": "draft: written 13 Nov 2026 from research round 3; shorter than fractions; not yet checked by a Kenyan maths teacher; not loaded by the live tutor"
+ },
+ "MATH.G5.NUMBER.WHOLE_NUMBERS.COMMON_MULTIPLES": {
+  "skill": "MATH.G5.NUMBER.WHOLE_NUMBERS.COMMON_MULTIPLES",
+  "key_step": "The child lists multiples starting from the number itself and finds those in both lists.",
+  "floor": {
+   "prerequisite": "Counts in steps of 2 to 10.",
+   "question": "Count in sixes to 30.",
+   "answer": "6, 12, 18, 24, 30"
+  },
+  "representations": [
+   "two jumping frogs on a number line",
+   "two lists of multiples",
+   "common multiples circled"
+  ],
+  "steps": [
+   "List multiples of each number starting with the number itself.",
+   "Circle numbers in both lists.",
+   "Notice they repeat at regular steps."
+  ],
+  "contexts": [
+   "two matatus leaving a stage at different intervals",
+   "buying buns in packs of 4 and juice in packs of 6"
+  ],
+  "board": [
+   {
+    "beat": "draw",
+    "do": "Draw a number line 0 to 30; draw jumps of 4 above and 6 below, one jump at a time."
+   },
+   {
+    "beat": "count",
+    "do": "Child counts the landing points as they appear."
+   },
+   {
+    "beat": "pause",
+    "do": "Wait for the child to spot where both land."
+   }
+  ],
+  "misconceptions": [
+   {
+    "code": "MATH.G5.NUMBER.WHOLE_NUMBERS.COMMON_MULTIPLES.M_MULT_PRODUCT_ONLY",
+    "listen_for": [
+     "24",
+     "4 times 6"
+    ],
+    "ask": "Look at the number line. Did both frogs land together before 24?",
+    "repair": "The jumps meet at 12 first. The product is a common multiple, not always the first.",
+    "error": "Thinks common multiples start at the product of the numbers.",
+    "example": {
+     "question": "Write the first three common multiples of 4 and 6.",
+     "wrong_answer": "24, 48, 72",
+     "correct_answer": "12, 24, 36"
+    }
+   },
+   {
+    "code": "MATH.G5.NUMBER.WHOLE_NUMBERS.COMMON_MULTIPLES.M_MULT_EXCLUDES_SELF",
+    "listen_for": [
+     "6 is not a multiple of 6"
+    ],
+    "ask": "What is 6 x 1?",
+    "repair": "The first multiple of a number is the number itself.",
+    "error": "Starts the list of multiples at twice the number, leaving out the number itself.",
+    "example": {
+     "question": "Is 6 a common multiple of 2 and 6?",
+     "wrong_answer": "No",
+     "correct_answer": "Yes, because 6 = 2 × 3 and 6 = 6 × 1"
+    }
+   }
+  ],
+  "checks": [
+   {
+    "question": "Write the first three common multiples of 4 and 6.",
+    "answer": "12, 24, 36",
+    "shows": "starts below the product"
+   },
+   {
+    "question": "Is 6 a common multiple of 2 and 6?",
+    "answer": "Yes",
+    "shows": "includes the number itself"
+   }
+  ],
+  "name": "List multiples and identify common multiples",
+  "sub_strand": "MATH.G5.NUMBER.WHOLE_NUMBERS",
+  "sub_strand_name": "Whole numbers",
+  "status": "draft: written 13 Nov 2026 from research round 3; shorter than fractions; not yet checked by a Kenyan maths teacher; not loaded by the live tutor"
+ },
+ "MATH.G5.NUMBER.WHOLE_NUMBERS.LCM": {
+  "skill": "MATH.G5.NUMBER.WHOLE_NUMBERS.LCM",
+  "key_step": "The child lists multiples until the first one in both lists, and checks it is not smaller than the larger number.",
+  "floor": {
+   "prerequisite": "Lists common multiples.",
+   "question": "First common multiple of 2 and 3?",
+   "answer": "6"
+  },
+  "representations": [
+   "two jumping frogs",
+   "lists of multiples",
+   "the first common one"
+  ],
+  "steps": [
+   "List multiples of the larger number.",
+   "Check each against the smaller number.",
+   "The first that works is the LCM.",
+   "Check: the LCM is at least the larger number."
+  ],
+  "contexts": [
+   "matatus leaving together again",
+   "school bells ringing together"
+  ],
+  "board": [
+   {
+    "beat": "write",
+    "do": "Write multiples of 6: 6, 12, 18, 24, leaving gaps after each."
+   },
+   {
+    "beat": "point",
+    "do": "Point at each in turn.",
+    "say": "Is this one a multiple of 8?"
+   },
+   {
+    "beat": "pause",
+    "do": "Wait for the child's yes or no each time."
+   }
+  ],
+  "misconceptions": [
+   {
+    "code": "MATH.G5.NUMBER.WHOLE_NUMBERS.LCM.M_LCM_ALWAYS_PRODUCT",
+    "listen_for": [
+     "I multiplied 4 and 6",
+     "24"
+    ],
+    "ask": "Is there a common multiple of 4 and 6 smaller than 24?",
+    "repair": "List and check: 12 is on both lists.",
+    "error": "Always multiplies the numbers to get the LCM.",
+    "example": {
+     "question": "Find the LCM of 4 and 6.",
+     "wrong_answer": "24",
+     "correct_answer": "12"
+    }
+   },
+   {
+    "code": "MATH.G5.NUMBER.WHOLE_NUMBERS.LCM.M_LCM_SMALLER_NUMBER",
+    "listen_for": [
+     "3 because it's least"
+    ],
+    "ask": "Is 3 a multiple of 9?",
+    "repair": "Least common multiple: it must be a multiple of both, so it is at least the bigger number.",
+    "error": "Gives the smaller number as the LCM because it is 'least'.",
+    "example": {
+     "question": "Find the LCM of 3 and 9.",
+     "wrong_answer": "3",
+     "correct_answer": "9"
+    }
+   }
+  ],
+  "checks": [
+   {
+    "question": "Find the LCM of 6 and 8.",
+    "answer": "24",
+    "shows": "first common multiple, not HCF"
+   },
+   {
+    "question": "Find the LCM of 3 and 9.",
+    "answer": "9",
+    "shows": "at least the larger number"
+   }
+  ],
+  "name": "Determine the LCM of two or three numbers",
+  "sub_strand": "MATH.G5.NUMBER.WHOLE_NUMBERS",
+  "sub_strand_name": "Whole numbers",
+  "status": "draft: written 13 Nov 2026 from research round 3; shorter than fractions; not yet checked by a Kenyan maths teacher; not loaded by the live tutor"
+ },
+ "MATH.G5.NUMBER.WHOLE_NUMBERS.LCM_PROBLEMS": {
+  "skill": "MATH.G5.NUMBER.WHOLE_NUMBERS.LCM_PROBLEMS",
+  "key_step": "The child recognises a 'next time together' story, finds the LCM, and turns it back into the story's units (a clock time, a number of packs).",
+  "floor": {
+   "prerequisite": "Finds the LCM of two numbers.",
+   "question": "LCM of 12 and 18?",
+   "answer": "36"
+  },
+  "representations": [
+   "a timeline of departures",
+   "jumps on a number line in minutes",
+   "the clock time"
+  ],
+  "steps": [
+   "Draw both repeating events on one timeline.",
+   "Find when they meet first: the LCM.",
+   "Add it to the start time.",
+   "Answer in the story's words."
+  ],
+  "contexts": [
+   "matatus at Kencom stage",
+   "two bells at a Nyeri school",
+   "a farmer spraying cows every 12 days and sheep every 8 days"
+  ],
+  "board": [
+   {
+    "beat": "draw",
+    "do": "Draw a timeline from 8:00 marked in minutes; jumps of 12 above and 18 below."
+   },
+   {
+    "beat": "child_draws",
+    "do": "Child continues the jumps until they meet."
+   },
+   {
+    "beat": "pause",
+    "do": "Wait for the child to say the minutes, then the clock time."
+   }
+  ],
+  "misconceptions": [
+   {
+    "code": "MATH.G5.NUMBER.WHOLE_NUMBERS.LCM_PROBLEMS.M_LCMPROB_ADDS_INTERVALS",
+    "listen_for": [
+     "12 plus 18",
+     "8:30"
+    ],
+    "ask": "At 8:30, has the 12-minute matatu just left? Count its jumps.",
+    "repair": "Check the answer against both lists: 30 is not a multiple of 12.",
+    "error": "Adds the two intervals instead of finding the LCM.",
+    "example": {
+     "question": "Two bells at a Nyeri school ring every 12 minutes and every 18 minutes. They ring together at 8:00 a.m. When do they next ring together?",
+     "wrong_answer": "8:30 a.m. (12 + 18 = 30)",
+     "correct_answer": "8:36 a.m."
+    }
+   },
+   {
+    "code": "MATH.G5.NUMBER.WHOLE_NUMBERS.LCM_PROBLEMS.M_LCMPROB_USES_HCF",
+    "listen_for": [
+     "6 minutes",
+     "8:06"
+    ],
+    "ask": "After 6 minutes, has either matatu even left again?",
+    "repair": "Next time together is after both have done whole jumps: a multiple of both.",
+    "error": "Uses the HCF in a 'when will they next happen together' problem.",
+    "example": {
+     "question": "At Kencom stage one matatu leaves every 12 minutes and another every 18 minutes. Both leave at 8:00 a.m. When do they next leave together?",
+     "wrong_answer": "8:06 a.m.",
+     "correct_answer": "8:36 a.m."
+    }
+   }
+  ],
+  "checks": [
+   {
+    "question": "Two bells ring every 12 and 18 minutes. Both ring at 8:00 a.m. When do they next ring together?",
+    "answer": "8:36 a.m.",
+    "shows": "LCM converted to a clock time"
+   },
+   {
+    "question": "Buns come in packs of 4, juice in packs of 6. What is the least number of each you can buy to have the same number?",
+    "answer": "12 (3 packs of buns, 2 of juice)",
+    "shows": "LCM in a shopping story"
+   }
+  ],
+  "name": "Solve real-life problems using LCM",
+  "sub_strand": "MATH.G5.NUMBER.WHOLE_NUMBERS",
+  "sub_strand_name": "Whole numbers",
+  "status": "draft: written 13 Nov 2026 from research round 3; shorter than fractions; not yet checked by a Kenyan maths teacher; not loaded by the live tutor"
+ },
  "MATH.G5.NUMBER.FRACTIONS.EQUIVALENT_FRACTIONS": {
   "skill": "MATH.G5.NUMBER.FRACTIONS.EQUIVALENT_FRACTIONS",
   "key_step": "The child says that cutting every piece into the same number of smaller pieces keeps the amount the same, so the top and the bottom are both multiplied by that number.",

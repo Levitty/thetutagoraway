@@ -164,11 +164,12 @@ export function checkStretch(lines) {
       const qs = spoken.split(/(?<=[.?!])\s+/).filter((s) => s.endsWith('?'));
       for (const q of qs) closedRun = CLOSED.test(q) ? closedRun + 1 : 0;
       if (closedRun > 3) problems.push(`funnel: more than three closed questions in a row at "${spoken}"`);
-      sinceChild.push(spoken);
+      // A choice the tutor offers ("1/4 or 1/8?") is not a giveaway: the child still decides.
+      sinceChild.push(spoken.split(/(?<=[.?!])\s+/).filter((s) => !(s.endsWith('?') && /\bor\b/i.test(s) && fractionsIn(s).size >= 2)).join(' '));
     } else if (child) {
       const said = fractionsIn(child[1]);
       const before = new Set(sinceChild.flatMap((t) => [...fractionsIn(t)]));
-      for (const f of said) if (before.has(f) && !/\bOK-TO-ECHO\b/.test(raw)) problems.push(`tutor said ${f} just before the child gave it: "${sinceChild.join(' | ')}"`);
+      for (const f of said) if (before.has(f)) problems.push(`tutor said ${f} just before the child gave it: "${sinceChild.join(' | ')}"`);
       sinceChild = [];
     }
   }
@@ -183,6 +184,8 @@ test('the giveaway check catches what it should (self-test)', () => {
   assert.deepEqual([...fractionsIn('Is it three quarters or 2/4? A half.')].sort(), ['1/2', '2/4', '3/4']);
   assert.equal(checkStretch(['Tutor: Is it 3/4?', 'Child: 3/4.']).length, 1);
   assert.equal(checkStretch(['Tutor: What fraction is shaded?', 'Child: Three quarters.']).length, 0);
+  assert.equal(checkStretch(['Tutor: Which is more, 1/4 or 1/8?', 'Child: One quarter.']).length, 0);
+  assert.equal(checkStretch(['Tutor: Two out of four makes two quarters. Say it.', 'Child: Two quarters.']).length, 1);
   assert.equal(checkStretch(['Tutor: No, that is wrong.']).length, 1);
   assert.equal(checkStretch(['Tutor: The answer is five.']).length, 1);
   assert.equal(checkStretch(['Tutor: Is it red? Is it big? Is it round? Is it flat?']).length, 1);
