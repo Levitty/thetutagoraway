@@ -1549,6 +1549,1535 @@ export const TEACHING_PACK_G5 = {
   "sub_strand_name": "Whole numbers",
   "status": "draft: written 13 Nov 2026 from research round 3; shorter than fractions; not yet checked by a Kenyan maths teacher; not loaded by the live tutor"
  },
+ "MATH.G5.NUMBER.ADDITION.ADD_NO_REGROUP_UP_TO_THREE": {
+  "skill": "MATH.G5.NUMBER.ADDITION.ADD_NO_REGROUP_UP_TO_THREE",
+  "key_step": "The child lines numbers up from the right (ones under ones) and adds each column, writing 0 where a column totals 0.",
+  "floor": {
+   "prerequisite": "Names places up to hundred thousands.",
+   "question": "In 25,103, which digit is in the ones place?",
+   "answer": "3"
+  },
+  "representations": [
+   "shilling notes and coins by value",
+   "place value chart with columns",
+   "column sum"
+  ],
+  "steps": [
+   "Estimate.",
+   "Write each number in the chart, ones in the ones column.",
+   "Add each column from the right.",
+   "Compare with the estimate."
+  ],
+  "contexts": [
+   "money collected at a harambee on three days",
+   "bags of maize from three farms",
+   "votes in three wards"
+  ],
+  "board": [
+   {
+    "beat": "draw",
+    "do": "Draw a place value chart; write 412,301 and 25,103 into it, the second number filled from the right, slowly."
+   },
+   {
+    "beat": "point",
+    "do": "Point at the ones column.",
+    "say": "Which digits sit in the ones column?"
+   },
+   {
+    "beat": "pause",
+    "do": "Wait for the child's answer."
+   },
+   {
+    "beat": "child_draws",
+    "do": "Child adds each column."
+   }
+  ],
+  "misconceptions": [
+   {
+    "code": "MATH.G5.NUMBER.ADDITION.ADD_NO_REGROUP_UP_TO_THREE.M_LEFT_ALIGN",
+    "listen_for": [
+     "I started from the left"
+    ],
+    "ask": "Is the 2 in 25,103 worth ten thousands or hundred thousands?",
+    "repair": "Line up from the right in the chart so each digit sits under its place.",
+    "error": "Lines up numbers of different lengths from the left instead of the right, so digits of different place values are added together.",
+    "example": {
+     "question": "412,301 + 25,103 + 1,042",
+     "wrong_answer": "767,531 (worked as 412,301 + 251,030 + 104,200)",
+     "correct_answer": "438,446"
+    }
+   },
+   {
+    "code": "MATH.G5.NUMBER.ADDITION.ADD_NO_REGROUP_UP_TO_THREE.M_ZERO_ANNIHILATES",
+    "listen_for": [
+     "zero makes zero"
+    ],
+    "ask": "If you have 3 shillings and add 0 shillings, how many do you have?",
+    "repair": "Adding nothing keeps what you had: 3 + 0 = 3.",
+    "error": "Writes 0 for any column that contains a zero, as if adding 0 makes the total 0.",
+    "example": {
+     "question": "230,104 + 405,032",
+     "wrong_answer": "600,006",
+     "correct_answer": "635,136"
+    }
+   }
+  ],
+  "checks": [
+   {
+    "question": "230,104 + 405,032",
+    "answer": "635,136",
+    "shows": "zeros added correctly"
+   },
+   {
+    "question": "412,301 + 25,103 + 1,042",
+    "answer": "438,446",
+    "shows": "right-aligned columns"
+   }
+  ],
+  "name": "Add up to three numbers of up to 6 digits without regrouping",
+  "sub_strand": "MATH.G5.NUMBER.ADDITION",
+  "sub_strand_name": "Addition (up to 6 digits)",
+  "status": "draft: written 13 Nov 2026 from research round 3; shorter entries; not yet checked by a Kenyan maths teacher; not loaded by the live tutor"
+ },
+ "MATH.G5.NUMBER.ADDITION.ADD_DOUBLE_REGROUP_TWO": {
+  "skill": "MATH.G5.NUMBER.ADDITION.ADD_DOUBLE_REGROUP_TWO",
+  "key_step": "The child writes the ones digit of a column total and carries the ten into the next column, then adds it there, even when that column then reaches ten again.",
+  "floor": {
+   "prerequisite": "Adds with one regrouping.",
+   "question": "58 + 75 =",
+   "answer": "133"
+  },
+  "representations": [
+   "ten 1-shilling coins exchanged for a 10-shilling coin",
+   "column sum with small carried digits",
+   "the total"
+  ],
+  "steps": [
+   "Estimate.",
+   "Add the ones; ten or more: carry one ten.",
+   "Add the next column with the carry; carry again if needed.",
+   "Compare with the estimate."
+  ],
+  "contexts": [
+   "school fees collected in two terms",
+   "visitors to a national park in two months",
+   "a farmer's two harvests in kg"
+  ],
+  "board": [
+   {
+    "beat": "write",
+    "do": "Write 246,358 + 312,475 in columns."
+   },
+   {
+    "beat": "point",
+    "do": "Point at 8 and 5.",
+    "say": "Add the ones. What do you do with the ten?"
+   },
+   {
+    "beat": "pause",
+    "do": "Wait for the child to write 3 and carry 1."
+   },
+   {
+    "beat": "child_draws",
+    "do": "Child continues, writing each carry above the next column."
+   }
+  ],
+  "misconceptions": [
+   {
+    "code": "MATH.G5.NUMBER.ADDITION.ADD_DOUBLE_REGROUP_TWO.M_NO_CARRY_WRITE_ALL",
+    "listen_for": [
+     "13 under the ones"
+    ],
+    "ask": "Your estimate was about 560,000. Is your answer near that?",
+    "repair": "Only one digit fits in a column; ten ones become one ten, carried.",
+    "error": "Writes the whole two-digit column total under the column instead of regrouping, producing an answer with too many digits.",
+    "example": {
+     "question": "246,358 + 312,475",
+     "wrong_answer": "55,871,213",
+     "correct_answer": "558,833"
+    }
+   },
+   {
+    "code": "MATH.G5.NUMBER.ADDITION.ADD_DOUBLE_REGROUP_TWO.M_DROP_CARRY",
+    "listen_for": [
+     "558,723"
+    ],
+    "ask": "Where did the ten from the ones column go?",
+    "repair": "Write the carried 1 small above the next column and add it in.",
+    "error": "Writes the ones digit of the column total but forgets to add the carried 1 into the next column.",
+    "example": {
+     "question": "246,358 + 312,475",
+     "wrong_answer": "558,723",
+     "correct_answer": "558,833"
+    }
+   }
+  ],
+  "checks": [
+   {
+    "question": "246,358 + 312,475",
+    "answer": "558,833",
+    "shows": "double regrouping"
+   },
+   {
+    "question": "235,247 + 140,155",
+    "answer": "375,402",
+    "shows": "carry that makes a column ten"
+   }
+  ],
+  "name": "Add two numbers of up to 6 digits with double regrouping",
+  "sub_strand": "MATH.G5.NUMBER.ADDITION",
+  "sub_strand_name": "Addition (up to 6 digits)",
+  "status": "draft: written 13 Nov 2026 from research round 3; shorter entries; not yet checked by a Kenyan maths teacher; not loaded by the live tutor"
+ },
+ "MATH.G5.NUMBER.ADDITION.ADD_IN_SITUATIONS": {
+  "skill": "MATH.G5.NUMBER.ADDITION.ADD_IN_SITUATIONS",
+  "key_step": "The child picks out only the quantities the question combines, writes them in figures with zeros, and adds.",
+  "floor": {
+   "prerequisite": "Adds 6-digit numbers.",
+   "question": "Write 'two hundred and five thousand' in figures.",
+   "answer": "205,000"
+  },
+  "representations": [
+   "the story",
+   "a bar model with parts and a whole",
+   "the sum and a sentence answer"
+  ],
+  "steps": [
+   "Read; underline what the question asks.",
+   "Draw a bar: parts and whole.",
+   "Choose only the needed numbers.",
+   "Add; answer in a sentence."
+  ],
+  "contexts": [
+   "a matatu Sacco's earnings over two months",
+   "trees planted by a county",
+   "money raised at a harambee"
+  ],
+  "board": [
+   {
+    "beat": "write",
+    "do": "Write the story: a Sacco with 15 matatus earned Sh 213,400 in January and Sh 198,750 in February. How much in both months?"
+   },
+   {
+    "beat": "draw",
+    "do": "Draw a bar with two parts and a brace over the whole."
+   },
+   {
+    "beat": "point",
+    "do": "Point at 15.",
+    "say": "Is the number of matatus part of the money?"
+   },
+   {
+    "beat": "pause",
+    "do": "Wait for the child to choose the two amounts."
+   }
+  ],
+  "misconceptions": [
+   {
+    "code": "MATH.G5.NUMBER.ADDITION.ADD_IN_SITUATIONS.M_ADD_ALL_NUMBERS",
+    "listen_for": [
+     "plus 15"
+    ],
+    "ask": "Is 15 matatus an amount of shillings?",
+    "repair": "Put only shillings on the bar; the 15 is extra information.",
+    "error": "Adds every number in the problem, including information that is not needed.",
+    "example": {
+     "question": "A matatu Sacco with 15 matatus earned Sh 213,400 in January and Sh 142,300 in February. How much did it earn in the two months?",
+     "wrong_answer": "Sh 355,715",
+     "correct_answer": "Sh 355,700"
+    }
+   },
+   {
+    "code": "MATH.G5.NUMBER.ADDITION.ADD_IN_SITUATIONS.M_KEYWORD_ADD",
+    "listen_for": [
+     "it says received so add"
+    ],
+    "ask": "Draw the bar. Is the number we want the whole or a part?",
+    "repair": "The bar shows a missing part, so subtract, whatever the words say.",
+    "error": "Adds whenever words like 'more', 'received' or 'after' appear, even when the question asks for a missing part.",
+    "example": {
+     "question": "A school fund had Sh 245,300. After a harambee it had Sh 618,500. How much was raised at the harambee?",
+     "wrong_answer": "Sh 863,800",
+     "correct_answer": "Sh 373,200"
+    }
+   }
+  ],
+  "checks": [
+   {
+    "question": "A Sacco with 15 matatus earned Sh 213,400 in January and Sh 198,750 in February. Total for both months?",
+    "answer": "Sh 412,150",
+    "shows": "ignores the 15"
+   },
+   {
+    "question": "A county planted two hundred and five thousand trees in March and forty thousand and sixty in April. Total?",
+    "answer": "245,060 trees",
+    "shows": "words to figures with zeros"
+   }
+  ],
+  "name": "Solve real-life addition problems with numbers up to 6 digits",
+  "sub_strand": "MATH.G5.NUMBER.ADDITION",
+  "sub_strand_name": "Addition (up to 6 digits)",
+  "status": "draft: written 13 Nov 2026 from research round 3; shorter entries; not yet checked by a Kenyan maths teacher; not loaded by the live tutor"
+ },
+ "MATH.G5.NUMBER.ADDITION.ESTIMATE_SUM_NEAREST_100": {
+  "skill": "MATH.G5.NUMBER.ADDITION.ESTIMATE_SUM_NEAREST_100",
+  "key_step": "The child rounds each number to the nearest hundred by the tens digit, then adds the rounded numbers.",
+  "floor": {
+   "prerequisite": "Rounds to the nearest hundred.",
+   "question": "Round 4,367 to the nearest hundred.",
+   "answer": "4,400"
+  },
+  "representations": [
+   "number lines between hundreds",
+   "rounded numbers",
+   "the estimate"
+  ],
+  "steps": [
+   "Round each number by its tens digit.",
+   "Bridge carefully (4,960 becomes 5,000).",
+   "Add the rounded numbers."
+  ],
+  "contexts": [
+   "estimating a shop bill",
+   "estimating people at two events",
+   "estimating total distance"
+  ],
+  "board": [
+   {
+    "beat": "write",
+    "do": "Write 4,367 + 2,851 with an empty box above each for its rounded value."
+   },
+   {
+    "beat": "child_draws",
+    "do": "Child writes each rounded number."
+   },
+   {
+    "beat": "pause",
+    "do": "Wait for the estimate."
+   }
+  ],
+  "misconceptions": [
+   {
+    "code": "MATH.G5.NUMBER.ADDITION.ESTIMATE_SUM_NEAREST_100.M_ROUND_BY_TRUNCATING",
+    "listen_for": [
+     "4,300 and 2,800"
+    ],
+    "ask": "On a number line, is 4,367 nearer 4,300 or 4,400?",
+    "repair": "Rounding goes to the nearer hundred; 6 tens is past halfway.",
+    "error": "Always rounds down by replacing the tens and ones with zeros, whatever the tens digit.",
+    "example": {
+     "question": "Estimate 4,367 + 2,851 by rounding each number to the nearest hundred.",
+     "wrong_answer": "4,300 + 2,800 = 7,100",
+     "correct_answer": "4,400 + 2,900 = 7,300"
+    }
+   },
+   {
+    "code": "MATH.G5.NUMBER.ADDITION.ESTIMATE_SUM_NEAREST_100.M_ROUND_BRIDGE",
+    "listen_for": [
+     "4,1000"
+    ],
+    "ask": "What hundred comes after 4,900?",
+    "repair": "Count on along the line: 4,900 then 5,000.",
+    "error": "Cannot round when the hundreds digit is 9 and must round up, writing things like '4,1000' or leaving the thousands unchanged.",
+    "example": {
+     "question": "Estimate 4,960 + 3,215 by rounding each number to the nearest hundred.",
+     "wrong_answer": "4,000 + 3,200 = 7,200",
+     "correct_answer": "5,000 + 3,200 = 8,200"
+    }
+   }
+  ],
+  "checks": [
+   {
+    "question": "Estimate 4,367 + 2,851 by rounding each to the nearest hundred.",
+    "answer": "4,400 + 2,900 = 7,300",
+    "shows": "rounds each by the tens digit"
+   },
+   {
+    "question": "Estimate 4,960 + 3,215 to the nearest hundred.",
+    "answer": "5,000 + 3,200 = 8,200",
+    "shows": "bridges"
+   }
+  ],
+  "name": "Estimate a sum by rounding the addends to the nearest hundred",
+  "sub_strand": "MATH.G5.NUMBER.ADDITION",
+  "sub_strand_name": "Addition (up to 6 digits)",
+  "status": "draft: written 13 Nov 2026 from research round 3; shorter entries; not yet checked by a Kenyan maths teacher; not loaded by the live tutor"
+ },
+ "MATH.G5.NUMBER.ADDITION.ESTIMATE_SUM_NEAREST_1000": {
+  "skill": "MATH.G5.NUMBER.ADDITION.ESTIMATE_SUM_NEAREST_1000",
+  "key_step": "The child rounds each number to the nearest thousand by the hundreds digit, keeps the zeros, and adds.",
+  "floor": {
+   "prerequisite": "Rounds to the nearest thousand.",
+   "question": "Round 23,640 to the nearest thousand.",
+   "answer": "24,000"
+  },
+  "representations": [
+   "number line between thousands",
+   "rounded numbers with zeros",
+   "the estimate"
+  ],
+  "steps": [
+   "Look at the hundreds digit.",
+   "Round each number.",
+   "Keep the zeros.",
+   "Add."
+  ],
+  "contexts": [
+   "estimating money for a school trip",
+   "estimating crowd sizes",
+   "estimating a harvest"
+  ],
+  "board": [
+   {
+    "beat": "write",
+    "do": "Write 46,409 + 31,750."
+   },
+   {
+    "beat": "point",
+    "do": "Point at the hundreds digit of each.",
+    "say": "Which digit decides for the nearest thousand?"
+   },
+   {
+    "beat": "pause",
+    "do": "Wait for the child to round both and add."
+   }
+  ],
+  "misconceptions": [
+   {
+    "code": "MATH.G5.NUMBER.ADDITION.ESTIMATE_SUM_NEAREST_1000.M_DECIDE_BY_LAST_DIGIT",
+    "listen_for": [
+     "the 9 rounds it up"
+    ],
+    "ask": "Which place are we rounding to, and which digit is just to its right?",
+    "repair": "Only the digit right after the thousands decides.",
+    "error": "Decides whether to round up by looking at the last (ones) digit instead of the hundreds digit.",
+    "example": {
+     "question": "Estimate 46,409 + 31,750 by rounding each number to the nearest thousand.",
+     "wrong_answer": "47,000 + 32,000 = 79,000",
+     "correct_answer": "46,000 + 32,000 = 78,000"
+    }
+   },
+   {
+    "code": "MATH.G5.NUMBER.ADDITION.ESTIMATE_SUM_NEAREST_1000.M_DROP_ZEROS_ROUNDED",
+    "listen_for": [
+     "129 plus 205"
+    ],
+    "ask": "Is 129 near 128,700?",
+    "repair": "Rounding keeps the size: write the zeros.",
+    "error": "Writes the rounded number without its zeros (e.g. '129' for 129,000), so the estimate is far too small.",
+    "example": {
+     "question": "Estimate 128,700 + 205,300 by rounding each number to the nearest thousand.",
+     "wrong_answer": "334",
+     "correct_answer": "129,000 + 205,000 = 334,000"
+    }
+   }
+  ],
+  "checks": [
+   {
+    "question": "Estimate 46,409 + 31,750 to the nearest thousand.",
+    "answer": "46,000 + 32,000 = 78,000",
+    "shows": "uses the hundreds digit"
+   },
+   {
+    "question": "Estimate 128,700 + 205,300 to the nearest thousand.",
+    "answer": "129,000 + 205,000 = 334,000",
+    "shows": "keeps the zeros"
+   }
+  ],
+  "name": "Estimate a sum by rounding the addends to the nearest thousand",
+  "sub_strand": "MATH.G5.NUMBER.ADDITION",
+  "sub_strand_name": "Addition (up to 6 digits)",
+  "status": "draft: written 13 Nov 2026 from research round 3; shorter entries; not yet checked by a Kenyan maths teacher; not loaded by the live tutor"
+ },
+ "MATH.G5.NUMBER.ADDITION.ESTIMATE_TO_CHECK_SUM": {
+  "skill": "MATH.G5.NUMBER.ADDITION.ESTIMATE_TO_CHECK_SUM",
+  "key_step": "The child compares an exact sum with an estimate and judges it reasonable if it is close (not equal), and suspicious if it is far off.",
+  "floor": {
+   "prerequisite": "Estimates a sum.",
+   "question": "Estimate 386,450 + 207,380 to the nearest thousand.",
+   "answer": "386,000 + 207,000 = 593,000"
+  },
+  "representations": [
+   "an exact answer and an estimate side by side",
+   "a number line showing both",
+   "a judgement"
+  ],
+  "steps": [
+   "Estimate.",
+   "Place the exact answer and the estimate on a line.",
+   "Close means reasonable; far means check again."
+  ],
+  "contexts": [
+   "checking a shop bill",
+   "checking a classmate's homework",
+   "checking a fundraising total"
+  ],
+  "board": [
+   {
+    "beat": "write",
+    "do": "Write Wanjiru's answer: 386,450 + 207,380 = 493,830."
+   },
+   {
+    "beat": "predict",
+    "do": "Ask for an estimate before judging.",
+    "say": "Estimate first. About how much?"
+   },
+   {
+    "beat": "pause",
+    "do": "Wait for the child to compare and judge."
+   }
+  ],
+  "misconceptions": [
+   {
+    "code": "MATH.G5.NUMBER.ADDITION.ESTIMATE_TO_CHECK_SUM.M_NO_SENSE_CHECK",
+    "listen_for": [
+     "it looks fine"
+    ],
+    "ask": "Is 493,830 near your estimate?",
+    "repair": "100,000 apart is too far: something went wrong. Always compare.",
+    "error": "Accepts an exact answer as reasonable without comparing it with an estimate, even when it is far off.",
+    "example": {
+     "question": "Wanjiru worked out 386,450 + 207,380 = 493,830. Is her answer reasonable?",
+     "wrong_answer": "Yes",
+     "correct_answer": "No. The estimate is 386,000 + 207,000 = 593,000; the correct sum is 593,830."
+    }
+   },
+   {
+    "code": "MATH.G5.NUMBER.ADDITION.ESTIMATE_TO_CHECK_SUM.M_EXACT_MUST_EQUAL_ESTIMATE",
+    "listen_for": [
+     "it's not the same so wrong"
+    ],
+    "ask": "Did we round the numbers to make the estimate?",
+    "repair": "An estimate is close, not exact; small differences are expected.",
+    "error": "Thinks a correct exact answer must equal the estimate, so rejects correct answers that are close to it.",
+    "example": {
+     "question": "The estimate for 386,450 + 207,380 is 593,000. Otieno's exact answer is 593,830. Is Otieno wrong?",
+     "wrong_answer": "Yes, because it is not 593,000",
+     "correct_answer": "No, 593,830 is correct and close to the estimate"
+    }
+   }
+  ],
+  "checks": [
+   {
+    "question": "Wanjiru worked out 386,450 + 207,380 = 493,830. Is it reasonable?",
+    "answer": "No; the estimate is about 593,000",
+    "shows": "spots a far-off answer"
+   },
+   {
+    "question": "The estimate is 593,000 and the exact answer is 593,830. Wrong?",
+    "answer": "No; it is close, so reasonable",
+    "shows": "close, not equal"
+   }
+  ],
+  "name": "Use an estimate to judge whether an exact sum is reasonable (proposed)",
+  "sub_strand": "MATH.G5.NUMBER.ADDITION",
+  "sub_strand_name": "Addition (up to 6 digits)",
+  "status": "draft: written 13 Nov 2026 from research round 3; shorter entries; not yet checked by a Kenyan maths teacher; not loaded by the live tutor"
+ },
+ "MATH.G5.NUMBER.ADDITION.ADD_PATTERN_EXTEND": {
+  "skill": "MATH.G5.NUMBER.ADDITION.ADD_PATTERN_EXTEND",
+  "key_step": "The child finds the step between neighbouring terms and adds it to get the next or missing terms, regrouping across places.",
+  "floor": {
+   "prerequisite": "Adds 6-digit numbers.",
+   "question": "What is added each time: 10, 20, 30, 40?",
+   "answer": "10"
+  },
+  "representations": [
+   "a savings story",
+   "jumps on a number line",
+   "the pattern"
+  ],
+  "steps": [
+   "Find the difference between two neighbours.",
+   "Check it with another pair.",
+   "Add the step for the next term.",
+   "For the nth term, count the jumps (n - 1)."
+  ],
+  "contexts": [
+   "a chama saving the same each month",
+   "a cooperative's savings",
+   "a school's growing library"
+  ],
+  "board": [
+   {
+    "beat": "write",
+    "do": "Write 450,000, 475,000, ___, 525,000."
+   },
+   {
+    "beat": "draw",
+    "do": "Draw jumps between the first two terms."
+   },
+   {
+    "beat": "pause",
+    "do": "Wait for the child to find the step and the missing term."
+   }
+  ],
+  "misconceptions": [
+   {
+    "code": "MATH.G5.NUMBER.ADDITION.ADD_PATTERN_EXTEND.M_PATTERN_NON_ADJACENT_STEP",
+    "listen_for": [
+     "75,000"
+    ],
+    "ask": "Are 450,000 and 525,000 next to each other?",
+    "repair": "Find the step from two neighbours.",
+    "error": "Finds the step from two terms that are not next to each other, so the missing term is wrong.",
+    "example": {
+     "question": "Fill in the missing number: 450,000, 475,000, ___, 525,000",
+     "wrong_answer": "550,000",
+     "correct_answer": "500,000"
+    }
+   },
+   {
+    "code": "MATH.G5.NUMBER.ADDITION.ADD_PATTERN_EXTEND.M_PATTERN_OFF_BY_ONE",
+    "listen_for": [
+     "I added it 5 times for month 5"
+    ],
+    "ask": "How many jumps from month 1 to month 5?",
+    "repair": "Draw the months and count the jumps between them: four.",
+    "error": "To find the nth term, adds the step n times instead of n − 1 times.",
+    "example": {
+     "question": "A co-operative had Sh 100,000 in month 1 and saves Sh 25,000 more each month. How much does it have in month 5?",
+     "wrong_answer": "Sh 225,000",
+     "correct_answer": "Sh 200,000"
+    }
+   }
+  ],
+  "checks": [
+   {
+    "question": "Fill in: 450,000, 475,000, ___, 525,000.",
+    "answer": "500,000",
+    "shows": "step from neighbours"
+   },
+   {
+    "question": "A cooperative had Sh 100,000 in month 1 and saves Sh 25,000 more each month. How much in month 5?",
+    "answer": "Sh 200,000",
+    "shows": "n - 1 jumps"
+   }
+  ],
+  "name": "Find the rule and extend or complete addition patterns",
+  "sub_strand": "MATH.G5.NUMBER.ADDITION",
+  "sub_strand_name": "Addition (up to 6 digits)",
+  "status": "draft: written 13 Nov 2026 from research round 3; shorter entries; not yet checked by a Kenyan maths teacher; not loaded by the live tutor"
+ },
+ "MATH.G5.NUMBER.ADDITION.ADD_PATTERN_CREATE": {
+  "skill": "MATH.G5.NUMBER.ADDITION.ADD_PATTERN_CREATE",
+  "key_step": "The child makes a pattern by adding the same value each time and states the rule by the value added (add 10,000), not by a digit change.",
+  "floor": {
+   "prerequisite": "Extends an addition pattern.",
+   "question": "Next: 20,000, 30,000, 40,000?",
+   "answer": "50,000"
+  },
+  "representations": [
+   "a chama contribution story",
+   "the pattern written out",
+   "the rule in words"
+  ],
+  "steps": [
+   "Choose a start and a step.",
+   "Add the step each time, regrouping.",
+   "State the rule as the value added.",
+   "Check each step is the same size."
+  ],
+  "contexts": [
+   "a chama adding the same each month",
+   "a water tank filling",
+   "a farm adding trees each year"
+  ],
+  "board": [
+   {
+    "beat": "write",
+    "do": "Write a start, 96,000, and a rule, add 2,000."
+   },
+   {
+    "beat": "child_draws",
+    "do": "Child writes the next four terms."
+   },
+   {
+    "beat": "pause",
+    "do": "Wait for the child to check the step across 100,000."
+   }
+  ],
+  "misconceptions": [
+   {
+    "code": "MATH.G5.NUMBER.ADDITION.ADD_PATTERN_CREATE.M_RULE_AS_DIGIT_CHANGE",
+    "listen_for": [
+     "add 1"
+    ],
+    "ask": "The digit went up by 1, but what is that 1 worth?",
+    "repair": "Say the rule with the place value: add 10,000.",
+    "error": "Describes the rule by how a digit changes ('add 1') rather than by the value added ('add 10,000').",
+    "example": {
+     "question": "What is the rule for this pattern: 200,500, 210,500, 220,500, 230,500?",
+     "wrong_answer": "Add 1",
+     "correct_answer": "Add 10,000"
+    }
+   },
+   {
+    "code": "MATH.G5.NUMBER.ADDITION.ADD_PATTERN_CREATE.M_PATTERN_RULE_DRIFT",
+    "listen_for": [
+     "100,000 then 101,000"
+    ],
+    "ask": "Subtract each pair. Are the steps all the same?",
+    "repair": "Check every step; regroup carefully at 100,000.",
+    "error": "Starts with the given rule but makes later steps the wrong size, often where a term crosses a place boundary, so the pattern is not constant.",
+    "example": {
+     "question": "Start at 120,000 and add 15,000 each time. Write the first four numbers.",
+     "wrong_answer": "120,000, 135,000, 140,000, 155,000",
+     "correct_answer": "120,000, 135,000, 150,000, 165,000"
+    }
+   }
+  ],
+  "checks": [
+   {
+    "question": "Start at 96,000 and add 2,000 each time. Write four terms.",
+    "answer": "98,000, 100,000, 102,000, 104,000",
+    "shows": "constant step across a boundary"
+   },
+   {
+    "question": "What is the rule: 20,000, 30,000, 40,000?",
+    "answer": "Add 10,000",
+    "shows": "rule by value"
+   }
+  ],
+  "name": "Create and describe addition patterns in real-life situations",
+  "sub_strand": "MATH.G5.NUMBER.ADDITION",
+  "sub_strand_name": "Addition (up to 6 digits)",
+  "status": "draft: written 13 Nov 2026 from research round 3; shorter entries; not yet checked by a Kenyan maths teacher; not loaded by the live tutor"
+ },
+ "MATH.G5.NUMBER.SUBTRACTION.SUB_6DIGIT_NO_REGROUP": {
+  "skill": "MATH.G5.NUMBER.SUBTRACTION.SUB_6DIGIT_NO_REGROUP",
+  "key_step": "The child lines numbers up from the right and subtracts each column, writing 0 where a column difference is 0 and keeping every place.",
+  "floor": {
+   "prerequisite": "Names places up to hundred thousands.",
+   "question": "In 3,241, which digit is in the thousands place?",
+   "answer": "3"
+  },
+  "representations": [
+   "money notes taken away",
+   "place value chart",
+   "column subtraction"
+  ],
+  "steps": [
+   "Estimate.",
+   "Right-align in the chart.",
+   "Subtract each column; n - 0 = n; equal digits give 0.",
+   "Check by adding back."
+  ],
+  "contexts": [
+   "money left after paying fees",
+   "maize sold from a store",
+   "people who left a stadium"
+  ],
+  "board": [
+   {
+    "beat": "write",
+    "do": "Write 573,846 - 201,030 in columns."
+   },
+   {
+    "beat": "point",
+    "do": "Point at 6 - 0.",
+    "say": "Six take away nothing leaves how many?"
+   },
+   {
+    "beat": "pause",
+    "do": "Wait for the child's answer."
+   },
+   {
+    "beat": "child_draws",
+    "do": "Child finishes the columns."
+   }
+  ],
+  "misconceptions": [
+   {
+    "code": "MATH.G5.NUMBER.SUBTRACTION.SUB_6DIGIT_NO_REGROUP.M_DIGIT_MINUS_ZERO_IS_ZERO",
+    "listen_for": [
+     "minus zero is zero"
+    ],
+    "ask": "You have 6 shillings and give away none. How many are left?",
+    "repair": "Taking away nothing leaves everything.",
+    "error": "Writes 0 when subtracting 0 from a digit (thinks n − 0 = 0).",
+    "example": {
+     "question": "573,846 − 201,030",
+     "wrong_answer": "302,010",
+     "correct_answer": "372,816"
+    }
+   },
+   {
+    "code": "MATH.G5.NUMBER.SUBTRACTION.SUB_6DIGIT_NO_REGROUP.M_DROP_INTERNAL_ZEROS",
+    "listen_for": [
+     "four hundred and four"
+    ],
+    "ask": "How many digits should the answer have?",
+    "repair": "Every column keeps its place; write the 0s.",
+    "error": "Leaves gaps where a column difference is 0, then closes them up and reads the answer as a much smaller number.",
+    "example": {
+     "question": "658,947 − 258,543",
+     "wrong_answer": "444",
+     "correct_answer": "400,404"
+    }
+   }
+  ],
+  "checks": [
+   {
+    "question": "573,846 - 201,030",
+    "answer": "372,816",
+    "shows": "n - 0 = n"
+   },
+   {
+    "question": "658,947 - 258,543",
+    "answer": "400,404",
+    "shows": "internal zeros kept"
+   }
+  ],
+  "name": "Subtract up to 6-digit numbers without regrouping",
+  "sub_strand": "MATH.G5.NUMBER.SUBTRACTION",
+  "sub_strand_name": "Subtraction (up to 6 digits)",
+  "status": "draft: written 13 Nov 2026 from research round 3; shorter entries; not yet checked by a Kenyan maths teacher; not loaded by the live tutor"
+ },
+ "MATH.G5.NUMBER.SUBTRACTION.SUB_6DIGIT_REGROUP": {
+  "skill": "MATH.G5.NUMBER.SUBTRACTION.SUB_6DIGIT_REGROUP",
+  "key_step": "The child exchanges one from the next column (reducing it by one) when the top digit is smaller than the bottom digit, and checks by adding back.",
+  "floor": {
+   "prerequisite": "Subtracts 3-digit numbers with exchange.",
+   "question": "52 - 28 =",
+   "answer": "24"
+  },
+  "representations": [
+   "exchanging a note for ten smaller notes",
+   "column subtraction with crossings",
+   "the add-back check"
+  ],
+  "steps": [
+   "Estimate.",
+   "Subtract from the right; if the top is smaller, exchange.",
+   "Cross out and reduce the next digit.",
+   "Check by adding back."
+  ],
+  "contexts": [
+   "money left after a purchase",
+   "bags of maize left after sales",
+   "the difference between two counties' populations"
+  ],
+  "board": [
+   {
+    "beat": "write",
+    "do": "Write 524,316 - 182,549 in columns."
+   },
+   {
+    "beat": "point",
+    "do": "Point at 6 above 9.",
+    "say": "Can we take 9 from 6?"
+   },
+   {
+    "beat": "pause",
+    "do": "Wait for the child to suggest exchanging."
+   },
+   {
+    "beat": "child_draws",
+    "do": "Child exchanges and continues."
+   }
+  ],
+  "misconceptions": [
+   {
+    "code": "MATH.G5.NUMBER.SUBTRACTION.SUB_6DIGIT_REGROUP.M_SMALLER_FROM_LARGER",
+    "listen_for": [
+     "9 take 6",
+     "462,233"
+    ],
+    "ask": "Add your answer to 182,549. Do you get 524,316?",
+    "repair": "The check fails. The top is what we have: exchange one ten for ten ones.",
+    "error": "In each column, subtracts the smaller digit from the larger, whichever is on top, so never regroups.",
+    "example": {
+     "question": "524,316 − 182,549",
+     "wrong_answer": "462,233",
+     "correct_answer": "341,767"
+    }
+   },
+   {
+    "code": "MATH.G5.NUMBER.SUBTRACTION.SUB_6DIGIT_REGROUP.M_REGROUP_NO_DECREMENT",
+    "listen_for": [
+     "I added ten to the top"
+    ],
+    "ask": "Where did that ten come from?",
+    "repair": "Cross out the digit you took from and write one less.",
+    "error": "Adds 10 to the top digit when regrouping but forgets to reduce the digit in the next column.",
+    "example": {
+     "question": "724,352 − 315,128",
+     "wrong_answer": "419,234",
+     "correct_answer": "409,224"
+    }
+   }
+  ],
+  "checks": [
+   {
+    "question": "524,316 - 182,549",
+    "answer": "341,767",
+    "shows": "exchange in several columns"
+   },
+   {
+    "question": "724,352 - 315,128",
+    "answer": "409,224",
+    "shows": "reduces the next digit"
+   }
+  ],
+  "name": "Subtract up to 6-digit numbers with regrouping (non-zero digits)",
+  "sub_strand": "MATH.G5.NUMBER.SUBTRACTION",
+  "sub_strand_name": "Subtraction (up to 6 digits)",
+  "status": "draft: written 13 Nov 2026 from research round 3; shorter entries; not yet checked by a Kenyan maths teacher; not loaded by the live tutor"
+ },
+ "MATH.G5.NUMBER.SUBTRACTION.SUB_REGROUP_ACROSS_ZEROS": {
+  "skill": "MATH.G5.NUMBER.SUBTRACTION.SUB_REGROUP_ACROSS_ZEROS",
+  "key_step": "The child exchanges step by step across zeros: the first non-zero digit gives one, each zero becomes ten then gives one, so zeros become 9 and the last column gets 10.",
+  "floor": {
+   "prerequisite": "Subtracts with regrouping.",
+   "question": "100 - 37 =",
+   "answer": "63"
+  },
+  "representations": [
+   "breaking a 1,000-shilling note into hundreds, tens, ones",
+   "column subtraction with each exchange shown",
+   "the add-back check"
+  ],
+  "steps": [
+   "Estimate.",
+   "Exchange from the first non-zero digit.",
+   "Pass the exchange along: each zero becomes 9, the last becomes 10.",
+   "Subtract; check by adding back."
+  ],
+  "contexts": [
+   "change from a 1,000-shilling note",
+   "a 500,000-shilling budget with spending",
+   "a tank of 100,000 litres"
+  ],
+  "board": [
+   {
+    "beat": "write",
+    "do": "Write 500,000 - 237,468 in columns."
+   },
+   {
+    "beat": "draw",
+    "do": "Slowly break the 5 into 4 and pass ten along each zero, one column at a time.",
+    "say": "Watch the ten travel along."
+   },
+   {
+    "beat": "pause",
+    "do": "Wait for the child to say what each zero becomes."
+   },
+   {
+    "beat": "child_draws",
+    "do": "Child subtracts the columns."
+   }
+  ],
+  "misconceptions": [
+   {
+    "code": "MATH.G5.NUMBER.SUBTRACTION.SUB_REGROUP_ACROSS_ZEROS.M_ZERO_MINUS_DIGIT_IS_ZERO",
+    "listen_for": [
+     "you can't take from nothing"
+    ],
+    "ask": "Can you get change from a 1,000-shilling note?",
+    "repair": "Break the note: the zeros get filled by exchange.",
+    "error": "Writes 0 for any column where the top digit is 0 ('you can't take from nothing') instead of regrouping.",
+    "example": {
+     "question": "500,000 − 237,468",
+     "wrong_answer": "300,000",
+     "correct_answer": "262,532"
+    }
+   },
+   {
+    "code": "MATH.G5.NUMBER.SUBTRACTION.SUB_REGROUP_ACROSS_ZEROS.M_ZEROS_ALL_BECOME_TEN",
+    "listen_for": [
+     "all the zeros are ten"
+    ],
+    "ask": "After a zero gives one to its right, how many does it keep?",
+    "repair": "Each zero becomes ten, then gives one away: 9 is left.",
+    "error": "Changes every zero in the minuend to 10 and reduces the first non-zero digit only once, so each zero column is worked as 10 − digit.",
+    "example": {
+     "question": "500,000 − 237,468",
+     "wrong_answer": "273,642",
+     "correct_answer": "262,532"
+    }
+   }
+  ],
+  "checks": [
+   {
+    "question": "500,000 - 237,468",
+    "answer": "262,532",
+    "shows": "regrouping across many zeros"
+   },
+   {
+    "question": "40,005 - 12,368",
+    "answer": "27,637",
+    "shows": "zeros between non-zero digits"
+   }
+  ],
+  "name": "Subtract with regrouping across zeros",
+  "sub_strand": "MATH.G5.NUMBER.SUBTRACTION",
+  "sub_strand_name": "Subtraction (up to 6 digits)",
+  "status": "draft: written 13 Nov 2026 from research round 3; shorter entries; not yet checked by a Kenyan maths teacher; not loaded by the live tutor"
+ },
+ "MATH.G5.NUMBER.SUBTRACTION.SUB_WORD_PROBLEMS": {
+  "skill": "MATH.G5.NUMBER.SUBTRACTION.SUB_WORD_PROBLEMS",
+  "key_step": "The child draws a bar to see whether the question asks for a part or a difference, writes the subtraction with the larger number first, and ignores keyword traps.",
+  "floor": {
+   "prerequisite": "Subtracts 6-digit numbers.",
+   "question": "245,600 - 38,450 =",
+   "answer": "207,150"
+  },
+  "representations": [
+   "the story",
+   "a comparison bar model",
+   "the subtraction"
+  ],
+  "steps": [
+   "Read; say what is unknown.",
+   "Draw two bars or a part-whole bar.",
+   "Decide add or subtract from the bar.",
+   "Answer in a sentence."
+  ],
+  "contexts": [
+   "maize stored in two counties",
+   "money still needed for a school project",
+   "change after shopping"
+  ],
+  "board": [
+   {
+    "beat": "write",
+    "do": "Write: Kisumu stored 245,600 bags. This is 38,450 more than Nyeri. How many did Nyeri store?"
+   },
+   {
+    "beat": "draw",
+    "do": "Draw a long bar for Kisumu and a shorter one for Nyeri, with the gap marked 38,450."
+   },
+   {
+    "beat": "point",
+    "do": "Point at the shorter bar.",
+    "say": "Is Nyeri's bar longer or shorter?"
+   },
+   {
+    "beat": "pause",
+    "do": "Wait for the child to choose the operation."
+   }
+  ],
+  "misconceptions": [
+   {
+    "code": "MATH.G5.NUMBER.SUBTRACTION.SUB_WORD_PROBLEMS.M_KEYWORD_MORE_MEANS_ADD",
+    "listen_for": [
+     "more so add"
+    ],
+    "ask": "Who stored more, Kisumu or Nyeri?",
+    "repair": "Draw the bars; the word 'more' is about Kisumu. Nyeri's is the shorter bar: subtract.",
+    "error": "Adds whenever the word 'more' appears, even when the problem asks for the smaller quantity.",
+    "example": {
+     "question": "Kisumu stored 245,600 bags of maize. This is 38,450 more than Nyeri stored. How many bags did Nyeri store?",
+     "wrong_answer": "284,050 bags",
+     "correct_answer": "207,150 bags"
+    }
+   },
+   {
+    "code": "MATH.G5.NUMBER.SUBTRACTION.SUB_WORD_PROBLEMS.M_MISSING_PART_ADDS",
+    "listen_for": [
+     "add what they raised and the target"
+    ],
+    "ask": "Is the amount still needed bigger than the target?",
+    "repair": "On a part-whole bar, the missing part is whole minus the known part.",
+    "error": "Adds the two given numbers in a 'how much more is needed' problem instead of finding the missing part.",
+    "example": {
+     "question": "A school in Nakuru has raised Sh 85,250 towards a target of Sh 120,000. How much more does it need?",
+     "wrong_answer": "Sh 205,250",
+     "correct_answer": "Sh 34,750"
+    }
+   }
+  ],
+  "checks": [
+   {
+    "question": "Kisumu stored 245,600 bags, 38,450 more than Nyeri. How many did Nyeri store?",
+    "answer": "207,150 bags",
+    "shows": "ignores the keyword"
+   },
+   {
+    "question": "A school needs Sh 150,000 and has raised Sh 85,400. How much more is needed?",
+    "answer": "Sh 64,600",
+    "shows": "missing part"
+   }
+  ],
+  "name": "Solve real-life subtraction problems with up to 6-digit numbers",
+  "sub_strand": "MATH.G5.NUMBER.SUBTRACTION",
+  "sub_strand_name": "Subtraction (up to 6 digits)",
+  "status": "draft: written 13 Nov 2026 from research round 3; shorter entries; not yet checked by a Kenyan maths teacher; not loaded by the live tutor"
+ },
+ "MATH.G5.NUMBER.SUBTRACTION.ROUND_NEAREST_100_1000": {
+  "skill": "MATH.G5.NUMBER.SUBTRACTION.ROUND_NEAREST_100_1000",
+  "key_step": "The child looks at the digit to the right of the rounding place, rounds, replaces the digits to the right with zeros, and carries when a 9 rounds up.",
+  "floor": {
+   "prerequisite": "Rounds to the nearest ten.",
+   "question": "Round 46 to the nearest ten.",
+   "answer": "50"
+  },
+  "representations": [
+   "number line between two hundreds or thousands",
+   "the rounding digit and its neighbour highlighted",
+   "the rounded number"
+  ],
+  "steps": [
+   "Underline the rounding place.",
+   "Look at the digit to its right.",
+   "Round; zeros after.",
+   "Carry if a 9 rounds up."
+  ],
+  "contexts": [
+   "about how many fans at a match",
+   "about how much a car costs",
+   "about how many people in a town"
+  ],
+  "board": [
+   {
+    "beat": "write",
+    "do": "Write 46,382; underline the hundreds digit."
+   },
+   {
+    "beat": "point",
+    "do": "Point at the digit just right of the underline.",
+    "say": "Which digit decides?"
+   },
+   {
+    "beat": "pause",
+    "do": "Wait for the child to round."
+   }
+  ],
+  "misconceptions": [
+   {
+    "code": "MATH.G5.NUMBER.SUBTRACTION.ROUND_NEAREST_100_1000.M_ROUND_USES_OWN_DIGIT",
+    "listen_for": [
+     "3 is small so down"
+    ],
+    "ask": "Which digit sits just to the right of the hundreds?",
+    "repair": "The neighbour on the right decides, not the digit itself.",
+    "error": "Looks at the digit in the rounding place itself instead of the digit to its right to decide whether to round up.",
+    "example": {
+     "question": "Round 46,382 to the nearest thousand.",
+     "wrong_answer": "47,000",
+     "correct_answer": "46,000"
+    }
+   },
+   {
+    "code": "MATH.G5.NUMBER.SUBTRACTION.ROUND_NEAREST_100_1000.M_ROUND_NO_CARRY",
+    "listen_for": [
+     "239,000"
+    ],
+    "ask": "What hundred comes after 239,900?",
+    "repair": "Count on along the number line: 240,000.",
+    "error": "When rounding up a 9, writes 0 but does not carry 1 into the next place.",
+    "example": {
+     "question": "Round 239,962 to the nearest hundred.",
+     "wrong_answer": "239,000",
+     "correct_answer": "240,000"
+    }
+   }
+  ],
+  "checks": [
+   {
+    "question": "Round 46,382 to the nearest hundred.",
+    "answer": "46,400",
+    "shows": "neighbour decides, zeros after"
+   },
+   {
+    "question": "Round 239,962 to the nearest hundred.",
+    "answer": "240,000",
+    "shows": "carries"
+   }
+  ],
+  "name": "Round numbers to the nearest hundred and nearest thousand",
+  "sub_strand": "MATH.G5.NUMBER.SUBTRACTION",
+  "sub_strand_name": "Subtraction (up to 6 digits)",
+  "status": "draft: written 13 Nov 2026 from research round 3; shorter entries; not yet checked by a Kenyan maths teacher; not loaded by the live tutor"
+ },
+ "MATH.G5.NUMBER.SUBTRACTION.ESTIMATE_DIFFERENCE": {
+  "skill": "MATH.G5.NUMBER.SUBTRACTION.ESTIMATE_DIFFERENCE",
+  "key_step": "The child rounds both numbers first, then subtracts the rounded numbers.",
+  "floor": {
+   "prerequisite": "Rounds to the nearest hundred and thousand.",
+   "question": "Round 6,480 to the nearest hundred.",
+   "answer": "6,500"
+  },
+  "representations": [
+   "two numbers on a line",
+   "rounded numbers",
+   "the estimate"
+  ],
+  "steps": [
+   "Round both numbers as asked.",
+   "Subtract the rounded numbers.",
+   "Use the estimate to check an exact answer."
+  ],
+  "contexts": [
+   "about how much more one county harvested",
+   "about how much change",
+   "about the difference in two prices"
+  ],
+  "board": [
+   {
+    "beat": "write",
+    "do": "Write 6,480 - 2,550 with boxes above each number."
+   },
+   {
+    "beat": "child_draws",
+    "do": "Child rounds both numbers into the boxes."
+   },
+   {
+    "beat": "pause",
+    "do": "Wait for the estimate."
+   }
+  ],
+  "misconceptions": [
+   {
+    "code": "MATH.G5.NUMBER.SUBTRACTION.ESTIMATE_DIFFERENCE.M_EXACT_THEN_ROUND",
+    "listen_for": [
+     "I worked it out then rounded"
+    ],
+    "ask": "Is an estimate meant to be quick?",
+    "repair": "Round first so the subtraction is easy to do in the head.",
+    "error": "Works out the exact difference first and then rounds it, instead of rounding both numbers first.",
+    "example": {
+     "question": "Estimate 6,480 − 2,550 by rounding each number to the nearest thousand.",
+     "wrong_answer": "4,000",
+     "correct_answer": "3,000 (6,000 − 3,000)"
+    }
+   },
+   {
+    "code": "MATH.G5.NUMBER.SUBTRACTION.ESTIMATE_DIFFERENCE.M_ROUND_ONLY_ONE",
+    "listen_for": [
+     "I rounded the big one"
+    ],
+    "ask": "Did you round both numbers?",
+    "repair": "Round every number, then subtract.",
+    "error": "Rounds only the minuend (or only the subtrahend) and subtracts the other number exactly.",
+    "example": {
+     "question": "Estimate 58,640 − 23,270 by rounding to the nearest thousand.",
+     "wrong_answer": "35,730",
+     "correct_answer": "36,000"
+    }
+   }
+  ],
+  "checks": [
+   {
+    "question": "Estimate 6,480 - 2,550 by rounding each to the nearest hundred.",
+    "answer": "6,500 - 2,600 = 3,900",
+    "shows": "rounds both first"
+   },
+   {
+    "question": "Estimate 58,640 - 23,270 to the nearest thousand.",
+    "answer": "59,000 - 23,000 = 36,000",
+    "shows": "nearest thousand"
+   }
+  ],
+  "name": "Estimate a difference by rounding the minuend and subtrahend",
+  "sub_strand": "MATH.G5.NUMBER.SUBTRACTION",
+  "sub_strand_name": "Subtraction (up to 6 digits)",
+  "status": "draft: written 13 Nov 2026 from research round 3; shorter entries; not yet checked by a Kenyan maths teacher; not loaded by the live tutor"
+ },
+ "MATH.G5.NUMBER.SUBTRACTION.COMBINED_ADD_SUB_CALC": {
+  "skill": "MATH.G5.NUMBER.SUBTRACTION.COMBINED_ADD_SUB_CALC",
+  "key_step": "The child works from left to right in an expression with only additions and subtractions.",
+  "floor": {
+   "prerequisite": "Adds and subtracts large numbers.",
+   "question": "85,000 - 20,000 =",
+   "answer": "65,000"
+  },
+  "representations": [
+   "money in and out of a purse in order",
+   "the expression worked step by step",
+   "the result"
+  ],
+  "steps": [
+   "Read the expression left to right.",
+   "Do the first operation.",
+   "Use its result with the next."
+  ],
+  "contexts": [
+   "a purse: money in and out",
+   "a shop's stock over a week",
+   "passengers on and off a matatu"
+  ],
+  "board": [
+   {
+    "beat": "write",
+    "do": "Write 85,000 - 20,000 + 15,000."
+   },
+   {
+    "beat": "point",
+    "do": "Point at the first two numbers.",
+    "say": "What happens first, reading left to right?"
+   },
+   {
+    "beat": "pause",
+    "do": "Wait for the child's two steps."
+   }
+  ],
+  "misconceptions": [
+   {
+    "code": "MATH.G5.NUMBER.SUBTRACTION.COMBINED_ADD_SUB_CALC.M_ADD_BEFORE_SUBTRACT",
+    "listen_for": [
+     "50,000",
+     "I added first"
+    ],
+    "ask": "If you had 85,000, spent 20,000, then got 15,000, how much do you have?",
+    "repair": "Tell it as a purse story in order: left to right.",
+    "error": "Does the addition first in an expression like a − b + c, so subtracts the sum b + c.",
+    "example": {
+     "question": "85,000 − 20,000 + 15,000",
+     "wrong_answer": "50,000",
+     "correct_answer": "80,000"
+    }
+   }
+  ],
+  "checks": [
+   {
+    "question": "85,000 - 20,000 + 15,000",
+    "answer": "80,000",
+    "shows": "left to right"
+   },
+   {
+    "question": "40,000 + 12,000 - 7,000",
+    "answer": "45,000",
+    "shows": "left to right with addition first"
+   }
+  ],
+  "name": "Work out combined addition and subtraction expressions",
+  "sub_strand": "MATH.G5.NUMBER.SUBTRACTION",
+  "sub_strand_name": "Subtraction (up to 6 digits)",
+  "status": "draft: written 13 Nov 2026 from research round 3; shorter entries; not yet checked by a Kenyan maths teacher; not loaded by the live tutor"
+ },
+ "MATH.G5.NUMBER.SUBTRACTION.COMBINED_ADD_SUB_PROBLEMS": {
+  "skill": "MATH.G5.NUMBER.SUBTRACTION.COMBINED_ADD_SUB_PROBLEMS",
+  "key_step": "The child decides for each step of a story whether money (or items) goes in or out, and adds or subtracts accordingly.",
+  "floor": {
+   "prerequisite": "Works out combined add-subtract expressions.",
+   "question": "12,500 - 4,750 =",
+   "answer": "7,750"
+  },
+  "representations": [
+   "the story told in order",
+   "a table with in and out columns",
+   "the result"
+  ],
+  "steps": [
+   "List each event in order.",
+   "Mark each as in or out.",
+   "Work left to right.",
+   "Answer in a sentence."
+  ],
+  "contexts": [
+   "Wanjiku's shopping",
+   "a matatu's passengers on and off",
+   "a shop's stock"
+  ],
+  "board": [
+   {
+    "beat": "draw",
+    "do": "Draw a table with columns 'in' and 'out'."
+   },
+   {
+    "beat": "write",
+    "do": "Write the story: Wanjiku had Sh 12,500, spent Sh 4,750 on sugar, then received Sh 3,000 from her mother."
+   },
+   {
+    "beat": "child_draws",
+    "do": "Child puts each amount in the right column."
+   },
+   {
+    "beat": "pause",
+    "do": "Wait for the child's working."
+   }
+  ],
+  "misconceptions": [
+   {
+    "code": "MATH.G5.NUMBER.SUBTRACTION.COMBINED_ADD_SUB_PROBLEMS.M_ADD_ALL_NUMBERS",
+    "listen_for": [
+     "I added them all"
+    ],
+    "ask": "When Wanjiku spent money, did she get more or less?",
+    "repair": "Sort each amount into in or out before calculating.",
+    "error": "Adds every number in a multi-step story regardless of whether each amount goes in or out.",
+    "example": {
+     "question": "Wanjiku had Sh 12,500. She spent Sh 4,750 on sugar and flour, then her mother gave her Sh 3,200. How much does she have now?",
+     "wrong_answer": "Sh 20,450",
+     "correct_answer": "Sh 10,950"
+    }
+   }
+  ],
+  "checks": [
+   {
+    "question": "Wanjiku had Sh 12,500, spent Sh 4,750, then received Sh 3,000. How much now?",
+    "answer": "Sh 10,750",
+    "shows": "in and out"
+   },
+   {
+    "question": "A matatu had 14 passengers; 5 got off, then 3 got on. How many now?",
+    "answer": "12",
+    "shows": "steps in order"
+   }
+  ],
+  "name": "Solve multi-step real-life problems using addition and subtraction",
+  "sub_strand": "MATH.G5.NUMBER.SUBTRACTION",
+  "sub_strand_name": "Subtraction (up to 6 digits)",
+  "status": "draft: written 13 Nov 2026 from research round 3; shorter entries; not yet checked by a Kenyan maths teacher; not loaded by the live tutor"
+ },
+ "MATH.G5.NUMBER.SUBTRACTION.SUB_PATTERN_CONTINUE": {
+  "skill": "MATH.G5.NUMBER.SUBTRACTION.SUB_PATTERN_CONTINUE",
+  "key_step": "The child finds the amount subtracted each time, states the rule by its value (subtract 10,000), and regroups correctly at place boundaries.",
+  "floor": {
+   "prerequisite": "Subtracts large numbers.",
+   "question": "845,300 - 835,300 =",
+   "answer": "10,000"
+  },
+  "representations": [
+   "a decreasing story",
+   "backward jumps on a number line",
+   "the rule"
+  ],
+  "steps": [
+   "Subtract neighbours to find the step.",
+   "Check it on another pair.",
+   "State the rule with the value.",
+   "Continue, regrouping at boundaries."
+  ],
+  "contexts": [
+   "water used from a tank each day",
+   "a loan paid down",
+   "a stock of books given out"
+  ],
+  "board": [
+   {
+    "beat": "write",
+    "do": "Write 302,500; 301,500; 300,500; ___."
+   },
+   {
+    "beat": "point",
+    "do": "Point at the step from 300,500 to the next term.",
+    "say": "What happens when we go below 300,000?"
+   },
+   {
+    "beat": "pause",
+    "do": "Wait for the child's next term."
+   }
+  ],
+  "misconceptions": [
+   {
+    "code": "MATH.G5.NUMBER.SUBTRACTION.SUB_PATTERN_CONTINUE.M_PATTERN_BOUNDARY_NO_REGROUP",
+    "listen_for": [
+     "309,500"
+    ],
+    "ask": "Is 309,500 smaller than 300,500?",
+    "repair": "Going below 300,000 changes the hundred thousands too: 299,500.",
+    "error": "When a pattern crosses a place-value boundary, changes the 0 to 9 but does not reduce the digit to its left.",
+    "example": {
+     "question": "302,500; 301,500; 300,500; ___",
+     "wrong_answer": "309,500",
+     "correct_answer": "299,500"
+    }
+   },
+   {
+    "code": "MATH.G5.NUMBER.SUBTRACTION.SUB_PATTERN_CONTINUE.M_RULE_DIGIT_NOT_VALUE",
+    "listen_for": [
+     "subtract 1"
+    ],
+    "ask": "What is the 1 that changes worth?",
+    "repair": "Say the rule with place value: subtract 10,000.",
+    "error": "States the rule using the face value of the changing digit rather than its place value.",
+    "example": {
+     "question": "What is the rule? 845,300; 835,300; 825,300",
+     "wrong_answer": "Subtract 1",
+     "correct_answer": "Subtract 10,000"
+    }
+   }
+  ],
+  "checks": [
+   {
+    "question": "Next term: 302,500; 301,500; 300,500; ___",
+    "answer": "299,500",
+    "shows": "regroups at a boundary"
+   },
+   {
+    "question": "What is the rule: 845,300; 835,300; 825,300?",
+    "answer": "Subtract 10,000",
+    "shows": "rule by value"
+   }
+  ],
+  "name": "Identify the rule and complete subtraction patterns up to 1,000,000",
+  "sub_strand": "MATH.G5.NUMBER.SUBTRACTION",
+  "sub_strand_name": "Subtraction (up to 6 digits)",
+  "status": "draft: written 13 Nov 2026 from research round 3; shorter entries; not yet checked by a Kenyan maths teacher; not loaded by the live tutor"
+ },
+ "MATH.G5.NUMBER.SUBTRACTION.SUB_PATTERN_CREATE": {
+  "skill": "MATH.G5.NUMBER.SUBTRACTION.SUB_PATTERN_CREATE",
+  "key_step": "The child makes a decreasing pattern by subtracting the same value each time, keeping the step constant across boundaries.",
+  "floor": {
+   "prerequisite": "Continues subtraction patterns.",
+   "question": "Next: 50,000; 45,000; 40,000?",
+   "answer": "35,000"
+  },
+  "representations": [
+   "a story of something decreasing",
+   "the pattern",
+   "the steps checked"
+  ],
+  "steps": [
+   "Choose a start and a step.",
+   "Subtract the step each time.",
+   "Check each step by subtracting neighbours."
+  ],
+  "contexts": [
+   "a tank emptying",
+   "money spent each week",
+   "a forest losing trees"
+  ],
+  "board": [
+   {
+    "beat": "write",
+    "do": "Write start 1,000,000 and rule subtract 125,000."
+   },
+   {
+    "beat": "child_draws",
+    "do": "Child writes four terms."
+   },
+   {
+    "beat": "pause",
+    "do": "Wait for the child to check the steps."
+   }
+  ],
+  "misconceptions": [
+   {
+    "code": "MATH.G5.NUMBER.SUBTRACTION.SUB_PATTERN_CREATE.M_PATTERN_STEP_NOT_CONSTANT",
+    "listen_for": [
+     "it goes down"
+    ],
+    "ask": "Subtract each pair. Are the steps equal?",
+    "repair": "A pattern keeps the same step every time.",
+    "error": "Creates a 'pattern' that simply decreases, without keeping the same step each time, while stating one rule.",
+    "example": {
+     "question": "Create a pattern starting at 60,000 using the rule 'subtract 5,000'. Write the next four terms.",
+     "wrong_answer": "55,000; 50,000; 40,000; 35,000",
+     "correct_answer": "55,000; 50,000; 45,000; 40,000"
+    }
+   }
+  ],
+  "checks": [
+   {
+    "question": "Start at 1,000,000 and subtract 125,000 each time. Write four terms.",
+    "answer": "875,000; 750,000; 625,000; 500,000",
+    "shows": "constant step"
+   },
+   {
+    "question": "Create a pattern starting at 60,000 with rule subtract 5,000. First three terms after the start?",
+    "answer": "55,000; 50,000; 45,000",
+    "shows": "applies the rule"
+   }
+  ],
+  "name": "Create subtraction patterns from up to 1,000,000",
+  "sub_strand": "MATH.G5.NUMBER.SUBTRACTION",
+  "sub_strand_name": "Subtraction (up to 6 digits)",
+  "status": "draft: written 13 Nov 2026 from research round 3; shorter entries; not yet checked by a Kenyan maths teacher; not loaded by the live tutor"
+ },
  "MATH.G5.NUMBER.FRACTIONS.EQUIVALENT_FRACTIONS": {
   "skill": "MATH.G5.NUMBER.FRACTIONS.EQUIVALENT_FRACTIONS",
   "key_step": "The child says that cutting every piece into the same number of smaller pieces keeps the amount the same, so the top and the bottom are both multiplied by that number.",

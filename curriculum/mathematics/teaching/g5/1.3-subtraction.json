@@ -1,0 +1,221 @@
+{
+  "sub_strand": "MATH.G5.NUMBER.SUBTRACTION",
+  "title": "Subtraction (up to 6 digits)",
+  "status": "draft: written 13 Nov 2026 from research round 3; shorter entries; not yet checked by a Kenyan maths teacher; not loaded by the live tutor",
+  "sources": [49, 52, 60, 73],
+  "notes": "The best-known subtraction error is taking the smaller digit from the larger in every column. The fastest repair is not re-teaching but the child's own check: add the answer back (move R3-10). Exchanging a 1,000-shilling note for ten 100-shilling notes is the picture. For word problems, draw a bar: the words 'more' and 'left' mislead (source 73).",
+  "skills": [
+    {
+      "skill": "MATH.G5.NUMBER.SUBTRACTION.SUB_6DIGIT_NO_REGROUP",
+      "key_step": "The child lines numbers up from the right and subtracts each column, writing 0 where a column difference is 0 and keeping every place.",
+      "floor": {"prerequisite": "Names places up to hundred thousands.", "question": "In 3,241, which digit is in the thousands place?", "answer": "3"},
+      "representations": ["money notes taken away", "place value chart", "column subtraction"],
+      "steps": ["Estimate.", "Right-align in the chart.", "Subtract each column; n - 0 = n; equal digits give 0.", "Check by adding back."],
+      "contexts": ["money left after paying fees", "maize sold from a store", "people who left a stadium"],
+      "board": [
+        {"beat": "write", "do": "Write 573,846 - 201,030 in columns."},
+        {"beat": "point", "do": "Point at 6 - 0.", "say": "Six take away nothing leaves how many?"},
+        {"beat": "pause", "do": "Wait for the child's answer."},
+        {"beat": "child_draws", "do": "Child finishes the columns."}
+      ],
+      "misconceptions": [
+        {"code": "MATH.G5.NUMBER.SUBTRACTION.SUB_6DIGIT_NO_REGROUP.M_DIGIT_MINUS_ZERO_IS_ZERO", "listen_for": ["minus zero is zero"], "ask": "You have 6 shillings and give away none. How many are left?", "repair": "Taking away nothing leaves everything."},
+        {"code": "MATH.G5.NUMBER.SUBTRACTION.SUB_6DIGIT_NO_REGROUP.M_DROP_INTERNAL_ZEROS", "listen_for": ["four hundred and four"], "ask": "How many digits should the answer have?", "repair": "Every column keeps its place; write the 0s."}
+      ],
+      "checks": [
+        {"question": "573,846 - 201,030", "answer": "372,816", "shows": "n - 0 = n"},
+        {"question": "658,947 - 258,543", "answer": "400,404", "shows": "internal zeros kept"}
+      ]
+    },
+    {
+      "skill": "MATH.G5.NUMBER.SUBTRACTION.SUB_6DIGIT_REGROUP",
+      "key_step": "The child exchanges one from the next column (reducing it by one) when the top digit is smaller than the bottom digit, and checks by adding back.",
+      "floor": {"prerequisite": "Subtracts 3-digit numbers with exchange.", "question": "52 - 28 =", "answer": "24"},
+      "representations": ["exchanging a note for ten smaller notes", "column subtraction with crossings", "the add-back check"],
+      "steps": ["Estimate.", "Subtract from the right; if the top is smaller, exchange.", "Cross out and reduce the next digit.", "Check by adding back."],
+      "contexts": ["money left after a purchase", "bags of maize left after sales", "the difference between two counties' populations"],
+      "board": [
+        {"beat": "write", "do": "Write 524,316 - 182,549 in columns."},
+        {"beat": "point", "do": "Point at 6 above 9.", "say": "Can we take 9 from 6?"},
+        {"beat": "pause", "do": "Wait for the child to suggest exchanging."},
+        {"beat": "child_draws", "do": "Child exchanges and continues."}
+      ],
+      "misconceptions": [
+        {"code": "MATH.G5.NUMBER.SUBTRACTION.SUB_6DIGIT_REGROUP.M_SMALLER_FROM_LARGER", "listen_for": ["9 take 6", "462,233"], "ask": "Add your answer to 182,549. Do you get 524,316?", "repair": "The check fails. The top is what we have: exchange one ten for ten ones."},
+        {"code": "MATH.G5.NUMBER.SUBTRACTION.SUB_6DIGIT_REGROUP.M_REGROUP_NO_DECREMENT", "listen_for": ["I added ten to the top"], "ask": "Where did that ten come from?", "repair": "Cross out the digit you took from and write one less."}
+      ],
+      "checks": [
+        {"question": "524,316 - 182,549", "answer": "341,767", "shows": "exchange in several columns"},
+        {"question": "724,352 - 315,128", "answer": "409,224", "shows": "reduces the next digit"}
+      ]
+    },
+    {
+      "skill": "MATH.G5.NUMBER.SUBTRACTION.SUB_REGROUP_ACROSS_ZEROS",
+      "key_step": "The child exchanges step by step across zeros: the first non-zero digit gives one, each zero becomes ten then gives one, so zeros become 9 and the last column gets 10.",
+      "floor": {"prerequisite": "Subtracts with regrouping.", "question": "100 - 37 =", "answer": "63"},
+      "representations": ["breaking a 1,000-shilling note into hundreds, tens, ones", "column subtraction with each exchange shown", "the add-back check"],
+      "steps": ["Estimate.", "Exchange from the first non-zero digit.", "Pass the exchange along: each zero becomes 9, the last becomes 10.", "Subtract; check by adding back."],
+      "contexts": ["change from a 1,000-shilling note", "a 500,000-shilling budget with spending", "a tank of 100,000 litres"],
+      "board": [
+        {"beat": "write", "do": "Write 500,000 - 237,468 in columns."},
+        {"beat": "draw", "do": "Slowly break the 5 into 4 and pass ten along each zero, one column at a time.", "say": "Watch the ten travel along."},
+        {"beat": "pause", "do": "Wait for the child to say what each zero becomes."},
+        {"beat": "child_draws", "do": "Child subtracts the columns."}
+      ],
+      "misconceptions": [
+        {"code": "MATH.G5.NUMBER.SUBTRACTION.SUB_REGROUP_ACROSS_ZEROS.M_ZERO_MINUS_DIGIT_IS_ZERO", "listen_for": ["you can't take from nothing"], "ask": "Can you get change from a 1,000-shilling note?", "repair": "Break the note: the zeros get filled by exchange."},
+        {"code": "MATH.G5.NUMBER.SUBTRACTION.SUB_REGROUP_ACROSS_ZEROS.M_ZEROS_ALL_BECOME_TEN", "listen_for": ["all the zeros are ten"], "ask": "After a zero gives one to its right, how many does it keep?", "repair": "Each zero becomes ten, then gives one away: 9 is left."}
+      ],
+      "checks": [
+        {"question": "500,000 - 237,468", "answer": "262,532", "shows": "regrouping across many zeros"},
+        {"question": "40,005 - 12,368", "answer": "27,637", "shows": "zeros between non-zero digits"}
+      ]
+    },
+    {
+      "skill": "MATH.G5.NUMBER.SUBTRACTION.SUB_WORD_PROBLEMS",
+      "key_step": "The child draws a bar to see whether the question asks for a part or a difference, writes the subtraction with the larger number first, and ignores keyword traps.",
+      "floor": {"prerequisite": "Subtracts 6-digit numbers.", "question": "245,600 - 38,450 =", "answer": "207,150"},
+      "representations": ["the story", "a comparison bar model", "the subtraction"],
+      "steps": ["Read; say what is unknown.", "Draw two bars or a part-whole bar.", "Decide add or subtract from the bar.", "Answer in a sentence."],
+      "contexts": ["maize stored in two counties", "money still needed for a school project", "change after shopping"],
+      "board": [
+        {"beat": "write", "do": "Write: Kisumu stored 245,600 bags. This is 38,450 more than Nyeri. How many did Nyeri store?"},
+        {"beat": "draw", "do": "Draw a long bar for Kisumu and a shorter one for Nyeri, with the gap marked 38,450."},
+        {"beat": "point", "do": "Point at the shorter bar.", "say": "Is Nyeri's bar longer or shorter?"},
+        {"beat": "pause", "do": "Wait for the child to choose the operation."}
+      ],
+      "misconceptions": [
+        {"code": "MATH.G5.NUMBER.SUBTRACTION.SUB_WORD_PROBLEMS.M_KEYWORD_MORE_MEANS_ADD", "listen_for": ["more so add"], "ask": "Who stored more, Kisumu or Nyeri?", "repair": "Draw the bars; the word 'more' is about Kisumu. Nyeri's is the shorter bar: subtract."},
+        {"code": "MATH.G5.NUMBER.SUBTRACTION.SUB_WORD_PROBLEMS.M_MISSING_PART_ADDS", "listen_for": ["add what they raised and the target"], "ask": "Is the amount still needed bigger than the target?", "repair": "On a part-whole bar, the missing part is whole minus the known part."}
+      ],
+      "checks": [
+        {"question": "Kisumu stored 245,600 bags, 38,450 more than Nyeri. How many did Nyeri store?", "answer": "207,150 bags", "shows": "ignores the keyword"},
+        {"question": "A school needs Sh 150,000 and has raised Sh 85,400. How much more is needed?", "answer": "Sh 64,600", "shows": "missing part"}
+      ]
+    },
+    {
+      "skill": "MATH.G5.NUMBER.SUBTRACTION.ROUND_NEAREST_100_1000",
+      "key_step": "The child looks at the digit to the right of the rounding place, rounds, replaces the digits to the right with zeros, and carries when a 9 rounds up.",
+      "floor": {"prerequisite": "Rounds to the nearest ten.", "question": "Round 46 to the nearest ten.", "answer": "50"},
+      "representations": ["number line between two hundreds or thousands", "the rounding digit and its neighbour highlighted", "the rounded number"],
+      "steps": ["Underline the rounding place.", "Look at the digit to its right.", "Round; zeros after.", "Carry if a 9 rounds up."],
+      "contexts": ["about how many fans at a match", "about how much a car costs", "about how many people in a town"],
+      "board": [
+        {"beat": "write", "do": "Write 46,382; underline the hundreds digit."},
+        {"beat": "point", "do": "Point at the digit just right of the underline.", "say": "Which digit decides?"},
+        {"beat": "pause", "do": "Wait for the child to round."}
+      ],
+      "misconceptions": [
+        {"code": "MATH.G5.NUMBER.SUBTRACTION.ROUND_NEAREST_100_1000.M_ROUND_USES_OWN_DIGIT", "listen_for": ["3 is small so down"], "ask": "Which digit sits just to the right of the hundreds?", "repair": "The neighbour on the right decides, not the digit itself."},
+        {"code": "MATH.G5.NUMBER.SUBTRACTION.ROUND_NEAREST_100_1000.M_ROUND_NO_CARRY", "listen_for": ["239,000"], "ask": "What hundred comes after 239,900?", "repair": "Count on along the number line: 240,000."}
+      ],
+      "checks": [
+        {"question": "Round 46,382 to the nearest hundred.", "answer": "46,400", "shows": "neighbour decides, zeros after"},
+        {"question": "Round 239,962 to the nearest hundred.", "answer": "240,000", "shows": "carries"}
+      ]
+    },
+    {
+      "skill": "MATH.G5.NUMBER.SUBTRACTION.ESTIMATE_DIFFERENCE",
+      "key_step": "The child rounds both numbers first, then subtracts the rounded numbers.",
+      "floor": {"prerequisite": "Rounds to the nearest hundred and thousand.", "question": "Round 6,480 to the nearest hundred.", "answer": "6,500"},
+      "representations": ["two numbers on a line", "rounded numbers", "the estimate"],
+      "steps": ["Round both numbers as asked.", "Subtract the rounded numbers.", "Use the estimate to check an exact answer."],
+      "contexts": ["about how much more one county harvested", "about how much change", "about the difference in two prices"],
+      "board": [
+        {"beat": "write", "do": "Write 6,480 - 2,550 with boxes above each number."},
+        {"beat": "child_draws", "do": "Child rounds both numbers into the boxes."},
+        {"beat": "pause", "do": "Wait for the estimate."}
+      ],
+      "misconceptions": [
+        {"code": "MATH.G5.NUMBER.SUBTRACTION.ESTIMATE_DIFFERENCE.M_EXACT_THEN_ROUND", "listen_for": ["I worked it out then rounded"], "ask": "Is an estimate meant to be quick?", "repair": "Round first so the subtraction is easy to do in the head."},
+        {"code": "MATH.G5.NUMBER.SUBTRACTION.ESTIMATE_DIFFERENCE.M_ROUND_ONLY_ONE", "listen_for": ["I rounded the big one"], "ask": "Did you round both numbers?", "repair": "Round every number, then subtract."}
+      ],
+      "checks": [
+        {"question": "Estimate 6,480 - 2,550 by rounding each to the nearest hundred.", "answer": "6,500 - 2,600 = 3,900", "shows": "rounds both first"},
+        {"question": "Estimate 58,640 - 23,270 to the nearest thousand.", "answer": "59,000 - 23,000 = 36,000", "shows": "nearest thousand"}
+      ]
+    },
+    {
+      "skill": "MATH.G5.NUMBER.SUBTRACTION.COMBINED_ADD_SUB_CALC",
+      "key_step": "The child works from left to right in an expression with only additions and subtractions.",
+      "floor": {"prerequisite": "Adds and subtracts large numbers.", "question": "85,000 - 20,000 =", "answer": "65,000"},
+      "representations": ["money in and out of a purse in order", "the expression worked step by step", "the result"],
+      "steps": ["Read the expression left to right.", "Do the first operation.", "Use its result with the next."],
+      "contexts": ["a purse: money in and out", "a shop's stock over a week", "passengers on and off a matatu"],
+      "board": [
+        {"beat": "write", "do": "Write 85,000 - 20,000 + 15,000."},
+        {"beat": "point", "do": "Point at the first two numbers.", "say": "What happens first, reading left to right?"},
+        {"beat": "pause", "do": "Wait for the child's two steps."}
+      ],
+      "misconceptions": [
+        {"code": "MATH.G5.NUMBER.SUBTRACTION.COMBINED_ADD_SUB_CALC.M_ADD_BEFORE_SUBTRACT", "listen_for": ["50,000", "I added first"], "ask": "If you had 85,000, spent 20,000, then got 15,000, how much do you have?", "repair": "Tell it as a purse story in order: left to right."}
+      ],
+      "checks": [
+        {"question": "85,000 - 20,000 + 15,000", "answer": "80,000", "shows": "left to right"},
+        {"question": "40,000 + 12,000 - 7,000", "answer": "45,000", "shows": "left to right with addition first"}
+      ]
+    },
+    {
+      "skill": "MATH.G5.NUMBER.SUBTRACTION.COMBINED_ADD_SUB_PROBLEMS",
+      "key_step": "The child decides for each step of a story whether money (or items) goes in or out, and adds or subtracts accordingly.",
+      "floor": {"prerequisite": "Works out combined add-subtract expressions.", "question": "12,500 - 4,750 =", "answer": "7,750"},
+      "representations": ["the story told in order", "a table with in and out columns", "the result"],
+      "steps": ["List each event in order.", "Mark each as in or out.", "Work left to right.", "Answer in a sentence."],
+      "contexts": ["Wanjiku's shopping", "a matatu's passengers on and off", "a shop's stock"],
+      "board": [
+        {"beat": "draw", "do": "Draw a table with columns 'in' and 'out'."},
+        {"beat": "write", "do": "Write the story: Wanjiku had Sh 12,500, spent Sh 4,750 on sugar, then received Sh 3,000 from her mother."},
+        {"beat": "child_draws", "do": "Child puts each amount in the right column."},
+        {"beat": "pause", "do": "Wait for the child's working."}
+      ],
+      "misconceptions": [
+        {"code": "MATH.G5.NUMBER.SUBTRACTION.COMBINED_ADD_SUB_PROBLEMS.M_ADD_ALL_NUMBERS", "listen_for": ["I added them all"], "ask": "When Wanjiku spent money, did she get more or less?", "repair": "Sort each amount into in or out before calculating."}
+      ],
+      "checks": [
+        {"question": "Wanjiku had Sh 12,500, spent Sh 4,750, then received Sh 3,000. How much now?", "answer": "Sh 10,750", "shows": "in and out"},
+        {"question": "A matatu had 14 passengers; 5 got off, then 3 got on. How many now?", "answer": "12", "shows": "steps in order"}
+      ]
+    },
+    {
+      "skill": "MATH.G5.NUMBER.SUBTRACTION.SUB_PATTERN_CONTINUE",
+      "key_step": "The child finds the amount subtracted each time, states the rule by its value (subtract 10,000), and regroups correctly at place boundaries.",
+      "floor": {"prerequisite": "Subtracts large numbers.", "question": "845,300 - 835,300 =", "answer": "10,000"},
+      "representations": ["a decreasing story", "backward jumps on a number line", "the rule"],
+      "steps": ["Subtract neighbours to find the step.", "Check it on another pair.", "State the rule with the value.", "Continue, regrouping at boundaries."],
+      "contexts": ["water used from a tank each day", "a loan paid down", "a stock of books given out"],
+      "board": [
+        {"beat": "write", "do": "Write 302,500; 301,500; 300,500; ___."},
+        {"beat": "point", "do": "Point at the step from 300,500 to the next term.", "say": "What happens when we go below 300,000?"},
+        {"beat": "pause", "do": "Wait for the child's next term."}
+      ],
+      "misconceptions": [
+        {"code": "MATH.G5.NUMBER.SUBTRACTION.SUB_PATTERN_CONTINUE.M_PATTERN_BOUNDARY_NO_REGROUP", "listen_for": ["309,500"], "ask": "Is 309,500 smaller than 300,500?", "repair": "Going below 300,000 changes the hundred thousands too: 299,500."},
+        {"code": "MATH.G5.NUMBER.SUBTRACTION.SUB_PATTERN_CONTINUE.M_RULE_DIGIT_NOT_VALUE", "listen_for": ["subtract 1"], "ask": "What is the 1 that changes worth?", "repair": "Say the rule with place value: subtract 10,000."}
+      ],
+      "checks": [
+        {"question": "Next term: 302,500; 301,500; 300,500; ___", "answer": "299,500", "shows": "regroups at a boundary"},
+        {"question": "What is the rule: 845,300; 835,300; 825,300?", "answer": "Subtract 10,000", "shows": "rule by value"}
+      ]
+    },
+    {
+      "skill": "MATH.G5.NUMBER.SUBTRACTION.SUB_PATTERN_CREATE",
+      "key_step": "The child makes a decreasing pattern by subtracting the same value each time, keeping the step constant across boundaries.",
+      "floor": {"prerequisite": "Continues subtraction patterns.", "question": "Next: 50,000; 45,000; 40,000?", "answer": "35,000"},
+      "representations": ["a story of something decreasing", "the pattern", "the steps checked"],
+      "steps": ["Choose a start and a step.", "Subtract the step each time.", "Check each step by subtracting neighbours."],
+      "contexts": ["a tank emptying", "money spent each week", "a forest losing trees"],
+      "board": [
+        {"beat": "write", "do": "Write start 1,000,000 and rule subtract 125,000."},
+        {"beat": "child_draws", "do": "Child writes four terms."},
+        {"beat": "pause", "do": "Wait for the child to check the steps."}
+      ],
+      "misconceptions": [
+        {"code": "MATH.G5.NUMBER.SUBTRACTION.SUB_PATTERN_CREATE.M_PATTERN_STEP_NOT_CONSTANT", "listen_for": ["it goes down"], "ask": "Subtract each pair. Are the steps equal?", "repair": "A pattern keeps the same step every time."}
+      ],
+      "checks": [
+        {"question": "Start at 1,000,000 and subtract 125,000 each time. Write four terms.", "answer": "875,000; 750,000; 625,000; 500,000", "shows": "constant step"},
+        {"question": "Create a pattern starting at 60,000 with rule subtract 5,000. First three terms after the start?", "answer": "55,000; 50,000; 45,000", "shows": "applies the rule"}
+      ]
+    }
+  ]
+}
