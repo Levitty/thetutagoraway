@@ -26,6 +26,8 @@ export default {
   'cre_g7_a.js': 'cre_g7_signed.js',
   'cre_g7_b.js': 'cre_g7_signed.js',
   'cre_g7_c.js': 'cre_g7_signed.js',
+  'cre_g8_a.js': 'cre_g8_signed.js',
+  'cre_g8_b.js': 'cre_g8_signed.js',
   'creativearts_g4_a.js': 'creativearts_g4_signed.js',
   'creativearts_g4_b.js': 'creativearts_g4_signed.js',
   'creativearts_g4_c.js': 'creativearts_g4_signed.js',

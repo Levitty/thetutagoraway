@@ -3,15 +3,15 @@
  "subject_key": "cre",
  "grade": 8,
  "source": "KICD Christian Religious Education, First published in 2023; Revised 2024 (text layer)",
- "status": "outcomes from KICD's text, word for word; skills, prerequisites and misconceptions not yet mapped",
+ "status": "outcomes from KICD's text, word for word; skills, prerequisites and misconceptions proposed (authored offline, 13 Nov 2026), awaiting a CRE teacher's review",
  "totals": {
   "strands": 6,
   "sub_strands": 18,
   "outcomes": 101,
   "lessons": 120,
-  "skills": 0,
-  "prerequisites": 0,
-  "misconceptions": 0
+  "skills": 20,
+  "prerequisites": 4,
+  "misconceptions": 60
  },
  "sub_strands": [
   {
@@ -87,8 +87,79 @@
      "status": "kicd_verified"
     }
    ],
-   "skills": [],
-   "misconceptions": [],
+   "skills": [
+    {
+     "code": "CRES.G8.CREATI.ORIGIN_AND_CONSEQUENCES_.SIN_ORIGIN",
+     "name": "Tell the origin and consequences of sin (Genesis 3)",
+     "outcomes": [
+      "CRE.G8.CREATI.ORIGIN_AND_CONSEQUENCES_.a",
+      "CRE.G8.CREATI.ORIGIN_AND_CONSEQUENCES_.b"
+     ],
+     "mastery": "The child says Adam and Eve ate the fruit God had forbidden after the serpent tempted them (Genesis 3), and that the results were shame, being sent out of the garden, hard work, pain and death, and separation from God. Evidence rule: at least four of the last five fresh questions right across at least two question forms, and no repeated pick of the same misconception.",
+     "question_forms": [
+      "pick the right answer",
+      "pick the right answer in a short story",
+      "find the false step in a learner's reason"
+     ],
+     "thinking": [
+      "recall",
+      "reasoning"
+     ],
+     "horeb_skill_ids": [],
+     "prerequisites": [],
+     "status": "proposed"
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "CRES.G8.CREATI.ORIGIN_AND_CONSEQUENCES_.SIN_ORIGIN.M_CR8_SO_FRUIT",
+     "skill": "CRES.G8.CREATI.ORIGIN_AND_CONSEQUENCES_.SIN_ORIGIN",
+     "error": "Says the forbidden thing was something else.",
+     "example": {
+      "question": "What did Adam and Eve eat that God had forbidden?",
+      "wrong_answer": "Honey from the garden",
+      "correct_answer": "Fruit of the tree of knowledge"
+     },
+     "cause": "The child mixes up two rules that are taught close together.",
+     "reveals": "Offer \"Honey from the garden\" next to the right answer and ask the question again in a new situation.",
+     "help": "They ate the forbidden fruit.",
+     "feedback": "They ate the forbidden fruit.",
+     "source": "To confirm by a CRE teacher: a common classroom error, not traced to a study by the author.",
+     "status": "draft"
+    },
+    {
+     "code": "CRES.G8.CREATI.ORIGIN_AND_CONSEQUENCES_.SIN_ORIGIN.M_CR8_SO_TEMPT",
+     "skill": "CRES.G8.CREATI.ORIGIN_AND_CONSEQUENCES_.SIN_ORIGIN",
+     "error": "Says God tempted them.",
+     "example": {
+      "question": "Who tempted Eve in the garden?",
+      "wrong_answer": "God",
+      "correct_answer": "The serpent"
+     },
+     "cause": "The child mixes up two rules that are taught close together.",
+     "reveals": "Offer \"God\" next to the right answer and ask the question again in a new situation.",
+     "help": "The serpent tempted Eve.",
+     "feedback": "The serpent tempted Eve.",
+     "source": "To confirm by a CRE teacher: a common classroom error, not traced to a study by the author.",
+     "status": "draft"
+    },
+    {
+     "code": "CRES.G8.CREATI.ORIGIN_AND_CONSEQUENCES_.SIN_ORIGIN.M_CR8_SO_RESULT",
+     "skill": "CRES.G8.CREATI.ORIGIN_AND_CONSEQUENCES_.SIN_ORIGIN",
+     "error": "Gives a good result of the fall.",
+     "example": {
+      "question": "What was a result of the fall?",
+      "wrong_answer": "They stayed in the garden for ever",
+      "correct_answer": "They were sent out of the garden"
+     },
+     "cause": "The child mixes up two rules that are taught close together.",
+     "reveals": "Offer \"They stayed in the garden for ever\" next to the right answer and ask the question again in a new situation.",
+     "help": "They were sent out of Eden.",
+     "feedback": "They were sent out of Eden.",
+     "source": "To confirm by a CRE teacher: a common classroom error, not traced to a study by the author.",
+     "status": "draft"
+    }
+   ],
    "rubric_indicators": [
     "CRE.G8.RUBRIC.1.1",
     "CRE.G8.RUBRIC.1.2",
@@ -165,8 +236,88 @@
      "status": "kicd_verified"
     }
    ],
-   "skills": [],
-   "misconceptions": [],
+   "skills": [
+    {
+     "code": "CRES.G8.CREATI.GOD_S_PLAN_FOR_REDEMPTIO.REDEMPTION",
+     "name": "Say how God showed love after the fall and planned salvation",
+     "outcomes": [
+      "CRE.G8.CREATI.GOD_S_PLAN_FOR_REDEMPTIO.a",
+      "CRE.G8.CREATI.GOD_S_PLAN_FOR_REDEMPTIO.b",
+      "CRE.G8.CREATI.GOD_S_PLAN_FOR_REDEMPTIO.c"
+     ],
+     "mastery": "The child says God made clothes for Adam and Eve (Genesis 3:21), promised that the woman's offspring would defeat the serpent (Genesis 3:15), and that Christians believe He sent Jesus to save people (John 3:16). Evidence rule: at least four of the last five fresh questions right across at least two question forms, and no repeated pick of the same misconception.",
+     "question_forms": [
+      "pick the right answer",
+      "pick the right answer in a short story",
+      "find the false step in a learner's reason"
+     ],
+     "thinking": [
+      "recall",
+      "reasoning"
+     ],
+     "horeb_skill_ids": [],
+     "prerequisites": [
+      {
+       "requires": "CRES.G8.CREATI.ORIGIN_AND_CONSEQUENCES_.SIN_ORIGIN",
+       "kind": "skill",
+       "strength": "essential",
+       "reason": "Proposed: this skill builds on it. To confirm by a CRE teacher.",
+       "status": "proposed"
+      }
+     ],
+     "status": "proposed"
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "CRES.G8.CREATI.GOD_S_PLAN_FOR_REDEMPTIO.REDEMPTION.M_CR8_RD_CLOTHES",
+     "skill": "CRES.G8.CREATI.GOD_S_PLAN_FOR_REDEMPTIO.REDEMPTION",
+     "error": "Says God abandoned them.",
+     "example": {
+      "question": "What did God do for Adam and Eve after the fall?",
+      "wrong_answer": "Left them without help",
+      "correct_answer": "Made clothes for them"
+     },
+     "cause": "The child mixes up two rules that are taught close together.",
+     "reveals": "Offer \"Left them without help\" next to the right answer and ask the question again in a new situation.",
+     "help": "God made clothes for them.",
+     "feedback": "God made clothes for them.",
+     "source": "To confirm by a CRE teacher: a common classroom error, not traced to a study by the author.",
+     "status": "draft"
+    },
+    {
+     "code": "CRES.G8.CREATI.GOD_S_PLAN_FOR_REDEMPTIO.REDEMPTION.M_CR8_RD_JOHN",
+     "skill": "CRES.G8.CREATI.GOD_S_PLAN_FOR_REDEMPTIO.REDEMPTION",
+     "error": "Misquotes John 3:16.",
+     "example": {
+      "question": "What does John 3:16 say God gave?",
+      "wrong_answer": "A new garden",
+      "correct_answer": "His only Son"
+     },
+     "cause": "The child mixes up two rules that are taught close together.",
+     "reveals": "Offer \"A new garden\" next to the right answer and ask the question again in a new situation.",
+     "help": "God gave His only Son.",
+     "feedback": "God gave His only Son.",
+     "source": "To confirm by a CRE teacher: a common classroom error, not traced to a study by the author.",
+     "status": "draft"
+    },
+    {
+     "code": "CRES.G8.CREATI.GOD_S_PLAN_FOR_REDEMPTIO.REDEMPTION.M_CR8_RD_WHY",
+     "skill": "CRES.G8.CREATI.GOD_S_PLAN_FOR_REDEMPTIO.REDEMPTION",
+     "error": "Does not know why redemption matters.",
+     "example": {
+      "question": "Why is redemption important?",
+      "wrong_answer": "It is not important",
+      "correct_answer": "It restores people to God"
+     },
+     "cause": "The child mixes up two rules that are taught close together.",
+     "reveals": "Offer \"It is not important\" next to the right answer and ask the question again in a new situation.",
+     "help": "Redemption restores people to God.",
+     "feedback": "Redemption restores people to God.",
+     "source": "To confirm by a CRE teacher: a common classroom error, not traced to a study by the author.",
+     "status": "draft"
+    }
+   ],
    "rubric_indicators": [
     "CRE.G8.RUBRIC.1.1",
     "CRE.G8.RUBRIC.1.2",
@@ -257,8 +408,156 @@
      "indicator": "CRE.G8.RUBRIC.2.5"
     }
    ],
-   "skills": [],
-   "misconceptions": [],
+   "skills": [
+    {
+     "code": "CRES.G8.THE_BI.FAITH_AND_GOD_S_PROMISES.ABRAHAM_FAITH",
+     "name": "Tell the call of Abraham and his faith",
+     "outcomes": [
+      "CRE.G8.THE_BI.FAITH_AND_GOD_S_PROMISES.a",
+      "CRE.G8.THE_BI.FAITH_AND_GOD_S_PROMISES.b"
+     ],
+     "mastery": "The child says God called Abram to leave his country and go to a land God would show him (Genesis 12:1-4), and he obeyed, and that he showed faith by trusting God when he was told to offer Isaac and God provided a ram (Genesis 22). Evidence rule: at least four of the last five fresh questions right across at least two question forms, and no repeated pick of the same misconception.",
+     "question_forms": [
+      "pick the right answer",
+      "pick the right answer in a short story",
+      "find the false step in a learner's reason"
+     ],
+     "thinking": [
+      "recall",
+      "reasoning"
+     ],
+     "horeb_skill_ids": [],
+     "prerequisites": [],
+     "status": "proposed"
+    },
+    {
+     "code": "CRES.G8.THE_BI.FAITH_AND_GOD_S_PROMISES.ABRAHAM_PROMISES",
+     "name": "Name God's promises to Abraham",
+     "outcomes": [
+      "CRE.G8.THE_BI.FAITH_AND_GOD_S_PROMISES.d",
+      "CRE.G8.THE_BI.FAITH_AND_GOD_S_PROMISES.e"
+     ],
+     "mastery": "The child names the promises of a land, many descendants, a great name, and a blessing for all families of the earth (Genesis 12:1-3), and says Christians trust God to keep His promises. Evidence rule: at least four of the last five fresh questions right across at least two question forms, and no repeated pick of the same misconception.",
+     "question_forms": [
+      "pick the right answer",
+      "pick the right answer in a short story",
+      "find the false step in a learner's reason"
+     ],
+     "thinking": [
+      "recall",
+      "reasoning"
+     ],
+     "horeb_skill_ids": [],
+     "prerequisites": [
+      {
+       "requires": "CRES.G8.THE_BI.FAITH_AND_GOD_S_PROMISES.ABRAHAM_FAITH",
+       "kind": "skill",
+       "strength": "essential",
+       "reason": "Proposed: this skill builds on it. To confirm by a CRE teacher.",
+       "status": "proposed"
+      }
+     ],
+     "status": "proposed"
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "CRES.G8.THE_BI.FAITH_AND_GOD_S_PROMISES.ABRAHAM_FAITH.M_CR8_AF_CALL",
+     "skill": "CRES.G8.THE_BI.FAITH_AND_GOD_S_PROMISES.ABRAHAM_FAITH",
+     "error": "Gives the wrong instruction.",
+     "example": {
+      "question": "What did God tell Abram to do?",
+      "wrong_answer": "Stay in his country",
+      "correct_answer": "Leave his country for a land God would show"
+     },
+     "cause": "The child mixes up two rules that are taught close together.",
+     "reveals": "Offer \"Stay in his country\" next to the right answer and ask the question again in a new situation.",
+     "help": "God told him to leave his country.",
+     "feedback": "God told him to leave his country.",
+     "source": "To confirm by a CRE teacher: a common classroom error, not traced to a study by the author.",
+     "status": "draft"
+    },
+    {
+     "code": "CRES.G8.THE_BI.FAITH_AND_GOD_S_PROMISES.ABRAHAM_FAITH.M_CR8_AF_ISAAC",
+     "skill": "CRES.G8.THE_BI.FAITH_AND_GOD_S_PROMISES.ABRAHAM_FAITH",
+     "error": "Says Isaac was sacrificed.",
+     "example": {
+      "question": "What did God provide instead of Isaac?",
+      "wrong_answer": "A lamb of Isaac's age",
+      "correct_answer": "A ram"
+     },
+     "cause": "The child mixes up two rules that are taught close together.",
+     "reveals": "Offer \"A lamb of Isaac's age\" next to the right answer and ask the question again in a new situation.",
+     "help": "God provided a ram.",
+     "feedback": "God provided a ram.",
+     "source": "To confirm by a CRE teacher: a common classroom error, not traced to a study by the author.",
+     "status": "draft"
+    },
+    {
+     "code": "CRES.G8.THE_BI.FAITH_AND_GOD_S_PROMISES.ABRAHAM_FAITH.M_CR8_AF_FAITH",
+     "skill": "CRES.G8.THE_BI.FAITH_AND_GOD_S_PROMISES.ABRAHAM_FAITH",
+     "error": "Says Abraham doubted and refused.",
+     "example": {
+      "question": "How did Abraham respond to God's call?",
+      "wrong_answer": "He refused",
+      "correct_answer": "He obeyed"
+     },
+     "cause": "The child mixes up two rules that are taught close together.",
+     "reveals": "Offer \"He refused\" next to the right answer and ask the question again in a new situation.",
+     "help": "Abraham obeyed.",
+     "feedback": "Abraham obeyed.",
+     "source": "To confirm by a CRE teacher: a common classroom error, not traced to a study by the author.",
+     "status": "draft"
+    },
+    {
+     "code": "CRES.G8.THE_BI.FAITH_AND_GOD_S_PROMISES.ABRAHAM_PROMISES.M_CR8_AP_LAND",
+     "skill": "CRES.G8.THE_BI.FAITH_AND_GOD_S_PROMISES.ABRAHAM_PROMISES",
+     "error": "Names a wrong promise.",
+     "example": {
+      "question": "Which was a promise to Abraham?",
+      "wrong_answer": "Great wealth in gold only",
+      "correct_answer": "Many descendants"
+     },
+     "cause": "The child mixes up two rules that are taught close together.",
+     "reveals": "Offer \"Great wealth in gold only\" next to the right answer and ask the question again in a new situation.",
+     "help": "God promised many descendants.",
+     "feedback": "God promised many descendants.",
+     "source": "To confirm by a CRE teacher: a common classroom error, not traced to a study by the author.",
+     "status": "draft"
+    },
+    {
+     "code": "CRES.G8.THE_BI.FAITH_AND_GOD_S_PROMISES.ABRAHAM_PROMISES.M_CR8_AP_BLESS",
+     "skill": "CRES.G8.THE_BI.FAITH_AND_GOD_S_PROMISES.ABRAHAM_PROMISES",
+     "error": "Says only Abraham would be blessed.",
+     "example": {
+      "question": "Who would be blessed through Abraham?",
+      "wrong_answer": "Only his family",
+      "correct_answer": "All families of the earth"
+     },
+     "cause": "The child mixes up two rules that are taught close together.",
+     "reveals": "Offer \"Only his family\" next to the right answer and ask the question again in a new situation.",
+     "help": "All families would be blessed.",
+     "feedback": "All families would be blessed.",
+     "source": "To confirm by a CRE teacher: a common classroom error, not traced to a study by the author.",
+     "status": "draft"
+    },
+    {
+     "code": "CRES.G8.THE_BI.FAITH_AND_GOD_S_PROMISES.ABRAHAM_PROMISES.M_CR8_AP_TRUST",
+     "skill": "CRES.G8.THE_BI.FAITH_AND_GOD_S_PROMISES.ABRAHAM_PROMISES",
+     "error": "Says promises are useless today.",
+     "example": {
+      "question": "Why do Christians value God's promises?",
+      "wrong_answer": "They are useless",
+      "correct_answer": "They can trust God to keep them"
+     },
+     "cause": "The child mixes up two rules that are taught close together.",
+     "reveals": "Offer \"They are useless\" next to the right answer and ask the question again in a new situation.",
+     "help": "Christians trust God's promises.",
+     "feedback": "Christians trust God's promises.",
+     "source": "To confirm by a CRE teacher: a common classroom error, not traced to a study by the author.",
+     "status": "draft"
+    }
+   ],
    "rubric_indicators": [
     "CRE.G8.RUBRIC.2.1",
     "CRE.G8.RUBRIC.2.2",
@@ -357,8 +656,88 @@
      "status": "kicd_verified"
     }
    ],
-   "skills": [],
-   "misconceptions": [],
+   "skills": [
+    {
+     "code": "CRES.G8.THE_BI.ABRAHAMIC_COVENANT.COVENANT_ABRAHAM",
+     "name": "Say what the covenant with Abraham was and its sign",
+     "outcomes": [
+      "CRE.G8.THE_BI.ABRAHAMIC_COVENANT.b",
+      "CRE.G8.THE_BI.ABRAHAMIC_COVENANT.c",
+      "CRE.G8.THE_BI.ABRAHAMIC_COVENANT.d"
+     ],
+     "mastery": "The child says a covenant is a binding agreement, God made a covenant with Abraham (Genesis 15 and 17) promising land and descendants, and circumcision was the sign of that covenant for his descendants (Genesis 17:10-11). Evidence rule: at least four of the last five fresh questions right across at least two question forms, and no repeated pick of the same misconception.",
+     "question_forms": [
+      "pick the right answer",
+      "pick the right answer in a short story",
+      "find the false step in a learner's reason"
+     ],
+     "thinking": [
+      "recall",
+      "reasoning"
+     ],
+     "horeb_skill_ids": [],
+     "prerequisites": [
+      {
+       "requires": "CRES.G8.THE_BI.FAITH_AND_GOD_S_PROMISES.ABRAHAM_PROMISES",
+       "kind": "skill",
+       "strength": "essential",
+       "reason": "Proposed: this skill builds on it. To confirm by a CRE teacher.",
+       "status": "proposed"
+      }
+     ],
+     "status": "proposed"
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "CRES.G8.THE_BI.ABRAHAMIC_COVENANT.COVENANT_ABRAHAM.M_CR8_CA_MEANING",
+     "skill": "CRES.G8.THE_BI.ABRAHAMIC_COVENANT.COVENANT_ABRAHAM",
+     "error": "Thinks a covenant is a gift.",
+     "example": {
+      "question": "What is a covenant?",
+      "wrong_answer": "A free gift",
+      "correct_answer": "A binding agreement"
+     },
+     "cause": "The child mixes up two rules that are taught close together.",
+     "reveals": "Offer \"A free gift\" next to the right answer and ask the question again in a new situation.",
+     "help": "A covenant is a binding agreement.",
+     "feedback": "A covenant is a binding agreement.",
+     "source": "To confirm by a CRE teacher: a common classroom error, not traced to a study by the author.",
+     "status": "draft"
+    },
+    {
+     "code": "CRES.G8.THE_BI.ABRAHAMIC_COVENANT.COVENANT_ABRAHAM.M_CR8_CA_SIGN",
+     "skill": "CRES.G8.THE_BI.ABRAHAMIC_COVENANT.COVENANT_ABRAHAM",
+     "error": "Gives the wrong sign.",
+     "example": {
+      "question": "What was the sign of God's covenant with Abraham?",
+      "wrong_answer": "A rainbow",
+      "correct_answer": "Circumcision"
+     },
+     "cause": "The child mixes up two rules that are taught close together.",
+     "reveals": "Offer \"A rainbow\" next to the right answer and ask the question again in a new situation.",
+     "help": "Circumcision was the sign.",
+     "feedback": "Circumcision was the sign.",
+     "source": "To confirm by a CRE teacher: a common classroom error, not traced to a study by the author.",
+     "status": "draft"
+    },
+    {
+     "code": "CRES.G8.THE_BI.ABRAHAMIC_COVENANT.COVENANT_ABRAHAM.M_CR8_CA_NAME",
+     "skill": "CRES.G8.THE_BI.ABRAHAMIC_COVENANT.COVENANT_ABRAHAM",
+     "error": "Gives the wrong new name.",
+     "example": {
+      "question": "What was Abram renamed?",
+      "wrong_answer": "Isaac",
+      "correct_answer": "Abraham"
+     },
+     "cause": "The child mixes up two rules that are taught close together.",
+     "reveals": "Offer \"Isaac\" next to the right answer and ask the question again in a new situation.",
+     "help": "Abram became Abraham.",
+     "feedback": "Abram became Abraham.",
+     "source": "To confirm by a CRE teacher: a common classroom error, not traced to a study by the author.",
+     "status": "draft"
+    }
+   ],
    "rubric_indicators": [
     "CRE.G8.RUBRIC.2.1",
     "CRE.G8.RUBRIC.2.2",
@@ -440,8 +819,156 @@
      "status": "kicd_verified"
     }
    ],
-   "skills": [],
-   "misconceptions": [],
+   "skills": [
+    {
+     "code": "CRES.G8.THE_BI.LEADERSHIP_IN_ISRAEL_SAU.KINGSHIP_ISRAEL",
+     "name": "Give reasons for and against kingship in Israel",
+     "outcomes": [
+      "CRE.G8.THE_BI.LEADERSHIP_IN_ISRAEL_SAU.a",
+      "CRE.G8.THE_BI.LEADERSHIP_IN_ISRAEL_SAU.b"
+     ],
+     "mastery": "The child says Israel asked for a king because Samuel was old, his sons did not follow his ways and they wanted to be like other nations (1 Samuel 8), and Samuel warned a king would take their sons, daughters and land for himself. Evidence rule: at least four of the last five fresh questions right across at least two question forms, and no repeated pick of the same misconception.",
+     "question_forms": [
+      "pick the right answer",
+      "pick the right answer in a short story",
+      "find the false step in a learner's reason"
+     ],
+     "thinking": [
+      "recall",
+      "reasoning"
+     ],
+     "horeb_skill_ids": [],
+     "prerequisites": [],
+     "status": "proposed"
+    },
+    {
+     "code": "CRES.G8.THE_BI.LEADERSHIP_IN_ISRAEL_SAU.SAUL_FAILURES",
+     "name": "Name Saul's failures and their consequences",
+     "outcomes": [
+      "CRE.G8.THE_BI.LEADERSHIP_IN_ISRAEL_SAU.c",
+      "CRE.G8.THE_BI.LEADERSHIP_IN_ISRAEL_SAU.d"
+     ],
+     "mastery": "The child says Saul offered the sacrifice himself instead of waiting for Samuel (1 Samuel 13) and spared the best of the Amalekites' flocks against God's command (1 Samuel 15), and so God rejected him as king. Evidence rule: at least four of the last five fresh questions right across at least two question forms, and no repeated pick of the same misconception.",
+     "question_forms": [
+      "pick the right answer",
+      "pick the right answer in a short story",
+      "find the false step in a learner's reason"
+     ],
+     "thinking": [
+      "recall",
+      "reasoning"
+     ],
+     "horeb_skill_ids": [],
+     "prerequisites": [
+      {
+       "requires": "CRES.G8.THE_BI.LEADERSHIP_IN_ISRAEL_SAU.KINGSHIP_ISRAEL",
+       "kind": "skill",
+       "strength": "essential",
+       "reason": "Proposed: this skill builds on it. To confirm by a CRE teacher.",
+       "status": "proposed"
+      }
+     ],
+     "status": "proposed"
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "CRES.G8.THE_BI.LEADERSHIP_IN_ISRAEL_SAU.KINGSHIP_ISRAEL.M_CR8_KI_REASON",
+     "skill": "CRES.G8.THE_BI.LEADERSHIP_IN_ISRAEL_SAU.KINGSHIP_ISRAEL",
+     "error": "Gives a wrong reason for asking for a king.",
+     "example": {
+      "question": "Why did Israel ask for a king?",
+      "wrong_answer": "Samuel was young",
+      "correct_answer": "Samuel was old and his sons did not follow his ways"
+     },
+     "cause": "The child mixes up two rules that are taught close together.",
+     "reveals": "Offer \"Samuel was young\" next to the right answer and ask the question again in a new situation.",
+     "help": "1 Samuel 8 gives this reason.",
+     "feedback": "1 Samuel 8 gives this reason.",
+     "source": "To confirm by a CRE teacher: a common classroom error, not traced to a study by the author.",
+     "status": "draft"
+    },
+    {
+     "code": "CRES.G8.THE_BI.LEADERSHIP_IN_ISRAEL_SAU.KINGSHIP_ISRAEL.M_CR8_KI_WARNING",
+     "skill": "CRES.G8.THE_BI.LEADERSHIP_IN_ISRAEL_SAU.KINGSHIP_ISRAEL",
+     "error": "Says Samuel welcomed a king.",
+     "example": {
+      "question": "What did Samuel warn a king would do?",
+      "wrong_answer": "Give them gifts",
+      "correct_answer": "Take their sons and land"
+     },
+     "cause": "The child mixes up two rules that are taught close together.",
+     "reveals": "Offer \"Give them gifts\" next to the right answer and ask the question again in a new situation.",
+     "help": "Samuel warned the king would take their sons and land.",
+     "feedback": "Samuel warned the king would take their sons and land.",
+     "source": "To confirm by a CRE teacher: a common classroom error, not traced to a study by the author.",
+     "status": "draft"
+    },
+    {
+     "code": "CRES.G8.THE_BI.LEADERSHIP_IN_ISRAEL_SAU.KINGSHIP_ISRAEL.M_CR8_KI_NATIONS",
+     "skill": "CRES.G8.THE_BI.LEADERSHIP_IN_ISRAEL_SAU.KINGSHIP_ISRAEL",
+     "error": "Says Israel wanted to be unlike other nations.",
+     "example": {
+      "question": "Why did the people want to be like the nations?",
+      "wrong_answer": "They wanted no king",
+      "correct_answer": "They wanted a king to lead them"
+     },
+     "cause": "The child mixes up two rules that are taught close together.",
+     "reveals": "Offer \"They wanted no king\" next to the right answer and ask the question again in a new situation.",
+     "help": "They wanted a king like other nations.",
+     "feedback": "They wanted a king like other nations.",
+     "source": "To confirm by a CRE teacher: a common classroom error, not traced to a study by the author.",
+     "status": "draft"
+    },
+    {
+     "code": "CRES.G8.THE_BI.LEADERSHIP_IN_ISRAEL_SAU.SAUL_FAILURES.M_CR8_SF_SACRIFICE",
+     "skill": "CRES.G8.THE_BI.LEADERSHIP_IN_ISRAEL_SAU.SAUL_FAILURES",
+     "error": "Says Saul waited for Samuel.",
+     "example": {
+      "question": "What did Saul do at Gilgal?",
+      "wrong_answer": "Waited for Samuel",
+      "correct_answer": "Offered the sacrifice himself"
+     },
+     "cause": "The child mixes up two rules that are taught close together.",
+     "reveals": "Offer \"Waited for Samuel\" next to the right answer and ask the question again in a new situation.",
+     "help": "Saul offered the sacrifice himself.",
+     "feedback": "Saul offered the sacrifice himself.",
+     "source": "To confirm by a CRE teacher: a common classroom error, not traced to a study by the author.",
+     "status": "draft"
+    },
+    {
+     "code": "CRES.G8.THE_BI.LEADERSHIP_IN_ISRAEL_SAU.SAUL_FAILURES.M_CR8_SF_AMALEK",
+     "skill": "CRES.G8.THE_BI.LEADERSHIP_IN_ISRAEL_SAU.SAUL_FAILURES",
+     "error": "Says Saul destroyed everything.",
+     "example": {
+      "question": "What did Saul do with the best Amalekite flocks?",
+      "wrong_answer": "Destroyed them",
+      "correct_answer": "Spared them"
+     },
+     "cause": "The child mixes up two rules that are taught close together.",
+     "reveals": "Offer \"Destroyed them\" next to the right answer and ask the question again in a new situation.",
+     "help": "Saul spared the best flocks.",
+     "feedback": "Saul spared the best flocks.",
+     "source": "To confirm by a CRE teacher: a common classroom error, not traced to a study by the author.",
+     "status": "draft"
+    },
+    {
+     "code": "CRES.G8.THE_BI.LEADERSHIP_IN_ISRAEL_SAU.SAUL_FAILURES.M_CR8_SF_RESULT",
+     "skill": "CRES.G8.THE_BI.LEADERSHIP_IN_ISRAEL_SAU.SAUL_FAILURES",
+     "error": "Says God kept Saul as king.",
+     "example": {
+      "question": "What was the result of Saul's disobedience?",
+      "wrong_answer": "God made him greater",
+      "correct_answer": "God rejected him as king"
+     },
+     "cause": "The child mixes up two rules that are taught close together.",
+     "reveals": "Offer \"God made him greater\" next to the right answer and ask the question again in a new situation.",
+     "help": "God rejected Saul as king.",
+     "feedback": "God rejected Saul as king.",
+     "source": "To confirm by a CRE teacher: a common classroom error, not traced to a study by the author.",
+     "status": "draft"
+    }
+   ],
    "rubric_indicators": [
     "CRE.G8.RUBRIC.2.1",
     "CRE.G8.RUBRIC.2.2",
@@ -515,8 +1042,79 @@
      "status": "kicd_verified"
     }
    ],
-   "skills": [],
-   "misconceptions": [],
+   "skills": [
+    {
+     "code": "CRES.G8.THE_LI.HEALING_OF_BLIND_BARTIMA.BARTIMAEUS",
+     "name": "Tell the healing of blind Bartimaeus",
+     "outcomes": [
+      "CRE.G8.THE_LI.HEALING_OF_BLIND_BARTIMA.a",
+      "CRE.G8.THE_LI.HEALING_OF_BLIND_BARTIMA.b"
+     ],
+     "mastery": "The child says Bartimaeus was a blind beggar beside the road at Jericho who called out \"Son of David, have mercy on me\", Jesus called him, asked what he wanted and said his faith had healed him, and he followed Jesus (Mark 10:46-52). Evidence rule: at least four of the last five fresh questions right across at least two question forms, and no repeated pick of the same misconception.",
+     "question_forms": [
+      "pick the right answer",
+      "pick the right answer in a short story",
+      "find the false step in a learner's reason"
+     ],
+     "thinking": [
+      "recall",
+      "reasoning"
+     ],
+     "horeb_skill_ids": [],
+     "prerequisites": [],
+     "status": "proposed"
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "CRES.G8.THE_LI.HEALING_OF_BLIND_BARTIMA.BARTIMAEUS.M_CR8_BT_PLACE",
+     "skill": "CRES.G8.THE_LI.HEALING_OF_BLIND_BARTIMA.BARTIMAEUS",
+     "error": "Gives the wrong town.",
+     "example": {
+      "question": "Where was Bartimaeus healed?",
+      "wrong_answer": "Jerusalem",
+      "correct_answer": "Jericho"
+     },
+     "cause": "The child mixes up two rules that are taught close together.",
+     "reveals": "Offer \"Jerusalem\" next to the right answer and ask the question again in a new situation.",
+     "help": "Bartimaeus was at Jericho.",
+     "feedback": "Bartimaeus was at Jericho.",
+     "source": "To confirm by a CRE teacher: a common classroom error, not traced to a study by the author.",
+     "status": "draft"
+    },
+    {
+     "code": "CRES.G8.THE_LI.HEALING_OF_BLIND_BARTIMA.BARTIMAEUS.M_CR8_BT_CRY",
+     "skill": "CRES.G8.THE_LI.HEALING_OF_BLIND_BARTIMA.BARTIMAEUS",
+     "error": "Gives the wrong cry.",
+     "example": {
+      "question": "What did Bartimaeus call out?",
+      "wrong_answer": "Teacher, teach me",
+      "correct_answer": "Son of David, have mercy on me"
+     },
+     "cause": "The child mixes up two rules that are taught close together.",
+     "reveals": "Offer \"Teacher, teach me\" next to the right answer and ask the question again in a new situation.",
+     "help": "He cried \"Son of David\".",
+     "feedback": "He cried \"Son of David\".",
+     "source": "To confirm by a CRE teacher: a common classroom error, not traced to a study by the author.",
+     "status": "draft"
+    },
+    {
+     "code": "CRES.G8.THE_LI.HEALING_OF_BLIND_BARTIMA.BARTIMAEUS.M_CR8_BT_RESULT",
+     "skill": "CRES.G8.THE_LI.HEALING_OF_BLIND_BARTIMA.BARTIMAEUS",
+     "error": "Says he went home.",
+     "example": {
+      "question": "What did Bartimaeus do after he was healed?",
+      "wrong_answer": "Went home alone",
+      "correct_answer": "Followed Jesus"
+     },
+     "cause": "The child mixes up two rules that are taught close together.",
+     "reveals": "Offer \"Went home alone\" next to the right answer and ask the question again in a new situation.",
+     "help": "He followed Jesus.",
+     "feedback": "He followed Jesus.",
+     "source": "To confirm by a CRE teacher: a common classroom error, not traced to a study by the author.",
+     "status": "draft"
+    }
+   ],
    "rubric_indicators": [
     "CRE.G8.RUBRIC.3.1",
     "CRE.G8.RUBRIC.3.2"
@@ -591,8 +1189,79 @@
      "status": "kicd_verified"
     }
    ],
-   "skills": [],
-   "misconceptions": [],
+   "skills": [
+    {
+     "code": "CRES.G8.THE_LI.CALMING_THE_STORM.CALMING_STORM",
+     "name": "Tell the calming of the storm",
+     "outcomes": [
+      "CRE.G8.THE_LI.CALMING_THE_STORM.a",
+      "CRE.G8.THE_LI.CALMING_THE_STORM.b"
+     ],
+     "mastery": "The child says Jesus was asleep in the boat when a storm rose on the lake, the disciples woke Him in fear, He told the wind and waves to be still, and asked why they had so little faith (Mark 4:35-41). Evidence rule: at least four of the last five fresh questions right across at least two question forms, and no repeated pick of the same misconception.",
+     "question_forms": [
+      "pick the right answer",
+      "pick the right answer in a short story",
+      "find the false step in a learner's reason"
+     ],
+     "thinking": [
+      "recall",
+      "reasoning"
+     ],
+     "horeb_skill_ids": [],
+     "prerequisites": [],
+     "status": "proposed"
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "CRES.G8.THE_LI.CALMING_THE_STORM.CALMING_STORM.M_CR8_CS_SLEEP",
+     "skill": "CRES.G8.THE_LI.CALMING_THE_STORM.CALMING_STORM",
+     "error": "Says Jesus was steering the boat.",
+     "example": {
+      "question": "What was Jesus doing in the storm?",
+      "wrong_answer": "Steering the boat",
+      "correct_answer": "Sleeping"
+     },
+     "cause": "The child mixes up two rules that are taught close together.",
+     "reveals": "Offer \"Steering the boat\" next to the right answer and ask the question again in a new situation.",
+     "help": "Jesus was asleep.",
+     "feedback": "Jesus was asleep.",
+     "source": "To confirm by a CRE teacher: a common classroom error, not traced to a study by the author.",
+     "status": "draft"
+    },
+    {
+     "code": "CRES.G8.THE_LI.CALMING_THE_STORM.CALMING_STORM.M_CR8_CS_WORDS",
+     "skill": "CRES.G8.THE_LI.CALMING_THE_STORM.CALMING_STORM",
+     "error": "Gives the wrong command.",
+     "example": {
+      "question": "What did Jesus say to the storm?",
+      "wrong_answer": "Rise higher",
+      "correct_answer": "Be still"
+     },
+     "cause": "The child mixes up two rules that are taught close together.",
+     "reveals": "Offer \"Rise higher\" next to the right answer and ask the question again in a new situation.",
+     "help": "He said \"Be still\".",
+     "feedback": "He said \"Be still\".",
+     "source": "To confirm by a CRE teacher: a common classroom error, not traced to a study by the author.",
+     "status": "draft"
+    },
+    {
+     "code": "CRES.G8.THE_LI.CALMING_THE_STORM.CALMING_STORM.M_CR8_CS_FAITH",
+     "skill": "CRES.G8.THE_LI.CALMING_THE_STORM.CALMING_STORM",
+     "error": "Says the disciples had great faith.",
+     "example": {
+      "question": "What did Jesus ask the disciples?",
+      "wrong_answer": "Why they were so brave",
+      "correct_answer": "Why they had so little faith"
+     },
+     "cause": "The child mixes up two rules that are taught close together.",
+     "reveals": "Offer \"Why they were so brave\" next to the right answer and ask the question again in a new situation.",
+     "help": "He asked about their faith.",
+     "feedback": "He asked about their faith.",
+     "source": "To confirm by a CRE teacher: a common classroom error, not traced to a study by the author.",
+     "status": "draft"
+    }
+   ],
    "rubric_indicators": [
     "CRE.G8.RUBRIC.3.1",
     "CRE.G8.RUBRIC.3.2"
@@ -668,8 +1337,80 @@
      "status": "kicd_verified"
     }
    ],
-   "skills": [],
-   "misconceptions": [],
+   "skills": [
+    {
+     "code": "CRES.G8.THE_LI.HEALING_OF_THE_PARALYTIC.PARALYTIC",
+     "name": "Tell the healing of the paralytic",
+     "outcomes": [
+      "CRE.G8.THE_LI.HEALING_OF_THE_PARALYTIC.a",
+      "CRE.G8.THE_LI.HEALING_OF_THE_PARALYTIC.b",
+      "CRE.G8.THE_LI.HEALING_OF_THE_PARALYTIC.c"
+     ],
+     "mastery": "The child says four friends lowered a paralysed man through the roof because of the crowd, Jesus first told him his sins were forgiven, the teachers of the law objected, and Jesus then told him to take up his mat and walk (Mark 2:1-12). Evidence rule: at least four of the last five fresh questions right across at least two question forms, and no repeated pick of the same misconception.",
+     "question_forms": [
+      "pick the right answer",
+      "pick the right answer in a short story",
+      "find the false step in a learner's reason"
+     ],
+     "thinking": [
+      "recall",
+      "reasoning"
+     ],
+     "horeb_skill_ids": [],
+     "prerequisites": [],
+     "status": "proposed"
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "CRES.G8.THE_LI.HEALING_OF_THE_PARALYTIC.PARALYTIC.M_CR8_PL_ROOF",
+     "skill": "CRES.G8.THE_LI.HEALING_OF_THE_PARALYTIC.PARALYTIC",
+     "error": "Says he came through the door.",
+     "example": {
+      "question": "How did the friends bring the man to Jesus?",
+      "wrong_answer": "Through the front door",
+      "correct_answer": "Through the roof"
+     },
+     "cause": "The child mixes up two rules that are taught close together.",
+     "reveals": "Offer \"Through the front door\" next to the right answer and ask the question again in a new situation.",
+     "help": "They lowered him through the roof.",
+     "feedback": "They lowered him through the roof.",
+     "source": "To confirm by a CRE teacher: a common classroom error, not traced to a study by the author.",
+     "status": "draft"
+    },
+    {
+     "code": "CRES.G8.THE_LI.HEALING_OF_THE_PARALYTIC.PARALYTIC.M_CR8_PL_SINS",
+     "skill": "CRES.G8.THE_LI.HEALING_OF_THE_PARALYTIC.PARALYTIC",
+     "error": "Says Jesus first healed the legs.",
+     "example": {
+      "question": "What did Jesus first say to the paralytic?",
+      "wrong_answer": "Your sins are forgiven",
+      "correct_answer": "Take your mat"
+     },
+     "cause": "The child mixes up two rules that are taught close together.",
+     "reveals": "Offer \"Your sins are forgiven\" next to the right answer and ask the question again in a new situation.",
+     "help": "Jesus first forgave his sins.",
+     "feedback": "Jesus first forgave his sins.",
+     "source": "To confirm by a CRE teacher: a common classroom error, not traced to a study by the author.",
+     "status": "draft"
+    },
+    {
+     "code": "CRES.G8.THE_LI.HEALING_OF_THE_PARALYTIC.PARALYTIC.M_CR8_PL_OPPOSITION",
+     "skill": "CRES.G8.THE_LI.HEALING_OF_THE_PARALYTIC.PARALYTIC",
+     "error": "Says the crowd opposed Him.",
+     "example": {
+      "question": "Who objected to Jesus forgiving sins?",
+      "wrong_answer": "The disciples",
+      "correct_answer": "The teachers of the law"
+     },
+     "cause": "The child mixes up two rules that are taught close together.",
+     "reveals": "Offer \"The disciples\" next to the right answer and ask the question again in a new situation.",
+     "help": "The teachers of the law objected.",
+     "feedback": "The teachers of the law objected.",
+     "source": "To confirm by a CRE teacher: a common classroom error, not traced to a study by the author.",
+     "status": "draft"
+    }
+   ],
    "rubric_indicators": [
     "CRE.G8.RUBRIC.3.1",
     "CRE.G8.RUBRIC.3.2"
@@ -743,8 +1484,79 @@
      "status": "kicd_verified"
     }
    ],
-   "skills": [],
-   "misconceptions": [],
+   "skills": [
+    {
+     "code": "CRES.G8.TEACHI.TEACHINGS_ON_PRAYER.PRAYER",
+     "name": "Say what Jesus taught about prayer",
+     "outcomes": [
+      "CRE.G8.TEACHI.TEACHINGS_ON_PRAYER.a",
+      "CRE.G8.TEACHI.TEACHINGS_ON_PRAYER.b"
+     ],
+     "mastery": "The child says Jesus taught the Lord's Prayer (Matthew 6:9-13), to pray with faith (Mark 11:24) and to keep on praying, as in the story of the friend at midnight (Luke 11:5-10). Evidence rule: at least four of the last five fresh questions right across at least two question forms, and no repeated pick of the same misconception.",
+     "question_forms": [
+      "pick the right answer",
+      "pick the right answer in a short story",
+      "find the false step in a learner's reason"
+     ],
+     "thinking": [
+      "recall",
+      "reasoning"
+     ],
+     "horeb_skill_ids": [],
+     "prerequisites": [],
+     "status": "proposed"
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "CRES.G8.TEACHI.TEACHINGS_ON_PRAYER.PRAYER.M_CR8_PR_LORDS",
+     "skill": "CRES.G8.TEACHI.TEACHINGS_ON_PRAYER.PRAYER",
+     "error": "Gives the wrong reference.",
+     "example": {
+      "question": "Where is the Lord's Prayer in Matthew?",
+      "wrong_answer": "Matthew 1",
+      "correct_answer": "Matthew 6:9-13"
+     },
+     "cause": "The child mixes up two rules that are taught close together.",
+     "reveals": "Offer \"Matthew 1\" next to the right answer and ask the question again in a new situation.",
+     "help": "It is in Matthew 6.",
+     "feedback": "It is in Matthew 6.",
+     "source": "To confirm by a CRE teacher: a common classroom error, not traced to a study by the author.",
+     "status": "draft"
+    },
+    {
+     "code": "CRES.G8.TEACHI.TEACHINGS_ON_PRAYER.PRAYER.M_CR8_PR_FAITH",
+     "skill": "CRES.G8.TEACHI.TEACHINGS_ON_PRAYER.PRAYER",
+     "error": "Says faith is not needed.",
+     "example": {
+      "question": "How should we pray, according to Jesus?",
+      "wrong_answer": "Without faith",
+      "correct_answer": "With faith"
+     },
+     "cause": "The child mixes up two rules that are taught close together.",
+     "reveals": "Offer \"Without faith\" next to the right answer and ask the question again in a new situation.",
+     "help": "Jesus taught to pray with faith.",
+     "feedback": "Jesus taught to pray with faith.",
+     "source": "To confirm by a CRE teacher: a common classroom error, not traced to a study by the author.",
+     "status": "draft"
+    },
+    {
+     "code": "CRES.G8.TEACHI.TEACHINGS_ON_PRAYER.PRAYER.M_CR8_PR_PERSIST",
+     "skill": "CRES.G8.TEACHI.TEACHINGS_ON_PRAYER.PRAYER",
+     "error": "Says give up quickly.",
+     "example": {
+      "question": "What does the story of the friend at midnight teach?",
+      "wrong_answer": "Give up quickly",
+      "correct_answer": "Keep on praying"
+     },
+     "cause": "The child mixes up two rules that are taught close together.",
+     "reveals": "Offer \"Give up quickly\" next to the right answer and ask the question again in a new situation.",
+     "help": "It teaches persistence.",
+     "feedback": "It teaches persistence.",
+     "source": "To confirm by a CRE teacher: a common classroom error, not traced to a study by the author.",
+     "status": "draft"
+    }
+   ],
    "rubric_indicators": [
     "CRE.G8.RUBRIC.4.1",
     "CRE.G8.RUBRIC.4.2",
@@ -812,8 +1624,78 @@
      "indicator": "CRE.G8.RUBRIC.4.2"
     }
    ],
-   "skills": [],
-   "misconceptions": [],
+   "skills": [
+    {
+     "code": "CRES.G8.TEACHI.THE_LOST_SHEEP.LOST_SHEEP",
+     "name": "Tell the parable of the lost sheep",
+     "outcomes": [
+      "CRE.G8.TEACHI.THE_LOST_SHEEP.a"
+     ],
+     "mastery": "The child says a shepherd with a hundred sheep left the ninety-nine to look for the one that was lost, rejoiced when he found it, and that there is joy in heaven over one sinner who repents (Luke 15:1-7). Evidence rule: at least four of the last five fresh questions right across at least two question forms, and no repeated pick of the same misconception.",
+     "question_forms": [
+      "pick the right answer",
+      "pick the right answer in a short story",
+      "find the false step in a learner's reason"
+     ],
+     "thinking": [
+      "recall",
+      "reasoning"
+     ],
+     "horeb_skill_ids": [],
+     "prerequisites": [],
+     "status": "proposed"
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "CRES.G8.TEACHI.THE_LOST_SHEEP.LOST_SHEEP.M_CR8_LS_NUMBER",
+     "skill": "CRES.G8.TEACHI.THE_LOST_SHEEP.LOST_SHEEP",
+     "error": "Gives the wrong number.",
+     "example": {
+      "question": "How many sheep did the shepherd leave?",
+      "wrong_answer": "Ten",
+      "correct_answer": "Ninety-nine"
+     },
+     "cause": "The child mixes up two rules that are taught close together.",
+     "reveals": "Offer \"Ten\" next to the right answer and ask the question again in a new situation.",
+     "help": "He left ninety-nine.",
+     "feedback": "He left ninety-nine.",
+     "source": "To confirm by a CRE teacher: a common classroom error, not traced to a study by the author.",
+     "status": "draft"
+    },
+    {
+     "code": "CRES.G8.TEACHI.THE_LOST_SHEEP.LOST_SHEEP.M_CR8_LS_ACTION",
+     "skill": "CRES.G8.TEACHI.THE_LOST_SHEEP.LOST_SHEEP",
+     "error": "Says he ignored the lost sheep.",
+     "example": {
+      "question": "What did the shepherd do about the lost sheep?",
+      "wrong_answer": "Ignored it",
+      "correct_answer": "Looked for it"
+     },
+     "cause": "The child mixes up two rules that are taught close together.",
+     "reveals": "Offer \"Ignored it\" next to the right answer and ask the question again in a new situation.",
+     "help": "He looked for it.",
+     "feedback": "He looked for it.",
+     "source": "To confirm by a CRE teacher: a common classroom error, not traced to a study by the author.",
+     "status": "draft"
+    },
+    {
+     "code": "CRES.G8.TEACHI.THE_LOST_SHEEP.LOST_SHEEP.M_CR8_LS_JOY",
+     "skill": "CRES.G8.TEACHI.THE_LOST_SHEEP.LOST_SHEEP",
+     "error": "Says heaven is sad over a lost sinner.",
+     "example": {
+      "question": "Who rejoices when one sinner repents?",
+      "wrong_answer": "Nobody",
+      "correct_answer": "Heaven"
+     },
+     "cause": "The child mixes up two rules that are taught close together.",
+     "reveals": "Offer \"Nobody\" next to the right answer and ask the question again in a new situation.",
+     "help": "There is joy in heaven.",
+     "feedback": "There is joy in heaven.",
+     "source": "To confirm by a CRE teacher: a common classroom error, not traced to a study by the author.",
+     "status": "draft"
+    }
+   ],
    "rubric_indicators": [
     "CRE.G8.RUBRIC.4.1",
     "CRE.G8.RUBRIC.4.2",
@@ -895,8 +1777,79 @@
      "status": "kicd_verified"
     }
    ],
-   "skills": [],
-   "misconceptions": [],
+   "skills": [
+    {
+     "code": "CRES.G8.THE_CH.THE_HOLY_SPIRIT.HOLY_SPIRIT",
+     "name": "Tell Pentecost and name the fruit of the Spirit",
+     "outcomes": [
+      "CRE.G8.THE_CH.THE_HOLY_SPIRIT.a",
+      "CRE.G8.THE_CH.THE_HOLY_SPIRIT.b"
+     ],
+     "mastery": "The child says on the day of Pentecost the Holy Spirit came on the disciples with a sound like wind and tongues like fire and they spoke in other languages (Acts 2), and names the fruit of the Spirit: love, joy, peace, patience, kindness, goodness, faithfulness, gentleness and self-control (Galatians 5:22-23). Evidence rule: at least four of the last five fresh questions right across at least two question forms, and no repeated pick of the same misconception.",
+     "question_forms": [
+      "pick the right answer",
+      "pick the right answer in a short story",
+      "find the false step in a learner's reason"
+     ],
+     "thinking": [
+      "recall",
+      "reasoning"
+     ],
+     "horeb_skill_ids": [],
+     "prerequisites": [],
+     "status": "proposed"
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "CRES.G8.THE_CH.THE_HOLY_SPIRIT.HOLY_SPIRIT.M_CR8_HS_DAY",
+     "skill": "CRES.G8.THE_CH.THE_HOLY_SPIRIT.HOLY_SPIRIT",
+     "error": "Gives the wrong day.",
+     "example": {
+      "question": "On which day did the Spirit come on the disciples?",
+      "wrong_answer": "Passover",
+      "correct_answer": "Pentecost"
+     },
+     "cause": "The child mixes up two rules that are taught close together.",
+     "reveals": "Offer \"Passover\" next to the right answer and ask the question again in a new situation.",
+     "help": "It was the day of Pentecost.",
+     "feedback": "It was the day of Pentecost.",
+     "source": "To confirm by a CRE teacher: a common classroom error, not traced to a study by the author.",
+     "status": "draft"
+    },
+    {
+     "code": "CRES.G8.THE_CH.THE_HOLY_SPIRIT.HOLY_SPIRIT.M_CR8_HS_SIGN",
+     "skill": "CRES.G8.THE_CH.THE_HOLY_SPIRIT.HOLY_SPIRIT",
+     "error": "Gives the wrong signs.",
+     "example": {
+      "question": "What signs came with the Spirit?",
+      "wrong_answer": "An earthquake and snow",
+      "correct_answer": "A sound like wind and tongues like fire"
+     },
+     "cause": "The child mixes up two rules that are taught close together.",
+     "reveals": "Offer \"An earthquake and snow\" next to the right answer and ask the question again in a new situation.",
+     "help": "There was a sound like wind and tongues like fire.",
+     "feedback": "There was a sound like wind and tongues like fire.",
+     "source": "To confirm by a CRE teacher: a common classroom error, not traced to a study by the author.",
+     "status": "draft"
+    },
+    {
+     "code": "CRES.G8.THE_CH.THE_HOLY_SPIRIT.HOLY_SPIRIT.M_CR8_HS_FRUIT",
+     "skill": "CRES.G8.THE_CH.THE_HOLY_SPIRIT.HOLY_SPIRIT",
+     "error": "Names a non-fruit.",
+     "example": {
+      "question": "Which is a fruit of the Spirit?",
+      "wrong_answer": "Anger",
+      "correct_answer": "Love"
+     },
+     "cause": "The child mixes up two rules that are taught close together.",
+     "reveals": "Offer \"Anger\" next to the right answer and ask the question again in a new situation.",
+     "help": "Love is a fruit of the Spirit.",
+     "feedback": "Love is a fruit of the Spirit.",
+     "source": "To confirm by a CRE teacher: a common classroom error, not traced to a study by the author.",
+     "status": "draft"
+    }
+   ],
    "rubric_indicators": [
     "CRE.G8.RUBRIC.5.1",
     "CRE.G8.RUBRIC.5.2",
@@ -994,8 +1947,80 @@
      "status": "kicd_verified"
     }
    ],
-   "skills": [],
-   "misconceptions": [],
+   "skills": [
+    {
+     "code": "CRES.G8.THE_CH.ACTS_OF_COMPASSION.COMPASSION",
+     "name": "Tell the acts of compassion in Matthew 25",
+     "outcomes": [
+      "CRE.G8.THE_CH.ACTS_OF_COMPASSION.a",
+      "CRE.G8.THE_CH.ACTS_OF_COMPASSION.c",
+      "CRE.G8.THE_CH.ACTS_OF_COMPASSION.e"
+     ],
+     "mastery": "The child says in Matthew 25:31-46 the king welcomes those who fed the hungry, gave drink to the thirsty, welcomed strangers, clothed the naked, and visited the sick and prisoners, saying whatever was done for the least was done for Him. Evidence rule: at least four of the last five fresh questions right across at least two question forms, and no repeated pick of the same misconception.",
+     "question_forms": [
+      "pick the right answer",
+      "pick the right answer in a short story",
+      "find the false step in a learner's reason"
+     ],
+     "thinking": [
+      "recall",
+      "reasoning"
+     ],
+     "horeb_skill_ids": [],
+     "prerequisites": [],
+     "status": "proposed"
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "CRES.G8.THE_CH.ACTS_OF_COMPASSION.COMPASSION.M_CR8_CM_FED",
+     "skill": "CRES.G8.THE_CH.ACTS_OF_COMPASSION.COMPASSION",
+     "error": "Leaves out feeding the hungry.",
+     "example": {
+      "question": "What did the king say was done for Him?",
+      "wrong_answer": "Feeding the hungry",
+      "correct_answer": "Ignoring the hungry"
+     },
+     "cause": "The child mixes up two rules that are taught close together.",
+     "reveals": "Offer \"Feeding the hungry\" next to the right answer and ask the question again in a new situation.",
+     "help": "Feeding the hungry was done for Him.",
+     "feedback": "Feeding the hungry was done for Him.",
+     "source": "To confirm by a CRE teacher: a common classroom error, not traced to a study by the author.",
+     "status": "draft"
+    },
+    {
+     "code": "CRES.G8.THE_CH.ACTS_OF_COMPASSION.COMPASSION.M_CR8_CM_STRANGER",
+     "skill": "CRES.G8.THE_CH.ACTS_OF_COMPASSION.COMPASSION",
+     "error": "Says strangers should be avoided.",
+     "example": {
+      "question": "How should strangers be treated?",
+      "wrong_answer": "Turned away",
+      "correct_answer": "Welcomed"
+     },
+     "cause": "The child mixes up two rules that are taught close together.",
+     "reveals": "Offer \"Turned away\" next to the right answer and ask the question again in a new situation.",
+     "help": "The king said \"I was a stranger and you welcomed me\".",
+     "feedback": "The king said \"I was a stranger and you welcomed me\".",
+     "source": "To confirm by a CRE teacher: a common classroom error, not traced to a study by the author.",
+     "status": "draft"
+    },
+    {
+     "code": "CRES.G8.THE_CH.ACTS_OF_COMPASSION.COMPASSION.M_CR8_CM_LEAST",
+     "skill": "CRES.G8.THE_CH.ACTS_OF_COMPASSION.COMPASSION",
+     "error": "Misreads \"the least of these\".",
+     "example": {
+      "question": "What does the king say about helping the least?",
+      "wrong_answer": "It is for nothing",
+      "correct_answer": "It was done for Him"
+     },
+     "cause": "The child mixes up two rules that are taught close together.",
+     "reveals": "Offer \"It is for nothing\" next to the right answer and ask the question again in a new situation.",
+     "help": "What was done for the least was done for Him.",
+     "feedback": "What was done for the least was done for Him.",
+     "source": "To confirm by a CRE teacher: a common classroom error, not traced to a study by the author.",
+     "status": "draft"
+    }
+   ],
    "rubric_indicators": [
     "CRE.G8.RUBRIC.5.1",
     "CRE.G8.RUBRIC.5.2",
@@ -1088,8 +2113,81 @@
      "status": "kicd_verified"
     }
    ],
-   "skills": [],
-   "misconceptions": [],
+   "skills": [
+    {
+     "code": "CRES.G8.CHRIST.FAMILY_RELATIONSHIPS.FAMILY_ROLES",
+     "name": "Name family roles, causes of conflict and healthy practices",
+     "outcomes": [
+      "CRE.G8.CHRIST.FAMILY_RELATIONSHIPS.a",
+      "CRE.G8.CHRIST.FAMILY_RELATIONSHIPS.b",
+      "CRE.G8.CHRIST.FAMILY_RELATIONSHIPS.c",
+      "CRE.G8.CHRIST.FAMILY_RELATIONSHIPS.e"
+     ],
+     "mastery": "The child names roles of parents (providing, guiding, caring) and children (obeying and helping), healthy practices (talking, sharing duties, forgiving) and causes of conflict (selfishness, lack of listening, quarrels over money), and says children honour parents (Ephesians 6:1-3). Evidence rule: at least four of the last five fresh questions right across at least two question forms, and no repeated pick of the same misconception.",
+     "question_forms": [
+      "pick the right answer",
+      "pick the right answer in a short story",
+      "find the false step in a learner's reason"
+     ],
+     "thinking": [
+      "recall",
+      "reasoning"
+     ],
+     "horeb_skill_ids": [],
+     "prerequisites": [],
+     "status": "proposed"
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "CRES.G8.CHRIST.FAMILY_RELATIONSHIPS.FAMILY_ROLES.M_CR8_FRL_PARENT",
+     "skill": "CRES.G8.CHRIST.FAMILY_RELATIONSHIPS.FAMILY_ROLES",
+     "error": "Says parents only punish.",
+     "example": {
+      "question": "What do parents do for children?",
+      "wrong_answer": "Only punish them",
+      "correct_answer": "Provide, guide and care for them"
+     },
+     "cause": "The child mixes up two rules that are taught close together.",
+     "reveals": "Offer \"Only punish them\" next to the right answer and ask the question again in a new situation.",
+     "help": "Parents provide, guide and care.",
+     "feedback": "Parents provide, guide and care.",
+     "source": "To confirm by a CRE teacher: a common classroom error, not traced to a study by the author.",
+     "status": "draft"
+    },
+    {
+     "code": "CRES.G8.CHRIST.FAMILY_RELATIONSHIPS.FAMILY_ROLES.M_CR8_FRL_HEALTHY",
+     "skill": "CRES.G8.CHRIST.FAMILY_RELATIONSHIPS.FAMILY_ROLES",
+     "error": "Names an unhealthy practice.",
+     "example": {
+      "question": "Which is a healthy family practice?",
+      "wrong_answer": "Shouting at each other",
+      "correct_answer": "Talking and forgiving"
+     },
+     "cause": "The child mixes up two rules that are taught close together.",
+     "reveals": "Offer \"Shouting at each other\" next to the right answer and ask the question again in a new situation.",
+     "help": "Talking and forgiving are healthy.",
+     "feedback": "Talking and forgiving are healthy.",
+     "source": "To confirm by a CRE teacher: a common classroom error, not traced to a study by the author.",
+     "status": "draft"
+    },
+    {
+     "code": "CRES.G8.CHRIST.FAMILY_RELATIONSHIPS.FAMILY_ROLES.M_CR8_FRL_CHILD",
+     "skill": "CRES.G8.CHRIST.FAMILY_RELATIONSHIPS.FAMILY_ROLES",
+     "error": "Says children need not obey.",
+     "example": {
+      "question": "What does Ephesians 6:1 say children should do?",
+      "wrong_answer": "Ignore their parents",
+      "correct_answer": "Obey their parents"
+     },
+     "cause": "The child mixes up two rules that are taught close together.",
+     "reveals": "Offer \"Ignore their parents\" next to the right answer and ask the question again in a new situation.",
+     "help": "Children obey their parents.",
+     "feedback": "Children obey their parents.",
+     "source": "To confirm by a CRE teacher: a common classroom error, not traced to a study by the author.",
+     "status": "draft"
+    }
+   ],
    "rubric_indicators": [
     "CRE.G8.RUBRIC.6.1",
     "CRE.G8.RUBRIC.6.2",
@@ -1189,8 +2287,79 @@
      "status": "kicd_verified"
     }
    ],
-   "skills": [],
-   "misconceptions": [],
+   "skills": [
+    {
+     "code": "CRES.G8.CHRIST.HUMAN_SEXUALITY_RESPONSI.ABUSE_SAFETY",
+     "name": "Know how to stay safe from abuse and where to get help",
+     "outcomes": [
+      "CRE.G8.CHRIST.HUMAN_SEXUALITY_RESPONSI.a",
+      "CRE.G8.CHRIST.HUMAN_SEXUALITY_RESPONSI.d"
+     ],
+     "mastery": "The child says abuse means someone hurting, frightening or taking advantage of a child, and says a child who is unsafe or unsure tells a trusted adult such as a parent, teacher or counsellor, and does not keep it secret; values such as self-control and respect keep people safe. Evidence rule: at least four of the last five fresh questions right across at least two question forms, and no repeated pick of the same misconception.",
+     "question_forms": [
+      "pick the right answer",
+      "pick the right answer in a short story",
+      "find the false step in a learner's reason"
+     ],
+     "thinking": [
+      "recall",
+      "reasoning"
+     ],
+     "horeb_skill_ids": [],
+     "prerequisites": [],
+     "status": "proposed"
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "CRES.G8.CHRIST.HUMAN_SEXUALITY_RESPONSI.ABUSE_SAFETY.M_CR8_AS_TELL",
+     "skill": "CRES.G8.CHRIST.HUMAN_SEXUALITY_RESPONSI.ABUSE_SAFETY",
+     "error": "Says to keep it secret.",
+     "example": {
+      "question": "What should a child do if someone hurts or frightens her?",
+      "wrong_answer": "Keep it secret",
+      "correct_answer": "Tell a trusted adult"
+     },
+     "cause": "The child mixes up two rules that are taught close together.",
+     "reveals": "Offer \"Keep it secret\" next to the right answer and ask the question again in a new situation.",
+     "help": "Tell a trusted adult.",
+     "feedback": "Tell a trusted adult.",
+     "source": "To confirm by a CRE teacher: a common classroom error, not traced to a study by the author.",
+     "status": "draft"
+    },
+    {
+     "code": "CRES.G8.CHRIST.HUMAN_SEXUALITY_RESPONSI.ABUSE_SAFETY.M_CR8_AS_MEANING",
+     "skill": "CRES.G8.CHRIST.HUMAN_SEXUALITY_RESPONSI.ABUSE_SAFETY",
+     "error": "Does not know what abuse is.",
+     "example": {
+      "question": "What is abuse?",
+      "wrong_answer": "Playing a game",
+      "correct_answer": "Hurting or taking advantage of someone"
+     },
+     "cause": "The child mixes up two rules that are taught close together.",
+     "reveals": "Offer \"Playing a game\" next to the right answer and ask the question again in a new situation.",
+     "help": "Abuse is hurting or taking advantage of someone.",
+     "feedback": "Abuse is hurting or taking advantage of someone.",
+     "source": "To confirm by a CRE teacher: a common classroom error, not traced to a study by the author.",
+     "status": "draft"
+    },
+    {
+     "code": "CRES.G8.CHRIST.HUMAN_SEXUALITY_RESPONSI.ABUSE_SAFETY.M_CR8_AS_VALUE",
+     "skill": "CRES.G8.CHRIST.HUMAN_SEXUALITY_RESPONSI.ABUSE_SAFETY",
+     "error": "Names a harmful value.",
+     "example": {
+      "question": "Which value helps people stay safe?",
+      "wrong_answer": "Pressure",
+      "correct_answer": "Respect and self-control"
+     },
+     "cause": "The child mixes up two rules that are taught close together.",
+     "reveals": "Offer \"Pressure\" next to the right answer and ask the question again in a new situation.",
+     "help": "Respect and self-control keep people safe.",
+     "feedback": "Respect and self-control keep people safe.",
+     "source": "To confirm by a CRE teacher: a common classroom error, not traced to a study by the author.",
+     "status": "draft"
+    }
+   ],
    "rubric_indicators": [
     "CRE.G8.RUBRIC.6.1",
     "CRE.G8.RUBRIC.6.2",
@@ -1293,8 +2462,80 @@
      "status": "kicd_verified"
     }
    ],
-   "skills": [],
-   "misconceptions": [],
+   "skills": [
+    {
+     "code": "CRES.G8.CHRIST.SACREDNESS_OF_LIFE.LIFE_SACRED",
+     "name": "Tell why life is sacred and where to get help",
+     "outcomes": [
+      "CRE.G8.CHRIST.SACREDNESS_OF_LIFE.a",
+      "CRE.G8.CHRIST.SACREDNESS_OF_LIFE.b",
+      "CRE.G8.CHRIST.SACREDNESS_OF_LIFE.c"
+     ],
+     "mastery": "The child says life is a gift from God, people are made in His image (Genesis 1:27), and \"You shall not murder\" (Exodus 20:13), and that a person who feels hopeless should tell a trusted adult or counsellor straight away. Evidence rule: at least four of the last five fresh questions right across at least two question forms, and no repeated pick of the same misconception.",
+     "question_forms": [
+      "pick the right answer",
+      "pick the right answer in a short story",
+      "find the false step in a learner's reason"
+     ],
+     "thinking": [
+      "recall",
+      "reasoning"
+     ],
+     "horeb_skill_ids": [],
+     "prerequisites": [],
+     "status": "proposed"
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "CRES.G8.CHRIST.SACREDNESS_OF_LIFE.LIFE_SACRED.M_CR8_LF_GIFT",
+     "skill": "CRES.G8.CHRIST.SACREDNESS_OF_LIFE.LIFE_SACRED",
+     "error": "Says life is cheap.",
+     "example": {
+      "question": "Where does life come from?",
+      "wrong_answer": "From chance only",
+      "correct_answer": "From God as a gift"
+     },
+     "cause": "The child mixes up two rules that are taught close together.",
+     "reveals": "Offer \"From chance only\" next to the right answer and ask the question again in a new situation.",
+     "help": "Life is a gift from God.",
+     "feedback": "Life is a gift from God.",
+     "source": "To confirm by a CRE teacher: a common classroom error, not traced to a study by the author.",
+     "status": "draft"
+    },
+    {
+     "code": "CRES.G8.CHRIST.SACREDNESS_OF_LIFE.LIFE_SACRED.M_CR8_LF_COMMAND",
+     "skill": "CRES.G8.CHRIST.SACREDNESS_OF_LIFE.LIFE_SACRED",
+     "error": "Gives the wrong commandment.",
+     "example": {
+      "question": "What does Exodus 20:13 say?",
+      "wrong_answer": "You shall not steal",
+      "correct_answer": "You shall not murder"
+     },
+     "cause": "The child mixes up two rules that are taught close together.",
+     "reveals": "Offer \"You shall not steal\" next to the right answer and ask the question again in a new situation.",
+     "help": "You shall not murder.",
+     "feedback": "You shall not murder.",
+     "source": "To confirm by a CRE teacher: a common classroom error, not traced to a study by the author.",
+     "status": "draft"
+    },
+    {
+     "code": "CRES.G8.CHRIST.SACREDNESS_OF_LIFE.LIFE_SACRED.M_CR8_LF_HELP",
+     "skill": "CRES.G8.CHRIST.SACREDNESS_OF_LIFE.LIFE_SACRED",
+     "error": "Says to hide hopeless feelings.",
+     "example": {
+      "question": "What should a child do who feels hopeless?",
+      "wrong_answer": "Hide it",
+      "correct_answer": "Tell a trusted adult or counsellor"
+     },
+     "cause": "The child mixes up two rules that are taught close together.",
+     "reveals": "Offer \"Hide it\" next to the right answer and ask the question again in a new situation.",
+     "help": "Tell a trusted adult or counsellor.",
+     "feedback": "Tell a trusted adult or counsellor.",
+     "source": "To confirm by a CRE teacher: a common classroom error, not traced to a study by the author.",
+     "status": "draft"
+    }
+   ],
    "rubric_indicators": [
     "CRE.G8.RUBRIC.6.1",
     "CRE.G8.RUBRIC.6.2",
@@ -1378,8 +2619,80 @@
      "indicator": "CRE.G8.RUBRIC.6.7"
     }
    ],
-   "skills": [],
-   "misconceptions": [],
+   "skills": [
+    {
+     "code": "CRES.G8.CHRIST.BULLYING.BULLYING",
+     "name": "Name causes and effects of bullying and values that stop it",
+     "outcomes": [
+      "CRE.G8.CHRIST.BULLYING.a",
+      "CRE.G8.CHRIST.BULLYING.b",
+      "CRE.G8.CHRIST.BULLYING.c"
+     ],
+     "mastery": "The child names causes (wanting power, jealousy, copying others) and effects (fear, low marks, loneliness), and values from the Bible such as kindness (Ephesians 4:32) and treating others as you wish to be treated (Luke 6:31), and says to tell a trusted adult. Evidence rule: at least four of the last five fresh questions right across at least two question forms, and no repeated pick of the same misconception.",
+     "question_forms": [
+      "pick the right answer",
+      "pick the right answer in a short story",
+      "find the false step in a learner's reason"
+     ],
+     "thinking": [
+      "recall",
+      "reasoning"
+     ],
+     "horeb_skill_ids": [],
+     "prerequisites": [],
+     "status": "proposed"
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "CRES.G8.CHRIST.BULLYING.BULLYING.M_CR8_BL_CAUSE",
+     "skill": "CRES.G8.CHRIST.BULLYING.BULLYING",
+     "error": "Names a good cause.",
+     "example": {
+      "question": "Which can cause bullying?",
+      "wrong_answer": "Kindness",
+      "correct_answer": "Wanting power over others"
+     },
+     "cause": "The child mixes up two rules that are taught close together.",
+     "reveals": "Offer \"Kindness\" next to the right answer and ask the question again in a new situation.",
+     "help": "Wanting power causes bullying.",
+     "feedback": "Wanting power causes bullying.",
+     "source": "To confirm by a CRE teacher: a common classroom error, not traced to a study by the author.",
+     "status": "draft"
+    },
+    {
+     "code": "CRES.G8.CHRIST.BULLYING.BULLYING.M_CR8_BL_EFFECT",
+     "skill": "CRES.G8.CHRIST.BULLYING.BULLYING",
+     "error": "Names a good effect.",
+     "example": {
+      "question": "Which is an effect of bullying?",
+      "wrong_answer": "Happiness",
+      "correct_answer": "Fear and loneliness"
+     },
+     "cause": "The child mixes up two rules that are taught close together.",
+     "reveals": "Offer \"Happiness\" next to the right answer and ask the question again in a new situation.",
+     "help": "Bullying causes fear and loneliness.",
+     "feedback": "Bullying causes fear and loneliness.",
+     "source": "To confirm by a CRE teacher: a common classroom error, not traced to a study by the author.",
+     "status": "draft"
+    },
+    {
+     "code": "CRES.G8.CHRIST.BULLYING.BULLYING.M_CR8_BL_VALUE",
+     "skill": "CRES.G8.CHRIST.BULLYING.BULLYING",
+     "error": "Names a harmful value.",
+     "example": {
+      "question": "Which value stops bullying?",
+      "wrong_answer": "Cruelty",
+      "correct_answer": "Kindness"
+     },
+     "cause": "The child mixes up two rules that are taught close together.",
+     "reveals": "Offer \"Cruelty\" next to the right answer and ask the question again in a new situation.",
+     "help": "Kindness stops bullying.",
+     "feedback": "Kindness stops bullying.",
+     "source": "To confirm by a CRE teacher: a common classroom error, not traced to a study by the author.",
+     "status": "draft"
+    }
+   ],
    "rubric_indicators": [
     "CRE.G8.RUBRIC.6.1",
     "CRE.G8.RUBRIC.6.2",
@@ -1490,8 +2803,79 @@
      "indicator": "CRE.G8.RUBRIC.6.11"
     }
    ],
-   "skills": [],
-   "misconceptions": [],
+   "skills": [
+    {
+     "code": "CRES.G8.CHRIST.WORK_TALENTS_GIFTS_AND_A.TALENTS_PARABLE",
+     "name": "Tell the parable of the talents",
+     "outcomes": [
+      "CRE.G8.CHRIST.WORK_TALENTS_GIFTS_AND_A.c",
+      "CRE.G8.CHRIST.WORK_TALENTS_GIFTS_AND_A.d"
+     ],
+     "mastery": "The child says the master gave servants five, two and one talents, the first two traded and doubled theirs, the third buried his, and the master praised the faithful servants and rebuked the one who did nothing (Matthew 25:14-30). Evidence rule: at least four of the last five fresh questions right across at least two question forms, and no repeated pick of the same misconception.",
+     "question_forms": [
+      "pick the right answer",
+      "pick the right answer in a short story",
+      "find the false step in a learner's reason"
+     ],
+     "thinking": [
+      "recall",
+      "reasoning"
+     ],
+     "horeb_skill_ids": [],
+     "prerequisites": [],
+     "status": "proposed"
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "CRES.G8.CHRIST.WORK_TALENTS_GIFTS_AND_A.TALENTS_PARABLE.M_CR8_TP_NUMBER",
+     "skill": "CRES.G8.CHRIST.WORK_TALENTS_GIFTS_AND_A.TALENTS_PARABLE",
+     "error": "Gives the wrong talents.",
+     "example": {
+      "question": "How many talents did the first servant get?",
+      "wrong_answer": "One",
+      "correct_answer": "Five"
+     },
+     "cause": "The child mixes up two rules that are taught close together.",
+     "reveals": "Offer \"One\" next to the right answer and ask the question again in a new situation.",
+     "help": "The first servant got five.",
+     "feedback": "The first servant got five.",
+     "source": "To confirm by a CRE teacher: a common classroom error, not traced to a study by the author.",
+     "status": "draft"
+    },
+    {
+     "code": "CRES.G8.CHRIST.WORK_TALENTS_GIFTS_AND_A.TALENTS_PARABLE.M_CR8_TP_BURY",
+     "skill": "CRES.G8.CHRIST.WORK_TALENTS_GIFTS_AND_A.TALENTS_PARABLE",
+     "error": "Says the third servant traded.",
+     "example": {
+      "question": "What did the third servant do?",
+      "wrong_answer": "Traded and doubled",
+      "correct_answer": "Buried the talent"
+     },
+     "cause": "The child mixes up two rules that are taught close together.",
+     "reveals": "Offer \"Traded and doubled\" next to the right answer and ask the question again in a new situation.",
+     "help": "He buried it.",
+     "feedback": "He buried it.",
+     "source": "To confirm by a CRE teacher: a common classroom error, not traced to a study by the author.",
+     "status": "draft"
+    },
+    {
+     "code": "CRES.G8.CHRIST.WORK_TALENTS_GIFTS_AND_A.TALENTS_PARABLE.M_CR8_TP_LESSON",
+     "skill": "CRES.G8.CHRIST.WORK_TALENTS_GIFTS_AND_A.TALENTS_PARABLE",
+     "error": "Misses the lesson.",
+     "example": {
+      "question": "What does the parable teach?",
+      "wrong_answer": "Hide what you have",
+      "correct_answer": "Use what you have faithfully"
+     },
+     "cause": "The child mixes up two rules that are taught close together.",
+     "reveals": "Offer \"Hide what you have\" next to the right answer and ask the question again in a new situation.",
+     "help": "Use what you have faithfully.",
+     "feedback": "Use what you have faithfully.",
+     "source": "To confirm by a CRE teacher: a common classroom error, not traced to a study by the author.",
+     "status": "draft"
+    }
+   ],
    "rubric_indicators": [
     "CRE.G8.RUBRIC.6.1",
     "CRE.G8.RUBRIC.6.2",
@@ -1592,8 +2976,81 @@
      "indicator": "CRE.G8.RUBRIC.6.10"
     }
    ],
-   "skills": [],
-   "misconceptions": [],
+   "skills": [
+    {
+     "code": "CRES.G8.CHRIST.LEISURE.LEISURE",
+     "name": "Tell constructive use of leisure from misuse",
+     "outcomes": [
+      "CRE.G8.CHRIST.LEISURE.a",
+      "CRE.G8.CHRIST.LEISURE.b",
+      "CRE.G8.CHRIST.LEISURE.c",
+      "CRE.G8.CHRIST.LEISURE.d"
+     ],
+     "mastery": "The child says leisure is free time, names misuse (too much idleness, gambling, drugs, too many games) and its effects (poor school work, poor health) and constructive uses (reading, sport, hobbies, helping at home, rest), and says God gave a day of rest (Exodus 20:8-10). Evidence rule: at least four of the last five fresh questions right across at least two question forms, and no repeated pick of the same misconception.",
+     "question_forms": [
+      "pick the right answer",
+      "pick the right answer in a short story",
+      "find the false step in a learner's reason"
+     ],
+     "thinking": [
+      "recall",
+      "reasoning"
+     ],
+     "horeb_skill_ids": [],
+     "prerequisites": [],
+     "status": "proposed"
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "CRES.G8.CHRIST.LEISURE.LEISURE.M_CR8_LE_MEANING",
+     "skill": "CRES.G8.CHRIST.LEISURE.LEISURE",
+     "error": "Thinks leisure is work.",
+     "example": {
+      "question": "What is leisure?",
+      "wrong_answer": "Hard work",
+      "correct_answer": "Free time"
+     },
+     "cause": "The child mixes up two rules that are taught close together.",
+     "reveals": "Offer \"Hard work\" next to the right answer and ask the question again in a new situation.",
+     "help": "Leisure is free time.",
+     "feedback": "Leisure is free time.",
+     "source": "To confirm by a CRE teacher: a common classroom error, not traced to a study by the author.",
+     "status": "draft"
+    },
+    {
+     "code": "CRES.G8.CHRIST.LEISURE.LEISURE.M_CR8_LE_MISUSE",
+     "skill": "CRES.G8.CHRIST.LEISURE.LEISURE",
+     "error": "Names a good use as misuse.",
+     "example": {
+      "question": "Which is a misuse of leisure?",
+      "wrong_answer": "Reading a book",
+      "correct_answer": "Gambling or taking drugs"
+     },
+     "cause": "The child mixes up two rules that are taught close together.",
+     "reveals": "Offer \"Reading a book\" next to the right answer and ask the question again in a new situation.",
+     "help": "Gambling and drugs are misuse.",
+     "feedback": "Gambling and drugs are misuse.",
+     "source": "To confirm by a CRE teacher: a common classroom error, not traced to a study by the author.",
+     "status": "draft"
+    },
+    {
+     "code": "CRES.G8.CHRIST.LEISURE.LEISURE.M_CR8_LE_GOOD",
+     "skill": "CRES.G8.CHRIST.LEISURE.LEISURE",
+     "error": "Names a harmful use as good.",
+     "example": {
+      "question": "Which is a constructive use of leisure?",
+      "wrong_answer": "Idling all day",
+      "correct_answer": "Sport or helping at home"
+     },
+     "cause": "The child mixes up two rules that are taught close together.",
+     "reveals": "Offer \"Idling all day\" next to the right answer and ask the question again in a new situation.",
+     "help": "Sport and helping are constructive.",
+     "feedback": "Sport and helping are constructive.",
+     "source": "To confirm by a CRE teacher: a common classroom error, not traced to a study by the author.",
+     "status": "draft"
+    }
+   ],
    "rubric_indicators": [
     "CRE.G8.RUBRIC.6.1",
     "CRE.G8.RUBRIC.6.2",
