@@ -31,7 +31,7 @@ const DET = [
   I('Each learner ___ asked to bring a book.', 'was', [['were', 'M_DET_EACH_PLURAL'], ['are', 'M_DET_EACH_PLURAL'], ['have', 'M_DET_EACH_PLURAL']], 'Each learner is one person, so the verb is singular: was.'),
   I('Would you like ___ more tea, Grandmother?', 'some', [['each', 'M_DET_SOME_ANY'], ['enough', 'M_DET_SOME_ANY'], ['a lots of', 'M_DET_LOTS_FORM']], 'In an offer we use some: Would you like some more tea?'),
   I('There are not ___ chairs for everyone, so some will stand.', 'enough', [['each', 'M_DET_EACH_PLURAL'], ['a lots of', 'M_DET_LOTS_FORM'], ['a lot off', 'M_DET_LOTS_FORM']], 'Enough chairs means as many as are needed. It comes before the noun.'),
-  I('Wanjiru gave ___ of the children a mango.', 'each', [['a lot of', 'M_DET_EACH_PLURAL'], ['enough', 'M_DET_EACH_PLURAL'], ['some', 'M_DET_EACH_PLURAL']], 'She gave a mango to one child at a time, so each.'),
+  I('Wanjiru gave ___ of the thirty children a mango, so nobody was left out.', 'each', [['a lot of', 'M_DET_EACH_PLURAL'], ['enough', 'M_DET_EACH_PLURAL'], ['some', 'M_DET_EACH_PLURAL']], 'She gave a mango to one child at a time, so each.'),
 ];
 // ---------------------------------------------------------------- concrete and abstract nouns
 const CA = [
@@ -46,10 +46,10 @@ const CA_ID = [
   I('Which of these nouns is abstract.', 'kindness', [['river', 'M_NOUN_FEELING_CONCRETE'], ['table', 'M_NOUN_FEELING_CONCRETE'], ['mango', 'M_NOUN_FEELING_CONCRETE']], 'You cannot see or touch kindness. It is an idea, so it is abstract.'),
   I('Which of these nouns is concrete.', 'market', [['freedom', 'M_NOUN_PLACE_ABSTRACT'], ['honesty', 'M_NOUN_PLACE_ABSTRACT'], ['courage', 'M_NOUN_PLACE_ABSTRACT']], 'You can walk to a market and see it, so it is concrete.'),
   I('Which of these nouns is abstract.', 'hunger', [['bread', 'M_NOUN_FEELING_CONCRETE'], ['bowl', 'M_NOUN_FEELING_CONCRETE'], ['spoon', 'M_NOUN_FEELING_CONCRETE']], 'Hunger is a feeling. You cannot touch it, so it is abstract.'),
-  I('Which of these nouns is abstract.', 'music', [['drum', 'M_NOUN_SENSE_ABSTRACT'], ['bell', 'M_NOUN_SENSE_ABSTRACT'], ['radio', 'M_NOUN_SENSE_ABSTRACT']], 'You can hear music but you cannot hold it. The drum, bell and radio are things.'),
+  I('Which of these nouns is abstract.', 'happiness', [['drum', 'M_NOUN_SENSE_ABSTRACT'], ['bell', 'M_NOUN_SENSE_ABSTRACT'], ['radio', 'M_NOUN_SENSE_ABSTRACT']], 'Happiness is a feeling, an idea. You cannot touch it. The drum, bell and radio are things.'),
   I('Which of these nouns is concrete.', 'teacher', [['wisdom', 'M_NOUN_PLACE_ABSTRACT'], ['patience', 'M_NOUN_PLACE_ABSTRACT'], ['friendship', 'M_NOUN_PLACE_ABSTRACT']], 'A teacher is a person we can see, so the noun is concrete.'),
   I('Which of these nouns is abstract.', 'freedom', [['school', 'M_NOUN_FEELING_CONCRETE'], ['flag', 'M_NOUN_FEELING_CONCRETE'], ['road', 'M_NOUN_FEELING_CONCRETE']], 'Freedom is an idea. We cannot touch it, so it is abstract.'),
-  I('Which of these nouns is concrete.', 'chalk', [['laughter', 'M_NOUN_SENSE_ABSTRACT'], ['silence', 'M_NOUN_SENSE_ABSTRACT'], ['time', 'M_NOUN_SENSE_ABSTRACT']], 'Chalk is a thing we can touch. Laughter, silence and time cannot be held.'),
+  I('Which of these nouns is concrete.', 'chalk', [['bravery', 'M_NOUN_SENSE_ABSTRACT'], ['silence', 'M_NOUN_SENSE_ABSTRACT'], ['time', 'M_NOUN_SENSE_ABSTRACT']], 'Chalk is a thing we can touch. Bravery, silence and time are ideas and cannot be held.'),
 ];
 // ---------------------------------------------------------------- correlative conjunctions
 const CORR = [
@@ -79,7 +79,7 @@ const REL = [
   I('This is the book ___ I bought yesterday.', 'which|that', [['who', 'M_REL_WHO_THING'], ['whose', 'M_REL_WHOSE_WHO'], ['which it', 'M_REL_DOUBLE']], 'A book is a thing, so which.'),
   I('The boy ___ bag was stolen began to cry.', 'whose', [['who', 'M_REL_WHOSE_WHO'], ['which', 'M_REL_WHICH_PERSON'], ['whom', 'M_REL_WHOSE_WHO']], 'The bag belongs to the boy. Belonging is whose.'),
   I('The teacher ___ taught us Maths is very kind.', 'who|that', [['who she', 'M_REL_DOUBLE'], ['which', 'M_REL_WHICH_PERSON'], ['whose', 'M_REL_WHOSE_WHO']], 'Who already stands for the teacher. Do not add she.'),
-  I('The dog ___ barked all night belongs to our neighbour.', 'which|that', [['who', 'M_REL_WHO_THING'], ['whose', 'M_REL_WHOSE_WHO'], ['which it', 'M_REL_DOUBLE']], 'A dog is an animal, so which or that.'),
+  I('The dog ___ barked all night belongs to our neighbour.', 'which|that', [['whom', 'M_REL_WHO_THING'], ['whose', 'M_REL_WHOSE_WHO'], ['which it', 'M_REL_DOUBLE']], 'A dog is an animal, so which or that.'),
   I('The woman ___ shop is near the bus stage sells good mandazi.', 'whose', [['who', 'M_REL_WHOSE_WHO'], ['which', 'M_REL_WHICH_PERSON'], ['whom', 'M_REL_WHOSE_WHO']], 'The shop belongs to the woman. Belonging is whose.'),
   I('The farmer to ___ we spoke gave us a bag of maize.', 'whom', [['who', 'M_REL_WHOM_WHO'], ['which', 'M_REL_WHICH_PERSON'], ['whose', 'M_REL_WHOSE_WHO']], 'After to, the formal word for a person is whom.'),
   I('The river ___ flows past our school is very wide.', 'which|that', [['who', 'M_REL_WHO_THING'], ['whose', 'M_REL_WHOSE_WHO'], ['which it', 'M_REL_DOUBLE']], 'A river is a thing, so which or that.'),
@@ -126,14 +126,14 @@ const PQ = [
 ];
 // ---------------------------------------------------------------- future continuous
 const FC = [
-  I('This time tomorrow we ___ travelling to Kisumu.', 'will be', [['will', 'M_FC_NO_BE'], ['are', 'M_FC_PRESENT'], ['will been', 'M_FC_WILL_BEEN']], 'The future continuous is will be + verb-ing: will be travelling.'),
-  I('At six o\'clock tonight I ___ cooking supper.', 'will be', [['will been', 'M_FC_WILL_BEEN'], ['will', 'M_FC_NO_BE'], ['am', 'M_FC_PRESENT']], 'At a stated time in the future: will be cooking.'),
-  I('At noon tomorrow Mama ___ working in the shamba.', 'will be', [['is', 'M_FC_PRESENT'], ['will', 'M_FC_NO_BE'], ['will been', 'M_FC_WILL_BEEN']], 'The time is in the future, so will be working.'),
-  I('Tomorrow at ten the pupils ___ writing a test.', 'will be', [['will write', 'M_FC_NO_ING'], ['will', 'M_FC_NO_BE'], ['are', 'M_FC_PRESENT']], 'The test will be going on at ten, so will be writing.'),
-  I('Next Saturday morning the whole village ___ cleaning the market.', 'will be', [['will been', 'M_FC_WILL_BEEN'], ['is', 'M_FC_PRESENT'], ['will', 'M_FC_NO_BE']], 'An action going on at a future time: will be cleaning.'),
-  I('This time next week, Atieno ___ sitting her final exam.', 'will be', [['will', 'M_FC_NO_BE'], ['is', 'M_FC_PRESENT'], ['will been', 'M_FC_WILL_BEEN']], 'This time next week is in the future: will be sitting.'),
-  I('When you arrive, we ___ waiting for you at the gate.', 'will be', [['will been', 'M_FC_WILL_BEEN'], ['are', 'M_FC_PRESENT'], ['will', 'M_FC_NO_BE']], 'The waiting will already be going on when you arrive: will be waiting.'),
-  I('By eight tomorrow morning the children ___ playing football.', 'will be', [['will play', 'M_FC_NO_ING'], ['are', 'M_FC_PRESENT'], ['will', 'M_FC_NO_BE']], 'An action going on at a stated future time: will be playing.'),
+  I('This time tomorrow we ___ travelling to Kisumu.', 'will be', [['will', 'M_FC_NO_BE'], ['be', 'M_FC_PRESENT'], ['will been', 'M_FC_WILL_BEEN']], 'The future continuous is will be + verb-ing: will be travelling.'),
+  I('At six o\'clock tonight I ___ cooking supper.', 'will be', [['will been', 'M_FC_WILL_BEEN'], ['will', 'M_FC_NO_BE'], ['be', 'M_FC_PRESENT']], 'At a stated time in the future: will be cooking.'),
+  I('At noon tomorrow Mama ___ working in the shamba.', 'will be', [['be', 'M_FC_PRESENT'], ['will', 'M_FC_NO_BE'], ['will been', 'M_FC_WILL_BEEN']], 'The time is in the future, so will be working.'),
+  I('Tomorrow at ten the pupils ___ writing a test.', 'will be', [['will write', 'M_FC_NO_ING'], ['will', 'M_FC_NO_BE'], ['be', 'M_FC_PRESENT']], 'The test will be going on at ten, so will be writing.'),
+  I('Next Saturday morning the whole village ___ cleaning the market.', 'will be', [['will been', 'M_FC_WILL_BEEN'], ['be', 'M_FC_PRESENT'], ['will', 'M_FC_NO_BE']], 'An action going on at a future time: will be cleaning.'),
+  I('This time next week, Atieno ___ sitting her final exam.', 'will be', [['will', 'M_FC_NO_BE'], ['be', 'M_FC_PRESENT'], ['will been', 'M_FC_WILL_BEEN']], 'This time next week is in the future: will be sitting.'),
+  I('When you arrive, we ___ waiting for you at the gate.', 'will be', [['will been', 'M_FC_WILL_BEEN'], ['be', 'M_FC_PRESENT'], ['will', 'M_FC_NO_BE']], 'The waiting will already be going on when you arrive: will be waiting.'),
+  I('By eight tomorrow morning the children ___ playing football.', 'will be', [['will play', 'M_FC_NO_ING'], ['be', 'M_FC_PRESENT'], ['will', 'M_FC_NO_BE']], 'An action going on at a stated future time: will be playing.'),
 ];
 // ---------------------------------------------------------------- active and passive
 const PASS = [
@@ -142,7 +142,7 @@ const PASS = [
   I('The books ___ returned to the library on Friday.', 'were', [['was', 'M_PASS_AGREEMENT'], ['is', 'M_PASS_AGREEMENT'], ['be', 'M_PASS_NO_BE']], 'The subject books is plural, so were.'),
   I('The food was ___ by the guests.', 'eaten', [['ate', 'M_PASS_PAST_FORM'], ['eat', 'M_PASS_PAST_FORM'], ['eating', 'M_PASS_PAST_FORM']], 'After was use the past participle: eaten.'),
   I('The match ___ by thousands of fans.', 'was watched', [['watched', 'M_PASS_NO_BE'], ['were watched', 'M_PASS_AGREEMENT'], ['was watch', 'M_PASS_PAST_FORM']], 'The match is singular, so was watched.'),
-  I('The trees ___ planted by the Grade 6 learners.', 'were', [['was', 'M_PASS_AGREEMENT'], ['are being', 'M_PASS_AGREEMENT'], ['be', 'M_PASS_NO_BE']], 'The trees is plural and the planting is finished, so were planted.'),
+  I('The trees ___ planted by the Grade 6 learners.', 'were', [['was', 'M_PASS_AGREEMENT'], ['be being', 'M_PASS_AGREEMENT'], ['be', 'M_PASS_NO_BE']], 'The trees is plural and the planting is finished, so were planted.'),
   I('The thief was ___ by the police near the market.', 'caught', [['catch', 'M_PASS_PAST_FORM'], ['catched', 'M_PASS_PAST_FORM'], ['catching', 'M_PASS_PAST_FORM']], 'The past participle of catch is caught.'),
   I('The new bridge ___ opened by the governor.', 'was', [['were', 'M_PASS_AGREEMENT'], ['has', 'M_PASS_NO_BE'], ['did', 'M_PASS_NO_BE']], 'The bridge is singular, so was opened.'),
 ];
@@ -165,7 +165,7 @@ const CW = [
   I('The teacher ___ us a story about a clever hare.', 'told', [['said', 'M_CW_SAY_TELL'], ['says', 'M_CW_SAY_TELL'], ['speaked', 'M_CW_SAY_TELL']], 'Tell is followed by the person: told us.'),
   I('Please ___ me your pen for a minute.', 'lend', [['borrow', 'M_CW_BORROW_LEND'], ['borrowed', 'M_CW_BORROW_LEND'], ['lent', 'M_CW_BORROW_LEND']], 'You give someone a thing for a short time: lend. The other person borrows.'),
   I('May I ___ your pen for a minute?', 'borrow', [['lend', 'M_CW_BORROW_LEND'], ['lent', 'M_CW_BORROW_LEND'], ['give', 'M_CW_BORROW_LEND']], 'You take a thing for a short time: borrow.'),
-  I('Please ___ this letter to the headteacher\'s office.', 'take', [['bring', 'M_CW_BRING_TAKE'], ['brings', 'M_CW_BRING_TAKE'], ['brang', 'M_CW_BRING_TAKE']], 'The letter moves away from the speaker, so take.'),
+  I('Please ___ this letter to the headteacher\'s office. I will stay here in the classroom.', 'take', [['bring', 'M_CW_BRING_TAKE'], ['brings', 'M_CW_BRING_TAKE'], ['brang', 'M_CW_BRING_TAKE']], 'The letter moves away from the speaker, so take.'),
   I('Mr Kimani will ___ us fractions this term.', 'teach', [['learn', 'M_CW_LEARN_TEACH'], ['learned', 'M_CW_LEARN_TEACH'], ['teached', 'M_CW_LEARN_TEACH']], 'The teacher teaches; the pupils learn.'),
   I('We ___ fractions from Mr Kimani every Monday.', 'learn', [['teach', 'M_CW_LEARN_TEACH'], ['taught', 'M_CW_LEARN_TEACH'], ['lerned', 'M_CW_LEARN_TEACH']], 'The pupils learn from the teacher.'),
   I('Please ___ carefully to the story.', 'listen', [['hear', 'M_CW_HEAR_LISTEN'], ['heard', 'M_CW_HEAR_LISTEN'], ['hearing', 'M_CW_HEAR_LISTEN']], 'You listen on purpose. Listen is followed by to.'),
@@ -180,7 +180,7 @@ const ADV = [
   I('He worked ___ and passed the exam.', 'hard', [['hardly', 'M6_ADV_HARD_HARDLY'], ['harder', 'M6_ADV_HARD_HARDLY'], ['hardy', 'M6_ADV_HARD_HARDLY']], 'Hard means with great effort. Hardly means almost not.'),
   I('Juma ___ walks to school.', 'always', [['walks always', 'M6_ADV_POSITION'], ['all ways', 'M6_ADV_POSITION'], ['alway', 'M6_ADV_POSITION']], 'Always comes before the main verb.'),
   I('The old man spoke ___ so that everyone could hear.', 'loudly', [['loud', 'M6_ADV_ADJ_FOR_ADV'], ['loudest', 'M6_ADV_ADJ_FOR_ADV'], ['louder', 'M6_ADV_ADJ_FOR_ADV']], 'How did he speak? Loudly.'),
-  I('She was ___ tired after the long walk.', 'very', [['well', 'M_ADV_KIND_MIXED'], ['hard', 'M_ADV_KIND_MIXED'], ['hardly', 'M_ADV_KIND_MIXED']], 'Very is an adverb of degree. It tells how much.'),
+  I('She was ___ tired after the long walk.', 'very', [['well', 'M_ADV_KIND_MIXED'], ['hard', 'M_ADV_KIND_MIXED'], ['good', 'M_ADV_KIND_MIXED']], 'Very is an adverb of degree. It tells how much.'),
   I('The children ___ play in the compound after school.', 'often', [['play often', 'M6_ADV_POSITION'], ['oftenly', 'M6_ADV_POSITION'], ['soft', 'M6_ADV_POSITION']], 'Often comes before the main verb: they often play.'),
   I('He ___ slept last night because of the noise.', 'hardly', [['hard', 'M6_ADV_HARD_HARDLY'], ['hardy', 'M6_ADV_HARD_HARDLY'], ['harder', 'M6_ADV_HARD_HARDLY']], 'He slept very little: hardly.'),
 ];
