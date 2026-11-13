@@ -41,6 +41,13 @@ test('units and Kenyan context are checked', () => {
   assert.ok(ids({ ...good, question: 'A matatu travels at 400 km/h for 2 hours. What is 12 + 8?' }).includes('soft:units'));
   assert.ok(!ids({ ...good, question: 'A forex bureau changes 50 US dollars into shillings at sh 128 each. What is 12 + 8?' }).includes('hard:units'));
 });
+test('feet and foot are flagged only as a measurement', () => {
+  assert.ok(ids({ ...good, question: 'A pole is 6 ft tall. What is 12 + 8?' }).includes('hard:units'));
+  assert.ok(ids({ ...good, question: 'A rope is ten feet long. What is 12 + 8?' }).includes('hard:units'));
+  assert.ok(!ids({ ...good, question: 'You enter the water feet first. What is 12 + 8?' }).includes('hard:units'));
+  assert.ok(!ids({ ...good, question: 'A crab balance is on the hands and feet. What is 12 + 8?' }).includes('hard:units'));
+  assert.ok(!ids({ ...good, question: 'The foot joint is the lowest part. What is 12 + 8?' }).includes('hard:units'));
+});
 test('the report script runs and finds no hard failure in the bank', () => {
   const out = execFileSync('node', ['scripts/review-precheck.mjs', '--draws', '4', '--strict', '--no-write'], { cwd: new URL('..', import.meta.url).pathname, encoding: 'utf8' });
   assert.match(out, /0 hard/);

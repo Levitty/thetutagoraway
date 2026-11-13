@@ -86,7 +86,7 @@ export const FAMILIES = [
     ['In which direction does a side roll go?', 'Sideways along the mat', [...w('M_CA4_GY_ROLL_HEAD', 'Over the head, forwards', 'Backwards over the head'), ...w('M_CA4_GY_ROLL_HEAD', 'In a circle')], 'A side roll goes sideways with the body straight.'],
     ['What is the body like in a side roll?', 'Straight, arms above the head and legs together', [...w('M_CA4_GY_ROLL_BENT', 'Curled up in a ball', 'Bent with knees apart'), ...w('M_CA4_GY_ROLL_BENT', 'Sitting up')], 'Keep the body long and straight.'],
     ['For how many counts is a crab balance held?', 'Three counts', [...w('M_CA4_GY_CRAB_RUSH', 'No counts, move at once', 'One quick count'), ...w('M_CA4_GY_CRAB_RUSH', 'Thirty counts')], 'Hold a balance still for a count of three.'],
-    ['What is on the mat in a crab balance?', 'Hands and soles of the foot', [...w('M_CA4_GY_CRAB_DOWN', 'Head and hands'), ...w('M_CA4_GY_CRAB_DOWN', 'Tummy and knees'), ...w('M_CA4_GY_CRAB_DOWN', 'Back and head')], 'A crab balance is on the hands and the soles of the foot with the tummy up.'],
+    ['What is on the mat in a crab balance?', 'Hands and feet', [...w('M_CA4_GY_CRAB_DOWN', 'Head and hands'), ...w('M_CA4_GY_CRAB_DOWN', 'Tummy and knees'), ...w('M_CA4_GY_CRAB_DOWN', 'Back and head')], 'A crab balance is on the hands and the feet with the tummy up.'],
   ], { h: ['Picture a crab with its tummy up.', 'Cross out the answers that cannot be right, then pick from the rest.'], s1: 'Recall how each move looks.' })),
   fam('gy.ba.word', `${GY}BALANCES`, 'word', 2, choose([
     ['Akinyi lifts her hips with her tummy facing down. Which move is she wrongly doing?', 'A push-up, not a crab balance', [...w('M_CA4_GY_CRAB_DOWN', 'A perfect and correct crab balance'), ...w('M_CA4_GY_ROLL_HEAD', 'A side roll on the mat'), ...w('M_CA4_GY_CRAB_RUSH', 'A resting position')], 'A crab balance has the tummy facing up.'],
@@ -100,8 +100,8 @@ export const FAMILIES = [
     sp('Hugo says a side roll goes over the head. Which step has the mistake?', ['Step 1: Hugo lies on a mat.', 'Step 2: He rolls sideways.', 'Step 3: He says it goes over the head.'], 2, 'A side roll is sideways, not over the head.', 'M_CA4_GY_ROLL_HEAD'),
     sp('Ina curls up for a side roll. Which step has the mistake?', ['Step 1: Ina lies on the mat.', 'Step 2: She curls her knees up.', 'Step 3: She rolls over.'], 1, 'Keep the body long and straight.', 'M_CA4_GY_ROLL_BENT'),
     sp('Jan says a crab balance needs no holding. Which step has the mistake?', ['Step 1: Jan lifts into a crab balance.', 'Step 2: He drops straight down.', 'Step 3: He says it needs no holding.'], 2, 'Hold it still for a count of three.', 'M_CA4_GY_CRAB_RUSH'),
-    sp('Kim says a crab balance is on the back and head. Which step has the mistake?', ['Step 1: Kim lifts her hips.', 'Step 2: She puts her hands and the soles of her foot on the mat.', 'Step 3: She says it is on the back and head.'], 2, 'It is on the hands and the soles of the foot.', 'M_CA4_GY_CRAB_DOWN'),
-  ], { h: ['Crab: tummy up on hands and the soles of the foot.', 'Read each step on its own and ask whether it is true.'], s1: 'Read each step and find the one that is not true.' })),
+    sp('Kim says a crab balance is on the back and head. Which step has the mistake?', ['Step 1: Kim lifts her hips.', 'Step 2: She puts her hands and the feet on the mat.', 'Step 3: She says it is on the back and head.'], 2, 'It is on the hands and the feet.', 'M_CA4_GY_CRAB_DOWN'),
+  ], { h: ['Crab: tummy up on hands and the feet.', 'Read each step on its own and ask whether it is true.'], s1: 'Read each step and find the one that is not true.' })),
 
   // ---------------------------------------------------------------- GY.GYMSAFE
   fam('gy.sf.which', `${GY}GYMSAFE`, 'direct', 1, choose([

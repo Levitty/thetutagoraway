@@ -97,6 +97,8 @@ var polishAll = (v) => {
   if (v && typeof v === "object") return Object.fromEntries(Object.entries(v).map(([k, x]) => [k, typeof x === "function" ? x : polishAll(x)]));
   return v;
 };
+var Q_WORD = /(^|[.?!]\s+)((?:Which|What|Whose|Whom|Who|Why|How|Is|Are|Do|Does|Did|Can|Will|Would|Should|Has|Have)\b[^.?!"\n]*|(?:When|Where)\b[^.?!",\n]*)\.(?=\s|"|$)/g;
+var asQuestion = (t) => typeof t === "string" ? t.replace(Q_WORD, "$1$2?") : t;
 var toProblem = (def, d) => polishAll(buildProblem(def, d));
 function buildProblem(def, d) {
   const m5 = def.make(d);
@@ -109,7 +111,7 @@ function buildProblem(def, d) {
     ...def.cskill ? { cskill: def.cskill } : {},
     ...def.marker ? { marker: def.marker } : {},
     // 'text': marked by answerCheckText.js (English), not the Maths marker
-    question: m5.question,
+    question: def.subject === "english" ? asQuestion(m5.question) : m5.question,
     hints: hintLadder(...m5.hints || []),
     hint: (m5.hints || [])[0],
     solutionSteps: m5.steps || [],
@@ -141,19 +143,23 @@ function buildProblem(def, d) {
     };
   }
   if (m5.working) {
-    const labels = m5.working.map((_, i) => `Step ${i + 1}`);
+    const sw = def.lang === "sw" || def.subject === "kiswahili";
+    const word = sw ? "Hatua" : "Step";
+    const labels = m5.working.map((_, i) => `${word} ${i + 1}`);
     const bad = m5.working.findIndex((s) => !s.ok);
+    const L13 = sw ? { instruction: "Hatua moja ina kosa. Itafute.", right: (l) => `${l} ni sahihi. Endelea kukagua hatua zinazofuata.`, later: (l) => `${l} inafuata vizuri kutoka hatua iliyotangulia. Kosa lilitokea mapema zaidi.` } : { instruction: "One step has a mistake. Find it.", right: (l) => `${l} is right. Keep checking the steps after it.`, later: (l) => `${l} follows on correctly from the step before it. The mistake happens earlier.` };
     return {
       ...base,
+      ...sw ? { lang: "sw" } : {},
       type: "spot-mistake",
-      instruction: "One step has a mistake. Find it.",
+      instruction: L13.instruction,
       shownSteps: m5.working.map((s) => s.text),
       mc: labels,
       answer: labels[bad],
-      accepts: [labels[bad], `${bad + 1}`, `step${bad + 1}`],
+      accepts: [labels[bad], `${bad + 1}`, `${word.toLowerCase()}${bad + 1}`, `step${bad + 1}`],
       explain: m5.fix,
       workingTruth: m5.working.map((s) => s.ok),
-      misconceptions: labels.map((l, i) => i === bad ? null : { when: l, feedback: i < bad ? `${l} is right. Keep checking the steps after it.` : `${l} follows on correctly from the step before it. The mistake happens earlier.` }).filter(Boolean),
+      misconceptions: labels.map((l, i) => i === bad ? null : { when: l, feedback: i < bad ? L13.right(l) : L13.later(l) }).filter(Boolean),
       solution: { ...base.solution, answer: labels[bad] },
       solutionSteps: [m5.fix, ...m5.steps || []]
     };
@@ -11014,7 +11020,7 @@ var FAMILIES18 = [
     ["In which direction does a side roll go?", "Sideways along the mat", [...w2("M_CA4_GY_ROLL_HEAD", "Over the head, forwards", "Backwards over the head"), ...w2("M_CA4_GY_ROLL_HEAD", "In a circle")], "A side roll goes sideways with the body straight."],
     ["What is the body like in a side roll?", "Straight, arms above the head and legs together", [...w2("M_CA4_GY_ROLL_BENT", "Curled up in a ball", "Bent with knees apart"), ...w2("M_CA4_GY_ROLL_BENT", "Sitting up")], "Keep the body long and straight."],
     ["For how many counts is a crab balance held?", "Three counts", [...w2("M_CA4_GY_CRAB_RUSH", "No counts, move at once", "One quick count"), ...w2("M_CA4_GY_CRAB_RUSH", "Thirty counts")], "Hold a balance still for a count of three."],
-    ["What is on the mat in a crab balance?", "Hands and soles of the foot", [...w2("M_CA4_GY_CRAB_DOWN", "Head and hands"), ...w2("M_CA4_GY_CRAB_DOWN", "Tummy and knees"), ...w2("M_CA4_GY_CRAB_DOWN", "Back and head")], "A crab balance is on the hands and the soles of the foot with the tummy up."]
+    ["What is on the mat in a crab balance?", "Hands and feet", [...w2("M_CA4_GY_CRAB_DOWN", "Head and hands"), ...w2("M_CA4_GY_CRAB_DOWN", "Tummy and knees"), ...w2("M_CA4_GY_CRAB_DOWN", "Back and head")], "A crab balance is on the hands and the feet with the tummy up."]
   ], { h: ["Picture a crab with its tummy up.", "Cross out the answers that cannot be right, then pick from the rest."], s1: "Recall how each move looks." })),
   fam3("gy.ba.word", `${GY}BALANCES`, "word", 2, choose5([
     ["Akinyi lifts her hips with her tummy facing down. Which move is she wrongly doing?", "A push-up, not a crab balance", [...w2("M_CA4_GY_CRAB_DOWN", "A perfect and correct crab balance"), ...w2("M_CA4_GY_ROLL_HEAD", "A side roll on the mat"), ...w2("M_CA4_GY_CRAB_RUSH", "A resting position")], "A crab balance has the tummy facing up."],
@@ -11028,8 +11034,8 @@ var FAMILIES18 = [
     sp2("Hugo says a side roll goes over the head. Which step has the mistake?", ["Step 1: Hugo lies on a mat.", "Step 2: He rolls sideways.", "Step 3: He says it goes over the head."], 2, "A side roll is sideways, not over the head.", "M_CA4_GY_ROLL_HEAD"),
     sp2("Ina curls up for a side roll. Which step has the mistake?", ["Step 1: Ina lies on the mat.", "Step 2: She curls her knees up.", "Step 3: She rolls over."], 1, "Keep the body long and straight.", "M_CA4_GY_ROLL_BENT"),
     sp2("Jan says a crab balance needs no holding. Which step has the mistake?", ["Step 1: Jan lifts into a crab balance.", "Step 2: He drops straight down.", "Step 3: He says it needs no holding."], 2, "Hold it still for a count of three.", "M_CA4_GY_CRAB_RUSH"),
-    sp2("Kim says a crab balance is on the back and head. Which step has the mistake?", ["Step 1: Kim lifts her hips.", "Step 2: She puts her hands and the soles of her foot on the mat.", "Step 3: She says it is on the back and head."], 2, "It is on the hands and the soles of the foot.", "M_CA4_GY_CRAB_DOWN")
-  ], { h: ["Crab: tummy up on hands and the soles of the foot.", "Read each step on its own and ask whether it is true."], s1: "Read each step and find the one that is not true." })),
+    sp2("Kim says a crab balance is on the back and head. Which step has the mistake?", ["Step 1: Kim lifts her hips.", "Step 2: She puts her hands and the feet on the mat.", "Step 3: She says it is on the back and head."], 2, "It is on the hands and the feet.", "M_CA4_GY_CRAB_DOWN")
+  ], { h: ["Crab: tummy up on hands and the feet.", "Read each step on its own and ask whether it is true."], s1: "Read each step and find the one that is not true." })),
   // ---------------------------------------------------------------- GY.GYMSAFE
   fam3("gy.sf.which", `${GY}GYMSAFE`, "direct", 1, choose5([
     ["What should you do before gymnastics?", "Warm up", [...w2("M_CA4_GY_NO_WARMUP", "Start straight away", "Eat a big meal"), ...w2("M_CA4_GY_NO_WARMUP", "Sit still")], "A warm-up gets the body ready."],
@@ -11282,26 +11288,26 @@ var FAMILIES19 = [
   ], { h: ["Tall, soft pads, gentle breath.", "Read each step on its own and ask whether it is true."], s1: "Read each step and find the one that is not true." })),
   // ---------------------------------------------------------------- SW.SAFETY
   fam3("sw.sf.which", `${SW}SAFETY`, "direct", 1, choose5([
-    ["How do you enter the water at the shallow end?", "Legs first, from the edge or the steps", [...w2("M_CA4_SW_DIVE_SHALLOW", "Dive in head first from the edge"), ...w2("M_CA4_SW_PUSH", "Jump in head first"), ...w2("M_CA4_SW_PUSH", "Be pushed in by a friend")], "Enter legs first. Never dive into shallow water."],
+    ["How do you enter the water at the shallow end?", "Feet first, from the edge or the steps", [...w2("M_CA4_SW_DIVE_SHALLOW", "Dive in head first from the edge"), ...w2("M_CA4_SW_PUSH", "Jump in head first"), ...w2("M_CA4_SW_PUSH", "Be pushed in by a friend")], "Enter feet first. Never dive into shallow water."],
     ["How do you move on the pool side?", "Walk", [...w2("M_CA4_SW_RUN_SIDE", "Run", "Skip fast"), ...w2("M_CA4_SW_RUN_SIDE", "Slide")], "The pool side is wet and slippery."],
     ["May you swim alone if you can swim well?", "No, always with a teacher or lifeguard watching", [...w2("M_CA4_SW_ALONE", "Yes, as long as you swim very well and carefully"), ...w2("M_CA4_SW_ALONE", "Yes, if the water is very calm"), ...w2("M_CA4_SW_ALONE", "Yes, if you go early in the morning")], "Never swim alone."],
     ["A friend stands at the pool edge. What should you do?", "Wait for your turn and leave them alone", [...w2("M_CA4_SW_PUSH", "Push them in because it is a funny game"), ...w2("M_CA4_SW_PUSH", "Pull them in"), ...w2("M_CA4_SW_PUSH", "Splash them hard")], "Never push others at the pool."],
     ["Why do we never dive into shallow water?", "The bottom is close and we could be hurt", [...w2("M_CA4_SW_DIVE_SHALLOW", "The water is always too cold there"), ...w2("M_CA4_SW_DIVE_SHALLOW", "It is against the rules of fashion"), ...w2("M_CA4_SW_DIVE_SHALLOW", "It is too easy")], "The bottom is close."]
-  ], { h: ["Legs first, walk, never alone, never push.", "Cross out the answers that cannot be right, then pick from the rest."], s1: "Think about how to stay safe at the pool." })),
+  ], { h: ["Feet first, walk, never alone, never push.", "Cross out the answers that cannot be right, then pick from the rest."], s1: "Think about how to stay safe at the pool." })),
   fam3("sw.sf.word", `${SW}SAFETY`, "word", 2, choose5([
-    ["Ali wants to dive into the shallow end. What should he do?", "Enter legs first", [...w2("M_CA4_SW_DIVE_SHALLOW", "Dive in"), ...w2("M_CA4_SW_DIVE_SHALLOW", "Jump head first"), ...w2("M_CA4_SW_DIVE_SHALLOW", "Slide head first")], "Enter legs first."],
+    ["Ali wants to dive into the shallow end. What should he do?", "Enter feet first", [...w2("M_CA4_SW_DIVE_SHALLOW", "Dive in"), ...w2("M_CA4_SW_DIVE_SHALLOW", "Jump head first"), ...w2("M_CA4_SW_DIVE_SHALLOW", "Slide head first")], "Enter feet first."],
     ["Bea is late and runs on the pool side. What should she do?", "Slow down and walk", [...w2("M_CA4_SW_RUN_SIDE", "Run faster"), ...w2("M_CA4_SW_RUN_SIDE", "Jump over puddles"), ...w2("M_CA4_SW_RUN_SIDE", "Skip")], "Walk on the pool side."],
     ["Cody is a good swimmer and wants to swim when nobody is at the pool. What should he do?", "Wait until a teacher or lifeguard is there", [...w2("M_CA4_SW_ALONE", "Swim alone because he is a good swimmer"), ...w2("M_CA4_SW_ALONE", "Swim in the deep end"), ...w2("M_CA4_SW_ALONE", "Dive in")], "Never swim alone."],
     ["Dana thinks it is a joke to push a friend into the pool. What is the best answer?", "It is not safe; the friend may be hurt or not swim", [...w2("M_CA4_SW_PUSH", "It is a funny game that everyone enjoys at the pool"), ...w2("M_CA4_SW_PUSH", "It is fine if they laugh"), ...w2("M_CA4_SW_PUSH", "It is fine if you say sorry later")], "Never push others at the pool."],
     ["Eli does not wait for the teacher and goes in first. What should he do?", "Wait for the teacher to say it is safe", [...w2("M_CA4_SW_ALONE", "Go in anyway before the teacher comes"), ...w2("M_CA4_SW_ALONE", "Dive in"), ...w2("M_CA4_SW_RUN_SIDE", "Run in")], "Go in only when the teacher says it is safe."]
-  ], { h: ["Legs first, walk, never alone, never push.", "Cross out the answers that cannot be right, then pick from the rest."], s1: "Think about the safe action." })),
+  ], { h: ["Feet first, walk, never alone, never push.", "Cross out the answers that cannot be right, then pick from the rest."], s1: "Think about the safe action." })),
   fam3("sw.sf.spot", `${SW}SAFETY`, "spot", 3, spot5([
-    sp2("Fin dives into the shallow end. Which step has the mistake?", ["Step 1: Fin stands at the edge.", "Step 2: He dives in head first.", "Step 3: He says it is fun."], 1, "Enter legs first. Never dive into shallow water.", "M_CA4_SW_DIVE_SHALLOW"),
+    sp2("Fin dives into the shallow end. Which step has the mistake?", ["Step 1: Fin stands at the edge.", "Step 2: He dives in head first.", "Step 3: He says it is fun."], 1, "Enter feet first. Never dive into shallow water.", "M_CA4_SW_DIVE_SHALLOW"),
     sp2("Gus runs on the pool side. Which step has the mistake?", ["Step 1: Gus is late.", "Step 2: He runs to the water.", "Step 3: He says the floor is dry."], 1, "Walk on the pool side. It is wet and slippery.", "M_CA4_SW_RUN_SIDE"),
     sp2("Hana says she can swim alone because she is good. Which step has the mistake?", ["Step 1: Hana swims well.", "Step 2: She goes to the pool with no adult.", "Step 3: She says she is safe."], 1, "Never swim alone. Always have a teacher or lifeguard.", "M_CA4_SW_ALONE"),
     sp2("Ian pushes a friend at the edge. Which step has the mistake?", ["Step 1: Ian is at the pool.", "Step 2: He pushes a friend in.", "Step 3: He says it is a joke."], 1, "Never push others at the pool.", "M_CA4_SW_PUSH"),
-    sp2("Jia jumps in head first at the shallow end. Which step has the mistake?", ["Step 1: Jia sees the shallow end.", "Step 2: She jumps in head first.", "Step 3: She says it is safe."], 1, "Enter legs first.", "M_CA4_SW_DIVE_SHALLOW")
-  ], { h: ["Legs first, walk, never alone, never push.", "Read each step on its own and ask whether it is true."], s1: "Read each step and find the one that is not true." })),
+    sp2("Jia jumps in head first at the shallow end. Which step has the mistake?", ["Step 1: Jia sees the shallow end.", "Step 2: She jumps in head first.", "Step 3: She says it is safe."], 1, "Enter feet first.", "M_CA4_SW_DIVE_SHALLOW")
+  ], { h: ["Feet first, walk, never alone, never push.", "Read each step on its own and ask whether it is true."], s1: "Read each step and find the one that is not true." })),
   // ---------------------------------------------------------------- SW.FLOAT
   fam3("sw.fl.which", `${SW}FLOAT`, "direct", 1, choose5([
     ["In a mushroom float the body is...", "Curled up with the knees hugged", [...w2("M_CA4_SW_MUSHROOM_STRETCH", "Stretched out flat", "Standing up"), ...w2("M_CA4_SW_MUSHROOM_STRETCH", "Lying on the back")], "A mushroom float is curled up."],
@@ -11326,21 +11332,21 @@ var FAMILIES19 = [
   ], { h: ["Mushroom curled, back float face up, glide long.", "Read each step on its own and ask whether it is true."], s1: "Read each step and find the one that is not true." })),
   // ---------------------------------------------------------------- SW.ANIMAL
   fam3("sw.an.which", `${SW}ANIMAL`, "direct", 1, choose5([
-    ["Which animal game is done on hands and legs with the tummy up?", "The crab walk", [...w2("M_CA4_SW_FROG_CRAWL", "The frog jump", "The bird hop"), ...w2("M_CA4_SW_FROG_CRAWL", "The hare chase")], "The crab walk is tummy up."],
+    ["Which animal game is done on hands and feet with the tummy up?", "The crab walk", [...w2("M_CA4_SW_FROG_CRAWL", "The frog jump", "The bird hop"), ...w2("M_CA4_SW_FROG_CRAWL", "The hare chase")], "The crab walk is tummy up."],
     ["Which animal game is a squat and a leap?", "The frog jump", [...w2("M_CA4_SW_FROG_CRAWL", "The crab walk", "The bird hop"), ...w2("M_CA4_SW_FROG_CRAWL", "The hare chase")], "The frog jump is a squat and a leap."],
     ["The frog jump builds...", "Leg strength", [...w2("M_CA4_SW_GAME_BUILDS", "Arm strength only", "Only a loud voice"), ...w2("M_CA4_SW_GAME_BUILDS", "Nothing")], "The frog jump uses the legs."],
     ["Hopping like a bird on one leg builds...", "Balance", [...w2("M_CA4_SW_GAME_BUILDS", "Arm strength", "A loud voice"), ...w2("M_CA4_SW_GAME_BUILDS", "Nothing")], "Hopping on one leg builds balance."],
     ["Animal games are...", "Indigenous games played for fun and fitness", [...w2("M_CA4_SW_GAME_NEW", "New games from television", "Games only for adults"), ...w2("M_CA4_SW_GAME_NEW", "Games with no rules")], "They are traditional games for fun and fitness."]
   ], { h: ["Think of the animal and how it moves.", "Cross out the answers that cannot be right, then pick from the rest."], s1: "Match the game with the animal move." })),
   fam3("sw.an.word", `${SW}ANIMAL`, "word", 2, choose5([
-    ["Rono walks on his hands and legs with his tummy facing up. Which animal is he copying?", "A crab", [...w2("M_CA4_SW_FROG_CRAWL", "A frog"), ...w2("M_CA4_SW_FROG_CRAWL", "A bird"), ...w2("M_CA4_SW_FROG_CRAWL", "A hare")], "The crab walk."],
+    ["Rono walks on his hands and feet with his tummy facing up. Which animal is he copying?", "A crab", [...w2("M_CA4_SW_FROG_CRAWL", "A frog"), ...w2("M_CA4_SW_FROG_CRAWL", "A bird"), ...w2("M_CA4_SW_FROG_CRAWL", "A hare")], "The crab walk."],
     ["Sia squats low and leaps forward. Which animal is she copying?", "A frog", [...w2("M_CA4_SW_FROG_CRAWL", "A crab"), ...w2("M_CA4_SW_FROG_CRAWL", "A bird"), ...w2("M_CA4_SW_FROG_CRAWL", "A snake")], "The frog jump."],
     ["Tuk wants to build his leg strength. Which game should he pick?", "The frog jump", [...w2("M_CA4_SW_GAME_BUILDS", "Sitting still"), ...w2("M_CA4_SW_GAME_BUILDS", "Only clapping"), ...w2("M_CA4_SW_GAME_BUILDS", "Reading")], "The frog jump builds leg strength."],
     ["Una says animal games are new games from television. What is the best answer?", "No, they are indigenous games played long ago", [...w2("M_CA4_SW_GAME_NEW", "Yes, they are new"), ...w2("M_CA4_SW_GAME_NEW", "Yes, they came from a film"), ...w2("M_CA4_SW_GAME_NEW", "No, they are only for adults")], "They are traditional games."],
     ["Vik hops on one leg like a bird. What does this build?", "Balance", [...w2("M_CA4_SW_GAME_BUILDS", "Arm strength"), ...w2("M_CA4_SW_GAME_BUILDS", "Speed only"), ...w2("M_CA4_SW_GAME_BUILDS", "Nothing")], "Hopping builds balance."]
   ], { h: ["Match the game with the animal and what it builds.", "Cross out the answers that cannot be right, then pick from the rest."], s1: "Think of the animal move." })),
   fam3("sw.an.spot", `${SW}ANIMAL`, "spot", 3, spot5([
-    sp2("Wes says the crab walk is a squat and leap. Which step has the mistake?", ["Step 1: Wes watches the crab walk.", "Step 2: He says it is a squat and a leap.", "Step 3: He says it is a crab game."], 1, "The crab walk is on hands and legs, tummy up. The frog jump is a squat and leap.", "M_CA4_SW_FROG_CRAWL"),
+    sp2("Wes says the crab walk is a squat and leap. Which step has the mistake?", ["Step 1: Wes watches the crab walk.", "Step 2: He says it is a squat and a leap.", "Step 3: He says it is a crab game."], 1, "The crab walk is on hands and feet, tummy up. The frog jump is a squat and leap.", "M_CA4_SW_FROG_CRAWL"),
     sp2("Xin says the frog jump builds arm strength only. Which step has the mistake?", ["Step 1: Xin does a frog jump.", "Step 2: He feels his legs work.", "Step 3: He says it builds arms only."], 2, "The frog jump builds leg strength.", "M_CA4_SW_GAME_BUILDS"),
     sp2("Yola says animal games are new. Which step has the mistake?", ["Step 1: Yola asks her grandmother.", "Step 2: Her grandmother played them as a girl.", "Step 3: Yola says they are new."], 2, "Animal games are indigenous games played long ago.", "M_CA4_SW_GAME_NEW"),
     sp2("Zane says the frog jump is on hands with the tummy up. Which step has the mistake?", ["Step 1: Zane copies a frog.", "Step 2: He puts his hands behind him, tummy up.", "Step 3: He calls it a frog jump."], 2, "That is the crab walk. The frog jump is a squat and a leap.", "M_CA4_SW_FROG_CRAWL"),
@@ -32647,7 +32653,7 @@ var spot12 = (pool2, { topic, hints }) => (cskill) => {
     question: `${p.name} aliandika sentensi nne ${topic}. Moja ina kosa.`,
     working,
     mis: [code],
-    fix: `Kosa liko katika Step ${badAt + 1}, yaani sentensi ya ${badAt + 1}. ${feedbackOf5(cskill, code)} ${bad.because}`,
+    fix: `Kosa liko katika Hatua ya ${badAt + 1}, yaani sentensi ya ${badAt + 1}. ${feedbackOf5(cskill, code)} ${bad.because}`,
     steps: [`Sentensi sahihi ni: ${say(bad, bad.right)}`],
     hints
   };
@@ -35834,7 +35840,7 @@ var spot13 = (pool2, { topic, hints }) => (cskill) => {
     question: `${p.name} aliandika sentensi nne ${topic}. Moja ina kosa.`,
     working,
     mis: [code],
-    fix: `Kosa liko katika Step ${badAt + 1}, yaani sentensi ya ${badAt + 1}. ${feedbackOf6(cskill, code)} ${bad.because}`,
+    fix: `Kosa liko katika Hatua ya ${badAt + 1}, yaani sentensi ya ${badAt + 1}. ${feedbackOf6(cskill, code)} ${bad.because}`,
     steps: [`Sentensi sahihi ni: ${say(bad, bad.right)}`],
     hints
   };

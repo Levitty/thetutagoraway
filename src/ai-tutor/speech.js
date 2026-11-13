@@ -46,7 +46,7 @@ export const stopSpeaking = () => { try { if (canSpeak()) window.speechSynthesis
 export function questionScript(problem) {
   if (!problem) return '';
   const parts = [problem.question];
-  if (problem.shownSteps) problem.shownSteps.forEach((s, i) => parts.push(`Step ${i + 1}. ${s}.`));
+  if (problem.shownSteps) problem.shownSteps.forEach((s, i) => parts.push(`${problem.lang === 'sw' ? 'Hatua' : 'Step'} ${i + 1}. ${s}.`));
   if (problem.parts) problem.parts.forEach((p, i) => parts.push(`Part ${String.fromCharCode(97 + i)}. ${p.prompt}`));
   if (problem.mc && !problem.shownSteps) parts.push(`Is it: ${problem.mc.map((o, i) => `${'ABCD'[i]}, ${o}`).join('; ')}?`);
   return parts.join(' ');

@@ -62,6 +62,12 @@ const polishAll = (v) => {
   return v;
 };
 
+// English items are authored with a full stop after every stem. A question ends with "?": any sentence that
+// opens with a question word and ends with a full stop (outside quotation marks) gets one. Instructions
+// ("Choose the noun.") do not open with a question word and keep their full stop.
+const Q_WORD = /(^|[.?!]\s+)((?:Which|What|Whose|Whom|Who|Why|How|Is|Are|Do|Does|Did|Can|Will|Would|Should|Has|Have)\b[^.?!"\n]*|(?:When|Where)\b[^.?!",\n]*)\.(?=\s|"|$)/g;
+export const asQuestion = (t) => (typeof t === 'string' ? t.replace(Q_WORD, '$1$2?') : t);
+
 // Turn one draw's make() output into the engine's problem object.
 export const toProblem = (def, d) => polishAll(buildProblem(def, d));
 function buildProblem(def, d) {
@@ -74,7 +80,7 @@ function buildProblem(def, d) {
     outcome: def.outcome,
     ...(def.cskill ? { cskill: def.cskill } : {}),
     ...(def.marker ? { marker: def.marker } : {}),   // 'text': marked by answerCheckText.js (English), not the Maths marker
-    question: m.question,
+    question: def.subject === 'english' ? asQuestion(m.question) : m.question,
     hints: hintLadder(...(m.hints || [])),
     hint: (m.hints || [])[0],
     solutionSteps: m.steps || [],
@@ -100,13 +106,19 @@ function buildProblem(def, d) {
       solution: { ...base.solution, answer: last.answer } };
   }
   if (m.working) {
-    const labels = m.working.map((_, i) => `Step ${i + 1}`);
+    // The frame speaks the family's language: a Kiswahili family (lang: 'sw', or subject 'kiswahili') says "Hatua".
+    const sw = def.lang === 'sw' || def.subject === 'kiswahili';
+    const word = sw ? 'Hatua' : 'Step';
+    const labels = m.working.map((_, i) => `${word} ${i + 1}`);
     const bad = m.working.findIndex(s => !s.ok);
-    return { ...base, type: 'spot-mistake', instruction: 'One step has a mistake. Find it.',
+    const L = sw
+      ? { instruction: 'Hatua moja ina kosa. Itafute.', right: l => `${l} ni sahihi. Endelea kukagua hatua zinazofuata.`, later: l => `${l} inafuata vizuri kutoka hatua iliyotangulia. Kosa lilitokea mapema zaidi.` }
+      : { instruction: 'One step has a mistake. Find it.', right: l => `${l} is right. Keep checking the steps after it.`, later: l => `${l} follows on correctly from the step before it. The mistake happens earlier.` };
+    return { ...base, ...(sw ? { lang: 'sw' } : {}), type: 'spot-mistake', instruction: L.instruction,
       shownSteps: m.working.map(s => s.text), mc: labels, answer: labels[bad],
-      accepts: [labels[bad], `${bad + 1}`, `step${bad + 1}`], explain: m.fix,
+      accepts: [labels[bad], `${bad + 1}`, `${word.toLowerCase()}${bad + 1}`, `step${bad + 1}`], explain: m.fix,
       workingTruth: m.working.map(s => s.ok),
-      misconceptions: labels.map((l, i) => (i === bad ? null : { when: l, feedback: i < bad ? `${l} is right. Keep checking the steps after it.` : `${l} follows on correctly from the step before it. The mistake happens earlier.` })).filter(Boolean),
+      misconceptions: labels.map((l, i) => (i === bad ? null : { when: l, feedback: i < bad ? L.right(l) : L.later(l) })).filter(Boolean),
       solution: { ...base.solution, answer: labels[bad] }, solutionSteps: [m.fix, ...(m.steps || [])] };
   }
   if (m.options) {

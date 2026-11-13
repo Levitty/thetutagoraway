@@ -84,7 +84,7 @@ test('no child sees an imperial unit, a currency other than shillings, or a pict
     const p = drawFamily(f).p;
     const all = JSON.stringify(p);
     const shown = [p.question, ...(p.options || []).map(o => o.text), ...(p.working || []).map(s => s.text)].join(' ');
-    assert.ok(!/\b(feet|inch|inches|miles?|yards?)\b/i.test(shown), `${f.id}: imperial unit in what the child reads`);
+    assert.ok(!/\b(inch|inches|miles?|yards?)\b|\d\s?(feet|ft)\b/i.test(shown), `${f.id}: imperial unit in what the child reads`);
     assert.ok(!/\b(look at the picture|see the picture|in the picture below)\b/i.test(all), `${f.id}: refers to a picture`);
   }
 });

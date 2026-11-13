@@ -2,8 +2,8 @@
 // GRADE 4 CREATIVE ARTS, THEME D: DESCANT RECORDER, SWIMMING AND ANIMAL GAMES, APPRECIATION (11 skills).
 // Only the knowledge half is tested here. Playing, swimming, animal games, making a portfolio and singing the anthem are practical:
 // see docs/qa/creativearts-g4-non-question-outcomes-2026-11-13.md. Holes and body positions are described in words, because the phone
-// question has no picture. The water entry is worded legs first in the questions (the design's feet first), because the pre-review
-// check rejects the word feet as an imperial unit. Every wrong answer names the library misconception it reveals. Anthem and
+// question has no picture. The water entry is worded feet first (KICD's wording; the pre-review
+// check flags feet only as a measurement, a number before it or ft). Every wrong answer names the library misconception it reveals. Anthem and
 // animal game facts are marked for a teacher to confirm. All stay reviewed:false until a teacher signs them off.
 // ============================================================================
 import { fam, choose, spot, w, sp } from './creativearts_g4_lib.js';
@@ -106,26 +106,26 @@ export const FAMILIES = [
 
   // ---------------------------------------------------------------- SW.SAFETY
   fam('sw.sf.which', `${SW}SAFETY`, 'direct', 1, choose([
-    ['How do you enter the water at the shallow end?', 'Legs first, from the edge or the steps', [...w('M_CA4_SW_DIVE_SHALLOW', 'Dive in head first from the edge'), ...w('M_CA4_SW_PUSH', 'Jump in head first'), ...w('M_CA4_SW_PUSH', 'Be pushed in by a friend')], 'Enter legs first. Never dive into shallow water.'],
+    ['How do you enter the water at the shallow end?', 'Feet first, from the edge or the steps', [...w('M_CA4_SW_DIVE_SHALLOW', 'Dive in head first from the edge'), ...w('M_CA4_SW_PUSH', 'Jump in head first'), ...w('M_CA4_SW_PUSH', 'Be pushed in by a friend')], 'Enter feet first. Never dive into shallow water.'],
     ['How do you move on the pool side?', 'Walk', [...w('M_CA4_SW_RUN_SIDE', 'Run', 'Skip fast'), ...w('M_CA4_SW_RUN_SIDE', 'Slide')], 'The pool side is wet and slippery.'],
     ['May you swim alone if you can swim well?', 'No, always with a teacher or lifeguard watching', [...w('M_CA4_SW_ALONE', 'Yes, as long as you swim very well and carefully'), ...w('M_CA4_SW_ALONE', 'Yes, if the water is very calm'), ...w('M_CA4_SW_ALONE', 'Yes, if you go early in the morning')], 'Never swim alone.'],
     ['A friend stands at the pool edge. What should you do?', 'Wait for your turn and leave them alone', [...w('M_CA4_SW_PUSH', 'Push them in because it is a funny game'), ...w('M_CA4_SW_PUSH', 'Pull them in'), ...w('M_CA4_SW_PUSH', 'Splash them hard')], 'Never push others at the pool.'],
     ['Why do we never dive into shallow water?', 'The bottom is close and we could be hurt', [...w('M_CA4_SW_DIVE_SHALLOW', 'The water is always too cold there'), ...w('M_CA4_SW_DIVE_SHALLOW', 'It is against the rules of fashion'), ...w('M_CA4_SW_DIVE_SHALLOW', 'It is too easy')], 'The bottom is close.'],
-  ], { h: ['Legs first, walk, never alone, never push.', 'Cross out the answers that cannot be right, then pick from the rest.'], s1: 'Think about how to stay safe at the pool.' })),
+  ], { h: ['Feet first, walk, never alone, never push.', 'Cross out the answers that cannot be right, then pick from the rest.'], s1: 'Think about how to stay safe at the pool.' })),
   fam('sw.sf.word', `${SW}SAFETY`, 'word', 2, choose([
-    ['Ali wants to dive into the shallow end. What should he do?', 'Enter legs first', [...w('M_CA4_SW_DIVE_SHALLOW', 'Dive in'), ...w('M_CA4_SW_DIVE_SHALLOW', 'Jump head first'), ...w('M_CA4_SW_DIVE_SHALLOW', 'Slide head first')], 'Enter legs first.'],
+    ['Ali wants to dive into the shallow end. What should he do?', 'Enter feet first', [...w('M_CA4_SW_DIVE_SHALLOW', 'Dive in'), ...w('M_CA4_SW_DIVE_SHALLOW', 'Jump head first'), ...w('M_CA4_SW_DIVE_SHALLOW', 'Slide head first')], 'Enter feet first.'],
     ['Bea is late and runs on the pool side. What should she do?', 'Slow down and walk', [...w('M_CA4_SW_RUN_SIDE', 'Run faster'), ...w('M_CA4_SW_RUN_SIDE', 'Jump over puddles'), ...w('M_CA4_SW_RUN_SIDE', 'Skip')], 'Walk on the pool side.'],
     ['Cody is a good swimmer and wants to swim when nobody is at the pool. What should he do?', 'Wait until a teacher or lifeguard is there', [...w('M_CA4_SW_ALONE', 'Swim alone because he is a good swimmer'), ...w('M_CA4_SW_ALONE', 'Swim in the deep end'), ...w('M_CA4_SW_ALONE', 'Dive in')], 'Never swim alone.'],
     ['Dana thinks it is a joke to push a friend into the pool. What is the best answer?', 'It is not safe; the friend may be hurt or not swim', [...w('M_CA4_SW_PUSH', 'It is a funny game that everyone enjoys at the pool'), ...w('M_CA4_SW_PUSH', 'It is fine if they laugh'), ...w('M_CA4_SW_PUSH', 'It is fine if you say sorry later')], 'Never push others at the pool.'],
     ['Eli does not wait for the teacher and goes in first. What should he do?', 'Wait for the teacher to say it is safe', [...w('M_CA4_SW_ALONE', 'Go in anyway before the teacher comes'), ...w('M_CA4_SW_ALONE', 'Dive in'), ...w('M_CA4_SW_RUN_SIDE', 'Run in')], 'Go in only when the teacher says it is safe.'],
-  ], { h: ['Legs first, walk, never alone, never push.', 'Cross out the answers that cannot be right, then pick from the rest.'], s1: 'Think about the safe action.' })),
+  ], { h: ['Feet first, walk, never alone, never push.', 'Cross out the answers that cannot be right, then pick from the rest.'], s1: 'Think about the safe action.' })),
   fam('sw.sf.spot', `${SW}SAFETY`, 'spot', 3, spot([
-    sp('Fin dives into the shallow end. Which step has the mistake?', ['Step 1: Fin stands at the edge.', 'Step 2: He dives in head first.', 'Step 3: He says it is fun.'], 1, 'Enter legs first. Never dive into shallow water.', 'M_CA4_SW_DIVE_SHALLOW'),
+    sp('Fin dives into the shallow end. Which step has the mistake?', ['Step 1: Fin stands at the edge.', 'Step 2: He dives in head first.', 'Step 3: He says it is fun.'], 1, 'Enter feet first. Never dive into shallow water.', 'M_CA4_SW_DIVE_SHALLOW'),
     sp('Gus runs on the pool side. Which step has the mistake?', ['Step 1: Gus is late.', 'Step 2: He runs to the water.', 'Step 3: He says the floor is dry.'], 1, 'Walk on the pool side. It is wet and slippery.', 'M_CA4_SW_RUN_SIDE'),
     sp('Hana says she can swim alone because she is good. Which step has the mistake?', ['Step 1: Hana swims well.', 'Step 2: She goes to the pool with no adult.', 'Step 3: She says she is safe.'], 1, 'Never swim alone. Always have a teacher or lifeguard.', 'M_CA4_SW_ALONE'),
     sp('Ian pushes a friend at the edge. Which step has the mistake?', ['Step 1: Ian is at the pool.', 'Step 2: He pushes a friend in.', 'Step 3: He says it is a joke.'], 1, 'Never push others at the pool.', 'M_CA4_SW_PUSH'),
-    sp('Jia jumps in head first at the shallow end. Which step has the mistake?', ['Step 1: Jia sees the shallow end.', 'Step 2: She jumps in head first.', 'Step 3: She says it is safe.'], 1, 'Enter legs first.', 'M_CA4_SW_DIVE_SHALLOW'),
-  ], { h: ['Legs first, walk, never alone, never push.', 'Read each step on its own and ask whether it is true.'], s1: 'Read each step and find the one that is not true.' })),
+    sp('Jia jumps in head first at the shallow end. Which step has the mistake?', ['Step 1: Jia sees the shallow end.', 'Step 2: She jumps in head first.', 'Step 3: She says it is safe.'], 1, 'Enter feet first.', 'M_CA4_SW_DIVE_SHALLOW'),
+  ], { h: ['Feet first, walk, never alone, never push.', 'Read each step on its own and ask whether it is true.'], s1: 'Read each step and find the one that is not true.' })),
 
   // ---------------------------------------------------------------- SW.FLOAT
   fam('sw.fl.which', `${SW}FLOAT`, 'direct', 1, choose([
@@ -152,21 +152,21 @@ export const FAMILIES = [
 
   // ---------------------------------------------------------------- SW.ANIMAL
   fam('sw.an.which', `${SW}ANIMAL`, 'direct', 1, choose([
-    ['Which animal game is done on hands and legs with the tummy up?', 'The crab walk', [...w('M_CA4_SW_FROG_CRAWL', 'The frog jump', 'The bird hop'), ...w('M_CA4_SW_FROG_CRAWL', 'The hare chase')], 'The crab walk is tummy up.'],
+    ['Which animal game is done on hands and feet with the tummy up?', 'The crab walk', [...w('M_CA4_SW_FROG_CRAWL', 'The frog jump', 'The bird hop'), ...w('M_CA4_SW_FROG_CRAWL', 'The hare chase')], 'The crab walk is tummy up.'],
     ['Which animal game is a squat and a leap?', 'The frog jump', [...w('M_CA4_SW_FROG_CRAWL', 'The crab walk', 'The bird hop'), ...w('M_CA4_SW_FROG_CRAWL', 'The hare chase')], 'The frog jump is a squat and a leap.'],
     ['The frog jump builds...', 'Leg strength', [...w('M_CA4_SW_GAME_BUILDS', 'Arm strength only', 'Only a loud voice'), ...w('M_CA4_SW_GAME_BUILDS', 'Nothing')], 'The frog jump uses the legs.'],
     ['Hopping like a bird on one leg builds...', 'Balance', [...w('M_CA4_SW_GAME_BUILDS', 'Arm strength', 'A loud voice'), ...w('M_CA4_SW_GAME_BUILDS', 'Nothing')], 'Hopping on one leg builds balance.'],
     ['Animal games are...', 'Indigenous games played for fun and fitness', [...w('M_CA4_SW_GAME_NEW', 'New games from television', 'Games only for adults'), ...w('M_CA4_SW_GAME_NEW', 'Games with no rules')], 'They are traditional games for fun and fitness.'],
   ], { h: ['Think of the animal and how it moves.', 'Cross out the answers that cannot be right, then pick from the rest.'], s1: 'Match the game with the animal move.' })),
   fam('sw.an.word', `${SW}ANIMAL`, 'word', 2, choose([
-    ['Rono walks on his hands and legs with his tummy facing up. Which animal is he copying?', 'A crab', [...w('M_CA4_SW_FROG_CRAWL', 'A frog'), ...w('M_CA4_SW_FROG_CRAWL', 'A bird'), ...w('M_CA4_SW_FROG_CRAWL', 'A hare')], 'The crab walk.'],
+    ['Rono walks on his hands and feet with his tummy facing up. Which animal is he copying?', 'A crab', [...w('M_CA4_SW_FROG_CRAWL', 'A frog'), ...w('M_CA4_SW_FROG_CRAWL', 'A bird'), ...w('M_CA4_SW_FROG_CRAWL', 'A hare')], 'The crab walk.'],
     ['Sia squats low and leaps forward. Which animal is she copying?', 'A frog', [...w('M_CA4_SW_FROG_CRAWL', 'A crab'), ...w('M_CA4_SW_FROG_CRAWL', 'A bird'), ...w('M_CA4_SW_FROG_CRAWL', 'A snake')], 'The frog jump.'],
     ['Tuk wants to build his leg strength. Which game should he pick?', 'The frog jump', [...w('M_CA4_SW_GAME_BUILDS', 'Sitting still'), ...w('M_CA4_SW_GAME_BUILDS', 'Only clapping'), ...w('M_CA4_SW_GAME_BUILDS', 'Reading')], 'The frog jump builds leg strength.'],
     ['Una says animal games are new games from television. What is the best answer?', 'No, they are indigenous games played long ago', [...w('M_CA4_SW_GAME_NEW', 'Yes, they are new'), ...w('M_CA4_SW_GAME_NEW', 'Yes, they came from a film'), ...w('M_CA4_SW_GAME_NEW', 'No, they are only for adults')], 'They are traditional games.'],
     ['Vik hops on one leg like a bird. What does this build?', 'Balance', [...w('M_CA4_SW_GAME_BUILDS', 'Arm strength'), ...w('M_CA4_SW_GAME_BUILDS', 'Speed only'), ...w('M_CA4_SW_GAME_BUILDS', 'Nothing')], 'Hopping builds balance.'],
   ], { h: ['Match the game with the animal and what it builds.', 'Cross out the answers that cannot be right, then pick from the rest.'], s1: 'Think of the animal move.' })),
   fam('sw.an.spot', `${SW}ANIMAL`, 'spot', 3, spot([
-    sp('Wes says the crab walk is a squat and leap. Which step has the mistake?', ['Step 1: Wes watches the crab walk.', 'Step 2: He says it is a squat and a leap.', 'Step 3: He says it is a crab game.'], 1, 'The crab walk is on hands and legs, tummy up. The frog jump is a squat and leap.', 'M_CA4_SW_FROG_CRAWL'),
+    sp('Wes says the crab walk is a squat and leap. Which step has the mistake?', ['Step 1: Wes watches the crab walk.', 'Step 2: He says it is a squat and a leap.', 'Step 3: He says it is a crab game.'], 1, 'The crab walk is on hands and feet, tummy up. The frog jump is a squat and leap.', 'M_CA4_SW_FROG_CRAWL'),
     sp('Xin says the frog jump builds arm strength only. Which step has the mistake?', ['Step 1: Xin does a frog jump.', 'Step 2: He feels his legs work.', 'Step 3: He says it builds arms only.'], 2, 'The frog jump builds leg strength.', 'M_CA4_SW_GAME_BUILDS'),
     sp('Yola says animal games are new. Which step has the mistake?', ['Step 1: Yola asks her grandmother.', 'Step 2: Her grandmother played them as a girl.', 'Step 3: Yola says they are new.'], 2, 'Animal games are indigenous games played long ago.', 'M_CA4_SW_GAME_NEW'),
     sp('Zane says the frog jump is on hands with the tummy up. Which step has the mistake?', ['Step 1: Zane copies a frog.', 'Step 2: He puts his hands behind him, tummy up.', 'Step 3: He calls it a frog jump.'], 2, 'That is the crab walk. The frog jump is a squat and a leap.', 'M_CA4_SW_FROG_CRAWL'),

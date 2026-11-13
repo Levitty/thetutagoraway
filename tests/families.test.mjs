@@ -73,3 +73,19 @@ test('the 18 skills now teach what their label says', () => {
     assert.ok(!/^-?\d+ [+−-] \(?-?\d+\)?$/.test(q.trim()), `bare arithmetic under Temperature: ${q}`);
   }
 });
+
+// ---- language of the frame, and the question mark (13 Nov 2026) ----
+import { asQuestion as _asQuestion, toProblem as _toProblem } from '../src/ai-tutor/content/families/core.js';
+test('English questions end with a question mark; instructions keep their full stop', () => {
+  assert.equal(_asQuestion('Which of these is a proper noun.'), 'Which of these is a proper noun?');
+  assert.equal(_asQuestion('Choose the noun. Which one is a verb.'), 'Choose the noun. Which one is a verb?');
+  assert.equal(_asQuestion('Choose the noun.'), 'Choose the noun.');
+});
+test('a spot-the-mistake frame speaks the family language', () => {
+  const mk = (extra) => ({ id: 't', form: 'spot', rung: 1, outcome: 'X', ...extra, make: () => ({ question: 'q', working: [{ text: 'a', ok: true }, { text: 'b', ok: false }], fix: 'f' }) });
+  const sw = _toProblem(mk({ subject: 'kiswahili' }), {});
+  assert.deepEqual(sw.mc, ['Hatua 1', 'Hatua 2']);
+  assert.equal(sw.answer, 'Hatua 2');
+  const en = _toProblem(mk({ subject: 'english' }), {});
+  assert.deepEqual(en.mc, ['Step 1', 'Step 2']);
+});

@@ -112,7 +112,7 @@ export const spot = (pool, { topic, hints }) => (cskill) => {
   if (new Set(working.map(w => w.text)).size !== 4) return null;
   const p = person();
   return { question: `${p.name} aliandika sentensi nne ${topic}. Moja ina kosa.`, working, mis: [code],
-    fix: `Kosa liko katika Step ${badAt + 1}, yaani sentensi ya ${badAt + 1}. ${feedbackOf(cskill, code)} ${bad.because}`, steps: [`Sentensi sahihi ni: ${say(bad, bad.right)}`], hints };
+    fix: `Kosa liko katika Hatua ya ${badAt + 1}, yaani sentensi ya ${badAt + 1}. ${feedbackOf(cskill, code)} ${bad.because}`, steps: [`Sentensi sahihi ni: ${say(bad, bad.right)}`], hints };
 };
 // One family from a pool, in one call.
 export const make = (id, cs, form, rung, gen, extra = {}) => kw({ id, cs, form, rung, gen, ...extra });

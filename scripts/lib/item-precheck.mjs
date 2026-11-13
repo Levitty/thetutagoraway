@@ -123,7 +123,7 @@ export function checkAmbiguity(p) {
 }
 
 // ---- 5. units and Kenyan context sane ---------------------------------------------
-const IMPERIAL = /\b(miles?|inch(es)?|feet|\d+\s?(foot|ft)|yards?|lbs?|ounces?|gallons?|fahrenheit)\b|°F|\d\s?pounds?\b/i;
+const IMPERIAL = /\b(miles?|inch(es)?|(?:\d+(?:[.,]\d+)?|one|two|three|four|five|six|seven|eight|nine|ten|twelve|twenty|hundred)(?:\s|-)?(?:feet|foot|ft)\b|yards?|lbs?|ounces?|gallons?|fahrenheit)\b|°F|\d\s?pounds?\b/i;
 const CURRENCY = /\$|\bdollars?\b|£|\beuros?\b/i;
 const FOREX = /forex|bureau|exchange|currency|convert|\bchanges?\b[^.?]{0,40}\binto\b|\bbuys? (sh|USh|KSh)|Ugandan|Tanzanian|\brate\b/i;
 const AMERICAN = /\b(color|meter|meters|liter|liters|center|centers|favorite|gray|neighbor|neighbors|traveled|traveling|realize|organize)\b/i;
