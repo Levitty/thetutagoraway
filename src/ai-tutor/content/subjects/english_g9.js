@@ -5,6 +5,7 @@
 import { SKILLS, SUBSTRANDS, OUTCOMES, MIS_FEEDBACK } from '../curriculumMap.english.g9.js';
 import { FAMILIES as A } from '../families/english_g9_a.js';
 import { FAMILIES as B } from '../families/english_g9_b.js';
+import { FAMILIES as R } from '../families/english_g9_reading.js';
 import { SIGNED } from '../families/english_g9_signed.js';
 
 export default {
@@ -12,8 +13,8 @@ export default {
   name: 'English', shortName: 'English', icon: 'book',
   description: 'Grade 9 English from the CBC design',
   map: { skills: SKILLS, substrands: SUBSTRANDS, outcomes: OUTCOMES, misFeedback: MIS_FEEDBACK },
-  families: [...A, ...B],                          // add each family file you write: [...A, ...B]
-  familyFiles: ['english_g9_a.js', 'english_g9_b.js'],              // the same files by name (a phone build drops them while nothing is signed)
+  families: [...A, ...B, ...R],                          // add each family file you write: [...A, ...B]
+  familyFiles: ['english_g9_a.js', 'english_g9_b.js', 'english_g9_reading.js'],              // the same files by name (a phone build drops them while nothing is signed)
   signed: SIGNED, signedFile: 'english_g9_signed.js',
   checks: 'family',                          // 'family' = the shared family checks; 'text' = word-answer checks (english_checks.mjs)
   idPrefix: 'english9.',          // every family id starts with this

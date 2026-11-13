@@ -3,7 +3,7 @@
 Built from `curriculum/english/g9.json` and the registry entry. Outcome text is KICD's, word for word. **Q** means a question can test it, **W** writing (composition marking), **O** speaking or an oral check (a teacher listening), **P** a practical task, product or portfolio, **A** an attitude (teacher observation).
 
 - Outcomes: 251. By what tests them best: Q 110, W 47, O 30, P 0, A 64.
-- Outcomes with at least one question family: 41. Q outcomes with a family: 22 of 110. Q outcomes with no family: 88.
+- Outcomes with at least one question family: 74. Q outcomes with a family: 55 of 110. Q outcomes with no family: 55.
 - A non-Q outcome that has a family: the family tests the recognition half and the rest still needs the teacher or the task named below.
 - Kind is assigned from the first verb of the outcome (identify, describe, distinguish, recognise and similar are Q; write, create, use, convert and spell are W; listening and speaking outcomes are O; appreciate, acknowledge and value are A). It is a first sort for the reviewer, not the KICD's own tag.
 - This build covers the grammar sub-strands and the mechanics, paragraph, letter, narrative and poetry knowledge: 22 skills. Reading comprehension on passages, plays and poems needs Grade 9 passages that are not built yet, so many Q outcomes have no family: they are listed in the table as NO.
@@ -21,8 +21,8 @@ Built from `curriculum/english/g9.json` and the registry entry. Outcome text is 
 | GRAMMA.T1_GENDER_NEUTRAL_LANGU.a | Q | yes | identify gender biased words and phrases in oral and written texts | Question families. |
 | GRAMMA.T1_GENDER_NEUTRAL_LANGU.b | W | yes (knowledge half) | use gender neutral words and phrases in sentences | Composition or written task marked by the teacher with the KICD rubric indicator: sentences, paragraphs, letters, summaries, notes and corrections written by the learner. The knowledge half is asked by questions where a family exists. |
 | GRAMMA.T1_GENDER_NEUTRAL_LANGU.c | A | no | acknowledge the importance of gender sensitivity in communication | Teacher observation over the term or a portfolio entry; a tapped answer cannot show an attitude. |
-| READIN.T1_PLAY_STRUCTURE_AND_S.a | Q | NO | describe the structure and setting of a play | Question families. |
-| READIN.T1_PLAY_STRUCTURE_AND_S.b | Q | NO | analyse the acts and scenes of a play for literary appreciation | Question families. |
+| READIN.T1_PLAY_STRUCTURE_AND_S.a | Q | yes | describe the structure and setting of a play | Question families. |
+| READIN.T1_PLAY_STRUCTURE_AND_S.b | Q | yes | analyse the acts and scenes of a play for literary appreciation | Question families. |
 | READIN.T1_PLAY_STRUCTURE_AND_S.c | Q | NO | recognise the role of literary appreciation in critical thinking | Question families. |
 | WRITIN.T1_LEGIBILITY_AND_NEATN.a | Q | NO | identify sections of a piece of writing that require breaking of words and indentation | Question families. |
 | WRITIN.T1_LEGIBILITY_AND_NEATN.b | Q | NO | indent paragraphs when writing a composition | Question families. |
@@ -32,23 +32,23 @@ Built from `curriculum/english/g9.json` and the registry entry. Outcome text is 
 | LISTEN.T2_ORAL_LITERATURE_SHOR.b | O | no | explain the functions of riddles, tongue twisters and proverbs | An oral or listening check scored by the teacher with the observation rubric (PLAN_OBSERVATION_RUBRICS.md): listening, speaking, reading aloud, drama and poetry performance. |
 | LISTEN.T2_ORAL_LITERATURE_SHOR.c | O | no | perform riddles, tongue twisters and proverbs | An oral or listening check scored by the teacher with the observation rubric (PLAN_OBSERVATION_RUBRICS.md): listening, speaking, reading aloud, drama and poetry performance. |
 | LISTEN.T2_ORAL_LITERATURE_SHOR.d | A | no | appreciate the importance of short forms in fostering fluency in communication | Teacher observation over the term or a portfolio entry; a tapped answer cannot show an attitude. |
-| READIN.T2_INTENSIVE_READING_SI.a | Q | NO | identify basic aspects of style such as repetition and rhyme in a poem | Question families. |
-| READIN.T2_INTENSIVE_READING_SI.b | Q | NO | describe the functions of rhyme and repetition in a poem | Question families. |
+| READIN.T2_INTENSIVE_READING_SI.a | Q | yes | identify basic aspects of style such as repetition and rhyme in a poem | Question families. |
+| READIN.T2_INTENSIVE_READING_SI.b | Q | yes | describe the functions of rhyme and repetition in a poem | Question families. |
 | READIN.T2_INTENSIVE_READING_SI.c | A | no | appreciate the role of repetition and rhyme in a poem | Teacher observation over the term or a portfolio entry; a tapped answer cannot show an attitude. |
 | GRAMMA.T2_NOUNS_AND_QUANTIFIER.a | W | yes (knowledge half) | use quantifiers in sentence | Composition or written task marked by the teacher with the KICD rubric indicator: sentences, paragraphs, letters, summaries, notes and corrections written by the learner. The knowledge half is asked by questions where a family exists. |
 | GRAMMA.T2_NOUNS_AND_QUANTIFIER.b | Q | yes | categorise count and non-count nouns in oral and written texts | Question families. |
 | GRAMMA.T2_NOUNS_AND_QUANTIFIER.c | A | no | acknowledge the importance of quantifiers in oral and written communication | Teacher observation over the term or a portfolio entry; a tapped answer cannot show an attitude. |
-| READIN.T2_INTENSIVE_READING_PL.a | Q | NO | describe the sequence of events in a play | Question families. |
-| READIN.T2_INTENSIVE_READING_PL.b | Q | NO | relate the events in a play to real life experiences | Question families. |
+| READIN.T2_INTENSIVE_READING_PL.a | Q | yes | describe the sequence of events in a play | Question families. |
+| READIN.T2_INTENSIVE_READING_PL.b | Q | yes | relate the events in a play to real life experiences | Question families. |
 | READIN.T2_INTENSIVE_READING_PL.c | A | no | acknowledge the importance of a plot in a literary work | Teacher observation over the term or a portfolio entry; a tapped answer cannot show an attitude. |
 | WRITIN.T2_MECHANICS_OF_WRITING.a | Q | yes | identify the double quotation marks and the bracket in a text | Question families. |
 | WRITIN.T2_MECHANICS_OF_WRITING.b | W | yes (knowledge half) | use the double quotation marks and the bracket in written texts | Composition or written task marked by the teacher with the KICD rubric indicator: sentences, paragraphs, letters, summaries, notes and corrections written by the learner. The knowledge half is asked by questions where a family exists. |
 | WRITIN.T2_MECHANICS_OF_WRITING.c | A | no | appreciate the role of the double quotation marks and the bracket in written texts | Teacher observation over the term or a portfolio entry; a tapped answer cannot show an attitude. |
-| LISTEN.T3_LISTENING_COMPREHENS.a | Q | NO | identify the main idea and specific details from an argumentative text | Question families. |
+| LISTEN.T3_LISTENING_COMPREHENS.a | Q | yes | identify the main idea and specific details from an argumentative text | Question families. |
 | LISTEN.T3_LISTENING_COMPREHENS.b | O | no | listen for the main idea and specific information (details) in an argumentative text | An oral or listening check scored by the teacher with the observation rubric (PLAN_OBSERVATION_RUBRICS.md): listening, speaking, reading aloud, drama and poetry performance. |
 | LISTEN.T3_LISTENING_COMPREHENS.c | A | no | acknowledge the need for comprehension in communication | Teacher observation over the term or a portfolio entry; a tapped answer cannot show an attitude. |
-| READIN.T3_READING_FOR_INFORMAT.a | Q | NO | infer the meaning of words, phrases and sentences from the context | Question families. |
-| READIN.T3_READING_FOR_INFORMAT.b | Q | NO | make connections between events in a text and real life situations | Question families. |
+| READIN.T3_READING_FOR_INFORMAT.a | Q | yes | infer the meaning of words, phrases and sentences from the context | Question families. |
+| READIN.T3_READING_FOR_INFORMAT.b | Q | yes | make connections between events in a text and real life situations | Question families. |
 | READIN.T3_READING_FOR_INFORMAT.c | A | no | value the need to comprehend the information in written texts | Teacher observation over the term or a portfolio entry; a tapped answer cannot show an attitude. |
 | GRAMMA.T3_MODAL_AUXILIARIES.a | Q | yes | identify modal auxiliaries in a passage | Question families. |
 | GRAMMA.T3_MODAL_AUXILIARIES.b | W | yes (knowledge half) | use modal auxiliaries in sentences to express different moods | Composition or written task marked by the teacher with the KICD rubric indicator: sentences, paragraphs, letters, summaries, notes and corrections written by the learner. The knowledge half is asked by questions where a family exists. |
@@ -63,18 +63,18 @@ Built from `curriculum/english/g9.json` and the registry entry. Outcome text is 
 | LISTEN.T4_SELECTIVE_LISTENING.a | O | no | select required information from a listening text | An oral or listening check scored by the teacher with the observation rubric (PLAN_OBSERVATION_RUBRICS.md): listening, speaking, reading aloud, drama and poetry performance. |
 | LISTEN.T4_SELECTIVE_LISTENING.b | O | no | make judgement on the message in the listening text | An oral or listening check scored by the teacher with the observation rubric (PLAN_OBSERVATION_RUBRICS.md): listening, speaking, reading aloud, drama and poetry performance. |
 | LISTEN.T4_SELECTIVE_LISTENING.c | A | no | advocate the need for selective listening in various contexts | Teacher observation over the term or a portfolio entry; a tapped answer cannot show an attitude. |
-| READIN.T4_INTENSIVE_READING.a | Q | NO | predict events in a reading text | Question families. |
-| READIN.T4_INTENSIVE_READING.b | Q | NO | outline the key events in a text | Question families. |
-| READIN.T4_INTENSIVE_READING.c | Q | NO | answer direct and inferential questions for comprehension | Question families. |
-| READIN.T4_INTENSIVE_READING.d | Q | NO | infer the meaning of new words and phrases using contextual clues | Question families. |
-| READIN.T4_INTENSIVE_READING.e | Q | NO | relate the characters, events and places in the text to real life | Question families. |
+| READIN.T4_INTENSIVE_READING.a | Q | yes | predict events in a reading text | Question families. |
+| READIN.T4_INTENSIVE_READING.b | Q | yes | outline the key events in a text | Question families. |
+| READIN.T4_INTENSIVE_READING.c | Q | yes | answer direct and inferential questions for comprehension | Question families. |
+| READIN.T4_INTENSIVE_READING.d | Q | yes | infer the meaning of new words and phrases using contextual clues | Question families. |
+| READIN.T4_INTENSIVE_READING.e | Q | yes | relate the characters, events and places in the text to real life | Question families. |
 | READIN.T4_INTENSIVE_READING.f | A | no | appreciate the importance of intensive reading in lifelong learning | Teacher observation over the term or a portfolio entry; a tapped answer cannot show an attitude. |
 | GRAMMA.T4_PRESENT_AND_PAST_PER.a | Q | yes | distinguish the present and past perfect aspect in sentences | Question families. |
 | GRAMMA.T4_PRESENT_AND_PAST_PER.b | W | yes (knowledge half) | use present and past perfect aspect in sentences | Composition or written task marked by the teacher with the KICD rubric indicator: sentences, paragraphs, letters, summaries, notes and corrections written by the learner. The knowledge half is asked by questions where a family exists. |
 | GRAMMA.T4_PRESENT_AND_PAST_PER.c | A | no | appreciate the importance of using tense in sentences | Teacher observation over the term or a portfolio entry; a tapped answer cannot show an attitude. |
-| READIN.T4_PLAY_IDENTIFICATION_.a | Q | NO | identify the characters in a play | Question families. |
+| READIN.T4_PLAY_IDENTIFICATION_.a | Q | yes | identify the characters in a play | Question families. |
 | READIN.T4_PLAY_IDENTIFICATION_.b | W | no | use appropriate adjectives to describe the characters | Composition or written task marked by the teacher with the KICD rubric indicator: sentences, paragraphs, letters, summaries, notes and corrections written by the learner. The knowledge half is asked by questions where a family exists. |
-| READIN.T4_PLAY_IDENTIFICATION_.c | Q | NO | describe the actions of the characters using appropriate adverbs | Question families. |
+| READIN.T4_PLAY_IDENTIFICATION_.c | Q | yes | describe the actions of the characters using appropriate adverbs | Question families. |
 | READIN.T4_PLAY_IDENTIFICATION_.d | A | no | value the need to describe people and situations appropriately | Teacher observation over the term or a portfolio entry; a tapped answer cannot show an attitude. |
 | WRITIN.T4_NARRATIVE_AND_DESCRI.a | Q | NO | highlight the qualities of a well formed paragraph | Question families. |
 | WRITIN.T4_NARRATIVE_AND_DESCRI.b | W | no | write narrative and descriptive paragraphs | Composition or written task marked by the teacher with the KICD rubric indicator: sentences, paragraphs, letters, summaries, notes and corrections written by the learner. The knowledge half is asked by questions where a family exists. |
@@ -105,8 +105,8 @@ Built from `curriculum/english/g9.json` and the registry entry. Outcome text is 
 | GRAMMA.T6_COMPARISON_OF_ADVERB.a | Q | yes | identify the degrees of comparison in adverbs | Question families. |
 | GRAMMA.T6_COMPARISON_OF_ADVERB.b | W | yes (knowledge half) | use positive, comparative and superlative degrees of adverbs in sentences | Composition or written task marked by the teacher with the KICD rubric indicator: sentences, paragraphs, letters, summaries, notes and corrections written by the learner. The knowledge half is asked by questions where a family exists. |
 | GRAMMA.T6_COMPARISON_OF_ADVERB.c | A | no | appreciate the importance of the correct usage of adverbs | Teacher observation over the term or a portfolio entry; a tapped answer cannot show an attitude. |
-| READIN.T6_INTENSIVE_READING_PL.a | Q | NO | identify the themes in a play or a section of a play | Question families. |
-| READIN.T6_INTENSIVE_READING_PL.b | Q | NO | analyse the themes in a play | Question families. |
+| READIN.T6_INTENSIVE_READING_PL.a | Q | yes | identify the themes in a play or a section of a play | Question families. |
+| READIN.T6_INTENSIVE_READING_PL.b | Q | yes | analyse the themes in a play | Question families. |
 | READIN.T6_INTENSIVE_READING_PL.c | Q | NO | relate the themes in a play to real life | Question families. |
 | READIN.T6_INTENSIVE_READING_PL.d | A | no | appreciate the role of literary appreciation in the development of critical thinking skills | Teacher observation over the term or a portfolio entry; a tapped answer cannot show an attitude. |
 | WRITIN.T6_MECHANICS_OF_WRITING.a | Q | yes | recognise homonyms, homophones, double consonants and double vowels in written texts | Question families. |
@@ -122,8 +122,8 @@ Built from `curriculum/english/g9.json` and the registry entry. Outcome text is 
 | GRAMMA.T7_RELATIVE_PRONOUNS_IN.a | Q | yes | recognise relative and interrogative pronouns in a text | Question families. |
 | GRAMMA.T7_RELATIVE_PRONOUNS_IN.b | W | yes (knowledge half) | use relative and interrogative pronouns in sentences | Composition or written task marked by the teacher with the KICD rubric indicator: sentences, paragraphs, letters, summaries, notes and corrections written by the learner. The knowledge half is asked by questions where a family exists. |
 | GRAMMA.T7_RELATIVE_PRONOUNS_IN.c | A | no | acknowledge the value of relative and interrogative pronouns in communication | Teacher observation over the term or a portfolio entry; a tapped answer cannot show an attitude. |
-| READIN.T7_INTENSIVE_READING_PL.a | Q | NO | identify the characters in a play for deeper understanding | Question families. |
-| READIN.T7_INTENSIVE_READING_PL.b | Q | NO | analyse the characters in a play and their relationship | Question families. |
+| READIN.T7_INTENSIVE_READING_PL.a | Q | yes | identify the characters in a play for deeper understanding | Question families. |
+| READIN.T7_INTENSIVE_READING_PL.b | Q | yes | analyse the characters in a play and their relationship | Question families. |
 | READIN.T7_INTENSIVE_READING_PL.c | A | no | value the role of literary appreciation in developing critical thinking | Teacher observation over the term or a portfolio entry; a tapped answer cannot show an attitude. |
 | WRITIN.T7_THE_WRITING_PROCESS.a | Q | NO | outline the stages of the writing process | Question families. |
 | WRITIN.T7_THE_WRITING_PROCESS.b | W | no | create a composition, story or poem following the steps of the writing process | Composition or written task marked by the teacher with the KICD rubric indicator: sentences, paragraphs, letters, summaries, notes and corrections written by the learner. The knowledge half is asked by questions where a family exists. |
@@ -131,14 +131,14 @@ Built from `curriculum/english/g9.json` and the registry entry. Outcome text is 
 | LISTEN.T8_ORAL_POETRY.a | O | no | interpret oral poems on varied issues | An oral or listening check scored by the teacher with the observation rubric (PLAN_OBSERVATION_RUBRICS.md): listening, speaking, reading aloud, drama and poetry performance. |
 | LISTEN.T8_ORAL_POETRY.b | O | no | perform an oral poem using performance techniques | An oral or listening check scored by the teacher with the observation rubric (PLAN_OBSERVATION_RUBRICS.md): listening, speaking, reading aloud, drama and poetry performance. |
 | LISTEN.T8_ORAL_POETRY.c | A | no | acknowledge the role of oral poetry in the preservation of our cultural heritage | Teacher observation over the term or a portfolio entry; a tapped answer cannot show an attitude. |
-| READIN.T8_READING_FOR_INTERPRE.a | Q | NO | identify the point of view in a poem | Question families. |
-| READIN.T8_READING_FOR_INTERPRE.b | Q | NO | analyse the point of view in a poem | Question families. |
+| READIN.T8_READING_FOR_INTERPRE.a | Q | yes | identify the point of view in a poem | Question families. |
+| READIN.T8_READING_FOR_INTERPRE.b | Q | yes | analyse the point of view in a poem | Question families. |
 | READIN.T8_READING_FOR_INTERPRE.c | A | no | acknowledge the importance of the point of view in the understanding of a poem | Teacher observation over the term or a portfolio entry; a tapped answer cannot show an attitude. |
 | GRAMMA.T8_COMPLEX_PREPOSITIONS.a | Q | yes | recognise complex prepositions in texts | Question families. |
 | GRAMMA.T8_COMPLEX_PREPOSITIONS.b | W | yes (knowledge half) | use complex prepositions in sentences | Composition or written task marked by the teacher with the KICD rubric indicator: sentences, paragraphs, letters, summaries, notes and corrections written by the learner. The knowledge half is asked by questions where a family exists. |
 | GRAMMA.T8_COMPLEX_PREPOSITIONS.c | A | no | appreciate the role of prepositions in oral and written communication | Teacher observation over the term or a portfolio entry; a tapped answer cannot show an attitude. |
-| READIN.T8_POETRY_CHARACTERS.a | Q | NO | identify the persona and other participants in a poem | Question families. |
-| READIN.T8_POETRY_CHARACTERS.b | Q | NO | analyse the character of the speaker (persona) and the other participants in a poem | Question families. |
+| READIN.T8_POETRY_CHARACTERS.a | Q | yes | identify the persona and other participants in a poem | Question families. |
+| READIN.T8_POETRY_CHARACTERS.b | Q | yes | analyse the character of the speaker (persona) and the other participants in a poem | Question families. |
 | READIN.T8_POETRY_CHARACTERS.c | A | no | acknowledge the importance of characters in literary appreciation | Teacher observation over the term or a portfolio entry; a tapped answer cannot show an attitude. |
 | WRITIN.T8_ASSESSING_WRITING.a | Q | NO | identify the qualities of a well written composition | Question families. |
 | WRITIN.T8_ASSESSING_WRITING.b | W | no | write a composition related to the theme | Composition or written task marked by the teacher with the KICD rubric indicator: sentences, paragraphs, letters, summaries, notes and corrections written by the learner. The knowledge half is asked by questions where a family exists. |
@@ -184,8 +184,8 @@ Built from `curriculum/english/g9.json` and the registry entry. Outcome text is 
 | GRAMMA.T11_WORD_CLASSES_NOUNS.a | Q | yes | identify nouns formed from verbs and other nouns from a text | Question families. |
 | GRAMMA.T11_WORD_CLASSES_NOUNS.b | W | yes (knowledge half) | use nouns formed from verbs and other nouns in sentences | Composition or written task marked by the teacher with the KICD rubric indicator: sentences, paragraphs, letters, summaries, notes and corrections written by the learner. The knowledge half is asked by questions where a family exists. |
 | GRAMMA.T11_WORD_CLASSES_NOUNS.c | A | no | acknowledge the necessity of forming words from other word classes in the process of communication | Teacher observation over the term or a portfolio entry; a tapped answer cannot show an attitude. |
-| READIN.T11_GRADE_APPROPRIATE_PL.a | Q | NO | identify and illustrate the lessons learnt from a play | Question families. |
-| READIN.T11_GRADE_APPROPRIATE_PL.b | Q | NO | relate the lessons learnt to real life experiences | Question families. |
+| READIN.T11_GRADE_APPROPRIATE_PL.a | Q | yes | identify and illustrate the lessons learnt from a play | Question families. |
+| READIN.T11_GRADE_APPROPRIATE_PL.b | Q | yes | relate the lessons learnt to real life experiences | Question families. |
 | READIN.T11_GRADE_APPROPRIATE_PL.c | Q | NO | perceive plays as sources of life lessons and entertainment | Question families. |
 | WRITIN.T11_MECHANICS_OF_WRITING.a | W | no | spell words for effective communication | Composition or written task marked by the teacher with the KICD rubric indicator: sentences, paragraphs, letters, summaries, notes and corrections written by the learner. The knowledge half is asked by questions where a family exists. |
 | WRITIN.T11_MECHANICS_OF_WRITING.b | W | yes (knowledge half) | write common abbreviations and acronyms in full | Composition or written task marked by the teacher with the KICD rubric indicator: sentences, paragraphs, letters, summaries, notes and corrections written by the learner. The knowledge half is asked by questions where a family exists. |
@@ -193,14 +193,14 @@ Built from `curriculum/english/g9.json` and the registry entry. Outcome text is 
 | LISTEN.T12_LISTENING_TO_RESPOND.a | Q | NO | identify words and expressions used to describe their feelings towards a poem | Question families. |
 | LISTEN.T12_LISTENING_TO_RESPOND.b | O | no | express their feelings towards the subject matter of a poem | An oral or listening check scored by the teacher with the observation rubric (PLAN_OBSERVATION_RUBRICS.md): listening, speaking, reading aloud, drama and poetry performance. |
 | LISTEN.T12_LISTENING_TO_RESPOND.c | A | no | value the importance of poem recitation for effective communication | Teacher observation over the term or a portfolio entry; a tapped answer cannot show an attitude. |
-| READIN.T12_INTENSIVE_READING_CO.a | Q | NO | identify clues in the passage from which conclusions can be drawn | Question families. |
-| READIN.T12_INTENSIVE_READING_CO.b | Q | NO | infer information and meaning of words and expressions from a passage | Question families. |
+| READIN.T12_INTENSIVE_READING_CO.a | Q | yes | identify clues in the passage from which conclusions can be drawn | Question families. |
+| READIN.T12_INTENSIVE_READING_CO.b | Q | yes | infer information and meaning of words and expressions from a passage | Question families. |
 | READIN.T12_INTENSIVE_READING_CO.c | W | no | summarise ideas in a passage | Composition or written task marked by the teacher with the KICD rubric indicator: sentences, paragraphs, letters, summaries, notes and corrections written by the learner. The knowledge half is asked by questions where a family exists. |
 | READIN.T12_INTENSIVE_READING_CO.d | W | no | apply the skills of making inferences and drawing conclusions in independent reading | Composition or written task marked by the teacher with the KICD rubric indicator: sentences, paragraphs, letters, summaries, notes and corrections written by the learner. The knowledge half is asked by questions where a family exists. |
 | GRAMMA.T12_PHRASAL_VERBS.a | Q | yes | identify phrasal verbs formed from break, hang, run and turn in texts | Question families. |
 | GRAMMA.T12_PHRASAL_VERBS.b | W | yes (knowledge half) | use the given phrasal verbs in sentences of their own | Composition or written task marked by the teacher with the KICD rubric indicator: sentences, paragraphs, letters, summaries, notes and corrections written by the learner. The knowledge half is asked by questions where a family exists. |
 | GRAMMA.T12_PHRASAL_VERBS.c | A | no | value the importance of using phrasal verbs in spoken and written communication | Teacher observation over the term or a portfolio entry; a tapped answer cannot show an attitude. |
-| READIN.T12_PLAY_CHARACTERISATIO.a | Q | NO | outline the clues for identifying traits of different characters in a play | Question families. |
+| READIN.T12_PLAY_CHARACTERISATIO.a | Q | yes | outline the clues for identifying traits of different characters in a play | Question families. |
 | READIN.T12_PLAY_CHARACTERISATIO.b | W | no | use the clues to describe the characters in a play | Composition or written task marked by the teacher with the KICD rubric indicator: sentences, paragraphs, letters, summaries, notes and corrections written by the learner. The knowledge half is asked by questions where a family exists. |
 | READIN.T12_PLAY_CHARACTERISATIO.c | A | no | appreciate the role of characterisation in determining virtues and vices in the society | Teacher observation over the term or a portfolio entry; a tapped answer cannot show an attitude. |
 | WRITIN.T12_THE_WRITING_PROCESS_.a | Q | NO | outline the different stages of the writing process | Question families. |
@@ -209,7 +209,7 @@ Built from `curriculum/english/g9.json` and the registry entry. Outcome text is 
 | LISTEN.T13_EXTENSIVE_LISTENING_.a | Q | NO | identify the issue addressed by the different speeches listened to | Question families. |
 | LISTEN.T13_EXTENSIVE_LISTENING_.b | O | no | take notes on the points made by the different speakers on the issue | An oral or listening check scored by the teacher with the observation rubric (PLAN_OBSERVATION_RUBRICS.md): listening, speaking, reading aloud, drama and poetry performance. |
 | LISTEN.T13_EXTENSIVE_LISTENING_.c | A | no | acknowledge the importance of getting information from varied sources | Teacher observation over the term or a portfolio entry; a tapped answer cannot show an attitude. |
-| READIN.T13_INTENSIVE_READING_VI.a | Q | NO | identify mental images created from a read passage | Question families. |
+| READIN.T13_INTENSIVE_READING_VI.a | Q | yes | identify mental images created from a read passage | Question families. |
 | READIN.T13_INTENSIVE_READING_VI.b | W | no | summarise what a passage is about | Composition or written task marked by the teacher with the KICD rubric indicator: sentences, paragraphs, letters, summaries, notes and corrections written by the learner. The knowledge half is asked by questions where a family exists. |
 | READIN.T13_INTENSIVE_READING_VI.c | A | no | appreciate the role of visualising and summarising in enhancing understanding of a text | Teacher observation over the term or a portfolio entry; a tapped answer cannot show an attitude. |
 | GRAMMA.T13_SENTENCES_COMPLEX_SE.a | Q | yes | identify subordinating conjunctions in sentences | Question families. |
@@ -225,8 +225,8 @@ Built from `curriculum/english/g9.json` and the registry entry. Outcome text is 
 | LISTEN.T14_INTONATION_IN_SENTEN.b | O | no | apply question tags appropriately in communication | An oral or listening check scored by the teacher with the observation rubric (PLAN_OBSERVATION_RUBRICS.md): listening, speaking, reading aloud, drama and poetry performance. |
 | LISTEN.T14_INTONATION_IN_SENTEN.c | O | no | compose sentences using question tags correctly | An oral or listening check scored by the teacher with the observation rubric (PLAN_OBSERVATION_RUBRICS.md): listening, speaking, reading aloud, drama and poetry performance. |
 | LISTEN.T14_INTONATION_IN_SENTEN.d | A | no | appreciate the importance of question tags and correct intonation in communication | Teacher observation over the term or a portfolio entry; a tapped answer cannot show an attitude. |
-| READIN.T14_SUMMARISING_ARGUMENT.a | Q | NO | pick out the main points discussed in a text | Question families. |
-| READIN.T14_SUMMARISING_ARGUMENT.b | Q | NO | organise an outline of points into a coherent whole | Question families. |
+| READIN.T14_SUMMARISING_ARGUMENT.a | Q | yes | pick out the main points discussed in a text | Question families. |
+| READIN.T14_SUMMARISING_ARGUMENT.b | Q | yes | organise an outline of points into a coherent whole | Question families. |
 | READIN.T14_SUMMARISING_ARGUMENT.c | W | no | summarise a text correctly in their own words | Composition or written task marked by the teacher with the KICD rubric indicator: sentences, paragraphs, letters, summaries, notes and corrections written by the learner. The knowledge half is asked by questions where a family exists. |
 | READIN.T14_SUMMARISING_ARGUMENT.d | Q | NO | realise the importance of good summary writing skills | Question families. |
 | GRAMMA.T14_SENTENCES_DIRECT_AND.a | Q | yes | differentiate between direct and indirect speech | Question families. |
@@ -248,7 +248,7 @@ Built from `curriculum/english/g9.json` and the registry entry. Outcome text is 
 | LISTEN.T15_ORAL_REPORTS_NEWS_RO.c | O | no | apply the features of oral presentations for effective communication | An oral or listening check scored by the teacher with the observation rubric (PLAN_OBSERVATION_RUBRICS.md): listening, speaking, reading aloud, drama and poetry performance. |
 | LISTEN.T15_ORAL_REPORTS_NEWS_RO.d | A | no | appreciate the importance of fluency in news report | Teacher observation over the term or a portfolio entry; a tapped answer cannot show an attitude. |
 | READIN.T15_READING_FLUENCY.a | Q | NO | preview a text while ignoring unknown words | Question families. |
-| READIN.T15_READING_FLUENCY.b | Q | NO | make predictions about the characters, events and the message in a given text | Question families. |
+| READIN.T15_READING_FLUENCY.b | Q | yes | make predictions about the characters, events and the message in a given text | Question families. |
 | READIN.T15_READING_FLUENCY.c | Q | NO | skim a text to get the gist | Question families. |
 | READIN.T15_READING_FLUENCY.d | Q | NO | scan a text to obtain specific information | Question families. |
 | READIN.T15_READING_FLUENCY.e | A | no | advocate the role of reading fluency in communication | Teacher observation over the term or a portfolio entry; a tapped answer cannot show an attitude. |

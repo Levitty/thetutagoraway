@@ -51217,6 +51217,36 @@ var SKILLS21 = {
       "M_EN9_GN_MANKIND"
     ]
   },
+  "ENGL.G9.READIN.T1_PLAY_STRUCTURE_AND_S.PL_STRUCTURE": {
+    "name": "Describe the setting and the order of a play",
+    "sub": "ENGL.G9.READIN.T1_PLAY_STRUCTURE_AND_S",
+    "outcome": "ENGL.G9.READIN.T1_PLAY_STRUCTURE_AND_S.a",
+    "outcomes": [
+      "ENGL.G9.READIN.T1_PLAY_STRUCTURE_AND_S.a",
+      "ENGL.G9.READIN.T1_PLAY_STRUCTURE_AND_S.b"
+    ],
+    "pre": [],
+    "mis": [
+      "M_EN9_PL_STRUCTURE_DETAIL",
+      "M_EN9_PL_STRUCTURE_OPPOSITE",
+      "M_EN9_PL_STRUCTURE_NOTSAID"
+    ]
+  },
+  "ENGL.G9.READIN.T2_INTENSIVE_READING_SI.RP_STYLE": {
+    "name": "Name repetition and its function in a poem",
+    "sub": "ENGL.G9.READIN.T2_INTENSIVE_READING_SI",
+    "outcome": "ENGL.G9.READIN.T2_INTENSIVE_READING_SI.a",
+    "outcomes": [
+      "ENGL.G9.READIN.T2_INTENSIVE_READING_SI.a",
+      "ENGL.G9.READIN.T2_INTENSIVE_READING_SI.b"
+    ],
+    "pre": [],
+    "mis": [
+      "M_EN9_RP_STYLE_DETAIL",
+      "M_EN9_RP_STYLE_OPPOSITE",
+      "M_EN9_RP_STYLE_NOTSAID"
+    ]
+  },
   "ENGL.G9.GRAMMA.T2_NOUNS_AND_QUANTIFIER.QUANTIFIERS": {
     "name": "Use quantifiers with count and non-count nouns",
     "sub": "ENGL.G9.GRAMMA.T2_NOUNS_AND_QUANTIFIER",
@@ -51232,6 +51262,21 @@ var SKILLS21 = {
       "M_EN9_QT_FEW"
     ]
   },
+  "ENGL.G9.READIN.T2_INTENSIVE_READING_PL.PL_SEQUENCE": {
+    "name": "Describe the sequence of events in a play and relate them to life",
+    "sub": "ENGL.G9.READIN.T2_INTENSIVE_READING_PL",
+    "outcome": "ENGL.G9.READIN.T2_INTENSIVE_READING_PL.a",
+    "outcomes": [
+      "ENGL.G9.READIN.T2_INTENSIVE_READING_PL.a",
+      "ENGL.G9.READIN.T2_INTENSIVE_READING_PL.b"
+    ],
+    "pre": [],
+    "mis": [
+      "M_EN9_PL_SEQUENCE_DETAIL",
+      "M_EN9_PL_SEQUENCE_OPPOSITE",
+      "M_EN9_PL_SEQUENCE_NOTSAID"
+    ]
+  },
   "ENGL.G9.WRITIN.T2_MECHANICS_OF_WRITING.QUOTES_BRACKETS": {
     "name": "Use double quotation marks and brackets",
     "sub": "ENGL.G9.WRITIN.T2_MECHANICS_OF_WRITING",
@@ -51245,6 +51290,48 @@ var SKILLS21 = {
       "M_EN9_QB_BRACKET",
       "M_EN9_QB_EXTRA",
       "M_EN9_QB_END"
+    ]
+  },
+  "ENGL.G9.LISTEN.T3_LISTENING_COMPREHENS.LS_MAIN": {
+    "name": "Pick the main idea and specific details of an argumentative listening text",
+    "sub": "ENGL.G9.LISTEN.T3_LISTENING_COMPREHENS",
+    "outcome": "ENGL.G9.LISTEN.T3_LISTENING_COMPREHENS.a",
+    "outcomes": [
+      "ENGL.G9.LISTEN.T3_LISTENING_COMPREHENS.a"
+    ],
+    "pre": [],
+    "mis": [
+      "M_EN9_LS_MAIN_DETAIL",
+      "M_EN9_LS_MAIN_OPPOSITE",
+      "M_EN9_LS_MAIN_NOTSAID"
+    ]
+  },
+  "ENGL.G9.READIN.T3_READING_FOR_INFORMAT.RS_CONTEXT": {
+    "name": "Infer the meaning of words and sentences from the context",
+    "sub": "ENGL.G9.READIN.T3_READING_FOR_INFORMAT",
+    "outcome": "ENGL.G9.READIN.T3_READING_FOR_INFORMAT.a",
+    "outcomes": [
+      "ENGL.G9.READIN.T3_READING_FOR_INFORMAT.a"
+    ],
+    "pre": [],
+    "mis": [
+      "M_EN9_RS_CONTEXT_DETAIL",
+      "M_EN9_RS_CONTEXT_OPPOSITE",
+      "M_EN9_RS_CONTEXT_NOTSAID"
+    ]
+  },
+  "ENGL.G9.READIN.T3_READING_FOR_INFORMAT.RS_CONNECT": {
+    "name": "Connect events in a text to real life",
+    "sub": "ENGL.G9.READIN.T3_READING_FOR_INFORMAT",
+    "outcome": "ENGL.G9.READIN.T3_READING_FOR_INFORMAT.b",
+    "outcomes": [
+      "ENGL.G9.READIN.T3_READING_FOR_INFORMAT.b"
+    ],
+    "pre": [],
+    "mis": [
+      "M_EN9_RS_CONNECT_DETAIL",
+      "M_EN9_RS_CONNECT_OPPOSITE",
+      "M_EN9_RS_CONNECT_NOTSAID"
     ]
   },
   "ENGL.G9.GRAMMA.T3_MODAL_AUXILIARIES.MODALS": {
@@ -51291,6 +51378,63 @@ var SKILLS21 = {
       "M_EN9_PA_COHERENCE"
     ]
   },
+  "ENGL.G9.READIN.T4_INTENSIVE_READING.RS_PREDICT": {
+    "name": "Predict events in a reading text",
+    "sub": "ENGL.G9.READIN.T4_INTENSIVE_READING",
+    "outcome": "ENGL.G9.READIN.T4_INTENSIVE_READING.a",
+    "outcomes": [
+      "ENGL.G9.READIN.T4_INTENSIVE_READING.a"
+    ],
+    "pre": [],
+    "mis": [
+      "M_EN9_RS_PREDICT_DETAIL",
+      "M_EN9_RS_PREDICT_OPPOSITE",
+      "M_EN9_RS_PREDICT_NOTSAID"
+    ]
+  },
+  "ENGL.G9.READIN.T4_INTENSIVE_READING.RS_KEYEVENTS": {
+    "name": "Outline the key events in a text",
+    "sub": "ENGL.G9.READIN.T4_INTENSIVE_READING",
+    "outcome": "ENGL.G9.READIN.T4_INTENSIVE_READING.b",
+    "outcomes": [
+      "ENGL.G9.READIN.T4_INTENSIVE_READING.b"
+    ],
+    "pre": [],
+    "mis": [
+      "M_EN9_RS_KEYEVENTS_DETAIL",
+      "M_EN9_RS_KEYEVENTS_OPPOSITE",
+      "M_EN9_RS_KEYEVENTS_NOTSAID"
+    ]
+  },
+  "ENGL.G9.READIN.T4_INTENSIVE_READING.RS_QUESTIONS": {
+    "name": "Answer direct and inferential questions and use clues for word meaning",
+    "sub": "ENGL.G9.READIN.T4_INTENSIVE_READING",
+    "outcome": "ENGL.G9.READIN.T4_INTENSIVE_READING.c",
+    "outcomes": [
+      "ENGL.G9.READIN.T4_INTENSIVE_READING.c",
+      "ENGL.G9.READIN.T4_INTENSIVE_READING.d"
+    ],
+    "pre": [],
+    "mis": [
+      "M_EN9_RS_QUESTIONS_DETAIL",
+      "M_EN9_RS_QUESTIONS_OPPOSITE",
+      "M_EN9_RS_QUESTIONS_NOTSAID"
+    ]
+  },
+  "ENGL.G9.READIN.T4_INTENSIVE_READING.RS_RELATE": {
+    "name": "Relate the characters, events and places in a text to real life",
+    "sub": "ENGL.G9.READIN.T4_INTENSIVE_READING",
+    "outcome": "ENGL.G9.READIN.T4_INTENSIVE_READING.e",
+    "outcomes": [
+      "ENGL.G9.READIN.T4_INTENSIVE_READING.e"
+    ],
+    "pre": [],
+    "mis": [
+      "M_EN9_RS_RELATE_DETAIL",
+      "M_EN9_RS_RELATE_OPPOSITE",
+      "M_EN9_RS_RELATE_NOTSAID"
+    ]
+  },
   "ENGL.G9.GRAMMA.T4_PRESENT_AND_PAST_PER.PERFECT": {
     "name": "Tell the present perfect from the past perfect",
     "sub": "ENGL.G9.GRAMMA.T4_PRESENT_AND_PAST_PER",
@@ -51304,6 +51448,21 @@ var SKILLS21 = {
       "M_EN9_PE_PRESENT",
       "M_EN9_PE_PAST",
       "M_EN9_PE_PARTICIPLE"
+    ]
+  },
+  "ENGL.G9.READIN.T4_PLAY_IDENTIFICATION_.PL_CHARACTERS": {
+    "name": "Identify the characters in a play and describe their actions with adverbs",
+    "sub": "ENGL.G9.READIN.T4_PLAY_IDENTIFICATION_",
+    "outcome": "ENGL.G9.READIN.T4_PLAY_IDENTIFICATION_.a",
+    "outcomes": [
+      "ENGL.G9.READIN.T4_PLAY_IDENTIFICATION_.a",
+      "ENGL.G9.READIN.T4_PLAY_IDENTIFICATION_.c"
+    ],
+    "pre": [],
+    "mis": [
+      "M_EN9_PL_CHARACTERS_DETAIL",
+      "M_EN9_PL_CHARACTERS_OPPOSITE",
+      "M_EN9_PL_CHARACTERS_NOTSAID"
     ]
   },
   "ENGL.G9.GRAMMA.T5_ORDER_OF_ADJECTIVES.ADJ_ORDER": {
@@ -51350,6 +51509,22 @@ var SKILLS21 = {
       "M_EN9_AD_THAN"
     ]
   },
+  "ENGL.G9.READIN.T6_INTENSIVE_READING_PL.PL_THEMES": {
+    "name": "Identify and analyse the themes in a play",
+    "sub": "ENGL.G9.READIN.T6_INTENSIVE_READING_PL",
+    "outcome": "ENGL.G9.READIN.T6_INTENSIVE_READING_PL.a",
+    "outcomes": [
+      "ENGL.G9.READIN.T6_INTENSIVE_READING_PL.a",
+      "ENGL.G9.READIN.T6_INTENSIVE_READING_PL.b",
+      "ENGL.G9.READIN.T6_INTENSIVE_READING_PL.c"
+    ],
+    "pre": [],
+    "mis": [
+      "M_EN9_PL_THEMES_DETAIL",
+      "M_EN9_PL_THEMES_OPPOSITE",
+      "M_EN9_PL_THEMES_NOTSAID"
+    ]
+  },
   "ENGL.G9.WRITIN.T6_MECHANICS_OF_WRITING.SPELLING": {
     "name": "Tell homophones and homonyms and spell commonly misspelt words",
     "sub": "ENGL.G9.WRITIN.T6_MECHANICS_OF_WRITING",
@@ -51380,6 +51555,36 @@ var SKILLS21 = {
       "M_EN9_RP_WHO"
     ]
   },
+  "ENGL.G9.READIN.T7_INTENSIVE_READING_PL.PL_RELATIONSHIP": {
+    "name": "Analyse the characters in a play and their relationship",
+    "sub": "ENGL.G9.READIN.T7_INTENSIVE_READING_PL",
+    "outcome": "ENGL.G9.READIN.T7_INTENSIVE_READING_PL.a",
+    "outcomes": [
+      "ENGL.G9.READIN.T7_INTENSIVE_READING_PL.a",
+      "ENGL.G9.READIN.T7_INTENSIVE_READING_PL.b"
+    ],
+    "pre": [],
+    "mis": [
+      "M_EN9_PL_RELATIONSHIP_DETAIL",
+      "M_EN9_PL_RELATIONSHIP_OPPOSITE",
+      "M_EN9_PL_RELATIONSHIP_NOTSAID"
+    ]
+  },
+  "ENGL.G9.READIN.T8_READING_FOR_INTERPRE.RP_POV": {
+    "name": "Identify the point of view of a poem",
+    "sub": "ENGL.G9.READIN.T8_READING_FOR_INTERPRE",
+    "outcome": "ENGL.G9.READIN.T8_READING_FOR_INTERPRE.a",
+    "outcomes": [
+      "ENGL.G9.READIN.T8_READING_FOR_INTERPRE.a",
+      "ENGL.G9.READIN.T8_READING_FOR_INTERPRE.b"
+    ],
+    "pre": [],
+    "mis": [
+      "M_EN9_RP_POV_DETAIL",
+      "M_EN9_RP_POV_OPPOSITE",
+      "M_EN9_RP_POV_NOTSAID"
+    ]
+  },
   "ENGL.G9.GRAMMA.T8_COMPLEX_PREPOSITIONS.COMPLEX_PREPS": {
     "name": "Use complex prepositions",
     "sub": "ENGL.G9.GRAMMA.T8_COMPLEX_PREPOSITIONS",
@@ -51393,6 +51598,21 @@ var SKILLS21 = {
       "M_EN9_CP_BECAUSE",
       "M_EN9_CP_INSTEAD",
       "M_EN9_CP_ACCORDING"
+    ]
+  },
+  "ENGL.G9.READIN.T8_POETRY_CHARACTERS.RP_PERSONA": {
+    "name": "Identify the persona and other participants in a poem",
+    "sub": "ENGL.G9.READIN.T8_POETRY_CHARACTERS",
+    "outcome": "ENGL.G9.READIN.T8_POETRY_CHARACTERS.a",
+    "outcomes": [
+      "ENGL.G9.READIN.T8_POETRY_CHARACTERS.a",
+      "ENGL.G9.READIN.T8_POETRY_CHARACTERS.b"
+    ],
+    "pre": [],
+    "mis": [
+      "M_EN9_RP_PERSONA_DETAIL",
+      "M_EN9_RP_PERSONA_OPPOSITE",
+      "M_EN9_RP_PERSONA_NOTSAID"
     ]
   },
   "ENGL.G9.GRAMMA.T9_CONJUNCTIONS_CORRELA.CORRELATIVE": {
@@ -51454,6 +51674,21 @@ var SKILLS21 = {
       "M_EN9_NF_CHILD"
     ]
   },
+  "ENGL.G9.READIN.T11_GRADE_APPROPRIATE_PL.PL_LESSONS": {
+    "name": "Identify the lessons learnt from a play",
+    "sub": "ENGL.G9.READIN.T11_GRADE_APPROPRIATE_PL",
+    "outcome": "ENGL.G9.READIN.T11_GRADE_APPROPRIATE_PL.a",
+    "outcomes": [
+      "ENGL.G9.READIN.T11_GRADE_APPROPRIATE_PL.a",
+      "ENGL.G9.READIN.T11_GRADE_APPROPRIATE_PL.b"
+    ],
+    "pre": [],
+    "mis": [
+      "M_EN9_PL_LESSONS_DETAIL",
+      "M_EN9_PL_LESSONS_OPPOSITE",
+      "M_EN9_PL_LESSONS_NOTSAID"
+    ]
+  },
   "ENGL.G9.WRITIN.T11_MECHANICS_OF_WRITING.ABBREVIATIONS": {
     "name": "Write common abbreviations and acronyms in full",
     "sub": "ENGL.G9.WRITIN.T11_MECHANICS_OF_WRITING",
@@ -51466,6 +51701,21 @@ var SKILLS21 = {
       "M_EN9_AB_EG",
       "M_EN9_AB_ETC",
       "M_EN9_AB_UN"
+    ]
+  },
+  "ENGL.G9.READIN.T12_INTENSIVE_READING_CO.RS_CLUES": {
+    "name": "Find clues in a passage and infer meaning from them",
+    "sub": "ENGL.G9.READIN.T12_INTENSIVE_READING_CO",
+    "outcome": "ENGL.G9.READIN.T12_INTENSIVE_READING_CO.a",
+    "outcomes": [
+      "ENGL.G9.READIN.T12_INTENSIVE_READING_CO.a",
+      "ENGL.G9.READIN.T12_INTENSIVE_READING_CO.b"
+    ],
+    "pre": [],
+    "mis": [
+      "M_EN9_RS_CLUES_DETAIL",
+      "M_EN9_RS_CLUES_OPPOSITE",
+      "M_EN9_RS_CLUES_NOTSAID"
     ]
   },
   "ENGL.G9.GRAMMA.T12_PHRASAL_VERBS.PHRASAL_VERBS": {
@@ -51481,6 +51731,34 @@ var SKILLS21 = {
       "M_EN9_PV_BREAKDOWN",
       "M_EN9_PV_RUNOUT",
       "M_EN9_PV_TURNUP"
+    ]
+  },
+  "ENGL.G9.READIN.T12_PLAY_CHARACTERISATIO.PL_TRAITS": {
+    "name": "Outline clues for the traits of characters in a play",
+    "sub": "ENGL.G9.READIN.T12_PLAY_CHARACTERISATIO",
+    "outcome": "ENGL.G9.READIN.T12_PLAY_CHARACTERISATIO.a",
+    "outcomes": [
+      "ENGL.G9.READIN.T12_PLAY_CHARACTERISATIO.a"
+    ],
+    "pre": [],
+    "mis": [
+      "M_EN9_PL_TRAITS_DETAIL",
+      "M_EN9_PL_TRAITS_OPPOSITE",
+      "M_EN9_PL_TRAITS_NOTSAID"
+    ]
+  },
+  "ENGL.G9.READIN.T13_INTENSIVE_READING_VI.RS_IMAGES": {
+    "name": "Pick the mental images a passage creates",
+    "sub": "ENGL.G9.READIN.T13_INTENSIVE_READING_VI",
+    "outcome": "ENGL.G9.READIN.T13_INTENSIVE_READING_VI.a",
+    "outcomes": [
+      "ENGL.G9.READIN.T13_INTENSIVE_READING_VI.a"
+    ],
+    "pre": [],
+    "mis": [
+      "M_EN9_RS_IMAGES_DETAIL",
+      "M_EN9_RS_IMAGES_OPPOSITE",
+      "M_EN9_RS_IMAGES_NOTSAID"
     ]
   },
   "ENGL.G9.GRAMMA.T13_SENTENCES_COMPLEX_SE.SUBORDINATING": {
@@ -51499,6 +51777,21 @@ var SKILLS21 = {
       "M_EN9_SC_UNLESS"
     ]
   },
+  "ENGL.G9.READIN.T14_SUMMARISING_ARGUMENT.RS_SUMMARY": {
+    "name": "Pick out the main points and organise them into a summary",
+    "sub": "ENGL.G9.READIN.T14_SUMMARISING_ARGUMENT",
+    "outcome": "ENGL.G9.READIN.T14_SUMMARISING_ARGUMENT.a",
+    "outcomes": [
+      "ENGL.G9.READIN.T14_SUMMARISING_ARGUMENT.a",
+      "ENGL.G9.READIN.T14_SUMMARISING_ARGUMENT.b"
+    ],
+    "pre": [],
+    "mis": [
+      "M_EN9_RS_SUMMARY_DETAIL",
+      "M_EN9_RS_SUMMARY_OPPOSITE",
+      "M_EN9_RS_SUMMARY_NOTSAID"
+    ]
+  },
   "ENGL.G9.GRAMMA.T14_SENTENCES_DIRECT_AND.DIRECT_INDIRECT": {
     "name": "Change direct speech into indirect speech",
     "sub": "ENGL.G9.GRAMMA.T14_SENTENCES_DIRECT_AND",
@@ -51515,6 +51808,20 @@ var SKILLS21 = {
       "M_EN9_DI_QUOTE",
       "M_EN9_DI_TENSE",
       "M_EN9_DI_PRONOUN"
+    ]
+  },
+  "ENGL.G9.READIN.T15_READING_FLUENCY.RS_FLUENCY": {
+    "name": "Make predictions about characters, events and the message of a text",
+    "sub": "ENGL.G9.READIN.T15_READING_FLUENCY",
+    "outcome": "ENGL.G9.READIN.T15_READING_FLUENCY.b",
+    "outcomes": [
+      "ENGL.G9.READIN.T15_READING_FLUENCY.b"
+    ],
+    "pre": [],
+    "mis": [
+      "M_EN9_RS_FLUENCY_DETAIL",
+      "M_EN9_RS_FLUENCY_OPPOSITE",
+      "M_EN9_RS_FLUENCY_NOTSAID"
     ]
   },
   "ENGL.G9.GRAMMA.T15_SENTENCES_1_IMPERATI.EXCLAM_IMPERATIVE": {
@@ -51537,12 +51844,30 @@ var MIS_FEEDBACK20 = {
   "M_EN9_GN_CHAIRMAN": "Chairperson does not assume the sex of the chair.",
   "M_EN9_GN_POLICE": "Police officer fits a man or a woman.",
   "M_EN9_GN_MANKIND": "Humankind includes everyone.",
+  "M_EN9_PL_STRUCTURE_DETAIL": "Check the answer against the text: it must cover what the question asks, not one small detail.",
+  "M_EN9_PL_STRUCTURE_OPPOSITE": "Check the answer against the text: it must agree with the text, not say the opposite.",
+  "M_EN9_PL_STRUCTURE_NOTSAID": "Check the answer against the text: it must be found in the text, not added from outside.",
+  "M_EN9_RP_STYLE_DETAIL": "Check the answer against the text: it must cover what the question asks, not one small detail.",
+  "M_EN9_RP_STYLE_OPPOSITE": "Check the answer against the text: it must agree with the text, not say the opposite.",
+  "M_EN9_RP_STYLE_NOTSAID": "Check the answer against the text: it must be found in the text, not added from outside.",
   "M_EN9_QT_MUCH": "Use many with count nouns such as chairs.",
   "M_EN9_QT_MANY": "Use much with non-count nouns such as water.",
   "M_EN9_QT_FEW": "Use little with non-count nouns such as milk.",
+  "M_EN9_PL_SEQUENCE_DETAIL": "Check the answer against the text: it must cover what the question asks, not one small detail.",
+  "M_EN9_PL_SEQUENCE_OPPOSITE": "Check the answer against the text: it must agree with the text, not say the opposite.",
+  "M_EN9_PL_SEQUENCE_NOTSAID": "Check the answer against the text: it must be found in the text, not added from outside.",
   "M_EN9_QB_BRACKET": "Quotation marks hold the exact words spoken.",
   "M_EN9_QB_EXTRA": "Brackets hold extra information.",
   "M_EN9_QB_END": "The full stop goes inside the closing quotation marks.",
+  "M_EN9_LS_MAIN_DETAIL": "Check the answer against the text: it must cover what the question asks, not one small detail.",
+  "M_EN9_LS_MAIN_OPPOSITE": "Check the answer against the text: it must agree with the text, not say the opposite.",
+  "M_EN9_LS_MAIN_NOTSAID": "Check the answer against the text: it must be found in the text, not added from outside.",
+  "M_EN9_RS_CONTEXT_DETAIL": "Check the answer against the text: it must cover what the question asks, not one small detail.",
+  "M_EN9_RS_CONTEXT_OPPOSITE": "Check the answer against the text: it must agree with the text, not say the opposite.",
+  "M_EN9_RS_CONTEXT_NOTSAID": "Check the answer against the text: it must be found in the text, not added from outside.",
+  "M_EN9_RS_CONNECT_DETAIL": "Check the answer against the text: it must cover what the question asks, not one small detail.",
+  "M_EN9_RS_CONNECT_OPPOSITE": "Check the answer against the text: it must agree with the text, not say the opposite.",
+  "M_EN9_RS_CONNECT_NOTSAID": "Check the answer against the text: it must be found in the text, not added from outside.",
   "M_EN9_MD_ABILITY": "Can shows ability.",
   "M_EN9_MD_DUTY": "Must shows duty.",
   "M_EN9_MD_BASE": "A modal is followed by the base verb with no to.",
@@ -51552,9 +51877,24 @@ var MIS_FEEDBACK20 = {
   "M_EN9_PA_TOPIC": "The topic sentence states the main idea.",
   "M_EN9_PA_UNITY": "Unity means one main idea.",
   "M_EN9_PA_COHERENCE": "Coherence means ideas flow in order.",
+  "M_EN9_RS_PREDICT_DETAIL": "Check the answer against the text: it must cover what the question asks, not one small detail.",
+  "M_EN9_RS_PREDICT_OPPOSITE": "Check the answer against the text: it must agree with the text, not say the opposite.",
+  "M_EN9_RS_PREDICT_NOTSAID": "Check the answer against the text: it must be found in the text, not added from outside.",
+  "M_EN9_RS_KEYEVENTS_DETAIL": "Check the answer against the text: it must cover what the question asks, not one small detail.",
+  "M_EN9_RS_KEYEVENTS_OPPOSITE": "Check the answer against the text: it must agree with the text, not say the opposite.",
+  "M_EN9_RS_KEYEVENTS_NOTSAID": "Check the answer against the text: it must be found in the text, not added from outside.",
+  "M_EN9_RS_QUESTIONS_DETAIL": "Check the answer against the text: it must cover what the question asks, not one small detail.",
+  "M_EN9_RS_QUESTIONS_OPPOSITE": "Check the answer against the text: it must agree with the text, not say the opposite.",
+  "M_EN9_RS_QUESTIONS_NOTSAID": "Check the answer against the text: it must be found in the text, not added from outside.",
+  "M_EN9_RS_RELATE_DETAIL": "Check the answer against the text: it must cover what the question asks, not one small detail.",
+  "M_EN9_RS_RELATE_OPPOSITE": "Check the answer against the text: it must agree with the text, not say the opposite.",
+  "M_EN9_RS_RELATE_NOTSAID": "Check the answer against the text: it must be found in the text, not added from outside.",
   "M_EN9_PE_PRESENT": "Present perfect uses have or has.",
   "M_EN9_PE_PAST": "Past perfect uses had.",
   "M_EN9_PE_PARTICIPLE": "Use the past participle after has.",
+  "M_EN9_PL_CHARACTERS_DETAIL": "Check the answer against the text: it must cover what the question asks, not one small detail.",
+  "M_EN9_PL_CHARACTERS_OPPOSITE": "Check the answer against the text: it must agree with the text, not say the opposite.",
+  "M_EN9_PL_CHARACTERS_NOTSAID": "Check the answer against the text: it must be found in the text, not added from outside.",
   "M_EN9_AO_COLOUR": "Size comes before colour.",
   "M_EN9_AO_OPINION": "Opinion comes before material.",
   "M_EN9_AO_AGE": "Age comes before colour.",
@@ -51564,15 +51904,27 @@ var MIS_FEEDBACK20 = {
   "M_EN9_AD_MORE": "Long adverbs take more and most.",
   "M_EN9_AD_SUPER": "Use the superlative when comparing three or more.",
   "M_EN9_AD_THAN": "Use the comparative with than.",
+  "M_EN9_PL_THEMES_DETAIL": "Check the answer against the text: it must cover what the question asks, not one small detail.",
+  "M_EN9_PL_THEMES_OPPOSITE": "Check the answer against the text: it must agree with the text, not say the opposite.",
+  "M_EN9_PL_THEMES_NOTSAID": "Check the answer against the text: it must be found in the text, not added from outside.",
   "M_EN9_SG_HOMOPHONE": "Their shows belonging.",
   "M_EN9_SG_SEPARATE": 'Separate has "par" in the middle.',
   "M_EN9_SG_COMMITTEE": "Committee has double m, double t and double e.",
   "M_EN9_RP_WHICH": "Use which for things.",
   "M_EN9_RP_WHOSE": "Whose shows belonging.",
   "M_EN9_RP_WHO": "Use who for people.",
+  "M_EN9_PL_RELATIONSHIP_DETAIL": "Check the answer against the text: it must cover what the question asks, not one small detail.",
+  "M_EN9_PL_RELATIONSHIP_OPPOSITE": "Check the answer against the text: it must agree with the text, not say the opposite.",
+  "M_EN9_PL_RELATIONSHIP_NOTSAID": "Check the answer against the text: it must be found in the text, not added from outside.",
+  "M_EN9_RP_POV_DETAIL": "Check the answer against the text: it must cover what the question asks, not one small detail.",
+  "M_EN9_RP_POV_OPPOSITE": "Check the answer against the text: it must agree with the text, not say the opposite.",
+  "M_EN9_RP_POV_NOTSAID": "Check the answer against the text: it must be found in the text, not added from outside.",
   "M_EN9_CP_BECAUSE": "Because of is followed by a noun.",
   "M_EN9_CP_INSTEAD": "Instead of is followed by a noun.",
   "M_EN9_CP_ACCORDING": "Use according to.",
+  "M_EN9_RP_PERSONA_DETAIL": "Check the answer against the text: it must cover what the question asks, not one small detail.",
+  "M_EN9_RP_PERSONA_OPPOSITE": "Check the answer against the text: it must agree with the text, not say the opposite.",
+  "M_EN9_RP_PERSONA_NOTSAID": "Check the answer against the text: it must be found in the text, not added from outside.",
   "M_EN9_CO_EITHER": "Either goes with or.",
   "M_EN9_CO_NEITHER": "Neither goes with nor.",
   "M_EN9_CO_NOTONLY": "Not only goes with but also.",
@@ -51585,18 +51937,36 @@ var MIS_FEEDBACK20 = {
   "M_EN9_NF_DECIDE": "The noun from decide is decision.",
   "M_EN9_NF_FRIEND": "Friendship is the noun formed from friend.",
   "M_EN9_NF_CHILD": "Childhood is the noun formed from child.",
+  "M_EN9_PL_LESSONS_DETAIL": "Check the answer against the text: it must cover what the question asks, not one small detail.",
+  "M_EN9_PL_LESSONS_OPPOSITE": "Check the answer against the text: it must agree with the text, not say the opposite.",
+  "M_EN9_PL_LESSONS_NOTSAID": "Check the answer against the text: it must be found in the text, not added from outside.",
   "M_EN9_AB_EG": "e.g. means for example.",
   "M_EN9_AB_ETC": "etc. means and so on.",
   "M_EN9_AB_UN": "UN stands for United Nations.",
+  "M_EN9_RS_CLUES_DETAIL": "Check the answer against the text: it must cover what the question asks, not one small detail.",
+  "M_EN9_RS_CLUES_OPPOSITE": "Check the answer against the text: it must agree with the text, not say the opposite.",
+  "M_EN9_RS_CLUES_NOTSAID": "Check the answer against the text: it must be found in the text, not added from outside.",
   "M_EN9_PV_BREAKDOWN": "Break down means stop working.",
   "M_EN9_PV_RUNOUT": "Run out of means have no more.",
   "M_EN9_PV_TURNUP": "Turn up means arrive.",
+  "M_EN9_PL_TRAITS_DETAIL": "Check the answer against the text: it must cover what the question asks, not one small detail.",
+  "M_EN9_PL_TRAITS_OPPOSITE": "Check the answer against the text: it must agree with the text, not say the opposite.",
+  "M_EN9_PL_TRAITS_NOTSAID": "Check the answer against the text: it must be found in the text, not added from outside.",
+  "M_EN9_RS_IMAGES_DETAIL": "Check the answer against the text: it must cover what the question asks, not one small detail.",
+  "M_EN9_RS_IMAGES_OPPOSITE": "Check the answer against the text: it must agree with the text, not say the opposite.",
+  "M_EN9_RS_IMAGES_NOTSAID": "Check the answer against the text: it must be found in the text, not added from outside.",
   "M_EN9_SC_ALTHOUGH": "Although shows contrast.",
   "M_EN9_SC_BECAUSE": "Because shows a reason.",
   "M_EN9_SC_UNLESS": "Unless means if not.",
+  "M_EN9_RS_SUMMARY_DETAIL": "Check the answer against the text: it must cover what the question asks, not one small detail.",
+  "M_EN9_RS_SUMMARY_OPPOSITE": "Check the answer against the text: it must agree with the text, not say the opposite.",
+  "M_EN9_RS_SUMMARY_NOTSAID": "Check the answer against the text: it must be found in the text, not added from outside.",
   "M_EN9_DI_QUOTE": "Indirect speech has no quotation marks.",
   "M_EN9_DI_TENSE": "Am becomes was.",
   "M_EN9_DI_PRONOUN": "I becomes he.",
+  "M_EN9_RS_FLUENCY_DETAIL": "Check the answer against the text: it must cover what the question asks, not one small detail.",
+  "M_EN9_RS_FLUENCY_OPPOSITE": "Check the answer against the text: it must agree with the text, not say the opposite.",
+  "M_EN9_RS_FLUENCY_NOTSAID": "Check the answer against the text: it must be found in the text, not added from outside.",
   "M_EN9_EI_MARK": "An exclamation ends with an exclamation mark.",
   "M_EN9_EI_COMMAND": "An imperative gives a command.",
   "M_EN9_EI_STOP": "A command ends with a full stop or exclamation mark."
@@ -51613,7 +51983,7 @@ var { choose: choose21, typed: typed16, spot: spot21, sfam: sfam16 } = makeKit({
   signed: SIGNED20,
   map: { skills: SKILLS21, outcomes: OUTCOMES20, misFeedback: MIS_FEEDBACK20 }
 });
-var fam13 = (tag, cs, form, rung2, gen2, oc) => sfam16({ id: `english9.${tag}`, cs, form, rung: rung2, gen: gen2, marker: "text", ...oc ? { oc } : {} });
+var fam13 = (tag, cs, form, rung2, gen2, oc, extra) => sfam16({ id: `english9.${tag}`, cs, form, rung: rung2, gen: gen2, marker: "text", ...oc ? { oc } : {}, ...extra || {} });
 var m7 = (code, ...texts) => texts.map((t) => [t, code]);
 var c7 = (q, right, why, ...groups) => [q, right, groups.flatMap(([code, ...t]) => m7(code, ...t)), why];
 var sp11 = (q, a, b, f, fix, mis) => [q, [[a, true], [b, true], [f, false]], fix, mis];
@@ -52076,6 +52446,441 @@ var FAMILIES62 = [
   ], ["a", "a"])
 ];
 
+// src/ai-tutor/content/families/english_g9_passages.js
+var PASSAGES6 = [
+  {
+    id: "phones",
+    title: "Should Learners Carry Phones to School?",
+    kind: "argument",
+    text: "Many parents in our town believe that a phone helps a child to stay safe. A learner can call home if the bus is late, and a parent can find out where the child is. These are strong reasons.\n\nHowever, teachers have a different view. They say that phones disturb lessons, because some learners send messages instead of listening. In addition, a lost or stolen phone can cause trouble and tears.\n\nIn my opinion, a school should find a middle path. Learners could hand in their phones at the gate each morning and collect them at the end of the day. In this way safety is kept, and lessons are not disturbed.",
+    q: {
+      order: [
+        ["Which part of the argument comes first?", "the reasons that parents give for phones", "the writer's own opinion", "the idea of handing phones in at the gate", "the problem of stolen phones"],
+        ["Which part of the argument comes last?", "the writer's suggestion of a middle path", "the parents' reasons", "the teachers' view", "the problem of phones that are lost on the road"]
+      ],
+      ctx: [
+        ['In the passage, what does the word "disturb" mean?', "interrupt and spoil", "help and improve", "buy and sell", "keep and protect"],
+        ['In the passage, what does the phrase "middle path" mean?', "a plan that gives each side part of what it wants", "a road through the town", "a plan that ignores both sides", "a punishment given to every learner who owns a phone"]
+      ],
+      fact: [
+        ["Why do some parents want learners to have phones?", "so a child can call home", "so the child can play games", "so the child can sell things", "so the child can skip lessons"],
+        ["What do teachers say phones do in lessons?", "distract learners from listening", "help learners to listen", "make lessons shorter", "make learners read more books in class"]
+      ],
+      infer: [
+        ["What does the writer think about the two sides?", "Both sides have good points.", "Only parents are right.", "Only teachers are right.", "The writer agrees with nobody here."],
+        ["Why does the writer suggest handing in phones at the gate?", "It keeps phones safe.", "It makes the school gate busy.", "It punishes all learners.", "It makes parents angry."]
+      ],
+      predict: [
+        ["What would the writer probably argue next?", "how the school could collect", "why phones should be banned for ever", "how to make phones cheaper", "why teachers should leave the school"],
+        ["How will many parents probably respond to the middle path?", "They may agree.", "They will refuse all rules.", "They will leave the town.", "They will buy more phones."]
+      ],
+      main: [
+        ["What is the main idea of the passage?", "A school should keep phones safe at the gate so safety and lessons are both protected.", "Phones are expensive for most families to buy.", "Parents are always right about learners and phones.", "Learners should have longer breaks in which they may phone home at will."],
+        ["Which title best fits the passage?", "A Middle Path for Phones at School", "The Price of a Phone in Town", "Teachers Leave the School for Ever", "A Lost Bus on the Road"]
+      ],
+      summary: [
+        ["Which is the best summary of the passage?", "Parents want phones for safety.", "Parents and teachers agree that phones should be banned.", "The writer says phones should be sold at school.", "The writer says learners should stay home."],
+        ["Which sentence is a key idea for a summary?", "The writer suggests.", "A lost phone can cause tears.", "The bus can be late.", "Parents live in town."]
+      ],
+      life: [
+        ["How can you connect this passage to real life?", "Many schools must balance safety with learning.", "Phones are never used at home or at school.", "All schools have been closed by the council.", "Teachers do not use phones to speak to parents."],
+        ["What could a learner do after reading this passage?", "Think about a fair rule.", "Ignore every rule.", "Hide a phone in class.", "Stop going to school."]
+      ],
+      image: [
+        ['What picture do the words "lost or stolen phone can cause trouble and tears" give you?', "a learner upset", "a learner laughing with friends", "a teacher giving prizes", "a bus arriving on time"],
+        ["Which line helps you picture a disturbed lesson?", "Some learners send messages instead of listening.", "Many parents believe that a phone helps a child.", "Learners could hand in their phones.", "A learner can call home."]
+      ]
+    }
+  },
+  {
+    id: "last-bus",
+    title: "The Last Bus to Eldoret",
+    kind: "story",
+    text: 'Wangari had run all the way to the stage, but the last bus to Eldoret was already pulling away. She stood with her heavy bag and fought back tears. It was getting dark, and she had no money for a hotel.\n\nAn old woman sitting on a bench looked up. "You are late, my child," she said gently. "Come, you can sleep at my house tonight. In the morning I shall take you to the first bus." Wangari hesitated. Her mother had always told her to be careful with strangers.\n\nThen she noticed the woman wore the badge of a church group. Wangari took a deep breath and followed her. The next morning she reached Eldoret safely and sent the old woman a letter of thanks. She also decided that one day she would help a stranger, too.',
+    q: {
+      order: [
+        ["Which event happened first in the story?", "Wangari missed the last bus.", "The old woman offered her a bed.", "Wangari noticed the church badge.", "Wangari wrote a letter of thanks."],
+        ["Which event happened last in the story?", "Wangari decided she would help a stranger one day.", "The old woman spoke gently.", "Wangari hesitated.", "Wangari gave away her heavy bag to a stranger at the stage."]
+      ],
+      ctx: [
+        ['In the passage, what does the word "hesitated" mean?', "paused because she was not sure", "ran away quickly", "shouted loudly", "sang a song to herself in a loud voice"],
+        ['In the passage, what does the word "badge" mean?', "a small sign showing", "a kind of bag", "a piece of bread", "a ticket for a bus"]
+      ],
+      fact: [
+        ["Where was Wangari trying to go?", "Eldoret", "Nairobi", "Mombasa", "Kisumu"],
+        ["What did the old woman offer Wangari?", "a place to sleep", "money for a hotel", "a ticket to Nairobi", "a job in the town"]
+      ],
+      infer: [
+        ["Why did Wangari hesitate to follow the old woman?", "Her mother had warned her.", "She did not like old people.", "She wanted to miss the bus.", "She had already found a hotel."],
+        ["Why did Wangari follow the old woman in the end?", "She saw the church badge.", "She was forced.", "She was bored.", "She wanted to see the town."]
+      ],
+      predict: [
+        ["What will Wangari probably do when she sees someone in need years later?", "help them as she was helped", "ignore them and walk away", "run away from them", "laugh at them and leave"],
+        ["What will the old woman probably feel when she receives the letter?", "happy that her kindness was valued", "angry about the letter she received", "sad about the bus that left", "worried about the church group"]
+      ],
+      main: [
+        ["What is the main idea of the passage?", "A kind stranger helps a girl who missed the last bus, and the girl learns to help others.", "Buses leave Eldoret at night for the coast.", "Girls should never travel anywhere alone.", "A girl loses her heavy bag and a driver gives her free tickets for a year."],
+        ["Which title best fits the passage?", "A Kind Stranger at the Bus Stage", "The Bus That Never Came Home", "A Hotel in Eldoret Town", "The Church Choir Sings"]
+      ],
+      summary: [
+        ["Which is the best summary of the passage?", "Wangari missed the last bus.", "Wangari stayed at the stage all night.", "The old woman took Wangari to a hotel.", "Wangari refused help and walked to Eldoret."],
+        ["Which sentence is a key idea for a summary?", "An old woman offered Wangari shelter and a ride to the first bus.", "Wangari carried a heavy bag.", "It was getting dark.", "Wangari bought a ticket from the old woman and travelled to Eldoret by night."]
+      ],
+      life: [
+        ["How can you connect this story to real life?", "We should be careful with strangers, but kindness exists and is worth sharing.", "No stranger is ever kind to a traveller.", "Buses are always on time in every town.", "Church groups always give strangers money, so no traveller needs to plan."],
+        ["What can you learn from Wangari's thanks?", "We should thank people who help us.", "Letters of thanks are a waste of time.", "Helpers always expect to be paid money.", "Strangers should always be ignored."]
+      ],
+      image: [
+        ['What picture do the words "fought back tears" give you?', "a girl trying not to cry", "a girl laughing", "a girl running a race", "a girl asleep"],
+        ["Which line helps you picture the old woman's kindness?", '"You are late.', "Wangari had run all the way.", "It was getting dark.", "She had no money for a hotel."]
+      ]
+    }
+  },
+  {
+    id: "village-shop",
+    title: "Mama Njoki's Shop",
+    kind: "information",
+    text: "Mama Njoki runs a small shop in a village near Nyeri. Ten years ago she sold only sugar, tea leaves and soap, and her customers had to carry cash to pay.\n\nToday she also helps neighbours to send and receive money with a mobile phone. A farmer can now pay for seed without walking to town, and a son in Nairobi can send school fees to his mother in seconds. Mama Njoki earns a small fee for each service.\n\nShe has also learnt to keep her records on her phone. In the evening she checks what she has sold and what she must order. Her business has grown, and she has employed a young assistant from the village.",
+    q: {
+      order: [
+        ["Which happened first in Mama Njoki's shop?", "She sold only sugar, tea leaves and soap.", "She employed an assistant.", "She learnt to keep records on her phone.", "She began to help neighbours send money."],
+        ["Which happened last in the passage?", "She employed a young assistant from the village.", "She sold sugar and soap.", "Customers carried cash to pay.", "She moved her shop from the village to a big town."]
+      ],
+      ctx: [
+        ['In the passage, what does the word "employed" mean?', "gave a job to", "sold goods to", "taught a lesson to", "sent money to"],
+        ['In the passage, what does the word "records" mean?', "notes of what is sold", "songs on a radio", "a kind of shop", "a list of villages"]
+      ],
+      fact: [
+        ["What does Mama Njoki earn for each money service?", "a small fee", "a free bag of sugar", "nothing", "a large prize"],
+        ["Where does the son who sends school fees live?", "Nairobi", "Nyeri", "Mombasa", "Eldoret"]
+      ],
+      infer: [
+        ["Why has Mama Njoki's business grown?", "She offers new services.", "She sells only sugar.", "She closes early.", "She has no customers."],
+        ["What does the passage show about Mama Njoki?", "She learns new things.", "She dislikes change.", "She is afraid of phones.", "She wants to move to Nairobi."]
+      ],
+      predict: [
+        ["What will Mama Njoki probably do if her business keeps growing?", "employ more helpers or add more services", "close her shop for good", "sell only soap and sugar", "move her shop to Nairobi and close it here"],
+        ["What will probably happen to neighbours who need to pay for seed?", "They will keep using her service instead of walking to town.", "They will stop farming for ever.", "They will refuse to pay for seed.", "They will ask her to stop all services and sell only soap."]
+      ],
+      main: [
+        ["What is the main idea of the passage?", "Mama Njoki uses a phone.", "Shops sell sugar and soap.", "Farmers need seed.", "Nairobi is a big city."],
+        ["Which title best fits the passage?", "A Village Shop Grows with the Phone", "Sugar and Tea Leaves for Sale", "A Son in Nairobi Sends Money", "A Shopkeeper Who Moves to Nairobi"]
+      ],
+      summary: [
+        ["Which is the best summary of the passage?", "Mama Njoki now helps neighbours send money by phone and keeps records on it, so her shop has grown and she has an assistant.", "Mama Njoki still sells only sugar.", "Mama Njoki moved her shop to Nairobi.", "Mama Njoki sells sugar, tea leaves and soap to neighbours who pay in cash, and she closes her shop early every evening."],
+        ["Which sentence is a key idea for a summary?", "She helps neighbours send.", "She sells soap.", "The shop is near Nyeri.", "Her assistant is young."]
+      ],
+      life: [
+        ["How can you connect this passage to real life?", "Many small businesses use phones for payments and records.", "No business uses a phone for payments.", "Shops never change what they sell.", "Most small shops in villages have closed and moved to the big towns."],
+        ["What can a young person learn from Mama Njoki?", "New skills can help a small business.", "Change is always bad.", "Businesses should never keep records.", "Customers should never be helped."]
+      ],
+      image: [
+        ['What picture do the words "send school fees to his mother in seconds" give you?', "money moving quickly from one place to another", "a long walk to the bank", "a closed shop", "a family carrying heavy sacks to the town on foot"],
+        ["Which line helps you picture Mama Njoki's evening work?", "In the evening she checks what she has sold and what she must order.", "Ten years ago she sold only sugar.", "She earns a small fee.", "Her business has grown, and she has employed a young assistant."]
+      ]
+    }
+  },
+  {
+    id: "debate",
+    title: "The Quiet Boy and the Debate",
+    kind: "story",
+    text: `Baraka was the quietest boy in Form Two. When the teacher asked a question, he looked down at his desk. His friends said, "Baraka, you know the answers! Why do you never speak?"
+
+One Monday, Mr Otieno announced a school debate. "Who will speak for our class?" he asked. Nobody moved. Then, to everyone's surprise, Baraka raised his hand. His knees shook, but he stood up.
+
+He had prepared well. He spoke slowly about the need for clean water in the school, and he used facts that he had collected from the borehole committee. When he sat down, the hall was quiet for a moment, and then everybody clapped. Baraka smiled shyly. He had found his voice.`,
+    q: {
+      order: [
+        ["Which event happened first in the story?", "Baraka's friends asked why he never spoke.", "Mr Otieno announced a debate.", "Baraka raised his hand.", "Baraka walked slowly to the school hall alone."],
+        ["Which event happened last in the story?", "Baraka smiled shyly.", "Nobody moved when the teacher asked.", "Baraka's knees shook.", "The teacher announced the debate."]
+      ],
+      ctx: [
+        ['In the passage, what does the word "announced" mean?', "told everyone publicly", "hid from everyone", "forgot about", "argued with"],
+        ['In the passage, what does the word "borehole" mean?', "a deep hole drilled", "a small shop", "a type of school desk", "a book about water"]
+      ],
+      fact: [
+        ["What was the topic of Baraka's speech?", "the need for clean water in the school", "the price of books", "a football match", "the need for a new football field at the school"],
+        ["Who announced the debate?", "Mr Otieno", "the head teacher", "Baraka", "a visitor"]
+      ],
+      infer: [
+        ["Why did Baraka's knees shake?", "He was nervous about speaking.", "He was cold.", "He was angry.", "He was angry about the heavy rain."],
+        ["What does the passage show about Baraka?", "He is shy but capable when he prepares.", "He is lazy.", "He dislikes his friends.", "He is bold but never prepares his work."]
+      ],
+      predict: [
+        ["What will Baraka probably do after the debate?", "speak up more often in class", "never speak in public again", "leave school at the end of term", "stop studying for the exams"],
+        ["How will his friends probably treat him now?", "with greater respect", "with anger", "with silence for ever", "with no interest"]
+      ],
+      main: [
+        ["What is the main idea of the passage?", "A shy boy prepares well.", "A school has a borehole.", "A teacher likes debates.", "Boys are quiet in Form Two."],
+        ["Which title best fits the passage?", "Baraka Finds His Voice", "The Borehole Committee", "A Quiet Monday", "The Teacher's Question"]
+      ],
+      summary: [
+        ["Which is the best summary of the passage?", "Quiet Baraka volunteers for a debate.", "Baraka refuses to join the debate.", "Baraka loses the debate and cries.", "The teacher gives the speech."],
+        ["Which sentence is a key idea for a summary?", "Baraka prepared well.", "His knees shook.", "He looked at his desk.", "The hall was quiet for a moment."]
+      ],
+      life: [
+        ["How can you connect this story to real life?", "Preparation can help a shy person.", "Shy people should never speak.", "Debates are never useful.", "Teachers should not ask questions."],
+        ["What can you learn from Baraka's facts?", "A speaker is stronger when he uses facts.", "Facts do not matter in a speech.", "Speeches should always be very short.", "A speaker should shout to win."]
+      ],
+      image: [
+        ['What picture do the words "his knees shook, but he stood up" give you?', "a nervous boy bravely getting to his feet", "a boy running away", "a boy asleep", "a proud boy running out of the school hall"],
+        ["Which line helps you picture the hall after the speech?", "The hall was quiet for a moment.", "Baraka was the quietest boy.", "Mr Otieno announced a debate.", "He had prepared well."]
+      ]
+    }
+  },
+  {
+    id: "poem-night",
+    title: "The Street Light",
+    kind: "poem",
+    text: 'I stand at the corner, tall and alone,\nWatching the night with my yellow stone.\nThe buses go past with a roar and a sigh,\nAnd the moon is my friend in the black of the sky.\n\nI see the late workers come walking home,\nTheir shadows grow long on the road and the loam.\nI whisper, "Take care," as they pass me by,\nAnd I light up their way till the sun climbs high.\n\nI stand at the corner, tall and alone,\nBut the whole town is mine, and I am its own.',
+    q: {
+      persona: [
+        ["Who is speaking in the poem?", "a street light", "a bus driver", "a late worker", "the moon"],
+        ["Who are the other participants in the poem?", "the late workers and the buses", "the farmers and the cattle", "the teachers and learners", "the tired children and the cattle"]
+      ],
+      repeat: [
+        ["Which line is repeated at the beginning and the end?", "I stand at the corner, tall and alone,", "I light up their way till the sun climbs high.", "The buses go past with a roar and a sigh,", "I see the late workers come walking home,"],
+        ['What is the effect of repeating "I stand at the corner, tall and alone"?', "It shows how the light stays in one place all night.", "It shows that the light is moving about the town.", "It shows that the light is broken and dark.", "It shows that there are many lights along the road."]
+      ],
+      about: [
+        ["What is the poem about?", "a street light", "a bus race", "the end of the school day", "a broken lamp"],
+        ["What does the street light do for the workers?", "It lights their way home.", "It chases them away.", "It sells them food.", "It makes them late."]
+      ],
+      msg: [
+        ["What message does the poem give?", "Even a quiet, lonely helper can care for a whole town.", "Only the noisy things in a town really matter.", "Night is always a frightening time for people.", "Only the loudest things in a town can ever help its people."],
+        ['Why does the street light say "Take care"?', "It cares about the people who pass.", "It wants them to leave the road.", "It is angry with the workers.", "It wants some money from them."]
+      ],
+      pov: [
+        ["From whose point of view is the poem told?", "the street light, in the first person", "a worker, in the first person", "the moon, in the third person", "a bus driver, in the third person"],
+        ["How can you tell the poem uses the first person?", 'The speaker says "I".', 'The speaker says "they" only.', 'The speaker says "you" only.', "There is no speaker."]
+      ],
+      image: [
+        ['What picture do the words "my yellow stone" give you?', "a glowing yellow lamp", "a heavy rock", "a golden coin", "a yellow flower"],
+        ["Which line helps you picture the workers' tiredness?", "Their shadows grow long on the road and the loam.", "The moon is my friend.", "The buses go past.", "The moon is my friend in the black of the sky."]
+      ]
+    }
+  },
+  {
+    id: "poem-river",
+    title: "The River Remembers",
+    kind: "poem",
+    text: "I am the river, old and slow,\nI remember the paths where the cattle go.\nI remember the children who splashed in my bend,\nAnd the old women singing from morning to end.\n\nI am the river, old and slow,\nI carry the rain to the fields below.\nI am quiet in drought and loud in the storm,\nBut I keep every secret both cool and warm.\n\nI am the river, old and slow,\nTake care of me, and I shall flow.",
+    q: {
+      persona: [
+        ["Who is speaking in the poem?", "the river", "a child", "an old woman", "a farmer"],
+        ["Who are the other participants in the poem?", "the cattle, the children", "the buses and the workers", "the teachers and the doctors", "the soldiers and the kings"]
+      ],
+      repeat: [
+        ["Which line is repeated at the start of every stanza?", "I am the river, old and slow,", "I remember the paths where the cattle go.", "I carry the rain to the fields below.", "Take care of me, and I shall flow."],
+        ['What is the effect of repeating "I am the river, old and slow"?', "It stresses who is speaking.", "It shows that the river has dried up.", "It shows that the river is angry.", "It shows that there are many rivers."]
+      ],
+      about: [
+        ["What is the poem about?", "a river that remembers the people", "a flood that destroys a town", "a boat on the sea", "a flood that washes away the whole village"],
+        ["What does the river carry to the fields?", "the rain", "the cattle", "the children", "the stones"]
+      ],
+      msg: [
+        ["What message does the poem give?", "We should take care of the river.", "Rivers are always dangerous.", "Rivers belong to no one.", "We should stay away from water."],
+        ['Why does the river say "Take care of me, and I shall flow"?', "It shows that people must protect it for it to continue giving.", "It is warning people to leave the village at once.", "It is asking the people for gifts of food and money.", "It is asking the people to build a boat for the river."]
+      ],
+      pov: [
+        ["From whose point of view is the poem told?", "the river, in the first person", "a child, in the first person", "a farmer, in the third person", "a narrator, in the third person"],
+        ["How can you tell the poem uses the first person?", 'The speaker says "I".', 'The speaker says "they" only.', 'The speaker says "we" only.', "There is no speaker."]
+      ],
+      image: [
+        ['What picture do the words "children who splashed in my bend" give you?', "happy children playing in the water", "children asleep", "children at school", "cattle drinking quietly at the river bend"],
+        ["Which line helps you hear the river's moods?", "I am quiet in drought and loud in the storm,", "I am the river, old and slow,", "I remember the paths where the cattle go.", "Take care of me, and I shall flow."]
+      ]
+    }
+  },
+  {
+    id: "play-meeting",
+    title: "The Village Meeting (a scene)",
+    kind: "play",
+    text: "SETTING: A shady tree in Kimana village, late afternoon. Villagers sit on stones and logs.\n\nCHAIRMAN MZEE ODHIAMBO: (calmly) Friends, the borehole has broken again.\nMAMA ADHIAMBO: (angrily) Again! My children walk three hours for water!\nJUMA: (eagerly) Let us each give fifty shillings and mend it today.\nOLD KAMAU: (slowly) Fifty shillings is too much for some of us.\nMZEE ODHIAMBO: (kindly) Then those who cannot pay may bring sand and stones instead.\nMAMA ADHIAMBO: (warmly) That is fair. I will bring sand tomorrow.\nJUMA: (cheerfully) And I will bring the tools.\n\nThe villagers nod and begin to stand. The sun sets behind them.",
+    q: {
+      char: [
+        ["Which word best describes Mzee Odhiambo?", "fair and calm", "angry and rude", "lazy and careless", "selfish and proud"],
+        ["Which character is the angriest at the start of the scene?", "Mama Adhiambo", "Juma", "Old Kamau", "Mzee Odhiambo"]
+      ],
+      order: [
+        ["Which event happens first in the scene?", "Mzee Odhiambo says the borehole has broken.", "Juma offers to bring the tools.", "The villagers begin to stand.", "Old Kamau says fifty shillings is too much."],
+        ["Which event happens last in the scene?", "The villagers nod and begin to stand.", "Mama Adhiambo complains about the walk.", "Juma suggests giving fifty shillings.", "Mzee Odhiambo calls the meeting."]
+      ],
+      theme: [
+        ["Which theme does the scene show?", "working together", "winning a competition", "a love story", "a journey abroad"],
+        ["What does the solution about sand and stones show?", "fairness to people who cannot pay money", "that money is not needed", "that the borehole is not important", "that the villagers do not agree"]
+      ],
+      lesson: [
+        ["What lesson does the scene teach?", "A community can solve its problems when everyone gives what they can.", "Only rich people should pay.", "Problems should be ignored.", "A village should wait for the government to repair every borehole for it."],
+        ["What can we learn from Mzee Odhiambo's answer to Old Kamau?", "Leaders should find fair ways for everyone.", "Leaders should force everyone to pay.", "Leaders should avoid meetings.", "Leaders should never listen to the elders."]
+      ],
+      adverb: [
+        ['How does Mama Adhiambo speak when she says "Again!"?', "angrily", "warmly", "slowly", "cheerfully"],
+        ["How does Mzee Odhiambo speak when he offers sand and stones?", "kindly", "angrily", "eagerly", "slowly"]
+      ],
+      setting: [
+        ["Where does the scene take place?", "under a shady tree in Kimana village", "in a classroom", "in a hospital", "inside a large room in a town hall by the road"],
+        ["At what time of day does the scene end?", "at sunset", "at sunrise", "at noon", "at midnight"]
+      ]
+    }
+  },
+  {
+    id: "play-phone",
+    title: "The Lost Phone (a scene)",
+    kind: "play",
+    text: "SETTING: The sitting room of the Mutuku family, evening. Njeri is searching under the cushions.\n\nNJERI: (anxiously) Where is it? Mum's phone was here a minute ago!\nKIOKO: (lazily) Maybe it is in your bag.\nNJERI: (sharply) I have looked in my bag twice, Kioko.\nKIOKO: (slowly, with a smile) Perhaps it is in your hand.\nNJERI: (embarrassed) Oh! It is. I was holding it all the time.\nMUM: (entering, gently) Have you found it?\nNJERI: (shyly) Yes, Mum. I am sorry for the fuss.\nMUM: (warmly) Never mind. Next time, look in your hand first.\n\nThey all laugh as the lights go down.",
+    q: {
+      char: [
+        ["Which word best describes Njeri at the start of the scene?", "worried", "calm", "sleepy", "proud"],
+        ["Which character teases Njeri gently?", "Kioko", "Mum", "a neighbour", "a teacher"]
+      ],
+      order: [
+        ["Which event happens first in the scene?", "Njeri searches under the cushions.", "Njeri finds the phone in her hand.", "Mum enters the room.", "They all laugh."],
+        ["Which event happens last in the scene?", "They all laugh as the lights go down.", "Kioko suggests the bag.", "Njeri looks in her bag twice.", "They all go to bed as the moon rises."]
+      ],
+      theme: [
+        ["Which theme does the scene show?", "a small mistake", "a dangerous journey", "a school exam", "a business problem"],
+        ["What does Mum's warm answer show?", "a forgiving, loving family", "an angry family", "a family in trouble", "a family that cannot laugh"]
+      ],
+      lesson: [
+        ["What lesson does the scene teach?", "Calm down and check carefully before you worry.", "Never use a phone.", "Always blame others.", "Always blame a brother or a sister before searching."],
+        [`What can we learn from Mum's words "look in your hand first"?`, "Simple things are easy to overlook.", "Phones should be hidden.", "Children should not hold phones.", "Mum is angry."]
+      ],
+      adverb: [
+        ['How does Njeri speak when she says "Where is it?"', "anxiously", "lazily", "warmly", "slowly"],
+        ["How does Kioko speak at first?", "lazily", "sharply", "shyly", "anxiously"]
+      ],
+      setting: [
+        ["Where does the scene take place?", "in the sitting room of the Mutuku family", "in a classroom", "in a shop", "in the kitchen of a house near the market"],
+        ["At what time of day does the scene take place?", "in the evening", "in the morning", "at noon", "at midnight"]
+      ]
+    }
+  }
+];
+var LISTENS2 = [
+  {
+    id: "read-daily",
+    title: "Why Learners Should Read Every Day",
+    kind: "listening",
+    script: "Good afternoon, everyone. Today I shall argue that every learner should read for at least twenty minutes each day. First, reading builds vocabulary. A learner who meets new words in stories will use them in speech and in writing. Second, reading improves concentration. When you follow a long story, your mind learns to stay with one idea. Third, reading is cheap. A library card costs very little, and a good book can be shared with friends. Some people say they have no time. However, twenty minutes is shorter than most tea breaks. For these reasons, I urge you to open a book tonight. Thank you.",
+    q: {
+      main: [
+        ["What is the main idea of the talk?", "Every learner should read.", "Libraries should be closed.", "Books are expensive.", "Tea breaks are too long."],
+        ["Which title best fits the talk?", "Read for Twenty Minutes a Day", "The Price of Books", "A Library Card", "Read Every Day for Four Hours at Night"]
+      ],
+      detail: [
+        ["How long should a learner read each day, according to the speaker?", "at least twenty minutes", "two hours", "five minutes", "one hour"],
+        ["What does the speaker say reading builds?", "vocabulary", "muscles", "houses", "roads"]
+      ],
+      infer: [
+        ["What does the speaker want the audience to do?", "start reading tonight", "stop reading", "sell their books", "skip school"],
+        ["Why does the speaker mention tea breaks?", "to show that twenty minutes is a short time", "to say that tea is cheap", "to say that tea breaks should end", "to say that learners drink too much tea"]
+      ],
+      ctx: [
+        ['In the talk, what does the word "concentration" mean?', "the ability to keep your mind on one thing", "a kind of drink", "a place to read", "the action of moving quickly from one place to another"],
+        ['In the talk, what does the word "urge" mean?', "strongly encourage", "tell to leave", "ask for money", "refuse"]
+      ],
+      effect: [
+        ["According to the speaker, what happens when you meet new words in stories?", "You use them in speech.", "You forget them.", "You stop reading.", "You become tired."],
+        ["According to the speaker, what does following a long story teach your mind?", "to stay with one idea", "to forget quickly", "to sleep", "to hurry"]
+      ]
+    }
+  },
+  {
+    id: "plastic-bags",
+    title: "Plastic Bags and Our Town",
+    kind: "listening",
+    script: "Listen to this short report. In our town, shopkeepers give out thousands of plastic bags every week. After use, many of the bags are thrown on the road. When the rains come, they are carried into the drains and block the water. As a result, the road floods and the mosquitoes breed in the standing water. The town council has now asked shops to sell strong cloth bags instead. Shoppers who bring their own bags will pay less. The council believes that within one year the drains will be cleaner and the town healthier.",
+    q: {
+      main: [
+        ["What is the main idea of the report?", "Plastic bags block drains.", "Shops sell cloth.", "Mosquitoes like rain.", "The council sells drains."],
+        ["Which title best fits the report?", "Cloth Bags Instead of Plastic", "A Flood in the Shop", "Mosquitoes of the Town", "Plastic Bags for Every Shopper in Town"]
+      ],
+      detail: [
+        ["What have shopkeepers been giving out?", "plastic bags", "cloth bags", "free food", "rain coats"],
+        ["What will shoppers who bring their own bags do?", "pay less", "pay more", "pay nothing", "wait longer"]
+      ],
+      infer: [
+        ["What does the council hope to achieve?", "cleaner drains", "more shops", "more plastic", "less rain"],
+        ["Why will shoppers probably start to bring their own bags?", "They will save money.", "They dislike shopkeepers.", "They want to throw bags away.", "They enjoy floods."]
+      ],
+      ctx: [
+        ['In the report, what does the word "block" mean?', "stop the flow of", "start the flow of", "carry away", "clean"],
+        ['In the report, what does the word "breed" mean?', "produce young ones", "wash away", "run away", "fall asleep"]
+      ],
+      effect: [
+        ["What happens when plastic bags block the drains?", "The road floods.", "The road dries.", "The shops close.", "The rain stops."],
+        ["What happens in the standing water?", "Mosquitoes breed.", "Fish grow.", "Bags disappear.", "Roads are mended."]
+      ]
+    }
+  },
+  {
+    id: "old-market",
+    title: "Should We Keep the Old Market?",
+    kind: "listening",
+    script: "Good evening. Tonight we discuss whether to keep the old market or to build a new one. Those who want to keep it say that it is close to the bus stage, and that traders have worked there for many years. However, others say that the old market is crowded and has no clean toilets. The new site would have wide paths, a roof and clean water. Some traders fear that they would lose their customers on the new site. The chairman suggests a compromise: build the new market near the old one, and let traders move in stages. We shall vote at the end of the month.",
+    q: {
+      main: [
+        ["What is the main idea of the talk?", "People are discussing whether.", "The market sells clean water.", "The bus stage is closing.", "Traders have no customers."],
+        ["Which title best fits the talk?", "The Old Market or a New One?", "Clean Water for the Bus", "The Chairman's Holiday", "A New Hospital for the Whole Town"]
+      ],
+      detail: [
+        ["When will the vote be held?", "at the end of the month", "tomorrow", "next year", "tonight"],
+        ["What does the new site have?", "wide paths, a roof", "a bus stage", "a school", "a hospital"]
+      ],
+      infer: [
+        ["Why do some traders fear moving?", "They worry they might lose customers.", "They want less work.", "They dislike roofs.", "They worry that the roof might fall down soon."],
+        ["What does the chairman's plan show?", "He wants a fair solution.", "He dislikes traders.", "He wants to close the market.", "He wants to avoid a vote."]
+      ],
+      ctx: [
+        ['In the talk, what does the word "compromise" mean?', "a plan in which each side gives up something", "a loud argument", "a type of market", "a quiet vote taken by only the oldest traders"],
+        ['In the talk, what does the word "stages" mean in "move in stages"?', "a few at a time", "all at once", "never", "in the night"]
+      ],
+      effect: [
+        ["Why do some people want to keep the old market?", "It is close to the bus stage and traders have worked there for years.", "It has clean toilets.", "It is very new.", "It has wide paths, a roof and clean water for all traders."],
+        ["Why do others want a new market?", "The old one is crowded.", "It is too small a price.", "It is on a hill.", "It is too quiet."]
+      ]
+    }
+  }
+];
+
+// src/ai-tutor/content/families/english_g9_reading.js
+var GROUPS = { prose: (p) => ["argument", "story", "information"].includes(p.kind), poem: (p) => p.kind === "poem", play: (p) => p.kind === "play" };
+var rowsFor2 = (src, test, types, half) => src.filter(test).filter((_, i) => i % 2 === half).flatMap((p) => types.flatMap((t) => (p.q[t] || []).map((row) => ({ p, row }))));
+var mk = (id5, src, test, types, half, h, listening) => () => {
+  const { p, row } = pick(rowsFor2(src, test, types, half));
+  const [q, right, w1, w22, w32] = row;
+  const wrongs = [[w1, `M_EN9_${id5}_DETAIL`], [w22, `M_EN9_${id5}_OPPOSITE`], [w32, `M_EN9_${id5}_NOTSAID`]];
+  const base = choose21([[q, right, wrongs, "Go back to the text and find the line that answers the question."]], { h, instruction: listening ? "Listen to the talk. Then choose the best answer." : "Read the text. Then choose the best answer.", s1: listening ? "Think about what you heard." : "Go back to the text." })();
+  if (!base) return null;
+  return { ...base, ...listening ? { listening: { title: p.title, script: p.script } } : { passage: { title: p.title, text: p.text } } };
+};
+var R2 = (tag, id5, cs, group, types, h, ocs) => [0, 1].map((half) => fam13(`read.${tag}.${half ? "b" : "a"}`, cs, half ? "word" : "direct", half + 1, mk(id5, group === "listen" ? LISTENS2 : PASSAGES6, group === "listen" ? () => true : GROUPS[group], types, half, h, group === "listen"), ocs[half] || ocs[0], group === "listen" ? { needsAudio: true } : void 0));
+var HP = ["Go back to the text and find the line that answers the question.", "The answer must be in the text; a small detail, the opposite or something new is wrong."];
+var FAMILIES63 = [
+  ...R2("predict", "RS_PREDICT", "READIN.T4_INTENSIVE_READING.RS_PREDICT", "prose", ["predict", "order"], ["A good prediction fits the clues and does not go against the text.", "Look at the last lines for what comes next."], ["a"]),
+  ...R2("keyevents", "RS_KEYEVENTS", "READIN.T4_INTENSIVE_READING.RS_KEYEVENTS", "prose", ["order", "summary"], ["Find the first event, then the next, and so on.", "A summary keeps the key events and leaves out small details."], ["b"]),
+  ...R2("questions", "RS_QUESTIONS", "READIN.T4_INTENSIVE_READING.RS_QUESTIONS", "prose", ["fact", "infer", "ctx"], HP, ["c", "d"]),
+  ...R2("relate", "RS_RELATE", "READIN.T4_INTENSIVE_READING.RS_RELATE", "prose", ["life", "main"], ["Ask: where have I seen something like this in real life?", "The connection must fit what the text says."], ["e"]),
+  ...R2("context", "RS_CONTEXT", "READIN.T3_READING_FOR_INFORMAT.RS_CONTEXT", "prose", ["ctx", "infer"], ["Read the sentence with the word and the sentences around it.", "Try each meaning in place of the word. Which one fits?"], ["a"]),
+  ...R2("connect", "RS_CONNECT", "READIN.T3_READING_FOR_INFORMAT.RS_CONNECT", "prose", ["life", "main"], ["Link what happens in the text to a real situation.", "The link must agree with the text."], ["b"]),
+  ...R2("clues", "RS_CLUES", "READIN.T12_INTENSIVE_READING_CO.RS_CLUES", "prose", ["infer", "ctx"], ["A clue is a line in the text that points to the answer.", "A conclusion must be backed by clues, not guessed."], ["a", "b"]),
+  ...R2("images", "RS_IMAGES", "READIN.T13_INTENSIVE_READING_VI.RS_IMAGES", "prose", ["image", "ctx"], ["Read the words slowly and picture them in your mind.", "Use all the words in the line together."], ["a"]),
+  ...R2("summary", "RS_SUMMARY", "READIN.T14_SUMMARISING_ARGUMENT.RS_SUMMARY", "prose", ["main", "summary"], ["The main point covers the whole text.", "A summary keeps the main points in a sensible order."], ["a", "b"]),
+  ...R2("fluency", "RS_FLUENCY", "READIN.T15_READING_FLUENCY.RS_FLUENCY", "prose", ["predict", "main"], ["A prediction is what will probably happen, from the clues.", "The message is what the whole text is about."], ["b"]),
+  ...R2("pstyle", "RP_STYLE", "READIN.T2_INTENSIVE_READING_SI.RP_STYLE", "poem", ["repeat", "about", "msg"], ["Repeated words are the same words that come again.", "Repetition stresses an idea."], ["a", "b"]),
+  ...R2("ppov", "RP_POV", "READIN.T8_READING_FOR_INTERPRE.RP_POV", "poem", ["pov", "persona", "about"], ["The point of view is whose eyes tell the poem.", 'If the speaker says "I" it is the first person.'], ["a", "b"]),
+  ...R2("ppersona", "RP_PERSONA", "READIN.T8_POETRY_CHARACTERS.RP_PERSONA", "poem", ["persona", "pov", "image"], ["The persona is the voice that speaks in the poem.", "Other participants are the people or things the speaker talks about."], ["a", "b"]),
+  ...R2("sequence", "PL_SEQUENCE", "READIN.T2_INTENSIVE_READING_PL.PL_SEQUENCE", "play", ["order", "lesson", "theme"], ["Find the first thing that happens in the scene, then the next.", "A lesson is shown by what happens at the end."], ["a", "b"]),
+  ...R2("characters", "PL_CHARACTERS", "READIN.T4_PLAY_IDENTIFICATION_.PL_CHARACTERS", "play", ["char", "adverb", "order"], ["The words in brackets tell how a character speaks.", "A trait must match what the character says and does."], ["a", "c"]),
+  ...R2("themes", "PL_THEMES", "READIN.T6_INTENSIVE_READING_PL.PL_THEMES", "play", ["theme", "lesson", "char"], ["A theme is the big idea the scene shows.", "Ask: what problem do the characters solve, and how?"], ["a", "b"]),
+  ...R2("relationship", "PL_RELATIONSHIP", "READIN.T7_INTENSIVE_READING_PL.PL_RELATIONSHIP", "play", ["char", "theme", "adverb"], ["Look at how characters speak to each other.", "The stage directions in brackets show feelings."], ["a", "b"]),
+  ...R2("lessons", "PL_LESSONS", "READIN.T11_GRADE_APPROPRIATE_PL.PL_LESSONS", "play", ["lesson", "theme", "order"], ["The lesson is shown by what happens at the end.", "A lesson is not a detail of the scene."], ["a", "b"]),
+  ...R2("traits", "PL_TRAITS", "READIN.T12_PLAY_CHARACTERISATIO.PL_TRAITS", "play", ["char", "adverb", "lesson"], ["Clues to a trait are what a character says and how.", "Check the trait against the words and the brackets."], ["a"]),
+  ...R2("structure", "PL_STRUCTURE", "READIN.T1_PLAY_STRUCTURE_AND_S.PL_STRUCTURE", "play", ["setting", "order", "theme"], ["The setting is the place and time given at the start.", "Follow the order of what the characters do."], ["a", "b"]),
+  ...R2("lmain", "LS_MAIN", "LISTEN.T3_LISTENING_COMPREHENS.LS_MAIN", "listen", ["main", "detail", "infer"], ["The main idea is what the whole talk is about.", "Listen again for the exact words that answer the question."], ["a"])
+];
+
 // src/ai-tutor/content/subjects/english_g9.js
 var english_g9_default = {
   subject: "english",
@@ -52086,9 +52891,9 @@ var english_g9_default = {
   icon: "book",
   description: "Grade 9 English from the CBC design",
   map: { skills: SKILLS21, substrands: SUBSTRANDS20, outcomes: OUTCOMES20, misFeedback: MIS_FEEDBACK20 },
-  families: [...FAMILIES61, ...FAMILIES62],
+  families: [...FAMILIES61, ...FAMILIES62, ...FAMILIES63],
   // add each family file you write: [...A, ...B]
-  familyFiles: ["english_g9_a.js", "english_g9_b.js"],
+  familyFiles: ["english_g9_a.js", "english_g9_b.js", "english_g9_reading.js"],
   // the same files by name (a phone build drops them while nothing is signed)
   signed: SIGNED20,
   signedFile: "english_g9_signed.js",
@@ -52986,7 +53791,7 @@ var sp12 = (q, a, b, f, fix, mis) => [q, [[a, true], [b, true], [f, false]], fix
 var IN2 = "SCIENT.INTRODUCTION_TO_INTEGRAT.";
 var LS3 = "SCIENT.LABORATORY_SAFETY.";
 var AP6 = "SCIENT.LABORATORY_APPARATUS_AND.";
-var FAMILIES63 = [
+var FAMILIES64 = [
   // ---------------------------------------------------------------- SCI_COMPONENTS
   fam14("in.comp.direct", `${IN2}SCI_COMPONENTS`, "direct", 1, choose22([
     c8("Which branch of Integrated Science studies living things?", "Biology", "Biology is the study of living things.", ["M_SC_BIO_PLANTS", "Chemistry", "Physics"], ["M_SC_SEPARATE", "None of them"]),
@@ -53191,7 +53996,7 @@ var FAMILIES63 = [
 var MX = "MIXTUR.MIXTURES.";
 var AB2 = "MIXTUR.ACIDS_BASES_AND_INDICATO.";
 var RP2 = "LIVING.HUMAN_REPRODUCTIVE_SYSTE.";
-var FAMILIES64 = [
+var FAMILIES65 = [
   // ---------------------------------------------------------------- HOMOGENEOUS_SOLUTION
   fam14("mx.hom.direct", `${MX}HOMOGENEOUS_SOLUTION`, "direct", 1, choose22([
     c8("Salt is stirred into water until it cannot be seen. Where is the salt?", "Still in the water, spread out", "The salt is still there, spread through the water.", ["M_HM_DISAPPEAR", "It has disappeared", "It has turned into water"], ["M_HM_SOLVENT_SOLUTE", "It has turned into the solvent"]),
@@ -53440,7 +54245,7 @@ var FAMILIES64 = [
 var EX = "LIVING.HUMAN_EXCRETORY_SYSTEM.";
 var EL = "FORCE_.ELECTRICAL_ENERGY.";
 var MG = "FORCE_.MAGNETISM.";
-var FAMILIES65 = [
+var FAMILIES66 = [
   // ---------------------------------------------------------------- EXCRETION_ORGANS
   fam14("ex.org.direct", `${EX}EXCRETION_ORGANS`, "direct", 1, choose22([
     c8("Which of these is excreted by the body?", "Urine", "Urine carries waste made by the body's cells.", ["M_EO_FAECES", "Faeces", "Undigested food"], ["M_EO_SKIN_ONLY_COOL", "Heat only"]),
@@ -53717,7 +54522,7 @@ var integratedscience_g7_default = {
   icon: "book",
   description: "Grade 7 Integrated Science from the CBC design",
   map: { skills: SKILLS22, substrands: SUBSTRANDS21, outcomes: OUTCOMES21, misFeedback: MIS_FEEDBACK21 },
-  families: [...FAMILIES63, ...FAMILIES64, ...FAMILIES65],
+  families: [...FAMILIES64, ...FAMILIES65, ...FAMILIES66],
   // add each family file you write: [...A, ...B]
   familyFiles: ["integratedscience_g7_a.js", "integratedscience_g7_b.js", "integratedscience_g7_c.js"],
   // the same files by name (a phone build drops them while nothing is signed)
@@ -54363,7 +55168,7 @@ var sp13 = (q, a, b, f, fix, mis) => {
 var EC = "MIXTUR.ELEMENTS_AND_COMPOUNDS.";
 var PC3 = "MIXTUR.PHYSICAL_AND_CHEMICAL_CH.";
 var OPT = (a, b) => ({ h: [a, b] });
-var FAMILIES66 = [
+var FAMILIES67 = [
   // ---------------------------------------------------------------- ATOM_ELEMENT
   fam15("ec.ae.what", `${EC}ATOM_ELEMENT`, "direct", 1, choose23([
     c9("What is a molecule?", "Two or more atoms joined together", "A molecule is atoms joined, such as water or oxygen gas.", ["M_G8_AE_ATOM_MOLECULE", "The smallest particle of an element", "A single atom of oxygen", "A very large grain"]),
@@ -54525,7 +55330,7 @@ var CF2 = "MIXTUR.CLASSES_OF_FIRE.";
 var CE3 = "LIVING.THE_CELL.";
 var MV = "LIVING.MOVEMENT_OF_MATERIALS_IN.";
 var OPT2 = (a, b) => ({ h: [a, b] });
-var FAMILIES67 = [
+var FAMILIES68 = [
   // ---------------------------------------------------------------- FIRE_TRIANGLE
   fam15("cf.ft.parts", `${CF2}FIRE_TRIANGLE`, "direct", 1, choose23([
     c9("What three things does a fire need?", "Heat, fuel and oxygen", "Remove any one and the fire goes out.", ["M_G8_FT_TWO_PARTS", "Heat and fuel only", "Water, fuel and air", "Smoke, heat and wind"]),
@@ -54643,7 +55448,7 @@ var RP3 = "LIVING.REPRODUCTION_IN_HUMAN_BE.";
 var TE = "FORCE_.TRANSFORMATION_OF_ENERGY.";
 var PR3 = "FORCE_.PRESSURE.";
 var OPT3 = (a, b) => ({ h: [a, b] });
-var FAMILIES68 = [
+var FAMILIES69 = [
   // ---------------------------------------------------------------- MENSTRUAL
   fam15("rp.mc.cycle", `${RP3}MENSTRUAL`, "direct", 1, choose23([
     c9("About how long is the menstrual cycle?", "About 28 days", "The cycle is about 28 days, but it varies a little.", ["M_G8_MC_LENGTH", "About 7 days", "About 3 days", "About 3 months"]),
@@ -54788,7 +55593,7 @@ var integratedscience_g8_default = {
   icon: "book",
   description: "Grade 8 Integrated Science from the CBC design",
   map: { skills: SKILLS23, substrands: SUBSTRANDS22, outcomes: OUTCOMES22, misFeedback: MIS_FEEDBACK22 },
-  families: [...FAMILIES66, ...FAMILIES67, ...FAMILIES68],
+  families: [...FAMILIES67, ...FAMILIES68, ...FAMILIES69],
   // add each family file you write: [...A, ...B]
   familyFiles: ["integratedscience_g8_a.js", "integratedscience_g8_b.js", "integratedscience_g8_c.js"],
   // the same files by name (a phone build drops them while nothing is signed)
@@ -55551,7 +56356,7 @@ var AT4 = "MIXTUR.STRUCTURE_OF_THE_ATOM.";
 var MA = "MIXTUR.METALS_AND_ALLOYS.";
 var WH = "MIXTUR.WATER_HARDNESS.";
 var NP = "LIVING.NUTRITION_IN_PLANTS.";
-var FAMILIES69 = [
+var FAMILIES70 = [
   ...S13("ap", AT4, "ATOM_PARTS", ["AP_ELECTRON", "AP_CHARGE", "AP_PROTON"], ["Protons and neutrons are in the nucleus; electrons are in shells.", "Protons are positive, electrons negative, neutrons have no charge."], [
     ["Where are electrons found in an atom?", "In shells around the nucleus", "Inside the nucleus only", "Outside the atom entirely", "In the neutrons"],
     ["Which particle has no charge?", "Neutron", "Proton", "Electron", "Nucleus"],
@@ -55750,7 +56555,7 @@ var RP4 = "LIVING.REPRODUCTION_IN_PLANTS.";
 var IL = "LIVING.THE_INTERDEPENDENCE_OF_L.";
 var CM2 = "FORCE_.CURVED_MIRRORS.";
 var WV2 = "FORCE_.WAVES.";
-var FAMILIES70 = [
+var FAMILIES71 = [
   ...S13("an", NA, "ANIMAL_NUTRITION", ["AN_HERBI", "AN_CARNI", "AN_OMNI"], ["Herbivores eat plants, carnivores eat flesh, omnivores eat both.", "Animals are grouped by what they eat."], [
     ["What does a herbivore eat?", "Plants only", "Flesh only", "Plants and flesh", "Soil only"],
     ["What does a carnivore eat?", "Flesh only", "Plants only", "Plants and flesh", "Soil only"],
@@ -55991,7 +56796,7 @@ var integratedscience_g9_default = {
   icon: "book",
   description: "Grade 9 Integrated Science from the CBC design",
   map: { skills: SKILLS24, substrands: SUBSTRANDS23, outcomes: OUTCOMES23, misFeedback: MIS_FEEDBACK23 },
-  families: [...FAMILIES69, ...FAMILIES70],
+  families: [...FAMILIES70, ...FAMILIES71],
   // add each family file you write: [...A, ...B]
   familyFiles: ["integratedscience_g9_a.js", "integratedscience_g9_b.js"],
   // the same files by name (a phone build drops them while nothing is signed)
@@ -58481,7 +59286,7 @@ var INT_ID = [
   ['Ni kihisishi kipi katika sentensi: "Ala! Mvua imenyesha tena leo."', "Ala", ["Mvua", "M4_INT_NOT"], ["imenyesha", "M4_INT_NOT"], ["leo", "M4_INT_NOT"], '"Ala!" kinaonyesha mshangao na kina alama ya hisi. Ni kihisishi.'],
   ['Ni kihisishi kipi katika sentensi: "Samahani! Nimekuchelewesha kwa dakika kumi."', "Samahani", ["Nimekuchelewesha", "M4_INT_NOT"], ["dakika", "M4_INT_NOT"], ["kumi", "M4_INT_NOT"], '"Samahani!" kinaonyesha kujuta na kina alama ya hisi. Ni kihisishi.']
 ];
-var FAMILIES71 = [
+var FAMILIES72 = [
   // ---- NOMINO
   ...trio6("nomino", "SARUFI.T1_NOMINO.NOMINO", NOM_GAP, { stem: "Chagua neno linalokamilisha sentensi.", gapStem: "Andika nomino inayokosekana:", topic: "kuhusu nomino", thinOk: true, hints: H10("Fikiria majina ya watu, wanyama, mahali na vitu unavyoviona kila siku.", "Neno la kufanya jambo si jina la kitu.") }),
   ...one("nomino.tambua", "SARUFI.T1_NOMINO.NOMINO", NOM_ID, { stem: "Chagua jibu sahihi.", oc: "b", tag: "tambua", rung: 1, hints: H10("Jiulize: je, ni jina la mtu, mnyama, mahali au kitu?", "Neno la kitendo si nomino.") }),
@@ -58639,7 +59444,7 @@ var LILI_ID = [
 ];
 var CG = "Andika kiambishi kinachokosekana:";
 var CS = "Chagua kiambishi kinachokosekana.";
-var FAMILIES72 = [
+var FAMILIES73 = [
   // ---- A-WA
   ...trio6("awa.upatanisho", "SARUFI.T4_NGELI_YA_A_WA.A_WA", AWA, { stem: CS, gapStem: CG, oc: ["a", "a", "c"], topic: "kuhusu ngeli ya A-WA", hints: H11("Hesabu: mmoja au wengi?", "Watu na wanyama wako katika ngeli moja.") }),
   ...one("awa.nomino", "SARUFI.T4_NGELI_YA_A_WA.A_WA", AWA_ID, { stem: "Chagua jibu sahihi.", oc: "b", tag: "nomino", rung: 1, hints: H11("Je, ni mtu au mnyama?", "Vitu havimo katika ngeli hii.") }),
@@ -58792,7 +59597,7 @@ var UDO_ID = [
   W4("UDO", "Ni neno lipi liko katika hali ya udogo (vingi)?", "vijiti", "majiti:JI miti:SAME kijiti:PL", "Vijiti ni wingi wa kijiti: kina vi-."),
   W4("UDO", "Ni neno lipi liko katika hali ya udogo (vingi)?", "vijiji", "majiji:JI miji:SAME kijiji:PL", "Vijiji ni wingi wa kijiji: kina vi-.")
 ];
-var FAMILIES73 = [
+var FAMILIES74 = [
   // ---- MNYAMBULIKO
   ...trio6("mnyambuliko", "SARUFI.T8_MNYAMBULIKO_WA_VITEN.MNYAMBULIKO", MNY, { stem: "Chagua kitenzi kinachofaa.", gapStem: "Andika kitenzi kinachokosekana:", oc: ["d", "d", "d"], topic: "kuhusu kauli za vitenzi", thinOk: true, hints: H17("Jiulize: kitendo kinafanyiwa mtu, au kitu ndicho kilichofanyiwa kitendo?", "Mwisho wa kitenzi unabadilika: -ia au -ea kwa mtu, -wa kwa kitu.") }),
   ...trio6("mnyambuliko.kauli", "SARUFI.T8_MNYAMBULIKO_WA_VITEN.MNYAMBULIKO", KAULI, { stem: "Chagua kauli sahihi.", gapStem: "Andika kauli:", tag: "kauli", oc: ["b", "c", "c"], topic: "kuhusu kauli za vitenzi", thinOk: true, hints: H17("Tazama mwisho wa kitenzi na anayefanyiwa kitendo.", "Kauli tatu zinatofautiana kwa mwisho wa kitenzi.") }),
@@ -58817,7 +59622,7 @@ var FAMILIES73 = [
 
 // src/ai-tutor/content/families/kiswahili_g4_d.js
 var H18 = (a, b) => [a, b];
-var PASSAGES6 = [
+var PASSAGES7 = [
   {
     id: "soko",
     title: "Soko la Jumamosi",
@@ -58956,7 +59761,7 @@ var PASSAGES6 = [
     lines: [["Shule yetu ni nyumba, ya elimu na adabu,", "Walimu ni wazazi, wanaotuongoza.", "Tunasoma kila siku, kwa moyo wa bidii,", "Kesho tutakuwa, viongozi wa nchi."], ["Darasani tunacheka, tunajifunza pamoja,", "Uwanjani tunacheza, kwa amani na upendo.", "Kila mtoto anathaminiwa, bila ubaguzi,", "Shule yetu ni nuru, katika kijiji chetu."]]
   }
 ];
-for (const p of PASSAGES6.filter((x) => x.kind === "shairi")) {
+for (const p of PASSAGES7.filter((x) => x.kind === "shairi")) {
   const other = (n, k) => {
     const s = /* @__PURE__ */ new Set([String(n)]);
     const out = [];
@@ -58984,7 +59789,7 @@ for (const p of PASSAGES6.filter((x) => x.kind === "shairi")) {
   }));
 }
 var showP6 = (p) => ({ title: p.title, text: p.text });
-var flat = (key, kind) => PASSAGES6.filter((p) => (kind ? p.kind === kind : true) && p[key]).flatMap((p) => p[key].map((e) => ({ p, e })));
+var flat = (key, kind) => PASSAGES7.filter((p) => (kind ? p.kind === kind : true) && p[key]).flatMap((p) => p[key].map((e) => ({ p, e })));
 var norm7 = (key, e) => {
   const a = [...e];
   const flags = a.length && !Array.isArray(a[a.length - 1]) && typeof a[a.length - 1] === "object" ? a.pop() : {};
@@ -59005,7 +59810,7 @@ var passType5 = (key, { hints, kind, label = "Soma kifungu. Kisha andika jibu fu
   return { passage: showP6(p), question: n.q, answer: shown, accepts: alt, wrong: n.wrongs.map(([t, code]) => [t, feedbackOf6(cskill, code), code]), instruction: label, hints: [...hints, `Jibu linaanza na herufi "${shown[0]}".`], steps: [n.because, `Jibu ni "${shown}".`], chk: (a) => [shown, ...alt].includes(String(a)) };
 };
 var orderGen7 = (cskill) => {
-  const p = pick(PASSAGES6.filter((x) => x.order && x.kind === "hadithi"));
+  const p = pick(PASSAGES7.filter((x) => x.order && x.kind === "hadithi"));
   const ev = p.order;
   let show;
   do {
@@ -59111,7 +59916,7 @@ var C_SHA = "KUSOMA.T5_KUSOMA_KWA_UFAHAMU.SHAIRI";
 var C_KAM = "KUSOMA.T2_KUSOMA_KWA_KINA.KAMUSI";
 var C_UFS = "KUSOMA.T3_KUSOMA_KWA_UFASAHA.UFASAHA_VIPENGELE";
 var C_DIG = "KUSOMA.T4_KUSOMA_KWA_MAPANA.USALAMA_DIJITALI";
-var FAMILIES74 = [
+var FAMILIES75 = [
   // ---- MSAMIATI
   kw({ id: "kiswahili4.msamiati.maana", cs: C_MSA, oc: "a", kind: "choose-meaning", form: "word", rung: 2, gen: passChoose5("vocab", { kind: "hadithi", hints: H18("Soma sentensi lenye neno hilo, na sentensi zilizo karibu nalo.", "Jaribu kila maana mahali pa neno. Ipi inafaa?") }) }),
   ...trio6("msamiati.tumia", C_MSA, MSA_GAP, { stem: "Chagua neno linalokamilisha sentensi.", gapStem: "Andika neno linalokosekana:", oc: ["b", "b", "b"], tag: "tumia", topic: "kuhusu msamiati", hints: H18("Fikiria maana ya kila neno kabla ya kuchagua.", "Neno linaloonekana kama jingine si lazima liwe na maana sawa nalo.") }),
@@ -59327,7 +60132,7 @@ var TASH_ID = [
   W7("TASH", "Ni tashbihi ipi?", "mkubwa kama ndovu", "Yeye_ni_ndovu:NO_KAMA Yeye_ni_mkubwa_sana:NO_KAMA Ndovu_ni_mnyama_mkubwa:NO_KAMA", 'Tashbihi hutumia "kama": mkubwa kama ndovu.'),
   W7("TASH", "Ni tashbihi ipi?", "mdogo kama sisimizi", "Yeye_ni_sisimizi:NO_KAMA Yeye_ni_mdogo_sana:NO_KAMA Sisimizi_hupanda_mti:NO_KAMA", 'Tashbihi hutumia "kama": mdogo kama sisimizi.')
 ];
-var FAMILIES75 = [
+var FAMILIES76 = [
   // ---- MAAMKUZI NA MAAGANO
   ...trio6("maamkuzi", "KUSIKI.T2_MAAMKUZI_NA_MAAGANO.MAAMKUZI", MAA, { stem: "Chagua salamu au agano linalofaa.", gapStem: "Andika salamu au agano:", oc: ["a", "b", "b"], topic: "kuhusu maamkuzi na maagano", hints: H19("Fikiria nani anasalimiwa na ni wakati gani.", "Salamu na jibu lake ni maneno tofauti.") }),
   // ---- VITENDAWILI
@@ -59436,7 +60241,7 @@ var BARUA_FORM = [
   W8("BAR", "Ni salamu ipi inafaa barua ya kirafiki?", "Mpendwa Baraka,", "Kwa_Mwalimu_Mkuu,:GREETING Bwana_Mheshimiwa,:GREETING Waheshimiwa,:GREETING", 'Barua ya kirafiki huanza kwa "Mpendwa" na jina la rafiki.'),
   W8("BAR", "Ni hitimisho lipi linafaa barua ya kirafiki?", "Rafiki yako mpendwa, Neema", "Wako_mtiifu_daima,_Neema:GREETING Mheshimiwa_mkuu,_Neema:GREETING Kwa_heshima_kubwa,_Neema:GREETING", 'Barua ya kirafiki huisha kwa "Rafiki yako".')
 ];
-var FAMILIES76 = [
+var FAMILIES77 = [
   // ---- AINA ZA INSHA
   ...one("insha.kifungu", "KUANDI.T1_INSHA_YA_WASIFU.AINA_ZA_INSHA", INSHA_TEXT, { stem: "Chagua aina ya insha.", oc: "a", tag: "kifungu", rung: 2, hints: H20("Je, kifungu kinamwelezea mtu, kinasimulia matukio, au kinaeleza jinsi ya kufanya kitu?", "Wasifu humwelezea mtu, masimulizi husimulia kilichotokea, na maelezo hueleza jambo.") }),
   ...trio6("insha.maana", "KUANDI.T1_INSHA_YA_WASIFU.AINA_ZA_INSHA", INSHA_DEF, { stem: "Chagua aina sahihi ya insha.", gapStem: "Andika aina ya insha:", oc: ["a", "a", "a"], thinOk: true, topic: "kuhusu aina za insha", hints: H20("Fikiria insha hiyo inafanya nini: kumwelezea mtu, kusimulia matukio, au kueleza jinsi ya kufanya kitu.", "Aina tatu za insha zina majina tofauti.") }),
@@ -59463,7 +60268,7 @@ var kiswahili_g4_default = {
   icon: "book",
   description: "Grade 4 Kiswahili from the CBC design",
   map: { skills: SKILLS25, substrands: SUBSTRANDS24, outcomes: OUTCOMES24, misFeedback: MIS_FEEDBACK24 },
-  families: [...FAMILIES71, ...FAMILIES72, ...FAMILIES73, ...FAMILIES74, ...FAMILIES75, ...FAMILIES76],
+  families: [...FAMILIES72, ...FAMILIES73, ...FAMILIES74, ...FAMILIES75, ...FAMILIES76, ...FAMILIES77],
   // add each family file you write: [...A, ...B]
   familyFiles: ["kiswahili_g4_a.js", "kiswahili_g4_b.js", "kiswahili_g4_c.js", "kiswahili_g4_d.js", "kiswahili_g4_e.js", "kiswahili_g4_f.js"],
   // the same files by name (a phone build drops them while nothing is signed)
@@ -61616,7 +62421,7 @@ var UAK2 = [
   ["", "Je, umefanya kazi yako ya nyumbani?", ["Je umefanya kazi yako ya nyumbani?", "M_UAK_NO_COMMA"], ["Je, umefanya kazi yako ya nyumbani.", "M_UAK_WRONG_MARK"], ["je, umefanya kazi yako ya nyumbani?", "M_UAK_NO_CAPITAL"], 'Weka koma baada ya "Je", na umalize swali kwa kiulizi.'],
   ["", "Wanafunzi walinunua daftari, kalamu na rula.", ["Wanafunzi walinunua daftari kalamu na rula.", "M_UAK_NO_COMMA"], ["wanafunzi walinunua daftari, kalamu na rula.", "M_UAK_NO_CAPITAL"], ["Wanafunzi walinunua daftari, kalamu na rula?", "M_UAK_WRONG_MARK"], "Orodha ya vitu hutenganishwa kwa koma."]
 ];
-var FAMILIES77 = [
+var FAMILIES78 = [
   ...trio7("nomino.pekee", "SARUFI.T1_AINA_ZA_NOMINO.PEKEE", PEKEE, { stem: "Chagua nomino ya pekee inayokamilisha sentensi.", gapStem: "Andika nomino ya pekee inayokosekana:", topic: "kuhusu nomino za pekee", hints: H21("Nomino ya pekee ni jina la mtu mmoja au mahali pamoja.", "Kazi na vyeo, kama mwalimu au daktari, si nomino za pekee.") }),
   ...duo5("nomino.pekee.sentensi", "SARUFI.T1_AINA_ZA_NOMINO.PEKEE", PEKEE_ID, { stem: "Chagua nomino ya pekee.", tag: "tafuta", oc: ["a", "a"], topic: "kuhusu nomino za pekee", hints: H21("Tafuta jina la mtu mmoja au mahali pamoja.", "Neno la kwanza la sentensi huanza kwa herufi kubwa kila wakati, hata likiwa nomino ya kawaida.") }),
   ...trio7("nomino.kawaida", "SARUFI.T1_AINA_ZA_NOMINO_2.KAWAIDA", KAWAIDA, { stem: "Chagua nomino ya kawaida inayokamilisha sentensi.", gapStem: "Andika nomino ya kawaida inayokosekana:", topic: "kuhusu nomino za kawaida", hints: H21("Nomino ya kawaida ni jina la jumla la aina ya kitu, mtu au mahali.", "Majina ya watu na miji si nomino za kawaida. Vitenzi na vivumishi pia si nomino.") }),
@@ -61706,7 +62511,7 @@ var KUKU_PL = [
   ['Wingi wa "kuimba" ni ___.', "kuimba", ["makuimba", "M_KUKU_PLURAL"], ["vikuimba", "M_KUKU_PLURAL"], ["waimba", "M_KUKU_PLURAL"], "Kitenzi-jina hakina wingi tofauti: kuimba hubaki kuimba."],
   ['Wingi wa "kula" ni ___.', "kula", ["makula", "M_KUKU_PLURAL"], ["vikula", "M_KUKU_PLURAL"], ["wala", "M_KUKU_PLURAL"], "Kitenzi-jina hakina wingi tofauti: kula hubaki kula."]
 ];
-var FAMILIES78 = [
+var FAMILIES79 = [
   ...trio7("ngeli.izi", "SARUFI.T4_NGELI_YA_I_ZI.I_ZI", IZI, { stem: PFX, gapStem: PFX_GAP, oc: ["a", "b", "a"], topic: "kuhusu ngeli ya I-ZI", hints: H22("Nyumba, meza, barabara, taa na simu ni za ngeli ya I-ZI.", "Umoja hutumia i-, na wingi hutumia zi-.") }),
   ...duo5("ngeli.izi.wingi", "SARUFI.T4_NGELI_YA_I_ZI.I_ZI", IZI_PL, { stem: "Chagua sentensi sahihi ya wingi.", oc: ["c", "c"], tag: "wingi", topic: "kuhusu wingi wa sentensi za I-ZI", hints: H22("Nomino za I-ZI hazibadiliki katika wingi.", "Kitenzi kinabadilika: i- inakuwa zi-.") }),
   ...trio7("ngeli.uzi", "SARUFI.T5_NGELI_YA_U_ZI.U_ZI", UZI, { stem: PFX, gapStem: PFX_GAP, oc: ["a", "a", "a"], topic: "kuhusu ngeli ya U-ZI", hints: H22("Ukuta, wimbo, ubao, ufunguo na uso ni za ngeli ya U-ZI.", "Umoja hutumia u-, na wingi hutumia zi-.") }),
@@ -61799,7 +62604,7 @@ var UKN = [
   ["Ndoo kubwa sana huitwa ___.", "jindoo", ["jinndoo", "M_UKN_KEEP_N"], ["kindoo", "M_UKN_SWAP"]],
   ["Ndoo ndogo huitwa ___.", "kindoo", ["kinndoo", "M_UKN_KEEP_N"], ["jindoo", "M_UKN_SWAP"]]
 ].map((it) => [...it, `${it[1]} ndilo umbo sahihi: ki- huonyesha udogo, na ukubwa huonyeshwa na ji- au umbo la pekee kama jumba.`]);
-var FAMILIES79 = [
+var FAMILIES80 = [
   ...one2("mnyambuliko.tambua", "SARUFI.T8_MNYAMBULIKO_WA_VITEN.MNYAMBULIKO", MNY_ID, { stem: "Chagua kitenzi sahihi.", oc: "a", tag: "tambua", hints: H23("Tazama mwisho wa kitenzi: -ika, -iwa au -ana.", "-ika: kinaweza kutendwa. -iwa: kimefanyiwa mtu. -ana: wanafanyiana.") }),
   ...trio7("mnyambuliko.tumia", "SARUFI.T8_MNYAMBULIKO_WA_VITEN.MNYAMBULIKO", MNY2, { stem: "Chagua kitenzi kinachokamilisha sentensi.", gapStem: "Andika kitenzi kinachokosekana:", oc: ["b", "b", "b"], tag: "tumia", topic: "kuhusu hali za vitenzi", hints: H23("Fikiria nani anafanya kitendo na kwa ajili ya nani.", "Watu wanapofanyiana kitendo, tumia -ana.") }),
   ...trio7("vinyume.tambua", "SARUFI.T9_VINYUME_VYA_VITENZI.VINYUME", VIN, { stem: "Chagua kinyume sahihi.", gapStem: "Andika kinyume kinachokosekana:", oc: ["a", "a", "a"], topic: "kuhusu vinyume vya vitenzi", hints: H23("Kinyume ni neno moja lenye maana ya kutengua kitendo.", '"Kutofanya" si kinyume cha "kufanya".') }),
@@ -61812,7 +62617,7 @@ var FAMILIES79 = [
 
 // src/ai-tutor/content/families/kiswahili_g5_d.js
 var H24 = (a, b) => [a, b];
-var PASSAGES7 = [
+var PASSAGES8 = [
   {
     id: "uji",
     title: "Uji wa Bibi",
@@ -61905,9 +62710,9 @@ var PASSAGES7 = [
     ]
   }
 ];
-var byId = Object.fromEntries(PASSAGES7.map((p) => [p.id, p]));
+var byId = Object.fromEntries(PASSAGES8.map((p) => [p.id, p]));
 var showP7 = (p) => ({ title: p.title, text: p.text });
-var flat2 = (key, kind) => PASSAGES7.filter((p) => (kind ? p.kind === kind : true) && p[key]).flatMap((p) => [...p[key], ...p[`${key}2`] || []].map((e) => ({ p, e })));
+var flat2 = (key, kind) => PASSAGES8.filter((p) => (kind ? p.kind === kind : true) && p[key]).flatMap((p) => [...p[key], ...p[`${key}2`] || []].map((e) => ({ p, e })));
 var norm8 = (key, e) => {
   const a = [...e];
   const flags = a.length && !Array.isArray(a[a.length - 1]) && typeof a[a.length - 1] === "object" ? a.pop() : {};
@@ -61928,7 +62733,7 @@ var passType6 = (key, { hints, kind }) => (cskill) => {
   return { passage: showP7(p), question: n.q, answer: shown, accepts: alt, wrong: n.wrongs.map(([t, code]) => [t, feedbackOf7(cskill, code), code]), instruction: "Soma kifungu. Kisha andika jibu fupi.", hints: [...hints, `Jibu linaanza na herufi "${shown[0]}".`], steps: [n.because, `Jibu ni "${shown}".`], chk: (a) => [shown, ...alt].includes(String(a)) };
 };
 var orderGen8 = (cskill) => {
-  const p = pick(PASSAGES7.filter((x) => x.order && x.kind === "hadithi"));
+  const p = pick(PASSAGES8.filter((x) => x.order && x.kind === "hadithi"));
   const ev = p.order;
   let show;
   do {
@@ -62017,7 +62822,7 @@ var C_UFA2 = "KUSOMA.T1_KUSOMA_KWA_UFAHAMU.UFAHAMU_HADITHI";
 var C_IGI2 = "KUSOMA.T8_KUSOMA_KWA_UFAHAMU.IGIZO";
 var C_SHA2 = "KUSOMA.T5_KUSOMA_KWA_UFAHAMU.SHAIRI";
 var C_KAM2 = "KUSOMA.T2_KUSOMA_KWA_KINA.KAMUSI";
-var FAMILIES80 = [
+var FAMILIES81 = [
   // ---- MSAMIATI
   kw2({ id: "kiswahili5.msamiati.maana", cs: C_MSA2, oc: "a", kind: "choose-meaning", form: "word", rung: 2, gen: passChoose6("vocab", { kind: "hadithi", hints: H24("Soma sentensi lenye neno hilo, na sentensi zilizo karibu nalo.", "Jaribu kila maana mahali pa neno. Ipi inafaa?") }) }),
   ...trio7("msamiati.tumia", C_MSA2, MSA_GAP2, { stem: "Chagua neno linalokamilisha sentensi.", gapStem: "Andika neno linalokosekana:", oc: ["b", "b", "b"], tag: "tumia", topic: "kuhusu msamiati", hints: H24("Fikiria maana ya kila neno kabla ya kuchagua.", "Neno linaloonekana kama jingine si lazima liwe na maana sawa nalo.") }),
@@ -62133,7 +62938,7 @@ var HES = [
   ["Mama wa baba yako anaitwa ___.", "bibi", ["shangazi", "M_HES_SIDE"], ["mama mkubwa", "M_HES_SIDE"], ["binamu", "M_HES_COUSIN"], "Mama wa baba (na wa mama) ni bibi."],
   ["Baba wa baba yako anaitwa ___.", "babu", ["mjomba", "M_HES_SIDE"], ["baba mkubwa", "M_HES_SIDE"], ["binamu", "M_HES_COUSIN"], "Baba wa baba (na wa mama) ni babu."]
 ];
-var FAMILIES81 = [
+var FAMILIES82 = [
   // ---- METHALI
   ...trio7("methali.kamilisha", "KUSIKI.T5_METHALI.METHALI", METHALI_END, { stem: "Chagua neno linalokamilisha methali.", gapStem: "Andika neno linalokamilisha methali:", oc: ["a", "a", "a"], topic: "kuhusu methali za bidii", hints: H25("Sema methali yote tangu mwanzo.", "Methali haibadiliki: kila neno liko mahali pake.") }),
   ...one2("methali.maana", "KUSIKI.T5_METHALI.METHALI", METHALI_MEANING, { stem: "Chagua maana sahihi.", oc: "b", tag: "maana", rung: 2, hints: H25("Methali ina maana ya pili, si maneno yake peke yake.", "Jiulize methali inafundisha nini kuhusu maisha.") }),
@@ -62209,7 +63014,7 @@ var DIG_STATEMENT2 = [
   ["", "Ninamwambia mzazi mtu asiyejulikana akiniomba anwani yangu.", ["Ninampa anwani yangu mtu nisiyemjua.", "M_DIG_SHARE"], ["Ninamtumia picha zangu mtu nisiyemjua.", "M_DIG_SHARE"], "Maelezo binafsi si ya kumpa mtu usiyemjua."],
   ["", "Ninauliza mwalimu kabla ya kupakua faili ya mtandaoni.", ["Ninapakua faili yoyote ninayoiona.", "M_DIG_LINK"], ["Ninafungua faili kutoka kwa mtu nisiyemjua.", "M_DIG_LINK"], "Faili zisizojulikana zinaweza kuwa hatari. Uliza mtu mzima kwanza."]
 ];
-var FAMILIES82 = [
+var FAMILIES83 = [
   // ---- AINA ZA INSHA
   ...one2("insha.kifungu", "KUANDI.T1_INSHA_YA_WASIFU.AINA_ZA_INSHA", INSHA_TEXT2, { stem: "Chagua aina ya insha.", oc: "a", tag: "kifungu", rung: 2, hints: H26("Je, kifungu kinamwelezea mtu, kinasimulia matukio, au kinaeleza jinsi ya kufanya kitu?", "Wasifu humwelezea mtu, masimulizi husimulia kilichotokea, na maelezo hueleza jambo.") }),
   ...trio7("insha.maana", "KUANDI.T1_INSHA_YA_WASIFU.AINA_ZA_INSHA", INSHA_DEF2, { stem: "Chagua aina sahihi ya insha.", gapStem: "Andika aina ya insha:", oc: ["a", "a", "a"], thinOk: true, topic: "kuhusu aina za insha", hints: H26("Fikiria insha hiyo inafanya nini: kumwelezea mtu, kusimulia matukio, au kueleza jinsi ya kufanya kitu.", "Aina tatu za insha zina majina tofauti.") }),
@@ -62234,7 +63039,7 @@ var kiswahili_g5_default = {
   icon: "book",
   description: "Grade 5 Kiswahili from the CBC design",
   map: { skills: SKILLS26, substrands: SUBSTRANDS25, outcomes: OUTCOMES25, misFeedback: MIS_FEEDBACK25 },
-  families: [...FAMILIES77, ...FAMILIES78, ...FAMILIES79, ...FAMILIES80, ...FAMILIES81, ...FAMILIES82],
+  families: [...FAMILIES78, ...FAMILIES79, ...FAMILIES80, ...FAMILIES81, ...FAMILIES82, ...FAMILIES83],
   // add each family file you write: [...A, ...B]
   familyFiles: ["kiswahili_g5_a.js", "kiswahili_g5_b.js", "kiswahili_g5_c.js", "kiswahili_g5_d.js", "kiswahili_g5_e.js", "kiswahili_g5_f.js"],
   // the same files by name (a phone build drops them while nothing is signed)
@@ -64494,7 +65299,7 @@ var UAK3 = [
   ["", "Wanafunzi wa ng'ambo walitutembelea.", ["Wanafunzi wa ngambo walitutembelea.", "M_UAK6_RITIFAA"], ["Wanafunzi wa ng-ambo walitutembelea.", "M_UAK6_RITIFAA"], "Ritifaa (') huandikwa katika ng'ambo kama katika ng'ombe."],
   ["", "Vifaa vinavyohitajika: kalamu, rula na kifutio.", ["Vifaa vinavyohitajika, kalamu, rula na kifutio.", "M_UAK6_KOLONI"], ["Vifaa vinavyohitajika. kalamu, rula na kifutio.", "M_UAK6_KOLONI"], "Koloni (:) hutangulia orodha ya vitu."]
 ];
-var FAMILIES83 = [
+var FAMILIES84 = [
   ...trio8("sifa", "SARUFI.T1_VIVUMISHI_VYA_SIFA.SIFA", SIFA, { stem: "Chagua kivumishi cha sifa kinachofaa.", gapStem: "Andika kivumishi cha sifa kinachokosekana:", topic: "kuhusu vivumishi vya sifa", hints: H27("Kivumishi cha sifa hubadilika kulingana na ngeli ya nomino.", "Tazama kama nomino ni moja au wengi, kisha ngeli yake.") }),
   ...trio8("viashiria", "SARUFI.T1_VIVUMISHI_VIASHIRIA.VIASHIRIA", VIASHIRIA, { stem: "Chagua kivumishi kiashiria kinachofaa.", gapStem: "Andika kivumishi kiashiria kinachokosekana:", topic: "kuhusu vivumishi viashiria", hints: H27("Kivumishi kiashiria hufuata nomino na huonyesha iko karibu au iko mbali.", "Tazama ngeli na idadi ya nomino.") }),
   ...trio8("vimilikishi", "SARUFI.T1_VIVUMISHI_VIMILIKISH.VIMILIKISHI", VIMIL, { stem: "Chagua kivumishi kimilikishi kinachofaa.", gapStem: "Andika kivumishi kimilikishi kinachokosekana:", topic: "kuhusu vivumishi vimilikishi", hints: H27("Kivumishi kimilikishi hufuata ngeli ya kitu kinachomilikiwa.", "Mwenye kitu (-angu, -ako, -ake, -etu, -enu, -ao) hubadilisha mwisho, na kitu hubadilisha mwanzo.") }),
@@ -64582,7 +65387,7 @@ var PKM_S = [
   ["", "Huko kuna joto jingi.", ["Huko pana joto jingi.", "M_PKM_MIX"], ["Huko una joto jingi.", "M_PKM_CLASS"], "Huko ni mahali pa mbali, kwa hiyo ku-: huko kuna joto jingi."],
   ["", "Humu mna harufu mbaya.", ["Humu pana harufu mbaya.", "M_PKM_MIX"], ["Humu una harufu mbaya.", "M_PKM_CLASS"], "Humu ni ndani, kwa hiyo mu- (m-): humu mna harufu mbaya."]
 ];
-var FAMILIES84 = [
+var FAMILIES85 = [
   ...trio8("ngeli.yaya", "SARUFI.T4_NGELI_YA_YA_YA.YA_YA", YAYA, { stem: PFX2, gapStem: PFX_GAP2, oc: ["a", "c", "c"], topic: "kuhusu ngeli ya YA-YA", hints: H28("Maji, maziwa, mafuta, mate na machozi hupatana na ya-.", "Nomino za YA-YA huanza na ma- na hazina umoja.") }),
   ...one3("ngeli.yaya.tambua", "SARUFI.T4_NGELI_YA_YA_YA.YA_YA", YAYA_ID, { stem: "Chagua nomino ya ngeli ya YA-YA.", oc: "b", tag: "tambua", hints: H28("Nomino za YA-YA hupatana na ya-: maji yamemwagika.", "Hazina umoja, kama maji na maziwa.") }),
   ...trio8("ngeli.uu", "SARUFI.T5_NGELI_YA_U_U.U_U", UU, { stem: PFX2, gapStem: PFX_GAP2, oc: ["a", "c", "c"], topic: "kuhusu ngeli ya U-U", hints: H28("Uji, unga, ugali, usingizi na uchafu hupatana na u-.", "Nomino za U-U hazina wingi, kwa hiyo hazitumii ya-.") }),
@@ -64657,7 +65462,7 @@ var UKUB_PL = [
   ['Wingi wa "jisu" ni ___.', "majisu", ["vijisu", "M_UKUB_SWAP"], ["visu", "M_UKUB_NO_CHANGE"], ["jisu", "M_UKUB_SINGULAR"], "Ukubwa huchukua ma- katika wingi: jisu, majisu."],
   ['Wingi wa "kijibanda" ni ___.', "vijibanda", ["majibanda", "M_UKUB_SWAP"], ["vibanda", "M_UKUB_NO_CHANGE"], ["kijibanda", "M_UKUB_SINGULAR"], "Udogo huchukua vi- katika wingi: kijibanda, vijibanda."]
 ];
-var FAMILIES85 = [
+var FAMILIES86 = [
   ...trio8("mnyambuliko", "SARUFI.T8_MNYAMBULIKO_WA.MNYAMBULIKO", MNY3, { stem: "Chagua kitenzi kinachofaa.", gapStem: "Andika kitenzi kinachokosekana:", topic: "kuhusu kutendeana, kutendesha na kutendua", hints: H29("Kutendeana ni kila mmoja kumtendea mwenzake, kutendesha ni kumfanya mtu atende, kutendua ni kufanya kinyume.", "Soma maelezo yaliyo kwenye mabano.") }),
   ...trio8("vinyume.vivumishi", "SARUFI.T9_VINYUME_VYA_VIVUMISH.VINYUME_VIVUMISHI", VINY, { stem: "Chagua kinyume cha kivumishi.", gapStem: "Andika kinyume kinachokosekana:", topic: "kuhusu vinyume vya vivumishi", hints: H29("Kinyume ni neno lenye maana ya upande wa pili.", "Kinyume lazima kipatane na nomino iliyo mbele yake.") }),
   ...trio8("masharti", "SARUFI.T10_HALI_YA_MASHARTI_NGE.MASHARTI", MASH, { stem: "Chagua kitenzi cha masharti kinachofaa.", gapStem: "Andika kitenzi cha masharti kinachokosekana:", topic: "kuhusu hali ya masharti", hints: H29("Hali ya masharti hutumia -ki-, -sipo- au -nge-.", "Kitenzi cha masharti hakina -li-, -na- wala -ta-.") }),
@@ -64669,7 +65474,7 @@ var FAMILIES85 = [
 
 // src/ai-tutor/content/families/kiswahili_g6_d.js
 var H30 = (a, b) => [a, b];
-var PASSAGES8 = [
+var PASSAGES9 = [
   {
     id: "soko",
     title: "Siku ya Soko Kijijini",
@@ -64784,9 +65589,9 @@ var PASSAGES8 = [
     ]
   }
 ];
-var byId2 = Object.fromEntries(PASSAGES8.map((p) => [p.id, p]));
+var byId2 = Object.fromEntries(PASSAGES9.map((p) => [p.id, p]));
 var showP8 = (p) => ({ title: p.title, text: p.text });
-var flat3 = (key, kind) => PASSAGES8.filter((p) => (kind ? p.kind === kind : true) && p[key]).flatMap((p) => [...p[key], ...p[`${key}2`] || []].map((e) => ({ p, e })));
+var flat3 = (key, kind) => PASSAGES9.filter((p) => (kind ? p.kind === kind : true) && p[key]).flatMap((p) => [...p[key], ...p[`${key}2`] || []].map((e) => ({ p, e })));
 var norm9 = (key, e) => {
   const a = [...e];
   const flags = a.length && !Array.isArray(a[a.length - 1]) && typeof a[a.length - 1] === "object" ? a.pop() : {};
@@ -64807,7 +65612,7 @@ var passType7 = (key, { hints, kind }) => (cskill) => {
   return { passage: showP8(p), question: n.q, answer: shown, accepts: alt, wrong: n.wrongs.map(([t, code]) => [t, feedbackOf8(cskill, code), code]), instruction: "Soma kifungu. Kisha andika jibu fupi.", hints: [...hints, `Jibu linaanza na herufi "${shown[0]}".`], steps: [n.because, `Jibu ni "${shown}".`], chk: (a) => [shown, ...alt].includes(String(a)) };
 };
 var orderGen9 = (cskill) => {
-  const p = pick(PASSAGES8.filter((x) => x.order && x.kind === "hadithi"));
+  const p = pick(PASSAGES9.filter((x) => x.order && x.kind === "hadithi"));
   const ev = p.order;
   let show;
   do {
@@ -64905,7 +65710,7 @@ var C_SHA3 = "KUSOMA.T5_KUSOMA_KWA_UFAHAMU.SHAIRI_AINA";
 var C_KAM3 = "KUSOMA.T2_KUSOMA_KWA_KINA.KAMUSI";
 var C_UFS2 = "KUSOMA.T3_KUSOMA_KWA_UFASAHA.UFASAHA_VIPENGELE";
 var C_DIG2 = "KUSOMA.T4_KUSOMA_KWA_MAPANA.USALAMA_DIJITALI";
-var FAMILIES86 = [
+var FAMILIES87 = [
   // ---- MSAMIATI
   kw3({ id: "kiswahili6.msamiati.maana", cs: C_MSA3, oc: "a", kind: "choose-meaning", form: "word", rung: 2, gen: passChoose7("vocab", { kind: "hadithi", hints: H30("Soma sentensi lenye neno hilo, na sentensi zilizo karibu nalo.", "Jaribu kila maana mahali pa neno. Ipi inafaa?") }) }),
   ...trio8("msamiati.tumia", C_MSA3, MSA_GAP3, { stem: "Chagua neno linalokamilisha sentensi.", gapStem: "Andika neno linalokosekana:", oc: ["b", "b", "b"], tag: "tumia", topic: "kuhusu msamiati", hints: H30("Fikiria maana ya kila neno kabla ya kuchagua.", "Neno linaloonekana kama jingine si lazima liwe na maana sawa nalo.") }),
@@ -65055,7 +65860,7 @@ var MUK_S = [
   ["Unamwandikia mkuu wa wilaya. Chagua sentensi inayofaa.", "Ninaomba kuwasilisha ombi langu kwa heshima.", ["Habari yako msee, nataka kukuomba kitu.", "M_MUK_INFORMAL"], ["Niaje boss, nisaidie.", "M_MUK_INFORMAL"], "Kwa kiongozi tunatumia lugha rasmi."],
   ["Unamwambia dada yako nyumbani. Chagua sentensi inayofaa.", "Dada, njoo unisaidie kuosha vyombo.", ["Dada mheshimiwa, tunaomba usaidizi wa kuosha vyombo.", "M_MUK_FORMAL_FRIEND"], ["Naomba unipatie msaada kwa mujibu wa utaratibu.", "M_MUK_FORMAL_FRIEND"], "Kwa dada nyumbani tunatumia lugha ya kawaida."]
 ];
-var FAMILIES87 = [
+var FAMILIES88 = [
   ...trio8("maamkuzi", "KUSIKI.T2_MAAMKUZI_NA_MAAGANO.MAAMKUZI", MAAM, { stem: "Chagua salamu au kuaga kunakofaa.", gapStem: "Andika salamu au kuaga kunakofaa:", topic: "kuhusu maamkuzi na maagano", hints: H31("Salamu na kuaga hutegemea wakati na idadi ya watu.", "Jiulize unakutana na mtu au unaondoka, na ni mmoja au wengi.") }),
   ...trio8("heshima", "KUSIKI.T4_HESHIMA_ADABU_NA_VYE.HESHIMA", HESH, { stem: "Chagua neno la heshima linalofaa.", gapStem: "Andika neno la heshima linalofaa:", oc: ["a", "b", "b"], topic: "kuhusu maneno ya heshima", hints: H31("Kila neno la heshima lina kazi yake: kuomba, kushukuru, kuomba msamaha, kufariji au kukaribisha.", "Fikiria hali ya sentensi kabla ya kuchagua.") }),
   ...duo6("heshima.sentensi", "KUSIKI.T4_HESHIMA_ADABU_NA_VYE.HESHIMA", HESH_S, { stem: "Chagua sentensi yenye heshima zaidi.", tag: "sentensi", oc: ["a", "b"], topic: "kuhusu maneno ya heshima", hints: H31("Maneno kama tafadhali, naomba, samahani na asante huonyesha heshima.", "Amri bila heshima si ya adabu.") }),
@@ -65128,7 +65933,7 @@ var STYLE = [
   ["Kuweka kazi yako salama katika tarakilishi huitwa ___.", "kuhifadhi", ["kuchapisha", "M_TAR6_ICON"], ["kufuta", "M_TAR6_ICON"], ["kufunga", "M_TAR6_ICON"], "Kuhifadhi ni kuweka kazi salama ili isipotee."],
   ["Kutoa kazi kwenye karatasi kwa kichapishi huitwa ___.", "kuchapisha", ["kuhifadhi", "M_TAR6_ICON"], ["kufuta", "M_TAR6_ICON"], ["kufunga", "M_TAR6_ICON"], "Kuchapisha ni kutoa nakala ya kazi kwenye karatasi."]
 ];
-var FAMILIES88 = [
+var FAMILIES89 = [
   ...one3("insha.kifungu", "KUANDI.T5_INSHA_ZA_MAELEZO.AINA_ZA_INSHA", INSHA_TEXT3, { stem: "Chagua aina ya insha.", oc: "a", tag: "kifungu", rung: 2, hints: H32("Je, kifungu kinamwelezea mtu, kinasimulia matukio au kinaeleza jinsi ya kufanya kitu?", "Wasifu huelezea, masimulizi husimulia, maelezo hueleza hatua.") }),
   ...trio8("insha.maana", "KUANDI.T5_INSHA_ZA_MAELEZO.AINA_ZA_INSHA", INSHA_DEF3, { stem: "Chagua aina sahihi ya insha.", gapStem: "Andika aina ya insha:", oc: ["a", "a", "a"], thinOk: true, topic: "kuhusu aina za insha", hints: H32("Kila aina ya insha ina kazi yake: kumwelezea mtu, kusimulia matukio au kueleza hatua.", "Soma ufafanuzi kwa makini.") }),
   ...trio8("insha.muundo", "KUANDI.T6_INSHA_YA_WASIFU.MUUNDO_WASIFU", MUUNDO, { stem: "Chagua sehemu sahihi ya insha.", gapStem: "Andika sehemu ya insha:", oc: ["a", "a", "a"], topic: "kuhusu muundo wa insha", hints: H32("Insha ina sehemu nne, na kila moja ina nafasi yake.", "Fikiria kama sehemu hiyo iko juu, mwanzoni, katikati au mwishoni.") }),
@@ -65149,7 +65954,7 @@ var kiswahili_g6_default = {
   icon: "book",
   description: "Grade 6 Kiswahili from the CBC design",
   map: { skills: SKILLS27, substrands: SUBSTRANDS26, outcomes: OUTCOMES26, misFeedback: MIS_FEEDBACK26 },
-  families: [...FAMILIES83, ...FAMILIES84, ...FAMILIES85, ...FAMILIES86, ...FAMILIES87, ...FAMILIES88],
+  families: [...FAMILIES84, ...FAMILIES85, ...FAMILIES86, ...FAMILIES87, ...FAMILIES88, ...FAMILIES89],
   // add each family file you write: [...A, ...B]
   familyFiles: ["kiswahili_g6_a.js", "kiswahili_g6_b.js", "kiswahili_g6_c.js", "kiswahili_g6_d.js", "kiswahili_g6_e.js", "kiswahili_g6_f.js"],
   // the same files by name (a phone build drops them while nothing is signed)
@@ -67266,7 +68071,7 @@ var S14 = (tag, sub, skill2, codes, h, direct, story, spots, oc) => {
 };
 
 // src/ai-tutor/content/families/kiswahili_g7_a.js
-var FAMILIES89 = [
+var FAMILIES90 = [
   ...S14("np", "SARUFI.T1_AINA_ZA_NOMINO.", "NOMINO_PEKEE", ["NP_KAWAIDA_KUBWA", "NP_PEKEE_NDOGO", "NP_JINA_JUMLA"], ["Nomino ya pekee ni jina mahususi.", "Nomino ya pekee huanza kwa herufi kubwa; ya kawaida ni jina la jumla."], [
     ["Ni nomino ipi ni ya pekee?", "Kisumu", "mji", "ziwa", "shule"],
     ["Ni nomino ipi ni ya kawaida?", "kijiji", "Wanjiru", "Mombasa", "Kenya"],
@@ -67403,7 +68208,7 @@ var FAMILIES89 = [
 ];
 
 // src/ai-tutor/content/families/kiswahili_g7_b.js
-var FAMILIES90 = [
+var FAMILIES91 = [
   ...S14("ga", "SARUFI.T8_NGELI_NA_UPATANISHO_.", "NGELI_AWA_UI", ["GA_MTI_AWA", "GA_MTOTO_UI", "GA_UPATANISHO"], ["A-WA ni viumbe hai; U-I ni miti na vitu kama mlima.", "A-WA: a-, wa-. U-I: u-, i-."], [
     ["Mti ni wa ngeli gani?", "U-I", "A-WA", "KI-VI", "LI-YA"],
     ["Mtoto ni wa ngeli gani?", "A-WA", "U-I", "KI-VI", "LI-YA"],
@@ -67559,7 +68364,7 @@ var FAMILIES90 = [
 ];
 
 // src/ai-tutor/content/families/kiswahili_g7_c.js
-var FAMILIES91 = [
+var FAMILIES92 = [
   ...S14("hk", "KUANDI.T1_VIAKIFISHI.", "HERUFI_KUBWA", ["HK_JINA", "HK_KIKOMO", "HK_KATIKATI"], ["Herufi kubwa mwanzoni mwa sentensi na kwa majina ya pekee.", "Sentensi ya kawaida huisha kwa kikomo."], [
     ["Sentensi ya kawaida huisha kwa nini?", "kikomo", "kiulizi", "koma", "herufi kubwa"],
     ["Ni neno lipi linahitaji herufi kubwa katikati ya sentensi?", "Kisumu", "mji", "ziwa", "barabara"],
@@ -67686,7 +68491,7 @@ var kiswahili_g7_default = {
   icon: "book",
   description: "Grade 7 Kiswahili from the CBC design",
   map: { skills: SKILLS28, substrands: SUBSTRANDS27, outcomes: OUTCOMES27, misFeedback: MIS_FEEDBACK27 },
-  families: [...FAMILIES89, ...FAMILIES90, ...FAMILIES91],
+  families: [...FAMILIES90, ...FAMILIES91, ...FAMILIES92],
   // add each family file you write: [...A, ...B]
   familyFiles: ["kiswahili_g7_a.js", "kiswahili_g7_b.js", "kiswahili_g7_c.js"],
   // the same files by name (a phone build drops them while nothing is signed)
@@ -69700,7 +70505,7 @@ var S15 = (tag, sub, skill2, codes, h, direct, story, spots, oc) => {
 };
 
 // src/ai-tutor/content/families/kiswahili_g8_a.js
-var FAMILIES92 = [
+var FAMILIES93 = [
   ...S15("vn", "SARUFI.T1_VIWAKILISHI.", "VIW_NAFSI", ["VN_NAFSI", "VN_ONYESHI", "VN_IDADI"], ["Mimi, wewe, yeye, sisi, ninyi, wao ni viwakilishi vya nafsi.", "Huyu, huyo na yule huonyesha; wawili na watatu ni vya idadi."], [
     ["Ni kiwakilishi kipi cha nafsi ya kwanza wingi?", "sisi", "wao", "ninyi", "mimi"],
     ["Ni kiwakilishi kipi cha kuonyesha mtu aliye karibu?", "huyu", "yule", "wao", "ninyi"],
@@ -69913,7 +70718,7 @@ var FAMILIES92 = [
 ];
 
 // src/ai-tutor/content/families/kiswahili_g8_b.js
-var FAMILIES93 = [
+var FAMILIES94 = [
   ...S15("bh", "KUANDI.T2_BARUA_YA_KIRAFIKI.", "BARUA_SHUKRANI", ["BH_MAANA", "BH_SALAMU", "BH_MWANZO"], ["Barua ya shukrani huthamini wema.", "Barua huanza kwa anwani na tarehe."], [
     ["Barua ya shukrani huandikwa kwa nini?", "kuthamini wema", "kuomba kitu", "kuonya mtu", "kuamuru mtu"],
     ["Ni salamu ipi inafaa barua ya shukrani ya kirafiki?", "Mpendwa rafiki yangu", "Mkuu wa Shule", "Kwa Mkurugenzi", "Bwana Mkubwa"],
@@ -70116,7 +70921,7 @@ var kiswahili_g8_default = {
   icon: "book",
   description: "Grade 8 Kiswahili from the CBC design",
   map: { skills: SKILLS29, substrands: SUBSTRANDS28, outcomes: OUTCOMES28, misFeedback: MIS_FEEDBACK28 },
-  families: [...FAMILIES92, ...FAMILIES93],
+  families: [...FAMILIES93, ...FAMILIES94],
   // add each family file you write: [...A, ...B]
   familyFiles: ["kiswahili_g8_a.js", "kiswahili_g8_b.js"],
   // the same files by name (a phone build drops them while nothing is signed)
@@ -72195,7 +73000,7 @@ var S16 = (tag, sub, skill2, codes, h, direct, story, spots, oc) => {
 };
 
 // src/ai-tutor/content/families/kiswahili_g9_a.js
-var FAMILIES94 = [
+var FAMILIES95 = [
   ...S16("vm", "SARUFI.T1_VIHUSISHI.", "VIH_MAHALI", ["VM_MAHALI", "VM_WAKATI", "VM_SENTENSI"], ["Mbele ya, nyuma ya na juu ya ni vya mahali; kabla ya na baada ya ni vya wakati.", "Vihusishi hivi hufuatwa na ya."], [
     ["Ni kihusishi kipi cha mahali katika orodha hii?", "mbele ya", "baada ya", "kabla ya", "wakati wa"],
     ["Ni kihusishi kipi cha wakati katika orodha hii?", "kabla ya", "mbele ya", "nyuma ya", "juu ya"],
@@ -72370,7 +73175,7 @@ var FAMILIES94 = [
 ];
 
 // src/ai-tutor/content/families/kiswahili_g9_b.js
-var FAMILIES95 = [
+var FAMILIES96 = [
   ...S16("gu", "SARUFI.T8_NGELI_NA_UPATANISHO_.", "NGELI_UZI_YAYA", ["GU_UKUTA", "GU_KUTA", "GU_MAJI"], ["U-ZI: ukuta umeanguka, kuta zimeanguka. YA-YA: maji yamemwagika.", "Maji, mafuta na maziwa ni za YA-YA."], [
     ["Chagua sentensi sahihi kuhusu ukuta.", "Ukuta umeanguka.", "Ukuta yameanguka.", "Ukuta zimeanguka.", "Ukuta kimeanguka."],
     ["Chagua sentensi sahihi ya wingi kuhusu kuta.", "Kuta zimeanguka.", "Kuta umeanguka.", "Kuta limeanguka.", "Kuta kimeanguka."],
@@ -72630,7 +73435,7 @@ var kiswahili_g9_default = {
   icon: "book",
   description: "Grade 9 Kiswahili from the CBC design",
   map: { skills: SKILLS30, substrands: SUBSTRANDS29, outcomes: OUTCOMES29, misFeedback: MIS_FEEDBACK29 },
-  families: [...FAMILIES94, ...FAMILIES95],
+  families: [...FAMILIES95, ...FAMILIES96],
   // add each family file you write: [...A, ...B]
   familyFiles: ["kiswahili_g9_a.js", "kiswahili_g9_b.js"],
   // the same files by name (a phone build drops them while nothing is signed)
@@ -73725,7 +74530,7 @@ var CC = "FOUNDA.COMPUTER_CONCEPTS.";
 var DR6 = "COMMUN.INTRODUCTION_TO_DRAWING.";
 var SK = "COMMUN.FREE_HAND_SKETCHING.";
 var IC3 = "COMMUN.ICT_TOOLS_IN_COMMUNICATI.";
-var FAMILIES96 = [
+var FAMILIES97 = [
   // ---------------------------------------------------------------- PT_INTRO
   fam20("in.intro.direct", `${IN3}PT_INTRO`, "direct", 1, choose31([
     c14("Which strand of Pre-Technical Studies covers drawing and sketching?", "Communication", "Drawing and sketching are in the Communication strand.", ["M_PI_TOOLS_ONLY", "Tools and Production", "Materials for Production"], ["M_PI_SCHOOL_ONLY", "Entrepreneurship"]),
@@ -73998,7 +74803,7 @@ var ME3 = "MATERI.METALLIC_MATERIALS.";
 var NM = "MATERI.NON_METALLIC_MATERIALS.";
 var MT = "TOOLS_.MEASURING_AND_MARKING_OU.";
 var HW = "TOOLS_.COMPUTER_HARDWARE.";
-var FAMILIES97 = [
+var FAMILIES98 = [
   // ---------------------------------------------------------------- MAT_METAL_NONMETAL
   fam20("mi.sort.direct", `${MI}MAT_METAL_NONMETAL`, "direct", 1, choose31([
     c14("Which of these is a metal?", "Copper", "Copper, steel, aluminium and iron are metals.", ["M_MM_SHINY", "Glass", "A shiny plastic bottle"], ["M_MM_HARD_METAL", "Granite stone"]),
@@ -74308,7 +75113,7 @@ var totalCases = TOTAL.map(([n, items9, q, b, s]) => c14(
   ["M_FN_ONE_ITEM", sh2(s - b), sh2(s)],
   ["M_FN_SELL_PROFIT", sh2(q * s)]
 ));
-var FAMILIES98 = [
+var FAMILIES99 = [
   // ---------------------------------------------------------------- ENT_MEANING
   fam20("en.mea.direct", `${EN2}ENT_MEANING`, "direct", 1, choose31([
     c14("Who is an entrepreneur?", "Someone who starts a business", "An entrepreneur sees a need or chance and takes the risk of a business.", ["M_EM_ALL_WORKERS", "Anyone who has a job", "Anyone who works for a salary"], ["M_EM_RICH_ONLY", "Only a rich person"]),
@@ -74485,7 +75290,7 @@ var pretechnical_g7_default = {
   icon: "book",
   description: "Grade 7 Pre-Technical Studies from the CBC design",
   map: { skills: SKILLS31, substrands: SUBSTRANDS30, outcomes: OUTCOMES30, misFeedback: MIS_FEEDBACK30 },
-  families: [...FAMILIES96, ...FAMILIES97, ...FAMILIES98],
+  families: [...FAMILIES97, ...FAMILIES98, ...FAMILIES99],
   // add each family file you write: [...A, ...B]
   familyFiles: ["pretechnical_g7_a.js", "pretechnical_g7_b.js", "pretechnical_g7_c.js"],
   // the same files by name (a phone build drops them while nothing is signed)
@@ -75278,7 +76083,7 @@ var PG = "COMMUN.PLANE_GEOMETRY.";
 var DM = "COMMUN.DIMENSIONING.";
 var PS2 = "COMMUN.PLAIN_SCALE_DRAWING.";
 var VP = "COMMUN.VISUAL_PROGRAMMING.";
-var FAMILIES99 = [
+var FAMILIES100 = [
   ...S17("fc", FS2, "FIRE_CAUSES", ["FC_NATURE_ONLY", "FC_WIRING", "FC_FUEL"], ["Think of the fires that start in homes and schools.", "Most fires start from something people did or forgot to do."], [
     ["Which is a common cause of fires in homes?", "A candle or stove left burning unattended", "Only a bolt of lightning striking the house", "A switched-off lamp that is still plugged in", "A pot of water standing on a cold table"],
     ["Which can cause an electrical fire?", "Overloaded sockets or damaged wires", "A clean switch with a plastic cover", "A switched-off lamp in an empty room", "A new bulb that is lit in a bedroom"],
@@ -75480,7 +76285,7 @@ var BK2 = "ENTREP.BOOKKEEPING.";
 var IB = "ENTREP.INCOME_AND_BUDGETING.";
 var MK = "ENTREP.OF_GOODS_AND_SERVICES.";
 var DI = "ENTREP.DISTRIBUTION_OF_GOODS_AN.";
-var FAMILIES100 = [
+var FAMILIES101 = [
   ...S17("cm", CM3, "COMPOSITE", ["CM_SINGLE", "CM_PLYWOOD", "CM_USE"], ["A composite joins two or more materials.", "Think of what goes into the mixture."], [
     ["What is concrete made of?", "Cement, sand, ballast and water", "One material only, taken from the ground", "Thin layers of wood glued together", "Glass fibre and clay only"],
     ["How is plywood made?", "Thin layers of wood glued crosswise", "From one solid piece of cut wood", "By melting plastic and pouring it", "By baking clay in a hot kiln"],
@@ -75652,7 +76457,7 @@ var pretechnical_g8_default = {
   icon: "book",
   description: "Grade 8 Pre-Technical Studies from the CBC design",
   map: { skills: SKILLS32, substrands: SUBSTRANDS31, outcomes: OUTCOMES31, misFeedback: MIS_FEEDBACK31 },
-  families: [...FAMILIES99, ...FAMILIES100],
+  families: [...FAMILIES100, ...FAMILIES101],
   // add each family file you write: [...A, ...B]
   familyFiles: ["pretechnical_g8_a.js", "pretechnical_g8_b.js"],
   // the same files by name (a phone build drops them while nothing is signed)
@@ -76384,7 +77189,7 @@ var OB = "COMMUN.OBLIQUE_PROJECTION.";
 var VP2 = "COMMUN.VISUAL_PROGRAMMING.";
 var WD = "MATERI.WOOD.";
 var WS2 = "MATERI.HANDLING_WASTE_MATERIALS.";
-var FAMILIES101 = [
+var FAMILIES102 = [
   ...S18("rp", RP5, "RAISED_PLATFORMS", ["RP_SAFE", "RP_RISK", "RP_TYPE"], ["Work at height needs a trained adult and a helper.", "The main risk at height is falling."], [
     ["Who should work on a raised platform?", "A trained adult with a helper", "A learner working alone", "A child who likes climbing", "Anyone who is in a hurry"],
     ["Which is a risk of working at height?", "Falling", "Getting a cold", "Getting bored", "Getting thirsty"],
@@ -76565,7 +77370,7 @@ var PJ = "TOOLS_.PROJECT.";
 var FS3 = "ENTREP.FINANCIAL_SERVICES.";
 var GB = "ENTREP.GOVERNMENT_AND_BUSINESS.";
 var BP = "ENTREP.BUSINESS_PLAN.";
-var FAMILIES102 = [
+var FAMILIES103 = [
   ...S18("ht", HT, "HOLDING_TOOLS", ["HT_VICE", "HT_CLAMP", "HT_CARE"], ["A vice and a clamp hold the work still.", "Clean and oil tools after use."], [
     ["What does a bench vice do?", "Holds the work still", "Drives nails", "Cuts wood", "Measures length"],
     ["Which is a holding tool?", "G-clamp", "Hammer", "Saw", "Tape measure"],
@@ -76730,7 +77535,7 @@ var pretechnical_g9_default = {
   icon: "book",
   description: "Grade 9 Pre-Technical Studies from the CBC design",
   map: { skills: SKILLS33, substrands: SUBSTRANDS32, outcomes: OUTCOMES32, misFeedback: MIS_FEEDBACK32 },
-  families: [...FAMILIES101, ...FAMILIES102],
+  families: [...FAMILIES102, ...FAMILIES103],
   // add each family file you write: [...A, ...B]
   familyFiles: ["pretechnical_g9_a.js", "pretechnical_g9_b.js"],
   // the same files by name (a phone build drops them while nothing is signed)
@@ -77453,7 +78258,7 @@ var m17 = (code, ...texts) => texts.map((t) => [t, code]);
 var PL3 = "LIVING.PLANTS.";
 var AN5 = "LIVING.ANIMALS.";
 var DG = "LIVING.HUMAN_DIGESTIVE_SYSTEM.";
-var FAMILIES103 = [
+var FAMILIES104 = [
   // ---------------------------------------------------------------- PLANT_LIFE_CHARS
   fam23("pl.life.direct", `${PL3}PLANT_LIFE_CHARS`, "direct", 1, choose34([
     ["Which of these is a sign that a maize plant is alive?", "It grows taller each week", [...m17("M_PL_NOT_ALIVE", "It walks to a sunny place"), ...m17("M_PL_NO_WASTE", "It never loses anything"), ...m17("M_PL_NO_RESPOND", "It does not change at all")], "A growing plant is a living plant. Growth is one of the signs of life."],
@@ -77666,7 +78471,7 @@ var FAMILIES103 = [
 var PM4 = "MATTER.PROPERTIES_OF_MATTER.";
 var SW7 = "MATTER.MANAGEMENT_OF_SOLID_WAST.";
 var WC = "MATTER.WATER_CONSERVATION.";
-var FAMILIES104 = [
+var FAMILIES105 = [
   // ---------------------------------------------------------------- STATES_SORT
   fam23("pm.sort.direct", `${PM4}STATES_SORT`, "direct", 1, choose34([
     ["Is sand a solid, a liquid or a gas?", "A solid", [...m17("M_SS_POWDER_LIQUID", "A liquid, because it pours"), ...m17("M_SS_AIR_NOTHING", "A gas"), ...m17("M_SS_SOFT_NOT_SOLID", "None of them, it is too soft")], "Sand pours, but each grain is a small solid with its own shape."],
@@ -77909,7 +78714,7 @@ var FAMILIES104 = [
 var FF = "FORCE_.FORCE_AND_ITS_EFFECT.";
 var LT = "FORCE_.LIGHT.";
 var HT2 = "FORCE_.HEAT.";
-var FAMILIES105 = [
+var FAMILIES106 = [
   // ---------------------------------------------------------------- FORCE_TYPES
   fam23("ff.type.direct", `${FF}FORCE_TYPES`, "direct", 1, choose34([
     ["A girl opens a drawer by holding the handle and moving it towards her. Is this a push or a pull?", "A pull", [...m17("M_FT_PUSH_PULL_MIX", "A push", "Neither, it needs no force")], "Moving something towards you is a pull."],
@@ -78181,7 +78986,7 @@ var science_g4_default = {
   icon: "zap",
   description: "Grade 4 Science and Technology from the CBC design",
   map: { skills: SKILLS34, substrands: SUBSTRANDS33, outcomes: OUTCOMES33, misFeedback: MIS_FEEDBACK33 },
-  families: [...FAMILIES103, ...FAMILIES104, ...FAMILIES105],
+  families: [...FAMILIES104, ...FAMILIES105, ...FAMILIES106],
   // add each family file you write: [...A, ...B]
   familyFiles: ["science_g4_a.js", "science_g4_b.js", "science_g4_c.js"],
   // the same files by name (a phone build drops them while nothing is signed)
@@ -79063,7 +79868,7 @@ var { choose: choose35, typed: typed27, spot: spot35, sfam: sfam27 } = makeKit({
 var P10 = "LIVING.CLASSIFICATION_OF_PLANTS.";
 var V = "LIVING.VERTEBRATES.";
 var B4 = "LIVING.THE_HUMAN_BREATHING_SYST.";
-var FAMILIES106 = [
+var FAMILIES107 = [
   // ---------------------------------------------------------------- FLOWERING_OR_NOT
   sfam27({
     id: "sci5.plants.fl.which",
@@ -79645,7 +80450,7 @@ var FAMILIES106 = [
 // src/ai-tutor/content/families/sci_g5_matter.js
 var M2 = "MATTER.MIXTURES.";
 var W10 = "MATTER.WATER_POLLUTION.";
-var FAMILIES107 = [
+var FAMILIES108 = [
   // ---------------------------------------------------------------- MIXTURE_MEANING
   sfam27({
     id: "sci5.mix.mm.meaning",
@@ -80014,7 +80819,7 @@ var FAMILIES107 = [
 var F3 = "FORCE_.FLOATING_AND_SINKING.";
 var S19 = "FORCE_.SOUND_ENERGY.";
 var H33 = "FORCE_.HEAT_TRANSFER.";
-var FAMILIES108 = [
+var FAMILIES109 = [
   // ---------------------------------------------------------------- FLOAT_OR_SINK
   sfam27({
     id: "sci5.float.fa.will",
@@ -80451,7 +81256,7 @@ var science_g5_default = {
   description: "Grade 5 Science and Technology from the CBC design",
   // The curriculum map (generated by scripts/build-subject-map.mjs) and the families written from it.
   map: { skills: SKILLS_SCI_G5, substrands: SUBSTRANDS_SCI_G5, outcomes: OUTCOMES_SCI_G5, misFeedback: MIS_FEEDBACK34 },
-  families: [...FAMILIES106, ...FAMILIES107, ...FAMILIES108],
+  families: [...FAMILIES107, ...FAMILIES108, ...FAMILIES109],
   // The files that hold the families (basenames in content/families/): a phone build drops them while the signed list is empty.
   familyFiles: ["sci_g5_living.js", "sci_g5_matter.js", "sci_g5_force.js"],
   // The one switch: ids a teacher has signed off. The family file reads this list to set reviewed.
@@ -81372,7 +82177,7 @@ var sp21 = (q, a, b, f, fix, mis) => [q, [[a, true], [b, true], [f, false]], fix
 var FU2 = "LIVING.FUNGI.";
 var IV2 = "LIVING.INVERTEBRATES.";
 var CI = "LIVING.HUMAN_CIRCULATORY_SYSTEM.";
-var FAMILIES109 = [
+var FAMILIES110 = [
   // ---------------------------------------------------------------- FUNGI_IDENTIFY
   fam24("fu.id.direct", `${FU2}FUNGI_IDENTIFY`, "direct", 1, choose36([
     c17("Which of these living things is a fungus?", "A mushroom", "A mushroom is a fungus. It has no green leaves.", ["M_FI_PLANT", "A maize plant", "A bean plant"], ["M_FI_MOULD_DIRT", "A speck of dirt"]),
@@ -81708,7 +82513,7 @@ var FAMILIES109 = [
 // src/ai-tutor/content/families/science_g6_b.js
 var CS2 = "MATTER.CHANGE_OF_STATE.";
 var AR = "MATTER.COMPOSITION_OF_AIR.";
-var FAMILIES110 = [
+var FAMILIES111 = [
   // ---------------------------------------------------------------- STATE_CHANGE_NAMES
   fam24("cs.names.direct", `${CS2}STATE_CHANGE_NAMES`, "direct", 1, choose36([
     c17("What is it called when ice becomes water?", "Melting", "Melting is a solid changing into a liquid when heated.", ["M_SN_MELT_DISSOLVE", "Dissolving", "Evaporation"], ["M_SN_CONDENSE_MIXUP", "Condensation"]),
@@ -81891,7 +82696,7 @@ var FAMILIES110 = [
 var LT2 = "FORCE_.LIGHT.";
 var LV = "FORCE_.LEVERS_AS_SIMPLE_MACHINE.";
 var SL2 = "FORCE_.SLOPES_AS_SIMPLE_MACHINE.";
-var FAMILIES111 = [
+var FAMILIES112 = [
   // ---------------------------------------------------------------- LIGHT_MATERIALS
   fam24("lt.mat.direct", `${LT2}LIGHT_MATERIALS`, "direct", 1, choose36([
     c17("Clear window glass lets you see a friend on the other side without a blur. What kind of material is it?", "Transparent", "Transparent materials let nearly all light through.", ["M_LM_TRANSLUCENT_TRANSPARENT", "Translucent", "Opaque"], ["M_LM_GLASS_ALWAYS", "All glass is opaque"]),
@@ -82169,7 +82974,7 @@ var science_g6_default = {
   icon: "zap",
   description: "Grade 6 Science and Technology from the CBC design",
   map: { skills: SKILLS36, substrands: SUBSTRANDS35, outcomes: OUTCOMES35, misFeedback: MIS_FEEDBACK35 },
-  families: [...FAMILIES109, ...FAMILIES110, ...FAMILIES111],
+  families: [...FAMILIES110, ...FAMILIES111, ...FAMILIES112],
   // add each family file you write: [...A, ...B]
   familyFiles: ["science_g6_a.js", "science_g6_b.js", "science_g6_c.js"],
   // the same files by name (a phone build drops them while nothing is signed)
@@ -83390,7 +84195,7 @@ var PH2 = "NATURA.PHYSICAL_FEATURES_IN_THE.";
 var SE3 = "NATURA.SEASONS_IN_THE_COUNTY.";
 var HB2 = "NATURA.HISTORIC_BUILT_ENVIRONME.";
 var T4 = (rows, head = ["Place", "Direction from our school"]) => ({ t: { head, rows } });
-var FAMILIES112 = [
+var FAMILIES113 = [
   // ---------------------------------------------------------------- CD_POINTS
   fam25("cd.pts.which", `${CD}CD_POINTS`, "direct", 1, choose37([
     Q4("Which point of the compass is opposite north?", "South", w10("CD_OPPOSITE", "East", "West", "North-east"), "North and south are opposite each other."),
@@ -83635,7 +84440,7 @@ var PD2 = "PEOPLE.POPULATION_DISTRIBUTION.";
 var TC2 = "SOCIAL.ASPECTS_OF_TRADITIONAL_C.";
 var SC2 = "SOCIAL.THE_SCHOOL.";
 var POP = (rows) => ({ t: { head: ["Area", "People", "Land in square kilometres"], rows } });
-var FAMILIES113 = [
+var FAMILIES114 = [
   // ---------------------------------------------------------------- ID_WAYS
   fam25("id.ways.which", `${ID}ID_WAYS`, "direct", 1, choose37([
     Q4("A farmer sells maize to a shopkeeper. Who needs the other?", "Both need each other", ["Only the farmer|ID_ONE_WAY", "Only the shopkeeper|ID_ONE_WAY", "Neither of them|ID_SELF_SUFFICIENT"], "The farmer needs a market, and the shopkeeper needs goods to sell."),
@@ -83753,7 +84558,7 @@ var EA = "RESOUR.ECONOMIC_ACTIVITIES_IN_T.";
 var IN4 = "RESOUR.INDUSTRIES_IN_THE_COUNTY.";
 var EP = "RESOUR.ENTERPRISE_PROJECT_AT_SC.";
 var RM = (rows) => ({ t: { head: ["Raw material", "Where it is found in the county"], rows } });
-var FAMILIES114 = [
+var FAMILIES115 = [
   // ---------------------------------------------------------------- EA_RESOURCES_ACTIVITIES
   fam25("ea.res.which", `${EA}EA_RESOURCES_ACTIVITIES`, "direct", 1, choose37([
     Q4("Which is a natural resource?", "A river", w10("EA_MADE_NATURAL", "A road", "A school building", "A tractor"), "A river is given by nature. Roads, buildings and tractors are made by people."),
@@ -83904,7 +84709,7 @@ var DS2 = "CITIZE.DEMOCRACY_IN_SCHOOL.";
 var CG2 = "CITIZE.CHILDREN_S_GOVERNMENT_IN.";
 var CL2 = "CITIZE.COMMUNITY_LEADERSHIP.";
 var CO5 = "CITIZE.THE_COUNTY_GOVERNMENTS_I.";
-var FAMILIES115 = [
+var FAMILIES116 = [
   // ---------------------------------------------------------------- GC_QUALITIES
   fam25("gc.which", `${GC}GC_QUALITIES`, "direct", 1, choose37([
     Q4("Who is a good citizen in school?", "Any respectful, honest learner", ["Only the learner with the top marks|GC_CLEVER_ONLY", "Only the learner who is never wrong|GC_CLEVER_ONLY", "Only the prefects|GC_CLEVER_ONLY"], "Good citizens show good qualities. Marks and posts are different."),
@@ -84184,11 +84989,11 @@ var FAMILIES115 = [
 // src/ai-tutor/content/families/socialstudies_g4_e.js
 var N3 = "NATURA.";
 var P11 = "PEOPLE.";
-var R2 = "RESOUR.";
+var R4 = "RESOUR.";
 var C11 = "CITIZE.";
 var SP6 = (name, s1, bad2, s3, fix, code) => S20(`${name} Which step has the mistake?`, [s1, `!${bad2}`, s3], fix, code);
 var OPT4 = (a, b) => ({ h: ["Which step says something that is not true?", a], s1: b });
-var FAMILIES116 = [
+var FAMILIES117 = [
   fam25("ls.nb.spot", `${N3}LOCATION_AND_SIZE_OF_THE.LS_NEIGHBOUR_DIRECTION`, "spot", 3, spot37([
     SP6("Kalia lies south of Mwangaza. Lena says Mwangaza is south of Kalia.", "Step 1: Lena reads that Kalia is south of Mwangaza.", "Step 2: She says Mwangaza is south of Kalia as well.", "Step 3: She writes south.", "If Kalia is south of Mwangaza, then Mwangaza is north of Kalia.", "LS_DIR_REVERSE"),
     SP6("Bonde lies east of Pwani (imaginary counties). Kimani says Pwani is east of Bonde.", "Step 1: Kimani finds Bonde east of Pwani.", "Step 2: He says Pwani is east of Bonde too.", "Step 3: He writes east.", "Pwani is west of Bonde.", "LS_DIR_REVERSE"),
@@ -84224,14 +85029,14 @@ var FAMILIES116 = [
     SP6("Gladys says the only benefit of the hospital to a farmer is the fee the farmer pays.", "Step 1: Gladys thinks about a hospital.", "Step 2: She says the gain is only about money.", "Step 3: She writes fees.", "A hospital gives care, and the farmer gives food: both gain more than money.", "ID_MONEY_ONLY"),
     SP6("Harun says strong people never need to trade.", "Step 1: Harun is proud of strong people.", "Step 2: He says strong people need nobody.", "Step 3: He writes never.", "Everyone needs goods and skills that others have.", "ID_WEAKNESS")
   ], OPT4("Depending on each other is a strength.", "Check each step against what people gain."))),
-  fam25("ea.imp.spot", `${R2}ECONOMIC_ACTIVITIES_IN_T.EA_IMPORTANCE`, "spot", 3, spot37([
+  fam25("ea.imp.spot", `${R4}ECONOMIC_ACTIVITIES_IN_T.EA_IMPORTANCE`, "spot", 3, spot37([
     SP6("Immaculate says farming helps only rich people.", "Step 1: Immaculate sees a big farm.", "Step 2: She says only the rich gain from farming.", "Step 3: She writes rich.", "Farmers, workers, traders and everyone who eats gain from farming.", "EA_RICH_ONLY"),
     SP6("Jonah says mining gives a county only food.", "Step 1: Jonah thinks about what people need.", "Step 2: He says mining gives only food.", "Step 3: He writes food.", "Mining gives jobs, income and raw materials.", "EA_FOOD_ONLY"),
     SP6("Karimi says fishing helps only the boat owner.", "Step 1: Karimi sees a boat at the lake.", "Step 2: She says nobody else gains.", "Step 3: She writes owner.", "Fishermen, traders and people who eat fish all gain.", "EA_RICH_ONLY"),
     SP6("Leonard says tourism gives only food to a county.", "Step 1: Leonard sees visitors at a hotel.", "Step 2: He says all visitors give is food.", "Step 3: He writes food.", "Tourism gives jobs and income to guides, drivers and traders.", "EA_FOOD_ONLY"),
     SP6("Mary says trading helps only the people who already have money.", "Step 1: Mary sees a busy market.", "Step 2: She says the poor do not gain.", "Step 3: She writes rich only.", "Many families earn an income from trade.", "EA_RICH_ONLY")
   ], OPT4("Activities give jobs, income, food and raw materials to many people.", "Check each step against who gains."))),
-  fam25("in.ben.spot", `${R2}INDUSTRIES_IN_THE_COUNTY.IN_BENEFITS`, "spot", 3, spot37([
+  fam25("in.ben.spot", `${R4}INDUSTRIES_IN_THE_COUNTY.IN_BENEFITS`, "spot", 3, spot37([
     SP6("Nelson says a factory helps only its owner.", "Step 1: Nelson sees a big factory.", "Step 2: He says nobody else gains.", "Step 3: He writes the owner.", "Workers, farmers, shoppers and the county also gain.", "IN_OWNER_ONLY"),
     SP6("Olivia says smoke from a factory is a benefit of industry.", "Step 1: Olivia sees a chimney.", "Step 2: She says smoke is good for the county.", "Step 3: She writes smoke.", "Smoke is a problem that factories must control. Jobs and goods are benefits.", "IN_POLLUTION_BENEFIT"),
     SP6("Peter says the farmers near a milk factory gain nothing.", "Step 1: Peter sees farmers delivering milk.", "Step 2: He says the factory gives them nothing.", "Step 3: He writes nothing.", "The factory buys their milk, so they earn an income.", "IN_OWNER_ONLY"),
@@ -84306,7 +85111,7 @@ var socialstudies_g4_default = {
   icon: "globe",
   description: "Grade 4 Social Studies from the CBC design",
   map: { skills: SKILLS37, substrands: SUBSTRANDS36, outcomes: OUTCOMES36, misFeedback: MIS_FEEDBACK36 },
-  families: [...FAMILIES112, ...FAMILIES113, ...FAMILIES114, ...FAMILIES115, ...FAMILIES116],
+  families: [...FAMILIES113, ...FAMILIES114, ...FAMILIES115, ...FAMILIES116, ...FAMILIES117],
   // add each family file you write: [...A, ...B]
   familyFiles: ["socialstudies_g4_a.js", "socialstudies_g4_b.js", "socialstudies_g4_c.js", "socialstudies_g4_d.js", "socialstudies_g4_e.js"],
   // the same files by name (a phone build drops them while nothing is signed)
@@ -85733,7 +86538,7 @@ var LP = "NATURA.LOCATION_POSITION_AND_SI.";
 var PF3 = "NATURA.MAIN_PHYSICAL_FEATURES_I.";
 var WC2 = "NATURA.WEATHER_AND_CLIMATE.";
 var BE = "NATURA.THE_BUILT_ENVIRONMENTS.";
-var FAMILIES117 = [
+var FAMILIES118 = [
   // ---------------------------------------------------------------- MAP_ELEMENTS
   fam26("map.el.which", `${EM2}MAP_ELEMENTS`, "direct", 1, choose38([
     ["Which part of a map turns a map distance into a ground distance?", "The scale", [["The key", "M_EM_SCALE_KEY"], ["The frame", "M_EM_FRAME_TITLE"], ["The compass", "M_EM_COMPASS_ROLE"]], "The scale turns a distance on the map into a distance on the ground."],
@@ -86021,7 +86826,7 @@ var TE2 = "PEOPLE.AFRICAN_TRADITIONAL_EDUC.";
 var SA4 = "PEOPLE.SCHOOL_ADMINISTRATION.";
 var RK = "RESOUR.RESOURCES_IN_KENYA.";
 var MK2 = "RESOUR.MINING_IN_KENYA.";
-var FAMILIES118 = [
+var FAMILIES119 = [
   // ---------------------------------------------------------------- GROUP_SORT
   fam26("lg.which", `${LG}GROUP_SORT`, "direct", 1, choose38([
     ["To which language group do the Kikuyu belong?", "Bantu", [["Nilotic", "M_LG_NILOTE_AS_BANTU"], ["Cushitic", "M_LG_CUSHITE_AS_NILOTE"], ["Swahili", "M_LG_CUSHITE_AS_NILOTE"]], "The Kikuyu are Bantu, like the Luhya, Kamba and Meru."],
@@ -86268,7 +87073,7 @@ var FK = "RESOUR.FISHING_IN_KENYA.";
 var WT2 = "RESOUR.WILDLIFE_AND_TOURISM_IN_.";
 var TR2 = "RESOUR.DEVELOPMENT_OF_TRANSPORT.";
 var CM4 = "RESOUR.DEVELOPMENT_OF_COMMUNICA.";
-var FAMILIES119 = [
+var FAMILIES120 = [
   // ---------------------------------------------------------------- FISHING_GROUNDS
   fam26("fg.which", `${FK}FISHING_GROUNDS`, "direct", 1, choose38([
     ["Which of these is the main inland fishing ground in Kenya?", "Lake Victoria", [["The Indian Ocean", "M_FK_SEA_AS_INLAND"], ["Lake Magadi", "M_FK_SODA_LAKE"], ["Mount Kenya", "M_FK_SEA_AS_INLAND"]], "Lake Victoria gives most of the fish caught inland in Kenya."],
@@ -86510,7 +87315,7 @@ var NG = "POLITI.NATIONAL_GOVERNMENT.";
 var NU2 = "GOVERN.NATIONAL_UNITY_IN_KENYA.";
 var HR = "GOVERN.HUMAN_RIGHTS.";
 var DM2 = "GOVERN.DEMOCRACY_IN_SOCIETY.";
-var FAMILIES120 = [
+var FAMILIES121 = [
   // ---------------------------------------------------------------- LEADER_FACTS
   fam26("lf.who", `${TL}LEADER_FACTS`, "direct", 1, choose38([
     ["Mekatilili wa Menza led which community?", "The Giriama", [["The Maasai", "M_TL_COMMUNITY_MIX"], ["The Luo", "M_TL_COMMUNITY_MIX"], ["The Nandi", "M_TL_COMMUNITY_MIX"]], "Mekatilili led the Giriama of the coast against forced labour."],
@@ -86851,7 +87656,7 @@ var socialstudies_g5_default = {
   icon: "globe",
   description: "Grade 5 Social Studies from the CBC design",
   map: { skills: SKILLS38, substrands: SUBSTRANDS37, outcomes: OUTCOMES37, misFeedback: MIS_FEEDBACK37 },
-  families: [...FAMILIES117, ...FAMILIES118, ...FAMILIES119, ...FAMILIES120],
+  families: [...FAMILIES118, ...FAMILIES119, ...FAMILIES120, ...FAMILIES121],
   // add each family file you write: [...A, ...B]
   familyFiles: ["socialstudies_g5_a.js", "socialstudies_g5_b.js", "socialstudies_g5_c.js", "socialstudies_g5_d.js"],
   // the same files by name (a phone build drops them while nothing is signed)
@@ -88530,7 +89335,7 @@ var VG = "NATURA.VEGETATION_IN_EASTERN_AF.";
 var HB3 = "NATURA.HISTORIC_BUILT_ENVIRONME.";
 var T5 = (head, rows) => ({ t: { head, rows } });
 var POS2 = (rows) => T5(["Town", "Latitude", "Longitude"], rows);
-var FAMILIES121 = [
+var FAMILIES122 = [
   // ---------------------------------------------------------------- PS_COUNTRIES
   fam27("ps.cty.which", `${PS3}PS_COUNTRIES`, "direct", 1, choose39([
     Q5("Which of these countries is in Eastern Africa?", "Rwanda", w11("PS_ADD_NEIGHBOUR", "Zambia", "Malawi", "Angola"), "Rwanda lies in Eastern Africa, next to Uganda, Tanzania and Burundi."),
@@ -88949,7 +89754,7 @@ var PD4 = "PEOPLE.POPULATION_DISTRIBUTION_.";
 var CS3 = "PEOPLE.CULTURE_AND_SOCIAL_ORGAN.";
 var SC3 = "PEOPLE.SCHOOL_AND_COMMUNITY.";
 var T6 = (head, rows) => ({ t: { head, rows } });
-var FAMILIES122 = [
+var FAMILIES123 = [
   // ---------------------------------------------------------------- LG_CLASSIFY
   fam27("lg.cl.which", `${LG2}LG_CLASSIFY`, "direct", 1, choose39([
     Q5("Which language group do the Luo belong to?", "Nilotic", w11("LG_GROUP_SWAP", "Bantu", "Cushitic", "Semitic"), "The Luo, Acholi, Dinka and Nuer belong to the Nilotic group."),
@@ -89188,7 +89993,7 @@ var BF = "RESOUR.BEEF_FARMING.";
 var FI = "RESOUR.FISHING_IN_EASTERN_AFRIC.";
 var WT3 = "RESOUR.WILDLIFE_AND_TOURISM_IN_.";
 var T7 = (head, rows) => ({ t: { head, rows } });
-var FAMILIES123 = [
+var FAMILIES124 = [
   // ---------------------------------------------------------------- BF_FACTORS
   fam27("bf.fa.which", `${BF}BF_FACTORS`, "direct", 1, choose39([
     Q5("Which area suits beef ranching best?", "Large grassland with enough water", w11("BF_RAIN_CROP", "A small crop farm in a wet highland", "A thick rain forest with no grass", "A town with no open land"), "Beef cattle need large grassland and water."),
@@ -89386,7 +90191,7 @@ var CM5 = "RESOUR.COMMUNICATIO_N_IN_EASTER.";
 var MN = "RESOUR.MINING_IN_EASTERN_AFRICA.";
 var TG = "POLITI.TRADITIONAL_FORMS_OF_GOV.";
 var T8 = (head, rows) => ({ t: { head, rows } });
-var FAMILIES124 = [
+var FAMILIES125 = [
   // ---------------------------------------------------------------- TR_NETWORKS
   fam27("tr.nw.which", `${TR3}TR_NETWORKS`, "direct", 1, choose39([
     Q5("In which country is the port of Dar es Salaam?", "Tanzania", w11("TR_PORT_COUNTRY", "Kenya", "Uganda", "Somalia"), "Dar es Salaam is the main port of Tanzania. Mombasa is the main port of Kenya."),
@@ -89585,7 +90390,7 @@ var HR2 = "POLITI.HUMAN_RIGHTS.";
 var PC4 = "GOVERN.PEACE_AND_CONFLICT_RESOL.";
 var GR2 = "GOVERN.GOVERNMENT_REVENUE_AND_E.";
 var PR4 = "GOVERN.THE_PREAMBLE_OF_THE_CONS.";
-var FAMILIES125 = [
+var FAMILIES126 = [
   // ---------------------------------------------------------------- RC_OBJECTIVES
   fam27("rc.ob.which", `${RC}RC_OBJECTIVES`, "direct", 1, choose39([
     Q5("Where is the headquarters of the East African Community?", "Arusha, in Tanzania", w11("RC_HQ", "Nairobi, in Kenya", "Kampala, in Uganda", "Kigali, in Rwanda"), "The EAC headquarters is in Arusha, near Mount Kilimanjaro."),
@@ -89846,210 +90651,210 @@ var PC5 = "GOVERN.PEACE_AND_CONFLICT_RESOL.";
 var GR3 = "GOVERN.GOVERNMENT_REVENUE_AND_E.";
 var PR5 = "GOVERN.THE_PREAMBLE_OF_THE_CONS.";
 var H34 = (a, b, s1) => ({ h: [a, b], s1 });
-var mk = (name, who, claim, wrongStep, fix, code) => S21(`${who} says ${claim}. Which step has the mistake?`, [`Step 1: ${who} thinks about ${name}.`, `!Step 2: ${wrongStep}`, `Step 3: ${who} writes the answer.`], fix, code);
-var FAMILIES126 = [
+var mk2 = (name, who, claim, wrongStep, fix, code) => S21(`${who} says ${claim}. Which step has the mistake?`, [`Step 1: ${who} thinks about ${name}.`, `!Step 2: ${wrongStep}`, `Step 3: ${who} writes the answer.`], fix, code);
+var FAMILIES127 = [
   fam27("lg.ef.spot", `${LG3}LG_EFFECTS`, "spot", 3, spot39([
-    mk("settlement", "Collins", "settling near other groups never caused quarrels", "He says neighbours never want the same land.", "Groups sometimes quarrelled over land, water and pasture.", "LG_NO_CONFLICT"),
-    mk("mixing of groups", "Lilian", "after settling together all groups became the same", "She says mixing makes every custom alike.", "Groups traded and mixed but kept their own languages and customs.", "LG_ALL_SAME"),
-    mk("trade", "Hassan", "settlement had only bad effects", "He says there was no trade or sharing of skills.", "Settlement also brought trade, intermarriage and the spread of skills.", "LG_NO_CONFLICT"),
-    mk("languages", "Grace", "the Kikuyu and the Maasai now speak one language", "She says living near each other joins languages.", "Neighbours learn words from each other, but each group keeps its language.", "LG_ALL_SAME"),
-    mk("land and pasture", "Peter", "sharing the same river caused no trouble", "He says two herds at one river never clash.", "Competition for water and pasture could lead to quarrels.", "LG_NO_CONFLICT")
+    mk2("settlement", "Collins", "settling near other groups never caused quarrels", "He says neighbours never want the same land.", "Groups sometimes quarrelled over land, water and pasture.", "LG_NO_CONFLICT"),
+    mk2("mixing of groups", "Lilian", "after settling together all groups became the same", "She says mixing makes every custom alike.", "Groups traded and mixed but kept their own languages and customs.", "LG_ALL_SAME"),
+    mk2("trade", "Hassan", "settlement had only bad effects", "He says there was no trade or sharing of skills.", "Settlement also brought trade, intermarriage and the spread of skills.", "LG_NO_CONFLICT"),
+    mk2("languages", "Grace", "the Kikuyu and the Maasai now speak one language", "She says living near each other joins languages.", "Neighbours learn words from each other, but each group keeps its language.", "LG_ALL_SAME"),
+    mk2("land and pasture", "Peter", "sharing the same river caused no trouble", "He says two herds at one river never clash.", "Competition for water and pasture could lead to quarrels.", "LG_NO_CONFLICT")
   ], H34("Which step says there was no trouble, or that all groups became alike?", "Settlement had good and bad effects.", "Check each step against the effects of settlement."))),
   fam27("pd.fa.spot", `${PD5}PD_FACTORS`, "spot", 3, spot39([
-    mk("deserts", "Mercy", "many people live in deserts because land is cheap", "She says price of land draws people to dry places.", "Few people live in deserts because there is too little water and food.", "PD_PEOPLE_DESERT"),
-    mk("mountains", "Brian", "people crowd on steep rocky mountain tops", "He says cool weather matters more than farmland.", "People crowd on gentle land with fertile soil and rain.", "PD_MOUNTAIN_TOP"),
-    mk("thin population", "Akinyi", "a dry plain has a high density of people", "She says dry land attracts farmers.", "A dry plain has few people because crops fail there.", "PD_PEOPLE_DESERT"),
-    mk("crowded land", "Kamau", "the best place to farm is a rocky steep slope", "He says steep land is easy to plough.", "Gentle land with deep soil and rain is best for farming and settling.", "PD_MOUNTAIN_TOP"),
-    mk("swamps", "Zawadi", "a swamp with tsetse flies attracts many people", "She says disease does not keep people away.", "Disease, swamps and tsetse flies keep people away.", "PD_PEOPLE_DESERT")
+    mk2("deserts", "Mercy", "many people live in deserts because land is cheap", "She says price of land draws people to dry places.", "Few people live in deserts because there is too little water and food.", "PD_PEOPLE_DESERT"),
+    mk2("mountains", "Brian", "people crowd on steep rocky mountain tops", "He says cool weather matters more than farmland.", "People crowd on gentle land with fertile soil and rain.", "PD_MOUNTAIN_TOP"),
+    mk2("thin population", "Akinyi", "a dry plain has a high density of people", "She says dry land attracts farmers.", "A dry plain has few people because crops fail there.", "PD_PEOPLE_DESERT"),
+    mk2("crowded land", "Kamau", "the best place to farm is a rocky steep slope", "He says steep land is easy to plough.", "Gentle land with deep soil and rain is best for farming and settling.", "PD_MOUNTAIN_TOP"),
+    mk2("swamps", "Zawadi", "a swamp with tsetse flies attracts many people", "She says disease does not keep people away.", "Disease, swamps and tsetse flies keep people away.", "PD_PEOPLE_DESERT")
   ], H34("Which step gives a reason that does not draw people?", "People settle where there is water, soil and safety.", "Check each step against what attracts people."))),
   fam27("cs.ag.spot", `${CS4}CS_AGE`, "spot", 3, spot39([
-    mk("age-sets", "Titus", "an age-set is any group born in the same month", "He says birthdays make an age-set.", "An age-set is a group initiated together.", "CS_SET_GROUP"),
-    mk("warriors", "Esther", "the warrior age-set looked after the sick at home", "She says warriors stayed to nurse patients.", "Warriors defended the community and its cattle.", "CS_WARRIOR"),
-    mk("age-groups", "Duncan", "an age-group is people who were initiated together", "He says age-group and age-set mean the same.", "An age-group is people of about the same age. Initiation forms an age-set.", "CS_SET_GROUP"),
-    mk("duties", "Gladys", "the main duty of warriors was teaching small children letters", "She says warriors ran the classes.", "Warriors defended the community. Elders and parents taught the young.", "CS_WARRIOR"),
-    mk("age-sets", "Moses", "a school class is an age-set", "He says any group of the same age is an age-set.", "An age-set is formed by initiation and stays together for life.", "CS_SET_GROUP")
+    mk2("age-sets", "Titus", "an age-set is any group born in the same month", "He says birthdays make an age-set.", "An age-set is a group initiated together.", "CS_SET_GROUP"),
+    mk2("warriors", "Esther", "the warrior age-set looked after the sick at home", "She says warriors stayed to nurse patients.", "Warriors defended the community and its cattle.", "CS_WARRIOR"),
+    mk2("age-groups", "Duncan", "an age-group is people who were initiated together", "He says age-group and age-set mean the same.", "An age-group is people of about the same age. Initiation forms an age-set.", "CS_SET_GROUP"),
+    mk2("duties", "Gladys", "the main duty of warriors was teaching small children letters", "She says warriors ran the classes.", "Warriors defended the community. Elders and parents taught the young.", "CS_WARRIOR"),
+    mk2("age-sets", "Moses", "a school class is an age-set", "He says any group of the same age is an age-set.", "An age-set is formed by initiation and stays together for life.", "CS_SET_GROUP")
   ], H34("Which step mixes up age-set and age-group, or gives a wrong duty?", "Age-set: initiated together. Age-group: same stage of life.", "Check each step against age-sets and their duties."))),
   fam27("sc.wa.spot", `${SC4}SC_WAYS`, "spot", 3, spot39([
-    mk("collaboration", "Gilbert", "teachers marking books alone is the school working with the community", "He says any school task involves the community.", "Collaboration needs the community to take part.", "SC_SCHOOL_ALONE"),
-    mk("what a school gives", "Hellen", "a school gives the community nothing", "She says only the community gives.", "A school lends its hall and field and trains learners who serve.", "SC_ONE_WAY"),
-    mk("working together", "Abdi", "a head teacher signing forms is a way of working with the community", "He says paperwork brings the community in.", "Working with the community means parents or villagers take part.", "SC_SCHOOL_ALONE"),
-    mk("helping each other", "Beth", "only the community helps the school", "She says the school gives nothing back.", "The school also serves the community, for example as a polling station.", "SC_ONE_WAY"),
-    mk("collaboration", "Collins", "learners sweeping their own classroom is working with the community", "He says any cleaning counts.", "No one from the community took part, so it is not collaboration.", "SC_SCHOOL_ALONE")
+    mk2("collaboration", "Gilbert", "teachers marking books alone is the school working with the community", "He says any school task involves the community.", "Collaboration needs the community to take part.", "SC_SCHOOL_ALONE"),
+    mk2("what a school gives", "Hellen", "a school gives the community nothing", "She says only the community gives.", "A school lends its hall and field and trains learners who serve.", "SC_ONE_WAY"),
+    mk2("working together", "Abdi", "a head teacher signing forms is a way of working with the community", "He says paperwork brings the community in.", "Working with the community means parents or villagers take part.", "SC_SCHOOL_ALONE"),
+    mk2("helping each other", "Beth", "only the community helps the school", "She says the school gives nothing back.", "The school also serves the community, for example as a polling station.", "SC_ONE_WAY"),
+    mk2("collaboration", "Collins", "learners sweeping their own classroom is working with the community", "He says any cleaning counts.", "No one from the community took part, so it is not collaboration.", "SC_SCHOOL_ALONE")
   ], H34("Which step says the school works alone, or that only one side gives?", "Collaboration needs both sides.", "Check each step against working together."))),
   fam27("sc.be.spot", `${SC4}SC_BENEFITS`, "spot", 3, spot39([
-    mk("benefits", "Dan", "only the school gains from collaboration", "He says the community gets nothing.", "The community gains better learners and shared facilities.", "SC_BENEFIT_ONLY_SCHOOL"),
-    mk("keeping it going", "Everlyne", "never inviting parents keeps collaboration going", "She says silence keeps people involved.", "Open days and meetings keep collaboration going.", "SC_STRATEGY_STOP"),
-    mk("benefits", "Mark", "the community gains nothing from a school field it can use", "He says a shared field has no value.", "A shared field and hall are a real benefit to the community.", "SC_BENEFIT_ONLY_SCHOOL"),
-    mk("strategies", "Janet", "hiding the school budget is a good strategy to sustain support", "She says parents should not know.", "Sharing reports and plans keeps parents involved and trusting.", "SC_STRATEGY_STOP"),
-    mk("who gains", "Hassan", "collaboration helps teachers but not learners", "He says learners gain nothing.", "Learners gain from the extra resources, security and support.", "SC_BENEFIT_ONLY_SCHOOL")
+    mk2("benefits", "Dan", "only the school gains from collaboration", "He says the community gets nothing.", "The community gains better learners and shared facilities.", "SC_BENEFIT_ONLY_SCHOOL"),
+    mk2("keeping it going", "Everlyne", "never inviting parents keeps collaboration going", "She says silence keeps people involved.", "Open days and meetings keep collaboration going.", "SC_STRATEGY_STOP"),
+    mk2("benefits", "Mark", "the community gains nothing from a school field it can use", "He says a shared field has no value.", "A shared field and hall are a real benefit to the community.", "SC_BENEFIT_ONLY_SCHOOL"),
+    mk2("strategies", "Janet", "hiding the school budget is a good strategy to sustain support", "She says parents should not know.", "Sharing reports and plans keeps parents involved and trusting.", "SC_STRATEGY_STOP"),
+    mk2("who gains", "Hassan", "collaboration helps teachers but not learners", "He says learners gain nothing.", "Learners gain from the extra resources, security and support.", "SC_BENEFIT_ONLY_SCHOOL")
   ], H34("Which step says only one side gains, or ends collaboration?", "Both sides gain, and talking keeps it going.", "Check each step against the benefits."))),
   fam27("bf.fa.spot", `${BF2}BF_FACTORS`, "spot", 3, spot39([
-    mk("ranching", "Chelimo", "beef ranching suits a small crop farm in a wet highland", "She says cattle need heavy rain and small plots.", "Beef cattle need large grassland and enough water.", "BF_RAIN_CROP"),
-    mk("vets", "Dorothy", "vets are not needed on a beef farm", "She says cattle never fall sick.", "Vets control diseases such as foot-and-mouth that kill cattle.", "BF_DISEASE_NO"),
-    mk("a good area", "Sam", "the best area for beef is a thick forest", "He says trees feed cattle.", "Beef cattle need open grassland.", "BF_RAIN_CROP"),
-    mk("diseases", "Linet", "tsetse flies are no problem for cattle", "She says the flies do not harm animals.", "Tsetse flies spread a disease that kills cattle.", "BF_DISEASE_NO"),
-    mk("ranches", "Peter", "a ranch is best sited on a wet crop-growing slope", "He says crop land is best for ranching.", "Ranches need wide grassland, not small crop land.", "BF_RAIN_CROP")
+    mk2("ranching", "Chelimo", "beef ranching suits a small crop farm in a wet highland", "She says cattle need heavy rain and small plots.", "Beef cattle need large grassland and enough water.", "BF_RAIN_CROP"),
+    mk2("vets", "Dorothy", "vets are not needed on a beef farm", "She says cattle never fall sick.", "Vets control diseases such as foot-and-mouth that kill cattle.", "BF_DISEASE_NO"),
+    mk2("a good area", "Sam", "the best area for beef is a thick forest", "He says trees feed cattle.", "Beef cattle need open grassland.", "BF_RAIN_CROP"),
+    mk2("diseases", "Linet", "tsetse flies are no problem for cattle", "She says the flies do not harm animals.", "Tsetse flies spread a disease that kills cattle.", "BF_DISEASE_NO"),
+    mk2("ranches", "Peter", "a ranch is best sited on a wet crop-growing slope", "He says crop land is best for ranching.", "Ranches need wide grassland, not small crop land.", "BF_RAIN_CROP")
   ], H34("Which step puts beef cattle in the wrong place or ignores disease?", "Cattle need grass, water and health care.", "Check each step against what cattle need."))),
   fam27("bf.pl.spot", `${BF2}BF_PLACES`, "spot", 3, spot39([
-    mk("Kenyan ranches", "Victor", "the main ranching area of Kenya is the tea highlands of Kericho", "He says tea land is cattle land.", "Laikipia and Kajiado are the big ranching areas.", "BF_BEEF_COAST"),
-    mk("Somalia", "Anita", "Somalia exports no animals because it is dry", "She says dry land has no herds.", "Somalia exports live animals from its dry lands.", "BF_SOMALIA"),
-    mk("beef areas", "Isaac", "Mombasa island is a main beef ranching area", "He says the coast strip is good for ranches.", "Beef areas are on wide grassland such as Laikipia and Kajiado.", "BF_BEEF_COAST"),
-    mk("Somali herds", "Brenda", "Somalia earns its money from tea and flowers", "She says dry land grows tea.", "Livestock is a main export of Somalia.", "BF_SOMALIA"),
-    mk("grazing land", "Charles", "the wet slopes of Mount Kenya are Kenya's ranching land", "He says rainy slopes suit big herds.", "Mount Kenya's slopes are farms. Ranches are on dry grassland.", "BF_BEEF_COAST")
+    mk2("Kenyan ranches", "Victor", "the main ranching area of Kenya is the tea highlands of Kericho", "He says tea land is cattle land.", "Laikipia and Kajiado are the big ranching areas.", "BF_BEEF_COAST"),
+    mk2("Somalia", "Anita", "Somalia exports no animals because it is dry", "She says dry land has no herds.", "Somalia exports live animals from its dry lands.", "BF_SOMALIA"),
+    mk2("beef areas", "Isaac", "Mombasa island is a main beef ranching area", "He says the coast strip is good for ranches.", "Beef areas are on wide grassland such as Laikipia and Kajiado.", "BF_BEEF_COAST"),
+    mk2("Somali herds", "Brenda", "Somalia earns its money from tea and flowers", "She says dry land grows tea.", "Livestock is a main export of Somalia.", "BF_SOMALIA"),
+    mk2("grazing land", "Charles", "the wet slopes of Mount Kenya are Kenya's ranching land", "He says rainy slopes suit big herds.", "Mount Kenya's slopes are farms. Ranches are on dry grassland.", "BF_BEEF_COAST")
   ], H34("Which step puts ranching or herds in the wrong place?", "Beef areas are dry grasslands.", "Check each step against where beef is raised."))),
   fam27("bf.ec.spot", `${BF2}BF_ECONOMY`, "spot", 3, spot39([
-    mk("beef", "Alex", "beef farming gives only meat", "He says cattle give nothing else.", "Beef farming also gives hides, jobs, manure and exports.", "BF_MEAT_ONLY"),
-    mk("jobs", "Sylvia", "beef farming gives no jobs", "She says only the owner works.", "Herders, vets, butchers and drivers all earn from beef.", "BF_NO_JOBS"),
-    mk("hides", "Moses", "hides and skins are thrown away", "He says only meat is used.", "Hides and skins are made into leather goods.", "BF_MEAT_ONLY"),
-    mk("workers", "Irene", "nobody earns a living from the beef industry", "She says beef is only for food at home.", "Many people earn a living from beef, from the ranch to the shop.", "BF_NO_JOBS"),
-    mk("exports", "Duncan", "a country earns nothing from selling beef abroad", "He says exports bring no money.", "Beef exports earn foreign exchange.", "BF_MEAT_ONLY")
+    mk2("beef", "Alex", "beef farming gives only meat", "He says cattle give nothing else.", "Beef farming also gives hides, jobs, manure and exports.", "BF_MEAT_ONLY"),
+    mk2("jobs", "Sylvia", "beef farming gives no jobs", "She says only the owner works.", "Herders, vets, butchers and drivers all earn from beef.", "BF_NO_JOBS"),
+    mk2("hides", "Moses", "hides and skins are thrown away", "He says only meat is used.", "Hides and skins are made into leather goods.", "BF_MEAT_ONLY"),
+    mk2("workers", "Irene", "nobody earns a living from the beef industry", "She says beef is only for food at home.", "Many people earn a living from beef, from the ranch to the shop.", "BF_NO_JOBS"),
+    mk2("exports", "Duncan", "a country earns nothing from selling beef abroad", "He says exports bring no money.", "Beef exports earn foreign exchange.", "BF_MEAT_ONLY")
   ], H34("Which step says beef gives only meat or no jobs?", "Beef gives meat, hides, jobs, manure and exports.", "Check each step against what beef farming gives."))),
   fam27("fi.gr.spot", `${FI2}FI_GROUNDS`, "spot", 3, spot39([
-    mk("fishing grounds", "Daniel", "Lake Victoria is a marine fishing ground", "He says any big water is the sea.", "Lake Victoria is inland. Marine grounds are in the sea.", "FI_LAKE_SEA"),
-    mk("fish", "Mwajuma", "Nile perch comes from the Indian Ocean", "She says all fish are from the sea.", "Nile perch lives in lakes such as Victoria and Turkana.", "FI_FISH_PLACE"),
-    mk("marine", "Kassim", "Lake Turkana is a marine fishing ground", "He says a very large lake is marine.", "Marine means from the sea. Lake Turkana is a lake.", "FI_LAKE_SEA"),
-    mk("sea fish", "Rehema", "tuna is caught in Lake Albert", "She says tuna lives in lakes.", "Tuna is caught in the sea, such as the Indian Ocean.", "FI_FISH_PLACE"),
-    mk("inland", "Hamza", "the Indian Ocean is an inland fishing ground", "He says the ocean is on land.", "Inland grounds are lakes and rivers. The ocean is marine.", "FI_LAKE_SEA")
+    mk2("fishing grounds", "Daniel", "Lake Victoria is a marine fishing ground", "He says any big water is the sea.", "Lake Victoria is inland. Marine grounds are in the sea.", "FI_LAKE_SEA"),
+    mk2("fish", "Mwajuma", "Nile perch comes from the Indian Ocean", "She says all fish are from the sea.", "Nile perch lives in lakes such as Victoria and Turkana.", "FI_FISH_PLACE"),
+    mk2("marine", "Kassim", "Lake Turkana is a marine fishing ground", "He says a very large lake is marine.", "Marine means from the sea. Lake Turkana is a lake.", "FI_LAKE_SEA"),
+    mk2("sea fish", "Rehema", "tuna is caught in Lake Albert", "She says tuna lives in lakes.", "Tuna is caught in the sea, such as the Indian Ocean.", "FI_FISH_PLACE"),
+    mk2("inland", "Hamza", "the Indian Ocean is an inland fishing ground", "He says the ocean is on land.", "Inland grounds are lakes and rivers. The ocean is marine.", "FI_LAKE_SEA")
   ], H34("Which step mixes the sea with a lake or puts a fish in the wrong water?", "Marine: sea. Inland: lakes and rivers.", "Check each step against the fishing grounds."))),
   fam27("fi.me.spot", `${FI2}FI_METHODS`, "spot", 3, spot39([
-    mk("trawling", "Aisha", "trawling means fishing with a hook and line", "She says trawl means a single hook.", "Trawling is dragging a large net behind a boat.", "FI_TRAWL"),
-    mk("modern fishing", "Kelvin", "a basket trap from a canoe is a modern method", "He says all small boats are modern.", "Basket traps and canoes are traditional. Trawlers are modern.", "FI_TRAD_MODERN"),
-    mk("nets", "Brenda", "a trawl net is thrown from the shore by hand", "She says a trawl is a hand net.", "A trawl net is dragged behind a boat.", "FI_TRAWL"),
-    mk("traditional fishing", "Hassan", "a ship with a freezer is a traditional method", "He says freezers belong to old methods.", "Ships with freezers are modern. Hooks and dhows are traditional.", "FI_TRAD_MODERN"),
-    mk("trawlers", "Janet", "trawling means spearing fish from a canoe", "She says spears and trawls are the same.", "Trawling drags a net. Spearing is a traditional method.", "FI_TRAWL")
+    mk2("trawling", "Aisha", "trawling means fishing with a hook and line", "She says trawl means a single hook.", "Trawling is dragging a large net behind a boat.", "FI_TRAWL"),
+    mk2("modern fishing", "Kelvin", "a basket trap from a canoe is a modern method", "He says all small boats are modern.", "Basket traps and canoes are traditional. Trawlers are modern.", "FI_TRAD_MODERN"),
+    mk2("nets", "Brenda", "a trawl net is thrown from the shore by hand", "She says a trawl is a hand net.", "A trawl net is dragged behind a boat.", "FI_TRAWL"),
+    mk2("traditional fishing", "Hassan", "a ship with a freezer is a traditional method", "He says freezers belong to old methods.", "Ships with freezers are modern. Hooks and dhows are traditional.", "FI_TRAD_MODERN"),
+    mk2("trawlers", "Janet", "trawling means spearing fish from a canoe", "She says spears and trawls are the same.", "Trawling drags a net. Spearing is a traditional method.", "FI_TRAWL")
   ], H34("Which step gives a wrong meaning of trawling, or calls an old method modern?", "Trawling means dragging a net.", "Check each step against the fishing methods."))),
   fam27("wt.fa.spot", `${WT4}WT_FACTORS`, "spot", 3, spot39([
-    mk("tourism", "Victor", "tourists do not need roads, airports or hotels", "He says visitors reach parks without them.", "Roads, airports and hotels bring visitors in and house them.", "WT_TOURIST_ROADS"),
-    mk("security", "Anita", "insecurity brings more tourists", "She says danger attracts visitors.", "Insecurity frightens tourists away.", "WT_INSECURITY"),
-    mk("hotels", "Isaac", "a park with no hotels will still fill with visitors", "He says visitors will sleep anywhere.", "Few tourists will come if they have nowhere to stay.", "WT_TOURIST_ROADS"),
-    mk("safety", "Brenda", "tourists visit places where fighting has just started", "She says war draws tourists.", "Fighting and insecurity make tourists stay away.", "WT_INSECURITY"),
-    mk("roads", "Charles", "a park with a bad road to it gets the most visitors", "He says rough roads attract tourists.", "Good roads and airports make a park easy to reach.", "WT_TOURIST_ROADS")
+    mk2("tourism", "Victor", "tourists do not need roads, airports or hotels", "He says visitors reach parks without them.", "Roads, airports and hotels bring visitors in and house them.", "WT_TOURIST_ROADS"),
+    mk2("security", "Anita", "insecurity brings more tourists", "She says danger attracts visitors.", "Insecurity frightens tourists away.", "WT_INSECURITY"),
+    mk2("hotels", "Isaac", "a park with no hotels will still fill with visitors", "He says visitors will sleep anywhere.", "Few tourists will come if they have nowhere to stay.", "WT_TOURIST_ROADS"),
+    mk2("safety", "Brenda", "tourists visit places where fighting has just started", "She says war draws tourists.", "Fighting and insecurity make tourists stay away.", "WT_INSECURITY"),
+    mk2("roads", "Charles", "a park with a bad road to it gets the most visitors", "He says rough roads attract tourists.", "Good roads and airports make a park easy to reach.", "WT_TOURIST_ROADS")
   ], H34("Which step says tourism does not need transport or safety?", "Tourists need access, comfort and safety.", "Check each step against what draws tourists."))),
   fam27("wt.pa.spot", `${WT4}WT_PARKS`, "spot", 3, spot39([
-    mk("the Serengeti", "Wekesa", "the Serengeti National Park is in Kenya", "He says the wildebeest park is Kenyan.", "The Serengeti is in Tanzania. The Maasai Mara is in Kenya.", "WT_PARK_COUNTRY"),
-    mk("gorillas", "Halima", "mountain gorillas live in the Maasai Mara", "She says big wildlife lives on the plains.", "Mountain gorillas live in the forests of Bwindi in Uganda and Volcanoes in Rwanda.", "WT_GORILLA"),
-    mk("the Maasai Mara", "Kiprop", "the Maasai Mara is in Tanzania", "He says the Mara and Serengeti are both in Tanzania.", "The Maasai Mara is in Kenya, beside the Serengeti.", "WT_PARK_COUNTRY"),
-    mk("gorilla parks", "Atieno", "Amboseli is the park of the mountain gorillas", "She says the park with elephants has gorillas.", "Amboseli has elephants. Gorillas live in Bwindi and Volcanoes.", "WT_GORILLA"),
-    mk("Queen Elizabeth", "Baraka", "Queen Elizabeth National Park is in Kenya", "He says famous parks are all Kenyan.", "Queen Elizabeth National Park is in Uganda.", "WT_PARK_COUNTRY")
+    mk2("the Serengeti", "Wekesa", "the Serengeti National Park is in Kenya", "He says the wildebeest park is Kenyan.", "The Serengeti is in Tanzania. The Maasai Mara is in Kenya.", "WT_PARK_COUNTRY"),
+    mk2("gorillas", "Halima", "mountain gorillas live in the Maasai Mara", "She says big wildlife lives on the plains.", "Mountain gorillas live in the forests of Bwindi in Uganda and Volcanoes in Rwanda.", "WT_GORILLA"),
+    mk2("the Maasai Mara", "Kiprop", "the Maasai Mara is in Tanzania", "He says the Mara and Serengeti are both in Tanzania.", "The Maasai Mara is in Kenya, beside the Serengeti.", "WT_PARK_COUNTRY"),
+    mk2("gorilla parks", "Atieno", "Amboseli is the park of the mountain gorillas", "She says the park with elephants has gorillas.", "Amboseli has elephants. Gorillas live in Bwindi and Volcanoes.", "WT_GORILLA"),
+    mk2("Queen Elizabeth", "Baraka", "Queen Elizabeth National Park is in Kenya", "He says famous parks are all Kenyan.", "Queen Elizabeth National Park is in Uganda.", "WT_PARK_COUNTRY")
   ], H34("Which step puts a park or an animal in the wrong country or place?", "Mara is in Kenya, Serengeti is in Tanzania.", "Check each step against the parks."))),
   fam27("tr.pr.spot", `${TR4}TR_PROBLEMS`, "spot", 3, spot39([
-    mk("border delays", "Mercy", "a one-stop border post makes lorries wait longer", "She says one stop means more checks.", "A one-stop post lets both countries check once, so crossing is faster.", "TR_BORDER"),
-    mk("crashes", "Kenneth", "higher speeds will reduce road crashes", "He says faster cars crash less.", "Speed limits and driver training reduce crashes.", "TR_CRASH_SOLVE"),
-    mk("border posts", "Lucy", "a one-stop border post is a place where lorries stop at every office", "She says it has many separate checks.", "At a one-stop post both countries check once in one place.", "TR_BORDER"),
-    mk("road safety", "Hussein", "removing speed limit signs makes roads safer", "He says signs cause crashes.", "Speed limits make roads safer.", "TR_CRASH_SOLVE"),
-    mk("delays", "Wendy", "adding more checks at the border speeds trade", "She says more checks make it faster.", "Fewer, joint checks such as a one-stop post speed trade.", "TR_BORDER")
+    mk2("border delays", "Mercy", "a one-stop border post makes lorries wait longer", "She says one stop means more checks.", "A one-stop post lets both countries check once, so crossing is faster.", "TR_BORDER"),
+    mk2("crashes", "Kenneth", "higher speeds will reduce road crashes", "He says faster cars crash less.", "Speed limits and driver training reduce crashes.", "TR_CRASH_SOLVE"),
+    mk2("border posts", "Lucy", "a one-stop border post is a place where lorries stop at every office", "She says it has many separate checks.", "At a one-stop post both countries check once in one place.", "TR_BORDER"),
+    mk2("road safety", "Hussein", "removing speed limit signs makes roads safer", "He says signs cause crashes.", "Speed limits make roads safer.", "TR_CRASH_SOLVE"),
+    mk2("delays", "Wendy", "adding more checks at the border speeds trade", "She says more checks make it faster.", "Fewer, joint checks such as a one-stop post speed trade.", "TR_BORDER")
   ], H34("Which step says delays or crashes would be solved by the wrong action?", "One-stop posts cut delays. Limits and training cut crashes.", "Check each step against the solutions."))),
   fam27("cm.mo.spot", `${CM6}CM_MODES`, "spot", 3, spot39([
-    mk("drums", "Aden", "the drum is a modern way of communicating", "He says drums need electricity.", "The drum is traditional. The mobile phone is modern.", "CM_TRAD_MODERN"),
-    mk("letters", "Grace", "a letter reaches many people at once", "She says a letter is mass communication.", "Radio and television reach many people at once. A letter reaches one.", "CM_MASS"),
-    mk("messengers", "Hillary", "a messenger on foot is a modern means of communication", "He says all human messengers are modern.", "Messengers are a traditional means.", "CM_TRAD_MODERN"),
-    mk("phone calls", "Janet", "a phone call reaches the whole country at once", "She says a call is mass media.", "A call is between two people. Radio and television reach the country.", "CM_MASS"),
-    mk("smoke signals", "Leonard", "smoke signals are a modern means", "He says anything with fire is modern.", "Smoke signals are a traditional means.", "CM_TRAD_MODERN")
+    mk2("drums", "Aden", "the drum is a modern way of communicating", "He says drums need electricity.", "The drum is traditional. The mobile phone is modern.", "CM_TRAD_MODERN"),
+    mk2("letters", "Grace", "a letter reaches many people at once", "She says a letter is mass communication.", "Radio and television reach many people at once. A letter reaches one.", "CM_MASS"),
+    mk2("messengers", "Hillary", "a messenger on foot is a modern means of communication", "He says all human messengers are modern.", "Messengers are a traditional means.", "CM_TRAD_MODERN"),
+    mk2("phone calls", "Janet", "a phone call reaches the whole country at once", "She says a call is mass media.", "A call is between two people. Radio and television reach the country.", "CM_MASS"),
+    mk2("smoke signals", "Leonard", "smoke signals are a modern means", "He says anything with fire is modern.", "Smoke signals are a traditional means.", "CM_TRAD_MODERN")
   ], H34("Which step calls a traditional means modern, or a one-to-one means mass media?", "Drums and messengers are traditional. Radio reaches many.", "Check each step against the modes."))),
   fam27("cm.pr.spot", `${CM6}CM_PROBLEMS`, "spot", 3, spot39([
-    mk("power", "Aden", "electricity has nothing to do with communication", "He says phones work without power.", "Phones, radios and the internet need power.", "CM_ELEC"),
-    mk("theft", "Grace", "training in digital skills stops theft of masts", "She says skills catch thieves.", "Laws and guards stop theft of masts. Training builds skills.", "CM_SOLUTION_SWAP"),
-    mk("charging", "Hillary", "villages with no electricity can use phones without charging", "He says phones never run down.", "Phones need charging, so solar points help.", "CM_ELEC"),
-    mk("false news", "Janet", "more masts will stop false news", "She says signal ends rumours.", "Laws and digital skills deal with false news. Masts bring signal.", "CM_SOLUTION_SWAP"),
-    mk("solutions", "Leonard", "lowering the price of data stops cable theft", "He says cheap data guards cables.", "Guards and laws protect cables. Lower prices help cost.", "CM_SOLUTION_SWAP")
+    mk2("power", "Aden", "electricity has nothing to do with communication", "He says phones work without power.", "Phones, radios and the internet need power.", "CM_ELEC"),
+    mk2("theft", "Grace", "training in digital skills stops theft of masts", "She says skills catch thieves.", "Laws and guards stop theft of masts. Training builds skills.", "CM_SOLUTION_SWAP"),
+    mk2("charging", "Hillary", "villages with no electricity can use phones without charging", "He says phones never run down.", "Phones need charging, so solar points help.", "CM_ELEC"),
+    mk2("false news", "Janet", "more masts will stop false news", "She says signal ends rumours.", "Laws and digital skills deal with false news. Masts bring signal.", "CM_SOLUTION_SWAP"),
+    mk2("solutions", "Leonard", "lowering the price of data stops cable theft", "He says cheap data guards cables.", "Guards and laws protect cables. Lower prices help cost.", "CM_SOLUTION_SWAP")
   ], H34("Which step pairs a problem with the wrong solution?", "Match each problem to its own cure.", "Check each pair of problem and solution."))),
   fam27("mn.mi.spot", `${MN2}MN_MINERALS`, "spot", 3, spot39([
-    mk("soda ash", "Vincent", "soda ash is mined at Lake Naivasha", "He says all Rift lakes give soda ash.", "Soda ash is mined at Lake Magadi.", "MN_MINERAL_PLACE"),
-    mk("tanzanite", "Hannah", "tanzanite is mined in Kenya", "She says gems come from the nearest country.", "Tanzanite is mined only in Tanzania.", "MN_TANZANITE"),
-    mk("minerals", "Zachary", "coffee is a mineral", "He says any export is a mineral.", "Coffee is a crop. Minerals are dug from the ground.", "MN_NOT_MINERAL"),
-    mk("gold", "Mercy", "Geita in Tanzania is famous for soda ash", "She says Geita is a lake.", "Geita is famous for gold. Soda ash is at Lake Magadi.", "MN_MINERAL_PLACE"),
-    mk("gems", "Samuel", "tanzanite is mined in Uganda", "He says all coloured gems are Ugandan.", "Tanzanite is mined only in Tanzania.", "MN_TANZANITE")
+    mk2("soda ash", "Vincent", "soda ash is mined at Lake Naivasha", "He says all Rift lakes give soda ash.", "Soda ash is mined at Lake Magadi.", "MN_MINERAL_PLACE"),
+    mk2("tanzanite", "Hannah", "tanzanite is mined in Kenya", "She says gems come from the nearest country.", "Tanzanite is mined only in Tanzania.", "MN_TANZANITE"),
+    mk2("minerals", "Zachary", "coffee is a mineral", "He says any export is a mineral.", "Coffee is a crop. Minerals are dug from the ground.", "MN_NOT_MINERAL"),
+    mk2("gold", "Mercy", "Geita in Tanzania is famous for soda ash", "She says Geita is a lake.", "Geita is famous for gold. Soda ash is at Lake Magadi.", "MN_MINERAL_PLACE"),
+    mk2("gems", "Samuel", "tanzanite is mined in Uganda", "He says all coloured gems are Ugandan.", "Tanzanite is mined only in Tanzania.", "MN_TANZANITE")
   ], H34("Which step puts a mineral in the wrong place, or calls a crop a mineral?", "Soda ash: Magadi. Tanzanite: Tanzania.", "Check each step against the minerals."))),
   fam27("mn.me.spot", `${MN2}MN_METHODS`, "spot", 3, spot39([
-    mk("limestone", "Alex", "limestone is mined in deep shafts", "He says all minerals need shafts.", "Limestone is quarried from an open pit near the surface.", "MN_METHOD_SWAP"),
-    mk("panning", "Sylvia", "panning means blasting rock with explosives", "She says panning is a loud method.", "Panning is washing gravel in water to find mineral bits.", "MN_PANNING"),
-    mk("quarrying", "Moses", "a quarry is a deep underground tunnel", "He says every mine is underground.", "A quarry is an open pit cut from the surface.", "MN_METHOD_SWAP"),
-    mk("gold panning", "Irene", "a pan is a machine that crushes rock", "She says panning needs a large machine.", "A pan is a simple dish used to wash gravel.", "MN_PANNING"),
-    mk("shafts", "Duncan", "a shaft is used to quarry limestone", "He says shafts are for stone.", "Shafts reach deep minerals. Limestone is quarried in open pits.", "MN_METHOD_SWAP")
+    mk2("limestone", "Alex", "limestone is mined in deep shafts", "He says all minerals need shafts.", "Limestone is quarried from an open pit near the surface.", "MN_METHOD_SWAP"),
+    mk2("panning", "Sylvia", "panning means blasting rock with explosives", "She says panning is a loud method.", "Panning is washing gravel in water to find mineral bits.", "MN_PANNING"),
+    mk2("quarrying", "Moses", "a quarry is a deep underground tunnel", "He says every mine is underground.", "A quarry is an open pit cut from the surface.", "MN_METHOD_SWAP"),
+    mk2("gold panning", "Irene", "a pan is a machine that crushes rock", "She says panning needs a large machine.", "A pan is a simple dish used to wash gravel.", "MN_PANNING"),
+    mk2("shafts", "Duncan", "a shaft is used to quarry limestone", "He says shafts are for stone.", "Shafts reach deep minerals. Limestone is quarried in open pits.", "MN_METHOD_SWAP")
   ], H34("Which step gives the wrong method for the mineral?", "Pit for near the surface, shaft for deep, pan for gravel.", "Check each step against the methods."))),
   fam27("tg.bu.spot", `${TG2}TG_BUGANDA`, "spot", 3, spot39([
-    mk("Buganda", "Henry", "the ruler of Buganda was called the Ntemi", "He says the king of Buganda was a Ntemi.", "The ruler of Buganda was the Kabaka. The Ntemi ruled a Nyamwezi chiefdom.", "TG_KABAKA"),
-    mk("the Katikkiro", "Prisca", "the Katikkiro was the village priest", "She says the title belongs to a priest.", "The Katikkiro was the Kabaka's chief minister.", "TG_KATIKKIRO"),
-    mk("titles", "Tom", "the Kabaka was a chief of a small Nyamwezi chiefdom", "He says Kabaka and Ntemi are the same.", "The Kabaka ruled the whole kingdom of Buganda.", "TG_KABAKA"),
-    mk("advisers", "Lydia", "the Katikkiro was the army leader at the border", "She says the chief minister led the army.", "The Katikkiro was the chief minister who helped the Kabaka rule.", "TG_KATIKKIRO"),
-    mk("the king", "Fred", "the king of Buganda was called the Katikkiro", "He says the chief minister was the king.", "The king was the Kabaka. The Katikkiro was his chief minister.", "TG_KABAKA")
+    mk2("Buganda", "Henry", "the ruler of Buganda was called the Ntemi", "He says the king of Buganda was a Ntemi.", "The ruler of Buganda was the Kabaka. The Ntemi ruled a Nyamwezi chiefdom.", "TG_KABAKA"),
+    mk2("the Katikkiro", "Prisca", "the Katikkiro was the village priest", "She says the title belongs to a priest.", "The Katikkiro was the Kabaka's chief minister.", "TG_KATIKKIRO"),
+    mk2("titles", "Tom", "the Kabaka was a chief of a small Nyamwezi chiefdom", "He says Kabaka and Ntemi are the same.", "The Kabaka ruled the whole kingdom of Buganda.", "TG_KABAKA"),
+    mk2("advisers", "Lydia", "the Katikkiro was the army leader at the border", "She says the chief minister led the army.", "The Katikkiro was the chief minister who helped the Kabaka rule.", "TG_KATIKKIRO"),
+    mk2("the king", "Fred", "the king of Buganda was called the Katikkiro", "He says the chief minister was the king.", "The king was the Kabaka. The Katikkiro was his chief minister.", "TG_KABAKA")
   ], H34("Which step gives the wrong title or job in Buganda?", "Kabaka: king. Katikkiro: chief minister. Lukiiko: council.", "Check each step against the Buganda titles."))),
   fam27("tg.ny.spot", `${TG2}TG_NYAMWEZI`, "spot", 3, spot39([
-    mk("the Nyamwezi", "Aisha", "the Nyamwezi lived in one large kingdom like Buganda", "She says all of them had one king.", "The Nyamwezi had many small chiefdoms, each under a Ntemi.", "TG_NTEMI_KING"),
-    mk("a Ntemi", "Kelvin", "a Ntemi was voted into office by all the people", "He says every Ntemi was elected.", "A Ntemi inherited the position and was advised by elders.", "TG_NTEMI_CHOSEN"),
-    mk("the chiefdoms", "Brenda", "one Ntemi ruled all of the Nyamwezi land", "She says one chief ruled all.", "Each Ntemi ruled his own small chiefdom.", "TG_NTEMI_KING"),
-    mk("choosing a Ntemi", "Hassan", "a Ntemi was chosen by the Kabaka", "He says Buganda chose Nyamwezi chiefs.", "A Ntemi inherited his place within his own family.", "TG_NTEMI_CHOSEN"),
-    mk("size", "Janet", "the Nyamwezi had one centralised kingdom", "She says they were one large state.", "The Nyamwezi lived in many small chiefdoms.", "TG_NTEMI_KING")
+    mk2("the Nyamwezi", "Aisha", "the Nyamwezi lived in one large kingdom like Buganda", "She says all of them had one king.", "The Nyamwezi had many small chiefdoms, each under a Ntemi.", "TG_NTEMI_KING"),
+    mk2("a Ntemi", "Kelvin", "a Ntemi was voted into office by all the people", "He says every Ntemi was elected.", "A Ntemi inherited the position and was advised by elders.", "TG_NTEMI_CHOSEN"),
+    mk2("the chiefdoms", "Brenda", "one Ntemi ruled all of the Nyamwezi land", "She says one chief ruled all.", "Each Ntemi ruled his own small chiefdom.", "TG_NTEMI_KING"),
+    mk2("choosing a Ntemi", "Hassan", "a Ntemi was chosen by the Kabaka", "He says Buganda chose Nyamwezi chiefs.", "A Ntemi inherited his place within his own family.", "TG_NTEMI_CHOSEN"),
+    mk2("size", "Janet", "the Nyamwezi had one centralised kingdom", "She says they were one large state.", "The Nyamwezi lived in many small chiefdoms.", "TG_NTEMI_KING")
   ], H34("Which step makes the Nyamwezi one kingdom or says a Ntemi was elected?", "Many small chiefdoms, a Ntemi who inherited.", "Check each step against the Nyamwezi."))),
   fam27("rc.ob.spot", `${RC2}RC_OBJECTIVES`, "spot", 3, spot39([
-    mk("the headquarters", "Collins", "the EAC headquarters is in Nairobi", "He says the biggest city holds it.", "The EAC headquarters is in Arusha, Tanzania.", "RC_HQ"),
-    mk("a customs union", "Lilian", "in a customs union each country taxes its partners' goods", "She says partners charge each other duty.", "In a customs union partners trade without duty and share an outside tariff.", "RC_CUSTOMS"),
-    mk("the Secretariat", "Hassan", "the EAC Secretariat sits in Kampala", "He says the Secretariat is in Uganda.", "The EAC Secretariat is in Arusha.", "RC_HQ"),
-    mk("duty", "Grace", "a customs union means goods pay duty every time they cross a border", "She says borders always tax partners.", "Partners trade freely without duty inside a customs union.", "RC_CUSTOMS"),
-    mk("the offices", "Peter", "the main EAC office is in Kigali", "He says it is in the smallest capital.", "The main EAC office is in Arusha.", "RC_HQ")
+    mk2("the headquarters", "Collins", "the EAC headquarters is in Nairobi", "He says the biggest city holds it.", "The EAC headquarters is in Arusha, Tanzania.", "RC_HQ"),
+    mk2("a customs union", "Lilian", "in a customs union each country taxes its partners' goods", "She says partners charge each other duty.", "In a customs union partners trade without duty and share an outside tariff.", "RC_CUSTOMS"),
+    mk2("the Secretariat", "Hassan", "the EAC Secretariat sits in Kampala", "He says the Secretariat is in Uganda.", "The EAC Secretariat is in Arusha.", "RC_HQ"),
+    mk2("duty", "Grace", "a customs union means goods pay duty every time they cross a border", "She says borders always tax partners.", "Partners trade freely without duty inside a customs union.", "RC_CUSTOMS"),
+    mk2("the offices", "Peter", "the main EAC office is in Kigali", "He says it is in the smallest capital.", "The main EAC office is in Arusha.", "RC_HQ")
   ], H34("Which step gives the wrong headquarters or the wrong meaning of customs union?", "Arusha is the headquarters.", "Check each step against the EAC."))),
   fam27("rc.be.spot", `${RC2}RC_BENEFITS`, "spot", 3, spot39([
-    mk("a common market", "Dan", "only the biggest country gains from the EAC", "He says small partners lose.", "All members gain a bigger market.", "RC_BENEFIT_ONE"),
-    mk("workers", "Everlyne", "people cannot move to work in another EAC country", "She says the market allows no movement.", "The common market allows free movement of people, goods and services.", "RC_NO_MOVE"),
-    mk("who gains", "Mark", "Rwanda gains nothing from a bigger market", "He says only large countries benefit.", "Small countries gain most from a larger market.", "RC_BENEFIT_ONE"),
-    mk("travel", "Janet", "a Kenyan cannot do business in Tanzania in the common market", "She says business stops at the border.", "The common market lets people set up business across borders.", "RC_NO_MOVE"),
-    mk("trade", "Hassan", "only one member gains from shared roads", "He says shared roads help one country only.", "Shared roads help all the members trade.", "RC_BENEFIT_ONE")
+    mk2("a common market", "Dan", "only the biggest country gains from the EAC", "He says small partners lose.", "All members gain a bigger market.", "RC_BENEFIT_ONE"),
+    mk2("workers", "Everlyne", "people cannot move to work in another EAC country", "She says the market allows no movement.", "The common market allows free movement of people, goods and services.", "RC_NO_MOVE"),
+    mk2("who gains", "Mark", "Rwanda gains nothing from a bigger market", "He says only large countries benefit.", "Small countries gain most from a larger market.", "RC_BENEFIT_ONE"),
+    mk2("travel", "Janet", "a Kenyan cannot do business in Tanzania in the common market", "She says business stops at the border.", "The common market lets people set up business across borders.", "RC_NO_MOVE"),
+    mk2("trade", "Hassan", "only one member gains from shared roads", "He says shared roads help one country only.", "Shared roads help all the members trade.", "RC_BENEFIT_ONE")
   ], H34("Which step says only one country gains, or that people cannot move?", "All members gain and people can move.", "Check each step against the benefits."))),
   fam27("rc.pr.spot", `${RC2}RC_PROBLEMS`, "spot", 3, spot39([
-    mk("border delays", "Henry", "singing the anthem at the gate cuts border delays", "He says songs speed up lorries.", "One-stop border posts cut delays.", "RC_PROBLEM_SOLUTION"),
-    mk("disputes", "Prisca", "a dispute between partner states should be settled by force", "She says soldiers should decide.", "Disputes are settled by talks and the EAC Court of Justice.", "RC_WAR"),
-    mk("trade barriers", "Tom", "adding more forms to fill in helps trade between partners", "He says forms speed up trade.", "Removing non-tariff barriers and fewer checks help trade.", "RC_PROBLEM_SOLUTION"),
-    mk("quarrels", "Lydia", "closing the border for ever ends a quarrel", "She says no contact means no quarrel.", "Talks and the Court of Justice settle quarrels peacefully.", "RC_WAR"),
-    mk("roads", "Fred", "cutting the number of lorries solves poor roads", "He says fewer lorries mend roads.", "Building and linking roads and railways helps trade.", "RC_PROBLEM_SOLUTION")
+    mk2("border delays", "Henry", "singing the anthem at the gate cuts border delays", "He says songs speed up lorries.", "One-stop border posts cut delays.", "RC_PROBLEM_SOLUTION"),
+    mk2("disputes", "Prisca", "a dispute between partner states should be settled by force", "She says soldiers should decide.", "Disputes are settled by talks and the EAC Court of Justice.", "RC_WAR"),
+    mk2("trade barriers", "Tom", "adding more forms to fill in helps trade between partners", "He says forms speed up trade.", "Removing non-tariff barriers and fewer checks help trade.", "RC_PROBLEM_SOLUTION"),
+    mk2("quarrels", "Lydia", "closing the border for ever ends a quarrel", "She says no contact means no quarrel.", "Talks and the Court of Justice settle quarrels peacefully.", "RC_WAR"),
+    mk2("roads", "Fred", "cutting the number of lorries solves poor roads", "He says fewer lorries mend roads.", "Building and linking roads and railways helps trade.", "RC_PROBLEM_SOLUTION")
   ], H34("Which step pairs a problem with the wrong solution, or uses force?", "Match each EAC problem to its cure.", "Check each step against the solutions."))),
   fam27("cz.rr.spot", `${CZ3}CZ_RIGHTS_RESP`, "spot", 3, spot39([
-    mk("duties", "Gilbert", "paying taxes is a right of a citizen", "He says paying is something received.", "Paying taxes is a responsibility. Free movement is a right.", "CZ_RIGHT_RESP"),
-    mk("voting", "Hellen", "a Kenyan citizen can vote at 14 years", "She says children can vote.", "A Kenyan citizen can vote at 18.", "CZ_VOTE_AGE"),
-    mk("rights", "Abdi", "obeying the law is a right of a citizen", "He says obeying is something we receive.", "Obeying the law is a responsibility.", "CZ_RIGHT_RESP"),
-    mk("voting age", "Beth", "a Kenyan citizen can vote at 21 years only", "She says only adults over 21 vote.", "A Kenyan citizen can vote at 18.", "CZ_VOTE_AGE"),
-    mk("responsibility", "Collins", "owning property is a responsibility of a citizen", "He says owning is a duty.", "Owning property is a right.", "CZ_RIGHT_RESP")
+    mk2("duties", "Gilbert", "paying taxes is a right of a citizen", "He says paying is something received.", "Paying taxes is a responsibility. Free movement is a right.", "CZ_RIGHT_RESP"),
+    mk2("voting", "Hellen", "a Kenyan citizen can vote at 14 years", "She says children can vote.", "A Kenyan citizen can vote at 18.", "CZ_VOTE_AGE"),
+    mk2("rights", "Abdi", "obeying the law is a right of a citizen", "He says obeying is something we receive.", "Obeying the law is a responsibility.", "CZ_RIGHT_RESP"),
+    mk2("voting age", "Beth", "a Kenyan citizen can vote at 21 years only", "She says only adults over 21 vote.", "A Kenyan citizen can vote at 18.", "CZ_VOTE_AGE"),
+    mk2("responsibility", "Collins", "owning property is a responsibility of a citizen", "He says owning is a duty.", "Owning property is a right.", "CZ_RIGHT_RESP")
   ], H34("Which step sorts a right or duty wrongly, or gives the wrong voting age?", "Rights are what we may enjoy. Duties are what we must do.", "Check each step against rights and duties."))),
   fam27("hr.ca.spot", `${HR3}HR_CATEGORIES`, "spot", 3, spot39([
-    mk("the vote", "Patrick", "the right to vote is an economic right", "He says voting is about money.", "The right to vote is a political right.", "HR_CAT_SWAP"),
-    mk("school", "Hellen", "the right to education is a political right", "She says school is about politics.", "Education is a social right.", "HR_EDU"),
-    mk("standing for office", "Wilfred", "standing for election is an economic right", "He says candidates earn money.", "Standing for election is a political right.", "HR_CAT_SWAP"),
-    mk("health", "Gloria", "the right to health care is a political right", "She says hospitals are political.", "Health care is a social right.", "HR_EDU"),
-    mk("work", "Said", "the right to work is a political right", "He says jobs are political.", "The right to work is an economic right.", "HR_CAT_SWAP")
+    mk2("the vote", "Patrick", "the right to vote is an economic right", "He says voting is about money.", "The right to vote is a political right.", "HR_CAT_SWAP"),
+    mk2("school", "Hellen", "the right to education is a political right", "She says school is about politics.", "Education is a social right.", "HR_EDU"),
+    mk2("standing for office", "Wilfred", "standing for election is an economic right", "He says candidates earn money.", "Standing for election is a political right.", "HR_CAT_SWAP"),
+    mk2("health", "Gloria", "the right to health care is a political right", "She says hospitals are political.", "Health care is a social right.", "HR_EDU"),
+    mk2("work", "Said", "the right to work is a political right", "He says jobs are political.", "The right to work is an economic right.", "HR_CAT_SWAP")
   ], H34("Which step puts a right in the wrong category?", "Political: vote. Social: school, health. Economic: work, property.", "Check each step against the categories."))),
   fam27("pc.ca.spot", `${PC5}PC_CAUSES`, "spot", 3, spot39([
-    mk("causes", "Edwin", "conflicts have no cause and just happen", "He says there is never a reason.", "Conflicts have causes such as quarrels over land and water.", "PC_NO_CAUSE"),
-    mk("settling quarrels", "Lucy", "fighting is the best way to settle a quarrel", "She says the winner is right.", "Quarrels are settled by talking and listening.", "PC_VIOLENCE_SOLVE"),
-    mk("reasons", "Salim", "competition for water causes no trouble", "He says sharing is never a problem.", "Competition for scarce water and pasture causes conflict.", "PC_NO_CAUSE"),
-    mk("quarrels", "Dorcas", "a fight ends a quarrel for ever", "She says violence ends all trouble.", "Fighting hurts people and makes the quarrel worse.", "PC_VIOLENCE_SOLVE"),
-    mk("unfairness", "Joseph", "unfair sharing of resources has nothing to do with conflict", "He says people do not mind unfairness.", "Unfair sharing makes people angry and can cause conflict.", "PC_NO_CAUSE")
+    mk2("causes", "Edwin", "conflicts have no cause and just happen", "He says there is never a reason.", "Conflicts have causes such as quarrels over land and water.", "PC_NO_CAUSE"),
+    mk2("settling quarrels", "Lucy", "fighting is the best way to settle a quarrel", "She says the winner is right.", "Quarrels are settled by talking and listening.", "PC_VIOLENCE_SOLVE"),
+    mk2("reasons", "Salim", "competition for water causes no trouble", "He says sharing is never a problem.", "Competition for scarce water and pasture causes conflict.", "PC_NO_CAUSE"),
+    mk2("quarrels", "Dorcas", "a fight ends a quarrel for ever", "She says violence ends all trouble.", "Fighting hurts people and makes the quarrel worse.", "PC_VIOLENCE_SOLVE"),
+    mk2("unfairness", "Joseph", "unfair sharing of resources has nothing to do with conflict", "He says people do not mind unfairness.", "Unfair sharing makes people angry and can cause conflict.", "PC_NO_CAUSE")
   ], H34("Which step says conflict has no cause, or that fighting is the answer?", "Conflicts have causes and talk settles them.", "Check each step against the causes."))),
   fam27("pc.pr.spot", `${PC5}PC_PROMOTE`, "spot", 3, spot39([
-    mk("peace", "Christine", "taking revenge promotes peace", "She says hitting back ends trouble.", "Forgiving and talking promote peace.", "PC_REVENGE"),
-    mk("rumours", "Francis", "spreading rumours is harmless", "He says words cannot hurt.", "Rumours start or increase conflict.", "PC_RUMOUR"),
-    mk("hurt", "Wilson", "paying back a wrong with a wrong keeps peace", "He says an eye for an eye is peace.", "Revenge brings more conflict. Talking and forgiving bring peace.", "PC_REVENGE"),
-    mk("gossip", "Ruth", "telling everyone a story you have not checked helps peace", "She says sharing news is good.", "Unchecked stories can start conflict.", "PC_RUMOUR"),
-    mk("revenge", "Stephen", "attacking those who hurt you shows love for peace", "He says strength proves peace.", "Peaceful people forgive and settle things by talk.", "PC_REVENGE")
+    mk2("peace", "Christine", "taking revenge promotes peace", "She says hitting back ends trouble.", "Forgiving and talking promote peace.", "PC_REVENGE"),
+    mk2("rumours", "Francis", "spreading rumours is harmless", "He says words cannot hurt.", "Rumours start or increase conflict.", "PC_RUMOUR"),
+    mk2("hurt", "Wilson", "paying back a wrong with a wrong keeps peace", "He says an eye for an eye is peace.", "Revenge brings more conflict. Talking and forgiving bring peace.", "PC_REVENGE"),
+    mk2("gossip", "Ruth", "telling everyone a story you have not checked helps peace", "She says sharing news is good.", "Unchecked stories can start conflict.", "PC_RUMOUR"),
+    mk2("revenge", "Stephen", "attacking those who hurt you shows love for peace", "He says strength proves peace.", "Peaceful people forgive and settle things by talk.", "PC_REVENGE")
   ], H34("Which step says revenge or rumours help peace?", "Talk, forgive and check the facts.", "Check each step against what builds peace."))),
   fam27("gr.so.spot", `${GR3}GR_SOURCES`, "spot", 3, spot39([
-    mk("taxes", "Titus", "a bank loan is a tax", "He says all money for government is tax.", "A tax is compulsory and not repaid. A loan must be repaid.", "GR_LOAN_TAX"),
-    mk("collecting tax", "Rachel", "the police collect national taxes", "She says the police take tax from shops.", "The Kenya Revenue Authority collects national taxes.", "GR_COLLECTOR"),
-    mk("revenue", "Collins", "a loan from another country is a tax", "He says borrowed money is tax.", "A loan is borrowed and must be repaid. A tax is not repaid.", "GR_LOAN_TAX"),
-    mk("the collector", "Beatrice", "the county assembly collects the national income tax", "She says the assembly collects it.", "The Kenya Revenue Authority collects national taxes.", "GR_COLLECTOR"),
-    mk("tax", "Elijah", "a gift from a friend is a tax", "He says money from anywhere is tax.", "A tax is a compulsory payment to the government.", "GR_LOAN_TAX")
+    mk2("taxes", "Titus", "a bank loan is a tax", "He says all money for government is tax.", "A tax is compulsory and not repaid. A loan must be repaid.", "GR_LOAN_TAX"),
+    mk2("collecting tax", "Rachel", "the police collect national taxes", "She says the police take tax from shops.", "The Kenya Revenue Authority collects national taxes.", "GR_COLLECTOR"),
+    mk2("revenue", "Collins", "a loan from another country is a tax", "He says borrowed money is tax.", "A loan is borrowed and must be repaid. A tax is not repaid.", "GR_LOAN_TAX"),
+    mk2("the collector", "Beatrice", "the county assembly collects the national income tax", "She says the assembly collects it.", "The Kenya Revenue Authority collects national taxes.", "GR_COLLECTOR"),
+    mk2("tax", "Elijah", "a gift from a friend is a tax", "He says money from anywhere is tax.", "A tax is a compulsory payment to the government.", "GR_LOAN_TAX")
   ], H34("Which step calls a loan or a gift a tax, or names the wrong collector?", "KRA collects taxes. A loan is repaid.", "Check each step against the sources of revenue."))),
   fam27("gr.sp.spot", `${GR3}GR_SPENDING`, "spot", 3, spot39([
-    mk("teachers", "Allan", "the county government pays the teachers", "He says counties run all schools.", "The national government pays teachers through the Teachers Service Commission.", "GR_LEVEL_SWAP"),
-    mk("taxes", "Brenda", "tax money is kept by officials and not spent on services", "She says tax pays nothing.", "Tax money pays for roads, schools, hospitals and security.", "GR_TAX_WASTE"),
-    mk("defence", "Duncan", "the county government pays for the army", "He says counties run the defence forces.", "Defence is paid for by the national government.", "GR_LEVEL_SWAP"),
-    mk("services", "Janet", "taxes are not used to build schools", "She says schools are paid for in other ways.", "Tax money helps build schools and pay teachers.", "GR_TAX_WASTE"),
-    mk("dispensaries", "Stephen", "the national government builds every village dispensary", "He says county clinics are national.", "County governments run county health services such as dispensaries.", "GR_LEVEL_SWAP")
+    mk2("teachers", "Allan", "the county government pays the teachers", "He says counties run all schools.", "The national government pays teachers through the Teachers Service Commission.", "GR_LEVEL_SWAP"),
+    mk2("taxes", "Brenda", "tax money is kept by officials and not spent on services", "She says tax pays nothing.", "Tax money pays for roads, schools, hospitals and security.", "GR_TAX_WASTE"),
+    mk2("defence", "Duncan", "the county government pays for the army", "He says counties run the defence forces.", "Defence is paid for by the national government.", "GR_LEVEL_SWAP"),
+    mk2("services", "Janet", "taxes are not used to build schools", "She says schools are paid for in other ways.", "Tax money helps build schools and pay teachers.", "GR_TAX_WASTE"),
+    mk2("dispensaries", "Stephen", "the national government builds every village dispensary", "He says county clinics are national.", "County governments run county health services such as dispensaries.", "GR_LEVEL_SWAP")
   ], H34("Which step gives the wrong level of government, or says taxes pay for nothing?", "National: defence, teachers. County: local health, roads.", "Check each step against who pays for what."))),
   fam27("pr.kw.spot", `${PR5}PR_KEYWORDS`, "spot", 3, spot39([
-    mk("the preamble", "Duncan", "the preamble is the last part of the Constitution", "He says the opening statement is at the back.", "The preamble is at the beginning. Pre means before.", "PR_WHAT"),
-    mk("power", "Janet", "the President holds the sovereign power in the preamble", "She says the leader holds the power.", "The preamble begins with We, the people of Kenya. The people hold sovereign power.", "PR_SOVEREIGN_WHO"),
-    mk("position", "Moses", "the preamble comes at the end as a closing note", "He says every document ends with the preamble.", "The preamble opens the Constitution.", "PR_WHAT"),
-    mk("who rules", "Ruth", "sovereign power belongs to the Parliament of Kenya", "She says the lawmakers hold all power.", "The people of Kenya hold the sovereign power.", "PR_SOVEREIGN_WHO"),
-    mk("the preamble", "Allan", "the preamble is a list of counties", "He says it names the 47 counties.", "The preamble is the opening statement of the aims and values of the Constitution.", "PR_WHAT")
+    mk2("the preamble", "Duncan", "the preamble is the last part of the Constitution", "He says the opening statement is at the back.", "The preamble is at the beginning. Pre means before.", "PR_WHAT"),
+    mk2("power", "Janet", "the President holds the sovereign power in the preamble", "She says the leader holds the power.", "The preamble begins with We, the people of Kenya. The people hold sovereign power.", "PR_SOVEREIGN_WHO"),
+    mk2("position", "Moses", "the preamble comes at the end as a closing note", "He says every document ends with the preamble.", "The preamble opens the Constitution.", "PR_WHAT"),
+    mk2("who rules", "Ruth", "sovereign power belongs to the Parliament of Kenya", "She says the lawmakers hold all power.", "The people of Kenya hold the sovereign power.", "PR_SOVEREIGN_WHO"),
+    mk2("the preamble", "Allan", "the preamble is a list of counties", "He says it names the 47 counties.", "The preamble is the opening statement of the aims and values of the Constitution.", "PR_WHAT")
   ], H34("Which step puts the preamble in the wrong place or gives the wrong holder of power?", "It opens the Constitution. The people hold sovereign power.", "Check each step against the preamble.")))
 ];
 
@@ -90063,7 +90868,7 @@ var socialstudies_g6_default = {
   icon: "book",
   description: "Grade 6 Social Studies from the CBC design",
   map: { skills: SKILLS39, substrands: SUBSTRANDS38, outcomes: OUTCOMES38, misFeedback: MIS_FEEDBACK38 },
-  families: [...FAMILIES121, ...FAMILIES122, ...FAMILIES123, ...FAMILIES124, ...FAMILIES125, ...FAMILIES126],
+  families: [...FAMILIES122, ...FAMILIES123, ...FAMILIES124, ...FAMILIES125, ...FAMILIES126, ...FAMILIES127],
   // add each family file you write: [...A, ...B]
   familyFiles: ["socialstudies_g6_a.js", "socialstudies_g6_b.js", "socialstudies_g6_c.js", "socialstudies_g6_d.js", "socialstudies_g6_e.js", "socialstudies_g6_f.js"],
   // the same files by name (a phone build drops them while nothing is signed)
@@ -91559,7 +92364,7 @@ var EO = "SOCIAL.ENTREPRENEURIAL_OPPORTUN.";
 var HO3 = "PEOPLE.HUMAN_ORIGIN.";
 var EC2 = "PEOPLE.EARLY_CIVILISATION.";
 var T9 = (head, rows) => ({ t: { head, rows } });
-var FAMILIES127 = [
+var FAMILIES128 = [
   // ---------------------------------------------------------------- SE_ABILITIES
   fam28("se.ab.which", `${SE4}SE_ABILITIES`, "direct", 1, choose40([
     Q6("Which of these is an interest?", "Liking to draw cartoons in free time", w12("SE_INTEREST_ABILITY", "Winning the school drawing contest", "Drawing a perfect map in a test", "Being the best artist in the class"), "An interest is what a person likes to do. A prize shows an ability."),
@@ -91716,7 +92521,7 @@ var DV = "PEOPLE.DIVERSITY_AND_INTERPERSO.";
 var PE4 = "PEOPLE.PEACEFUL_COEXISTENCE.";
 var CS5 = "COMMUN.COMMUNITY_SERVICE_LEARNI.";
 var T10 = (head, rows) => ({ t: { head, rows } });
-var FAMILIES128 = [
+var FAMILIES129 = [
   // ---------------------------------------------------------------- SL_FORMS
   fam28("sl.fo.which", `${SL3}SL_FORMS`, "direct", 1, choose40([
     Q6("Which is true about slavery today?", "It still exists in forms such as trafficking", w12("SL_ONLY_PAST", "It ended completely long ago", "It exists only in books", "It exists only in one country"), "Slavery has not ended. It takes new forms, such as trafficking and forced labour."),
@@ -91938,7 +92743,7 @@ var diffCases = DIFF.map(([a, b, A5, B6, hrs]) => Q6(
   [`${b - a} hours|MM_DEGREE_HOUR`, `${hrs + 1} hours|MM_DEGREE_HOUR`, `${Math.max(1, hrs - 1)} hours|MM_DEGREE_HOUR`],
   `The difference is ${b - a} degrees. Divide by 15 to get ${hrs} hours.`
 ));
-var FAMILIES129 = [
+var FAMILIES130 = [
   // ---------------------------------------------------------------- HI_SOURCES
   fam28("hi.so.which", `${HI}HI_SOURCES`, "direct", 1, choose40([
     Q6("Which is a source of history?", "Oral stories told by elders", w12("HI_ONLY_BOOKS", "Only textbooks", "Only newspapers", "Only films"), "History comes from many sources, including oral stories."),
@@ -92131,7 +92936,7 @@ var modeCases = DATA.map((d, i) => Q6(
   [...uniq([d.mean, d.median, d.s[0], d.s[4]], d.mode).slice(0, 3).map((x) => `${x}|FW_MODE_MEAN`)],
   `The mode is the number that occurs most often. Here it is ${d.mode}.`
 ));
-var FAMILIES130 = [
+var FAMILIES131 = [
   // ---------------------------------------------------------------- ES_ORIGIN_SIZE
   fam28("es.or.which", `${ES}ES_ORIGIN_SIZE`, "direct", 1, choose40([
     Q6("What is the shape of the earth?", "Almost round, like a ball", w12("ES_FLAT", "Flat like a plate", "Shaped like a cube", "Long like a pencil"), "The earth is almost a sphere."),
@@ -92251,7 +93056,7 @@ var FAMILIES130 = [
 var PD6 = "POLITI.POLITICAL_DEVELOPMENT_IN.";
 var CK3 = "POLITI.THE_CONSTITUTION_OF_KENY.";
 var HR4 = "POLITI.HUMAN_RIGHTS.";
-var FAMILIES131 = [
+var FAMILIES132 = [
   // ---------------------------------------------------------------- PD_SCRAMBLE
   fam28("pd.sc.which", `${PD6}PD_SCRAMBLE`, "direct", 1, choose40([
     Q6("Who made the decisions at Berlin about claiming Africa?", "European powers", w12("PD_ASK_AFRICANS", "African leaders", "The people of Africa together", "Traders from Asia"), "European powers decided. No African leaders were at the table."),
@@ -92408,7 +93213,7 @@ var FAMILIES131 = [
 var AD2 = "POLITI.AFRICAN_DIASPORAS.";
 var CZ4 = "POLITI.CITIZENSHIP.";
 var T12 = (head, rows) => ({ t: { head, rows } });
-var FAMILIES132 = [
+var FAMILIES133 = [
   // ---------------------------------------------------------------- AD_FACTORS
   fam28("ad.fa.which", `${AD2}AD_FACTORS`, "direct", 1, choose40([
     Q6("What is a diaspora?", "A people living away from their homeland", w12("AD_DIASPORA_WORD", "The original homeland of the whole people", "A kind of government run by Africans", "A kind of tax"), "A diaspora lives outside the original homeland."),
@@ -92534,7 +93339,7 @@ var HR5 = "POLITI.HUMAN_RIGHTS.";
 var CZ5 = "POLITI.CITIZENSHIP.";
 var SP7 = (code, who, topic, bad2, fix) => S22(`${who} answers a question on ${topic}. Which step has the mistake?`, [`Step 1: ${who} reads the question carefully.`, `!Step 2: ${bad2}`, `Step 3: ${who} writes the answer down.`], fix, code);
 var HINT = { h: ["Check each step against what you know.", "Only one step is false."], s1: "Check each step in turn." };
-var FAMILIES133 = [
+var FAMILIES134 = [
   fam28("se.em.spot", `${SE5}SE_EMOTIONS`, "spot", 3, spot40([
     SP7("SE_ANGER_BAD", "Amani", "managing anger", "Amani says anger is wrong and should never be felt.", "Anger is a normal feeling. We learn to manage what we do with it."),
     SP7("SE_REVENGE", "Brenda", "a broken pencil", "Brenda says she should break her friend's pencil too.", "Hitting back makes things worse. Breathe, calm down and talk."),
@@ -92708,7 +93513,7 @@ var socialstudies_g7_default = {
   icon: "book",
   description: "Grade 7 Social Studies from the CBC design",
   map: { skills: SKILLS40, substrands: SUBSTRANDS39, outcomes: OUTCOMES39, misFeedback: MIS_FEEDBACK39 },
-  families: [...FAMILIES127, ...FAMILIES128, ...FAMILIES129, ...FAMILIES130, ...FAMILIES131, ...FAMILIES132, ...FAMILIES133],
+  families: [...FAMILIES128, ...FAMILIES129, ...FAMILIES130, ...FAMILIES131, ...FAMILIES132, ...FAMILIES133, ...FAMILIES134],
   // add each family file you write: [...A, ...B]
   familyFiles: ["socialstudies_g7_a.js", "socialstudies_g7_b.js", "socialstudies_g7_c.js", "socialstudies_g7_d.js", "socialstudies_g7_e.js", "socialstudies_g7_f.js", "socialstudies_g7_g.js"],
   // the same files by name (a phone build drops them while nothing is signed)
@@ -93638,7 +94443,7 @@ var SA5 = "SOCIAL.SELF_ESTEEM_ASSESSMENT.";
 var CS7 = "COMMUN.COMMUNITY_SERVICE_LEARNI.";
 var SC5 = "PEOPLE.SCIENTIFIC_THEORY_ABOUT_.";
 var EC4 = "PEOPLE.EARLY_CIVILISATION.";
-var FAMILIES134 = [
+var FAMILIES135 = [
   // ---------------------------------------------------------------- PERSONALITY
   fam29("si.pt.trait", `${SI}PERSONALITY`, "direct", 1, choose41([
     C13("G8_PT_TRAIT_FEELING", "Which is a personality trait?", "Being patient", ["Feeling angry today", "Feeling tired now", "Feeling hungry at noon"], "A trait is how a person usually is. A feeling comes and goes."),
@@ -93779,7 +94584,7 @@ var PG2 = "PEOPLE.POPULATION_GROWTH_IN_AFR.";
 var DV3 = "PEOPLE.DIVERSITY_AND_INTERPERSO.";
 var PC6 = "PEOPLE.PEACEFUL_CONFLICT_RESOLU.";
 var MP = "NATURA.MAP_READING_AND_INTERPRE.";
-var FAMILIES135 = [
+var FAMILIES136 = [
   // ---------------------------------------------------------------- TRANS_SAHARAN
   fam29("ts.tr.how", `${TS}TRANS_SAHARAN`, "direct", 1, choose41([
     C13("G8_TS_ROUTE", "How did traders cross the Sahara?", "By camel caravans", ["By ship", "By train", "By aeroplane"], "The trade crossed the desert by camel caravans."),
@@ -93921,7 +94726,7 @@ var HS4 = "NATURA.HISTORICAL_SITES_AND_MON.";
 var CN2 = "POLITI.THE_CONSTITUTION_OF_KENY.";
 var HR6 = "POLITI.HUMAN_RIGHTS.";
 var CZ6 = "POLITI.CITIZENSHIP.";
-var FAMILIES136 = [
+var FAMILIES137 = [
   // ---------------------------------------------------------------- CLIMATE_AFRICA
   fam29("wc.cl.factors", `${WC3}CLIMATE_AFRICA`, "direct", 1, choose41([
     C13("G8_CL_LAT", "Which factors affect climate?", "Latitude, altitude, distance from the sea, currents and winds", ["Only latitude", "Only the colour of the soil", "Only the number of people"], "Many factors affect climate."),
@@ -94066,7 +94871,7 @@ var socialstudies_g8_default = {
   icon: "book",
   description: "Grade 8 Social Studies from the CBC design",
   map: { skills: SKILLS41, substrands: SUBSTRANDS40, outcomes: OUTCOMES40, misFeedback: MIS_FEEDBACK40 },
-  families: [...FAMILIES134, ...FAMILIES135, ...FAMILIES136],
+  families: [...FAMILIES135, ...FAMILIES136, ...FAMILIES137],
   // add each family file you write: [...A, ...B]
   familyFiles: ["socialstudies_g8_a.js", "socialstudies_g8_b.js", "socialstudies_g8_c.js"],
   // the same files by name (a phone build drops them while nothing is signed)
@@ -95010,7 +95815,7 @@ var PO = "PEOPLE.POVERTY_REDUCTION.";
 var PP4 = "PEOPLE.POPULATION_STRUCTURE.";
 var PE6 = "PEOPLE.PEACEFUL_CONFLICT_RESOLU.";
 var HR7 = "PEOPLE.HEALTHY_RELATIONSHIPS.";
-var FAMILIES137 = [
+var FAMILIES138 = [
   ...S24("pw", PC7, "PATHWAYS", ["PW_NUMBER", "PW_FACTOR", "PW_NAME"], ["There are three pathways: STEM, Social Sciences, and Arts and Sports Science.", "Choose by interests, abilities and career goals."], [
     ["How many senior school pathways are there?", "Three", "Two pathways only", "Five different pathways", "Seven different pathways"],
     ["Which should guide a learner's choice of pathway?", "Her interests, abilities and goals", "Only where her friends are going", "Only what her neighbour chose", "Only the shortest route"],
@@ -95194,7 +95999,7 @@ var CK5 = "POLITI.THE_CONSTITUTION_OF_KENY.";
 var CE4 = "POLITI.CIVIC_ENGAGEMENT_IN_GOVE.";
 var BR = "POLITI.KENYA_S_BILL_OF_RIGHTS.";
 var CG3 = "POLITI.CULTURAL_GLOBALISATION.";
-var FAMILIES138 = [
+var FAMILIES139 = [
   ...S24("tm", TM, "TOPO_MAPS", ["TM_CONTOUR", "TM_SECTION", "TM_HUMAN"], ["Contour lines show the height of the land.", "A cross-section shows the shape of the land along a line."], [
     ["What do contour lines show?", "The height of the land", "The roads of a town", "The names of the farms", "The rainfall of a place"],
     ["What does a cross-section show?", "The shape of the land along a line", "The map's title and date", "The names of all the towns", "The colours of the soil"],
@@ -95378,7 +96183,7 @@ var socialstudies_g9_default = {
   icon: "book",
   description: "Grade 9 Social Studies from the CBC design",
   map: { skills: SKILLS42, substrands: SUBSTRANDS41, outcomes: OUTCOMES41, misFeedback: MIS_FEEDBACK41 },
-  families: [...FAMILIES137, ...FAMILIES138],
+  families: [...FAMILIES138, ...FAMILIES139],
   // add each family file you write: [...A, ...B]
   familyFiles: ["socialstudies_g9_a.js", "socialstudies_g9_b.js"],
   // the same files by name (a phone build drops them while nothing is signed)
@@ -95481,7 +96286,7 @@ var substrandsOf = (subject) => subjectDef(subject)?.substrands || {};
 
 // src/ai-tutor/content/families/gaps.js
 var fam31 = (def) => family({ reviewed: false, ...def });
-var FAMILIES139 = [
+var FAMILIES140 = [
   fam31({
     id: "g7.dec.tiles-row",
     skill: "G6_DECIMALS_MUL",
@@ -95789,21 +96594,21 @@ var FAMILIES139 = [
     rung: 2,
     form: "table",
     draw: () => {
-      const P14 = pick([1e4, 2e4, 4e4, 5e4]), R4 = pick([5, 10, 20]);
-      return { P: P14, R: R4 };
+      const P14 = pick([1e4, 2e4, 4e4, 5e4]), R5 = pick([5, 10, 20]);
+      return { P: P14, R: R5 };
     },
-    make: ({ P: P14, R: R4 }) => {
-      const A1 = P14 * (1 + R4 / 100), A22 = A1 * (1 + R4 / 100);
+    make: ({ P: P14, R: R5 }) => {
+      const A1 = P14 * (1 + R5 / 100), A22 = A1 * (1 + R5 / 100);
       return {
-        question: `Read this SACCO table. Each year adds ${R4}% to what is there at the start: compound interest. What goes in the empty box, in shillings?`,
+        question: `Read this SACCO table. Each year adds ${R5}% to what is there at the start: compound interest. What goes in the empty box, in shillings?`,
         model: { type: "table", data: { head: ["Year", "Start (sh)", "End (sh)"], rows: [{ cells: ["1", commas(P14), commas(A1)] }, { cells: ["2", commas(A1), "?"] }] } },
         answer: A22,
-        wrong: [[P14 + 2 * (P14 * R4) / 100, `That is simple interest. Year 2's interest is worked on the new amount.`], [A22 - P14, "That is only the interest. The table asks for the whole amount at the end of the year."], [A1 * R4 / 100, "That is the interest in year 2. Add it to the amount at the start of the year."]],
-        hints: ["Read the amount at the start of year 2.", `Add ${R4}% of that amount.`],
-        steps: [`Start of year 2: ${sh(A1)}.`, `Interest: ${R4}% of ${commas(A1)} = ${sh(A1 * R4 / 100)}.`, `End of year 2: ${sh(A22)}.`]
+        wrong: [[P14 + 2 * (P14 * R5) / 100, `That is simple interest. Year 2's interest is worked on the new amount.`], [A22 - P14, "That is only the interest. The table asks for the whole amount at the end of the year."], [A1 * R5 / 100, "That is the interest in year 2. Add it to the amount at the start of the year."]],
+        hints: ["Read the amount at the start of year 2.", `Add ${R5}% of that amount.`],
+        steps: [`Start of year 2: ${sh(A1)}.`, `Interest: ${R5}% of ${commas(A1)} = ${sh(A1 * R5 / 100)}.`, `End of year 2: ${sh(A22)}.`]
       };
     },
-    check: ({ P: P14, R: R4 }, a) => Math.abs(a / (1 + R4 / 100) ** 2 - P14) < 1e-6
+    check: ({ P: P14, R: R5 }, a) => Math.abs(a / (1 + R5 / 100) ** 2 - P14) < 1e-6
   })
 ];
 
@@ -95820,7 +96625,7 @@ var shuffle10 = (a) => {
   return b;
 };
 var opts = (items9, rightText, why) => items9.map((t) => ({ text: t, right: t === rightText, why: t === rightText ? void 0 : typeof why === "function" ? why(t) : why }));
-var FAMILIES140 = [
+var FAMILIES141 = [
   // ================================================================ GRADE 1
   fam32({
     id: "g1.add.got-more",
@@ -96673,7 +97478,7 @@ var words = (n) => {
   return s.join(" ");
 };
 var ROMAN = { 2: "II", 3: "III", 4: "IV", 7: "VII", 8: "VIII", 9: "IX" };
-var FAMILIES141 = [
+var FAMILIES142 = [
   // ======================================================================
   // WHOLE NUMBERS
   // ======================================================================
@@ -97388,13 +98193,13 @@ var FAMILIES141 = [
     form: "direct",
     draw: () => {
       const T18 = pick(["proper", "improper", "mixed"]);
-      const mk2 = (t) => {
+      const mk3 = (t) => {
         const d = randInt(3, 9);
         return t === "proper" ? `${randInt(1, d - 1)}/${d}` : t === "improper" ? `${randInt(d + 1, 2 * d - 1)}/${d}` : `${randInt(1, 4)} ${randInt(1, d - 1)}/${d}`;
       };
       const others = ["proper", "improper", "mixed"].filter((t) => t !== T18);
       const kinds = [T18, pick(others), pick(others), pick(others)];
-      const texts = kinds.map(mk2);
+      const texts = kinds.map(mk3);
       const val = (x) => {
         const m20 = x.match(/^(?:(\d+) )?(\d+)\/(\d+)$/);
         return ((Number(m20[1] || 0) * Number(m20[3]) + Number(m20[2])) / Number(m20[3])).toFixed(6);
@@ -97458,11 +98263,11 @@ var FAMILIES141 = [
         for (let j = 0; j < counts[i]; j++) list2.push(t);
       });
       list2.sort(() => Math.random() - 0.5);
-      const mk2 = (t) => {
+      const mk3 = (t) => {
         const d = randInt(3, 8);
         return t === "proper" ? `${randInt(1, d - 1)}/${d}` : t === "improper" ? `${randInt(d + 1, 2 * d - 1)}/${d}` : `${randInt(1, 3)} ${randInt(1, d - 1)}/${d}`;
       };
-      const texts = list2.map(mk2);
+      const texts = list2.map(mk3);
       return new Set(texts).size === 6 ? { counts, types, list: list2, texts, ask: randInt(0, 2), p: person() } : null;
     },
     make: ({ counts, types, texts, ask: ask4 }) => {
@@ -100066,7 +100871,7 @@ var fiveDigits = () => {
   } while (String(n).includes("0") || new Set(String(n)).size < 5);
   return n;
 };
-var FAMILIES142 = [
+var FAMILIES143 = [
   // ------------------------------------------------------------ PLACE_VALUE_TENTH
   fam34({
     id: "g4c.whole.pv.name-place",
@@ -100460,14 +101265,14 @@ var FAMILIES142 = [
     form: "direct",
     rung: 1,
     gen: () => {
-      const R4 = { 4: "IV", 6: "VI", 7: "VII", 8: "VIII", 9: "IX", 3: "III", 2: "II" }, n = pick([4, 6, 7, 8, 9]), pe = person();
+      const R5 = { 4: "IV", 6: "VI", 7: "VII", 8: "VIII", 9: "IX", 3: "III", 2: "II" }, n = pick([4, 6, 7, 8, 9]), pe = person();
       const wrongs = { 4: [[6, "IV is not I after V. A smaller numeral before a larger one is taken away.", "M_ROMAN_IV_AS_6"], [5, "IV is 5 take away 1.", "M_ROMAN_X_AS_5"], [3, "Count again: 5 take away 1.", "M_ROMAN_IV_AS_6"]], 9: [[11, "IX is not I after X. 1 before 10 means 10 take away 1.", "M_ROMAN_IV_AS_6"], [10, "IX is 10 take away 1.", "M_ROMAN_X_AS_5"], [8, "Count again: 10 take away 1.", "M_ROMAN_IV_AS_6"]], 6: [[4, "VI is V and then I, so it is 5 plus 1.", "M_ROMAN_IV_AS_6"], [5, "VI is 5 plus 1.", "M_ROMAN_X_AS_5"], [7, "Count again: V is 5, I is 1.", "M_ROMAN_X_AS_5"]], 7: [[5, "VII is V and two I: 5 plus 2.", "M_ROMAN_X_AS_5"], [6, "VII has two I.", "M_ROMAN_X_AS_5"], [8, "VII has two I, not three.", "M_ROMAN_X_AS_5"]], 8: [[7, "VIII has three I: 5 plus 3.", "M_ROMAN_X_AS_5"], [6, "VIII has three I.", "M_ROMAN_X_AS_5"], [9, "VIII is 5 plus 3.", "M_ROMAN_IV_AS_6"]] };
       return {
-        question: `On the wall clock in the school hall the hour hand is pointing straight at the Roman numeral ${R4[n]}. Which hour of the clock is that when the hour is written as an ordinary number?`,
+        question: `On the wall clock in the school hall the hour hand is pointing straight at the Roman numeral ${R5[n]}. Which hour of the clock is that when the hour is written as an ordinary number?`,
         answer: n,
         wrong: wrongs[n],
         hints: ["V is 5 and X is 10. I is 1.", "A smaller numeral before a larger one is taken away."],
-        steps: [`${R4[n]}: ${n === 4 ? "5 take away 1" : n === 9 ? "10 take away 1" : `5 and ${n - 5} more`}.`, `${R4[n]} is ${n}.`],
+        steps: [`${R5[n]}: ${n === 4 ? "5 take away 1" : n === 9 ? "10 take away 1" : `5 and ${n - 5} more`}.`, `${R5[n]} is ${n}.`],
         chk: (x) => x === n
       };
     }
@@ -100478,16 +101283,16 @@ var FAMILIES142 = [
     form: "direct",
     rung: 2,
     gen: () => {
-      const R4 = { 4: "IV", 6: "VI", 7: "VII", 8: "VIII", 9: "IX", 3: "III" }, n = pick([4, 6, 7, 9]), pe = person();
+      const R5 = { 4: "IV", 6: "VI", 7: "VII", 8: "VIII", 9: "IX", 3: "III" }, n = pick([4, 6, 7, 9]), pe = person();
       const wrongs = { 4: [["V", "V is 5. For 4 put the I before the V.", "M_ROMAN_X_AS_5"], ["III", "III is 3. 4 is 5 take away 1.", "M_ROMAN_IIII_FOR_4"], ["VII", "VII is 7. 4 is 5 take away 1.", "M_ROMAN_X_AS_5"]], 6: [["V", "V is 5. 6 is V and one I.", "M_ROMAN_X_AS_5"], ["VII", "VII is 7. 6 is V and one I.", "M_ROMAN_X_AS_5"], ["VIII", "VIII is 8. 6 is V and one I.", "M_ROMAN_X_AS_5"]], 7: [["VI", "VI is 6. 7 is V and two I.", "M_ROMAN_X_AS_5"], ["VIII", "VIII is 8. 7 is V and two I.", "M_ROMAN_X_AS_5"], ["IX", "IX is 9. 7 is V and two I.", "M_ROMAN_IV_AS_6"]], 9: [["X", "X is 10. 9 is 10 take away 1: IX.", "M_ROMAN_X_AS_5"], ["VIII", "VIII is 8. 9 is 10 take away 1.", "M_ROMAN_X_AS_5"], ["VII", "VII is 7. 9 is 10 take away 1.", "M_ROMAN_X_AS_5"]] };
-      const options = mc9(R4[n], wrongs[n]);
+      const options = mc9(R5[n], wrongs[n]);
       if (!options) return null;
       return {
         question: `${pe.name} writes the page number ${n} in Roman numerals. Which is correct?`,
         options,
         instruction: "Choose the Roman numeral.",
         hints: ["V is 5, X is 10, I is 1.", "A smaller numeral before a larger one is taken away; after it, added."],
-        steps: [`${n === 4 ? "5 take away 1 is IV" : n === 9 ? "10 take away 1 is IX" : `5 plus ${n - 5} is ${R4[n]}`}.`, `${n} is ${R4[n]}.`]
+        steps: [`${n === 4 ? "5 take away 1 is IV" : n === 9 ? "10 take away 1 is IX" : `5 plus ${n - 5} is ${R5[n]}`}.`, `${n} is ${R5[n]}.`]
       };
     }
   })
@@ -100547,7 +101352,7 @@ var rowBefore = (a, m20) => {
 };
 var noZero = (n) => !String(n).includes("0");
 var THINGS = ["mandazi", "oranges", "eggs", "pencils", "exercise books", "bananas", "mangoes", "bottles"];
-var FAMILIES143 = [
+var FAMILIES144 = [
   // ------------------------------------------------------------ ADD_SINGLE_REGROUP
   fam34({
     id: "g4c.add.single.depot",
@@ -100895,8 +101700,8 @@ var F4 = "NUMBER.FRACTIONS.";
 var C14 = "NUMBER.DECIMALS.";
 var L12 = "NUMBER.USE_OF_LETTERS.";
 var ITEMS = ["chapati", "cake", "pizza", "bar of soap", "roll of cloth"];
-var GROUPS = [["goats", "black"], ["mangoes", "ripe"], ["learners", "in the choir"], ["chickens", "brown"], ["books", "new"]];
-var FAMILIES144 = [
+var GROUPS2 = [["goats", "black"], ["mangoes", "ripe"], ["learners", "in the choir"], ["chickens", "brown"], ["books", "new"]];
+var FAMILIES145 = [
   // ------------------------------------------------------------ NUM_DEN
   fam34({
     id: "g4c.frac.numden.which",
@@ -100959,7 +101764,7 @@ var FAMILIES144 = [
     form: "word",
     rung: 1,
     gen: () => {
-      const n = randInt(5, 12), k = randInt(1, n - 1), [what, prop] = pick(GROUPS);
+      const n = randInt(5, 12), k = randInt(1, n - 1), [what, prop] = pick(GROUPS2);
       const options = mc9(`${k}/${n}`, [[`${k}/${n - k}`, "The whole is the whole group, not the ones without the property.", "M_FRAC_GROUP_PART_OVER_OTHER"], [`${n - k}/${n}`, `That is the fraction that are not ${prop}.`, "M_FRAC_GROUP_PART_OVER_OTHER"], [`${n}/${k}`, "The part goes on top and the whole group goes on the bottom.", "M_FRAC_SWAP_NUM_DEN"]]);
       if (!options || k === n - k) return null;
       return {
@@ -100977,7 +101782,7 @@ var FAMILIES144 = [
     form: "word",
     rung: 2,
     gen: () => {
-      const d = pick([2, 3, 4, 5, 6, 8, 10]), a = randInt(1, d - 1), one4 = randInt(2, 9), N5 = d * one4, pe = person(), [what] = pick(GROUPS);
+      const d = pick([2, 3, 4, 5, 6, 8, 10]), a = randInt(1, d - 1), one4 = randInt(2, 9), N5 = d * one4, pe = person(), [what] = pick(GROUPS2);
       if (a === 1 && Math.random() < 0.5) return null;
       const ans = one4 * a;
       return {
@@ -101146,7 +101951,7 @@ var Ar = "MEASUR.AREA.";
 var V2 = "MEASUR.VOLUME.";
 var L13 = (m20, c19) => m20 && c19 ? `${m20} m ${c19} cm` : m20 ? `${m20} m` : `${c19} cm`;
 var CLOTH = ["cloth", "rope", "ribbon", "wire", "string"];
-var FAMILIES145 = [
+var FAMILIES146 = [
   // ------------------------------------------------------------ CM_UNIT
   fam34({
     id: "g4c.len.unit.pick",
@@ -101816,7 +102621,7 @@ var MAS = {
   unitWhy: "Litres measure how much a container holds, not how heavy something is.",
   codes: { read: "M_MASS_SCALE_READ_END", cmp: "M_MASS_LARGER_IS_HEAVIER", half: "M_MASS_HALF_KG_AS_500", halfBig: "M_MASS_HALF_LARGER_THAN_KG", quarter: "M_MASS_QUARTER_TWO", addSub: "M_MASS_ADD_SUBTRACTS", omit: "M_MASS_ADD_OMIT_UNIT", unit: "M_MASS_CAPACITY_UNIT", subAdd: "M_MASS_SUB_ADDS", subOrder: "M_MASS_SUB_CONTAINER" }
 };
-var FAMILIES146 = [...build(CAP2), ...build(MAS)];
+var FAMILIES147 = [...build(CAP2), ...build(MAS)];
 
 // src/ai-tutor/content/families/g4c_time.js
 var T14 = "MEASUR.TIME.";
@@ -101825,7 +102630,7 @@ var pad = (m20) => String(m20).padStart(2, "0");
 var plural = (n, w14) => `${n} ${w14}${n === 1 ? "" : "s"}`;
 var HM = (h, m20) => h && m20 ? `${plural(h, "hour")} ${plural(m20, "minute")}` : h ? plural(h, "hour") : plural(m20, "minute");
 var EVENTS = [["get up for school", 6, "a.m."], ["start school assembly", 8, "a.m."], ["eat lunch", 1, "p.m."], ["go home after games", 4, "p.m."], ["eat supper", 7, "p.m."], ["go to bed", 9, "p.m."]];
-var FAMILIES147 = [
+var FAMILIES148 = [
   // ------------------------------------------------------------ TELL_TIME_AM_PM
   fam34({
     id: "g4c.time.tell.hands",
@@ -102139,7 +102944,7 @@ var A2 = "GEOMET.ANGLES.";
 var F5 = "GEOMET.PLANE_FIGURES.";
 var D4 = "DATA_H.DATA.";
 var DIRS = ["north", "east", "south", "west"];
-var FAMILIES148 = [
+var FAMILIES149 = [
   // ------------------------------------------------------------ CLOCKWISE_ANTI
   fam34({
     id: "g4c.pos.turn.direction",
@@ -102477,7 +103282,7 @@ var rot2 = (a, k) => [...a.slice(k), ...a.slice(0, k)];
 var distinct3 = (...v) => new Set(v).size === v.length;
 var rnd2 = (n, to) => Math.round(n / to) * to;
 var fl = (n, to) => Math.floor(n / to) * to;
-var FAMILIES149 = [
+var FAMILIES150 = [
   // ================================================================ MONEY
   fam35({
     id: "g5.money.budget-table",
@@ -104195,7 +105000,7 @@ var digitAt2 = (n, p) => Math.floor(n / 10 ** p) % 10;
 var tv = (n, p) => digitAt2(n, p) * 10 ** p;
 var SCHOOLS = ["Mwangaza", "Tumaini", "Baraka", "Upendo", "Jitegemee", "Amani"];
 var TOWNS = ["Nyeri", "Kisumu", "Nakuru", "Embu", "Kakamega", "Meru"];
-var FAMILIES150 = [
+var FAMILIES151 = [
   // ---------------------------------------------------------------- PLACE_VALUE_HTH
   fam36({
     id: "g5c.whole.pv.choose",
@@ -105300,7 +106105,7 @@ var noBorrowPair = () => {
 var r6 = () => randInt(1e5, 499999);
 var KG2 = ["maize", "beans", "rice", "sugar cane", "potatoes"];
 var TOWNS2 = ["Kisumu", "Nyeri", "Nakuru", "Eldoret", "Embu", "Meru"];
-var FAMILIES151 = [
+var FAMILIES152 = [
   // ---------------------------------------------------------------- ADD_NO_REGROUP_UP_TO_THREE
   fam36({
     id: "g5c.add.noreg.harvest",
@@ -106379,7 +107184,7 @@ var likeAdd = (n, m20) => {
 };
 var mixedRows = (n, m20) => n * (m20 % 10) + (n * Math.floor(m20 / 10) + Math.floor(n * (m20 % 10) / 100)) * 10;
 var place2 = () => pick(["Nyandarua", "Murang'a", "Kitale", "Naivasha", "Kericho"]);
-var FAMILIES152 = [
+var FAMILIES153 = [
   // ---------------------------------------------------------------- MULT_3D_BY_1D
   fam36({
     id: "g5c.mul.d1.packets",
@@ -107287,7 +108092,7 @@ var places = (x) => (String(x).split(".")[1] || "").length;
 var digs = (x, n) => Number(Number(x).toFixed(n).replace(".", ""));
 var GRAMS = ["sukuma wiki", "tomatoes", "onions", "potatoes", "beans"];
 var pairs = [[2, 4], [2, 6], [3, 6], [4, 8], [2, 8], [3, 9], [4, 12], [6, 12], [3, 12], [2, 10], [5, 10], [2, 12]];
-var FAMILIES153 = [
+var FAMILIES154 = [
   // ---------------------------------------------------------------- EQUIVALENT_FRACTIONS
   fam36({
     id: "g5c.fra.eq.missing",
@@ -108329,7 +109134,7 @@ var Q8 = "NUMBER.SIMPLE_EQUATIONS.";
 var LETTERS = ["n", "p", "x", "m", "a", "b"];
 var SHOP = ["mandazi", "exercise books", "pencils", "bananas", "eggs"];
 var L14 = () => pick(LETTERS);
-var FAMILIES154 = [
+var FAMILIES155 = [
   // ---------------------------------------------------------------- EQ_MEANING
   fam36({
     id: "g5c.eq.mean.pick",
@@ -109290,7 +110095,7 @@ function build2(name) {
   });
   return out;
 }
-var FAMILIES155 = [...build2("length"), ...build2("capacity"), ...build2("mass"), ...build2("time")];
+var FAMILIES156 = [...build2("length"), ...build2("capacity"), ...build2("mass"), ...build2("time")];
 
 // src/ai-tutor/content/families/g5c_meas.js
 var M6 = "MEASUR.";
@@ -109301,7 +110106,7 @@ var ML4 = [["a spoon of cough medicine", "ml"], ["a cup of chai", "ml"], ["a jer
 var GM2 = [["an egg", "g"], ["a sack of potatoes", "kg"], ["a pencil", "g"], ["a bag of sugar", "kg"], ["a packet of chewing gum", "g"], ["a schoolchild", "kg"], ["a tomato", "g"], ["a bag of cement", "kg"]];
 var NAMES_ML = { ml: "millilitres", l: "litres" };
 var unitOpts = (right, units, mismatch, extra) => mc10(right, [...units.filter((u2) => u2 !== right).map((u2) => [u2, `${WHY_L[u2] || ""} ${mismatch || ""}`.trim(), "M_UNIT_SIZE_MISMATCH"]), ...extra ? [extra] : []]);
-var FAMILIES156 = [
+var FAMILIES157 = [
   // ================================================================ LENGTH
   fam36({
     id: "g5c.lenc.kmid.choose",
@@ -110776,7 +111581,7 @@ var pool = (items9, lead) => () => {
   return ask(x.r, x.w, `${lead(person())}${x.q}`, x.h || ["Think about what the words mean.", "Check each choice against what you know."], [x.s, `So: ${x.r}.`]);
 };
 var spot43 = (stem, steps3, badIdx, fix, mis, hint) => ({ question: stem, working: steps3.map((text, i) => ({ text, ok: i !== badIdx })), fix, mis, hints: [hint], steps: [fix] });
-var FAMILIES157 = [
+var FAMILIES158 = [
   // ---------------------------------------------------------------- BUDGET_MEANING
   fam36({
     id: "g5c.mon.bm.which",
@@ -111216,7 +112021,7 @@ var fromPool = (pool2, lead) => () => {
   return ask2(x.r, x.w, `${lead(person())}${x.q}`, x.h || ["Think about what the words mean.", "Check each choice against the picture in your mind."], [x.s, `So the answer is: ${x.r}.`], x.i);
 };
 var spot44 = (stem, steps3, badIdx, fix, mis, hint) => ({ question: stem, working: steps3.map((text, i) => ({ text, ok: i !== badIdx })), fix, mis, hints: [hint], steps: [fix] });
-var FAMILIES158 = [
+var FAMILIES159 = [
   // ================================================================ LINES
   fam36({
     id: "g5c.geol.hv.classify",
@@ -111993,7 +112798,7 @@ var FAMILIES158 = [
     form: "direct",
     rung: 1,
     gen: () => {
-      const n = randInt(6, 17), g = Math.floor(n / 5), r = n % 5, mk2 = (g2, r2, five) => `${Array(g2).fill(five ? "||||/" : "||||/").join(" ")}${r2 ? " " + "|".repeat(r2) : ""}`.trim();
+      const n = randInt(6, 17), g = Math.floor(n / 5), r = n % 5, mk3 = (g2, r2, five) => `${Array(g2).fill(five ? "||||/" : "||||/").join(" ")}${r2 ? " " + "|".repeat(r2) : ""}`.trim();
       const right = `${Array(g).fill("[||||/]").join(" ")}${r ? " " + "|".repeat(r) : ""}`.trim();
       const six = `${Array(g).fill("[|||||/]").join(" ")}${r ? " " + "|".repeat(r) : ""}`.trim(), nogroup = "|".repeat(n);
       const options = mc10(right, [[six, "A group of five is four upright strokes and one across them. Five uprights and a stroke make six.", "M_GATE_SIX_STROKES"], [nogroup, "Group the tally in fives so it is easy to count.", "M_NO_GROUPING"], [`${Array(g + 1).fill("[||||/]").join(" ")}`, "Count the groups again.", "M_GATE_SIX_STROKES"]].filter((w14) => w14[0] !== right));
@@ -112420,7 +113225,7 @@ var words4 = (n) => {
   return s.join(" ");
 };
 var TOWNS3 = ["Nyeri", "Kitale", "Embu", "Machakos", "Kericho", "Garissa", "Thika", "Kakamega"];
-var FAMILIES159 = [
+var FAMILIES160 = [
   // =========================================================== WHOLE NUMBERS
   fam37({
     id: "g6.place.two-digits",
@@ -114084,7 +114889,7 @@ var sup = (n) => String(n).split("").map((c19) => SUP[c19]).join("");
 // src/ai-tutor/content/families/g6_cov.js
 var T43 = (n) => (n / 1e4).toFixed(4);
 var TOWNS4 = ["Nyeri", "Kitale", "Embu", "Machakos", "Kericho", "Garissa", "Thika", "Kakamega", "Meru", "Kisii"];
-var FAMILIES160 = [
+var FAMILIES161 = [
   // ================================================================ WHOLE NUMBERS
   cov({
     id: "g6c.whole.symbols-from-parts",
@@ -114241,19 +115046,19 @@ var FAMILIES160 = [
     form: "word",
     rung: 3,
     gen: () => {
-      const A5 = randInt(2e4, 99999), B6 = randInt(1e4, A5 - 5e3), R4 = A5 - B6;
+      const A5 = randInt(2e4, 99999), B6 = randInt(1e4, A5 - 5e3), R5 = A5 - B6;
       const dig = (n) => String(n).padStart(5, "0").split("").map(Number);
       const a = dig(A5), b = dig(B6);
       const columnwise = Number(a.map((x, i) => Math.abs(x - b[i])).join(""));
-      if (columnwise === R4) return null;
-      const w14 = [[T43(columnwise), "You took the smaller digit from the bigger one in each column. When the top digit is smaller, regroup from the next place."], [T43(A5 + B6), "You added. The question asks how much heavier, so subtract."], [T43(Math.max(R4 - 1e3, 0)), "Check the regrouping. Taking a tenth for the next place on the right means ten of that place, not a hundred."], [T43(Math.round(R4 / 10) * 10), "The answer has been rounded. Keep all four places."]];
+      if (columnwise === R5) return null;
+      const w14 = [[T43(columnwise), "You took the smaller digit from the bigger one in each column. When the top digit is smaller, regroup from the next place."], [T43(A5 + B6), "You added. The question asks how much heavier, so subtract."], [T43(Math.max(R5 - 1e3, 0)), "Check the regrouping. Taking a tenth for the next place on the right means ten of that place, not a hundred."], [T43(Math.round(R5 / 10) * 10), "The answer has been rounded. Keep all four places."]];
       const p = person();
       return {
         question: `A scientist weighs two samples of soil. The first has a mass of ${T43(A5)} kg and the second ${T43(B6)} kg. How many kilograms heavier is the first sample than the second?`,
-        answer: T43(R4),
+        answer: T43(R5),
         wrong: w14,
         hints: ["Line up the decimal points. Write zeros so each number has four places.", "Start with the ten-thousandths on the right. Regroup when the top digit is smaller."],
-        steps: [`${T43(A5)} \u2212 ${T43(B6)}, with the decimal points lined up.`, `The answer is ${T43(R4)} m.`],
+        steps: [`${T43(A5)} \u2212 ${T43(B6)}, with the decimal points lined up.`, `The answer is ${T43(R5)} m.`],
         chk: (a2) => Math.round(Number(a2) * 1e4) + B6 === A5
       };
     }
@@ -114465,15 +115270,15 @@ var FAMILIES160 = [
     rung: 3,
     gen: () => {
       const c1 = randInt(10, 30), c22 = randInt(2, c1 - 3), m1 = randInt(0, 6), m22 = randInt(m1 + 1, 9);
-      const A5 = 10 * c1 + m1, B6 = 10 * c22 + m22, R4 = A5 - B6;
+      const A5 = 10 * c1 + m1, B6 = 10 * c22 + m22, R5 = A5 - B6;
       const w14 = [[10 * (c1 - c22) + (m22 - m1), "In the millimetre column the top number is smaller, so you cannot take the smaller from the bigger the other way round. Regroup one centimetre."], [10 * (c1 - c22 - 1) + (m1 + 100 - m22), "One centimetre is 10 mm, not 100 mm, when you regroup."], [A5 + B6, "You added. The question asks how much ribbon is left."], [10 * (c1 - c22), "You left out the millimetres."]];
       const p = person();
       return {
         question: `${p.name} has a ribbon ${c1} cm ${m1} mm long. ${p.She} cuts off ${c22} cm ${m22} mm. How many millimetres of ribbon are left?`,
-        answer: R4,
+        answer: R5,
         wrong: w14,
         hints: ["Change each length to millimetres only before you subtract.", "1 cm = 10 mm."],
-        steps: [`${c1} cm ${m1} mm = ${A5} mm.`, `${c22} cm ${m22} mm = ${B6} mm.`, `${A5} \u2212 ${B6} = ${R4} mm.`],
+        steps: [`${c1} cm ${m1} mm = ${A5} mm.`, `${c22} cm ${m22} mm = ${B6} mm.`, `${A5} \u2212 ${B6} = ${R5} mm.`],
         chk: (a) => a + B6 === A5
       };
     }
@@ -114669,14 +115474,14 @@ var FAMILIES160 = [
     gen: () => {
       const t1 = randInt(1, 5), t2 = randInt(1, 5), k1 = randInt(1, 9) * 100 + randInt(0, 1) * 50, k2 = randInt(1, 9) * 100 + randInt(0, 1) * 50;
       if (k1 + k2 < 1e3) return null;
-      const R4 = (t1 + t2) * 1e3 + k1 + k2, p = person();
+      const R5 = (t1 + t2) * 1e3 + k1 + k2, p = person();
       const w14 = [[(t1 + t2) * 100 + k1 + k2, "A tonne is 1,000 kg, not 100 kg."], [t1 + t2 + k1 + k2, "You added the numbers without changing the tonnes to kilograms."], [(t1 + t2) * 1e3, "You left out the kilograms."], [(t1 + t2) * 1e3 + k1 + k2 - 1e3, "The kilograms came to 1,000 or more, which is another tonne. Check the carrying."]];
       return {
         question: `A grain store receives ${t1} tonnes ${k1} kg of rice on Monday and ${t2} tonnes ${k2} kg of rice on Tuesday. How many kilograms does it receive in the two days?`,
-        answer: R4,
+        answer: R5,
         wrong: w14,
         hints: ["Change each load to kilograms: 1 tonne = 1,000 kg.", "Then add the two loads."],
-        steps: [`${t1} t ${k1} kg = ${commas(t1 * 1e3 + k1)} kg.`, `${t2} t ${k2} kg = ${commas(t2 * 1e3 + k2)} kg.`, `Total: ${commas(R4)} kg.`],
+        steps: [`${t1} t ${k1} kg = ${commas(t1 * 1e3 + k1)} kg.`, `${t2} t ${k2} kg = ${commas(t2 * 1e3 + k2)} kg.`, `Total: ${commas(R5)} kg.`],
         chk: (a) => a - (t1 * 1e3 + k1) === t2 * 1e3 + k2
       };
     }
@@ -114692,15 +115497,15 @@ var FAMILIES160 = [
     rung: 3,
     gen: () => {
       const t1 = randInt(5, 12), t2 = randInt(1, t1 - 3), k1 = randInt(1, 4) * 100, k2 = randInt(k1 / 100 + 1, 9) * 100;
-      const A5 = t1 * 1e3 + k1, B6 = t2 * 1e3 + k2, R4 = A5 - B6;
+      const A5 = t1 * 1e3 + k1, B6 = t2 * 1e3 + k2, R5 = A5 - B6;
       const w14 = [[(t1 - t2) * 1e3 + (k2 - k1), "In the kilogram column the top number is smaller. Regroup one tonne, do not take the smaller from the bigger the other way round."], [(t1 - t2 - 1) * 1e3 + k1 + 100 - k2, "One tonne is 1,000 kg, not 100 kg, when you regroup."], [A5 + B6, "You added. The question asks how much cement is left."], [(t1 - t2) * 1e3, "You left out the kilograms."]];
       const p = person();
       return {
         question: `A hardware shop in ${pick(TOWNS4)} receives ${t1} tonnes ${k1} kg of cement. ${p.name} sells ${t2} tonnes ${k2} kg of it. How many kilograms of cement are left?`,
-        answer: R4,
+        answer: R5,
         wrong: w14,
         hints: ["Change both masses to kilograms first.", "Then take the smaller from the bigger."],
-        steps: [`${t1} t ${k1} kg = ${commas(A5)} kg.`, `${t2} t ${k2} kg = ${commas(B6)} kg.`, `${commas(A5)} \u2212 ${commas(B6)} = ${commas(R4)} kg.`],
+        steps: [`${t1} t ${k1} kg = ${commas(A5)} kg.`, `${t2} t ${k2} kg = ${commas(B6)} kg.`, `${commas(A5)} \u2212 ${commas(B6)} = ${commas(R5)} kg.`],
         chk: (a) => a + B6 === A5
       };
     }
@@ -115080,13 +115885,13 @@ var FAMILIES160 = [
     form: "word",
     rung: 3,
     gen: () => {
-      const R4 = pick([10, 20, 50]), units = [randInt(2, 9), randInt(2, 9), randInt(2, 9)];
+      const R5 = pick([10, 20, 50]), units = [randInt(2, 9), randInt(2, 9), randInt(2, 9)];
       if (units.every((x) => x % 2 === 0) || units.some((x) => x % 2 === 1) === false) return null;
-      const vals = units.map((x) => x * R4), opts2 = [R4 / 2, R4, 2 * R4, 4 * R4];
+      const vals = units.map((x) => x * R5), opts2 = [R5 / 2, R5, 2 * R5, 4 * R5];
       const valid = (e) => vals.every((v) => v % e === 0) && Math.max(...vals) / e <= 10;
-      if (opts2.filter(valid).length !== 1 || !valid(R4)) return null;
+      if (opts2.filter(valid).length !== 1 || !valid(R5)) return null;
       const p = person();
-      const options = mcFixed(`${R4}`, opts2.filter((e) => e !== R4).map((e) => [`${e}`, vals.some((v) => v % e !== 0) ? `Some numbers cannot be shown with whole symbols when one symbol stands for ${e}.` : `The longest row would need more than 10 symbols when one symbol stands for ${e}.`]), opts2.map(String));
+      const options = mcFixed(`${R5}`, opts2.filter((e) => e !== R5).map((e) => [`${e}`, vals.some((v) => v % e !== 0) ? `Some numbers cannot be shown with whole symbols when one symbol stands for ${e}.` : `The longest row would need more than 10 symbols when one symbol stands for ${e}.`]), opts2.map(String));
       return {
         question: `${p.name} will draw a pictograph for ${vals.join(", ")} learners in three classes. Only whole symbols are allowed, and a row may have at most 10 symbols. How many learners should one symbol stand for?`,
         options,
@@ -116953,7 +117758,7 @@ var digitsOf7 = () => {
   for (let i = 1; i < 7; i++) d.push(randInt(0, 9));
   return d;
 };
-var FAMILIES161 = [
+var FAMILIES162 = [
   // ------------------------------------------------------------ WHOLE NUMBERS
   fam38({
     id: "g6d.whole.which-place",
@@ -117042,14 +117847,14 @@ var FAMILIES161 = [
     gen: () => {
       const a = randInt(10, 49) * 1e3 + randInt(100, 999), b = randInt(5, 9) * 1e3 + randInt(0, 999), c19 = a - randInt(2, 9) * 1e3 - randInt(1, 99), d = randInt(1, 4) * 1e3 + randInt(0, 999);
       if (!(b > a / 10 && String(b)[0] > String(a)[0]) || c19 < 1e4 || !distinct4(a, b, c19, d)) return null;
-      const mk2 = (x) => commas(x);
-      const options = mc10(mk2(a), [[mk2(b), "This number has a bigger first digit, but it has fewer digits. A number with more digits is bigger.", "M_FIRST_DIGIT_ONLY"], [mk2(c19), "This is a five-digit number, but another five-digit number is bigger. Compare place by place from the left.", "M_FIRST_DIGIT_ONLY"], [mk2(d), "This is the smallest of the four, not the largest. Read the question again.", "M_LARGEST_FIRST"]]);
+      const mk3 = (x) => commas(x);
+      const options = mc10(mk3(a), [[mk3(b), "This number has a bigger first digit, but it has fewer digits. A number with more digits is bigger.", "M_FIRST_DIGIT_ONLY"], [mk3(c19), "This is a five-digit number, but another five-digit number is bigger. Compare place by place from the left.", "M_FIRST_DIGIT_ONLY"], [mk3(d), "This is the smallest of the four, not the largest. Read the question again.", "M_LARGEST_FIRST"]]);
       return {
-        question: `The crowds at four matches were ${shuffle12([a, b, c19, d]).map(mk2).join(", ")}. Which match had the largest crowd?`,
+        question: `The crowds at four matches were ${shuffle12([a, b, c19, d]).map(mk3).join(", ")}. Which match had the largest crowd?`,
         options,
         instruction: "Choose the best answer.",
         hints: ["Count the digits of each number first.", "If two numbers have the same number of digits, compare place by place from the left."],
-        steps: [`Two of the numbers have five digits, so the largest is one of them.`, `${mk2(a)} is bigger than ${mk2(c19)}, so ${mk2(a)} is the largest.`]
+        steps: [`Two of the numbers have five digits, so the largest is one of them.`, `${mk3(a)} is bigger than ${mk3(c19)}, so ${mk3(a)} is the largest.`]
       };
     }
   }),
@@ -117259,7 +118064,7 @@ var split = () => {
   const c19 = randInt(2, 9), m20 = randInt(1, 9);
   return [c19, m20, c19 * 10 + m20];
 };
-var FAMILIES162 = [
+var FAMILIES163 = [
   // ------------------------------------------------------------ LENGTH
   fam38({
     id: "g6d.len.read-ruler",
@@ -117719,7 +118524,7 @@ var N4 = "GEOMET.LINES.";
 var G16 = "GEOMET.ANGLES.";
 var H35 = "GEOMET.3_D_OBJECTS.";
 var B5 = "DATA_H.BAR_GRAPHS.";
-var FAMILIES163 = [
+var FAMILIES164 = [
   // ------------------------------------------------------------ LINES
   fam38({
     id: "g6d.lines.which-parallel",
@@ -118030,7 +118835,7 @@ var FAMILIES163 = [
 // src/ai-tutor/content/families/g8_cov.js
 var TOWNS5 = ["Nyeri", "Kitale", "Embu", "Machakos", "Kericho", "Garissa", "Thika", "Kakamega", "Meru", "Kisii"];
 var sgn = (n) => n < 0 ? `\u2212${-n}` : `${n}`;
-var FAMILIES164 = [
+var FAMILIES165 = [
   // ================================================================ INTEGERS
   cov({
     id: "g8c.int.number-line-lift",
@@ -120033,12 +120838,12 @@ var MATRICES = [
         working.push({ text: `${labs[i][j]}: ${a} \u2212 ${br(b)} = ${fm(v)}`, ok: v === right });
       }
       const fix = type === "neg" ? "Subtracting a negative number is the same as adding. The step with the negative number was worked out as a plain subtraction." : "In subtraction the order matters. The element of the second matrix is taken away from the element of the first.";
-      const R4 = A5.map((row, i) => row.map((x, j) => x - B6[i][j]));
+      const R5 = A5.map((row, i) => row.map((x, j) => x - B6[i][j]));
       return {
         question: `${who.name} worked out ${mat(A5)} \u2212 ${mat(B6)} one element at a time. One step is wrong. Which one?`,
         working,
         fix,
-        steps: [`The answer is ${mat(R4)}.`, "Subtract each element of the second matrix from the matching element of the first."]
+        steps: [`The answer is ${mat(R5)}.`, "Subtract each element of the second matrix from the matching element of the first."]
       };
     }
   }),
@@ -120569,7 +121374,7 @@ var INEQ = [
     check: ({ W: W15, b, w: w14 }, v) => v[0] + b === W15 && v[1] * w14 <= v[0] && (v[1] + 1) * w14 > v[0] && v[2] + v[1] * w14 === v[0]
   })
 ];
-var FAMILIES165 = [...INTEGERS, ...CUBES, ...INDICES, ...LOGS, ...PROPORTION, ...MATRICES, ...LINES, ...INEQ];
+var FAMILIES166 = [...INTEGERS, ...CUBES, ...INDICES, ...LOGS, ...PROPORTION, ...MATRICES, ...LINES, ...INEQ];
 
 // src/ai-tutor/content/families/g9_measure.js
 var fam40 = (def) => family({ reviewed: false, ...def });
@@ -120587,7 +121392,7 @@ var clock = (min) => `${Math.floor(min / 60)}:${String(Math.round(min) % 60).pad
 var clock24 = (min) => `${String(Math.floor(min / 60)).padStart(2, "0")}:${String(Math.round(min) % 60).padStart(2, "0")}`;
 var ROADS = [["Nairobi", "Nakuru", 160], ["Nairobi", "Thika", 45], ["Nairobi", "Machakos", 60], ["Nairobi", "Nyeri", 150], ["Mombasa", "Malindi", 120], ["Kisumu", "Kakamega", 50], ["Nakuru", "Eldoret", 155], ["Eldoret", "Kitale", 70], ["Nairobi", "Meru", 225], ["Nakuru", "Kisumu", 185]];
 var TRIPLES = [[3, 4, 5], [6, 8, 10], [5, 12, 13], [9, 12, 15], [8, 15, 17]];
-var FAMILIES166 = [
+var FAMILIES167 = [
   // ======================================================== AREA: pentagon, hexagon
   fam40({
     id: "g9.area.hexagon-slab",
@@ -121164,17 +121969,17 @@ var FAMILIES166 = [
     rung: 3,
     form: "word",
     draw: () => {
-      const [R4, r] = pick([[6, 3], [9, 3], [12, 3], [15, 3], [4, 2], [6, 2], [8, 2], [10, 5]]);
-      return { R: R4, r };
+      const [R5, r] = pick([[6, 3], [9, 3], [12, 3], [15, 3], [4, 2], [6, 2], [8, 2], [10, 5]]);
+      return { R: R5, r };
     },
-    make: ({ R: R4, r }) => ({
-      question: `A metalworker melts one solid metal sphere of radius ${R4} cm. The metal is cast into small solid spheres of radius ${r} cm. No metal is lost. How many small spheres can be made?`,
-      answer: (R4 / r) ** 3,
-      wrong: [[R4 / r, "The radius is " + R4 / r + " times bigger, but the volume grows with the radius three times over."], [(R4 / r) ** 2, "That compares surface areas. Compare volumes, which use r \xD7 r \xD7 r."], [R4 ** 3 - r ** 3, "Divide the big volume by the small volume. Do not subtract."], [(R4 - r) ** 3, "Divide the volume of the big sphere by the volume of a small one."]],
+    make: ({ R: R5, r }) => ({
+      question: `A metalworker melts one solid metal sphere of radius ${R5} cm. The metal is cast into small solid spheres of radius ${r} cm. No metal is lost. How many small spheres can be made?`,
+      answer: (R5 / r) ** 3,
+      wrong: [[R5 / r, "The radius is " + R5 / r + " times bigger, but the volume grows with the radius three times over."], [(R5 / r) ** 2, "That compares surface areas. Compare volumes, which use r \xD7 r \xD7 r."], [R5 ** 3 - r ** 3, "Divide the big volume by the small volume. Do not subtract."], [(R5 - r) ** 3, "Divide the volume of the big sphere by the volume of a small one."]],
       hints: ["The metal keeps the same volume. Compare the volume of the big sphere with the volume of one small sphere.", "Volume of a sphere = \u2074\u2044\u2083 \u03C0 r\xB3. The \u2074\u2044\u2083 \u03C0 cancels."],
-      steps: [`Big sphere: \u2074\u2044\u2083 \u03C0 \xD7 ${R4}\xB3. Small sphere: \u2074\u2044\u2083 \u03C0 \xD7 ${r}\xB3.`, `Number = ${R4}\xB3 \xF7 ${r}\xB3 = ${R4 ** 3} \xF7 ${r ** 3} = ${(R4 / r) ** 3}.`]
+      steps: [`Big sphere: \u2074\u2044\u2083 \u03C0 \xD7 ${R5}\xB3. Small sphere: \u2074\u2044\u2083 \u03C0 \xD7 ${r}\xB3.`, `Number = ${R5}\xB3 \xF7 ${r}\xB3 = ${R5 ** 3} \xF7 ${r ** 3} = ${(R5 / r) ** 3}.`]
     }),
-    check: ({ R: R4, r }, a) => a * r ** 3 === R4 ** 3
+    check: ({ R: R5, r }, a) => a * r ** 3 === R5 ** 3
   }),
   // ======================================================== MASS, WEIGHT AND DENSITY
   fam40({
@@ -122245,7 +123050,7 @@ var pt = (x, y) => `(${sg(x)}, ${sg(y)})`;
 var near2 = (a, b, e = 1e-6) => Math.abs(a - b) < e;
 var rad = (d) => d * Math.PI / 180;
 var TRIG = { sin: (d) => round(Math.sin(rad(d)), 4), cos: (d) => round(Math.cos(rad(d)), 4), tan: (d) => round(Math.tan(rad(d)), 4) };
-var FAMILIES167 = [
+var FAMILIES168 = [
   // =========================== COORDINATES AND GRAPHS ===========================
   fam41({
     id: "g9.graphs.parallel-table-pick",
@@ -123550,7 +124355,7 @@ var simp3 = (n, d) => {
   return [n / g, d / g];
 };
 var signed = (c19) => c19 < 0 ? `\u2212 ${-c19}` : `+ ${c19}`;
-var FAMILIES168 = [
+var FAMILIES169 = [
   // ======================================================== INTEGERS
   fam42({
     id: "g8.int.lift-floors",
@@ -124823,7 +125628,7 @@ var uniq5 = (...v) => new Set(v.map((x) => String(round(x, 4)))).size === v.leng
 var near3 = (a, b) => Math.abs(a - b) < 1e-6;
 var circ = (r) => 2 * PI3 * r;
 var nice = (v) => Number.isInteger(v * 2);
-var FAMILIES169 = [
+var FAMILIES170 = [
   // ================================================================ CIRCLES
   fam43({
     id: "g8.circ.wheel-distance",
@@ -125029,17 +125834,17 @@ var FAMILIES169 = [
     rung: 3,
     form: "steps",
     draw: () => {
-      const r = pick([14, 21, 28]), w14 = pick([7, 14]), R4 = r + w14;
-      return { r, w: w14, R: R4, A1: 22 * r * r / 7, A2: 22 * R4 * R4 / 7 };
+      const r = pick([14, 21, 28]), w14 = pick([7, 14]), R5 = r + w14;
+      return { r, w: w14, R: R5, A1: 22 * r * r / 7, A2: 22 * R5 * R5 / 7 };
     },
-    make: ({ r, w: w14, R: R4, A1, A2: A22 }) => ({
+    make: ({ r, w: w14, R: R5, A1, A2: A22 }) => ({
       question: `A round flower garden at a school has a radius of ${r} m. A path ${w14} m wide goes all the way round the outside of the garden. Use \u03C0 = 22/7.`,
       parts: [
         { prompt: "What is the area of the garden, in m\xB2?", answer: A1, unit: "m\xB2", hint: "Area of a circle = \u03C0 \xD7 radius \xD7 radius.", wrong: [[44 * r / 7, "That is the distance round the field. Area is \u03C0 \xD7 r \xD7 r."]] },
-        { prompt: "The garden and the path together make a bigger circle. What is its radius, in metres?", answer: R4, unit: "m", hint: "The path is added all round the edge.", wrong: [[r + 2 * w14, "The path is added once to the radius, not twice."], [w14, "That is the width of the path only."]] },
+        { prompt: "The garden and the path together make a bigger circle. What is its radius, in metres?", answer: R5, unit: "m", hint: "The path is added all round the edge.", wrong: [[r + 2 * w14, "The path is added once to the radius, not twice."], [w14, "That is the width of the path only."]] },
         { prompt: "What is the area of the path alone, in m\xB2?", answer: A22 - A1, unit: "m\xB2", hint: "Take the area of the field away from the area of the bigger circle.", wrong: [[22 * w14 * w14 / 7, "That is the area of a circle as wide as the path. The path is a ring."], [A22, "That includes the field. Take the field away."]] }
       ],
-      steps: [`Field: 22/7 \xD7 ${r} \xD7 ${r} = ${A1} m\xB2.`, `Bigger circle radius: ${r} + ${w14} = ${R4} m.`, `Bigger circle area: 22/7 \xD7 ${R4} \xD7 ${R4} = ${A22} m\xB2.`, `Path: ${A22} \u2212 ${A1} = ${A22 - A1} m\xB2.`]
+      steps: [`Field: 22/7 \xD7 ${r} \xD7 ${r} = ${A1} m\xB2.`, `Bigger circle radius: ${r} + ${w14} = ${R5} m.`, `Bigger circle area: 22/7 \xD7 ${R5} \xD7 ${R5} = ${A22} m\xB2.`, `Path: ${A22} \u2212 ${A1} = ${A22 - A1} m\xB2.`]
     }),
     check: ({ r, w: w14, A1, A2: A22 }, v) => v[0] === A1 && v[1] === r + w14 && v[2] + A1 === A22
   }),
@@ -126586,7 +127391,7 @@ var mixed = (n, d) => {
   if (a > b) return `${Math.floor(a / b)} ${a % b}/${b}`;
   return `${a}/${b}`;
 };
-var FAMILIES170 = [
+var FAMILIES171 = [
   // ======================================================================
   // WHOLE NUMBERS
   // ======================================================================
@@ -128202,7 +129007,7 @@ var isRight = (x, y, z) => {
 };
 var LETTERS2 = "ABCDEFGHJKLMNPQRSTUVWXYZ";
 var F7 = { cm: 0.01, dm: 0.1, m: 1, Dm: 10, Hm: 100, km: 1e3 };
-var FAMILIES171 = [
+var FAMILIES172 = [
   // =========================================================== PYTHAGORAS
   fam45({
     id: "g7.pyth.name-hypotenuse",
@@ -128464,18 +129269,18 @@ var FAMILIES171 = [
     rung: 2,
     form: "word",
     draw: () => {
-      const n = randInt(3, 8), pc = pick([25, 40, 50, 60, 75, 80]), R4 = randInt(8, 20);
-      const left = R4 - n * pc / 100;
-      return Number.isInteger(left * 2) && left > 0 && uniq6(left, R4 * 100 - n * pc, R4 - pc / 100, R4 + n * pc / 100, n * pc / 100) ? { n, pc, R: R4, p: person() } : null;
+      const n = randInt(3, 8), pc = pick([25, 40, 50, 60, 75, 80]), R5 = randInt(8, 20);
+      const left = R5 - n * pc / 100;
+      return Number.isInteger(left * 2) && left > 0 && uniq6(left, R5 * 100 - n * pc, R5 - pc / 100, R5 + n * pc / 100, n * pc / 100) ? { n, pc, R: R5, p: person() } : null;
     },
-    make: ({ n, pc, R: R4, p }) => ({
-      question: `${p.name} has a rope ${R4} m long. ${p.She} cuts ${n} pieces, each ${pc} cm long, for a washing line. How many metres of rope are left?`,
-      answer: R4 - n * pc / 100,
-      wrong: [[R4 * 100 - n * pc, "That is in centimetres. The question asks for metres."], [R4 - pc / 100, "There are several pieces. Find the length of all the pieces together."], [R4 + n * pc / 100, "Cutting takes rope away, so subtract."], [n * pc / 100, "That is the rope that is cut. The question asks what is left."]],
+    make: ({ n, pc, R: R5, p }) => ({
+      question: `${p.name} has a rope ${R5} m long. ${p.She} cuts ${n} pieces, each ${pc} cm long, for a washing line. How many metres of rope are left?`,
+      answer: R5 - n * pc / 100,
+      wrong: [[R5 * 100 - n * pc, "That is in centimetres. The question asks for metres."], [R5 - pc / 100, "There are several pieces. Find the length of all the pieces together."], [R5 + n * pc / 100, "Cutting takes rope away, so subtract."], [n * pc / 100, "That is the rope that is cut. The question asks what is left."]],
       hints: ["Use one unit for everything.", `Total length of the ${n} pieces, then change it to metres.`],
-      steps: [`${n} pieces \xD7 ${pc} cm = ${n * pc} cm = ${n * pc / 100} m.`, `Left: ${R4} \u2212 ${n * pc / 100} = ${R4 - n * pc / 100} m.`]
+      steps: [`${n} pieces \xD7 ${pc} cm = ${n * pc} cm = ${n * pc / 100} m.`, `Left: ${R5} \u2212 ${n * pc / 100} = ${R5 - n * pc / 100} m.`]
     }),
-    check: ({ n, pc, R: R4 }, a) => Math.round((R4 - a) * 100) === n * pc
+    check: ({ n, pc, R: R5 }, a) => Math.round((R5 - a) * 100) === n * pc
   }),
   fam45({
     id: "g7.length.fence-posts-line",
@@ -130034,7 +130839,7 @@ var freqModel = (c19, fs) => ({ type: "table", data: { head: [c19.h, "Frequency"
 var tally = (f) => [...Array(Math.floor(f / 5)).fill("||||/"), "|".repeat(f % 5)].filter(Boolean).join(" ");
 var SCALES2 = [1, 2, 5, 10, 20, 50, 100, 200, 500, 1e3];
 var THINGS2 = [{ t: "kilograms of maize", u: "kg" }, { t: "litres of milk", u: "litres" }, { t: "mangoes", u: "mangoes" }, { t: "exercise books", u: "books" }];
-var FAMILIES172 = [
+var FAMILIES173 = [
   // ================================================================ ANGLES
   fam46({
     id: "g7.angles.point-cake",
@@ -130113,7 +130918,7 @@ var FAMILIES172 = [
     form: "why",
     draw: () => ({ a: pick([48, 52, 62, 68, 72, 74, 108, 112, 118, 124]), type: pick(["alt", "corr", "coint"]), k: randInt(0, 3) }),
     make: ({ a, type, k }) => {
-      const R4 = {
+      const R5 = {
         alt: { val: a, reason: "alternate angles are equal", where: `Angle x is between the parallel lines, on the opposite side of the transversal from the ${a}\xB0 angle.` },
         corr: { val: a, reason: "corresponding angles are equal", where: `The ${a}\xB0 angle is above one parallel line and to the right of the transversal. Angle x is above the other parallel line and to the right of the transversal.` },
         coint: { val: 180 - a, reason: "co-interior angles add up to 180\xB0", where: `Angle x is between the parallel lines, on the same side of the transversal as the ${a}\xB0 angle.` },
@@ -130125,12 +130930,12 @@ var FAMILIES172 = [
         coint: "Co-interior angles lie between the parallel lines on the same side of the transversal. Check where angle x is.",
         vert: "Vertically opposite angles are across a single crossing. Angle x is at the other crossing."
       };
-      const opts2 = ["alt", "corr", "coint", "vert"].map((t) => ({ text: `${R4[t].val}\xB0, because ${R4[t].reason}`, right: t === type, why: t === type ? void 0 : wrongWhy[t] }));
+      const opts2 = ["alt", "corr", "coint", "vert"].map((t) => ({ text: `${R5[t].val}\xB0, because ${R5[t].reason}`, right: t === type, why: t === type ? void 0 : wrongWhy[t] }));
       return {
-        question: `Line AB is parallel to line CD. The transversal EF crosses both. ${R4[type].where} What is angle x, and what is the reason?`,
+        question: `Line AB is parallel to line CD. The transversal EF crosses both. ${R5[type].where} What is angle x, and what is the reason?`,
         options: rot5(opts2, k),
         hints: ["Say where angle x is: which side of the transversal, and between or outside the parallel lines.", "Match that position to one of the angle pairs: alternate, corresponding, co-interior."],
-        steps: [`Position of x compared with the ${a}\xB0 angle: ${type === "alt" ? "opposite sides, between the lines, so alternate" : type === "corr" ? "matching places at the two crossings, so corresponding" : "same side, between the lines, so co-interior"}.`, `So x = ${R4[type].val}\xB0, because ${R4[type].reason}.`]
+        steps: [`Position of x compared with the ${a}\xB0 angle: ${type === "alt" ? "opposite sides, between the lines, so alternate" : type === "corr" ? "matching places at the two crossings, so corresponding" : "same side, between the lines, so co-interior"}.`, `So x = ${R5[type].val}\xB0, because ${R5[type].reason}.`]
       };
     }
   }),
@@ -130161,22 +130966,22 @@ var FAMILIES172 = [
     draw: () => {
       const a = pick([52, 58, 64, 68, 72, 76, 82]);
       const kind = pick(["rule", "rule", "arith"]);
-      const R4 = kind === "rule" ? pick([360, 90]) : 180;
+      const R5 = kind === "rule" ? pick([360, 90]) : 180;
       const slip = pick([10, -10, 20]);
-      const v = kind === "rule" ? R4 - a : 180 - a + slip;
-      return { a, kind, R: R4, v, p: person() };
+      const v = kind === "rule" ? R5 - a : 180 - a + slip;
+      return { a, kind, R: R5, v, p: person() };
     },
-    make: ({ a, kind, R: R4, v, p }) => {
+    make: ({ a, kind, R: R5, v, p }) => {
       const right = 180 - a;
       return {
         question: `Lines AB and CD are parallel. Angle x and the ${a}\xB0 angle are co-interior angles. ${p.name} worked out x. Which step has the mistake?`,
         working: [
-          { text: `Co-interior angles add up to ${R4}\xB0.`, ok: R4 === 180 },
-          { text: `So x + ${a} = ${R4}.`, ok: true },
-          { text: `x = ${R4} \u2212 ${a} = ${v}.`, ok: v === R4 - a },
+          { text: `Co-interior angles add up to ${R5}\xB0.`, ok: R5 === 180 },
+          { text: `So x + ${a} = ${R5}.`, ok: true },
+          { text: `x = ${R5} \u2212 ${a} = ${v}.`, ok: v === R5 - a },
           { text: `So angle x is ${v}\xB0.`, ok: true }
         ],
-        fix: kind === "rule" ? `Co-interior angles add up to 180\xB0, not ${R4}\xB0. That makes x = ${right}\xB0.` : `The subtraction is wrong: 180 \u2212 ${a} = ${right}, not ${v}.`,
+        fix: kind === "rule" ? `Co-interior angles add up to 180\xB0, not ${R5}\xB0. That makes x = ${right}\xB0.` : `The subtraction is wrong: 180 \u2212 ${a} = ${right}, not ${v}.`,
         hints: ["Check the rule used, then check the sums that follow.", "Co-interior angles lie between parallel lines on the same side of the transversal."],
         steps: [`Co-interior angles add up to 180\xB0.`, `x = 180 \u2212 ${a} = ${right}\xB0.`]
       };
@@ -130705,17 +131510,17 @@ var FAMILIES172 = [
     rung: 3,
     form: "word",
     draw: () => {
-      const R4 = pick([10, 20, 50, 100]), units = Array.from({ length: 4 }, () => randInt(1, 9));
+      const R5 = pick([10, 20, 50, 100]), units = Array.from({ length: 4 }, () => randInt(1, 9));
       if (units.every((x) => x % 2 === 0)) return null;
-      const vals = units.map((x) => x * R4 / 2);
+      const vals = units.map((x) => x * R5 / 2);
       const max = Math.max(...vals);
-      if (max <= 4 * R4 || max > 8 * R4 || new Set(vals).size < 4) return null;
-      const opts2 = [R4 / 2, R4, 2 * R4, 4 * R4];
+      if (max <= 4 * R5 || max > 8 * R5 || new Set(vals).size < 4) return null;
+      const opts2 = [R5 / 2, R5, 2 * R5, 4 * R5];
       const valid = (e) => vals.every((v) => v * 2 % e === 0) && max / e <= 8;
-      if (opts2.filter(valid).length !== 1 || !valid(R4)) return null;
-      return { R: R4, vals, opts: opts2, p: person(), k: randInt(0, 3) };
+      if (opts2.filter(valid).length !== 1 || !valid(R5)) return null;
+      return { R: R5, vals, opts: opts2, p: person(), k: randInt(0, 3) };
     },
-    make: ({ R: R4, vals, opts: opts2, p, k }) => {
+    make: ({ R: R5, vals, opts: opts2, p, k }) => {
       const valid = (e) => vals.every((v) => v * 2 % e === 0) && Math.max(...vals) / e <= 8;
       return {
         question: `${p.name} draws a pictograph of the bottles sold by four shops: ${vals.join(", ")}. Only whole symbols and half symbols are allowed. The longest row may have at most 8 symbols. What should each symbol stand for?`,
@@ -131012,15 +131817,15 @@ var FAMILIES172 = [
 ];
 
 // src/ai-tutor/content/families/bank.js
-var G4_CURRICULUM = [...FAMILIES142, ...FAMILIES143, ...FAMILIES144, ...FAMILIES145, ...FAMILIES146, ...FAMILIES147, ...FAMILIES148];
-var G5_CURRICULUM = [...FAMILIES150, ...FAMILIES151, ...FAMILIES152, ...FAMILIES153, ...FAMILIES154, ...FAMILIES155, ...FAMILIES156, ...FAMILIES157, ...FAMILIES158];
-var G6_CURRICULUM = [...FAMILIES161, ...FAMILIES162, ...FAMILIES163];
-var GRADE_FAMILIES = [...bankFamilies(), ...FAMILIES165, ...FAMILIES166, ...FAMILIES167, ...FAMILIES168, ...FAMILIES169, ...FAMILIES170, ...FAMILIES171, ...FAMILIES172, ...FAMILIES159, ...FAMILIES160, ...G6_CURRICULUM, ...FAMILIES164, ...G5_CURRICULUM, ...FAMILIES149, ...G4_CURRICULUM, ...FAMILIES141, ...FAMILIES140, ...FAMILIES139];
+var G4_CURRICULUM = [...FAMILIES143, ...FAMILIES144, ...FAMILIES145, ...FAMILIES146, ...FAMILIES147, ...FAMILIES148, ...FAMILIES149];
+var G5_CURRICULUM = [...FAMILIES151, ...FAMILIES152, ...FAMILIES153, ...FAMILIES154, ...FAMILIES155, ...FAMILIES156, ...FAMILIES157, ...FAMILIES158, ...FAMILIES159];
+var G6_CURRICULUM = [...FAMILIES162, ...FAMILIES163, ...FAMILIES164];
+var GRADE_FAMILIES = [...bankFamilies(), ...FAMILIES166, ...FAMILIES167, ...FAMILIES168, ...FAMILIES169, ...FAMILIES170, ...FAMILIES171, ...FAMILIES172, ...FAMILIES173, ...FAMILIES160, ...FAMILIES161, ...G6_CURRICULUM, ...FAMILIES165, ...G5_CURRICULUM, ...FAMILIES150, ...G4_CURRICULUM, ...FAMILIES142, ...FAMILIES141, ...FAMILIES140];
 
 // src/ai-tutor/content/families/index.js
-var FAMILIES173 = [...CORE_FAMILIES, ...GRADE_FAMILIES];
+var FAMILIES174 = [...CORE_FAMILIES, ...GRADE_FAMILIES];
 var BY_SKILL = /* @__PURE__ */ new Map();
-for (const f of FAMILIES173) {
+for (const f of FAMILIES174) {
   if (!BY_SKILL.has(f.skill)) BY_SKILL.set(f.skill, []);
   BY_SKILL.get(f.skill).push(f);
 }
@@ -132034,7 +132839,7 @@ var withSeed = (text, fn) => {
 };
 var usable = (f) => !!f.cskill && f.form !== "steps";
 var BY_CSKILL = /* @__PURE__ */ new Map();
-for (const f of [...FAMILIES173, ...familiesOutsideBank()]) if (usable(f)) {
+for (const f of [...FAMILIES174, ...familiesOutsideBank()]) if (usable(f)) {
   if (!BY_CSKILL.has(f.cskill)) BY_CSKILL.set(f.cskill, []);
   BY_CSKILL.get(f.cskill).push(f);
 }

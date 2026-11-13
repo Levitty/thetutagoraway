@@ -1728,6 +1728,36 @@ export const SKILLS = {
    "M_EN9_GN_MANKIND"
   ]
  },
+ "ENGL.G9.READIN.T1_PLAY_STRUCTURE_AND_S.PL_STRUCTURE": {
+  "name": "Describe the setting and the order of a play",
+  "sub": "ENGL.G9.READIN.T1_PLAY_STRUCTURE_AND_S",
+  "outcome": "ENGL.G9.READIN.T1_PLAY_STRUCTURE_AND_S.a",
+  "outcomes": [
+   "ENGL.G9.READIN.T1_PLAY_STRUCTURE_AND_S.a",
+   "ENGL.G9.READIN.T1_PLAY_STRUCTURE_AND_S.b"
+  ],
+  "pre": [],
+  "mis": [
+   "M_EN9_PL_STRUCTURE_DETAIL",
+   "M_EN9_PL_STRUCTURE_OPPOSITE",
+   "M_EN9_PL_STRUCTURE_NOTSAID"
+  ]
+ },
+ "ENGL.G9.READIN.T2_INTENSIVE_READING_SI.RP_STYLE": {
+  "name": "Name repetition and its function in a poem",
+  "sub": "ENGL.G9.READIN.T2_INTENSIVE_READING_SI",
+  "outcome": "ENGL.G9.READIN.T2_INTENSIVE_READING_SI.a",
+  "outcomes": [
+   "ENGL.G9.READIN.T2_INTENSIVE_READING_SI.a",
+   "ENGL.G9.READIN.T2_INTENSIVE_READING_SI.b"
+  ],
+  "pre": [],
+  "mis": [
+   "M_EN9_RP_STYLE_DETAIL",
+   "M_EN9_RP_STYLE_OPPOSITE",
+   "M_EN9_RP_STYLE_NOTSAID"
+  ]
+ },
  "ENGL.G9.GRAMMA.T2_NOUNS_AND_QUANTIFIER.QUANTIFIERS": {
   "name": "Use quantifiers with count and non-count nouns",
   "sub": "ENGL.G9.GRAMMA.T2_NOUNS_AND_QUANTIFIER",
@@ -1743,6 +1773,21 @@ export const SKILLS = {
    "M_EN9_QT_FEW"
   ]
  },
+ "ENGL.G9.READIN.T2_INTENSIVE_READING_PL.PL_SEQUENCE": {
+  "name": "Describe the sequence of events in a play and relate them to life",
+  "sub": "ENGL.G9.READIN.T2_INTENSIVE_READING_PL",
+  "outcome": "ENGL.G9.READIN.T2_INTENSIVE_READING_PL.a",
+  "outcomes": [
+   "ENGL.G9.READIN.T2_INTENSIVE_READING_PL.a",
+   "ENGL.G9.READIN.T2_INTENSIVE_READING_PL.b"
+  ],
+  "pre": [],
+  "mis": [
+   "M_EN9_PL_SEQUENCE_DETAIL",
+   "M_EN9_PL_SEQUENCE_OPPOSITE",
+   "M_EN9_PL_SEQUENCE_NOTSAID"
+  ]
+ },
  "ENGL.G9.WRITIN.T2_MECHANICS_OF_WRITING.QUOTES_BRACKETS": {
   "name": "Use double quotation marks and brackets",
   "sub": "ENGL.G9.WRITIN.T2_MECHANICS_OF_WRITING",
@@ -1756,6 +1801,48 @@ export const SKILLS = {
    "M_EN9_QB_BRACKET",
    "M_EN9_QB_EXTRA",
    "M_EN9_QB_END"
+  ]
+ },
+ "ENGL.G9.LISTEN.T3_LISTENING_COMPREHENS.LS_MAIN": {
+  "name": "Pick the main idea and specific details of an argumentative listening text",
+  "sub": "ENGL.G9.LISTEN.T3_LISTENING_COMPREHENS",
+  "outcome": "ENGL.G9.LISTEN.T3_LISTENING_COMPREHENS.a",
+  "outcomes": [
+   "ENGL.G9.LISTEN.T3_LISTENING_COMPREHENS.a"
+  ],
+  "pre": [],
+  "mis": [
+   "M_EN9_LS_MAIN_DETAIL",
+   "M_EN9_LS_MAIN_OPPOSITE",
+   "M_EN9_LS_MAIN_NOTSAID"
+  ]
+ },
+ "ENGL.G9.READIN.T3_READING_FOR_INFORMAT.RS_CONTEXT": {
+  "name": "Infer the meaning of words and sentences from the context",
+  "sub": "ENGL.G9.READIN.T3_READING_FOR_INFORMAT",
+  "outcome": "ENGL.G9.READIN.T3_READING_FOR_INFORMAT.a",
+  "outcomes": [
+   "ENGL.G9.READIN.T3_READING_FOR_INFORMAT.a"
+  ],
+  "pre": [],
+  "mis": [
+   "M_EN9_RS_CONTEXT_DETAIL",
+   "M_EN9_RS_CONTEXT_OPPOSITE",
+   "M_EN9_RS_CONTEXT_NOTSAID"
+  ]
+ },
+ "ENGL.G9.READIN.T3_READING_FOR_INFORMAT.RS_CONNECT": {
+  "name": "Connect events in a text to real life",
+  "sub": "ENGL.G9.READIN.T3_READING_FOR_INFORMAT",
+  "outcome": "ENGL.G9.READIN.T3_READING_FOR_INFORMAT.b",
+  "outcomes": [
+   "ENGL.G9.READIN.T3_READING_FOR_INFORMAT.b"
+  ],
+  "pre": [],
+  "mis": [
+   "M_EN9_RS_CONNECT_DETAIL",
+   "M_EN9_RS_CONNECT_OPPOSITE",
+   "M_EN9_RS_CONNECT_NOTSAID"
   ]
  },
  "ENGL.G9.GRAMMA.T3_MODAL_AUXILIARIES.MODALS": {
@@ -1802,6 +1889,63 @@ export const SKILLS = {
    "M_EN9_PA_COHERENCE"
   ]
  },
+ "ENGL.G9.READIN.T4_INTENSIVE_READING.RS_PREDICT": {
+  "name": "Predict events in a reading text",
+  "sub": "ENGL.G9.READIN.T4_INTENSIVE_READING",
+  "outcome": "ENGL.G9.READIN.T4_INTENSIVE_READING.a",
+  "outcomes": [
+   "ENGL.G9.READIN.T4_INTENSIVE_READING.a"
+  ],
+  "pre": [],
+  "mis": [
+   "M_EN9_RS_PREDICT_DETAIL",
+   "M_EN9_RS_PREDICT_OPPOSITE",
+   "M_EN9_RS_PREDICT_NOTSAID"
+  ]
+ },
+ "ENGL.G9.READIN.T4_INTENSIVE_READING.RS_KEYEVENTS": {
+  "name": "Outline the key events in a text",
+  "sub": "ENGL.G9.READIN.T4_INTENSIVE_READING",
+  "outcome": "ENGL.G9.READIN.T4_INTENSIVE_READING.b",
+  "outcomes": [
+   "ENGL.G9.READIN.T4_INTENSIVE_READING.b"
+  ],
+  "pre": [],
+  "mis": [
+   "M_EN9_RS_KEYEVENTS_DETAIL",
+   "M_EN9_RS_KEYEVENTS_OPPOSITE",
+   "M_EN9_RS_KEYEVENTS_NOTSAID"
+  ]
+ },
+ "ENGL.G9.READIN.T4_INTENSIVE_READING.RS_QUESTIONS": {
+  "name": "Answer direct and inferential questions and use clues for word meaning",
+  "sub": "ENGL.G9.READIN.T4_INTENSIVE_READING",
+  "outcome": "ENGL.G9.READIN.T4_INTENSIVE_READING.c",
+  "outcomes": [
+   "ENGL.G9.READIN.T4_INTENSIVE_READING.c",
+   "ENGL.G9.READIN.T4_INTENSIVE_READING.d"
+  ],
+  "pre": [],
+  "mis": [
+   "M_EN9_RS_QUESTIONS_DETAIL",
+   "M_EN9_RS_QUESTIONS_OPPOSITE",
+   "M_EN9_RS_QUESTIONS_NOTSAID"
+  ]
+ },
+ "ENGL.G9.READIN.T4_INTENSIVE_READING.RS_RELATE": {
+  "name": "Relate the characters, events and places in a text to real life",
+  "sub": "ENGL.G9.READIN.T4_INTENSIVE_READING",
+  "outcome": "ENGL.G9.READIN.T4_INTENSIVE_READING.e",
+  "outcomes": [
+   "ENGL.G9.READIN.T4_INTENSIVE_READING.e"
+  ],
+  "pre": [],
+  "mis": [
+   "M_EN9_RS_RELATE_DETAIL",
+   "M_EN9_RS_RELATE_OPPOSITE",
+   "M_EN9_RS_RELATE_NOTSAID"
+  ]
+ },
  "ENGL.G9.GRAMMA.T4_PRESENT_AND_PAST_PER.PERFECT": {
   "name": "Tell the present perfect from the past perfect",
   "sub": "ENGL.G9.GRAMMA.T4_PRESENT_AND_PAST_PER",
@@ -1815,6 +1959,21 @@ export const SKILLS = {
    "M_EN9_PE_PRESENT",
    "M_EN9_PE_PAST",
    "M_EN9_PE_PARTICIPLE"
+  ]
+ },
+ "ENGL.G9.READIN.T4_PLAY_IDENTIFICATION_.PL_CHARACTERS": {
+  "name": "Identify the characters in a play and describe their actions with adverbs",
+  "sub": "ENGL.G9.READIN.T4_PLAY_IDENTIFICATION_",
+  "outcome": "ENGL.G9.READIN.T4_PLAY_IDENTIFICATION_.a",
+  "outcomes": [
+   "ENGL.G9.READIN.T4_PLAY_IDENTIFICATION_.a",
+   "ENGL.G9.READIN.T4_PLAY_IDENTIFICATION_.c"
+  ],
+  "pre": [],
+  "mis": [
+   "M_EN9_PL_CHARACTERS_DETAIL",
+   "M_EN9_PL_CHARACTERS_OPPOSITE",
+   "M_EN9_PL_CHARACTERS_NOTSAID"
   ]
  },
  "ENGL.G9.GRAMMA.T5_ORDER_OF_ADJECTIVES.ADJ_ORDER": {
@@ -1861,6 +2020,22 @@ export const SKILLS = {
    "M_EN9_AD_THAN"
   ]
  },
+ "ENGL.G9.READIN.T6_INTENSIVE_READING_PL.PL_THEMES": {
+  "name": "Identify and analyse the themes in a play",
+  "sub": "ENGL.G9.READIN.T6_INTENSIVE_READING_PL",
+  "outcome": "ENGL.G9.READIN.T6_INTENSIVE_READING_PL.a",
+  "outcomes": [
+   "ENGL.G9.READIN.T6_INTENSIVE_READING_PL.a",
+   "ENGL.G9.READIN.T6_INTENSIVE_READING_PL.b",
+   "ENGL.G9.READIN.T6_INTENSIVE_READING_PL.c"
+  ],
+  "pre": [],
+  "mis": [
+   "M_EN9_PL_THEMES_DETAIL",
+   "M_EN9_PL_THEMES_OPPOSITE",
+   "M_EN9_PL_THEMES_NOTSAID"
+  ]
+ },
  "ENGL.G9.WRITIN.T6_MECHANICS_OF_WRITING.SPELLING": {
   "name": "Tell homophones and homonyms and spell commonly misspelt words",
   "sub": "ENGL.G9.WRITIN.T6_MECHANICS_OF_WRITING",
@@ -1891,6 +2066,36 @@ export const SKILLS = {
    "M_EN9_RP_WHO"
   ]
  },
+ "ENGL.G9.READIN.T7_INTENSIVE_READING_PL.PL_RELATIONSHIP": {
+  "name": "Analyse the characters in a play and their relationship",
+  "sub": "ENGL.G9.READIN.T7_INTENSIVE_READING_PL",
+  "outcome": "ENGL.G9.READIN.T7_INTENSIVE_READING_PL.a",
+  "outcomes": [
+   "ENGL.G9.READIN.T7_INTENSIVE_READING_PL.a",
+   "ENGL.G9.READIN.T7_INTENSIVE_READING_PL.b"
+  ],
+  "pre": [],
+  "mis": [
+   "M_EN9_PL_RELATIONSHIP_DETAIL",
+   "M_EN9_PL_RELATIONSHIP_OPPOSITE",
+   "M_EN9_PL_RELATIONSHIP_NOTSAID"
+  ]
+ },
+ "ENGL.G9.READIN.T8_READING_FOR_INTERPRE.RP_POV": {
+  "name": "Identify the point of view of a poem",
+  "sub": "ENGL.G9.READIN.T8_READING_FOR_INTERPRE",
+  "outcome": "ENGL.G9.READIN.T8_READING_FOR_INTERPRE.a",
+  "outcomes": [
+   "ENGL.G9.READIN.T8_READING_FOR_INTERPRE.a",
+   "ENGL.G9.READIN.T8_READING_FOR_INTERPRE.b"
+  ],
+  "pre": [],
+  "mis": [
+   "M_EN9_RP_POV_DETAIL",
+   "M_EN9_RP_POV_OPPOSITE",
+   "M_EN9_RP_POV_NOTSAID"
+  ]
+ },
  "ENGL.G9.GRAMMA.T8_COMPLEX_PREPOSITIONS.COMPLEX_PREPS": {
   "name": "Use complex prepositions",
   "sub": "ENGL.G9.GRAMMA.T8_COMPLEX_PREPOSITIONS",
@@ -1904,6 +2109,21 @@ export const SKILLS = {
    "M_EN9_CP_BECAUSE",
    "M_EN9_CP_INSTEAD",
    "M_EN9_CP_ACCORDING"
+  ]
+ },
+ "ENGL.G9.READIN.T8_POETRY_CHARACTERS.RP_PERSONA": {
+  "name": "Identify the persona and other participants in a poem",
+  "sub": "ENGL.G9.READIN.T8_POETRY_CHARACTERS",
+  "outcome": "ENGL.G9.READIN.T8_POETRY_CHARACTERS.a",
+  "outcomes": [
+   "ENGL.G9.READIN.T8_POETRY_CHARACTERS.a",
+   "ENGL.G9.READIN.T8_POETRY_CHARACTERS.b"
+  ],
+  "pre": [],
+  "mis": [
+   "M_EN9_RP_PERSONA_DETAIL",
+   "M_EN9_RP_PERSONA_OPPOSITE",
+   "M_EN9_RP_PERSONA_NOTSAID"
   ]
  },
  "ENGL.G9.GRAMMA.T9_CONJUNCTIONS_CORRELA.CORRELATIVE": {
@@ -1965,6 +2185,21 @@ export const SKILLS = {
    "M_EN9_NF_CHILD"
   ]
  },
+ "ENGL.G9.READIN.T11_GRADE_APPROPRIATE_PL.PL_LESSONS": {
+  "name": "Identify the lessons learnt from a play",
+  "sub": "ENGL.G9.READIN.T11_GRADE_APPROPRIATE_PL",
+  "outcome": "ENGL.G9.READIN.T11_GRADE_APPROPRIATE_PL.a",
+  "outcomes": [
+   "ENGL.G9.READIN.T11_GRADE_APPROPRIATE_PL.a",
+   "ENGL.G9.READIN.T11_GRADE_APPROPRIATE_PL.b"
+  ],
+  "pre": [],
+  "mis": [
+   "M_EN9_PL_LESSONS_DETAIL",
+   "M_EN9_PL_LESSONS_OPPOSITE",
+   "M_EN9_PL_LESSONS_NOTSAID"
+  ]
+ },
  "ENGL.G9.WRITIN.T11_MECHANICS_OF_WRITING.ABBREVIATIONS": {
   "name": "Write common abbreviations and acronyms in full",
   "sub": "ENGL.G9.WRITIN.T11_MECHANICS_OF_WRITING",
@@ -1977,6 +2212,21 @@ export const SKILLS = {
    "M_EN9_AB_EG",
    "M_EN9_AB_ETC",
    "M_EN9_AB_UN"
+  ]
+ },
+ "ENGL.G9.READIN.T12_INTENSIVE_READING_CO.RS_CLUES": {
+  "name": "Find clues in a passage and infer meaning from them",
+  "sub": "ENGL.G9.READIN.T12_INTENSIVE_READING_CO",
+  "outcome": "ENGL.G9.READIN.T12_INTENSIVE_READING_CO.a",
+  "outcomes": [
+   "ENGL.G9.READIN.T12_INTENSIVE_READING_CO.a",
+   "ENGL.G9.READIN.T12_INTENSIVE_READING_CO.b"
+  ],
+  "pre": [],
+  "mis": [
+   "M_EN9_RS_CLUES_DETAIL",
+   "M_EN9_RS_CLUES_OPPOSITE",
+   "M_EN9_RS_CLUES_NOTSAID"
   ]
  },
  "ENGL.G9.GRAMMA.T12_PHRASAL_VERBS.PHRASAL_VERBS": {
@@ -1992,6 +2242,34 @@ export const SKILLS = {
    "M_EN9_PV_BREAKDOWN",
    "M_EN9_PV_RUNOUT",
    "M_EN9_PV_TURNUP"
+  ]
+ },
+ "ENGL.G9.READIN.T12_PLAY_CHARACTERISATIO.PL_TRAITS": {
+  "name": "Outline clues for the traits of characters in a play",
+  "sub": "ENGL.G9.READIN.T12_PLAY_CHARACTERISATIO",
+  "outcome": "ENGL.G9.READIN.T12_PLAY_CHARACTERISATIO.a",
+  "outcomes": [
+   "ENGL.G9.READIN.T12_PLAY_CHARACTERISATIO.a"
+  ],
+  "pre": [],
+  "mis": [
+   "M_EN9_PL_TRAITS_DETAIL",
+   "M_EN9_PL_TRAITS_OPPOSITE",
+   "M_EN9_PL_TRAITS_NOTSAID"
+  ]
+ },
+ "ENGL.G9.READIN.T13_INTENSIVE_READING_VI.RS_IMAGES": {
+  "name": "Pick the mental images a passage creates",
+  "sub": "ENGL.G9.READIN.T13_INTENSIVE_READING_VI",
+  "outcome": "ENGL.G9.READIN.T13_INTENSIVE_READING_VI.a",
+  "outcomes": [
+   "ENGL.G9.READIN.T13_INTENSIVE_READING_VI.a"
+  ],
+  "pre": [],
+  "mis": [
+   "M_EN9_RS_IMAGES_DETAIL",
+   "M_EN9_RS_IMAGES_OPPOSITE",
+   "M_EN9_RS_IMAGES_NOTSAID"
   ]
  },
  "ENGL.G9.GRAMMA.T13_SENTENCES_COMPLEX_SE.SUBORDINATING": {
@@ -2010,6 +2288,21 @@ export const SKILLS = {
    "M_EN9_SC_UNLESS"
   ]
  },
+ "ENGL.G9.READIN.T14_SUMMARISING_ARGUMENT.RS_SUMMARY": {
+  "name": "Pick out the main points and organise them into a summary",
+  "sub": "ENGL.G9.READIN.T14_SUMMARISING_ARGUMENT",
+  "outcome": "ENGL.G9.READIN.T14_SUMMARISING_ARGUMENT.a",
+  "outcomes": [
+   "ENGL.G9.READIN.T14_SUMMARISING_ARGUMENT.a",
+   "ENGL.G9.READIN.T14_SUMMARISING_ARGUMENT.b"
+  ],
+  "pre": [],
+  "mis": [
+   "M_EN9_RS_SUMMARY_DETAIL",
+   "M_EN9_RS_SUMMARY_OPPOSITE",
+   "M_EN9_RS_SUMMARY_NOTSAID"
+  ]
+ },
  "ENGL.G9.GRAMMA.T14_SENTENCES_DIRECT_AND.DIRECT_INDIRECT": {
   "name": "Change direct speech into indirect speech",
   "sub": "ENGL.G9.GRAMMA.T14_SENTENCES_DIRECT_AND",
@@ -2026,6 +2319,20 @@ export const SKILLS = {
    "M_EN9_DI_QUOTE",
    "M_EN9_DI_TENSE",
    "M_EN9_DI_PRONOUN"
+  ]
+ },
+ "ENGL.G9.READIN.T15_READING_FLUENCY.RS_FLUENCY": {
+  "name": "Make predictions about characters, events and the message of a text",
+  "sub": "ENGL.G9.READIN.T15_READING_FLUENCY",
+  "outcome": "ENGL.G9.READIN.T15_READING_FLUENCY.b",
+  "outcomes": [
+   "ENGL.G9.READIN.T15_READING_FLUENCY.b"
+  ],
+  "pre": [],
+  "mis": [
+   "M_EN9_RS_FLUENCY_DETAIL",
+   "M_EN9_RS_FLUENCY_OPPOSITE",
+   "M_EN9_RS_FLUENCY_NOTSAID"
   ]
  },
  "ENGL.G9.GRAMMA.T15_SENTENCES_1_IMPERATI.EXCLAM_IMPERATIVE": {
@@ -2048,12 +2355,30 @@ export const MIS_FEEDBACK = {
  "M_EN9_GN_CHAIRMAN": "Chairperson does not assume the sex of the chair.",
  "M_EN9_GN_POLICE": "Police officer fits a man or a woman.",
  "M_EN9_GN_MANKIND": "Humankind includes everyone.",
+ "M_EN9_PL_STRUCTURE_DETAIL": "Check the answer against the text: it must cover what the question asks, not one small detail.",
+ "M_EN9_PL_STRUCTURE_OPPOSITE": "Check the answer against the text: it must agree with the text, not say the opposite.",
+ "M_EN9_PL_STRUCTURE_NOTSAID": "Check the answer against the text: it must be found in the text, not added from outside.",
+ "M_EN9_RP_STYLE_DETAIL": "Check the answer against the text: it must cover what the question asks, not one small detail.",
+ "M_EN9_RP_STYLE_OPPOSITE": "Check the answer against the text: it must agree with the text, not say the opposite.",
+ "M_EN9_RP_STYLE_NOTSAID": "Check the answer against the text: it must be found in the text, not added from outside.",
  "M_EN9_QT_MUCH": "Use many with count nouns such as chairs.",
  "M_EN9_QT_MANY": "Use much with non-count nouns such as water.",
  "M_EN9_QT_FEW": "Use little with non-count nouns such as milk.",
+ "M_EN9_PL_SEQUENCE_DETAIL": "Check the answer against the text: it must cover what the question asks, not one small detail.",
+ "M_EN9_PL_SEQUENCE_OPPOSITE": "Check the answer against the text: it must agree with the text, not say the opposite.",
+ "M_EN9_PL_SEQUENCE_NOTSAID": "Check the answer against the text: it must be found in the text, not added from outside.",
  "M_EN9_QB_BRACKET": "Quotation marks hold the exact words spoken.",
  "M_EN9_QB_EXTRA": "Brackets hold extra information.",
  "M_EN9_QB_END": "The full stop goes inside the closing quotation marks.",
+ "M_EN9_LS_MAIN_DETAIL": "Check the answer against the text: it must cover what the question asks, not one small detail.",
+ "M_EN9_LS_MAIN_OPPOSITE": "Check the answer against the text: it must agree with the text, not say the opposite.",
+ "M_EN9_LS_MAIN_NOTSAID": "Check the answer against the text: it must be found in the text, not added from outside.",
+ "M_EN9_RS_CONTEXT_DETAIL": "Check the answer against the text: it must cover what the question asks, not one small detail.",
+ "M_EN9_RS_CONTEXT_OPPOSITE": "Check the answer against the text: it must agree with the text, not say the opposite.",
+ "M_EN9_RS_CONTEXT_NOTSAID": "Check the answer against the text: it must be found in the text, not added from outside.",
+ "M_EN9_RS_CONNECT_DETAIL": "Check the answer against the text: it must cover what the question asks, not one small detail.",
+ "M_EN9_RS_CONNECT_OPPOSITE": "Check the answer against the text: it must agree with the text, not say the opposite.",
+ "M_EN9_RS_CONNECT_NOTSAID": "Check the answer against the text: it must be found in the text, not added from outside.",
  "M_EN9_MD_ABILITY": "Can shows ability.",
  "M_EN9_MD_DUTY": "Must shows duty.",
  "M_EN9_MD_BASE": "A modal is followed by the base verb with no to.",
@@ -2063,9 +2388,24 @@ export const MIS_FEEDBACK = {
  "M_EN9_PA_TOPIC": "The topic sentence states the main idea.",
  "M_EN9_PA_UNITY": "Unity means one main idea.",
  "M_EN9_PA_COHERENCE": "Coherence means ideas flow in order.",
+ "M_EN9_RS_PREDICT_DETAIL": "Check the answer against the text: it must cover what the question asks, not one small detail.",
+ "M_EN9_RS_PREDICT_OPPOSITE": "Check the answer against the text: it must agree with the text, not say the opposite.",
+ "M_EN9_RS_PREDICT_NOTSAID": "Check the answer against the text: it must be found in the text, not added from outside.",
+ "M_EN9_RS_KEYEVENTS_DETAIL": "Check the answer against the text: it must cover what the question asks, not one small detail.",
+ "M_EN9_RS_KEYEVENTS_OPPOSITE": "Check the answer against the text: it must agree with the text, not say the opposite.",
+ "M_EN9_RS_KEYEVENTS_NOTSAID": "Check the answer against the text: it must be found in the text, not added from outside.",
+ "M_EN9_RS_QUESTIONS_DETAIL": "Check the answer against the text: it must cover what the question asks, not one small detail.",
+ "M_EN9_RS_QUESTIONS_OPPOSITE": "Check the answer against the text: it must agree with the text, not say the opposite.",
+ "M_EN9_RS_QUESTIONS_NOTSAID": "Check the answer against the text: it must be found in the text, not added from outside.",
+ "M_EN9_RS_RELATE_DETAIL": "Check the answer against the text: it must cover what the question asks, not one small detail.",
+ "M_EN9_RS_RELATE_OPPOSITE": "Check the answer against the text: it must agree with the text, not say the opposite.",
+ "M_EN9_RS_RELATE_NOTSAID": "Check the answer against the text: it must be found in the text, not added from outside.",
  "M_EN9_PE_PRESENT": "Present perfect uses have or has.",
  "M_EN9_PE_PAST": "Past perfect uses had.",
  "M_EN9_PE_PARTICIPLE": "Use the past participle after has.",
+ "M_EN9_PL_CHARACTERS_DETAIL": "Check the answer against the text: it must cover what the question asks, not one small detail.",
+ "M_EN9_PL_CHARACTERS_OPPOSITE": "Check the answer against the text: it must agree with the text, not say the opposite.",
+ "M_EN9_PL_CHARACTERS_NOTSAID": "Check the answer against the text: it must be found in the text, not added from outside.",
  "M_EN9_AO_COLOUR": "Size comes before colour.",
  "M_EN9_AO_OPINION": "Opinion comes before material.",
  "M_EN9_AO_AGE": "Age comes before colour.",
@@ -2075,15 +2415,27 @@ export const MIS_FEEDBACK = {
  "M_EN9_AD_MORE": "Long adverbs take more and most.",
  "M_EN9_AD_SUPER": "Use the superlative when comparing three or more.",
  "M_EN9_AD_THAN": "Use the comparative with than.",
+ "M_EN9_PL_THEMES_DETAIL": "Check the answer against the text: it must cover what the question asks, not one small detail.",
+ "M_EN9_PL_THEMES_OPPOSITE": "Check the answer against the text: it must agree with the text, not say the opposite.",
+ "M_EN9_PL_THEMES_NOTSAID": "Check the answer against the text: it must be found in the text, not added from outside.",
  "M_EN9_SG_HOMOPHONE": "Their shows belonging.",
  "M_EN9_SG_SEPARATE": "Separate has \"par\" in the middle.",
  "M_EN9_SG_COMMITTEE": "Committee has double m, double t and double e.",
  "M_EN9_RP_WHICH": "Use which for things.",
  "M_EN9_RP_WHOSE": "Whose shows belonging.",
  "M_EN9_RP_WHO": "Use who for people.",
+ "M_EN9_PL_RELATIONSHIP_DETAIL": "Check the answer against the text: it must cover what the question asks, not one small detail.",
+ "M_EN9_PL_RELATIONSHIP_OPPOSITE": "Check the answer against the text: it must agree with the text, not say the opposite.",
+ "M_EN9_PL_RELATIONSHIP_NOTSAID": "Check the answer against the text: it must be found in the text, not added from outside.",
+ "M_EN9_RP_POV_DETAIL": "Check the answer against the text: it must cover what the question asks, not one small detail.",
+ "M_EN9_RP_POV_OPPOSITE": "Check the answer against the text: it must agree with the text, not say the opposite.",
+ "M_EN9_RP_POV_NOTSAID": "Check the answer against the text: it must be found in the text, not added from outside.",
  "M_EN9_CP_BECAUSE": "Because of is followed by a noun.",
  "M_EN9_CP_INSTEAD": "Instead of is followed by a noun.",
  "M_EN9_CP_ACCORDING": "Use according to.",
+ "M_EN9_RP_PERSONA_DETAIL": "Check the answer against the text: it must cover what the question asks, not one small detail.",
+ "M_EN9_RP_PERSONA_OPPOSITE": "Check the answer against the text: it must agree with the text, not say the opposite.",
+ "M_EN9_RP_PERSONA_NOTSAID": "Check the answer against the text: it must be found in the text, not added from outside.",
  "M_EN9_CO_EITHER": "Either goes with or.",
  "M_EN9_CO_NEITHER": "Neither goes with nor.",
  "M_EN9_CO_NOTONLY": "Not only goes with but also.",
@@ -2096,18 +2448,36 @@ export const MIS_FEEDBACK = {
  "M_EN9_NF_DECIDE": "The noun from decide is decision.",
  "M_EN9_NF_FRIEND": "Friendship is the noun formed from friend.",
  "M_EN9_NF_CHILD": "Childhood is the noun formed from child.",
+ "M_EN9_PL_LESSONS_DETAIL": "Check the answer against the text: it must cover what the question asks, not one small detail.",
+ "M_EN9_PL_LESSONS_OPPOSITE": "Check the answer against the text: it must agree with the text, not say the opposite.",
+ "M_EN9_PL_LESSONS_NOTSAID": "Check the answer against the text: it must be found in the text, not added from outside.",
  "M_EN9_AB_EG": "e.g. means for example.",
  "M_EN9_AB_ETC": "etc. means and so on.",
  "M_EN9_AB_UN": "UN stands for United Nations.",
+ "M_EN9_RS_CLUES_DETAIL": "Check the answer against the text: it must cover what the question asks, not one small detail.",
+ "M_EN9_RS_CLUES_OPPOSITE": "Check the answer against the text: it must agree with the text, not say the opposite.",
+ "M_EN9_RS_CLUES_NOTSAID": "Check the answer against the text: it must be found in the text, not added from outside.",
  "M_EN9_PV_BREAKDOWN": "Break down means stop working.",
  "M_EN9_PV_RUNOUT": "Run out of means have no more.",
  "M_EN9_PV_TURNUP": "Turn up means arrive.",
+ "M_EN9_PL_TRAITS_DETAIL": "Check the answer against the text: it must cover what the question asks, not one small detail.",
+ "M_EN9_PL_TRAITS_OPPOSITE": "Check the answer against the text: it must agree with the text, not say the opposite.",
+ "M_EN9_PL_TRAITS_NOTSAID": "Check the answer against the text: it must be found in the text, not added from outside.",
+ "M_EN9_RS_IMAGES_DETAIL": "Check the answer against the text: it must cover what the question asks, not one small detail.",
+ "M_EN9_RS_IMAGES_OPPOSITE": "Check the answer against the text: it must agree with the text, not say the opposite.",
+ "M_EN9_RS_IMAGES_NOTSAID": "Check the answer against the text: it must be found in the text, not added from outside.",
  "M_EN9_SC_ALTHOUGH": "Although shows contrast.",
  "M_EN9_SC_BECAUSE": "Because shows a reason.",
  "M_EN9_SC_UNLESS": "Unless means if not.",
+ "M_EN9_RS_SUMMARY_DETAIL": "Check the answer against the text: it must cover what the question asks, not one small detail.",
+ "M_EN9_RS_SUMMARY_OPPOSITE": "Check the answer against the text: it must agree with the text, not say the opposite.",
+ "M_EN9_RS_SUMMARY_NOTSAID": "Check the answer against the text: it must be found in the text, not added from outside.",
  "M_EN9_DI_QUOTE": "Indirect speech has no quotation marks.",
  "M_EN9_DI_TENSE": "Am becomes was.",
  "M_EN9_DI_PRONOUN": "I becomes he.",
+ "M_EN9_RS_FLUENCY_DETAIL": "Check the answer against the text: it must cover what the question asks, not one small detail.",
+ "M_EN9_RS_FLUENCY_OPPOSITE": "Check the answer against the text: it must agree with the text, not say the opposite.",
+ "M_EN9_RS_FLUENCY_NOTSAID": "Check the answer against the text: it must be found in the text, not added from outside.",
  "M_EN9_EI_MARK": "An exclamation ends with an exclamation mark.",
  "M_EN9_EI_COMMAND": "An imperative gives a command.",
  "M_EN9_EI_STOP": "A command ends with a full stop or exclamation mark."

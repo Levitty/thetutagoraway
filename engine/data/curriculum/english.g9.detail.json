@@ -261,6 +261,20 @@
    ],
    "mastery": "The child spots gender-biased words (chairman, policeman, fireman, waitress, mankind) and picks neutral ones (chairperson, police officer, firefighter, server, humankind), and says a job word should not assume the sex of the worker. Evidence rule: at least four of the last five fresh questions right across at least two question forms, and no repeated pick of the same misconception."
   },
+  "ENGL.G9.READIN.T1_PLAY_STRUCTURE_AND_S.PL_STRUCTURE": {
+   "forms": [
+    "pick the right answer",
+    "pick the right answer on a second text"
+   ],
+   "mastery": "The child reads the scene and picks the answer that fits the words and stage directions, and does not pick a small detail, the opposite or something not in the text. Evidence rule: at least four of the last five fresh questions right across at least two question forms, and no repeated pick of the same misconception."
+  },
+  "ENGL.G9.READIN.T2_INTENSIVE_READING_SI.RP_STYLE": {
+   "forms": [
+    "pick the right answer",
+    "pick the right answer on a second text"
+   ],
+   "mastery": "The child reads the poem for its speaker, repetition and message and picks the one that fits all its lines, and does not pick a small detail, the opposite or something not in the text. Evidence rule: at least four of the last five fresh questions right across at least two question forms, and no repeated pick of the same misconception."
+  },
   "ENGL.G9.GRAMMA.T2_NOUNS_AND_QUANTIFIER.QUANTIFIERS": {
    "forms": [
     "pick the right answer",
@@ -269,6 +283,13 @@
    ],
    "mastery": "The child uses many, few and a number of with count nouns, much and little with non-count nouns, and some, a lot of and plenty of with both; he sorts nouns (books, chairs: count; water, advice: non-count). Evidence rule: at least four of the last five fresh questions right across at least two question forms, and no repeated pick of the same misconception."
   },
+  "ENGL.G9.READIN.T2_INTENSIVE_READING_PL.PL_SEQUENCE": {
+   "forms": [
+    "pick the right answer",
+    "pick the right answer on a second text"
+   ],
+   "mastery": "The child reads the scene and picks the answer that fits the words and stage directions, and does not pick a small detail, the opposite or something not in the text. Evidence rule: at least four of the last five fresh questions right across at least two question forms, and no repeated pick of the same misconception."
+  },
   "ENGL.G9.WRITIN.T2_MECHANICS_OF_WRITING.QUOTES_BRACKETS": {
    "forms": [
     "pick the right answer",
@@ -276,6 +297,27 @@
     "find the false step in a learner's reason"
    ],
    "mastery": "The child puts the exact words spoken inside double quotation marks, and puts extra information or an explanation inside brackets, and does not use brackets for speech. Evidence rule: at least four of the last five fresh questions right across at least two question forms, and no repeated pick of the same misconception."
+  },
+  "ENGL.G9.LISTEN.T3_LISTENING_COMPREHENS.LS_MAIN": {
+   "forms": [
+    "pick the right answer",
+    "pick the right answer on a second text"
+   ],
+   "mastery": "The child remembers what was said and picks the answer that fits the whole talk, and does not pick a small detail, the opposite or something not in the text. Evidence rule: at least four of the last five fresh questions right across at least two question forms, and no repeated pick of the same misconception."
+  },
+  "ENGL.G9.READIN.T3_READING_FOR_INFORMAT.RS_CONTEXT": {
+   "forms": [
+    "pick the right answer",
+    "pick the right answer on a second text"
+   ],
+   "mastery": "The child finds the answer in the passage and picks the one that covers what the question asks, and does not pick a small detail, the opposite or something not in the text. Evidence rule: at least four of the last five fresh questions right across at least two question forms, and no repeated pick of the same misconception."
+  },
+  "ENGL.G9.READIN.T3_READING_FOR_INFORMAT.RS_CONNECT": {
+   "forms": [
+    "pick the right answer",
+    "pick the right answer on a second text"
+   ],
+   "mastery": "The child finds the answer in the passage and picks the one that covers what the question asks, and does not pick a small detail, the opposite or something not in the text. Evidence rule: at least four of the last five fresh questions right across at least two question forms, and no repeated pick of the same misconception."
   },
   "ENGL.G9.GRAMMA.T3_MODAL_AUXILIARIES.MODALS": {
    "forms": [
@@ -301,6 +343,34 @@
    ],
    "mastery": "The child says a good paragraph has a topic sentence, supporting sentences, unity (one idea), coherence (ideas in order, joined by linking words) and a closing sentence. Evidence rule: at least four of the last five fresh questions right across at least two question forms, and no repeated pick of the same misconception."
   },
+  "ENGL.G9.READIN.T4_INTENSIVE_READING.RS_PREDICT": {
+   "forms": [
+    "pick the right answer",
+    "pick the right answer on a second text"
+   ],
+   "mastery": "The child finds the answer in the passage and picks the one that covers what the question asks, and does not pick a small detail, the opposite or something not in the text. Evidence rule: at least four of the last five fresh questions right across at least two question forms, and no repeated pick of the same misconception."
+  },
+  "ENGL.G9.READIN.T4_INTENSIVE_READING.RS_KEYEVENTS": {
+   "forms": [
+    "pick the right answer",
+    "pick the right answer on a second text"
+   ],
+   "mastery": "The child finds the answer in the passage and picks the one that covers what the question asks, and does not pick a small detail, the opposite or something not in the text. Evidence rule: at least four of the last five fresh questions right across at least two question forms, and no repeated pick of the same misconception."
+  },
+  "ENGL.G9.READIN.T4_INTENSIVE_READING.RS_QUESTIONS": {
+   "forms": [
+    "pick the right answer",
+    "pick the right answer on a second text"
+   ],
+   "mastery": "The child finds the answer in the passage and picks the one that covers what the question asks, and does not pick a small detail, the opposite or something not in the text. Evidence rule: at least four of the last five fresh questions right across at least two question forms, and no repeated pick of the same misconception."
+  },
+  "ENGL.G9.READIN.T4_INTENSIVE_READING.RS_RELATE": {
+   "forms": [
+    "pick the right answer",
+    "pick the right answer on a second text"
+   ],
+   "mastery": "The child finds the answer in the passage and picks the one that covers what the question asks, and does not pick a small detail, the opposite or something not in the text. Evidence rule: at least four of the last five fresh questions right across at least two question forms, and no repeated pick of the same misconception."
+  },
   "ENGL.G9.GRAMMA.T4_PRESENT_AND_PAST_PER.PERFECT": {
    "forms": [
     "pick the right answer",
@@ -308,6 +378,13 @@
     "find the false step in a learner's reason"
    ],
    "mastery": "The child says the present perfect is have or has plus the past participle (She has finished) and the past perfect is had plus the past participle (She had finished before I came). Evidence rule: at least four of the last five fresh questions right across at least two question forms, and no repeated pick of the same misconception."
+  },
+  "ENGL.G9.READIN.T4_PLAY_IDENTIFICATION_.PL_CHARACTERS": {
+   "forms": [
+    "pick the right answer",
+    "pick the right answer on a second text"
+   ],
+   "mastery": "The child reads the scene and picks the answer that fits the words and stage directions, and does not pick a small detail, the opposite or something not in the text. Evidence rule: at least four of the last five fresh questions right across at least two question forms, and no repeated pick of the same misconception."
   },
   "ENGL.G9.GRAMMA.T5_ORDER_OF_ADJECTIVES.ADJ_ORDER": {
    "forms": [
@@ -333,6 +410,13 @@
    ],
    "mastery": "The child says the positive (fast), comparative (faster, more carefully) and superlative (fastest, most carefully) and that long adverbs take more and most. Evidence rule: at least four of the last five fresh questions right across at least two question forms, and no repeated pick of the same misconception."
   },
+  "ENGL.G9.READIN.T6_INTENSIVE_READING_PL.PL_THEMES": {
+   "forms": [
+    "pick the right answer",
+    "pick the right answer on a second text"
+   ],
+   "mastery": "The child reads the scene and picks the answer that fits the words and stage directions, and does not pick a small detail, the opposite or something not in the text. Evidence rule: at least four of the last five fresh questions right across at least two question forms, and no repeated pick of the same misconception."
+  },
   "ENGL.G9.WRITIN.T6_MECHANICS_OF_WRITING.SPELLING": {
    "forms": [
     "pick the right answer",
@@ -349,6 +433,20 @@
    ],
    "mastery": "The child says who and whom refer to people, which to things and animals, whose to belonging, that to people or things, and that who, what, which and whose also start questions. Evidence rule: at least four of the last five fresh questions right across at least two question forms, and no repeated pick of the same misconception."
   },
+  "ENGL.G9.READIN.T7_INTENSIVE_READING_PL.PL_RELATIONSHIP": {
+   "forms": [
+    "pick the right answer",
+    "pick the right answer on a second text"
+   ],
+   "mastery": "The child reads the scene and picks the answer that fits the words and stage directions, and does not pick a small detail, the opposite or something not in the text. Evidence rule: at least four of the last five fresh questions right across at least two question forms, and no repeated pick of the same misconception."
+  },
+  "ENGL.G9.READIN.T8_READING_FOR_INTERPRE.RP_POV": {
+   "forms": [
+    "pick the right answer",
+    "pick the right answer on a second text"
+   ],
+   "mastery": "The child reads the poem for its speaker, repetition and message and picks the one that fits all its lines, and does not pick a small detail, the opposite or something not in the text. Evidence rule: at least four of the last five fresh questions right across at least two question forms, and no repeated pick of the same misconception."
+  },
   "ENGL.G9.GRAMMA.T8_COMPLEX_PREPOSITIONS.COMPLEX_PREPS": {
    "forms": [
     "pick the right answer",
@@ -356,6 +454,13 @@
     "find the false step in a learner's reason"
    ],
    "mastery": "The child names complex prepositions of two or three words (because of, in front of, instead of, in spite of, according to, on behalf of) and uses them correctly. Evidence rule: at least four of the last five fresh questions right across at least two question forms, and no repeated pick of the same misconception."
+  },
+  "ENGL.G9.READIN.T8_POETRY_CHARACTERS.RP_PERSONA": {
+   "forms": [
+    "pick the right answer",
+    "pick the right answer on a second text"
+   ],
+   "mastery": "The child reads the poem for its speaker, repetition and message and picks the one that fits all its lines, and does not pick a small detail, the opposite or something not in the text. Evidence rule: at least four of the last five fresh questions right across at least two question forms, and no repeated pick of the same misconception."
   },
   "ENGL.G9.GRAMMA.T9_CONJUNCTIONS_CORRELA.CORRELATIVE": {
    "forms": [
@@ -389,6 +494,13 @@
    ],
    "mastery": "The child forms nouns from verbs (decide to decision, teach to teacher, move to movement) and from other nouns (child to childhood, friend to friendship). Evidence rule: at least four of the last five fresh questions right across at least two question forms, and no repeated pick of the same misconception."
   },
+  "ENGL.G9.READIN.T11_GRADE_APPROPRIATE_PL.PL_LESSONS": {
+   "forms": [
+    "pick the right answer",
+    "pick the right answer on a second text"
+   ],
+   "mastery": "The child reads the scene and picks the answer that fits the words and stage directions, and does not pick a small detail, the opposite or something not in the text. Evidence rule: at least four of the last five fresh questions right across at least two question forms, and no repeated pick of the same misconception."
+  },
   "ENGL.G9.WRITIN.T11_MECHANICS_OF_WRITING.ABBREVIATIONS": {
    "forms": [
     "pick the right answer",
@@ -396,6 +508,13 @@
     "find the false step in a learner's reason"
    ],
    "mastery": "The child gives the full form of common abbreviations and acronyms such as e.g. (for example), i.e. (that is), etc. (and so on), UN (United Nations), WHO (World Health Organisation) and ICT (information and communication technology). Evidence rule: at least four of the last five fresh questions right across at least two question forms, and no repeated pick of the same misconception."
+  },
+  "ENGL.G9.READIN.T12_INTENSIVE_READING_CO.RS_CLUES": {
+   "forms": [
+    "pick the right answer",
+    "pick the right answer on a second text"
+   ],
+   "mastery": "The child finds the answer in the passage and picks the one that covers what the question asks, and does not pick a small detail, the opposite or something not in the text. Evidence rule: at least four of the last five fresh questions right across at least two question forms, and no repeated pick of the same misconception."
   },
   "ENGL.G9.GRAMMA.T12_PHRASAL_VERBS.PHRASAL_VERBS": {
    "forms": [
@@ -405,6 +524,20 @@
    ],
    "mastery": "The child knows break down (stop working), break out (start suddenly), hang on (wait), hang up (end a call), run out of (have no more), run into (meet by chance), turn up (arrive), turn down (refuse). Evidence rule: at least four of the last five fresh questions right across at least two question forms, and no repeated pick of the same misconception."
   },
+  "ENGL.G9.READIN.T12_PLAY_CHARACTERISATIO.PL_TRAITS": {
+   "forms": [
+    "pick the right answer",
+    "pick the right answer on a second text"
+   ],
+   "mastery": "The child reads the scene and picks the answer that fits the words and stage directions, and does not pick a small detail, the opposite or something not in the text. Evidence rule: at least four of the last five fresh questions right across at least two question forms, and no repeated pick of the same misconception."
+  },
+  "ENGL.G9.READIN.T13_INTENSIVE_READING_VI.RS_IMAGES": {
+   "forms": [
+    "pick the right answer",
+    "pick the right answer on a second text"
+   ],
+   "mastery": "The child finds the answer in the passage and picks the one that covers what the question asks, and does not pick a small detail, the opposite or something not in the text. Evidence rule: at least four of the last five fresh questions right across at least two question forms, and no repeated pick of the same misconception."
+  },
   "ENGL.G9.GRAMMA.T13_SENTENCES_COMPLEX_SE.SUBORDINATING": {
    "forms": [
     "pick the right answer",
@@ -413,6 +546,13 @@
    ],
    "mastery": "The child picks because (reason), although (contrast), if and unless (condition), when and while (time) and since, and says a complex sentence has a main clause and a subordinate clause. Evidence rule: at least four of the last five fresh questions right across at least two question forms, and no repeated pick of the same misconception."
   },
+  "ENGL.G9.READIN.T14_SUMMARISING_ARGUMENT.RS_SUMMARY": {
+   "forms": [
+    "pick the right answer",
+    "pick the right answer on a second text"
+   ],
+   "mastery": "The child finds the answer in the passage and picks the one that covers what the question asks, and does not pick a small detail, the opposite or something not in the text. Evidence rule: at least four of the last five fresh questions right across at least two question forms, and no repeated pick of the same misconception."
+  },
   "ENGL.G9.GRAMMA.T14_SENTENCES_DIRECT_AND.DIRECT_INDIRECT": {
    "forms": [
     "pick the right answer",
@@ -420,6 +560,13 @@
     "find the false step in a learner's reason"
    ],
    "mastery": "The child says direct speech gives the exact words in quotation marks and indirect speech reports them without quotation marks, with tense and pronouns changed (am becomes was, now becomes then). Evidence rule: at least four of the last five fresh questions right across at least two question forms, and no repeated pick of the same misconception."
+  },
+  "ENGL.G9.READIN.T15_READING_FLUENCY.RS_FLUENCY": {
+   "forms": [
+    "pick the right answer",
+    "pick the right answer on a second text"
+   ],
+   "mastery": "The child finds the answer in the passage and picks the one that covers what the question asks, and does not pick a small detail, the opposite or something not in the text. Evidence rule: at least four of the last five fresh questions right across at least two question forms, and no repeated pick of the same misconception."
   },
   "ENGL.G9.GRAMMA.T15_SENTENCES_1_IMPERATI.EXCLAM_IMPERATIVE": {
    "forms": [

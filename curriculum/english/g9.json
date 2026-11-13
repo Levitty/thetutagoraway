@@ -9,9 +9,9 @@
   "sub_strands": 75,
   "outcomes": 251,
   "lessons": 146,
-  "skills": 22,
+  "skills": 43,
   "prerequisites": 1,
-  "misconceptions": 66
+  "misconceptions": 129
  },
  "sub_strands": [
   {
@@ -361,8 +361,78 @@
      "status": "kicd_verified"
     }
    ],
-   "skills": [],
-   "misconceptions": [],
+   "skills": [
+    {
+     "code": "ENGL.G9.READIN.T1_PLAY_STRUCTURE_AND_S.PL_STRUCTURE",
+     "name": "Describe the setting and the order of a play",
+     "outcomes": [
+      "ENGL.G9.READIN.T1_PLAY_STRUCTURE_AND_S.a",
+      "ENGL.G9.READIN.T1_PLAY_STRUCTURE_AND_S.b"
+     ],
+     "mastery": "The child reads the scene and picks the answer that fits the words and stage directions, and does not pick a small detail, the opposite or something not in the text. Evidence rule: at least four of the last five fresh questions right across at least two question forms, and no repeated pick of the same misconception.",
+     "question_forms": [
+      "pick the right answer",
+      "pick the right answer on a second text"
+     ],
+     "thinking": [
+      "recall",
+      "reasoning"
+     ],
+     "horeb_skill_ids": [],
+     "prerequisites": [],
+     "status": "proposed"
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "ENGL.G9.READIN.T1_PLAY_STRUCTURE_AND_S.PL_STRUCTURE.M_EN9_PL_STRUCTURE_DETAIL",
+     "skill": "ENGL.G9.READIN.T1_PLAY_STRUCTURE_AND_S.PL_STRUCTURE",
+     "error": "Picks one small detail instead of the answer asked for.",
+     "example": {
+      "question": "Which answer fits the text?",
+      "wrong_answer": "an answer that is a small detail",
+      "correct_answer": "the answer the text supports"
+     },
+     "cause": "The child mixes up two rules that are taught close together.",
+     "reveals": "Offer \"an answer that is a small detail\" next to the right answer and ask the question again in a new situation.",
+     "help": "Check the answer against the text: it must cover what the question asks, not one small detail.",
+     "feedback": "Check the answer against the text: it must cover what the question asks, not one small detail.",
+     "source": "To confirm by a Kenyan English teacher: a common classroom error, not traced to a study by the author.",
+     "status": "draft"
+    },
+    {
+     "code": "ENGL.G9.READIN.T1_PLAY_STRUCTURE_AND_S.PL_STRUCTURE.M_EN9_PL_STRUCTURE_OPPOSITE",
+     "skill": "ENGL.G9.READIN.T1_PLAY_STRUCTURE_AND_S.PL_STRUCTURE",
+     "error": "Picks the opposite of what the text says.",
+     "example": {
+      "question": "Which answer fits the text?",
+      "wrong_answer": "an answer that is the opposite",
+      "correct_answer": "the answer the text supports"
+     },
+     "cause": "The child mixes up two rules that are taught close together.",
+     "reveals": "Offer \"an answer that is the opposite\" next to the right answer and ask the question again in a new situation.",
+     "help": "Check the answer against the text: it must agree with the text, not say the opposite.",
+     "feedback": "Check the answer against the text: it must agree with the text, not say the opposite.",
+     "source": "To confirm by a Kenyan English teacher: a common classroom error, not traced to a study by the author.",
+     "status": "draft"
+    },
+    {
+     "code": "ENGL.G9.READIN.T1_PLAY_STRUCTURE_AND_S.PL_STRUCTURE.M_EN9_PL_STRUCTURE_NOTSAID",
+     "skill": "ENGL.G9.READIN.T1_PLAY_STRUCTURE_AND_S.PL_STRUCTURE",
+     "error": "Picks something the text does not say.",
+     "example": {
+      "question": "Which answer fits the text?",
+      "wrong_answer": "an answer that is something not in the text",
+      "correct_answer": "the answer the text supports"
+     },
+     "cause": "The child mixes up two rules that are taught close together.",
+     "reveals": "Offer \"an answer that is something not in the text\" next to the right answer and ask the question again in a new situation.",
+     "help": "Check the answer against the text: it must be found in the text, not added from outside.",
+     "feedback": "Check the answer against the text: it must be found in the text, not added from outside.",
+     "source": "To confirm by a Kenyan English teacher: a common classroom error, not traced to a study by the author.",
+     "status": "draft"
+    }
+   ],
    "rubric_indicators": [
     "ENGL.G9.RUBRIC.2.1",
     "ENGL.G9.RUBRIC.2.2",
@@ -575,8 +645,78 @@
      "status": "kicd_read"
     }
    ],
-   "skills": [],
-   "misconceptions": [],
+   "skills": [
+    {
+     "code": "ENGL.G9.READIN.T2_INTENSIVE_READING_SI.RP_STYLE",
+     "name": "Name repetition and its function in a poem",
+     "outcomes": [
+      "ENGL.G9.READIN.T2_INTENSIVE_READING_SI.a",
+      "ENGL.G9.READIN.T2_INTENSIVE_READING_SI.b"
+     ],
+     "mastery": "The child reads the poem for its speaker, repetition and message and picks the one that fits all its lines, and does not pick a small detail, the opposite or something not in the text. Evidence rule: at least four of the last five fresh questions right across at least two question forms, and no repeated pick of the same misconception.",
+     "question_forms": [
+      "pick the right answer",
+      "pick the right answer on a second text"
+     ],
+     "thinking": [
+      "recall",
+      "reasoning"
+     ],
+     "horeb_skill_ids": [],
+     "prerequisites": [],
+     "status": "proposed"
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "ENGL.G9.READIN.T2_INTENSIVE_READING_SI.RP_STYLE.M_EN9_RP_STYLE_DETAIL",
+     "skill": "ENGL.G9.READIN.T2_INTENSIVE_READING_SI.RP_STYLE",
+     "error": "Picks one small detail instead of the answer asked for.",
+     "example": {
+      "question": "Which answer fits the text?",
+      "wrong_answer": "an answer that is a small detail",
+      "correct_answer": "the answer the text supports"
+     },
+     "cause": "The child mixes up two rules that are taught close together.",
+     "reveals": "Offer \"an answer that is a small detail\" next to the right answer and ask the question again in a new situation.",
+     "help": "Check the answer against the text: it must cover what the question asks, not one small detail.",
+     "feedback": "Check the answer against the text: it must cover what the question asks, not one small detail.",
+     "source": "To confirm by a Kenyan English teacher: a common classroom error, not traced to a study by the author.",
+     "status": "draft"
+    },
+    {
+     "code": "ENGL.G9.READIN.T2_INTENSIVE_READING_SI.RP_STYLE.M_EN9_RP_STYLE_OPPOSITE",
+     "skill": "ENGL.G9.READIN.T2_INTENSIVE_READING_SI.RP_STYLE",
+     "error": "Picks the opposite of what the text says.",
+     "example": {
+      "question": "Which answer fits the text?",
+      "wrong_answer": "an answer that is the opposite",
+      "correct_answer": "the answer the text supports"
+     },
+     "cause": "The child mixes up two rules that are taught close together.",
+     "reveals": "Offer \"an answer that is the opposite\" next to the right answer and ask the question again in a new situation.",
+     "help": "Check the answer against the text: it must agree with the text, not say the opposite.",
+     "feedback": "Check the answer against the text: it must agree with the text, not say the opposite.",
+     "source": "To confirm by a Kenyan English teacher: a common classroom error, not traced to a study by the author.",
+     "status": "draft"
+    },
+    {
+     "code": "ENGL.G9.READIN.T2_INTENSIVE_READING_SI.RP_STYLE.M_EN9_RP_STYLE_NOTSAID",
+     "skill": "ENGL.G9.READIN.T2_INTENSIVE_READING_SI.RP_STYLE",
+     "error": "Picks something the text does not say.",
+     "example": {
+      "question": "Which answer fits the text?",
+      "wrong_answer": "an answer that is something not in the text",
+      "correct_answer": "the answer the text supports"
+     },
+     "cause": "The child mixes up two rules that are taught close together.",
+     "reveals": "Offer \"an answer that is something not in the text\" next to the right answer and ask the question again in a new situation.",
+     "help": "Check the answer against the text: it must be found in the text, not added from outside.",
+     "feedback": "Check the answer against the text: it must be found in the text, not added from outside.",
+     "source": "To confirm by a Kenyan English teacher: a common classroom error, not traced to a study by the author.",
+     "status": "draft"
+    }
+   ],
    "rubric_indicators": [
     "ENGL.G9.RUBRIC.2.1",
     "ENGL.G9.RUBRIC.2.2",
@@ -779,8 +919,78 @@
      "status": "kicd_verified"
     }
    ],
-   "skills": [],
-   "misconceptions": [],
+   "skills": [
+    {
+     "code": "ENGL.G9.READIN.T2_INTENSIVE_READING_PL.PL_SEQUENCE",
+     "name": "Describe the sequence of events in a play and relate them to life",
+     "outcomes": [
+      "ENGL.G9.READIN.T2_INTENSIVE_READING_PL.a",
+      "ENGL.G9.READIN.T2_INTENSIVE_READING_PL.b"
+     ],
+     "mastery": "The child reads the scene and picks the answer that fits the words and stage directions, and does not pick a small detail, the opposite or something not in the text. Evidence rule: at least four of the last five fresh questions right across at least two question forms, and no repeated pick of the same misconception.",
+     "question_forms": [
+      "pick the right answer",
+      "pick the right answer on a second text"
+     ],
+     "thinking": [
+      "recall",
+      "reasoning"
+     ],
+     "horeb_skill_ids": [],
+     "prerequisites": [],
+     "status": "proposed"
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "ENGL.G9.READIN.T2_INTENSIVE_READING_PL.PL_SEQUENCE.M_EN9_PL_SEQUENCE_DETAIL",
+     "skill": "ENGL.G9.READIN.T2_INTENSIVE_READING_PL.PL_SEQUENCE",
+     "error": "Picks one small detail instead of the answer asked for.",
+     "example": {
+      "question": "Which answer fits the text?",
+      "wrong_answer": "an answer that is a small detail",
+      "correct_answer": "the answer the text supports"
+     },
+     "cause": "The child mixes up two rules that are taught close together.",
+     "reveals": "Offer \"an answer that is a small detail\" next to the right answer and ask the question again in a new situation.",
+     "help": "Check the answer against the text: it must cover what the question asks, not one small detail.",
+     "feedback": "Check the answer against the text: it must cover what the question asks, not one small detail.",
+     "source": "To confirm by a Kenyan English teacher: a common classroom error, not traced to a study by the author.",
+     "status": "draft"
+    },
+    {
+     "code": "ENGL.G9.READIN.T2_INTENSIVE_READING_PL.PL_SEQUENCE.M_EN9_PL_SEQUENCE_OPPOSITE",
+     "skill": "ENGL.G9.READIN.T2_INTENSIVE_READING_PL.PL_SEQUENCE",
+     "error": "Picks the opposite of what the text says.",
+     "example": {
+      "question": "Which answer fits the text?",
+      "wrong_answer": "an answer that is the opposite",
+      "correct_answer": "the answer the text supports"
+     },
+     "cause": "The child mixes up two rules that are taught close together.",
+     "reveals": "Offer \"an answer that is the opposite\" next to the right answer and ask the question again in a new situation.",
+     "help": "Check the answer against the text: it must agree with the text, not say the opposite.",
+     "feedback": "Check the answer against the text: it must agree with the text, not say the opposite.",
+     "source": "To confirm by a Kenyan English teacher: a common classroom error, not traced to a study by the author.",
+     "status": "draft"
+    },
+    {
+     "code": "ENGL.G9.READIN.T2_INTENSIVE_READING_PL.PL_SEQUENCE.M_EN9_PL_SEQUENCE_NOTSAID",
+     "skill": "ENGL.G9.READIN.T2_INTENSIVE_READING_PL.PL_SEQUENCE",
+     "error": "Picks something the text does not say.",
+     "example": {
+      "question": "Which answer fits the text?",
+      "wrong_answer": "an answer that is something not in the text",
+      "correct_answer": "the answer the text supports"
+     },
+     "cause": "The child mixes up two rules that are taught close together.",
+     "reveals": "Offer \"an answer that is something not in the text\" next to the right answer and ask the question again in a new situation.",
+     "help": "Check the answer against the text: it must be found in the text, not added from outside.",
+     "feedback": "Check the answer against the text: it must be found in the text, not added from outside.",
+     "source": "To confirm by a Kenyan English teacher: a common classroom error, not traced to a study by the author.",
+     "status": "draft"
+    }
+   ],
    "rubric_indicators": [
     "ENGL.G9.RUBRIC.2.1",
     "ENGL.G9.RUBRIC.2.2",
@@ -983,8 +1193,77 @@
      "status": "kicd_verified"
     }
    ],
-   "skills": [],
-   "misconceptions": [],
+   "skills": [
+    {
+     "code": "ENGL.G9.LISTEN.T3_LISTENING_COMPREHENS.LS_MAIN",
+     "name": "Pick the main idea and specific details of an argumentative listening text",
+     "outcomes": [
+      "ENGL.G9.LISTEN.T3_LISTENING_COMPREHENS.a"
+     ],
+     "mastery": "The child remembers what was said and picks the answer that fits the whole talk, and does not pick a small detail, the opposite or something not in the text. Evidence rule: at least four of the last five fresh questions right across at least two question forms, and no repeated pick of the same misconception.",
+     "question_forms": [
+      "pick the right answer",
+      "pick the right answer on a second text"
+     ],
+     "thinking": [
+      "recall",
+      "reasoning"
+     ],
+     "horeb_skill_ids": [],
+     "prerequisites": [],
+     "status": "proposed"
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "ENGL.G9.LISTEN.T3_LISTENING_COMPREHENS.LS_MAIN.M_EN9_LS_MAIN_DETAIL",
+     "skill": "ENGL.G9.LISTEN.T3_LISTENING_COMPREHENS.LS_MAIN",
+     "error": "Picks one small detail instead of the answer asked for.",
+     "example": {
+      "question": "Which answer fits the text?",
+      "wrong_answer": "an answer that is a small detail",
+      "correct_answer": "the answer the text supports"
+     },
+     "cause": "The child mixes up two rules that are taught close together.",
+     "reveals": "Offer \"an answer that is a small detail\" next to the right answer and ask the question again in a new situation.",
+     "help": "Check the answer against the text: it must cover what the question asks, not one small detail.",
+     "feedback": "Check the answer against the text: it must cover what the question asks, not one small detail.",
+     "source": "To confirm by a Kenyan English teacher: a common classroom error, not traced to a study by the author.",
+     "status": "draft"
+    },
+    {
+     "code": "ENGL.G9.LISTEN.T3_LISTENING_COMPREHENS.LS_MAIN.M_EN9_LS_MAIN_OPPOSITE",
+     "skill": "ENGL.G9.LISTEN.T3_LISTENING_COMPREHENS.LS_MAIN",
+     "error": "Picks the opposite of what the text says.",
+     "example": {
+      "question": "Which answer fits the text?",
+      "wrong_answer": "an answer that is the opposite",
+      "correct_answer": "the answer the text supports"
+     },
+     "cause": "The child mixes up two rules that are taught close together.",
+     "reveals": "Offer \"an answer that is the opposite\" next to the right answer and ask the question again in a new situation.",
+     "help": "Check the answer against the text: it must agree with the text, not say the opposite.",
+     "feedback": "Check the answer against the text: it must agree with the text, not say the opposite.",
+     "source": "To confirm by a Kenyan English teacher: a common classroom error, not traced to a study by the author.",
+     "status": "draft"
+    },
+    {
+     "code": "ENGL.G9.LISTEN.T3_LISTENING_COMPREHENS.LS_MAIN.M_EN9_LS_MAIN_NOTSAID",
+     "skill": "ENGL.G9.LISTEN.T3_LISTENING_COMPREHENS.LS_MAIN",
+     "error": "Picks something the text does not say.",
+     "example": {
+      "question": "Which answer fits the text?",
+      "wrong_answer": "an answer that is something not in the text",
+      "correct_answer": "the answer the text supports"
+     },
+     "cause": "The child mixes up two rules that are taught close together.",
+     "reveals": "Offer \"an answer that is something not in the text\" next to the right answer and ask the question again in a new situation.",
+     "help": "Check the answer against the text: it must be found in the text, not added from outside.",
+     "feedback": "Check the answer against the text: it must be found in the text, not added from outside.",
+     "source": "To confirm by a Kenyan English teacher: a common classroom error, not traced to a study by the author.",
+     "status": "draft"
+    }
+   ],
    "rubric_indicators": [
     "ENGL.G9.RUBRIC.1.1",
     "ENGL.G9.RUBRIC.1.2",
@@ -1053,8 +1332,144 @@
      "status": "kicd_verified"
     }
    ],
-   "skills": [],
-   "misconceptions": [],
+   "skills": [
+    {
+     "code": "ENGL.G9.READIN.T3_READING_FOR_INFORMAT.RS_CONTEXT",
+     "name": "Infer the meaning of words and sentences from the context",
+     "outcomes": [
+      "ENGL.G9.READIN.T3_READING_FOR_INFORMAT.a"
+     ],
+     "mastery": "The child finds the answer in the passage and picks the one that covers what the question asks, and does not pick a small detail, the opposite or something not in the text. Evidence rule: at least four of the last five fresh questions right across at least two question forms, and no repeated pick of the same misconception.",
+     "question_forms": [
+      "pick the right answer",
+      "pick the right answer on a second text"
+     ],
+     "thinking": [
+      "recall",
+      "reasoning"
+     ],
+     "horeb_skill_ids": [],
+     "prerequisites": [],
+     "status": "proposed"
+    },
+    {
+     "code": "ENGL.G9.READIN.T3_READING_FOR_INFORMAT.RS_CONNECT",
+     "name": "Connect events in a text to real life",
+     "outcomes": [
+      "ENGL.G9.READIN.T3_READING_FOR_INFORMAT.b"
+     ],
+     "mastery": "The child finds the answer in the passage and picks the one that covers what the question asks, and does not pick a small detail, the opposite or something not in the text. Evidence rule: at least four of the last five fresh questions right across at least two question forms, and no repeated pick of the same misconception.",
+     "question_forms": [
+      "pick the right answer",
+      "pick the right answer on a second text"
+     ],
+     "thinking": [
+      "recall",
+      "reasoning"
+     ],
+     "horeb_skill_ids": [],
+     "prerequisites": [],
+     "status": "proposed"
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "ENGL.G9.READIN.T3_READING_FOR_INFORMAT.RS_CONTEXT.M_EN9_RS_CONTEXT_DETAIL",
+     "skill": "ENGL.G9.READIN.T3_READING_FOR_INFORMAT.RS_CONTEXT",
+     "error": "Picks one small detail instead of the answer asked for.",
+     "example": {
+      "question": "Which answer fits the text?",
+      "wrong_answer": "an answer that is a small detail",
+      "correct_answer": "the answer the text supports"
+     },
+     "cause": "The child mixes up two rules that are taught close together.",
+     "reveals": "Offer \"an answer that is a small detail\" next to the right answer and ask the question again in a new situation.",
+     "help": "Check the answer against the text: it must cover what the question asks, not one small detail.",
+     "feedback": "Check the answer against the text: it must cover what the question asks, not one small detail.",
+     "source": "To confirm by a Kenyan English teacher: a common classroom error, not traced to a study by the author.",
+     "status": "draft"
+    },
+    {
+     "code": "ENGL.G9.READIN.T3_READING_FOR_INFORMAT.RS_CONTEXT.M_EN9_RS_CONTEXT_OPPOSITE",
+     "skill": "ENGL.G9.READIN.T3_READING_FOR_INFORMAT.RS_CONTEXT",
+     "error": "Picks the opposite of what the text says.",
+     "example": {
+      "question": "Which answer fits the text?",
+      "wrong_answer": "an answer that is the opposite",
+      "correct_answer": "the answer the text supports"
+     },
+     "cause": "The child mixes up two rules that are taught close together.",
+     "reveals": "Offer \"an answer that is the opposite\" next to the right answer and ask the question again in a new situation.",
+     "help": "Check the answer against the text: it must agree with the text, not say the opposite.",
+     "feedback": "Check the answer against the text: it must agree with the text, not say the opposite.",
+     "source": "To confirm by a Kenyan English teacher: a common classroom error, not traced to a study by the author.",
+     "status": "draft"
+    },
+    {
+     "code": "ENGL.G9.READIN.T3_READING_FOR_INFORMAT.RS_CONTEXT.M_EN9_RS_CONTEXT_NOTSAID",
+     "skill": "ENGL.G9.READIN.T3_READING_FOR_INFORMAT.RS_CONTEXT",
+     "error": "Picks something the text does not say.",
+     "example": {
+      "question": "Which answer fits the text?",
+      "wrong_answer": "an answer that is something not in the text",
+      "correct_answer": "the answer the text supports"
+     },
+     "cause": "The child mixes up two rules that are taught close together.",
+     "reveals": "Offer \"an answer that is something not in the text\" next to the right answer and ask the question again in a new situation.",
+     "help": "Check the answer against the text: it must be found in the text, not added from outside.",
+     "feedback": "Check the answer against the text: it must be found in the text, not added from outside.",
+     "source": "To confirm by a Kenyan English teacher: a common classroom error, not traced to a study by the author.",
+     "status": "draft"
+    },
+    {
+     "code": "ENGL.G9.READIN.T3_READING_FOR_INFORMAT.RS_CONNECT.M_EN9_RS_CONNECT_DETAIL",
+     "skill": "ENGL.G9.READIN.T3_READING_FOR_INFORMAT.RS_CONNECT",
+     "error": "Picks one small detail instead of the answer asked for.",
+     "example": {
+      "question": "Which answer fits the text?",
+      "wrong_answer": "an answer that is a small detail",
+      "correct_answer": "the answer the text supports"
+     },
+     "cause": "The child mixes up two rules that are taught close together.",
+     "reveals": "Offer \"an answer that is a small detail\" next to the right answer and ask the question again in a new situation.",
+     "help": "Check the answer against the text: it must cover what the question asks, not one small detail.",
+     "feedback": "Check the answer against the text: it must cover what the question asks, not one small detail.",
+     "source": "To confirm by a Kenyan English teacher: a common classroom error, not traced to a study by the author.",
+     "status": "draft"
+    },
+    {
+     "code": "ENGL.G9.READIN.T3_READING_FOR_INFORMAT.RS_CONNECT.M_EN9_RS_CONNECT_OPPOSITE",
+     "skill": "ENGL.G9.READIN.T3_READING_FOR_INFORMAT.RS_CONNECT",
+     "error": "Picks the opposite of what the text says.",
+     "example": {
+      "question": "Which answer fits the text?",
+      "wrong_answer": "an answer that is the opposite",
+      "correct_answer": "the answer the text supports"
+     },
+     "cause": "The child mixes up two rules that are taught close together.",
+     "reveals": "Offer \"an answer that is the opposite\" next to the right answer and ask the question again in a new situation.",
+     "help": "Check the answer against the text: it must agree with the text, not say the opposite.",
+     "feedback": "Check the answer against the text: it must agree with the text, not say the opposite.",
+     "source": "To confirm by a Kenyan English teacher: a common classroom error, not traced to a study by the author.",
+     "status": "draft"
+    },
+    {
+     "code": "ENGL.G9.READIN.T3_READING_FOR_INFORMAT.RS_CONNECT.M_EN9_RS_CONNECT_NOTSAID",
+     "skill": "ENGL.G9.READIN.T3_READING_FOR_INFORMAT.RS_CONNECT",
+     "error": "Picks something the text does not say.",
+     "example": {
+      "question": "Which answer fits the text?",
+      "wrong_answer": "an answer that is something not in the text",
+      "correct_answer": "the answer the text supports"
+     },
+     "cause": "The child mixes up two rules that are taught close together.",
+     "reveals": "Offer \"an answer that is something not in the text\" next to the right answer and ask the question again in a new situation.",
+     "help": "Check the answer against the text: it must be found in the text, not added from outside.",
+     "feedback": "Check the answer against the text: it must be found in the text, not added from outside.",
+     "source": "To confirm by a Kenyan English teacher: a common classroom error, not traced to a study by the author.",
+     "status": "draft"
+    }
+   ],
    "rubric_indicators": [
     "ENGL.G9.RUBRIC.2.1",
     "ENGL.G9.RUBRIC.2.2",
@@ -1620,8 +2035,279 @@
      "status": "kicd_verified"
     }
    ],
-   "skills": [],
-   "misconceptions": [],
+   "skills": [
+    {
+     "code": "ENGL.G9.READIN.T4_INTENSIVE_READING.RS_PREDICT",
+     "name": "Predict events in a reading text",
+     "outcomes": [
+      "ENGL.G9.READIN.T4_INTENSIVE_READING.a"
+     ],
+     "mastery": "The child finds the answer in the passage and picks the one that covers what the question asks, and does not pick a small detail, the opposite or something not in the text. Evidence rule: at least four of the last five fresh questions right across at least two question forms, and no repeated pick of the same misconception.",
+     "question_forms": [
+      "pick the right answer",
+      "pick the right answer on a second text"
+     ],
+     "thinking": [
+      "recall",
+      "reasoning"
+     ],
+     "horeb_skill_ids": [],
+     "prerequisites": [],
+     "status": "proposed"
+    },
+    {
+     "code": "ENGL.G9.READIN.T4_INTENSIVE_READING.RS_KEYEVENTS",
+     "name": "Outline the key events in a text",
+     "outcomes": [
+      "ENGL.G9.READIN.T4_INTENSIVE_READING.b"
+     ],
+     "mastery": "The child finds the answer in the passage and picks the one that covers what the question asks, and does not pick a small detail, the opposite or something not in the text. Evidence rule: at least four of the last five fresh questions right across at least two question forms, and no repeated pick of the same misconception.",
+     "question_forms": [
+      "pick the right answer",
+      "pick the right answer on a second text"
+     ],
+     "thinking": [
+      "recall",
+      "reasoning"
+     ],
+     "horeb_skill_ids": [],
+     "prerequisites": [],
+     "status": "proposed"
+    },
+    {
+     "code": "ENGL.G9.READIN.T4_INTENSIVE_READING.RS_QUESTIONS",
+     "name": "Answer direct and inferential questions and use clues for word meaning",
+     "outcomes": [
+      "ENGL.G9.READIN.T4_INTENSIVE_READING.c",
+      "ENGL.G9.READIN.T4_INTENSIVE_READING.d"
+     ],
+     "mastery": "The child finds the answer in the passage and picks the one that covers what the question asks, and does not pick a small detail, the opposite or something not in the text. Evidence rule: at least four of the last five fresh questions right across at least two question forms, and no repeated pick of the same misconception.",
+     "question_forms": [
+      "pick the right answer",
+      "pick the right answer on a second text"
+     ],
+     "thinking": [
+      "recall",
+      "reasoning"
+     ],
+     "horeb_skill_ids": [],
+     "prerequisites": [],
+     "status": "proposed"
+    },
+    {
+     "code": "ENGL.G9.READIN.T4_INTENSIVE_READING.RS_RELATE",
+     "name": "Relate the characters, events and places in a text to real life",
+     "outcomes": [
+      "ENGL.G9.READIN.T4_INTENSIVE_READING.e"
+     ],
+     "mastery": "The child finds the answer in the passage and picks the one that covers what the question asks, and does not pick a small detail, the opposite or something not in the text. Evidence rule: at least four of the last five fresh questions right across at least two question forms, and no repeated pick of the same misconception.",
+     "question_forms": [
+      "pick the right answer",
+      "pick the right answer on a second text"
+     ],
+     "thinking": [
+      "recall",
+      "reasoning"
+     ],
+     "horeb_skill_ids": [],
+     "prerequisites": [],
+     "status": "proposed"
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "ENGL.G9.READIN.T4_INTENSIVE_READING.RS_PREDICT.M_EN9_RS_PREDICT_DETAIL",
+     "skill": "ENGL.G9.READIN.T4_INTENSIVE_READING.RS_PREDICT",
+     "error": "Picks one small detail instead of the answer asked for.",
+     "example": {
+      "question": "Which answer fits the text?",
+      "wrong_answer": "an answer that is a small detail",
+      "correct_answer": "the answer the text supports"
+     },
+     "cause": "The child mixes up two rules that are taught close together.",
+     "reveals": "Offer \"an answer that is a small detail\" next to the right answer and ask the question again in a new situation.",
+     "help": "Check the answer against the text: it must cover what the question asks, not one small detail.",
+     "feedback": "Check the answer against the text: it must cover what the question asks, not one small detail.",
+     "source": "To confirm by a Kenyan English teacher: a common classroom error, not traced to a study by the author.",
+     "status": "draft"
+    },
+    {
+     "code": "ENGL.G9.READIN.T4_INTENSIVE_READING.RS_PREDICT.M_EN9_RS_PREDICT_OPPOSITE",
+     "skill": "ENGL.G9.READIN.T4_INTENSIVE_READING.RS_PREDICT",
+     "error": "Picks the opposite of what the text says.",
+     "example": {
+      "question": "Which answer fits the text?",
+      "wrong_answer": "an answer that is the opposite",
+      "correct_answer": "the answer the text supports"
+     },
+     "cause": "The child mixes up two rules that are taught close together.",
+     "reveals": "Offer \"an answer that is the opposite\" next to the right answer and ask the question again in a new situation.",
+     "help": "Check the answer against the text: it must agree with the text, not say the opposite.",
+     "feedback": "Check the answer against the text: it must agree with the text, not say the opposite.",
+     "source": "To confirm by a Kenyan English teacher: a common classroom error, not traced to a study by the author.",
+     "status": "draft"
+    },
+    {
+     "code": "ENGL.G9.READIN.T4_INTENSIVE_READING.RS_PREDICT.M_EN9_RS_PREDICT_NOTSAID",
+     "skill": "ENGL.G9.READIN.T4_INTENSIVE_READING.RS_PREDICT",
+     "error": "Picks something the text does not say.",
+     "example": {
+      "question": "Which answer fits the text?",
+      "wrong_answer": "an answer that is something not in the text",
+      "correct_answer": "the answer the text supports"
+     },
+     "cause": "The child mixes up two rules that are taught close together.",
+     "reveals": "Offer \"an answer that is something not in the text\" next to the right answer and ask the question again in a new situation.",
+     "help": "Check the answer against the text: it must be found in the text, not added from outside.",
+     "feedback": "Check the answer against the text: it must be found in the text, not added from outside.",
+     "source": "To confirm by a Kenyan English teacher: a common classroom error, not traced to a study by the author.",
+     "status": "draft"
+    },
+    {
+     "code": "ENGL.G9.READIN.T4_INTENSIVE_READING.RS_KEYEVENTS.M_EN9_RS_KEYEVENTS_DETAIL",
+     "skill": "ENGL.G9.READIN.T4_INTENSIVE_READING.RS_KEYEVENTS",
+     "error": "Picks one small detail instead of the answer asked for.",
+     "example": {
+      "question": "Which answer fits the text?",
+      "wrong_answer": "an answer that is a small detail",
+      "correct_answer": "the answer the text supports"
+     },
+     "cause": "The child mixes up two rules that are taught close together.",
+     "reveals": "Offer \"an answer that is a small detail\" next to the right answer and ask the question again in a new situation.",
+     "help": "Check the answer against the text: it must cover what the question asks, not one small detail.",
+     "feedback": "Check the answer against the text: it must cover what the question asks, not one small detail.",
+     "source": "To confirm by a Kenyan English teacher: a common classroom error, not traced to a study by the author.",
+     "status": "draft"
+    },
+    {
+     "code": "ENGL.G9.READIN.T4_INTENSIVE_READING.RS_KEYEVENTS.M_EN9_RS_KEYEVENTS_OPPOSITE",
+     "skill": "ENGL.G9.READIN.T4_INTENSIVE_READING.RS_KEYEVENTS",
+     "error": "Picks the opposite of what the text says.",
+     "example": {
+      "question": "Which answer fits the text?",
+      "wrong_answer": "an answer that is the opposite",
+      "correct_answer": "the answer the text supports"
+     },
+     "cause": "The child mixes up two rules that are taught close together.",
+     "reveals": "Offer \"an answer that is the opposite\" next to the right answer and ask the question again in a new situation.",
+     "help": "Check the answer against the text: it must agree with the text, not say the opposite.",
+     "feedback": "Check the answer against the text: it must agree with the text, not say the opposite.",
+     "source": "To confirm by a Kenyan English teacher: a common classroom error, not traced to a study by the author.",
+     "status": "draft"
+    },
+    {
+     "code": "ENGL.G9.READIN.T4_INTENSIVE_READING.RS_KEYEVENTS.M_EN9_RS_KEYEVENTS_NOTSAID",
+     "skill": "ENGL.G9.READIN.T4_INTENSIVE_READING.RS_KEYEVENTS",
+     "error": "Picks something the text does not say.",
+     "example": {
+      "question": "Which answer fits the text?",
+      "wrong_answer": "an answer that is something not in the text",
+      "correct_answer": "the answer the text supports"
+     },
+     "cause": "The child mixes up two rules that are taught close together.",
+     "reveals": "Offer \"an answer that is something not in the text\" next to the right answer and ask the question again in a new situation.",
+     "help": "Check the answer against the text: it must be found in the text, not added from outside.",
+     "feedback": "Check the answer against the text: it must be found in the text, not added from outside.",
+     "source": "To confirm by a Kenyan English teacher: a common classroom error, not traced to a study by the author.",
+     "status": "draft"
+    },
+    {
+     "code": "ENGL.G9.READIN.T4_INTENSIVE_READING.RS_QUESTIONS.M_EN9_RS_QUESTIONS_DETAIL",
+     "skill": "ENGL.G9.READIN.T4_INTENSIVE_READING.RS_QUESTIONS",
+     "error": "Picks one small detail instead of the answer asked for.",
+     "example": {
+      "question": "Which answer fits the text?",
+      "wrong_answer": "an answer that is a small detail",
+      "correct_answer": "the answer the text supports"
+     },
+     "cause": "The child mixes up two rules that are taught close together.",
+     "reveals": "Offer \"an answer that is a small detail\" next to the right answer and ask the question again in a new situation.",
+     "help": "Check the answer against the text: it must cover what the question asks, not one small detail.",
+     "feedback": "Check the answer against the text: it must cover what the question asks, not one small detail.",
+     "source": "To confirm by a Kenyan English teacher: a common classroom error, not traced to a study by the author.",
+     "status": "draft"
+    },
+    {
+     "code": "ENGL.G9.READIN.T4_INTENSIVE_READING.RS_QUESTIONS.M_EN9_RS_QUESTIONS_OPPOSITE",
+     "skill": "ENGL.G9.READIN.T4_INTENSIVE_READING.RS_QUESTIONS",
+     "error": "Picks the opposite of what the text says.",
+     "example": {
+      "question": "Which answer fits the text?",
+      "wrong_answer": "an answer that is the opposite",
+      "correct_answer": "the answer the text supports"
+     },
+     "cause": "The child mixes up two rules that are taught close together.",
+     "reveals": "Offer \"an answer that is the opposite\" next to the right answer and ask the question again in a new situation.",
+     "help": "Check the answer against the text: it must agree with the text, not say the opposite.",
+     "feedback": "Check the answer against the text: it must agree with the text, not say the opposite.",
+     "source": "To confirm by a Kenyan English teacher: a common classroom error, not traced to a study by the author.",
+     "status": "draft"
+    },
+    {
+     "code": "ENGL.G9.READIN.T4_INTENSIVE_READING.RS_QUESTIONS.M_EN9_RS_QUESTIONS_NOTSAID",
+     "skill": "ENGL.G9.READIN.T4_INTENSIVE_READING.RS_QUESTIONS",
+     "error": "Picks something the text does not say.",
+     "example": {
+      "question": "Which answer fits the text?",
+      "wrong_answer": "an answer that is something not in the text",
+      "correct_answer": "the answer the text supports"
+     },
+     "cause": "The child mixes up two rules that are taught close together.",
+     "reveals": "Offer \"an answer that is something not in the text\" next to the right answer and ask the question again in a new situation.",
+     "help": "Check the answer against the text: it must be found in the text, not added from outside.",
+     "feedback": "Check the answer against the text: it must be found in the text, not added from outside.",
+     "source": "To confirm by a Kenyan English teacher: a common classroom error, not traced to a study by the author.",
+     "status": "draft"
+    },
+    {
+     "code": "ENGL.G9.READIN.T4_INTENSIVE_READING.RS_RELATE.M_EN9_RS_RELATE_DETAIL",
+     "skill": "ENGL.G9.READIN.T4_INTENSIVE_READING.RS_RELATE",
+     "error": "Picks one small detail instead of the answer asked for.",
+     "example": {
+      "question": "Which answer fits the text?",
+      "wrong_answer": "an answer that is a small detail",
+      "correct_answer": "the answer the text supports"
+     },
+     "cause": "The child mixes up two rules that are taught close together.",
+     "reveals": "Offer \"an answer that is a small detail\" next to the right answer and ask the question again in a new situation.",
+     "help": "Check the answer against the text: it must cover what the question asks, not one small detail.",
+     "feedback": "Check the answer against the text: it must cover what the question asks, not one small detail.",
+     "source": "To confirm by a Kenyan English teacher: a common classroom error, not traced to a study by the author.",
+     "status": "draft"
+    },
+    {
+     "code": "ENGL.G9.READIN.T4_INTENSIVE_READING.RS_RELATE.M_EN9_RS_RELATE_OPPOSITE",
+     "skill": "ENGL.G9.READIN.T4_INTENSIVE_READING.RS_RELATE",
+     "error": "Picks the opposite of what the text says.",
+     "example": {
+      "question": "Which answer fits the text?",
+      "wrong_answer": "an answer that is the opposite",
+      "correct_answer": "the answer the text supports"
+     },
+     "cause": "The child mixes up two rules that are taught close together.",
+     "reveals": "Offer \"an answer that is the opposite\" next to the right answer and ask the question again in a new situation.",
+     "help": "Check the answer against the text: it must agree with the text, not say the opposite.",
+     "feedback": "Check the answer against the text: it must agree with the text, not say the opposite.",
+     "source": "To confirm by a Kenyan English teacher: a common classroom error, not traced to a study by the author.",
+     "status": "draft"
+    },
+    {
+     "code": "ENGL.G9.READIN.T4_INTENSIVE_READING.RS_RELATE.M_EN9_RS_RELATE_NOTSAID",
+     "skill": "ENGL.G9.READIN.T4_INTENSIVE_READING.RS_RELATE",
+     "error": "Picks something the text does not say.",
+     "example": {
+      "question": "Which answer fits the text?",
+      "wrong_answer": "an answer that is something not in the text",
+      "correct_answer": "the answer the text supports"
+     },
+     "cause": "The child mixes up two rules that are taught close together.",
+     "reveals": "Offer \"an answer that is something not in the text\" next to the right answer and ask the question again in a new situation.",
+     "help": "Check the answer against the text: it must be found in the text, not added from outside.",
+     "feedback": "Check the answer against the text: it must be found in the text, not added from outside.",
+     "source": "To confirm by a Kenyan English teacher: a common classroom error, not traced to a study by the author.",
+     "status": "draft"
+    }
+   ],
    "rubric_indicators": [
     "ENGL.G9.RUBRIC.2.1",
     "ENGL.G9.RUBRIC.2.2",
@@ -1834,8 +2520,78 @@
      "status": "kicd_verified"
     }
    ],
-   "skills": [],
-   "misconceptions": [],
+   "skills": [
+    {
+     "code": "ENGL.G9.READIN.T4_PLAY_IDENTIFICATION_.PL_CHARACTERS",
+     "name": "Identify the characters in a play and describe their actions with adverbs",
+     "outcomes": [
+      "ENGL.G9.READIN.T4_PLAY_IDENTIFICATION_.a",
+      "ENGL.G9.READIN.T4_PLAY_IDENTIFICATION_.c"
+     ],
+     "mastery": "The child reads the scene and picks the answer that fits the words and stage directions, and does not pick a small detail, the opposite or something not in the text. Evidence rule: at least four of the last five fresh questions right across at least two question forms, and no repeated pick of the same misconception.",
+     "question_forms": [
+      "pick the right answer",
+      "pick the right answer on a second text"
+     ],
+     "thinking": [
+      "recall",
+      "reasoning"
+     ],
+     "horeb_skill_ids": [],
+     "prerequisites": [],
+     "status": "proposed"
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "ENGL.G9.READIN.T4_PLAY_IDENTIFICATION_.PL_CHARACTERS.M_EN9_PL_CHARACTERS_DETAIL",
+     "skill": "ENGL.G9.READIN.T4_PLAY_IDENTIFICATION_.PL_CHARACTERS",
+     "error": "Picks one small detail instead of the answer asked for.",
+     "example": {
+      "question": "Which answer fits the text?",
+      "wrong_answer": "an answer that is a small detail",
+      "correct_answer": "the answer the text supports"
+     },
+     "cause": "The child mixes up two rules that are taught close together.",
+     "reveals": "Offer \"an answer that is a small detail\" next to the right answer and ask the question again in a new situation.",
+     "help": "Check the answer against the text: it must cover what the question asks, not one small detail.",
+     "feedback": "Check the answer against the text: it must cover what the question asks, not one small detail.",
+     "source": "To confirm by a Kenyan English teacher: a common classroom error, not traced to a study by the author.",
+     "status": "draft"
+    },
+    {
+     "code": "ENGL.G9.READIN.T4_PLAY_IDENTIFICATION_.PL_CHARACTERS.M_EN9_PL_CHARACTERS_OPPOSITE",
+     "skill": "ENGL.G9.READIN.T4_PLAY_IDENTIFICATION_.PL_CHARACTERS",
+     "error": "Picks the opposite of what the text says.",
+     "example": {
+      "question": "Which answer fits the text?",
+      "wrong_answer": "an answer that is the opposite",
+      "correct_answer": "the answer the text supports"
+     },
+     "cause": "The child mixes up two rules that are taught close together.",
+     "reveals": "Offer \"an answer that is the opposite\" next to the right answer and ask the question again in a new situation.",
+     "help": "Check the answer against the text: it must agree with the text, not say the opposite.",
+     "feedback": "Check the answer against the text: it must agree with the text, not say the opposite.",
+     "source": "To confirm by a Kenyan English teacher: a common classroom error, not traced to a study by the author.",
+     "status": "draft"
+    },
+    {
+     "code": "ENGL.G9.READIN.T4_PLAY_IDENTIFICATION_.PL_CHARACTERS.M_EN9_PL_CHARACTERS_NOTSAID",
+     "skill": "ENGL.G9.READIN.T4_PLAY_IDENTIFICATION_.PL_CHARACTERS",
+     "error": "Picks something the text does not say.",
+     "example": {
+      "question": "Which answer fits the text?",
+      "wrong_answer": "an answer that is something not in the text",
+      "correct_answer": "the answer the text supports"
+     },
+     "cause": "The child mixes up two rules that are taught close together.",
+     "reveals": "Offer \"an answer that is something not in the text\" next to the right answer and ask the question again in a new situation.",
+     "help": "Check the answer against the text: it must be found in the text, not added from outside.",
+     "feedback": "Check the answer against the text: it must be found in the text, not added from outside.",
+     "source": "To confirm by a Kenyan English teacher: a common classroom error, not traced to a study by the author.",
+     "status": "draft"
+    }
+   ],
    "rubric_indicators": [
     "ENGL.G9.RUBRIC.2.1",
     "ENGL.G9.RUBRIC.2.2",
@@ -2757,8 +3513,79 @@
      "status": "kicd_verified"
     }
    ],
-   "skills": [],
-   "misconceptions": [],
+   "skills": [
+    {
+     "code": "ENGL.G9.READIN.T6_INTENSIVE_READING_PL.PL_THEMES",
+     "name": "Identify and analyse the themes in a play",
+     "outcomes": [
+      "ENGL.G9.READIN.T6_INTENSIVE_READING_PL.a",
+      "ENGL.G9.READIN.T6_INTENSIVE_READING_PL.b",
+      "ENGL.G9.READIN.T6_INTENSIVE_READING_PL.c"
+     ],
+     "mastery": "The child reads the scene and picks the answer that fits the words and stage directions, and does not pick a small detail, the opposite or something not in the text. Evidence rule: at least four of the last five fresh questions right across at least two question forms, and no repeated pick of the same misconception.",
+     "question_forms": [
+      "pick the right answer",
+      "pick the right answer on a second text"
+     ],
+     "thinking": [
+      "recall",
+      "reasoning"
+     ],
+     "horeb_skill_ids": [],
+     "prerequisites": [],
+     "status": "proposed"
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "ENGL.G9.READIN.T6_INTENSIVE_READING_PL.PL_THEMES.M_EN9_PL_THEMES_DETAIL",
+     "skill": "ENGL.G9.READIN.T6_INTENSIVE_READING_PL.PL_THEMES",
+     "error": "Picks one small detail instead of the answer asked for.",
+     "example": {
+      "question": "Which answer fits the text?",
+      "wrong_answer": "an answer that is a small detail",
+      "correct_answer": "the answer the text supports"
+     },
+     "cause": "The child mixes up two rules that are taught close together.",
+     "reveals": "Offer \"an answer that is a small detail\" next to the right answer and ask the question again in a new situation.",
+     "help": "Check the answer against the text: it must cover what the question asks, not one small detail.",
+     "feedback": "Check the answer against the text: it must cover what the question asks, not one small detail.",
+     "source": "To confirm by a Kenyan English teacher: a common classroom error, not traced to a study by the author.",
+     "status": "draft"
+    },
+    {
+     "code": "ENGL.G9.READIN.T6_INTENSIVE_READING_PL.PL_THEMES.M_EN9_PL_THEMES_OPPOSITE",
+     "skill": "ENGL.G9.READIN.T6_INTENSIVE_READING_PL.PL_THEMES",
+     "error": "Picks the opposite of what the text says.",
+     "example": {
+      "question": "Which answer fits the text?",
+      "wrong_answer": "an answer that is the opposite",
+      "correct_answer": "the answer the text supports"
+     },
+     "cause": "The child mixes up two rules that are taught close together.",
+     "reveals": "Offer \"an answer that is the opposite\" next to the right answer and ask the question again in a new situation.",
+     "help": "Check the answer against the text: it must agree with the text, not say the opposite.",
+     "feedback": "Check the answer against the text: it must agree with the text, not say the opposite.",
+     "source": "To confirm by a Kenyan English teacher: a common classroom error, not traced to a study by the author.",
+     "status": "draft"
+    },
+    {
+     "code": "ENGL.G9.READIN.T6_INTENSIVE_READING_PL.PL_THEMES.M_EN9_PL_THEMES_NOTSAID",
+     "skill": "ENGL.G9.READIN.T6_INTENSIVE_READING_PL.PL_THEMES",
+     "error": "Picks something the text does not say.",
+     "example": {
+      "question": "Which answer fits the text?",
+      "wrong_answer": "an answer that is something not in the text",
+      "correct_answer": "the answer the text supports"
+     },
+     "cause": "The child mixes up two rules that are taught close together.",
+     "reveals": "Offer \"an answer that is something not in the text\" next to the right answer and ask the question again in a new situation.",
+     "help": "Check the answer against the text: it must be found in the text, not added from outside.",
+     "feedback": "Check the answer against the text: it must be found in the text, not added from outside.",
+     "source": "To confirm by a Kenyan English teacher: a common classroom error, not traced to a study by the author.",
+     "status": "draft"
+    }
+   ],
    "rubric_indicators": [
     "ENGL.G9.RUBRIC.2.1",
     "ENGL.G9.RUBRIC.2.2",
@@ -3246,8 +4073,78 @@
      "status": "kicd_verified"
     }
    ],
-   "skills": [],
-   "misconceptions": [],
+   "skills": [
+    {
+     "code": "ENGL.G9.READIN.T7_INTENSIVE_READING_PL.PL_RELATIONSHIP",
+     "name": "Analyse the characters in a play and their relationship",
+     "outcomes": [
+      "ENGL.G9.READIN.T7_INTENSIVE_READING_PL.a",
+      "ENGL.G9.READIN.T7_INTENSIVE_READING_PL.b"
+     ],
+     "mastery": "The child reads the scene and picks the answer that fits the words and stage directions, and does not pick a small detail, the opposite or something not in the text. Evidence rule: at least four of the last five fresh questions right across at least two question forms, and no repeated pick of the same misconception.",
+     "question_forms": [
+      "pick the right answer",
+      "pick the right answer on a second text"
+     ],
+     "thinking": [
+      "recall",
+      "reasoning"
+     ],
+     "horeb_skill_ids": [],
+     "prerequisites": [],
+     "status": "proposed"
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "ENGL.G9.READIN.T7_INTENSIVE_READING_PL.PL_RELATIONSHIP.M_EN9_PL_RELATIONSHIP_DETAIL",
+     "skill": "ENGL.G9.READIN.T7_INTENSIVE_READING_PL.PL_RELATIONSHIP",
+     "error": "Picks one small detail instead of the answer asked for.",
+     "example": {
+      "question": "Which answer fits the text?",
+      "wrong_answer": "an answer that is a small detail",
+      "correct_answer": "the answer the text supports"
+     },
+     "cause": "The child mixes up two rules that are taught close together.",
+     "reveals": "Offer \"an answer that is a small detail\" next to the right answer and ask the question again in a new situation.",
+     "help": "Check the answer against the text: it must cover what the question asks, not one small detail.",
+     "feedback": "Check the answer against the text: it must cover what the question asks, not one small detail.",
+     "source": "To confirm by a Kenyan English teacher: a common classroom error, not traced to a study by the author.",
+     "status": "draft"
+    },
+    {
+     "code": "ENGL.G9.READIN.T7_INTENSIVE_READING_PL.PL_RELATIONSHIP.M_EN9_PL_RELATIONSHIP_OPPOSITE",
+     "skill": "ENGL.G9.READIN.T7_INTENSIVE_READING_PL.PL_RELATIONSHIP",
+     "error": "Picks the opposite of what the text says.",
+     "example": {
+      "question": "Which answer fits the text?",
+      "wrong_answer": "an answer that is the opposite",
+      "correct_answer": "the answer the text supports"
+     },
+     "cause": "The child mixes up two rules that are taught close together.",
+     "reveals": "Offer \"an answer that is the opposite\" next to the right answer and ask the question again in a new situation.",
+     "help": "Check the answer against the text: it must agree with the text, not say the opposite.",
+     "feedback": "Check the answer against the text: it must agree with the text, not say the opposite.",
+     "source": "To confirm by a Kenyan English teacher: a common classroom error, not traced to a study by the author.",
+     "status": "draft"
+    },
+    {
+     "code": "ENGL.G9.READIN.T7_INTENSIVE_READING_PL.PL_RELATIONSHIP.M_EN9_PL_RELATIONSHIP_NOTSAID",
+     "skill": "ENGL.G9.READIN.T7_INTENSIVE_READING_PL.PL_RELATIONSHIP",
+     "error": "Picks something the text does not say.",
+     "example": {
+      "question": "Which answer fits the text?",
+      "wrong_answer": "an answer that is something not in the text",
+      "correct_answer": "the answer the text supports"
+     },
+     "cause": "The child mixes up two rules that are taught close together.",
+     "reveals": "Offer \"an answer that is something not in the text\" next to the right answer and ask the question again in a new situation.",
+     "help": "Check the answer against the text: it must be found in the text, not added from outside.",
+     "feedback": "Check the answer against the text: it must be found in the text, not added from outside.",
+     "source": "To confirm by a Kenyan English teacher: a common classroom error, not traced to a study by the author.",
+     "status": "draft"
+    }
+   ],
    "rubric_indicators": [
     "ENGL.G9.RUBRIC.2.1",
     "ENGL.G9.RUBRIC.2.2",
@@ -3444,8 +4341,78 @@
      "status": "kicd_verified"
     }
    ],
-   "skills": [],
-   "misconceptions": [],
+   "skills": [
+    {
+     "code": "ENGL.G9.READIN.T8_READING_FOR_INTERPRE.RP_POV",
+     "name": "Identify the point of view of a poem",
+     "outcomes": [
+      "ENGL.G9.READIN.T8_READING_FOR_INTERPRE.a",
+      "ENGL.G9.READIN.T8_READING_FOR_INTERPRE.b"
+     ],
+     "mastery": "The child reads the poem for its speaker, repetition and message and picks the one that fits all its lines, and does not pick a small detail, the opposite or something not in the text. Evidence rule: at least four of the last five fresh questions right across at least two question forms, and no repeated pick of the same misconception.",
+     "question_forms": [
+      "pick the right answer",
+      "pick the right answer on a second text"
+     ],
+     "thinking": [
+      "recall",
+      "reasoning"
+     ],
+     "horeb_skill_ids": [],
+     "prerequisites": [],
+     "status": "proposed"
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "ENGL.G9.READIN.T8_READING_FOR_INTERPRE.RP_POV.M_EN9_RP_POV_DETAIL",
+     "skill": "ENGL.G9.READIN.T8_READING_FOR_INTERPRE.RP_POV",
+     "error": "Picks one small detail instead of the answer asked for.",
+     "example": {
+      "question": "Which answer fits the text?",
+      "wrong_answer": "an answer that is a small detail",
+      "correct_answer": "the answer the text supports"
+     },
+     "cause": "The child mixes up two rules that are taught close together.",
+     "reveals": "Offer \"an answer that is a small detail\" next to the right answer and ask the question again in a new situation.",
+     "help": "Check the answer against the text: it must cover what the question asks, not one small detail.",
+     "feedback": "Check the answer against the text: it must cover what the question asks, not one small detail.",
+     "source": "To confirm by a Kenyan English teacher: a common classroom error, not traced to a study by the author.",
+     "status": "draft"
+    },
+    {
+     "code": "ENGL.G9.READIN.T8_READING_FOR_INTERPRE.RP_POV.M_EN9_RP_POV_OPPOSITE",
+     "skill": "ENGL.G9.READIN.T8_READING_FOR_INTERPRE.RP_POV",
+     "error": "Picks the opposite of what the text says.",
+     "example": {
+      "question": "Which answer fits the text?",
+      "wrong_answer": "an answer that is the opposite",
+      "correct_answer": "the answer the text supports"
+     },
+     "cause": "The child mixes up two rules that are taught close together.",
+     "reveals": "Offer \"an answer that is the opposite\" next to the right answer and ask the question again in a new situation.",
+     "help": "Check the answer against the text: it must agree with the text, not say the opposite.",
+     "feedback": "Check the answer against the text: it must agree with the text, not say the opposite.",
+     "source": "To confirm by a Kenyan English teacher: a common classroom error, not traced to a study by the author.",
+     "status": "draft"
+    },
+    {
+     "code": "ENGL.G9.READIN.T8_READING_FOR_INTERPRE.RP_POV.M_EN9_RP_POV_NOTSAID",
+     "skill": "ENGL.G9.READIN.T8_READING_FOR_INTERPRE.RP_POV",
+     "error": "Picks something the text does not say.",
+     "example": {
+      "question": "Which answer fits the text?",
+      "wrong_answer": "an answer that is something not in the text",
+      "correct_answer": "the answer the text supports"
+     },
+     "cause": "The child mixes up two rules that are taught close together.",
+     "reveals": "Offer \"an answer that is something not in the text\" next to the right answer and ask the question again in a new situation.",
+     "help": "Check the answer against the text: it must be found in the text, not added from outside.",
+     "feedback": "Check the answer against the text: it must be found in the text, not added from outside.",
+     "source": "To confirm by a Kenyan English teacher: a common classroom error, not traced to a study by the author.",
+     "status": "draft"
+    }
+   ],
    "rubric_indicators": [
     "ENGL.G9.RUBRIC.2.1",
     "ENGL.G9.RUBRIC.2.2",
@@ -3651,8 +4618,78 @@
      "status": "kicd_verified"
     }
    ],
-   "skills": [],
-   "misconceptions": [],
+   "skills": [
+    {
+     "code": "ENGL.G9.READIN.T8_POETRY_CHARACTERS.RP_PERSONA",
+     "name": "Identify the persona and other participants in a poem",
+     "outcomes": [
+      "ENGL.G9.READIN.T8_POETRY_CHARACTERS.a",
+      "ENGL.G9.READIN.T8_POETRY_CHARACTERS.b"
+     ],
+     "mastery": "The child reads the poem for its speaker, repetition and message and picks the one that fits all its lines, and does not pick a small detail, the opposite or something not in the text. Evidence rule: at least four of the last five fresh questions right across at least two question forms, and no repeated pick of the same misconception.",
+     "question_forms": [
+      "pick the right answer",
+      "pick the right answer on a second text"
+     ],
+     "thinking": [
+      "recall",
+      "reasoning"
+     ],
+     "horeb_skill_ids": [],
+     "prerequisites": [],
+     "status": "proposed"
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "ENGL.G9.READIN.T8_POETRY_CHARACTERS.RP_PERSONA.M_EN9_RP_PERSONA_DETAIL",
+     "skill": "ENGL.G9.READIN.T8_POETRY_CHARACTERS.RP_PERSONA",
+     "error": "Picks one small detail instead of the answer asked for.",
+     "example": {
+      "question": "Which answer fits the text?",
+      "wrong_answer": "an answer that is a small detail",
+      "correct_answer": "the answer the text supports"
+     },
+     "cause": "The child mixes up two rules that are taught close together.",
+     "reveals": "Offer \"an answer that is a small detail\" next to the right answer and ask the question again in a new situation.",
+     "help": "Check the answer against the text: it must cover what the question asks, not one small detail.",
+     "feedback": "Check the answer against the text: it must cover what the question asks, not one small detail.",
+     "source": "To confirm by a Kenyan English teacher: a common classroom error, not traced to a study by the author.",
+     "status": "draft"
+    },
+    {
+     "code": "ENGL.G9.READIN.T8_POETRY_CHARACTERS.RP_PERSONA.M_EN9_RP_PERSONA_OPPOSITE",
+     "skill": "ENGL.G9.READIN.T8_POETRY_CHARACTERS.RP_PERSONA",
+     "error": "Picks the opposite of what the text says.",
+     "example": {
+      "question": "Which answer fits the text?",
+      "wrong_answer": "an answer that is the opposite",
+      "correct_answer": "the answer the text supports"
+     },
+     "cause": "The child mixes up two rules that are taught close together.",
+     "reveals": "Offer \"an answer that is the opposite\" next to the right answer and ask the question again in a new situation.",
+     "help": "Check the answer against the text: it must agree with the text, not say the opposite.",
+     "feedback": "Check the answer against the text: it must agree with the text, not say the opposite.",
+     "source": "To confirm by a Kenyan English teacher: a common classroom error, not traced to a study by the author.",
+     "status": "draft"
+    },
+    {
+     "code": "ENGL.G9.READIN.T8_POETRY_CHARACTERS.RP_PERSONA.M_EN9_RP_PERSONA_NOTSAID",
+     "skill": "ENGL.G9.READIN.T8_POETRY_CHARACTERS.RP_PERSONA",
+     "error": "Picks something the text does not say.",
+     "example": {
+      "question": "Which answer fits the text?",
+      "wrong_answer": "an answer that is something not in the text",
+      "correct_answer": "the answer the text supports"
+     },
+     "cause": "The child mixes up two rules that are taught close together.",
+     "reveals": "Offer \"an answer that is something not in the text\" next to the right answer and ask the question again in a new situation.",
+     "help": "Check the answer against the text: it must be found in the text, not added from outside.",
+     "feedback": "Check the answer against the text: it must be found in the text, not added from outside.",
+     "source": "To confirm by a Kenyan English teacher: a common classroom error, not traced to a study by the author.",
+     "status": "draft"
+    }
+   ],
    "rubric_indicators": [
     "ENGL.G9.RUBRIC.2.1",
     "ENGL.G9.RUBRIC.2.2",
@@ -4960,8 +5997,78 @@
      "status": "kicd_verified"
     }
    ],
-   "skills": [],
-   "misconceptions": [],
+   "skills": [
+    {
+     "code": "ENGL.G9.READIN.T11_GRADE_APPROPRIATE_PL.PL_LESSONS",
+     "name": "Identify the lessons learnt from a play",
+     "outcomes": [
+      "ENGL.G9.READIN.T11_GRADE_APPROPRIATE_PL.a",
+      "ENGL.G9.READIN.T11_GRADE_APPROPRIATE_PL.b"
+     ],
+     "mastery": "The child reads the scene and picks the answer that fits the words and stage directions, and does not pick a small detail, the opposite or something not in the text. Evidence rule: at least four of the last five fresh questions right across at least two question forms, and no repeated pick of the same misconception.",
+     "question_forms": [
+      "pick the right answer",
+      "pick the right answer on a second text"
+     ],
+     "thinking": [
+      "recall",
+      "reasoning"
+     ],
+     "horeb_skill_ids": [],
+     "prerequisites": [],
+     "status": "proposed"
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "ENGL.G9.READIN.T11_GRADE_APPROPRIATE_PL.PL_LESSONS.M_EN9_PL_LESSONS_DETAIL",
+     "skill": "ENGL.G9.READIN.T11_GRADE_APPROPRIATE_PL.PL_LESSONS",
+     "error": "Picks one small detail instead of the answer asked for.",
+     "example": {
+      "question": "Which answer fits the text?",
+      "wrong_answer": "an answer that is a small detail",
+      "correct_answer": "the answer the text supports"
+     },
+     "cause": "The child mixes up two rules that are taught close together.",
+     "reveals": "Offer \"an answer that is a small detail\" next to the right answer and ask the question again in a new situation.",
+     "help": "Check the answer against the text: it must cover what the question asks, not one small detail.",
+     "feedback": "Check the answer against the text: it must cover what the question asks, not one small detail.",
+     "source": "To confirm by a Kenyan English teacher: a common classroom error, not traced to a study by the author.",
+     "status": "draft"
+    },
+    {
+     "code": "ENGL.G9.READIN.T11_GRADE_APPROPRIATE_PL.PL_LESSONS.M_EN9_PL_LESSONS_OPPOSITE",
+     "skill": "ENGL.G9.READIN.T11_GRADE_APPROPRIATE_PL.PL_LESSONS",
+     "error": "Picks the opposite of what the text says.",
+     "example": {
+      "question": "Which answer fits the text?",
+      "wrong_answer": "an answer that is the opposite",
+      "correct_answer": "the answer the text supports"
+     },
+     "cause": "The child mixes up two rules that are taught close together.",
+     "reveals": "Offer \"an answer that is the opposite\" next to the right answer and ask the question again in a new situation.",
+     "help": "Check the answer against the text: it must agree with the text, not say the opposite.",
+     "feedback": "Check the answer against the text: it must agree with the text, not say the opposite.",
+     "source": "To confirm by a Kenyan English teacher: a common classroom error, not traced to a study by the author.",
+     "status": "draft"
+    },
+    {
+     "code": "ENGL.G9.READIN.T11_GRADE_APPROPRIATE_PL.PL_LESSONS.M_EN9_PL_LESSONS_NOTSAID",
+     "skill": "ENGL.G9.READIN.T11_GRADE_APPROPRIATE_PL.PL_LESSONS",
+     "error": "Picks something the text does not say.",
+     "example": {
+      "question": "Which answer fits the text?",
+      "wrong_answer": "an answer that is something not in the text",
+      "correct_answer": "the answer the text supports"
+     },
+     "cause": "The child mixes up two rules that are taught close together.",
+     "reveals": "Offer \"an answer that is something not in the text\" next to the right answer and ask the question again in a new situation.",
+     "help": "Check the answer against the text: it must be found in the text, not added from outside.",
+     "feedback": "Check the answer against the text: it must be found in the text, not added from outside.",
+     "source": "To confirm by a Kenyan English teacher: a common classroom error, not traced to a study by the author.",
+     "status": "draft"
+    }
+   ],
    "rubric_indicators": [
     "ENGL.G9.RUBRIC.2.1",
     "ENGL.G9.RUBRIC.2.2",
@@ -5232,8 +6339,78 @@
      "status": "kicd_verified"
     }
    ],
-   "skills": [],
-   "misconceptions": [],
+   "skills": [
+    {
+     "code": "ENGL.G9.READIN.T12_INTENSIVE_READING_CO.RS_CLUES",
+     "name": "Find clues in a passage and infer meaning from them",
+     "outcomes": [
+      "ENGL.G9.READIN.T12_INTENSIVE_READING_CO.a",
+      "ENGL.G9.READIN.T12_INTENSIVE_READING_CO.b"
+     ],
+     "mastery": "The child finds the answer in the passage and picks the one that covers what the question asks, and does not pick a small detail, the opposite or something not in the text. Evidence rule: at least four of the last five fresh questions right across at least two question forms, and no repeated pick of the same misconception.",
+     "question_forms": [
+      "pick the right answer",
+      "pick the right answer on a second text"
+     ],
+     "thinking": [
+      "recall",
+      "reasoning"
+     ],
+     "horeb_skill_ids": [],
+     "prerequisites": [],
+     "status": "proposed"
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "ENGL.G9.READIN.T12_INTENSIVE_READING_CO.RS_CLUES.M_EN9_RS_CLUES_DETAIL",
+     "skill": "ENGL.G9.READIN.T12_INTENSIVE_READING_CO.RS_CLUES",
+     "error": "Picks one small detail instead of the answer asked for.",
+     "example": {
+      "question": "Which answer fits the text?",
+      "wrong_answer": "an answer that is a small detail",
+      "correct_answer": "the answer the text supports"
+     },
+     "cause": "The child mixes up two rules that are taught close together.",
+     "reveals": "Offer \"an answer that is a small detail\" next to the right answer and ask the question again in a new situation.",
+     "help": "Check the answer against the text: it must cover what the question asks, not one small detail.",
+     "feedback": "Check the answer against the text: it must cover what the question asks, not one small detail.",
+     "source": "To confirm by a Kenyan English teacher: a common classroom error, not traced to a study by the author.",
+     "status": "draft"
+    },
+    {
+     "code": "ENGL.G9.READIN.T12_INTENSIVE_READING_CO.RS_CLUES.M_EN9_RS_CLUES_OPPOSITE",
+     "skill": "ENGL.G9.READIN.T12_INTENSIVE_READING_CO.RS_CLUES",
+     "error": "Picks the opposite of what the text says.",
+     "example": {
+      "question": "Which answer fits the text?",
+      "wrong_answer": "an answer that is the opposite",
+      "correct_answer": "the answer the text supports"
+     },
+     "cause": "The child mixes up two rules that are taught close together.",
+     "reveals": "Offer \"an answer that is the opposite\" next to the right answer and ask the question again in a new situation.",
+     "help": "Check the answer against the text: it must agree with the text, not say the opposite.",
+     "feedback": "Check the answer against the text: it must agree with the text, not say the opposite.",
+     "source": "To confirm by a Kenyan English teacher: a common classroom error, not traced to a study by the author.",
+     "status": "draft"
+    },
+    {
+     "code": "ENGL.G9.READIN.T12_INTENSIVE_READING_CO.RS_CLUES.M_EN9_RS_CLUES_NOTSAID",
+     "skill": "ENGL.G9.READIN.T12_INTENSIVE_READING_CO.RS_CLUES",
+     "error": "Picks something the text does not say.",
+     "example": {
+      "question": "Which answer fits the text?",
+      "wrong_answer": "an answer that is something not in the text",
+      "correct_answer": "the answer the text supports"
+     },
+     "cause": "The child mixes up two rules that are taught close together.",
+     "reveals": "Offer \"an answer that is something not in the text\" next to the right answer and ask the question again in a new situation.",
+     "help": "Check the answer against the text: it must be found in the text, not added from outside.",
+     "feedback": "Check the answer against the text: it must be found in the text, not added from outside.",
+     "source": "To confirm by a Kenyan English teacher: a common classroom error, not traced to a study by the author.",
+     "status": "draft"
+    }
+   ],
    "rubric_indicators": [
     "ENGL.G9.RUBRIC.2.1",
     "ENGL.G9.RUBRIC.2.2",
@@ -5437,8 +6614,77 @@
      "status": "kicd_verified"
     }
    ],
-   "skills": [],
-   "misconceptions": [],
+   "skills": [
+    {
+     "code": "ENGL.G9.READIN.T12_PLAY_CHARACTERISATIO.PL_TRAITS",
+     "name": "Outline clues for the traits of characters in a play",
+     "outcomes": [
+      "ENGL.G9.READIN.T12_PLAY_CHARACTERISATIO.a"
+     ],
+     "mastery": "The child reads the scene and picks the answer that fits the words and stage directions, and does not pick a small detail, the opposite or something not in the text. Evidence rule: at least four of the last five fresh questions right across at least two question forms, and no repeated pick of the same misconception.",
+     "question_forms": [
+      "pick the right answer",
+      "pick the right answer on a second text"
+     ],
+     "thinking": [
+      "recall",
+      "reasoning"
+     ],
+     "horeb_skill_ids": [],
+     "prerequisites": [],
+     "status": "proposed"
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "ENGL.G9.READIN.T12_PLAY_CHARACTERISATIO.PL_TRAITS.M_EN9_PL_TRAITS_DETAIL",
+     "skill": "ENGL.G9.READIN.T12_PLAY_CHARACTERISATIO.PL_TRAITS",
+     "error": "Picks one small detail instead of the answer asked for.",
+     "example": {
+      "question": "Which answer fits the text?",
+      "wrong_answer": "an answer that is a small detail",
+      "correct_answer": "the answer the text supports"
+     },
+     "cause": "The child mixes up two rules that are taught close together.",
+     "reveals": "Offer \"an answer that is a small detail\" next to the right answer and ask the question again in a new situation.",
+     "help": "Check the answer against the text: it must cover what the question asks, not one small detail.",
+     "feedback": "Check the answer against the text: it must cover what the question asks, not one small detail.",
+     "source": "To confirm by a Kenyan English teacher: a common classroom error, not traced to a study by the author.",
+     "status": "draft"
+    },
+    {
+     "code": "ENGL.G9.READIN.T12_PLAY_CHARACTERISATIO.PL_TRAITS.M_EN9_PL_TRAITS_OPPOSITE",
+     "skill": "ENGL.G9.READIN.T12_PLAY_CHARACTERISATIO.PL_TRAITS",
+     "error": "Picks the opposite of what the text says.",
+     "example": {
+      "question": "Which answer fits the text?",
+      "wrong_answer": "an answer that is the opposite",
+      "correct_answer": "the answer the text supports"
+     },
+     "cause": "The child mixes up two rules that are taught close together.",
+     "reveals": "Offer \"an answer that is the opposite\" next to the right answer and ask the question again in a new situation.",
+     "help": "Check the answer against the text: it must agree with the text, not say the opposite.",
+     "feedback": "Check the answer against the text: it must agree with the text, not say the opposite.",
+     "source": "To confirm by a Kenyan English teacher: a common classroom error, not traced to a study by the author.",
+     "status": "draft"
+    },
+    {
+     "code": "ENGL.G9.READIN.T12_PLAY_CHARACTERISATIO.PL_TRAITS.M_EN9_PL_TRAITS_NOTSAID",
+     "skill": "ENGL.G9.READIN.T12_PLAY_CHARACTERISATIO.PL_TRAITS",
+     "error": "Picks something the text does not say.",
+     "example": {
+      "question": "Which answer fits the text?",
+      "wrong_answer": "an answer that is something not in the text",
+      "correct_answer": "the answer the text supports"
+     },
+     "cause": "The child mixes up two rules that are taught close together.",
+     "reveals": "Offer \"an answer that is something not in the text\" next to the right answer and ask the question again in a new situation.",
+     "help": "Check the answer against the text: it must be found in the text, not added from outside.",
+     "feedback": "Check the answer against the text: it must be found in the text, not added from outside.",
+     "source": "To confirm by a Kenyan English teacher: a common classroom error, not traced to a study by the author.",
+     "status": "draft"
+    }
+   ],
    "rubric_indicators": [
     "ENGL.G9.RUBRIC.2.1",
     "ENGL.G9.RUBRIC.2.2",
@@ -5636,8 +6882,77 @@
      "status": "kicd_verified"
     }
    ],
-   "skills": [],
-   "misconceptions": [],
+   "skills": [
+    {
+     "code": "ENGL.G9.READIN.T13_INTENSIVE_READING_VI.RS_IMAGES",
+     "name": "Pick the mental images a passage creates",
+     "outcomes": [
+      "ENGL.G9.READIN.T13_INTENSIVE_READING_VI.a"
+     ],
+     "mastery": "The child finds the answer in the passage and picks the one that covers what the question asks, and does not pick a small detail, the opposite or something not in the text. Evidence rule: at least four of the last five fresh questions right across at least two question forms, and no repeated pick of the same misconception.",
+     "question_forms": [
+      "pick the right answer",
+      "pick the right answer on a second text"
+     ],
+     "thinking": [
+      "recall",
+      "reasoning"
+     ],
+     "horeb_skill_ids": [],
+     "prerequisites": [],
+     "status": "proposed"
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "ENGL.G9.READIN.T13_INTENSIVE_READING_VI.RS_IMAGES.M_EN9_RS_IMAGES_DETAIL",
+     "skill": "ENGL.G9.READIN.T13_INTENSIVE_READING_VI.RS_IMAGES",
+     "error": "Picks one small detail instead of the answer asked for.",
+     "example": {
+      "question": "Which answer fits the text?",
+      "wrong_answer": "an answer that is a small detail",
+      "correct_answer": "the answer the text supports"
+     },
+     "cause": "The child mixes up two rules that are taught close together.",
+     "reveals": "Offer \"an answer that is a small detail\" next to the right answer and ask the question again in a new situation.",
+     "help": "Check the answer against the text: it must cover what the question asks, not one small detail.",
+     "feedback": "Check the answer against the text: it must cover what the question asks, not one small detail.",
+     "source": "To confirm by a Kenyan English teacher: a common classroom error, not traced to a study by the author.",
+     "status": "draft"
+    },
+    {
+     "code": "ENGL.G9.READIN.T13_INTENSIVE_READING_VI.RS_IMAGES.M_EN9_RS_IMAGES_OPPOSITE",
+     "skill": "ENGL.G9.READIN.T13_INTENSIVE_READING_VI.RS_IMAGES",
+     "error": "Picks the opposite of what the text says.",
+     "example": {
+      "question": "Which answer fits the text?",
+      "wrong_answer": "an answer that is the opposite",
+      "correct_answer": "the answer the text supports"
+     },
+     "cause": "The child mixes up two rules that are taught close together.",
+     "reveals": "Offer \"an answer that is the opposite\" next to the right answer and ask the question again in a new situation.",
+     "help": "Check the answer against the text: it must agree with the text, not say the opposite.",
+     "feedback": "Check the answer against the text: it must agree with the text, not say the opposite.",
+     "source": "To confirm by a Kenyan English teacher: a common classroom error, not traced to a study by the author.",
+     "status": "draft"
+    },
+    {
+     "code": "ENGL.G9.READIN.T13_INTENSIVE_READING_VI.RS_IMAGES.M_EN9_RS_IMAGES_NOTSAID",
+     "skill": "ENGL.G9.READIN.T13_INTENSIVE_READING_VI.RS_IMAGES",
+     "error": "Picks something the text does not say.",
+     "example": {
+      "question": "Which answer fits the text?",
+      "wrong_answer": "an answer that is something not in the text",
+      "correct_answer": "the answer the text supports"
+     },
+     "cause": "The child mixes up two rules that are taught close together.",
+     "reveals": "Offer \"an answer that is something not in the text\" next to the right answer and ask the question again in a new situation.",
+     "help": "Check the answer against the text: it must be found in the text, not added from outside.",
+     "feedback": "Check the answer against the text: it must be found in the text, not added from outside.",
+     "source": "To confirm by a Kenyan English teacher: a common classroom error, not traced to a study by the author.",
+     "status": "draft"
+    }
+   ],
    "rubric_indicators": [
     "ENGL.G9.RUBRIC.2.1",
     "ENGL.G9.RUBRIC.2.2",
@@ -6051,8 +7366,78 @@
      "status": "kicd_verified"
     }
    ],
-   "skills": [],
-   "misconceptions": [],
+   "skills": [
+    {
+     "code": "ENGL.G9.READIN.T14_SUMMARISING_ARGUMENT.RS_SUMMARY",
+     "name": "Pick out the main points and organise them into a summary",
+     "outcomes": [
+      "ENGL.G9.READIN.T14_SUMMARISING_ARGUMENT.a",
+      "ENGL.G9.READIN.T14_SUMMARISING_ARGUMENT.b"
+     ],
+     "mastery": "The child finds the answer in the passage and picks the one that covers what the question asks, and does not pick a small detail, the opposite or something not in the text. Evidence rule: at least four of the last five fresh questions right across at least two question forms, and no repeated pick of the same misconception.",
+     "question_forms": [
+      "pick the right answer",
+      "pick the right answer on a second text"
+     ],
+     "thinking": [
+      "recall",
+      "reasoning"
+     ],
+     "horeb_skill_ids": [],
+     "prerequisites": [],
+     "status": "proposed"
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "ENGL.G9.READIN.T14_SUMMARISING_ARGUMENT.RS_SUMMARY.M_EN9_RS_SUMMARY_DETAIL",
+     "skill": "ENGL.G9.READIN.T14_SUMMARISING_ARGUMENT.RS_SUMMARY",
+     "error": "Picks one small detail instead of the answer asked for.",
+     "example": {
+      "question": "Which answer fits the text?",
+      "wrong_answer": "an answer that is a small detail",
+      "correct_answer": "the answer the text supports"
+     },
+     "cause": "The child mixes up two rules that are taught close together.",
+     "reveals": "Offer \"an answer that is a small detail\" next to the right answer and ask the question again in a new situation.",
+     "help": "Check the answer against the text: it must cover what the question asks, not one small detail.",
+     "feedback": "Check the answer against the text: it must cover what the question asks, not one small detail.",
+     "source": "To confirm by a Kenyan English teacher: a common classroom error, not traced to a study by the author.",
+     "status": "draft"
+    },
+    {
+     "code": "ENGL.G9.READIN.T14_SUMMARISING_ARGUMENT.RS_SUMMARY.M_EN9_RS_SUMMARY_OPPOSITE",
+     "skill": "ENGL.G9.READIN.T14_SUMMARISING_ARGUMENT.RS_SUMMARY",
+     "error": "Picks the opposite of what the text says.",
+     "example": {
+      "question": "Which answer fits the text?",
+      "wrong_answer": "an answer that is the opposite",
+      "correct_answer": "the answer the text supports"
+     },
+     "cause": "The child mixes up two rules that are taught close together.",
+     "reveals": "Offer \"an answer that is the opposite\" next to the right answer and ask the question again in a new situation.",
+     "help": "Check the answer against the text: it must agree with the text, not say the opposite.",
+     "feedback": "Check the answer against the text: it must agree with the text, not say the opposite.",
+     "source": "To confirm by a Kenyan English teacher: a common classroom error, not traced to a study by the author.",
+     "status": "draft"
+    },
+    {
+     "code": "ENGL.G9.READIN.T14_SUMMARISING_ARGUMENT.RS_SUMMARY.M_EN9_RS_SUMMARY_NOTSAID",
+     "skill": "ENGL.G9.READIN.T14_SUMMARISING_ARGUMENT.RS_SUMMARY",
+     "error": "Picks something the text does not say.",
+     "example": {
+      "question": "Which answer fits the text?",
+      "wrong_answer": "an answer that is something not in the text",
+      "correct_answer": "the answer the text supports"
+     },
+     "cause": "The child mixes up two rules that are taught close together.",
+     "reveals": "Offer \"an answer that is something not in the text\" next to the right answer and ask the question again in a new situation.",
+     "help": "Check the answer against the text: it must be found in the text, not added from outside.",
+     "feedback": "Check the answer against the text: it must be found in the text, not added from outside.",
+     "source": "To confirm by a Kenyan English teacher: a common classroom error, not traced to a study by the author.",
+     "status": "draft"
+    }
+   ],
    "rubric_indicators": [
     "ENGL.G9.RUBRIC.2.1",
     "ENGL.G9.RUBRIC.2.2",
@@ -6519,8 +7904,77 @@
      "status": "kicd_verified"
     }
    ],
-   "skills": [],
-   "misconceptions": [],
+   "skills": [
+    {
+     "code": "ENGL.G9.READIN.T15_READING_FLUENCY.RS_FLUENCY",
+     "name": "Make predictions about characters, events and the message of a text",
+     "outcomes": [
+      "ENGL.G9.READIN.T15_READING_FLUENCY.b"
+     ],
+     "mastery": "The child finds the answer in the passage and picks the one that covers what the question asks, and does not pick a small detail, the opposite or something not in the text. Evidence rule: at least four of the last five fresh questions right across at least two question forms, and no repeated pick of the same misconception.",
+     "question_forms": [
+      "pick the right answer",
+      "pick the right answer on a second text"
+     ],
+     "thinking": [
+      "recall",
+      "reasoning"
+     ],
+     "horeb_skill_ids": [],
+     "prerequisites": [],
+     "status": "proposed"
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "ENGL.G9.READIN.T15_READING_FLUENCY.RS_FLUENCY.M_EN9_RS_FLUENCY_DETAIL",
+     "skill": "ENGL.G9.READIN.T15_READING_FLUENCY.RS_FLUENCY",
+     "error": "Picks one small detail instead of the answer asked for.",
+     "example": {
+      "question": "Which answer fits the text?",
+      "wrong_answer": "an answer that is a small detail",
+      "correct_answer": "the answer the text supports"
+     },
+     "cause": "The child mixes up two rules that are taught close together.",
+     "reveals": "Offer \"an answer that is a small detail\" next to the right answer and ask the question again in a new situation.",
+     "help": "Check the answer against the text: it must cover what the question asks, not one small detail.",
+     "feedback": "Check the answer against the text: it must cover what the question asks, not one small detail.",
+     "source": "To confirm by a Kenyan English teacher: a common classroom error, not traced to a study by the author.",
+     "status": "draft"
+    },
+    {
+     "code": "ENGL.G9.READIN.T15_READING_FLUENCY.RS_FLUENCY.M_EN9_RS_FLUENCY_OPPOSITE",
+     "skill": "ENGL.G9.READIN.T15_READING_FLUENCY.RS_FLUENCY",
+     "error": "Picks the opposite of what the text says.",
+     "example": {
+      "question": "Which answer fits the text?",
+      "wrong_answer": "an answer that is the opposite",
+      "correct_answer": "the answer the text supports"
+     },
+     "cause": "The child mixes up two rules that are taught close together.",
+     "reveals": "Offer \"an answer that is the opposite\" next to the right answer and ask the question again in a new situation.",
+     "help": "Check the answer against the text: it must agree with the text, not say the opposite.",
+     "feedback": "Check the answer against the text: it must agree with the text, not say the opposite.",
+     "source": "To confirm by a Kenyan English teacher: a common classroom error, not traced to a study by the author.",
+     "status": "draft"
+    },
+    {
+     "code": "ENGL.G9.READIN.T15_READING_FLUENCY.RS_FLUENCY.M_EN9_RS_FLUENCY_NOTSAID",
+     "skill": "ENGL.G9.READIN.T15_READING_FLUENCY.RS_FLUENCY",
+     "error": "Picks something the text does not say.",
+     "example": {
+      "question": "Which answer fits the text?",
+      "wrong_answer": "an answer that is something not in the text",
+      "correct_answer": "the answer the text supports"
+     },
+     "cause": "The child mixes up two rules that are taught close together.",
+     "reveals": "Offer \"an answer that is something not in the text\" next to the right answer and ask the question again in a new situation.",
+     "help": "Check the answer against the text: it must be found in the text, not added from outside.",
+     "feedback": "Check the answer against the text: it must be found in the text, not added from outside.",
+     "source": "To confirm by a Kenyan English teacher: a common classroom error, not traced to a study by the author.",
+     "status": "draft"
+    }
+   ],
    "rubric_indicators": [
     "ENGL.G9.RUBRIC.2.1",
     "ENGL.G9.RUBRIC.2.2",
