@@ -1,0 +1,200 @@
+{
+  "sub_strand": "MATH.G5.MEASUR.MONEY",
+  "title": "Money (budgets, tax, banks, transfers, saving)",
+  "status": "draft: written 13 Nov 2026 from research round 3; shorter entries; prices are examples only and need a Kenyan teacher's check; not loaded by the live tutor",
+  "sources": [65, 73],
+  "notes": "Much of this sub-strand is understanding, not calculation, so the 'key step' is often an explanation in the child's words. Keep prices round and realistic; a teacher should check them against current Kenyan prices. The money transfer skill carries a safety message (never share a PIN) which the tutor must teach plainly and never role-play asking for.",
+  "skills": [
+    {
+      "skill": "MATH.G5.MEASUR.MONEY.BUDGET_MEANING",
+      "key_step": "The child explains that a budget is a plan made before spending, of how a known amount of money will be used, and tells it apart from a shopping list and a receipt.",
+      "floor": {"prerequisite": "Adds money amounts in shillings.", "question": "Sugar 180 shillings and bread 65 shillings. Total?", "answer": "245 shillings"},
+      "representations": ["a family planning the week's shopping", "three papers side by side: a list, a budget, a receipt", "the child's own definition"],
+      "steps": ["Show a list, a budget and a receipt.", "Ask which was written before shopping and which after.", "Ask which shows the money available.", "The child says what a budget is in their own words."],
+      "contexts": ["Mama planning the week's shopping", "a class party with 1,000 shillings", "pocket money for a week"],
+      "board": [
+        {"beat": "draw", "do": "Draw three papers: a list with no prices, a plan with prices and 'money available 500', and a shop receipt."},
+        {"beat": "point", "do": "Point at each paper.", "say": "Was this one written before shopping, or after?"},
+        {"beat": "pause", "do": "Wait for the child to sort them and say which is the budget."}
+      ],
+      "misconceptions": [
+        {"code": "MATH.G5.MEASUR.MONEY.BUDGET_MEANING.M_BUDGET_IS_RECEIPT", "listen_for": ["the receipt", "what you bought"], "ask": "Can you plan with a paper you get after you have spent the money?", "repair": "A budget comes first, a receipt comes last. Order the papers on a timeline."},
+        {"code": "MATH.G5.MEASUR.MONEY.BUDGET_MEANING.M_BUDGET_NO_MONEY_LIMIT", "listen_for": ["sugar, bread, milk is a budget"], "ask": "From Otieno's list, can you tell if 500 shillings is enough?", "repair": "A budget needs costs and the money available, so you can check it fits."}
+      ],
+      "checks": [
+        {"question": "In your own words, what is a budget?", "answer": "A plan, made before spending, of how a known amount of money will be used", "shows": "own definition"},
+        {"question": "Otieno has 500 shillings and writes: sugar, bread, milk. Is this a complete budget? Why?", "answer": "No; it has no costs to compare with the 500 shillings", "shows": "needs costs and money available"}
+      ]
+    },
+    {
+      "skill": "MATH.G5.MEASUR.MONEY.BUDGET_IMPORTANCE",
+      "key_step": "The child gives reasons for budgeting (not overspending, needs before wants, saving, avoiding debt) and says which item to drop first when money is short: a want, not a need.",
+      "floor": {"prerequisite": "Knows what a budget is.", "question": "Is a budget made before or after shopping?", "answer": "Before"},
+      "representations": ["a family short of money", "items sorted into needs and wants", "reasons in the child's words"],
+      "steps": ["Sort items into needs and wants.", "Ask what happens without a plan.", "The child gives three reasons.", "Practise dropping a want when money is short."],
+      "contexts": ["maize flour, cooking oil, sweets and a soda", "school fees and a new toy", "a family's month"],
+      "board": [
+        {"beat": "draw", "do": "Draw two baskets labelled needs and wants."},
+        {"beat": "child_draws", "do": "Child sorts maize flour, sweets, cooking oil, soda into the baskets."},
+        {"beat": "pause", "do": "Wait for the child to say which to drop first and why."}
+      ],
+      "misconceptions": [
+        {"code": "MATH.G5.MEASUR.MONEY.BUDGET_IMPORTANCE.M_DROP_MOST_EXPENSIVE", "listen_for": ["drop the flour, it costs the most"], "ask": "If the family drops maize flour, what will they eat?", "repair": "Drop wants before needs, even if the need costs more."},
+        {"code": "MATH.G5.MEASUR.MONEY.BUDGET_IMPORTANCE.M_BUDGET_MEANS_SPEND_ALL", "listen_for": ["she failed because money was left"], "ask": "Is money left over good or bad for Akinyi's family?", "repair": "Money left can be saved: a budget that leaves a balance worked."}
+      ],
+      "checks": [
+        {"question": "Give two reasons why a family should make a budget.", "answer": "E.g. so they do not overspend; so needs come before wants; so they can save", "shows": "reasons"},
+        {"question": "Mama's budget is too high. Items: maize flour, cooking oil, soda. Which should she drop first?", "answer": "The soda, a want", "shows": "needs before wants"}
+      ]
+    },
+    {
+      "skill": "MATH.G5.MEASUR.MONEY.BUDGET_ITEM_COSTS",
+      "key_step": "The child multiplies quantity by unit price for each line, and checks the answer is sensible.",
+      "floor": {"prerequisite": "Multiplies a 2- or 3-digit number by a 1-digit number.", "question": "65 x 4 =", "answer": "260"},
+      "representations": ["items on a duka shelf with price tags", "a budget table with columns", "line costs"],
+      "steps": ["Read quantity and unit price.", "Estimate the line cost.", "Multiply; check against the estimate."],
+      "contexts": ["3 kg of sugar", "4 packets of milk", "5 exercise books"],
+      "board": [
+        {"beat": "draw", "do": "Draw a budget table: item, quantity, unit price, cost; fill sugar, 3 kg, 180 shillings per kg."},
+        {"beat": "predict", "do": "Ask for a rough cost before calculating.", "say": "About how much will 3 kg cost?"},
+        {"beat": "pause", "do": "Wait for the estimate and then the exact cost."}
+      ],
+      "misconceptions": [
+        {"code": "MATH.G5.MEASUR.MONEY.BUDGET_ITEM_COSTS.M_UNIT_PRICE_AS_COST", "listen_for": ["180 shillings"], "ask": "Is 180 shillings the price of one kg or of three?", "repair": "Unit price is for one; the line cost is for all of them."},
+        {"code": "MATH.G5.MEASUR.MONEY.BUDGET_ITEM_COSTS.M_ADD_QTY_AND_PRICE", "listen_for": ["69 shillings"], "ask": "Four packets at 65 each. Is that about 69 or about 260?", "repair": "Draw the four packets with a price on each and add or multiply."}
+      ],
+      "checks": [
+        {"question": "Sugar costs 180 shillings per kg. What is the cost of 3 kg?", "answer": "540 shillings", "shows": "quantity x price"},
+        {"question": "5 exercise books cost 45 shillings each. Total cost?", "answer": "225 shillings", "shows": "carries correctly"}
+      ]
+    },
+    {
+      "skill": "MATH.G5.MEASUR.MONEY.BUDGET_TOTAL_BALANCE",
+      "key_step": "The child adds the line costs (not the unit prices), compares the total with the money available, and states the balance or the shortfall and what to drop.",
+      "floor": {"prerequisite": "Works out line costs.", "question": "2 kg rice at 150 per kg. Cost?", "answer": "300 shillings"},
+      "representations": ["a full budget table", "total and money available side by side", "balance or shortfall"],
+      "steps": ["Find each line cost.", "Add the line costs.", "Compare with the money available.", "Balance: subtract. Shortfall: drop a want and check again."],
+      "contexts": ["Njeri's 1,000 shillings shopping", "a class trip budget", "Halima's 500 shillings"],
+      "board": [
+        {"beat": "draw", "do": "Draw a budget table with three lines filled and the cost column empty, and 'money available 1,000'."},
+        {"beat": "child_draws", "do": "Child fills the costs and the total."},
+        {"beat": "point", "do": "Point at the total and the money available.", "say": "Is there money left, or not enough?"},
+        {"beat": "pause", "do": "Wait for the child to find the balance."}
+      ],
+      "misconceptions": [
+        {"code": "MATH.G5.MEASUR.MONEY.BUDGET_TOTAL_BALANCE.M_TOTAL_OF_UNIT_PRICES", "listen_for": ["I added the prices"], "ask": "Which column shows what Njeri will actually pay?", "repair": "Add the cost column, not the unit price column."},
+        {"code": "MATH.G5.MEASUR.MONEY.BUDGET_TOTAL_BALANCE.M_BALANCE_ADDED", "listen_for": ["1,870"], "ask": "After shopping, can Njeri have more money than she started with?", "repair": "Money left = money available minus total spent."}
+      ],
+      "checks": [
+        {"question": "Njeri has 1,000 shillings. Her budget total is 870 shillings. How much will be left?", "answer": "130 shillings", "shows": "subtracts for the balance"},
+        {"question": "Halima has 500 shillings. Her budget totals 560 shillings. What should she notice and do?", "answer": "She is 60 shillings short; she should drop or reduce a want", "shows": "spots a shortfall"}
+      ]
+    },
+    {
+      "skill": "MATH.G5.MEASUR.MONEY.TAX_MEANING",
+      "key_step": "The child explains that tax is money people and businesses pay to the government (through KRA) to pay for public services, and names some.",
+      "floor": {"prerequisite": "Knows what public services are (roads, schools).", "question": "Who builds the main roads?", "answer": "The government"},
+      "representations": ["public services the child uses", "a picture of money flowing to government and back as services", "the child's definition"],
+      "steps": ["List services everyone uses: roads, public schools, hospitals, security, water.", "Ask who pays for them.", "Name tax and KRA.", "The child explains in their own words."],
+      "contexts": ["the road to school", "a public hospital", "police and security"],
+      "board": [
+        {"beat": "draw", "do": "Draw people and shops on one side, the government in the middle, and a road, a school and a hospital on the other."},
+        {"beat": "draw", "do": "Draw arrows of money from people to government, then from government to services, slowly."},
+        {"beat": "pause", "do": "Wait for the child to say what the first arrows are called."}
+      ],
+      "misconceptions": [
+        {"code": "MATH.G5.MEASUR.MONEY.TAX_MEANING.M_TAX_IS_FINE", "listen_for": ["a punishment"], "ask": "Does a person who never breaks a rule still pay for roads?", "repair": "A fine is for breaking a rule; tax is everyone's share for public services."},
+        {"code": "MATH.G5.MEASUR.MONEY.TAX_MEANING.M_GOVT_PRINTS_MONEY", "listen_for": ["they can print money"], "ask": "If the government printed money for everything, would prices stay the same?", "repair": "Keep it simple: printing money does not make more goods, so prices rise; services are paid from taxes."}
+      ],
+      "checks": [
+        {"question": "What is tax?", "answer": "Money people and businesses pay to the government to pay for public services", "shows": "definition"},
+        {"question": "Name three things taxes pay for.", "answer": "E.g. roads, public schools, hospitals, security, water", "shows": "examples"}
+      ]
+    },
+    {
+      "skill": "MATH.G5.MEASUR.MONEY.TAX_ON_RECEIPT",
+      "key_step": "The child finds the tax line on a receipt, reads the tax amount (not the rate), and knows the total already includes it.",
+      "floor": {"prerequisite": "Reads money amounts with cents.", "question": "Read 580.00 shillings.", "answer": "Five hundred and eighty shillings"},
+      "representations": ["a model supermarket receipt", "the receipt drawn with lines highlighted", "the tax amount"],
+      "steps": ["Find the TOTAL line.", "Find the VAT line: the rate (16%) and the amount.", "Ask whether the total already includes it.", "Read the tax amount."],
+      "contexts": ["a supermarket receipt", "a hardware shop receipt", "a fuel station receipt"],
+      "board": [
+        {"beat": "draw", "do": "Draw a receipt: items, TOTAL 1,160.00, VAT 16%: 160.00, CASH 1,200.00, CHANGE 40.00."},
+        {"beat": "point", "do": "Point at each line in turn.", "say": "Which line tells us the tax paid?"},
+        {"beat": "pause", "do": "Wait for the child to choose and read it."}
+      ],
+      "misconceptions": [
+        {"code": "MATH.G5.MEASUR.MONEY.TAX_ON_RECEIPT.M_ADD_TAX_AGAIN", "listen_for": ["660 shillings"], "ask": "The receipt says 'VAT included'. What does included mean?", "repair": "The total already has the tax inside it; adding again counts it twice."},
+        {"code": "MATH.G5.MEASUR.MONEY.TAX_ON_RECEIPT.M_TAX_RATE_AS_AMOUNT", "listen_for": ["16 shillings", "40"], "ask": "Is 16% an amount of shillings, or a rate?", "repair": "Read the shillings beside the rate; change is not tax."}
+      ],
+      "checks": [
+        {"question": "Receipt: TOTAL 1,160.00; VAT 16%: 160.00; CASH 1,200.00; CHANGE 40.00. How much tax was paid?", "answer": "160.00 shillings", "shows": "amount, not rate or change"},
+        {"question": "A receipt shows TOTAL 580.00 and 'VAT 16% included: 80.00'. How much did the customer pay?", "answer": "580.00 shillings", "shows": "tax is inside the total"}
+      ]
+    },
+    {
+      "skill": "MATH.G5.MEASUR.MONEY.BANK_SERVICES",
+      "key_step": "The child names bank services (deposit, withdrawal, savings, loans repaid with interest, safe custody, transfers) and picks the right one for a situation.",
+      "floor": {"prerequisite": "Knows what saving is.", "question": "Why might a family keep money in a safe place?", "answer": "So it is not lost or stolen"},
+      "representations": ["situations from family life", "service cards matched to situations", "the service named"],
+      "steps": ["Name each service in child words.", "Match situations to services.", "Explain a loan is paid back with interest."],
+      "contexts": ["a farmer borrowing for a posho mill", "saving for school fees", "putting money in and taking it out"],
+      "board": [
+        {"beat": "write", "do": "Write four situations and four service names in two columns."},
+        {"beat": "child_draws", "do": "Child draws lines matching them."},
+        {"beat": "pause", "do": "Wait for the child to explain one match."}
+      ],
+      "misconceptions": [
+        {"code": "MATH.G5.MEASUR.MONEY.BANK_SERVICES.M_LOAN_IS_GIFT", "listen_for": ["she keeps it"], "ask": "Where does a bank get money to lend to the next person?", "repair": "A loan is borrowed and paid back, with a little extra called interest."},
+        {"code": "MATH.G5.MEASUR.MONEY.BANK_SERVICES.M_DEPOSIT_WITHDRAW_SWAP", "listen_for": ["withdrawal is putting in"], "ask": "When you draw water from a well, does water go in or come out?", "repair": "Withdraw is take out (like drawing water); deposit is put in."}
+      ],
+      "checks": [
+        {"question": "Putting money into your bank account is called a ______.", "answer": "Deposit", "shows": "vocabulary"},
+        {"question": "Mama Njeri borrows 20,000 shillings from a bank. Must she pay it back?", "answer": "Yes, with interest", "shows": "loans are repaid"}
+      ]
+    },
+    {
+      "skill": "MATH.G5.MEASUR.MONEY.MONEY_TRANSFER_DIGITAL",
+      "key_step": "The child describes the steps of sending money by phone (choose send, enter number, enter amount, check the name, enter PIN, confirm) and says the PIN is never shared and the name is always checked.",
+      "floor": {"prerequisite": "Reads phone numbers and money amounts.", "question": "Read 500 shillings in words.", "answer": "Five hundred shillings"},
+      "representations": ["a drawn phone screen sequence", "steps in order", "the safety rules in the child's words"],
+      "steps": ["Put the steps in order.", "Stop at the confirmation screen: check the name.", "The PIN is secret, even from someone who says they are from the bank.", "What to do if something goes wrong: tell a grown-up."],
+      "contexts": ["Mum sending money to a relative", "paying school fees by phone", "a suspicious phone call"],
+      "board": [
+        {"beat": "draw", "do": "Draw four phone screens out of order: amount, recipient name to confirm, number, PIN."},
+        {"beat": "child_draws", "do": "Child numbers them in order."},
+        {"beat": "point", "do": "Point at the confirm screen and hold.", "say": "What must Mum check here?"},
+        {"beat": "pause", "do": "Wait for the child to say the name check and the PIN rule."}
+      ],
+      "misconceptions": [
+        {"code": "MATH.G5.MEASUR.MONEY.MONEY_TRANSFER_DIGITAL.M_SHARE_PIN", "listen_for": ["give it if he's from the bank"], "ask": "Does a real bank ever need your PIN on a phone call?", "repair": "Never share a PIN with anyone; hang up and tell a grown-up."},
+        {"code": "MATH.G5.MEASUR.MONEY.MONEY_TRANSFER_DIGITAL.M_NO_CHECK_RECIPIENT", "listen_for": ["it will come back anyway"], "ask": "If the name on the screen is not Jane Achieng, what should Mum do?", "repair": "Check the name before the PIN: money sent wrongly may not come back."}
+      ],
+      "checks": [
+        {"question": "A caller says he is from the bank and asks for your PIN. What do you do?", "answer": "Never give it; end the call and tell a grown-up", "shows": "safety rule"},
+        {"question": "Put in order: enter amount, choose send money, check the name, enter PIN, enter number.", "answer": "Choose send money, enter number, enter amount, check the name, enter PIN", "shows": "steps"}
+      ]
+    },
+    {
+      "skill": "MATH.G5.MEASUR.MONEY.SAVING_FACTORS",
+      "key_step": "The child explains wise saving (save first, a safe place, a goal, regular small amounts) and picks the wiser plan in a story.",
+      "floor": {"prerequisite": "Knows what saving is.", "question": "Is saving spending money or keeping some for later?", "answer": "Keeping some for later"},
+      "representations": ["two children's saving plans", "a savings jar filling week by week", "the reasons"],
+      "steps": ["Compare save-first with save-what-is-left.", "Compare a tin at home with a bank or SACCO.", "Small amounts add up: count up week by week."],
+      "contexts": ["pocket money", "saving for school shoes", "a SACCO"],
+      "board": [
+        {"beat": "draw", "do": "Draw two jars over four weeks: one adds 20 shillings first each week, one adds whatever is left (sometimes 0)."},
+        {"beat": "predict", "do": "Ask which jar will have more after four weeks.", "say": "Which jar will have more?"},
+        {"beat": "pause", "do": "Wait for the child's answer and reason."}
+      ],
+      "misconceptions": [
+        {"code": "MATH.G5.MEASUR.MONEY.SAVING_FACTORS.M_SAVE_WHATS_LEFT", "listen_for": ["save what's left"], "ask": "In the weeks Baraka spent it all, how much did he save?", "repair": "Set aside the saving first, then spend the rest."},
+        {"code": "MATH.G5.MEASUR.MONEY.SAVING_FACTORS.M_SAVING_ONLY_FOR_RICH", "listen_for": ["only rich people"], "ask": "If Wafula keeps 5 shillings a day, how much after a month?", "repair": "Count it up: small amounts grow."}
+      ],
+      "checks": [
+        {"question": "Baraka gets 200 shillings a week. Which is wiser: save first, or save what is left after spending?", "answer": "Save first", "shows": "save first"},
+        {"question": "Where is safer for 5,000 shillings saved for school: a tin under the bed or a bank or SACCO? Why?", "answer": "A bank or SACCO; it is safe from theft and loss", "shows": "safe place"}
+      ]
+    }
+  ]
+}
