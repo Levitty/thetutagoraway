@@ -1,0 +1,88 @@
+// ============================================================================
+// ENGLISH GRADE 8: skills and prerequisites (authoring source). The misconception library is in english-g8-mis.mjs.
+// Written offline by Claude (13 Nov 2026), no model call. Everything here is DRAFT until a Kenyan English teacher reviews it.
+// scripts/build-english-g8.mjs merges it into curriculum/english/g8.json (HOREB owns that file), then
+// `npm run subject:map -- english 8 --dir english --title English` writes the in-app map.
+// Sub-strand keys: 'GRAMMA.T5' = the sub-strand ENGL.G8.GRAMMA.T5_*; a longer key ('READIN.T9_INTENSIVE_READING_SI') names one of two
+// sub-strands of a theme. A skill: S(sub, ID, name, outcome letters, what the child does, question forms, prerequisites, thinking).
+// Prerequisites: 'G7:ID' = a Grade 7 English skill, 'S:ID' = a Grade 8 skill. Every Grade 7 skill whose leads_to names a Grade 8
+// outcome also becomes a prerequisite of the Grade 8 skills that cover it: the build adds those links itself.
+// Not built here (no question can test them): the pronunciation, oral and listening outcomes, reading comprehension on a passage
+// (the Grade 7 passage machinery exists and is the next step) and every writing task.
+// ============================================================================
+export const TO_CONFIRM = 'common learner error; to confirm by a Kenyan English teacher';
+export const KISWAHILI = 'Kiswahili influence (to confirm by a Kenyan English teacher)';
+
+const S = (sub, id, name, outcomes, does, forms, pre = [], thinking = ['recall']) => ({ sub, id, name, outcomes, mastery: does.endsWith('.') ? does : `${does}, in 8 of 10 new items.`, forms, pre, thinking });
+const CH = 'choose the correct word', GAP = 'fill the gap', SPOT = 'spot the mistake', SENT = 'choose the correct sentence';
+
+export const SKILLS = [
+  S('GRAMMA.T1', 'COMPOUND_NOUNS', 'Tell compound nouns and write their singular and plural forms', ['a', 'b'],
+    'Recognises a compound noun (toothbrush, post office, mother-in-law), writes its plural by changing the main word (post offices, mothers-in-law, toothbrushes), and does not write the plural on the last part only (mother-in-laws)',
+    [CH, GAP, SPOT], ['G7:PLURALS', 'G7:NOUN_TYPES'], ['recall', 'rule']),
+  S('GRAMMA.T2', 'COLLECTIVE_NOUNS', 'Use collective nouns correctly', ['a', 'b'],
+    'Picks the collective noun that fits a group (a pride of lions, a fleet of ships, a school of fish, a troop of monkeys, a crew of sailors) and writes it as one singular word (a flock, not a flocks) before of, and does not use one group word for every group',
+    [CH, GAP, SPOT], ['G7:NOUN_TYPES', 'G7:SV_AGREEMENT'], ['recall', 'rule']),
+  S('GRAMMA.T3', 'AUXILIARY_VERBS', 'Use the primary auxiliary verbs be, do and have', ['a', 'b'],
+    'Chooses the right form of be (is, are, was, were), do (do, does, did) and have (has, have, had) as a helping verb, makes it agree with the subject, and does not write she have finished or they was playing',
+    [CH, GAP, SPOT], ['G7:SV_AGREEMENT', 'G7:SIMPLE_PRESENT'], ['recall', 'rule']),
+  S('GRAMMA.T4', 'PRESENT_PAST_TENSE', 'Write sentences in the simple present and the simple past', ['a', 'b', 'c'],
+    'Writes the simple present for habits and facts with -s after he, she or it, writes the simple past (regular -ed and irregular went, saw, ate), and uses did not with the plain verb, not did not went',
+    [CH, GAP, SPOT], ['G7:SIMPLE_PRESENT', 'G7:SIMPLE_PAST', 'G7:IRREGULAR_VERBS'], ['rule']),
+  S('GRAMMA.T5', 'GRADABLE_ADJECTIVES', 'Tell gradable adjectives from non-gradable ones and use them correctly', ['a', 'b'],
+    'Uses very, quite and extremely with gradable adjectives (very tall, quite cold), uses absolutely and completely with non-gradable adjectives (absolutely perfect, completely empty), and does not write very perfect, more unique or very dead',
+    [CH, GAP, SPOT], ['G7:ADJECTIVE_DEGREES'], ['recall', 'rule']),
+  S('GRAMMA.T6', 'FREQUENCY_DEGREE', 'Use adverbs of frequency and degree and put them in the right place', ['a', 'b'],
+    'Uses always, usually, often, sometimes and never for how often, and very, quite, too, almost and extremely for how much, puts a frequency adverb before the main verb and after be (she always arrives, he is never late), and does not write too for very',
+    [CH, GAP, SPOT], ['G7:ADVERB_KINDS', 'G7:ADVERB_FORM'], ['recall', 'rule']),
+  S('GRAMMA.T7', 'INDEFINITE_REFLEXIVE', 'Use indefinite and reflexive pronouns', ['a', 'b'],
+    'Uses someone, anybody, everything and nothing for people and things not named, writes the reflexive pronouns myself, yourself, himself, herself, itself, ourselves, yourselves and themselves, and does not write hisself or theirselves',
+    [CH, GAP, SPOT], ['G7:PERSONAL_PRONOUNS', 'G7:POSSESSIVES'], ['recall', 'rule']),
+  S('GRAMMA.T8', 'PREPOSITIONS_PLACE_TIME', 'Use prepositions of position, time and place', ['a', 'b'],
+    'Chooses at, on or in for a time or a place (at 6 o\'clock, on Monday, in June, at the gate, in the room) and under, above, beside, between, opposite, behind and in front of for position, and does not write at Monday or in the morning of Friday',
+    [CH, GAP, SPOT], ['G7:PREPOSITIONS'], ['recall', 'rule']),
+  S('GRAMMA.T9', 'CONJUNCTIONS_LISTED', 'Use the conjunctions because, although, unless, until, while and so', ['a', 'b'],
+    'Chooses the conjunction for a reason (because), a contrast (although), a condition (unless), a limit in time (until), two things at once (while) and a result (so), and does not write although and but together or because and so together',
+    [CH, GAP, SPOT], ['G7:CONJUNCTIONS_BASIC'], ['reasoning', 'rule']),
+  S('GRAMMA.T10', 'DEMONSTRATIVES_QUANTIFIERS', 'Use this, that, these, those and quantifiers', ['a', 'b'],
+    'Uses this and these for near things and that and those for far ones, matches this and that with one thing and these and those with many, and uses some, any, many, much, few and little with the right kind of noun',
+    [CH, GAP, SPOT], ['G7:COUNT_NONCOUNT', 'G7:ARTICLES'], ['recall', 'rule']),
+  S('GRAMMA.T11', 'ADVERB_FORMATION', 'Form adverbs from adjectives', ['a', 'b', 'c'],
+    'Adds -ly to most adjectives (quick, quickly), changes y to i before -ly (happy, happily), changes -le to -ly (gentle, gently), writes truly, and knows that the adverb of good is well and that fast and hard stay the same',
+    [CH, GAP, SPOT], ['G7:ADVERB_FORM', 'G7:ADJECTIVE_FORMATION'], ['recall', 'rule']),
+  S('GRAMMA.T12', 'PHRASAL_VERBS', 'Give the meaning of common phrasal verbs and use them', ['a', 'b'],
+    'Gives the meaning of look after, look for, give up, turn off, put off, run out of, set off, break down and carry on from the sentence, and picks the right particle, not one that changes the meaning',
+    ['choose the meaning', GAP, SPOT, CH], ['G7:PHRASAL_PCG'], ['recall', 'reasoning']),
+  S('GRAMMA.T13', 'COMPOUND_SENTENCES', 'Join two simple sentences with a coordinating conjunction', ['a', 'b'],
+    'Joins two complete sentences with for, and, nor, but, or, yet or so and puts a comma before the conjunction, and does not join them with only a comma (a comma splice) or with no conjunction at all',
+    [SENT, GAP, SPOT], ['G7:SIMPLE_SENTENCE', 'G7:CONJUNCTIONS_BASIC'], ['rule', 'reasoning']),
+  S('GRAMMA.T14', 'ACTIVE_PASSIVE', 'Tell the active and the passive voice and change one into the other', ['a', 'b', 'c'],
+    'Tells a sentence in which the subject does the action (the dog bit the boy) from one in which the subject receives it (the boy was bitten by the dog), forms the passive with be and the past participle, and does not write was bite or the boy bitten by',
+    ['choose the voice', GAP, SPOT, SENT], ['G7:SIMPLE_PAST', 'G7:IRREGULAR_VERBS'], ['rule', 'reasoning']),
+  S('GRAMMA.T15', 'QUESTION_TAGS', 'Frame interrogative sentences and question tags', ['a', 'b'],
+    'Forms a question tag from the sentence (you are coming, aren\'t you; she doesn\'t like tea, does she), turns a positive sentence to a negative tag and a negative one to a positive tag, and does not use isn\'t it for every tag',
+    [CH, GAP, SPOT], ['G7:NEGATIVES', 'G7:SV_AGREEMENT'], ['rule']),
+  S('WRITIN.T2', 'PUNCTUATION', 'Use commas, apostrophes and capital letters correctly', ['a', 'b'],
+    'Puts commas between the items of a list and after an opening word, writes the apostrophe for belonging (the boy\'s book, the boys\' books) and for a short form (it\'s, don\'t) but not for a plain plural, and writes capital letters for names, the first word and I',
+    [SENT, GAP, SPOT], ['G7:END_MARKS', 'G7:PLURALS'], ['rule']),
+  S('WRITIN.T6', 'SPELLING', 'Spell commonly misspelt words and the -ie and -ei words', ['a', 'c'],
+    'Spells words such as separate, definitely, necessary, occasion, accommodate and tomorrow correctly, writes i before e except after c (believe, receive, ceiling) and knows the common exceptions (seize, weird)',
+    [CH, GAP, SPOT], ['G7:MISSPELT_WORDS'], ['recall', 'rule']),
+  S('WRITIN.T11', 'PREFIXES_SUFFIXES', 'Use prefixes and suffixes and know what they do to a word', ['a', 'b', 'c'],
+    'Adds un-, dis-, re- and mis- to the front of a word (unhappy, disagree, replay, misunderstand) and -ful, -less, -ment and -ness to the end (careful, careless, enjoyment, kindness), says how the meaning changes, and keeps the spelling right (happy, happiness)',
+    [CH, GAP, SPOT], ['G7:ADJECTIVE_FORMATION', 'G7:MISSPELT_WORDS'], ['recall', 'rule']),
+  S('READIN.T9_INTENSIVE_READING_SI', 'SIMILE_METAPHOR', 'Tell a simile from a metaphor and explain what each says', ['a', 'c'],
+    'Says a simile compares two things with like or as (as brave as a lion) and a metaphor says one thing is another (he is a lion), explains what the comparison means, and does not call every comparison a simile',
+    ['choose the figure of speech', GAP, SPOT, 'choose the meaning'], ['G7:IMAGERY', 'G7:STYLE'], ['recall', 'reasoning']),
+  S('READIN.T13_SHORT_STORY_STYLE_CL', 'LITERARY_DEVICES', 'Tell personification and flashback in a story', ['a'],
+    'Says that personification gives a human action or feeling to a thing or an animal (the wind whispered, the sun smiled) and that a flashback takes the story back to an earlier time, and does not call a plain description personification',
+    ['choose the device', SPOT, 'choose the example'], ['G7:IMAGERY', 'G7:STYLE'], ['recall']),
+  S('READIN.T3_INTENSIVE_READING_PO', 'POEM_PARTS', 'Name the parts of a poem and the repetition in it', ['a'],
+    'Names the stanza (a group of lines), the line, the rhyme (matching end sounds), the rhythm (the beat) and the repetition (a word or line said again), and says the speaker of the poem is the persona, not always the poet',
+    ['choose the term', SPOT, 'choose the example'], ['G7:POEM_STRUCTURE', 'G7:POEM_MEANING'], ['recall']),
+  S('LISTEN.T14', 'SILENT_LETTERS', 'Tell the silent consonant letters in words', ['a'],
+    'Names the silent letter in words such as knife (k), write (w), island (s), castle (t), honest (h), listen (t) and lamb (b), and does not pick a sounded letter',
+    [CH, GAP, SPOT], ['G7:SOUNDS_CONSONANTS'], ['recall']),
+];
+
+export const ALSO = {};

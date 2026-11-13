@@ -1,0 +1,1022 @@
+{
+ "ENGL.G8.GRAMMA.T1_WORD_CLASSES_COMPOUN.COMPOUND_NOUNS.M8_CPN_PLURAL_LAST": {
+  "skill": "ENGL.G8.GRAMMA.T1_WORD_CLASSES_COMPOUN.COMPOUND_NOUNS",
+  "error": "Puts the plural -s on the last part of a hyphenated compound (mother-in-laws, passer-bys).",
+  "example": {
+   "question": "My two ___ came to the party.",
+   "wrong_answer": "mother-in-laws",
+   "correct_answer": "mothers-in-law"
+  },
+  "cause": "Common error of Kenyan learners of English.",
+  "reveals": "Offer \"mother-in-laws\" next to the right answer in a new sentence and ask again.",
+  "help": "The main noun takes the plural: mothers, then in-law.",
+  "feedback": "In a hyphenated compound the main noun takes the plural: mothers-in-law, passers-by, not mother-in-laws.",
+  "source": "common learner error; to confirm by a Kenyan English teacher",
+  "status": "draft"
+ },
+ "ENGL.G8.GRAMMA.T1_WORD_CLASSES_COMPOUN.COMPOUND_NOUNS.M8_CPN_SPLIT": {
+  "skill": "ENGL.G8.GRAMMA.T1_WORD_CLASSES_COMPOUN.COMPOUND_NOUNS",
+  "error": "Writes a one-word compound as two words (tooth brush, class room) or the other way round.",
+  "example": {
+   "question": "Wanjiru bought a new ___.",
+   "wrong_answer": "tooth brush",
+   "correct_answer": "toothbrush"
+  },
+  "cause": "Common error of Kenyan learners of English.",
+  "reveals": "Offer \"tooth brush\" next to the right answer in a new sentence and ask again.",
+  "help": "Check the dictionary: some compounds are one word, some two.",
+  "feedback": "Some compound nouns are one word (toothbrush, classroom), some are two (post office), and some have a hyphen (mother-in-law). Look in a dictionary.",
+  "source": "common learner error; to confirm by a Kenyan English teacher",
+  "status": "draft"
+ },
+ "ENGL.G8.GRAMMA.T1_WORD_CLASSES_COMPOUN.COMPOUND_NOUNS.M8_CPN_SINGULAR": {
+  "skill": "ENGL.G8.GRAMMA.T1_WORD_CLASSES_COMPOUN.COMPOUND_NOUNS",
+  "error": "Leaves a compound noun singular where a plural is needed.",
+  "example": {
+   "question": "The ___ sell stamps.",
+   "wrong_answer": "post office",
+   "correct_answer": "post offices"
+  },
+  "cause": "Common error of Kenyan learners of English.",
+  "reveals": "Offer \"post office\" next to the right answer in a new sentence and ask again.",
+  "help": "Ask: one or many? Many needs the plural -s on the main noun.",
+  "feedback": "Many post offices sell stamps. Put the plural on the main noun.",
+  "source": "common learner error; to confirm by a Kenyan English teacher",
+  "status": "draft"
+ },
+ "ENGL.G8.GRAMMA.T2_WORD_CLASSES_COLLECT.COLLECTIVE_NOUNS.M8_CLN_WRONG_GROUP": {
+  "skill": "ENGL.G8.GRAMMA.T2_WORD_CLASSES_COLLECT.COLLECTIVE_NOUNS",
+  "error": "Uses the wrong collective noun for a group (a herd of fish, a swarm of lions).",
+  "example": {
+   "question": "A ___ of lions rested under the tree.",
+   "wrong_answer": "swarm",
+   "correct_answer": "pride"
+  },
+  "cause": "Uses one word for every group.",
+  "reveals": "Offer \"swarm\" next to the right answer in a new sentence and ask again.",
+  "help": "Each group has its own word.",
+  "feedback": "Each kind of group has its own collective noun: a pride of lions, a school of fish, a fleet of ships, a troop of monkeys, a crew of sailors.",
+  "source": "common learner error; to confirm by a Kenyan English teacher",
+  "status": "draft"
+ },
+ "ENGL.G8.GRAMMA.T2_WORD_CLASSES_COLLECT.COLLECTIVE_NOUNS.M8_CLN_PLURAL": {
+  "skill": "ENGL.G8.GRAMMA.T2_WORD_CLASSES_COLLECT.COLLECTIVE_NOUNS",
+  "error": "Writes the collective noun as a plural (a flocks of birds, a crews of sailors).",
+  "example": {
+   "question": "A ___ of sailors boarded the ship.",
+   "wrong_answer": "crews",
+   "correct_answer": "crew"
+  },
+  "cause": "Common error of Kenyan learners of English.",
+  "reveals": "Offer \"crews\" next to the right answer in a new sentence and ask again.",
+  "help": "One group is one thing, so one crew.",
+  "feedback": "A collective noun names one group, so write a crew of sailors, not a crews of sailors.",
+  "source": "common learner error; to confirm by a Kenyan English teacher",
+  "status": "draft"
+ },
+ "ENGL.G8.GRAMMA.T2_WORD_CLASSES_COLLECT.COLLECTIVE_NOUNS.M8_CLN_NO_OF": {
+  "skill": "ENGL.G8.GRAMMA.T2_WORD_CLASSES_COLLECT.COLLECTIVE_NOUNS",
+  "error": "Leaves out of after the collective noun (a swarm bees).",
+  "example": {
+   "question": "A swarm ___ bees settled on the roof.",
+   "wrong_answer": "for",
+   "correct_answer": "of"
+  },
+  "cause": "Common error of Kenyan learners of English.",
+  "reveals": "Offer \"for\" next to the right answer in a new sentence and ask again.",
+  "help": "The words go: a swarm of bees.",
+  "feedback": "Say a swarm of bees. The collective noun is followed by of.",
+  "source": "common learner error; to confirm by a Kenyan English teacher",
+  "status": "draft"
+ },
+ "ENGL.G8.WRITIN.T2_MECHANICS_OF_WRITING.PUNCTUATION.M8_PN_APOS_PLURAL": {
+  "skill": "ENGL.G8.WRITIN.T2_MECHANICS_OF_WRITING.PUNCTUATION",
+  "error": "Puts an apostrophe in a plain plural (apple's for sale, the boy's are here).",
+  "example": {
+   "question": "Mama bought three ___ at the market.",
+   "wrong_answer": "mango's",
+   "correct_answer": "mangoes"
+  },
+  "cause": "Common error of Kenyan learners of English.",
+  "reveals": "Offer \"mango's\" next to the right answer in a new sentence and ask again.",
+  "help": "A plain plural does not take an apostrophe.",
+  "feedback": "An apostrophe shows belonging or a short form, not a plural: three mangoes, not three mango's.",
+  "source": "common learner error; to confirm by a Kenyan English teacher",
+  "status": "draft"
+ },
+ "ENGL.G8.WRITIN.T2_MECHANICS_OF_WRITING.PUNCTUATION.M8_PN_APOS_POSS": {
+  "skill": "ENGL.G8.WRITIN.T2_MECHANICS_OF_WRITING.PUNCTUATION",
+  "error": "Puts the apostrophe in the wrong place for belonging (the boys book, the boy's books for many boys).",
+  "example": {
+   "question": "The ___ bags are in the classroom. (many boys)",
+   "wrong_answer": "boy's",
+   "correct_answer": "boys'"
+  },
+  "cause": "Common error of Kenyan learners of English.",
+  "reveals": "Offer \"boy's\" next to the right answer in a new sentence and ask again.",
+  "help": "One owner: 's. Many owners ending in s: s'.",
+  "feedback": "For one owner write the boy's bag. For many owners write the boys' bags, with the apostrophe after the s.",
+  "source": "common learner error; to confirm by a Kenyan English teacher",
+  "status": "draft"
+ },
+ "ENGL.G8.WRITIN.T2_MECHANICS_OF_WRITING.PUNCTUATION.M8_PN_COMMA_LIST": {
+  "skill": "ENGL.G8.WRITIN.T2_MECHANICS_OF_WRITING.PUNCTUATION",
+  "error": "Leaves out the commas in a list or puts one before the last item wrongly.",
+  "example": {
+   "question": "We bought rice___ beans and maize.",
+   "wrong_answer": "",
+   "correct_answer": ","
+  },
+  "cause": "Common error of Kenyan learners of English.",
+  "reveals": "Offer \"\" next to the right answer in a new sentence and ask again.",
+  "help": "Separate the items in a list with commas.",
+  "feedback": "Put a comma between the items of a list and use and before the last: rice, beans and maize.",
+  "source": "common learner error; to confirm by a Kenyan English teacher",
+  "status": "draft"
+ },
+ "ENGL.G8.WRITIN.T2_MECHANICS_OF_WRITING.PUNCTUATION.M8_PN_ITS": {
+  "skill": "ENGL.G8.WRITIN.T2_MECHANICS_OF_WRITING.PUNCTUATION",
+  "error": "Mixes its and it's.",
+  "example": {
+   "question": "The cow licked ___ calf.",
+   "wrong_answer": "it's",
+   "correct_answer": "its"
+  },
+  "cause": "Common error of Kenyan learners of English.",
+  "reveals": "Offer \"it's\" next to the right answer in a new sentence and ask again.",
+  "help": "It's means it is. Its shows belonging.",
+  "feedback": "Its (no apostrophe) shows belonging: its calf. It's is short for it is or it has.",
+  "source": "common learner error; to confirm by a Kenyan English teacher",
+  "status": "draft"
+ },
+ "ENGL.G8.GRAMMA.T3_WORD_CLASSES_PRIMARY.AUXILIARY_VERBS.M8_AUX_AGREE": {
+  "skill": "ENGL.G8.GRAMMA.T3_WORD_CLASSES_PRIMARY.AUXILIARY_VERBS",
+  "error": "Does not make has, have or do agree with the subject (she have finished, they has gone).",
+  "example": {
+   "question": "Wanjiru ___ finished her work.",
+   "wrong_answer": "have",
+   "correct_answer": "has"
+  },
+  "cause": "Common error of Kenyan learners of English.",
+  "reveals": "Offer \"have\" next to the right answer in a new sentence and ask again.",
+  "help": "He, she and it take has; I, you, we and they take have.",
+  "feedback": "Use has with he, she, it and one name (Wanjiru has). Use have with I, you, we and they.",
+  "source": "common learner error; to confirm by a Kenyan English teacher",
+  "status": "draft"
+ },
+ "ENGL.G8.GRAMMA.T3_WORD_CLASSES_PRIMARY.AUXILIARY_VERBS.M8_AUX_BE_FORM": {
+  "skill": "ENGL.G8.GRAMMA.T3_WORD_CLASSES_PRIMARY.AUXILIARY_VERBS",
+  "error": "Uses the wrong form of be (they was playing, I is ready).",
+  "example": {
+   "question": "The boys ___ playing football.",
+   "wrong_answer": "was",
+   "correct_answer": "were"
+  },
+  "cause": "Common error of Kenyan learners of English.",
+  "reveals": "Offer \"was\" next to the right answer in a new sentence and ask again.",
+  "help": "Many people or things take were or are.",
+  "feedback": "Use was with I, he, she and it, and were with you, we, they and plural nouns: The boys were playing.",
+  "source": "common learner error; to confirm by a Kenyan English teacher",
+  "status": "draft"
+ },
+ "ENGL.G8.GRAMMA.T3_WORD_CLASSES_PRIMARY.AUXILIARY_VERBS.M8_AUX_DID_PAST": {
+  "skill": "ENGL.G8.GRAMMA.T3_WORD_CLASSES_PRIMARY.AUXILIARY_VERBS",
+  "error": "Puts did or does and then a past or -s verb (did went, does goes).",
+  "example": {
+   "question": "Otieno did not ___ to school.",
+   "wrong_answer": "went",
+   "correct_answer": "go"
+  },
+  "cause": "Common error of Kenyan learners of English.",
+  "reveals": "Offer \"went\" next to the right answer in a new sentence and ask again.",
+  "help": "After did and does the main verb stays plain.",
+  "feedback": "After do, does or did the main verb has no ending: Otieno did not go, he does not go.",
+  "source": "common learner error; to confirm by a Kenyan English teacher",
+  "status": "draft"
+ },
+ "ENGL.G8.READIN.T3_INTENSIVE_READING_PO.POEM_PARTS.M8_PM_STANZA_LINE": {
+  "skill": "ENGL.G8.READIN.T3_INTENSIVE_READING_PO.POEM_PARTS",
+  "error": "Mixes a stanza and a line of a poem.",
+  "example": {
+   "question": "What is a stanza?",
+   "wrong_answer": "One line of a poem",
+   "correct_answer": "A group of lines in a poem"
+  },
+  "cause": "Common error of Kenyan learners of English.",
+  "reveals": "Offer \"One line of a poem\" next to the right answer in a new sentence and ask again.",
+  "help": "A stanza is like a paragraph of lines.",
+  "feedback": "A line is one row of words in a poem. A stanza is a group of lines.",
+  "source": "common learner error; to confirm by a Kenyan English teacher",
+  "status": "draft"
+ },
+ "ENGL.G8.READIN.T3_INTENSIVE_READING_PO.POEM_PARTS.M8_PM_RHYME_REPEAT": {
+  "skill": "ENGL.G8.READIN.T3_INTENSIVE_READING_PO.POEM_PARTS",
+  "error": "Mixes rhyme and repetition.",
+  "example": {
+   "question": "What is repetition in a poem?",
+   "wrong_answer": "Words with the same end sound",
+   "correct_answer": "A word or line said again"
+  },
+  "cause": "Common error of Kenyan learners of English.",
+  "reveals": "Offer \"Words with the same end sound\" next to the right answer in a new sentence and ask again.",
+  "help": "Rhyme is the same sound. Repetition is the same words again.",
+  "feedback": "Rhyme is words with the same end sound. Repetition is a word or a line said again.",
+  "source": "common learner error; to confirm by a Kenyan English teacher",
+  "status": "draft"
+ },
+ "ENGL.G8.READIN.T3_INTENSIVE_READING_PO.POEM_PARTS.M8_PM_POET_PERSONA": {
+  "skill": "ENGL.G8.READIN.T3_INTENSIVE_READING_PO.POEM_PARTS",
+  "error": "Says the speaker of a poem is always the poet.",
+  "example": {
+   "question": "Who is the persona in a poem?",
+   "wrong_answer": "The poet himself, always",
+   "correct_answer": "The voice that speaks in the poem"
+  },
+  "cause": "Common error of Kenyan learners of English.",
+  "reveals": "Offer \"The poet himself, always\" next to the right answer in a new sentence and ask again.",
+  "help": "The speaker may be an imagined person.",
+  "feedback": "The persona is the voice that speaks in the poem. It may be the poet or an imagined person.",
+  "source": "common learner error; to confirm by a Kenyan English teacher",
+  "status": "draft"
+ },
+ "ENGL.G8.GRAMMA.T4_VERBS_AND_TENSE.PRESENT_PAST_TENSE.M8_TN_S_MISSING": {
+  "skill": "ENGL.G8.GRAMMA.T4_VERBS_AND_TENSE.PRESENT_PAST_TENSE",
+  "error": "Leaves out the -s after he, she or it in the simple present (he walk, she like).",
+  "example": {
+   "question": "Achieng ___ to school every day.",
+   "wrong_answer": "walk",
+   "correct_answer": "walks"
+  },
+  "cause": "Common error of Kenyan learners of English.",
+  "reveals": "Offer \"walk\" next to the right answer in a new sentence and ask again.",
+  "help": "One name or he, she or it adds -s in the present.",
+  "feedback": "In the simple present add -s or -es after he, she, it or one name: Achieng walks.",
+  "source": "common learner error; to confirm by a Kenyan English teacher",
+  "status": "draft"
+ },
+ "ENGL.G8.GRAMMA.T4_VERBS_AND_TENSE.PRESENT_PAST_TENSE.M8_TN_DID_PAST": {
+  "skill": "ENGL.G8.GRAMMA.T4_VERBS_AND_TENSE.PRESENT_PAST_TENSE",
+  "error": "Puts the past form after did or did not (did not went, did she saw).",
+  "example": {
+   "question": "Baraka did not ___ the answer.",
+   "wrong_answer": "knew",
+   "correct_answer": "know"
+  },
+  "cause": "Common error of Kenyan learners of English.",
+  "reveals": "Offer \"knew\" next to the right answer in a new sentence and ask again.",
+  "help": "After did the verb is plain.",
+  "feedback": "Did already shows the past, so the verb stays plain: did not know, did she see.",
+  "source": "common learner error; to confirm by a Kenyan English teacher",
+  "status": "draft"
+ },
+ "ENGL.G8.GRAMMA.T4_VERBS_AND_TENSE.PRESENT_PAST_TENSE.M8_TN_WRONG_PAST": {
+  "skill": "ENGL.G8.GRAMMA.T4_VERBS_AND_TENSE.PRESENT_PAST_TENSE",
+  "error": "Adds -ed to an irregular verb or uses the wrong irregular form (goed, eated, seen for saw).",
+  "example": {
+   "question": "Yesterday we ___ to the market.",
+   "wrong_answer": "goed",
+   "correct_answer": "went"
+  },
+  "cause": "Common error of Kenyan learners of English.",
+  "reveals": "Offer \"goed\" next to the right answer in a new sentence and ask again.",
+  "help": "Irregular verbs have their own past form.",
+  "feedback": "Irregular verbs do not add -ed. Learn the forms: go, went; see, saw; eat, ate; run, ran.",
+  "source": "common learner error; to confirm by a Kenyan English teacher",
+  "status": "draft"
+ },
+ "ENGL.G8.GRAMMA.T5_WORD_CLASSES_ADJECTI.GRADABLE_ADJECTIVES.M8_GR_VERY_ABSOLUTE": {
+  "skill": "ENGL.G8.GRAMMA.T5_WORD_CLASSES_ADJECTI.GRADABLE_ADJECTIVES",
+  "error": "Uses very or more with a non-gradable adjective (very perfect, more unique, very dead).",
+  "example": {
+   "question": "The soup is ___ perfect.",
+   "wrong_answer": "very",
+   "correct_answer": "absolutely"
+  },
+  "cause": "Common error of Kenyan learners of English.",
+  "reveals": "Offer \"very\" next to the right answer in a new sentence and ask again.",
+  "help": "Perfect, empty and dead cannot be more or less.",
+  "feedback": "A non-gradable adjective such as perfect, empty, dead or unique cannot be graded, so use absolutely or completely, not very.",
+  "source": "common learner error; to confirm by a Kenyan English teacher",
+  "status": "draft"
+ },
+ "ENGL.G8.GRAMMA.T5_WORD_CLASSES_ADJECTI.GRADABLE_ADJECTIVES.M8_GR_ABSOLUTELY_GRADABLE": {
+  "skill": "ENGL.G8.GRAMMA.T5_WORD_CLASSES_ADJECTI.GRADABLE_ADJECTIVES",
+  "error": "Uses absolutely or completely with a gradable adjective (absolutely tall, completely cold).",
+  "example": {
+   "question": "The boy is ___ tall for his age.",
+   "wrong_answer": "absolutely",
+   "correct_answer": "very"
+  },
+  "cause": "Common error of Kenyan learners of English.",
+  "reveals": "Offer \"absolutely\" next to the right answer in a new sentence and ask again.",
+  "help": "Tall can be more or less. Very goes with it.",
+  "feedback": "A gradable adjective such as tall, cold or big can be more or less, so use very, quite or extremely with it.",
+  "source": "common learner error; to confirm by a Kenyan English teacher",
+  "status": "draft"
+ },
+ "ENGL.G8.GRAMMA.T5_WORD_CLASSES_ADJECTI.GRADABLE_ADJECTIVES.M8_GR_MORE_UNIQUE": {
+  "skill": "ENGL.G8.GRAMMA.T5_WORD_CLASSES_ADJECTI.GRADABLE_ADJECTIVES",
+  "error": "Makes a degree form of a non-gradable adjective (most unique, more empty, deader).",
+  "example": {
+   "question": "This painting is ___.",
+   "wrong_answer": "more unique",
+   "correct_answer": "unique"
+  },
+  "cause": "Common error of Kenyan learners of English.",
+  "reveals": "Offer \"more unique\" next to the right answer in a new sentence and ask again.",
+  "help": "Unique means one of a kind, so it has no degrees.",
+  "feedback": "Unique, perfect, empty and dead have no comparative or superlative form. Say unique, not more unique.",
+  "source": "common learner error; to confirm by a Kenyan English teacher",
+  "status": "draft"
+ },
+ "ENGL.G8.GRAMMA.T6_WORD_CLASSES_ADVERBS.FREQUENCY_DEGREE.M8_FD_PLACE": {
+  "skill": "ENGL.G8.GRAMMA.T6_WORD_CLASSES_ADVERBS.FREQUENCY_DEGREE",
+  "error": "Puts the frequency adverb in the wrong place (She arrives always, he never is late).",
+  "example": {
+   "question": "Achieng ___ to school early.",
+   "wrong_answer": "comes always",
+   "correct_answer": "always comes"
+  },
+  "cause": "Common error of Kenyan learners of English.",
+  "reveals": "Offer \"comes always\" next to the right answer in a new sentence and ask again.",
+  "help": "Put the adverb before the main verb and after be.",
+  "feedback": "A frequency adverb goes before the main verb (she always comes) and after be (he is never late).",
+  "source": "common learner error; to confirm by a Kenyan English teacher",
+  "status": "draft"
+ },
+ "ENGL.G8.GRAMMA.T6_WORD_CLASSES_ADVERBS.FREQUENCY_DEGREE.M8_FD_TOO_VERY": {
+  "skill": "ENGL.G8.GRAMMA.T6_WORD_CLASSES_ADVERBS.FREQUENCY_DEGREE",
+  "error": "Uses too where very is meant (too good, too beautiful).",
+  "example": {
+   "question": "The mandazi were ___ tasty, so we ate them all.",
+   "wrong_answer": "too",
+   "correct_answer": "very"
+  },
+  "cause": "Common error of Kenyan learners of English.",
+  "reveals": "Offer \"too\" next to the right answer in a new sentence and ask again.",
+  "help": "Too means more than is wanted. Very just adds strength.",
+  "feedback": "Too means more than enough and is usually a problem (too hot to drink). Use very for a strong degree: very tasty.",
+  "source": "common learner error; to confirm by a Kenyan English teacher",
+  "status": "draft"
+ },
+ "ENGL.G8.GRAMMA.T6_WORD_CLASSES_ADVERBS.FREQUENCY_DEGREE.M8_FD_NEVER_NOT": {
+  "skill": "ENGL.G8.GRAMMA.T6_WORD_CLASSES_ADVERBS.FREQUENCY_DEGREE",
+  "error": "Uses never with not (does not never come, I do not never go).",
+  "example": {
+   "question": "She ___ comes late.",
+   "wrong_answer": "does not never",
+   "correct_answer": "never"
+  },
+  "cause": "Common error of Kenyan learners of English.",
+  "reveals": "Offer \"does not never\" next to the right answer in a new sentence and ask again.",
+  "help": "Never already means not ever.",
+  "feedback": "Never already makes the sentence negative, so do not add not: she never comes late.",
+  "source": "common learner error; to confirm by a Kenyan English teacher",
+  "status": "draft"
+ },
+ "ENGL.G8.WRITIN.T6_MECHANICS_OF_WRITING.SPELLING.M8_SP_MISSPELT": {
+  "skill": "ENGL.G8.WRITIN.T6_MECHANICS_OF_WRITING.SPELLING",
+  "error": "Misspells a commonly misspelt word (seperate, definately, neccessary).",
+  "example": {
+   "question": "Please ___ the red beans from the green ones.",
+   "wrong_answer": "seperate",
+   "correct_answer": "separate"
+  },
+  "cause": "Common error of Kenyan learners of English.",
+  "reveals": "Offer \"seperate\" next to the right answer in a new sentence and ask again.",
+  "help": "Look for the a in the middle: sep-a-rate.",
+  "feedback": "Learn the tricky spellings: separate, definitely, necessary, occasion, accommodate, tomorrow. Look at the word, cover it, write it, check it.",
+  "source": "common learner error; to confirm by a Kenyan English teacher",
+  "status": "draft"
+ },
+ "ENGL.G8.WRITIN.T6_MECHANICS_OF_WRITING.SPELLING.M8_SP_IE_EI": {
+  "skill": "ENGL.G8.WRITIN.T6_MECHANICS_OF_WRITING.SPELLING",
+  "error": "Writes ei where ie is needed or the other way round (beleive, recieve).",
+  "example": {
+   "question": "We ___ a letter from Nairobi.",
+   "wrong_answer": "recieve",
+   "correct_answer": "receive"
+  },
+  "cause": "Common error of Kenyan learners of English.",
+  "reveals": "Offer \"recieve\" next to the right answer in a new sentence and ask again.",
+  "help": "I before e, except after c.",
+  "feedback": "Write i before e except after c: believe, but receive and ceiling. A few words break the rule, such as seize and weird.",
+  "source": "common learner error; to confirm by a Kenyan English teacher",
+  "status": "draft"
+ },
+ "ENGL.G8.WRITIN.T6_MECHANICS_OF_WRITING.SPELLING.M8_SP_DOUBLE": {
+  "skill": "ENGL.G8.WRITIN.T6_MECHANICS_OF_WRITING.SPELLING",
+  "error": "Doubles a letter that should not be doubled or leaves out a double letter (acommodate, occassion).",
+  "example": {
+   "question": "The hotel can ___ forty guests.",
+   "wrong_answer": "acommodate",
+   "correct_answer": "accommodate"
+  },
+  "cause": "Common error of Kenyan learners of English.",
+  "reveals": "Offer \"acommodate\" next to the right answer in a new sentence and ask again.",
+  "help": "Accommodate has two c and two m.",
+  "feedback": "Accommodate has a double c and a double m. Occasion has a double c and one s.",
+  "source": "common learner error; to confirm by a Kenyan English teacher",
+  "status": "draft"
+ },
+ "ENGL.G8.GRAMMA.T7_WORD_CLASSES_PRONOUN.INDEFINITE_REFLEXIVE.M8_IR_HISSELF": {
+  "skill": "ENGL.G8.GRAMMA.T7_WORD_CLASSES_PRONOUN.INDEFINITE_REFLEXIVE",
+  "error": "Writes hisself or theirselves for himself and themselves.",
+  "example": {
+   "question": "The boys taught ___ to swim.",
+   "wrong_answer": "theirselves",
+   "correct_answer": "themselves"
+  },
+  "cause": "Common error of Kenyan learners of English.",
+  "reveals": "Offer \"theirselves\" next to the right answer in a new sentence and ask again.",
+  "help": "The reflexive pronouns end in -self or -selves.",
+  "feedback": "The reflexive forms are myself, yourself, himself, herself, itself, ourselves, yourselves and themselves. There is no theirselves or hisself.",
+  "source": "common learner error; to confirm by a Kenyan English teacher",
+  "status": "draft"
+ },
+ "ENGL.G8.GRAMMA.T7_WORD_CLASSES_PRONOUN.INDEFINITE_REFLEXIVE.M8_IR_OURSELF": {
+  "skill": "ENGL.G8.GRAMMA.T7_WORD_CLASSES_PRONOUN.INDEFINITE_REFLEXIVE",
+  "error": "Writes ourself or yourselfs where the plural -selves is needed.",
+  "example": {
+   "question": "We made the cake ___.",
+   "wrong_answer": "ourself",
+   "correct_answer": "ourselves"
+  },
+  "cause": "Common error of Kenyan learners of English.",
+  "reveals": "Offer \"ourself\" next to the right answer in a new sentence and ask again.",
+  "help": "We is many, so -selves.",
+  "feedback": "Plural reflexive pronouns end in -selves: ourselves, yourselves, themselves.",
+  "source": "common learner error; to confirm by a Kenyan English teacher",
+  "status": "draft"
+ },
+ "ENGL.G8.GRAMMA.T7_WORD_CLASSES_PRONOUN.INDEFINITE_REFLEXIVE.M8_IR_EVERYONE_PLURAL": {
+  "skill": "ENGL.G8.GRAMMA.T7_WORD_CLASSES_PRONOUN.INDEFINITE_REFLEXIVE",
+  "error": "Treats everyone, someone or nobody as plural (everyone are here, nobody are hurt).",
+  "example": {
+   "question": "Everyone ___ ready for the trip.",
+   "wrong_answer": "are",
+   "correct_answer": "is"
+  },
+  "cause": "Common error of Kenyan learners of English.",
+  "reveals": "Offer \"are\" next to the right answer in a new sentence and ask again.",
+  "help": "Everyone is one word, so it is singular.",
+  "feedback": "Everyone, someone, anybody and nobody take a singular verb: everyone is ready.",
+  "source": "common learner error; to confirm by a Kenyan English teacher",
+  "status": "draft"
+ },
+ "ENGL.G8.GRAMMA.T8_WORD_CLASSES_SIMPLE_.PREPOSITIONS_PLACE_TIME.M8_PP_AT_ON_IN": {
+  "skill": "ENGL.G8.GRAMMA.T8_WORD_CLASSES_SIMPLE_.PREPOSITIONS_PLACE_TIME",
+  "error": "Uses the wrong preposition of time (at Monday, in 6 o'clock, on June).",
+  "example": {
+   "question": "The sports day is ___ Friday.",
+   "wrong_answer": "in",
+   "correct_answer": "on"
+  },
+  "cause": "Kiswahili influence (to confirm by a Kenyan English teacher)",
+  "reveals": "Offer \"in\" next to the right answer in a new sentence and ask again.",
+  "help": "On for days, in for months and years, at for clock times.",
+  "feedback": "Use on with days (on Friday), in with months, years and parts of the day (in June, in the morning) and at with clock times (at 6 o'clock).",
+  "source": "common learner error; to confirm by a Kenyan English teacher",
+  "status": "draft"
+ },
+ "ENGL.G8.GRAMMA.T8_WORD_CLASSES_SIMPLE_.PREPOSITIONS_PLACE_TIME.M8_PP_BETWEEN_AMONG": {
+  "skill": "ENGL.G8.GRAMMA.T8_WORD_CLASSES_SIMPLE_.PREPOSITIONS_PLACE_TIME",
+  "error": "Uses beside for between, or between for many things (between the boys in the class).",
+  "example": {
+   "question": "The ball is ___ the two goal posts.",
+   "wrong_answer": "beside",
+   "correct_answer": "between"
+  },
+  "cause": "Common error of Kenyan learners of English.",
+  "reveals": "Offer \"beside\" next to the right answer in a new sentence and ask again.",
+  "help": "Between is for two things.",
+  "feedback": "Between is for two (or a few named) things and beside means next to: the ball is between the two posts.",
+  "source": "common learner error; to confirm by a Kenyan English teacher",
+  "status": "draft"
+ },
+ "ENGL.G8.GRAMMA.T8_WORD_CLASSES_SIMPLE_.PREPOSITIONS_PLACE_TIME.M8_PP_IN_PLACE": {
+  "skill": "ENGL.G8.GRAMMA.T8_WORD_CLASSES_SIMPLE_.PREPOSITIONS_PLACE_TIME",
+  "error": "Uses in for a point or a surface (in the gate, in the table).",
+  "example": {
+   "question": "Otieno waited ___ the school gate.",
+   "wrong_answer": "in",
+   "correct_answer": "at"
+  },
+  "cause": "Common error of Kenyan learners of English.",
+  "reveals": "Offer \"in\" next to the right answer in a new sentence and ask again.",
+  "help": "At is for a point, on for a surface, in for inside.",
+  "feedback": "Use at for a point (at the gate), on for a surface (on the table) and in for inside a space (in the room).",
+  "source": "common learner error; to confirm by a Kenyan English teacher",
+  "status": "draft"
+ },
+ "ENGL.G8.GRAMMA.T9_WORD_CLASSES_CONJUNC.CONJUNCTIONS_LISTED.M8_CJ_ALTHOUGH_BUT": {
+  "skill": "ENGL.G8.GRAMMA.T9_WORD_CLASSES_CONJUNC.CONJUNCTIONS_LISTED",
+  "error": "Uses although and but together (Although it rained, but we played).",
+  "example": {
+   "question": "___ it was raining, we played football.",
+   "wrong_answer": "Although but",
+   "correct_answer": "Although"
+  },
+  "cause": "Common error of Kenyan learners of English.",
+  "reveals": "Offer \"Although but\" next to the right answer in a new sentence and ask again.",
+  "help": "Choose one of the two.",
+  "feedback": "Although and but both show a contrast, so use only one of them: Although it was raining, we played.",
+  "source": "common learner error; to confirm by a Kenyan English teacher",
+  "status": "draft"
+ },
+ "ENGL.G8.GRAMMA.T9_WORD_CLASSES_CONJUNC.CONJUNCTIONS_LISTED.M8_CJ_BECAUSE_SO": {
+  "skill": "ENGL.G8.GRAMMA.T9_WORD_CLASSES_CONJUNC.CONJUNCTIONS_LISTED",
+  "error": "Uses because and so together (Because he was late, so he ran).",
+  "example": {
+   "question": "Because Juma was late, ___ he ran to school.",
+   "wrong_answer": "so",
+   "correct_answer": "(nothing)"
+  },
+  "cause": "Common error of Kenyan learners of English.",
+  "reveals": "Offer \"so\" next to the right answer in a new sentence and ask again.",
+  "help": "One joining word is enough.",
+  "feedback": "Because and so both join a reason and a result. Use one: Because Juma was late, he ran. Or: Juma was late, so he ran.",
+  "source": "common learner error; to confirm by a Kenyan English teacher",
+  "status": "draft"
+ },
+ "ENGL.G8.GRAMMA.T9_WORD_CLASSES_CONJUNC.CONJUNCTIONS_LISTED.M8_CJ_UNLESS_NEG": {
+  "skill": "ENGL.G8.GRAMMA.T9_WORD_CLASSES_CONJUNC.CONJUNCTIONS_LISTED",
+  "error": "Uses unless with a negative (unless you do not study).",
+  "example": {
+   "question": "You will fail ___ you study.",
+   "wrong_answer": "unless you do not",
+   "correct_answer": "unless"
+  },
+  "cause": "Common error of Kenyan learners of English.",
+  "reveals": "Offer \"unless you do not\" next to the right answer in a new sentence and ask again.",
+  "help": "Unless already means if not.",
+  "feedback": "Unless means if not, so do not add not: You will fail unless you study.",
+  "source": "common learner error; to confirm by a Kenyan English teacher",
+  "status": "draft"
+ },
+ "ENGL.G8.GRAMMA.T9_WORD_CLASSES_CONJUNC.CONJUNCTIONS_LISTED.M8_CJ_WRONG": {
+  "skill": "ENGL.G8.GRAMMA.T9_WORD_CLASSES_CONJUNC.CONJUNCTIONS_LISTED",
+  "error": "Picks a conjunction whose meaning does not fit (because for a contrast, unless for a reason).",
+  "example": {
+   "question": "___ it was raining, we played football.",
+   "wrong_answer": "Because",
+   "correct_answer": "Although"
+  },
+  "cause": "Common error of Kenyan learners of English.",
+  "reveals": "Offer \"Because\" next to the right answer in a new sentence and ask again.",
+  "help": "Ask what the two parts of the sentence say to each other: a reason, a contrast, a condition.",
+  "feedback": "Choose the conjunction for the meaning: because for a reason, although for a contrast, unless for a condition, until for a limit in time, while for two things at once, so for a result.",
+  "source": "common learner error; to confirm by a Kenyan English teacher",
+  "status": "draft"
+ },
+ "ENGL.G8.READIN.T9_INTENSIVE_READING_SI.SIMILE_METAPHOR.M8_SM_SIMILE_AS_METAPHOR": {
+  "skill": "ENGL.G8.READIN.T9_INTENSIVE_READING_SI.SIMILE_METAPHOR",
+  "error": "Calls a comparison with like or as a metaphor.",
+  "example": {
+   "question": "He ran like the wind. What figure of speech is this?",
+   "wrong_answer": "metaphor",
+   "correct_answer": "simile"
+  },
+  "cause": "Common error of Kenyan learners of English.",
+  "reveals": "Offer \"metaphor\" next to the right answer in a new sentence and ask again.",
+  "help": "Look for like or as.",
+  "feedback": "A simile compares two things using like or as: he ran like the wind.",
+  "source": "common learner error; to confirm by a Kenyan English teacher",
+  "status": "draft"
+ },
+ "ENGL.G8.READIN.T9_INTENSIVE_READING_SI.SIMILE_METAPHOR.M8_SM_METAPHOR_AS_SIMILE": {
+  "skill": "ENGL.G8.READIN.T9_INTENSIVE_READING_SI.SIMILE_METAPHOR",
+  "error": "Calls a direct comparison a simile (The boy is a lion).",
+  "example": {
+   "question": "The boy is a lion in the game. What figure of speech is this?",
+   "wrong_answer": "simile",
+   "correct_answer": "metaphor"
+  },
+  "cause": "Common error of Kenyan learners of English.",
+  "reveals": "Offer \"simile\" next to the right answer in a new sentence and ask again.",
+  "help": "A metaphor says one thing is another, without like or as.",
+  "feedback": "A metaphor says one thing is another without like or as: the boy is a lion.",
+  "source": "common learner error; to confirm by a Kenyan English teacher",
+  "status": "draft"
+ },
+ "ENGL.G8.READIN.T9_INTENSIVE_READING_SI.SIMILE_METAPHOR.M8_SM_LITERAL": {
+  "skill": "ENGL.G8.READIN.T9_INTENSIVE_READING_SI.SIMILE_METAPHOR",
+  "error": "Takes the comparison word for word (He is a lion means he is an animal).",
+  "example": {
+   "question": "He is a lion in the game. What does it mean?",
+   "wrong_answer": "He is a real animal",
+   "correct_answer": "He is brave and strong"
+  },
+  "cause": "Common error of Kenyan learners of English.",
+  "reveals": "Offer \"He is a real animal\" next to the right answer in a new sentence and ask again.",
+  "help": "Ask what quality the two share.",
+  "feedback": "A metaphor uses a picture to show a quality: a lion is brave, so he is brave and strong.",
+  "source": "common learner error; to confirm by a Kenyan English teacher",
+  "status": "draft"
+ },
+ "ENGL.G8.GRAMMA.T10_WORD_CLASSES_DEMONST.DEMONSTRATIVES_QUANTIFIERS.M8_DQ_THIS_THESE": {
+  "skill": "ENGL.G8.GRAMMA.T10_WORD_CLASSES_DEMONST.DEMONSTRATIVES_QUANTIFIERS",
+  "error": "Uses this with a plural noun or these with a singular noun (this books, these book).",
+  "example": {
+   "question": "___ books on my desk are mine.",
+   "wrong_answer": "This",
+   "correct_answer": "These"
+  },
+  "cause": "Common error of Kenyan learners of English.",
+  "reveals": "Offer \"This\" next to the right answer in a new sentence and ask again.",
+  "help": "This is one; these is many.",
+  "feedback": "Use this and that with one thing, and these and those with many things: these books.",
+  "source": "common learner error; to confirm by a Kenyan English teacher",
+  "status": "draft"
+ },
+ "ENGL.G8.GRAMMA.T10_WORD_CLASSES_DEMONST.DEMONSTRATIVES_QUANTIFIERS.M8_DQ_NEAR_FAR": {
+  "skill": "ENGL.G8.GRAMMA.T10_WORD_CLASSES_DEMONST.DEMONSTRATIVES_QUANTIFIERS",
+  "error": "Uses this or these for something far away, or that or those for something near.",
+  "example": {
+   "question": "The teacher points at a tree across the field: ___ tree is tall.",
+   "wrong_answer": "This",
+   "correct_answer": "That"
+  },
+  "cause": "Common error of Kenyan learners of English.",
+  "reveals": "Offer \"This\" next to the right answer in a new sentence and ask again.",
+  "help": "This and these are near; that and those are far.",
+  "feedback": "This and these point to things near the speaker. That and those point to things far away.",
+  "source": "common learner error; to confirm by a Kenyan English teacher",
+  "status": "draft"
+ },
+ "ENGL.G8.GRAMMA.T10_WORD_CLASSES_DEMONST.DEMONSTRATIVES_QUANTIFIERS.M8_DQ_MUCH_MANY": {
+  "skill": "ENGL.G8.GRAMMA.T10_WORD_CLASSES_DEMONST.DEMONSTRATIVES_QUANTIFIERS",
+  "error": "Uses much with a count noun or many with a non-count noun.",
+  "example": {
+   "question": "There are too ___ cars on the road.",
+   "wrong_answer": "much",
+   "correct_answer": "many"
+  },
+  "cause": "Common error of Kenyan learners of English.",
+  "reveals": "Offer \"much\" next to the right answer in a new sentence and ask again.",
+  "help": "Cars can be counted, so many.",
+  "feedback": "Use many and few with nouns we count (many cars) and much and little with nouns we cannot count (much traffic).",
+  "source": "common learner error; to confirm by a Kenyan English teacher",
+  "status": "draft"
+ },
+ "ENGL.G8.GRAMMA.T11_WORD_CLASSES_ADVERBS.ADVERB_FORMATION.M8_AF_GOOD_WELL": {
+  "skill": "ENGL.G8.GRAMMA.T11_WORD_CLASSES_ADVERBS.ADVERB_FORMATION",
+  "error": "Uses an adjective where the adverb is needed (she sings good, he ran quick, the baby smiled happy).",
+  "example": {
+   "question": "Wanjiru sings very ___.",
+   "wrong_answer": "good",
+   "correct_answer": "well"
+  },
+  "cause": "Common error of Kenyan learners of English.",
+  "reveals": "Offer \"good\" next to the right answer in a new sentence and ask again.",
+  "help": "Good describes a noun. Well describes a verb.",
+  "feedback": "The adverb of good is well: she sings well. Good is an adjective: a good song.",
+  "source": "common learner error; to confirm by a Kenyan English teacher",
+  "status": "draft"
+ },
+ "ENGL.G8.GRAMMA.T11_WORD_CLASSES_ADVERBS.ADVERB_FORMATION.M8_AF_SPELL": {
+  "skill": "ENGL.G8.GRAMMA.T11_WORD_CLASSES_ADVERBS.ADVERB_FORMATION",
+  "error": "Spells the -ly adverb wrongly (happyly, gentlely, truely).",
+  "example": {
+   "question": "The baby smiled ___.",
+   "wrong_answer": "happyly",
+   "correct_answer": "happily"
+  },
+  "cause": "Common error of Kenyan learners of English.",
+  "reveals": "Offer \"happyly\" next to the right answer in a new sentence and ask again.",
+  "help": "After a consonant, change y to i before -ly; -le becomes -ly; true becomes truly.",
+  "feedback": "Change y to i before -ly (happily), change -le to -ly (gently) and write truly, not truely.",
+  "source": "common learner error; to confirm by a Kenyan English teacher",
+  "status": "draft"
+ },
+ "ENGL.G8.GRAMMA.T11_WORD_CLASSES_ADVERBS.ADVERB_FORMATION.M8_AF_HARDLY": {
+  "skill": "ENGL.G8.GRAMMA.T11_WORD_CLASSES_ADVERBS.ADVERB_FORMATION",
+  "error": "Uses hardly for hard or lately for late.",
+  "example": {
+   "question": "Otieno studied ___ for the test.",
+   "wrong_answer": "hardly",
+   "correct_answer": "hard"
+  },
+  "cause": "Common error of Kenyan learners of English.",
+  "reveals": "Offer \"hardly\" next to the right answer in a new sentence and ask again.",
+  "help": "Hardly means almost not. The adverb of hard is hard.",
+  "feedback": "Hard, fast and late are also adverbs without -ly. Hardly means almost not at all and lately means recently.",
+  "source": "common learner error; to confirm by a Kenyan English teacher",
+  "status": "draft"
+ },
+ "ENGL.G8.WRITIN.T11_MECHANICS_OF_WRITING.PREFIXES_SUFFIXES.M8_PS_WRONG_PREFIX": {
+  "skill": "ENGL.G8.WRITIN.T11_MECHANICS_OF_WRITING.PREFIXES_SUFFIXES",
+  "error": "Uses the wrong prefix (unagree, disinteresting where uninteresting is meant).",
+  "example": {
+   "question": "The boys had a ___ about the rules.",
+   "wrong_answer": "unagreement",
+   "correct_answer": "disagreement"
+  },
+  "cause": "Common error of Kenyan learners of English.",
+  "reveals": "Offer \"unagreement\" next to the right answer in a new sentence and ask again.",
+  "help": "Dis- goes with agree, un- goes with happy.",
+  "feedback": "Words take their own prefix: disagree, unhappy, replay, misunderstand. Check in a dictionary.",
+  "source": "common learner error; to confirm by a Kenyan English teacher",
+  "status": "draft"
+ },
+ "ENGL.G8.WRITIN.T11_MECHANICS_OF_WRITING.PREFIXES_SUFFIXES.M8_PS_MEANING": {
+  "skill": "ENGL.G8.WRITIN.T11_MECHANICS_OF_WRITING.PREFIXES_SUFFIXES",
+  "error": "Gives the wrong meaning to a prefix or suffix (careless means full of care).",
+  "example": {
+   "question": "What does careless mean?",
+   "wrong_answer": "full of care",
+   "correct_answer": "without care"
+  },
+  "cause": "Common error of Kenyan learners of English.",
+  "reveals": "Offer \"full of care\" next to the right answer in a new sentence and ask again.",
+  "help": "The suffix -less means without.",
+  "feedback": "The suffix -ful means full of and -less means without: careful is full of care, careless is without care.",
+  "source": "common learner error; to confirm by a Kenyan English teacher",
+  "status": "draft"
+ },
+ "ENGL.G8.WRITIN.T11_MECHANICS_OF_WRITING.PREFIXES_SUFFIXES.M8_PS_SPELL": {
+  "skill": "ENGL.G8.WRITIN.T11_MECHANICS_OF_WRITING.PREFIXES_SUFFIXES",
+  "error": "Spells the new word wrongly when adding a suffix (happyness, beautifull).",
+  "example": {
+   "question": "Kindness and ___ are good values.",
+   "wrong_answer": "happyness",
+   "correct_answer": "happiness"
+  },
+  "cause": "Common error of Kenyan learners of English.",
+  "reveals": "Offer \"happyness\" next to the right answer in a new sentence and ask again.",
+  "help": "Change y to i before the ending -ness.",
+  "feedback": "When a word ends in consonant + y, change y to i before the suffix: happiness. The suffix -ful has one l: beautiful.",
+  "source": "common learner error; to confirm by a Kenyan English teacher",
+  "status": "draft"
+ },
+ "ENGL.G8.GRAMMA.T12_PHRASAL_VERBS.PHRASAL_VERBS.M8_PV_MEANING": {
+  "skill": "ENGL.G8.GRAMMA.T12_PHRASAL_VERBS.PHRASAL_VERBS",
+  "error": "Gives the wrong meaning of a phrasal verb (give up means present, run out of means run away).",
+  "example": {
+   "question": "The man gave up smoking. What did he do?",
+   "wrong_answer": "He gave it to someone",
+   "correct_answer": "He stopped"
+  },
+  "cause": "Common error of Kenyan learners of English.",
+  "reveals": "Offer \"He gave it to someone\" next to the right answer in a new sentence and ask again.",
+  "help": "Read the whole sentence for the meaning.",
+  "feedback": "A phrasal verb has its own meaning: give up means stop, look after means take care of, run out of means have no more.",
+  "source": "common learner error; to confirm by a Kenyan English teacher",
+  "status": "draft"
+ },
+ "ENGL.G8.GRAMMA.T12_PHRASAL_VERBS.PHRASAL_VERBS.M8_PV_PARTICLE": {
+  "skill": "ENGL.G8.GRAMMA.T12_PHRASAL_VERBS.PHRASAL_VERBS",
+  "error": "Uses the wrong particle (look at the baby for look after, turn of the light).",
+  "example": {
+   "question": "Please ___ the light when you leave.",
+   "wrong_answer": "turn on",
+   "correct_answer": "turn off"
+  },
+  "cause": "Common error of Kenyan learners of English.",
+  "reveals": "Offer \"turn on\" next to the right answer in a new sentence and ask again.",
+  "help": "The particle changes the meaning: on and off are opposites.",
+  "feedback": "The particle changes the meaning: turn on starts a light, turn off stops it.",
+  "source": "common learner error; to confirm by a Kenyan English teacher",
+  "status": "draft"
+ },
+ "ENGL.G8.GRAMMA.T12_PHRASAL_VERBS.PHRASAL_VERBS.M8_PV_LITERAL": {
+  "skill": "ENGL.G8.GRAMMA.T12_PHRASAL_VERBS.PHRASAL_VERBS",
+  "error": "Reads a phrasal verb word by word (break down means break something).",
+  "example": {
+   "question": "The bus broke down near Nakuru. What happened?",
+   "wrong_answer": "It was broken into pieces",
+   "correct_answer": "It stopped working"
+  },
+  "cause": "Common error of Kenyan learners of English.",
+  "reveals": "Offer \"It was broken into pieces\" next to the right answer in a new sentence and ask again.",
+  "help": "Think what the whole phrase means.",
+  "feedback": "A phrasal verb often has a meaning that is not the sum of its parts: break down means stop working.",
+  "source": "common learner error; to confirm by a Kenyan English teacher",
+  "status": "draft"
+ },
+ "ENGL.G8.GRAMMA.T13_WORD_CLASSES_COMPOUN.COMPOUND_SENTENCES.M8_CS_COMMA_SPLICE": {
+  "skill": "ENGL.G8.GRAMMA.T13_WORD_CLASSES_COMPOUN.COMPOUND_SENTENCES",
+  "error": "Joins two sentences with only a comma (I was tired, I went to bed).",
+  "example": {
+   "question": "I was tired ___ I went to bed.",
+   "wrong_answer": ",",
+   "correct_answer": ", so"
+  },
+  "cause": "Common error of Kenyan learners of English.",
+  "reveals": "Offer \",\" next to the right answer in a new sentence and ask again.",
+  "help": "A comma alone cannot join two sentences.",
+  "feedback": "Two complete sentences need a conjunction as well as the comma: I was tired, so I went to bed.",
+  "source": "common learner error; to confirm by a Kenyan English teacher",
+  "status": "draft"
+ },
+ "ENGL.G8.GRAMMA.T13_WORD_CLASSES_COMPOUN.COMPOUND_SENTENCES.M8_CS_NO_COMMA": {
+  "skill": "ENGL.G8.GRAMMA.T13_WORD_CLASSES_COMPOUN.COMPOUND_SENTENCES",
+  "error": "Leaves out the comma before the conjunction (She ran fast but she lost).",
+  "example": {
+   "question": "She ran fast___ but she lost.",
+   "wrong_answer": "",
+   "correct_answer": ","
+  },
+  "cause": "Common error of Kenyan learners of English.",
+  "reveals": "Offer \"\" next to the right answer in a new sentence and ask again.",
+  "help": "Put a comma before the joining word.",
+  "feedback": "A comma goes before for, and, nor, but, or, yet or so when it joins two sentences: She ran fast, but she lost.",
+  "source": "common learner error; to confirm by a Kenyan English teacher",
+  "status": "draft"
+ },
+ "ENGL.G8.GRAMMA.T13_WORD_CLASSES_COMPOUN.COMPOUND_SENTENCES.M8_CS_WRONG_CONJ": {
+  "skill": "ENGL.G8.GRAMMA.T13_WORD_CLASSES_COMPOUN.COMPOUND_SENTENCES",
+  "error": "Chooses a conjunction that does not fit (It rained, and we stayed home when we wanted to go).",
+  "example": {
+   "question": "It was raining, ___ we stayed indoors.",
+   "wrong_answer": "but",
+   "correct_answer": "so"
+  },
+  "cause": "Common error of Kenyan learners of English.",
+  "reveals": "Offer \"but\" next to the right answer in a new sentence and ask again.",
+  "help": "Think: does the second part show a result, a contrast or an addition?",
+  "feedback": "Pick the conjunction for the meaning: so for a result, but and yet for a contrast, and for an addition, or for a choice.",
+  "source": "common learner error; to confirm by a Kenyan English teacher",
+  "status": "draft"
+ },
+ "ENGL.G8.READIN.T13_SHORT_STORY_STYLE_CL.LITERARY_DEVICES.M8_LD_PERSON_PLAIN": {
+  "skill": "ENGL.G8.READIN.T13_SHORT_STORY_STYLE_CL.LITERARY_DEVICES",
+  "error": "Calls a plain description personification, or misses personification.",
+  "example": {
+   "question": "Which sentence has personification?",
+   "wrong_answer": "The wind was strong.",
+   "correct_answer": "The wind whispered in my ear."
+  },
+  "cause": "Common error of Kenyan learners of English.",
+  "reveals": "Offer \"The wind was strong.\" next to the right answer in a new sentence and ask again.",
+  "help": "Does a thing act like a person?",
+  "feedback": "Personification gives a thing or an animal a human action or feeling: the wind whispered.",
+  "source": "common learner error; to confirm by a Kenyan English teacher",
+  "status": "draft"
+ },
+ "ENGL.G8.READIN.T13_SHORT_STORY_STYLE_CL.LITERARY_DEVICES.M8_LD_FLASHBACK_FUTURE": {
+  "skill": "ENGL.G8.READIN.T13_SHORT_STORY_STYLE_CL.LITERARY_DEVICES",
+  "error": "Says a flashback jumps forward in time.",
+  "example": {
+   "question": "What is a flashback?",
+   "wrong_answer": "A jump to the future of the story",
+   "correct_answer": "A return to an earlier time in the story"
+  },
+  "cause": "Common error of Kenyan learners of English.",
+  "reveals": "Offer \"A jump to the future of the story\" next to the right answer in a new sentence and ask again.",
+  "help": "Flash back means go back.",
+  "feedback": "A flashback takes the reader back to something that happened earlier.",
+  "source": "common learner error; to confirm by a Kenyan English teacher",
+  "status": "draft"
+ },
+ "ENGL.G8.READIN.T13_SHORT_STORY_STYLE_CL.LITERARY_DEVICES.M8_LD_SIMILE": {
+  "skill": "ENGL.G8.READIN.T13_SHORT_STORY_STYLE_CL.LITERARY_DEVICES",
+  "error": "Calls a simile personification.",
+  "example": {
+   "question": "Which sentence has personification?",
+   "wrong_answer": "The cloud was like a pillow.",
+   "correct_answer": "The cloud smiled at the hills."
+  },
+  "cause": "Common error of Kenyan learners of English.",
+  "reveals": "Offer \"The cloud was like a pillow.\" next to the right answer in a new sentence and ask again.",
+  "help": "A simile compares with like or as. Personification gives human actions.",
+  "feedback": "Personification gives a human action to a thing (the cloud smiled). A simile uses like or as (the cloud was like a pillow).",
+  "source": "common learner error; to confirm by a Kenyan English teacher",
+  "status": "draft"
+ },
+ "ENGL.G8.LISTEN.T14_PRONUNCIATION_AND_IN.SILENT_LETTERS.M8_SL_SOUNDED": {
+  "skill": "ENGL.G8.LISTEN.T14_PRONUNCIATION_AND_IN.SILENT_LETTERS",
+  "error": "Picks a sounded letter as the silent one (in knife, says f).",
+  "example": {
+   "question": "Which letter is silent in knife?",
+   "wrong_answer": "f",
+   "correct_answer": "k"
+  },
+  "cause": "Common error of Kenyan learners of English.",
+  "reveals": "Offer \"f\" next to the right answer in a new sentence and ask again.",
+  "help": "Say the word slowly: nife.",
+  "feedback": "In knife the k is silent: we say /naɪf/.",
+  "source": "common learner error; to confirm by a Kenyan English teacher",
+  "status": "draft"
+ },
+ "ENGL.G8.LISTEN.T14_PRONUNCIATION_AND_IN.SILENT_LETTERS.M8_SL_WRONG_LETTER": {
+  "skill": "ENGL.G8.LISTEN.T14_PRONUNCIATION_AND_IN.SILENT_LETTERS",
+  "error": "Picks the wrong silent letter in a word (castle: c, honest: n).",
+  "example": {
+   "question": "Which letter is silent in castle?",
+   "wrong_answer": "c",
+   "correct_answer": "t"
+  },
+  "cause": "Common error of Kenyan learners of English.",
+  "reveals": "Offer \"c\" next to the right answer in a new sentence and ask again.",
+  "help": "Say the word slowly: cassle.",
+  "feedback": "In castle the t is silent. In honest the h is silent. In listen the t is silent.",
+  "source": "common learner error; to confirm by a Kenyan English teacher",
+  "status": "draft"
+ },
+ "ENGL.G8.LISTEN.T14_PRONUNCIATION_AND_IN.SILENT_LETTERS.M8_SL_SPELL": {
+  "skill": "ENGL.G8.LISTEN.T14_PRONUNCIATION_AND_IN.SILENT_LETTERS",
+  "error": "Leaves out the silent letter when spelling (nife, rite, ilsand).",
+  "example": {
+   "question": "Spell the word for a tool to cut with: ___.",
+   "wrong_answer": "nife",
+   "correct_answer": "knife"
+  },
+  "cause": "Common error of Kenyan learners of English.",
+  "reveals": "Offer \"nife\" next to the right answer in a new sentence and ask again.",
+  "help": "Silent letters still appear when you write.",
+  "feedback": "A silent letter is not said but it is written: knife, write, island, castle, honest, lamb.",
+  "source": "common learner error; to confirm by a Kenyan English teacher",
+  "status": "draft"
+ },
+ "ENGL.G8.GRAMMA.T14_SENTENCES_ACTIVE_AND.ACTIVE_PASSIVE.M8_AP_WRONG_PARTICIPLE": {
+  "skill": "ENGL.G8.GRAMMA.T14_SENTENCES_ACTIVE_AND.ACTIVE_PASSIVE",
+  "error": "Uses the wrong verb form in the passive (was bite, was wrote).",
+  "example": {
+   "question": "The boy was ___ by the dog.",
+   "wrong_answer": "bite",
+   "correct_answer": "bitten"
+  },
+  "cause": "Common error of Kenyan learners of English.",
+  "reveals": "Offer \"bite\" next to the right answer in a new sentence and ask again.",
+  "help": "The passive uses be and the past participle.",
+  "feedback": "The passive is formed with be and the past participle: was bitten, was written, was taken.",
+  "source": "common learner error; to confirm by a Kenyan English teacher",
+  "status": "draft"
+ },
+ "ENGL.G8.GRAMMA.T14_SENTENCES_ACTIVE_AND.ACTIVE_PASSIVE.M8_AP_VOICE_MIX": {
+  "skill": "ENGL.G8.GRAMMA.T14_SENTENCES_ACTIVE_AND.ACTIVE_PASSIVE",
+  "error": "Calls an active sentence passive, or the other way round.",
+  "example": {
+   "question": "Which sentence is passive: Juma kicked the ball. The ball was kicked by Juma.",
+   "wrong_answer": "Juma kicked the ball.",
+   "correct_answer": "The ball was kicked by Juma."
+  },
+  "cause": "Common error of Kenyan learners of English.",
+  "reveals": "Offer \"Juma kicked the ball.\" next to the right answer in a new sentence and ask again.",
+  "help": "In the passive the subject receives the action.",
+  "feedback": "In the active voice the subject does the action (Juma kicked the ball). In the passive the subject receives it (The ball was kicked by Juma).",
+  "source": "common learner error; to confirm by a Kenyan English teacher",
+  "status": "draft"
+ },
+ "ENGL.G8.GRAMMA.T14_SENTENCES_ACTIVE_AND.ACTIVE_PASSIVE.M8_AP_NO_BE": {
+  "skill": "ENGL.G8.GRAMMA.T14_SENTENCES_ACTIVE_AND.ACTIVE_PASSIVE",
+  "error": "Leaves out be in the passive (The boy bitten by the dog).",
+  "example": {
+   "question": "The window ___ broken by the wind.",
+   "wrong_answer": "(nothing)",
+   "correct_answer": "was"
+  },
+  "cause": "Common error of Kenyan learners of English.",
+  "reveals": "Offer \"(nothing)\" next to the right answer in a new sentence and ask again.",
+  "help": "The passive needs a form of be.",
+  "feedback": "A passive sentence needs a form of be before the past participle: The window was broken by the wind.",
+  "source": "common learner error; to confirm by a Kenyan English teacher",
+  "status": "draft"
+ },
+ "ENGL.G8.GRAMMA.T15_TYPES_OF_SENTENCES_I.QUESTION_TAGS.M8_QT_SAME_SIGN": {
+  "skill": "ENGL.G8.GRAMMA.T15_TYPES_OF_SENTENCES_I.QUESTION_TAGS",
+  "error": "Gives a positive tag after a positive sentence (You are coming, are you).",
+  "example": {
+   "question": "You are coming, ___?",
+   "wrong_answer": "are you",
+   "correct_answer": "aren't you"
+  },
+  "cause": "Common error of Kenyan learners of English.",
+  "reveals": "Offer \"are you\" next to the right answer in a new sentence and ask again.",
+  "help": "A positive sentence takes a negative tag.",
+  "feedback": "A positive sentence takes a negative tag (You are coming, aren't you) and a negative sentence takes a positive tag (You are not coming, are you).",
+  "source": "common learner error; to confirm by a Kenyan English teacher",
+  "status": "draft"
+ },
+ "ENGL.G8.GRAMMA.T15_TYPES_OF_SENTENCES_I.QUESTION_TAGS.M8_QT_ISNT_IT": {
+  "skill": "ENGL.G8.GRAMMA.T15_TYPES_OF_SENTENCES_I.QUESTION_TAGS",
+  "error": "Uses isn't it for every tag (They are late, isn't it).",
+  "example": {
+   "question": "They are late, ___?",
+   "wrong_answer": "isn't it",
+   "correct_answer": "aren't they"
+  },
+  "cause": "Copied from the usual spoken Kenyan English.",
+  "reveals": "Offer \"isn't it\" next to the right answer in a new sentence and ask again.",
+  "help": "The tag repeats the helping verb and the subject.",
+  "feedback": "The tag repeats the helping verb and the subject as a pronoun: They are late, aren't they. Isn't it is not for every tag.",
+  "source": "common learner error; to confirm by a Kenyan English teacher",
+  "status": "draft"
+ },
+ "ENGL.G8.GRAMMA.T15_TYPES_OF_SENTENCES_I.QUESTION_TAGS.M8_QT_WRONG_AUX": {
+  "skill": "ENGL.G8.GRAMMA.T15_TYPES_OF_SENTENCES_I.QUESTION_TAGS",
+  "error": "Uses the wrong helping verb in the tag (She likes tea, isn't she).",
+  "example": {
+   "question": "She likes tea, ___?",
+   "wrong_answer": "isn't she",
+   "correct_answer": "doesn't she"
+  },
+  "cause": "Common error of Kenyan learners of English.",
+  "reveals": "Offer \"isn't she\" next to the right answer in a new sentence and ask again.",
+  "help": "Use the helping verb of the sentence: likes needs does.",
+  "feedback": "The tag uses the helping verb that fits the sentence: She likes tea, doesn't she. For present simple, use do or does.",
+  "source": "common learner error; to confirm by a Kenyan English teacher",
+  "status": "draft"
+ }
+}

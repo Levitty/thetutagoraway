@@ -1,0 +1,439 @@
+{
+ "outcomes": {
+  "ENGL.G8.LISTEN.T1_POLITE_LANGUAGE_TELE.a": "identify polite words and phrases in telephone conversations",
+  "ENGL.G8.LISTEN.T1_POLITE_LANGUAGE_TELE.b": "conduct a telephone conversation using polite words and expressions",
+  "ENGL.G8.LISTEN.T1_POLITE_LANGUAGE_TELE.c": "acknowledge the significance of etiquette in telephone conversations",
+  "ENGL.G8.READIN.T1_EXTENSIVE_READING_IN.a": "identify print and non-print texts that are interesting to read",
+  "ENGL.G8.READIN.T1_EXTENSIVE_READING_IN.b": "read a range of texts for information",
+  "ENGL.G8.READIN.T1_EXTENSIVE_READING_IN.c": "appreciate the importance of reading for enjoyment",
+  "ENGL.G8.GRAMMA.T1_WORD_CLASSES_COMPOUN.a": "identify compound nouns in a text",
+  "ENGL.G8.GRAMMA.T1_WORD_CLASSES_COMPOUN.b": "use compound nouns in their singular and plural forms",
+  "ENGL.G8.GRAMMA.T1_WORD_CLASSES_COMPOUN.c": "appreciate the importance of compound nouns in communication",
+  "ENGL.G8.READIN.T1_INTENSIVE_READING_SH.a": "outline the sequence of events in a short story that they have read",
+  "ENGL.G8.READIN.T1_INTENSIVE_READING_SH.b": "use contextual clues to infer the meanings of words",
+  "ENGL.G8.READIN.T1_INTENSIVE_READING_SH.c": "answer direct and inferential questions from a short story",
+  "ENGL.G8.READIN.T1_INTENSIVE_READING_SH.d": "acknowledge the role of reading in communication",
+  "ENGL.G8.WRITIN.T1_WRITING_LEGIBLY_AND_.a": "classify letters according to height differentials",
+  "ENGL.G8.WRITIN.T1_WRITING_LEGIBLY_AND_.b": "write a text, legibly and neatly",
+  "ENGL.G8.WRITIN.T1_WRITING_LEGIBLY_AND_.c": "advocate the need for legibility and neatness in writing",
+  "ENGL.G8.LISTEN.T2_ORAL_PRESENTATIONS_S.a": "identify features of songs in the locality",
+  "ENGL.G8.LISTEN.T2_ORAL_PRESENTATIONS_S.b": "use performance techniques when singing",
+  "ENGL.G8.LISTEN.T2_ORAL_PRESENTATIONS_S.c": "write songs on a scientific innovation",
+  "ENGL.G8.LISTEN.T2_ORAL_PRESENTATIONS_S.d": "appreciate the role of songs in the society",
+  "ENGL.G8.READIN.T2_INTENSIVE_READING_SI.a": "identify the persona in a given poem",
+  "ENGL.G8.READIN.T2_INTENSIVE_READING_SI.b": "identify instances of repetition in a given poem",
+  "ENGL.G8.READIN.T2_INTENSIVE_READING_SI.c": "explain what the poem is about",
+  "ENGL.G8.READIN.T2_INTENSIVE_READING_SI.d": "appreciate the role of poems in communication",
+  "ENGL.G8.GRAMMA.T2_WORD_CLASSES_COLLECT.a": "identify collective nouns from a text",
+  "ENGL.G8.GRAMMA.T2_WORD_CLASSES_COLLECT.b": "use singular and plural forms of collective nouns correctly in sentences",
+  "ENGL.G8.GRAMMA.T2_WORD_CLASSES_COLLECT.c": "appreciate the importance of collective nouns in communication",
+  "ENGL.G8.READIN.T2_INTENSIVE_READING_SH.a": "identify the setting - time and place-of a short story",
+  "ENGL.G8.READIN.T2_INTENSIVE_READING_SH.b": "highlight the episodes in the short story chronologically",
+  "ENGL.G8.READIN.T2_INTENSIVE_READING_SH.c": "appreciate the differences in culture and setting",
+  "ENGL.G8.WRITIN.T2_MECHANICS_OF_WRITING.a": "punctuate a given text using commas, apostrophes, and capital letters correctly",
+  "ENGL.G8.WRITIN.T2_MECHANICS_OF_WRITING.b": "use an apostrophe, commas and capital letters appropriately in composition writing",
+  "ENGL.G8.WRITIN.T2_MECHANICS_OF_WRITING.c": "advocate the use of correct punctuation in writing",
+  "ENGL.G8.LISTEN.T3_LISTENING_COMPREHENS.a": "identify the main idea from a cause and effect text",
+  "ENGL.G8.LISTEN.T3_LISTENING_COMPREHENS.b": "pinpoint specific information from a cause and effect text",
+  "ENGL.G8.LISTEN.T3_LISTENING_COMPREHENS.c": "infer the meanings of unfamiliar words using context clues",
+  "ENGL.G8.LISTEN.T3_LISTENING_COMPREHENS.d": "acknowledge the importance of listening for detail",
+  "ENGL.G8.READIN.T3_INTENSIVE_READING.a": "answer questions based on a given text correctly",
+  "ENGL.G8.READIN.T3_INTENSIVE_READING.b": "infer meanings of words in a given text correctly",
+  "ENGL.G8.READIN.T3_INTENSIVE_READING.c": "acknowledge the importance of good reading skills reading in life",
+  "ENGL.G8.GRAMMA.T3_WORD_CLASSES_PRIMARY.a": "identify primary auxiliary verbs in a text",
+  "ENGL.G8.GRAMMA.T3_WORD_CLASSES_PRIMARY.b": "use primary auxiliary verbs in sentences correctly",
+  "ENGL.G8.GRAMMA.T3_WORD_CLASSES_PRIMARY.c": "appreciate the importance of primary auxiliary verbs in communication",
+  "ENGL.G8.READIN.T3_INTENSIVE_READING_PO.a": "identify the aspects of structure in a given poem",
+  "ENGL.G8.READIN.T3_INTENSIVE_READING_PO.b": "recognize the main ideas in a given poem",
+  "ENGL.G8.READIN.T3_INTENSIVE_READING_PO.c": "recognize the role of poems in communicating values",
+  "ENGL.G8.WRITIN.T3_PARAGRAPHING_SEQUENC.a": "identify conjunctions used in a well formed paragraph",
+  "ENGL.G8.WRITIN.T3_PARAGRAPHING_SEQUENC.b": "use conjunctions to sequence and connect ideas correctly in a paragraph",
+  "ENGL.G8.WRITIN.T3_PARAGRAPHING_SEQUENC.c": "appreciate the role of conjunctions in communication",
+  "ENGL.G8.LISTEN.T4_LISTENING_COMPREHENS.a": "distinguish between specific and general information from a listening text",
+  "ENGL.G8.LISTEN.T4_LISTENING_COMPREHENS.b": "select specific information from a text",
+  "ENGL.G8.LISTEN.T4_LISTENING_COMPREHENS.c": "listen and respond to texts appropriately",
+  "ENGL.G8.LISTEN.T4_LISTENING_COMPREHENS.d": "emphasise the value of listening skills in communication",
+  "ENGL.G8.READIN.T4_INTENSIVE_READING.a": "identify reading strategies for use on given texts",
+  "ENGL.G8.READIN.T4_INTENSIVE_READING.b": "select main ideas and details from written texts",
+  "ENGL.G8.READIN.T4_INTENSIVE_READING.c": "acknowledge reading for main ideas and details as a comprehension skill",
+  "ENGL.G8.GRAMMA.T4_VERBS_AND_TENSE.a": "identify verbs in the simple present and simple past tense in a text",
+  "ENGL.G8.GRAMMA.T4_VERBS_AND_TENSE.b": "write sentences using the simple present tense",
+  "ENGL.G8.GRAMMA.T4_VERBS_AND_TENSE.c": "write sentences using the simple past tense",
+  "ENGL.G8.GRAMMA.T4_VERBS_AND_TENSE.d": "advocate for appropriate use of tense in communication",
+  "ENGL.G8.READIN.T4_INTENSIVE_READING_SH.a": "identify the characters in a short story",
+  "ENGL.G8.READIN.T4_INTENSIVE_READING_SH.b": "use contextual clues to infer character traits of the characters in a short story",
+  "ENGL.G8.READIN.T4_INTENSIVE_READING_SH.c": "acknowledge the role of characters in a short story",
+  "ENGL.G8.WRITIN.T4_PARAGRAPHING_CONNECT.a": "identify connectors of sequence from a given text",
+  "ENGL.G8.WRITIN.T4_PARAGRAPHING_CONNECT.b": "sequence ideas in a given paragraph",
+  "ENGL.G8.WRITIN.T4_PARAGRAPHING_CONNECT.c": "appreciate the use of idea connectors for clarity in communication",
+  "ENGL.G8.LISTEN.T5_PRONUNCIATION.a": "identify words with sounds /ɒ/, /ͻ:/, /θ/ and /ð/ in a given text",
+  "ENGL.G8.LISTEN.T5_PRONUNCIATION.b": "pronounce words that have target sounds correctly",
+  "ENGL.G8.LISTEN.T5_PRONUNCIATION.c": "apply emphatic stress correctly in varied contexts",
+  "ENGL.G8.LISTEN.T5_PRONUNCIATION.d": "acknowledge the role of correct pronunciation in communication",
+  "ENGL.G8.READIN.T5_STUDY_SKILLS_REFEREN.a": "select relevant reference materials for varied tasks",
+  "ENGL.G8.READIN.T5_STUDY_SKILLS_REFEREN.b": "use reference materials to obtain information on varied subjects",
+  "ENGL.G8.READIN.T5_STUDY_SKILLS_REFEREN.c": "acknowledge the role of reference materials in lifelong learning",
+  "ENGL.G8.GRAMMA.T5_WORD_CLASSES_ADJECTI.a": "identify gradable and non-gradable adjectives from a text",
+  "ENGL.G8.GRAMMA.T5_WORD_CLASSES_ADJECTI.b": "use gradable and the non- gradable adjectives in sentences",
+  "ENGL.G8.GRAMMA.T5_WORD_CLASSES_ADJECTI.c": "value the need for correct use of adjectives in communication",
+  "ENGL.G8.READIN.T5_INTENSIVE_READING_SH.a": "identify dialogue and repetition in a short story",
+  "ENGL.G8.READIN.T5_INTENSIVE_READING_SH.b": "explain the importance of repetition and dialogue in a short story",
+  "ENGL.G8.READIN.T5_INTENSIVE_READING_SH.c": "acknowledge the role of dialogue and repetition in fiction writing",
+  "ENGL.G8.WRITIN.T5_FUNCTIONAL_WRITING_A.a": "list the parts of a letter of apology",
+  "ENGL.G8.WRITIN.T5_FUNCTIONAL_WRITING_A.b": "write a letter of apology based on a given context",
+  "ENGL.G8.WRITIN.T5_FUNCTIONAL_WRITING_A.c": "acknowledge the role of letter writing in communication",
+  "ENGL.G8.LISTEN.T6_CONVERSATIONAL_SKILL.a": "list ways of disagreeing politely",
+  "ENGL.G8.LISTEN.T6_CONVERSATIONAL_SKILL.b": "use conversational strategies to disagree appropriately",
+  "ENGL.G8.LISTEN.T6_CONVERSATIONAL_SKILL.c": "apply non-verbal cues to express varied moods and feelings",
+  "ENGL.G8.LISTEN.T6_CONVERSATIONAL_SKILL.d": "advocate for the need to speak politely during communication",
+  "ENGL.G8.READIN.T6_READING_FLUENCY_POEM.a": "identify techniques of reading fast",
+  "ENGL.G8.READIN.T6_READING_FLUENCY_POEM.b": "read a text accurately, with expression and at the right speed",
+  "ENGL.G8.READIN.T6_READING_FLUENCY_POEM.c": "apply fluency strategies when reading a text",
+  "ENGL.G8.READIN.T6_READING_FLUENCY_POEM.d": "appreciate the value of fluency in reading to enhance understanding",
+  "ENGL.G8.GRAMMA.T6_WORD_CLASSES_ADVERBS.a": "identify adverbs of frequency and degree correctly from a text",
+  "ENGL.G8.GRAMMA.T6_WORD_CLASSES_ADVERBS.b": "use adverbs of frequency and degree correctly in sentences",
+  "ENGL.G8.GRAMMA.T6_WORD_CLASSES_ADVERBS.c": "appreciate the importance of using adverbs correctly in communication",
+  "ENGL.G8.READIN.T6_INTENSIVE_READING_SH.a": "identify the main ideas in the short story",
+  "ENGL.G8.READIN.T6_INTENSIVE_READING_SH.b": "summarise the key events in the short story",
+  "ENGL.G8.READIN.T6_INTENSIVE_READING_SH.c": "relate the main ideas in the short story to real life situations",
+  "ENGL.G8.READIN.T6_INTENSIVE_READING_SH.d": "appreciate the relevance of the short story in addressing real life issues",
+  "ENGL.G8.WRITIN.T6_MECHANICS_OF_WRITING.a": "spell commonly misspelt words correctly",
+  "ENGL.G8.WRITIN.T6_MECHANICS_OF_WRITING.b": "use prefixes and suffixes correctly in writing",
+  "ENGL.G8.WRITIN.T6_MECHANICS_OF_WRITING.c": "write words with silent vowels (-ie and -ei) correctly",
+  "ENGL.G8.WRITIN.T6_MECHANICS_OF_WRITING.d": "make connections between spelling and meaning in suffixed and prefixed words",
+  "ENGL.G8.WRITIN.T6_MECHANICS_OF_WRITING.e": "acknowledge the importance of correct spellings in writing",
+  "ENGL.G8.LISTEN.T7_LISTENING_FOR_DETAIL.a": "identify main ideas in a listening text",
+  "ENGL.G8.LISTEN.T7_LISTENING_FOR_DETAIL.b": "respond appropriately to questions based on the listening text",
+  "ENGL.G8.LISTEN.T7_LISTENING_FOR_DETAIL.c": "acknowledge the importance of listening for details in life",
+  "ENGL.G8.READIN.T7_INTENSIVE_READING_VI.a": "identify different visuals in given contexts correctly",
+  "ENGL.G8.READIN.T7_INTENSIVE_READING_VI.b": "make a connection between visuals and the written text",
+  "ENGL.G8.READIN.T7_INTENSIVE_READING_VI.c": "interpret visuals correctly for meaning",
+  "ENGL.G8.READIN.T7_INTENSIVE_READING_VI.d": "appreciate the role of visuals in simplifying representation",
+  "ENGL.G8.GRAMMA.T7_WORD_CLASSES_PRONOUN.a": "identify indefinite and reflexive pronouns correctly",
+  "ENGL.G8.GRAMMA.T7_WORD_CLASSES_PRONOUN.b": "use indefinite and reflexive pronouns in sentences correctly",
+  "ENGL.G8.GRAMMA.T7_WORD_CLASSES_PRONOUN.c": "appreciate the role of indefinite and reflexive pronouns in communication",
+  "ENGL.G8.READIN.T7_INTENSIVE_READING_SH.a": "identify the characters in a given short story",
+  "ENGL.G8.READIN.T7_INTENSIVE_READING_SH.b": "explain the relationship between the characters in the short story",
+  "ENGL.G8.READIN.T7_INTENSIVE_READING_SH.c": "appreciate the role of the characters in the short story in depicting real-life experiences",
+  "ENGL.G8.WRITIN.T7_COMPOSITION_WRITING.a": "identify the steps in the writing process",
+  "ENGL.G8.WRITIN.T7_COMPOSITION_WRITING.b": "write a dialogue on a given topic",
+  "ENGL.G8.WRITIN.T7_COMPOSITION_WRITING.c": "appreciate the importance of the writing process in enhancing clear communication",
+  "ENGL.G8.LISTEN.T8_LISTENING_AND_RESPON.a": "identify the characters in a given myth",
+  "ENGL.G8.LISTEN.T8_LISTENING_AND_RESPON.b": "narrate the key events in a given myth",
+  "ENGL.G8.LISTEN.T8_LISTENING_AND_RESPON.c": "explain the moral lesson in a set myth",
+  "ENGL.G8.LISTEN.T8_LISTENING_AND_RESPON.d": "relate the characters in a myth to real life",
+  "ENGL.G8.LISTEN.T8_LISTENING_AND_RESPON.e": "acknowledge the role/importance of oral literature in lifelong learning",
+  "ENGL.G8.READIN.T8_INTENSIVE_READING_PO.a": "select required information from a text",
+  "ENGL.G8.READIN.T8_INTENSIVE_READING_PO.b": "use non-verbal cues to bring out the message in a poem",
+  "ENGL.G8.READIN.T8_INTENSIVE_READING_PO.c": "make judgement on the information in a text",
+  "ENGL.G8.READIN.T8_INTENSIVE_READING_PO.d": "infer the meaning of unfamiliar words using contextual clues",
+  "ENGL.G8.READIN.T8_INTENSIVE_READING_PO.e": "acknowledge the importance of comprehension in life",
+  "ENGL.G8.GRAMMA.T8_WORD_CLASSES_SIMPLE_.a": "identify prepositions of position, time and place correctly",
+  "ENGL.G8.GRAMMA.T8_WORD_CLASSES_SIMPLE_.b": "use prepositions of position, time and place in sentences correctly",
+  "ENGL.G8.GRAMMA.T8_WORD_CLASSES_SIMPLE_.c": "appreciate the role of prepositions of position, place and time in communication",
+  "ENGL.G8.READIN.T8_INTENSIVE_READING_PO_2.a": "identify inanimate characters in a given poem",
+  "ENGL.G8.READIN.T8_INTENSIVE_READING_PO_2.b": "describe traits of inanimate characters present in a given poem",
+  "ENGL.G8.READIN.T8_INTENSIVE_READING_PO_2.c": "appreciate the role of inanimate characters in poetry",
+  "ENGL.G8.WRITIN.T8_ASSESSMENT_OF_WRITIN.a": "identify errors in an essay written by self or peers",
+  "ENGL.G8.WRITIN.T8_ASSESSMENT_OF_WRITIN.b": "assess a composition written by self or peers and suggest corrections for errors",
+  "ENGL.G8.WRITIN.T8_ASSESSMENT_OF_WRITIN.c": "appreciate the importance feedback to improve a composition",
+  "ENGL.G8.LISTEN.T9_PRONUNCIATION_1_SOUN.a": "identify words with vowels /ɑː/; /зː/ and the consonant /tʃ/; /dʒ/ from a sample text",
+  "ENGL.G8.LISTEN.T9_PRONUNCIATION_1_SOUN.b": "pronounce the vowels /ɑː/; /зː/ and the consonants /tʃ/; /dʒ/ correctly",
+  "ENGL.G8.LISTEN.T9_PRONUNCIATION_1_SOUN.c": "apply stress on content words while leaving the function words unstressed",
+  "ENGL.G8.LISTEN.T9_PRONUNCIATION_1_SOUN.d": "acknowledge the importance of emphatic stress in communication",
+  "ENGL.G8.READIN.T9_EXTENSIVE_READING_GR.a": "identify the characters in a given fiction text",
+  "ENGL.G8.READIN.T9_EXTENSIVE_READING_GR.b": "describe the traits of a given character in a fictional text",
+  "ENGL.G8.READIN.T9_EXTENSIVE_READING_GR.c": "appreciate the role of characters in fiction",
+  "ENGL.G8.GRAMMA.T9_WORD_CLASSES_CONJUNC.a": "identify the listed conjunctions from a group of words",
+  "ENGL.G8.GRAMMA.T9_WORD_CLASSES_CONJUNC.b": "use the listed conjunctions correctly in sentences",
+  "ENGL.G8.GRAMMA.T9_WORD_CLASSES_CONJUNC.c": "appreciate the correct use of conjunctions in communication",
+  "ENGL.G8.READIN.T9_INTENSIVE_READING_SI.a": "list the similes and metaphors in a given short story",
+  "ENGL.G8.READIN.T9_INTENSIVE_READING_SI.b": "use similes and metaphors in their own sentences",
+  "ENGL.G8.READIN.T9_INTENSIVE_READING_SI.c": "explain the similes and metaphors used in the short story",
+  "ENGL.G8.READIN.T9_INTENSIVE_READING_SI.d": "acknowledge the importance of similes and metaphors in communication",
+  "ENGL.G8.WRITIN.T9_CREATIVE_WRITING_NAR.a": "recall a specific event, emotion or experience that affected them greatly",
+  "ENGL.G8.WRITIN.T9_CREATIVE_WRITING_NAR.b": "plan a narrative composition using prewriting techniques",
+  "ENGL.G8.WRITIN.T9_CREATIVE_WRITING_NAR.c": "create a narrative composition using revealing details",
+  "ENGL.G8.WRITIN.T9_CREATIVE_WRITING_NAR.d": "acknowledge the value of quality narrative compositions",
+  "ENGL.G8.LISTEN.T10_ORAL_PRESENTATIONS.a": "identify the items in the format of a speech",
+  "ENGL.G8.LISTEN.T10_ORAL_PRESENTATIONS.b": "present a written speech using effective speaking skills",
+  "ENGL.G8.LISTEN.T10_ORAL_PRESENTATIONS.c": "prepare a short speech on a given topic",
+  "ENGL.G8.LISTEN.T10_ORAL_PRESENTATIONS.d": "acknowledge the importance of good speaking skills for effective communication",
+  "ENGL.G8.READIN.T10_STUDY_SKILLS_NOTE_MA.a": "identify key points in a text",
+  "ENGL.G8.READIN.T10_STUDY_SKILLS_NOTE_MA.b": "make notes from a written text",
+  "ENGL.G8.READIN.T10_STUDY_SKILLS_NOTE_MA.c": "appreciate the importance of note making in learning",
+  "ENGL.G8.GRAMMA.T10_WORD_CLASSES_DEMONST.a": "identify demonstratives and quantifiers in a given text",
+  "ENGL.G8.GRAMMA.T10_WORD_CLASSES_DEMONST.b": "use demonstratives in sentences for clarity of communication",
+  "ENGL.G8.GRAMMA.T10_WORD_CLASSES_DEMONST.c": "appreciate the importance of demonstratives and quantifiers communication",
+  "ENGL.G8.READIN.T10_INTENSIVE_READING_SH.a": "highlight the main events in the story",
+  "ENGL.G8.READIN.T10_INTENSIVE_READING_SH.b": "relate the events in the short story to real life",
+  "ENGL.G8.READIN.T10_INTENSIVE_READING_SH.c": "identify the setting in the short story",
+  "ENGL.G8.READIN.T10_INTENSIVE_READING_SH.d": "appreciate the importance of literature in life",
+  "ENGL.G8.WRITIN.T10_FUNCTIONAL_WRITING_T.a": "recognise the key elements and layout of a thank you and a congratulatory note",
+  "ENGL.G8.WRITIN.T10_FUNCTIONAL_WRITING_T.b": "use the correct format to write a thank you note",
+  "ENGL.G8.WRITIN.T10_FUNCTIONAL_WRITING_T.c": "write a congratulatory note correctly",
+  "ENGL.G8.WRITIN.T10_FUNCTIONAL_WRITING_T.d": "critique thank you and congratulatory notes for correctness and relevance",
+  "ENGL.G8.LISTEN.T11_CONVERSATIONAL_SKILL.a": "identify polite words and expressions in a radio or television interview",
+  "ENGL.G8.LISTEN.T11_CONVERSATIONAL_SKILL.b": "use polite words and expressions when conducting an interview",
+  "ENGL.G8.LISTEN.T11_CONVERSATIONAL_SKILL.c": "appreciate the role of interviews in presenting reality",
+  "ENGL.G8.READIN.T11_EXTENSIVE_READING_NO.a": "identify print and non-print non-fiction materials that are interesting to read",
+  "ENGL.G8.READIN.T11_EXTENSIVE_READING_NO.b": "read a range of non-fiction materials for general information",
+  "ENGL.G8.READIN.T11_EXTENSIVE_READING_NO.c": "appreciate the importance of reading for information",
+  "ENGL.G8.GRAMMA.T11_WORD_CLASSES_ADVERBS.a": "identify adverbs formed from adjectives in sentences or a group of words",
+  "ENGL.G8.GRAMMA.T11_WORD_CLASSES_ADVERBS.b": "form adverbs from adjectives",
+  "ENGL.G8.GRAMMA.T11_WORD_CLASSES_ADVERBS.c": "use adverbs formed from adjectives in sentences",
+  "ENGL.G8.GRAMMA.T11_WORD_CLASSES_ADVERBS.d": "appreciate the value of adverbs in communication",
+  "ENGL.G8.READIN.T11_INTENSIVE_READING_LE.a": "identify the lessons learnt in a short story",
+  "ENGL.G8.READIN.T11_INTENSIVE_READING_LE.b": "relate the lessons learnt in the short story to real life",
+  "ENGL.G8.READIN.T11_INTENSIVE_READING_LE.c": "appreciate the role of stories in addressing societal issues",
+  "ENGL.G8.WRITIN.T11_MECHANICS_OF_WRITING.a": "identify words with prefixes and suffixes from a text",
+  "ENGL.G8.WRITIN.T11_MECHANICS_OF_WRITING.b": "use prefixes and suffixes correctly in sentences",
+  "ENGL.G8.WRITIN.T11_MECHANICS_OF_WRITING.c": "acknowledge the influence of prefixes and suffixes on meaning and formation of words",
+  "ENGL.G8.LISTEN.T12_LISTENING_TO_RESPOND.a": "explain the message in a given song",
+  "ENGL.G8.LISTEN.T12_LISTENING_TO_RESPOND.b": "use appropriate words and expressions to express their attitude towards a given song",
+  "ENGL.G8.LISTEN.T12_LISTENING_TO_RESPOND.c": "appreciate how choice of words affects the reader",
+  "ENGL.G8.READIN.T12_INTENSIVE_READING_CO.a": "identify mental images in a text correctly",
+  "ENGL.G8.READIN.T12_INTENSIVE_READING_CO.b": "use contextual clues to infer information and meanings of words correctly in a text",
+  "ENGL.G8.READIN.T12_INTENSIVE_READING_CO.c": "acknowledge the role of comprehension in effective communication",
+  "ENGL.G8.GRAMMA.T12_PHRASAL_VERBS.a": "identify phrasal verbs correctly in a text",
+  "ENGL.G8.GRAMMA.T12_PHRASAL_VERBS.b": "use the phrasal verbs correctly in sentences",
+  "ENGL.G8.GRAMMA.T12_PHRASAL_VERBS.c": "acknowledge the role of phrasal verbs in making conversations interesting",
+  "ENGL.G8.READIN.T12_SHORT_STORY_CHARACTE.a": "identify the characters in the short story",
+  "ENGL.G8.READIN.T12_SHORT_STORY_CHARACTE.b": "write a paragraph on the characters in the short story",
+  "ENGL.G8.READIN.T12_SHORT_STORY_CHARACTE.c": "appreciate the role of characters in stories",
+  "ENGL.G8.WRITIN.T12_THE_WRITING_PROCESS.a": "explain the process of writing a dialogue",
+  "ENGL.G8.WRITIN.T12_THE_WRITING_PROCESS.b": "write a dialogue on a given topic correctly",
+  "ENGL.G8.WRITIN.T12_THE_WRITING_PROCESS.c": "acknowledge the importance of the writing process",
+  "ENGL.G8.LISTEN.T13_EXTENSIVE_LISTENING_.a": "identify messages in poems",
+  "ENGL.G8.LISTEN.T13_EXTENSIVE_LISTENING_.b": "perform poems using appropriate techniques",
+  "ENGL.G8.LISTEN.T13_EXTENSIVE_LISTENING_.c": "acknowledge the role of poems in society",
+  "ENGL.G8.READIN.T13_INTENSIVE_READING_CO.a": "identify the key points in a passage",
+  "ENGL.G8.READIN.T13_INTENSIVE_READING_CO.b": "create mental images of the characters, places and events in the text",
+  "ENGL.G8.READIN.T13_INTENSIVE_READING_CO.c": "summarise the key points in the text",
+  "ENGL.G8.READIN.T13_INTENSIVE_READING_CO.d": "appreciate the role of reading in lifelong learning",
+  "ENGL.G8.GRAMMA.T13_WORD_CLASSES_COMPOUN.a": "identify compound sentences from texts",
+  "ENGL.G8.GRAMMA.T13_WORD_CLASSES_COMPOUN.b": "construct compound sentences using different coordinating conjunctions",
+  "ENGL.G8.GRAMMA.T13_WORD_CLASSES_COMPOUN.c": "appreciate the usage of compound sentences in communication",
+  "ENGL.G8.READIN.T13_SHORT_STORY_STYLE_CL.a": "identify personification and flashback in a short story",
+  "ENGL.G8.READIN.T13_SHORT_STORY_STYLE_CL.b": "read and dramatise selected parts of a short story featuring personification and flashback",
+  "ENGL.G8.READIN.T13_SHORT_STORY_STYLE_CL.c": "appreciate the creative use of language in short stories",
+  "ENGL.G8.WRITIN.T13_CREATIVE_NARRATIVE_C.a": "explain the meaning of the specified idioms in context",
+  "ENGL.G8.WRITIN.T13_CREATIVE_NARRATIVE_C.b": "compose a narrative composition using the specified idioms",
+  "ENGL.G8.WRITIN.T13_CREATIVE_NARRATIVE_C.c": "appreciate the value of idioms in spoken and written communication",
+  "ENGL.G8.LISTEN.T14_PRONUNCIATION_AND_IN.a": "identify silent consonant letters in words",
+  "ENGL.G8.LISTEN.T14_PRONUNCIATION_AND_IN.b": "pronounce words with silent consonant letters in sentences",
+  "ENGL.G8.LISTEN.T14_PRONUNCIATION_AND_IN.c": "use the correct intonation in declarative and exclamatory sentences",
+  "ENGL.G8.LISTEN.T14_PRONUNCIATION_AND_IN.d": "acknowledge the importance of correct pronunciation and intonation in communication",
+  "ENGL.G8.READIN.T14_STUDY_SKILLS.a": "identify the main ideas in a descriptive text",
+  "ENGL.G8.READIN.T14_STUDY_SKILLS.b": "make notes from a descriptive text",
+  "ENGL.G8.READIN.T14_STUDY_SKILLS.c": "summarise a descriptive text in a paragraph of stated number of words",
+  "ENGL.G8.READIN.T14_STUDY_SKILLS.d": "acknowledge the role of note making and summarise texts",
+  "ENGL.G8.GRAMMA.T14_SENTENCES_ACTIVE_AND.a": "identify sentences in the active and passive voice",
+  "ENGL.G8.GRAMMA.T14_SENTENCES_ACTIVE_AND.b": "transform sentences from active to passive voice and vice versa",
+  "ENGL.G8.GRAMMA.T14_SENTENCES_ACTIVE_AND.c": "construct sentences in the active and passive voice",
+  "ENGL.G8.GRAMMA.T14_SENTENCES_ACTIVE_AND.d": "appreciate the use of active and passive voice in effective communication",
+  "ENGL.G8.READIN.T14_EXTENSIVE_READING_SH.a": "identify the ideas in the short story",
+  "ENGL.G8.READIN.T14_EXTENSIVE_READING_SH.b": "relate the ideas from the short story to real life experiences",
+  "ENGL.G8.READIN.T14_EXTENSIVE_READING_SH.c": "appreciate the value of short stories in reflecting social issues",
+  "ENGL.G8.WRITIN.T14_CREATIVE_WRITING_DES.a": "identify words and expressions for describing people, places and events",
+  "ENGL.G8.WRITIN.T14_CREATIVE_WRITING_DES.b": "write a descriptive composition on people, places and events",
+  "ENGL.G8.WRITIN.T14_CREATIVE_WRITING_DES.c": "value the place of description in written and spoken communication",
+  "ENGL.G8.LISTEN.T15_ORAL_REPORTS_EVENTS.a": "recount events that take place outside the classroom",
+  "ENGL.G8.LISTEN.T15_ORAL_REPORTS_EVENTS.b": "present a report on occurences taking place out of the classsroom using verbal and non-verbal cues",
+  "ENGL.G8.LISTEN.T15_ORAL_REPORTS_EVENTS.c": "acknowledge the role of oral reports in communication",
+  "ENGL.G8.READIN.T15_READING_FLUENCY.a": "outline reading fluency aspects and strategies observed while reading aloud",
+  "ENGL.G8.READIN.T15_READING_FLUENCY.b": "read texts accurately, with expressions and at the right speed",
+  "ENGL.G8.READIN.T15_READING_FLUENCY.c": "apply fluency strategies when reading a text",
+  "ENGL.G8.READIN.T15_READING_FLUENCY.d": "Appreciate the significance of poems in communication",
+  "ENGL.G8.GRAMMA.T15_TYPES_OF_SENTENCES_I.a": "identify interrogative sentences and question tags from a text",
+  "ENGL.G8.GRAMMA.T15_TYPES_OF_SENTENCES_I.b": "use interrogative sentences and question tags in varied contexts",
+  "ENGL.G8.GRAMMA.T15_TYPES_OF_SENTENCES_I.c": "appreciate the role of correctly framed questions in communication",
+  "ENGL.G8.READIN.T15_POEMS.a": "identify the ideas in the Poems",
+  "ENGL.G8.READIN.T15_POEMS.b": "derive the lessons learnt in the poem",
+  "ENGL.G8.READIN.T15_POEMS.c": "recognise the role of poems in addressing societal issues",
+  "ENGL.G8.WRITIN.T15_FUNCTIONAL_WRITING_P.a": "outline the components of a personal journal",
+  "ENGL.G8.WRITIN.T15_FUNCTIONAL_WRITING_P.b": "create a personal journal on varied experiences",
+  "ENGL.G8.WRITIN.T15_FUNCTIONAL_WRITING_P.c": "evaluate a journal for correctness and relevance"
+ },
+ "skills": {
+  "ENGL.G8.GRAMMA.T1_WORD_CLASSES_COMPOUN.COMPOUND_NOUNS": {
+   "forms": [
+    "choose the correct word",
+    "fill the gap",
+    "spot the mistake"
+   ],
+   "mastery": "Recognises a compound noun (toothbrush, post office, mother-in-law), writes its plural by changing the main word (post offices, mothers-in-law, toothbrushes), and does not write the plural on the last part only (mother-in-laws), in 8 of 10 new items."
+  },
+  "ENGL.G8.GRAMMA.T2_WORD_CLASSES_COLLECT.COLLECTIVE_NOUNS": {
+   "forms": [
+    "choose the correct word",
+    "fill the gap",
+    "spot the mistake"
+   ],
+   "mastery": "Picks the collective noun that fits a group (a pride of lions, a fleet of ships, a school of fish, a troop of monkeys, a crew of sailors) and writes it as one singular word (a flock, not a flocks) before of, and does not use one group word for every group, in 8 of 10 new items."
+  },
+  "ENGL.G8.WRITIN.T2_MECHANICS_OF_WRITING.PUNCTUATION": {
+   "forms": [
+    "choose the correct sentence",
+    "fill the gap",
+    "spot the mistake"
+   ],
+   "mastery": "Puts commas between the items of a list and after an opening word, writes the apostrophe for belonging (the boy's book, the boys' books) and for a short form (it's, don't) but not for a plain plural, and writes capital letters for names, the first word and I, in 8 of 10 new items."
+  },
+  "ENGL.G8.GRAMMA.T3_WORD_CLASSES_PRIMARY.AUXILIARY_VERBS": {
+   "forms": [
+    "choose the correct word",
+    "fill the gap",
+    "spot the mistake"
+   ],
+   "mastery": "Chooses the right form of be (is, are, was, were), do (do, does, did) and have (has, have, had) as a helping verb, makes it agree with the subject, and does not write she have finished or they was playing, in 8 of 10 new items."
+  },
+  "ENGL.G8.READIN.T3_INTENSIVE_READING_PO.POEM_PARTS": {
+   "forms": [
+    "choose the term",
+    "spot the mistake",
+    "choose the example"
+   ],
+   "mastery": "Names the stanza (a group of lines), the line, the rhyme (matching end sounds), the rhythm (the beat) and the repetition (a word or line said again), and says the speaker of the poem is the persona, not always the poet, in 8 of 10 new items."
+  },
+  "ENGL.G8.GRAMMA.T4_VERBS_AND_TENSE.PRESENT_PAST_TENSE": {
+   "forms": [
+    "choose the correct word",
+    "fill the gap",
+    "spot the mistake"
+   ],
+   "mastery": "Writes the simple present for habits and facts with -s after he, she or it, writes the simple past (regular -ed and irregular went, saw, ate), and uses did not with the plain verb, not did not went, in 8 of 10 new items."
+  },
+  "ENGL.G8.GRAMMA.T5_WORD_CLASSES_ADJECTI.GRADABLE_ADJECTIVES": {
+   "forms": [
+    "choose the correct word",
+    "fill the gap",
+    "spot the mistake"
+   ],
+   "mastery": "Uses very, quite and extremely with gradable adjectives (very tall, quite cold), uses absolutely and completely with non-gradable adjectives (absolutely perfect, completely empty), and does not write very perfect, more unique or very dead, in 8 of 10 new items."
+  },
+  "ENGL.G8.GRAMMA.T6_WORD_CLASSES_ADVERBS.FREQUENCY_DEGREE": {
+   "forms": [
+    "choose the correct word",
+    "fill the gap",
+    "spot the mistake"
+   ],
+   "mastery": "Uses always, usually, often, sometimes and never for how often, and very, quite, too, almost and extremely for how much, puts a frequency adverb before the main verb and after be (she always arrives, he is never late), and does not write too for very, in 8 of 10 new items."
+  },
+  "ENGL.G8.WRITIN.T6_MECHANICS_OF_WRITING.SPELLING": {
+   "forms": [
+    "choose the correct word",
+    "fill the gap",
+    "spot the mistake"
+   ],
+   "mastery": "Spells words such as separate, definitely, necessary, occasion, accommodate and tomorrow correctly, writes i before e except after c (believe, receive, ceiling) and knows the common exceptions (seize, weird), in 8 of 10 new items."
+  },
+  "ENGL.G8.GRAMMA.T7_WORD_CLASSES_PRONOUN.INDEFINITE_REFLEXIVE": {
+   "forms": [
+    "choose the correct word",
+    "fill the gap",
+    "spot the mistake"
+   ],
+   "mastery": "Uses someone, anybody, everything and nothing for people and things not named, writes the reflexive pronouns myself, yourself, himself, herself, itself, ourselves, yourselves and themselves, and does not write hisself or theirselves, in 8 of 10 new items."
+  },
+  "ENGL.G8.GRAMMA.T8_WORD_CLASSES_SIMPLE_.PREPOSITIONS_PLACE_TIME": {
+   "forms": [
+    "choose the correct word",
+    "fill the gap",
+    "spot the mistake"
+   ],
+   "mastery": "Chooses at, on or in for a time or a place (at 6 o'clock, on Monday, in June, at the gate, in the room) and under, above, beside, between, opposite, behind and in front of for position, and does not write at Monday or in the morning of Friday, in 8 of 10 new items."
+  },
+  "ENGL.G8.GRAMMA.T9_WORD_CLASSES_CONJUNC.CONJUNCTIONS_LISTED": {
+   "forms": [
+    "choose the correct word",
+    "fill the gap",
+    "spot the mistake"
+   ],
+   "mastery": "Chooses the conjunction for a reason (because), a contrast (although), a condition (unless), a limit in time (until), two things at once (while) and a result (so), and does not write although and but together or because and so together, in 8 of 10 new items."
+  },
+  "ENGL.G8.READIN.T9_INTENSIVE_READING_SI.SIMILE_METAPHOR": {
+   "forms": [
+    "choose the figure of speech",
+    "fill the gap",
+    "spot the mistake",
+    "choose the meaning"
+   ],
+   "mastery": "Says a simile compares two things with like or as (as brave as a lion) and a metaphor says one thing is another (he is a lion), explains what the comparison means, and does not call every comparison a simile, in 8 of 10 new items."
+  },
+  "ENGL.G8.GRAMMA.T10_WORD_CLASSES_DEMONST.DEMONSTRATIVES_QUANTIFIERS": {
+   "forms": [
+    "choose the correct word",
+    "fill the gap",
+    "spot the mistake"
+   ],
+   "mastery": "Uses this and these for near things and that and those for far ones, matches this and that with one thing and these and those with many, and uses some, any, many, much, few and little with the right kind of noun, in 8 of 10 new items."
+  },
+  "ENGL.G8.GRAMMA.T11_WORD_CLASSES_ADVERBS.ADVERB_FORMATION": {
+   "forms": [
+    "choose the correct word",
+    "fill the gap",
+    "spot the mistake"
+   ],
+   "mastery": "Adds -ly to most adjectives (quick, quickly), changes y to i before -ly (happy, happily), changes -le to -ly (gentle, gently), writes truly, and knows that the adverb of good is well and that fast and hard stay the same, in 8 of 10 new items."
+  },
+  "ENGL.G8.WRITIN.T11_MECHANICS_OF_WRITING.PREFIXES_SUFFIXES": {
+   "forms": [
+    "choose the correct word",
+    "fill the gap",
+    "spot the mistake"
+   ],
+   "mastery": "Adds un-, dis-, re- and mis- to the front of a word (unhappy, disagree, replay, misunderstand) and -ful, -less, -ment and -ness to the end (careful, careless, enjoyment, kindness), says how the meaning changes, and keeps the spelling right (happy, happiness), in 8 of 10 new items."
+  },
+  "ENGL.G8.GRAMMA.T12_PHRASAL_VERBS.PHRASAL_VERBS": {
+   "forms": [
+    "choose the meaning",
+    "fill the gap",
+    "spot the mistake",
+    "choose the correct word"
+   ],
+   "mastery": "Gives the meaning of look after, look for, give up, turn off, put off, run out of, set off, break down and carry on from the sentence, and picks the right particle, not one that changes the meaning, in 8 of 10 new items."
+  },
+  "ENGL.G8.GRAMMA.T13_WORD_CLASSES_COMPOUN.COMPOUND_SENTENCES": {
+   "forms": [
+    "choose the correct sentence",
+    "fill the gap",
+    "spot the mistake"
+   ],
+   "mastery": "Joins two complete sentences with for, and, nor, but, or, yet or so and puts a comma before the conjunction, and does not join them with only a comma (a comma splice) or with no conjunction at all, in 8 of 10 new items."
+  },
+  "ENGL.G8.READIN.T13_SHORT_STORY_STYLE_CL.LITERARY_DEVICES": {
+   "forms": [
+    "choose the device",
+    "spot the mistake",
+    "choose the example"
+   ],
+   "mastery": "Says that personification gives a human action or feeling to a thing or an animal (the wind whispered, the sun smiled) and that a flashback takes the story back to an earlier time, and does not call a plain description personification, in 8 of 10 new items."
+  },
+  "ENGL.G8.LISTEN.T14_PRONUNCIATION_AND_IN.SILENT_LETTERS": {
+   "forms": [
+    "choose the correct word",
+    "fill the gap",
+    "spot the mistake"
+   ],
+   "mastery": "Names the silent letter in words such as knife (k), write (w), island (s), castle (t), honest (h), listen (t) and lamb (b), and does not pick a sounded letter, in 8 of 10 new items."
+  },
+  "ENGL.G8.GRAMMA.T14_SENTENCES_ACTIVE_AND.ACTIVE_PASSIVE": {
+   "forms": [
+    "choose the voice",
+    "fill the gap",
+    "spot the mistake",
+    "choose the correct sentence"
+   ],
+   "mastery": "Tells a sentence in which the subject does the action (the dog bit the boy) from one in which the subject receives it (the boy was bitten by the dog), forms the passive with be and the past participle, and does not write was bite or the boy bitten by, in 8 of 10 new items."
+  },
+  "ENGL.G8.GRAMMA.T15_TYPES_OF_SENTENCES_I.QUESTION_TAGS": {
+   "forms": [
+    "choose the correct word",
+    "fill the gap",
+    "spot the mistake"
+   ],
+   "mastery": "Forms a question tag from the sentence (you are coming, aren't you; she doesn't like tea, does she), turns a positive sentence to a negative tag and a negative one to a positive tag, and does not use isn't it for every tag, in 8 of 10 new items."
+  }
+ }
+}
