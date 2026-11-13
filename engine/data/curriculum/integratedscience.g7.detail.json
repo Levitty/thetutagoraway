@@ -1,0 +1,332 @@
+{
+ "outcomes": {
+  "INTE.G7.SCIENT.INTRODUCTION_TO_INTEGRAT.a": "outline the components of Integrated Science as a field of study",
+  "INTE.G7.SCIENT.INTRODUCTION_TO_INTEGRAT.b": "explain the importance of science in daily life",
+  "INTE.G7.SCIENT.INTRODUCTION_TO_INTEGRAT.c": "show interest in learning Integrated Science at junior school",
+  "INTE.G7.SCIENT.LABORATORY_SAFETY.a": "identify common hazards and their symbols in the laboratory",
+  "INTE.G7.SCIENT.LABORATORY_SAFETY.b": "explain the causes of common accidents in the laboratory",
+  "INTE.G7.SCIENT.LABORATORY_SAFETY.c": "describe First Aid measures for common laboratory accidents",
+  "INTE.G7.SCIENT.LABORATORY_SAFETY.d": "appreciate the importance of safety in the laboratory and access to a healthy working environment",
+  "INTE.G7.SCIENT.LABORATORY_APPARATUS_AND.a": "describe the basic skills in science",
+  "INTE.G7.SCIENT.LABORATORY_APPARATUS_AND.b": "use and care for apparatus and instruments in the laboratory",
+  "INTE.G7.SCIENT.LABORATORY_APPARATUS_AND.c": "use the SI units for basic and derived quantities in science",
+  "INTE.G7.SCIENT.LABORATORY_APPARATUS_AND.d": "appreciate consumer protection when handling different apparatus, instruments, and other materials in day-to-day life",
+  "INTE.G7.MIXTUR.MIXTURES.a": "separate homogeneous mixtures using appropriate methods",
+  "INTE.G7.MIXTUR.MIXTURES.b": "outline applications of separating homogeneous mixtures in day-to-day life",
+  "INTE.G7.MIXTUR.MIXTURES.c": "appreciate the use of different methods of separating mixtures in day-to-day life",
+  "INTE.G7.MIXTUR.ACIDS_BASES_AND_INDICATO.a": "identify acids and bases using a litmus paper",
+  "INTE.G7.MIXTUR.ACIDS_BASES_AND_INDICATO.b": "prepare an acid-base indicator from plant extracts",
+  "INTE.G7.MIXTUR.ACIDS_BASES_AND_INDICATO.c": "describe the physical properties of acids and bases",
+  "INTE.G7.MIXTUR.ACIDS_BASES_AND_INDICATO.d": "outline applications of acids, bases, and indicators in real life",
+  "INTE.G7.MIXTUR.ACIDS_BASES_AND_INDICATO.e": "appreciate the uses of acids and bases in r eal life",
+  "INTE.G7.LIVING.HUMAN_REPRODUCTIVE_SYSTE.a": "identify parts of the male and female reproductive systems",
+  "INTE.G7.LIVING.HUMAN_REPRODUCTIVE_SYSTE.b": "describe functions of parts of the male and female reproductive system",
+  "INTE.G7.LIVING.HUMAN_REPRODUCTIVE_SYSTE.c": "describe the physical changes that take place in boys and girls during adolescence",
+  "INTE.G7.LIVING.HUMAN_REPRODUCTIVE_SYSTE.d": "develop a plan to manage developmental challenges during adolescence",
+  "INTE.G7.LIVING.HUMAN_REPRODUCTIVE_SYSTE.e": "appreciate that physical changes in boys and girls during adolescence have social and reproductive implications",
+  "INTE.G7.LIVING.HUMAN_EXCRETORY_SYSTEM.a": "identify functions of parts of the human skin",
+  "INTE.G7.LIVING.HUMAN_EXCRETORY_SYSTEM.b": "identify functions of parts of the urinary system in human",
+  "INTE.G7.LIVING.HUMAN_EXCRETORY_SYSTEM.c": "describe the causes of kidney disorders in human beings",
+  "INTE.G7.LIVING.HUMAN_EXCRETORY_SYSTEM.d": "develop and maintain a daily log of activities that promote skin and kidney health in human beings",
+  "INTE.G7.LIVING.HUMAN_EXCRETORY_SYSTEM.e": "appreciate the need for a healthy lifestyle to promote kidney and skin health",
+  "INTE.G7.FORCE_.ELECTRICAL_ENERGY.a": "identify sources of electricity in the environment",
+  "INTE.G7.FORCE_.ELECTRICAL_ENERGY.b": "connect simple electrical circuits to demonstrate the flow of electric current",
+  "INTE.G7.FORCE_.ELECTRICAL_ENERGY.c": "identify common electrical appliances used in day-to-day life",
+  "INTE.G7.FORCE_.ELECTRICAL_ENERGY.d": "identify safety measures observed when handling electrical appliances",
+  "INTE.G7.FORCE_.ELECTRICAL_ENERGY.e": "appreciate the use of electricity in day-to-day life",
+  "INTE.G7.FORCE_.MAGNETISM.a": "demonstrate the properties of a magnet",
+  "INTE.G7.FORCE_.MAGNETISM.b": "classify materials as magnetic or non-magnetic",
+  "INTE.G7.FORCE_.MAGNETISM.c": "identify the uses of magnets in day-to-day life",
+  "INTE.G7.FORCE_.MAGNETISM.d": "appreciate the applications of magnets in day-to-day life"
+ },
+ "skills": {
+  "INTE.G7.SCIENT.INTRODUCTION_TO_INTEGRAT.SCI_COMPONENTS": {
+   "forms": [
+    "say which branch studies a described topic",
+    "sort topics into biology, chemistry and physics",
+    "decide which branch a short story is about",
+    "find the false step in a learner's reason"
+   ],
+   "mastery": "The child says Integrated Science joins biology (living things), chemistry (matter and how it changes) and physics (energy and forces), and puts topics such as the heart, acids and circuits in the right branch. The child does not say the branches have nothing to do with each other. Evidence rule: at least four of the last five fresh questions right across at least two question forms, and no repeated pick of the same misconception."
+  },
+  "INTE.G7.SCIENT.INTRODUCTION_TO_INTEGRAT.SCI_IMPORTANCE": {
+   "forms": [
+    "say which area of life a described use belongs to",
+    "say how science helps in one named area",
+    "name a career that uses science",
+    "find the false step in a learner's reason"
+   ],
+   "mastery": "The child says science gives us medicines and vaccines (health), better seeds and ways of keeping soil healthy (farming), machines and materials (industry), engines and roads (transport), food preserving and dyed cloth, and jobs such as nurse, engineer and laboratory technician. The child does not say science is only done by people in white coats in a laboratory. Evidence rule: at least four of the last five fresh questions right across at least two question forms, and no repeated pick of the same misconception."
+  },
+  "INTE.G7.SCIENT.LABORATORY_SAFETY.HAZARD_SYMBOLS": {
+   "forms": [
+    "say what a described symbol warns about",
+    "pick the symbol for a named danger",
+    "say what to do when a bottle carries a symbol",
+    "find the false step in a learner's reason"
+   ],
+   "mastery": "The child says the flame symbol warns of a substance that catches fire easily, the symbol of a hand and a metal being eaten away warns of a corrosive substance, the skull and crossbones warns of a toxic (poisonous) substance, and the three-blade symbol warns of a radioactive substance. The child does not read a skull as meaning \"dead things inside\" or a flame as meaning \"put it on the fire\". Evidence rule: at least four of the last five fresh questions right across at least two question forms, and no repeated pick of the same misconception."
+  },
+  "INTE.G7.SCIENT.LABORATORY_SAFETY.LAB_ACCIDENTS": {
+   "forms": [
+    "say what caused a described accident",
+    "pick the rule that would have prevented it",
+    "decide from a short story who broke a rule",
+    "find the false step in a learner's reason"
+   ],
+   "mastery": "The child says accidents come from running and playing, tasting or smelling chemicals, heating a test tube while pointing it at someone, leaving a flame unattended, spilt liquids and loose hair, and that the rules are to walk, never taste, point the tube away, tie back hair, wear a coat or an apron, and tell the teacher at once. The child does not say accidents only happen to careless people and cannot be prevented. Evidence rule: at least four of the last five fresh questions right across at least two question forms, and no repeated pick of the same misconception."
+  },
+  "INTE.G7.SCIENT.LABORATORY_SAFETY.FIRST_AID": {
+   "forms": [
+    "pick the first thing to do for a named accident",
+    "say what not to do",
+    "put the first aid steps in order",
+    "find the false step in a learner's reason"
+   ],
+   "mastery": "The child says to cool a burn or scald under cool running water for ten minutes and cover it loosely, to press a clean cloth on a cut and raise the hurt part, and for a swallowed harmful substance to call the teacher at once, say what was swallowed and get the child to a hospital, without making the child vomit. The child does not say to put butter, toothpaste or ash on a burn. Evidence rule: at least four of the last five fresh questions right across at least two question forms, and no repeated pick of the same misconception."
+  },
+  "INTE.G7.SCIENT.LABORATORY_APPARATUS_AND.SCIENCE_SKILLS": {
+   "forms": [
+    "say which skill a described action uses",
+    "put the steps of an investigation in order",
+    "decide from a short story",
+    "find the false step in a learner's reason"
+   ],
+   "mastery": "The child says observing is using the senses (safely), measuring is comparing with a unit, classifying is sorting by what is alike, predicting is saying what you expect to happen before you test, communicating is telling or recording what was found, and a conclusion is what the results show. The child does not say a prediction is what happened or that a guess without a test is a conclusion. Evidence rule: at least four of the last five fresh questions right across at least two question forms, and no repeated pick of the same misconception."
+  },
+  "INTE.G7.SCIENT.LABORATORY_APPARATUS_AND.APPARATUS_USE": {
+   "forms": [
+    "name the apparatus for a described job",
+    "say how to read or hold the apparatus",
+    "say how to look after it",
+    "find the false step in a learner's reason"
+   ],
+   "mastery": "The child says a measuring cylinder measures the volume of a liquid and is read at eye level at the bottom of the curve, a beaker holds and heats liquids, a thermometer measures temperature, a stopwatch measures time, a beam or electronic balance measures mass, a hand lens and a light microscope make small things look bigger, and a Bunsen burner gives a flame with the air hole closed for a yellow safety flame. The child does not say a beaker is the best for exact volumes or that apparatus is washed after use only if it looks dirty. Evidence rule: at least four of the last five fresh questions right across at least two question forms, and no repeated pick of the same misconception."
+  },
+  "INTE.G7.SCIENT.LABORATORY_APPARATUS_AND.SI_BASE": {
+   "forms": [
+    "name the SI unit of a quantity",
+    "name the quantity a unit measures",
+    "choose the right unit for a measurement",
+    "find the false step in a learner's reason"
+   ],
+   "mastery": "The child says the SI unit of length is the metre (m), mass the kilogram (kg), time the second (s), temperature the kelvin (K) and electric current the ampere (A), and that the thermometer in the classroom reads in degrees Celsius. The child does not say the SI unit of mass is the gram or that mass and weight are the same thing. Evidence rule: at least four of the last five fresh questions right across at least two question forms, and no repeated pick of the same misconception."
+  },
+  "INTE.G7.SCIENT.LABORATORY_APPARATUS_AND.SI_DERIVED": {
+   "forms": [
+    "say the unit of a derived quantity",
+    "say which basic units make a derived unit",
+    "work out the unit from a short story",
+    "find the false step in a learner's reason"
+   ],
+   "mastery": "The child says area is length times length so its unit is the square metre (m2), volume is length times length times length so its unit is the cubic metre (m3), speed is distance over time so its unit is metres per second (m/s), and density is mass over volume so its unit is kilograms per cubic metre (kg/m3). The child does not give the litre as the SI unit of volume or give a speed in metres alone. Evidence rule: at least four of the last five fresh questions right across at least two question forms, and no repeated pick of the same misconception."
+  },
+  "INTE.G7.MIXTUR.MIXTURES.HOMOGENEOUS_SOLUTION": {
+   "forms": [
+    "say if a named mixture is homogeneous",
+    "name the solute and the solvent",
+    "say what a solution is",
+    "find the false step in a learner's reason"
+   ],
+   "mastery": "The child says a homogeneous mixture looks the same all through (salt in water, tea with sugar, brass, air), the solid or liquid that dissolves is the solute, the liquid it dissolves in is the solvent, and both together make the solution. The child does not say that a dissolved solid has disappeared or that muddy water is a solution. Evidence rule: at least four of the last five fresh questions right across at least two question forms, and no repeated pick of the same misconception."
+  },
+  "INTE.G7.MIXTUR.MIXTURES.SEPARATE_CHOICE": {
+   "forms": [
+    "pick the method for a named mixture",
+    "say what property the method uses",
+    "say what is collected and where",
+    "find the false step in a learner's reason"
+   ],
+   "mastery": "The child says evaporation gets a dissolved solid from its solvent, crystallisation gives crystals as a hot strong solution cools, simple distillation collects the solvent (pure water) from a solution, fractional distillation separates liquids with different boiling points, sublimation separates a solid that turns straight to a gas (iodine, ammonium chloride) from one that does not, solvent extraction uses a liquid that dissolves only one part, and chromatography separates coloured dyes by how far they travel on paper. The child does not say that filtering separates salt from water. Evidence rule: at least four of the last five fresh questions right across at least two question forms, and no repeated pick of the same misconception."
+  },
+  "INTE.G7.MIXTUR.MIXTURES.SEPARATE_USES": {
+   "forms": [
+    "say which method a named process uses",
+    "say why a process needs separating",
+    "decide from a short story",
+    "find the false step in a learner's reason"
+   ],
+   "mastery": "The child says salt is won from sea water by evaporation in shallow pans at the coast, clean drinking water can be got from salty or dirty water by distillation, crude oil is separated into petrol, diesel and paraffin by fractional distillation, and the dyes in an ink are found by chromatography. The child does not say these uses are only for scientists or that the water in a salt pan is filtered. Evidence rule: at least four of the last five fresh questions right across at least two question forms, and no repeated pick of the same misconception."
+  },
+  "INTE.G7.MIXTUR.ACIDS_BASES_AND_INDICATO.LITMUS_CLASSIFY": {
+   "forms": [
+    "say what colour a litmus paper turns",
+    "say if a solution is an acid, a base or neutral from the litmus result",
+    "say which litmus test is safe",
+    "find the false step in a learner's reason"
+   ],
+   "mastery": "The child says blue litmus turns red in an acid, red litmus turns blue in a base, neither paper changes colour in a neutral solution such as pure water, lemon juice and vinegar are acids, soap solution and wood ash solution are bases, and unknown liquids are never tasted. The child does not say a base turns blue litmus bluer or that a litmus paper that stays red shows an acid. Evidence rule: at least four of the last five fresh questions right across at least two question forms, and no repeated pick of the same misconception."
+  },
+  "INTE.G7.MIXTUR.ACIDS_BASES_AND_INDICATO.INDICATOR_PLANT": {
+   "forms": [
+    "pick a plant that makes an indicator",
+    "put the steps of making an indicator in order",
+    "say what the colour change shows",
+    "find the false step in a learner's reason"
+   ],
+   "mastery": "The child says red cabbage, beetroot, hibiscus flowers or tea can be crushed and soaked in warm water, strained, and the coloured liquid tested with a household solution; the colour changes tell acid or base, and the colours are compared with ones already known for acids and bases. The child does not say that every colour change means a base or that the indicator should be made with strong chemicals. Evidence rule: at least four of the last five fresh questions right across at least two question forms, and no repeated pick of the same misconception."
+  },
+  "INTE.G7.MIXTUR.ACIDS_BASES_AND_INDICATO.AB_PROPERTIES": {
+   "forms": [
+    "say which property belongs to acids or bases",
+    "pick the safe way to find out",
+    "decide from a short story",
+    "find the false step in a learner's reason"
+   ],
+   "mastery": "The child says acids taste sour and bases taste bitter and feel soapy, both change the colour of indicators, strong ones are corrosive and can burn skin, and nothing in the laboratory is tasted or touched to find out. The child does not say a base is the opposite of a poison or that every acid burns skin. Evidence rule: at least four of the last five fresh questions right across at least two question forms, and no repeated pick of the same misconception."
+  },
+  "INTE.G7.MIXTUR.ACIDS_BASES_AND_INDICATO.AB_USES": {
+   "forms": [
+    "say what a named acid or base is used for",
+    "say why an acid or base is chosen for a job",
+    "decide from a short story",
+    "find the false step in a learner's reason"
+   ],
+   "mastery": "The child says vinegar and lemon give a sour taste and help keep food, an antacid (a base) eases heartburn from too much stomach acid, soap and cleaners are bases that lift grease, lime or wood ash is added to soil that is too acidic, battery acid is a strong acid that must be handled by adults, and indicators show whether a solution, a soil or a swimming pool is acidic or basic. The child does not say that an acid cures every stomach complaint or that a stronger acid is always better. Evidence rule: at least four of the last five fresh questions right across at least two question forms, and no repeated pick of the same misconception."
+  },
+  "INTE.G7.LIVING.HUMAN_REPRODUCTIVE_SYSTE.REPRO_MALE": {
+   "forms": [
+    "name the part from its job",
+    "say what a named part does",
+    "pick the part that does not belong",
+    "find the false step in a learner's reason"
+   ],
+   "mastery": "The child names the testes (make sperm and are held in the scrotum), the sperm duct, the urethra (carries sperm and also urine, but never both together) and the penis, and says what each does. The child does not say the testes make urine or that sperm are made in the bladder. Evidence rule: at least four of the last five fresh questions right across at least two question forms, and no repeated pick of the same misconception."
+  },
+  "INTE.G7.LIVING.HUMAN_REPRODUCTIVE_SYSTE.REPRO_FEMALE": {
+   "forms": [
+    "name the part from its job",
+    "say what a named part does",
+    "pick the part that does not belong",
+    "find the false step in a learner's reason"
+   ],
+   "mastery": "The child names the ovaries (make and store eggs), the oviducts (carry an egg towards the uterus), the uterus (womb, where a baby would grow), the cervix (the narrow neck of the uterus) and the vagina (the passage to the outside), and says what each does. The child does not say the stomach holds a baby or that the ovary is the same as the uterus. Evidence rule: at least four of the last five fresh questions right across at least two question forms, and no repeated pick of the same misconception."
+  },
+  "INTE.G7.LIVING.HUMAN_REPRODUCTIVE_SYSTE.ADOLESCENCE_CHANGES": {
+   "forms": [
+    "say which change belongs to boys or girls",
+    "say which change is shared by both",
+    "decide from a short story",
+    "find the false step in a learner's reason"
+   ],
+   "mastery": "The child says that in adolescence both boys and girls grow taller quickly, grow hair under the arms and in the pubic area, sweat more and get pimples; boys also get a deeper voice and broader shoulders and begin to make sperm; girls also develop breasts, wider hips and begin to menstruate (monthly periods); and that the age these start differs from child to child and is normal. The child does not say that a child whose body changes early or late is sick. Evidence rule: at least four of the last five fresh questions right across at least two question forms, and no repeated pick of the same misconception."
+  },
+  "INTE.G7.LIVING.HUMAN_REPRODUCTIVE_SYSTE.ADOLESCENCE_COPING": {
+   "forms": [
+    "pick the healthy way to deal with a challenge",
+    "say who to ask for help",
+    "decide from a short story",
+    "find the false step in a learner's reason"
+   ],
+   "mastery": "The child says to wash the body and clothes daily to manage sweat and body odour, to wash the face and not squeeze pimples, to use clean sanitary pads and change them often during periods, to eat well and sleep, to talk to a parent, teacher or counsellor about worries and moods, and to say no to pressure from friends. The child does not say that periods or wet dreams are dirty or shameful, or that worries are best kept to oneself. Evidence rule: at least four of the last five fresh questions right across at least two question forms, and no repeated pick of the same misconception."
+  },
+  "INTE.G7.LIVING.HUMAN_EXCRETORY_SYSTEM.EXCRETION_ORGANS": {
+   "forms": [
+    "say what a named organ removes",
+    "say which organ removes a named waste",
+    "decide if a waste is excreted",
+    "find the false step in a learner's reason"
+   ],
+   "mastery": "The child says excretion is the removal of waste made by the body's own cells; the skin removes water and salts in sweat, the lungs remove carbon dioxide and water vapour when we breathe out, and the kidneys remove urea, excess salts and water as urine. The child does not say faeces are excreted waste from the body's cells (they are food that was never absorbed). Evidence rule: at least four of the last five fresh questions right across at least two question forms, and no repeated pick of the same misconception."
+  },
+  "INTE.G7.LIVING.HUMAN_EXCRETORY_SYSTEM.SKIN_PARTS": {
+   "forms": [
+    "name the part from its job",
+    "say what a named part does",
+    "put the layers in order",
+    "find the false step in a learner's reason"
+   ],
+   "mastery": "The child says the epidermis is the thin outer layer that protects, the dermis is the layer under it with blood vessels, nerve endings, hair roots and sweat glands, the sweat gland makes sweat, the sweat duct carries it up and the pore is the opening on the surface, and hair grows out of the dermis. The child does not say the epidermis makes the sweat or that pores are holes that go to the blood. Evidence rule: at least four of the last five fresh questions right across at least two question forms, and no repeated pick of the same misconception."
+  },
+  "INTE.G7.LIVING.HUMAN_EXCRETORY_SYSTEM.URINARY_PARTS": {
+   "forms": [
+    "name the part from its job",
+    "put the path of urine in order",
+    "say what a named part does",
+    "find the false step in a learner's reason"
+   ],
+   "mastery": "The child says the kidneys (two, bean-shaped, at the back) clean the blood and make urine, blood goes to them in a vessel and comes back cleaned, the ureters carry urine down to the bladder, the bladder stores it, and the urethra carries it out. The child does not say the kidneys store urine or that drink goes straight to the bladder. Evidence rule: at least four of the last five fresh questions right across at least two question forms, and no repeated pick of the same misconception."
+  },
+  "INTE.G7.LIVING.HUMAN_EXCRETORY_SYSTEM.KIDNEY_HEALTH": {
+   "forms": [
+    "say what can harm the kidneys",
+    "pick the habit that protects the kidneys or the skin",
+    "decide from a short story",
+    "find the false step in a learner's reason"
+   ],
+   "mastery": "The child says kidney stones, infections, high blood pressure, diabetes and misuse of some medicines can harm the kidneys, that drinking enough clean water, eating little salt, not smoking and seeing a health worker when urine hurts or looks wrong protect them, and that bathing and wearing clean clothes keep the skin healthy. The child does not say kidney problems are caught from other people or that drinking less water protects the kidneys. Evidence rule: at least four of the last five fresh questions right across at least two question forms, and no repeated pick of the same misconception."
+  },
+  "INTE.G7.FORCE_.ELECTRICAL_ENERGY.ELEC_SOURCES": {
+   "forms": [
+    "name the source from a description",
+    "say which energy turns a generator",
+    "decide from a short story",
+    "find the false step in a learner's reason"
+   ],
+   "mastery": "The child says electricity comes from cells and batteries, generators driven by falling water (hydroelectric, for example at Masinga and Gitaru), steam from underground heat (geothermal, at Olkaria), wind (at Lake Turkana), the Sun (solar panels), and burning fuel (diesel and fuel oil). The child does not say that electricity is stored in the wires of a house or that a power socket is itself the source. Evidence rule: at least four of the last five fresh questions right across at least two question forms, and no repeated pick of the same misconception."
+  },
+  "INTE.G7.FORCE_.ELECTRICAL_ENERGY.CIRCUIT_BASICS": {
+   "forms": [
+    "name a part from its job",
+    "say what a switch does",
+    "say why a bulb does not light",
+    "find the false step in a learner's reason"
+   ],
+   "mastery": "The child says a simple circuit has a cell, wires, a switch and a bulb in a complete loop, the cell pushes the current round, a closed switch lets the current flow and an open one breaks the loop, and a bulb lights only when the loop is complete and every wire is fixed. The child does not say current flows out of the cell to the bulb and stops there, or that the bulb uses the current up. Evidence rule: at least four of the last five fresh questions right across at least two question forms, and no repeated pick of the same misconception."
+  },
+  "INTE.G7.FORCE_.ELECTRICAL_ENERGY.SERIES_PARALLEL": {
+   "forms": [
+    "say which circuit a description fits",
+    "say what happens to the other bulbs when one goes out",
+    "compare the brightness",
+    "find the false step in a learner's reason"
+   ],
+   "mastery": "The child says in a series circuit the parts are in one loop, so when one bulb goes out the others go out too, in a parallel circuit each bulb has its own path, so the others stay lit, and house lights are wired in parallel so one lamp can fail without putting the others out. The child does not say a parallel circuit makes the bulbs dimmer or that the first bulb in a series uses all the current. Evidence rule: at least four of the last five fresh questions right across at least two question forms, and no repeated pick of the same misconception."
+  },
+  "INTE.G7.FORCE_.ELECTRICAL_ENERGY.APPLIANCES": {
+   "forms": [
+    "say which appliance does a described job",
+    "say what energy an appliance gives out",
+    "sort appliances by the energy they give",
+    "find the false step in a learner's reason"
+   ],
+   "mastery": "The child says an electric kettle, iron box and cooker give heat, a lamp and torch give light, a fan and blender give movement, a radio, television and speaker give sound (and light), and a refrigerator and air conditioner use electricity to take heat away. The child does not say a radio works without electricity or that the appliance makes electricity. Evidence rule: at least four of the last five fresh questions right across at least two question forms, and no repeated pick of the same misconception."
+  },
+  "INTE.G7.FORCE_.ELECTRICAL_ENERGY.ELEC_SAFETY": {
+   "forms": [
+    "pick the safe way",
+    "say what is wrong with a described action",
+    "decide from a short story",
+    "find the false step in a learner's reason"
+   ],
+   "mastery": "The child says to switch off and unplug before cleaning or mending, never to touch a switch, plug or wire with wet hands, to keep water and sockets apart, to use a plug that fits and not to overload one socket, to leave mending to an electrician, and to keep away from fallen power lines. The child does not say a low-voltage wire cannot hurt or that rubber sandals make it safe to handle bare wires. Evidence rule: at least four of the last five fresh questions right across at least two question forms, and no repeated pick of the same misconception."
+  },
+  "INTE.G7.FORCE_.MAGNETISM.MAGNET_PROPERTIES": {
+   "forms": [
+    "say which end of a magnet attracts most",
+    "say what two named poles do",
+    "say what a hanging magnet does",
+    "find the false step in a learner's reason"
+   ],
+   "mastery": "The child says a magnet attracts iron and steel, is strongest at its two poles (north and south), points north and south when it hangs free, like poles repel and unlike poles attract, and that a magnet can attract or repel across a gap. The child does not say that a magnet has only one pole or that the middle of a bar magnet is the strongest. Evidence rule: at least four of the last five fresh questions right across at least two question forms, and no repeated pick of the same misconception."
+  },
+  "INTE.G7.FORCE_.MAGNETISM.MAGNETIC_MATERIALS": {
+   "forms": [
+    "say if a named material is magnetic",
+    "say which of a group is not magnetic",
+    "decide from a short test result",
+    "find the false step in a learner's reason"
+   ],
+   "mastery": "The child says iron, steel, nickel and cobalt are magnetic; copper, aluminium, brass, wood, plastic, glass and paper are not; so a tin can is mostly steel and is attracted, a coin might not be, and an aluminium cup is not. The child does not say every metal is magnetic or that a shiny metal must be. Evidence rule: at least four of the last five fresh questions right across at least two question forms, and no repeated pick of the same misconception."
+  },
+  "INTE.G7.FORCE_.MAGNETISM.MAGNET_USES": {
+   "forms": [
+    "say what a magnet does in a named thing",
+    "say which use depends on a property",
+    "decide from a short story",
+    "find the false step in a learner's reason"
+   ],
+   "mastery": "The child says magnets hold a refrigerator door shut, are inside loudspeakers and radios, pull iron out of a mixed heap (waste sorting), make a compass needle point north and south, and are in toys and fastenings such as a bag clasp. The child does not say a compass needle points to the Sun or to a place where iron is buried. Evidence rule: at least four of the last five fresh questions right across at least two question forms, and no repeated pick of the same misconception."
+  }
+ }
+}

@@ -8,6 +8,7 @@ export const SUBJECT_IDS = [
   'agriculture',
   'cre',
   'creativearts',
+  'integratedscience',
   'socialstudies',
 ];
 export const SUBJECT_PREFIXES = {
@@ -18,5 +19,6 @@ export const SUBJECT_PREFIXES = {
   AGRI: 'agriculture',
   CRES: 'cre',
   CREA: 'creativearts',
+  INTE: 'integratedscience',
   SOCI: 'socialstudies',
 };
