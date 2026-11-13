@@ -5,6 +5,7 @@
 import { SKILLS, SUBSTRANDS, OUTCOMES, MIS_FEEDBACK } from '../curriculumMap.kiswahili.g8.js';
 import { FAMILIES as A } from '../families/kiswahili_g8_a.js';
 import { FAMILIES as B } from '../families/kiswahili_g8_b.js';
+import { FAMILIES as RD } from '../families/kiswahili_g8_reading.js';
 import { SIGNED } from '../families/kiswahili_g8_signed.js';
 
 export default {
@@ -12,8 +13,8 @@ export default {
   name: 'Kiswahili', shortName: 'Kiswahili', icon: 'book',
   description: 'Grade 8 Kiswahili from the CBC design',
   map: { skills: SKILLS, substrands: SUBSTRANDS, outcomes: OUTCOMES, misFeedback: MIS_FEEDBACK },
-  families: [...A, ...B],                          // add each family file you write: [...A, ...B]
-  familyFiles: ['kiswahili_g8_a.js', 'kiswahili_g8_b.js'],              // the same files by name (a phone build drops them while nothing is signed)
+  families: [...A, ...B, ...RD],                          // add each family file you write: [...A, ...B]
+  familyFiles: ['kiswahili_g8_a.js', 'kiswahili_g8_b.js', 'kiswahili_g8_reading.js'],              // the same files by name (a phone build drops them while nothing is signed)
   signed: SIGNED, signedFile: 'kiswahili_g8_signed.js',
   checks: 'family',                          // 'family' = the shared family checks; 'text' = word-answer checks (english_checks.mjs)
   idPrefix: 'kiswahili8.',          // every family id starts with this

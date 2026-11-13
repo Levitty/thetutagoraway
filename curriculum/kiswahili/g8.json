@@ -9,9 +9,9 @@
   "sub_strands": 60,
   "outcomes": 241,
   "lessons": 120,
-  "skills": 21,
+  "skills": 33,
   "prerequisites": 6,
-  "misconceptions": 63
+  "misconceptions": 99
  },
  "sub_strands": [
   {
@@ -157,8 +157,278 @@
      "status": "kicd_verified"
     }
    ],
-   "skills": [],
-   "misconceptions": [],
+   "skills": [
+    {
+     "code": "KISW.G8.KUSOMA.T1_KUSOMA_KWA_UFAHAMU.RS_HABARI",
+     "name": "Dondoa habari mahususi katika kifungu cha simulizi",
+     "outcomes": [
+      "KISW.G8.KUSOMA.T1_KUSOMA_KWA_UFAHAMU.a"
+     ],
+     "mastery": "Mtoto hupata jibu kwenye kifungu na huchagua lile linalojibu swali lote, wala hachagui jambo dogo, kinyume au jambo lisilomo kwenye matini. Evidence rule: at least four of the last five fresh questions right across at least two question forms, and no repeated pick of the same misconception.",
+     "question_forms": [
+      "chagua jibu sahihi",
+      "chagua jibu katika matini ya pili"
+     ],
+     "thinking": [
+      "recall",
+      "reasoning"
+     ],
+     "horeb_skill_ids": [],
+     "prerequisites": [],
+     "status": "proposed"
+    },
+    {
+     "code": "KISW.G8.KUSOMA.T1_KUSOMA_KWA_UFAHAMU.RS_MATUKIO",
+     "name": "Panga matukio yanavyofuatana katika kifungu",
+     "outcomes": [
+      "KISW.G8.KUSOMA.T1_KUSOMA_KWA_UFAHAMU.b"
+     ],
+     "mastery": "Mtoto hupata jibu kwenye kifungu na huchagua lile linalojibu swali lote, wala hachagui jambo dogo, kinyume au jambo lisilomo kwenye matini. Evidence rule: at least four of the last five fresh questions right across at least two question forms, and no repeated pick of the same misconception.",
+     "question_forms": [
+      "chagua jibu sahihi",
+      "chagua jibu katika matini ya pili"
+     ],
+     "thinking": [
+      "recall",
+      "reasoning"
+     ],
+     "horeb_skill_ids": [],
+     "prerequisites": [],
+     "status": "proposed"
+    },
+    {
+     "code": "KISW.G8.KUSOMA.T1_KUSOMA_KWA_UFAHAMU.RS_UTABIRI",
+     "name": "Fanya utabiri na ufasiri kutokana na kifungu",
+     "outcomes": [
+      "KISW.G8.KUSOMA.T1_KUSOMA_KWA_UFAHAMU.c"
+     ],
+     "mastery": "Mtoto hupata jibu kwenye kifungu na huchagua lile linalojibu swali lote, wala hachagui jambo dogo, kinyume au jambo lisilomo kwenye matini. Evidence rule: at least four of the last five fresh questions right across at least two question forms, and no repeated pick of the same misconception.",
+     "question_forms": [
+      "chagua jibu sahihi",
+      "chagua jibu katika matini ya pili"
+     ],
+     "thinking": [
+      "recall",
+      "reasoning"
+     ],
+     "horeb_skill_ids": [],
+     "prerequisites": [],
+     "status": "proposed"
+    },
+    {
+     "code": "KISW.G8.KUSOMA.T1_KUSOMA_KWA_UFAHAMU.RS_MSAMIATI",
+     "name": "Eleza maana ya msamiati katika kifungu",
+     "outcomes": [
+      "KISW.G8.KUSOMA.T1_KUSOMA_KWA_UFAHAMU.d"
+     ],
+     "mastery": "Mtoto hupata jibu kwenye kifungu na huchagua lile linalojibu swali lote, wala hachagui jambo dogo, kinyume au jambo lisilomo kwenye matini. Evidence rule: at least four of the last five fresh questions right across at least two question forms, and no repeated pick of the same misconception.",
+     "question_forms": [
+      "chagua jibu sahihi",
+      "chagua jibu katika matini ya pili"
+     ],
+     "thinking": [
+      "recall",
+      "reasoning"
+     ],
+     "horeb_skill_ids": [],
+     "prerequisites": [],
+     "status": "proposed"
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "KISW.G8.KUSOMA.T1_KUSOMA_KWA_UFAHAMU.RS_HABARI.M_KS8_RS_HABARI_DETAIL",
+     "skill": "KISW.G8.KUSOMA.T1_KUSOMA_KWA_UFAHAMU.RS_HABARI",
+     "error": "Picks one small detail instead of the answer asked for.",
+     "example": {
+      "question": "Ni jibu lipi linalopatana na matini?",
+      "wrong_answer": "jibu lisilopatana na matini",
+      "correct_answer": "jibu ambalo matini inaunga mkono"
+     },
+     "cause": "The child mixes up two rules that are taught close together.",
+     "reveals": "Offer \"jibu lisilopatana na matini\" next to the right answer and ask the question again in a new sentence.",
+     "help": "Jibu lazima lijibu swali lote, si jambo moja dogo.",
+     "feedback": "Jibu lazima lijibu swali lote, si jambo moja dogo.",
+     "source": "To confirm by a native Kiswahili teacher: a common classroom error, not traced to a study by the author.",
+     "status": "draft"
+    },
+    {
+     "code": "KISW.G8.KUSOMA.T1_KUSOMA_KWA_UFAHAMU.RS_HABARI.M_KS8_RS_HABARI_OPPOSITE",
+     "skill": "KISW.G8.KUSOMA.T1_KUSOMA_KWA_UFAHAMU.RS_HABARI",
+     "error": "Picks the opposite of what the text says.",
+     "example": {
+      "question": "Ni jibu lipi linalopatana na matini?",
+      "wrong_answer": "jibu lisilopatana na matini",
+      "correct_answer": "jibu ambalo matini inaunga mkono"
+     },
+     "cause": "The child mixes up two rules that are taught close together.",
+     "reveals": "Offer \"jibu lisilopatana na matini\" next to the right answer and ask the question again in a new sentence.",
+     "help": "Jibu lazima lipatane na matini, si kinyume chake.",
+     "feedback": "Jibu lazima lipatane na matini, si kinyume chake.",
+     "source": "To confirm by a native Kiswahili teacher: a common classroom error, not traced to a study by the author.",
+     "status": "draft"
+    },
+    {
+     "code": "KISW.G8.KUSOMA.T1_KUSOMA_KWA_UFAHAMU.RS_HABARI.M_KS8_RS_HABARI_NOTSAID",
+     "skill": "KISW.G8.KUSOMA.T1_KUSOMA_KWA_UFAHAMU.RS_HABARI",
+     "error": "Picks something the text does not say.",
+     "example": {
+      "question": "Ni jibu lipi linalopatana na matini?",
+      "wrong_answer": "jibu lisilopatana na matini",
+      "correct_answer": "jibu ambalo matini inaunga mkono"
+     },
+     "cause": "The child mixes up two rules that are taught close together.",
+     "reveals": "Offer \"jibu lisilopatana na matini\" next to the right answer and ask the question again in a new sentence.",
+     "help": "Jibu lazima lipatikane kwenye matini, si kuongezwa kutoka nje.",
+     "feedback": "Jibu lazima lipatikane kwenye matini, si kuongezwa kutoka nje.",
+     "source": "To confirm by a native Kiswahili teacher: a common classroom error, not traced to a study by the author.",
+     "status": "draft"
+    },
+    {
+     "code": "KISW.G8.KUSOMA.T1_KUSOMA_KWA_UFAHAMU.RS_MATUKIO.M_KS8_RS_MATUKIO_DETAIL",
+     "skill": "KISW.G8.KUSOMA.T1_KUSOMA_KWA_UFAHAMU.RS_MATUKIO",
+     "error": "Picks one small detail instead of the answer asked for.",
+     "example": {
+      "question": "Ni jibu lipi linalopatana na matini?",
+      "wrong_answer": "jibu lisilopatana na matini",
+      "correct_answer": "jibu ambalo matini inaunga mkono"
+     },
+     "cause": "The child mixes up two rules that are taught close together.",
+     "reveals": "Offer \"jibu lisilopatana na matini\" next to the right answer and ask the question again in a new sentence.",
+     "help": "Jibu lazima lijibu swali lote, si jambo moja dogo.",
+     "feedback": "Jibu lazima lijibu swali lote, si jambo moja dogo.",
+     "source": "To confirm by a native Kiswahili teacher: a common classroom error, not traced to a study by the author.",
+     "status": "draft"
+    },
+    {
+     "code": "KISW.G8.KUSOMA.T1_KUSOMA_KWA_UFAHAMU.RS_MATUKIO.M_KS8_RS_MATUKIO_OPPOSITE",
+     "skill": "KISW.G8.KUSOMA.T1_KUSOMA_KWA_UFAHAMU.RS_MATUKIO",
+     "error": "Picks the opposite of what the text says.",
+     "example": {
+      "question": "Ni jibu lipi linalopatana na matini?",
+      "wrong_answer": "jibu lisilopatana na matini",
+      "correct_answer": "jibu ambalo matini inaunga mkono"
+     },
+     "cause": "The child mixes up two rules that are taught close together.",
+     "reveals": "Offer \"jibu lisilopatana na matini\" next to the right answer and ask the question again in a new sentence.",
+     "help": "Jibu lazima lipatane na matini, si kinyume chake.",
+     "feedback": "Jibu lazima lipatane na matini, si kinyume chake.",
+     "source": "To confirm by a native Kiswahili teacher: a common classroom error, not traced to a study by the author.",
+     "status": "draft"
+    },
+    {
+     "code": "KISW.G8.KUSOMA.T1_KUSOMA_KWA_UFAHAMU.RS_MATUKIO.M_KS8_RS_MATUKIO_NOTSAID",
+     "skill": "KISW.G8.KUSOMA.T1_KUSOMA_KWA_UFAHAMU.RS_MATUKIO",
+     "error": "Picks something the text does not say.",
+     "example": {
+      "question": "Ni jibu lipi linalopatana na matini?",
+      "wrong_answer": "jibu lisilopatana na matini",
+      "correct_answer": "jibu ambalo matini inaunga mkono"
+     },
+     "cause": "The child mixes up two rules that are taught close together.",
+     "reveals": "Offer \"jibu lisilopatana na matini\" next to the right answer and ask the question again in a new sentence.",
+     "help": "Jibu lazima lipatikane kwenye matini, si kuongezwa kutoka nje.",
+     "feedback": "Jibu lazima lipatikane kwenye matini, si kuongezwa kutoka nje.",
+     "source": "To confirm by a native Kiswahili teacher: a common classroom error, not traced to a study by the author.",
+     "status": "draft"
+    },
+    {
+     "code": "KISW.G8.KUSOMA.T1_KUSOMA_KWA_UFAHAMU.RS_UTABIRI.M_KS8_RS_UTABIRI_DETAIL",
+     "skill": "KISW.G8.KUSOMA.T1_KUSOMA_KWA_UFAHAMU.RS_UTABIRI",
+     "error": "Picks one small detail instead of the answer asked for.",
+     "example": {
+      "question": "Ni jibu lipi linalopatana na matini?",
+      "wrong_answer": "jibu lisilopatana na matini",
+      "correct_answer": "jibu ambalo matini inaunga mkono"
+     },
+     "cause": "The child mixes up two rules that are taught close together.",
+     "reveals": "Offer \"jibu lisilopatana na matini\" next to the right answer and ask the question again in a new sentence.",
+     "help": "Jibu lazima lijibu swali lote, si jambo moja dogo.",
+     "feedback": "Jibu lazima lijibu swali lote, si jambo moja dogo.",
+     "source": "To confirm by a native Kiswahili teacher: a common classroom error, not traced to a study by the author.",
+     "status": "draft"
+    },
+    {
+     "code": "KISW.G8.KUSOMA.T1_KUSOMA_KWA_UFAHAMU.RS_UTABIRI.M_KS8_RS_UTABIRI_OPPOSITE",
+     "skill": "KISW.G8.KUSOMA.T1_KUSOMA_KWA_UFAHAMU.RS_UTABIRI",
+     "error": "Picks the opposite of what the text says.",
+     "example": {
+      "question": "Ni jibu lipi linalopatana na matini?",
+      "wrong_answer": "jibu lisilopatana na matini",
+      "correct_answer": "jibu ambalo matini inaunga mkono"
+     },
+     "cause": "The child mixes up two rules that are taught close together.",
+     "reveals": "Offer \"jibu lisilopatana na matini\" next to the right answer and ask the question again in a new sentence.",
+     "help": "Jibu lazima lipatane na matini, si kinyume chake.",
+     "feedback": "Jibu lazima lipatane na matini, si kinyume chake.",
+     "source": "To confirm by a native Kiswahili teacher: a common classroom error, not traced to a study by the author.",
+     "status": "draft"
+    },
+    {
+     "code": "KISW.G8.KUSOMA.T1_KUSOMA_KWA_UFAHAMU.RS_UTABIRI.M_KS8_RS_UTABIRI_NOTSAID",
+     "skill": "KISW.G8.KUSOMA.T1_KUSOMA_KWA_UFAHAMU.RS_UTABIRI",
+     "error": "Picks something the text does not say.",
+     "example": {
+      "question": "Ni jibu lipi linalopatana na matini?",
+      "wrong_answer": "jibu lisilopatana na matini",
+      "correct_answer": "jibu ambalo matini inaunga mkono"
+     },
+     "cause": "The child mixes up two rules that are taught close together.",
+     "reveals": "Offer \"jibu lisilopatana na matini\" next to the right answer and ask the question again in a new sentence.",
+     "help": "Jibu lazima lipatikane kwenye matini, si kuongezwa kutoka nje.",
+     "feedback": "Jibu lazima lipatikane kwenye matini, si kuongezwa kutoka nje.",
+     "source": "To confirm by a native Kiswahili teacher: a common classroom error, not traced to a study by the author.",
+     "status": "draft"
+    },
+    {
+     "code": "KISW.G8.KUSOMA.T1_KUSOMA_KWA_UFAHAMU.RS_MSAMIATI.M_KS8_RS_MSAMIATI_DETAIL",
+     "skill": "KISW.G8.KUSOMA.T1_KUSOMA_KWA_UFAHAMU.RS_MSAMIATI",
+     "error": "Picks one small detail instead of the answer asked for.",
+     "example": {
+      "question": "Ni jibu lipi linalopatana na matini?",
+      "wrong_answer": "jibu lisilopatana na matini",
+      "correct_answer": "jibu ambalo matini inaunga mkono"
+     },
+     "cause": "The child mixes up two rules that are taught close together.",
+     "reveals": "Offer \"jibu lisilopatana na matini\" next to the right answer and ask the question again in a new sentence.",
+     "help": "Jibu lazima lijibu swali lote, si jambo moja dogo.",
+     "feedback": "Jibu lazima lijibu swali lote, si jambo moja dogo.",
+     "source": "To confirm by a native Kiswahili teacher: a common classroom error, not traced to a study by the author.",
+     "status": "draft"
+    },
+    {
+     "code": "KISW.G8.KUSOMA.T1_KUSOMA_KWA_UFAHAMU.RS_MSAMIATI.M_KS8_RS_MSAMIATI_OPPOSITE",
+     "skill": "KISW.G8.KUSOMA.T1_KUSOMA_KWA_UFAHAMU.RS_MSAMIATI",
+     "error": "Picks the opposite of what the text says.",
+     "example": {
+      "question": "Ni jibu lipi linalopatana na matini?",
+      "wrong_answer": "jibu lisilopatana na matini",
+      "correct_answer": "jibu ambalo matini inaunga mkono"
+     },
+     "cause": "The child mixes up two rules that are taught close together.",
+     "reveals": "Offer \"jibu lisilopatana na matini\" next to the right answer and ask the question again in a new sentence.",
+     "help": "Jibu lazima lipatane na matini, si kinyume chake.",
+     "feedback": "Jibu lazima lipatane na matini, si kinyume chake.",
+     "source": "To confirm by a native Kiswahili teacher: a common classroom error, not traced to a study by the author.",
+     "status": "draft"
+    },
+    {
+     "code": "KISW.G8.KUSOMA.T1_KUSOMA_KWA_UFAHAMU.RS_MSAMIATI.M_KS8_RS_MSAMIATI_NOTSAID",
+     "skill": "KISW.G8.KUSOMA.T1_KUSOMA_KWA_UFAHAMU.RS_MSAMIATI",
+     "error": "Picks something the text does not say.",
+     "example": {
+      "question": "Ni jibu lipi linalopatana na matini?",
+      "wrong_answer": "jibu lisilopatana na matini",
+      "correct_answer": "jibu ambalo matini inaunga mkono"
+     },
+     "cause": "The child mixes up two rules that are taught close together.",
+     "reveals": "Offer \"jibu lisilopatana na matini\" next to the right answer and ask the question again in a new sentence.",
+     "help": "Jibu lazima lipatikane kwenye matini, si kuongezwa kutoka nje.",
+     "feedback": "Jibu lazima lipatikane kwenye matini, si kuongezwa kutoka nje.",
+     "source": "To confirm by a native Kiswahili teacher: a common classroom error, not traced to a study by the author.",
+     "status": "draft"
+    }
+   ],
    "rubric_indicators": [
     "KISW.G8.RUBRIC.2.1",
     "KISW.G8.RUBRIC.2.2",
@@ -588,8 +858,77 @@
      "status": "kicd_verified"
     }
    ],
-   "skills": [],
-   "misconceptions": [],
+   "skills": [
+    {
+     "code": "KISW.G8.KUSOMA.T2_KUSOMA_KWA_MAPANA.RS_UJUMBE",
+     "name": "Eleza ujumbe wa matini aliyosoma",
+     "outcomes": [
+      "KISW.G8.KUSOMA.T2_KUSOMA_KWA_MAPANA.a"
+     ],
+     "mastery": "Mtoto hupata jibu kwenye kifungu na huchagua lile linalojibu swali lote, wala hachagui jambo dogo, kinyume au jambo lisilomo kwenye matini. Evidence rule: at least four of the last five fresh questions right across at least two question forms, and no repeated pick of the same misconception.",
+     "question_forms": [
+      "chagua jibu sahihi",
+      "chagua jibu katika matini ya pili"
+     ],
+     "thinking": [
+      "recall",
+      "reasoning"
+     ],
+     "horeb_skill_ids": [],
+     "prerequisites": [],
+     "status": "proposed"
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "KISW.G8.KUSOMA.T2_KUSOMA_KWA_MAPANA.RS_UJUMBE.M_KS8_RS_UJUMBE_DETAIL",
+     "skill": "KISW.G8.KUSOMA.T2_KUSOMA_KWA_MAPANA.RS_UJUMBE",
+     "error": "Picks one small detail instead of the answer asked for.",
+     "example": {
+      "question": "Ni jibu lipi linalopatana na matini?",
+      "wrong_answer": "jibu lisilopatana na matini",
+      "correct_answer": "jibu ambalo matini inaunga mkono"
+     },
+     "cause": "The child mixes up two rules that are taught close together.",
+     "reveals": "Offer \"jibu lisilopatana na matini\" next to the right answer and ask the question again in a new sentence.",
+     "help": "Jibu lazima lijibu swali lote, si jambo moja dogo.",
+     "feedback": "Jibu lazima lijibu swali lote, si jambo moja dogo.",
+     "source": "To confirm by a native Kiswahili teacher: a common classroom error, not traced to a study by the author.",
+     "status": "draft"
+    },
+    {
+     "code": "KISW.G8.KUSOMA.T2_KUSOMA_KWA_MAPANA.RS_UJUMBE.M_KS8_RS_UJUMBE_OPPOSITE",
+     "skill": "KISW.G8.KUSOMA.T2_KUSOMA_KWA_MAPANA.RS_UJUMBE",
+     "error": "Picks the opposite of what the text says.",
+     "example": {
+      "question": "Ni jibu lipi linalopatana na matini?",
+      "wrong_answer": "jibu lisilopatana na matini",
+      "correct_answer": "jibu ambalo matini inaunga mkono"
+     },
+     "cause": "The child mixes up two rules that are taught close together.",
+     "reveals": "Offer \"jibu lisilopatana na matini\" next to the right answer and ask the question again in a new sentence.",
+     "help": "Jibu lazima lipatane na matini, si kinyume chake.",
+     "feedback": "Jibu lazima lipatane na matini, si kinyume chake.",
+     "source": "To confirm by a native Kiswahili teacher: a common classroom error, not traced to a study by the author.",
+     "status": "draft"
+    },
+    {
+     "code": "KISW.G8.KUSOMA.T2_KUSOMA_KWA_MAPANA.RS_UJUMBE.M_KS8_RS_UJUMBE_NOTSAID",
+     "skill": "KISW.G8.KUSOMA.T2_KUSOMA_KWA_MAPANA.RS_UJUMBE",
+     "error": "Picks something the text does not say.",
+     "example": {
+      "question": "Ni jibu lipi linalopatana na matini?",
+      "wrong_answer": "jibu lisilopatana na matini",
+      "correct_answer": "jibu ambalo matini inaunga mkono"
+     },
+     "cause": "The child mixes up two rules that are taught close together.",
+     "reveals": "Offer \"jibu lisilopatana na matini\" next to the right answer and ask the question again in a new sentence.",
+     "help": "Jibu lazima lipatikane kwenye matini, si kuongezwa kutoka nje.",
+     "feedback": "Jibu lazima lipatikane kwenye matini, si kuongezwa kutoka nje.",
+     "source": "To confirm by a native Kiswahili teacher: a common classroom error, not traced to a study by the author.",
+     "status": "draft"
+    }
+   ],
    "rubric_indicators": [
     "KISW.G8.RUBRIC.2.1",
     "KISW.G8.RUBRIC.2.2",
@@ -1240,8 +1579,8 @@
      },
      "cause": "The child mixes up two rules that are taught close together.",
      "reveals": "Offer \"wangu\" next to the right answer and ask the question again in a new sentence.",
-     "help": "Kitabu hupatana na chang u.",
-     "feedback": "Kitabu hupatana na chang u.",
+     "help": "Kitabu hupatana na changu.",
+     "feedback": "Kitabu hupatana na changu.",
      "source": "To confirm by a native Kiswahili teacher: a common classroom error, not traced to a study by the author.",
      "status": "draft"
     }
@@ -1729,8 +2068,78 @@
      "status": "kicd_verified"
     }
    ],
-   "skills": [],
-   "misconceptions": [],
+   "skills": [
+    {
+     "code": "KISW.G8.KUSIKI.T5_KUSIKILIZA_MAAGIZO.LS_MAAGIZO",
+     "name": "Tambua maagizo na sifa zake katika matini ya kusikiliza",
+     "outcomes": [
+      "KISW.G8.KUSIKI.T5_KUSIKILIZA_MAAGIZO.b",
+      "KISW.G8.KUSIKI.T5_KUSIKILIZA_MAAGIZO.c"
+     ],
+     "mastery": "Mtoto hukumbuka alichosikia na huchagua jibu linalolingana na matini yote, wala hachagui jambo dogo, kinyume au jambo lisilomo kwenye matini. Evidence rule: at least four of the last five fresh questions right across at least two question forms, and no repeated pick of the same misconception.",
+     "question_forms": [
+      "chagua jibu sahihi",
+      "chagua jibu katika matini ya pili"
+     ],
+     "thinking": [
+      "recall",
+      "reasoning"
+     ],
+     "horeb_skill_ids": [],
+     "prerequisites": [],
+     "status": "proposed"
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "KISW.G8.KUSIKI.T5_KUSIKILIZA_MAAGIZO.LS_MAAGIZO.M_KS8_LS_MAAGIZO_DETAIL",
+     "skill": "KISW.G8.KUSIKI.T5_KUSIKILIZA_MAAGIZO.LS_MAAGIZO",
+     "error": "Picks one small detail instead of the answer asked for.",
+     "example": {
+      "question": "Ni jibu lipi linalopatana na matini?",
+      "wrong_answer": "jibu lisilopatana na matini",
+      "correct_answer": "jibu ambalo matini inaunga mkono"
+     },
+     "cause": "The child mixes up two rules that are taught close together.",
+     "reveals": "Offer \"jibu lisilopatana na matini\" next to the right answer and ask the question again in a new sentence.",
+     "help": "Jibu lazima lijibu swali lote, si jambo moja dogo.",
+     "feedback": "Jibu lazima lijibu swali lote, si jambo moja dogo.",
+     "source": "To confirm by a native Kiswahili teacher: a common classroom error, not traced to a study by the author.",
+     "status": "draft"
+    },
+    {
+     "code": "KISW.G8.KUSIKI.T5_KUSIKILIZA_MAAGIZO.LS_MAAGIZO.M_KS8_LS_MAAGIZO_OPPOSITE",
+     "skill": "KISW.G8.KUSIKI.T5_KUSIKILIZA_MAAGIZO.LS_MAAGIZO",
+     "error": "Picks the opposite of what the text says.",
+     "example": {
+      "question": "Ni jibu lipi linalopatana na matini?",
+      "wrong_answer": "jibu lisilopatana na matini",
+      "correct_answer": "jibu ambalo matini inaunga mkono"
+     },
+     "cause": "The child mixes up two rules that are taught close together.",
+     "reveals": "Offer \"jibu lisilopatana na matini\" next to the right answer and ask the question again in a new sentence.",
+     "help": "Jibu lazima lipatane na matini, si kinyume chake.",
+     "feedback": "Jibu lazima lipatane na matini, si kinyume chake.",
+     "source": "To confirm by a native Kiswahili teacher: a common classroom error, not traced to a study by the author.",
+     "status": "draft"
+    },
+    {
+     "code": "KISW.G8.KUSIKI.T5_KUSIKILIZA_MAAGIZO.LS_MAAGIZO.M_KS8_LS_MAAGIZO_NOTSAID",
+     "skill": "KISW.G8.KUSIKI.T5_KUSIKILIZA_MAAGIZO.LS_MAAGIZO",
+     "error": "Picks something the text does not say.",
+     "example": {
+      "question": "Ni jibu lipi linalopatana na matini?",
+      "wrong_answer": "jibu lisilopatana na matini",
+      "correct_answer": "jibu ambalo matini inaunga mkono"
+     },
+     "cause": "The child mixes up two rules that are taught close together.",
+     "reveals": "Offer \"jibu lisilopatana na matini\" next to the right answer and ask the question again in a new sentence.",
+     "help": "Jibu lazima lipatikane kwenye matini, si kuongezwa kutoka nje.",
+     "feedback": "Jibu lazima lipatikane kwenye matini, si kuongezwa kutoka nje.",
+     "source": "To confirm by a native Kiswahili teacher: a common classroom error, not traced to a study by the author.",
+     "status": "draft"
+    }
+   ],
    "rubric_indicators": [
     "KISW.G8.RUBRIC.1.1",
     "KISW.G8.RUBRIC.1.2",
@@ -1793,8 +2202,78 @@
      "indicator": "KISW.G8.RUBRIC.2.1"
     }
    ],
-   "skills": [],
-   "misconceptions": [],
+   "skills": [
+    {
+     "code": "KISW.G8.KUSOMA.T5_KUSOMA_KWA_UFAHAMU.RS_UFAHAMU5",
+     "name": "Dondoa habari na eleza msamiati kulingana na muktadha",
+     "outcomes": [
+      "KISW.G8.KUSOMA.T5_KUSOMA_KWA_UFAHAMU.a",
+      "KISW.G8.KUSOMA.T5_KUSOMA_KWA_UFAHAMU.b"
+     ],
+     "mastery": "Mtoto hupata jibu kwenye kifungu na huchagua lile linalojibu swali lote, wala hachagui jambo dogo, kinyume au jambo lisilomo kwenye matini. Evidence rule: at least four of the last five fresh questions right across at least two question forms, and no repeated pick of the same misconception.",
+     "question_forms": [
+      "chagua jibu sahihi",
+      "chagua jibu katika matini ya pili"
+     ],
+     "thinking": [
+      "recall",
+      "reasoning"
+     ],
+     "horeb_skill_ids": [],
+     "prerequisites": [],
+     "status": "proposed"
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "KISW.G8.KUSOMA.T5_KUSOMA_KWA_UFAHAMU.RS_UFAHAMU5.M_KS8_RS_UFAHAMU5_DETAIL",
+     "skill": "KISW.G8.KUSOMA.T5_KUSOMA_KWA_UFAHAMU.RS_UFAHAMU5",
+     "error": "Picks one small detail instead of the answer asked for.",
+     "example": {
+      "question": "Ni jibu lipi linalopatana na matini?",
+      "wrong_answer": "jibu lisilopatana na matini",
+      "correct_answer": "jibu ambalo matini inaunga mkono"
+     },
+     "cause": "The child mixes up two rules that are taught close together.",
+     "reveals": "Offer \"jibu lisilopatana na matini\" next to the right answer and ask the question again in a new sentence.",
+     "help": "Jibu lazima lijibu swali lote, si jambo moja dogo.",
+     "feedback": "Jibu lazima lijibu swali lote, si jambo moja dogo.",
+     "source": "To confirm by a native Kiswahili teacher: a common classroom error, not traced to a study by the author.",
+     "status": "draft"
+    },
+    {
+     "code": "KISW.G8.KUSOMA.T5_KUSOMA_KWA_UFAHAMU.RS_UFAHAMU5.M_KS8_RS_UFAHAMU5_OPPOSITE",
+     "skill": "KISW.G8.KUSOMA.T5_KUSOMA_KWA_UFAHAMU.RS_UFAHAMU5",
+     "error": "Picks the opposite of what the text says.",
+     "example": {
+      "question": "Ni jibu lipi linalopatana na matini?",
+      "wrong_answer": "jibu lisilopatana na matini",
+      "correct_answer": "jibu ambalo matini inaunga mkono"
+     },
+     "cause": "The child mixes up two rules that are taught close together.",
+     "reveals": "Offer \"jibu lisilopatana na matini\" next to the right answer and ask the question again in a new sentence.",
+     "help": "Jibu lazima lipatane na matini, si kinyume chake.",
+     "feedback": "Jibu lazima lipatane na matini, si kinyume chake.",
+     "source": "To confirm by a native Kiswahili teacher: a common classroom error, not traced to a study by the author.",
+     "status": "draft"
+    },
+    {
+     "code": "KISW.G8.KUSOMA.T5_KUSOMA_KWA_UFAHAMU.RS_UFAHAMU5.M_KS8_RS_UFAHAMU5_NOTSAID",
+     "skill": "KISW.G8.KUSOMA.T5_KUSOMA_KWA_UFAHAMU.RS_UFAHAMU5",
+     "error": "Picks something the text does not say.",
+     "example": {
+      "question": "Ni jibu lipi linalopatana na matini?",
+      "wrong_answer": "jibu lisilopatana na matini",
+      "correct_answer": "jibu ambalo matini inaunga mkono"
+     },
+     "cause": "The child mixes up two rules that are taught close together.",
+     "reveals": "Offer \"jibu lisilopatana na matini\" next to the right answer and ask the question again in a new sentence.",
+     "help": "Jibu lazima lipatikane kwenye matini, si kuongezwa kutoka nje.",
+     "feedback": "Jibu lazima lipatikane kwenye matini, si kuongezwa kutoka nje.",
+     "source": "To confirm by a native Kiswahili teacher: a common classroom error, not traced to a study by the author.",
+     "status": "draft"
+    }
+   ],
    "rubric_indicators": [
     "KISW.G8.RUBRIC.2.1",
     "KISW.G8.RUBRIC.2.2",
@@ -2096,8 +2575,79 @@
      "indicator": "KISW.G8.RUBRIC.1.2"
     }
    ],
-   "skills": [],
-   "misconceptions": [],
+   "skills": [
+    {
+     "code": "KISW.G8.KUSIKI.T6_KUSIKILIZA_KWA_KUFAS.LS_UJUMBE",
+     "name": "Tambua ujumbe na mafunzo katika matini ya kusikiliza",
+     "outcomes": [
+      "KISW.G8.KUSIKI.T6_KUSIKILIZA_KWA_KUFAS.a",
+      "KISW.G8.KUSIKI.T6_KUSIKILIZA_KWA_KUFAS.b",
+      "KISW.G8.KUSIKI.T6_KUSIKILIZA_KWA_KUFAS.c"
+     ],
+     "mastery": "Mtoto hukumbuka alichosikia na huchagua jibu linalolingana na matini yote, wala hachagui jambo dogo, kinyume au jambo lisilomo kwenye matini. Evidence rule: at least four of the last five fresh questions right across at least two question forms, and no repeated pick of the same misconception.",
+     "question_forms": [
+      "chagua jibu sahihi",
+      "chagua jibu katika matini ya pili"
+     ],
+     "thinking": [
+      "recall",
+      "reasoning"
+     ],
+     "horeb_skill_ids": [],
+     "prerequisites": [],
+     "status": "proposed"
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "KISW.G8.KUSIKI.T6_KUSIKILIZA_KWA_KUFAS.LS_UJUMBE.M_KS8_LS_UJUMBE_DETAIL",
+     "skill": "KISW.G8.KUSIKI.T6_KUSIKILIZA_KWA_KUFAS.LS_UJUMBE",
+     "error": "Picks one small detail instead of the answer asked for.",
+     "example": {
+      "question": "Ni jibu lipi linalopatana na matini?",
+      "wrong_answer": "jibu lisilopatana na matini",
+      "correct_answer": "jibu ambalo matini inaunga mkono"
+     },
+     "cause": "The child mixes up two rules that are taught close together.",
+     "reveals": "Offer \"jibu lisilopatana na matini\" next to the right answer and ask the question again in a new sentence.",
+     "help": "Jibu lazima lijibu swali lote, si jambo moja dogo.",
+     "feedback": "Jibu lazima lijibu swali lote, si jambo moja dogo.",
+     "source": "To confirm by a native Kiswahili teacher: a common classroom error, not traced to a study by the author.",
+     "status": "draft"
+    },
+    {
+     "code": "KISW.G8.KUSIKI.T6_KUSIKILIZA_KWA_KUFAS.LS_UJUMBE.M_KS8_LS_UJUMBE_OPPOSITE",
+     "skill": "KISW.G8.KUSIKI.T6_KUSIKILIZA_KWA_KUFAS.LS_UJUMBE",
+     "error": "Picks the opposite of what the text says.",
+     "example": {
+      "question": "Ni jibu lipi linalopatana na matini?",
+      "wrong_answer": "jibu lisilopatana na matini",
+      "correct_answer": "jibu ambalo matini inaunga mkono"
+     },
+     "cause": "The child mixes up two rules that are taught close together.",
+     "reveals": "Offer \"jibu lisilopatana na matini\" next to the right answer and ask the question again in a new sentence.",
+     "help": "Jibu lazima lipatane na matini, si kinyume chake.",
+     "feedback": "Jibu lazima lipatane na matini, si kinyume chake.",
+     "source": "To confirm by a native Kiswahili teacher: a common classroom error, not traced to a study by the author.",
+     "status": "draft"
+    },
+    {
+     "code": "KISW.G8.KUSIKI.T6_KUSIKILIZA_KWA_KUFAS.LS_UJUMBE.M_KS8_LS_UJUMBE_NOTSAID",
+     "skill": "KISW.G8.KUSIKI.T6_KUSIKILIZA_KWA_KUFAS.LS_UJUMBE",
+     "error": "Picks something the text does not say.",
+     "example": {
+      "question": "Ni jibu lipi linalopatana na matini?",
+      "wrong_answer": "jibu lisilopatana na matini",
+      "correct_answer": "jibu ambalo matini inaunga mkono"
+     },
+     "cause": "The child mixes up two rules that are taught close together.",
+     "reveals": "Offer \"jibu lisilopatana na matini\" next to the right answer and ask the question again in a new sentence.",
+     "help": "Jibu lazima lipatikane kwenye matini, si kuongezwa kutoka nje.",
+     "feedback": "Jibu lazima lipatikane kwenye matini, si kuongezwa kutoka nje.",
+     "source": "To confirm by a native Kiswahili teacher: a common classroom error, not traced to a study by the author.",
+     "status": "draft"
+    }
+   ],
    "rubric_indicators": [
     "KISW.G8.RUBRIC.1.1",
     "KISW.G8.RUBRIC.1.2",
@@ -3363,8 +3913,80 @@
      "status": "kicd_verified"
     }
    ],
-   "skills": [],
-   "misconceptions": [],
+   "skills": [
+    {
+     "code": "KISW.G8.KUSOMA.T9_KUSOMA_KWA_UFAHAMU.RS_USHAWISHI",
+     "name": "Soma kifungu cha kushawishi: habari, utabiri, msamiati na ushawishi",
+     "outcomes": [
+      "KISW.G8.KUSOMA.T9_KUSOMA_KWA_UFAHAMU.a",
+      "KISW.G8.KUSOMA.T9_KUSOMA_KWA_UFAHAMU.b",
+      "KISW.G8.KUSOMA.T9_KUSOMA_KWA_UFAHAMU.c",
+      "KISW.G8.KUSOMA.T9_KUSOMA_KWA_UFAHAMU.d"
+     ],
+     "mastery": "Mtoto hupata jibu kwenye kifungu na huchagua lile linalojibu swali lote, wala hachagui jambo dogo, kinyume au jambo lisilomo kwenye matini. Evidence rule: at least four of the last five fresh questions right across at least two question forms, and no repeated pick of the same misconception.",
+     "question_forms": [
+      "chagua jibu sahihi",
+      "chagua jibu katika matini ya pili"
+     ],
+     "thinking": [
+      "recall",
+      "reasoning"
+     ],
+     "horeb_skill_ids": [],
+     "prerequisites": [],
+     "status": "proposed"
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "KISW.G8.KUSOMA.T9_KUSOMA_KWA_UFAHAMU.RS_USHAWISHI.M_KS8_RS_USHAWISHI_DETAIL",
+     "skill": "KISW.G8.KUSOMA.T9_KUSOMA_KWA_UFAHAMU.RS_USHAWISHI",
+     "error": "Picks one small detail instead of the answer asked for.",
+     "example": {
+      "question": "Ni jibu lipi linalopatana na matini?",
+      "wrong_answer": "jibu lisilopatana na matini",
+      "correct_answer": "jibu ambalo matini inaunga mkono"
+     },
+     "cause": "The child mixes up two rules that are taught close together.",
+     "reveals": "Offer \"jibu lisilopatana na matini\" next to the right answer and ask the question again in a new sentence.",
+     "help": "Jibu lazima lijibu swali lote, si jambo moja dogo.",
+     "feedback": "Jibu lazima lijibu swali lote, si jambo moja dogo.",
+     "source": "To confirm by a native Kiswahili teacher: a common classroom error, not traced to a study by the author.",
+     "status": "draft"
+    },
+    {
+     "code": "KISW.G8.KUSOMA.T9_KUSOMA_KWA_UFAHAMU.RS_USHAWISHI.M_KS8_RS_USHAWISHI_OPPOSITE",
+     "skill": "KISW.G8.KUSOMA.T9_KUSOMA_KWA_UFAHAMU.RS_USHAWISHI",
+     "error": "Picks the opposite of what the text says.",
+     "example": {
+      "question": "Ni jibu lipi linalopatana na matini?",
+      "wrong_answer": "jibu lisilopatana na matini",
+      "correct_answer": "jibu ambalo matini inaunga mkono"
+     },
+     "cause": "The child mixes up two rules that are taught close together.",
+     "reveals": "Offer \"jibu lisilopatana na matini\" next to the right answer and ask the question again in a new sentence.",
+     "help": "Jibu lazima lipatane na matini, si kinyume chake.",
+     "feedback": "Jibu lazima lipatane na matini, si kinyume chake.",
+     "source": "To confirm by a native Kiswahili teacher: a common classroom error, not traced to a study by the author.",
+     "status": "draft"
+    },
+    {
+     "code": "KISW.G8.KUSOMA.T9_KUSOMA_KWA_UFAHAMU.RS_USHAWISHI.M_KS8_RS_USHAWISHI_NOTSAID",
+     "skill": "KISW.G8.KUSOMA.T9_KUSOMA_KWA_UFAHAMU.RS_USHAWISHI",
+     "error": "Picks something the text does not say.",
+     "example": {
+      "question": "Ni jibu lipi linalopatana na matini?",
+      "wrong_answer": "jibu lisilopatana na matini",
+      "correct_answer": "jibu ambalo matini inaunga mkono"
+     },
+     "cause": "The child mixes up two rules that are taught close together.",
+     "reveals": "Offer \"jibu lisilopatana na matini\" next to the right answer and ask the question again in a new sentence.",
+     "help": "Jibu lazima lipatikane kwenye matini, si kuongezwa kutoka nje.",
+     "feedback": "Jibu lazima lipatikane kwenye matini, si kuongezwa kutoka nje.",
+     "source": "To confirm by a native Kiswahili teacher: a common classroom error, not traced to a study by the author.",
+     "status": "draft"
+    }
+   ],
    "rubric_indicators": [
     "KISW.G8.RUBRIC.2.1",
     "KISW.G8.RUBRIC.2.2",
@@ -4497,8 +5119,79 @@
      "status": "kicd_verified"
     }
    ],
-   "skills": [],
-   "misconceptions": [],
+   "skills": [
+    {
+     "code": "KISW.G8.KUSIKI.T12_KUSIKILIZA_KWA_MAKIN.LS_HABARI",
+     "name": "Eleza habari, dondoa mpangilio na msamiati katika matini ya kusikiliza",
+     "outcomes": [
+      "KISW.G8.KUSIKI.T12_KUSIKILIZA_KWA_MAKIN.a",
+      "KISW.G8.KUSIKI.T12_KUSIKILIZA_KWA_MAKIN.b",
+      "KISW.G8.KUSIKI.T12_KUSIKILIZA_KWA_MAKIN.c"
+     ],
+     "mastery": "Mtoto hukumbuka alichosikia na huchagua jibu linalolingana na matini yote, wala hachagui jambo dogo, kinyume au jambo lisilomo kwenye matini. Evidence rule: at least four of the last five fresh questions right across at least two question forms, and no repeated pick of the same misconception.",
+     "question_forms": [
+      "chagua jibu sahihi",
+      "chagua jibu katika matini ya pili"
+     ],
+     "thinking": [
+      "recall",
+      "reasoning"
+     ],
+     "horeb_skill_ids": [],
+     "prerequisites": [],
+     "status": "proposed"
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "KISW.G8.KUSIKI.T12_KUSIKILIZA_KWA_MAKIN.LS_HABARI.M_KS8_LS_HABARI_DETAIL",
+     "skill": "KISW.G8.KUSIKI.T12_KUSIKILIZA_KWA_MAKIN.LS_HABARI",
+     "error": "Picks one small detail instead of the answer asked for.",
+     "example": {
+      "question": "Ni jibu lipi linalopatana na matini?",
+      "wrong_answer": "jibu lisilopatana na matini",
+      "correct_answer": "jibu ambalo matini inaunga mkono"
+     },
+     "cause": "The child mixes up two rules that are taught close together.",
+     "reveals": "Offer \"jibu lisilopatana na matini\" next to the right answer and ask the question again in a new sentence.",
+     "help": "Jibu lazima lijibu swali lote, si jambo moja dogo.",
+     "feedback": "Jibu lazima lijibu swali lote, si jambo moja dogo.",
+     "source": "To confirm by a native Kiswahili teacher: a common classroom error, not traced to a study by the author.",
+     "status": "draft"
+    },
+    {
+     "code": "KISW.G8.KUSIKI.T12_KUSIKILIZA_KWA_MAKIN.LS_HABARI.M_KS8_LS_HABARI_OPPOSITE",
+     "skill": "KISW.G8.KUSIKI.T12_KUSIKILIZA_KWA_MAKIN.LS_HABARI",
+     "error": "Picks the opposite of what the text says.",
+     "example": {
+      "question": "Ni jibu lipi linalopatana na matini?",
+      "wrong_answer": "jibu lisilopatana na matini",
+      "correct_answer": "jibu ambalo matini inaunga mkono"
+     },
+     "cause": "The child mixes up two rules that are taught close together.",
+     "reveals": "Offer \"jibu lisilopatana na matini\" next to the right answer and ask the question again in a new sentence.",
+     "help": "Jibu lazima lipatane na matini, si kinyume chake.",
+     "feedback": "Jibu lazima lipatane na matini, si kinyume chake.",
+     "source": "To confirm by a native Kiswahili teacher: a common classroom error, not traced to a study by the author.",
+     "status": "draft"
+    },
+    {
+     "code": "KISW.G8.KUSIKI.T12_KUSIKILIZA_KWA_MAKIN.LS_HABARI.M_KS8_LS_HABARI_NOTSAID",
+     "skill": "KISW.G8.KUSIKI.T12_KUSIKILIZA_KWA_MAKIN.LS_HABARI",
+     "error": "Picks something the text does not say.",
+     "example": {
+      "question": "Ni jibu lipi linalopatana na matini?",
+      "wrong_answer": "jibu lisilopatana na matini",
+      "correct_answer": "jibu ambalo matini inaunga mkono"
+     },
+     "cause": "The child mixes up two rules that are taught close together.",
+     "reveals": "Offer \"jibu lisilopatana na matini\" next to the right answer and ask the question again in a new sentence.",
+     "help": "Jibu lazima lipatikane kwenye matini, si kuongezwa kutoka nje.",
+     "feedback": "Jibu lazima lipatikane kwenye matini, si kuongezwa kutoka nje.",
+     "source": "To confirm by a native Kiswahili teacher: a common classroom error, not traced to a study by the author.",
+     "status": "draft"
+    }
+   ],
    "rubric_indicators": [
     "KISW.G8.RUBRIC.1.1",
     "KISW.G8.RUBRIC.1.2",
@@ -5335,8 +6028,79 @@
      "status": "kicd_verified"
     }
    ],
-   "skills": [],
-   "misconceptions": [],
+   "skills": [
+    {
+     "code": "KISW.G8.KUSOMA.T14_KUSOMA_KWA_UFAHAMU.RS_MJADALA",
+     "name": "Soma kifungu cha mjadala: habari, msamiati na mitazamo",
+     "outcomes": [
+      "KISW.G8.KUSOMA.T14_KUSOMA_KWA_UFAHAMU.a",
+      "KISW.G8.KUSOMA.T14_KUSOMA_KWA_UFAHAMU.b",
+      "KISW.G8.KUSOMA.T14_KUSOMA_KWA_UFAHAMU.c"
+     ],
+     "mastery": "Mtoto hupata jibu kwenye kifungu na huchagua lile linalojibu swali lote, wala hachagui jambo dogo, kinyume au jambo lisilomo kwenye matini. Evidence rule: at least four of the last five fresh questions right across at least two question forms, and no repeated pick of the same misconception.",
+     "question_forms": [
+      "chagua jibu sahihi",
+      "chagua jibu katika matini ya pili"
+     ],
+     "thinking": [
+      "recall",
+      "reasoning"
+     ],
+     "horeb_skill_ids": [],
+     "prerequisites": [],
+     "status": "proposed"
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "KISW.G8.KUSOMA.T14_KUSOMA_KWA_UFAHAMU.RS_MJADALA.M_KS8_RS_MJADALA_DETAIL",
+     "skill": "KISW.G8.KUSOMA.T14_KUSOMA_KWA_UFAHAMU.RS_MJADALA",
+     "error": "Picks one small detail instead of the answer asked for.",
+     "example": {
+      "question": "Ni jibu lipi linalopatana na matini?",
+      "wrong_answer": "jibu lisilopatana na matini",
+      "correct_answer": "jibu ambalo matini inaunga mkono"
+     },
+     "cause": "The child mixes up two rules that are taught close together.",
+     "reveals": "Offer \"jibu lisilopatana na matini\" next to the right answer and ask the question again in a new sentence.",
+     "help": "Jibu lazima lijibu swali lote, si jambo moja dogo.",
+     "feedback": "Jibu lazima lijibu swali lote, si jambo moja dogo.",
+     "source": "To confirm by a native Kiswahili teacher: a common classroom error, not traced to a study by the author.",
+     "status": "draft"
+    },
+    {
+     "code": "KISW.G8.KUSOMA.T14_KUSOMA_KWA_UFAHAMU.RS_MJADALA.M_KS8_RS_MJADALA_OPPOSITE",
+     "skill": "KISW.G8.KUSOMA.T14_KUSOMA_KWA_UFAHAMU.RS_MJADALA",
+     "error": "Picks the opposite of what the text says.",
+     "example": {
+      "question": "Ni jibu lipi linalopatana na matini?",
+      "wrong_answer": "jibu lisilopatana na matini",
+      "correct_answer": "jibu ambalo matini inaunga mkono"
+     },
+     "cause": "The child mixes up two rules that are taught close together.",
+     "reveals": "Offer \"jibu lisilopatana na matini\" next to the right answer and ask the question again in a new sentence.",
+     "help": "Jibu lazima lipatane na matini, si kinyume chake.",
+     "feedback": "Jibu lazima lipatane na matini, si kinyume chake.",
+     "source": "To confirm by a native Kiswahili teacher: a common classroom error, not traced to a study by the author.",
+     "status": "draft"
+    },
+    {
+     "code": "KISW.G8.KUSOMA.T14_KUSOMA_KWA_UFAHAMU.RS_MJADALA.M_KS8_RS_MJADALA_NOTSAID",
+     "skill": "KISW.G8.KUSOMA.T14_KUSOMA_KWA_UFAHAMU.RS_MJADALA",
+     "error": "Picks something the text does not say.",
+     "example": {
+      "question": "Ni jibu lipi linalopatana na matini?",
+      "wrong_answer": "jibu lisilopatana na matini",
+      "correct_answer": "jibu ambalo matini inaunga mkono"
+     },
+     "cause": "The child mixes up two rules that are taught close together.",
+     "reveals": "Offer \"jibu lisilopatana na matini\" next to the right answer and ask the question again in a new sentence.",
+     "help": "Jibu lazima lipatikane kwenye matini, si kuongezwa kutoka nje.",
+     "feedback": "Jibu lazima lipatikane kwenye matini, si kuongezwa kutoka nje.",
+     "source": "To confirm by a native Kiswahili teacher: a common classroom error, not traced to a study by the author.",
+     "status": "draft"
+    }
+   ],
    "rubric_indicators": [
     "KISW.G8.RUBRIC.2.1",
     "KISW.G8.RUBRIC.2.2",
@@ -5722,6 +6486,26 @@
      "horeb_skill_ids": [],
      "prerequisites": [],
      "status": "proposed"
+    },
+    {
+     "code": "KISW.G8.KUSOMA.T15_UFUPISHO.RS_UFUPISHO",
+     "name": "Eleza ujumbe wa aya na wa matini kwa ufupi",
+     "outcomes": [
+      "KISW.G8.KUSOMA.T15_UFUPISHO.a",
+      "KISW.G8.KUSOMA.T15_UFUPISHO.b"
+     ],
+     "mastery": "Mtoto hupata jibu kwenye kifungu na huchagua lile linalojibu swali lote, wala hachagui jambo dogo, kinyume au jambo lisilomo kwenye matini. Evidence rule: at least four of the last five fresh questions right across at least two question forms, and no repeated pick of the same misconception.",
+     "question_forms": [
+      "chagua jibu sahihi",
+      "chagua jibu katika matini ya pili"
+     ],
+     "thinking": [
+      "recall",
+      "reasoning"
+     ],
+     "horeb_skill_ids": [],
+     "prerequisites": [],
+     "status": "proposed"
     }
    ],
    "misconceptions": [
@@ -5770,6 +6554,54 @@
      "reveals": "Offer \"mfano mdogo\" next to the right answer and ask the question again in a new sentence.",
      "help": "Habari kuu ni wazo kuu.",
      "feedback": "Habari kuu ni wazo kuu.",
+     "source": "To confirm by a native Kiswahili teacher: a common classroom error, not traced to a study by the author.",
+     "status": "draft"
+    },
+    {
+     "code": "KISW.G8.KUSOMA.T15_UFUPISHO.RS_UFUPISHO.M_KS8_RS_UFUPISHO_DETAIL",
+     "skill": "KISW.G8.KUSOMA.T15_UFUPISHO.RS_UFUPISHO",
+     "error": "Picks one small detail instead of the answer asked for.",
+     "example": {
+      "question": "Ni jibu lipi linalopatana na matini?",
+      "wrong_answer": "jibu lisilopatana na matini",
+      "correct_answer": "jibu ambalo matini inaunga mkono"
+     },
+     "cause": "The child mixes up two rules that are taught close together.",
+     "reveals": "Offer \"jibu lisilopatana na matini\" next to the right answer and ask the question again in a new sentence.",
+     "help": "Jibu lazima lijibu swali lote, si jambo moja dogo.",
+     "feedback": "Jibu lazima lijibu swali lote, si jambo moja dogo.",
+     "source": "To confirm by a native Kiswahili teacher: a common classroom error, not traced to a study by the author.",
+     "status": "draft"
+    },
+    {
+     "code": "KISW.G8.KUSOMA.T15_UFUPISHO.RS_UFUPISHO.M_KS8_RS_UFUPISHO_OPPOSITE",
+     "skill": "KISW.G8.KUSOMA.T15_UFUPISHO.RS_UFUPISHO",
+     "error": "Picks the opposite of what the text says.",
+     "example": {
+      "question": "Ni jibu lipi linalopatana na matini?",
+      "wrong_answer": "jibu lisilopatana na matini",
+      "correct_answer": "jibu ambalo matini inaunga mkono"
+     },
+     "cause": "The child mixes up two rules that are taught close together.",
+     "reveals": "Offer \"jibu lisilopatana na matini\" next to the right answer and ask the question again in a new sentence.",
+     "help": "Jibu lazima lipatane na matini, si kinyume chake.",
+     "feedback": "Jibu lazima lipatane na matini, si kinyume chake.",
+     "source": "To confirm by a native Kiswahili teacher: a common classroom error, not traced to a study by the author.",
+     "status": "draft"
+    },
+    {
+     "code": "KISW.G8.KUSOMA.T15_UFUPISHO.RS_UFUPISHO.M_KS8_RS_UFUPISHO_NOTSAID",
+     "skill": "KISW.G8.KUSOMA.T15_UFUPISHO.RS_UFUPISHO",
+     "error": "Picks something the text does not say.",
+     "example": {
+      "question": "Ni jibu lipi linalopatana na matini?",
+      "wrong_answer": "jibu lisilopatana na matini",
+      "correct_answer": "jibu ambalo matini inaunga mkono"
+     },
+     "cause": "The child mixes up two rules that are taught close together.",
+     "reveals": "Offer \"jibu lisilopatana na matini\" next to the right answer and ask the question again in a new sentence.",
+     "help": "Jibu lazima lipatikane kwenye matini, si kuongezwa kutoka nje.",
+     "feedback": "Jibu lazima lipatikane kwenye matini, si kuongezwa kutoka nje.",
      "source": "To confirm by a native Kiswahili teacher: a common classroom error, not traced to a study by the author.",
      "status": "draft"
     }

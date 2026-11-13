@@ -9,7 +9,7 @@ export const { choose, typed, spot, sfam } = makeKit({
   subject: 'kiswahili', grade: 8, prefix: 'KISW', signed: SIGNED,
   map: { skills: SKILLS, outcomes: OUTCOMES, misFeedback: MIS_FEEDBACK },
 });
-export const fam = (tag, cs, form, rung, gen, oc) => sfam({ id: `kiswahili8.${tag}`, cs, form, rung, gen, native: true, ...(oc ? { oc } : {}) });
+export const fam = (tag, cs, form, rung, gen, oc, extra) => sfam({ id: `kiswahili8.${tag}`, cs, form, rung, gen, native: true, ...(oc ? { oc } : {}), ...(extra || {}) });
 export const m = (code, ...texts) => texts.map(t => [t, code]);
 export const c = (q, right, why, ...groups) => [q, right, groups.flatMap(([code, ...t]) => m(code, ...t)), why];
 export const sp = (q, a, b, f, fix, mis) => [q, [[a, true], [b, true], [f, false]], fix, mis];

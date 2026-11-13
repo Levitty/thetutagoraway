@@ -3,7 +3,7 @@
 Built from `curriculum/kiswahili/g8.json` and the registry entry. Outcome text is KICD's, word for word. **Q** means a question can test it, **W** writing (composition marking), **O** speaking or an oral check (a teacher listening), **P** a practical task, product or portfolio, **A** an attitude (teacher observation).
 
 - Outcomes: 241. By what tests them best: Q 128, W 18, O 47, P 0, A 48.
-- Outcomes with at least one question family: 42. Q outcomes with a family: 40 of 128. Q outcomes with no family: 88.
+- Outcomes with at least one question family: 59. Q outcomes with a family: 55 of 128. Q outcomes with no family: 73.
 - A non-Q outcome that has a family: the family tests the recognition half and the rest still needs the teacher or the task named below.
 - Kind is assigned from the first verb of the outcome (kutambua, kueleza and kubainisha are Q; kuandika, kutunga and kufupisha are W; kujadili, kuwasilisha and the listening and speaking outcomes are O; kuchangamkia, kufurahia and kuonea fahari are A). It is a first sort for the reviewer, not the KICD's own tag. Reading comprehension and listening need passages or recordings and are not built here.
 - This build covers grammar (sarufi), punctuation, letter-writing knowledge, tanzu za fasihi and ufupisho: 21 skills. The 39 other sub-strands (kusikiliza, kusoma, kuandika of compositions, most oral work) are for a later pass with passages.
@@ -14,10 +14,10 @@ Built from `curriculum/kiswahili/g8.json` and the registry entry. Outcome text i
 | KUSIKI.T1_KUSIKILIZA_NA_KUJIBU.b | Q | NO | kutambua vipengele vya kuzingatia katika kujibu mahojiano | Question families. |
 | KUSIKI.T1_KUSIKILIZA_NA_KUJIBU.c | O | no | kutumia vipengele vifaavyo katika kusikiliza na kujibu mahojiano ipasavyo | An oral or listening check scored by the teacher with the observation rubric (PLAN_OBSERVATION_RUBRICS.md): listening and speaking tasks, songs, recitation and role play. |
 | KUSIKI.T1_KUSIKILIZA_NA_KUJIBU.d | A | no | kuchangamkia kushiriki mahojiano katika miktadha mbalimbali | Teacher observation over the term or a portfolio entry; a tapped answer cannot show a feeling or a habit. |
-| KUSOMA.T1_KUSOMA_KWA_UFAHAMU.a | Q | NO | kudondoa habari mahususi katika kifungu cha simulizi | Question families. |
-| KUSOMA.T1_KUSOMA_KWA_UFAHAMU.b | Q | NO | kupanga matukio yanavyofuatana katika kifungu cha simulizi | Question families. |
-| KUSOMA.T1_KUSOMA_KWA_UFAHAMU.c | Q | NO | kufanya utabiri na ufasiri kutokana na kifungu cha simulizi | Question families. |
-| KUSOMA.T1_KUSOMA_KWA_UFAHAMU.d | Q | NO | kueleza maana ya msamiati katika kifungu cha simulizi | Question families. |
+| KUSOMA.T1_KUSOMA_KWA_UFAHAMU.a | Q | yes | kudondoa habari mahususi katika kifungu cha simulizi | Question families. |
+| KUSOMA.T1_KUSOMA_KWA_UFAHAMU.b | Q | yes | kupanga matukio yanavyofuatana katika kifungu cha simulizi | Question families. |
+| KUSOMA.T1_KUSOMA_KWA_UFAHAMU.c | Q | yes | kufanya utabiri na ufasiri kutokana na kifungu cha simulizi | Question families. |
+| KUSOMA.T1_KUSOMA_KWA_UFAHAMU.d | Q | yes | kueleza maana ya msamiati katika kifungu cha simulizi | Question families. |
 | KUSOMA.T1_KUSOMA_KWA_UFAHAMU.e | A | no | kuchangamkia kujibu maswali ya ufahamu ili kukuza uelewa wa habari | Teacher observation over the term or a portfolio entry; a tapped answer cannot show a feeling or a habit. |
 | KUANDI.T1_VIAKIFISHI.a | Q | yes | kutambua matumizi ya alama ya hisi na ritifaa katika matini | Question families. |
 | KUANDI.T1_VIAKIFISHI.b | W | yes (knowledge half) | kutumia alama ya hisi na ritifaa ipasavyo katika matini | Composition or written task marked by the teacher against the KICD rubric indicator (a letter, an essay, a summary or a sentence the learner writes). |
@@ -29,7 +29,7 @@ Built from `curriculum/kiswahili/g8.json` and the registry entry. Outcome text i
 | KUSIKI.T2_KUSIKILIZA_KWA_KINA.b | O | no | kutamka sauti /g/ na /gh/ ipasavyo katika silabi na maneno | An oral or listening check scored by the teacher with the observation rubric (PLAN_OBSERVATION_RUBRICS.md): listening and speaking tasks, songs, recitation and role play. |
 | KUSIKI.T2_KUSIKILIZA_KWA_KINA.c | O | no | kutumia maneno yenye sauti /g/ na /gh/ ipasavyo katika matini ili kuyatofautisha kimatamshi | An oral or listening check scored by the teacher with the observation rubric (PLAN_OBSERVATION_RUBRICS.md): listening and speaking tasks, songs, recitation and role play. |
 | KUSIKI.T2_KUSIKILIZA_KWA_KINA.d | A | no | kuchangamkia matamshi bora ya sauti /g/ na /gh/ katika mazungumzo ya kawaida | Teacher observation over the term or a portfolio entry; a tapped answer cannot show a feeling or a habit. |
-| KUSOMA.T2_KUSOMA_KWA_MAPANA.a | Q | NO | kueleza ujumbe wa matini aliyosoma | Question families. |
+| KUSOMA.T2_KUSOMA_KWA_MAPANA.a | Q | yes | kueleza ujumbe wa matini aliyosoma | Question families. |
 | KUSOMA.T2_KUSOMA_KWA_MAPANA.b | Q | NO | kutambua msamiati uliotumiwa katika matini ya kujichagulia | Question families. |
 | KUSOMA.T2_KUSOMA_KWA_MAPANA.c | Q | NO | kutumia ipasavyo msamiati unaotokana na matini aliyosoma | Question families. |
 | KUSOMA.T2_KUSOMA_KWA_MAPANA.d | Q | NO | kujenga mazoea ya kusoma matini za miktadha mbalimbali ili kupanua mawanda ya fikra | Question families. |
@@ -74,12 +74,12 @@ Built from `curriculum/kiswahili/g8.json` and the registry entry. Outcome text i
 | SARUFI.T4_NYAKATI_NA_HALI.c | Q | NO | kutumia hali ya mazoea na timilifu ipasavyo katika matini | Question families. |
 | SARUFI.T4_NYAKATI_NA_HALI.d | A | no | kufurahia kutumia hali ya mazoea na timilifu ipasavyo ili kufanikisha mawasiliano | Teacher observation over the term or a portfolio entry; a tapped answer cannot show a feeling or a habit. |
 | KUSIKI.T5_KUSIKILIZA_MAAGIZO.a | Q | NO | kueleza maana ya maagizo ili kuyapambanua | Question families. |
-| KUSIKI.T5_KUSIKILIZA_MAAGIZO.b | Q | NO | kutambua maagizo katika miktadha mbalimbali | Question families. |
-| KUSIKI.T5_KUSIKILIZA_MAAGIZO.c | O | no | kujadili sifa za kimsingi za maagizo yafaayo | An oral or listening check scored by the teacher with the observation rubric (PLAN_OBSERVATION_RUBRICS.md): listening and speaking tasks, songs, recitation and role play. |
+| KUSIKI.T5_KUSIKILIZA_MAAGIZO.b | Q | yes | kutambua maagizo katika miktadha mbalimbali | Question families. |
+| KUSIKI.T5_KUSIKILIZA_MAAGIZO.c | O | yes (knowledge half) | kujadili sifa za kimsingi za maagizo yafaayo | An oral or listening check scored by the teacher with the observation rubric (PLAN_OBSERVATION_RUBRICS.md): listening and speaking tasks, songs, recitation and role play. |
 | KUSIKI.T5_KUSIKILIZA_MAAGIZO.d | O | no | kutoa na kupokea maagizo ipasavyo | An oral or listening check scored by the teacher with the observation rubric (PLAN_OBSERVATION_RUBRICS.md): listening and speaking tasks, songs, recitation and role play. |
 | KUSIKI.T5_KUSIKILIZA_MAAGIZO.e | A | no | kuchangamkia kutoa na kufuata maagizo ifaavyo katika miktadha mbalimbali | Teacher observation over the term or a portfolio entry; a tapped answer cannot show a feeling or a habit. |
-| KUSOMA.T5_KUSOMA_KWA_UFAHAMU.a | Q | NO | kudondoa habari mahususi katika kifungu cha ufahamu | Question families. |
-| KUSOMA.T5_KUSOMA_KWA_UFAHAMU.b | Q | NO | kueleza maana ya msamiati kulingana na muktadha wa kifungu cha ufahamu | Question families. |
+| KUSOMA.T5_KUSOMA_KWA_UFAHAMU.a | Q | yes | kudondoa habari mahususi katika kifungu cha ufahamu | Question families. |
+| KUSOMA.T5_KUSOMA_KWA_UFAHAMU.b | Q | yes | kueleza maana ya msamiati kulingana na muktadha wa kifungu cha ufahamu | Question families. |
 | KUSOMA.T5_KUSOMA_KWA_UFAHAMU.c | A | no | kuchangamkia kusoma kwa ufahamu ili kukuza uelewa wa habari | Teacher observation over the term or a portfolio entry; a tapped answer cannot show a feeling or a habit. |
 | KUANDI.T5_INSHA_YA_MAELEKEZO.a | Q | NO | kutambua insha ya maelekezo katika matini | Question families. |
 | KUANDI.T5_INSHA_YA_MAELEKEZO.b | O | no | kujadili sifa za insha ya maelekezo | An oral or listening check scored by the teacher with the observation rubric (PLAN_OBSERVATION_RUBRICS.md): listening and speaking tasks, songs, recitation and role play. |
@@ -89,8 +89,8 @@ Built from `curriculum/kiswahili/g8.json` and the registry entry. Outcome text i
 | SARUFI.T5_NYAKATI_NA_HALI.b | Q | yes | kutambua viambishi vya wakati uliopita hali timilifu na wakati ujao hali timilifu katika matini | Question families. |
 | SARUFI.T5_NYAKATI_NA_HALI.c | Q | yes | kutumia wakati uliopita hali timilifu na wakati ujao hali timilifu ipasavyo katika matini | Question families. |
 | SARUFI.T5_NYAKATI_NA_HALI.d | A | no | kuchangamkia kutumia wakati uliopita hali timilifu na wakati ujao hali timilifu ipasavyo ili kufanikisha mawasiliano | Teacher observation over the term or a portfolio entry; a tapped answer cannot show a feeling or a habit. |
-| KUSIKI.T6_KUSIKILIZA_KWA_KUFAS.a | Q | NO | kutambua ujumbe katika matini ya kusikiliza | Question families. |
-| KUSIKI.T6_KUSIKILIZA_KWA_KUFAS.b | Q | NO | kueleza uhusiano kati ya ujumbe wa matini na maisha ya kila siku | Question families. |
+| KUSIKI.T6_KUSIKILIZA_KWA_KUFAS.a | Q | yes | kutambua ujumbe katika matini ya kusikiliza | Question families. |
+| KUSIKI.T6_KUSIKILIZA_KWA_KUFAS.b | Q | yes | kueleza uhusiano kati ya ujumbe wa matini na maisha ya kila siku | Question families. |
 | KUSIKI.T6_KUSIKILIZA_KWA_KUFAS.c | O | no | kujadili mafunzo yanayotokana na ujumbe wa matini | An oral or listening check scored by the teacher with the observation rubric (PLAN_OBSERVATION_RUBRICS.md): listening and speaking tasks, songs, recitation and role play. |
 | KUSIKI.T6_KUSIKILIZA_KWA_KUFAS.d | O | no | kujenga mazoea ya kuhusisha ujumbe katika matini na hali ya maisha ya kila siku | An oral or listening check scored by the teacher with the observation rubric (PLAN_OBSERVATION_RUBRICS.md): listening and speaking tasks, songs, recitation and role play. |
 | KUSOMA.T6_KUSOMA_KWA_KINA_TAMT.a | Q | NO | kueleza maana ya maudhui na dhamira katika fasihi ili kuipambanua | Question families. |
@@ -139,8 +139,8 @@ Built from `curriculum/kiswahili/g8.json` and the registry entry. Outcome text i
 | KUSIKI.T9_KUSIKILIZA_KWA_KINA.b | O | no | kutamka sauti /ch/ na /sh/ipasavyo katika silabi na maneno | An oral or listening check scored by the teacher with the observation rubric (PLAN_OBSERVATION_RUBRICS.md): listening and speaking tasks, songs, recitation and role play. |
 | KUSIKI.T9_KUSIKILIZA_KWA_KINA.c | O | no | kutumia maneno yenye sauti /ch/ na /sh/ ipasavyo katika matini ili kuyatofautisha kimatamshi | An oral or listening check scored by the teacher with the observation rubric (PLAN_OBSERVATION_RUBRICS.md): listening and speaking tasks, songs, recitation and role play. |
 | KUSIKI.T9_KUSIKILIZA_KWA_KINA.d | A | no | kuchangamkia matamshi bora ya sauti /ch/ na /sh/katika mazungumzo ya kawaida ili kufanikisha mawasiliano | Teacher observation over the term or a portfolio entry; a tapped answer cannot show a feeling or a habit. |
-| KUSOMA.T9_KUSOMA_KWA_UFAHAMU.a | Q | NO | kutambua habari mahususi katika kifungu cha ufahamu cha kushawishi | Question families. |
-| KUSOMA.T9_KUSOMA_KWA_UFAHAMU.b | Q | NO | kutabiri matukio katika kifungu cha ufahamu cha kushawishi | Question families. |
+| KUSOMA.T9_KUSOMA_KWA_UFAHAMU.a | Q | yes | kutambua habari mahususi katika kifungu cha ufahamu cha kushawishi | Question families. |
+| KUSOMA.T9_KUSOMA_KWA_UFAHAMU.b | Q | yes | kutabiri matukio katika kifungu cha ufahamu cha kushawishi | Question families. |
 | KUSOMA.T9_KUSOMA_KWA_UFAHAMU.c | Q | NO | kueleza maana ya msamiati na vifungu vya maneno katika kifungu cha ufahamu cha kushawishi | Question families. |
 | KUSOMA.T9_KUSOMA_KWA_UFAHAMU.d | O | no | kujadili ushawishi katika kifungu cha ufahamu cha kushawishi | An oral or listening check scored by the teacher with the observation rubric (PLAN_OBSERVATION_RUBRICS.md): listening and speaking tasks, songs, recitation and role play. |
 | KUSOMA.T9_KUSOMA_KWA_UFAHAMU.e | A | no | kuchangamkia usomaji wa ufahamu shawishi ili kukuza hamu ya ujifunzaji | Teacher observation over the term or a portfolio entry; a tapped answer cannot show a feeling or a habit. |
@@ -184,8 +184,8 @@ Built from `curriculum/kiswahili/g8.json` and the registry entry. Outcome text i
 | SARUFI.T11_MNYAMBULIKO_WA_VITEN.a | Q | yes | kutambua kauli ya kutendeka, kutendewa na kutendatenda katika vitenzi | Question families. |
 | SARUFI.T11_MNYAMBULIKO_WA_VITEN.b | Q | yes | kutumia vitenzi katika kauli ya kutendeka, kutendewa na kutendatenda ipasavyo katika matini | Question families. |
 | SARUFI.T11_MNYAMBULIKO_WA_VITEN.c | A | no | kuchangamkia kutumia vitenzi katika kauli ya kutendeka, kutendewa na kutendatenda ipasavyo ili kuimarisha mawasiliano. masuala mtambuko mbalimbali | Teacher observation over the term or a portfolio entry; a tapped answer cannot show a feeling or a habit. |
-| KUSIKI.T12_KUSIKILIZA_KWA_MAKIN.a | Q | NO | kueleza habari katika matini ya kusikiliza | Question families. |
-| KUSIKI.T12_KUSIKILIZA_KWA_MAKIN.b | O | no | kudondoa habari muhimu katika matini aliyosikiliza kwa kufuata mpangilio ufaao | An oral or listening check scored by the teacher with the observation rubric (PLAN_OBSERVATION_RUBRICS.md): listening and speaking tasks, songs, recitation and role play. |
+| KUSIKI.T12_KUSIKILIZA_KWA_MAKIN.a | Q | yes | kueleza habari katika matini ya kusikiliza | Question families. |
+| KUSIKI.T12_KUSIKILIZA_KWA_MAKIN.b | O | yes (knowledge half) | kudondoa habari muhimu katika matini aliyosikiliza kwa kufuata mpangilio ufaao | An oral or listening check scored by the teacher with the observation rubric (PLAN_OBSERVATION_RUBRICS.md): listening and speaking tasks, songs, recitation and role play. |
 | KUSIKI.T12_KUSIKILIZA_KWA_MAKIN.c | O | no | kukadiria maana ya msamiati mahususi na vifungu katika matini ya kusikiliza | An oral or listening check scored by the teacher with the observation rubric (PLAN_OBSERVATION_RUBRICS.md): listening and speaking tasks, songs, recitation and role play. |
 | KUSIKI.T12_KUSIKILIZA_KWA_MAKIN.d | O | no | kujenga mazoea ya kufurahia kusikiliza vifungu vya kusikiliza ili kuimarisha uwezo wa kusikiliza | An oral or listening check scored by the teacher with the observation rubric (PLAN_OBSERVATION_RUBRICS.md): listening and speaking tasks, songs, recitation and role play. |
 | KUSOMA.T12_KUSOMA_KWA_UFASAHA.a | Q | NO | kueleza vipengele vya kusoma kwa ufasaha ili kuvibainisha | Question families. |
@@ -222,8 +222,8 @@ Built from `curriculum/kiswahili/g8.json` and the registry entry. Outcome text i
 | KUSIKI.T14_HADITHI.b | O | no | kujadili umuhimu wa vipengele vya lugha vinavyotumika katika hadithi | An oral or listening check scored by the teacher with the observation rubric (PLAN_OBSERVATION_RUBRICS.md): listening and speaking tasks, songs, recitation and role play. |
 | KUSIKI.T14_HADITHI.c | O | no | kusimulia hadithi kwa kutumia vipengele vya lugha ipasavyo | An oral or listening check scored by the teacher with the observation rubric (PLAN_OBSERVATION_RUBRICS.md): listening and speaking tasks, songs, recitation and role play. |
 | KUSIKI.T14_HADITHI.d | A | no | kuonea fahari uchanganuzi wa lugha katika hadithi kama utungo wa fasihi simulizi | Teacher observation over the term or a portfolio entry; a tapped answer cannot show a feeling or a habit. |
-| KUSOMA.T14_KUSOMA_KWA_UFAHAMU.a | Q | NO | kudondoa habari mahususi katika kifungu cha mjadala | Question families. |
-| KUSOMA.T14_KUSOMA_KWA_UFAHAMU.b | Q | NO | kutambua msamiati mpya katika kifungu cha mjadala | Question families. |
+| KUSOMA.T14_KUSOMA_KWA_UFAHAMU.a | Q | yes | kudondoa habari mahususi katika kifungu cha mjadala | Question families. |
+| KUSOMA.T14_KUSOMA_KWA_UFAHAMU.b | Q | yes | kutambua msamiati mpya katika kifungu cha mjadala | Question families. |
 | KUSOMA.T14_KUSOMA_KWA_UFAHAMU.c | Q | NO | kuchambua mitazamo katika kifungu cha mjadala | Question families. |
 | KUSOMA.T14_KUSOMA_KWA_UFAHAMU.d | Q | NO | kuridhia kusoma kifungu cha mjadala ili kukuza uelewa wa habari | Question families. |
 | KUANDI.T14_INSHA_ZA_MAELEKEZO.a | O | no | kujadili vipengele vya insha ya maelekezo | An oral or listening check scored by the teacher with the observation rubric (PLAN_OBSERVATION_RUBRICS.md): listening and speaking tasks, songs, recitation and role play. |
