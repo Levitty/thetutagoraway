@@ -1,0 +1,576 @@
+{
+ "outcomes": {
+  "SOCI.G7.SOCIAL.SELF_EXPLORATION.a": "explore personal abilities and interests for holistic development",
+  "SOCI.G7.SOCIAL.SELF_EXPLORATION.b": "develop personal values for a steady personality",
+  "SOCI.G7.SOCIAL.SELF_EXPLORATION.c": "manage emotions in day-to-day life",
+  "SOCI.G7.SOCIAL.SELF_EXPLORATION.d": "appreciate personal awareness in day-to-day life",
+  "SOCI.G7.SOCIAL.ENTREPRENEURIAL_OPPORTUN.a": "identify entrepreneurial opportunities that closely match their personality",
+  "SOCI.G7.SOCIAL.ENTREPRENEURIAL_OPPORTUN.b": "describe requirements for social entrepreneurial opportunities in the world of work",
+  "SOCI.G7.SOCIAL.ENTREPRENEURIAL_OPPORTUN.c": "appreciate entrepreneurial opportunities in social studies",
+  "SOCI.G7.PEOPLE.HUMAN_ORIGIN.a": "explore traditional stories of human origin from African communities",
+  "SOCI.G7.PEOPLE.HUMAN_ORIGIN.b": "explain religious stories about the origin of humankind",
+  "SOCI.G7.PEOPLE.HUMAN_ORIGIN.c": "illustrate common aspects found in traditional and religious stories of human origin",
+  "SOCI.G7.PEOPLE.HUMAN_ORIGIN.d": "acknowledge religious and traditional stories of human origin",
+  "SOCI.G7.PEOPLE.EARLY_CIVILISATION.a": "explore factors that led to the growth of the selected ancient Kingdoms in Africa",
+  "SOCI.G7.PEOPLE.EARLY_CIVILISATION.b": "locate the selected ancient Kingdoms on a map of Africa",
+  "SOCI.G7.PEOPLE.EARLY_CIVILISATION.c": "assess the contribution of ancient Kingdoms to the modern world civilisation",
+  "SOCI.G7.PEOPLE.EARLY_CIVILISATION.d": "appreciate the contribution of ancient kingdoms to the development of the modern world",
+  "SOCI.G7.PEOPLE.SLAVERY_AND_SERVITUDE.a": "identify the various forms of slavery and servitude in traditional African and contemporary society",
+  "SOCI.G7.PEOPLE.SLAVERY_AND_SERVITUDE.b": "explain factors that led to the development of the Indian Ocean slave trade",
+  "SOCI.G7.PEOPLE.SLAVERY_AND_SERVITUDE.c": "sketch the geographical extent of the regions covered by the Indian Ocean slave trade in Africa",
+  "SOCI.G7.PEOPLE.SLAVERY_AND_SERVITUDE.d": "desire to promote human dignity for a just and peaceful world",
+  "SOCI.G7.PEOPLE.DEVELOPMENTS_IN_MEDIUM_O.a": "compare barter trade and the use of currency trade in Africa",
+  "SOCI.G7.PEOPLE.DEVELOPMENTS_IN_MEDIUM_O.b": "trace the factors that led to the introduction of money in Africa",
+  "SOCI.G7.PEOPLE.DEVELOPMENTS_IN_MEDIUM_O.c": "deduce the impact of the introduction of money in Africa",
+  "SOCI.G7.PEOPLE.DEVELOPMENTS_IN_MEDIUM_O.d": "appreciate the medium of trade for sustainability",
+  "SOCI.G7.PEOPLE.DIVERSITY_AND_INTERPERSO.a": "identify factors that determine human diversity in the society",
+  "SOCI.G7.PEOPLE.DIVERSITY_AND_INTERPERSO.b": "explain interpersonal skills that enhance healthy interactions in a multicultural society",
+  "SOCI.G7.PEOPLE.DIVERSITY_AND_INTERPERSO.c": "classify the desirable and undesirable personality attributes",
+  "SOCI.G7.PEOPLE.DIVERSITY_AND_INTERPERSO.d": "appreciate the importance of building healthy relationships in a multicultural society",
+  "SOCI.G7.PEOPLE.PEACEFUL_COEXISTENCE.a": "outline the qualities of a peaceful person in the community",
+  "SOCI.G7.PEOPLE.PEACEFUL_COEXISTENCE.b": "explore factors that promote peaceful co-existence",
+  "SOCI.G7.PEOPLE.PEACEFUL_COEXISTENCE.c": "assess peaceful conflict resolution process in day-to-day life",
+  "SOCI.G7.PEOPLE.PEACEFUL_COEXISTENCE.d": "value the importance of peaceful coexistence in the community in day-to-day life",
+  "SOCI.G7.COMMUN.COMMUNITY_SERVICE_LEARNI.a": "explain the meaning of key terms used in community service learning (CSL) and CSL projects",
+  "SOCI.G7.COMMUN.COMMUNITY_SERVICE_LEARNI.b": "describe the importance of CSL in the community",
+  "SOCI.G7.COMMUN.COMMUNITY_SERVICE_LEARNI.c": "outline steps of a CSL project/activity",
+  "SOCI.G7.COMMUN.COMMUNITY_SERVICE_LEARNI.d": "execute a class CSL project",
+  "SOCI.G7.COMMUN.COMMUNITY_SERVICE_LEARNI.e": "desire to conduct CSL projects in the community",
+  "SOCI.G7.NATURA.HISTORICAL_INFORMATION.a": "identify various sources of historical information in the society",
+  "SOCI.G7.NATURA.HISTORICAL_INFORMATION.b": "distinguish between primary and secondary sources of historical information",
+  "SOCI.G7.NATURA.HISTORICAL_INFORMATION.c": "explore how various sources of historical information have been preserved over the years",
+  "SOCI.G7.NATURA.HISTORICAL_INFORMATION.d": "appreciate the significance of various sources of historical information in providing evidence of past human accounts",
+  "SOCI.G7.NATURA.HISTORICAL_DEVELOPMENT_O.a": "locate areas where early agriculture was practised in selected geographical regions in Africa",
+  "SOCI.G7.NATURA.HISTORICAL_DEVELOPMENT_O.b": "explore factors that favoured growing of crops and rearing of animals in selected regions during early agriculture",
+  "SOCI.G7.NATURA.HISTORICAL_DEVELOPMENT_O.c": "assess the contributions of the Nile Valley agriculture to the world civilisation",
+  "SOCI.G7.NATURA.HISTORICAL_DEVELOPMENT_O.d": "value the importance of domestication of plants and animals in Africa",
+  "SOCI.G7.NATURA.MAPS_AND_MAP_WORK.a": "describe the position, shape, and size of Africa",
+  "SOCI.G7.NATURA.MAPS_AND_MAP_WORK.b": "locate places and features using latitudes and longitudes on a map",
+  "SOCI.G7.NATURA.MAPS_AND_MAP_WORK.c": "calculate the time of different places in the world",
+  "SOCI.G7.NATURA.MAPS_AND_MAP_WORK.d": "appreciate the location of key features in the continent",
+  "SOCI.G7.NATURA.EARTH_AND_THE_SOLAR_SYST.a": "describe the origin of the earth",
+  "SOCI.G7.NATURA.EARTH_AND_THE_SOLAR_SYST.b": "explore the size, shape, and position of the Earth in the solar system",
+  "SOCI.G7.NATURA.EARTH_AND_THE_SOLAR_SYST.c": "examine the effects of rotation and revolution of the earth on human activities",
+  "SOCI.G7.NATURA.EARTH_AND_THE_SOLAR_SYST.d": "illustrate the internal structure of the earth in the solar system",
+  "SOCI.G7.NATURA.EARTH_AND_THE_SOLAR_SYST.e": "appreciate the effects of rotation and revolution of the earth on human activities",
+  "SOCI.G7.NATURA.WEATHER.a": "describe the elements of weather in the environment",
+  "SOCI.G7.NATURA.WEATHER.b": "construct selected instruments for measuring elements of weather",
+  "SOCI.G7.NATURA.WEATHER.c": "examine the significance of weather to the human environment",
+  "SOCI.G7.NATURA.WEATHER.d": "respond appropriately to different weather conditions in the environment",
+  "SOCI.G7.NATURA.FIELDWORK.a": "examine methods of data collection used in fieldwork",
+  "SOCI.G7.NATURA.FIELDWORK.b": "explore challenges and possible solutions in carrying out fieldwork",
+  "SOCI.G7.NATURA.FIELDWORK.c": "illustrate methods of data analysis after fieldwork",
+  "SOCI.G7.NATURA.FIELDWORK.d": "value field work in investigating phenomena in the immediate environment",
+  "SOCI.G7.POLITI.POLITICAL_DEVELOPMENT_IN.a": "explore roles of European groups in the ‘Scramble for and Partition’ of Africa",
+  "SOCI.G7.POLITI.POLITICAL_DEVELOPMENT_IN.b": "examine the terms of the Berlin Conference of 1884- 1885 on the partitioning of Africa",
+  "SOCI.G7.POLITI.POLITICAL_DEVELOPMENT_IN.c": "illustrate the implications of colonial rule on African nations",
+  "SOCI.G7.POLITI.POLITICAL_DEVELOPMENT_IN.d": "advocate for elimination of neo-colonialism through good governance",
+  "SOCI.G7.POLITI.THE_CONSTITUTION_OF_KENY.a": "discuss the importance of the Constitution of Kenya",
+  "SOCI.G7.POLITI.THE_CONSTITUTION_OF_KENY.b": "analyse ways of upholding and protecting the Constitution of Kenya for social cohesion",
+  "SOCI.G7.POLITI.THE_CONSTITUTION_OF_KENY.c": "apply the national values in day-to-day life as provided in the Constitution of Kenya",
+  "SOCI.G7.POLITI.THE_CONSTITUTION_OF_KENY.d": "uphold and protect the Constitution of Kenya to promote ethical and responsible citizenship",
+  "SOCI.G7.POLITI.HUMAN_RIGHTS.a": "classify human rights as stipulated in the human rights instruments",
+  "SOCI.G7.POLITI.HUMAN_RIGHTS.b": "explore characteristics of human rights in the society",
+  "SOCI.G7.POLITI.HUMAN_RIGHTS.c": "explain the concept of equity and non-discrimination in fostering solidarity",
+  "SOCI.G7.POLITI.HUMAN_RIGHTS.d": "take action to promote equity and non-discrimination for social justice",
+  "SOCI.G7.POLITI.HUMAN_RIGHTS.e": "value human rights for the promotion of human dignity",
+  "SOCI.G7.POLITI.AFRICAN_DIASPORAS.a": "explore the factors that contributed to the presence of African diasporas across the world",
+  "SOCI.G7.POLITI.AFRICAN_DIASPORAS.b": "locate countries inhabited by African diasporas by 1960 on a world map",
+  "SOCI.G7.POLITI.AFRICAN_DIASPORAS.c": "assess the role of the diasporas in the political development in Africa",
+  "SOCI.G7.POLITI.AFRICAN_DIASPORAS.d": "acknowledge the African diasporas and promotion of African unity in society today",
+  "SOCI.G7.POLITI.CITIZENSHIP.a": "explain why there is interconnectedness and interdependence among countries in the world today",
+  "SOCI.G7.POLITI.CITIZENSHIP.b": "examine the effects of globalisation at national and global levels",
+  "SOCI.G7.POLITI.CITIZENSHIP.c": "describe the qualities of a global citizen in the modern society",
+  "SOCI.G7.POLITI.CITIZENSHIP.d": "create awareness of the effects of globalisation at national and global levels",
+  "SOCI.G7.POLITI.CITIZENSHIP.e": "identify ways of contributing to the international community while maintaining loyalty to own country",
+  "SOCI.G7.POLITI.CITIZENSHIP.f": "appreciate interconnectedness and interdependence among countries in the world today"
+ },
+ "skills": {
+  "SOCI.G7.SOCIAL.SELF_EXPLORATION.SE_ABILITIES": {
+   "forms": [
+    "pick the example of a talent",
+    "tell an ability from an interest",
+    "pick a way to grow a talent",
+    "find the false step in a learner's answer"
+   ],
+   "mastery": "The child tells an ability (what a person can do), a talent (a natural gift), an interest (what a person likes to do) and a skill (what is learnt by practice), and picks practice, feedback and joining clubs as ways to grow them. Evidence rule: at least four of the last five fresh questions right across at least two question forms, and no repeated pick of the same misconception."
+  },
+  "SOCI.G7.SOCIAL.SELF_EXPLORATION.SE_VALUES": {
+   "forms": [
+    "pick the personal value",
+    "say what a value is",
+    "say what a person with steady values does under pressure",
+    "find the false step in a learner's answer"
+   ],
+   "mastery": "The child says a personal value is a belief about what is right that guides how a person acts (honesty, respect, responsibility, perseverance, kindness, integrity), tells values from possessions, and says a steady person keeps their values when friends pressure them to do wrong. Evidence rule: at least four of the last five fresh questions right across at least two question forms, and no repeated pick of the same misconception."
+  },
+  "SOCI.G7.SOCIAL.SELF_EXPLORATION.SE_EMOTIONS": {
+   "forms": [
+    "name the feeling from a short story",
+    "pick a healthy way to handle the feeling",
+    "say what a harmful way is",
+    "find the false step in a learner's answer"
+   ],
+   "mastery": "The child names feelings (happiness, love, fear, anger, sadness) from a story and picks healthy ways to manage them (breathing slowly, pausing before speaking, talking to a trusted adult, exercise, writing it down) over harmful ones (shouting, hitting, hiding it for ever, revenge). Evidence rule: at least four of the last five fresh questions right across at least two question forms, and no repeated pick of the same misconception."
+  },
+  "SOCI.G7.SOCIAL.ENTREPRENEURIAL_OPPORTUN.EO_OPPORTUNITY": {
+   "forms": [
+    "match a learner to a suitable opportunity",
+    "say what a business idea needs to start",
+    "say what a social entrepreneur does",
+    "find the false step in a learner's answer"
+   ],
+   "mastery": "The child matches a described personality or talent to a sensible opportunity, and says a social entrepreneur solves a community problem through an enterprise, and that a start needs a need people have, a plan, some capital, skills, honesty and a customer. Evidence rule: at least four of the last five fresh questions right across at least two question forms, and no repeated pick of the same misconception."
+  },
+  "SOCI.G7.PEOPLE.HUMAN_ORIGIN.HO_TRADITIONAL": {
+   "forms": [
+    "say which story belongs to which community",
+    "say who the first man and woman are in a story",
+    "say who the creator is in a story",
+    "say how such stories were passed on"
+   ],
+   "mastery": "The child tells that African communities hold their own stories of how people began, for example the Agikuyu story of Gikuyu and Mumbi under the Mukuru wa Gathanga tree given by Ngai, and the Maasai story that Enkai sent down cattle; that they were told aloud by elders; and that each community values its own. Stories are marked for a teacher or resource person to confirm. Evidence rule: at least four of the last five fresh questions right across at least two question forms, and no repeated pick of the same misconception."
+  },
+  "SOCI.G7.PEOPLE.HUMAN_ORIGIN.HO_RELIGIOUS": {
+   "forms": [
+    "say who the first man and woman are",
+    "say what a religious story and a traditional story both teach",
+    "pick the common aspect",
+    "find the false step in a learner's answer"
+   ],
+   "mastery": "The child tells that the Christian story names Adam and Eve made by God in the garden of Eden (Genesis), the Islamic story names Adam and Hawa made by Allah, and picks the common aspects of religious and traditional stories: a creator, a first man and a first woman, a special place, and the idea that people have a purpose and must be respected. Evidence rule: at least four of the last five fresh questions right across at least two question forms, and no repeated pick of the same misconception."
+  },
+  "SOCI.G7.PEOPLE.EARLY_CIVILISATION.EC_FACTORS": {
+   "forms": [
+    "say which factor helped which kingdom",
+    "pick the main reason a kingdom grew",
+    "say which kingdom is famous for what",
+    "find the false step in a learner's answer"
+   ],
+   "mastery": "The child says ancient Egypt grew on the fertile Nile valley with yearly floods and farming, Great Zimbabwe on cattle, gold and long-distance trade with the coast (its stone walls), and the Kingdom of Kongo on the fertile Congo River area, farming, iron and copper working and trade with strong central rule under the Manikongo. Evidence rule: at least four of the last five fresh questions right across at least two question forms, and no repeated pick of the same misconception."
+  },
+  "SOCI.G7.PEOPLE.EARLY_CIVILISATION.EC_LOCATE": {
+   "forms": [
+    "say which part of Africa a kingdom was in",
+    "say which river or sea it was near",
+    "say which modern country holds its remains",
+    "read a small table of kingdoms and places"
+   ],
+   "mastery": "The child places ancient Egypt in the north-east of Africa along the River Nile, Great Zimbabwe in southern Africa between the Limpopo and Zambezi rivers (today in Zimbabwe), and the Kingdom of Kongo in west-central Africa near the mouth of the Congo River (today parts of Angola and the two Congos). Map questions are in words or a small described table. Evidence rule: at least four of the last five fresh questions right across at least two question forms, and no repeated pick of the same misconception."
+  },
+  "SOCI.G7.PEOPLE.EARLY_CIVILISATION.EC_CONTRIB": {
+   "forms": [
+    "say what an ancient kingdom gave the world",
+    "say which kingdom gave which idea",
+    "say why it still matters today",
+    "find the false step in a learner's answer"
+   ],
+   "mastery": "The child says Egypt gave writing (hieroglyphs), papyrus paper, a 365-day calendar, geometry for building, medicine and the pyramids; Great Zimbabwe gave stone building without mortar and a model of trade and gold working; Kongo gave skilled copper and iron work, cloth and its system of government and trade; and that these ideas still influence the world. Evidence rule: at least four of the last five fresh questions right across at least two question forms, and no repeated pick of the same misconception."
+  },
+  "SOCI.G7.PEOPLE.SLAVERY_AND_SERVITUDE.SL_FORMS": {
+   "forms": [
+    "pick the form of servitude described",
+    "say how a form differs from another",
+    "say which is slavery today",
+    "find the false step in a learner's answer"
+   ],
+   "mastery": "The child tells slavery (a person owned and forced to work), domestic servitude, debt bondage or pledging, serfdom and indenture in the past, and child labour, forced labour, trafficking and forced marriage today, and says each takes away a person's freedom and dignity. Evidence rule: at least four of the last five fresh questions right across at least two question forms, and no repeated pick of the same misconception."
+  },
+  "SOCI.G7.PEOPLE.SLAVERY_AND_SERVITUDE.SL_INDIAN": {
+   "forms": [
+    "say why people were traded",
+    "say who bought and who sold",
+    "say what made the trade grow",
+    "find the false step in a learner's answer"
+   ],
+   "mastery": "The child says the trade grew because of demand for workers on plantations (cloves in Zanzibar, sugar on the islands), in homes and ports of Arabia and the Gulf, because ivory and slaves were carried together along trade routes, because monsoon winds carried dhows, and because Zanzibar became a trading centre. Coastal and inland leaders also took part. Evidence rule: at least four of the last five fresh questions right across at least two question forms, and no repeated pick of the same misconception."
+  },
+  "SOCI.G7.PEOPLE.SLAVERY_AND_SERVITUDE.SL_EXTENT": {
+   "forms": [
+    "say which African coast was involved",
+    "say where people were taken to",
+    "say which island was a centre",
+    "read a small table of regions"
+   ],
+   "mastery": "The child says the trade reached from Ethiopia and the Horn and the East African coast (Kilwa, Zanzibar, Mombasa, Mozambique) inland as far as Lake Victoria and the Congo basin, and carried people to Arabia, the Persian Gulf, India and islands such as Zanzibar and Réunion. Map questions are in words or a small described table. Evidence rule: at least four of the last five fresh questions right across at least two question forms, and no repeated pick of the same misconception."
+  },
+  "SOCI.G7.PEOPLE.DEVELOPMENTS_IN_MEDIUM_O.MT_COMPARE": {
+   "forms": [
+    "say what barter is",
+    "say a problem of barter",
+    "say how money fixes it",
+    "find the false step in a learner's answer"
+   ],
+   "mastery": "The child says barter is swapping goods for goods with no money, that it needs both people to want what the other has, that goods are hard to divide, store and carry or to value, and that money gives a common measure of value, is easy to carry and store and is accepted by all. Evidence rule: at least four of the last five fresh questions right across at least two question forms, and no repeated pick of the same misconception."
+  },
+  "SOCI.G7.PEOPLE.DEVELOPMENTS_IN_MEDIUM_O.MT_MONEY": {
+   "forms": [
+    "say what was used before coins",
+    "say what led to money",
+    "say what money changed",
+    "find the false step in a learner's answer"
+   ],
+   "mastery": "The child says people used cowrie shells, beads, salt, iron hoes, cattle and gold before coins; that growth of long-distance trade, towns and colonial rule (rupees and later the East African shilling) led to coins and notes; and that money made trade easier, brought wages and taxes, helped banks and savings, but also debt and a gap between rich and poor. Evidence rule: at least four of the last five fresh questions right across at least two question forms, and no repeated pick of the same misconception."
+  },
+  "SOCI.G7.PEOPLE.DIVERSITY_AND_INTERPERSO.DV_FACTORS": {
+   "forms": [
+    "pick a factor of diversity",
+    "say which differences a person chooses and which not",
+    "say why diversity is not a problem",
+    "find the false step in a learner's answer"
+   ],
+   "mastery": "The child names age, gender, ethnic group, religion, race, language, ability or disability, family background, talents and interests as what makes people different, and says differences enrich society and are not a reason to treat anyone unfairly. Evidence rule: at least four of the last five fresh questions right across at least two question forms, and no repeated pick of the same misconception."
+  },
+  "SOCI.G7.PEOPLE.DIVERSITY_AND_INTERPERSO.DV_SKILLS": {
+   "forms": [
+    "pick the skill from a story",
+    "pick a desirable attribute",
+    "pick an undesirable attribute",
+    "find the false step in a learner's answer"
+   ],
+   "mastery": "The child pairs effective communication, negotiation, assertiveness and empathy with a short story, and sorts honesty, respect, kindness, humility, responsibility and tolerance as desirable and bullying, jealousy, gossip, arrogance and dishonesty as undesirable. Evidence rule: at least four of the last five fresh questions right across at least two question forms, and no repeated pick of the same misconception."
+  },
+  "SOCI.G7.PEOPLE.PEACEFUL_COEXISTENCE.PE_QUALITIES": {
+   "forms": [
+    "pick a quality of a peaceful person",
+    "pick an action of a peaceful person",
+    "say what a peaceful person avoids",
+    "find the false step in a learner's answer"
+   ],
+   "mastery": "The child names tolerance, forgiveness, respect, honesty, fairness, patience, kindness and willingness to listen as qualities of a peaceful person, and says a peaceful person avoids revenge, insults and spreading rumours. Evidence rule: at least four of the last five fresh questions right across at least two question forms, and no repeated pick of the same misconception."
+  },
+  "SOCI.G7.PEOPLE.PEACEFUL_COEXISTENCE.PE_FACTORS": {
+   "forms": [
+    "pick a factor that promotes peace",
+    "pick a factor that breaks peace",
+    "say who helps keep peace in the community",
+    "say why peace matters"
+   ],
+   "mastery": "The child picks respect for the law, justice and fairness, equal sharing of resources, dialogue, religious and cultural tolerance, good leaders, peace committees and elders as factors that promote peace, and says peace lets people farm, trade, study and be safe. Evidence rule: at least four of the last five fresh questions right across at least two question forms, and no repeated pick of the same misconception."
+  },
+  "SOCI.G7.PEOPLE.PEACEFUL_COEXISTENCE.PE_RESOLVE": {
+   "forms": [
+    "say the first step to take",
+    "say what a mediator does",
+    "pick the method for a story",
+    "find the false step in a learner's answer"
+   ],
+   "mastery": "The child puts the steps in order (stay calm, listen to each side, name the problem, suggest solutions, agree and keep the agreement) and picks negotiation, mediation, arbitration or reconciliation by what each does, and says violence is not a method. Evidence rule: at least four of the last five fresh questions right across at least two question forms, and no repeated pick of the same misconception."
+  },
+  "SOCI.G7.COMMUN.COMMUNITY_SERVICE_LEARNI.CS_MEANING": {
+   "forms": [
+    "say what community service learning is",
+    "say what a CSL project is",
+    "say what a community need is",
+    "say how CSL helps"
+   ],
+   "mastery": "The child says community service learning (CSL) is learning by serving a community need, a CSL project is a planned activity that meets a real need, a community need is a gap such as litter or a bare school compound, and that CSL builds skills and values, solves real problems and strengthens the bond between the school and the community. Evidence rule: at least four of the last five fresh questions right across at least two question forms, and no repeated pick of the same misconception."
+  },
+  "SOCI.G7.COMMUN.COMMUNITY_SERVICE_LEARNI.CS_STEPS": {
+   "forms": [
+    "say the first step",
+    "put two steps in order",
+    "say what a plan holds",
+    "find the false step in a learner's answer"
+   ],
+   "mastery": "The child puts the steps in order: identify a need, plan (who, what, when, resources), carry out the activity, report and reflect on it, and says a good plan names tasks, people, time and resources. Evidence rule: at least four of the last five fresh questions right across at least two question forms, and no repeated pick of the same misconception."
+  },
+  "SOCI.G7.NATURA.HISTORICAL_INFORMATION.HI_SOURCES": {
+   "forms": [
+    "pick the source from a description",
+    "say which source is oral",
+    "say which is archaeological",
+    "find the false step in a learner's answer"
+   ],
+   "mastery": "The child names oral traditions, written records, archaeology (artefacts, fossils, buildings), language (linguistics), genealogies, photographs and audio-visual records, and ethnography as sources, and matches each to an example. Evidence rule: at least four of the last five fresh questions right across at least two question forms, and no repeated pick of the same misconception."
+  },
+  "SOCI.G7.NATURA.HISTORICAL_INFORMATION.HI_PRIMARY": {
+   "forms": [
+    "say whether a source is primary or secondary",
+    "pick the primary source",
+    "pick the secondary source",
+    "find the false step in a learner's answer"
+   ],
+   "mastery": "The child says a primary source was made at the time by someone who was there (a diary, a letter, an old photograph, a treaty, a tool) and a secondary source was written later by someone who was not (a textbook, an encyclopaedia, a documentary), and sorts examples correctly. Evidence rule: at least four of the last five fresh questions right across at least two question forms, and no repeated pick of the same misconception."
+  },
+  "SOCI.G7.NATURA.HISTORICAL_INFORMATION.HI_PRESERVE": {
+   "forms": [
+    "say how oral history was kept",
+    "say how written records are kept",
+    "say how objects and sites are kept",
+    "find the false step in a learner's answer"
+   ],
+   "mastery": "The child says oral history was kept in songs, proverbs, riddles and stories told by elders and now recorded on audio and video; writing on papyrus, paper and now digital files; objects in museums and archives; and sites by law and by the National Museums of Kenya. Evidence rule: at least four of the last five fresh questions right across at least two question forms, and no repeated pick of the same misconception."
+  },
+  "SOCI.G7.NATURA.HISTORICAL_DEVELOPMENT_O.EA_WHERE": {
+   "forms": [
+    "say which region grew which crop",
+    "say which factor favoured farming",
+    "say which animals were reared",
+    "say what domestication is"
+   ],
+   "mastery": "The child says early farming in Africa began in the Nile Valley (wheat, barley, flax), the Ethiopian highlands (teff, coffee) and the West African savanna and Sahel (sorghum, millet, African rice, yams), that animals reared were cattle, sheep, goats and donkeys, and picks fertile soil, reliable water, a suitable climate and wild plants and animals to tame as the factors. Domestication means taming wild plants and animals. Evidence rule: at least four of the last five fresh questions right across at least two question forms, and no repeated pick of the same misconception."
+  },
+  "SOCI.G7.NATURA.HISTORICAL_DEVELOPMENT_O.EA_NILE": {
+   "forms": [
+    "say what the yearly flood gave",
+    "say what irrigation is",
+    "say what a food surplus allowed",
+    "find the false step in a learner's answer"
+   ],
+   "mastery": "The child says the yearly Nile flood left rich silt, that irrigation (canals and the shaduf) carried water to fields, that a food surplus let some people become scribes, priests, builders and traders, and that this led to writing, a calendar, record keeping, towns and government. Evidence rule: at least four of the last five fresh questions right across at least two question forms, and no repeated pick of the same misconception."
+  },
+  "SOCI.G7.NATURA.MAPS_AND_MAP_WORK.MM_AFRICA": {
+   "forms": [
+    "say what lines cross Africa",
+    "say which oceans and seas border it",
+    "say its size",
+    "say its shape"
+   ],
+   "mastery": "The child says Africa is the second largest continent (about 30 million square kilometres), the equator crosses its middle so most of it lies in the tropics, the Tropic of Cancer crosses the north and the Tropic of Capricorn the south, the Atlantic Ocean lies to the west, the Indian Ocean to the east, the Mediterranean Sea to the north and the Red Sea to the north-east, and the shape is wide in the north and narrows to the south. Evidence rule: at least four of the last five fresh questions right across at least two question forms, and no repeated pick of the same misconception."
+  },
+  "SOCI.G7.NATURA.MAPS_AND_MAP_WORK.MM_LATLONG": {
+   "forms": [
+    "say north or south from a latitude",
+    "say east or west from a longitude",
+    "pick the place from its position",
+    "read a small table of places"
+   ],
+   "mastery": "The child reads a latitude (degrees north or south of the equator) first and then a longitude (degrees east or west of the Prime Meridian), says whether a place is in the northern or southern hemisphere and east or west of the Prime Meridian, and picks the place from a small table. Evidence rule: at least four of the last five fresh questions right across at least two question forms, and no repeated pick of the same misconception."
+  },
+  "SOCI.G7.NATURA.MAPS_AND_MAP_WORK.MM_TIME": {
+   "forms": [
+    "work out the time in an eastern place",
+    "work out the time in a western place",
+    "work out the time difference between two longitudes",
+    "say how many degrees make an hour"
+   ],
+   "mastery": "The child says the earth turns 360 degrees in 24 hours so 15 degrees is one hour and 1 degree is 4 minutes, that places east of Greenwich are ahead and places west are behind, and works out the local time or the time difference from the longitudes, adding in the east and subtracting in the west. Evidence rule: at least four of the last five fresh questions right across at least two question forms, and no repeated pick of the same misconception."
+  },
+  "SOCI.G7.NATURA.MAPS_AND_MAP_WORK.MM_FEATURES": {
+   "forms": [
+    "say which feature is largest, longest or highest",
+    "say where a feature is",
+    "say which countries share a feature",
+    "find the false step in a learner's answer"
+   ],
+   "mastery": "The child says the Nile is the longest river and flows north to the Mediterranean, the Sahara is the largest hot desert, Mount Kilimanjaro (Tanzania) is the highest mountain, Lake Victoria is the largest lake and is shared by Kenya, Uganda and Tanzania, the Congo Basin holds a great rain forest, the Kalahari and Namib deserts lie in the south-west, and the Atlas Mountains lie in the north-west. Evidence rule: at least four of the last five fresh questions right across at least two question forms, and no repeated pick of the same misconception."
+  },
+  "SOCI.G7.NATURA.EARTH_AND_THE_SOLAR_SYST.ES_ORIGIN_SIZE": {
+   "forms": [
+    "say which planet the earth is from the Sun",
+    "say the shape of the earth",
+    "pick the evidence that the earth is round",
+    "say what the big bang theory says"
+   ],
+   "mastery": "The child says the earth is about 4.5 billion years old and formed from a cloud of gas and dust around the young Sun (the nebula idea; the big bang theory is for the universe), is the third planet from the Sun of eight, is almost a sphere about 12,700 kilometres across, and picks evidence such as ships disappearing hull first, the round shadow in a lunar eclipse and photographs from space. Evidence rule: at least four of the last five fresh questions right across at least two question forms, and no repeated pick of the same misconception."
+  },
+  "SOCI.G7.NATURA.EARTH_AND_THE_SOLAR_SYST.ES_MOTION": {
+   "forms": [
+    "say what causes day and night",
+    "say what causes the seasons",
+    "say how long a rotation and a revolution take",
+    "say why the time differs between places"
+   ],
+   "mastery": "The child says rotation is the earth spinning on its axis once in 24 hours, causing day and night and differences in time between places; revolution is the earth going round the Sun once in about 365 and a quarter days, giving a leap year every four years; and the tilt of the axis (about 23.5 degrees) with revolution gives the seasons away from the equator. Evidence rule: at least four of the last five fresh questions right across at least two question forms, and no repeated pick of the same misconception."
+  },
+  "SOCI.G7.NATURA.EARTH_AND_THE_SOLAR_SYST.ES_STRUCTURE": {
+   "forms": [
+    "pick the layer from its description",
+    "put the layers in order from the top",
+    "say which layer is liquid",
+    "find the false step in a learner's answer"
+   ],
+   "mastery": "The child names the crust (thin, solid, outermost), the mantle (thick, hot, with molten rock called magma at the top), the outer core (liquid iron and nickel) and the inner core (solid, hottest), in order from the surface, and says the crust is the thinnest layer and we live on it. Evidence rule: at least four of the last five fresh questions right across at least two question forms, and no repeated pick of the same misconception."
+  },
+  "SOCI.G7.NATURA.WEATHER.WE_ELEMENTS": {
+   "forms": [
+    "pick the instrument for an element",
+    "pick the element an instrument measures",
+    "say what a Stevenson screen is for",
+    "find the false step in a learner's answer"
+   ],
+   "mastery": "The child names temperature (thermometer), rainfall (rain gauge), humidity (hygrometer), air pressure (barometer), wind direction (wind vane), wind speed (anemometer), sunshine (sunshine recorder) and cloud cover, says a Stevenson screen shelters the instruments from rain and direct sun, and tells weather (short term) from climate (long term). Evidence rule: at least four of the last five fresh questions right across at least two question forms, and no repeated pick of the same misconception."
+  },
+  "SOCI.G7.NATURA.WEATHER.WE_SIGNIFICANCE": {
+   "forms": [
+    "say how weather affects an activity",
+    "pick the right response to a weather warning",
+    "say what a forecast helps with",
+    "find the false step in a learner's answer"
+   ],
+   "mastery": "The child says weather affects farming (planting and harvest), transport, building, clothing, health and safety, that forecasts help people plan, and picks safe responses (stay indoors and away from trees in lightning, avoid crossing flooded rivers, drink water and cover up in great heat, take shelter in a storm). Evidence rule: at least four of the last five fresh questions right across at least two question forms, and no repeated pick of the same misconception."
+  },
+  "SOCI.G7.NATURA.FIELDWORK.FW_METHODS": {
+   "forms": [
+    "pick the method for a task",
+    "say what a questionnaire is",
+    "say what an interview is",
+    "find the false step in a learner's answer"
+   ],
+   "mastery": "The child names observation, questionnaires, interviews, focus group discussions and measuring or counting, and picks the best method for a task (counting vehicles by observation, asking a driver by interview, many written questions by questionnaire). Evidence rule: at least four of the last five fresh questions right across at least two question forms, and no repeated pick of the same misconception."
+  },
+  "SOCI.G7.NATURA.FIELDWORK.FW_CHALLENGES": {
+   "forms": [
+    "pick the solution to a challenge",
+    "say the safe thing to do on a road",
+    "say why permission is needed",
+    "find the false step in a learner's answer"
+   ],
+   "mastery": "The child pairs bad weather, cost, shortage of time, unwilling respondents, getting lost and road danger with their solutions (check the forecast, a small budget, a timetable, explaining the purpose politely, a map and a guide, crossing at a safe place with a teacher), and says to get permission first. Evidence rule: at least four of the last five fresh questions right across at least two question forms, and no repeated pick of the same misconception."
+  },
+  "SOCI.G7.NATURA.FIELDWORK.FW_ANALYSIS": {
+   "forms": [
+    "work out the mean of a small set",
+    "find the median",
+    "find the mode",
+    "pick a graph for the data"
+   ],
+   "mastery": "The child works out the mean (total divided by the number of values), the median (the middle value when ordered) and the mode (the value that occurs most) for a small set of whole numbers, and picks a table, bar graph or pie chart to show data. Evidence rule: at least four of the last five fresh questions right across at least two question forms, and no repeated pick of the same misconception."
+  },
+  "SOCI.G7.POLITI.POLITICAL_DEVELOPMENT_IN.PD_SCRAMBLE": {
+   "forms": [
+    "say which group did what",
+    "say a reason Europeans wanted Africa",
+    "say which explorer or company is linked to what",
+    "find the false step in a learner's answer"
+   ],
+   "mastery": "The child says explorers mapped routes and reported on resources, missionaries opened mission stations, schools and hospitals and prepared the way, traders and chartered companies (for example the Imperial British East Africa Company) set up trade and signed treaties, and colonial officers and armies took control; and gives raw materials, markets, strategic places and national pride as reasons. Evidence rule: at least four of the last five fresh questions right across at least two question forms, and no repeated pick of the same misconception."
+  },
+  "SOCI.G7.POLITI.POLITICAL_DEVELOPMENT_IN.PD_BERLIN": {
+   "forms": [
+    "say where and when it met",
+    "say who was there and who was not",
+    "say one of its terms",
+    "find the false step in a learner's answer"
+   ],
+   "mastery": "The child says European powers (and the United States as an observer) met in Berlin in 1884 to 1885, hosted by Chancellor Bismarck of Germany, no African leaders were present, and its terms were that a power must occupy a region effectively to claim it, must tell the others of a claim, and that the Congo and Niger rivers be open to trade; it set the rules for the scramble and borders were drawn later. Evidence rule: at least four of the last five fresh questions right across at least two question forms, and no repeated pick of the same misconception."
+  },
+  "SOCI.G7.POLITI.POLITICAL_DEVELOPMENT_IN.PD_IMPLICATIONS": {
+   "forms": [
+    "say a harm of colonial rule",
+    "say a change it brought",
+    "say what the new borders did",
+    "find the false step in a learner's answer"
+   ],
+   "mastery": "The child says colonial rule took away independence and land, drew borders that split some communities and joined others, brought taxes, forced labour and cash crops for European industry, harmed local culture, and also brought roads, railways, schools and new languages that served the colonial interest. Evidence rule: at least four of the last five fresh questions right across at least two question forms, and no repeated pick of the same misconception."
+  },
+  "SOCI.G7.POLITI.POLITICAL_DEVELOPMENT_IN.PD_NEO": {
+   "forms": [
+    "say what neo-colonialism means",
+    "pick a way to end it",
+    "say what good governance is",
+    "find the false step in a learner's answer"
+   ],
+   "mastery": "The child says neo-colonialism is when a powerful country still controls a free one through trade, debt, money and politics, and picks accountability, honesty, fair elections, the rule of law, building local industry and using resources for the people as good governance that reduces it. Evidence rule: at least four of the last five fresh questions right across at least two question forms, and no repeated pick of the same misconception."
+  },
+  "SOCI.G7.POLITI.THE_CONSTITUTION_OF_KENY.CK_IMPORTANCE": {
+   "forms": [
+    "say what the Constitution is",
+    "say when it was promulgated",
+    "say what it protects",
+    "find the false step in a learner's answer"
+   ],
+   "mastery": "The child says the Constitution is the supreme law of Kenya, was promulgated on 27 August 2010, sets out the rights of every person in the Bill of Rights, how the government is organised, the national values and how power is shared with the counties, and that every person and leader must obey it. Evidence rule: at least four of the last five fresh questions right across at least two question forms, and no repeated pick of the same misconception."
+  },
+  "SOCI.G7.POLITI.THE_CONSTITUTION_OF_KENY.CK_UPHOLD": {
+   "forms": [
+    "pick a way to uphold the Constitution",
+    "pick an action that breaks it",
+    "say how to protect it for unity",
+    "find the false step in a learner's answer"
+   ],
+   "mastery": "The child picks learning the Constitution, obeying the law, voting, taking part in public meetings, paying taxes, respecting the rights of others and reporting corruption as ways to uphold it, and rejects bribery, hate speech and ignoring court orders. Evidence rule: at least four of the last five fresh questions right across at least two question forms, and no repeated pick of the same misconception."
+  },
+  "SOCI.G7.POLITI.THE_CONSTITUTION_OF_KENY.CK_VALUES": {
+   "forms": [
+    "pick a national value",
+    "match a value to an action",
+    "say what patriotism means",
+    "find the false step in a learner's answer"
+   ],
+   "mastery": "The child names the national values and principles of governance in Article 10: patriotism, national unity, sharing and devolution of power, the rule of law, democracy and participation of the people, human dignity, equity, social justice, inclusiveness, equality, human rights, non-discrimination, good governance, integrity, transparency, accountability and sustainable development, and matches a value to an action. Evidence rule: at least four of the last five fresh questions right across at least two question forms, and no repeated pick of the same misconception."
+  },
+  "SOCI.G7.POLITI.HUMAN_RIGHTS.HR_CLASSIFY": {
+   "forms": [
+    "sort a right into its group",
+    "name the instrument",
+    "say who an instrument covers",
+    "find the false step in a learner's answer"
+   ],
+   "mastery": "The child sorts rights into civil and political (vote, free speech), economic, social and cultural (education, health, work) and group or peoples' rights (a clean environment, self-determination), and names the Universal Declaration of Human Rights (1948), the African Charter on Human and Peoples' Rights (1981) and Chapter Four of the Constitution of Kenya (the Bill of Rights). Evidence rule: at least four of the last five fresh questions right across at least two question forms, and no repeated pick of the same misconception."
+  },
+  "SOCI.G7.POLITI.HUMAN_RIGHTS.HR_EQUITY": {
+   "forms": [
+    "say a characteristic of human rights",
+    "tell equity from equality",
+    "say what discrimination is",
+    "find the false step in a learner's answer"
+   ],
+   "mastery": "The child says human rights are universal (for all), inalienable (cannot be taken away), indivisible and equal, tells equality (everyone gets the same) from equity (everyone gets what is fair for their need), and says discrimination is unfair treatment because of who a person is. Evidence rule: at least four of the last five fresh questions right across at least two question forms, and no repeated pick of the same misconception."
+  },
+  "SOCI.G7.POLITI.HUMAN_RIGHTS.HR_ACTION": {
+   "forms": [
+    "pick the right action in a story",
+    "pick the action that discriminates",
+    "say why rights give dignity",
+    "find the false step in a learner's answer"
+   ],
+   "mastery": "The child picks speaking up against bullying and discrimination, including everyone in games, helping a classmate with a disability, and reporting abuse to a trusted adult, rejects name-calling and exclusion, and says rights protect the dignity of every person. Evidence rule: at least four of the last five fresh questions right across at least two question forms, and no repeated pick of the same misconception."
+  },
+  "SOCI.G7.POLITI.AFRICAN_DIASPORAS.AD_FACTORS": {
+   "forms": [
+    "say what a diaspora is",
+    "say how people came to live abroad",
+    "say which was voluntary and which forced",
+    "find the false step in a learner's answer"
+   ],
+   "mastery": "The child says a diaspora is a people living away from their original homeland, and that Africans came to be spread across the world through the forced transatlantic and Indian Ocean slave trades, later movement for work and study, trade and flight from war or hardship. Evidence rule: at least four of the last five fresh questions right across at least two question forms, and no repeated pick of the same misconception."
+  },
+  "SOCI.G7.POLITI.AFRICAN_DIASPORAS.AD_LOCATE": {
+   "forms": [
+    "say which region has a diaspora",
+    "say which country is in the Caribbean",
+    "say which continent holds Brazil",
+    "read a small table of countries"
+   ],
+   "mastery": "The child places large African diasporas in the Americas (the United States, Brazil, Jamaica, Haiti, Cuba), in Europe (Britain, France) and in the Indian Ocean world (India, Arabia and islands such as Mauritius). Map questions are in words or a small described table. Evidence rule: at least four of the last five fresh questions right across at least two question forms, and no repeated pick of the same misconception."
+  },
+  "SOCI.G7.POLITI.AFRICAN_DIASPORAS.AD_ROLE": {
+   "forms": [
+    "say what Pan-Africanism is",
+    "say who a leader was and what he did",
+    "say how the diasporas helped",
+    "find the false step in a learner's answer"
+   ],
+   "mastery": "The child says Pan-Africanism is the idea that Africans and people of African origin share a cause and should unite, names W. E. B. Du Bois and Marcus Garvey of the diaspora and George Padmore and Kwame Nkrumah, and says the Pan-African congresses, writings and support from the diaspora encouraged the push for independence. The people and dates are for a teacher to confirm. Evidence rule: at least four of the last five fresh questions right across at least two question forms, and no repeated pick of the same misconception."
+  },
+  "SOCI.G7.POLITI.CITIZENSHIP.CZ_INTERDEP": {
+   "forms": [
+    "say what interdependence means",
+    "say what a country buys and sells",
+    "say why countries cooperate",
+    "find the false step in a learner's answer"
+   ],
+   "mastery": "The child says countries depend on each other because no one has every resource or skill, so they trade (Kenya sells tea and flowers and buys oil, vehicles and machines), share knowledge and technology, and work through bodies such as the United Nations, the African Union and the East African Community. Evidence rule: at least four of the last five fresh questions right across at least two question forms, and no repeated pick of the same misconception."
+  },
+  "SOCI.G7.POLITI.CITIZENSHIP.CZ_GLOBAL": {
+   "forms": [
+    "say what globalisation is",
+    "pick a good effect",
+    "pick a bad effect",
+    "find the false step in a learner's answer"
+   ],
+   "mastery": "The child says globalisation is the world becoming one connected place through trade, transport, the internet and finance, and picks the good effects (cheaper goods, quick communication, shared ideas, jobs and new markets) and the bad ones (loss of local culture, local firms beaten by imports, cybercrime, quick spread of disease). Evidence rule: at least four of the last five fresh questions right across at least two question forms, and no repeated pick of the same misconception."
+  },
+  "SOCI.G7.POLITI.CITIZENSHIP.CZ_CITIZEN": {
+   "forms": [
+    "pick the quality of a global citizen",
+    "pick a way to help the world",
+    "say how to stay loyal to Kenya too",
+    "find the false step in a learner's answer"
+   ],
+   "mastery": "The child names respect for other cultures, concern for the environment and for other people, honesty, cooperation and being informed, and picks actions such as joining peacekeeping or aid work, caring for the environment, and buying and promoting Kenyan goods, and says one can serve the world and still love and obey one's own country. Evidence rule: at least four of the last five fresh questions right across at least two question forms, and no repeated pick of the same misconception."
+  }
+ }
+}
