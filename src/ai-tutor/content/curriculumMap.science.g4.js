@@ -636,7 +636,7 @@ export const MIS_FEEDBACK = {
  "M_SS_AIR_NOTHING": "Air is a gas. A gas is matter. It takes up room even if we cannot see it.",
  "M_SS_SOFT_NOT_SOLID": "A sponge is soft but it keeps its own shape, so it is a solid.",
  "M_SP_LIQUID_OWN_SHAPE": "A liquid takes the shape of its container. It has no shape of its own.",
- "M_SP_GAS_WEIGHTLESS": "Air takes up room and has weight. A blown-up balloon weighs more than a flat one.",
+ "M_SP_GAS_WEIGHTLESS": "Air takes up room and has weight. A pumped football weighs more than a flat one.",
  "M_SP_VOLUME_CHANGES": "The amount stays the same. Only the shape changes. One litre is still one litre.",
  "M_WC_PLASTIC_ROTS": "A plastic bag does not rot. It stays in the soil for many years, so it is non-decomposable.",
  "M_WC_RUST_IS_ROT": "A rusting tin does not rot into soil. It stays for many years, so it is non-decomposable.",

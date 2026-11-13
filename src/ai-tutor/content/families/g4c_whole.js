@@ -9,7 +9,7 @@ const W = 'NUMBER.WHOLE_NUMBERS.';
 const PLACES = ['ones', 'tens', 'hundreds', 'thousands', 'ten thousands'];
 const digitAt = (n, p) => Math.floor(n / 10 ** p) % 10;
 // A five-digit number with a zero in the thousands place and a non-zero digit after it.
-const withZero = () => { let n; do { n = randInt(1, 9) * 10000 + randInt(1, 9) * 100 + randInt(1, 9) * 10 + randInt(1, 9); } while (new Set(String(n)).size < 4); return n; };
+const withZero = () => { let n; do { n = randInt(1, 9) * 10000 + randInt(1, 9) * 100 + randInt(1, 9) * 10 + randInt(1, 9); } while (new Set(String(n)).size < 5); return n; };
 const fiveDigits = () => { let n; do { n = randInt(10000, 99999); } while (String(n).includes('0') || new Set(String(n)).size < 5); return n; };
 
 export const FAMILIES = [

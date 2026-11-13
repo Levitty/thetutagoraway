@@ -43,7 +43,7 @@ export const FAMILIES = [
       const n = randInt(5, 12), k = randInt(1, n - 1), [what, prop] = pick(GROUPS);
       const options = mc(`${k}/${n}`, [[`${k}/${n - k}`, 'The whole is the whole group, not the ones without the property.', 'M_FRAC_GROUP_PART_OVER_OTHER'], [`${n - k}/${n}`, `That is the fraction that are not ${prop}.`, 'M_FRAC_GROUP_PART_OVER_OTHER'], [`${n}/${k}`, 'The part goes on top and the whole group goes on the bottom.', 'M_FRAC_SWAP_NUM_DEN']]);
       if (!options || k === n - k) return null;
-      return { question: `There are ${n} ${what} in a pen and ${k} of them are ${prop}. What fraction of the ${what} are ${prop}?`, options, instruction: 'Choose the fraction.',
+      return { question: `Out of ${n} ${what}, ${k} ${k === 1 ? 'is' : 'are'} ${prop}. What fraction of the ${what} are ${prop}?`, options, instruction: 'Choose the fraction.',
         hints: ['The whole is all the animals or things in the group.', 'Put the number with the property over the number in the whole group.'], steps: [`The whole group has ${n}.`, `${k} are ${prop}, so ${k}/${n}.`] };
     } }),
   fam({ id: 'g4c.frac.group.of-number', cs: `${F}FRACTION_OF_GROUP`, form: 'word', rung: 2,
@@ -95,7 +95,7 @@ export const FAMILIES = [
       const right = `nought point ${D[t]} ${D[h]}`, asWhole = `nought point ${W[t]}-${D[h]}`;
       const options = mc(right, [[asWhole, 'The digits after the point are said one by one, not as one whole number.', 'M_DEC_READ_AS_WHOLE'], [`${D[t]} point ${D[h]}`, `The decimal is less than one: it starts with nought.`, 'M_DEC_FRACTION_AS_TWO_WHOLES'], [`nought point ${D[h]} ${D[t]}`, 'Read the digits in the order they are written.', 'M_DEC_READ_AS_WHOLE']]);
       if (!options) return null;
-      return { question: `A scale shows ${person().name}'s weight as 0.${t}${h} kg on a toy. How is 0.${t}${h} read aloud?`, options, instruction: 'Choose how to say the number.',
+      return { question: `A scale shows the mass of a toy as 0.${t}${h} kg. How is 0.${t}${h} read aloud?`, options, instruction: 'Choose how to say the number.',
         hints: ['Say nought, then point, then each digit after the point by itself.', 'Do not say it as a whole number.'], steps: [`0.${t}${h}: nought point, then ${D[t]}, then ${D[h]}.`, `It is read: ${right}.`] };
     } }),
 
@@ -113,7 +113,7 @@ export const FAMILIES = [
   fam({ id: 'g4c.dec.place.zero', cs: `${C}DECIMAL_PLACE_VALUE`, form: 'word', rung: 2,
     gen: () => {
       const w = randInt(1, 9), h = randInt(1, 9), pe = person();
-      return { question: `${pe.name} measures a pencil as ${w}.0${h} dm. What is the value of the digit ${h} in ${w}.0${h}?`, answer: h / 100,
+      return { question: `${pe.name} measures a leaf as ${w}.0${h} cm. What is the value of the digit ${h} in ${w}.0${h}?`, answer: h / 100,
         wrong: [[h / 10, `The zero holds the tenths place, so the ${h} is in the hundredths place.`, 'M_DEC_ZERO_PLACE_HOLDER'], [h, `${h} is just the digit. Its value depends on its place.`, 'M_DEC_VALUE_OF_DIGIT'], [h * 10, 'The digit is after the point, so its value is less than one.', 'M_DEC_PLACE_NAME_AS_WHOLE']],
         hints: ['The zero is a place. It holds the tenths.', 'The next place after it is hundredths.'], steps: [`In ${w}.0${h}: ones ${w}, tenths 0, hundredths ${h}.`, `The ${h} is worth ${h / 100}.`], chk: (x) => Math.round(x * 100) === h };
     } }),

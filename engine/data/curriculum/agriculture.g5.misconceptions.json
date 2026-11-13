@@ -12,7 +12,11 @@
   "help": "Show two soils: dark crumbly and pale packed. Ask which holds water and which grows a seed, then ask what the colour tells.",
   "feedback": "Colour alone does not tell. Dark, crumbly soil is usually rich in rotted plant matter. Bare, hard, washed-away ground is a sign of poor soil.",
   "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
-  "status": "draft"
+  "status": "draft",
+  "review": {
+   "mark": "plausible, to confirm by a teacher",
+   "note": "Own judgement: believable for a Kenyan child of this age, but we have no source or homework count. A teacher who knows the class should say whether children really hold it."
+  }
  },
  "AGRI.G5.CONSER.SOIL_CONSERVATION.SOIL_SITES.M_AG_SITE_PIT_LOW": {
   "skill": "AGRI.G5.CONSER.SOIL_CONSERVATION.SOIL_SITES",
@@ -27,7 +31,11 @@
   "help": "Walk the site after rain. Ask what happens to a pit that fills with water, and what could happen to a nearby well.",
   "feedback": "A pit in a hollow floods and a pit near drinking water can pollute it. Choose firm ground near the garden and away from the well.",
   "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
-  "status": "draft"
+  "status": "draft",
+  "review": {
+   "mark": "plausible, to confirm by a teacher",
+   "note": "Own judgement: believable for a Kenyan child of this age, but we have no source or homework count. A teacher who knows the class should say whether children really hold it."
+  }
  },
  "AGRI.G5.CONSER.SOIL_CONSERVATION.SOIL_SITES.M_AG_SITE_BARE_FINE": {
   "skill": "AGRI.G5.CONSER.SOIL_CONSERVATION.SOIL_SITES",
@@ -42,7 +50,11 @@
   "help": "Plant the same seed in a bare patch and in the garden and compare after two weeks.",
   "feedback": "Hard bare ground and small yellow crops show the soil is poor. It needs rotted plant matter and manure to improve it.",
   "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
-  "status": "draft"
+  "status": "draft",
+  "review": {
+   "mark": "doubtful",
+   "why": "Children see bare hard ground where nothing grows and know it is poor; a trap option."
+  }
  },
  "AGRI.G5.CONSER.SOIL_CONSERVATION.COMPOST_PIT.M_AG_PIT_ANYTHING": {
   "skill": "AGRI.G5.CONSER.SOIL_CONSERVATION.COMPOST_PIT",
@@ -57,7 +69,11 @@
   "help": "Dig up an old pit with a teacher. Ask what rotted and what did not.",
   "feedback": "Polythene, tins and glass do not rot and spoil the manure. Only things that were once plants or animal dung go in.",
   "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
-  "status": "draft"
+  "status": "draft",
+  "review": {
+   "mark": "plausible, to confirm by a teacher",
+   "note": "Own judgement: believable for a Kenyan child of this age, but we have no source or homework count. A teacher who knows the class should say whether children really hold it."
+  }
  },
  "AGRI.G5.CONSER.SOIL_CONSERVATION.COMPOST_PIT.M_AG_PIT_COOKED": {
   "skill": "AGRI.G5.CONSER.SOIL_CONSERVATION.COMPOST_PIT",
@@ -72,7 +88,11 @@
   "help": "Ask what comes to a rubbish heap with meat scraps. Then say what a pit for a school garden should attract.",
   "feedback": "Meat and oily leftovers draw rats and flies. Peelings, leaves, grass and dung are better.",
   "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
-  "status": "draft"
+  "status": "draft",
+  "review": {
+   "mark": "plausible, to confirm by a teacher",
+   "note": "Own judgement: believable for a Kenyan child of this age, but we have no source or homework count. A teacher who knows the class should say whether children really hold it."
+  }
  },
  "AGRI.G5.CONSER.SOIL_CONSERVATION.COMPOST_PIT.M_AG_PIT_NO_CARE": {
   "skill": "AGRI.G5.CONSER.SOIL_CONSERVATION.COMPOST_PIT",
@@ -87,7 +107,11 @@
   "help": "Compare a damp covered heap and a dry open heap after a month.",
   "feedback": "Rotting needs a little moisture and cover. Keep the pit damp and covered until the waste is dark and crumbly.",
   "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
-  "status": "draft"
+  "status": "draft",
+  "review": {
+   "mark": "plausible, to confirm by a teacher",
+   "note": "Own judgement: believable for a Kenyan child of this age, but we have no source or homework count. A teacher who knows the class should say whether children really hold it."
+  }
  },
  "AGRI.G5.CONSER.SOIL_CONSERVATION.PLANT_REMAINS.M_AG_REMAINS_BURN": {
   "skill": "AGRI.G5.CONSER.SOIL_CONSERVATION.PLANT_REMAINS",
@@ -102,7 +126,11 @@
   "help": "Ask what the soil would receive if the stalks were rotted or dug in.",
   "feedback": "Burning wastes the plant matter. Rotted stalks give the soil humus and plant food.",
   "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
-  "status": "draft"
+  "status": "draft",
+  "review": {
+   "mark": "plausible, to confirm by a teacher",
+   "note": "Own judgement: believable for a Kenyan child of this age, but we have no source or homework count. A teacher who knows the class should say whether children really hold it."
+  }
  },
  "AGRI.G5.CONSER.SOIL_CONSERVATION.PLANT_REMAINS.M_AG_REMAINS_WASTE": {
   "skill": "AGRI.G5.CONSER.SOIL_CONSERVATION.PLANT_REMAINS",
@@ -117,7 +145,11 @@
   "help": "Ask where forest soil gets its food from, then link to fallen leaves.",
   "feedback": "Leaves and grass can be rotted into compost or used as mulch. They are plant food in waiting.",
   "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
-  "status": "draft"
+  "status": "draft",
+  "review": {
+   "mark": "doubtful",
+   "why": "Children in farming homes know leaves and grass are used for mulch and manure; a trap option."
+  }
  },
  "AGRI.G5.CONSER.WATER_CONSERVATION.WATER_WAYS.M_AG_WATER_NOON": {
   "skill": "AGRI.G5.CONSER.WATER_CONSERVATION.WATER_WAYS",
@@ -132,7 +164,11 @@
   "help": "Pour a cup of water on the ground at noon and one at six in the evening and compare how long each stays damp.",
   "feedback": "In the heat much of the water dries off before it soaks in. Water early or late.",
   "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
-  "status": "draft"
+  "status": "draft",
+  "review": {
+   "mark": "plausible, to confirm by a teacher",
+   "note": "Own judgement: believable for a Kenyan child of this age, but we have no source or homework count. A teacher who knows the class should say whether children really hold it."
+  }
  },
  "AGRI.G5.CONSER.WATER_CONSERVATION.WATER_WAYS.M_AG_WATER_MULCH_WARM": {
   "skill": "AGRI.G5.CONSER.WATER_CONSERVATION.WATER_WAYS",
@@ -147,7 +183,11 @@
   "help": "Uncover a mulched patch and a bare patch at midday and feel both.",
   "feedback": "Mulch shades the soil so water dries off slowly. That is how it saves water.",
   "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
-  "status": "draft"
+  "status": "draft",
+  "review": {
+   "mark": "plausible, to confirm by a teacher",
+   "note": "Own judgement: believable for a Kenyan child of this age, but we have no source or homework count. A teacher who knows the class should say whether children really hold it."
+  }
  },
  "AGRI.G5.CONSER.WATER_CONSERVATION.WATER_WAYS.M_AG_WATER_MORE": {
   "skill": "AGRI.G5.CONSER.WATER_CONSERVATION.WATER_WAYS",
@@ -162,7 +202,11 @@
   "help": "Ask where the water went. Then show that a cover stops it escaping.",
   "feedback": "More water can simply dry off or run away. A mulch, a cover crop or shade keeps the water in the soil.",
   "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
-  "status": "draft"
+  "status": "draft",
+  "review": {
+   "mark": "doubtful",
+   "why": "Children know mulch and shade keep a bed moist; \"more water only\" is mostly a trap option."
+  }
  },
  "AGRI.G5.CONSER.WATER_CONSERVATION.MULCH_TEST.M_AG_TEST_UNFAIR": {
   "skill": "AGRI.G5.CONSER.WATER_CONSERVATION.MULCH_TEST",
@@ -177,7 +221,11 @@
   "help": "Ask what Otieno could blame if the mulched bed did better.",
   "feedback": "A fair test changes only one thing. Same crop, same soil and same water, with and without mulch.",
   "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
-  "status": "draft"
+  "status": "draft",
+  "review": {
+   "mark": "common in the literature",
+   "source": "Chen and Klahr (1999), All other things being equal: acquisition and transfer of the control of variables strategy, Child Development 70: children change more than one thing at a time."
+  }
  },
  "AGRI.G5.CONSER.WATER_CONSERVATION.MULCH_TEST.M_AG_TEST_RESULT": {
   "skill": "AGRI.G5.CONSER.WATER_CONSERVATION.MULCH_TEST",
@@ -192,7 +240,11 @@
   "help": "Do the test: dig a finger deep in both beds and feel.",
   "feedback": "Mulch shades the soil and slows drying, so the mulched bed stays damp longer.",
   "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
-  "status": "draft"
+  "status": "draft",
+  "review": {
+   "mark": "doubtful",
+   "why": "Children who have felt wet mulched soil expect it to stay damp; a trap option."
+  }
  },
  "AGRI.G5.CONSER.CONSERVING_WILD_ANIMALS.PEST_DAMAGE.M_AG_PEST_MIX": {
   "skill": "AGRI.G5.CONSER.CONSERVING_WILD_ANIMALS.PEST_DAMAGE",
@@ -207,7 +259,11 @@
   "help": "Ask where a bird can reach and where a digger can reach.",
   "feedback": "Birds eat grain on the plant and fruit. Warthogs and moles dig up roots and tubers.",
   "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
-  "status": "draft"
+  "status": "draft",
+  "review": {
+   "mark": "plausible, to confirm by a teacher",
+   "note": "Own judgement: believable for a Kenyan child of this age, but we have no source or homework count. A teacher who knows the class should say whether children really hold it."
+  }
  },
  "AGRI.G5.CONSER.CONSERVING_WILD_ANIMALS.PEST_DAMAGE.M_AG_PEST_ALL": {
   "skill": "AGRI.G5.CONSER.CONSERVING_WILD_ANIMALS.PEST_DAMAGE",
@@ -222,7 +278,11 @@
   "help": "Ask what bees do to the flowers on a tomato plant and what owls do to rats.",
   "feedback": "Bees carry pollen so crops give fruit, and owls eat rats. Many wild animals help.",
   "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
-  "status": "draft"
+  "status": "draft",
+  "review": {
+   "mark": "plausible, to confirm by a teacher",
+   "note": "Own judgement: believable for a Kenyan child of this age, but we have no source or homework count. A teacher who knows the class should say whether children really hold it."
+  }
  },
  "AGRI.G5.CONSER.CONSERVING_WILD_ANIMALS.REPEL_METHODS.M_AG_REPEL_KILL": {
   "skill": "AGRI.G5.CONSER.CONSERVING_WILD_ANIMALS.REPEL_METHODS",
@@ -237,7 +297,11 @@
   "help": "Ask what happens to other animals that eat the poison and what the law says about wild animals.",
   "feedback": "We protect wild animals. Scare them off with a scarecrow, noise, a fence or a guard.",
   "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
-  "status": "draft"
+  "status": "draft",
+  "review": {
+   "mark": "plausible, to confirm by a teacher",
+   "note": "Own judgement: believable for a Kenyan child of this age, but we have no source or homework count. A teacher who knows the class should say whether children really hold it."
+  }
  },
  "AGRI.G5.CONSER.CONSERVING_WILD_ANIMALS.REPEL_METHODS.M_AG_REPEL_ONE": {
   "skill": "AGRI.G5.CONSER.CONSERVING_WILD_ANIMALS.REPEL_METHODS",
@@ -252,7 +316,11 @@
   "help": "Ask whether an elephant is afraid of a coat on a stick.",
   "feedback": "A scarecrow can scare birds, but elephants need stronger measures such as beehive fences, chilli or a trench.",
   "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
-  "status": "draft"
+  "status": "draft",
+  "review": {
+   "mark": "doubtful",
+   "why": "Few children say one method suits every animal; mostly a trap option."
+  }
  },
  "AGRI.G5.CONSER.CONSERVING_WILD_ANIMALS.REPEL_METHODS.M_AG_REPEL_CLOSE": {
   "skill": "AGRI.G5.CONSER.CONSERVING_WILD_ANIMALS.REPEL_METHODS",
@@ -267,7 +335,11 @@
   "help": "Ask who gets hurt when a person meets a frightened buffalo.",
   "feedback": "Big animals are dangerous. Keep away and tell an adult or the Kenya Wildlife Service.",
   "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
-  "status": "draft"
+  "status": "draft",
+  "review": {
+   "mark": "plausible, to confirm by a teacher",
+   "note": "Own judgement: believable for a Kenyan child of this age, but we have no source or homework count. A teacher who knows the class should say whether children really hold it."
+  }
  },
  "AGRI.G5.FOOD_P.GROWING_VEGETABLES.VEG_PRACTICES.M_AG_VEG_ORDER": {
   "skill": "AGRI.G5.FOOD_P.GROWING_VEGETABLES.VEG_PRACTICES",
@@ -282,7 +354,11 @@
   "help": "Ask what you transplant if you have not sown.",
   "feedback": "You prepare first, sow in the nursery, then transplant the seedlings, then care and harvest.",
   "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
-  "status": "draft"
+  "status": "draft",
+  "review": {
+   "mark": "doubtful",
+   "why": "The order of nursery, transplanting and harvest is recall, not a held belief."
+  }
  },
  "AGRI.G5.FOOD_P.GROWING_VEGETABLES.VEG_PRACTICES.M_AG_VEG_WATER_ONLY": {
   "skill": "AGRI.G5.FOOD_P.GROWING_VEGETABLES.VEG_PRACTICES",
@@ -297,7 +373,11 @@
   "help": "Compare a weeded and an unweeded bed after three weeks.",
   "feedback": "Plants need weeding, mulch and protection from pests as well as water.",
   "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
-  "status": "draft"
+  "status": "draft",
+  "review": {
+   "mark": "plausible, to confirm by a teacher",
+   "note": "Own judgement: believable for a Kenyan child of this age, but we have no source or homework count. A teacher who knows the class should say whether children really hold it."
+  }
  },
  "AGRI.G5.FOOD_P.GROWING_VEGETABLES.NURSERY_BED.M_AG_NURS_COARSE": {
   "skill": "AGRI.G5.FOOD_P.GROWING_VEGETABLES.NURSERY_BED",
@@ -312,7 +392,11 @@
   "help": "Hide a tiny seed under a lump and under a crumb and ask which one can push through.",
   "feedback": "Tiny seeds need fine soil so they touch the soil and the shoot can push up.",
   "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
-  "status": "draft"
+  "status": "draft",
+  "review": {
+   "mark": "doubtful",
+   "why": "Children can see that tiny seeds need fine soil; a trap option."
+  }
  },
  "AGRI.G5.FOOD_P.GROWING_VEGETABLES.NURSERY_BED.M_AG_NURS_DEEP": {
   "skill": "AGRI.G5.FOOD_P.GROWING_VEGETABLES.NURSERY_BED",
@@ -327,7 +411,11 @@
   "help": "Ask how a tiny shoot can push through a thick layer of soil.",
   "feedback": "Tiny seeds are sown shallow and covered thinly. A deep seed cannot push through.",
   "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
-  "status": "draft"
+  "status": "draft",
+  "review": {
+   "mark": "plausible, to confirm by a teacher",
+   "note": "Own judgement: believable for a Kenyan child of this age, but we have no source or homework count. A teacher who knows the class should say whether children really hold it."
+  }
  },
  "AGRI.G5.FOOD_P.GROWING_VEGETABLES.NURSERY_BED.M_AG_NURS_FLOOD": {
   "skill": "AGRI.G5.FOOD_P.GROWING_VEGETABLES.NURSERY_BED",
@@ -342,7 +430,11 @@
   "help": "Ask what happens to tiny seeds in a puddle.",
   "feedback": "Seeds and seedlings rot in standing water. Water lightly and keep the bed well drained.",
   "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
-  "status": "draft"
+  "status": "draft",
+  "review": {
+   "mark": "plausible, to confirm by a teacher",
+   "note": "Own judgement: believable for a Kenyan child of this age, but we have no source or homework count. A teacher who knows the class should say whether children really hold it."
+  }
  },
  "AGRI.G5.FOOD_P.GROWING_VEGETABLES.SEEDLING_CARE.M_AG_TRANS_NOON": {
   "skill": "AGRI.G5.FOOD_P.GROWING_VEGETABLES.SEEDLING_CARE",
@@ -357,7 +449,11 @@
   "help": "Place one wilted and one shaded seedling in the sun and compare.",
   "feedback": "The hot midday sun scorches new transplants. Evening or cloudy weather is kinder.",
   "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
-  "status": "draft"
+  "status": "draft",
+  "review": {
+   "mark": "plausible, to confirm by a teacher",
+   "note": "Own judgement: believable for a Kenyan child of this age, but we have no source or homework count. A teacher who knows the class should say whether children really hold it."
+  }
  },
  "AGRI.G5.FOOD_P.GROWING_VEGETABLES.SEEDLING_CARE.M_AG_TRANS_DRY": {
   "skill": "AGRI.G5.FOOD_P.GROWING_VEGETABLES.SEEDLING_CARE",
@@ -372,7 +468,11 @@
   "help": "Ask which seedlings keep their roots: one pulled dry or one lifted wet with soil.",
   "feedback": "Water the bed first and lift with soil on the roots so the roots are not torn.",
   "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
-  "status": "draft"
+  "status": "draft",
+  "review": {
+   "mark": "doubtful",
+   "why": "Few children pull dry seedlings bare-root on purpose; mostly a trap option."
+  }
  },
  "AGRI.G5.FOOD_P.GROWING_VEGETABLES.SEEDLING_CARE.M_AG_TRANS_NOWATER": {
   "skill": "AGRI.G5.FOOD_P.GROWING_VEGETABLES.SEEDLING_CARE",
@@ -387,7 +487,11 @@
   "help": "Look at two transplanted beds, one cared for and one left.",
   "feedback": "New transplants need water and shade for a few days, then weeding and mulching.",
   "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
-  "status": "draft"
+  "status": "draft",
+  "review": {
+   "mark": "doubtful",
+   "why": "Children know seedlings need watering; a trap option."
+  }
  },
  "AGRI.G5.FOOD_P.USES_OF_DOMESTIC_ANIMALS.ANIMAL_PRODUCTS.M_AG_PROD_COCK": {
   "skill": "AGRI.G5.FOOD_P.USES_OF_DOMESTIC_ANIMALS.ANIMAL_PRODUCTS",
@@ -402,7 +506,11 @@
   "help": "Ask the child to watch the flock: who sits on a nest?",
   "feedback": "The hen lays eggs. The cock does not.",
   "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
-  "status": "draft"
+  "status": "draft",
+  "review": {
+   "mark": "doubtful",
+   "why": "Kenyan children keep hens and know hens lay; a trap option."
+  }
  },
  "AGRI.G5.FOOD_P.USES_OF_DOMESTIC_ANIMALS.ANIMAL_PRODUCTS.M_AG_PROD_WOOL": {
   "skill": "AGRI.G5.FOOD_P.USES_OF_DOMESTIC_ANIMALS.ANIMAL_PRODUCTS",
@@ -417,7 +525,11 @@
   "help": "Show a sample of wool and a sample of goat skin and ask where each comes from.",
   "feedback": "Wool comes from sheep. Goats give meat, milk and skins.",
   "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
-  "status": "draft"
+  "status": "draft",
+  "review": {
+   "mark": "plausible, to confirm by a teacher",
+   "note": "Own judgement: believable for a Kenyan child of this age, but we have no source or homework count. A teacher who knows the class should say whether children really hold it."
+  }
  },
  "AGRI.G5.FOOD_P.USES_OF_DOMESTIC_ANIMALS.ANIMAL_PRODUCTS.M_AG_PROD_MILK_ALL": {
   "skill": "AGRI.G5.FOOD_P.USES_OF_DOMESTIC_ANIMALS.ANIMAL_PRODUCTS",
@@ -432,7 +544,11 @@
   "help": "List the animals the family milks.",
   "feedback": "Cows, goats and camels give milk. Hens give eggs, not milk.",
   "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
-  "status": "draft"
+  "status": "draft",
+  "review": {
+   "mark": "doubtful",
+   "why": "Children know a hen gives no milk; a trap option."
+  }
  },
  "AGRI.G5.FOOD_P.USES_OF_DOMESTIC_ANIMALS.ANIMAL_USES.M_AG_USE_FOOD_ONLY": {
   "skill": "AGRI.G5.FOOD_P.USES_OF_DOMESTIC_ANIMALS.ANIMAL_USES",
@@ -447,7 +563,11 @@
   "help": "Ask who ploughs the field in a family with no tractor.",
   "feedback": "Oxen pull ploughs and carts. Animals give work as well as food.",
   "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
-  "status": "draft"
+  "status": "draft",
+  "review": {
+   "mark": "plausible, to confirm by a teacher",
+   "note": "Own judgement: believable for a Kenyan child of this age, but we have no source or homework count. A teacher who knows the class should say whether children really hold it."
+  }
  },
  "AGRI.G5.FOOD_P.USES_OF_DOMESTIC_ANIMALS.ANIMAL_USES.M_AG_USE_DONKEY": {
   "skill": "AGRI.G5.FOOD_P.USES_OF_DOMESTIC_ANIMALS.ANIMAL_USES",
@@ -462,7 +582,11 @@
   "help": "Ask who carries water in the dry season.",
   "feedback": "Donkeys carry loads and pull carts, which saves people carrying heavy things.",
   "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
-  "status": "draft"
+  "status": "draft",
+  "review": {
+   "mark": "doubtful",
+   "why": "Children see donkeys carry loads; milk from a donkey is a trap option."
+  }
  },
  "AGRI.G5.FOOD_P.USES_OF_DOMESTIC_ANIMALS.ANIMAL_USES.M_AG_USE_DUNG": {
   "skill": "AGRI.G5.FOOD_P.USES_OF_DOMESTIC_ANIMALS.ANIMAL_USES",
@@ -477,7 +601,11 @@
   "help": "Compare kale grown with and without manure.",
   "feedback": "Dung rots into manure that adds plant food and helps the soil.",
   "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
-  "status": "draft"
+  "status": "draft",
+  "review": {
+   "mark": "plausible, to confirm by a teacher",
+   "note": "Own judgement: believable for a Kenyan child of this age, but we have no source or homework count. A teacher who knows the class should say whether children really hold it."
+  }
  },
  "AGRI.G5.FOOD_P.PRESERVATION_OF_CEREALS_.PRESERVE_METHODS.M_AG_PRES_WET": {
   "skill": "AGRI.G5.FOOD_P.PRESERVATION_OF_CEREALS_.PRESERVE_METHODS",
@@ -492,7 +620,11 @@
   "help": "Store a handful dry and a handful damp in jars for a week.",
   "feedback": "Damp grain grows mould. Dry it fully before storing.",
   "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
-  "status": "draft"
+  "status": "draft",
+  "review": {
+   "mark": "plausible, to confirm by a teacher",
+   "note": "Own judgement: believable for a Kenyan child of this age, but we have no source or homework count. A teacher who knows the class should say whether children really hold it."
+  }
  },
  "AGRI.G5.FOOD_P.PRESERVATION_OF_CEREALS_.PRESERVE_METHODS.M_AG_PRES_SACK": {
   "skill": "AGRI.G5.FOOD_P.PRESERVATION_OF_CEREALS_.PRESERVE_METHODS",
@@ -507,7 +639,11 @@
   "help": "Place weevils in an open jar and a sealed jar overnight.",
   "feedback": "An airtight container stops air and insects. Open baskets let weevils in.",
   "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
-  "status": "draft"
+  "status": "draft",
+  "review": {
+   "mark": "plausible, to confirm by a teacher",
+   "note": "Own judgement: believable for a Kenyan child of this age, but we have no source or homework count. A teacher who knows the class should say whether children really hold it."
+  }
  },
  "AGRI.G5.FOOD_P.PRESERVATION_OF_CEREALS_.PRESERVE_METHODS.M_AG_PRES_WATER": {
   "skill": "AGRI.G5.FOOD_P.PRESERVATION_OF_CEREALS_.PRESERVE_METHODS",
@@ -522,7 +658,11 @@
   "help": "Ask what happens to soaked beans after a day.",
   "feedback": "Soaked beans sprout or rot. Drying and sealed storage preserve beans.",
   "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
-  "status": "draft"
+  "status": "draft",
+  "review": {
+   "mark": "doubtful",
+   "why": "Children know wet grain spoils; a trap option."
+  }
  },
  "AGRI.G5.FOOD_P.PRESERVATION_OF_CEREALS_.PRESERVE_PRACTICE.M_AG_PRACT_SEAL_EARLY": {
   "skill": "AGRI.G5.FOOD_P.PRESERVATION_OF_CEREALS_.PRESERVE_PRACTICE",
@@ -537,7 +677,11 @@
   "help": "Seal two jars, one with dry maize and one with damp, and look after a week.",
   "feedback": "Sealing damp grain traps the moisture and it grows mould. Dry it first.",
   "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
-  "status": "draft"
+  "status": "draft",
+  "review": {
+   "mark": "plausible, to confirm by a teacher",
+   "note": "Own judgement: believable for a Kenyan child of this age, but we have no source or homework count. A teacher who knows the class should say whether children really hold it."
+  }
  },
  "AGRI.G5.FOOD_P.PRESERVATION_OF_CEREALS_.PRESERVE_PRACTICE.M_AG_PRACT_GROUND": {
   "skill": "AGRI.G5.FOOD_P.PRESERVATION_OF_CEREALS_.PRESERVE_PRACTICE",
@@ -552,7 +696,11 @@
   "help": "Ask where rats and damp enter.",
   "feedback": "Floors and walls let in damp and rats. Raise the sacks and keep them away from the wall.",
   "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
-  "status": "draft"
+  "status": "draft",
+  "review": {
+   "mark": "plausible, to confirm by a teacher",
+   "note": "Own judgement: believable for a Kenyan child of this age, but we have no source or homework count. A teacher who knows the class should say whether children really hold it."
+  }
  },
  "AGRI.G5.FOOD_P.PRESERVATION_OF_CEREALS_.PRESERVE_PRACTICE.M_AG_PRACT_DRYNESS": {
   "skill": "AGRI.G5.FOOD_P.PRESERVATION_OF_CEREALS_.PRESERVE_PRACTICE",
@@ -567,7 +715,11 @@
   "help": "Try the bite test on a dry and a damp grain.",
   "feedback": "A dry grain is hard and cracks when bitten or sounds like a rattle when shaken.",
   "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
-  "status": "draft"
+  "status": "draft",
+  "review": {
+   "mark": "plausible, to confirm by a teacher",
+   "note": "Own judgement: believable for a Kenyan child of this age, but we have no source or homework count. A teacher who knows the class should say whether children really hold it."
+  }
  },
  "AGRI.G5.FOOD_P.FOOD_NUTRIENTS.NUTRIENT_FUNCTIONS.M_AG_NUT_PROT_ENERGY": {
   "skill": "AGRI.G5.FOOD_P.FOOD_NUTRIENTS.NUTRIENT_FUNCTIONS",
@@ -582,7 +734,11 @@
   "help": "Ask what a growing child needs to make new muscle.",
   "feedback": "Proteins build and repair the body. Carbohydrates give energy.",
   "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
-  "status": "draft"
+  "status": "draft",
+  "review": {
+   "mark": "plausible, to confirm by a teacher",
+   "note": "Own judgement: believable for a Kenyan child of this age, but we have no source or homework count. A teacher who knows the class should say whether children really hold it."
+  }
  },
  "AGRI.G5.FOOD_P.FOOD_NUTRIENTS.NUTRIENT_FUNCTIONS.M_AG_NUT_VIT_ENERGY": {
   "skill": "AGRI.G5.FOOD_P.FOOD_NUTRIENTS.NUTRIENT_FUNCTIONS",
@@ -597,7 +753,11 @@
   "help": "Ask which group of foods stops illness.",
   "feedback": "Vitamins protect the body. Energy comes mostly from carbohydrates and fats.",
   "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
-  "status": "draft"
+  "status": "draft",
+  "review": {
+   "mark": "plausible, to confirm by a teacher",
+   "note": "Own judgement: believable for a Kenyan child of this age, but we have no source or homework count. A teacher who knows the class should say whether children really hold it."
+  }
  },
  "AGRI.G5.FOOD_P.FOOD_NUTRIENTS.NUTRIENT_FUNCTIONS.M_AG_NUT_FAT_BAD": {
   "skill": "AGRI.G5.FOOD_P.FOOD_NUTRIENTS.NUTRIENT_FUNCTIONS",
@@ -612,7 +772,11 @@
   "help": "Ask why animals in cold places have a layer of fat.",
   "feedback": "Fats store energy and keep the body warm. A little is needed, too much is not good.",
   "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
-  "status": "draft"
+  "status": "draft",
+  "review": {
+   "mark": "plausible, to confirm by a teacher",
+   "note": "Own judgement: believable for a Kenyan child of this age, but we have no source or homework count. A teacher who knows the class should say whether children really hold it."
+  }
  },
  "AGRI.G5.FOOD_P.FOOD_NUTRIENTS.FOOD_GROUPS.M_AG_GRP_PLANT_VIT": {
   "skill": "AGRI.G5.FOOD_P.FOOD_NUTRIENTS.FOOD_GROUPS",
@@ -627,7 +791,11 @@
   "help": "Ask what ugali, rice and cassava have in common.",
   "feedback": "Cassava, ugali and rice are carbohydrate foods that give energy. Vitamin foods are mostly fruits and green vegetables.",
   "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
-  "status": "draft"
+  "status": "draft",
+  "review": {
+   "mark": "plausible, to confirm by a teacher",
+   "note": "Own judgement: believable for a Kenyan child of this age, but we have no source or homework count. A teacher who knows the class should say whether children really hold it."
+  }
  },
  "AGRI.G5.FOOD_P.FOOD_NUTRIENTS.FOOD_GROUPS.M_AG_GRP_MILK_ENERGY": {
   "skill": "AGRI.G5.FOOD_P.FOOD_NUTRIENTS.FOOD_GROUPS",
@@ -642,7 +810,11 @@
   "help": "Ask what chicks grow from.",
   "feedback": "Eggs, milk and beans are rich in protein, so they build the body.",
   "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
-  "status": "draft"
+  "status": "draft",
+  "review": {
+   "mark": "plausible, to confirm by a teacher",
+   "note": "Own judgement: believable for a Kenyan child of this age, but we have no source or homework count. A teacher who knows the class should say whether children really hold it."
+  }
  },
  "AGRI.G5.FOOD_P.FOOD_NUTRIENTS.FOOD_GROUPS.M_AG_GRP_FILLING": {
   "skill": "AGRI.G5.FOOD_P.FOOD_NUTRIENTS.FOOD_GROUPS",
@@ -657,7 +829,11 @@
   "help": "Ask what ugali is made from and what it gives for running and playing.",
   "feedback": "Ugali is a carbohydrate food that gives energy. Body-building foods are beans, meat, fish, eggs and milk.",
   "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
-  "status": "draft"
+  "status": "draft",
+  "review": {
+   "mark": "plausible, to confirm by a teacher",
+   "note": "Own judgement: believable for a Kenyan child of this age, but we have no source or homework count. A teacher who knows the class should say whether children really hold it."
+  }
  },
  "AGRI.G5.FOOD_P.FOOD_NUTRIENTS.FOOD_GROUPS.M_AG_GRP_BUTTER_PROT": {
   "skill": "AGRI.G5.FOOD_P.FOOD_NUTRIENTS.FOOD_GROUPS",
@@ -672,7 +848,11 @@
   "help": "Ask what is left on the pan after frying.",
   "feedback": "Cooking oil and butter are fats.",
   "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
-  "status": "draft"
+  "status": "draft",
+  "review": {
+   "mark": "doubtful",
+   "why": "Few children call cooking oil a protein; mostly a trap option."
+  }
  },
  "AGRI.G5.FOOD_P.FOOD_NUTRIENTS.DEFICIENCY_DISEASES.M_AG_DIS_SWAP": {
   "skill": "AGRI.G5.FOOD_P.FOOD_NUTRIENTS.DEFICIENCY_DISEASES",
@@ -687,7 +867,11 @@
   "help": "Describe the pictures: a swollen belly and puffy legs, and a very thin wasted child.",
   "feedback": "Marasmus is very thin and wasted from too little food overall. Kwashiorkor shows swollen legs and belly from lack of protein.",
   "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
-  "status": "draft"
+  "status": "draft",
+  "review": {
+   "mark": "plausible, to confirm by a teacher",
+   "note": "Own judgement: believable for a Kenyan child of this age, but we have no source or homework count. A teacher who knows the class should say whether children really hold it."
+  }
  },
  "AGRI.G5.FOOD_P.FOOD_NUTRIENTS.DEFICIENCY_DISEASES.M_AG_DIS_CATCH": {
   "skill": "AGRI.G5.FOOD_P.FOOD_NUTRIENTS.DEFICIENCY_DISEASES",
@@ -702,7 +886,11 @@
   "help": "Ask what two children from the same home both ate and what they both missed.",
   "feedback": "Lack of a nutrient is not an infection. It does not spread from person to person.",
   "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
-  "status": "draft"
+  "status": "draft",
+  "review": {
+   "mark": "plausible, to confirm by a teacher",
+   "note": "Own judgement: believable for a Kenyan child of this age, but we have no source or homework count. A teacher who knows the class should say whether children really hold it."
+  }
  },
  "AGRI.G5.FOOD_P.FOOD_NUTRIENTS.DEFICIENCY_DISEASES.M_AG_DIS_CAUSE": {
   "skill": "AGRI.G5.FOOD_P.FOOD_NUTRIENTS.DEFICIENCY_DISEASES",
@@ -717,7 +905,11 @@
   "help": "Match each disease with its missing nutrient on a card.",
   "feedback": "Goitre comes from too little iodine. Anaemia comes from too little iron.",
   "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
-  "status": "draft"
+  "status": "draft",
+  "review": {
+   "mark": "plausible, to confirm by a teacher",
+   "note": "Own judgement: believable for a Kenyan child of this age, but we have no source or homework count. A teacher who knows the class should say whether children really hold it."
+  }
  },
  "AGRI.G5.FOOD_P.FOOD_NUTRIENTS.DISEASE_PREVENTION.M_AG_PREV_ONE_FOOD": {
   "skill": "AGRI.G5.FOOD_P.FOOD_NUTRIENTS.DISEASE_PREVENTION",
@@ -732,7 +924,11 @@
   "help": "Ask which nutrients ugali alone is missing.",
   "feedback": "A varied meal gives all the nutrients. One food cannot.",
   "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
-  "status": "draft"
+  "status": "draft",
+  "review": {
+   "mark": "plausible, to confirm by a teacher",
+   "note": "Own judgement: believable for a Kenyan child of this age, but we have no source or homework count. A teacher who knows the class should say whether children really hold it."
+  }
  },
  "AGRI.G5.FOOD_P.FOOD_NUTRIENTS.DISEASE_PREVENTION.M_AG_PREV_SALT": {
   "skill": "AGRI.G5.FOOD_P.FOOD_NUTRIENTS.DISEASE_PREVENTION",
@@ -747,7 +943,11 @@
   "help": "Check the packet for the word iodised.",
   "feedback": "Only iodised salt carries iodine to prevent goitre.",
   "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
-  "status": "draft"
+  "status": "draft",
+  "review": {
+   "mark": "plausible, to confirm by a teacher",
+   "note": "Own judgement: believable for a Kenyan child of this age, but we have no source or homework count. A teacher who knows the class should say whether children really hold it."
+  }
  },
  "AGRI.G5.FOOD_P.FOOD_NUTRIENTS.DISEASE_PREVENTION.M_AG_PREV_MEDICINE": {
   "skill": "AGRI.G5.FOOD_P.FOOD_NUTRIENTS.DISEASE_PREVENTION",
@@ -762,7 +962,11 @@
   "help": "Ask what a family can do at the next meal.",
   "feedback": "Eating enough protein foods prevents kwashiorkor. Good food is the best protection.",
   "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
-  "status": "draft"
+  "status": "draft",
+  "review": {
+   "mark": "plausible, to confirm by a teacher",
+   "note": "Own judgement: believable for a Kenyan child of this age, but we have no source or homework count. A teacher who knows the class should say whether children really hold it."
+  }
  },
  "AGRI.G5.FOOD_P.COOKING_FOOD.FRYING_METHODS.M_AG_FRY_DEEP_LITTLE": {
   "skill": "AGRI.G5.FOOD_P.COOKING_FOOD.FRYING_METHODS",
@@ -777,7 +981,11 @@
   "help": "Compare a pan of mandazi frying in deep oil and eggs frying in a little oil.",
   "feedback": "In deep frying the food is covered by hot oil.",
   "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
-  "status": "draft"
+  "status": "draft",
+  "review": {
+   "mark": "doubtful",
+   "why": "Children who have seen mandazi fried know they float in oil; a trap option."
+  }
  },
  "AGRI.G5.FOOD_P.COOKING_FOOD.FRYING_METHODS.M_AG_FRY_DRY_LOTS": {
   "skill": "AGRI.G5.FOOD_P.COOKING_FOOD.FRYING_METHODS",
@@ -792,7 +1000,11 @@
   "help": "Warm sausages in a dry pan and watch the fat come out.",
   "feedback": "Dry fat frying uses the fat that melts out of the food.",
   "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
-  "status": "draft"
+  "status": "draft",
+  "review": {
+   "mark": "doubtful",
+   "why": "A trap option; children who cook sausages know they release their own fat."
+  }
  },
  "AGRI.G5.FOOD_P.COOKING_FOOD.FRYING_METHODS.M_AG_FRY_MIX": {
   "skill": "AGRI.G5.FOOD_P.COOKING_FOOD.FRYING_METHODS",
@@ -807,7 +1019,11 @@
   "help": "Ask whether the food floats in oil or cooks in its own fat.",
   "feedback": "Mandazi are fried in deep oil. Sausages release their own fat in a pan.",
   "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
-  "status": "draft"
+  "status": "draft",
+  "review": {
+   "mark": "plausible, to confirm by a teacher",
+   "note": "Own judgement: believable for a Kenyan child of this age, but we have no source or homework count. A teacher who knows the class should say whether children really hold it."
+  }
  },
  "AGRI.G5.FOOD_P.COOKING_FOOD.FRYING_SAFETY.M_AG_FSAFE_WATER": {
   "skill": "AGRI.G5.FOOD_P.COOKING_FOOD.FRYING_SAFETY",
@@ -822,7 +1038,11 @@
   "help": "Show with a teacher why water and hot oil spit and spread the fire.",
   "feedback": "Water makes burning oil splash and spread. Smother the fire with a lid.",
   "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
-  "status": "draft"
+  "status": "draft",
+  "review": {
+   "mark": "plausible, to confirm by a teacher",
+   "note": "Own judgement: believable for a Kenyan child of this age, but we have no source or homework count. A teacher who knows the class should say whether children really hold it."
+  }
  },
  "AGRI.G5.FOOD_P.COOKING_FOOD.FRYING_SAFETY.M_AG_FSAFE_WET": {
   "skill": "AGRI.G5.FOOD_P.COOKING_FOOD.FRYING_SAFETY",
@@ -837,7 +1057,11 @@
   "help": "Dry one piece and leave another wet, drop each into a safe test with a teacher.",
   "feedback": "Water spits in hot oil. Dry food gently with a cloth first.",
   "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
-  "status": "draft"
+  "status": "draft",
+  "review": {
+   "mark": "plausible, to confirm by a teacher",
+   "note": "Own judgement: believable for a Kenyan child of this age, but we have no source or homework count. A teacher who knows the class should say whether children really hold it."
+  }
  },
  "AGRI.G5.FOOD_P.COOKING_FOOD.FRYING_SAFETY.M_AG_FSAFE_FULL": {
   "skill": "AGRI.G5.FOOD_P.COOKING_FOOD.FRYING_SAFETY",
@@ -852,7 +1076,11 @@
   "help": "Ask what happens when food goes into a full pan.",
   "feedback": "Oil bubbles up when food goes in. Fill the pan no more than half.",
   "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
-  "status": "draft"
+  "status": "draft",
+  "review": {
+   "mark": "plausible, to confirm by a teacher",
+   "note": "Own judgement: believable for a Kenyan child of this age, but we have no source or homework count. A teacher who knows the class should say whether children really hold it."
+  }
  },
  "AGRI.G5.FOOD_P.COOKING_FOOD.FRYING_SAFETY.M_AG_FSAFE_LEAVE": {
   "skill": "AGRI.G5.FOOD_P.COOKING_FOOD.FRYING_SAFETY",
@@ -867,7 +1095,11 @@
   "help": "Ask how fast oil heats and when it smokes.",
   "feedback": "Hot oil can catch fire. Never leave it alone.",
   "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
-  "status": "draft"
+  "status": "draft",
+  "review": {
+   "mark": "plausible, to confirm by a teacher",
+   "note": "Own judgement: believable for a Kenyan child of this age, but we have no source or homework count. A teacher who knows the class should say whether children really hold it."
+  }
  },
  "AGRI.G5.HYGIEN.GOOD_GROOMING_PRACTICES.GROOMING_HABITS.M_AG_GROOM_EXPENSIVE": {
   "skill": "AGRI.G5.HYGIEN.GOOD_GROOMING_PRACTICES.GROOMING_HABITS",
@@ -882,7 +1114,11 @@
   "help": "Ask whether a clean old shirt is good grooming.",
   "feedback": "Grooming is about being clean and neat, not about cost.",
   "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
-  "status": "draft"
+  "status": "draft",
+  "review": {
+   "mark": "plausible, to confirm by a teacher",
+   "note": "Own judgement: believable for a Kenyan child of this age, but we have no source or homework count. A teacher who knows the class should say whether children really hold it."
+  }
  },
  "AGRI.G5.HYGIEN.GOOD_GROOMING_PRACTICES.GROOMING_HABITS.M_AG_GROOM_PERFUME": {
   "skill": "AGRI.G5.HYGIEN.GOOD_GROOMING_PRACTICES.GROOMING_HABITS",
@@ -897,7 +1133,11 @@
   "help": "Ask what scent covers and what soap removes.",
   "feedback": "Bathing removes dirt and germs. Scent only covers smell.",
   "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
-  "status": "draft"
+  "status": "draft",
+  "review": {
+   "mark": "plausible, to confirm by a teacher",
+   "note": "Own judgement: believable for a Kenyan child of this age, but we have no source or homework count. A teacher who knows the class should say whether children really hold it."
+  }
  },
  "AGRI.G5.HYGIEN.GOOD_GROOMING_PRACTICES.GROOMING_HABITS.M_AG_GROOM_SPECIAL": {
   "skill": "AGRI.G5.HYGIEN.GOOD_GROOMING_PRACTICES.GROOMING_HABITS",
@@ -912,7 +1152,11 @@
   "help": "Ask when germs gather.",
   "feedback": "Good grooming is a daily habit.",
   "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
-  "status": "draft"
+  "status": "draft",
+  "review": {
+   "mark": "doubtful",
+   "why": "Children wash and brush daily; \"only on special days\" is mostly a trap option."
+  }
  },
  "AGRI.G5.HYGIEN.GOOD_GROOMING_PRACTICES.DRESS_ETIQUETTE.M_AG_DRESS_SAME": {
   "skill": "AGRI.G5.HYGIEN.GOOD_GROOMING_PRACTICES.DRESS_ETIQUETTE",
@@ -927,7 +1171,11 @@
   "help": "Ask what happens to best clothes in the mud, and what a games kit is for.",
   "feedback": "Dress to suit the activity: old clothes and gumboots for farm work, sports wear for games, neat clothes for a visit.",
   "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
-  "status": "draft"
+  "status": "draft",
+  "review": {
+   "mark": "doubtful",
+   "why": "Children dress differently for farm and church; a trap option."
+  }
  },
  "AGRI.G5.HYGIEN.GOOD_GROOMING_PRACTICES.DRESS_ETIQUETTE.M_AG_ETIQ_GREET": {
   "skill": "AGRI.G5.HYGIEN.GOOD_GROOMING_PRACTICES.DRESS_ETIQUETTE",
@@ -942,7 +1190,11 @@
   "help": "Practise a greeting for a visitor in class, then ask how the visitor would feel with no greeting.",
   "feedback": "Greeting visitors and new people politely shows respect. Say please and thank you every day.",
   "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
-  "status": "draft"
+  "status": "draft",
+  "review": {
+   "mark": "doubtful",
+   "why": "Kenyan children are taught to greet; not greeting is mostly a trap option."
+  }
  },
  "AGRI.G5.HYGIEN.HOME_HYGIENE.SURFACE_TYPES.M_AG_SURF_TILE_CEMENT": {
   "skill": "AGRI.G5.HYGIEN.HOME_HYGIENE.SURFACE_TYPES",
@@ -957,7 +1209,11 @@
   "help": "Let the child feel a piece of rough cement and a glazed tile and say which is which.",
   "feedback": "Tiles are smooth, shiny squares. Cement is rough and grey.",
   "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
-  "status": "draft"
+  "status": "draft",
+  "review": {
+   "mark": "doubtful",
+   "why": "Children can tell a smooth tile from rough cement; mostly a trap option."
+  }
  },
  "AGRI.G5.HYGIEN.HOME_HYGIENE.SURFACE_TYPES.M_AG_SURF_TILE_GLASS": {
   "skill": "AGRI.G5.HYGIEN.HOME_HYGIENE.SURFACE_TYPES",
@@ -972,7 +1228,11 @@
   "help": "Hold each material up to the light and ask which lets the light through.",
   "feedback": "Glass is see-through. Tiles shine but you cannot see through them.",
   "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
-  "status": "draft"
+  "status": "draft",
+  "review": {
+   "mark": "doubtful",
+   "why": "Children can see through glass; a trap option."
+  }
  },
  "AGRI.G5.HYGIEN.HOME_HYGIENE.SURFACE_CLEANING.M_AG_CLEAN_SOAK_WOOD": {
   "skill": "AGRI.G5.HYGIEN.HOME_HYGIENE.SURFACE_CLEANING",
@@ -987,7 +1247,11 @@
   "help": "Compare a piece of wood soaked overnight with a piece wiped damp, after a day.",
   "feedback": "Too much water swells and rots wood. Wipe it with a damp cloth and dry it.",
   "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
-  "status": "draft"
+  "status": "draft",
+  "review": {
+   "mark": "plausible, to confirm by a teacher",
+   "note": "Own judgement: believable for a Kenyan child of this age, but we have no source or homework count. A teacher who knows the class should say whether children really hold it."
+  }
  },
  "AGRI.G5.HYGIEN.HOME_HYGIENE.SURFACE_CLEANING.M_AG_CLEAN_EARTH_SCRUB": {
   "skill": "AGRI.G5.HYGIEN.HOME_HYGIENE.SURFACE_CLEANING",
@@ -1002,7 +1266,11 @@
   "help": "Ask what plenty of water does to packed soil.",
   "feedback": "Plenty of water turns an earthen floor to mud. Sprinkle a little water to settle the dust and sweep softly.",
   "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
-  "status": "draft"
+  "status": "draft",
+  "review": {
+   "mark": "plausible, to confirm by a teacher",
+   "note": "Own judgement: believable for a Kenyan child of this age, but we have no source or homework count. A teacher who knows the class should say whether children really hold it."
+  }
  },
  "AGRI.G5.HYGIEN.HOME_HYGIENE.SURFACE_CLEANING.M_AG_CLEAN_WET_SLIP": {
   "skill": "AGRI.G5.HYGIEN.HOME_HYGIENE.SURFACE_CLEANING",
@@ -1017,7 +1285,11 @@
   "help": "Walk carefully on a wet tile and a dry tile, and ask which is safer.",
   "feedback": "Wet tiles are slippery. Dry the floor or put up a warning sign.",
   "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
-  "status": "draft"
+  "status": "draft",
+  "review": {
+   "mark": "plausible, to confirm by a teacher",
+   "note": "Own judgement: believable for a Kenyan child of this age, but we have no source or homework count. A teacher who knows the class should say whether children really hold it."
+  }
  },
  "AGRI.G5.HYGIEN.HOME_HYGIENE.SURFACE_CLEANING.M_AG_CLEAN_WASH_FIRST": {
   "skill": "AGRI.G5.HYGIEN.HOME_HYGIENE.SURFACE_CLEANING",
@@ -1032,7 +1304,11 @@
   "help": "Pour water on a dusty floor and look at the mud, then sweep first and try again.",
   "feedback": "Sweep or dust first, then wash. Water on dust makes mud.",
   "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
-  "status": "draft"
+  "status": "draft",
+  "review": {
+   "mark": "plausible, to confirm by a teacher",
+   "note": "Own judgement: believable for a Kenyan child of this age, but we have no source or homework count. A teacher who knows the class should say whether children really hold it."
+  }
  },
  "AGRI.G5.HYGIEN.LAUNDERING_COTTON_ITEM.LAUNDRY_STEPS.M_AG_LAUN_ORDER": {
   "skill": "AGRI.G5.HYGIEN.LAUNDERING_COTTON_ITEM.LAUNDRY_STEPS",
@@ -1047,7 +1323,11 @@
   "help": "Lay out the steps on cards and do a real small wash in that order.",
   "feedback": "The order is sort, soak, wash, rinse, dry, iron.",
   "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
-  "status": "draft"
+  "status": "draft",
+  "review": {
+   "mark": "doubtful",
+   "why": "The order of laundry steps is recall, not a held belief."
+  }
  },
  "AGRI.G5.HYGIEN.LAUNDERING_COTTON_ITEM.LAUNDRY_STEPS.M_AG_LAUN_MIX": {
   "skill": "AGRI.G5.HYGIEN.LAUNDERING_COTTON_ITEM.LAUNDRY_STEPS",
@@ -1062,7 +1342,11 @@
   "help": "Soak a red cloth with a white one in a basin and look at the water.",
   "feedback": "Colour from coloured clothes can run and stain whites, so wash them separately.",
   "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
-  "status": "draft"
+  "status": "draft",
+  "review": {
+   "mark": "plausible, to confirm by a teacher",
+   "note": "Own judgement: believable for a Kenyan child of this age, but we have no source or homework count. A teacher who knows the class should say whether children really hold it."
+  }
  },
  "AGRI.G5.HYGIEN.LAUNDERING_COTTON_ITEM.LAUNDRY_STEPS.M_AG_LAUN_RINSE": {
   "skill": "AGRI.G5.HYGIEN.LAUNDERING_COTTON_ITEM.LAUNDRY_STEPS",
@@ -1077,7 +1361,11 @@
   "help": "Feel a rinsed and an unrinsed cloth when dry.",
   "feedback": "Rinse until the water runs clear. Soap left in makes cloth stiff and can itch.",
   "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
-  "status": "draft"
+  "status": "draft",
+  "review": {
+   "mark": "plausible, to confirm by a teacher",
+   "note": "Own judgement: believable for a Kenyan child of this age, but we have no source or homework count. A teacher who knows the class should say whether children really hold it."
+  }
  },
  "AGRI.G5.HYGIEN.LAUNDERING_COTTON_ITEM.LAUNDRY_CARE.M_AG_CARE_HOT": {
   "skill": "AGRI.G5.HYGIEN.LAUNDERING_COTTON_ITEM.LAUNDRY_CARE",
@@ -1092,7 +1380,11 @@
   "help": "Wash two cloths of the same colour, one in cool and one in hot water, and look at the water.",
   "feedback": "Very hot water can make colours run. Use cool or warm water for coloured cotton.",
   "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
-  "status": "draft"
+  "status": "draft",
+  "review": {
+   "mark": "plausible, to confirm by a teacher",
+   "note": "Own judgement: believable for a Kenyan child of this age, but we have no source or homework count. A teacher who knows the class should say whether children really hold it."
+  }
  },
  "AGRI.G5.HYGIEN.LAUNDERING_COTTON_ITEM.LAUNDRY_CARE.M_AG_CARE_SUN": {
   "skill": "AGRI.G5.HYGIEN.LAUNDERING_COTTON_ITEM.LAUNDRY_CARE",
@@ -1107,7 +1399,11 @@
   "help": "Compare an old shirt dried face out in the sun for a term with a shirt dried in the shade.",
   "feedback": "Strong sun fades colours. Dry coloured clothes inside out in the shade. White clothes may go in the sun.",
   "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
-  "status": "draft"
+  "status": "draft",
+  "review": {
+   "mark": "plausible, to confirm by a teacher",
+   "note": "Own judgement: believable for a Kenyan child of this age, but we have no source or homework count. A teacher who knows the class should say whether children really hold it."
+  }
  },
  "AGRI.G5.HYGIEN.LAUNDERING_COTTON_ITEM.LAUNDRY_CARE.M_AG_CARE_IRON": {
   "skill": "AGRI.G5.HYGIEN.LAUNDERING_COTTON_ITEM.LAUNDRY_CARE",
@@ -1122,7 +1418,11 @@
   "help": "Iron two pieces of cotton, one dripping and one a little damp, with a teacher.",
   "feedback": "Cotton takes a hot iron and presses best while a little damp.",
   "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
-  "status": "draft"
+  "status": "draft",
+  "review": {
+   "mark": "doubtful",
+   "why": "Few children iron cotton cold; mostly a trap option."
+  }
  },
  "AGRI.G5.PRODUC.REPAIRING_GARMENTS.STITCH_TYPES.M_AG_STITCH_SWAP": {
   "skill": "AGRI.G5.PRODUC.REPAIRING_GARMENTS.STITCH_TYPES",
@@ -1137,7 +1437,11 @@
   "help": "Have the child sew a short line of each on a scrap of cloth and name them from the pattern.",
   "feedback": "Back stitch goes back to meet the last stitch. Running stitch goes in and out with gaps.",
   "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
-  "status": "draft"
+  "status": "draft",
+  "review": {
+   "mark": "plausible, to confirm by a teacher",
+   "note": "Own judgement: believable for a Kenyan child of this age, but we have no source or homework count. A teacher who knows the class should say whether children really hold it."
+  }
  },
  "AGRI.G5.PRODUC.REPAIRING_GARMENTS.STITCH_TYPES.M_AG_STITCH_RUN_STRONG": {
   "skill": "AGRI.G5.PRODUC.REPAIRING_GARMENTS.STITCH_TYPES",
@@ -1152,7 +1456,11 @@
   "help": "Pull two seams, one in each stitch, and see which gives way.",
   "feedback": "Back stitch has no gaps and holds much better than running stitch.",
   "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
-  "status": "draft"
+  "status": "draft",
+  "review": {
+   "mark": "plausible, to confirm by a teacher",
+   "note": "Own judgement: believable for a Kenyan child of this age, but we have no source or homework count. A teacher who knows the class should say whether children really hold it."
+  }
  },
  "AGRI.G5.PRODUC.REPAIRING_GARMENTS.STITCH_TYPES.M_AG_STITCH_BACK_GAPS": {
   "skill": "AGRI.G5.PRODUC.REPAIRING_GARMENTS.STITCH_TYPES",
@@ -1167,7 +1475,11 @@
   "help": "Look at the front of both stitches on a scrap and count the gaps.",
   "feedback": "Running stitch leaves gaps. Back stitch has none on the front.",
   "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
-  "status": "draft"
+  "status": "draft",
+  "review": {
+   "mark": "plausible, to confirm by a teacher",
+   "note": "Own judgement: believable for a Kenyan child of this age, but we have no source or homework count. A teacher who knows the class should say whether children really hold it."
+  }
  },
  "AGRI.G5.PRODUC.REPAIRING_GARMENTS.SEAM_REPAIR.M_AG_SEAM_RUN": {
   "skill": "AGRI.G5.PRODUC.REPAIRING_GARMENTS.SEAM_REPAIR",
@@ -1182,7 +1494,11 @@
   "help": "Repair two seams, one in each stitch, and pull them.",
   "feedback": "A seam that has split needs back stitch, because it is strong.",
   "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
-  "status": "draft"
+  "status": "draft",
+  "review": {
+   "mark": "plausible, to confirm by a teacher",
+   "note": "Own judgement: believable for a Kenyan child of this age, but we have no source or homework count. A teacher who knows the class should say whether children really hold it."
+  }
  },
  "AGRI.G5.PRODUC.REPAIRING_GARMENTS.SEAM_REPAIR.M_AG_SEAM_START": {
   "skill": "AGRI.G5.PRODUC.REPAIRING_GARMENTS.SEAM_REPAIR",
@@ -1197,7 +1513,11 @@
   "help": "Pull a seam that started at the gap and one that started before it.",
   "feedback": "Start a little before the gap, sew a little past it, and fasten the thread with two small stitches.",
   "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
-  "status": "draft"
+  "status": "draft",
+  "review": {
+   "mark": "plausible, to confirm by a teacher",
+   "note": "Own judgement: believable for a Kenyan child of this age, but we have no source or homework count. A teacher who knows the class should say whether children really hold it."
+  }
  },
  "AGRI.G5.PRODUC.REPAIRING_GARMENTS.SEAM_REPAIR.M_AG_SEAM_TIGHT": {
   "skill": "AGRI.G5.PRODUC.REPAIRING_GARMENTS.SEAM_REPAIR",
@@ -1212,7 +1532,11 @@
   "help": "Look at a puckered seam and a flat seam side by side.",
   "feedback": "Too tight puckers the cloth. Pull firm and even.",
   "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
-  "status": "draft"
+  "status": "draft",
+  "review": {
+   "mark": "plausible, to confirm by a teacher",
+   "note": "Own judgement: believable for a Kenyan child of this age, but we have no source or homework count. A teacher who knows the class should say whether children really hold it."
+  }
  },
  "AGRI.G5.PRODUC.CONSTRUCTING_INNOVATIVE_.GARDEN_TYPES.M_AG_GTYPE_NEED_LAND": {
   "skill": "AGRI.G5.PRODUC.CONSTRUCTING_INNOVATIVE_.GARDEN_TYPES",
@@ -1227,7 +1551,11 @@
   "help": "Stand a sack on the ground and measure the ground it covers.",
   "feedback": "A vertical garden grows upwards, so it needs very little ground.",
   "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
-  "status": "draft"
+  "status": "draft",
+  "review": {
+   "mark": "doubtful",
+   "why": "Children can see a sack garden stands on a small patch; a trap option."
+  }
  },
  "AGRI.G5.PRODUC.CONSTRUCTING_INNOVATIVE_.GARDEN_TYPES.M_AG_GTYPE_SWAP": {
   "skill": "AGRI.G5.PRODUC.CONSTRUCTING_INNOVATIVE_.GARDEN_TYPES",
@@ -1242,7 +1570,11 @@
   "help": "Stand a sack up and lay a tray flat and name each one.",
   "feedback": "A sack garden grows upwards, so it is a vertical garden.",
   "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
-  "status": "draft"
+  "status": "draft",
+  "review": {
+   "mark": "plausible, to confirm by a teacher",
+   "note": "Own judgement: believable for a Kenyan child of this age, but we have no source or homework count. A teacher who knows the class should say whether children really hold it."
+  }
  },
  "AGRI.G5.PRODUC.CONSTRUCTING_INNOVATIVE_.GARDEN_BUILD.M_AG_GBUILD_ANY_CROP": {
   "skill": "AGRI.G5.PRODUC.CONSTRUCTING_INNOVATIVE_.GARDEN_BUILD",
@@ -1257,7 +1589,11 @@
   "help": "Ask how deep the roots of maize and cassava go compared with kale.",
   "feedback": "Choose small crops with shallow roots such as kale, spinach, spring onions and coriander.",
   "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
-  "status": "draft"
+  "status": "draft",
+  "review": {
+   "mark": "plausible, to confirm by a teacher",
+   "note": "Own judgement: believable for a Kenyan child of this age, but we have no source or homework count. A teacher who knows the class should say whether children really hold it."
+  }
  },
  "AGRI.G5.PRODUC.CONSTRUCTING_INNOVATIVE_.GARDEN_BUILD.M_AG_GBUILD_DRAIN": {
   "skill": "AGRI.G5.PRODUC.CONSTRUCTING_INNOVATIVE_.GARDEN_BUILD",
@@ -1272,7 +1608,11 @@
   "help": "Pour water into one sack with a column and one without, then open them.",
   "feedback": "The stone column spreads water through the sack. Containers also need drainage holes so extra water can leave.",
   "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
-  "status": "draft"
+  "status": "draft",
+  "review": {
+   "mark": "plausible, to confirm by a teacher",
+   "note": "Own judgement: believable for a Kenyan child of this age, but we have no source or homework count. A teacher who knows the class should say whether children really hold it."
+  }
  },
  "AGRI.G5.PRODUC.CONSTRUCTING_INNOVATIVE_.GARDEN_BUILD.M_AG_GBUILD_NO_WATER": {
   "skill": "AGRI.G5.PRODUC.CONSTRUCTING_INNOVATIVE_.GARDEN_BUILD",
@@ -1287,6 +1627,10 @@
   "help": "Feel the soil of a sack garden two days after watering.",
   "feedback": "A small garden dries quickly. Water it regularly through the stone column.",
   "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
-  "status": "draft"
+  "status": "draft",
+  "review": {
+   "mark": "plausible, to confirm by a teacher",
+   "note": "Own judgement: believable for a Kenyan child of this age, but we have no source or homework count. A teacher who knows the class should say whether children really hold it."
+  }
  }
 }

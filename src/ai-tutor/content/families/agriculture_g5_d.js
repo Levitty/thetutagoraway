@@ -111,7 +111,7 @@ export const FAMILIES = [
     Q('Kamau uses boiling water for a coloured shirt and the dye runs. What went wrong?', 'The water was too hot for the colour', ['The water was too cool|CARE_HOT', 'The soap was too mild|CARE_HOT', 'The shirt was too dry|CARE_HOT'], 'Use cool or warm water.'),
     Q('Njeri irons a soaking wet cotton shirt on a cool setting. What should she change?', 'Use a hot iron when it is slightly damp', ['Use a cooler iron still|CARE_IRON', 'Iron it while it is dripping|CARE_IRON', 'Do not iron cotton at all|CARE_IRON'], 'Cotton needs heat and a little dampness.'),
     Q('Hassan\'s mother dries the white sheets in the sun. Why?', 'The sun keeps them bright', ['The sun colours them blue|CARE_SUN', 'The sun makes them smaller|CARE_SUN', 'The sun washes them again|CARE_SUN'], 'Sunshine whitens cotton.'),
-    Q('Which of these fast coloured items should be washed apart from whites?', 'A new red dress', ['A white towel|CARE_HOT', 'A white sock|CARE_HOT', 'A cream blouse|CARE_HOT'], 'Coloured clothes should be washed apart from white ones.'),
+    Q('Which of these should be washed apart from the white clothes?', 'A new red dress', ['A white towel|CARE_HOT', 'A white sock|CARE_HOT', 'A cream blouse|CARE_HOT'], 'Coloured clothes should be washed apart from white ones.'),
   ], { h: ['What did the cloth need?', 'Coloured: cool water, shade. White: sun. Cotton: hot iron, slightly damp.'], s1: 'Match the care to the cloth.' })),
 
   // ---------------------------------------------------------------- STITCH_TYPES
@@ -171,7 +171,7 @@ export const FAMILIES = [
 
   // ---------------------------------------------------------------- GARDEN_BUILD
   fam('ga.bu.which', `${GA}GARDEN_BUILD`, 'direct', 1, choose([
-    Q('Which crop suits a sack garden?', 'Kale', ['Maize|GBUILD_ANY_CROP', 'Cassava|GBUILD_ANY_CROP', 'Sweet potato|GBUILD_ANY_CROP'], 'Small crops with shallow roots grow well in a sack.'),
+    Q('Which crop suits a sack garden?', 'Kale', ['Maize|GBUILD_ANY_CROP', 'Cassava|GBUILD_ANY_CROP', 'Sugarcane|GBUILD_ANY_CROP'], 'Small crops with shallow roots grow well in a sack.'),
     Q('Why is a column of stones placed in the middle of a sack garden?', 'To let water reach the lower soil', ['For decoration only|GBUILD_DRAIN', 'To make the sack heavier|GBUILD_DRAIN', 'To keep the kale from growing|GBUILD_DRAIN'], 'The stones spread water through the sack.'),
     Q('How often does a sack garden need water?', 'Regularly, through the stone column', ['Never, the sack keeps it|GBUILD_NO_WATER', 'Only once a year|GBUILD_NO_WATER', 'Only when it is cold|GBUILD_NO_WATER'], 'It dries quickly and needs regular watering.'),
     Q('What is made in plastic bottles before planting?', 'Small holes for drainage', ['No holes at all|GBUILD_DRAIN', 'Large holes in the base|GBUILD_DRAIN', 'A hole for the seeds only|GBUILD_DRAIN'], 'Extra water must be able to drain out.'),

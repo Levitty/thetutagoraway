@@ -4497,6 +4497,7 @@ var SUBJECT_PREFIXES = {
   CRES: "cre",
   CREA: "creativearts",
   INTE: "integratedscience",
+  PRET: "pretechnical",
   SOCI: "socialstudies"
 };
 

@@ -12,7 +12,11 @@
   "help": "Use a described map: the key lists symbols, the scale turns a ruler distance into ground distance. Ask for one job each.",
   "feedback": "The key tells what each symbol means. The scale tells how far a distance on the map is on the ground.",
   "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
-  "status": "draft"
+  "status": "draft",
+  "review": {
+   "mark": "plausible, to confirm by a teacher",
+   "note": "Own judgement: believable for a Kenyan child of this age, but we have no source or homework count. A teacher who knows the class should say whether children really hold it."
+  }
  },
  "SOCI.G5.NATURA.ELEMENTS_OF_A_MAP.MAP_ELEMENTS.M_EM_FRAME_TITLE": {
   "skill": "SOCI.G5.NATURA.ELEMENTS_OF_A_MAP.MAP_ELEMENTS",
@@ -27,7 +31,11 @@
   "help": "Cover the title and ask what the map is about; then ask what the border is for.",
   "feedback": "The title says what the map is about. The frame is the border line around the map.",
   "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
-  "status": "draft"
+  "status": "draft",
+  "review": {
+   "mark": "plausible, to confirm by a teacher",
+   "note": "Own judgement: believable for a Kenyan child of this age, but we have no source or homework count. A teacher who knows the class should say whether children really hold it."
+  }
  },
  "SOCI.G5.NATURA.ELEMENTS_OF_A_MAP.MAP_ELEMENTS.M_EM_COMPASS_ROLE": {
   "skill": "SOCI.G5.NATURA.ELEMENTS_OF_A_MAP.MAP_ELEMENTS",
@@ -42,7 +50,11 @@
   "help": "Ask the child to find north on the page before using any place name.",
   "feedback": "The compass shows direction. It tells you which way is north, south, east and west on the map.",
   "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
-  "status": "draft"
+  "status": "draft",
+  "review": {
+   "mark": "doubtful",
+   "why": "Children who use a compass know it shows direction; a trap option."
+  }
  },
  "SOCI.G5.NATURA.ELEMENTS_OF_A_MAP.MAP_READING.M_EM_SYMBOL_GUESS": {
   "skill": "SOCI.G5.NATURA.ELEMENTS_OF_A_MAP.MAP_READING",
@@ -57,7 +69,11 @@
   "help": "Change the key so a triangle means a church, then a school, and ask again each time.",
   "feedback": "Use the key. A symbol means what the key says it means, not what it looks like.",
   "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
-  "status": "draft"
+  "status": "draft",
+  "review": {
+   "mark": "plausible, to confirm by a teacher",
+   "note": "Own judgement: believable for a Kenyan child of this age, but we have no source or homework count. A teacher who knows the class should say whether children really hold it."
+  }
  },
  "SOCI.G5.NATURA.ELEMENTS_OF_A_MAP.MAP_READING.M_EM_SCALE_IGNORE": {
   "skill": "SOCI.G5.NATURA.ELEMENTS_OF_A_MAP.MAP_READING",
@@ -72,7 +88,11 @@
   "help": "Make a scale line on paper and read it together before measuring anything.",
   "feedback": "Use the scale. If 3 cm stands for 30 km, then 1 cm stands for 10 km, so 2 cm stands for 20 km.",
   "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
-  "status": "draft"
+  "status": "draft",
+  "review": {
+   "mark": "plausible, to confirm by a teacher",
+   "note": "Own judgement: believable for a Kenyan child of this age, but we have no source or homework count. A teacher who knows the class should say whether children really hold it."
+  }
  },
  "SOCI.G5.NATURA.LOCATION_POSITION_AND_SI.NEIGHBOURS.M_LP_NEAR_NOT_BORDER": {
   "skill": "SOCI.G5.NATURA.LOCATION_POSITION_AND_SI.NEIGHBOURS",
@@ -87,7 +107,11 @@
   "help": "Trace the border on a described map: which countries touch Kenya at a line? Rwanda lies behind Uganda and Tanzania.",
   "feedback": "Rwanda is in East Africa but does not touch Kenya. Kenya's five neighbours are Ethiopia, South Sudan, Uganda, Tanzania and Somalia.",
   "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
-  "status": "draft"
+  "status": "draft",
+  "review": {
+   "mark": "plausible, to confirm by a teacher",
+   "note": "Own judgement: believable for a Kenyan child of this age, but we have no source or homework count. A teacher who knows the class should say whether children really hold it."
+  }
  },
  "SOCI.G5.NATURA.LOCATION_POSITION_AND_SI.NEIGHBOURS.M_LP_OCEAN_AS_COUNTRY": {
   "skill": "SOCI.G5.NATURA.LOCATION_POSITION_AND_SI.NEIGHBOURS",
@@ -102,7 +126,11 @@
   "help": "Ask: can a person have a passport from the ocean? Sort touching things into countries and water.",
   "feedback": "The Indian Ocean touches Kenya but it is water, not a country. Somalia is a country that shares a border with Kenya.",
   "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
-  "status": "draft"
+  "status": "draft",
+  "review": {
+   "mark": "doubtful",
+   "why": "Children know the ocean is water; counting it as a neighbour is mostly a trap option."
+  }
  },
  "SOCI.G5.NATURA.LOCATION_POSITION_AND_SI.NEIGHBOUR_DIRECTIONS.M_LP_EAST_WEST_SWAP": {
   "skill": "SOCI.G5.NATURA.LOCATION_POSITION_AND_SI.NEIGHBOUR_DIRECTIONS",
@@ -117,7 +145,11 @@
   "help": "Use the sea: the Indian Ocean is on the east side, so Somalia is east and Uganda is the other side.",
   "feedback": "Uganda is to the west of Kenya. Somalia and the Indian Ocean are to the east.",
   "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
-  "status": "draft"
+  "status": "draft",
+  "review": {
+   "mark": "plausible, to confirm by a teacher",
+   "note": "Own judgement: believable for a Kenyan child of this age, but we have no source or homework count. A teacher who knows the class should say whether children really hold it."
+  }
  },
  "SOCI.G5.NATURA.LOCATION_POSITION_AND_SI.NEIGHBOUR_DIRECTIONS.M_LP_NORTH_SOUTH_SWAP": {
   "skill": "SOCI.G5.NATURA.LOCATION_POSITION_AND_SI.NEIGHBOUR_DIRECTIONS",
@@ -132,7 +164,11 @@
   "help": "Use Mount Kilimanjaro: it looks over Amboseli, in the south, from Tanzania. Ethiopia is up toward the Horn of Africa.",
   "feedback": "Tanzania is to the south of Kenya. Ethiopia is to the north.",
   "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
-  "status": "draft"
+  "status": "draft",
+  "review": {
+   "mark": "plausible, to confirm by a teacher",
+   "note": "Own judgement: believable for a Kenyan child of this age, but we have no source or homework count. A teacher who knows the class should say whether children really hold it."
+  }
  },
  "SOCI.G5.NATURA.MAIN_PHYSICAL_FEATURES_I.FEATURE_NAMES.M_PF_KILIMANJARO": {
   "skill": "SOCI.G5.NATURA.MAIN_PHYSICAL_FEATURES_I.FEATURE_NAMES",
@@ -147,7 +183,11 @@
   "help": "Show that Kilimanjaro stands on the Tanzanian side. Ask which mountain gave Kenya its name.",
   "feedback": "Mount Kilimanjaro is in Tanzania. Mount Kenya, at 5,199 metres, is the highest mountain in Kenya.",
   "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
-  "status": "draft"
+  "status": "draft",
+  "review": {
+   "mark": "plausible, to confirm by a teacher",
+   "note": "Own judgement: believable for a Kenyan child of this age, but we have no source or homework count. A teacher who knows the class should say whether children really hold it."
+  }
  },
  "SOCI.G5.NATURA.MAIN_PHYSICAL_FEATURES_I.FEATURE_NAMES.M_PF_TYPE_MIX": {
   "skill": "SOCI.G5.NATURA.MAIN_PHYSICAL_FEATURES_I.FEATURE_NAMES",
@@ -162,7 +202,11 @@
   "help": "Use the word in the name: lake or mount. Ask whether the water flows or stands.",
   "feedback": "Lake Turkana is a lake, a large body of water with land all round it. Rivers like the Tana flow in a line to the sea.",
   "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
-  "status": "draft"
+  "status": "draft",
+  "review": {
+   "mark": "doubtful",
+   "why": "The word Lake, River or Mount is in the name; mixing the kind of feature is mostly a trap option."
+  }
  },
  "SOCI.G5.NATURA.MAIN_PHYSICAL_FEATURES_I.FEATURE_WHERE.M_PF_REGION_MIX": {
   "skill": "SOCI.G5.NATURA.MAIN_PHYSICAL_FEATURES_I.FEATURE_WHERE",
@@ -177,7 +221,11 @@
   "help": "Link the feature to a neighbour: Lake Victoria is shared with Uganda and Tanzania, so it is on the west.",
   "feedback": "Lake Victoria lies in the west of Kenya and is shared with Uganda and Tanzania.",
   "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
-  "status": "draft"
+  "status": "draft",
+  "review": {
+   "mark": "plausible, to confirm by a teacher",
+   "note": "Own judgement: believable for a Kenyan child of this age, but we have no source or homework count. A teacher who knows the class should say whether children really hold it."
+  }
  },
  "SOCI.G5.NATURA.MAIN_PHYSICAL_FEATURES_I.FEATURE_WHERE.M_PF_RIFT_DIRECTION": {
   "skill": "SOCI.G5.NATURA.MAIN_PHYSICAL_FEATURES_I.FEATURE_WHERE",
@@ -192,7 +240,11 @@
   "help": "Describe the Rift lakes in order: Turkana in the north, then Baringo, Nakuru, Naivasha, Magadi toward the south.",
   "feedback": "The Great Rift Valley runs north to south through Kenya, past Lake Turkana, Lake Baringo, Lake Nakuru, Lake Naivasha and Lake Magadi.",
   "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
-  "status": "draft"
+  "status": "draft",
+  "review": {
+   "mark": "doubtful",
+   "why": "Direction of the Rift Valley is recall; few children hold a firm wrong idea."
+  }
  },
  "SOCI.G5.NATURA.WEATHER_AND_CLIMATE.WEATHER_ELEMENTS.M_WC_WEATHER_CLIMATE": {
   "skill": "SOCI.G5.NATURA.WEATHER_AND_CLIMATE.WEATHER_ELEMENTS",
@@ -207,7 +259,11 @@
   "help": "Ask \"how long did we watch?\" One day is weather. Many years is climate.",
   "feedback": "Weather is what the air is like on one day. Climate is the usual pattern over many years.",
   "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
-  "status": "draft"
+  "status": "draft",
+  "review": {
+   "mark": "plausible, to confirm by a teacher",
+   "note": "Own judgement: believable for a Kenyan child of this age, but we have no source or homework count. A teacher who knows the class should say whether children really hold it."
+  }
  },
  "SOCI.G5.NATURA.WEATHER_AND_CLIMATE.WEATHER_ELEMENTS.M_WC_INSTRUMENT_MIX": {
   "skill": "SOCI.G5.NATURA.WEATHER_AND_CLIMATE.WEATHER_ELEMENTS",
@@ -222,7 +278,11 @@
   "help": "Match each instrument to a unit: degrees, millimetres, direction.",
   "feedback": "A rain gauge measures rainfall. A thermometer measures temperature.",
   "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
-  "status": "draft"
+  "status": "draft",
+  "review": {
+   "mark": "plausible, to confirm by a teacher",
+   "note": "Own judgement: believable for a Kenyan child of this age, but we have no source or homework count. A teacher who knows the class should say whether children really hold it."
+  }
  },
  "SOCI.G5.NATURA.WEATHER_AND_CLIMATE.CLIMATE_REGION_PLACES.M_WC_REGION_MIX": {
   "skill": "SOCI.G5.NATURA.WEATHER_AND_CLIMATE.CLIMATE_REGION_PLACES",
@@ -237,7 +297,11 @@
   "help": "Match three towns to rain: Nyeri (much rain), Mombasa (humid), Lodwar (very little).",
   "feedback": "The arid north, around Turkana and Marsabit, gets very little rain. The Mount Kenya area is cool and wet.",
   "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
-  "status": "draft"
+  "status": "draft",
+  "review": {
+   "mark": "plausible, to confirm by a teacher",
+   "note": "Own judgement: believable for a Kenyan child of this age, but we have no source or homework count. A teacher who knows the class should say whether children really hold it."
+  }
  },
  "SOCI.G5.NATURA.WEATHER_AND_CLIMATE.CLIMATE_REGION_PLACES.M_WC_COAST_DRY": {
   "skill": "SOCI.G5.NATURA.WEATHER_AND_CLIMATE.CLIMATE_REGION_PLACES",
@@ -252,7 +316,11 @@
   "help": "Hot has two kinds: dry (Lodwar) and humid (Mombasa). Ask about the sea air.",
   "feedback": "The coast is hot and humid, with plenty of rain. Dry heat is the climate of the arid north.",
   "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
-  "status": "draft"
+  "status": "draft",
+  "review": {
+   "mark": "plausible, to confirm by a teacher",
+   "note": "Own judgement: believable for a Kenyan child of this age, but we have no source or homework count. A teacher who knows the class should say whether children really hold it."
+  }
  },
  "SOCI.G5.NATURA.WEATHER_AND_CLIMATE.CLIMATE_REGION_TRAITS.M_WC_EQUATOR_HOT": {
   "skill": "SOCI.G5.NATURA.WEATHER_AND_CLIMATE.CLIMATE_REGION_TRAITS",
@@ -267,7 +335,11 @@
   "help": "Ask: is it colder at the top of a high hill than at its foot? Then link to the mountain.",
   "feedback": "Even on the equator, the air gets cooler as you go higher. That is why Mount Kenya has snow at the top.",
   "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
-  "status": "draft"
+  "status": "draft",
+  "review": {
+   "mark": "plausible, to confirm by a teacher",
+   "note": "Own judgement: believable for a Kenyan child of this age, but we have no source or homework count. A teacher who knows the class should say whether children really hold it."
+  }
  },
  "SOCI.G5.NATURA.WEATHER_AND_CLIMATE.CLIMATE_REGION_TRAITS.M_WC_HUMID_DRY": {
   "skill": "SOCI.G5.NATURA.WEATHER_AND_CLIMATE.CLIMATE_REGION_TRAITS",
@@ -282,7 +354,11 @@
   "help": "Use clothes that do not dry on a humid day.",
   "feedback": "Humid means there is a lot of water vapour in the air, so the air feels damp and sticky.",
   "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
-  "status": "draft"
+  "status": "draft",
+  "review": {
+   "mark": "plausible, to confirm by a teacher",
+   "note": "Own judgement: believable for a Kenyan child of this age, but we have no source or homework count. A teacher who knows the class should say whether children really hold it."
+  }
  },
  "SOCI.G5.NATURA.THE_BUILT_ENVIRONMENTS.HISTORIC_SITES.M_BE_NATURAL_AS_BUILT": {
   "skill": "SOCI.G5.NATURA.THE_BUILT_ENVIRONMENTS.HISTORIC_SITES",
@@ -297,7 +373,11 @@
   "help": "Sort cards: made by people, or made by nature?",
   "feedback": "Fort Jesus was built by people, so it is a built environment. Mount Kenya was not built by anyone.",
   "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
-  "status": "draft"
+  "status": "draft",
+  "review": {
+   "mark": "doubtful",
+   "why": "Children know a mountain is not built; a trap option."
+  }
  },
  "SOCI.G5.NATURA.THE_BUILT_ENVIRONMENTS.HISTORIC_SITES.M_BE_PLACE_MIX": {
   "skill": "SOCI.G5.NATURA.THE_BUILT_ENVIRONMENTS.HISTORIC_SITES",
@@ -312,7 +392,11 @@
   "help": "Tell the stories: the Portuguese built Fort Jesus at Mombasa; Lamu Old Town is a town of coral stone houses.",
   "feedback": "Fort Jesus is in Mombasa. Lamu has its own old town, a historic town on an island.",
   "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
-  "status": "draft"
+  "status": "draft",
+  "review": {
+   "mark": "plausible, to confirm by a teacher",
+   "note": "Own judgement: believable for a Kenyan child of this age, but we have no source or homework count. A teacher who knows the class should say whether children really hold it."
+  }
  },
  "SOCI.G5.NATURA.THE_BUILT_ENVIRONMENTS.CONSERVATION.M_BE_KEEP_OUT": {
   "skill": "SOCI.G5.NATURA.THE_BUILT_ENVIRONMENTS.CONSERVATION",
@@ -327,7 +411,11 @@
   "help": "Ask what a grandparent would lose if a home photo album were thrown away.",
   "feedback": "Conserving means looking after a place so it lasts. Careful repair and visitor rules keep it for later generations.",
   "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
-  "status": "draft"
+  "status": "draft",
+  "review": {
+   "mark": "doubtful",
+   "why": "Few children say a fort should be pulled down; mostly a trap option."
+  }
  },
  "SOCI.G5.NATURA.THE_BUILT_ENVIRONMENTS.CONSERVATION.M_BE_TOUCH_TAKE": {
   "skill": "SOCI.G5.NATURA.THE_BUILT_ENVIRONMENTS.CONSERVATION",
@@ -342,7 +430,11 @@
   "help": "Ask what happens when 100 visitors each take one stone.",
   "feedback": "A small stone seems harmless, but many people doing it ruins the site. We leave heritage sites as we find them.",
   "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
-  "status": "draft"
+  "status": "draft",
+  "review": {
+   "mark": "plausible, to confirm by a teacher",
+   "note": "Own judgement: believable for a Kenyan child of this age, but we have no source or homework count. A teacher who knows the class should say whether children really hold it."
+  }
  },
  "SOCI.G5.PEOPLE.LANGUAGE_GROUPS_IN_KENYA.GROUP_SORT.M_LG_NILOTE_AS_BANTU": {
   "skill": "SOCI.G5.PEOPLE.LANGUAGE_GROUPS_IN_KENYA.GROUP_SORT",
@@ -357,7 +449,11 @@
   "help": "Start with the Bantu list (Kikuyu, Luhya, Kamba), then name the Nilotes by their lake and plain homes.",
   "feedback": "The Luo are Nilotes. The Bantu group includes the Kikuyu, Luhya and Kamba.",
   "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
-  "status": "draft"
+  "status": "draft",
+  "review": {
+   "mark": "plausible, to confirm by a teacher",
+   "note": "Own judgement: believable for a Kenyan child of this age, but we have no source or homework count. A teacher who knows the class should say whether children really hold it."
+  }
  },
  "SOCI.G5.PEOPLE.LANGUAGE_GROUPS_IN_KENYA.GROUP_SORT.M_LG_CUSHITE_AS_NILOTE": {
   "skill": "SOCI.G5.PEOPLE.LANGUAGE_GROUPS_IN_KENYA.GROUP_SORT",
@@ -372,7 +468,11 @@
   "help": "Group by language family, not by way of life: Maasai are herders and Nilotes, Somali are herders and Cushites.",
   "feedback": "The Somali are Cushites. Herding is a way of life; language group depends on the family of languages.",
   "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
-  "status": "draft"
+  "status": "draft",
+  "review": {
+   "mark": "plausible, to confirm by a teacher",
+   "note": "Own judgement: believable for a Kenyan child of this age, but we have no source or homework count. A teacher who knows the class should say whether children really hold it."
+  }
  },
  "SOCI.G5.PEOPLE.LANGUAGE_GROUPS_IN_KENYA.INTERDEPENDENCE.M_LG_SELF_SUFFICIENT": {
   "skill": "SOCI.G5.PEOPLE.LANGUAGE_GROUPS_IN_KENYA.INTERDEPENDENCE",
@@ -387,7 +487,11 @@
   "help": "Ask each group what it has and what it lacks, then join the groups.",
   "feedback": "No community has everything. Communities swap goods and skills, so they depend on each other.",
   "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
-  "status": "draft"
+  "status": "draft",
+  "review": {
+   "mark": "plausible, to confirm by a teacher",
+   "note": "Own judgement: believable for a Kenyan child of this age, but we have no source or homework count. A teacher who knows the class should say whether children really hold it."
+  }
  },
  "SOCI.G5.PEOPLE.LANGUAGE_GROUPS_IN_KENYA.INTERDEPENDENCE.M_LG_RIVALRY": {
   "skill": "SOCI.G5.PEOPLE.LANGUAGE_GROUPS_IN_KENYA.INTERDEPENDENCE",
@@ -402,7 +506,11 @@
   "help": "Use a market scene where both sides gain.",
   "feedback": "Interdependence means helping each other. Both sides gain when they exchange goods, skills and ideas.",
   "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
-  "status": "draft"
+  "status": "draft",
+  "review": {
+   "mark": "plausible, to confirm by a teacher",
+   "note": "Own judgement: believable for a Kenyan child of this age, but we have no source or homework count. A teacher who knows the class should say whether children really hold it."
+  }
  },
  "SOCI.G5.PEOPLE.POPULATION_DISTRIBUTION_.DENSITY_AREAS.M_PD_DESERT_DENSE": {
   "skill": "SOCI.G5.PEOPLE.POPULATION_DISTRIBUTION_.DENSITY_AREAS",
@@ -417,7 +525,11 @@
   "help": "Ask what people need to farm and live: water and good soil. Then compare the two places.",
   "feedback": "Few people live in the dry north because there is little water and farming is hard. The highlands have rain and fertile soil.",
   "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
-  "status": "draft"
+  "status": "draft",
+  "review": {
+   "mark": "doubtful",
+   "why": "Children know dry places have few people; a trap option."
+  }
  },
  "SOCI.G5.PEOPLE.POPULATION_DISTRIBUTION_.DENSITY_AREAS.M_PD_SIZE_DENSITY": {
   "skill": "SOCI.G5.PEOPLE.POPULATION_DISTRIBUTION_.DENSITY_AREAS",
@@ -432,7 +544,11 @@
   "help": "Draw both areas on squared paper and place the 600 people in each.",
   "feedback": "Density is people per square kilometre. Area A has 200 people for each square kilometre and Area B has 100, so Area A is more crowded.",
   "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
-  "status": "draft"
+  "status": "draft",
+  "review": {
+   "mark": "plausible, to confirm by a teacher",
+   "note": "Own judgement: believable for a Kenyan child of this age, but we have no source or homework count. A teacher who knows the class should say whether children really hold it."
+  }
  },
  "SOCI.G5.PEOPLE.POPULATION_DISTRIBUTION_.DENSITY_EFFECTS.M_PD_DENSE_ALL_GOOD": {
   "skill": "SOCI.G5.PEOPLE.POPULATION_DISTRIBUTION_.DENSITY_EFFECTS",
@@ -447,7 +563,11 @@
   "help": "List both: easy markets and many schools, but small plots and crowded roads.",
   "feedback": "High density brings pressure on land, water and housing, even though markets and services are close.",
   "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
-  "status": "draft"
+  "status": "draft",
+  "review": {
+   "mark": "doubtful",
+   "why": "Few children say crowding has no problems; mostly a trap option."
+  }
  },
  "SOCI.G5.PEOPLE.POPULATION_DISTRIBUTION_.DENSITY_EFFECTS.M_PD_SPARSE_NO_PROBLEM": {
   "skill": "SOCI.G5.PEOPLE.POPULATION_DISTRIBUTION_.DENSITY_EFFECTS",
@@ -462,7 +582,11 @@
   "help": "Ask how far a child walks to the nearest school in a thinly settled area.",
   "feedback": "Where few people live, services such as schools, clinics and roads are far apart and costly to provide.",
   "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
-  "status": "draft"
+  "status": "draft",
+  "review": {
+   "mark": "doubtful",
+   "why": "Few children say thin settlement has no problems; mostly a trap option."
+  }
  },
  "SOCI.G5.PEOPLE.AFRICAN_TRADITIONAL_EDUC.ATE_METHODS.M_TE_NO_SCHOOL": {
   "skill": "SOCI.G5.PEOPLE.AFRICAN_TRADITIONAL_EDUC.ATE_METHODS",
@@ -477,7 +601,11 @@
   "help": "Ask how a child learned to herd or farm, and who taught her.",
   "feedback": "Children learned a lot before classrooms: elders and parents taught through stories, proverbs, songs and work.",
   "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
-  "status": "draft"
+  "status": "draft",
+  "review": {
+   "mark": "plausible, to confirm by a teacher",
+   "note": "Own judgement: believable for a Kenyan child of this age, but we have no source or homework count. A teacher who knows the class should say whether children really hold it."
+  }
  },
  "SOCI.G5.PEOPLE.AFRICAN_TRADITIONAL_EDUC.ATE_METHODS.M_TE_METHOD_MIX": {
   "skill": "SOCI.G5.PEOPLE.AFRICAN_TRADITIONAL_EDUC.ATE_METHODS",
@@ -492,7 +620,11 @@
   "help": "Describe three scenes and have the child name each: a story, a song, a task.",
   "feedback": "She learns by doing, working beside someone with the skill. Storytelling means learning from told stories.",
   "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
-  "status": "draft"
+  "status": "draft",
+  "review": {
+   "mark": "doubtful",
+   "why": "Names of teaching methods are recall, not a held belief."
+  }
  },
  "SOCI.G5.PEOPLE.AFRICAN_TRADITIONAL_EDUC.ATE_VALUES.M_TE_ONLY_SKILLS": {
   "skill": "SOCI.G5.PEOPLE.AFRICAN_TRADITIONAL_EDUC.ATE_VALUES",
@@ -507,7 +639,11 @@
   "help": "Read a proverb and ask what it teaches about behaviour.",
   "feedback": "Traditional education taught values too: respect for elders, honesty, sharing and responsibility.",
   "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
-  "status": "draft"
+  "status": "draft",
+  "review": {
+   "mark": "plausible, to confirm by a teacher",
+   "note": "Own judgement: believable for a Kenyan child of this age, but we have no source or homework count. A teacher who knows the class should say whether children really hold it."
+  }
  },
  "SOCI.G5.PEOPLE.AFRICAN_TRADITIONAL_EDUC.ATE_VALUES.M_TE_OUTDATED": {
   "skill": "SOCI.G5.PEOPLE.AFRICAN_TRADITIONAL_EDUC.ATE_VALUES",
@@ -522,7 +658,11 @@
   "help": "Pick a value the school teaches and find the same one in a proverb.",
   "feedback": "Traditional education taught respect, honesty and teamwork. These values still help us live well with others.",
   "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
-  "status": "draft"
+  "status": "draft",
+  "review": {
+   "mark": "plausible, to confirm by a teacher",
+   "note": "Own judgement: believable for a Kenyan child of this age, but we have no source or homework count. A teacher who knows the class should say whether children really hold it."
+  }
  },
  "SOCI.G5.PEOPLE.SCHOOL_ADMINISTRATION.ADMIN_LEADERS.M_SA_DEPUTY_HEAD": {
   "skill": "SOCI.G5.PEOPLE.SCHOOL_ADMINISTRATION.ADMIN_LEADERS",
@@ -537,7 +677,11 @@
   "help": "Ask who is in charge on a day when both are present and who helps.",
   "feedback": "The headteacher runs the whole school. The deputy helps the head and acts when the head is away.",
   "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
-  "status": "draft"
+  "status": "draft",
+  "review": {
+   "mark": "plausible, to confirm by a teacher",
+   "note": "Own judgement: believable for a Kenyan child of this age, but we have no source or homework count. A teacher who knows the class should say whether children really hold it."
+  }
  },
  "SOCI.G5.PEOPLE.SCHOOL_ADMINISTRATION.ADMIN_LEADERS.M_SA_DUTY_MIX": {
   "skill": "SOCI.G5.PEOPLE.SCHOOL_ADMINISTRATION.ADMIN_LEADERS",
@@ -552,7 +696,11 @@
   "help": "Match each duty to the person whose desk or room it is done at.",
   "feedback": "The class teacher looks after a class and takes the register. The Board of Management oversees the school as a whole.",
   "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
-  "status": "draft"
+  "status": "draft",
+  "review": {
+   "mark": "plausible, to confirm by a teacher",
+   "note": "Own judgement: believable for a Kenyan child of this age, but we have no source or homework count. A teacher who knows the class should say whether children really hold it."
+  }
  },
  "SOCI.G5.PEOPLE.SCHOOL_ADMINISTRATION.ADMIN_STRUCTURE.M_SA_ORDER_REVERSED": {
   "skill": "SOCI.G5.PEOPLE.SCHOOL_ADMINISTRATION.ADMIN_STRUCTURE",
@@ -567,7 +715,11 @@
   "help": "Draw the chart from the top down, one level at a time.",
   "feedback": "The deputy headteacher comes directly under the headteacher. Class teachers come below them.",
   "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
-  "status": "draft"
+  "status": "draft",
+  "review": {
+   "mark": "doubtful",
+   "why": "Children know the head is above the deputy; a trap option."
+  }
  },
  "SOCI.G5.PEOPLE.SCHOOL_ADMINISTRATION.ADMIN_STRUCTURE.M_SA_PREFECT_ABOVE": {
   "skill": "SOCI.G5.PEOPLE.SCHOOL_ADMINISTRATION.ADMIN_STRUCTURE",
@@ -582,7 +734,11 @@
   "help": "Ask who gives prefects their duties.",
   "feedback": "Prefects are learners who help keep order. They report to teachers, who are above them in the school structure.",
   "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
-  "status": "draft"
+  "status": "draft",
+  "review": {
+   "mark": "doubtful",
+   "why": "Children know prefects are learners; a trap option."
+  }
  },
  "SOCI.G5.RESOUR.RESOURCES_IN_KENYA.RESOURCE_TYPES.M_RK_MONEY_ONLY": {
   "skill": "SOCI.G5.RESOUR.RESOURCES_IN_KENYA.RESOURCE_TYPES",
@@ -597,7 +753,11 @@
   "help": "Ask what people used before they had money.",
   "feedback": "Natural resources come from nature: land, water, forests, minerals and wildlife. Money is not a natural resource.",
   "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
-  "status": "draft"
+  "status": "draft",
+  "review": {
+   "mark": "plausible, to confirm by a teacher",
+   "note": "Own judgement: believable for a Kenyan child of this age, but we have no source or homework count. A teacher who knows the class should say whether children really hold it."
+  }
  },
  "SOCI.G5.RESOUR.RESOURCES_IN_KENYA.RESOURCE_TYPES.M_RK_BUILT_NATURAL": {
   "skill": "SOCI.G5.RESOUR.RESOURCES_IN_KENYA.RESOURCE_TYPES",
@@ -612,7 +772,11 @@
   "help": "Sort cards into made by nature or made by people.",
   "feedback": "A forest grows by itself, so it is a natural resource. A school is built by people.",
   "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
-  "status": "draft"
+  "status": "draft",
+  "review": {
+   "mark": "plausible, to confirm by a teacher",
+   "note": "Own judgement: believable for a Kenyan child of this age, but we have no source or homework count. A teacher who knows the class should say whether children really hold it."
+  }
  },
  "SOCI.G5.RESOUR.RESOURCES_IN_KENYA.PRUDENT_USE.M_RK_CONSERVE_NO_USE": {
   "skill": "SOCI.G5.RESOUR.RESOURCES_IN_KENYA.PRUDENT_USE",
@@ -627,7 +791,11 @@
   "help": "Compare a family that uses water carefully with one that wastes it.",
   "feedback": "To use a resource prudently is to use it carefully so it does not run out and others can use it too.",
   "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
-  "status": "draft"
+  "status": "draft",
+  "review": {
+   "mark": "plausible, to confirm by a teacher",
+   "note": "Own judgement: believable for a Kenyan child of this age, but we have no source or homework count. A teacher who knows the class should say whether children really hold it."
+  }
  },
  "SOCI.G5.RESOUR.RESOURCES_IN_KENYA.PRUDENT_USE.M_RK_UNLIMITED": {
   "skill": "SOCI.G5.RESOUR.RESOURCES_IN_KENYA.PRUDENT_USE",
@@ -642,7 +810,11 @@
   "help": "Compare how long a tree takes to grow with how fast it can be cut.",
   "feedback": "Forests grow slowly. If we cut trees faster than they grow, the forest can finish. Replanting keeps it going.",
   "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
-  "status": "draft"
+  "status": "draft",
+  "review": {
+   "mark": "plausible, to confirm by a teacher",
+   "note": "Own judgement: believable for a Kenyan child of this age, but we have no source or homework count. A teacher who knows the class should say whether children really hold it."
+  }
  },
  "SOCI.G5.RESOUR.MINING_IN_KENYA.MINERAL_PLACES.M_MK_PLACE_MIX": {
   "skill": "SOCI.G5.RESOUR.MINING_IN_KENYA.MINERAL_PLACES",
@@ -657,7 +829,11 @@
   "help": "Link each to a story: soda ash is taken from the lake water at Magadi; fluorspar is dug in the Kerio Valley.",
   "feedback": "Soda ash comes from Lake Magadi. Fluorspar is mined in the Kerio Valley.",
   "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
-  "status": "draft"
+  "status": "draft",
+  "review": {
+   "mark": "plausible, to confirm by a teacher",
+   "note": "Own judgement: believable for a Kenyan child of this age, but we have no source or homework count. A teacher who knows the class should say whether children really hold it."
+  }
  },
  "SOCI.G5.RESOUR.MINING_IN_KENYA.MINERAL_PLACES.M_MK_NOT_MINERAL": {
   "skill": "SOCI.G5.RESOUR.MINING_IN_KENYA.MINERAL_PLACES",
@@ -672,7 +848,11 @@
   "help": "Ask whether it was dug from the ground or grown from a seed.",
   "feedback": "Minerals are found in the ground or rocks. Coffee grows on a plant. Gold is a mineral.",
   "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
-  "status": "draft"
+  "status": "draft",
+  "review": {
+   "mark": "doubtful",
+   "why": "Children know coffee is a plant; a trap option."
+  }
  },
  "SOCI.G5.RESOUR.MINING_IN_KENYA.MINERAL_IMPORTANCE.M_MK_USE_MIX": {
   "skill": "SOCI.G5.RESOUR.MINING_IN_KENYA.MINERAL_IMPORTANCE",
@@ -687,7 +867,11 @@
   "help": "Trace the road from a mineral to a product people see: limestone to cement, gemstone to a ring.",
   "feedback": "Limestone is crushed and heated to make cement. Gemstones are cut for jewellery.",
   "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
-  "status": "draft"
+  "status": "draft",
+  "review": {
+   "mark": "plausible, to confirm by a teacher",
+   "note": "Own judgement: believable for a Kenyan child of this age, but we have no source or homework count. A teacher who knows the class should say whether children really hold it."
+  }
  },
  "SOCI.G5.RESOUR.MINING_IN_KENYA.MINERAL_IMPORTANCE.M_MK_NO_HARM": {
   "skill": "SOCI.G5.RESOUR.MINING_IN_KENYA.MINERAL_IMPORTANCE",
@@ -702,7 +886,11 @@
   "help": "Describe an open pit left after mining and ask what it does to farmland.",
   "feedback": "Mining gives jobs and income, but if it is not controlled it can damage land, spread dust and put workers in danger.",
   "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
-  "status": "draft"
+  "status": "draft",
+  "review": {
+   "mark": "plausible, to confirm by a teacher",
+   "note": "Own judgement: believable for a Kenyan child of this age, but we have no source or homework count. A teacher who knows the class should say whether children really hold it."
+  }
  },
  "SOCI.G5.RESOUR.FISHING_IN_KENYA.FISHING_GROUNDS.M_FK_SEA_AS_INLAND": {
   "skill": "SOCI.G5.RESOUR.FISHING_IN_KENYA.FISHING_GROUNDS",
@@ -717,7 +905,11 @@
   "help": "Inland means within the country, away from the sea. Sort water bodies on a described map.",
   "feedback": "Inland fishing grounds are lakes, rivers and dams inside the country. The Indian Ocean is the sea.",
   "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
-  "status": "draft"
+  "status": "draft",
+  "review": {
+   "mark": "plausible, to confirm by a teacher",
+   "note": "Own judgement: believable for a Kenyan child of this age, but we have no source or homework count. A teacher who knows the class should say whether children really hold it."
+  }
  },
  "SOCI.G5.RESOUR.FISHING_IN_KENYA.FISHING_GROUNDS.M_FK_SODA_LAKE": {
   "skill": "SOCI.G5.RESOUR.FISHING_IN_KENYA.FISHING_GROUNDS",
@@ -732,7 +924,11 @@
   "help": "Ask whether fish can live in water full of soda.",
   "feedback": "Lake Magadi has water too salty with soda for most fish. Lake Turkana and Lake Victoria are main fishing grounds.",
   "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
-  "status": "draft"
+  "status": "draft",
+  "review": {
+   "mark": "doubtful",
+   "why": "A fine point about one lake; children rarely hold a view."
+  }
  },
  "SOCI.G5.RESOUR.FISHING_IN_KENYA.FISHING_GROUNDS.M_FK_REGION_MIX": {
   "skill": "SOCI.G5.RESOUR.FISHING_IN_KENYA.FISHING_GROUNDS",
@@ -747,7 +943,11 @@
   "help": "Link the lake to the dry north and Lodwar town. Lake Victoria is western.",
   "feedback": "Lake Turkana is in the dry north-west of Kenya. Lake Victoria is in the west.",
   "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
-  "status": "draft"
+  "status": "draft",
+  "review": {
+   "mark": "plausible, to confirm by a teacher",
+   "note": "Own judgement: believable for a Kenyan child of this age, but we have no source or homework count. A teacher who knows the class should say whether children really hold it."
+  }
  },
  "SOCI.G5.RESOUR.FISHING_IN_KENYA.FISHING_ECONOMY.M_FK_FOOD_ONLY": {
   "skill": "SOCI.G5.RESOUR.FISHING_IN_KENYA.FISHING_ECONOMY",
@@ -762,7 +962,11 @@
   "help": "Follow one fish from the boat to the market, the factory and the plate.",
   "feedback": "Fishing gives food, jobs for fishers, traders and processors, and money from selling fish at home and abroad.",
   "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
-  "status": "draft"
+  "status": "draft",
+  "review": {
+   "mark": "plausible, to confirm by a teacher",
+   "note": "Own judgement: believable for a Kenyan child of this age, but we have no source or homework count. A teacher who knows the class should say whether children really hold it."
+  }
  },
  "SOCI.G5.RESOUR.FISHING_IN_KENYA.FISHING_ECONOMY.M_FK_NO_SUSTAIN": {
   "skill": "SOCI.G5.RESOUR.FISHING_IN_KENYA.FISHING_ECONOMY",
@@ -777,7 +981,11 @@
   "help": "Compare catching all the chickens with keeping some to lay eggs.",
   "feedback": "Fish need to grow and breed. If we catch all young fish, there will be fewer fish later.",
   "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
-  "status": "draft"
+  "status": "draft",
+  "review": {
+   "mark": "plausible, to confirm by a teacher",
+   "note": "Own judgement: believable for a Kenyan child of this age, but we have no source or homework count. A teacher who knows the class should say whether children really hold it."
+  }
  },
  "SOCI.G5.RESOUR.WILDLIFE_AND_TOURISM_IN_.ATTRACTIONS_PLACES.M_WT_PLACE_MIX": {
   "skill": "SOCI.G5.RESOUR.WILDLIFE_AND_TOURISM_IN_.ATTRACTIONS_PLACES",
@@ -792,7 +1000,11 @@
   "help": "Link them to a story: the Mara is where the wildebeest cross; Amboseli looks at Kilimanjaro.",
   "feedback": "The Maasai Mara is in Narok County. Amboseli is in Kajiado County.",
   "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
-  "status": "draft"
+  "status": "draft",
+  "review": {
+   "mark": "plausible, to confirm by a teacher",
+   "note": "Own judgement: believable for a Kenyan child of this age, but we have no source or homework count. A teacher who knows the class should say whether children really hold it."
+  }
  },
  "SOCI.G5.RESOUR.WILDLIFE_AND_TOURISM_IN_.ATTRACTIONS_PLACES.M_WT_ANIMAL_MIX": {
   "skill": "SOCI.G5.RESOUR.WILDLIFE_AND_TOURISM_IN_.ATTRACTIONS_PLACES",
@@ -807,7 +1019,11 @@
   "help": "Tell the one thing each park is famous for.",
   "feedback": "Lake Nakuru is famous for flamingos, which gather at the shore, and for rhinos.",
   "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
-  "status": "draft"
+  "status": "draft",
+  "review": {
+   "mark": "plausible, to confirm by a teacher",
+   "note": "Own judgement: believable for a Kenyan child of this age, but we have no source or homework count. A teacher who knows the class should say whether children really hold it."
+  }
  },
  "SOCI.G5.RESOUR.WILDLIFE_AND_TOURISM_IN_.TOURISM_ECONOMY.M_WT_HOTELS_ONLY": {
   "skill": "SOCI.G5.RESOUR.WILDLIFE_AND_TOURISM_IN_.TOURISM_ECONOMY",
@@ -822,7 +1038,11 @@
   "help": "List ten jobs on a day trip to a park.",
   "feedback": "Tourism supports many people: guides, drivers, cooks, craft sellers and local communities.",
   "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
-  "status": "draft"
+  "status": "draft",
+  "review": {
+   "mark": "plausible, to confirm by a teacher",
+   "note": "Own judgement: believable for a Kenyan child of this age, but we have no source or homework count. A teacher who knows the class should say whether children really hold it."
+  }
  },
  "SOCI.G5.RESOUR.WILDLIFE_AND_TOURISM_IN_.TOURISM_ECONOMY.M_WT_ANIMALS_NO_VALUE": {
   "skill": "SOCI.G5.RESOUR.WILDLIFE_AND_TOURISM_IN_.TOURISM_ECONOMY",
@@ -837,7 +1057,11 @@
   "help": "Compare the income of a park visit with a small farm's harvest.",
   "feedback": "Wildlife attracts tourists, who bring money and jobs. Protecting it protects that income.",
   "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
-  "status": "draft"
+  "status": "draft",
+  "review": {
+   "mark": "plausible, to confirm by a teacher",
+   "note": "Own judgement: believable for a Kenyan child of this age, but we have no source or homework count. A teacher who knows the class should say whether children really hold it."
+  }
  },
  "SOCI.G5.RESOUR.DEVELOPMENT_OF_TRANSPORT.EARLY_TRANSPORT.M_TR_EARLY_MODERN_MIX": {
   "skill": "SOCI.G5.RESOUR.DEVELOPMENT_OF_TRANSPORT.EARLY_TRANSPORT",
@@ -852,7 +1076,11 @@
   "help": "Sort cards by what the grandparents' grandparents could have used.",
   "feedback": "Early means of transport include donkeys, canoes and people carrying loads. Lorries are modern.",
   "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
-  "status": "draft"
+  "status": "draft",
+  "review": {
+   "mark": "doubtful",
+   "why": "Children know a lorry is modern; a trap option."
+  }
  },
  "SOCI.G5.RESOUR.DEVELOPMENT_OF_TRANSPORT.EARLY_TRANSPORT.M_TR_WALK_NOT_TRANSPORT": {
   "skill": "SOCI.G5.RESOUR.DEVELOPMENT_OF_TRANSPORT.EARLY_TRANSPORT",
@@ -867,7 +1095,11 @@
   "help": "Ask how salt reached an inland home a hundred years ago.",
   "feedback": "Carrying loads on the head or back was an early means of transport, along with donkeys, camels and canoes.",
   "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
-  "status": "draft"
+  "status": "draft",
+  "review": {
+   "mark": "plausible, to confirm by a teacher",
+   "note": "Own judgement: believable for a Kenyan child of this age, but we have no source or homework count. A teacher who knows the class should say whether children really hold it."
+  }
  },
  "SOCI.G5.RESOUR.DEVELOPMENT_OF_TRANSPORT.MODERN_TRANSPORT.M_TR_MODE_MIX": {
   "skill": "SOCI.G5.RESOUR.DEVELOPMENT_OF_TRANSPORT.MODERN_TRANSPORT",
@@ -882,7 +1114,11 @@
   "help": "Compare tonnes and speed: a big load, a long way, or a small fast parcel.",
   "feedback": "Fuel in large amounts moves best by pipeline or tanker lorry. A bicycle carries a very small load.",
   "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
-  "status": "draft"
+  "status": "draft",
+  "review": {
+   "mark": "doubtful",
+   "why": "Children can match a means to a job; a trap option."
+  }
  },
  "SOCI.G5.RESOUR.DEVELOPMENT_OF_TRANSPORT.MODERN_TRANSPORT.M_TR_SGR_FIRST": {
   "skill": "SOCI.G5.RESOUR.DEVELOPMENT_OF_TRANSPORT.MODERN_TRANSPORT",
@@ -897,7 +1133,11 @@
   "help": "Tell the story of the railway built from Mombasa toward Lake Victoria over 100 years ago.",
   "feedback": "The first railway ran from Mombasa to Kisumu and was built over 100 years ago. The Standard Gauge Railway is much newer.",
   "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
-  "status": "draft"
+  "status": "draft",
+  "review": {
+   "mark": "plausible, to confirm by a teacher",
+   "note": "Own judgement: believable for a Kenyan child of this age, but we have no source or homework count. A teacher who knows the class should say whether children really hold it."
+  }
  },
  "SOCI.G5.RESOUR.DEVELOPMENT_OF_TRANSPORT.ROAD_SAFETY.M_TR_CROSS_ANYWHERE": {
   "skill": "SOCI.G5.RESOUR.DEVELOPMENT_OF_TRANSPORT.ROAD_SAFETY",
@@ -912,7 +1152,11 @@
   "help": "Ask what a driver at speed can see around a bend.",
   "feedback": "Cross at a zebra crossing or footbridge. A road that looks empty can hide a fast vehicle.",
   "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
-  "status": "draft"
+  "status": "draft",
+  "review": {
+   "mark": "plausible, to confirm by a teacher",
+   "note": "Own judgement: believable for a Kenyan child of this age, but we have no source or homework count. A teacher who knows the class should say whether children really hold it."
+  }
  },
  "SOCI.G5.RESOUR.DEVELOPMENT_OF_TRANSPORT.ROAD_SAFETY.M_TR_BELT_LATER": {
   "skill": "SOCI.G5.RESOUR.DEVELOPMENT_OF_TRANSPORT.ROAD_SAFETY",
@@ -927,7 +1171,11 @@
   "help": "Ask how fast a crash can happen on a short road.",
   "feedback": "A crash can happen on any trip, short or long. Wear a helmet or seat belt every time.",
   "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
-  "status": "draft"
+  "status": "draft",
+  "review": {
+   "mark": "plausible, to confirm by a teacher",
+   "note": "Own judgement: believable for a Kenyan child of this age, but we have no source or homework count. A teacher who knows the class should say whether children really hold it."
+  }
  },
  "SOCI.G5.RESOUR.DEVELOPMENT_OF_COMMUNICA.EARLY_COMMUNICATION.M_CM_EARLY_MODERN_MIX": {
   "skill": "SOCI.G5.RESOUR.DEVELOPMENT_OF_COMMUNICA.EARLY_COMMUNICATION",
@@ -942,7 +1190,11 @@
   "help": "Ask what was used before electricity.",
   "feedback": "Drums, horns and smoke signals were early forms. Email needs the internet and is modern.",
   "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
-  "status": "draft"
+  "status": "draft",
+  "review": {
+   "mark": "doubtful",
+   "why": "Children know email is modern; a trap option."
+  }
  },
  "SOCI.G5.RESOUR.DEVELOPMENT_OF_COMMUNICA.EARLY_COMMUNICATION.M_CM_EARLY_FAST": {
   "skill": "SOCI.G5.RESOUR.DEVELOPMENT_OF_COMMUNICA.EARLY_COMMUNICATION",
@@ -957,7 +1209,11 @@
   "help": "Time a runner and a phone call across the same distance.",
   "feedback": "A runner carries a message only as fast as he walks. A phone sends it at once, however far.",
   "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
-  "status": "draft"
+  "status": "draft",
+  "review": {
+   "mark": "doubtful",
+   "why": "Children know a runner is slower than a phone; a trap option."
+  }
  },
  "SOCI.G5.RESOUR.DEVELOPMENT_OF_COMMUNICA.MODERN_COMMUNICATION.M_CM_MEDIUM_MIX": {
   "skill": "SOCI.G5.RESOUR.DEVELOPMENT_OF_COMMUNICA.MODERN_COMMUNICATION",
@@ -972,7 +1228,11 @@
   "help": "Describe what you can see and hear on each in a one-line list.",
   "feedback": "Television shows pictures with sound. Radio has sound only.",
   "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
-  "status": "draft"
+  "status": "draft",
+  "review": {
+   "mark": "plausible, to confirm by a teacher",
+   "note": "Own judgement: believable for a Kenyan child of this age, but we have no source or homework count. A teacher who knows the class should say whether children really hold it."
+  }
  },
  "SOCI.G5.RESOUR.DEVELOPMENT_OF_COMMUNICA.MODERN_COMMUNICATION.M_CM_NO_RISK": {
   "skill": "SOCI.G5.RESOUR.DEVELOPMENT_OF_COMMUNICA.MODERN_COMMUNICATION",
@@ -987,7 +1247,11 @@
   "help": "Practise with a made-up rumour and ask who could check it.",
   "feedback": "Not everything we read or are sent is true. Check first, then share.",
   "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
-  "status": "draft"
+  "status": "draft",
+  "review": {
+   "mark": "plausible, to confirm by a teacher",
+   "note": "Own judgement: believable for a Kenyan child of this age, but we have no source or homework count. A teacher who knows the class should say whether children really hold it."
+  }
  },
  "SOCI.G5.POLITI.TRADITIONAL_LEADERS_IN_K.LEADER_FACTS.M_TL_COMMUNITY_MIX": {
   "skill": "SOCI.G5.POLITI.TRADITIONAL_LEADERS_IN_K.LEADER_FACTS",
@@ -1002,7 +1266,11 @@
   "help": "Link each leader with a map place: Mekatilili at the coast, Koitalel in the Nandi hills.",
   "feedback": "Mekatilili wa Menza led the Giriama of the Kenyan coast against forced labour.",
   "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
-  "status": "draft"
+  "status": "draft",
+  "review": {
+   "mark": "plausible, to confirm by a teacher",
+   "note": "Own judgement: believable for a Kenyan child of this age, but we have no source or homework count. A teacher who knows the class should say whether children really hold it."
+  }
  },
  "SOCI.G5.POLITI.TRADITIONAL_LEADERS_IN_K.LEADER_FACTS.M_TL_ROLE_MIX": {
   "skill": "SOCI.G5.POLITI.TRADITIONAL_LEADERS_IN_K.LEADER_FACTS",
@@ -1017,7 +1285,11 @@
   "help": "Compare two leaders: one resisted, one welcomed visitors.",
   "feedback": "Koitalel Arap Samoei led the Nandi against the railway. Nabongo Mumia ruled the Wanga and welcomed the British.",
   "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
-  "status": "draft"
+  "status": "draft",
+  "review": {
+   "mark": "plausible, to confirm by a teacher",
+   "note": "Own judgement: believable for a Kenyan child of this age, but we have no source or homework count. A teacher who knows the class should say whether children really hold it."
+  }
  },
  "SOCI.G5.POLITI.TRADITIONAL_LEADERS_IN_K.LEADER_QUALITIES.M_TL_FEAR_LEADER": {
   "skill": "SOCI.G5.POLITI.TRADITIONAL_LEADERS_IN_K.LEADER_QUALITIES",
@@ -1032,7 +1304,11 @@
   "help": "Ask whom a villager would go to for help and why.",
   "feedback": "Good leaders are respected for qualities such as bravery, wisdom and fairness, not because they are feared.",
   "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
-  "status": "draft"
+  "status": "draft",
+  "review": {
+   "mark": "doubtful",
+   "why": "Few children say a good leader is one people fear; mostly a trap option."
+  }
  },
  "SOCI.G5.POLITI.TRADITIONAL_LEADERS_IN_K.LEADER_QUALITIES.M_TL_NO_ROLE_TODAY": {
   "skill": "SOCI.G5.POLITI.TRADITIONAL_LEADERS_IN_K.LEADER_QUALITIES",
@@ -1047,7 +1323,11 @@
   "help": "Ask who settles a quarrel between neighbours first.",
   "feedback": "Elders still settle disputes, guide ceremonies and teach values in many communities.",
   "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
-  "status": "draft"
+  "status": "draft",
+  "review": {
+   "mark": "plausible, to confirm by a teacher",
+   "note": "Own judgement: believable for a Kenyan child of this age, but we have no source or homework count. A teacher who knows the class should say whether children really hold it."
+  }
  },
  "SOCI.G5.POLITI.EARLY_FORMS_OF_GOVERNM_E.EARLY_FORMS.M_EG_NO_GOVT": {
   "skill": "SOCI.G5.POLITI.EARLY_FORMS_OF_GOVERNM_E.EARLY_FORMS",
@@ -1062,7 +1342,11 @@
   "help": "Ask who settled disputes and made rules in a village before colonial rule.",
   "feedback": "Communities had their own governments: councils of elders, age-sets, spiritual leaders and, in some places, kings.",
   "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
-  "status": "draft"
+  "status": "draft",
+  "review": {
+   "mark": "plausible, to confirm by a teacher",
+   "note": "Own judgement: believable for a Kenyan child of this age, but we have no source or homework count. A teacher who knows the class should say whether children really hold it."
+  }
  },
  "SOCI.G5.POLITI.EARLY_FORMS_OF_GOVERNM_E.EARLY_FORMS.M_EG_KING_ALL": {
   "skill": "SOCI.G5.POLITI.EARLY_FORMS_OF_GOVERNM_E.EARLY_FORMS",
@@ -1077,7 +1361,11 @@
   "help": "Compare the Wanga kingdom with the council-ruled Ameru.",
   "feedback": "Most Kenyan communities were ruled by councils of elders. The Wanga kingdom, under the Nabongo, was one with a king.",
   "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
-  "status": "draft"
+  "status": "draft",
+  "review": {
+   "mark": "plausible, to confirm by a teacher",
+   "note": "Own judgement: believable for a Kenyan child of this age, but we have no source or homework count. A teacher who knows the class should say whether children really hold it."
+  }
  },
  "SOCI.G5.POLITI.EARLY_FORMS_OF_GOVERNM_E.MAASAI_AMERU.M_EG_SAME_NAMES": {
   "skill": "SOCI.G5.POLITI.EARLY_FORMS_OF_GOVERNM_E.MAASAI_AMERU",
@@ -1092,7 +1380,11 @@
   "help": "Link the Maasai laibon to the spiritual leader and the Njuri Ncheke to the Ameru elders.",
   "feedback": "The Njuri Ncheke is the council of elders of the Ameru. The laibon was a Maasai spiritual leader.",
   "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
-  "status": "draft"
+  "status": "draft",
+  "review": {
+   "mark": "plausible, to confirm by a teacher",
+   "note": "Own judgement: believable for a Kenyan child of this age, but we have no source or homework count. A teacher who knows the class should say whether children really hold it."
+  }
  },
  "SOCI.G5.POLITI.EARLY_FORMS_OF_GOVERNM_E.MAASAI_AMERU.M_EG_ONE_RULER": {
   "skill": "SOCI.G5.POLITI.EARLY_FORMS_OF_GOVERNM_E.MAASAI_AMERU",
@@ -1107,7 +1399,11 @@
   "help": "Ask who made decisions about cattle raids and grazing.",
   "feedback": "The laibon gave spiritual guidance. Decisions were made by elders and age-sets, so he was not a king.",
   "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
-  "status": "draft"
+  "status": "draft",
+  "review": {
+   "mark": "plausible, to confirm by a teacher",
+   "note": "Own judgement: believable for a Kenyan child of this age, but we have no source or homework count. A teacher who knows the class should say whether children really hold it."
+  }
  },
  "SOCI.G5.POLITI.EARLY_FORMS_OF_GOVERNM_E.LESSONS.M_EG_OLD_USELESS": {
   "skill": "SOCI.G5.POLITI.EARLY_FORMS_OF_GOVERNM_E.LESSONS",
@@ -1122,7 +1418,11 @@
   "help": "Match each old practice to a modern office.",
   "feedback": "Settling quarrels by talk, consulting wise people and serving the community are still good practices.",
   "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
-  "status": "draft"
+  "status": "draft",
+  "review": {
+   "mark": "plausible, to confirm by a teacher",
+   "note": "Own judgement: believable for a Kenyan child of this age, but we have no source or homework count. A teacher who knows the class should say whether children really hold it."
+  }
  },
  "SOCI.G5.POLITI.EARLY_FORMS_OF_GOVERNM_E.LESSONS.M_EG_COPY_ALL": {
   "skill": "SOCI.G5.POLITI.EARLY_FORMS_OF_GOVERNM_E.LESSONS",
@@ -1137,7 +1437,11 @@
   "help": "Sort practices into keep and leave behind with reasons.",
   "feedback": "We keep good practices such as consulting elders. Harsh punishments break rights and are left behind.",
   "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
-  "status": "draft"
+  "status": "draft",
+  "review": {
+   "mark": "doubtful",
+   "why": "Few children say harsh punishments should return; mostly a trap option."
+  }
  },
  "SOCI.G5.POLITI.CITIZENSHIP_IN_KENYA.HOW_CITIZEN.M_CZ_BORN_IN_KENYA_ONLY": {
   "skill": "SOCI.G5.POLITI.CITIZENSHIP_IN_KENYA.HOW_CITIZEN",
@@ -1152,7 +1456,11 @@
   "help": "Use two stories: one born in Kenya, one born abroad to a Kenyan parent.",
   "feedback": "A child is a Kenyan citizen by birth if at least one parent is a Kenyan citizen, even when born abroad.",
   "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
-  "status": "draft"
+  "status": "draft",
+  "review": {
+   "mark": "plausible, to confirm by a teacher",
+   "note": "Own judgement: believable for a Kenyan child of this age, but we have no source or homework count. A teacher who knows the class should say whether children really hold it."
+  }
  },
  "SOCI.G5.POLITI.CITIZENSHIP_IN_KENYA.HOW_CITIZEN.M_CZ_ID_MAKES": {
   "skill": "SOCI.G5.POLITI.CITIZENSHIP_IN_KENYA.HOW_CITIZEN",
@@ -1167,7 +1475,11 @@
   "help": "Ask: is a baby a citizen? Does she have an ID?",
   "feedback": "An ID card is a document that proves citizenship. A person is a citizen by birth or registration.",
   "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
-  "status": "draft"
+  "status": "draft",
+  "review": {
+   "mark": "plausible, to confirm by a teacher",
+   "note": "Own judgement: believable for a Kenyan child of this age, but we have no source or homework count. A teacher who knows the class should say whether children really hold it."
+  }
  },
  "SOCI.G5.POLITI.CITIZENSHIP_IN_KENYA.HOW_CITIZEN.M_CZ_MARRIAGE_INSTANT": {
   "skill": "SOCI.G5.POLITI.CITIZENSHIP_IN_KENYA.HOW_CITIZEN",
@@ -1182,7 +1494,11 @@
   "help": "Tell the story with the years in order.",
   "feedback": "Marriage to a Kenyan does not give citizenship at once. A person may apply to be registered after seven years of marriage.",
   "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
-  "status": "draft"
+  "status": "draft",
+  "review": {
+   "mark": "plausible, to confirm by a teacher",
+   "note": "Own judgement: believable for a Kenyan child of this age, but we have no source or homework count. A teacher who knows the class should say whether children really hold it."
+  }
  },
  "SOCI.G5.POLITI.CITIZENSHIP_IN_KENYA.DUAL.M_CZ_ONE_PASSPORT": {
   "skill": "SOCI.G5.POLITI.CITIZENSHIP_IN_KENYA.DUAL",
@@ -1197,7 +1513,11 @@
   "help": "Ask: what year is the Constitution?",
   "feedback": "The 2010 Constitution allows a Kenyan to hold the citizenship of another country too.",
   "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
-  "status": "draft"
+  "status": "draft",
+  "review": {
+   "mark": "plausible, to confirm by a teacher",
+   "note": "Own judgement: believable for a Kenyan child of this age, but we have no source or homework count. A teacher who knows the class should say whether children really hold it."
+  }
  },
  "SOCI.G5.POLITI.CITIZENSHIP_IN_KENYA.DUAL.M_CZ_DUAL_LOSE": {
   "skill": "SOCI.G5.POLITI.CITIZENSHIP_IN_KENYA.DUAL",
@@ -1212,7 +1532,11 @@
   "help": "Use a two-flag picture: two homes, one family.",
   "feedback": "A Kenyan citizen by birth does not lose Kenyan citizenship by getting another nationality.",
   "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
-  "status": "draft"
+  "status": "draft",
+  "review": {
+   "mark": "plausible, to confirm by a teacher",
+   "note": "Own judgement: believable for a Kenyan child of this age, but we have no source or homework count. A teacher who knows the class should say whether children really hold it."
+  }
  },
  "SOCI.G5.POLITI.CITIZENSHIP_IN_KENYA.GOOD_CITIZEN.M_CZ_ONLY_VOTING": {
   "skill": "SOCI.G5.POLITI.CITIZENSHIP_IN_KENYA.GOOD_CITIZEN",
@@ -1227,7 +1551,11 @@
   "help": "List things a ten-year-old can do for the school and the village.",
   "feedback": "Good citizens obey rules, respect others and care for the environment at any age, not only when they vote.",
   "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
-  "status": "draft"
+  "status": "draft",
+  "review": {
+   "mark": "plausible, to confirm by a teacher",
+   "note": "Own judgement: believable for a Kenyan child of this age, but we have no source or homework count. A teacher who knows the class should say whether children really hold it."
+  }
  },
  "SOCI.G5.POLITI.CITIZENSHIP_IN_KENYA.GOOD_CITIZEN.M_CZ_RIGHTS_NO_DUTY": {
   "skill": "SOCI.G5.POLITI.CITIZENSHIP_IN_KENYA.GOOD_CITIZEN",
@@ -1242,7 +1570,11 @@
   "help": "Pair every right with a duty in a two-column list.",
   "feedback": "Citizens have rights and duties. One duty is to obey the law.",
   "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
-  "status": "draft"
+  "status": "draft",
+  "review": {
+   "mark": "plausible, to confirm by a teacher",
+   "note": "Own judgement: believable for a Kenyan child of this age, but we have no source or homework count. A teacher who knows the class should say whether children really hold it."
+  }
  },
  "SOCI.G5.POLITI.NATIONAL_GOVERNMENT.ARMS_DUTIES.M_NG_ARM_MIX": {
   "skill": "SOCI.G5.POLITI.NATIONAL_GOVERNMENT.ARMS_DUTIES",
@@ -1257,7 +1589,11 @@
   "help": "Use one verb per arm: runs, makes, explains.",
   "feedback": "The Legislature, or Parliament, makes laws. The Judiciary explains the law and settles disputes in courts.",
   "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
-  "status": "draft"
+  "status": "draft",
+  "review": {
+   "mark": "plausible, to confirm by a teacher",
+   "note": "Own judgement: believable for a Kenyan child of this age, but we have no source or homework count. A teacher who knows the class should say whether children really hold it."
+  }
  },
  "SOCI.G5.POLITI.NATIONAL_GOVERNMENT.ARMS_DUTIES.M_NG_PRESIDENT_ALL": {
   "skill": "SOCI.G5.POLITI.NATIONAL_GOVERNMENT.ARMS_DUTIES",
@@ -1272,7 +1608,11 @@
   "help": "Show that each arm checks the others.",
   "feedback": "Laws are made by Parliament. The President leads the Executive that carries them out.",
   "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
-  "status": "draft"
+  "status": "draft",
+  "review": {
+   "mark": "plausible, to confirm by a teacher",
+   "note": "Own judgement: believable for a Kenyan child of this age, but we have no source or homework count. A teacher who knows the class should say whether children really hold it."
+  }
  },
  "SOCI.G5.POLITI.NATIONAL_GOVERNMENT.ARMS_MEMBERS.M_NG_MEMBER_MIX": {
   "skill": "SOCI.G5.POLITI.NATIONAL_GOVERNMENT.ARMS_MEMBERS",
@@ -1287,7 +1627,11 @@
   "help": "Place each title in one of three boxes by its job.",
   "feedback": "Judges and magistrates belong to the Judiciary. The President and Cabinet belong to the Executive.",
   "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
-  "status": "draft"
+  "status": "draft",
+  "review": {
+   "mark": "plausible, to confirm by a teacher",
+   "note": "Own judgement: believable for a Kenyan child of this age, but we have no source or homework count. A teacher who knows the class should say whether children really hold it."
+  }
  },
  "SOCI.G5.POLITI.NATIONAL_GOVERNMENT.ARMS_MEMBERS.M_NG_COUNTY_NATIONAL": {
   "skill": "SOCI.G5.POLITI.NATIONAL_GOVERNMENT.ARMS_MEMBERS",
@@ -1302,7 +1646,11 @@
   "help": "Draw two levels: county and national.",
   "feedback": "A county governor leads a county government. The Deputy President is part of the national Executive.",
   "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
-  "status": "draft"
+  "status": "draft",
+  "review": {
+   "mark": "plausible, to confirm by a teacher",
+   "note": "Own judgement: believable for a Kenyan child of this age, but we have no source or homework count. A teacher who knows the class should say whether children really hold it."
+  }
  },
  "SOCI.G5.GOVERN.NATIONAL_UNITY_IN_KENYA.SYMBOLS.M_NU_COLOUR_MEANING": {
   "skill": "SOCI.G5.GOVERN.NATIONAL_UNITY_IN_KENYA.SYMBOLS",
@@ -1317,7 +1665,11 @@
   "help": "Use a sentence: black people, red blood, green land, white peace.",
   "feedback": "Red on the flag stands for the blood shed in the struggle for freedom. Black stands for the people.",
   "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
-  "status": "draft"
+  "status": "draft",
+  "review": {
+   "mark": "plausible, to confirm by a teacher",
+   "note": "Own judgement: believable for a Kenyan child of this age, but we have no source or homework count. A teacher who knows the class should say whether children really hold it."
+  }
  },
  "SOCI.G5.GOVERN.NATIONAL_UNITY_IN_KENYA.SYMBOLS.M_NU_SYMBOL_MIX": {
   "skill": "SOCI.G5.GOVERN.NATIONAL_UNITY_IN_KENYA.SYMBOLS",
@@ -1332,7 +1684,11 @@
   "help": "List the official symbols and ask if the rally is among them.",
   "feedback": "The national flag, the coat of arms and the national anthem are official symbols. The Safari Rally is a sports event.",
   "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
-  "status": "draft"
+  "status": "draft",
+  "review": {
+   "mark": "doubtful",
+   "why": "Children can list the flag, anthem and coat of arms; a trap option."
+  }
  },
  "SOCI.G5.GOVERN.NATIONAL_UNITY_IN_KENYA.UNITY_FACTORS.M_NU_UNITY_SAME": {
   "skill": "SOCI.G5.GOVERN.NATIONAL_UNITY_IN_KENYA.UNITY_FACTORS",
@@ -1347,7 +1703,11 @@
   "help": "Ask whether a football team where all are the same does well.",
   "feedback": "Unity does not mean being the same. It means people of different communities live and work together.",
   "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
-  "status": "draft"
+  "status": "draft",
+  "review": {
+   "mark": "plausible, to confirm by a teacher",
+   "note": "Own judgement: believable for a Kenyan child of this age, but we have no source or homework count. A teacher who knows the class should say whether children really hold it."
+  }
  },
  "SOCI.G5.GOVERN.NATIONAL_UNITY_IN_KENYA.UNITY_FACTORS.M_NU_TRIBE_FIX": {
   "skill": "SOCI.G5.GOVERN.NATIONAL_UNITY_IN_KENYA.UNITY_FACTORS",
@@ -1362,7 +1722,11 @@
   "help": "Describe a school with mixed friends and a school with split groups.",
   "feedback": "Tribalism is overcome by mixing, sharing and respecting each other, not by keeping apart.",
   "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
-  "status": "draft"
+  "status": "draft",
+  "review": {
+   "mark": "plausible, to confirm by a teacher",
+   "note": "Own judgement: believable for a Kenyan child of this age, but we have no source or homework count. A teacher who knows the class should say whether children really hold it."
+  }
  },
  "SOCI.G5.GOVERN.HUMAN_RIGHTS.BASIC_RIGHTS.M_HR_WANT_AS_RIGHT": {
   "skill": "SOCI.G5.GOVERN.HUMAN_RIGHTS.BASIC_RIGHTS",
@@ -1377,7 +1741,11 @@
   "help": "Sort cards into needs that protect life and dignity and things that are nice to have.",
   "feedback": "Rights protect life and dignity, such as education and health. A new phone is something we want.",
   "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
-  "status": "draft"
+  "status": "draft",
+  "review": {
+   "mark": "common in the literature",
+   "source": "Howe and Covell (2005), Empowering Children: Children's Rights Education as a Pathway to Citizenship (University of Toronto Press): children confuse what they want with what they have a right to."
+  }
  },
  "SOCI.G5.GOVERN.HUMAN_RIGHTS.BASIC_RIGHTS.M_HR_ADULT_ONLY": {
   "skill": "SOCI.G5.GOVERN.HUMAN_RIGHTS.BASIC_RIGHTS",
@@ -1392,7 +1760,11 @@
   "help": "Read the children's rights list aloud.",
   "feedback": "Every person has rights, including children. Children have the right to education.",
   "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
-  "status": "draft"
+  "status": "draft",
+  "review": {
+   "mark": "doubtful",
+   "why": "Grade 5 children know they have rights to school; a trap option."
+  }
  },
  "SOCI.G5.GOVERN.HUMAN_RIGHTS.RIGHTS_RESPONSIBILITY.M_HR_NO_LIMIT": {
   "skill": "SOCI.G5.GOVERN.HUMAN_RIGHTS.RIGHTS_RESPONSIBILITY",
@@ -1407,7 +1779,11 @@
   "help": "Ask whose rights are touched when the music is loud.",
   "feedback": "Our rights end where they harm another person. Each right comes with a duty to respect it in others.",
   "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
-  "status": "draft"
+  "status": "draft",
+  "review": {
+   "mark": "plausible, to confirm by a teacher",
+   "note": "Own judgement: believable for a Kenyan child of this age, but we have no source or homework count. A teacher who knows the class should say whether children really hold it."
+  }
  },
  "SOCI.G5.GOVERN.HUMAN_RIGHTS.RIGHTS_RESPONSIBILITY.M_HR_NO_REPORT": {
   "skill": "SOCI.G5.GOVERN.HUMAN_RIGHTS.RIGHTS_RESPONSIBILITY",
@@ -1422,7 +1798,11 @@
   "help": "Practise telling a teacher and call Childline 116.",
   "feedback": "Abuse is never a secret to keep. Tell a trusted adult, a teacher or Childline 116.",
   "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
-  "status": "draft"
+  "status": "draft",
+  "review": {
+   "mark": "plausible, to confirm by a teacher",
+   "note": "Own judgement: believable for a Kenyan child of this age, but we have no source or homework count. A teacher who knows the class should say whether children really hold it."
+  }
  },
  "SOCI.G5.GOVERN.DEMOCRACY_IN_SOCIETY.TYPES.M_DM_TYPE_MIX": {
   "skill": "SOCI.G5.GOVERN.DEMOCRACY_IN_SOCIETY.TYPES",
@@ -1437,7 +1817,11 @@
   "help": "Ask: did each person decide, or did chosen people decide for them?",
   "feedback": "When every person votes on the matter, that is direct democracy. In representative democracy we elect others to decide.",
   "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
-  "status": "draft"
+  "status": "draft",
+  "review": {
+   "mark": "plausible, to confirm by a teacher",
+   "note": "Own judgement: believable for a Kenyan child of this age, but we have no source or homework count. A teacher who knows the class should say whether children really hold it."
+  }
  },
  "SOCI.G5.GOVERN.DEMOCRACY_IN_SOCIETY.TYPES.M_DM_NOT_DEMOCRACY": {
   "skill": "SOCI.G5.GOVERN.DEMOCRACY_IN_SOCIETY.TYPES",
@@ -1452,7 +1836,11 @@
   "help": "Ask who chose the leader and who can remove him.",
   "feedback": "In a democracy, people choose their leaders. A leader who keeps power without elections is not a democratic leader.",
   "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
-  "status": "draft"
+  "status": "draft",
+  "review": {
+   "mark": "doubtful",
+   "why": "Children know a ruler for life is not chosen by vote; a trap option."
+  }
  },
  "SOCI.G5.GOVERN.DEMOCRACY_IN_SOCIETY.BENEFITS_PRACTICE.M_DM_MAJORITY_ALL": {
   "skill": "SOCI.G5.GOVERN.DEMOCRACY_IN_SOCIETY.BENEFITS_PRACTICE",
@@ -1467,7 +1855,11 @@
   "help": "Ask how the 8 can still get a turn another day.",
   "feedback": "The majority decides, but the minority is still respected and can speak and try again next time.",
   "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
-  "status": "draft"
+  "status": "draft",
+  "review": {
+   "mark": "plausible, to confirm by a teacher",
+   "note": "Own judgement: believable for a Kenyan child of this age, but we have no source or homework count. A teacher who knows the class should say whether children really hold it."
+  }
  },
  "SOCI.G5.GOVERN.DEMOCRACY_IN_SOCIETY.BENEFITS_PRACTICE.M_DM_LOUDEST": {
   "skill": "SOCI.G5.GOVERN.DEMOCRACY_IN_SOCIETY.BENEFITS_PRACTICE",
@@ -1482,6 +1874,10 @@
   "help": "Run a mock election with secret ballots.",
   "feedback": "A fair election uses a free, secret vote, counted honestly. Shouting does not decide it.",
   "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
-  "status": "draft"
+  "status": "draft",
+  "review": {
+   "mark": "plausible, to confirm by a teacher",
+   "note": "Own judgement: believable for a Kenyan child of this age, but we have no source or homework count. A teacher who knows the class should say whether children really hold it."
+  }
  }
 }

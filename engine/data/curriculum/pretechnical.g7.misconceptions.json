@@ -1,0 +1,1847 @@
+{
+ "PRET.G7.FOUNDA.INTRODUCTION_TO_PRE_TECH.PT_INTRO.M_PI_TOOLS_ONLY": {
+  "skill": "PRET.G7.FOUNDA.INTRODUCTION_TO_PRE_TECH.PT_INTRO",
+  "error": "Thinks Pre-Technical Studies is only about handling tools and making things.",
+  "example": {
+   "question": "Which of these is part of Pre-Technical Studies?",
+   "wrong_answer": "Only using tools in the workshop",
+   "correct_answer": "Tools, drawing, materials, computers, safety and starting a business"
+  },
+  "cause": "The child saw only the workshop lessons.",
+  "reveals": "Offer \"Only using tools in the workshop\" next to the right answer and ask the question again in a new context.",
+  "help": "List the five strands and one activity from each.",
+  "feedback": "Pre-Technical Studies also covers safety, drawing, materials, computers and entrepreneurship, not only tools.",
+  "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
+  "status": "draft"
+ },
+ "PRET.G7.FOUNDA.INTRODUCTION_TO_PRE_TECH.PT_INTRO.M_PI_BOYS": {
+  "skill": "PRET.G7.FOUNDA.INTRODUCTION_TO_PRE_TECH.PT_INTRO",
+  "error": "Thinks Pre-Technical Studies is for boys or for learners who will not go on to other careers.",
+  "example": {
+   "question": "Who uses Pre-Technical knowledge?",
+   "wrong_answer": "Only boys who will become mechanics",
+   "correct_answer": "Girls and boys, in many jobs and in daily life"
+  },
+  "cause": "Workshop work is pictured as a boys' job.",
+  "reveals": "Offer \"Only boys who will become mechanics\" next to the right answer and ask the question again in a new context.",
+  "help": "Name a woman who uses it: a tailor, an engineer, a salon owner, a farmer with a pump.",
+  "feedback": "Everybody uses it: girls and boys, in homes, shops, farms, offices and workshops.",
+  "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
+  "status": "draft"
+ },
+ "PRET.G7.FOUNDA.INTRODUCTION_TO_PRE_TECH.PT_INTRO.M_PI_SCHOOL_ONLY": {
+  "skill": "PRET.G7.FOUNDA.INTRODUCTION_TO_PRE_TECH.PT_INTRO",
+  "error": "Thinks Pre-Technical knowledge is used only in a school workshop.",
+  "example": {
+   "question": "Where is Pre-Technical knowledge used in daily life?",
+   "wrong_answer": "Only in the school workshop",
+   "correct_answer": "At home, in shops, on farms and in workshops"
+  },
+  "cause": "The child links the subject to a room, not to daily life.",
+  "reveals": "Offer \"Only in the school workshop\" next to the right answer and ask the question again in a new context.",
+  "help": "List what happens at home: cooking safely, mending a chair, a phone, a budget.",
+  "feedback": "Safety, tools, drawings and small businesses are part of daily life everywhere.",
+  "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
+  "status": "draft"
+ },
+ "PRET.G7.FOUNDA.SAFETY_IN_THE_IMMEDIATE_.SAFETY_THREATS.M_ST_SLIP_TRIP": {
+  "skill": "PRET.G7.FOUNDA.SAFETY_IN_THE_IMMEDIATE_.SAFETY_THREATS",
+  "error": "Treats a slip and a trip as the same thing.",
+  "example": {
+   "question": "Kamau steps on a wet floor and his feet slide away. What is this?",
+   "wrong_answer": "A trip",
+   "correct_answer": "A slip"
+  },
+  "cause": "Both words are used loosely.",
+  "reveals": "Offer \"A trip\" next to the right answer and ask the question again in a new context.",
+  "help": "A slip is sliding on a smooth or wet surface; a trip is catching the foot on something.",
+  "feedback": "A slip happens on a wet or smooth floor. A trip happens when the foot catches on something in the way.",
+  "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
+  "status": "draft"
+ },
+ "PRET.G7.FOUNDA.SAFETY_IN_THE_IMMEDIATE_.SAFETY_THREATS.M_ST_FIRE_STOVE": {
+  "skill": "PRET.G7.FOUNDA.SAFETY_IN_THE_IMMEDIATE_.SAFETY_THREATS",
+  "error": "Thinks fires start only from big flames, not from wires, chargers or cooking oil.",
+  "example": {
+   "question": "Which can start a fire?",
+   "wrong_answer": "Only a big open flame",
+   "correct_answer": "A faulty wire, an overloaded socket or hot cooking oil"
+  },
+  "cause": "The child pictures fire as a bonfire.",
+  "reveals": "Offer \"Only a big open flame\" next to the right answer and ask the question again in a new context.",
+  "help": "List five ways a fire can start in a house or a workshop.",
+  "feedback": "Faulty wires, overloaded sockets, hot oil and sparks can all start a fire, not only a big flame.",
+  "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
+  "status": "draft"
+ },
+ "PRET.G7.FOUNDA.SAFETY_IN_THE_IMMEDIATE_.SAFETY_THREATS.M_ST_DEVICE_THIEF": {
+  "skill": "PRET.G7.FOUNDA.SAFETY_IN_THE_IMMEDIATE_.SAFETY_THREATS",
+  "error": "Thinks the only threat to a phone or computer is a thief.",
+  "example": {
+   "question": "Which can harm a computer?",
+   "wrong_answer": "Only a thief",
+   "correct_answer": "A thief, a flood or fire, or a hardware fault"
+  },
+  "cause": "The child thinks only of theft.",
+  "reveals": "Offer \"Only a thief\" next to the right answer and ask the question again in a new context.",
+  "help": "Ask what happens to a computer in a flood, in lightning or when the power surges.",
+  "feedback": "Theft, floods, fire and hardware failure can all harm a device.",
+  "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
+  "status": "draft"
+ },
+ "PRET.G7.FOUNDA.SAFETY_IN_THE_IMMEDIATE_.SAFETY_THREATS.M_ST_ROAD_DRIVER": {
+  "skill": "PRET.G7.FOUNDA.SAFETY_IN_THE_IMMEDIATE_.SAFETY_THREATS",
+  "error": "Thinks road crashes only harm drivers on highways.",
+  "example": {
+   "question": "Who is at risk from road crashes?",
+   "wrong_answer": "Only drivers on highways",
+   "correct_answer": "Pedestrians, cyclists, boda boda riders, passengers and drivers"
+  },
+  "cause": "The child pictures a highway crash.",
+  "reveals": "Offer \"Only drivers on highways\" next to the right answer and ask the question again in a new context.",
+  "help": "List who is on a road outside the school gate.",
+  "feedback": "Walkers, riders and passengers are at risk too, near the school gate as well as on highways.",
+  "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
+  "status": "draft"
+ },
+ "PRET.G7.FOUNDA.SAFETY_IN_THE_IMMEDIATE_.SAFETY_ONLINE.M_SO_LOOKS_REAL": {
+  "skill": "PRET.G7.FOUNDA.SAFETY_IN_THE_IMMEDIATE_.SAFETY_ONLINE",
+  "error": "Thinks a message is safe if it looks like it comes from a bank or M-Pesa.",
+  "example": {
+   "question": "A message that looks like M-Pesa asks you to send your PIN. What is it?",
+   "wrong_answer": "A real message, because it looks official",
+   "correct_answer": "Phishing, a trick to get your PIN"
+  },
+  "cause": "Logos and good spelling feel trustworthy.",
+  "reveals": "Offer \"A real message, because it looks official\" next to the right answer and ask the question again in a new context.",
+  "help": "Show that anybody can copy a logo. Real companies never ask for a PIN.",
+  "feedback": "Phishing messages copy real logos. Nobody real asks for your PIN or password.",
+  "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
+  "status": "draft"
+ },
+ "PRET.G7.FOUNDA.SAFETY_IN_THE_IMMEDIATE_.SAFETY_ONLINE.M_SO_ACCEPT_STRANGER": {
+  "skill": "PRET.G7.FOUNDA.SAFETY_IN_THE_IMMEDIATE_.SAFETY_ONLINE",
+  "error": "Thinks it is fine to accept a friend request from someone met only online.",
+  "example": {
+   "question": "A stranger sends you a friend request. What should you do?",
+   "wrong_answer": "Accept, because more friends is better",
+   "correct_answer": "Not accept, and tell a trusted adult"
+  },
+  "cause": "The child links friends with popularity.",
+  "reveals": "Offer \"Accept, because more friends is better\" next to the right answer and ask the question again in a new context.",
+  "help": "Ask: would you give a stranger at the gate your home address?",
+  "feedback": "Do not accept a stranger. Tell a trusted adult about the request.",
+  "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
+  "status": "draft"
+ },
+ "PRET.G7.FOUNDA.SAFETY_IN_THE_IMMEDIATE_.SAFETY_ONLINE.M_SO_BULLY_JOKE": {
+  "skill": "PRET.G7.FOUNDA.SAFETY_IN_THE_IMMEDIATE_.SAFETY_ONLINE",
+  "error": "Thinks cyberbullying is only a joke because nobody is hit.",
+  "example": {
+   "question": "Is hurting someone with nasty messages harmful?",
+   "wrong_answer": "No, words online do not hurt",
+   "correct_answer": "Yes, it is cyberbullying and it hurts"
+  },
+  "cause": "The harm is not seen.",
+  "reveals": "Offer \"No, words online do not hurt\" next to the right answer and ask the question again in a new context.",
+  "help": "Ask how a nasty message to you would feel; a message can be kept and shared.",
+  "feedback": "Cyberbullying hurts like bullying in person. Tell a trusted adult.",
+  "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
+  "status": "draft"
+ },
+ "PRET.G7.FOUNDA.SAFETY_IN_THE_IMMEDIATE_.SAFETY_ONLINE.M_SO_IMPERSONATE": {
+  "skill": "PRET.G7.FOUNDA.SAFETY_IN_THE_IMMEDIATE_.SAFETY_ONLINE",
+  "error": "Thinks impersonation means using a nickname.",
+  "example": {
+   "question": "Someone makes an account with your friend's name and photo. What is this?",
+   "wrong_answer": "A nickname",
+   "correct_answer": "Impersonation"
+  },
+  "cause": "The two ideas both involve a changed name.",
+  "reveals": "Offer \"A nickname\" next to the right answer and ask the question again in a new context.",
+  "help": "A nickname is open and harmless; impersonation pretends to be a real person to trick others.",
+  "feedback": "Impersonation is pretending to be another real person, usually to trick people.",
+  "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
+  "status": "draft"
+ },
+ "PRET.G7.FOUNDA.SAFETY_IN_THE_IMMEDIATE_.SAFETY_ONLINE.M_SO_HACK_EXPERT": {
+  "skill": "PRET.G7.FOUNDA.SAFETY_IN_THE_IMMEDIATE_.SAFETY_ONLINE",
+  "error": "Thinks hacking happens only to banks and never to a child's phone or account.",
+  "example": {
+   "question": "Who can be hacked?",
+   "wrong_answer": "Only banks and big companies",
+   "correct_answer": "Anyone with a weak password or a careless click"
+  },
+  "cause": "The child thinks only of big news stories.",
+  "reveals": "Offer \"Only banks and big companies\" next to the right answer and ask the question again in a new context.",
+  "help": "Ask what a thief would want from a child's social media account.",
+  "feedback": "Anyone can be hacked. Strong passwords and careful clicking protect you.",
+  "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
+  "status": "draft"
+ },
+ "PRET.G7.FOUNDA.SAFETY_IN_THE_IMMEDIATE_.SAFETY_RULES.M_SR_RUSH": {
+  "skill": "PRET.G7.FOUNDA.SAFETY_IN_THE_IMMEDIATE_.SAFETY_RULES",
+  "error": "Thinks working fast is safer or better in a workshop.",
+  "example": {
+   "question": "Which habit keeps you safe in the workshop?",
+   "wrong_answer": "Work as quickly as possible",
+   "correct_answer": "Work carefully and follow the steps"
+  },
+  "cause": "Speed feels like skill.",
+  "reveals": "Offer \"Work as quickly as possible\" next to the right answer and ask the question again in a new context.",
+  "help": "Ask what happens to a hand that hurries near a saw.",
+  "feedback": "Rushing causes accidents. Work carefully and follow the steps.",
+  "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
+  "status": "draft"
+ },
+ "PRET.G7.FOUNDA.SAFETY_IN_THE_IMMEDIATE_.SAFETY_RULES.M_SR_NO_REPORT": {
+  "skill": "PRET.G7.FOUNDA.SAFETY_IN_THE_IMMEDIATE_.SAFETY_RULES",
+  "error": "Thinks a small cut or a near miss need not be reported.",
+  "example": {
+   "question": "You cut your finger a little. What should you do?",
+   "wrong_answer": "Say nothing, it is small",
+   "correct_answer": "Tell the teacher and clean the cut"
+  },
+  "cause": "The child fears trouble or thinks it is small.",
+  "reveals": "Offer \"Say nothing, it is small\" next to the right answer and ask the question again in a new context.",
+  "help": "A cut can be dirty; the teacher can also fix what caused it.",
+  "feedback": "Always tell the teacher about an injury, however small.",
+  "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
+  "status": "draft"
+ },
+ "PRET.G7.FOUNDA.SAFETY_IN_THE_IMMEDIATE_.SAFETY_RULES.M_SR_LOOSE": {
+  "skill": "PRET.G7.FOUNDA.SAFETY_IN_THE_IMMEDIATE_.SAFETY_RULES",
+  "error": "Thinks long hair or loose clothes do no harm near a machine.",
+  "example": {
+   "question": "What should you do with long hair in the workshop?",
+   "wrong_answer": "Leave it loose",
+   "correct_answer": "Tie it back"
+  },
+  "cause": "The hazard is not obvious.",
+  "reveals": "Offer \"Leave it loose\" next to the right answer and ask the question again in a new context.",
+  "help": "Show how a loose sleeve could be caught by a moving part.",
+  "feedback": "Hair and loose clothes can be caught by moving parts. Tie hair back.",
+  "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
+  "status": "draft"
+ },
+ "PRET.G7.FOUNDA.SAFETY_IN_THE_IMMEDIATE_.SAFETY_RULES.M_SR_TOOLS_FLOOR": {
+  "skill": "PRET.G7.FOUNDA.SAFETY_IN_THE_IMMEDIATE_.SAFETY_RULES",
+  "error": "Thinks tools can be left anywhere on the floor or bench.",
+  "example": {
+   "question": "Where do tools go when the job is done?",
+   "wrong_answer": "Anywhere, on the floor is fine",
+   "correct_answer": "Back in their place, cleaned"
+  },
+  "cause": "The child does not see the trip risk.",
+  "reveals": "Offer \"Anywhere, on the floor is fine\" next to the right answer and ask the question again in a new context.",
+  "help": "Ask who might step on a tool left in a walkway.",
+  "feedback": "Tools left about cause trips and cuts. Put them back in their place.",
+  "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
+  "status": "draft"
+ },
+ "PRET.G7.FOUNDA.COMPUTER_CONCEPTS.COMP_CHARS.M_CC_DATA_INFO": {
+  "skill": "PRET.G7.FOUNDA.COMPUTER_CONCEPTS.COMP_CHARS",
+  "error": "Thinks data and information are the same.",
+  "example": {
+   "question": "A list of marks 45, 62, 38 is data. What is the class average?",
+   "wrong_answer": "Data too, they are the same thing",
+   "correct_answer": "Information, because the data was processed"
+  },
+  "cause": "The words are used as if equal.",
+  "reveals": "Offer \"Data too, they are the same thing\" next to the right answer and ask the question again in a new context.",
+  "help": "Data is raw; information is data made useful by processing.",
+  "feedback": "Data is raw facts. Information is data that has been processed so it means something.",
+  "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
+  "status": "draft"
+ },
+ "PRET.G7.FOUNDA.COMPUTER_CONCEPTS.COMP_CHARS.M_CC_ALWAYS_RIGHT": {
+  "skill": "PRET.G7.FOUNDA.COMPUTER_CONCEPTS.COMP_CHARS",
+  "error": "Thinks a computer is accurate even when the person types the wrong thing in.",
+  "example": {
+   "question": "A clerk types a wrong price. What will the computer print?",
+   "wrong_answer": "The right price, computers never make mistakes",
+   "correct_answer": "The wrong price, from wrong input"
+  },
+  "cause": "Accuracy is mixed up with being right.",
+  "reveals": "Offer \"The right price, computers never make mistakes\" next to the right answer and ask the question again in a new context.",
+  "help": "A computer is exact in its sums; it cannot know your typing was wrong.",
+  "feedback": "A computer is accurate at the working, but wrong input gives wrong output.",
+  "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
+  "status": "draft"
+ },
+ "PRET.G7.FOUNDA.COMPUTER_CONCEPTS.COMP_CHARS.M_CC_TIRED": {
+  "skill": "PRET.G7.FOUNDA.COMPUTER_CONCEPTS.COMP_CHARS",
+  "error": "Thinks diligence means a computer gets tired and must rest like a person.",
+  "example": {
+   "question": "What does diligence mean for a computer?",
+   "wrong_answer": "It gets tired and needs rest",
+   "correct_answer": "It can work for long hours without getting tired"
+  },
+  "cause": "The word is read for people.",
+  "reveals": "Offer \"It gets tired and needs rest\" next to the right answer and ask the question again in a new context.",
+  "help": "A person tires; a computer repeats the same work without losing care.",
+  "feedback": "Diligence means it works for long hours without tiring or losing care.",
+  "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
+  "status": "draft"
+ },
+ "PRET.G7.FOUNDA.COMPUTER_CONCEPTS.COMP_CHARS.M_CC_THINKS": {
+  "skill": "PRET.G7.FOUNDA.COMPUTER_CONCEPTS.COMP_CHARS",
+  "error": "Thinks a computer thinks and decides by itself.",
+  "example": {
+   "question": "How does a computer know what to do?",
+   "wrong_answer": "It thinks for itself",
+   "correct_answer": "It follows instructions given to it"
+  },
+  "cause": "Films show clever machines.",
+  "reveals": "Offer \"It thinks for itself\" next to the right answer and ask the question again in a new context.",
+  "help": "Ask what a computer does with no program.",
+  "feedback": "A computer follows the instructions it is given. It does not think for itself.",
+  "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
+  "status": "draft"
+ },
+ "PRET.G7.FOUNDA.COMPUTER_CONCEPTS.COMP_CHARS.M_CC_ONE_JOB": {
+  "skill": "PRET.G7.FOUNDA.COMPUTER_CONCEPTS.COMP_CHARS",
+  "error": "Thinks a computer can do only one kind of job.",
+  "example": {
+   "question": "Which characteristic means a computer can do many kinds of jobs?",
+   "wrong_answer": "Diligence",
+   "correct_answer": "Versatility"
+  },
+  "cause": "The child does not know the word.",
+  "reveals": "Offer \"Diligence\" next to the right answer and ask the question again in a new context.",
+  "help": "List what a laptop does: write, draw, play, calculate.",
+  "feedback": "Versatility is doing many different kinds of jobs.",
+  "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
+  "status": "draft"
+ },
+ "PRET.G7.FOUNDA.COMPUTER_CONCEPTS.COMP_CLASSIFY.M_CL_PHONE_NOT": {
+  "skill": "PRET.G7.FOUNDA.COMPUTER_CONCEPTS.COMP_CLASSIFY",
+  "error": "Thinks a smartphone is not a computer.",
+  "example": {
+   "question": "Is a smartphone a computer?",
+   "wrong_answer": "No, only a desktop is",
+   "correct_answer": "Yes, it is a micro computer"
+  },
+  "cause": "The child links computers with big screens.",
+  "reveals": "Offer \"No, only a desktop is\" next to the right answer and ask the question again in a new context.",
+  "help": "A phone takes input, processes, stores and gives output.",
+  "feedback": "A smartphone is a small computer: it takes input, processes, stores and gives output.",
+  "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
+  "status": "draft"
+ },
+ "PRET.G7.FOUNDA.COMPUTER_CONCEPTS.COMP_CLASSIFY.M_CL_MICRO_SMALL": {
+  "skill": "PRET.G7.FOUNDA.COMPUTER_CONCEPTS.COMP_CLASSIFY",
+  "error": "Mixes up the sizes: thinks mini and micro computers are the biggest.",
+  "example": {
+   "question": "Which is the biggest and most powerful type?",
+   "wrong_answer": "Micro computer",
+   "correct_answer": "Super computer"
+  },
+  "cause": "The names suggest nothing about size order.",
+  "reveals": "Offer \"Micro computer\" next to the right answer and ask the question again in a new context.",
+  "help": "Order them from biggest: super, mainframe, mini, micro.",
+  "feedback": "The order from biggest is super, mainframe, mini and micro. A laptop is a micro computer.",
+  "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
+  "status": "draft"
+ },
+ "PRET.G7.FOUNDA.COMPUTER_CONCEPTS.COMP_CLASSIFY.M_CL_ANALOGUE_OLD": {
+  "skill": "PRET.G7.FOUNDA.COMPUTER_CONCEPTS.COMP_CLASSIFY",
+  "error": "Thinks an analogue computer is just an old computer or not a computer at all.",
+  "example": {
+   "question": "What does an analogue computer work with?",
+   "wrong_answer": "Only old data",
+   "correct_answer": "Continuous measurements such as temperature or speed"
+  },
+  "cause": "The word sounds old.",
+  "reveals": "Offer \"Only old data\" next to the right answer and ask the question again in a new context.",
+  "help": "A petrol pump meter reads a flow, not digits alone.",
+  "feedback": "Analogue computers work with continuous quantities, such as temperature, speed or flow.",
+  "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
+  "status": "draft"
+ },
+ "PRET.G7.FOUNDA.COMPUTER_CONCEPTS.COMP_CLASSIFY.M_CL_SPECIAL_WEAK": {
+  "skill": "PRET.G7.FOUNDA.COMPUTER_CONCEPTS.COMP_CLASSIFY",
+  "error": "Thinks special purpose means weak or low quality.",
+  "example": {
+   "question": "A computer in a washing machine does only one job. What type is it?",
+   "wrong_answer": "A weak general-purpose computer",
+   "correct_answer": "A special-purpose computer"
+  },
+  "cause": "Special sounds like a poor copy.",
+  "reveals": "Offer \"A weak general-purpose computer\" next to the right answer and ask the question again in a new context.",
+  "help": "It is built for one job and does it well.",
+  "feedback": "A special-purpose computer is built for one job. General-purpose computers do many jobs.",
+  "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
+  "status": "draft"
+ },
+ "PRET.G7.COMMUN.INTRODUCTION_TO_DRAWING.DRAW_PURPOSE.M_DP_ARTISTS_ONLY": {
+  "skill": "PRET.G7.COMMUN.INTRODUCTION_TO_DRAWING.DRAW_PURPOSE",
+  "error": "Thinks drawing is only for artists.",
+  "example": {
+   "question": "Who uses drawing at work?",
+   "wrong_answer": "Only artists",
+   "correct_answer": "Builders, tailors, mechanics, engineers and artists"
+  },
+  "cause": "The child links drawing with art class.",
+  "reveals": "Offer \"Only artists\" next to the right answer and ask the question again in a new context.",
+  "help": "Ask how a builder tells workers the plan of a house.",
+  "feedback": "Builders, tailors and engineers all use drawings to share plans.",
+  "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
+  "status": "draft"
+ },
+ "PRET.G7.COMMUN.INTRODUCTION_TO_DRAWING.DRAW_PURPOSE.M_DP_WORDS_BETTER": {
+  "skill": "PRET.G7.COMMUN.INTRODUCTION_TO_DRAWING.DRAW_PURPOSE",
+  "error": "Thinks words always explain a shape better than a drawing.",
+  "example": {
+   "question": "Why is a drawing useful?",
+   "wrong_answer": "It is not, words are always better",
+   "correct_answer": "It shows shape and size that words describe badly"
+  },
+  "cause": "Words are the child's main tool.",
+  "reveals": "Offer \"It is not, words are always better\" next to the right answer and ask the question again in a new context.",
+  "help": "Describe a door hinge in words, then draw it.",
+  "feedback": "A drawing shows shape, size and parts that words describe badly.",
+  "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
+  "status": "draft"
+ },
+ "PRET.G7.COMMUN.INTRODUCTION_TO_DRAWING.DRAW_PURPOSE.M_DP_TECH_PRETTY": {
+  "skill": "PRET.G7.COMMUN.INTRODUCTION_TO_DRAWING.DRAW_PURPOSE",
+  "error": "Thinks a technical drawing is just a prettier drawing.",
+  "example": {
+   "question": "What is a technical drawing?",
+   "wrong_answer": "A beautiful picture for decoration",
+   "correct_answer": "An exact drawing with sizes that a worker can follow"
+  },
+  "cause": "Technical is read as fancy.",
+  "reveals": "Offer \"A beautiful picture for decoration\" next to the right answer and ask the question again in a new context.",
+  "help": "Compare a painting of a house with its building plan.",
+  "feedback": "A technical drawing gives exact shape and size by rules so a worker can make the thing.",
+  "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
+  "status": "draft"
+ },
+ "PRET.G7.COMMUN.INTRODUCTION_TO_DRAWING.DRAW_PURPOSE.M_DP_ART_NO_RULES": {
+  "skill": "PRET.G7.COMMUN.INTRODUCTION_TO_DRAWING.DRAW_PURPOSE",
+  "error": "Thinks artistic drawing needs exact measuring and technical drawing is free.",
+  "example": {
+   "question": "Which drawing needs exact sizes and rules?",
+   "wrong_answer": "An artistic drawing",
+   "correct_answer": "A technical drawing"
+  },
+  "cause": "The two are swapped.",
+  "reveals": "Offer \"An artistic drawing\" next to the right answer and ask the question again in a new context.",
+  "help": "A plan for a table must have sizes; a drawing of a sunset need not.",
+  "feedback": "An artistic drawing shows feeling or beauty. A technical drawing uses rules and exact sizes.",
+  "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
+  "status": "draft"
+ },
+ "PRET.G7.COMMUN.INTRODUCTION_TO_DRAWING.DRAW_LINES.M_DL_HIDDEN_CHAIN": {
+  "skill": "PRET.G7.COMMUN.INTRODUCTION_TO_DRAWING.DRAW_LINES",
+  "error": "Uses the chain line for hidden detail.",
+  "example": {
+   "question": "Which line shows hidden detail?",
+   "wrong_answer": "Chain line",
+   "correct_answer": "Dashed line"
+  },
+  "cause": "Both lines have breaks.",
+  "reveals": "Offer \"Chain line\" next to the right answer and ask the question again in a new context.",
+  "help": "Dashed has equal short dashes; chain has long and short dashes.",
+  "feedback": "Hidden detail is shown by a dashed line. A chain line shows centres.",
+  "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
+  "status": "draft"
+ },
+ "PRET.G7.COMMUN.INTRODUCTION_TO_DRAWING.DRAW_LINES.M_DL_CENTRE_DASHED": {
+  "skill": "PRET.G7.COMMUN.INTRODUCTION_TO_DRAWING.DRAW_LINES",
+  "error": "Uses the dashed line for the centre of a round part.",
+  "example": {
+   "question": "Which line marks the centre of a hole?",
+   "wrong_answer": "Dashed line",
+   "correct_answer": "Chain line"
+  },
+  "cause": "Both lines have breaks.",
+  "reveals": "Offer \"Dashed line\" next to the right answer and ask the question again in a new context.",
+  "help": "Chain means long-short-long.",
+  "feedback": "A chain line (long and short dashes) marks centres. Dashed lines show hidden detail.",
+  "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
+  "status": "draft"
+ },
+ "PRET.G7.COMMUN.INTRODUCTION_TO_DRAWING.DRAW_LINES.M_DL_DIM_THICK": {
+  "skill": "PRET.G7.COMMUN.INTRODUCTION_TO_DRAWING.DRAW_LINES",
+  "error": "Draws dimension lines thick.",
+  "example": {
+   "question": "Which line is used for dimension lines?",
+   "wrong_answer": "Thick continuous line",
+   "correct_answer": "Thin continuous line"
+  },
+  "cause": "Thick is thought to mean important.",
+  "reveals": "Offer \"Thick continuous line\" next to the right answer and ask the question again in a new context.",
+  "help": "Thick lines are for the outline; dimension lines must not hide it.",
+  "feedback": "Dimension lines are thin continuous lines. The outline is thick.",
+  "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
+  "status": "draft"
+ },
+ "PRET.G7.COMMUN.INTRODUCTION_TO_DRAWING.DRAW_LINES.M_DL_OUTLINE_THIN": {
+  "skill": "PRET.G7.COMMUN.INTRODUCTION_TO_DRAWING.DRAW_LINES",
+  "error": "Draws the outline of an object with a thin line.",
+  "example": {
+   "question": "Which line draws the outline of an object?",
+   "wrong_answer": "Thin continuous line",
+   "correct_answer": "Thick continuous line"
+  },
+  "cause": "The child sketches lightly.",
+  "reveals": "Offer \"Thin continuous line\" next to the right answer and ask the question again in a new context.",
+  "help": "The outline must stand out from the thin working lines.",
+  "feedback": "The outline and visible edges are thick continuous lines.",
+  "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
+  "status": "draft"
+ },
+ "PRET.G7.COMMUN.INTRODUCTION_TO_DRAWING.DRAW_SYMBOLS.M_DS_R_DIAM": {
+  "skill": "PRET.G7.COMMUN.INTRODUCTION_TO_DRAWING.DRAW_SYMBOLS",
+  "error": "Mixes up diameter and radius: reads R as diameter.",
+  "example": {
+   "question": "What does R mean on a drawing?",
+   "wrong_answer": "Diameter",
+   "correct_answer": "Radius"
+  },
+  "cause": "Both words belong to circles.",
+  "reveals": "Offer \"Diameter\" next to the right answer and ask the question again in a new context.",
+  "help": "Diameter is across the whole circle; radius is half of it.",
+  "feedback": "R stands for radius. Diameter is shown by the symbol ⌀.",
+  "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
+  "status": "draft"
+ },
+ "PRET.G7.COMMUN.INTRODUCTION_TO_DRAWING.DRAW_SYMBOLS.M_DS_PERP_PARALLEL": {
+  "skill": "PRET.G7.COMMUN.INTRODUCTION_TO_DRAWING.DRAW_SYMBOLS",
+  "error": "Reads the perpendicular symbol as parallel.",
+  "example": {
+   "question": "What does the symbol ⊥ mean?",
+   "wrong_answer": "Parallel",
+   "correct_answer": "Perpendicular, at a right angle"
+  },
+  "cause": "The two ideas are about lines.",
+  "reveals": "Offer \"Parallel\" next to the right answer and ask the question again in a new context.",
+  "help": "Draw two lines at a right angle: the symbol is those two lines.",
+  "feedback": "The symbol ⊥ means perpendicular, at a right angle.",
+  "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
+  "status": "draft"
+ },
+ "PRET.G7.COMMUN.INTRODUCTION_TO_DRAWING.DRAW_SYMBOLS.M_DS_ID_OD": {
+  "skill": "PRET.G7.COMMUN.INTRODUCTION_TO_DRAWING.DRAW_SYMBOLS",
+  "error": "Mixes up inside diameter and outside diameter.",
+  "example": {
+   "question": "What does O/D mean?",
+   "wrong_answer": "Inside diameter",
+   "correct_answer": "Outside diameter"
+  },
+  "cause": "The letters I and O are confused.",
+  "reveals": "Offer \"Inside diameter\" next to the right answer and ask the question again in a new context.",
+  "help": "Measure a pipe across the outside, then across the hole.",
+  "feedback": "O/D is outside diameter. I/D is inside diameter.",
+  "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
+  "status": "draft"
+ },
+ "PRET.G7.COMMUN.INTRODUCTION_TO_DRAWING.DRAW_SYMBOLS.M_DS_AF_AC": {
+  "skill": "PRET.G7.COMMUN.INTRODUCTION_TO_DRAWING.DRAW_SYMBOLS",
+  "error": "Mixes up across flats and across corners.",
+  "example": {
+   "question": "What does A/F mean on a nut?",
+   "wrong_answer": "Across corners",
+   "correct_answer": "Across flats"
+  },
+  "cause": "Both measure a hexagon.",
+  "reveals": "Offer \"Across corners\" next to the right answer and ask the question again in a new context.",
+  "help": "A/F is spanner size: from one flat side to the opposite.",
+  "feedback": "A/F is across flats, side to side. A/C is across corners.",
+  "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
+  "status": "draft"
+ },
+ "PRET.G7.COMMUN.FREE_HAND_SKETCHING.SKETCH_PRINCIPLES.M_SP_RULER": {
+  "skill": "PRET.G7.COMMUN.FREE_HAND_SKETCHING.SKETCH_PRINCIPLES",
+  "error": "Thinks a sketch must be drawn with a ruler.",
+  "example": {
+   "question": "What is free-hand sketching?",
+   "wrong_answer": "Drawing with a ruler and compass",
+   "correct_answer": "Drawing by hand without drawing tools"
+  },
+  "cause": "The child links neat with a ruler.",
+  "reveals": "Offer \"Drawing with a ruler and compass\" next to the right answer and ask the question again in a new context.",
+  "help": "Free-hand means the hand alone.",
+  "feedback": "Free-hand sketching is done without a ruler or compass.",
+  "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
+  "status": "draft"
+ },
+ "PRET.G7.COMMUN.FREE_HAND_SKETCHING.SKETCH_PRINCIPLES.M_SP_PRESS_FIRST": {
+  "skill": "PRET.G7.COMMUN.FREE_HAND_SKETCHING.SKETCH_PRINCIPLES",
+  "error": "Starts a sketch with dark pressed lines.",
+  "example": {
+   "question": "How should a sketch start?",
+   "wrong_answer": "With dark pressed lines",
+   "correct_answer": "With light lines you can change"
+  },
+  "cause": "The child wants it right first time.",
+  "reveals": "Offer \"With dark pressed lines\" next to the right answer and ask the question again in a new context.",
+  "help": "Light lines can be corrected and firmed up.",
+  "feedback": "Start light. Firm up the correct lines later.",
+  "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
+  "status": "draft"
+ },
+ "PRET.G7.COMMUN.FREE_HAND_SKETCHING.SKETCH_PRINCIPLES.M_SP_ERASER": {
+  "skill": "PRET.G7.COMMUN.FREE_HAND_SKETCHING.SKETCH_PRINCIPLES",
+  "error": "Thinks a sketch needs constant rubbing out.",
+  "example": {
+   "question": "What helps a sketch stay tidy?",
+   "wrong_answer": "Rub out every line at once",
+   "correct_answer": "Light lines, then firm the right ones"
+  },
+  "cause": "The child fears wrong lines.",
+  "reveals": "Offer \"Rub out every line at once\" next to the right answer and ask the question again in a new context.",
+  "help": "Overlapping light lines are part of sketching.",
+  "feedback": "Light lines let you correct without much rubbing out.",
+  "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
+  "status": "draft"
+ },
+ "PRET.G7.COMMUN.FREE_HAND_SKETCHING.SKETCH_PRINCIPLES.M_SP_PROPORTION": {
+  "skill": "PRET.G7.COMMUN.FREE_HAND_SKETCHING.SKETCH_PRINCIPLES",
+  "error": "Starts with small details and ignores the overall shape and proportion.",
+  "example": {
+   "question": "What do you look at first when sketching a bottle?",
+   "wrong_answer": "The label detail",
+   "correct_answer": "The whole shape and its proportions"
+  },
+  "cause": "The detail is most interesting.",
+  "reveals": "Offer \"The label detail\" next to the right answer and ask the question again in a new context.",
+  "help": "Get height to width right before details.",
+  "feedback": "Look at the whole shape and proportions first. Add detail last.",
+  "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
+  "status": "draft"
+ },
+ "PRET.G7.COMMUN.FREE_HAND_SKETCHING.SKETCH_TECHNIQUES.M_SK_HATCH_DOTS": {
+  "skill": "PRET.G7.COMMUN.FREE_HAND_SKETCHING.SKETCH_TECHNIQUES",
+  "error": "Thinks hatching is drawn with dots.",
+  "example": {
+   "question": "What is hatching?",
+   "wrong_answer": "Shading with dots",
+   "correct_answer": "Shading with parallel lines"
+  },
+  "cause": "Hatching and stippling are mixed up.",
+  "reveals": "Offer \"Shading with dots\" next to the right answer and ask the question again in a new context.",
+  "help": "Dots are stippling; parallel lines are hatching.",
+  "feedback": "Hatching is shading with parallel lines. Dots are stippling.",
+  "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
+  "status": "draft"
+ },
+ "PRET.G7.COMMUN.FREE_HAND_SKETCHING.SKETCH_TECHNIQUES.M_SK_CROSS_HATCH": {
+  "skill": "PRET.G7.COMMUN.FREE_HAND_SKETCHING.SKETCH_TECHNIQUES",
+  "error": "Thinks cross-hatching is one set of lines drawn across the shape.",
+  "example": {
+   "question": "What is cross-hatching?",
+   "wrong_answer": "One set of lines across the shape",
+   "correct_answer": "Two sets of lines that cross each other"
+  },
+  "cause": "The name is read as \"across\".",
+  "reveals": "Offer \"One set of lines across the shape\" next to the right answer and ask the question again in a new context.",
+  "help": "It is hatching, then hatching again across the first lines.",
+  "feedback": "Cross-hatching is two sets of lines crossing each other, for darker shade.",
+  "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
+  "status": "draft"
+ },
+ "PRET.G7.COMMUN.FREE_HAND_SKETCHING.SKETCH_TECHNIQUES.M_SK_BOX_CIRCLE": {
+  "skill": "PRET.G7.COMMUN.FREE_HAND_SKETCHING.SKETCH_TECHNIQUES",
+  "error": "Thinks the box method is for circles only, or mixes it with the hand compass method.",
+  "example": {
+   "question": "Which method draws a circle with the hand turning about a fixed finger?",
+   "wrong_answer": "Box method",
+   "correct_answer": "Hand compass method"
+  },
+  "cause": "Box and compass both sound like circles.",
+  "reveals": "Offer \"Box method\" next to the right answer and ask the question again in a new context.",
+  "help": "The box method puts the object in a box. A hand compass pivots.",
+  "feedback": "The hand compass method draws arcs and circles. The box method draws a light box round an object.",
+  "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
+  "status": "draft"
+ },
+ "PRET.G7.COMMUN.FREE_HAND_SKETCHING.SKETCH_TECHNIQUES.M_SK_CENTRE_ANY": {
+  "skill": "PRET.G7.COMMUN.FREE_HAND_SKETCHING.SKETCH_TECHNIQUES",
+  "error": "Uses the centreline method for a shape that is not symmetrical.",
+  "example": {
+   "question": "Which object suits the centreline method?",
+   "wrong_answer": "A pile of stones",
+   "correct_answer": "A bottle, the same on both sides"
+  },
+  "cause": "The method is not tied to symmetry in the child's mind.",
+  "reveals": "Offer \"A pile of stones\" next to the right answer and ask the question again in a new context.",
+  "help": "Fold the paper in half: do both sides match?",
+  "feedback": "The centreline method suits symmetrical objects, the same on both sides of a centre line.",
+  "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
+  "status": "draft"
+ },
+ "PRET.G7.COMMUN.ICT_TOOLS_IN_COMMUNICATI.ICT_TOOLS.M_IT_ALL_FREE": {
+  "skill": "PRET.G7.COMMUN.ICT_TOOLS_IN_COMMUNICATI.ICT_TOOLS",
+  "error": "Thinks ICT tools cost nothing to use.",
+  "example": {
+   "question": "What does a video call need?",
+   "wrong_answer": "Nothing, it is free",
+   "correct_answer": "Data or an internet link, and a device"
+  },
+  "cause": "Messages seem to arrive for free.",
+  "reveals": "Offer \"Nothing, it is free\" next to the right answer and ask the question again in a new context.",
+  "help": "Ask what your parent buys for the phone each month.",
+  "feedback": "Calls, data and devices cost money. Airtime or data is needed.",
+  "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
+  "status": "draft"
+ },
+ "PRET.G7.COMMUN.ICT_TOOLS_IN_COMMUNICATI.ICT_TOOLS.M_IT_SMS_NET": {
+  "skill": "PRET.G7.COMMUN.ICT_TOOLS_IN_COMMUNICATI.ICT_TOOLS",
+  "error": "Thinks a text message (SMS) needs the internet.",
+  "example": {
+   "question": "Which needs no internet?",
+   "wrong_answer": "A text message (SMS)",
+   "correct_answer": "A video conference"
+  },
+  "cause": "The child links all phone use with data.",
+  "reveals": "Offer \"A text message (SMS)\" next to the right answer and ask the question again in a new context.",
+  "help": "An SMS travels on the phone network.",
+  "feedback": "An SMS uses the phone network. A video conference needs an internet link.",
+  "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
+  "status": "draft"
+ },
+ "PRET.G7.COMMUN.ICT_TOOLS_IN_COMMUNICATI.ICT_TOOLS.M_IT_EMAIL_LIVE": {
+  "skill": "PRET.G7.COMMUN.ICT_TOOLS_IN_COMMUNICATI.ICT_TOOLS",
+  "error": "Thinks email is a live video link.",
+  "example": {
+   "question": "Which tool lets people see and hear one another live?",
+   "wrong_answer": "Email",
+   "correct_answer": "Video conferencing"
+  },
+  "cause": "Both are on the internet.",
+  "reveals": "Offer \"Email\" next to the right answer and ask the question again in a new context.",
+  "help": "Email is written and read later.",
+  "feedback": "Video conferencing shows and sounds both ways live. Email sends written messages and files.",
+  "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
+  "status": "draft"
+ },
+ "PRET.G7.COMMUN.ICT_TOOLS_IN_COMMUNICATI.ICT_TOOLS.M_IT_SOCIAL_FUN": {
+  "skill": "PRET.G7.COMMUN.ICT_TOOLS_IN_COMMUNICATI.ICT_TOOLS",
+  "error": "Thinks social networking is only for fun and never for work or learning.",
+  "example": {
+   "question": "How can social networking help a small business?",
+   "wrong_answer": "It cannot",
+   "correct_answer": "It shows products to many customers"
+  },
+  "cause": "The child sees only chat and games.",
+  "reveals": "Offer \"It cannot\" next to the right answer and ask the question again in a new context.",
+  "help": "Ask how a seller shows photos to buyers.",
+  "feedback": "Social networking shares messages and pictures with many people, including customers.",
+  "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
+  "status": "draft"
+ },
+ "PRET.G7.MATERI.INTRODUCTION_TO_MATERIAL.MAT_METAL_NONMETAL.M_MM_SHINY": {
+  "skill": "PRET.G7.MATERI.INTRODUCTION_TO_MATERIAL.MAT_METAL_NONMETAL",
+  "error": "Thinks anything shiny is a metal.",
+  "example": {
+   "question": "Which of these is non-metallic?",
+   "wrong_answer": "Glass, even though it shines",
+   "correct_answer": "Steel"
+  },
+  "cause": "Shine and metal are linked in the child's mind.",
+  "reveals": "Offer \"Glass, even though it shines\" next to the right answer and ask the question again in a new context.",
+  "help": "Glass shines but does not carry electricity or stick to a magnet.",
+  "feedback": "Glass shines but is non-metallic.",
+  "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
+  "status": "draft"
+ },
+ "PRET.G7.MATERI.INTRODUCTION_TO_MATERIAL.MAT_METAL_NONMETAL.M_MM_HARD_METAL": {
+  "skill": "PRET.G7.MATERI.INTRODUCTION_TO_MATERIAL.MAT_METAL_NONMETAL",
+  "error": "Thinks anything hard or heavy is a metal.",
+  "example": {
+   "question": "Which of these is non-metallic?",
+   "wrong_answer": "Stone, because it is hard",
+   "correct_answer": "Copper"
+  },
+  "cause": "Hard and heavy feel like metal.",
+  "reveals": "Offer \"Stone, because it is hard\" next to the right answer and ask the question again in a new context.",
+  "help": "Stone is hard and heavy but is not a metal.",
+  "feedback": "Stone is hard but is non-metallic.",
+  "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
+  "status": "draft"
+ },
+ "PRET.G7.MATERI.INTRODUCTION_TO_MATERIAL.MAT_METAL_NONMETAL.M_MM_PRODUCT": {
+  "skill": "PRET.G7.MATERI.INTRODUCTION_TO_MATERIAL.MAT_METAL_NONMETAL",
+  "error": "Treats a finished product as a material.",
+  "example": {
+   "question": "Which of these is a material?",
+   "wrong_answer": "A chair",
+   "correct_answer": "Wood"
+  },
+  "cause": "The child names the thing instead of what it is made of.",
+  "reveals": "Offer \"A chair\" next to the right answer and ask the question again in a new context.",
+  "help": "A material is what a thing is made from.",
+  "feedback": "A chair is a product. Wood is a material it is made from.",
+  "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
+  "status": "draft"
+ },
+ "PRET.G7.MATERI.INTRODUCTION_TO_MATERIAL.MAT_SUSTAINABLE.M_MS_WASTE_OK": {
+  "skill": "PRET.G7.MATERI.INTRODUCTION_TO_MATERIAL.MAT_SUSTAINABLE",
+  "error": "Thinks there is no need to save materials that are plentiful.",
+  "example": {
+   "question": "A carpenter has plenty of timber. What is a good habit?",
+   "wrong_answer": "Waste it, there is plenty",
+   "correct_answer": "Plan the cuts and use offcuts"
+  },
+  "cause": "Plenty feels endless.",
+  "reveals": "Offer \"Waste it, there is plenty\" next to the right answer and ask the question again in a new context.",
+  "help": "Trees take years to grow.",
+  "feedback": "Plan to waste less and use offcuts, even when materials are plentiful.",
+  "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
+  "status": "draft"
+ },
+ "PRET.G7.MATERI.INTRODUCTION_TO_MATERIAL.MAT_SUSTAINABLE.M_MS_BURN_OFFCUTS": {
+  "skill": "PRET.G7.MATERI.INTRODUCTION_TO_MATERIAL.MAT_SUSTAINABLE",
+  "error": "Thinks burning scrap is the best way to get rid of it.",
+  "example": {
+   "question": "What is a better use of scrap metal?",
+   "wrong_answer": "Burn it",
+   "correct_answer": "Recycle it"
+  },
+  "cause": "The child wants the scrap gone.",
+  "reveals": "Offer \"Burn it\" next to the right answer and ask the question again in a new context.",
+  "help": "Jua kali workers melt and reshape scrap into new things.",
+  "feedback": "Scrap metal can be recycled into new products. Burning plastics also harms the air.",
+  "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
+  "status": "draft"
+ },
+ "PRET.G7.MATERI.INTRODUCTION_TO_MATERIAL.MAT_SUSTAINABLE.M_MS_NEW_ONLY": {
+  "skill": "PRET.G7.MATERI.INTRODUCTION_TO_MATERIAL.MAT_SUSTAINABLE",
+  "error": "Thinks new materials are always better than reusing old ones.",
+  "example": {
+   "question": "A worn chair leg can be repaired. What is sustainable?",
+   "wrong_answer": "Throw it away and buy new",
+   "correct_answer": "Repair and reuse it"
+  },
+  "cause": "New feels better.",
+  "reveals": "Offer \"Throw it away and buy new\" next to the right answer and ask the question again in a new context.",
+  "help": "Repairing saves materials and money.",
+  "feedback": "Repair and reuse saves materials. Buy new only when needed.",
+  "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
+  "status": "draft"
+ },
+ "PRET.G7.MATERI.METALLIC_MATERIALS.METAL_TYPES.M_MT_ALU_STEEL": {
+  "skill": "PRET.G7.MATERI.METALLIC_MATERIALS.METAL_TYPES",
+  "error": "Thinks aluminium is a kind of steel and sticks to a magnet.",
+  "example": {
+   "question": "A silvery, light metal does not stick to a magnet. What is it likely to be?",
+   "wrong_answer": "Steel",
+   "correct_answer": "Aluminium"
+  },
+  "cause": "Both are grey-silver.",
+  "reveals": "Offer \"Steel\" next to the right answer and ask the question again in a new context.",
+  "help": "Steel sticks to a magnet; aluminium does not.",
+  "feedback": "Aluminium is light and silvery and does not stick to a magnet. Steel does.",
+  "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
+  "status": "draft"
+ },
+ "PRET.G7.MATERI.METALLIC_MATERIALS.METAL_TYPES.M_MT_COPPER_COLOUR": {
+  "skill": "PRET.G7.MATERI.METALLIC_MATERIALS.METAL_TYPES",
+  "error": "Does not know copper is reddish-brown.",
+  "example": {
+   "question": "Which metal is reddish-brown?",
+   "wrong_answer": "Aluminium",
+   "correct_answer": "Copper"
+  },
+  "cause": "The child has seen only grey metals.",
+  "reveals": "Offer \"Aluminium\" next to the right answer and ask the question again in a new context.",
+  "help": "Look at an electric wire with the plastic stripped off.",
+  "feedback": "Copper is reddish-brown.",
+  "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
+  "status": "draft"
+ },
+ "PRET.G7.MATERI.METALLIC_MATERIALS.METAL_TYPES.M_MT_MAGNET_ALL": {
+  "skill": "PRET.G7.MATERI.METALLIC_MATERIALS.METAL_TYPES",
+  "error": "Thinks a magnet picks up every metal.",
+  "example": {
+   "question": "A magnet does not pick up a metal spoon. What can you say?",
+   "wrong_answer": "It cannot be metal",
+   "correct_answer": "It may be aluminium or copper"
+  },
+  "cause": "Only iron and steel are noticed.",
+  "reveals": "Offer \"It cannot be metal\" next to the right answer and ask the question again in a new context.",
+  "help": "Try a magnet on a sufuria and a nail.",
+  "feedback": "Only iron and steel stick to a magnet. Aluminium and copper do not.",
+  "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
+  "status": "draft"
+ },
+ "PRET.G7.MATERI.METALLIC_MATERIALS.METAL_PROPERTIES.M_MP_ALL_MAGNETIC": {
+  "skill": "PRET.G7.MATERI.METALLIC_MATERIALS.METAL_PROPERTIES",
+  "error": "Thinks all metals are magnetic.",
+  "example": {
+   "question": "Which metal does a magnet pick up?",
+   "wrong_answer": "Copper",
+   "correct_answer": "Steel"
+  },
+  "cause": "The child knows only magnet and nail.",
+  "reveals": "Offer \"Copper\" next to the right answer and ask the question again in a new context.",
+  "help": "Test a coin, a nail and foil with a magnet.",
+  "feedback": "Only iron and steel are magnetic. Copper and aluminium are not.",
+  "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
+  "status": "draft"
+ },
+ "PRET.G7.MATERI.METALLIC_MATERIALS.METAL_PROPERTIES.M_MP_ALL_RUST": {
+  "skill": "PRET.G7.MATERI.METALLIC_MATERIALS.METAL_PROPERTIES",
+  "error": "Thinks every metal rusts.",
+  "example": {
+   "question": "Which metal rusts?",
+   "wrong_answer": "Copper and aluminium as well",
+   "correct_answer": "Iron and steel"
+  },
+  "cause": "Rust is used for any ageing metal.",
+  "reveals": "Offer \"Copper and aluminium as well\" next to the right answer and ask the question again in a new context.",
+  "help": "Rust is the red-brown flaking on iron and steel.",
+  "feedback": "Rust forms on iron and steel. Copper and aluminium do not rust like iron.",
+  "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
+  "status": "draft"
+ },
+ "PRET.G7.MATERI.METALLIC_MATERIALS.METAL_PROPERTIES.M_MP_NO_HEAT": {
+  "skill": "PRET.G7.MATERI.METALLIC_MATERIALS.METAL_PROPERTIES",
+  "error": "Thinks metals do not conduct heat.",
+  "example": {
+   "question": "Why does a metal spoon get hot in hot tea?",
+   "wrong_answer": "Metals do not carry heat",
+   "correct_answer": "Metals conduct heat well"
+  },
+  "cause": "The handle on a pan is plastic, so the child thinks metals keep heat in.",
+  "reveals": "Offer \"Metals do not carry heat\" next to the right answer and ask the question again in a new context.",
+  "help": "Touch a metal spoon in hot water.",
+  "feedback": "Metals conduct heat well, so a pan has a plastic or wooden handle.",
+  "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
+  "status": "draft"
+ },
+ "PRET.G7.MATERI.METALLIC_MATERIALS.METAL_PROPERTIES.M_MP_BRITTLE": {
+  "skill": "PRET.G7.MATERI.METALLIC_MATERIALS.METAL_PROPERTIES",
+  "error": "Thinks metals shatter when hammered, like glass.",
+  "example": {
+   "question": "What happens when copper is hammered?",
+   "wrong_answer": "It shatters",
+   "correct_answer": "It can be shaped into a sheet or drawn into wire"
+  },
+  "cause": "The child compares to glass.",
+  "reveals": "Offer \"It shatters\" next to the right answer and ask the question again in a new context.",
+  "help": "A jua kali worker hammers a hot piece of steel into a shape.",
+  "feedback": "Metals can be hammered into sheets and drawn into wire, unlike brittle glass.",
+  "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
+  "status": "draft"
+ },
+ "PRET.G7.MATERI.METALLIC_MATERIALS.METAL_USES.M_MU_WIRE_STEEL": {
+  "skill": "PRET.G7.MATERI.METALLIC_MATERIALS.METAL_USES",
+  "error": "Thinks electric wire is made of steel.",
+  "example": {
+   "question": "Which metal makes electric wire?",
+   "wrong_answer": "Steel",
+   "correct_answer": "Copper"
+  },
+  "cause": "Steel is the metal most known.",
+  "reveals": "Offer \"Steel\" next to the right answer and ask the question again in a new context.",
+  "help": "Copper conducts electricity very well.",
+  "feedback": "Copper is used for electric wire because it conducts electricity well.",
+  "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
+  "status": "draft"
+ },
+ "PRET.G7.MATERI.METALLIC_MATERIALS.METAL_USES.M_MU_ALU_HEAVY": {
+  "skill": "PRET.G7.MATERI.METALLIC_MATERIALS.METAL_USES",
+  "error": "Thinks aluminium is heavy and chosen for strength.",
+  "example": {
+   "question": "Why is a sufuria often made of aluminium?",
+   "wrong_answer": "It is very heavy",
+   "correct_answer": "It is light and conducts heat"
+  },
+  "cause": "Strong and heavy are linked.",
+  "reveals": "Offer \"It is very heavy\" next to the right answer and ask the question again in a new context.",
+  "help": "Aluminium is light and spreads heat.",
+  "feedback": "A sufuria is aluminium because it is light and conducts heat.",
+  "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
+  "status": "draft"
+ },
+ "PRET.G7.MATERI.METALLIC_MATERIALS.METAL_USES.M_MU_PROPERTY_SWAP": {
+  "skill": "PRET.G7.MATERI.METALLIC_MATERIALS.METAL_USES",
+  "error": "Matches a use to a property that does not fit.",
+  "example": {
+   "question": "Why is steel used for a jembe blade?",
+   "wrong_answer": "Because it does not conduct heat",
+   "correct_answer": "Because it is hard and strong"
+  },
+  "cause": "The reason is guessed.",
+  "reveals": "Offer \"Because it does not conduct heat\" next to the right answer and ask the question again in a new context.",
+  "help": "A jembe digs hard ground.",
+  "feedback": "Steel is hard and strong, so it suits a jembe, a panga and nails.",
+  "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
+  "status": "draft"
+ },
+ "PRET.G7.MATERI.NON_METALLIC_MATERIALS.NONMETAL_CLASS.M_NC_SYNTH_FAKE": {
+  "skill": "PRET.G7.MATERI.NON_METALLIC_MATERIALS.NONMETAL_CLASS",
+  "error": "Thinks synthetic means fake or poor quality.",
+  "example": {
+   "question": "What does synthetic mean?",
+   "wrong_answer": "Fake",
+   "correct_answer": "Made by people from chemicals"
+  },
+  "cause": "The word is used for imitations.",
+  "reveals": "Offer \"Fake\" next to the right answer and ask the question again in a new context.",
+  "help": "Nylon and plastic are real materials made in factories.",
+  "feedback": "Synthetic means made by people from chemicals. It does not mean fake.",
+  "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
+  "status": "draft"
+ },
+ "PRET.G7.MATERI.NON_METALLIC_MATERIALS.NONMETAL_CLASS.M_NC_NATURAL_UNMADE": {
+  "skill": "PRET.G7.MATERI.NON_METALLIC_MATERIALS.NONMETAL_CLASS",
+  "error": "Thinks natural means a material can never be shaped by people.",
+  "example": {
+   "question": "Is wood still natural when made into a table?",
+   "wrong_answer": "No, people changed it",
+   "correct_answer": "Yes, it comes from a tree"
+  },
+  "cause": "The child confuses natural with untouched.",
+  "reveals": "Offer \"No, people changed it\" next to the right answer and ask the question again in a new context.",
+  "help": "Natural means the source: plants, animals or the ground.",
+  "feedback": "Natural describes where a material comes from. Wood is still natural when shaped.",
+  "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
+  "status": "draft"
+ },
+ "PRET.G7.MATERI.NON_METALLIC_MATERIALS.NONMETAL_CLASS.M_NC_PLASTIC_NATURAL": {
+  "skill": "PRET.G7.MATERI.NON_METALLIC_MATERIALS.NONMETAL_CLASS",
+  "error": "Thinks plastic is a natural material.",
+  "example": {
+   "question": "Which is synthetic?",
+   "wrong_answer": "Cotton",
+   "correct_answer": "A polythene bag"
+  },
+  "cause": "Plastic is everywhere and feels like part of nature.",
+  "reveals": "Offer \"Cotton\" next to the right answer and ask the question again in a new context.",
+  "help": "Plastic is made in factories from chemicals.",
+  "feedback": "Plastic is synthetic. Cotton, wool and wood are natural.",
+  "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
+  "status": "draft"
+ },
+ "PRET.G7.MATERI.NON_METALLIC_MATERIALS.NONMETAL_CLASS.M_NC_WOOL_SYNTH": {
+  "skill": "PRET.G7.MATERI.NON_METALLIC_MATERIALS.NONMETAL_CLASS",
+  "error": "Thinks nylon cloth is natural like cotton.",
+  "example": {
+   "question": "Which cloth fibre is synthetic?",
+   "wrong_answer": "Wool",
+   "correct_answer": "Nylon"
+  },
+  "cause": "Both are cloth.",
+  "reveals": "Offer \"Wool\" next to the right answer and ask the question again in a new context.",
+  "help": "Wool comes from sheep; nylon is made from chemicals.",
+  "feedback": "Nylon is synthetic. Wool and cotton are natural.",
+  "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
+  "status": "draft"
+ },
+ "PRET.G7.MATERI.NON_METALLIC_MATERIALS.NONMETAL_PROPERTIES.M_NP_ALL_BURN": {
+  "skill": "PRET.G7.MATERI.NON_METALLIC_MATERIALS.NONMETAL_PROPERTIES",
+  "error": "Thinks all non-metals burn.",
+  "example": {
+   "question": "Which non-metal does not burn?",
+   "wrong_answer": "Wood",
+   "correct_answer": "A clay brick"
+  },
+  "cause": "Non-metals are lumped together.",
+  "reveals": "Offer \"Wood\" next to the right answer and ask the question again in a new context.",
+  "help": "Bricks and tiles are baked in a very hot kiln.",
+  "feedback": "Stone and clay products do not burn. Wood and paper do.",
+  "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
+  "status": "draft"
+ },
+ "PRET.G7.MATERI.NON_METALLIC_MATERIALS.NONMETAL_PROPERTIES.M_NP_PLASTIC_HEAT": {
+  "skill": "PRET.G7.MATERI.NON_METALLIC_MATERIALS.NONMETAL_PROPERTIES",
+  "error": "Thinks plastics stand up to heat like metals.",
+  "example": {
+   "question": "What happens to a plastic basin on a hot jiko?",
+   "wrong_answer": "Nothing, plastic is heat-proof",
+   "correct_answer": "It softens and melts"
+  },
+  "cause": "The child has not seen melting.",
+  "reveals": "Offer \"Nothing, plastic is heat-proof\" next to the right answer and ask the question again in a new context.",
+  "help": "Plastic cups lose shape in hot water.",
+  "feedback": "Plastics soften and melt in heat. Metals and ceramics do not.",
+  "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
+  "status": "draft"
+ },
+ "PRET.G7.MATERI.NON_METALLIC_MATERIALS.NONMETAL_PROPERTIES.M_NP_HARD_UNBREAKABLE": {
+  "skill": "PRET.G7.MATERI.NON_METALLIC_MATERIALS.NONMETAL_PROPERTIES",
+  "error": "Thinks that hard means it cannot break.",
+  "example": {
+   "question": "Glass is hard. Can it break?",
+   "wrong_answer": "No, hard materials never break",
+   "correct_answer": "Yes, glass is hard but brittle"
+  },
+  "cause": "Hard and strong are mixed up.",
+  "reveals": "Offer \"No, hard materials never break\" next to the right answer and ask the question again in a new context.",
+  "help": "Drop a glass cup and a plastic one.",
+  "feedback": "Glass is hard but brittle, so it breaks. Hardness is not the same as toughness.",
+  "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
+  "status": "draft"
+ },
+ "PRET.G7.MATERI.NON_METALLIC_MATERIALS.NONMETAL_PROPERTIES.M_NP_RUBBER_CONDUCT": {
+  "skill": "PRET.G7.MATERI.NON_METALLIC_MATERIALS.NONMETAL_PROPERTIES",
+  "error": "Thinks rubber carries electricity.",
+  "example": {
+   "question": "Why do electricians wear rubber gloves?",
+   "wrong_answer": "Rubber carries electricity",
+   "correct_answer": "Rubber does not carry electricity"
+  },
+  "cause": "The child does not know insulators.",
+  "reveals": "Offer \"Rubber carries electricity\" next to the right answer and ask the question again in a new context.",
+  "help": "Rubber and plastic cover wires.",
+  "feedback": "Rubber does not carry electricity, so it protects.",
+  "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
+  "status": "draft"
+ },
+ "PRET.G7.MATERI.NON_METALLIC_MATERIALS.NONMETAL_USES.M_NU_GLASS_HANDLE": {
+  "skill": "PRET.G7.MATERI.NON_METALLIC_MATERIALS.NONMETAL_USES",
+  "error": "Picks a material whose property does not fit the use.",
+  "example": {
+   "question": "Which material suits a water tank?",
+   "wrong_answer": "Glass",
+   "correct_answer": "Plastic"
+  },
+  "cause": "The child does not check the property.",
+  "reveals": "Offer \"Glass\" next to the right answer and ask the question again in a new context.",
+  "help": "A water tank must not rust or break when knocked.",
+  "feedback": "Plastic is light, waterproof and does not rust, so it suits a tank.",
+  "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
+  "status": "draft"
+ },
+ "PRET.G7.MATERI.NON_METALLIC_MATERIALS.NONMETAL_USES.M_NU_WOOD_ANY": {
+  "skill": "PRET.G7.MATERI.NON_METALLIC_MATERIALS.NONMETAL_USES",
+  "error": "Thinks wood suits every job.",
+  "example": {
+   "question": "Which material suits a floor tile in a kitchen?",
+   "wrong_answer": "Wood, because it is natural",
+   "correct_answer": "Ceramic, because it is hard and does not burn"
+  },
+  "cause": "Wood is the first material that comes to mind.",
+  "reveals": "Offer \"Wood, because it is natural\" next to the right answer and ask the question again in a new context.",
+  "help": "A tile must not burn or soak up water.",
+  "feedback": "Ceramic tiles are hard, waterproof and do not burn.",
+  "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
+  "status": "draft"
+ },
+ "PRET.G7.MATERI.NON_METALLIC_MATERIALS.NONMETAL_USES.M_NU_CEMENT": {
+  "skill": "PRET.G7.MATERI.NON_METALLIC_MATERIALS.NONMETAL_USES",
+  "error": "Thinks cement is the finished wall, not the binder.",
+  "example": {
+   "question": "What does cement do in a wall?",
+   "wrong_answer": "It is the wall",
+   "correct_answer": "It joins the blocks as it sets"
+  },
+  "cause": "Cement and concrete are mixed up.",
+  "reveals": "Offer \"It is the wall\" next to the right answer and ask the question again in a new context.",
+  "help": "Cement sets hard when mixed with water and sand.",
+  "feedback": "Cement is mixed with sand and water to join blocks or make concrete.",
+  "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
+  "status": "draft"
+ },
+ "PRET.G7.TOOLS_.MEASURING_AND_MARKING_OU.MEAS_TOOLS.M_MV_VOLT_AMP": {
+  "skill": "PRET.G7.TOOLS_.MEASURING_AND_MARKING_OU.MEAS_TOOLS",
+  "error": "Thinks a voltmeter measures current.",
+  "example": {
+   "question": "Which tool measures voltage?",
+   "wrong_answer": "Ammeter",
+   "correct_answer": "Voltmeter"
+  },
+  "cause": "The two meters are mixed up.",
+  "reveals": "Offer \"Ammeter\" next to the right answer and ask the question again in a new context.",
+  "help": "Volts go with the voltmeter, amperes with the ammeter.",
+  "feedback": "A voltmeter measures voltage. An ammeter measures current.",
+  "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
+  "status": "draft"
+ },
+ "PRET.G7.TOOLS_.MEASURING_AND_MARKING_OU.MEAS_TOOLS.M_MV_BALANCE_LEN": {
+  "skill": "PRET.G7.TOOLS_.MEASURING_AND_MARKING_OU.MEAS_TOOLS",
+  "error": "Thinks a weighing balance measures length.",
+  "example": {
+   "question": "What does a weighing balance measure?",
+   "wrong_answer": "Length",
+   "correct_answer": "Mass"
+  },
+  "cause": "The child names any tool as \"measuring\".",
+  "reveals": "Offer \"Length\" next to the right answer and ask the question again in a new context.",
+  "help": "A balance compares masses.",
+  "feedback": "A weighing balance measures mass.",
+  "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
+  "status": "draft"
+ },
+ "PRET.G7.TOOLS_.MEASURING_AND_MARKING_OU.MEAS_TOOLS.M_MV_STOPWATCH": {
+  "skill": "PRET.G7.TOOLS_.MEASURING_AND_MARKING_OU.MEAS_TOOLS",
+  "error": "Thinks a stopwatch measures speed or length.",
+  "example": {
+   "question": "What does a stopwatch measure?",
+   "wrong_answer": "Speed",
+   "correct_answer": "Time"
+  },
+  "cause": "The child links it with races.",
+  "reveals": "Offer \"Speed\" next to the right answer and ask the question again in a new context.",
+  "help": "It shows seconds and parts of seconds.",
+  "feedback": "A stopwatch measures time.",
+  "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
+  "status": "draft"
+ },
+ "PRET.G7.TOOLS_.MEASURING_AND_MARKING_OU.MEAS_TOOLS.M_MV_RULER_ALL": {
+  "skill": "PRET.G7.TOOLS_.MEASURING_AND_MARKING_OU.MEAS_TOOLS",
+  "error": "Thinks a steel rule is best for every length.",
+  "example": {
+   "question": "Which tool measures the length of a long wall?",
+   "wrong_answer": "Steel rule",
+   "correct_answer": "Tape measure"
+  },
+  "cause": "The child knows only the ruler.",
+  "reveals": "Offer \"Steel rule\" next to the right answer and ask the question again in a new context.",
+  "help": "A steel rule is short and stiff; a tape is long and flexible.",
+  "feedback": "A tape measure measures long lengths. A steel rule suits short ones.",
+  "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
+  "status": "draft"
+ },
+ "PRET.G7.TOOLS_.MEASURING_AND_MARKING_OU.MARK_TOOLS.M_MK_PUNCH_HOLE": {
+  "skill": "PRET.G7.TOOLS_.MEASURING_AND_MARKING_OU.MARK_TOOLS",
+  "error": "Thinks a dot punch makes a hole.",
+  "example": {
+   "question": "What does a dot punch do?",
+   "wrong_answer": "Makes the hole",
+   "correct_answer": "Makes a small dent to mark a centre"
+  },
+  "cause": "Punch sounds like it cuts through.",
+  "reveals": "Offer \"Makes the hole\" next to the right answer and ask the question again in a new context.",
+  "help": "The dent guides the drill bit.",
+  "feedback": "A dot punch makes a small dent to mark where to drill.",
+  "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
+  "status": "draft"
+ },
+ "PRET.G7.TOOLS_.MEASURING_AND_MARKING_OU.MARK_TOOLS.M_MK_DIVIDER_CUT": {
+  "skill": "PRET.G7.TOOLS_.MEASURING_AND_MARKING_OU.MARK_TOOLS",
+  "error": "Thinks a divider cuts metal.",
+  "example": {
+   "question": "What is a divider used for?",
+   "wrong_answer": "Cutting metal",
+   "correct_answer": "Marking circles and arcs"
+  },
+  "cause": "It looks like scissors.",
+  "reveals": "Offer \"Cutting metal\" next to the right answer and ask the question again in a new context.",
+  "help": "It has two points like a compass.",
+  "feedback": "A divider marks circles, arcs and equal distances. It does not cut.",
+  "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
+  "status": "draft"
+ },
+ "PRET.G7.TOOLS_.MEASURING_AND_MARKING_OU.MARK_TOOLS.M_MK_SQUARE_LENGTH": {
+  "skill": "PRET.G7.TOOLS_.MEASURING_AND_MARKING_OU.MARK_TOOLS",
+  "error": "Thinks a try-square measures length.",
+  "example": {
+   "question": "What does a try-square check?",
+   "wrong_answer": "The length of a board",
+   "correct_answer": "A right angle"
+  },
+  "cause": "It has a ruler-like blade.",
+  "reveals": "Offer \"The length of a board\" next to the right answer and ask the question again in a new context.",
+  "help": "The corner is 90 degrees.",
+  "feedback": "A try-square checks and marks right angles.",
+  "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
+  "status": "draft"
+ },
+ "PRET.G7.TOOLS_.MEASURING_AND_MARKING_OU.MARK_TOOLS.M_MK_PENCIL_METAL": {
+  "skill": "PRET.G7.TOOLS_.MEASURING_AND_MARKING_OU.MARK_TOOLS",
+  "error": "Thinks a pencil is the right tool for marking steel.",
+  "example": {
+   "question": "Which tool marks a fine line on steel?",
+   "wrong_answer": "Pencil",
+   "correct_answer": "Scriber"
+  },
+  "cause": "Pencil is the usual marker.",
+  "reveals": "Offer \"Pencil\" next to the right answer and ask the question again in a new context.",
+  "help": "A pencil line on steel is thick and rubs off.",
+  "feedback": "A scriber scratches a fine lasting line on metal.",
+  "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
+  "status": "draft"
+ },
+ "PRET.G7.TOOLS_.MEASURING_AND_MARKING_OU.TOOL_CHOOSE.M_TC_TAPE_ALL": {
+  "skill": "PRET.G7.TOOLS_.MEASURING_AND_MARKING_OU.TOOL_CHOOSE",
+  "error": "Uses a tape measure for everything.",
+  "example": {
+   "question": "Which tool measures the diameter of a bolt most exactly?",
+   "wrong_answer": "Tape measure",
+   "correct_answer": "Callipers"
+  },
+  "cause": "The tape is the child's usual tool.",
+  "reveals": "Offer \"Tape measure\" next to the right answer and ask the question again in a new context.",
+  "help": "A tape is too thick to grip a small round part.",
+  "feedback": "Callipers measure the diameter of small round parts most exactly.",
+  "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
+  "status": "draft"
+ },
+ "PRET.G7.TOOLS_.MEASURING_AND_MARKING_OU.TOOL_CHOOSE.M_TC_NEAREST": {
+  "skill": "PRET.G7.TOOLS_.MEASURING_AND_MARKING_OU.TOOL_CHOOSE",
+  "error": "Picks any tool that is close to hand.",
+  "example": {
+   "question": "You need a right angle on a board. What do you pick?",
+   "wrong_answer": "Whatever is nearest",
+   "correct_answer": "A try-square"
+  },
+  "cause": "Convenience beats suitability.",
+  "reveals": "Offer \"Whatever is nearest\" next to the right answer and ask the question again in a new context.",
+  "help": "The right tool gives a better result.",
+  "feedback": "Choose the tool made for the job, such as a try-square for a right angle.",
+  "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
+  "status": "draft"
+ },
+ "PRET.G7.TOOLS_.MEASURING_AND_MARKING_OU.TOOL_CHOOSE.M_TC_PRECISION": {
+  "skill": "PRET.G7.TOOLS_.MEASURING_AND_MARKING_OU.TOOL_CHOOSE",
+  "error": "Thinks accuracy does not depend on the tool.",
+  "example": {
+   "question": "Why use a scriber rather than a pencil on steel?",
+   "wrong_answer": "No reason, both are the same",
+   "correct_answer": "It gives a finer line that lasts"
+  },
+  "cause": "Marking seems the same with any tool.",
+  "reveals": "Offer \"No reason, both are the same\" next to the right answer and ask the question again in a new context.",
+  "help": "A finer line gives a more accurate cut.",
+  "feedback": "A finer line means a more accurate cut, so the right tool matters.",
+  "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
+  "status": "draft"
+ },
+ "PRET.G7.TOOLS_.MEASURING_AND_MARKING_OU.TOOL_CARE.M_CT_NO_OIL": {
+  "skill": "PRET.G7.TOOLS_.MEASURING_AND_MARKING_OU.TOOL_CARE",
+  "error": "Thinks a wet steel tool can be put away without drying.",
+  "example": {
+   "question": "What do you do to a steel tool after use?",
+   "wrong_answer": "Put it away wet",
+   "correct_answer": "Wipe it dry and oil it lightly"
+  },
+  "cause": "Rust is not seen at once.",
+  "reveals": "Offer \"Put it away wet\" next to the right answer and ask the question again in a new context.",
+  "help": "Steel rusts in damp air.",
+  "feedback": "Wipe tools dry and oil them lightly so they do not rust.",
+  "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
+  "status": "draft"
+ },
+ "PRET.G7.TOOLS_.MEASURING_AND_MARKING_OU.TOOL_CARE.M_CT_HAMMER": {
+  "skill": "PRET.G7.TOOLS_.MEASURING_AND_MARKING_OU.TOOL_CARE",
+  "error": "Uses a steel rule or try-square as a lever or hammer.",
+  "example": {
+   "question": "What should you not do with a steel rule?",
+   "wrong_answer": "Nothing, it is strong",
+   "correct_answer": "Use it as a lever or hammer"
+  },
+  "cause": "Steel seems tough.",
+  "reveals": "Offer \"Nothing, it is strong\" next to the right answer and ask the question again in a new context.",
+  "help": "A bent rule gives wrong readings.",
+  "feedback": "Do not use measuring tools as levers or hammers. They bend and lose accuracy.",
+  "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
+  "status": "draft"
+ },
+ "PRET.G7.TOOLS_.MEASURING_AND_MARKING_OU.TOOL_CARE.M_CT_HEAP": {
+  "skill": "PRET.G7.TOOLS_.MEASURING_AND_MARKING_OU.TOOL_CARE",
+  "error": "Throws tools into a heap after use.",
+  "example": {
+   "question": "Where do tools go at the end of the lesson?",
+   "wrong_answer": "In a heap in the box",
+   "correct_answer": "In their place, clean and dry"
+  },
+  "cause": "Tidy-up is rushed.",
+  "reveals": "Offer \"In a heap in the box\" next to the right answer and ask the question again in a new context.",
+  "help": "Points and edges get damaged in a heap.",
+  "feedback": "Put tools back in their place so points and edges are not damaged.",
+  "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
+  "status": "draft"
+ },
+ "PRET.G7.TOOLS_.MEASURING_AND_MARKING_OU.TOOL_CARE.M_CT_POINTS_OPEN": {
+  "skill": "PRET.G7.TOOLS_.MEASURING_AND_MARKING_OU.TOOL_CARE",
+  "error": "Leaves the points of dividers and scribers uncovered.",
+  "example": {
+   "question": "How do you store a scriber or divider?",
+   "wrong_answer": "With the sharp point uncovered",
+   "correct_answer": "With the point covered or in a holder"
+  },
+  "cause": "The hazard is not seen.",
+  "reveals": "Offer \"With the sharp point uncovered\" next to the right answer and ask the question again in a new context.",
+  "help": "A point can hurt a hand and be blunted.",
+  "feedback": "Cover sharp points so they do not hurt you or become blunt.",
+  "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
+  "status": "draft"
+ },
+ "PRET.G7.TOOLS_.COMPUTER_HARDWARE.HW_CLASSIFY.M_HW_PRINTER_IN": {
+  "skill": "PRET.G7.TOOLS_.COMPUTER_HARDWARE.HW_CLASSIFY",
+  "error": "Thinks a printer is an input device.",
+  "example": {
+   "question": "A printer is a type of what?",
+   "wrong_answer": "Input device",
+   "correct_answer": "Output device (hardcopy)"
+  },
+  "cause": "The printer is plugged into the computer.",
+  "reveals": "Offer \"Input device\" next to the right answer and ask the question again in a new context.",
+  "help": "Input sends data in; output gives results out.",
+  "feedback": "A printer is an output device. It gives hardcopy on paper.",
+  "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
+  "status": "draft"
+ },
+ "PRET.G7.TOOLS_.COMPUTER_HARDWARE.HW_CLASSIFY.M_HW_MONITOR_HARD": {
+  "skill": "PRET.G7.TOOLS_.COMPUTER_HARDWARE.HW_CLASSIFY",
+  "error": "Thinks a monitor gives hardcopy.",
+  "example": {
+   "question": "Which output is softcopy?",
+   "wrong_answer": "Printer",
+   "correct_answer": "Monitor"
+  },
+  "cause": "Output is thought to be on paper.",
+  "reveals": "Offer \"Printer\" next to the right answer and ask the question again in a new context.",
+  "help": "Softcopy is on a screen or sound, hardcopy on paper.",
+  "feedback": "A monitor gives softcopy. A printer gives hardcopy.",
+  "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
+  "status": "draft"
+ },
+ "PRET.G7.TOOLS_.COMPUTER_HARDWARE.HW_CLASSIFY.M_HW_SCANNER_OUT": {
+  "skill": "PRET.G7.TOOLS_.COMPUTER_HARDWARE.HW_CLASSIFY",
+  "error": "Thinks a scanner is an output device.",
+  "example": {
+   "question": "A scanner sends a picture into the computer. What is it?",
+   "wrong_answer": "Output device",
+   "correct_answer": "Input device"
+  },
+  "cause": "It looks like a printer.",
+  "reveals": "Offer \"Output device\" next to the right answer and ask the question again in a new context.",
+  "help": "Data goes in: input.",
+  "feedback": "A scanner is an input device because it sends data in.",
+  "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
+  "status": "draft"
+ },
+ "PRET.G7.TOOLS_.COMPUTER_HARDWARE.HW_CLASSIFY.M_HW_STORAGE_INPUT": {
+  "skill": "PRET.G7.TOOLS_.COMPUTER_HARDWARE.HW_CLASSIFY",
+  "error": "Thinks a flash disk is an input or output device.",
+  "example": {
+   "question": "A flash disk keeps files. What is it?",
+   "wrong_answer": "Input device",
+   "correct_answer": "Storage device"
+  },
+  "cause": "It is plugged in for transfer.",
+  "reveals": "Offer \"Input device\" next to the right answer and ask the question again in a new context.",
+  "help": "Storage keeps data for later.",
+  "feedback": "A flash disk is a storage device. It keeps data for later.",
+  "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
+  "status": "draft"
+ },
+ "PRET.G7.ENTREP.INTRODUCTION_TO_ENTREPRE.ENT_MEANING.M_EM_ALL_WORKERS": {
+  "skill": "PRET.G7.ENTREP.INTRODUCTION_TO_ENTREPRE.ENT_MEANING",
+  "error": "Thinks every worker is an entrepreneur.",
+  "example": {
+   "question": "Who is an entrepreneur?",
+   "wrong_answer": "Anyone who has a job",
+   "correct_answer": "A person who starts and runs a business"
+  },
+  "cause": "The two words are used loosely.",
+  "reveals": "Offer \"Anyone who has a job\" next to the right answer and ask the question again in a new context.",
+  "help": "An employee works for someone else's business.",
+  "feedback": "An entrepreneur starts and runs a business and takes the risk. An employee works for someone else.",
+  "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
+  "status": "draft"
+ },
+ "PRET.G7.ENTREP.INTRODUCTION_TO_ENTREPRE.ENT_MEANING.M_EM_RICH_ONLY": {
+  "skill": "PRET.G7.ENTREP.INTRODUCTION_TO_ENTREPRE.ENT_MEANING",
+  "error": "Thinks only rich people can be entrepreneurs.",
+  "example": {
+   "question": "Who can start a small business?",
+   "wrong_answer": "Only rich people",
+   "correct_answer": "Anyone with an idea and a plan"
+  },
+  "cause": "Big business is pictured.",
+  "reveals": "Offer \"Only rich people\" next to the right answer and ask the question again in a new context.",
+  "help": "Many businesses start from small savings, such as a mandazi stall.",
+  "feedback": "Anyone with an idea, effort and a plan can start small.",
+  "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
+  "status": "draft"
+ },
+ "PRET.G7.ENTREP.INTRODUCTION_TO_ENTREPRE.ENT_MEANING.M_EM_OWNER_ONLY": {
+  "skill": "PRET.G7.ENTREP.INTRODUCTION_TO_ENTREPRE.ENT_MEANING",
+  "error": "Thinks entrepreneurship helps only the owner.",
+  "example": {
+   "question": "How does a posho mill help its community?",
+   "wrong_answer": "Only the owner gains",
+   "correct_answer": "It makes jobs, grinds maize and pays taxes"
+  },
+  "cause": "The child sees the owner only.",
+  "reveals": "Offer \"Only the owner gains\" next to the right answer and ask the question again in a new context.",
+  "help": "Count the workers and customers.",
+  "feedback": "Businesses give jobs, goods and services and pay taxes, so the community gains.",
+  "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
+  "status": "draft"
+ },
+ "PRET.G7.ENTREP.INTRODUCTION_TO_ENTREPRE.ENT_QUALITIES.M_EQ_GAMBLE": {
+  "skill": "PRET.G7.ENTREP.INTRODUCTION_TO_ENTREPRE.ENT_QUALITIES",
+  "error": "Thinks taking risks means gambling or acting without thinking.",
+  "example": {
+   "question": "What is a calculated risk?",
+   "wrong_answer": "Spending everything and hoping",
+   "correct_answer": "A risk taken after counting the cost"
+  },
+  "cause": "The word risk is linked with luck.",
+  "reveals": "Offer \"Spending everything and hoping\" next to the right answer and ask the question again in a new context.",
+  "help": "Add up the costs and the chance of success first.",
+  "feedback": "A calculated risk is taken after thinking about costs and the chance of success.",
+  "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
+  "status": "draft"
+ },
+ "PRET.G7.ENTREP.INTRODUCTION_TO_ENTREPRE.ENT_QUALITIES.M_EQ_GIVE_UP": {
+  "skill": "PRET.G7.ENTREP.INTRODUCTION_TO_ENTREPRE.ENT_QUALITIES",
+  "error": "Thinks a good entrepreneur stops after the first failure.",
+  "example": {
+   "question": "A first batch of soap did not sell. What does a determined entrepreneur do?",
+   "wrong_answer": "Give up",
+   "correct_answer": "Find out why and try again"
+  },
+  "cause": "Failure feels final.",
+  "reveals": "Offer \"Give up\" next to the right answer and ask the question again in a new context.",
+  "help": "Many businesses learn from early mistakes.",
+  "feedback": "A determined entrepreneur learns from failure and tries again.",
+  "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
+  "status": "draft"
+ },
+ "PRET.G7.ENTREP.INTRODUCTION_TO_ENTREPRE.ENT_QUALITIES.M_EQ_LUCK": {
+  "skill": "PRET.G7.ENTREP.INTRODUCTION_TO_ENTREPRE.ENT_QUALITIES",
+  "error": "Thinks success in business is luck only.",
+  "example": {
+   "question": "Why does a business succeed?",
+   "wrong_answer": "Only luck",
+   "correct_answer": "Hard work, honesty and good planning"
+  },
+  "cause": "Success is seen, work is not.",
+  "reveals": "Offer \"Only luck\" next to the right answer and ask the question again in a new context.",
+  "help": "Ask what a trader does before sunrise.",
+  "feedback": "Hard work, honesty and planning matter more than luck.",
+  "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
+  "status": "draft"
+ },
+ "PRET.G7.ENTREP.INTRODUCTION_TO_ENTREPRE.ENT_QUALITIES.M_EQ_CHEAT": {
+  "skill": "PRET.G7.ENTREP.INTRODUCTION_TO_ENTREPRE.ENT_QUALITIES",
+  "error": "Thinks cheating customers is clever business.",
+  "example": {
+   "question": "A shopkeeper adds water to milk. Which quality is missing?",
+   "wrong_answer": "Creativity",
+   "correct_answer": "Honesty"
+  },
+  "cause": "Profit is put first.",
+  "reveals": "Offer \"Creativity\" next to the right answer and ask the question again in a new context.",
+  "help": "Customers do not return after being cheated.",
+  "feedback": "Honesty keeps customers. Cheating loses them.",
+  "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
+  "status": "draft"
+ },
+ "PRET.G7.ENTREP.INTRODUCTION_TO_ENTREPRE.ENT_IDEAS.M_EI_CAPITAL_FIRST": {
+  "skill": "PRET.G7.ENTREP.INTRODUCTION_TO_ENTREPRE.ENT_IDEAS",
+  "error": "Thinks a business needs a lot of money before it has an idea.",
+  "example": {
+   "question": "What comes first when starting a business?",
+   "wrong_answer": "A lot of money",
+   "correct_answer": "A good idea that meets a need"
+  },
+  "cause": "Capital is the loudest need.",
+  "reveals": "Offer \"A lot of money\" next to the right answer and ask the question again in a new context.",
+  "help": "Many businesses start small and grow.",
+  "feedback": "A good idea that meets a need comes first. Money can start small.",
+  "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
+  "status": "draft"
+ },
+ "PRET.G7.ENTREP.INTRODUCTION_TO_ENTREPRE.ENT_IDEAS.M_EI_NEW_ONLY": {
+  "skill": "PRET.G7.ENTREP.INTRODUCTION_TO_ENTREPRE.ENT_IDEAS",
+  "error": "Thinks a business idea must be completely new.",
+  "example": {
+   "question": "Can a business idea come from improving another business?",
+   "wrong_answer": "No, it must be new",
+   "correct_answer": "Yes, you can improve what others do"
+  },
+  "cause": "Original is mixed up with useful.",
+  "reveals": "Offer \"No, it must be new\" next to the right answer and ask the question again in a new context.",
+  "help": "Many shops sell better service, not new goods.",
+  "feedback": "Improving on what others do is a good source of ideas.",
+  "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
+  "status": "draft"
+ },
+ "PRET.G7.ENTREP.INTRODUCTION_TO_ENTREPRE.ENT_IDEAS.M_EI_COPY_EXACT": {
+  "skill": "PRET.G7.ENTREP.INTRODUCTION_TO_ENTREPRE.ENT_IDEAS",
+  "error": "Thinks copying a neighbour exactly is a good idea.",
+  "example": {
+   "question": "A kiosk next door sells airtime and does well. What is a good idea?",
+   "wrong_answer": "Copy it exactly beside it",
+   "correct_answer": "Look for a need not yet met"
+  },
+  "cause": "Success seems copyable.",
+  "reveals": "Offer \"Copy it exactly beside it\" next to the right answer and ask the question again in a new context.",
+  "help": "A second identical kiosk shares the same customers.",
+  "feedback": "Look for a need not yet met rather than copying exactly.",
+  "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
+  "status": "draft"
+ },
+ "PRET.G7.ENTREP.INTRODUCTION_TO_ENTREPRE.ENT_IDEAS.M_EI_WASTE": {
+  "skill": "PRET.G7.ENTREP.INTRODUCTION_TO_ENTREPRE.ENT_IDEAS",
+  "error": "Thinks waste has no value for a business idea.",
+  "example": {
+   "question": "What can old tyres become in a business?",
+   "wrong_answer": "Nothing, they are rubbish",
+   "correct_answer": "Sandals, flower pots or farm buckets"
+  },
+  "cause": "Waste is only seen as dirty.",
+  "reveals": "Offer \"Nothing, they are rubbish\" next to the right answer and ask the question again in a new context.",
+  "help": "Jua kali workers turn old tyres into sandals.",
+  "feedback": "Waste can be reused or recycled into products that sell.",
+  "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
+  "status": "draft"
+ },
+ "PRET.G7.ENTREP.UNIT.UNIT_LOCATION.M_UL_TOWN_ALWAYS": {
+  "skill": "PRET.G7.ENTREP.UNIT.UNIT_LOCATION",
+  "error": "Thinks the town centre is always the best place for any business.",
+  "example": {
+   "question": "Where is a posho mill best placed?",
+   "wrong_answer": "In the town centre",
+   "correct_answer": "Near homes that grow maize, with power"
+  },
+  "cause": "Town means customers.",
+  "reveals": "Offer \"In the town centre\" next to the right answer and ask the question again in a new context.",
+  "help": "Ask where the maize is and who carries it.",
+  "feedback": "A posho mill is best near its customers and power, not always in town.",
+  "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
+  "status": "draft"
+ },
+ "PRET.G7.ENTREP.UNIT.UNIT_LOCATION.M_UL_CHEAP_ONLY": {
+  "skill": "PRET.G7.ENTREP.UNIT.UNIT_LOCATION",
+  "error": "Thinks cheap rent is the only factor.",
+  "example": {
+   "question": "A site has cheap rent but no customers pass. What happens?",
+   "wrong_answer": "The business does well",
+   "correct_answer": "The business may fail"
+  },
+  "cause": "Cost seems the main thing.",
+  "reveals": "Offer \"The business does well\" next to the right answer and ask the question again in a new context.",
+  "help": "Customers matter more than rent.",
+  "feedback": "Cheap rent does not help if customers do not come. Consider customers, power, safety and more.",
+  "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
+  "status": "draft"
+ },
+ "PRET.G7.ENTREP.UNIT.UNIT_LOCATION.M_UL_ANYWHERE": {
+  "skill": "PRET.G7.ENTREP.UNIT.UNIT_LOCATION",
+  "error": "Thinks the place does not matter.",
+  "example": {
+   "question": "Does the place matter to a salon?",
+   "wrong_answer": "No, anywhere will do",
+   "correct_answer": "Yes, near customers and with power and water"
+  },
+  "cause": "The child focuses on the product.",
+  "reveals": "Offer \"No, anywhere will do\" next to the right answer and ask the question again in a new context.",
+  "help": "A salon needs water and power.",
+  "feedback": "Place matters. Customers, power, water and safety all count.",
+  "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
+  "status": "draft"
+ },
+ "PRET.G7.ENTREP.UNIT.UNIT_SIZE.M_US_BIGGER_BETTER": {
+  "skill": "PRET.G7.ENTREP.UNIT.UNIT_SIZE",
+  "error": "Thinks a bigger business is always better.",
+  "example": {
+   "question": "Is a big workshop always better than a small one?",
+   "wrong_answer": "Yes, always",
+   "correct_answer": "No, it depends on capital, market and skills"
+  },
+  "cause": "Big looks successful.",
+  "reveals": "Offer \"Yes, always\" next to the right answer and ask the question again in a new context.",
+  "help": "A big workshop with no orders loses money.",
+  "feedback": "Size should match capital, market, skills and space.",
+  "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
+  "status": "draft"
+ },
+ "PRET.G7.ENTREP.UNIT.UNIT_SIZE.M_US_WISH_ONLY": {
+  "skill": "PRET.G7.ENTREP.UNIT.UNIT_SIZE",
+  "error": "Thinks size depends only on the owner's wish.",
+  "example": {
+   "question": "What limits the size of a business?",
+   "wrong_answer": "Only what the owner wants",
+   "correct_answer": "Capital, market, raw materials, skills and the law"
+  },
+  "cause": "Dreams seem enough.",
+  "reveals": "Offer \"Only what the owner wants\" next to the right answer and ask the question again in a new context.",
+  "help": "Ask what happens when the money runs out.",
+  "feedback": "Capital, market, materials, labour and the law all limit size.",
+  "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
+  "status": "draft"
+ },
+ "PRET.G7.ENTREP.UNIT.UNIT_SIZE.M_US_NO_MARKET": {
+  "skill": "PRET.G7.ENTREP.UNIT.UNIT_SIZE",
+  "error": "Ignores the size of the market when sizing a business.",
+  "example": {
+   "question": "A village has 20 families. How big a bakery fits?",
+   "wrong_answer": "A very big one",
+   "correct_answer": "A small one"
+  },
+  "cause": "Market size is not thought of.",
+  "reveals": "Offer \"A very big one\" next to the right answer and ask the question again in a new context.",
+  "help": "The bakery sells only what customers buy.",
+  "feedback": "The size of the market limits the size of the business.",
+  "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
+  "status": "draft"
+ },
+ "PRET.G7.ENTREP.FINANCIAL_GOALS.FIN_GOALS.M_FI_RICH_ONLY": {
+  "skill": "PRET.G7.ENTREP.FINANCIAL_GOALS.FIN_GOALS",
+  "error": "Thinks financial goals are only for rich people.",
+  "example": {
+   "question": "Who needs financial goals?",
+   "wrong_answer": "Only rich people",
+   "correct_answer": "Everyone who handles money"
+  },
+  "cause": "Goals sound like big plans.",
+  "reveals": "Offer \"Only rich people\" next to the right answer and ask the question again in a new context.",
+  "help": "A child saving for a shoe has a goal.",
+  "feedback": "Everyone who handles money, even a little, gains from goals.",
+  "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
+  "status": "draft"
+ },
+ "PRET.G7.ENTREP.FINANCIAL_GOALS.FIN_GOALS.M_FI_WISH": {
+  "skill": "PRET.G7.ENTREP.FINANCIAL_GOALS.FIN_GOALS",
+  "error": "Treats a goal as a wish.",
+  "example": {
+   "question": "What makes a goal different from a wish?",
+   "wrong_answer": "Nothing, they are the same",
+   "correct_answer": "A goal has a plan and a date"
+  },
+  "cause": "The two words are used alike.",
+  "reveals": "Offer \"Nothing, they are the same\" next to the right answer and ask the question again in a new context.",
+  "help": "A wish says \"I want\"; a goal says how and when.",
+  "feedback": "A goal has a plan, an amount and a date. A wish does not.",
+  "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
+  "status": "draft"
+ },
+ "PRET.G7.ENTREP.FINANCIAL_GOALS.FIN_GOALS.M_FI_WANTS_FIRST": {
+  "skill": "PRET.G7.ENTREP.FINANCIAL_GOALS.FIN_GOALS",
+  "error": "Puts wants before needs when setting goals.",
+  "example": {
+   "question": "A learner has little money. What comes first?",
+   "wrong_answer": "A new game",
+   "correct_answer": "School shoes, a need"
+  },
+  "cause": "Wants feel urgent.",
+  "reveals": "Offer \"A new game\" next to the right answer and ask the question again in a new context.",
+  "help": "Needs first, then wants.",
+  "feedback": "Needs come before wants when money is limited.",
+  "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
+  "status": "draft"
+ },
+ "PRET.G7.ENTREP.FINANCIAL_GOALS.FIN_GOALS.M_FI_NO_TIME": {
+  "skill": "PRET.G7.ENTREP.FINANCIAL_GOALS.FIN_GOALS",
+  "error": "Ignores the time available for a goal.",
+  "example": {
+   "question": "Which factor says how soon a goal can be reached?",
+   "wrong_answer": "Colour of the notebook",
+   "correct_answer": "Time and income"
+  },
+  "cause": "Time is not seen as a factor.",
+  "reveals": "Offer \"Colour of the notebook\" next to the right answer and ask the question again in a new context.",
+  "help": "More time means smaller savings each week.",
+  "feedback": "Income, cost and time decide how soon a goal can be reached.",
+  "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
+  "status": "draft"
+ },
+ "PRET.G7.ENTREP.FINANCIAL_GOALS.FIN_SMART.M_SM_LETTERS": {
+  "skill": "PRET.G7.ENTREP.FINANCIAL_GOALS.FIN_SMART",
+  "error": "Gets the SMART letters wrong.",
+  "example": {
+   "question": "What does the A in SMART stand for?",
+   "wrong_answer": "Ambitious",
+   "correct_answer": "Achievable"
+  },
+  "cause": "The word is guessed.",
+  "reveals": "Offer \"Ambitious\" next to the right answer and ask the question again in a new context.",
+  "help": "S, M, A, R, T: Specific, Measurable, Achievable, Realistic, Time-bound.",
+  "feedback": "SMART means Specific, Measurable, Achievable, Realistic and Time-bound.",
+  "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
+  "status": "draft"
+ },
+ "PRET.G7.ENTREP.FINANCIAL_GOALS.FIN_SMART.M_SM_VAGUE": {
+  "skill": "PRET.G7.ENTREP.FINANCIAL_GOALS.FIN_SMART",
+  "error": "Thinks \"save more money\" is a good goal.",
+  "example": {
+   "question": "Which is a SMART goal?",
+   "wrong_answer": "Save more money",
+   "correct_answer": "Save 1,200 shillings in 12 weeks by saving 100 shillings a week"
+  },
+  "cause": "The child does not see what is missing.",
+  "reveals": "Offer \"Save more money\" next to the right answer and ask the question again in a new context.",
+  "help": "Ask: how much, how, by when?",
+  "feedback": "A SMART goal names an amount, a way and a date.",
+  "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
+  "status": "draft"
+ },
+ "PRET.G7.ENTREP.FINANCIAL_GOALS.FIN_SMART.M_SM_NUMBER_ENOUGH": {
+  "skill": "PRET.G7.ENTREP.FINANCIAL_GOALS.FIN_SMART",
+  "error": "Thinks any goal with a number is SMART.",
+  "example": {
+   "question": "A learner with 100 shillings a week aims to save 1 million shillings in a month. Is it SMART?",
+   "wrong_answer": "Yes, it has a number",
+   "correct_answer": "No, it is not realistic"
+  },
+  "cause": "A number seems enough.",
+  "reveals": "Offer \"Yes, it has a number\" next to the right answer and ask the question again in a new context.",
+  "help": "Weekly income decides what is realistic.",
+  "feedback": "A number is not enough. The goal must also be achievable and realistic.",
+  "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
+  "status": "draft"
+ },
+ "PRET.G7.ENTREP.FINANCIAL_GOALS.FIN_NUMBERS.M_FN_SELL_PROFIT": {
+  "skill": "PRET.G7.ENTREP.FINANCIAL_GOALS.FIN_NUMBERS",
+  "error": "Takes the selling price as the profit.",
+  "example": {
+   "question": "A trader buys a bag for 400 shillings and sells it for 500. What is the profit?",
+   "wrong_answer": "500 shillings",
+   "correct_answer": "100 shillings"
+  },
+  "cause": "The money received feels like gain.",
+  "reveals": "Offer \"500 shillings\" next to the right answer and ask the question again in a new context.",
+  "help": "Profit is what is left after paying for the goods.",
+  "feedback": "Profit is selling price minus buying price.",
+  "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
+  "status": "draft"
+ },
+ "PRET.G7.ENTREP.FINANCIAL_GOALS.FIN_NUMBERS.M_FN_ADD_WEEKS": {
+  "skill": "PRET.G7.ENTREP.FINANCIAL_GOALS.FIN_NUMBERS",
+  "error": "Adds or subtracts instead of dividing to find the weeks needed to save.",
+  "example": {
+   "question": "To save 1,200 shillings at 100 shillings a week, how many weeks are needed?",
+   "wrong_answer": "1,300 weeks",
+   "correct_answer": "12 weeks"
+  },
+  "cause": "Two numbers are added without thought.",
+  "reveals": "Offer \"1,300 weeks\" next to the right answer and ask the question again in a new context.",
+  "help": "Count the 100s in 1,200.",
+  "feedback": "Divide the goal by the amount saved each week.",
+  "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
+  "status": "draft"
+ },
+ "PRET.G7.ENTREP.FINANCIAL_GOALS.FIN_NUMBERS.M_FN_ONE_ITEM": {
+  "skill": "PRET.G7.ENTREP.FINANCIAL_GOALS.FIN_NUMBERS",
+  "error": "Gives the profit on one item as the profit on the whole batch.",
+  "example": {
+   "question": "A trader earns 10 shillings profit on each of 20 loaves. What is the total profit?",
+   "wrong_answer": "10 shillings",
+   "correct_answer": "200 shillings"
+  },
+  "cause": "The number of items is forgotten.",
+  "reveals": "Offer \"10 shillings\" next to the right answer and ask the question again in a new context.",
+  "help": "Multiply the profit on one by the number sold.",
+  "feedback": "Total profit is profit on one item times the number sold.",
+  "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
+  "status": "draft"
+ },
+ "PRET.G7.ENTREP.FINANCIAL_GOALS.FIN_NUMBERS.M_FN_BUY_SELL": {
+  "skill": "PRET.G7.ENTREP.FINANCIAL_GOALS.FIN_NUMBERS",
+  "error": "Subtracts the selling price from the buying price.",
+  "example": {
+   "question": "Buying 60, selling 75. Profit?",
+   "wrong_answer": "Minus 15 shillings",
+   "correct_answer": "15 shillings"
+  },
+  "cause": "The order of subtracting is reversed.",
+  "reveals": "Offer \"Minus 15 shillings\" next to the right answer and ask the question again in a new context.",
+  "help": "Selling price is the bigger number when there is a profit.",
+  "feedback": "Profit is selling price minus buying price.",
+  "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
+  "status": "draft"
+ }
+}

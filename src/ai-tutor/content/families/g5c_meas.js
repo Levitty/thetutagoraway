@@ -412,7 +412,7 @@ export const FAMILIES = [
 
   fam({ id: 'g5c.arec.real.pick', cs: `${M}AREA.CM2_REAL_LIFE`, form: 'direct', rung: 1,
     gen: () => {
-      const A = shuffle(['the top of a postage stamp', 'the cover of an exercise book', 'the screen of a phone']), B = shuffle(['the length of a pencil', 'the height of a door', 'the mass of a mango', 'the water in a cup']);
+      const A = shuffle(['the top of a postage stamp', 'a book cover', 'the screen of a phone']), B = shuffle(['the length of a pencil', 'the height of a door', 'the mass of a mango', 'the water in a cup']);
       const options = mc(A[0], B.slice(0, 3).map(b => [b, b.includes('mass') ? 'Mass is measured in grammes, not cm².' : b.includes('water') ? 'Water in a cup is capacity, measured in ml.' : 'A length is measured in cm or m, not cm².', 'M_CM2_FOR_LENGTH']));
       return { question: `${person().name} wants to measure something in square centimetres. Which would ${'they'} measure in cm²?`, options, instruction: 'Choose the one measured in cm².',
         hints: ['cm² measures flat surfaces.', 'Which is a flat surface?'], steps: [`${A[0]} is a flat surface.`, 'Flat surfaces are measured in cm².'] };

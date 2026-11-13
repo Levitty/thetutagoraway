@@ -34,9 +34,14 @@ export const FAMILIES = [
   // ------------------------------------------------------------ ESTIMATE_TIME
   fam({ id: 'g4c.time.est.event', cs: `${T}ESTIMATE_TIME`, form: 'direct', rung: 1,
     gen: () => {
-      const e = pick(EVENTS), others = EVENTS.filter(x => x !== e), o1 = pick(others), o2 = pick(others.filter(x => x !== o1)), other = e[2] === 'a.m.' ? 'p.m.' : 'a.m.';
-      const right = `${e[1]}:00 ${e[2]}`;
-      const options = mc(right, [[`${e[1]}:00 ${other}`, 'Think about the sun: is it morning or afternoon for this?', 'M_TIME_AMPM_WRONG'], [`${o1[1]}:00 ${o1[2] === 'a.m.' ? 'p.m.' : 'a.m.'}`, 'That is the wrong time of day for this.', 'M_TIME_AMPM_WRONG'], [`${o2[1]}:00 ${o2[2] === 'a.m.' ? 'p.m.' : 'a.m.'}`, 'That is the wrong time of day for this.', 'M_TIME_AMPM_WRONG']].filter(w => w[0] !== right));
+      const e = pick(EVENTS), other = e[2] === 'a.m.' ? 'p.m.' : 'a.m.';
+      const mins = (h, ap) => ((h % 12) + (ap === 'p.m.' ? 12 : 0)) * 60, right = `${e[1]}:00 ${e[2]}`, tr = mins(e[1], e[2]);
+      const flip = (x) => `${x[1]}:00 ${x[2] === 'a.m.' ? 'p.m.' : 'a.m.'}`;
+      // A wrong time must be clearly wrong: at least four hours from the right one (8 p.m. is a fair bedtime, 7 a.m. a fair time to get up).
+      const far = EVENTS.filter(x => x !== e).filter(x => { const t = mins(x[1], x[2] === 'a.m.' ? 'p.m.' : 'a.m.'), dd = Math.abs(t - tr); return Math.min(dd, 1440 - dd) >= 240; });
+      const picked = shuffle(far).slice(0, 2);
+      if (picked.length < 2) return null;
+      const options = mc(right, [[`${e[1]}:00 ${other}`, 'Think about the sun: is it morning or afternoon for this?', 'M_TIME_AMPM_WRONG'], ...picked.map(x => [flip(x), 'That is the wrong time of day for this.', 'M_TIME_AMPM_WRONG'])].filter(w => w[0] !== right));
       if (!options) return null;
       return { question: `${person().name} wants to ${e[0]}. Which time is the most sensible for this?`, options, instruction: 'Choose the most sensible time.',
         hints: ['Think about when this usually happens in the day.', 'Morning is a.m. and afternoon or evening is p.m.'], steps: [`This usually happens in the ${e[2] === 'a.m.' ? 'morning' : 'afternoon or evening'}.`, `${right} is sensible.`] };
@@ -45,14 +50,14 @@ export const FAMILIES = [
     gen: () => {
       const sets = [['9:00 a.m.', '12:00 noon', '4:00 p.m.'], ['8:00 a.m.', '12:00 noon', '5:00 p.m.'], ['10:00 a.m.', '12:00 noon', '3:00 p.m.'], ['7:00 a.m.', '12:00 noon', '5:00 p.m.']], s = pick(sets), obj = pick(['tree', 'flagpole', 'school building', 'goal post', 'water tank']), pe = person();
       const options = mc('12:00 noon', [[s[0], 'The sun is lower in the morning, so shadows are long.', 'M_TIME_SHADOW_DIRECTION'], [s[2], 'The sun is lower in the late afternoon, so shadows are long.', 'M_TIME_SHADOW_DIRECTION'], ['The shadow stays the same length all day.', 'The sun moves across the sky, so the shadow changes.', 'M_TIME_SHADOW_DIRECTION']]);
-      return { question: `${pe.name} measures the shadow of a ${obj} at ${s[0]}, ${s[1]} and ${s[2]}. At which time is the shadow shortest?`, options, instruction: 'Choose the time.',
+      return { question: `${pe.name} measures the shadow of a ${obj} at ${s[0]}, ${s[1]} and ${s[2]}. At which time is the shadow shortest?`.replace('..', '.'), options, instruction: 'Choose the time.',
         hints: ['The shadow is shortest when the sun is highest in the sky.', 'When is the sun highest?'], steps: ['The sun is highest at noon.', 'So the shadow is shortest at 12:00 noon.'] };
     } }),
 
   // ------------------------------------------------------------ CONVERT_HOURS_MINUTES
   fam({ id: 'g4c.time.conv.to-min', cs: `${T}CONVERT_HOURS_MINUTES`, form: 'word', rung: 1,
     gen: () => {
-      const k = randInt(2, 9), pe = person(), th = pick(['film', 'journey by bus', 'football match', 'church service', 'trip to the market']);
+      const k = randInt(2, 9), pe = person(), th = pick(['journey by bus', 'school trip', 'journey to Mombasa', 'journey to Kisumu']);
       return { question: `The ${th} that ${pe.name} goes to takes ${k} hours. How many minutes is that?`, answer: 60 * k,
         wrong: [[100 * k, 'There are 60 minutes in one hour, not 100.', 'M_TIME_100_MINUTES'], [10 * k, 'There are 60 minutes in one hour, not 10.', 'M_TIME_100_MINUTES'], [k + 60, 'Each hour has 60 minutes: multiply.', 'M_TIME_DIVIDES_TO_MULTIPLY'], [30 * k, 'That is half hours. Each full hour is 60 minutes.', 'M_TIME_100_MINUTES']],
         hints: ['One hour is 60 minutes.', 'Multiply the hours by 60.'], steps: [`1 hour = 60 minutes.`, `${k} x 60 = ${60 * k} minutes.`], chk: (x) => x === 60 * k };
@@ -87,15 +92,16 @@ export const FAMILIES = [
   fam({ id: 'g4c.time.dur.lesson', cs: `${T}RECORD_DURATION`, form: 'word', rung: 1,
     gen: () => {
       const sh1 = randInt(8, 10), sm = pick([0, 15, 30]), dh = randInt(1, 2), dm = pick([15, 30, 45]), eh = sh1 + dh + Math.floor((sm + dm) / 60), em = (sm + dm) % 60, pe = person();
+      const endH = eh > 12 ? eh - 12 : eh, endAp = eh >= 12 ? 'p.m.' : 'a.m.';
       const dd = eh - sh1 - (em < sm ? 1 : 0), mm = (em - sm + 60) % 60;
-      const options = mc(HM(dd, mm), [[`${eh}:${pad(em)} a.m.`, 'That is when it ends. The question asks how long it lasts.', 'M_TIME_DURATION_END_TIME'], [`${dd}.${pad(mm)} hours`, 'Hours and minutes are not a decimal. Write the hours and the minutes.', 'M_TIME_DURATION_WRONG_UNITS'], [HM(dd + 1, mm), 'Count the hours again from the start time to the finish time.', 'M_TIME_DURATION_WRONG_UNITS']]);
+      const options = mc(HM(dd, mm), [[`${endH}:${pad(em)} ${endAp}`, 'That is when it ends. The question asks how long it lasts.', 'M_TIME_DURATION_END_TIME'], [`${dd}.${pad(mm)} hours`, 'Hours and minutes are not a decimal. Write the hours and the minutes.', 'M_TIME_DURATION_WRONG_UNITS'], [HM(dd + 1, mm), 'Count the hours again from the start time to the finish time.', 'M_TIME_DURATION_WRONG_UNITS']]);
       if (!options || mm === 0) return null;
-      return { question: `A lesson starts at ${sh1}:${pad(sm)} a.m. and ends at ${eh}:${pad(em)} a.m. How long does the lesson last?`, options, instruction: 'Choose the duration.',
-        hints: ['Duration is how long, not when it ends.', 'Count the hours and then the minutes from the start to the end.'], steps: [`From ${sh1}:${pad(sm)} to ${eh}:${pad(em)}.`, `The lesson lasts ${HM(dd, mm)}.`] };
+      return { question: `A lesson starts at ${sh1}:${pad(sm)} a.m. and ends at ${endH}:${pad(em)} ${endAp} How long does the lesson last?`, options, instruction: 'Choose the duration.',
+        hints: ['Duration is how long, not when it ends.', 'Count the hours and then the minutes from the start to the end.'], steps: [`From ${sh1}:${pad(sm)} to ${endH}:${pad(em)}.`, `The lesson lasts ${HM(dd, mm)}.`] };
     } }),
   fam({ id: 'g4c.time.dur.to-min', cs: `${T}RECORD_DURATION`, form: 'word', rung: 2,
     gen: () => {
-      const h = randInt(1, 4), m = pick([10, 15, 20, 30, 40, 45]), pe = person(), th = pick(['film', 'football match', 'church service', 'maths exam']);
+      const h = randInt(1, 4), m = pick([10, 15, 20, 30, 40, 45]), pe = person(), th = pick(['film', 'journey by matatu', 'church service', 'visit to the clinic']);
       return { question: `A ${th} lasts ${HM(h, m)}. For how many minutes does it last?`, answer: h * 60 + m,
         wrong: [[h * 100 + m, 'An hour has 60 minutes, not 100.', 'M_TIME_DURATION_WRONG_UNITS'], [h + m, 'Change the hours to minutes first, then add the minutes.', 'M_TIME_DURATION_WRONG_UNITS'], [h * 60, 'The extra minutes are missing.', 'M_TIME_DURATION_WRONG_UNITS'], [h * 10 + m, 'An hour has 60 minutes, not 10.', 'M_TIME_DURATION_WRONG_UNITS']],
         hints: ['Change the hours to minutes.', 'Then add the minutes.'], steps: [`${h} hours = ${h * 60} minutes.`, `${h * 60} + ${m} = ${h * 60 + m} minutes.`], chk: (x) => x - m === h * 60 };

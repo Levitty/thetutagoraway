@@ -97,7 +97,7 @@ export const FAMILIES = [
     Q('Why do cooks and farmers wear an apron or overall?', 'To keep dirt off their clothes and skin', ['To look smart for visitors|PI_FASHION', 'To keep the sun away from the eyes|PI_MATCH', 'To go to a party|PI_FASHION'], 'An apron protects clothes and skin.'),
   ], { h: ['Which body part does the item cover?', 'Goggles: eyes. Gloves: hands. Gumboots: the whole foot. Mask: nose and mouth. Apron: body.'], s1: 'Think about which body part each item covers.' })),
   fam('ppe.item.story', `${PP}PPE_ITEMS`, 'word', 2, choose([
-    Q('Mama Rehema sprays the beans with medicine. What should she wear on her face?', 'A mask', ['Goggles only|PI_MATCH', 'Gloves only|PI_MATCH', 'Perfume|PI_FASHION'], 'A mask keeps the spray out of the nose and mouth.'),
+    Q('Mama Rehema sprays the beans with medicine. What should she wear over her nose and mouth?', 'A mask', ['Goggles only|PI_MATCH', 'Gloves only|PI_MATCH', 'Perfume|PI_FASHION'], 'A mask keeps the spray out of the nose and mouth.'),
     Q('Wafula goes to work in wet muddy ground. Which footwear should he wear?', 'Gumboots', ['Open sandals|PI_SANDALS', 'No shoes at all|PI_SANDALS', 'Dress shoes|PI_SANDALS'], 'Gumboots keep out mud, thorns and snakes.'),
     Q('Brenda says protective clothing is just for looks. What is the best reply?', 'It keeps dirt, germs and chemicals off the body', ['She is right, it is for looks|PI_FASHION', 'It is for parties|PI_FASHION', 'It is for hiding|PI_FASHION'], 'Protective clothing protects the body.'),
     Q('A boy cuts thorny hedge and needs to protect his hands. Which item should he wear?', 'Gloves', ['Goggles|PI_MATCH', 'A hat|PI_MATCH', 'Gumboots|PI_MATCH'], 'Gloves protect the hands from thorns.'),

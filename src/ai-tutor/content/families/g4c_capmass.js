@@ -69,7 +69,7 @@ const build = (c) => {
 };
 
 const CAP = {
-  id: 'cap', sub: 'CAPACITY', unit: 'litres', one: 'litre', unitPl: 'litres', s1: 'LITRE_MEASURE', s2: 'HALF_QUARTER_LITRE', s3: 'CAPACITY_ADD', s4: 'CAPACITY_SUB', mark: 'water level',
+  id: 'cap', sub: 'CAPACITY', unit: 'litres', one: 'litre', unitPl: 'litres', s1: 'LITRE_MEASURE', s2: 'HALF_QUARTER_LITRE', s3: 'CAPACITY_ADD', s4: 'CAPACITY_SUB', mark: 'liquid level',
   things: ['water', 'milk', 'cooking oil', 'paraffin'],
   readQ: (pe, max, w, th) => `A jug marked up to ${max} litres has ${th} in it. The ${th} level is at the ${w} mark. How many litres of ${th} are in the jug?`,
   readWhy: 'That is the biggest mark on the jug, not where the level is.', readHint: 'Look at where the level is, not at the top mark.',
@@ -89,7 +89,7 @@ const MAS = {
   things: ['maize flour', 'sugar', 'rice', 'potatoes', 'beans'],
   readQ: (pe, max, w, th) => `A scale goes up to ${max} kg. ${pe.name} puts ${th} on it and the pointer stops at ${w}. What is the mass of the ${th} in kilograms?`,
   readWhy: 'That is the biggest number on the scale, not where the pointer is.', readHint: 'Look at where the pointer is, not at the biggest number.',
-  pairs: [{ big: 'The stone', small: 'The sponge', bigName: 'the small stone', smallName: 'the big sponge' }, { big: 'The tin of paint', small: 'The pillow', bigName: 'the small tin of paint', smallName: 'the big pillow' }, { big: 'The iron bar', small: 'The empty box', bigName: 'the thin iron bar', smallName: 'the large empty box' }],
+  pairs: [{ big: 'The stone', small: 'The bag of cotton wool', bigName: 'the small stone', smallName: 'the big bag of cotton wool' }, { big: 'The tin of paint', small: 'The bag of feathers', bigName: 'the small tin of paint', smallName: 'the big bag of feathers' }, { big: 'The iron bar', small: 'The empty box', bigName: 'the thin iron bar', smallName: 'the large empty box' }],
   cmpWhy: 'A bigger object is not always heavier. Compare the kilograms.',
   cmpQ: (p, a, b) => `${p.smallName[0].toUpperCase() + p.smallName.slice(1)} has a mass of ${a} kg. ${p.bigName[0].toUpperCase() + p.bigName.slice(1)} has a mass of ${b} kg. Which is heavier?`,
   halfQ: (pe, k) => `${pe.name} packs ${k} kg of rice into half-kilogram bags. How many half-kilogram bags does ${pe.she} fill?`,
