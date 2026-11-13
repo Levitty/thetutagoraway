@@ -33,7 +33,7 @@ const FIRSTAID = [
 const NUTRITION = [
   ['Beans, eggs and meat give us ___.', 'protein', ['carbohydrates', 'M_NUT_NEAR_MEANING'], ['fibre', 'M_NUT_NEAR_MEANING'], ['vitamins', 'M_NUT_NEAR_MEANING'], 'Protein builds the body.'],
   ['Ugali, rice and bread give us energy because they have ___.', 'carbohydrates', ['protein', 'M_NUT_NEAR_MEANING'], ['vitamins', 'M_NUT_NEAR_MEANING'], ['fibre', 'M_NUT_NEAR_MEANING'], 'Carbohydrates give energy.'],
-  ['Fruits and vegetables have ___ that keep us healthy.', 'vitamins', ['fibre', 'M_NUT_VITAMIN_FIBRE'], ['protein', 'M_NUT_NEAR_MEANING'], ['carbohydrates', 'M_NUT_NEAR_MEANING'], 'Vitamins keep the body healthy.'],
+  ['Fruits and vegetables have ___ that keep us healthy.', 'vitamins', ['salt', 'M_NUT_VITAMIN_FIBRE'], ['protein', 'M_NUT_NEAR_MEANING'], ['carbohydrates', 'M_NUT_NEAR_MEANING'], 'Vitamins keep the body healthy.'],
   ['A ___ diet has food from all the food groups.', 'balanced', ['heavy', 'M_NUT_BALANCED'], ['sweet', 'M_NUT_BALANCED'], ['cheap', 'M_NUT_BALANCED'], 'A balanced diet has all the food groups in the right amounts.'],
   ['___ in vegetables helps food move through the body.', 'Fibre', ['Vitamins', 'M_NUT_VITAMIN_FIBRE'], ['Protein', 'M_NUT_NEAR_MEANING'], ['Sugar', 'M_NUT_NEAR_MEANING'], 'Fibre helps food move through the body.'],
   ['Eating only ugali every day is not a ___ diet.', 'balanced', ['heavy', 'M_NUT_BALANCED'], ['cheap', 'M_NUT_BALANCED'], ['sweet', 'M_NUT_BALANCED'], 'One food alone does not give everything the body needs.'],
@@ -52,7 +52,7 @@ const FARM = [
   ['We ___ the maize when it is ripe.', 'harvest', ['plant', 'M_FRM_NEAR_MEANING'], ['plough', 'M_FRM_NEAR_MEANING'], ['weed', 'M_FRM_NEAR_MEANING'], 'To harvest is to gather the crop when it is ripe.'],
   ['Cows, goats and sheep are ___.', 'livestock', ['crops', 'M_FRM_LIVESTOCK_CROPS'], ['seedlings', 'M_FRM_NEAR_MEANING'], ['fertiliser', 'M_FRM_NEAR_MEANING'], 'Livestock are farm animals.'],
   ['___ makes the soil richer so that crops grow well.', 'Fertiliser', ['Pesticide', 'M_FRM_FERTILISER'], ['Livestock', 'M_FRM_NEAR_MEANING'], ['Harvest', 'M_FRM_NEAR_MEANING'], 'Fertiliser feeds the soil.'],
-  ['Before planting, the farmer will ___ the land.', 'plough', ['harvest', 'M_FRM_NEAR_MEANING'], ['weed', 'M_FRM_NEAR_MEANING'], ['fertiliser', 'M_FRM_NEAR_MEANING'], 'To plough is to turn over the soil before planting.'],
+  ['Before planting, the farmer uses oxen or a tractor to ___ the land.', 'plough', ['harvest', 'M_FRM_NEAR_MEANING'], ['weed', 'M_FRM_NEAR_MEANING'], ['fertiliser', 'M_FRM_NEAR_MEANING'], 'To plough is to turn over the soil before planting.'],
   ['Young plants that grow from seeds are called ___.', 'seedlings', ['harvest', 'M_FRM_NEAR_MEANING'], ['fertiliser', 'M_FRM_NEAR_MEANING'], ['livestock', 'M_FRM_LIVESTOCK_CROPS'], 'Seedlings are young plants.'],
   ['We ___ to remove unwanted plants between the rows.', 'weed', ['harvest', 'M_FRM_NEAR_MEANING'], ['plough', 'M_FRM_NEAR_MEANING'], ['plant', 'M_FRM_NEAR_MEANING'], 'To weed is to remove unwanted plants.'],
 ];
@@ -75,7 +75,7 @@ const MONEY = [
 ];
 const SPORTS = [
   ['The ___ blows the whistle to start the match.', 'referee', ['goalkeeper', 'M_SPT_NEAR_MEANING'], ['opponent', 'M_SPT_NEAR_MEANING'], ['trophy', 'M_SPT_NEAR_MEANING'], 'The referee controls the game.'],
-  ['Our team won the ___ at the end of the tournament.', 'trophy', ['tournament', 'M_SPT_TROPHY_TOURNAMENT'], ['referee', 'M_SPT_NEAR_MEANING'], ['whistle', 'M_SPT_NEAR_MEANING'], 'A trophy is the prize.'],
+  ['At the end, the captain lifted the shining silver ___.', 'trophy', ['tournament', 'M_SPT_TROPHY_TOURNAMENT'], ['referee', 'M_SPT_NEAR_MEANING'], ['whistle', 'M_SPT_NEAR_MEANING'], 'A trophy is the prize.'],
   ['A ___ is a series of games where teams compete.', 'tournament', ['trophy', 'M_SPT_TROPHY_TOURNAMENT'], ['whistle', 'M_SPT_NEAR_MEANING'], ['goalkeeper', 'M_SPT_NEAR_MEANING'], 'A tournament is a series of games.'],
   ['The player on the other team is my ___.', 'opponent', ['teammate', 'M_SPT_OPPONENT_TEAMMATE'], ['referee', 'M_SPT_NEAR_MEANING'], ['goalkeeper', 'M_SPT_NEAR_MEANING'], 'An opponent plays against you.'],
   ['My ___ passed me the ball, so we scored.', 'teammate', ['opponent', 'M_SPT_OPPONENT_TEAMMATE'], ['referee', 'M_SPT_NEAR_MEANING'], ['trophy', 'M_SPT_NEAR_MEANING'], 'A teammate plays on your side.'],
@@ -102,8 +102,8 @@ const POLITE = [
 ];
 // ---------------------------------------------------------------- silent letters
 const SILENT = [
-  ['In the word "knife", the silent letter is ___.', 'k', ['n', 'M_SIL_NEIGHBOUR'], ['none', 'M_SIL_NONE'], ['e', 'M_SIL_END_E'], 'You say "nife": the k is silent.'],
-  ['In the word "write", the silent letter is ___.', 'w', ['r', 'M_SIL_NEIGHBOUR'], ['none', 'M_SIL_NONE'], ['e', 'M_SIL_END_E'], 'You say "rite": the w is silent.'],
+  ['In the word "knife", the silent letter is ___.', 'k', ['n', 'M_SIL_NEIGHBOUR'], ['none', 'M_SIL_NONE'], ['f', 'M_SIL_NEIGHBOUR'], 'You say "nife": the k is silent.'],
+  ['In the word "write", the silent letter is ___.', 'w', ['r', 'M_SIL_NEIGHBOUR'], ['none', 'M_SIL_NONE'], ['i', 'M_SIL_NEIGHBOUR'], 'You say "rite": the w is silent.'],
   ['In the word "lamb", the silent letter is ___.', 'b', ['m', 'M_SIL_NEIGHBOUR'], ['none', 'M_SIL_NONE'], ['l', 'M_SIL_NEIGHBOUR'], 'You say "lam": the b is silent.'],
   ['In the word "listen", the silent letter is ___.', 't', ['s', 'M_SIL_NEIGHBOUR'], ['n', 'M_SIL_END_E'], ['none', 'M_SIL_NONE'], 'You say "lisen": the t is silent.'],
   ['In the word "hour", the silent letter is ___.', 'h', ['o', 'M_SIL_NEIGHBOUR'], ['none', 'M_SIL_NONE'], ['r', 'M_SIL_END_E'], 'You say "our": the h is silent.'],

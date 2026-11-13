@@ -12,7 +12,11 @@
   "help": "Have the child say both forms aloud and say why one fits: \"bag, ball, bat\", not \"bat, bag, ball\".",
   "feedback": "When the first letters match, look at the second letter, then the third.",
   "source": "common learner error; to confirm by a Kenyan English teacher",
-  "status": "draft"
+  "status": "draft",
+  "review": {
+   "mark": "plausible, to confirm by a teacher",
+   "note": "A usage or reading slip a Kenyan Grade 4 learner could plausibly make. No source and no homework count; a Kenyan English teacher should say whether it comes up in class."
+  }
  },
  "ENGL.G4.READIN.T1_EXTENSIVE_READING.DICTIONARY_USE.M_DIC_GUIDE_WORDS": {
   "skill": "ENGL.G4.READIN.T1_EXTENSIVE_READING.DICTIONARY_USE",
@@ -27,7 +31,11 @@
   "help": "Have the child say both forms aloud and say why one fits: \"No\", not \"Yes\".",
   "feedback": "Guide words show the first and last words on a page. A word is on the page only if it comes between them in alphabetical order.",
   "source": "common learner error; to confirm by a Kenyan English teacher",
-  "status": "draft"
+  "status": "draft",
+  "review": {
+   "mark": "plausible, to confirm by a teacher",
+   "note": "A usage or reading slip a Kenyan Grade 4 learner could plausibly make. No source and no homework count; a Kenyan English teacher should say whether it comes up in class."
+  }
  },
  "ENGL.G4.READIN.T1_EXTENSIVE_READING.DICTIONARY_USE.M_DIC_WRONG_MEANING": {
   "skill": "ENGL.G4.READIN.T1_EXTENSIVE_READING.DICTIONARY_USE",
@@ -42,7 +50,11 @@
   "help": "Have the child say both forms aloud and say why one fits: \"a very fast run for a short distance\", not \"a long walk\".",
   "feedback": "Read all the meanings, then try each in the sentence to see which one fits.",
   "source": "common learner error; to confirm by a Kenyan English teacher",
-  "status": "draft"
+  "status": "draft",
+  "review": {
+   "mark": "plausible, to confirm by a teacher",
+   "note": "A usage or reading slip a Kenyan Grade 4 learner could plausibly make. No source and no homework count; a Kenyan English teacher should say whether it comes up in class."
+  }
  },
  "ENGL.G4.READIN.T1_EXTENSIVE_READING.REFERENCE_MATERIALS.M_REF_DICTIONARY_FOR_FACTS": {
   "skill": "ENGL.G4.READIN.T1_EXTENSIVE_READING.REFERENCE_MATERIALS",
@@ -57,7 +69,11 @@
   "help": "Have the child say both forms aloud and say why one fits: \"a junior encyclopaedia\", not \"a dictionary\".",
   "feedback": "A dictionary tells the meaning and spelling of words. A junior encyclopaedia gives facts about topics.",
   "source": "common learner error; to confirm by a Kenyan English teacher",
-  "status": "draft"
+  "status": "draft",
+  "review": {
+   "mark": "plausible, to confirm by a teacher",
+   "note": "A usage or reading slip a Kenyan Grade 4 learner could plausibly make. No source and no homework count; a Kenyan English teacher should say whether it comes up in class."
+  }
  },
  "ENGL.G4.READIN.T1_EXTENSIVE_READING.REFERENCE_MATERIALS.M_REF_ATLAS_FOR_WORDS": {
   "skill": "ENGL.G4.READIN.T1_EXTENSIVE_READING.REFERENCE_MATERIALS",
@@ -72,7 +88,11 @@
   "help": "Have the child say both forms aloud and say why one fits: \"an atlas\", not \"a dictionary\".",
   "feedback": "An atlas is a book of maps. Use it to find places and countries.",
   "source": "common learner error; to confirm by a Kenyan English teacher",
-  "status": "draft"
+  "status": "draft",
+  "review": {
+   "mark": "plausible, to confirm by a teacher",
+   "note": "A usage or reading slip a Kenyan Grade 4 learner could plausibly make. No source and no homework count; a Kenyan English teacher should say whether it comes up in class."
+  }
  },
  "ENGL.G4.READIN.T1_EXTENSIVE_READING.REFERENCE_MATERIALS.M_REF_STORY_FOR_FACTS": {
   "skill": "ENGL.G4.READIN.T1_EXTENSIVE_READING.REFERENCE_MATERIALS",
@@ -87,7 +107,11 @@
   "help": "Have the child say both forms aloud and say why one fits: \"a timetable\", not \"a story book\".",
   "feedback": "A timetable lists times. A story book tells an invented story and is not for looking things up.",
   "source": "common learner error; to confirm by a Kenyan English teacher",
-  "status": "draft"
+  "status": "draft",
+  "review": {
+   "mark": "plausible, to confirm by a teacher",
+   "note": "A usage or reading slip a Kenyan Grade 4 learner could plausibly make. No source and no homework count; a Kenyan English teacher should say whether it comes up in class."
+  }
  },
  "ENGL.G4.READIN.T1_EXTENSIVE_READING.REFERENCE_MATERIALS.M_REF_NEWSPAPER_OLD": {
   "skill": "ENGL.G4.READIN.T1_EXTENSIVE_READING.REFERENCE_MATERIALS",
@@ -102,7 +126,11 @@
   "help": "Have the child say both forms aloud and say why one fits: \"a newspaper\", not \"a dictionary\".",
   "feedback": "A newspaper gives news of today. A dictionary or encyclopaedia gives facts that stay the same.",
   "source": "common learner error; to confirm by a Kenyan English teacher",
-  "status": "draft"
+  "status": "draft",
+  "review": {
+   "mark": "plausible, to confirm by a teacher",
+   "note": "A usage or reading slip a Kenyan Grade 4 learner could plausibly make. No source and no homework count; a Kenyan English teacher should say whether it comes up in class."
+  }
  },
  "ENGL.G4.LANGUA.T1_WORD_CLASSES_DETERMI.ARTICLES.M_ART_A_BEFORE_VOWEL": {
   "skill": "ENGL.G4.LANGUA.T1_WORD_CLASSES_DETERMI.ARTICLES",
@@ -117,7 +145,11 @@
   "help": "Have the child say both forms aloud and say why one fits: \"an\", not \"a\".",
   "feedback": "Before a vowel sound (a, e, i, o, u) use \"an\": an orange, an egg.",
   "source": "common learner error; to confirm by a Kenyan English teacher",
-  "status": "draft"
+  "status": "draft",
+  "review": {
+   "mark": "plausible, to confirm by a teacher",
+   "note": "A usage or reading slip a Kenyan Grade 4 learner could plausibly make. No source and no homework count; a Kenyan English teacher should say whether it comes up in class."
+  }
  },
  "ENGL.G4.LANGUA.T1_WORD_CLASSES_DETERMI.ARTICLES.M_ART_AN_BEFORE_CONSONANT": {
   "skill": "ENGL.G4.LANGUA.T1_WORD_CLASSES_DETERMI.ARTICLES",
@@ -132,7 +164,11 @@
   "help": "Have the child say both forms aloud and say why one fits: \"a\", not \"an\".",
   "feedback": "Before a consonant sound use \"a\": a book, a pen.",
   "source": "common learner error; to confirm by a Kenyan English teacher",
-  "status": "draft"
+  "status": "draft",
+  "review": {
+   "mark": "plausible, to confirm by a teacher",
+   "note": "A usage or reading slip a Kenyan Grade 4 learner could plausibly make. No source and no homework count; a Kenyan English teacher should say whether it comes up in class."
+  }
  },
  "ENGL.G4.LANGUA.T1_WORD_CLASSES_DETERMI.ARTICLES.M_ART_SOUND_NOT_LETTER": {
   "skill": "ENGL.G4.LANGUA.T1_WORD_CLASSES_DETERMI.ARTICLES",
@@ -147,7 +183,11 @@
   "help": "Have the child say both forms aloud and say why one fits: \"an\", not \"a\".",
   "feedback": "Listen to the sound, not the letter. \"Hour\" starts with the sound \"ow\", so it takes \"an\". \"Uniform\" starts with the sound \"yoo\", so it takes \"a\".",
   "source": "common learner error; to confirm by a Kenyan English teacher",
-  "status": "draft"
+  "status": "draft",
+  "review": {
+   "mark": "plausible, to confirm by a teacher",
+   "note": "A usage or reading slip a Kenyan Grade 4 learner could plausibly make. No source and no homework count; a Kenyan English teacher should say whether it comes up in class."
+  }
  },
  "ENGL.G4.LANGUA.T1_WORD_CLASSES_DETERMI.ARTICLES.M_ART_THE_FIRST_MENTION": {
   "skill": "ENGL.G4.LANGUA.T1_WORD_CLASSES_DETERMI.ARTICLES",
@@ -162,7 +202,11 @@
   "help": "Have the child say both forms aloud and say why one fits: \"an\", not \"the\".",
   "feedback": "Use a or an the first time you speak about a thing. Use the when both people already know which one.",
   "source": "common learner error; to confirm by a Kenyan English teacher",
-  "status": "draft"
+  "status": "draft",
+  "review": {
+   "mark": "common in the literature",
+   "source": "Master (1997): learners use the for things not yet mentioned."
+  }
  },
  "ENGL.G4.LANGUA.T1_WORD_CLASSES_DETERMI.ARTICLES.M_ART_A_FOR_KNOWN": {
   "skill": "ENGL.G4.LANGUA.T1_WORD_CLASSES_DETERMI.ARTICLES",
@@ -177,7 +221,11 @@
   "help": "Have the child say both forms aloud and say why one fits: \"the\", not \"a\".",
   "feedback": "Use the for something that is the only one (the sun, the moon) or that both people know about.",
   "source": "common learner error; to confirm by a Kenyan English teacher",
-  "status": "draft"
+  "status": "draft",
+  "review": {
+   "mark": "common in the literature",
+   "source": "Master (1997): learners use a for something already known."
+  }
  },
  "ENGL.G4.LANGUA.T1_WORD_CLASSES_DETERMI.ARTICLES.M_ART_OMITTED": {
   "skill": "ENGL.G4.LANGUA.T1_WORD_CLASSES_DETERMI.ARTICLES",
@@ -192,7 +240,11 @@
   "help": "Have the child say both forms aloud and say why one fits: \"a\", not \"no article\".",
   "feedback": "A singular thing you can count needs a, an or the before it: a new bicycle.",
   "source": "Kiswahili influence (to confirm by a Kenyan English teacher)",
-  "status": "draft"
+  "status": "draft",
+  "review": {
+   "mark": "common in the literature",
+   "source": "Master, P. (1997), The English article system, System 25: learners of English leave articles out."
+  }
  },
  "ENGL.G4.LANGUA.T1_WORD_CLASSES_DETERMI.ARTICLES.M_ART_THE_GENERAL": {
   "skill": "ENGL.G4.LANGUA.T1_WORD_CLASSES_DETERMI.ARTICLES",
@@ -207,7 +259,11 @@
   "help": "Have the child say both forms aloud and say why one fits: \"no article (Lions are strong animals.)\", not \"The\".",
   "feedback": "When you speak about a kind of thing in general, use no article: Lions are strong animals. Use \"the\" for one particular thing both people know.",
   "source": "common learner error; to confirm by a Kenyan English teacher",
-  "status": "draft"
+  "status": "draft",
+  "review": {
+   "mark": "plausible, to confirm by a teacher",
+   "note": "A usage or reading slip a Kenyan Grade 4 learner could plausibly make. No source and no homework count; a Kenyan English teacher should say whether it comes up in class."
+  }
  },
  "ENGL.G4.WRITIN.T1_FUNCTIONAL_WRITING.FORM_INFORMATION.M_FRM_DETAIL_MIX": {
   "skill": "ENGL.G4.WRITIN.T1_FUNCTIONAL_WRITING.FORM_INFORMATION",
@@ -222,7 +278,11 @@
   "help": "Have the child say both forms aloud and say why one fits: \"14th March 2016\", not \"Nairobi\".",
   "feedback": "Read the name of the box first, then write only what it asks for.",
   "source": "common learner error; to confirm by a Kenyan English teacher",
-  "status": "draft"
+  "status": "draft",
+  "review": {
+   "mark": "plausible, to confirm by a teacher",
+   "note": "A usage or reading slip a Kenyan Grade 4 learner could plausibly make. No source and no homework count; a Kenyan English teacher should say whether it comes up in class."
+  }
  },
  "ENGL.G4.WRITIN.T1_FUNCTIONAL_WRITING.FORM_INFORMATION.M_FRM_AGE_FOR_DOB": {
   "skill": "ENGL.G4.WRITIN.T1_FUNCTIONAL_WRITING.FORM_INFORMATION",
@@ -237,7 +297,11 @@
   "help": "Have the child say both forms aloud and say why one fits: \"14th March 2016\", not \"9 years\".",
   "feedback": "Date of birth needs the day, month and year you were born. Age is a number.",
   "source": "common learner error; to confirm by a Kenyan English teacher",
-  "status": "draft"
+  "status": "draft",
+  "review": {
+   "mark": "plausible, to confirm by a teacher",
+   "note": "A usage or reading slip a Kenyan Grade 4 learner could plausibly make. No source and no homework count; a Kenyan English teacher should say whether it comes up in class."
+  }
  },
  "ENGL.G4.WRITIN.T1_FUNCTIONAL_WRITING.FORM_INFORMATION.M_FRM_CONTACT_FOR_ADDRESS": {
   "skill": "ENGL.G4.WRITIN.T1_FUNCTIONAL_WRITING.FORM_INFORMATION",
@@ -252,7 +316,11 @@
   "help": "Have the child say both forms aloud and say why one fits: \"P.O. Box 12, Kisumu\", not \"0712 345 678\".",
   "feedback": "An address says where you live or get letters. A phone number goes in the contact box.",
   "source": "common learner error; to confirm by a Kenyan English teacher",
-  "status": "draft"
+  "status": "draft",
+  "review": {
+   "mark": "plausible, to confirm by a teacher",
+   "note": "A usage or reading slip a Kenyan Grade 4 learner could plausibly make. No source and no homework count; a Kenyan English teacher should say whether it comes up in class."
+  }
  },
  "ENGL.G4.WRITIN.T1_FUNCTIONAL_WRITING.FORM_INFORMATION.M_FRM_NAME_PART": {
   "skill": "ENGL.G4.WRITIN.T1_FUNCTIONAL_WRITING.FORM_INFORMATION",
@@ -267,7 +335,11 @@
   "help": "Have the child say both forms aloud and say why one fits: \"Wanjiru Kamau Njeri\", not \"Wanjiru\".",
   "feedback": "Full names means all of your names, in the order the form asks for.",
   "source": "common learner error; to confirm by a Kenyan English teacher",
-  "status": "draft"
+  "status": "draft",
+  "review": {
+   "mark": "plausible, to confirm by a teacher",
+   "note": "A usage or reading slip a Kenyan Grade 4 learner could plausibly make. No source and no homework count; a Kenyan English teacher should say whether it comes up in class."
+  }
  },
  "ENGL.G4.READIN.T2_INTENSIVE_READING.FACTUAL_QUESTIONS.M_FACT_NEARBY_DETAIL": {
   "skill": "ENGL.G4.READIN.T2_INTENSIVE_READING.FACTUAL_QUESTIONS",
@@ -282,7 +354,11 @@
   "help": "Have the child say both forms aloud and say why one fits: \"rags\", not \"sand\".",
   "feedback": "Find the sentence that answers the question and check that the words match what is asked.",
   "source": "common learner error; to confirm by a Kenyan English teacher",
-  "status": "draft"
+  "status": "draft",
+  "review": {
+   "mark": "plausible, to confirm by a teacher",
+   "note": "A usage or reading slip a Kenyan Grade 4 learner could plausibly make. No source and no homework count; a Kenyan English teacher should say whether it comes up in class."
+  }
  },
  "ENGL.G4.READIN.T2_INTENSIVE_READING.FACTUAL_QUESTIONS.M_FACT_OUTSIDE_KNOWLEDGE": {
   "skill": "ENGL.G4.READIN.T2_INTENSIVE_READING.FACTUAL_QUESTIONS",
@@ -297,7 +373,11 @@
   "help": "Have the child say both forms aloud and say why one fits: \"by boda boda\", not \"by bus\".",
   "feedback": "Answer from the text, not from what you think is likely. Go back to the sentence.",
   "source": "common learner error; to confirm by a Kenyan English teacher",
-  "status": "draft"
+  "status": "draft",
+  "review": {
+   "mark": "common in the literature",
+   "source": "Raphael, T. (1982), Question-answering strategies for children, The Reading Teacher 36: children answer from what they know, not from the text."
+  }
  },
  "ENGL.G4.READIN.T2_INTENSIVE_READING.FACTUAL_QUESTIONS.M_FACT_MISSES_STATED": {
   "skill": "ENGL.G4.READIN.T2_INTENSIVE_READING.FACTUAL_QUESTIONS",
@@ -312,7 +392,11 @@
   "help": "Have the child say both forms aloud and say why one fits: \"True\", not \"Not stated\".",
   "feedback": "Look again. When the text says it clearly, the answer is true.",
   "source": "common learner error; to confirm by a Kenyan English teacher",
-  "status": "draft"
+  "status": "draft",
+  "review": {
+   "mark": "plausible, to confirm by a teacher",
+   "note": "A usage or reading slip a Kenyan Grade 4 learner could plausibly make. No source and no homework count; a Kenyan English teacher should say whether it comes up in class."
+  }
  },
  "ENGL.G4.READIN.T2_INTENSIVE_READING.FACTUAL_QUESTIONS.M_FACT_FALSE_AS_TRUE": {
   "skill": "ENGL.G4.READIN.T2_INTENSIVE_READING.FACTUAL_QUESTIONS",
@@ -327,7 +411,11 @@
   "help": "Have the child say both forms aloud and say why one fits: \"False\", not \"True\".",
   "feedback": "The text says something different from the statement, so the statement is false.",
   "source": "common learner error; to confirm by a Kenyan English teacher",
-  "status": "draft"
+  "status": "draft",
+  "review": {
+   "mark": "plausible, to confirm by a teacher",
+   "note": "A usage or reading slip a Kenyan Grade 4 learner could plausibly make. No source and no homework count; a Kenyan English teacher should say whether it comes up in class."
+  }
  },
  "ENGL.G4.READIN.T2_INTENSIVE_READING.FACTUAL_QUESTIONS.M_FACT_FALSE_AS_NOT_STATED": {
   "skill": "ENGL.G4.READIN.T2_INTENSIVE_READING.FACTUAL_QUESTIONS",
@@ -342,7 +430,11 @@
   "help": "Have the child say both forms aloud and say why one fits: \"False\", not \"Not stated\".",
   "feedback": "If the text says the opposite, the answer is false. Not stated means the text says nothing about it.",
   "source": "common learner error; to confirm by a Kenyan English teacher",
-  "status": "draft"
+  "status": "draft",
+  "review": {
+   "mark": "plausible, to confirm by a teacher",
+   "note": "A usage or reading slip a Kenyan Grade 4 learner could plausibly make. No source and no homework count; a Kenyan English teacher should say whether it comes up in class."
+  }
  },
  "ENGL.G4.READIN.T2_INTENSIVE_READING.FACTUAL_QUESTIONS.M_FACT_NOT_STATED_AS_TRUE": {
   "skill": "ENGL.G4.READIN.T2_INTENSIVE_READING.FACTUAL_QUESTIONS",
@@ -357,7 +449,11 @@
   "help": "Have the child say both forms aloud and say why one fits: \"Not stated\", not \"True\".",
   "feedback": "The text does not mention it, so the answer is not stated. Do not guess from what is likely.",
   "source": "common learner error; to confirm by a Kenyan English teacher",
-  "status": "draft"
+  "status": "draft",
+  "review": {
+   "mark": "plausible, to confirm by a teacher",
+   "note": "A usage or reading slip a Kenyan Grade 4 learner could plausibly make. No source and no homework count; a Kenyan English teacher should say whether it comes up in class."
+  }
  },
  "ENGL.G4.READIN.T2_INTENSIVE_READING.FACTUAL_QUESTIONS.M_FACT_WRONG_WHO": {
   "skill": "ENGL.G4.READIN.T2_INTENSIVE_READING.FACTUAL_QUESTIONS",
@@ -372,7 +468,11 @@
   "help": "Have the child say both forms aloud and say why one fits: \"his grandmother\", not \"his teacher\".",
   "feedback": "Find the sentence about the helper and check who it names.",
   "source": "common learner error; to confirm by a Kenyan English teacher",
-  "status": "draft"
+  "status": "draft",
+  "review": {
+   "mark": "plausible, to confirm by a teacher",
+   "note": "A usage or reading slip a Kenyan Grade 4 learner could plausibly make. No source and no homework count; a Kenyan English teacher should say whether it comes up in class."
+  }
  },
  "ENGL.G4.READIN.T2_INTENSIVE_READING.INFERENCE_QUESTIONS.M_INFER_REPEATS_TEXT": {
   "skill": "ENGL.G4.READIN.T2_INTENSIVE_READING.INFERENCE_QUESTIONS",
@@ -387,7 +487,11 @@
   "help": "Have the child say both forms aloud and say why one fits: \"Achieng counted carefully and gave the right change.\", not \"The woman wore a green dress.\".",
   "feedback": "An inference is worked out from clues. A sentence copied from the text is not working anything out.",
   "source": "common learner error; to confirm by a Kenyan English teacher",
-  "status": "draft"
+  "status": "draft",
+  "review": {
+   "mark": "common in the literature",
+   "source": "Raphael (1982): children copy a sentence from the text when asked to infer."
+  }
  },
  "ENGL.G4.READIN.T2_INTENSIVE_READING.INFERENCE_QUESTIONS.M_INFER_CONTRADICTS": {
   "skill": "ENGL.G4.READIN.T2_INTENSIVE_READING.INFERENCE_QUESTIONS",
@@ -402,7 +506,11 @@
   "help": "Have the child say both forms aloud and say why one fits: \"He loved football and the ball burst.\", not \"The school was closed.\".",
   "feedback": "A good inference agrees with every clue in the text.",
   "source": "common learner error; to confirm by a Kenyan English teacher",
-  "status": "draft"
+  "status": "draft",
+  "review": {
+   "mark": "plausible, to confirm by a teacher",
+   "note": "A usage or reading slip a Kenyan Grade 4 learner could plausibly make. No source and no homework count; a Kenyan English teacher should say whether it comes up in class."
+  }
  },
  "ENGL.G4.READIN.T2_INTENSIVE_READING.INFERENCE_QUESTIONS.M_INFER_OVERREACH": {
   "skill": "ENGL.G4.READIN.T2_INTENSIVE_READING.INFERENCE_QUESTIONS",
@@ -417,7 +525,11 @@
   "help": "Have the child say both forms aloud and say why one fits: \"She is kind and clever.\", not \"She is the richest woman in town.\".",
   "feedback": "An inference is a small step from the clues. If the text gives no clue for it, it goes too far.",
   "source": "common learner error; to confirm by a Kenyan English teacher",
-  "status": "draft"
+  "status": "draft",
+  "review": {
+   "mark": "plausible, to confirm by a teacher",
+   "note": "A usage or reading slip a Kenyan Grade 4 learner could plausibly make. No source and no homework count; a Kenyan English teacher should say whether it comes up in class."
+  }
  },
  "ENGL.G4.READIN.T2_INTENSIVE_READING.CONTEXT_CLUES.M_CTX_LOOKS_LIKE": {
   "skill": "ENGL.G4.READIN.T2_INTENSIVE_READING.CONTEXT_CLUES",
@@ -432,7 +544,11 @@
   "help": "Have the child say both forms aloud and say why one fits: \"broke open\", not \"rolled away\".",
   "feedback": "Read the sentences around the word to find its meaning.",
   "source": "common learner error; to confirm by a Kenyan English teacher",
-  "status": "draft"
+  "status": "draft",
+  "review": {
+   "mark": "plausible, to confirm by a teacher",
+   "note": "A usage or reading slip a Kenyan Grade 4 learner could plausibly make. No source and no homework count; a Kenyan English teacher should say whether it comes up in class."
+  }
  },
  "ENGL.G4.READIN.T2_INTENSIVE_READING.CONTEXT_CLUES.M_CTX_COMMON_MEANING": {
   "skill": "ENGL.G4.READIN.T2_INTENSIVE_READING.CONTEXT_CLUES",
@@ -447,7 +563,11 @@
   "help": "Have the child say both forms aloud and say why one fits: \"small piles\", not \"big baskets\".",
   "feedback": "Try the meaning in the sentence. If it does not fit, it is not the right one.",
   "source": "common learner error; to confirm by a Kenyan English teacher",
-  "status": "draft"
+  "status": "draft",
+  "review": {
+   "mark": "plausible, to confirm by a teacher",
+   "note": "A usage or reading slip a Kenyan Grade 4 learner could plausibly make. No source and no homework count; a Kenyan English teacher should say whether it comes up in class."
+  }
  },
  "ENGL.G4.READIN.T2_INTENSIVE_READING.CONTEXT_CLUES.M_CTX_OPPOSITE": {
   "skill": "ENGL.G4.READIN.T2_INTENSIVE_READING.CONTEXT_CLUES",
@@ -462,7 +582,11 @@
   "help": "Have the child say both forms aloud and say why one fits: \"very old\", not \"very new\".",
   "feedback": "Read for clue words. They tell you if the word means the same as or the opposite of something.",
   "source": "common learner error; to confirm by a Kenyan English teacher",
-  "status": "draft"
+  "status": "draft",
+  "review": {
+   "mark": "doubtful",
+   "why": "Plausible only in a few cases; it is mostly a trap option."
+  }
  },
  "ENGL.G4.READIN.T2_INTENSIVE_READING.CONTEXT_CLUES.M_CTX_WRONG_CLUE": {
   "skill": "ENGL.G4.READIN.T2_INTENSIVE_READING.CONTEXT_CLUES",
@@ -477,7 +601,11 @@
   "help": "Have the child say both forms aloud and say why one fits: \"the school had no money for a new one\", not \"in Nyeri\".",
   "feedback": "A clue is a group of words that tells more about the hard word, not just words near it.",
   "source": "common learner error; to confirm by a Kenyan English teacher",
-  "status": "draft"
+  "status": "draft",
+  "review": {
+   "mark": "plausible, to confirm by a teacher",
+   "note": "A usage or reading slip a Kenyan Grade 4 learner could plausibly make. No source and no homework count; a Kenyan English teacher should say whether it comes up in class."
+  }
  },
  "ENGL.G4.LANGUA.T2_WORD_CLASSES_NOUNS.PLURALS_REGULAR.M_PLR_NO_ES": {
   "skill": "ENGL.G4.LANGUA.T2_WORD_CLASSES_NOUNS.PLURALS_REGULAR",
@@ -492,7 +620,11 @@
   "help": "Have the child say both forms aloud and say why one fits: \"boxes\", not \"boxs\".",
   "feedback": "After s, x, ch and sh we add -es so that the word can be said: box, boxes; church, churches.",
   "source": "common learner error; to confirm by a Kenyan English teacher",
-  "status": "draft"
+  "status": "draft",
+  "review": {
+   "mark": "plausible, to confirm by a teacher",
+   "note": "A usage or reading slip a Kenyan Grade 4 learner could plausibly make. No source and no homework count; a Kenyan English teacher should say whether it comes up in class."
+  }
  },
  "ENGL.G4.LANGUA.T2_WORD_CLASSES_NOUNS.PLURALS_REGULAR.M_PLR_Y_TO_S": {
   "skill": "ENGL.G4.LANGUA.T2_WORD_CLASSES_NOUNS.PLURALS_REGULAR",
@@ -507,7 +639,11 @@
   "help": "Have the child say both forms aloud and say why one fits: \"babies\", not \"babys\".",
   "feedback": "When a word ends in a consonant and y, change the y to i and add -es: baby, babies.",
   "source": "common learner error; to confirm by a Kenyan English teacher",
-  "status": "draft"
+  "status": "draft",
+  "review": {
+   "mark": "plausible, to confirm by a teacher",
+   "note": "A usage or reading slip a Kenyan Grade 4 learner could plausibly make. No source and no homework count; a Kenyan English teacher should say whether it comes up in class."
+  }
  },
  "ENGL.G4.LANGUA.T2_WORD_CLASSES_NOUNS.PLURALS_REGULAR.M_PLR_VOWEL_Y_IES": {
   "skill": "ENGL.G4.LANGUA.T2_WORD_CLASSES_NOUNS.PLURALS_REGULAR",
@@ -522,7 +658,11 @@
   "help": "Have the child say both forms aloud and say why one fits: \"monkeys\", not \"monkies\".",
   "feedback": "When a vowel comes before the y, just add -s: monkey, monkeys; day, days.",
   "source": "common learner error; to confirm by a Kenyan English teacher",
-  "status": "draft"
+  "status": "draft",
+  "review": {
+   "mark": "plausible, to confirm by a teacher",
+   "note": "A usage or reading slip a Kenyan Grade 4 learner could plausibly make. No source and no homework count; a Kenyan English teacher should say whether it comes up in class."
+  }
  },
  "ENGL.G4.LANGUA.T2_WORD_CLASSES_NOUNS.PLURALS_REGULAR.M_PLR_F_NO_VES": {
   "skill": "ENGL.G4.LANGUA.T2_WORD_CLASSES_NOUNS.PLURALS_REGULAR",
@@ -537,7 +677,11 @@
   "help": "Have the child say both forms aloud and say why one fits: \"leaves\", not \"leafs\".",
   "feedback": "Some words ending in f or fe change to -ves: leaf, leaves; knife, knives; wife, wives.",
   "source": "common learner error; to confirm by a Kenyan English teacher",
-  "status": "draft"
+  "status": "draft",
+  "review": {
+   "mark": "plausible, to confirm by a teacher",
+   "note": "A usage or reading slip a Kenyan Grade 4 learner could plausibly make. No source and no homework count; a Kenyan English teacher should say whether it comes up in class."
+  }
  },
  "ENGL.G4.LANGUA.T2_WORD_CLASSES_NOUNS.PLURALS_REGULAR.M_PLR_SINGULAR_AFTER_NUMBER": {
   "skill": "ENGL.G4.LANGUA.T2_WORD_CLASSES_NOUNS.PLURALS_REGULAR",
@@ -552,7 +696,11 @@
   "help": "Have the child say both forms aloud and say why one fits: \"books\", not \"book\".",
   "feedback": "After two, three, four or any number above one, the noun must be plural: four books.",
   "source": "Kiswahili influence (to confirm by a Kenyan English teacher)",
-  "status": "draft"
+  "status": "draft",
+  "review": {
+   "mark": "plausible, to confirm by a teacher",
+   "note": "A usage or reading slip a Kenyan Grade 4 learner could plausibly make. No source and no homework count; a Kenyan English teacher should say whether it comes up in class."
+  }
  },
  "ENGL.G4.LANGUA.T2_WORD_CLASSES_NOUNS.PLURALS_IRREGULAR.M_PLI_ADD_S": {
   "skill": "ENGL.G4.LANGUA.T2_WORD_CLASSES_NOUNS.PLURALS_IRREGULAR",
@@ -567,7 +715,11 @@
   "help": "Have the child say both forms aloud and say why one fits: \"children\", not \"childs\".",
   "feedback": "A few nouns change in their own way. The plural of child is children, and of man is men.",
   "source": "common learner error; to confirm by a Kenyan English teacher",
-  "status": "draft"
+  "status": "draft",
+  "review": {
+   "mark": "common in the literature",
+   "source": "Berko, J. (1958), The child's learning of English morphology, Word 14, and Marcus et al. (1992): children regularise irregular plurals (mouses, tooths)."
+  }
  },
  "ENGL.G4.LANGUA.T2_WORD_CLASSES_NOUNS.PLURALS_IRREGULAR.M_PLI_DOUBLE_PLURAL": {
   "skill": "ENGL.G4.LANGUA.T2_WORD_CLASSES_NOUNS.PLURALS_IRREGULAR",
@@ -582,7 +734,11 @@
   "help": "Have the child say both forms aloud and say why one fits: \"children\", not \"childrens\".",
   "feedback": "Children, men and women are already plural. Do not add -s.",
   "source": "common learner error; to confirm by a Kenyan English teacher",
-  "status": "draft"
+  "status": "draft",
+  "review": {
+   "mark": "common in the literature",
+   "source": "Marcus et al. (1992): children add -s to plurals that are already plural (childrens)."
+  }
  },
  "ENGL.G4.LANGUA.T2_WORD_CLASSES_NOUNS.PLURALS_IRREGULAR.M_PLI_FOOT_TOOTH": {
   "skill": "ENGL.G4.LANGUA.T2_WORD_CLASSES_NOUNS.PLURALS_IRREGULAR",
@@ -597,7 +753,11 @@
   "help": "Have the child say both forms aloud and say why one fits: \"teeth\", not \"tooths\".",
   "feedback": "Some plurals change the vowels inside the word: tooth, teeth; mouse, mice; goose, geese.",
   "source": "common learner error; to confirm by a Kenyan English teacher",
-  "status": "draft"
+  "status": "draft",
+  "review": {
+   "mark": "common in the literature",
+   "source": "Berko (1958) and Marcus et al. (1992): regularised irregular plurals."
+  }
  },
  "ENGL.G4.LANGUA.T2_WORD_CLASSES_NOUNS.PLURALS_IRREGULAR.M_PLI_SAME_FORM_S": {
   "skill": "ENGL.G4.LANGUA.T2_WORD_CLASSES_NOUNS.PLURALS_IRREGULAR",
@@ -612,7 +772,11 @@
   "help": "Have the child say both forms aloud and say why one fits: \"sheep\", not \"sheeps\".",
   "feedback": "Sheep stays sheep. We say one sheep and ten sheep. Fish is the same.",
   "source": "common learner error; to confirm by a Kenyan English teacher",
-  "status": "draft"
+  "status": "draft",
+  "review": {
+   "mark": "common in the literature",
+   "source": "Marcus et al. (1992): children regularise nouns that keep one form (sheeps)."
+  }
  },
  "ENGL.G4.LISTEN.T3_PRONUNCIATION_AND_VO.POLITE_WORDS.M_POL_DEMAND": {
   "skill": "ENGL.G4.LISTEN.T3_PRONUNCIATION_AND_VO.POLITE_WORDS",
@@ -627,7 +791,11 @@
   "help": "Have the child say both forms aloud and say why one fits: \"May I please borrow your pen?\", not \"Give me your pen.\".",
   "feedback": "A polite request starts with May I or Could you, and says please.",
   "source": "common learner error; to confirm by a Kenyan English teacher",
-  "status": "draft"
+  "status": "draft",
+  "review": {
+   "mark": "plausible, to confirm by a teacher",
+   "note": "A usage or reading slip a Kenyan Grade 4 learner could plausibly make. No source and no homework count; a Kenyan English teacher should say whether it comes up in class."
+  }
  },
  "ENGL.G4.LISTEN.T3_PRONUNCIATION_AND_VO.POLITE_WORDS.M_POL_NO_THANKS": {
   "skill": "ENGL.G4.LISTEN.T3_PRONUNCIATION_AND_VO.POLITE_WORDS",
@@ -642,7 +810,11 @@
   "help": "Have the child say both forms aloud and say why one fits: \"Thank you for helping me.\", not \"Okay.\".",
   "feedback": "When someone helps you, say thank you.",
   "source": "common learner error; to confirm by a Kenyan English teacher",
-  "status": "draft"
+  "status": "draft",
+  "review": {
+   "mark": "plausible, to confirm by a teacher",
+   "note": "A usage or reading slip a Kenyan Grade 4 learner could plausibly make. No source and no homework count; a Kenyan English teacher should say whether it comes up in class."
+  }
  },
  "ENGL.G4.LISTEN.T3_PRONUNCIATION_AND_VO.POLITE_WORDS.M_POL_RUDE_REFUSAL": {
   "skill": "ENGL.G4.LISTEN.T3_PRONUNCIATION_AND_VO.POLITE_WORDS",
@@ -657,7 +829,11 @@
   "help": "Have the child say both forms aloud and say why one fits: \"I am sorry, I cannot lend it today.\", not \"No. Go away.\".",
   "feedback": "You can say no in a polite way: begin with I am sorry.",
   "source": "common learner error; to confirm by a Kenyan English teacher",
-  "status": "draft"
+  "status": "draft",
+  "review": {
+   "mark": "plausible, to confirm by a teacher",
+   "note": "A usage or reading slip a Kenyan Grade 4 learner could plausibly make. No source and no homework count; a Kenyan English teacher should say whether it comes up in class."
+  }
  },
  "ENGL.G4.LISTEN.T3_PRONUNCIATION_AND_VO.POLITE_WORDS.M_POL_NO_SORRY": {
   "skill": "ENGL.G4.LISTEN.T3_PRONUNCIATION_AND_VO.POLITE_WORDS",
@@ -672,7 +848,11 @@
   "help": "Have the child say both forms aloud and say why one fits: \"Sorry, I did not see you.\", not \"Move.\".",
   "feedback": "When you hurt or bother someone, say sorry.",
   "source": "common learner error; to confirm by a Kenyan English teacher",
-  "status": "draft"
+  "status": "draft",
+  "review": {
+   "mark": "plausible, to confirm by a teacher",
+   "note": "A usage or reading slip a Kenyan Grade 4 learner could plausibly make. No source and no homework count; a Kenyan English teacher should say whether it comes up in class."
+  }
  },
  "ENGL.G4.LANGUA.T3_LANGUAGE_PATTERN.POLITE_PATTERN.M_PAT_VERB_FORM": {
   "skill": "ENGL.G4.LANGUA.T3_LANGUAGE_PATTERN.POLITE_PATTERN",
@@ -687,7 +867,11 @@
   "help": "Have the child say both forms aloud and say why one fits: \"come\", not \"to come\".",
   "feedback": "After May I and Could you the verb stays plain: May I come in? Could you help me?",
   "source": "Kiswahili influence (to confirm by a Kenyan English teacher)",
-  "status": "draft"
+  "status": "draft",
+  "review": {
+   "mark": "plausible, to confirm by a teacher",
+   "note": "A usage or reading slip a Kenyan Grade 4 learner could plausibly make. No source and no homework count; a Kenyan English teacher should say whether it comes up in class."
+  }
  },
  "ENGL.G4.LANGUA.T3_LANGUAGE_PATTERN.POLITE_PATTERN.M_PAT_NO_PLEASE": {
   "skill": "ENGL.G4.LANGUA.T3_LANGUAGE_PATTERN.POLITE_PATTERN",
@@ -702,7 +886,11 @@
   "help": "Have the child say both forms aloud and say why one fits: \"Could you give me some water, please?\", not \"Give me water.\".",
   "feedback": "A polite request uses May I or Could you, and the word please.",
   "source": "common learner error; to confirm by a Kenyan English teacher",
-  "status": "draft"
+  "status": "draft",
+  "review": {
+   "mark": "plausible, to confirm by a teacher",
+   "note": "A usage or reading slip a Kenyan Grade 4 learner could plausibly make. No source and no homework count; a Kenyan English teacher should say whether it comes up in class."
+  }
  },
  "ENGL.G4.LANGUA.T3_LANGUAGE_PATTERN.POLITE_PATTERN.M_PAT_WOULD_LIKE_FORM": {
   "skill": "ENGL.G4.LANGUA.T3_LANGUAGE_PATTERN.POLITE_PATTERN",
@@ -717,7 +905,11 @@
   "help": "Have the child say both forms aloud and say why one fits: \"Would\", not \"Do\".",
   "feedback": "To offer something politely we say: Would you like some tea? The verb after like is to + the plain verb, or a noun.",
   "source": "common learner error; to confirm by a Kenyan English teacher",
-  "status": "draft"
+  "status": "draft",
+  "review": {
+   "mark": "plausible, to confirm by a teacher",
+   "note": "A usage or reading slip a Kenyan Grade 4 learner could plausibly make. No source and no homework count; a Kenyan English teacher should say whether it comes up in class."
+  }
  },
  "ENGL.G4.LANGUA.T3_LANGUAGE_PATTERN.POLITE_PATTERN.M_PAT_ORDER": {
   "skill": "ENGL.G4.LANGUA.T3_LANGUAGE_PATTERN.POLITE_PATTERN",
@@ -732,7 +924,11 @@
   "help": "Have the child say both forms aloud and say why one fits: \"you help\", not \"help you\".",
   "feedback": "In a request the helping word comes first: Could you help me? May I borrow your pen?",
   "source": "common learner error; to confirm by a Kenyan English teacher",
-  "status": "draft"
+  "status": "draft",
+  "review": {
+   "mark": "plausible, to confirm by a teacher",
+   "note": "A usage or reading slip a Kenyan Grade 4 learner could plausibly make. No source and no homework count; a Kenyan English teacher should say whether it comes up in class."
+  }
  },
  "ENGL.G4.LISTEN.T4_PRONUNCIATION_AND_VO.FIRST_AID_WORDS.M_FA_NEAR_MEANING": {
   "skill": "ENGL.G4.LISTEN.T4_PRONUNCIATION_AND_VO.FIRST_AID_WORDS",
@@ -747,7 +943,11 @@
   "help": "Have the child say both forms aloud and say why one fits: \"bandage\", not \"bruise\".",
   "feedback": "Read the whole sentence and say what the gap must mean before choosing.",
   "source": "common learner error; to confirm by a Kenyan English teacher",
-  "status": "draft"
+  "status": "draft",
+  "review": {
+   "mark": "plausible, to confirm by a teacher",
+   "note": "A usage or reading slip a Kenyan Grade 4 learner could plausibly make. No source and no homework count; a Kenyan English teacher should say whether it comes up in class."
+  }
  },
  "ENGL.G4.LISTEN.T4_PRONUNCIATION_AND_VO.FIRST_AID_WORDS.M_FA_WOUND_BRUISE": {
   "skill": "ENGL.G4.LISTEN.T4_PRONUNCIATION_AND_VO.FIRST_AID_WORDS",
@@ -762,7 +962,11 @@
   "help": "Have the child say both forms aloud and say why one fits: \"bruise\", not \"wound\".",
   "feedback": "A wound is a cut or a break in the skin. A bruise is a dark mark under the skin.",
   "source": "common learner error; to confirm by a Kenyan English teacher",
-  "status": "draft"
+  "status": "draft",
+  "review": {
+   "mark": "plausible, to confirm by a teacher",
+   "note": "A usage or reading slip a Kenyan Grade 4 learner could plausibly make. No source and no homework count; a Kenyan English teacher should say whether it comes up in class."
+  }
  },
  "ENGL.G4.LISTEN.T4_PRONUNCIATION_AND_VO.FIRST_AID_WORDS.M_FA_SPRAIN_BREAK": {
   "skill": "ENGL.G4.LISTEN.T4_PRONUNCIATION_AND_VO.FIRST_AID_WORDS",
@@ -777,7 +981,11 @@
   "help": "Have the child say both forms aloud and say why one fits: \"sprain\", not \"ambulance\".",
   "feedback": "A sprain is a twisted joint. An ambulance is a vehicle that takes people to hospital.",
   "source": "common learner error; to confirm by a Kenyan English teacher",
-  "status": "draft"
+  "status": "draft",
+  "review": {
+   "mark": "plausible, to confirm by a teacher",
+   "note": "A usage or reading slip a Kenyan Grade 4 learner could plausibly make. No source and no homework count; a Kenyan English teacher should say whether it comes up in class."
+  }
  },
  "ENGL.G4.READIN.T4_INTENSIVE_READING_VI.VISUALS.M_VIS_WRONG_ROW": {
   "skill": "ENGL.G4.READIN.T4_INTENSIVE_READING_VI.VISUALS",
@@ -792,7 +1000,11 @@
   "help": "Have the child say both forms aloud and say why one fits: \"8:00 am\", not \"10:30 am\".",
   "feedback": "Find the row for what you need, then read across to the right column.",
   "source": "common learner error; to confirm by a Kenyan English teacher",
-  "status": "draft"
+  "status": "draft",
+  "review": {
+   "mark": "plausible, to confirm by a teacher",
+   "note": "A usage or reading slip a Kenyan Grade 4 learner could plausibly make. No source and no homework count; a Kenyan English teacher should say whether it comes up in class."
+  }
  },
  "ENGL.G4.READIN.T4_INTENSIVE_READING_VI.VISUALS.M_VIS_NEARBY_DETAIL": {
   "skill": "ENGL.G4.READIN.T4_INTENSIVE_READING_VI.VISUALS",
@@ -807,7 +1019,11 @@
   "help": "Have the child say both forms aloud and say why one fits: \"Sunday\", not \"Saturday\".",
   "feedback": "Go back to the line that answers the question and check the words.",
   "source": "common learner error; to confirm by a Kenyan English teacher",
-  "status": "draft"
+  "status": "draft",
+  "review": {
+   "mark": "plausible, to confirm by a teacher",
+   "note": "A usage or reading slip a Kenyan Grade 4 learner could plausibly make. No source and no homework count; a Kenyan English teacher should say whether it comes up in class."
+  }
  },
  "ENGL.G4.READIN.T4_INTENSIVE_READING_VI.VISUALS.M_VIS_PURPOSE": {
   "skill": "ENGL.G4.READIN.T4_INTENSIVE_READING_VI.VISUALS",
@@ -822,7 +1038,11 @@
   "help": "Have the child say both forms aloud and say why one fits: \"to tell people the time of the meeting\", not \"to sell shoes\".",
   "feedback": "Look at the title and the first line. They say what the notice is for.",
   "source": "common learner error; to confirm by a Kenyan English teacher",
-  "status": "draft"
+  "status": "draft",
+  "review": {
+   "mark": "plausible, to confirm by a teacher",
+   "note": "A usage or reading slip a Kenyan Grade 4 learner could plausibly make. No source and no homework count; a Kenyan English teacher should say whether it comes up in class."
+  }
  },
  "ENGL.G4.LANGUA.T4_WORD_CLASSES_PRONOUN.PERSONAL_PRONOUNS.M_PRO_SUBJECT_AS_OBJECT": {
   "skill": "ENGL.G4.LANGUA.T4_WORD_CLASSES_PRONOUN.PERSONAL_PRONOUNS",
@@ -837,7 +1057,11 @@
   "help": "Have the child say both forms aloud and say why one fits: \"me\", not \"I\".",
   "feedback": "After a verb or a small word like to, for or with, use me, him, her, us or them.",
   "source": "common learner error; to confirm by a Kenyan English teacher",
-  "status": "draft"
+  "status": "draft",
+  "review": {
+   "mark": "common in the literature",
+   "source": "Rispoli, M. (1994), Pronoun case overextensions and paradigm building, Journal of Child Language 21: children use the wrong case of a pronoun."
+  }
  },
  "ENGL.G4.LANGUA.T4_WORD_CLASSES_PRONOUN.PERSONAL_PRONOUNS.M_PRO_OBJECT_AS_SUBJECT": {
   "skill": "ENGL.G4.LANGUA.T4_WORD_CLASSES_PRONOUN.PERSONAL_PRONOUNS",
@@ -852,7 +1076,11 @@
   "help": "Have the child say both forms aloud and say why one fits: \"Wanjiru and I\", not \"Me and Wanjiru\".",
   "feedback": "Before a verb, who does the action? Use I, he, she, we or they: Wanjiru and I went to the market.",
   "source": "common learner error; to confirm by a Kenyan English teacher",
-  "status": "draft"
+  "status": "draft",
+  "review": {
+   "mark": "common in the literature",
+   "source": "Rispoli (1994): children use object-case pronouns as subjects (me and him went)."
+  }
  },
  "ENGL.G4.LANGUA.T4_WORD_CLASSES_PRONOUN.PERSONAL_PRONOUNS.M_PRO_NOUN_AND_PRONOUN": {
   "skill": "ENGL.G4.LANGUA.T4_WORD_CLASSES_PRONOUN.PERSONAL_PRONOUNS",
@@ -867,7 +1095,11 @@
   "help": "Have the child say both forms aloud and say why one fits: \"no pronoun\", not \"she\".",
   "feedback": "Do not say the name and the pronoun together. Wanjiru is tall, or She is tall.",
   "source": "common learner error; to confirm by a Kenyan English teacher",
-  "status": "draft"
+  "status": "draft",
+  "review": {
+   "mark": "plausible, to confirm by a teacher",
+   "note": "A usage or reading slip a Kenyan Grade 4 learner could plausibly make. No source and no homework count; a Kenyan English teacher should say whether it comes up in class."
+  }
  },
  "ENGL.G4.LANGUA.T4_WORD_CLASSES_PRONOUN.PERSONAL_PRONOUNS.M_PRO_GENDER": {
   "skill": "ENGL.G4.LANGUA.T4_WORD_CLASSES_PRONOUN.PERSONAL_PRONOUNS",
@@ -882,7 +1114,11 @@
   "help": "Have the child say both forms aloud and say why one fits: \"She\", not \"He\".",
   "feedback": "Use he for a boy or man and she for a girl or woman.",
   "source": "Kiswahili influence (to confirm by a Kenyan English teacher)",
-  "status": "draft"
+  "status": "draft",
+  "review": {
+   "mark": "plausible, to confirm by a teacher",
+   "note": "A usage or reading slip a Kenyan Grade 4 learner could plausibly make. No source and no homework count; a Kenyan English teacher should say whether it comes up in class."
+  }
  },
  "ENGL.G4.LANGUA.T4_WORD_CLASSES_PRONOUN.POSSESSIVE_PRONOUNS.M_POS_DETERMINER_FOR_PRONOUN": {
   "skill": "ENGL.G4.LANGUA.T4_WORD_CLASSES_PRONOUN.POSSESSIVE_PRONOUNS",
@@ -897,7 +1133,11 @@
   "help": "Have the child say both forms aloud and say why one fits: \"mine\", not \"my\".",
   "feedback": "When no noun comes after, use mine, yours, hers, ours or theirs: That bag is mine.",
   "source": "common learner error; to confirm by a Kenyan English teacher",
-  "status": "draft"
+  "status": "draft",
+  "review": {
+   "mark": "plausible, to confirm by a teacher",
+   "note": "A usage or reading slip a Kenyan Grade 4 learner could plausibly make. No source and no homework count; a Kenyan English teacher should say whether it comes up in class."
+  }
  },
  "ENGL.G4.LANGUA.T4_WORD_CLASSES_PRONOUN.POSSESSIVE_PRONOUNS.M_POS_PRONOUN_BEFORE_NOUN": {
   "skill": "ENGL.G4.LANGUA.T4_WORD_CLASSES_PRONOUN.POSSESSIVE_PRONOUNS",
@@ -912,7 +1152,11 @@
   "help": "Have the child say both forms aloud and say why one fits: \"my\", not \"mine\".",
   "feedback": "Before a noun use my, your, her, our or their: my pencil.",
   "source": "common learner error; to confirm by a Kenyan English teacher",
-  "status": "draft"
+  "status": "draft",
+  "review": {
+   "mark": "plausible, to confirm by a teacher",
+   "note": "A usage or reading slip a Kenyan Grade 4 learner could plausibly make. No source and no homework count; a Kenyan English teacher should say whether it comes up in class."
+  }
  },
  "ENGL.G4.LANGUA.T4_WORD_CLASSES_PRONOUN.POSSESSIVE_PRONOUNS.M_POS_APOSTROPHE": {
   "skill": "ENGL.G4.LANGUA.T4_WORD_CLASSES_PRONOUN.POSSESSIVE_PRONOUNS",
@@ -927,7 +1171,11 @@
   "help": "Have the child say both forms aloud and say why one fits: \"yours\", not \"your's\".",
   "feedback": "Words like yours, hers, ours and theirs never have an apostrophe.",
   "source": "common learner error; to confirm by a Kenyan English teacher",
-  "status": "draft"
+  "status": "draft",
+  "review": {
+   "mark": "plausible, to confirm by a teacher",
+   "note": "A usage or reading slip a Kenyan Grade 4 learner could plausibly make. No source and no homework count; a Kenyan English teacher should say whether it comes up in class."
+  }
  },
  "ENGL.G4.LANGUA.T4_WORD_CLASSES_PRONOUN.POSSESSIVE_PRONOUNS.M_POS_WRONG_PERSON": {
   "skill": "ENGL.G4.LANGUA.T4_WORD_CLASSES_PRONOUN.POSSESSIVE_PRONOUNS",
@@ -942,7 +1190,11 @@
   "help": "Have the child say both forms aloud and say why one fits: \"yours\", not \"his\".",
   "feedback": "Ask who owns it. The person spoken to is you, so the word is yours.",
   "source": "common learner error; to confirm by a Kenyan English teacher",
-  "status": "draft"
+  "status": "draft",
+  "review": {
+   "mark": "plausible, to confirm by a teacher",
+   "note": "A usage or reading slip a Kenyan Grade 4 learner could plausibly make. No source and no homework count; a Kenyan English teacher should say whether it comes up in class."
+  }
  },
  "ENGL.G4.WRITIN.T4_FUNCTIONAL_WRITING.LETTER_PARTS.M_LTR_PART_MIX": {
   "skill": "ENGL.G4.WRITIN.T4_FUNCTIONAL_WRITING.LETTER_PARTS",
@@ -957,7 +1209,11 @@
   "help": "Have the child say both forms aloud and say why one fits: \"greeting\", not \"closing\".",
   "feedback": "The greeting comes first and starts with Dear. The closing comes at the end, for example Yours lovingly.",
   "source": "common learner error; to confirm by a Kenyan English teacher",
-  "status": "draft"
+  "status": "draft",
+  "review": {
+   "mark": "plausible, to confirm by a teacher",
+   "note": "A usage or reading slip a Kenyan Grade 4 learner could plausibly make. No source and no homework count; a Kenyan English teacher should say whether it comes up in class."
+  }
  },
  "ENGL.G4.WRITIN.T4_FUNCTIONAL_WRITING.LETTER_PARTS.M_LTR_ORDER": {
   "skill": "ENGL.G4.WRITIN.T4_FUNCTIONAL_WRITING.LETTER_PARTS",
@@ -972,7 +1228,11 @@
   "help": "Have the child say both forms aloud and say why one fits: \"your address and the date\", not \"the closing\".",
   "feedback": "A friendly letter goes: your address, the date, the greeting, the body, the closing, your name.",
   "source": "common learner error; to confirm by a Kenyan English teacher",
-  "status": "draft"
+  "status": "draft",
+  "review": {
+   "mark": "plausible, to confirm by a teacher",
+   "note": "A usage or reading slip a Kenyan Grade 4 learner could plausibly make. No source and no homework count; a Kenyan English teacher should say whether it comes up in class."
+  }
  },
  "ENGL.G4.WRITIN.T4_FUNCTIONAL_WRITING.LETTER_PARTS.M_LTR_NO_COMMA": {
   "skill": "ENGL.G4.WRITIN.T4_FUNCTIONAL_WRITING.LETTER_PARTS",
@@ -987,7 +1247,11 @@
   "help": "Have the child say both forms aloud and say why one fits: \"Dear Amina,\", not \"Dear Amina\".",
   "feedback": "A comma follows the greeting (Dear Amina,) and the closing (Yours lovingly,).",
   "source": "common learner error; to confirm by a Kenyan English teacher",
-  "status": "draft"
+  "status": "draft",
+  "review": {
+   "mark": "plausible, to confirm by a teacher",
+   "note": "A usage or reading slip a Kenyan Grade 4 learner could plausibly make. No source and no homework count; a Kenyan English teacher should say whether it comes up in class."
+  }
  },
  "ENGL.G4.WRITIN.T4_FUNCTIONAL_WRITING.LETTER_PARTS.M_LTR_RECEIVER_ADDRESS": {
   "skill": "ENGL.G4.WRITIN.T4_FUNCTIONAL_WRITING.LETTER_PARTS",
@@ -1002,7 +1266,11 @@
   "help": "Have the child say both forms aloud and say why one fits: \"the writer\", not \"the person getting the letter\".",
   "feedback": "In a friendly letter, write your own address at the top. Do not write the receiver's address there.",
   "source": "common learner error; to confirm by a Kenyan English teacher",
-  "status": "draft"
+  "status": "draft",
+  "review": {
+   "mark": "plausible, to confirm by a teacher",
+   "note": "A usage or reading slip a Kenyan Grade 4 learner could plausibly make. No source and no homework count; a Kenyan English teacher should say whether it comes up in class."
+  }
  },
  "ENGL.G4.LISTEN.T5_PRONUNCIATION_AND_VO.NUTRITION_WORDS.M_NUT_NEAR_MEANING": {
   "skill": "ENGL.G4.LISTEN.T5_PRONUNCIATION_AND_VO.NUTRITION_WORDS",
@@ -1017,7 +1285,11 @@
   "help": "Have the child say both forms aloud and say why one fits: \"protein\", not \"carbohydrates\".",
   "feedback": "Protein builds the body (beans, meat, eggs). Carbohydrates give energy (ugali, rice, bread).",
   "source": "common learner error; to confirm by a Kenyan English teacher",
-  "status": "draft"
+  "status": "draft",
+  "review": {
+   "mark": "plausible, to confirm by a teacher",
+   "note": "A usage or reading slip a Kenyan Grade 4 learner could plausibly make. No source and no homework count; a Kenyan English teacher should say whether it comes up in class."
+  }
  },
  "ENGL.G4.LISTEN.T5_PRONUNCIATION_AND_VO.NUTRITION_WORDS.M_NUT_VITAMIN_FIBRE": {
   "skill": "ENGL.G4.LISTEN.T5_PRONUNCIATION_AND_VO.NUTRITION_WORDS",
@@ -1032,7 +1304,11 @@
   "help": "Have the child say both forms aloud and say why one fits: \"Vitamins\", not \"Fibre\".",
   "feedback": "Vitamins keep the body healthy. Fibre helps food move through the body.",
   "source": "common learner error; to confirm by a Kenyan English teacher",
-  "status": "draft"
+  "status": "draft",
+  "review": {
+   "mark": "plausible, to confirm by a teacher",
+   "note": "A usage or reading slip a Kenyan Grade 4 learner could plausibly make. No source and no homework count; a Kenyan English teacher should say whether it comes up in class."
+  }
  },
  "ENGL.G4.LISTEN.T5_PRONUNCIATION_AND_VO.NUTRITION_WORDS.M_NUT_BALANCED": {
   "skill": "ENGL.G4.LISTEN.T5_PRONUNCIATION_AND_VO.NUTRITION_WORDS",
@@ -1047,7 +1323,11 @@
   "help": "Have the child say both forms aloud and say why one fits: \"all the food groups in the right amounts\", not \"only ugali\".",
   "feedback": "A balanced diet has food from all the food groups in the right amounts.",
   "source": "common learner error; to confirm by a Kenyan English teacher",
-  "status": "draft"
+  "status": "draft",
+  "review": {
+   "mark": "doubtful",
+   "why": "Trap option written to contrast with the right answer; unlikely as a held idea."
+  }
  },
  "ENGL.G4.READIN.T5_EXTENSIVE_READING.SCAN_FOR_DETAIL.M_SCAN_NEAR_NUMBER": {
   "skill": "ENGL.G4.READIN.T5_EXTENSIVE_READING.SCAN_FOR_DETAIL",
@@ -1062,7 +1342,11 @@
   "help": "Have the child say both forms aloud and say why one fits: \"50 shillings\", not \"60 shillings\".",
   "feedback": "Scan for the key word in the question (ticket) and read only that line.",
   "source": "common learner error; to confirm by a Kenyan English teacher",
-  "status": "draft"
+  "status": "draft",
+  "review": {
+   "mark": "plausible, to confirm by a teacher",
+   "note": "A usage or reading slip a Kenyan Grade 4 learner could plausibly make. No source and no homework count; a Kenyan English teacher should say whether it comes up in class."
+  }
  },
  "ENGL.G4.READIN.T5_EXTENSIVE_READING.SCAN_FOR_DETAIL.M_SCAN_WRONG_KEYWORD": {
   "skill": "ENGL.G4.READIN.T5_EXTENSIVE_READING.SCAN_FOR_DETAIL",
@@ -1077,7 +1361,11 @@
   "help": "Have the child say both forms aloud and say why one fits: \"at 4 pm\", not \"at 6 pm\".",
   "feedback": "Choose the key word that matches the question, then read the line.",
   "source": "common learner error; to confirm by a Kenyan English teacher",
-  "status": "draft"
+  "status": "draft",
+  "review": {
+   "mark": "plausible, to confirm by a teacher",
+   "note": "A usage or reading slip a Kenyan Grade 4 learner could plausibly make. No source and no homework count; a Kenyan English teacher should say whether it comes up in class."
+  }
  },
  "ENGL.G4.READIN.T5_EXTENSIVE_READING.SCAN_FOR_DETAIL.M_SCAN_TOO_LONG": {
   "skill": "ENGL.G4.READIN.T5_EXTENSIVE_READING.SCAN_FOR_DETAIL",
@@ -1092,7 +1380,11 @@
   "help": "Have the child say both forms aloud and say why one fits: \"Mr Otieno\", not \"a long answer from the whole text\".",
   "feedback": "Look for a capital letter or a number. Skip the rest.",
   "source": "common learner error; to confirm by a Kenyan English teacher",
-  "status": "draft"
+  "status": "draft",
+  "review": {
+   "mark": "plausible, to confirm by a teacher",
+   "note": "A usage or reading slip a Kenyan Grade 4 learner could plausibly make. No source and no homework count; a Kenyan English teacher should say whether it comes up in class."
+  }
  },
  "ENGL.G4.LANGUA.T5_WORD_CLASSES_ADJECTI.ADJECTIVES.M_ADJ_NOUN_AS_ADJ": {
   "skill": "ENGL.G4.LANGUA.T5_WORD_CLASSES_ADJECTI.ADJECTIVES",
@@ -1107,7 +1399,11 @@
   "help": "Have the child say both forms aloud and say why one fits: \"red\", not \"bus\".",
   "feedback": "An adjective describes a noun. Ask which word tells more about the bus: red.",
   "source": "common learner error; to confirm by a Kenyan English teacher",
-  "status": "draft"
+  "status": "draft",
+  "review": {
+   "mark": "plausible, to confirm by a teacher",
+   "note": "A usage or reading slip a Kenyan Grade 4 learner could plausibly make. No source and no homework count; a Kenyan English teacher should say whether it comes up in class."
+  }
  },
  "ENGL.G4.LANGUA.T5_WORD_CLASSES_ADJECTI.ADJECTIVES.M_ADJ_VERB_AS_ADJ": {
   "skill": "ENGL.G4.LANGUA.T5_WORD_CLASSES_ADJECTI.ADJECTIVES",
@@ -1122,7 +1418,11 @@
   "help": "Have the child say both forms aloud and say why one fits: \"tall\", not \"ran\".",
   "feedback": "A verb tells what someone does. An adjective tells what someone or something is like.",
   "source": "common learner error; to confirm by a Kenyan English teacher",
-  "status": "draft"
+  "status": "draft",
+  "review": {
+   "mark": "plausible, to confirm by a teacher",
+   "note": "A usage or reading slip a Kenyan Grade 4 learner could plausibly make. No source and no homework count; a Kenyan English teacher should say whether it comes up in class."
+  }
  },
  "ENGL.G4.LANGUA.T5_WORD_CLASSES_ADJECTI.ADJECTIVES.M_ADJ_ADVERB_AS_ADJ": {
   "skill": "ENGL.G4.LANGUA.T5_WORD_CLASSES_ADJECTI.ADJECTIVES",
@@ -1137,7 +1437,11 @@
   "help": "Have the child say both forms aloud and say why one fits: \"small\", not \"slowly\".",
   "feedback": "Slowly tells how the boy walked, so it is an adverb. Small tells what the boy is like, so it is the adjective.",
   "source": "common learner error; to confirm by a Kenyan English teacher",
-  "status": "draft"
+  "status": "draft",
+  "review": {
+   "mark": "plausible, to confirm by a teacher",
+   "note": "A usage or reading slip a Kenyan Grade 4 learner could plausibly make. No source and no homework count; a Kenyan English teacher should say whether it comes up in class."
+  }
  },
  "ENGL.G4.LANGUA.T5_WORD_CLASSES_ADJECTI.ADJECTIVES.M_ADJ_ARTICLE_AS_ADJ": {
   "skill": "ENGL.G4.LANGUA.T5_WORD_CLASSES_ADJECTI.ADJECTIVES",
@@ -1152,7 +1456,11 @@
   "help": "Have the child say both forms aloud and say why one fits: \"sweet\", not \"a\".",
   "feedback": "A, an and the point to a noun but do not describe it. Sweet describes the mango.",
   "source": "common learner error; to confirm by a Kenyan English teacher",
-  "status": "draft"
+  "status": "draft",
+  "review": {
+   "mark": "doubtful",
+   "why": "Traditional grammar classes a, an and the as adjectives, so this is a labelling difference, not a child error. Ask the teacher which the textbook uses."
+  }
  },
  "ENGL.G4.LANGUA.T5_WORD_CLASSES_ADJECTI.ADJECTIVE_ORDER.M_ADO_SHAPE_BEFORE_SIZE": {
   "skill": "ENGL.G4.LANGUA.T5_WORD_CLASSES_ADJECTI.ADJECTIVE_ORDER",
@@ -1167,7 +1475,11 @@
   "help": "Have the child say both forms aloud and say why one fits: \"big round\", not \"round big\".",
   "feedback": "Size comes first, then shape: a big round stool.",
   "source": "common learner error; to confirm by a Kenyan English teacher",
-  "status": "draft"
+  "status": "draft",
+  "review": {
+   "mark": "plausible, to confirm by a teacher",
+   "note": "A usage or reading slip a Kenyan Grade 4 learner could plausibly make. No source and no homework count; a Kenyan English teacher should say whether it comes up in class."
+  }
  },
  "ENGL.G4.LANGUA.T5_WORD_CLASSES_ADJECTI.ADJECTIVE_ORDER.M_ADO_AFTER_NOUN": {
   "skill": "ENGL.G4.LANGUA.T5_WORD_CLASSES_ADJECTI.ADJECTIVE_ORDER",
@@ -1182,7 +1494,11 @@
   "help": "Have the child say both forms aloud and say why one fits: \"big ball\", not \"ball big\".",
   "feedback": "In English the describing word comes before the noun: a big ball.",
   "source": "Kiswahili influence (to confirm by a Kenyan English teacher)",
-  "status": "draft"
+  "status": "draft",
+  "review": {
+   "mark": "plausible, to confirm by a teacher",
+   "note": "A usage or reading slip a Kenyan Grade 4 learner could plausibly make. No source and no homework count; a Kenyan English teacher should say whether it comes up in class."
+  }
  },
  "ENGL.G4.LANGUA.T5_WORD_CLASSES_ADJECTI.ADJECTIVE_ORDER.M_ADO_NO_AND": {
   "skill": "ENGL.G4.LANGUA.T5_WORD_CLASSES_ADJECTI.ADJECTIVE_ORDER",
@@ -1197,7 +1513,11 @@
   "help": "Have the child say both forms aloud and say why one fits: \"big round\", not \"big and round\".",
   "feedback": "Two describing words before a noun need no and and no comma: a big round table.",
   "source": "common learner error; to confirm by a Kenyan English teacher",
-  "status": "draft"
+  "status": "draft",
+  "review": {
+   "mark": "doubtful",
+   "why": "Two adjectives joined by and or a comma are grammatical (a big and round stool, a big, round stool). Not an error; the items that used it were removed."
+  }
  },
  "ENGL.G4.WRITIN.T5_CREATIVE_WRITING.NARRATIVE_PARTS.M_NAR_PART_MIX": {
   "skill": "ENGL.G4.WRITIN.T5_CREATIVE_WRITING.NARRATIVE_PARTS",
@@ -1212,7 +1532,11 @@
   "help": "Have the child say both forms aloud and say why one fits: \"the end\", not \"the beginning\".",
   "feedback": "The beginning introduces people and place, the middle tells what happens, and the end tells how it finishes.",
   "source": "common learner error; to confirm by a Kenyan English teacher",
-  "status": "draft"
+  "status": "draft",
+  "review": {
+   "mark": "plausible, to confirm by a teacher",
+   "note": "A usage or reading slip a Kenyan Grade 4 learner could plausibly make. No source and no homework count; a Kenyan English teacher should say whether it comes up in class."
+  }
  },
  "ENGL.G4.WRITIN.T5_CREATIVE_WRITING.NARRATIVE_PARTS.M_NAR_SETTING_CHARACTER": {
   "skill": "ENGL.G4.WRITIN.T5_CREATIVE_WRITING.NARRATIVE_PARTS",
@@ -1227,7 +1551,11 @@
   "help": "Have the child say both forms aloud and say why one fits: \"the setting\", not \"the characters\".",
   "feedback": "Characters are the people or animals in the story. The setting is where and when it happens.",
   "source": "common learner error; to confirm by a Kenyan English teacher",
-  "status": "draft"
+  "status": "draft",
+  "review": {
+   "mark": "plausible, to confirm by a teacher",
+   "note": "A usage or reading slip a Kenyan Grade 4 learner could plausibly make. No source and no homework count; a Kenyan English teacher should say whether it comes up in class."
+  }
  },
  "ENGL.G4.WRITIN.T5_CREATIVE_WRITING.NARRATIVE_PARTS.M_NAR_PROBLEM_END": {
   "skill": "ENGL.G4.WRITIN.T5_CREATIVE_WRITING.NARRATIVE_PARTS",
@@ -1242,7 +1570,11 @@
   "help": "Have the child say both forms aloud and say why one fits: \"in the middle\", not \"at the end\".",
   "feedback": "The problem usually starts in the middle. The end tells how it was solved.",
   "source": "common learner error; to confirm by a Kenyan English teacher",
-  "status": "draft"
+  "status": "draft",
+  "review": {
+   "mark": "plausible, to confirm by a teacher",
+   "note": "A usage or reading slip a Kenyan Grade 4 learner could plausibly make. No source and no homework count; a Kenyan English teacher should say whether it comes up in class."
+  }
  },
  "ENGL.G4.WRITIN.T5_CREATIVE_WRITING.NARRATIVE_PARTS.M_NAR_TITLE": {
   "skill": "ENGL.G4.WRITIN.T5_CREATIVE_WRITING.NARRATIVE_PARTS",
@@ -1257,7 +1589,11 @@
   "help": "Have the child say both forms aloud and say why one fits: \"gives a short name to the story\", not \"tells the whole story\".",
   "feedback": "A title is a short name that hints at the story. It does not tell all of it.",
   "source": "common learner error; to confirm by a Kenyan English teacher",
-  "status": "draft"
+  "status": "draft",
+  "review": {
+   "mark": "plausible, to confirm by a teacher",
+   "note": "A usage or reading slip a Kenyan Grade 4 learner could plausibly make. No source and no homework count; a Kenyan English teacher should say whether it comes up in class."
+  }
  },
  "ENGL.G4.WRITIN.T5_CREATIVE_WRITING.PARAGRAPH_ORDER.M_PAR_ORDER_REVERSED": {
   "skill": "ENGL.G4.WRITIN.T5_CREATIVE_WRITING.PARAGRAPH_ORDER",
@@ -1272,7 +1608,11 @@
   "help": "Have the child say both forms aloud and say why one fits: \"A B C D\", not \"D C B A\".",
   "feedback": "Start with the sentence that introduces the topic and read forward.",
   "source": "common learner error; to confirm by a Kenyan English teacher",
-  "status": "draft"
+  "status": "draft",
+  "review": {
+   "mark": "plausible, to confirm by a teacher",
+   "note": "A usage or reading slip a Kenyan Grade 4 learner could plausibly make. No source and no homework count; a Kenyan English teacher should say whether it comes up in class."
+  }
  },
  "ENGL.G4.WRITIN.T5_CREATIVE_WRITING.PARAGRAPH_ORDER.M_PAR_ORDER_SWAPPED": {
   "skill": "ENGL.G4.WRITIN.T5_CREATIVE_WRITING.PARAGRAPH_ORDER",
@@ -1287,7 +1627,11 @@
   "help": "Have the child say both forms aloud and say why one fits: \"A B C D\", not \"A C B D\".",
   "feedback": "Look at words like first, then, next and finally to see the order.",
   "source": "common learner error; to confirm by a Kenyan English teacher",
-  "status": "draft"
+  "status": "draft",
+  "review": {
+   "mark": "plausible, to confirm by a teacher",
+   "note": "A usage or reading slip a Kenyan Grade 4 learner could plausibly make. No source and no homework count; a Kenyan English teacher should say whether it comes up in class."
+  }
  },
  "ENGL.G4.WRITIN.T5_CREATIVE_WRITING.PARAGRAPH_ORDER.M_PAR_TOPIC_DETAIL": {
   "skill": "ENGL.G4.WRITIN.T5_CREATIVE_WRITING.PARAGRAPH_ORDER",
@@ -1302,7 +1646,11 @@
   "help": "Have the child say both forms aloud and say why one fits: \"the sentence that tells what the paragraph is about\", not \"a detail\".",
   "feedback": "The topic sentence names what the whole paragraph is about. The other sentences give details.",
   "source": "common learner error; to confirm by a Kenyan English teacher",
-  "status": "draft"
+  "status": "draft",
+  "review": {
+   "mark": "plausible, to confirm by a teacher",
+   "note": "A usage or reading slip a Kenyan Grade 4 learner could plausibly make. No source and no homework count; a Kenyan English teacher should say whether it comes up in class."
+  }
  },
  "ENGL.G4.LISTEN.T6_PRONUNCIATION_AND_VO.INTERNET_WORDS.M_NET_NEAR_MEANING": {
   "skill": "ENGL.G4.LISTEN.T6_PRONUNCIATION_AND_VO.INTERNET_WORDS",
@@ -1317,7 +1665,11 @@
   "help": "Have the child say both forms aloud and say why one fits: \"inbox\", not \"attachment\".",
   "feedback": "The inbox is where received emails are kept. An attachment is a file sent with an email.",
   "source": "common learner error; to confirm by a Kenyan English teacher",
-  "status": "draft"
+  "status": "draft",
+  "review": {
+   "mark": "plausible, to confirm by a teacher",
+   "note": "A usage or reading slip a Kenyan Grade 4 learner could plausibly make. No source and no homework count; a Kenyan English teacher should say whether it comes up in class."
+  }
  },
  "ENGL.G4.LISTEN.T6_PRONUNCIATION_AND_VO.INTERNET_WORDS.M_NET_PASSWORD_SHARED": {
   "skill": "ENGL.G4.LISTEN.T6_PRONUNCIATION_AND_VO.INTERNET_WORDS",
@@ -1332,7 +1684,11 @@
   "help": "Have the child say both forms aloud and say why one fits: \"no one except a trusted adult\", not \"friends\".",
   "feedback": "A password is secret. Share it with no one, except a trusted adult such as a parent.",
   "source": "common learner error; to confirm by a Kenyan English teacher",
-  "status": "draft"
+  "status": "draft",
+  "review": {
+   "mark": "plausible, to confirm by a teacher",
+   "note": "A usage or reading slip a Kenyan Grade 4 learner could plausibly make. No source and no homework count; a Kenyan English teacher should say whether it comes up in class."
+  }
  },
  "ENGL.G4.LISTEN.T6_PRONUNCIATION_AND_VO.INTERNET_WORDS.M_NET_STRANGER": {
   "skill": "ENGL.G4.LISTEN.T6_PRONUNCIATION_AND_VO.INTERNET_WORDS",
@@ -1347,7 +1703,11 @@
   "help": "Have the child say both forms aloud and say why one fits: \"not answer and tell an adult\", not \"tell him\".",
   "feedback": "Never give personal information to a stranger online. Tell a trusted adult.",
   "source": "common learner error; to confirm by a Kenyan English teacher",
-  "status": "draft"
+  "status": "draft",
+  "review": {
+   "mark": "plausible, to confirm by a teacher",
+   "note": "A usage or reading slip a Kenyan Grade 4 learner could plausibly make. No source and no homework count; a Kenyan English teacher should say whether it comes up in class."
+  }
  },
  "ENGL.G4.LANGUA.T6_WORD_CLASS_DETERMINE.COUNT_UNCOUNT.M_QUA_MUCH_COUNT": {
   "skill": "ENGL.G4.LANGUA.T6_WORD_CLASS_DETERMINE.COUNT_UNCOUNT",
@@ -1362,7 +1722,11 @@
   "help": "Have the child say both forms aloud and say why one fits: \"many\", not \"much\".",
   "feedback": "Use many with things you can count (chairs, books). Use much with things you cannot count (water, sugar).",
   "source": "common learner error; to confirm by a Kenyan English teacher",
-  "status": "draft"
+  "status": "draft",
+  "review": {
+   "mark": "plausible, to confirm by a teacher",
+   "note": "A usage or reading slip a Kenyan Grade 4 learner could plausibly make. No source and no homework count; a Kenyan English teacher should say whether it comes up in class."
+  }
  },
  "ENGL.G4.LANGUA.T6_WORD_CLASS_DETERMINE.COUNT_UNCOUNT.M_QUA_MANY_UNCOUNT": {
   "skill": "ENGL.G4.LANGUA.T6_WORD_CLASS_DETERMINE.COUNT_UNCOUNT",
@@ -1377,7 +1741,11 @@
   "help": "Have the child say both forms aloud and say why one fits: \"much\", not \"many\".",
   "feedback": "You cannot count water one by one, so use much, not many.",
   "source": "common learner error; to confirm by a Kenyan English teacher",
-  "status": "draft"
+  "status": "draft",
+  "review": {
+   "mark": "plausible, to confirm by a teacher",
+   "note": "A usage or reading slip a Kenyan Grade 4 learner could plausibly make. No source and no homework count; a Kenyan English teacher should say whether it comes up in class."
+  }
  },
  "ENGL.G4.LANGUA.T6_WORD_CLASS_DETERMINE.COUNT_UNCOUNT.M_QUA_FEW_UNCOUNT": {
   "skill": "ENGL.G4.LANGUA.T6_WORD_CLASS_DETERMINE.COUNT_UNCOUNT",
@@ -1392,7 +1760,11 @@
   "help": "Have the child say both forms aloud and say why one fits: \"little\", not \"few\".",
   "feedback": "Few goes with things you can count: few eggs. Little goes with things you cannot count: little sugar.",
   "source": "common learner error; to confirm by a Kenyan English teacher",
-  "status": "draft"
+  "status": "draft",
+  "review": {
+   "mark": "plausible, to confirm by a teacher",
+   "note": "A usage or reading slip a Kenyan Grade 4 learner could plausibly make. No source and no homework count; a Kenyan English teacher should say whether it comes up in class."
+  }
  },
  "ENGL.G4.LANGUA.T6_WORD_CLASS_DETERMINE.COUNT_UNCOUNT.M_QUA_MUCH_IN_STATEMENT": {
   "skill": "ENGL.G4.LANGUA.T6_WORD_CLASS_DETERMINE.COUNT_UNCOUNT",
@@ -1407,7 +1779,11 @@
   "help": "Have the child say both forms aloud and say why one fits: \"many (or a lot of)\", not \"much\".",
   "feedback": "In a positive sentence we usually say a lot of or many: She has many friends.",
   "source": "common learner error; to confirm by a Kenyan English teacher",
-  "status": "draft"
+  "status": "draft",
+  "review": {
+   "mark": "plausible, to confirm by a teacher",
+   "note": "A usage or reading slip a Kenyan Grade 4 learner could plausibly make. No source and no homework count; a Kenyan English teacher should say whether it comes up in class."
+  }
  },
  "ENGL.G4.LANGUA.T6_WORD_CLASS_DETERMINE.SOME_ANY.M_QSA_ANY_STATEMENT": {
   "skill": "ENGL.G4.LANGUA.T6_WORD_CLASS_DETERMINE.SOME_ANY",
@@ -1422,7 +1798,11 @@
   "help": "Have the child say both forms aloud and say why one fits: \"some\", not \"any\".",
   "feedback": "Use some in a positive sentence: I have some sugar. Use any in a question or after not: I do not have any sugar.",
   "source": "common learner error; to confirm by a Kenyan English teacher",
-  "status": "draft"
+  "status": "draft",
+  "review": {
+   "mark": "plausible, to confirm by a teacher",
+   "note": "A usage or reading slip a Kenyan Grade 4 learner could plausibly make. No source and no homework count; a Kenyan English teacher should say whether it comes up in class."
+  }
  },
  "ENGL.G4.LANGUA.T6_WORD_CLASS_DETERMINE.SOME_ANY.M_QSA_SOME_NEGATIVE": {
   "skill": "ENGL.G4.LANGUA.T6_WORD_CLASS_DETERMINE.SOME_ANY",
@@ -1437,7 +1817,11 @@
   "help": "Have the child say both forms aloud and say why one fits: \"any\", not \"some\".",
   "feedback": "After not or in a question, use any: I do not have any money. Do you have any money?",
   "source": "common learner error; to confirm by a Kenyan English teacher",
-  "status": "draft"
+  "status": "draft",
+  "review": {
+   "mark": "plausible, to confirm by a teacher",
+   "note": "A usage or reading slip a Kenyan Grade 4 learner could plausibly make. No source and no homework count; a Kenyan English teacher should say whether it comes up in class."
+  }
  },
  "ENGL.G4.LANGUA.T6_WORD_CLASS_DETERMINE.SOME_ANY.M_QSA_ENOUGH_AFTER": {
   "skill": "ENGL.G4.LANGUA.T6_WORD_CLASS_DETERMINE.SOME_ANY",
@@ -1452,7 +1836,11 @@
   "help": "Have the child say both forms aloud and say why one fits: \"enough food\", not \"food enough\".",
   "feedback": "In English enough comes before the noun: enough food.",
   "source": "Kiswahili influence (to confirm by a Kenyan English teacher)",
-  "status": "draft"
+  "status": "draft",
+  "review": {
+   "mark": "plausible, to confirm by a teacher",
+   "note": "A usage or reading slip a Kenyan Grade 4 learner could plausibly make. No source and no homework count; a Kenyan English teacher should say whether it comes up in class."
+  }
  },
  "ENGL.G4.LANGUA.T6_WORD_CLASS_DETERMINE.SOME_ANY.M_QSA_A_LOT_NOUN": {
   "skill": "ENGL.G4.LANGUA.T6_WORD_CLASS_DETERMINE.SOME_ANY",
@@ -1467,7 +1855,11 @@
   "help": "Have the child say both forms aloud and say why one fits: \"a lot of mangoes\", not \"a lot mangoes\".",
   "feedback": "A lot needs of before the noun: a lot of mangoes.",
   "source": "Kiswahili influence (to confirm by a Kenyan English teacher)",
-  "status": "draft"
+  "status": "draft",
+  "review": {
+   "mark": "plausible, to confirm by a teacher",
+   "note": "A usage or reading slip a Kenyan Grade 4 learner could plausibly make. No source and no homework count; a Kenyan English teacher should say whether it comes up in class."
+  }
  },
  "ENGL.G4.WRITIN.T6_CREATIVE_WRITING.PICTURE_SEQUENCE.M_PIC_ORDER_REVERSED": {
   "skill": "ENGL.G4.WRITIN.T6_CREATIVE_WRITING.PICTURE_SEQUENCE",
@@ -1482,7 +1874,11 @@
   "help": "Have the child say both forms aloud and say why one fits: \"A, B, C, D\", not \"D, C, B, A\".",
   "feedback": "Find the picture that starts the story and then follow what happens next.",
   "source": "common learner error; to confirm by a Kenyan English teacher",
-  "status": "draft"
+  "status": "draft",
+  "review": {
+   "mark": "plausible, to confirm by a teacher",
+   "note": "A usage or reading slip a Kenyan Grade 4 learner could plausibly make. No source and no homework count; a Kenyan English teacher should say whether it comes up in class."
+  }
  },
  "ENGL.G4.WRITIN.T6_CREATIVE_WRITING.PICTURE_SEQUENCE.M_PIC_ORDER_SWAPPED": {
   "skill": "ENGL.G4.WRITIN.T6_CREATIVE_WRITING.PICTURE_SEQUENCE",
@@ -1497,7 +1893,11 @@
   "help": "Have the child say both forms aloud and say why one fits: \"A, B, C, D\", not \"A, C, B, D\".",
   "feedback": "Ask what has to happen first for the next picture to make sense.",
   "source": "common learner error; to confirm by a Kenyan English teacher",
-  "status": "draft"
+  "status": "draft",
+  "review": {
+   "mark": "plausible, to confirm by a teacher",
+   "note": "A usage or reading slip a Kenyan Grade 4 learner could plausibly make. No source and no homework count; a Kenyan English teacher should say whether it comes up in class."
+  }
  },
  "ENGL.G4.WRITIN.T6_CREATIVE_WRITING.PICTURE_SEQUENCE.M_PIC_TENSE": {
   "skill": "ENGL.G4.WRITIN.T6_CREATIVE_WRITING.PICTURE_SEQUENCE",
@@ -1512,7 +1912,11 @@
   "help": "Have the child say both forms aloud and say why one fits: \"Wafula picked a mango.\", not \"Wafula picks a mango.\".",
   "feedback": "A story written after the event uses the past tense: Wafula picked a mango.",
   "source": "common learner error; to confirm by a Kenyan English teacher",
-  "status": "draft"
+  "status": "draft",
+  "review": {
+   "mark": "doubtful",
+   "why": "Telling a picture in the present tense is not wrong. Only the instruction (tell it as a story that happened) makes it wrong; items now say so."
+  }
  },
  "ENGL.G4.WRITIN.T6_CREATIVE_WRITING.PICTURE_SEQUENCE.M_PIC_MISMATCH": {
   "skill": "ENGL.G4.WRITIN.T6_CREATIVE_WRITING.PICTURE_SEQUENCE",
@@ -1527,7 +1931,11 @@
   "help": "Have the child say both forms aloud and say why one fits: \"She picked the fruit.\", not \"She sold the fruit.\".",
   "feedback": "Look at what the person is doing in the picture and pick the sentence that says exactly that.",
   "source": "common learner error; to confirm by a Kenyan English teacher",
-  "status": "draft"
+  "status": "draft",
+  "review": {
+   "mark": "plausible, to confirm by a teacher",
+   "note": "A usage or reading slip a Kenyan Grade 4 learner could plausibly make. No source and no homework count; a Kenyan English teacher should say whether it comes up in class."
+  }
  },
  "ENGL.G4.LISTEN.T7_PRONUNCIATION_AND_VO.SIMPLE_PAST.M_SPA_BASE_FOR_PAST": {
   "skill": "ENGL.G4.LISTEN.T7_PRONUNCIATION_AND_VO.SIMPLE_PAST",
@@ -1542,7 +1950,11 @@
   "help": "Have the child say both forms aloud and say why one fits: \"went\", not \"go\".",
   "feedback": "When the time is past, the verb must show it: Yesterday I went to the market.",
   "source": "Kiswahili influence (to confirm by a Kenyan English teacher)",
-  "status": "draft"
+  "status": "draft",
+  "review": {
+   "mark": "plausible, to confirm by a teacher",
+   "note": "A usage or reading slip a Kenyan Grade 4 learner could plausibly make. No source and no homework count; a Kenyan English teacher should say whether it comes up in class."
+  }
  },
  "ENGL.G4.LISTEN.T7_PRONUNCIATION_AND_VO.SIMPLE_PAST.M_SPA_ED_ON_IRREGULAR": {
   "skill": "ENGL.G4.LISTEN.T7_PRONUNCIATION_AND_VO.SIMPLE_PAST",
@@ -1557,7 +1969,11 @@
   "help": "Have the child say both forms aloud and say why one fits: \"ate\", not \"eated\".",
   "feedback": "Some verbs change inside: go, went; eat, ate; see, saw. They do not take -ed.",
   "source": "common learner error; to confirm by a Kenyan English teacher",
-  "status": "draft"
+  "status": "draft",
+  "review": {
+   "mark": "common in the literature",
+   "source": "Marcus et al. (1992), Overregularization in Language Acquisition, Monographs of the Society for Research in Child Development 57: children add -ed to irregular verbs (goed)."
+  }
  },
  "ENGL.G4.LISTEN.T7_PRONUNCIATION_AND_VO.SIMPLE_PAST.M_SPA_DID_PLUS_PAST": {
   "skill": "ENGL.G4.LISTEN.T7_PRONUNCIATION_AND_VO.SIMPLE_PAST",
@@ -1572,7 +1988,11 @@
   "help": "Have the child say both forms aloud and say why one fits: \"see\", not \"saw\".",
   "feedback": "After did the verb stays plain: Did you see the film?",
   "source": "common learner error; to confirm by a Kenyan English teacher",
-  "status": "draft"
+  "status": "draft",
+  "review": {
+   "mark": "plausible, to confirm by a teacher",
+   "note": "A usage or reading slip a Kenyan Grade 4 learner could plausibly make. No source and no homework count; a Kenyan English teacher should say whether it comes up in class."
+  }
  },
  "ENGL.G4.LISTEN.T7_PRONUNCIATION_AND_VO.SIMPLE_PAST.M_SPA_PAST_FOR_HABIT": {
   "skill": "ENGL.G4.LISTEN.T7_PRONUNCIATION_AND_VO.SIMPLE_PAST",
@@ -1587,7 +2007,11 @@
   "help": "Have the child say both forms aloud and say why one fits: \"rises\", not \"rose\".",
   "feedback": "For a fact or something that always happens, use the present: The sun rises in the east.",
   "source": "common learner error; to confirm by a Kenyan English teacher",
-  "status": "draft"
+  "status": "draft",
+  "review": {
+   "mark": "plausible, to confirm by a teacher",
+   "note": "A usage or reading slip a Kenyan Grade 4 learner could plausibly make. No source and no homework count; a Kenyan English teacher should say whether it comes up in class."
+  }
  },
  "ENGL.G4.LANGUA.T7_WORD_CLASSES_VERB_AS.PRESENT_PROGRESSIVE.M_PRP_NO_BE": {
   "skill": "ENGL.G4.LANGUA.T7_WORD_CLASSES_VERB_AS.PRESENT_PROGRESSIVE",
@@ -1602,7 +2026,11 @@
   "help": "Have the child say both forms aloud and say why one fits: \"is reading\", not \"reading\".",
   "feedback": "An action happening now needs am, is or are before the -ing word: She is reading.",
   "source": "Kiswahili influence (to confirm by a Kenyan English teacher)",
-  "status": "draft"
+  "status": "draft",
+  "review": {
+   "mark": "common in the literature",
+   "source": "Rice, Wexler and Cleave (1995), Journal of Speech and Hearing Research 38: children leave out is, am and are."
+  }
  },
  "ENGL.G4.LANGUA.T7_WORD_CLASSES_VERB_AS.PRESENT_PROGRESSIVE.M_PRP_WRONG_BE": {
   "skill": "ENGL.G4.LANGUA.T7_WORD_CLASSES_VERB_AS.PRESENT_PROGRESSIVE",
@@ -1617,7 +2045,11 @@
   "help": "Have the child say both forms aloud and say why one fits: \"are\", not \"is\".",
   "feedback": "Use am with I, is with one person or thing, and are with you, we, they and plural nouns.",
   "source": "common learner error; to confirm by a Kenyan English teacher",
-  "status": "draft"
+  "status": "draft",
+  "review": {
+   "mark": "plausible, to confirm by a teacher",
+   "note": "A usage or reading slip a Kenyan Grade 4 learner could plausibly make. No source and no homework count; a Kenyan English teacher should say whether it comes up in class."
+  }
  },
  "ENGL.G4.LANGUA.T7_WORD_CLASSES_VERB_AS.PRESENT_PROGRESSIVE.M_PRP_NO_ING": {
   "skill": "ENGL.G4.LANGUA.T7_WORD_CLASSES_VERB_AS.PRESENT_PROGRESSIVE",
@@ -1632,7 +2064,11 @@
   "help": "Have the child say both forms aloud and say why one fits: \"playing\", not \"play\".",
   "feedback": "After am, is or are, the verb ends in -ing: He is playing.",
   "source": "common learner error; to confirm by a Kenyan English teacher",
-  "status": "draft"
+  "status": "draft",
+  "review": {
+   "mark": "plausible, to confirm by a teacher",
+   "note": "A usage or reading slip a Kenyan Grade 4 learner could plausibly make. No source and no homework count; a Kenyan English teacher should say whether it comes up in class."
+  }
  },
  "ENGL.G4.LANGUA.T7_WORD_CLASSES_VERB_AS.PRESENT_PROGRESSIVE.M_PRP_ING_SPELLING": {
   "skill": "ENGL.G4.LANGUA.T7_WORD_CLASSES_VERB_AS.PRESENT_PROGRESSIVE",
@@ -1647,7 +2083,11 @@
   "help": "Have the child say both forms aloud and say why one fits: \"making\", not \"makeing\".",
   "feedback": "Drop the silent e before -ing (make, making). For short words with one vowel, double the last letter (run, running).",
   "source": "common learner error; to confirm by a Kenyan English teacher",
-  "status": "draft"
+  "status": "draft",
+  "review": {
+   "mark": "plausible, to confirm by a teacher",
+   "note": "A usage or reading slip a Kenyan Grade 4 learner could plausibly make. No source and no homework count; a Kenyan English teacher should say whether it comes up in class."
+  }
  },
  "ENGL.G4.LANGUA.T7_WORD_CLASSES_VERB_AS.PAST_PROGRESSIVE.M_PAP_PRESENT_FOR_PAST": {
   "skill": "ENGL.G4.LANGUA.T7_WORD_CLASSES_VERB_AS.PAST_PROGRESSIVE",
@@ -1662,7 +2102,11 @@
   "help": "Have the child say both forms aloud and say why one fits: \"was\", not \"is\".",
   "feedback": "For something that was going on in the past, use was or were: Mum was cooking.",
   "source": "common learner error; to confirm by a Kenyan English teacher",
-  "status": "draft"
+  "status": "draft",
+  "review": {
+   "mark": "plausible, to confirm by a teacher",
+   "note": "A usage or reading slip a Kenyan Grade 4 learner could plausibly make. No source and no homework count; a Kenyan English teacher should say whether it comes up in class."
+  }
  },
  "ENGL.G4.LANGUA.T7_WORD_CLASSES_VERB_AS.PAST_PROGRESSIVE.M_PAP_WAS_WERE": {
   "skill": "ENGL.G4.LANGUA.T7_WORD_CLASSES_VERB_AS.PAST_PROGRESSIVE",
@@ -1677,7 +2121,11 @@
   "help": "Have the child say both forms aloud and say why one fits: \"were\", not \"was\".",
   "feedback": "Use was with I and one person or thing. Use were with you, we, they and plural nouns.",
   "source": "common learner error; to confirm by a Kenyan English teacher",
-  "status": "draft"
+  "status": "draft",
+  "review": {
+   "mark": "plausible, to confirm by a teacher",
+   "note": "A usage or reading slip a Kenyan Grade 4 learner could plausibly make. No source and no homework count; a Kenyan English teacher should say whether it comes up in class."
+  }
  },
  "ENGL.G4.LANGUA.T7_WORD_CLASSES_VERB_AS.PAST_PROGRESSIVE.M_PAP_PAST_FORM": {
   "skill": "ENGL.G4.LANGUA.T7_WORD_CLASSES_VERB_AS.PAST_PROGRESSIVE",
@@ -1692,7 +2140,11 @@
   "help": "Have the child say both forms aloud and say why one fits: \"eating\", not \"ate\".",
   "feedback": "After was or were, the verb ends in -ing: He was eating his lunch.",
   "source": "common learner error; to confirm by a Kenyan English teacher",
-  "status": "draft"
+  "status": "draft",
+  "review": {
+   "mark": "plausible, to confirm by a teacher",
+   "note": "A usage or reading slip a Kenyan Grade 4 learner could plausibly make. No source and no homework count; a Kenyan English teacher should say whether it comes up in class."
+  }
  },
  "ENGL.G4.LANGUA.T7_WORD_CLASSES_VERB_AS.PAST_PROGRESSIVE.M_PAP_NO_ING": {
   "skill": "ENGL.G4.LANGUA.T7_WORD_CLASSES_VERB_AS.PAST_PROGRESSIVE",
@@ -1707,7 +2159,11 @@
   "help": "Have the child say both forms aloud and say why one fits: \"playing\", not \"play\".",
   "feedback": "After was or were, the main verb takes -ing: They were playing football.",
   "source": "common learner error; to confirm by a Kenyan English teacher",
-  "status": "draft"
+  "status": "draft",
+  "review": {
+   "mark": "plausible, to confirm by a teacher",
+   "note": "A usage or reading slip a Kenyan Grade 4 learner could plausibly make. No source and no homework count; a Kenyan English teacher should say whether it comes up in class."
+  }
  },
  "ENGL.G4.WRITIN.T7_MECHANICS_OF_WRITING.CAPITALS_FULL_STOPS.M_PUN_NO_CAPITAL_START": {
   "skill": "ENGL.G4.WRITIN.T7_MECHANICS_OF_WRITING.CAPITALS_FULL_STOPS",
@@ -1722,7 +2178,11 @@
   "help": "Have the child say both forms aloud and say why one fits: \"We went to the lake.\", not \"we went to the lake.\".",
   "feedback": "Every sentence starts with a capital letter.",
   "source": "common learner error; to confirm by a Kenyan English teacher",
-  "status": "draft"
+  "status": "draft",
+  "review": {
+   "mark": "plausible, to confirm by a teacher",
+   "note": "A usage or reading slip a Kenyan Grade 4 learner could plausibly make. No source and no homework count; a Kenyan English teacher should say whether it comes up in class."
+  }
  },
  "ENGL.G4.WRITIN.T7_MECHANICS_OF_WRITING.CAPITALS_FULL_STOPS.M_PUN_NO_FULL_STOP": {
   "skill": "ENGL.G4.WRITIN.T7_MECHANICS_OF_WRITING.CAPITALS_FULL_STOPS",
@@ -1737,7 +2197,11 @@
   "help": "Have the child say both forms aloud and say why one fits: \"Mum is at work.\", not \"Mum is at work\".",
   "feedback": "A telling sentence ends with a full stop.",
   "source": "common learner error; to confirm by a Kenyan English teacher",
-  "status": "draft"
+  "status": "draft",
+  "review": {
+   "mark": "plausible, to confirm by a teacher",
+   "note": "A usage or reading slip a Kenyan Grade 4 learner could plausibly make. No source and no homework count; a Kenyan English teacher should say whether it comes up in class."
+  }
  },
  "ENGL.G4.WRITIN.T7_MECHANICS_OF_WRITING.CAPITALS_FULL_STOPS.M_PUN_CAPITAL_MID": {
   "skill": "ENGL.G4.WRITIN.T7_MECHANICS_OF_WRITING.CAPITALS_FULL_STOPS",
@@ -1752,7 +2216,11 @@
   "help": "Have the child say both forms aloud and say why one fits: \"My mother went to the market.\", not \"My Mother went to the Market.\".",
   "feedback": "Only the first word of a sentence, names and I take a capital. Mother and market are ordinary words.",
   "source": "common learner error; to confirm by a Kenyan English teacher",
-  "status": "draft"
+  "status": "draft",
+  "review": {
+   "mark": "plausible, to confirm by a teacher",
+   "note": "A usage or reading slip a Kenyan Grade 4 learner could plausibly make. No source and no homework count; a Kenyan English teacher should say whether it comes up in class."
+  }
  },
  "ENGL.G4.WRITIN.T7_MECHANICS_OF_WRITING.CAPITALS_FULL_STOPS.M_PUN_NAME_LOWER": {
   "skill": "ENGL.G4.WRITIN.T7_MECHANICS_OF_WRITING.CAPITALS_FULL_STOPS",
@@ -1767,7 +2235,11 @@
   "help": "Have the child say both forms aloud and say why one fits: \"We live in Nairobi.\", not \"We live in nairobi.\".",
   "feedback": "Names of people, places and days begin with a capital letter: Nairobi, Wanjiru, Monday.",
   "source": "common learner error; to confirm by a Kenyan English teacher",
-  "status": "draft"
+  "status": "draft",
+  "review": {
+   "mark": "plausible, to confirm by a teacher",
+   "note": "A usage or reading slip a Kenyan Grade 4 learner could plausibly make. No source and no homework count; a Kenyan English teacher should say whether it comes up in class."
+  }
  },
  "ENGL.G4.WRITIN.T7_MECHANICS_OF_WRITING.CAPITALS_FULL_STOPS.M_PUN_I_LOWER": {
   "skill": "ENGL.G4.WRITIN.T7_MECHANICS_OF_WRITING.CAPITALS_FULL_STOPS",
@@ -1782,7 +2254,11 @@
   "help": "Have the child say both forms aloud and say why one fits: \"Today I played football.\", not \"Today i played football.\".",
   "feedback": "The word I always takes a capital letter.",
   "source": "common learner error; to confirm by a Kenyan English teacher",
-  "status": "draft"
+  "status": "draft",
+  "review": {
+   "mark": "plausible, to confirm by a teacher",
+   "note": "A usage or reading slip a Kenyan Grade 4 learner could plausibly make. No source and no homework count; a Kenyan English teacher should say whether it comes up in class."
+  }
  },
  "ENGL.G4.LISTEN.T8_PRONUNCIATION_AND_VO.FARM_WORDS.M_FRM_NEAR_MEANING": {
   "skill": "ENGL.G4.LISTEN.T8_PRONUNCIATION_AND_VO.FARM_WORDS",
@@ -1797,7 +2273,11 @@
   "help": "Have the child say both forms aloud and say why one fits: \"harvest\", not \"plant\".",
   "feedback": "Planting comes first. Harvesting is gathering the crop when it is ripe.",
   "source": "common learner error; to confirm by a Kenyan English teacher",
-  "status": "draft"
+  "status": "draft",
+  "review": {
+   "mark": "plausible, to confirm by a teacher",
+   "note": "A usage or reading slip a Kenyan Grade 4 learner could plausibly make. No source and no homework count; a Kenyan English teacher should say whether it comes up in class."
+  }
  },
  "ENGL.G4.LISTEN.T8_PRONUNCIATION_AND_VO.FARM_WORDS.M_FRM_LIVESTOCK_CROPS": {
   "skill": "ENGL.G4.LISTEN.T8_PRONUNCIATION_AND_VO.FARM_WORDS",
@@ -1812,7 +2292,11 @@
   "help": "Have the child say both forms aloud and say why one fits: \"livestock\", not \"crops\".",
   "feedback": "Livestock are farm animals. Crops are plants grown for food.",
   "source": "common learner error; to confirm by a Kenyan English teacher",
-  "status": "draft"
+  "status": "draft",
+  "review": {
+   "mark": "plausible, to confirm by a teacher",
+   "note": "A usage or reading slip a Kenyan Grade 4 learner could plausibly make. No source and no homework count; a Kenyan English teacher should say whether it comes up in class."
+  }
  },
  "ENGL.G4.LISTEN.T8_PRONUNCIATION_AND_VO.FARM_WORDS.M_FRM_FERTILISER": {
   "skill": "ENGL.G4.LISTEN.T8_PRONUNCIATION_AND_VO.FARM_WORDS",
@@ -1827,7 +2311,11 @@
   "help": "Have the child say both forms aloud and say why one fits: \"Fertiliser\", not \"Pesticide\".",
   "feedback": "Fertiliser feeds the soil. Pesticide kills pests.",
   "source": "common learner error; to confirm by a Kenyan English teacher",
-  "status": "draft"
+  "status": "draft",
+  "review": {
+   "mark": "plausible, to confirm by a teacher",
+   "note": "A usage or reading slip a Kenyan Grade 4 learner could plausibly make. No source and no homework count; a Kenyan English teacher should say whether it comes up in class."
+  }
  },
  "ENGL.G4.LANGUA.T8_WORD_CLASSES.CONTRACTIONS.M_CON_NO_APOSTROPHE": {
   "skill": "ENGL.G4.LANGUA.T8_WORD_CLASSES.CONTRACTIONS",
@@ -1842,7 +2330,11 @@
   "help": "Have the child say both forms aloud and say why one fits: \"don't\", not \"dont\".",
   "feedback": "The apostrophe takes the place of the missing letter: do not becomes don't.",
   "source": "common learner error; to confirm by a Kenyan English teacher",
-  "status": "draft"
+  "status": "draft",
+  "review": {
+   "mark": "plausible, to confirm by a teacher",
+   "note": "A usage or reading slip a Kenyan Grade 4 learner could plausibly make. No source and no homework count; a Kenyan English teacher should say whether it comes up in class."
+  }
  },
  "ENGL.G4.LANGUA.T8_WORD_CLASSES.CONTRACTIONS.M_CON_WRONG_PLACE": {
   "skill": "ENGL.G4.LANGUA.T8_WORD_CLASSES.CONTRACTIONS",
@@ -1857,7 +2349,11 @@
   "help": "Have the child say both forms aloud and say why one fits: \"isn't\", not \"is'nt\".",
   "feedback": "The apostrophe goes where the letter was left out: is not becomes isn't, with the mark in place of the o.",
   "source": "common learner error; to confirm by a Kenyan English teacher",
-  "status": "draft"
+  "status": "draft",
+  "review": {
+   "mark": "plausible, to confirm by a teacher",
+   "note": "A usage or reading slip a Kenyan Grade 4 learner could plausibly make. No source and no homework count; a Kenyan English teacher should say whether it comes up in class."
+  }
  },
  "ENGL.G4.LANGUA.T8_WORD_CLASSES.CONTRACTIONS.M_CON_ITS": {
   "skill": "ENGL.G4.LANGUA.T8_WORD_CLASSES.CONTRACTIONS",
@@ -1872,7 +2368,11 @@
   "help": "Have the child say both forms aloud and say why one fits: \"It's\", not \"Its\".",
   "feedback": "It's means it is. Its (no apostrophe) means belonging to it: The cat licked its paw.",
   "source": "common learner error; to confirm by a Kenyan English teacher",
-  "status": "draft"
+  "status": "draft",
+  "review": {
+   "mark": "plausible, to confirm by a teacher",
+   "note": "A usage or reading slip a Kenyan Grade 4 learner could plausibly make. No source and no homework count; a Kenyan English teacher should say whether it comes up in class."
+  }
  },
  "ENGL.G4.LANGUA.T8_WORD_CLASSES.CONTRACTIONS.M_CON_WRONG_FORM": {
   "skill": "ENGL.G4.LANGUA.T8_WORD_CLASSES.CONTRACTIONS",
@@ -1887,7 +2387,11 @@
   "help": "Have the child say both forms aloud and say why one fits: \"won't\", not \"willn't\".",
   "feedback": "A few short forms change: will not is won't, can not is can't.",
   "source": "common learner error; to confirm by a Kenyan English teacher",
-  "status": "draft"
+  "status": "draft",
+  "review": {
+   "mark": "plausible, to confirm by a teacher",
+   "note": "A usage or reading slip a Kenyan Grade 4 learner could plausibly make. No source and no homework count; a Kenyan English teacher should say whether it comes up in class."
+  }
  },
  "ENGL.G4.LANGUA.T8_WORD_CLASSES.NEGATIVE_STATEMENTS.M_NEG_DOUBLE": {
   "skill": "ENGL.G4.LANGUA.T8_WORD_CLASSES.NEGATIVE_STATEMENTS",
@@ -1902,7 +2406,11 @@
   "help": "Have the child say both forms aloud and say why one fits: \"a\", not \"no\".",
   "feedback": "In English one negative is enough: I do not have a pen, or I have no pen.",
   "source": "common learner error; to confirm by a Kenyan English teacher",
-  "status": "draft"
+  "status": "draft",
+  "review": {
+   "mark": "common in the literature",
+   "source": "Labov, W. (1972), Language in the Inner City: negative concord is a regular feature of many varieties of English; it is a mark of register rather than a muddle."
+  }
  },
  "ENGL.G4.LANGUA.T8_WORD_CLASSES.NEGATIVE_STATEMENTS.M_NEG_NO_DO": {
   "skill": "ENGL.G4.LANGUA.T8_WORD_CLASSES.NEGATIVE_STATEMENTS",
@@ -1917,7 +2425,11 @@
   "help": "Have the child say both forms aloud and say why one fits: \"does not\", not \"not\".",
   "feedback": "In English use do not or does not before the verb: She does not like milk.",
   "source": "Kiswahili influence (to confirm by a Kenyan English teacher)",
-  "status": "draft"
+  "status": "draft",
+  "review": {
+   "mark": "plausible, to confirm by a teacher",
+   "note": "A usage or reading slip a Kenyan Grade 4 learner could plausibly make. No source and no homework count; a Kenyan English teacher should say whether it comes up in class."
+  }
  },
  "ENGL.G4.LANGUA.T8_WORD_CLASSES.NEGATIVE_STATEMENTS.M_NEG_VERB_S": {
   "skill": "ENGL.G4.LANGUA.T8_WORD_CLASSES.NEGATIVE_STATEMENTS",
@@ -1932,7 +2444,11 @@
   "help": "Have the child say both forms aloud and say why one fits: \"eat\", not \"eats\".",
   "feedback": "After does not and did not, the verb stays plain: He does not eat meat.",
   "source": "common learner error; to confirm by a Kenyan English teacher",
-  "status": "draft"
+  "status": "draft",
+  "review": {
+   "mark": "plausible, to confirm by a teacher",
+   "note": "A usage or reading slip a Kenyan Grade 4 learner could plausibly make. No source and no homework count; a Kenyan English teacher should say whether it comes up in class."
+  }
  },
  "ENGL.G4.LANGUA.T8_WORD_CLASSES.NEGATIVE_STATEMENTS.M_NEG_DO_WITH_BE": {
   "skill": "ENGL.G4.LANGUA.T8_WORD_CLASSES.NEGATIVE_STATEMENTS",
@@ -1947,7 +2463,11 @@
   "help": "Have the child say both forms aloud and say why one fits: \"am not\", not \"do not\".",
   "feedback": "With am, is and are, put not after the helping word: I am not tired.",
   "source": "common learner error; to confirm by a Kenyan English teacher",
-  "status": "draft"
+  "status": "draft",
+  "review": {
+   "mark": "plausible, to confirm by a teacher",
+   "note": "A usage or reading slip a Kenyan Grade 4 learner could plausibly make. No source and no homework count; a Kenyan English teacher should say whether it comes up in class."
+  }
  },
  "ENGL.G4.LANGUA.T9_WORD_CLASSES_ADVERBS.ADVERBS.M_ADV_ADJ_FOR_ADV": {
   "skill": "ENGL.G4.LANGUA.T9_WORD_CLASSES_ADVERBS.ADVERBS",
@@ -1962,7 +2482,11 @@
   "help": "Have the child say both forms aloud and say why one fits: \"beautifully\", not \"beautiful\".",
   "feedback": "A word that tells how someone does something is an adverb. Many adverbs end in -ly: sings beautifully.",
   "source": "Kiswahili influence (to confirm by a Kenyan English teacher)",
-  "status": "draft"
+  "status": "draft",
+  "review": {
+   "mark": "plausible, to confirm by a teacher",
+   "note": "A usage or reading slip a Kenyan Grade 4 learner could plausibly make. No source and no homework count; a Kenyan English teacher should say whether it comes up in class."
+  }
  },
  "ENGL.G4.LANGUA.T9_WORD_CLASSES_ADVERBS.ADVERBS.M_ADV_KIND_MIX": {
   "skill": "ENGL.G4.LANGUA.T9_WORD_CLASSES_ADVERBS.ADVERBS",
@@ -1977,7 +2501,11 @@
   "help": "Have the child say both forms aloud and say why one fits: \"time\", not \"manner\".",
   "feedback": "Manner answers how, time answers when, place answers where. Yesterday tells when.",
   "source": "common learner error; to confirm by a Kenyan English teacher",
-  "status": "draft"
+  "status": "draft",
+  "review": {
+   "mark": "plausible, to confirm by a teacher",
+   "note": "A usage or reading slip a Kenyan Grade 4 learner could plausibly make. No source and no homework count; a Kenyan English teacher should say whether it comes up in class."
+  }
  },
  "ENGL.G4.LANGUA.T9_WORD_CLASSES_ADVERBS.ADVERBS.M_ADV_GOOD_WELL": {
   "skill": "ENGL.G4.LANGUA.T9_WORD_CLASSES_ADVERBS.ADVERBS",
@@ -1992,7 +2520,11 @@
   "help": "Have the child say both forms aloud and say why one fits: \"well\", not \"good\".",
   "feedback": "Good describes a noun (a good player). Well tells how something is done (plays well).",
   "source": "common learner error; to confirm by a Kenyan English teacher",
-  "status": "draft"
+  "status": "draft",
+  "review": {
+   "mark": "plausible, to confirm by a teacher",
+   "note": "A usage or reading slip a Kenyan Grade 4 learner could plausibly make. No source and no homework count; a Kenyan English teacher should say whether it comes up in class."
+  }
  },
  "ENGL.G4.LANGUA.T9_WORD_CLASSES_ADVERBS.ADVERBS.M_ADV_FASTLY": {
   "skill": "ENGL.G4.LANGUA.T9_WORD_CLASSES_ADVERBS.ADVERBS",
@@ -2007,7 +2539,11 @@
   "help": "Have the child say both forms aloud and say why one fits: \"fast\", not \"fastly\".",
   "feedback": "Fast, hard and late are adverbs already. We say runs fast and works hard.",
   "source": "common learner error; to confirm by a Kenyan English teacher",
-  "status": "draft"
+  "status": "draft",
+  "review": {
+   "mark": "plausible, to confirm by a teacher",
+   "note": "A usage or reading slip a Kenyan Grade 4 learner could plausibly make. No source and no homework count; a Kenyan English teacher should say whether it comes up in class."
+  }
  },
  "ENGL.G4.WRITIN.T9_PUNCTUATION.COMMAS.M_COM_NO_COMMA_LIST": {
   "skill": "ENGL.G4.WRITIN.T9_PUNCTUATION.COMMAS",
@@ -2022,7 +2558,11 @@
   "help": "Have the child say both forms aloud and say why one fits: \"Mama bought rice, beans and maize.\", not \"Mama bought rice beans and maize.\".",
   "feedback": "In a list, put a comma between the items. Use and before the last one.",
   "source": "common learner error; to confirm by a Kenyan English teacher",
-  "status": "draft"
+  "status": "draft",
+  "review": {
+   "mark": "plausible, to confirm by a teacher",
+   "note": "A usage or reading slip a Kenyan Grade 4 learner could plausibly make. No source and no homework count; a Kenyan English teacher should say whether it comes up in class."
+  }
  },
  "ENGL.G4.WRITIN.T9_PUNCTUATION.COMMAS.M_COM_AFTER_LAST": {
   "skill": "ENGL.G4.WRITIN.T9_PUNCTUATION.COMMAS",
@@ -2037,7 +2577,11 @@
   "help": "Have the child say both forms aloud and say why one fits: \"I like mangoes, oranges and bananas.\", not \"I like mangoes, oranges, bananas,\".",
   "feedback": "The last item has no comma after it. Put and before it and end with a full stop.",
   "source": "common learner error; to confirm by a Kenyan English teacher",
-  "status": "draft"
+  "status": "draft",
+  "review": {
+   "mark": "doubtful",
+   "why": "A comma after the last item is unusual in a child; the Oxford comma is also acceptable before and."
+  }
  },
  "ENGL.G4.WRITIN.T9_PUNCTUATION.COMMAS.M_COM_SPLIT_SENTENCE": {
   "skill": "ENGL.G4.WRITIN.T9_PUNCTUATION.COMMAS",
@@ -2052,7 +2596,11 @@
   "help": "Have the child say both forms aloud and say why one fits: \"Wafula kicked the ball.\", not \"Wafula, kicked the ball.\".",
   "feedback": "Do not put a comma between a person and what the person did. A comma is not a pause mark.",
   "source": "common learner error; to confirm by a Kenyan English teacher",
-  "status": "draft"
+  "status": "draft",
+  "review": {
+   "mark": "plausible, to confirm by a teacher",
+   "note": "A usage or reading slip a Kenyan Grade 4 learner could plausibly make. No source and no homework count; a Kenyan English teacher should say whether it comes up in class."
+  }
  },
  "ENGL.G4.WRITIN.T9_PUNCTUATION.COMMAS.M_COM_FULL_STOP_LIST": {
   "skill": "ENGL.G4.WRITIN.T9_PUNCTUATION.COMMAS",
@@ -2067,7 +2615,11 @@
   "help": "Have the child say both forms aloud and say why one fits: \"We saw lions, zebras and giraffes.\", not \"We saw lions. zebras. and giraffes.\".",
   "feedback": "A full stop ends a whole sentence. Items in one list are separated by commas.",
   "source": "common learner error; to confirm by a Kenyan English teacher",
-  "status": "draft"
+  "status": "draft",
+  "review": {
+   "mark": "doubtful",
+   "why": "Written as a trap option; children rarely use full stops between list items."
+  }
  },
  "ENGL.G4.WRITIN.T9_PUNCTUATION.QUESTION_MARKS.M_QMK_FULL_STOP": {
   "skill": "ENGL.G4.WRITIN.T9_PUNCTUATION.QUESTION_MARKS",
@@ -2082,7 +2634,11 @@
   "help": "Have the child say both forms aloud and say why one fits: \"Where is the book?\", not \"Where is the book.\".",
   "feedback": "A question ends with a question mark.",
   "source": "common learner error; to confirm by a Kenyan English teacher",
-  "status": "draft"
+  "status": "draft",
+  "review": {
+   "mark": "plausible, to confirm by a teacher",
+   "note": "A usage or reading slip a Kenyan Grade 4 learner could plausibly make. No source and no homework count; a Kenyan English teacher should say whether it comes up in class."
+  }
  },
  "ENGL.G4.WRITIN.T9_PUNCTUATION.QUESTION_MARKS.M_QMK_STATEMENT": {
   "skill": "ENGL.G4.WRITIN.T9_PUNCTUATION.QUESTION_MARKS",
@@ -2097,7 +2653,11 @@
   "help": "Have the child say both forms aloud and say why one fits: \"I do not know where he lives.\", not \"I do not know where he lives?\".",
   "feedback": "A sentence that tells something ends with a full stop, even if it has a word like where in it.",
   "source": "common learner error; to confirm by a Kenyan English teacher",
-  "status": "draft"
+  "status": "draft",
+  "review": {
+   "mark": "plausible, to confirm by a teacher",
+   "note": "A usage or reading slip a Kenyan Grade 4 learner could plausibly make. No source and no homework count; a Kenyan English teacher should say whether it comes up in class."
+  }
  },
  "ENGL.G4.WRITIN.T9_PUNCTUATION.QUESTION_MARKS.M_QMK_COMMA": {
   "skill": "ENGL.G4.WRITIN.T9_PUNCTUATION.QUESTION_MARKS",
@@ -2112,7 +2672,11 @@
   "help": "Have the child say both forms aloud and say why one fits: \"Are you hungry?\", not \"Are you hungry,\".",
   "feedback": "A comma never ends a sentence. A question ends with a question mark.",
   "source": "common learner error; to confirm by a Kenyan English teacher",
-  "status": "draft"
+  "status": "draft",
+  "review": {
+   "mark": "plausible, to confirm by a teacher",
+   "note": "A usage or reading slip a Kenyan Grade 4 learner could plausibly make. No source and no homework count; a Kenyan English teacher should say whether it comes up in class."
+  }
  },
  "ENGL.G4.WRITIN.T9_PUNCTUATION.QUESTION_MARKS.M_QMK_NO_MARK": {
   "skill": "ENGL.G4.WRITIN.T9_PUNCTUATION.QUESTION_MARKS",
@@ -2127,7 +2691,11 @@
   "help": "Have the child say both forms aloud and say why one fits: \"What is your name?\", not \"What is your name\".",
   "feedback": "Every sentence needs an end mark. A question needs a question mark.",
   "source": "common learner error; to confirm by a Kenyan English teacher",
-  "status": "draft"
+  "status": "draft",
+  "review": {
+   "mark": "plausible, to confirm by a teacher",
+   "note": "A usage or reading slip a Kenyan Grade 4 learner could plausibly make. No source and no homework count; a Kenyan English teacher should say whether it comes up in class."
+  }
  },
  "ENGL.G4.LISTEN.T10_PRONUNCIATION_AND_VO.HYGIENE_WORDS.M_HYG_NEAR_MEANING": {
   "skill": "ENGL.G4.LISTEN.T10_PRONUNCIATION_AND_VO.HYGIENE_WORDS",
@@ -2142,7 +2710,11 @@
   "help": "Have the child say both forms aloud and say why one fits: \"germs\", not \"rubbish\".",
   "feedback": "Germs are tiny living things that can cause disease. Rubbish is waste.",
   "source": "common learner error; to confirm by a Kenyan English teacher",
-  "status": "draft"
+  "status": "draft",
+  "review": {
+   "mark": "plausible, to confirm by a teacher",
+   "note": "A usage or reading slip a Kenyan Grade 4 learner could plausibly make. No source and no homework count; a Kenyan English teacher should say whether it comes up in class."
+  }
  },
  "ENGL.G4.LISTEN.T10_PRONUNCIATION_AND_VO.HYGIENE_WORDS.M_HYG_DISINFECT": {
   "skill": "ENGL.G4.LISTEN.T10_PRONUNCIATION_AND_VO.HYGIENE_WORDS",
@@ -2157,7 +2729,11 @@
   "help": "Have the child say both forms aloud and say why one fits: \"disinfect\", not \"perfume\".",
   "feedback": "To disinfect is to kill germs on a surface.",
   "source": "common learner error; to confirm by a Kenyan English teacher",
-  "status": "draft"
+  "status": "draft",
+  "review": {
+   "mark": "plausible, to confirm by a teacher",
+   "note": "A usage or reading slip a Kenyan Grade 4 learner could plausibly make. No source and no homework count; a Kenyan English teacher should say whether it comes up in class."
+  }
  },
  "ENGL.G4.LISTEN.T10_PRONUNCIATION_AND_VO.HYGIENE_WORDS.M_HYG_LATRINE": {
   "skill": "ENGL.G4.LISTEN.T10_PRONUNCIATION_AND_VO.HYGIENE_WORDS",
@@ -2172,7 +2748,11 @@
   "help": "Have the child say both forms aloud and say why one fits: \"latrine\", not \"drainage\".",
   "feedback": "A latrine is for human waste. Drainage carries away dirty water.",
   "source": "common learner error; to confirm by a Kenyan English teacher",
-  "status": "draft"
+  "status": "draft",
+  "review": {
+   "mark": "plausible, to confirm by a teacher",
+   "note": "A usage or reading slip a Kenyan Grade 4 learner could plausibly make. No source and no homework count; a Kenyan English teacher should say whether it comes up in class."
+  }
  },
  "ENGL.G4.LANGUA.T10_WORD_CLASS_CONJUNCTI.CONJUNCTIONS.M_CNJ_BUT_FOR_AND": {
   "skill": "ENGL.G4.LANGUA.T10_WORD_CLASS_CONJUNCTI.CONJUNCTIONS",
@@ -2187,7 +2767,11 @@
   "help": "Have the child say both forms aloud and say why one fits: \"and\", not \"but\".",
   "feedback": "Use and to add one idea to another. Use but when the two ideas go against each other.",
   "source": "common learner error; to confirm by a Kenyan English teacher",
-  "status": "draft"
+  "status": "draft",
+  "review": {
+   "mark": "plausible, to confirm by a teacher",
+   "note": "A usage or reading slip a Kenyan Grade 4 learner could plausibly make. No source and no homework count; a Kenyan English teacher should say whether it comes up in class."
+  }
  },
  "ENGL.G4.LANGUA.T10_WORD_CLASS_CONJUNCTI.CONJUNCTIONS.M_CNJ_BECAUSE_SO": {
   "skill": "ENGL.G4.LANGUA.T10_WORD_CLASS_CONJUNCTI.CONJUNCTIONS",
@@ -2202,7 +2786,11 @@
   "help": "Have the child say both forms aloud and say why one fits: \"so\", not \"because\".",
   "feedback": "Because gives the reason. So gives the result. The rain is the reason; staying inside is the result.",
   "source": "common learner error; to confirm by a Kenyan English teacher",
-  "status": "draft"
+  "status": "draft",
+  "review": {
+   "mark": "plausible, to confirm by a teacher",
+   "note": "A usage or reading slip a Kenyan Grade 4 learner could plausibly make. No source and no homework count; a Kenyan English teacher should say whether it comes up in class."
+  }
  },
  "ENGL.G4.LANGUA.T10_WORD_CLASS_CONJUNCTI.CONJUNCTIONS.M_CNJ_AND_FOR_BUT": {
   "skill": "ENGL.G4.LANGUA.T10_WORD_CLASS_CONJUNCTI.CONJUNCTIONS",
@@ -2217,7 +2805,11 @@
   "help": "Have the child say both forms aloud and say why one fits: \"but\", not \"and\".",
   "feedback": "When the second idea goes against the first, use but, not and.",
   "source": "common learner error; to confirm by a Kenyan English teacher",
-  "status": "draft"
+  "status": "draft",
+  "review": {
+   "mark": "plausible, to confirm by a teacher",
+   "note": "A usage or reading slip a Kenyan Grade 4 learner could plausibly make. No source and no homework count; a Kenyan English teacher should say whether it comes up in class."
+  }
  },
  "ENGL.G4.LANGUA.T10_WORD_CLASS_CONJUNCTI.CONJUNCTIONS.M_CNJ_AND_FOR_OR": {
   "skill": "ENGL.G4.LANGUA.T10_WORD_CLASS_CONJUNCTI.CONJUNCTIONS",
@@ -2232,7 +2824,11 @@
   "help": "Have the child say both forms aloud and say why one fits: \"or\", not \"and\".",
   "feedback": "To offer a choice use or. And joins two things that are both there.",
   "source": "common learner error; to confirm by a Kenyan English teacher",
-  "status": "draft"
+  "status": "draft",
+  "review": {
+   "mark": "plausible, to confirm by a teacher",
+   "note": "A usage or reading slip a Kenyan Grade 4 learner could plausibly make. No source and no homework count; a Kenyan English teacher should say whether it comes up in class."
+  }
  },
  "ENGL.G4.LANGUA.T10_WORD_CLASS_CONJUNCTI.CONJUNCTIONS.M_CNJ_OR_FOR_AND": {
   "skill": "ENGL.G4.LANGUA.T10_WORD_CLASS_CONJUNCTI.CONJUNCTIONS",
@@ -2247,7 +2843,11 @@
   "help": "Have the child say both forms aloud and say why one fits: \"and\", not \"or\".",
   "feedback": "Or shows a choice between two things. And joins two things that are both there.",
   "source": "common learner error; to confirm by a Kenyan English teacher",
-  "status": "draft"
+  "status": "draft",
+  "review": {
+   "mark": "plausible, to confirm by a teacher",
+   "note": "A usage or reading slip a Kenyan Grade 4 learner could plausibly make. No source and no homework count; a Kenyan English teacher should say whether it comes up in class."
+  }
  },
  "ENGL.G4.LANGUA.T10_WORD_CLASS_CONJUNCTI.CONJUNCTIONS.M_CNJ_DOUBLE": {
   "skill": "ENGL.G4.LANGUA.T10_WORD_CLASS_CONJUNCTI.CONJUNCTIONS",
@@ -2262,7 +2862,11 @@
   "help": "Have the child say both forms aloud and say why one fits: \"no joining word\", not \"but\".",
   "feedback": "One joining word is enough between two ideas. Use although or but, not both.",
   "source": "common learner error; to confirm by a Kenyan English teacher",
-  "status": "draft"
+  "status": "draft",
+  "review": {
+   "mark": "plausible, to confirm by a teacher",
+   "note": "A usage or reading slip a Kenyan Grade 4 learner could plausibly make. No source and no homework count; a Kenyan English teacher should say whether it comes up in class."
+  }
  },
  "ENGL.G4.WRITIN.T10_CREATIVE_WRITING.DESCRIPTIVE_PARTS.M_DES_TELLS_STORY": {
   "skill": "ENGL.G4.WRITIN.T10_CREATIVE_WRITING.DESCRIPTIVE_PARTS",
@@ -2277,7 +2881,11 @@
   "help": "Have the child say both forms aloud and say why one fits: \"The market is noisy and smells of fresh fruit.\", not \"Yesterday I went to the market and bought a hat.\".",
   "feedback": "A description tells what something looks, sounds, smells, feels or tastes like. A story tells what happened.",
   "source": "common learner error; to confirm by a Kenyan English teacher",
-  "status": "draft"
+  "status": "draft",
+  "review": {
+   "mark": "plausible, to confirm by a teacher",
+   "note": "A usage or reading slip a Kenyan Grade 4 learner could plausibly make. No source and no homework count; a Kenyan English teacher should say whether it comes up in class."
+  }
  },
  "ENGL.G4.WRITIN.T10_CREATIVE_WRITING.DESCRIPTIVE_PARTS.M_DES_ONE_SENSE": {
   "skill": "ENGL.G4.WRITIN.T10_CREATIVE_WRITING.DESCRIPTIVE_PARTS",
@@ -2292,7 +2900,11 @@
   "help": "Have the child say both forms aloud and say why one fits: \"The market smells of fresh fruit.\", not \"The market is big.\".",
   "feedback": "Use all the senses: sight, hearing, smell, touch and taste.",
   "source": "common learner error; to confirm by a Kenyan English teacher",
-  "status": "draft"
+  "status": "draft",
+  "review": {
+   "mark": "plausible, to confirm by a teacher",
+   "note": "A usage or reading slip a Kenyan Grade 4 learner could plausibly make. No source and no homework count; a Kenyan English teacher should say whether it comes up in class."
+  }
  },
  "ENGL.G4.WRITIN.T10_CREATIVE_WRITING.DESCRIPTIVE_PARTS.M_DES_PART_MIX": {
   "skill": "ENGL.G4.WRITIN.T10_CREATIVE_WRITING.DESCRIPTIVE_PARTS",
@@ -2307,7 +2919,11 @@
   "help": "Have the child say both forms aloud and say why one fits: \"the introduction\", not \"the conclusion\".",
   "feedback": "The introduction says what you are going to describe. The conclusion ends with a feeling or a last thought.",
   "source": "common learner error; to confirm by a Kenyan English teacher",
-  "status": "draft"
+  "status": "draft",
+  "review": {
+   "mark": "plausible, to confirm by a teacher",
+   "note": "A usage or reading slip a Kenyan Grade 4 learner could plausibly make. No source and no homework count; a Kenyan English teacher should say whether it comes up in class."
+  }
  },
  "ENGL.G4.LISTEN.T11_PRONUNCIATION_AND_VO.SPORTS_WORDS.M_SPT_NEAR_MEANING": {
   "skill": "ENGL.G4.LISTEN.T11_PRONUNCIATION_AND_VO.SPORTS_WORDS",
@@ -2322,7 +2938,11 @@
   "help": "Have the child say both forms aloud and say why one fits: \"referee\", not \"goalkeeper\".",
   "feedback": "The referee controls the game. The goalkeeper guards the goal.",
   "source": "common learner error; to confirm by a Kenyan English teacher",
-  "status": "draft"
+  "status": "draft",
+  "review": {
+   "mark": "plausible, to confirm by a teacher",
+   "note": "A usage or reading slip a Kenyan Grade 4 learner could plausibly make. No source and no homework count; a Kenyan English teacher should say whether it comes up in class."
+  }
  },
  "ENGL.G4.LISTEN.T11_PRONUNCIATION_AND_VO.SPORTS_WORDS.M_SPT_TROPHY_TOURNAMENT": {
   "skill": "ENGL.G4.LISTEN.T11_PRONUNCIATION_AND_VO.SPORTS_WORDS",
@@ -2337,7 +2957,11 @@
   "help": "Have the child say both forms aloud and say why one fits: \"trophy\", not \"tournament\".",
   "feedback": "A tournament is a series of games. A trophy is the prize.",
   "source": "common learner error; to confirm by a Kenyan English teacher",
-  "status": "draft"
+  "status": "draft",
+  "review": {
+   "mark": "plausible, to confirm by a teacher",
+   "note": "A usage or reading slip a Kenyan Grade 4 learner could plausibly make. No source and no homework count; a Kenyan English teacher should say whether it comes up in class."
+  }
  },
  "ENGL.G4.LISTEN.T11_PRONUNCIATION_AND_VO.SPORTS_WORDS.M_SPT_OPPONENT_TEAMMATE": {
   "skill": "ENGL.G4.LISTEN.T11_PRONUNCIATION_AND_VO.SPORTS_WORDS",
@@ -2352,7 +2976,11 @@
   "help": "Have the child say both forms aloud and say why one fits: \"opponent\", not \"teammate\".",
   "feedback": "An opponent plays against you. A teammate plays with you.",
   "source": "common learner error; to confirm by a Kenyan English teacher",
-  "status": "draft"
+  "status": "draft",
+  "review": {
+   "mark": "plausible, to confirm by a teacher",
+   "note": "A usage or reading slip a Kenyan Grade 4 learner could plausibly make. No source and no homework count; a Kenyan English teacher should say whether it comes up in class."
+  }
  },
  "ENGL.G4.LANGUA.T11_LANGUAGE_PATTERNS.INTERROGATIVES.M_INT_WHO_FOR_WHAT": {
   "skill": "ENGL.G4.LANGUA.T11_LANGUAGE_PATTERNS.INTERROGATIVES",
@@ -2367,7 +2995,11 @@
   "help": "Have the child say both forms aloud and say why one fits: \"Who\", not \"What\".",
   "feedback": "Who asks about a person. What asks about a thing.",
   "source": "common learner error; to confirm by a Kenyan English teacher",
-  "status": "draft"
+  "status": "draft",
+  "review": {
+   "mark": "plausible, to confirm by a teacher",
+   "note": "A usage or reading slip a Kenyan Grade 4 learner could plausibly make. No source and no homework count; a Kenyan English teacher should say whether it comes up in class."
+  }
  },
  "ENGL.G4.LANGUA.T11_LANGUAGE_PATTERNS.INTERROGATIVES.M_INT_WHERE_FOR_WHEN": {
   "skill": "ENGL.G4.LANGUA.T11_LANGUAGE_PATTERNS.INTERROGATIVES",
@@ -2382,7 +3014,11 @@
   "help": "Have the child say both forms aloud and say why one fits: \"When\", not \"Where\".",
   "feedback": "When asks about time. Where asks about a place. Why asks for a reason.",
   "source": "common learner error; to confirm by a Kenyan English teacher",
-  "status": "draft"
+  "status": "draft",
+  "review": {
+   "mark": "plausible, to confirm by a teacher",
+   "note": "A usage or reading slip a Kenyan Grade 4 learner could plausibly make. No source and no homework count; a Kenyan English teacher should say whether it comes up in class."
+  }
  },
  "ENGL.G4.LANGUA.T11_LANGUAGE_PATTERNS.INTERROGATIVES.M_INT_NO_INVERSION": {
   "skill": "ENGL.G4.LANGUA.T11_LANGUAGE_PATTERNS.INTERROGATIVES",
@@ -2397,7 +3033,11 @@
   "help": "Have the child say both forms aloud and say why one fits: \"are you\", not \"you are\".",
   "feedback": "In a question the helping word goes before the subject: Where are you going?",
   "source": "Kiswahili influence (to confirm by a Kenyan English teacher)",
-  "status": "draft"
+  "status": "draft",
+  "review": {
+   "mark": "plausible, to confirm by a teacher",
+   "note": "A usage or reading slip a Kenyan Grade 4 learner could plausibly make. No source and no homework count; a Kenyan English teacher should say whether it comes up in class."
+  }
  },
  "ENGL.G4.LANGUA.T11_LANGUAGE_PATTERNS.INTERROGATIVES.M_INT_DO_EXTRA": {
   "skill": "ENGL.G4.LANGUA.T11_LANGUAGE_PATTERNS.INTERROGATIVES",
@@ -2412,7 +3052,11 @@
   "help": "Have the child say both forms aloud and say why one fits: \"are\", not \"do are\".",
   "feedback": "Use only one helping word. How are you? Where do you live?",
   "source": "common learner error; to confirm by a Kenyan English teacher",
-  "status": "draft"
+  "status": "draft",
+  "review": {
+   "mark": "plausible, to confirm by a teacher",
+   "note": "A usage or reading slip a Kenyan Grade 4 learner could plausibly make. No source and no homework count; a Kenyan English teacher should say whether it comes up in class."
+  }
  },
  "ENGL.G4.LANGUA.T11_LANGUAGE_PATTERNS.INTERROGATIVES.M_INT_WHOSE_WHOS": {
   "skill": "ENGL.G4.LANGUA.T11_LANGUAGE_PATTERNS.INTERROGATIVES",
@@ -2427,7 +3071,11 @@
   "help": "Have the child say both forms aloud and say why one fits: \"Whose\", not \"Who's\".",
   "feedback": "Whose asks who owns something. Who's means who is.",
   "source": "common learner error; to confirm by a Kenyan English teacher",
-  "status": "draft"
+  "status": "draft",
+  "review": {
+   "mark": "plausible, to confirm by a teacher",
+   "note": "A usage or reading slip a Kenyan Grade 4 learner could plausibly make. No source and no homework count; a Kenyan English teacher should say whether it comes up in class."
+  }
  },
  "ENGL.G4.WRITIN.T11_MECHANICS_OF_WRITING.MISSPELT_WORDS.M_SPL_VOWEL_ORDER": {
   "skill": "ENGL.G4.WRITIN.T11_MECHANICS_OF_WRITING.MISSPELT_WORDS",
@@ -2442,7 +3090,11 @@
   "help": "Have the child say both forms aloud and say why one fits: \"friend\", not \"freind\".",
   "feedback": "Check the word. Friend has ie, as in \"a friend to the end\". Learn it as a whole word.",
   "source": "common learner error; to confirm by a Kenyan English teacher",
-  "status": "draft"
+  "status": "draft",
+  "review": {
+   "mark": "plausible, to confirm by a teacher",
+   "note": "A usage or reading slip a Kenyan Grade 4 learner could plausibly make. No source and no homework count; a Kenyan English teacher should say whether it comes up in class."
+  }
  },
  "ENGL.G4.WRITIN.T11_MECHANICS_OF_WRITING.MISSPELT_WORDS.M_SPL_PHONETIC": {
   "skill": "ENGL.G4.WRITIN.T11_MECHANICS_OF_WRITING.MISSPELT_WORDS",
@@ -2457,7 +3109,11 @@
   "help": "Have the child say both forms aloud and say why one fits: \"because\", not \"becos\".",
   "feedback": "Many words are not spelt the way they sound. Learn the shape: because (be-cau-se).",
   "source": "common learner error; to confirm by a Kenyan English teacher",
-  "status": "draft"
+  "status": "draft",
+  "review": {
+   "mark": "common in the literature",
+   "source": "Treiman, R. (1993), Beginning to Spell, Oxford University Press: children spell the sounds they hear."
+  }
  },
  "ENGL.G4.WRITIN.T11_MECHANICS_OF_WRITING.MISSPELT_WORDS.M_SPL_DROPPED_LETTER": {
   "skill": "ENGL.G4.WRITIN.T11_MECHANICS_OF_WRITING.MISSPELT_WORDS",
@@ -2472,7 +3128,11 @@
   "help": "Have the child say both forms aloud and say why one fits: \"library\", not \"libary\".",
   "feedback": "Say the word slowly in parts: li-brar-y. Do not leave out the r.",
   "source": "common learner error; to confirm by a Kenyan English teacher",
-  "status": "draft"
+  "status": "draft",
+  "review": {
+   "mark": "plausible, to confirm by a teacher",
+   "note": "A usage or reading slip a Kenyan Grade 4 learner could plausibly make. No source and no homework count; a Kenyan English teacher should say whether it comes up in class."
+  }
  },
  "ENGL.G4.WRITIN.T11_MECHANICS_OF_WRITING.MISSPELT_WORDS.M_SPL_EXTRA_LETTER": {
   "skill": "ENGL.G4.WRITIN.T11_MECHANICS_OF_WRITING.MISSPELT_WORDS",
@@ -2487,7 +3147,11 @@
   "help": "Have the child say both forms aloud and say why one fits: \"beautiful\", not \"beutiful\".",
   "feedback": "Beautiful starts with beau, as in \"beautiful\". Look at the word again and copy its shape.",
   "source": "common learner error; to confirm by a Kenyan English teacher",
-  "status": "draft"
+  "status": "draft",
+  "review": {
+   "mark": "plausible, to confirm by a teacher",
+   "note": "A usage or reading slip a Kenyan Grade 4 learner could plausibly make. No source and no homework count; a Kenyan English teacher should say whether it comes up in class."
+  }
  },
  "ENGL.G4.LISTEN.T12_PRONUNCIATION_AND_VO.ENVIRONMENT_WORDS.M_ENV_NEAR_MEANING": {
   "skill": "ENGL.G4.LISTEN.T12_PRONUNCIATION_AND_VO.ENVIRONMENT_WORDS",
@@ -2502,7 +3166,11 @@
   "help": "Have the child say both forms aloud and say why one fits: \"recycle\", not \"litter\".",
   "feedback": "To recycle is to make waste into something new. Litter is rubbish dropped in a public place.",
   "source": "common learner error; to confirm by a Kenyan English teacher",
-  "status": "draft"
+  "status": "draft",
+  "review": {
+   "mark": "plausible, to confirm by a teacher",
+   "note": "A usage or reading slip a Kenyan Grade 4 learner could plausibly make. No source and no homework count; a Kenyan English teacher should say whether it comes up in class."
+  }
  },
  "ENGL.G4.LISTEN.T12_PRONUNCIATION_AND_VO.ENVIRONMENT_WORDS.M_ENV_POLLUTION": {
   "skill": "ENGL.G4.LISTEN.T12_PRONUNCIATION_AND_VO.ENVIRONMENT_WORDS",
@@ -2517,7 +3185,11 @@
   "help": "Have the child say both forms aloud and say why one fits: \"Pollution\", not \"Compost\".",
   "feedback": "Pollution is dirt or poison that harms the air, water or soil.",
   "source": "common learner error; to confirm by a Kenyan English teacher",
-  "status": "draft"
+  "status": "draft",
+  "review": {
+   "mark": "doubtful",
+   "why": "Trap option. Children are unlikely to think pollution is a kind of plant."
+  }
  },
  "ENGL.G4.LISTEN.T12_PRONUNCIATION_AND_VO.ENVIRONMENT_WORDS.M_ENV_CONSERVE": {
   "skill": "ENGL.G4.LISTEN.T12_PRONUNCIATION_AND_VO.ENVIRONMENT_WORDS",
@@ -2532,7 +3204,11 @@
   "help": "Have the child say both forms aloud and say why one fits: \"conserve\", not \"pollute\".",
   "feedback": "To conserve is to look after and use carefully.",
   "source": "common learner error; to confirm by a Kenyan English teacher",
-  "status": "draft"
+  "status": "draft",
+  "review": {
+   "mark": "plausible, to confirm by a teacher",
+   "note": "A usage or reading slip a Kenyan Grade 4 learner could plausibly make. No source and no homework count; a Kenyan English teacher should say whether it comes up in class."
+  }
  },
  "ENGL.G4.READIN.T12_1_INTENSIVE_READING.PROVERBS.M_PRV_LITERAL": {
   "skill": "ENGL.G4.READIN.T12_1_INTENSIVE_READING.PROVERBS",
@@ -2547,7 +3223,11 @@
   "help": "Have the child say both forms aloud and say why one fits: \"doing a thing too fast can spoil it\", not \"people who hurry waste water\".",
   "feedback": "A proverb is a short saying with a lesson. Ask what it teaches people.",
   "source": "common learner error; to confirm by a Kenyan English teacher",
-  "status": "draft"
+  "status": "draft",
+  "review": {
+   "mark": "common in the literature",
+   "source": "Nippold and Haq (1996), Journal of Speech and Hearing Research 39: younger children read proverbs literally."
+  }
  },
  "ENGL.G4.READIN.T12_1_INTENSIVE_READING.PROVERBS.M_PRV_OPPOSITE": {
   "skill": "ENGL.G4.READIN.T12_1_INTENSIVE_READING.PROVERBS",
@@ -2562,7 +3242,11 @@
   "help": "Have the child say both forms aloud and say why one fits: \"keep going carefully and you will succeed\", not \"be fast to win\".",
   "feedback": "Check the lesson against the proverb. The lesson of this one is patience.",
   "source": "common learner error; to confirm by a Kenyan English teacher",
-  "status": "draft"
+  "status": "draft",
+  "review": {
+   "mark": "plausible, to confirm by a teacher",
+   "note": "A usage or reading slip a Kenyan Grade 4 learner could plausibly make. No source and no homework count; a Kenyan English teacher should say whether it comes up in class."
+  }
  },
  "ENGL.G4.READIN.T12_1_INTENSIVE_READING.PROVERBS.M_PRV_UNRELATED": {
   "skill": "ENGL.G4.READIN.T12_1_INTENSIVE_READING.PROVERBS",
@@ -2577,7 +3261,11 @@
   "help": "Have the child say both forms aloud and say why one fits: \"fix a small problem early to avoid a big one\", not \"sewing is hard\".",
   "feedback": "The lesson must fit the idea of the whole proverb.",
   "source": "common learner error; to confirm by a Kenyan English teacher",
-  "status": "draft"
+  "status": "draft",
+  "review": {
+   "mark": "doubtful",
+   "why": "Trap option. No child chooses an unrelated lesson as a belief; it tests careful reading."
+  }
  },
  "ENGL.G4.READIN.T12_1_INTENSIVE_READING.PROVERBS.M_PRV_WRONG_WORD": {
   "skill": "ENGL.G4.READIN.T12_1_INTENSIVE_READING.PROVERBS",
@@ -2592,7 +3280,11 @@
   "help": "Have the child say both forms aloud and say why one fits: \"go\", not \"stay\".",
   "feedback": "A proverb always has the same words. Say the whole saying aloud.",
   "source": "common learner error; to confirm by a Kenyan English teacher",
-  "status": "draft"
+  "status": "draft",
+  "review": {
+   "mark": "plausible, to confirm by a teacher",
+   "note": "A usage or reading slip a Kenyan Grade 4 learner could plausibly make. No source and no homework count; a Kenyan English teacher should say whether it comes up in class."
+  }
  },
  "ENGL.G4.LANGUA.T12_WORD_CLASSES_VERB_AS.PRESENT_PERFECT.M_PPF_PAST_FORM": {
   "skill": "ENGL.G4.LANGUA.T12_WORD_CLASSES_VERB_AS.PRESENT_PERFECT",
@@ -2607,7 +3299,11 @@
   "help": "Have the child say both forms aloud and say why one fits: \"eaten\", not \"ate\".",
   "feedback": "After have or has use the past participle: have eaten, has gone, have seen.",
   "source": "common learner error; to confirm by a Kenyan English teacher",
-  "status": "draft"
+  "status": "draft",
+  "review": {
+   "mark": "plausible, to confirm by a teacher",
+   "note": "A usage or reading slip a Kenyan Grade 4 learner could plausibly make. No source and no homework count; a Kenyan English teacher should say whether it comes up in class."
+  }
  },
  "ENGL.G4.LANGUA.T12_WORD_CLASSES_VERB_AS.PRESENT_PERFECT.M_PPF_HAS_HAVE": {
   "skill": "ENGL.G4.LANGUA.T12_WORD_CLASSES_VERB_AS.PRESENT_PERFECT",
@@ -2622,7 +3318,11 @@
   "help": "Have the child say both forms aloud and say why one fits: \"has\", not \"have\".",
   "feedback": "Use has with he, she, it and one person or thing. Use have with I, you, we, they and plural nouns.",
   "source": "common learner error; to confirm by a Kenyan English teacher",
-  "status": "draft"
+  "status": "draft",
+  "review": {
+   "mark": "plausible, to confirm by a teacher",
+   "note": "A usage or reading slip a Kenyan Grade 4 learner could plausibly make. No source and no homework count; a Kenyan English teacher should say whether it comes up in class."
+  }
  },
  "ENGL.G4.LANGUA.T12_WORD_CLASSES_VERB_AS.PRESENT_PERFECT.M_PPF_BASE_VERB": {
   "skill": "ENGL.G4.LANGUA.T12_WORD_CLASSES_VERB_AS.PRESENT_PERFECT",
@@ -2637,7 +3337,11 @@
   "help": "Have the child say both forms aloud and say why one fits: \"gone\", not \"go\".",
   "feedback": "After have or has the verb needs its past participle: gone, taken, written.",
   "source": "common learner error; to confirm by a Kenyan English teacher",
-  "status": "draft"
+  "status": "draft",
+  "review": {
+   "mark": "plausible, to confirm by a teacher",
+   "note": "A usage or reading slip a Kenyan Grade 4 learner could plausibly make. No source and no homework count; a Kenyan English teacher should say whether it comes up in class."
+  }
  },
  "ENGL.G4.LANGUA.T12_WORD_CLASSES_VERB_AS.PRESENT_PERFECT.M_PPF_WITH_PAST_TIME": {
   "skill": "ENGL.G4.LANGUA.T12_WORD_CLASSES_VERB_AS.PRESENT_PERFECT",
@@ -2652,7 +3356,11 @@
   "help": "Have the child say both forms aloud and say why one fits: \"saw\", not \"have seen\".",
   "feedback": "When the time is named (yesterday, last week), use the simple past: I saw him yesterday.",
   "source": "common learner error; to confirm by a Kenyan English teacher",
-  "status": "draft"
+  "status": "draft",
+  "review": {
+   "mark": "plausible, to confirm by a teacher",
+   "note": "A usage or reading slip a Kenyan Grade 4 learner could plausibly make. No source and no homework count; a Kenyan English teacher should say whether it comes up in class."
+  }
  },
  "ENGL.G4.LANGUA.T12_WORD_CLASSES_VERB_AS.PAST_PERFECT.M_PAF_HAD_MISSING": {
   "skill": "ENGL.G4.LANGUA.T12_WORD_CLASSES_VERB_AS.PAST_PERFECT",
@@ -2667,7 +3375,11 @@
   "help": "Have the child say both forms aloud and say why one fits: \"had\", not \"was\".",
   "feedback": "The earlier of two past events takes had + participle: The bus had left before I arrived.",
   "source": "common learner error; to confirm by a Kenyan English teacher",
-  "status": "draft"
+  "status": "draft",
+  "review": {
+   "mark": "plausible, to confirm by a teacher",
+   "note": "A usage or reading slip a Kenyan Grade 4 learner could plausibly make. No source and no homework count; a Kenyan English teacher should say whether it comes up in class."
+  }
  },
  "ENGL.G4.LANGUA.T12_WORD_CLASSES_VERB_AS.PAST_PERFECT.M_PAF_HAVE_FOR_HAD": {
   "skill": "ENGL.G4.LANGUA.T12_WORD_CLASSES_VERB_AS.PAST_PERFECT",
@@ -2682,7 +3394,11 @@
   "help": "Have the child say both forms aloud and say why one fits: \"had\", not \"has\".",
   "feedback": "In a story about the past, use had, not have or has.",
   "source": "common learner error; to confirm by a Kenyan English teacher",
-  "status": "draft"
+  "status": "draft",
+  "review": {
+   "mark": "plausible, to confirm by a teacher",
+   "note": "A usage or reading slip a Kenyan Grade 4 learner could plausibly make. No source and no homework count; a Kenyan English teacher should say whether it comes up in class."
+  }
  },
  "ENGL.G4.LANGUA.T12_WORD_CLASSES_VERB_AS.PAST_PERFECT.M_PAF_BASE_VERB": {
   "skill": "ENGL.G4.LANGUA.T12_WORD_CLASSES_VERB_AS.PAST_PERFECT",
@@ -2697,7 +3413,11 @@
   "help": "Have the child say both forms aloud and say why one fits: \"finished\", not \"finish\".",
   "feedback": "After had the verb is a participle: had finished, had gone.",
   "source": "common learner error; to confirm by a Kenyan English teacher",
-  "status": "draft"
+  "status": "draft",
+  "review": {
+   "mark": "plausible, to confirm by a teacher",
+   "note": "A usage or reading slip a Kenyan Grade 4 learner could plausibly make. No source and no homework count; a Kenyan English teacher should say whether it comes up in class."
+  }
  },
  "ENGL.G4.LANGUA.T12_WORD_CLASSES_VERB_AS.PAST_PERFECT.M_PAF_WRONG_ORDER": {
   "skill": "ENGL.G4.LANGUA.T12_WORD_CLASSES_VERB_AS.PAST_PERFECT",
@@ -2712,7 +3432,11 @@
   "help": "Have the child say both forms aloud and say why one fits: \"Wanjiru left\", not \"I arrived\".",
   "feedback": "The event with had happened first. Wanjiru had left, then I arrived.",
   "source": "common learner error; to confirm by a Kenyan English teacher",
-  "status": "draft"
+  "status": "draft",
+  "review": {
+   "mark": "plausible, to confirm by a teacher",
+   "note": "A usage or reading slip a Kenyan Grade 4 learner could plausibly make. No source and no homework count; a Kenyan English teacher should say whether it comes up in class."
+  }
  },
  "ENGL.G4.WRITIN.T12_GUIDED_COMPOSITION.DIARY_PARTS.M_DIA_NO_DATE": {
   "skill": "ENGL.G4.WRITIN.T12_GUIDED_COMPOSITION.DIARY_PARTS",
@@ -2727,7 +3451,11 @@
   "help": "Have the child say both forms aloud and say why one fits: \"the date\", not \"a title\".",
   "feedback": "A diary entry begins with the date, so you know when it happened.",
   "source": "common learner error; to confirm by a Kenyan English teacher",
-  "status": "draft"
+  "status": "draft",
+  "review": {
+   "mark": "plausible, to confirm by a teacher",
+   "note": "A usage or reading slip a Kenyan Grade 4 learner could plausibly make. No source and no homework count; a Kenyan English teacher should say whether it comes up in class."
+  }
  },
  "ENGL.G4.WRITIN.T12_GUIDED_COMPOSITION.DIARY_PARTS.M_DIA_LETTER_FORMAT": {
   "skill": "ENGL.G4.WRITIN.T12_GUIDED_COMPOSITION.DIARY_PARTS",
@@ -2742,7 +3470,11 @@
   "help": "Have the child say both forms aloud and say why one fits: \"Monday, 4th March. Dear Diary,\", not \"Dear Mum, how are you?\".",
   "feedback": "A diary is written to yourself. Begin with the date and Dear Diary, not Dear Mum.",
   "source": "common learner error; to confirm by a Kenyan English teacher",
-  "status": "draft"
+  "status": "draft",
+  "review": {
+   "mark": "plausible, to confirm by a teacher",
+   "note": "A usage or reading slip a Kenyan Grade 4 learner could plausibly make. No source and no homework count; a Kenyan English teacher should say whether it comes up in class."
+  }
  },
  "ENGL.G4.WRITIN.T12_GUIDED_COMPOSITION.DIARY_PARTS.M_DIA_THIRD_PERSON": {
   "skill": "ENGL.G4.WRITIN.T12_GUIDED_COMPOSITION.DIARY_PARTS",
@@ -2757,7 +3489,11 @@
   "help": "Have the child say both forms aloud and say why one fits: \"I woke up early.\", not \"Wanjiru woke up early.\".",
   "feedback": "A diary is about you, so write in the first person: I woke up early.",
   "source": "common learner error; to confirm by a Kenyan English teacher",
-  "status": "draft"
+  "status": "draft",
+  "review": {
+   "mark": "plausible, to confirm by a teacher",
+   "note": "A usage or reading slip a Kenyan Grade 4 learner could plausibly make. No source and no homework count; a Kenyan English teacher should say whether it comes up in class."
+  }
  },
  "ENGL.G4.WRITIN.T12_GUIDED_COMPOSITION.DIARY_PARTS.M_DIA_NO_FEELINGS": {
   "skill": "ENGL.G4.WRITIN.T12_GUIDED_COMPOSITION.DIARY_PARTS",
@@ -2772,7 +3508,11 @@
   "help": "Have the child say both forms aloud and say why one fits: \"how the writer felt\", not \"a list of names\".",
   "feedback": "A diary also tells how you felt: I was happy when we won.",
   "source": "common learner error; to confirm by a Kenyan English teacher",
-  "status": "draft"
+  "status": "draft",
+  "review": {
+   "mark": "plausible, to confirm by a teacher",
+   "note": "A usage or reading slip a Kenyan Grade 4 learner could plausibly make. No source and no homework count; a Kenyan English teacher should say whether it comes up in class."
+  }
  },
  "ENGL.G4.LISTEN.T13_PRONUNCIATION_AND_VO.MONEY_WORDS.M_MON_EARN_SAVE": {
   "skill": "ENGL.G4.LISTEN.T13_PRONUNCIATION_AND_VO.MONEY_WORDS",
@@ -2787,7 +3527,11 @@
   "help": "Have the child say both forms aloud and say why one fits: \"saves\", not \"earns\".",
   "feedback": "To earn is to get money for work. To save is to keep money for later.",
   "source": "common learner error; to confirm by a Kenyan English teacher",
-  "status": "draft"
+  "status": "draft",
+  "review": {
+   "mark": "plausible, to confirm by a teacher",
+   "note": "A usage or reading slip a Kenyan Grade 4 learner could plausibly make. No source and no homework count; a Kenyan English teacher should say whether it comes up in class."
+  }
  },
  "ENGL.G4.LISTEN.T13_PRONUNCIATION_AND_VO.MONEY_WORDS.M_MON_BORROW_LEND": {
   "skill": "ENGL.G4.LISTEN.T13_PRONUNCIATION_AND_VO.MONEY_WORDS",
@@ -2802,7 +3546,11 @@
   "help": "Have the child say both forms aloud and say why one fits: \"borrow\", not \"lend\".",
   "feedback": "You borrow when you take for a short time. You lend when you give for a short time.",
   "source": "common learner error; to confirm by a Kenyan English teacher",
-  "status": "draft"
+  "status": "draft",
+  "review": {
+   "mark": "plausible, to confirm by a teacher",
+   "note": "A usage or reading slip a Kenyan Grade 4 learner could plausibly make. No source and no homework count; a Kenyan English teacher should say whether it comes up in class."
+  }
  },
  "ENGL.G4.LISTEN.T13_PRONUNCIATION_AND_VO.MONEY_WORDS.M_MON_NEAR_MEANING": {
   "skill": "ENGL.G4.LISTEN.T13_PRONUNCIATION_AND_VO.MONEY_WORDS",
@@ -2817,7 +3565,11 @@
   "help": "Have the child say both forms aloud and say why one fits: \"budget\", not \"price\".",
   "feedback": "Read the whole sentence and say what the gap must mean before you choose.",
   "source": "common learner error; to confirm by a Kenyan English teacher",
-  "status": "draft"
+  "status": "draft",
+  "review": {
+   "mark": "plausible, to confirm by a teacher",
+   "note": "A usage or reading slip a Kenyan Grade 4 learner could plausibly make. No source and no homework count; a Kenyan English teacher should say whether it comes up in class."
+  }
  },
  "ENGL.G4.LISTEN.T13_PRONUNCIATION_AND_VO.MONEY_WORDS.M_MON_PRICE_CHANGE": {
   "skill": "ENGL.G4.LISTEN.T13_PRONUNCIATION_AND_VO.MONEY_WORDS",
@@ -2832,7 +3584,11 @@
   "help": "Have the child say both forms aloud and say why one fits: \"price\", not \"change\".",
   "feedback": "The price is what something costs. Change is the money given back.",
   "source": "common learner error; to confirm by a Kenyan English teacher",
-  "status": "draft"
+  "status": "draft",
+  "review": {
+   "mark": "plausible, to confirm by a teacher",
+   "note": "A usage or reading slip a Kenyan Grade 4 learner could plausibly make. No source and no homework count; a Kenyan English teacher should say whether it comes up in class."
+  }
  },
  "ENGL.G4.LISTEN.T13_PRONUNCIATION_AND_VO.SILENT_LETTERS.M_SIL_NEIGHBOUR": {
   "skill": "ENGL.G4.LISTEN.T13_PRONUNCIATION_AND_VO.SILENT_LETTERS",
@@ -2847,7 +3603,11 @@
   "help": "Have the child say both forms aloud and say why one fits: \"k\", not \"n\".",
   "feedback": "Say the word aloud. In knife you hear n, but not k.",
   "source": "common learner error; to confirm by a Kenyan English teacher",
-  "status": "draft"
+  "status": "draft",
+  "review": {
+   "mark": "plausible, to confirm by a teacher",
+   "note": "A usage or reading slip a Kenyan Grade 4 learner could plausibly make. No source and no homework count; a Kenyan English teacher should say whether it comes up in class."
+  }
  },
  "ENGL.G4.LISTEN.T13_PRONUNCIATION_AND_VO.SILENT_LETTERS.M_SIL_NONE": {
   "skill": "ENGL.G4.LISTEN.T13_PRONUNCIATION_AND_VO.SILENT_LETTERS",
@@ -2862,7 +3622,11 @@
   "help": "Have the child say both forms aloud and say why one fits: \"w\", not \"none\".",
   "feedback": "Some letters are written but not said. In write, the w is silent.",
   "source": "common learner error; to confirm by a Kenyan English teacher",
-  "status": "draft"
+  "status": "draft",
+  "review": {
+   "mark": "plausible, to confirm by a teacher",
+   "note": "A usage or reading slip a Kenyan Grade 4 learner could plausibly make. No source and no homework count; a Kenyan English teacher should say whether it comes up in class."
+  }
  },
  "ENGL.G4.LISTEN.T13_PRONUNCIATION_AND_VO.SILENT_LETTERS.M_SIL_END_E": {
   "skill": "ENGL.G4.LISTEN.T13_PRONUNCIATION_AND_VO.SILENT_LETTERS",
@@ -2877,7 +3641,11 @@
   "help": "Have the child say both forms aloud and say why one fits: \"b\", not \"m\".",
   "feedback": "A silent letter can be anywhere. In lamb the b is silent.",
   "source": "common learner error; to confirm by a Kenyan English teacher",
-  "status": "draft"
+  "status": "draft",
+  "review": {
+   "mark": "doubtful",
+   "why": "The final e of knife and write is silent, so choosing it is correct. The misconception as written (always the last letter) is invented. Items using it were changed."
+  }
  },
  "ENGL.G4.LANGUA.T13_WORD_CLASS_PREPOSITI.PREP_POSITION.M_PRE_IN_ON": {
   "skill": "ENGL.G4.LANGUA.T13_WORD_CLASS_PREPOSITI.PREP_POSITION",
@@ -2892,7 +3660,11 @@
   "help": "Have the child say both forms aloud and say why one fits: \"on\", not \"in\".",
   "feedback": "On means touching the top of something. In means inside it.",
   "source": "common learner error; to confirm by a Kenyan English teacher",
-  "status": "draft"
+  "status": "draft",
+  "review": {
+   "mark": "plausible, to confirm by a teacher",
+   "note": "A usage or reading slip a Kenyan Grade 4 learner could plausibly make. No source and no homework count; a Kenyan English teacher should say whether it comes up in class."
+  }
  },
  "ENGL.G4.LANGUA.T13_WORD_CLASS_PREPOSITI.PREP_POSITION.M_PRE_BETWEEN_AMONG": {
   "skill": "ENGL.G4.LANGUA.T13_WORD_CLASS_PREPOSITI.PREP_POSITION",
@@ -2907,7 +3679,11 @@
   "help": "Have the child say both forms aloud and say why one fits: \"between\", not \"among\".",
   "feedback": "Use between for two things and among for more than two.",
   "source": "common learner error; to confirm by a Kenyan English teacher",
-  "status": "draft"
+  "status": "draft",
+  "review": {
+   "mark": "plausible, to confirm by a teacher",
+   "note": "A usage or reading slip a Kenyan Grade 4 learner could plausibly make. No source and no homework count; a Kenyan English teacher should say whether it comes up in class."
+  }
  },
  "ENGL.G4.LANGUA.T13_WORD_CLASS_PREPOSITI.PREP_POSITION.M_PRE_UNDER_OVER": {
   "skill": "ENGL.G4.LANGUA.T13_WORD_CLASS_PREPOSITI.PREP_POSITION",
@@ -2922,7 +3698,11 @@
   "help": "Have the child say both forms aloud and say why one fits: \"under\", not \"on\".",
   "feedback": "Under means below something. Behind means at the back of it.",
   "source": "common learner error; to confirm by a Kenyan English teacher",
-  "status": "draft"
+  "status": "draft",
+  "review": {
+   "mark": "plausible, to confirm by a teacher",
+   "note": "A usage or reading slip a Kenyan Grade 4 learner could plausibly make. No source and no homework count; a Kenyan English teacher should say whether it comes up in class."
+  }
  },
  "ENGL.G4.LANGUA.T13_WORD_CLASS_PREPOSITI.PREP_POSITION.M_PRE_FRONT_BEHIND": {
   "skill": "ENGL.G4.LANGUA.T13_WORD_CLASS_PREPOSITI.PREP_POSITION",
@@ -2937,7 +3717,11 @@
   "help": "Have the child say both forms aloud and say why one fits: \"behind\", not \"in front of\".",
   "feedback": "In front of means before it. Behind means after it, at the back.",
   "source": "common learner error; to confirm by a Kenyan English teacher",
-  "status": "draft"
+  "status": "draft",
+  "review": {
+   "mark": "plausible, to confirm by a teacher",
+   "note": "A usage or reading slip a Kenyan Grade 4 learner could plausibly make. No source and no homework count; a Kenyan English teacher should say whether it comes up in class."
+  }
  },
  "ENGL.G4.LANGUA.T13_WORD_CLASS_PREPOSITI.PREP_DIRECTION.M_PRD_TO_INTO": {
   "skill": "ENGL.G4.LANGUA.T13_WORD_CLASS_PREPOSITI.PREP_DIRECTION",
@@ -2952,7 +3736,11 @@
   "help": "Have the child say both forms aloud and say why one fits: \"into\", not \"to\".",
   "feedback": "Into shows going from outside to inside a place. To shows going towards it.",
   "source": "common learner error; to confirm by a Kenyan English teacher",
-  "status": "draft"
+  "status": "draft",
+  "review": {
+   "mark": "plausible, to confirm by a teacher",
+   "note": "A usage or reading slip a Kenyan Grade 4 learner could plausibly make. No source and no homework count; a Kenyan English teacher should say whether it comes up in class."
+  }
  },
  "ENGL.G4.LANGUA.T13_WORD_CLASS_PREPOSITI.PREP_DIRECTION.M_PRD_AT_FOR_TO": {
   "skill": "ENGL.G4.LANGUA.T13_WORD_CLASS_PREPOSITI.PREP_DIRECTION",
@@ -2967,7 +3755,11 @@
   "help": "Have the child say both forms aloud and say why one fits: \"to\", not \"at\".",
   "feedback": "After go use to: go to school. At tells where something is.",
   "source": "Kiswahili influence (to confirm by a Kenyan English teacher)",
-  "status": "draft"
+  "status": "draft",
+  "review": {
+   "mark": "plausible, to confirm by a teacher",
+   "note": "A usage or reading slip a Kenyan Grade 4 learner could plausibly make. No source and no homework count; a Kenyan English teacher should say whether it comes up in class."
+  }
  },
  "ENGL.G4.LANGUA.T13_WORD_CLASS_PREPOSITI.PREP_DIRECTION.M_PRD_TO_HOME": {
   "skill": "ENGL.G4.LANGUA.T13_WORD_CLASS_PREPOSITI.PREP_DIRECTION",
@@ -2982,7 +3774,11 @@
   "help": "Have the child say both forms aloud and say why one fits: \"home\", not \"to home\".",
   "feedback": "Home needs no word before it after go: I went home.",
   "source": "common learner error; to confirm by a Kenyan English teacher",
-  "status": "draft"
+  "status": "draft",
+  "review": {
+   "mark": "plausible, to confirm by a teacher",
+   "note": "A usage or reading slip a Kenyan Grade 4 learner could plausibly make. No source and no homework count; a Kenyan English teacher should say whether it comes up in class."
+  }
  },
  "ENGL.G4.LANGUA.T13_WORD_CLASS_PREPOSITI.PREP_DIRECTION.M_PRD_THROUGH_ACROSS": {
   "skill": "ENGL.G4.LANGUA.T13_WORD_CLASS_PREPOSITI.PREP_DIRECTION",
@@ -2997,7 +3793,11 @@
   "help": "Have the child say both forms aloud and say why one fits: \"across\", not \"through\".",
   "feedback": "Across means from one side of a flat place to the other. Through means passing in at one side and out at the other.",
   "source": "common learner error; to confirm by a Kenyan English teacher",
-  "status": "draft"
+  "status": "draft",
+  "review": {
+   "mark": "plausible, to confirm by a teacher",
+   "note": "A usage or reading slip a Kenyan Grade 4 learner could plausibly make. No source and no homework count; a Kenyan English teacher should say whether it comes up in class."
+  }
  },
  "ENGL.G4.WRITIN.T13_SPELLING.DOUBLE_CONSONANTS.M_DBL_SINGLE": {
   "skill": "ENGL.G4.WRITIN.T13_SPELLING.DOUBLE_CONSONANTS",
@@ -3012,7 +3812,11 @@
   "help": "Have the child say both forms aloud and say why one fits: \"coffee\", not \"cofee\".",
   "feedback": "Some words have two of the same letter together: coffee, summer, letter.",
   "source": "common learner error; to confirm by a Kenyan English teacher",
-  "status": "draft"
+  "status": "draft",
+  "review": {
+   "mark": "plausible, to confirm by a teacher",
+   "note": "A usage or reading slip a Kenyan Grade 4 learner could plausibly make. No source and no homework count; a Kenyan English teacher should say whether it comes up in class."
+  }
  },
  "ENGL.G4.WRITIN.T13_SPELLING.DOUBLE_CONSONANTS.M_DBL_PHONETIC": {
   "skill": "ENGL.G4.WRITIN.T13_SPELLING.DOUBLE_CONSONANTS",
@@ -3027,7 +3831,11 @@
   "help": "Have the child say both forms aloud and say why one fits: \"rabbit\", not \"rabbet\".",
   "feedback": "Say the word slowly and then check it. Rabbit has bb in the middle.",
   "source": "common learner error; to confirm by a Kenyan English teacher",
-  "status": "draft"
+  "status": "draft",
+  "review": {
+   "mark": "common in the literature",
+   "source": "Treiman (1993): children spell by sound and miss doubled letters."
+  }
  },
  "ENGL.G4.WRITIN.T13_SPELLING.DOUBLE_CONSONANTS.M_DBL_EXTRA": {
   "skill": "ENGL.G4.WRITIN.T13_SPELLING.DOUBLE_CONSONANTS",
@@ -3042,6 +3850,10 @@
   "help": "Have the child say both forms aloud and say why one fits: \"letter\", not \"lettter\".",
   "feedback": "Only some letters are doubled. Check each word: letter has tt but not three t.",
   "source": "common learner error; to confirm by a Kenyan English teacher",
-  "status": "draft"
+  "status": "draft",
+  "review": {
+   "mark": "plausible, to confirm by a teacher",
+   "note": "A usage or reading slip a Kenyan Grade 4 learner could plausibly make. No source and no homework count; a Kenyan English teacher should say whether it comes up in class."
+  }
  }
 }

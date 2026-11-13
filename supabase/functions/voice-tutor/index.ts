@@ -17731,11 +17731,11 @@ var duo = (key, cs, pool2, { stem = SENT, hints, topic, sentences = false }) => 
 };
 var sentenceChoose = (key, cs, pool2, { stem = SENT, hints, rung: rung2 = 2 }) => eng({ id: id(key, "sentence"), kind: "choose-sentence", cs, oc: outcomeLetters(cs, 2)[1], form: "direct", rung: rung2, gen: choose5(pool2, { stem, hints }) });
 var ART = [
-  ["Mama gave me ___ apple. It was sweet.", "an", ["a", "M_ART_A_BEFORE_VOWEL"], ["the", "M_ART_THE_FIRST_MENTION"], "Apple starts with a vowel sound and has not been mentioned before: an apple."],
+  ["Mama gave me ___ apple. The apple was sweet.", "an", ["a", "M_ART_A_BEFORE_VOWEL"], ["the", "M_ART_THE_FIRST_MENTION"], "Apple starts with a vowel sound and has not been mentioned before: an apple."],
   ["Kamau bought ___ book. The book was about lions.", "a", ["an", "M_ART_AN_BEFORE_CONSONANT"], ["the", "M_ART_THE_FIRST_MENTION"], "Book starts with a consonant sound and is mentioned for the first time: a book."],
   ["There is only one sun. We feel the heat of ___ sun.", "the", ["a", "M_ART_A_FOR_KNOWN"], ["an", "M_ART_AN_BEFORE_CONSONANT"], "There is only one sun, so we use the."],
   ["We waited for ___ hour at the clinic.", "an", ["a", "M_ART_SOUND_NOT_LETTER"], ["the", "M_ART_THE_FIRST_MENTION"], 'Hour starts with the vowel sound "ow" because the h is silent: an hour.'],
-  ["Every pupil at our school wears ___ uniform.", "a", ["an", "M_ART_SOUND_NOT_LETTER"], ["the", "M_ART_THE_FIRST_MENTION"], 'Uniform starts with the consonant sound "yoo": a uniform.'],
+  ["Tabitha has ___ uniform. The uniform is new.", "a", ["an", "M_ART_SOUND_NOT_LETTER"], ["the", "M_ART_THE_FIRST_MENTION"], 'Uniform starts with the consonant sound "yoo": a uniform.'],
   ["Please close ___ door. It is open.", "the", ["a", "M_ART_A_FOR_KNOWN"], ["an", "M_ART_AN_BEFORE_CONSONANT"], "Both people know which door, so we use the."],
   ["Njeri wants to be ___ engineer.", "an", ["a", "M_ART_A_BEFORE_VOWEL"], ["the", "M_ART_THE_FIRST_MENTION"], "Engineer starts with a vowel sound: an engineer."],
   ["Is there ___ egg in the basket?", "an", ["a", "M_ART_A_BEFORE_VOWEL"], ["the", "M_ART_THE_FIRST_MENTION"], "Egg starts with a vowel sound, and it is a new thing: an egg."]
@@ -17817,14 +17817,14 @@ var ADJ = [
   L2('Adjective in "Achieng wore a yellow dress."', ['Which word in the sentence "Achieng wore a yellow dress." is an adjective.', "yellow", ["dress", "M_ADJ_NOUN_AS_ADJ"], ["wore", "M_ADJ_VERB_AS_ADJ"], ["a", "M_ADJ_ARTICLE_AS_ADJ"], "Yellow tells more about the dress."])
 ];
 var ORD = [
-  ["She sat on a ___ stool.", "big round", ["round big", "M_ADO_SHAPE_BEFORE_SIZE"], ["big and round", "M_ADO_NO_AND"], ["stool big round", "M_ADO_AFTER_NOUN"], "Size comes before shape: a big round stool."],
-  ["Wafula kicked a ___ ball.", "small round", ["round small", "M_ADO_SHAPE_BEFORE_SIZE"], ["small and round", "M_ADO_NO_AND"], ["ball small round", "M_ADO_AFTER_NOUN"], "Size comes before shape: a small round ball."],
-  ["Mama bought a ___ table.", "large square", ["square large", "M_ADO_SHAPE_BEFORE_SIZE"], ["large and square", "M_ADO_NO_AND"], ["table large square", "M_ADO_AFTER_NOUN"], "Size comes before shape: a large square table."],
-  ["The goat ate a ___ stick.", "long thin", ["thin long", "M_ADO_SHAPE_BEFORE_SIZE"], ["long and thin", "M_ADO_NO_AND"], ["stick long thin", "M_ADO_AFTER_NOUN"], "Size comes before shape: a long thin stick."],
-  ["Amina has a ___.", "big ball", ["ball big", "M_ADO_AFTER_NOUN"], ["ball and big", "M_ADO_AFTER_NOUN"], ["big and ball", "M_ADO_NO_AND"], "The adjective comes before the noun: a big ball."],
-  ["We live in a ___.", "small house", ["house small", "M_ADO_AFTER_NOUN"], ["house and small", "M_ADO_AFTER_NOUN"], ["small and house", "M_ADO_NO_AND"], "The adjective comes before the noun: a small house."],
-  ["Baraka kicked a ___.", "big round ball", ["ball big round", "M_ADO_AFTER_NOUN"], ["round big ball", "M_ADO_SHAPE_BEFORE_SIZE"], ["big and round ball", "M_ADO_NO_AND"], "Size, then shape, then the noun: a big round ball."],
-  ["The hall has a ___ roof.", "huge flat", ["flat huge", "M_ADO_SHAPE_BEFORE_SIZE"], ["huge and flat", "M_ADO_NO_AND"], ["roof huge flat", "M_ADO_AFTER_NOUN"], "Size comes before shape: a huge flat roof."]
+  ["She sat on a ___ stool.", "big round", ["round big", "M_ADO_SHAPE_BEFORE_SIZE"], ["stool big round", "M_ADO_AFTER_NOUN"], "Size comes before shape: a big round stool."],
+  ["Wafula kicked a ___ ball.", "small round", ["round small", "M_ADO_SHAPE_BEFORE_SIZE"], ["ball small round", "M_ADO_AFTER_NOUN"], "Size comes before shape: a small round ball."],
+  ["Mama bought a ___ table.", "large square", ["square large", "M_ADO_SHAPE_BEFORE_SIZE"], ["table large square", "M_ADO_AFTER_NOUN"], "Size comes before shape: a large square table."],
+  ["The goat ate a ___ stick.", "long thin", ["thin long", "M_ADO_SHAPE_BEFORE_SIZE"], ["stick long thin", "M_ADO_AFTER_NOUN"], "Size comes before shape: a long thin stick."],
+  ["Amina has a ___.", "big ball", ["ball big", "M_ADO_AFTER_NOUN"], ["ball and big", "M_ADO_AFTER_NOUN"], "The adjective comes before the noun: a big ball."],
+  ["We live in a ___.", "small house", ["house small", "M_ADO_AFTER_NOUN"], ["house and small", "M_ADO_AFTER_NOUN"], "The adjective comes before the noun: a small house."],
+  ["Baraka kicked a ___.", "big round ball", ["ball big round", "M_ADO_AFTER_NOUN"], ["round big ball", "M_ADO_SHAPE_BEFORE_SIZE"], "Size, then shape, then the noun: a big round ball."],
+  ["The hall has a ___ roof.", "huge flat", ["flat huge", "M_ADO_SHAPE_BEFORE_SIZE"], ["roof huge flat", "M_ADO_AFTER_NOUN"], "Size comes before shape: a huge flat roof."]
 ];
 var CNT = [
   ["There are not ___ chairs in the hall.", "many", ["much", "M_QUA_MUCH_COUNT"], ["little", "M_QUA_FEW_UNCOUNT"], "Chairs can be counted: many."],
@@ -17932,11 +17932,11 @@ var ADV_KIND = [
   ['"We left early." Which kind of adverb is early.', "time", ["manner", "M_ADV_KIND_MIX"], ["place", "M_ADV_KIND_MIX"], "Early tells when."]
 ];
 var CNJ = [
-  ["Ali likes tea ___ coffee.", "and", ["but", "M_CNJ_BUT_FOR_AND"], ["or", "M_CNJ_OR_FOR_AND"], "He likes both, so and joins them."],
+  ["Ali likes tea ___ coffee. He drinks both every day.", "and", ["but", "M_CNJ_BUT_FOR_AND"], ["or", "M_CNJ_OR_FOR_AND"], "He likes both, so and joins them."],
   ["It was raining, ___ we stayed inside.", "so", ["because", "M_CNJ_BECAUSE_SO"], ["but", "M_CNJ_BUT_FOR_AND"], "Staying inside is the result: so."],
   ["We stayed inside ___ it was raining.", "because", ["so", "M_CNJ_BECAUSE_SO"], ["but", "M_CNJ_BUT_FOR_AND"], "The rain is the reason: because."],
   ["I wanted to play, ___ I was tired.", "but", ["and", "M_CNJ_AND_FOR_BUT"], ["or", "M_CNJ_OR_FOR_AND"], "The two ideas go against each other: but."],
-  ["Mama bought rice ___ beans.", "and", ["or", "M_CNJ_OR_FOR_AND"], ["but", "M_CNJ_BUT_FOR_AND"], "She bought both: and."],
+  ["Mama bought rice ___ beans. She put both in the basket.", "and", ["or", "M_CNJ_OR_FOR_AND"], ["but", "M_CNJ_BUT_FOR_AND"], "She bought both: and."],
   ["Would you like tea ___ juice?", "or", ["and", "M_CNJ_AND_FOR_OR"], ["but", "M_CNJ_BUT_FOR_AND"], "A choice between two things: or."],
   ["He was hungry, ___ he ate two plates of ugali.", "so", ["because", "M_CNJ_BECAUSE_SO"], ["but", "M_CNJ_BUT_FOR_AND"], "Eating is the result of being hungry: so."],
   ["She is small ___ strong.", "but", ["and", "M_CNJ_AND_FOR_BUT"], ["or", "M_CNJ_OR_FOR_AND"], "Small and strong go against each other: but."]
@@ -18016,7 +18016,7 @@ var FAMILIES16 = [
   sentenceChoose("pro", "LANGUA.T4.PERSONAL_PRONOUNS", PRO_SENT, { hints: ["Do not say the name and the pronoun together.", "Before the verb use the subject form. After a small word use the object form."] }),
   ...trio("poss", "LANGUA.T4.POSSESSIVE_PRONOUNS", POSS, { thinOk: true, topic: "saying who owns something", hints: ["Look at what comes after the gap. Is there a noun, or nothing?", "Mine, yours, hers, ours and theirs stand alone and never take an apostrophe."] }),
   ...duo("adj", "LANGUA.T5.ADJECTIVES", ADJ, { stem: "", topic: "about the describing word in a sentence", hints: ["An adjective tells more about a noun, such as a person or a thing.", "A verb tells what is done. An adverb tells how, when or where."] }),
-  ...trio("ado", "LANGUA.T5.ADJECTIVE_ORDER", ORD, { thinOk: false, stem: WORDS2, topic: "with describing words before a noun", hints: ["In English the describing words come before the noun.", "Size comes first, then shape. Do not put and between them."] }),
+  ...trio("ado", "LANGUA.T5.ADJECTIVE_ORDER", ORD, { thinOk: true, stem: WORDS2, topic: "with describing words before a noun", hints: ["In English the describing words come before the noun.", "Size comes first, then shape, then the noun."] }),
   ...trio("cnt", "LANGUA.T6.COUNT_UNCOUNT", CNT, { thinOk: true, topic: "about how much or how many", hints: ["Can you count the thing one by one?", "Many and few go with things you can count. Much and little go with things you cannot."] }),
   ...trio("som", "LANGUA.T6.SOME_ANY", SOM, { thinOk: true, stem: WORDS2, topic: "about how much there is of something", hints: ["Is the sentence positive, a question or a negative?", "Some goes in a positive sentence. Any goes in a question or after not. Enough comes before the noun."] }),
   ...trio("prp", "LANGUA.T7.PRESENT_PROGRESSIVE", PRP, { thinOk: true, topic: "about what is happening now", hints: ["An action happening now needs am, is or are and a verb ending in -ing.", "Match am, is or are to the subject. Drop a silent e or double the last letter before -ing."] }),
@@ -18162,7 +18162,7 @@ var DESC = [
   L3("A sentence about smell", ["Which sentence uses the sense of smell.", "The kitchen smells of fresh bread.", ["The kitchen is big and clean.", "M_DES_ONE_SENSE"], ["The kitchen has two doors.", "M_DES_ONE_SENSE"], "Smells of fresh bread uses the sense of smell."]),
   L3("A sentence about sound", ["Which sentence uses the sense of sound.", "The drums beat loudly in the hall.", ["The hall is wide and tall.", "M_DES_ONE_SENSE"], ["The hall has a red floor.", "M_DES_ONE_SENSE"], "Beat loudly uses the sense of hearing."]),
   L3("A sentence about touch", ["Which sentence uses the sense of touch.", "The cloth is soft and warm.", ["The cloth is blue.", "M_DES_ONE_SENSE"], ["The cloth is on the table.", "M_DES_ONE_SENSE"], "Soft and warm use the sense of touch."]),
-  L3("The introduction", ["Which part of a description names what you will describe.", "the introduction", ["the conclusion", "M_DES_PART_MIX"], ["the title", "M_DES_PART_MIX"], "The introduction names the thing you will describe."]),
+  L3("The introduction", ["Which part of a description names what you will describe.", "the introduction", ["the conclusion", "M_DES_PART_MIX"], ["the middle", "M_DES_PART_MIX"], "The introduction names the thing you will describe."]),
   L3("The conclusion", ["Which part of a description ends with a last thought or feeling about it.", "the conclusion", ["the introduction", "M_DES_PART_MIX"], ["the beginning", "M_DES_PART_MIX"], "The conclusion ends with a last thought or feeling."])
 ];
 var DIARY = [
@@ -18214,12 +18214,12 @@ var topicGen = (cskill) => {
   return { passage: { title: "A paragraph", text: show.map((i) => p[i]).join(" ") }, question: "Which sentence is the topic sentence of the paragraph. It tells what the whole paragraph is about.", options, instruction: "Read the paragraph. Then choose the best answer.", hints: ["The topic sentence names what the whole paragraph is about.", "The other sentences give details, steps or times."], steps: ["The topic sentence covers all the others.", `The topic sentence is "${p[0]}"`] };
 };
 var PICSENT = [
-  ["Picture: a boy is picking a mango from a tree. Which sentence tells the picture best.", "The boy picked a mango from the tree.", ["The boy picks a mango from the tree.", "M_PIC_TENSE"], ["The boy sold a mango at the market.", "M_PIC_MISMATCH"], ["The boy ate a mango under the tree.", "M_PIC_MISMATCH"], "The story is told after the event, so we use the past tense."],
-  ["Picture: a girl is watering a small plant. Which sentence tells the picture best.", "The girl watered the small plant.", ["The girl waters the small plant.", "M_PIC_TENSE"], ["The girl planted a big tree.", "M_PIC_MISMATCH"], ["The girl picked a red flower.", "M_PIC_MISMATCH"], "The picture shows watering, told in the past tense."],
-  ["Picture: two children are walking to school with bags. Which sentence tells the picture best.", "The children walked to school with their bags.", ["The children walk to school with their bags.", "M_PIC_TENSE"], ["The children rode a bus to the market.", "M_PIC_MISMATCH"], ["The children played football at home.", "M_PIC_MISMATCH"], "The picture shows a walk to school, told in the past tense."],
-  ["Picture: a cat is knocking a cup off a table. Which sentence tells the picture best.", "The cat knocked the cup off the table.", ["The cat knocks the cup off the table.", "M_PIC_TENSE"], ["The cat drank milk from the cup.", "M_PIC_MISMATCH"], ["The cat slept on the table.", "M_PIC_MISMATCH"], "The picture shows the cup being knocked off, told in the past tense."],
-  ["Picture: dark clouds are over the hills and rain is falling. Which sentence tells the picture best.", "Dark clouds gathered and the rain fell.", ["Dark clouds gather and the rain falls.", "M_PIC_TENSE"], ["The sun shone over the hills.", "M_PIC_MISMATCH"], ["The farmer went to the market.", "M_PIC_MISMATCH"], "The picture shows clouds and rain, told in the past tense."],
-  ["Picture: a farmer is cutting ripe maize in a shamba. Which sentence tells the picture best.", "The farmer harvested the ripe maize.", ["The farmer harvests the ripe maize.", "M_PIC_TENSE"], ["The farmer planted the maize seeds.", "M_PIC_MISMATCH"], ["The farmer sold the cows.", "M_PIC_MISMATCH"], "The picture shows a harvest, told in the past tense."]
+  ["Picture: a boy is picking a mango from a tree. Tell it as a story that already happened. Which sentence tells the picture best.", "The boy picked a mango from the tree.", ["The boy picks a mango from the tree.", "M_PIC_TENSE"], ["The boy sold a mango at the market.", "M_PIC_MISMATCH"], ["The boy ate a mango under the tree.", "M_PIC_MISMATCH"], "The story is told after the event, so we use the past tense."],
+  ["Picture: a girl is watering a small plant. Tell it as a story that already happened. Which sentence tells the picture best.", "The girl watered the small plant.", ["The girl waters the small plant.", "M_PIC_TENSE"], ["The girl planted a big tree.", "M_PIC_MISMATCH"], ["The girl picked a red flower.", "M_PIC_MISMATCH"], "The picture shows watering, told in the past tense."],
+  ["Picture: two children are walking to school with bags. Tell it as a story that already happened. Which sentence tells the picture best.", "The children walked to school with their bags.", ["The children walk to school with their bags.", "M_PIC_TENSE"], ["The children rode a bus to the market.", "M_PIC_MISMATCH"], ["The children played football at home.", "M_PIC_MISMATCH"], "The picture shows a walk to school, told in the past tense."],
+  ["Picture: a cat is knocking a cup off a table. Tell it as a story that already happened. Which sentence tells the picture best.", "The cat knocked the cup off the table.", ["The cat knocks the cup off the table.", "M_PIC_TENSE"], ["The cat drank milk from the cup.", "M_PIC_MISMATCH"], ["The cat slept on the table.", "M_PIC_MISMATCH"], "The picture shows the cup being knocked off, told in the past tense."],
+  ["Picture: dark clouds are over the hills and rain is falling. Tell it as a story that already happened. Which sentence tells the picture best.", "Dark clouds gathered and the rain fell.", ["Dark clouds gather and the rain falls.", "M_PIC_TENSE"], ["The sun shone over the hills.", "M_PIC_MISMATCH"], ["The farmer went to the market.", "M_PIC_MISMATCH"], "The picture shows clouds and rain, told in the past tense."],
+  ["Picture: a farmer is cutting ripe maize in a shamba. Tell it as a story that already happened. Which sentence tells the picture best.", "The farmer harvested the ripe maize.", ["The farmer harvests the ripe maize.", "M_PIC_TENSE"], ["The farmer planted the maize seeds.", "M_PIC_MISMATCH"], ["The farmer sold the cows.", "M_PIC_MISMATCH"], "The picture shows a harvest, told in the past tense."]
 ];
 var FAMILIES17 = [
   ...duo2("cap", "WRITIN.T7.CAPITALS_FULL_STOPS", CAP, { sentences: true, topic: "with capital letters and full stops", hints: ["Look at the first letter of the sentence, the names and the word I.", "Only the first word, names and I take a capital. A sentence that tells something ends with a full stop."] }),
@@ -18267,7 +18267,7 @@ var FIRSTAID = [
 var NUTRITION = [
   ["Beans, eggs and meat give us ___.", "protein", ["carbohydrates", "M_NUT_NEAR_MEANING"], ["fibre", "M_NUT_NEAR_MEANING"], ["vitamins", "M_NUT_NEAR_MEANING"], "Protein builds the body."],
   ["Ugali, rice and bread give us energy because they have ___.", "carbohydrates", ["protein", "M_NUT_NEAR_MEANING"], ["vitamins", "M_NUT_NEAR_MEANING"], ["fibre", "M_NUT_NEAR_MEANING"], "Carbohydrates give energy."],
-  ["Fruits and vegetables have ___ that keep us healthy.", "vitamins", ["fibre", "M_NUT_VITAMIN_FIBRE"], ["protein", "M_NUT_NEAR_MEANING"], ["carbohydrates", "M_NUT_NEAR_MEANING"], "Vitamins keep the body healthy."],
+  ["Fruits and vegetables have ___ that keep us healthy.", "vitamins", ["salt", "M_NUT_VITAMIN_FIBRE"], ["protein", "M_NUT_NEAR_MEANING"], ["carbohydrates", "M_NUT_NEAR_MEANING"], "Vitamins keep the body healthy."],
   ["A ___ diet has food from all the food groups.", "balanced", ["heavy", "M_NUT_BALANCED"], ["sweet", "M_NUT_BALANCED"], ["cheap", "M_NUT_BALANCED"], "A balanced diet has all the food groups in the right amounts."],
   ["___ in vegetables helps food move through the body.", "Fibre", ["Vitamins", "M_NUT_VITAMIN_FIBRE"], ["Protein", "M_NUT_NEAR_MEANING"], ["Sugar", "M_NUT_NEAR_MEANING"], "Fibre helps food move through the body."],
   ["Eating only ugali every day is not a ___ diet.", "balanced", ["heavy", "M_NUT_BALANCED"], ["cheap", "M_NUT_BALANCED"], ["sweet", "M_NUT_BALANCED"], "One food alone does not give everything the body needs."]
@@ -18286,7 +18286,7 @@ var FARM = [
   ["We ___ the maize when it is ripe.", "harvest", ["plant", "M_FRM_NEAR_MEANING"], ["plough", "M_FRM_NEAR_MEANING"], ["weed", "M_FRM_NEAR_MEANING"], "To harvest is to gather the crop when it is ripe."],
   ["Cows, goats and sheep are ___.", "livestock", ["crops", "M_FRM_LIVESTOCK_CROPS"], ["seedlings", "M_FRM_NEAR_MEANING"], ["fertiliser", "M_FRM_NEAR_MEANING"], "Livestock are farm animals."],
   ["___ makes the soil richer so that crops grow well.", "Fertiliser", ["Pesticide", "M_FRM_FERTILISER"], ["Livestock", "M_FRM_NEAR_MEANING"], ["Harvest", "M_FRM_NEAR_MEANING"], "Fertiliser feeds the soil."],
-  ["Before planting, the farmer will ___ the land.", "plough", ["harvest", "M_FRM_NEAR_MEANING"], ["weed", "M_FRM_NEAR_MEANING"], ["fertiliser", "M_FRM_NEAR_MEANING"], "To plough is to turn over the soil before planting."],
+  ["Before planting, the farmer uses oxen or a tractor to ___ the land.", "plough", ["harvest", "M_FRM_NEAR_MEANING"], ["weed", "M_FRM_NEAR_MEANING"], ["fertiliser", "M_FRM_NEAR_MEANING"], "To plough is to turn over the soil before planting."],
   ["Young plants that grow from seeds are called ___.", "seedlings", ["harvest", "M_FRM_NEAR_MEANING"], ["fertiliser", "M_FRM_NEAR_MEANING"], ["livestock", "M_FRM_LIVESTOCK_CROPS"], "Seedlings are young plants."],
   ["We ___ to remove unwanted plants between the rows.", "weed", ["harvest", "M_FRM_NEAR_MEANING"], ["plough", "M_FRM_NEAR_MEANING"], ["plant", "M_FRM_NEAR_MEANING"], "To weed is to remove unwanted plants."]
 ];
@@ -18309,7 +18309,7 @@ var MONEY = [
 ];
 var SPORTS = [
   ["The ___ blows the whistle to start the match.", "referee", ["goalkeeper", "M_SPT_NEAR_MEANING"], ["opponent", "M_SPT_NEAR_MEANING"], ["trophy", "M_SPT_NEAR_MEANING"], "The referee controls the game."],
-  ["Our team won the ___ at the end of the tournament.", "trophy", ["tournament", "M_SPT_TROPHY_TOURNAMENT"], ["referee", "M_SPT_NEAR_MEANING"], ["whistle", "M_SPT_NEAR_MEANING"], "A trophy is the prize."],
+  ["At the end, the captain lifted the shining silver ___.", "trophy", ["tournament", "M_SPT_TROPHY_TOURNAMENT"], ["referee", "M_SPT_NEAR_MEANING"], ["whistle", "M_SPT_NEAR_MEANING"], "A trophy is the prize."],
   ["A ___ is a series of games where teams compete.", "tournament", ["trophy", "M_SPT_TROPHY_TOURNAMENT"], ["whistle", "M_SPT_NEAR_MEANING"], ["goalkeeper", "M_SPT_NEAR_MEANING"], "A tournament is a series of games."],
   ["The player on the other team is my ___.", "opponent", ["teammate", "M_SPT_OPPONENT_TEAMMATE"], ["referee", "M_SPT_NEAR_MEANING"], ["goalkeeper", "M_SPT_NEAR_MEANING"], "An opponent plays against you."],
   ["My ___ passed me the ball, so we scored.", "teammate", ["opponent", "M_SPT_OPPONENT_TEAMMATE"], ["referee", "M_SPT_NEAR_MEANING"], ["trophy", "M_SPT_NEAR_MEANING"], "A teammate plays on your side."],
@@ -18334,8 +18334,8 @@ var POLITE2 = [
   L4("Hurting someone by mistake", ["You step on a boy's foot by mistake. What do you say.", "I am sorry, are you hurt?", ["Move your foot.", "M_POL_NO_SORRY"], ["It was nothing.", "M_POL_NO_SORRY"], ["Why was your foot there?", "M_POL_NO_SORRY"], "Say sorry and show you care."])
 ];
 var SILENT = [
-  ['In the word "knife", the silent letter is ___.', "k", ["n", "M_SIL_NEIGHBOUR"], ["none", "M_SIL_NONE"], ["e", "M_SIL_END_E"], 'You say "nife": the k is silent.'],
-  ['In the word "write", the silent letter is ___.', "w", ["r", "M_SIL_NEIGHBOUR"], ["none", "M_SIL_NONE"], ["e", "M_SIL_END_E"], 'You say "rite": the w is silent.'],
+  ['In the word "knife", the silent letter is ___.', "k", ["n", "M_SIL_NEIGHBOUR"], ["none", "M_SIL_NONE"], ["f", "M_SIL_NEIGHBOUR"], 'You say "nife": the k is silent.'],
+  ['In the word "write", the silent letter is ___.', "w", ["r", "M_SIL_NEIGHBOUR"], ["none", "M_SIL_NONE"], ["i", "M_SIL_NEIGHBOUR"], 'You say "rite": the w is silent.'],
   ['In the word "lamb", the silent letter is ___.', "b", ["m", "M_SIL_NEIGHBOUR"], ["none", "M_SIL_NONE"], ["l", "M_SIL_NEIGHBOUR"], 'You say "lam": the b is silent.'],
   ['In the word "listen", the silent letter is ___.', "t", ["s", "M_SIL_NEIGHBOUR"], ["n", "M_SIL_END_E"], ["none", "M_SIL_NONE"], 'You say "lisen": the t is silent.'],
   ['In the word "hour", the silent letter is ___.', "h", ["o", "M_SIL_NEIGHBOUR"], ["none", "M_SIL_NONE"], ["r", "M_SIL_END_E"], 'You say "our": the h is silent.'],
@@ -24373,7 +24373,7 @@ var DET = [
   I2("Each learner ___ asked to bring a book.", "was", [["were", "M_DET_EACH_PLURAL"], ["are", "M_DET_EACH_PLURAL"], ["have", "M_DET_EACH_PLURAL"]], "Each learner is one person, so the verb is singular: was."),
   I2("Would you like ___ more tea, Grandmother?", "some", [["each", "M_DET_SOME_ANY"], ["enough", "M_DET_SOME_ANY"], ["a lots of", "M_DET_LOTS_FORM"]], "In an offer we use some: Would you like some more tea?"),
   I2("There are not ___ chairs for everyone, so some will stand.", "enough", [["each", "M_DET_EACH_PLURAL"], ["a lots of", "M_DET_LOTS_FORM"], ["a lot off", "M_DET_LOTS_FORM"]], "Enough chairs means as many as are needed. It comes before the noun."),
-  I2("Wanjiru gave ___ of the children a mango.", "each", [["a lot of", "M_DET_EACH_PLURAL"], ["enough", "M_DET_EACH_PLURAL"], ["some", "M_DET_EACH_PLURAL"]], "She gave a mango to one child at a time, so each.")
+  I2("Wanjiru gave ___ of the thirty children a mango, so nobody was left out.", "each", [["a lot of", "M_DET_EACH_PLURAL"], ["enough", "M_DET_EACH_PLURAL"], ["some", "M_DET_EACH_PLURAL"]], "She gave a mango to one child at a time, so each.")
 ];
 var CA = [
   I2("The headteacher praised Wanjiru for her ___.", "honesty", [["honest", "M_NOUN_ADJECTIVE_FORM"], ["honestly", "M_NOUN_ADJECTIVE_FORM"], ["honesties", "M_NOUN_ADJECTIVE_FORM"]], "After her, a noun is needed. The noun for honest is honesty."),
@@ -24387,10 +24387,10 @@ var CA_ID = [
   I2("Which of these nouns is abstract.", "kindness", [["river", "M_NOUN_FEELING_CONCRETE"], ["table", "M_NOUN_FEELING_CONCRETE"], ["mango", "M_NOUN_FEELING_CONCRETE"]], "You cannot see or touch kindness. It is an idea, so it is abstract."),
   I2("Which of these nouns is concrete.", "market", [["freedom", "M_NOUN_PLACE_ABSTRACT"], ["honesty", "M_NOUN_PLACE_ABSTRACT"], ["courage", "M_NOUN_PLACE_ABSTRACT"]], "You can walk to a market and see it, so it is concrete."),
   I2("Which of these nouns is abstract.", "hunger", [["bread", "M_NOUN_FEELING_CONCRETE"], ["bowl", "M_NOUN_FEELING_CONCRETE"], ["spoon", "M_NOUN_FEELING_CONCRETE"]], "Hunger is a feeling. You cannot touch it, so it is abstract."),
-  I2("Which of these nouns is abstract.", "music", [["drum", "M_NOUN_SENSE_ABSTRACT"], ["bell", "M_NOUN_SENSE_ABSTRACT"], ["radio", "M_NOUN_SENSE_ABSTRACT"]], "You can hear music but you cannot hold it. The drum, bell and radio are things."),
+  I2("Which of these nouns is abstract.", "happiness", [["drum", "M_NOUN_SENSE_ABSTRACT"], ["bell", "M_NOUN_SENSE_ABSTRACT"], ["radio", "M_NOUN_SENSE_ABSTRACT"]], "Happiness is a feeling, an idea. You cannot touch it. The drum, bell and radio are things."),
   I2("Which of these nouns is concrete.", "teacher", [["wisdom", "M_NOUN_PLACE_ABSTRACT"], ["patience", "M_NOUN_PLACE_ABSTRACT"], ["friendship", "M_NOUN_PLACE_ABSTRACT"]], "A teacher is a person we can see, so the noun is concrete."),
   I2("Which of these nouns is abstract.", "freedom", [["school", "M_NOUN_FEELING_CONCRETE"], ["flag", "M_NOUN_FEELING_CONCRETE"], ["road", "M_NOUN_FEELING_CONCRETE"]], "Freedom is an idea. We cannot touch it, so it is abstract."),
-  I2("Which of these nouns is concrete.", "chalk", [["laughter", "M_NOUN_SENSE_ABSTRACT"], ["silence", "M_NOUN_SENSE_ABSTRACT"], ["time", "M_NOUN_SENSE_ABSTRACT"]], "Chalk is a thing we can touch. Laughter, silence and time cannot be held.")
+  I2("Which of these nouns is concrete.", "chalk", [["bravery", "M_NOUN_SENSE_ABSTRACT"], ["silence", "M_NOUN_SENSE_ABSTRACT"], ["time", "M_NOUN_SENSE_ABSTRACT"]], "Chalk is a thing we can touch. Bravery, silence and time are ideas and cannot be held.")
 ];
 var CORR = [
   I2("Neither Atieno ___ Juma knew the answer.", "nor", [["or", "M_CORR_NEITHER_OR"], ["and", "M_CORR_NEITHER_OR"], ["but", "M_CORR_NEITHER_OR"]], "Neither goes with nor: neither Atieno nor Juma."),
@@ -24417,7 +24417,7 @@ var REL = [
   I2("This is the book ___ I bought yesterday.", "which|that", [["who", "M_REL_WHO_THING"], ["whose", "M_REL_WHOSE_WHO"], ["which it", "M_REL_DOUBLE"]], "A book is a thing, so which."),
   I2("The boy ___ bag was stolen began to cry.", "whose", [["who", "M_REL_WHOSE_WHO"], ["which", "M_REL_WHICH_PERSON"], ["whom", "M_REL_WHOSE_WHO"]], "The bag belongs to the boy. Belonging is whose."),
   I2("The teacher ___ taught us Maths is very kind.", "who|that", [["who she", "M_REL_DOUBLE"], ["which", "M_REL_WHICH_PERSON"], ["whose", "M_REL_WHOSE_WHO"]], "Who already stands for the teacher. Do not add she."),
-  I2("The dog ___ barked all night belongs to our neighbour.", "which|that", [["who", "M_REL_WHO_THING"], ["whose", "M_REL_WHOSE_WHO"], ["which it", "M_REL_DOUBLE"]], "A dog is an animal, so which or that."),
+  I2("The dog ___ barked all night belongs to our neighbour.", "which|that", [["whom", "M_REL_WHO_THING"], ["whose", "M_REL_WHOSE_WHO"], ["which it", "M_REL_DOUBLE"]], "A dog is an animal, so which or that."),
   I2("The woman ___ shop is near the bus stage sells good mandazi.", "whose", [["who", "M_REL_WHOSE_WHO"], ["which", "M_REL_WHICH_PERSON"], ["whom", "M_REL_WHOSE_WHO"]], "The shop belongs to the woman. Belonging is whose."),
   I2("The farmer to ___ we spoke gave us a bag of maize.", "whom", [["who", "M_REL_WHOM_WHO"], ["which", "M_REL_WHICH_PERSON"], ["whose", "M_REL_WHOSE_WHO"]], "After to, the formal word for a person is whom."),
   I2("The river ___ flows past our school is very wide.", "which|that", [["who", "M_REL_WHO_THING"], ["whose", "M_REL_WHOSE_WHO"], ["which it", "M_REL_DOUBLE"]], "A river is a thing, so which or that.")
@@ -24460,14 +24460,14 @@ var PQ = [
   I2("He gave us a useful piece of ___ about the journey.", "information", [["informations", "M_PQ_PIECE_PLURAL"], ["inform", "M_PQ_PIECE_PLURAL"], ["informing", "M_PQ_PIECE_PLURAL"]], "Information has no plural. We count it with a piece of.")
 ];
 var FC = [
-  I2("This time tomorrow we ___ travelling to Kisumu.", "will be", [["will", "M_FC_NO_BE"], ["are", "M_FC_PRESENT"], ["will been", "M_FC_WILL_BEEN"]], "The future continuous is will be + verb-ing: will be travelling."),
-  I2("At six o'clock tonight I ___ cooking supper.", "will be", [["will been", "M_FC_WILL_BEEN"], ["will", "M_FC_NO_BE"], ["am", "M_FC_PRESENT"]], "At a stated time in the future: will be cooking."),
-  I2("At noon tomorrow Mama ___ working in the shamba.", "will be", [["is", "M_FC_PRESENT"], ["will", "M_FC_NO_BE"], ["will been", "M_FC_WILL_BEEN"]], "The time is in the future, so will be working."),
-  I2("Tomorrow at ten the pupils ___ writing a test.", "will be", [["will write", "M_FC_NO_ING"], ["will", "M_FC_NO_BE"], ["are", "M_FC_PRESENT"]], "The test will be going on at ten, so will be writing."),
-  I2("Next Saturday morning the whole village ___ cleaning the market.", "will be", [["will been", "M_FC_WILL_BEEN"], ["is", "M_FC_PRESENT"], ["will", "M_FC_NO_BE"]], "An action going on at a future time: will be cleaning."),
-  I2("This time next week, Atieno ___ sitting her final exam.", "will be", [["will", "M_FC_NO_BE"], ["is", "M_FC_PRESENT"], ["will been", "M_FC_WILL_BEEN"]], "This time next week is in the future: will be sitting."),
-  I2("When you arrive, we ___ waiting for you at the gate.", "will be", [["will been", "M_FC_WILL_BEEN"], ["are", "M_FC_PRESENT"], ["will", "M_FC_NO_BE"]], "The waiting will already be going on when you arrive: will be waiting."),
-  I2("By eight tomorrow morning the children ___ playing football.", "will be", [["will play", "M_FC_NO_ING"], ["are", "M_FC_PRESENT"], ["will", "M_FC_NO_BE"]], "An action going on at a stated future time: will be playing.")
+  I2("This time tomorrow we ___ travelling to Kisumu.", "will be", [["will", "M_FC_NO_BE"], ["be", "M_FC_PRESENT"], ["will been", "M_FC_WILL_BEEN"]], "The future continuous is will be + verb-ing: will be travelling."),
+  I2("At six o'clock tonight I ___ cooking supper.", "will be", [["will been", "M_FC_WILL_BEEN"], ["will", "M_FC_NO_BE"], ["be", "M_FC_PRESENT"]], "At a stated time in the future: will be cooking."),
+  I2("At noon tomorrow Mama ___ working in the shamba.", "will be", [["be", "M_FC_PRESENT"], ["will", "M_FC_NO_BE"], ["will been", "M_FC_WILL_BEEN"]], "The time is in the future, so will be working."),
+  I2("Tomorrow at ten the pupils ___ writing a test.", "will be", [["will write", "M_FC_NO_ING"], ["will", "M_FC_NO_BE"], ["be", "M_FC_PRESENT"]], "The test will be going on at ten, so will be writing."),
+  I2("Next Saturday morning the whole village ___ cleaning the market.", "will be", [["will been", "M_FC_WILL_BEEN"], ["be", "M_FC_PRESENT"], ["will", "M_FC_NO_BE"]], "An action going on at a future time: will be cleaning."),
+  I2("This time next week, Atieno ___ sitting her final exam.", "will be", [["will", "M_FC_NO_BE"], ["be", "M_FC_PRESENT"], ["will been", "M_FC_WILL_BEEN"]], "This time next week is in the future: will be sitting."),
+  I2("When you arrive, we ___ waiting for you at the gate.", "will be", [["will been", "M_FC_WILL_BEEN"], ["be", "M_FC_PRESENT"], ["will", "M_FC_NO_BE"]], "The waiting will already be going on when you arrive: will be waiting."),
+  I2("By eight tomorrow morning the children ___ playing football.", "will be", [["will play", "M_FC_NO_ING"], ["be", "M_FC_PRESENT"], ["will", "M_FC_NO_BE"]], "An action going on at a stated future time: will be playing.")
 ];
 var PASS = [
   I2("The window ___ by the wind.", "was broken", [["broken", "M_PASS_NO_BE"], ["was break", "M_PASS_PAST_FORM"], ["were broken", "M_PASS_AGREEMENT"]], "A passive needs be + the past participle: was broken."),
@@ -24475,7 +24475,7 @@ var PASS = [
   I2("The books ___ returned to the library on Friday.", "were", [["was", "M_PASS_AGREEMENT"], ["is", "M_PASS_AGREEMENT"], ["be", "M_PASS_NO_BE"]], "The subject books is plural, so were."),
   I2("The food was ___ by the guests.", "eaten", [["ate", "M_PASS_PAST_FORM"], ["eat", "M_PASS_PAST_FORM"], ["eating", "M_PASS_PAST_FORM"]], "After was use the past participle: eaten."),
   I2("The match ___ by thousands of fans.", "was watched", [["watched", "M_PASS_NO_BE"], ["were watched", "M_PASS_AGREEMENT"], ["was watch", "M_PASS_PAST_FORM"]], "The match is singular, so was watched."),
-  I2("The trees ___ planted by the Grade 6 learners.", "were", [["was", "M_PASS_AGREEMENT"], ["are being", "M_PASS_AGREEMENT"], ["be", "M_PASS_NO_BE"]], "The trees is plural and the planting is finished, so were planted."),
+  I2("The trees ___ planted by the Grade 6 learners.", "were", [["was", "M_PASS_AGREEMENT"], ["be being", "M_PASS_AGREEMENT"], ["be", "M_PASS_NO_BE"]], "The trees is plural and the planting is finished, so were planted."),
   I2("The thief was ___ by the police near the market.", "caught", [["catch", "M_PASS_PAST_FORM"], ["catched", "M_PASS_PAST_FORM"], ["catching", "M_PASS_PAST_FORM"]], "The past participle of catch is caught."),
   I2("The new bridge ___ opened by the governor.", "was", [["were", "M_PASS_AGREEMENT"], ["has", "M_PASS_NO_BE"], ["did", "M_PASS_NO_BE"]], "The bridge is singular, so was opened.")
 ];
@@ -24497,7 +24497,7 @@ var CW = [
   I2("The teacher ___ us a story about a clever hare.", "told", [["said", "M_CW_SAY_TELL"], ["says", "M_CW_SAY_TELL"], ["speaked", "M_CW_SAY_TELL"]], "Tell is followed by the person: told us."),
   I2("Please ___ me your pen for a minute.", "lend", [["borrow", "M_CW_BORROW_LEND"], ["borrowed", "M_CW_BORROW_LEND"], ["lent", "M_CW_BORROW_LEND"]], "You give someone a thing for a short time: lend. The other person borrows."),
   I2("May I ___ your pen for a minute?", "borrow", [["lend", "M_CW_BORROW_LEND"], ["lent", "M_CW_BORROW_LEND"], ["give", "M_CW_BORROW_LEND"]], "You take a thing for a short time: borrow."),
-  I2("Please ___ this letter to the headteacher's office.", "take", [["bring", "M_CW_BRING_TAKE"], ["brings", "M_CW_BRING_TAKE"], ["brang", "M_CW_BRING_TAKE"]], "The letter moves away from the speaker, so take."),
+  I2("Please ___ this letter to the headteacher's office. I will stay here in the classroom.", "take", [["bring", "M_CW_BRING_TAKE"], ["brings", "M_CW_BRING_TAKE"], ["brang", "M_CW_BRING_TAKE"]], "The letter moves away from the speaker, so take."),
   I2("Mr Kimani will ___ us fractions this term.", "teach", [["learn", "M_CW_LEARN_TEACH"], ["learned", "M_CW_LEARN_TEACH"], ["teached", "M_CW_LEARN_TEACH"]], "The teacher teaches; the pupils learn."),
   I2("We ___ fractions from Mr Kimani every Monday.", "learn", [["teach", "M_CW_LEARN_TEACH"], ["taught", "M_CW_LEARN_TEACH"], ["lerned", "M_CW_LEARN_TEACH"]], "The pupils learn from the teacher."),
   I2("Please ___ carefully to the story.", "listen", [["hear", "M_CW_HEAR_LISTEN"], ["heard", "M_CW_HEAR_LISTEN"], ["hearing", "M_CW_HEAR_LISTEN"]], "You listen on purpose. Listen is followed by to."),
@@ -24511,7 +24511,7 @@ var ADV3 = [
   I2("He worked ___ and passed the exam.", "hard", [["hardly", "M6_ADV_HARD_HARDLY"], ["harder", "M6_ADV_HARD_HARDLY"], ["hardy", "M6_ADV_HARD_HARDLY"]], "Hard means with great effort. Hardly means almost not."),
   I2("Juma ___ walks to school.", "always", [["walks always", "M6_ADV_POSITION"], ["all ways", "M6_ADV_POSITION"], ["alway", "M6_ADV_POSITION"]], "Always comes before the main verb."),
   I2("The old man spoke ___ so that everyone could hear.", "loudly", [["loud", "M6_ADV_ADJ_FOR_ADV"], ["loudest", "M6_ADV_ADJ_FOR_ADV"], ["louder", "M6_ADV_ADJ_FOR_ADV"]], "How did he speak? Loudly."),
-  I2("She was ___ tired after the long walk.", "very", [["well", "M_ADV_KIND_MIXED"], ["hard", "M_ADV_KIND_MIXED"], ["hardly", "M_ADV_KIND_MIXED"]], "Very is an adverb of degree. It tells how much."),
+  I2("She was ___ tired after the long walk.", "very", [["well", "M_ADV_KIND_MIXED"], ["hard", "M_ADV_KIND_MIXED"], ["good", "M_ADV_KIND_MIXED"]], "Very is an adverb of degree. It tells how much."),
   I2("The children ___ play in the compound after school.", "often", [["play often", "M6_ADV_POSITION"], ["oftenly", "M6_ADV_POSITION"], ["soft", "M6_ADV_POSITION"]], "Often comes before the main verb: they often play."),
   I2("He ___ slept last night because of the noise.", "hardly", [["hard", "M6_ADV_HARD_HARDLY"], ["hardy", "M6_ADV_HARD_HARDLY"], ["harder", "M6_ADV_HARD_HARDLY"]], "He slept very little: hardly.")
 ];
@@ -24654,20 +24654,20 @@ var NUM_SENT = [
 var COMMA2 = [
   I3("", "The boy in the blue shirt is my cousin.", [["The boy in the blue shirt, is my cousin.", "M_COMMA_SUBJECT_VERB"], ["The boy, in the blue shirt is my cousin.", "M_COMMA_SUBJECT_VERB"], ["The boy in the blue, shirt is my cousin.", "M_COMMA_SUBJECT_VERB"]], "Do not put a comma between a subject and its verb."),
   I3("", "Mama bought rice, beans, maize and sugar.", [["Mama bought rice beans maize and sugar.", "M6_COMMA_LIST_MISSING"], ["Mama bought rice beans, maize and sugar.", "M6_COMMA_LIST_MISSING"], ["Mama bought, rice, beans, maize and sugar.", "M_COMMA_SUBJECT_VERB"]], "Put a comma between the items in a list. And joins the last two."),
-  I3("", "After lunch, we played football.", [["After lunch we played football.", "M_COMMA_OPENING_MISSING"], ["After, lunch we played football.", "M_COMMA_OPENING_MISSING"], ["After lunch we, played football.", "M_COMMA_SUBJECT_VERB"]], "A phrase that opens the sentence is followed by a comma."),
+  I3("", "After lunch, we played football.", [["After, lunch we played football.", "M_COMMA_OPENING_MISSING"], ["After lunch we, played football.", "M_COMMA_SUBJECT_VERB"]], "A phrase that opens the sentence is followed by a comma."),
   I3("", "It was raining, so we stayed at home.", [["It was raining, we stayed at home.", "M6_COMMA_SPLICE"], ["It was raining so, we stayed at home.", "M6_COMMA_SPLICE"], ["It was raining we stayed at home.", "M6_COMMA_SPLICE"]], "A comma cannot join two sentences by itself. Add a joining word such as so."),
   I3("", 'Mama said, "Come and eat."', [['Mama said "Come and eat."', "M_COMMA_SPEECH_MISSING"], ['Mama, said "Come and eat."', "M_COMMA_SPEECH_MISSING"], ['Mama said "Come and eat",', "M_COMMA_SPEECH_MISSING"]], "Put a comma between the speaker and the spoken words."),
-  I3("", "In the morning, the children walk to school.", [["In the morning the children walk to school.", "M_COMMA_OPENING_MISSING"], ["In the morning the children, walk to school.", "M_COMMA_SUBJECT_VERB"], ["In, the morning the children walk to school.", "M_COMMA_OPENING_MISSING"]], "The opening phrase In the morning is followed by a comma."),
+  I3("", "In the morning, the children walk to school.", [["In the morning the children, walk to school.", "M_COMMA_SUBJECT_VERB"], ["In, the morning the children walk to school.", "M_COMMA_OPENING_MISSING"]], "The opening phrase In the morning is followed by a comma."),
   I3("", "We visited Nairobi, Nakuru, Kisumu and Mombasa.", [["We visited Nairobi Nakuru Kisumu and Mombasa.", "M6_COMMA_LIST_MISSING"], ["We visited, Nairobi, Nakuru, Kisumu and Mombasa.", "M_COMMA_SUBJECT_VERB"], ["We visited Nairobi, Nakuru Kisumu and Mombasa.", "M6_COMMA_LIST_MISSING"]], "Commas separate the places in a list."),
   I3("", "The test was hard, but everybody passed.", [["The test was hard but, everybody passed.", "M6_COMMA_SPLICE"], ["The test was hard everybody passed.", "M6_COMMA_SPLICE"], ["The test, was hard but everybody passed.", "M_COMMA_SUBJECT_VERB"]], "A comma goes before but when it joins two full sentences.")
 ];
 var QM = [
-  I3("", 'Mama said, "Come and eat."', [["Mama said, Come and eat.", "M_QM_MISSING"], ["Mama said, 'Come and eat.'", "M_QM_SINGLE"], ['Mama said, "Come and eat".', "M_QM_PUNCT_OUTSIDE"]], "The exact words go inside double quotation marks, and the full stop goes inside too."),
+  I3("", 'Mama said, "Come and eat."', [["Mama said, Come and eat.", "M_QM_MISSING"], ['Mama said, "Come and eat".', "M_QM_PUNCT_OUTSIDE"]], "The exact words go inside double quotation marks, and the full stop goes inside too."),
   I3("", 'Juma asked, "Where is my bag?"', [['Juma asked, "Where is my bag"?', "M_QM_PUNCT_OUTSIDE"], ["Juma asked, Where is my bag?", "M_QM_MISSING"], ['Juma asked, "Where is my bag?".', "M_QM_PUNCT_OUTSIDE"]], "The question mark goes inside the closing quotation marks."),
   I3("", '"I am tired," said Amina, "but I will finish."', [['"I am tired," said Amina, "But I will finish."', "M_QM_CAPITAL_SPLIT"], ['"I am tired", said Amina, "but I will finish".', "M_QM_PUNCT_OUTSIDE"], ["I am tired, said Amina, but I will finish.", "M_QM_MISSING"]], "In split speech the second part starts with a small letter, because the sentence goes on."),
   I3("", "She said that she was tired.", [['She said that "she was tired."', "M_QM_REPORTED"], ['She said "that she was tired."', "M_QM_REPORTED"], ['She said, that "she was tired".', "M_QM_REPORTED"]], "Reported speech does not use quotation marks."),
   I3("", '"Please sit down," said the teacher.', [['"Please sit down", said the teacher.', "M_QM_PUNCT_OUTSIDE"], ["Please sit down, said the teacher.", "M_QM_MISSING"], ['"please sit down," said the teacher.', "M_QM_CAPITAL_SPLIT"]], "The comma goes inside the closing quotation marks, and the speech starts with a capital letter."),
-  I3("", 'The headteacher shouted, "Stop!"', [['The headteacher shouted, "Stop"!', "M_QM_PUNCT_OUTSIDE"], ["The headteacher shouted, Stop!", "M_QM_MISSING"], ["The headteacher shouted, 'Stop!'", "M_QM_SINGLE"]], "The exclamation mark goes inside the closing quotation marks."),
+  I3("", 'The headteacher shouted, "Stop!"', [['The headteacher shouted, "Stop"!', "M_QM_PUNCT_OUTSIDE"], ["The headteacher shouted, Stop!", "M_QM_MISSING"]], "The exclamation mark goes inside the closing quotation marks."),
   I3("", '"We are ready," said Otieno, "so let us begin."', [['"We are ready," said Otieno, "So let us begin."', "M_QM_CAPITAL_SPLIT"], ['"We are ready", said Otieno, "so let us begin".', "M_QM_PUNCT_OUTSIDE"], ["We are ready, said Otieno, so let us begin.", "M_QM_MISSING"]], "The second part of split speech starts with a small letter."),
   I3("", "Wanjiru told us that the bus was late.", [['Wanjiru told us that "the bus was late."', "M_QM_REPORTED"], ['Wanjiru told us "that the bus was late."', "M_QM_REPORTED"], ['Wanjiru told us, that "the bus was late".', "M_QM_REPORTED"]], "This reports what she said, not her exact words, so there are no quotation marks.")
 ];
@@ -24685,7 +24685,7 @@ var SA = [
   I3("The old man was weak but his son was ___.", "strong", [["feeble", "M_SA_SYN_FOR_ANT"], ["weak", "M_SA_REPEAT"], ["tall", "M_SA_RELATED_NOT_PAIR"]], "An antonym is the opposite: weak and strong."),
   I3("Wafula was delighted with his gift. He was very ___.", "happy", [["sad", "M_SA_ANT_FOR_SYN"], ["angry", "M_SA_ANT_FOR_SYN"], ["rich", "M_SA_RELATED_NOT_PAIR"]], "A synonym has the same meaning: delighted and happy."),
   I3("The road was wide but the path was ___.", "narrow", [["broad", "M_SA_SYN_FOR_ANT"], ["long", "M_SA_RELATED_NOT_PAIR"], ["wide", "M_SA_REPEAT"]], "The opposite of wide is narrow."),
-  I3("The soup was hot, but the juice was ___.", "cold", [["warm", "M_SA_RELATED_NOT_PAIR"], ["hot", "M_SA_REPEAT"], ["boiling", "M_SA_SYN_FOR_ANT"]], "The opposite of hot is cold."),
+  I3("The soup was hot, but the juice was ___.", "cold", [["sticky", "M_SA_RELATED_NOT_PAIR"], ["hot", "M_SA_REPEAT"], ["boiling", "M_SA_SYN_FOR_ANT"]], "The opposite of hot is cold."),
   I3("The thief was caught and brought to the police. He was a ___.", "robber", [["guard", "M_SA_ANT_FOR_SYN"], ["judge", "M_SA_RELATED_NOT_PAIR"], ["policeman", "M_SA_ANT_FOR_SYN"]], "A synonym of thief is robber."),
   I3("Amina is very clever. Another word for clever is ___.", "intelligent", [["foolish", "M_SA_ANT_FOR_SYN"], ["quiet", "M_SA_RELATED_NOT_PAIR"], ["tall", "M_SA_RELATED_NOT_PAIR"]], "Intelligent has the same meaning as clever."),
   I3("The opposite of ancient is ___.", "modern", [["old", "M_SA_SYN_FOR_ANT"], ["ancient", "M_SA_REPEAT"], ["rare", "M_SA_RELATED_NOT_PAIR"]], "An antonym is the opposite: ancient and modern."),
@@ -24696,7 +24696,7 @@ var AFF = [
   I3("___agree", "dis", [["un", "M_AFF_WRONG_PREFIX"], ["im", "M_AFF_WRONG_PREFIX"], ["re", "M_AFF_WRONG_PREFIX"]], "Disagree takes dis-."),
   I3("___spell", "mis", [["dis", "M_AFF_WRONG_PREFIX"], ["un", "M_AFF_WRONG_PREFIX"], ["in", "M_AFF_WRONG_PREFIX"]], "Misspell means to spell wrongly: mis + spell."),
   I3("___possible", "im", [["un", "M_AFF_WRONG_PREFIX"], ["dis", "M_AFF_WRONG_PREFIX"], ["mis", "M_AFF_WRONG_PREFIX"]], "Impossible takes im- before p."),
-  I3("care___", "ful", [["full", "M_AFF_FULL"], ["less", "M_AFF_FULL"], ["ness", "M_AFF_FULL"]], "The suffix -ful has one l: careful."),
+  I3("care___", "ful", [["full", "M_AFF_FULL"], ["ious", "M_AFF_FULL"], ["ness", "M_AFF_FULL"]], "The suffix -ful has one l: careful."),
   I3("help___", "ful", [["full", "M_AFF_FULL"], ["fool", "M_AFF_FULL"], ["ment", "M_AFF_FULL"]], "Helpful is help + ful, with one l."),
   I3("___appear", "dis", [["diss", "M_AFF_DOUBLE_LETTER"], ["un", "M_AFF_WRONG_PREFIX"], ["mis", "M_AFF_WRONG_PREFIX"]], "Dis + appear = disappear. Keep every letter once and do not add an extra s."),
   I3("happy + ness = ___", "happiness", [["happyness", "M_AFF_Y_TO_I"], ["happinness", "M_AFF_Y_TO_I"], ["happynes", "M_AFF_Y_TO_I"]], "Change the y to i before -ness: happiness."),
@@ -24886,7 +24886,7 @@ var PRV_SIT = [
   I4("Five learners each tried to lead the project and nothing was finished. Which proverb fits.", "Too many cooks spoil the broth.", [["Haste makes waste.", "M_PRV_MIXED"], ["Actions speak louder than words.", "M_PRV_MIXED"], ["A bird in the hand is worth two in the bush.", "M_PRV_MIXED"]], "Too many leaders spoilt the work."),
   I4("Wanjiru studied a little every day and finally topped the class. Which proverb fits.", "Slow and steady wins the race.", [["Haste makes waste.", "M_PRV_MIXED"], ["Too many cooks spoil the broth.", "M_PRV_MIXED"], ["Do not count your chickens before they hatch.", "M_PRV_MIXED"]], "Steady effort brought success."),
   I4("Peter promised to help but never came. His brother came without promising and worked all day. Which proverb fits.", "Actions speak louder than words.", [["Slow and steady wins the race.", "M_PRV_MIXED"], ["A stitch in time saves nine.", "M_PRV_MIXED"], ["Haste makes waste.", "M_PRV_MIXED"]], "What the brother did showed more than what Peter said."),
-  I4("Mr Kimani sold his sure harvest to buy a lottery ticket and lost everything. Which proverb fits.", "A bird in the hand is worth two in the bush.", [["Haste makes waste.", "M_PRV_MIXED"], ["Actions speak louder than words.", "M_PRV_MIXED"], ["Too many cooks spoil the broth.", "M_PRV_MIXED"]], "He gave up what he had for something uncertain."),
+  I4("Mr Kimani sold his sure harvest to put the money into a risky scheme and lost everything. Which proverb fits.", "A bird in the hand is worth two in the bush.", [["Haste makes waste.", "M_PRV_MIXED"], ["Actions speak louder than words.", "M_PRV_MIXED"], ["Too many cooks spoil the broth.", "M_PRV_MIXED"]], "He gave up what he had for something uncertain."),
   I4("Njeri bought goats with money she had not yet received from selling her crop. The sale fell through. Which proverb fits.", "Do not count your chickens before they hatch.", [["A stitch in time saves nine.", "M_PRV_MIXED"], ["Slow and steady wins the race.", "M_PRV_MIXED"], ["Actions speak louder than words.", "M_PRV_MIXED"]], "She spent money she did not have yet.")
 ];
 var RID_KIND = [
@@ -24901,7 +24901,7 @@ var RID_ANS = [
   I4("I have a neck but no head. What am I.", "a bottle", [["a giraffe", "M_RID_LITERAL"], ["a person", "M_RID_LITERAL"], ["a tree", "M_RID_LITERAL"]], "A bottle has a neck but no head. A giraffe has both."),
   I4("I have teeth but I cannot bite. What am I.", "a comb", [["a lion", "M_RID_LITERAL"], ["a crocodile", "M_RID_LITERAL"], ["a shark", "M_RID_LITERAL"]], "A comb has teeth that do not bite."),
   I4("I have hands but I cannot clap. What am I.", "a clock", [["a baby", "M_RID_LITERAL"], ["a monkey", "M_RID_LITERAL"], ["a gorilla", "M_RID_LITERAL"]], "A clock has hands that point to the time and cannot clap."),
-  I4("I run all day but I never walk. What am I.", "a river", [["a cheetah", "M_RID_LITERAL"], ["a runner", "M_RID_LITERAL"], ["a car", "M_RID_LITERAL"]], "A river runs but has no legs to walk."),
+  I4("I run all day but I never walk. What am I.", "a river", [["a cheetah", "M_RID_LITERAL"], ["a runner", "M_RID_LITERAL"], ["a dog", "M_RID_LITERAL"]], "A river runs but has no legs to walk."),
   I4("The more you take from me, the more I leave behind. What am I.", "footsteps", [["money", "M_RID_LITERAL"], ["water", "M_RID_LITERAL"], ["food", "M_RID_LITERAL"]], "The more steps you take, the more footsteps you leave behind."),
   I4("I have a mouth that cannot eat, and a bed that cannot sleep. What am I.", "a river", [["a baby", "M_RID_LITERAL"], ["a lion", "M_RID_LITERAL"], ["a house", "M_RID_LITERAL"]], "A river has a mouth where it meets the sea and a bed, the ground it flows over.")
 ];
@@ -24921,7 +24921,7 @@ var IDM_GAP = [
   I4("When she heard the sad news, she burst into ___.", "tears", [["water", "M_IDM_WORD_CHANGED"], ["laughter", "M_IDM_WORD_CHANGED"], ["rain", "M_IDM_WORD_CHANGED"]], "The idiom is burst into tears."),
   I4("The test was a piece of ___.", "cake", [["bread", "M_IDM_WORD_CHANGED"], ["food", "M_IDM_WORD_CHANGED"], ["meat", "M_IDM_WORD_CHANGED"]], "The idiom is a piece of cake."),
   I4("I feel a little under the ___ today.", "weather", [["rain", "M_IDM_WORD_CHANGED"], ["sun", "M_IDM_WORD_CHANGED"], ["cloud", "M_IDM_WORD_CHANGED"]], "The idiom is under the weather."),
-  I4("Wafula told a joke to break the ___ at the party.", "ice", [["water", "M_IDM_WORD_CHANGED"], ["glass", "M_IDM_WORD_CHANGED"], ["silence", "M_IDM_WORD_CHANGED"]], "The idiom is break the ice."),
+  I4("Wafula told a joke to break the ___ at the party.", "ice", [["water", "M_IDM_WORD_CHANGED"], ["glass", "M_IDM_WORD_CHANGED"], ["wall", "M_IDM_WORD_CHANGED"]], "The idiom is break the ice."),
   I4("Please do not spill the ___ about the surprise party.", "beans", [["rice", "M_IDM_WORD_CHANGED"], ["maize", "M_IDM_WORD_CHANGED"], ["news", "M_IDM_WORD_CHANGED"]], "The idiom is spill the beans."),
   I4("Many farm workers work for ___, with very low pay.", "peanuts", [["sweets", "M_IDM_WORD_CHANGED"], ["maize", "M_IDM_WORD_CHANGED"], ["mangoes", "M_IDM_WORD_CHANGED"]], "The idiom is work for peanuts.")
 ];
@@ -25023,7 +25023,7 @@ var POL_GAP = [
   I4("Excuse me, ___ I add something to what you said?", "may", [["must", "M_POL_BLUNT"], ["will", "M_POL_BLUNT"], ["do", "M_POL_BLUNT"]], "May I asks permission politely."),
   I4("Could you say that ___, please?", "again", [["now", "M_POL_CLARIFY"], ["yes", "M_POL_CLARIFY"], ["fast", "M_POL_CLARIFY"]], "Could you say that again, please asks for repetition politely."),
   I4("I beg your ___?", "pardon", [["sorry", "M_POL_CLARIFY"], ["thanks", "M_POL_CLARIFY"], ["help", "M_POL_CLARIFY"]], "I beg your pardon is a polite way to ask for something to be repeated."),
-  I4("Hello, this is Amina ___. How may I help you?", "speaking", [["talking", "M_POL_PHONE_START"], ["saying", "M_POL_PHONE_START"], ["calling", "M_POL_PHONE_START"]], "On the telephone we say this is ... speaking."),
+  I4("Hello, this is Amina ___. How may I help you?", "speaking", [["smiling", "M_POL_PHONE_START"], ["saying", "M_POL_PHONE_START"], ["calling", "M_POL_PHONE_START"]], "On the telephone we say this is ... speaking."),
   I4("She is out at the moment. May I take a ___?", "message", [["talk", "M_POL_MESSAGE"], ["call", "M_POL_MESSAGE"], ["letter", "M_POL_MESSAGE"]], "We offer to take a message for someone who is out."),
   I4("Thank you for ___. Goodbye.", "calling", [["call", "M_POL_PHONE_START"], ["called", "M_POL_PHONE_START"], ["to call", "M_POL_PHONE_START"]], "After thank you for we use the -ing form: calling.")
 ];

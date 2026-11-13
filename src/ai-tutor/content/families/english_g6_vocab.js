@@ -44,7 +44,7 @@ const PRV_SIT = [
   I('Five learners each tried to lead the project and nothing was finished. Which proverb fits.', 'Too many cooks spoil the broth.', [['Haste makes waste.', 'M_PRV_MIXED'], ['Actions speak louder than words.', 'M_PRV_MIXED'], ['A bird in the hand is worth two in the bush.', 'M_PRV_MIXED']], 'Too many leaders spoilt the work.'),
   I('Wanjiru studied a little every day and finally topped the class. Which proverb fits.', 'Slow and steady wins the race.', [['Haste makes waste.', 'M_PRV_MIXED'], ['Too many cooks spoil the broth.', 'M_PRV_MIXED'], ['Do not count your chickens before they hatch.', 'M_PRV_MIXED']], 'Steady effort brought success.'),
   I('Peter promised to help but never came. His brother came without promising and worked all day. Which proverb fits.', 'Actions speak louder than words.', [['Slow and steady wins the race.', 'M_PRV_MIXED'], ['A stitch in time saves nine.', 'M_PRV_MIXED'], ['Haste makes waste.', 'M_PRV_MIXED']], 'What the brother did showed more than what Peter said.'),
-  I('Mr Kimani sold his sure harvest to buy a lottery ticket and lost everything. Which proverb fits.', 'A bird in the hand is worth two in the bush.', [['Haste makes waste.', 'M_PRV_MIXED'], ['Actions speak louder than words.', 'M_PRV_MIXED'], ['Too many cooks spoil the broth.', 'M_PRV_MIXED']], 'He gave up what he had for something uncertain.'),
+  I('Mr Kimani sold his sure harvest to put the money into a risky scheme and lost everything. Which proverb fits.', 'A bird in the hand is worth two in the bush.', [['Haste makes waste.', 'M_PRV_MIXED'], ['Actions speak louder than words.', 'M_PRV_MIXED'], ['Too many cooks spoil the broth.', 'M_PRV_MIXED']], 'He gave up what he had for something uncertain.'),
   I('Njeri bought goats with money she had not yet received from selling her crop. The sale fell through. Which proverb fits.', 'Do not count your chickens before they hatch.', [['A stitch in time saves nine.', 'M_PRV_MIXED'], ['Slow and steady wins the race.', 'M_PRV_MIXED'], ['Actions speak louder than words.', 'M_PRV_MIXED']], 'She spent money she did not have yet.'),
 ];
 // ---------------------------------------------------------------- riddles
@@ -60,7 +60,7 @@ const RID_ANS = [
   I('I have a neck but no head. What am I.', 'a bottle', [['a giraffe', 'M_RID_LITERAL'], ['a person', 'M_RID_LITERAL'], ['a tree', 'M_RID_LITERAL']], 'A bottle has a neck but no head. A giraffe has both.'),
   I('I have teeth but I cannot bite. What am I.', 'a comb', [['a lion', 'M_RID_LITERAL'], ['a crocodile', 'M_RID_LITERAL'], ['a shark', 'M_RID_LITERAL']], 'A comb has teeth that do not bite.'),
   I('I have hands but I cannot clap. What am I.', 'a clock', [['a baby', 'M_RID_LITERAL'], ['a monkey', 'M_RID_LITERAL'], ['a gorilla', 'M_RID_LITERAL']], 'A clock has hands that point to the time and cannot clap.'),
-  I('I run all day but I never walk. What am I.', 'a river', [['a cheetah', 'M_RID_LITERAL'], ['a runner', 'M_RID_LITERAL'], ['a car', 'M_RID_LITERAL']], 'A river runs but has no legs to walk.'),
+  I('I run all day but I never walk. What am I.', 'a river', [['a cheetah', 'M_RID_LITERAL'], ['a runner', 'M_RID_LITERAL'], ['a dog', 'M_RID_LITERAL']], 'A river runs but has no legs to walk.'),
   I('The more you take from me, the more I leave behind. What am I.', 'footsteps', [['money', 'M_RID_LITERAL'], ['water', 'M_RID_LITERAL'], ['food', 'M_RID_LITERAL']], 'The more steps you take, the more footsteps you leave behind.'),
   I('I have a mouth that cannot eat, and a bed that cannot sleep. What am I.', 'a river', [['a baby', 'M_RID_LITERAL'], ['a lion', 'M_RID_LITERAL'], ['a house', 'M_RID_LITERAL']], 'A river has a mouth where it meets the sea and a bed, the ground it flows over.'),
 ];
@@ -81,7 +81,7 @@ const IDM_GAP = [
   I('When she heard the sad news, she burst into ___.', 'tears', [['water', 'M_IDM_WORD_CHANGED'], ['laughter', 'M_IDM_WORD_CHANGED'], ['rain', 'M_IDM_WORD_CHANGED']], 'The idiom is burst into tears.'),
   I('The test was a piece of ___.', 'cake', [['bread', 'M_IDM_WORD_CHANGED'], ['food', 'M_IDM_WORD_CHANGED'], ['meat', 'M_IDM_WORD_CHANGED']], 'The idiom is a piece of cake.'),
   I('I feel a little under the ___ today.', 'weather', [['rain', 'M_IDM_WORD_CHANGED'], ['sun', 'M_IDM_WORD_CHANGED'], ['cloud', 'M_IDM_WORD_CHANGED']], 'The idiom is under the weather.'),
-  I('Wafula told a joke to break the ___ at the party.', 'ice', [['water', 'M_IDM_WORD_CHANGED'], ['glass', 'M_IDM_WORD_CHANGED'], ['silence', 'M_IDM_WORD_CHANGED']], 'The idiom is break the ice.'),
+  I('Wafula told a joke to break the ___ at the party.', 'ice', [['water', 'M_IDM_WORD_CHANGED'], ['glass', 'M_IDM_WORD_CHANGED'], ['wall', 'M_IDM_WORD_CHANGED']], 'The idiom is break the ice.'),
   I('Please do not spill the ___ about the surprise party.', 'beans', [['rice', 'M_IDM_WORD_CHANGED'], ['maize', 'M_IDM_WORD_CHANGED'], ['news', 'M_IDM_WORD_CHANGED']], 'The idiom is spill the beans.'),
   I('Many farm workers work for ___, with very low pay.', 'peanuts', [['sweets', 'M_IDM_WORD_CHANGED'], ['maize', 'M_IDM_WORD_CHANGED'], ['mangoes', 'M_IDM_WORD_CHANGED']], 'The idiom is work for peanuts.'),
 ];
@@ -188,7 +188,7 @@ const POL_GAP = [
   I('Excuse me, ___ I add something to what you said?', 'may', [['must', 'M_POL_BLUNT'], ['will', 'M_POL_BLUNT'], ['do', 'M_POL_BLUNT']], 'May I asks permission politely.'),
   I('Could you say that ___, please?', 'again', [['now', 'M_POL_CLARIFY'], ['yes', 'M_POL_CLARIFY'], ['fast', 'M_POL_CLARIFY']], 'Could you say that again, please asks for repetition politely.'),
   I('I beg your ___?', 'pardon', [['sorry', 'M_POL_CLARIFY'], ['thanks', 'M_POL_CLARIFY'], ['help', 'M_POL_CLARIFY']], 'I beg your pardon is a polite way to ask for something to be repeated.'),
-  I('Hello, this is Amina ___. How may I help you?', 'speaking', [['talking', 'M_POL_PHONE_START'], ['saying', 'M_POL_PHONE_START'], ['calling', 'M_POL_PHONE_START']], 'On the telephone we say this is ... speaking.'),
+  I('Hello, this is Amina ___. How may I help you?', 'speaking', [['smiling', 'M_POL_PHONE_START'], ['saying', 'M_POL_PHONE_START'], ['calling', 'M_POL_PHONE_START']], 'On the telephone we say this is ... speaking.'),
   I('She is out at the moment. May I take a ___?', 'message', [['talk', 'M_POL_MESSAGE'], ['call', 'M_POL_MESSAGE'], ['letter', 'M_POL_MESSAGE']], 'We offer to take a message for someone who is out.'),
   I('Thank you for ___. Goodbye.', 'calling', [['call', 'M_POL_PHONE_START'], ['called', 'M_POL_PHONE_START'], ['to call', 'M_POL_PHONE_START']], 'After thank you for we use the -ing form: calling.'),
 ];
