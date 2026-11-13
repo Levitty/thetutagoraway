@@ -1,0 +1,228 @@
+{
+ "outcomes": {
+  "INTE.G9.MIXTUR.STRUCTURE_OF_THE_ATOM.a": "describe the structure of the atom",
+  "INTE.G9.MIXTUR.STRUCTURE_OF_THE_ATOM.b": "determine the mass number of elements",
+  "INTE.G9.MIXTUR.STRUCTURE_OF_THE_ATOM.c": "draw the electron arrangement in atoms using dot or cross diagrams",
+  "INTE.G9.MIXTUR.STRUCTURE_OF_THE_ATOM.d": "classify elements into metals and non-metals",
+  "INTE.G9.MIXTUR.STRUCTURE_OF_THE_ATOM.e": "show interest in classifying elements into metals and non-metals",
+  "INTE.G9.MIXTUR.METALS_AND_ALLOYS.a": "describe the physical properties of metals",
+  "INTE.G9.MIXTUR.METALS_AND_ALLOYS.b": "describe the composition of alloys",
+  "INTE.G9.MIXTUR.METALS_AND_ALLOYS.c": "identify the uses of metals and alloys in day-to-day life",
+  "INTE.G9.MIXTUR.METALS_AND_ALLOYS.d": "explain the effects of rusting of metals",
+  "INTE.G9.MIXTUR.METALS_AND_ALLOYS.e": "appreciate the importance of common alloys in day-to-day life",
+  "INTE.G9.MIXTUR.WATER_HARDNESS.a": "describe the physical properties of water",
+  "INTE.G9.MIXTUR.WATER_HARDNESS.b": "distinguish between hard and soft water in nature",
+  "INTE.G9.MIXTUR.WATER_HARDNESS.c": "apply methods of softening hard water in day-to-day life",
+  "INTE.G9.MIXTUR.WATER_HARDNESS.d": "outline the advantages and disadvantages of hard and soft water",
+  "INTE.G9.MIXTUR.WATER_HARDNESS.e": "appreciate the applications of soft and hard water in day-to-day life",
+  "INTE.G9.LIVING.NUTRITION_IN_PLANTS.a": "identify external and internal parts of a leaf",
+  "INTE.G9.LIVING.NUTRITION_IN_PLANTS.b": "explain adaptations of the leaf to photosynthesis",
+  "INTE.G9.LIVING.NUTRITION_IN_PLANTS.c": "describe the process of photosynthesis",
+  "INTE.G9.LIVING.NUTRITION_IN_PLANTS.d": "investigate the conditions necessary for photosynthesis",
+  "INTE.G9.LIVING.NUTRITION_IN_PLANTS.e": "appreciate the process of photosynthesis in nature",
+  "INTE.G9.LIVING.NUTRITION_IN_ANIMALS.a": "outline modes of nutrition in animals",
+  "INTE.G9.LIVING.NUTRITION_IN_ANIMALS.b": "describe the structure and functions of different types of teeth",
+  "INTE.G9.LIVING.NUTRITION_IN_ANIMALS.c": "classify animals based on their dentition",
+  "INTE.G9.LIVING.NUTRITION_IN_ANIMALS.d": "describe the process of digestion in human beings",
+  "INTE.G9.LIVING.NUTRITION_IN_ANIMALS.e": "appreciate that animals have varied modes of nutrition",
+  "INTE.G9.LIVING.REPRODUCTION_IN_PLANTS.a": "outline functions of parts of a flower",
+  "INTE.G9.LIVING.REPRODUCTION_IN_PLANTS.b": "describe pollination in plants",
+  "INTE.G9.LIVING.REPRODUCTION_IN_PLANTS.c": "outline the adaptations of flowers to wind and insect pollination",
+  "INTE.G9.LIVING.REPRODUCTION_IN_PLANTS.d": "explain fertilisation and fruit formation in flowering plants",
+  "INTE.G9.LIVING.REPRODUCTION_IN_PLANTS.e": "categorise fruits and seeds based on their mode of dispersal",
+  "INTE.G9.LIVING.REPRODUCTION_IN_PLANTS.f": "recognise the role of flowers in nature",
+  "INTE.G9.LIVING.THE_INTERDEPENDENCE_OF_L.a": "explain the biotic and abiotic factors of the environment",
+  "INTE.G9.LIVING.THE_INTERDEPENDENCE_OF_L.b": "construct food chains and food webs in the environment",
+  "INTE.G9.LIVING.THE_INTERDEPENDENCE_OF_L.c": "describe the effect of human activities on the environment",
+  "INTE.G9.LIVING.THE_INTERDEPENDENCE_OF_L.d": "appreciate the interdependence between living and non-living factors of the environment",
+  "INTE.G9.FORCE_.CURVED_MIRRORS.a": "describe types of curved mirrors",
+  "INTE.G9.FORCE_.CURVED_MIRRORS.b": "draw ray diagrams to locate images formed by concave and convex mirrors",
+  "INTE.G9.FORCE_.CURVED_MIRRORS.c": "describe the characteristics of images formed by concave and convex mirrors",
+  "INTE.G9.FORCE_.CURVED_MIRRORS.d": "explain the uses of concave and convex mirrors in day-to-day life",
+  "INTE.G9.FORCE_.CURVED_MIRRORS.e": "appreciate the applications of curved mirrors in day-to-day life",
+  "INTE.G9.FORCE_.WAVES.a": "describe the generation of waves in nature",
+  "INTE.G9.FORCE_.WAVES.b": "classify waves as longitudinal and transverse",
+  "INTE.G9.FORCE_.WAVES.c": "describe basic characteristics of waves in nature",
+  "INTE.G9.FORCE_.WAVES.d": "describe remote sensing in relation to waves",
+  "INTE.G9.FORCE_.WAVES.e": "describe applications of waves in day-to-day life",
+  "INTE.G9.FORCE_.WAVES.f": "appreciate the applications of waves in day-to-day life"
+ },
+ "skills": {
+  "INTE.G9.MIXTUR.STRUCTURE_OF_THE_ATOM.ATOM_PARTS": {
+   "forms": [
+    "pick the right answer",
+    "pick the right answer in a short story",
+    "find the false step in a learner's reason"
+   ],
+   "mastery": "The child says an atom has protons (positive) and neutrons (no charge) in the nucleus and electrons (negative) in shells around it, and that an atom is neutral because protons and electrons are equal in number. Evidence rule: at least four of the last five fresh questions right across at least two question forms, and no repeated pick of the same misconception."
+  },
+  "INTE.G9.MIXTUR.STRUCTURE_OF_THE_ATOM.MASS_NUMBER": {
+   "forms": [
+    "pick the right answer",
+    "pick the right answer in a short story",
+    "find the false step in a learner's reason"
+   ],
+   "mastery": "The child says the mass number is the number of protons plus the number of neutrons, and the atomic number is the number of protons, and works a small sum. Evidence rule: at least four of the last five fresh questions right across at least two question forms, and no repeated pick of the same misconception."
+  },
+  "INTE.G9.MIXTUR.STRUCTURE_OF_THE_ATOM.ELECTRON_ARR": {
+   "forms": [
+    "pick the right answer",
+    "pick the right answer in a short story",
+    "find the false step in a learner's reason"
+   ],
+   "mastery": "The child says the first shell holds up to 2 electrons and the second up to 8, so sodium (11) is 2, 8, 1 and chlorine (17) is 2, 8, 7. Evidence rule: at least four of the last five fresh questions right across at least two question forms, and no repeated pick of the same misconception."
+  },
+  "INTE.G9.MIXTUR.STRUCTURE_OF_THE_ATOM.METAL_NONMETAL": {
+   "forms": [
+    "pick the right answer",
+    "pick the right answer in a short story",
+    "find the false step in a learner's reason"
+   ],
+   "mastery": "The child sorts iron, copper, zinc and aluminium as metals and carbon, sulphur, oxygen and chlorine as non-metals, and says metals conduct electricity and shine. Evidence rule: at least four of the last five fresh questions right across at least two question forms, and no repeated pick of the same misconception."
+  },
+  "INTE.G9.MIXTUR.METALS_AND_ALLOYS.METAL_PROPS": {
+   "forms": [
+    "pick the right answer",
+    "pick the right answer in a short story",
+    "find the false step in a learner's reason"
+   ],
+   "mastery": "The child says metals are shiny, conduct heat and electricity, can be hammered into sheets (malleable) and drawn into wires (ductile), and are mostly solid, and links copper to wires and aluminium to pots. Evidence rule: at least four of the last five fresh questions right across at least two question forms, and no repeated pick of the same misconception."
+  },
+  "INTE.G9.MIXTUR.METALS_AND_ALLOYS.ALLOYS": {
+   "forms": [
+    "pick the right answer",
+    "pick the right answer in a short story",
+    "find the false step in a learner's reason"
+   ],
+   "mastery": "The child says an alloy is a mixture of a metal with other elements, and names brass (copper and zinc), bronze (copper and tin) and steel (iron and a little carbon), made to be stronger or last longer. Evidence rule: at least four of the last five fresh questions right across at least two question forms, and no repeated pick of the same misconception."
+  },
+  "INTE.G9.MIXTUR.METALS_AND_ALLOYS.RUSTING": {
+   "forms": [
+    "pick the right answer",
+    "pick the right answer in a short story",
+    "find the false step in a learner's reason"
+   ],
+   "mastery": "The child says iron rusts when it meets both air (oxygen) and water, and rusting weakens metal, and that painting, oiling, galvanising and plating keep air and water away. Evidence rule: at least four of the last five fresh questions right across at least two question forms, and no repeated pick of the same misconception."
+  },
+  "INTE.G9.MIXTUR.WATER_HARDNESS.HARD_SOFT": {
+   "forms": [
+    "pick the right answer",
+    "pick the right answer in a short story",
+    "find the false step in a learner's reason"
+   ],
+   "mastery": "The child says hard water does not lather easily with soap and leaves scum, soft water lathers well, boiling or washing soda can soften it, and hard water leaves scale in kettles. Evidence rule: at least four of the last five fresh questions right across at least two question forms, and no repeated pick of the same misconception."
+  },
+  "INTE.G9.LIVING.NUTRITION_IN_PLANTS.LEAF_PARTS": {
+   "forms": [
+    "pick the right answer",
+    "pick the right answer in a short story",
+    "find the false step in a learner's reason"
+   ],
+   "mastery": "The child names the blade, petiole and veins, the stomata for gas exchange, the chloroplasts with chlorophyll and the palisade layer near the top, and says a broad, thin leaf catches light. Evidence rule: at least four of the last five fresh questions right across at least two question forms, and no repeated pick of the same misconception."
+  },
+  "INTE.G9.LIVING.NUTRITION_IN_PLANTS.PHOTOSYNTHESIS": {
+   "forms": [
+    "pick the right answer",
+    "pick the right answer in a short story",
+    "find the false step in a learner's reason"
+   ],
+   "mastery": "The child says green plants make glucose from carbon dioxide and water using light and chlorophyll, giving off oxygen, and that iodine turns starch blue-black. Evidence rule: at least four of the last five fresh questions right across at least two question forms, and no repeated pick of the same misconception."
+  },
+  "INTE.G9.LIVING.NUTRITION_IN_ANIMALS.ANIMAL_NUTRITION": {
+   "forms": [
+    "pick the right answer",
+    "pick the right answer in a short story",
+    "find the false step in a learner's reason"
+   ],
+   "mastery": "The child names herbivores (plants only), carnivores (flesh only) and omnivores (both), and says animals are grouped by what they eat. Evidence rule: at least four of the last five fresh questions right across at least two question forms, and no repeated pick of the same misconception."
+  },
+  "INTE.G9.LIVING.NUTRITION_IN_ANIMALS.TEETH": {
+   "forms": [
+    "pick the right answer",
+    "pick the right answer in a short story",
+    "find the false step in a learner's reason"
+   ],
+   "mastery": "The child says incisors cut, canines tear, premolars and molars grind, and that carnivores have large canines while herbivores have broad molars. Evidence rule: at least four of the last five fresh questions right across at least two question forms, and no repeated pick of the same misconception."
+  },
+  "INTE.G9.LIVING.NUTRITION_IN_ANIMALS.DIGESTION": {
+   "forms": [
+    "pick the right answer",
+    "pick the right answer in a short story",
+    "find the false step in a learner's reason"
+   ],
+   "mastery": "The child says digestion starts in the mouth (saliva begins on starch), goes on in the stomach (protein), digested food is absorbed in the small intestine and water is absorbed in the large intestine. Evidence rule: at least four of the last five fresh questions right across at least two question forms, and no repeated pick of the same misconception."
+  },
+  "INTE.G9.LIVING.REPRODUCTION_IN_PLANTS.FLOWER_PARTS": {
+   "forms": [
+    "pick the right answer",
+    "pick the right answer in a short story",
+    "find the false step in a learner's reason"
+   ],
+   "mastery": "The child says sepals protect the bud, petals attract insects, the stamen (anther and filament) is male and the carpel (stigma, style and ovary) is female. Evidence rule: at least four of the last five fresh questions right across at least two question forms, and no repeated pick of the same misconception."
+  },
+  "INTE.G9.LIVING.REPRODUCTION_IN_PLANTS.POLLINATION": {
+   "forms": [
+    "pick the right answer",
+    "pick the right answer in a short story",
+    "find the false step in a learner's reason"
+   ],
+   "mastery": "The child says pollination is the transfer of pollen from an anther to a stigma, wind flowers have feathery stigmas and light pollen, and insect flowers have bright petals, scent and nectar. Evidence rule: at least four of the last five fresh questions right across at least two question forms, and no repeated pick of the same misconception."
+  },
+  "INTE.G9.LIVING.REPRODUCTION_IN_PLANTS.FERTIL_DISPERSAL": {
+   "forms": [
+    "pick the right answer",
+    "pick the right answer in a short story",
+    "find the false step in a learner's reason"
+   ],
+   "mastery": "The child says the pollen grows a tube to the ovule, fertilisation makes the ovule a seed and the ovary a fruit, and seeds are dispersed by wind, water, animals or by bursting. Evidence rule: at least four of the last five fresh questions right across at least two question forms, and no repeated pick of the same misconception."
+  },
+  "INTE.G9.LIVING.THE_INTERDEPENDENCE_OF_L.BIOTIC_ABIOTIC": {
+   "forms": [
+    "pick the right answer",
+    "pick the right answer in a short story",
+    "find the false step in a learner's reason"
+   ],
+   "mastery": "The child says biotic factors are living (plants, animals, microbes) and abiotic factors are non-living (light, temperature, water, soil). Evidence rule: at least four of the last five fresh questions right across at least two question forms, and no repeated pick of the same misconception."
+  },
+  "INTE.G9.LIVING.THE_INTERDEPENDENCE_OF_L.FOOD_CHAINS": {
+   "forms": [
+    "pick the right answer",
+    "pick the right answer in a short story",
+    "find the false step in a learner's reason"
+   ],
+   "mastery": "The child says a food chain starts with a producer (a green plant), then a primary consumer, then a secondary consumer, with arrows pointing to the eater, and that cutting forests and pollution upset food webs. Evidence rule: at least four of the last five fresh questions right across at least two question forms, and no repeated pick of the same misconception."
+  },
+  "INTE.G9.FORCE_.CURVED_MIRRORS.CURVED_MIRRORS": {
+   "forms": [
+    "pick the right answer",
+    "pick the right answer in a short story",
+    "find the false step in a learner's reason"
+   ],
+   "mastery": "The child says a concave mirror curves inwards and converges light, a convex mirror curves outwards and spreads it, and that a convex mirror always forms a small, upright, virtual image. Evidence rule: at least four of the last five fresh questions right across at least two question forms, and no repeated pick of the same misconception."
+  },
+  "INTE.G9.FORCE_.CURVED_MIRRORS.MIRROR_USES": {
+   "forms": [
+    "pick the right answer",
+    "pick the right answer in a short story",
+    "find the false step in a learner's reason"
+   ],
+   "mastery": "The child says concave mirrors are used in shaving mirrors, torches and dentist mirrors, and convex mirrors in driving mirrors and shop security mirrors for a wide view. Evidence rule: at least four of the last five fresh questions right across at least two question forms, and no repeated pick of the same misconception."
+  },
+  "INTE.G9.FORCE_.WAVES.WAVE_TYPES": {
+   "forms": [
+    "pick the right answer",
+    "pick the right answer in a short story",
+    "find the false step in a learner's reason"
+   ],
+   "mastery": "The child says waves are made by vibrations that carry energy, in a transverse wave the particles move at right angles to the direction of travel (water, light), and in a longitudinal wave they move back and forth along it (sound). Evidence rule: at least four of the last five fresh questions right across at least two question forms, and no repeated pick of the same misconception."
+  },
+  "INTE.G9.FORCE_.WAVES.WAVE_PARTS": {
+   "forms": [
+    "pick the right answer",
+    "pick the right answer in a short story",
+    "find the false step in a learner's reason"
+   ],
+   "mastery": "The child names crest, trough, amplitude, wavelength and frequency (waves per second, in hertz), and says remote sensing, radio and ultrasound scans use waves. Evidence rule: at least four of the last five fresh questions right across at least two question forms, and no repeated pick of the same misconception."
+  }
+ }
+}

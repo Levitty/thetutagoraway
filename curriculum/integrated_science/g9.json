@@ -3,15 +3,15 @@
  "subject_key": "integrated_science",
  "grade": 9,
  "source": "KICD Integrated Science, First published 2024 (text layer)",
- "status": "outcomes from KICD's text, word for word; skills, prerequisites and misconceptions not yet mapped",
+ "status": "outcomes from KICD's text, word for word; skills, prerequisites and misconceptions proposed (authored offline, 13 Nov 2026), awaiting an Integrated Science teacher's review",
  "totals": {
   "strands": 3,
   "sub_strands": 9,
   "outcomes": 46,
   "lessons": 150,
-  "skills": 0,
-  "prerequisites": 0,
-  "misconceptions": 0
+  "skills": 22,
+  "prerequisites": 14,
+  "misconceptions": 66
  },
  "sub_strands": [
   {
@@ -89,8 +89,306 @@
      "indicator": "INTE.G9.RUBRIC.1.2"
     }
    ],
-   "skills": [],
-   "misconceptions": [],
+   "skills": [
+    {
+     "code": "INTE.G9.MIXTUR.STRUCTURE_OF_THE_ATOM.ATOM_PARTS",
+     "name": "Name the particles of an atom and where they are",
+     "outcomes": [
+      "INTE.G9.MIXTUR.STRUCTURE_OF_THE_ATOM.a"
+     ],
+     "mastery": "The child says an atom has protons (positive) and neutrons (no charge) in the nucleus and electrons (negative) in shells around it, and that an atom is neutral because protons and electrons are equal in number. Evidence rule: at least four of the last five fresh questions right across at least two question forms, and no repeated pick of the same misconception.",
+     "question_forms": [
+      "pick the right answer",
+      "pick the right answer in a short story",
+      "find the false step in a learner's reason"
+     ],
+     "thinking": [
+      "recall",
+      "reasoning"
+     ],
+     "horeb_skill_ids": [],
+     "prerequisites": [],
+     "status": "proposed"
+    },
+    {
+     "code": "INTE.G9.MIXTUR.STRUCTURE_OF_THE_ATOM.MASS_NUMBER",
+     "name": "Work out the mass number from protons and neutrons",
+     "outcomes": [
+      "INTE.G9.MIXTUR.STRUCTURE_OF_THE_ATOM.b"
+     ],
+     "mastery": "The child says the mass number is the number of protons plus the number of neutrons, and the atomic number is the number of protons, and works a small sum. Evidence rule: at least four of the last five fresh questions right across at least two question forms, and no repeated pick of the same misconception.",
+     "question_forms": [
+      "pick the right answer",
+      "pick the right answer in a short story",
+      "find the false step in a learner's reason"
+     ],
+     "thinking": [
+      "recall",
+      "reasoning"
+     ],
+     "horeb_skill_ids": [],
+     "prerequisites": [
+      {
+       "requires": "INTE.G9.MIXTUR.STRUCTURE_OF_THE_ATOM.ATOM_PARTS",
+       "kind": "skill",
+       "strength": "essential",
+       "reason": "Proposed: this skill builds on it. To confirm by an Integrated Science teacher.",
+       "status": "proposed"
+      }
+     ],
+     "status": "proposed"
+    },
+    {
+     "code": "INTE.G9.MIXTUR.STRUCTURE_OF_THE_ATOM.ELECTRON_ARR",
+     "name": "Write the electron arrangement of the first twenty elements",
+     "outcomes": [
+      "INTE.G9.MIXTUR.STRUCTURE_OF_THE_ATOM.c"
+     ],
+     "mastery": "The child says the first shell holds up to 2 electrons and the second up to 8, so sodium (11) is 2, 8, 1 and chlorine (17) is 2, 8, 7. Evidence rule: at least four of the last five fresh questions right across at least two question forms, and no repeated pick of the same misconception.",
+     "question_forms": [
+      "pick the right answer",
+      "pick the right answer in a short story",
+      "find the false step in a learner's reason"
+     ],
+     "thinking": [
+      "recall",
+      "reasoning"
+     ],
+     "horeb_skill_ids": [],
+     "prerequisites": [
+      {
+       "requires": "INTE.G9.MIXTUR.STRUCTURE_OF_THE_ATOM.ATOM_PARTS",
+       "kind": "skill",
+       "strength": "essential",
+       "reason": "Proposed: this skill builds on it. To confirm by an Integrated Science teacher.",
+       "status": "proposed"
+      }
+     ],
+     "status": "proposed"
+    },
+    {
+     "code": "INTE.G9.MIXTUR.STRUCTURE_OF_THE_ATOM.METAL_NONMETAL",
+     "name": "Sort elements into metals and non-metals",
+     "outcomes": [
+      "INTE.G9.MIXTUR.STRUCTURE_OF_THE_ATOM.d"
+     ],
+     "mastery": "The child sorts iron, copper, zinc and aluminium as metals and carbon, sulphur, oxygen and chlorine as non-metals, and says metals conduct electricity and shine. Evidence rule: at least four of the last five fresh questions right across at least two question forms, and no repeated pick of the same misconception.",
+     "question_forms": [
+      "pick the right answer",
+      "pick the right answer in a short story",
+      "find the false step in a learner's reason"
+     ],
+     "thinking": [
+      "recall",
+      "reasoning"
+     ],
+     "horeb_skill_ids": [],
+     "prerequisites": [
+      {
+       "requires": "INTE.G9.MIXTUR.STRUCTURE_OF_THE_ATOM.ATOM_PARTS",
+       "kind": "skill",
+       "strength": "essential",
+       "reason": "Proposed: this skill builds on it. To confirm by an Integrated Science teacher.",
+       "status": "proposed"
+      }
+     ],
+     "status": "proposed"
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "INTE.G9.MIXTUR.STRUCTURE_OF_THE_ATOM.ATOM_PARTS.M_IS9_AP_ELECTRON",
+     "skill": "INTE.G9.MIXTUR.STRUCTURE_OF_THE_ATOM.ATOM_PARTS",
+     "error": "Puts electrons in the nucleus.",
+     "example": {
+      "question": "Where are electrons found?",
+      "wrong_answer": "In the nucleus",
+      "correct_answer": "In shells around the nucleus"
+     },
+     "cause": "The child mixes up two rules that are taught close together.",
+     "reveals": "Offer \"In the nucleus\" next to the right answer and ask the question again in a new situation.",
+     "help": "Electrons move in shells around the nucleus.",
+     "feedback": "Electrons move in shells around the nucleus.",
+     "source": "To confirm by an Integrated Science teacher: a common classroom error, not traced to a study by the author.",
+     "status": "draft"
+    },
+    {
+     "code": "INTE.G9.MIXTUR.STRUCTURE_OF_THE_ATOM.ATOM_PARTS.M_IS9_AP_CHARGE",
+     "skill": "INTE.G9.MIXTUR.STRUCTURE_OF_THE_ATOM.ATOM_PARTS",
+     "error": "Gives neutrons a charge.",
+     "example": {
+      "question": "Which particle has no charge?",
+      "wrong_answer": "Proton",
+      "correct_answer": "Neutron"
+     },
+     "cause": "The child mixes up two rules that are taught close together.",
+     "reveals": "Offer \"Proton\" next to the right answer and ask the question again in a new situation.",
+     "help": "Neutrons have no charge.",
+     "feedback": "Neutrons have no charge.",
+     "source": "To confirm by an Integrated Science teacher: a common classroom error, not traced to a study by the author.",
+     "status": "draft"
+    },
+    {
+     "code": "INTE.G9.MIXTUR.STRUCTURE_OF_THE_ATOM.ATOM_PARTS.M_IS9_AP_PROTON",
+     "skill": "INTE.G9.MIXTUR.STRUCTURE_OF_THE_ATOM.ATOM_PARTS",
+     "error": "Gives protons a negative charge.",
+     "example": {
+      "question": "Which particle is positive?",
+      "wrong_answer": "Electron",
+      "correct_answer": "Proton"
+     },
+     "cause": "The child mixes up two rules that are taught close together.",
+     "reveals": "Offer \"Electron\" next to the right answer and ask the question again in a new situation.",
+     "help": "Protons are positive.",
+     "feedback": "Protons are positive.",
+     "source": "To confirm by an Integrated Science teacher: a common classroom error, not traced to a study by the author.",
+     "status": "draft"
+    },
+    {
+     "code": "INTE.G9.MIXTUR.STRUCTURE_OF_THE_ATOM.MASS_NUMBER.M_IS9_MN_ADD",
+     "skill": "INTE.G9.MIXTUR.STRUCTURE_OF_THE_ATOM.MASS_NUMBER",
+     "error": "Subtracts instead of adding.",
+     "example": {
+      "question": "An atom has 6 protons and 6 neutrons. What is the mass number?",
+      "wrong_answer": "0",
+      "correct_answer": "12"
+     },
+     "cause": "The child mixes up two rules that are taught close together.",
+     "reveals": "Offer \"0\" next to the right answer and ask the question again in a new situation.",
+     "help": "Add the protons and neutrons.",
+     "feedback": "Add the protons and neutrons.",
+     "source": "To confirm by an Integrated Science teacher: a common classroom error, not traced to a study by the author.",
+     "status": "draft"
+    },
+    {
+     "code": "INTE.G9.MIXTUR.STRUCTURE_OF_THE_ATOM.MASS_NUMBER.M_IS9_MN_ELECTRON",
+     "skill": "INTE.G9.MIXTUR.STRUCTURE_OF_THE_ATOM.MASS_NUMBER",
+     "error": "Counts electrons in the mass number.",
+     "example": {
+      "question": "The mass number counts which particles?",
+      "wrong_answer": "Protons and electrons",
+      "correct_answer": "Protons and neutrons"
+     },
+     "cause": "The child mixes up two rules that are taught close together.",
+     "reveals": "Offer \"Protons and electrons\" next to the right answer and ask the question again in a new situation.",
+     "help": "The mass number counts protons and neutrons.",
+     "feedback": "The mass number counts protons and neutrons.",
+     "source": "To confirm by an Integrated Science teacher: a common classroom error, not traced to a study by the author.",
+     "status": "draft"
+    },
+    {
+     "code": "INTE.G9.MIXTUR.STRUCTURE_OF_THE_ATOM.MASS_NUMBER.M_IS9_MN_ATOMIC",
+     "skill": "INTE.G9.MIXTUR.STRUCTURE_OF_THE_ATOM.MASS_NUMBER",
+     "error": "Mixes atomic and mass number.",
+     "example": {
+      "question": "The atomic number is the number of...",
+      "wrong_answer": "neutrons",
+      "correct_answer": "protons"
+     },
+     "cause": "The child mixes up two rules that are taught close together.",
+     "reveals": "Offer \"neutrons\" next to the right answer and ask the question again in a new situation.",
+     "help": "The atomic number is the number of protons.",
+     "feedback": "The atomic number is the number of protons.",
+     "source": "To confirm by an Integrated Science teacher: a common classroom error, not traced to a study by the author.",
+     "status": "draft"
+    },
+    {
+     "code": "INTE.G9.MIXTUR.STRUCTURE_OF_THE_ATOM.ELECTRON_ARR.M_IS9_EA_FIRST",
+     "skill": "INTE.G9.MIXTUR.STRUCTURE_OF_THE_ATOM.ELECTRON_ARR",
+     "error": "Puts 8 in the first shell.",
+     "example": {
+      "question": "How many electrons can the first shell hold?",
+      "wrong_answer": "8",
+      "correct_answer": "2"
+     },
+     "cause": "The child mixes up two rules that are taught close together.",
+     "reveals": "Offer \"8\" next to the right answer and ask the question again in a new situation.",
+     "help": "The first shell holds up to 2 electrons.",
+     "feedback": "The first shell holds up to 2 electrons.",
+     "source": "To confirm by an Integrated Science teacher: a common classroom error, not traced to a study by the author.",
+     "status": "draft"
+    },
+    {
+     "code": "INTE.G9.MIXTUR.STRUCTURE_OF_THE_ATOM.ELECTRON_ARR.M_IS9_EA_SODIUM",
+     "skill": "INTE.G9.MIXTUR.STRUCTURE_OF_THE_ATOM.ELECTRON_ARR",
+     "error": "Gives the wrong sodium arrangement.",
+     "example": {
+      "question": "What is the electron arrangement of sodium (11 electrons)?",
+      "wrong_answer": "2, 9",
+      "correct_answer": "2, 8, 1"
+     },
+     "cause": "The child mixes up two rules that are taught close together.",
+     "reveals": "Offer \"2, 9\" next to the right answer and ask the question again in a new situation.",
+     "help": "Sodium is 2, 8, 1.",
+     "feedback": "Sodium is 2, 8, 1.",
+     "source": "To confirm by an Integrated Science teacher: a common classroom error, not traced to a study by the author.",
+     "status": "draft"
+    },
+    {
+     "code": "INTE.G9.MIXTUR.STRUCTURE_OF_THE_ATOM.ELECTRON_ARR.M_IS9_EA_SECOND",
+     "skill": "INTE.G9.MIXTUR.STRUCTURE_OF_THE_ATOM.ELECTRON_ARR",
+     "error": "Puts 18 in the second shell.",
+     "example": {
+      "question": "How many electrons can the second shell hold?",
+      "wrong_answer": "18",
+      "correct_answer": "8"
+     },
+     "cause": "The child mixes up two rules that are taught close together.",
+     "reveals": "Offer \"18\" next to the right answer and ask the question again in a new situation.",
+     "help": "The second shell holds up to 8 electrons.",
+     "feedback": "The second shell holds up to 8 electrons.",
+     "source": "To confirm by an Integrated Science teacher: a common classroom error, not traced to a study by the author.",
+     "status": "draft"
+    },
+    {
+     "code": "INTE.G9.MIXTUR.STRUCTURE_OF_THE_ATOM.METAL_NONMETAL.M_IS9_MM_CARBON",
+     "skill": "INTE.G9.MIXTUR.STRUCTURE_OF_THE_ATOM.METAL_NONMETAL",
+     "error": "Calls carbon a metal.",
+     "example": {
+      "question": "Which is a non-metal?",
+      "wrong_answer": "Iron",
+      "correct_answer": "Carbon"
+     },
+     "cause": "The child mixes up two rules that are taught close together.",
+     "reveals": "Offer \"Iron\" next to the right answer and ask the question again in a new situation.",
+     "help": "Carbon is a non-metal.",
+     "feedback": "Carbon is a non-metal.",
+     "source": "To confirm by an Integrated Science teacher: a common classroom error, not traced to a study by the author.",
+     "status": "draft"
+    },
+    {
+     "code": "INTE.G9.MIXTUR.STRUCTURE_OF_THE_ATOM.METAL_NONMETAL.M_IS9_MM_COPPER",
+     "skill": "INTE.G9.MIXTUR.STRUCTURE_OF_THE_ATOM.METAL_NONMETAL",
+     "error": "Calls copper a non-metal.",
+     "example": {
+      "question": "Which is a metal?",
+      "wrong_answer": "Sulphur",
+      "correct_answer": "Copper"
+     },
+     "cause": "The child mixes up two rules that are taught close together.",
+     "reveals": "Offer \"Sulphur\" next to the right answer and ask the question again in a new situation.",
+     "help": "Copper is a metal.",
+     "feedback": "Copper is a metal.",
+     "source": "To confirm by an Integrated Science teacher: a common classroom error, not traced to a study by the author.",
+     "status": "draft"
+    },
+    {
+     "code": "INTE.G9.MIXTUR.STRUCTURE_OF_THE_ATOM.METAL_NONMETAL.M_IS9_MM_CONDUCT",
+     "skill": "INTE.G9.MIXTUR.STRUCTURE_OF_THE_ATOM.METAL_NONMETAL",
+     "error": "Says non-metals conduct.",
+     "example": {
+      "question": "Which property do metals usually have?",
+      "wrong_answer": "They are dull and brittle",
+      "correct_answer": "They conduct electricity"
+     },
+     "cause": "The child mixes up two rules that are taught close together.",
+     "reveals": "Offer \"They are dull and brittle\" next to the right answer and ask the question again in a new situation.",
+     "help": "Metals conduct electricity.",
+     "feedback": "Metals conduct electricity.",
+     "source": "To confirm by an Integrated Science teacher: a common classroom error, not traced to a study by the author.",
+     "status": "draft"
+    }
+   ],
    "rubric_indicators": [
     "INTE.G9.RUBRIC.1.1",
     "INTE.G9.RUBRIC.1.2",
@@ -173,8 +471,240 @@
      "status": "kicd_verified"
     }
    ],
-   "skills": [],
-   "misconceptions": [],
+   "skills": [
+    {
+     "code": "INTE.G9.MIXTUR.METALS_AND_ALLOYS.METAL_PROPS",
+     "name": "Name the physical properties and uses of metals",
+     "outcomes": [
+      "INTE.G9.MIXTUR.METALS_AND_ALLOYS.a",
+      "INTE.G9.MIXTUR.METALS_AND_ALLOYS.c"
+     ],
+     "mastery": "The child says metals are shiny, conduct heat and electricity, can be hammered into sheets (malleable) and drawn into wires (ductile), and are mostly solid, and links copper to wires and aluminium to pots. Evidence rule: at least four of the last five fresh questions right across at least two question forms, and no repeated pick of the same misconception.",
+     "question_forms": [
+      "pick the right answer",
+      "pick the right answer in a short story",
+      "find the false step in a learner's reason"
+     ],
+     "thinking": [
+      "recall",
+      "reasoning"
+     ],
+     "horeb_skill_ids": [],
+     "prerequisites": [
+      {
+       "requires": "INTE.G9.MIXTUR.STRUCTURE_OF_THE_ATOM.METAL_NONMETAL",
+       "kind": "skill",
+       "strength": "essential",
+       "reason": "Proposed: this skill builds on it. To confirm by an Integrated Science teacher.",
+       "status": "proposed"
+      }
+     ],
+     "status": "proposed"
+    },
+    {
+     "code": "INTE.G9.MIXTUR.METALS_AND_ALLOYS.ALLOYS",
+     "name": "Say what alloys are and name common ones",
+     "outcomes": [
+      "INTE.G9.MIXTUR.METALS_AND_ALLOYS.b",
+      "INTE.G9.MIXTUR.METALS_AND_ALLOYS.c"
+     ],
+     "mastery": "The child says an alloy is a mixture of a metal with other elements, and names brass (copper and zinc), bronze (copper and tin) and steel (iron and a little carbon), made to be stronger or last longer. Evidence rule: at least four of the last five fresh questions right across at least two question forms, and no repeated pick of the same misconception.",
+     "question_forms": [
+      "pick the right answer",
+      "pick the right answer in a short story",
+      "find the false step in a learner's reason"
+     ],
+     "thinking": [
+      "recall",
+      "reasoning"
+     ],
+     "horeb_skill_ids": [],
+     "prerequisites": [
+      {
+       "requires": "INTE.G9.MIXTUR.METALS_AND_ALLOYS.METAL_PROPS",
+       "kind": "skill",
+       "strength": "essential",
+       "reason": "Proposed: this skill builds on it. To confirm by an Integrated Science teacher.",
+       "status": "proposed"
+      }
+     ],
+     "status": "proposed"
+    },
+    {
+     "code": "INTE.G9.MIXTUR.METALS_AND_ALLOYS.RUSTING",
+     "name": "Say what rusting is and how to prevent it",
+     "outcomes": [
+      "INTE.G9.MIXTUR.METALS_AND_ALLOYS.d"
+     ],
+     "mastery": "The child says iron rusts when it meets both air (oxygen) and water, and rusting weakens metal, and that painting, oiling, galvanising and plating keep air and water away. Evidence rule: at least four of the last five fresh questions right across at least two question forms, and no repeated pick of the same misconception.",
+     "question_forms": [
+      "pick the right answer",
+      "pick the right answer in a short story",
+      "find the false step in a learner's reason"
+     ],
+     "thinking": [
+      "recall",
+      "reasoning"
+     ],
+     "horeb_skill_ids": [],
+     "prerequisites": [
+      {
+       "requires": "INTE.G9.MIXTUR.METALS_AND_ALLOYS.METAL_PROPS",
+       "kind": "skill",
+       "strength": "essential",
+       "reason": "Proposed: this skill builds on it. To confirm by an Integrated Science teacher.",
+       "status": "proposed"
+      }
+     ],
+     "status": "proposed"
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "INTE.G9.MIXTUR.METALS_AND_ALLOYS.METAL_PROPS.M_IS9_MP_MALLEABLE",
+     "skill": "INTE.G9.MIXTUR.METALS_AND_ALLOYS.METAL_PROPS",
+     "error": "Mixes malleable and ductile.",
+     "example": {
+      "question": "Which means can be hammered into sheets?",
+      "wrong_answer": "Ductile",
+      "correct_answer": "Malleable"
+     },
+     "cause": "The child mixes up two rules that are taught close together.",
+     "reveals": "Offer \"Ductile\" next to the right answer and ask the question again in a new situation.",
+     "help": "Malleable metals can be hammered into sheets.",
+     "feedback": "Malleable metals can be hammered into sheets.",
+     "source": "To confirm by an Integrated Science teacher: a common classroom error, not traced to a study by the author.",
+     "status": "draft"
+    },
+    {
+     "code": "INTE.G9.MIXTUR.METALS_AND_ALLOYS.METAL_PROPS.M_IS9_MP_DUCTILE",
+     "skill": "INTE.G9.MIXTUR.METALS_AND_ALLOYS.METAL_PROPS",
+     "error": "Mixes ductile and malleable.",
+     "example": {
+      "question": "Which means can be drawn into wires?",
+      "wrong_answer": "Malleable",
+      "correct_answer": "Ductile"
+     },
+     "cause": "The child mixes up two rules that are taught close together.",
+     "reveals": "Offer \"Malleable\" next to the right answer and ask the question again in a new situation.",
+     "help": "Ductile metals can be drawn into wires.",
+     "feedback": "Ductile metals can be drawn into wires.",
+     "source": "To confirm by an Integrated Science teacher: a common classroom error, not traced to a study by the author.",
+     "status": "draft"
+    },
+    {
+     "code": "INTE.G9.MIXTUR.METALS_AND_ALLOYS.METAL_PROPS.M_IS9_MP_USE",
+     "skill": "INTE.G9.MIXTUR.METALS_AND_ALLOYS.METAL_PROPS",
+     "error": "Gives the wrong use of copper.",
+     "example": {
+      "question": "Why is copper used for wires?",
+      "wrong_answer": "It does not conduct",
+      "correct_answer": "It conducts electricity well"
+     },
+     "cause": "The child mixes up two rules that are taught close together.",
+     "reveals": "Offer \"It does not conduct\" next to the right answer and ask the question again in a new situation.",
+     "help": "Copper conducts electricity well.",
+     "feedback": "Copper conducts electricity well.",
+     "source": "To confirm by an Integrated Science teacher: a common classroom error, not traced to a study by the author.",
+     "status": "draft"
+    },
+    {
+     "code": "INTE.G9.MIXTUR.METALS_AND_ALLOYS.ALLOYS.M_IS9_AL_MEANING",
+     "skill": "INTE.G9.MIXTUR.METALS_AND_ALLOYS.ALLOYS",
+     "error": "Thinks an alloy is a pure metal.",
+     "example": {
+      "question": "What is an alloy?",
+      "wrong_answer": "A pure metal",
+      "correct_answer": "A mixture of a metal with other elements"
+     },
+     "cause": "The child mixes up two rules that are taught close together.",
+     "reveals": "Offer \"A pure metal\" next to the right answer and ask the question again in a new situation.",
+     "help": "An alloy is a mixture.",
+     "feedback": "An alloy is a mixture.",
+     "source": "To confirm by an Integrated Science teacher: a common classroom error, not traced to a study by the author.",
+     "status": "draft"
+    },
+    {
+     "code": "INTE.G9.MIXTUR.METALS_AND_ALLOYS.ALLOYS.M_IS9_AL_BRASS",
+     "skill": "INTE.G9.MIXTUR.METALS_AND_ALLOYS.ALLOYS",
+     "error": "Gives the wrong metals for brass.",
+     "example": {
+      "question": "Brass is made of copper and...",
+      "wrong_answer": "tin",
+      "correct_answer": "zinc"
+     },
+     "cause": "The child mixes up two rules that are taught close together.",
+     "reveals": "Offer \"tin\" next to the right answer and ask the question again in a new situation.",
+     "help": "Brass is copper and zinc.",
+     "feedback": "Brass is copper and zinc.",
+     "source": "To confirm by an Integrated Science teacher: a common classroom error, not traced to a study by the author.",
+     "status": "draft"
+    },
+    {
+     "code": "INTE.G9.MIXTUR.METALS_AND_ALLOYS.ALLOYS.M_IS9_AL_STEEL",
+     "skill": "INTE.G9.MIXTUR.METALS_AND_ALLOYS.ALLOYS",
+     "error": "Gives the wrong metals for steel.",
+     "example": {
+      "question": "Steel is iron with a little...",
+      "wrong_answer": "copper",
+      "correct_answer": "carbon"
+     },
+     "cause": "The child mixes up two rules that are taught close together.",
+     "reveals": "Offer \"copper\" next to the right answer and ask the question again in a new situation.",
+     "help": "Steel is iron with a little carbon.",
+     "feedback": "Steel is iron with a little carbon.",
+     "source": "To confirm by an Integrated Science teacher: a common classroom error, not traced to a study by the author.",
+     "status": "draft"
+    },
+    {
+     "code": "INTE.G9.MIXTUR.METALS_AND_ALLOYS.RUSTING.M_IS9_RU_NEED",
+     "skill": "INTE.G9.MIXTUR.METALS_AND_ALLOYS.RUSTING",
+     "error": "Says rust needs only water.",
+     "example": {
+      "question": "What does iron need to rust?",
+      "wrong_answer": "Water only",
+      "correct_answer": "Air and water"
+     },
+     "cause": "The child mixes up two rules that are taught close together.",
+     "reveals": "Offer \"Water only\" next to the right answer and ask the question again in a new situation.",
+     "help": "Iron needs both air and water to rust.",
+     "feedback": "Iron needs both air and water to rust.",
+     "source": "To confirm by an Integrated Science teacher: a common classroom error, not traced to a study by the author.",
+     "status": "draft"
+    },
+    {
+     "code": "INTE.G9.MIXTUR.METALS_AND_ALLOYS.RUSTING.M_IS9_RU_PREVENT",
+     "skill": "INTE.G9.MIXTUR.METALS_AND_ALLOYS.RUSTING",
+     "error": "Names a wrong prevention.",
+     "example": {
+      "question": "Which prevents rusting?",
+      "wrong_answer": "Leaving it wet",
+      "correct_answer": "Painting or oiling it"
+     },
+     "cause": "The child mixes up two rules that are taught close together.",
+     "reveals": "Offer \"Leaving it wet\" next to the right answer and ask the question again in a new situation.",
+     "help": "Painting or oiling keeps air and water away.",
+     "feedback": "Painting or oiling keeps air and water away.",
+     "source": "To confirm by an Integrated Science teacher: a common classroom error, not traced to a study by the author.",
+     "status": "draft"
+    },
+    {
+     "code": "INTE.G9.MIXTUR.METALS_AND_ALLOYS.RUSTING.M_IS9_RU_EFFECT",
+     "skill": "INTE.G9.MIXTUR.METALS_AND_ALLOYS.RUSTING",
+     "error": "Says rust strengthens metal.",
+     "example": {
+      "question": "What does rust do to iron?",
+      "wrong_answer": "Makes it stronger",
+      "correct_answer": "Weakens it"
+     },
+     "cause": "The child mixes up two rules that are taught close together.",
+     "reveals": "Offer \"Makes it stronger\" next to the right answer and ask the question again in a new situation.",
+     "help": "Rust weakens iron.",
+     "feedback": "Rust weakens iron.",
+     "source": "To confirm by an Integrated Science teacher: a common classroom error, not traced to a study by the author.",
+     "status": "draft"
+    }
+   ],
    "rubric_indicators": [
     "INTE.G9.RUBRIC.1.1",
     "INTE.G9.RUBRIC.1.2",
@@ -260,8 +790,80 @@
      "indicator": "INTE.G9.RUBRIC.1.5"
     }
    ],
-   "skills": [],
-   "misconceptions": [],
+   "skills": [
+    {
+     "code": "INTE.G9.MIXTUR.WATER_HARDNESS.HARD_SOFT",
+     "name": "Tell hard water from soft water and soften it",
+     "outcomes": [
+      "INTE.G9.MIXTUR.WATER_HARDNESS.b",
+      "INTE.G9.MIXTUR.WATER_HARDNESS.c",
+      "INTE.G9.MIXTUR.WATER_HARDNESS.d"
+     ],
+     "mastery": "The child says hard water does not lather easily with soap and leaves scum, soft water lathers well, boiling or washing soda can soften it, and hard water leaves scale in kettles. Evidence rule: at least four of the last five fresh questions right across at least two question forms, and no repeated pick of the same misconception.",
+     "question_forms": [
+      "pick the right answer",
+      "pick the right answer in a short story",
+      "find the false step in a learner's reason"
+     ],
+     "thinking": [
+      "recall",
+      "reasoning"
+     ],
+     "horeb_skill_ids": [],
+     "prerequisites": [],
+     "status": "proposed"
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "INTE.G9.MIXTUR.WATER_HARDNESS.HARD_SOFT.M_IS9_HS_LATHER",
+     "skill": "INTE.G9.MIXTUR.WATER_HARDNESS.HARD_SOFT",
+     "error": "Says hard water lathers easily.",
+     "example": {
+      "question": "Which water lathers easily with soap?",
+      "wrong_answer": "Hard water",
+      "correct_answer": "Soft water"
+     },
+     "cause": "The child mixes up two rules that are taught close together.",
+     "reveals": "Offer \"Hard water\" next to the right answer and ask the question again in a new situation.",
+     "help": "Soft water lathers easily.",
+     "feedback": "Soft water lathers easily.",
+     "source": "To confirm by an Integrated Science teacher: a common classroom error, not traced to a study by the author.",
+     "status": "draft"
+    },
+    {
+     "code": "INTE.G9.MIXTUR.WATER_HARDNESS.HARD_SOFT.M_IS9_HS_SCALE",
+     "skill": "INTE.G9.MIXTUR.WATER_HARDNESS.HARD_SOFT",
+     "error": "Says soft water forms scale.",
+     "example": {
+      "question": "Which leaves scale in a kettle?",
+      "wrong_answer": "Soft water",
+      "correct_answer": "Hard water"
+     },
+     "cause": "The child mixes up two rules that are taught close together.",
+     "reveals": "Offer \"Soft water\" next to the right answer and ask the question again in a new situation.",
+     "help": "Hard water leaves scale.",
+     "feedback": "Hard water leaves scale.",
+     "source": "To confirm by an Integrated Science teacher: a common classroom error, not traced to a study by the author.",
+     "status": "draft"
+    },
+    {
+     "code": "INTE.G9.MIXTUR.WATER_HARDNESS.HARD_SOFT.M_IS9_HS_SOFTEN",
+     "skill": "INTE.G9.MIXTUR.WATER_HARDNESS.HARD_SOFT",
+     "error": "Names a wrong softening method.",
+     "example": {
+      "question": "Which can soften hard water?",
+      "wrong_answer": "Freezing it",
+      "correct_answer": "Boiling it"
+     },
+     "cause": "The child mixes up two rules that are taught close together.",
+     "reveals": "Offer \"Freezing it\" next to the right answer and ask the question again in a new situation.",
+     "help": "Boiling softens temporary hard water.",
+     "feedback": "Boiling softens temporary hard water.",
+     "source": "To confirm by an Integrated Science teacher: a common classroom error, not traced to a study by the author.",
+     "status": "draft"
+    }
+   ],
    "rubric_indicators": [
     "INTE.G9.RUBRIC.1.1",
     "INTE.G9.RUBRIC.1.2",
@@ -344,8 +946,156 @@
      "status": "kicd_verified"
     }
    ],
-   "skills": [],
-   "misconceptions": [],
+   "skills": [
+    {
+     "code": "INTE.G9.LIVING.NUTRITION_IN_PLANTS.LEAF_PARTS",
+     "name": "Name the parts of a leaf and how it suits photosynthesis",
+     "outcomes": [
+      "INTE.G9.LIVING.NUTRITION_IN_PLANTS.a",
+      "INTE.G9.LIVING.NUTRITION_IN_PLANTS.b"
+     ],
+     "mastery": "The child names the blade, petiole and veins, the stomata for gas exchange, the chloroplasts with chlorophyll and the palisade layer near the top, and says a broad, thin leaf catches light. Evidence rule: at least four of the last five fresh questions right across at least two question forms, and no repeated pick of the same misconception.",
+     "question_forms": [
+      "pick the right answer",
+      "pick the right answer in a short story",
+      "find the false step in a learner's reason"
+     ],
+     "thinking": [
+      "recall",
+      "reasoning"
+     ],
+     "horeb_skill_ids": [],
+     "prerequisites": [],
+     "status": "proposed"
+    },
+    {
+     "code": "INTE.G9.LIVING.NUTRITION_IN_PLANTS.PHOTOSYNTHESIS",
+     "name": "Describe photosynthesis and what it needs",
+     "outcomes": [
+      "INTE.G9.LIVING.NUTRITION_IN_PLANTS.c",
+      "INTE.G9.LIVING.NUTRITION_IN_PLANTS.d"
+     ],
+     "mastery": "The child says green plants make glucose from carbon dioxide and water using light and chlorophyll, giving off oxygen, and that iodine turns starch blue-black. Evidence rule: at least four of the last five fresh questions right across at least two question forms, and no repeated pick of the same misconception.",
+     "question_forms": [
+      "pick the right answer",
+      "pick the right answer in a short story",
+      "find the false step in a learner's reason"
+     ],
+     "thinking": [
+      "recall",
+      "reasoning"
+     ],
+     "horeb_skill_ids": [],
+     "prerequisites": [
+      {
+       "requires": "INTE.G9.LIVING.NUTRITION_IN_PLANTS.LEAF_PARTS",
+       "kind": "skill",
+       "strength": "essential",
+       "reason": "Proposed: this skill builds on it. To confirm by an Integrated Science teacher.",
+       "status": "proposed"
+      }
+     ],
+     "status": "proposed"
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "INTE.G9.LIVING.NUTRITION_IN_PLANTS.LEAF_PARTS.M_IS9_LP_STOMATA",
+     "skill": "INTE.G9.LIVING.NUTRITION_IN_PLANTS.LEAF_PARTS",
+     "error": "Gives the wrong job of stomata.",
+     "example": {
+      "question": "What do stomata do?",
+      "wrong_answer": "Make sugar",
+      "correct_answer": "Let gases in and out"
+     },
+     "cause": "The child mixes up two rules that are taught close together.",
+     "reveals": "Offer \"Make sugar\" next to the right answer and ask the question again in a new situation.",
+     "help": "Stomata let gases in and out.",
+     "feedback": "Stomata let gases in and out.",
+     "source": "To confirm by an Integrated Science teacher: a common classroom error, not traced to a study by the author.",
+     "status": "draft"
+    },
+    {
+     "code": "INTE.G9.LIVING.NUTRITION_IN_PLANTS.LEAF_PARTS.M_IS9_LP_CHLORO",
+     "skill": "INTE.G9.LIVING.NUTRITION_IN_PLANTS.LEAF_PARTS",
+     "error": "Puts chlorophyll in the roots.",
+     "example": {
+      "question": "Where is chlorophyll found?",
+      "wrong_answer": "In the roots",
+      "correct_answer": "In chloroplasts in leaves"
+     },
+     "cause": "The child mixes up two rules that are taught close together.",
+     "reveals": "Offer \"In the roots\" next to the right answer and ask the question again in a new situation.",
+     "help": "Chlorophyll is in chloroplasts in the leaves.",
+     "feedback": "Chlorophyll is in chloroplasts in the leaves.",
+     "source": "To confirm by an Integrated Science teacher: a common classroom error, not traced to a study by the author.",
+     "status": "draft"
+    },
+    {
+     "code": "INTE.G9.LIVING.NUTRITION_IN_PLANTS.LEAF_PARTS.M_IS9_LP_BROAD",
+     "skill": "INTE.G9.LIVING.NUTRITION_IN_PLANTS.LEAF_PARTS",
+     "error": "Says a narrow leaf catches the most light.",
+     "example": {
+      "question": "Why is a leaf broad and thin?",
+      "wrong_answer": "To hide from light",
+      "correct_answer": "To catch light and let gases in"
+     },
+     "cause": "The child mixes up two rules that are taught close together.",
+     "reveals": "Offer \"To hide from light\" next to the right answer and ask the question again in a new situation.",
+     "help": "A broad, thin leaf catches light.",
+     "feedback": "A broad, thin leaf catches light.",
+     "source": "To confirm by an Integrated Science teacher: a common classroom error, not traced to a study by the author.",
+     "status": "draft"
+    },
+    {
+     "code": "INTE.G9.LIVING.NUTRITION_IN_PLANTS.PHOTOSYNTHESIS.M_IS9_PS_GAS",
+     "skill": "INTE.G9.LIVING.NUTRITION_IN_PLANTS.PHOTOSYNTHESIS",
+     "error": "Says plants take in oxygen to make food.",
+     "example": {
+      "question": "Which gas is used in photosynthesis?",
+      "wrong_answer": "Oxygen",
+      "correct_answer": "Carbon dioxide"
+     },
+     "cause": "The child mixes up two rules that are taught close together.",
+     "reveals": "Offer \"Oxygen\" next to the right answer and ask the question again in a new situation.",
+     "help": "Plants use carbon dioxide.",
+     "feedback": "Plants use carbon dioxide.",
+     "source": "To confirm by an Integrated Science teacher: a common classroom error, not traced to a study by the author.",
+     "status": "draft"
+    },
+    {
+     "code": "INTE.G9.LIVING.NUTRITION_IN_PLANTS.PHOTOSYNTHESIS.M_IS9_PS_PRODUCT",
+     "skill": "INTE.G9.LIVING.NUTRITION_IN_PLANTS.PHOTOSYNTHESIS",
+     "error": "Gives the wrong product.",
+     "example": {
+      "question": "What does photosynthesis give off?",
+      "wrong_answer": "Carbon dioxide",
+      "correct_answer": "Oxygen"
+     },
+     "cause": "The child mixes up two rules that are taught close together.",
+     "reveals": "Offer \"Carbon dioxide\" next to the right answer and ask the question again in a new situation.",
+     "help": "Photosynthesis gives off oxygen.",
+     "feedback": "Photosynthesis gives off oxygen.",
+     "source": "To confirm by an Integrated Science teacher: a common classroom error, not traced to a study by the author.",
+     "status": "draft"
+    },
+    {
+     "code": "INTE.G9.LIVING.NUTRITION_IN_PLANTS.PHOTOSYNTHESIS.M_IS9_PS_TEST",
+     "skill": "INTE.G9.LIVING.NUTRITION_IN_PLANTS.PHOTOSYNTHESIS",
+     "error": "Gives the wrong starch test.",
+     "example": {
+      "question": "What turns blue-black with starch?",
+      "wrong_answer": "Salt water",
+      "correct_answer": "Iodine"
+     },
+     "cause": "The child mixes up two rules that are taught close together.",
+     "reveals": "Offer \"Salt water\" next to the right answer and ask the question again in a new situation.",
+     "help": "Iodine turns blue-black with starch.",
+     "feedback": "Iodine turns blue-black with starch.",
+     "source": "To confirm by an Integrated Science teacher: a common classroom error, not traced to a study by the author.",
+     "status": "draft"
+    }
+   ],
    "rubric_indicators": [
     "INTE.G9.RUBRIC.2.1",
     "INTE.G9.RUBRIC.2.2",
@@ -427,8 +1177,231 @@
      "status": "kicd_verified"
     }
    ],
-   "skills": [],
-   "misconceptions": [],
+   "skills": [
+    {
+     "code": "INTE.G9.LIVING.NUTRITION_IN_ANIMALS.ANIMAL_NUTRITION",
+     "name": "Name modes of nutrition in animals",
+     "outcomes": [
+      "INTE.G9.LIVING.NUTRITION_IN_ANIMALS.a",
+      "INTE.G9.LIVING.NUTRITION_IN_ANIMALS.c"
+     ],
+     "mastery": "The child names herbivores (plants only), carnivores (flesh only) and omnivores (both), and says animals are grouped by what they eat. Evidence rule: at least four of the last five fresh questions right across at least two question forms, and no repeated pick of the same misconception.",
+     "question_forms": [
+      "pick the right answer",
+      "pick the right answer in a short story",
+      "find the false step in a learner's reason"
+     ],
+     "thinking": [
+      "recall",
+      "reasoning"
+     ],
+     "horeb_skill_ids": [],
+     "prerequisites": [],
+     "status": "proposed"
+    },
+    {
+     "code": "INTE.G9.LIVING.NUTRITION_IN_ANIMALS.TEETH",
+     "name": "Name the teeth and what each does",
+     "outcomes": [
+      "INTE.G9.LIVING.NUTRITION_IN_ANIMALS.b"
+     ],
+     "mastery": "The child says incisors cut, canines tear, premolars and molars grind, and that carnivores have large canines while herbivores have broad molars. Evidence rule: at least four of the last five fresh questions right across at least two question forms, and no repeated pick of the same misconception.",
+     "question_forms": [
+      "pick the right answer",
+      "pick the right answer in a short story",
+      "find the false step in a learner's reason"
+     ],
+     "thinking": [
+      "recall",
+      "reasoning"
+     ],
+     "horeb_skill_ids": [],
+     "prerequisites": [
+      {
+       "requires": "INTE.G9.LIVING.NUTRITION_IN_ANIMALS.ANIMAL_NUTRITION",
+       "kind": "skill",
+       "strength": "essential",
+       "reason": "Proposed: this skill builds on it. To confirm by an Integrated Science teacher.",
+       "status": "proposed"
+      }
+     ],
+     "status": "proposed"
+    },
+    {
+     "code": "INTE.G9.LIVING.NUTRITION_IN_ANIMALS.DIGESTION",
+     "name": "Describe where digestion happens in a human",
+     "outcomes": [
+      "INTE.G9.LIVING.NUTRITION_IN_ANIMALS.d"
+     ],
+     "mastery": "The child says digestion starts in the mouth (saliva begins on starch), goes on in the stomach (protein), digested food is absorbed in the small intestine and water is absorbed in the large intestine. Evidence rule: at least four of the last five fresh questions right across at least two question forms, and no repeated pick of the same misconception.",
+     "question_forms": [
+      "pick the right answer",
+      "pick the right answer in a short story",
+      "find the false step in a learner's reason"
+     ],
+     "thinking": [
+      "recall",
+      "reasoning"
+     ],
+     "horeb_skill_ids": [],
+     "prerequisites": [
+      {
+       "requires": "INTE.G9.LIVING.NUTRITION_IN_ANIMALS.TEETH",
+       "kind": "skill",
+       "strength": "essential",
+       "reason": "Proposed: this skill builds on it. To confirm by an Integrated Science teacher.",
+       "status": "proposed"
+      }
+     ],
+     "status": "proposed"
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "INTE.G9.LIVING.NUTRITION_IN_ANIMALS.ANIMAL_NUTRITION.M_IS9_AN_HERBI",
+     "skill": "INTE.G9.LIVING.NUTRITION_IN_ANIMALS.ANIMAL_NUTRITION",
+     "error": "Mixes herbivore and carnivore.",
+     "example": {
+      "question": "What does a herbivore eat?",
+      "wrong_answer": "Flesh only",
+      "correct_answer": "Plants only"
+     },
+     "cause": "The child mixes up two rules that are taught close together.",
+     "reveals": "Offer \"Flesh only\" next to the right answer and ask the question again in a new situation.",
+     "help": "A herbivore eats plants only.",
+     "feedback": "A herbivore eats plants only.",
+     "source": "To confirm by an Integrated Science teacher: a common classroom error, not traced to a study by the author.",
+     "status": "draft"
+    },
+    {
+     "code": "INTE.G9.LIVING.NUTRITION_IN_ANIMALS.ANIMAL_NUTRITION.M_IS9_AN_CARNI",
+     "skill": "INTE.G9.LIVING.NUTRITION_IN_ANIMALS.ANIMAL_NUTRITION",
+     "error": "Mixes carnivore and herbivore.",
+     "example": {
+      "question": "What does a carnivore eat?",
+      "wrong_answer": "Plants only",
+      "correct_answer": "Flesh only"
+     },
+     "cause": "The child mixes up two rules that are taught close together.",
+     "reveals": "Offer \"Plants only\" next to the right answer and ask the question again in a new situation.",
+     "help": "A carnivore eats flesh.",
+     "feedback": "A carnivore eats flesh.",
+     "source": "To confirm by an Integrated Science teacher: a common classroom error, not traced to a study by the author.",
+     "status": "draft"
+    },
+    {
+     "code": "INTE.G9.LIVING.NUTRITION_IN_ANIMALS.ANIMAL_NUTRITION.M_IS9_AN_OMNI",
+     "skill": "INTE.G9.LIVING.NUTRITION_IN_ANIMALS.ANIMAL_NUTRITION",
+     "error": "Says omnivores eat only plants.",
+     "example": {
+      "question": "What does an omnivore eat?",
+      "wrong_answer": "Plants only",
+      "correct_answer": "Plants and animals"
+     },
+     "cause": "The child mixes up two rules that are taught close together.",
+     "reveals": "Offer \"Plants only\" next to the right answer and ask the question again in a new situation.",
+     "help": "An omnivore eats both.",
+     "feedback": "An omnivore eats both.",
+     "source": "To confirm by an Integrated Science teacher: a common classroom error, not traced to a study by the author.",
+     "status": "draft"
+    },
+    {
+     "code": "INTE.G9.LIVING.NUTRITION_IN_ANIMALS.TEETH.M_IS9_TE_CANINE",
+     "skill": "INTE.G9.LIVING.NUTRITION_IN_ANIMALS.TEETH",
+     "error": "Mixes canines and incisors.",
+     "example": {
+      "question": "Which teeth tear flesh?",
+      "wrong_answer": "Incisors",
+      "correct_answer": "Canines"
+     },
+     "cause": "The child mixes up two rules that are taught close together.",
+     "reveals": "Offer \"Incisors\" next to the right answer and ask the question again in a new situation.",
+     "help": "Canines tear flesh.",
+     "feedback": "Canines tear flesh.",
+     "source": "To confirm by an Integrated Science teacher: a common classroom error, not traced to a study by the author.",
+     "status": "draft"
+    },
+    {
+     "code": "INTE.G9.LIVING.NUTRITION_IN_ANIMALS.TEETH.M_IS9_TE_INCISOR",
+     "skill": "INTE.G9.LIVING.NUTRITION_IN_ANIMALS.TEETH",
+     "error": "Gives incisors the wrong job.",
+     "example": {
+      "question": "Which teeth cut food?",
+      "wrong_answer": "Molars",
+      "correct_answer": "Incisors"
+     },
+     "cause": "The child mixes up two rules that are taught close together.",
+     "reveals": "Offer \"Molars\" next to the right answer and ask the question again in a new situation.",
+     "help": "Incisors cut food.",
+     "feedback": "Incisors cut food.",
+     "source": "To confirm by an Integrated Science teacher: a common classroom error, not traced to a study by the author.",
+     "status": "draft"
+    },
+    {
+     "code": "INTE.G9.LIVING.NUTRITION_IN_ANIMALS.TEETH.M_IS9_TE_MOLAR",
+     "skill": "INTE.G9.LIVING.NUTRITION_IN_ANIMALS.TEETH",
+     "error": "Gives molars the wrong job.",
+     "example": {
+      "question": "Which teeth grind food?",
+      "wrong_answer": "Canines",
+      "correct_answer": "Molars"
+     },
+     "cause": "The child mixes up two rules that are taught close together.",
+     "reveals": "Offer \"Canines\" next to the right answer and ask the question again in a new situation.",
+     "help": "Molars grind food.",
+     "feedback": "Molars grind food.",
+     "source": "To confirm by an Integrated Science teacher: a common classroom error, not traced to a study by the author.",
+     "status": "draft"
+    },
+    {
+     "code": "INTE.G9.LIVING.NUTRITION_IN_ANIMALS.DIGESTION.M_IS9_DG_START",
+     "skill": "INTE.G9.LIVING.NUTRITION_IN_ANIMALS.DIGESTION",
+     "error": "Starts digestion in the stomach only.",
+     "example": {
+      "question": "Where does digestion begin?",
+      "wrong_answer": "In the stomach",
+      "correct_answer": "In the mouth"
+     },
+     "cause": "The child mixes up two rules that are taught close together.",
+     "reveals": "Offer \"In the stomach\" next to the right answer and ask the question again in a new situation.",
+     "help": "Digestion starts in the mouth.",
+     "feedback": "Digestion starts in the mouth.",
+     "source": "To confirm by an Integrated Science teacher: a common classroom error, not traced to a study by the author.",
+     "status": "draft"
+    },
+    {
+     "code": "INTE.G9.LIVING.NUTRITION_IN_ANIMALS.DIGESTION.M_IS9_DG_ABSORB",
+     "skill": "INTE.G9.LIVING.NUTRITION_IN_ANIMALS.DIGESTION",
+     "error": "Places absorption in the stomach.",
+     "example": {
+      "question": "Where is digested food absorbed?",
+      "wrong_answer": "In the mouth",
+      "correct_answer": "In the small intestine"
+     },
+     "cause": "The child mixes up two rules that are taught close together.",
+     "reveals": "Offer \"In the mouth\" next to the right answer and ask the question again in a new situation.",
+     "help": "Digested food is absorbed in the small intestine.",
+     "feedback": "Digested food is absorbed in the small intestine.",
+     "source": "To confirm by an Integrated Science teacher: a common classroom error, not traced to a study by the author.",
+     "status": "draft"
+    },
+    {
+     "code": "INTE.G9.LIVING.NUTRITION_IN_ANIMALS.DIGESTION.M_IS9_DG_WATER",
+     "skill": "INTE.G9.LIVING.NUTRITION_IN_ANIMALS.DIGESTION",
+     "error": "Places water absorption wrongly.",
+     "example": {
+      "question": "Where is most water absorbed?",
+      "wrong_answer": "In the oesophagus",
+      "correct_answer": "In the large intestine"
+     },
+     "cause": "The child mixes up two rules that are taught close together.",
+     "reveals": "Offer \"In the oesophagus\" next to the right answer and ask the question again in a new situation.",
+     "help": "Water is absorbed in the large intestine.",
+     "feedback": "Water is absorbed in the large intestine.",
+     "source": "To confirm by an Integrated Science teacher: a common classroom error, not traced to a study by the author.",
+     "status": "draft"
+    }
+   ],
    "rubric_indicators": [
     "INTE.G9.RUBRIC.2.1",
     "INTE.G9.RUBRIC.2.2",
@@ -524,8 +1497,232 @@
      "status": "kicd_read"
     }
    ],
-   "skills": [],
-   "misconceptions": [],
+   "skills": [
+    {
+     "code": "INTE.G9.LIVING.REPRODUCTION_IN_PLANTS.FLOWER_PARTS",
+     "name": "Name the parts of a flower and what they do",
+     "outcomes": [
+      "INTE.G9.LIVING.REPRODUCTION_IN_PLANTS.a"
+     ],
+     "mastery": "The child says sepals protect the bud, petals attract insects, the stamen (anther and filament) is male and the carpel (stigma, style and ovary) is female. Evidence rule: at least four of the last five fresh questions right across at least two question forms, and no repeated pick of the same misconception.",
+     "question_forms": [
+      "pick the right answer",
+      "pick the right answer in a short story",
+      "find the false step in a learner's reason"
+     ],
+     "thinking": [
+      "recall",
+      "reasoning"
+     ],
+     "horeb_skill_ids": [],
+     "prerequisites": [],
+     "status": "proposed"
+    },
+    {
+     "code": "INTE.G9.LIVING.REPRODUCTION_IN_PLANTS.POLLINATION",
+     "name": "Describe pollination and the adaptations for wind and insects",
+     "outcomes": [
+      "INTE.G9.LIVING.REPRODUCTION_IN_PLANTS.b",
+      "INTE.G9.LIVING.REPRODUCTION_IN_PLANTS.c"
+     ],
+     "mastery": "The child says pollination is the transfer of pollen from an anther to a stigma, wind flowers have feathery stigmas and light pollen, and insect flowers have bright petals, scent and nectar. Evidence rule: at least four of the last five fresh questions right across at least two question forms, and no repeated pick of the same misconception.",
+     "question_forms": [
+      "pick the right answer",
+      "pick the right answer in a short story",
+      "find the false step in a learner's reason"
+     ],
+     "thinking": [
+      "recall",
+      "reasoning"
+     ],
+     "horeb_skill_ids": [],
+     "prerequisites": [
+      {
+       "requires": "INTE.G9.LIVING.REPRODUCTION_IN_PLANTS.FLOWER_PARTS",
+       "kind": "skill",
+       "strength": "essential",
+       "reason": "Proposed: this skill builds on it. To confirm by an Integrated Science teacher.",
+       "status": "proposed"
+      }
+     ],
+     "status": "proposed"
+    },
+    {
+     "code": "INTE.G9.LIVING.REPRODUCTION_IN_PLANTS.FERTIL_DISPERSAL",
+     "name": "Describe fertilisation, fruit formation and seed dispersal",
+     "outcomes": [
+      "INTE.G9.LIVING.REPRODUCTION_IN_PLANTS.d",
+      "INTE.G9.LIVING.REPRODUCTION_IN_PLANTS.e"
+     ],
+     "mastery": "The child says the pollen grows a tube to the ovule, fertilisation makes the ovule a seed and the ovary a fruit, and seeds are dispersed by wind, water, animals or by bursting. Evidence rule: at least four of the last five fresh questions right across at least two question forms, and no repeated pick of the same misconception.",
+     "question_forms": [
+      "pick the right answer",
+      "pick the right answer in a short story",
+      "find the false step in a learner's reason"
+     ],
+     "thinking": [
+      "recall",
+      "reasoning"
+     ],
+     "horeb_skill_ids": [],
+     "prerequisites": [
+      {
+       "requires": "INTE.G9.LIVING.REPRODUCTION_IN_PLANTS.POLLINATION",
+       "kind": "skill",
+       "strength": "essential",
+       "reason": "Proposed: this skill builds on it. To confirm by an Integrated Science teacher.",
+       "status": "proposed"
+      }
+     ],
+     "status": "proposed"
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "INTE.G9.LIVING.REPRODUCTION_IN_PLANTS.FLOWER_PARTS.M_IS9_FP_STAMEN",
+     "skill": "INTE.G9.LIVING.REPRODUCTION_IN_PLANTS.FLOWER_PARTS",
+     "error": "Calls the stamen female.",
+     "example": {
+      "question": "Which part is the male part of a flower?",
+      "wrong_answer": "Carpel",
+      "correct_answer": "Stamen"
+     },
+     "cause": "The child mixes up two rules that are taught close together.",
+     "reveals": "Offer \"Carpel\" next to the right answer and ask the question again in a new situation.",
+     "help": "The stamen is the male part.",
+     "feedback": "The stamen is the male part.",
+     "source": "To confirm by an Integrated Science teacher: a common classroom error, not traced to a study by the author.",
+     "status": "draft"
+    },
+    {
+     "code": "INTE.G9.LIVING.REPRODUCTION_IN_PLANTS.FLOWER_PARTS.M_IS9_FP_CARPEL",
+     "skill": "INTE.G9.LIVING.REPRODUCTION_IN_PLANTS.FLOWER_PARTS",
+     "error": "Calls the carpel male.",
+     "example": {
+      "question": "Which part is the female part of a flower?",
+      "wrong_answer": "Stamen",
+      "correct_answer": "Carpel"
+     },
+     "cause": "The child mixes up two rules that are taught close together.",
+     "reveals": "Offer \"Stamen\" next to the right answer and ask the question again in a new situation.",
+     "help": "The carpel is the female part.",
+     "feedback": "The carpel is the female part.",
+     "source": "To confirm by an Integrated Science teacher: a common classroom error, not traced to a study by the author.",
+     "status": "draft"
+    },
+    {
+     "code": "INTE.G9.LIVING.REPRODUCTION_IN_PLANTS.FLOWER_PARTS.M_IS9_FP_PETAL",
+     "skill": "INTE.G9.LIVING.REPRODUCTION_IN_PLANTS.FLOWER_PARTS",
+     "error": "Gives petals the wrong job.",
+     "example": {
+      "question": "What do petals do?",
+      "wrong_answer": "Make seeds",
+      "correct_answer": "Attract insects"
+     },
+     "cause": "The child mixes up two rules that are taught close together.",
+     "reveals": "Offer \"Make seeds\" next to the right answer and ask the question again in a new situation.",
+     "help": "Petals attract insects.",
+     "feedback": "Petals attract insects.",
+     "source": "To confirm by an Integrated Science teacher: a common classroom error, not traced to a study by the author.",
+     "status": "draft"
+    },
+    {
+     "code": "INTE.G9.LIVING.REPRODUCTION_IN_PLANTS.POLLINATION.M_IS9_PL_MEANING",
+     "skill": "INTE.G9.LIVING.REPRODUCTION_IN_PLANTS.POLLINATION",
+     "error": "Mixes pollination and fertilisation.",
+     "example": {
+      "question": "What is pollination?",
+      "wrong_answer": "Joining of male and female cells",
+      "correct_answer": "Transfer of pollen to a stigma"
+     },
+     "cause": "The child mixes up two rules that are taught close together.",
+     "reveals": "Offer \"Joining of male and female cells\" next to the right answer and ask the question again in a new situation.",
+     "help": "Pollination is the transfer of pollen to a stigma.",
+     "feedback": "Pollination is the transfer of pollen to a stigma.",
+     "source": "To confirm by an Integrated Science teacher: a common classroom error, not traced to a study by the author.",
+     "status": "draft"
+    },
+    {
+     "code": "INTE.G9.LIVING.REPRODUCTION_IN_PLANTS.POLLINATION.M_IS9_PL_WIND",
+     "skill": "INTE.G9.LIVING.REPRODUCTION_IN_PLANTS.POLLINATION",
+     "error": "Gives wind flowers bright petals.",
+     "example": {
+      "question": "Which is a feature of a wind-pollinated flower?",
+      "wrong_answer": "Bright petals and nectar",
+      "correct_answer": "Feathery stigma and light pollen"
+     },
+     "cause": "The child mixes up two rules that are taught close together.",
+     "reveals": "Offer \"Bright petals and nectar\" next to the right answer and ask the question again in a new situation.",
+     "help": "Wind flowers have feathery stigmas.",
+     "feedback": "Wind flowers have feathery stigmas.",
+     "source": "To confirm by an Integrated Science teacher: a common classroom error, not traced to a study by the author.",
+     "status": "draft"
+    },
+    {
+     "code": "INTE.G9.LIVING.REPRODUCTION_IN_PLANTS.POLLINATION.M_IS9_PL_INSECT",
+     "skill": "INTE.G9.LIVING.REPRODUCTION_IN_PLANTS.POLLINATION",
+     "error": "Gives insect flowers light pollen only.",
+     "example": {
+      "question": "Which is a feature of an insect-pollinated flower?",
+      "wrong_answer": "Feathery stigma",
+      "correct_answer": "Bright petals and scent"
+     },
+     "cause": "The child mixes up two rules that are taught close together.",
+     "reveals": "Offer \"Feathery stigma\" next to the right answer and ask the question again in a new situation.",
+     "help": "Insect flowers have bright petals and scent.",
+     "feedback": "Insect flowers have bright petals and scent.",
+     "source": "To confirm by an Integrated Science teacher: a common classroom error, not traced to a study by the author.",
+     "status": "draft"
+    },
+    {
+     "code": "INTE.G9.LIVING.REPRODUCTION_IN_PLANTS.FERTIL_DISPERSAL.M_IS9_FD_FRUIT",
+     "skill": "INTE.G9.LIVING.REPRODUCTION_IN_PLANTS.FERTIL_DISPERSAL",
+     "error": "Says the ovule becomes the fruit.",
+     "example": {
+      "question": "Which part becomes the fruit?",
+      "wrong_answer": "The ovule",
+      "correct_answer": "The ovary"
+     },
+     "cause": "The child mixes up two rules that are taught close together.",
+     "reveals": "Offer \"The ovule\" next to the right answer and ask the question again in a new situation.",
+     "help": "The ovary becomes the fruit.",
+     "feedback": "The ovary becomes the fruit.",
+     "source": "To confirm by an Integrated Science teacher: a common classroom error, not traced to a study by the author.",
+     "status": "draft"
+    },
+    {
+     "code": "INTE.G9.LIVING.REPRODUCTION_IN_PLANTS.FERTIL_DISPERSAL.M_IS9_FD_SEED",
+     "skill": "INTE.G9.LIVING.REPRODUCTION_IN_PLANTS.FERTIL_DISPERSAL",
+     "error": "Says the ovary becomes the seed.",
+     "example": {
+      "question": "Which part becomes the seed?",
+      "wrong_answer": "The ovary",
+      "correct_answer": "The ovule"
+     },
+     "cause": "The child mixes up two rules that are taught close together.",
+     "reveals": "Offer \"The ovary\" next to the right answer and ask the question again in a new situation.",
+     "help": "The ovule becomes the seed.",
+     "feedback": "The ovule becomes the seed.",
+     "source": "To confirm by an Integrated Science teacher: a common classroom error, not traced to a study by the author.",
+     "status": "draft"
+    },
+    {
+     "code": "INTE.G9.LIVING.REPRODUCTION_IN_PLANTS.FERTIL_DISPERSAL.M_IS9_FD_WIND",
+     "skill": "INTE.G9.LIVING.REPRODUCTION_IN_PLANTS.FERTIL_DISPERSAL",
+     "error": "Gives wind seeds hooks.",
+     "example": {
+      "question": "Which seeds are carried by wind?",
+      "wrong_answer": "Seeds with hooks",
+      "correct_answer": "Seeds with wings or hairs"
+     },
+     "cause": "The child mixes up two rules that are taught close together.",
+     "reveals": "Offer \"Seeds with hooks\" next to the right answer and ask the question again in a new situation.",
+     "help": "Wind-dispersed seeds have wings or hairs.",
+     "feedback": "Wind-dispersed seeds have wings or hairs.",
+     "source": "To confirm by an Integrated Science teacher: a common classroom error, not traced to a study by the author.",
+     "status": "draft"
+    }
+   ],
    "rubric_indicators": [
     "INTE.G9.RUBRIC.2.1",
     "INTE.G9.RUBRIC.2.2",
@@ -603,8 +1800,155 @@
      "status": "kicd_verified"
     }
    ],
-   "skills": [],
-   "misconceptions": [],
+   "skills": [
+    {
+     "code": "INTE.G9.LIVING.THE_INTERDEPENDENCE_OF_L.BIOTIC_ABIOTIC",
+     "name": "Tell biotic from abiotic factors",
+     "outcomes": [
+      "INTE.G9.LIVING.THE_INTERDEPENDENCE_OF_L.a"
+     ],
+     "mastery": "The child says biotic factors are living (plants, animals, microbes) and abiotic factors are non-living (light, temperature, water, soil). Evidence rule: at least four of the last five fresh questions right across at least two question forms, and no repeated pick of the same misconception.",
+     "question_forms": [
+      "pick the right answer",
+      "pick the right answer in a short story",
+      "find the false step in a learner's reason"
+     ],
+     "thinking": [
+      "recall",
+      "reasoning"
+     ],
+     "horeb_skill_ids": [],
+     "prerequisites": [],
+     "status": "proposed"
+    },
+    {
+     "code": "INTE.G9.LIVING.THE_INTERDEPENDENCE_OF_L.FOOD_CHAINS",
+     "name": "Read food chains and say what human activities do",
+     "outcomes": [
+      "INTE.G9.LIVING.THE_INTERDEPENDENCE_OF_L.b",
+      "INTE.G9.LIVING.THE_INTERDEPENDENCE_OF_L.c"
+     ],
+     "mastery": "The child says a food chain starts with a producer (a green plant), then a primary consumer, then a secondary consumer, with arrows pointing to the eater, and that cutting forests and pollution upset food webs. Evidence rule: at least four of the last five fresh questions right across at least two question forms, and no repeated pick of the same misconception.",
+     "question_forms": [
+      "pick the right answer",
+      "pick the right answer in a short story",
+      "find the false step in a learner's reason"
+     ],
+     "thinking": [
+      "recall",
+      "reasoning"
+     ],
+     "horeb_skill_ids": [],
+     "prerequisites": [
+      {
+       "requires": "INTE.G9.LIVING.THE_INTERDEPENDENCE_OF_L.BIOTIC_ABIOTIC",
+       "kind": "skill",
+       "strength": "essential",
+       "reason": "Proposed: this skill builds on it. To confirm by an Integrated Science teacher.",
+       "status": "proposed"
+      }
+     ],
+     "status": "proposed"
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "INTE.G9.LIVING.THE_INTERDEPENDENCE_OF_L.BIOTIC_ABIOTIC.M_IS9_BA_LIGHT",
+     "skill": "INTE.G9.LIVING.THE_INTERDEPENDENCE_OF_L.BIOTIC_ABIOTIC",
+     "error": "Calls light biotic.",
+     "example": {
+      "question": "Which is an abiotic factor?",
+      "wrong_answer": "A tree",
+      "correct_answer": "Sunlight"
+     },
+     "cause": "The child mixes up two rules that are taught close together.",
+     "reveals": "Offer \"A tree\" next to the right answer and ask the question again in a new situation.",
+     "help": "Sunlight is non-living.",
+     "feedback": "Sunlight is non-living.",
+     "source": "To confirm by an Integrated Science teacher: a common classroom error, not traced to a study by the author.",
+     "status": "draft"
+    },
+    {
+     "code": "INTE.G9.LIVING.THE_INTERDEPENDENCE_OF_L.BIOTIC_ABIOTIC.M_IS9_BA_PLANT",
+     "skill": "INTE.G9.LIVING.THE_INTERDEPENDENCE_OF_L.BIOTIC_ABIOTIC",
+     "error": "Calls a plant abiotic.",
+     "example": {
+      "question": "Which is a biotic factor?",
+      "wrong_answer": "Soil",
+      "correct_answer": "A plant"
+     },
+     "cause": "The child mixes up two rules that are taught close together.",
+     "reveals": "Offer \"Soil\" next to the right answer and ask the question again in a new situation.",
+     "help": "A plant is living.",
+     "feedback": "A plant is living.",
+     "source": "To confirm by an Integrated Science teacher: a common classroom error, not traced to a study by the author.",
+     "status": "draft"
+    },
+    {
+     "code": "INTE.G9.LIVING.THE_INTERDEPENDENCE_OF_L.BIOTIC_ABIOTIC.M_IS9_BA_WATER",
+     "skill": "INTE.G9.LIVING.THE_INTERDEPENDENCE_OF_L.BIOTIC_ABIOTIC",
+     "error": "Calls water biotic.",
+     "example": {
+      "question": "Which is an abiotic factor?",
+      "wrong_answer": "A frog",
+      "correct_answer": "Water"
+     },
+     "cause": "The child mixes up two rules that are taught close together.",
+     "reveals": "Offer \"A frog\" next to the right answer and ask the question again in a new situation.",
+     "help": "Water is non-living.",
+     "feedback": "Water is non-living.",
+     "source": "To confirm by an Integrated Science teacher: a common classroom error, not traced to a study by the author.",
+     "status": "draft"
+    },
+    {
+     "code": "INTE.G9.LIVING.THE_INTERDEPENDENCE_OF_L.FOOD_CHAINS.M_IS9_FC_START",
+     "skill": "INTE.G9.LIVING.THE_INTERDEPENDENCE_OF_L.FOOD_CHAINS",
+     "error": "Starts a chain with an animal.",
+     "example": {
+      "question": "What does a food chain start with?",
+      "wrong_answer": "A herbivore",
+      "correct_answer": "A producer"
+     },
+     "cause": "The child mixes up two rules that are taught close together.",
+     "reveals": "Offer \"A herbivore\" next to the right answer and ask the question again in a new situation.",
+     "help": "A food chain starts with a producer.",
+     "feedback": "A food chain starts with a producer.",
+     "source": "To confirm by an Integrated Science teacher: a common classroom error, not traced to a study by the author.",
+     "status": "draft"
+    },
+    {
+     "code": "INTE.G9.LIVING.THE_INTERDEPENDENCE_OF_L.FOOD_CHAINS.M_IS9_FC_ARROW",
+     "skill": "INTE.G9.LIVING.THE_INTERDEPENDENCE_OF_L.FOOD_CHAINS",
+     "error": "Points the arrow at the eaten.",
+     "example": {
+      "question": "In grass to zebra, what does the arrow show?",
+      "wrong_answer": "Zebra eats grass wrongly",
+      "correct_answer": "The direction of energy to the zebra"
+     },
+     "cause": "The child mixes up two rules that are taught close together.",
+     "reveals": "Offer \"Zebra eats grass wrongly\" next to the right answer and ask the question again in a new situation.",
+     "help": "Arrows show energy moving to the eater.",
+     "feedback": "Arrows show energy moving to the eater.",
+     "source": "To confirm by an Integrated Science teacher: a common classroom error, not traced to a study by the author.",
+     "status": "draft"
+    },
+    {
+     "code": "INTE.G9.LIVING.THE_INTERDEPENDENCE_OF_L.FOOD_CHAINS.M_IS9_FC_HUMAN",
+     "skill": "INTE.G9.LIVING.THE_INTERDEPENDENCE_OF_L.FOOD_CHAINS",
+     "error": "Thinks human activity has no effect.",
+     "example": {
+      "question": "What does cutting forests do to food webs?",
+      "wrong_answer": "Nothing",
+      "correct_answer": "Upsets them"
+     },
+     "cause": "The child mixes up two rules that are taught close together.",
+     "reveals": "Offer \"Nothing\" next to the right answer and ask the question again in a new situation.",
+     "help": "Cutting forests upsets food webs.",
+     "feedback": "Cutting forests upsets food webs.",
+     "source": "To confirm by an Integrated Science teacher: a common classroom error, not traced to a study by the author.",
+     "status": "draft"
+    }
+   ],
    "rubric_indicators": [
     "INTE.G9.RUBRIC.2.1",
     "INTE.G9.RUBRIC.2.2",
@@ -686,8 +2030,155 @@
      "status": "kicd_read"
     }
    ],
-   "skills": [],
-   "misconceptions": [],
+   "skills": [
+    {
+     "code": "INTE.G9.FORCE_.CURVED_MIRRORS.CURVED_MIRRORS",
+     "name": "Name types of curved mirrors and the images they form",
+     "outcomes": [
+      "INTE.G9.FORCE_.CURVED_MIRRORS.a",
+      "INTE.G9.FORCE_.CURVED_MIRRORS.c"
+     ],
+     "mastery": "The child says a concave mirror curves inwards and converges light, a convex mirror curves outwards and spreads it, and that a convex mirror always forms a small, upright, virtual image. Evidence rule: at least four of the last five fresh questions right across at least two question forms, and no repeated pick of the same misconception.",
+     "question_forms": [
+      "pick the right answer",
+      "pick the right answer in a short story",
+      "find the false step in a learner's reason"
+     ],
+     "thinking": [
+      "recall",
+      "reasoning"
+     ],
+     "horeb_skill_ids": [],
+     "prerequisites": [],
+     "status": "proposed"
+    },
+    {
+     "code": "INTE.G9.FORCE_.CURVED_MIRRORS.MIRROR_USES",
+     "name": "Say where concave and convex mirrors are used",
+     "outcomes": [
+      "INTE.G9.FORCE_.CURVED_MIRRORS.d"
+     ],
+     "mastery": "The child says concave mirrors are used in shaving mirrors, torches and dentist mirrors, and convex mirrors in driving mirrors and shop security mirrors for a wide view. Evidence rule: at least four of the last five fresh questions right across at least two question forms, and no repeated pick of the same misconception.",
+     "question_forms": [
+      "pick the right answer",
+      "pick the right answer in a short story",
+      "find the false step in a learner's reason"
+     ],
+     "thinking": [
+      "recall",
+      "reasoning"
+     ],
+     "horeb_skill_ids": [],
+     "prerequisites": [
+      {
+       "requires": "INTE.G9.FORCE_.CURVED_MIRRORS.CURVED_MIRRORS",
+       "kind": "skill",
+       "strength": "essential",
+       "reason": "Proposed: this skill builds on it. To confirm by an Integrated Science teacher.",
+       "status": "proposed"
+      }
+     ],
+     "status": "proposed"
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "INTE.G9.FORCE_.CURVED_MIRRORS.CURVED_MIRRORS.M_IS9_CV_CONCAVE",
+     "skill": "INTE.G9.FORCE_.CURVED_MIRRORS.CURVED_MIRRORS",
+     "error": "Mixes concave and convex.",
+     "example": {
+      "question": "Which mirror curves inwards?",
+      "wrong_answer": "Convex",
+      "correct_answer": "Concave"
+     },
+     "cause": "The child mixes up two rules that are taught close together.",
+     "reveals": "Offer \"Convex\" next to the right answer and ask the question again in a new situation.",
+     "help": "A concave mirror curves inwards.",
+     "feedback": "A concave mirror curves inwards.",
+     "source": "To confirm by an Integrated Science teacher: a common classroom error, not traced to a study by the author.",
+     "status": "draft"
+    },
+    {
+     "code": "INTE.G9.FORCE_.CURVED_MIRRORS.CURVED_MIRRORS.M_IS9_CV_CONVEX",
+     "skill": "INTE.G9.FORCE_.CURVED_MIRRORS.CURVED_MIRRORS",
+     "error": "Mixes convex and concave.",
+     "example": {
+      "question": "Which mirror curves outwards?",
+      "wrong_answer": "Concave",
+      "correct_answer": "Convex"
+     },
+     "cause": "The child mixes up two rules that are taught close together.",
+     "reveals": "Offer \"Concave\" next to the right answer and ask the question again in a new situation.",
+     "help": "A convex mirror curves outwards.",
+     "feedback": "A convex mirror curves outwards.",
+     "source": "To confirm by an Integrated Science teacher: a common classroom error, not traced to a study by the author.",
+     "status": "draft"
+    },
+    {
+     "code": "INTE.G9.FORCE_.CURVED_MIRRORS.CURVED_MIRRORS.M_IS9_CV_IMAGE",
+     "skill": "INTE.G9.FORCE_.CURVED_MIRRORS.CURVED_MIRRORS",
+     "error": "Says a convex mirror magnifies.",
+     "example": {
+      "question": "What image does a convex mirror form?",
+      "wrong_answer": "Large and real",
+      "correct_answer": "Small, upright and virtual"
+     },
+     "cause": "The child mixes up two rules that are taught close together.",
+     "reveals": "Offer \"Large and real\" next to the right answer and ask the question again in a new situation.",
+     "help": "A convex mirror forms a small, upright, virtual image.",
+     "feedback": "A convex mirror forms a small, upright, virtual image.",
+     "source": "To confirm by an Integrated Science teacher: a common classroom error, not traced to a study by the author.",
+     "status": "draft"
+    },
+    {
+     "code": "INTE.G9.FORCE_.CURVED_MIRRORS.MIRROR_USES.M_IS9_MU_DRIVING",
+     "skill": "INTE.G9.FORCE_.CURVED_MIRRORS.MIRROR_USES",
+     "error": "Gives driving mirrors as concave.",
+     "example": {
+      "question": "Which mirror is used as a driving mirror?",
+      "wrong_answer": "Concave",
+      "correct_answer": "Convex"
+     },
+     "cause": "The child mixes up two rules that are taught close together.",
+     "reveals": "Offer \"Concave\" next to the right answer and ask the question again in a new situation.",
+     "help": "Driving mirrors are convex for a wide view.",
+     "feedback": "Driving mirrors are convex for a wide view.",
+     "source": "To confirm by an Integrated Science teacher: a common classroom error, not traced to a study by the author.",
+     "status": "draft"
+    },
+    {
+     "code": "INTE.G9.FORCE_.CURVED_MIRRORS.MIRROR_USES.M_IS9_MU_SHAVING",
+     "skill": "INTE.G9.FORCE_.CURVED_MIRRORS.MIRROR_USES",
+     "error": "Gives shaving mirrors as convex.",
+     "example": {
+      "question": "Which mirror is used for shaving?",
+      "wrong_answer": "Convex",
+      "correct_answer": "Concave"
+     },
+     "cause": "The child mixes up two rules that are taught close together.",
+     "reveals": "Offer \"Convex\" next to the right answer and ask the question again in a new situation.",
+     "help": "A shaving mirror is concave for a larger image.",
+     "feedback": "A shaving mirror is concave for a larger image.",
+     "source": "To confirm by an Integrated Science teacher: a common classroom error, not traced to a study by the author.",
+     "status": "draft"
+    },
+    {
+     "code": "INTE.G9.FORCE_.CURVED_MIRRORS.MIRROR_USES.M_IS9_MU_SECURITY",
+     "skill": "INTE.G9.FORCE_.CURVED_MIRRORS.MIRROR_USES",
+     "error": "Gives security mirrors as concave.",
+     "example": {
+      "question": "Which mirror gives a wide view in a shop?",
+      "wrong_answer": "Concave",
+      "correct_answer": "Convex"
+     },
+     "cause": "The child mixes up two rules that are taught close together.",
+     "reveals": "Offer \"Concave\" next to the right answer and ask the question again in a new situation.",
+     "help": "Convex mirrors give a wide view.",
+     "feedback": "Convex mirrors give a wide view.",
+     "source": "To confirm by an Integrated Science teacher: a common classroom error, not traced to a study by the author.",
+     "status": "draft"
+    }
+   ],
    "rubric_indicators": [
     "INTE.G9.RUBRIC.3.1",
     "INTE.G9.RUBRIC.3.2",
@@ -783,8 +2274,157 @@
      "indicator": "INTE.G9.RUBRIC.3.7"
     }
    ],
-   "skills": [],
-   "misconceptions": [],
+   "skills": [
+    {
+     "code": "INTE.G9.FORCE_.WAVES.WAVE_TYPES",
+     "name": "Tell transverse from longitudinal waves",
+     "outcomes": [
+      "INTE.G9.FORCE_.WAVES.a",
+      "INTE.G9.FORCE_.WAVES.b"
+     ],
+     "mastery": "The child says waves are made by vibrations that carry energy, in a transverse wave the particles move at right angles to the direction of travel (water, light), and in a longitudinal wave they move back and forth along it (sound). Evidence rule: at least four of the last five fresh questions right across at least two question forms, and no repeated pick of the same misconception.",
+     "question_forms": [
+      "pick the right answer",
+      "pick the right answer in a short story",
+      "find the false step in a learner's reason"
+     ],
+     "thinking": [
+      "recall",
+      "reasoning"
+     ],
+     "horeb_skill_ids": [],
+     "prerequisites": [],
+     "status": "proposed"
+    },
+    {
+     "code": "INTE.G9.FORCE_.WAVES.WAVE_PARTS",
+     "name": "Name the features of a wave and its uses",
+     "outcomes": [
+      "INTE.G9.FORCE_.WAVES.c",
+      "INTE.G9.FORCE_.WAVES.d",
+      "INTE.G9.FORCE_.WAVES.e"
+     ],
+     "mastery": "The child names crest, trough, amplitude, wavelength and frequency (waves per second, in hertz), and says remote sensing, radio and ultrasound scans use waves. Evidence rule: at least four of the last five fresh questions right across at least two question forms, and no repeated pick of the same misconception.",
+     "question_forms": [
+      "pick the right answer",
+      "pick the right answer in a short story",
+      "find the false step in a learner's reason"
+     ],
+     "thinking": [
+      "recall",
+      "reasoning"
+     ],
+     "horeb_skill_ids": [],
+     "prerequisites": [
+      {
+       "requires": "INTE.G9.FORCE_.WAVES.WAVE_TYPES",
+       "kind": "skill",
+       "strength": "essential",
+       "reason": "Proposed: this skill builds on it. To confirm by an Integrated Science teacher.",
+       "status": "proposed"
+      }
+     ],
+     "status": "proposed"
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "INTE.G9.FORCE_.WAVES.WAVE_TYPES.M_IS9_WT_SOUND",
+     "skill": "INTE.G9.FORCE_.WAVES.WAVE_TYPES",
+     "error": "Calls sound transverse.",
+     "example": {
+      "question": "Which wave is longitudinal?",
+      "wrong_answer": "Water wave",
+      "correct_answer": "Sound wave"
+     },
+     "cause": "The child mixes up two rules that are taught close together.",
+     "reveals": "Offer \"Water wave\" next to the right answer and ask the question again in a new situation.",
+     "help": "Sound is a longitudinal wave.",
+     "feedback": "Sound is a longitudinal wave.",
+     "source": "To confirm by an Integrated Science teacher: a common classroom error, not traced to a study by the author.",
+     "status": "draft"
+    },
+    {
+     "code": "INTE.G9.FORCE_.WAVES.WAVE_TYPES.M_IS9_WT_WATER",
+     "skill": "INTE.G9.FORCE_.WAVES.WAVE_TYPES",
+     "error": "Calls water waves longitudinal.",
+     "example": {
+      "question": "Which wave is transverse?",
+      "wrong_answer": "Sound wave",
+      "correct_answer": "Water wave"
+     },
+     "cause": "The child mixes up two rules that are taught close together.",
+     "reveals": "Offer \"Sound wave\" next to the right answer and ask the question again in a new situation.",
+     "help": "Water waves are transverse.",
+     "feedback": "Water waves are transverse.",
+     "source": "To confirm by an Integrated Science teacher: a common classroom error, not traced to a study by the author.",
+     "status": "draft"
+    },
+    {
+     "code": "INTE.G9.FORCE_.WAVES.WAVE_TYPES.M_IS9_WT_DIR",
+     "skill": "INTE.G9.FORCE_.WAVES.WAVE_TYPES",
+     "error": "Mixes the directions.",
+     "example": {
+      "question": "In a transverse wave, particles move...",
+      "wrong_answer": "Along the direction of travel",
+      "correct_answer": "At right angles to the direction of travel"
+     },
+     "cause": "The child mixes up two rules that are taught close together.",
+     "reveals": "Offer \"Along the direction of travel\" next to the right answer and ask the question again in a new situation.",
+     "help": "Transverse particles move at right angles.",
+     "feedback": "Transverse particles move at right angles.",
+     "source": "To confirm by an Integrated Science teacher: a common classroom error, not traced to a study by the author.",
+     "status": "draft"
+    },
+    {
+     "code": "INTE.G9.FORCE_.WAVES.WAVE_PARTS.M_IS9_WP_CREST",
+     "skill": "INTE.G9.FORCE_.WAVES.WAVE_PARTS",
+     "error": "Mixes crest and trough.",
+     "example": {
+      "question": "What is the highest point of a wave?",
+      "wrong_answer": "Trough",
+      "correct_answer": "Crest"
+     },
+     "cause": "The child mixes up two rules that are taught close together.",
+     "reveals": "Offer \"Trough\" next to the right answer and ask the question again in a new situation.",
+     "help": "The crest is the highest point.",
+     "feedback": "The crest is the highest point.",
+     "source": "To confirm by an Integrated Science teacher: a common classroom error, not traced to a study by the author.",
+     "status": "draft"
+    },
+    {
+     "code": "INTE.G9.FORCE_.WAVES.WAVE_PARTS.M_IS9_WP_FREQ",
+     "skill": "INTE.G9.FORCE_.WAVES.WAVE_PARTS",
+     "error": "Gives the wrong unit.",
+     "example": {
+      "question": "In what unit is frequency measured?",
+      "wrong_answer": "Metres",
+      "correct_answer": "Hertz"
+     },
+     "cause": "The child mixes up two rules that are taught close together.",
+     "reveals": "Offer \"Metres\" next to the right answer and ask the question again in a new situation.",
+     "help": "Frequency is measured in hertz.",
+     "feedback": "Frequency is measured in hertz.",
+     "source": "To confirm by an Integrated Science teacher: a common classroom error, not traced to a study by the author.",
+     "status": "draft"
+    },
+    {
+     "code": "INTE.G9.FORCE_.WAVES.WAVE_PARTS.M_IS9_WP_LENGTH",
+     "skill": "INTE.G9.FORCE_.WAVES.WAVE_PARTS",
+     "error": "Mixes wavelength and amplitude.",
+     "example": {
+      "question": "What is the distance between two crests?",
+      "wrong_answer": "Amplitude",
+      "correct_answer": "Wavelength"
+     },
+     "cause": "The child mixes up two rules that are taught close together.",
+     "reveals": "Offer \"Amplitude\" next to the right answer and ask the question again in a new situation.",
+     "help": "The distance between two crests is the wavelength.",
+     "feedback": "The distance between two crests is the wavelength.",
+     "source": "To confirm by an Integrated Science teacher: a common classroom error, not traced to a study by the author.",
+     "status": "draft"
+    }
+   ],
    "rubric_indicators": [
     "INTE.G9.RUBRIC.3.1",
     "INTE.G9.RUBRIC.3.2",

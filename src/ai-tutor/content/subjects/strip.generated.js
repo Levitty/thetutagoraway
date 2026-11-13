@@ -63,6 +63,8 @@ export default {
   'integratedscience_g8_a.js': 'integratedscience_g8_signed.js',
   'integratedscience_g8_b.js': 'integratedscience_g8_signed.js',
   'integratedscience_g8_c.js': 'integratedscience_g8_signed.js',
+  'integratedscience_g9_a.js': 'integratedscience_g9_signed.js',
+  'integratedscience_g9_b.js': 'integratedscience_g9_signed.js',
   'kiswahili_g4_a.js': 'kiswahili_g4_signed.js',
   'kiswahili_g4_b.js': 'kiswahili_g4_signed.js',
   'kiswahili_g4_c.js': 'kiswahili_g4_signed.js',

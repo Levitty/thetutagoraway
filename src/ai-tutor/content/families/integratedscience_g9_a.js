@@ -1,0 +1,200 @@
+// ============================================================================
+// INTEGRATED SCIENCE GRADE 9, A (10 skills): atoms, mass number, electron arrangement, metals and non-metals, metal properties, alloys,
+// rusting, hard and soft water, leaves, photosynthesis. Written offline from the KICD design through the curriculum map. Every wrong answer
+// names the library misconception it reveals. All stay reviewed:false until an Integrated Science teacher signs them off.
+// ============================================================================
+import { S } from './integratedscience_g9_lib.js';
+const AT = 'MIXTUR.STRUCTURE_OF_THE_ATOM.', MA = 'MIXTUR.METALS_AND_ALLOYS.', WH = 'MIXTUR.WATER_HARDNESS.', NP = 'LIVING.NUTRITION_IN_PLANTS.';
+
+export const FAMILIES = [
+  ...S('ap', AT, 'ATOM_PARTS', ['AP_ELECTRON', 'AP_CHARGE', 'AP_PROTON'], ['Protons and neutrons are in the nucleus; electrons are in shells.', 'Protons are positive, electrons negative, neutrons have no charge.'], [
+    ['Where are electrons found in an atom?', 'In shells around the nucleus', 'Inside the nucleus only', 'Outside the atom entirely', 'In the neutrons'],
+    ['Which particle has no charge?', 'Neutron', 'Proton', 'Electron', 'Nucleus'],
+    ['Which particle has a positive charge?', 'Proton', 'Electron', 'Neutron', 'Shell'],
+    ['Which particle has a negative charge?', 'Electron', 'Proton', 'Neutron', 'Nucleus'],
+    ['Where are protons and neutrons found?', 'In the nucleus', 'In the outer shells', 'Outside the atom', 'In the air around it'],
+  ], [
+    ['A scientist says electrons orbit the centre of an atom. What is the centre called?', 'The nucleus', 'The shell', 'The charge', 'The ion'],
+    ['A particle has no charge. Which is it?', 'A neutron', 'A proton', 'An electron', 'A shell'],
+    ['A particle is positive and sits in the nucleus. Which is it?', 'A proton', 'An electron', 'A neutron', 'A shell'],
+    ['A particle is negative and moves fast around the nucleus. Which is it?', 'An electron', 'A proton', 'A neutron', 'A nucleus'],
+    ['An atom has 5 protons. How many electrons does the neutral atom have?', '5', '0', '10', '2'],
+  ], [
+    ['Which step is the mistake?', 'Step 1: The nucleus is in the centre.', 'Step 2: Electrons move around it.', 'Step 3: So electrons are inside the nucleus.', 'Electrons are in shells around the nucleus.', 2],
+    ['Which step is the mistake?', 'Step 1: Neutrons are in the nucleus.', 'Step 2: They have no charge.', 'Step 3: So neutrons are positive.', 'Neutrons have no charge.', 1],
+    ['Which step is the mistake?', 'Step 1: Protons are in the nucleus.', 'Step 2: Electrons are outside it.', 'Step 3: So protons are negative.', 'Protons are positive.', 2],
+    ['Which step is the mistake?', 'Step 1: A neutral atom has equal charges.', 'Step 2: Protons are positive.', 'Step 3: So an atom has more electrons than protons.', 'It has equal numbers of protons and electrons.', 2],
+    ['Which step is the mistake?', 'Step 1: Electrons are tiny.', 'Step 2: They sit in shells.', 'Step 3: So they are in the nucleus.', 'They are in shells.', 2],
+  ], ['a', 'a']),
+  ...S('mn', AT, 'MASS_NUMBER', ['MN_ADD', 'MN_ELECTRON', 'MN_ATOMIC'], ['Mass number = protons + neutrons.', 'Atomic number = protons.'], [
+    ['An atom has 6 protons and 6 neutrons. What is its mass number?', '12', '0', '6', '36'],
+    ['The mass number counts which particles?', 'Protons and neutrons', 'Protons and electrons', 'Electrons only', 'Neutrons and electrons'],
+    ['The atomic number is the number of...', 'protons', 'neutrons', 'electrons only', 'shells'],
+    ['An atom has 11 protons and 12 neutrons. What is its mass number?', '23', '1', '11', '132'],
+    ['An atom has 8 protons and 8 neutrons. What is its atomic number?', '8', '16', '0', '64'],
+  ], [
+    ['Carbon has 6 protons and 6 neutrons. What is the mass number?', '12', '0', '6', '36'],
+    ['Oxygen has 8 protons and 8 neutrons. What is the mass number?', '16', '0', '8', '64'],
+    ['Sodium has 11 protons and 12 neutrons. What is the mass number?', '23', '1', '11', '132'],
+    ['An atom has mass number 14 and 7 protons. How many neutrons does it have?', '7', '21', '14', '2'],
+    ['An atom has 3 protons and 4 neutrons. What is its mass number?', '7', '1', '12', '3'],
+  ], [
+    ['Which step is the mistake?', 'Step 1: Carbon has 6 protons and 6 neutrons.', 'Step 2: Mass number counts both.', 'Step 3: So the mass number is 6 minus 6.', 'The mass number is 6 plus 6, which is 12.', 2],
+    ['Which step is the mistake?', 'Step 1: Mass number counts nuclear particles.', 'Step 2: Electrons are very light.', 'Step 3: So electrons are added to the mass number.', 'Electrons are not counted.', 1],
+    ['Which step is the mistake?', 'Step 1: The atomic number is the number of protons.', 'Step 2: Sodium has 11 protons.', 'Step 3: So its atomic number is 12.', 'Its atomic number is 11.', 2],
+    ['Which step is the mistake?', 'Step 1: Mass number is 14 and protons are 7.', 'Step 2: Neutrons = mass number minus protons.', 'Step 3: So neutrons are 14 plus 7.', 'Neutrons are 14 minus 7, which is 7.', 2],
+    ['Which step is the mistake?', 'Step 1: Protons are 3 and neutrons are 4.', 'Step 2: We add them.', 'Step 3: So the mass number is 1.', 'The mass number is 7.', 2],
+  ], ['b', 'b']),
+  ...S('ea', AT, 'ELECTRON_ARR', ['EA_FIRST', 'EA_SODIUM', 'EA_SECOND'], ['The first shell holds 2 and the second holds 8.', 'Sodium is 2, 8, 1.'], [
+    ['How many electrons can the first shell hold?', '2', '8', '18', '1'],
+    ['What is the electron arrangement of sodium, which has 11 electrons?', '2, 8, 1', '2, 9', '8, 3', '11'],
+    ['How many electrons can the second shell hold?', '8', '2', '18', '4'],
+    ['What is the electron arrangement of carbon, which has 6 electrons?', '2, 4', '6', '4, 2', '2, 2, 2'],
+    ['What is the electron arrangement of chlorine, which has 17 electrons?', '2, 8, 7', '2, 15', '8, 9', '17'],
+  ], [
+    ['Helium has 2 electrons. Which arrangement is right?', '2', '1, 1', '0, 2', '2, 0, 0'],
+    ['Oxygen has 8 electrons. Which arrangement is right?', '2, 6', '8', '6, 2', '4, 4'],
+    ['Magnesium has 12 electrons. Which arrangement is right?', '2, 8, 2', '2, 10', '12', '8, 4'],
+    ['Neon has 10 electrons. Which arrangement is right?', '2, 8', '10', '8, 2', '2, 2, 6'],
+    ['Nitrogen has 7 electrons. Which arrangement is right?', '2, 5', '7', '5, 2', '3, 4'],
+  ], [
+    ['Which step is the mistake?', 'Step 1: Electrons fill the shells in order.', 'Step 2: The first shell holds 2.', 'Step 3: So sodium is 2, 9.', 'Sodium is 2, 8, 1.', 2],
+    ['Which step is the mistake?', 'Step 1: Sodium has 11 electrons.', 'Step 2: 2 go in the first shell.', 'Step 3: So 9 go in the second shell.', 'The second shell holds only 8.', 2],
+    ['Which step is the mistake?', 'Step 1: The first shell fills first.', 'Step 2: It takes 2 electrons.', 'Step 3: So it takes 8.', 'It takes 2.', 2],
+    ['Which step is the mistake?', 'Step 1: Carbon has 6 electrons.', 'Step 2: 2 fill the first shell.', 'Step 3: So 2 go in the second shell and 4 stay out.', '4 go in the second shell.', 2],
+    ['Which step is the mistake?', 'Step 1: Chlorine has 17 electrons.', 'Step 2: 2 and 8 fill two shells.', 'Step 3: So the third shell has 8.', 'The third shell has 7.', 2],
+  ], ['c', 'c']),
+  ...S('mm', AT, 'METAL_NONMETAL', ['MM_CARBON', 'MM_COPPER', 'MM_CONDUCT'], ['Iron, copper and zinc are metals; carbon, sulphur and oxygen are non-metals.', 'Metals usually conduct electricity.'], [
+    ['Which is a non-metal?', 'Carbon', 'Iron', 'Copper', 'Zinc'],
+    ['Which is a metal?', 'Copper', 'Sulphur', 'Oxygen', 'Carbon'],
+    ['Which property do metals usually have?', 'They conduct electricity', 'They are dull and brittle', 'They are gases at room temperature', 'They cannot be shaped'],
+    ['Which of these yellow solids is a non-metal?', 'Sulphur', 'Aluminium', 'Iron', 'Zinc'],
+    ['Which of these is used to make light pots and is a metal?', 'Aluminium', 'Chlorine', 'Oxygen', 'Sulphur'],
+  ], [
+    ['A learner tests a shiny wire and it conducts electricity. What is it likely to be?', 'A metal', 'A non-metal', 'A gas', 'A liquid'],
+    ['A black, brittle solid does not conduct electricity. What is it likely to be?', 'A non-metal such as carbon', 'A metal such as copper', 'A metal such as iron', 'A metal such as zinc'],
+    ['A teacher lists iron, zinc and copper. What are they?', 'Metals', 'Non-metals', 'Gases', 'Liquids'],
+    ['A teacher lists oxygen, sulphur and carbon. What are they?', 'Non-metals', 'Metals', 'Alloys', 'Rocks'],
+    ['Which element is used for electric wires?', 'Copper', 'Sulphur', 'Carbon', 'Oxygen'],
+  ], [
+    ['Which step is the mistake?', 'Step 1: Carbon is a black solid.', 'Step 2: It is brittle.', 'Step 3: So carbon is a metal.', 'Carbon is a non-metal.', 2],
+    ['Which step is the mistake?', 'Step 1: Copper is shiny.', 'Step 2: It conducts electricity.', 'Step 3: So copper is a non-metal.', 'Copper is a metal.', 2],
+    ['Which step is the mistake?', 'Step 1: Metals are shiny.', 'Step 2: Metals conduct heat.', 'Step 3: So metals do not conduct electricity.', 'Metals conduct electricity.', 2],
+    ['Which step is the mistake?', 'Step 1: Sulphur is a yellow solid.', 'Step 2: It does not conduct.', 'Step 3: So sulphur is a metal.', 'Sulphur is a non-metal.', 2],
+    ['Which step is the mistake?', 'Step 1: Oxygen is a gas.', 'Step 2: It does not shine.', 'Step 3: So oxygen is a metal.', 'Oxygen is a non-metal.', 2],
+  ], ['d', 'd']),
+  ...S('mp', MA, 'METAL_PROPS', ['MP_MALLEABLE', 'MP_DUCTILE', 'MP_USE'], ['Malleable: hammered into sheets. Ductile: drawn into wires.', 'Copper conducts electricity well.'], [
+    ['Which word means can be hammered into sheets?', 'Malleable', 'Ductile', 'Brittle', 'Sonorous'],
+    ['Which word means can be drawn into wires?', 'Ductile', 'Malleable', 'Brittle', 'Sonorous'],
+    ['Why is copper used for wires?', 'It conducts electricity well', 'It does not conduct', 'It is a gas', 'It is a liquid'],
+    ['Why are pots made of aluminium?', 'It conducts heat and is light', 'It does not conduct heat', 'It is brittle', 'It is a gas'],
+    ['Which is a property of most metals?', 'Shiny when polished', 'Dull and crumbly', 'Soft like chalk', 'Floats on water'],
+  ], [
+    ['A blacksmith hammers a metal into a thin sheet. Which property is shown?', 'Malleability', 'Ductility', 'Brittleness', 'Softness'],
+    ['A worker pulls a metal into a long thin wire. Which property is shown?', 'Ductility', 'Malleability', 'Brittleness', 'Softness'],
+    ['An electrician chooses copper for a cable. Why?', 'It conducts electricity well', 'It does not conduct', 'It is a gas', 'It is a liquid'],
+    ['A cook chooses an aluminium pot. Why?', 'It conducts heat and is light', 'It does not conduct heat', 'It is brittle', 'It melts easily'],
+    ['A bell rings when struck. Which property of metals is this?', 'Sonorous (it rings)', 'Brittle', 'Dull', 'Soft'],
+  ], [
+    ['Which step is the mistake?', 'Step 1: Metals can be hammered.', 'Step 2: This is malleability.', 'Step 3: So malleable means drawn into wires.', 'Malleable means hammered into sheets.', 2],
+    ['Which step is the mistake?', 'Step 1: Metals can be drawn into wires.', 'Step 2: This is ductility.', 'Step 3: So ductile means hammered into sheets.', 'Ductile means drawn into wires.', 2],
+    ['Which step is the mistake?', 'Step 1: Electrons move in copper.', 'Step 2: It carries current.', 'Step 3: So copper is used because it does not conduct.', 'Copper is used because it conducts.', 2],
+    ['Which step is the mistake?', 'Step 1: Aluminium is light.', 'Step 2: It conducts heat.', 'Step 3: So it is a poor material for pots.', 'It is a good material for pots.', 2],
+    ['Which step is the mistake?', 'Step 1: Metals are usually solid.', 'Step 2: Mercury is an exception.', 'Step 3: So all metals are liquids.', 'Most metals are solid.', 2],
+  ], ['a', 'c']),
+  ...S('al', MA, 'ALLOYS', ['AL_MEANING', 'AL_BRASS', 'AL_STEEL'], ['An alloy is a mixture of a metal with other elements.', 'Brass: copper and zinc. Steel: iron and carbon.'], [
+    ['What is an alloy?', 'A mixture of a metal with other elements', 'A pure metal', 'A gas', 'A liquid only'],
+    ['Brass is made of copper and...', 'zinc', 'tin', 'iron', 'carbon'],
+    ['Steel is iron with a little...', 'carbon', 'copper', 'zinc', 'tin'],
+    ['Bronze is made of copper and...', 'tin', 'zinc', 'carbon', 'lead'],
+    ['Why are alloys made?', 'To make metals stronger or last longer', 'To make metals weaker', 'To make metals gases', 'To make metals disappear'],
+  ], [
+    ['A bell is made of copper and tin. What is this alloy?', 'Bronze', 'Brass', 'Steel', 'Solder'],
+    ['A tap is made of copper and zinc. What is this alloy?', 'Brass', 'Bronze', 'Steel', 'Solder'],
+    ['A bridge is made of iron with a little carbon. What is this alloy?', 'Steel', 'Brass', 'Bronze', 'Copper'],
+    ['A learner says an alloy is a pure metal. What can you tell her?', 'An alloy is a mixture', 'She is right', 'It is a gas', 'It is a liquid'],
+    ['Why is steel used in buildings?', 'It is strong', 'It is weak', 'It is a gas', 'It is a liquid'],
+  ], [
+    ['Which step is the mistake?', 'Step 1: Alloys combine metals.', 'Step 2: They may include non-metals.', 'Step 3: So an alloy is a pure metal.', 'An alloy is a mixture.', 2],
+    ['Which step is the mistake?', 'Step 1: Brass contains copper.', 'Step 2: It contains another metal.', 'Step 3: So brass is copper and tin.', 'Brass is copper and zinc.', 2],
+    ['Which step is the mistake?', 'Step 1: Steel contains iron.', 'Step 2: It has a small amount of another element.', 'Step 3: So it is iron and copper.', 'It is iron and carbon.', 2],
+    ['Which step is the mistake?', 'Step 1: Bronze contains copper.', 'Step 2: It contains another metal.', 'Step 3: So bronze is copper and zinc.', 'Bronze is copper and tin.', 2],
+    ['Which step is the mistake?', 'Step 1: Alloys are made for use.', 'Step 2: They are often stronger.', 'Step 3: So alloys are always weaker.', 'Alloys are often stronger.', 2],
+  ], ['b', 'c']),
+  ...S('ru', MA, 'RUSTING', ['RU_NEED', 'RU_PREVENT', 'RU_EFFECT'], ['Iron rusts with air and water.', 'Painting and oiling prevent rust.'], [
+    ['What does iron need to rust?', 'Air and water', 'Water only', 'Air only', 'Heat only'],
+    ['Which prevents rusting?', 'Painting or oiling it', 'Leaving it wet', 'Leaving it in the rain', 'Burying it in wet soil'],
+    ['What does rust do to iron?', 'Weakens it', 'Makes it stronger', 'Makes it shinier', 'Makes it lighter and gold'],
+    ['Which is a way of preventing rust on a roof?', 'Galvanising it', 'Soaking it', 'Scratching it', 'Leaving it bare'],
+    ['What is rust?', 'A reddish-brown coating on iron', 'A kind of paint', 'A gas', 'A kind of plastic'],
+  ], [
+    ['A bicycle chain is left in the rain. What may happen?', 'It rusts', 'It shines', 'It strengthens', 'It turns to gold'],
+    ['A farmer oils his panga after use. Why?', 'To keep air and water away', 'To make it rust more quickly', 'To make it weaker than before', 'To make it wet all the time'],
+    ['A fence painted every year lasts longer. Why?', 'Paint keeps air and water away', 'Paint makes the iron rust faster', 'Paint weakens the iron gate', 'Paint is wasted on a fence'],
+    ['A nail is kept dry in a sealed jar of air. Does it rust quickly?', 'No, it needs water too', 'Yes, air alone is enough', 'Yes, at once', 'Yes, with only heat'],
+    ['A gate has red-brown flakes. What does this show?', 'The iron is rusting and weakening', 'The iron is getting stronger', 'The iron is brand new again', 'The iron is turning to gold'],
+  ], [
+    ['Which step is the mistake?', 'Step 1: Rust needs oxygen from air.', 'Step 2: It also needs water.', 'Step 3: So water alone is enough.', 'Both air and water are needed.', 2],
+    ['Which step is the mistake?', 'Step 1: Paint covers iron.', 'Step 2: It keeps out air and water.', 'Step 3: So paint makes iron rust faster.', 'Paint prevents rust.', 2],
+    ['Which step is the mistake?', 'Step 1: Rust flakes off iron.', 'Step 2: The metal is eaten away.', 'Step 3: So rust makes iron stronger.', 'Rust weakens iron.', 2],
+    ['Which step is the mistake?', 'Step 1: Oil coats a tool.', 'Step 2: It keeps out water.', 'Step 3: So oil makes the tool rust.', 'Oil prevents rust.', 2],
+    ['Which step is the mistake?', 'Step 1: Galvanising coats iron with zinc.', 'Step 2: Zinc protects the iron.', 'Step 3: So galvanising speeds up rust.', 'Galvanising prevents rust.', 2],
+  ], ['d', 'd']),
+  ...S('hs', WH, 'HARD_SOFT', ['HS_LATHER', 'HS_SCALE', 'HS_SOFTEN'], ['Soft water lathers easily; hard water leaves scum and scale.', 'Boiling can soften temporary hard water.'], [
+    ['Which water lathers easily with soap?', 'Soft water', 'Hard water', 'Muddy water', 'Salt water only'],
+    ['Which water leaves scale in a kettle?', 'Hard water', 'Soft water', 'Distilled water', 'Rain water'],
+    ['Which can soften hard water?', 'Boiling it', 'Freezing it', 'Stirring it', 'Colouring it'],
+    ['Which water forms scum with soap?', 'Hard water', 'Soft water', 'Rain water', 'Distilled water'],
+    ['What is a disadvantage of hard water?', 'It wastes soap', 'It lathers too easily', 'It is too clean', 'It has no taste'],
+  ], [
+    ['Wanjiru washes clothes and the soap lathers very well. What water is this?', 'Soft water', 'Hard water', 'Salty water', 'Muddy water'],
+    ['A kettle is lined with a white crust. What kind of water was boiled in it?', 'Hard water', 'Soft water', 'Rain water', 'Distilled water'],
+    ['A family boils their hard water before use. What does this do?', 'It softens it', 'It hardens it', 'It makes it dirty', 'It makes it salty'],
+    ['Soap makes scum instead of lather. What is the water like?', 'Hard', 'Soft', 'Pure rain', 'Distilled'],
+    ['A learner says hard water is never useful. What can you say?', 'It can be good for bones and teeth', 'She is right', 'It is never drunk', 'It is poison'],
+  ], [
+    ['Which step is the mistake?', 'Step 1: Soap lathers in soft water.', 'Step 2: It forms scum in hard water.', 'Step 3: So hard water lathers easily.', 'Soft water lathers easily.', 2],
+    ['Which step is the mistake?', 'Step 1: Hard water has dissolved salts.', 'Step 2: They form scale.', 'Step 3: So soft water forms scale.', 'Hard water forms scale.', 2],
+    ['Which step is the mistake?', 'Step 1: Boiling can remove some hardness.', 'Step 2: It works on temporary hardness.', 'Step 3: So freezing softens water.', 'Boiling can soften water.', 2],
+    ['Which step is the mistake?', 'Step 1: Hard water wastes soap.', 'Step 2: It leaves scale.', 'Step 3: So hard water has no use.', 'It has some uses, such as for bones and teeth.', 2],
+    ['Which step is the mistake?', 'Step 1: Rain water is soft.', 'Step 2: It lathers well.', 'Step 3: So it leaves scum.', 'Soft water leaves little scum.', 2],
+  ], ['b', 'd']),
+  ...S('lp', NP, 'LEAF_PARTS', ['LP_STOMATA', 'LP_CHLORO', 'LP_BROAD'], ['Stomata let gases in and out; chlorophyll is in chloroplasts.', 'A broad thin leaf catches light.'], [
+    ['What do stomata do?', 'Let gases in and out', 'Make sugar', 'Hold the leaf up', 'Carry water to the roots'],
+    ['Where is chlorophyll found?', 'In chloroplasts in leaves', 'In the roots', 'In the bark', 'In the flowers only'],
+    ['Why is a leaf broad and thin?', 'To catch light and let gases in', 'To hide from light', 'To hold water inside', 'To be heavy'],
+    ['Which part joins the leaf to the stem?', 'The petiole', 'The stoma', 'The root', 'The flower'],
+    ['Which cells control the stomata?', 'Guard cells', 'Root hairs', 'Petals', 'Seeds'],
+  ], [
+    ['A leaf takes in carbon dioxide through tiny pores. What are the pores?', 'Stomata', 'Veins', 'Roots', 'Petals'],
+    ['A leaf looks green. Which substance gives the colour?', 'Chlorophyll', 'Iodine', 'Starch', 'Sugar'],
+    ['A plant has wide flat leaves in the shade. Why are broad leaves useful?', 'They catch more light', 'They hide from light', 'They hold less water', 'They are heavy'],
+    ['A learner points to the stalk of a leaf. What is it called?', 'The petiole', 'The stoma', 'The vein', 'The root'],
+    ['Veins in a leaf carry what?', 'Water and food', 'Only air', 'Only light', 'Only soil'],
+  ], [
+    ['Which step is the mistake?', 'Step 1: Stomata are tiny pores.', 'Step 2: They are mostly on the underside.', 'Step 3: So stomata make sugar.', 'Stomata let gases in and out.', 2],
+    ['Which step is the mistake?', 'Step 1: Chlorophyll is green.', 'Step 2: It traps light.', 'Step 3: So it is found in the roots.', 'It is in chloroplasts in leaves.', 2],
+    ['Which step is the mistake?', 'Step 1: Leaves need light.', 'Step 2: A broad blade catches more.', 'Step 3: So narrow leaves catch the most light.', 'Broad leaves catch more light.', 2],
+    ['Which step is the mistake?', 'Step 1: The petiole is the leaf stalk.', 'Step 2: It joins the blade to the stem.', 'Step 3: So the petiole makes sugar.', 'The petiole joins the leaf to the stem.', 2],
+    ['Which step is the mistake?', 'Step 1: Guard cells surround stomata.', 'Step 2: They open and close them.', 'Step 3: So they make seeds.', 'They control the stomata.', 2],
+  ], ['a', 'b']),
+  ...S('ps', NP, 'PHOTOSYNTHESIS', ['PS_GAS', 'PS_PRODUCT', 'PS_TEST'], ['Photosynthesis uses carbon dioxide and water with light and gives glucose and oxygen.', 'Iodine turns blue-black with starch.'], [
+    ['Which gas is used in photosynthesis?', 'Carbon dioxide', 'Oxygen', 'Nitrogen', 'Hydrogen'],
+    ['Which gas does photosynthesis give off?', 'Oxygen', 'Carbon dioxide', 'Nitrogen', 'Smoke'],
+    ['What turns blue-black with starch?', 'Iodine', 'Salt water', 'Soap', 'Lime juice'],
+    ['What does a plant need for photosynthesis?', 'Light, water and carbon dioxide', 'Only soil', 'Only darkness', 'Only oxygen'],
+    ['What food does photosynthesis make?', 'Glucose', 'Protein', 'Fat', 'Salt'],
+  ], [
+    ['A plant is kept in the dark for days. What happens to photosynthesis?', 'It stops', 'It speeds up', 'It gives more oxygen', 'It makes more starch'],
+    ['A learner tests a leaf with iodine and it turns blue-black. What is present?', 'Starch', 'Oxygen', 'Salt', 'Protein'],
+    ['A pond plant gives off bubbles in sunlight. Which gas are they?', 'Oxygen', 'Carbon dioxide', 'Nitrogen', 'Smoke'],
+    ['A plant has no chlorophyll. What can it not do well?', 'Make food by photosynthesis', 'Take in water', 'Grow roots', 'Have flowers'],
+    ['Which is the right word equation for photosynthesis?', 'Carbon dioxide and water make glucose and oxygen', 'Glucose and oxygen make carbon dioxide and water', 'Oxygen and water make glucose', 'Carbon dioxide and glucose make water'],
+  ], [
+    ['Which step is the mistake?', 'Step 1: Plants make food using light.', 'Step 2: They take in a gas from the air.', 'Step 3: So they take in oxygen to make food.', 'They take in carbon dioxide.', 2],
+    ['Which step is the mistake?', 'Step 1: Photosynthesis makes glucose.', 'Step 2: It also releases a gas.', 'Step 3: So it releases carbon dioxide.', 'It releases oxygen.', 2],
+    ['Which step is the mistake?', 'Step 1: Starch is a food store.', 'Step 2: We test it with a chemical.', 'Step 3: So salt water turns blue-black.', 'Iodine turns blue-black.', 2],
+    ['Which step is the mistake?', 'Step 1: Light provides energy.', 'Step 2: Chlorophyll traps it.', 'Step 3: So photosynthesis works best in the dark.', 'It needs light.', 2],
+    ['Which step is the mistake?', 'Step 1: Water comes from the roots.', 'Step 2: It travels to the leaf.', 'Step 3: So the leaf needs no water.', 'The leaf needs water.', 2],
+  ], ['c', 'd']),
+];
