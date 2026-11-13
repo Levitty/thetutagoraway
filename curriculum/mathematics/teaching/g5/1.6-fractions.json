@@ -1,0 +1,454 @@
+{
+  "sub_strand": "MATH.G5.NUMBER.FRACTIONS",
+  "title": "Fractions",
+  "status": "draft: written 13 Nov 2026 from research round 3; not yet checked by a Kenyan maths teacher; not loaded by the live tutor",
+  "sources": [49, 50, 51, 52, 57, 60, 69],
+  "notes": "One root sits under most fraction errors: the child treats the top and bottom numbers as two separate whole numbers (whole number bias, source 51). Every skill below moves from a real thing, to a bar or strip, to a number line, to numerals (source 52), and every calculation starts with an estimate (source 49).",
+  "skills": [
+    {
+      "skill": "MATH.G5.NUMBER.FRACTIONS.EQUIVALENT_FRACTIONS",
+      "key_step": "The child says that cutting every piece into the same number of smaller pieces keeps the amount the same, so the top and the bottom are both multiplied by that number.",
+      "floor": {
+        "prerequisite": "Names halves, quarters and eighths of one whole cut into equal parts (Grade 4 fractions).",
+        "question": "Here is a chapati cut into 4 equal pieces, 1 shaded. What fraction is shaded?",
+        "answer": "One quarter"
+      },
+      "representations": ["real object: chapati or paper strip folded", "fraction bar (strip) stacked under a whole", "number line 0 to 1 with halves, quarters, eighths", "numerals with x2 written above and below"],
+      "steps": [
+        "Start from sharing: one chapati shared fairly between 2 children. The child names one half.",
+        "Cut every half again. The child counts the new pieces and the shaded pieces and names the new fraction.",
+        "Predict before checking: is two quarters more, less or the same as one half? Lay one over the other to check.",
+        "Repeat once more (eighths) and let the child find the third name for the same amount.",
+        "Move to the number line: half and two quarters land on the same point.",
+        "Only now look at the numbers: what happened to the top and to the bottom? The child says the pattern.",
+        "Missing-number form (3/4 = ?/12), first with the strip available, then without."
+      ],
+      "contexts": ["a chapati shared at supper", "a 1 kg packet of sugar split into half and quarter kilogrammes", "a shamba divided into equal plots", "a loaf of bread sliced for breakfast"],
+      "board": [
+        {"beat": "draw", "do": "Draw one long bar, the whole, slowly, and label it 1.", "say": "This bar is one whole chapati."},
+        {"beat": "draw", "do": "Draw a second bar of exactly the same length under it, cut into 2 equal parts; shade 1 part.", "say": "Shared between two children. One child's share is shaded."},
+        {"beat": "pause", "do": "Stop drawing and wait for the child to name the share."},
+        {"beat": "draw", "do": "Slowly, the key idea: cut each half of a third bar into 2. Draw the two new cuts one at a time.", "say": "Now I cut every piece again. Watch each cut."},
+        {"beat": "count", "do": "Child counts all parts while the board marks each one; then counts the shaded parts.", "say": "Count all the pieces with your finger."},
+        {"beat": "predict", "do": "Before shading the third bar, ask the child to predict whether the shaded amount will be more, less or the same.", "say": "Guess first. More, less, or the same?"},
+        {"beat": "child_draws", "do": "Child shades the third bar to match the half."},
+        {"beat": "reveal", "do": "Draw a dotted vertical line down from the end of the shaded half through all bars, only after the child has answered.", "say": "Look where the shading ends."},
+        {"beat": "write", "do": "Write 1/2 and 2/4 beside their bars; leave a gap between them for the child to say the sign."}
+      ],
+      "misconceptions": [
+        {
+          "code": "MATH.G5.NUMBER.FRACTIONS.EQUIVALENT_FRACTIONS.M_EQUIV_ADDITIVE",
+          "listen_for": ["I added 3 to both", "plus three on top and bottom", "it goes up by the same"],
+          "ask": "Show me 2/3 and 5/6 on two strips of the same length. Are they the same amount?",
+          "repair": "The strips show 5/6 is more. Cut each third into 2 pieces on the strip: how many sixths are shaded now? Ask the child what they did to the 3 to get 6, and whether they must do the same to the 2."
+        },
+        {
+          "code": "MATH.G5.NUMBER.FRACTIONS.EQUIVALENT_FRACTIONS.M_EQUIV_ONE_TERM_ONLY",
+          "listen_for": ["the top stays the same", "I only changed the bottom", "three eighths because the top is three"],
+          "ask": "Is 3/8 of a cake the same amount as 3/4 of the same cake?",
+          "repair": "Fold a strip in quarters, shade 3, fold again into eighths and let the child count the shaded eighths. Ask: when every piece was cut in two, what happened to the number of shaded pieces?"
+        },
+        {
+          "code": "MATH.G5.NUMBER.FRACTIONS.EQUIVALENT_FRACTIONS.M_EQUIV_BIGGER_NUMBERS_BIGGER",
+          "listen_for": ["four eighths is more because the numbers are bigger", "eight is more than two"],
+          "ask": "Wanjiku ate 1/2 of a chapati. Otieno ate 4/8 of the same size chapati. Who ate more?",
+          "repair": "Lay a half bar over four eighths on the board. The child says what they see. Then: more pieces, but what about the size of each piece?"
+        }
+      ],
+      "checks": [
+        {"question": "Fill the gap: 2/3 = ?/12.", "answer": "8", "shows": "multiplies both terms by the same number; the additive error gives 11"},
+        {"question": "Akinyi says 3/5 and 6/10 of the same bag of maize are the same amount. Is she right? How do you know?", "answer": "Yes; each fifth is cut into 2 tenths, so 3 fifths is 6 tenths", "shows": "explains equivalence as the same amount, not by rule alone"}
+      ]
+    },
+    {
+      "skill": "MATH.G5.NUMBER.FRACTIONS.SIMPLIFY_FRACTIONS",
+      "key_step": "The child finds a number that divides both the top and the bottom exactly, divides both by it, and checks that no common factor other than 1 is left.",
+      "floor": {
+        "prerequisite": "Lists factors of numbers up to 50 (Grade 4 factors) and generates equivalent fractions.",
+        "question": "Name a number that divides both 6 and 9 exactly.",
+        "answer": "3"
+      },
+      "representations": ["real object: 6 of 8 mandazi on a tray", "fraction bar with pieces joined back together", "numerals with divide-by written above and below"],
+      "steps": [
+        "Start from equivalence the other way round: 6 of 8 mandazi eaten. Can we say the same amount with fewer, bigger pieces?",
+        "On the bar, join pairs of pieces. The child counts the new pieces and the shaded pieces.",
+        "The child names what happened to the top and the bottom (both divided by 2).",
+        "Introduce the question to ask every time: what number divides both exactly?",
+        "Two-step case (12/18): divide once, then ask the check question again.",
+        "Finish with the meaning: is the simplified fraction a smaller amount? The child explains why not."
+      ],
+      "contexts": ["mandazi left on a tray", "a crate of 12 eggs, some used", "a class of learners, some in the football team", "a bag of rice shared"],
+      "board": [
+        {"beat": "draw", "do": "Draw a bar cut into 8 equal parts; shade 6 one at a time.", "say": "Six of eight mandazi were eaten."},
+        {"beat": "count", "do": "Child counts shaded and total parts.", "say": "Count the shaded parts for me."},
+        {"beat": "draw", "do": "Slowly, the key idea: draw thick rings around pairs of parts, one ring at a time, so the bar shows 4 bigger pieces.", "say": "I join the pieces in pairs. Watch."},
+        {"beat": "pause", "do": "Wait for the child to say how many big pieces and how many are shaded."},
+        {"beat": "predict", "do": "Ask: is 3/4 more, less or the same as 6/8 before writing anything.", "say": "Is the shaded amount bigger now?"},
+        {"beat": "write", "do": "Write 6/8 = 3/4 with the divide-by gap left blank above and below for the child to fill."}
+      ],
+      "misconceptions": [
+        {
+          "code": "MATH.G5.NUMBER.FRACTIONS.SIMPLIFY_FRACTIONS.M_SIMPLIFY_SUBTRACT",
+          "listen_for": ["I took away 3 from both", "minus the same"],
+          "ask": "Do 3/6 and 6/9 shade the same amount of the same bar?",
+          "repair": "Draw both on equal bars: 3/6 is a half, 6/9 is more. Ask what number goes into 6 and 9 exactly, and whether taking away keeps pieces the same size."
+        },
+        {
+          "code": "MATH.G5.NUMBER.FRACTIONS.SIMPLIFY_FRACTIONS.M_SIMPLIFY_STOPS_EARLY",
+          "listen_for": ["I divided by 2 and that's it", "six ninths is the answer"],
+          "ask": "Look at 6/9. Is there a number other than 1 that still divides both?",
+          "repair": "Make the check question a habit: after each division, ask 'do they still share a factor?'. Praise the first step, then let the child take the second."
+        },
+        {
+          "code": "MATH.G5.NUMBER.FRACTIONS.SIMPLIFY_FRACTIONS.M_SIMPLIFY_MAKES_SMALLER",
+          "listen_for": ["it is smaller now", "the numbers went down so it is less"],
+          "ask": "Is 2/3 of a bag of rice more, less or the same as 8/12 of the bag?",
+          "repair": "Show both on equal bars, one under the other. The child traces where the shading ends. Same amount, a shorter name."
+        }
+      ],
+      "checks": [
+        {"question": "Simplify 12/18 fully.", "answer": "2/3", "shows": "keeps going until no common factor is left; stopping early gives 6/9"},
+        {"question": "Baraka ate 4 of 12 slices of bread. He says he ate 1/3 of the loaf. Is he right? Explain.", "answer": "Yes; 4 and 12 both divide by 4, giving 1/3", "shows": "uses simplifying in a word problem and explains with a common factor"}
+      ]
+    },
+    {
+      "skill": "MATH.G5.NUMBER.FRACTIONS.COMPARE_LIKE_FRACTIONS",
+      "key_step": "The child explains that, for the same whole, more equal pieces means each piece is smaller (same numerator), and that with the same size pieces more pieces is more (same denominator).",
+      "floor": {
+        "prerequisite": "Knows that a fraction's parts must be equal and of the same whole.",
+        "question": "A chapati is cut into 2 pieces, one big and one small. Is each piece a half?",
+        "answer": "No, halves must be equal"
+      },
+      "representations": ["real objects: one loaf shared among 4, an equal loaf among 8", "two equal bars, one under the other", "number line 0 to 1 with both fractions marked", "numerals with <, > or ="],
+      "steps": [
+        "Same denominator first: 3/8 and 5/8 of the same chapati. Same size pieces, so the child compares counts.",
+        "Unit fractions next, from sharing: one loaf among 4, the same loaf among 8. Who gets the bigger piece?",
+        "The child states the rule in their own words (more pieces, smaller pieces).",
+        "Same numerator, not unit: 3/5 and 3/8. Same number of pieces, which pieces are bigger?",
+        "Check the same whole: half of a small mandazi against a quarter of a big cake.",
+        "Write with < and >; the child reads the sign aloud."
+      ],
+      "contexts": ["a loaf shared among more or fewer children", "a pawpaw cut in pieces", "a mandazi against a cake (different wholes)", "a 1 km walk to school split in parts"],
+      "board": [
+        {"beat": "draw", "do": "Draw two bars of exactly the same length, one above the other, both labelled 1 loaf.", "say": "Two loaves, exactly the same size."},
+        {"beat": "draw", "do": "Cut the top bar into 4 equal parts and the bottom into 8, one cut at a time.", "say": "Four children share this one. Eight share this one."},
+        {"beat": "predict", "do": "Ask who gets the bigger piece before shading anything.", "say": "Guess first. Who gets more?"},
+        {"beat": "child_draws", "do": "Child shades one piece in each bar."},
+        {"beat": "point", "do": "Highlight the two shaded pieces side by side; slow at the key idea, the edge of 1/8 against the edge of 1/4.", "say": "Look at the two shaded pieces."},
+        {"beat": "pause", "do": "Wait for the child to say which is bigger and why."},
+        {"beat": "write", "do": "Write 1/4 and 1/8 with an empty box between them for the sign."}
+      ],
+      "misconceptions": [
+        {
+          "code": "MATH.G5.NUMBER.FRACTIONS.COMPARE_LIKE_FRACTIONS.M_COMPARE_BIGGER_DENOMINATOR",
+          "listen_for": ["eight is bigger than four", "because 8 is more", "more pieces so more bread"],
+          "ask": "Which is more, 1/4 of a loaf or 1/8 of the same loaf?",
+          "repair": "Share one loaf among 4 and an equal loaf among 8 on the board. The child says who gets the bigger piece, then says the rule. Test with 3/5 and 3/8."
+        },
+        {
+          "code": "MATH.G5.NUMBER.FRACTIONS.COMPARE_LIKE_FRACTIONS.M_COMPARE_DIFFERENT_WHOLES",
+          "listen_for": ["a half is always more than a quarter", "half is bigger always"],
+          "ask": "Akinyi got half of a small mandazi. Baraka got a quarter of a big cake. Who got more food?",
+          "repair": "Draw a small mandazi and a big cake, then the two shares. The child says what must be the same before comparing fractions: the whole."
+        }
+      ],
+      "checks": [
+        {"question": "Put <, > or = between 3/7 and 3/10.", "answer": "3/7 > 3/10", "shows": "same numerator: sevenths are bigger pieces than tenths"},
+        {"question": "Two equal pawpaws. Neema eats 5/9 of one and Juma eats 7/9 of the other. Who eats more, and why?", "answer": "Juma; the pieces are the same size and he has more of them", "shows": "same denominator reasoning in a story"}
+      ]
+    },
+    {
+      "skill": "MATH.G5.NUMBER.FRACTIONS.COMPARE_UNLIKE_FRACTIONS",
+      "key_step": "The child renames one or both fractions so the pieces are the same size, then compares the counts; or uses one half as a benchmark and says why.",
+      "floor": {
+        "prerequisite": "Generates equivalent fractions with denominators up to 12.",
+        "question": "What is 2/3 in sixths?",
+        "answer": "4/6"
+      },
+      "representations": ["two plots of sukuma wiki of the same size", "stacked fraction bars (fraction board)", "number line 0 to 1 marked in twelfths", "numerals renamed to the same denominator"],
+      "steps": [
+        "Estimate with one half: is each fraction more or less than a half? If one is above and one below, the child can decide at once.",
+        "If both are on the same side, the pieces must be made the same size: rename.",
+        "Rename one fraction where one denominator divides the other (2/3 and 5/6).",
+        "Rename both into twelfths where both divide 12 (2/3 and 3/4).",
+        "Compare on the stacked bars or number line to check the renaming.",
+        "The child explains why renaming is fair: same amount, same size pieces."
+      ],
+      "contexts": ["2/3 of one plot of sukuma wiki against 5/6 of an equal plot", "fractions of a kilometre walked to school", "parts of a 1 litre bottle of milk drunk", "a class: fraction of learners who walk against those who ride"],
+      "board": [
+        {"beat": "draw", "do": "Draw a number line from 0 to 1, mark 1/2 with a longer tick.", "say": "Here is one half on the line."},
+        {"beat": "predict", "do": "Ask whether 2/3 is more or less than a half, then the same for 3/4.", "say": "More than a half, or less?"},
+        {"beat": "draw", "do": "Draw two equal bars: thirds above, quarters below; shade 2 and 3.", "say": "Two thirds here. Three quarters here."},
+        {"beat": "draw", "do": "Slowly, the key idea: cut every third into 4 and every quarter into 3, one bar at a time, so both show twelfths.", "say": "I make every piece the same size."},
+        {"beat": "count", "do": "Child counts shaded twelfths in each bar.", "say": "Count the shaded small pieces in each."},
+        {"beat": "pause", "do": "Wait for the child to compare the counts and give the sign."},
+        {"beat": "write", "do": "Write 8/12 and 9/12 under the bars, then the original fractions with a box for the sign."}
+      ],
+      "misconceptions": [
+        {
+          "code": "MATH.G5.NUMBER.FRACTIONS.COMPARE_UNLIKE_FRACTIONS.M_COMPARE_GAP_THINKING",
+          "listen_for": ["both are one away from a whole", "they are both missing one", "one part short so equal"],
+          "ask": "What is missing from each to make a whole? Which missing piece is bigger?",
+          "repair": "On stacked bars, shade 2/3 and 3/4 and point at the empty piece in each. The child compares the missing third and the missing quarter, then decides which shaded amount is more."
+        },
+        {
+          "code": "MATH.G5.NUMBER.FRACTIONS.COMPARE_UNLIKE_FRACTIONS.M_COMPARE_BIGGER_TERMS",
+          "listen_for": ["five twelfths has bigger numbers", "twelve is big so it is more"],
+          "ask": "Which is more, 5/12 or 2/3? Is each one more or less than a half?",
+          "repair": "Use one half as a benchmark: 5/12 is less than 6/12, 2/3 is more than a half. Then rename 2/3 to twelfths and compare counts."
+        }
+      ],
+      "checks": [
+        {"question": "Put <, > or = between 5/6 and 3/4.", "answer": "5/6 > 3/4 (10/12 > 9/12)", "shows": "renames both to twelfths, or reasons with the missing pieces"},
+        {"question": "Otieno walked 3/8 of a kilometre. Achieng walked 1/2 of a kilometre. Who walked further? How do you know?", "answer": "Achieng; 1/2 is 4/8, which is more than 3/8", "shows": "renames one fraction in context"}
+      ]
+    },
+    {
+      "skill": "MATH.G5.NUMBER.FRACTIONS.ORDER_FRACTIONS",
+      "key_step": "The child makes the pieces the same size (or uses the number line) before ordering, and writes the order using the original fractions.",
+      "floor": {
+        "prerequisite": "Compares two fractions with like or unlike denominators.",
+        "question": "Which is bigger, 1/3 or 1/6?",
+        "answer": "1/3"
+      },
+      "representations": ["sharing stories", "stacked fraction bars", "number line 0 to 1", "numerals renamed to a common denominator"],
+      "steps": [
+        "Say what the order words mean first: increasing means smallest first.",
+        "Unit fractions: place each on the number line, then read the order.",
+        "Same denominator: order the numerators.",
+        "Mixed denominators that divide 12: rename to twelfths, order, write back the originals.",
+        "Check the order on the number line.",
+        "Spot which fraction is out of order in a given list."
+      ],
+      "contexts": ["three children's shares of a cake", "fractions of a kilometre walked by three friends", "parts of a jerrycan filled", "a race: fraction of the track run"],
+      "board": [
+        {"beat": "draw", "do": "Draw a long number line from 0 to 1.", "say": "Smallest at this end, biggest at that end."},
+        {"beat": "point", "do": "Point at 0 then 1 and the direction of increasing.", "say": "Increasing means we walk this way."},
+        {"beat": "child_draws", "do": "Child marks where 1/2 goes; then 1/3; then 1/6, each before the tutor checks."},
+        {"beat": "pause", "do": "After each mark, wait for the child to say why it goes there."},
+        {"beat": "reveal", "do": "Draw the exact ticks for halves, thirds and sixths under the child's marks only after all three are placed.", "say": "Let's check your marks."},
+        {"beat": "write", "do": "Write three empty boxes with arrows for the child to fill in increasing order."}
+      ],
+      "misconceptions": [
+        {
+          "code": "MATH.G5.NUMBER.FRACTIONS.ORDER_FRACTIONS.M_ORDER_BY_DENOMINATOR",
+          "listen_for": ["two, three, six, smallest first", "I put the small numbers first"],
+          "ask": "Put 1/3, 1/6 and 1/2 on the number line before you write the order.",
+          "repair": "The line shows 1/6 nearest 0. Ask which share of the same cake is smallest. The child says the rule from comparing like fractions."
+        },
+        {
+          "code": "MATH.G5.NUMBER.FRACTIONS.ORDER_FRACTIONS.M_ORDER_BY_NUMERATOR",
+          "listen_for": ["two, three, five on top", "I looked at the top numbers"],
+          "ask": "Can we compare the top numbers when the pieces are different sizes?",
+          "repair": "Make the pieces the same size first: rename to twelfths, order, then write back the original fractions."
+        },
+        {
+          "code": "MATH.G5.NUMBER.FRACTIONS.ORDER_FRACTIONS.M_ORDER_DIRECTION",
+          "listen_for": ["decreasing means going down so smallest first", "I started small"],
+          "ask": "Before you write: smallest first, or largest first?",
+          "repair": "Tie the words to a picture (steps going up for increasing) and ask the child to say 'smallest first' or 'largest first' aloud before writing."
+        }
+      ],
+      "checks": [
+        {"question": "Arrange 3/4, 1/2 and 5/12 in decreasing order.", "answer": "3/4, 1/2, 5/12", "shows": "renames to twelfths (9, 6, 5) and keeps the direction right"},
+        {"question": "Halima says the increasing order of 1/5, 1/10, 1/2 is 1/2, 1/5, 1/10. Is she right? What would you tell her?", "answer": "No; increasing is 1/10, 1/5, 1/2, because tenths are the smallest pieces", "shows": "spots ordering by denominator in someone else's work"}
+      ]
+    },
+    {
+      "skill": "MATH.G5.NUMBER.FRACTIONS.ADD_SAME_DENOMINATOR",
+      "key_step": "The child says that the pieces stay the same size, so only the number of pieces is added, and names the answer with its unit (five sevenths).",
+      "floor": {
+        "prerequisite": "Reads and names a fraction of a whole; knows the bottom number names the size of the pieces.",
+        "question": "A bar has 7 equal parts. What is one part called?",
+        "answer": "One seventh"
+      },
+      "representations": ["paper cut-outs of a pawpaw or a jug of uji", "one bar with two colours", "number line with jumps", "numerals read aloud with the unit"],
+      "steps": [
+        "Estimate: will the total be more or less than each part? More or less than 1?",
+        "Act it out: 2 sevenths and 3 sevenths of one jug of uji, as cut-outs on one bar.",
+        "The child counts the pieces and names the unit: five sevenths.",
+        "Say it aloud with the unit every time: two sevenths plus three sevenths is five sevenths.",
+        "Number line: start at 2/7, jump 3 sevenths.",
+        "Simplify where possible; where the sum is more than 1, write it as a mixed number.",
+        "Missing addend: 2/9 + ?/9 = 7/9."
+      ],
+      "contexts": ["uji poured from one jug in two cups", "a plot of maize planted on two days", "flour used on Monday and Tuesday from one packet", "a pawpaw eaten by two children"],
+      "board": [
+        {"beat": "draw", "do": "Draw one bar cut into 7 equal parts, labelled one jug of uji.", "say": "One jug of uji, in sevenths."},
+        {"beat": "child_draws", "do": "Child shades 2 parts in one colour."},
+        {"beat": "child_draws", "do": "Child shades 3 more parts in a second colour."},
+        {"beat": "count", "do": "Child counts all shaded parts; the board marks each one.", "say": "Count all the shaded sevenths."},
+        {"beat": "point", "do": "Slowly, the key idea: point to the size of one part, then to the 7 at the bottom, and hold.", "say": "Did the pieces change size?"},
+        {"beat": "pause", "do": "Wait for the child to name the answer with its unit."},
+        {"beat": "write", "do": "Write 2/7 + 3/7 = with a gap for the child's answer."}
+      ],
+      "misconceptions": [
+        {
+          "code": "MATH.G5.NUMBER.FRACTIONS.ADD_SAME_DENOMINATOR.M_ADD_DENOMINATORS",
+          "listen_for": ["seven and seven is fourteen", "I added the bottoms too", "five over fourteen"],
+          "ask": "Is 5/14 more or less than 2/7? Can a total be smaller than one of its parts?",
+          "repair": "Estimate check first: 5/14 is less than a half and less than the parts. Then show on one bar that the pieces stay sevenths; the child counts five sevenths."
+        },
+        {
+          "code": "MATH.G5.NUMBER.FRACTIONS.ADD_SAME_DENOMINATOR.M_ADD_DROPS_DENOMINATOR",
+          "listen_for": ["five", "she used five", "the answer is 5"],
+          "ask": "Five what? Did Mama use five packets? She had one packet.",
+          "repair": "Say the unit aloud together: two eighths plus three eighths is five eighths. The child repeats with the unit and writes the fraction."
+        }
+      ],
+      "checks": [
+        {"question": "Work out 4/11 + 5/11.", "answer": "9/11", "shows": "adds the counts and keeps the size of the pieces"},
+        {"question": "Mama poured 3/10 of a jug of milk in the morning and 4/10 in the evening. What fraction of the jug did she pour altogether?", "answer": "7/10 of the jug", "shows": "keeps the unit in a word problem"}
+      ]
+    },
+    {
+      "skill": "MATH.G5.NUMBER.FRACTIONS.SUBTRACT_SAME_DENOMINATOR",
+      "key_step": "The child takes away pieces of the same size, keeps the size name, and names a whole as so many of those pieces (8/8) when taking from a whole.",
+      "floor": {
+        "prerequisite": "Adds fractions with the same denominator; knows one whole as n/n.",
+        "question": "How many eighths make one whole?",
+        "answer": "Eight"
+      },
+      "representations": ["paper cut-outs of a pawpaw", "a bar with pieces crossed out", "number line with backward jumps", "numerals"],
+      "steps": [
+        "Estimate: will what is left be more or less than what we started with?",
+        "Take away from a fraction: 5/8 of a pawpaw, 3/8 eaten. The child crosses out pieces and counts what is left.",
+        "Take away from a whole: name the whole as 8/8 first.",
+        "Number line: start at 5/8, jump back 3 eighths.",
+        "Simplify the answer where possible.",
+        "Missing number: 7/10 - ?/10 = 3/10."
+      ],
+      "contexts": ["a pawpaw, part eaten", "a bag of flour, part used", "a 2 km road, part tarmacked (using fractions of one km)", "a full water tank, part used"],
+      "board": [
+        {"beat": "draw", "do": "Draw a pawpaw as a bar cut into 8 equal pieces; shade 5.", "say": "Five eighths of a pawpaw are left on the plate."},
+        {"beat": "child_draws", "do": "Child crosses out 3 shaded pieces, one at a time."},
+        {"beat": "count", "do": "Child counts the shaded pieces not crossed out.", "say": "Count what is still there."},
+        {"beat": "point", "do": "Point at one remaining piece, then at the 8 parts of the whole, slowly.", "say": "What is each piece still called?"},
+        {"beat": "pause", "do": "Wait for the child's answer with its unit."},
+        {"beat": "write", "do": "Write 5/8 - 3/8 = with a gap; then ask the child whether it can be named more simply."}
+      ],
+      "misconceptions": [
+        {
+          "code": "MATH.G5.NUMBER.FRACTIONS.SUBTRACT_SAME_DENOMINATOR.M_SUB_DENOMINATORS",
+          "listen_for": ["eight take away eight is nothing", "two over zero", "the answer is 2"],
+          "ask": "After eating 3 pieces, are the pieces left still eighths?",
+          "repair": "Number line in eighths: start at 5/8, jump back three eighths one at a time while the child counts. Land on 2/8; the child names it."
+        },
+        {
+          "code": "MATH.G5.NUMBER.FRACTIONS.SUBTRACT_SAME_DENOMINATOR.M_SUB_WHOLE_NOT_RENAMED",
+          "listen_for": ["you can't take 3/8 from 1", "three eighths is left", "the answer is 3/8"],
+          "ask": "Juma had a whole pawpaw in 8 pieces. How many pieces did he have before eating?",
+          "repair": "Cut the whole into 8 on the board and name it 8/8. Cross out 3 pieces. The child counts what is left."
+        }
+      ],
+      "checks": [
+        {"question": "Work out 1 - 4/9.", "answer": "5/9", "shows": "renames the whole as 9/9"},
+        {"question": "A tank was 7/12 full. The family used 5/12 of the tank. What fraction of the tank is still full? Give it in its simplest form.", "answer": "2/12 = 1/6", "shows": "subtracts, keeps twelfths, then simplifies"}
+      ]
+    },
+    {
+      "skill": "MATH.G5.NUMBER.FRACTIONS.ADD_ONE_RENAMING",
+      "key_step": "The child decides which fraction to rename so that both have the same size pieces, renames it as an equal amount, and only then adds.",
+      "floor": {
+        "prerequisite": "Generates equivalent fractions and adds fractions with the same denominator.",
+        "question": "What is 1/2 in quarters?",
+        "answer": "2/4"
+      },
+      "representations": ["half and quarter kilogramme packets of sugar", "stacked bars (fraction board)", "number line in quarters or sixths", "numerals with the renaming shown"],
+      "steps": [
+        "Estimate: 1/2 + 1/4 must be more than 1/2 and less than 1.",
+        "Try to add on the bar: the pieces are different sizes, so they cannot be counted together yet.",
+        "The child chooses which fraction to cut into smaller pieces and says why (the bigger pieces can be cut to match the smaller).",
+        "Rename that fraction and check it is the same amount on the bar.",
+        "Add the same-size pieces; simplify if possible.",
+        "Check the answer against the estimate.",
+        "Spot the error in a worked sum (1/2 + 1/4 = 2/6)."
+      ],
+      "contexts": ["1/2 kg and 1/4 kg of sugar bought in two trips", "a shamba: 2/3 planted with maize and 1/6 with beans", "a walk of 1/2 km then 3/8 km more", "uji: 1/3 of a jug then 1/6 more"],
+      "board": [
+        {"beat": "draw", "do": "Draw a bar for 1/2 kg and a bar for 1/4 kg, end to end on one whole bar.", "say": "Half a kilo, then a quarter more."},
+        {"beat": "predict", "do": "Ask for an estimate: more or less than a half? More or less than 1?", "say": "Before we add: more than a half?"},
+        {"beat": "point", "do": "Point at the half piece beside the quarter piece; hold on the different sizes.", "say": "Can we count these pieces together?"},
+        {"beat": "pause", "do": "Wait for the child to say the pieces are not the same size."},
+        {"beat": "child_draws", "do": "Child draws the cut that turns the half into quarters."},
+        {"beat": "count", "do": "Child counts all the quarters now shaded.", "say": "Count the quarters now."},
+        {"beat": "write", "do": "Write 1/2 + 1/4 = ?/4 + 1/4 with gaps for the child."}
+      ],
+      "misconceptions": [
+        {
+          "code": "MATH.G5.NUMBER.FRACTIONS.ADD_ONE_RENAMING.M_RENAME_ADD_DENOMINATORS",
+          "listen_for": ["one plus one, two plus four", "two sixths", "I added the tops and the bottoms"],
+          "ask": "Your answer is 2/6. Is that more or less than 1/2? You started with 1/2 and added more.",
+          "repair": "Put a half and a quarter end to end on the board and find the one strip they match. Then use R3-7: Juma wrote 2/6; what would you tell him?"
+        },
+        {
+          "code": "MATH.G5.NUMBER.FRACTIONS.ADD_ONE_RENAMING.M_RENAME_DENOMINATOR_ONLY",
+          "listen_for": ["a half is one quarter", "I changed the 2 to a 4"],
+          "ask": "Is 1/4 the same amount as 1/2?",
+          "repair": "After every renaming ask: is the new fraction the same amount as the old one? Show 1/2 and 1/4 on stacked bars; the child corrects to 2/4."
+        },
+        {
+          "code": "MATH.G5.NUMBER.FRACTIONS.ADD_ONE_RENAMING.M_RENAME_ADDITIVE",
+          "listen_for": ["I added 3 to make sixths", "two thirds is three sixths"],
+          "ask": "Show me 2/3 and 3/6 on two strips. Are they the same amount?",
+          "repair": "On the strips, cut each third into two sixths. The child counts four sixths and says what was done to both numbers."
+        }
+      ],
+      "checks": [
+        {"question": "Work out 1/3 + 1/6.", "answer": "3/6 = 1/2", "shows": "renames thirds to sixths, adds, simplifies"},
+        {"question": "Kamau planted 2/5 of his shamba with maize and 3/10 with beans. What fraction did he plant altogether?", "answer": "7/10", "shows": "chooses to rename fifths to tenths in context"}
+      ]
+    },
+    {
+      "skill": "MATH.G5.NUMBER.FRACTIONS.SUBTRACT_ONE_RENAMING",
+      "key_step": "The child renames one fraction so the pieces are the same size, notices which fraction is really larger after renaming, and then subtracts.",
+      "floor": {
+        "prerequisite": "Generates equivalent fractions and subtracts fractions with the same denominator.",
+        "question": "What is 1/2 in eighths?",
+        "answer": "4/8"
+      },
+      "representations": ["half a litre of milk in a 1 litre bottle", "stacked bars", "number line in eighths with a backward jump", "numerals with the renaming shown"],
+      "steps": [
+        "Estimate: the answer must be less than the first fraction.",
+        "Compare first: which fraction is really bigger? Rename to find out (1/2 and 3/8).",
+        "Rename the fraction with the bigger pieces into the smaller pieces; check it is the same amount.",
+        "Take away pieces of the same size; simplify.",
+        "Check against the estimate.",
+        "How much more problems: the difference between two shares."
+      ],
+      "contexts": ["1/2 litre of milk, 3/8 litre drunk", "3/4 of a field ploughed, 1/2 planted", "5/6 of a bag of beans, 1/3 sold", "a 1 km race, one runner at 1/2 km and another at 7/10 km"],
+      "board": [
+        {"beat": "draw", "do": "Draw a 1 litre bottle as a tall bar with the level at 1/2.", "say": "Neema had half a litre of milk."},
+        {"beat": "predict", "do": "Ask: can she drink 3/8 litre from this? Is 3/8 more or less than a half?", "say": "Is three eighths more or less than a half?"},
+        {"beat": "draw", "do": "Slowly, the key idea: draw the eighths marks up the bottle, one at a time, while the child counts up to the milk level.", "say": "Count the eighths up to the milk."},
+        {"beat": "pause", "do": "Wait for the child to say a half is four eighths."},
+        {"beat": "child_draws", "do": "Child shades or crosses out 3 eighths from the top of the milk."},
+        {"beat": "write", "do": "Write 1/2 - 3/8 = ?/8 - 3/8 with gaps for the child."}
+      ],
+      "misconceptions": [
+        {
+          "code": "MATH.G5.NUMBER.FRACTIONS.SUBTRACT_ONE_RENAMING.M_RENAME_SUB_DENOMINATORS",
+          "listen_for": ["three take one, four take two", "two halves", "it is one"],
+          "ask": "Your answer is bigger than 3/4, the amount we started with. Can taking away give more?",
+          "repair": "Estimate first: the answer must be less than 3/4. Rename 1/2 as 2/4 on stacked bars, take away, and compare with the estimate."
+        },
+        {
+          "code": "MATH.G5.NUMBER.FRACTIONS.SUBTRACT_ONE_RENAMING.M_RENAME_SUB_DENOMINATOR_ONLY",
+          "listen_for": ["one third is one sixth", "I made the bottom 6"],
+          "ask": "Is 1/6 the same amount as 1/3?",
+          "repair": "Show 1/3 and its renamed form on the chart before subtracting. The child corrects to 2/6 and checks the answer simplifies to 1/2."
+        },
+        {
+          "code": "MATH.G5.NUMBER.FRACTIONS.SUBTRACT_ONE_RENAMING.M_SUB_THINKS_IMPOSSIBLE",
+          "listen_for": ["you can't, three eighths is bigger", "eight is bigger than two so you can't take it"],
+          "ask": "Before deciding, what is 1/2 in eighths?",
+          "repair": "Rename first, then compare: 1/2 is 4/8, more than 3/8. Praise the child for checking whether the take-away was possible."
+        }
+      ],
+      "checks": [
+        {"question": "Work out 5/6 - 1/3.", "answer": "3/6 = 1/2", "shows": "renames thirds as sixths and simplifies"},
+        {"question": "A field is 3/4 ploughed and 1/2 planted. How much more of the field is ploughed than planted?", "answer": "1/4", "shows": "renames halves to quarters in a how-much-more problem"}
+      ]
+    }
+  ]
+}
