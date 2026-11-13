@@ -1,0 +1,1802 @@
+{
+ "KISW.G6.KUSOMA.T1_KUSOMA_KWA_UFAHAMU.MSAMIATI.M_MSA_LOOKALIKE": {
+  "skill": "KISW.G6.KUSOMA.T1_KUSOMA_KWA_UFAHAMU.MSAMIATI",
+  "error": "Picks a word that looks or sounds like the word in the passage.",
+  "example": {
+   "question": "Katika kifungu, \"kuchemsha\" maana yake ni nini?",
+   "wrong_answer": "kuchemka kwa maji",
+   "correct_answer": "kupasha maji moto hadi yatokote"
+  },
+  "cause": "The child reads the first letters and not the meaning.",
+  "reveals": "A word with a look-alike among the options.",
+  "help": "Read the sentence around the word and think what is being done.",
+  "feedback": "Maana ya neno hutokana na sentensi lilimo, si na jinsi linavyofanana na neno lingine.",
+  "source": "common learner error; to confirm by a native Kiswahili teacher",
+  "status": "draft"
+ },
+ "KISW.G6.KUSOMA.T1_KUSOMA_KWA_UFAHAMU.MSAMIATI.M_MSA_NEARBY": {
+  "skill": "KISW.G6.KUSOMA.T1_KUSOMA_KWA_UFAHAMU.MSAMIATI",
+  "error": "Picks a word from a nearby sentence that is not about this word.",
+  "example": {
+   "question": "Katika kifungu, \"kuchemsha\" maana yake ni nini?",
+   "wrong_answer": "kuchuma majani ya chai",
+   "correct_answer": "kupasha maji moto hadi yatokote"
+  },
+  "cause": "The child grabs the first thing the passage says.",
+  "reveals": "An option taken from another sentence.",
+  "help": "Go back to the exact sentence with the word.",
+  "feedback": "Rudi kwenye sentensi lenyewe lenye neno hilo. Maana inatoka hapo, si kutoka sentensi ya karibu.",
+  "source": "common learner error; to confirm by a native Kiswahili teacher",
+  "status": "draft"
+ },
+ "KISW.G6.KUSOMA.T1_KUSOMA_KWA_UFAHAMU.MSAMIATI.M_MSA_OPPOSITE": {
+  "skill": "KISW.G6.KUSOMA.T1_KUSOMA_KWA_UFAHAMU.MSAMIATI",
+  "error": "Picks the opposite of the word.",
+  "example": {
+   "question": "Katika kifungu, \"kuchemsha\" maana yake ni nini?",
+   "wrong_answer": "kupoza maji",
+   "correct_answer": "kupasha maji moto hadi yatokote"
+  },
+  "cause": "The child finds the idea and then reverses it.",
+  "reveals": "An option with the opposite meaning.",
+  "help": "Does the word mean the same thing as your choice?",
+  "feedback": "Kinyume cha neno si maana yake. Soma tena sentensi.",
+  "source": "common learner error; to confirm by a native Kiswahili teacher",
+  "status": "draft"
+ },
+ "KISW.G6.KUSOMA.T1_KUSOMA_KWA_UFAHAMU.UFAHAMU_HADITHI.M_UFA_WRONG_PERSON": {
+  "skill": "KISW.G6.KUSOMA.T1_KUSOMA_KWA_UFAHAMU.UFAHAMU_HADITHI",
+  "error": "Gives another character for who did it.",
+  "example": {
+   "question": "Nani alimsaidia Wanjiru?",
+   "wrong_answer": "mwalimu",
+   "correct_answer": "bibi yake"
+  },
+  "cause": "The child remembers several names and joins them.",
+  "reveals": "A who-question with another character as an option.",
+  "help": "Find the sentence with the action and see who did it.",
+  "feedback": "Rudi kwenye kifungu uone ni nani hasa alifanya kitendo hicho.",
+  "source": "common learner error; to confirm by a native Kiswahili teacher",
+  "status": "draft"
+ },
+ "KISW.G6.KUSOMA.T1_KUSOMA_KWA_UFAHAMU.UFAHAMU_HADITHI.M_UFA_OUTSIDE": {
+  "skill": "KISW.G6.KUSOMA.T1_KUSOMA_KWA_UFAHAMU.UFAHAMU_HADITHI",
+  "error": "Answers from what the child knows, not from what the passage says.",
+  "example": {
+   "question": "Walipika chakula gani?",
+   "wrong_answer": "ugali",
+   "correct_answer": "mchele"
+  },
+  "cause": "The child answers a Kenyan child's common meal rather than the one in the passage.",
+  "reveals": "A question whose answer is not the usual one.",
+  "help": "Underline the answer in the passage.",
+  "feedback": "Jibu liko katika kifungu. Tumia kilichoandikwa, si kile unachokijua kutoka nyumbani.",
+  "source": "common learner error; to confirm by a native Kiswahili teacher",
+  "status": "draft"
+ },
+ "KISW.G6.KUSOMA.T1_KUSOMA_KWA_UFAHAMU.UFAHAMU_HADITHI.M_UFA_DETAIL_AS_MAIN": {
+  "skill": "KISW.G6.KUSOMA.T1_KUSOMA_KWA_UFAHAMU.UFAHAMU_HADITHI",
+  "error": "Gives a small detail as the main message.",
+  "example": {
+   "question": "Ujumbe mkuu wa hadithi ni upi?",
+   "wrong_answer": "Wanjiru alikuwa na sufuria nyekundu.",
+   "correct_answer": "Kusaidiana kunafanya kazi iwe rahisi."
+  },
+  "cause": "The child chooses a sentence that is easy to find.",
+  "reveals": "A main-message question with a detail as one option.",
+  "help": "Ask \"Hadithi nzima inatufundisha nini?\"",
+  "feedback": "Ujumbe mkuu ni funzo la hadithi nzima, si jambo moja dogo ndani yake.",
+  "source": "common learner error; to confirm by a native Kiswahili teacher",
+  "status": "draft"
+ },
+ "KISW.G6.KUSOMA.T1_KUSOMA_KWA_UFAHAMU.UFAHAMU_HADITHI.M_UFA_ORDER": {
+  "skill": "KISW.G6.KUSOMA.T1_KUSOMA_KWA_UFAHAMU.UFAHAMU_HADITHI",
+  "error": "Puts events in the order they are told in the question, not in the story.",
+  "example": {
+   "question": "Panga matukio kwa mpangilio.",
+   "wrong_answer": "D, A, C, B",
+   "correct_answer": "A, B, C, D"
+  },
+  "cause": "The child does not go back to the story.",
+  "reveals": "Ordering four events from the story.",
+  "help": "Find each event in the story and see which came first.",
+  "feedback": "Matukio hupangwa kwa jinsi yalivyotokea katika hadithi. Soma tena kila tukio.",
+  "source": "common learner error; to confirm by a native Kiswahili teacher",
+  "status": "draft"
+ },
+ "KISW.G6.KUSOMA.T1_KUSOMA_KWA_UFAHAMU.UFAHAMU_HADITHI.M_UFA_DETAIL_MIX": {
+  "skill": "KISW.G6.KUSOMA.T1_KUSOMA_KWA_UFAHAMU.UFAHAMU_HADITHI",
+  "error": "Gives a detail from the passage that belongs to another part of the story.",
+  "example": {
+   "question": "Wanjiru alichemsha maji katika nini?",
+   "wrong_answer": "kikombe",
+   "correct_answer": "sufuria kubwa"
+  },
+  "cause": "The child remembers many details and joins the wrong ones.",
+  "reveals": "A what-or-where question with another detail of the passage as an option.",
+  "help": "Find the exact sentence with the action in the passage.",
+  "feedback": "Kifungu kinataja vitu vingi. Rudi kwenye sentensi sahihi ujue jibu linalolingana na swali.",
+  "source": "common learner error; to confirm by a native Kiswahili teacher",
+  "status": "draft"
+ },
+ "KISW.G6.SARUFI.T1_VIVUMISHI_VYA_SIFA.SIFA.M_SIFA_NUMBER": {
+  "skill": "KISW.G6.SARUFI.T1_VIVUMISHI_VYA_SIFA.SIFA",
+  "error": "Uses the singular adjective with a plural noun, or the plural with a singular noun (wanafunzi mzuri).",
+  "example": {
+   "question": "Wanafunzi ___ walipata zawadi.",
+   "wrong_answer": "mzuri",
+   "correct_answer": "wazuri"
+  },
+  "cause": "English adjectives do not change with number, so the child keeps one form.",
+  "reveals": "The question \"Wanafunzi ___ walipata zawadi.\" with \"mzuri\" among the options.",
+  "help": "Ask \"Wanafunzi ni mmoja au wengi? Kivumishi kinaonyesha nini?\"",
+  "feedback": "Kivumishi cha sifa hubadilika kulingana na idadi ya nomino. Wanafunzi wengi, kwa hiyo wazuri.",
+  "source": "English or mother-tongue influence on Kiswahili (to confirm by a native Kiswahili teacher)",
+  "status": "draft"
+ },
+ "KISW.G6.SARUFI.T1_VIVUMISHI_VYA_SIFA.SIFA.M_SIFA_NO_AGREE": {
+  "skill": "KISW.G6.SARUFI.T1_VIVUMISHI_VYA_SIFA.SIFA",
+  "error": "Uses an adjective with the prefix of another noun class (kitabu mkubwa).",
+  "example": {
+   "question": "Kitabu ___ kiko mezani.",
+   "wrong_answer": "mkubwa",
+   "correct_answer": "kikubwa"
+  },
+  "cause": "The child learned one prefix and uses it for every noun.",
+  "reveals": "The question \"Kitabu ___ kiko mezani.\" with \"mkubwa\" among the options.",
+  "help": "A gap with a noun of KI-VI and options from other classes.",
+  "feedback": "Kivumishi huchukua kiambishi kinacholingana na ngeli ya nomino, kama kitabu kikubwa.",
+  "source": "common learner error; to confirm by a native Kiswahili teacher",
+  "status": "draft"
+ },
+ "KISW.G6.SARUFI.T1_VIVUMISHI_VYA_SIFA.SIFA.M_SIFA_NOT_ADJ": {
+  "skill": "KISW.G6.SARUFI.T1_VIVUMISHI_VYA_SIFA.SIFA",
+  "error": "Picks a noun (ukarimu) where an adjective (mkarimu) is needed.",
+  "example": {
+   "question": "Mkulima ___ alipanda mahindi mengi.",
+   "wrong_answer": "ukarimu",
+   "correct_answer": "mkarimu"
+  },
+  "cause": "The child does not yet tell an adjective from the noun made from it.",
+  "reveals": "The question \"Mkulima ___ alipanda mahindi mengi.\" with \"ukarimu\" among the options.",
+  "help": "Options that include the noun and the adjective of the same word.",
+  "feedback": "Kivumishi cha sifa huelezea nomino. Ukarimu ni jina la tabia, si kivumishi.",
+  "source": "common learner error; to confirm by a native Kiswahili teacher",
+  "status": "draft"
+ },
+ "KISW.G6.SARUFI.T1_VIVUMISHI_VIASHIRIA.VIASHIRIA.M_VIASH_NUMBER": {
+  "skill": "KISW.G6.SARUFI.T1_VIVUMISHI_VIASHIRIA.VIASHIRIA",
+  "error": "Uses the singular demonstrative with a plural noun (watoto huyu).",
+  "example": {
+   "question": "Vitabu ___ ni vya maktaba.",
+   "wrong_answer": "hiki",
+   "correct_answer": "hivi"
+  },
+  "cause": "The child matches the class but not the number.",
+  "reveals": "The question \"Vitabu ___ ni vya maktaba.\" with \"hiki\" among the options.",
+  "help": "A plural noun with the singular form among the options.",
+  "feedback": "Kivumishi kiashiria hubadilika kulingana na idadi: kitabu hiki, vitabu hivi.",
+  "source": "English or mother-tongue influence on Kiswahili (to confirm by a native Kiswahili teacher)",
+  "status": "draft"
+ },
+ "KISW.G6.SARUFI.T1_VIVUMISHI_VIASHIRIA.VIASHIRIA.M_VIASH_CLASS": {
+  "skill": "KISW.G6.SARUFI.T1_VIVUMISHI_VIASHIRIA.VIASHIRIA",
+  "error": "Uses a demonstrative of another noun class (mti hii, nyumba huu).",
+  "example": {
+   "question": "Mawe ___ ni mazito.",
+   "wrong_answer": "hivi",
+   "correct_answer": "haya"
+  },
+  "cause": "The child has learned the demonstrative of one class by heart and uses it everywhere.",
+  "reveals": "The question \"Mawe ___ ni mazito.\" with \"hivi\" among the options.",
+  "help": "A gap with several classes among the options.",
+  "feedback": "Kivumishi kiashiria huchukua ngeli ya nomino. Mawe ni ya LI-YA, kwa hiyo haya.",
+  "source": "common learner error; to confirm by a native Kiswahili teacher",
+  "status": "draft"
+ },
+ "KISW.G6.SARUFI.T1_VIVUMISHI_VIASHIRIA.VIASHIRIA.M_VIASH_FAR": {
+  "skill": "KISW.G6.SARUFI.T1_VIVUMISHI_VIASHIRIA.VIASHIRIA",
+  "error": "Uses the near demonstrative (huyu, hiki) for something far (yule, kile).",
+  "example": {
+   "question": "Mtoto ___ aliye mbali na sisi ni mdogo wangu.",
+   "wrong_answer": "huyu",
+   "correct_answer": "yule"
+  },
+  "cause": "The child does not read the clue about distance in the sentence.",
+  "reveals": "The question \"Mtoto ___ aliye mbali na sisi ni mdogo wangu.\" with \"huyu\" among the options.",
+  "help": "A sentence with a clue word such as mbali or kule.",
+  "feedback": "Kilicho karibu huonyeshwa kwa huyu, hiki; kilicho mbali kwa yule, kile.",
+  "source": "common learner error; to confirm by a native Kiswahili teacher",
+  "status": "draft"
+ },
+ "KISW.G6.SARUFI.T1_VIVUMISHI_VIMILIKISH.VIMILIKISHI.M_VIMIL_CLASS": {
+  "skill": "KISW.G6.SARUFI.T1_VIVUMISHI_VIMILIKISH.VIMILIKISHI",
+  "error": "Uses the possessive of another noun class (kitabu yangu, mwalimu changu).",
+  "example": {
+   "question": "Kitabu ___ kimepotea.",
+   "wrong_answer": "wangu",
+   "correct_answer": "changu"
+  },
+  "cause": "The child uses the possessive that goes with people for every noun.",
+  "reveals": "The question \"Kitabu ___ kimepotea.\" with \"wangu\" among the options.",
+  "help": "A gap with a thing noun and options from other classes.",
+  "feedback": "Kivumishi kimilikishi hufuata ngeli ya kitu kinachomilikiwa, si ya mwenye kitu.",
+  "source": "common learner error; to confirm by a native Kiswahili teacher",
+  "status": "draft"
+ },
+ "KISW.G6.SARUFI.T1_VIVUMISHI_VIMILIKISH.VIMILIKISHI.M_VIMIL_NUMBER": {
+  "skill": "KISW.G6.SARUFI.T1_VIVUMISHI_VIMILIKISH.VIMILIKISHI",
+  "error": "Uses the singular possessive with a plural noun (vitabu changu).",
+  "example": {
+   "question": "Vitabu ___ viko mezani.",
+   "wrong_answer": "chenu",
+   "correct_answer": "vyenu"
+  },
+  "cause": "The child matches the class but forgets the number.",
+  "reveals": "The question \"Vitabu ___ viko mezani.\" with \"chenu\" among the options.",
+  "help": "A plural noun with the singular form among the options.",
+  "feedback": "Kitu kikiwa wengi, kivumishi hubadilika: kitabu changu, vitabu vyangu.",
+  "source": "English or mother-tongue influence on Kiswahili (to confirm by a native Kiswahili teacher)",
+  "status": "draft"
+ },
+ "KISW.G6.SARUFI.T1_VIVUMISHI_VIMILIKISH.VIMILIKISHI.M_VIMIL_PERSON": {
+  "skill": "KISW.G6.SARUFI.T1_VIVUMISHI_VIMILIKISH.VIMILIKISHI",
+  "error": "Uses the possessive of the wrong owner (shule yangu where the owners are we).",
+  "example": {
+   "question": "Sisi tunapenda shule ___.",
+   "wrong_answer": "yangu",
+   "correct_answer": "yetu"
+  },
+  "cause": "The child does not match the owner (-angu, -ako, -ake, -etu, -enu, -ao).",
+  "reveals": "The question \"Sisi tunapenda shule ___.\" with \"yangu\" among the options.",
+  "help": "A sentence about we or they with -angu among the options.",
+  "feedback": "Mwenye kitu anaonyeshwa na mwisho: -angu (mimi), -ako (wewe), -ake (yeye), -etu (sisi), -enu (ninyi), -ao (wao).",
+  "source": "common learner error; to confirm by a native Kiswahili teacher",
+  "status": "draft"
+ },
+ "KISW.G6.KUSIKI.T2_MAAMKUZI_NA_MAAGANO.MAAMKUZI.M_MAA_NUMBER": {
+  "skill": "KISW.G6.KUSIKI.T2_MAAMKUZI_NA_MAAGANO.MAAMKUZI",
+  "error": "Uses the greeting or farewell for one person with many (Hujambo for Hamjambo, Kwaheri for Kwa herini).",
+  "example": {
+   "question": "Unawasalimia wanafunzi wengi darasani: \"___!\"",
+   "wrong_answer": "Hujambo",
+   "correct_answer": "Hamjambo"
+  },
+  "cause": "The child learned the greeting for one person and uses it for everyone.",
+  "reveals": "The question \"Unawasalimia wanafunzi wengi darasani: \"___!\"\" with \"Hujambo\" among the options.",
+  "help": "A situation with many people and both greetings among the options.",
+  "feedback": "Kwa mtu mmoja tunasema Hujambo na Kwaheri. Kwa watu wengi tunasema Hamjambo na Kwa herini.",
+  "source": "common learner error; to confirm by a native Kiswahili teacher",
+  "status": "draft"
+ },
+ "KISW.G6.KUSIKI.T2_MAAMKUZI_NA_MAAGANO.MAAMKUZI.M_MAA_TIME": {
+  "skill": "KISW.G6.KUSIKI.T2_MAAMKUZI_NA_MAAGANO.MAAMKUZI",
+  "error": "Uses a night farewell in the morning or a morning greeting at night.",
+  "example": {
+   "question": "Asubuhi unamwamkia mwalimu: \"___, mwalimu.\"",
+   "wrong_answer": "Lala salama",
+   "correct_answer": "Habari za asubuhi"
+  },
+  "cause": "The child does not match the greeting to the time of day.",
+  "reveals": "The question \"Asubuhi unamwamkia mwalimu: \"___, mwalimu.\"\" with \"Lala salama\" among the options.",
+  "help": "A situation with a clue word such as asubuhi or usiku.",
+  "feedback": "Asubuhi tunasema Habari za asubuhi. Usiku tunasema Lala salama au Usiku mwema.",
+  "source": "common learner error; to confirm by a native Kiswahili teacher",
+  "status": "draft"
+ },
+ "KISW.G6.KUSIKI.T2_MAAMKUZI_NA_MAAGANO.MAAMKUZI.M_MAA_FAREWELL": {
+  "skill": "KISW.G6.KUSIKI.T2_MAAMKUZI_NA_MAAGANO.MAAMKUZI",
+  "error": "Uses a greeting where a farewell is needed, or a farewell where a greeting is needed (Hujambo when leaving).",
+  "example": {
+   "question": "Unaondoka na kumwaga mtu mmoja: \"___!\"",
+   "wrong_answer": "Hujambo",
+   "correct_answer": "Kwaheri"
+  },
+  "cause": "The child does not ask whether he is arriving or leaving.",
+  "reveals": "The question \"Unaondoka na kumwaga mtu mmoja: \"___!\"\" with \"Hujambo\" among the options.",
+  "help": "A leaving situation with a greeting among the options.",
+  "feedback": "Tunasalimia tunapokutana (Hujambo) na tunaaga tunapoondoka (Kwaheri).",
+  "source": "common learner error; to confirm by a native Kiswahili teacher",
+  "status": "draft"
+ },
+ "KISW.G6.KUSIKI.T2_MAAMKUZI_NA_MAAGANO.MAAMKUZI.M_MAA_REPLY": {
+  "skill": "KISW.G6.KUSIKI.T2_MAAMKUZI_NA_MAAGANO.MAAMKUZI",
+  "error": "Repeats the greeting (Shikamoo) where the reply (Marahaba) is needed.",
+  "example": {
+   "question": "Mdogo anamwambia mzee \"Shikamoo\". Mzee anajibu: \"___.\"",
+   "wrong_answer": "Shikamoo",
+   "correct_answer": "Marahaba"
+  },
+  "cause": "The child does not know the reply is a different word.",
+  "reveals": "The question \"Mdogo anamwambia mzee \"Shikamoo\". Mzee anajibu: \"___.\"\" with \"Shikamoo\" among the options.",
+  "help": "The elder's turn with both words among the options.",
+  "feedback": "Mdogo husema Shikamoo kwa heshima, na mzee hujibu Marahaba.",
+  "source": "common learner error; to confirm by a native Kiswahili teacher",
+  "status": "draft"
+ },
+ "KISW.G6.KUSOMA.T2_KUSOMA_KWA_KINA.KAMUSI.M_KAM_LENGTH": {
+  "skill": "KISW.G6.KUSOMA.T2_KUSOMA_KWA_KINA.KAMUSI",
+  "error": "Puts words in order of length, not alphabet.",
+  "example": {
+   "question": "Neno gani huja kwanza kwenye kamusi?",
+   "wrong_answer": "mti",
+   "correct_answer": "baba"
+  },
+  "cause": "The child looks for the shortest or the first-looking word.",
+  "reveals": "Words of different lengths.",
+  "help": "Say the alphabet and look at the first letter.",
+  "feedback": "Kamusi hupanga maneno kwa herufi za alfabeti, si kwa urefu wa neno.",
+  "source": "common learner error; to confirm by a native Kiswahili teacher",
+  "status": "draft"
+ },
+ "KISW.G6.KUSOMA.T2_KUSOMA_KWA_KINA.KAMUSI.M_KAM_FIRST_ONLY": {
+  "skill": "KISW.G6.KUSOMA.T2_KUSOMA_KWA_KINA.KAMUSI",
+  "error": "Looks only at the first letter and picks any word with the same first letter.",
+  "example": {
+   "question": "Neno gani huja kwanza kwenye kamusi?",
+   "wrong_answer": "samaki",
+   "correct_answer": "sahani"
+  },
+  "cause": "The child stops at the first letter when two words begin the same.",
+  "reveals": "Words that begin with the same letter.",
+  "help": "When the first letters match, look at the second letter.",
+  "feedback": "Maneno yanapoanza kwa herufi moja, tazama herufi ya pili, kisha ya tatu: sahani huja kabla ya samaki.",
+  "source": "common learner error; to confirm by a native Kiswahili teacher",
+  "status": "draft"
+ },
+ "KISW.G6.KUSOMA.T2_KUSOMA_KWA_KINA.KAMUSI.M_KAM_REVERSE": {
+  "skill": "KISW.G6.KUSOMA.T2_KUSOMA_KWA_KINA.KAMUSI",
+  "error": "Puts the end of the alphabet first.",
+  "example": {
+   "question": "Neno gani huja mwisho kwenye kamusi?",
+   "wrong_answer": "ndizi",
+   "correct_answer": "zeze"
+  },
+  "cause": "The child mixes first and last.",
+  "reveals": "A question that asks for the last word.",
+  "help": "A comes first and Z comes last.",
+  "feedback": "Alfabeti huanza na A na kuishia na Z. Neno la mwisho kwenye kamusi huanza na herufi ya mwisho zaidi.",
+  "source": "common learner error; to confirm by a native Kiswahili teacher",
+  "status": "draft"
+ },
+ "KISW.G6.SARUFI.T2_VIVUMISHI_VYA_IDADI.IDADI.M_IDADI_CLASS": {
+  "skill": "KISW.G6.SARUFI.T2_VIVUMISHI_VYA_IDADI.IDADI",
+  "error": "Puts the prefix of another noun class on the number (vitabu watatu, wanafunzi viwili).",
+  "example": {
+   "question": "Vitabu ___ viko mezani.",
+   "wrong_answer": "watatu",
+   "correct_answer": "vitatu"
+  },
+  "cause": "The child knows the number words but not that they take the prefix of the noun.",
+  "reveals": "The question \"Vitabu ___ viko mezani.\" with \"watatu\" among the options.",
+  "help": "A gap with a thing noun and the people form among the options.",
+  "feedback": "Nambari moja hadi tano huchukua kiambishi cha ngeli ya nomino: vitabu vitatu.",
+  "source": "common learner error; to confirm by a native Kiswahili teacher",
+  "status": "draft"
+ },
+ "KISW.G6.SARUFI.T2_VIVUMISHI_VYA_IDADI.IDADI.M_IDADI_NO_PREFIX": {
+  "skill": "KISW.G6.SARUFI.T2_VIVUMISHI_VYA_IDADI.IDADI",
+  "error": "Writes the bare number (tatu, nne) without the prefix.",
+  "example": {
+   "question": "Miti ___ imekatwa.",
+   "wrong_answer": "nne",
+   "correct_answer": "minne"
+  },
+  "cause": "In English the number never changes.",
+  "reveals": "The question \"Miti ___ imekatwa.\" with \"nne\" among the options.",
+  "help": "Options with the bare number word.",
+  "feedback": "Nambari moja hadi tano huchukua kiambishi cha ngeli ya nomino. Miti minne.",
+  "source": "English or mother-tongue influence on Kiswahili (to confirm by a native Kiswahili teacher)",
+  "status": "draft"
+ },
+ "KISW.G6.SARUFI.T2_VIVUMISHI_VYA_IDADI.IDADI.M_IDADI_SIX_PLUS": {
+  "skill": "KISW.G6.SARUFI.T2_VIVUMISHI_VYA_IDADI.IDADI",
+  "error": "Adds a class prefix to numbers from six (ng'ombe wasita).",
+  "example": {
+   "question": "Baba ana ng'ombe ___.",
+   "wrong_answer": "wasita",
+   "correct_answer": "sita"
+  },
+  "cause": "The child over-applies the rule for one to five.",
+  "reveals": "The question \"Baba ana ng'ombe ___.\" with \"wasita\" among the options.",
+  "help": "A sentence with sita, saba or nane.",
+  "feedback": "Kuanzia sita, nambari haichukui kiambishi cha ngeli: ng'ombe sita, vitabu saba.",
+  "source": "common learner error; to confirm by a native Kiswahili teacher",
+  "status": "draft"
+ },
+ "KISW.G6.SARUFI.T2_VIVUMISHI_VIULIZI.VIULIZI.M_VIUL_CLASS": {
+  "skill": "KISW.G6.SARUFI.T2_VIVUMISHI_VIULIZI.VIULIZI",
+  "error": "Uses the question word of another noun class (vitabu wangapi).",
+  "example": {
+   "question": "Vitabu ___ vimepotea?",
+   "wrong_answer": "wangapi",
+   "correct_answer": "vingapi"
+  },
+  "cause": "The child uses the form for people for every noun.",
+  "reveals": "The question \"Vitabu ___ vimepotea?\" with \"wangapi\" among the options.",
+  "help": "A question about things with the people form among the options.",
+  "feedback": "Kivumishi kiulizi huchukua ngeli ya nomino: wanafunzi wangapi, vitabu vingapi.",
+  "source": "common learner error; to confirm by a native Kiswahili teacher",
+  "status": "draft"
+ },
+ "KISW.G6.SARUFI.T2_VIVUMISHI_VIULIZI.VIULIZI.M_VIUL_NUMBER": {
+  "skill": "KISW.G6.SARUFI.T2_VIVUMISHI_VIULIZI.VIULIZI",
+  "error": "Uses the plural question word with one noun, or the singular with many (kitabu vipi).",
+  "example": {
+   "question": "Kitabu ___ ni chako?",
+   "wrong_answer": "vipi",
+   "correct_answer": "kipi"
+  },
+  "cause": "The child matches the class but not the number.",
+  "reveals": "The question \"Kitabu ___ ni chako?\" with \"vipi\" among the options.",
+  "help": "A question with one noun and the plural form among the options.",
+  "feedback": "Kitabu kimoja: kipi. Vitabu vingi: vipi.",
+  "source": "English or mother-tongue influence on Kiswahili (to confirm by a native Kiswahili teacher)",
+  "status": "draft"
+ },
+ "KISW.G6.SARUFI.T2_VIVUMISHI_VIULIZI.VIULIZI.M_VIUL_KIND": {
+  "skill": "KISW.G6.SARUFI.T2_VIVUMISHI_VIULIZI.VIULIZI",
+  "error": "Confuses -ngapi (how many) with gani (what kind), or the other way.",
+  "example": {
+   "question": "Ulikula chakula ___ jana?",
+   "wrong_answer": "wangapi",
+   "correct_answer": "gani"
+  },
+  "cause": "The child does not ask what the question wants to know: a number, one of many, or a kind.",
+  "reveals": "The question \"Ulikula chakula ___ jana?\" with \"wangapi\" among the options.",
+  "help": "A question about kind with -ngapi among the options.",
+  "feedback": "-ngapi huuliza idadi, -pi huuliza ni ipi kati ya nyingi, gani huuliza aina.",
+  "source": "common learner error; to confirm by a native Kiswahili teacher",
+  "status": "draft"
+ },
+ "KISW.G6.SARUFI.T2_KIVUMISHI_KIREJESHI_.AMBA.M_AMBA_CLASS": {
+  "skill": "KISW.G6.SARUFI.T2_KIVUMISHI_KIREJESHI_.AMBA",
+  "error": "Uses amba- with the ending of another noun class (kitabu ambaye).",
+  "example": {
+   "question": "Kitabu ___ nilinunua ni kizuri.",
+   "wrong_answer": "ambaye",
+   "correct_answer": "ambacho"
+  },
+  "cause": "The child uses ambaye for every noun.",
+  "reveals": "The question \"Kitabu ___ nilinunua ni kizuri.\" with \"ambaye\" among the options.",
+  "help": "A thing noun with ambaye among the options.",
+  "feedback": "Amba- huchukua mwisho unaolingana na ngeli ya nomino: kitabu ambacho, mwalimu ambaye.",
+  "source": "common learner error; to confirm by a native Kiswahili teacher",
+  "status": "draft"
+ },
+ "KISW.G6.SARUFI.T2_KIVUMISHI_KIREJESHI_.AMBA.M_AMBA_NUMBER": {
+  "skill": "KISW.G6.SARUFI.T2_KIVUMISHI_KIREJESHI_.AMBA",
+  "error": "Uses the singular amba- form for many, or the plural for one (watoto ambaye).",
+  "example": {
+   "question": "Watoto ___ wanasoma ni werevu.",
+   "wrong_answer": "ambaye",
+   "correct_answer": "ambao"
+  },
+  "cause": "The child matches the class but not the number.",
+  "reveals": "The question \"Watoto ___ wanasoma ni werevu.\" with \"ambaye\" among the options.",
+  "help": "A plural noun with the singular form among the options.",
+  "feedback": "Mtu mmoja: ambaye. Watu wengi: ambao.",
+  "source": "English or mother-tongue influence on Kiswahili (to confirm by a native Kiswahili teacher)",
+  "status": "draft"
+ },
+ "KISW.G6.SARUFI.T2_KIVUMISHI_KIREJESHI_.AMBA.M_AMBA_NO_END": {
+  "skill": "KISW.G6.SARUFI.T2_KIVUMISHI_KIREJESHI_.AMBA",
+  "error": "Leaves amba- without its ending (mama amba anauza).",
+  "example": {
+   "question": "Mama ___ anauza mboga ni shangazi yangu.",
+   "wrong_answer": "amba",
+   "correct_answer": "ambaye"
+  },
+  "cause": "The child knows the stem but not that it needs an ending.",
+  "reveals": "The question \"Mama ___ anauza mboga ni shangazi yangu.\" with \"amba\" among the options.",
+  "help": "Options with the bare stem amba.",
+  "feedback": "Amba- haitumiki peke yake. Ina mwisho: ambaye, ambao, ambacho, ambayo.",
+  "source": "common learner error; to confirm by a native Kiswahili teacher",
+  "status": "draft"
+ },
+ "KISW.G6.KUSIKI.T3_MATAMSHI_BORA.VITENDAWILI.M_VIT_METHALI": {
+  "skill": "KISW.G6.KUSIKI.T3_MATAMSHI_BORA.VITENDAWILI",
+  "error": "Takes a methali for a riddle.",
+  "example": {
+   "question": "Ni kitendawili kipi?",
+   "wrong_answer": "Haba na haba hujaza kibaba",
+   "correct_answer": "Nyumba yangu haina mlango"
+  },
+  "cause": "Both are short sayings.",
+  "reveals": "A riddle and a methali.",
+  "help": "A riddle asks a hidden question and waits for the answer.",
+  "feedback": "Kitendawili huficha jibu na humtaka mtu kukitegua. Methali hutoa funzo.",
+  "source": "common learner error; to confirm by a native Kiswahili teacher",
+  "status": "draft"
+ },
+ "KISW.G6.KUSIKI.T3_MATAMSHI_BORA.VITENDAWILI.M_VIT_NAHAU": {
+  "skill": "KISW.G6.KUSIKI.T3_MATAMSHI_BORA.VITENDAWILI",
+  "error": "Takes a nahau for a riddle.",
+  "example": {
+   "question": "Ni kitendawili kipi?",
+   "wrong_answer": "Kukata tamaa",
+   "correct_answer": "Popote niendapo hunifuata"
+  },
+  "cause": "Both can be a short phrase.",
+  "reveals": "A riddle and a nahau.",
+  "help": "Can you guess an answer to it?",
+  "feedback": "Nahau ni maneno yenye maana maalum. Kitendawili huuliza kwa mafumbo na kina jibu la kutegua.",
+  "source": "common learner error; to confirm by a native Kiswahili teacher",
+  "status": "draft"
+ },
+ "KISW.G6.KUSIKI.T3_MATAMSHI_BORA.VITENDAWILI.M_VIT_PLAIN": {
+  "skill": "KISW.G6.KUSIKI.T3_MATAMSHI_BORA.VITENDAWILI",
+  "error": "Takes an ordinary sentence for a riddle.",
+  "example": {
+   "question": "Ni kitendawili kipi?",
+   "wrong_answer": "Yai ni chakula kizuri",
+   "correct_answer": "Nyumba yangu haina mlango"
+  },
+  "cause": "The child does not see that a riddle hides the thing it describes.",
+  "reveals": "A riddle and a plain sentence.",
+  "help": "Does the text name the thing, or hide it?",
+  "feedback": "Kitendawili hakitaji kitu moja kwa moja; hukielezea kwa fumbo. Sentensi ya kawaida inataja wazi.",
+  "source": "common learner error; to confirm by a native Kiswahili teacher",
+  "status": "draft"
+ },
+ "KISW.G6.KUSIKI.T3_MATAMSHI_BORA.VITENDAWILI.M_VIT_WRONG_ANSWER": {
+  "skill": "KISW.G6.KUSIKI.T3_MATAMSHI_BORA.VITENDAWILI",
+  "error": "Gives a thing that shares one detail with the riddle but is not the answer.",
+  "example": {
+   "question": "\"Popote niendapo hunifuata.\" Jibu ni nini?",
+   "wrong_answer": "mbwa",
+   "correct_answer": "kivuli"
+  },
+  "cause": "The child picks the first thing that comes to mind.",
+  "reveals": "A riddle with plausible answers.",
+  "help": "Test each answer against every part of the riddle.",
+  "feedback": "Jibu la kitendawili lazima lilingane na kila sehemu yake. Hiyo si jibu sahihi.",
+  "source": "common learner error; to confirm by a native Kiswahili teacher",
+  "status": "draft"
+ },
+ "KISW.G6.KUSOMA.T3_KUSOMA_KWA_UFASAHA.UFASAHA_VIPENGELE.M_UFS_SPEED": {
+  "skill": "KISW.G6.KUSOMA.T3_KUSOMA_KWA_UFASAHA.UFASAHA_VIPENGELE",
+  "error": "Takes fast reading for fluent reading, or very slow reading for careful reading.",
+  "example": {
+   "question": "Kasi ifaayo ya kusoma ni ipi?",
+   "wrong_answer": "Haraka iwezekanavyo",
+   "correct_answer": "Si haraka sana wala polepole sana"
+  },
+  "cause": "The child thinks the best reader is the fastest.",
+  "reveals": "A question on speed with extremes as options.",
+  "help": "Ask whether the listener can follow every word.",
+  "feedback": "Kusoma kwa ufasaha si kusoma haraka sana. Kasi ifaayo ni ya wastani, ili msikilizaji aelewe kila neno.",
+  "source": "common learner error; to confirm by a native Kiswahili teacher",
+  "status": "draft"
+ },
+ "KISW.G6.KUSOMA.T3_KUSOMA_KWA_UFASAHA.UFASAHA_VIPENGELE.M_UFS_LOUD": {
+  "skill": "KISW.G6.KUSOMA.T3_KUSOMA_KWA_UFASAHA.UFASAHA_VIPENGELE",
+  "error": "Takes a loud voice for a fitting voice.",
+  "example": {
+   "question": "Sauti ipasavyo wakati wa kusoma ni ipi?",
+   "wrong_answer": "Kupiga kelele",
+   "correct_answer": "Sauti inayosikika wazi bila kupiga kelele"
+  },
+  "cause": "The child thinks louder is better.",
+  "reveals": "A question on the voice with shouting and whispering as options.",
+  "help": "Ask whether the voice is clear and comfortable to listen to.",
+  "feedback": "Sauti ipasavyo ni ile inayosikika wazi bila kupiga kelele wala kunong'ona.",
+  "source": "common learner error; to confirm by a native Kiswahili teacher",
+  "status": "draft"
+ },
+ "KISW.G6.KUSOMA.T3_KUSOMA_KWA_UFASAHA.UFASAHA_VIPENGELE.M_UFS_IGNORE_MARKS": {
+  "skill": "KISW.G6.KUSOMA.T3_KUSOMA_KWA_UFASAHA.UFASAHA_VIPENGELE",
+  "error": "Reads on without a pause at the koma and the kikomo.",
+  "example": {
+   "question": "Ukifika kwenye koma wakati wa kusoma, ufanye nini?",
+   "wrong_answer": "Niendelee bila kupumzika",
+   "correct_answer": "Nipumzike kidogo"
+  },
+  "cause": "The child reads word after word and does not use the marks.",
+  "reveals": "A question on the pause at a koma or a kikomo.",
+  "help": "Read the sentence aloud and listen to where the voice rests.",
+  "feedback": "Alama za uakifishi zinatuonyesha mahali pa kupumzika: kidogo kwenye koma na kwa muda mrefu zaidi kwenye kikomo.",
+  "source": "common learner error; to confirm by a native Kiswahili teacher",
+  "status": "draft"
+ },
+ "KISW.G6.KUANDI.T3_KUANDIKA_KWA_TARAKIL.MAANDISHI_TARAKILISHI.M_TAR6_MIX": {
+  "skill": "KISW.G6.KUANDI.T3_KUANDIKA_KWA_TARAKIL.MAANDISHI_TARAKILISHI",
+  "error": "Mixes herufi nzito, mlazo, saizi and rangi.",
+  "example": {
+   "question": "Herufi zinazoegemea upande huitwa herufi ___.",
+   "wrong_answer": "nzito",
+   "correct_answer": "mlazo"
+  },
+  "cause": "The child has used the buttons but does not know their names.",
+  "reveals": "The question \"Herufi zinazoegemea upande huitwa herufi ___.\" with \"nzito\" among the options.",
+  "help": "Style names among the options.",
+  "feedback": "Herufi nzito zimenenepeshwa, herufi mlazo huegemea upande, saizi ni ukubwa wa herufi.",
+  "source": "common learner error; to confirm by a native Kiswahili teacher",
+  "status": "draft"
+ },
+ "KISW.G6.KUANDI.T3_KUANDIKA_KWA_TARAKIL.MAANDISHI_TARAKILISHI.M_TAR6_CAPS": {
+  "skill": "KISW.G6.KUANDI.T3_KUANDIKA_KWA_TARAKIL.MAANDISHI_TARAKILISHI",
+  "error": "Takes herufi kubwa or ndogo (capital or small letters) for a style such as herufi nzito.",
+  "example": {
+   "question": "Herufi zilizonenepeshwa huitwa herufi ___.",
+   "wrong_answer": "kubwa",
+   "correct_answer": "nzito"
+  },
+  "cause": "The child thinks big and bold are the same.",
+  "reveals": "The question \"Herufi zilizonenepeshwa huitwa herufi ___.\" with \"kubwa\" among the options.",
+  "help": "Kubwa among the options.",
+  "feedback": "Herufi kubwa ni za mwanzo wa sentensi na majina. Herufi nzito ni zilizonenepeshwa, zinaweza kuwa ndogo au kubwa.",
+  "source": "common learner error; to confirm by a native Kiswahili teacher",
+  "status": "draft"
+ },
+ "KISW.G6.KUANDI.T3_KUANDIKA_KWA_TARAKIL.MAANDISHI_TARAKILISHI.M_TAR6_ICON": {
+  "skill": "KISW.G6.KUANDI.T3_KUANDIKA_KWA_TARAKIL.MAANDISHI_TARAKILISHI",
+  "error": "Mixes the actions kuhifadhi (save), kuchapisha (print), kufuta (delete) and kufunga (close).",
+  "example": {
+   "question": "Kuweka kazi yako salama katika tarakilishi huitwa ___.",
+   "wrong_answer": "kuchapisha",
+   "correct_answer": "kuhifadhi"
+  },
+  "cause": "The child does not know what each button does.",
+  "reveals": "The question \"Kuweka kazi yako salama katika tarakilishi huitwa ___.\" with \"kuchapisha\" among the options.",
+  "help": "Several actions among the options.",
+  "feedback": "Kuhifadhi ni kuweka kazi salama. Kuchapisha ni kutoa karatasi. Kufuta huondoa kazi.",
+  "source": "common learner error; to confirm by a native Kiswahili teacher",
+  "status": "draft"
+ },
+ "KISW.G6.SARUFI.T3_VIWAKILISHI_VYA_NAFS.NAFSI.M_NAFSI_PERSON": {
+  "skill": "KISW.G6.SARUFI.T3_VIWAKILISHI_VYA_NAFS.NAFSI",
+  "error": "Picks the pronoun of another person (wewe for mimi, wao for sisi).",
+  "example": {
+   "question": "Juma anamwambia Akinyi, \"___ ni rafiki yangu.\"",
+   "wrong_answer": "Mimi",
+   "correct_answer": "Wewe"
+  },
+  "cause": "The child does not ask who speaks and who is spoken to.",
+  "reveals": "The question \"Juma anamwambia Akinyi, \"___ ni rafiki yangu.\"\" with \"Mimi\" among the options.",
+  "help": "A sentence with speaker, listener and the one spoken about, all in the options.",
+  "feedback": "Aliye anasema ni mimi, aliye anaambiwa ni wewe, anayezungumziwa ni yeye.",
+  "source": "common learner error; to confirm by a native Kiswahili teacher",
+  "status": "draft"
+ },
+ "KISW.G6.SARUFI.T3_VIWAKILISHI_VYA_NAFS.NAFSI.M_NAFSI_NUMBER": {
+  "skill": "KISW.G6.SARUFI.T3_VIWAKILISHI_VYA_NAFS.NAFSI",
+  "error": "Uses the singular for many or the plural for one (sisi for mimi, ninyi for wewe).",
+  "example": {
+   "question": "Mama anamwambia mtoto, \"___ unastahili sifa.\"",
+   "wrong_answer": "Ninyi",
+   "correct_answer": "Wewe"
+  },
+  "cause": "The child matches the person but not the number.",
+  "reveals": "The question \"Mama anamwambia mtoto, \"___ unastahili sifa.\"\" with \"Ninyi\" among the options.",
+  "help": "A sentence to one child with the plural pronoun among the options.",
+  "feedback": "Wewe ni mmoja, ninyi ni wengi. Mimi ni mmoja, sisi ni wengi.",
+  "source": "English or mother-tongue influence on Kiswahili (to confirm by a native Kiswahili teacher)",
+  "status": "draft"
+ },
+ "KISW.G6.SARUFI.T3_VIWAKILISHI_VIASHIRI.VIWAKILISHI_VIASHIRIA.M_VWASH_CLASS": {
+  "skill": "KISW.G6.SARUFI.T3_VIWAKILISHI_VIASHIRI.VIWAKILISHI_VIASHIRIA",
+  "error": "Uses the demonstrative of another noun class (Hiki ni mti).",
+  "example": {
+   "question": "___ ni mti wa mwembe.",
+   "wrong_answer": "Hii",
+   "correct_answer": "Huu"
+  },
+  "cause": "The child has learned one form and uses it for every noun.",
+  "reveals": "The question \"___ ni mti wa mwembe.\" with \"Hii\" among the options.",
+  "help": "A gap with several classes among the options.",
+  "feedback": "Kiwakilishi kiashiria hufuata ngeli ya kitu kinachoonyeshwa: mti, huu.",
+  "source": "common learner error; to confirm by a native Kiswahili teacher",
+  "status": "draft"
+ },
+ "KISW.G6.SARUFI.T3_VIWAKILISHI_VIASHIRI.VIWAKILISHI_VIASHIRIA.M_VWASH_NUMBER": {
+  "skill": "KISW.G6.SARUFI.T3_VIWAKILISHI_VIASHIRI.VIWAKILISHI_VIASHIRIA",
+  "error": "Uses the singular demonstrative for many or the plural for one (Hawa ni mtoto).",
+  "example": {
+   "question": "___ ni vitabu vya shule.",
+   "wrong_answer": "Hiki",
+   "correct_answer": "Hivi"
+  },
+  "cause": "The child matches the class but not the number.",
+  "reveals": "The question \"___ ni vitabu vya shule.\" with \"Hiki\" among the options.",
+  "help": "A plural noun with the singular form among the options.",
+  "feedback": "Kitu kimoja: hiki. Vitu vingi: hivi.",
+  "source": "English or mother-tongue influence on Kiswahili (to confirm by a native Kiswahili teacher)",
+  "status": "draft"
+ },
+ "KISW.G6.SARUFI.T3_VIWAKILISHI_VIASHIRI.VIWAKILISHI_VIASHIRIA.M_VWASH_ADJ": {
+  "skill": "KISW.G6.SARUFI.T3_VIWAKILISHI_VIASHIRI.VIWAKILISHI_VIASHIRIA",
+  "error": "Takes the demonstrative after a noun (kitabu hiki) for the pronoun that stands alone (Hiki ni kitabu).",
+  "example": {
+   "question": "Chagua sentensi yenye kiwakilishi kiashiria (kinasimama peke yake).",
+   "wrong_answer": "Kitabu hiki ni kizuri.",
+   "correct_answer": "Hiki ni kitabu changu."
+  },
+  "cause": "The child sees the word hiki and does not look at whether a noun comes before it.",
+  "reveals": "The question \"Chagua sentensi yenye kiwakilishi kiashiria (kinasimama peke yake).\" with \"Kitabu hiki ni kizuri.\" among the options.",
+  "help": "Two sentences with the same word, one with a noun before it.",
+  "feedback": "Kiwakilishi husimama mahali pa nomino. Kikifuata nomino, ni kivumishi.",
+  "source": "common learner error; to confirm by a native Kiswahili teacher",
+  "status": "draft"
+ },
+ "KISW.G6.SARUFI.T3_VIWAKILISHI_VYA_IDAD.VIWAKILISHI_IDADI.M_VWID_CLASS": {
+  "skill": "KISW.G6.SARUFI.T3_VIWAKILISHI_VYA_IDAD.VIWAKILISHI_IDADI",
+  "error": "Uses the number with the prefix of another class (Viwili walichelewa for wawili).",
+  "example": {
+   "question": "Wanafunzi kumi walifika. ___ walichelewa. (wawili kati yao)",
+   "wrong_answer": "Viwili",
+   "correct_answer": "Wawili"
+  },
+  "cause": "The child forgets the pronoun takes the prefix of the noun it replaces.",
+  "reveals": "The question \"Wanafunzi kumi walifika. ___ walichelewa. (wawili kati yao)\" with \"Viwili\" among the options.",
+  "help": "A sentence about people with the form for things among the options.",
+  "feedback": "Kiwakilishi cha idadi huchukua kiambishi cha nomino iliyoachwa: watu, wawili.",
+  "source": "common learner error; to confirm by a native Kiswahili teacher",
+  "status": "draft"
+ },
+ "KISW.G6.SARUFI.T3_VIWAKILISHI_VYA_IDAD.VIWAKILISHI_IDADI.M_VWID_NO_PREFIX": {
+  "skill": "KISW.G6.SARUFI.T3_VIWAKILISHI_VYA_IDAD.VIWAKILISHI_IDADI",
+  "error": "Writes the bare number (Tatu, Wili) with no prefix.",
+  "example": {
+   "question": "Nilinunua vitabu vitano. ___ nilimpa Wanjiru. (vitatu kati yake)",
+   "wrong_answer": "Tatu",
+   "correct_answer": "Vitatu"
+  },
+  "cause": "In English the number never changes.",
+  "reveals": "The question \"Nilinunua vitabu vitano. ___ nilimpa Wanjiru. (vitatu kati yake)\" with \"Tatu\" among the options.",
+  "help": "Options with the bare number word.",
+  "feedback": "Nambari moja hadi tano huchukua kiambishi cha nomino, hata ikisimama peke yake.",
+  "source": "English or mother-tongue influence on Kiswahili (to confirm by a native Kiswahili teacher)",
+  "status": "draft"
+ },
+ "KISW.G6.SARUFI.T3_UAKIFISHI.ALAMA.M_UAK6_HISI": {
+  "skill": "KISW.G6.SARUFI.T3_UAKIFISHI.ALAMA",
+  "error": "Ends an exclamation or a command with a full stop or a question mark.",
+  "example": {
+   "question": "Lo! Umefika mapema leo!",
+   "wrong_answer": "Lo. Umefika mapema leo.",
+   "correct_answer": "Lo! Umefika mapema leo!"
+  },
+  "cause": "The child ends every sentence the same way.",
+  "reveals": "The question \"Lo! Umefika mapema leo!\" with \"Lo. Umefika mapema leo.\" among the options.",
+  "help": "A sentence of surprise with a full stop among the options.",
+  "feedback": "Mshangao, furaha na amri kali huisha kwa alama ya hisi (!).",
+  "source": "common learner error; to confirm by a native Kiswahili teacher",
+  "status": "draft"
+ },
+ "KISW.G6.SARUFI.T3_UAKIFISHI.ALAMA.M_UAK6_RITIFAA": {
+  "skill": "KISW.G6.SARUFI.T3_UAKIFISHI.ALAMA",
+  "error": "Writes ng'ombe or ng'ambo without the ritifaa (ngombe).",
+  "example": {
+   "question": "Mkulima ana ng'ombe watano.",
+   "wrong_answer": "Mkulima ana ngombe watano.",
+   "correct_answer": "Mkulima ana ng'ombe watano."
+  },
+  "cause": "The child does not know the ritifaa marks that ng is one sound.",
+  "reveals": "The question \"Mkulima ana ng'ombe watano.\" with \"Mkulima ana ngombe watano.\" among the options.",
+  "help": "Options with the word spelt both ways.",
+  "feedback": "Ritifaa (') huandikwa baada ya ng katika ng'ombe, ng'ambo, ng'ang'ana.",
+  "source": "common learner error; to confirm by a native Kiswahili teacher",
+  "status": "draft"
+ },
+ "KISW.G6.SARUFI.T3_UAKIFISHI.ALAMA.M_UAK6_KOLONI": {
+  "skill": "KISW.G6.SARUFI.T3_UAKIFISHI.ALAMA",
+  "error": "Puts a comma or a full stop where a koloni goes before a list.",
+  "example": {
+   "question": "Mama alinunua vitu hivi: mchele, sukari na chumvi.",
+   "wrong_answer": "Mama alinunua vitu hivi, mchele, sukari na chumvi.",
+   "correct_answer": "Mama alinunua vitu hivi: mchele, sukari na chumvi."
+  },
+  "cause": "The child does not know koloni introduces a list.",
+  "reveals": "The question \"Mama alinunua vitu hivi: mchele, sukari na chumvi.\" with \"Mama alinunua vitu hivi, mchele, sukari na chumvi.\" among the options.",
+  "help": "A sentence that announces a list with a comma among the options.",
+  "feedback": "Koloni (:) huja kabla ya orodha au maelezo yanayofuata.",
+  "source": "common learner error; to confirm by a native Kiswahili teacher",
+  "status": "draft"
+ },
+ "KISW.G6.KUSIKI.T4_HESHIMA_ADABU_NA_VYE.HESHIMA.M_HESH_MISUSE": {
+  "skill": "KISW.G6.KUSIKI.T4_HESHIMA_ADABU_NA_VYE.HESHIMA",
+  "error": "Uses a polite word for the wrong job (asante to ask, pole to thank).",
+  "example": {
+   "question": "Ukimwomba mwalimu kalamu unasema, \"Mwalimu, nipe kalamu, ___.\"",
+   "wrong_answer": "asante",
+   "correct_answer": "tafadhali"
+  },
+  "cause": "The child knows the words but not what each is for.",
+  "reveals": "The question \"Ukimwomba mwalimu kalamu unasema, \"Mwalimu, nipe kalamu, ___.\"\" with \"asante\" among the options.",
+  "help": "A situation with all the polite words among the options.",
+  "feedback": "Tafadhali ni kuomba, asante ni kushukuru, samahani ni kuomba msamaha, pole ni kufariji, karibu ni kukaribisha.",
+  "source": "common learner error; to confirm by a native Kiswahili teacher",
+  "status": "draft"
+ },
+ "KISW.G6.KUSIKI.T4_HESHIMA_ADABU_NA_VYE.HESHIMA.M_HESH_RUDE": {
+  "skill": "KISW.G6.KUSIKI.T4_HESHIMA_ADABU_NA_VYE.HESHIMA",
+  "error": "Picks the sentence without a polite word, as if a command were polite.",
+  "example": {
+   "question": "Ni sentensi ipi ina heshima zaidi?",
+   "wrong_answer": "Nisaidie kubeba mzigo huu!",
+   "correct_answer": "Tafadhali nisaidie kubeba mzigo huu."
+  },
+  "cause": "The child does not notice the tone of a command.",
+  "reveals": "The question \"Ni sentensi ipi ina heshima zaidi?\" with \"Nisaidie kubeba mzigo huu!\" among the options.",
+  "help": "A request with and without tafadhali or naomba.",
+  "feedback": "Ombi la heshima lina maneno kama tafadhali, naomba, samahani na asante.",
+  "source": "common learner error; to confirm by a native Kiswahili teacher",
+  "status": "draft"
+ },
+ "KISW.G6.KUSOMA.T4_KUSOMA_KWA_MAPANA.USALAMA_DIJITALI.M_DIG_SHARE": {
+  "skill": "KISW.G6.KUSOMA.T4_KUSOMA_KWA_MAPANA.USALAMA_DIJITALI",
+  "error": "Shares a password or a personal detail with a friend or a stranger.",
+  "example": {
+   "question": "Ni hatua ipi ya kiusalama?",
+   "wrong_answer": "Kumpa rafiki nenosiri langu",
+   "correct_answer": "Kuweka nenosiri langu siri"
+  },
+  "cause": "The child thinks sharing is friendly.",
+  "reveals": "Safe and unsafe steps for a password.",
+  "help": "Ask who can use your account if they have the password.",
+  "feedback": "Nenosiri ni siri yako. Usimpe mtu mwingine, hata rafiki, ila mzazi au mlezi.",
+  "source": "common learner error; to confirm by a native Kiswahili teacher",
+  "status": "draft"
+ },
+ "KISW.G6.KUSOMA.T4_KUSOMA_KWA_MAPANA.USALAMA_DIJITALI.M_DIG_LINK": {
+  "skill": "KISW.G6.KUSOMA.T4_KUSOMA_KWA_MAPANA.USALAMA_DIJITALI",
+  "error": "Opens every link in a message from someone he does not know.",
+  "example": {
+   "question": "Ujumbe usiojulikana una kiungo cha zawadi. Ufanye nini?",
+   "wrong_answer": "Nikifungue haraka",
+   "correct_answer": "Nimwonyeshe mzazi au mwalimu kwanza"
+  },
+  "cause": "The child is curious and likes a prize.",
+  "reveals": "An unknown message with a link.",
+  "help": "Ask who sent it and whether you asked for it.",
+  "feedback": "Viungo kutoka kwa watu usiowajua vinaweza kuwa hatari. Mwonyeshe mtu mzima kabla ya kuvifungua.",
+  "source": "common learner error; to confirm by a native Kiswahili teacher",
+  "status": "draft"
+ },
+ "KISW.G6.KUSOMA.T4_KUSOMA_KWA_MAPANA.USALAMA_DIJITALI.M_DIG_UNSAFE_SITE": {
+  "skill": "KISW.G6.KUSOMA.T4_KUSOMA_KWA_MAPANA.USALAMA_DIJITALI",
+  "error": "Searches on any site and gives details to a site that asks for them.",
+  "example": {
+   "question": "Unatafuta kifungu cha kusoma. Utumie tovuti ipi?",
+   "wrong_answer": "Tovuti inayotaka jina na nambari ya simu yangu",
+   "correct_answer": "Tovuti ya shule au maktaba iliyopendekezwa na mwalimu"
+  },
+  "cause": "The child does not ask who runs the site.",
+  "reveals": "Safe and unsafe sites.",
+  "help": "Ask whether the site needs your personal details to read.",
+  "feedback": "Tumia tovuti salama zilizopendekezwa na mwalimu au mzazi, na usitoe maelezo yako binafsi.",
+  "source": "common learner error; to confirm by a native Kiswahili teacher",
+  "status": "draft"
+ },
+ "KISW.G6.KUANDI.T4_BARUA_RASMI.BARUA_RASMI.M_BAR6_PART": {
+  "skill": "KISW.G6.KUANDI.T4_BARUA_RASMI.BARUA_RASMI",
+  "error": "Puts a part of the letter in the wrong place (salamu for kichwa, tarehe for jina).",
+  "example": {
+   "question": "Mada ya barua rasmi huandikwa katika ___ cha barua.",
+   "wrong_answer": "mwili",
+   "correct_answer": "kichwa"
+  },
+  "cause": "The child has met the parts but not what each holds.",
+  "reveals": "The question \"Mada ya barua rasmi huandikwa katika ___ cha barua.\" with \"mwili\" among the options.",
+  "help": "Parts asked by what they hold.",
+  "feedback": "Kichwa hutaja mada, salamu humwamkia mwandikiwa, mwili una ujumbe, na mwisho una sahihi na jina.",
+  "source": "common learner error; to confirm by a native Kiswahili teacher",
+  "status": "draft"
+ },
+ "KISW.G6.KUANDI.T4_BARUA_RASMI.BARUA_RASMI.M_BAR6_POSITION": {
+  "skill": "KISW.G6.KUANDI.T4_BARUA_RASMI.BARUA_RASMI",
+  "error": "Puts the sender's address on the left and the receiver's on the right.",
+  "example": {
+   "question": "Anwani ya mwandikaji wa barua rasmi huandikwa upande wa ___ juu ya karatasi.",
+   "wrong_answer": "kushoto",
+   "correct_answer": "kulia"
+  },
+  "cause": "The child swaps the two addresses.",
+  "reveals": "The question \"Anwani ya mwandikaji wa barua rasmi huandikwa upande wa ___ juu ya karatasi.\" with \"kushoto\" among the options.",
+  "help": "Left and right among the options.",
+  "feedback": "Anwani ya mwandikaji iko juu kulia. Anwani ya mwandikiwa iko kushoto, chini ya tarehe.",
+  "source": "common learner error; to confirm by a native Kiswahili teacher",
+  "status": "draft"
+ },
+ "KISW.G6.KUANDI.T4_BARUA_RASMI.BARUA_RASMI.M_BAR6_FRIENDLY": {
+  "skill": "KISW.G6.KUANDI.T4_BARUA_RASMI.BARUA_RASMI",
+  "error": "Uses the greeting, ending or words of a friendly letter in a formal one.",
+  "example": {
+   "question": "Mwisho wa barua rasmi huwa \"Wako ___,\".",
+   "wrong_answer": "mpenzi",
+   "correct_answer": "mwaminifu"
+  },
+  "cause": "The child writes to a headteacher as to a friend.",
+  "reveals": "The question \"Mwisho wa barua rasmi huwa \"Wako ___,\".\" with \"mpenzi\" among the options.",
+  "help": "A formal and a friendly ending among the options.",
+  "feedback": "Barua rasmi hutumia lugha na maneno ya heshima, kama \"Wako mwaminifu,\".",
+  "source": "common learner error; to confirm by a native Kiswahili teacher",
+  "status": "draft"
+ },
+ "KISW.G6.KUANDI.T4_BARUA_RASMI.BARUA_RASMI.M_BAR6_ORDER": {
+  "skill": "KISW.G6.KUANDI.T4_BARUA_RASMI.BARUA_RASMI",
+  "error": "Puts the parts of the letter in the wrong order.",
+  "example": {
+   "question": "Ni mpangilio upi sahihi wa sehemu za barua rasmi?",
+   "wrong_answer": "Salamu, mwili, anwani, kichwa, tarehe, mwisho",
+   "correct_answer": "Anwani, tarehe, salamu, kichwa, mwili, mwisho"
+  },
+  "cause": "The child does not picture the page from top to bottom.",
+  "reveals": "The question \"Ni mpangilio upi sahihi wa sehemu za barua rasmi?\" with \"Salamu, mwili, anwani, kichwa, tarehe, mwisho\" among the options.",
+  "help": "Two orderings among the options.",
+  "feedback": "Barua huanza na anwani na tarehe juu, kisha salamu, kichwa, mwili na mwisho chini.",
+  "source": "common learner error; to confirm by a native Kiswahili teacher",
+  "status": "draft"
+ },
+ "KISW.G6.SARUFI.T4_NGELI_YA_YA_YA.YA_YA.M_YAYA_LI": {
+  "skill": "KISW.G6.SARUFI.T4_NGELI_YA_YA_YA.YA_YA",
+  "error": "Uses li- with a ma- noun because it starts with ma- (maji limeisha).",
+  "example": {
+   "question": "Maji ___meisha kisimani.",
+   "wrong_answer": "li",
+   "correct_answer": "ya"
+  },
+  "cause": "The child learned that ma- goes with li-, which is true only for the plural of nouns that have a singular.",
+  "reveals": "The question \"Maji ___meisha kisimani.\" with \"li\" among the options.",
+  "help": "Ask \"Je, kuna neno jiji, au jimaji?\" Maji has no singular.",
+  "feedback": "Maji ni ya ngeli ya YA-YA. Hupatana na ya-: maji yameisha.",
+  "source": "common learner error; to confirm by a native Kiswahili teacher",
+  "status": "draft"
+ },
+ "KISW.G6.SARUFI.T4_NGELI_YA_YA_YA.YA_YA.M_YAYA_OTHER": {
+  "skill": "KISW.G6.SARUFI.T4_NGELI_YA_YA_YA.YA_YA",
+  "error": "Uses u-, i-, zi- or vi- with a YA-YA noun.",
+  "example": {
+   "question": "Maziwa ___meichacha jikoni.",
+   "wrong_answer": "i",
+   "correct_answer": "ya"
+  },
+  "cause": "The child uses the prefix of the class he knows best.",
+  "reveals": "The question \"Maziwa ___meichacha jikoni.\" with \"i\" among the options.",
+  "help": "A gap with several prefixes among the options.",
+  "feedback": "Nomino za YA-YA hupatana na ya- tu.",
+  "source": "common learner error; to confirm by a native Kiswahili teacher",
+  "status": "draft"
+ },
+ "KISW.G6.SARUFI.T4_NGELI_YA_YA_YA.YA_YA.M_YAYA_A": {
+  "skill": "KISW.G6.SARUFI.T4_NGELI_YA_YA_YA.YA_YA",
+  "error": "Uses a- as for a person or animal (maziwa ameichacha).",
+  "example": {
+   "question": "Maziwa ___meichacha jikoni.",
+   "wrong_answer": "a",
+   "correct_answer": "ya"
+  },
+  "cause": "The child treats the noun like a living thing.",
+  "reveals": "The question \"Maziwa ___meichacha jikoni.\" with \"a\" among the options.",
+  "help": "A gap with a- among the options for a thing noun.",
+  "feedback": "A- ni ya watu na wanyama. Maziwa ni kitu, na hupatana na ya-.",
+  "source": "common learner error; to confirm by a native Kiswahili teacher",
+  "status": "draft"
+ },
+ "KISW.G6.SARUFI.T4_NGELI_YA_YA_YA.YA_YA.M_YAYA_NOUN": {
+  "skill": "KISW.G6.SARUFI.T4_NGELI_YA_YA_YA.YA_YA",
+  "error": "Picks a noun of another class as a YA-YA noun.",
+  "example": {
+   "question": "Ni nomino ipi ni ya ngeli ya YA-YA?",
+   "wrong_answer": "kitabu",
+   "correct_answer": "maji"
+  },
+  "cause": "The child cannot yet tell YA-YA nouns by their agreement.",
+  "reveals": "The question \"Ni nomino ipi ni ya ngeli ya YA-YA?\" with \"kitabu\" among the options.",
+  "help": "Options with nouns from different classes.",
+  "feedback": "Nomino za YA-YA hupatana na ya- na hazina umoja, kama maji.",
+  "source": "common learner error; to confirm by a native Kiswahili teacher",
+  "status": "draft"
+ },
+ "KISW.G6.KUSIKI.T5_METHALI_KUFIKIA_MWIS.METHALI.M_MET_LITERAL": {
+  "skill": "KISW.G6.KUSIKI.T5_METHALI_KUFIKIA_MWIS.METHALI",
+  "error": "Reads the methali word for word.",
+  "example": {
+   "question": "Mchumia juani hulia kivulini. Maana yake ni nini?",
+   "wrong_answer": "Anayekaa juani hulia",
+   "correct_answer": "Anayefanya kazi kwa bidii hufurahia matunda yake baadaye"
+  },
+  "cause": "The child does not know that a methali carries a second meaning.",
+  "reveals": "A meaning question with a literal option.",
+  "help": "Ask what lesson the methali teaches.",
+  "feedback": "Methali haisemi maana yake wazi. Mchumia juani hulia kivulini ina maana kwamba anayefanya kazi kwa bidii atapumzika na kufurahia matunda yake.",
+  "source": "common learner error; to confirm by a native Kiswahili teacher",
+  "status": "draft"
+ },
+ "KISW.G6.KUSIKI.T5_METHALI_KUFIKIA_MWIS.METHALI.M_MET_WRONG_LESSON": {
+  "skill": "KISW.G6.KUSIKI.T5_METHALI_KUFIKIA_MWIS.METHALI",
+  "error": "Gives the lesson of another methali.",
+  "example": {
+   "question": "Haba na haba hujaza kibaba. Maana yake ni nini?",
+   "wrong_answer": "Umoja ni nguvu",
+   "correct_answer": "Vitu vidogo vikiongezwa polepole huwa vingi"
+  },
+  "cause": "The child knows methali but swaps their lessons.",
+  "reveals": "The meaning of a different methali as an option.",
+  "help": "Ask what the words say about little and little.",
+  "feedback": "Kila methali ina funzo lake. Haba na haba hujaza kibaba inafundisha kwamba kidogo kidogo hujaza.",
+  "source": "common learner error; to confirm by a native Kiswahili teacher",
+  "status": "draft"
+ },
+ "KISW.G6.KUSIKI.T5_METHALI_KUFIKIA_MWIS.METHALI.M_MET_WRONG_END": {
+  "skill": "KISW.G6.KUSIKI.T5_METHALI_KUFIKIA_MWIS.METHALI",
+  "error": "Completes the methali with a word that does not belong to it.",
+  "example": {
+   "question": "Haba na haba hujaza ___.",
+   "wrong_answer": "chupa",
+   "correct_answer": "kibaba"
+  },
+  "cause": "The child remembers the beginning but not the end.",
+  "reveals": "A gap where a plausible wrong ending is an option.",
+  "help": "Say the whole methali again from the beginning.",
+  "feedback": "Methali hubaki jinsi ilivyo. Mwisho sahihi ni kibaba: haba na haba hujaza kibaba.",
+  "source": "common learner error; to confirm by a native Kiswahili teacher",
+  "status": "draft"
+ },
+ "KISW.G6.KUSOMA.T5_KUSOMA_KWA_UFAHAMU.SHAIRI_AINA.M_SHA_AINA_SWAP": {
+  "skill": "KISW.G6.KUSOMA.T5_KUSOMA_KWA_UFAHAMU.SHAIRI_AINA",
+  "error": "Gives the name of another kind of poem for the number of lines (tathlitha for tathnia).",
+  "example": {
+   "question": "Ubeti wenye mishororo miwili huitwa ___.",
+   "wrong_answer": "tathlitha",
+   "correct_answer": "tathnia"
+  },
+  "cause": "The child has the names but not the numbers behind them.",
+  "reveals": "The question \"Ubeti wenye mishororo miwili huitwa ___.\" with \"tathlitha\" among the options.",
+  "help": "The number of lines asked with all three names among the options.",
+  "feedback": "Tathnia ni mishororo miwili, tathlitha mitatu na tarbia minne. Jina linaonyesha idadi.",
+  "source": "common learner error; to confirm by a native Kiswahili teacher",
+  "status": "draft"
+ },
+ "KISW.G6.KUSOMA.T5_KUSOMA_KWA_UFAHAMU.SHAIRI_AINA.M_SHA_AINA_COUNT": {
+  "skill": "KISW.G6.KUSOMA.T5_KUSOMA_KWA_UFAHAMU.SHAIRI_AINA",
+  "error": "Names the kind of a stanza shown without counting its lines.",
+  "example": {
+   "question": "Ubeti huu ni wa aina gani? \"Mvua imenyesha, / Mito imejaa.\"",
+   "wrong_answer": "tathlitha",
+   "correct_answer": "tathnia"
+  },
+  "cause": "The child guesses from the look of the stanza.",
+  "reveals": "The question \"Ubeti huu ni wa aina gani? \"Mvua imenyesha, / Mito imejaa.\"\" with \"tathlitha\" among the options.",
+  "help": "A short stanza with the three names among the options.",
+  "feedback": "Hesabu mishororo kwanza. Mistari miwili ni tathnia, mitatu ni tathlitha, minne ni tarbia.",
+  "source": "common learner error; to confirm by a native Kiswahili teacher",
+  "status": "draft"
+ },
+ "KISW.G6.KUSOMA.T5_KUSOMA_KWA_UFAHAMU.SHAIRI_AINA.M_SHA_UKWAPI_SWAP": {
+  "skill": "KISW.G6.KUSOMA.T5_KUSOMA_KWA_UFAHAMU.SHAIRI_AINA",
+  "error": "Swaps ukwapi (the first part of a line) and utao (the second).",
+  "example": {
+   "question": "Kipande cha kwanza cha mshororo wa shairi huitwa ___.",
+   "wrong_answer": "utao",
+   "correct_answer": "ukwapi"
+  },
+  "cause": "The child knows the two names but not their order.",
+  "reveals": "The question \"Kipande cha kwanza cha mshororo wa shairi huitwa ___.\" with \"utao\" among the options.",
+  "help": "Both names among the options for the first or the second part.",
+  "feedback": "Mshororo hugawanyika katika sehemu mbili: ukwapi ni ya kwanza, utao ni ya pili.",
+  "source": "common learner error; to confirm by a native Kiswahili teacher",
+  "status": "draft"
+ },
+ "KISW.G6.KUSOMA.T5_KUSOMA_KWA_UFAHAMU.SHAIRI_AINA.M_SHA_PART_MIX": {
+  "skill": "KISW.G6.KUSOMA.T5_KUSOMA_KWA_UFAHAMU.SHAIRI_AINA",
+  "error": "Gives vina or mizani for the parts of a line.",
+  "example": {
+   "question": "Kipande cha pili cha mshororo wa shairi huitwa ___.",
+   "wrong_answer": "vina",
+   "correct_answer": "utao"
+  },
+  "cause": "The child mixes the parts of a line with its sounds and counts.",
+  "reveals": "The question \"Kipande cha pili cha mshororo wa shairi huitwa ___.\" with \"vina\" among the options.",
+  "help": "Options with vina and mizani.",
+  "feedback": "Vina ni sauti za mwisho zinazofanana, na mizani ni silabi. Vipande vya mshororo ni ukwapi na utao.",
+  "source": "common learner error; to confirm by a native Kiswahili teacher",
+  "status": "draft"
+ },
+ "KISW.G6.KUANDI.T5_INSHA_ZA_MAELEZO.AINA_ZA_INSHA.M_INS_WASIFU_STORY": {
+  "skill": "KISW.G6.KUANDI.T5_INSHA_ZA_MAELEZO.AINA_ZA_INSHA",
+  "error": "Takes a text that describes a person (wasifu) for a story (masimulizi).",
+  "example": {
+   "question": "Kifungu kinaelezea sura, tabia na maisha ya mtu. Ni insha ya aina gani?",
+   "wrong_answer": "masimulizi",
+   "correct_answer": "wasifu"
+  },
+  "cause": "Both kinds can mention a person.",
+  "reveals": "Short texts: one describing a person, one telling events.",
+  "help": "Ask whether the text tells what happened in order, or tells who someone is.",
+  "feedback": "Insha ya wasifu humwelezea mtu: sura yake, tabia yake na maisha yake. Masimulizi husimulia matukio.",
+  "source": "common learner error; to confirm by a native Kiswahili teacher",
+  "status": "draft"
+ },
+ "KISW.G6.KUANDI.T5_INSHA_ZA_MAELEZO.AINA_ZA_INSHA.M_INS_MAELEZO_STORY": {
+  "skill": "KISW.G6.KUANDI.T5_INSHA_ZA_MAELEZO.AINA_ZA_INSHA",
+  "error": "Takes a text that explains how something is done (maelezo) for a story.",
+  "example": {
+   "question": "Kifungu kinaeleza hatua za kupika uji. Ni insha ya aina gani?",
+   "wrong_answer": "masimulizi",
+   "correct_answer": "maelezo"
+  },
+  "cause": "The child sees a sequence in both.",
+  "reveals": "A recipe-like text and a story.",
+  "help": "Ask whether the writer says \"what happened\" or \"how to do it\".",
+  "feedback": "Insha ya maelezo hueleza jambo au jinsi ya kufanya kitu. Masimulizi husimulia tukio lililotokea.",
+  "source": "common learner error; to confirm by a native Kiswahili teacher",
+  "status": "draft"
+ },
+ "KISW.G6.KUANDI.T5_INSHA_ZA_MAELEZO.AINA_ZA_INSHA.M_INS_STORY_WASIFU": {
+  "skill": "KISW.G6.KUANDI.T5_INSHA_ZA_MAELEZO.AINA_ZA_INSHA",
+  "error": "Takes a story of events for a description of a person.",
+  "example": {
+   "question": "Kifungu kinasimulia kilichotokea Jumamosi kijijini. Ni insha ya aina gani?",
+   "wrong_answer": "wasifu",
+   "correct_answer": "masimulizi"
+  },
+  "cause": "A story has a person in it.",
+  "reveals": "A story about a person doing things.",
+  "help": "Does the text tell events in order?",
+  "feedback": "Masimulizi husimulia matukio kwa mpangilio. Wasifu humwelezea mtu mwenyewe.",
+  "source": "common learner error; to confirm by a native Kiswahili teacher",
+  "status": "draft"
+ },
+ "KISW.G6.SARUFI.T5_NGELI_YA_U_U.U_U.M_UU_PLURAL": {
+  "skill": "KISW.G6.SARUFI.T5_NGELI_YA_U_U.U_U",
+  "error": "Uses ya- or zi- with a U-U noun as if it had a plural (uji yametiwa).",
+  "example": {
+   "question": "Uji ___metiwa sukari.",
+   "wrong_answer": "ya",
+   "correct_answer": "u"
+  },
+  "cause": "The child assumes every noun can be many.",
+  "reveals": "The question \"Uji ___metiwa sukari.\" with \"ya\" among the options.",
+  "help": "Ask \"Je, tunasema ujiuji? Uji una wingi?\" It has none.",
+  "feedback": "Nomino za U-U hazina wingi, kwa hiyo hupatana na u- tu: uji umetiwa sukari.",
+  "source": "common learner error; to confirm by a native Kiswahili teacher",
+  "status": "draft"
+ },
+ "KISW.G6.SARUFI.T5_NGELI_YA_U_U.U_U.M_UU_OTHER": {
+  "skill": "KISW.G6.SARUFI.T5_NGELI_YA_U_U.U_U",
+  "error": "Uses i-, li- or another prefix with a U-U noun.",
+  "example": {
+   "question": "Ugali ___meiva sasa.",
+   "wrong_answer": "i",
+   "correct_answer": "u"
+  },
+  "cause": "The child uses the prefix of a class he knows better.",
+  "reveals": "The question \"Ugali ___meiva sasa.\" with \"i\" among the options.",
+  "help": "A gap with several prefixes among the options.",
+  "feedback": "Nomino za U-U hupatana na u-: ugali umeiva.",
+  "source": "common learner error; to confirm by a native Kiswahili teacher",
+  "status": "draft"
+ },
+ "KISW.G6.SARUFI.T5_NGELI_YA_U_U.U_U.M_UU_NOUN": {
+  "skill": "KISW.G6.SARUFI.T5_NGELI_YA_U_U.U_U",
+  "error": "Picks a noun of another class as a U-U noun.",
+  "example": {
+   "question": "Ni nomino ipi ni ya ngeli ya U-U?",
+   "wrong_answer": "kitabu",
+   "correct_answer": "uji"
+  },
+  "cause": "The child cannot yet tell U-U nouns by their agreement.",
+  "reveals": "The question \"Ni nomino ipi ni ya ngeli ya U-U?\" with \"kitabu\" among the options.",
+  "help": "Options with nouns from different classes.",
+  "feedback": "Nomino za U-U hupatana na u- na hazina wingi, kama uji.",
+  "source": "common learner error; to confirm by a native Kiswahili teacher",
+  "status": "draft"
+ },
+ "KISW.G6.KUANDI.T6_INSHA_YA_WASIFU.MUUNDO_WASIFU.M_INS6_PART": {
+  "skill": "KISW.G6.KUANDI.T6_INSHA_YA_WASIFU.MUUNDO_WASIFU",
+  "error": "Names the wrong part of the insha (puts the ending in the introduction).",
+  "example": {
+   "question": "Sehemu ya mwisho ya insha huitwa ___.",
+   "wrong_answer": "utangulizi",
+   "correct_answer": "hitimisho"
+  },
+  "cause": "The child knows the names of the parts but not their order.",
+  "reveals": "The question \"Sehemu ya mwisho ya insha huitwa ___.\" with \"utangulizi\" among the options.",
+  "help": "A part asked by its place (first, middle, last) with all the names among the options.",
+  "feedback": "Insha ina kichwa juu, kisha utangulizi (mwanzo), mwili (katikati) na hitimisho (mwisho).",
+  "source": "common learner error; to confirm by a native Kiswahili teacher",
+  "status": "draft"
+ },
+ "KISW.G6.SARUFI.T6_NGELI_YA_I_I.I_I.M_II_PLURAL": {
+  "skill": "KISW.G6.SARUFI.T6_NGELI_YA_I_I.I_I",
+  "error": "Uses zi- with an I-I noun as if it were a plural (afya zimeimarika).",
+  "example": {
+   "question": "Afya ___meimarika baada ya matibabu.",
+   "wrong_answer": "zi",
+   "correct_answer": "i"
+  },
+  "cause": "The child ties i- and zi- together as the pair for one and many.",
+  "reveals": "The question \"Afya ___meimarika baada ya matibabu.\" with \"zi\" among the options.",
+  "help": "Ask \"Je, tunasema afyaafya? Afya ni kitu cha kuhesabu?\"",
+  "feedback": "Nomino za I-I hazihesabiki, kwa hiyo hupatana na i-: afya imeimarika.",
+  "source": "common learner error; to confirm by a native Kiswahili teacher",
+  "status": "draft"
+ },
+ "KISW.G6.SARUFI.T6_NGELI_YA_I_I.I_I.M_II_OTHER": {
+  "skill": "KISW.G6.SARUFI.T6_NGELI_YA_I_I.I_I",
+  "error": "Uses u-, li- or another prefix with an I-I noun.",
+  "example": {
+   "question": "Njaa ___nauma tumboni.",
+   "wrong_answer": "u",
+   "correct_answer": "i"
+  },
+  "cause": "The child uses the prefix of a class he knows better.",
+  "reveals": "The question \"Njaa ___nauma tumboni.\" with \"u\" among the options.",
+  "help": "A gap with several prefixes among the options.",
+  "feedback": "Nomino za I-I hupatana na i-: njaa inauma.",
+  "source": "common learner error; to confirm by a native Kiswahili teacher",
+  "status": "draft"
+ },
+ "KISW.G6.SARUFI.T6_NGELI_YA_I_I.I_I.M_II_NOUN": {
+  "skill": "KISW.G6.SARUFI.T6_NGELI_YA_I_I.I_I",
+  "error": "Picks a noun of another class as an I-I noun.",
+  "example": {
+   "question": "Ni nomino ipi ni ya ngeli ya I-I?",
+   "wrong_answer": "kitabu",
+   "correct_answer": "afya"
+  },
+  "cause": "The child cannot yet tell I-I nouns by their agreement.",
+  "reveals": "The question \"Ni nomino ipi ni ya ngeli ya I-I?\" with \"kitabu\" among the options.",
+  "help": "Options with nouns from different classes.",
+  "feedback": "Nomino za I-I ni hali au mawazo yasiyohesabika, kama afya na njaa.",
+  "source": "common learner error; to confirm by a native Kiswahili teacher",
+  "status": "draft"
+ },
+ "KISW.G6.KUSIKI.T7_NAHAU.NAHAU.M_NAH_LITERAL": {
+  "skill": "KISW.G6.KUSIKI.T7_NAHAU.NAHAU",
+  "error": "Reads the nahau word for word.",
+  "example": {
+   "question": "\"Kukata tamaa\" maana yake ni nini?",
+   "wrong_answer": "kukata kamba ya tamaa",
+   "correct_answer": "kuacha kuwa na matumaini"
+  },
+  "cause": "The child does not know that a nahau has its own meaning.",
+  "reveals": "A meaning question with a literal option.",
+  "help": "Ask whether anyone really cuts tamaa.",
+  "feedback": "Nahau ina maana tofauti na maneno yake. \"Kukata tamaa\" ni kuacha kuwa na matumaini.",
+  "source": "common learner error; to confirm by a native Kiswahili teacher",
+  "status": "draft"
+ },
+ "KISW.G6.KUSIKI.T7_NAHAU.NAHAU.M_NAH_WRONG_MEANING": {
+  "skill": "KISW.G6.KUSIKI.T7_NAHAU.NAHAU",
+  "error": "Gives the meaning of another nahau.",
+  "example": {
+   "question": "\"Kula chumvi\" maana yake ni nini?",
+   "wrong_answer": "kuwa na hamu ya kula",
+   "correct_answer": "kuwa na umri mkubwa na uzoefu"
+  },
+  "cause": "The child knows several nahau but swaps meanings.",
+  "reveals": "The meaning of another nahau as an option.",
+  "help": "Ask what experience chumvi stands for.",
+  "feedback": "Kila nahau ina maana yake. \"Kula chumvi\" ni kuwa na uzoefu wa miaka mingi.",
+  "source": "common learner error; to confirm by a native Kiswahili teacher",
+  "status": "draft"
+ },
+ "KISW.G6.KUSIKI.T7_NAHAU.NAHAU.M_NAH_WRONG_WORD": {
+  "skill": "KISW.G6.KUSIKI.T7_NAHAU.NAHAU",
+  "error": "Completes the nahau with a different word (kukata moyo for kukata tamaa).",
+  "example": {
+   "question": "Usikate ___ ukishindwa mara moja.",
+   "wrong_answer": "kamba",
+   "correct_answer": "tamaa"
+  },
+  "cause": "The child remembers the shape but changes a word.",
+  "reveals": "A nahau gap where a near word is an option.",
+  "help": "Recite the whole nahau.",
+  "feedback": "Nahau hazibadiliki: kukata tamaa, kupiga moyo konde. Neno moja likibadilika, maana hupotea.",
+  "source": "common learner error; to confirm by a native Kiswahili teacher",
+  "status": "draft"
+ },
+ "KISW.G6.SARUFI.T7_NGELI_YA_PA_KU_MU.PA_KU_MU.M_PKM_MIX": {
+  "skill": "KISW.G6.SARUFI.T7_NGELI_YA_PA_KU_MU.PA_KU_MU",
+  "error": "Uses the wrong one of pa-, ku-, mu- for the place (kule pana).",
+  "example": {
+   "question": "Kule shambani ___ mazao mengi.",
+   "wrong_answer": "pana",
+   "correct_answer": "kuna"
+  },
+  "cause": "The child does not read the word of place (pale, kule, humu).",
+  "reveals": "The question \"Kule shambani ___ mazao mengi.\" with \"pana\" among the options.",
+  "help": "A sentence with pale, kule or humu and all three forms among the options.",
+  "feedback": "Pale huchukua pa-, kule huchukua ku-, humu na mle huchukua mu- (m-).",
+  "source": "common learner error; to confirm by a native Kiswahili teacher",
+  "status": "draft"
+ },
+ "KISW.G6.SARUFI.T7_NGELI_YA_PA_KU_MU.PA_KU_MU.M_PKM_CLASS": {
+  "skill": "KISW.G6.SARUFI.T7_NGELI_YA_PA_KU_MU.PA_KU_MU",
+  "error": "Uses the prefix of the noun (una, ina) where the place needs pa-, ku- or mu-.",
+  "example": {
+   "question": "Kule shambani ___ mazao mengi.",
+   "wrong_answer": "ina",
+   "correct_answer": "kuna"
+  },
+  "cause": "The child follows the noun and not the place.",
+  "reveals": "The question \"Kule shambani ___ mazao mengi.\" with \"ina\" among the options.",
+  "help": "Options with u- and i- forms.",
+  "feedback": "Katika ngeli ya mahali, kitenzi hupatana na mahali (pa-, ku-, mu-), si na nomino.",
+  "source": "common learner error; to confirm by a native Kiswahili teacher",
+  "status": "draft"
+ },
+ "KISW.G6.KUSIKI.T8_VISAWE.VISAWE.M_VIS_OPPOSITE": {
+  "skill": "KISW.G6.KUSIKI.T8_VISAWE.VISAWE",
+  "error": "Picks the opposite where the same meaning is asked.",
+  "example": {
+   "question": "Kisawe cha \"furaha\" ni ___.",
+   "wrong_answer": "huzuni",
+   "correct_answer": "bashasha"
+  },
+  "cause": "The child links furaha and huzuni because they go together.",
+  "reveals": "A synonym question with the opposite as an option.",
+  "help": "Ask whether the two words mean the same.",
+  "feedback": "Visawe ni maneno yenye maana sawa. Furaha na huzuni ni vinyume, si visawe.",
+  "source": "common learner error; to confirm by a native Kiswahili teacher",
+  "status": "draft"
+ },
+ "KISW.G6.KUSIKI.T8_VISAWE.VISAWE.M_VIS_RELATED": {
+  "skill": "KISW.G6.KUSIKI.T8_VISAWE.VISAWE",
+  "error": "Picks a word about the same topic but with a different meaning.",
+  "example": {
+   "question": "Kisawe cha \"huzuni\" ni ___.",
+   "wrong_answer": "kilio",
+   "correct_answer": "simanzi"
+  },
+  "cause": "The child picks what goes with the word, not what means the same.",
+  "reveals": "A related word as an option.",
+  "help": "Could you swap the two words in a sentence and keep the same meaning?",
+  "feedback": "Neno linalohusiana na jingine si lazima liwe na maana sawa nalo. Kisawe cha huzuni ni simanzi.",
+  "source": "common learner error; to confirm by a native Kiswahili teacher",
+  "status": "draft"
+ },
+ "KISW.G6.KUSIKI.T8_VISAWE.VISAWE.M_VIS_LOOKALIKE": {
+  "skill": "KISW.G6.KUSIKI.T8_VISAWE.VISAWE",
+  "error": "Picks a word that looks or sounds like the word.",
+  "example": {
+   "question": "Kisawe cha \"haraka\" ni ___.",
+   "wrong_answer": "harufu",
+   "correct_answer": "upesi"
+  },
+  "cause": "The child goes by the first letters.",
+  "reveals": "A look-alike word as an option.",
+  "help": "Say what each word means.",
+  "feedback": "Maneno yanaweza kuanza kwa herufi zilezile na yasiwe na maana sawa. Kisawe cha haraka ni upesi.",
+  "source": "common learner error; to confirm by a native Kiswahili teacher",
+  "status": "draft"
+ },
+ "KISW.G6.KUSIKI.T8_VISAWE.VISAWE.M_VIS_MIXED": {
+  "skill": "KISW.G6.KUSIKI.T8_VISAWE.VISAWE",
+  "error": "Picks a group that has one opposite or unrelated word among the synonyms.",
+  "example": {
+   "question": "Ni kundi lipi lina maneno yote yenye maana sawa na \"furaha\"?",
+   "wrong_answer": "bashasha, huzuni, raha, tabasamu",
+   "correct_answer": "bashasha, shangwe, raha, nderemo"
+  },
+  "cause": "The child checks the first words of the group and not every word.",
+  "reveals": "The question \"Ni kundi lipi lina maneno yote yenye maana sawa na \"furaha\"?\" with \"bashasha, huzuni, raha, tabasamu\" among the options.",
+  "help": "A group with three synonyms and one opposite.",
+  "feedback": "Kila neno la kundi lazima liwe na maana sawa. Huzuni ni kinyume cha furaha.",
+  "source": "common learner error; to confirm by a native Kiswahili teacher",
+  "status": "draft"
+ },
+ "KISW.G6.KUSOMA.T8_KUSOMA_KWA_UFAHAMU.IGIZO.M_IGI_STAGE_AS_SPEECH": {
+  "skill": "KISW.G6.KUSOMA.T8_KUSOMA_KWA_UFAHAMU.IGIZO",
+  "error": "Reads the words in brackets (what to do on stage) as words a character says.",
+  "example": {
+   "question": "Maelekezo ya jukwaani katika igizo ni yapi?",
+   "wrong_answer": "Mama: Nenda sokoni.",
+   "correct_answer": "(Anafungua mlango)"
+  },
+  "cause": "The child reads a play as a story.",
+  "reveals": "A play with brackets and spoken lines.",
+  "help": "Brackets tell the actor what to do, not what to say.",
+  "feedback": "Maneno yaliyo kwenye mabano ni maelekezo ya kitendo, si maneno ya mhusika. Hayasomwi kama mazungumzo.",
+  "source": "common learner error; to confirm by a native Kiswahili teacher",
+  "status": "draft"
+ },
+ "KISW.G6.KUSOMA.T8_KUSOMA_KWA_UFAHAMU.IGIZO.M_IGI_STORY": {
+  "skill": "KISW.G6.KUSOMA.T8_KUSOMA_KWA_UFAHAMU.IGIZO",
+  "error": "Does not tell a play from a story.",
+  "example": {
+   "question": "Ni kipi kati ya hivi ni igizo?",
+   "wrong_answer": "Wanjiru alienda sokoni.",
+   "correct_answer": "Wanjiru: Naenda sokoni."
+  },
+  "cause": "The child sees a short text and does not look at the form.",
+  "reveals": "A play and a story on the same event.",
+  "help": "Look for the speaker names with a colon.",
+  "feedback": "Igizo huonyesha jina la mhusika, nukta mbili, kisha maneno anayosema. Hadithi huelezwa na msimulizi.",
+  "source": "common learner error; to confirm by a native Kiswahili teacher",
+  "status": "draft"
+ },
+ "KISW.G6.KUSOMA.T8_KUSOMA_KWA_UFAHAMU.IGIZO.M_IGI_WRONG_SPEAKER": {
+  "skill": "KISW.G6.KUSOMA.T8_KUSOMA_KWA_UFAHAMU.IGIZO",
+  "error": "Gives a character who did not say the line.",
+  "example": {
+   "question": "Nani alisema \"Nitakuletea maji\"?",
+   "wrong_answer": "Baba",
+   "correct_answer": "Mwajuma"
+  },
+  "cause": "The child does not follow the names before the colons.",
+  "reveals": "A who-said-it question.",
+  "help": "Find the line and read the name before it.",
+  "feedback": "Jina lililo mbele ya nukta mbili ndilo la mtu anayesema maneno yaliyofuata.",
+  "source": "common learner error; to confirm by a native Kiswahili teacher",
+  "status": "draft"
+ },
+ "KISW.G6.KUSOMA.T8_KUSOMA_KWA_UFAHAMU.IGIZO.M_IGI_DETAIL": {
+  "skill": "KISW.G6.KUSOMA.T8_KUSOMA_KWA_UFAHAMU.IGIZO",
+  "error": "Gives a wrong detail of the play (the place, the thing bought).",
+  "example": {
+   "question": "Akinyi alienda wapi?",
+   "wrong_answer": "jikoni",
+   "correct_answer": "sokoni"
+  },
+  "cause": "The child remembers a place named near the question.",
+  "reveals": "A where-or-what question with another detail of the play.",
+  "help": "Find the line where it is said.",
+  "feedback": "Rudi kwenye igizo na utafute mstari unaotaja jibu.",
+  "source": "common learner error; to confirm by a native Kiswahili teacher",
+  "status": "draft"
+ },
+ "KISW.G6.KUSOMA.T8_KUSOMA_KWA_UFAHAMU.IGIZO.M_IGI_VOCAB": {
+  "skill": "KISW.G6.KUSOMA.T8_KUSOMA_KWA_UFAHAMU.IGIZO",
+  "error": "Gives the wrong meaning of a word in the play.",
+  "example": {
+   "question": "Neno \"kuandamana\" lina maana gani katika igizo?",
+   "wrong_answer": "kukimbia peke yake",
+   "correct_answer": "kwenda pamoja na mtu"
+  },
+  "cause": "The child guesses from the look of the word.",
+  "reveals": "A meaning question for a word in the play.",
+  "help": "Read the line where the word is used and think who goes with whom.",
+  "feedback": "Maana ya neno hutokana na mstari lilimotumika katika igizo. Soma mstari huo tena.",
+  "source": "common learner error; to confirm by a native Kiswahili teacher",
+  "status": "draft"
+ },
+ "KISW.G6.SARUFI.T8_MNYAMBULIKO_WA.MNYAMBULIKO.M_MNY_BASE": {
+  "skill": "KISW.G6.SARUFI.T8_MNYAMBULIKO_WA.MNYAMBULIKO",
+  "error": "Keeps the simple verb where a longer form is needed (hupika for hupikiana).",
+  "example": {
+   "question": "Majirani hao ___ chakula kila Jumapili. (kila mmoja humpikia mwenzake)",
+   "wrong_answer": "hupika",
+   "correct_answer": "hupikiana"
+  },
+  "cause": "The child reads the verb and not what the sentence says about who does it for whom.",
+  "reveals": "The question \"Majirani hao ___ chakula kila Jumapili. (kila mmoja humpikia mwenzake)\" with \"hupika\" among the options.",
+  "help": "Ask \"Nani anampikia nani?\" If each cooks for the other, the verb needs -ana.",
+  "feedback": "Kitenzi cha kawaida hakionyeshi kwamba kila mmoja anamtendea mwenzake. Kutendeana: hupikiana.",
+  "source": "common learner error; to confirm by a native Kiswahili teacher",
+  "status": "draft"
+ },
+ "KISW.G6.SARUFI.T8_MNYAMBULIKO_WA.MNYAMBULIKO.M_MNY_ONEWAY": {
+  "skill": "KISW.G6.SARUFI.T8_MNYAMBULIKO_WA.MNYAMBULIKO",
+  "error": "Uses the verb for one doing it for another (hupikia) where each does it for the other (hupikiana).",
+  "example": {
+   "question": "Otieno na Achieng ___ barua kila mwezi.",
+   "wrong_answer": "huandikia",
+   "correct_answer": "huandikiana"
+  },
+  "cause": "The child leaves out -ana.",
+  "reveals": "The question \"Otieno na Achieng ___ barua kila mwezi.\" with \"huandikia\" among the options.",
+  "help": "A sentence in which two people do the same for each other.",
+  "feedback": "Wawili wakitendeana, kitenzi huishia -ana: huandikiana.",
+  "source": "common learner error; to confirm by a native Kiswahili teacher",
+  "status": "draft"
+ },
+ "KISW.G6.SARUFI.T8_MNYAMBULIKO_WA.MNYAMBULIKO.M_MNY_WRONG_FORM": {
+  "skill": "KISW.G6.SARUFI.T8_MNYAMBULIKO_WA.MNYAMBULIKO",
+  "error": "Picks a verb form that does not fit the meaning (huandikisha for huandikiana).",
+  "example": {
+   "question": "Mwalimu ___ watoto kuimba wimbo mpya. (huwafanya waimbe)",
+   "wrong_answer": "huimbiana",
+   "correct_answer": "huimbisha"
+  },
+  "cause": "The child mixes the endings -ana, -isha and -ua.",
+  "reveals": "The question \"Mwalimu ___ watoto kuimba wimbo mpya. (huwafanya waimbe)\" with \"huimbiana\" among the options.",
+  "help": "Options with each ending and a gloss in brackets.",
+  "feedback": "-ana ni kila mmoja kwa mwenzake, -isha ni kumfanya mtu atende, na -ua ni kufanya kinyume.",
+  "source": "common learner error; to confirm by a native Kiswahili teacher",
+  "status": "draft"
+ },
+ "KISW.G6.KUSIKI.T9_MAZUNGUMZO_YA_KIMUKT.MUKTADHA.M_MUK_MIX": {
+  "skill": "KISW.G6.KUSIKI.T9_MAZUNGUMZO_YA_KIMUKT.MUKTADHA",
+  "error": "Calls formal language informal, or informal language formal.",
+  "example": {
+   "question": "\"Niaje, msee?\" ni lugha ___.",
+   "wrong_answer": "rasmi",
+   "correct_answer": "isiyo rasmi"
+  },
+  "cause": "The child does not look at who is speaking to whom.",
+  "reveals": "The question \"\"Niaje, msee?\" ni lugha ___.\" with \"rasmi\" among the options.",
+  "help": "A greeting between friends and a greeting to a leader.",
+  "feedback": "Lugha rasmi ni ya heshima na ya viongozi. Lugha isiyo rasmi ni ya marafiki na nyumbani.",
+  "source": "common learner error; to confirm by a native Kiswahili teacher",
+  "status": "draft"
+ },
+ "KISW.G6.KUSIKI.T9_MAZUNGUMZO_YA_KIMUKT.MUKTADHA.M_MUK_INFORMAL": {
+  "skill": "KISW.G6.KUSIKI.T9_MAZUNGUMZO_YA_KIMUKT.MUKTADHA",
+  "error": "Uses slang or casual words with a teacher, a leader or at a meeting.",
+  "example": {
+   "question": "Chagua sentensi inayofaa unapozungumza na mwalimu mkuu.",
+   "wrong_answer": "Nipe ruhusa tu.",
+   "correct_answer": "Mwalimu mkuu, naomba ruhusa ya kuondoka mapema."
+  },
+  "cause": "The child uses the way he talks to friends everywhere.",
+  "reveals": "The question \"Chagua sentensi inayofaa unapozungumza na mwalimu mkuu.\" with \"Nipe ruhusa tu.\" among the options.",
+  "help": "A request to a leader with a casual version among the options.",
+  "feedback": "Kwa mwalimu, kiongozi au mkutano rasmi tunatumia maneno ya heshima.",
+  "source": "common learner error; to confirm by a native Kiswahili teacher",
+  "status": "draft"
+ },
+ "KISW.G6.KUSIKI.T9_MAZUNGUMZO_YA_KIMUKT.MUKTADHA.M_MUK_FORMAL_FRIEND": {
+  "skill": "KISW.G6.KUSIKI.T9_MAZUNGUMZO_YA_KIMUKT.MUKTADHA",
+  "error": "Uses very formal words with a friend or a sister at home.",
+  "example": {
+   "question": "Chagua sentensi inayofaa unapozungumza na rafiki uwanjani.",
+   "wrong_answer": "Naomba kibali cha kuanza mchezo.",
+   "correct_answer": "Twende tucheze mpira, rafiki!"
+  },
+  "cause": "The child thinks formal words are always better.",
+  "reveals": "The question \"Chagua sentensi inayofaa unapozungumza na rafiki uwanjani.\" with \"Naomba kibali cha kuanza mchezo.\" among the options.",
+  "help": "A friendly invitation next to a formal one.",
+  "feedback": "Kwa rafiki au ndugu nyumbani, lugha ya kawaida inafaa. Lugha rasmi kupita kiasi inasikika ya ajabu.",
+  "source": "common learner error; to confirm by a native Kiswahili teacher",
+  "status": "draft"
+ },
+ "KISW.G6.SARUFI.T9_VINYUME_VYA_VIVUMISH.VINYUME_VIVUMISHI.M_VINY_SAME": {
+  "skill": "KISW.G6.SARUFI.T9_VINYUME_VYA_VIVUMISH.VINYUME_VIVUMISHI",
+  "error": "Repeats the word as its own opposite.",
+  "example": {
+   "question": "Mfuko huu ni mzito lakini ule ni ___.",
+   "wrong_answer": "mzito",
+   "correct_answer": "mwepesi"
+  },
+  "cause": "The child does not read the word lakini that signals a contrast.",
+  "reveals": "The question \"Mfuko huu ni mzito lakini ule ni ___.\" with \"mzito\" among the options.",
+  "help": "A sentence with lakini and the same word among the options.",
+  "feedback": "Kinyume ni neno la maana ya upande wa pili, si neno lilelile.",
+  "source": "common learner error; to confirm by a native Kiswahili teacher",
+  "status": "draft"
+ },
+ "KISW.G6.SARUFI.T9_VINYUME_VYA_VIVUMISH.VINYUME_VIVUMISHI.M_VINY_OTHER": {
+  "skill": "KISW.G6.SARUFI.T9_VINYUME_VYA_VIVUMISH.VINYUME_VIVUMISHI",
+  "error": "Picks a different adjective that is not the opposite (mdogo for mfupi).",
+  "example": {
+   "question": "Mti huu ni mrefu lakini ule ni ___.",
+   "wrong_answer": "mdogo",
+   "correct_answer": "mfupi"
+  },
+  "cause": "The child picks a word from the same field (size) without checking it is the exact opposite.",
+  "reveals": "The question \"Mti huu ni mrefu lakini ule ni ___.\" with \"mdogo\" among the options.",
+  "help": "A word with a near neighbour of meaning among the options.",
+  "feedback": "Kinyume cha mrefu ni mfupi. Mdogo ni kinyume cha mkubwa.",
+  "source": "common learner error; to confirm by a native Kiswahili teacher",
+  "status": "draft"
+ },
+ "KISW.G6.SARUFI.T9_VINYUME_VYA_VIVUMISH.VINYUME_VIVUMISHI.M_VINY_NO_AGREE": {
+  "skill": "KISW.G6.SARUFI.T9_VINYUME_VYA_VIVUMISH.VINYUME_VIVUMISHI",
+  "error": "Gives the opposite without the prefix of the noun (refu for mrefu, jinga for mjinga).",
+  "example": {
+   "question": "Kiti hiki ni kigumu lakini kile ni ___.",
+   "wrong_answer": "kilaini",
+   "correct_answer": "laini"
+  },
+  "cause": "The child changes the opposite to fit the noun when it does not change, or leaves out the prefix when it must.",
+  "reveals": "The question \"Kiti hiki ni kigumu lakini kile ni ___.\" with \"kilaini\" among the options.",
+  "help": "Options with and without the prefix.",
+  "feedback": "Vivumishi vingi huchukua kiambishi cha nomino (mjinga, wachache). Vingine hubaki kama vilivyo (laini, moto).",
+  "source": "common learner error; to confirm by a native Kiswahili teacher",
+  "status": "draft"
+ },
+ "KISW.G6.KUSIKI.T10_SITIARI_ZA_TABIA.SITIARI.M_SIT_WRONG_ANIMAL": {
+  "skill": "KISW.G6.KUSIKI.T10_SITIARI_ZA_TABIA.SITIARI",
+  "error": "Names the wrong animal for the behaviour (kobe for a hard worker).",
+  "example": {
+   "question": "Kamau hufanya kazi kutwa nzima bila kuchoka. Kamau ni ___.",
+   "wrong_answer": "kobe",
+   "correct_answer": "nyuki"
+  },
+  "cause": "The child does not link the animal with the behaviour it stands for.",
+  "reveals": "The question \"Kamau hufanya kazi kutwa nzima bila kuchoka. Kamau ni ___.\" with \"kobe\" among the options.",
+  "help": "A behaviour with several animals among the options.",
+  "feedback": "Kila mnyama hutumika kuonyesha tabia: nyuki (bidii), simba (ujasiri), kobe (polepole), kinyonga (kubadilika), mbweha (ujanja), tausi (kujionyesha).",
+  "source": "common learner error; to confirm by a native Kiswahili teacher",
+  "status": "draft"
+ },
+ "KISW.G6.KUSIKI.T10_SITIARI_ZA_TABIA.SITIARI.M_SIT_TASHBIHI": {
+  "skill": "KISW.G6.KUSIKI.T10_SITIARI_ZA_TABIA.SITIARI",
+  "error": "Takes a sentence with kama (a tashbihi) for a sitiari.",
+  "example": {
+   "question": "Chagua sentensi iliyo sitiari.",
+   "wrong_answer": "Mwalimu ni kama simba.",
+   "correct_answer": "Mwalimu ni simba."
+  },
+  "cause": "The child does not tell the two figures apart.",
+  "reveals": "The question \"Chagua sentensi iliyo sitiari.\" with \"Mwalimu ni kama simba.\" among the options.",
+  "help": "A sitiari and a tashbihi on the same subject.",
+  "feedback": "Tashbihi hulinganisha kwa kutumia \"kama\". Sitiari husema moja ni lingine bila \"kama\".",
+  "source": "common learner error; to confirm by a native Kiswahili teacher",
+  "status": "draft"
+ },
+ "KISW.G6.KUSIKI.T10_SITIARI_ZA_TABIA.SITIARI.M_SIT_LITERAL": {
+  "skill": "KISW.G6.KUSIKI.T10_SITIARI_ZA_TABIA.SITIARI",
+  "error": "Takes the sitiari word for word (the teacher really has a lion).",
+  "example": {
+   "question": "Chagua sentensi iliyo sitiari.",
+   "wrong_answer": "Mwalimu ana simba.",
+   "correct_answer": "Mwalimu ni simba."
+  },
+  "cause": "The child reads the sentence as a plain statement.",
+  "reveals": "The question \"Chagua sentensi iliyo sitiari.\" with \"Mwalimu ana simba.\" among the options.",
+  "help": "A sitiari beside a sentence with the verb kuwa na.",
+  "feedback": "Sitiari haisemi mtu ana mnyama. Inasema mtu ni mnyama kwa tabia yake.",
+  "source": "common learner error; to confirm by a native Kiswahili teacher",
+  "status": "draft"
+ },
+ "KISW.G6.SARUFI.T10_HALI_YA_MASHARTI_NGE.MASHARTI.M_MASH_TENSE": {
+  "skill": "KISW.G6.SARUFI.T10_HALI_YA_MASHARTI_NGE.MASHARTI",
+  "error": "Uses a tense marker (-li-, -na-, -ta-) where a condition marker (-ki-, -nge-) is needed.",
+  "example": {
+   "question": "___ kwa bidii, utafaulu mtihani.",
+   "wrong_answer": "Ulisoma",
+   "correct_answer": "Ukisoma"
+  },
+  "cause": "The child knows tenses and not the condition marker.",
+  "reveals": "The question \"___ kwa bidii, utafaulu mtihani.\" with \"Ulisoma\" among the options.",
+  "help": "A sentence with if in the meaning and tense forms among the options.",
+  "feedback": "Sharti linaonyeshwa kwa -ki-, -sipo- au -nge-, si kwa -li-, -na- au -ta-.",
+  "source": "common learner error; to confirm by a native Kiswahili teacher",
+  "status": "draft"
+ },
+ "KISW.G6.SARUFI.T10_HALI_YA_MASHARTI_NGE.MASHARTI.M_MASH_NEG": {
+  "skill": "KISW.G6.SARUFI.T10_HALI_YA_MASHARTI_NGE.MASHARTI",
+  "error": "Uses -sipo- (do not) where the condition is to do (-ki-).",
+  "example": {
+   "question": "Wanafunzi ___ pamoja, watamaliza kazi haraka.",
+   "wrong_answer": "wasipofanya",
+   "correct_answer": "wakifanya"
+  },
+  "cause": "The child does not read the whole sentence for meaning.",
+  "reveals": "The question \"Wanafunzi ___ pamoja, watamaliza kazi haraka.\" with \"wasipofanya\" among the options.",
+  "help": "A condition whose result only makes sense if it is positive.",
+  "feedback": "Soma sentensi nzima. Kama matokeo ni mazuri, sharti ni la kufanya (-ki-).",
+  "source": "common learner error; to confirm by a native Kiswahili teacher",
+  "status": "draft"
+ },
+ "KISW.G6.SARUFI.T10_HALI_YA_MASHARTI_NGE.MASHARTI.M_MASH_ID_TENSE": {
+  "skill": "KISW.G6.SARUFI.T10_HALI_YA_MASHARTI_NGE.MASHARTI",
+  "error": "Names the tense marker (-ta-) as the condition marker.",
+  "example": {
+   "question": "Ni kiambishi kipi cha masharti katika \"Ukisoma, utafaulu\"?",
+   "wrong_answer": "-ta-",
+   "correct_answer": "-ki-"
+  },
+  "cause": "The child finds a marker in the verb but picks the wrong one.",
+  "reveals": "The question \"Ni kiambishi kipi cha masharti katika \"Ukisoma, utafaulu\"?\" with \"-ta-\" among the options.",
+  "help": "A sentence with both -ki- and -ta- and both in the options.",
+  "feedback": "Ta- huonyesha wakati ujao. Ki- huonyesha sharti.",
+  "source": "common learner error; to confirm by a native Kiswahili teacher",
+  "status": "draft"
+ },
+ "KISW.G6.SARUFI.T10_HALI_YA_MASHARTI_NGE.MASHARTI.M_MASH_ID_PERSON": {
+  "skill": "KISW.G6.SARUFI.T10_HALI_YA_MASHARTI_NGE.MASHARTI",
+  "error": "Names the person prefix (u-, a-, ni-) as the condition marker.",
+  "example": {
+   "question": "Ni kiambishi kipi cha masharti katika \"Angekuja, angeona\"?",
+   "wrong_answer": "-a-",
+   "correct_answer": "-nge-"
+  },
+  "cause": "The child picks the first marker in the verb.",
+  "reveals": "The question \"Ni kiambishi kipi cha masharti katika \"Angekuja, angeona\"?\" with \"-a-\" among the options.",
+  "help": "A verb with a person prefix and a condition marker.",
+  "feedback": "Kiambishi cha mtu (u-, a-, ni-) hakionyeshi sharti. Sharti ni -ki-, -sipo-, -nge-.",
+  "source": "common learner error; to confirm by a native Kiswahili teacher",
+  "status": "draft"
+ },
+ "KISW.G6.SARUFI.T11_UKANUSHAJI_WA_MANENO.UKANUSHAJI_MASHARTI.M_UKM_SI_ONLY": {
+  "skill": "KISW.G6.SARUFI.T11_UKANUSHAJI_WA_MANENO.UKANUSHAJI_MASHARTI",
+  "error": "Only puts si- in front and keeps -ki- (Usikisoma for Usiposoma).",
+  "example": {
+   "question": "Neno \"Ukisoma\" likikanushwa huwa ___.",
+   "wrong_answer": "Usikisoma",
+   "correct_answer": "Usiposoma"
+  },
+  "cause": "The child applies the rule for negating a command or a tense to the conditional.",
+  "reveals": "The question \"Neno \"Ukisoma\" likikanushwa huwa ___.\" with \"Usikisoma\" among the options.",
+  "help": "A conditional verb with the si-form among the options.",
+  "feedback": "Katika ukanushaji wa masharti, ki- hubadilika kuwa -sipo-: Ukisoma, Usiposoma.",
+  "source": "common learner error; to confirm by a native Kiswahili teacher",
+  "status": "draft"
+ },
+ "KISW.G6.SARUFI.T11_UKANUSHAJI_WA_MANENO.UKANUSHAJI_MASHARTI.M_UKM_KEEP_KI": {
+  "skill": "KISW.G6.SARUFI.T11_UKANUSHAJI_WA_MANENO.UKANUSHAJI_MASHARTI",
+  "error": "Negates with ha- and keeps -ki- (Hukisoma, Hakija).",
+  "example": {
+   "question": "Neno \"Akija\" likikanushwa huwa ___.",
+   "wrong_answer": "Hakija",
+   "correct_answer": "Asipokuja"
+  },
+  "cause": "The child applies the rule for negating a tense to the conditional.",
+  "reveals": "The question \"Neno \"Akija\" likikanushwa huwa ___.\" with \"Hakija\" among the options.",
+  "help": "A conditional verb with the ha-form among the options.",
+  "feedback": "Ha- haikanushi -ki-. Ki- hubadilika kuwa -sipo-.",
+  "source": "common learner error; to confirm by a native Kiswahili teacher",
+  "status": "draft"
+ },
+ "KISW.G6.SARUFI.T11_UKANUSHAJI_WA_MANENO.UKANUSHAJI_MASHARTI.M_UKM_COMMAND": {
+  "skill": "KISW.G6.SARUFI.T11_UKANUSHAJI_WA_MANENO.UKANUSHAJI_MASHARTI",
+  "error": "Gives the negative command (Usisome, Asije) for the negative condition.",
+  "example": {
+   "question": "Neno \"Ukisoma\" likikanushwa huwa ___.",
+   "wrong_answer": "Usisome",
+   "correct_answer": "Usiposoma"
+  },
+  "cause": "The child knows the negative command and uses it for every negative.",
+  "reveals": "The question \"Neno \"Ukisoma\" likikanushwa huwa ___.\" with \"Usisome\" among the options.",
+  "help": "A conditional verb with the negative command among the options.",
+  "feedback": "Usisome ni amri ya kutosoma. Sharti hasi la Ukisoma ni Usiposoma.",
+  "source": "common learner error; to confirm by a native Kiswahili teacher",
+  "status": "draft"
+ },
+ "KISW.G6.SARUFI.T11_UKUBWA_NA_UDOGO_WA_N.UKUBWA_KI.M_UKUB_SWAP": {
+  "skill": "KISW.G6.SARUFI.T11_UKUBWA_NA_UDOGO_WA_N.UKUBWA_KI",
+  "error": "Swaps the big form (ji-) and the small form (kiji-).",
+  "example": {
+   "question": "Kitabu kikubwa sana huitwa ___.",
+   "wrong_answer": "kijitabu",
+   "correct_answer": "jitabu"
+  },
+  "cause": "The child learned both forms but not which is for big and which for small.",
+  "reveals": "The question \"Kitabu kikubwa sana huitwa ___.\" with \"kijitabu\" among the options.",
+  "help": "A big or small noun with both forms among the options.",
+  "feedback": "Ukubwa hupata ji-, udogo hupata kiji-. Kijitabu ni kitabu kidogo.",
+  "source": "common learner error; to confirm by a native Kiswahili teacher",
+  "status": "draft"
+ },
+ "KISW.G6.SARUFI.T11_UKUBWA_NA_UDOGO_WA_N.UKUBWA_KI.M_UKUB_PLURAL": {
+  "skill": "KISW.G6.SARUFI.T11_UKUBWA_NA_UDOGO_WA_N.UKUBWA_KI",
+  "error": "Gives the plain plural (vitabu) where the big or small form is asked.",
+  "example": {
+   "question": "Kitabu kikubwa sana huitwa ___.",
+   "wrong_answer": "vitabu",
+   "correct_answer": "jitabu"
+  },
+  "cause": "The child confuses a big thing with many things.",
+  "reveals": "The question \"Kitabu kikubwa sana huitwa ___.\" with \"vitabu\" among the options.",
+  "help": "Options with the plain plural.",
+  "feedback": "Vitabu ni wingi wa kitabu. Kitabu kikubwa sana ni jitabu.",
+  "source": "common learner error; to confirm by a native Kiswahili teacher",
+  "status": "draft"
+ },
+ "KISW.G6.SARUFI.T11_UKUBWA_NA_UDOGO_WA_N.UKUBWA_KI.M_UKUB_NO_CHANGE": {
+  "skill": "KISW.G6.SARUFI.T11_UKUBWA_NA_UDOGO_WA_N.UKUBWA_KI",
+  "error": "Leaves the noun unchanged (kitabu for jitabu or kijitabu).",
+  "example": {
+   "question": "Kisu kidogo huitwa ___.",
+   "wrong_answer": "kisu",
+   "correct_answer": "kijisu"
+  },
+  "cause": "The child does not see that size changes the noun.",
+  "reveals": "The question \"Kisu kidogo huitwa ___.\" with \"kisu\" among the options.",
+  "help": "Options with the plain noun.",
+  "feedback": "Ukubwa na udogo hubadilisha mwanzo wa nomino: kisu, kijisu.",
+  "source": "common learner error; to confirm by a native Kiswahili teacher",
+  "status": "draft"
+ },
+ "KISW.G6.SARUFI.T11_UKUBWA_NA_UDOGO_WA_N.UKUBWA_KI.M_UKUB_SINGULAR": {
+  "skill": "KISW.G6.SARUFI.T11_UKUBWA_NA_UDOGO_WA_N.UKUBWA_KI",
+  "error": "Gives the singular where the plural is asked.",
+  "example": {
+   "question": "Wingi wa \"jitabu\" ni ___.",
+   "wrong_answer": "jitabu",
+   "correct_answer": "majitabu"
+  },
+  "cause": "The child does not read the word wingi.",
+  "reveals": "The question \"Wingi wa \"jitabu\" ni ___.\" with \"jitabu\" among the options.",
+  "help": "Options with the singular.",
+  "feedback": "Wingi wa jitabu ni majitabu.",
+  "source": "common learner error; to confirm by a native Kiswahili teacher",
+  "status": "draft"
+ }
+}

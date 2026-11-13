@@ -1,0 +1,58 @@
+// KISWAHILI GRADE 6, part B: Sarufi ngeli (YA-YA, U-U, I-I, PA-KU-MU), Themes 4 to 7. Draft, written offline by Claude (13 Nov 2026).
+import { S, M, G5, INTERFERENCE } from './kiswahili-g6-lib.mjs';
+
+export const SKILLS = [
+  S('SARUFI.T4_NGELI_YA_YA_YA', 'YA_YA', 'Tumia ngeli ya YA-YA kwa upatanisho wa kisarufi', ['a', 'b', 'c'],
+    'Knows nouns that belong to YA-YA (maji, maziwa, mafuta, mate, machozi, manukato; they begin with ma- and have no singular), gives ya- as the subject prefix, and does not use li- or a prefix of another class, in 8 of 10 new items.',
+    ['choose the prefix', 'fill the gap', 'spot the mistake', 'choose the noun'], [G5('SARUFI.T5_NGELI_YA_U_ZI.a'), G5('SARUFI.T6_NGELI_YA_U_YA.a')], ['recall', 'rule']),
+  S('SARUFI.T5_NGELI_YA_U_U', 'U_U', 'Tumia ngeli ya U-U kwa upatanisho wa kisarufi', ['a', 'b', 'c'],
+    'Knows nouns that belong to U-U (uji, unga, ugali, usingizi, uchafu, wino, mchele, mchanga: no plural), gives u- as the subject prefix, and does not use ya- or i-, in 8 of 10 new items.',
+    ['choose the prefix', 'fill the gap', 'spot the mistake', 'choose the noun'], [G5('SARUFI.T5_NGELI_YA_U_ZI.a')], ['recall', 'rule']),
+  S('SARUFI.T6_NGELI_YA_I_I', 'I_I', 'Tumia ngeli ya I-I kwa upatanisho wa kisarufi', ['a', 'b', 'c'],
+    'Knows nouns that belong to I-I (afya, njaa, nguvu, subira, heshima, akili, haki, bahati: states and ideas that are not counted), gives i- as the subject prefix, and does not use zi- as for a plural, in 8 of 10 new items.',
+    ['choose the prefix', 'fill the gap', 'spot the mistake', 'choose the noun'], [G5('SARUFI.T4_NGELI_YA_I_ZI.a')], ['recall', 'rule']),
+  S('SARUFI.T7_NGELI_YA_PA_KU_MU', 'PA_KU_MU', 'Tumia ngeli ya PA-KU-MU kwa upatanisho wa kisarufi', ['a', 'b'],
+    'Matches the word of place and the verb in PA-KU-MU: pa- for a particular place (pale pana), ku- for a far or general place (kule kuna), mu- or m- for inside (mle mna), in 8 of 10 new sentences.',
+    ['choose the word', 'fill the gap', 'spot the mistake', 'choose the sentence'], [G5('SARUFI.T4_NGELI_YA_I_ZI.a')], ['recall', 'rule']),
+];
+
+export const ALSO = {};
+
+export const MIS = [
+  M('SARUFI.T4_NGELI_YA_YA_YA.YA_YA', 'M_YAYA_LI', 'Uses li- with a ma- noun because it starts with ma- (maji limeisha).',
+    'Maji ___meisha kisimani.', 'li', 'ya', 'The child learned that ma- goes with li-, which is true only for the plural of nouns that have a singular.',
+    'Ask "Je, kuna neno jiji, au jimaji?" Maji has no singular.', 'Maji ni ya ngeli ya YA-YA. Hupatana na ya-: maji yameisha.'),
+  M('SARUFI.T4_NGELI_YA_YA_YA.YA_YA', 'M_YAYA_OTHER', 'Uses u-, i-, zi- or vi- with a YA-YA noun.',
+    'Maziwa ___meichacha jikoni.', 'i', 'ya', 'The child uses the prefix of the class he knows best.',
+    'A gap with several prefixes among the options.', 'Nomino za YA-YA hupatana na ya- tu.'),
+  M('SARUFI.T4_NGELI_YA_YA_YA.YA_YA', 'M_YAYA_A', 'Uses a- as for a person or animal (maziwa ameichacha).',
+    'Maziwa ___meichacha jikoni.', 'a', 'ya', 'The child treats the noun like a living thing.',
+    'A gap with a- among the options for a thing noun.', 'A- ni ya watu na wanyama. Maziwa ni kitu, na hupatana na ya-.'),
+  M('SARUFI.T4_NGELI_YA_YA_YA.YA_YA', 'M_YAYA_NOUN', 'Picks a noun of another class as a YA-YA noun.',
+    'Ni nomino ipi ni ya ngeli ya YA-YA?', 'kitabu', 'maji', 'The child cannot yet tell YA-YA nouns by their agreement.',
+    'Options with nouns from different classes.', 'Nomino za YA-YA hupatana na ya- na hazina umoja, kama maji.'),
+  M('SARUFI.T5_NGELI_YA_U_U.U_U', 'M_UU_PLURAL', 'Uses ya- or zi- with a U-U noun as if it had a plural (uji yametiwa).',
+    'Uji ___metiwa sukari.', 'ya', 'u', 'The child assumes every noun can be many.',
+    'Ask "Je, tunasema ujiuji? Uji una wingi?" It has none.', 'Nomino za U-U hazina wingi, kwa hiyo hupatana na u- tu: uji umetiwa sukari.'),
+  M('SARUFI.T5_NGELI_YA_U_U.U_U', 'M_UU_OTHER', 'Uses i-, li- or another prefix with a U-U noun.',
+    'Ugali ___meiva sasa.', 'i', 'u', 'The child uses the prefix of a class he knows better.',
+    'A gap with several prefixes among the options.', 'Nomino za U-U hupatana na u-: ugali umeiva.'),
+  M('SARUFI.T5_NGELI_YA_U_U.U_U', 'M_UU_NOUN', 'Picks a noun of another class as a U-U noun.',
+    'Ni nomino ipi ni ya ngeli ya U-U?', 'kitabu', 'uji', 'The child cannot yet tell U-U nouns by their agreement.',
+    'Options with nouns from different classes.', 'Nomino za U-U hupatana na u- na hazina wingi, kama uji.'),
+  M('SARUFI.T6_NGELI_YA_I_I.I_I', 'M_II_PLURAL', 'Uses zi- with an I-I noun as if it were a plural (afya zimeimarika).',
+    'Afya ___meimarika baada ya matibabu.', 'zi', 'i', 'The child ties i- and zi- together as the pair for one and many.',
+    'Ask "Je, tunasema afyaafya? Afya ni kitu cha kuhesabu?"', 'Nomino za I-I hazihesabiki, kwa hiyo hupatana na i-: afya imeimarika.'),
+  M('SARUFI.T6_NGELI_YA_I_I.I_I', 'M_II_OTHER', 'Uses u-, li- or another prefix with an I-I noun.',
+    'Njaa ___nauma tumboni.', 'u', 'i', 'The child uses the prefix of a class he knows better.',
+    'A gap with several prefixes among the options.', 'Nomino za I-I hupatana na i-: njaa inauma.'),
+  M('SARUFI.T6_NGELI_YA_I_I.I_I', 'M_II_NOUN', 'Picks a noun of another class as an I-I noun.',
+    'Ni nomino ipi ni ya ngeli ya I-I?', 'kitabu', 'afya', 'The child cannot yet tell I-I nouns by their agreement.',
+    'Options with nouns from different classes.', 'Nomino za I-I ni hali au mawazo yasiyohesabika, kama afya na njaa.'),
+  M('SARUFI.T7_NGELI_YA_PA_KU_MU.PA_KU_MU', 'M_PKM_MIX', 'Uses the wrong one of pa-, ku-, mu- for the place (kule pana).',
+    'Kule shambani ___ mazao mengi.', 'pana', 'kuna', 'The child does not read the word of place (pale, kule, humu).',
+    'A sentence with pale, kule or humu and all three forms among the options.', 'Pale huchukua pa-, kule huchukua ku-, humu na mle huchukua mu- (m-).'),
+  M('SARUFI.T7_NGELI_YA_PA_KU_MU.PA_KU_MU', 'M_PKM_CLASS', 'Uses the prefix of the noun (una, ina) where the place needs pa-, ku- or mu-.',
+    'Kule shambani ___ mazao mengi.', 'ina', 'kuna', 'The child follows the noun and not the place.',
+    'Options with u- and i- forms.', 'Katika ngeli ya mahali, kitenzi hupatana na mahali (pa-, ku-, mu-), si na nomino.'),
+];
