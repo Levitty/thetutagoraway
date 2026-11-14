@@ -50,6 +50,7 @@ export default {
   'english_g4_vocab.js': 'english_g4_signed.js',
   'english_g4_write.js': 'english_g4_signed.js',
   'english_g6_lang.js': 'english_g6_signed.js',
+  'english_g6_listening.js': 'english_g6_signed.js',
   'english_g6_reading.js': 'english_g6_signed.js',
   'english_g6_vocab.js': 'english_g6_signed.js',
   'english_g6_write.js': 'english_g6_signed.js',

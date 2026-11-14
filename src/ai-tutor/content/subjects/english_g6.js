@@ -7,6 +7,7 @@ import { FAMILIES as LANG } from '../families/english_g6_lang.js';
 import { FAMILIES as WRITE } from '../families/english_g6_write.js';
 import { FAMILIES as VOCAB } from '../families/english_g6_vocab.js';
 import { FAMILIES as READING } from '../families/english_g6_reading.js';
+import { FAMILIES as LISTEN } from '../families/english_g6_listening.js';
 import { SIGNED } from '../families/english_g6_signed.js';
 
 export default {
@@ -14,8 +15,8 @@ export default {
   name: 'English', shortName: 'English', icon: 'book',
   description: 'Grade 6 English from the CBC design',
   map: { skills: SKILLS, substrands: SUBSTRANDS, outcomes: OUTCOMES, misFeedback: MIS_FEEDBACK },
-  families: [...LANG, ...WRITE, ...VOCAB, ...READING],
-  familyFiles: ['english_g6_lang.js', 'english_g6_write.js', 'english_g6_vocab.js', 'english_g6_reading.js'],
+  families: [...LANG, ...WRITE, ...VOCAB, ...READING, ...LISTEN],
+  familyFiles: ['english_g6_lang.js', 'english_g6_write.js', 'english_g6_vocab.js', 'english_g6_reading.js', 'english_g6_listening.js'],
   signed: SIGNED, signedFile: 'english_g6_signed.js',
   checks: 'text',
   idPrefix: 'english6.',          // every family id starts with this
