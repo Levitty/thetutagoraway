@@ -9,9 +9,12 @@ import { fam, choose, pick } from './kiswahili_g7_lib.js';
 import { PASSAGES, LISTENS } from './kiswahili_g7_passages.js';
 
 const rowsFor = (src, types, half) => src.filter((_, i) => i % 2 === half).flatMap(p => types.flatMap(t => (p.q[t] || []).map(row => ({ p, row }))));
+// A stem that repeats across texts ("Ni muhtasari upi unafaa zaidi?") names its text, so each text gives its own distinct question.
+const stemFor = (q, p, src) => src.filter(x => Object.values(x.q).some(rs => rs.some(r => r[0] === q))).length > 1 ? `${q.replace(/\?$/, '')} katika "${p.title.replace(/[?!.:]+$/, '')}"?` : q;
 const mk = (id, src, types, half, h, listening) => () => {
   const { p, row } = pick(rowsFor(src, types, half));
-  const [q, right, w1, w2, w3] = row;
+  const [q0, right, w1, w2, w3] = row;
+  const q = stemFor(q0, p, src);
   const wrongs = [[w1, `M_KS7_${id}_DETAIL`], [w2, `M_KS7_${id}_OPPOSITE`], [w3, `M_KS7_${id}_NOTSAID`]];
   const base = choose([[q, right, wrongs, 'Rudi kwenye matini na utafute sehemu inayojibu swali.']], { h, instruction: listening ? 'Sikiliza matini. Kisha chagua jibu bora.' : 'Soma kifungu. Kisha chagua jibu bora.', s1: listening ? 'Fikiria ulichosikia.' : 'Rudi kwenye kifungu.' })();
   if (!base) return null;

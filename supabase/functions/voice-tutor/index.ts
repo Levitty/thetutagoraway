@@ -52847,9 +52847,11 @@ var LISTENS2 = [
 // src/ai-tutor/content/families/english_g9_reading.js
 var GROUPS = { prose: (p) => ["argument", "story", "information"].includes(p.kind), poem: (p) => p.kind === "poem", play: (p) => p.kind === "play" };
 var rowsFor2 = (src, test, types, half) => src.filter(test).filter((_, i) => i % 2 === half).flatMap((p) => types.flatMap((t) => (p.q[t] || []).map((row) => ({ p, row }))));
+var stemFor = (q, p, src) => src.filter((x) => Object.values(x.q).some((rs) => rs.some((r) => r[0] === q))).length > 1 ? `${q.replace(/\?$/, "")} in "${p.title.replace(/[?!.:]+$/, "")}"?` : q;
 var mk = (id5, src, test, types, half, h, listening) => () => {
   const { p, row } = pick(rowsFor2(src, test, types, half));
-  const [q, right, w1, w22, w32] = row;
+  const [q0, right, w1, w22, w32] = row;
+  const q = stemFor(q0, p, src);
   const wrongs = [[w1, `M_EN9_${id5}_DETAIL`], [w22, `M_EN9_${id5}_OPPOSITE`], [w32, `M_EN9_${id5}_NOTSAID`]];
   const base = choose21([[q, right, wrongs, "Go back to the text and find the line that answers the question."]], { h, instruction: listening ? "Listen to the talk. Then choose the best answer." : "Read the text. Then choose the best answer.", s1: listening ? "Think about what you heard." : "Go back to the text." })();
   if (!base) return null;
@@ -68944,9 +68946,11 @@ var LISTENS3 = [
 
 // src/ai-tutor/content/families/kiswahili_g7_reading.js
 var rowsFor3 = (src, types, half) => src.filter((_, i) => i % 2 === half).flatMap((p) => types.flatMap((t) => (p.q[t] || []).map((row) => ({ p, row }))));
+var stemFor2 = (q, p, src) => src.filter((x) => Object.values(x.q).some((rs) => rs.some((r) => r[0] === q))).length > 1 ? `${q.replace(/\?$/, "")} katika "${p.title.replace(/[?!.:]+$/, "")}"?` : q;
 var mk2 = (id5, src, types, half, h, listening) => () => {
   const { p, row } = pick(rowsFor3(src, types, half));
-  const [q, right, w1, w22, w32] = row;
+  const [q0, right, w1, w22, w32] = row;
+  const q = stemFor2(q0, p, src);
   const wrongs = [[w1, `M_KS7_${id5}_DETAIL`], [w22, `M_KS7_${id5}_OPPOSITE`], [w32, `M_KS7_${id5}_NOTSAID`]];
   const base = choose28([[q, right, wrongs, "Rudi kwenye matini na utafute sehemu inayojibu swali."]], { h, instruction: listening ? "Sikiliza matini. Kisha chagua jibu bora." : "Soma kifungu. Kisha chagua jibu bora.", s1: listening ? "Fikiria ulichosikia." : "Rudi kwenye kifungu." })();
   if (!base) return null;
@@ -71828,9 +71832,11 @@ var LISTENS4 = [
 
 // src/ai-tutor/content/families/kiswahili_g8_reading.js
 var rowsFor4 = (src, types, half) => src.filter((_, i) => i % 2 === half).flatMap((p) => types.flatMap((t) => (p.q[t] || []).map((row) => ({ p, row }))));
+var stemFor3 = (q, p, src) => src.filter((x) => Object.values(x.q).some((rs) => rs.some((r) => r[0] === q))).length > 1 ? `${q.replace(/\?$/, "")} katika "${p.title.replace(/[?!.:]+$/, "")}"?` : q;
 var mk3 = (id5, src, types, half, h, listening) => () => {
   const { p, row } = pick(rowsFor4(src, types, half));
-  const [q, right, w1, w22, w32] = row;
+  const [q0, right, w1, w22, w32] = row;
+  const q = stemFor3(q0, p, src);
   const wrongs = [[w1, `M_KS8_${id5}_DETAIL`], [w22, `M_KS8_${id5}_OPPOSITE`], [w32, `M_KS8_${id5}_NOTSAID`]];
   const base = choose29([[q, right, wrongs, "Rudi kwenye matini na utafute sehemu inayojibu swali."]], { h, instruction: listening ? "Sikiliza matini. Kisha chagua jibu bora." : "Soma kifungu. Kisha chagua jibu bora.", s1: listening ? "Fikiria ulichosikia." : "Rudi kwenye kifungu." })();
   if (!base) return null;
@@ -74873,9 +74879,11 @@ var LISTENS5 = [
 var PROSE = PASSAGES12.filter((p) => p.kind !== "shairi");
 var POEMS = PASSAGES12.filter((p) => p.kind === "shairi");
 var rowsFor5 = (src, types, half) => src.filter((_, i) => i % 2 === half).flatMap((p) => types.flatMap((t) => (p.q[t] || []).map((row) => ({ p, row }))));
+var stemFor4 = (q, p, src) => src.filter((x) => Object.values(x.q).some((rs) => rs.some((r) => r[0] === q))).length > 1 ? `${q.replace(/\?$/, "")} katika "${p.title.replace(/[?!.:]+$/, "")}"?` : q;
 var mk4 = (id5, src, types, half, h, listening) => () => {
   const { p, row } = pick(rowsFor5(src, types, half));
-  const [q, right, w1, w22, w32] = row;
+  const [q0, right, w1, w22, w32] = row;
+  const q = stemFor4(q0, p, src);
   const wrongs = [[w1, `M_KS9_${id5}_DETAIL`], [w22, `M_KS9_${id5}_OPPOSITE`], [w32, `M_KS9_${id5}_NOTSAID`]];
   const base = choose30([[q, right, wrongs, "Rudi kwenye matini na utafute sehemu inayojibu swali."]], { h, instruction: listening ? "Sikiliza matini. Kisha chagua jibu bora." : "Soma kifungu. Kisha chagua jibu bora.", s1: listening ? "Fikiria ulichosikia." : "Rudi kwenye kifungu." })();
   if (!base) return null;

@@ -10,9 +10,12 @@ import { PASSAGES, LISTENS } from './english_g9_passages.js';
 
 const GROUPS = { prose: (p) => ['argument', 'story', 'information'].includes(p.kind), poem: (p) => p.kind === 'poem', play: (p) => p.kind === 'play' };
 const rowsFor = (src, test, types, half) => src.filter(test).filter((_, i) => i % 2 === half).flatMap(p => types.flatMap(t => (p.q[t] || []).map(row => ({ p, row }))));
+// A stem that repeats across texts ("What is the main point?") names its text, so each text gives its own distinct question.
+const stemFor = (q, p, src) => src.filter(x => Object.values(x.q).some(rs => rs.some(r => r[0] === q))).length > 1 ? `${q.replace(/\?$/, '')} in "${p.title.replace(/[?!.:]+$/, '')}"?` : q;
 const mk = (id, src, test, types, half, h, listening) => () => {
   const { p, row } = pick(rowsFor(src, test, types, half));
-  const [q, right, w1, w2, w3] = row;
+  const [q0, right, w1, w2, w3] = row;
+  const q = stemFor(q0, p, src);
   const wrongs = [[w1, `M_EN9_${id}_DETAIL`], [w2, `M_EN9_${id}_OPPOSITE`], [w3, `M_EN9_${id}_NOTSAID`]];
   const base = choose([[q, right, wrongs, 'Go back to the text and find the line that answers the question.']], { h, instruction: listening ? 'Listen to the talk. Then choose the best answer.' : 'Read the text. Then choose the best answer.', s1: listening ? 'Think about what you heard.' : 'Go back to the text.' })();
   if (!base) return null;
