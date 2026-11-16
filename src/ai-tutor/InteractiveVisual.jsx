@@ -5,6 +5,7 @@
 
 import React, { useState, useEffect, useRef, useCallback } from 'react';
 import { numberLineLabel } from './numberLineLabels.js';
+import { FIGURE } from './figurePalette.js';
 
 // ==================== COORDINATE SYSTEM HELPERS ====================
 const toCanvas = (x, y, bounds, canvas) => ({
@@ -111,17 +112,17 @@ const LinearGraphVisual = ({ data, onAnswer, disabled }) => {
       <canvas ref={canvasRef} width={360} height={300} className="w-full rounded-xl border border-slate-700" style={{ maxWidth: 400 }} />
       <div className="mt-3 space-y-3">
         <div className="flex items-center gap-3">
-          <label className="text-sm text-slate-400 w-24">Gradient (m):</label>
+          <label className="text-sm text-slate-600 w-24">Gradient (m):</label>
           <input type="range" min={-5} max={5} step={0.5} value={m} onChange={e => setM(parseFloat(e.target.value))} disabled={disabled} className="flex-1 accent-emerald-500" />
-          <span className="text-emerald-400 font-mono w-10 text-right">{m}</span>
+          <span className="text-emerald-700 font-mono w-10 text-right">{m}</span>
         </div>
         <div className="flex items-center gap-3">
-          <label className="text-sm text-slate-400 w-24">y-intercept (c):</label>
+          <label className="text-sm text-slate-600 w-24">y-intercept (c):</label>
           <input type="range" min={-6} max={6} step={0.5} value={c} onChange={e => setC(parseFloat(e.target.value))} disabled={disabled} className="flex-1 accent-emerald-500" />
-          <span className="text-emerald-400 font-mono w-10 text-right">{c}</span>
+          <span className="text-emerald-700 font-mono w-10 text-right">{c}</span>
         </div>
       </div>
-      {data.showTarget && <p className="text-xs text-slate-500 mt-2">Adjust the sliders to match the red dashed target line</p>}
+      {data.showTarget && <p className="text-xs text-slate-600 mt-2">Adjust the sliders to match the red dashed target line</p>}
     </div>
   );
 };
@@ -191,8 +192,8 @@ const CoordinatePlotterVisual = ({ data, onAnswer, disabled }) => {
   return (
     <div className="mb-4">
       <canvas ref={canvasRef} width={360} height={360} onClick={handleClick} className="w-full rounded-xl border border-slate-700 cursor-crosshair" style={{ maxWidth: 400 }} />
-      <p className="text-xs text-slate-500 mt-2">Tap/click on the grid to plot points. Tap again to remove.</p>
-      {plotted.length > 0 && <p className="text-xs text-emerald-400 mt-1">Plotted: {plotted.map(p => `(${p.x}, ${p.y})`).join(', ')}</p>}
+      <p className="text-xs text-slate-600 mt-2">Tap/click on the grid to plot points. Tap again to remove.</p>
+      {plotted.length > 0 && <p className="text-xs text-emerald-700 mt-1">Plotted: {plotted.map(p => `(${p.x}, ${p.y})`).join(', ')}</p>}
     </div>
   );
 };
@@ -272,19 +273,19 @@ const QuadraticGraphVisual = ({ data, onAnswer, disabled }) => {
       <canvas ref={canvasRef} width={360} height={300} className="w-full rounded-xl border border-slate-700" style={{ maxWidth: 400 }} />
       <div className="mt-3 space-y-2">
         <div className="flex items-center gap-3">
-          <label className="text-sm text-slate-400 w-20">Stretch (a):</label>
+          <label className="text-sm text-slate-600 w-20">Stretch (a):</label>
           <input type="range" min={-3} max={3} step={0.5} value={a} onChange={e => setA(parseFloat(e.target.value))} disabled={disabled} className="flex-1 accent-emerald-500" />
-          <span className="text-emerald-400 font-mono w-10 text-right">{a}</span>
+          <span className="text-emerald-700 font-mono w-10 text-right">{a}</span>
         </div>
         <div className="flex items-center gap-3">
-          <label className="text-sm text-slate-400 w-20">Vertex x (h):</label>
+          <label className="text-sm text-slate-600 w-20">Vertex x (h):</label>
           <input type="range" min={-5} max={5} step={0.5} value={h} onChange={e => setH(parseFloat(e.target.value))} disabled={disabled} className="flex-1 accent-orange-500" />
-          <span className="text-orange-400 font-mono w-10 text-right">{h}</span>
+          <span className="text-orange-700 font-mono w-10 text-right">{h}</span>
         </div>
         <div className="flex items-center gap-3">
-          <label className="text-sm text-slate-400 w-20">Vertex y (k):</label>
+          <label className="text-sm text-slate-600 w-20">Vertex y (k):</label>
           <input type="range" min={-8} max={8} step={0.5} value={k} onChange={e => setK(parseFloat(e.target.value))} disabled={disabled} className="flex-1 accent-orange-500" />
-          <span className="text-orange-400 font-mono w-10 text-right">{k}</span>
+          <span className="text-orange-700 font-mono w-10 text-right">{k}</span>
         </div>
       </div>
     </div>
@@ -369,9 +370,9 @@ const AngleExplorerVisual = ({ data, onAnswer, disabled }) => {
     <div className="mb-4">
       <canvas ref={canvasRef} width={360} height={300} className="w-full rounded-xl border border-slate-700" style={{ maxWidth: 400 }} />
       <div className="mt-3 flex items-center gap-3">
-        <label className="text-sm text-slate-400 w-20">Angle:</label>
+        <label className="text-sm text-slate-600 w-20">Angle:</label>
         <input type="range" min={0} max={360} step={1} value={angle} onChange={e => setAngle(parseInt(e.target.value))} disabled={disabled} className="flex-1 accent-orange-500" />
-        <span className="text-orange-400 font-mono w-14 text-right">{angle}°</span>
+        <span className="text-orange-700 font-mono w-14 text-right">{angle}°</span>
       </div>
     </div>
   );
@@ -451,19 +452,19 @@ const TriangleExplorerVisual = ({ data, onAnswer, disabled }) => {
       <canvas ref={canvasRef} width={360} height={300} className="w-full rounded-xl border border-slate-700" style={{ maxWidth: 400 }} />
       <div className="mt-3 space-y-2">
         <div className="flex items-center gap-3">
-          <label className="text-sm text-orange-400 w-20">Angle A:</label>
+          <label className="text-sm text-orange-700 w-20">Angle A:</label>
           <input type="range" min={10} max={150} step={1} value={angleA} onChange={e => setAngleA(parseInt(e.target.value))} disabled={disabled} className="flex-1 accent-orange-500" />
-          <span className="text-orange-400 font-mono w-12 text-right">{angleA}°</span>
+          <span className="text-orange-700 font-mono w-12 text-right">{angleA}°</span>
         </div>
         <div className="flex items-center gap-3">
-          <label className="text-sm text-blue-400 w-20">Angle B:</label>
+          <label className="text-sm text-blue-700 w-20">Angle B:</label>
           <input type="range" min={10} max={Math.min(150, 170 - angleA)} step={1} value={Math.min(angleB, 170 - angleA)} onChange={e => setAngleB(parseInt(e.target.value))} disabled={disabled} className="flex-1 accent-blue-500" />
-          <span className="text-blue-400 font-mono w-12 text-right">{angleB}°</span>
+          <span className="text-blue-700 font-mono w-12 text-right">{angleB}°</span>
         </div>
         <div className="flex items-center gap-3">
-          <label className="text-sm text-purple-400 w-20">Angle C:</label>
-          <span className="flex-1 text-sm text-slate-500">auto-calculated</span>
-          <span className="text-purple-400 font-mono w-12 text-right">{angleC}°</span>
+          <label className="text-sm text-purple-700 w-20">Angle C:</label>
+          <span className="flex-1 text-sm text-slate-600">auto-calculated</span>
+          <span className="text-purple-700 font-mono w-12 text-right">{angleC}°</span>
         </div>
       </div>
     </div>
@@ -543,14 +544,14 @@ const PythagorasVisual = ({ data, onAnswer, disabled }) => {
       <canvas ref={canvasRef} width={360} height={340} className="w-full rounded-xl border border-slate-700" style={{ maxWidth: 400 }} />
       <div className="mt-3 space-y-2">
         <div className="flex items-center gap-3">
-          <label className="text-sm text-orange-400 w-16">Side a:</label>
+          <label className="text-sm text-orange-700 w-16">Side a:</label>
           <input type="range" min={1} max={10} step={0.5} value={sideA} onChange={e => setSideA(parseFloat(e.target.value))} disabled={disabled} className="flex-1 accent-orange-500" />
-          <span className="text-orange-400 font-mono w-10 text-right">{sideA}</span>
+          <span className="text-orange-700 font-mono w-10 text-right">{sideA}</span>
         </div>
         <div className="flex items-center gap-3">
-          <label className="text-sm text-blue-400 w-16">Side b:</label>
+          <label className="text-sm text-blue-700 w-16">Side b:</label>
           <input type="range" min={1} max={10} step={0.5} value={sideB} onChange={e => setSideB(parseFloat(e.target.value))} disabled={disabled} className="flex-1 accent-blue-500" />
-          <span className="text-blue-400 font-mono w-10 text-right">{sideB}</span>
+          <span className="text-blue-700 font-mono w-10 text-right">{sideB}</span>
         </div>
       </div>
     </div>
@@ -629,22 +630,22 @@ const AreaExplorerVisual = ({ data, onAnswer, disabled }) => {
       <div className="mt-3 space-y-2">
         {shape === 'circle' && (
           <div className="flex items-center gap-3">
-            <label className="text-sm text-orange-400 w-16">Radius:</label>
+            <label className="text-sm text-orange-700 w-16">Radius:</label>
             <input type="range" min={1} max={6} step={0.5} value={radius} onChange={e => setRadius(parseFloat(e.target.value))} disabled={disabled} className="flex-1 accent-orange-500" />
-            <span className="text-orange-400 font-mono w-10 text-right">{radius}</span>
+            <span className="text-orange-700 font-mono w-10 text-right">{radius}</span>
           </div>
         )}
         {shape === 'triangle' && (
           <>
             <div className="flex items-center gap-3">
-              <label className="text-sm text-blue-400 w-16">Base:</label>
+              <label className="text-sm text-blue-700 w-16">Base:</label>
               <input type="range" min={2} max={10} step={1} value={base} onChange={e => setBase(parseInt(e.target.value))} disabled={disabled} className="flex-1 accent-blue-500" />
-              <span className="text-blue-400 font-mono w-10 text-right">{base}</span>
+              <span className="text-blue-700 font-mono w-10 text-right">{base}</span>
             </div>
             <div className="flex items-center gap-3">
-              <label className="text-sm text-orange-400 w-16">Height:</label>
+              <label className="text-sm text-orange-700 w-16">Height:</label>
               <input type="range" min={2} max={10} step={1} value={height} onChange={e => setHeight(parseInt(e.target.value))} disabled={disabled} className="flex-1 accent-orange-500" />
-              <span className="text-orange-400 font-mono w-10 text-right">{height}</span>
+              <span className="text-orange-700 font-mono w-10 text-right">{height}</span>
             </div>
           </>
         )}
@@ -726,24 +727,24 @@ const GradientExplorerVisual = ({ data, onAnswer, disabled }) => {
       <div className="mt-3 space-y-2 text-xs">
         <div className="grid grid-cols-2 gap-2">
           <div className="flex items-center gap-2">
-            <label className="text-slate-400">x₁:</label>
+            <label className="text-slate-600">x₁:</label>
             <input type="range" min={-5} max={5} step={1} value={x1} onChange={e => setX1(parseInt(e.target.value))} disabled={disabled} className="flex-1 accent-orange-500" />
-            <span className="text-orange-400 font-mono">{x1}</span>
+            <span className="text-orange-700 font-mono">{x1}</span>
           </div>
           <div className="flex items-center gap-2">
-            <label className="text-slate-400">y₁:</label>
+            <label className="text-slate-600">y₁:</label>
             <input type="range" min={-5} max={5} step={1} value={y1} onChange={e => setY1(parseInt(e.target.value))} disabled={disabled} className="flex-1 accent-orange-500" />
-            <span className="text-orange-400 font-mono">{y1}</span>
+            <span className="text-orange-700 font-mono">{y1}</span>
           </div>
           <div className="flex items-center gap-2">
-            <label className="text-slate-400">x₂:</label>
+            <label className="text-slate-600">x₂:</label>
             <input type="range" min={-5} max={5} step={1} value={x2} onChange={e => setX2(parseInt(e.target.value))} disabled={disabled} className="flex-1 accent-blue-500" />
-            <span className="text-blue-400 font-mono">{x2}</span>
+            <span className="text-blue-700 font-mono">{x2}</span>
           </div>
           <div className="flex items-center gap-2">
-            <label className="text-slate-400">y₂:</label>
+            <label className="text-slate-600">y₂:</label>
             <input type="range" min={-5} max={5} step={1} value={y2} onChange={e => setY2(parseInt(e.target.value))} disabled={disabled} className="flex-1 accent-blue-500" />
-            <span className="text-blue-400 font-mono">{y2}</span>
+            <span className="text-blue-700 font-mono">{y2}</span>
           </div>
         </div>
       </div>
@@ -807,8 +808,8 @@ const PointPlotterVisual = ({ data, onAnswer, disabled }) => {
     <div className="mb-4">
       <canvas ref={canvasRef} width={360} height={360} onClick={handleClick}
         className="w-full rounded-xl border border-slate-700 cursor-crosshair" style={{ maxWidth: 400 }} />
-      <p className="text-xs text-slate-500 mt-2">Click the grid to place your point.</p>
-      {point && <p className="text-xs text-emerald-400 mt-1">Your point: ({point.x}, {point.y})</p>}
+      <p className="text-xs text-slate-600 mt-2">Click the grid to place your point.</p>
+      {point && <p className="text-xs text-emerald-700 mt-1">Your point: ({point.x}, {point.y})</p>}
     </div>
   );
 };
@@ -834,14 +835,14 @@ const FractionBarVisual = ({ data, onAnswer, disabled }) => {
       <svg viewBox={`0 0 ${W} ${H}`} className="w-full" style={{ maxWidth: 420 }}>
         {Array.from({ length: total }).map((_, i) => (
           <rect key={i} x={i * seg + 1} y={6} width={seg - 2} height={H - 12} rx="4"
-            fill={i < shaded ? '#22c55e' : '#1e293b'} stroke="#475569" strokeWidth="1.5"
+            fill={i < shaded ? FIGURE.filled : FIGURE.empty} stroke={FIGURE.outline} strokeWidth="1.5"
             onClick={() => click(i)} style={{ cursor: isShow ? 'default' : 'pointer' }} />
         ))}
       </svg>
       {!isShow && (
         <>
-          <p className="text-xs text-slate-500 mt-2">Click to shade parts of the bar.</p>
-          <p className="text-xs text-emerald-400 mt-1">Shaded: {shaded}/{total}</p>
+          <p className="text-xs text-slate-600 mt-2">Click to shade parts of the bar.</p>
+          <p className="text-xs text-emerald-700 mt-1">Shaded: {shaded}/{total}</p>
         </>
       )}
     </div>
@@ -871,16 +872,16 @@ const FractionNumberLineVisual = ({ data, onAnswer, disabled }) => {
   return (
     <div className="mb-4">
       <svg viewBox={`0 0 ${W} ${H}`} className="w-full cursor-pointer" style={{ maxWidth: 440 }} onClick={click}>
-        <line x1={pad} y1={lineY} x2={W - pad} y2={lineY} stroke="#64748b" strokeWidth="2" />
+        <line x1={pad} y1={lineY} x2={W - pad} y2={lineY} stroke={FIGURE.outline} strokeWidth="2" />
         {Array.from({ length: steps + 1 }).map((_, j) => (
           <g key={j}>
-            <line x1={xOf(j)} y1={lineY - 7} x2={xOf(j)} y2={lineY + 7} stroke="#64748b" strokeWidth="1.5" />
-            <text x={xOf(j)} y={lineY + 22} fill="#94a3b8" fontSize="9" textAnchor="middle">{label(j)}</text>
+            <line x1={xOf(j)} y1={lineY - 7} x2={xOf(j)} y2={lineY + 7} stroke={FIGURE.outline} strokeWidth="1.5" />
+            <text x={xOf(j)} y={lineY + 22} fill={FIGURE.label} fontSize="9" textAnchor="middle">{label(j)}</text>
           </g>
         ))}
-        {k != null && <circle cx={xOf(k)} cy={lineY} r="7" fill="#22c55e" />}
+        {k != null && <circle cx={xOf(k)} cy={lineY} r="7" fill={FIGURE.filled} />}
       </svg>
-      <p className="text-xs text-slate-500 mt-1">Click the number line to place the fraction.</p>
+      <p className="text-xs text-slate-600 mt-1">Click the number line to place the fraction.</p>
     </div>
   );
 };
@@ -900,14 +901,14 @@ const FractionCompareVisual = ({ data }) => {
             <g key={row}>
               {Array.from({ length: f.d }).map((_, i) => (
                 <rect key={i} x={i * seg + 1} y={y} width={seg - 2} height={barH} rx="3"
-                  fill={i < f.n ? (f.color || '#22c55e') : '#1e293b'} stroke="#475569" strokeWidth="1" />
+                  fill={i < f.n ? (f.color || FIGURE.filled) : FIGURE.empty} stroke={FIGURE.outline} strokeWidth="1" />
               ))}
-              <text x={W - 4} y={y + barH / 2 + 4} fill="#cbd5e1" fontSize="13" textAnchor="end" fontWeight="600">{f.n}/{f.d}</text>
+              <text x={W - 4} y={y + barH / 2 + 4} fill={FIGURE.label} fontSize="13" textAnchor="end" fontWeight="600">{f.n}/{f.d}</text>
             </g>
           );
         })}
       </svg>
-      <p className="text-xs text-slate-500 mt-1">Notice the pieces are different sizes.</p>
+      <p className="text-xs text-slate-600 mt-1">Notice the pieces are different sizes.</p>
     </div>
   );
 };
@@ -933,26 +934,26 @@ const IntegerLineVisual = ({ data, onAnswer, disabled }) => {
   return (
     <div className="mb-4">
       <svg viewBox={`0 0 ${W} ${H}`} className="w-full cursor-pointer" style={{ maxWidth: 480 }} onClick={click}>
-        <line x1={pad} y1={lineY} x2={W - pad} y2={lineY} stroke="#64748b" strokeWidth="2" />
+        <line x1={pad} y1={lineY} x2={W - pad} y2={lineY} stroke={FIGURE.outline} strokeWidth="2" />
         {Array.from({ length: span + 1 }).map((_, i) => {
           const v = min + i;
           return (
             <g key={v}>
-              <line x1={xOf(v)} y1={lineY - 6} x2={xOf(v)} y2={lineY + 6} stroke={v === 0 ? '#e2e8f0' : '#64748b'} strokeWidth={v === 0 ? 2 : 1} />
-              <text x={xOf(v)} y={lineY + 20} fill="#94a3b8" fontSize="9" textAnchor="middle">{v}</text>
+              <line x1={xOf(v)} y1={lineY - 6} x2={xOf(v)} y2={lineY + 6} stroke={FIGURE.outline} strokeWidth={v === 0 ? 2.5 : 1} />
+              <text x={xOf(v)} y={lineY + 20} fill={FIGURE.label} fontSize="9" textAnchor="middle">{v}</text>
             </g>
           );
         })}
         {data.start != null && (
           <g>
-            <circle cx={xOf(data.start)} cy={lineY} r="6" fill="#3b82f6" />
-            <text x={xOf(data.start)} y={lineY - 12} fill="#93c5fd" fontSize="10" textAnchor="middle">start</text>
+            <circle cx={xOf(data.start)} cy={lineY} r="6" fill={FIGURE.mark} />
+            <text x={xOf(data.start)} y={lineY - 12} fill={FIGURE.mark} fontSize="10" textAnchor="middle">start</text>
           </g>
         )}
-        {sel != null && <circle cx={xOf(sel)} cy={lineY} r="7" fill="#22c55e" />}
+        {sel != null && <circle cx={xOf(sel)} cy={lineY} r="7" fill={FIGURE.filled} />}
       </svg>
-      <p className="text-xs text-slate-500 mt-1">Click the number line to land your answer.</p>
-      {sel != null && <p className="text-xs text-emerald-400 mt-0.5">You landed on {sel}.</p>}
+      <p className="text-xs text-slate-600 mt-1">Click the number line to land your answer.</p>
+      {sel != null && <p className="text-xs text-emerald-700 mt-0.5">You landed on {sel}.</p>}
     </div>
   );
 };
@@ -978,11 +979,11 @@ const DecimalGridVisual = ({ data, onAnswer, disabled }) => {
         {Array.from({ length: 100 }).map((_, i) => {
           const r = Math.floor(i / 10), c = i % 10;
           return <rect key={i} x={c * cell} y={r * cell} width={cell - 1} height={cell - 1}
-            fill={i < shaded ? '#22c55e' : '#1e293b'} stroke="#475569" strokeWidth="0.5"
+            fill={i < shaded ? FIGURE.filled : FIGURE.empty} stroke={FIGURE.outline} strokeWidth="0.5"
             onClick={() => click(i)} style={{ cursor: isShow ? 'default' : 'pointer' }} />;
         })}
       </svg>
-      {!isShow && <p className="text-xs text-emerald-400 mt-2">Shaded: {shaded}/100 = {shaded / 100}</p>}
+      {!isShow && <p className="text-xs text-emerald-700 mt-2">Shaded: {shaded}/100 = {shaded / 100}</p>}
     </div>
   );
 };
@@ -1022,10 +1023,10 @@ const PlaceValueChartVisual = ({ data }) => {
           const x = i * colW, hl = i === highlight;
           return (
             <g key={i}>
-              <rect x={x + 2} y={top} width={colW - 4} height={headH} fill="#1e293b" stroke="#475569" />
-              <text x={x + colW / 2} y={top + headH / 2 + 4} fill="#94a3b8" fontSize="11" textAnchor="middle">{labels[i]}</text>
-              <rect x={x + 2} y={top + headH + 2} width={colW - 4} height={cellH} fill={hl ? '#a855f7' : '#0f172a'} stroke="#475569" />
-              <text x={x + colW / 2} y={top + headH + 2 + cellH / 2 + 9} fill="#fff" fontSize="26" textAnchor="middle" fontWeight="700">{d}</text>
+              <rect x={x + 2} y={top} width={colW - 4} height={headH} fill={FIGURE.card} stroke={FIGURE.outline} />
+              <text x={x + colW / 2} y={top + headH / 2 + 4} fill={FIGURE.label} fontSize="11" textAnchor="middle">{labels[i]}</text>
+              <rect x={x + 2} y={top + headH + 2} width={colW - 4} height={cellH} fill={hl ? FIGURE.emphasis : FIGURE.empty} stroke={FIGURE.outline} strokeWidth={hl ? 2 : 1} />
+              <text x={x + colW / 2} y={top + headH + 2 + cellH / 2 + 9} fill={FIGURE.label} fontSize="26" textAnchor="middle" fontWeight="700">{d}</text>
             </g>
           );
         })}
@@ -1045,18 +1046,18 @@ const FractionAreaVisual = ({ data }) => {
   for (let col = 0; col < b; col++) {
     for (let row = 0; row < d; row++) {
       const inCol = col < a, inRow = row < c;
-      let fill = '#0f172a';
+      let fill = FIGURE.empty;
       if (inCol && inRow) fill = '#a855f7';            // overlap = product
       else if (inCol) fill = 'rgba(34,197,94,0.4)';    // a/b of columns
       else if (inRow) fill = 'rgba(59,130,246,0.4)';   // c/d of rows
       cells.push(<rect key={`${col}-${row}`} x={col * cw} y={row * ch} width={cw} height={ch}
-        fill={fill} stroke="#475569" strokeWidth="1" />);
+        fill={fill} stroke={FIGURE.outline} strokeWidth="1" />);
     }
   }
   return (
     <div className="mb-4 flex flex-col items-center">
       <svg viewBox={`0 0 ${W} ${H}`} className="w-full" style={{ maxWidth: 250 }}>{cells}</svg>
-      <p className="text-xs text-slate-500 mt-2 text-center">
+      <p className="text-xs text-slate-600 mt-2 text-center">
         {a}/{b} of the columns × {c}/{d} of the rows — the purple overlap is the answer.
       </p>
     </div>

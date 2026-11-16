@@ -1110,17 +1110,20 @@ function ColumnOp({ data }) {
   const yTop = 20, yA = 46, yB = 74, yRule = 84, yR = 104;
   const H = yR + 12 + (caption ? 18 : 0);
   const colX = (i) => W - 34 - (i + 0.5) * CW;    // ones on the right
+  // The digits are drawn left to right, so the page reads 96117, not 71169.
+  const leftToRight = Array.from({ length: cols }, (_, n) => cols - 1 - n);
+  const said = `${a} ${sub ? 'minus' : 'plus'} ${b}${showResult ? ` equals ${result}` : ''}`;
   const opX = colX(cols - 1) - CW * 0.95;
 
   return (
     <div className="w-full">
-      <svg viewBox={`0 0 ${W} ${H}`} className="w-full" style={{ maxWidth: 300, margin: '0 auto', display: 'block' }} role="img" aria-label={`Column ${sub ? 'subtraction' : 'addition'} working`}>
+      <svg viewBox={`0 0 ${W} ${H}`} className="w-full" style={{ maxWidth: 300, margin: '0 auto', display: 'block' }} role="img" aria-label={`Column ${sub ? 'subtraction' : 'addition'}: ${said}`}>
         {/* addition carries — only on the reveal: deciding where to carry IS the practice */}
-        {!sub && showResult && carryIn.map((c, i) => c ? (
+        {!sub && showResult && leftToRight.map((i) => carryIn[i] ? (
           <text key={`c${i}`} x={colX(i)} y={yTop + 4} textAnchor="middle" fontSize="12" fontWeight="800" fill="#c98a14">1</text>
         ) : null)}
         {/* top number with borrow marks (reveal only) */}
-        {Array.from({ length: cols }).map((_, i) => {
+        {leftToRight.map((i) => {
           const dgt = da[i];
           if (dgt == null) return null;
           const x = colX(i);
@@ -1141,13 +1144,13 @@ function ColumnOp({ data }) {
         })}
         {/* second number + operator */}
         <text x={opX} y={yB} textAnchor="middle" fontSize="17" fontWeight="800" fill="#c98a14">{sub ? '−' : '+'}</text>
-        {Array.from({ length: cols }).map((_, i) => db[i] == null ? null : (
+        {leftToRight.map((i) => db[i] == null ? null : (
           <text key={`b${i}`} x={colX(i)} y={yB} textAnchor="middle" fontSize="18" fontWeight="700" fill="#1e293b">{db[i]}</text>
         ))}
         {/* the rule */}
         <line x1={opX - CW * 0.5} y1={yRule} x2={colX(0) + CW * 0.7} y2={yRule} stroke="#64748b" strokeWidth="1.8" />
         {/* result row — hidden in practice */}
-        {Array.from({ length: cols }).map((_, i) => {
+        {leftToRight.map((i) => {
           if (!showResult) {
             return dr[i] == null ? null : <text key={`r${i}`} x={colX(i)} y={yR} textAnchor="middle" fontSize="17" fontWeight="700" fill="#cbd5e1">?</text>;
           }
