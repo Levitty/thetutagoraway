@@ -2,6 +2,7 @@
 // the lowest skill their child is missing, what it rests on, and what rests on
 // it. Pure, so it can be tested without the app.
 import { SKILLS } from '../ai-tutor/knowledgeGraph.js';
+import { NATIVE, gradeOf } from '../ai-tutor/curricula.js';
 
 const passed = (sp) => !!sp && sp.passed === true;
 const failed = (sp) => !!sp && sp.fromDiagnostic === true && sp.passed === false;
@@ -12,21 +13,32 @@ export const plainName = (name = '') =>
   name.replace(/(^|[\s(])([A-Z])([a-z]+)/g, (m, pre, first, rest, offset) =>
     offset === 0 ? m : pre + first.toLowerCase() + rest);
 
-export function findMissingStep(progress, skills = SKILLS) {
+export function findMissingStep(progress, skills = SKILLS, curriculum = progress?.curriculum) {
   const sk = progress?.skills || {};
   const declared = Number(progress?.declaredGrade) || null;
   const placement = Number(progress?.placementGrade) || null;
 
   if (!Object.keys(sk).length) return { missing: null, solid: [], next: [], otherGaps: [], placement, declared, allClear: false };
 
-  const gaps = Object.keys(sk).filter(id => skills[id] && failed(sk[id]));
+  // A gap is a skill at or below where the child placed. A stretch question
+  // missed ABOVE it is the next thing to learn, not something missing: a child
+  // who cleared Grade 9 and missed the one Grade 10 probe was being told their
+  // missing step was Grade 10 sequences (feedback F9). Grades are read in the
+  // child's own curriculum.
+  const curr = curriculum || NATIVE;
+  const level = placement || declared;
+  const failedAll = Object.keys(sk).filter(id => skills[id] && failed(sk[id]));
+  const above = (id) => level != null && gradeOf(skills[id], curr) > level;
+  const gaps = failedAll.filter(id => !above(id));
+  const stretch = failedAll.filter(above).sort((a, b) => gradeOf(skills[a], curr) - gradeOf(skills[b], curr));
   // A root gap is a missing skill whose own prerequisites aren't missing:
   // that's where the ladder actually breaks.
   const roots = gaps.filter(id => !(skills[id].prerequisites || []).some(p => gaps.includes(p)));
   const pool = roots.length ? roots : gaps;
   const ranked = [...pool].sort((a, b) => {
     const A = skills[a], B = skills[b];
-    if (A.grade !== B.grade) return A.grade - B.grade;
+    const gA = gradeOf(A, curr), gB = gradeOf(B, curr);
+    if (gA !== gB) return gA - gB;
     if (!!B.critical !== !!A.critical) return B.critical ? 1 : -1;
     return (skills[b].weight || 0) - (skills[a].weight || 0);
   });
@@ -37,10 +49,14 @@ export function findMissingStep(progress, skills = SKILLS) {
   // where they placed.
   if (!missing) {
     allClear = true;
+    // What they reached for and missed is the natural next step.
+    if (stretch.length) missing = stretch[0];
+  }
+  if (!missing) {
     const from = (placement || declared || 1) + 1;
     missing = Object.values(skills)
-      .filter(s => s.grade >= from && !passed(sk[s.id]) && (s.prerequisites || []).every(p => passed(sk[p]) || !skills[p]))
-      .sort((a, b) => a.grade - b.grade || (b.critical ? 1 : 0) - (a.critical ? 1 : 0))[0]?.id || null;
+      .filter(s => gradeOf(s, curr) >= from && !passed(sk[s.id]) && (s.prerequisites || []).every(p => passed(sk[p]) || !skills[p]))
+      .sort((a, b) => gradeOf(a, curr) - gradeOf(b, curr) || (b.critical ? 1 : 0) - (a.critical ? 1 : 0))[0]?.id || null;
   }
   if (!missing) return { missing: null, solid: [], next: [], otherGaps: [], placement, declared, allClear };
 

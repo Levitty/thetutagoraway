@@ -110,6 +110,16 @@ const longSecure = (skill, progress) => {
   return !(sp?.attempts > 0 && !sp.mastered);   // struggle cancels it, as above
 };
 
+// Fluency drills: never more than one grade below the practice anchor
+// (placement or class grade, whichever is higher), in curriculum grades.
+const FLUENCY_FLOOR_GAP = 1;
+const belowDrillFloor = (skill, progress, c) => {
+  const lvl = Math.max(progress?.placementGrade ?? 0, progress?.declaredGrade ?? 0);
+  if (!lvl) return false;
+  const g = gradeOf(skill, c.curriculum);
+  return Number.isFinite(g) && g < lvl - FLUENCY_FLOOR_GAP;
+};
+
 export const prereqsMet = (skillId, progress, ctx) => {
   const c = resolveCtx(ctx);
   const skill = c.skills[skillId];
@@ -159,8 +169,12 @@ export const findGaps = (progress, ctx) => {
   const gaps = [];
   const seen = new Set();
 
+  const lvl = learnerLevel(progress);
   for (const skill of c.skillList) {
     const sp = progress.skills[skill.id];
+    // A stretch question missed in the check, above where the child placed, is
+    // new learning, not a sign that its foundations are missing (feedback F9).
+    if (lvl && sp?.fromDiagnostic && !(sp.attempts > 1) && gradeOf(skill, c.curriculum) > lvl) continue;
     if (isStruggling(sp)) {
       const preReqs = skill.keyPrerequisites || skill.prerequisites;
       for (const pid of preReqs) {
@@ -169,6 +183,9 @@ export const findGaps = (progress, ctx) => {
           seen.add(pid);
           const preSkill = c.skills[pid];
           if (!preSkill) continue;
+          // A foundation above where the child placed has not been taught
+          // yet, so it is next to learn, never a gap (feedback F9).
+          if (lvl && gradeOf(preSkill, c.curriculum) > lvl) continue;
 
           let dependentCount = 0;
           try { dependentCount = c.getPostChain(pid).length; } catch(e) { dependentCount = 0; }
@@ -361,7 +378,15 @@ export const getFluencyPractice = (progress, ctx) => {
     // Activities. Building automaticity on work a learner finished years
     // ago buys nothing; the point of fluency practice is to free working
     // memory for what they are learning NOW.
-    if (!sp.practisedHere && longSecure(skill, progress)) continue;
+    //
+    // F4 (21 Oct): that three-grade write-off window was still too wide for
+    // a DRILL. A strong Grade 4 placed at Grade 5 got a timed rep on
+    // G3_COUNTING in every sitting, a third of their practice two grades
+    // below where they placed, and the same at every grade 4-9. A fluency rep
+    // comes from the grade they are at or the one just below, in the child's
+    // own curriculum (a CBC child's grades, not the graph's). Work practised
+    // here (a foundation rebuilt after a real miss) stays drillable.
+    if (!sp.practisedHere && belowDrillFloor(skill, progress, c)) continue;
     out.push({
       ...skill,
       type: 'fluency',
@@ -442,12 +467,12 @@ export const leadWithMissingStep = (path, progress, ctx) => {
   if (!progress?.diagnosed || !Array.isArray(path)) return path;
   const c = resolveCtx(ctx);
   let r;
-  try { r = findMissingStep(progress, c.skills); } catch { return path; }
+  try { r = findMissingStep(progress, c.skills, c.curriculum); } catch { return path; }
   const id = r?.missing;
   const skill = id && c.skills[id];
   if (!skill || progress.skills?.[id]?.mastered) return path;
   if (path[0]?.id === id) return path;
-  const lead = { ...(path.find(p => p.id === id) || skill), type: r.allClear ? 'learn' : 'gap', reason: 'The missing step from the check' };
+  const lead = { ...(path.find(p => p.id === id) || skill), type: r.allClear ? 'learn' : 'gap', reason: r.allClear ? 'Next to learn after the check' : 'The missing step from the check' };
   return [lead, ...path.filter(p => p.id !== id)];
 };
 
