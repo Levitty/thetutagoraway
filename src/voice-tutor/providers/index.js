@@ -17,7 +17,7 @@
 //            stream.version()                           grows as times arrive
 //            stream.failed / stream.stop()
 //          stop()                                     silence at once (barge-in)
-//          browser-voice (practice) | cartesia (live) | simulated (silent, where neither works)
+//          browser-voice (practice) | cartesia (live) | elevenlabs (live, ?tts=elevenlabs, to try) | simulated
 //   stt    open({ onSpeech, onPartial, onPause, onUtterance, onNoise, onBargeIn, onError, pace })
 //            -> { setMode('child'|'tutor'|'off'), close() }   one listening session for the whole lesson
 //          cartesia-ink (live, continuous itself) | browser-listening (practice) and typed-as-speech
@@ -29,6 +29,7 @@
 import { createMockTutor } from '../mockTutor.js';
 import { simulatedTts, fakeStt } from './mockVoice.js';
 import { cartesiaTts } from './cartesia.js';
+import { elevenlabsTts } from './elevenlabs.js';
 import { cartesiaStt } from './cartesiaStt.js';
 import { webSpeechTts, webSpeechStt, hasWebSpeechStt } from './webSpeech.js';
 import { readTurnStream } from './turnStream.js';
@@ -71,11 +72,12 @@ export const remoteTutor = (supabase) => ({
 });
 
 /** One Cartesia token for speaking and listening, kept until shortly before it expires. */
-export const tokenGetter = (supabase, sessionId, childId = () => null) => {
+// `tts: 'elevenlabs'` asks for an ElevenLabs single-use token instead: spent on one connection, so never kept.
+export const tokenGetter = (supabase, sessionId, childId = () => null, { tts = null } = {}) => {
   let cached = null; let until = 0;
   return async () => {
-    if (cached && Date.now() < until) return cached;
-    const { data, error } = await supabase.functions.invoke('voice-tutor-token', { body: { session_id: sessionId(), child_id: childId() } });
+    if (!tts && cached && Date.now() < until) return cached;
+    const { data, error } = await supabase.functions.invoke('voice-tutor-token', { body: { session_id: sessionId(), child_id: childId(), ...(tts ? { tts } : {}) } });
     if (error) {
       // The function's own reason (status and the voice service's answer), for the tester view.
       let body = null; try { body = await error.context?.json?.(); } catch { /* not JSON */ }
@@ -94,7 +96,7 @@ export const tokenGetter = (supabase, sessionId, childId = () => null) => {
  * The self-playing demo "speaks" typed words instead of listening.
  * mode 'remote': the real tutor; with voice, Cartesia speaks and listens (Ink).
  */
-export function providersFor(mode, { supabase = null, voice = true, sessionId = () => '', childId = () => null, demo = false, quiet = false } = {}) {
+export function providersFor(mode, { supabase = null, voice = true, sessionId = () => '', childId = () => null, demo = false, quiet = false, tts = 'cartesia' } = {}) {
   if (mode !== 'remote') {
     return {
       tutor: createMockTutor(),
@@ -105,7 +107,9 @@ export function providersFor(mode, { supabase = null, voice = true, sessionId = 
   const getToken = tokenGetter(supabase, sessionId, childId);
   return {
     tutor: remoteTutor(supabase),
-    tts: voice ? cartesiaTts({ getToken }) : simulatedTts(),
+    tts: !voice ? simulatedTts()
+      : tts === 'elevenlabs' ? elevenlabsTts({ getToken: tokenGetter(supabase, sessionId, childId, { tts: 'elevenlabs' }) })
+      : cartesiaTts({ getToken }),
     stt: voice ? cartesiaStt({ getToken }) : null,
   };
 }

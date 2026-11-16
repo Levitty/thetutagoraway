@@ -101,7 +101,7 @@ test('word times drive the strokes; while streaming, a stroke waits for its word
   timing[1] = { words: [{ word: 'Shade', start: 0, end: 300 }, { word: 'three', start: 320, end: 600 }, { word: 'of', start: 620, end: 700 }, { word: 'them.', start: 720, end: 1000 }], duration: 1050, complete: true };
   updateTimeline(p, buildTimeline(steps, { speech }));
   assert.equal(ev('highlight').t, 1400 + SENTENCE_GAP_MS + 320);
-  assert.ok(readFileSync(new URL('../src/voice-tutor/providers/cartesia.js', import.meta.url), 'utf8').includes('SENTENCE_GAP_MS'), 'the voice uses the same gap');
+  assert.ok(readFileSync(new URL('../src/voice-tutor/providers/socketVoice.js', import.meta.url), 'utf8').includes('SENTENCE_GAP_MS'), 'the voice uses the same gap');
   assert.ok(p.fired.has(1), 'what fired stays fired across rebuilds');
 });
 

@@ -562,7 +562,11 @@ var DEFAULT_SETTINGS = Object.freeze({
   // Speed (Sonic: 0.6 to 1.5, 1 is normal) and emotion for a ten-year-old; the pace state moves them from here (childVoice.js).
   ttsSpeed: CHILD_SPEECH.baseSpeed,
   ttsEmotion: CHILD_SPEECH.emotion,
-  ttsSampleRate: 24e3
+  ttsSampleRate: 24e3,
+  // ElevenLabs, the second voice to try (owner, 16 Nov 2026): Flash v2.5 over the multi-context WebSocket,
+  // asked for with ?tts=elevenlabs. The voice id is a setting (VOICE_TUTOR_EL_VOICE); the default is a stock voice.
+  elModel: "eleven_flash_v2_5",
+  elVoice: "21m00Tcm4TlvDq8ikWAM"
 });
 var num = (v, d) => Number.isFinite(Number(v)) && String(v ?? "").trim() !== "" ? Number(v) : d;
 var settingsFrom = (get = () => void 0) => ({
@@ -580,6 +584,8 @@ var settingsFrom = (get = () => void 0) => ({
   ttsSpeed: Math.max(0.6, Math.min(1.5, num(get("VOICE_TUTOR_TTS_SPEED"), DEFAULT_SETTINGS.ttsSpeed))),
   ttsEmotion: ["neutral", "calm", "content", "sad", "angry", "none"].includes(get("VOICE_TUTOR_TTS_EMOTION")) ? get("VOICE_TUTOR_TTS_EMOTION") : DEFAULT_SETTINGS.ttsEmotion,
   ttsSampleRate: [16e3, 22050, 24e3, 44100].includes(num(get("VOICE_TUTOR_TTS_SAMPLE_RATE"), 0)) ? num(get("VOICE_TUTOR_TTS_SAMPLE_RATE"), 0) : DEFAULT_SETTINGS.ttsSampleRate,
+  elModel: get("VOICE_TUTOR_EL_MODEL") || DEFAULT_SETTINGS.elModel,
+  elVoice: get("VOICE_TUTOR_EL_VOICE") || DEFAULT_SETTINGS.elVoice,
   // The turn gate (gate.js, PLAN_TO_FOUR.md step 3): on unless VOICE_TUTOR_GATE=0.
   gate: get("VOICE_TUTOR_GATE") !== "0",
   // Matched good-turn examples in the turn's context (examples lookup, step 5): an A/B switch, off unless set to 1.
@@ -597,6 +603,8 @@ var TOKEN_TTL_S = 600;
 var TOKENS_PER_MINUTE = 20;
 var CARTESIA_WS = "wss://api.cartesia.ai/tts/websocket";
 var CARTESIA_VERSION = "2026-08-14";
+var ELEVENLABS_WS = "wss://api.elevenlabs.io/v1/text-to-speech";
+var EL_SAMPLE_RATE = 24e3;
 var reply = (status, body) => ({ status, body });
 var dayStartIso = (now) => {
   const d = new Date(now);
@@ -626,7 +634,28 @@ async function mintToken({ user, body, db, settings, keys = {}, fetch: f, now = 
   if (!cap.ok) return reply(402, { error: "This lesson has used its allowance for today.", reason: cap.reason });
   const recent = await db.countTokens({ userId: user.id, since: new Date(now - 6e4).toISOString() });
   if (recent >= TOKENS_PER_MINUTE) return reply(429, { error: "Too many voice requests. Wait a moment." });
-  const key = String(keys.cartesia || "").trim().replace(/^["']|["']$/g, "");
+  const clean = (k) => String(k || "").trim().replace(/^["']|["']$/g, "");
+  if (body?.tts === "elevenlabs") {
+    const el = clean(keys.elevenlabs);
+    if (!el) return reply(503, { error: "ElevenLabs is not set up (ELEVENLABS_API_KEY is missing)." });
+    let out2;
+    try {
+      const r = await f("https://api.elevenlabs.io/v1/single-use-token/tts_websocket", { method: "POST", headers: { "xi-api-key": el } });
+      if (!r.ok) {
+        const t = typeof r.text === "function" ? await r.text().catch(() => "") : "";
+        throw new Error(`elevenlabs ${r.status} ${t.slice(0, 120)}`);
+      }
+      const j = await r.json();
+      if (!j?.token) throw new Error("elevenlabs gave no token");
+      out2 = { provider: "elevenlabs", token: j.token, expires_in: 840, url: ELEVENLABS_WS, model: settings.elModel, voice: settings.elVoice, sample_rate: EL_SAMPLE_RATE };
+    } catch (e) {
+      console.error("voice token", String(e?.message || e).slice(0, 200));
+      return reply(502, { error: "The voice service did not answer. Please type for now.", detail: String(e?.message || e).slice(0, 160) });
+    }
+    await db.recordUsage({ user_id: user.id, child_key: childKey, session_id: sid, model: "elevenlabs", cost_usd: 0, guard: ["token-voice"], dropped_steps: 0 });
+    return reply(200, out2);
+  }
+  const key = clean(keys.cartesia);
   if (!key) return reply(503, { error: "Voice is not set up (CARTESIA_API_KEY is missing)." });
   let out;
   try {
@@ -694,7 +723,7 @@ Deno.serve(async (req) => {
       body: await req.json().catch(() => ({})),
       db: dbFor(admin),
       settings: settingsFrom((k) => Deno.env.get(k)),
-      keys: { cartesia: Deno.env.get("CARTESIA_API_KEY") },
+      keys: { cartesia: Deno.env.get("CARTESIA_API_KEY"), elevenlabs: Deno.env.get("ELEVENLABS_API_KEY") },
       fetch
     });
     return json(out.body, out.status);

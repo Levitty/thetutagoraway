@@ -435,7 +435,7 @@ export function VoiceTutor({ user = null, isAdmin = false, onNavigate = null, ch
 
   const start = async () => {
     const sid = () => sessionRef.current.id;
-    providers.current = providersFor(mode, { supabase, voice: voiceOn, sessionId: sid, childId: () => childId || null, demo, quiet: q.get('quiet') === '1' });
+    providers.current = providersFor(mode, { supabase, voice: voiceOn, sessionId: sid, childId: () => childId || null, demo, quiet: q.get('quiet') === '1', tts: q.get('tts') === 'elevenlabs' ? 'elevenlabs' : 'cartesia' });
     const missing = checkProviders(providers.current);
     if (missing.length) console.error('voice-tutor: provider is missing', missing);
     startedAt.current = clock();
@@ -939,7 +939,7 @@ function TesterPanel({ lesson = null, moves = [], voiceId = null, onVoice = null
   return (
     <div className="fixed inset-x-2 bottom-2 top-12 sm:left-auto sm:w-[400px] z-50 bg-white rounded-2xl border border-slate-300 overflow-y-auto p-4 text-sm">
       <div className="flex items-center"><b className="text-base">Tester view</b><button type="button" className="ml-auto font-bold" onClick={onClose}>Close</button></div>
-      <p className="text-slate-500 mt-1">Adult testers only: a prototype. Mode: {mode === 'remote' ? 'live model' : 'scripted'}. Nothing is saved yet (storage and review come in milestone 4).</p>
+      <p className="text-slate-500 mt-1">Adult testers only: a prototype. Mode: {mode === 'remote' ? 'live model' : 'scripted'}{mode === 'remote' ? `, voice: ${q.get('tts') === 'elevenlabs' ? 'ElevenLabs' : 'Cartesia'}` : ''}. Nothing is saved yet (storage and review come in milestone 4).</p>
       <h3 className="font-extrabold mt-3">Lesson</h3>
       <p>Target: {session.target ? skillName(session.target) : 'not chosen yet'}</p>
       <p>Weakest prerequisite: {session.prerequisite ? skillName(session.prerequisite) : 'none'}</p>

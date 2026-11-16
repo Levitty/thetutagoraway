@@ -5493,7 +5493,11 @@ var DEFAULT_SETTINGS = Object.freeze({
   // Speed (Sonic: 0.6 to 1.5, 1 is normal) and emotion for a ten-year-old; the pace state moves them from here (childVoice.js).
   ttsSpeed: CHILD_SPEECH.baseSpeed,
   ttsEmotion: CHILD_SPEECH.emotion,
-  ttsSampleRate: 24e3
+  ttsSampleRate: 24e3,
+  // ElevenLabs, the second voice to try (owner, 16 Nov 2026): Flash v2.5 over the multi-context WebSocket,
+  // asked for with ?tts=elevenlabs. The voice id is a setting (VOICE_TUTOR_EL_VOICE); the default is a stock voice.
+  elModel: "eleven_flash_v2_5",
+  elVoice: "21m00Tcm4TlvDq8ikWAM"
 });
 var num = (v, d) => Number.isFinite(Number(v)) && String(v ?? "").trim() !== "" ? Number(v) : d;
 var settingsFrom = (get = () => void 0) => ({
@@ -5511,6 +5515,8 @@ var settingsFrom = (get = () => void 0) => ({
   ttsSpeed: Math.max(0.6, Math.min(1.5, num(get("VOICE_TUTOR_TTS_SPEED"), DEFAULT_SETTINGS.ttsSpeed))),
   ttsEmotion: ["neutral", "calm", "content", "sad", "angry", "none"].includes(get("VOICE_TUTOR_TTS_EMOTION")) ? get("VOICE_TUTOR_TTS_EMOTION") : DEFAULT_SETTINGS.ttsEmotion,
   ttsSampleRate: [16e3, 22050, 24e3, 44100].includes(num(get("VOICE_TUTOR_TTS_SAMPLE_RATE"), 0)) ? num(get("VOICE_TUTOR_TTS_SAMPLE_RATE"), 0) : DEFAULT_SETTINGS.ttsSampleRate,
+  elModel: get("VOICE_TUTOR_EL_MODEL") || DEFAULT_SETTINGS.elModel,
+  elVoice: get("VOICE_TUTOR_EL_VOICE") || DEFAULT_SETTINGS.elVoice,
   // The turn gate (gate.js, PLAN_TO_FOUR.md step 3): on unless VOICE_TUTOR_GATE=0.
   gate: get("VOICE_TUTOR_GATE") !== "0",
   // Matched good-turn examples in the turn's context (examples lookup, step 5): an A/B switch, off unless set to 1.

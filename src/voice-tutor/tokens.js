@@ -12,6 +12,10 @@
 // Each token minted is logged (cost 0) so the rate limit has something to count.
 //
 //   POST { session_id, child_id? }  ->  { token, expires_in, version, url, model, voice, sample_rate }
+//   POST { session_id, child_id?, tts: 'elevenlabs' }  ->  { provider: 'elevenlabs', token, url, model, voice, sample_rate }
+//     ElevenLabs (owner, 16 Nov 2026, to try beside Cartesia): one single-use token per connection
+//     (POST /v1/single-use-token/tts_websocket, consumed when the socket opens). ELEVENLABS_API_KEY stays here.
+//     Same rules as above; listening stays on Cartesia.
 // Pure: database, fetch and keys passed in. Tested in tests/voice-tutor-voice.test.mjs.
 // ============================================================================
 import { capCheck } from './session.js';
@@ -19,6 +23,8 @@ export const TOKEN_TTL_S = 600;     // a stretch of the lesson; the page asks ag
 export const TOKENS_PER_MINUTE = 20;
 export const CARTESIA_WS = 'wss://api.cartesia.ai/tts/websocket';
 export const CARTESIA_VERSION = '2026-08-14';
+export const ELEVENLABS_WS = 'wss://api.elevenlabs.io/v1/text-to-speech';
+export const EL_SAMPLE_RATE = 24000;   // pcm_24000: 16-bit mono PCM
 
 const reply = (status, body) => ({ status, body });
 export const dayStartIso = (now) => { const d = new Date(now); d.setUTCHours(0, 0, 0, 0); return d.toISOString(); };
@@ -29,7 +35,7 @@ export const dayStartIso = (now) => { const d = new Date(now); d.setUTCHours(0, 
  * @param {{session_id:string, child_id?:string}} a.body
  * @param {object} a.db        spend({ sessionId, childKey, since }), countTokens({ userId, since }), recordUsage(row), getChild(id)
  * @param {object} a.settings  settingsFrom(env)
- * @param {{ cartesia?:string }} a.keys
+ * @param {{ cartesia?:string, elevenlabs?:string }} a.keys
  * @param {Function} a.fetch
  */
 export async function mintToken({ user, body, db, settings, keys = {}, fetch: f, now = Date.now() }) {
@@ -55,7 +61,25 @@ export async function mintToken({ user, body, db, settings, keys = {}, fetch: f,
   if (recent >= TOKENS_PER_MINUTE) return reply(429, { error: 'Too many voice requests. Wait a moment.' });
 
   // A key pasted with a line break, spaces or quotes round it is still the key.
-  const key = String(keys.cartesia || '').trim().replace(/^["']|["']$/g, '');
+  const clean = (k) => String(k || '').trim().replace(/^["']|["']$/g, '');
+  if (body?.tts === 'elevenlabs') {
+    const el = clean(keys.elevenlabs);
+    if (!el) return reply(503, { error: 'ElevenLabs is not set up (ELEVENLABS_API_KEY is missing).' });
+    let out;
+    try {
+      const r = await f('https://api.elevenlabs.io/v1/single-use-token/tts_websocket', { method: 'POST', headers: { 'xi-api-key': el } });
+      if (!r.ok) { const t = typeof r.text === 'function' ? await r.text().catch(() => '') : ''; throw new Error(`elevenlabs ${r.status} ${t.slice(0, 120)}`); }
+      const j = await r.json();
+      if (!j?.token) throw new Error('elevenlabs gave no token');
+      out = { provider: 'elevenlabs', token: j.token, expires_in: 840, url: ELEVENLABS_WS, model: settings.elModel, voice: settings.elVoice, sample_rate: EL_SAMPLE_RATE };
+    } catch (e) {
+      console.error('voice token', String(e?.message || e).slice(0, 200));
+      return reply(502, { error: 'The voice service did not answer. Please type for now.', detail: String(e?.message || e).slice(0, 160) });
+    }
+    await db.recordUsage({ user_id: user.id, child_key: childKey, session_id: sid, model: 'elevenlabs', cost_usd: 0, guard: ['token-voice'], dropped_steps: 0 });
+    return reply(200, out);
+  }
+  const key = clean(keys.cartesia);
   if (!key) return reply(503, { error: 'Voice is not set up (CARTESIA_API_KEY is missing).' });
 
   let out;
