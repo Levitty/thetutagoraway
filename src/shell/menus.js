@@ -68,6 +68,11 @@ export function menuFor({ kind, approved = false, hasClasses = false, isAdmin = 
     };
   }
 
+  // An independent teacher (16 Nov 2026): their home now; Lessons and Classes open here next.
+  if (kind === 'teacher') {
+    return { sections: [{ items: [item('overview', 'Home', 'home', 'dashboard', 'overview')] }], foot, bar: ['overview'] };
+  }
+
   const teaching = hasClasses ? [teachingSection()] : [];
 
   if (kind === 'learner') {
@@ -109,6 +114,7 @@ export function menuFor({ kind, approved = false, hasClasses = false, isAdmin = 
 /** Which menu an account gets. A tutor is a tutor; `student` is the learner's own account. */
 export function personKind(profile, accountType) {
   if (profile?.role === 'tutor') return 'tutor';
+  if (profile?.role === 'teacher' || accountType === 'teacher') return 'teacher';
   if (accountType === 'student') return 'learner';
   return 'parent';
 }

@@ -45,6 +45,7 @@ const LazySpreadsheet = named(() => import('./Spreadsheet.jsx'), 'Spreadsheet');
 const LazyConsultingPage = named(() => import('./ConsultingPage.jsx'), 'ConsultingPage');
 const LazySchoolsPage = lazy(() => import('./SchoolsPage.jsx'));
 const LazyClubsPage = lazy(() => import('./ClubsPage.jsx'));
+const LazyTeacherHome = lazy(() => import('./teacher/TeacherHome.jsx'));
 const LazyRocketChallenge = named(() => import('./rocket/RocketChallenge.jsx'), 'RocketChallenge');
 // HOREB live tutor prototype (test only). Without VITE_VOICE_TUTOR=1 the import is
 // compiled out, so no phone precaches a chunk it can never open.
@@ -69,3 +70,4 @@ export const SchoolsPage = route(LazySchoolsPage);
 export const ClubsPage = route(LazyClubsPage);
 export const RocketChallenge = route(LazyRocketChallenge);
 export const VoiceTutor = route(LazyVoiceTutor);
+export const TeacherHome = route(LazyTeacherHome);
