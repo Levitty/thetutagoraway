@@ -53,7 +53,8 @@ const greeting = (d = new Date()) => (d.getHours() < 12 ? 'Good morning' : d.get
 /**
  * The teacher's screens in HOREB's one frame, with their classes listed under the
  * menu. `classes` is [{ id, name, size }]. Signed out (the teacher demo) there is
- * no person, so the teaching items are the whole menu.
+ * no person, so the teaching items are the whole menu. In a demo they are the whole menu
+ * even for someone signed in, so no link leaves the demo for their own pages (owner, 16 Nov 2026).
  */
 export function TeacherShell({ active, onNav, classes = [], onOpenClass, activeClassId, demoNote, title, children }) {
   const ctx = useShell();
@@ -62,7 +63,7 @@ export function TeacherShell({ active, onNav, classes = [], onOpenClass, activeC
     return false;
   };
   return (
-    <AppShell active={active} title={title} note={demoNote} menu={ctx ? undefined : teachingMenu()} onItem={onItem}
+    <AppShell active={active} title={title} note={demoNote} menu={ctx && !demoNote ? undefined : teachingMenu()} onItem={onItem}
       extra={classes.length > 0 ? <>
         <div className="hb-lbl">My classes</div>
         {classes.map(c => (
