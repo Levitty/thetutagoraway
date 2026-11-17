@@ -1,0 +1,999 @@
+{
+ "outcomes": {
+  "MATH.G7.NUMBER.WHOLE_NUMBERS.a": "use place value and total value of digits up to hundreds of millions in real life",
+  "MATH.G7.NUMBER.WHOLE_NUMBERS.b": "read and write numbers in symbols up to hundreds of millions in real life situations",
+  "MATH.G7.NUMBER.WHOLE_NUMBERS.c": "read and write numbers in words up to millions for fluency",
+  "MATH.G7.NUMBER.WHOLE_NUMBERS.d": "round off numbers up to the nearest hundreds of millions in real life situations",
+  "MATH.G7.NUMBER.WHOLE_NUMBERS.e": "classify natural numbers as even, odd and prime in different situations",
+  "MATH.G7.NUMBER.WHOLE_NUMBERS.f": "apply operations of whole numbers in real life situations",
+  "MATH.G7.NUMBER.WHOLE_NUMBERS.g": "identify number sequence in different situations",
+  "MATH.G7.NUMBER.WHOLE_NUMBERS.h": "create number sequence for playing number games",
+  "MATH.G7.NUMBER.WHOLE_NUMBERS.i": "appreciate use of whole numbers in real life situations",
+  "MATH.G7.NUMBER.FACTORS.a": "test divisibility of numbers by 2, 3, 4, 5, 6, 8, 9,10 and 11 in different situations",
+  "MATH.G7.NUMBER.FACTORS.b": "express composite numbers as a product of prime factors in different situations",
+  "MATH.G7.NUMBER.FACTORS.c": "work out the Greatest Common Divisor (GCD) and the Least Common Multiples (LCM) of numbers by factor method in different situations",
+  "MATH.G7.NUMBER.FACTORS.d": "apply the Greatest Common Divisor (GCD) and the Least Common Multiples (LCM) in real life situations",
+  "MATH.G7.NUMBER.FACTORS.e": "reflect on use of factors in real life situations",
+  "MATH.G7.NUMBER.FRACTIONS.a": "compare fractions in different situations",
+  "MATH.G7.NUMBER.FRACTIONS.b": "add fractions in different situations",
+  "MATH.G7.NUMBER.FRACTIONS.c": "subtract fractions in different situations",
+  "MATH.G7.NUMBER.FRACTIONS.d": "multiply fractions by a whole number, fraction and a mixed number in real life situations",
+  "MATH.G7.NUMBER.FRACTIONS.e": "identify the reciprocals of fractions in different situations",
+  "MATH.G7.NUMBER.FRACTIONS.f": "divide fractions by a whole number, fraction and a mixed fraction in real life situations",
+  "MATH.G7.NUMBER.FRACTIONS.g": "divide a whole number by fractions in different situations",
+  "MATH.G7.NUMBER.FRACTIONS.h": "identify number sequence involving fractions in different situations",
+  "MATH.G7.NUMBER.FRACTIONS.i": "create number sequence involving fractions for playing number games",
+  "MATH.G7.NUMBER.FRACTIONS.j": "recognise use of fractions in real life situations",
+  "MATH.G7.NUMBER.DECIMALS.a": "identify the place value and the total value of digits in decimals in real life",
+  "MATH.G7.NUMBER.DECIMALS.b": "multiply decimals by a whole number and by a decimal in real life situations",
+  "MATH.G7.NUMBER.DECIMALS.c": "divide decimals by a whole number and by a decimal in real life situations",
+  "MATH.G7.NUMBER.DECIMALS.d": "recognise use of decimals in real life situations",
+  "MATH.G7.NUMBER.SQUARES_AND_SQUARE_ROOTS.a": "determine the squares of whole numbers, fractions and decimals by multiplication in different situations",
+  "MATH.G7.NUMBER.SQUARES_AND_SQUARE_ROOTS.b": "determine the square roots of whole numbers, fractions and decimals of perfect squares in different situations",
+  "MATH.G7.NUMBER.SQUARES_AND_SQUARE_ROOTS.c": "appreciate use of squares and square roots in real life situations",
+  "MATH.G7.ALGEBR.ALGEBRAIC_EXPRESSIONS.a": "form algebraic expressions from real life situations",
+  "MATH.G7.ALGEBR.ALGEBRAIC_EXPRESSIONS.b": "form algebraic expressions from simple algebraic statements in real life situations",
+  "MATH.G7.ALGEBR.ALGEBRAIC_EXPRESSIONS.c": "simplify algebraic expressions in real life situations",
+  "MATH.G7.ALGEBR.ALGEBRAIC_EXPRESSIONS.d": "appreciate use of algebraic expressions in real life",
+  "MATH.G7.ALGEBR.LINEAR_EQUATIONS.a": "form linear equations in one unknown in different situations",
+  "MATH.G7.ALGEBR.LINEAR_EQUATIONS.b": "solve linear equations in one unknown in different situations",
+  "MATH.G7.ALGEBR.LINEAR_EQUATIONS.c": "apply linear equations in one unknown to real life situations",
+  "MATH.G7.ALGEBR.LINEAR_EQUATIONS.d": "reflect on use of linear equations in real life situations",
+  "MATH.G7.ALGEBR.LINEAR_INEQUALITIES.a": "apply inequality symbols to inequality statements in learning situations",
+  "MATH.G7.ALGEBR.LINEAR_INEQUALITIES.b": "form simple linear inequalities in one unknown in different situations",
+  "MATH.G7.ALGEBR.LINEAR_INEQUALITIES.c": "illustrate simple inequalities on a number line",
+  "MATH.G7.ALGEBR.LINEAR_INEQUALITIES.d": "form compound inequality statements in one unknown in different situations",
+  "MATH.G7.ALGEBR.LINEAR_INEQUALITIES.e": "illustrate compound inequalities in one unknown on a number line",
+  "MATH.G7.ALGEBR.LINEAR_INEQUALITIES.f": "appreciate use of linear inequalities in real life",
+  "MATH.G7.MEASUR.PYTHAGOREAN_RELATIONSHIP.a": "recognize the sides of a right-angled triangle in different situations",
+  "MATH.G7.MEASUR.PYTHAGOREAN_RELATIONSHIP.b": "identify Pythagorean relationship in different situations",
+  "MATH.G7.MEASUR.PYTHAGOREAN_RELATIONSHIP.c": "apply Pythagorean relationship to real life situations",
+  "MATH.G7.MEASUR.PYTHAGOREAN_RELATIONSHIP.d": "promote use of Pythagoras Theorem in real life situations",
+  "MATH.G7.MEASUR.LENGTH.a": "convert units of length from one form to another involving cm, dm, m, Dm, Hm in learning situations",
+  "MATH.G7.MEASUR.LENGTH.b": "perform operations involving units of length in different situations",
+  "MATH.G7.MEASUR.LENGTH.c": "work out the perimeter of plane figures in different situations",
+  "MATH.G7.MEASUR.LENGTH.d": "work out the circumference of circles in different situations",
+  "MATH.G7.MEASUR.LENGTH.e": "promote use of length in real life situations",
+  "MATH.G7.MEASUR.AREA.a": "identify square metre (m²), acres and hectares as units of measuring area",
+  "MATH.G7.MEASUR.AREA.b": "work out the area of rectangle, parallelogram, rhombus and trapezium in different situations",
+  "MATH.G7.MEASUR.AREA.c": "work out the area of circles in different situations",
+  "MATH.G7.MEASUR.AREA.d": "calculate the area of borders and combined shapes in real life situations",
+  "MATH.G7.MEASUR.AREA.e": "recognise use of area in real life situations",
+  "MATH.G7.MEASUR.VOLUME_AND_CAPACITY.a": "identify metre cube (m³) as a unit of volume in measurements",
+  "MATH.G7.MEASUR.VOLUME_AND_CAPACITY.b": "convert metre cube (m³) into centimeter cube (cm³) and vice versa in different situations",
+  "MATH.G7.MEASUR.VOLUME_AND_CAPACITY.c": "work out the volume of cubes, cuboids and cylinder in different situations",
+  "MATH.G7.MEASUR.VOLUME_AND_CAPACITY.d": "identify the relationship between cm³, m³ and litres in real life situations",
+  "MATH.G7.MEASUR.VOLUME_AND_CAPACITY.e": "relate volume to capacity in real life situations",
+  "MATH.G7.MEASUR.VOLUME_AND_CAPACITY.f": "work out the capacity of containers in real life situations",
+  "MATH.G7.MEASUR.VOLUME_AND_CAPACITY.g": "promote use of volume and capacity in real life situations",
+  "MATH.G7.MEASUR.TIME_DISTANCE_AND_SPEED.a": "identify units of measuring time in real life situations",
+  "MATH.G7.MEASUR.TIME_DISTANCE_AND_SPEED.b": "convert units of time from one form to another in learning situations",
+  "MATH.G7.MEASUR.TIME_DISTANCE_AND_SPEED.c": "convert units of measuring distance in learning situations",
+  "MATH.G7.MEASUR.TIME_DISTANCE_AND_SPEED.d": "identify speed as distance covered per unit time in different situations",
+  "MATH.G7.MEASUR.TIME_DISTANCE_AND_SPEED.e": "work out speed in km/h and m/s in real life situations",
+  "MATH.G7.MEASUR.TIME_DISTANCE_AND_SPEED.f": "convert units of speed from kilometers per hour (Km/h) to meters per second (m/s) and vice versa in real life situations",
+  "MATH.G7.MEASUR.TIME_DISTANCE_AND_SPEED.g": "reflect on use of time, distance and speed in real life situations",
+  "MATH.G7.MEASUR.TEMPERATURE.a": "describe the temperature conditions of the immediate environment as either warm, hot or cold",
+  "MATH.G7.MEASUR.TEMPERATURE.b": "compare temperature using hotter, warmer, colder and same as in different situations",
+  "MATH.G7.MEASUR.TEMPERATURE.c": "identify units of measuring temperature as degree Celsius and Kelvin in different situations",
+  "MATH.G7.MEASUR.TEMPERATURE.d": "convert units of measuring temperature from degree Celsius to Kelvin and vice-versa",
+  "MATH.G7.MEASUR.TEMPERATURE.e": "work out temperature in degree Celsius and Kelvin in real life situations",
+  "MATH.G7.MEASUR.TEMPERATURE.f": "use IT devices or other resources to read temperature conditions of different places",
+  "MATH.G7.MEASUR.TEMPERATURE.g": "recognise temperature changes in the environment",
+  "MATH.G7.MEASUR.MONEY.a": "work out profit and loss in real life situations",
+  "MATH.G7.MEASUR.MONEY.b": "calculate the percentage profit and loss in different situations",
+  "MATH.G7.MEASUR.MONEY.c": "calculate discount and percentage discount of different goods and services",
+  "MATH.G7.MEASUR.MONEY.d": "calculate commission and percentage commission in real life situations",
+  "MATH.G7.MEASUR.MONEY.e": "interpret bills at home",
+  "MATH.G7.MEASUR.MONEY.f": "prepare bills in real life situations",
+  "MATH.G7.MEASUR.MONEY.g": "work out postal charges in real life situations",
+  "MATH.G7.MEASUR.MONEY.h": "identify mobile money services for different transactions",
+  "MATH.G7.MEASUR.MONEY.i": "work out mobile money transactions in real life situations",
+  "MATH.G7.MEASUR.MONEY.j": "use IT devices or other resources to learn more on money transactions",
+  "MATH.G7.MEASUR.MONEY.k": "recognise use of money in day to day activities",
+  "MATH.G7.GEOMET.ANGLES.a": "relate different types of angles on a straight line in real life situations",
+  "MATH.G7.GEOMET.ANGLES.b": "solve angles at a point in learning situations",
+  "MATH.G7.GEOMET.ANGLES.c": "relate angles on a transversal in different situations",
+  "MATH.G7.GEOMET.ANGLES.d": "solve angles in a parallelogram in different situation",
+  "MATH.G7.GEOMET.ANGLES.e": "identify angle properties of polygons up to hexagon in different situations",
+  "MATH.G7.GEOMET.ANGLES.f": "relate interior angles, exterior angles and the number of sides of a polygon up to hexagon in different situations",
+  "MATH.G7.GEOMET.ANGLES.g": "solve angles and sides of polygons up to hexagon in learning situations",
+  "MATH.G7.GEOMET.ANGLES.h": "reflect on use of angles in objects within the environment",
+  "MATH.G7.GEOMET.GEOMETRICAL_CONSTRUCTION.a": "measure different angles in learning situations",
+  "MATH.G7.GEOMET.GEOMETRICAL_CONSTRUCTION.b": "bisect angles using a ruler and a pair of compasses only in learning situations",
+  "MATH.G7.GEOMET.GEOMETRICAL_CONSTRUCTION.c": "construct 90 0 , 45 0 60 0 , 30 0 and other angles that are multiples of 7.5 0 using a ruler and a pair of compasses only in learning situations",
+  "MATH.G7.GEOMET.GEOMETRICAL_CONSTRUCTION.d": "construct different triangles using a ruler and a pair of compasses only in different situations",
+  "MATH.G7.GEOMET.GEOMETRICAL_CONSTRUCTION.e": "construct circles using a ruler and a pair of compasses only in different situations",
+  "MATH.G7.GEOMET.GEOMETRICAL_CONSTRUCTION.f": "recognise use of geometric constructions of different shapes in objects",
+  "MATH.G7.DATA_H.DATA_HANDLING.a": "state the meaning of data in learning situation",
+  "MATH.G7.DATA_H.DATA_HANDLING.b": "collect data from different situations",
+  "MATH.G7.DATA_H.DATA_HANDLING.c": "draw frequency distribution table of data from different sources",
+  "MATH.G7.DATA_H.DATA_HANDLING.d": "determine suitable scale for graphs of data from different situations",
+  "MATH.G7.DATA_H.DATA_HANDLING.e": "draw pictographs of data from real life situations",
+  "MATH.G7.DATA_H.DATA_HANDLING.f": "draw bar graphs of data from different sources",
+  "MATH.G7.DATA_H.DATA_HANDLING.g": "interpret bar graphs of data from real life situations",
+  "MATH.G7.DATA_H.DATA_HANDLING.h": "draw pie charts of data from real life situations",
+  "MATH.G7.DATA_H.DATA_HANDLING.i": "interpret pie charts of data from real life situations",
+  "MATH.G7.DATA_H.DATA_HANDLING.j": "draw a line graph of data from different situations",
+  "MATH.G7.DATA_H.DATA_HANDLING.k": "interpret travel graphs from real life situations",
+  "MATH.G7.DATA_H.DATA_HANDLING.l": "promote use of data in real life situations"
+ },
+ "skills": {
+  "MATH.G7.NUMBER.WHOLE_NUMBERS.PLACE_VALUE_HM": {
+   "forms": [
+    "name the place of a digit",
+    "which digit is in a named place",
+    "read a place value chart",
+    "how many places a number has"
+   ],
+   "mastery": "Given a whole number up to 999,999,999 the child names the place of any digit (ones to hundred millions), including digits beside zeros, and says which digit sits in a named place. Numbers come from real settings such as a county budget or the number of phone lines."
+  },
+  "MATH.G7.NUMBER.WHOLE_NUMBERS.TOTAL_VALUE_HM": {
+   "forms": [
+    "total value of an underlined digit",
+    "total values of two digits added",
+    "expanded form",
+    "difference between two digits of the same value"
+   ],
+   "mastery": "Given a whole number up to 999,999,999 the child gives the total value of a chosen digit (digit times its place), adds the total values of two digits, and writes the number in expanded form. The child does not mistake a digit for its total value."
+  },
+  "MATH.G7.NUMBER.WHOLE_NUMBERS.SYMBOLS_HM": {
+   "forms": [
+    "write from parts",
+    "choose the number in figures",
+    "spot the missing zero",
+    "read a number aloud in groups"
+   ],
+   "mastery": "Given a number said or written in parts (for example 45 million, 12 thousand and 7) the child writes it in figures with every place filled and zero as a place holder, and reads a figure aloud in groups of three. Numbers up to 999,999,999."
+  },
+  "MATH.G7.NUMBER.WHOLE_NUMBERS.WORDS_FROM_FIGURES": {
+   "forms": [
+    "choose the words for a figure",
+    "write a cheque amount in words",
+    "spot the mistake in the words",
+    "say the same number two ways"
+   ],
+   "mastery": "The child writes a number up to 9,999,999 in words with British spelling, a hyphen in twenty-one to ninety-nine, and each group (millions, thousands, hundreds) in order. Zeros in a group are not spoken. The design limit for words is millions."
+  },
+  "MATH.G7.NUMBER.WHOLE_NUMBERS.FIGURES_FROM_WORDS": {
+   "forms": [
+    "words to figures",
+    "which figures match these words",
+    "fill the missing zero",
+    "order two numbers given in words"
+   ],
+   "mastery": "Given a number in words up to millions, such as \"two million and forty-five thousand and seven\", the child writes it in figures with zero place holders in every empty place."
+  },
+  "MATH.G7.NUMBER.WHOLE_NUMBERS.ROUND_TO_PLACE": {
+   "forms": [
+    "round to a named place",
+    "which digit decides",
+    "round the same number two ways",
+    "choose the rounded number"
+   ],
+   "mastery": "The child rounds a number up to 999,999,999 to the nearest ten, hundred, thousand, ten thousand, hundred thousand, million, ten million or hundred million: looks at the digit just to the right, rounds up on 5 or more, and writes zeros in all places after the one rounded."
+  },
+  "MATH.G7.NUMBER.WHOLE_NUMBERS.ROUND_IN_CONTEXT": {
+   "forms": [
+    "round the number in a report",
+    "which rounding is correct",
+    "why a rounded number is not exact",
+    "round and write in words"
+   ],
+   "mastery": "Given a real setting (a population, a county budget, a news report) the child chooses the sensible place to round to, rounds the number, and says why the rounded number is only an estimate. Rounding a carried digit (such as 999,500 to the nearest thousand) is included."
+  },
+  "MATH.G7.NUMBER.WHOLE_NUMBERS.EVEN_ODD": {
+   "forms": [
+    "even or odd",
+    "sort a list",
+    "even or odd after adding",
+    "is zero even"
+   ],
+   "mastery": "The child classifies any whole number up to millions as even or odd by its last digit, and knows that sums and products of even and odd numbers follow a pattern (even + even is even, odd + odd is even, even x anything is even)."
+  },
+  "MATH.G7.NUMBER.WHOLE_NUMBERS.PRIME_NUMBERS": {
+   "forms": [
+    "is this number prime",
+    "pick the primes from a table",
+    "the only even prime",
+    "list primes between two numbers"
+   ],
+   "mastery": "The child tells prime from composite numbers up to 100 by testing small divisors, knows that 1 is neither, that 2 is the only even prime, and that an odd number is not always prime. The child lists the primes up to 50."
+  },
+  "MATH.G7.NUMBER.WHOLE_NUMBERS.ADD_SUB_LARGE": {
+   "forms": [
+    "add large amounts",
+    "subtract across zeros",
+    "sum or difference in a story",
+    "check with an estimate"
+   ],
+   "mastery": "The child adds and subtracts whole numbers of up to nine digits in a column, regrouping across zeros, and decides whether to add or subtract in a story about money, population or distance. Answers are checked by estimating."
+  },
+  "MATH.G7.NUMBER.WHOLE_NUMBERS.MULT_LARGE": {
+   "forms": [
+    "long multiplication",
+    "multiply by 100",
+    "estimate to check",
+    "multiplication in a story"
+   ],
+   "mastery": "The child multiplies a number of up to 4 digits by a number of up to 3 digits using long multiplication, with the zero place holder in the second and third rows, and by 10, 100 and 1,000 by shifting the digits. The product is checked by estimating."
+  },
+  "MATH.G7.NUMBER.WHOLE_NUMBERS.DIV_LARGE": {
+   "forms": [
+    "long division",
+    "zero in the quotient",
+    "what the remainder means in a story",
+    "check by multiplying"
+   ],
+   "mastery": "The child divides a number of up to 6 digits by a number of up to 3 digits by long division, with zeros in the quotient where a digit does not fit, writes the remainder as a whole number, and checks by multiplying back."
+  },
+  "MATH.G7.NUMBER.WHOLE_NUMBERS.ORDER_OF_OPERATIONS": {
+   "forms": [
+    "work out the expression",
+    "which operation first",
+    "put in brackets to make a value",
+    "find the mistake in the order"
+   ],
+   "mastery": "The child works out expressions of up to three operations with brackets, working brackets first, then multiplication and division from left to right, then addition and subtraction from left to right. Numbers up to 3 digits."
+  },
+  "MATH.G7.NUMBER.WHOLE_NUMBERS.OPERATIONS_IN_CONTEXT": {
+   "forms": [
+    "two-step story",
+    "three-step story",
+    "which working is right",
+    "find the mistake"
+   ],
+   "mastery": "The child reads a story with two or three steps (fares, fuel, rent, bags and rows), chooses the operations, works them in order and writes the answer with its unit. Money left, total takings and equal sharing are included."
+  },
+  "MATH.G7.NUMBER.WHOLE_NUMBERS.SEQ_EXTEND_RULE": {
+   "forms": [
+    "next term",
+    "state the rule",
+    "the odd one out",
+    "increasing or decreasing sequence"
+   ],
+   "mastery": "Given the first four to six terms of a sequence with a constant difference or a constant multiplier, the child finds the rule, continues the sequence, and spots a term that does not fit."
+  },
+  "MATH.G7.NUMBER.WHOLE_NUMBERS.SEQ_NTH_TERM": {
+   "forms": [
+    "the 12th term",
+    "which term is this number",
+    "seats in row n",
+    "check with a table"
+   ],
+   "mastery": "For a sequence that goes up or down by the same amount, the child finds a distant term (for example the 12th) by first term plus the number of steps times the difference, and does not count the first term as a step."
+  },
+  "MATH.G7.NUMBER.WHOLE_NUMBERS.SEQ_CREATE_RULE": {
+   "forms": [
+    "write the terms from a rule",
+    "terms of a two-step rule",
+    "make a puzzle sequence",
+    "check a classmate's sequence"
+   ],
+   "mastery": "Given a rule such as \"start at 5, add 4\" or \"multiply by 3 then add 3\", the child writes the first terms, and makes a sequence of their own for a number game, checking that the terms follow the rule every time."
+  },
+  "MATH.G7.NUMBER.FACTORS.DIV_BY_2_4_8_5_10": {
+   "forms": [
+    "is it divisible by 4",
+    "which numbers pass the test",
+    "make the number divisible by 8",
+    "explain the test"
+   ],
+   "mastery": "The child tests a number up to 6 digits for divisibility by 2, 5 and 10 from the last digit, by 4 from the last two digits and by 8 from the last three digits, and explains the test."
+  },
+  "MATH.G7.NUMBER.FACTORS.DIV_BY_3_6_9": {
+   "forms": [
+    "divisible by 3 or 9",
+    "divisible by 6: count from a table",
+    "find the missing digit",
+    "spot the wrong test"
+   ],
+   "mastery": "The child adds the digits of a number up to 6 digits and tests the sum for 3 and 9, and knows a number is divisible by 6 only when it is even and divisible by 3."
+  },
+  "MATH.G7.NUMBER.FACTORS.DIV_BY_11": {
+   "forms": [
+    "test a 4-digit number",
+    "spot the slip in the working",
+    "make a number divisible by 11",
+    "explain the test"
+   ],
+   "mastery": "The child adds the digits in the odd places and in the even places, subtracts the two sums, and says the number is divisible by 11 when the difference is 0 or a multiple of 11."
+  },
+  "MATH.G7.NUMBER.FACTORS.PRIME_FACTORISE": {
+   "forms": [
+    "factor tree",
+    "repeated division",
+    "find the mistake in the working",
+    "why 143 is not prime"
+   ],
+   "mastery": "The child splits a number up to 500 with a factor tree or repeated division by 2, 3, 5, 7 and 11 until every factor is prime, writes repeated factors in full or with a power, and explains why a number with no small factors may still be composite."
+  },
+  "MATH.G7.NUMBER.FACTORS.GCD_BY_FACTORS": {
+   "forms": [
+    "GCD of two numbers",
+    "GCD of three numbers",
+    "GCD or LCM",
+    "check by dividing"
+   ],
+   "mastery": "The child writes each of two or three numbers (up to 200) as a product of primes, multiplies the primes common to all of them, taking each as many times as it is in every number, and gets the GCD."
+  },
+  "MATH.G7.NUMBER.FACTORS.LCM_BY_FACTORS": {
+   "forms": [
+    "LCM of two numbers",
+    "LCM of three numbers",
+    "why the product is not the least",
+    "check with multiples"
+   ],
+   "mastery": "The child writes each of two or three numbers (up to 60) as a product of primes and multiplies each prime the greatest number of times it appears in any one number, and gets the LCM."
+  },
+  "MATH.G7.NUMBER.FACTORS.GCD_IN_CONTEXT": {
+   "forms": [
+    "longest equal pieces",
+    "greatest number of equal packs",
+    "which is the GCD story",
+    "what the GCD means here"
+   ],
+   "mastery": "The child decides from a story that the greatest equal size or number of equal groups is the GCD (cutting ropes, packing boxes, tiling) and works it out for two or three quantities, answering the size or the number asked."
+  },
+  "MATH.G7.NUMBER.FACTORS.LCM_IN_CONTEXT": {
+   "forms": [
+    "when do they meet again",
+    "three bells",
+    "which is the LCM story",
+    "next time in clock time"
+   ],
+   "mastery": "The child decides from a story that the first time two or three repeating events coincide is the LCM (matatus leaving, bells ringing) and works it out in minutes or days, answering the time asked."
+  },
+  "MATH.G7.NUMBER.FRACTIONS.COMPARE_FRACTIONS": {
+   "forms": [
+    "which is greater",
+    "order three fractions",
+    "choose the best reason",
+    "who has read the most"
+   ],
+   "mastery": "The child compares two or three fractions with denominators up to 12 by renaming them with a common denominator, decides which is greater, orders them, and can explain why a bigger denominator does not mean a bigger fraction."
+  },
+  "MATH.G7.NUMBER.FRACTIONS.ADD_UNLIKE_FRACTIONS": {
+   "forms": [
+    "add two fractions",
+    "add mixed numbers",
+    "a sum in a story",
+    "find the mistake"
+   ],
+   "mastery": "The child adds two fractions or mixed numbers with unlike denominators (up to 12) by renaming with the LCM, adds numerators, carries any whole from the fraction part, and writes the sum in simplest form."
+  },
+  "MATH.G7.NUMBER.FRACTIONS.SUBTRACT_UNLIKE_FRACTIONS": {
+   "forms": [
+    "subtract two fractions",
+    "subtract mixed numbers with regrouping",
+    "what is left in a story",
+    "find the mistake"
+   ],
+   "mastery": "The child subtracts fractions or mixed numbers with unlike denominators (up to 12) by renaming with the LCM, regroups a whole into the fraction part when needed, reduces the whole by one, and simplifies."
+  },
+  "MATH.G7.NUMBER.FRACTIONS.MULT_FRACTION_BY_WHOLE": {
+   "forms": [
+    "multiply a fraction by a whole number",
+    "fraction of an amount",
+    "repeated addition picture",
+    "find the mistake"
+   ],
+   "mastery": "The child multiplies a fraction by a whole number (and finds a fraction of a quantity), multiplying the numerator and keeping the denominator, simplifies, and writes an improper result as a mixed number."
+  },
+  "MATH.G7.NUMBER.FRACTIONS.MULT_FRACTION_BY_FRACTION": {
+   "forms": [
+    "multiply two fractions",
+    "multiply a mixed number",
+    "part of a part",
+    "find the mistake"
+   ],
+   "mastery": "The child multiplies a fraction by a fraction or a mixed number by writing mixed numbers as improper fractions, multiplying numerators and denominators, simplifying (also across before multiplying), and finds a fraction of a fraction of an amount in a story."
+  },
+  "MATH.G7.NUMBER.FRACTIONS.RECIPROCAL": {
+   "forms": [
+    "write the reciprocal",
+    "reciprocal of a mixed number",
+    "check by multiplying to 1",
+    "use a reciprocal in a story"
+   ],
+   "mastery": "The child writes the reciprocal by turning a fraction upside down, writes a whole number as a fraction over 1 first, writes a mixed number as an improper fraction first, and checks that the number times its reciprocal is 1."
+  },
+  "MATH.G7.NUMBER.FRACTIONS.DIVIDE_FRACTION_BY_WHOLE": {
+   "forms": [
+    "divide a fraction by a whole number",
+    "share equally among drums",
+    "which working is right",
+    "check the size"
+   ],
+   "mastery": "The child divides a fraction or a mixed number by a whole number by multiplying the denominator (or by the reciprocal), simplifies, and knows the result is smaller than the fraction."
+  },
+  "MATH.G7.NUMBER.FRACTIONS.DIVIDE_BY_FRACTION": {
+   "forms": [
+    "divide a fraction by a fraction",
+    "divide a mixed number",
+    "which number is flipped",
+    "find the mistake"
+   ],
+   "mastery": "The child divides a whole number, fraction or mixed number by a fraction or a mixed number by multiplying by the reciprocal of the divisor (the second number only), writing mixed numbers as improper fractions first."
+  },
+  "MATH.G7.NUMBER.FRACTIONS.DIVIDE_WHOLE_BY_FRACTION": {
+   "forms": [
+    "how many fit",
+    "which calculation",
+    "divide a whole number by a fraction",
+    "will the answer be larger or smaller"
+   ],
+   "mastery": "The child divides a whole number by a fraction, chooses division when the story asks how many small amounts fit into a large one (cups from a jug, bags from a sack), and knows the answer is larger than the whole number."
+  },
+  "MATH.G7.NUMBER.FRACTIONS.FRACTION_SEQ_ADD_RULE": {
+   "forms": [
+    "next term",
+    "the gap",
+    "a decreasing sequence",
+    "a whole number as a term"
+   ],
+   "mastery": "The child finds the constant gap between terms of a sequence of fractions with a common denominator, keeps the denominator, and writes the next terms and a term that is a whole number as a fraction."
+  },
+  "MATH.G7.NUMBER.FRACTIONS.FRACTION_SEQ_MULTIPLY_RULE": {
+   "forms": [
+    "name the rule",
+    "next term",
+    "getting smaller: which rule",
+    "spot the term that does not fit"
+   ],
+   "mastery": "The child finds that terms such as 1, 1/3, 1/9 follow a constant ratio, states the rule (divide by 3, or multiply by 1/3), and continues the sequence."
+  },
+  "MATH.G7.NUMBER.FRACTIONS.FRACTION_SEQ_IN_TABLE": {
+   "forms": [
+    "when is it full",
+    "part after n hours",
+    "fill the table",
+    "which row is missing"
+   ],
+   "mastery": "Given a table of the part of a task done after equal times (2, 4, 6 hours), the child finds the part done per step, and answers when the task is complete or how much is done at a later time, counting hours and not steps."
+  },
+  "MATH.G7.NUMBER.FRACTIONS.FRACTION_SEQ_CREATE": {
+   "forms": [
+    "write the first terms from a rule",
+    "make a puzzle",
+    "check a classmate's sequence",
+    "rule for given terms"
+   ],
+   "mastery": "The child writes a sequence of fractions from a rule (add 1/4, or multiply by 1/2), keeps every term in line with the rule, and writes a rule for a puzzle sequence of their own that a partner can solve."
+  },
+  "MATH.G7.NUMBER.DECIMALS.DEC_PLACE_AND_TOTAL_VALUE": {
+   "forms": [
+    "name the place",
+    "total value of a digit",
+    "write the number from a chart",
+    "which digit is in the place"
+   ],
+   "mastery": "The child names the place of a digit after the point (tenths, hundredths, thousandths), gives its total value (the 7 in 4.073 is worth 0.07), and writes a decimal from a place value chart whose rows are not in order."
+  },
+  "MATH.G7.NUMBER.DECIMALS.DEC_COUNT_TENTHS": {
+   "forms": [
+    "how many tenths",
+    "how many hundredths",
+    "write as tenths",
+    "whole ones as tenths"
+   ],
+   "mastery": "The child says how many tenths (or hundredths) make a decimal such as 7.7 (77 tenths) by counting the whole ones as ten tenths each."
+  },
+  "MATH.G7.NUMBER.DECIMALS.MULT_DEC_BY_WHOLE": {
+   "forms": [
+    "multiply a decimal",
+    "cost of 3.5 kg",
+    "find the mistake with the point",
+    "estimate to check"
+   ],
+   "mastery": "The child multiplies a decimal with up to three places by a whole number up to 100 by multiplying without the point and putting the point back with the same number of places, and decides if the answer is sensible."
+  },
+  "MATH.G7.NUMBER.DECIMALS.MULT_DEC_BY_DEC": {
+   "forms": [
+    "multiply two decimals",
+    "area of a garden",
+    "where does the point go",
+    "is the product bigger or smaller"
+   ],
+   "mastery": "The child multiplies two decimals by multiplying without points and giving the product as many decimal places as both factors together, uses it for the area of a rectangle with decimal sides, and says when the product is smaller than a factor."
+  },
+  "MATH.G7.NUMBER.DECIMALS.DIV_DEC_BY_WHOLE": {
+   "forms": [
+    "share equally",
+    "divide with a point",
+    "where is the point",
+    "check by multiplying"
+   ],
+   "mastery": "The child divides a decimal by a whole number, and a whole number by a whole number with a decimal quotient (12 / 8 = 1.5), by long division with the point in the quotient directly above the point in the dividend."
+  },
+  "MATH.G7.NUMBER.DECIMALS.DIV_BY_DECIMAL": {
+   "forms": [
+    "how many pieces",
+    "price per kilogram",
+    "move the point in both",
+    "check by multiplying"
+   ],
+   "mastery": "The child divides by a decimal by moving the point in both numbers the same number of places until the divisor is whole, uses it to count how many small amounts fit into a large one, and finds a price per kilogram."
+  },
+  "MATH.G7.NUMBER.DECIMALS.DEC_DIVISION_SIZE": {
+   "forms": [
+    "bigger or smaller",
+    "why is the answer bigger than 6",
+    "choose the best explanation",
+    "estimate the quotient"
+   ],
+   "mastery": "The child says that dividing by a number less than 1 makes the answer larger and dividing by a number greater than 1 makes it smaller, using how many lots fit, and does not move the point without a reason."
+  },
+  "MATH.G7.NUMBER.SQUARES_AND_SQUARE_ROOTS.SQUARE_WHOLE_NUMBER": {
+   "forms": [
+    "square of a number",
+    "square of a multiple of ten",
+    "which is a perfect square",
+    "area of a square"
+   ],
+   "mastery": "The child finds the square of a whole number up to 50, and of multiples of 10 (30 squared is 900), by multiplying the number by itself, and knows that squaring is not doubling."
+  },
+  "MATH.G7.NUMBER.SQUARES_AND_SQUARE_ROOTS.SQUARE_FRACTION": {
+   "forms": [
+    "which fraction is the square",
+    "square a fraction",
+    "spot the mistake",
+    "is it smaller"
+   ],
+   "mastery": "The child squares a fraction by multiplying the numerator by itself and the denominator by itself, simplifies, and says why the answer is smaller than the fraction."
+  },
+  "MATH.G7.NUMBER.SQUARES_AND_SQUARE_ROOTS.SQUARE_DECIMAL": {
+   "forms": [
+    "square of a decimal",
+    "area of a square garden",
+    "where does the point go",
+    "area when the side doubles"
+   ],
+   "mastery": "The child squares a decimal such as 0.03 or 1.5 by multiplying without the point and giving the square twice as many decimal places, and uses it for the area of a square plot and for the area when the side is doubled."
+  },
+  "MATH.G7.NUMBER.SQUARES_AND_SQUARE_ROOTS.ROOT_WHOLE_NUMBER": {
+   "forms": [
+    "find the square root",
+    "check by squaring",
+    "which is a perfect square",
+    "the root of a sum"
+   ],
+   "mastery": "The child finds the square root of a perfect square up to 2,500 by finding the number that multiplied by itself gives it, checks by squaring, and knows the root of a sum is not the sum of the roots."
+  },
+  "MATH.G7.NUMBER.SQUARES_AND_SQUARE_ROOTS.ROOT_FRACTION_DECIMAL": {
+   "forms": [
+    "root of a fraction",
+    "root of a decimal",
+    "check by squaring",
+    "where does the point go"
+   ],
+   "mastery": "The child finds the root of a fraction by taking the root of the numerator and of the denominator (9/16 gives 3/4), and of a decimal that is a perfect square (0.09 gives 0.3 and 1.44 gives 1.2) by halving the decimal places."
+  },
+  "MATH.G7.NUMBER.SQUARES_AND_SQUARE_ROOTS.ROOT_IN_CONTEXT": {
+   "forms": [
+    "side from the area",
+    "fence round the plot",
+    "difference between two sides",
+    "which measure is asked for"
+   ],
+   "mastery": "The child takes the square root of the area of a square plot to find a side, then uses the side (for the distance round, or to compare plots), reading the question to know which is needed."
+  },
+  "MATH.G7.NUMBER.SQUARES_AND_SQUARE_ROOTS.ROOT_BY_ANCHORS": {
+   "forms": [
+    "between which two whole numbers",
+    "which perfect squares are either side",
+    "estimate a root",
+    "check a root"
+   ],
+   "mastery": "The child finds the two perfect squares either side of a number (98 lies between 81 and 100) and so places its root between two whole numbers (between 9 and 10). The number is not itself a perfect square: this skill supports checking roots."
+  },
+  "MATH.G7.ALGEBR.ALGEBRAIC_EXPRESSIONS.FORM_EXPRESSION_RATE_FIXED": {
+   "forms": [
+    "choose the expression from a table",
+    "what does each part mean",
+    "write the charge for n items",
+    "test with values"
+   ],
+   "mastery": "From a table or story (delivery of n jerricans at sh 30 each plus sh 10), the child writes the expression rate x n + fixed, tests it with n = 1 and n = 2, and says what each part means."
+  },
+  "MATH.G7.ALGEBR.ALGEBRAIC_EXPRESSIONS.FORM_EXPRESSION_RELATIONS": {
+   "forms": [
+    "expression for each person",
+    "total of three ages",
+    "the difference between two ages",
+    "which expression is right"
+   ],
+   "mastery": "Given one person is x years old, another is 2 years younger and another is 3 times as old, the child writes an expression for each and for their total, using brackets only when a whole group is taken."
+  },
+  "MATH.G7.ALGEBR.ALGEBRAIC_EXPRESSIONS.FORM_FROM_STATEMENT": {
+   "forms": [
+    "words to expression",
+    "expression to words",
+    "which statement matches",
+    "less than in the right order"
+   ],
+   "mastery": "The child turns words such as \"3 more than x\", \"5 less than n\", \"twice y and then 4 more\" and \"a third of m\" into expressions, keeping the order for \"less than\"."
+  },
+  "MATH.G7.ALGEBR.ALGEBRAIC_EXPRESSIONS.SIMPLIFY_LIKE_TERMS": {
+   "forms": [
+    "collect like terms",
+    "perimeter of a plot",
+    "find a and b in ax + b",
+    "substitute x"
+   ],
+   "mastery": "The child collects the x terms and the number terms of an expression with up to three terms of each kind, keeps each sign, counts a plain x as 1x, and substitutes a value to check or to use."
+  },
+  "MATH.G7.ALGEBR.ALGEBRAIC_EXPRESSIONS.SIMPLIFY_WITH_BRACKETS": {
+   "forms": [
+    "expand the bracket",
+    "perimeter with a bracket",
+    "find the wrong step",
+    "is x + 8 the same as 8x"
+   ],
+   "mastery": "The child multiplies every term inside a bracket by the number outside, collects like terms, and does not join an x term with a number term."
+  },
+  "MATH.G7.ALGEBR.LINEAR_EQUATIONS.FORM_EQUATION_FROM_STORY": {
+   "forms": [
+    "choose the equation",
+    "what does each part mean",
+    "write the equation",
+    "which story matches the equation"
+   ],
+   "mastery": "From a story with a price for each item, a fixed amount and a total (8 books and a geometry set, total sh 398) the child writes an equation such as 8x + 150 = 398, with the fixed amount added once and on the same side as the books."
+  },
+  "MATH.G7.ALGEBR.LINEAR_EQUATIONS.SOLVE_TWO_STEP": {
+   "forms": [
+    "solve and check",
+    "solve from a table of values",
+    "find the wrong step",
+    "which step first"
+   ],
+   "mastery": "The child solves equations like 6x + 6 = 78 and 3n + 3 = 45 by undoing the added or subtracted number first and then the multiplier, doing the same to both sides, and checks by putting the answer back."
+  },
+  "MATH.G7.ALGEBR.LINEAR_EQUATIONS.SOLVE_BOTH_SIDES": {
+   "forms": [
+    "solve with x on both sides",
+    "find the wrong step",
+    "what to do first",
+    "check in both sides"
+   ],
+   "mastery": "The child solves equations like 4x - 4 = 2x + 12 by taking the smaller x term from both sides, then undoing the number, then dividing, and checks in both sides."
+  },
+  "MATH.G7.ALGEBR.LINEAR_EQUATIONS.EQUATION_BALANCE_REASON": {
+   "forms": [
+    "why both sides",
+    "which explanation is right",
+    "balance picture",
+    "what stays the same"
+   ],
+   "mastery": "The child explains that an equation is a balance, so what is done to one side must be done to the other, and that the unknown can be on either side."
+  },
+  "MATH.G7.ALGEBR.LINEAR_EQUATIONS.SOLVE_IN_CONTEXT": {
+   "forms": [
+    "ages in 4 years",
+    "parking charge",
+    "mangoes in boxes",
+    "money at the start",
+    "which quantity is asked"
+   ],
+   "mastery": "The child forms an equation for a story (ages after some years, a parking charge with a fixed part, equal boxes and loose items, money left after spending), solves it, and answers the quantity the question asks for, not the unknown."
+  },
+  "MATH.G7.MEASUR.PYTHAGOREAN_RELATIONSHIP.RIGHT_TRIANGLE_SIDES": {
+   "forms": [
+    "which side is the hypotenuse",
+    "which is the longest side",
+    "name the legs",
+    "draw a right-angled triangle"
+   ],
+   "mastery": "The child finds the right angle in a triangle labelled with letters, names the hypotenuse as the side opposite the right angle (and the longest side), and names the other two sides as the legs."
+  },
+  "MATH.G7.MEASUR.PYTHAGOREAN_RELATIONSHIP.PYTHAGORAS_TEST": {
+   "forms": [
+    "which triangle is right-angled",
+    "is this corner square",
+    "why does 5, 12, 13 show a right angle",
+    "find the mistake in the test"
+   ],
+   "mastery": "The child squares the two shorter sides, adds them, and compares with the square of the longest side (exactly equal means a right angle), and explains why a 3, 4, 5 or 5, 12, 13 corner is square."
+  },
+  "MATH.G7.MEASUR.PYTHAGOREAN_RELATIONSHIP.FIND_HYPOTENUSE": {
+   "forms": [
+    "length of the brace",
+    "length of the wire",
+    "cost of a wire",
+    "which working is right"
+   ],
+   "mastery": "The child squares the two shorter sides, adds them and takes the square root to find the hypotenuse, and uses it for a brace on a gate, a wire from a pole to a peg and a diagonal path."
+  },
+  "MATH.G7.MEASUR.PYTHAGOREAN_RELATIONSHIP.FIND_SHORT_SIDE": {
+   "forms": [
+    "find the third side",
+    "find the wrong step",
+    "which operation first",
+    "check by squaring"
+   ],
+   "mastery": "The child subtracts the square of the known shorter side from the square of the hypotenuse and takes the square root, and knows a square root is not halving."
+  },
+  "MATH.G7.MEASUR.PYTHAGOREAN_RELATIONSHIP.PYTHAGORAS_SAVING": {
+   "forms": [
+    "how much shorter",
+    "length of the straight path",
+    "length along two sides",
+    "which quantity is asked"
+   ],
+   "mastery": "The child finds the straight path as the hypotenuse, adds the two sides for the long way, and subtracts to find how much shorter the straight path is, answering the quantity the question asks for."
+  },
+  "MATH.G7.MEASUR.LENGTH.CONVERT_LENGTH_UNITS": {
+   "forms": [
+    "change metres to decimetres",
+    "two-stage conversion",
+    "why multiply or divide",
+    "find the mistake"
+   ],
+   "mastery": "The child changes a length between cm, dm, m, Dm and Hm by multiplying when going to a smaller unit and dividing when going to a bigger one, using the number of small units in one big unit (1 m = 10 dm = 100 cm; 1 Hm = 100 m), also in two stages."
+  },
+  "MATH.G7.MEASUR.LENGTH.COMPARE_LENGTHS_UNITS": {
+   "forms": [
+    "how much longer",
+    "which is longer",
+    "use the table of units",
+    "same unit first"
+   ],
+   "mastery": "The child reads the size of each unit from a table, changes both lengths to the same unit, and finds how much longer one is, answering in the unit asked."
+  },
+  "MATH.G7.MEASUR.LENGTH.OPERATIONS_ON_LENGTH": {
+   "forms": [
+    "rope left after cutting",
+    "posts along a straight fence",
+    "which unit is the answer in",
+    "find the mistake"
+   ],
+   "mastery": "The child works with lengths in a story (rope cut into pieces, posts along a fence): changes to one unit, finds the total of several pieces, subtracts what is left, and counts posts on a straight fence as gaps plus one."
+  },
+  "MATH.G7.MEASUR.LENGTH.PERIMETER_PLANE_FIGURES": {
+   "forms": [
+    "perimeter of an L-shape",
+    "which plot needs the longest fence",
+    "posts round a plot",
+    "fence or area"
+   ],
+   "mastery": "The child finds the distance round a rectangle as 2 x (length + width), round an L-shape by adding every edge, compares plots by perimeter and not by area, and counts posts round a closed plot as distance divided by gap."
+  },
+  "MATH.G7.MEASUR.LENGTH.CIRCUMFERENCE_DISTANCE": {
+   "forms": [
+    "distance of a wheel",
+    "length of a running track",
+    "cm to m",
+    "half circles make a circle"
+   ],
+   "mastery": "The child finds the circumference as pi x diameter (22/7 or 3.14 as the question says), uses it for the distance a wheel travels in many turns (changing cm to m), and for a track made of straight sides and half circles."
+  },
+  "MATH.G7.MEASUR.LENGTH.CIRCUMFERENCE_FIND_DIAMETER": {
+   "forms": [
+    "diameter from the distance round",
+    "radius from the circumference",
+    "check by multiplying",
+    "which one is asked"
+   ],
+   "mastery": "Given the distance round a circle, the child divides by pi (multiplies by 7/22) to find the diameter, halves it for the radius, and checks by multiplying back."
+  },
+  "MATH.G7.MEASUR.LENGTH.CIRCUMFERENCE_REASON": {
+   "forms": [
+    "when the diameter doubles",
+    "find pi from a table",
+    "which statement is right",
+    "predict the distance round"
+   ],
+   "mastery": "The child says the circumference is always about 3.14 times the diameter, so doubling the diameter doubles the circumference, and finds the pattern in a table of measured circles."
+  },
+  "MATH.G7.MEASUR.VOLUME_AND_CAPACITY.CUBIC_UNIT_CONVERT": {
+   "forms": [
+    "m3 to cm3",
+    "cm3 to m3",
+    "why 1,000,000",
+    "blocks that make a cubic metre",
+    "find the mistake"
+   ],
+   "mastery": "The child says a cubic metre is a cube 100 cm by 100 cm by 100 cm (1,000,000 cm3), changes m3 to cm3 and back, and says why the three lengths are multiplied and not added."
+  },
+  "MATH.G7.MEASUR.VOLUME_AND_CAPACITY.VOLUME_CUBOID_CUBE": {
+   "forms": [
+    "volume of a cube from its wire",
+    "how many cubes pack a carton",
+    "find the height",
+    "volume of a tank"
+   ],
+   "mastery": "The child finds the volume of a cuboid or cube from its edges, finds the edge of a cube from the total length of its wire (12 edges), counts blocks that pack a carton exactly, and finds a missing height by dividing the volume by the base area."
+  },
+  "MATH.G7.MEASUR.VOLUME_AND_CAPACITY.VOLUME_CYLINDER": {
+   "forms": [
+    "volume from a diameter",
+    "height from the volume",
+    "volume then litres",
+    "base area step"
+   ],
+   "mastery": "The child finds the radius from the diameter, the base area (pi x radius x radius), multiplies by the height for the volume, and works backwards to a height from the volume, and to litres."
+  },
+  "MATH.G7.MEASUR.VOLUME_AND_CAPACITY.VOLUME_TO_LITRES": {
+   "forms": [
+    "litres in a tank",
+    "cm3 to litres",
+    "which unit is asked",
+    "one litre is how many cm3"
+   ],
+   "mastery": "The child changes m3 to litres (x 1,000) and cm3 to litres (divide by 1,000), and states the relation between cm3, ml and litres."
+  },
+  "MATH.G7.MEASUR.VOLUME_AND_CAPACITY.CAPACITY_HOW_MANY": {
+   "forms": [
+    "jerricans to fill a tank",
+    "cups from a can",
+    "days of water",
+    "same unit first"
+   ],
+   "mastery": "The child changes the quantity and the container to the same unit, then divides to find how many jerricans fill a tank, how many cups come from a can, or how many days a tank lasts from the total daily use."
+  },
+  "MATH.G7.MEASUR.TIME_DISTANCE_AND_SPEED.TIME_UNITS_CONVERT": {
+   "forms": [
+    "seconds to hours and minutes",
+    "minutes to hours",
+    "whole hours and minutes left",
+    "find the mistake"
+   ],
+   "mastery": "The child changes seconds to minutes and hours (60 and 3,600) and back, writes a time such as 8,400 seconds as hours and minutes (2 h 20 min), and never treats an hour as 100 minutes."
+  },
+  "MATH.G7.MEASUR.TIME_DISTANCE_AND_SPEED.TIMETABLE_DURATION": {
+   "forms": [
+    "moving time from a timetable",
+    "waiting time",
+    "length of one leg",
+    "whole journey including the stop"
+   ],
+   "mastery": "The child reads a timetable on the 24-hour clock, finds the time of each leg, leaves out the waiting time at a stop, and gives the moving time in minutes."
+  },
+  "MATH.G7.MEASUR.TIME_DISTANCE_AND_SPEED.DISTANCE_UNITS_CONVERT": {
+   "forms": [
+    "laps in kilometres",
+    "to and from school for a week",
+    "both ways",
+    "answer in the right unit"
+   ],
+   "mastery": "The child changes metres to kilometres (divide by 1,000) and back, finds a total distance such as laps or a return trip over several days, and answers in the unit asked."
+  },
+  "MATH.G7.MEASUR.TIME_DISTANCE_AND_SPEED.SPEED_FROM_DISTANCE_TIME": {
+   "forms": [
+    "speed of a matatu",
+    "speed from a timetable",
+    "minutes to hours",
+    "find the mistake"
+   ],
+   "mastery": "The child changes the time to hours (75 min is 1.25 h, with minutes out of 60), divides the distance by it, and does not multiply or invert; a timetable gives the time between two 24-hour readings."
+  },
+  "MATH.G7.MEASUR.TIME_DISTANCE_AND_SPEED.TIME_FROM_SPEED": {
+   "forms": [
+    "time in hours",
+    "time in minutes",
+    "decimal hours to minutes",
+    "find the mistake"
+   ],
+   "mastery": "The child finds time as distance divided by speed, and changes a decimal number of hours to minutes by multiplying the decimal part by 60 (2.5 h = 150 min)."
+  },
+  "MATH.G7.MEASUR.TIME_DISTANCE_AND_SPEED.AVERAGE_SPEED_TWO_LEGS": {
+   "forms": [
+    "time of each part",
+    "average speed",
+    "why not the middle",
+    "total time"
+   ],
+   "mastery": "The child finds the time of each part (distance divided by speed), adds them, and divides the total distance by the total time; the slower part takes longer, so the average is not halfway between the speeds."
+  },
+  "MATH.G7.MEASUR.TIME_DISTANCE_AND_SPEED.SPEED_UNITS_CONVERT": {
+   "forms": [
+    "km/h to m/s",
+    "m/s to km/h",
+    "why divide by 3,600",
+    "find speed in m/s from metres and seconds"
+   ],
+   "mastery": "The child changes km/h to m/s by multiplying by 1,000 and dividing by 3,600 (divide by 3.6), and m/s to km/h by multiplying by 3.6, and explains why an hour has 3,600 seconds."
+  },
+  "MATH.G7.MEASUR.TIME_DISTANCE_AND_SPEED.SPEED_COMPARE_MIXED_UNITS": {
+   "forms": [
+    "which is fastest",
+    "order three speeds",
+    "same unit first",
+    "change m/s to km/h"
+   ],
+   "mastery": "The child changes all speeds to km/h (or all to m/s) before saying which is fastest, and does not compare a number in m/s with a number in km/h."
+  },
+  "MATH.G7.MEASUR.TEMPERATURE.TEMP_WORDS": {
+   "forms": [
+    "which word for 35 degrees",
+    "a reading for a hot day",
+    "which range",
+    "order the words"
+   ],
+   "mastery": "The child reads a table of temperature ranges and says whether a reading in degrees Celsius is cold, cool, warm or hot, and gives a sensible temperature for a day described in words."
+  },
+  "MATH.G7.MEASUR.TEMPERATURE.TEMP_COMPARE_DIFFERENCE": {
+   "forms": [
+    "how much warmer",
+    "range of a graph",
+    "one below zero",
+    "which is colder"
+   ],
+   "mastery": "The child says which of two places is hotter, warmer or colder, finds the difference between two readings (counting through zero when one is below it), and the difference between the highest and lowest points of a graph."
+  },
+  "MATH.G7.MEASUR.TEMPERATURE.TEMP_UNITS": {
+   "forms": [
+    "freezing and boiling points",
+    "which unit",
+    "write the unit",
+    "which is bigger"
+   ],
+   "mastery": "The child names degree Celsius and kelvin as units, knows water freezes at 0 degrees Celsius (273 K) and boils at 100 degrees Celsius (373 K), writes kelvin without a degree sign, and knows a Kelvin reading is larger than the Celsius reading."
+  },
+  "MATH.G7.MEASUR.TEMPERATURE.TEMP_CONVERT_C_K": {
+   "forms": [
+    "Celsius to kelvin",
+    "kelvin to Celsius",
+    "the hottest of three readings",
+    "a fall of temperature in kelvin",
+    "find the mistake"
+   ],
+   "mastery": "The child adds 273 to change degrees Celsius to kelvin and subtracts 273 for the reverse, knows a change in temperature is the same in both units, and puts both on one scale before comparing."
+  },
+  "MATH.G7.MEASUR.TEMPERATURE.TEMP_RISES_FALLS": {
+   "forms": [
+    "reading at midnight",
+    "after two changes",
+    "what was the start",
+    "rise then fall"
+   ],
+   "mastery": "The child starts from the first reading, adds each rise and subtracts each fall in turn, and gives the final temperature in degrees Celsius or kelvin."
+  },
+  "MATH.G7.GEOMET.GEOMETRICAL_CONSTRUCTION.MEASURE_ANGLES_PROTRACTOR": {
+   "forms": [
+    "read the angle",
+    "which scale",
+    "acute or obtuse",
+    "estimate then measure"
+   ],
+   "mastery": "The child places the centre of the protractor on the corner and the base line along one arm, reads the scale that starts at zero on that arm, and states whether the angle is acute, right, obtuse or reflex."
+  },
+  "MATH.G7.GEOMET.GEOMETRICAL_CONSTRUCTION.BISECT_ANGLE": {
+   "forms": [
+    "size of each half",
+    "why this arc",
+    "order of the steps",
+    "which step is wrong"
+   ],
+   "mastery": "The child bisects an angle with a ruler and compasses (arc across both arms from the corner, two equal arcs from those marks, line through the crossing point), says each half is half the original, and gives the reason for each arc."
+  },
+  "MATH.G7.GEOMET.GEOMETRICAL_CONSTRUCTION.CONSTRUCT_STANDARD_ANGLES": {
+   "forms": [
+    "how to make 30 degrees",
+    "plan for 135 degrees",
+    "which bisection gives 15",
+    "find the mistake in the plan"
+   ],
+   "mastery": "The child plans which angles to construct and how often to bisect to get 90, 60, 45, 30, 15 and 7.5 degrees, and builds angles such as 135 or 105 by adding or subtracting these."
+  },
+  "MATH.G7.GEOMET.GEOMETRICAL_CONSTRUCTION.CONSTRUCT_TRIANGLES": {
+   "forms": [
+    "can this triangle be drawn",
+    "which sides make a triangle",
+    "order of the steps",
+    "why the arcs do not meet"
+   ],
+   "mastery": "The child decides whether three side lengths make a triangle (the two shorter sides together must be longer than the longest), and plans the construction of a triangle from its sides or from two sides and the angle between them."
+  },
+  "MATH.G7.GEOMET.GEOMETRICAL_CONSTRUCTION.CONSTRUCT_CIRCLES": {
+   "forms": [
+    "set the compasses",
+    "radius from diameter",
+    "why the point stays still",
+    "draw a circle of diameter 6 cm"
+   ],
+   "mastery": "The child sets the compasses to the radius (half the diameter), places the point at the centre, and draws a circle, and says that every point on it is the same distance from the centre."
+  }
+ }
+}

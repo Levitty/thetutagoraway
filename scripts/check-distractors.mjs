@@ -1,5 +1,5 @@
 // ============================================================================
-// CHECK DISTRACTORS (17 Nov 2026): free, local, no AI. Draws every Grade 5
+// CHECK DISTRACTORS (17 Nov 2026): free, local, no AI. Draws every Grade 5 and Grade 7
 // curriculum family many times, exactly as homework does (toItem), and counts
 // wrong options that would tell the learner record something untrue:
 //   (a) shared    two or more wrong options in one question carry the same code
@@ -38,7 +38,7 @@ const num = (t) => { const s = String(t).replace(/,/g, '').trim(); return /^-?\d
 // A slip is a miscount of one or two. Only whole numbers can be that: 3.04 beside 3.4 is a place-value idea, not a slip (18 Nov 2026).
 const isInt = (v) => Number.isInteger(v);
 
-const families = FAMILIES.filter(f => f.cskill && String(f.id).startsWith('g5c.') && (!ONLY || f.id === ONLY));
+const families = FAMILIES.filter(f => f.cskill && /^g(5c|7)\./.test(String(f.id)) && (!ONLY || f.id === ONLY));
 const found = {}; // familyId -> { shared: Set(examples), nearmiss: ..., reason: ..., unmapped: ... }
 const bump = (id, metric, example) => { ((found[id] ||= { shared: new Set(), nearmiss: new Set(), reason: new Set(), unmapped: new Set() })[metric]).add(example); };
 
@@ -66,7 +66,7 @@ for (const f of families) {
 
 const flagged = (metric) => Object.keys(found).filter(id => found[id][metric].size).sort();
 const summary = Object.fromEntries([...METRICS, 'unmapped'].map(m => [m, flagged(m)]));
-console.log(`Distractor check: ${families.length} Grade 5 families, ${DRAWS} draws each`);
+console.log(`Distractor check: ${families.length} Grade 5 and Grade 7 families, ${DRAWS} draws each`);
 console.log('  (a) families with 2+ wrong options sharing a code ........ ' + summary.shared.length);
 console.log('  (b) families with a near-miss answer carrying a code ..... ' + summary.nearmiss.length);
 console.log('  (c) families with an empty or generic wrong-option reason  ' + summary.reason.length);

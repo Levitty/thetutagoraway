@@ -3,7 +3,7 @@
  "draws": 40,
  "counts": {
   "shared": 227,
-  "nearmiss": 54,
+  "nearmiss": 60,
   "reason": 114
  },
  "families": {
@@ -290,7 +290,13 @@
    "g5c.whole.hcf.find",
    "g5c.whole.hp.ribbon",
    "g5c.whole.pv.digit-in",
-   "g5c.whole.rh.list"
+   "g5c.whole.rh.list",
+   "g7.circ.table-pattern",
+   "g7.factors.div-baskets",
+   "g7.factors.div-six-table",
+   "g7.length.fence-posts-line",
+   "g7.perim.fence-posts-round",
+   "g7.vol.box-carton"
   ],
   "reason": [
    "g5c.add.chk.compare",

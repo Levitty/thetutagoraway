@@ -1,0 +1,431 @@
+{
+ "sub_strand": "MATH.G7.ALGEBR.ALGEBRAIC_EXPRESSIONS",
+ "title": "Algebraic Expressions",
+ "status": "draft: written 17 Nov 2026 offline for the Grade 7 pilot; not yet checked by a Kenyan maths teacher; not loaded by the live tutor",
+ "sources": [],
+ "notes": "Official outcomes a to c are tested; d is an attitude. Forming expressions (a, b) is split by the kind of situation (a rate plus a fixed amount, relations between people, words such as \"3 more than\"); simplifying (c) is collecting like terms and removing a bracket multiplied by a number. Letters stand for numbers.",
+ "skills": [
+  {
+   "skill": "MATH.G7.ALGEBR.ALGEBRAIC_EXPRESSIONS.FORM_EXPRESSION_RATE_FIXED",
+   "key_step": "The child says the charge for n items is the rate times n, plus the fixed amount once, and tests it with n = 1 and n = 2.",
+   "floor": {
+    "prerequisite": "Finds a charge for a given number.",
+    "question": "Sh 30 each plus sh 10: charge for 2?",
+    "answer": "70"
+   },
+   "representations": [
+    "a table of charges",
+    "a word rule",
+    "the expression"
+   ],
+   "steps": [
+    "Look at the rise per item.",
+    "Find the charge for 0 items: that is the fixed amount.",
+    "Write rate x n + fixed.",
+    "Test with n = 1 and n = 2."
+   ],
+   "contexts": [
+    "water jerricans delivery",
+    "photocopies",
+    "bus hire"
+   ],
+   "board": [
+    {
+     "beat": "draw",
+     "do": "Draw a table of jerricans 1, 2, 3 and charges 40, 70, 100."
+    },
+    {
+     "beat": "point",
+     "do": "Point at the rise.",
+     "say": "How much more for each extra jerrican?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for the child to say."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "MATH.G7.ALGEBR.ALGEBRAIC_EXPRESSIONS.FORM_EXPRESSION_RATE_FIXED.M_RATE_AND_FIXED_SWAPPED",
+     "listen_for": [
+      "10n + 30"
+     ],
+     "ask": "What is the charge for 2 jerricans with your expression?",
+     "repair": "Test with n = 2."
+    },
+    {
+     "code": "MATH.G7.ALGEBR.ALGEBRAIC_EXPRESSIONS.FORM_EXPRESSION_RATE_FIXED.M_FIXED_CHARGE_MULTIPLIED",
+     "listen_for": [
+      "40n"
+     ],
+     "ask": "Is the delivery fee paid for each jerrican?",
+     "repair": "It is paid once."
+    },
+    {
+     "code": "MATH.G7.ALGEBR.ALGEBRAIC_EXPRESSIONS.FORM_EXPRESSION_RATE_FIXED.M_FIXED_ADDED_BEFORE_MULTIPLYING",
+     "listen_for": [
+      "30(n + 10)"
+     ],
+     "ask": "What is 30(n + 10) for n = 2?",
+     "repair": "Add the fixed amount after multiplying."
+    }
+   ],
+   "checks": [
+    {
+     "question": "Sh 30 each plus sh 10 delivery: expression for n jerricans",
+     "answer": "30n + 10",
+     "shows": "rate and fixed"
+    },
+    {
+     "question": "Using it: n = 5",
+     "answer": "sh 160",
+     "shows": "substitute"
+    }
+   ]
+  },
+  {
+   "skill": "MATH.G7.ALGEBR.ALGEBRAIC_EXPRESSIONS.FORM_EXPRESSION_RELATIONS",
+   "key_step": "The child writes one expression for each person from the words, then adds all of them.",
+   "floor": {
+    "prerequisite": "Uses a letter for an age.",
+    "question": "Barasa is x. His sister is 3 years older. Her age?",
+    "answer": "x + 3"
+   },
+   "representations": [
+    "ages on a line",
+    "each person written",
+    "the total"
+   ],
+   "steps": [
+    "Write x for the first person.",
+    "Write each relation in words, then as an expression.",
+    "Check the direction (younger or older).",
+    "Add all expressions."
+   ],
+   "contexts": [
+    "ages in a family",
+    "pocket money",
+    "books on shelves"
+   ],
+   "board": [
+    {
+     "beat": "write",
+     "do": "Write: Barasa x, brother 2 younger, mother 3 times."
+    },
+    {
+     "beat": "point",
+     "do": "Point at the brother.",
+     "say": "Older or younger than Barasa?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for the child to write."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "MATH.G7.ALGEBR.ALGEBRAIC_EXPRESSIONS.FORM_EXPRESSION_RELATIONS.M_YOUNGER_ADDED",
+     "listen_for": [
+      "x + 2"
+     ],
+     "ask": "Is the brother older or younger?",
+     "repair": "Younger: take away."
+    },
+    {
+     "code": "MATH.G7.ALGEBR.ALGEBRAIC_EXPRESSIONS.FORM_EXPRESSION_RELATIONS.M_PERSON_MISSED",
+     "listen_for": [
+      "4x - 2"
+     ],
+     "ask": "How many people are in the total?",
+     "repair": "Add all three."
+    },
+    {
+     "code": "MATH.G7.ALGEBR.ALGEBRAIC_EXPRESSIONS.FORM_EXPRESSION_RELATIONS.M_RELATION_APPLIED_TO_ALL",
+     "listen_for": [
+      "5(x - 2)"
+     ],
+     "ask": "Is everyone 2 years younger?",
+     "repair": "Only the brother."
+    }
+   ],
+   "checks": [
+    {
+     "question": "Barasa x, brother 2 younger, mother 3 times as old: total",
+     "answer": "5x - 2",
+     "shows": "all three"
+    },
+    {
+     "question": "Mother's age minus Barasa's",
+     "answer": "2x",
+     "shows": "difference"
+    }
+   ]
+  },
+  {
+   "skill": "MATH.G7.ALGEBR.ALGEBRAIC_EXPRESSIONS.FORM_FROM_STATEMENT",
+   "key_step": "The child says \"more than\" adds to the letter and \"less than\" takes away from the letter, with the letter first.",
+   "floor": {
+    "prerequisite": "Uses a letter for an unknown.",
+    "question": "3 more than 5",
+    "answer": "8"
+   },
+   "representations": [
+    "numbers first, then letters",
+    "the words",
+    "the expression"
+   ],
+   "steps": [
+    "Try the words with a number.",
+    "Write the letter instead.",
+    "Check \"less than\" with a number.",
+    "Write the expression."
+   ],
+   "contexts": [
+    "pencils in a pack",
+    "money in a purse",
+    "goats in a herd"
+   ],
+   "board": [
+    {
+     "beat": "write",
+     "do": "Write: 5 less than 8 is ? and 5 less than n is ?"
+    },
+    {
+     "beat": "point",
+     "do": "Point at 8.",
+     "say": "Which number do we start from?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for the child to say."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "MATH.G7.ALGEBR.ALGEBRAIC_EXPRESSIONS.FORM_FROM_STATEMENT.M_MORE_THAN_AS_PRODUCT",
+     "listen_for": [
+      "3x"
+     ],
+     "ask": "If x is 5, what is 3 more than 5?",
+     "repair": "Use a number to test."
+    },
+    {
+     "code": "MATH.G7.ALGEBR.ALGEBRAIC_EXPRESSIONS.FORM_FROM_STATEMENT.M_LESS_THAN_REVERSED",
+     "listen_for": [
+      "5 - n"
+     ],
+     "ask": "What is 5 less than 8?",
+     "repair": "Start from n and take away 5."
+    }
+   ],
+   "checks": [
+    {
+     "question": "3 more than x",
+     "answer": "x + 3",
+     "shows": "more than"
+    },
+    {
+     "question": "5 less than n",
+     "answer": "n - 5",
+     "shows": "order"
+    }
+   ]
+  },
+  {
+   "skill": "MATH.G7.ALGEBR.ALGEBRAIC_EXPRESSIONS.SIMPLIFY_LIKE_TERMS",
+   "key_step": "The child collects the x terms and the number terms separately, adding the numbers in front and keeping each sign.",
+   "floor": {
+    "prerequisite": "Adds numbers with signs.",
+    "question": "6 + 1 - 1",
+    "answer": "6"
+   },
+   "representations": [
+    "x terms circled and numbers boxed",
+    "the sums",
+    "the simplified expression"
+   ],
+   "steps": [
+    "Circle the x terms.",
+    "Box the plain numbers.",
+    "Add each kind with its sign.",
+    "Substitute a value to check."
+   ],
+   "contexts": [
+    "perimeter of a plot",
+    "cost of items",
+    "ages"
+   ],
+   "board": [
+    {
+     "beat": "write",
+     "do": "Write (x + 6) + (4x + 1) + (2x - 1)."
+    },
+    {
+     "beat": "point",
+     "do": "Point at the x terms.",
+     "say": "How many x altogether?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for the child to say."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "MATH.G7.ALGEBR.ALGEBRAIC_EXPRESSIONS.SIMPLIFY_LIKE_TERMS.M_TERM_MISSED",
+     "listen_for": [
+      "5x"
+     ],
+     "ask": "How many x terms are there?",
+     "repair": "Count each side."
+    },
+    {
+     "code": "MATH.G7.ALGEBR.ALGEBRAIC_EXPRESSIONS.SIMPLIFY_LIKE_TERMS.M_LIKE_TERMS_MULTIPLIED",
+     "listen_for": [
+      "8x"
+     ],
+     "ask": "Do like terms add or multiply?",
+     "repair": "Like terms add."
+    },
+    {
+     "code": "MATH.G7.ALGEBR.ALGEBRAIC_EXPRESSIONS.SIMPLIFY_LIKE_TERMS.M_COEFFICIENT_ONE_ASSUMED",
+     "listen_for": [
+      "3x"
+     ],
+     "ask": "What does 4x mean?",
+     "repair": "Add the numbers in front."
+    },
+    {
+     "code": "MATH.G7.ALGEBR.ALGEBRAIC_EXPRESSIONS.SIMPLIFY_LIKE_TERMS.M_SIGN_DROPPED",
+     "listen_for": [
+      "8"
+     ],
+     "ask": "What does the last number do?",
+     "repair": "Keep the minus sign."
+    },
+    {
+     "code": "MATH.G7.ALGEBR.ALGEBRAIC_EXPRESSIONS.SIMPLIFY_LIKE_TERMS.M_CONSTANT_TERM_MISSED",
+     "listen_for": [
+      "7"
+     ],
+     "ask": "How many plain numbers are there?",
+     "repair": "List all of them."
+    },
+    {
+     "code": "MATH.G7.ALGEBR.ALGEBRAIC_EXPRESSIONS.SIMPLIFY_LIKE_TERMS.M_CONSTANTS_MULTIPLIED",
+     "listen_for": [
+      "-6"
+     ],
+     "ask": "Add or multiply?",
+     "repair": "Like terms add."
+    },
+    {
+     "code": "MATH.G7.ALGEBR.ALGEBRAIC_EXPRESSIONS.SIMPLIFY_LIKE_TERMS.M_COEFFICIENT_ADDED_TO_VALUE",
+     "listen_for": [
+      "7 + 3"
+     ],
+     "ask": "What does 7x mean?",
+     "repair": "7 times x."
+    },
+    {
+     "code": "MATH.G7.ALGEBR.ALGEBRAIC_EXPRESSIONS.SIMPLIFY_LIKE_TERMS.M_CONSTANT_LEFT_OUT",
+     "listen_for": [
+      "21"
+     ],
+     "ask": "Where did the 6 go?",
+     "repair": "Add it."
+    },
+    {
+     "code": "MATH.G7.ALGEBR.ALGEBRAIC_EXPRESSIONS.SIMPLIFY_LIKE_TERMS.M_CONSTANT_SIGN_FLIPPED",
+     "listen_for": [
+      "21 - 6"
+     ],
+     "ask": "Is the 6 added or taken?",
+     "repair": "Keep its sign."
+    }
+   ],
+   "checks": [
+    {
+     "question": "Simplify (x + 6) + (4x + 1) + (2x - 1)",
+     "answer": "7x + 6",
+     "shows": "collect"
+    },
+    {
+     "question": "Its value when x = 3",
+     "answer": "27",
+     "shows": "substitute"
+    }
+   ]
+  },
+  {
+   "skill": "MATH.G7.ALGEBR.ALGEBRAIC_EXPRESSIONS.SIMPLIFY_WITH_BRACKETS",
+   "key_step": "The child multiplies every term in the bracket by the number outside, and does not join x with a plain number.",
+   "floor": {
+    "prerequisite": "Multiplies a sum.",
+    "question": "2 x (3 + 4)",
+    "answer": "14"
+   },
+   "representations": [
+    "arrows from the number to each term",
+    "expanded form",
+    "a check with a value"
+   ],
+   "steps": [
+    "Draw arrows to each term.",
+    "Multiply each term.",
+    "Collect like terms.",
+    "Check with a value of x."
+   ],
+   "contexts": [
+    "fence round a plot",
+    "cost of 2 equal items",
+    "tiles in rows"
+   ],
+   "board": [
+    {
+     "beat": "write",
+     "do": "Write 2 x (x + 8)."
+    },
+    {
+     "beat": "point",
+     "do": "Point at the 2.",
+     "say": "Which terms does it multiply?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for the child to say."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "MATH.G7.ALGEBR.ALGEBRAIC_EXPRESSIONS.SIMPLIFY_WITH_BRACKETS.M_BRACKET_FIRST_TERM_ONLY",
+     "listen_for": [
+      "2x + 8"
+     ],
+     "ask": "Does the 2 multiply the 8?",
+     "repair": "Both terms."
+    },
+    {
+     "code": "MATH.G7.ALGEBR.ALGEBRAIC_EXPRESSIONS.SIMPLIFY_WITH_BRACKETS.M_UNLIKE_TERMS_JOINED",
+     "listen_for": [
+      "9x"
+     ],
+     "ask": "If x is 1, is x + 8 the same as 9x?",
+     "repair": "x and 8 are unlike."
+    }
+   ],
+   "checks": [
+    {
+     "question": "Simplify 2(x + 8)",
+     "answer": "2x + 16",
+     "shows": "both terms"
+    },
+    {
+     "question": "Fence 2 x ((x + 6) + 2)",
+     "answer": "2x + 16",
+     "shows": "perimeter"
+    }
+   ]
+  }
+ ]
+}

@@ -20,15 +20,15 @@ const F = { cm: 0.01, dm: 0.1, m: 1, Dm: 10, Hm: 100, km: 1000 };
 
 export const FAMILIES = [
   // =========================================================== PYTHAGORAS
-  fam({ id: 'g7.pyth.name-hypotenuse', skill: 'G7_PYTHAGORAS', outcome: 'G7.PYTH.a', rung: 1, form: 'direct',
+  fam({ id: 'g7.pyth.name-hypotenuse', skill: 'G7_PYTHAGORAS', outcome: 'MATH.G7.MEASUR.PYTHAGOREAN_RELATIONSHIP.a', cskill: 'MATH.G7.MEASUR.PYTHAGOREAN_RELATIONSHIP.RIGHT_TRIANGLE_SIDES', rung: 1, form: 'direct',
     draw: () => { const l = shuffle(LETTERS.split('')).slice(0, 3); return { p: l[0], q: l[1], r: l[2] }; },
     make: ({ p, q, r }) => ({
       question: `In triangle ${p}${q}${r}, the angle at ${q} is 90°. Which side is the hypotenuse?`, story: false,
-      options: [{ text: `${p}${r}`, right: true }, { text: `${p}${q}`, right: false, why: `${p}${q} meets the right angle at ${q}. The hypotenuse is opposite the right angle.` }, { text: `${q}${r}`, right: false, why: `${q}${r} meets the right angle at ${q}. The hypotenuse is opposite the right angle.` }],
+      options: [{ text: `${p}${r}`, right: true }, { text: `${p}${q}`, right: false, why: `${p}${q} meets the right angle at ${q}. The hypotenuse is opposite the right angle.`, mis: 'M_HYPOTENUSE_NEXT_TO_RIGHT_ANGLE' }, { text: `${q}${r}`, right: false, why: `${q}${r} meets the right angle at ${q}. The hypotenuse is opposite the right angle.`, mis: 'M_LEG_NAMED_BY_LETTER_ORDER' }],
       hints: ['The hypotenuse is the side opposite the right angle.', `Which side does not touch corner ${q}?`],
       steps: [`The right angle is at ${q}, so the two sides that meet there are ${p}${q} and ${q}${r}.`, `The side left over, opposite ${q}, is the hypotenuse: ${p}${r}.`],
     }) }),
-  fam({ id: 'g7.pyth.which-triangle', skill: 'G7_PYTHAGORAS', outcome: 'G7.PYTH.b', rung: 2, form: 'table',
+  fam({ id: 'g7.pyth.which-triangle', skill: 'G7_PYTHAGORAS', outcome: 'MATH.G7.MEASUR.PYTHAGOREAN_RELATIONSHIP.b', cskill: 'MATH.G7.MEASUR.PYTHAGOREAN_RELATIONSHIP.PYTHAGORAS_TEST', rung: 2, form: 'table',
     draw: () => {
       const t = triple(), good = shuffle([t.a, t.b, t.c]);
       const rows = [good];
@@ -42,11 +42,12 @@ export const FAMILIES = [
     make: ({ rows, ans }) => ({
       question: 'The table gives the three sides of four triangles. Which triangle is right-angled?',
       model: { type: 'table', data: { head: ['Triangle', 'Side 1 (cm)', 'Side 2 (cm)', 'Side 3 (cm)'], rows: rows.map((r, i) => ({ cells: [`Triangle ${'ABCD'[i]}`, ...r.map(String)] })) } },
-      options: rows.map((r, i) => ({ text: `Triangle ${'ABCD'[i]}`, right: isRight(...r), why: isRight(...r) ? undefined : `Square the two shorter sides and add. The answer is not the square of the longest side.` })),
+      // the wrong triangle that nearly fits is the one a child who accepts "close enough" picks; the others miss by more and carry no idea
+      options: (() => { const gap = (r) => { const t = [...r].sort((x, y) => x - y); return Math.abs(t[0] * t[0] + t[1] * t[1] - t[2] * t[2]); }; const wrongs = rows.filter(r => !isRight(...r)); const near = wrongs.reduce((m, r) => (gap(r) < gap(m) ? r : m), wrongs[0]); return rows.map((r, i) => ({ text: `Triangle ${'ABCD'[i]}`, right: isRight(...r), ...(isRight(...r) ? {} : r === near ? { why: 'The two squares are close, but a right angle needs them exactly equal. Square the two shorter sides and add.', mis: 'M_NEARLY_RIGHT_ACCEPTED' } : { why: 'Square the two shorter sides and add. The answer is not the square of the longest side.', mis: 'SLIP' }) })); })(),
       hints: ['In a right-angled triangle, the squares of the two shorter sides add up to the square of the longest side.', 'Test each triangle. Always put the longest side on its own.'],
       steps: rows.map((r, i) => { const s = [...r].sort((a, b) => a - b); return `Triangle ${'ABCD'[i]}: ${s[0]}² + ${s[1]}² = ${s[0] * s[0] + s[1] * s[1]} and ${s[2]}² = ${s[2] * s[2]}${isRight(...r) ? ', equal, so it is right-angled' : ', not equal'}.`; }),
     }) }),
-  fam({ id: 'g7.pyth.spot-missing-side', skill: 'G7_PYTHAGORAS', outcome: 'G7.PYTH.b', rung: 3, form: 'spot',
+  fam({ id: 'g7.pyth.spot-missing-side', skill: 'G7_PYTHAGORAS', outcome: 'MATH.G7.MEASUR.PYTHAGOREAN_RELATIONSHIP.b', cskill: 'MATH.G7.MEASUR.PYTHAGOREAN_RELATIONSHIP.FIND_SHORT_SIDE', rung: 3, form: 'spot',
     draw: () => ({ ...triple(30), mode: pick(['half', 'minus']), p: person() }),
     make: ({ a, b, c, mode, p }) => {
       const sq = c * c - a * a, half = round(sq / 2, 1);
@@ -61,57 +62,58 @@ export const FAMILIES = [
         { text: `The other side is ${c - a} cm.`, ok: c - a === c - a },
       ];
       return { question: `The longest side of a right-angled triangle is ${c} cm and another side is ${a} cm. ${p.name} is finding the third side. Where does ${p.her} working go wrong?`, working,
+        mis: mode === 'half' ? 'M_ROOT_AS_HALF' : 'M_SIDES_SUBTRACTED_NOT_SQUARED_SHORT',
         fix: mode === 'half' ? `A square root is not halving. b² = ${sq}, so b is the number that multiplies by itself to give ${sq}.` : `The sides must be squared first: b² = ${c}² − ${a}², then take the square root. Taking the sides away without squaring is wrong.`,
         steps: [`b² = ${c}² − ${a}² = ${sq}.`, `b = √${sq} = ${b} cm.`] };
     } }),
-  fam({ id: 'g7.pyth.gate-brace', skill: 'G7_PYTHAGORAS', outcome: 'G7.PYTH.c', rung: 2, form: 'word',
+  fam({ id: 'g7.pyth.gate-brace', skill: 'G7_PYTHAGORAS', outcome: 'MATH.G7.MEASUR.PYTHAGOREAN_RELATIONSHIP.c', cskill: 'MATH.G7.MEASUR.PYTHAGOREAN_RELATIONSHIP.FIND_HYPOTENUSE', rung: 2, form: 'word',
     draw: () => { const [a, b, c, m] = pick([[3, 4, 5, 40], [3, 4, 5, 50], [3, 4, 5, 60], [5, 12, 13, 20], [5, 12, 13, 25], [8, 15, 17, 10]]); return { a: a * m, b: b * m, c: c * m, who: person(), flip: pick([0, 1]) }; },
     make: ({ a, b, c, who, flip }) => {
       const w = flip ? a : b, h = flip ? b : a;
       return { question: `${who.name} makes a metal gate ${w} cm wide and ${h} cm high. ${who.She} welds a brace diagonally across the gate, from one corner to the opposite corner. How long is the brace, in cm?`,
         answer: c,
-        wrong: [[w + h, 'The brace goes straight across. It is shorter than going along two sides.'], [w * w + h * h, 'That is the square of the brace. Take the square root.'], [Math.abs(w - h), 'The brace is the hypotenuse. Square the sides and add. Do not take the sides away.']],
+        wrong: [[w + h, 'The brace goes straight across. It is shorter than going along two sides.', 'M_TWO_SIDES_ADDED'], [w * w + h * h, 'That is the square of the brace. Take the square root.', 'M_SQUARE_NOT_ROOTED'], [Math.abs(w - h), 'The brace is the hypotenuse. Square the sides and add. Do not take the sides away.', 'M_SIDES_SUBTRACTED_NOT_SQUARED']],
         hints: ['The width, the height and the brace make a right-angled triangle.', 'The brace is the longest side, the hypotenuse.'],
         steps: [`The brace is the hypotenuse: c² = ${w}² + ${h}² = ${commas(w * w + h * h)}.`, `c = √${commas(w * w + h * h)} = ${c} cm.`] };
     },
     check: ({ a, b }, v) => v * v === a * a + b * b }),
-  fam({ id: 'g7.pyth.shortcut-path', skill: 'G7_PYTHAGORAS', outcome: 'G7.PYTH.c', rung: 3, form: 'word',
+  fam({ id: 'g7.pyth.shortcut-path', skill: 'G7_PYTHAGORAS', outcome: 'MATH.G7.MEASUR.PYTHAGOREAN_RELATIONSHIP.c', cskill: 'MATH.G7.MEASUR.PYTHAGOREAN_RELATIONSHIP.PYTHAGORAS_SAVING', rung: 3, form: 'word',
     draw: () => { const t = triple(45); return { ...t, p: person() }; },
     make: ({ a, b, c, p }) => ({
       question: `${p.name} walks ${a * 10} m east along the road and then ${b * 10} m north along a lane. A footpath goes straight from the start to the end. How many metres shorter is the footpath?`,
       answer: (a + b - c) * 10,
-      wrong: [[c * 10, 'That is the length of the footpath. The question asks how much shorter it is than the road and lane.'], [(a + b) * 10, 'That is the length of the road and lane together.'], [(a + b + c) * 10, 'Subtract the footpath from the two sides. Do not add it.']],
+      wrong: [[c * 10, 'That is the length of the footpath. The question asks how much shorter it is than the road and lane.', 'M_QUANTITY_ASKED_MIXED'], [(a + b) * 10, 'That is the length of the road and lane together.', 'M_ROAD_LENGTH_AS_ANSWER'], [(a + b + c) * 10, 'Subtract the footpath from the two sides. Do not add it.', 'M_PATH_ADDED_TO_ROAD']],
       hints: ['East and north meet at a right angle. The footpath is the hypotenuse.', 'Find the footpath first. Then compare it with the road and lane together.'],
       steps: [`Footpath: √(${a * 10}² + ${b * 10}²) = ${c * 10} m.`, `Road and lane: ${a * 10} + ${b * 10} = ${(a + b) * 10} m.`, `Shorter by ${(a + b) * 10} − ${c * 10} = ${(a + b - c) * 10} m.`],
     }),
     check: ({ a, b, c }, v) => v + c * 10 === (a + b) * 10 }),
-  fam({ id: 'g7.pyth.pole-wire', skill: 'G7_PYTHAGORAS', outcome: 'G7.PYTH.c', rung: 3, form: 'steps',
+  fam({ id: 'g7.pyth.pole-wire', skill: 'G7_PYTHAGORAS', outcome: 'MATH.G7.MEASUR.PYTHAGOREAN_RELATIONSHIP.c', cskill: 'MATH.G7.MEASUR.PYTHAGOREAN_RELATIONSHIP.FIND_HYPOTENUSE', rung: 3, form: 'steps',
     draw: () => ({ ...triple(26), per: pick([30, 40, 50, 60]) }),
     make: ({ a, b, c, per }) => ({
       question: `A pole is ${b} m tall. A wire runs from its top to a peg in the ground ${a} m from the foot of the pole. The wire costs sh ${per} a metre.`,
       parts: [
-        { prompt: `Work out ${a}² + ${b}².`, answer: a * a + b * b, hint: 'Square each number, then add.', wrong: [[a + b, 'Square each number first.'], [b * b - a * a, 'Add the squares. Taking away is for finding a shorter side.']] },
-        { prompt: 'How long is the wire, in metres?', answer: c, unit: 'm', hint: 'The wire is the hypotenuse. Take the square root of the last answer.', wrong: [[a + b, 'The wire is a straight line from the top to the peg, so it is shorter than the pole and ground together.']] },
-        { prompt: 'How much does the wire cost, in shillings?', answer: c * per, unit: 'sh', hint: 'Length of wire times the price of one metre.', wrong: [[(a + b) * per, 'Use the length of the wire, not the pole and ground added.']] },
+        { prompt: `Work out ${a}² + ${b}².`, answer: a * a + b * b, hint: 'Square each number, then add.', wrong: [[a + b, 'Square each number first.', 'M_SIDES_ADDED_NOT_SQUARED'], [b * b - a * a, 'Add the squares. Taking away is for finding a shorter side.', 'M_SQUARES_SUBTRACTED_FOR_LONGEST']] },
+        { prompt: 'How long is the wire, in metres?', answer: c, unit: 'm', hint: 'The wire is the hypotenuse. Take the square root of the last answer.', wrong: [[a + b, 'The wire is a straight line from the top to the peg, so it is shorter than the pole and ground together.', 'M_TWO_SIDES_ADDED']] },
+        { prompt: 'How much does the wire cost, in shillings?', answer: c * per, unit: 'sh', hint: 'Length of wire times the price of one metre.', wrong: [[(a + b) * per, 'Use the length of the wire, not the pole and ground added.', 'M_TWO_SIDES_ADDED']] },
       ],
       steps: [`${a}² + ${b}² = ${a * a} + ${b * b} = ${a * a + b * b}.`, `Wire = √${a * a + b * b} = ${c} m.`, `Cost = ${c} × ${per} = ${sh(c * per)}.`],
     }),
     check: ({ a, b, c, per }, v) => v[0] === a * a + b * b && v[1] * v[1] === v[0] && v[2] / per === v[1] }),
-  fam({ id: 'g7.pyth.why-345', skill: 'G7_PYTHAGORAS', outcome: 'G7.PYTH.c', rung: 2, form: 'why',
+  fam({ id: 'g7.pyth.why-345', skill: 'G7_PYTHAGORAS', outcome: 'MATH.G7.MEASUR.PYTHAGOREAN_RELATIONSHIP.b', cskill: 'MATH.G7.MEASUR.PYTHAGOREAN_RELATIONSHIP.PYTHAGORAS_TEST', rung: 2, form: 'why',
     draw: () => { const [a, b, c] = pick([[3, 4, 5], [5, 12, 13], [6, 8, 10]]); return { a, b, c, p: person() }; },
     make: ({ a, b, c, p }) => ({
       question: `A builder marks ${a} m along one wall from a corner and ${b} m along the other wall. ${p.name} measures ${c} m between the two marks. Why does this show that the corner is a right angle?`,
       options: [
         { text: `${a}² + ${b}² = ${c}², so the sides fit the Pythagorean relationship`, right: true },
-        { text: `${a} + ${b} is bigger than ${c}, so the three lengths make a triangle`, right: false, why: 'Any three lengths that make a triangle have that property. It does not make the angle 90°.' },
-        { text: `${c} is the longest of the three lengths`, right: false, why: 'The longest side is longest in every triangle. That does not show a right angle.' },
-        { text: `${a} + ${b} + ${c} gives a whole number of metres`, right: false, why: 'The sum of the sides tells nothing about an angle.' },
+        { text: `${a} + ${b} is bigger than ${c}, so the three lengths make a triangle`, right: false, why: 'Any three lengths that make a triangle have that property. It does not make the angle 90°.', mis: 'M_TRIANGLE_INEQUALITY_AS_PROOF' },
+        { text: `${c} is the longest of the three lengths`, right: false, why: 'The longest side is longest in every triangle. That does not show a right angle.', mis: 'M_LONGEST_SIDE_AS_PROOF' },
+        { text: `${a} + ${b} + ${c} gives a whole number of metres`, right: false, why: 'The sum of the sides tells nothing about an angle.', mis: 'M_SIDES_ADDED_NOT_SQUARED' },
       ],
       hints: ['Square the two shorter lengths and add them.', 'Compare with the square of the longest length.'],
       steps: [`${a}² + ${b}² = ${a * a} + ${b * b} = ${a * a + b * b}.`, `${c}² = ${c * c}. They are equal, so the corner is a right angle.`],
     }) }),
   // =========================================================== LENGTH
-  fam({ id: 'g7.length.convert-story', skill: 'G7_LENGTH_CONV', outcome: 'G7.LENGTH.a', rung: 1, form: 'word',
+  fam({ id: 'g7.length.convert-story', skill: 'G7_LENGTH_CONV', outcome: 'MATH.G7.MEASUR.LENGTH.a', cskill: 'MATH.G7.MEASUR.LENGTH.CONVERT_LENGTH_UNITS', rung: 1, form: 'word',
     draw: () => {
       const sc = pick([
         { f: 'dm', t: 'cm', say: (v) => `A tailor cuts ${v} dm of ribbon.`, to: 'centimetres' },
@@ -129,12 +131,12 @@ export const FAMILIES = [
       const w = [round(val / r, 4), round(ans * 10, 4), round(ans / 10, 4)];
       if (!uniq(ans, ...w)) return { question: 'x', answer: ans, wrong: [], hints: [], steps: [] };
       return { question: `${say(v)} Change this length to ${to}.`, answer: ans,
-        wrong: [[w[0], `A ${F[f] > F[t] ? t : f} is the smaller unit, so there are more of them. Check whether to multiply or divide.`], [w[1], 'Check how many of the smaller unit fit in the larger one. The size of the step is wrong.'], [w[2], 'Check how many of the smaller unit fit in the larger one. The size of the step is wrong.']],
+        wrong: [[w[0], `A ${F[f] > F[t] ? t : f} is the smaller unit, so there are more of them. Check whether to multiply or divide.`, 'M_DIVIDED_FOR_SMALLER_UNIT'], [w[1], 'That multiplies by the wrong number. Look at how many of the smaller unit fit in the larger one.', 'M_STEP_SIZE_WRONG'], [w[2], 'That keeps the number the same, but the new unit is a different size, so the number must change.', 'M_NUMBER_NOT_CHANGED']],
         hints: [`Which is bigger, a ${f} or a ${t}?`, `Find how many ${F[f] > F[t] ? t : f} make one ${F[f] > F[t] ? f : t}. Then multiply or divide.`],
         steps: [`1 ${f} = ${commas(round(r, 4))} ${t}.`, `${commas(val)} ${f} = ${commas(val)} × ${commas(round(r, 4))} = ${commas(ans)} ${t}.`] };
     },
     check: ({ f, t, v, raw }, a) => Math.abs(a * F[t] - (raw ? v * 10 : v) * F[f]) < 1e-9 }),
-  fam({ id: 'g7.length.table-compare', skill: 'G7_LENGTH_CONV', outcome: 'G7.LENGTH.a', rung: 3, form: 'table',
+  fam({ id: 'g7.length.table-compare', skill: 'G7_LENGTH_CONV', outcome: 'MATH.G7.MEASUR.LENGTH.b', cskill: 'MATH.G7.MEASUR.LENGTH.COMPARE_LENGTHS_UNITS', rung: 3, form: 'table',
     draw: () => {
       const ua = pick(['Dm', 'Hm']), ub = pick(['dm', 'cm']);
       const va = randInt(3, 9), vb = ub === 'dm' ? randInt(2, 90) * 10 : randInt(2, 90) * 100;
@@ -146,25 +148,25 @@ export const FAMILIES = [
       question: `Use the table. A rope is ${va} ${ua} long. A cable is ${commas(vb)} ${ub} long. How many metres longer is the longer one?`,
       model: { type: 'table', data: { head: ['Unit', 'Length in metres'], rows: [['cm', '0.01'], ['dm', '0.1'], ['m', '1'], ['Dm', '10'], ['Hm', '100'], ['km', '1,000']].map(([label, value]) => ({ label, value })) } },
       answer: round(Math.abs(ma - mb), 3),
-      wrong: [[wa[0], 'The two lengths are in different units. Change both to metres before you subtract.'], [round(wa[1], 3), `Read the table again for ${ua}. How many metres is one ${ua}?`], [round(wa[2], 3), `Read the table again for ${ub}. How many metres is one ${ub}?`]],
+      wrong: [[wa[0], 'The two lengths are in different units. Change both to metres before you subtract.', 'M_UNITS_NOT_MATCHED'], [round(wa[1], 3), `Read the table again for ${ua}. How many metres is one ${ua}?`, 'M_LARGE_UNIT_VALUE_MISREAD'], [round(wa[2], 3), `Read the table again for ${ub}. How many metres is one ${ub}?`, 'M_SMALL_UNIT_VALUE_MISREAD']],
       hints: ['Change both lengths to metres first.', 'Use the table for the number of metres in one of each unit.'],
       steps: [`${va} ${ua} = ${va} × ${F[ua]} = ${commas(ma)} m.`, `${commas(vb)} ${ub} = ${commas(vb)} × ${F[ub]} = ${commas(mb)} m.`, `Difference = ${commas(Math.max(ma, mb))} − ${commas(Math.min(ma, mb))} = ${commas(round(Math.abs(ma - mb), 3))} m.`],
     }),
     check: ({ ma, mb }, a) => Math.abs(Math.min(ma, mb) + a - Math.max(ma, mb)) < 1e-9 }),
-  fam({ id: 'g7.length.why-divide', skill: 'G7_LENGTH_CONV', outcome: 'G7.LENGTH.a', rung: 2, form: 'why',
+  fam({ id: 'g7.length.why-divide', skill: 'G7_LENGTH_CONV', outcome: 'MATH.G7.MEASUR.LENGTH.a', cskill: 'MATH.G7.MEASUR.LENGTH.CONVERT_LENGTH_UNITS', rung: 2, form: 'why',
     draw: () => { const [f, t, r] = pick([['Dm', 'dm', 100], ['Hm', 'm', 100], ['Hm', 'dm', 1000], ['Dm', 'cm', 1000]]); return { f, t, r, v: randInt(3, 9), p: person() }; },
     make: ({ f, t, r, v, p }) => ({
       question: `${p.name} changes ${v} ${f} to ${t}. ${p.She} divides ${v} by ${r} and gets ${round(v / r, 4)} ${t}. Why is this wrong?`,
       options: [
         { text: `A ${t} is smaller than a ${f}, so multiply by ${commas(r)}`, right: true },
-        { text: 'The number should stay the same, because only the unit name changes', right: false, why: 'The unit changes the size of one step, so the number must change too.' },
-        { text: `${p.She} should divide, but by 10 every time`, right: false, why: 'The number of small units in a big unit depends on the two units. It is not always 10.' },
-        { text: `Dividing is right, because a ${t} is bigger than a ${f}`, right: false, why: `Compare the units again. A ${f} is the longer one.` },
+        { text: 'The number should stay the same, because only the unit name changes', right: false, why: 'The unit changes the size of one step, so the number must change too.', mis: 'M_NUMBER_NOT_CHANGED' },
+        { text: `${p.She} should divide, but by 10 every time`, right: false, why: 'The number of small units in a big unit depends on the two units. It is not always 10.', mis: 'M_ALWAYS_TEN' },
+        { text: `Dividing is right, because a ${t} is bigger than a ${f}`, right: false, why: `Compare the units again. A ${f} is the longer one.`, mis: 'M_UNIT_SIZE_REVERSED' },
       ],
       hints: [`Which is longer, one ${f} or one ${t}?`, 'When you measure with a smaller unit, do you need more of them or fewer?'],
       steps: [`A ${f} is longer than a ${t}, so one ${f} holds many ${t}.`, `${v} ${f} = ${v} × ${commas(r)} = ${commas(v * r)} ${t}.`],
     }) }),
-  fam({ id: 'g7.length.spot-hm-cm', skill: 'G7_LENGTH_CONV', outcome: 'G7.LENGTH.a', rung: 2, form: 'spot',
+  fam({ id: 'g7.length.spot-hm-cm', skill: 'G7_LENGTH_CONV', outcome: 'MATH.G7.MEASUR.LENGTH.a', cskill: 'MATH.G7.MEASUR.LENGTH.CONVERT_LENGTH_UNITS', rung: 2, form: 'spot',
     draw: () => ({ n: pick([1.5, 2.5, 3.5, 4.5, 6, 7.5, 8]), p: person() }),
     make: ({ n, p }) => {
       const m = round(n * 100, 3), bad = round(m * 10, 3), good = round(m * 100, 3);
@@ -174,42 +176,43 @@ export const FAMILIES = [
           { text: `1 m = 100 cm, so ${commas(m)} m = ${commas(bad)} cm`, ok: bad === good },
           { text: `${n} Hm = ${commas(bad)} cm`, ok: bad === bad },
         ],
+        mis: 'M_STEP_SIZE_WRONG',
         fix: 'There are 100 cm in 1 m, so multiply by 100, not by 10.',
         steps: [`${n} Hm = ${commas(m)} m.`, `${commas(m)} m = ${commas(m)} × 100 = ${commas(good)} cm.`] };
     } }),
-  fam({ id: 'g7.length.rope-left', skill: 'G7_LENGTH_CONV', outcome: 'G7.LENGTH.b', rung: 2, form: 'word',
-    draw: () => { const n = randInt(3, 8), pc = pick([25, 40, 50, 60, 75, 80]), R = randInt(8, 20); const left = R - (n * pc) / 100; return Number.isInteger(left * 2) && left > 0 && uniq(left, R * 100 - n * pc, R - pc / 100, R + (n * pc) / 100, (n * pc) / 100) ? { n, pc, R, p: person() } : null; },
+  fam({ id: 'g7.length.rope-left', skill: 'G7_LENGTH_CONV', outcome: 'MATH.G7.MEASUR.LENGTH.b', cskill: 'MATH.G7.MEASUR.LENGTH.OPERATIONS_ON_LENGTH', rung: 2, form: 'word',
+    draw: () => { const n = randInt(3, 8), pc = pick([25, 40, 50, 60, 75, 80]), R = randInt(8, 20); const left = R - (n * pc) / 100; return Number.isInteger(left * 2) && left > 0 && [R * 100 - n * pc, R - pc / 100, R + (n * pc) / 100, (n * pc) / 100].every(v => Math.abs(v - left) > 2) && uniq(left, R * 100 - n * pc, R - pc / 100, R + (n * pc) / 100, (n * pc) / 100) ? { n, pc, R, p: person() } : null; },
     make: ({ n, pc, R, p }) => ({
       question: `${p.name} has a rope ${R} m long. ${p.She} cuts ${n} pieces, each ${pc} cm long, for a washing line. How many metres of rope are left?`,
       answer: R - (n * pc) / 100,
-      wrong: [[R * 100 - n * pc, 'That is in centimetres. The question asks for metres.'], [R - pc / 100, 'There are several pieces. Find the length of all the pieces together.'], [R + (n * pc) / 100, 'Cutting takes rope away, so subtract.'], [(n * pc) / 100, 'That is the rope that is cut. The question asks what is left.']],
+      wrong: [[R * 100 - n * pc, 'That is in centimetres. The question asks for metres.', 'M_ANSWER_UNIT_NOT_CONVERTED'], [R - pc / 100, 'There are several pieces. Find the length of all the pieces together.', 'M_ONE_PIECE_ONLY'], [R + (n * pc) / 100, 'Cutting takes rope away, so subtract.', 'M_ADDED_NOT_SUBTRACTED'], [(n * pc) / 100, 'That is the rope that is cut. The question asks what is left.', 'M_CUT_AMOUNT_AS_LEFT']],
       hints: ['Use one unit for everything.', `Total length of the ${n} pieces, then change it to metres.`],
       steps: [`${n} pieces × ${pc} cm = ${n * pc} cm = ${(n * pc) / 100} m.`, `Left: ${R} − ${(n * pc) / 100} = ${R - (n * pc) / 100} m.`],
     }),
     check: ({ n, pc, R }, a) => Math.round((R - a) * 100) === n * pc }),
-  fam({ id: 'g7.length.fence-posts-line', skill: 'G7_LENGTH_CONV', outcome: 'G7.LENGTH.b', rung: 2, form: 'word',
+  fam({ id: 'g7.length.fence-posts-line', skill: 'G7_LENGTH_CONV', outcome: 'MATH.G7.MEASUR.LENGTH.b', cskill: 'MATH.G7.MEASUR.LENGTH.OPERATIONS_ON_LENGTH', rung: 2, form: 'word',
     draw: () => { const gap = pick([2, 3, 4, 5, 6]), n = randInt(6, 20); return { gap, n, L: gap * n, p: person() }; },
     make: ({ gap, n, L, p }) => ({
       question: `${p.name} puts up a straight fence ${L} m long. There is a post every ${gap} m, and one at each end. How many posts does ${p.she} need?`,
       answer: n + 1,
-      wrong: [[n, 'That counts the gaps between posts. There is a post at both ends too.'], [n - 1, 'There are more posts than gaps on a straight fence.'], [L * gap, 'Divide the length by the gap. Do not multiply.']],
+      wrong: [[n, 'That counts the gaps between posts. There is a post at both ends too.', 'M_GAPS_FOR_POSTS'], [n - 1, 'There are more posts than gaps on a straight fence.', 'M_FENCE_END_POST_SUBTRACTED'], [L * gap, 'Divide the length by the gap. Do not multiply.', 'M_MULTIPLIED_NOT_DIVIDED_LENGTH']],
       hints: ['Draw a short fence with 3 gaps. Count the posts.', 'Find the number of gaps first.'],
       steps: [`Number of gaps = ${L} ÷ ${gap} = ${n}.`, `A post at each end means one more post than gaps: ${n} + 1 = ${n + 1}.`],
     }),
     check: ({ gap, L }, a) => (a - 1) * gap === L }),
 
   // =========================================================== PERIMETER
-  fam({ id: 'g7.perim.l-shape', skill: 'G7_PERIMETER', outcome: 'G7.LENGTH.c', rung: 3, form: 'word',
+  fam({ id: 'g7.perim.l-shape', skill: 'G7_PERIMETER', outcome: 'MATH.G7.MEASUR.LENGTH.c', cskill: 'MATH.G7.MEASUR.LENGTH.PERIMETER_PLANE_FIGURES', rung: 3, form: 'word',
     draw: () => { const w = randInt(10, 20), h = randInt(8, 16), a = randInt(3, 6), b = randInt(3, 6); return a < w - 2 && b < h - 2 && uniq(2 * (w + h), 2 * (w + h) - 2 * (a + b), 2 * (w + h) + 2 * (a + b), w * h - a * b) ? { w, h, a, b, p: person() } : null; },
     make: ({ w, h, a, b, p }) => ({
       question: `${p.name} cuts a corner ${a} m by ${b} m from a rectangular plot ${w} m by ${h} m. This leaves an L-shaped plot. How long is the fence needed all around the L-shaped plot, in metres?`,
       answer: 2 * (w + h),
-      wrong: [[2 * (w + h) - 2 * (a + b), 'Taking a corner away does not take the sides away. Look at what the new edges add.'], [2 * (w + h) + 2 * (a + b), 'The two new edges only replace the two sides that were cut. Count the length again.'], [w * h - a * b, 'That is the area. A fence goes around the edge.']],
+      wrong: [[2 * (w + h) - 2 * (a + b), 'Taking a corner away does not take the sides away. Look at what the new edges add.', 'M_CUT_SIDES_NOT_REPLACED'], [2 * (w + h) + 2 * (a + b), 'The two new edges only replace the two sides that were cut. Count the length again.', 'M_NEW_EDGES_ADDED_TO_FULL'], [w * h - a * b, 'That is the area. A fence goes around the edge.', 'M_AREA_FOR_PERIMETER_LEN']],
       hints: ['Picture the L. The two new edges run along the cut.', 'Compare the new edges with the old sides they replace.'],
       steps: [`The two new edges are ${a} m and ${b} m. They replace the cut parts of the sides, which were also ${a} m and ${b} m.`, `So the perimeter stays the same as the rectangle: 2 × (${w} + ${h}) = ${2 * (w + h)} m.`],
     }),
     check: ({ w, h }, a) => a === w + h + w + h }),
-  fam({ id: 'g7.perim.longest-fence', skill: 'G7_PERIMETER', outcome: 'G7.LENGTH.c', rung: 3, form: 'table',
+  fam({ id: 'g7.perim.longest-fence', skill: 'G7_PERIMETER', outcome: 'MATH.G7.MEASUR.LENGTH.c', cskill: 'MATH.G7.MEASUR.LENGTH.PERIMETER_PLANE_FIGURES', rung: 3, form: 'table',
     draw: () => {
       const rows = []; for (let i = 0; i < 3; i++) rows.push([randInt(5, 40), randInt(5, 40)]);
       const per = rows.map(([l, w]) => 2 * (l + w)), ar = rows.map(([l, w]) => l * w);
@@ -219,74 +222,74 @@ export const FAMILIES = [
     make: ({ rows, pm }) => ({
       question: 'A farmer wants to fence one of three rectangular plots all around. The table shows the plots. Which plot needs the longest fence?',
       model: { type: 'table', data: { head: ['Plot', 'Length (m)', 'Width (m)'], rows: rows.map(([l, w], i) => ({ cells: [`Plot ${'ABC'[i]}`, String(l), String(w)] })) } },
-      options: rows.map(([l, w], i) => ({ text: `Plot ${'ABC'[i]}`, right: i === pm, why: i === pm ? undefined : `Find the distance around each plot: 2 × (length + width). A plot with a large area does not always have the longest edge.` })),
+      options: rows.map(([l, w], i) => ({ text: `Plot ${'ABC'[i]}`, right: i === pm, ...(i === pm ? {} : i === rows.reduce((m, r, j) => (r[0] * r[1] > rows[m][0] * rows[m][1] ? j : m), 0) ? { why: 'That plot has the biggest area, but a fence goes round the edge. Find 2 × (length + width) for each plot.', mis: 'M_AREA_DECIDES_FENCE' } : { why: 'Find the distance around each plot: 2 × (length + width). Looking at one side only is not enough, because the width goes round too.', mis: 'M_ONE_DIMENSION_ONLY' }) })),
       hints: ['A fence goes around the edge, so use the perimeter.', 'Work out 2 × (length + width) for each plot.'],
       steps: rows.map(([l, w], i) => `Plot ${'ABC'[i]}: 2 × (${l} + ${w}) = ${2 * (l + w)} m.`),
     }) }),
-  fam({ id: 'g7.perim.fence-posts-round', skill: 'G7_PERIMETER', outcome: 'G7.LENGTH.c', rung: 3, form: 'word',
+  fam({ id: 'g7.perim.fence-posts-round', skill: 'G7_PERIMETER', outcome: 'MATH.G7.MEASUR.LENGTH.c', cskill: 'MATH.G7.MEASUR.LENGTH.PERIMETER_PLANE_FIGURES', rung: 3, form: 'word',
     draw: () => { const gap = pick([2, 4, 5]), n = randInt(10, 30), l = randInt(8, 20) * gap; const w = (n * gap) / 2 - l; return Number.isInteger(w) && w >= 4 && w !== l ? { gap, n, l, w, p: person() } : null; },
     make: ({ gap, n, l, w, p }) => ({
       question: `${p.name} fences a rectangular plot ${l} m long and ${w} m wide with a post every ${gap} m, all the way around. How many posts are needed?`,
       answer: n,
-      wrong: [[n + 1, 'Around a closed plot the first post is also the last one. Do not add one for the end.'], [(l * w) / gap, 'That uses the area. Posts go around the edge.'], [l + w + (l + w) / gap, 'Find the distance around, then divide by the gap.']],
+      wrong: [[n + 1, 'Around a closed plot the first post is also the last one. Do not add one for the end.', 'M_END_POST_ADDED_ROUND'], [(l * w) / gap, 'That uses the area. Posts go around the edge.', 'M_AREA_FOR_PERIMETER_LEN'], [l + w + (l + w) / gap, 'Find the distance around, then divide by the gap.', 'M_POSTS_DIVISION_MISSED']],
       hints: ['Find the distance all the way around.', 'Divide the distance by the gap between posts.'],
       steps: [`Distance around = 2 × (${l} + ${w}) = ${2 * (l + w)} m.`, `Posts = ${2 * (l + w)} ÷ ${gap} = ${n}. The last post meets the first, so there is no extra post.`],
     }),
     check: ({ gap, l, w }, a) => a * gap === 2 * (l + w) }),
 
   // =========================================================== CIRCUMFERENCE
-  fam({ id: 'g7.circ.wheel-distance', skill: 'G7_CIRCUMFERENCE', outcome: 'G7.LENGTH.d', rung: 2, form: 'word',
+  fam({ id: 'g7.circ.wheel-distance', skill: 'G7_CIRCUMFERENCE', outcome: 'MATH.G7.MEASUR.LENGTH.d', cskill: 'MATH.G7.MEASUR.LENGTH.CIRCUMFERENCE_DISTANCE', rung: 2, form: 'word',
     draw: () => { const d = pick([14, 21, 28, 35, 42, 56, 70, 84]), n = pick([50, 100, 150, 200, 250, 500]); const c = (22 * d) / 7; const m = (c * n) / 100; return Number.isInteger(m) && uniq(m, (11 * d * d * n) / (7 * 100) , (d * n) / 100, c * n) ? { d, n, c, m, p: person() } : null; },
     make: ({ d, n, c, m, p }) => ({
       question: `The wheel of ${p.name}'s bicycle has a diameter of ${d} cm. Take π = 22/7. The wheel turns ${n} times. How far does the bicycle go, in metres?`,
       answer: m,
-      wrong: [[(d * n) / 100, 'One turn of the wheel covers the distance round the wheel, which is more than the diameter.'], [c * n, 'That is in centimetres. The question asks for metres.'], [round((c * n) / 1000, 3), 'There are 100 cm in 1 m, not 1,000.']],
+      wrong: [[(d * n) / 100, 'One turn of the wheel covers the distance round the wheel, which is more than the diameter.', 'M_DIAMETER_AS_CIRCUMFERENCE'], [c * n, 'That is in centimetres. The question asks for metres.', 'M_UNITS_NOT_CONVERTED_CIRC'], [round((c * n) / 1000, 3), 'There are 100 cm in 1 m, not 1,000.', 'M_CM_TO_M_BY_THOUSAND']],
       hints: ['One full turn covers one circumference.', 'Multiply by the number of turns, then change cm to m.'],
       steps: [`Circumference = 22/7 × ${d} = ${c} cm.`, `${n} turns: ${c} × ${n} = ${commas(c * n)} cm.`, `${commas(c * n)} ÷ 100 = ${m} m.`],
     }),
     check: ({ n, c }, a) => a * 100 === c * n }),
-  fam({ id: 'g7.circ.find-diameter', skill: 'G7_CIRCUMFERENCE', outcome: 'G7.LENGTH.d', rung: 3, form: 'word',
+  fam({ id: 'g7.circ.find-diameter', skill: 'G7_CIRCUMFERENCE', outcome: 'MATH.G7.MEASUR.LENGTH.d', cskill: 'MATH.G7.MEASUR.LENGTH.CIRCUMFERENCE_FIND_DIAMETER', rung: 3, form: 'word',
     draw: () => { const d = pick([7, 14, 21, 28, 35, 42, 49, 56]); return { d, thing: pick(['water drum', 'round table', 'clay pot', 'circular fish pond']), p: person() }; },
     make: ({ d, thing, p }) => ({
       question: `${p.name} measures the distance round a ${thing} with a tape and gets ${(22 * d) / 7} cm. Take π = 22/7. What is the diameter of the ${thing}, in cm?`,
       answer: d,
-      wrong: [[d / 2, 'That is the radius. The question asks for the diameter.'], [d / 7, 'Divide by π = 22/7, which is the same as multiplying by 7/22. Dividing by 22 alone leaves out the 7.'], [(22 * d) / 7 / 2, 'The distance round is the circumference. Halving it does not give the diameter.']],
+      wrong: [[d / 2, 'That is the radius. The question asks for the diameter.', 'M_RADIUS_FOR_DIAMETER'], [d / 7, 'Divide by π = 22/7, which is the same as multiplying by 7/22. Dividing by 22 alone leaves out the 7.', 'M_PI_PART_DROPPED'], [(22 * d) / 7 / 2, 'The distance round is the circumference. Halving it does not give the diameter.', 'M_CIRCUMFERENCE_HALVED']],
       hints: ['Circumference = π × diameter.', 'To find the diameter, divide the circumference by π.'],
       steps: [`${(22 * d) / 7} = 22/7 × d.`, `d = ${(22 * d) / 7} ÷ 22/7 = ${(22 * d) / 7} × 7/22 = ${d} cm.`],
     }),
     check: ({ d }, a) => (22 * a) / 7 === (22 * d) / 7 && a === d }),
-  fam({ id: 'g7.circ.why-double', skill: 'G7_CIRCUMFERENCE', outcome: 'G7.LENGTH.d', rung: 3, form: 'why',
+  fam({ id: 'g7.circ.why-double', skill: 'G7_CIRCUMFERENCE', outcome: 'MATH.G7.MEASUR.LENGTH.d', cskill: 'MATH.G7.MEASUR.LENGTH.CIRCUMFERENCE_REASON', rung: 3, form: 'why',
     draw: () => { const d = pick([7, 14, 21, 28]); return { d, p: person() }; },
     make: ({ d, p }) => ({
       question: `A round pond has a diameter of ${d} m. A second pond has a diameter of ${2 * d} m. ${p.name} says the distance round the second pond is 4 times the distance round the first. Why is ${p.she} wrong?`,
       options: [
         { text: 'Circumference = π × diameter, so doubling the diameter only doubles the circumference', right: true },
-        { text: 'The circumference of a circle never changes with its size', right: false, why: 'A bigger circle has a longer circumference.' },
-        { text: 'Doubling the diameter makes the circumference 3 times as long because π is about 3', right: false, why: 'π is the same for both ponds. It does not multiply the change.' },
-        { text: 'The circumference is 4 times as long only for ponds, not for other circles', right: false, why: 'The rule for circumference is the same for every circle.' },
+        { text: 'The circumference of a circle never changes with its size', right: false, why: 'A bigger circle has a longer circumference.', mis: 'M_CIRCUMFERENCE_SIZE_FIXED' },
+        { text: 'Doubling the diameter makes the circumference 3 times as long because π is about 3', right: false, why: 'π is the same for both ponds. It does not multiply the change.', mis: 'M_PI_MULTIPLIES_CHANGE' },
+        { text: 'The circumference is 4 times as long only for ponds, not for other circles', right: false, why: 'The rule for circumference is the same for every circle.', mis: 'M_RULE_DEPENDS_ON_OBJECT' },
       ],
       hints: ['Write the circumference of each pond with the rule C = π × d.', 'Compare the two answers.'],
       steps: [`First pond: π × ${d}. Second pond: π × ${2 * d}.`, 'The second is 2 times the first: it is the area, not the distance round, that becomes 4 times as big.'],
     }) }),
-  fam({ id: 'g7.circ.table-pattern', skill: 'G7_CIRCUMFERENCE', outcome: 'G7.LENGTH.d', rung: 2, form: 'table',
+  fam({ id: 'g7.circ.table-pattern', skill: 'G7_CIRCUMFERENCE', outcome: 'MATH.G7.MEASUR.LENGTH.d', cskill: 'MATH.G7.MEASUR.LENGTH.CIRCUMFERENCE_REASON', rung: 2, form: 'table',
     draw: () => { const all = shuffle([7, 14, 21, 28, 35, 42, 49, 56, 63, 70]); return { ds: all.slice(0, 4).sort((x, y) => x - y), target: all[4], thing: pick(['water tank', 'round table', 'drum', 'circular pond']) }; },
     make: ({ ds, target, thing }) => ({
       question: `A class measured the width across some round objects and the distance round each. The table shows the results. The distance round divided by the width is the same every time. A ${thing} is ${target} cm wide. How far is it round, in cm?`,
       model: { type: 'table', data: { head: ['Object', 'Width across (cm)', 'Distance round (cm)'], rows: ds.map((d, i) => ({ cells: [['Tin', 'Bucket lid', 'Plate', 'Basin'][i], String(d), String((22 * d) / 7)] })) } },
       answer: (22 * target) / 7,
-      wrong: [[target * 3, 'The distance round is a little more than 3 times the width. Check the exact number in the table.'], [target + 22, 'Look at how the distance round grows. It is a multiple of the width, not an add-on.'], [target * 2, 'Doubling the width is not enough. Divide one distance round by its width in the table to find the multiplier.']],
+      wrong: [[target * 3, 'The distance round is a little more than 3 times the width. Check the exact number in the table.', 'M_PI_ROUNDED_TO_THREE'], [target + 22, 'Look at how the distance round grows. It is a multiple of the width, not an add-on.', 'M_ADD_NOT_MULTIPLY_CIRC'], [target * 2, 'Doubling the width is not enough. Divide one distance round by its width in the table to find the multiplier.', 'M_DOUBLE_ONLY_CIRC']],
       hints: ['Divide a distance round by its width in the table.', 'Multiply the width of the new object by that number.'],
       steps: [`In the table, ${(22 * ds[0]) / 7} ÷ ${ds[0]} and ${(22 * ds[1]) / 7} ÷ ${ds[1]} both give 22/7.`, `${target} × 22/7 = ${(22 * target) / 7} cm.`],
     }),
     check: ({ target }, a) => a * 7 === target * 22 }),
-  fam({ id: 'g7.circ.running-track', skill: 'G7_CIRCUMFERENCE', outcome: 'G7.LENGTH.d', rung: 3, form: 'steps',
+  fam({ id: 'g7.circ.running-track', skill: 'G7_CIRCUMFERENCE', outcome: 'MATH.G7.MEASUR.LENGTH.d', cskill: 'MATH.G7.MEASUR.LENGTH.CIRCUMFERENCE_DISTANCE', rung: 3, form: 'steps',
     draw: () => { const d = pick([14, 28, 42, 56, 70]), s = pick([80, 90, 100, 110, 120]); return { d, s }; },
     make: ({ d, s }) => ({
       question: `A running track has two straight sides, each ${s} m long. At each end is a half circle with a diameter of ${d} m. Take π = 22/7.`,
       parts: [
-        { prompt: 'The two half circles make one full circle. What is its circumference, in metres?', answer: (22 * d) / 7, unit: 'm', hint: 'Circumference = π × diameter.', wrong: [[(11 * d) / 7, 'Two half circles make a whole circle, not a half.']] },
-        { prompt: 'What is the total length of the two straight sides, in metres?', answer: 2 * s, unit: 'm', hint: 'There are two sides.', wrong: [[s, 'The track has two straight sides.']] },
-        { prompt: 'How far is one lap of the track, in metres?', answer: 2 * s + (22 * d) / 7, unit: 'm', hint: 'Add the curved part and the straight part.', wrong: [[2 * s * d, 'Add the two parts. Do not multiply.']] },
+        { prompt: 'The two half circles make one full circle. What is its circumference, in metres?', answer: (22 * d) / 7, unit: 'm', hint: 'Circumference = π × diameter.', wrong: [[(11 * d) / 7, 'Two half circles make a whole circle, not a half.', 'M_HALF_CIRCLES_AS_HALF']] },
+        { prompt: 'What is the total length of the two straight sides, in metres?', answer: 2 * s, unit: 'm', hint: 'There are two sides.', wrong: [[s, 'The track has two straight sides.', 'M_ONE_STRAIGHT_SIDE_ONLY']] },
+        { prompt: 'How far is one lap of the track, in metres?', answer: 2 * s + (22 * d) / 7, unit: 'm', hint: 'Add the curved part and the straight part.', wrong: [[2 * s * d, 'Add the two parts. Do not multiply.', 'M_LAP_PARTS_MULTIPLIED']] },
       ],
       steps: [`Two half circles: 22/7 × ${d} = ${(22 * d) / 7} m.`, `Straight sides: 2 × ${s} = ${2 * s} m.`, `One lap: ${(22 * d) / 7} + ${2 * s} = ${2 * s + (22 * d) / 7} m.`],
     }),
@@ -500,20 +503,20 @@ export const FAMILIES = [
     check: ({ r, x }, v) => v[0] === r + x && v[1] * 7 === 22 * v[0] * v[0] && v[2] + (22 * r * r) / 7 === v[1] }),
 
   // =========================================================== VOLUME AND CAPACITY
-  fam({ id: 'g7.vol.why-million', skill: 'G7_VOLUME_CUBOID', outcome: 'G7.VOL.a', rung: 2, form: 'why',
+  fam({ id: 'g7.vol.why-million', skill: 'G7_VOLUME_CUBOID', outcome: 'MATH.G7.MEASUR.VOLUME_AND_CAPACITY.a', cskill: 'MATH.G7.MEASUR.VOLUME_AND_CAPACITY.CUBIC_UNIT_CONVERT', rung: 2, form: 'why',
     draw: () => ({ p: person(), n: pick([2, 3, 5]) }),
     make: ({ p, n }) => ({
       question: `${p.name} says that ${n} m³ of sand is ${n * 100} cm³, because 1 m = 100 cm. Why is ${p.she} wrong?`,
       options: [
         { text: 'A cubic metre is a cube 100 cm by 100 cm by 100 cm, which holds 1,000,000 cm³', right: true },
-        { text: 'A cubic metre holds 10,000 cm³, because it has two sides of 100 cm', right: false, why: 'A cube has three dimensions. Multiply three lengths, not two.' },
-        { text: `${n} m³ is smaller than ${n * 100} cm³ because metres are smaller than centimetres`, right: false, why: 'A metre is longer than a centimetre, so a cubic metre is much bigger than a cubic centimetre.' },
-        { text: '1 m = 100 cm, so the number is right and only the unit is wrong', right: false, why: 'For volume you must use the 100 three times, once for each dimension.' },
+        { text: 'A cubic metre holds 10,000 cm³, because it has two sides of 100 cm', right: false, why: 'A cube has three dimensions. Multiply three lengths, not two.', mis: 'M_TWO_DIMENSIONS_ONLY' },
+        { text: `${n} m³ is smaller than ${n * 100} cm³ because metres are smaller than centimetres`, right: false, why: 'A metre is longer than a centimetre, so a cubic metre is much bigger than a cubic centimetre.', mis: 'M_UNIT_SIZE_REVERSED_VOL' },
+        { text: '1 m = 100 cm, so the number is right and only the unit is wrong', right: false, why: 'For volume you must use the 100 three times, once for each dimension.', mis: 'M_NUMBER_NOT_CUBED' },
       ],
       hints: ['Picture a cube with sides 1 m long. Each side is 100 cm.', 'Volume = length × width × height.'],
       steps: ['1 m³ = 100 cm × 100 cm × 100 cm = 1,000,000 cm³.', `${n} m³ = ${n} × 1,000,000 = ${commas(n * 1000000)} cm³.`],
     }) }),
-  fam({ id: 'g7.vol.spot-m3-cm3', skill: 'G7_VOLUME_CUBOID', outcome: 'G7.VOL.a', rung: 2, form: 'spot',
+  fam({ id: 'g7.vol.spot-m3-cm3', skill: 'G7_VOLUME_CUBOID', outcome: 'MATH.G7.MEASUR.VOLUME_AND_CAPACITY.b', cskill: 'MATH.G7.MEASUR.VOLUME_AND_CAPACITY.CUBIC_UNIT_CONVERT', rung: 2, form: 'spot',
     draw: () => ({ n: pick([2, 3, 4, 2.5, 3.5, 5]), p: person() }),
     make: ({ n, p }) => {
       const bad = 300, good = 100 * 100 * 100;
@@ -524,82 +527,83 @@ export const FAMILIES = [
           { text: `${n} m³ = ${n} × 300 = ${commas(n * 300)} cm³`, ok: n * 300 === n * bad },
           { text: `So ${n} m³ is ${commas(n * 300)} cm³.`, ok: n * 300 === n * 300 },
         ],
+        mis: 'M_ADDED_NOT_MULTIPLIED_DIMS',
         fix: 'A volume multiplies the three sides: 100 × 100 × 100. Adding them is wrong.',
         steps: ['1 m³ = 100 × 100 × 100 = 1,000,000 cm³.', `${n} m³ = ${n} × 1,000,000 = ${commas(n * good)} cm³.`] };
     } }),
-  fam({ id: 'g7.vol.blocks-in-cubic-metre', skill: 'G7_VOLUME_CUBOID', outcome: 'G7.VOL.a', rung: 2, form: 'word',
+  fam({ id: 'g7.vol.blocks-in-cubic-metre', skill: 'G7_VOLUME_CUBOID', outcome: 'MATH.G7.MEASUR.VOLUME_AND_CAPACITY.b', cskill: 'MATH.G7.MEASUR.VOLUME_AND_CAPACITY.CUBIC_UNIT_CONVERT', rung: 2, form: 'word',
     draw: () => { const [a, b, c] = [pick([10, 20, 25, 50]), pick([10, 20, 25, 50]), pick([5, 10, 20, 25])]; const n = 1000000 / (a * b * c); return Number.isInteger(n) && n <= 4000 && uniq(n, n / 100, n * 100, 100 / a + 100 / b + 100 / c) ? { a, b, c, n, p: person() } : null; },
     make: ({ a, b, c, n, p }) => ({
       question: `${p.name} makes stone blocks. Each block is ${a} cm long, ${b} cm wide and ${c} cm high. How many blocks have the same total volume as 1 m³?`,
       answer: n,
-      wrong: [[n / 100, 'Check how many cm³ make 1 m³. A cube has three dimensions, not two.'], [n * 100, 'Check how many cm³ make 1 m³. You multiply three lengths, each in cm.'], [round(100 / a + 100 / b + 100 / c, 3), 'That adds the blocks along each side. Compare volumes instead.']],
+      wrong: [[n / 100, 'That uses the area of one face for a cubic metre. A cube has three dimensions, not two, so use the edge length three times.', 'M_TWO_DIMENSIONS_ONLY'], [n * 100, 'That has too many zeros in the number of cm³ in a cubic metre. Multiply the three edges of the cube, each measured in cm.', 'M_ZEROS_MISCOUNTED_CUBIC'], [round(100 / a + 100 / b + 100 / c, 3), 'That adds the blocks along each side. Compare volumes instead.', 'M_SIDES_COUNTED_NOT_VOLUMES']],
       hints: ['Change 1 m³ to cm³.', 'Find the volume of one block, then divide.'],
       steps: [`1 m³ = 1,000,000 cm³. One block: ${a} × ${b} × ${c} = ${commas(a * b * c)} cm³.`, `Blocks = ${commas(1000000)} ÷ ${commas(a * b * c)} = ${commas(n)}.`],
     }),
     check: ({ a, b, c }, n) => n * a * b * c === 1000000 }),
-  fam({ id: 'g7.vol.cube-edges', skill: 'G7_VOLUME_CUBOID', outcome: 'G7.VOL.c', rung: 3, form: 'word',
+  fam({ id: 'g7.vol.cube-edges', skill: 'G7_VOLUME_CUBOID', outcome: 'MATH.G7.MEASUR.VOLUME_AND_CAPACITY.c', cskill: 'MATH.G7.MEASUR.VOLUME_AND_CAPACITY.VOLUME_CUBOID_CUBE', rung: 3, form: 'word',
     draw: () => { const s = randInt(3, 12); return { s, E: 12 * s, p: person() }; },
     make: ({ s, E, p }) => ({
       question: `${p.name} makes a cube-shaped box from wire. The wire along all 12 edges of the box is ${E} cm long altogether. What is the volume of the box, in cm³?`,
       answer: s * s * s,
-      wrong: [[E * E * E, 'That cubes the total wire. First find the length of one edge.'], [(E / 6) ** 3, 'A cube has 12 edges, not 6.'], [s * s, 'That is the area of one face. Multiply by the edge once more.']],
+      wrong: [[E * E * E, 'That cubes the total wire. First find the length of one edge.', 'M_TOTAL_LENGTH_CUBED'], [(E / 6) ** 3, 'A cube has 12 edges, not 6.', 'M_EDGE_COUNT_WRONG'], [s * s, 'That is the area of one face. Multiply by the edge once more.', 'M_AREA_FOR_VOLUME']],
       hints: ['A cube has 12 edges, all the same length.', 'Find one edge, then multiply it by itself three times.'],
       steps: [`One edge = ${E} ÷ 12 = ${s} cm.`, `Volume = ${s} × ${s} × ${s} = ${s * s * s} cm³.`],
     }),
     check: ({ E }, a) => Math.round(Math.cbrt(a)) * 12 === E }),
-  fam({ id: 'g7.vol.cylinder-diameter', skill: 'G7_VOLUME_CYLINDER', outcome: 'G7.VOL.c', rung: 2, form: 'word',
+  fam({ id: 'g7.vol.cylinder-diameter', skill: 'G7_VOLUME_CYLINDER', outcome: 'MATH.G7.MEASUR.VOLUME_AND_CAPACITY.c', cskill: 'MATH.G7.MEASUR.VOLUME_AND_CAPACITY.VOLUME_CYLINDER', rung: 2, form: 'word',
     draw: () => ({ d: pick([14, 28, 42]), h: randInt(5, 30), p: person() }),
     make: ({ d, h, p }) => ({
       question: `A tin of cooking fat is a cylinder. Its diameter is ${d} cm and its height is ${h} cm. Take π = 22/7. What is the volume of the tin, in cm³?`,
       answer: (22 * (d / 2) ** 2 * h) / 7,
-      wrong: [[(22 * d * d * h) / 7, 'The diameter is the full width. The formula needs the radius, which is half of it.'], [(22 * (d / 2) * h) / 7, 'The radius must be squared in the area of the circular base.'], [(22 * (d / 2) ** 2) / 7, 'That is the area of the base. Multiply by the height.']],
+      wrong: [[(22 * d * d * h) / 7, 'The diameter is the full width. The formula needs the radius, which is half of it.', 'M_DIAMETER_FOR_RADIUS_VOL'], [(22 * (d / 2) * h) / 7, 'The radius must be squared in the area of the circular base.', 'M_RADIUS_NOT_SQUARED'], [(22 * (d / 2) ** 2) / 7, 'That is the area of the base. Multiply by the height.', 'M_BASE_AREA_AS_VOLUME']],
       hints: ['Volume = area of the circular base × height.', 'The radius is half of the diameter.'],
       steps: [`Radius = ${d / 2} cm. Base area = 22/7 × ${d / 2} × ${d / 2} = ${(22 * (d / 2) ** 2) / 7} cm².`, `Volume = ${(22 * (d / 2) ** 2) / 7} × ${h} = ${commas((22 * (d / 2) ** 2 * h) / 7)} cm³.`],
     }),
     check: ({ d, h }, a) => (a * 7) / 22 === (d / 2) * (d / 2) * h }),
-  fam({ id: 'g7.vol.drum-litres', skill: 'G7_VOLUME_CYLINDER', outcome: 'G7.VOL.d', rung: 3, form: 'steps',
+  fam({ id: 'g7.vol.drum-litres', skill: 'G7_VOLUME_CYLINDER', outcome: 'MATH.G7.MEASUR.VOLUME_AND_CAPACITY.d', cskill: 'MATH.G7.MEASUR.VOLUME_AND_CAPACITY.VOLUME_CYLINDER', rung: 3, form: 'steps',
     draw: () => { const r = pick([7, 14, 21, 35, 70]), h = pick([50, 70, 100, 140, 200]); const v = (22 * r * r * h) / 7; return Number.isInteger(v / 1000) && v / 1000 >= 20 && v / 1000 <= 5000 ? { r, h, v } : null; },
     make: ({ r, h, v }) => ({
       question: `A round water tank is a cylinder with a radius of ${r} cm and a height of ${h} cm. Take π = 22/7.`,
       parts: [
-        { prompt: 'What is the area of the circular base, in cm²?', answer: (22 * r * r) / 7, unit: 'cm²', hint: 'Area = π × r × r.', wrong: [[(22 * 2 * r) / 7, 'Use the radius squared, not the distance round.']] },
-        { prompt: 'What is the volume of the tank, in cm³?', answer: v, unit: 'cm³', hint: 'Base area times height.', wrong: [[(22 * r * r) / 7 + h, 'Multiply the base area by the height. Do not add.']] },
-        { prompt: 'How many litres does the tank hold? (1 litre = 1,000 cm³)', answer: v / 1000, unit: 'litres', hint: 'Divide cm³ by 1,000.', wrong: [[v / 100, 'A litre is 1,000 cm³, not 100 cm³.'], [v / 1000000, 'That changes to m³. One litre is 1,000 cm³.']] },
+        { prompt: 'What is the area of the circular base, in cm²?', answer: (22 * r * r) / 7, unit: 'cm²', hint: 'Area = π × r × r.', wrong: [[(22 * 2 * r) / 7, 'Use the radius squared, not the distance round.', 'M_CIRCUMFERENCE_FOR_BASE_AREA']] },
+        { prompt: 'What is the volume of the tank, in cm³?', answer: v, unit: 'cm³', hint: 'Base area times height.', wrong: [[(22 * r * r) / 7 + h, 'Multiply the base area by the height. Do not add.', 'M_ADDED_FOR_VOLUME']] },
+        { prompt: 'How many litres does the tank hold? (1 litre = 1,000 cm³)', answer: v / 1000, unit: 'litres', hint: 'Divide cm³ by 1,000.', wrong: [[v / 100, 'A litre is 1,000 cm³, not 100 cm³.', 'M_LITRE_AS_HUNDRED_CM3'], [v / 1000000, 'That changes to m³. One litre is 1,000 cm³.', 'M_CM3_TO_M3_FOR_LITRES']] },
       ],
       steps: [`Base area = 22/7 × ${r} × ${r} = ${(22 * r * r) / 7} cm².`, `Volume = ${(22 * r * r) / 7} × ${h} = ${commas(v)} cm³.`, `${commas(v)} ÷ 1,000 = ${commas(v / 1000)} litres.`],
     }),
     check: ({ r, h }, a) => a[0] * 7 === 22 * r * r && a[1] === a[0] * h && a[2] * 1000 === a[1] }),
-  fam({ id: 'g7.vol.cylinder-height', skill: 'G7_VOLUME_CYLINDER', outcome: 'G7.VOL.c', rung: 3, form: 'word',
+  fam({ id: 'g7.vol.cylinder-height', skill: 'G7_VOLUME_CYLINDER', outcome: 'MATH.G7.MEASUR.VOLUME_AND_CAPACITY.c', cskill: 'MATH.G7.MEASUR.VOLUME_AND_CAPACITY.VOLUME_CYLINDER', rung: 3, form: 'word',
     draw: () => { const r = pick([7, 14]), h = randInt(5, 30); return { r, h, V: (22 * r * r * h) / 7, p: person() }; },
     make: ({ r, h, V, p }) => ({
       question: `A cylinder-shaped tin has a base radius of ${r} cm. It holds ${commas(V)} cm³ of oil. Take π = 22/7. How tall is the tin, in cm?`,
       answer: h,
-      wrong: [[V / ((22 * r) / 7), 'The base area uses r × r, not just r.'], [round(V / (22 * r * 2 / 7), 2), 'The base area is π r². The distance round, 2πr, is not used.'], [round(V / (22 / 7), 2), 'Divide by the whole base area, which uses π × r × r.']],
+      wrong: [[V / ((22 * r) / 7), 'The base area uses r × r, not just r.', 'M_RADIUS_NOT_SQUARED'], [round(V / (22 * r * 2 / 7), 2), 'The base area is π r². The distance round, 2πr, is not used.', 'M_CIRCUMFERENCE_FOR_BASE_AREA'], [round(V / (22 / 7), 2), 'Divide by the whole base area, which uses π × r × r.', 'M_BASE_AREA_PART_DROPPED']],
       hints: ['Volume = base area × height, so height = volume ÷ base area.', 'Find the area of the circular base first.'],
       steps: [`Base area = 22/7 × ${r} × ${r} = ${(22 * r * r) / 7} cm².`, `Height = ${commas(V)} ÷ ${(22 * r * r) / 7} = ${h} cm.`],
     }),
     check: ({ r, V }, a) => a * 22 * r * r === V * 7 }),
-  fam({ id: 'g7.vol.tank-litres', skill: 'G7_VOLUME_CUBOID', outcome: 'G7.VOL.d', rung: 2, form: 'word',
+  fam({ id: 'g7.vol.tank-litres', skill: 'G7_VOLUME_CUBOID', outcome: 'MATH.G7.MEASUR.VOLUME_AND_CAPACITY.d', cskill: 'MATH.G7.MEASUR.VOLUME_AND_CAPACITY.VOLUME_TO_LITRES', rung: 2, form: 'word',
     draw: () => { const l = pick([1, 1.5, 2, 2.5, 3, 4]), w = pick([1, 1.5, 2]), h = pick([1, 1.5, 2]); const V = round(l * w * h, 3); return V >= 1.5 && uniq(V * 1000, V * 100, V, V * 1000000) ? { l, w, h, V, p: person() } : null; },
     make: ({ l, w, h, V, p }) => ({
       question: `Rainwater fills a cuboid tank at ${p.name}'s school. The base is ${l} m by ${w} m and the water is ${h} m deep. How many litres of water are in the tank? (1 m³ holds 1,000 litres)`,
       answer: round(V * 1000, 3),
-      wrong: [[round(V * 100, 3), 'One cubic metre holds 1,000 litres, not 100.'], [V, 'That is the volume in m³. Change it to litres.'], [round(V * 1000000, 3), 'That is the volume in cm³. The question asks for litres.']],
+      wrong: [[round(V * 100, 3), 'One cubic metre holds 1,000 litres, not 100.', 'M_M3_AS_HUNDRED_LITRES'], [V, 'That is the volume in m³. Change it to litres.', 'M_VOLUME_NOT_CONVERTED'], [round(V * 1000000, 3), 'That is the volume in cm³. The question asks for litres.', 'M_CM3_FOR_LITRES']],
       hints: ['Find the volume in m³ first.', 'Then multiply by the number of litres in 1 m³.'],
       steps: [`Volume = ${l} × ${w} × ${h} = ${V} m³.`, `Litres = ${V} × 1,000 = ${commas(round(V * 1000, 3))}.`],
     }),
     check: ({ l, w, h }, a) => Math.abs(a / 1000 - l * w * h) < 1e-9 }),
-  fam({ id: 'g7.vol.jerricans-fill-tank', skill: 'G7_VOLUME_CUBOID', outcome: 'G7.VOL.d', rung: 3, form: 'word',
+  fam({ id: 'g7.vol.jerricans-fill-tank', skill: 'G7_VOLUME_CUBOID', outcome: 'MATH.G7.MEASUR.VOLUME_AND_CAPACITY.f', cskill: 'MATH.G7.MEASUR.VOLUME_AND_CAPACITY.CAPACITY_HOW_MANY', rung: 3, form: 'word',
     draw: () => { const l = pick([1, 2, 3, 4]), w = pick([1, 2]), h = pick([1, 1.5, 2]); const L = l * w * h * 1000, n = L / 20; return Number.isInteger(n) && uniq(n, l * w * h / 20, l * w * h * 100 / 20) ? { l, w, h, L, n, p: person() } : null; },
     make: ({ l, w, h, L, n, p }) => ({
       question: `A jerrican holds 20 litres. ${p.name} wants to fill an empty box-shaped tank, ${l} m long, ${w} m wide and ${h} m high, from jerricans. How many jerricans are needed? (1 m³ holds 1,000 litres)`,
       answer: n,
-      wrong: [[round((l * w * h) / 20, 3), 'The volume is in m³ but the jerrican is in litres. Change to one unit first.'], [(l * w * h * 100) / 20, '1 m³ holds 1,000 litres, not 100.'], [L * 20, 'Divide the tank by the size of one jerrican. Do not multiply.']],
+      wrong: [[round((l * w * h) / 20, 3), 'The volume is in m³ but the jerrican is in litres. Change to one unit first.', 'M_UNITS_NOT_MATCHED_VOL'], [(l * w * h * 100) / 20, '1 m³ holds 1,000 litres, not 100.', 'M_M3_AS_HUNDRED_LITRES'], [L * 20, 'Divide the tank by the size of one jerrican. Do not multiply.', 'M_MULTIPLIED_FOR_COUNT']],
       hints: ['Find how many litres the tank holds.', 'Divide by the size of one jerrican.'],
       steps: [`Volume = ${l} × ${w} × ${h} = ${l * w * h} m³ = ${commas(L)} litres.`, `Jerricans = ${commas(L)} ÷ 20 = ${commas(n)}.`],
     }),
     check: ({ L }, a) => a * 20 === L }),
-  fam({ id: 'g7.vol.days-of-water', skill: 'G7_VOLUME_CUBOID', outcome: 'G7.VOL.d', rung: 3, form: 'table',
+  fam({ id: 'g7.vol.days-of-water', skill: 'G7_VOLUME_CUBOID', outcome: 'MATH.G7.MEASUR.VOLUME_AND_CAPACITY.f', cskill: 'MATH.G7.MEASUR.VOLUME_AND_CAPACITY.CAPACITY_HOW_MANY', rung: 3, form: 'table',
     draw: () => {
       const u = [randInt(2, 6) * 5, randInt(5, 12) * 5, randInt(2, 6) * 5, randInt(2, 6) * 5]; const t = u.reduce((a, b) => a + b, 0);
       const days = pick([5, 10, 15, 20, 25, 30]); const V = (t * days) / 1000;
@@ -609,37 +613,37 @@ export const FAMILIES = [
       question: `The table shows how much water ${p.name}'s family uses in one day. They have a tank that holds ${V} m³ when full. For how many days can the family use the water in a full tank? (1 m³ = 1,000 litres)`,
       model: { type: 'table', data: { head: ['Use', 'Litres a day'], rows: ['Cooking and drinking', 'Washing clothes', 'Bathing', 'Cleaning'].map((label, i) => ({ label, value: String(u[i]) })) } },
       answer: days,
-      wrong: [[round(V / t, 6), 'The tank is in m³ and the table is in litres. Change to litres first.'], [round((V * 100) / t, 3), '1 m³ holds 1,000 litres, not 100.'], [round(V * 1000 / u[0], 3), 'Add up all four uses in the table, not just the first one.']],
+      wrong: [[round(V / t, 6), 'The tank is in m³ and the table is in litres. Change to litres first.', 'M_UNITS_NOT_MATCHED_VOL'], [round((V * 100) / t, 3), '1 m³ holds 1,000 litres, not 100.', 'M_M3_AS_HUNDRED_LITRES'], [round(V * 1000 / u[0], 3), 'Add up all four uses in the table, not just the first one.', 'M_ONE_USE_COUNTED']],
       hints: ['Add the four amounts to find the litres used in one day.', `Change ${V} m³ to litres, then divide by the daily use.`],
       steps: [`One day: ${u.join(' + ')} = ${t} litres.`, `${V} m³ = ${commas(V * 1000)} litres.`, `Days = ${commas(V * 1000)} ÷ ${t} = ${days}.`],
     }),
     check: ({ t, V }, a) => a * t === Math.round(V * 1000) }),
-  fam({ id: 'g7.vol.cups-from-can', skill: 'G7_VOLUME_CUBOID', outcome: 'G7.VOL.d', rung: 2, form: 'word',
+  fam({ id: 'g7.vol.cups-from-can', skill: 'G7_VOLUME_CUBOID', outcome: 'MATH.G7.MEASUR.VOLUME_AND_CAPACITY.f', cskill: 'MATH.G7.MEASUR.VOLUME_AND_CAPACITY.CAPACITY_HOW_MANY', rung: 2, form: 'word',
     draw: () => { const c = pick([200, 250, 500]), L = pick([5, 10, 12, 20, 25, 30, 40]); const n = (L * 1000) / c; return Number.isInteger(n) && uniq(n, L / c, (L * 100) / c, L * c) ? { c, L, n, p: person() } : null; },
     make: ({ c, L, n, p }) => ({
       question: `${p.name} sells tea from a can that holds ${L} litres. Each cup holds ${c} millilitres (ml). How many full cups can ${p.she} fill from the can?`,
       answer: n,
-      wrong: [[round(L / c, 4), 'The can is in litres and the cup is in millilitres. Use one unit.'], [(L * 100) / c, 'There are 1,000 ml in 1 litre, not 100.'], [L * c, 'Divide the amount in the can by the amount in one cup.']],
+      wrong: [[round(L / c, 4), 'The can is in litres and the cup is in millilitres. Use one unit.', 'M_UNITS_NOT_MATCHED_VOL'], [(L * 100) / c, 'There are 1,000 ml in 1 litre, not 100.', 'M_LITRE_AS_HUNDRED_ML'], [L * c, 'Divide the amount in the can by the amount in one cup.', 'M_MULTIPLIED_FOR_COUNT']],
       hints: ['Change litres to millilitres.', 'Divide by the size of one cup.'],
       steps: [`${L} litres = ${L} × 1,000 = ${commas(L * 1000)} ml.`, `Cups = ${commas(L * 1000)} ÷ ${c} = ${n}.`],
     }),
     check: ({ c, L }, a) => a * c === L * 1000 }),
 
   // =========================================================== TIME, DISTANCE AND SPEED
-  fam({ id: 'g7.speed.seconds-to-hm', skill: 'G7_SPEED', outcome: 'G7.SPEED.a', rung: 2, form: 'steps',
+  fam({ id: 'g7.speed.seconds-to-hm', skill: 'G7_SPEED', outcome: 'MATH.G7.MEASUR.TIME_DISTANCE_AND_SPEED.b', cskill: 'MATH.G7.MEASUR.TIME_DISTANCE_AND_SPEED.TIME_UNITS_CONVERT', rung: 2, form: 'steps',
     draw: () => ({ h: randInt(1, 3), m: pick([5, 10, 15, 20, 25, 35, 40, 45, 50]), p: person() }),
     make: ({ h, m, p }) => {
       const s = h * 3600 + m * 60;
       return { question: `${p.name} runs a long race. The clock shows ${commas(s)} seconds at the finish.`,
         parts: [
-          { prompt: 'How many minutes is that?', answer: s / 60, unit: 'minutes', hint: 'There are 60 seconds in a minute.', wrong: [[s / 100, 'A minute has 60 seconds, not 100.'], [s * 60, 'Seconds are small units, so there are fewer minutes than seconds.']] },
-          { prompt: 'How many whole hours are in that time?', answer: h, unit: 'hours', hint: 'There are 60 minutes in an hour.', wrong: [[round(s / 60 / 100, 2), 'An hour has 60 minutes, not 100.']] },
-          { prompt: 'How many minutes are left over after the whole hours?', answer: m, unit: 'minutes', hint: 'Take the minutes in the whole hours away from the total minutes.', wrong: [[s / 60 - h, 'Take away 60 minutes for every whole hour, not 1.']] },
+          { prompt: 'How many minutes is that?', answer: s / 60, unit: 'minutes', hint: 'There are 60 seconds in a minute.', wrong: [[s / 100, 'A minute has 60 seconds, not 100.', 'M_MINUTE_AS_HUNDRED'], [s * 60, 'Seconds are small units, so there are fewer minutes than seconds.', 'M_CONVERT_DIRECTION_REVERSED']] },
+          { prompt: 'How many whole hours are in that time?', answer: h, unit: 'hours', hint: 'There are 60 minutes in an hour.', wrong: [[round(s / 60 / 100, 2), 'An hour has 60 minutes, not 100.', 'M_HOUR_AS_HUNDRED_MINUTES']] },
+          { prompt: 'How many minutes are left over after the whole hours?', answer: m, unit: 'minutes', hint: 'Take the minutes in the whole hours away from the total minutes.', wrong: [[s / 60 - h, 'Take away 60 minutes for every whole hour, not 1.', 'M_ONE_PER_WHOLE_HOUR']] },
         ],
         steps: [`${commas(s)} ÷ 60 = ${s / 60} minutes.`, `${s / 60} minutes has ${h} whole hour${h > 1 ? 's' : ''} (${h * 60} minutes).`, `Left over: ${s / 60} − ${h * 60} = ${m} minutes.`] };
     },
     check: ({ h, m }, v) => v[0] * 60 === (h * 60 + m) * 60 && v[1] * 60 + v[2] === v[0] }),
-  fam({ id: 'g7.speed.timetable-moving', skill: 'G7_SPEED', outcome: 'G7.SPEED.a', rung: 3, form: 'table',
+  fam({ id: 'g7.speed.timetable-moving', skill: 'G7_SPEED', outcome: 'MATH.G7.MEASUR.TIME_DISTANCE_AND_SPEED.a', cskill: 'MATH.G7.MEASUR.TIME_DISTANCE_AND_SPEED.TIMETABLE_DURATION', rung: 3, form: 'table',
     draw: () => {
       const t0 = randInt(5, 9) * 60 + pick([0, 15, 30, 45]), leg1 = randInt(10, 24) * 5, wait = pick([10, 15, 20, 25]), leg2 = randInt(8, 18) * 5;
       const a1 = t0 + leg1, d1 = a1 + wait, a2 = d1 + leg2;
@@ -650,12 +654,12 @@ export const FAMILIES = [
       return { question: 'The table shows a bus timetable on the 24-hour clock. How many minutes is the bus actually moving between Nairobi and Nakuru? It is not moving while it waits at Naivasha.',
         model: { type: 'table', data: { head: ['Stop', 'Arrives', 'Leaves'], rows: [{ cells: ['Nairobi', '-', f(t0)] }, { cells: ['Naivasha', f(a1), f(d1)] }, { cells: ['Nakuru', f(a2), '-'] }] } },
         answer: leg1 + leg2,
-        wrong: [[leg1 + leg2 + wait, 'That includes the time the bus waits at Naivasha. The bus is not moving then.'], [leg1, 'That is only the first part of the journey, Nairobi to Naivasha.'], [leg2, 'That is only the second part of the journey, Naivasha to Nakuru.']],
+        wrong: [[leg1 + leg2 + wait, 'That includes the time the bus waits at Naivasha. The bus is not moving then.', 'M_WAIT_TIME_COUNTED'], [leg1, 'That is only the first part of the journey, Nairobi to Naivasha.', 'M_FIRST_LEG_ONLY'], [leg2, 'That is only the second part of the journey, Naivasha to Nakuru.', 'M_SECOND_LEG_ONLY']],
         hints: ['Find the time from Nairobi to Naivasha, and from Naivasha to Nakuru.', 'Do not count the time the bus waits.'],
         steps: [`Nairobi to Naivasha: ${f(t0)} to ${f(a1)} is ${leg1} minutes.`, `Naivasha to Nakuru: ${f(d1)} to ${f(a2)} is ${leg2} minutes.`, `Moving: ${leg1} + ${leg2} = ${leg1 + leg2} minutes.`] };
     },
     check: ({ t0, wait, a2 }, a) => a + wait === a2 - t0 }),
-  fam({ id: 'g7.speed.timetable-speed', skill: 'G7_SPEED', outcome: 'G7.SPEED.d', rung: 2, form: 'table',
+  fam({ id: 'g7.speed.timetable-speed', skill: 'G7_SPEED', outcome: 'MATH.G7.MEASUR.TIME_DISTANCE_AND_SPEED.d', cskill: 'MATH.G7.MEASUR.TIME_DISTANCE_AND_SPEED.SPEED_FROM_DISTANCE_TIME', rung: 2, form: 'table',
     draw: () => {
       const [from, to, km] = route(); const v = pick([40, 50, 60, 64, 75, 80, 100]); const mins = (km * 60) / v;
       if (!Number.isInteger(mins) || mins < 30 || mins % 60 === 0 || km < 60) return null;
@@ -668,54 +672,54 @@ export const FAMILIES = [
       return { question: 'A bus company prints this notice on the 24-hour clock. The bus travels at the same speed all the way. What is its speed, in km/h?',
         model: { type: 'table', data: { head: ['Notice', ''], rows: [{ label: 'From', value: from }, { label: 'To', value: to }, { label: 'Distance (km)', value: String(km) }, { label: 'Leaves', value: f(t0) }, { label: 'Arrives', value: f(t0 + mins) }] } },
         answer: v,
-        wrong: [[round(km / mins, 2), 'Speed in km/h needs the time in hours, not minutes.'], [round(km * hrs, 2), 'Speed is distance divided by time. Do not multiply.'], [round(km / (Math.floor(mins / 60) + (mins % 60) / 100), 2), 'Minutes are out of 60, not 100. Change the minutes to a fraction of an hour.']],
+        wrong: [[round(km / mins, 2), 'Speed in km/h needs the time in hours, not minutes.', 'M_MINUTES_NOT_HOURS'], [round(km * hrs, 2), 'Speed is distance divided by time. Do not multiply.', 'M_SPEED_BY_MULTIPLYING'], [round(km / (Math.floor(mins / 60) + (mins % 60) / 100), 2), 'Minutes are out of 60, not 100. Change the minutes to a fraction of an hour.', 'M_MINUTE_AS_HUNDRED_TIME']],
         hints: ['Work out how long the journey takes, from the two times.', 'Speed = distance ÷ time, with the time in hours.'],
         steps: [`Time = ${f(t0 + mins)} − ${f(t0)} = ${mins} minutes = ${round(hrs, 4)} hours.`, `Speed = ${km} ÷ ${round(hrs, 4)} = ${v} km/h.`] };
     },
     check: ({ km, mins }, a) => Math.round(a * mins) === km * 60 }),
-  fam({ id: 'g7.speed.laps-km', skill: 'G7_SPEED', outcome: 'G7.SPEED.c', rung: 1, form: 'word',
+  fam({ id: 'g7.speed.laps-km', skill: 'G7_SPEED', outcome: 'MATH.G7.MEASUR.TIME_DISTANCE_AND_SPEED.c', cskill: 'MATH.G7.MEASUR.TIME_DISTANCE_AND_SPEED.DISTANCE_UNITS_CONVERT', rung: 1, form: 'word',
     draw: () => { const L = pick([200, 250, 400]), n = randInt(3, 12); return (L * n) % 100 === 0 ? { L, n, p: person() } : null; },
     make: ({ L, n, p }) => ({
       question: `One lap of the school track is ${L} metres. ${p.name} runs ${n} laps. How many kilometres does ${p.she} run?`,
       answer: (L * n) / 1000,
-      wrong: [[L * n, 'That is in metres. The question asks for kilometres.'], [(L * n) / 100, 'There are 1,000 m in 1 km, not 100 m.'], [(L * n) / 10000, 'There are 1,000 m in 1 km. This divides by too much.']],
+      wrong: [[L * n, 'That is in metres. The question asks for kilometres.', 'M_ANSWER_UNIT_NOT_CONVERTED_DIST'], [(L * n) / 100, 'There are 1,000 m in 1 km, not 100 m.', 'M_HUNDRED_METRES_IN_KM'], [(L * n) / 10000, 'There are 1,000 m in 1 km. This divides by too much.', 'M_DIVIDED_TOO_FAR']],
       hints: ['Find the total distance in metres first.', 'Change metres to kilometres.'],
       steps: [`${n} × ${L} = ${L * n} m.`, `${L * n} ÷ 1,000 = ${(L * n) / 1000} km.`],
     }),
     check: ({ L, n }, a) => Math.round(a * 1000) === L * n }),
-  fam({ id: 'g7.speed.walk-to-school-week', skill: 'G7_SPEED', outcome: 'G7.SPEED.c', rung: 2, form: 'word',
+  fam({ id: 'g7.speed.walk-to-school-week', skill: 'G7_SPEED', outcome: 'MATH.G7.MEASUR.TIME_DISTANCE_AND_SPEED.c', cskill: 'MATH.G7.MEASUR.TIME_DISTANCE_AND_SPEED.DISTANCE_UNITS_CONVERT', rung: 2, form: 'word',
     draw: () => { const d = pick([450, 600, 750, 900, 1200, 1350, 1500]), days = pick([5, 6]); return { d, days, p: person() }; },
     make: ({ d, days, p }) => ({
       question: `${p.name} walks ${commas(d)} m to school each morning and ${commas(d)} m home each afternoon. School is open ${days} days a week. How many kilometres does ${p.she} walk to and from school in one week?`,
       answer: round((2 * d * days) / 1000, 3),
-      wrong: [[2 * d * days, 'That is in metres. The question asks for kilometres.'], [round((d * days) / 1000, 3), `${p.name} walks to school and home again, so count both ways.`], [round((2 * d * days) / 100, 3), 'There are 1,000 m in 1 km, not 100 m.']],
+      wrong: [[2 * d * days, 'That is in metres. The question asks for kilometres.', 'M_ANSWER_UNIT_NOT_CONVERTED_DIST'], [round((d * days) / 1000, 3), `${p.name} walks to school and home again, so count both ways.`, 'M_ONE_WAY_ONLY'], [round((2 * d * days) / 100, 3), 'There are 1,000 m in 1 km, not 100 m.', 'M_HUNDRED_METRES_IN_KM']],
       hints: ['Find the distance for one day, there and back.', 'Multiply by the number of days, then change to kilometres.'],
       steps: [`One day: ${commas(d)} + ${commas(d)} = ${commas(2 * d)} m.`, `${days} days: ${commas(2 * d)} × ${days} = ${commas(2 * d * days)} m = ${round((2 * d * days) / 1000, 3)} km.`],
     }),
     check: ({ d, days }, a) => Math.round(a * 1000) === 2 * d * days }),
-  fam({ id: 'g7.speed.hours-and-minutes', skill: 'G7_SPEED', outcome: 'G7.SPEED.d', rung: 2, form: 'word',
+  fam({ id: 'g7.speed.hours-and-minutes', skill: 'G7_SPEED', outcome: 'MATH.G7.MEASUR.TIME_DISTANCE_AND_SPEED.d', cskill: 'MATH.G7.MEASUR.TIME_DISTANCE_AND_SPEED.SPEED_FROM_DISTANCE_TIME', rung: 2, form: 'word',
     draw: () => { const v = pick([40, 48, 60, 72, 80]), t = pick([1.5, 2.5, 3.5, 0.75, 1.25, 2.25]); const d = v * t; return Number.isInteger(d) ? { v, t, d, p: person() } : null; },
     make: ({ v, t, d, p }) => {
       const h = Math.floor(t), m = round((t - h) * 60, 0);
       return { question: `${p.name}'s matatu travels ${d} km in ${h > 0 ? `${h} hour${h > 1 ? 's' : ''} and ` : ''}${m} minutes. What is the speed of the matatu, in km/h?`,
         answer: v,
-        wrong: [[round(d / (h + m / 100), 2), 'Minutes are out of 60, not 100. Change the minutes to part of an hour.'], [round(d / (h * 60 + m), 3), 'Speed in km/h needs the time in hours, not minutes.'], [round(d * t, 2), 'Speed is distance divided by time. Do not multiply.']],
+        wrong: [[round(d / (h + m / 100), 2), 'Minutes are out of 60, not 100. Change the minutes to part of an hour.', 'M_MINUTE_AS_HUNDRED_TIME'], [round(d / (h * 60 + m), 3), 'Speed in km/h needs the time in hours, not minutes.', 'M_MINUTES_NOT_HOURS'], [round(d * t, 2), 'Speed is distance divided by time. Do not multiply.', 'M_SPEED_BY_MULTIPLYING']],
         hints: ['Change the time to hours. 30 minutes is half an hour.', 'Speed = distance ÷ time.'],
         steps: [`${m} minutes = ${m}/60 = ${round(m / 60, 4)} hour.`, `Time = ${t} hours. Speed = ${d} ÷ ${t} = ${v} km/h.`] };
     },
     check: ({ d, t }, a) => Math.abs(a * t - d) < 1e-9 }),
-  fam({ id: 'g7.speed.minutes-for-trip', skill: 'G7_SPEED', outcome: 'G7.SPEED.a', rung: 2, form: 'word',
+  fam({ id: 'g7.speed.minutes-for-trip', skill: 'G7_SPEED', outcome: 'MATH.G7.MEASUR.TIME_DISTANCE_AND_SPEED.e', cskill: 'MATH.G7.MEASUR.TIME_DISTANCE_AND_SPEED.TIME_FROM_SPEED', rung: 2, form: 'word',
     draw: () => { const v = pick([40, 50, 60, 80]), d = pick([60, 100, 120, 140, 160, 180, 200, 250]); const mins = (d * 60) / v; return Number.isInteger(mins) && mins % 60 !== 0 && mins % 30 === 0 && uniq(mins, d / v, mins + (mins % 60) * 0.667, d * v) ? { v, d, mins, p: person() } : null; },
     make: ({ v, d, mins, p }) => {
       const hrs = d / v, h = Math.floor(hrs), m = mins - h * 60;
       return { question: `${p.name} drives a ${pick(['lorry', 'car', 'bus'])} at ${v} km/h (kilometres per hour) for ${d} km. Give the time of the journey in minutes.`,
         answer: mins,
-        wrong: [[round(hrs, 2), 'That is the time in hours. The question asks for minutes.'], [h * 60 + round((hrs - h) * 100, 0), 'Part of an hour is out of 60 minutes, not 100. Multiply the decimal part by 60.'], [d * v, 'Time = distance ÷ speed. Do not multiply.']],
+        wrong: [[round(hrs, 2), 'That is the time in hours. The question asks for minutes.', 'M_HOURS_NOT_CONVERTED_TO_MINUTES'], [h * 60 + round((hrs - h) * 100, 0), 'Part of an hour is out of 60 minutes, not 100. Multiply the decimal part by 60.', 'M_DECIMAL_HOURS_AS_MINUTES'], [d * v, 'Time = distance ÷ speed. Do not multiply.', 'M_TIME_BY_MULTIPLYING']],
         hints: ['Find the time in hours, using distance ÷ speed.', 'Change the hours to minutes. An hour has 60 minutes.'],
         steps: [`Time = ${d} ÷ ${v} = ${round(hrs, 4)} hours.`, `${round(hrs, 4)} × 60 = ${mins} minutes.`] };
     },
     check: ({ v, d, mins }, a) => a * v === d * 60 }),
-  fam({ id: 'g7.speed.spot-minutes-hours', skill: 'G7_SPEED', outcome: 'G7.SPEED.d', rung: 2, form: 'spot',
+  fam({ id: 'g7.speed.spot-minutes-hours', skill: 'G7_SPEED', outcome: 'MATH.G7.MEASUR.TIME_DISTANCE_AND_SPEED.d', cskill: 'MATH.G7.MEASUR.TIME_DISTANCE_AND_SPEED.SPEED_FROM_DISTANCE_TIME', rung: 2, form: 'spot',
     draw: () => ({ v: pick([12, 24, 36]), m: pick([15, 30, 45]), p: person() }),
     make: ({ v, m, p }) => {
       const d = (v * m) / 60, bad = m / 100, good = m / 60;
@@ -727,90 +731,101 @@ export const FAMILIES = [
           { text: `Speed = ${d} ÷ ${bad} = ${shown} km/h`, ok: shown === round(d / bad, 2) },
           { text: `The speed is ${shown} km/h.`, ok: shown === shown },
         ],
+        mis: 'M_MINUTE_AS_HUNDRED_TIME',
         fix: 'An hour has 60 minutes, so change minutes to hours by dividing by 60, not 100.',
         steps: [`${m} minutes = ${m} ÷ 60 = ${round(good, 4)} hours.`, `Speed = ${d} ÷ ${round(good, 4)} = ${v} km/h.`] };
     } }),
-  fam({ id: 'g7.speed.average-two-legs', skill: 'G7_SPEED', outcome: 'G7.SPEED.d', rung: 3, form: 'steps',
+  fam({ id: 'g7.speed.average-two-legs', skill: 'G7_SPEED', outcome: 'MATH.G7.MEASUR.TIME_DISTANCE_AND_SPEED.e', cskill: 'MATH.G7.MEASUR.TIME_DISTANCE_AND_SPEED.AVERAGE_SPEED_TWO_LEGS', rung: 3, form: 'steps',
     draw: () => { const [v1, v2] = pick([[60, 40], [40, 24], [60, 30], [30, 20], [60, 20]]); const D = pick([120, 240]); return { v1, v2, D, p: person() }; },
     make: ({ v1, v2, D, p }) => {
       const t1 = D / v1, t2 = D / v2, avg = (2 * D) / (t1 + t2);
       return { question: `${p.name} drives ${D} km at ${v1} km/h, then another ${D} km at ${v2} km/h.`,
         parts: [
-          { prompt: 'How many hours does the first part take?', answer: t1, unit: 'hours', hint: 'Time = distance ÷ speed.', wrong: [[D * v1, 'Divide the distance by the speed.']] },
-          { prompt: 'How many hours does the second part take?', answer: t2, unit: 'hours', hint: 'Time = distance ÷ speed.', wrong: [[D * v2, 'Divide the distance by the speed.']] },
-          { prompt: 'What is the average speed for the whole journey, in km/h?', answer: avg, unit: 'km/h', hint: 'Total distance ÷ total time.', wrong: [[(v1 + v2) / 2, 'The slower part takes longer, so the average is not halfway between the speeds. Use total distance ÷ total time.']] },
+          { prompt: 'How many hours does the first part take?', answer: t1, unit: 'hours', hint: 'Time = distance ÷ speed.', wrong: [[D * v1, 'Divide the distance by the speed.', 'M_TIME_BY_MULTIPLYING']] },
+          { prompt: 'How many hours does the second part take?', answer: t2, unit: 'hours', hint: 'Time = distance ÷ speed.', wrong: [[D * v2, 'Divide the distance by the speed.', 'M_TIME_BY_MULTIPLYING']] },
+          { prompt: 'What is the average speed for the whole journey, in km/h?', answer: avg, unit: 'km/h', hint: 'Total distance ÷ total time.', wrong: [[(v1 + v2) / 2, 'The slower part takes longer, so the average is not halfway between the speeds. Use total distance ÷ total time.', 'M_AVERAGE_OF_SPEEDS']] },
         ],
         steps: [`${D} ÷ ${v1} = ${t1} hours.`, `${D} ÷ ${v2} = ${t2} hours.`, `Total distance ${2 * D} km ÷ total time ${t1 + t2} hours = ${avg} km/h.`] };
     },
     check: ({ v1, v2, D }, a) => a[0] * v1 === D && a[1] * v2 === D && a[2] * (a[0] + a[1]) === 2 * D }),
-  fam({ id: 'g7.speed.ms-steps', skill: 'G7_SPEED', outcome: 'G7.SPEED.f', rung: 2, form: 'steps',
+  fam({ id: 'g7.speed.ms-steps', skill: 'G7_SPEED', outcome: 'MATH.G7.MEASUR.TIME_DISTANCE_AND_SPEED.f', cskill: 'MATH.G7.MEASUR.TIME_DISTANCE_AND_SPEED.SPEED_UNITS_CONVERT', rung: 2, form: 'steps',
     draw: () => { const v = pick([5, 10, 15, 20, 25]), t = pick([10, 15, 20, 30]); return { v, t, d: v * t, what: pick(['A train', 'A lorry', 'A boda boda']) }; },
     make: ({ v, t, d, what }) => ({
       question: `${what} covers ${d} metres in ${t} seconds, going at the same speed all the time.`,
       parts: [
-        { prompt: 'What is its speed in metres per second (m/s)?', answer: v, unit: 'm/s', hint: 'Speed = distance ÷ time.', wrong: [[d * t, 'Divide the distance by the time.']] },
-        { prompt: 'How many metres does it cover in one hour (3,600 seconds)?', answer: v * 3600, unit: 'm', hint: 'Multiply the metres in one second by the seconds in an hour.', wrong: [[v * 60, 'An hour has 3,600 seconds, not 60.']] },
-        { prompt: 'What is its speed in kilometres per hour (km/h)?', answer: v * 3.6, unit: 'km/h', hint: 'Change those metres to kilometres.', wrong: [[v * 3600, 'That is in metres. Divide by 1,000 to get kilometres.']] },
+        { prompt: 'What is its speed in metres per second (m/s)?', answer: v, unit: 'm/s', hint: 'Speed = distance ÷ time.', wrong: [[d * t, 'Divide the distance by the time.', 'M_SPEED_BY_MULTIPLYING']] },
+        { prompt: 'How many metres does it cover in one hour (3,600 seconds)?', answer: v * 3600, unit: 'm', hint: 'Multiply the metres in one second by the seconds in an hour.', wrong: [[v * 60, 'An hour has 3,600 seconds, not 60.', 'M_HOUR_AS_SIXTY_SECONDS']] },
+        { prompt: 'What is its speed in kilometres per hour (km/h)?', answer: v * 3.6, unit: 'km/h', hint: 'Change those metres to kilometres.', wrong: [[v * 3600, 'That is in metres. Divide by 1,000 to get kilometres.', 'M_UNIT_NOT_CONVERTED_TO_KM']] },
       ],
       steps: [`${d} ÷ ${t} = ${v} m/s.`, `${v} × 3,600 = ${commas(v * 3600)} m in an hour.`, `${commas(v * 3600)} ÷ 1,000 = ${v * 3.6} km/h.`],
     }),
     check: ({ d, t }, a) => a[0] * t === d && a[1] === a[0] * 3600 && Math.abs(a[2] * 1000 - a[1]) < 1e-6 }),
-  fam({ id: 'g7.speed.kmh-to-ms-animal', skill: 'G7_SPEED', outcome: 'G7.SPEED.f', rung: 2, form: 'word',
+  fam({ id: 'g7.speed.kmh-to-ms-animal', skill: 'G7_SPEED', outcome: 'MATH.G7.MEASUR.TIME_DISTANCE_AND_SPEED.f', cskill: 'MATH.G7.MEASUR.TIME_DISTANCE_AND_SPEED.SPEED_UNITS_CONVERT', rung: 2, form: 'word',
     draw: () => { const [who, vs] = pick([['A cheetah runs', [25, 30]], ['An ostrich runs', [15, 20]], ['A racing cyclist rides', [10, 15]], ['A matatu on the highway goes', [20, 25, 30]]]); const v = pick(vs); return { v, kmh: v * 3.6, who }; },
     make: ({ v, kmh, who }) => ({
       question: `${who} at ${kmh} km/h. How many metres does it cover in one second? Give the speed in m/s.`,
       answer: v,
-      wrong: [[round(kmh / 60, 2), 'An hour has 3,600 seconds, not 60.'], [round(kmh * 3.6, 2), 'To go from km/h to m/s you divide by 3.6. Multiplying goes the other way.'], [round(kmh / 1000, 3), 'Changing km to m multiplies by 1,000, and an hour to seconds divides by 3,600.']],
+      wrong: [[round(kmh / 60, 2), 'An hour has 3,600 seconds, not 60.', 'M_HOUR_AS_SIXTY_SECONDS'], [round(kmh * 3.6, 2), 'To go from km/h to m/s you divide by 3.6. Multiplying goes the other way.', 'M_CONVERSION_DIRECTION_REVERSED'], [round(kmh / 1000, 3), 'Changing km to m multiplies by 1,000, and an hour to seconds divides by 3,600.', 'M_KM_TO_M_DIVIDED']],
       hints: ['In one hour it covers that many kilometres. Change them to metres.', 'Then divide by the number of seconds in an hour.'],
       steps: [`${kmh} km = ${commas(kmh * 1000)} m in 3,600 s.`, `${commas(kmh * 1000)} ÷ 3,600 = ${v} m/s.`],
     }),
     check: ({ v, kmh }, a) => Math.abs(a * 3.6 - kmh) < 1e-9 }),
-  fam({ id: 'g7.speed.why-divide-60', skill: 'G7_SPEED', outcome: 'G7.SPEED.f', rung: 3, form: 'why',
+  fam({ id: 'g7.speed.why-divide-60', skill: 'G7_SPEED', outcome: 'MATH.G7.MEASUR.TIME_DISTANCE_AND_SPEED.f', cskill: 'MATH.G7.MEASUR.TIME_DISTANCE_AND_SPEED.SPEED_UNITS_CONVERT', rung: 3, form: 'why',
     draw: () => { const v = pick([5, 10, 15, 20]); return { v, kmh: v * 3.6, p: person() }; },
     make: ({ v, kmh, p }) => ({
       question: `${p.name} changes ${kmh} km/h to m/s. ${p.She} multiplies by 1,000 and divides by 60. Why is this wrong?`,
       options: [
         { text: 'An hour has 3,600 seconds, not 60 seconds', right: true },
-        { text: 'A kilometre is 100 metres, not 1,000', right: false, why: 'A kilometre is 1,000 metres. That part is correct.' },
-        { text: 'You should add 1,000 and 60, not multiply and divide', right: false, why: 'Adding units does not change them. You multiply by the size of the new small unit and divide by the bigger one.' },
-        { text: 'You do not divide by anything. You only multiply by 1,000', right: false, why: 'The time changes from hours to seconds as well, so you must divide by the seconds in one hour.' },
+        { text: 'A kilometre is 100 metres, not 1,000', right: false, why: 'A kilometre is 1,000 metres. That part is correct.', mis: 'M_KM_AS_HUNDRED_M' },
+        { text: 'You should add 1,000 and 60, not multiply and divide', right: false, why: 'Adding units does not change them. You multiply by the size of the new small unit and divide by the bigger one.', mis: 'M_UNITS_ADDED' },
+        { text: 'You do not divide by anything. You only multiply by 1,000', right: false, why: 'The time changes from hours to seconds as well, so you must divide by the seconds in one hour.', mis: 'M_TIME_UNIT_NOT_CHANGED' },
       ],
       hints: ['Change the distance and the time separately.', 'How many seconds are there in one hour?'],
       steps: ['1 hour = 60 × 60 = 3,600 seconds.', `${kmh} km/h = ${commas(kmh * 1000)} m in 3,600 s = ${v} m/s.`],
     }) }),
-  fam({ id: 'g7.speed.fastest-mixed-units', skill: 'G7_SPEED', outcome: 'G7.SPEED.f', rung: 2, form: 'direct',
+  fam({ id: 'g7.speed.fastest-mixed-units', skill: 'G7_SPEED', outcome: 'MATH.G7.MEASUR.TIME_DISTANCE_AND_SPEED.f', cskill: 'MATH.G7.MEASUR.TIME_DISTANCE_AND_SPEED.SPEED_COMPARE_MIXED_UNITS', rung: 2, form: 'direct',
     draw: () => { const a = randInt(6, 12) * 5, b = randInt(6, 10), c = randInt(3, 6) * 5; const vals = [a, b * 3.6, c]; const s = [...vals].sort((x, y) => x - y); return uniq(a, b * 3.6, c) && s[2] - s[1] >= 4 && s[1] - s[0] >= 4 ? { a, b, c } : null; },
     make: ({ a, b, c }) => {
       const v = [{ t: `a boda boda at ${a} km/h`, k: a }, { t: `a runner at ${b} m/s`, k: b * 3.6 }, { t: `a bicycle at ${c} km/h`, k: c }];
       const best = Math.max(...v.map(x => x.k));
       return { question: `Which is the fastest: a boda boda at ${a} km/h, a runner at ${b} m/s or a bicycle at ${c} km/h?`, story: false,
-        options: v.map(x => ({ text: x.t.charAt(0).toUpperCase() + x.t.slice(1), right: x.k === best, why: x.k === best ? undefined : `Change all the speeds to km/h first. A speed in m/s becomes km/h when you multiply by 3.6.` })),
+        options: (() => { let c = 0; return v.map(x => ({ text: x.t.charAt(0).toUpperCase() + x.t.slice(1), right: x.k === best, ...(x.k === best ? {} : { why: /m\/s/.test(x.t) ? 'That compares a number in m/s with numbers in km/h. Change m/s to km/h first: multiply by 3.6.' : 'The speeds are in different units, so the numbers cannot be compared as they are. Change all the speeds to km/h first.', mis: /m\/s/.test(x.t) ? 'M_MS_NUMBER_TAKEN_AS_KMH' : (c++ === 0 ? 'M_SPEEDS_COMPARED_WITHOUT_SAME_UNIT' : 'SLIP') }) })); })(),
         hints: ['You cannot compare m/s with km/h until they are in the same unit.', `Multiply ${b} by 3.6 to change m/s to km/h.`],
         steps: [`${b} m/s = ${b} × 3.6 = ${round(b * 3.6, 1)} km/h.`, `Compare ${a} km/h, ${round(b * 3.6, 1)} km/h and ${c} km/h. The fastest is ${v.find(x => x.k === best).t}.`] };
     } }),
 
   // =========================================================== TEMPERATURE
-  fam({ id: 'g7.temp.word-from-table', skill: 'G7_TEMPERATURE', outcome: 'G7.TEMP.a', rung: 1, form: 'table',
+  fam({ id: 'g7.temp.word-from-table', skill: 'G7_TEMPERATURE', outcome: 'MATH.G7.MEASUR.TEMPERATURE.a', cskill: 'MATH.G7.MEASUR.TEMPERATURE.TEMP_WORDS', rung: 1, form: 'table',
     draw: () => ({ t: pick([3, 6, 8, 12, 14, 17, 18, 22, 25, 27, 32, 35, 38]), place: pick(['Nairobi', 'Nakuru', 'Mombasa', 'Nyeri', 'Kisumu']) }),
     make: ({ t, place }) => {
       const word = t < 10 ? 'cold' : t < 20 ? 'cool' : t < 30 ? 'warm' : 'hot';
       return { question: `A thermometer in ${place} shows ${t} °C. Use the table. Which word describes this temperature?`,
         model: { type: 'table', data: { head: ['Temperature', 'Word'], rows: [{ label: 'Below 10 °C', value: 'cold' }, { label: '10 °C to 19 °C', value: 'cool' }, { label: '20 °C to 29 °C', value: 'warm' }, { label: '30 °C and above', value: 'hot' }] } },
-        options: ['cold', 'cool', 'warm', 'hot'].map(w => ({ text: w, right: w === word, why: w === word ? undefined : `Look at which row of the table ${t} °C falls in.` })), fixedOrder: true,
+        options: (() => {
+        // up to three wrong words, one for each way of misreading the table: the next band or a band further away, too cold or too hot
+        const W = ['cold', 'cool', 'warm', 'hot'], ri = W.indexOf(word), seen = new Set(), out = [];
+        for (const [wi, w] of W.entries()) {
+          if (wi === ri) { out.push({ text: w, right: true }); continue; }
+          const code = `M_${Math.abs(wi - ri) === 1 ? 'NEXT' : 'FAR'}_BAND_TOO_${wi < ri ? 'COLD' : 'HOT'}`;
+          if (seen.has(code)) continue;
+          seen.add(code); out.push({ text: w, right: false, why: `${t} °C is not in the ${w} row of the table. Look at which row ${t} °C falls in.`, mis: code });
+        }
+        return out;
+      })(), fixedOrder: true,
         hints: ['Find the row whose range contains the reading.', 'Read the word in that row.'],
         steps: [`${t} °C is in the range for "${word}".`, `The word is ${word}.`] };
     } }),
-  fam({ id: 'g7.temp.rise-then-fall', skill: 'G7_TEMPERATURE', outcome: 'G7.TEMP.b', rung: 2, form: 'word',
-    draw: () => { const s = randInt(8, 16), r = randInt(10, 18), f = randInt(5, 12); return uniq(s + r - f, s + r + f, s - r + f, r - f) ? { s, r, f, place: pick(['Nakuru', 'Nyeri', 'Eldoret', 'Kitale']), p: person() } : null; },
+  fam({ id: 'g7.temp.rise-then-fall', skill: 'G7_TEMPERATURE', outcome: 'MATH.G7.MEASUR.TEMPERATURE.e', cskill: 'MATH.G7.MEASUR.TEMPERATURE.TEMP_RISES_FALLS', rung: 2, form: 'word',
+    draw: () => { const s = randInt(8, 16), r = randInt(10, 18), f = randInt(5, 12); return uniq(s + r - f, s + r + f, s - r + f, r - f) && [s + r + f, s - r + f, r - f].every(v => Math.abs(v - (s + r - f)) > 2) ? { s, r, f, place: pick(['Nakuru', 'Nyeri', 'Eldoret', 'Kitale']), p: person() } : null; },
     make: ({ s, r, f, place }) => ({
       question: `A thermometer in ${place} shows ${s} °C at 6 a.m. By 2 p.m. the temperature has risen by ${r} °C. Then it falls by ${f} °C by midnight. What does the thermometer show at midnight?`,
       answer: s + r - f,
-      wrong: [[s + r + f, 'The temperature fell the second time. Take that fall away.'], [s - r + f, 'The first change was a rise. Add it.'], [r - f, 'Start from the 6 a.m. reading, then apply both changes.']],
+      wrong: [[s + r + f, 'The temperature fell the second time. Take that fall away.', 'M_FALL_ADDED'], [s - r + f, 'The first change was a rise. Add it.', 'M_RISE_SUBTRACTED'], [r - f, 'Start from the 6 a.m. reading, then apply both changes.', 'M_START_READING_IGNORED']],
       hints: ['Follow the thermometer through the day: start, rise, fall.', 'A rise goes up the scale. A fall goes down.'],
       steps: [`After the rise: ${s} + ${r} = ${s + r} °C.`, `After the fall: ${s + r} − ${f} = ${s + r - f} °C.`],
     }),
     check: ({ s, r, f }, a) => a + f - r === s }),
-  fam({ id: 'g7.temp.spot-kelvin-minus', skill: 'G7_TEMPERATURE', outcome: 'G7.TEMP.d', rung: 2, form: 'spot',
+  fam({ id: 'g7.temp.spot-kelvin-minus', skill: 'G7_TEMPERATURE', outcome: 'MATH.G7.MEASUR.TEMPERATURE.d', cskill: 'MATH.G7.MEASUR.TEMPERATURE.TEMP_CONVERT_C_K', rung: 2, form: 'spot',
     draw: () => ({ c: randInt(10, 38), p: person() }),
     make: ({ c, p }) => {
       const bad = c - 273, good = c + 273;
@@ -820,17 +835,18 @@ export const FAMILIES = [
           { text: `Kelvin = ${c} − 273 = ${bad}`, ok: bad === c - 273 },
           { text: `So ${c} °C is ${bad} K.`, ok: bad === bad },
         ],
+        mis: 'M_273_SUBTRACTED_TO_GET_KELVIN',
         fix: 'To change °C to kelvin, add 273. Kelvin readings are larger than the Celsius ones here.',
         steps: ['Kelvin = Celsius + 273.', `${c} + 273 = ${good} K.`] };
     } }),
-  fam({ id: 'g7.temp.daily-range-graph', skill: 'G7_TEMPERATURE', outcome: 'G7.TEMP.b', rung: 2, form: 'graph',
+  fam({ id: 'g7.temp.daily-range-graph', skill: 'G7_TEMPERATURE', outcome: 'MATH.G7.MEASUR.TEMPERATURE.b', cskill: 'MATH.G7.MEASUR.TEMPERATURE.TEMP_COMPARE_DIFFERENCE', rung: 2, form: 'graph',
     draw: () => { const hours = [6, 9, 12, 15, 18, 21]; const vals = [randInt(10, 14), randInt(15, 20), randInt(22, 28), randInt(23, 30), randInt(17, 22), randInt(12, 16)]; const hi = Math.max(...vals), lo = Math.min(...vals); return vals.filter(v => v === hi).length === 1 && vals.filter(v => v === lo).length === 1 && uniq(hi - lo, hi, vals[5] - vals[0] || 99, hi + lo) ? { hours, vals, place: pick(['Kitale', 'Thika', 'Nyeri', 'Machakos']) } : null; },
     make: ({ hours, vals, place }) => {
       const hi = Math.max(...vals), lo = Math.min(...vals);
       return { question: `The line graph shows the temperature in °C at a school in ${place} during one day. What is the difference between the hottest and the coldest temperature on the graph, in degrees?`,
         model: { type: 'line-graph', data: { points: hours.map((x, i) => ({ x, y: vals[i] })), xTicks: hours, yTicks: [10, 15, 20, 25, 30], xLabel: 'Time of day (hours)', yLabel: 'Temperature (°C)' } },
         answer: hi - lo,
-        wrong: [[hi, 'That is the hottest temperature alone. Find how far it is from the coldest.'], [hi + lo, 'A difference is found by subtracting.'], [Math.abs(vals[vals.length - 1] - vals[0]), 'That compares the first and last readings. Look for the highest and the lowest points.']],
+        wrong: [[hi, 'That is the hottest temperature alone. Find how far it is from the coldest.', 'M_ONE_READING_GIVEN'], [hi + lo, 'A difference is found by subtracting.', 'M_SUMMED_FOR_DIFFERENCE'], [Math.abs(vals[vals.length - 1] - vals[0]), 'That compares the first and last readings. Look for the highest and the lowest points.', 'M_FIRST_AND_LAST_COMPARED']],
         hints: ['Find the highest point on the graph and the lowest point.', 'Subtract the lowest reading from the highest.'],
         steps: [`Highest: ${hi} °C. Lowest: ${lo} °C.`, `Difference: ${hi} − ${lo} = ${hi - lo} degrees.`] };
     },

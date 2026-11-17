@@ -1,0 +1,1470 @@
+{
+ "sub_strand": "MATH.G7.NUMBER.WHOLE_NUMBERS",
+ "title": "Whole Numbers",
+ "status": "draft: written 17 Nov 2026 offline for the Grade 7 pilot; not yet checked by a Kenyan maths teacher; not loaded by the live tutor",
+ "sources": [],
+ "notes": "Official outcomes a to h are tested; i is an attitude and has no skill. Outcome f (apply operations of whole numbers) is 'kicd_read': the design gives no limit, so the skills use Grade 6 limits stretched to Grade 7 numbers (up to 9-digit sums, 3-digit by 3-digit products, up to 6-digit dividends, three operations with brackets). Outcome e names even, odd and prime. Number sequences (g, h) are with a constant difference or ratio, or a two-step rule.",
+ "skills": [
+  {
+   "skill": "MATH.G7.NUMBER.WHOLE_NUMBERS.PLACE_VALUE_HM",
+   "key_step": "The child says the place of a digit by counting from the ones place on the right, three places at a time, and names the group (ones, thousands, millions).",
+   "floor": {
+    "prerequisite": "Reads numbers to millions.",
+    "question": "Which digit is in the thousands place in 4,215,683?",
+    "answer": "5"
+   },
+   "representations": [
+    "a place value chart in groups of three",
+    "the number with commas",
+    "the number said aloud"
+   ],
+   "steps": [
+    "Write the number under a chart with headings Ones, Thousands, Millions.",
+    "Each group has three places: hundreds, tens, ones.",
+    "Count from the right to find the place of the digit asked about.",
+    "Name the digit that sits in a place asked about."
+   ],
+   "contexts": [
+    "a county budget",
+    "phone lines in a region",
+    "people watching a match"
+   ],
+   "board": [
+    {
+     "beat": "draw",
+     "do": "Draw a chart with three groups and nine places. Write 305,000,200 in it."
+    },
+    {
+     "beat": "point",
+     "do": "Point at the digit 3.",
+     "say": "Which group is this digit in?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for the child to name the place."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "MATH.G7.NUMBER.WHOLE_NUMBERS.PLACE_VALUE_HM.M_COUNT_FROM_LEFT",
+     "listen_for": [
+      "starts from the left",
+      "the first place"
+     ],
+     "ask": "If you start counting from the left, does the ones place stay in the same box when the number gets longer?",
+     "repair": "The ones place is always on the right. Count from there."
+    },
+    {
+     "code": "MATH.G7.NUMBER.WHOLE_NUMBERS.PLACE_VALUE_HM.M_PLACE_SKIPPED_GROUP",
+     "listen_for": [
+      "ten millions",
+      "it is in millions"
+     ],
+     "ask": "How many places are in the millions group?",
+     "repair": "Each group has three places: hundreds, tens and ones of that group."
+    },
+    {
+     "code": "MATH.G7.NUMBER.WHOLE_NUMBERS.PLACE_VALUE_HM.M_ZERO_NOT_A_PLACE",
+     "listen_for": [
+      "skip the zero",
+      "zero is nothing"
+     ],
+     "ask": "If we take the zero away, does 4 stay in the same place?",
+     "repair": "A zero is a digit that holds its place."
+    }
+   ],
+   "checks": [
+    {
+     "question": "In 407,530,918 which place is the digit 5 in?",
+     "answer": "hundred thousands",
+     "shows": "name a place"
+    },
+    {
+     "question": "In 82,305,614 which digit is in the hundred thousands place?",
+     "answer": "3",
+     "shows": "find a digit from its place"
+    }
+   ]
+  },
+  {
+   "skill": "MATH.G7.NUMBER.WHOLE_NUMBERS.TOTAL_VALUE_HM",
+   "key_step": "The child writes total value as the digit times the value of its place and says that it is the digit with the zeros of its place.",
+   "floor": {
+    "prerequisite": "Names the place of a digit.",
+    "question": "What is the place of 7 in 7,215?",
+    "answer": "thousands"
+   },
+   "representations": [
+    "coins and notes of a million shillings",
+    "a two-row table of digit and place",
+    "expanded form"
+   ],
+   "steps": [
+    "Find the place of the digit.",
+    "Write the value of the place (1,000,000 for millions).",
+    "Multiply the digit by it.",
+    "Add total values together when asked."
+   ],
+   "contexts": [
+    "notes of sh 1,000,000",
+    "a cheque for a county project",
+    "population of a county"
+   ],
+   "board": [
+    {
+     "beat": "draw",
+     "do": "Write 83,402,115 and draw an arrow from the digit 3."
+    },
+    {
+     "beat": "point",
+     "do": "Point at the 3.",
+     "say": "How many millions is this digit?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for the child to give the total value."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "MATH.G7.NUMBER.WHOLE_NUMBERS.TOTAL_VALUE_HM.M_DIGIT_FOR_TOTAL",
+     "listen_for": [
+      "it is 3",
+      "the digit"
+     ],
+     "ask": "If I had 3 notes of one million shillings, would I have 3 shillings?",
+     "repair": "Total value is the digit times its place: 3 x 1,000,000."
+    },
+    {
+     "code": "MATH.G7.NUMBER.WHOLE_NUMBERS.TOTAL_VALUE_HM.M_ZEROS_MISCOUNTED",
+     "listen_for": [
+      "three zeros",
+      "one zero short"
+     ],
+     "ask": "How many places are on the right of the 3?",
+     "repair": "The zeros are the places to the right of the digit."
+    },
+    {
+     "code": "MATH.G7.NUMBER.WHOLE_NUMBERS.TOTAL_VALUE_HM.M_ONE_DIGIT_ONLY_VALUED",
+     "listen_for": [
+      "plus the 2",
+      "the digit as it is"
+     ],
+     "ask": "Did the second digit get its place value too?",
+     "repair": "Fill a two-row table before adding."
+    },
+    {
+     "code": "MATH.G7.NUMBER.WHOLE_NUMBERS.TOTAL_VALUE_HM.M_PLACE_ONE_TOO_HIGH",
+     "listen_for": [
+      "forty million",
+      "one more zero"
+     ],
+     "ask": "How many digits are after the 4?",
+     "repair": "Count the digits to its right: that many zeros."
+    }
+   ],
+   "checks": [
+    {
+     "question": "What is the total value of 6 in 462,000,000?",
+     "answer": "60,000,000",
+     "shows": "total value"
+    },
+    {
+     "question": "Total values of the 4 and the 2 added in 4,200,000?",
+     "answer": "4,200,000",
+     "shows": "two digits together"
+    }
+   ]
+  },
+  {
+   "skill": "MATH.G7.NUMBER.WHOLE_NUMBERS.SYMBOLS_HM",
+   "key_step": "The child writes each group of three digits with zero place holders and puts the groups in the right order.",
+   "floor": {
+    "prerequisite": "Writes numbers to millions.",
+    "question": "Write 3 million and 5 thousand in figures.",
+    "answer": "3,005,000"
+   },
+   "representations": [
+    "three boxes for millions, thousands and ones",
+    "the number with commas",
+    "the number said in groups"
+   ],
+   "steps": [
+    "Draw three boxes: millions, thousands, ones.",
+    "Put each said group in its box with leading zeros.",
+    "Put commas between the groups.",
+    "Read the number aloud to check."
+   ],
+   "contexts": [
+    "a county population",
+    "a national budget",
+    "a cheque"
+   ],
+   "board": [
+    {
+     "beat": "draw",
+     "do": "Draw three boxes. Write: 45 million, 12 thousand and 7."
+    },
+    {
+     "beat": "point",
+     "do": "Point at the thousands box.",
+     "say": "How many digits go in each box?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for the child to fill the boxes."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "MATH.G7.NUMBER.WHOLE_NUMBERS.SYMBOLS_HM.M_JOIN_PARTS_AS_WRITTEN",
+     "listen_for": [
+      "45,127",
+      "just put them together"
+     ],
+     "ask": "How many digits does the thousands group need?",
+     "repair": "Every group has three places, so 12 becomes 012."
+    },
+    {
+     "code": "MATH.G7.NUMBER.WHOLE_NUMBERS.SYMBOLS_HM.M_GROUP_SHIFTED",
+     "listen_for": [
+      "8,000,450"
+     ],
+     "ask": "Is 450 thousand in the thousands group or the ones group?",
+     "repair": "Say the group name when you write it."
+    },
+    {
+     "code": "MATH.G7.NUMBER.WHOLE_NUMBERS.SYMBOLS_HM.M_COMMA_PLACED_BY_FOUR",
+     "listen_for": [
+      "four digits then a comma"
+     ],
+     "ask": "Where do you start counting from?",
+     "repair": "Start at the right and count three digits."
+    }
+   ],
+   "checks": [
+    {
+     "question": "Write 207 million, 30 thousand and 9 in figures.",
+     "answer": "207,030,009",
+     "shows": "zero place holders"
+    },
+    {
+     "question": "Write 8 million and 450 thousand in figures.",
+     "answer": "8,450,000",
+     "shows": "groups in order"
+    }
+   ]
+  },
+  {
+   "skill": "MATH.G7.NUMBER.WHOLE_NUMBERS.WORDS_FROM_FIGURES",
+   "key_step": "The child reads a number group by group (millions, thousands, ones) and writes the words for each group before its name.",
+   "floor": {
+    "prerequisite": "Reads numbers to thousands.",
+    "question": "Write 2,050 in words.",
+    "answer": "two thousand and fifty"
+   },
+   "representations": [
+    "figures in groups",
+    "the groups said aloud",
+    "the words written"
+   ],
+   "steps": [
+    "Split the number into groups of three.",
+    "Say each group and its name.",
+    "Do not say a group that is 000.",
+    "Write the words with hyphens for 21 to 99."
+   ],
+   "contexts": [
+    "cheques",
+    "prices of land",
+    "county budgets"
+   ],
+   "board": [
+    {
+     "beat": "write",
+     "do": "Write 2,050,300 and split it into 2 | 050 | 300."
+    },
+    {
+     "beat": "point",
+     "do": "Point at the group 050.",
+     "say": "How do we say this group and what is its name?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for the child to say it."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "MATH.G7.NUMBER.WHOLE_NUMBERS.WORDS_FROM_FIGURES.M_LEADING_ZERO_MISREAD",
+     "listen_for": [
+      "five hundred thousand",
+      "two million five hundred"
+     ],
+     "ask": "How many digits are in the group 050: and what does the first zero tell us?",
+     "repair": "The zero says there are no hundreds in this group: say fifty thousand."
+    },
+    {
+     "code": "MATH.G7.NUMBER.WHOLE_NUMBERS.WORDS_FROM_FIGURES.M_TENS_AND_UNITS_SWAPPED",
+     "listen_for": [
+      "fifty-seven for seventy-five"
+     ],
+     "ask": "Which digit is the tens digit?",
+     "repair": "The left digit is tens: 7 tens is seventy."
+    },
+    {
+     "code": "MATH.G7.NUMBER.WHOLE_NUMBERS.WORDS_FROM_FIGURES.M_HUNDRED_DROPPED",
+     "listen_for": [
+      "four thousand for four hundred thousand"
+     ],
+     "ask": "Is the 4 in the thousands place or the hundred thousands place?",
+     "repair": "The 4 is in the hundred thousands place, so say hundred thousand."
+    },
+    {
+     "code": "MATH.G7.NUMBER.WHOLE_NUMBERS.WORDS_FROM_FIGURES.M_DIGIT_MOVED_ACROSS_GROUPS",
+     "listen_for": [
+      "three hundred and five thousand",
+      "a digit in the wrong group"
+     ],
+     "ask": "Which group does the 5 belong to, the thousands or the hundreds of thousands?",
+     "repair": "Split into groups first and read each group on its own."
+    },
+    {
+     "code": "MATH.G7.NUMBER.WHOLE_NUMBERS.WORDS_FROM_FIGURES.M_ORDER_WITHIN_GROUP_SWAPPED",
+     "listen_for": [
+      "seventy",
+      "eight hundred and seventy"
+     ],
+     "ask": "In 807, how many tens are there?",
+     "repair": "The zero means no tens: say eight hundred and seven."
+    }
+   ],
+   "checks": [
+    {
+     "question": "Write 1,807,402 in words.",
+     "answer": "one million eight hundred and seven thousand four hundred and two",
+     "shows": "groups in words"
+    },
+    {
+     "question": "Write 3,040,000 in words.",
+     "answer": "three million and forty thousand",
+     "shows": "zero groups"
+    }
+   ]
+  },
+  {
+   "skill": "MATH.G7.NUMBER.WHOLE_NUMBERS.FIGURES_FROM_WORDS",
+   "key_step": "The child puts each named group in its box and fills the empty places with zeros, so the total number of digits is right.",
+   "floor": {
+    "prerequisite": "Reads words to thousands.",
+    "question": "Write \"four thousand and six\" in figures.",
+    "answer": "4,006"
+   },
+   "representations": [
+    "three boxes",
+    "words under the boxes",
+    "the figures"
+   ],
+   "steps": [
+    "Draw the boxes for millions, thousands and ones.",
+    "Put each group in its box.",
+    "Fill empty places with zeros.",
+    "Count the digits and read back."
+   ],
+   "contexts": [
+    "a cheque in words",
+    "a land price in an advert",
+    "a result in a news bulletin"
+   ],
+   "board": [
+    {
+     "beat": "write",
+     "do": "Write: three million and forty-five."
+    },
+    {
+     "beat": "draw",
+     "do": "Draw three boxes and put 3 in millions."
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for the child to fill the other boxes."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "MATH.G7.NUMBER.WHOLE_NUMBERS.FIGURES_FROM_WORDS.M_GROUP_ZEROS_MISSING",
+     "listen_for": [
+      "345",
+      "just the numbers"
+     ],
+     "ask": "How many digits are in a number in the millions?",
+     "repair": "There are seven digits, so zeros fill the empty places: 3,000,045."
+    },
+    {
+     "code": "MATH.G7.NUMBER.WHOLE_NUMBERS.FIGURES_FROM_WORDS.M_THOUSAND_ONE_ZERO_SHORT",
+     "listen_for": [
+      "257,750",
+      "257,75"
+     ],
+     "ask": "How many digits does the group after the comma need?",
+     "repair": "Three digits, so 75 becomes 075."
+    },
+    {
+     "code": "MATH.G7.NUMBER.WHOLE_NUMBERS.FIGURES_FROM_WORDS.M_TEEN_FOR_TY",
+     "listen_for": [
+      "thirteen",
+      "thirty is 13"
+     ],
+     "ask": "Is thirty three tens or one ten and three?",
+     "repair": "Thirty is three tens: 30."
+    }
+   ],
+   "checks": [
+    {
+     "question": "Write \"five million and eighty thousand\" in figures.",
+     "answer": "5,080,000",
+     "shows": "groups with zeros"
+    },
+    {
+     "question": "Write \"two hundred and fifty-seven thousand and seventy-five\".",
+     "answer": "257,075",
+     "shows": "three-digit group"
+    }
+   ]
+  },
+  {
+   "skill": "MATH.G7.NUMBER.WHOLE_NUMBERS.ROUND_TO_PLACE",
+   "key_step": "The child underlines the place to round to, looks at the digit just to its right, and rounds up on 5 or more, then writes zeros after.",
+   "floor": {
+    "prerequisite": "Rounds to the nearest thousand.",
+    "question": "Round 4,562 to the nearest thousand.",
+    "answer": "5,000"
+   },
+   "representations": [
+    "a number line between two multiples",
+    "the digit to the right underlined",
+    "the rounded number"
+   ],
+   "steps": [
+    "Name the place to round to.",
+    "Underline that place and the digit on its right.",
+    "If the right digit is 5 or more, add one to the underlined digit.",
+    "Write zeros in all places after it."
+   ],
+   "contexts": [
+    "a population report",
+    "a county budget",
+    "phone lines"
+   ],
+   "board": [
+    {
+     "beat": "draw",
+     "do": "Draw a number line from 200,000,000 to 300,000,000 and mark 265,320,847."
+    },
+    {
+     "beat": "point",
+     "do": "Point at the middle between the two.",
+     "say": "Which end is the number closer to?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for the child to choose."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "MATH.G7.NUMBER.WHOLE_NUMBERS.ROUND_TO_PLACE.M_ROUND_WRONG_DIGIT_CHECKED",
+     "listen_for": [
+      "because the 2 is small",
+      "I looked at the 2"
+     ],
+     "ask": "Which digit is next to the one you are rounding?",
+     "repair": "Look at the digit to the right of the place."
+    },
+    {
+     "code": "MATH.G7.NUMBER.WHOLE_NUMBERS.ROUND_TO_PLACE.M_ROUND_DIRECTION_FIXED",
+     "listen_for": [
+      "cut off the end",
+      "just zeros"
+     ],
+     "ask": "Is 18,294,211 closer to 10 million or 20 million?",
+     "repair": "Rounding picks the nearer multiple, up or down."
+    },
+    {
+     "code": "MATH.G7.NUMBER.WHOLE_NUMBERS.ROUND_TO_PLACE.M_ZEROS_NOT_WRITTEN",
+     "listen_for": [
+      "just 3",
+      "3 only"
+     ],
+     "ask": "Is 3 about the same size as 265 million?",
+     "repair": "Keep every place: fill with zeros."
+    },
+    {
+     "code": "MATH.G7.NUMBER.WHOLE_NUMBERS.ROUND_TO_PLACE.M_ROUND_TO_WRONG_PLACE",
+     "listen_for": [
+      "270,000,000",
+      "to the ten millions"
+     ],
+     "ask": "Which place does the question name?",
+     "repair": "Say the place before you start."
+    },
+    {
+     "code": "MATH.G7.NUMBER.WHOLE_NUMBERS.ROUND_TO_PLACE.M_ROUND_LAST_DIGIT_ONLY",
+     "listen_for": [
+      "the last digit is 5",
+      "look at the end"
+     ],
+     "ask": "Which digit is next to the millions digit?",
+     "repair": "The digit right after the place decides."
+    }
+   ],
+   "checks": [
+    {
+     "question": "Round 265,320,847 to the nearest ten million.",
+     "answer": "270,000,000",
+     "shows": "name the place"
+    },
+    {
+     "question": "Round 18,294,211 to the nearest million.",
+     "answer": "18,000,000",
+     "shows": "round down"
+    }
+   ]
+  },
+  {
+   "skill": "MATH.G7.NUMBER.WHOLE_NUMBERS.ROUND_IN_CONTEXT",
+   "key_step": "The child picks a sensible place to round to for the setting, rounds, and says the new number is only close to the real one.",
+   "floor": {
+    "prerequisite": "Rounds large numbers.",
+    "question": "Round 7,450 to the nearest hundred.",
+    "answer": "7,500"
+   },
+   "representations": [
+    "a news headline",
+    "the number line",
+    "the exact and rounded numbers side by side"
+   ],
+   "steps": [
+    "Read the setting and decide what accuracy is needed.",
+    "Round to that place.",
+    "Check a carried 9.",
+    "Say why the answer is only an estimate."
+   ],
+   "contexts": [
+    "a news report",
+    "a county budget",
+    "people at a stadium"
+   ],
+   "board": [
+    {
+     "beat": "write",
+     "do": "Write: a stadium holds 49,986 people. A newspaper says about 50,000."
+    },
+    {
+     "beat": "point",
+     "do": "Point at the two numbers.",
+     "say": "Are they the same? Why might the newspaper use the second?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for the child to say."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "MATH.G7.NUMBER.WHOLE_NUMBERS.ROUND_IN_CONTEXT.M_NINE_CARRY_MISSED",
+     "listen_for": [
+      "1,999,000"
+     ],
+     "ask": "What is 1,999,000 + 1,000?",
+     "repair": "Rounding up adds one place value and carries."
+    },
+    {
+     "code": "MATH.G7.NUMBER.WHOLE_NUMBERS.ROUND_IN_CONTEXT.M_ROUNDED_IS_EXACT",
+     "listen_for": [
+      "exactly",
+      "it is the number"
+     ],
+     "ask": "Could the real number be a little different?",
+     "repair": "A rounded number is close to the real one, not the same."
+    },
+    {
+     "code": "MATH.G7.NUMBER.WHOLE_NUMBERS.ROUND_IN_CONTEXT.M_NO_ROUNDING_FOR_MONEY",
+     "listen_for": [
+      "money must be exact"
+     ],
+     "ask": "Do newspapers print every shilling of a budget?",
+     "repair": "Exact for accounts, rounded for reports."
+    }
+   ],
+   "checks": [
+    {
+     "question": "Round 1,999,500 to the nearest thousand.",
+     "answer": "2,000,000",
+     "shows": "carry on rounding"
+    },
+    {
+     "question": "A county has 3,486,219 people. Round to the nearest hundred thousand.",
+     "answer": "3,500,000",
+     "shows": "round in context"
+    }
+   ]
+  },
+  {
+   "skill": "MATH.G7.NUMBER.WHOLE_NUMBERS.EVEN_ODD",
+   "key_step": "The child decides even or odd from the last digit only and explains that even numbers share into two equal groups.",
+   "floor": {
+    "prerequisite": "Knows the 2 times table.",
+    "question": "Is 14 divisible by 2?",
+    "answer": "Yes"
+   },
+   "representations": [
+    "counters in pairs",
+    "the last digit",
+    "a list sorted into two columns"
+   ],
+   "steps": [
+    "Look at the ones digit.",
+    "If it is 0, 2, 4, 6 or 8 the number is even.",
+    "Test with pairs of counters.",
+    "Predict even or odd for sums and products."
+   ],
+   "contexts": [
+    "seats in pairs",
+    "house numbers",
+    "jersey numbers"
+   ],
+   "board": [
+    {
+     "beat": "draw",
+     "do": "Draw 7 counters in pairs: what is left over?"
+    },
+    {
+     "beat": "point",
+     "do": "Point at the single counter.",
+     "say": "What does it tell us about 7?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for the child to answer."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "MATH.G7.NUMBER.WHOLE_NUMBERS.EVEN_ODD.M_EVEN_BY_FIRST_DIGIT",
+     "listen_for": [
+      "it starts with 2"
+     ],
+     "ask": "Which digit tells us what is left over when we share by 2?",
+     "repair": "Only the ones digit decides."
+    },
+    {
+     "code": "MATH.G7.NUMBER.WHOLE_NUMBERS.EVEN_ODD.M_ZERO_NOT_EVEN",
+     "listen_for": [
+      "neither",
+      "zero is nothing"
+     ],
+     "ask": "Can 0 be shared into 2 equal groups?",
+     "repair": "Zero is even: 0 = 2 x 0."
+    }
+   ],
+   "checks": [
+    {
+     "question": "Is 2,357 even or odd?",
+     "answer": "odd",
+     "shows": "last digit"
+    },
+    {
+     "question": "Is 0 even or odd?",
+     "answer": "even",
+     "shows": "zero is even"
+    }
+   ]
+  },
+  {
+   "skill": "MATH.G7.NUMBER.WHOLE_NUMBERS.PRIME_NUMBERS",
+   "key_step": "The child tests for divisors other than 1 and the number itself and says a prime has exactly two factors.",
+   "floor": {
+    "prerequisite": "Lists factors of a number.",
+    "question": "What are the factors of 6?",
+    "answer": "1, 2, 3, 6"
+   },
+   "representations": [
+    "arrays of dots for a number",
+    "a list of factors",
+    "a grid of 1 to 50 with primes circled"
+   ],
+   "steps": [
+    "List the factors of the number.",
+    "Exactly two factors means prime.",
+    "Test 2, 3, 5 and 7 as divisors.",
+    "Remember 1 is not prime and 2 is the only even prime."
+   ],
+   "contexts": [
+    "jersey numbers",
+    "house numbers",
+    "arranging chairs in rows"
+   ],
+   "board": [
+    {
+     "beat": "draw",
+     "do": "Draw 9 dots in an array 3 by 3. Draw 7 dots in a row."
+    },
+    {
+     "beat": "point",
+     "do": "Point at both arrays.",
+     "say": "Which one can be made into a rectangle with more than one row?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for the child to say."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "MATH.G7.NUMBER.WHOLE_NUMBERS.PRIME_NUMBERS.M_ODD_MEANS_PRIME",
+     "listen_for": [
+      "9 is prime",
+      "it is odd"
+     ],
+     "ask": "Can 9 dots make a 3 by 3 square?",
+     "repair": "Odd numbers can be composite, such as 9 and 15."
+    },
+    {
+     "code": "MATH.G7.NUMBER.WHOLE_NUMBERS.PRIME_NUMBERS.M_ONE_IS_PRIME",
+     "listen_for": [
+      "1 is prime"
+     ],
+     "ask": "How many factors does 1 have?",
+     "repair": "A prime has exactly two factors."
+    },
+    {
+     "code": "MATH.G7.NUMBER.WHOLE_NUMBERS.PRIME_NUMBERS.M_TWO_NOT_PRIME",
+     "listen_for": [
+      "2 is even so not prime"
+     ],
+     "ask": "What are the factors of 2?",
+     "repair": "1 and 2 only: it is prime."
+    },
+    {
+     "code": "MATH.G7.NUMBER.WHOLE_NUMBERS.PRIME_NUMBERS.M_PRIME_COMPOSITE_CONFUSED",
+     "listen_for": [
+      "the composite ones",
+      "the other way round"
+     ],
+     "ask": "Which word means built from smaller factors?",
+     "repair": "Prime is on its own, composite is built from smaller factors."
+    },
+    {
+     "code": "MATH.G7.NUMBER.WHOLE_NUMBERS.PRIME_NUMBERS.M_ONLY_SMALL_DIVISORS_TESTED",
+     "listen_for": [
+      "not divisible by 2 or 3",
+      "only tried 2 and 3"
+     ],
+     "ask": "Does 5 divide 35?",
+     "repair": "Test 2, 3, 5 and 7 before you call a number prime."
+    }
+   ],
+   "checks": [
+    {
+     "question": "Is 9 prime?",
+     "answer": "No",
+     "shows": "odd but composite"
+    },
+    {
+     "question": "List the primes between 10 and 20.",
+     "answer": "11, 13, 17, 19",
+     "shows": "primes in a range"
+    }
+   ]
+  },
+  {
+   "skill": "MATH.G7.NUMBER.WHOLE_NUMBERS.ADD_SUB_LARGE",
+   "key_step": "The child lines up the digits by place, regroups in each column, and chains the regrouping across zeros.",
+   "floor": {
+    "prerequisite": "Adds and subtracts to 6 digits.",
+    "question": "Work out 500,000 - 2,000.",
+    "answer": "498,000"
+   },
+   "representations": [
+    "a place value chart",
+    "column working",
+    "an estimate"
+   ],
+   "steps": [
+    "Line up the ones.",
+    "Work from the right.",
+    "Regroup across zeros as a chain of nines.",
+    "Estimate to check."
+   ],
+   "contexts": [
+    "county budgets",
+    "population figures",
+    "distances"
+   ],
+   "board": [
+    {
+     "beat": "write",
+     "do": "Write 5,000,000 - 1,234,567 in columns."
+    },
+    {
+     "beat": "point",
+     "do": "Point at the zeros.",
+     "say": "What do we do when the top digit is smaller?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for the child to regroup."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "MATH.G7.NUMBER.WHOLE_NUMBERS.ADD_SUB_LARGE.M_SMALLER_FROM_LARGER",
+     "listen_for": [
+      "take the smaller from the larger"
+     ],
+     "ask": "Is it top minus bottom or big minus small?",
+     "repair": "Top minus bottom: regroup if needed."
+    },
+    {
+     "code": "MATH.G7.NUMBER.WHOLE_NUMBERS.ADD_SUB_LARGE.M_ZERO_REGROUP_BROKEN",
+     "listen_for": [
+      "the zero stays zero"
+     ],
+     "ask": "What does 5,000,000 look like as 4,999,999 + 1?",
+     "repair": "Each zero becomes 9 in a chain."
+    },
+    {
+     "code": "MATH.G7.NUMBER.WHOLE_NUMBERS.ADD_SUB_LARGE.M_COLUMN_MISALIGNED",
+     "listen_for": [
+      "line up from the left"
+     ],
+     "ask": "Are the ones in the same column?",
+     "repair": "Always line up the ones first."
+    }
+   ],
+   "checks": [
+    {
+     "question": "Work out 5,000,000 - 1,234,567.",
+     "answer": "3,765,433",
+     "shows": "across zeros"
+    },
+    {
+     "question": "Add 12,500,000 and 750,000.",
+     "answer": "13,250,000",
+     "shows": "line up places"
+    }
+   ]
+  },
+  {
+   "skill": "MATH.G7.NUMBER.WHOLE_NUMBERS.MULT_LARGE",
+   "key_step": "The child multiplies by each digit of the multiplier in turn, uses a zero place holder for tens and hundreds, and adds the rows.",
+   "floor": {
+    "prerequisite": "Multiplies a 4-digit by a 2-digit number.",
+    "question": "Work out 123 x 12.",
+    "answer": "1,476"
+   },
+   "representations": [
+    "long multiplication in rows",
+    "the area box",
+    "the estimate"
+   ],
+   "steps": [
+    "Multiply by the ones digit.",
+    "Put a zero under the ones and multiply by the tens digit.",
+    "Put two zeros and multiply by the hundreds.",
+    "Add the rows and check with an estimate."
+   ],
+   "contexts": [
+    "bags of maize",
+    "seats in a hall",
+    "school fees for a year"
+   ],
+   "board": [
+    {
+     "beat": "write",
+     "do": "Write 235 x 124 in columns."
+    },
+    {
+     "beat": "point",
+     "do": "Point at the tens row.",
+     "say": "What goes in the ones column of this row?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for the child to place the zero."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "MATH.G7.NUMBER.WHOLE_NUMBERS.MULT_LARGE.M_PLACE_HOLDER_ZERO_MISSING",
+     "listen_for": [
+      "no zero"
+     ],
+     "ask": "What does the 2 in 124 stand for: ones or tens?",
+     "repair": "It stands for tens, so shift one place."
+    },
+    {
+     "code": "MATH.G7.NUMBER.WHOLE_NUMBERS.MULT_LARGE.M_ZEROS_LOST_BY_100",
+     "listen_for": [
+      "450,000"
+     ],
+     "ask": "Where did the other zeros go?",
+     "repair": "Shift all digits to the left."
+    },
+    {
+     "code": "MATH.G7.NUMBER.WHOLE_NUMBERS.MULT_LARGE.M_ONLY_ONES_DIGIT",
+     "listen_for": [
+      "times 4 only",
+      "940"
+     ],
+     "ask": "What do the 2 and the 1 in 124 stand for?",
+     "repair": "Multiply by 100, 20 and 4 and add the three rows."
+    }
+   ],
+   "checks": [
+    {
+     "question": "Work out 235 x 124.",
+     "answer": "29,140",
+     "shows": "long multiplication"
+    },
+    {
+     "question": "Work out 4,500 x 1,000.",
+     "answer": "4,500,000",
+     "shows": "shift of digits"
+    }
+   ]
+  },
+  {
+   "skill": "MATH.G7.NUMBER.WHOLE_NUMBERS.DIV_LARGE",
+   "key_step": "The child divides digit by digit, writes a digit (even 0) above every digit brought down, and checks by multiplying back.",
+   "floor": {
+    "prerequisite": "Divides 4-digit numbers.",
+    "question": "Work out 936 / 3.",
+    "answer": "312"
+   },
+   "representations": [
+    "long division",
+    "multiplying back",
+    "a story about sharing"
+   ],
+   "steps": [
+    "Divide the first digits that fit.",
+    "Bring down the next digit.",
+    "Write 0 in the quotient when it does not go in.",
+    "Multiply back to check, and read the remainder in the story."
+   ],
+   "contexts": [
+    "sharing sh 84,036 among 4 groups",
+    "buses for pupils",
+    "packing eggs"
+   ],
+   "board": [
+    {
+     "beat": "write",
+     "do": "Write 84,036 / 4."
+    },
+    {
+     "beat": "point",
+     "do": "Point at the 0 after 84.",
+     "say": "Does 4 go into 0?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for the child to place a zero."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "MATH.G7.NUMBER.WHOLE_NUMBERS.DIV_LARGE.M_ZERO_IN_QUOTIENT_DROPPED",
+     "listen_for": [
+      "2,109"
+     ],
+     "ask": "How many digits should the answer have?",
+     "repair": "Write a digit above every digit you bring down."
+    },
+    {
+     "code": "MATH.G7.NUMBER.WHOLE_NUMBERS.DIV_LARGE.M_REMAINDER_IGNORED",
+     "listen_for": [
+      "6 buses"
+     ],
+     "ask": "What happens to the pupils who are left?",
+     "repair": "Draw the buses and decide what to do with the rest."
+    },
+    {
+     "code": "MATH.G7.NUMBER.WHOLE_NUMBERS.DIV_LARGE.M_DIVIDE_SMALL_BY_LARGE",
+     "listen_for": [
+      "24 into 120"
+     ],
+     "ask": "What is being shared?",
+     "repair": "The amount shared goes inside the bracket."
+    }
+   ],
+   "checks": [
+    {
+     "question": "Work out 84,036 / 4.",
+     "answer": "21,009",
+     "shows": "zero in quotient"
+    },
+    {
+     "question": "290 pupils go in buses of 45. How many buses are needed?",
+     "answer": "7",
+     "shows": "remainder in context"
+    }
+   ]
+  },
+  {
+   "skill": "MATH.G7.NUMBER.WHOLE_NUMBERS.ORDER_OF_OPERATIONS",
+   "key_step": "The child works brackets first, then multiplication and division left to right, then addition and subtraction left to right, writing each step.",
+   "floor": {
+    "prerequisite": "Does one operation at a time.",
+    "question": "Work out 8 + 4 x 5.",
+    "answer": "28"
+   },
+   "representations": [
+    "a story that gives the order",
+    "the working one line at a time",
+    "brackets as a box"
+   ],
+   "steps": [
+    "Do brackets first.",
+    "Then multiplication and division from the left.",
+    "Then addition and subtraction from the left.",
+    "Rewrite the expression after each step."
+   ],
+   "contexts": [
+    "change from a shop",
+    "bags and rows",
+    "fares in a matatu"
+   ],
+   "board": [
+    {
+     "beat": "write",
+     "do": "Write: 8 + 4 x 5 and the story: 8 shillings and 4 coins of 5."
+    },
+    {
+     "beat": "point",
+     "do": "Point at the 4 x 5.",
+     "say": "Which part of the story do we count first?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for the child to say."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "MATH.G7.NUMBER.WHOLE_NUMBERS.ORDER_OF_OPERATIONS.M_LEFT_TO_RIGHT_ONLY",
+     "listen_for": [
+      "60",
+      "12 times 5"
+     ],
+     "ask": "In the story, do we have 12 shillings or 28?",
+     "repair": "Multiplication comes before addition."
+    },
+    {
+     "code": "MATH.G7.NUMBER.WHOLE_NUMBERS.ORDER_OF_OPERATIONS.M_BRACKETS_IGNORED",
+     "listen_for": [
+      "28 for the bracket one"
+     ],
+     "ask": "What does a bracket tell us?",
+     "repair": "Work what is inside first."
+    },
+    {
+     "code": "MATH.G7.NUMBER.WHOLE_NUMBERS.ORDER_OF_OPERATIONS.M_ADD_BEFORE_SUBTRACT",
+     "listen_for": [
+      "3 added first"
+     ],
+     "ask": "Which is first from the left?",
+     "repair": "Equal rank: left to right."
+    },
+    {
+     "code": "MATH.G7.NUMBER.WHOLE_NUMBERS.ORDER_OF_OPERATIONS.M_MULT_BEFORE_DIVIDE",
+     "listen_for": [
+      "3 x 4 first"
+     ],
+     "ask": "Which is first from the left?",
+     "repair": "Equal rank: left to right."
+    }
+   ],
+   "checks": [
+    {
+     "question": "Work out (8 + 4) x 5.",
+     "answer": "60",
+     "shows": "brackets"
+    },
+    {
+     "question": "Work out 24 / 4 x 3.",
+     "answer": "18",
+     "shows": "left to right"
+    }
+   ]
+  },
+  {
+   "skill": "MATH.G7.NUMBER.WHOLE_NUMBERS.OPERATIONS_IN_CONTEXT",
+   "key_step": "The child writes each step of the story as an operation, in the order of the story, and gives the final answer with a unit.",
+   "floor": {
+    "prerequisite": "Solves one-step stories.",
+    "question": "A fare is sh 100 and 30 pay. How much is collected?",
+    "answer": "sh 3,000"
+   },
+   "representations": [
+    "the story drawn as boxes",
+    "a number sentence per step",
+    "the final answer in a sentence"
+   ],
+   "steps": [
+    "Underline the question.",
+    "List the steps in order.",
+    "Work each step.",
+    "Answer with the unit."
+   ],
+   "contexts": [
+    "matatu takings",
+    "mango sharing",
+    "school trip costs"
+   ],
+   "board": [
+    {
+     "beat": "write",
+     "do": "Write the matatu story with 30 passengers at sh 100."
+    },
+    {
+     "beat": "draw",
+     "do": "Draw a box for takings, then a box for costs."
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for the child to say the next step."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "MATH.G7.NUMBER.WHOLE_NUMBERS.OPERATIONS_IN_CONTEXT.M_ONE_STEP_STOPPED",
+     "listen_for": [
+      "3,000",
+      "that is the answer"
+     ],
+     "ask": "Has the driver paid for fuel yet?",
+     "repair": "Read the question again and use every number."
+    },
+    {
+     "code": "MATH.G7.NUMBER.WHOLE_NUMBERS.OPERATIONS_IN_CONTEXT.M_ADDED_NOT_TAKEN_AWAY",
+     "listen_for": [
+      "4,000"
+     ],
+     "ask": "Does the driver gain or lose money on fuel?",
+     "repair": "Costs leave the takings."
+    },
+    {
+     "code": "MATH.G7.NUMBER.WHOLE_NUMBERS.OPERATIONS_IN_CONTEXT.M_TOTAL_GIVEN_AS_SHARE",
+     "listen_for": [
+      "30 each"
+     ],
+     "ask": "Is 30 for one family or for all?",
+     "repair": "Divide the total by the number of families."
+    },
+    {
+     "code": "MATH.G7.NUMBER.WHOLE_NUMBERS.OPERATIONS_IN_CONTEXT.M_LAST_COST_LEFT_OUT",
+     "listen_for": [
+      "2,200",
+      "only the fuel"
+     ],
+     "ask": "Which money amounts are in the story?",
+     "repair": "Use every amount: tick them off."
+    },
+    {
+     "code": "MATH.G7.NUMBER.WHOLE_NUMBERS.OPERATIONS_IN_CONTEXT.M_SHARE_BY_MULTIPLYING",
+     "listen_for": [
+      "150",
+      "times five"
+     ],
+     "ask": "If 5 families share, does each get more than the whole?",
+     "repair": "Sharing means dividing."
+    }
+   ],
+   "checks": [
+    {
+     "question": "A matatu has 30 passengers at sh 100 each. Fuel costs sh 800 and parking sh 200. How much is left?",
+     "answer": "sh 2,000",
+     "shows": "two-step"
+    },
+    {
+     "question": "Barasa has 45 mangoes, gives away 15, then shares the rest among 5 families. How many does each get?",
+     "answer": "6",
+     "shows": "share the rest"
+    }
+   ]
+  },
+  {
+   "skill": "MATH.G7.NUMBER.WHOLE_NUMBERS.SEQ_EXTEND_RULE",
+   "key_step": "The child compares neighbouring terms (the gap or the ratio), states the rule in words, and checks it on every pair.",
+   "floor": {
+    "prerequisite": "Counts on in steps.",
+    "question": "What comes after 5, 10, 15?",
+    "answer": "20"
+   },
+   "representations": [
+    "the sequence on a number line",
+    "the gaps written between terms",
+    "a table"
+   ],
+   "steps": [
+    "Write the gap or ratio between each pair.",
+    "Say the rule in words.",
+    "Check it on every pair.",
+    "Use it for the next term."
+   ],
+   "contexts": [
+    "seats in a hall",
+    "savings each week",
+    "steps on a staircase"
+   ],
+   "board": [
+    {
+     "beat": "write",
+     "do": "Write 2, 6, 18, 54 with gaps 4, 12, 36 between."
+    },
+    {
+     "beat": "point",
+     "do": "Point at the gaps.",
+     "say": "Are the gaps equal?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for the child to find the ratio."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "MATH.G7.NUMBER.WHOLE_NUMBERS.SEQ_EXTEND_RULE.M_ADD_NOT_MULTIPLY",
+     "listen_for": [
+      "90",
+      "add 4"
+     ],
+     "ask": "Are the gaps all 4?",
+     "repair": "If the gaps grow, check the ratio."
+    },
+    {
+     "code": "MATH.G7.NUMBER.WHOLE_NUMBERS.SEQ_EXTEND_RULE.M_FIRST_GAP_ONLY",
+     "listen_for": [
+      "24"
+     ],
+     "ask": "Which gap appears most often?",
+     "repair": "Check every gap, not only the first."
+    },
+    {
+     "code": "MATH.G7.NUMBER.WHOLE_NUMBERS.SEQ_EXTEND_RULE.M_DECREASING_SIGN",
+     "listen_for": [
+      "plus 6"
+     ],
+     "ask": "Are the terms getting bigger or smaller?",
+     "repair": "Smaller means take away."
+    },
+    {
+     "code": "MATH.G7.NUMBER.WHOLE_NUMBERS.SEQ_EXTEND_RULE.M_NEIGHBOUR_BLAMED",
+     "listen_for": [
+      "the one after"
+     ],
+     "ask": "What should each term be if the rule is add 7?",
+     "repair": "Write what each term should be and compare."
+    },
+    {
+     "code": "MATH.G7.NUMBER.WHOLE_NUMBERS.SEQ_EXTEND_RULE.M_GIVES_CORRECT_TERM",
+     "listen_for": [
+      "it should be 31"
+     ],
+     "ask": "Is 31 written in the list?",
+     "repair": "Name the term that is written and does not fit."
+    }
+   ],
+   "checks": [
+    {
+     "question": "What comes after 2, 6, 18, 54?",
+     "answer": "162",
+     "shows": "multiply"
+    },
+    {
+     "question": "Which term does not fit: 17, 24, 31, 36, 45?",
+     "answer": "36",
+     "shows": "odd one out"
+    }
+   ]
+  },
+  {
+   "skill": "MATH.G7.NUMBER.WHOLE_NUMBERS.SEQ_NTH_TERM",
+   "key_step": "The child counts the steps from the first term (position minus one), multiplies by the difference, and adds the first term.",
+   "floor": {
+    "prerequisite": "Finds the rule of a sequence.",
+    "question": "What is the rule of 21, 24, 27?",
+    "answer": "add 3"
+   },
+   "representations": [
+    "a table of position and term",
+    "jumps on a number line",
+    "the formula in words"
+   ],
+   "steps": [
+    "Find the difference.",
+    "Count the steps from the first term.",
+    "Multiply steps by the difference.",
+    "Add the first term."
+   ],
+   "contexts": [
+    "seats in rows",
+    "saving each week",
+    "bricks in a wall"
+   ],
+   "board": [
+    {
+     "beat": "write",
+     "do": "Write a table: row 1: 21, row 2: 24, row 3: 27."
+    },
+    {
+     "beat": "point",
+     "do": "Point at row 3.",
+     "say": "How many steps from row 1?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for the child to say."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "MATH.G7.NUMBER.WHOLE_NUMBERS.SEQ_NTH_TERM.M_COUNT_TERMS_NOT_STEPS",
+     "listen_for": [
+      "12 times 3"
+     ],
+     "ask": "How many steps from term 1 to term 3?",
+     "repair": "Steps are position minus one."
+    },
+    {
+     "code": "MATH.G7.NUMBER.WHOLE_NUMBERS.SEQ_NTH_TERM.M_FIRST_TERM_LEFT_OUT",
+     "listen_for": [
+      "33"
+     ],
+     "ask": "Where did the sequence start?",
+     "repair": "Add the first term."
+    },
+    {
+     "code": "MATH.G7.NUMBER.WHOLE_NUMBERS.SEQ_NTH_TERM.M_NEXT_TERM_NOT_FAR",
+     "listen_for": [
+      "21",
+      "the next one"
+     ],
+     "ask": "Which term does the question ask for?",
+     "repair": "Jump ahead with the rule."
+    },
+    {
+     "code": "MATH.G7.NUMBER.WHOLE_NUMBERS.SEQ_NTH_TERM.M_MULTIPLIES_FIRST_TERM",
+     "listen_for": [
+      "four times six"
+     ],
+     "ask": "Does the second shape need 6 new sticks or only some?",
+     "repair": "Shapes share a side: use the rule."
+    },
+    {
+     "code": "MATH.G7.NUMBER.WHOLE_NUMBERS.SEQ_NTH_TERM.M_DIFFERENCE_IGNORED",
+     "listen_for": [
+      "plus one each time"
+     ],
+     "ask": "How many sticks does each new shape add?",
+     "repair": "Add the difference each time, not 1."
+    }
+   ],
+   "checks": [
+    {
+     "question": "21, 24, 27, 30: what is the 12th term?",
+     "answer": "54",
+     "shows": "nth term"
+    },
+    {
+     "question": "5, 9, 13, 17: what is the 20th term?",
+     "answer": "81",
+     "shows": "steps and difference"
+    }
+   ]
+  },
+  {
+   "skill": "MATH.G7.NUMBER.WHOLE_NUMBERS.SEQ_CREATE_RULE",
+   "key_step": "The child puts each term through the whole rule (every part, in order), and checks that every pair of neighbours follows it.",
+   "floor": {
+    "prerequisite": "Continues a sequence.",
+    "question": "Next: 3, 6, 9, ?",
+    "answer": "12"
+   },
+   "representations": [
+    "the rule as boxes",
+    "terms written",
+    "a number puzzle"
+   ],
+   "steps": [
+    "Write the rule as boxes.",
+    "Put each term through every box.",
+    "Write the next term.",
+    "Check neighbours."
+   ],
+   "contexts": [
+    "number games",
+    "savings plans",
+    "pattern puzzles"
+   ],
+   "board": [
+    {
+     "beat": "draw",
+     "do": "Draw two boxes: x 3 then + 3, and a first term 1."
+    },
+    {
+     "beat": "point",
+     "do": "Point at the first box.",
+     "say": "What does the first term become after both boxes?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for the child to say the second term."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "MATH.G7.NUMBER.WHOLE_NUMBERS.SEQ_CREATE_RULE.M_ONLY_ADDING_USED",
+     "listen_for": [
+      "4",
+      "only add"
+     ],
+     "ask": "Did the term go through the multiplying box too?",
+     "repair": "Apply both parts, the multiplying first."
+    },
+    {
+     "code": "MATH.G7.NUMBER.WHOLE_NUMBERS.SEQ_CREATE_RULE.M_ONLY_MULTIPLYING_USED",
+     "listen_for": [
+      "27",
+      "times three each time"
+     ],
+     "ask": "What did you do with the adding part of the rule?",
+     "repair": "Every new term uses both parts: multiply, then add."
+    },
+    {
+     "code": "MATH.G7.NUMBER.WHOLE_NUMBERS.SEQ_CREATE_RULE.M_RULE_NOT_KEPT",
+     "listen_for": [
+      "2, 7, 13"
+     ],
+     "ask": "Is the gap the same each time?",
+     "repair": "Check every pair."
+    }
+   ],
+   "checks": [
+    {
+     "question": "Rule: multiply by 3, then add 3. First term 1. What is the 4th term?",
+     "answer": "66",
+     "shows": "two-part rule"
+    },
+    {
+     "question": "Rule: start at 2, add 5. Write four terms.",
+     "answer": "2, 7, 12, 17",
+     "shows": "constant gap"
+    }
+   ]
+  }
+ ]
+}

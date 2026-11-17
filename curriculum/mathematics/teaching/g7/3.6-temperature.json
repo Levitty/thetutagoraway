@@ -1,0 +1,423 @@
+{
+ "sub_strand": "MATH.G7.MEASUR.TEMPERATURE",
+ "title": "Temperature",
+ "status": "draft: written 17 Nov 2026 offline for the Grade 7 pilot; not yet checked by a Kenyan maths teacher; not loaded by the live tutor",
+ "sources": [],
+ "notes": "Official outcomes a to e are tested. Outcome f (use IT devices to read temperatures, 'kicd_read') and g (recognise changes) are not questions. Temperatures below zero are used (Mount Kenya at dawn), so integers with signs appear here for the first time in the Grade 7 map. Kelvin is the Celsius reading plus 273.",
+ "skills": [
+  {
+   "skill": "MATH.G7.MEASUR.TEMPERATURE.TEMP_WORDS",
+   "key_step": "The child finds the number in the table of ranges and reads the word from that row.",
+   "floor": {
+    "prerequisite": "Reads a table.",
+    "question": "Find 25 in 20 to 29",
+    "answer": "the row 20 to 29"
+   },
+   "representations": [
+    "a thermometer drawn",
+    "a table of ranges",
+    "the word"
+   ],
+   "steps": [
+    "Read the thermometer or number.",
+    "Find the row.",
+    "Read the word.",
+    "Check with a day you know."
+   ],
+   "contexts": [
+    "Nyeri in the morning",
+    "a hot day in Mombasa",
+    "a cold night in Limuru"
+   ],
+   "board": [
+    {
+     "beat": "draw",
+     "do": "Draw a thermometer at 35 and a table of ranges."
+    },
+    {
+     "beat": "point",
+     "do": "Point at 35 on the scale.",
+     "say": "Which row of the table is it in?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for the child to say."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "MATH.G7.MEASUR.TEMPERATURE.TEMP_WORDS.M_NEXT_BAND_TOO_COLD",
+     "listen_for": [
+      "warm"
+     ],
+     "ask": "Where does the hot row start?",
+     "repair": "Use the cut-offs."
+    },
+    {
+     "code": "MATH.G7.MEASUR.TEMPERATURE.TEMP_WORDS.M_NEXT_BAND_TOO_HOT",
+     "listen_for": [
+      "hot"
+     ],
+     "ask": "Where does the warm row end?",
+     "repair": "Use the cut-offs."
+    },
+    {
+     "code": "MATH.G7.MEASUR.TEMPERATURE.TEMP_WORDS.M_FAR_BAND_TOO_COLD",
+     "listen_for": [
+      "cool"
+     ],
+     "ask": "Is 35 near the cool row?",
+     "repair": "Find the row with 35."
+    },
+    {
+     "code": "MATH.G7.MEASUR.TEMPERATURE.TEMP_WORDS.M_FAR_BAND_TOO_HOT",
+     "listen_for": [
+      "warm"
+     ],
+     "ask": "Is 5 near the warm row?",
+     "repair": "Find the row with 5."
+    }
+   ],
+   "checks": [
+    {
+     "question": "Table: cold below 10, cool 10 to 19, warm 20 to 29, hot 30 and over. 35 degrees is?",
+     "answer": "hot",
+     "shows": "read the table"
+    },
+    {
+     "question": "15 degrees is?",
+     "answer": "cool",
+     "shows": "read the table"
+    }
+   ]
+  },
+  {
+   "skill": "MATH.G7.MEASUR.TEMPERATURE.TEMP_COMPARE_DIFFERENCE",
+   "key_step": "The child counts from the colder reading up to the warmer one, passing through zero when needed, or subtracts the lowest reading from the highest.",
+   "floor": {
+    "prerequisite": "Finds a difference.",
+    "question": "18 - 5",
+    "answer": "13"
+   },
+   "representations": [
+    "a vertical thermometer scale",
+    "a number line through zero",
+    "a line graph"
+   ],
+   "steps": [
+    "Find the colder and warmer reading.",
+    "Count up to zero if below it.",
+    "Then up to the warmer reading.",
+    "Add the two parts."
+   ],
+   "contexts": [
+    "Mount Kenya and Nairobi",
+    "a school day graph",
+    "two towns"
+   ],
+   "board": [
+    {
+     "beat": "draw",
+     "do": "Draw a thermometer from -5 to 20 with -2 and 18 marked."
+    },
+    {
+     "beat": "point",
+     "do": "Point at -2.",
+     "say": "How many degrees up to zero?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for the child to say."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "MATH.G7.MEASUR.TEMPERATURE.TEMP_COMPARE_DIFFERENCE.M_NEGATIVE_SIGN_IGNORED",
+     "listen_for": [
+      "16"
+     ],
+     "ask": "Is -2 above or below zero?",
+     "repair": "Count through zero."
+    },
+    {
+     "code": "MATH.G7.MEASUR.TEMPERATURE.TEMP_COMPARE_DIFFERENCE.M_ONLY_BELOW_ZERO_PART",
+     "listen_for": [
+      "2"
+     ],
+     "ask": "Where does 18 come in?",
+     "repair": "Keep going to 18."
+    },
+    {
+     "code": "MATH.G7.MEASUR.TEMPERATURE.TEMP_COMPARE_DIFFERENCE.M_ONE_READING_GIVEN",
+     "listen_for": [
+      "29"
+     ],
+     "ask": "What does the question ask?",
+     "repair": "Compare two readings."
+    },
+    {
+     "code": "MATH.G7.MEASUR.TEMPERATURE.TEMP_COMPARE_DIFFERENCE.M_SUMMED_FOR_DIFFERENCE",
+     "listen_for": [
+      "40"
+     ],
+     "ask": "Difference: add or subtract?",
+     "repair": "Subtract."
+    },
+    {
+     "code": "MATH.G7.MEASUR.TEMPERATURE.TEMP_COMPARE_DIFFERENCE.M_FIRST_AND_LAST_COMPARED",
+     "listen_for": [
+      "first and last"
+     ],
+     "ask": "Where is the highest point?",
+     "repair": "Use highest and lowest."
+    }
+   ],
+   "checks": [
+    {
+     "question": "-2 degrees on Mount Kenya and 18 degrees in Nairobi: how much warmer is Nairobi?",
+     "answer": "20 degrees",
+     "shows": "through zero"
+    },
+    {
+     "question": "A graph has hottest 29 and coldest 11: difference?",
+     "answer": "18 degrees",
+     "shows": "range"
+    }
+   ]
+  },
+  {
+   "skill": "MATH.G7.MEASUR.TEMPERATURE.TEMP_UNITS",
+   "key_step": "The child says Celsius and kelvin are two scales with water freezing at 0 and 273, and kelvin numbers are bigger.",
+   "floor": {
+    "prerequisite": "Reads a thermometer.",
+    "question": "What does the thermometer read when water freezes?",
+    "answer": "0 degrees Celsius"
+   },
+   "representations": [
+    "two scales side by side",
+    "freezing and boiling",
+    "the unit names"
+   ],
+   "steps": [
+    "Draw the two scales.",
+    "Mark freezing on both.",
+    "Mark boiling on both.",
+    "Say which numbers are bigger."
+   ],
+   "contexts": [
+    "water freezing",
+    "boiling water",
+    "the weather"
+   ],
+   "board": [
+    {
+     "beat": "draw",
+     "do": "Draw two thermometers: Celsius 0 to 100 and kelvin 273 to 373."
+    },
+    {
+     "beat": "point",
+     "do": "Point at freezing on both.",
+     "say": "What number is it on each scale?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for the child to say."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "MATH.G7.MEASUR.TEMPERATURE.TEMP_UNITS.M_KELVIN_BELOW_CELSIUS",
+     "listen_for": [
+      "kelvin is smaller"
+     ],
+     "ask": "What is 0 degrees in kelvin?",
+     "repair": "273, so bigger."
+    },
+    {
+     "code": "MATH.G7.MEASUR.TEMPERATURE.TEMP_UNITS.M_ZERO_KELVIN_AS_ZERO_CELSIUS",
+     "listen_for": [
+      "0 K"
+     ],
+     "ask": "Where does kelvin start?",
+     "repair": "Far below freezing."
+    }
+   ],
+   "checks": [
+    {
+     "question": "Water freezes at what kelvin reading?",
+     "answer": "273 K",
+     "shows": "freezing"
+    },
+    {
+     "question": "Is the Kelvin number bigger or smaller than the Celsius number?",
+     "answer": "bigger",
+     "shows": "scales"
+    }
+   ]
+  },
+  {
+   "skill": "MATH.G7.MEASUR.TEMPERATURE.TEMP_CONVERT_C_K",
+   "key_step": "The child adds 273 for kelvin, subtracts 273 for Celsius, and changes all readings to one scale before comparing.",
+   "floor": {
+    "prerequisite": "Adds 273.",
+    "question": "11 + 273",
+    "answer": "284"
+   },
+   "representations": [
+    "two thermometers",
+    "the rule",
+    "a table of readings"
+   ],
+   "steps": [
+    "Decide which scale you want.",
+    "Add 273 for kelvin.",
+    "Subtract 273 for Celsius.",
+    "A change stays the same size."
+   ],
+   "contexts": [
+    "milk cooling",
+    "a fridge",
+    "boiling water"
+   ],
+   "board": [
+    {
+     "beat": "draw",
+     "do": "Draw two scales and mark 11 on Celsius."
+    },
+    {
+     "beat": "point",
+     "do": "Point at 11.",
+     "say": "Where is it on the kelvin scale?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for the child to say."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "MATH.G7.MEASUR.TEMPERATURE.TEMP_CONVERT_C_K.M_273_SUBTRACTED_TO_GET_KELVIN",
+     "listen_for": [
+      "minus 273"
+     ],
+     "ask": "Is kelvin bigger or smaller?",
+     "repair": "Add 273."
+    },
+    {
+     "code": "MATH.G7.MEASUR.TEMPERATURE.TEMP_CONVERT_C_K.M_CHANGE_CONVERTED_AS_READING",
+     "listen_for": [
+      "307 K"
+     ],
+     "ask": "Does a fall of 34 degrees change when the scale changes?",
+     "repair": "The same: 34 K."
+    },
+    {
+     "code": "MATH.G7.MEASUR.TEMPERATURE.TEMP_CONVERT_C_K.M_KELVIN_NOT_FOR_EVERYDAY",
+     "listen_for": [
+      "not for milk"
+     ],
+     "ask": "Can any temperature be written in kelvin?",
+     "repair": "Yes."
+    },
+    {
+     "code": "MATH.G7.MEASUR.TEMPERATURE.TEMP_CONVERT_C_K.M_SCALES_NOT_MATCHED",
+     "listen_for": [
+      "10 is bigger"
+     ],
+     "ask": "What is 294 K in degrees Celsius?",
+     "repair": "Change first."
+    }
+   ],
+   "checks": [
+    {
+     "question": "11 degrees Celsius in kelvin",
+     "answer": "284 K",
+     "shows": "add"
+    },
+    {
+     "question": "Hottest of 294 K, 2 and 10 degrees Celsius",
+     "answer": "294 K",
+     "shows": "same scale"
+    }
+   ]
+  },
+  {
+   "skill": "MATH.G7.MEASUR.TEMPERATURE.TEMP_RISES_FALLS",
+   "key_step": "The child starts with the first reading and applies each change in order, adding a rise and taking away a fall.",
+   "floor": {
+    "prerequisite": "Adds and subtracts.",
+    "question": "11 + 11",
+    "answer": "22"
+   },
+   "representations": [
+    "a thermometer with arrows",
+    "steps written",
+    "the final reading"
+   ],
+   "steps": [
+    "Write the start.",
+    "Apply the first change.",
+    "Apply the second.",
+    "Give the final reading with its unit."
+   ],
+   "contexts": [
+    "a day in Nyeri",
+    "a cooling cup of tea",
+    "a night in the highlands"
+   ],
+   "board": [
+    {
+     "beat": "draw",
+     "do": "Draw a thermometer at 11 with an arrow up by 11 then down by 9."
+    },
+    {
+     "beat": "point",
+     "do": "Point at the second arrow.",
+     "say": "Does this go up or down?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for the child to say."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "MATH.G7.MEASUR.TEMPERATURE.TEMP_RISES_FALLS.M_FALL_ADDED",
+     "listen_for": [
+      "31"
+     ],
+     "ask": "Did the temperature go up the second time?",
+     "repair": "Take the fall away."
+    },
+    {
+     "code": "MATH.G7.MEASUR.TEMPERATURE.TEMP_RISES_FALLS.M_RISE_SUBTRACTED",
+     "listen_for": [
+      "9"
+     ],
+     "ask": "Does a rise add or take away?",
+     "repair": "A rise adds."
+    },
+    {
+     "code": "MATH.G7.MEASUR.TEMPERATURE.TEMP_RISES_FALLS.M_START_READING_IGNORED",
+     "listen_for": [
+      "2"
+     ],
+     "ask": "What was the first reading?",
+     "repair": "Start from it."
+    }
+   ],
+   "checks": [
+    {
+     "question": "11 degrees at 6 a.m., rises by 11, then falls by 9. Reading at midnight?",
+     "answer": "13 degrees",
+     "shows": "two changes"
+    },
+    {
+     "question": "7 degrees, falls by 10, then rises by 4. Reading?",
+     "answer": "1 degree",
+     "shows": "below zero"
+    }
+   ]
+  }
+ ]
+}

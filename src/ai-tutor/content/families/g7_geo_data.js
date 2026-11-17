@@ -313,9 +313,9 @@ export const FAMILIES = [
     } }),
 
   // ========================================================= CONSTRUCTIONS
-  fam({ id: 'g7.construct.spot-plan', skill: 'G7_ANGLE_CONSTRUCTION', outcome: 'G7.CONSTRUCT.b', rung: 3, form: 'spot',
+  fam({ id: 'g7.construct.spot-plan', skill: 'G7_ANGLE_CONSTRUCTION', outcome: 'MATH.G7.GEOMET.GEOMETRICAL_CONSTRUCTION.c', cskill: 'MATH.G7.GEOMET.GEOMETRICAL_CONSTRUCTION.CONSTRUCT_STANDARD_ANGLES', rung: 3, form: 'spot',
     draw: () => {
-      const base = pick([60, 90, 120]), piece = pick([30, 15]), kind = pick(['count', 'add']);
+      const base = pick([60, 90, 120]), piece = pick([30, 15]), kind = 'count';
       const times = piece === 30 ? 1 : 2;
       const total = base + piece;
       const claimed = piece;
@@ -332,13 +332,14 @@ export const FAMILIES = [
           { text: `Construct the ${claimed}° angle beside the ${base}° angle. The two together make ${shownTotal}°.`, ok: shownTotal === base + claimed },
           { text: `The angle of ${shownTotal}° is ready.`, ok: true },
         ],
+        mis: 'M_BISECT_COUNT_WRONG',
         fix: kind === 'count' ? `Bisecting 60° ${wrongTimes === 1 ? 'once' : 'twice'} gives ${60 / 2 ** wrongTimes}°, not ${claimed}°. To get ${piece}° you must bisect ${times === 1 ? 'once' : 'twice'}.` : `${base}° + ${piece}° is ${total}°, not ${shownTotal}°.`,
         hints: ['Check each step. Does it give the angle it claims?', 'Bisecting cuts an angle into two equal halves each time.'],
         steps: [`60° bisected ${times === 1 ? 'once' : 'twice'} is ${piece}°.`, `${base}° + ${piece}° = ${total}°.`],
       };
     } }),
 
-  fam({ id: 'g7.construct.arc-reasons', skill: 'G7_CONSTRUCTIONS', outcome: 'G7.CONSTRUCT.b', rung: 3, form: 'why',
+  fam({ id: 'g7.construct.arc-reasons', skill: 'G7_CONSTRUCTIONS', outcome: 'MATH.G7.GEOMET.GEOMETRICAL_CONSTRUCTION.b', cskill: 'MATH.G7.GEOMET.GEOMETRICAL_CONSTRUCTION.BISECT_ANGLE', rung: 3, form: 'why',
     draw: () => ({ step: randInt(0, 3), k: randInt(0, 3) }),
     make: ({ step, k }) => {
       const S = [
@@ -347,7 +348,7 @@ export const FAMILIES = [
         { do: 'join the corner to the point where the two arcs cross', why: 'That point is equally far from both arms, so the line splits the angle into two equal angles' },
         { do: 'open the compasses wider than half the gap between the two marks before drawing the crossing arcs', why: 'Otherwise the two arcs would be too short to meet' },
       ];
-      const opts = S.map((s, i) => ({ text: s.why, right: i === step, why: i === step ? undefined : 'That is a good reason, but for a different step of the method. Check which step the question asks about.' }));
+      const opts = S.map((s, i) => ({ text: s.why, right: i === step, ...(i === step ? {} : { why: 'That is a good reason, but for a different step of the method. Check which step the question asks about.', mis: ['M_ARC_REASON_FOR_FIRST_ARC', 'M_ARC_REASON_FOR_CROSSING_STEP', 'M_ARC_REASON_FOR_BISECTOR_STEP', 'M_ARC_REASON_ARCS_TOO_SHORT'][i] }) }));
       return {
         question: `When you bisect an angle with a ruler and compasses, you ${S[step].do}. Why?`,
         story: false, options: rot(opts, k),
@@ -356,7 +357,7 @@ export const FAMILIES = [
       };
     } }),
 
-  fam({ id: 'g7.construct.triangle-possible', skill: 'G7_CONSTRUCTIONS', outcome: 'G7.CONSTRUCT.b', rung: 3, form: 'why',
+  fam({ id: 'g7.construct.triangle-possible', skill: 'G7_CONSTRUCTIONS', outcome: 'MATH.G7.GEOMET.GEOMETRICAL_CONSTRUCTION.d', cskill: 'MATH.G7.GEOMET.GEOMETRICAL_CONSTRUCTION.CONSTRUCT_TRIANGLES', rung: 3, form: 'why',
     draw: () => {
       const a = randInt(3, 8), b = randInt(3, 8), possible = Math.random() < 0.5;
       const lo = Math.min(a, b), hi = Math.max(a, b);
@@ -369,14 +370,14 @@ export const FAMILIES = [
     make: ({ sides, L, s1, s2, possible, k, p }) => {
       const opts = possible ? [
         { text: `Yes. ${s1} + ${s2} = ${s1 + s2}, which is more than ${L}`, right: true },
-        { text: 'No. The three sides are all different lengths', right: false, why: 'A triangle can have three different sides. What matters is whether the two shorter sides together are longer than the longest side.' },
-        { text: `No. ${L} cm is longer than each of the other two sides`, right: false, why: 'The longest side is always longer than each of the others. The test is whether the two shorter sides together beat it.' },
-        { text: 'Yes. Any three lengths make a triangle', right: false, why: 'Not any three. If the two shorter sides together are too short, the arcs never meet.' },
+        { text: 'No. The three sides are all different lengths', right: false, why: 'A triangle can have three different sides. What matters is whether the two shorter sides together are longer than the longest side.', mis: 'M_ALL_SIDES_DIFFERENT_NO_TRIANGLE' },
+        { text: `No. ${L} cm is longer than each of the other two sides`, right: false, why: 'The longest side is always longer than each of the others. The test is whether the two shorter sides together beat it.', mis: 'M_LONGEST_SIDE_BLOCKS_TRIANGLE' },
+        { text: 'Yes. Any three lengths make a triangle', right: false, why: 'Not any three. If the two shorter sides together are too short, the arcs never meet.', mis: 'M_ANY_THREE_LENGTHS_MAKE_TRIANGLE' },
       ] : [
         { text: `No. ${s1} + ${s2} = ${s1 + s2}, which is less than ${L}`, right: true },
-        { text: 'Yes. Any three lengths at all will make a triangle', right: false, why: 'Not any three. If the two shorter sides together are too short, the arcs never meet.' },
-        { text: `Yes. ${L} cm is the longest side, so it can be the base`, right: false, why: 'Any side can be the base. The problem is that the two shorter sides together are too short to reach each other.' },
-        { text: 'No. The three sides are all different lengths', right: false, why: 'A triangle can have three different sides. Check whether the two shorter sides together are longer than the longest.' },
+        { text: 'Yes. Any three lengths at all will make a triangle', right: false, why: 'Not any three. If the two shorter sides together are too short, the arcs never meet.', mis: 'M_ANY_THREE_LENGTHS_MAKE_TRIANGLE' },
+        { text: `Yes. ${L} cm is the longest side, so it can be the base`, right: false, why: 'Any side can be the base. The problem is that the two shorter sides together are too short to reach each other.', mis: 'M_LONGEST_SIDE_AS_BASE_ENOUGH' },
+        { text: 'No. The three sides are all different lengths', right: false, why: 'A triangle can have three different sides. Check whether the two shorter sides together are longer than the longest.', mis: 'M_ALL_SIDES_DIFFERENT_NO_TRIANGLE' },
       ];
       return {
         question: `${p.name} wants to construct a triangle with sides of ${sides[0]} cm, ${sides[1]} cm and ${sides[2]} cm, using a ruler and compasses. Can it be done?`,

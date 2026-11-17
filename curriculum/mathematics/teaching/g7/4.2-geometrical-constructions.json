@@ -1,0 +1,446 @@
+{
+ "sub_strand": "MATH.G7.GEOMET.GEOMETRICAL_CONSTRUCTION",
+ "title": "Geometrical Constructions",
+ "status": "draft: written 17 Nov 2026 offline for the Grade 7 pilot; not yet checked by a Kenyan maths teacher; not loaded by the live tutor",
+ "sources": [],
+ "notes": "Official outcomes a to e are tested; f is an attitude. Construction is done on paper with a ruler and compasses, so a typed or tapped answer can test only the reasoning and the plan (which angle comes from which steps, which sides make a triangle); the drawing itself stays with the teacher. Angles that are multiples of 7.5 degrees come from 60 and 90 degrees by bisecting.",
+ "skills": [
+  {
+   "skill": "MATH.G7.GEOMET.GEOMETRICAL_CONSTRUCTION.MEASURE_ANGLES_PROTRACTOR",
+   "key_step": "The child puts the centre on the corner, a base line on one arm, and reads the scale that starts at zero on that arm.",
+   "floor": {
+    "prerequisite": "Knows a right angle.",
+    "question": "How many degrees in a right angle?",
+    "answer": "90"
+   },
+   "representations": [
+    "a protractor on an angle",
+    "two scales",
+    "an estimate"
+   ],
+   "steps": [
+    "Centre on the corner.",
+    "Base line along an arm.",
+    "Read the scale from zero.",
+    "Check with acute or obtuse."
+   ],
+   "contexts": [
+    "a door open",
+    "scissors",
+    "a roof"
+   ],
+   "board": [
+    {
+     "beat": "draw",
+     "do": "Draw an obtuse angle with a protractor."
+    },
+    {
+     "beat": "point",
+     "do": "Point at the arm on zero.",
+     "say": "Which scale starts here?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for the child to say."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "MATH.G7.GEOMET.GEOMETRICAL_CONSTRUCTION.MEASURE_ANGLES_PROTRACTOR.M_WRONG_SCALE_READ",
+     "listen_for": [
+      "70"
+     ],
+     "ask": "Is the angle bigger than a right angle?",
+     "repair": "Use the matching scale."
+    },
+    {
+     "code": "MATH.G7.GEOMET.GEOMETRICAL_CONSTRUCTION.MEASURE_ANGLES_PROTRACTOR.M_PROTRACTOR_NOT_ALIGNED",
+     "listen_for": [
+      "edge on the corner"
+     ],
+     "ask": "Where is the centre mark?",
+     "repair": "On the corner."
+    }
+   ],
+   "checks": [
+    {
+     "question": "An angle is more than a right angle. The two readings are 70 and 110. Which is it?",
+     "answer": "110",
+     "shows": "scale"
+    },
+    {
+     "question": "Is a 120 degree angle acute or obtuse?",
+     "answer": "obtuse",
+     "shows": "type"
+    }
+   ]
+  },
+  {
+   "skill": "MATH.G7.GEOMET.GEOMETRICAL_CONSTRUCTION.BISECT_ANGLE",
+   "key_step": "The child says bisect means cut into two equal parts, each half the size, and gives the reason for the equal arcs.",
+   "floor": {
+    "prerequisite": "Halves numbers.",
+    "question": "Half of 50",
+    "answer": "25"
+   },
+   "representations": [
+    "a bisected angle",
+    "the arcs",
+    "a protractor check"
+   ],
+   "steps": [
+    "Arc across both arms from the corner.",
+    "Two equal arcs from those marks.",
+    "Line through the crossing.",
+    "Check each half with a protractor."
+   ],
+   "contexts": [
+    "a door",
+    "a fan",
+    "a roof"
+   ],
+   "board": [
+    {
+     "beat": "draw",
+     "do": "Draw a 50 degree angle and its bisector."
+    },
+    {
+     "beat": "point",
+     "do": "Point at the two halves.",
+     "say": "How big is each?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for the child to say."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "MATH.G7.GEOMET.GEOMETRICAL_CONSTRUCTION.BISECT_ANGLE.M_BISECT_DOUBLES",
+     "listen_for": [
+      "100"
+     ],
+     "ask": "Are the parts bigger or smaller than the whole?",
+     "repair": "Smaller."
+    },
+    {
+     "code": "MATH.G7.GEOMET.GEOMETRICAL_CONSTRUCTION.BISECT_ANGLE.M_BISECT_NO_CHANGE",
+     "listen_for": [
+      "50"
+     ],
+     "ask": "What do the two halves add to?",
+     "repair": "The whole."
+    },
+    {
+     "code": "MATH.G7.GEOMET.GEOMETRICAL_CONSTRUCTION.BISECT_ANGLE.M_SUPPLEMENT_FOR_HALF",
+     "listen_for": [
+      "130"
+     ],
+     "ask": "Is 130 half of 50?",
+     "repair": "No."
+    },
+    {
+     "code": "MATH.G7.GEOMET.GEOMETRICAL_CONSTRUCTION.BISECT_ANGLE.M_ARC_REASON_FOR_FIRST_ARC",
+     "listen_for": [
+      "same distance from the corner"
+     ],
+     "ask": "Which step is that reason for?",
+     "repair": "The first arc."
+    },
+    {
+     "code": "MATH.G7.GEOMET.GEOMETRICAL_CONSTRUCTION.BISECT_ANGLE.M_ARC_REASON_FOR_CROSSING_STEP",
+     "listen_for": [
+      "the crossing point"
+     ],
+     "ask": "Which step are we asking about?",
+     "repair": "The first arc."
+    },
+    {
+     "code": "MATH.G7.GEOMET.GEOMETRICAL_CONSTRUCTION.BISECT_ANGLE.M_ARC_REASON_FOR_BISECTOR_STEP",
+     "listen_for": [
+      "equally far from both arms"
+     ],
+     "ask": "Which step is that reason for?",
+     "repair": "The last."
+    },
+    {
+     "code": "MATH.G7.GEOMET.GEOMETRICAL_CONSTRUCTION.BISECT_ANGLE.M_ARC_REASON_ARCS_TOO_SHORT",
+     "listen_for": [
+      "arcs too short"
+     ],
+     "ask": "What does the first arc make equal?",
+     "repair": "Two distances."
+    }
+   ],
+   "checks": [
+    {
+     "question": "Bisect an angle of 50 degrees: each new angle?",
+     "answer": "25 degrees",
+     "shows": "halves"
+    },
+    {
+     "question": "Bisect 90 degrees twice: size?",
+     "answer": "22.5 degrees",
+     "shows": "twice"
+    }
+   ]
+  },
+  {
+   "skill": "MATH.G7.GEOMET.GEOMETRICAL_CONSTRUCTION.CONSTRUCT_STANDARD_ANGLES",
+   "key_step": "The child plans the angle from 60 and 90 by bisecting, and adds or subtracts to build the others.",
+   "floor": {
+    "prerequisite": "Halves angles.",
+    "question": "Half of 60",
+    "answer": "30"
+   },
+   "representations": [
+    "a plan on paper",
+    "bisect arrows",
+    "a check with a protractor"
+   ],
+   "steps": [
+    "Choose the starting angle.",
+    "Bisect how many times.",
+    "Add or subtract angles.",
+    "Check with a protractor."
+   ],
+   "contexts": [
+    "a set square",
+    "a roof truss",
+    "a kite"
+   ],
+   "board": [
+    {
+     "beat": "write",
+     "do": "Write: make 30 degrees."
+    },
+    {
+     "beat": "draw",
+     "do": "Draw 60 then half of it."
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for the child to say the plan."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "MATH.G7.GEOMET.GEOMETRICAL_CONSTRUCTION.CONSTRUCT_STANDARD_ANGLES.M_BISECTED_TOO_FAR",
+     "listen_for": [
+      "15"
+     ],
+     "ask": "What is half of 30?",
+     "repair": "Stop at 30."
+    },
+    {
+     "code": "MATH.G7.GEOMET.GEOMETRICAL_CONSTRUCTION.CONSTRUCT_STANDARD_ANGLES.M_WRONG_START_ANGLE",
+     "listen_for": [
+      "from 90"
+     ],
+     "ask": "What is half of 90?",
+     "repair": "45."
+    },
+    {
+     "code": "MATH.G7.GEOMET.GEOMETRICAL_CONSTRUCTION.CONSTRUCT_STANDARD_ANGLES.M_STOPPED_AT_SIXTY",
+     "listen_for": [
+      "equilateral"
+     ],
+     "ask": "What does an equilateral triangle give?",
+     "repair": "60."
+    },
+    {
+     "code": "MATH.G7.GEOMET.GEOMETRICAL_CONSTRUCTION.CONSTRUCT_STANDARD_ANGLES.M_BISECTED_ONCE_ONLY",
+     "listen_for": [
+      "bisect once"
+     ],
+     "ask": "What does bisecting 60 once give?",
+     "repair": "30, so 15 needs one more."
+    },
+    {
+     "code": "MATH.G7.GEOMET.GEOMETRICAL_CONSTRUCTION.CONSTRUCT_STANDARD_ANGLES.M_PERPENDICULAR_FOR_ANGLE",
+     "listen_for": [
+      "a perpendicular"
+     ],
+     "ask": "What angle is a perpendicular?",
+     "repair": "90, not the angle wanted."
+    },
+    {
+     "code": "MATH.G7.GEOMET.GEOMETRICAL_CONSTRUCTION.CONSTRUCT_STANDARD_ANGLES.M_BISECT_COUNT_WRONG",
+     "listen_for": [
+      "once"
+     ],
+     "ask": "What does one bisection give?",
+     "repair": "30, then 15."
+    }
+   ],
+   "checks": [
+    {
+     "question": "How do you make 30 degrees with ruler and compasses?",
+     "answer": "construct 60 then bisect it",
+     "shows": "plan"
+    },
+    {
+     "question": "How can you make 135 degrees?",
+     "answer": "90 and 45 side by side",
+     "shows": "add"
+    }
+   ]
+  },
+  {
+   "skill": "MATH.G7.GEOMET.GEOMETRICAL_CONSTRUCTION.CONSTRUCT_TRIANGLES",
+   "key_step": "The child checks that the two shorter sides together are longer than the longest, and then plans the arcs.",
+   "floor": {
+    "prerequisite": "Compares sums.",
+    "question": "3 + 4 vs 6",
+    "answer": "7 is more"
+   },
+   "representations": [
+    "sticks laid out",
+    "arcs that meet or not",
+    "the test written"
+   ],
+   "steps": [
+    "Order the sides.",
+    "Add the two shorter sides.",
+    "Compare with the longest.",
+    "Plan the arcs."
+   ],
+   "contexts": [
+    "a roof frame",
+    "a swing frame",
+    "a kite"
+   ],
+   "board": [
+    {
+     "beat": "draw",
+     "do": "Draw a line of 6 cm and arcs of 3 cm and 4 cm."
+    },
+    {
+     "beat": "point",
+     "do": "Point at where they cross.",
+     "say": "Do the arcs meet?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for the child to say."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "MATH.G7.GEOMET.GEOMETRICAL_CONSTRUCTION.CONSTRUCT_TRIANGLES.M_ANY_THREE_LENGTHS_MAKE_TRIANGLE",
+     "listen_for": [
+      "any three"
+     ],
+     "ask": "Do the arcs meet for 4, 3 and 10?",
+     "repair": "Test it."
+    },
+    {
+     "code": "MATH.G7.GEOMET.GEOMETRICAL_CONSTRUCTION.CONSTRUCT_TRIANGLES.M_ALL_SIDES_DIFFERENT_NO_TRIANGLE",
+     "listen_for": [
+      "all different"
+     ],
+     "ask": "Must sides be equal?",
+     "repair": "No."
+    },
+    {
+     "code": "MATH.G7.GEOMET.GEOMETRICAL_CONSTRUCTION.CONSTRUCT_TRIANGLES.M_LONGEST_SIDE_BLOCKS_TRIANGLE",
+     "listen_for": [
+      "6 is longer"
+     ],
+     "ask": "Is the longest side always longer?",
+     "repair": "Test the two shorter together."
+    },
+    {
+     "code": "MATH.G7.GEOMET.GEOMETRICAL_CONSTRUCTION.CONSTRUCT_TRIANGLES.M_LONGEST_SIDE_AS_BASE_ENOUGH",
+     "listen_for": [
+      "it can be the base"
+     ],
+     "ask": "Do the two short sides reach each other?",
+     "repair": "Test them."
+    }
+   ],
+   "checks": [
+    {
+     "question": "Sides 4, 3 and 6 cm: can a triangle be drawn?",
+     "answer": "Yes",
+     "shows": "test"
+    },
+    {
+     "question": "Sides 4, 3 and 10 cm: can a triangle be drawn?",
+     "answer": "No",
+     "shows": "test"
+    }
+   ]
+  },
+  {
+   "skill": "MATH.G7.GEOMET.GEOMETRICAL_CONSTRUCTION.CONSTRUCT_CIRCLES",
+   "key_step": "The child sets the compasses to the radius, keeps the point still at the centre, and says all points are the same distance from it.",
+   "floor": {
+    "prerequisite": "Halves a diameter.",
+    "question": "Radius of diameter 6",
+    "answer": "3"
+   },
+   "representations": [
+    "compasses opened to the radius",
+    "a drawn circle",
+    "a string and pencil"
+   ],
+   "steps": [
+    "Halve the diameter.",
+    "Open the compasses.",
+    "Point on the centre.",
+    "Turn without moving the point."
+   ],
+   "contexts": [
+    "a round table",
+    "a coin",
+    "a garden bed"
+   ],
+   "board": [
+    {
+     "beat": "draw",
+     "do": "Draw a centre and compasses."
+    },
+    {
+     "beat": "point",
+     "do": "Point at the opening.",
+     "say": "Is that the radius or the diameter?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for the child to say."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "MATH.G7.GEOMET.GEOMETRICAL_CONSTRUCTION.CONSTRUCT_CIRCLES.M_RADIUS_AS_DIAMETER_SET",
+     "listen_for": [
+      "6 cm"
+     ],
+     "ask": "What is half of 6?",
+     "repair": "Set to the radius."
+    },
+    {
+     "code": "MATH.G7.GEOMET.GEOMETRICAL_CONSTRUCTION.CONSTRUCT_CIRCLES.M_COMPASS_POINT_MOVES",
+     "listen_for": [
+      "it does not matter"
+     ],
+     "ask": "What is the centre?",
+     "repair": "Fixed."
+    }
+   ],
+   "checks": [
+    {
+     "question": "To draw a circle of diameter 6 cm, set the compasses to?",
+     "answer": "3 cm",
+     "shows": "radius"
+    },
+    {
+     "question": "Why must the point stay still?",
+     "answer": "every point is the same distance from the centre",
+     "shows": "centre"
+    }
+   ]
+  }
+ ]
+}

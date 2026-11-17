@@ -1,0 +1,587 @@
+{
+ "sub_strand": "MATH.G7.NUMBER.SQUARES_AND_SQUARE_ROOTS",
+ "title": "Squares and Square Roots",
+ "status": "draft: written 17 Nov 2026 offline for the Grade 7 pilot; not yet checked by a Kenyan maths teacher; not loaded by the live tutor",
+ "sources": [],
+ "notes": "Official outcomes a and b are tested; c is an attitude. Square roots are of perfect squares only (outcome b). One skill places a root between two whole numbers using perfect squares as anchors: it is a way of checking a root and is kept, with its limit named. Squares and roots in the Grade 6 map go up to 100 and 10,000.",
+ "skills": [
+  {
+   "skill": "MATH.G7.NUMBER.SQUARES_AND_SQUARE_ROOTS.SQUARE_WHOLE_NUMBER",
+   "key_step": "The child says a square is the number multiplied by itself and shows it as a square of dots.",
+   "floor": {
+    "prerequisite": "Knows multiplication facts.",
+    "question": "7 x 7",
+    "answer": "49"
+   },
+   "representations": [
+    "a square of dots",
+    "the product",
+    "the area of a tile"
+   ],
+   "steps": [
+    "Draw a square with sides of that number.",
+    "Count the dots as rows of that number.",
+    "Write the multiplication.",
+    "For multiples of 10 count the zeros."
+   ],
+   "contexts": [
+    "tiles on a floor",
+    "plots of land",
+    "seedlings in rows"
+   ],
+   "board": [
+    {
+     "beat": "draw",
+     "do": "Draw a 7 by 7 square of dots."
+    },
+    {
+     "beat": "point",
+     "do": "Point at one row.",
+     "say": "How many rows are there?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for the child to say."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "MATH.G7.NUMBER.SQUARES_AND_SQUARE_ROOTS.SQUARE_WHOLE_NUMBER.M_SQUARE_IS_DOUBLE",
+     "listen_for": [
+      "7 squared is 14"
+     ],
+     "ask": "How many dots are in a 7 by 7 square?",
+     "repair": "A square is 7 rows of 7."
+    },
+    {
+     "code": "MATH.G7.NUMBER.SQUARES_AND_SQUARE_ROOTS.SQUARE_WHOLE_NUMBER.M_ZEROS_NOT_SQUARED",
+     "listen_for": [
+      "300"
+     ],
+     "ask": "What is 30 x 30?",
+     "repair": "Both numbers have a zero: two zeros."
+    }
+   ],
+   "checks": [
+    {
+     "question": "7 squared",
+     "answer": "49",
+     "shows": "multiply by itself"
+    },
+    {
+     "question": "30 squared",
+     "answer": "900",
+     "shows": "zeros"
+    }
+   ]
+  },
+  {
+   "skill": "MATH.G7.NUMBER.SQUARES_AND_SQUARE_ROOTS.SQUARE_FRACTION",
+   "key_step": "The child multiplies the fraction by itself, top by top and bottom by bottom.",
+   "floor": {
+    "prerequisite": "Multiplies fractions.",
+    "question": "1/2 x 1/2",
+    "answer": "1/4"
+   },
+   "representations": [
+    "a square cut into parts",
+    "the product",
+    "the simplified fraction"
+   ],
+   "steps": [
+    "Write the fraction twice.",
+    "Multiply the numerators.",
+    "Multiply the denominators.",
+    "Simplify."
+   ],
+   "contexts": [
+    "part of a shamba",
+    "a folded paper",
+    "a tile"
+   ],
+   "board": [
+    {
+     "beat": "draw",
+     "do": "Draw a square, shade 3/4 of one side and 3/4 of the other."
+    },
+    {
+     "beat": "point",
+     "do": "Point at the double shaded part.",
+     "say": "What part of the whole square is this?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for the child to say."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "MATH.G7.NUMBER.SQUARES_AND_SQUARE_ROOTS.SQUARE_FRACTION.M_ONLY_NUMERATOR_SQUARED",
+     "listen_for": [
+      "9/4"
+     ],
+     "ask": "Is 9/4 less than 1?",
+     "repair": "Square both numbers."
+    },
+    {
+     "code": "MATH.G7.NUMBER.SQUARES_AND_SQUARE_ROOTS.SQUARE_FRACTION.M_ONLY_DENOMINATOR_SQUARED",
+     "listen_for": [
+      "3/16"
+     ],
+     "ask": "Did the top change?",
+     "repair": "Both numbers multiply."
+    },
+    {
+     "code": "MATH.G7.NUMBER.SQUARES_AND_SQUARE_ROOTS.SQUARE_FRACTION.M_NUMERATOR_DOUBLED",
+     "listen_for": [
+      "6/4"
+     ],
+     "ask": "Is squared the same as doubled?",
+     "repair": "Multiply the fraction by itself."
+    }
+   ],
+   "checks": [
+    {
+     "question": "Square of 3/4",
+     "answer": "9/16",
+     "shows": "both numbers"
+    },
+    {
+     "question": "Square of 2/5",
+     "answer": "4/25",
+     "shows": "both numbers"
+    }
+   ]
+  },
+  {
+   "skill": "MATH.G7.NUMBER.SQUARES_AND_SQUARE_ROOTS.SQUARE_DECIMAL",
+   "key_step": "The child squares without the point and gives the square twice as many decimal places as the number.",
+   "floor": {
+    "prerequisite": "Multiplies decimals.",
+    "question": "0.3 x 0.3",
+    "answer": "0.09"
+   },
+   "representations": [
+    "an area grid",
+    "digits without the point",
+    "the square"
+   ],
+   "steps": [
+    "Ignore the point and square.",
+    "Count the decimal places in the number.",
+    "Double the count.",
+    "Check the size."
+   ],
+   "contexts": [
+    "a square garden",
+    "a square mat",
+    "a tile"
+   ],
+   "board": [
+    {
+     "beat": "draw",
+     "do": "Draw a square with side 1.5 m split into 1 and 0.5."
+    },
+    {
+     "beat": "point",
+     "do": "Point at the 0.5 by 0.5 part.",
+     "say": "How big is this part?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for the child to say."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "MATH.G7.NUMBER.SQUARES_AND_SQUARE_ROOTS.SQUARE_DECIMAL.M_POINT_PLACES_NOT_DOUBLED",
+     "listen_for": [
+      "0.09"
+     ],
+     "ask": "How many places does 0.03 have, and how many in the product?",
+     "repair": "Double the places."
+    },
+    {
+     "code": "MATH.G7.NUMBER.SQUARES_AND_SQUARE_ROOTS.SQUARE_DECIMAL.M_DOUBLED_NOT_SQUARED",
+     "listen_for": [
+      "3"
+     ],
+     "ask": "What is 1.5 x 1.5?",
+     "repair": "Multiply the side by itself."
+    },
+    {
+     "code": "MATH.G7.NUMBER.SQUARES_AND_SQUARE_ROOTS.SQUARE_DECIMAL.M_PERIMETER_FOR_AREA_SQ",
+     "listen_for": [
+      "6 m"
+     ],
+     "ask": "Is the garden covered or fenced?",
+     "repair": "Area is side times side."
+    },
+    {
+     "code": "MATH.G7.NUMBER.SQUARES_AND_SQUARE_ROOTS.SQUARE_DECIMAL.M_ADDED_NOT_SQUARED",
+     "listen_for": [
+      "add 3"
+     ],
+     "ask": "What is the new side?",
+     "repair": "Find the new side, then square it."
+    },
+    {
+     "code": "MATH.G7.NUMBER.SQUARES_AND_SQUARE_ROOTS.SQUARE_DECIMAL.M_CUBED_NOT_SQUARED",
+     "listen_for": [
+      "times 8"
+     ],
+     "ask": "How many directions does an area have?",
+     "repair": "Two directions: times 2 times 2."
+    },
+    {
+     "code": "MATH.G7.NUMBER.SQUARES_AND_SQUARE_ROOTS.SQUARE_DECIMAL.M_AREA_DOUBLES_WITH_SIDE",
+     "listen_for": [
+      "18"
+     ],
+     "ask": "How many old squares fit in the new one?",
+     "repair": "Square the new side."
+    }
+   ],
+   "checks": [
+    {
+     "question": "Square of 0.03",
+     "answer": "0.0009",
+     "shows": "doubled places"
+    },
+    {
+     "question": "Area of a square garden with side 1.5 m",
+     "answer": "2.25 m2",
+     "shows": "area"
+    }
+   ]
+  },
+  {
+   "skill": "MATH.G7.NUMBER.SQUARES_AND_SQUARE_ROOTS.ROOT_WHOLE_NUMBER",
+   "key_step": "The child finds the number that multiplied by itself gives the perfect square and checks by squaring.",
+   "floor": {
+    "prerequisite": "Knows squares.",
+    "question": "22 x 22",
+    "answer": "484"
+   },
+   "representations": [
+    "a square of known area",
+    "trial and check",
+    "the root"
+   ],
+   "steps": [
+    "Estimate between known squares.",
+    "Try a number.",
+    "Square it to check.",
+    "Write the root."
+   ],
+   "contexts": [
+    "a square plot",
+    "a floor",
+    "a tile"
+   ],
+   "board": [
+    {
+     "beat": "draw",
+     "do": "Draw a square with area 484 and ask for its side."
+    },
+    {
+     "beat": "point",
+     "do": "Point at the side.",
+     "say": "Which number times itself gives 484?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for the child to try."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "MATH.G7.NUMBER.SQUARES_AND_SQUARE_ROOTS.ROOT_WHOLE_NUMBER.M_HALVED_NOT_ROOTED",
+     "listen_for": [
+      "242"
+     ],
+     "ask": "What is 242 x 242?",
+     "repair": "Test your root by squaring it."
+    },
+    {
+     "code": "MATH.G7.NUMBER.SQUARES_AND_SQUARE_ROOTS.ROOT_WHOLE_NUMBER.M_ROOT_OF_SUM_IS_SUM_OF_ROOTS",
+     "listen_for": [
+      "6 plus 8"
+     ],
+     "ask": "What is 36 + 64 first?",
+     "repair": "Add first, then take the root."
+    },
+    {
+     "code": "MATH.G7.NUMBER.SQUARES_AND_SQUARE_ROOTS.ROOT_WHOLE_NUMBER.M_ROOTS_MULTIPLIED_FOR_SUM",
+     "listen_for": [
+      "48"
+     ],
+     "ask": "Was it a product or a sum?",
+     "repair": "Root of a sum is of the total."
+    }
+   ],
+   "checks": [
+    {
+     "question": "Square root of 484",
+     "answer": "22",
+     "shows": "root"
+    },
+    {
+     "question": "Square root of 36 + 64",
+     "answer": "10",
+     "shows": "sum first"
+    }
+   ]
+  },
+  {
+   "skill": "MATH.G7.NUMBER.SQUARES_AND_SQUARE_ROOTS.ROOT_FRACTION_DECIMAL",
+   "key_step": "The child takes the root of the numerator and the denominator, or halves the decimal places, and checks by squaring.",
+   "floor": {
+    "prerequisite": "Finds roots of whole numbers.",
+    "question": "Square root of 16",
+    "answer": "4"
+   },
+   "representations": [
+    "a square with fraction sides",
+    "root of top and bottom",
+    "a check by squaring"
+   ],
+   "steps": [
+    "For a fraction take the root of each part.",
+    "For a decimal halve the places.",
+    "Check by squaring.",
+    "Write the root."
+   ],
+   "contexts": [
+    "a square plot of fractional area",
+    "a mat",
+    "a tile"
+   ],
+   "board": [
+    {
+     "beat": "write",
+     "do": "Write 9/16 and 0.09."
+    },
+    {
+     "beat": "point",
+     "do": "Point at 9/16.",
+     "say": "Which numbers multiplied by themselves give 9 and 16?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for the child to find them."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "MATH.G7.NUMBER.SQUARES_AND_SQUARE_ROOTS.ROOT_FRACTION_DECIMAL.M_ROOT_NUMERATOR_ONLY",
+     "listen_for": [
+      "3/16"
+     ],
+     "ask": "Did you take the root of the bottom?",
+     "repair": "Both parts."
+    },
+    {
+     "code": "MATH.G7.NUMBER.SQUARES_AND_SQUARE_ROOTS.ROOT_FRACTION_DECIMAL.M_ROOT_DECIMAL_POINT",
+     "listen_for": [
+      "0.03"
+     ],
+     "ask": "What is 0.03 x 0.03?",
+     "repair": "Halve the decimal places."
+    }
+   ],
+   "checks": [
+    {
+     "question": "Square root of 9/16",
+     "answer": "3/4",
+     "shows": "both parts"
+    },
+    {
+     "question": "Square root of 0.09",
+     "answer": "0.3",
+     "shows": "halve places"
+    }
+   ]
+  },
+  {
+   "skill": "MATH.G7.NUMBER.SQUARES_AND_SQUARE_ROOTS.ROOT_IN_CONTEXT",
+   "key_step": "The child takes the root of the area for the side, then reads the question to see what to do with the side.",
+   "floor": {
+    "prerequisite": "Finds a root.",
+    "question": "Square root of 484",
+    "answer": "22"
+   },
+   "representations": [
+    "a square plot with its side",
+    "a fence round it",
+    "two plots compared"
+   ],
+   "steps": [
+    "Find the side by the root.",
+    "Read what is asked.",
+    "Use 4 sides for a fence.",
+    "Subtract sides to compare plots."
+   ],
+   "contexts": [
+    "a school plot",
+    "fencing",
+    "tiling"
+   ],
+   "board": [
+    {
+     "beat": "draw",
+     "do": "Draw a square plot with area 484 m2."
+    },
+    {
+     "beat": "point",
+     "do": "Point at one side.",
+     "say": "How long is it?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for the child to say."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "MATH.G7.NUMBER.SQUARES_AND_SQUARE_ROOTS.ROOT_IN_CONTEXT.M_DIVIDED_BY_FOUR_FOR_ROOT",
+     "listen_for": [
+      "121"
+     ],
+     "ask": "What is 121 x 121?",
+     "repair": "Find the root, not a quarter."
+    },
+    {
+     "code": "MATH.G7.NUMBER.SQUARES_AND_SQUARE_ROOTS.ROOT_IN_CONTEXT.M_TWO_SIDES_FOR_PERIMETER",
+     "listen_for": [
+      "two sides"
+     ],
+     "ask": "How many sides does a square have?",
+     "repair": "Four equal sides."
+    },
+    {
+     "code": "MATH.G7.NUMBER.SQUARES_AND_SQUARE_ROOTS.ROOT_IN_CONTEXT.M_AREA_FOR_PERIMETER",
+     "listen_for": [
+      "484"
+     ],
+     "ask": "Does a fence cover the plot?",
+     "repair": "Fence goes round the edge."
+    },
+    {
+     "code": "MATH.G7.NUMBER.SQUARES_AND_SQUARE_ROOTS.ROOT_IN_CONTEXT.M_SIDE_PLUS_FOUR",
+     "listen_for": [
+      "26"
+     ],
+     "ask": "Four sides of 22 m each?",
+     "repair": "Multiply by 4."
+    },
+    {
+     "code": "MATH.G7.NUMBER.SQUARES_AND_SQUARE_ROOTS.ROOT_IN_CONTEXT.M_AREA_DIFFERENCE_USED",
+     "listen_for": [
+      "288"
+     ],
+     "ask": "Did you find the sides?",
+     "repair": "Take roots first."
+    },
+    {
+     "code": "MATH.G7.NUMBER.SQUARES_AND_SQUARE_ROOTS.ROOT_IN_CONTEXT.M_ROOT_OF_DIFFERENCE",
+     "listen_for": [
+      "root of 288"
+     ],
+     "ask": "Is the difference of sides the root of the difference?",
+     "repair": "Root each area, then subtract."
+    },
+    {
+     "code": "MATH.G7.NUMBER.SQUARES_AND_SQUARE_ROOTS.ROOT_IN_CONTEXT.M_ONLY_BIGGEST_ROOT",
+     "listen_for": [
+      "18"
+     ],
+     "ask": "What is the smallest side?",
+     "repair": "Subtract the smallest side too."
+    }
+   ],
+   "checks": [
+    {
+     "question": "A square plot has area 484 m2. What is the length of the fence round it?",
+     "answer": "88 m",
+     "shows": "side then 4 sides"
+    },
+    {
+     "question": "Areas 36 m2 and 324 m2: how much longer is the bigger side?",
+     "answer": "12 m",
+     "shows": "two roots"
+    }
+   ]
+  },
+  {
+   "skill": "MATH.G7.NUMBER.SQUARES_AND_SQUARE_ROOTS.ROOT_BY_ANCHORS",
+   "key_step": "The child names the perfect squares on either side of the number and gives their roots as the whole numbers that bound the root.",
+   "floor": {
+    "prerequisite": "Knows squares to 144.",
+    "question": "9 x 9",
+    "answer": "81"
+   },
+   "representations": [
+    "a number line of perfect squares",
+    "the number between two squares",
+    "the bounds"
+   ],
+   "steps": [
+    "List nearby perfect squares.",
+    "Find the two that the number lies between.",
+    "Take their roots.",
+    "Check by squaring the bounds."
+   ],
+   "contexts": [
+    "a square plot",
+    "a tile",
+    "a field"
+   ],
+   "board": [
+    {
+     "beat": "draw",
+     "do": "Draw a line with 81 and 100 marked and 98 between them."
+    },
+    {
+     "beat": "point",
+     "do": "Point at 98.",
+     "say": "Which two squares is it between?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for the child to say."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "MATH.G7.NUMBER.SQUARES_AND_SQUARE_ROOTS.ROOT_BY_ANCHORS.M_ROOT_BOUNDS_ONE_BELOW",
+     "listen_for": [
+      "8 and 9"
+     ],
+     "ask": "What is 9 x 9?",
+     "repair": "Test the bounds by squaring."
+    },
+    {
+     "code": "MATH.G7.NUMBER.SQUARES_AND_SQUARE_ROOTS.ROOT_BY_ANCHORS.M_ROOT_BOUNDS_ONE_ABOVE",
+     "listen_for": [
+      "10 and 11"
+     ],
+     "ask": "What is 10 x 10?",
+     "repair": "Test the bounds by squaring."
+    }
+   ],
+   "checks": [
+    {
+     "question": "Between which two whole numbers is the root of 98?",
+     "answer": "9 and 10",
+     "shows": "anchors"
+    },
+    {
+     "question": "Between which two whole numbers is the root of 50?",
+     "answer": "7 and 8",
+     "shows": "anchors"
+    }
+   ]
+  }
+ ]
+}
