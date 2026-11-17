@@ -234,9 +234,13 @@ export const FAMILIES = [
 
   fam({ id: 'g7.factors.div-six-table', skill: 'G7_DIVISIBILITY', outcome: 'MATH.G7.NUMBER.FACTORS.a', cskill: 'MATH.G7.NUMBER.FACTORS.DIV_BY_3_6_9', rung: 2, form: 'table',
     draw: () => {
+      // most draws are rejected by the rules below, so try several before giving up
+      for (let t = 0; t < 300; t++) { const r = (() => {
       const v = Array.from({ length: 5 }, () => randInt(1000, 9999)); if (new Set(v).size < 5) return null;
       const six = v.filter(n => n % 6 === 0).length, three = v.filter(n => n % 3 === 0).length, two = v.filter(n => n % 2 === 0).length, sum6 = v.filter(n => digitSum(n) % 6 === 0).length;
       return six >= 1 && six <= 3 && distinct(six, three, two, sum6) ? { v, six, three, two, sum6 } : null;
+    })(); if (r) return r; }
+      return null;
     },
     make: ({ v, six, three, two, sum6 }) => ({
       question: 'The table shows five numbers and the sum of the digits of each. How many of the numbers are divisible by 6?', story: false,
@@ -294,9 +298,13 @@ export const FAMILIES = [
 
   fam({ id: 'g7.factors.hcf-gift-boxes', skill: 'G7_GCD', outcome: 'MATH.G7.NUMBER.FACTORS.d', cskill: 'MATH.G7.NUMBER.FACTORS.GCD_IN_CONTEXT', rung: 3, form: 'table',
     draw: () => {
+      // most draws are rejected by the rules below, so try several before giving up
+      for (let t = 0; t < 300; t++) { const r = (() => {
       const g = pick([4, 5, 6, 8, 10]), u = randInt(2, 9), v = randInt(2, 9), w = randInt(2, 9); if (!distinct(u, v, w) || gcd(gcd(u, v), w) !== 1) return null;
       const nums = [g * u, g * v, g * w]; const gab = gcd(nums[0], nums[1]), mn = Math.min(...nums), per = nums.reduce((s, x) => s + x, 0) / g;
       return distinct(g, gab, mn, per) ? { g, nums, gab, mn, per, items: shuffle(['Bars of soap', 'Packets of tea', 'Boxes of matches', 'Tubes of toothpaste', 'Packets of sugar']).slice(0, 3), p: person() } : null;
+    })(); if (r) return r; }
+      return null;
     },
     make: ({ g, nums, gab, mn, per, items, p }) => ({
       question: `${p.name} packs gift boxes from the stock in the table. Every box must have the same things in it, and nothing is left over. What is the greatest number of boxes ${p.she} can make? Use the HCF (highest common factor) of the three numbers.`, story: false,

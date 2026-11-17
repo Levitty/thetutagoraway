@@ -629,20 +629,20 @@ export const FAMILIES = [
     check: ({ c, L }, a) => a * c === L * 1000 }),
 
   // =========================================================== TIME, DISTANCE AND SPEED
-  fam({ id: 'g7.speed.seconds-to-hm', skill: 'G7_SPEED', outcome: 'G7.SPEED.a', rung: 2, form: 'steps',
+  fam({ id: 'g7.speed.seconds-to-hm', skill: 'G7_SPEED', outcome: 'MATH.G7.MEASUR.TIME_DISTANCE_AND_SPEED.b', cskill: 'MATH.G7.MEASUR.TIME_DISTANCE_AND_SPEED.TIME_UNITS_CONVERT', rung: 2, form: 'steps',
     draw: () => ({ h: randInt(1, 3), m: pick([5, 10, 15, 20, 25, 35, 40, 45, 50]), p: person() }),
     make: ({ h, m, p }) => {
       const s = h * 3600 + m * 60;
       return { question: `${p.name} runs a long race. The clock shows ${commas(s)} seconds at the finish.`,
         parts: [
-          { prompt: 'How many minutes is that?', answer: s / 60, unit: 'minutes', hint: 'There are 60 seconds in a minute.', wrong: [[s / 100, 'A minute has 60 seconds, not 100.'], [s * 60, 'Seconds are small units, so there are fewer minutes than seconds.']] },
-          { prompt: 'How many whole hours are in that time?', answer: h, unit: 'hours', hint: 'There are 60 minutes in an hour.', wrong: [[round(s / 60 / 100, 2), 'An hour has 60 minutes, not 100.']] },
-          { prompt: 'How many minutes are left over after the whole hours?', answer: m, unit: 'minutes', hint: 'Take the minutes in the whole hours away from the total minutes.', wrong: [[s / 60 - h, 'Take away 60 minutes for every whole hour, not 1.']] },
+          { prompt: 'How many minutes is that?', answer: s / 60, unit: 'minutes', hint: 'There are 60 seconds in a minute.', wrong: [[s / 100, 'A minute has 60 seconds, not 100.', 'M_MINUTE_AS_HUNDRED'], [s * 60, 'Seconds are small units, so there are fewer minutes than seconds.', 'M_CONVERT_DIRECTION_REVERSED']] },
+          { prompt: 'How many whole hours are in that time?', answer: h, unit: 'hours', hint: 'There are 60 minutes in an hour.', wrong: [[round(s / 60 / 100, 2), 'An hour has 60 minutes, not 100.', 'M_HOUR_AS_HUNDRED_MINUTES']] },
+          { prompt: 'How many minutes are left over after the whole hours?', answer: m, unit: 'minutes', hint: 'Take the minutes in the whole hours away from the total minutes.', wrong: [[s / 60 - h, 'Take away 60 minutes for every whole hour, not 1.', 'M_ONE_PER_WHOLE_HOUR']] },
         ],
         steps: [`${commas(s)} ÷ 60 = ${s / 60} minutes.`, `${s / 60} minutes has ${h} whole hour${h > 1 ? 's' : ''} (${h * 60} minutes).`, `Left over: ${s / 60} − ${h * 60} = ${m} minutes.`] };
     },
     check: ({ h, m }, v) => v[0] * 60 === (h * 60 + m) * 60 && v[1] * 60 + v[2] === v[0] }),
-  fam({ id: 'g7.speed.timetable-moving', skill: 'G7_SPEED', outcome: 'G7.SPEED.a', rung: 3, form: 'table',
+  fam({ id: 'g7.speed.timetable-moving', skill: 'G7_SPEED', outcome: 'MATH.G7.MEASUR.TIME_DISTANCE_AND_SPEED.a', cskill: 'MATH.G7.MEASUR.TIME_DISTANCE_AND_SPEED.TIMETABLE_DURATION', rung: 3, form: 'table',
     draw: () => {
       const t0 = randInt(5, 9) * 60 + pick([0, 15, 30, 45]), leg1 = randInt(10, 24) * 5, wait = pick([10, 15, 20, 25]), leg2 = randInt(8, 18) * 5;
       const a1 = t0 + leg1, d1 = a1 + wait, a2 = d1 + leg2;
@@ -653,12 +653,12 @@ export const FAMILIES = [
       return { question: 'The table shows a bus timetable on the 24-hour clock. How many minutes is the bus actually moving between Nairobi and Nakuru? It is not moving while it waits at Naivasha.',
         model: { type: 'table', data: { head: ['Stop', 'Arrives', 'Leaves'], rows: [{ cells: ['Nairobi', '-', f(t0)] }, { cells: ['Naivasha', f(a1), f(d1)] }, { cells: ['Nakuru', f(a2), '-'] }] } },
         answer: leg1 + leg2,
-        wrong: [[leg1 + leg2 + wait, 'That includes the time the bus waits at Naivasha. The bus is not moving then.'], [leg1, 'That is only the first part of the journey, Nairobi to Naivasha.'], [leg2, 'That is only the second part of the journey, Naivasha to Nakuru.']],
+        wrong: [[leg1 + leg2 + wait, 'That includes the time the bus waits at Naivasha. The bus is not moving then.', 'M_WAIT_TIME_COUNTED'], [leg1, 'That is only the first part of the journey, Nairobi to Naivasha.', 'M_FIRST_LEG_ONLY'], [leg2, 'That is only the second part of the journey, Naivasha to Nakuru.', 'M_SECOND_LEG_ONLY']],
         hints: ['Find the time from Nairobi to Naivasha, and from Naivasha to Nakuru.', 'Do not count the time the bus waits.'],
         steps: [`Nairobi to Naivasha: ${f(t0)} to ${f(a1)} is ${leg1} minutes.`, `Naivasha to Nakuru: ${f(d1)} to ${f(a2)} is ${leg2} minutes.`, `Moving: ${leg1} + ${leg2} = ${leg1 + leg2} minutes.`] };
     },
     check: ({ t0, wait, a2 }, a) => a + wait === a2 - t0 }),
-  fam({ id: 'g7.speed.timetable-speed', skill: 'G7_SPEED', outcome: 'G7.SPEED.d', rung: 2, form: 'table',
+  fam({ id: 'g7.speed.timetable-speed', skill: 'G7_SPEED', outcome: 'MATH.G7.MEASUR.TIME_DISTANCE_AND_SPEED.d', cskill: 'MATH.G7.MEASUR.TIME_DISTANCE_AND_SPEED.SPEED_FROM_DISTANCE_TIME', rung: 2, form: 'table',
     draw: () => {
       const [from, to, km] = route(); const v = pick([40, 50, 60, 64, 75, 80, 100]); const mins = (km * 60) / v;
       if (!Number.isInteger(mins) || mins < 30 || mins % 60 === 0 || km < 60) return null;
@@ -671,54 +671,54 @@ export const FAMILIES = [
       return { question: 'A bus company prints this notice on the 24-hour clock. The bus travels at the same speed all the way. What is its speed, in km/h?',
         model: { type: 'table', data: { head: ['Notice', ''], rows: [{ label: 'From', value: from }, { label: 'To', value: to }, { label: 'Distance (km)', value: String(km) }, { label: 'Leaves', value: f(t0) }, { label: 'Arrives', value: f(t0 + mins) }] } },
         answer: v,
-        wrong: [[round(km / mins, 2), 'Speed in km/h needs the time in hours, not minutes.'], [round(km * hrs, 2), 'Speed is distance divided by time. Do not multiply.'], [round(km / (Math.floor(mins / 60) + (mins % 60) / 100), 2), 'Minutes are out of 60, not 100. Change the minutes to a fraction of an hour.']],
+        wrong: [[round(km / mins, 2), 'Speed in km/h needs the time in hours, not minutes.', 'M_MINUTES_NOT_HOURS'], [round(km * hrs, 2), 'Speed is distance divided by time. Do not multiply.', 'M_SPEED_BY_MULTIPLYING'], [round(km / (Math.floor(mins / 60) + (mins % 60) / 100), 2), 'Minutes are out of 60, not 100. Change the minutes to a fraction of an hour.', 'M_MINUTE_AS_HUNDRED_TIME']],
         hints: ['Work out how long the journey takes, from the two times.', 'Speed = distance ÷ time, with the time in hours.'],
         steps: [`Time = ${f(t0 + mins)} − ${f(t0)} = ${mins} minutes = ${round(hrs, 4)} hours.`, `Speed = ${km} ÷ ${round(hrs, 4)} = ${v} km/h.`] };
     },
     check: ({ km, mins }, a) => Math.round(a * mins) === km * 60 }),
-  fam({ id: 'g7.speed.laps-km', skill: 'G7_SPEED', outcome: 'G7.SPEED.c', rung: 1, form: 'word',
+  fam({ id: 'g7.speed.laps-km', skill: 'G7_SPEED', outcome: 'MATH.G7.MEASUR.TIME_DISTANCE_AND_SPEED.c', cskill: 'MATH.G7.MEASUR.TIME_DISTANCE_AND_SPEED.DISTANCE_UNITS_CONVERT', rung: 1, form: 'word',
     draw: () => { const L = pick([200, 250, 400]), n = randInt(3, 12); return (L * n) % 100 === 0 ? { L, n, p: person() } : null; },
     make: ({ L, n, p }) => ({
       question: `One lap of the school track is ${L} metres. ${p.name} runs ${n} laps. How many kilometres does ${p.she} run?`,
       answer: (L * n) / 1000,
-      wrong: [[L * n, 'That is in metres. The question asks for kilometres.'], [(L * n) / 100, 'There are 1,000 m in 1 km, not 100 m.'], [(L * n) / 10000, 'There are 1,000 m in 1 km. This divides by too much.']],
+      wrong: [[L * n, 'That is in metres. The question asks for kilometres.', 'M_ANSWER_UNIT_NOT_CONVERTED_DIST'], [(L * n) / 100, 'There are 1,000 m in 1 km, not 100 m.', 'M_HUNDRED_METRES_IN_KM'], [(L * n) / 10000, 'There are 1,000 m in 1 km. This divides by too much.', 'M_DIVIDED_TOO_FAR']],
       hints: ['Find the total distance in metres first.', 'Change metres to kilometres.'],
       steps: [`${n} × ${L} = ${L * n} m.`, `${L * n} ÷ 1,000 = ${(L * n) / 1000} km.`],
     }),
     check: ({ L, n }, a) => Math.round(a * 1000) === L * n }),
-  fam({ id: 'g7.speed.walk-to-school-week', skill: 'G7_SPEED', outcome: 'G7.SPEED.c', rung: 2, form: 'word',
+  fam({ id: 'g7.speed.walk-to-school-week', skill: 'G7_SPEED', outcome: 'MATH.G7.MEASUR.TIME_DISTANCE_AND_SPEED.c', cskill: 'MATH.G7.MEASUR.TIME_DISTANCE_AND_SPEED.DISTANCE_UNITS_CONVERT', rung: 2, form: 'word',
     draw: () => { const d = pick([450, 600, 750, 900, 1200, 1350, 1500]), days = pick([5, 6]); return { d, days, p: person() }; },
     make: ({ d, days, p }) => ({
       question: `${p.name} walks ${commas(d)} m to school each morning and ${commas(d)} m home each afternoon. School is open ${days} days a week. How many kilometres does ${p.she} walk to and from school in one week?`,
       answer: round((2 * d * days) / 1000, 3),
-      wrong: [[2 * d * days, 'That is in metres. The question asks for kilometres.'], [round((d * days) / 1000, 3), `${p.name} walks to school and home again, so count both ways.`], [round((2 * d * days) / 100, 3), 'There are 1,000 m in 1 km, not 100 m.']],
+      wrong: [[2 * d * days, 'That is in metres. The question asks for kilometres.', 'M_ANSWER_UNIT_NOT_CONVERTED_DIST'], [round((d * days) / 1000, 3), `${p.name} walks to school and home again, so count both ways.`, 'M_ONE_WAY_ONLY'], [round((2 * d * days) / 100, 3), 'There are 1,000 m in 1 km, not 100 m.', 'M_HUNDRED_METRES_IN_KM']],
       hints: ['Find the distance for one day, there and back.', 'Multiply by the number of days, then change to kilometres.'],
       steps: [`One day: ${commas(d)} + ${commas(d)} = ${commas(2 * d)} m.`, `${days} days: ${commas(2 * d)} × ${days} = ${commas(2 * d * days)} m = ${round((2 * d * days) / 1000, 3)} km.`],
     }),
     check: ({ d, days }, a) => Math.round(a * 1000) === 2 * d * days }),
-  fam({ id: 'g7.speed.hours-and-minutes', skill: 'G7_SPEED', outcome: 'G7.SPEED.d', rung: 2, form: 'word',
+  fam({ id: 'g7.speed.hours-and-minutes', skill: 'G7_SPEED', outcome: 'MATH.G7.MEASUR.TIME_DISTANCE_AND_SPEED.d', cskill: 'MATH.G7.MEASUR.TIME_DISTANCE_AND_SPEED.SPEED_FROM_DISTANCE_TIME', rung: 2, form: 'word',
     draw: () => { const v = pick([40, 48, 60, 72, 80]), t = pick([1.5, 2.5, 3.5, 0.75, 1.25, 2.25]); const d = v * t; return Number.isInteger(d) ? { v, t, d, p: person() } : null; },
     make: ({ v, t, d, p }) => {
       const h = Math.floor(t), m = round((t - h) * 60, 0);
       return { question: `${p.name}'s matatu travels ${d} km in ${h > 0 ? `${h} hour${h > 1 ? 's' : ''} and ` : ''}${m} minutes. What is the speed of the matatu, in km/h?`,
         answer: v,
-        wrong: [[round(d / (h + m / 100), 2), 'Minutes are out of 60, not 100. Change the minutes to part of an hour.'], [round(d / (h * 60 + m), 3), 'Speed in km/h needs the time in hours, not minutes.'], [round(d * t, 2), 'Speed is distance divided by time. Do not multiply.']],
+        wrong: [[round(d / (h + m / 100), 2), 'Minutes are out of 60, not 100. Change the minutes to part of an hour.', 'M_MINUTE_AS_HUNDRED_TIME'], [round(d / (h * 60 + m), 3), 'Speed in km/h needs the time in hours, not minutes.', 'M_MINUTES_NOT_HOURS'], [round(d * t, 2), 'Speed is distance divided by time. Do not multiply.', 'M_SPEED_BY_MULTIPLYING']],
         hints: ['Change the time to hours. 30 minutes is half an hour.', 'Speed = distance ÷ time.'],
         steps: [`${m} minutes = ${m}/60 = ${round(m / 60, 4)} hour.`, `Time = ${t} hours. Speed = ${d} ÷ ${t} = ${v} km/h.`] };
     },
     check: ({ d, t }, a) => Math.abs(a * t - d) < 1e-9 }),
-  fam({ id: 'g7.speed.minutes-for-trip', skill: 'G7_SPEED', outcome: 'G7.SPEED.a', rung: 2, form: 'word',
+  fam({ id: 'g7.speed.minutes-for-trip', skill: 'G7_SPEED', outcome: 'MATH.G7.MEASUR.TIME_DISTANCE_AND_SPEED.e', cskill: 'MATH.G7.MEASUR.TIME_DISTANCE_AND_SPEED.TIME_FROM_SPEED', rung: 2, form: 'word',
     draw: () => { const v = pick([40, 50, 60, 80]), d = pick([60, 100, 120, 140, 160, 180, 200, 250]); const mins = (d * 60) / v; return Number.isInteger(mins) && mins % 60 !== 0 && mins % 30 === 0 && uniq(mins, d / v, mins + (mins % 60) * 0.667, d * v) ? { v, d, mins, p: person() } : null; },
     make: ({ v, d, mins, p }) => {
       const hrs = d / v, h = Math.floor(hrs), m = mins - h * 60;
       return { question: `${p.name} drives a ${pick(['lorry', 'car', 'bus'])} at ${v} km/h (kilometres per hour) for ${d} km. Give the time of the journey in minutes.`,
         answer: mins,
-        wrong: [[round(hrs, 2), 'That is the time in hours. The question asks for minutes.'], [h * 60 + round((hrs - h) * 100, 0), 'Part of an hour is out of 60 minutes, not 100. Multiply the decimal part by 60.'], [d * v, 'Time = distance ÷ speed. Do not multiply.']],
+        wrong: [[round(hrs, 2), 'That is the time in hours. The question asks for minutes.', 'M_HOURS_NOT_CONVERTED_TO_MINUTES'], [h * 60 + round((hrs - h) * 100, 0), 'Part of an hour is out of 60 minutes, not 100. Multiply the decimal part by 60.', 'M_DECIMAL_HOURS_AS_MINUTES'], [d * v, 'Time = distance ÷ speed. Do not multiply.', 'M_TIME_BY_MULTIPLYING']],
         hints: ['Find the time in hours, using distance ÷ speed.', 'Change the hours to minutes. An hour has 60 minutes.'],
         steps: [`Time = ${d} ÷ ${v} = ${round(hrs, 4)} hours.`, `${round(hrs, 4)} × 60 = ${mins} minutes.`] };
     },
     check: ({ v, d, mins }, a) => a * v === d * 60 }),
-  fam({ id: 'g7.speed.spot-minutes-hours', skill: 'G7_SPEED', outcome: 'G7.SPEED.d', rung: 2, form: 'spot',
+  fam({ id: 'g7.speed.spot-minutes-hours', skill: 'G7_SPEED', outcome: 'MATH.G7.MEASUR.TIME_DISTANCE_AND_SPEED.d', cskill: 'MATH.G7.MEASUR.TIME_DISTANCE_AND_SPEED.SPEED_FROM_DISTANCE_TIME', rung: 2, form: 'spot',
     draw: () => ({ v: pick([12, 24, 36]), m: pick([15, 30, 45]), p: person() }),
     make: ({ v, m, p }) => {
       const d = (v * m) / 60, bad = m / 100, good = m / 60;
@@ -730,64 +730,65 @@ export const FAMILIES = [
           { text: `Speed = ${d} ÷ ${bad} = ${shown} km/h`, ok: shown === round(d / bad, 2) },
           { text: `The speed is ${shown} km/h.`, ok: shown === shown },
         ],
+        mis: 'M_MINUTE_AS_HUNDRED_TIME',
         fix: 'An hour has 60 minutes, so change minutes to hours by dividing by 60, not 100.',
         steps: [`${m} minutes = ${m} ÷ 60 = ${round(good, 4)} hours.`, `Speed = ${d} ÷ ${round(good, 4)} = ${v} km/h.`] };
     } }),
-  fam({ id: 'g7.speed.average-two-legs', skill: 'G7_SPEED', outcome: 'G7.SPEED.d', rung: 3, form: 'steps',
+  fam({ id: 'g7.speed.average-two-legs', skill: 'G7_SPEED', outcome: 'MATH.G7.MEASUR.TIME_DISTANCE_AND_SPEED.e', cskill: 'MATH.G7.MEASUR.TIME_DISTANCE_AND_SPEED.AVERAGE_SPEED_TWO_LEGS', rung: 3, form: 'steps',
     draw: () => { const [v1, v2] = pick([[60, 40], [40, 24], [60, 30], [30, 20], [60, 20]]); const D = pick([120, 240]); return { v1, v2, D, p: person() }; },
     make: ({ v1, v2, D, p }) => {
       const t1 = D / v1, t2 = D / v2, avg = (2 * D) / (t1 + t2);
       return { question: `${p.name} drives ${D} km at ${v1} km/h, then another ${D} km at ${v2} km/h.`,
         parts: [
-          { prompt: 'How many hours does the first part take?', answer: t1, unit: 'hours', hint: 'Time = distance ÷ speed.', wrong: [[D * v1, 'Divide the distance by the speed.']] },
-          { prompt: 'How many hours does the second part take?', answer: t2, unit: 'hours', hint: 'Time = distance ÷ speed.', wrong: [[D * v2, 'Divide the distance by the speed.']] },
-          { prompt: 'What is the average speed for the whole journey, in km/h?', answer: avg, unit: 'km/h', hint: 'Total distance ÷ total time.', wrong: [[(v1 + v2) / 2, 'The slower part takes longer, so the average is not halfway between the speeds. Use total distance ÷ total time.']] },
+          { prompt: 'How many hours does the first part take?', answer: t1, unit: 'hours', hint: 'Time = distance ÷ speed.', wrong: [[D * v1, 'Divide the distance by the speed.', 'M_TIME_BY_MULTIPLYING']] },
+          { prompt: 'How many hours does the second part take?', answer: t2, unit: 'hours', hint: 'Time = distance ÷ speed.', wrong: [[D * v2, 'Divide the distance by the speed.', 'M_TIME_BY_MULTIPLYING']] },
+          { prompt: 'What is the average speed for the whole journey, in km/h?', answer: avg, unit: 'km/h', hint: 'Total distance ÷ total time.', wrong: [[(v1 + v2) / 2, 'The slower part takes longer, so the average is not halfway between the speeds. Use total distance ÷ total time.', 'M_AVERAGE_OF_SPEEDS']] },
         ],
         steps: [`${D} ÷ ${v1} = ${t1} hours.`, `${D} ÷ ${v2} = ${t2} hours.`, `Total distance ${2 * D} km ÷ total time ${t1 + t2} hours = ${avg} km/h.`] };
     },
     check: ({ v1, v2, D }, a) => a[0] * v1 === D && a[1] * v2 === D && a[2] * (a[0] + a[1]) === 2 * D }),
-  fam({ id: 'g7.speed.ms-steps', skill: 'G7_SPEED', outcome: 'G7.SPEED.f', rung: 2, form: 'steps',
+  fam({ id: 'g7.speed.ms-steps', skill: 'G7_SPEED', outcome: 'MATH.G7.MEASUR.TIME_DISTANCE_AND_SPEED.f', cskill: 'MATH.G7.MEASUR.TIME_DISTANCE_AND_SPEED.SPEED_UNITS_CONVERT', rung: 2, form: 'steps',
     draw: () => { const v = pick([5, 10, 15, 20, 25]), t = pick([10, 15, 20, 30]); return { v, t, d: v * t, what: pick(['A train', 'A lorry', 'A boda boda']) }; },
     make: ({ v, t, d, what }) => ({
       question: `${what} covers ${d} metres in ${t} seconds, going at the same speed all the time.`,
       parts: [
-        { prompt: 'What is its speed in metres per second (m/s)?', answer: v, unit: 'm/s', hint: 'Speed = distance ÷ time.', wrong: [[d * t, 'Divide the distance by the time.']] },
-        { prompt: 'How many metres does it cover in one hour (3,600 seconds)?', answer: v * 3600, unit: 'm', hint: 'Multiply the metres in one second by the seconds in an hour.', wrong: [[v * 60, 'An hour has 3,600 seconds, not 60.']] },
-        { prompt: 'What is its speed in kilometres per hour (km/h)?', answer: v * 3.6, unit: 'km/h', hint: 'Change those metres to kilometres.', wrong: [[v * 3600, 'That is in metres. Divide by 1,000 to get kilometres.']] },
+        { prompt: 'What is its speed in metres per second (m/s)?', answer: v, unit: 'm/s', hint: 'Speed = distance ÷ time.', wrong: [[d * t, 'Divide the distance by the time.', 'M_SPEED_BY_MULTIPLYING']] },
+        { prompt: 'How many metres does it cover in one hour (3,600 seconds)?', answer: v * 3600, unit: 'm', hint: 'Multiply the metres in one second by the seconds in an hour.', wrong: [[v * 60, 'An hour has 3,600 seconds, not 60.', 'M_HOUR_AS_SIXTY_SECONDS']] },
+        { prompt: 'What is its speed in kilometres per hour (km/h)?', answer: v * 3.6, unit: 'km/h', hint: 'Change those metres to kilometres.', wrong: [[v * 3600, 'That is in metres. Divide by 1,000 to get kilometres.', 'M_UNIT_NOT_CONVERTED_TO_KM']] },
       ],
       steps: [`${d} ÷ ${t} = ${v} m/s.`, `${v} × 3,600 = ${commas(v * 3600)} m in an hour.`, `${commas(v * 3600)} ÷ 1,000 = ${v * 3.6} km/h.`],
     }),
     check: ({ d, t }, a) => a[0] * t === d && a[1] === a[0] * 3600 && Math.abs(a[2] * 1000 - a[1]) < 1e-6 }),
-  fam({ id: 'g7.speed.kmh-to-ms-animal', skill: 'G7_SPEED', outcome: 'G7.SPEED.f', rung: 2, form: 'word',
+  fam({ id: 'g7.speed.kmh-to-ms-animal', skill: 'G7_SPEED', outcome: 'MATH.G7.MEASUR.TIME_DISTANCE_AND_SPEED.f', cskill: 'MATH.G7.MEASUR.TIME_DISTANCE_AND_SPEED.SPEED_UNITS_CONVERT', rung: 2, form: 'word',
     draw: () => { const [who, vs] = pick([['A cheetah runs', [25, 30]], ['An ostrich runs', [15, 20]], ['A racing cyclist rides', [10, 15]], ['A matatu on the highway goes', [20, 25, 30]]]); const v = pick(vs); return { v, kmh: v * 3.6, who }; },
     make: ({ v, kmh, who }) => ({
       question: `${who} at ${kmh} km/h. How many metres does it cover in one second? Give the speed in m/s.`,
       answer: v,
-      wrong: [[round(kmh / 60, 2), 'An hour has 3,600 seconds, not 60.'], [round(kmh * 3.6, 2), 'To go from km/h to m/s you divide by 3.6. Multiplying goes the other way.'], [round(kmh / 1000, 3), 'Changing km to m multiplies by 1,000, and an hour to seconds divides by 3,600.']],
+      wrong: [[round(kmh / 60, 2), 'An hour has 3,600 seconds, not 60.', 'M_HOUR_AS_SIXTY_SECONDS'], [round(kmh * 3.6, 2), 'To go from km/h to m/s you divide by 3.6. Multiplying goes the other way.', 'M_CONVERSION_DIRECTION_REVERSED'], [round(kmh / 1000, 3), 'Changing km to m multiplies by 1,000, and an hour to seconds divides by 3,600.', 'M_KM_TO_M_DIVIDED']],
       hints: ['In one hour it covers that many kilometres. Change them to metres.', 'Then divide by the number of seconds in an hour.'],
       steps: [`${kmh} km = ${commas(kmh * 1000)} m in 3,600 s.`, `${commas(kmh * 1000)} ÷ 3,600 = ${v} m/s.`],
     }),
     check: ({ v, kmh }, a) => Math.abs(a * 3.6 - kmh) < 1e-9 }),
-  fam({ id: 'g7.speed.why-divide-60', skill: 'G7_SPEED', outcome: 'G7.SPEED.f', rung: 3, form: 'why',
+  fam({ id: 'g7.speed.why-divide-60', skill: 'G7_SPEED', outcome: 'MATH.G7.MEASUR.TIME_DISTANCE_AND_SPEED.f', cskill: 'MATH.G7.MEASUR.TIME_DISTANCE_AND_SPEED.SPEED_UNITS_CONVERT', rung: 3, form: 'why',
     draw: () => { const v = pick([5, 10, 15, 20]); return { v, kmh: v * 3.6, p: person() }; },
     make: ({ v, kmh, p }) => ({
       question: `${p.name} changes ${kmh} km/h to m/s. ${p.She} multiplies by 1,000 and divides by 60. Why is this wrong?`,
       options: [
         { text: 'An hour has 3,600 seconds, not 60 seconds', right: true },
-        { text: 'A kilometre is 100 metres, not 1,000', right: false, why: 'A kilometre is 1,000 metres. That part is correct.' },
-        { text: 'You should add 1,000 and 60, not multiply and divide', right: false, why: 'Adding units does not change them. You multiply by the size of the new small unit and divide by the bigger one.' },
-        { text: 'You do not divide by anything. You only multiply by 1,000', right: false, why: 'The time changes from hours to seconds as well, so you must divide by the seconds in one hour.' },
+        { text: 'A kilometre is 100 metres, not 1,000', right: false, why: 'A kilometre is 1,000 metres. That part is correct.', mis: 'M_KM_AS_HUNDRED_M' },
+        { text: 'You should add 1,000 and 60, not multiply and divide', right: false, why: 'Adding units does not change them. You multiply by the size of the new small unit and divide by the bigger one.', mis: 'M_UNITS_ADDED' },
+        { text: 'You do not divide by anything. You only multiply by 1,000', right: false, why: 'The time changes from hours to seconds as well, so you must divide by the seconds in one hour.', mis: 'M_TIME_UNIT_NOT_CHANGED' },
       ],
       hints: ['Change the distance and the time separately.', 'How many seconds are there in one hour?'],
       steps: ['1 hour = 60 × 60 = 3,600 seconds.', `${kmh} km/h = ${commas(kmh * 1000)} m in 3,600 s = ${v} m/s.`],
     }) }),
-  fam({ id: 'g7.speed.fastest-mixed-units', skill: 'G7_SPEED', outcome: 'G7.SPEED.f', rung: 2, form: 'direct',
+  fam({ id: 'g7.speed.fastest-mixed-units', skill: 'G7_SPEED', outcome: 'MATH.G7.MEASUR.TIME_DISTANCE_AND_SPEED.f', cskill: 'MATH.G7.MEASUR.TIME_DISTANCE_AND_SPEED.SPEED_COMPARE_MIXED_UNITS', rung: 2, form: 'direct',
     draw: () => { const a = randInt(6, 12) * 5, b = randInt(6, 10), c = randInt(3, 6) * 5; const vals = [a, b * 3.6, c]; const s = [...vals].sort((x, y) => x - y); return uniq(a, b * 3.6, c) && s[2] - s[1] >= 4 && s[1] - s[0] >= 4 ? { a, b, c } : null; },
     make: ({ a, b, c }) => {
       const v = [{ t: `a boda boda at ${a} km/h`, k: a }, { t: `a runner at ${b} m/s`, k: b * 3.6 }, { t: `a bicycle at ${c} km/h`, k: c }];
       const best = Math.max(...v.map(x => x.k));
       return { question: `Which is the fastest: a boda boda at ${a} km/h, a runner at ${b} m/s or a bicycle at ${c} km/h?`, story: false,
-        options: v.map(x => ({ text: x.t.charAt(0).toUpperCase() + x.t.slice(1), right: x.k === best, why: x.k === best ? undefined : `Change all the speeds to km/h first. A speed in m/s becomes km/h when you multiply by 3.6.` })),
+        options: (() => { let c = 0; return v.map(x => ({ text: x.t.charAt(0).toUpperCase() + x.t.slice(1), right: x.k === best, ...(x.k === best ? {} : { why: /m\/s/.test(x.t) ? 'That compares a number in m/s with numbers in km/h. Change m/s to km/h first: multiply by 3.6.' : 'The speeds are in different units, so the numbers cannot be compared as they are. Change all the speeds to km/h first.', mis: /m\/s/.test(x.t) ? 'M_MS_NUMBER_TAKEN_AS_KMH' : (c++ === 0 ? 'M_SPEEDS_COMPARED_WITHOUT_SAME_UNIT' : 'SLIP') }) })); })(),
         hints: ['You cannot compare m/s with km/h until they are in the same unit.', `Multiply ${b} by 3.6 to change m/s to km/h.`],
         steps: [`${b} m/s = ${b} × 3.6 = ${round(b * 3.6, 1)} km/h.`, `Compare ${a} km/h, ${round(b * 3.6, 1)} km/h and ${c} km/h. The fastest is ${v.find(x => x.k === best).t}.`] };
     } }),

@@ -786,6 +786,78 @@
    ],
    "mastery": "The child says the circumference is always about 3.14 times the diameter, so doubling the diameter doubles the circumference, and finds the pattern in a table of measured circles."
   },
+  "MATH.G7.MEASUR.TIME_DISTANCE_AND_SPEED.TIME_UNITS_CONVERT": {
+   "forms": [
+    "seconds to hours and minutes",
+    "minutes to hours",
+    "whole hours and minutes left",
+    "find the mistake"
+   ],
+   "mastery": "The child changes seconds to minutes and hours (60 and 3,600) and back, writes a time such as 8,400 seconds as hours and minutes (2 h 20 min), and never treats an hour as 100 minutes."
+  },
+  "MATH.G7.MEASUR.TIME_DISTANCE_AND_SPEED.TIMETABLE_DURATION": {
+   "forms": [
+    "moving time from a timetable",
+    "waiting time",
+    "length of one leg",
+    "whole journey including the stop"
+   ],
+   "mastery": "The child reads a timetable on the 24-hour clock, finds the time of each leg, leaves out the waiting time at a stop, and gives the moving time in minutes."
+  },
+  "MATH.G7.MEASUR.TIME_DISTANCE_AND_SPEED.DISTANCE_UNITS_CONVERT": {
+   "forms": [
+    "laps in kilometres",
+    "to and from school for a week",
+    "both ways",
+    "answer in the right unit"
+   ],
+   "mastery": "The child changes metres to kilometres (divide by 1,000) and back, finds a total distance such as laps or a return trip over several days, and answers in the unit asked."
+  },
+  "MATH.G7.MEASUR.TIME_DISTANCE_AND_SPEED.SPEED_FROM_DISTANCE_TIME": {
+   "forms": [
+    "speed of a matatu",
+    "speed from a timetable",
+    "minutes to hours",
+    "find the mistake"
+   ],
+   "mastery": "The child changes the time to hours (75 min is 1.25 h, with minutes out of 60), divides the distance by it, and does not multiply or invert; a timetable gives the time between two 24-hour readings."
+  },
+  "MATH.G7.MEASUR.TIME_DISTANCE_AND_SPEED.TIME_FROM_SPEED": {
+   "forms": [
+    "time in hours",
+    "time in minutes",
+    "decimal hours to minutes",
+    "find the mistake"
+   ],
+   "mastery": "The child finds time as distance divided by speed, and changes a decimal number of hours to minutes by multiplying the decimal part by 60 (2.5 h = 150 min)."
+  },
+  "MATH.G7.MEASUR.TIME_DISTANCE_AND_SPEED.AVERAGE_SPEED_TWO_LEGS": {
+   "forms": [
+    "time of each part",
+    "average speed",
+    "why not the middle",
+    "total time"
+   ],
+   "mastery": "The child finds the time of each part (distance divided by speed), adds them, and divides the total distance by the total time; the slower part takes longer, so the average is not halfway between the speeds."
+  },
+  "MATH.G7.MEASUR.TIME_DISTANCE_AND_SPEED.SPEED_UNITS_CONVERT": {
+   "forms": [
+    "km/h to m/s",
+    "m/s to km/h",
+    "why divide by 3,600",
+    "find speed in m/s from metres and seconds"
+   ],
+   "mastery": "The child changes km/h to m/s by multiplying by 1,000 and dividing by 3,600 (divide by 3.6), and m/s to km/h by multiplying by 3.6, and explains why an hour has 3,600 seconds."
+  },
+  "MATH.G7.MEASUR.TIME_DISTANCE_AND_SPEED.SPEED_COMPARE_MIXED_UNITS": {
+   "forms": [
+    "which is fastest",
+    "order three speeds",
+    "same unit first",
+    "change m/s to km/h"
+   ],
+   "mastery": "The child changes all speeds to km/h (or all to m/s) before saying which is fastest, and does not compare a number in m/s with a number in km/h."
+  },
   "MATH.G7.MEASUR.TEMPERATURE.TEMP_WORDS": {
    "forms": [
     "which word for 35 degrees",

@@ -8154,6 +8154,876 @@ export const TEACHING_PACK_G7 = {
   "sub_strand_name": "Length",
   "status": "draft: written 17 Nov 2026 offline for the Grade 7 pilot; not yet checked by a Kenyan maths teacher; not loaded by the live tutor"
  },
+ "MATH.G7.MEASUR.TIME_DISTANCE_AND_SPEED.TIME_UNITS_CONVERT": {
+  "skill": "MATH.G7.MEASUR.TIME_DISTANCE_AND_SPEED.TIME_UNITS_CONVERT",
+  "key_step": "The child says there are 60 seconds in a minute and 60 minutes in an hour, and divides for bigger units, with remainders as the smaller unit.",
+  "floor": {
+   "prerequisite": "Knows 60 seconds make a minute.",
+   "question": "Seconds in 3 minutes",
+   "answer": "180"
+  },
+  "representations": [
+   "a clock",
+   "steps of 60",
+   "hours and minutes"
+  ],
+  "steps": [
+   "Seconds to minutes: divide by 60.",
+   "Minutes to hours: divide by 60.",
+   "Whole hours first.",
+   "Minutes left over."
+  ],
+  "contexts": [
+   "a long race",
+   "a school lesson",
+   "a bus ride"
+  ],
+  "board": [
+   {
+    "beat": "write",
+    "do": "Write 8,400 seconds."
+   },
+   {
+    "beat": "point",
+    "do": "Point at 8,400.",
+    "say": "How many minutes is that?"
+   },
+   {
+    "beat": "pause",
+    "do": "Wait for the child to say."
+   }
+  ],
+  "misconceptions": [
+   {
+    "code": "MATH.G7.MEASUR.TIME_DISTANCE_AND_SPEED.TIME_UNITS_CONVERT.M_MINUTE_AS_HUNDRED",
+    "listen_for": [
+     "84"
+    ],
+    "ask": "How many seconds in a minute?",
+    "repair": "60.",
+    "error": "Treats a minute as 100 seconds.",
+    "example": {
+     "question": "8,400 seconds in minutes",
+     "wrong_answer": "84",
+     "correct_answer": "140"
+    }
+   },
+   {
+    "code": "MATH.G7.MEASUR.TIME_DISTANCE_AND_SPEED.TIME_UNITS_CONVERT.M_HOUR_AS_HUNDRED_MINUTES",
+    "listen_for": [
+     "1.4 hours"
+    ],
+    "ask": "How many minutes in an hour?",
+    "repair": "60.",
+    "error": "Treats an hour as 100 minutes.",
+    "example": {
+     "question": "140 minutes in hours",
+     "wrong_answer": "1.4 hours",
+     "correct_answer": "2 hours 20 minutes"
+    }
+   },
+   {
+    "code": "MATH.G7.MEASUR.TIME_DISTANCE_AND_SPEED.TIME_UNITS_CONVERT.M_CONVERT_DIRECTION_REVERSED",
+    "listen_for": [
+     "504,000"
+    ],
+    "ask": "Are there more seconds or minutes?",
+    "repair": "More seconds.",
+    "error": "Multiplies when changing to a bigger unit.",
+    "example": {
+     "question": "8,400 seconds in minutes",
+     "wrong_answer": "504,000",
+     "correct_answer": "140"
+    }
+   },
+   {
+    "code": "MATH.G7.MEASUR.TIME_DISTANCE_AND_SPEED.TIME_UNITS_CONVERT.M_ONE_PER_WHOLE_HOUR",
+    "listen_for": [
+     "138"
+    ],
+    "ask": "How many minutes in a whole hour?",
+    "repair": "60.",
+    "error": "Takes away 1 minute for every whole hour instead of 60.",
+    "example": {
+     "question": "140 minutes: minutes left after the whole hours",
+     "wrong_answer": "138",
+     "correct_answer": "20"
+    }
+   }
+  ],
+  "checks": [
+   {
+    "question": "8,400 seconds in hours and minutes",
+    "answer": "2 hours 20 minutes",
+    "shows": "two steps"
+   },
+   {
+    "question": "195 minutes in hours and minutes",
+    "answer": "3 hours 15 minutes",
+    "shows": "minutes"
+   }
+  ],
+  "name": "Convert between seconds, minutes and hours",
+  "sub_strand": "MATH.G7.MEASUR.TIME_DISTANCE_AND_SPEED",
+  "sub_strand_name": "Time, Distance and Speed",
+  "status": "draft: written 17 Nov 2026 offline for the Grade 7 pilot; not yet checked by a Kenyan maths teacher; not loaded by the live tutor"
+ },
+ "MATH.G7.MEASUR.TIME_DISTANCE_AND_SPEED.TIMETABLE_DURATION": {
+  "skill": "MATH.G7.MEASUR.TIME_DISTANCE_AND_SPEED.TIMETABLE_DURATION",
+  "key_step": "The child finds the time of each leg from the 24-hour times and adds only the moving legs.",
+  "floor": {
+   "prerequisite": "Reads 24-hour times.",
+   "question": "14:30 in am or pm",
+   "answer": "2:30 pm"
+  },
+  "representations": [
+   "a timetable",
+   "time on a line",
+   "the legs"
+  ],
+  "steps": [
+   "Read the times.",
+   "Find each leg.",
+   "Leave out the wait.",
+   "Add the moving legs."
+  ],
+  "contexts": [
+   "a bus",
+   "a train",
+   "a matatu"
+  ],
+  "board": [
+   {
+    "beat": "draw",
+    "do": "Draw a timeline from Nairobi to Nakuru with a stop at Naivasha."
+   },
+   {
+    "beat": "point",
+    "do": "Point at the stop.",
+    "say": "Is the bus moving here?"
+   },
+   {
+    "beat": "pause",
+    "do": "Wait for the child to say."
+   }
+  ],
+  "misconceptions": [
+   {
+    "code": "MATH.G7.MEASUR.TIME_DISTANCE_AND_SPEED.TIMETABLE_DURATION.M_WAIT_TIME_COUNTED",
+    "listen_for": [
+     "first to last time"
+    ],
+    "ask": "Is the bus moving at the stop?",
+    "repair": "Leave it out.",
+    "error": "Counts the time the bus waits as moving time.",
+    "example": {
+     "question": "Nairobi 08:00, Naivasha 09:50 to 10:05, Nakuru 11:15: moving minutes",
+     "wrong_answer": "195",
+     "correct_answer": "180"
+    }
+   },
+   {
+    "code": "MATH.G7.MEASUR.TIME_DISTANCE_AND_SPEED.TIMETABLE_DURATION.M_FIRST_LEG_ONLY",
+    "listen_for": [
+     "first part only"
+    ],
+    "ask": "How many legs are there?",
+    "repair": "Both.",
+    "error": "Gives the first part of the journey only.",
+    "example": {
+     "question": "Moving time Nairobi to Nakuru",
+     "wrong_answer": "110",
+     "correct_answer": "180"
+    }
+   },
+   {
+    "code": "MATH.G7.MEASUR.TIME_DISTANCE_AND_SPEED.TIMETABLE_DURATION.M_SECOND_LEG_ONLY",
+    "listen_for": [
+     "last part"
+    ],
+    "ask": "How many legs are there?",
+    "repair": "Both.",
+    "error": "Gives the second part of the journey only.",
+    "example": {
+     "question": "Moving time Nairobi to Nakuru",
+     "wrong_answer": "70",
+     "correct_answer": "180"
+    }
+   }
+  ],
+  "checks": [
+   {
+    "question": "Nairobi 08:00, Naivasha 09:50 to 10:05, Nakuru 11:15: minutes moving?",
+    "answer": "175",
+    "shows": "leave out wait"
+   },
+   {
+    "question": "How long is the stop?",
+    "answer": "15 minutes",
+    "shows": "wait"
+   }
+  ],
+  "name": "Find the time a vehicle is moving from a 24-hour timetable",
+  "sub_strand": "MATH.G7.MEASUR.TIME_DISTANCE_AND_SPEED",
+  "sub_strand_name": "Time, Distance and Speed",
+  "status": "draft: written 17 Nov 2026 offline for the Grade 7 pilot; not yet checked by a Kenyan maths teacher; not loaded by the live tutor"
+ },
+ "MATH.G7.MEASUR.TIME_DISTANCE_AND_SPEED.DISTANCE_UNITS_CONVERT": {
+  "skill": "MATH.G7.MEASUR.TIME_DISTANCE_AND_SPEED.DISTANCE_UNITS_CONVERT",
+  "key_step": "The child finds the total distance in metres first and divides by 1,000 for kilometres, counting both ways of a return trip.",
+  "floor": {
+   "prerequisite": "Knows 1 km = 1,000 m.",
+   "question": "2 km in m",
+   "answer": "2,000"
+  },
+  "representations": [
+   "a track",
+   "a line of metres",
+   "the total"
+  ],
+  "steps": [
+   "Total in metres.",
+   "Check both ways.",
+   "Divide by 1,000.",
+   "Answer with km."
+  ],
+  "contexts": [
+   "laps of a track",
+   "walking to school",
+   "a market trip"
+  ],
+  "board": [
+   {
+    "beat": "draw",
+    "do": "Draw a lap of 400 m ten times."
+   },
+   {
+    "beat": "point",
+    "do": "Point at the total.",
+    "say": "How many metres in all?"
+   },
+   {
+    "beat": "pause",
+    "do": "Wait for the child to say."
+   }
+  ],
+  "misconceptions": [
+   {
+    "code": "MATH.G7.MEASUR.TIME_DISTANCE_AND_SPEED.DISTANCE_UNITS_CONVERT.M_ANSWER_UNIT_NOT_CONVERTED_DIST",
+    "listen_for": [
+     "4,000"
+    ],
+    "ask": "What unit does the question ask?",
+    "repair": "Kilometres.",
+    "error": "Leaves the answer in metres when kilometres are asked.",
+    "example": {
+     "question": "10 laps of 400 m in kilometres",
+     "wrong_answer": "4,000",
+     "correct_answer": "4"
+    }
+   },
+   {
+    "code": "MATH.G7.MEASUR.TIME_DISTANCE_AND_SPEED.DISTANCE_UNITS_CONVERT.M_HUNDRED_METRES_IN_KM",
+    "listen_for": [
+     "40"
+    ],
+    "ask": "How many metres in a km?",
+    "repair": "1,000.",
+    "error": "Uses 100 m for a kilometre.",
+    "example": {
+     "question": "4,000 m in km",
+     "wrong_answer": "40",
+     "correct_answer": "4"
+    }
+   },
+   {
+    "code": "MATH.G7.MEASUR.TIME_DISTANCE_AND_SPEED.DISTANCE_UNITS_CONVERT.M_DIVIDED_TOO_FAR",
+    "listen_for": [
+     "0.4"
+    ],
+    "ask": "How many places does the point move?",
+    "repair": "Three.",
+    "error": "Divides by 10,000 instead of 1,000.",
+    "example": {
+     "question": "4,000 m in km",
+     "wrong_answer": "0.4",
+     "correct_answer": "4"
+    }
+   },
+   {
+    "code": "MATH.G7.MEASUR.TIME_DISTANCE_AND_SPEED.DISTANCE_UNITS_CONVERT.M_ONE_WAY_ONLY",
+    "listen_for": [
+     "2.25"
+    ],
+    "ask": "Does he walk home?",
+    "repair": "Both ways.",
+    "error": "Counts only the way to school.",
+    "example": {
+     "question": "450 m each way, 5 days: km in a week",
+     "wrong_answer": "2.25",
+     "correct_answer": "4.5"
+    }
+   }
+  ],
+  "checks": [
+   {
+    "question": "10 laps of 400 m in kilometres",
+    "answer": "4 km",
+    "shows": "convert"
+   },
+   {
+    "question": "450 m each way for 5 days: km in a week",
+    "answer": "4.5 km",
+    "shows": "both ways"
+   }
+  ],
+  "name": "Convert and combine distances in metres and kilometres",
+  "sub_strand": "MATH.G7.MEASUR.TIME_DISTANCE_AND_SPEED",
+  "sub_strand_name": "Time, Distance and Speed",
+  "status": "draft: written 17 Nov 2026 offline for the Grade 7 pilot; not yet checked by a Kenyan maths teacher; not loaded by the live tutor"
+ },
+ "MATH.G7.MEASUR.TIME_DISTANCE_AND_SPEED.SPEED_FROM_DISTANCE_TIME": {
+  "skill": "MATH.G7.MEASUR.TIME_DISTANCE_AND_SPEED.SPEED_FROM_DISTANCE_TIME",
+  "key_step": "The child changes the time to hours first (minutes out of 60) and divides the distance by it.",
+  "floor": {
+   "prerequisite": "Divides distance by time.",
+   "question": "100 km in 2 h",
+   "answer": "50 km/h"
+  },
+  "representations": [
+   "distance-time story",
+   "15 minutes as a quarter hour",
+   "division"
+  ],
+  "steps": [
+   "Time in hours.",
+   "Distance divided by time.",
+   "Unit km/h.",
+   "Check the size."
+  ],
+  "contexts": [
+   "a matatu",
+   "a bicycle",
+   "a bus timetable"
+  ],
+  "board": [
+   {
+    "beat": "write",
+    "do": "Write 60 km in 1 hour 15 minutes."
+   },
+   {
+    "beat": "point",
+    "do": "Point at 15 minutes.",
+    "say": "What part of an hour is that?"
+   },
+   {
+    "beat": "pause",
+    "do": "Wait for the child to say."
+   }
+  ],
+  "misconceptions": [
+   {
+    "code": "MATH.G7.MEASUR.TIME_DISTANCE_AND_SPEED.SPEED_FROM_DISTANCE_TIME.M_MINUTE_AS_HUNDRED_TIME",
+    "listen_for": [
+     "1.15"
+    ],
+    "ask": "How many minutes in an hour?",
+    "repair": "60.",
+    "error": "Writes minutes as hundredths of an hour.",
+    "example": {
+     "question": "60 km in 1 hour 15 minutes",
+     "wrong_answer": "52.17 km/h",
+     "correct_answer": "48 km/h"
+    }
+   },
+   {
+    "code": "MATH.G7.MEASUR.TIME_DISTANCE_AND_SPEED.SPEED_FROM_DISTANCE_TIME.M_TIME_OVER_DISTANCE",
+    "listen_for": [
+     "0.8"
+    ],
+    "ask": "What is speed?",
+    "repair": "Distance per hour.",
+    "error": "Divides the time by the distance.",
+    "example": {
+     "question": "60 km in 1.25 h",
+     "wrong_answer": "0.8",
+     "correct_answer": "48"
+    }
+   },
+   {
+    "code": "MATH.G7.MEASUR.TIME_DISTANCE_AND_SPEED.SPEED_FROM_DISTANCE_TIME.M_SPEED_BY_MULTIPLYING",
+    "listen_for": [
+     "75"
+    ],
+    "ask": "Is speed distance times time?",
+    "repair": "Divide.",
+    "error": "Multiplies distance and time.",
+    "example": {
+     "question": "60 km in 1.25 h",
+     "wrong_answer": "75",
+     "correct_answer": "48"
+    }
+   },
+   {
+    "code": "MATH.G7.MEASUR.TIME_DISTANCE_AND_SPEED.SPEED_FROM_DISTANCE_TIME.M_MINUTES_NOT_HOURS",
+    "listen_for": [
+     "0.83"
+    ],
+    "ask": "What unit does km/h need?",
+    "repair": "Hours.",
+    "error": "Uses minutes in the time for km/h.",
+    "example": {
+     "question": "40 km in 48 minutes: km/h",
+     "wrong_answer": "0.83",
+     "correct_answer": "50"
+    }
+   }
+  ],
+  "checks": [
+   {
+    "question": "60 km in 1 hour 15 minutes: speed",
+    "answer": "48 km/h",
+    "shows": "hours and minutes"
+   },
+   {
+    "question": "40 km in 48 minutes",
+    "answer": "50 km/h",
+    "shows": "minutes to hours"
+   }
+  ],
+  "name": "Work out speed in km/h from a distance and a time in hours and minutes",
+  "sub_strand": "MATH.G7.MEASUR.TIME_DISTANCE_AND_SPEED",
+  "sub_strand_name": "Time, Distance and Speed",
+  "status": "draft: written 17 Nov 2026 offline for the Grade 7 pilot; not yet checked by a Kenyan maths teacher; not loaded by the live tutor"
+ },
+ "MATH.G7.MEASUR.TIME_DISTANCE_AND_SPEED.TIME_FROM_SPEED": {
+  "skill": "MATH.G7.MEASUR.TIME_DISTANCE_AND_SPEED.TIME_FROM_SPEED",
+  "key_step": "The child divides distance by speed for hours, then multiplies the decimal hours by 60 for minutes.",
+  "floor": {
+   "prerequisite": "Divides.",
+   "question": "200 / 80",
+   "answer": "2.5"
+  },
+  "representations": [
+   "distance-speed-time triangle",
+   "hours as decimals",
+   "minutes"
+  ],
+  "steps": [
+   "Time = distance / speed.",
+   "Hours as a decimal.",
+   "Multiply by 60 for minutes.",
+   "Check the size."
+  ],
+  "contexts": [
+   "a car journey",
+   "a bus",
+   "a runner"
+  ],
+  "board": [
+   {
+    "beat": "write",
+    "do": "Write 200 km at 80 km/h."
+   },
+   {
+    "beat": "point",
+    "do": "Point at the 80.",
+    "say": "Do we divide or multiply?"
+   },
+   {
+    "beat": "pause",
+    "do": "Wait for the child to say."
+   }
+  ],
+  "misconceptions": [
+   {
+    "code": "MATH.G7.MEASUR.TIME_DISTANCE_AND_SPEED.TIME_FROM_SPEED.M_HOURS_NOT_CONVERTED_TO_MINUTES",
+    "listen_for": [
+     "2.5"
+    ],
+    "ask": "What unit is asked?",
+    "repair": "Minutes.",
+    "error": "Gives the time in hours when minutes are asked.",
+    "example": {
+     "question": "200 km at 80 km/h: minutes",
+     "wrong_answer": "2.5",
+     "correct_answer": "150"
+    }
+   },
+   {
+    "code": "MATH.G7.MEASUR.TIME_DISTANCE_AND_SPEED.TIME_FROM_SPEED.M_DECIMAL_HOURS_AS_MINUTES",
+    "listen_for": [
+     "2 h 50 min"
+    ],
+    "ask": "What is half an hour in minutes?",
+    "repair": "30.",
+    "error": "Writes the decimal part of an hour as minutes.",
+    "example": {
+     "question": "2.5 hours in minutes",
+     "wrong_answer": "2 hours 50 minutes (170)",
+     "correct_answer": "150"
+    }
+   },
+   {
+    "code": "MATH.G7.MEASUR.TIME_DISTANCE_AND_SPEED.TIME_FROM_SPEED.M_TIME_BY_MULTIPLYING",
+    "listen_for": [
+     "16000"
+    ],
+    "ask": "Is time distance times speed?",
+    "repair": "Divide.",
+    "error": "Multiplies the distance by the speed to get time.",
+    "example": {
+     "question": "200 km at 80 km/h: time",
+     "wrong_answer": "16,000",
+     "correct_answer": "2.5 hours"
+    }
+   }
+  ],
+  "checks": [
+   {
+    "question": "200 km at 80 km/h: time in minutes",
+    "answer": "150",
+    "shows": "minutes"
+   },
+   {
+    "question": "90 km at 60 km/h: time in minutes",
+    "answer": "90",
+    "shows": "decimal to minutes"
+   }
+  ],
+  "name": "Work out the time of a journey from the distance and the speed",
+  "sub_strand": "MATH.G7.MEASUR.TIME_DISTANCE_AND_SPEED",
+  "sub_strand_name": "Time, Distance and Speed",
+  "status": "draft: written 17 Nov 2026 offline for the Grade 7 pilot; not yet checked by a Kenyan maths teacher; not loaded by the live tutor"
+ },
+ "MATH.G7.MEASUR.TIME_DISTANCE_AND_SPEED.AVERAGE_SPEED_TWO_LEGS": {
+  "skill": "MATH.G7.MEASUR.TIME_DISTANCE_AND_SPEED.AVERAGE_SPEED_TWO_LEGS",
+  "key_step": "The child finds each time, adds the times, and divides the total distance by the total time.",
+  "floor": {
+   "prerequisite": "Finds time from speed.",
+   "question": "120 km at 30 km/h",
+   "answer": "4 h"
+  },
+  "representations": [
+   "two legs drawn",
+   "times added",
+   "total distance over total time"
+  ],
+  "steps": [
+   "Time of each leg.",
+   "Total time.",
+   "Total distance.",
+   "Divide."
+  ],
+  "contexts": [
+   "a journey with a slow road",
+   "a trip to a market",
+   "a safari"
+  ],
+  "board": [
+   {
+    "beat": "draw",
+    "do": "Draw two legs of 120 km at 30 and 20 km/h."
+   },
+   {
+    "beat": "point",
+    "do": "Point at the slower leg.",
+    "say": "Which takes longer?"
+   },
+   {
+    "beat": "pause",
+    "do": "Wait for the child to say."
+   }
+  ],
+  "misconceptions": [
+   {
+    "code": "MATH.G7.MEASUR.TIME_DISTANCE_AND_SPEED.AVERAGE_SPEED_TWO_LEGS.M_AVERAGE_OF_SPEEDS",
+    "listen_for": [
+     "25"
+    ],
+    "ask": "Does the slower leg take longer?",
+    "repair": "Use total distance and total time.",
+    "error": "Takes the middle of the two speeds as the average speed.",
+    "example": {
+     "question": "120 km at 30 km/h then 120 km at 20 km/h: average",
+     "wrong_answer": "25",
+     "correct_answer": "24"
+    }
+   },
+   {
+    "code": "MATH.G7.MEASUR.TIME_DISTANCE_AND_SPEED.AVERAGE_SPEED_TWO_LEGS.M_TOTAL_DISTANCE_ONLY",
+    "listen_for": [
+     "one time only"
+    ],
+    "ask": "What is the total time?",
+    "repair": "Add both.",
+    "error": "Divides the total distance by only one of the times.",
+    "example": {
+     "question": "Total 240 km: 4 h and 6 h. Average?",
+     "wrong_answer": "60",
+     "correct_answer": "24"
+    }
+   }
+  ],
+  "checks": [
+   {
+    "question": "120 km at 30 km/h then 120 km at 20 km/h: average speed",
+    "answer": "24 km/h",
+    "shows": "total over total"
+   },
+   {
+    "question": "Total time of the journey",
+    "answer": "10 hours",
+    "shows": "add times"
+   }
+  ],
+  "name": "Work out the average speed over two parts of a journey",
+  "sub_strand": "MATH.G7.MEASUR.TIME_DISTANCE_AND_SPEED",
+  "sub_strand_name": "Time, Distance and Speed",
+  "status": "draft: written 17 Nov 2026 offline for the Grade 7 pilot; not yet checked by a Kenyan maths teacher; not loaded by the live tutor"
+ },
+ "MATH.G7.MEASUR.TIME_DISTANCE_AND_SPEED.SPEED_UNITS_CONVERT": {
+  "skill": "MATH.G7.MEASUR.TIME_DISTANCE_AND_SPEED.SPEED_UNITS_CONVERT",
+  "key_step": "The child changes km to m and hours to seconds, which is divide by 3.6 for m/s and multiply by 3.6 for km/h.",
+  "floor": {
+   "prerequisite": "Knows 1 hour is 3,600 seconds.",
+   "question": "Seconds in an hour",
+   "answer": "3,600"
+  },
+  "representations": [
+   "km/h as metres per hour",
+   "then per second",
+   "the factor 3.6"
+  ],
+  "steps": [
+   "Km to m: times 1,000.",
+   "Hours to seconds: divide by 3,600.",
+   "So divide by 3.6.",
+   "Reverse: multiply by 3.6."
+  ],
+  "contexts": [
+   "a cheetah",
+   "a lorry",
+   "a runner"
+  ],
+  "board": [
+   {
+    "beat": "write",
+    "do": "Write 90 km/h = 90 x 1,000 m per 3,600 s."
+   },
+   {
+    "beat": "point",
+    "do": "Point at 3,600.",
+    "say": "Why 3,600?"
+   },
+   {
+    "beat": "pause",
+    "do": "Wait for the child to say."
+   }
+  ],
+  "misconceptions": [
+   {
+    "code": "MATH.G7.MEASUR.TIME_DISTANCE_AND_SPEED.SPEED_UNITS_CONVERT.M_HOUR_AS_SIXTY_SECONDS",
+    "listen_for": [
+     "60"
+    ],
+    "ask": "How many seconds in an hour?",
+    "repair": "3,600.",
+    "error": "Uses 60 seconds for an hour.",
+    "example": {
+     "question": "90 km/h in m/s",
+     "wrong_answer": "1.5",
+     "correct_answer": "25"
+    }
+   },
+   {
+    "code": "MATH.G7.MEASUR.TIME_DISTANCE_AND_SPEED.SPEED_UNITS_CONVERT.M_CONVERSION_DIRECTION_REVERSED",
+    "listen_for": [
+     "324"
+    ],
+    "ask": "Is m/s a bigger or smaller number?",
+    "repair": "Smaller: divide.",
+    "error": "Multiplies by 3.6 when changing km/h to m/s.",
+    "example": {
+     "question": "90 km/h in m/s",
+     "wrong_answer": "324",
+     "correct_answer": "25"
+    }
+   },
+   {
+    "code": "MATH.G7.MEASUR.TIME_DISTANCE_AND_SPEED.SPEED_UNITS_CONVERT.M_KM_TO_M_DIVIDED",
+    "listen_for": [
+     "0.09"
+    ],
+    "ask": "Are there more metres than km?",
+    "repair": "Yes: multiply.",
+    "error": "Divides by 1,000 to change km to m.",
+    "example": {
+     "question": "90 km/h in m/s",
+     "wrong_answer": "0.09",
+     "correct_answer": "25"
+    }
+   },
+   {
+    "code": "MATH.G7.MEASUR.TIME_DISTANCE_AND_SPEED.SPEED_UNITS_CONVERT.M_KM_AS_HUNDRED_M",
+    "listen_for": [
+     "100 m"
+    ],
+    "ask": "How many m in a km?",
+    "repair": "1,000.",
+    "error": "Says a kilometre is 100 metres.",
+    "example": {
+     "question": "72 km/h in m/s: why multiply by 1,000?",
+     "wrong_answer": "a km is 100 m",
+     "correct_answer": "a km is 1,000 m"
+    }
+   },
+   {
+    "code": "MATH.G7.MEASUR.TIME_DISTANCE_AND_SPEED.SPEED_UNITS_CONVERT.M_UNITS_ADDED",
+    "listen_for": [
+     "add"
+    ],
+    "ask": "Does adding change a unit?",
+    "repair": "Multiply and divide.",
+    "error": "Adds the numbers of the units instead of multiplying and dividing.",
+    "example": {
+     "question": "72 km/h in m/s: add 1,000 and 60?",
+     "wrong_answer": "add",
+     "correct_answer": "multiply and divide"
+    }
+   },
+   {
+    "code": "MATH.G7.MEASUR.TIME_DISTANCE_AND_SPEED.SPEED_UNITS_CONVERT.M_TIME_UNIT_NOT_CHANGED",
+    "listen_for": [
+     "only 1,000"
+    ],
+    "ask": "What about the hour?",
+    "repair": "Divide by 3,600.",
+    "error": "Changes only the distance unit and leaves the hour.",
+    "example": {
+     "question": "72 km/h in m/s: only multiply by 1,000",
+     "wrong_answer": "only multiply",
+     "correct_answer": "also divide by 3,600"
+    }
+   },
+   {
+    "code": "MATH.G7.MEASUR.TIME_DISTANCE_AND_SPEED.SPEED_UNITS_CONVERT.M_UNIT_NOT_CONVERTED_TO_KM",
+    "listen_for": [
+     "90,000"
+    ],
+    "ask": "What unit is asked?",
+    "repair": "km/h.",
+    "error": "Leaves the distance in metres when km/h is asked.",
+    "example": {
+     "question": "25 m/s in km/h",
+     "wrong_answer": "90,000",
+     "correct_answer": "90"
+    }
+   }
+  ],
+  "checks": [
+   {
+    "question": "90 km/h in m/s",
+    "answer": "25 m/s",
+    "shows": "divide by 3.6"
+   },
+   {
+    "question": "25 m/s in km/h",
+    "answer": "90 km/h",
+    "shows": "multiply by 3.6"
+   }
+  ],
+  "name": "Convert speed between km/h and m/s",
+  "sub_strand": "MATH.G7.MEASUR.TIME_DISTANCE_AND_SPEED",
+  "sub_strand_name": "Time, Distance and Speed",
+  "status": "draft: written 17 Nov 2026 offline for the Grade 7 pilot; not yet checked by a Kenyan maths teacher; not loaded by the live tutor"
+ },
+ "MATH.G7.MEASUR.TIME_DISTANCE_AND_SPEED.SPEED_COMPARE_MIXED_UNITS": {
+  "skill": "MATH.G7.MEASUR.TIME_DISTANCE_AND_SPEED.SPEED_COMPARE_MIXED_UNITS",
+  "key_step": "The child changes all the speeds to the same unit before choosing the fastest.",
+  "floor": {
+   "prerequisite": "Converts m/s to km/h.",
+   "question": "10 m/s in km/h",
+   "answer": "36"
+  },
+  "representations": [
+   "three speeds in a list",
+   "all in km/h",
+   "order"
+  ],
+  "steps": [
+   "Choose a unit.",
+   "Convert each speed.",
+   "Compare the numbers.",
+   "Name the fastest."
+  ],
+  "contexts": [
+   "a boda boda",
+   "a runner",
+   "a bicycle"
+  ],
+  "board": [
+   {
+    "beat": "write",
+    "do": "Write 45 km/h, 10 m/s, 15 km/h."
+   },
+   {
+    "beat": "point",
+    "do": "Point at 10 m/s.",
+    "say": "What is it in km/h?"
+   },
+   {
+    "beat": "pause",
+    "do": "Wait for the child to say."
+   }
+  ],
+  "misconceptions": [
+   {
+    "code": "MATH.G7.MEASUR.TIME_DISTANCE_AND_SPEED.SPEED_COMPARE_MIXED_UNITS.M_MS_NUMBER_TAKEN_AS_KMH",
+    "listen_for": [
+     "10 m/s is slow"
+    ],
+    "ask": "What is 10 m/s in km/h?",
+    "repair": "Multiply by 3.6.",
+    "error": "Takes a speed in m/s as if it were in km/h.",
+    "example": {
+     "question": "Fastest of 45 km/h, 10 m/s, 15 km/h",
+     "wrong_answer": "10 m/s",
+     "correct_answer": "45 km/h"
+    }
+   },
+   {
+    "code": "MATH.G7.MEASUR.TIME_DISTANCE_AND_SPEED.SPEED_COMPARE_MIXED_UNITS.M_SPEEDS_COMPARED_WITHOUT_SAME_UNIT",
+    "listen_for": [
+     "15 km/h"
+    ],
+    "ask": "Are all the speeds in the same unit?",
+    "repair": "Change first.",
+    "error": "Picks the fastest without changing to the same unit.",
+    "example": {
+     "question": "Fastest of 45 km/h, 10 m/s, 15 km/h",
+     "wrong_answer": "15 km/h",
+     "correct_answer": "45 km/h"
+    }
+   }
+  ],
+  "checks": [
+   {
+    "question": "Fastest of 45 km/h, 10 m/s and 15 km/h?",
+    "answer": "45 km/h",
+    "shows": "same unit"
+   },
+   {
+    "question": "10 m/s in km/h",
+    "answer": "36 km/h",
+    "shows": "convert"
+   }
+  ],
+  "name": "Compare speeds given in different units",
+  "sub_strand": "MATH.G7.MEASUR.TIME_DISTANCE_AND_SPEED",
+  "sub_strand_name": "Time, Distance and Speed",
+  "status": "draft: written 17 Nov 2026 offline for the Grade 7 pilot; not yet checked by a Kenyan maths teacher; not loaded by the live tutor"
+ },
  "MATH.G7.MEASUR.TEMPERATURE.TEMP_WORDS": {
   "skill": "MATH.G7.MEASUR.TEMPERATURE.TEMP_WORDS",
   "key_step": "The child finds the number in the table of ranges and reads the word from that row.",

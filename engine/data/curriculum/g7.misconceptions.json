@@ -3821,6 +3821,412 @@
   "source": "to be confirmed by a teacher (no source yet)",
   "status": "draft"
  },
+ "MATH.G7.MEASUR.TIME_DISTANCE_AND_SPEED.TIME_UNITS_CONVERT.M_MINUTE_AS_HUNDRED": {
+  "skill": "MATH.G7.MEASUR.TIME_DISTANCE_AND_SPEED.TIME_UNITS_CONVERT",
+  "error": "Treats a minute as 100 seconds.",
+  "example": {
+   "question": "8,400 seconds in minutes",
+   "wrong_answer": "84",
+   "correct_answer": "140"
+  },
+  "cause": "Uses hundreds like money.",
+  "reveals": "The answer 84 as a wrong option, with a reason that names the idea.",
+  "help": "There are 60 seconds in a minute.",
+  "source": "to be confirmed by a teacher (no source yet)",
+  "status": "draft"
+ },
+ "MATH.G7.MEASUR.TIME_DISTANCE_AND_SPEED.TIME_UNITS_CONVERT.M_HOUR_AS_HUNDRED_MINUTES": {
+  "skill": "MATH.G7.MEASUR.TIME_DISTANCE_AND_SPEED.TIME_UNITS_CONVERT",
+  "error": "Treats an hour as 100 minutes.",
+  "example": {
+   "question": "140 minutes in hours",
+   "wrong_answer": "1.4 hours",
+   "correct_answer": "2 hours 20 minutes"
+  },
+  "cause": "Uses decimals as if an hour had 100 minutes.",
+  "reveals": "The answer 1.4 hours as a wrong option, with a reason that names the idea.",
+  "help": "There are 60 minutes in an hour.",
+  "source": "to be confirmed by a teacher (no source yet)",
+  "status": "draft"
+ },
+ "MATH.G7.MEASUR.TIME_DISTANCE_AND_SPEED.TIME_UNITS_CONVERT.M_CONVERT_DIRECTION_REVERSED": {
+  "skill": "MATH.G7.MEASUR.TIME_DISTANCE_AND_SPEED.TIME_UNITS_CONVERT",
+  "error": "Multiplies when changing to a bigger unit.",
+  "example": {
+   "question": "8,400 seconds in minutes",
+   "wrong_answer": "504,000",
+   "correct_answer": "140"
+  },
+  "cause": "Thinks changing unit always means multiply.",
+  "reveals": "The answer 504,000 as a wrong option, with a reason that names the idea.",
+  "help": "A minute is bigger than a second, so there are fewer minutes.",
+  "source": "to be confirmed by a teacher (no source yet)",
+  "status": "draft"
+ },
+ "MATH.G7.MEASUR.TIME_DISTANCE_AND_SPEED.TIME_UNITS_CONVERT.M_ONE_PER_WHOLE_HOUR": {
+  "skill": "MATH.G7.MEASUR.TIME_DISTANCE_AND_SPEED.TIME_UNITS_CONVERT",
+  "error": "Takes away 1 minute for every whole hour instead of 60.",
+  "example": {
+   "question": "140 minutes: minutes left after the whole hours",
+   "wrong_answer": "138",
+   "correct_answer": "20"
+  },
+  "cause": "Subtracts the number of hours.",
+  "reveals": "The answer 138 as a wrong option, with a reason that names the idea.",
+  "help": "Each whole hour uses 60 minutes.",
+  "source": "to be confirmed by a teacher (no source yet)",
+  "status": "draft"
+ },
+ "MATH.G7.MEASUR.TIME_DISTANCE_AND_SPEED.TIMETABLE_DURATION.M_WAIT_TIME_COUNTED": {
+  "skill": "MATH.G7.MEASUR.TIME_DISTANCE_AND_SPEED.TIMETABLE_DURATION",
+  "error": "Counts the time the bus waits as moving time.",
+  "example": {
+   "question": "Nairobi 08:00, Naivasha 09:50 to 10:05, Nakuru 11:15: moving minutes",
+   "wrong_answer": "195",
+   "correct_answer": "180"
+  },
+  "cause": "Subtracts the first and last times only.",
+  "reveals": "The answer 195 as a wrong option, with a reason that names the idea.",
+  "help": "The bus is not moving while it waits.",
+  "source": "to be confirmed by a teacher (no source yet)",
+  "status": "draft"
+ },
+ "MATH.G7.MEASUR.TIME_DISTANCE_AND_SPEED.TIMETABLE_DURATION.M_FIRST_LEG_ONLY": {
+  "skill": "MATH.G7.MEASUR.TIME_DISTANCE_AND_SPEED.TIMETABLE_DURATION",
+  "error": "Gives the first part of the journey only.",
+  "example": {
+   "question": "Moving time Nairobi to Nakuru",
+   "wrong_answer": "110",
+   "correct_answer": "180"
+  },
+  "cause": "Stops after the first leg.",
+  "reveals": "The answer 110 as a wrong option, with a reason that names the idea.",
+  "help": "Add both moving parts.",
+  "source": "to be confirmed by a teacher (no source yet)",
+  "status": "draft"
+ },
+ "MATH.G7.MEASUR.TIME_DISTANCE_AND_SPEED.TIMETABLE_DURATION.M_SECOND_LEG_ONLY": {
+  "skill": "MATH.G7.MEASUR.TIME_DISTANCE_AND_SPEED.TIMETABLE_DURATION",
+  "error": "Gives the second part of the journey only.",
+  "example": {
+   "question": "Moving time Nairobi to Nakuru",
+   "wrong_answer": "70",
+   "correct_answer": "180"
+  },
+  "cause": "Uses the last leg.",
+  "reveals": "The answer 70 as a wrong option, with a reason that names the idea.",
+  "help": "Add both moving parts.",
+  "source": "to be confirmed by a teacher (no source yet)",
+  "status": "draft"
+ },
+ "MATH.G7.MEASUR.TIME_DISTANCE_AND_SPEED.DISTANCE_UNITS_CONVERT.M_ANSWER_UNIT_NOT_CONVERTED_DIST": {
+  "skill": "MATH.G7.MEASUR.TIME_DISTANCE_AND_SPEED.DISTANCE_UNITS_CONVERT",
+  "error": "Leaves the answer in metres when kilometres are asked.",
+  "example": {
+   "question": "10 laps of 400 m in kilometres",
+   "wrong_answer": "4,000",
+   "correct_answer": "4"
+  },
+  "cause": "Stops in the unit of the working.",
+  "reveals": "The answer 4,000 as a wrong option, with a reason that names the idea.",
+  "help": "Divide by 1,000.",
+  "source": "to be confirmed by a teacher (no source yet)",
+  "status": "draft"
+ },
+ "MATH.G7.MEASUR.TIME_DISTANCE_AND_SPEED.DISTANCE_UNITS_CONVERT.M_HUNDRED_METRES_IN_KM": {
+  "skill": "MATH.G7.MEASUR.TIME_DISTANCE_AND_SPEED.DISTANCE_UNITS_CONVERT",
+  "error": "Uses 100 m for a kilometre.",
+  "example": {
+   "question": "4,000 m in km",
+   "wrong_answer": "40",
+   "correct_answer": "4"
+  },
+  "cause": "Mixes up km with hm.",
+  "reveals": "The answer 40 as a wrong option, with a reason that names the idea.",
+  "help": "1 km = 1,000 m.",
+  "source": "to be confirmed by a teacher (no source yet)",
+  "status": "draft"
+ },
+ "MATH.G7.MEASUR.TIME_DISTANCE_AND_SPEED.DISTANCE_UNITS_CONVERT.M_DIVIDED_TOO_FAR": {
+  "skill": "MATH.G7.MEASUR.TIME_DISTANCE_AND_SPEED.DISTANCE_UNITS_CONVERT",
+  "error": "Divides by 10,000 instead of 1,000.",
+  "example": {
+   "question": "4,000 m in km",
+   "wrong_answer": "0.4",
+   "correct_answer": "4"
+  },
+  "cause": "Counts one zero too many.",
+  "reveals": "The answer 0.4 as a wrong option, with a reason that names the idea.",
+  "help": "Move the point three places.",
+  "source": "to be confirmed by a teacher (no source yet)",
+  "status": "draft"
+ },
+ "MATH.G7.MEASUR.TIME_DISTANCE_AND_SPEED.DISTANCE_UNITS_CONVERT.M_ONE_WAY_ONLY": {
+  "skill": "MATH.G7.MEASUR.TIME_DISTANCE_AND_SPEED.DISTANCE_UNITS_CONVERT",
+  "error": "Counts only the way to school.",
+  "example": {
+   "question": "450 m each way, 5 days: km in a week",
+   "wrong_answer": "2.25",
+   "correct_answer": "4.5"
+  },
+  "cause": "Ignores the way home.",
+  "reveals": "The answer 2.25 as a wrong option, with a reason that names the idea.",
+  "help": "Count both ways.",
+  "source": "to be confirmed by a teacher (no source yet)",
+  "status": "draft"
+ },
+ "MATH.G7.MEASUR.TIME_DISTANCE_AND_SPEED.SPEED_FROM_DISTANCE_TIME.M_MINUTE_AS_HUNDRED_TIME": {
+  "skill": "MATH.G7.MEASUR.TIME_DISTANCE_AND_SPEED.SPEED_FROM_DISTANCE_TIME",
+  "error": "Writes minutes as hundredths of an hour.",
+  "example": {
+   "question": "60 km in 1 hour 15 minutes",
+   "wrong_answer": "52.17 km/h",
+   "correct_answer": "48 km/h"
+  },
+  "cause": "Writes 1.15 hours.",
+  "reveals": "The answer 52.17 km/h as a wrong option, with a reason that names the idea.",
+  "help": "15 minutes is 0.25 hour.",
+  "source": "to be confirmed by a teacher (no source yet)",
+  "status": "draft"
+ },
+ "MATH.G7.MEASUR.TIME_DISTANCE_AND_SPEED.SPEED_FROM_DISTANCE_TIME.M_TIME_OVER_DISTANCE": {
+  "skill": "MATH.G7.MEASUR.TIME_DISTANCE_AND_SPEED.SPEED_FROM_DISTANCE_TIME",
+  "error": "Divides the time by the distance.",
+  "example": {
+   "question": "60 km in 1.25 h",
+   "wrong_answer": "0.8",
+   "correct_answer": "48"
+  },
+  "cause": "Divides the smaller by the bigger.",
+  "reveals": "The answer 0.8 as a wrong option, with a reason that names the idea.",
+  "help": "Speed = distance divided by time.",
+  "source": "to be confirmed by a teacher (no source yet)",
+  "status": "draft"
+ },
+ "MATH.G7.MEASUR.TIME_DISTANCE_AND_SPEED.SPEED_FROM_DISTANCE_TIME.M_SPEED_BY_MULTIPLYING": {
+  "skill": "MATH.G7.MEASUR.TIME_DISTANCE_AND_SPEED.SPEED_FROM_DISTANCE_TIME",
+  "error": "Multiplies distance and time.",
+  "example": {
+   "question": "60 km in 1.25 h",
+   "wrong_answer": "75",
+   "correct_answer": "48"
+  },
+  "cause": "Sees two numbers and multiplies.",
+  "reveals": "The answer 75 as a wrong option, with a reason that names the idea.",
+  "help": "Speed is how far per hour: divide.",
+  "source": "to be confirmed by a teacher (no source yet)",
+  "status": "draft"
+ },
+ "MATH.G7.MEASUR.TIME_DISTANCE_AND_SPEED.SPEED_FROM_DISTANCE_TIME.M_MINUTES_NOT_HOURS": {
+  "skill": "MATH.G7.MEASUR.TIME_DISTANCE_AND_SPEED.SPEED_FROM_DISTANCE_TIME",
+  "error": "Uses minutes in the time for km/h.",
+  "example": {
+   "question": "40 km in 48 minutes: km/h",
+   "wrong_answer": "0.83",
+   "correct_answer": "50"
+  },
+  "cause": "Does not change the time to hours.",
+  "reveals": "The answer 0.83 as a wrong option, with a reason that names the idea.",
+  "help": "km/h needs the time in hours.",
+  "source": "to be confirmed by a teacher (no source yet)",
+  "status": "draft"
+ },
+ "MATH.G7.MEASUR.TIME_DISTANCE_AND_SPEED.TIME_FROM_SPEED.M_HOURS_NOT_CONVERTED_TO_MINUTES": {
+  "skill": "MATH.G7.MEASUR.TIME_DISTANCE_AND_SPEED.TIME_FROM_SPEED",
+  "error": "Gives the time in hours when minutes are asked.",
+  "example": {
+   "question": "200 km at 80 km/h: minutes",
+   "wrong_answer": "2.5",
+   "correct_answer": "150"
+  },
+  "cause": "Stops after dividing.",
+  "reveals": "The answer 2.5 as a wrong option, with a reason that names the idea.",
+  "help": "Multiply the hours by 60.",
+  "source": "to be confirmed by a teacher (no source yet)",
+  "status": "draft"
+ },
+ "MATH.G7.MEASUR.TIME_DISTANCE_AND_SPEED.TIME_FROM_SPEED.M_DECIMAL_HOURS_AS_MINUTES": {
+  "skill": "MATH.G7.MEASUR.TIME_DISTANCE_AND_SPEED.TIME_FROM_SPEED",
+  "error": "Writes the decimal part of an hour as minutes.",
+  "example": {
+   "question": "2.5 hours in minutes",
+   "wrong_answer": "2 hours 50 minutes (170)",
+   "correct_answer": "150"
+  },
+  "cause": "Reads 0.5 as 50 minutes.",
+  "reveals": "The answer 2 hours 50 minutes (170) as a wrong option, with a reason that names the idea.",
+  "help": "0.5 hour is half of 60 minutes: 30.",
+  "source": "to be confirmed by a teacher (no source yet)",
+  "status": "draft"
+ },
+ "MATH.G7.MEASUR.TIME_DISTANCE_AND_SPEED.TIME_FROM_SPEED.M_TIME_BY_MULTIPLYING": {
+  "skill": "MATH.G7.MEASUR.TIME_DISTANCE_AND_SPEED.TIME_FROM_SPEED",
+  "error": "Multiplies the distance by the speed to get time.",
+  "example": {
+   "question": "200 km at 80 km/h: time",
+   "wrong_answer": "16,000",
+   "correct_answer": "2.5 hours"
+  },
+  "cause": "Sees two numbers and multiplies.",
+  "reveals": "The answer 16,000 as a wrong option, with a reason that names the idea.",
+  "help": "Time = distance divided by speed.",
+  "source": "to be confirmed by a teacher (no source yet)",
+  "status": "draft"
+ },
+ "MATH.G7.MEASUR.TIME_DISTANCE_AND_SPEED.AVERAGE_SPEED_TWO_LEGS.M_AVERAGE_OF_SPEEDS": {
+  "skill": "MATH.G7.MEASUR.TIME_DISTANCE_AND_SPEED.AVERAGE_SPEED_TWO_LEGS",
+  "error": "Takes the middle of the two speeds as the average speed.",
+  "example": {
+   "question": "120 km at 30 km/h then 120 km at 20 km/h: average",
+   "wrong_answer": "25",
+   "correct_answer": "24"
+  },
+  "cause": "Adds the speeds and halves.",
+  "reveals": "The answer 25 as a wrong option, with a reason that names the idea.",
+  "help": "The slower part takes longer: use total distance divided by total time.",
+  "source": "to be confirmed by a teacher (no source yet)",
+  "status": "draft"
+ },
+ "MATH.G7.MEASUR.TIME_DISTANCE_AND_SPEED.AVERAGE_SPEED_TWO_LEGS.M_TOTAL_DISTANCE_ONLY": {
+  "skill": "MATH.G7.MEASUR.TIME_DISTANCE_AND_SPEED.AVERAGE_SPEED_TWO_LEGS",
+  "error": "Divides the total distance by only one of the times.",
+  "example": {
+   "question": "Total 240 km: 4 h and 6 h. Average?",
+   "wrong_answer": "60",
+   "correct_answer": "24"
+  },
+  "cause": "Forgets to add the times.",
+  "reveals": "The answer 60 as a wrong option, with a reason that names the idea.",
+  "help": "Total time is 10 hours.",
+  "source": "to be confirmed by a teacher (no source yet)",
+  "status": "draft"
+ },
+ "MATH.G7.MEASUR.TIME_DISTANCE_AND_SPEED.SPEED_UNITS_CONVERT.M_HOUR_AS_SIXTY_SECONDS": {
+  "skill": "MATH.G7.MEASUR.TIME_DISTANCE_AND_SPEED.SPEED_UNITS_CONVERT",
+  "error": "Uses 60 seconds for an hour.",
+  "example": {
+   "question": "90 km/h in m/s",
+   "wrong_answer": "1.5",
+   "correct_answer": "25"
+  },
+  "cause": "Mixes seconds in a minute with seconds in an hour.",
+  "reveals": "The answer 1.5 as a wrong option, with a reason that names the idea.",
+  "help": "An hour has 3,600 seconds.",
+  "source": "to be confirmed by a teacher (no source yet)",
+  "status": "draft"
+ },
+ "MATH.G7.MEASUR.TIME_DISTANCE_AND_SPEED.SPEED_UNITS_CONVERT.M_CONVERSION_DIRECTION_REVERSED": {
+  "skill": "MATH.G7.MEASUR.TIME_DISTANCE_AND_SPEED.SPEED_UNITS_CONVERT",
+  "error": "Multiplies by 3.6 when changing km/h to m/s.",
+  "example": {
+   "question": "90 km/h in m/s",
+   "wrong_answer": "324",
+   "correct_answer": "25"
+  },
+  "cause": "Uses the factor in the wrong direction.",
+  "reveals": "The answer 324 as a wrong option, with a reason that names the idea.",
+  "help": "Going to m/s gives a smaller number: divide by 3.6.",
+  "source": "to be confirmed by a teacher (no source yet)",
+  "status": "draft"
+ },
+ "MATH.G7.MEASUR.TIME_DISTANCE_AND_SPEED.SPEED_UNITS_CONVERT.M_KM_TO_M_DIVIDED": {
+  "skill": "MATH.G7.MEASUR.TIME_DISTANCE_AND_SPEED.SPEED_UNITS_CONVERT",
+  "error": "Divides by 1,000 to change km to m.",
+  "example": {
+   "question": "90 km/h in m/s",
+   "wrong_answer": "0.09",
+   "correct_answer": "25"
+  },
+  "cause": "Changes the length unit the wrong way.",
+  "reveals": "The answer 0.09 as a wrong option, with a reason that names the idea.",
+  "help": "A km is bigger than a m: multiply.",
+  "source": "to be confirmed by a teacher (no source yet)",
+  "status": "draft"
+ },
+ "MATH.G7.MEASUR.TIME_DISTANCE_AND_SPEED.SPEED_UNITS_CONVERT.M_KM_AS_HUNDRED_M": {
+  "skill": "MATH.G7.MEASUR.TIME_DISTANCE_AND_SPEED.SPEED_UNITS_CONVERT",
+  "error": "Says a kilometre is 100 metres.",
+  "example": {
+   "question": "72 km/h in m/s: why multiply by 1,000?",
+   "wrong_answer": "a km is 100 m",
+   "correct_answer": "a km is 1,000 m"
+  },
+  "cause": "Mixes km and hm.",
+  "reveals": "The answer a km is 100 m as a wrong option, with a reason that names the idea.",
+  "help": "1 km = 1,000 m.",
+  "source": "to be confirmed by a teacher (no source yet)",
+  "status": "draft"
+ },
+ "MATH.G7.MEASUR.TIME_DISTANCE_AND_SPEED.SPEED_UNITS_CONVERT.M_UNITS_ADDED": {
+  "skill": "MATH.G7.MEASUR.TIME_DISTANCE_AND_SPEED.SPEED_UNITS_CONVERT",
+  "error": "Adds the numbers of the units instead of multiplying and dividing.",
+  "example": {
+   "question": "72 km/h in m/s: add 1,000 and 60?",
+   "wrong_answer": "add",
+   "correct_answer": "multiply and divide"
+  },
+  "cause": "Treats conversion as a sum.",
+  "reveals": "The answer add as a wrong option, with a reason that names the idea.",
+  "help": "Multiply by the size of the new small unit and divide by the new big one.",
+  "source": "to be confirmed by a teacher (no source yet)",
+  "status": "draft"
+ },
+ "MATH.G7.MEASUR.TIME_DISTANCE_AND_SPEED.SPEED_UNITS_CONVERT.M_TIME_UNIT_NOT_CHANGED": {
+  "skill": "MATH.G7.MEASUR.TIME_DISTANCE_AND_SPEED.SPEED_UNITS_CONVERT",
+  "error": "Changes only the distance unit and leaves the hour.",
+  "example": {
+   "question": "72 km/h in m/s: only multiply by 1,000",
+   "wrong_answer": "only multiply",
+   "correct_answer": "also divide by 3,600"
+  },
+  "cause": "Forgets the time part of the unit.",
+  "reveals": "The answer only multiply as a wrong option, with a reason that names the idea.",
+  "help": "The unit has a time part: hours to seconds.",
+  "source": "to be confirmed by a teacher (no source yet)",
+  "status": "draft"
+ },
+ "MATH.G7.MEASUR.TIME_DISTANCE_AND_SPEED.SPEED_UNITS_CONVERT.M_UNIT_NOT_CONVERTED_TO_KM": {
+  "skill": "MATH.G7.MEASUR.TIME_DISTANCE_AND_SPEED.SPEED_UNITS_CONVERT",
+  "error": "Leaves the distance in metres when km/h is asked.",
+  "example": {
+   "question": "25 m/s in km/h",
+   "wrong_answer": "90,000",
+   "correct_answer": "90"
+  },
+  "cause": "Stops in metres.",
+  "reveals": "The answer 90,000 as a wrong option, with a reason that names the idea.",
+  "help": "Divide by 1,000 for km.",
+  "source": "to be confirmed by a teacher (no source yet)",
+  "status": "draft"
+ },
+ "MATH.G7.MEASUR.TIME_DISTANCE_AND_SPEED.SPEED_COMPARE_MIXED_UNITS.M_MS_NUMBER_TAKEN_AS_KMH": {
+  "skill": "MATH.G7.MEASUR.TIME_DISTANCE_AND_SPEED.SPEED_COMPARE_MIXED_UNITS",
+  "error": "Takes a speed in m/s as if it were in km/h.",
+  "example": {
+   "question": "Fastest of 45 km/h, 10 m/s, 15 km/h",
+   "wrong_answer": "10 m/s",
+   "correct_answer": "45 km/h"
+  },
+  "cause": "Compares the numbers only.",
+  "reveals": "The answer 10 m/s as a wrong option, with a reason that names the idea.",
+  "help": "Change m/s to km/h: multiply by 3.6.",
+  "source": "to be confirmed by a teacher (no source yet)",
+  "status": "draft"
+ },
+ "MATH.G7.MEASUR.TIME_DISTANCE_AND_SPEED.SPEED_COMPARE_MIXED_UNITS.M_SPEEDS_COMPARED_WITHOUT_SAME_UNIT": {
+  "skill": "MATH.G7.MEASUR.TIME_DISTANCE_AND_SPEED.SPEED_COMPARE_MIXED_UNITS",
+  "error": "Picks the fastest without changing to the same unit.",
+  "example": {
+   "question": "Fastest of 45 km/h, 10 m/s, 15 km/h",
+   "wrong_answer": "15 km/h",
+   "correct_answer": "45 km/h"
+  },
+  "cause": "Chooses by guess.",
+  "reveals": "The answer 15 km/h as a wrong option, with a reason that names the idea.",
+  "help": "Put all speeds in one unit first.",
+  "source": "to be confirmed by a teacher (no source yet)",
+  "status": "draft"
+ },
  "MATH.G7.MEASUR.TEMPERATURE.TEMP_WORDS.M_NEXT_BAND_TOO_COLD": {
   "skill": "MATH.G7.MEASUR.TEMPERATURE.TEMP_WORDS",
   "error": "Picks the next colder word band than the table gives.",

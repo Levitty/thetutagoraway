@@ -3,15 +3,15 @@
  "subject_key": "mathematics",
  "grade": 7,
  "source": "KICD KICD-Grade7-Mathematics-Curriculum-Design.pdf, revised 2024 (text layer)",
- "status": "outcomes from KICD's text, word for word; skills and prerequisites proposed; misconceptions draft; all awaiting teacher review (17 Nov 2026); no skills yet for: ALGEBR.LINEAR_INEQUALITIES, MEASUR.AREA, MEASUR.VOLUME_AND_CAPACITY, MEASUR.TIME_DISTANCE_AND_SPEED, MEASUR.MONEY, GEOMET.ANGLES, DATA_H.DATA_HANDLING",
+ "status": "outcomes from KICD's text, word for word; skills and prerequisites proposed; misconceptions draft; all awaiting teacher review (17 Nov 2026); no skills yet for: ALGEBR.LINEAR_INEQUALITIES, MEASUR.AREA, MEASUR.VOLUME_AND_CAPACITY, MEASUR.MONEY, GEOMET.ANGLES, DATA_H.DATA_HANDLING",
  "totals": {
   "strands": 5,
   "sub_strands": 18,
   "outcomes": 117,
   "lessons": 148,
-  "skills": 84,
-  "prerequisites": 175,
-  "misconceptions": 312
+  "skills": 92,
+  "prerequisites": 191,
+  "misconceptions": 341
  },
  "sub_strands": [
   {
@@ -55,7 +55,7 @@
    "values": "",
    "pcis": "",
    "links": "",
-   "design_notes": "Official outcomes a to h are tested; i is an attitude and has no skill. Outcome f (apply operations of whole numbers) is 'kicd_read': the design gives no limit, so the skills use Grade 6 limits stretched to Grade 7 numbers (up to 9-digit sums, 3-digit by 3-digit products, up to 6-digit dividends, three operations with brackets). Outcome e names even, odd and prime. Number sequences (g, h) are with a constant difference or ratio, or a two-step rule. Official outcomes a to h are tested; i is an attitude and has no skill. Outcome f (apply operations of whole numbers) is 'kicd_read': the design gives no limit, so the skills use Grade 6 limits stretched to Grade 7 numbers (up to 9-digit sums, 3-digit by 3-digit products, up to 6-digit dividends, three operations with brackets). Outcome e names even, odd and prime. Number sequences (g, h) are with a constant difference or ratio, or a two-step rule. Official outcomes a to h are tested; i is an attitude and has no skill. Outcome f (apply operations of whole numbers) is 'kicd_read': the design gives no limit, so the skills use Grade 6 limits stretched to Grade 7 numbers (up to 9-digit sums, 3-digit by 3-digit products, up to 6-digit dividends, three operations with brackets). Outcome e names even, odd and prime. Number sequences (g, h) are with a constant difference or ratio, or a two-step rule. Official outcomes a to h are tested; i is an attitude and has no skill. Outcome f (apply operations of whole numbers) is 'kicd_read': the design gives no limit, so the skills use Grade 6 limits stretched to Grade 7 numbers (up to 9-digit sums, 3-digit by 3-digit products, up to 6-digit dividends, three operations with brackets). Outcome e names even, odd and prime. Number sequences (g, h) are with a constant difference or ratio, or a two-step rule. Official outcomes a to h are tested; i is an attitude and has no skill. Outcome f (apply operations of whole numbers) is 'kicd_read': the design gives no limit, so the skills use Grade 6 limits stretched to Grade 7 numbers (up to 9-digit sums, 3-digit by 3-digit products, up to 6-digit dividends, three operations with brackets). Outcome e names even, odd and prime. Number sequences (g, h) are with a constant difference or ratio, or a two-step rule. Official outcomes a to h are tested; i is an attitude and has no skill. Outcome f (apply operations of whole numbers) is 'kicd_read': the design gives no limit, so the skills use Grade 6 limits stretched to Grade 7 numbers (up to 9-digit sums, 3-digit by 3-digit products, up to 6-digit dividends, three operations with brackets). Outcome e names even, odd and prime. Number sequences (g, h) are with a constant difference or ratio, or a two-step rule. Official outcomes a to h are tested; i is an attitude and has no skill. Outcome f (apply operations of whole numbers) is 'kicd_read': the design gives no limit, so the skills use Grade 6 limits stretched to Grade 7 numbers (up to 9-digit sums, 3-digit by 3-digit products, up to 6-digit dividends, three operations with brackets). Outcome e names even, odd and prime. Number sequences (g, h) are with a constant difference or ratio, or a two-step rule. Official outcomes a to h are tested; i is an attitude and has no skill. Outcome f (apply operations of whole numbers) is 'kicd_read': the design gives no limit, so the skills use Grade 6 limits stretched to Grade 7 numbers (up to 9-digit sums, 3-digit by 3-digit products, up to 6-digit dividends, three operations with brackets). Outcome e names even, odd and prime. Number sequences (g, h) are with a constant difference or ratio, or a two-step rule. Official outcomes a to h are tested; i is an attitude and has no skill. Outcome f (apply operations of whole numbers) is 'kicd_read': the design gives no limit, so the skills use Grade 6 limits stretched to Grade 7 numbers (up to 9-digit sums, 3-digit by 3-digit products, up to 6-digit dividends, three operations with brackets). Outcome e names even, odd and prime. Number sequences (g, h) are with a constant difference or ratio, or a two-step rule. Official outcomes a to h are tested; i is an attitude and has no skill. Outcome f (apply operations of whole numbers) is 'kicd_read': the design gives no limit, so the skills use Grade 6 limits stretched to Grade 7 numbers (up to 9-digit sums, 3-digit by 3-digit products, up to 6-digit dividends, three operations with brackets). Outcome e names even, odd and prime. Number sequences (g, h) are with a constant difference or ratio, or a two-step rule. Official outcomes a to h are tested; i is an attitude and has no skill. Outcome f (apply operations of whole numbers) is 'kicd_read': the design gives no limit, so the skills use Grade 6 limits stretched to Grade 7 numbers (up to 9-digit sums, 3-digit by 3-digit products, up to 6-digit dividends, three operations with brackets). Outcome e names even, odd and prime. Number sequences (g, h) are with a constant difference or ratio, or a two-step rule. Official outcomes a to h are tested; i is an attitude and has no skill. Outcome f (apply operations of whole numbers) is 'kicd_read': the design gives no limit, so the skills use Grade 6 limits stretched to Grade 7 numbers (up to 9-digit sums, 3-digit by 3-digit products, up to 6-digit dividends, three operations with brackets). Outcome e names even, odd and prime. Number sequences (g, h) are with a constant difference or ratio, or a two-step rule. Official outcomes a to h are tested; i is an attitude and has no skill. Outcome f (apply operations of whole numbers) is 'kicd_read': the design gives no limit, so the skills use Grade 6 limits stretched to Grade 7 numbers (up to 9-digit sums, 3-digit by 3-digit products, up to 6-digit dividends, three operations with brackets). Outcome e names even, odd and prime. Number sequences (g, h) are with a constant difference or ratio, or a two-step rule. Official outcomes a to h are tested; i is an attitude and has no skill. Outcome f (apply operations of whole numbers) is 'kicd_read': the design gives no limit, so the skills use Grade 6 limits stretched to Grade 7 numbers (up to 9-digit sums, 3-digit by 3-digit products, up to 6-digit dividends, three operations with brackets). Outcome e names even, odd and prime. Number sequences (g, h) are with a constant difference or ratio, or a two-step rule. Official outcomes a to h are tested; i is an attitude and has no skill. Outcome f (apply operations of whole numbers) is 'kicd_read': the design gives no limit, so the skills use Grade 6 limits stretched to Grade 7 numbers (up to 9-digit sums, 3-digit by 3-digit products, up to 6-digit dividends, three operations with brackets). Outcome e names even, odd and prime. Number sequences (g, h) are with a constant difference or ratio, or a two-step rule. Official outcomes a to h are tested; i is an attitude and has no skill. Outcome f (apply operations of whole numbers) is 'kicd_read': the design gives no limit, so the skills use Grade 6 limits stretched to Grade 7 numbers (up to 9-digit sums, 3-digit by 3-digit products, up to 6-digit dividends, three operations with brackets). Outcome e names even, odd and prime. Number sequences (g, h) are with a constant difference or ratio, or a two-step rule. Official outcomes a to h are tested; i is an attitude and has no skill. Outcome f (apply operations of whole numbers) is 'kicd_read': the design gives no limit, so the skills use Grade 6 limits stretched to Grade 7 numbers (up to 9-digit sums, 3-digit by 3-digit products, up to 6-digit dividends, three operations with brackets). Outcome e names even, odd and prime. Number sequences (g, h) are with a constant difference or ratio, or a two-step rule. Official outcomes a to h are tested; i is an attitude and has no skill. Outcome f (apply operations of whole numbers) is 'kicd_read': the design gives no limit, so the skills use Grade 6 limits stretched to Grade 7 numbers (up to 9-digit sums, 3-digit by 3-digit products, up to 6-digit dividends, three operations with brackets). Outcome e names even, odd and prime. Number sequences (g, h) are with a constant difference or ratio, or a two-step rule.",
+   "design_notes": "Official outcomes a to h are tested; i is an attitude and has no skill. Outcome f (apply operations of whole numbers) is 'kicd_read': the design gives no limit, so the skills use Grade 6 limits stretched to Grade 7 numbers (up to 9-digit sums, 3-digit by 3-digit products, up to 6-digit dividends, three operations with brackets). Outcome e names even, odd and prime. Number sequences (g, h) are with a constant difference or ratio, or a two-step rule. Official outcomes a to h are tested; i is an attitude and has no skill. Outcome f (apply operations of whole numbers) is 'kicd_read': the design gives no limit, so the skills use Grade 6 limits stretched to Grade 7 numbers (up to 9-digit sums, 3-digit by 3-digit products, up to 6-digit dividends, three operations with brackets). Outcome e names even, odd and prime. Number sequences (g, h) are with a constant difference or ratio, or a two-step rule. Official outcomes a to h are tested; i is an attitude and has no skill. Outcome f (apply operations of whole numbers) is 'kicd_read': the design gives no limit, so the skills use Grade 6 limits stretched to Grade 7 numbers (up to 9-digit sums, 3-digit by 3-digit products, up to 6-digit dividends, three operations with brackets). Outcome e names even, odd and prime. Number sequences (g, h) are with a constant difference or ratio, or a two-step rule. Official outcomes a to h are tested; i is an attitude and has no skill. Outcome f (apply operations of whole numbers) is 'kicd_read': the design gives no limit, so the skills use Grade 6 limits stretched to Grade 7 numbers (up to 9-digit sums, 3-digit by 3-digit products, up to 6-digit dividends, three operations with brackets). Outcome e names even, odd and prime. Number sequences (g, h) are with a constant difference or ratio, or a two-step rule. Official outcomes a to h are tested; i is an attitude and has no skill. Outcome f (apply operations of whole numbers) is 'kicd_read': the design gives no limit, so the skills use Grade 6 limits stretched to Grade 7 numbers (up to 9-digit sums, 3-digit by 3-digit products, up to 6-digit dividends, three operations with brackets). Outcome e names even, odd and prime. Number sequences (g, h) are with a constant difference or ratio, or a two-step rule. Official outcomes a to h are tested; i is an attitude and has no skill. Outcome f (apply operations of whole numbers) is 'kicd_read': the design gives no limit, so the skills use Grade 6 limits stretched to Grade 7 numbers (up to 9-digit sums, 3-digit by 3-digit products, up to 6-digit dividends, three operations with brackets). Outcome e names even, odd and prime. Number sequences (g, h) are with a constant difference or ratio, or a two-step rule. Official outcomes a to h are tested; i is an attitude and has no skill. Outcome f (apply operations of whole numbers) is 'kicd_read': the design gives no limit, so the skills use Grade 6 limits stretched to Grade 7 numbers (up to 9-digit sums, 3-digit by 3-digit products, up to 6-digit dividends, three operations with brackets). Outcome e names even, odd and prime. Number sequences (g, h) are with a constant difference or ratio, or a two-step rule. Official outcomes a to h are tested; i is an attitude and has no skill. Outcome f (apply operations of whole numbers) is 'kicd_read': the design gives no limit, so the skills use Grade 6 limits stretched to Grade 7 numbers (up to 9-digit sums, 3-digit by 3-digit products, up to 6-digit dividends, three operations with brackets). Outcome e names even, odd and prime. Number sequences (g, h) are with a constant difference or ratio, or a two-step rule. Official outcomes a to h are tested; i is an attitude and has no skill. Outcome f (apply operations of whole numbers) is 'kicd_read': the design gives no limit, so the skills use Grade 6 limits stretched to Grade 7 numbers (up to 9-digit sums, 3-digit by 3-digit products, up to 6-digit dividends, three operations with brackets). Outcome e names even, odd and prime. Number sequences (g, h) are with a constant difference or ratio, or a two-step rule. Official outcomes a to h are tested; i is an attitude and has no skill. Outcome f (apply operations of whole numbers) is 'kicd_read': the design gives no limit, so the skills use Grade 6 limits stretched to Grade 7 numbers (up to 9-digit sums, 3-digit by 3-digit products, up to 6-digit dividends, three operations with brackets). Outcome e names even, odd and prime. Number sequences (g, h) are with a constant difference or ratio, or a two-step rule. Official outcomes a to h are tested; i is an attitude and has no skill. Outcome f (apply operations of whole numbers) is 'kicd_read': the design gives no limit, so the skills use Grade 6 limits stretched to Grade 7 numbers (up to 9-digit sums, 3-digit by 3-digit products, up to 6-digit dividends, three operations with brackets). Outcome e names even, odd and prime. Number sequences (g, h) are with a constant difference or ratio, or a two-step rule. Official outcomes a to h are tested; i is an attitude and has no skill. Outcome f (apply operations of whole numbers) is 'kicd_read': the design gives no limit, so the skills use Grade 6 limits stretched to Grade 7 numbers (up to 9-digit sums, 3-digit by 3-digit products, up to 6-digit dividends, three operations with brackets). Outcome e names even, odd and prime. Number sequences (g, h) are with a constant difference or ratio, or a two-step rule. Official outcomes a to h are tested; i is an attitude and has no skill. Outcome f (apply operations of whole numbers) is 'kicd_read': the design gives no limit, so the skills use Grade 6 limits stretched to Grade 7 numbers (up to 9-digit sums, 3-digit by 3-digit products, up to 6-digit dividends, three operations with brackets). Outcome e names even, odd and prime. Number sequences (g, h) are with a constant difference or ratio, or a two-step rule. Official outcomes a to h are tested; i is an attitude and has no skill. Outcome f (apply operations of whole numbers) is 'kicd_read': the design gives no limit, so the skills use Grade 6 limits stretched to Grade 7 numbers (up to 9-digit sums, 3-digit by 3-digit products, up to 6-digit dividends, three operations with brackets). Outcome e names even, odd and prime. Number sequences (g, h) are with a constant difference or ratio, or a two-step rule. Official outcomes a to h are tested; i is an attitude and has no skill. Outcome f (apply operations of whole numbers) is 'kicd_read': the design gives no limit, so the skills use Grade 6 limits stretched to Grade 7 numbers (up to 9-digit sums, 3-digit by 3-digit products, up to 6-digit dividends, three operations with brackets). Outcome e names even, odd and prime. Number sequences (g, h) are with a constant difference or ratio, or a two-step rule. Official outcomes a to h are tested; i is an attitude and has no skill. Outcome f (apply operations of whole numbers) is 'kicd_read': the design gives no limit, so the skills use Grade 6 limits stretched to Grade 7 numbers (up to 9-digit sums, 3-digit by 3-digit products, up to 6-digit dividends, three operations with brackets). Outcome e names even, odd and prime. Number sequences (g, h) are with a constant difference or ratio, or a two-step rule. Official outcomes a to h are tested; i is an attitude and has no skill. Outcome f (apply operations of whole numbers) is 'kicd_read': the design gives no limit, so the skills use Grade 6 limits stretched to Grade 7 numbers (up to 9-digit sums, 3-digit by 3-digit products, up to 6-digit dividends, three operations with brackets). Outcome e names even, odd and prime. Number sequences (g, h) are with a constant difference or ratio, or a two-step rule. Official outcomes a to h are tested; i is an attitude and has no skill. Outcome f (apply operations of whole numbers) is 'kicd_read': the design gives no limit, so the skills use Grade 6 limits stretched to Grade 7 numbers (up to 9-digit sums, 3-digit by 3-digit products, up to 6-digit dividends, three operations with brackets). Outcome e names even, odd and prime. Number sequences (g, h) are with a constant difference or ratio, or a two-step rule. Official outcomes a to h are tested; i is an attitude and has no skill. Outcome f (apply operations of whole numbers) is 'kicd_read': the design gives no limit, so the skills use Grade 6 limits stretched to Grade 7 numbers (up to 9-digit sums, 3-digit by 3-digit products, up to 6-digit dividends, three operations with brackets). Outcome e names even, odd and prime. Number sequences (g, h) are with a constant difference or ratio, or a two-step rule.",
    "source": {
     "grade_page": "https://kicd.ac.ke/cbc-materials/curriculum-designs/grade-seven-designs/",
     "design": "KICD-Grade7-Mathematics-Curriculum-Design.pdf",
@@ -1766,7 +1766,7 @@
    "values": "",
    "pcis": "",
    "links": "",
-   "design_notes": "Official outcomes a to d are tested; e is an attitude. Outcome a lists 2, 3, 4, 5, 6, 8, 9, 10 and 11, so there are three divisibility skills grouped by the kind of test (last digits, digit sum, alternating sum). Outcomes c and d are by the factor method, so the skills use prime factorisation. GCD is the same as HCF in Grade 5. Official outcomes a to d are tested; e is an attitude. Outcome a lists 2, 3, 4, 5, 6, 8, 9, 10 and 11, so there are three divisibility skills grouped by the kind of test (last digits, digit sum, alternating sum). Outcomes c and d are by the factor method, so the skills use prime factorisation. GCD is the same as HCF in Grade 5. Official outcomes a to d are tested; e is an attitude. Outcome a lists 2, 3, 4, 5, 6, 8, 9, 10 and 11, so there are three divisibility skills grouped by the kind of test (last digits, digit sum, alternating sum). Outcomes c and d are by the factor method, so the skills use prime factorisation. GCD is the same as HCF in Grade 5. Official outcomes a to d are tested; e is an attitude. Outcome a lists 2, 3, 4, 5, 6, 8, 9, 10 and 11, so there are three divisibility skills grouped by the kind of test (last digits, digit sum, alternating sum). Outcomes c and d are by the factor method, so the skills use prime factorisation. GCD is the same as HCF in Grade 5. Official outcomes a to d are tested; e is an attitude. Outcome a lists 2, 3, 4, 5, 6, 8, 9, 10 and 11, so there are three divisibility skills grouped by the kind of test (last digits, digit sum, alternating sum). Outcomes c and d are by the factor method, so the skills use prime factorisation. GCD is the same as HCF in Grade 5. Official outcomes a to d are tested; e is an attitude. Outcome a lists 2, 3, 4, 5, 6, 8, 9, 10 and 11, so there are three divisibility skills grouped by the kind of test (last digits, digit sum, alternating sum). Outcomes c and d are by the factor method, so the skills use prime factorisation. GCD is the same as HCF in Grade 5. Official outcomes a to d are tested; e is an attitude. Outcome a lists 2, 3, 4, 5, 6, 8, 9, 10 and 11, so there are three divisibility skills grouped by the kind of test (last digits, digit sum, alternating sum). Outcomes c and d are by the factor method, so the skills use prime factorisation. GCD is the same as HCF in Grade 5. Official outcomes a to d are tested; e is an attitude. Outcome a lists 2, 3, 4, 5, 6, 8, 9, 10 and 11, so there are three divisibility skills grouped by the kind of test (last digits, digit sum, alternating sum). Outcomes c and d are by the factor method, so the skills use prime factorisation. GCD is the same as HCF in Grade 5. Official outcomes a to d are tested; e is an attitude. Outcome a lists 2, 3, 4, 5, 6, 8, 9, 10 and 11, so there are three divisibility skills grouped by the kind of test (last digits, digit sum, alternating sum). Outcomes c and d are by the factor method, so the skills use prime factorisation. GCD is the same as HCF in Grade 5. Official outcomes a to d are tested; e is an attitude. Outcome a lists 2, 3, 4, 5, 6, 8, 9, 10 and 11, so there are three divisibility skills grouped by the kind of test (last digits, digit sum, alternating sum). Outcomes c and d are by the factor method, so the skills use prime factorisation. GCD is the same as HCF in Grade 5. Official outcomes a to d are tested; e is an attitude. Outcome a lists 2, 3, 4, 5, 6, 8, 9, 10 and 11, so there are three divisibility skills grouped by the kind of test (last digits, digit sum, alternating sum). Outcomes c and d are by the factor method, so the skills use prime factorisation. GCD is the same as HCF in Grade 5. Official outcomes a to d are tested; e is an attitude. Outcome a lists 2, 3, 4, 5, 6, 8, 9, 10 and 11, so there are three divisibility skills grouped by the kind of test (last digits, digit sum, alternating sum). Outcomes c and d are by the factor method, so the skills use prime factorisation. GCD is the same as HCF in Grade 5. Official outcomes a to d are tested; e is an attitude. Outcome a lists 2, 3, 4, 5, 6, 8, 9, 10 and 11, so there are three divisibility skills grouped by the kind of test (last digits, digit sum, alternating sum). Outcomes c and d are by the factor method, so the skills use prime factorisation. GCD is the same as HCF in Grade 5. Official outcomes a to d are tested; e is an attitude. Outcome a lists 2, 3, 4, 5, 6, 8, 9, 10 and 11, so there are three divisibility skills grouped by the kind of test (last digits, digit sum, alternating sum). Outcomes c and d are by the factor method, so the skills use prime factorisation. GCD is the same as HCF in Grade 5. Official outcomes a to d are tested; e is an attitude. Outcome a lists 2, 3, 4, 5, 6, 8, 9, 10 and 11, so there are three divisibility skills grouped by the kind of test (last digits, digit sum, alternating sum). Outcomes c and d are by the factor method, so the skills use prime factorisation. GCD is the same as HCF in Grade 5.",
+   "design_notes": "Official outcomes a to d are tested; e is an attitude. Outcome a lists 2, 3, 4, 5, 6, 8, 9, 10 and 11, so there are three divisibility skills grouped by the kind of test (last digits, digit sum, alternating sum). Outcomes c and d are by the factor method, so the skills use prime factorisation. GCD is the same as HCF in Grade 5. Official outcomes a to d are tested; e is an attitude. Outcome a lists 2, 3, 4, 5, 6, 8, 9, 10 and 11, so there are three divisibility skills grouped by the kind of test (last digits, digit sum, alternating sum). Outcomes c and d are by the factor method, so the skills use prime factorisation. GCD is the same as HCF in Grade 5. Official outcomes a to d are tested; e is an attitude. Outcome a lists 2, 3, 4, 5, 6, 8, 9, 10 and 11, so there are three divisibility skills grouped by the kind of test (last digits, digit sum, alternating sum). Outcomes c and d are by the factor method, so the skills use prime factorisation. GCD is the same as HCF in Grade 5. Official outcomes a to d are tested; e is an attitude. Outcome a lists 2, 3, 4, 5, 6, 8, 9, 10 and 11, so there are three divisibility skills grouped by the kind of test (last digits, digit sum, alternating sum). Outcomes c and d are by the factor method, so the skills use prime factorisation. GCD is the same as HCF in Grade 5. Official outcomes a to d are tested; e is an attitude. Outcome a lists 2, 3, 4, 5, 6, 8, 9, 10 and 11, so there are three divisibility skills grouped by the kind of test (last digits, digit sum, alternating sum). Outcomes c and d are by the factor method, so the skills use prime factorisation. GCD is the same as HCF in Grade 5. Official outcomes a to d are tested; e is an attitude. Outcome a lists 2, 3, 4, 5, 6, 8, 9, 10 and 11, so there are three divisibility skills grouped by the kind of test (last digits, digit sum, alternating sum). Outcomes c and d are by the factor method, so the skills use prime factorisation. GCD is the same as HCF in Grade 5. Official outcomes a to d are tested; e is an attitude. Outcome a lists 2, 3, 4, 5, 6, 8, 9, 10 and 11, so there are three divisibility skills grouped by the kind of test (last digits, digit sum, alternating sum). Outcomes c and d are by the factor method, so the skills use prime factorisation. GCD is the same as HCF in Grade 5. Official outcomes a to d are tested; e is an attitude. Outcome a lists 2, 3, 4, 5, 6, 8, 9, 10 and 11, so there are three divisibility skills grouped by the kind of test (last digits, digit sum, alternating sum). Outcomes c and d are by the factor method, so the skills use prime factorisation. GCD is the same as HCF in Grade 5. Official outcomes a to d are tested; e is an attitude. Outcome a lists 2, 3, 4, 5, 6, 8, 9, 10 and 11, so there are three divisibility skills grouped by the kind of test (last digits, digit sum, alternating sum). Outcomes c and d are by the factor method, so the skills use prime factorisation. GCD is the same as HCF in Grade 5. Official outcomes a to d are tested; e is an attitude. Outcome a lists 2, 3, 4, 5, 6, 8, 9, 10 and 11, so there are three divisibility skills grouped by the kind of test (last digits, digit sum, alternating sum). Outcomes c and d are by the factor method, so the skills use prime factorisation. GCD is the same as HCF in Grade 5. Official outcomes a to d are tested; e is an attitude. Outcome a lists 2, 3, 4, 5, 6, 8, 9, 10 and 11, so there are three divisibility skills grouped by the kind of test (last digits, digit sum, alternating sum). Outcomes c and d are by the factor method, so the skills use prime factorisation. GCD is the same as HCF in Grade 5. Official outcomes a to d are tested; e is an attitude. Outcome a lists 2, 3, 4, 5, 6, 8, 9, 10 and 11, so there are three divisibility skills grouped by the kind of test (last digits, digit sum, alternating sum). Outcomes c and d are by the factor method, so the skills use prime factorisation. GCD is the same as HCF in Grade 5. Official outcomes a to d are tested; e is an attitude. Outcome a lists 2, 3, 4, 5, 6, 8, 9, 10 and 11, so there are three divisibility skills grouped by the kind of test (last digits, digit sum, alternating sum). Outcomes c and d are by the factor method, so the skills use prime factorisation. GCD is the same as HCF in Grade 5. Official outcomes a to d are tested; e is an attitude. Outcome a lists 2, 3, 4, 5, 6, 8, 9, 10 and 11, so there are three divisibility skills grouped by the kind of test (last digits, digit sum, alternating sum). Outcomes c and d are by the factor method, so the skills use prime factorisation. GCD is the same as HCF in Grade 5. Official outcomes a to d are tested; e is an attitude. Outcome a lists 2, 3, 4, 5, 6, 8, 9, 10 and 11, so there are three divisibility skills grouped by the kind of test (last digits, digit sum, alternating sum). Outcomes c and d are by the factor method, so the skills use prime factorisation. GCD is the same as HCF in Grade 5. Official outcomes a to d are tested; e is an attitude. Outcome a lists 2, 3, 4, 5, 6, 8, 9, 10 and 11, so there are three divisibility skills grouped by the kind of test (last digits, digit sum, alternating sum). Outcomes c and d are by the factor method, so the skills use prime factorisation. GCD is the same as HCF in Grade 5.",
    "source": {
     "grade_page": "https://kicd.ac.ke/cbc-materials/curriculum-designs/grade-seven-designs/",
     "design": "KICD-Grade7-Mathematics-Curriculum-Design.pdf",
@@ -2497,7 +2497,7 @@
    "values": "",
    "pcis": "",
    "links": "",
-   "design_notes": "Official outcomes a to h are tested; i (create sequences with fractions) is 'kicd_read' and has a skill; j is an attitude. Fractions are proper fractions and mixed numbers with denominators up to 12. Multiplication and division by a whole number, a fraction and a mixed number are separate skills because the errors differ. Number sequences with fractions (h, i) come from the same outcome words as whole-number sequences. Official outcomes a to h are tested; i (create sequences with fractions) is 'kicd_read' and has a skill; j is an attitude. Fractions are proper fractions and mixed numbers with denominators up to 12. Multiplication and division by a whole number, a fraction and a mixed number are separate skills because the errors differ. Number sequences with fractions (h, i) come from the same outcome words as whole-number sequences. Official outcomes a to h are tested; i (create sequences with fractions) is 'kicd_read' and has a skill; j is an attitude. Fractions are proper fractions and mixed numbers with denominators up to 12. Multiplication and division by a whole number, a fraction and a mixed number are separate skills because the errors differ. Number sequences with fractions (h, i) come from the same outcome words as whole-number sequences. Official outcomes a to h are tested; i (create sequences with fractions) is 'kicd_read' and has a skill; j is an attitude. Fractions are proper fractions and mixed numbers with denominators up to 12. Multiplication and division by a whole number, a fraction and a mixed number are separate skills because the errors differ. Number sequences with fractions (h, i) come from the same outcome words as whole-number sequences. Official outcomes a to h are tested; i (create sequences with fractions) is 'kicd_read' and has a skill; j is an attitude. Fractions are proper fractions and mixed numbers with denominators up to 12. Multiplication and division by a whole number, a fraction and a mixed number are separate skills because the errors differ. Number sequences with fractions (h, i) come from the same outcome words as whole-number sequences. Official outcomes a to h are tested; i (create sequences with fractions) is 'kicd_read' and has a skill; j is an attitude. Fractions are proper fractions and mixed numbers with denominators up to 12. Multiplication and division by a whole number, a fraction and a mixed number are separate skills because the errors differ. Number sequences with fractions (h, i) come from the same outcome words as whole-number sequences. Official outcomes a to h are tested; i (create sequences with fractions) is 'kicd_read' and has a skill; j is an attitude. Fractions are proper fractions and mixed numbers with denominators up to 12. Multiplication and division by a whole number, a fraction and a mixed number are separate skills because the errors differ. Number sequences with fractions (h, i) come from the same outcome words as whole-number sequences. Official outcomes a to h are tested; i (create sequences with fractions) is 'kicd_read' and has a skill; j is an attitude. Fractions are proper fractions and mixed numbers with denominators up to 12. Multiplication and division by a whole number, a fraction and a mixed number are separate skills because the errors differ. Number sequences with fractions (h, i) come from the same outcome words as whole-number sequences. Official outcomes a to h are tested; i (create sequences with fractions) is 'kicd_read' and has a skill; j is an attitude. Fractions are proper fractions and mixed numbers with denominators up to 12. Multiplication and division by a whole number, a fraction and a mixed number are separate skills because the errors differ. Number sequences with fractions (h, i) come from the same outcome words as whole-number sequences. Official outcomes a to h are tested; i (create sequences with fractions) is 'kicd_read' and has a skill; j is an attitude. Fractions are proper fractions and mixed numbers with denominators up to 12. Multiplication and division by a whole number, a fraction and a mixed number are separate skills because the errors differ. Number sequences with fractions (h, i) come from the same outcome words as whole-number sequences. Official outcomes a to h are tested; i (create sequences with fractions) is 'kicd_read' and has a skill; j is an attitude. Fractions are proper fractions and mixed numbers with denominators up to 12. Multiplication and division by a whole number, a fraction and a mixed number are separate skills because the errors differ. Number sequences with fractions (h, i) come from the same outcome words as whole-number sequences. Official outcomes a to h are tested; i (create sequences with fractions) is 'kicd_read' and has a skill; j is an attitude. Fractions are proper fractions and mixed numbers with denominators up to 12. Multiplication and division by a whole number, a fraction and a mixed number are separate skills because the errors differ. Number sequences with fractions (h, i) come from the same outcome words as whole-number sequences.",
+   "design_notes": "Official outcomes a to h are tested; i (create sequences with fractions) is 'kicd_read' and has a skill; j is an attitude. Fractions are proper fractions and mixed numbers with denominators up to 12. Multiplication and division by a whole number, a fraction and a mixed number are separate skills because the errors differ. Number sequences with fractions (h, i) come from the same outcome words as whole-number sequences. Official outcomes a to h are tested; i (create sequences with fractions) is 'kicd_read' and has a skill; j is an attitude. Fractions are proper fractions and mixed numbers with denominators up to 12. Multiplication and division by a whole number, a fraction and a mixed number are separate skills because the errors differ. Number sequences with fractions (h, i) come from the same outcome words as whole-number sequences. Official outcomes a to h are tested; i (create sequences with fractions) is 'kicd_read' and has a skill; j is an attitude. Fractions are proper fractions and mixed numbers with denominators up to 12. Multiplication and division by a whole number, a fraction and a mixed number are separate skills because the errors differ. Number sequences with fractions (h, i) come from the same outcome words as whole-number sequences. Official outcomes a to h are tested; i (create sequences with fractions) is 'kicd_read' and has a skill; j is an attitude. Fractions are proper fractions and mixed numbers with denominators up to 12. Multiplication and division by a whole number, a fraction and a mixed number are separate skills because the errors differ. Number sequences with fractions (h, i) come from the same outcome words as whole-number sequences. Official outcomes a to h are tested; i (create sequences with fractions) is 'kicd_read' and has a skill; j is an attitude. Fractions are proper fractions and mixed numbers with denominators up to 12. Multiplication and division by a whole number, a fraction and a mixed number are separate skills because the errors differ. Number sequences with fractions (h, i) come from the same outcome words as whole-number sequences. Official outcomes a to h are tested; i (create sequences with fractions) is 'kicd_read' and has a skill; j is an attitude. Fractions are proper fractions and mixed numbers with denominators up to 12. Multiplication and division by a whole number, a fraction and a mixed number are separate skills because the errors differ. Number sequences with fractions (h, i) come from the same outcome words as whole-number sequences. Official outcomes a to h are tested; i (create sequences with fractions) is 'kicd_read' and has a skill; j is an attitude. Fractions are proper fractions and mixed numbers with denominators up to 12. Multiplication and division by a whole number, a fraction and a mixed number are separate skills because the errors differ. Number sequences with fractions (h, i) come from the same outcome words as whole-number sequences. Official outcomes a to h are tested; i (create sequences with fractions) is 'kicd_read' and has a skill; j is an attitude. Fractions are proper fractions and mixed numbers with denominators up to 12. Multiplication and division by a whole number, a fraction and a mixed number are separate skills because the errors differ. Number sequences with fractions (h, i) come from the same outcome words as whole-number sequences. Official outcomes a to h are tested; i (create sequences with fractions) is 'kicd_read' and has a skill; j is an attitude. Fractions are proper fractions and mixed numbers with denominators up to 12. Multiplication and division by a whole number, a fraction and a mixed number are separate skills because the errors differ. Number sequences with fractions (h, i) come from the same outcome words as whole-number sequences. Official outcomes a to h are tested; i (create sequences with fractions) is 'kicd_read' and has a skill; j is an attitude. Fractions are proper fractions and mixed numbers with denominators up to 12. Multiplication and division by a whole number, a fraction and a mixed number are separate skills because the errors differ. Number sequences with fractions (h, i) come from the same outcome words as whole-number sequences. Official outcomes a to h are tested; i (create sequences with fractions) is 'kicd_read' and has a skill; j is an attitude. Fractions are proper fractions and mixed numbers with denominators up to 12. Multiplication and division by a whole number, a fraction and a mixed number are separate skills because the errors differ. Number sequences with fractions (h, i) come from the same outcome words as whole-number sequences. Official outcomes a to h are tested; i (create sequences with fractions) is 'kicd_read' and has a skill; j is an attitude. Fractions are proper fractions and mixed numbers with denominators up to 12. Multiplication and division by a whole number, a fraction and a mixed number are separate skills because the errors differ. Number sequences with fractions (h, i) come from the same outcome words as whole-number sequences. Official outcomes a to h are tested; i (create sequences with fractions) is 'kicd_read' and has a skill; j is an attitude. Fractions are proper fractions and mixed numbers with denominators up to 12. Multiplication and division by a whole number, a fraction and a mixed number are separate skills because the errors differ. Number sequences with fractions (h, i) come from the same outcome words as whole-number sequences.",
    "source": {
     "grade_page": "https://kicd.ac.ke/cbc-materials/curriculum-designs/grade-seven-designs/",
     "design": "KICD-Grade7-Mathematics-Curriculum-Design.pdf",
@@ -3741,7 +3741,7 @@
    "values": "",
    "pcis": "",
    "links": "",
-   "design_notes": "Official outcomes a to c are tested; d is an attitude. Decimals go to thousandths. Multiplication and division are by a whole number and by a decimal, separate skills because the errors differ (a lost point, the wrong operation, moving the point in one number only). Official outcomes a to c are tested; d is an attitude. Decimals go to thousandths. Multiplication and division are by a whole number and by a decimal, separate skills because the errors differ (a lost point, the wrong operation, moving the point in one number only). Official outcomes a to c are tested; d is an attitude. Decimals go to thousandths. Multiplication and division are by a whole number and by a decimal, separate skills because the errors differ (a lost point, the wrong operation, moving the point in one number only). Official outcomes a to c are tested; d is an attitude. Decimals go to thousandths. Multiplication and division are by a whole number and by a decimal, separate skills because the errors differ (a lost point, the wrong operation, moving the point in one number only). Official outcomes a to c are tested; d is an attitude. Decimals go to thousandths. Multiplication and division are by a whole number and by a decimal, separate skills because the errors differ (a lost point, the wrong operation, moving the point in one number only). Official outcomes a to c are tested; d is an attitude. Decimals go to thousandths. Multiplication and division are by a whole number and by a decimal, separate skills because the errors differ (a lost point, the wrong operation, moving the point in one number only). Official outcomes a to c are tested; d is an attitude. Decimals go to thousandths. Multiplication and division are by a whole number and by a decimal, separate skills because the errors differ (a lost point, the wrong operation, moving the point in one number only). Official outcomes a to c are tested; d is an attitude. Decimals go to thousandths. Multiplication and division are by a whole number and by a decimal, separate skills because the errors differ (a lost point, the wrong operation, moving the point in one number only). Official outcomes a to c are tested; d is an attitude. Decimals go to thousandths. Multiplication and division are by a whole number and by a decimal, separate skills because the errors differ (a lost point, the wrong operation, moving the point in one number only).",
+   "design_notes": "Official outcomes a to c are tested; d is an attitude. Decimals go to thousandths. Multiplication and division are by a whole number and by a decimal, separate skills because the errors differ (a lost point, the wrong operation, moving the point in one number only). Official outcomes a to c are tested; d is an attitude. Decimals go to thousandths. Multiplication and division are by a whole number and by a decimal, separate skills because the errors differ (a lost point, the wrong operation, moving the point in one number only). Official outcomes a to c are tested; d is an attitude. Decimals go to thousandths. Multiplication and division are by a whole number and by a decimal, separate skills because the errors differ (a lost point, the wrong operation, moving the point in one number only). Official outcomes a to c are tested; d is an attitude. Decimals go to thousandths. Multiplication and division are by a whole number and by a decimal, separate skills because the errors differ (a lost point, the wrong operation, moving the point in one number only). Official outcomes a to c are tested; d is an attitude. Decimals go to thousandths. Multiplication and division are by a whole number and by a decimal, separate skills because the errors differ (a lost point, the wrong operation, moving the point in one number only). Official outcomes a to c are tested; d is an attitude. Decimals go to thousandths. Multiplication and division are by a whole number and by a decimal, separate skills because the errors differ (a lost point, the wrong operation, moving the point in one number only). Official outcomes a to c are tested; d is an attitude. Decimals go to thousandths. Multiplication and division are by a whole number and by a decimal, separate skills because the errors differ (a lost point, the wrong operation, moving the point in one number only). Official outcomes a to c are tested; d is an attitude. Decimals go to thousandths. Multiplication and division are by a whole number and by a decimal, separate skills because the errors differ (a lost point, the wrong operation, moving the point in one number only). Official outcomes a to c are tested; d is an attitude. Decimals go to thousandths. Multiplication and division are by a whole number and by a decimal, separate skills because the errors differ (a lost point, the wrong operation, moving the point in one number only). Official outcomes a to c are tested; d is an attitude. Decimals go to thousandths. Multiplication and division are by a whole number and by a decimal, separate skills because the errors differ (a lost point, the wrong operation, moving the point in one number only).",
    "source": {
     "grade_page": "https://kicd.ac.ke/cbc-materials/curriculum-designs/grade-seven-designs/",
     "design": "KICD-Grade7-Mathematics-Curriculum-Design.pdf",
@@ -4453,7 +4453,7 @@
    "values": "",
    "pcis": "",
    "links": "",
-   "design_notes": "Official outcomes a and b are tested; c is an attitude. Square roots are of perfect squares only (outcome b). One skill places a root between two whole numbers using perfect squares as anchors: it is a way of checking a root and is kept, with its limit named. Squares and roots in the Grade 6 map go up to 100 and 10,000. Official outcomes a and b are tested; c is an attitude. Square roots are of perfect squares only (outcome b). One skill places a root between two whole numbers using perfect squares as anchors: it is a way of checking a root and is kept, with its limit named. Squares and roots in the Grade 6 map go up to 100 and 10,000. Official outcomes a and b are tested; c is an attitude. Square roots are of perfect squares only (outcome b). One skill places a root between two whole numbers using perfect squares as anchors: it is a way of checking a root and is kept, with its limit named. Squares and roots in the Grade 6 map go up to 100 and 10,000. Official outcomes a and b are tested; c is an attitude. Square roots are of perfect squares only (outcome b). One skill places a root between two whole numbers using perfect squares as anchors: it is a way of checking a root and is kept, with its limit named. Squares and roots in the Grade 6 map go up to 100 and 10,000. Official outcomes a and b are tested; c is an attitude. Square roots are of perfect squares only (outcome b). One skill places a root between two whole numbers using perfect squares as anchors: it is a way of checking a root and is kept, with its limit named. Squares and roots in the Grade 6 map go up to 100 and 10,000. Official outcomes a and b are tested; c is an attitude. Square roots are of perfect squares only (outcome b). One skill places a root between two whole numbers using perfect squares as anchors: it is a way of checking a root and is kept, with its limit named. Squares and roots in the Grade 6 map go up to 100 and 10,000. Official outcomes a and b are tested; c is an attitude. Square roots are of perfect squares only (outcome b). One skill places a root between two whole numbers using perfect squares as anchors: it is a way of checking a root and is kept, with its limit named. Squares and roots in the Grade 6 map go up to 100 and 10,000. Official outcomes a and b are tested; c is an attitude. Square roots are of perfect squares only (outcome b). One skill places a root between two whole numbers using perfect squares as anchors: it is a way of checking a root and is kept, with its limit named. Squares and roots in the Grade 6 map go up to 100 and 10,000. Official outcomes a and b are tested; c is an attitude. Square roots are of perfect squares only (outcome b). One skill places a root between two whole numbers using perfect squares as anchors: it is a way of checking a root and is kept, with its limit named. Squares and roots in the Grade 6 map go up to 100 and 10,000.",
+   "design_notes": "Official outcomes a and b are tested; c is an attitude. Square roots are of perfect squares only (outcome b). One skill places a root between two whole numbers using perfect squares as anchors: it is a way of checking a root and is kept, with its limit named. Squares and roots in the Grade 6 map go up to 100 and 10,000. Official outcomes a and b are tested; c is an attitude. Square roots are of perfect squares only (outcome b). One skill places a root between two whole numbers using perfect squares as anchors: it is a way of checking a root and is kept, with its limit named. Squares and roots in the Grade 6 map go up to 100 and 10,000. Official outcomes a and b are tested; c is an attitude. Square roots are of perfect squares only (outcome b). One skill places a root between two whole numbers using perfect squares as anchors: it is a way of checking a root and is kept, with its limit named. Squares and roots in the Grade 6 map go up to 100 and 10,000. Official outcomes a and b are tested; c is an attitude. Square roots are of perfect squares only (outcome b). One skill places a root between two whole numbers using perfect squares as anchors: it is a way of checking a root and is kept, with its limit named. Squares and roots in the Grade 6 map go up to 100 and 10,000. Official outcomes a and b are tested; c is an attitude. Square roots are of perfect squares only (outcome b). One skill places a root between two whole numbers using perfect squares as anchors: it is a way of checking a root and is kept, with its limit named. Squares and roots in the Grade 6 map go up to 100 and 10,000. Official outcomes a and b are tested; c is an attitude. Square roots are of perfect squares only (outcome b). One skill places a root between two whole numbers using perfect squares as anchors: it is a way of checking a root and is kept, with its limit named. Squares and roots in the Grade 6 map go up to 100 and 10,000. Official outcomes a and b are tested; c is an attitude. Square roots are of perfect squares only (outcome b). One skill places a root between two whole numbers using perfect squares as anchors: it is a way of checking a root and is kept, with its limit named. Squares and roots in the Grade 6 map go up to 100 and 10,000. Official outcomes a and b are tested; c is an attitude. Square roots are of perfect squares only (outcome b). One skill places a root between two whole numbers using perfect squares as anchors: it is a way of checking a root and is kept, with its limit named. Squares and roots in the Grade 6 map go up to 100 and 10,000. Official outcomes a and b are tested; c is an attitude. Square roots are of perfect squares only (outcome b). One skill places a root between two whole numbers using perfect squares as anchors: it is a way of checking a root and is kept, with its limit named. Squares and roots in the Grade 6 map go up to 100 and 10,000. Official outcomes a and b are tested; c is an attitude. Square roots are of perfect squares only (outcome b). One skill places a root between two whole numbers using perfect squares as anchors: it is a way of checking a root and is kept, with its limit named. Squares and roots in the Grade 6 map go up to 100 and 10,000.",
    "source": {
     "grade_page": "https://kicd.ac.ke/cbc-materials/curriculum-designs/grade-seven-designs/",
     "design": "KICD-Grade7-Mathematics-Curriculum-Design.pdf",
@@ -5164,7 +5164,7 @@
    "values": "",
    "pcis": "",
    "links": "",
-   "design_notes": "Official outcomes a to c are tested; d is an attitude. Forming expressions (a, b) is split by the kind of situation (a rate plus a fixed amount, relations between people, words such as \"3 more than\"); simplifying (c) is collecting like terms and removing a bracket multiplied by a number. Letters stand for numbers. Official outcomes a to c are tested; d is an attitude. Forming expressions (a, b) is split by the kind of situation (a rate plus a fixed amount, relations between people, words such as \"3 more than\"); simplifying (c) is collecting like terms and removing a bracket multiplied by a number. Letters stand for numbers. Official outcomes a to c are tested; d is an attitude. Forming expressions (a, b) is split by the kind of situation (a rate plus a fixed amount, relations between people, words such as \"3 more than\"); simplifying (c) is collecting like terms and removing a bracket multiplied by a number. Letters stand for numbers. Official outcomes a to c are tested; d is an attitude. Forming expressions (a, b) is split by the kind of situation (a rate plus a fixed amount, relations between people, words such as \"3 more than\"); simplifying (c) is collecting like terms and removing a bracket multiplied by a number. Letters stand for numbers. Official outcomes a to c are tested; d is an attitude. Forming expressions (a, b) is split by the kind of situation (a rate plus a fixed amount, relations between people, words such as \"3 more than\"); simplifying (c) is collecting like terms and removing a bracket multiplied by a number. Letters stand for numbers. Official outcomes a to c are tested; d is an attitude. Forming expressions (a, b) is split by the kind of situation (a rate plus a fixed amount, relations between people, words such as \"3 more than\"); simplifying (c) is collecting like terms and removing a bracket multiplied by a number. Letters stand for numbers. Official outcomes a to c are tested; d is an attitude. Forming expressions (a, b) is split by the kind of situation (a rate plus a fixed amount, relations between people, words such as \"3 more than\"); simplifying (c) is collecting like terms and removing a bracket multiplied by a number. Letters stand for numbers. Official outcomes a to c are tested; d is an attitude. Forming expressions (a, b) is split by the kind of situation (a rate plus a fixed amount, relations between people, words such as \"3 more than\"); simplifying (c) is collecting like terms and removing a bracket multiplied by a number. Letters stand for numbers.",
+   "design_notes": "Official outcomes a to c are tested; d is an attitude. Forming expressions (a, b) is split by the kind of situation (a rate plus a fixed amount, relations between people, words such as \"3 more than\"); simplifying (c) is collecting like terms and removing a bracket multiplied by a number. Letters stand for numbers. Official outcomes a to c are tested; d is an attitude. Forming expressions (a, b) is split by the kind of situation (a rate plus a fixed amount, relations between people, words such as \"3 more than\"); simplifying (c) is collecting like terms and removing a bracket multiplied by a number. Letters stand for numbers. Official outcomes a to c are tested; d is an attitude. Forming expressions (a, b) is split by the kind of situation (a rate plus a fixed amount, relations between people, words such as \"3 more than\"); simplifying (c) is collecting like terms and removing a bracket multiplied by a number. Letters stand for numbers. Official outcomes a to c are tested; d is an attitude. Forming expressions (a, b) is split by the kind of situation (a rate plus a fixed amount, relations between people, words such as \"3 more than\"); simplifying (c) is collecting like terms and removing a bracket multiplied by a number. Letters stand for numbers. Official outcomes a to c are tested; d is an attitude. Forming expressions (a, b) is split by the kind of situation (a rate plus a fixed amount, relations between people, words such as \"3 more than\"); simplifying (c) is collecting like terms and removing a bracket multiplied by a number. Letters stand for numbers. Official outcomes a to c are tested; d is an attitude. Forming expressions (a, b) is split by the kind of situation (a rate plus a fixed amount, relations between people, words such as \"3 more than\"); simplifying (c) is collecting like terms and removing a bracket multiplied by a number. Letters stand for numbers. Official outcomes a to c are tested; d is an attitude. Forming expressions (a, b) is split by the kind of situation (a rate plus a fixed amount, relations between people, words such as \"3 more than\"); simplifying (c) is collecting like terms and removing a bracket multiplied by a number. Letters stand for numbers. Official outcomes a to c are tested; d is an attitude. Forming expressions (a, b) is split by the kind of situation (a rate plus a fixed amount, relations between people, words such as \"3 more than\"); simplifying (c) is collecting like terms and removing a bracket multiplied by a number. Letters stand for numbers. Official outcomes a to c are tested; d is an attitude. Forming expressions (a, b) is split by the kind of situation (a rate plus a fixed amount, relations between people, words such as \"3 more than\"); simplifying (c) is collecting like terms and removing a bracket multiplied by a number. Letters stand for numbers.",
    "source": {
     "grade_page": "https://kicd.ac.ke/cbc-materials/curriculum-designs/grade-seven-designs/",
     "design": "KICD-Grade7-Mathematics-Curriculum-Design.pdf",
@@ -5706,7 +5706,7 @@
    "values": "",
    "pcis": "",
    "links": "",
-   "design_notes": "Official outcomes a to c are tested; d is an attitude. Linear equations in one unknown: forming from stories, solving with one or two steps and with the unknown on both sides, explaining why the same is done to both sides, and applying them (ages, charges, equal boxes). Grade 5 had one- and two-step equations with whole numbers. Official outcomes a to c are tested; d is an attitude. Linear equations in one unknown: forming from stories, solving with one or two steps and with the unknown on both sides, explaining why the same is done to both sides, and applying them (ages, charges, equal boxes). Grade 5 had one- and two-step equations with whole numbers. Official outcomes a to c are tested; d is an attitude. Linear equations in one unknown: forming from stories, solving with one or two steps and with the unknown on both sides, explaining why the same is done to both sides, and applying them (ages, charges, equal boxes). Grade 5 had one- and two-step equations with whole numbers. Official outcomes a to c are tested; d is an attitude. Linear equations in one unknown: forming from stories, solving with one or two steps and with the unknown on both sides, explaining why the same is done to both sides, and applying them (ages, charges, equal boxes). Grade 5 had one- and two-step equations with whole numbers. Official outcomes a to c are tested; d is an attitude. Linear equations in one unknown: forming from stories, solving with one or two steps and with the unknown on both sides, explaining why the same is done to both sides, and applying them (ages, charges, equal boxes). Grade 5 had one- and two-step equations with whole numbers. Official outcomes a to c are tested; d is an attitude. Linear equations in one unknown: forming from stories, solving with one or two steps and with the unknown on both sides, explaining why the same is done to both sides, and applying them (ages, charges, equal boxes). Grade 5 had one- and two-step equations with whole numbers. Official outcomes a to c are tested; d is an attitude. Linear equations in one unknown: forming from stories, solving with one or two steps and with the unknown on both sides, explaining why the same is done to both sides, and applying them (ages, charges, equal boxes). Grade 5 had one- and two-step equations with whole numbers. Official outcomes a to c are tested; d is an attitude. Linear equations in one unknown: forming from stories, solving with one or two steps and with the unknown on both sides, explaining why the same is done to both sides, and applying them (ages, charges, equal boxes). Grade 5 had one- and two-step equations with whole numbers.",
+   "design_notes": "Official outcomes a to c are tested; d is an attitude. Linear equations in one unknown: forming from stories, solving with one or two steps and with the unknown on both sides, explaining why the same is done to both sides, and applying them (ages, charges, equal boxes). Grade 5 had one- and two-step equations with whole numbers. Official outcomes a to c are tested; d is an attitude. Linear equations in one unknown: forming from stories, solving with one or two steps and with the unknown on both sides, explaining why the same is done to both sides, and applying them (ages, charges, equal boxes). Grade 5 had one- and two-step equations with whole numbers. Official outcomes a to c are tested; d is an attitude. Linear equations in one unknown: forming from stories, solving with one or two steps and with the unknown on both sides, explaining why the same is done to both sides, and applying them (ages, charges, equal boxes). Grade 5 had one- and two-step equations with whole numbers. Official outcomes a to c are tested; d is an attitude. Linear equations in one unknown: forming from stories, solving with one or two steps and with the unknown on both sides, explaining why the same is done to both sides, and applying them (ages, charges, equal boxes). Grade 5 had one- and two-step equations with whole numbers. Official outcomes a to c are tested; d is an attitude. Linear equations in one unknown: forming from stories, solving with one or two steps and with the unknown on both sides, explaining why the same is done to both sides, and applying them (ages, charges, equal boxes). Grade 5 had one- and two-step equations with whole numbers. Official outcomes a to c are tested; d is an attitude. Linear equations in one unknown: forming from stories, solving with one or two steps and with the unknown on both sides, explaining why the same is done to both sides, and applying them (ages, charges, equal boxes). Grade 5 had one- and two-step equations with whole numbers. Official outcomes a to c are tested; d is an attitude. Linear equations in one unknown: forming from stories, solving with one or two steps and with the unknown on both sides, explaining why the same is done to both sides, and applying them (ages, charges, equal boxes). Grade 5 had one- and two-step equations with whole numbers. Official outcomes a to c are tested; d is an attitude. Linear equations in one unknown: forming from stories, solving with one or two steps and with the unknown on both sides, explaining why the same is done to both sides, and applying them (ages, charges, equal boxes). Grade 5 had one- and two-step equations with whole numbers. Official outcomes a to c are tested; d is an attitude. Linear equations in one unknown: forming from stories, solving with one or two steps and with the unknown on both sides, explaining why the same is done to both sides, and applying them (ages, charges, equal boxes). Grade 5 had one- and two-step equations with whole numbers.",
    "source": {
     "grade_page": "https://kicd.ac.ke/cbc-materials/curriculum-designs/grade-seven-designs/",
     "design": "KICD-Grade7-Mathematics-Curriculum-Design.pdf",
@@ -6411,7 +6411,7 @@
    "values": "",
    "pcis": "",
    "links": "",
-   "design_notes": "Official outcomes a to c are tested; d is an attitude. Sides are whole numbers from Pythagorean triples (3, 4, 5; 5, 12, 13; 8, 15, 17 and their multiples) so every root is exact. Grade 7 meets the relationship for the first time: the prerequisites are squares, roots and right angles. Official outcomes a to c are tested; d is an attitude. Sides are whole numbers from Pythagorean triples (3, 4, 5; 5, 12, 13; 8, 15, 17 and their multiples) so every root is exact. Grade 7 meets the relationship for the first time: the prerequisites are squares, roots and right angles. Official outcomes a to c are tested; d is an attitude. Sides are whole numbers from Pythagorean triples (3, 4, 5; 5, 12, 13; 8, 15, 17 and their multiples) so every root is exact. Grade 7 meets the relationship for the first time: the prerequisites are squares, roots and right angles. Official outcomes a to c are tested; d is an attitude. Sides are whole numbers from Pythagorean triples (3, 4, 5; 5, 12, 13; 8, 15, 17 and their multiples) so every root is exact. Grade 7 meets the relationship for the first time: the prerequisites are squares, roots and right angles. Official outcomes a to c are tested; d is an attitude. Sides are whole numbers from Pythagorean triples (3, 4, 5; 5, 12, 13; 8, 15, 17 and their multiples) so every root is exact. Grade 7 meets the relationship for the first time: the prerequisites are squares, roots and right angles. Official outcomes a to c are tested; d is an attitude. Sides are whole numbers from Pythagorean triples (3, 4, 5; 5, 12, 13; 8, 15, 17 and their multiples) so every root is exact. Grade 7 meets the relationship for the first time: the prerequisites are squares, roots and right angles.",
+   "design_notes": "Official outcomes a to c are tested; d is an attitude. Sides are whole numbers from Pythagorean triples (3, 4, 5; 5, 12, 13; 8, 15, 17 and their multiples) so every root is exact. Grade 7 meets the relationship for the first time: the prerequisites are squares, roots and right angles. Official outcomes a to c are tested; d is an attitude. Sides are whole numbers from Pythagorean triples (3, 4, 5; 5, 12, 13; 8, 15, 17 and their multiples) so every root is exact. Grade 7 meets the relationship for the first time: the prerequisites are squares, roots and right angles. Official outcomes a to c are tested; d is an attitude. Sides are whole numbers from Pythagorean triples (3, 4, 5; 5, 12, 13; 8, 15, 17 and their multiples) so every root is exact. Grade 7 meets the relationship for the first time: the prerequisites are squares, roots and right angles. Official outcomes a to c are tested; d is an attitude. Sides are whole numbers from Pythagorean triples (3, 4, 5; 5, 12, 13; 8, 15, 17 and their multiples) so every root is exact. Grade 7 meets the relationship for the first time: the prerequisites are squares, roots and right angles. Official outcomes a to c are tested; d is an attitude. Sides are whole numbers from Pythagorean triples (3, 4, 5; 5, 12, 13; 8, 15, 17 and their multiples) so every root is exact. Grade 7 meets the relationship for the first time: the prerequisites are squares, roots and right angles. Official outcomes a to c are tested; d is an attitude. Sides are whole numbers from Pythagorean triples (3, 4, 5; 5, 12, 13; 8, 15, 17 and their multiples) so every root is exact. Grade 7 meets the relationship for the first time: the prerequisites are squares, roots and right angles. Official outcomes a to c are tested; d is an attitude. Sides are whole numbers from Pythagorean triples (3, 4, 5; 5, 12, 13; 8, 15, 17 and their multiples) so every root is exact. Grade 7 meets the relationship for the first time: the prerequisites are squares, roots and right angles.",
    "source": {
     "grade_page": "https://kicd.ac.ke/cbc-materials/curriculum-designs/grade-seven-designs/",
     "design": "KICD-Grade7-Mathematics-Curriculum-Design.pdf",
@@ -6900,7 +6900,7 @@
    "values": "",
    "pcis": "",
    "links": "",
-   "design_notes": "Official outcomes a to d are tested; e is an attitude. Units are mm, cm, dm, m, Dm and Hm (1 Dm = 10 m, 1 Hm = 100 m). Perimeter covers rectangles, L-shapes and posts round a plot; circumference uses pi = 22/7 or 3.14 as the question says. Area and the circle area are in the Area sub-strand. Official outcomes a to d are tested; e is an attitude. Units are mm, cm, dm, m, Dm and Hm (1 Dm = 10 m, 1 Hm = 100 m). Perimeter covers rectangles, L-shapes and posts round a plot; circumference uses pi = 22/7 or 3.14 as the question says. Area and the circle area are in the Area sub-strand. Official outcomes a to d are tested; e is an attitude. Units are mm, cm, dm, m, Dm and Hm (1 Dm = 10 m, 1 Hm = 100 m). Perimeter covers rectangles, L-shapes and posts round a plot; circumference uses pi = 22/7 or 3.14 as the question says. Area and the circle area are in the Area sub-strand. Official outcomes a to d are tested; e is an attitude. Units are mm, cm, dm, m, Dm and Hm (1 Dm = 10 m, 1 Hm = 100 m). Perimeter covers rectangles, L-shapes and posts round a plot; circumference uses pi = 22/7 or 3.14 as the question says. Area and the circle area are in the Area sub-strand. Official outcomes a to d are tested; e is an attitude. Units are mm, cm, dm, m, Dm and Hm (1 Dm = 10 m, 1 Hm = 100 m). Perimeter covers rectangles, L-shapes and posts round a plot; circumference uses pi = 22/7 or 3.14 as the question says. Area and the circle area are in the Area sub-strand.",
+   "design_notes": "Official outcomes a to d are tested; e is an attitude. Units are mm, cm, dm, m, Dm and Hm (1 Dm = 10 m, 1 Hm = 100 m). Perimeter covers rectangles, L-shapes and posts round a plot; circumference uses pi = 22/7 or 3.14 as the question says. Area and the circle area are in the Area sub-strand. Official outcomes a to d are tested; e is an attitude. Units are mm, cm, dm, m, Dm and Hm (1 Dm = 10 m, 1 Hm = 100 m). Perimeter covers rectangles, L-shapes and posts round a plot; circumference uses pi = 22/7 or 3.14 as the question says. Area and the circle area are in the Area sub-strand. Official outcomes a to d are tested; e is an attitude. Units are mm, cm, dm, m, Dm and Hm (1 Dm = 10 m, 1 Hm = 100 m). Perimeter covers rectangles, L-shapes and posts round a plot; circumference uses pi = 22/7 or 3.14 as the question says. Area and the circle area are in the Area sub-strand. Official outcomes a to d are tested; e is an attitude. Units are mm, cm, dm, m, Dm and Hm (1 Dm = 10 m, 1 Hm = 100 m). Perimeter covers rectangles, L-shapes and posts round a plot; circumference uses pi = 22/7 or 3.14 as the question says. Area and the circle area are in the Area sub-strand. Official outcomes a to d are tested; e is an attitude. Units are mm, cm, dm, m, Dm and Hm (1 Dm = 10 m, 1 Hm = 100 m). Perimeter covers rectangles, L-shapes and posts round a plot; circumference uses pi = 22/7 or 3.14 as the question says. Area and the circle area are in the Area sub-strand. Official outcomes a to d are tested; e is an attitude. Units are mm, cm, dm, m, Dm and Hm (1 Dm = 10 m, 1 Hm = 100 m). Perimeter covers rectangles, L-shapes and posts round a plot; circumference uses pi = 22/7 or 3.14 as the question says. Area and the circle area are in the Area sub-strand.",
    "source": {
     "grade_page": "https://kicd.ac.ke/cbc-materials/curriculum-designs/grade-seven-designs/",
     "design": "KICD-Grade7-Mathematics-Curriculum-Design.pdf",
@@ -7994,7 +7994,7 @@
    "values": "",
    "pcis": "",
    "links": "",
-   "design_notes": "",
+   "design_notes": "Official outcomes a to f are tested; g (reflect on the use of time, distance and speed) is 'kicd_read' and an attitude. Speed is distance divided by time. The 24-hour clock is used for timetables. Conversion between km/h and m/s uses 3.6. Minutes are never written as hundredths of an hour.",
    "source": {
     "grade_page": "https://kicd.ac.ke/cbc-materials/curriculum-designs/grade-seven-designs/",
     "design": "KICD-Grade7-Mathematics-Curriculum-Design.pdf",
@@ -8048,8 +8048,748 @@
      "status": "kicd_read"
     }
    ],
-   "skills": [],
-   "misconceptions": []
+   "skills": [
+    {
+     "code": "MATH.G7.MEASUR.TIME_DISTANCE_AND_SPEED.TIME_UNITS_CONVERT",
+     "name": "Convert between seconds, minutes and hours",
+     "outcomes": [
+      "MATH.G7.MEASUR.TIME_DISTANCE_AND_SPEED.a",
+      "MATH.G7.MEASUR.TIME_DISTANCE_AND_SPEED.b"
+     ],
+     "mastery": "The child changes seconds to minutes and hours (60 and 3,600) and back, writes a time such as 8,400 seconds as hours and minutes (2 h 20 min), and never treats an hour as 100 minutes.",
+     "question_forms": [
+      "seconds to hours and minutes",
+      "minutes to hours",
+      "whole hours and minutes left",
+      "find the mistake"
+     ],
+     "thinking": [
+      "procedure"
+     ],
+     "horeb_skill_ids": [
+      "G7_SPEED"
+     ],
+     "prerequisites": [
+      {
+       "requires": "MATH.G5.MEASUR.TIME.CONVERT_SEC_TO_MIN",
+       "kind": "skill",
+       "strength": "essential",
+       "reason": "Grade 5 changed seconds to minutes.",
+       "status": "proposed"
+      },
+      {
+       "requires": "MATH.G5.MEASUR.TIME.MINUTE_SECOND_RELATION",
+       "kind": "skill",
+       "strength": "essential",
+       "reason": "There are 60 seconds in a minute.",
+       "status": "proposed"
+      }
+     ],
+     "status": "proposed"
+    },
+    {
+     "code": "MATH.G7.MEASUR.TIME_DISTANCE_AND_SPEED.TIMETABLE_DURATION",
+     "name": "Find the time a vehicle is moving from a 24-hour timetable",
+     "outcomes": [
+      "MATH.G7.MEASUR.TIME_DISTANCE_AND_SPEED.a",
+      "MATH.G7.MEASUR.TIME_DISTANCE_AND_SPEED.b"
+     ],
+     "mastery": "The child reads a timetable on the 24-hour clock, finds the time of each leg, leaves out the waiting time at a stop, and gives the moving time in minutes.",
+     "question_forms": [
+      "moving time from a timetable",
+      "waiting time",
+      "length of one leg",
+      "whole journey including the stop"
+     ],
+     "thinking": [
+      "procedure"
+     ],
+     "horeb_skill_ids": [
+      "G7_SPEED"
+     ],
+     "prerequisites": [
+      {
+       "requires": "MATH.G6.MEASUR.TIME.TRAVEL_TIMETABLE",
+       "kind": "skill",
+       "strength": "essential",
+       "reason": "Grade 6 read travel timetables.",
+       "status": "proposed"
+      },
+      {
+       "requires": "MATH.G6.MEASUR.TIME.CONVERT_12_24",
+       "kind": "skill",
+       "strength": "essential",
+       "reason": "The 24-hour clock.",
+       "status": "proposed"
+      }
+     ],
+     "status": "proposed"
+    },
+    {
+     "code": "MATH.G7.MEASUR.TIME_DISTANCE_AND_SPEED.DISTANCE_UNITS_CONVERT",
+     "name": "Convert and combine distances in metres and kilometres",
+     "outcomes": [
+      "MATH.G7.MEASUR.TIME_DISTANCE_AND_SPEED.c"
+     ],
+     "mastery": "The child changes metres to kilometres (divide by 1,000) and back, finds a total distance such as laps or a return trip over several days, and answers in the unit asked.",
+     "question_forms": [
+      "laps in kilometres",
+      "to and from school for a week",
+      "both ways",
+      "answer in the right unit"
+     ],
+     "thinking": [
+      "procedure"
+     ],
+     "horeb_skill_ids": [
+      "G7_SPEED"
+     ],
+     "prerequisites": [
+      {
+       "requires": "MATH.G5.MEASUR.LENGTH.CONVERT_M_TO_KM",
+       "kind": "skill",
+       "strength": "essential",
+       "reason": "Grade 5 changed metres to kilometres.",
+       "status": "proposed"
+      },
+      {
+       "requires": "MATH.G5.MEASUR.LENGTH.KM_M_RELATIONSHIP",
+       "kind": "skill",
+       "strength": "essential",
+       "reason": "1,000 m = 1 km.",
+       "status": "proposed"
+      }
+     ],
+     "status": "proposed"
+    },
+    {
+     "code": "MATH.G7.MEASUR.TIME_DISTANCE_AND_SPEED.SPEED_FROM_DISTANCE_TIME",
+     "name": "Work out speed in km/h from a distance and a time in hours and minutes",
+     "outcomes": [
+      "MATH.G7.MEASUR.TIME_DISTANCE_AND_SPEED.d",
+      "MATH.G7.MEASUR.TIME_DISTANCE_AND_SPEED.e"
+     ],
+     "mastery": "The child changes the time to hours (75 min is 1.25 h, with minutes out of 60), divides the distance by it, and does not multiply or invert; a timetable gives the time between two 24-hour readings.",
+     "question_forms": [
+      "speed of a matatu",
+      "speed from a timetable",
+      "minutes to hours",
+      "find the mistake"
+     ],
+     "thinking": [
+      "procedure"
+     ],
+     "horeb_skill_ids": [
+      "G7_SPEED"
+     ],
+     "prerequisites": [
+      {
+       "requires": "MATH.G7.MEASUR.TIME_DISTANCE_AND_SPEED.TIME_UNITS_CONVERT",
+       "kind": "skill",
+       "strength": "essential",
+       "reason": "Minutes to hours.",
+       "status": "proposed"
+      },
+      {
+       "requires": "MATH.G7.NUMBER.DECIMALS.DIV_DEC_BY_WHOLE",
+       "kind": "skill",
+       "strength": "essential",
+       "reason": "Dividing to get a decimal speed.",
+       "status": "proposed"
+      }
+     ],
+     "status": "proposed"
+    },
+    {
+     "code": "MATH.G7.MEASUR.TIME_DISTANCE_AND_SPEED.TIME_FROM_SPEED",
+     "name": "Work out the time of a journey from the distance and the speed",
+     "outcomes": [
+      "MATH.G7.MEASUR.TIME_DISTANCE_AND_SPEED.d",
+      "MATH.G7.MEASUR.TIME_DISTANCE_AND_SPEED.e"
+     ],
+     "mastery": "The child finds time as distance divided by speed, and changes a decimal number of hours to minutes by multiplying the decimal part by 60 (2.5 h = 150 min).",
+     "question_forms": [
+      "time in hours",
+      "time in minutes",
+      "decimal hours to minutes",
+      "find the mistake"
+     ],
+     "thinking": [
+      "procedure"
+     ],
+     "horeb_skill_ids": [
+      "G7_SPEED"
+     ],
+     "prerequisites": [
+      {
+       "requires": "MATH.G7.MEASUR.TIME_DISTANCE_AND_SPEED.SPEED_FROM_DISTANCE_TIME",
+       "kind": "skill",
+       "strength": "essential",
+       "reason": "The same relation turned round.",
+       "status": "proposed"
+      },
+      {
+       "requires": "MATH.G7.MEASUR.TIME_DISTANCE_AND_SPEED.TIME_UNITS_CONVERT",
+       "kind": "skill",
+       "strength": "essential",
+       "reason": "Hours to minutes.",
+       "status": "proposed"
+      }
+     ],
+     "status": "proposed"
+    },
+    {
+     "code": "MATH.G7.MEASUR.TIME_DISTANCE_AND_SPEED.AVERAGE_SPEED_TWO_LEGS",
+     "name": "Work out the average speed over two parts of a journey",
+     "outcomes": [
+      "MATH.G7.MEASUR.TIME_DISTANCE_AND_SPEED.e"
+     ],
+     "mastery": "The child finds the time of each part (distance divided by speed), adds them, and divides the total distance by the total time; the slower part takes longer, so the average is not halfway between the speeds.",
+     "question_forms": [
+      "time of each part",
+      "average speed",
+      "why not the middle",
+      "total time"
+     ],
+     "thinking": [
+      "procedure",
+      "reasoning"
+     ],
+     "horeb_skill_ids": [
+      "G7_SPEED"
+     ],
+     "prerequisites": [
+      {
+       "requires": "MATH.G7.MEASUR.TIME_DISTANCE_AND_SPEED.TIME_FROM_SPEED",
+       "kind": "skill",
+       "strength": "essential",
+       "reason": "Time of each leg.",
+       "status": "proposed"
+      },
+      {
+       "requires": "MATH.G7.NUMBER.WHOLE_NUMBERS.OPERATIONS_IN_CONTEXT",
+       "kind": "skill",
+       "strength": "helpful",
+       "reason": "Several steps in order.",
+       "status": "proposed"
+      }
+     ],
+     "status": "proposed"
+    },
+    {
+     "code": "MATH.G7.MEASUR.TIME_DISTANCE_AND_SPEED.SPEED_UNITS_CONVERT",
+     "name": "Convert speed between km/h and m/s",
+     "outcomes": [
+      "MATH.G7.MEASUR.TIME_DISTANCE_AND_SPEED.f"
+     ],
+     "mastery": "The child changes km/h to m/s by multiplying by 1,000 and dividing by 3,600 (divide by 3.6), and m/s to km/h by multiplying by 3.6, and explains why an hour has 3,600 seconds.",
+     "question_forms": [
+      "km/h to m/s",
+      "m/s to km/h",
+      "why divide by 3,600",
+      "find speed in m/s from metres and seconds"
+     ],
+     "thinking": [
+      "procedure",
+      "reasoning"
+     ],
+     "horeb_skill_ids": [
+      "G7_SPEED"
+     ],
+     "prerequisites": [
+      {
+       "requires": "MATH.G7.MEASUR.TIME_DISTANCE_AND_SPEED.SPEED_FROM_DISTANCE_TIME",
+       "kind": "skill",
+       "strength": "essential",
+       "reason": "Speed from distance and time.",
+       "status": "proposed"
+      },
+      {
+       "requires": "MATH.G7.MEASUR.TIME_DISTANCE_AND_SPEED.DISTANCE_UNITS_CONVERT",
+       "kind": "skill",
+       "strength": "essential",
+       "reason": "m and km.",
+       "status": "proposed"
+      },
+      {
+       "requires": "MATH.G7.MEASUR.TIME_DISTANCE_AND_SPEED.TIME_UNITS_CONVERT",
+       "kind": "skill",
+       "strength": "essential",
+       "reason": "Seconds and hours.",
+       "status": "proposed"
+      }
+     ],
+     "status": "proposed"
+    },
+    {
+     "code": "MATH.G7.MEASUR.TIME_DISTANCE_AND_SPEED.SPEED_COMPARE_MIXED_UNITS",
+     "name": "Compare speeds given in different units",
+     "outcomes": [
+      "MATH.G7.MEASUR.TIME_DISTANCE_AND_SPEED.f"
+     ],
+     "mastery": "The child changes all speeds to km/h (or all to m/s) before saying which is fastest, and does not compare a number in m/s with a number in km/h.",
+     "question_forms": [
+      "which is fastest",
+      "order three speeds",
+      "same unit first",
+      "change m/s to km/h"
+     ],
+     "thinking": [
+      "reasoning",
+      "procedure"
+     ],
+     "horeb_skill_ids": [
+      "G7_SPEED"
+     ],
+     "prerequisites": [
+      {
+       "requires": "MATH.G7.MEASUR.TIME_DISTANCE_AND_SPEED.SPEED_UNITS_CONVERT",
+       "kind": "skill",
+       "strength": "essential",
+       "reason": "The conversion comes first.",
+       "status": "proposed"
+      }
+     ],
+     "status": "proposed"
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "MATH.G7.MEASUR.TIME_DISTANCE_AND_SPEED.TIME_UNITS_CONVERT.M_MINUTE_AS_HUNDRED",
+     "skill": "MATH.G7.MEASUR.TIME_DISTANCE_AND_SPEED.TIME_UNITS_CONVERT",
+     "error": "Treats a minute as 100 seconds.",
+     "example": {
+      "question": "8,400 seconds in minutes",
+      "wrong_answer": "84",
+      "correct_answer": "140"
+     },
+     "cause": "Uses hundreds like money.",
+     "reveals": "The answer 84 as a wrong option, with a reason that names the idea.",
+     "help": "There are 60 seconds in a minute.",
+     "source": "to be confirmed by a teacher (no source yet)",
+     "status": "draft"
+    },
+    {
+     "code": "MATH.G7.MEASUR.TIME_DISTANCE_AND_SPEED.TIME_UNITS_CONVERT.M_HOUR_AS_HUNDRED_MINUTES",
+     "skill": "MATH.G7.MEASUR.TIME_DISTANCE_AND_SPEED.TIME_UNITS_CONVERT",
+     "error": "Treats an hour as 100 minutes.",
+     "example": {
+      "question": "140 minutes in hours",
+      "wrong_answer": "1.4 hours",
+      "correct_answer": "2 hours 20 minutes"
+     },
+     "cause": "Uses decimals as if an hour had 100 minutes.",
+     "reveals": "The answer 1.4 hours as a wrong option, with a reason that names the idea.",
+     "help": "There are 60 minutes in an hour.",
+     "source": "to be confirmed by a teacher (no source yet)",
+     "status": "draft"
+    },
+    {
+     "code": "MATH.G7.MEASUR.TIME_DISTANCE_AND_SPEED.TIME_UNITS_CONVERT.M_CONVERT_DIRECTION_REVERSED",
+     "skill": "MATH.G7.MEASUR.TIME_DISTANCE_AND_SPEED.TIME_UNITS_CONVERT",
+     "error": "Multiplies when changing to a bigger unit.",
+     "example": {
+      "question": "8,400 seconds in minutes",
+      "wrong_answer": "504,000",
+      "correct_answer": "140"
+     },
+     "cause": "Thinks changing unit always means multiply.",
+     "reveals": "The answer 504,000 as a wrong option, with a reason that names the idea.",
+     "help": "A minute is bigger than a second, so there are fewer minutes.",
+     "source": "to be confirmed by a teacher (no source yet)",
+     "status": "draft"
+    },
+    {
+     "code": "MATH.G7.MEASUR.TIME_DISTANCE_AND_SPEED.TIME_UNITS_CONVERT.M_ONE_PER_WHOLE_HOUR",
+     "skill": "MATH.G7.MEASUR.TIME_DISTANCE_AND_SPEED.TIME_UNITS_CONVERT",
+     "error": "Takes away 1 minute for every whole hour instead of 60.",
+     "example": {
+      "question": "140 minutes: minutes left after the whole hours",
+      "wrong_answer": "138",
+      "correct_answer": "20"
+     },
+     "cause": "Subtracts the number of hours.",
+     "reveals": "The answer 138 as a wrong option, with a reason that names the idea.",
+     "help": "Each whole hour uses 60 minutes.",
+     "source": "to be confirmed by a teacher (no source yet)",
+     "status": "draft"
+    },
+    {
+     "code": "MATH.G7.MEASUR.TIME_DISTANCE_AND_SPEED.TIMETABLE_DURATION.M_WAIT_TIME_COUNTED",
+     "skill": "MATH.G7.MEASUR.TIME_DISTANCE_AND_SPEED.TIMETABLE_DURATION",
+     "error": "Counts the time the bus waits as moving time.",
+     "example": {
+      "question": "Nairobi 08:00, Naivasha 09:50 to 10:05, Nakuru 11:15: moving minutes",
+      "wrong_answer": "195",
+      "correct_answer": "180"
+     },
+     "cause": "Subtracts the first and last times only.",
+     "reveals": "The answer 195 as a wrong option, with a reason that names the idea.",
+     "help": "The bus is not moving while it waits.",
+     "source": "to be confirmed by a teacher (no source yet)",
+     "status": "draft"
+    },
+    {
+     "code": "MATH.G7.MEASUR.TIME_DISTANCE_AND_SPEED.TIMETABLE_DURATION.M_FIRST_LEG_ONLY",
+     "skill": "MATH.G7.MEASUR.TIME_DISTANCE_AND_SPEED.TIMETABLE_DURATION",
+     "error": "Gives the first part of the journey only.",
+     "example": {
+      "question": "Moving time Nairobi to Nakuru",
+      "wrong_answer": "110",
+      "correct_answer": "180"
+     },
+     "cause": "Stops after the first leg.",
+     "reveals": "The answer 110 as a wrong option, with a reason that names the idea.",
+     "help": "Add both moving parts.",
+     "source": "to be confirmed by a teacher (no source yet)",
+     "status": "draft"
+    },
+    {
+     "code": "MATH.G7.MEASUR.TIME_DISTANCE_AND_SPEED.TIMETABLE_DURATION.M_SECOND_LEG_ONLY",
+     "skill": "MATH.G7.MEASUR.TIME_DISTANCE_AND_SPEED.TIMETABLE_DURATION",
+     "error": "Gives the second part of the journey only.",
+     "example": {
+      "question": "Moving time Nairobi to Nakuru",
+      "wrong_answer": "70",
+      "correct_answer": "180"
+     },
+     "cause": "Uses the last leg.",
+     "reveals": "The answer 70 as a wrong option, with a reason that names the idea.",
+     "help": "Add both moving parts.",
+     "source": "to be confirmed by a teacher (no source yet)",
+     "status": "draft"
+    },
+    {
+     "code": "MATH.G7.MEASUR.TIME_DISTANCE_AND_SPEED.DISTANCE_UNITS_CONVERT.M_ANSWER_UNIT_NOT_CONVERTED_DIST",
+     "skill": "MATH.G7.MEASUR.TIME_DISTANCE_AND_SPEED.DISTANCE_UNITS_CONVERT",
+     "error": "Leaves the answer in metres when kilometres are asked.",
+     "example": {
+      "question": "10 laps of 400 m in kilometres",
+      "wrong_answer": "4,000",
+      "correct_answer": "4"
+     },
+     "cause": "Stops in the unit of the working.",
+     "reveals": "The answer 4,000 as a wrong option, with a reason that names the idea.",
+     "help": "Divide by 1,000.",
+     "source": "to be confirmed by a teacher (no source yet)",
+     "status": "draft"
+    },
+    {
+     "code": "MATH.G7.MEASUR.TIME_DISTANCE_AND_SPEED.DISTANCE_UNITS_CONVERT.M_HUNDRED_METRES_IN_KM",
+     "skill": "MATH.G7.MEASUR.TIME_DISTANCE_AND_SPEED.DISTANCE_UNITS_CONVERT",
+     "error": "Uses 100 m for a kilometre.",
+     "example": {
+      "question": "4,000 m in km",
+      "wrong_answer": "40",
+      "correct_answer": "4"
+     },
+     "cause": "Mixes up km with hm.",
+     "reveals": "The answer 40 as a wrong option, with a reason that names the idea.",
+     "help": "1 km = 1,000 m.",
+     "source": "to be confirmed by a teacher (no source yet)",
+     "status": "draft"
+    },
+    {
+     "code": "MATH.G7.MEASUR.TIME_DISTANCE_AND_SPEED.DISTANCE_UNITS_CONVERT.M_DIVIDED_TOO_FAR",
+     "skill": "MATH.G7.MEASUR.TIME_DISTANCE_AND_SPEED.DISTANCE_UNITS_CONVERT",
+     "error": "Divides by 10,000 instead of 1,000.",
+     "example": {
+      "question": "4,000 m in km",
+      "wrong_answer": "0.4",
+      "correct_answer": "4"
+     },
+     "cause": "Counts one zero too many.",
+     "reveals": "The answer 0.4 as a wrong option, with a reason that names the idea.",
+     "help": "Move the point three places.",
+     "source": "to be confirmed by a teacher (no source yet)",
+     "status": "draft"
+    },
+    {
+     "code": "MATH.G7.MEASUR.TIME_DISTANCE_AND_SPEED.DISTANCE_UNITS_CONVERT.M_ONE_WAY_ONLY",
+     "skill": "MATH.G7.MEASUR.TIME_DISTANCE_AND_SPEED.DISTANCE_UNITS_CONVERT",
+     "error": "Counts only the way to school.",
+     "example": {
+      "question": "450 m each way, 5 days: km in a week",
+      "wrong_answer": "2.25",
+      "correct_answer": "4.5"
+     },
+     "cause": "Ignores the way home.",
+     "reveals": "The answer 2.25 as a wrong option, with a reason that names the idea.",
+     "help": "Count both ways.",
+     "source": "to be confirmed by a teacher (no source yet)",
+     "status": "draft"
+    },
+    {
+     "code": "MATH.G7.MEASUR.TIME_DISTANCE_AND_SPEED.SPEED_FROM_DISTANCE_TIME.M_MINUTE_AS_HUNDRED_TIME",
+     "skill": "MATH.G7.MEASUR.TIME_DISTANCE_AND_SPEED.SPEED_FROM_DISTANCE_TIME",
+     "error": "Writes minutes as hundredths of an hour.",
+     "example": {
+      "question": "60 km in 1 hour 15 minutes",
+      "wrong_answer": "52.17 km/h",
+      "correct_answer": "48 km/h"
+     },
+     "cause": "Writes 1.15 hours.",
+     "reveals": "The answer 52.17 km/h as a wrong option, with a reason that names the idea.",
+     "help": "15 minutes is 0.25 hour.",
+     "source": "to be confirmed by a teacher (no source yet)",
+     "status": "draft"
+    },
+    {
+     "code": "MATH.G7.MEASUR.TIME_DISTANCE_AND_SPEED.SPEED_FROM_DISTANCE_TIME.M_TIME_OVER_DISTANCE",
+     "skill": "MATH.G7.MEASUR.TIME_DISTANCE_AND_SPEED.SPEED_FROM_DISTANCE_TIME",
+     "error": "Divides the time by the distance.",
+     "example": {
+      "question": "60 km in 1.25 h",
+      "wrong_answer": "0.8",
+      "correct_answer": "48"
+     },
+     "cause": "Divides the smaller by the bigger.",
+     "reveals": "The answer 0.8 as a wrong option, with a reason that names the idea.",
+     "help": "Speed = distance divided by time.",
+     "source": "to be confirmed by a teacher (no source yet)",
+     "status": "draft"
+    },
+    {
+     "code": "MATH.G7.MEASUR.TIME_DISTANCE_AND_SPEED.SPEED_FROM_DISTANCE_TIME.M_SPEED_BY_MULTIPLYING",
+     "skill": "MATH.G7.MEASUR.TIME_DISTANCE_AND_SPEED.SPEED_FROM_DISTANCE_TIME",
+     "error": "Multiplies distance and time.",
+     "example": {
+      "question": "60 km in 1.25 h",
+      "wrong_answer": "75",
+      "correct_answer": "48"
+     },
+     "cause": "Sees two numbers and multiplies.",
+     "reveals": "The answer 75 as a wrong option, with a reason that names the idea.",
+     "help": "Speed is how far per hour: divide.",
+     "source": "to be confirmed by a teacher (no source yet)",
+     "status": "draft"
+    },
+    {
+     "code": "MATH.G7.MEASUR.TIME_DISTANCE_AND_SPEED.SPEED_FROM_DISTANCE_TIME.M_MINUTES_NOT_HOURS",
+     "skill": "MATH.G7.MEASUR.TIME_DISTANCE_AND_SPEED.SPEED_FROM_DISTANCE_TIME",
+     "error": "Uses minutes in the time for km/h.",
+     "example": {
+      "question": "40 km in 48 minutes: km/h",
+      "wrong_answer": "0.83",
+      "correct_answer": "50"
+     },
+     "cause": "Does not change the time to hours.",
+     "reveals": "The answer 0.83 as a wrong option, with a reason that names the idea.",
+     "help": "km/h needs the time in hours.",
+     "source": "to be confirmed by a teacher (no source yet)",
+     "status": "draft"
+    },
+    {
+     "code": "MATH.G7.MEASUR.TIME_DISTANCE_AND_SPEED.TIME_FROM_SPEED.M_HOURS_NOT_CONVERTED_TO_MINUTES",
+     "skill": "MATH.G7.MEASUR.TIME_DISTANCE_AND_SPEED.TIME_FROM_SPEED",
+     "error": "Gives the time in hours when minutes are asked.",
+     "example": {
+      "question": "200 km at 80 km/h: minutes",
+      "wrong_answer": "2.5",
+      "correct_answer": "150"
+     },
+     "cause": "Stops after dividing.",
+     "reveals": "The answer 2.5 as a wrong option, with a reason that names the idea.",
+     "help": "Multiply the hours by 60.",
+     "source": "to be confirmed by a teacher (no source yet)",
+     "status": "draft"
+    },
+    {
+     "code": "MATH.G7.MEASUR.TIME_DISTANCE_AND_SPEED.TIME_FROM_SPEED.M_DECIMAL_HOURS_AS_MINUTES",
+     "skill": "MATH.G7.MEASUR.TIME_DISTANCE_AND_SPEED.TIME_FROM_SPEED",
+     "error": "Writes the decimal part of an hour as minutes.",
+     "example": {
+      "question": "2.5 hours in minutes",
+      "wrong_answer": "2 hours 50 minutes (170)",
+      "correct_answer": "150"
+     },
+     "cause": "Reads 0.5 as 50 minutes.",
+     "reveals": "The answer 2 hours 50 minutes (170) as a wrong option, with a reason that names the idea.",
+     "help": "0.5 hour is half of 60 minutes: 30.",
+     "source": "to be confirmed by a teacher (no source yet)",
+     "status": "draft"
+    },
+    {
+     "code": "MATH.G7.MEASUR.TIME_DISTANCE_AND_SPEED.TIME_FROM_SPEED.M_TIME_BY_MULTIPLYING",
+     "skill": "MATH.G7.MEASUR.TIME_DISTANCE_AND_SPEED.TIME_FROM_SPEED",
+     "error": "Multiplies the distance by the speed to get time.",
+     "example": {
+      "question": "200 km at 80 km/h: time",
+      "wrong_answer": "16,000",
+      "correct_answer": "2.5 hours"
+     },
+     "cause": "Sees two numbers and multiplies.",
+     "reveals": "The answer 16,000 as a wrong option, with a reason that names the idea.",
+     "help": "Time = distance divided by speed.",
+     "source": "to be confirmed by a teacher (no source yet)",
+     "status": "draft"
+    },
+    {
+     "code": "MATH.G7.MEASUR.TIME_DISTANCE_AND_SPEED.AVERAGE_SPEED_TWO_LEGS.M_AVERAGE_OF_SPEEDS",
+     "skill": "MATH.G7.MEASUR.TIME_DISTANCE_AND_SPEED.AVERAGE_SPEED_TWO_LEGS",
+     "error": "Takes the middle of the two speeds as the average speed.",
+     "example": {
+      "question": "120 km at 30 km/h then 120 km at 20 km/h: average",
+      "wrong_answer": "25",
+      "correct_answer": "24"
+     },
+     "cause": "Adds the speeds and halves.",
+     "reveals": "The answer 25 as a wrong option, with a reason that names the idea.",
+     "help": "The slower part takes longer: use total distance divided by total time.",
+     "source": "to be confirmed by a teacher (no source yet)",
+     "status": "draft"
+    },
+    {
+     "code": "MATH.G7.MEASUR.TIME_DISTANCE_AND_SPEED.AVERAGE_SPEED_TWO_LEGS.M_TOTAL_DISTANCE_ONLY",
+     "skill": "MATH.G7.MEASUR.TIME_DISTANCE_AND_SPEED.AVERAGE_SPEED_TWO_LEGS",
+     "error": "Divides the total distance by only one of the times.",
+     "example": {
+      "question": "Total 240 km: 4 h and 6 h. Average?",
+      "wrong_answer": "60",
+      "correct_answer": "24"
+     },
+     "cause": "Forgets to add the times.",
+     "reveals": "The answer 60 as a wrong option, with a reason that names the idea.",
+     "help": "Total time is 10 hours.",
+     "source": "to be confirmed by a teacher (no source yet)",
+     "status": "draft"
+    },
+    {
+     "code": "MATH.G7.MEASUR.TIME_DISTANCE_AND_SPEED.SPEED_UNITS_CONVERT.M_HOUR_AS_SIXTY_SECONDS",
+     "skill": "MATH.G7.MEASUR.TIME_DISTANCE_AND_SPEED.SPEED_UNITS_CONVERT",
+     "error": "Uses 60 seconds for an hour.",
+     "example": {
+      "question": "90 km/h in m/s",
+      "wrong_answer": "1.5",
+      "correct_answer": "25"
+     },
+     "cause": "Mixes seconds in a minute with seconds in an hour.",
+     "reveals": "The answer 1.5 as a wrong option, with a reason that names the idea.",
+     "help": "An hour has 3,600 seconds.",
+     "source": "to be confirmed by a teacher (no source yet)",
+     "status": "draft"
+    },
+    {
+     "code": "MATH.G7.MEASUR.TIME_DISTANCE_AND_SPEED.SPEED_UNITS_CONVERT.M_CONVERSION_DIRECTION_REVERSED",
+     "skill": "MATH.G7.MEASUR.TIME_DISTANCE_AND_SPEED.SPEED_UNITS_CONVERT",
+     "error": "Multiplies by 3.6 when changing km/h to m/s.",
+     "example": {
+      "question": "90 km/h in m/s",
+      "wrong_answer": "324",
+      "correct_answer": "25"
+     },
+     "cause": "Uses the factor in the wrong direction.",
+     "reveals": "The answer 324 as a wrong option, with a reason that names the idea.",
+     "help": "Going to m/s gives a smaller number: divide by 3.6.",
+     "source": "to be confirmed by a teacher (no source yet)",
+     "status": "draft"
+    },
+    {
+     "code": "MATH.G7.MEASUR.TIME_DISTANCE_AND_SPEED.SPEED_UNITS_CONVERT.M_KM_TO_M_DIVIDED",
+     "skill": "MATH.G7.MEASUR.TIME_DISTANCE_AND_SPEED.SPEED_UNITS_CONVERT",
+     "error": "Divides by 1,000 to change km to m.",
+     "example": {
+      "question": "90 km/h in m/s",
+      "wrong_answer": "0.09",
+      "correct_answer": "25"
+     },
+     "cause": "Changes the length unit the wrong way.",
+     "reveals": "The answer 0.09 as a wrong option, with a reason that names the idea.",
+     "help": "A km is bigger than a m: multiply.",
+     "source": "to be confirmed by a teacher (no source yet)",
+     "status": "draft"
+    },
+    {
+     "code": "MATH.G7.MEASUR.TIME_DISTANCE_AND_SPEED.SPEED_UNITS_CONVERT.M_KM_AS_HUNDRED_M",
+     "skill": "MATH.G7.MEASUR.TIME_DISTANCE_AND_SPEED.SPEED_UNITS_CONVERT",
+     "error": "Says a kilometre is 100 metres.",
+     "example": {
+      "question": "72 km/h in m/s: why multiply by 1,000?",
+      "wrong_answer": "a km is 100 m",
+      "correct_answer": "a km is 1,000 m"
+     },
+     "cause": "Mixes km and hm.",
+     "reveals": "The answer a km is 100 m as a wrong option, with a reason that names the idea.",
+     "help": "1 km = 1,000 m.",
+     "source": "to be confirmed by a teacher (no source yet)",
+     "status": "draft"
+    },
+    {
+     "code": "MATH.G7.MEASUR.TIME_DISTANCE_AND_SPEED.SPEED_UNITS_CONVERT.M_UNITS_ADDED",
+     "skill": "MATH.G7.MEASUR.TIME_DISTANCE_AND_SPEED.SPEED_UNITS_CONVERT",
+     "error": "Adds the numbers of the units instead of multiplying and dividing.",
+     "example": {
+      "question": "72 km/h in m/s: add 1,000 and 60?",
+      "wrong_answer": "add",
+      "correct_answer": "multiply and divide"
+     },
+     "cause": "Treats conversion as a sum.",
+     "reveals": "The answer add as a wrong option, with a reason that names the idea.",
+     "help": "Multiply by the size of the new small unit and divide by the new big one.",
+     "source": "to be confirmed by a teacher (no source yet)",
+     "status": "draft"
+    },
+    {
+     "code": "MATH.G7.MEASUR.TIME_DISTANCE_AND_SPEED.SPEED_UNITS_CONVERT.M_TIME_UNIT_NOT_CHANGED",
+     "skill": "MATH.G7.MEASUR.TIME_DISTANCE_AND_SPEED.SPEED_UNITS_CONVERT",
+     "error": "Changes only the distance unit and leaves the hour.",
+     "example": {
+      "question": "72 km/h in m/s: only multiply by 1,000",
+      "wrong_answer": "only multiply",
+      "correct_answer": "also divide by 3,600"
+     },
+     "cause": "Forgets the time part of the unit.",
+     "reveals": "The answer only multiply as a wrong option, with a reason that names the idea.",
+     "help": "The unit has a time part: hours to seconds.",
+     "source": "to be confirmed by a teacher (no source yet)",
+     "status": "draft"
+    },
+    {
+     "code": "MATH.G7.MEASUR.TIME_DISTANCE_AND_SPEED.SPEED_UNITS_CONVERT.M_UNIT_NOT_CONVERTED_TO_KM",
+     "skill": "MATH.G7.MEASUR.TIME_DISTANCE_AND_SPEED.SPEED_UNITS_CONVERT",
+     "error": "Leaves the distance in metres when km/h is asked.",
+     "example": {
+      "question": "25 m/s in km/h",
+      "wrong_answer": "90,000",
+      "correct_answer": "90"
+     },
+     "cause": "Stops in metres.",
+     "reveals": "The answer 90,000 as a wrong option, with a reason that names the idea.",
+     "help": "Divide by 1,000 for km.",
+     "source": "to be confirmed by a teacher (no source yet)",
+     "status": "draft"
+    },
+    {
+     "code": "MATH.G7.MEASUR.TIME_DISTANCE_AND_SPEED.SPEED_COMPARE_MIXED_UNITS.M_MS_NUMBER_TAKEN_AS_KMH",
+     "skill": "MATH.G7.MEASUR.TIME_DISTANCE_AND_SPEED.SPEED_COMPARE_MIXED_UNITS",
+     "error": "Takes a speed in m/s as if it were in km/h.",
+     "example": {
+      "question": "Fastest of 45 km/h, 10 m/s, 15 km/h",
+      "wrong_answer": "10 m/s",
+      "correct_answer": "45 km/h"
+     },
+     "cause": "Compares the numbers only.",
+     "reveals": "The answer 10 m/s as a wrong option, with a reason that names the idea.",
+     "help": "Change m/s to km/h: multiply by 3.6.",
+     "source": "to be confirmed by a teacher (no source yet)",
+     "status": "draft"
+    },
+    {
+     "code": "MATH.G7.MEASUR.TIME_DISTANCE_AND_SPEED.SPEED_COMPARE_MIXED_UNITS.M_SPEEDS_COMPARED_WITHOUT_SAME_UNIT",
+     "skill": "MATH.G7.MEASUR.TIME_DISTANCE_AND_SPEED.SPEED_COMPARE_MIXED_UNITS",
+     "error": "Picks the fastest without changing to the same unit.",
+     "example": {
+      "question": "Fastest of 45 km/h, 10 m/s, 15 km/h",
+      "wrong_answer": "15 km/h",
+      "correct_answer": "45 km/h"
+     },
+     "cause": "Chooses by guess.",
+     "reveals": "The answer 15 km/h as a wrong option, with a reason that names the idea.",
+     "help": "Put all speeds in one unit first.",
+     "source": "to be confirmed by a teacher (no source yet)",
+     "status": "draft"
+    }
+   ]
   },
   {
    "code": "MATH.G7.MEASUR.TEMPERATURE",
@@ -8086,7 +8826,7 @@
    "values": "",
    "pcis": "",
    "links": "",
-   "design_notes": "Official outcomes a to e are tested. Outcome f (use IT devices to read temperatures, 'kicd_read') and g (recognise changes) are not questions. Temperatures below zero are used (Mount Kenya at dawn), so integers with signs appear here for the first time in the Grade 7 map. Kelvin is the Celsius reading plus 273. Official outcomes a to e are tested. Outcome f (use IT devices to read temperatures, 'kicd_read') and g (recognise changes) are not questions. Temperatures below zero are used (Mount Kenya at dawn), so integers with signs appear here for the first time in the Grade 7 map. Kelvin is the Celsius reading plus 273. Official outcomes a to e are tested. Outcome f (use IT devices to read temperatures, 'kicd_read') and g (recognise changes) are not questions. Temperatures below zero are used (Mount Kenya at dawn), so integers with signs appear here for the first time in the Grade 7 map. Kelvin is the Celsius reading plus 273. Official outcomes a to e are tested. Outcome f (use IT devices to read temperatures, 'kicd_read') and g (recognise changes) are not questions. Temperatures below zero are used (Mount Kenya at dawn), so integers with signs appear here for the first time in the Grade 7 map. Kelvin is the Celsius reading plus 273.",
+   "design_notes": "Official outcomes a to e are tested. Outcome f (use IT devices to read temperatures, 'kicd_read') and g (recognise changes) are not questions. Temperatures below zero are used (Mount Kenya at dawn), so integers with signs appear here for the first time in the Grade 7 map. Kelvin is the Celsius reading plus 273. Official outcomes a to e are tested. Outcome f (use IT devices to read temperatures, 'kicd_read') and g (recognise changes) are not questions. Temperatures below zero are used (Mount Kenya at dawn), so integers with signs appear here for the first time in the Grade 7 map. Kelvin is the Celsius reading plus 273. Official outcomes a to e are tested. Outcome f (use IT devices to read temperatures, 'kicd_read') and g (recognise changes) are not questions. Temperatures below zero are used (Mount Kenya at dawn), so integers with signs appear here for the first time in the Grade 7 map. Kelvin is the Celsius reading plus 273. Official outcomes a to e are tested. Outcome f (use IT devices to read temperatures, 'kicd_read') and g (recognise changes) are not questions. Temperatures below zero are used (Mount Kenya at dawn), so integers with signs appear here for the first time in the Grade 7 map. Kelvin is the Celsius reading plus 273. Official outcomes a to e are tested. Outcome f (use IT devices to read temperatures, 'kicd_read') and g (recognise changes) are not questions. Temperatures below zero are used (Mount Kenya at dawn), so integers with signs appear here for the first time in the Grade 7 map. Kelvin is the Celsius reading plus 273.",
    "source": {
     "grade_page": "https://kicd.ac.ke/cbc-materials/curriculum-designs/grade-seven-designs/",
     "design": "KICD-Grade7-Mathematics-Curriculum-Design.pdf",
@@ -8844,7 +9584,7 @@
    "values": "",
    "pcis": "",
    "links": "",
-   "design_notes": "Official outcomes a to e are tested; f is an attitude. Construction is done on paper with a ruler and compasses, so a typed or tapped answer can test only the reasoning and the plan (which angle comes from which steps, which sides make a triangle); the drawing itself stays with the teacher. Angles that are multiples of 7.5 degrees come from 60 and 90 degrees by bisecting. Official outcomes a to e are tested; f is an attitude. Construction is done on paper with a ruler and compasses, so a typed or tapped answer can test only the reasoning and the plan (which angle comes from which steps, which sides make a triangle); the drawing itself stays with the teacher. Angles that are multiples of 7.5 degrees come from 60 and 90 degrees by bisecting. Official outcomes a to e are tested; f is an attitude. Construction is done on paper with a ruler and compasses, so a typed or tapped answer can test only the reasoning and the plan (which angle comes from which steps, which sides make a triangle); the drawing itself stays with the teacher. Angles that are multiples of 7.5 degrees come from 60 and 90 degrees by bisecting.",
+   "design_notes": "Official outcomes a to e are tested; f is an attitude. Construction is done on paper with a ruler and compasses, so a typed or tapped answer can test only the reasoning and the plan (which angle comes from which steps, which sides make a triangle); the drawing itself stays with the teacher. Angles that are multiples of 7.5 degrees come from 60 and 90 degrees by bisecting. Official outcomes a to e are tested; f is an attitude. Construction is done on paper with a ruler and compasses, so a typed or tapped answer can test only the reasoning and the plan (which angle comes from which steps, which sides make a triangle); the drawing itself stays with the teacher. Angles that are multiples of 7.5 degrees come from 60 and 90 degrees by bisecting. Official outcomes a to e are tested; f is an attitude. Construction is done on paper with a ruler and compasses, so a typed or tapped answer can test only the reasoning and the plan (which angle comes from which steps, which sides make a triangle); the drawing itself stays with the teacher. Angles that are multiples of 7.5 degrees come from 60 and 90 degrees by bisecting. Official outcomes a to e are tested; f is an attitude. Construction is done on paper with a ruler and compasses, so a typed or tapped answer can test only the reasoning and the plan (which angle comes from which steps, which sides make a triangle); the drawing itself stays with the teacher. Angles that are multiples of 7.5 degrees come from 60 and 90 degrees by bisecting.",
    "source": {
     "grade_page": "https://kicd.ac.ke/cbc-materials/curriculum-designs/grade-seven-designs/",
     "design": "KICD-Grade7-Mathematics-Curriculum-Design.pdf",

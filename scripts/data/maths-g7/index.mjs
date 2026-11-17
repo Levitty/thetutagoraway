@@ -10,4 +10,5 @@ import * as pythagoras from "./pythagoras.mjs";
 import * as length from "./length.mjs";
 import * as temperature from "./temperature.mjs";
 import * as construction from "./construction.mjs";
-export const SUBS = [whole, factors, fractions, decimals, squares, expressions, equations, pythagoras, length, temperature, construction];
+import * as speed from "./speed.mjs";
+export const SUBS = [whole, factors, fractions, decimals, squares, expressions, equations, pythagoras, length, temperature, construction, speed];
