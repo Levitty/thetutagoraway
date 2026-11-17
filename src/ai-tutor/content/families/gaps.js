@@ -62,23 +62,23 @@ export const FAMILIES = [
       hints: ['Think of the equals sign as a balance.', 'What keeps a balance level?'],
       steps: ['An equation is like a level balance.', 'Taking the same from both sides keeps it level.'],
     }) }),
-  fam({ id: 'g7.vol.box-carton', skill: 'G6_VOLUME_CUBOID', outcome: 'G7.VOL.c', rung: 2, form: 'word',
+  fam({ id: 'g7.vol.box-carton', skill: 'G6_VOLUME_CUBOID', outcome: 'MATH.G7.MEASUR.VOLUME_AND_CAPACITY.c', cskill: 'MATH.G7.MEASUR.VOLUME_AND_CAPACITY.VOLUME_CUBOID_CUBE', rung: 2, form: 'word',
     draw: () => { const l = pick([20, 30, 40]), w = pick([10, 15, 20]), h = pick([10, 20]), s = pick([2, 5, 10]); return l % s || w % s || h % s ? null : { l, w, h, s }; },
     make: ({ l, w, h, s }) => {
       const v = l * w * h, n = (l / s | 0) * (w / s | 0) * (h / s | 0);
       return { question: `A carton is ${l} cm long, ${w} cm wide and ${h} cm high. How many cubes of soap with edge ${s} cm pack it exactly?`,
         answer: n,
-        wrong: [[v, 'That is the volume of the carton in cm³. Each cube takes up more than 1 cm³.'], [round(v / s, 0), 'Divide by the volume of one cube, not by its edge.'], [round(l / s + w / s + h / s, 0), 'The rows, columns and layers are multiplied, not added.']],
+        wrong: [[v, 'That is the volume of the carton in cm³. Each cube takes up more than 1 cm³.', 'M_PACKED_VOLUME_FOR_COUNT'], [round(v / s, 0), 'Divide by the volume of one cube, not by its edge.', 'M_DIVIDED_BY_EDGE'], [round(l / s + w / s + h / s, 0), 'The rows, columns and layers are multiplied, not added.', 'M_ROWS_ADDED_NOT_MULTIPLIED']],
         hints: ['How many cubes fit along each edge?', 'Multiply the three numbers.'],
         steps: [`Along the length ${l / s}, across ${w / s}, up ${h / s}.`, `${l / s} × ${w / s} × ${h / s} = ${n} cubes.`] };
     },
     check: ({ l, w, h, s }, a) => a * s * s * s === l * w * h }),
-  fam({ id: 'g7.vol.find-height', skill: 'G6_VOLUME_CUBOID', outcome: 'G7.VOL.c', rung: 3, form: 'word',
+  fam({ id: 'g7.vol.find-height', skill: 'G6_VOLUME_CUBOID', outcome: 'MATH.G7.MEASUR.VOLUME_AND_CAPACITY.c', cskill: 'MATH.G7.MEASUR.VOLUME_AND_CAPACITY.VOLUME_CUBOID_CUBE', rung: 3, form: 'word',
     draw: () => { const l = pick([50, 60, 80]), w = pick([30, 40, 50]), h = pick([20, 25, 30, 40]); return { l, w, h }; },
     make: ({ l, w, h }) => ({
       question: `A cuboid water tank has a base ${l} cm by ${w} cm. Its volume is ${commas(l * w * h)} cm³. How high is the tank, in cm?`,
       answer: h,
-      wrong: [[l * w * h - l * w, 'The volume is length × width × height. To find the height, divide.'], [l + w, 'Multiply the length and width, then divide the volume by that.'], [round((l * w * h) / l, 0), 'Divide by the width as well as the length.']],
+      wrong: [[l * w * h - l * w, 'The volume is length × width × height. To find the height, divide.', 'M_MULTIPLIED_TO_FIND_HEIGHT'], [l + w, 'Multiply the length and width, then divide the volume by that.', 'M_BASE_SIDES_ADDED'], [round((l * w * h) / l, 0), 'Divide by the width as well as the length.', 'M_DIVIDED_BY_ONE_SIDE']],
       hints: ['Volume = base area × height.', 'Find the area of the base first.'],
       steps: [`Base area: ${l} × ${w} = ${commas(l * w)} cm².`, `Height: ${commas(l * w * h)} ÷ ${commas(l * w)} = ${h} cm.`],
     }),

@@ -99827,7 +99827,8 @@ var FAMILIES144 = [
   fam31({
     id: "g7.vol.box-carton",
     skill: "G6_VOLUME_CUBOID",
-    outcome: "G7.VOL.c",
+    outcome: "MATH.G7.MEASUR.VOLUME_AND_CAPACITY.c",
+    cskill: "MATH.G7.MEASUR.VOLUME_AND_CAPACITY.VOLUME_CUBOID_CUBE",
     rung: 2,
     form: "word",
     draw: () => {
@@ -99839,7 +99840,7 @@ var FAMILIES144 = [
       return {
         question: `A carton is ${l} cm long, ${w14} cm wide and ${h} cm high. How many cubes of soap with edge ${s} cm pack it exactly?`,
         answer: n,
-        wrong: [[v, "That is the volume of the carton in cm\xB3. Each cube takes up more than 1 cm\xB3."], [round(v / s, 0), "Divide by the volume of one cube, not by its edge."], [round(l / s + w14 / s + h / s, 0), "The rows, columns and layers are multiplied, not added."]],
+        wrong: [[v, "That is the volume of the carton in cm\xB3. Each cube takes up more than 1 cm\xB3.", "M_PACKED_VOLUME_FOR_COUNT"], [round(v / s, 0), "Divide by the volume of one cube, not by its edge.", "M_DIVIDED_BY_EDGE"], [round(l / s + w14 / s + h / s, 0), "The rows, columns and layers are multiplied, not added.", "M_ROWS_ADDED_NOT_MULTIPLIED"]],
         hints: ["How many cubes fit along each edge?", "Multiply the three numbers."],
         steps: [`Along the length ${l / s}, across ${w14 / s}, up ${h / s}.`, `${l / s} \xD7 ${w14 / s} \xD7 ${h / s} = ${n} cubes.`]
       };
@@ -99849,7 +99850,8 @@ var FAMILIES144 = [
   fam31({
     id: "g7.vol.find-height",
     skill: "G6_VOLUME_CUBOID",
-    outcome: "G7.VOL.c",
+    outcome: "MATH.G7.MEASUR.VOLUME_AND_CAPACITY.c",
+    cskill: "MATH.G7.MEASUR.VOLUME_AND_CAPACITY.VOLUME_CUBOID_CUBE",
     rung: 3,
     form: "word",
     draw: () => {
@@ -99859,7 +99861,7 @@ var FAMILIES144 = [
     make: ({ l, w: w14, h }) => ({
       question: `A cuboid water tank has a base ${l} cm by ${w14} cm. Its volume is ${commas(l * w14 * h)} cm\xB3. How high is the tank, in cm?`,
       answer: h,
-      wrong: [[l * w14 * h - l * w14, "The volume is length \xD7 width \xD7 height. To find the height, divide."], [l + w14, "Multiply the length and width, then divide the volume by that."], [round(l * w14 * h / l, 0), "Divide by the width as well as the length."]],
+      wrong: [[l * w14 * h - l * w14, "The volume is length \xD7 width \xD7 height. To find the height, divide.", "M_MULTIPLIED_TO_FIND_HEIGHT"], [l + w14, "Multiply the length and width, then divide the volume by that.", "M_BASE_SIDES_ADDED"], [round(l * w14 * h / l, 0), "Divide by the width as well as the length.", "M_DIVIDED_BY_ONE_SIDE"]],
       hints: ["Volume = base area \xD7 height.", "Find the area of the base first."],
       steps: [`Base area: ${l} \xD7 ${w14} = ${commas(l * w14)} cm\xB2.`, `Height: ${commas(l * w14 * h)} \xF7 ${commas(l * w14)} = ${h} cm.`]
     }),
@@ -133475,7 +133477,8 @@ var FAMILIES176 = [
   fam45({
     id: "g7.vol.why-million",
     skill: "G7_VOLUME_CUBOID",
-    outcome: "G7.VOL.a",
+    outcome: "MATH.G7.MEASUR.VOLUME_AND_CAPACITY.a",
+    cskill: "MATH.G7.MEASUR.VOLUME_AND_CAPACITY.CUBIC_UNIT_CONVERT",
     rung: 2,
     form: "why",
     draw: () => ({ p: person(), n: pick([2, 3, 5]) }),
@@ -133483,9 +133486,9 @@ var FAMILIES176 = [
       question: `${p.name} says that ${n} m\xB3 of sand is ${n * 100} cm\xB3, because 1 m = 100 cm. Why is ${p.she} wrong?`,
       options: [
         { text: "A cubic metre is a cube 100 cm by 100 cm by 100 cm, which holds 1,000,000 cm\xB3", right: true },
-        { text: "A cubic metre holds 10,000 cm\xB3, because it has two sides of 100 cm", right: false, why: "A cube has three dimensions. Multiply three lengths, not two." },
-        { text: `${n} m\xB3 is smaller than ${n * 100} cm\xB3 because metres are smaller than centimetres`, right: false, why: "A metre is longer than a centimetre, so a cubic metre is much bigger than a cubic centimetre." },
-        { text: "1 m = 100 cm, so the number is right and only the unit is wrong", right: false, why: "For volume you must use the 100 three times, once for each dimension." }
+        { text: "A cubic metre holds 10,000 cm\xB3, because it has two sides of 100 cm", right: false, why: "A cube has three dimensions. Multiply three lengths, not two.", mis: "M_TWO_DIMENSIONS_ONLY" },
+        { text: `${n} m\xB3 is smaller than ${n * 100} cm\xB3 because metres are smaller than centimetres`, right: false, why: "A metre is longer than a centimetre, so a cubic metre is much bigger than a cubic centimetre.", mis: "M_UNIT_SIZE_REVERSED_VOL" },
+        { text: "1 m = 100 cm, so the number is right and only the unit is wrong", right: false, why: "For volume you must use the 100 three times, once for each dimension.", mis: "M_NUMBER_NOT_CUBED" }
       ],
       hints: ["Picture a cube with sides 1 m long. Each side is 100 cm.", "Volume = length \xD7 width \xD7 height."],
       steps: ["1 m\xB3 = 100 cm \xD7 100 cm \xD7 100 cm = 1,000,000 cm\xB3.", `${n} m\xB3 = ${n} \xD7 1,000,000 = ${commas(n * 1e6)} cm\xB3.`]
@@ -133494,7 +133497,8 @@ var FAMILIES176 = [
   fam45({
     id: "g7.vol.spot-m3-cm3",
     skill: "G7_VOLUME_CUBOID",
-    outcome: "G7.VOL.a",
+    outcome: "MATH.G7.MEASUR.VOLUME_AND_CAPACITY.b",
+    cskill: "MATH.G7.MEASUR.VOLUME_AND_CAPACITY.CUBIC_UNIT_CONVERT",
     rung: 2,
     form: "spot",
     draw: () => ({ n: pick([2, 3, 4, 2.5, 3.5, 5]), p: person() }),
@@ -133508,6 +133512,7 @@ var FAMILIES176 = [
           { text: `${n} m\xB3 = ${n} \xD7 300 = ${commas(n * 300)} cm\xB3`, ok: n * 300 === n * bad2 },
           { text: `So ${n} m\xB3 is ${commas(n * 300)} cm\xB3.`, ok: n * 300 === n * 300 }
         ],
+        mis: "M_ADDED_NOT_MULTIPLIED_DIMS",
         fix: "A volume multiplies the three sides: 100 \xD7 100 \xD7 100. Adding them is wrong.",
         steps: ["1 m\xB3 = 100 \xD7 100 \xD7 100 = 1,000,000 cm\xB3.", `${n} m\xB3 = ${n} \xD7 1,000,000 = ${commas(n * good)} cm\xB3.`]
       };
@@ -133516,7 +133521,8 @@ var FAMILIES176 = [
   fam45({
     id: "g7.vol.blocks-in-cubic-metre",
     skill: "G7_VOLUME_CUBOID",
-    outcome: "G7.VOL.a",
+    outcome: "MATH.G7.MEASUR.VOLUME_AND_CAPACITY.b",
+    cskill: "MATH.G7.MEASUR.VOLUME_AND_CAPACITY.CUBIC_UNIT_CONVERT",
     rung: 2,
     form: "word",
     draw: () => {
@@ -133527,7 +133533,7 @@ var FAMILIES176 = [
     make: ({ a, b, c: c19, n, p }) => ({
       question: `${p.name} makes stone blocks. Each block is ${a} cm long, ${b} cm wide and ${c19} cm high. How many blocks have the same total volume as 1 m\xB3?`,
       answer: n,
-      wrong: [[n / 100, "Check how many cm\xB3 make 1 m\xB3. A cube has three dimensions, not two."], [n * 100, "Check how many cm\xB3 make 1 m\xB3. You multiply three lengths, each in cm."], [round(100 / a + 100 / b + 100 / c19, 3), "That adds the blocks along each side. Compare volumes instead."]],
+      wrong: [[n / 100, "That uses 10,000 cm\xB3 for a cubic metre. A cube has three dimensions, not two, so use 100 three times.", "M_TWO_DIMENSIONS_ONLY"], [n * 100, "That has one zero too many in the number of cm\xB3 in a cubic metre. Multiply three lengths, each 100 cm.", "M_ZEROS_MISCOUNTED_CUBIC"], [round(100 / a + 100 / b + 100 / c19, 3), "That adds the blocks along each side. Compare volumes instead.", "M_SIDES_COUNTED_NOT_VOLUMES"]],
       hints: ["Change 1 m\xB3 to cm\xB3.", "Find the volume of one block, then divide."],
       steps: [`1 m\xB3 = 1,000,000 cm\xB3. One block: ${a} \xD7 ${b} \xD7 ${c19} = ${commas(a * b * c19)} cm\xB3.`, `Blocks = ${commas(1e6)} \xF7 ${commas(a * b * c19)} = ${commas(n)}.`]
     }),
@@ -133536,7 +133542,8 @@ var FAMILIES176 = [
   fam45({
     id: "g7.vol.cube-edges",
     skill: "G7_VOLUME_CUBOID",
-    outcome: "G7.VOL.c",
+    outcome: "MATH.G7.MEASUR.VOLUME_AND_CAPACITY.c",
+    cskill: "MATH.G7.MEASUR.VOLUME_AND_CAPACITY.VOLUME_CUBOID_CUBE",
     rung: 3,
     form: "word",
     draw: () => {
@@ -133546,7 +133553,7 @@ var FAMILIES176 = [
     make: ({ s, E: E3, p }) => ({
       question: `${p.name} makes a cube-shaped box from wire. The wire along all 12 edges of the box is ${E3} cm long altogether. What is the volume of the box, in cm\xB3?`,
       answer: s * s * s,
-      wrong: [[E3 * E3 * E3, "That cubes the total wire. First find the length of one edge."], [(E3 / 6) ** 3, "A cube has 12 edges, not 6."], [s * s, "That is the area of one face. Multiply by the edge once more."]],
+      wrong: [[E3 * E3 * E3, "That cubes the total wire. First find the length of one edge.", "M_TOTAL_LENGTH_CUBED"], [(E3 / 6) ** 3, "A cube has 12 edges, not 6.", "M_EDGE_COUNT_WRONG"], [s * s, "That is the area of one face. Multiply by the edge once more.", "M_AREA_FOR_VOLUME"]],
       hints: ["A cube has 12 edges, all the same length.", "Find one edge, then multiply it by itself three times."],
       steps: [`One edge = ${E3} \xF7 12 = ${s} cm.`, `Volume = ${s} \xD7 ${s} \xD7 ${s} = ${s * s * s} cm\xB3.`]
     }),
@@ -133555,14 +133562,15 @@ var FAMILIES176 = [
   fam45({
     id: "g7.vol.cylinder-diameter",
     skill: "G7_VOLUME_CYLINDER",
-    outcome: "G7.VOL.c",
+    outcome: "MATH.G7.MEASUR.VOLUME_AND_CAPACITY.c",
+    cskill: "MATH.G7.MEASUR.VOLUME_AND_CAPACITY.VOLUME_CYLINDER",
     rung: 2,
     form: "word",
     draw: () => ({ d: pick([14, 28, 42]), h: randInt(5, 30), p: person() }),
     make: ({ d, h, p }) => ({
       question: `A tin of cooking fat is a cylinder. Its diameter is ${d} cm and its height is ${h} cm. Take \u03C0 = 22/7. What is the volume of the tin, in cm\xB3?`,
       answer: 22 * (d / 2) ** 2 * h / 7,
-      wrong: [[22 * d * d * h / 7, "The diameter is the full width. The formula needs the radius, which is half of it."], [22 * (d / 2) * h / 7, "The radius must be squared in the area of the circular base."], [22 * (d / 2) ** 2 / 7, "That is the area of the base. Multiply by the height."]],
+      wrong: [[22 * d * d * h / 7, "The diameter is the full width. The formula needs the radius, which is half of it.", "M_DIAMETER_FOR_RADIUS_VOL"], [22 * (d / 2) * h / 7, "The radius must be squared in the area of the circular base.", "M_RADIUS_NOT_SQUARED"], [22 * (d / 2) ** 2 / 7, "That is the area of the base. Multiply by the height.", "M_BASE_AREA_AS_VOLUME"]],
       hints: ["Volume = area of the circular base \xD7 height.", "The radius is half of the diameter."],
       steps: [`Radius = ${d / 2} cm. Base area = 22/7 \xD7 ${d / 2} \xD7 ${d / 2} = ${22 * (d / 2) ** 2 / 7} cm\xB2.`, `Volume = ${22 * (d / 2) ** 2 / 7} \xD7 ${h} = ${commas(22 * (d / 2) ** 2 * h / 7)} cm\xB3.`]
     }),
@@ -133571,7 +133579,8 @@ var FAMILIES176 = [
   fam45({
     id: "g7.vol.drum-litres",
     skill: "G7_VOLUME_CYLINDER",
-    outcome: "G7.VOL.d",
+    outcome: "MATH.G7.MEASUR.VOLUME_AND_CAPACITY.d",
+    cskill: "MATH.G7.MEASUR.VOLUME_AND_CAPACITY.VOLUME_CYLINDER",
     rung: 3,
     form: "steps",
     draw: () => {
@@ -133582,9 +133591,9 @@ var FAMILIES176 = [
     make: ({ r, h, v }) => ({
       question: `A round water tank is a cylinder with a radius of ${r} cm and a height of ${h} cm. Take \u03C0 = 22/7.`,
       parts: [
-        { prompt: "What is the area of the circular base, in cm\xB2?", answer: 22 * r * r / 7, unit: "cm\xB2", hint: "Area = \u03C0 \xD7 r \xD7 r.", wrong: [[22 * 2 * r / 7, "Use the radius squared, not the distance round."]] },
-        { prompt: "What is the volume of the tank, in cm\xB3?", answer: v, unit: "cm\xB3", hint: "Base area times height.", wrong: [[22 * r * r / 7 + h, "Multiply the base area by the height. Do not add."]] },
-        { prompt: "How many litres does the tank hold? (1 litre = 1,000 cm\xB3)", answer: v / 1e3, unit: "litres", hint: "Divide cm\xB3 by 1,000.", wrong: [[v / 100, "A litre is 1,000 cm\xB3, not 100 cm\xB3."], [v / 1e6, "That changes to m\xB3. One litre is 1,000 cm\xB3."]] }
+        { prompt: "What is the area of the circular base, in cm\xB2?", answer: 22 * r * r / 7, unit: "cm\xB2", hint: "Area = \u03C0 \xD7 r \xD7 r.", wrong: [[22 * 2 * r / 7, "Use the radius squared, not the distance round.", "M_CIRCUMFERENCE_FOR_BASE_AREA"]] },
+        { prompt: "What is the volume of the tank, in cm\xB3?", answer: v, unit: "cm\xB3", hint: "Base area times height.", wrong: [[22 * r * r / 7 + h, "Multiply the base area by the height. Do not add.", "M_ADDED_FOR_VOLUME"]] },
+        { prompt: "How many litres does the tank hold? (1 litre = 1,000 cm\xB3)", answer: v / 1e3, unit: "litres", hint: "Divide cm\xB3 by 1,000.", wrong: [[v / 100, "A litre is 1,000 cm\xB3, not 100 cm\xB3.", "M_LITRE_AS_HUNDRED_CM3"], [v / 1e6, "That changes to m\xB3. One litre is 1,000 cm\xB3.", "M_CM3_TO_M3_FOR_LITRES"]] }
       ],
       steps: [`Base area = 22/7 \xD7 ${r} \xD7 ${r} = ${22 * r * r / 7} cm\xB2.`, `Volume = ${22 * r * r / 7} \xD7 ${h} = ${commas(v)} cm\xB3.`, `${commas(v)} \xF7 1,000 = ${commas(v / 1e3)} litres.`]
     }),
@@ -133593,7 +133602,8 @@ var FAMILIES176 = [
   fam45({
     id: "g7.vol.cylinder-height",
     skill: "G7_VOLUME_CYLINDER",
-    outcome: "G7.VOL.c",
+    outcome: "MATH.G7.MEASUR.VOLUME_AND_CAPACITY.c",
+    cskill: "MATH.G7.MEASUR.VOLUME_AND_CAPACITY.VOLUME_CYLINDER",
     rung: 3,
     form: "word",
     draw: () => {
@@ -133603,7 +133613,7 @@ var FAMILIES176 = [
     make: ({ r, h, V: V3, p }) => ({
       question: `A cylinder-shaped tin has a base radius of ${r} cm. It holds ${commas(V3)} cm\xB3 of oil. Take \u03C0 = 22/7. How tall is the tin, in cm?`,
       answer: h,
-      wrong: [[V3 / (22 * r / 7), "The base area uses r \xD7 r, not just r."], [round(V3 / (22 * r * 2 / 7), 2), "The base area is \u03C0 r\xB2. The distance round, 2\u03C0r, is not used."], [round(V3 / (22 / 7), 2), "Divide by the whole base area, which uses \u03C0 \xD7 r \xD7 r."]],
+      wrong: [[V3 / (22 * r / 7), "The base area uses r \xD7 r, not just r.", "M_RADIUS_NOT_SQUARED"], [round(V3 / (22 * r * 2 / 7), 2), "The base area is \u03C0 r\xB2. The distance round, 2\u03C0r, is not used.", "M_CIRCUMFERENCE_FOR_BASE_AREA"], [round(V3 / (22 / 7), 2), "Divide by the whole base area, which uses \u03C0 \xD7 r \xD7 r.", "M_BASE_AREA_PART_DROPPED"]],
       hints: ["Volume = base area \xD7 height, so height = volume \xF7 base area.", "Find the area of the circular base first."],
       steps: [`Base area = 22/7 \xD7 ${r} \xD7 ${r} = ${22 * r * r / 7} cm\xB2.`, `Height = ${commas(V3)} \xF7 ${22 * r * r / 7} = ${h} cm.`]
     }),
@@ -133612,7 +133622,8 @@ var FAMILIES176 = [
   fam45({
     id: "g7.vol.tank-litres",
     skill: "G7_VOLUME_CUBOID",
-    outcome: "G7.VOL.d",
+    outcome: "MATH.G7.MEASUR.VOLUME_AND_CAPACITY.d",
+    cskill: "MATH.G7.MEASUR.VOLUME_AND_CAPACITY.VOLUME_TO_LITRES",
     rung: 2,
     form: "word",
     draw: () => {
@@ -133623,7 +133634,7 @@ var FAMILIES176 = [
     make: ({ l, w: w14, h, V: V3, p }) => ({
       question: `Rainwater fills a cuboid tank at ${p.name}'s school. The base is ${l} m by ${w14} m and the water is ${h} m deep. How many litres of water are in the tank? (1 m\xB3 holds 1,000 litres)`,
       answer: round(V3 * 1e3, 3),
-      wrong: [[round(V3 * 100, 3), "One cubic metre holds 1,000 litres, not 100."], [V3, "That is the volume in m\xB3. Change it to litres."], [round(V3 * 1e6, 3), "That is the volume in cm\xB3. The question asks for litres."]],
+      wrong: [[round(V3 * 100, 3), "One cubic metre holds 1,000 litres, not 100.", "M_M3_AS_HUNDRED_LITRES"], [V3, "That is the volume in m\xB3. Change it to litres.", "M_VOLUME_NOT_CONVERTED"], [round(V3 * 1e6, 3), "That is the volume in cm\xB3. The question asks for litres.", "M_CM3_FOR_LITRES"]],
       hints: ["Find the volume in m\xB3 first.", "Then multiply by the number of litres in 1 m\xB3."],
       steps: [`Volume = ${l} \xD7 ${w14} \xD7 ${h} = ${V3} m\xB3.`, `Litres = ${V3} \xD7 1,000 = ${commas(round(V3 * 1e3, 3))}.`]
     }),
@@ -133632,7 +133643,8 @@ var FAMILIES176 = [
   fam45({
     id: "g7.vol.jerricans-fill-tank",
     skill: "G7_VOLUME_CUBOID",
-    outcome: "G7.VOL.d",
+    outcome: "MATH.G7.MEASUR.VOLUME_AND_CAPACITY.f",
+    cskill: "MATH.G7.MEASUR.VOLUME_AND_CAPACITY.CAPACITY_HOW_MANY",
     rung: 3,
     form: "word",
     draw: () => {
@@ -133643,7 +133655,7 @@ var FAMILIES176 = [
     make: ({ l, w: w14, h, L: L16, n, p }) => ({
       question: `A jerrican holds 20 litres. ${p.name} wants to fill an empty box-shaped tank, ${l} m long, ${w14} m wide and ${h} m high, from jerricans. How many jerricans are needed? (1 m\xB3 holds 1,000 litres)`,
       answer: n,
-      wrong: [[round(l * w14 * h / 20, 3), "The volume is in m\xB3 but the jerrican is in litres. Change to one unit first."], [l * w14 * h * 100 / 20, "1 m\xB3 holds 1,000 litres, not 100."], [L16 * 20, "Divide the tank by the size of one jerrican. Do not multiply."]],
+      wrong: [[round(l * w14 * h / 20, 3), "The volume is in m\xB3 but the jerrican is in litres. Change to one unit first.", "M_UNITS_NOT_MATCHED_VOL"], [l * w14 * h * 100 / 20, "1 m\xB3 holds 1,000 litres, not 100.", "M_M3_AS_HUNDRED_LITRES"], [L16 * 20, "Divide the tank by the size of one jerrican. Do not multiply.", "M_MULTIPLIED_FOR_COUNT"]],
       hints: ["Find how many litres the tank holds.", "Divide by the size of one jerrican."],
       steps: [`Volume = ${l} \xD7 ${w14} \xD7 ${h} = ${l * w14 * h} m\xB3 = ${commas(L16)} litres.`, `Jerricans = ${commas(L16)} \xF7 20 = ${commas(n)}.`]
     }),
@@ -133652,7 +133664,8 @@ var FAMILIES176 = [
   fam45({
     id: "g7.vol.days-of-water",
     skill: "G7_VOLUME_CUBOID",
-    outcome: "G7.VOL.d",
+    outcome: "MATH.G7.MEASUR.VOLUME_AND_CAPACITY.f",
+    cskill: "MATH.G7.MEASUR.VOLUME_AND_CAPACITY.CAPACITY_HOW_MANY",
     rung: 3,
     form: "table",
     draw: () => {
@@ -133666,7 +133679,7 @@ var FAMILIES176 = [
       question: `The table shows how much water ${p.name}'s family uses in one day. They have a tank that holds ${V3} m\xB3 when full. For how many days can the family use the water in a full tank? (1 m\xB3 = 1,000 litres)`,
       model: { type: "table", data: { head: ["Use", "Litres a day"], rows: ["Cooking and drinking", "Washing clothes", "Bathing", "Cleaning"].map((label, i) => ({ label, value: String(u2[i]) })) } },
       answer: days,
-      wrong: [[round(V3 / t, 6), "The tank is in m\xB3 and the table is in litres. Change to litres first."], [round(V3 * 100 / t, 3), "1 m\xB3 holds 1,000 litres, not 100."], [round(V3 * 1e3 / u2[0], 3), "Add up all four uses in the table, not just the first one."]],
+      wrong: [[round(V3 / t, 6), "The tank is in m\xB3 and the table is in litres. Change to litres first.", "M_UNITS_NOT_MATCHED_VOL"], [round(V3 * 100 / t, 3), "1 m\xB3 holds 1,000 litres, not 100.", "M_M3_AS_HUNDRED_LITRES"], [round(V3 * 1e3 / u2[0], 3), "Add up all four uses in the table, not just the first one.", "M_ONE_USE_COUNTED"]],
       hints: ["Add the four amounts to find the litres used in one day.", `Change ${V3} m\xB3 to litres, then divide by the daily use.`],
       steps: [`One day: ${u2.join(" + ")} = ${t} litres.`, `${V3} m\xB3 = ${commas(V3 * 1e3)} litres.`, `Days = ${commas(V3 * 1e3)} \xF7 ${t} = ${days}.`]
     }),
@@ -133675,7 +133688,8 @@ var FAMILIES176 = [
   fam45({
     id: "g7.vol.cups-from-can",
     skill: "G7_VOLUME_CUBOID",
-    outcome: "G7.VOL.d",
+    outcome: "MATH.G7.MEASUR.VOLUME_AND_CAPACITY.f",
+    cskill: "MATH.G7.MEASUR.VOLUME_AND_CAPACITY.CAPACITY_HOW_MANY",
     rung: 2,
     form: "word",
     draw: () => {
@@ -133686,7 +133700,7 @@ var FAMILIES176 = [
     make: ({ c: c19, L: L16, n, p }) => ({
       question: `${p.name} sells tea from a can that holds ${L16} litres. Each cup holds ${c19} millilitres (ml). How many full cups can ${p.she} fill from the can?`,
       answer: n,
-      wrong: [[round(L16 / c19, 4), "The can is in litres and the cup is in millilitres. Use one unit."], [L16 * 100 / c19, "There are 1,000 ml in 1 litre, not 100."], [L16 * c19, "Divide the amount in the can by the amount in one cup."]],
+      wrong: [[round(L16 / c19, 4), "The can is in litres and the cup is in millilitres. Use one unit.", "M_UNITS_NOT_MATCHED_VOL"], [L16 * 100 / c19, "There are 1,000 ml in 1 litre, not 100.", "M_LITRE_AS_HUNDRED_ML"], [L16 * c19, "Divide the amount in the can by the amount in one cup.", "M_MULTIPLIED_FOR_COUNT"]],
       hints: ["Change litres to millilitres.", "Divide by the size of one cup."],
       steps: [`${L16} litres = ${L16} \xD7 1,000 = ${commas(L16 * 1e3)} ml.`, `Cups = ${commas(L16 * 1e3)} \xF7 ${c19} = ${n}.`]
     }),
@@ -137148,6 +137162,133 @@ var SKILLS_G7 = {
       "M_PI_ROUNDED_TO_THREE",
       "M_ADD_NOT_MULTIPLY_CIRC",
       "M_DOUBLE_ONLY_CIRC"
+    ]
+  },
+  "MATH.G7.MEASUR.VOLUME_AND_CAPACITY.CUBIC_UNIT_CONVERT": {
+    "name": "Know the cubic metre and change between m3 and cm3",
+    "sub": "MATH.G7.MEASUR.VOLUME_AND_CAPACITY",
+    "outcome": "MATH.G7.MEASUR.VOLUME_AND_CAPACITY.a",
+    "outcomes": [
+      "MATH.G7.MEASUR.VOLUME_AND_CAPACITY.a",
+      "MATH.G7.MEASUR.VOLUME_AND_CAPACITY.b"
+    ],
+    "horeb": [
+      "G7_VOLUME_CUBOID"
+    ],
+    "primary": "G7_VOLUME_CUBOID",
+    "pre": [
+      "MATH.G5.MEASUR.VOLUME.CUBOID_VOLUME_CALC",
+      "MATH.G6.MEASUR.CAPACITY.CM3_ML_LITRE_RELATION"
+    ],
+    "mis": [
+      "M_TWO_DIMENSIONS_ONLY",
+      "M_UNIT_SIZE_REVERSED_VOL",
+      "M_NUMBER_NOT_CUBED",
+      "M_ADDED_NOT_MULTIPLIED_DIMS",
+      "M_ZEROS_MISCOUNTED_CUBIC",
+      "M_SIDES_COUNTED_NOT_VOLUMES"
+    ]
+  },
+  "MATH.G7.MEASUR.VOLUME_AND_CAPACITY.VOLUME_CUBOID_CUBE": {
+    "name": "Work out the volume of cuboids and cubes and use it to count, find an edge or a height",
+    "sub": "MATH.G7.MEASUR.VOLUME_AND_CAPACITY",
+    "outcome": "MATH.G7.MEASUR.VOLUME_AND_CAPACITY.c",
+    "outcomes": [
+      "MATH.G7.MEASUR.VOLUME_AND_CAPACITY.c"
+    ],
+    "horeb": [
+      "G7_VOLUME_CUBOID",
+      "G6_VOLUME_CUBOID"
+    ],
+    "primary": "G7_VOLUME_CUBOID",
+    "pre": [
+      "MATH.G5.MEASUR.VOLUME.CUBE_VOLUME_CALC",
+      "MATH.G5.MEASUR.VOLUME.CUBOID_VOLUME_CALC",
+      "MATH.G7.NUMBER.SQUARES_AND_SQUARE_ROOTS.SQUARE_WHOLE_NUMBER"
+    ],
+    "mis": [
+      "M_TOTAL_LENGTH_CUBED",
+      "M_EDGE_COUNT_WRONG",
+      "M_AREA_FOR_VOLUME",
+      "M_PACKED_VOLUME_FOR_COUNT",
+      "M_DIVIDED_BY_EDGE",
+      "M_ROWS_ADDED_NOT_MULTIPLIED",
+      "M_MULTIPLIED_TO_FIND_HEIGHT",
+      "M_BASE_SIDES_ADDED",
+      "M_DIVIDED_BY_ONE_SIDE"
+    ]
+  },
+  "MATH.G7.MEASUR.VOLUME_AND_CAPACITY.VOLUME_CYLINDER": {
+    "name": "Work out the volume of a cylinder",
+    "sub": "MATH.G7.MEASUR.VOLUME_AND_CAPACITY",
+    "outcome": "MATH.G7.MEASUR.VOLUME_AND_CAPACITY.c",
+    "outcomes": [
+      "MATH.G7.MEASUR.VOLUME_AND_CAPACITY.c",
+      "MATH.G7.MEASUR.VOLUME_AND_CAPACITY.d"
+    ],
+    "horeb": [
+      "G7_VOLUME_CYLINDER"
+    ],
+    "primary": "G7_VOLUME_CYLINDER",
+    "pre": [
+      "MATH.G7.MEASUR.LENGTH.CIRCUMFERENCE_FIND_DIAMETER",
+      "MATH.G7.NUMBER.SQUARES_AND_SQUARE_ROOTS.SQUARE_WHOLE_NUMBER",
+      "MATH.G7.NUMBER.FRACTIONS.MULT_FRACTION_BY_WHOLE"
+    ],
+    "mis": [
+      "M_DIAMETER_FOR_RADIUS_VOL",
+      "M_RADIUS_NOT_SQUARED",
+      "M_BASE_AREA_AS_VOLUME",
+      "M_CIRCUMFERENCE_FOR_BASE_AREA",
+      "M_ADDED_FOR_VOLUME",
+      "M_BASE_AREA_PART_DROPPED"
+    ]
+  },
+  "MATH.G7.MEASUR.VOLUME_AND_CAPACITY.VOLUME_TO_LITRES": {
+    "name": "Change a volume in cubic metres or cubic centimetres to litres",
+    "sub": "MATH.G7.MEASUR.VOLUME_AND_CAPACITY",
+    "outcome": "MATH.G7.MEASUR.VOLUME_AND_CAPACITY.d",
+    "outcomes": [
+      "MATH.G7.MEASUR.VOLUME_AND_CAPACITY.d",
+      "MATH.G7.MEASUR.VOLUME_AND_CAPACITY.e"
+    ],
+    "horeb": [
+      "G7_VOLUME_CUBOID"
+    ],
+    "primary": "G7_VOLUME_CUBOID",
+    "pre": [
+      "MATH.G6.MEASUR.CAPACITY.CM3_ML_LITRE_RELATION",
+      "MATH.G7.MEASUR.VOLUME_AND_CAPACITY.CUBIC_UNIT_CONVERT"
+    ],
+    "mis": [
+      "M_M3_AS_HUNDRED_LITRES",
+      "M_VOLUME_NOT_CONVERTED",
+      "M_CM3_FOR_LITRES",
+      "M_LITRE_AS_HUNDRED_CM3",
+      "M_CM3_TO_M3_FOR_LITRES"
+    ]
+  },
+  "MATH.G7.MEASUR.VOLUME_AND_CAPACITY.CAPACITY_HOW_MANY": {
+    "name": "Work out how many containers, cups or days a quantity of water lasts",
+    "sub": "MATH.G7.MEASUR.VOLUME_AND_CAPACITY",
+    "outcome": "MATH.G7.MEASUR.VOLUME_AND_CAPACITY.f",
+    "outcomes": [
+      "MATH.G7.MEASUR.VOLUME_AND_CAPACITY.f"
+    ],
+    "horeb": [
+      "G7_VOLUME_CUBOID"
+    ],
+    "primary": "G7_VOLUME_CUBOID",
+    "pre": [
+      "MATH.G7.MEASUR.VOLUME_AND_CAPACITY.VOLUME_TO_LITRES",
+      "MATH.G6.MEASUR.CAPACITY.LITRES_TO_ML",
+      "MATH.G6.MEASUR.CAPACITY.ML_TO_LITRES"
+    ],
+    "mis": [
+      "M_UNITS_NOT_MATCHED_VOL",
+      "M_MULTIPLIED_FOR_COUNT",
+      "M_ONE_USE_COUNTED",
+      "M_LITRE_AS_HUNDRED_ML"
     ]
   },
   "MATH.G7.MEASUR.TIME_DISTANCE_AND_SPEED.TIME_UNITS_CONVERT": {

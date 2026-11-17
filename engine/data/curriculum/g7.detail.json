@@ -786,6 +786,52 @@
    ],
    "mastery": "The child says the circumference is always about 3.14 times the diameter, so doubling the diameter doubles the circumference, and finds the pattern in a table of measured circles."
   },
+  "MATH.G7.MEASUR.VOLUME_AND_CAPACITY.CUBIC_UNIT_CONVERT": {
+   "forms": [
+    "m3 to cm3",
+    "cm3 to m3",
+    "why 1,000,000",
+    "blocks that make a cubic metre",
+    "find the mistake"
+   ],
+   "mastery": "The child says a cubic metre is a cube 100 cm by 100 cm by 100 cm (1,000,000 cm3), changes m3 to cm3 and back, and says why the three lengths are multiplied and not added."
+  },
+  "MATH.G7.MEASUR.VOLUME_AND_CAPACITY.VOLUME_CUBOID_CUBE": {
+   "forms": [
+    "volume of a cube from its wire",
+    "how many cubes pack a carton",
+    "find the height",
+    "volume of a tank"
+   ],
+   "mastery": "The child finds the volume of a cuboid or cube from its edges, finds the edge of a cube from the total length of its wire (12 edges), counts blocks that pack a carton exactly, and finds a missing height by dividing the volume by the base area."
+  },
+  "MATH.G7.MEASUR.VOLUME_AND_CAPACITY.VOLUME_CYLINDER": {
+   "forms": [
+    "volume from a diameter",
+    "height from the volume",
+    "volume then litres",
+    "base area step"
+   ],
+   "mastery": "The child finds the radius from the diameter, the base area (pi x radius x radius), multiplies by the height for the volume, and works backwards to a height from the volume, and to litres."
+  },
+  "MATH.G7.MEASUR.VOLUME_AND_CAPACITY.VOLUME_TO_LITRES": {
+   "forms": [
+    "litres in a tank",
+    "cm3 to litres",
+    "which unit is asked",
+    "one litre is how many cm3"
+   ],
+   "mastery": "The child changes m3 to litres (x 1,000) and cm3 to litres (divide by 1,000), and states the relation between cm3, ml and litres."
+  },
+  "MATH.G7.MEASUR.VOLUME_AND_CAPACITY.CAPACITY_HOW_MANY": {
+   "forms": [
+    "jerricans to fill a tank",
+    "cups from a can",
+    "days of water",
+    "same unit first"
+   ],
+   "mastery": "The child changes the quantity and the container to the same unit, then divides to find how many jerricans fill a tank, how many cups come from a can, or how many days a tank lasts from the total daily use."
+  },
   "MATH.G7.MEASUR.TIME_DISTANCE_AND_SPEED.TIME_UNITS_CONVERT": {
    "forms": [
     "seconds to hours and minutes",

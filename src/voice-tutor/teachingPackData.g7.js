@@ -8154,6 +8154,716 @@ export const TEACHING_PACK_G7 = {
   "sub_strand_name": "Length",
   "status": "draft: written 17 Nov 2026 offline for the Grade 7 pilot; not yet checked by a Kenyan maths teacher; not loaded by the live tutor"
  },
+ "MATH.G7.MEASUR.VOLUME_AND_CAPACITY.CUBIC_UNIT_CONVERT": {
+  "skill": "MATH.G7.MEASUR.VOLUME_AND_CAPACITY.CUBIC_UNIT_CONVERT",
+  "key_step": "The child says a cubic metre is 100 cm by 100 cm by 100 cm, so the factor is 1,000,000 and not 100.",
+  "floor": {
+   "prerequisite": "Multiplies three numbers.",
+   "question": "10 x 10 x 10",
+   "answer": "1,000"
+  },
+  "representations": [
+   "a cube split into 100 layers",
+   "three 100s multiplied",
+   "a number line"
+  ],
+  "steps": [
+   "Draw a cube of 1 m.",
+   "Each edge is 100 cm.",
+   "Multiply three lengths.",
+   "Convert by 1,000,000."
+  ],
+  "contexts": [
+   "sand in a lorry",
+   "stone blocks",
+   "a water tank"
+  ],
+  "board": [
+   {
+    "beat": "draw",
+    "do": "Draw a 1 m cube with each edge marked 100 cm."
+   },
+   {
+    "beat": "point",
+    "do": "Point at the three edges.",
+    "say": "How many cm cubes along the length, width and height?"
+   },
+   {
+    "beat": "pause",
+    "do": "Wait for the child to say."
+   }
+  ],
+  "misconceptions": [
+   {
+    "code": "MATH.G7.MEASUR.VOLUME_AND_CAPACITY.CUBIC_UNIT_CONVERT.M_TWO_DIMENSIONS_ONLY",
+    "listen_for": [
+     "10,000"
+    ],
+    "ask": "How many dimensions has a cube?",
+    "repair": "Three.",
+    "error": "Uses only two lengths of 100 for a cubic metre.",
+    "example": {
+     "question": "2 m3 in cm3",
+     "wrong_answer": "20,000",
+     "correct_answer": "2,000,000"
+    }
+   },
+   {
+    "code": "MATH.G7.MEASUR.VOLUME_AND_CAPACITY.CUBIC_UNIT_CONVERT.M_UNIT_SIZE_REVERSED_VOL",
+    "listen_for": [
+     "200 cm3 is bigger"
+    ],
+    "ask": "Is a metre longer than a cm?",
+    "repair": "So a m3 is bigger.",
+    "error": "Believes a cubic metre is smaller than a cubic centimetre.",
+    "example": {
+     "question": "2 m3 and 200 cm3: which is bigger?",
+     "wrong_answer": "200 cm3",
+     "correct_answer": "2 m3"
+    }
+   },
+   {
+    "code": "MATH.G7.MEASUR.VOLUME_AND_CAPACITY.CUBIC_UNIT_CONVERT.M_NUMBER_NOT_CUBED",
+    "listen_for": [
+     "200"
+    ],
+    "ask": "How many times is 100 used?",
+    "repair": "Three times.",
+    "error": "Uses 100 once, as for a length.",
+    "example": {
+     "question": "2 m3 in cm3",
+     "wrong_answer": "200",
+     "correct_answer": "2,000,000"
+    }
+   },
+   {
+    "code": "MATH.G7.MEASUR.VOLUME_AND_CAPACITY.CUBIC_UNIT_CONVERT.M_ADDED_NOT_MULTIPLIED_DIMS",
+    "listen_for": [
+     "300"
+    ],
+    "ask": "Do we add lengths for volume?",
+    "repair": "Multiply.",
+    "error": "Adds the three 100s instead of multiplying.",
+    "example": {
+     "question": "1 m3 in cm3",
+     "wrong_answer": "300",
+     "correct_answer": "1,000,000"
+    }
+   },
+   {
+    "code": "MATH.G7.MEASUR.VOLUME_AND_CAPACITY.CUBIC_UNIT_CONVERT.M_ZEROS_MISCOUNTED_CUBIC",
+    "listen_for": [
+     "50,000"
+    ],
+    "ask": "How many zeros in 100 x 100 x 100?",
+    "repair": "Six.",
+    "error": "Gives the wrong number of zeros for cm3 in a cubic metre.",
+    "example": {
+     "question": "Blocks of 2,000 cm3 in 1 m3",
+     "wrong_answer": "50,000",
+     "correct_answer": "500"
+    }
+   },
+   {
+    "code": "MATH.G7.MEASUR.VOLUME_AND_CAPACITY.CUBIC_UNIT_CONVERT.M_SIDES_COUNTED_NOT_VOLUMES",
+    "listen_for": [
+     "25"
+    ],
+    "ask": "What are we comparing?",
+    "repair": "Volumes.",
+    "error": "Counts the blocks along the sides instead of comparing volumes.",
+    "example": {
+     "question": "Blocks 20 by 10 by 10 cm in 1 m3",
+     "wrong_answer": "25",
+     "correct_answer": "500"
+    }
+   }
+  ],
+  "checks": [
+   {
+    "question": "2 m3 in cm3",
+    "answer": "2,000,000 cm3",
+    "shows": "cube"
+   },
+   {
+    "question": "Blocks 20 by 10 by 10 cm that have the volume of 1 m3",
+    "answer": "500",
+    "shows": "compare volumes"
+   }
+  ],
+  "name": "Know the cubic metre and change between m3 and cm3",
+  "sub_strand": "MATH.G7.MEASUR.VOLUME_AND_CAPACITY",
+  "sub_strand_name": "Volume and Capacity",
+  "status": "draft: written 17 Nov 2026 offline for the Grade 7 pilot; not yet checked by a Kenyan maths teacher; not loaded by the live tutor"
+ },
+ "MATH.G7.MEASUR.VOLUME_AND_CAPACITY.VOLUME_CUBOID_CUBE": {
+  "skill": "MATH.G7.MEASUR.VOLUME_AND_CAPACITY.VOLUME_CUBOID_CUBE",
+  "key_step": "The child finds one edge or the base area first, then multiplies or divides the volumes, and divides a volume by a volume to count.",
+  "floor": {
+   "prerequisite": "Volume of a cuboid.",
+   "question": "40 x 20 x 10",
+   "answer": "8,000"
+  },
+  "representations": [
+   "a cube of wire",
+   "a carton packed",
+   "a base area layer"
+  ],
+  "steps": [
+   "Find the edge or base.",
+   "Volume = l x w x h.",
+   "Count = volume / volume.",
+   "Height = volume / base area."
+  ],
+  "contexts": [
+   "wire box",
+   "soap in cartons",
+   "a water tank"
+  ],
+  "board": [
+   {
+    "beat": "draw",
+    "do": "Draw a cube with 12 edges marked."
+   },
+   {
+    "beat": "point",
+    "do": "Point at the 12 edges.",
+    "say": "How long is one edge?"
+   },
+   {
+    "beat": "pause",
+    "do": "Wait for the child to say."
+   }
+  ],
+  "misconceptions": [
+   {
+    "code": "MATH.G7.MEASUR.VOLUME_AND_CAPACITY.VOLUME_CUBOID_CUBE.M_TOTAL_LENGTH_CUBED",
+    "listen_for": [
+     "108 cubed"
+    ],
+    "ask": "Is 108 the edge?",
+    "repair": "Divide by 12 first.",
+    "error": "Cubes the total length of the wire.",
+    "example": {
+     "question": "12 edges: 108 cm of wire. Volume?",
+     "wrong_answer": "1,259,712",
+     "correct_answer": "729"
+    }
+   },
+   {
+    "code": "MATH.G7.MEASUR.VOLUME_AND_CAPACITY.VOLUME_CUBOID_CUBE.M_EDGE_COUNT_WRONG",
+    "listen_for": [
+     "6 edges"
+    ],
+    "ask": "How many edges has a cube?",
+    "repair": "12.",
+    "error": "Uses 6 edges for a cube.",
+    "example": {
+     "question": "12 edges: 108 cm of wire. Edge?",
+     "wrong_answer": "18 cm",
+     "correct_answer": "9 cm"
+    }
+   },
+   {
+    "code": "MATH.G7.MEASUR.VOLUME_AND_CAPACITY.VOLUME_CUBOID_CUBE.M_AREA_FOR_VOLUME",
+    "listen_for": [
+     "81"
+    ],
+    "ask": "What is 81?",
+    "repair": "A face: multiply by 9.",
+    "error": "Stops at the area of a face.",
+    "example": {
+     "question": "Cube with edge 9 cm: volume",
+     "wrong_answer": "81",
+     "correct_answer": "729"
+    }
+   },
+   {
+    "code": "MATH.G7.MEASUR.VOLUME_AND_CAPACITY.VOLUME_CUBOID_CUBE.M_PACKED_VOLUME_FOR_COUNT",
+    "listen_for": [
+     "8,000"
+    ],
+    "ask": "Is 8,000 the number of cubes?",
+    "repair": "Divide by one cube.",
+    "error": "Gives the volume of the carton as the number of cubes.",
+    "example": {
+     "question": "Cubes of edge 10 cm in a carton 40 by 20 by 10 cm",
+     "wrong_answer": "8,000",
+     "correct_answer": "8"
+    }
+   },
+   {
+    "code": "MATH.G7.MEASUR.VOLUME_AND_CAPACITY.VOLUME_CUBOID_CUBE.M_DIVIDED_BY_EDGE",
+    "listen_for": [
+     "800"
+    ],
+    "ask": "How big is one cube?",
+    "repair": "1,000 cm3.",
+    "error": "Divides the volume by the edge of one cube.",
+    "example": {
+     "question": "Cubes of edge 10 cm in a carton 40 by 20 by 10 cm",
+     "wrong_answer": "800",
+     "correct_answer": "8"
+    }
+   },
+   {
+    "code": "MATH.G7.MEASUR.VOLUME_AND_CAPACITY.VOLUME_CUBOID_CUBE.M_ROWS_ADDED_NOT_MULTIPLIED",
+    "listen_for": [
+     "4 + 2 + 1"
+    ],
+    "ask": "Do rows add?",
+    "repair": "Multiply.",
+    "error": "Adds the cubes along the length, width and height.",
+    "example": {
+     "question": "Cubes of edge 10 cm in a carton 40 by 20 by 10 cm",
+     "wrong_answer": "7",
+     "correct_answer": "8"
+    }
+   },
+   {
+    "code": "MATH.G7.MEASUR.VOLUME_AND_CAPACITY.VOLUME_CUBOID_CUBE.M_MULTIPLIED_TO_FIND_HEIGHT",
+    "listen_for": [
+     "93,600"
+    ],
+    "ask": "Is volume more than the base area?",
+    "repair": "Divide.",
+    "error": "Multiplies the volume by the base area to find the height.",
+    "example": {
+     "question": "Base 60 by 40 cm, volume 96,000 cm3: height",
+     "wrong_answer": "93,600",
+     "correct_answer": "40"
+    }
+   },
+   {
+    "code": "MATH.G7.MEASUR.VOLUME_AND_CAPACITY.VOLUME_CUBOID_CUBE.M_BASE_SIDES_ADDED",
+    "listen_for": [
+     "add the sides"
+    ],
+    "ask": "What is the base area?",
+    "repair": "l x w.",
+    "error": "Adds the two sides of the base and gives that as the height.",
+    "example": {
+     "question": "Base 60 by 40 cm, volume 96,000 cm3: height",
+     "wrong_answer": "100",
+     "correct_answer": "40"
+    }
+   },
+   {
+    "code": "MATH.G7.MEASUR.VOLUME_AND_CAPACITY.VOLUME_CUBOID_CUBE.M_DIVIDED_BY_ONE_SIDE",
+    "listen_for": [
+     "1,600"
+    ],
+    "ask": "What is the whole base area?",
+    "repair": "60 x 40.",
+    "error": "Divides by one side of the base only.",
+    "example": {
+     "question": "Base 60 by 40 cm, volume 96,000 cm3: height",
+     "wrong_answer": "1,600",
+     "correct_answer": "40"
+    }
+   }
+  ],
+  "checks": [
+   {
+    "question": "A cube is made from 108 cm of wire (12 edges). Volume?",
+    "answer": "729 cm3",
+    "shows": "edge first"
+   },
+   {
+    "question": "Base 60 by 40 cm, volume 96,000 cm3: height?",
+    "answer": "40 cm",
+    "shows": "divide"
+   }
+  ],
+  "name": "Work out the volume of cuboids and cubes and use it to count, find an edge or a height",
+  "sub_strand": "MATH.G7.MEASUR.VOLUME_AND_CAPACITY",
+  "sub_strand_name": "Volume and Capacity",
+  "status": "draft: written 17 Nov 2026 offline for the Grade 7 pilot; not yet checked by a Kenyan maths teacher; not loaded by the live tutor"
+ },
+ "MATH.G7.MEASUR.VOLUME_AND_CAPACITY.VOLUME_CYLINDER": {
+  "skill": "MATH.G7.MEASUR.VOLUME_AND_CAPACITY.VOLUME_CYLINDER",
+  "key_step": "The child halves the diameter, squares the radius with pi for the base, and multiplies by the height.",
+  "floor": {
+   "prerequisite": "Squares numbers.",
+   "question": "7 squared",
+   "answer": "49"
+  },
+  "representations": [
+   "a circle base",
+   "a stack of circles",
+   "the formula"
+  ],
+  "steps": [
+   "Radius from diameter.",
+   "Base area = pi x r x r.",
+   "Volume = base x height.",
+   "Backwards: divide by the base."
+  ],
+  "contexts": [
+   "a tin of fat",
+   "a water tank",
+   "a drum"
+  ],
+  "board": [
+   {
+    "beat": "draw",
+    "do": "Draw a cylinder with diameter 14 cm."
+   },
+   {
+    "beat": "point",
+    "do": "Point at the diameter.",
+    "say": "What is the radius?"
+   },
+   {
+    "beat": "pause",
+    "do": "Wait for the child to say."
+   }
+  ],
+  "misconceptions": [
+   {
+    "code": "MATH.G7.MEASUR.VOLUME_AND_CAPACITY.VOLUME_CYLINDER.M_DIAMETER_FOR_RADIUS_VOL",
+    "listen_for": [
+     "14 not 7"
+    ],
+    "ask": "What is half of 14?",
+    "repair": "Use 7.",
+    "error": "Uses the diameter in place of the radius.",
+    "example": {
+     "question": "Cylinder diameter 14 cm, height 26 cm",
+     "wrong_answer": "16,016",
+     "correct_answer": "4,004"
+    }
+   },
+   {
+    "code": "MATH.G7.MEASUR.VOLUME_AND_CAPACITY.VOLUME_CYLINDER.M_RADIUS_NOT_SQUARED",
+    "listen_for": [
+     "pi r h"
+    ],
+    "ask": "How many r in the base area?",
+    "repair": "Two.",
+    "error": "Multiplies by the radius once, not twice.",
+    "example": {
+     "question": "Cylinder diameter 14 cm, height 26 cm",
+     "wrong_answer": "572",
+     "correct_answer": "4,004"
+    }
+   },
+   {
+    "code": "MATH.G7.MEASUR.VOLUME_AND_CAPACITY.VOLUME_CYLINDER.M_BASE_AREA_AS_VOLUME",
+    "listen_for": [
+     "154"
+    ],
+    "ask": "Is that the whole volume?",
+    "repair": "Multiply by the height.",
+    "error": "Gives the base area as the volume.",
+    "example": {
+     "question": "Cylinder radius 7 cm, height 26 cm",
+     "wrong_answer": "154",
+     "correct_answer": "4,004"
+    }
+   },
+   {
+    "code": "MATH.G7.MEASUR.VOLUME_AND_CAPACITY.VOLUME_CYLINDER.M_CIRCUMFERENCE_FOR_BASE_AREA",
+    "listen_for": [
+     "2 pi r"
+    ],
+    "ask": "Is the base area the distance round?",
+    "repair": "No.",
+    "error": "Uses the distance round the base as its area.",
+    "example": {
+     "question": "Base area of a circle of radius 35 cm",
+     "wrong_answer": "220",
+     "correct_answer": "3,850"
+    }
+   },
+   {
+    "code": "MATH.G7.MEASUR.VOLUME_AND_CAPACITY.VOLUME_CYLINDER.M_ADDED_FOR_VOLUME",
+    "listen_for": [
+     "plus the height"
+    ],
+    "ask": "How are base and height combined?",
+    "repair": "Multiplied.",
+    "error": "Adds the base area and the height.",
+    "example": {
+     "question": "Tank base area 3,850 cm2, height 140 cm: volume",
+     "wrong_answer": "3,990",
+     "correct_answer": "539,000"
+    }
+   },
+   {
+    "code": "MATH.G7.MEASUR.VOLUME_AND_CAPACITY.VOLUME_CYLINDER.M_BASE_AREA_PART_DROPPED",
+    "listen_for": [
+     "divide by pi only"
+    ],
+    "ask": "What is the whole base area?",
+    "repair": "pi x r x r.",
+    "error": "Divides by pi only when finding a height.",
+    "example": {
+     "question": "Volume 11,704 cm3, base radius 14 cm: height",
+     "wrong_answer": "3,724",
+     "correct_answer": "19"
+    }
+   }
+  ],
+  "checks": [
+   {
+    "question": "Cylinder diameter 14 cm, height 26 cm (pi = 22/7). Volume?",
+    "answer": "4,004 cm3",
+    "shows": "volume"
+   },
+   {
+    "question": "Volume 11,704 cm3, radius 14 cm: height?",
+    "answer": "19 cm",
+    "shows": "divide"
+   }
+  ],
+  "name": "Work out the volume of a cylinder",
+  "sub_strand": "MATH.G7.MEASUR.VOLUME_AND_CAPACITY",
+  "sub_strand_name": "Volume and Capacity",
+  "status": "draft: written 17 Nov 2026 offline for the Grade 7 pilot; not yet checked by a Kenyan maths teacher; not loaded by the live tutor"
+ },
+ "MATH.G7.MEASUR.VOLUME_AND_CAPACITY.VOLUME_TO_LITRES": {
+  "skill": "MATH.G7.MEASUR.VOLUME_AND_CAPACITY.VOLUME_TO_LITRES",
+  "key_step": "The child says 1,000 litres are in a cubic metre and 1,000 cm3 in a litre, and picks the unit asked.",
+  "floor": {
+   "prerequisite": "Multiplies by 1,000.",
+   "question": "6 x 1,000",
+   "answer": "6,000"
+  },
+  "representations": [
+   "a cubic metre of water",
+   "a litre bottle",
+   "a conversion line"
+  ],
+  "steps": [
+   "Find the volume in m3.",
+   "Multiply by 1,000 for litres.",
+   "cm3 to litres: divide by 1,000.",
+   "Check the unit asked."
+  ],
+  "contexts": [
+   "a school tank",
+   "a drum",
+   "a jerrican"
+  ],
+  "board": [
+   {
+    "beat": "write",
+    "do": "Write 3 m x 2 m x 1 m."
+   },
+   {
+    "beat": "point",
+    "do": "Point at the volume 6.",
+    "say": "How many litres in one m3?"
+   },
+   {
+    "beat": "pause",
+    "do": "Wait for the child to say."
+   }
+  ],
+  "misconceptions": [
+   {
+    "code": "MATH.G7.MEASUR.VOLUME_AND_CAPACITY.VOLUME_TO_LITRES.M_M3_AS_HUNDRED_LITRES",
+    "listen_for": [
+     "600"
+    ],
+    "ask": "How many litres in a m3?",
+    "repair": "1,000.",
+    "error": "Uses 100 litres for a cubic metre.",
+    "example": {
+     "question": "6 m3 in litres",
+     "wrong_answer": "600",
+     "correct_answer": "6,000"
+    }
+   },
+   {
+    "code": "MATH.G7.MEASUR.VOLUME_AND_CAPACITY.VOLUME_TO_LITRES.M_VOLUME_NOT_CONVERTED",
+    "listen_for": [
+     "6"
+    ],
+    "ask": "What unit is asked?",
+    "repair": "Litres.",
+    "error": "Leaves the volume in cubic metres.",
+    "example": {
+     "question": "6 m3 in litres",
+     "wrong_answer": "6",
+     "correct_answer": "6,000"
+    }
+   },
+   {
+    "code": "MATH.G7.MEASUR.VOLUME_AND_CAPACITY.VOLUME_TO_LITRES.M_CM3_FOR_LITRES",
+    "listen_for": [
+     "6,000,000"
+    ],
+    "ask": "Is that litres?",
+    "repair": "Divide by 1,000.",
+    "error": "Gives the volume in cm3 when litres are asked.",
+    "example": {
+     "question": "6 m3 in litres",
+     "wrong_answer": "6,000,000",
+     "correct_answer": "6,000"
+    }
+   },
+   {
+    "code": "MATH.G7.MEASUR.VOLUME_AND_CAPACITY.VOLUME_TO_LITRES.M_LITRE_AS_HUNDRED_CM3",
+    "listen_for": [
+     "5,390"
+    ],
+    "ask": "How many cm3 in a litre?",
+    "repair": "1,000.",
+    "error": "Uses 100 cm3 for a litre.",
+    "example": {
+     "question": "Tank 539,000 cm3 in litres",
+     "wrong_answer": "5,390",
+     "correct_answer": "539"
+    }
+   },
+   {
+    "code": "MATH.G7.MEASUR.VOLUME_AND_CAPACITY.VOLUME_TO_LITRES.M_CM3_TO_M3_FOR_LITRES",
+    "listen_for": [
+     "0.539"
+    ],
+    "ask": "What unit is asked?",
+    "repair": "Litres.",
+    "error": "Changes cm3 to m3 when litres are asked.",
+    "example": {
+     "question": "Tank 539,000 cm3 in litres",
+     "wrong_answer": "0.539",
+     "correct_answer": "539"
+    }
+   }
+  ],
+  "checks": [
+   {
+    "question": "A tank 3 m by 2 m by 1 m deep: litres of water?",
+    "answer": "6,000",
+    "shows": "m3 to litres"
+   },
+   {
+    "question": "539,000 cm3 in litres",
+    "answer": "539",
+    "shows": "cm3 to litres"
+   }
+  ],
+  "name": "Change a volume in cubic metres or cubic centimetres to litres",
+  "sub_strand": "MATH.G7.MEASUR.VOLUME_AND_CAPACITY",
+  "sub_strand_name": "Volume and Capacity",
+  "status": "draft: written 17 Nov 2026 offline for the Grade 7 pilot; not yet checked by a Kenyan maths teacher; not loaded by the live tutor"
+ },
+ "MATH.G7.MEASUR.VOLUME_AND_CAPACITY.CAPACITY_HOW_MANY": {
+  "skill": "MATH.G7.MEASUR.VOLUME_AND_CAPACITY.CAPACITY_HOW_MANY",
+  "key_step": "The child puts the quantity and the container in the same unit and divides to count.",
+  "floor": {
+   "prerequisite": "Converts litres to ml.",
+   "question": "5 litres in ml",
+   "answer": "5,000"
+  },
+  "representations": [
+   "containers lined up",
+   "same unit",
+   "division"
+  ],
+  "steps": [
+   "Same unit.",
+   "Divide the quantity by one container.",
+   "Add the daily uses first for days.",
+   "Whole numbers only."
+  ],
+  "contexts": [
+   "jerricans",
+   "cups of tea",
+   "a family's water"
+  ],
+  "board": [
+   {
+    "beat": "draw",
+    "do": "Draw a tank and jerricans of 20 litres."
+   },
+   {
+    "beat": "point",
+    "do": "Point at the tank.",
+    "say": "How many litres does it hold?"
+   },
+   {
+    "beat": "pause",
+    "do": "Wait for the child to say."
+   }
+  ],
+  "misconceptions": [
+   {
+    "code": "MATH.G7.MEASUR.VOLUME_AND_CAPACITY.CAPACITY_HOW_MANY.M_UNITS_NOT_MATCHED_VOL",
+    "listen_for": [
+     "0.3"
+    ],
+    "ask": "Are m3 and litres the same unit?",
+    "repair": "Change first.",
+    "error": "Divides a quantity in one unit by a container in another.",
+    "example": {
+     "question": "A tank of 6 m3 and jerricans of 20 litres",
+     "wrong_answer": "0.3",
+     "correct_answer": "300"
+    }
+   },
+   {
+    "code": "MATH.G7.MEASUR.VOLUME_AND_CAPACITY.CAPACITY_HOW_MANY.M_MULTIPLIED_FOR_COUNT",
+    "listen_for": [
+     "120,000"
+    ],
+    "ask": "How many 20s fit in 6,000?",
+    "repair": "Divide.",
+    "error": "Multiplies to count how many containers are needed.",
+    "example": {
+     "question": "6,000 litres and jerricans of 20 litres",
+     "wrong_answer": "120,000",
+     "correct_answer": "300"
+    }
+   },
+   {
+    "code": "MATH.G7.MEASUR.VOLUME_AND_CAPACITY.CAPACITY_HOW_MANY.M_ONE_USE_COUNTED",
+    "listen_for": [
+     "240"
+    ],
+    "ask": "What is the daily total?",
+    "repair": "Add all uses.",
+    "error": "Uses only the first use in the daily table.",
+    "example": {
+     "question": "Tank 2,400 litres; daily uses 10, 20, 90 and 120 litres: how many days?",
+     "wrong_answer": "240",
+     "correct_answer": "10"
+    }
+   },
+   {
+    "code": "MATH.G7.MEASUR.VOLUME_AND_CAPACITY.CAPACITY_HOW_MANY.M_LITRE_AS_HUNDRED_ML",
+    "listen_for": [
+     "1 cup"
+    ],
+    "ask": "How many ml in a litre?",
+    "repair": "1,000.",
+    "error": "Uses 100 ml for a litre.",
+    "example": {
+     "question": "5 litres into cups of 500 ml",
+     "wrong_answer": "1",
+     "correct_answer": "10"
+    }
+   }
+  ],
+  "checks": [
+   {
+    "question": "A tank 3 m by 1 m by 2 m is filled from 20-litre jerricans. How many?",
+    "answer": "300",
+    "shows": "same unit"
+   },
+   {
+    "question": "5 litres into cups of 500 ml: how many cups?",
+    "answer": "10",
+    "shows": "ml"
+   }
+  ],
+  "name": "Work out how many containers, cups or days a quantity of water lasts",
+  "sub_strand": "MATH.G7.MEASUR.VOLUME_AND_CAPACITY",
+  "sub_strand_name": "Volume and Capacity",
+  "status": "draft: written 17 Nov 2026 offline for the Grade 7 pilot; not yet checked by a Kenyan maths teacher; not loaded by the live tutor"
+ },
  "MATH.G7.MEASUR.TIME_DISTANCE_AND_SPEED.TIME_UNITS_CONVERT": {
   "skill": "MATH.G7.MEASUR.TIME_DISTANCE_AND_SPEED.TIME_UNITS_CONVERT",
   "key_step": "The child says there are 60 seconds in a minute and 60 minutes in an hour, and divides for bigger units, with remainders as the smaller unit.",
