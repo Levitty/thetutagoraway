@@ -1475,7 +1475,8 @@ var SKILLS_G5 = {
     "mis": [
       "M_TV_FACE_VALUE",
       "M_TV_WRONG_NUMBER_OF_ZEROS",
-      "M_TV_COMPOSE_DROPS_ZEROS"
+      "M_TV_COMPOSE_DROPS_ZEROS",
+      "M_TV_NUMBER_UP_TO_DIGIT"
     ]
   },
   "MATH.G5.NUMBER.WHOLE_NUMBERS.NUMBERS_TO_WORDS": {
@@ -1494,7 +1495,9 @@ var SKILLS_G5 = {
     ],
     "mis": [
       "M_WORDS_OMITS_THOUSAND_GROUP",
-      "M_WORDS_SPELLING_TY"
+      "M_WORDS_SPELLING_TY",
+      "M_WORDS_THOUSANDS_AS_HUNDREDS",
+      "M_WORDS_THOUSAND_WORD_MISSING"
     ]
   },
   "MATH.G5.NUMBER.WHOLE_NUMBERS.WORDS_TO_SYMBOLS": {
@@ -1515,7 +1518,8 @@ var SKILLS_G5 = {
     "mis": [
       "M_SYMBOLS_WRITE_AS_HEARD",
       "M_SYMBOLS_MISSING_PLACEHOLDER",
-      "M_SYMBOLS_TEEN_TY"
+      "M_SYMBOLS_TEEN_TY",
+      "M_SYMBOLS_STOPS_AT_THOUSAND"
     ]
   },
   "MATH.G5.NUMBER.WHOLE_NUMBERS.COMPARE_NUMBERS": {
@@ -108501,7 +108505,7 @@ var FAMILIES155 = [
       return {
         question: `${pe.name} counts ${commas(n)} bags of maize at a depot. How much is the digit ${d} worth in that number?`,
         answer: t,
-        wrong: [[d, `${d} is just the digit. In this place it stands for much more.`, "M_TV_FACE_VALUE"], [t * 10, "That has one zero too many. Count the digits to the right of the " + d + ".", "M_TV_WRONG_NUMBER_OF_ZEROS"], [t / 10, "That has one zero too few. Count the digits to the right of the " + d + ".", "M_TV_WRONG_NUMBER_OF_ZEROS"], [Math.floor(n / 10 ** p) * 10 ** p, "That is the digits from the left to the " + d + ", not the " + d + " alone.", "M_TV_WRONG_NUMBER_OF_ZEROS"]],
+        wrong: [[d, `${d} is just the digit. In this place it stands for much more.`, "M_TV_FACE_VALUE"], [Number(`${d}${"0".repeat(String(n).length - 1)}`), `That is as long as the whole number. A digit is worth its own place only, so count the places to the right of the ${d} and write that many zeros.`, "M_TV_WRONG_NUMBER_OF_ZEROS"], [Math.floor(n / 10 ** p) * 10 ** p, `That is every digit from the left up to the ${d}, with zeros after. The ${d} is worth only itself and the zeros that follow it.`, "M_TV_NUMBER_UP_TO_DIGIT"], [t * 10, `One zero too many. Count the digits to the right of the ${d} again.`, "SLIP"]],
         hints: ["Count how many digits are to the right of it.", "Write the digit, then that many zeros."],
         steps: [`There are ${p} digits to the right of the ${d}.`, `${d} followed by ${p} zeros is ${commas(t)}.`],
         chk: (x) => x / d === 10 ** p
@@ -108569,7 +108573,7 @@ var FAMILIES155 = [
       if (th % 10 === 0 && Math.random() < 0.5) return null;
       const n = th * 1e3 + r, right = words3(n);
       const dropped = r < 100 ? `${words3(th % 10 === 0 ? th / 10 : th % 10)} thousand and ${words3(r)}`.replace(/^(.*) thousand/, (m20) => m20) : `${words3(Math.floor(th / 10))} thousand, ${words3(r)}`;
-      const options = mc10(right, [[`${words3(Math.floor(th / 10) || 1)} thousand${r < 100 ? " and " + words3(r) : ", " + words3(r)}`, "That reads a different number. The thousands part is the first two digits together.", "M_WORDS_OMITS_THOUSAND_GROUP"], [`${words3(th)} ${r < 100 ? "hundred and " + words3(r) : "hundred, " + words3(r)}`, "Read the first group of digits before the comma as thousands, not hundreds.", "M_WORDS_OMITS_THOUSAND_GROUP"], [`${words3(th)}, ${r < 100 ? "one hundred and " + words3(r) : words3(r)}`, "The word thousand is missing. Say the thousands group before the rest.", "M_WORDS_OMITS_THOUSAND_GROUP"]]);
+      const options = mc10(right, [[`${words3(Math.floor(th / 10) || 1)} thousand${r < 100 ? " and " + words3(r) : ", " + words3(r)}`, "That reads a different number. The thousands part is the first two digits together, not just the first digit.", "M_WORDS_OMITS_THOUSAND_GROUP"], [`${words3(th)} ${r < 100 ? "hundred and " + words3(r) : "hundred, " + words3(r)}`, "The group before the comma is read as thousands, not hundreds. Hundreds are only the third digit from the right.", "M_WORDS_THOUSANDS_AS_HUNDREDS"], [`${words3(th)}, ${r < 100 ? "one hundred and " + words3(r) : words3(r)}`, "The comma stands for the word thousand, and it is missing. Say the thousands group, then the word thousand, then the rest.", "M_WORDS_THOUSAND_WORD_MISSING"]]);
       return {
         question: `Which of these is ${commas(n)} written in words?`,
         options,
@@ -108631,10 +108635,11 @@ var FAMILIES155 = [
       if (th % 10 === 0 && Math.random() < 0.5) return null;
       const n = th * 1e3 + r, t = TOWNS[randInt(0, 5)];
       const asHeard = Number(`${th}${r}`), pad2 = r < 10 ? Number(`${th}0${r}`) : r < 100 ? Number(`${th}${r}`) : null;
+      if (!farFrom(n, th * 1e3, asHeard)) return null;
       return {
         question: `A report says the population of a small town near ${t} is ${words3(n)}. Write that number in figures, without a comma.`,
         answer: n,
-        wrong: [[asHeard, "Every group after thousand has three digits. Put zeros in the places the words do not mention.", "M_SYMBOLS_MISSING_PLACEHOLDER"], [Number(`${th}0${String(r).padStart(3, "0")}`), "Write the words as spoken, but keep exactly three digits after the thousands: that is one 0 too many here.", "M_SYMBOLS_WRITE_AS_HEARD"], [Number(`${th}${String(r).padStart(4, "0")}`), "After the thousands there are only three places, not four.", "M_SYMBOLS_WRITE_AS_HEARD"], [th * 1e3, "The last part of the words is missing in your number.", "M_SYMBOLS_MISSING_PLACEHOLDER"]],
+        wrong: [[asHeard, "Every group after thousand has three digits. Put zeros in the places the words do not mention.", "M_SYMBOLS_MISSING_PLACEHOLDER"], [Number(`${th}0${String(r).padStart(3, "0")}`), "Write the words as spoken, but keep exactly three digits after the thousands: that is one 0 too many here.", "M_SYMBOLS_WRITE_AS_HEARD"], [Number(`${th}${String(r).padStart(4, "0")}`), "After the thousands there are only three places, not four.", "M_SYMBOLS_WRITE_AS_HEARD"], [th * 1e3, "The last part of the words is missing in your number. Write what comes after the word thousand as well.", "M_SYMBOLS_STOPS_AT_THOUSAND"]],
         hints: ["Write the thousands part first, then the three digits after it.", "A place not named in the words holds 0."],
         steps: [`${words3(th)} thousand is ${commas(th * 1e3)}.`, `Add ${r}: ${commas(n)}.`],
         chk: (x) => x - th * 1e3 === r
@@ -138598,6 +138603,19 @@ var g5_misconceptions_default = {
     help: "Have the child stack the place value cards on top of each other, or fill a six-column chart, writing 0 in every empty column.",
     status: "draft"
   },
+  "MATH.G5.NUMBER.WHOLE_NUMBERS.TOTAL_VALUE_HTH.M_TV_NUMBER_UP_TO_DIGIT": {
+    skill: "MATH.G5.NUMBER.WHOLE_NUMBERS.TOTAL_VALUE_HTH",
+    error: "Gives the number formed by all the digits from the left up to the digit asked about, instead of that digit's own total value.",
+    example: {
+      question: "How much is the digit 1 worth in 661,125?",
+      wrong_answer: "661,100",
+      correct_answer: "100"
+    },
+    cause: "The child reads the number up to the place and fills the rest with zeros, as if rounding, so the digits to the left are counted too.",
+    reveals: "A total-value item with the rounded-down number among the choices.",
+    help: "Cover every digit except the one asked about. Write that digit and the zeros that follow it.",
+    status: "draft"
+  },
   "MATH.G5.NUMBER.WHOLE_NUMBERS.NUMBERS_TO_WORDS.M_WORDS_OMITS_THOUSAND_GROUP": {
     skill: "MATH.G5.NUMBER.WHOLE_NUMBERS.NUMBERS_TO_WORDS",
     error: "Reads a five-digit number with a zero wrongly, dropping or shrinking the thousands part.",
@@ -138622,6 +138640,32 @@ var g5_misconceptions_default = {
     cause: "The child spells by sound and by analogy with 'four' and 'nine'.",
     reveals: "Ask the child to choose the correctly written version, with misspelt options alongside.",
     help: "Display a number-word wall chart and practise spelling 'forty', 'ninety' and 'twelve' regularly.",
+    status: "draft"
+  },
+  "MATH.G5.NUMBER.WHOLE_NUMBERS.NUMBERS_TO_WORDS.M_WORDS_THOUSANDS_AS_HUNDREDS": {
+    skill: "MATH.G5.NUMBER.WHOLE_NUMBERS.NUMBERS_TO_WORDS",
+    error: "Reads the first two digits of a five-digit number as hundreds ('twenty-five hundred'), so the thousands group is called hundreds.",
+    example: {
+      question: "Which of these is 25,068 written in words?",
+      wrong_answer: "twenty-five hundred and sixty-eight",
+      correct_answer: "twenty-five thousand and sixty-eight"
+    },
+    cause: "The child has met 'hundred' for the third place and reads any large number as a count of hundreds, without grouping the digits in threes.",
+    reveals: "A numbers-to-words item with a 'hundred' reading of the thousands group among the choices.",
+    help: "Cover the last three digits and read the rest with the word thousand: twenty-five thousand. Then read the last three digits.",
+    status: "draft"
+  },
+  "MATH.G5.NUMBER.WHOLE_NUMBERS.NUMBERS_TO_WORDS.M_WORDS_THOUSAND_WORD_MISSING": {
+    skill: "MATH.G5.NUMBER.WHOLE_NUMBERS.NUMBERS_TO_WORDS",
+    error: "Writes the thousands group and the rest of the number without saying 'thousand'.",
+    example: {
+      question: "Which of these is 25,068 written in words?",
+      wrong_answer: "twenty-five, sixty-eight",
+      correct_answer: "twenty-five thousand and sixty-eight"
+    },
+    cause: "The child reads the digits in two chunks and forgets that the comma stands for the word thousand.",
+    reveals: "A numbers-to-words item where one choice leaves out the word thousand.",
+    help: "Point at the comma and say 'thousand' out loud every time you pass it.",
     status: "draft"
   },
   "MATH.G5.NUMBER.WHOLE_NUMBERS.WORDS_TO_SYMBOLS.M_SYMBOLS_WRITE_AS_HEARD": {
@@ -138661,6 +138705,19 @@ var g5_misconceptions_default = {
     cause: "The two words sound alike, so the child mishears or misreads which one it is.",
     reveals: "Use dictation items pairing 'seventeen thousand' and 'seventy thousand'.",
     help: "Stress the endings when speaking ('seven-TEEN', 'SEV-en-ty') and link 'teen' to 1 ten and 'ty' to several tens.",
+    status: "draft"
+  },
+  "MATH.G5.NUMBER.WHOLE_NUMBERS.WORDS_TO_SYMBOLS.M_SYMBOLS_STOPS_AT_THOUSAND": {
+    skill: "MATH.G5.NUMBER.WHOLE_NUMBERS.WORDS_TO_SYMBOLS",
+    error: "Writes only the thousands part of a number given in words and leaves out the rest.",
+    example: {
+      question: "Write ninety-one thousand and sixty-seven in figures.",
+      wrong_answer: "91000",
+      correct_answer: "91067"
+    },
+    cause: "The child writes the first big word group as a finished number and does not go on to the words that follow it.",
+    reveals: "A words-to-symbols item with the thousands part alone among the choices.",
+    help: "Tick each part of the words as it is written: ninety-one thousand, and, sixty-seven.",
     status: "draft"
   },
   "MATH.G5.NUMBER.WHOLE_NUMBERS.COMPARE_NUMBERS.M_COMPARE_FIRST_DIGIT_ONLY": {

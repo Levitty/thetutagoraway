@@ -100198,7 +100198,8 @@ var SKILLS_G5 = {
     "mis": [
       "M_TV_FACE_VALUE",
       "M_TV_WRONG_NUMBER_OF_ZEROS",
-      "M_TV_COMPOSE_DROPS_ZEROS"
+      "M_TV_COMPOSE_DROPS_ZEROS",
+      "M_TV_NUMBER_UP_TO_DIGIT"
     ]
   },
   "MATH.G5.NUMBER.WHOLE_NUMBERS.NUMBERS_TO_WORDS": {
@@ -100217,7 +100218,9 @@ var SKILLS_G5 = {
     ],
     "mis": [
       "M_WORDS_OMITS_THOUSAND_GROUP",
-      "M_WORDS_SPELLING_TY"
+      "M_WORDS_SPELLING_TY",
+      "M_WORDS_THOUSANDS_AS_HUNDREDS",
+      "M_WORDS_THOUSAND_WORD_MISSING"
     ]
   },
   "MATH.G5.NUMBER.WHOLE_NUMBERS.WORDS_TO_SYMBOLS": {
@@ -100238,7 +100241,8 @@ var SKILLS_G5 = {
     "mis": [
       "M_SYMBOLS_WRITE_AS_HEARD",
       "M_SYMBOLS_MISSING_PLACEHOLDER",
-      "M_SYMBOLS_TEEN_TY"
+      "M_SYMBOLS_TEEN_TY",
+      "M_SYMBOLS_STOPS_AT_THOUSAND"
     ]
   },
   "MATH.G5.NUMBER.WHOLE_NUMBERS.COMPARE_NUMBERS": {
@@ -103672,7 +103676,7 @@ var FAMILIES155 = [
       return {
         question: `${pe.name} counts ${commas(n)} bags of maize at a depot. How much is the digit ${d} worth in that number?`,
         answer: t,
-        wrong: [[d, `${d} is just the digit. In this place it stands for much more.`, "M_TV_FACE_VALUE"], [t * 10, "That has one zero too many. Count the digits to the right of the " + d + ".", "M_TV_WRONG_NUMBER_OF_ZEROS"], [t / 10, "That has one zero too few. Count the digits to the right of the " + d + ".", "M_TV_WRONG_NUMBER_OF_ZEROS"], [Math.floor(n / 10 ** p) * 10 ** p, "That is the digits from the left to the " + d + ", not the " + d + " alone.", "M_TV_WRONG_NUMBER_OF_ZEROS"]],
+        wrong: [[d, `${d} is just the digit. In this place it stands for much more.`, "M_TV_FACE_VALUE"], [Number(`${d}${"0".repeat(String(n).length - 1)}`), `That is as long as the whole number. A digit is worth its own place only, so count the places to the right of the ${d} and write that many zeros.`, "M_TV_WRONG_NUMBER_OF_ZEROS"], [Math.floor(n / 10 ** p) * 10 ** p, `That is every digit from the left up to the ${d}, with zeros after. The ${d} is worth only itself and the zeros that follow it.`, "M_TV_NUMBER_UP_TO_DIGIT"], [t * 10, `One zero too many. Count the digits to the right of the ${d} again.`, "SLIP"]],
         hints: ["Count how many digits are to the right of it.", "Write the digit, then that many zeros."],
         steps: [`There are ${p} digits to the right of the ${d}.`, `${d} followed by ${p} zeros is ${commas(t)}.`],
         chk: (x) => x / d === 10 ** p
@@ -103740,7 +103744,7 @@ var FAMILIES155 = [
       if (th % 10 === 0 && Math.random() < 0.5) return null;
       const n = th * 1e3 + r, right = words3(n);
       const dropped = r < 100 ? `${words3(th % 10 === 0 ? th / 10 : th % 10)} thousand and ${words3(r)}`.replace(/^(.*) thousand/, (m20) => m20) : `${words3(Math.floor(th / 10))} thousand, ${words3(r)}`;
-      const options = mc10(right, [[`${words3(Math.floor(th / 10) || 1)} thousand${r < 100 ? " and " + words3(r) : ", " + words3(r)}`, "That reads a different number. The thousands part is the first two digits together.", "M_WORDS_OMITS_THOUSAND_GROUP"], [`${words3(th)} ${r < 100 ? "hundred and " + words3(r) : "hundred, " + words3(r)}`, "Read the first group of digits before the comma as thousands, not hundreds.", "M_WORDS_OMITS_THOUSAND_GROUP"], [`${words3(th)}, ${r < 100 ? "one hundred and " + words3(r) : words3(r)}`, "The word thousand is missing. Say the thousands group before the rest.", "M_WORDS_OMITS_THOUSAND_GROUP"]]);
+      const options = mc10(right, [[`${words3(Math.floor(th / 10) || 1)} thousand${r < 100 ? " and " + words3(r) : ", " + words3(r)}`, "That reads a different number. The thousands part is the first two digits together, not just the first digit.", "M_WORDS_OMITS_THOUSAND_GROUP"], [`${words3(th)} ${r < 100 ? "hundred and " + words3(r) : "hundred, " + words3(r)}`, "The group before the comma is read as thousands, not hundreds. Hundreds are only the third digit from the right.", "M_WORDS_THOUSANDS_AS_HUNDREDS"], [`${words3(th)}, ${r < 100 ? "one hundred and " + words3(r) : words3(r)}`, "The comma stands for the word thousand, and it is missing. Say the thousands group, then the word thousand, then the rest.", "M_WORDS_THOUSAND_WORD_MISSING"]]);
       return {
         question: `Which of these is ${commas(n)} written in words?`,
         options,
@@ -103802,10 +103806,11 @@ var FAMILIES155 = [
       if (th % 10 === 0 && Math.random() < 0.5) return null;
       const n = th * 1e3 + r, t = TOWNS[randInt(0, 5)];
       const asHeard = Number(`${th}${r}`), pad2 = r < 10 ? Number(`${th}0${r}`) : r < 100 ? Number(`${th}${r}`) : null;
+      if (!farFrom(n, th * 1e3, asHeard)) return null;
       return {
         question: `A report says the population of a small town near ${t} is ${words3(n)}. Write that number in figures, without a comma.`,
         answer: n,
-        wrong: [[asHeard, "Every group after thousand has three digits. Put zeros in the places the words do not mention.", "M_SYMBOLS_MISSING_PLACEHOLDER"], [Number(`${th}0${String(r).padStart(3, "0")}`), "Write the words as spoken, but keep exactly three digits after the thousands: that is one 0 too many here.", "M_SYMBOLS_WRITE_AS_HEARD"], [Number(`${th}${String(r).padStart(4, "0")}`), "After the thousands there are only three places, not four.", "M_SYMBOLS_WRITE_AS_HEARD"], [th * 1e3, "The last part of the words is missing in your number.", "M_SYMBOLS_MISSING_PLACEHOLDER"]],
+        wrong: [[asHeard, "Every group after thousand has three digits. Put zeros in the places the words do not mention.", "M_SYMBOLS_MISSING_PLACEHOLDER"], [Number(`${th}0${String(r).padStart(3, "0")}`), "Write the words as spoken, but keep exactly three digits after the thousands: that is one 0 too many here.", "M_SYMBOLS_WRITE_AS_HEARD"], [Number(`${th}${String(r).padStart(4, "0")}`), "After the thousands there are only three places, not four.", "M_SYMBOLS_WRITE_AS_HEARD"], [th * 1e3, "The last part of the words is missing in your number. Write what comes after the word thousand as well.", "M_SYMBOLS_STOPS_AT_THOUSAND"]],
         hints: ["Write the thousands part first, then the three digits after it.", "A place not named in the words holds 0."],
         steps: [`${words3(th)} thousand is ${commas(th * 1e3)}.`, `Add ${r}: ${commas(n)}.`],
         chk: (x) => x - th * 1e3 === r

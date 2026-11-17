@@ -117,7 +117,7 @@ g5c.dec.addm.market,Decimals,DEC_ADD_MIXED_PLACES,fit,shared,ok,fix,wrong option
 g5c.dec.addm.price,Decimals,DEC_ADD_MIXED_PLACES,fit,ok,ok,keep,"each wrong option is its own idea, the situation is real, serves the outcome",fixed
 g5c.dec.addm.whole,Decimals,DEC_ADD_MIXED_PLACES,fit,shared,ok,fix,wrong options: shared codes and near miss carrying a code and generic reason,fixed
 g5c.dec.cmp.spot,Decimals,DEC_COMPARE,fit,ok,ok,keep,"each wrong option is its own idea, the situation is real, serves the outcome",fixed
-g5c.dec.cmp.symbol,Decimals,DEC_COMPARE,weak,ok,ok,fix,outcome weak: a bare symbol question with no situation,open
+g5c.dec.cmp.symbol,Decimals,DEC_COMPARE,weak,ok,ok,fix,outcome weak: a bare symbol question with no situation,fixed
 g5c.dec.cmp.which,Decimals,DEC_COMPARE,fit,shared,ok,fix,wrong options: shared codes and near miss carrying a code,fixed
 g5c.dec.k.grams,Decimals,DEC_MULT_1000,fit,shared,odd_numbers,fix,wrong options: shared codes; odd_numbers: wrong options are negatives or long decimals,fixed
 g5c.dec.k.missing,Decimals,DEC_MULT_1000,weak,shared,ok,fix,wrong options: shared codes and near miss carrying a code and generic reason; outcome weak: a bare missing-number item with no situation,fixed
@@ -493,10 +493,10 @@ g5c.whole.rt.crowd,Whole Numbers,ROUND_NEAREST_THOUSAND,fit,shared,ok,fix,wrong 
 g5c.whole.rt.spot,Whole Numbers,ROUND_NEAREST_THOUSAND,fit,ok,ok,keep,"each wrong option is its own idea, the situation is real, serves the outcome",fixed
 g5c.whole.sym.dictate,Whole Numbers,WORDS_TO_SYMBOLS,fit,ok,fake_context,fix,"fake_context: ""is told two numbers to write"" is a wrapper",open
 g5c.whole.sym.match,Whole Numbers,WORDS_TO_SYMBOLS,fit,ok,ok,keep,"each wrong option is its own idea, the situation is real, serves the outcome",fixed
-g5c.whole.sym.news,Whole Numbers,WORDS_TO_SYMBOLS,fit,shared,ok,fix,wrong options: shared codes and near miss carrying a code,open
+g5c.whole.sym.news,Whole Numbers,WORDS_TO_SYMBOLS,fit,shared,ok,fix,wrong options: shared codes and near miss carrying a code,fixed
 g5c.whole.tv.expand,Whole Numbers,TOTAL_VALUE_HTH,weak,ok,fake_context,fix,"fake_context: ""writes 974,548 as a sum"" is a wrapper",open
 g5c.whole.tv.rebuild-spot,Whole Numbers,TOTAL_VALUE_HTH,fit,ok,ok,keep,"each wrong option is its own idea, the situation is real, serves the outcome",fixed
-g5c.whole.tv.worth,Whole Numbers,TOTAL_VALUE_HTH,fit,shared,ok,fix,wrong options: shared codes,open
+g5c.whole.tv.worth,Whole Numbers,TOTAL_VALUE_HTH,fit,shared,ok,fix,wrong options: shared codes,fixed
 g5c.whole.words.cheque,Whole Numbers,NUMBERS_TO_WORDS,fit,shared,ok,fix,wrong options: shared codes,open
-g5c.whole.words.choose,Whole Numbers,NUMBERS_TO_WORDS,fit,shared,ok,fix,wrong options: shared codes,open
+g5c.whole.words.choose,Whole Numbers,NUMBERS_TO_WORDS,fit,shared,ok,fix,wrong options: shared codes,fixed
 g5c.whole.words.spot,Whole Numbers,NUMBERS_TO_WORDS,fit,ok,ok,keep,"each wrong option is its own idea, the situation is real, serves the outcome",fixed

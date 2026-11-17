@@ -852,6 +852,20 @@
      "status": "draft"
     },
     {
+     "code": "MATH.G5.NUMBER.WHOLE_NUMBERS.TOTAL_VALUE_HTH.M_TV_NUMBER_UP_TO_DIGIT",
+     "skill": "MATH.G5.NUMBER.WHOLE_NUMBERS.TOTAL_VALUE_HTH",
+     "error": "Gives the number formed by all the digits from the left up to the digit asked about, instead of that digit's own total value.",
+     "example": {
+      "question": "How much is the digit 1 worth in 661,125?",
+      "wrong_answer": "661,100",
+      "correct_answer": "100"
+     },
+     "cause": "The child reads the number up to the place and fills the rest with zeros, as if rounding, so the digits to the left are counted too.",
+     "reveals": "A total-value item with the rounded-down number among the choices.",
+     "help": "Cover every digit except the one asked about. Write that digit and the zeros that follow it.",
+     "status": "draft"
+    },
+    {
      "code": "MATH.G5.NUMBER.WHOLE_NUMBERS.NUMBERS_TO_WORDS.M_WORDS_OMITS_THOUSAND_GROUP",
      "skill": "MATH.G5.NUMBER.WHOLE_NUMBERS.NUMBERS_TO_WORDS",
      "error": "Reads a five-digit number with a zero wrongly, dropping or shrinking the thousands part.",
@@ -877,6 +891,34 @@
      "cause": "The child spells by sound and by analogy with 'four' and 'nine'.",
      "reveals": "Ask the child to choose the correctly written version, with misspelt options alongside.",
      "help": "Display a number-word wall chart and practise spelling 'forty', 'ninety' and 'twelve' regularly.",
+     "status": "draft"
+    },
+    {
+     "code": "MATH.G5.NUMBER.WHOLE_NUMBERS.NUMBERS_TO_WORDS.M_WORDS_THOUSANDS_AS_HUNDREDS",
+     "skill": "MATH.G5.NUMBER.WHOLE_NUMBERS.NUMBERS_TO_WORDS",
+     "error": "Reads the first two digits of a five-digit number as hundreds ('twenty-five hundred'), so the thousands group is called hundreds.",
+     "example": {
+      "question": "Which of these is 25,068 written in words?",
+      "wrong_answer": "twenty-five hundred and sixty-eight",
+      "correct_answer": "twenty-five thousand and sixty-eight"
+     },
+     "cause": "The child has met 'hundred' for the third place and reads any large number as a count of hundreds, without grouping the digits in threes.",
+     "reveals": "A numbers-to-words item with a 'hundred' reading of the thousands group among the choices.",
+     "help": "Cover the last three digits and read the rest with the word thousand: twenty-five thousand. Then read the last three digits.",
+     "status": "draft"
+    },
+    {
+     "code": "MATH.G5.NUMBER.WHOLE_NUMBERS.NUMBERS_TO_WORDS.M_WORDS_THOUSAND_WORD_MISSING",
+     "skill": "MATH.G5.NUMBER.WHOLE_NUMBERS.NUMBERS_TO_WORDS",
+     "error": "Writes the thousands group and the rest of the number without saying 'thousand'.",
+     "example": {
+      "question": "Which of these is 25,068 written in words?",
+      "wrong_answer": "twenty-five, sixty-eight",
+      "correct_answer": "twenty-five thousand and sixty-eight"
+     },
+     "cause": "The child reads the digits in two chunks and forgets that the comma stands for the word thousand.",
+     "reveals": "A numbers-to-words item where one choice leaves out the word thousand.",
+     "help": "Point at the comma and say 'thousand' out loud every time you pass it.",
      "status": "draft"
     },
     {
@@ -919,6 +961,20 @@
      "cause": "The two words sound alike, so the child mishears or misreads which one it is.",
      "reveals": "Use dictation items pairing 'seventeen thousand' and 'seventy thousand'.",
      "help": "Stress the endings when speaking ('seven-TEEN', 'SEV-en-ty') and link 'teen' to 1 ten and 'ty' to several tens.",
+     "status": "draft"
+    },
+    {
+     "code": "MATH.G5.NUMBER.WHOLE_NUMBERS.WORDS_TO_SYMBOLS.M_SYMBOLS_STOPS_AT_THOUSAND",
+     "skill": "MATH.G5.NUMBER.WHOLE_NUMBERS.WORDS_TO_SYMBOLS",
+     "error": "Writes only the thousands part of a number given in words and leaves out the rest.",
+     "example": {
+      "question": "Write ninety-one thousand and sixty-seven in figures.",
+      "wrong_answer": "91000",
+      "correct_answer": "91067"
+     },
+     "cause": "The child writes the first big word group as a finished number and does not go on to the words that follow it.",
+     "reveals": "A words-to-symbols item with the thousands part alone among the choices.",
+     "help": "Tick each part of the words as it is written: ninety-one thousand, and, sixty-seven.",
      "status": "draft"
     },
     {

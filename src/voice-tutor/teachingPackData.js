@@ -207,6 +207,20 @@ export const TEACHING_PACK_G5 = {
      "wrong_answer": "600,000",
      "correct_answer": "60,000"
     }
+   },
+   {
+    "code": "MATH.G5.NUMBER.WHOLE_NUMBERS.TOTAL_VALUE_HTH.M_TV_NUMBER_UP_TO_DIGIT",
+    "listen_for": [
+     "661,100"
+    ],
+    "ask": "Is the 6 in front part of what the 1 is worth?",
+    "repair": "A digit is worth only its own place. Write the digit and one zero for each place to its right.",
+    "error": "Gives the number formed by all the digits from the left up to the digit asked about, instead of that digit's own total value.",
+    "example": {
+     "question": "How much is the digit 1 worth in 661,125?",
+     "wrong_answer": "661,100",
+     "correct_answer": "100"
+    }
    }
   ],
   "checks": [
@@ -302,6 +316,34 @@ export const TEACHING_PACK_G5 = {
      "question": "Write 45,090 in words.",
      "wrong_answer": "fourty-five thousand and ninty",
      "correct_answer": "forty-five thousand and ninety"
+    }
+   },
+   {
+    "code": "MATH.G5.NUMBER.WHOLE_NUMBERS.NUMBERS_TO_WORDS.M_WORDS_THOUSANDS_AS_HUNDREDS",
+    "listen_for": [
+     "twenty-five hundred"
+    ],
+    "ask": "What does the comma tell us? How many digits are after it?",
+    "repair": "Everything before the comma is read as thousands. Hundreds are only the third digit from the right.",
+    "error": "Reads the first two digits of a five-digit number as hundreds ('twenty-five hundred'), so the thousands group is called hundreds.",
+    "example": {
+     "question": "Which of these is 25,068 written in words?",
+     "wrong_answer": "twenty-five hundred and sixty-eight",
+     "correct_answer": "twenty-five thousand and sixty-eight"
+    }
+   },
+   {
+    "code": "MATH.G5.NUMBER.WHOLE_NUMBERS.NUMBERS_TO_WORDS.M_WORDS_THOUSAND_WORD_MISSING",
+    "listen_for": [
+     "twenty-five, sixty-eight"
+    ],
+    "ask": "What word does the comma stand for?",
+    "repair": "The comma says thousand. Read the group before it, then the word thousand, then the last three digits.",
+    "error": "Writes the thousands group and the rest of the number without saying 'thousand'.",
+    "example": {
+     "question": "Which of these is 25,068 written in words?",
+     "wrong_answer": "twenty-five, sixty-eight",
+     "correct_answer": "twenty-five thousand and sixty-eight"
     }
    }
   ],
@@ -407,6 +449,20 @@ export const TEACHING_PACK_G5 = {
      "question": "Write 'seventeen thousand' in symbols.",
      "wrong_answer": "70,000",
      "correct_answer": "17,000"
+    }
+   },
+   {
+    "code": "MATH.G5.NUMBER.WHOLE_NUMBERS.WORDS_TO_SYMBOLS.M_SYMBOLS_STOPS_AT_THOUSAND",
+    "listen_for": [
+     "91,000"
+    ],
+    "ask": "Did you write the 'sixty-seven' as well?",
+    "repair": "Write every part of the words. Ninety-one thousand is 91 000 and sixty-seven goes in the last places.",
+    "error": "Writes only the thousands part of a number given in words and leaves out the rest.",
+    "example": {
+     "question": "Write ninety-one thousand and sixty-seven in figures.",
+     "wrong_answer": "91000",
+     "correct_answer": "91067"
     }
    }
   ],

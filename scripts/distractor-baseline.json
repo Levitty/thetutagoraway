@@ -2,8 +2,8 @@
  "note": "Families flagged today by scripts/check-distractors.mjs. Fix a family, then rerun with --update-baseline. It may only shrink.",
  "draws": 40,
  "counts": {
-  "shared": 230,
-  "nearmiss": 55,
+  "shared": 227,
+  "nearmiss": 54,
   "reason": 114
  },
  "families": {
@@ -234,10 +234,7 @@
    "g5c.whole.lp.matatu",
    "g5c.whole.ord.distances",
    "g5c.whole.pv.digit-in",
-   "g5c.whole.rt.crowd",
-   "g5c.whole.sym.news",
-   "g5c.whole.tv.worth",
-   "g5c.whole.words.choose"
+   "g5c.whole.rt.crowd"
   ],
   "nearmiss": [
    "g5c.add.noreg.zeros",
@@ -293,8 +290,7 @@
    "g5c.whole.hcf.find",
    "g5c.whole.hp.ribbon",
    "g5c.whole.pv.digit-in",
-   "g5c.whole.rh.list",
-   "g5c.whole.sym.news"
+   "g5c.whole.rh.list"
   ],
   "reason": [
    "g5c.add.chk.compare",
