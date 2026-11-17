@@ -112614,20 +112614,48 @@ var twoStep = () => {
 };
 var FAMILIES159 = [
   // ---------------------------------------------------------------- EQ_MEANING
+  // Owner, 17 Nov 2026: KICD Grade 5 asks the child to FORM an equation from a real situation, so the child
+  // turns the story into the equation; each wrong option is a different way of forming it wrongly.
   fam36({
     id: "g5c.eq.mean.pick",
+    cs: `${Q9}EQ_FORM_ADD_SUB`,
+    form: "word",
+    rung: 1,
+    gen: () => {
+      const l = L14(), a = randInt(6, 30), b = a + randInt(8, 40), p = person(), thing = pick(["mandazi", "eggs", "mangoes", "exercise books"]);
+      const options = mc10(`${l} + ${a} = ${b}`, [
+        [`${l} - ${a} = ${b}`, `${p.She} was given more, so the number went up. That is adding ${a}, not taking it away.`, "M_OPERATION_OPPOSITE_TO_STORY"],
+        [`${a} + ${b} = ${l}`, `This adds the two numbers in the story. But ${b} is what ${p.she} has at the end, after the ${a} were added to ${l}.`, "M_KEYWORD_MORE_MEANS_ADD"],
+        [`${l} = ${b - a}`, `That is the answer worked out. The question asks for the equation that tells the story: start, then the change, then the end.`, "M_WRITES_ANSWER_NOT_EQUATION"]
+      ]);
+      return {
+        question: `${p.name} had some ${thing}. ${p.She} was given ${a} more and now has ${b}. Let ${l} be the number ${p.she} had at first. Which equation tells this story?`,
+        options,
+        instruction: "Choose the equation.",
+        hints: [`Tell the story in order: what ${p.she} had, what happened, what ${p.she} has now.`, `What ${p.she} had, plus ${a}, is the same as ${b}.`],
+        steps: [`Start with ${l}. ${p.She} was given ${a} more: ${l} + ${a}.`, `Now ${p.she} has ${b}, so ${l} + ${a} = ${b}.`]
+      };
+    }
+  }),
+  // A number sentence, true or false: '=' means the same value on both sides (KICD form; owner, 17 Nov 2026).
+  fam36({
+    id: "g5c.eq.mean.truefalse",
     cs: `${Q9}EQ_MEANING`,
     form: "direct",
     rung: 1,
     gen: () => {
-      const l = L14(), a = randInt(6, 30), b = a + randInt(8, 40), p = person(), thing = pick(["mandazi", "eggs", "mangoes", "exercise books"]);
-      const options = mc10(`${l} + ${a} = ${b}`, [[`${l} + ${a}`, "This has no equals sign, so it does not say two things have the same value. It is an expression, not an equation.", "M_EXPRESSION_IS_EQUATION"], [`${b}`, "A single number says nothing is equal to anything. An equation needs an equals sign with something on each side.", "M_NUMBER_IS_EQUATION"], [`${l} + ${a} =`, "There is an equals sign but nothing after it, so it is waiting for an answer. An equation has something on both sides.", "M_EQUALS_MEANS_ANSWER"]]);
+      const a = randInt(5, 15), b = randInt(3, 9), sum3 = a + b;
+      let c19 = randInt(2, sum3 - 2);
+      if (c19 === a || c19 === b) c19 = c19 === sum3 - 2 ? 2 : c19 + 1;
+      const isTrue = Math.random() < 0.5;
+      const sentence = isTrue ? `${a} + ${b} = ${c19} + ${sum3 - c19}` : `${a} + ${b} = ${sum3} + ${c19}`;
+      const options = isTrue ? mc10("True", [["False", `Work out both sides: ${a} + ${b} is ${sum3}, and ${c19} + ${sum3 - c19} is ${sum3}. They have the same value, so it is true. The = sign does not have to be followed by the answer.`, "M_EQUALS_MEANS_ANSWER"]]) : mc10("False", [["True", `${a} + ${b} is ${sum3}, but ${sum3} + ${c19} is ${sum3 + c19}. The two sides are not the same value. = means both sides are equal, not "write the answer next".`, "M_EQUALS_MEANS_ANSWER"]]);
       return {
-        question: `${p.name} had some ${thing}. ${p.She} was given ${a} more and now has ${b}. Let ${l} be the number ${p.she} had at first. Which of these is an equation for this story?`,
+        question: `Is this number sentence true or false? ${sentence}`,
         options,
-        instruction: "Choose the equation.",
-        hints: ["An equation says two things have the same value.", "Look for an equals sign with something on each side."],
-        steps: [`${l} + ${a} = ${b} has an equals sign with a side on each side: what ${p.she} had plus ${a} is the same as ${b}.`, "The others are an expression, a single number and a sum with nothing after the equals sign."]
+        instruction: "Choose true or false.",
+        hints: ["Work out the value of each side.", "True means both sides have the same value."],
+        steps: [`Left side: ${a} + ${b} = ${sum3}.`, isTrue ? `Right side: ${c19} + ${sum3 - c19} = ${sum3}. Same value, so true.` : `Right side: ${sum3} + ${c19} = ${sum3 + c19}. Not the same, so false.`]
       };
     }
   }),
