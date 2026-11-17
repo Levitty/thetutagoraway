@@ -894,5 +894,327 @@
   "help": "Each new shape adds 5 sticks, not 1. Write the rule as: add 5 each time.",
   "source": "to be confirmed by a teacher (no source yet)",
   "status": "draft"
+ },
+ "MATH.G7.NUMBER.FACTORS.DIV_BY_2_4_8_5_10.M_LAST_DIGIT_FOR_4_8": {
+  "skill": "MATH.G7.NUMBER.FACTORS.DIV_BY_2_4_8_5_10",
+  "error": "Tests divisibility by 4 or 8 from the last digit only.",
+  "example": {
+   "question": "Is 3,614 divisible by 4?",
+   "wrong_answer": "Yes, it ends in 4 (even)",
+   "correct_answer": "No: 14 is not divisible by 4"
+  },
+  "cause": "Extends the rule for 2 to 4 and 8.",
+  "reveals": "The answer Yes, it ends in 4 (even) as a wrong option, with a reason that names the idea.",
+  "help": "For 4 look at the last two digits, for 8 the last three.",
+  "source": "to be confirmed by a teacher (no source yet)",
+  "status": "draft"
+ },
+ "MATH.G7.NUMBER.FACTORS.DIV_BY_2_4_8_5_10.M_EVEN_MEANS_DIVISIBLE_BY_4": {
+  "skill": "MATH.G7.NUMBER.FACTORS.DIV_BY_2_4_8_5_10",
+  "error": "Believes every even number is divisible by 4.",
+  "example": {
+   "question": "Is 4,126 divisible by 4?",
+   "wrong_answer": "Yes, it is even",
+   "correct_answer": "No: 26 is not divisible by 4"
+  },
+  "cause": "Mixes up divisible by 2 with divisible by 4.",
+  "reveals": "The answer Yes, it is even as a wrong option, with a reason that names the idea.",
+  "help": "Halve it, then halve again: if the first half is odd it fails.",
+  "source": "to be confirmed by a teacher (no source yet)",
+  "status": "draft"
+ },
+ "MATH.G7.NUMBER.FACTORS.DIV_BY_3_6_9.M_DIGIT_SUM_NOT_DIVIDED": {
+  "skill": "MATH.G7.NUMBER.FACTORS.DIV_BY_3_6_9",
+  "error": "Calls a number divisible by 3 or 9 without testing the digit sum, or accepts a sum that is not a multiple.",
+  "example": {
+   "question": "Is 8,180 divisible by 3?",
+   "wrong_answer": "Yes (digits add to 17)",
+   "correct_answer": "No: 17 is not a multiple of 3"
+  },
+  "cause": "Adds the digits but forgets to check if the sum is a multiple of 3.",
+  "reveals": "The answer Yes (digits add to 17) as a wrong option, with a reason that names the idea.",
+  "help": "After adding the digits, ask: is the sum in the 3 times table?",
+  "source": "to be confirmed by a teacher (no source yet)",
+  "status": "draft"
+ },
+ "MATH.G7.NUMBER.FACTORS.DIV_BY_3_6_9.M_SIX_ONLY_THREE_TESTED": {
+  "skill": "MATH.G7.NUMBER.FACTORS.DIV_BY_3_6_9",
+  "error": "Tests only divisibility by 3 for 6.",
+  "example": {
+   "question": "Is 4,125 divisible by 6?",
+   "wrong_answer": "Yes, the digit sum 12 is a multiple of 3",
+   "correct_answer": "No: it is odd"
+  },
+  "cause": "Forgets that 6 = 2 x 3 needs both tests.",
+  "reveals": "The answer Yes, the digit sum 12 is a multiple of 3 as a wrong option, with a reason that names the idea.",
+  "help": "A number divisible by 6 must pass the test for 2 and the test for 3.",
+  "source": "to be confirmed by a teacher (no source yet)",
+  "status": "draft"
+ },
+ "MATH.G7.NUMBER.FACTORS.DIV_BY_3_6_9.M_SIX_ONLY_EVEN_TESTED": {
+  "skill": "MATH.G7.NUMBER.FACTORS.DIV_BY_3_6_9",
+  "error": "Tests only that the number is even for 6.",
+  "example": {
+   "question": "Is 4,126 divisible by 6?",
+   "wrong_answer": "Yes, it is even",
+   "correct_answer": "No: the digit sum 13 is not a multiple of 3"
+  },
+  "cause": "Forgets the test for 3.",
+  "reveals": "The answer Yes, it is even as a wrong option, with a reason that names the idea.",
+  "help": "Check both: even, and the digit sum a multiple of 3.",
+  "source": "to be confirmed by a teacher (no source yet)",
+  "status": "draft"
+ },
+ "MATH.G7.NUMBER.FACTORS.DIV_BY_3_6_9.M_DIGIT_SUM_DIVISIBLE_BY_SIX": {
+  "skill": "MATH.G7.NUMBER.FACTORS.DIV_BY_3_6_9",
+  "error": "Uses the digit sum test for 6 by asking if the digit sum is a multiple of 6.",
+  "example": {
+   "question": "Is 4,125 divisible by 6? (digits add to 12)",
+   "wrong_answer": "Yes, 12 is a multiple of 6",
+   "correct_answer": "No: it is odd"
+  },
+  "cause": "Copies the 3 and 9 rule to 6.",
+  "reveals": "The answer Yes, 12 is a multiple of 6 as a wrong option, with a reason that names the idea.",
+  "help": "The digit sum rule works for 3 and 9 only. For 6 use even and digit sum for 3.",
+  "source": "to be confirmed by a teacher (no source yet)",
+  "status": "draft"
+ },
+ "MATH.G7.NUMBER.FACTORS.DIV_BY_11.M_ELEVEN_ADD_ALL_DIGITS": {
+  "skill": "MATH.G7.NUMBER.FACTORS.DIV_BY_11",
+  "error": "Adds all the digits and tests the sum for 11.",
+  "example": {
+   "question": "Is 5,445 divisible by 11?",
+   "wrong_answer": "No: 5+4+4+5 = 18, not a multiple of 11",
+   "correct_answer": "Yes: (5+4) - (4+5) = 0"
+  },
+  "cause": "Uses the 3 and 9 rule for 11.",
+  "reveals": "The answer No: 5+4+4+5 = 18, not a multiple of 11 as a wrong option, with a reason that names the idea.",
+  "help": "For 11 add the digits in odd places, then in even places, and subtract.",
+  "source": "to be confirmed by a teacher (no source yet)",
+  "status": "draft"
+ },
+ "MATH.G7.NUMBER.FACTORS.DIV_BY_11.M_ELEVEN_ZERO_ONLY": {
+  "skill": "MATH.G7.NUMBER.FACTORS.DIV_BY_11",
+  "error": "Accepts only a difference of 0 and misses a difference of 11.",
+  "example": {
+   "question": "Is 3,718 divisible by 11?",
+   "wrong_answer": "No: the difference is 11, not 0",
+   "correct_answer": "Yes: 11 is a multiple of 11"
+  },
+  "cause": "Believes the difference must be exactly 0.",
+  "reveals": "The answer No: the difference is 11, not 0 as a wrong option, with a reason that names the idea.",
+  "help": "The difference can be 0, 11, 22 and so on: any multiple of 11.",
+  "source": "to be confirmed by a teacher (no source yet)",
+  "status": "draft"
+ },
+ "MATH.G7.NUMBER.FACTORS.PRIME_FACTORISE.M_FACTORS_NOT_PRIME": {
+  "skill": "MATH.G7.NUMBER.FACTORS.PRIME_FACTORISE",
+  "error": "Stops with a composite factor, such as 396 = 2 x 2 x 9 x 11.",
+  "example": {
+   "question": "Write 396 as a product of prime factors.",
+   "wrong_answer": "2 x 2 x 9 x 11",
+   "correct_answer": "2 x 2 x 3 x 3 x 11"
+  },
+  "cause": "Stops at the first factors found.",
+  "reveals": "The answer 2 x 2 x 9 x 11 as a wrong option, with a reason that names the idea.",
+  "help": "Check each factor: if it can be split, split it again.",
+  "source": "to be confirmed by a teacher (no source yet)",
+  "status": "draft"
+ },
+ "MATH.G7.NUMBER.FACTORS.PRIME_FACTORISE.M_REPEATED_FACTOR_ONCE": {
+  "skill": "MATH.G7.NUMBER.FACTORS.PRIME_FACTORISE",
+  "error": "Writes a repeated prime factor only once.",
+  "example": {
+   "question": "Write 36 as a product of prime factors.",
+   "wrong_answer": "2 x 3",
+   "correct_answer": "2 x 2 x 3 x 3"
+  },
+  "cause": "Thinks a prime factor needs to be listed once.",
+  "reveals": "The answer 2 x 3 as a wrong option, with a reason that names the idea.",
+  "help": "Multiply your answer back: 2 x 3 is only 6, so more factors are needed.",
+  "source": "to be confirmed by a teacher (no source yet)",
+  "status": "draft"
+ },
+ "MATH.G7.NUMBER.FACTORS.PRIME_FACTORISE.M_SMALL_PRIMES_ENOUGH": {
+  "skill": "MATH.G7.NUMBER.FACTORS.PRIME_FACTORISE",
+  "error": "Believes a number that does not divide by 2, 3 or 5 is prime.",
+  "example": {
+   "question": "Is 143 prime?",
+   "wrong_answer": "Yes, 2, 3 and 5 do not divide it",
+   "correct_answer": "No: 143 = 11 x 13"
+  },
+  "cause": "Tests only the first three primes.",
+  "reveals": "The answer Yes, 2, 3 and 5 do not divide it as a wrong option, with a reason that names the idea.",
+  "help": "Keep testing primes until the square of the prime is larger than the number.",
+  "source": "to be confirmed by a teacher (no source yet)",
+  "status": "draft"
+ },
+ "MATH.G7.NUMBER.FACTORS.PRIME_FACTORISE.M_PRIMES_STOP_AT_100": {
+  "skill": "MATH.G7.NUMBER.FACTORS.PRIME_FACTORISE",
+  "error": "Believes prime numbers stop at 100.",
+  "example": {
+   "question": "Is 101 prime?",
+   "wrong_answer": "No, primes stop at 100",
+   "correct_answer": "Yes: no prime divides it"
+  },
+  "cause": "Has only seen primes up to 100 in a table.",
+  "reveals": "The answer No, primes stop at 100 as a wrong option, with a reason that names the idea.",
+  "help": "Test 101 with 2, 3, 5 and 7: none divides it, so it is prime.",
+  "source": "to be confirmed by a teacher (no source yet)",
+  "status": "draft"
+ },
+ "MATH.G7.NUMBER.FACTORS.GCD_BY_FACTORS.M_GCD_IS_LCM": {
+  "skill": "MATH.G7.NUMBER.FACTORS.GCD_BY_FACTORS",
+  "error": "Gives the LCM when asked for the GCD.",
+  "example": {
+   "question": "GCD of 63 and 81",
+   "wrong_answer": "567",
+   "correct_answer": "9"
+  },
+  "cause": "Mixes up common factors and common multiples.",
+  "reveals": "The answer 567 as a wrong option, with a reason that names the idea.",
+  "help": "The GCD divides both numbers, so it cannot be larger than the smaller one.",
+  "source": "to be confirmed by a teacher (no source yet)",
+  "status": "draft"
+ },
+ "MATH.G7.NUMBER.FACTORS.GCD_BY_FACTORS.M_GCD_DIFFERENCE": {
+  "skill": "MATH.G7.NUMBER.FACTORS.GCD_BY_FACTORS",
+  "error": "Uses the difference of the numbers as the GCD.",
+  "example": {
+   "question": "GCD of 63 and 81",
+   "wrong_answer": "18",
+   "correct_answer": "9"
+  },
+  "cause": "Believes the GCD is the gap between the numbers.",
+  "reveals": "The answer 18 as a wrong option, with a reason that names the idea.",
+  "help": "Check: does 18 divide 63 exactly? It does not.",
+  "source": "to be confirmed by a teacher (no source yet)",
+  "status": "draft"
+ },
+ "MATH.G7.NUMBER.FACTORS.GCD_BY_FACTORS.M_MULTIPLE_VS_FACTOR_CONFUSED": {
+  "skill": "MATH.G7.NUMBER.FACTORS.GCD_BY_FACTORS",
+  "error": "Mixes up factor and multiple.",
+  "example": {
+   "question": "Is 120 a multiple of 6?",
+   "wrong_answer": "No: 120 is not a factor of 6",
+   "correct_answer": "Yes: 6 x 20 = 120"
+  },
+  "cause": "Says \"not a factor\" when the question is about multiples.",
+  "reveals": "The answer No: 120 is not a factor of 6 as a wrong option, with a reason that names the idea.",
+  "help": "A multiple is in the times table of the number; a factor divides into it.",
+  "source": "to be confirmed by a teacher (no source yet)",
+  "status": "draft"
+ },
+ "MATH.G7.NUMBER.FACTORS.LCM_BY_FACTORS.M_LCM_PRODUCT": {
+  "skill": "MATH.G7.NUMBER.FACTORS.LCM_BY_FACTORS",
+  "error": "Takes the product of the two numbers as the LCM.",
+  "example": {
+   "question": "LCM of 12 and 8",
+   "wrong_answer": "96",
+   "correct_answer": "24"
+  },
+  "cause": "Takes any common multiple as the least.",
+  "reveals": "The answer 96 as a wrong option, with a reason that names the idea.",
+  "help": "List multiples of 12 and 8 and find the first one in both lists.",
+  "source": "to be confirmed by a teacher (no source yet)",
+  "status": "draft"
+ },
+ "MATH.G7.NUMBER.FACTORS.LCM_BY_FACTORS.M_LCM_ADD_THE_GAPS": {
+  "skill": "MATH.G7.NUMBER.FACTORS.LCM_BY_FACTORS",
+  "error": "Adds the two numbers to find the LCM.",
+  "example": {
+   "question": "LCM of 12 and 8",
+   "wrong_answer": "20",
+   "correct_answer": "24"
+  },
+  "cause": "Adds because the story gives two numbers.",
+  "reveals": "The answer 20 as a wrong option, with a reason that names the idea.",
+  "help": "Check: is 20 in the 12 times table?",
+  "source": "to be confirmed by a teacher (no source yet)",
+  "status": "draft"
+ },
+ "MATH.G7.NUMBER.FACTORS.LCM_BY_FACTORS.M_LCM_SMALLER_THAN_NUMBERS": {
+  "skill": "MATH.G7.NUMBER.FACTORS.LCM_BY_FACTORS",
+  "error": "Believes the LCM must be smaller than the numbers.",
+  "example": {
+   "question": "LCM of 6 and 20",
+   "wrong_answer": "2",
+   "correct_answer": "60"
+  },
+  "cause": "Mixes the LCM with the GCD.",
+  "reveals": "The answer 2 as a wrong option, with a reason that names the idea.",
+  "help": "A multiple is never smaller than the number itself.",
+  "source": "to be confirmed by a teacher (no source yet)",
+  "status": "draft"
+ },
+ "MATH.G7.NUMBER.FACTORS.GCD_IN_CONTEXT.M_SMALLEST_QUANTITY_IS_GCD": {
+  "skill": "MATH.G7.NUMBER.FACTORS.GCD_IN_CONTEXT",
+  "error": "Gives the smallest quantity as the greatest number of groups.",
+  "example": {
+   "question": "24, 30 and 18 items. Greatest number of equal packs?",
+   "wrong_answer": "18",
+   "correct_answer": "6"
+  },
+  "cause": "Thinks the packs cannot be more than the smallest stock.",
+  "reveals": "The answer 18 as a wrong option, with a reason that names the idea.",
+  "help": "Check: does 18 divide 24 and 30 exactly?",
+  "source": "to be confirmed by a teacher (no source yet)",
+  "status": "draft"
+ },
+ "MATH.G7.NUMBER.FACTORS.GCD_IN_CONTEXT.M_GCD_TWO_OF_THREE": {
+  "skill": "MATH.G7.NUMBER.FACTORS.GCD_IN_CONTEXT",
+  "error": "Finds the GCD of two of the three numbers only.",
+  "example": {
+   "question": "24, 36 and 30 items: the greatest number of equal packs?",
+   "wrong_answer": "12",
+   "correct_answer": "6"
+  },
+  "cause": "Stops after two numbers.",
+  "reveals": "The answer 12 as a wrong option, with a reason that names the idea.",
+  "help": "The third number must divide exactly too.",
+  "source": "to be confirmed by a teacher (no source yet)",
+  "status": "draft"
+ },
+ "MATH.G7.NUMBER.FACTORS.GCD_IN_CONTEXT.M_OTHER_QUANTITY_GIVEN": {
+  "skill": "MATH.G7.NUMBER.FACTORS.GCD_IN_CONTEXT",
+  "error": "Gives the other quantity: the number of pieces for the length, or the contents of a pack for the number of packs.",
+  "example": {
+   "question": "Ropes of 63 m and 81 m are cut into equal longest pieces. How long is each piece?",
+   "wrong_answer": "16",
+   "correct_answer": "9"
+  },
+  "cause": "Answers the number of pieces instead of their length.",
+  "reveals": "The answer 16 as a wrong option, with a reason that names the idea.",
+  "help": "Read the last sentence: what is the question asking for?",
+  "source": "to be confirmed by a teacher (no source yet)",
+  "status": "draft"
+ },
+ "MATH.G7.NUMBER.FACTORS.LCM_IN_CONTEXT.M_LCM_ONE_GAP_ONLY": {
+  "skill": "MATH.G7.NUMBER.FACTORS.LCM_IN_CONTEXT",
+  "error": "Gives one of the gaps as the time they meet.",
+  "example": {
+   "question": "Matatus every 12 and 8 minutes: when together again?",
+   "wrong_answer": "12 minutes",
+   "correct_answer": "24 minutes"
+  },
+  "cause": "Looks at the first time one of them leaves.",
+  "reveals": "The answer 12 minutes as a wrong option, with a reason that names the idea.",
+  "help": "Check: does the 8 minute matatu leave at 12 minutes?",
+  "source": "to be confirmed by a teacher (no source yet)",
+  "status": "draft"
+ },
+ "MATH.G7.NUMBER.FACTORS.LCM_IN_CONTEXT.M_LCM_TWO_OF_THREE": {
+  "skill": "MATH.G7.NUMBER.FACTORS.LCM_IN_CONTEXT",
+  "error": "Finds the LCM of two of three numbers only.",
+  "example": {
+   "question": "Bells every 6, 10 and 8 minutes: when do all three ring together?",
+   "wrong_answer": "30 minutes",
+   "correct_answer": "120 minutes"
+  },
+  "cause": "Forgets the third bell.",
+  "reveals": "The answer 30 minutes as a wrong option, with a reason that names the idea.",
+  "help": "Check the answer in all three lists.",
+  "source": "to be confirmed by a teacher (no source yet)",
+  "status": "draft"
  }
 }

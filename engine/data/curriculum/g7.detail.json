@@ -271,6 +271,78 @@
     "check a classmate's sequence"
    ],
    "mastery": "Given a rule such as \"start at 5, add 4\" or \"multiply by 3 then add 3\", the child writes the first terms, and makes a sequence of their own for a number game, checking that the terms follow the rule every time."
+  },
+  "MATH.G7.NUMBER.FACTORS.DIV_BY_2_4_8_5_10": {
+   "forms": [
+    "is it divisible by 4",
+    "which numbers pass the test",
+    "make the number divisible by 8",
+    "explain the test"
+   ],
+   "mastery": "The child tests a number up to 6 digits for divisibility by 2, 5 and 10 from the last digit, by 4 from the last two digits and by 8 from the last three digits, and explains the test."
+  },
+  "MATH.G7.NUMBER.FACTORS.DIV_BY_3_6_9": {
+   "forms": [
+    "divisible by 3 or 9",
+    "divisible by 6: count from a table",
+    "find the missing digit",
+    "spot the wrong test"
+   ],
+   "mastery": "The child adds the digits of a number up to 6 digits and tests the sum for 3 and 9, and knows a number is divisible by 6 only when it is even and divisible by 3."
+  },
+  "MATH.G7.NUMBER.FACTORS.DIV_BY_11": {
+   "forms": [
+    "test a 4-digit number",
+    "spot the slip in the working",
+    "make a number divisible by 11",
+    "explain the test"
+   ],
+   "mastery": "The child adds the digits in the odd places and in the even places, subtracts the two sums, and says the number is divisible by 11 when the difference is 0 or a multiple of 11."
+  },
+  "MATH.G7.NUMBER.FACTORS.PRIME_FACTORISE": {
+   "forms": [
+    "factor tree",
+    "repeated division",
+    "find the mistake in the working",
+    "why 143 is not prime"
+   ],
+   "mastery": "The child splits a number up to 500 with a factor tree or repeated division by 2, 3, 5, 7 and 11 until every factor is prime, writes repeated factors in full or with a power, and explains why a number with no small factors may still be composite."
+  },
+  "MATH.G7.NUMBER.FACTORS.GCD_BY_FACTORS": {
+   "forms": [
+    "GCD of two numbers",
+    "GCD of three numbers",
+    "GCD or LCM",
+    "check by dividing"
+   ],
+   "mastery": "The child writes each of two or three numbers (up to 200) as a product of primes, multiplies the primes common to all of them, taking each as many times as it is in every number, and gets the GCD."
+  },
+  "MATH.G7.NUMBER.FACTORS.LCM_BY_FACTORS": {
+   "forms": [
+    "LCM of two numbers",
+    "LCM of three numbers",
+    "why the product is not the least",
+    "check with multiples"
+   ],
+   "mastery": "The child writes each of two or three numbers (up to 60) as a product of primes and multiplies each prime the greatest number of times it appears in any one number, and gets the LCM."
+  },
+  "MATH.G7.NUMBER.FACTORS.GCD_IN_CONTEXT": {
+   "forms": [
+    "longest equal pieces",
+    "greatest number of equal packs",
+    "which is the GCD story",
+    "what the GCD means here"
+   ],
+   "mastery": "The child decides from a story that the greatest equal size or number of equal groups is the GCD (cutting ropes, packing boxes, tiling) and works it out for two or three quantities, answering the size or the number asked."
+  },
+  "MATH.G7.NUMBER.FACTORS.LCM_IN_CONTEXT": {
+   "forms": [
+    "when do they meet again",
+    "three bells",
+    "which is the LCM story",
+    "next time in clock time"
+   ],
+   "mastery": "The child decides from a story that the first time two or three repeating events coincide is the LCM (matatus leaving, bells ringing) and works it out in minutes or days, answering the time asked."
   }
  }
 }

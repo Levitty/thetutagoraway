@@ -18,9 +18,12 @@
 //   packCoverage()                    { skills, misconceptions } counts
 // ============================================================================
 import { TEACHING_PACK_G5 } from './teachingPackData.js';
+import { TEACHING_PACK_G7 } from './teachingPackData.g7.js';
+// Grade 5 and Grade 7 side by side: codes carry the grade, so they never clash.
+const PACK = { ...TEACHING_PACK_G5, ...TEACHING_PACK_G7 };
 
 export function teachingFor(skillCode) {
-  return TEACHING_PACK_G5[skillCode] || null;
+  return PACK[skillCode] || null;
 }
 
 export function misconceptionFor(skillCode, code) {
@@ -50,7 +53,7 @@ export function briefFor(skillCode, { stage = 'teach', misconception = null } = 
 }
 
 export function packCoverage() {
-  const entries = Object.values(TEACHING_PACK_G5);
+  const entries = Object.values(PACK);
   return { skills: entries.length, misconceptions: entries.reduce((n, e) => n + e.misconceptions.length, 0) };
 }
 

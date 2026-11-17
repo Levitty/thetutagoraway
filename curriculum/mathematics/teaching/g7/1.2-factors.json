@@ -1,0 +1,627 @@
+{
+ "sub_strand": "MATH.G7.NUMBER.FACTORS",
+ "title": "Factors",
+ "status": "draft: written 17 Nov 2026 offline for the Grade 7 pilot; not yet checked by a Kenyan maths teacher; not loaded by the live tutor",
+ "sources": [],
+ "notes": "Official outcomes a to d are tested; e is an attitude. Outcome a lists 2, 3, 4, 5, 6, 8, 9, 10 and 11, so there are three divisibility skills grouped by the kind of test (last digits, digit sum, alternating sum). Outcomes c and d are by the factor method, so the skills use prime factorisation. GCD is the same as HCF in Grade 5.",
+ "skills": [
+  {
+   "skill": "MATH.G7.NUMBER.FACTORS.DIV_BY_2_4_8_5_10",
+   "key_step": "The child says which end of the number decides: the last digit for 2, 5 and 10, the last two digits for 4, the last three for 8.",
+   "floor": {
+    "prerequisite": "Knows even numbers.",
+    "question": "Is 3,614 divisible by 2?",
+    "answer": "Yes"
+   },
+   "representations": [
+    "a number with its last digits boxed",
+    "dividing the boxed part",
+    "bundles of books"
+   ],
+   "steps": [
+    "Name the divisor.",
+    "Box the last digits that decide.",
+    "Divide the boxed part by the divisor.",
+    "Say yes or no with the reason."
+   ],
+   "contexts": [
+    "bundles of books",
+    "sharing sacks",
+    "packing eggs"
+   ],
+   "board": [
+    {
+     "beat": "write",
+     "do": "Write 3,614 and box 14."
+    },
+    {
+     "beat": "point",
+     "do": "Point at the boxed 14.",
+     "say": "Does 4 go into 14 exactly?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for the child to decide."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "MATH.G7.NUMBER.FACTORS.DIV_BY_2_4_8_5_10.M_LAST_DIGIT_FOR_4_8",
+     "listen_for": [
+      "it ends in 4",
+      "last digit is even"
+     ],
+     "ask": "Does 4 go into 14 exactly?",
+     "repair": "For 4 look at the last two digits."
+    },
+    {
+     "code": "MATH.G7.NUMBER.FACTORS.DIV_BY_2_4_8_5_10.M_EVEN_MEANS_DIVISIBLE_BY_4",
+     "listen_for": [
+      "it is even so yes"
+     ],
+     "ask": "Halve 4,126, then halve again: what happens?",
+     "repair": "Even means divisible by 2 only."
+    }
+   ],
+   "checks": [
+    {
+     "question": "Is 3,614 divisible by 4?",
+     "answer": "No",
+     "shows": "last two digits"
+    },
+    {
+     "question": "Is 7,128 divisible by 8?",
+     "answer": "Yes",
+     "shows": "last three digits"
+    }
+   ]
+  },
+  {
+   "skill": "MATH.G7.NUMBER.FACTORS.DIV_BY_3_6_9",
+   "key_step": "The child adds the digits and says whether the sum is in the 3 or 9 table, and for 6 checks even and the sum for 3.",
+   "floor": {
+    "prerequisite": "Adds the digits of a number.",
+    "question": "Add the digits of 4,125.",
+    "answer": "12"
+   },
+   "representations": [
+    "digits added in a row",
+    "the sum in a times table",
+    "a table of numbers and digit sums"
+   ],
+   "steps": [
+    "Add the digits.",
+    "Is the sum in the 3 (or 9) times table?",
+    "For 6 also check the number is even.",
+    "Say the answer with the reason."
+   ],
+   "contexts": [
+    "sharing sacks among 3 or 9",
+    "packing in sixes",
+    "bundles"
+   ],
+   "board": [
+    {
+     "beat": "write",
+     "do": "Write 4,125 and add the digits underneath."
+    },
+    {
+     "beat": "point",
+     "do": "Point at the sum 12.",
+     "say": "Is 12 in the 3 times table?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for the child to decide."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "MATH.G7.NUMBER.FACTORS.DIV_BY_3_6_9.M_DIGIT_SUM_NOT_DIVIDED",
+     "listen_for": [
+      "digits add to 17 so yes"
+     ],
+     "ask": "Is 17 in the 3 times table?",
+     "repair": "The sum must be a multiple of 3."
+    },
+    {
+     "code": "MATH.G7.NUMBER.FACTORS.DIV_BY_3_6_9.M_SIX_ONLY_THREE_TESTED",
+     "listen_for": [
+      "the digits make 12 so yes"
+     ],
+     "ask": "Is 4,125 even?",
+     "repair": "For 6 both tests must pass."
+    },
+    {
+     "code": "MATH.G7.NUMBER.FACTORS.DIV_BY_3_6_9.M_SIX_ONLY_EVEN_TESTED",
+     "listen_for": [
+      "it is even"
+     ],
+     "ask": "What is the digit sum, and is it in the 3 table?",
+     "repair": "For 6 both tests must pass."
+    },
+    {
+     "code": "MATH.G7.NUMBER.FACTORS.DIV_BY_3_6_9.M_DIGIT_SUM_DIVISIBLE_BY_SIX",
+     "listen_for": [
+      "12 is a multiple of 6"
+     ],
+     "ask": "Does the digit sum rule work for 6, or only for 3 and 9?",
+     "repair": "For 6 use even and the digit sum for 3."
+    }
+   ],
+   "checks": [
+    {
+     "question": "Is 4,125 divisible by 6?",
+     "answer": "No",
+     "shows": "odd"
+    },
+    {
+     "question": "Is 5,274 divisible by 9?",
+     "answer": "Yes",
+     "shows": "digit sum 18"
+    }
+   ]
+  },
+  {
+   "skill": "MATH.G7.NUMBER.FACTORS.DIV_BY_11",
+   "key_step": "The child adds the digits in alternate places, subtracts the two sums, and checks the difference is 0 or a multiple of 11.",
+   "floor": {
+    "prerequisite": "Adds numbers.",
+    "question": "What is 5 + 4?",
+    "answer": "9"
+   },
+   "representations": [
+    "digits labelled odd and even places",
+    "two sums",
+    "the difference"
+   ],
+   "steps": [
+    "Label the places 1, 2, 3, 4.",
+    "Add the digits in odd places, then in even places.",
+    "Subtract the smaller sum from the larger.",
+    "A difference of 0 or 11 or 22 means yes."
+   ],
+   "contexts": [
+    "sharing among 11 players",
+    "bundles",
+    "house numbers"
+   ],
+   "board": [
+    {
+     "beat": "write",
+     "do": "Write 5,445 and mark the places 1 to 4."
+    },
+    {
+     "beat": "draw",
+     "do": "Draw two boxes: odd places sum, even places sum."
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for the child to fill the boxes."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "MATH.G7.NUMBER.FACTORS.DIV_BY_11.M_ELEVEN_ADD_ALL_DIGITS",
+     "listen_for": [
+      "digits add to 18"
+     ],
+     "ask": "Is this the rule for 3 and 9 or for 11?",
+     "repair": "For 11 subtract the two sums."
+    },
+    {
+     "code": "MATH.G7.NUMBER.FACTORS.DIV_BY_11.M_ELEVEN_ZERO_ONLY",
+     "listen_for": [
+      "not zero so no",
+      "difference is 11"
+     ],
+     "ask": "Is 11 in the 11 times table?",
+     "repair": "The difference can be 0, 11 or 22."
+    }
+   ],
+   "checks": [
+    {
+     "question": "Is 5,445 divisible by 11?",
+     "answer": "Yes",
+     "shows": "difference 0"
+    },
+    {
+     "question": "Is 8,127 divisible by 11?",
+     "answer": "No",
+     "shows": "difference 2"
+    }
+   ]
+  },
+  {
+   "skill": "MATH.G7.NUMBER.FACTORS.PRIME_FACTORISE",
+   "key_step": "The child keeps splitting until every factor is prime, then writes all the primes in a product and multiplies back to check.",
+   "floor": {
+    "prerequisite": "Lists factors.",
+    "question": "List the factors of 12.",
+    "answer": "1, 2, 3, 4, 6, 12"
+   },
+   "representations": [
+    "a factor tree",
+    "repeated division",
+    "the product of primes"
+   ],
+   "steps": [
+    "Split the number into two factors.",
+    "Split each composite factor again.",
+    "Stop when every factor is prime.",
+    "Write the product and check by multiplying."
+   ],
+   "contexts": [
+    "arranging chairs in rows",
+    "bundles",
+    "tiles"
+   ],
+   "board": [
+    {
+     "beat": "draw",
+     "do": "Draw a tree for 396 with 4 and 99."
+    },
+    {
+     "beat": "point",
+     "do": "Point at the 4.",
+     "say": "Is this factor prime?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for the child to split."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "MATH.G7.NUMBER.FACTORS.PRIME_FACTORISE.M_FACTORS_NOT_PRIME",
+     "listen_for": [
+      "2 x 2 x 9 x 11"
+     ],
+     "ask": "Can 9 be split again?",
+     "repair": "Split until every factor is prime."
+    },
+    {
+     "code": "MATH.G7.NUMBER.FACTORS.PRIME_FACTORISE.M_REPEATED_FACTOR_ONCE",
+     "listen_for": [
+      "2 x 3 for 36"
+     ],
+     "ask": "What is 2 x 3?",
+     "repair": "Write each factor as many times as it appears."
+    },
+    {
+     "code": "MATH.G7.NUMBER.FACTORS.PRIME_FACTORISE.M_SMALL_PRIMES_ENOUGH",
+     "listen_for": [
+      "not divisible by 2, 3 or 5"
+     ],
+     "ask": "Does 11 divide 143?",
+     "repair": "Test more primes."
+    },
+    {
+     "code": "MATH.G7.NUMBER.FACTORS.PRIME_FACTORISE.M_PRIMES_STOP_AT_100",
+     "listen_for": [
+      "primes stop at 100"
+     ],
+     "ask": "Does 2, 3, 5 or 7 divide 101?",
+     "repair": "Primes go on for ever."
+    }
+   ],
+   "checks": [
+    {
+     "question": "Write 396 as a product of primes.",
+     "answer": "2 x 2 x 3 x 3 x 11",
+     "shows": "full tree"
+    },
+    {
+     "question": "Is 143 prime?",
+     "answer": "No, 11 x 13",
+     "shows": "test more primes"
+    }
+   ]
+  },
+  {
+   "skill": "MATH.G7.NUMBER.FACTORS.GCD_BY_FACTORS",
+   "key_step": "The child writes the numbers as products of primes and multiplies the primes they share, each as many times as it is in every number.",
+   "floor": {
+    "prerequisite": "Factorises.",
+    "question": "Write 18 as a product of primes.",
+    "answer": "2 x 3 x 3"
+   },
+   "representations": [
+    "prime factor trees side by side",
+    "common primes circled",
+    "the product of the circled primes"
+   ],
+   "steps": [
+    "Factorise each number.",
+    "Circle the primes common to all.",
+    "Multiply them.",
+    "Check it divides each number."
+   ],
+   "contexts": [
+    "cutting ropes",
+    "packing boxes",
+    "tiling a floor"
+   ],
+   "board": [
+    {
+     "beat": "draw",
+     "do": "Draw the trees for 63 and 81."
+    },
+    {
+     "beat": "point",
+     "do": "Point at the common 3s.",
+     "say": "How many 3s does each number have?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for the child to circle the common ones."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "MATH.G7.NUMBER.FACTORS.GCD_BY_FACTORS.M_GCD_IS_LCM",
+     "listen_for": [
+      "567"
+     ],
+     "ask": "Can the GCD be larger than 63?",
+     "repair": "The GCD divides both numbers."
+    },
+    {
+     "code": "MATH.G7.NUMBER.FACTORS.GCD_BY_FACTORS.M_GCD_DIFFERENCE",
+     "listen_for": [
+      "the difference"
+     ],
+     "ask": "Does 18 divide 63?",
+     "repair": "Use the common primes."
+    },
+    {
+     "code": "MATH.G7.NUMBER.FACTORS.GCD_BY_FACTORS.M_MULTIPLE_VS_FACTOR_CONFUSED",
+     "listen_for": [
+      "not a factor"
+     ],
+     "ask": "Is 120 in the 6 times table?",
+     "repair": "A multiple is in the times table."
+    }
+   ],
+   "checks": [
+    {
+     "question": "GCD of 63 and 81",
+     "answer": "9",
+     "shows": "common primes"
+    },
+    {
+     "question": "GCD of 24, 36 and 60",
+     "answer": "12",
+     "shows": "three numbers"
+    }
+   ]
+  },
+  {
+   "skill": "MATH.G7.NUMBER.FACTORS.LCM_BY_FACTORS",
+   "key_step": "The child writes each number as primes and takes each prime the greatest number of times it appears in any one number, then multiplies.",
+   "floor": {
+    "prerequisite": "Lists multiples.",
+    "question": "List the first four multiples of 6.",
+    "answer": "6, 12, 18, 24"
+   },
+   "representations": [
+    "prime trees",
+    "highest powers circled",
+    "a list of multiples to check"
+   ],
+   "steps": [
+    "Factorise each number.",
+    "Take every prime at its highest count.",
+    "Multiply.",
+    "Check with lists of multiples."
+   ],
+   "contexts": [
+    "bells",
+    "matatus",
+    "market days"
+   ],
+   "board": [
+    {
+     "beat": "draw",
+     "do": "Draw the trees for 12 and 8."
+    },
+    {
+     "beat": "point",
+     "do": "Point at the 2s.",
+     "say": "What is the most 2s in one number?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for the child to take the highest."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "MATH.G7.NUMBER.FACTORS.LCM_BY_FACTORS.M_LCM_PRODUCT",
+     "listen_for": [
+      "96"
+     ],
+     "ask": "Is 24 also in both lists?",
+     "repair": "Find the first multiple in both."
+    },
+    {
+     "code": "MATH.G7.NUMBER.FACTORS.LCM_BY_FACTORS.M_LCM_ADD_THE_GAPS",
+     "listen_for": [
+      "12 + 8"
+     ],
+     "ask": "Is 20 in the 12 times table?",
+     "repair": "Add does not give a multiple."
+    },
+    {
+     "code": "MATH.G7.NUMBER.FACTORS.LCM_BY_FACTORS.M_LCM_SMALLER_THAN_NUMBERS",
+     "listen_for": [
+      "smaller",
+      "2"
+     ],
+     "ask": "Can a multiple be smaller than the number?",
+     "repair": "A multiple is at least the number."
+    }
+   ],
+   "checks": [
+    {
+     "question": "LCM of 12 and 8",
+     "answer": "24",
+     "shows": "highest powers"
+    },
+    {
+     "question": "LCM of 6 and 20",
+     "answer": "60",
+     "shows": "least not the product"
+    }
+   ]
+  },
+  {
+   "skill": "MATH.G7.NUMBER.FACTORS.GCD_IN_CONTEXT",
+   "key_step": "The child says whether the story needs the biggest equal size or the number of groups and finds the GCD, then answers what was asked.",
+   "floor": {
+    "prerequisite": "Finds a GCD.",
+    "question": "GCD of 12 and 18",
+    "answer": "6"
+   },
+   "representations": [
+    "ropes cut into equal pieces",
+    "boxes packed",
+    "the GCD with the question underlined"
+   ],
+   "steps": [
+    "Underline what is asked.",
+    "Find the GCD.",
+    "Read what the GCD stands for in the story.",
+    "Answer with the unit."
+   ],
+   "contexts": [
+    "ropes",
+    "gift boxes",
+    "tiles"
+   ],
+   "board": [
+    {
+     "beat": "draw",
+     "do": "Draw two ropes of 63 m and 81 m."
+    },
+    {
+     "beat": "point",
+     "do": "Point at the cuts.",
+     "say": "Do the pieces have to fit both ropes?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for the child to say."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "MATH.G7.NUMBER.FACTORS.GCD_IN_CONTEXT.M_SMALLEST_QUANTITY_IS_GCD",
+     "listen_for": [
+      "the smallest"
+     ],
+     "ask": "Does 18 divide 30?",
+     "repair": "Test it on every quantity."
+    },
+    {
+     "code": "MATH.G7.NUMBER.FACTORS.GCD_IN_CONTEXT.M_GCD_TWO_OF_THREE",
+     "listen_for": [
+      "only the first two"
+     ],
+     "ask": "Does it divide the third?",
+     "repair": "All three must divide exactly."
+    },
+    {
+     "code": "MATH.G7.NUMBER.FACTORS.GCD_IN_CONTEXT.M_OTHER_QUANTITY_GIVEN",
+     "listen_for": [
+      "16 pieces"
+     ],
+     "ask": "What is the question asking for?",
+     "repair": "Answer length or number as asked."
+    }
+   ],
+   "checks": [
+    {
+     "question": "Ropes of 63 m and 81 m are cut into the longest equal pieces. How long is a piece?",
+     "answer": "9 m",
+     "shows": "GCD"
+    },
+    {
+     "question": "24 soaps, 36 tubes and 60 packets. Most equal gift boxes?",
+     "answer": "12",
+     "shows": "GCD of three"
+    }
+   ]
+  },
+  {
+   "skill": "MATH.G7.NUMBER.FACTORS.LCM_IN_CONTEXT",
+   "key_step": "The child sees that repeating events meet at a common multiple, finds the least one, and answers in the unit asked.",
+   "floor": {
+    "prerequisite": "Finds an LCM.",
+    "question": "LCM of 4 and 6",
+    "answer": "12"
+   },
+   "representations": [
+    "two timelines",
+    "lists of multiples",
+    "the first match"
+   ],
+   "steps": [
+    "Draw the timelines or list multiples.",
+    "Find the first time in both.",
+    "Check with the third event.",
+    "Answer in minutes or clock time."
+   ],
+   "contexts": [
+    "matatus leaving",
+    "school bells",
+    "market days"
+   ],
+   "board": [
+    {
+     "beat": "draw",
+     "do": "Draw two timelines marked every 12 and every 8 minutes."
+    },
+    {
+     "beat": "point",
+     "do": "Point at the first match.",
+     "say": "When do the marks meet?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for the child to say."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "MATH.G7.NUMBER.FACTORS.LCM_IN_CONTEXT.M_LCM_ONE_GAP_ONLY",
+     "listen_for": [
+      "12 minutes"
+     ],
+     "ask": "Does the 8 minute matatu leave at 12?",
+     "repair": "Both must leave."
+    },
+    {
+     "code": "MATH.G7.NUMBER.FACTORS.LCM_IN_CONTEXT.M_LCM_TWO_OF_THREE",
+     "listen_for": [
+      "30 minutes"
+     ],
+     "ask": "Does the third bell ring at 30?",
+     "repair": "All three must fit."
+    }
+   ],
+   "checks": [
+    {
+     "question": "Matatus leave every 12 and 8 minutes. After how many minutes do they leave together again?",
+     "answer": "24",
+     "shows": "LCM"
+    },
+    {
+     "question": "Bells ring every 6, 10 and 8 minutes. When do all three ring together?",
+     "answer": "120 minutes",
+     "shows": "three events"
+    }
+   ]
+  }
+ ]
+}

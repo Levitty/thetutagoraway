@@ -113,7 +113,7 @@ export const FAMILIES = [
       question: 'The table shows the jersey numbers of five players. What is the total of the jersey numbers that are prime?', story: false,
       model: { type: 'table', data: { head: ['Player', 'Jersey number'], rows: v.map((n, i) => ({ label: ps[i], value: String(n) })) } },
       answer: pr,
-      wrong: [[odd, 'That is the total of the odd numbers. Some odd numbers are not prime, for example 9 and 15.', 'M_ODD_MEANS_PRIME'], [comp, 'That is the total of the numbers that are not prime. The question asks for the prime ones.', 'M_PRIME_COMPOSITE_CONFUSED'], [small, 'That only tests 2 and 3. A number such as 25 or 35 is not divisible by 2 or 3, but it is not prime.', 'M_ONLY_SMALL_DIVISORS_TESTED']],
+      wrong: [[odd, 'That is the total of the odd numbers. Some odd numbers are not prime, for example 9 and 15.', 'M_ODD_MEANS_PRIME'], [comp, 'That is the total of the numbers that are not prime. The question asks for the prime ones.', 'M_PRIME_COMPOSITE_CONFUSED'], [small, 'That only tests 2 and 3. A number that passes those two tests can still have 5 or 7 as a factor.', 'M_ONLY_SMALL_DIVISORS_TESTED']],
       hints: ['A prime number has exactly two factors: 1 and itself.', 'Test each jersey number: does anything other than 1 and itself divide it?'],
       steps: [`Check each number: ${v.map(n => `${n} is ${isPrime(n) ? 'prime' : 'not prime'}`).join(', ')}.`, `The prime numbers are ${v.filter(isPrime).join(', ')}. Their total is ${pr}.`] }),
     check: ({ v }, a) => v.filter(n => n > 1 && Array.from({ length: n - 2 }, (_, i) => i + 2).every(f => n % f !== 0)).reduce((t, x) => t + x, 0) === a }),
@@ -196,59 +196,62 @@ export const FAMILIES = [
   // ======================================================================
   // FACTORS
   // ======================================================================
-  fam({ id: 'g7.factors.div-baskets', skill: 'G7_DIVISIBILITY', outcome: 'G7.FACTORS.a', rung: 2, form: 'word',
+  fam({ id: 'g7.factors.div-baskets', skill: 'G7_DIVISIBILITY', outcome: 'MATH.G7.NUMBER.FACTORS.a', cskill: 'MATH.G7.NUMBER.FACTORS.DIV_BY_3_6_9', rung: 2, form: 'word',
     draw: () => {
-      const N = randInt(1000, 9999), ks = [2, 3, 4, 5, 6, 7, 8, 9, 10, 11], yes = ks.filter(k => N % k === 0), no = ks.filter(k => N % k !== 0);
-      if (yes.length < 1 || no.length < 3) return null;
-      return { N, r: pick(yes), ws: shuffle(no).slice(0, 3), p: person() };
+      const N = randInt(1000, 9999), ks = [2, 3, 4, 5, 6, 8, 9, 10, 11], yes = ks.filter(k => N % k === 0);
+      // one wrong divisor from each kind of test: digit sum (3, 9), last digits (4, 8), both tests (6), alternating sum (11)
+      const kinds = [[3, 9], [4, 8], [6], [11]].map(c => c.filter(k => N % k !== 0)).filter(c => c.length).map(c => pick(c));
+      if (yes.length < 1 || kinds.length < 3) return null;
+      return { N, r: pick(yes), ws: shuffle(kinds).slice(0, 3), p: person() };
     },
     make: ({ N, r, ws, p }) => {
       const reason = (k) => ({ 2: 'its last digit is not even', 3: `its digits add up to ${digitSum(N)}, which is not a multiple of 3`, 4: `its last two digits make ${N % 100}, which does not divide by 4`, 5: 'its last digit is not 0 or 5', 6: 'it must divide by both 2 and 3, and it fails one of them', 7: `dividing leaves a remainder of ${N % 7}`, 8: `its last three digits make ${N % 1000}, which does not divide by 8`, 9: `its digits add up to ${digitSum(N)}, which is not a multiple of 9`, 10: 'its last digit is not 0', 11: 'the difference between the sums of its alternate digits is not 0 or a multiple of 11' }[k]);
       return { question: `${p.name} has ${commas(N)} books. ${p.She} packs them into equal bundles with none left over. Which of these numbers is ${commas(N)} divisible by? It must divide exactly.`,
-        options: shuffle([{ text: String(r), right: true }, ...ws.map(k => ({ text: String(k), right: false, why: `${commas(N)} does not divide exactly by ${k}: ${reason(k)}.` }))]),
+        options: shuffle([{ text: String(r), right: true }, ...ws.map(k => ({ text: String(k), right: false, why: `${commas(N)} does not divide exactly by ${k}: ${reason(k)}.`, mis: { 3: 'M_DIGIT_SUM_NOT_DIVIDED', 9: 'M_DIGIT_SUM_NOT_DIVIDED', 4: 'M_LAST_DIGIT_FOR_4_8', 8: 'M_LAST_DIGIT_FOR_4_8', 6: 'M_SIX_ONLY_EVEN_TESTED', 11: 'M_ELEVEN_ADD_ALL_DIGITS' }[k] }))]),
         hints: ['Use the divisibility test for each number in turn.', 'Only one of the numbers passes its test.'],
         steps: [`Test each number with its divisibility rule.`, `${commas(N)} ÷ ${r} = ${commas(N / r)} with nothing left, so ${r} divides exactly.`] };
     } }),
 
-  fam({ id: 'g7.factors.eleven-spot', skill: 'G7_DIVISIBILITY', outcome: 'G7.FACTORS.a', rung: 3, form: 'spot',
+  fam({ id: 'g7.factors.eleven-spot', skill: 'G7_DIVISIBILITY', outcome: 'MATH.G7.NUMBER.FACTORS.a', cskill: 'MATH.G7.NUMBER.FACTORS.DIV_BY_11', rung: 3, form: 'spot',
     draw: () => {
       const want = Math.random() < 0.5; const ds = [randInt(1, 9), randInt(0, 9), randInt(0, 9), randInt(0, 9)]; const N = Number(ds.join(''));
-      return (N % 11 === 0) === want ? { ds, N, bug: pick([1, 2]), e: pick([-2, -1, 1, 2]), p: person() } : null;
+      const [a, b, c, d] = ds;
+      return (N % 11 === 0) === want && a + c !== b + d && (a + b + c + d) % 11 !== 0 ? { ds, N, p: person() } : null;
     },
-    make: ({ ds, N, bug, e, p }) => {
-      const [a, b, c, d] = ds, s1 = a + c + (bug === 1 ? e : 0), s2 = b + d + (bug === 2 ? e : 0), diff = Math.abs(s1 - s2), yes = diff % 11 === 0;
-      const trueDiff = Math.abs(a + c - b - d);
+    make: ({ ds, N, p }) => {
+      const [a, b, c, d] = ds, s1 = a + c, s2 = b + d, tot = s1 + s2, diff = Math.abs(s1 - s2), yes = tot % 11 === 0;
       return { question: `${p.name} tests whether ${commas(N)} is divisible by 11. Here is ${p.her} working. Which step has the mistake?`,
         working: [
-          { text: `Add the digits in places 1 and 3: ${a} + ${c} = ${s1}.`, ok: s1 === a + c },
-          { text: `Add the digits in places 2 and 4: ${b} + ${d} = ${s2}.`, ok: s2 === b + d },
-          { text: `Find the difference: ${Math.max(s1, s2)} − ${Math.min(s1, s2)} = ${diff}.`, ok: diff === Math.abs(s1 - s2) },
-          { text: `${diff} ${yes ? 'is' : 'is not'} 0 or a multiple of 11, so ${commas(N)} ${yes ? 'is' : 'is not'} divisible by 11.`, ok: yes === (diff % 11 === 0) },
+          { text: `Add the digits in places 1 and 3: ${a} + ${c} = ${s1}.`, ok: true },
+          { text: `Add the digits in places 2 and 4: ${b} + ${d} = ${s2}.`, ok: true },
+          { text: `Combine the two sums: ${s1} + ${s2} = ${tot}.`, ok: false },
+          { text: `${tot} ${yes ? 'is' : 'is not'} 0 or a multiple of 11, so ${commas(N)} ${yes ? 'is' : 'is not'} divisible by 11.`, ok: true },
         ],
-        fix: `One of the two digit sums was added up wrongly. Added carefully, the sums give a difference of ${trueDiff}, and the conclusion must follow from that.`,
-        steps: [`${a} + ${c} = ${a + c} and ${b} + ${d} = ${b + d}.`, `The difference is ${trueDiff}, so ${commas(N)} ${trueDiff % 11 === 0 ? 'is' : 'is not'} divisible by 11.`] };
+        mis: 'M_ELEVEN_ADD_ALL_DIGITS',
+        fix: `The test for 11 subtracts the two sums, it does not add them. ${Math.max(s1, s2)} − ${Math.min(s1, s2)} = ${diff}, and the conclusion must follow from that.`,
+        steps: [`${s1} − ${s2} gives a difference of ${diff}.`, `${diff} ${diff % 11 === 0 ? 'is' : 'is not'} 0 or a multiple of 11, so ${commas(N)} ${diff % 11 === 0 ? 'is' : 'is not'} divisible by 11.`] };
     } }),
 
-  fam({ id: 'g7.factors.div-six-table', skill: 'G7_DIVISIBILITY', outcome: 'G7.FACTORS.a', rung: 2, form: 'table',
+  fam({ id: 'g7.factors.div-six-table', skill: 'G7_DIVISIBILITY', outcome: 'MATH.G7.NUMBER.FACTORS.a', cskill: 'MATH.G7.NUMBER.FACTORS.DIV_BY_3_6_9', rung: 2, form: 'table',
     draw: () => {
       const v = Array.from({ length: 5 }, () => randInt(1000, 9999)); if (new Set(v).size < 5) return null;
-      const six = v.filter(n => n % 6 === 0).length, three = v.filter(n => n % 3 === 0).length, two = v.filter(n => n % 2 === 0).length;
-      return six >= 1 && six <= 3 && distinct(six, three, two, 5) ? { v, six, three, two } : null;
+      const six = v.filter(n => n % 6 === 0).length, three = v.filter(n => n % 3 === 0).length, two = v.filter(n => n % 2 === 0).length, sum6 = v.filter(n => digitSum(n) % 6 === 0).length;
+      return six >= 1 && six <= 3 && distinct(six, three, two, sum6) ? { v, six, three, two, sum6 } : null;
     },
-    make: ({ v, six, three, two }) => ({
+    make: ({ v, six, three, two, sum6 }) => ({
       question: 'The table shows five numbers and the sum of the digits of each. How many of the numbers are divisible by 6?', story: false,
       model: { type: 'table', data: { head: ['Number', 'Sum of digits'], rows: v.map(n => ({ cells: [commas(n), String(digitSum(n))] })) } },
       answer: six,
-      wrong: [[three, 'That counts the numbers divisible by 3 only. A number divisible by 6 must also be even.'], [two, 'That counts the even numbers only. A number divisible by 6 must also divide by 3.'], [5, 'Not every number passes both tests. Test each one.']],
+      wrong: [[three, 'That counts the numbers divisible by 3 only. A number divisible by 6 must also be even.', 'M_SIX_ONLY_THREE_TESTED'], [two, 'That counts the even numbers only. A number divisible by 6 must also divide by 3.', 'M_SIX_ONLY_EVEN_TESTED'], [sum6, 'That counts the numbers whose digit sum is a multiple of 6. The digit sum rule is for 3 and 9: for 6, test even and the sum for 3.', 'M_DIGIT_SUM_DIVISIBLE_BY_SIX']],
       hints: ['A number divides by 6 when it divides by both 2 and 3.', 'Use the last digit for 2 and the sum of digits for 3.'],
       steps: v.map(n => `${commas(n)}: ${n % 2 === 0 ? 'even' : 'odd'}, digit sum ${digitSum(n)} ${digitSum(n) % 3 === 0 ? 'divides' : 'does not divide'} by 3.`).concat([`Divisible by both: ${six}.`]) }),
     check: ({ v }, a) => v.filter(n => n % 2 === 0 && digitSum(n) % 3 === 0).length === a }),
 
-  fam({ id: 'g7.factors.prime-factor-spot', skill: 'G7_PRIME_FACTORIZATION', outcome: 'G7.FACTORS.b', rung: 3, form: 'spot',
+  fam({ id: 'g7.factors.prime-factor-spot', skill: 'G7_PRIME_FACTORIZATION', outcome: 'MATH.G7.NUMBER.FACTORS.b', cskill: 'MATH.G7.NUMBER.FACTORS.PRIME_FACTORISE', rung: 3, form: 'spot',
     draw: () => ({ r: pick([5, 7, 11, 13]), bug: pick(['composite', 'product']), p: person() }),
     make: ({ r, bug, p }) => {
       const m = 9 * r, N = 4 * m;
-      const f3 = bug === 'composite' ? [r, 9] : [3, 3, r + 2], claim = f3.every(isPrime);
+      const f3 = bug === 'composite' ? [r, 9] : [3, r], claim = f3.every(isPrime);
       const prod = f3.reduce((x, y) => x * y, 1);
       return { question: `${p.name} writes ${N} as a product of prime factors. Here is ${p.her} working. Which step has the mistake?`,
         working: [
@@ -257,38 +260,39 @@ export const FAMILIES = [
           { text: `${m} = ${f3.join(' × ')}, and all of these factors are prime.`, ok: prod === m && claim },
           { text: `So ${N} = 2 × 2 × ${f3.join(' × ')}.`, ok: true },
         ],
-        fix: bug === 'composite' ? `${r} × 9 is a correct product, but 9 is not prime: 9 = 3 × 3. Keep splitting until every factor is prime.` : `The factors in this step do not multiply to give ${m}. Check ${f3.join(' × ')} = ${prod}.`,
+        mis: bug === 'composite' ? 'M_FACTORS_NOT_PRIME' : 'M_REPEATED_FACTOR_ONCE',
+        fix: bug === 'composite' ? `${r} × 9 is a correct product, but 9 is not prime: 9 = 3 × 3. Keep splitting until every factor is prime.` : `The factors in this step do not multiply to give ${m}: ${f3.join(' × ')} = ${prod}. A repeated factor must be written each time it appears, so one 3 is missing.`,
         steps: [`${m} = 3 × 3 × ${r}, and 3, 3 and ${r} are all prime.`, `${N} = 2 × 2 × 3 × 3 × ${r}.`] };
     } }),
 
-  fam({ id: 'g7.factors.not-prime-why', skill: 'G7_PRIMES', outcome: 'G7.FACTORS.b', rung: 3, form: 'why',
+  fam({ id: 'g7.factors.not-prime-why', skill: 'G7_PRIMES', outcome: 'MATH.G7.NUMBER.FACTORS.b', cskill: 'MATH.G7.NUMBER.FACTORS.PRIME_FACTORISE', rung: 3, form: 'why',
     draw: () => { const p = pick([7, 11, 13]), q = pick([7, 11, 13]); return { p, q, N: p * q, who: person() }; },
     make: ({ p, q, N, who }) => ({
       question: `${who.name} says that ${N} is a prime number, because it does not divide by 2, 3 or 5. Why is ${who.her} reasoning not enough?`,
       options: [
         { text: `${N} = ${p} × ${q}, so it has factors besides 1 and itself`, right: true },
-        { text: 'A number that does not divide by 2, 3 or 5 is always prime', right: false, why: `That is not true. ${N} passes those three tests and is still not prime.` },
-        { text: `${N} is even, so it divides by 2`, right: false, why: `${N} ends in an odd digit, so it is odd.` },
-        { text: 'Prime numbers are never larger than 100', right: false, why: 'There are prime numbers bigger than 100, such as 101. Look for a factor of this number instead.' },
+        { text: 'A number that does not divide by 2, 3 or 5 is always prime', right: false, why: `That is not true. ${N} passes those three tests and is still not prime.`, mis: 'M_SMALL_PRIMES_ENOUGH' },
+        { text: `${N} is even, so it divides by 2`, right: false, why: `${N} ends in an odd digit, so it is odd.`, mis: 'SLIP' },
+        { text: 'Prime numbers are never larger than 100', right: false, why: 'There are prime numbers bigger than 100, such as 101. Look for a factor of this number instead.', mis: 'M_PRIMES_STOP_AT_100' },
       ],
       hints: ['Passing a few tests is not the same as having no factors.', 'Try dividing by the next prime numbers: 7, 11, 13.'],
       steps: [`${N} ÷ ${p} = ${q}.`, `So ${N} has the factors ${p} and ${q}, and it is composite.`] }) }),
 
-  fam({ id: 'g7.factors.gcd-rope', skill: 'G7_GCD', outcome: 'G7.FACTORS.c', rung: 2, form: 'word',
+  fam({ id: 'g7.factors.gcd-rope', skill: 'G7_GCD', outcome: 'MATH.G7.NUMBER.FACTORS.d', cskill: 'MATH.G7.NUMBER.FACTORS.GCD_IN_CONTEXT', rung: 2, form: 'word',
     draw: () => {
       const g = pick([4, 6, 8, 9, 12, 15]), u = randInt(2, 9), v = randInt(2, 9); if (gcd(u, v) !== 1 || u === v) return null;
       const a = g * Math.min(u, v), b = g * Math.max(u, v); const L = lcm(a, b), dif = b - a, pieces = a / g + b / g;
-      return distinct(g, L, dif, pieces, a) && b <= 150 ? { a, b, g, L, dif, pieces, p: person() } : null;
+      return distinct(g, L, dif, pieces, a) && Math.abs(pieces - g) > 2 && Math.abs(dif - g) > 2 && b <= 150 ? { a, b, g, L, dif, pieces, p: person() } : null;
     },
     make: ({ a, b, g, L, dif, pieces, p }) => ({
       question: `${p.name} has two ropes, ${a} m and ${b} m long. ${p.She} cuts both into equal pieces with no rope left over. The pieces must be as long as possible, so the length is the GCD (greatest common divisor) of ${a} and ${b}. How many metres long is each piece?`,
       answer: g,
-      wrong: [[L, 'That is the least common multiple. A piece cannot be longer than the shorter rope.'], [dif, 'The difference between the lengths does not have to fit into both ropes.'], [pieces, 'That is the number of pieces, not their length.']],
+      wrong: [[L, 'That is the least common multiple. A piece cannot be longer than the shorter rope.', 'M_GCD_IS_LCM'], [dif, 'The difference between the lengths does not have to fit into both ropes.', 'M_GCD_DIFFERENCE'], [pieces, 'That is the number of pieces, not their length.', 'M_OTHER_QUANTITY_GIVEN']],
       hints: ['List the factors of each length, or divide both by small numbers.', 'The greatest factor they share is the GCD.'],
       steps: [`Factors of ${a} and ${b} that both share: the biggest is ${g}.`, `Check: ${a} ÷ ${g} = ${a / g} and ${b} ÷ ${g} = ${b / g}, with nothing left.`] }),
     check: ({ a, b }, x) => a % x === 0 && b % x === 0 && gcd(a / x, b / x) === 1 }),
 
-  fam({ id: 'g7.factors.hcf-gift-boxes', skill: 'G7_GCD', outcome: 'G7.FACTORS.c', rung: 3, form: 'table',
+  fam({ id: 'g7.factors.hcf-gift-boxes', skill: 'G7_GCD', outcome: 'MATH.G7.NUMBER.FACTORS.d', cskill: 'MATH.G7.NUMBER.FACTORS.GCD_IN_CONTEXT', rung: 3, form: 'table',
     draw: () => {
       const g = pick([4, 5, 6, 8, 10]), u = randInt(2, 9), v = randInt(2, 9), w = randInt(2, 9); if (!distinct(u, v, w) || gcd(gcd(u, v), w) !== 1) return null;
       const nums = [g * u, g * v, g * w]; const gab = gcd(nums[0], nums[1]), mn = Math.min(...nums), per = nums.reduce((s, x) => s + x, 0) / g;
@@ -298,12 +302,12 @@ export const FAMILIES = [
       question: `${p.name} packs gift boxes from the stock in the table. Every box must have the same things in it, and nothing is left over. What is the greatest number of boxes ${p.she} can make? Use the HCF (highest common factor) of the three numbers.`, story: false,
       model: { type: 'table', data: { head: ['Item', 'Number in stock'], rows: items.map((l, i) => ({ label: l, value: String(nums[i]) })) } },
       answer: g,
-      wrong: [[mn, 'That is the smallest stock. The number of boxes must also divide the other two numbers exactly.'], [gab, 'That is the HCF of only the first two numbers. The third item must also divide exactly.'], [per, 'That is the number of items in one box, found by adding. The question asks for the number of boxes.']],
+      wrong: [[mn, 'That is the smallest stock. The number of boxes must also divide the other two numbers exactly.', 'M_SMALLEST_QUANTITY_IS_GCD'], [gab, 'That is the HCF of only the first two numbers. The third item must also divide exactly.', 'M_GCD_TWO_OF_THREE'], [per, 'That is the number of items in one box, found by adding. The question asks for the number of boxes.', 'M_OTHER_QUANTITY_GIVEN']],
       hints: ['The number of boxes must divide all three numbers exactly.', 'Find the greatest number that divides all three.'],
       steps: [`The greatest number that divides ${nums.join(', ')} exactly is ${g}.`, `Each box then has ${nums.map(n => n / g).join(', ')} of the items.`] }),
     check: ({ nums }, a) => nums.every(n => n % a === 0) && nums.every(n => gcd(n / a, nums[0] / a) >= 1) && gcd(gcd(nums[0] / a, nums[1] / a), nums[2] / a) === 1 }),
 
-  fam({ id: 'g7.factors.lcm-matatus', skill: 'G7_LCM', outcome: 'G7.FACTORS.d', rung: 2, form: 'word',
+  fam({ id: 'g7.factors.lcm-matatus', skill: 'G7_LCM', outcome: 'MATH.G7.NUMBER.FACTORS.d', cskill: 'MATH.G7.NUMBER.FACTORS.LCM_IN_CONTEXT', rung: 2, form: 'word',
     draw: () => {
       const a = pick([6, 8, 10, 12, 15, 18, 20]), b = pick([6, 8, 9, 10, 12, 15, 18, 20, 24]); if (a === b || gcd(a, b) === 1 || a % b === 0 || b % a === 0) return null;
       const L = lcm(a, b); return L <= 120 && distinct(L, a * b, a + b, Math.max(a, b)) ? { a, b, L, town: pick(['Thika', 'Nakuru', 'Kisumu', 'Eldoret', 'Machakos']) } : null;
@@ -311,12 +315,12 @@ export const FAMILIES = [
     make: ({ a, b, L, town }) => ({
       question: `Two matatus leave the ${town} stage together at 6:00 a.m. One matatu leaves the stage every ${a} minutes. The other leaves every ${b} minutes. After how many minutes do they leave together again?`,
       answer: L,
-      wrong: [[a * b, `The two matatus leave together earlier than that. Look for the smallest time that fits both gaps.`], [a + b, 'Adding the gaps does not give a time when both leave. Both must arrive at a multiple of their own gap.'], [Math.max(a, b), 'The shorter gap does not fit exactly into this time. Check it.']],
+      wrong: [[a * b, `The two matatus leave together earlier than that. Look for the smallest time that fits both gaps.`, 'M_LCM_PRODUCT'], [a + b, 'Adding the gaps does not give a time when both leave. Both must arrive at a multiple of their own gap.', 'M_LCM_ADD_THE_GAPS'], [Math.max(a, b), 'The shorter gap does not fit exactly into this time. Check it.', 'M_LCM_ONE_GAP_ONLY']],
       hints: ['List the times when the first matatu leaves: multiples of its gap.', 'Find the first time that is also on the second list.'],
       steps: [`Multiples of ${a}: ${[1, 2, 3, 4, 5, 6].map(i => a * i).join(', ')} ...`, `Multiples of ${b}: ${[1, 2, 3, 4, 5, 6].map(i => b * i).join(', ')} ...`, `The first time on both lists is ${L} minutes.`] }),
     check: ({ a, b }, x) => x % a === 0 && x % b === 0 && gcd(x / a, x / b) === 1 }),
 
-  fam({ id: 'g7.factors.lcm-product-why', skill: 'G7_LCM', outcome: 'G7.FACTORS.d', rung: 3, form: 'why',
+  fam({ id: 'g7.factors.lcm-product-why', skill: 'G7_LCM', outcome: 'MATH.G7.NUMBER.FACTORS.c', cskill: 'MATH.G7.NUMBER.FACTORS.LCM_BY_FACTORS', rung: 3, form: 'why',
     draw: () => {
       const a = pick([4, 6, 8, 9, 10, 12, 14, 15]), b = pick([6, 9, 10, 12, 14, 15, 18, 20]); if (a >= b || gcd(a, b) === 1 || b % a === 0) return null;
       return { a, b, L: lcm(a, b), p: person() };
@@ -325,14 +329,14 @@ export const FAMILIES = [
       question: `${p.name} says the LCM of ${a} and ${b} is ${a * b}, because ${a * b} is a common multiple of both numbers. Why is ${p.her} answer not the least common multiple?`,
       options: [
         { text: `${L} is also a common multiple, and it is smaller`, right: true },
-        { text: `${a * b} is not a multiple of ${a}, so it cannot be common`, right: false, why: `${a * b} = ${a} × ${b}, so it is a multiple of ${a}. It is just not the smallest common one.` },
-        { text: 'The LCM must be smaller than both of the numbers', right: false, why: 'A common multiple is never smaller than the numbers themselves.' },
-        { text: 'The LCM is always found by adding the two numbers', right: false, why: 'Adding does not give a multiple of both numbers. Look at lists of multiples.' },
+        { text: `${a * b} is not a multiple of ${a}, so it cannot be common`, right: false, why: `${a * b} = ${a} × ${b}, so it is a multiple of ${a}. It is just not the smallest common one.`, mis: 'M_MULTIPLE_VS_FACTOR_CONFUSED' },
+        { text: 'The LCM must be smaller than both of the numbers', right: false, why: 'A common multiple is never smaller than the numbers themselves.', mis: 'M_LCM_SMALLER_THAN_NUMBERS' },
+        { text: 'The LCM is always found by adding the two numbers', right: false, why: 'Adding does not give a multiple of both numbers. Look at lists of multiples.', mis: 'M_LCM_ADD_THE_GAPS' },
       ],
       hints: ['The least common multiple is the smallest number on both lists of multiples.', `Is there a common multiple of ${a} and ${b} that is smaller than ${a * b}?`],
       steps: [`${a * b} is a common multiple, but not the smallest.`, `${L} ÷ ${a} = ${L / a} and ${L} ÷ ${b} = ${L / b}, so ${L} is a smaller common multiple.`] }) }),
 
-  fam({ id: 'g7.factors.lcm-three-bells', skill: 'G7_LCM', outcome: 'G7.FACTORS.d', rung: 3, form: 'table',
+  fam({ id: 'g7.factors.lcm-three-bells', skill: 'G7_LCM', outcome: 'MATH.G7.NUMBER.FACTORS.d', cskill: 'MATH.G7.NUMBER.FACTORS.LCM_IN_CONTEXT', rung: 3, form: 'table',
     draw: () => {
       const v = shuffle([4, 6, 8, 9, 10, 12, 15, 18, 20]).slice(0, 3), L = lcm(lcm(v[0], v[1]), v[2]); const L2 = lcm(v[0], v[1]);
       return L <= 180 && L !== L2 && distinct(L, L2, Math.max(...v), v[0] * v[1] * v[2]) ? { v, L, L2 } : null;
@@ -341,7 +345,7 @@ export const FAMILIES = [
       question: 'The school has three bells. The table shows how often each one rings. At 8:00 a.m. all three ring at the same time. After how many minutes do they next ring at the same time? Find the LCM.', story: false,
       model: { type: 'table', data: { head: ['Bell', 'Rings every (minutes)'], rows: v.map((n, i) => ({ label: `Bell ${'ABC'[i]}`, value: String(n) })) } },
       answer: L,
-      wrong: [[L2, `That is when only the first two bells ring together. The third bell must fit as well.`], [v[0] * v[1] * v[2], 'That is a time all three ring together, but a smaller one exists.'], [Math.max(...v), 'The other bells do not ring at that time. Check it.']],
+      wrong: [[L2, `That is when only the first two bells ring together. The third bell must fit as well.`, 'M_LCM_TWO_OF_THREE'], [v[0] * v[1] * v[2], 'That is a time all three ring together, but a smaller one exists.', 'M_LCM_PRODUCT'], [Math.max(...v), 'The other bells do not ring at that time. Check it.', 'M_LCM_ONE_GAP_ONLY']],
       hints: ['Find the LCM of the first two numbers.', 'Then find the LCM of that answer and the third number.'],
       steps: [`LCM of ${v[0]} and ${v[1]} is ${L2}.`, `LCM of ${L2} and ${v[2]} is ${L}.`] }),
     check: ({ v }, x) => v.every(n => x % n === 0) && gcd(gcd(x / v[0], x / v[1]), x / v[2]) === 1 }),
