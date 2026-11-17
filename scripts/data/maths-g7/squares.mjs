@@ -53,7 +53,7 @@ export const links = {
   'g7.sq.decimal-spot': ['SQUARE_DECIMAL', 'a', null, 'M_POINT_PLACES_NOT_DOUBLED'],
   'g7.sq.fraction-options': ['SQUARE_FRACTION', 'a', null, null, [['Only the top was squared', 'M_ONLY_NUMERATOR_SQUARED'], ['Only the bottom was squared', 'M_ONLY_DENOMINATOR_SQUARED'], ['That doubles the top', 'M_NUMERATOR_DOUBLED']]],
   'g7.sq.plot-side': ['ROOT_IN_CONTEXT', 'b', [['M_HALVED_NOT_ROOTED', 'M_DIVIDED_BY_FOUR_FOR_ROOT', 'SLIP'], ['M_TWO_SIDES_FOR_PERIMETER', 'M_AREA_FOR_PERIMETER', 'M_SIDE_PLUS_FOUR']]],
-  'g7.sq.between-roots': ['ROOT_BY_ANCHORS', 'b', ['M_ROOT_BOUNDS_ONE_BELOW', 'M_HALVED_NOT_ROOTED', 'M_ROOT_BOUNDS_ONE_ABOVE']],
+  'g7.sq.between-roots': ['ROOT_BY_ANCHORS', 'b', null],
   'g7.sq.root-of-sum-why': ['ROOT_WHOLE_NUMBER', 'b', null, null, [['6 × 6 = 36', 'SLIP'], ['Multiplying the roots', 'M_ROOTS_MULTIPLIED_FOR_SUM'], ['Halving is not taking', 'M_HALVED_NOT_ROOTED']]],
   'g7.sq.root-table-sides': ['ROOT_IN_CONTEXT', 'b', ['M_AREA_DIFFERENCE_USED', 'M_ROOT_OF_DIFFERENCE', 'M_ONLY_BIGGEST_ROOT']],
 };

@@ -631,7 +631,7 @@ export const FAMILIES = [
       steps: [`√${commas(s * s)} = ${s}, because ${s} × ${s} = ${commas(s * s)}.`, `Fence: 4 × ${s} = ${4 * s} m.`] }),
     check: ({ s }, v) => v[0] * v[0] === s * s && v[1] === 4 * v[0] }),
 
-  fam({ id: 'g7.sq.between-roots', skill: 'G7_SQUARE_ROOTS', outcome: 'G7.SQUARES.b', rung: 2, form: 'word',
+  fam({ id: 'g7.sq.between-roots', skill: 'G7_SQUARE_ROOTS', outcome: 'MATH.G7.NUMBER.SQUARES_AND_SQUARE_ROOTS.b', cskill: 'MATH.G7.NUMBER.SQUARES_AND_SQUARE_ROOTS.ROOT_BY_ANCHORS', rung: 2, form: 'word',
     draw: () => { const k = randInt(6, 14), A = randInt(k * k + 1, k * k + 2 * k); return { k, A, p: person() }; },
     make: ({ k, A, p }) => ({
       question: `${p.name} has a square plot with an area of ${A} square metres. Between which two whole numbers does the square root √${A}, the length of one side in metres, lie?`,

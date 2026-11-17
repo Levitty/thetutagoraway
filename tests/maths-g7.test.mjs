@@ -72,8 +72,10 @@ test('a Grade 7 family carries its curriculum skill, an official outcome of that
 });
 
 test('no Grade 7 family is left under an old outcome code in a finished sub-strand', () => {
+  // the segment after g7. in a family id names its sub-strand
+  const SEG = { whole: 'WHOLE_NUMBERS', factors: 'FACTORS', frac: 'FRACTIONS', dec: 'DECIMALS', sq: 'SQUARES_AND_SQUARE_ROOTS', expr: 'ALGEBRAIC_EXPRESSIONS', eq: 'LINEAR_EQUATIONS', ineq: 'LINEAR_INEQUALITIES', pyth: 'PYTHAGOREAN_RELATIONSHIP', length: 'LENGTH', area: 'AREA', vol: 'VOLUME_AND_CAPACITY', speed: 'TIME_DISTANCE_AND_SPEED', temp: 'TEMPERATURE', money: 'MONEY', angles: 'ANGLES', construct: 'GEOMETRICAL_CONSTRUCTION', data: 'DATA_HANDLING' };
   const left = FAMILIES.filter(f => /^g7\./.test(f.id) && !f.cskill).map(f => f.id.split('.')[1]);
-  const inDone = left.filter(k => done.some(s => s.code.toLowerCase().includes(k)));
+  const inDone = left.filter(k => SEG[k] && done.some(s => s.code.endsWith('.' + SEG[k])));
   assert.deepEqual([...new Set(inDone)], []);
 });
 
