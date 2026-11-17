@@ -103492,7 +103492,18 @@ var lcm = (a, b) => a / gcd(a, b) * b;
 var rnd3 = (n, to) => Math.round(n / to) * to;
 var fl2 = (n, to) => Math.floor(n / to) * to;
 var tbl3 = (head, rows) => ({ type: "table", data: { head, rows: rows.map((cells) => ({ cells })) } });
-var mc10 = (right, wrongs) => {
+var onePerIdea = (wrongs, keep) => {
+  const seen = /* @__PURE__ */ new Set(), out = [];
+  for (const w14 of wrongs) {
+    const c19 = w14[2];
+    if (c19 && c19 !== "SLIP" && seen.has(c19)) continue;
+    if (c19 && c19 !== "SLIP") seen.add(c19);
+    out.push(w14);
+  }
+  return out.length >= keep ? out : wrongs;
+};
+var mc10 = (right, wrongs0) => {
+  const wrongs = onePerIdea(wrongs0, 2);
   const texts = [String(right), ...wrongs.map((w14) => String(w14[0]))];
   if (new Set(texts).size !== texts.length) return null;
   return shuffle12([{ text: String(right), right: true }, ...wrongs.map(([text, why, mis]) => ({ text: String(text), right: false, why, mis }))]);
@@ -103507,7 +103518,9 @@ var clean2 = (wrong, answer, need, neg2) => {
     seen.add(v);
     out.push(w14);
   }
-  return out.length >= need ? out : null;
+  if (out.length < need) return null;
+  const one4 = onePerIdea(out, need);
+  return one4;
 };
 var leaksAnswer = (answer, text, question) => {
   const a = String(answer);
@@ -107372,7 +107385,7 @@ var FAMILIES158 = [
       const options = mc10(right, [[right === "=" ? ">" : "=", right === "=" ? "A zero at the end of a decimal does not change its value. 0.70 and 0.7 are both 70 hundredths." : "The two numbers are not equal. Compare place by place.", right === "=" ? "M_TRAILING_ZERO_CHANGES_VALUE" : "M_TRAILING_ZERO_CHANGES_VALUE"], [right === ">" ? "<" : ">", "Add zeros to give the same number of decimal places, then compare.", right === "=" ? "M_TRAILING_ZERO_CHANGES_VALUE" : "M_LONGER_IS_LARGER"], ["<>".includes(right) ? "<>".replace(right, "") : "<", "Add zeros to give the same number of decimal places, then compare.", "M_SHORTER_IS_LARGER"]].filter((w14, i, arr) => arr.findIndex((z) => z[0] === w14[0]) === i));
       if (!options || options.length < 3) return null;
       return {
-        question: `Which symbol, >, < or =, makes this true: ${a} ___ ${b}?`,
+        question: `Two parcels are weighed on a shop scale and read ${a} kg and ${b} kg. Which symbol, >, < or =, makes this true: ${a} ___ ${b}?`,
         options,
         instruction: "Choose the symbol.",
         hints: ["Write both numbers with the same number of decimal places.", "Compare place by place from the left."],
@@ -107713,7 +107726,7 @@ var FAMILIES158 = [
       const x = pick([2.045, 0.375, 1.8, 0.06, 3.2, 4.075]), t = dp(x * 1e3);
       const options = mc10(String(x), [[String(dp(x * 10)), "Undoing \xD7 1000 means dividing by 1000, so the point moves three places to the left. You moved it two.", "M_WRONG_NUMBER_OF_PLACES"], [String(dp(t)), "Multiplying by 1000 makes a number 1000 times bigger. The missing number is smaller than " + commas(t) + ", not the same.", "M_MOVES_WRONG_WAY"]]);
       return {
-        question: `Which number goes in the box? \u25A1 \xD7 1000 = ${commas(t)}`,
+        question: `A trader changes a mass from kilograms to grams by multiplying by 1000 and gets ${commas(t)} g. Which number of kilograms goes in the box? \u25A1 \xD7 1000 = ${commas(t)}`,
         options,
         instruction: "Choose the number.",
         hints: ["Undo the multiplication by dividing by 1000.", "Move the digits three places to the right."],

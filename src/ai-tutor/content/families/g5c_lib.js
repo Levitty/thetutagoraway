@@ -39,7 +39,16 @@ export const bars = (labels, vals) => ({ type: 'bar-chart', data: { bars: labels
 export const ones = (n) => (n === 1 ? '' : 's');
 
 // Options for a tap question: the right text and wrong ones [text, why, mis]. Null when two texts match.
-export const mc = (right, wrongs) => {
+// One misconception, one option: a question never offers two wrong answers for the same idea, because the learner record
+// would count one slip of thought twice (map review, 17 Nov 2026). The first option for a code stays; a later one is dropped
+// when at least two wrong options remain. A 'SLIP' option carries no code and is never dropped.
+export const onePerIdea = (wrongs, keep) => {
+  const seen = new Set(), out = [];
+  for (const w of wrongs) { const c = w[2]; if (c && c !== 'SLIP' && seen.has(c)) continue; if (c && c !== 'SLIP') seen.add(c); out.push(w); }
+  return out.length >= keep ? out : wrongs;
+};
+export const mc = (right, wrongs0) => {
+  const wrongs = onePerIdea(wrongs0, 2);
   const texts = [String(right), ...wrongs.map(w => String(w[0]))];
   if (new Set(texts).size !== texts.length) return null;
   return shuffle([{ text: String(right), right: true }, ...wrongs.map(([text, why, mis]) => ({ text: String(text), right: false, why, mis }))]);
@@ -54,7 +63,9 @@ const clean = (wrong, answer, need, neg) => {
     if (typeof w[0] === 'number' && (!Number.isFinite(w[0]) || (!neg && w[0] < 0))) continue;
     seen.add(v); out.push(w);
   }
-  return out.length >= need ? out : null;
+  if (out.length < need) return null;
+  const one = onePerIdea(out, need);   // one misconception, one option, when enough remain
+  return one;
 };
 
 // Same rule as engine/scripts/family_checks.mjs: a wrong option's reason or a hint must not state the right answer.

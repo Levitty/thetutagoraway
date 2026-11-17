@@ -1,0 +1,502 @@
+family_id,sub_strand,skill,outcome_fit,wrong_options,practical,verdict,reason,status
+g5c.add.chk.compare,Addition,ESTIMATE_TO_CHECK_SUM,fit,shared,ok,fix,wrong options: shared codes and generic reason,open
+g5c.add.chk.must-be-wrong,Addition,ESTIMATE_TO_CHECK_SUM,weak,shared,ok,fix,wrong options: shared codes,open
+g5c.add.chk.reasonable,Addition,ESTIMATE_TO_CHECK_SUM,fit,shared,ok,fix,wrong options: shared codes,open
+g5c.add.cre.make,Addition,ADD_PATTERN_CREATE,fit,shared,ok,fix,wrong options: shared codes,open
+g5c.add.cre.rule,Addition,ADD_PATTERN_CREATE,weak,shared,ok,fix,wrong options: shared codes,open
+g5c.add.cre.spot,Addition,ADD_PATTERN_CREATE,fit,ok,ok,keep,"each wrong option is its own idea, the situation is real, serves the outcome",fixed
+g5c.add.dbl.fees,Addition,ADD_DOUBLE_REGROUP_TWO,fit,shared,ok,fix,wrong options: shared codes and generic reason,open
+g5c.add.dbl.nines,Addition,ADD_DOUBLE_REGROUP_TWO,weak,ok,ok,keep,keep: a bare drill with no situation; the word-problem sibling in this skill carries the situation,fixed
+g5c.add.dbl.spot,Addition,ADD_DOUBLE_REGROUP_TWO,fit,ok,ok,keep,"each wrong option is its own idea, the situation is real, serves the outcome",fixed
+g5c.add.e100.best,Addition,ESTIMATE_SUM_NEAREST_100,weak,ok,ok,keep,keep: a bare drill with no situation; the word-problem sibling in this skill carries the situation,fixed
+g5c.add.e100.round,Addition,ESTIMATE_SUM_NEAREST_100,fit,ok,ok,keep,"each wrong option is its own idea, the situation is real, serves the outcome",fixed
+g5c.add.e100.spot,Addition,ESTIMATE_SUM_NEAREST_100,fit,ok,ok,keep,"each wrong option is its own idea, the situation is real, serves the outcome",fixed
+g5c.add.e1000.both,Addition,ESTIMATE_SUM_NEAREST_1000,fit,ok,ok,keep,"each wrong option is its own idea, the situation is real, serves the outcome",fixed
+g5c.add.e1000.round,Addition,ESTIMATE_SUM_NEAREST_1000,fit,ok,ok,keep,"each wrong option is its own idea, the situation is real, serves the outcome",fixed
+g5c.add.e1000.spot,Addition,ESTIMATE_SUM_NEAREST_1000,fit,ok,ok,keep,"each wrong option is its own idea, the situation is real, serves the outcome",fixed
+g5c.add.noreg.different-lengths,Addition,ADD_NO_REGROUP_UP_TO_THREE,fit,ok,ok,keep,"each wrong option is its own idea, the situation is real, serves the outcome",fixed
+g5c.add.noreg.harvest,Addition,ADD_NO_REGROUP_UP_TO_THREE,fit,shared,ok,fix,wrong options: shared codes,open
+g5c.add.noreg.zeros,Addition,ADD_NO_REGROUP_UP_TO_THREE,weak,shared,ok,fix,wrong options: shared codes and near miss carrying a code and generic reason,open
+g5c.add.pat.missing,Addition,ADD_PATTERN_EXTEND,fit,shared,ok,fix,wrong options: shared codes and generic reason,open
+g5c.add.pat.next,Addition,ADD_PATTERN_EXTEND,weak,shared,ok,fix,wrong options: shared codes and generic reason,open
+g5c.add.pat.nth,Addition,ADD_PATTERN_EXTEND,fit,shared,ok,fix,wrong options: shared codes,open
+g5c.add.sit.extra,Addition,ADD_IN_SITUATIONS,fit,ok,ok,keep,"each wrong option is its own idea, the situation is real, serves the outcome",fixed
+g5c.add.sit.table,Addition,ADD_IN_SITUATIONS,fit,shared,ok,fix,wrong options: shared codes,open
+g5c.add.sit.words,Addition,ADD_IN_SITUATIONS,fit,shared,ok,fix,wrong options: shared codes and generic reason,open
+g5c.arec.calc.labelled,Area,AREA_RECT_SQUARE_CALC,fit,shared,ok,fix,wrong options: shared codes and near miss carrying a code and generic reason,open
+g5c.arec.calc.square,Area,AREA_RECT_SQUARE_CALC,weak,ok,ok,keep,keep: a bare drill with no situation; the word-problem sibling in this skill carries the situation,fixed
+g5c.arec.calc.word,Area,AREA_RECT_SQUARE_CALC,fit,shared,ok,fix,wrong options: shared codes and near miss carrying a code and generic reason,open
+g5c.arec.cover.count,Area,AREA_COVER_AND_COUNT,fit,shared,ok,fix,wrong options: shared codes and near miss carrying a code and generic reason,open
+g5c.arec.cover.spot,Area,AREA_COVER_AND_COUNT,fit,ok,ok,keep,"each wrong option is its own idea, the situation is real, serves the outcome",fixed
+g5c.arec.cover.stamp,Area,AREA_COVER_AND_COUNT,weak,shared,ok,fix,wrong options: shared codes,open
+g5c.arec.prob.choose,Area,AREA_PROBLEMS,fit,shared,odd_numbers,fix,wrong options: shared codes; odd_numbers: a garden bed 13 cm long: a garden is measured in metres,open
+g5c.arec.prob.cloth,Area,AREA_PROBLEMS,fit,shared,ok,fix,wrong options: shared codes and generic reason,open
+g5c.arec.prob.side,Area,AREA_PROBLEMS,weak,shared,ok,fix,wrong options: shared codes,open
+g5c.arec.real.list,Area,CM2_REAL_LIFE,fit,shared,ok,fix,wrong options: shared codes,open
+g5c.arec.real.pick,Area,CM2_REAL_LIFE,weak,shared,ok,fix,wrong options: shared codes,open
+g5c.arec.real.unit,Area,CM2_REAL_LIFE,fit,shared,ok,fix,wrong options: shared codes and generic reason,open
+g5c.arec.rows.array,Area,AREA_ROWS_BY_COLUMNS,fit,shared,fake_context,fix,wrong options: shared codes and near miss carrying a code and generic reason; fake_context: a tray of mandazi drawn so each takes 1 cm2: contrived,open
+g5c.arec.rows.partial,Area,AREA_ROWS_BY_COLUMNS,weak,shared,ok,fix,wrong options: shared codes,open
+g5c.arec.rows.why,Area,AREA_ROWS_BY_COLUMNS,fit,ok,ok,keep,"each wrong option is its own idea, the situation is real, serves the outcome",fixed
+g5c.arec.unit.mean,Area,CM2_UNIT_MEANING,fit,ok,ok,keep,"each wrong option is its own idea, the situation is real, serves the outcome",fixed
+g5c.arec.unit.side2,Area,CM2_UNIT_MEANING,fit,ok,ok,keep,"each wrong option is its own idea, the situation is real, serves the outcome",fixed
+g5c.arec.unit.which,Area,CM2_UNIT_MEANING,fit,shared,ok,fix,wrong options: shared codes,open
+g5c.cap.add.options,Capacity,ADD_L_ML,weak,shared,ok,fix,wrong options: shared codes,open
+g5c.cap.add.spot,Capacity,ADD_L_ML,fit,ok,ok,keep,"each wrong option is its own idea, the situation is real, serves the outcome",fixed
+g5c.cap.add.word,Capacity,ADD_L_ML,fit,shared,ok,fix,wrong options: shared codes and generic reason,open
+g5c.cap.div.check,Capacity,DIVIDE_L_ML,fit,ok,ok,keep,"each wrong option is its own idea, the situation is real, serves the outcome",fixed
+g5c.cap.div.options,Capacity,DIVIDE_L_ML,weak,ok,ok,keep,keep: a bare drill with no situation; the word-problem sibling in this skill carries the situation,fixed
+g5c.cap.div.word,Capacity,DIVIDE_L_ML,fit,shared,ok,fix,wrong options: shared codes and generic reason,open
+g5c.cap.k2s.options,Capacity,CONVERT_L_TO_ML,weak,shared,ok,fix,wrong options: shared codes,open
+g5c.cap.k2s.spot,Capacity,CONVERT_L_TO_ML,fit,ok,ok,keep,"each wrong option is its own idea, the situation is real, serves the outcome",fixed
+g5c.cap.k2s.word,Capacity,CONVERT_L_TO_ML,fit,shared,ok,fix,wrong options: shared codes,open
+g5c.cap.mul.options,Capacity,MULTIPLY_L_ML,weak,shared,ok,fix,wrong options: shared codes,open
+g5c.cap.mul.spot,Capacity,MULTIPLY_L_ML,fit,ok,ok,keep,"each wrong option is its own idea, the situation is real, serves the outcome",fixed
+g5c.cap.mul.word,Capacity,MULTIPLY_L_ML,fit,shared,ok,fix,wrong options: shared codes,open
+g5c.cap.rel.compare,Capacity,L_ML_RELATIONSHIP,fit,shared,fake_context,fix,"wrong options: shared codes; fake_context: ""X compares two amounts"" is a wrapper, not a situation",open
+g5c.cap.rel.half,Capacity,L_ML_RELATIONSHIP,weak,shared,fake_context,fix,"wrong options: shared codes and generic reason; fake_context: ""X uses a quarter of a unit"" is a wrapper",open
+g5c.cap.rel.parts,Capacity,L_ML_RELATIONSHIP,fit,shared,fake_context,fix,"wrong options: shared codes and near miss carrying a code and generic reason; fake_context: ""X makes up one unit using small lengths"" is a wrapper",open
+g5c.cap.s2k.options,Capacity,CONVERT_ML_TO_L,weak,shared,ok,fix,wrong options: shared codes and generic reason,open
+g5c.cap.s2k.spot,Capacity,CONVERT_ML_TO_L,fit,ok,ok,keep,"each wrong option is its own idea, the situation is real, serves the outcome",fixed
+g5c.cap.s2k.word,Capacity,CONVERT_ML_TO_L,fit,shared,ok,fix,wrong options: shared codes and generic reason,open
+g5c.cap.sub.options,Capacity,SUBTRACT_L_ML,weak,shared,ok,fix,wrong options: shared codes,open
+g5c.cap.sub.spot,Capacity,SUBTRACT_L_ML,fit,ok,ok,keep,"each wrong option is its own idea, the situation is real, serves the outcome",fixed
+g5c.cap.sub.word,Capacity,SUBTRACT_L_ML,fit,shared,ok,fix,wrong options: shared codes and generic reason,open
+g5c.capc.fill.compare,Capacity,ML_MEASURE_BY_FILLING,fit,shared,ok,fix,wrong options: shared codes,open
+g5c.capc.fill.count,Capacity,ML_MEASURE_BY_FILLING,fit,shared,ok,fix,wrong options: shared codes and generic reason,open
+g5c.capc.fill.needed,Capacity,ML_MEASURE_BY_FILLING,fit,ok,ok,keep,"each wrong option is its own idea, the situation is real, serves the outcome",fixed
+g5c.capc.mlest.best,Capacity,ML_ESTIMATE,weak,shared,ok,fix,wrong options: shared codes,open
+g5c.capc.mlest.record,Capacity,ML_ESTIMATE,fit,shared,ok,fix,wrong options: shared codes and generic reason,open
+g5c.capc.mlest.which,Capacity,ML_ESTIMATE,fit,shared,ok,fix,wrong options: shared codes,open
+g5c.capc.mlid.label,Capacity,ML_IDENTIFY_UNIT,fit,shared,ok,fix,wrong options: shared codes and generic reason,open
+g5c.capc.mlid.more,Capacity,ML_IDENTIFY_UNIT,fit,shared,ok,fix,wrong options: shared codes,open
+g5c.capc.mlid.odd,Capacity,ML_IDENTIFY_UNIT,fit,shared,ok,fix,wrong options: shared codes and generic reason,open
+g5c.capc.mlscale.eye,Capacity,ML_MEASURE_SCALE,fit,shared,ok,fix,wrong options: shared codes,open
+g5c.capc.mlscale.read,Capacity,ML_MEASURE_SCALE,fit,shared,ok,fix,wrong options: shared codes and generic reason,open
+g5c.capc.mlscale.step,Capacity,ML_MEASURE_SCALE,fit,shared,ok,fix,wrong options: shared codes,open
+g5c.comb.calc.missing,Subtraction,COMBINED_ADD_SUB_CALC,weak,shared,ok,fix,wrong options: shared codes and generic reason,open
+g5c.comb.calc.spot,Subtraction,COMBINED_ADD_SUB_CALC,fit,ok,ok,keep,"each wrong option is its own idea, the situation is real, serves the outcome",fixed
+g5c.comb.calc.story,Subtraction,COMBINED_ADD_SUB_CALC,fit,shared,ok,fix,wrong options: shared codes and generic reason,open
+g5c.comb.prob.money,Subtraction,COMBINED_ADD_SUB_PROBLEMS,fit,shared,ok,fix,wrong options: shared codes,open
+g5c.comb.prob.sentence,Subtraction,COMBINED_ADD_SUB_PROBLEMS,fit,shared,ok,fix,wrong options: shared codes and generic reason,open
+g5c.comb.prob.table,Subtraction,COMBINED_ADD_SUB_PROBLEMS,fit,shared,ok,fix,wrong options: shared codes and generic reason,open
+g5c.dat.cmp.more,Data Representation,COMPARE_TOTAL_FREQUENCIES,fit,shared,ok,fix,wrong options: shared codes and near miss carrying a code and generic reason,open
+g5c.dat.cmp.not,Data Representation,COMPARE_TOTAL_FREQUENCIES,fit,shared,ok,fix,wrong options: shared codes and generic reason,open
+g5c.dat.cmp.total,Data Representation,COMPARE_TOTAL_FREQUENCIES,fit,shared,ok,fix,wrong options: shared codes and near miss carrying a code and generic reason,open
+g5c.dat.col.check,Data Representation,COLLECT_DATA_30,fit,shared,ok,fix,wrong options: shared codes and near miss carrying a code and generic reason,open
+g5c.dat.col.error,Data Representation,COLLECT_DATA_30,fit,shared,ok,fix,wrong options: shared codes and generic reason,open
+g5c.dat.col.fix,Data Representation,COLLECT_DATA_30,fit,ok,ok,keep,"each wrong option is its own idea, the situation is real, serves the outcome",fixed
+g5c.dat.inf.decide,Data Representation,INFER_FROM_FREQUENCY_TABLE,fit,shared,ok,fix,wrong options: shared codes,open
+g5c.dat.inf.majority,Data Representation,INFER_FROM_FREQUENCY_TABLE,fit,shared,ok,fix,wrong options: shared codes,open
+g5c.dat.inf.support,Data Representation,INFER_FROM_FREQUENCY_TABLE,fit,shared,ok,fix,wrong options: shared codes,open
+g5c.dat.plan.categories,Data Representation,PLAN_DATA_COLLECTION,fit,shared,ok,fix,wrong options: shared codes,open
+g5c.dat.plan.method,Data Representation,PLAN_DATA_COLLECTION,fit,shared,ok,fix,wrong options: shared codes and near miss carrying a code and generic reason,open
+g5c.dat.plan.what,Data Representation,PLAN_DATA_COLLECTION,fit,shared,ok,fix,wrong options: shared codes,open
+g5c.dat.prep.check,Data Representation,PREPARE_FREQUENCY_TABLE,fit,shared,ok,fix,wrong options: shared codes and generic reason,open
+g5c.dat.prep.rows,Data Representation,PREPARE_FREQUENCY_TABLE,fit,shared,ok,fix,wrong options: shared codes and near miss carrying a code and generic reason,open
+g5c.dat.prep.total,Data Representation,PREPARE_FREQUENCY_TABLE,fit,shared,ok,fix,wrong options: shared codes and near miss carrying a code and generic reason,open
+g5c.dat.read.count,Data Representation,READ_FREQUENCY_TABLE,fit,shared,ok,fix,wrong options: shared codes and near miss carrying a code,open
+g5c.dat.read.least,Data Representation,READ_FREQUENCY_TABLE,fit,shared,ok,fix,wrong options: shared codes and generic reason,open
+g5c.dat.read.most,Data Representation,READ_FREQUENCY_TABLE,fit,shared,ok,fix,wrong options: shared codes and generic reason,open
+g5c.dat.tab.align,Data Representation,DRAW_RECORDING_TABLE,fit,shared,ok,fix,wrong options: shared codes and near miss carrying a code and generic reason,open
+g5c.dat.tab.build,Data Representation,DRAW_RECORDING_TABLE,fit,ok,ok,keep,"each wrong option is its own idea, the situation is real, serves the outcome",fixed
+g5c.dat.tab.headings,Data Representation,DRAW_RECORDING_TABLE,fit,shared,ok,fix,wrong options: shared codes,open
+g5c.dat.tf.bigger,Data Representation,TALLY_TO_FREQUENCY,weak,shared,ok,fix,wrong options: shared codes,open
+g5c.dat.tf.complete,Data Representation,TALLY_TO_FREQUENCY,fit,shared,ok,fix,wrong options: shared codes and near miss carrying a code,open
+g5c.dat.tf.read,Data Representation,TALLY_TO_FREQUENCY,fit,shared,ok,fix,wrong options: shared codes and near miss carrying a code,open
+g5c.dat.tg.count,Data Representation,DRAW_TALLY_GROUPS,fit,shared,ok,fix,wrong options: shared codes and near miss carrying a code,open
+g5c.dat.tg.draw,Data Representation,DRAW_TALLY_GROUPS,weak,shared,ok,fix,wrong options: shared codes and generic reason,open
+g5c.dat.tg.spot,Data Representation,DRAW_TALLY_GROUPS,fit,ok,ok,keep,"each wrong option is its own idea, the situation is real, serves the outcome",fixed
+g5c.dat.traw.drinks,Data Representation,TALLY_RAW_DATA,fit,shared,ok,fix,wrong options: shared codes and near miss carrying a code and generic reason,open
+g5c.dat.traw.sizes,Data Representation,TALLY_RAW_DATA,fit,shared,ok,fix,wrong options: shared codes and generic reason,open
+g5c.dat.traw.spot,Data Representation,TALLY_RAW_DATA,fit,ok,ok,keep,"each wrong option is its own idea, the situation is real, serves the outcome",fixed
+g5c.dec.add.same.market,Decimals,DEC_ADD_SAME_PLACES,fit,shared,ok,fix,wrong options: shared codes and near miss carrying a code and generic reason,fixed
+g5c.dec.add.same.missing,Decimals,DEC_ADD_SAME_PLACES,fit,ok,ok,keep,"each wrong option is its own idea, the situation is real, serves the outcome",fixed
+g5c.dec.add.same.thousandths,Decimals,DEC_ADD_SAME_PLACES,fit,shared,ok,fix,wrong options: shared codes and near miss carrying a code and generic reason,fixed
+g5c.dec.addm.market,Decimals,DEC_ADD_MIXED_PLACES,fit,shared,ok,fix,wrong options: shared codes and near miss carrying a code and generic reason,fixed
+g5c.dec.addm.price,Decimals,DEC_ADD_MIXED_PLACES,fit,ok,ok,keep,"each wrong option is its own idea, the situation is real, serves the outcome",fixed
+g5c.dec.addm.whole,Decimals,DEC_ADD_MIXED_PLACES,fit,shared,ok,fix,wrong options: shared codes and near miss carrying a code and generic reason,fixed
+g5c.dec.cmp.spot,Decimals,DEC_COMPARE,fit,ok,ok,keep,"each wrong option is its own idea, the situation is real, serves the outcome",fixed
+g5c.dec.cmp.symbol,Decimals,DEC_COMPARE,weak,ok,ok,fix,outcome weak: a bare symbol question with no situation,open
+g5c.dec.cmp.which,Decimals,DEC_COMPARE,fit,shared,ok,fix,wrong options: shared codes and near miss carrying a code,fixed
+g5c.dec.k.grams,Decimals,DEC_MULT_1000,fit,shared,odd_numbers,fix,wrong options: shared codes; odd_numbers: wrong options are negatives or long decimals,fixed
+g5c.dec.k.missing,Decimals,DEC_MULT_1000,weak,shared,ok,fix,wrong options: shared codes and near miss carrying a code and generic reason; outcome weak: a bare missing-number item with no situation,fixed
+g5c.dec.k.spot,Decimals,DEC_MULT_1000,fit,ok,ok,keep,"each wrong option is its own idea, the situation is real, serves the outcome",fixed
+g5c.dec.ord.between,Decimals,DEC_ORDER,fit,ok,ok,keep,"each wrong option is its own idea, the situation is real, serves the outcome",fixed
+g5c.dec.ord.list,Decimals,DEC_ORDER,weak,shared,ok,fix,wrong options: shared codes; outcome weak: a bare list to order with no situation,fixed
+g5c.dec.ord.race,Decimals,DEC_ORDER,fit,shared,ok,fix,wrong options: shared codes and near miss carrying a code,fixed
+g5c.dec.place.chart,Decimals,DEC_PLACE_NAME,fit,shared,ok,fix,wrong options: shared codes and near miss carrying a code,fixed
+g5c.dec.place.name,Decimals,DEC_PLACE_NAME,fit,shared,ok,fix,wrong options: shared codes,fixed
+g5c.dec.place.size,Decimals,DEC_PLACE_NAME,fit,shared,ok,fix,wrong options: shared codes,fixed
+g5c.dec.sub.same.change,Decimals,DEC_SUB_SAME_PLACES,fit,shared,ok,fix,wrong options: shared codes and near miss carrying a code and generic reason,fixed
+g5c.dec.sub.same.spot,Decimals,DEC_SUB_SAME_PLACES,fit,ok,ok,keep,"each wrong option is its own idea, the situation is real, serves the outcome",fixed
+g5c.dec.sub.same.zero,Decimals,DEC_SUB_SAME_PLACES,fit,shared,ok,fix,wrong options: shared codes and near miss carrying a code and generic reason,fixed
+g5c.dec.subm.change,Decimals,DEC_SUB_MIXED_PLACES,fit,ok,ok,keep,"each wrong option is its own idea, the situation is real, serves the outcome",fixed
+g5c.dec.subm.extra,Decimals,DEC_SUB_MIXED_PLACES,fit,shared,ok,fix,wrong options: shared codes and near miss carrying a code and generic reason,fixed
+g5c.dec.subm.whole,Decimals,DEC_SUB_MIXED_PLACES,fit,shared,ok,fix,wrong options: shared codes and near miss carrying a code and generic reason,fixed
+g5c.dec.value.expanded,Decimals,DEC_DIGIT_VALUE,fit,ok,ok,keep,"each wrong option is its own idea, the situation is real, serves the outcome",fixed
+g5c.dec.value.worth,Decimals,DEC_DIGIT_VALUE,fit,shared,ok,fix,wrong options: shared codes and near miss carrying a code,fixed
+g5c.dec.value.write,Decimals,DEC_DIGIT_VALUE,weak,shared,ok,fix,wrong options: shared codes and near miss carrying a code and generic reason; outcome weak: a bare write-the-number item with no situation,fixed
+g5c.div.chk.dividend,Division,CHECK_DIVISION_BY_MULT,fit,shared,ok,fix,wrong options: shared codes and near miss carrying a code,open
+g5c.div.chk.verify,Division,CHECK_DIVISION_BY_MULT,fit,shared,ok,fix,wrong options: shared codes,open
+g5c.div.chk.which,Division,CHECK_DIVISION_BY_MULT,weak,shared,ok,fix,wrong options: shared codes and generic reason,open
+g5c.div.d1.remainder,Division,DIV_3DIGIT_BY_1DIGIT,weak,shared,ok,fix,wrong options: shared codes and generic reason,open
+g5c.div.d1.spot,Division,DIV_3DIGIT_BY_1DIGIT,fit,ok,ok,keep,"each wrong option is its own idea, the situation is real, serves the outcome",fixed
+g5c.div.d1.zero,Division,DIV_3DIGIT_BY_1DIGIT,fit,generic,ok,fix,wrong options: generic reason,open
+g5c.div.d2.long,Division,DIV_3DIGIT_BY_2DIGIT,fit,shared,ok,fix,wrong options: shared codes and near miss carrying a code and generic reason,open
+g5c.div.d2.spot,Division,DIV_3DIGIT_BY_2DIGIT,fit,ok,ok,keep,"each wrong option is its own idea, the situation is real, serves the outcome",fixed
+g5c.div.d2.zero,Division,DIV_3DIGIT_BY_2DIGIT,weak,shared,ok,fix,wrong options: shared codes,open
+g5c.div.est.best,Division,ESTIMATE_QUOTIENTS,weak,shared,ok,fix,wrong options: shared codes and generic reason,open
+g5c.div.est.reasonable,Division,ESTIMATE_QUOTIENTS,fit,shared,ok,fix,wrong options: shared codes,open
+g5c.div.est.word,Division,ESTIMATE_QUOTIENTS,fit,shared,odd_numbers,fix,wrong options: shared codes and near miss carrying a code and generic reason; odd_numbers: wrong option 22.222 is not a number a child would write,open
+g5c.div.fam.missing,Division,MULT_DIV_FACT_FAMILIES,fit,shared,fake_context,fix,"wrong options: shared codes and generic reason; fake_context: ""thinks of a number"" is a wrapper; wrong option 2.63",open
+g5c.div.fam.tf,Division,MULT_DIV_FACT_FAMILIES,fit,shared,ok,fix,wrong options: shared codes,open
+g5c.div.fam.write,Division,MULT_DIV_FACT_FAMILIES,weak,shared,ok,fix,wrong options: shared codes,open
+g5c.div.k.grams,Division,DIV_BY_1000,fit,shared,ok,fix,wrong options: shared codes and near miss carrying a code,open
+g5c.div.k.table,Division,DIV_BY_1000,fit,shared,ok,fix,wrong options: shared codes and near miss carrying a code,open
+g5c.div.k.which,Division,DIV_BY_1000,weak,slip_as_mis,ok,fix,wrong options: near miss carrying a code,open
+g5c.div.wp.choose,Division,DIV_WORD_PROBLEMS,fit,shared,ok,fix,wrong options: shared codes,open
+g5c.div.wp.left,Division,DIV_WORD_PROBLEMS,fit,shared,ok,fix,wrong options: shared codes,open
+g5c.div.wp.roundup,Division,DIV_WORD_PROBLEMS,fit,shared,ok,fix,wrong options: shared codes and near miss carrying a code,open
+g5c.eq.ctx.matatu,Simple Equations,EQ_SOLVE_IN_CONTEXT,fit,ok,ok,keep,"each wrong option is its own idea, the situation is real, serves the outcome",fixed
+g5c.eq.ctx.sense,Simple Equations,EQ_SOLVE_IN_CONTEXT,fit,shared,ok,fix,wrong options: shared codes and generic reason,fixed
+g5c.eq.ctx.sukuma,Simple Equations,EQ_SOLVE_IN_CONTEXT,fit,shared,odd_numbers,fix,wrong options: shared codes and generic reason; odd_numbers: sukuma wiki bunches at sh 15 to 60 each are dear,fixed
+g5c.eq.fadd.more,Simple Equations,EQ_FORM_ADD_SUB,weak,shared,ok,fix,wrong options: shared codes and near miss carrying a code and generic reason; outcome weak: the equation is handed over; the outcome is to form it from the situation,fixed
+g5c.eq.fadd.spent,Simple Equations,EQ_FORM_ADD_SUB,fit,shared,ok,fix,wrong options: shared codes,fixed
+g5c.eq.fadd.spot,Simple Equations,EQ_FORM_ADD_SUB,fit,ok,ok,keep,"each wrong option is its own idea, the situation is real, serves the outcome",fixed
+g5c.eq.fmul.cost,Simple Equations,EQ_FORM_MUL_DIV,weak,shared,ok,fix,wrong options: shared codes and near miss carrying a code and generic reason; outcome weak: the equation is handed over; the outcome is to form it from the situation,fixed
+g5c.eq.fmul.share,Simple Equations,EQ_FORM_MUL_DIV,fit,shared,ok,fix,wrong options: shared codes,fixed
+g5c.eq.fmul.times,Simple Equations,EQ_FORM_MUL_DIV,weak,shared,ok,fix,wrong options: shared codes,fixed
+g5c.eq.mean.balance,Simple Equations,EQ_MEANING,fit,slip_as_mis,ok,fix,wrong options: near miss carrying a code,fixed
+g5c.eq.mean.letter,Simple Equations,EQ_MEANING,fit,shared,trivial,fix,"wrong options: shared codes; trivial: the stem already says what the letter is, so the answer is copied",fixed
+g5c.eq.mean.pick,Simple Equations,EQ_MEANING,weak,ok,fake_context,fix,"outcome weak: recognising an equation from a list with no situation is Grade 4; the outcome is to form equations from real life; fake_context: X writes four lines on the board: a wrapper, not a situation",fixed
+g5c.eq.sadd.minus,Simple Equations,EQ_SOLVE_ADD_SUB,fit,shared,fake_context,fix,"wrong options: shared codes and near miss carrying a code and generic reason; fake_context: ""a learner takes some away from a number"" is a wrapper",fixed
+g5c.eq.sadd.plus,Simple Equations,EQ_SOLVE_ADD_SUB,fit,shared,fake_context,fix,"wrong options: shared codes and near miss carrying a code and generic reason; fake_context: ""thinks of a number"" is a wrapper",fixed
+g5c.eq.sadd.spot,Simple Equations,EQ_SOLVE_ADD_SUB,fit,ok,ok,keep,"each wrong option is its own idea, the situation is real, serves the outcome",fixed
+g5c.eq.smul.divide,Simple Equations,EQ_SOLVE_MUL_DIV,fit,shared,ok,fix,wrong options: shared codes and generic reason,fixed
+g5c.eq.smul.groups,Simple Equations,EQ_SOLVE_MUL_DIV,fit,shared,fake_context,fix,"wrong options: shared codes and near miss carrying a code and generic reason; fake_context: ""X solves 9x = 90"" is a wrapper",fixed
+g5c.eq.smul.spot,Simple Equations,EQ_SOLVE_MUL_DIV,fit,ok,ok,keep,"each wrong option is its own idea, the situation is real, serves the outcome",fixed
+g5c.eq.two.order,Simple Equations,EQ_TWO_STEP,weak,shared,fake_context,fix,"wrong options: shared codes and near miss carrying a code; fake_context: ""must find x"" is a wrapper; wrong options were decimals and negatives",fixed
+g5c.eq.two.pens,Simple Equations,EQ_TWO_STEP,fit,shared,odd_numbers,fix,wrong options: shared codes and near miss carrying a code; odd_numbers: wrong options such as 2.05 shillings and negative answers,fixed
+g5c.eq.two.spot,Simple Equations,EQ_TWO_STEP,fit,ok,ok,keep,"each wrong option is its own idea, the situation is real, serves the outcome",fixed
+g5c.fra.add.flour,Fractions,ADD_SAME_DENOMINATOR,fit,shared,ok,fix,wrong options: shared codes and generic reason,fixed
+g5c.fra.add.missing,Fractions,ADD_SAME_DENOMINATOR,weak,shared,ok,fix,wrong options: shared codes and near miss carrying a code; outcome weak: a bare missing numerator; no situation for the fractions,fixed
+g5c.fra.add.spot,Fractions,ADD_SAME_DENOMINATOR,fit,ok,ok,keep,"each wrong option is its own idea, the situation is real, serves the outcome",fixed
+g5c.fra.addr.spot,Fractions,ADD_ONE_RENAMING,fit,ok,ok,keep,"each wrong option is its own idea, the situation is real, serves the outcome",fixed
+g5c.fra.addr.sugar,Fractions,ADD_ONE_RENAMING,fit,shared,ok,fix,wrong options: shared codes and generic reason,fixed
+g5c.fra.addr.which,Fractions,ADD_ONE_RENAMING,weak,ok,ok,keep,keep: a bare drill with no situation; the word-problem sibling in this skill carries the situation,fixed
+g5c.fra.cl.loaf,Fractions,COMPARE_LIKE_FRACTIONS,fit,shared,ok,fix,wrong options: shared codes,fixed
+g5c.fra.cl.symbol,Fractions,COMPARE_LIKE_FRACTIONS,weak,ok,ok,fix,outcome weak: a bare symbol question; the outcome asks for different situations,fixed
+g5c.fra.cl.whole,Fractions,COMPARE_LIKE_FRACTIONS,fit,ok,ok,keep,"each wrong option is its own idea, the situation is real, serves the outcome",fixed
+g5c.fra.cu.method,Fractions,COMPARE_UNLIKE_FRACTIONS,fit,ok,ok,keep,"each wrong option is its own idea, the situation is real, serves the outcome",fixed
+g5c.fra.cu.plot,Fractions,COMPARE_UNLIKE_FRACTIONS,fit,ok,ok,keep,"each wrong option is its own idea, the situation is real, serves the outcome",fixed
+g5c.fra.cu.symbol,Fractions,COMPARE_UNLIKE_FRACTIONS,weak,shared,ok,fix,wrong options: shared codes; outcome weak: a bare symbol question; the outcome asks for different situations,fixed
+g5c.fra.eq.missing,Fractions,EQUIVALENT_FRACTIONS,fit,shared,ok,fix,wrong options: shared codes and near miss carrying a code,fixed
+g5c.fra.eq.truefalse,Fractions,EQUIVALENT_FRACTIONS,weak,ok,ok,keep,keep: a bare drill with no situation; the word-problem sibling in this skill carries the situation,fixed
+g5c.fra.eq.who-more,Fractions,EQUIVALENT_FRACTIONS,fit,shared,ok,fix,wrong options: shared codes,fixed
+g5c.fra.ord.inc,Fractions,ORDER_FRACTIONS,weak,ok,ok,fix,outcome weak: a bare list to order; the outcome asks for different situations,fixed
+g5c.fra.ord.out,Fractions,ORDER_FRACTIONS,fit,ok,ok,keep,"each wrong option is its own idea, the situation is real, serves the outcome",fixed
+g5c.fra.ord.walk,Fractions,ORDER_FRACTIONS,fit,shared,ok,fix,wrong options: shared codes and near miss carrying a code,fixed
+g5c.fra.simp.is-it,Fractions,SIMPLIFY_FRACTIONS,fit,shared,ok,fix,wrong options: shared codes,fixed
+g5c.fra.simp.mandazi,Fractions,SIMPLIFY_FRACTIONS,fit,shared,ok,fix,wrong options: shared codes,fixed
+g5c.fra.simp.spot,Fractions,SIMPLIFY_FRACTIONS,fit,ok,ok,keep,"each wrong option is its own idea, the situation is real, serves the outcome",fixed
+g5c.fra.sub.line,Fractions,SUBTRACT_SAME_DENOMINATOR,fit,shared,ok,fix,wrong options: shared codes,fixed
+g5c.fra.sub.missing,Fractions,SUBTRACT_SAME_DENOMINATOR,weak,shared,ok,fix,wrong options: shared codes and near miss carrying a code; outcome weak: a bare missing numerator; no situation for the fractions,fixed
+g5c.fra.sub.pawpaw,Fractions,SUBTRACT_SAME_DENOMINATOR,fit,shared,ok,fix,wrong options: shared codes,fixed
+g5c.fra.subr.milk,Fractions,SUBTRACT_ONE_RENAMING,fit,shared,ok,fix,wrong options: shared codes and generic reason,fixed
+g5c.fra.subr.moremissing,Fractions,SUBTRACT_ONE_RENAMING,fit,shared,ok,fix,wrong options: shared codes,fixed
+g5c.fra.subr.spot,Fractions,SUBTRACT_ONE_RENAMING,fit,ok,ok,keep,"each wrong option is its own idea, the situation is real, serves the outcome",fixed
+g5c.geo3.dim.match,Three-Dimension (3-D) Objects,2D_VS_3D,fit,ok,ok,keep,"each wrong option is its own idea, the situation is real, serves the outcome",fixed
+g5c.geo3.dim.sort,Three-Dimension (3-D) Objects,2D_VS_3D,fit,shared,ok,fix,wrong options: shared codes,open
+g5c.geo3.dim.which,Three-Dimension (3-D) Objects,2D_VS_3D,fit,shared,ok,fix,wrong options: shared codes,open
+g5c.geo3.face.count,Three-Dimension (3-D) Objects,2D_FACES_IN_3D,fit,shared,ok,fix,wrong options: shared codes and near miss carrying a code,open
+g5c.geo3.face.shape,Three-Dimension (3-D) Objects,2D_FACES_IN_3D,fit,shared,ok,fix,wrong options: shared codes,open
+g5c.geo3.face.tf,Three-Dimension (3-D) Objects,2D_FACES_IN_3D,fit,shared,ok,fix,wrong options: shared codes and generic reason,open
+g5c.geo3.feat.count,Three-Dimension (3-D) Objects,DESCRIBE_3D_FEATURES,fit,shared,ok,fix,wrong options: shared codes and near miss carrying a code and generic reason,open
+g5c.geo3.feat.guess,Three-Dimension (3-D) Objects,DESCRIBE_3D_FEATURES,fit,ok,ok,keep,"each wrong option is its own idea, the situation is real, serves the outcome",fixed
+g5c.geo3.feat.surfaces,Three-Dimension (3-D) Objects,DESCRIBE_3D_FEATURES,fit,shared,ok,fix,wrong options: shared codes and near miss carrying a code,open
+g5c.geo3.name.object,Three-Dimension (3-D) Objects,NAME_3D_OBJECTS,fit,shared,ok,fix,wrong options: shared codes,open
+g5c.geo3.name.odd,Three-Dimension (3-D) Objects,NAME_3D_OBJECTS,fit,shared,ok,fix,wrong options: shared codes,open
+g5c.geo3.name.sort,Three-Dimension (3-D) Objects,NAME_3D_OBJECTS,fit,shared,ok,fix,wrong options: shared codes and generic reason,open
+g5c.geoa.ctx.bigger,Angles,MEASURE_ANGLES_IN_CONTEXT,fit,shared,trivial,fix,wrong options: shared codes; trivial: the answer appears in the question,open
+g5c.geoa.ctx.sense,Angles,MEASURE_ANGLES_IN_CONTEXT,fit,shared,ok,fix,wrong options: shared codes,open
+g5c.geoa.ctx.unit,Angles,MEASURE_ANGLES_IN_CONTEXT,weak,shared,ok,fix,wrong options: shared codes and generic reason,open
+g5c.geoa.deg.arms,Angles,DEGREE_AS_UNIT,fit,ok,ok,keep,"each wrong option is its own idea, the situation is real, serves the outcome",fixed
+g5c.geoa.deg.right,Angles,DEGREE_AS_UNIT,fit,shared,ok,fix,wrong options: shared codes,open
+g5c.geoa.deg.which,Angles,DEGREE_AS_UNIT,fit,shared,ok,fix,wrong options: shared codes and generic reason,open
+g5c.geoa.env.compare,Angles,ANGLES_IN_ENVIRONMENT,fit,shared,ok,fix,wrong options: shared codes,open
+g5c.geoa.env.right,Angles,ANGLES_IN_ENVIRONMENT,fit,shared,ok,fix,wrong options: shared codes,open
+g5c.geoa.env.roof,Angles,ANGLES_IN_ENVIRONMENT,fit,shared,trivial,fix,"wrong options: shared codes and near miss carrying a code and generic reason; trivial: right angles on 3 identical square tiles: 3 x 4, no environment in it",open
+g5c.geoa.meas.place,Angles,MEASURE_WITH_PROTRACTOR,weak,shared,ok,fix,wrong options: shared codes,open
+g5c.geoa.meas.spot,Angles,MEASURE_WITH_PROTRACTOR,fit,ok,ok,keep,"each wrong option is its own idea, the situation is real, serves the outcome",fixed
+g5c.geoa.meas.tilted,Angles,MEASURE_WITH_PROTRACTOR,fit,shared,ok,fix,wrong options: shared codes and generic reason,open
+g5c.geoa.prot.scale,Angles,READ_PROTRACTOR_BOTH_SCALES,fit,shared,ok,fix,wrong options: shared codes and near miss carrying a code,open
+g5c.geoa.prot.spot,Angles,READ_PROTRACTOR_BOTH_SCALES,fit,ok,ok,keep,"each wrong option is its own idea, the situation is real, serves the outcome",fixed
+g5c.geoa.prot.which,Angles,READ_PROTRACTOR_BOTH_SCALES,weak,shared,ok,fix,wrong options: shared codes and generic reason,open
+g5c.geoa.turn.clock,Angles,TURNS_AS_ANGLES,weak,shared,ok,fix,wrong options: shared codes,open
+g5c.geoa.turn.compass,Angles,TURNS_AS_ANGLES,fit,shared,ok,fix,wrong options: shared codes,open
+g5c.geoa.turn.degrees,Angles,TURNS_AS_ANGLES,fit,shared,ok,fix,wrong options: shared codes and generic reason,open
+g5c.geol.drawhv.how,Lines,DRAW_HORIZONTAL_VERTICAL,weak,ok,ok,keep,keep: a bare drill with no situation; the word-problem sibling in this skill carries the situation,fixed
+g5c.geol.drawhv.ruler,Lines,DRAW_HORIZONTAL_VERTICAL,fit,shared,ok,fix,wrong options: shared codes and near miss carrying a code,open
+g5c.geol.drawhv.spot,Lines,DRAW_HORIZONTAL_VERTICAL,fit,ok,ok,keep,"each wrong option is its own idea, the situation is real, serves the outcome",fixed
+g5c.geol.drawpar.dist,Lines,DRAW_PARALLEL,fit,shared,ok,fix,wrong options: shared codes and near miss carrying a code,open
+g5c.geol.drawpar.how,Lines,DRAW_PARALLEL,weak,shared,ok,fix,wrong options: shared codes,open
+g5c.geol.drawpar.spot,Lines,DRAW_PARALLEL,fit,ok,ok,keep,"each wrong option is its own idea, the situation is real, serves the outcome",fixed
+g5c.geol.drawperp.check,Lines,DRAW_PERPENDICULAR,fit,shared,ok,fix,wrong options: shared codes and generic reason,open
+g5c.geol.drawperp.spot,Lines,DRAW_PERPENDICULAR,fit,ok,ok,keep,"each wrong option is its own idea, the situation is real, serves the outcome",fixed
+g5c.geol.drawperp.tool,Lines,DRAW_PERPENDICULAR,weak,ok,ok,keep,keep: a bare drill with no situation; the word-problem sibling in this skill carries the situation,fixed
+g5c.geol.hv.classify,Lines,IDENTIFY_HORIZONTAL_VERTICAL,fit,shared,ok,fix,wrong options: shared codes,open
+g5c.geol.hv.letters,Lines,IDENTIFY_HORIZONTAL_VERTICAL,fit,shared,ok,fix,wrong options: shared codes and near miss carrying a code and generic reason,open
+g5c.geol.hv.tilted,Lines,IDENTIFY_HORIZONTAL_VERTICAL,fit,shared,ok,fix,wrong options: shared codes and near miss carrying a code,open
+g5c.geol.par.pairs,Lines,IDENTIFY_PARALLEL,fit,shared,ok,fix,wrong options: shared codes,open
+g5c.geol.par.shape,Lines,IDENTIFY_PARALLEL,fit,shared,odd_numbers,fix,wrong options: shared codes and near miss carrying a code and generic reason; odd_numbers: a window frame with 5 pairs of parallel sides,open
+g5c.geol.par.sort,Lines,IDENTIFY_PARALLEL,fit,shared,ok,fix,wrong options: shared codes,open
+g5c.geol.perp.shape,Lines,IDENTIFY_PERPENDICULAR,fit,shared,ok,fix,wrong options: shared codes and near miss carrying a code and generic reason,open
+g5c.geol.perp.tilted,Lines,IDENTIFY_PERPENDICULAR,fit,shared,ok,fix,wrong options: shared codes,open
+g5c.geol.perp.which,Lines,IDENTIFY_PERPENDICULAR,fit,shared,ok,fix,wrong options: shared codes,open
+g5c.len.add.options,Length,ADD_KM_M,weak,shared,ok,fix,wrong options: shared codes,open
+g5c.len.add.spot,Length,ADD_KM_M,fit,ok,ok,keep,"each wrong option is its own idea, the situation is real, serves the outcome",fixed
+g5c.len.add.word,Length,ADD_KM_M,fit,shared,ok,fix,wrong options: shared codes and generic reason,open
+g5c.len.div.check,Length,DIVIDE_KM_M,fit,ok,ok,keep,"each wrong option is its own idea, the situation is real, serves the outcome",fixed
+g5c.len.div.options,Length,DIVIDE_KM_M,weak,shared,ok,fix,wrong options: shared codes,open
+g5c.len.div.word,Length,DIVIDE_KM_M,fit,shared,ok,fix,wrong options: shared codes and generic reason,open
+g5c.len.k2s.options,Length,CONVERT_KM_TO_M,weak,shared,ok,fix,wrong options: shared codes,open
+g5c.len.k2s.spot,Length,CONVERT_KM_TO_M,fit,ok,ok,keep,"each wrong option is its own idea, the situation is real, serves the outcome",fixed
+g5c.len.k2s.word,Length,CONVERT_KM_TO_M,fit,shared,ok,fix,wrong options: shared codes,open
+g5c.len.mul.options,Length,MULTIPLY_KM_M,weak,shared,ok,fix,wrong options: shared codes,open
+g5c.len.mul.spot,Length,MULTIPLY_KM_M,fit,ok,ok,keep,"each wrong option is its own idea, the situation is real, serves the outcome",fixed
+g5c.len.mul.word,Length,MULTIPLY_KM_M,fit,shared,ok,fix,wrong options: shared codes,open
+g5c.len.rel.compare,Length,KM_M_RELATIONSHIP,fit,shared,fake_context,fix,"wrong options: shared codes; fake_context: ""X compares two amounts"" is a wrapper, not a situation",open
+g5c.len.rel.half,Length,KM_M_RELATIONSHIP,weak,shared,fake_context,fix,"wrong options: shared codes and generic reason; fake_context: ""X uses a quarter of a unit"" is a wrapper",open
+g5c.len.rel.parts,Length,KM_M_RELATIONSHIP,fit,shared,fake_context,fix,"wrong options: shared codes and near miss carrying a code and generic reason; fake_context: ""X makes up one unit using small lengths"" is a wrapper",open
+g5c.len.s2k.options,Length,CONVERT_M_TO_KM,weak,shared,ok,fix,wrong options: shared codes and generic reason,open
+g5c.len.s2k.spot,Length,CONVERT_M_TO_KM,fit,ok,ok,keep,"each wrong option is its own idea, the situation is real, serves the outcome",fixed
+g5c.len.s2k.word,Length,CONVERT_M_TO_KM,fit,shared,ok,fix,wrong options: shared codes and generic reason,open
+g5c.len.sub.options,Length,SUBTRACT_KM_M,weak,ok,ok,keep,keep: a bare drill with no situation; the word-problem sibling in this skill carries the situation,fixed
+g5c.len.sub.spot,Length,SUBTRACT_KM_M,fit,ok,ok,keep,"each wrong option is its own idea, the situation is real, serves the outcome",fixed
+g5c.len.sub.word,Length,SUBTRACT_KM_M,fit,shared,ok,fix,wrong options: shared codes and generic reason,open
+g5c.lenc.kmest.compare,Length,KM_ESTIMATE_DISTANCE,fit,shared,ok,fix,wrong options: shared codes,open
+g5c.lenc.kmest.pick,Length,KM_ESTIMATE_DISTANCE,fit,shared,ok,fix,wrong options: shared codes,open
+g5c.lenc.kmest.sense,Length,KM_ESTIMATE_DISTANCE,fit,shared,ok,fix,wrong options: shared codes,open
+g5c.lenc.kmid.choose,Length,KM_IDENTIFY_UNIT,fit,shared,ok,fix,wrong options: shared codes,open
+g5c.lenc.kmid.sign,Length,KM_IDENTIFY_UNIT,fit,shared,ok,fix,wrong options: shared codes,open
+g5c.lenc.kmid.sort,Length,KM_IDENTIFY_UNIT,fit,shared,ok,fix,wrong options: shared codes,open
+g5c.mas.add.options,Mass,MASS_ADD_KG_G,fit,shared,ok,fix,wrong options: shared codes,open
+g5c.mas.add.spot,Mass,MASS_ADD_KG_G,fit,ok,ok,keep,"each wrong option is its own idea, the situation is real, serves the outcome",fixed
+g5c.mas.add.word,Mass,MASS_ADD_KG_G,fit,shared,ok,fix,wrong options: shared codes and generic reason,open
+g5c.mas.div.check,Mass,MASS_DIVIDE_KG_G,fit,ok,ok,keep,"each wrong option is its own idea, the situation is real, serves the outcome",fixed
+g5c.mas.div.options,Mass,MASS_DIVIDE_KG_G,fit,ok,ok,keep,"each wrong option is its own idea, the situation is real, serves the outcome",fixed
+g5c.mas.div.word,Mass,MASS_DIVIDE_KG_G,fit,shared,ok,fix,wrong options: shared codes and generic reason,open
+g5c.mas.k2s.options,Mass,MASS_CONVERT_KG_TO_G,fit,shared,ok,fix,wrong options: shared codes,open
+g5c.mas.k2s.spot,Mass,MASS_CONVERT_KG_TO_G,fit,ok,ok,keep,"each wrong option is its own idea, the situation is real, serves the outcome",fixed
+g5c.mas.k2s.word,Mass,MASS_CONVERT_KG_TO_G,fit,shared,ok,fix,wrong options: shared codes,open
+g5c.mas.mul.options,Mass,MASS_MULTIPLY_KG_G,fit,shared,ok,fix,wrong options: shared codes,open
+g5c.mas.mul.spot,Mass,MASS_MULTIPLY_KG_G,fit,ok,ok,keep,"each wrong option is its own idea, the situation is real, serves the outcome",fixed
+g5c.mas.mul.word,Mass,MASS_MULTIPLY_KG_G,fit,shared,ok,fix,wrong options: shared codes,open
+g5c.mas.rel.compare,Mass,MASS_KG_G_RELATIONSHIP,fit,shared,fake_context,fix,"wrong options: shared codes; fake_context: ""X compares two amounts"" is a wrapper, not a situation",open
+g5c.mas.rel.half,Mass,MASS_KG_G_RELATIONSHIP,fit,shared,fake_context,fix,"wrong options: shared codes and generic reason; fake_context: ""X uses a quarter of a unit"" is a wrapper",open
+g5c.mas.rel.parts,Mass,MASS_KG_G_RELATIONSHIP,fit,shared,fake_context,fix,"wrong options: shared codes and near miss carrying a code and generic reason; fake_context: ""X makes up one unit using small lengths"" is a wrapper",open
+g5c.mas.s2k.options,Mass,MASS_CONVERT_G_TO_KG,fit,shared,ok,fix,wrong options: shared codes and generic reason,open
+g5c.mas.s2k.spot,Mass,MASS_CONVERT_G_TO_KG,fit,ok,ok,keep,"each wrong option is its own idea, the situation is real, serves the outcome",fixed
+g5c.mas.s2k.word,Mass,MASS_CONVERT_G_TO_KG,fit,shared,ok,fix,wrong options: shared codes and generic reason,open
+g5c.mas.sub.options,Mass,MASS_SUBTRACT_KG_G,fit,ok,ok,keep,"each wrong option is its own idea, the situation is real, serves the outcome",fixed
+g5c.mas.sub.spot,Mass,MASS_SUBTRACT_KG_G,fit,ok,ok,keep,"each wrong option is its own idea, the situation is real, serves the outcome",fixed
+g5c.mas.sub.word,Mass,MASS_SUBTRACT_KG_G,fit,shared,ok,fix,wrong options: shared codes and generic reason,open
+g5c.masc.bal.heavier,Mass,MASS_MEASURE_BALANCE,fit,shared,ok,fix,wrong options: shared codes,open
+g5c.masc.bal.sum,Mass,MASS_MEASURE_BALANCE,fit,shared,ok,fix,wrong options: shared codes and generic reason,open
+g5c.masc.bal.which-masses,Mass,MASS_MEASURE_BALANCE,weak,shared,ok,fix,wrong options: shared codes,open
+g5c.masc.est.bench,Mass,MASS_ESTIMATE_GRAMMES,fit,shared,ok,fix,wrong options: shared codes and generic reason,open
+g5c.masc.est.heavier,Mass,MASS_ESTIMATE_GRAMMES,fit,shared,ok,fix,wrong options: shared codes,open
+g5c.masc.est.record,Mass,MASS_ESTIMATE_GRAMMES,weak,shared,ok,fix,wrong options: shared codes,open
+g5c.masc.gram.label,Mass,MASS_GRAMME_RECOGNISE,fit,shared,ok,fix,wrong options: shared codes and generic reason,open
+g5c.masc.gram.spot,Mass,MASS_GRAMME_RECOGNISE,fit,ok,ok,keep,"each wrong option is its own idea, the situation is real, serves the outcome",fixed
+g5c.masc.gram.which,Mass,MASS_GRAMME_RECOGNISE,fit,shared,ok,fix,wrong options: shared codes,open
+g5c.masc.scale.dial,Mass,MASS_READ_SCALE,fit,shared,ok,fix,wrong options: shared codes and generic reason,open
+g5c.masc.scale.diff,Mass,MASS_READ_SCALE,fit,ok,ok,keep,"each wrong option is its own idea, the situation is real, serves the outcome",fixed
+g5c.masc.scale.half,Mass,MASS_READ_SCALE,weak,shared,ok,fix,wrong options: shared codes,open
+g5c.masc.unit.choose,Mass,MASS_CHOOSE_UNIT,fit,shared,ok,fix,wrong options: shared codes and generic reason,open
+g5c.masc.unit.complete,Mass,MASS_CHOOSE_UNIT,fit,shared,ok,fix,wrong options: shared codes and generic reason,open
+g5c.masc.unit.size,Mass,MASS_CHOOSE_UNIT,fit,shared,ok,fix,wrong options: shared codes and generic reason,open
+g5c.mon.bi.drop,Money,BUDGET_IMPORTANCE,weak,shared,ok,fix,wrong options: shared codes,open
+g5c.mon.bi.fail,Money,BUDGET_IMPORTANCE,fit,shared,ok,fix,wrong options: shared codes,open
+g5c.mon.bi.reasons,Money,BUDGET_IMPORTANCE,fit,shared,ok,fix,wrong options: shared codes,open
+g5c.mon.bic.line,Money,BUDGET_ITEM_COSTS,fit,shared,ok,fix,wrong options: shared codes and generic reason,open
+g5c.mon.bic.spot,Money,BUDGET_ITEM_COSTS,fit,ok,ok,keep,"each wrong option is its own idea, the situation is real, serves the outcome",fixed
+g5c.mon.bic.table,Money,BUDGET_ITEM_COSTS,fit,shared,ok,fix,wrong options: shared codes and generic reason,open
+g5c.mon.bm.complete,Money,BUDGET_MEANING,fit,shared,ok,fix,wrong options: shared codes,open
+g5c.mon.bm.which,Money,BUDGET_MEANING,fit,shared,ok,fix,wrong options: shared codes,open
+g5c.mon.bm.who,Money,BUDGET_MEANING,fit,shared,trivial,fix,wrong options: shared codes; trivial: an obvious yes with no working,open
+g5c.mon.bs.loan,Money,BANK_SERVICES,fit,shared,ok,fix,wrong options: shared codes,open
+g5c.mon.bs.match,Money,BANK_SERVICES,weak,shared,ok,fix,wrong options: shared codes,open
+g5c.mon.bs.notes,Money,BANK_SERVICES,fit,shared,ok,fix,wrong options: shared codes,open
+g5c.mon.bt.afford,Money,BUDGET_TOTAL_BALANCE,fit,shared,ok,fix,wrong options: shared codes,open
+g5c.mon.bt.balance,Money,BUDGET_TOTAL_BALANCE,fit,shared,ok,fix,wrong options: shared codes and generic reason,open
+g5c.mon.bt.total,Money,BUDGET_TOTAL_BALANCE,fit,shared,ok,fix,wrong options: shared codes and generic reason,open
+g5c.mon.mt.check,Money,MONEY_TRANSFER_DIGITAL,fit,shared,ok,fix,wrong options: shared codes,open
+g5c.mon.mt.order,Money,MONEY_TRANSFER_DIGITAL,fit,shared,ok,fix,wrong options: shared codes and generic reason,open
+g5c.mon.mt.pin,Money,MONEY_TRANSFER_DIGITAL,weak,shared,ok,fix,wrong options: shared codes,open
+g5c.mon.sf.plan,Money,SAVING_FACTORS,weak,shared,ok,fix,wrong options: shared codes,open
+g5c.mon.sf.safe,Money,SAVING_FACTORS,fit,shared,ok,fix,wrong options: shared codes,open
+g5c.mon.sf.small,Money,SAVING_FACTORS,fit,shared,ok,fix,wrong options: shared codes,open
+g5c.mon.tm.tf,Money,TAX_MEANING,fit,ok,ok,keep,"each wrong option is its own idea, the situation is real, serves the outcome",fixed
+g5c.mon.tm.what,Money,TAX_MEANING,weak,shared,ok,fix,wrong options: shared codes,open
+g5c.mon.tm.why,Money,TAX_MEANING,fit,ok,ok,keep,"each wrong option is its own idea, the situation is real, serves the outcome",fixed
+g5c.mon.tr.amount,Money,TAX_ON_RECEIPT,fit,shared,ok,fix,wrong options: shared codes,open
+g5c.mon.tr.before,Money,TAX_ON_RECEIPT,fit,shared,ok,fix,wrong options: shared codes,open
+g5c.mon.tr.total,Money,TAX_ON_RECEIPT,fit,shared,trivial,fix,wrong options: shared codes; trivial: the total is stated in the question and is also the answer,open
+g5c.mul.chk.money,Multiplication,ESTIMATE_CHECK_REASONABLE,fit,shared,odd_numbers,fix,"wrong options: shared codes and near miss carrying a code; odd_numbers: answer options mix 0, 1, 2 with 10,800 and 3,000; the yes/no rule is unclear",open
+g5c.mul.chk.reasonable,Multiplication,ESTIMATE_CHECK_REASONABLE,fit,shared,ok,fix,wrong options: shared codes,open
+g5c.mul.chk.wrong,Multiplication,ESTIMATE_CHECK_REASONABLE,weak,shared,ok,fix,wrong options: shared codes,open
+g5c.mul.cre.list,Multiplication,MULT_PATTERN_CREATE,weak,shared,ok,fix,wrong options: shared codes,open
+g5c.mul.cre.spot,Multiplication,MULT_PATTERN_CREATE,fit,ok,ok,keep,"each wrong option is its own idea, the situation is real, serves the outcome",fixed
+g5c.mul.cre.stop,Multiplication,MULT_PATTERN_CREATE,fit,shared,ok,fix,wrong options: shared codes and near miss carrying a code,open
+g5c.mul.d1.packets,Multiplication,MULT_3D_BY_1D,fit,shared,ok,fix,wrong options: shared codes,open
+g5c.mul.d1.spot,Multiplication,MULT_3D_BY_1D,fit,ok,ok,keep,"each wrong option is its own idea, the situation is real, serves the outcome",fixed
+g5c.mul.d1.zero,Multiplication,MULT_3D_BY_1D,fit,generic,ok,fix,wrong options: generic reason,open
+g5c.mul.d2.compare,Multiplication,MULT_3D_BY_2D,weak,ok,ok,keep,keep: a bare drill with no situation; the word-problem sibling in this skill carries the situation,fixed
+g5c.mul.d2.grid,Multiplication,MULT_3D_BY_2D,fit,ok,ok,keep,"each wrong option is its own idea, the situation is real, serves the outcome",fixed
+g5c.mul.d2.spot,Multiplication,MULT_3D_BY_2D,fit,ok,ok,keep,"each wrong option is its own idea, the situation is real, serves the outcome",fixed
+g5c.mul.est.best,Multiplication,ESTIMATE_PRODUCT_ROUND10,weak,generic,ok,fix,wrong options: generic reason,open
+g5c.mul.est.round,Multiplication,ESTIMATE_PRODUCT_ROUND10,fit,shared,ok,fix,wrong options: shared codes,open
+g5c.mul.est.spot,Multiplication,ESTIMATE_PRODUCT_ROUND10,fit,ok,ok,keep,"each wrong option is its own idea, the situation is real, serves the outcome",fixed
+g5c.mul.pat.first,Multiplication,MULT_PATTERN_EXTEND,fit,shared,ok,fix,wrong options: shared codes and near miss carrying a code and generic reason,open
+g5c.mul.pat.next,Multiplication,MULT_PATTERN_EXTEND,fit,shared,ok,fix,wrong options: shared codes and near miss carrying a code and generic reason,open
+g5c.mul.pat.table,Multiplication,MULT_PATTERN_EXTEND,fit,shared,ok,fix,wrong options: shared codes and near miss carrying a code and generic reason,open
+g5c.mul.wp.buses,Multiplication,MULT_WORD_PROBLEMS,fit,shared,ok,fix,wrong options: shared codes and generic reason,open
+g5c.mul.wp.change,Multiplication,MULT_WORD_PROBLEMS,fit,ok,ok,keep,"each wrong option is its own idea, the situation is real, serves the outcome",fixed
+g5c.mul.wp.sentence,Multiplication,MULT_WORD_PROBLEMS,fit,shared,ok,fix,wrong options: shared codes,open
+g5c.ops.order.addsub,Division,ORDER_OF_OPERATIONS,fit,shared,ok,fix,wrong options: shared codes and near miss carrying a code and generic reason,open
+g5c.ops.order.spot,Division,ORDER_OF_OPERATIONS,fit,ok,ok,keep,"each wrong option is its own idea, the situation is real, serves the outcome",fixed
+g5c.ops.order.value,Division,ORDER_OF_OPERATIONS,fit,shared,fake_context,fix,"wrong options: shared codes and generic reason; fake_context: ""a teacher writes the expression on the board"" is a wrapper; wrong option 11.778",open
+g5c.ops.prob.change,Division,COMBINED_OPS_PROBLEMS,fit,shared,ok,fix,wrong options: shared codes and generic reason,open
+g5c.ops.prob.expr,Division,COMBINED_OPS_PROBLEMS,fit,shared,ok,fix,wrong options: shared codes and generic reason,open
+g5c.ops.prob.share,Division,COMBINED_OPS_PROBLEMS,fit,ok,ok,keep,"each wrong option is its own idea, the situation is real, serves the outcome",fixed
+g5c.sub.est.hundred,Subtraction,ESTIMATE_DIFFERENCE,weak,shared,ok,fix,wrong options: shared codes and generic reason,open
+g5c.sub.est.reasonable,Subtraction,ESTIMATE_DIFFERENCE,fit,shared,ok,fix,wrong options: shared codes,open
+g5c.sub.est.thousand,Subtraction,ESTIMATE_DIFFERENCE,fit,shared,ok,fix,wrong options: shared codes,open
+g5c.sub.noreg.short,Subtraction,SUB_6DIGIT_NO_REGROUP,weak,shared,ok,fix,wrong options: shared codes and generic reason,open
+g5c.sub.noreg.spot,Subtraction,SUB_6DIGIT_NO_REGROUP,fit,ok,ok,keep,"each wrong option is its own idea, the situation is real, serves the outcome",fixed
+g5c.sub.noreg.stock,Subtraction,SUB_6DIGIT_NO_REGROUP,fit,shared,ok,fix,wrong options: shared codes and near miss carrying a code and generic reason,open
+g5c.sub.reg.budget,Subtraction,SUB_6DIGIT_REGROUP,fit,shared,ok,fix,wrong options: shared codes and generic reason,open
+g5c.sub.reg.check,Subtraction,SUB_6DIGIT_REGROUP,fit,ok,ok,keep,"each wrong option is its own idea, the situation is real, serves the outcome",fixed
+g5c.sub.reg.spot,Subtraction,SUB_6DIGIT_REGROUP,fit,ok,ok,keep,"each wrong option is its own idea, the situation is real, serves the outcome",fixed
+g5c.sub.round.both,Subtraction,ROUND_NEAREST_100_1000,fit,shared,ok,fix,wrong options: shared codes,open
+g5c.sub.round.carry,Subtraction,ROUND_NEAREST_100_1000,fit,shared,ok,fix,wrong options: shared codes,open
+g5c.sub.round.halfway,Subtraction,ROUND_NEAREST_100_1000,fit,ok,ok,keep,"each wrong option is its own idea, the situation is real, serves the outcome",fixed
+g5c.sub.wp.fewer,Subtraction,SUB_WORD_PROBLEMS,fit,shared,ok,fix,wrong options: shared codes and generic reason,open
+g5c.sub.wp.sentence,Subtraction,SUB_WORD_PROBLEMS,fit,shared,ok,fix,wrong options: shared codes,open
+g5c.sub.wp.target,Subtraction,SUB_WORD_PROBLEMS,fit,shared,ok,fix,wrong options: shared codes,open
+g5c.sub.zero.note,Subtraction,SUB_REGROUP_ACROSS_ZEROS,fit,shared,ok,fix,wrong options: shared codes and generic reason,open
+g5c.sub.zero.round,Subtraction,SUB_REGROUP_ACROSS_ZEROS,fit,shared,ok,fix,wrong options: shared codes and near miss carrying a code and generic reason,open
+g5c.sub.zero.spot,Subtraction,SUB_REGROUP_ACROSS_ZEROS,fit,ok,ok,keep,"each wrong option is its own idea, the situation is real, serves the outcome",fixed
+g5c.subcre.make,Subtraction,SUB_PATTERN_CREATE,weak,shared,ok,fix,wrong options: shared codes,open
+g5c.subcre.spot,Subtraction,SUB_PATTERN_CREATE,fit,ok,ok,keep,"each wrong option is its own idea, the situation is real, serves the outcome",fixed
+g5c.subcre.stop,Subtraction,SUB_PATTERN_CREATE,fit,shared,ok,fix,wrong options: shared codes and near miss carrying a code,open
+g5c.subpat.next,Subtraction,SUB_PATTERN_CONTINUE,fit,shared,ok,fix,wrong options: shared codes,open
+g5c.subpat.rule,Subtraction,SUB_PATTERN_CONTINUE,fit,shared,ok,fix,wrong options: shared codes,open
+g5c.subpat.table,Subtraction,SUB_PATTERN_CONTINUE,fit,shared,ok,fix,wrong options: shared codes and generic reason,open
+g5c.tim.add.options,Time,ADD_MIN_SEC,weak,ok,ok,keep,keep: a bare drill with no situation; the word-problem sibling in this skill carries the situation,fixed
+g5c.tim.add.spot,Time,ADD_MIN_SEC,fit,ok,ok,keep,"each wrong option is its own idea, the situation is real, serves the outcome",fixed
+g5c.tim.add.word,Time,ADD_MIN_SEC,fit,shared,ok,fix,wrong options: shared codes and generic reason,open
+g5c.tim.div.check,Time,DIVIDE_MIN_SEC,fit,ok,ok,keep,"each wrong option is its own idea, the situation is real, serves the outcome",fixed
+g5c.tim.div.options,Time,DIVIDE_MIN_SEC,weak,ok,ok,keep,keep: a bare drill with no situation; the word-problem sibling in this skill carries the situation,fixed
+g5c.tim.div.word,Time,DIVIDE_MIN_SEC,fit,shared,ok,fix,wrong options: shared codes and generic reason,open
+g5c.tim.k2s.options,Time,CONVERT_MIN_TO_SEC,weak,shared,ok,fix,wrong options: shared codes,open
+g5c.tim.k2s.spot,Time,CONVERT_MIN_TO_SEC,fit,ok,ok,keep,"each wrong option is its own idea, the situation is real, serves the outcome",fixed
+g5c.tim.k2s.word,Time,CONVERT_MIN_TO_SEC,fit,shared,ok,fix,wrong options: shared codes,open
+g5c.tim.mul.options,Time,MULTIPLY_MIN_SEC,weak,ok,ok,keep,keep: a bare drill with no situation; the word-problem sibling in this skill carries the situation,fixed
+g5c.tim.mul.spot,Time,MULTIPLY_MIN_SEC,fit,ok,ok,keep,"each wrong option is its own idea, the situation is real, serves the outcome",fixed
+g5c.tim.mul.word,Time,MULTIPLY_MIN_SEC,fit,shared,ok,fix,wrong options: shared codes,open
+g5c.tim.rel.compare,Time,MINUTE_SECOND_RELATION,fit,shared,fake_context,fix,"wrong options: shared codes; fake_context: ""X compares two amounts"" is a wrapper, not a situation",open
+g5c.tim.rel.half,Time,MINUTE_SECOND_RELATION,weak,shared,fake_context,fix,"wrong options: shared codes and generic reason; fake_context: ""X uses a quarter of a unit"" is a wrapper",open
+g5c.tim.rel.parts,Time,MINUTE_SECOND_RELATION,fit,shared,fake_context,fix,"wrong options: shared codes and near miss carrying a code and generic reason; fake_context: ""X makes up one unit using small lengths"" is a wrapper",open
+g5c.tim.s2k.options,Time,CONVERT_SEC_TO_MIN,weak,shared,ok,fix,wrong options: shared codes and generic reason,open
+g5c.tim.s2k.spot,Time,CONVERT_SEC_TO_MIN,fit,ok,ok,keep,"each wrong option is its own idea, the situation is real, serves the outcome",fixed
+g5c.tim.s2k.word,Time,CONVERT_SEC_TO_MIN,fit,ok,ok,keep,"each wrong option is its own idea, the situation is real, serves the outcome",fixed
+g5c.tim.sub.options,Time,SUBTRACT_MIN_SEC,weak,ok,ok,keep,keep: a bare drill with no situation; the word-problem sibling in this skill carries the situation,fixed
+g5c.tim.sub.spot,Time,SUBTRACT_MIN_SEC,fit,ok,ok,keep,"each wrong option is its own idea, the situation is real, serves the outcome",fixed
+g5c.tim.sub.word,Time,SUBTRACT_MIN_SEC,fit,shared,ok,fix,wrong options: shared codes and generic reason,open
+g5c.timc.dig.clock,Time,READ_SECONDS_DIGITAL,fit,shared,odd_numbers,fix,"wrong options: shared codes and near miss carrying a code; odd_numbers: a digital clock reading ""011:20:14"", the hour has three digits",open
+g5c.timc.dig.match,Time,READ_SECONDS_DIGITAL,fit,ok,ok,keep,"each wrong option is its own idea, the situation is real, serves the outcome",fixed
+g5c.timc.dig.stopwatch,Time,READ_SECONDS_DIGITAL,fit,shared,ok,fix,wrong options: shared codes,open
+g5c.timc.dur.measure,Time,SECOND_DURATION_SENSE,fit,shared,trivial,fix,"wrong options: shared codes and generic reason; trivial: 11 claps in 11 seconds, so 33 in 33: the answer is the number in the question",open
+g5c.timc.dur.order,Time,SECOND_DURATION_SENSE,fit,shared,ok,fix,wrong options: shared codes,open
+g5c.timc.dur.which,Time,SECOND_DURATION_SENSE,weak,shared,ok,fix,wrong options: shared codes,open
+g5c.timc.read.analog,Time,READ_SECONDS_ANALOGUE,fit,shared,ok,fix,wrong options: shared codes and generic reason,open
+g5c.timc.read.marks,Time,READ_SECONDS_ANALOGUE,weak,shared,ok,fix,wrong options: shared codes,open
+g5c.timc.read.spot,Time,READ_SECONDS_ANALOGUE,fit,ok,ok,keep,"each wrong option is its own idea, the situation is real, serves the outcome",fixed
+g5c.timc.sec.hand,Time,SECOND_IDENTIFY,fit,shared,ok,fix,wrong options: shared codes,open
+g5c.timc.sec.tf,Time,SECOND_IDENTIFY,fit,shared,ok,fix,wrong options: shared codes,open
+g5c.timc.sec.which,Time,SECOND_IDENTIFY,fit,shared,ok,fix,wrong options: shared codes and generic reason,open
+g5c.volc.calc.spot,Volume,CUBOID_VOLUME_CALC,fit,ok,ok,keep,"each wrong option is its own idea, the situation is real, serves the outcome",fixed
+g5c.volc.calc.table,Volume,CUBOID_VOLUME_CALC,fit,shared,ok,fix,wrong options: shared codes and generic reason,open
+g5c.volc.calc.word,Volume,CUBOID_VOLUME_CALC,fit,shared,ok,fix,wrong options: shared codes and generic reason,open
+g5c.volc.cm3.cubes,Volume,CM3_UNIT_IDENTIFY,fit,shared,ok,fix,wrong options: shared codes,open
+g5c.volc.cm3.edge,Volume,CM3_UNIT_IDENTIFY,fit,shared,ok,fix,wrong options: shared codes,open
+g5c.volc.cm3.mass,Volume,CM3_UNIT_IDENTIFY,fit,shared,trivial,fix,wrong options: shared codes and near miss carrying a code and generic reason; trivial: the number of cubes is the volume: copied from the question,open
+g5c.volc.count.layers,Volume,VOLUME_COUNT_CM3_CUBES,fit,shared,ok,fix,wrong options: shared codes and near miss carrying a code and generic reason,open
+g5c.volc.count.picture,Volume,VOLUME_COUNT_CM3_CUBES,weak,shared,ok,fix,wrong options: shared codes,open
+g5c.volc.count.same,Volume,VOLUME_COUNT_CM3_CUBES,fit,shared,ok,fix,wrong options: shared codes and generic reason,open
+g5c.volc.cube.calc,Volume,CUBE_VOLUME_CALC,fit,shared,ok,fix,wrong options: shared codes and generic reason,open
+g5c.volc.cube.dice,Volume,CUBE_VOLUME_CALC,weak,shared,ok,fix,wrong options: shared codes,open
+g5c.volc.cube.table,Volume,CUBE_VOLUME_CALC,fit,shared,ok,fix,wrong options: shared codes,open
+g5c.volc.cubederive.build,Volume,CUBE_FORMULA_DERIVE,fit,shared,ok,fix,wrong options: shared codes and near miss carrying a code and generic reason,open
+g5c.volc.cubederive.tf,Volume,CUBE_FORMULA_DERIVE,fit,shared,ok,fix,wrong options: shared codes,open
+g5c.volc.cubederive.which,Volume,CUBE_FORMULA_DERIVE,weak,shared,ok,fix,wrong options: shared codes,open
+g5c.volc.derive.rotate,Volume,CUBOID_FORMULA_DERIVE,weak,shared,ok,fix,wrong options: shared codes,open
+g5c.volc.derive.table,Volume,CUBOID_FORMULA_DERIVE,fit,shared,ok,fix,wrong options: shared codes and generic reason,open
+g5c.volc.derive.why,Volume,CUBOID_FORMULA_DERIVE,fit,shared,ok,fix,wrong options: shared codes,open
+g5c.volc.prob.extra,Volume,CUBOID_VOLUME_PROBLEMS,weak,shared,ok,fix,wrong options: shared codes and generic reason,open
+g5c.volc.prob.fill,Volume,CUBOID_VOLUME_PROBLEMS,fit,ok,ok,keep,"each wrong option is its own idea, the situation is real, serves the outcome",fixed
+g5c.volc.prob.metre,Volume,CUBOID_VOLUME_PROBLEMS,fit,shared,ok,fix,wrong options: shared codes and generic reason,open
+g5c.whole.cf.common,Whole Numbers,COMMON_FACTORS,fit,shared,ok,fix,wrong options: shared codes and near miss carrying a code and generic reason,open
+g5c.whole.cf.list,Whole Numbers,COMMON_FACTORS,weak,ok,ok,keep,keep: a bare drill with no situation; the word-problem sibling in this skill carries the situation,fixed
+g5c.whole.cf.spot,Whole Numbers,COMMON_FACTORS,fit,ok,ok,keep,"each wrong option is its own idea, the situation is real, serves the outcome",fixed
+g5c.whole.cm.common,Whole Numbers,COMMON_MULTIPLES,fit,shared,ok,fix,wrong options: shared codes,open
+g5c.whole.cm.list,Whole Numbers,COMMON_MULTIPLES,weak,shared,ok,fix,wrong options: shared codes,open
+g5c.whole.cm.yesno,Whole Numbers,COMMON_MULTIPLES,fit,ok,ok,keep,"each wrong option is its own idea, the situation is real, serves the outcome",fixed
+g5c.whole.cmp.explain,Whole Numbers,COMPARE_NUMBERS,fit,shared,ok,fix,wrong options: shared codes,open
+g5c.whole.cmp.longer,Whole Numbers,COMPARE_NUMBERS,fit,shared,trivial,fix,wrong options: shared codes; trivial: the answer appears in the question,open
+g5c.whole.cmp.symbol,Whole Numbers,COMPARE_NUMBERS,weak,ok,ok,fix,"outcome weak: a bare symbol question; the wording ""using the largest number as the guide"" is unclear",open
+g5c.whole.d2.missing,Whole Numbers,DIVISIBLE_BY_2,fit,shared,ok,fix,wrong options: shared codes and near miss carrying a code,open
+g5c.whole.d2.pick,Whole Numbers,DIVISIBLE_BY_2,fit,shared,ok,fix,wrong options: shared codes,open
+g5c.whole.d2.yesno,Whole Numbers,DIVISIBLE_BY_2,fit,shared,fake_context,fix,"wrong options: shared codes; fake_context: a wrapper such as ""thinks of a number""",open
+g5c.whole.d510.packs,Whole Numbers,DIVISIBLE_BY_5_AND_10,fit,shared,ok,fix,wrong options: shared codes and generic reason,open
+g5c.whole.d510.pattern,Whole Numbers,DIVISIBLE_BY_5_AND_10,fit,shared,fake_context,fix,"wrong options: shared codes; fake_context: ""has noticed that some numbers end in 0 and 5"" is a wrapper",open
+g5c.whole.d510.sort,Whole Numbers,DIVISIBLE_BY_5_AND_10,weak,shared,ok,fix,wrong options: shared codes,open
+g5c.whole.dp.coins,Whole Numbers,DIVISIBILITY_PROBLEMS,fit,ok,ok,keep,"each wrong option is its own idea, the situation is real, serves the outcome",fixed
+g5c.whole.dp.pack,Whole Numbers,DIVISIBILITY_PROBLEMS,fit,shared,ok,fix,wrong options: shared codes and generic reason,open
+g5c.whole.dp.share,Whole Numbers,DIVISIBILITY_PROBLEMS,fit,shared,ok,fix,wrong options: shared codes,open
+g5c.whole.hcf.find,Whole Numbers,HCF_GCD,fit,shared,fake_context,fix,"wrong options: shared codes and near miss carrying a code; fake_context: ""lists the factors and picks the biggest"" is a wrapper",open
+g5c.whole.hcf.three,Whole Numbers,HCF_GCD,fit,ok,ok,keep,"each wrong option is its own idea, the situation is real, serves the outcome",fixed
+g5c.whole.hcf.truefalse,Whole Numbers,HCF_GCD,fit,generic,ok,fix,wrong options: generic reason,open
+g5c.whole.hp.bags,Whole Numbers,HCF_PROBLEMS,fit,ok,ok,keep,"each wrong option is its own idea, the situation is real, serves the outcome",fixed
+g5c.whole.hp.ribbon,Whole Numbers,HCF_PROBLEMS,fit,shared,ok,fix,wrong options: shared codes and near miss carrying a code,open
+g5c.whole.hp.which,Whole Numbers,HCF_PROBLEMS,fit,ok,ok,keep,"each wrong option is its own idea, the situation is real, serves the outcome",fixed
+g5c.whole.lcm.find,Whole Numbers,LCM,fit,shared,fake_context,fix,"wrong options: shared codes; fake_context: ""writes the multiples in one row and circles"" is a wrapper",open
+g5c.whole.lcm.three,Whole Numbers,LCM,fit,ok,ok,keep,"each wrong option is its own idea, the situation is real, serves the outcome",fixed
+g5c.whole.lcm.truefalse,Whole Numbers,LCM,fit,generic,ok,fix,wrong options: generic reason,open
+g5c.whole.lp.clock,Whole Numbers,LCM_PROBLEMS,fit,shared,ok,fix,wrong options: shared codes,open
+g5c.whole.lp.matatu,Whole Numbers,LCM_PROBLEMS,fit,shared,ok,fix,wrong options: shared codes,open
+g5c.whole.lp.packs,Whole Numbers,LCM_PROBLEMS,fit,ok,ok,keep,"each wrong option is its own idea, the situation is real, serves the outcome",fixed
+g5c.whole.ord.distances,Whole Numbers,ORDER_NUMBERS,fit,shared,odd_numbers,fix,"wrong options: shared codes; odd_numbers: a school 1,301 m from Mombasa, 9,007 m from Eldoret: distances do not fit the places",open
+g5c.whole.ord.increasing,Whole Numbers,ORDER_NUMBERS,weak,ok,ok,keep,keep: a bare drill with no situation; the word-problem sibling in this skill carries the situation,fixed
+g5c.whole.ord.out-of-place,Whole Numbers,ORDER_NUMBERS,fit,ok,ok,keep,"each wrong option is its own idea, the situation is real, serves the outcome",fixed
+g5c.whole.pv.build,Whole Numbers,PLACE_VALUE_HTH,fit,ok,fake_context,fix,"fake_context: ""thinks of a number"" is a wrapper",open
+g5c.whole.pv.choose,Whole Numbers,PLACE_VALUE_HTH,fit,shared,ok,fix,wrong options: shared codes,open
+g5c.whole.pv.digit-in,Whole Numbers,PLACE_VALUE_HTH,fit,shared,ok,fix,wrong options: shared codes and near miss carrying a code,open
+g5c.whole.rh.fees,Whole Numbers,ROUND_NEAREST_HUNDRED,fit,ok,ok,keep,"each wrong option is its own idea, the situation is real, serves the outcome",fixed
+g5c.whole.rh.list,Whole Numbers,ROUND_NEAREST_HUNDRED,fit,shared,ok,fix,wrong options: shared codes and near miss carrying a code,open
+g5c.whole.rh.which,Whole Numbers,ROUND_NEAREST_HUNDRED,weak,ok,ok,keep,keep: a bare drill with no situation; the word-problem sibling in this skill carries the situation,fixed
+g5c.whole.rt.both,Whole Numbers,ROUND_NEAREST_THOUSAND,fit,ok,ok,keep,"each wrong option is its own idea, the situation is real, serves the outcome",fixed
+g5c.whole.rt.crowd,Whole Numbers,ROUND_NEAREST_THOUSAND,fit,shared,ok,fix,wrong options: shared codes,open
+g5c.whole.rt.spot,Whole Numbers,ROUND_NEAREST_THOUSAND,fit,ok,ok,keep,"each wrong option is its own idea, the situation is real, serves the outcome",fixed
+g5c.whole.sym.dictate,Whole Numbers,WORDS_TO_SYMBOLS,fit,ok,fake_context,fix,"fake_context: ""is told two numbers to write"" is a wrapper",open
+g5c.whole.sym.match,Whole Numbers,WORDS_TO_SYMBOLS,fit,ok,ok,keep,"each wrong option is its own idea, the situation is real, serves the outcome",fixed
+g5c.whole.sym.news,Whole Numbers,WORDS_TO_SYMBOLS,fit,shared,ok,fix,wrong options: shared codes and near miss carrying a code,open
+g5c.whole.tv.expand,Whole Numbers,TOTAL_VALUE_HTH,weak,ok,fake_context,fix,"fake_context: ""writes 974,548 as a sum"" is a wrapper",open
+g5c.whole.tv.rebuild-spot,Whole Numbers,TOTAL_VALUE_HTH,fit,ok,ok,keep,"each wrong option is its own idea, the situation is real, serves the outcome",fixed
+g5c.whole.tv.worth,Whole Numbers,TOTAL_VALUE_HTH,fit,shared,ok,fix,wrong options: shared codes,open
+g5c.whole.words.cheque,Whole Numbers,NUMBERS_TO_WORDS,fit,shared,ok,fix,wrong options: shared codes,open
+g5c.whole.words.choose,Whole Numbers,NUMBERS_TO_WORDS,fit,shared,ok,fix,wrong options: shared codes,open
+g5c.whole.words.spot,Whole Numbers,NUMBERS_TO_WORDS,fit,ok,ok,keep,"each wrong option is its own idea, the situation is real, serves the outcome",fixed

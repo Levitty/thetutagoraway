@@ -373,7 +373,7 @@ export const FAMILIES = [
       if (a === b) return null;
       const options = mc(right, [[right === '=' ? '>' : '=', right === '=' ? 'A zero at the end of a decimal does not change its value. 0.70 and 0.7 are both 70 hundredths.' : 'The two numbers are not equal. Compare place by place.', right === '=' ? 'M_TRAILING_ZERO_CHANGES_VALUE' : 'M_TRAILING_ZERO_CHANGES_VALUE'], [right === '>' ? '<' : '>', 'Add zeros to give the same number of decimal places, then compare.', right === '=' ? 'M_TRAILING_ZERO_CHANGES_VALUE' : 'M_LONGER_IS_LARGER'], ['<>'.includes(right) ? ('<>'.replace(right, '')) : '<', 'Add zeros to give the same number of decimal places, then compare.', 'M_SHORTER_IS_LARGER']].filter((w, i, arr) => arr.findIndex(z => z[0] === w[0]) === i));
       if (!options || options.length < 3) return null;
-      return { question: `Which symbol, >, < or =, makes this true: ${a} ___ ${b}?`, options, instruction: 'Choose the symbol.',
+      return { question: `Two parcels are weighed on a shop scale and read ${a} kg and ${b} kg. Which symbol, >, < or =, makes this true: ${a} ___ ${b}?`, options, instruction: 'Choose the symbol.',
         hints: ['Write both numbers with the same number of decimal places.', 'Compare place by place from the left.'], steps: [`${va.toFixed(3)} and ${vb.toFixed(3)}.`, `${a} ${right} ${b}.`] };
     } }),
   fam({ id: 'g5c.dec.cmp.spot', cs: `${DC}DEC_COMPARE`, form: 'spot', rung: 3,
@@ -540,7 +540,7 @@ export const FAMILIES = [
     gen: () => {
       const x = pick([2.045, 0.375, 1.8, 0.06, 3.2, 4.075]), t = dp(x * 1000);
       const options = mc(String(x), [[String(dp(x * 10)), 'Undoing × 1000 means dividing by 1000, so the point moves three places to the left. You moved it two.', 'M_WRONG_NUMBER_OF_PLACES'], [String(dp(t)), 'Multiplying by 1000 makes a number 1000 times bigger. The missing number is smaller than ' + commas(t) + ', not the same.', 'M_MOVES_WRONG_WAY']]);
-      return { question: `Which number goes in the box? □ × 1000 = ${commas(t)}`, options, instruction: 'Choose the number.',
+      return { question: `A trader changes a mass from kilograms to grams by multiplying by 1000 and gets ${commas(t)} g. Which number of kilograms goes in the box? □ × 1000 = ${commas(t)}`, options, instruction: 'Choose the number.',
         hints: ['Undo the multiplication by dividing by 1000.', 'Move the digits three places to the right.'], steps: [`${commas(t)} ÷ 1000 = ${x}.`, `Check: ${x} × 1000 = ${commas(t)}.`] };
     } }),
   fam({ id: 'g5c.dec.k.spot', cs: `${DC}DEC_MULT_1000`, form: 'spot', rung: 3,
