@@ -91708,7 +91708,8 @@ var FAMILIES144 = [
   fam31({
     id: "g7.whole.cheque-digit",
     skill: "G7_PLACE_VALUE",
-    outcome: "G7.WHOLE.a",
+    outcome: "MATH.G7.NUMBER.WHOLE_NUMBERS.a",
+    cskill: "MATH.G7.NUMBER.WHOLE_NUMBERS.TOTAL_VALUE_HM",
     rung: 2,
     form: "word",
     draw: () => {
@@ -91718,7 +91719,7 @@ var FAMILIES144 = [
     make: ({ n, m: m20, p }) => ({
       question: `${p.name} writes a cheque for ${sh(n)} for a county project. What is the total value of the digit ${m20} at the start of the amount?`,
       answer: m20 * 1e6,
-      wrong: [[m20, "That is the digit itself. Its total value depends on its place."], [m20 * 1e5, "Count the places again: which column is the first digit in?"], [m20 * 1e7, "Count the places again: which column is the first digit in?"]],
+      wrong: [[m20, "That is the digit itself. Its total value depends on its place.", "M_DIGIT_FOR_TOTAL"], [m20 * 1e5, "That has one zero too few. The first digit is in the millions place, which has six zeros after it.", "M_ZEROS_MISCOUNTED"], [m20 * 1e7, "That has one zero too many. The first digit is in the millions place, not the ten millions place.", "M_PLACE_ONE_TOO_HIGH"]],
       hints: ["Write the amount in a place value chart.", "The first digit is in the millions place."],
       steps: [`The digit ${m20} is in the millions place.`, `Total value: ${m20} \xD7 1,000,000 = ${commas(m20 * 1e6)}.`]
     }),
@@ -91727,7 +91728,8 @@ var FAMILIES144 = [
   fam31({
     id: "g7.whole.round-county-budget",
     skill: "G7_ROUNDING_WHOLE",
-    outcome: "G7.WHOLE.d",
+    outcome: "MATH.G7.NUMBER.WHOLE_NUMBERS.d",
+    cskill: "MATH.G7.NUMBER.WHOLE_NUMBERS.ROUND_IN_CONTEXT",
     rung: 3,
     form: "why",
     draw: () => {
@@ -91738,7 +91740,7 @@ var FAMILIES144 = [
       const up = r >= 5e5, right = (up ? m20 + 1 : m20) * 1e6, wrong = (up ? m20 : m20 + 1) * 1e6;
       return {
         question: `A county's budget is ${sh(n)}. ${p.name} rounds it to the nearest million as ${sh(wrong)}. Why is this wrong?`,
-        options: [{ text: up ? "The next digit is 5 or more, so it rounds up" : "The next digit is below 5, so it rounds down", right: true }, { text: "Numbers are always rounded up to the next million", right: false, why: "Rounding depends on the next digit." }, { text: "Only the very last digit of the number is looked at", right: false, why: "Look at the digit just after the place you are rounding to." }, { text: "Money amounts cannot be rounded to the nearest million", right: false, why: "Large amounts are often rounded in reports." }],
+        options: [{ text: up ? "The next digit is 5 or more, so it rounds up" : "The next digit is below 5, so it rounds down", right: true }, { text: "Numbers are always rounded up to the next million", right: false, why: "Rounding depends on the next digit. It does not always go up.", mis: "M_ROUND_DIRECTION_FIXED" }, { text: "Only the very last digit of the number is looked at", right: false, why: "Look at the digit just after the place you are rounding to, not at the end of the number.", mis: "M_ROUND_LAST_DIGIT_ONLY" }, { text: "Money amounts cannot be rounded to the nearest million", right: false, why: "Large amounts are often rounded in reports. Newspapers say about sh 18 million.", mis: "M_NO_ROUNDING_FOR_MONEY" }],
         hints: ["Find the millions digit.", "Look at the digit straight after it."],
         steps: [`The digit after the millions is ${Math.floor(r / 1e5)}.`, `So ${commas(n)} rounds to ${commas(right)}.`]
       };
@@ -126085,7 +126087,8 @@ var FAMILIES175 = [
   fam44({
     id: "g7.whole.place-chart",
     skill: "G7_PLACE_VALUE",
-    outcome: "G7.WHOLE.a",
+    outcome: "MATH.G7.NUMBER.WHOLE_NUMBERS.a",
+    cskill: "MATH.G7.NUMBER.WHOLE_NUMBERS.TOTAL_VALUE_HM",
     rung: 2,
     form: "table",
     draw: () => {
@@ -126093,7 +126096,7 @@ var FAMILIES175 = [
       const ds = Array.from({ length: L16 }, () => randInt(1, 9));
       const j = randInt(L16 - 3, L16 - 1), k = randInt(2, 4);
       const A5 = ds[j] * 10 ** j, B5 = ds[k] * 10 ** k;
-      return new Set(ds).size >= 5 && distinct8(A5 + B5, ds[j] + ds[k], A5 + ds[k], ds[j] + B5) ? { ds, L: L16, j, k } : null;
+      return new Set(ds).size >= 5 && distinct8(A5 + B5, ds[j] + ds[k], A5 + ds[k], A5 * 10 + B5) ? { ds, L: L16, j, k } : null;
     },
     make: ({ ds, L: L16, j, k }) => {
       const A5 = ds[j] * 10 ** j, B5 = ds[k] * 10 ** k;
@@ -126102,17 +126105,18 @@ var FAMILIES175 = [
         story: false,
         model: { type: "table", data: { head: ["Place", "Digit"], rows: Array.from({ length: L16 }, (_, i) => ({ label: PLACES4[L16 - 1 - i], value: String(ds[L16 - 1 - i]) })) } },
         answer: A5 + B5,
-        wrong: [[ds[j] + ds[k], "That adds the digits only. Total value also depends on the place each digit sits in."], [A5 + ds[k], `The digit in the ${PLACES4[k]} place is also worth more than itself.`], [ds[j] + B5, `The digit in the ${PLACES4[j]} place is also worth more than itself.`]],
+        wrong: [[ds[j] + ds[k], "That adds the digits only. Total value also depends on the place each digit sits in.", "M_DIGIT_FOR_TOTAL"], [A5 + ds[k], `The digit in the ${PLACES4[k]} place is also worth more than itself.`, "M_ONE_DIGIT_ONLY_VALUED"], [A5 * 10 + B5, `The digit in the ${PLACES4[j]} place has one zero too many after it.`, "M_ZEROS_MISCOUNTED"]],
         hints: ["Find each row in the table and read its digit.", "Total value = the digit \xD7 the value of its place. Do this for both places, then add."],
         steps: [`${PLACES4[j]}: the digit is ${ds[j]}, total value ${commas(A5)}.`, `${PLACES4[k]}: the digit is ${ds[k]}, total value ${commas(B5)}.`, `Sum: ${commas(A5)} + ${commas(B5)} = ${commas(A5 + B5)}.`]
       };
     },
-    check: ({ ds, j, k }, a) => String(a).length === j + 1 && Number(String(ds[j]) + "0".repeat(j)) + Number(String(ds[k]) + "0".repeat(k)) === a
+    check: ({ ds, j, k }, a) => Number(String(ds[j]) + "0".repeat(j)) + Number(String(ds[k]) + "0".repeat(k)) === a
   }),
   fam44({
     id: "g7.whole.words-spot",
     skill: "G7_NUMBERS_WORDS",
-    outcome: "G7.WHOLE.c",
+    outcome: "MATH.G7.NUMBER.WHOLE_NUMBERS.c",
+    cskill: "MATH.G7.NUMBER.WHOLE_NUMBERS.FIGURES_FROM_WORDS",
     rung: 2,
     form: "spot",
     draw: () => ({ A: randInt(101, 899), B: randInt(11, 99), bug: pick([1, 2]), p: person() }),
@@ -126126,6 +126130,7 @@ var FAMILIES175 = [
           { text: `Add the two parts: ${commas(sa2)} + ${sb} = ${commas(tot)}.`, ok: tot === sa2 + sb },
           { text: `So the number is ${commas(tot)}.`, ok: true }
         ],
+        mis: bug === 1 ? "M_GROUP_ZEROS_MISSING" : "M_THOUSAND_ONE_ZERO_SHORT",
         fix: bug === 1 ? `${words5(A5)} thousand means ${A5} \xD7 1,000, so it is ${commas(A5 * 1e3)}. One zero was missing.` : `${words5(B5)} is ${B5}. The ${B5} belongs in the units, not shifted to the next place.`,
         steps: [`${words5(A5)} thousand = ${commas(A5 * 1e3)}.`, `${words5(B5)} = ${B5}.`, `${commas(A5 * 1e3)} + ${B5} = ${commas(A5 * 1e3 + B5)}.`]
       };
@@ -126134,7 +126139,8 @@ var FAMILIES175 = [
   fam44({
     id: "g7.whole.words-cheque",
     skill: "G7_NUMBERS_WORDS",
-    outcome: "G7.WHOLE.c",
+    outcome: "MATH.G7.NUMBER.WHOLE_NUMBERS.c",
+    cskill: "MATH.G7.NUMBER.WHOLE_NUMBERS.WORDS_FROM_FIGURES",
     rung: 2,
     form: "word",
     draw: () => {
@@ -126142,19 +126148,19 @@ var FAMILIES175 = [
       const ds = Array.from({ length: L16 }, (_, i) => i === 0 ? randInt(1, 9) : randInt(0, 9));
       const zeros = ds.slice(1).filter((x) => x === 0).length;
       if (zeros < 2) return null;
-      const alt = [];
+      const n = Number(ds.join(""));
+      const kinds = { tu: [], across: [], within: [] };
       for (let i = 0; i < L16 - 1; i++) if (ds[i] !== ds[i + 1] && !(i === 0 && ds[i + 1] === 0)) {
         const c19 = [...ds];
         [c19[i], c19[i + 1]] = [c19[i + 1], c19[i]];
-        alt.push(Number(c19.join("")));
+        const w14 = words5(Number(c19.join("")));
+        if (w14 !== words5(n)) kinds[i === 5 ? "tu" : i === 0 || i === 3 ? "across" : "within"].push(w14);
       }
-      const n = Number(ds.join(""));
-      const set = [...new Set(alt.map((a) => words5(a)))].filter((w14) => w14 !== words5(n));
-      return set.length >= 3 ? { n, wrongs: shuffle15(set).slice(0, 3), p: person() } : null;
+      return kinds.tu.length && kinds.across.length && kinds.within.length ? { n, wrongs: [pick(kinds.tu), pick(kinds.across), pick(kinds.within)], p: person() } : null;
     },
     make: ({ n, wrongs, p }) => ({
       question: `${p.name} sells a plot of land for ${sh(n)}. Which of these shows the amount in words?`,
-      options: shuffle15([{ text: words5(n), right: true }, ...wrongs.map((w14) => ({ text: w14, right: false, why: "Read each group of digits again: millions, thousands, then the rest. In these words, one digit has moved to a different place." }))]),
+      options: shuffle15([{ text: words5(n), right: true }, ...wrongs.map((w14, i) => ({ text: w14, right: false, why: ["In these words the tens and the ones of the last group are the wrong way round.", "In these words a digit has moved out of its group into the next one. Check which group each digit belongs to.", "In these words two digits of one group are the wrong way round. Read hundreds, tens and ones in order."][i], mis: ["M_TENS_AND_UNITS_SWAPPED", "M_DIGIT_MOVED_ACROSS_GROUPS", "M_ORDER_WITHIN_GROUP_SWAPPED"][i] }))]),
       hints: ["Split the number into groups of three digits, from the right.", "Say the millions group, then the thousands group, then the last group."],
       steps: [`Groups: ${commas(n).split(",").join(" | ")}.`, `In words: ${words5(n)}.`]
     })
@@ -126162,7 +126168,8 @@ var FAMILIES175 = [
   fam44({
     id: "g7.whole.round-report",
     skill: "G7_ROUNDING_WHOLE",
-    outcome: "G7.WHOLE.d",
+    outcome: "MATH.G7.NUMBER.WHOLE_NUMBERS.d",
+    cskill: "MATH.G7.NUMBER.WHOLE_NUMBERS.ROUND_TO_PLACE",
     rung: 2,
     form: "word",
     draw: () => {
@@ -126175,7 +126182,7 @@ var FAMILIES175 = [
     make: ({ N: N4, ans, other, tenM, lead }) => ({
       question: `A report says that ${commas(N4)} mobile phone lines are in use in a region. The newspaper rounds this to the nearest hundred million. What number does it print?`,
       answer: ans,
-      wrong: [[other, "You rounded the wrong way. Look at the digit in the ten millions place: 5 or more rounds up, less than 5 stays."], [tenM, "That is rounded to the nearest ten million. The question asks for the nearest hundred million."], [lead, "That is only the hundred millions digit. Write the number in full, with zeros in the other places."]],
+      wrong: [[other, "You rounded the wrong way. Look at the digit in the ten millions place: 5 or more rounds up, less than 5 stays.", "M_ROUND_WRONG_DIGIT_CHECKED"], [tenM, "That is rounded to the nearest ten million. The question asks for the nearest hundred million.", "M_ROUND_TO_WRONG_PLACE"], [lead, "That is only the hundred millions digit. Write the number in full, with zeros in the other places.", "M_ZEROS_NOT_WRITTEN"]],
       hints: ["Underline the digit in the hundred millions place.", "Look at the digit to its right, in the ten millions place."],
       steps: [`The hundred millions digit is ${Math.floor(N4 / 1e8)}. The next digit is ${Math.floor(N4 % 1e8 / 1e7)}.`, `${Math.floor(N4 % 1e8 / 1e7) >= 5 ? "It is 5 or more, so round up." : "It is less than 5, so keep the digit."}`, `Rounded: ${commas(ans)}.`]
     }),
@@ -126184,15 +126191,17 @@ var FAMILIES175 = [
   fam44({
     id: "g7.whole.prime-jerseys",
     skill: "G7_PRIMES",
-    outcome: "G7.WHOLE.e",
+    outcome: "MATH.G7.NUMBER.WHOLE_NUMBERS.e",
+    cskill: "MATH.G7.NUMBER.WHOLE_NUMBERS.PRIME_NUMBERS",
     rung: 2,
     form: "table",
     draw: () => {
       const nums2 = /* @__PURE__ */ new Set();
       while (nums2.size < 5) nums2.add(randInt(2, 40));
       const v = [...nums2];
-      const pr2 = v.filter(isPrime).length, odd = v.filter((x) => x % 2).length, comp2 = v.length - pr2, even = v.length - odd;
-      return pr2 >= 1 && pr2 <= 3 && distinct8(pr2, odd, comp2, even) ? { v, pr: pr2, odd, comp: comp2, even, ps: (() => {
+      const sum3 = (a) => a.reduce((t, x) => t + x, 0), pr2 = sum3(v.filter(isPrime)), np = v.filter(isPrime).length, odd = sum3(v.filter((x) => x % 2)), comp2 = sum3(v.filter((x) => !isPrime(x))), small = sum3(v.filter((x) => x === 2 || x === 3 || x % 2 && x % 3));
+      const far = (...c19) => c19.every((a) => c19.every((b) => a === b || Math.abs(a - b) > 2));
+      return np >= 1 && np <= 3 && distinct8(pr2, odd, comp2, small) && far(pr2, odd, comp2, small) ? { v, pr: pr2, odd, comp: comp2, small, ps: (() => {
         const ns = [];
         while (ns.length < 5) {
           const x = person().name;
@@ -126201,21 +126210,22 @@ var FAMILIES175 = [
         return ns;
       })() } : null;
     },
-    make: ({ v, pr: pr2, odd, comp: comp2, even, ps }) => ({
-      question: "The table shows the jersey numbers of five players. How many of the numbers are prime?",
+    make: ({ v, pr: pr2, odd, comp: comp2, small, ps }) => ({
+      question: "The table shows the jersey numbers of five players. What is the total of the jersey numbers that are prime?",
       story: false,
       model: { type: "table", data: { head: ["Player", "Jersey number"], rows: v.map((n, i) => ({ label: ps[i], value: String(n) })) } },
       answer: pr2,
-      wrong: [[odd, "Some odd numbers are not prime, for example 9 and 15. Check each number for a factor other than 1 and itself."], [comp2, "That counts the numbers that are not prime. The question asks for the prime ones."], [even, "That counts the even numbers. Only one even number is prime, so check each number for factors."]],
+      wrong: [[odd, "That is the total of the odd numbers. Some odd numbers are not prime, for example 9 and 15.", "M_ODD_MEANS_PRIME"], [comp2, "That is the total of the numbers that are not prime. The question asks for the prime ones.", "M_PRIME_COMPOSITE_CONFUSED"], [small, "That only tests 2 and 3. A number such as 25 or 35 is not divisible by 2 or 3, but it is not prime.", "M_ONLY_SMALL_DIVISORS_TESTED"]],
       hints: ["A prime number has exactly two factors: 1 and itself.", "Test each jersey number: does anything other than 1 and itself divide it?"],
-      steps: [`Check each number: ${v.map((n) => `${n} is ${isPrime(n) ? "prime" : "not prime"}`).join(", ")}.`, `The prime numbers are ${v.filter(isPrime).join(", ")}.`]
+      steps: [`Check each number: ${v.map((n) => `${n} is ${isPrime(n) ? "prime" : "not prime"}`).join(", ")}.`, `The prime numbers are ${v.filter(isPrime).join(", ")}. Their total is ${pr2}.`]
     }),
-    check: ({ v }, a) => v.filter((n) => n > 1 && Array.from({ length: n - 2 }, (_, i) => i + 2).every((f) => n % f !== 0)).length === a
+    check: ({ v }, a) => v.filter((n) => n > 1 && Array.from({ length: n - 2 }, (_, i) => i + 2).every((f) => n % f !== 0)).reduce((t, x) => t + x, 0) === a
   }),
   fam44({
     id: "g7.whole.matatu-takings",
     skill: "G7_BODMAS_ADV",
-    outcome: "G7.WHOLE.f",
+    outcome: "MATH.G7.NUMBER.WHOLE_NUMBERS.f",
+    cskill: "MATH.G7.NUMBER.WHOLE_NUMBERS.OPERATIONS_IN_CONTEXT",
     rung: 2,
     form: "word",
     draw: () => {
@@ -126225,7 +126235,7 @@ var FAMILIES175 = [
     make: ({ f, k, F: F8, P: P14 }) => ({
       question: `A matatu charges ${sh(f)} from each passenger. On one trip it carries ${k} passengers. The driver pays ${sh(F8)} for fuel and ${sh(P14)} for parking. How much money is left from the fares? Answer in shillings.`,
       answer: f * k - (F8 + P14),
-      wrong: [[f * k - F8, "The driver also pays for parking. Take that away as well."], [f * k - F8 + P14, "Both payments come out of the fares. Neither one is added back."], [f * k, "That is all the money collected. Take away what the driver pays."]],
+      wrong: [[f * k - F8, "The driver also pays for parking. Take that away as well.", "M_LAST_COST_LEFT_OUT"], [f * k - F8 + P14, "Both payments come out of the fares. Neither one is added back.", "M_ADDED_NOT_TAKEN_AWAY"], [f * k, "That is all the money collected. Take away what the driver pays.", "M_ONE_STEP_STOPPED"]],
       hints: ["First find all the money the passengers pay.", "Then take away the fuel and the parking."],
       steps: [`Fares: ${f} \xD7 ${k} = ${commas(f * k)}.`, `Costs: ${F8} + ${P14} = ${commas(F8 + P14)}.`, `Left: ${commas(f * k)} \u2212 ${commas(F8 + P14)} = ${commas(f * k - F8 - P14)}.`]
     }),
@@ -126234,7 +126244,8 @@ var FAMILIES175 = [
   fam44({
     id: "g7.whole.mangoes-spot",
     skill: "G7_BODMAS_ADV",
-    outcome: "G7.WHOLE.f",
+    outcome: "MATH.G7.NUMBER.WHOLE_NUMBERS.f",
+    cskill: "MATH.G7.NUMBER.WHOLE_NUMBERS.OPERATIONS_IN_CONTEXT",
     rung: 2,
     form: "spot",
     draw: () => {
@@ -126252,6 +126263,7 @@ var FAMILIES175 = [
           { text: `Share equally among ${fm2} families: ${s2} ${bug === "B" ? "\xD7" : "\xF7"} ${fm2} = ${s3}.`, ok: s3 === s2 / fm2 },
           { text: `Each family gets ${s3} mangoes.`, ok: true }
         ],
+        mis: bug === "A" ? "M_ADDED_NOT_TAKEN_AWAY" : "M_SHARE_BY_MULTIPLYING",
         fix: bug === "A" ? `Giving mangoes away means taking them away, so it is ${t1} \u2212 ${g}, not ${t1} + ${g}.` : `Sharing equally means dividing: ${s2} \xF7 ${fm2}, not ${s2} \xD7 ${fm2}.`,
         steps: [`${bags} \xD7 ${per} = ${t1}.`, `${t1} \u2212 ${g} = ${t2}.`, `${t2} \xF7 ${fm2} = ${s}.`]
       };
@@ -126260,16 +126272,17 @@ var FAMILIES175 = [
   fam44({
     id: "g7.whole.hall-rows",
     skill: "G7_NUMBER_SEQUENCES",
-    outcome: "G7.WHOLE.g",
+    outcome: "MATH.G7.NUMBER.WHOLE_NUMBERS.g",
+    cskill: "MATH.G7.NUMBER.WHOLE_NUMBERS.SEQ_NTH_TERM",
     rung: 2,
     form: "table",
-    draw: () => ({ a: randInt(10, 30), d: randInt(2, 6), n: pick([8, 10, 12]) }),
+    draw: () => ({ a: randInt(10, 30), d: randInt(3, 6), n: pick([8, 10, 12]) }),
     make: ({ a, d, n }) => ({
       question: `The table shows the seats in the first four rows of a hall. The pattern continues, so each row has the same number of extra seats. How many seats are in row ${n}?`,
       story: false,
       model: { type: "table", data: { head: ["Row", "Seats"], rows: [1, 2, 3, 4].map((r) => ({ label: String(r), value: String(a + (r - 1) * d) })) } },
       answer: a + (n - 1) * d,
-      wrong: [[a + n * d, `Row 1 has ${a} seats already. Row ${n} has one fewer step than ${n}.`], [n * d, "That ignores the seats in the first row. The pattern starts from the first row."], [a + (n - 2) * d, `Count the steps from row 1 to row ${n} again. You stopped one step early.`]],
+      wrong: [[a + n * d, `Row 1 has ${a} seats already. Row ${n} has one fewer step than ${n}.`, "M_COUNT_TERMS_NOT_STEPS"], [n * d, "That ignores the seats in the first row. The pattern starts from the first row.", "M_FIRST_TERM_LEFT_OUT"], [a + (n - 2) * d, `Count the steps from row 1 to row ${n} again. You stopped one step early.`, "SLIP"]],
       hints: ["How many seats does each row add to the one before it?", `From row 1 to row ${n}, how many times is that added?`],
       steps: [`Each row adds ${d} seats.`, `From row 1 to row ${n} the amount is added ${n - 1} times: ${d} \xD7 ${n - 1} = ${d * (n - 1)}.`, `Row ${n}: ${a} + ${d * (n - 1)} = ${a + (n - 1) * d}.`]
     }),
@@ -126278,11 +126291,12 @@ var FAMILIES175 = [
   fam44({
     id: "g7.whole.odd-term-out",
     skill: "G7_NUMBER_SEQUENCES",
-    outcome: "G7.WHOLE.g",
+    outcome: "MATH.G7.NUMBER.WHOLE_NUMBERS.g",
+    cskill: "MATH.G7.NUMBER.WHOLE_NUMBERS.SEQ_EXTEND_RULE",
     rung: 3,
     form: "word",
     draw: () => {
-      const a = randInt(3, 20), d = randInt(3, 9), j = pick([2, 3]), e = pick([-2, -1, 1, 2]);
+      const a = randInt(3, 20), d = randInt(7, 9), j = pick([2, 3]), e = pick([-4, -3, 3, 4]);
       return { a, d, j, e, p: person() };
     },
     make: ({ a, d, j, e, p }) => {
@@ -126292,7 +126306,7 @@ var FAMILIES175 = [
       return {
         question: `${p.name} writes a number sequence that goes up by the same amount each time. One term is wrong: ${shown.join(", ")}. Which term does not fit the pattern?`,
         answer: shown[j],
-        wrong: [[shown[j - 1], "That term fits the pattern. Check the gaps between the terms: one gap is different."], [shown[j + 1], "That term fits the pattern. Compare it with the terms after it."], [terms[j], "That is the number that should be there. The question asks for the wrong term that was written."]],
+        wrong: [[shown[j - 1], "That term fits the pattern. Check the gaps between the terms: one gap is different.", "M_FIRST_GAP_ONLY"], [shown[j + 1], "That term fits the pattern. Compare it with the terms after it.", "M_NEIGHBOUR_BLAMED"], [terms[j], "That is the number that should be there. The question asks for the wrong term that was written.", "M_GIVES_CORRECT_TERM"]],
         hints: ["Find the usual gap from the first two terms.", "Check each next term against that gap."],
         steps: [`The first terms ${shown[0]}, ${shown[1]} go up by ${d}.`, `After ${shown[j - 1]} the next term should be ${terms[j]}, but ${shown[j]} is written.`]
       };
@@ -126302,7 +126316,8 @@ var FAMILIES175 = [
   fam44({
     id: "g7.whole.rule-fourth-term",
     skill: "G7_NUMBER_SEQUENCES",
-    outcome: "G7.WHOLE.h",
+    outcome: "MATH.G7.NUMBER.WHOLE_NUMBERS.h",
+    cskill: "MATH.G7.NUMBER.WHOLE_NUMBERS.SEQ_CREATE_RULE",
     rung: 2,
     form: "word",
     draw: () => {
@@ -126314,7 +126329,7 @@ var FAMILIES175 = [
     make: ({ a, m: m20, c: c19, t, p }) => ({
       question: `${p.name} makes a sequence with this rule: multiply the last term by ${m20}, then add ${c19}. The first term is ${a}. What is the fourth term?`,
       answer: t[3],
-      wrong: [[a + 3 * c19, `The rule has two parts. This only used the adding part.`], [a * m20 ** 3, "The rule has two parts. This only used the multiplying part."], [t[2], "That is the third term. Apply the rule once more."]],
+      wrong: [[a + 3 * c19, `The rule has two parts. This only used the adding part.`, "M_ONLY_ADDING_USED"], [a * m20 ** 3, "The rule has two parts. This only used the multiplying part.", "M_ONLY_MULTIPLYING_USED"], [t[2], "That is the third term. Apply the rule once more.", "SLIP"]],
       hints: ["Find the second term first: use both parts of the rule.", "Then use the rule again on the second term."],
       steps: [`Second term: ${a} \xD7 ${m20} + ${c19} = ${t[1]}.`, `Third term: ${t[1]} \xD7 ${m20} + ${c19} = ${t[2]}.`, `Fourth term: ${t[2]} \xD7 ${m20} + ${c19} = ${t[3]}.`]
     }),
@@ -126323,20 +126338,21 @@ var FAMILIES175 = [
   fam44({
     id: "g7.whole.sticks-rule",
     skill: "G7_NUMBER_SEQUENCES",
-    outcome: "G7.WHOLE.h",
+    outcome: "MATH.G7.NUMBER.WHOLE_NUMBERS.g",
+    cskill: "MATH.G7.NUMBER.WHOLE_NUMBERS.SEQ_NTH_TERM",
     rung: 3,
     form: "steps",
     draw: () => {
-      const s = pick([{ n: "square", f: 4, d: 3 }, { n: "triangle", f: 3, d: 2 }, { n: "hexagon", f: 6, d: 5 }]);
+      const s = pick([{ n: "square", f: 4, d: 3 }, { n: "pentagon", f: 5, d: 4 }, { n: "hexagon", f: 6, d: 5 }]);
       const k = randInt(12, 20);
       return { ...s, k, S: s.f + (k - 1) * s.d, p: person() };
     },
     make: ({ n, f, d, k, S: S26, p }) => ({
       question: `${p.name} joins matchsticks to make a row of ${n}s. The first ${n} uses ${f} sticks. Each new ${n} shares a side with the one before, so it adds ${d} sticks. Use this rule to answer.`,
       parts: [
-        { prompt: `How many sticks make a row of 4 ${n}s?`, answer: f + 3 * d, hint: `Start with ${f} and add ${d} three times.`, wrong: [[4 * f, `The ${n}s share sides, so they do not each need ${f} sticks.`], [f + 4 * d, "The first shape is already in place. Only 3 more are added."], [f + 3, "Each new shape adds more than 1 stick."]] },
-        { prompt: `How many sticks make a row of 10 ${n}s?`, answer: f + 9 * d, hint: "The rule is added once for each shape after the first.", wrong: [[10 * f, "Shapes in the row share sides. Use the rule."], [f + 10 * d, "The first shape is not an addition. Count the added shapes again."], [10 * d, "The first shape uses more sticks than a new one adds."]] },
-        { prompt: `${p.name} has ${S26} sticks and uses them all. How many ${n}s are in the row?`, answer: k, hint: `Take off the first ${n}, then see how many lots of ${d} fit.`, wrong: [[Math.floor(S26 / f), `That would give each ${n} its own sticks. They share sides.`], [k - 1, "Do not forget the first shape."], [Math.floor(S26 / d), "The first shape uses a different number of sticks from the new ones."]] }
+        { prompt: `How many sticks make a row of 4 ${n}s?`, answer: f + 3 * d, hint: `Start with ${f} and add ${d} three times.`, wrong: [[4 * f, `The ${n}s share sides, so they do not each need ${f} sticks.`, "M_MULTIPLIES_FIRST_TERM"], [f + 4 * d, "The first shape is already in place. Only 3 more are added.", "M_COUNT_TERMS_NOT_STEPS"], [f + 3, "Each new shape adds more than 1 stick.", "M_DIFFERENCE_IGNORED"]] },
+        { prompt: `How many sticks make a row of 10 ${n}s?`, answer: f + 9 * d, hint: "The rule is added once for each shape after the first.", wrong: [[10 * f, "Shapes in the row share sides. Use the rule.", "M_MULTIPLIES_FIRST_TERM"], [f + 10 * d, "The first shape is not an addition. Count the added shapes again.", "M_COUNT_TERMS_NOT_STEPS"], [10 * d, "The first shape uses more sticks than a new one adds.", "M_FIRST_TERM_LEFT_OUT"]] },
+        { prompt: `${p.name} has ${S26} sticks and uses them all. How many ${n}s are in the row?`, answer: k, hint: `Take off the first ${n}, then see how many lots of ${d} fit.`, wrong: [[Math.floor(S26 / f), `That would give each ${n} its own sticks. They share sides.`, "M_MULTIPLIES_FIRST_TERM"], [k - 1, "Do not forget the first shape.", "SLIP"], [Math.floor(S26 / d), "The first shape uses a different number of sticks from the new ones.", "M_FIRST_TERM_LEFT_OUT"]] }
       ],
       steps: [`4 shapes: ${f} + 3 \xD7 ${d} = ${f + 3 * d}.`, `10 shapes: ${f} + 9 \xD7 ${d} = ${f + 9 * d}.`, `${S26} \u2212 ${f} = ${S26 - f}, and ${S26 - f} \xF7 ${d} = ${k - 1} added shapes. With the first one: ${k} shapes.`]
     }),
@@ -130517,6 +130533,381 @@ for (const f of FAMILIES178) {
   BY_SKILL.get(f.skill).push(f);
 }
 
+// src/ai-tutor/content/curriculumMap.g7.js
+var SKILLS_G7 = {
+  "MATH.G7.NUMBER.WHOLE_NUMBERS.PLACE_VALUE_HM": {
+    "name": "Place value of digits up to hundreds of millions",
+    "sub": "MATH.G7.NUMBER.WHOLE_NUMBERS",
+    "outcome": "MATH.G7.NUMBER.WHOLE_NUMBERS.a",
+    "outcomes": [
+      "MATH.G7.NUMBER.WHOLE_NUMBERS.a"
+    ],
+    "horeb": [
+      "G7_PLACE_VALUE"
+    ],
+    "primary": "G7_PLACE_VALUE",
+    "pre": [
+      "MATH.G6.NUMBER.WHOLE_NUMBERS.PLACE_VALUE_MILLIONS",
+      "MATH.G6.NUMBER.WHOLE_NUMBERS.SYMBOLS_MILLIONS"
+    ],
+    "mis": [
+      "M_COUNT_FROM_LEFT",
+      "M_PLACE_SKIPPED_GROUP",
+      "M_ZERO_NOT_A_PLACE"
+    ]
+  },
+  "MATH.G7.NUMBER.WHOLE_NUMBERS.TOTAL_VALUE_HM": {
+    "name": "Total value of digits up to hundreds of millions",
+    "sub": "MATH.G7.NUMBER.WHOLE_NUMBERS",
+    "outcome": "MATH.G7.NUMBER.WHOLE_NUMBERS.a",
+    "outcomes": [
+      "MATH.G7.NUMBER.WHOLE_NUMBERS.a"
+    ],
+    "horeb": [
+      "G7_PLACE_VALUE"
+    ],
+    "primary": "G7_PLACE_VALUE",
+    "pre": [
+      "MATH.G7.NUMBER.WHOLE_NUMBERS.PLACE_VALUE_HM",
+      "MATH.G6.NUMBER.WHOLE_NUMBERS.TOTAL_VALUE_MILLIONS"
+    ],
+    "mis": [
+      "M_DIGIT_FOR_TOTAL",
+      "M_ZEROS_MISCOUNTED",
+      "M_ONE_DIGIT_ONLY_VALUED",
+      "M_PLACE_ONE_TOO_HIGH"
+    ]
+  },
+  "MATH.G7.NUMBER.WHOLE_NUMBERS.SYMBOLS_HM": {
+    "name": "Read and write numbers in symbols up to hundreds of millions",
+    "sub": "MATH.G7.NUMBER.WHOLE_NUMBERS",
+    "outcome": "MATH.G7.NUMBER.WHOLE_NUMBERS.b",
+    "outcomes": [
+      "MATH.G7.NUMBER.WHOLE_NUMBERS.b"
+    ],
+    "horeb": [
+      "G7_PLACE_VALUE"
+    ],
+    "primary": "G7_PLACE_VALUE",
+    "pre": [
+      "MATH.G6.NUMBER.WHOLE_NUMBERS.SYMBOLS_MILLIONS",
+      "MATH.G7.NUMBER.WHOLE_NUMBERS.PLACE_VALUE_HM"
+    ],
+    "mis": [
+      "M_JOIN_PARTS_AS_WRITTEN",
+      "M_GROUP_SHIFTED",
+      "M_COMMA_PLACED_BY_FOUR"
+    ]
+  },
+  "MATH.G7.NUMBER.WHOLE_NUMBERS.WORDS_FROM_FIGURES": {
+    "name": "Write a number in words (figures to words), up to millions",
+    "sub": "MATH.G7.NUMBER.WHOLE_NUMBERS",
+    "outcome": "MATH.G7.NUMBER.WHOLE_NUMBERS.c",
+    "outcomes": [
+      "MATH.G7.NUMBER.WHOLE_NUMBERS.c"
+    ],
+    "horeb": [
+      "G7_NUMBERS_WORDS"
+    ],
+    "primary": "G7_NUMBERS_WORDS",
+    "pre": [
+      "MATH.G6.NUMBER.WHOLE_NUMBERS.READ_WRITE_WORDS_100K",
+      "MATH.G7.NUMBER.WHOLE_NUMBERS.SYMBOLS_HM"
+    ],
+    "mis": [
+      "M_LEADING_ZERO_MISREAD",
+      "M_TENS_AND_UNITS_SWAPPED",
+      "M_HUNDRED_DROPPED",
+      "M_DIGIT_MOVED_ACROSS_GROUPS",
+      "M_ORDER_WITHIN_GROUP_SWAPPED"
+    ]
+  },
+  "MATH.G7.NUMBER.WHOLE_NUMBERS.FIGURES_FROM_WORDS": {
+    "name": "Write a number in figures from words, up to millions",
+    "sub": "MATH.G7.NUMBER.WHOLE_NUMBERS",
+    "outcome": "MATH.G7.NUMBER.WHOLE_NUMBERS.c",
+    "outcomes": [
+      "MATH.G7.NUMBER.WHOLE_NUMBERS.c"
+    ],
+    "horeb": [
+      "G7_NUMBERS_WORDS"
+    ],
+    "primary": "G7_NUMBERS_WORDS",
+    "pre": [
+      "MATH.G6.NUMBER.WHOLE_NUMBERS.READ_WRITE_WORDS_100K",
+      "MATH.G7.NUMBER.WHOLE_NUMBERS.SYMBOLS_HM"
+    ],
+    "mis": [
+      "M_GROUP_ZEROS_MISSING",
+      "M_THOUSAND_ONE_ZERO_SHORT",
+      "M_TEEN_FOR_TY"
+    ]
+  },
+  "MATH.G7.NUMBER.WHOLE_NUMBERS.ROUND_TO_PLACE": {
+    "name": "Round whole numbers to the nearest ten up to hundred million",
+    "sub": "MATH.G7.NUMBER.WHOLE_NUMBERS",
+    "outcome": "MATH.G7.NUMBER.WHOLE_NUMBERS.d",
+    "outcomes": [
+      "MATH.G7.NUMBER.WHOLE_NUMBERS.d"
+    ],
+    "horeb": [
+      "G7_ROUNDING_WHOLE"
+    ],
+    "primary": "G7_ROUNDING_WHOLE",
+    "pre": [
+      "MATH.G6.NUMBER.WHOLE_NUMBERS.ROUND_NEAREST_THOUSAND",
+      "MATH.G7.NUMBER.WHOLE_NUMBERS.PLACE_VALUE_HM"
+    ],
+    "mis": [
+      "M_ROUND_WRONG_DIGIT_CHECKED",
+      "M_ROUND_DIRECTION_FIXED",
+      "M_ZEROS_NOT_WRITTEN",
+      "M_ROUND_TO_WRONG_PLACE",
+      "M_ROUND_LAST_DIGIT_ONLY"
+    ]
+  },
+  "MATH.G7.NUMBER.WHOLE_NUMBERS.ROUND_IN_CONTEXT": {
+    "name": "Round large numbers in news, budgets and populations",
+    "sub": "MATH.G7.NUMBER.WHOLE_NUMBERS",
+    "outcome": "MATH.G7.NUMBER.WHOLE_NUMBERS.d",
+    "outcomes": [
+      "MATH.G7.NUMBER.WHOLE_NUMBERS.d"
+    ],
+    "horeb": [
+      "G7_ROUNDING_WHOLE"
+    ],
+    "primary": "G7_ROUNDING_WHOLE",
+    "pre": [
+      "MATH.G7.NUMBER.WHOLE_NUMBERS.ROUND_TO_PLACE"
+    ],
+    "mis": [
+      "M_NINE_CARRY_MISSED",
+      "M_ROUNDED_IS_EXACT",
+      "M_NO_ROUNDING_FOR_MONEY"
+    ]
+  },
+  "MATH.G7.NUMBER.WHOLE_NUMBERS.EVEN_ODD": {
+    "name": "Classify whole numbers as even or odd",
+    "sub": "MATH.G7.NUMBER.WHOLE_NUMBERS",
+    "outcome": "MATH.G7.NUMBER.WHOLE_NUMBERS.e",
+    "outcomes": [
+      "MATH.G7.NUMBER.WHOLE_NUMBERS.e"
+    ],
+    "horeb": [
+      "G7_PRIMES"
+    ],
+    "primary": "G7_PRIMES",
+    "pre": [
+      "MATH.G5.NUMBER.WHOLE_NUMBERS.DIVISIBLE_BY_2"
+    ],
+    "mis": [
+      "M_EVEN_BY_FIRST_DIGIT",
+      "M_ZERO_NOT_EVEN"
+    ]
+  },
+  "MATH.G7.NUMBER.WHOLE_NUMBERS.PRIME_NUMBERS": {
+    "name": "Identify prime and composite numbers up to 100",
+    "sub": "MATH.G7.NUMBER.WHOLE_NUMBERS",
+    "outcome": "MATH.G7.NUMBER.WHOLE_NUMBERS.e",
+    "outcomes": [
+      "MATH.G7.NUMBER.WHOLE_NUMBERS.e"
+    ],
+    "horeb": [
+      "G7_PRIMES"
+    ],
+    "primary": "G7_PRIMES",
+    "pre": [
+      "MATH.G5.NUMBER.WHOLE_NUMBERS.COMMON_FACTORS",
+      "MATH.G7.NUMBER.WHOLE_NUMBERS.EVEN_ODD",
+      "MATH.G5.NUMBER.WHOLE_NUMBERS.DIVISIBLE_BY_5_AND_10"
+    ],
+    "mis": [
+      "M_ODD_MEANS_PRIME",
+      "M_ONE_IS_PRIME",
+      "M_TWO_NOT_PRIME",
+      "M_PRIME_COMPOSITE_CONFUSED",
+      "M_ONLY_SMALL_DIVISORS_TESTED"
+    ]
+  },
+  "MATH.G7.NUMBER.WHOLE_NUMBERS.ADD_SUB_LARGE": {
+    "name": "Add and subtract large whole numbers (up to 9 digits)",
+    "sub": "MATH.G7.NUMBER.WHOLE_NUMBERS",
+    "outcome": "MATH.G7.NUMBER.WHOLE_NUMBERS.f",
+    "outcomes": [
+      "MATH.G7.NUMBER.WHOLE_NUMBERS.f"
+    ],
+    "horeb": [
+      "G7_PLACE_VALUE"
+    ],
+    "primary": "G7_PLACE_VALUE",
+    "pre": [
+      "MATH.G5.NUMBER.SUBTRACTION.SUB_REGROUP_ACROSS_ZEROS",
+      "MATH.G5.NUMBER.ADDITION.ADD_DOUBLE_REGROUP_TWO"
+    ],
+    "mis": [
+      "M_SMALLER_FROM_LARGER",
+      "M_ZERO_REGROUP_BROKEN",
+      "M_COLUMN_MISALIGNED"
+    ]
+  },
+  "MATH.G7.NUMBER.WHOLE_NUMBERS.MULT_LARGE": {
+    "name": "Multiply large whole numbers (up to 3 digits by 3 digits)",
+    "sub": "MATH.G7.NUMBER.WHOLE_NUMBERS",
+    "outcome": "MATH.G7.NUMBER.WHOLE_NUMBERS.f",
+    "outcomes": [
+      "MATH.G7.NUMBER.WHOLE_NUMBERS.f"
+    ],
+    "horeb": [
+      "G7_PLACE_VALUE"
+    ],
+    "primary": "G7_PLACE_VALUE",
+    "pre": [
+      "MATH.G6.NUMBER.MULTIPLICATION.MULT_4D_BY_2D",
+      "MATH.G6.NUMBER.MULTIPLICATION.ESTIMATE_PRODUCT_ROUND10"
+    ],
+    "mis": [
+      "M_PLACE_HOLDER_ZERO_MISSING",
+      "M_ZEROS_LOST_BY_100",
+      "M_ONLY_ONES_DIGIT"
+    ]
+  },
+  "MATH.G7.NUMBER.WHOLE_NUMBERS.DIV_LARGE": {
+    "name": "Divide large whole numbers (up to 6 digits by up to 3 digits)",
+    "sub": "MATH.G7.NUMBER.WHOLE_NUMBERS",
+    "outcome": "MATH.G7.NUMBER.WHOLE_NUMBERS.f",
+    "outcomes": [
+      "MATH.G7.NUMBER.WHOLE_NUMBERS.f"
+    ],
+    "horeb": [
+      "G7_BODMAS_ADV"
+    ],
+    "primary": "G7_BODMAS_ADV",
+    "pre": [
+      "MATH.G6.NUMBER.DIVISION.DIV_4D_BY_UP_TO_3D",
+      "MATH.G5.NUMBER.DIVISION.CHECK_DIVISION_BY_MULT"
+    ],
+    "mis": [
+      "M_ZERO_IN_QUOTIENT_DROPPED",
+      "M_REMAINDER_IGNORED",
+      "M_DIVIDE_SMALL_BY_LARGE"
+    ]
+  },
+  "MATH.G7.NUMBER.WHOLE_NUMBERS.ORDER_OF_OPERATIONS": {
+    "name": "Work out combined operations in the correct order (with brackets)",
+    "sub": "MATH.G7.NUMBER.WHOLE_NUMBERS",
+    "outcome": "MATH.G7.NUMBER.WHOLE_NUMBERS.f",
+    "outcomes": [
+      "MATH.G7.NUMBER.WHOLE_NUMBERS.f"
+    ],
+    "horeb": [
+      "G7_BODMAS_ADV"
+    ],
+    "primary": "G7_BODMAS_ADV",
+    "pre": [
+      "MATH.G6.NUMBER.DIVISION.COMBINED_OPERATIONS",
+      "MATH.G5.NUMBER.DIVISION.ORDER_OF_OPERATIONS"
+    ],
+    "mis": [
+      "M_LEFT_TO_RIGHT_ONLY",
+      "M_BRACKETS_IGNORED",
+      "M_ADD_BEFORE_SUBTRACT",
+      "M_MULT_BEFORE_DIVIDE"
+    ]
+  },
+  "MATH.G7.NUMBER.WHOLE_NUMBERS.OPERATIONS_IN_CONTEXT": {
+    "name": "Use whole-number operations to solve real-life problems",
+    "sub": "MATH.G7.NUMBER.WHOLE_NUMBERS",
+    "outcome": "MATH.G7.NUMBER.WHOLE_NUMBERS.f",
+    "outcomes": [
+      "MATH.G7.NUMBER.WHOLE_NUMBERS.f"
+    ],
+    "horeb": [
+      "G7_BODMAS_ADV"
+    ],
+    "primary": "G7_BODMAS_ADV",
+    "pre": [
+      "MATH.G7.NUMBER.WHOLE_NUMBERS.ORDER_OF_OPERATIONS",
+      "MATH.G7.NUMBER.WHOLE_NUMBERS.ADD_SUB_LARGE",
+      "MATH.G7.NUMBER.WHOLE_NUMBERS.MULT_LARGE"
+    ],
+    "mis": [
+      "M_ONE_STEP_STOPPED",
+      "M_ADDED_NOT_TAKEN_AWAY",
+      "M_TOTAL_GIVEN_AS_SHARE",
+      "M_LAST_COST_LEFT_OUT",
+      "M_SHARE_BY_MULTIPLYING"
+    ]
+  },
+  "MATH.G7.NUMBER.WHOLE_NUMBERS.SEQ_EXTEND_RULE": {
+    "name": "Find the rule of a number sequence and extend it",
+    "sub": "MATH.G7.NUMBER.WHOLE_NUMBERS",
+    "outcome": "MATH.G7.NUMBER.WHOLE_NUMBERS.g",
+    "outcomes": [
+      "MATH.G7.NUMBER.WHOLE_NUMBERS.g"
+    ],
+    "horeb": [
+      "G7_NUMBER_SEQUENCES"
+    ],
+    "primary": "G7_NUMBER_SEQUENCES",
+    "pre": [
+      "MATH.G6.NUMBER.MULTIPLICATION.MULT_PATTERNS",
+      "MATH.G5.NUMBER.ADDITION.ADD_PATTERN_EXTEND",
+      "MATH.G5.NUMBER.SUBTRACTION.SUB_PATTERN_CONTINUE"
+    ],
+    "mis": [
+      "M_ADD_NOT_MULTIPLY",
+      "M_FIRST_GAP_ONLY",
+      "M_DECREASING_SIGN",
+      "M_NEIGHBOUR_BLAMED",
+      "M_GIVES_CORRECT_TERM"
+    ]
+  },
+  "MATH.G7.NUMBER.WHOLE_NUMBERS.SEQ_NTH_TERM": {
+    "name": "Find a term far along a number sequence",
+    "sub": "MATH.G7.NUMBER.WHOLE_NUMBERS",
+    "outcome": "MATH.G7.NUMBER.WHOLE_NUMBERS.g",
+    "outcomes": [
+      "MATH.G7.NUMBER.WHOLE_NUMBERS.g"
+    ],
+    "horeb": [
+      "G7_NUMBER_SEQUENCES"
+    ],
+    "primary": "G7_NUMBER_SEQUENCES",
+    "pre": [
+      "MATH.G7.NUMBER.WHOLE_NUMBERS.SEQ_EXTEND_RULE",
+      "MATH.G6.NUMBER.MULTIPLICATION.MULT_PATTERNS"
+    ],
+    "mis": [
+      "M_COUNT_TERMS_NOT_STEPS",
+      "M_FIRST_TERM_LEFT_OUT",
+      "M_NEXT_TERM_NOT_FAR",
+      "M_MULTIPLIES_FIRST_TERM",
+      "M_DIFFERENCE_IGNORED"
+    ]
+  },
+  "MATH.G7.NUMBER.WHOLE_NUMBERS.SEQ_CREATE_RULE": {
+    "name": "Create a number sequence from a rule",
+    "sub": "MATH.G7.NUMBER.WHOLE_NUMBERS",
+    "outcome": "MATH.G7.NUMBER.WHOLE_NUMBERS.h",
+    "outcomes": [
+      "MATH.G7.NUMBER.WHOLE_NUMBERS.h"
+    ],
+    "horeb": [
+      "G7_NUMBER_SEQUENCES"
+    ],
+    "primary": "G7_NUMBER_SEQUENCES",
+    "pre": [
+      "MATH.G7.NUMBER.WHOLE_NUMBERS.SEQ_EXTEND_RULE",
+      "MATH.G5.NUMBER.ADDITION.ADD_PATTERN_CREATE"
+    ],
+    "mis": [
+      "M_ONLY_ADDING_USED",
+      "M_ONLY_MULTIPLYING_USED",
+      "M_RULE_NOT_KEPT"
+    ]
+  }
+};
+
 // src/learner/subjects.generated.js
 var SUBJECT_PREFIXES = {
   MATH: "math",
@@ -131703,12 +132094,12 @@ for (const f of [...FAMILIES178, ...familiesOutsideBank()]) if (usable(f)) {
   BY_CSKILL.get(f.cskill).push(f);
 }
 var familiesForSkill = (cskill) => BY_CSKILL.get(cskill) || [];
-var MAPS = { math: { skills: SKILLS_G5, substrands: null }, ...Object.fromEntries(SUBJECT_ORDER.map((id5) => [id5, { skills: skillMapOf(id5), substrands: substrandsOf(id5) }])) };
+var MAPS = { math: { skills: { ...SKILLS_G5, ...SKILLS_G6, ...SKILLS_G7 }, substrands: null }, ...Object.fromEntries(SUBJECT_ORDER.map((id5) => [id5, { skills: skillMapOf(id5), substrands: substrandsOf(id5) }])) };
 var mapOf = (code) => MAPS[subjectOfCskill(code)]?.skills || {};
 var isReviewed = isSigned;
 var isCurriculumSkill = (code) => {
   const subject = subjectOfCskill(code);
-  if (subject === "math") return !!SKILLS_G5[code];
+  if (subject === "math") return !!(SKILLS_G5[code] || SKILLS_G7[code]);
   if (subject && subject !== "math") return !!mapOf(code)[code] && familiesForSkill(code).some(isSigned);
   return false;
 };

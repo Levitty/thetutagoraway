@@ -82,22 +82,22 @@ export const FAMILIES = [
       steps: [`Base area: ${l} × ${w} = ${commas(l * w)} cm².`, `Height: ${commas(l * w * h)} ÷ ${commas(l * w)} = ${h} cm.`],
     }),
     check: ({ l, w, h }, a) => a * l * w === l * w * h }),
-  fam({ id: 'g7.whole.cheque-digit', skill: 'G7_PLACE_VALUE', outcome: 'G7.WHOLE.a', rung: 2, form: 'word',
+  fam({ id: 'g7.whole.cheque-digit', skill: 'G7_PLACE_VALUE', outcome: 'MATH.G7.NUMBER.WHOLE_NUMBERS.a', cskill: 'MATH.G7.NUMBER.WHOLE_NUMBERS.TOTAL_VALUE_HM', rung: 2, form: 'word',
     draw: () => { const m = randInt(2, 9), t = randInt(100, 900) , h = randInt(1, 9) * 100; return { n: m * 1000000 + t * 1000 + h, m, p: person() }; },
     make: ({ n, m, p }) => ({
       question: `${p.name} writes a cheque for ${sh(n)} for a county project. What is the total value of the digit ${m} at the start of the amount?`,
       answer: m * 1000000,
-      wrong: [[m, 'That is the digit itself. Its total value depends on its place.'], [m * 100000, 'Count the places again: which column is the first digit in?'], [m * 10000000, 'Count the places again: which column is the first digit in?']],
+      wrong: [[m, 'That is the digit itself. Its total value depends on its place.', 'M_DIGIT_FOR_TOTAL'], [m * 100000, 'That has one zero too few. The first digit is in the millions place, which has six zeros after it.', 'M_ZEROS_MISCOUNTED'], [m * 10000000, 'That has one zero too many. The first digit is in the millions place, not the ten millions place.', 'M_PLACE_ONE_TOO_HIGH']],
       hints: ['Write the amount in a place value chart.', 'The first digit is in the millions place.'],
       steps: [`The digit ${m} is in the millions place.`, `Total value: ${m} × 1,000,000 = ${commas(m * 1000000)}.`],
     }),
     check: ({ n, m }, a) => Math.floor(n / 1000000) === m && a % 1000000 === 0 }),
-  fam({ id: 'g7.whole.round-county-budget', skill: 'G7_ROUNDING_WHOLE', outcome: 'G7.WHOLE.d', rung: 3, form: 'why',
+  fam({ id: 'g7.whole.round-county-budget', skill: 'G7_ROUNDING_WHOLE', outcome: 'MATH.G7.NUMBER.WHOLE_NUMBERS.d', cskill: 'MATH.G7.NUMBER.WHOLE_NUMBERS.ROUND_IN_CONTEXT', rung: 3, form: 'why',
     draw: () => { const m = randInt(12, 58), r = randInt(100000, 899999); return r === 500000 ? null : { n: m * 1000000 + r, m, r, p: person() }; },
     make: ({ n, m, r, p }) => {
       const up = r >= 500000, right = (up ? m + 1 : m) * 1000000, wrong = (up ? m : m + 1) * 1000000;
       return { question: `A county's budget is ${sh(n)}. ${p.name} rounds it to the nearest million as ${sh(wrong)}. Why is this wrong?`,
-        options: [{ text: up ? 'The next digit is 5 or more, so it rounds up' : 'The next digit is below 5, so it rounds down', right: true }, { text: 'Numbers are always rounded up to the next million', right: false, why: 'Rounding depends on the next digit.' }, { text: 'Only the very last digit of the number is looked at', right: false, why: 'Look at the digit just after the place you are rounding to.' }, { text: 'Money amounts cannot be rounded to the nearest million', right: false, why: 'Large amounts are often rounded in reports.' }],
+        options: [{ text: up ? 'The next digit is 5 or more, so it rounds up' : 'The next digit is below 5, so it rounds down', right: true }, { text: 'Numbers are always rounded up to the next million', right: false, why: 'Rounding depends on the next digit. It does not always go up.', mis: 'M_ROUND_DIRECTION_FIXED' }, { text: 'Only the very last digit of the number is looked at', right: false, why: 'Look at the digit just after the place you are rounding to, not at the end of the number.', mis: 'M_ROUND_LAST_DIGIT_ONLY' }, { text: 'Money amounts cannot be rounded to the nearest million', right: false, why: 'Large amounts are often rounded in reports. Newspapers say about sh 18 million.', mis: 'M_NO_ROUNDING_FOR_MONEY' }],
         hints: ['Find the millions digit.', 'Look at the digit straight after it.'],
         steps: [`The digit after the millions is ${Math.floor(r / 100000)}.`, `So ${commas(n)} rounds to ${commas(right)}.`] };
     } }),

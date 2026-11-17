@@ -3,15 +3,15 @@
  "subject_key": "mathematics",
  "grade": 7,
  "source": "KICD KICD-Grade7-Mathematics-Curriculum-Design.pdf, revised 2024 (text layer)",
- "status": "outcomes from KICD's text, word for word; skills, prerequisites and misconceptions not yet mapped",
+ "status": "outcomes from KICD's text, word for word; skills and prerequisites proposed; misconceptions draft; all awaiting teacher review (17 Nov 2026); no skills yet for: NUMBER.FACTORS, NUMBER.FRACTIONS, NUMBER.DECIMALS, NUMBER.SQUARES_AND_SQUARE_ROOTS, ALGEBR.ALGEBRAIC_EXPRESSIONS, ALGEBR.LINEAR_EQUATIONS, ALGEBR.LINEAR_INEQUALITIES, MEASUR.PYTHAGOREAN_RELATIONSHIP, MEASUR.LENGTH, MEASUR.AREA, MEASUR.VOLUME_AND_CAPACITY, MEASUR.TIME_DISTANCE_AND_SPEED, MEASUR.TEMPERATURE, MEASUR.MONEY, GEOMET.ANGLES, GEOMET.GEOMETRICAL_CONSTRUCTION, DATA_H.DATA_HANDLING",
  "totals": {
   "strands": 5,
   "sub_strands": 18,
   "outcomes": 117,
   "lessons": 148,
-  "skills": 0,
-  "prerequisites": 0,
-  "misconceptions": 0
+  "skills": 17,
+  "prerequisites": 35,
+  "misconceptions": 64
  },
  "sub_strands": [
   {
@@ -55,7 +55,7 @@
    "values": "",
    "pcis": "",
    "links": "",
-   "design_notes": "",
+   "design_notes": "Official outcomes a to h are tested; i is an attitude and has no skill. Outcome f (apply operations of whole numbers) is 'kicd_read': the design gives no limit, so the skills use Grade 6 limits stretched to Grade 7 numbers (up to 9-digit sums, 3-digit by 3-digit products, up to 6-digit dividends, three operations with brackets). Outcome e names even, odd and prime. Number sequences (g, h) are with a constant difference or ratio, or a two-step rule. Official outcomes a to h are tested; i is an attitude and has no skill. Outcome f (apply operations of whole numbers) is 'kicd_read': the design gives no limit, so the skills use Grade 6 limits stretched to Grade 7 numbers (up to 9-digit sums, 3-digit by 3-digit products, up to 6-digit dividends, three operations with brackets). Outcome e names even, odd and prime. Number sequences (g, h) are with a constant difference or ratio, or a two-step rule. Official outcomes a to h are tested; i is an attitude and has no skill. Outcome f (apply operations of whole numbers) is 'kicd_read': the design gives no limit, so the skills use Grade 6 limits stretched to Grade 7 numbers (up to 9-digit sums, 3-digit by 3-digit products, up to 6-digit dividends, three operations with brackets). Outcome e names even, odd and prime. Number sequences (g, h) are with a constant difference or ratio, or a two-step rule.",
    "source": {
     "grade_page": "https://kicd.ac.ke/cbc-materials/curriculum-designs/grade-seven-designs/",
     "design": "KICD-Grade7-Mathematics-Curriculum-Design.pdf",
@@ -121,8 +121,1616 @@
      "status": "kicd_verified"
     }
    ],
-   "skills": [],
-   "misconceptions": []
+   "skills": [
+    {
+     "code": "MATH.G7.NUMBER.WHOLE_NUMBERS.PLACE_VALUE_HM",
+     "name": "Place value of digits up to hundreds of millions",
+     "outcomes": [
+      "MATH.G7.NUMBER.WHOLE_NUMBERS.a"
+     ],
+     "mastery": "Given a whole number up to 999,999,999 the child names the place of any digit (ones to hundred millions), including digits beside zeros, and says which digit sits in a named place. Numbers come from real settings such as a county budget or the number of phone lines.",
+     "question_forms": [
+      "name the place of a digit",
+      "which digit is in a named place",
+      "read a place value chart",
+      "how many places a number has"
+     ],
+     "thinking": [
+      "recall",
+      "procedure"
+     ],
+     "horeb_skill_ids": [
+      "G7_PLACE_VALUE"
+     ],
+     "prerequisites": [
+      {
+       "requires": "MATH.G6.NUMBER.WHOLE_NUMBERS.PLACE_VALUE_MILLIONS",
+       "kind": "skill",
+       "strength": "essential",
+       "reason": "Grade 7 extends the places from millions to hundred millions.",
+       "status": "proposed"
+      },
+      {
+       "requires": "MATH.G6.NUMBER.WHOLE_NUMBERS.SYMBOLS_MILLIONS",
+       "kind": "skill",
+       "strength": "helpful",
+       "reason": "Grouping digits in threes helps to find the place.",
+       "status": "proposed"
+      }
+     ],
+     "status": "proposed"
+    },
+    {
+     "code": "MATH.G7.NUMBER.WHOLE_NUMBERS.TOTAL_VALUE_HM",
+     "name": "Total value of digits up to hundreds of millions",
+     "outcomes": [
+      "MATH.G7.NUMBER.WHOLE_NUMBERS.a"
+     ],
+     "mastery": "Given a whole number up to 999,999,999 the child gives the total value of a chosen digit (digit times its place), adds the total values of two digits, and writes the number in expanded form. The child does not mistake a digit for its total value.",
+     "question_forms": [
+      "total value of an underlined digit",
+      "total values of two digits added",
+      "expanded form",
+      "difference between two digits of the same value"
+     ],
+     "thinking": [
+      "recall",
+      "procedure"
+     ],
+     "horeb_skill_ids": [
+      "G7_PLACE_VALUE"
+     ],
+     "prerequisites": [
+      {
+       "requires": "MATH.G7.NUMBER.WHOLE_NUMBERS.PLACE_VALUE_HM",
+       "kind": "skill",
+       "strength": "essential",
+       "reason": "Total value needs the place first.",
+       "status": "proposed"
+      },
+      {
+       "requires": "MATH.G6.NUMBER.WHOLE_NUMBERS.TOTAL_VALUE_MILLIONS",
+       "kind": "skill",
+       "strength": "essential",
+       "reason": "Total value to millions is already known.",
+       "status": "proposed"
+      }
+     ],
+     "status": "proposed"
+    },
+    {
+     "code": "MATH.G7.NUMBER.WHOLE_NUMBERS.SYMBOLS_HM",
+     "name": "Read and write numbers in symbols up to hundreds of millions",
+     "outcomes": [
+      "MATH.G7.NUMBER.WHOLE_NUMBERS.b"
+     ],
+     "mastery": "Given a number said or written in parts (for example 45 million, 12 thousand and 7) the child writes it in figures with every place filled and zero as a place holder, and reads a figure aloud in groups of three. Numbers up to 999,999,999.",
+     "question_forms": [
+      "write from parts",
+      "choose the number in figures",
+      "spot the missing zero",
+      "read a number aloud in groups"
+     ],
+     "thinking": [
+      "procedure"
+     ],
+     "horeb_skill_ids": [
+      "G7_PLACE_VALUE"
+     ],
+     "prerequisites": [
+      {
+       "requires": "MATH.G6.NUMBER.WHOLE_NUMBERS.SYMBOLS_MILLIONS",
+       "kind": "skill",
+       "strength": "essential",
+       "reason": "The same idea, with millions as the top group.",
+       "status": "proposed"
+      },
+      {
+       "requires": "MATH.G7.NUMBER.WHOLE_NUMBERS.PLACE_VALUE_HM",
+       "kind": "skill",
+       "strength": "essential",
+       "reason": "The groups of three depend on the place of each digit.",
+       "status": "proposed"
+      }
+     ],
+     "status": "proposed"
+    },
+    {
+     "code": "MATH.G7.NUMBER.WHOLE_NUMBERS.WORDS_FROM_FIGURES",
+     "name": "Write a number in words (figures to words), up to millions",
+     "outcomes": [
+      "MATH.G7.NUMBER.WHOLE_NUMBERS.c"
+     ],
+     "mastery": "The child writes a number up to 9,999,999 in words with British spelling, a hyphen in twenty-one to ninety-nine, and each group (millions, thousands, hundreds) in order. Zeros in a group are not spoken. The design limit for words is millions.",
+     "question_forms": [
+      "choose the words for a figure",
+      "write a cheque amount in words",
+      "spot the mistake in the words",
+      "say the same number two ways"
+     ],
+     "thinking": [
+      "recall",
+      "procedure"
+     ],
+     "horeb_skill_ids": [
+      "G7_NUMBERS_WORDS"
+     ],
+     "prerequisites": [
+      {
+       "requires": "MATH.G6.NUMBER.WHOLE_NUMBERS.READ_WRITE_WORDS_100K",
+       "kind": "skill",
+       "strength": "essential",
+       "reason": "Extends words from 100,000 to millions.",
+       "status": "proposed"
+      },
+      {
+       "requires": "MATH.G7.NUMBER.WHOLE_NUMBERS.SYMBOLS_HM",
+       "kind": "skill",
+       "strength": "essential",
+       "reason": "The groups of three give the words.",
+       "status": "proposed"
+      }
+     ],
+     "status": "proposed"
+    },
+    {
+     "code": "MATH.G7.NUMBER.WHOLE_NUMBERS.FIGURES_FROM_WORDS",
+     "name": "Write a number in figures from words, up to millions",
+     "outcomes": [
+      "MATH.G7.NUMBER.WHOLE_NUMBERS.c"
+     ],
+     "mastery": "Given a number in words up to millions, such as \"two million and forty-five thousand and seven\", the child writes it in figures with zero place holders in every empty place.",
+     "question_forms": [
+      "words to figures",
+      "which figures match these words",
+      "fill the missing zero",
+      "order two numbers given in words"
+     ],
+     "thinking": [
+      "recall",
+      "procedure"
+     ],
+     "horeb_skill_ids": [
+      "G7_NUMBERS_WORDS"
+     ],
+     "prerequisites": [
+      {
+       "requires": "MATH.G6.NUMBER.WHOLE_NUMBERS.READ_WRITE_WORDS_100K",
+       "kind": "skill",
+       "strength": "essential",
+       "reason": "The reverse direction, now with millions.",
+       "status": "proposed"
+      },
+      {
+       "requires": "MATH.G7.NUMBER.WHOLE_NUMBERS.SYMBOLS_HM",
+       "kind": "skill",
+       "strength": "essential",
+       "reason": "Writing groups of three digits with zeros.",
+       "status": "proposed"
+      }
+     ],
+     "status": "proposed"
+    },
+    {
+     "code": "MATH.G7.NUMBER.WHOLE_NUMBERS.ROUND_TO_PLACE",
+     "name": "Round whole numbers to the nearest ten up to hundred million",
+     "outcomes": [
+      "MATH.G7.NUMBER.WHOLE_NUMBERS.d"
+     ],
+     "mastery": "The child rounds a number up to 999,999,999 to the nearest ten, hundred, thousand, ten thousand, hundred thousand, million, ten million or hundred million: looks at the digit just to the right, rounds up on 5 or more, and writes zeros in all places after the one rounded.",
+     "question_forms": [
+      "round to a named place",
+      "which digit decides",
+      "round the same number two ways",
+      "choose the rounded number"
+     ],
+     "thinking": [
+      "procedure"
+     ],
+     "horeb_skill_ids": [
+      "G7_ROUNDING_WHOLE"
+     ],
+     "prerequisites": [
+      {
+       "requires": "MATH.G6.NUMBER.WHOLE_NUMBERS.ROUND_NEAREST_THOUSAND",
+       "kind": "skill",
+       "strength": "essential",
+       "reason": "The same rule on bigger numbers.",
+       "status": "proposed"
+      },
+      {
+       "requires": "MATH.G7.NUMBER.WHOLE_NUMBERS.PLACE_VALUE_HM",
+       "kind": "skill",
+       "strength": "essential",
+       "reason": "You must name the place to be rounded to.",
+       "status": "proposed"
+      }
+     ],
+     "status": "proposed"
+    },
+    {
+     "code": "MATH.G7.NUMBER.WHOLE_NUMBERS.ROUND_IN_CONTEXT",
+     "name": "Round large numbers in news, budgets and populations",
+     "outcomes": [
+      "MATH.G7.NUMBER.WHOLE_NUMBERS.d"
+     ],
+     "mastery": "Given a real setting (a population, a county budget, a news report) the child chooses the sensible place to round to, rounds the number, and says why the rounded number is only an estimate. Rounding a carried digit (such as 999,500 to the nearest thousand) is included.",
+     "question_forms": [
+      "round the number in a report",
+      "which rounding is correct",
+      "why a rounded number is not exact",
+      "round and write in words"
+     ],
+     "thinking": [
+      "procedure",
+      "reasoning"
+     ],
+     "horeb_skill_ids": [
+      "G7_ROUNDING_WHOLE"
+     ],
+     "prerequisites": [
+      {
+       "requires": "MATH.G7.NUMBER.WHOLE_NUMBERS.ROUND_TO_PLACE",
+       "kind": "skill",
+       "strength": "essential",
+       "reason": "The rule comes first, the setting second.",
+       "status": "proposed"
+      }
+     ],
+     "status": "proposed"
+    },
+    {
+     "code": "MATH.G7.NUMBER.WHOLE_NUMBERS.EVEN_ODD",
+     "name": "Classify whole numbers as even or odd",
+     "outcomes": [
+      "MATH.G7.NUMBER.WHOLE_NUMBERS.e"
+     ],
+     "mastery": "The child classifies any whole number up to millions as even or odd by its last digit, and knows that sums and products of even and odd numbers follow a pattern (even + even is even, odd + odd is even, even x anything is even).",
+     "question_forms": [
+      "even or odd",
+      "sort a list",
+      "even or odd after adding",
+      "is zero even"
+     ],
+     "thinking": [
+      "recall",
+      "reasoning"
+     ],
+     "horeb_skill_ids": [
+      "G7_PRIMES"
+     ],
+     "prerequisites": [
+      {
+       "requires": "MATH.G5.NUMBER.WHOLE_NUMBERS.DIVISIBLE_BY_2",
+       "kind": "skill",
+       "strength": "essential",
+       "reason": "Even means divisible by 2.",
+       "status": "proposed"
+      }
+     ],
+     "status": "proposed"
+    },
+    {
+     "code": "MATH.G7.NUMBER.WHOLE_NUMBERS.PRIME_NUMBERS",
+     "name": "Identify prime and composite numbers up to 100",
+     "outcomes": [
+      "MATH.G7.NUMBER.WHOLE_NUMBERS.e"
+     ],
+     "mastery": "The child tells prime from composite numbers up to 100 by testing small divisors, knows that 1 is neither, that 2 is the only even prime, and that an odd number is not always prime. The child lists the primes up to 50.",
+     "question_forms": [
+      "is this number prime",
+      "pick the primes from a table",
+      "the only even prime",
+      "list primes between two numbers"
+     ],
+     "thinking": [
+      "recall",
+      "procedure"
+     ],
+     "horeb_skill_ids": [
+      "G7_PRIMES"
+     ],
+     "prerequisites": [
+      {
+       "requires": "MATH.G5.NUMBER.WHOLE_NUMBERS.COMMON_FACTORS",
+       "kind": "skill",
+       "strength": "essential",
+       "reason": "A prime has exactly two factors.",
+       "status": "proposed"
+      },
+      {
+       "requires": "MATH.G7.NUMBER.WHOLE_NUMBERS.EVEN_ODD",
+       "kind": "skill",
+       "strength": "essential",
+       "reason": "Even numbers other than 2 are composite.",
+       "status": "proposed"
+      },
+      {
+       "requires": "MATH.G5.NUMBER.WHOLE_NUMBERS.DIVISIBLE_BY_5_AND_10",
+       "kind": "skill",
+       "strength": "helpful",
+       "reason": "Quick tests for 5 and 10 rule out many numbers.",
+       "status": "proposed"
+      }
+     ],
+     "status": "proposed"
+    },
+    {
+     "code": "MATH.G7.NUMBER.WHOLE_NUMBERS.ADD_SUB_LARGE",
+     "name": "Add and subtract large whole numbers (up to 9 digits)",
+     "outcomes": [
+      "MATH.G7.NUMBER.WHOLE_NUMBERS.f"
+     ],
+     "mastery": "The child adds and subtracts whole numbers of up to nine digits in a column, regrouping across zeros, and decides whether to add or subtract in a story about money, population or distance. Answers are checked by estimating.",
+     "question_forms": [
+      "add large amounts",
+      "subtract across zeros",
+      "sum or difference in a story",
+      "check with an estimate"
+     ],
+     "thinking": [
+      "procedure"
+     ],
+     "horeb_skill_ids": [
+      "G7_PLACE_VALUE"
+     ],
+     "prerequisites": [
+      {
+       "requires": "MATH.G5.NUMBER.SUBTRACTION.SUB_REGROUP_ACROSS_ZEROS",
+       "kind": "skill",
+       "strength": "essential",
+       "reason": "Regrouping across zeros is the hard part of large subtraction.",
+       "status": "proposed"
+      },
+      {
+       "requires": "MATH.G5.NUMBER.ADDITION.ADD_DOUBLE_REGROUP_TWO",
+       "kind": "skill",
+       "strength": "essential",
+       "reason": "Carrying in several columns.",
+       "status": "proposed"
+      }
+     ],
+     "status": "proposed"
+    },
+    {
+     "code": "MATH.G7.NUMBER.WHOLE_NUMBERS.MULT_LARGE",
+     "name": "Multiply large whole numbers (up to 3 digits by 3 digits)",
+     "outcomes": [
+      "MATH.G7.NUMBER.WHOLE_NUMBERS.f"
+     ],
+     "mastery": "The child multiplies a number of up to 4 digits by a number of up to 3 digits using long multiplication, with the zero place holder in the second and third rows, and by 10, 100 and 1,000 by shifting the digits. The product is checked by estimating.",
+     "question_forms": [
+      "long multiplication",
+      "multiply by 100",
+      "estimate to check",
+      "multiplication in a story"
+     ],
+     "thinking": [
+      "procedure"
+     ],
+     "horeb_skill_ids": [
+      "G7_PLACE_VALUE"
+     ],
+     "prerequisites": [
+      {
+       "requires": "MATH.G6.NUMBER.MULTIPLICATION.MULT_4D_BY_2D",
+       "kind": "skill",
+       "strength": "essential",
+       "reason": "Extends one more digit in the multiplier.",
+       "status": "proposed"
+      },
+      {
+       "requires": "MATH.G6.NUMBER.MULTIPLICATION.ESTIMATE_PRODUCT_ROUND10",
+       "kind": "skill",
+       "strength": "helpful",
+       "reason": "Estimating catches a missing place holder.",
+       "status": "proposed"
+      }
+     ],
+     "status": "proposed"
+    },
+    {
+     "code": "MATH.G7.NUMBER.WHOLE_NUMBERS.DIV_LARGE",
+     "name": "Divide large whole numbers (up to 6 digits by up to 3 digits)",
+     "outcomes": [
+      "MATH.G7.NUMBER.WHOLE_NUMBERS.f"
+     ],
+     "mastery": "The child divides a number of up to 6 digits by a number of up to 3 digits by long division, with zeros in the quotient where a digit does not fit, writes the remainder as a whole number, and checks by multiplying back.",
+     "question_forms": [
+      "long division",
+      "zero in the quotient",
+      "what the remainder means in a story",
+      "check by multiplying"
+     ],
+     "thinking": [
+      "procedure"
+     ],
+     "horeb_skill_ids": [
+      "G7_BODMAS_ADV"
+     ],
+     "prerequisites": [
+      {
+       "requires": "MATH.G6.NUMBER.DIVISION.DIV_4D_BY_UP_TO_3D",
+       "kind": "skill",
+       "strength": "essential",
+       "reason": "Extends the dividend by two digits.",
+       "status": "proposed"
+      },
+      {
+       "requires": "MATH.G5.NUMBER.DIVISION.CHECK_DIVISION_BY_MULT",
+       "kind": "skill",
+       "strength": "helpful",
+       "reason": "Checking by multiplication.",
+       "status": "proposed"
+      }
+     ],
+     "status": "proposed"
+    },
+    {
+     "code": "MATH.G7.NUMBER.WHOLE_NUMBERS.ORDER_OF_OPERATIONS",
+     "name": "Work out combined operations in the correct order (with brackets)",
+     "outcomes": [
+      "MATH.G7.NUMBER.WHOLE_NUMBERS.f"
+     ],
+     "mastery": "The child works out expressions of up to three operations with brackets, working brackets first, then multiplication and division from left to right, then addition and subtraction from left to right. Numbers up to 3 digits.",
+     "question_forms": [
+      "work out the expression",
+      "which operation first",
+      "put in brackets to make a value",
+      "find the mistake in the order"
+     ],
+     "thinking": [
+      "procedure"
+     ],
+     "horeb_skill_ids": [
+      "G7_BODMAS_ADV"
+     ],
+     "prerequisites": [
+      {
+       "requires": "MATH.G6.NUMBER.DIVISION.COMBINED_OPERATIONS",
+       "kind": "skill",
+       "strength": "essential",
+       "reason": "Grade 6 order of operations without brackets.",
+       "status": "proposed"
+      },
+      {
+       "requires": "MATH.G5.NUMBER.DIVISION.ORDER_OF_OPERATIONS",
+       "kind": "skill",
+       "strength": "helpful",
+       "reason": "Multiplication and division before addition and subtraction.",
+       "status": "proposed"
+      }
+     ],
+     "status": "proposed"
+    },
+    {
+     "code": "MATH.G7.NUMBER.WHOLE_NUMBERS.OPERATIONS_IN_CONTEXT",
+     "name": "Use whole-number operations to solve real-life problems",
+     "outcomes": [
+      "MATH.G7.NUMBER.WHOLE_NUMBERS.f"
+     ],
+     "mastery": "The child reads a story with two or three steps (fares, fuel, rent, bags and rows), chooses the operations, works them in order and writes the answer with its unit. Money left, total takings and equal sharing are included.",
+     "question_forms": [
+      "two-step story",
+      "three-step story",
+      "which working is right",
+      "find the mistake"
+     ],
+     "thinking": [
+      "procedure",
+      "reasoning"
+     ],
+     "horeb_skill_ids": [
+      "G7_BODMAS_ADV"
+     ],
+     "prerequisites": [
+      {
+       "requires": "MATH.G7.NUMBER.WHOLE_NUMBERS.ORDER_OF_OPERATIONS",
+       "kind": "skill",
+       "strength": "essential",
+       "reason": "The steps in a story give an expression to work in order.",
+       "status": "proposed"
+      },
+      {
+       "requires": "MATH.G7.NUMBER.WHOLE_NUMBERS.ADD_SUB_LARGE",
+       "kind": "skill",
+       "strength": "helpful",
+       "reason": "Large sums and differences.",
+       "status": "proposed"
+      },
+      {
+       "requires": "MATH.G7.NUMBER.WHOLE_NUMBERS.MULT_LARGE",
+       "kind": "skill",
+       "strength": "helpful",
+       "reason": "Multiplying amounts.",
+       "status": "proposed"
+      }
+     ],
+     "status": "proposed"
+    },
+    {
+     "code": "MATH.G7.NUMBER.WHOLE_NUMBERS.SEQ_EXTEND_RULE",
+     "name": "Find the rule of a number sequence and extend it",
+     "outcomes": [
+      "MATH.G7.NUMBER.WHOLE_NUMBERS.g"
+     ],
+     "mastery": "Given the first four to six terms of a sequence with a constant difference or a constant multiplier, the child finds the rule, continues the sequence, and spots a term that does not fit.",
+     "question_forms": [
+      "next term",
+      "state the rule",
+      "the odd one out",
+      "increasing or decreasing sequence"
+     ],
+     "thinking": [
+      "procedure",
+      "reasoning"
+     ],
+     "horeb_skill_ids": [
+      "G7_NUMBER_SEQUENCES"
+     ],
+     "prerequisites": [
+      {
+       "requires": "MATH.G6.NUMBER.MULTIPLICATION.MULT_PATTERNS",
+       "kind": "skill",
+       "strength": "essential",
+       "reason": "Patterns that multiply.",
+       "status": "proposed"
+      },
+      {
+       "requires": "MATH.G5.NUMBER.ADDITION.ADD_PATTERN_EXTEND",
+       "kind": "skill",
+       "strength": "essential",
+       "reason": "Patterns that add.",
+       "status": "proposed"
+      },
+      {
+       "requires": "MATH.G5.NUMBER.SUBTRACTION.SUB_PATTERN_CONTINUE",
+       "kind": "skill",
+       "strength": "helpful",
+       "reason": "Patterns that subtract.",
+       "status": "proposed"
+      }
+     ],
+     "status": "proposed"
+    },
+    {
+     "code": "MATH.G7.NUMBER.WHOLE_NUMBERS.SEQ_NTH_TERM",
+     "name": "Find a term far along a number sequence",
+     "outcomes": [
+      "MATH.G7.NUMBER.WHOLE_NUMBERS.g"
+     ],
+     "mastery": "For a sequence that goes up or down by the same amount, the child finds a distant term (for example the 12th) by first term plus the number of steps times the difference, and does not count the first term as a step.",
+     "question_forms": [
+      "the 12th term",
+      "which term is this number",
+      "seats in row n",
+      "check with a table"
+     ],
+     "thinking": [
+      "procedure"
+     ],
+     "horeb_skill_ids": [
+      "G7_NUMBER_SEQUENCES"
+     ],
+     "prerequisites": [
+      {
+       "requires": "MATH.G7.NUMBER.WHOLE_NUMBERS.SEQ_EXTEND_RULE",
+       "kind": "skill",
+       "strength": "essential",
+       "reason": "You need the rule to jump ahead.",
+       "status": "proposed"
+      },
+      {
+       "requires": "MATH.G6.NUMBER.MULTIPLICATION.MULT_PATTERNS",
+       "kind": "skill",
+       "strength": "helpful",
+       "reason": "Repeated addition is multiplication.",
+       "status": "proposed"
+      }
+     ],
+     "status": "proposed"
+    },
+    {
+     "code": "MATH.G7.NUMBER.WHOLE_NUMBERS.SEQ_CREATE_RULE",
+     "name": "Create a number sequence from a rule",
+     "outcomes": [
+      "MATH.G7.NUMBER.WHOLE_NUMBERS.h"
+     ],
+     "mastery": "Given a rule such as \"start at 5, add 4\" or \"multiply by 3 then add 3\", the child writes the first terms, and makes a sequence of their own for a number game, checking that the terms follow the rule every time.",
+     "question_forms": [
+      "write the terms from a rule",
+      "terms of a two-step rule",
+      "make a puzzle sequence",
+      "check a classmate's sequence"
+     ],
+     "thinking": [
+      "procedure",
+      "creating"
+     ],
+     "horeb_skill_ids": [
+      "G7_NUMBER_SEQUENCES"
+     ],
+     "prerequisites": [
+      {
+       "requires": "MATH.G7.NUMBER.WHOLE_NUMBERS.SEQ_EXTEND_RULE",
+       "kind": "skill",
+       "strength": "essential",
+       "reason": "Understanding a rule comes before making one.",
+       "status": "proposed"
+      },
+      {
+       "requires": "MATH.G5.NUMBER.ADDITION.ADD_PATTERN_CREATE",
+       "kind": "skill",
+       "strength": "helpful",
+       "reason": "Creating an adding pattern.",
+       "status": "proposed"
+      }
+     ],
+     "status": "proposed"
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "MATH.G7.NUMBER.WHOLE_NUMBERS.PLACE_VALUE_HM.M_COUNT_FROM_LEFT",
+     "skill": "MATH.G7.NUMBER.WHOLE_NUMBERS.PLACE_VALUE_HM",
+     "error": "Counts the places from the left end of the number.",
+     "example": {
+      "question": "In 407,530,918 which place is the digit 5 in?",
+      "wrong_answer": "thousands",
+      "correct_answer": "hundred thousands"
+     },
+     "cause": "Reads the digits left to right like words and numbers the places that way.",
+     "reveals": "The answer thousands as a wrong option, with a reason that names the idea.",
+     "help": "Put the number in a place value chart and start counting from the ones on the right.",
+     "source": "to be confirmed by a teacher (no source yet)",
+     "status": "draft"
+    },
+    {
+     "code": "MATH.G7.NUMBER.WHOLE_NUMBERS.PLACE_VALUE_HM.M_PLACE_SKIPPED_GROUP",
+     "skill": "MATH.G7.NUMBER.WHOLE_NUMBERS.PLACE_VALUE_HM",
+     "error": "Loses a place when a group of three has zeros, or names the ten millions place as millions.",
+     "example": {
+      "question": "In 305,000,200 what is the place of the 3?",
+      "wrong_answer": "millions",
+      "correct_answer": "hundred millions"
+     },
+     "cause": "Reads the numbers in groups but forgets that each group has three places.",
+     "reveals": "The answer millions as a wrong option, with a reason that names the idea.",
+     "help": "Write the number under a chart with the headings Hundreds, Tens, Ones for each group.",
+     "source": "to be confirmed by a teacher (no source yet)",
+     "status": "draft"
+    },
+    {
+     "code": "MATH.G7.NUMBER.WHOLE_NUMBERS.PLACE_VALUE_HM.M_ZERO_NOT_A_PLACE",
+     "skill": "MATH.G7.NUMBER.WHOLE_NUMBERS.PLACE_VALUE_HM",
+     "error": "Ignores a zero when counting places, so the digits after it move up one place.",
+     "example": {
+      "question": "In 70,408,003 which digit is in the millions place?",
+      "wrong_answer": "4",
+      "correct_answer": "0"
+     },
+     "cause": "Thinks a zero is empty space rather than a digit that holds a place.",
+     "reveals": "The answer 4 as a wrong option, with a reason that names the idea.",
+     "help": "Colour each zero. Say: a zero is a digit that says there is nothing in that place.",
+     "source": "to be confirmed by a teacher (no source yet)",
+     "status": "draft"
+    },
+    {
+     "code": "MATH.G7.NUMBER.WHOLE_NUMBERS.TOTAL_VALUE_HM.M_DIGIT_FOR_TOTAL",
+     "skill": "MATH.G7.NUMBER.WHOLE_NUMBERS.TOTAL_VALUE_HM",
+     "error": "Gives the digit itself when asked for its total value.",
+     "example": {
+      "question": "What is the total value of 7 in 47,300,000?",
+      "wrong_answer": "7",
+      "correct_answer": "7,000,000"
+     },
+     "cause": "Confuses total value (digit times the place) with the digit.",
+     "reveals": "The answer 7 as a wrong option, with a reason that names the idea.",
+     "help": "Ask: if I had 7 notes of one million shillings, how much money? Write 7 x 1,000,000.",
+     "source": "to be confirmed by a teacher (no source yet)",
+     "status": "draft"
+    },
+    {
+     "code": "MATH.G7.NUMBER.WHOLE_NUMBERS.TOTAL_VALUE_HM.M_ZEROS_MISCOUNTED",
+     "skill": "MATH.G7.NUMBER.WHOLE_NUMBERS.TOTAL_VALUE_HM",
+     "error": "Writes too many or too few zeros after the digit.",
+     "example": {
+      "question": "What is the total value of the 3 in 83,402,115?",
+      "wrong_answer": "3,000,000",
+      "correct_answer": "3,000"
+     },
+     "cause": "Counts the digit as the place name instead of counting the zeros after it.",
+     "reveals": "The answer 3,000,000 as a wrong option, with a reason that names the idea.",
+     "help": "The zeros are the places to the right of the digit. Count them off under the digits.",
+     "source": "to be confirmed by a teacher (no source yet)",
+     "status": "draft"
+    },
+    {
+     "code": "MATH.G7.NUMBER.WHOLE_NUMBERS.TOTAL_VALUE_HM.M_ONE_DIGIT_ONLY_VALUED",
+     "skill": "MATH.G7.NUMBER.WHOLE_NUMBERS.TOTAL_VALUE_HM",
+     "error": "Works out the total value of one digit and takes the other digit as it is.",
+     "example": {
+      "question": "Add the total values of the 2 and the 5 in 25,000,000.",
+      "wrong_answer": "20,000,000 + 5",
+      "correct_answer": "25,000,000"
+     },
+     "cause": "Applies place value to one digit and forgets the other needs it too.",
+     "reveals": "The answer 20,000,000 + 5 as a wrong option, with a reason that names the idea.",
+     "help": "Make a two-row table: digit, place, total value. Fill every row before adding.",
+     "source": "to be confirmed by a teacher (no source yet)",
+     "status": "draft"
+    },
+    {
+     "code": "MATH.G7.NUMBER.WHOLE_NUMBERS.SYMBOLS_HM.M_JOIN_PARTS_AS_WRITTEN",
+     "skill": "MATH.G7.NUMBER.WHOLE_NUMBERS.SYMBOLS_HM",
+     "error": "Joins the parts as they are said, with no place holder zeros.",
+     "example": {
+      "question": "Write 45 million, 12 thousand and 7 in figures.",
+      "wrong_answer": "45,127",
+      "correct_answer": "45,012,007"
+     },
+     "cause": "Sticks 45, 12 and 7 together as numbers rather than giving each group three places.",
+     "reveals": "The answer 45,127 as a wrong option, with a reason that names the idea.",
+     "help": "Draw three boxes for each group (millions, thousands, ones) and fill each with its digits and leading zeros.",
+     "source": "to be confirmed by a teacher (no source yet)",
+     "status": "draft"
+    },
+    {
+     "code": "MATH.G7.NUMBER.WHOLE_NUMBERS.SYMBOLS_HM.M_GROUP_SHIFTED",
+     "skill": "MATH.G7.NUMBER.WHOLE_NUMBERS.SYMBOLS_HM",
+     "error": "Puts a group in the wrong place, for example thousands written in the hundreds group.",
+     "example": {
+      "question": "Write 8 million and 450 thousand in figures.",
+      "wrong_answer": "8,000,450",
+      "correct_answer": "8,450,000"
+     },
+     "cause": "Writes the thousands figure after the zeros of the thousands group.",
+     "reveals": "The answer 8,000,450 as a wrong option, with a reason that names the idea.",
+     "help": "Say the name of the group when you write it: 450 thousand goes in the thousands group.",
+     "source": "to be confirmed by a teacher (no source yet)",
+     "status": "draft"
+    },
+    {
+     "code": "MATH.G7.NUMBER.WHOLE_NUMBERS.SYMBOLS_HM.M_COMMA_PLACED_BY_FOUR",
+     "skill": "MATH.G7.NUMBER.WHOLE_NUMBERS.SYMBOLS_HM",
+     "error": "Puts a comma or space after every four digits, or reads the number in wrong groups.",
+     "example": {
+      "question": "Write 3456789012 with commas.",
+      "wrong_answer": "3456,7890,12",
+      "correct_answer": "3,456,789,012"
+     },
+     "cause": "Counts the digits from the left in lumps that do not match the places.",
+     "reveals": "The answer 3456,7890,12 as a wrong option, with a reason that names the idea.",
+     "help": "Start at the right and count three digits, then a comma, and so on.",
+     "source": "to be confirmed by a teacher (no source yet)",
+     "status": "draft"
+    },
+    {
+     "code": "MATH.G7.NUMBER.WHOLE_NUMBERS.WORDS_FROM_FIGURES.M_LEADING_ZERO_MISREAD",
+     "skill": "MATH.G7.NUMBER.WHOLE_NUMBERS.WORDS_FROM_FIGURES",
+     "error": "Reads a group that starts with zero (050) as if it were a full three-digit number.",
+     "example": {
+      "question": "Write 2,050,300 in words.",
+      "wrong_answer": "two million five hundred thousand three hundred",
+      "correct_answer": "two million fifty thousand three hundred"
+     },
+     "cause": "Reads the digits left to right but does not match them to the group names.",
+     "reveals": "The answer two million five hundred thousand three hundred as a wrong option, with a reason that names the idea.",
+     "help": "Say each group of three with its name: 2 million, 050 thousand, 300.",
+     "source": "to be confirmed by a teacher (no source yet)",
+     "status": "draft"
+    },
+    {
+     "code": "MATH.G7.NUMBER.WHOLE_NUMBERS.WORDS_FROM_FIGURES.M_TENS_AND_UNITS_SWAPPED",
+     "skill": "MATH.G7.NUMBER.WHOLE_NUMBERS.WORDS_FROM_FIGURES",
+     "error": "Swaps the tens and ones when writing the words, such as fifty-seven for seventy-five.",
+     "example": {
+      "question": "Write 1,075 in words.",
+      "wrong_answer": "one thousand and fifty-seven",
+      "correct_answer": "one thousand and seventy-five"
+     },
+     "cause": "Hears seventy and seventeen the same, or reads the last two digits in reverse.",
+     "reveals": "The answer one thousand and fifty-seven as a wrong option, with a reason that names the idea.",
+     "help": "Point to each digit: the left digit is tens (seven tens is seventy), the right digit is ones.",
+     "source": "to be confirmed by a teacher (no source yet)",
+     "status": "draft"
+    },
+    {
+     "code": "MATH.G7.NUMBER.WHOLE_NUMBERS.WORDS_FROM_FIGURES.M_HUNDRED_DROPPED",
+     "skill": "MATH.G7.NUMBER.WHOLE_NUMBERS.WORDS_FROM_FIGURES",
+     "error": "Leaves out the word hundred in a group, or writes thousand for hundred.",
+     "example": {
+      "question": "Write 3,400,000 in words.",
+      "wrong_answer": "three million four thousand",
+      "correct_answer": "three million four hundred thousand"
+     },
+     "cause": "Hears \"four\" and \"four hundred\" as the same group.",
+     "reveals": "The answer three million four thousand as a wrong option, with a reason that names the idea.",
+     "help": "The 4 is in the hundred thousands place, so say hundred before thousand.",
+     "source": "to be confirmed by a teacher (no source yet)",
+     "status": "draft"
+    },
+    {
+     "code": "MATH.G7.NUMBER.WHOLE_NUMBERS.FIGURES_FROM_WORDS.M_GROUP_ZEROS_MISSING",
+     "skill": "MATH.G7.NUMBER.WHOLE_NUMBERS.FIGURES_FROM_WORDS",
+     "error": "Writes the words as numbers side by side without zeros: three million and forty-five gives 345.",
+     "example": {
+      "question": "Write \"three million and forty-five\" in figures.",
+      "wrong_answer": "345",
+      "correct_answer": "3,000,045"
+     },
+     "cause": "Writes the numbers in the order said instead of in place value groups.",
+     "reveals": "The answer 345 as a wrong option, with a reason that names the idea.",
+     "help": "Draw the three groups and put 3 in millions, nothing in thousands (000) and 045 in ones.",
+     "source": "to be confirmed by a teacher (no source yet)",
+     "status": "draft"
+    },
+    {
+     "code": "MATH.G7.NUMBER.WHOLE_NUMBERS.FIGURES_FROM_WORDS.M_THOUSAND_ONE_ZERO_SHORT",
+     "skill": "MATH.G7.NUMBER.WHOLE_NUMBERS.FIGURES_FROM_WORDS",
+     "error": "Writes one zero too few or too many after the thousands number.",
+     "example": {
+      "question": "Write \"two hundred and fifty-seven thousand and seventy-five\" in figures.",
+      "wrong_answer": "257,750",
+      "correct_answer": "257,075"
+     },
+     "cause": "Forgets that a thousand group has three digits, so seventy-five becomes 750 or 75.",
+     "reveals": "The answer 257,750 as a wrong option, with a reason that names the idea.",
+     "help": "Seventy-five is only two digits, so it needs a zero in front to fill the hundreds place: 075.",
+     "source": "to be confirmed by a teacher (no source yet)",
+     "status": "draft"
+    },
+    {
+     "code": "MATH.G7.NUMBER.WHOLE_NUMBERS.FIGURES_FROM_WORDS.M_TEEN_FOR_TY",
+     "skill": "MATH.G7.NUMBER.WHOLE_NUMBERS.FIGURES_FROM_WORDS",
+     "error": "Writes a teen (such as 13) for a ty number (30), because they sound alike.",
+     "example": {
+      "question": "Write \"thirty thousand\" in figures.",
+      "wrong_answer": "13,000",
+      "correct_answer": "30,000"
+     },
+     "cause": "Mixes thirteen and thirty when listening.",
+     "reveals": "The answer 13,000 as a wrong option, with a reason that names the idea.",
+     "help": "Thirteen ends in teen (one ten and three); thirty means three tens.",
+     "source": "to be confirmed by a teacher (no source yet)",
+     "status": "draft"
+    },
+    {
+     "code": "MATH.G7.NUMBER.WHOLE_NUMBERS.ROUND_TO_PLACE.M_ROUND_WRONG_DIGIT_CHECKED",
+     "skill": "MATH.G7.NUMBER.WHOLE_NUMBERS.ROUND_TO_PLACE",
+     "error": "Looks at the digit in the place being rounded to instead of the digit after it.",
+     "example": {
+      "question": "Round 265,320,847 to the nearest hundred million.",
+      "wrong_answer": "200,000,000",
+      "correct_answer": "300,000,000"
+     },
+     "cause": "Thinks the digit being rounded decides, not the digit to its right.",
+     "reveals": "The answer 200,000,000 as a wrong option, with a reason that names the idea.",
+     "help": "Underline the place, then draw an arrow to the digit on its right: that one decides.",
+     "source": "to be confirmed by a teacher (no source yet)",
+     "status": "draft"
+    },
+    {
+     "code": "MATH.G7.NUMBER.WHOLE_NUMBERS.ROUND_TO_PLACE.M_ROUND_DIRECTION_FIXED",
+     "skill": "MATH.G7.NUMBER.WHOLE_NUMBERS.ROUND_TO_PLACE",
+     "error": "Always rounds the same way (usually down, by dropping digits) without looking at the next digit.",
+     "example": {
+      "question": "Round 18,294,211 to the nearest ten million.",
+      "wrong_answer": "10,000,000",
+      "correct_answer": "20,000,000"
+     },
+     "cause": "Thinks rounding means cutting off the end of the number.",
+     "reveals": "The answer 10,000,000 as a wrong option, with a reason that names the idea.",
+     "help": "Put the number on a number line between the two multiples and see which is nearer.",
+     "source": "to be confirmed by a teacher (no source yet)",
+     "status": "draft"
+    },
+    {
+     "code": "MATH.G7.NUMBER.WHOLE_NUMBERS.ROUND_TO_PLACE.M_ZEROS_NOT_WRITTEN",
+     "skill": "MATH.G7.NUMBER.WHOLE_NUMBERS.ROUND_TO_PLACE",
+     "error": "Gives only the rounded digit, or replaces the later digits with nothing instead of zeros.",
+     "example": {
+      "question": "Round 265,320,847 to the nearest hundred million.",
+      "wrong_answer": "3",
+      "correct_answer": "300,000,000"
+     },
+     "cause": "Forgets that the rounded number must still be the same size as the original.",
+     "reveals": "The answer 3 as a wrong option, with a reason that names the idea.",
+     "help": "The rounded number must keep every place. Fill the empty places with zeros.",
+     "source": "to be confirmed by a teacher (no source yet)",
+     "status": "draft"
+    },
+    {
+     "code": "MATH.G7.NUMBER.WHOLE_NUMBERS.ROUND_TO_PLACE.M_ROUND_TO_WRONG_PLACE",
+     "skill": "MATH.G7.NUMBER.WHOLE_NUMBERS.ROUND_TO_PLACE",
+     "error": "Rounds to a nearby place (for example ten million) when asked for the nearest hundred million.",
+     "example": {
+      "question": "Round 265,320,847 to the nearest hundred million.",
+      "wrong_answer": "270,000,000",
+      "correct_answer": "300,000,000"
+     },
+     "cause": "Does not name the place before rounding, so rounds to the one that looks easy.",
+     "reveals": "The answer 270,000,000 as a wrong option, with a reason that names the idea.",
+     "help": "Say the place aloud before you start and underline its digit.",
+     "source": "to be confirmed by a teacher (no source yet)",
+     "status": "draft"
+    },
+    {
+     "code": "MATH.G7.NUMBER.WHOLE_NUMBERS.ROUND_IN_CONTEXT.M_NINE_CARRY_MISSED",
+     "skill": "MATH.G7.NUMBER.WHOLE_NUMBERS.ROUND_IN_CONTEXT",
+     "error": "Rounds up a 9 and leaves the digit in front unchanged, so no carry.",
+     "example": {
+      "question": "Round 1,999,500 to the nearest thousand.",
+      "wrong_answer": "1,999,000",
+      "correct_answer": "2,000,000"
+     },
+     "cause": "Treats each digit separately and does not carry.",
+     "reveals": "The answer 1,999,000 as a wrong option, with a reason that names the idea.",
+     "help": "Rounding up means adding one place value: 1,999,000 + 1,000 = 2,000,000.",
+     "source": "to be confirmed by a teacher (no source yet)",
+     "status": "draft"
+    },
+    {
+     "code": "MATH.G7.NUMBER.WHOLE_NUMBERS.ROUND_IN_CONTEXT.M_ROUNDED_IS_EXACT",
+     "skill": "MATH.G7.NUMBER.WHOLE_NUMBERS.ROUND_IN_CONTEXT",
+     "error": "Believes a rounded number is the exact one.",
+     "example": {
+      "question": "A report says about 270,000,000 lines. Are there exactly 270,000,000?",
+      "wrong_answer": "Yes",
+      "correct_answer": "No, it is only a close estimate"
+     },
+     "cause": "Does not see rounding as approximating.",
+     "reveals": "The answer Yes as a wrong option, with a reason that names the idea.",
+     "help": "Ask: could the real number be 265,320,847 and still be called 270 million?",
+     "source": "to be confirmed by a teacher (no source yet)",
+     "status": "draft"
+    },
+    {
+     "code": "MATH.G7.NUMBER.WHOLE_NUMBERS.ROUND_IN_CONTEXT.M_NO_ROUNDING_FOR_MONEY",
+     "skill": "MATH.G7.NUMBER.WHOLE_NUMBERS.ROUND_IN_CONTEXT",
+     "error": "Says money amounts cannot be rounded.",
+     "example": {
+      "question": "Can a county budget of sh 18,294,211 be given to the nearest million?",
+      "wrong_answer": "No, money must be exact",
+      "correct_answer": "Yes: sh 18,000,000 for a report"
+     },
+     "cause": "Thinks money always needs to be exact.",
+     "reveals": "The answer No, money must be exact as a wrong option, with a reason that names the idea.",
+     "help": "Show a newspaper line that says \"about sh 18 million\". Exact amounts are for accounts, round ones for reports.",
+     "source": "to be confirmed by a teacher (no source yet)",
+     "status": "draft"
+    },
+    {
+     "code": "MATH.G7.NUMBER.WHOLE_NUMBERS.EVEN_ODD.M_EVEN_BY_FIRST_DIGIT",
+     "skill": "MATH.G7.NUMBER.WHOLE_NUMBERS.EVEN_ODD",
+     "error": "Uses the first digit of the number to decide if it is even or odd.",
+     "example": {
+      "question": "Is 2,357 even or odd?",
+      "wrong_answer": "even (it starts with 2)",
+      "correct_answer": "odd"
+     },
+     "cause": "Looks at the front of the number instead of the last digit.",
+     "reveals": "The answer even (it starts with 2) as a wrong option, with a reason that names the idea.",
+     "help": "Only the ones digit tells: 2,357 ends in 7, so one is left over when you share into twos.",
+     "source": "to be confirmed by a teacher (no source yet)",
+     "status": "draft"
+    },
+    {
+     "code": "MATH.G7.NUMBER.WHOLE_NUMBERS.EVEN_ODD.M_ZERO_NOT_EVEN",
+     "skill": "MATH.G7.NUMBER.WHOLE_NUMBERS.EVEN_ODD",
+     "error": "Says zero is neither even nor odd, or that odd + odd is odd.",
+     "example": {
+      "question": "Is 0 even or odd?",
+      "wrong_answer": "neither",
+      "correct_answer": "even"
+     },
+     "cause": "Zero does not feel like a number to count with.",
+     "reveals": "The answer neither as a wrong option, with a reason that names the idea.",
+     "help": "Zero can be shared into two equal groups of zero, and it sits between 1 and -1 in the pattern odd, even, odd.",
+     "source": "to be confirmed by a teacher (no source yet)",
+     "status": "draft"
+    },
+    {
+     "code": "MATH.G7.NUMBER.WHOLE_NUMBERS.PRIME_NUMBERS.M_ODD_MEANS_PRIME",
+     "skill": "MATH.G7.NUMBER.WHOLE_NUMBERS.PRIME_NUMBERS",
+     "error": "Believes every odd number is prime.",
+     "example": {
+      "question": "Is 9 prime?",
+      "wrong_answer": "Yes, it is odd",
+      "correct_answer": "No, 3 x 3 = 9"
+     },
+     "cause": "Mixes the idea that all primes except 2 are odd with the reverse.",
+     "reveals": "The answer Yes, it is odd as a wrong option, with a reason that names the idea.",
+     "help": "Try dividing by 3, 5 and 7: 9, 15, 21 and 27 are odd but composite.",
+     "source": "to be confirmed by a teacher (no source yet)",
+     "status": "draft"
+    },
+    {
+     "code": "MATH.G7.NUMBER.WHOLE_NUMBERS.PRIME_NUMBERS.M_ONE_IS_PRIME",
+     "skill": "MATH.G7.NUMBER.WHOLE_NUMBERS.PRIME_NUMBERS",
+     "error": "Counts 1 as a prime number.",
+     "example": {
+      "question": "Is 1 a prime number?",
+      "wrong_answer": "Yes",
+      "correct_answer": "No, it has only one factor"
+     },
+     "cause": "Remembers that primes can be divided only by 1 and themselves, and 1 fits that.",
+     "reveals": "The answer Yes as a wrong option, with a reason that names the idea.",
+     "help": "A prime has exactly two different factors. 1 has just one.",
+     "source": "to be confirmed by a teacher (no source yet)",
+     "status": "draft"
+    },
+    {
+     "code": "MATH.G7.NUMBER.WHOLE_NUMBERS.PRIME_NUMBERS.M_TWO_NOT_PRIME",
+     "skill": "MATH.G7.NUMBER.WHOLE_NUMBERS.PRIME_NUMBERS",
+     "error": "Says 2 is not prime because it is even.",
+     "example": {
+      "question": "Is 2 prime?",
+      "wrong_answer": "No, it is even",
+      "correct_answer": "Yes"
+     },
+     "cause": "Thinks all even numbers are composite.",
+     "reveals": "The answer No, it is even as a wrong option, with a reason that names the idea.",
+     "help": "List the factors of 2: 1 and 2 only. It is the only even prime.",
+     "source": "to be confirmed by a teacher (no source yet)",
+     "status": "draft"
+    },
+    {
+     "code": "MATH.G7.NUMBER.WHOLE_NUMBERS.ADD_SUB_LARGE.M_SMALLER_FROM_LARGER",
+     "skill": "MATH.G7.NUMBER.WHOLE_NUMBERS.ADD_SUB_LARGE",
+     "error": "In subtraction takes the smaller digit from the larger in each column.",
+     "example": {
+      "question": "Work out 300,400,200 - 123,456,789.",
+      "wrong_answer": "223,056,589",
+      "correct_answer": "176,943,411"
+     },
+     "cause": "Avoids regrouping by reversing the digits that are in the wrong order.",
+     "reveals": "The answer 223,056,589 as a wrong option, with a reason that names the idea.",
+     "help": "Show that each column must be top minus bottom; when the top is smaller, regroup from the next column.",
+     "source": "to be confirmed by a teacher (no source yet)",
+     "status": "draft"
+    },
+    {
+     "code": "MATH.G7.NUMBER.WHOLE_NUMBERS.ADD_SUB_LARGE.M_ZERO_REGROUP_BROKEN",
+     "skill": "MATH.G7.NUMBER.WHOLE_NUMBERS.ADD_SUB_LARGE",
+     "error": "Regroups across a zero but leaves the zero as it was, so the number grows by 10.",
+     "example": {
+      "question": "Work out 5,000,000 - 1,234,567.",
+      "wrong_answer": "3,876,543",
+      "correct_answer": "3,765,433"
+     },
+     "cause": "Takes 1 from the next digit only once and does not make the zero a nine.",
+     "reveals": "The answer 3,876,543 as a wrong option, with a reason that names the idea.",
+     "help": "Break the zeros: 5,000,000 = 4,999,999 + 1. Show the chain of nines.",
+     "source": "to be confirmed by a teacher (no source yet)",
+     "status": "draft"
+    },
+    {
+     "code": "MATH.G7.NUMBER.WHOLE_NUMBERS.ADD_SUB_LARGE.M_COLUMN_MISALIGNED",
+     "skill": "MATH.G7.NUMBER.WHOLE_NUMBERS.ADD_SUB_LARGE",
+     "error": "Adds or subtracts digits that are not in the same place because the numbers are not lined up from the right.",
+     "example": {
+      "question": "Add 12,500,000 and 750,000.",
+      "wrong_answer": "20,000,000",
+      "correct_answer": "13,250,000"
+     },
+     "cause": "Lines up numbers from the left.",
+     "reveals": "The answer 20,000,000 as a wrong option, with a reason that names the idea.",
+     "help": "Always line up the ones. Use squared paper or a place value chart.",
+     "source": "to be confirmed by a teacher (no source yet)",
+     "status": "draft"
+    },
+    {
+     "code": "MATH.G7.NUMBER.WHOLE_NUMBERS.MULT_LARGE.M_PLACE_HOLDER_ZERO_MISSING",
+     "skill": "MATH.G7.NUMBER.WHOLE_NUMBERS.MULT_LARGE",
+     "error": "Leaves out the zero place holder in the second or third row of long multiplication.",
+     "example": {
+      "question": "Work out 235 x 124.",
+      "wrong_answer": "1,645",
+      "correct_answer": "29,140"
+     },
+     "cause": "Writes the second row directly under the first.",
+     "reveals": "The answer 1,645 as a wrong option, with a reason that names the idea.",
+     "help": "The second row is for tens, so it starts under the tens column. Put a zero under the ones.",
+     "source": "to be confirmed by a teacher (no source yet)",
+     "status": "draft"
+    },
+    {
+     "code": "MATH.G7.NUMBER.WHOLE_NUMBERS.MULT_LARGE.M_ZEROS_LOST_BY_100",
+     "skill": "MATH.G7.NUMBER.WHOLE_NUMBERS.MULT_LARGE",
+     "error": "Multiplies by 100 by adding only one zero, or by 1,000 by adding two zeros.",
+     "example": {
+      "question": "Work out 4,500 x 1,000.",
+      "wrong_answer": "450,000",
+      "correct_answer": "4,500,000"
+     },
+     "cause": "Counts the zeros of the multiplier but loses those already in the number.",
+     "reveals": "The answer 450,000 as a wrong option, with a reason that names the idea.",
+     "help": "Shift every digit three places to the left, then fill the gaps with zeros.",
+     "source": "to be confirmed by a teacher (no source yet)",
+     "status": "draft"
+    },
+    {
+     "code": "MATH.G7.NUMBER.WHOLE_NUMBERS.MULT_LARGE.M_ONLY_ONES_DIGIT",
+     "skill": "MATH.G7.NUMBER.WHOLE_NUMBERS.MULT_LARGE",
+     "error": "Multiplies by the ones digit of the multiplier only and ignores the tens and hundreds digits.",
+     "example": {
+      "question": "Work out 235 x 124.",
+      "wrong_answer": "940",
+      "correct_answer": "29,140"
+     },
+     "cause": "Treats the multiplier as the last digit only.",
+     "reveals": "The answer 940 as a wrong option, with a reason that names the idea.",
+     "help": "Split 124 into 100 + 20 + 4 and multiply by each part, then add.",
+     "source": "to be confirmed by a teacher (no source yet)",
+     "status": "draft"
+    },
+    {
+     "code": "MATH.G7.NUMBER.WHOLE_NUMBERS.DIV_LARGE.M_ZERO_IN_QUOTIENT_DROPPED",
+     "skill": "MATH.G7.NUMBER.WHOLE_NUMBERS.DIV_LARGE",
+     "error": "Leaves out a zero in the quotient when the next digit is too small to divide.",
+     "example": {
+      "question": "Work out 84,036 / 4.",
+      "wrong_answer": "2,109",
+      "correct_answer": "21,009"
+     },
+     "cause": "Brings down the next digit but forgets to write 0 when the divisor does not go in.",
+     "reveals": "The answer 2,109 as a wrong option, with a reason that names the idea.",
+     "help": "After bringing down each digit, write a digit above it, even 0.",
+     "source": "to be confirmed by a teacher (no source yet)",
+     "status": "draft"
+    },
+    {
+     "code": "MATH.G7.NUMBER.WHOLE_NUMBERS.DIV_LARGE.M_REMAINDER_IGNORED",
+     "skill": "MATH.G7.NUMBER.WHOLE_NUMBERS.DIV_LARGE",
+     "error": "Gives only the quotient when the question needs the remainder, or rounds the remainder away.",
+     "example": {
+      "question": "290 pupils go in buses of 45. How many buses are needed?",
+      "wrong_answer": "6",
+      "correct_answer": "7"
+     },
+     "cause": "Thinks the remainder does not matter.",
+     "reveals": "The answer 6 as a wrong option, with a reason that names the idea.",
+     "help": "Draw the buses: 6 are full and 20 pupils are left, so one more is needed.",
+     "source": "to be confirmed by a teacher (no source yet)",
+     "status": "draft"
+    },
+    {
+     "code": "MATH.G7.NUMBER.WHOLE_NUMBERS.DIV_LARGE.M_DIVIDE_SMALL_BY_LARGE",
+     "skill": "MATH.G7.NUMBER.WHOLE_NUMBERS.DIV_LARGE",
+     "error": "Divides the smaller number by the larger when setting up the division.",
+     "example": {
+      "question": "A rope 300 m long is cut into pieces of 12 m. How many pieces?",
+      "wrong_answer": "0.04 (12 divided by 300)",
+      "correct_answer": "25"
+     },
+     "cause": "Does not see which number is being shared.",
+     "reveals": "The answer 0.04 (12 divided by 300) as a wrong option, with a reason that names the idea.",
+     "help": "Ask: what are we sharing? That number goes inside the division bracket.",
+     "source": "to be confirmed by a teacher (no source yet)",
+     "status": "draft"
+    },
+    {
+     "code": "MATH.G7.NUMBER.WHOLE_NUMBERS.ORDER_OF_OPERATIONS.M_LEFT_TO_RIGHT_ONLY",
+     "skill": "MATH.G7.NUMBER.WHOLE_NUMBERS.ORDER_OF_OPERATIONS",
+     "error": "Works every operation from left to right whatever it is.",
+     "example": {
+      "question": "Work out 8 + 4 x 5.",
+      "wrong_answer": "60",
+      "correct_answer": "28"
+     },
+     "cause": "Reads like a sentence and does not know that multiplication comes first.",
+     "reveals": "The answer 60 as a wrong option, with a reason that names the idea.",
+     "help": "Picture 8 shillings and 4 coins of 5 shillings: that is 8 + 20.",
+     "source": "to be confirmed by a teacher (no source yet)",
+     "status": "draft"
+    },
+    {
+     "code": "MATH.G7.NUMBER.WHOLE_NUMBERS.ORDER_OF_OPERATIONS.M_BRACKETS_IGNORED",
+     "skill": "MATH.G7.NUMBER.WHOLE_NUMBERS.ORDER_OF_OPERATIONS",
+     "error": "Ignores the brackets and applies the usual order.",
+     "example": {
+      "question": "Work out (8 + 4) x 5.",
+      "wrong_answer": "28",
+      "correct_answer": "60"
+     },
+     "cause": "Does not see that brackets mean work this part first.",
+     "reveals": "The answer 28 as a wrong option, with a reason that names the idea.",
+     "help": "Replace the bracket with its value first: (8 + 4) becomes 12.",
+     "source": "to be confirmed by a teacher (no source yet)",
+     "status": "draft"
+    },
+    {
+     "code": "MATH.G7.NUMBER.WHOLE_NUMBERS.ORDER_OF_OPERATIONS.M_ADD_BEFORE_SUBTRACT",
+     "skill": "MATH.G7.NUMBER.WHOLE_NUMBERS.ORDER_OF_OPERATIONS",
+     "error": "Always adds before subtracting, even when subtraction comes first from the left.",
+     "example": {
+      "question": "Work out 20 - 5 + 3.",
+      "wrong_answer": "12",
+      "correct_answer": "18"
+     },
+     "cause": "Has learnt that addition beats subtraction, like multiplication beats addition.",
+     "reveals": "The answer 12 as a wrong option, with a reason that names the idea.",
+     "help": "Addition and subtraction are equal rank: go left to right. 20 - 5 = 15, then + 3.",
+     "source": "to be confirmed by a teacher (no source yet)",
+     "status": "draft"
+    },
+    {
+     "code": "MATH.G7.NUMBER.WHOLE_NUMBERS.ORDER_OF_OPERATIONS.M_MULT_BEFORE_DIVIDE",
+     "skill": "MATH.G7.NUMBER.WHOLE_NUMBERS.ORDER_OF_OPERATIONS",
+     "error": "Always does multiplication before division even when the division comes first.",
+     "example": {
+      "question": "Work out 24 / 4 x 3.",
+      "wrong_answer": "2",
+      "correct_answer": "18"
+     },
+     "cause": "Has learnt a rule that multiplication always goes first.",
+     "reveals": "The answer 2 as a wrong option, with a reason that names the idea.",
+     "help": "Division and multiplication are equal rank: left to right. 24 / 4 = 6, then x 3.",
+     "source": "to be confirmed by a teacher (no source yet)",
+     "status": "draft"
+    },
+    {
+     "code": "MATH.G7.NUMBER.WHOLE_NUMBERS.OPERATIONS_IN_CONTEXT.M_ONE_STEP_STOPPED",
+     "skill": "MATH.G7.NUMBER.WHOLE_NUMBERS.OPERATIONS_IN_CONTEXT",
+     "error": "Does the first operation in a two-step story and stops.",
+     "example": {
+      "question": "A matatu carries 30 passengers at sh 100 each. The driver pays sh 800 fuel and sh 200 parking. What is left?",
+      "wrong_answer": "3,000",
+      "correct_answer": "2,000"
+     },
+     "cause": "Takes the first answer as the end of the story.",
+     "reveals": "The answer 3,000 as a wrong option, with a reason that names the idea.",
+     "help": "Underline every question phrase in the story and cross them out as each is answered.",
+     "source": "to be confirmed by a teacher (no source yet)",
+     "status": "draft"
+    },
+    {
+     "code": "MATH.G7.NUMBER.WHOLE_NUMBERS.OPERATIONS_IN_CONTEXT.M_ADDED_NOT_TAKEN_AWAY",
+     "skill": "MATH.G7.NUMBER.WHOLE_NUMBERS.OPERATIONS_IN_CONTEXT",
+     "error": "Adds an amount that is paid out or given away instead of taking it away.",
+     "example": {
+      "question": "Takings sh 3,000, costs sh 1,000. How much is left?",
+      "wrong_answer": "4,000",
+      "correct_answer": "2,000"
+     },
+     "cause": "Sees two money amounts and adds them.",
+     "reveals": "The answer 4,000 as a wrong option, with a reason that names the idea.",
+     "help": "Ask: does the driver get money or pay money? Paying means it leaves.",
+     "source": "to be confirmed by a teacher (no source yet)",
+     "status": "draft"
+    },
+    {
+     "code": "MATH.G7.NUMBER.WHOLE_NUMBERS.OPERATIONS_IN_CONTEXT.M_TOTAL_GIVEN_AS_SHARE",
+     "skill": "MATH.G7.NUMBER.WHOLE_NUMBERS.OPERATIONS_IN_CONTEXT",
+     "error": "Gives the amount left in total as the amount each person gets, without dividing.",
+     "example": {
+      "question": "Barasa has 45 mangoes, gives away 15, then shares the rest among 5 families.",
+      "wrong_answer": "30 each",
+      "correct_answer": "6 each"
+     },
+     "cause": "Gives the amount left as the amount each gets.",
+     "reveals": "The answer 30 each as a wrong option, with a reason that names the idea.",
+     "help": "Check: 30 is the amount left in total. Divide it by the 5 families.",
+     "source": "to be confirmed by a teacher (no source yet)",
+     "status": "draft"
+    },
+    {
+     "code": "MATH.G7.NUMBER.WHOLE_NUMBERS.SEQ_EXTEND_RULE.M_ADD_NOT_MULTIPLY",
+     "skill": "MATH.G7.NUMBER.WHOLE_NUMBERS.SEQ_EXTEND_RULE",
+     "error": "Adds a constant when the terms are growing by multiplying.",
+     "example": {
+      "question": "What comes after 2, 6, 18, 54?",
+      "wrong_answer": "90",
+      "correct_answer": "162"
+     },
+     "cause": "Sees the first gap (4) and keeps adding it.",
+     "reveals": "The answer 90 as a wrong option, with a reason that names the idea.",
+     "help": "Check the gaps: 4, 12, 36 are not equal. Check the ratios: all x 3.",
+     "source": "to be confirmed by a teacher (no source yet)",
+     "status": "draft"
+    },
+    {
+     "code": "MATH.G7.NUMBER.WHOLE_NUMBERS.SEQ_EXTEND_RULE.M_FIRST_GAP_ONLY",
+     "skill": "MATH.G7.NUMBER.WHOLE_NUMBERS.SEQ_EXTEND_RULE",
+     "error": "Finds the rule from the first two terms and does not test it on the others.",
+     "example": {
+      "question": "17, 24, 33, 38, 45, 52: which term does not fit?",
+      "wrong_answer": "38",
+      "correct_answer": "33"
+     },
+     "cause": "Trusts the first gap and calls anything else wrong.",
+     "reveals": "The answer 38 as a wrong option, with a reason that names the idea.",
+     "help": "Find all the gaps. The gap that appears most often is the rule.",
+     "source": "to be confirmed by a teacher (no source yet)",
+     "status": "draft"
+    },
+    {
+     "code": "MATH.G7.NUMBER.WHOLE_NUMBERS.SEQ_EXTEND_RULE.M_DECREASING_SIGN",
+     "skill": "MATH.G7.NUMBER.WHOLE_NUMBERS.SEQ_EXTEND_RULE",
+     "error": "Adds instead of subtracting when the terms get smaller.",
+     "example": {
+      "question": "What comes after 40, 34, 28, 22?",
+      "wrong_answer": "28",
+      "correct_answer": "16"
+     },
+     "cause": "Goes through the sequence looking at the size of the gap and forgets the direction.",
+     "reveals": "The answer 28 as a wrong option, with a reason that names the idea.",
+     "help": "The terms get smaller, so the rule is take away 6.",
+     "source": "to be confirmed by a teacher (no source yet)",
+     "status": "draft"
+    },
+    {
+     "code": "MATH.G7.NUMBER.WHOLE_NUMBERS.SEQ_NTH_TERM.M_COUNT_TERMS_NOT_STEPS",
+     "skill": "MATH.G7.NUMBER.WHOLE_NUMBERS.SEQ_NTH_TERM",
+     "error": "Multiplies the difference by the position instead of by the number of steps from the first term.",
+     "example": {
+      "question": "21, 24, 27, 30. What is the 12th term?",
+      "wrong_answer": "57",
+      "correct_answer": "54"
+     },
+     "cause": "Thinks the first term needs a step too.",
+     "reveals": "The answer 57 as a wrong option, with a reason that names the idea.",
+     "help": "From the 1st to the 12th term there are only 11 steps.",
+     "source": "to be confirmed by a teacher (no source yet)",
+     "status": "draft"
+    },
+    {
+     "code": "MATH.G7.NUMBER.WHOLE_NUMBERS.SEQ_NTH_TERM.M_FIRST_TERM_LEFT_OUT",
+     "skill": "MATH.G7.NUMBER.WHOLE_NUMBERS.SEQ_NTH_TERM",
+     "error": "Gives the number of steps times the difference but does not add the first term.",
+     "example": {
+      "question": "21, 24, 27, 30. What is the 12th term?",
+      "wrong_answer": "33",
+      "correct_answer": "54"
+     },
+     "cause": "Forgets that the sequence started at 21, not 0.",
+     "reveals": "The answer 33 as a wrong option, with a reason that names the idea.",
+     "help": "Add where you started: 21 + 11 x 3.",
+     "source": "to be confirmed by a teacher (no source yet)",
+     "status": "draft"
+    },
+    {
+     "code": "MATH.G7.NUMBER.WHOLE_NUMBERS.SEQ_NTH_TERM.M_NEXT_TERM_NOT_FAR",
+     "skill": "MATH.G7.NUMBER.WHOLE_NUMBERS.SEQ_NTH_TERM",
+     "error": "Gives the next term when asked for a term far along.",
+     "example": {
+      "question": "5, 9, 13, 17. What is the 10th term?",
+      "wrong_answer": "21",
+      "correct_answer": "41"
+     },
+     "cause": "Tries to continue term by term and stops early.",
+     "reveals": "The answer 21 as a wrong option, with a reason that names the idea.",
+     "help": "Use first term + steps x difference to jump straight to the 12th.",
+     "source": "to be confirmed by a teacher (no source yet)",
+     "status": "draft"
+    },
+    {
+     "code": "MATH.G7.NUMBER.WHOLE_NUMBERS.SEQ_CREATE_RULE.M_ONLY_ADDING_USED",
+     "skill": "MATH.G7.NUMBER.WHOLE_NUMBERS.SEQ_CREATE_RULE",
+     "error": "Uses only the adding part of a two-part rule.",
+     "example": {
+      "question": "Rule: multiply by 3, then add 3. First term 1. What is the 2nd term?",
+      "wrong_answer": "4",
+      "correct_answer": "6"
+     },
+     "cause": "Does the last operation named and forgets the first.",
+     "reveals": "The answer 4 as a wrong option, with a reason that names the idea.",
+     "help": "Write the rule as two boxes: x 3, then + 3. Put each term through both.",
+     "source": "to be confirmed by a teacher (no source yet)",
+     "status": "draft"
+    },
+    {
+     "code": "MATH.G7.NUMBER.WHOLE_NUMBERS.SEQ_CREATE_RULE.M_ONLY_MULTIPLYING_USED",
+     "skill": "MATH.G7.NUMBER.WHOLE_NUMBERS.SEQ_CREATE_RULE",
+     "error": "Uses only the multiplying part of a two-part rule.",
+     "example": {
+      "question": "Rule: multiply by 3, then add 3. First term 1. What is the 4th term?",
+      "wrong_answer": "27",
+      "correct_answer": "66"
+     },
+     "cause": "Does the first operation named and forgets the second.",
+     "reveals": "The answer 27 as a wrong option, with a reason that names the idea.",
+     "help": "Write the rule as two boxes. Each step goes through both boxes: x 3, then + 3.",
+     "source": "to be confirmed by a teacher (no source yet)",
+     "status": "draft"
+    },
+    {
+     "code": "MATH.G7.NUMBER.WHOLE_NUMBERS.SEQ_CREATE_RULE.M_RULE_NOT_KEPT",
+     "skill": "MATH.G7.NUMBER.WHOLE_NUMBERS.SEQ_CREATE_RULE",
+     "error": "Writes terms that do not all follow the rule.",
+     "example": {
+      "question": "Rule: add 5 to 2. Write four terms.",
+      "wrong_answer": "2, 7, 13, 18",
+      "correct_answer": "2, 7, 12, 17"
+     },
+     "cause": "Drifts to a different gap partway.",
+     "reveals": "The answer 2, 7, 13, 18 as a wrong option, with a reason that names the idea.",
+     "help": "Check each pair of neighbours: the gap must be the same every time.",
+     "source": "to be confirmed by a teacher (no source yet)",
+     "status": "draft"
+    },
+    {
+     "code": "MATH.G7.NUMBER.WHOLE_NUMBERS.TOTAL_VALUE_HM.M_PLACE_ONE_TOO_HIGH",
+     "skill": "MATH.G7.NUMBER.WHOLE_NUMBERS.TOTAL_VALUE_HM",
+     "error": "Counts the place one too high, so the total value has one zero too many.",
+     "example": {
+      "question": "What is the total value of the 4 in 4,215,000?",
+      "wrong_answer": "40,000,000",
+      "correct_answer": "4,000,000"
+     },
+     "cause": "Counts the ones place as the first place instead of the place to the right of it.",
+     "reveals": "The answer 40,000,000 as a wrong option, with a reason that names the idea.",
+     "help": "Count the zeros: the digit that is the first in a 7-digit number has six zeros after it.",
+     "source": "to be confirmed by a teacher (no source yet)",
+     "status": "draft"
+    },
+    {
+     "code": "MATH.G7.NUMBER.WHOLE_NUMBERS.WORDS_FROM_FIGURES.M_DIGIT_MOVED_ACROSS_GROUPS",
+     "skill": "MATH.G7.NUMBER.WHOLE_NUMBERS.WORDS_FROM_FIGURES",
+     "error": "Moves a digit into the neighbouring group when reading, so the words describe a different number.",
+     "example": {
+      "question": "Write 6,350,128 in words.",
+      "wrong_answer": "six million three hundred and five thousand one hundred and twenty-eight",
+      "correct_answer": "six million three hundred and fifty thousand one hundred and twenty-eight"
+     },
+     "cause": "Reads the digits one after the other without keeping to the groups of three.",
+     "reveals": "The answer six million three hundred and five thousand one hundred and twenty-eight as a wrong option, with a reason that names the idea.",
+     "help": "Split the number into groups with commas first, then read each group on its own.",
+     "source": "to be confirmed by a teacher (no source yet)",
+     "status": "draft"
+    },
+    {
+     "code": "MATH.G7.NUMBER.WHOLE_NUMBERS.WORDS_FROM_FIGURES.M_ORDER_WITHIN_GROUP_SWAPPED",
+     "skill": "MATH.G7.NUMBER.WHOLE_NUMBERS.WORDS_FROM_FIGURES",
+     "error": "Reads two digits of one group in the wrong order.",
+     "example": {
+      "question": "Write 1,807,402 in words.",
+      "wrong_answer": "one million eight hundred and seventy thousand four hundred and two",
+      "correct_answer": "one million eight hundred and seven thousand four hundred and two"
+     },
+     "cause": "Skips over a zero in the middle of a group and reads the next digit as tens.",
+     "reveals": "The answer one million eight hundred and seventy thousand four hundred and two as a wrong option, with a reason that names the idea.",
+     "help": "In 807 the 0 means no tens, so the group reads eight hundred and seven.",
+     "source": "to be confirmed by a teacher (no source yet)",
+     "status": "draft"
+    },
+    {
+     "code": "MATH.G7.NUMBER.WHOLE_NUMBERS.ROUND_TO_PLACE.M_ROUND_LAST_DIGIT_ONLY",
+     "skill": "MATH.G7.NUMBER.WHOLE_NUMBERS.ROUND_TO_PLACE",
+     "error": "Looks at the last digit of the whole number, not the digit just after the place being rounded to.",
+     "example": {
+      "question": "Round 18,694,215 to the nearest million.",
+      "wrong_answer": "18,000,000",
+      "correct_answer": "19,000,000"
+     },
+     "cause": "Believes the last digit of a number decides how it rounds.",
+     "reveals": "The answer 18,000,000 as a wrong option, with a reason that names the idea.",
+     "help": "Underline the millions digit, then the digit right after it: 6 decides, not the 5 at the end.",
+     "source": "to be confirmed by a teacher (no source yet)",
+     "status": "draft"
+    },
+    {
+     "code": "MATH.G7.NUMBER.WHOLE_NUMBERS.PRIME_NUMBERS.M_PRIME_COMPOSITE_CONFUSED",
+     "skill": "MATH.G7.NUMBER.WHOLE_NUMBERS.PRIME_NUMBERS",
+     "error": "Mixes up prime and composite and picks the composite numbers.",
+     "example": {
+      "question": "Which of 7, 9, 12 is prime?",
+      "wrong_answer": "12",
+      "correct_answer": "7"
+     },
+     "cause": "Cannot hold apart the two words and what each means.",
+     "reveals": "The answer 12 as a wrong option, with a reason that names the idea.",
+     "help": "A prime is on its own: only 1 and itself divide it. A composite is built from smaller factors.",
+     "source": "to be confirmed by a teacher (no source yet)",
+     "status": "draft"
+    },
+    {
+     "code": "MATH.G7.NUMBER.WHOLE_NUMBERS.PRIME_NUMBERS.M_ONLY_SMALL_DIVISORS_TESTED",
+     "skill": "MATH.G7.NUMBER.WHOLE_NUMBERS.PRIME_NUMBERS",
+     "error": "Tests only 2 and 3 as divisors, so calls 25 and 35 prime.",
+     "example": {
+      "question": "Is 35 prime?",
+      "wrong_answer": "Yes, 2 and 3 do not divide it",
+      "correct_answer": "No, 5 x 7 = 35"
+     },
+     "cause": "Stops testing after the first two divisors.",
+     "reveals": "The answer Yes, 2 and 3 do not divide it as a wrong option, with a reason that names the idea.",
+     "help": "Test 2, 3, 5 and 7 in order. A number up to 100 that none of these divide is prime.",
+     "source": "to be confirmed by a teacher (no source yet)",
+     "status": "draft"
+    },
+    {
+     "code": "MATH.G7.NUMBER.WHOLE_NUMBERS.OPERATIONS_IN_CONTEXT.M_LAST_COST_LEFT_OUT",
+     "skill": "MATH.G7.NUMBER.WHOLE_NUMBERS.OPERATIONS_IN_CONTEXT",
+     "error": "Takes away the first cost in the story but not the second.",
+     "example": {
+      "question": "Fares sh 3,000, fuel sh 800 and parking sh 200. How much is left?",
+      "wrong_answer": "sh 2,200",
+      "correct_answer": "sh 2,000"
+     },
+     "cause": "Stops reading the story before the last sentence.",
+     "reveals": "The answer sh 2,200 as a wrong option, with a reason that names the idea.",
+     "help": "Underline every money amount in the story and tick each one off when it is used.",
+     "source": "to be confirmed by a teacher (no source yet)",
+     "status": "draft"
+    },
+    {
+     "code": "MATH.G7.NUMBER.WHOLE_NUMBERS.OPERATIONS_IN_CONTEXT.M_SHARE_BY_MULTIPLYING",
+     "skill": "MATH.G7.NUMBER.WHOLE_NUMBERS.OPERATIONS_IN_CONTEXT",
+     "error": "Multiplies where the story says share equally.",
+     "example": {
+      "question": "30 mangoes are shared equally among 5 families. How many does each get?",
+      "wrong_answer": "150",
+      "correct_answer": "6"
+     },
+     "cause": "Sees two numbers and multiplies them.",
+     "reveals": "The answer 150 as a wrong option, with a reason that names the idea.",
+     "help": "Draw 5 baskets and deal the mangoes out one at a time: sharing needs division.",
+     "source": "to be confirmed by a teacher (no source yet)",
+     "status": "draft"
+    },
+    {
+     "code": "MATH.G7.NUMBER.WHOLE_NUMBERS.SEQ_EXTEND_RULE.M_NEIGHBOUR_BLAMED",
+     "skill": "MATH.G7.NUMBER.WHOLE_NUMBERS.SEQ_EXTEND_RULE",
+     "error": "Blames the term next to the wrong one because the gap beside it also looks different.",
+     "example": {
+      "question": "17, 24, 33, 38, 45, 52: which term does not fit the pattern of adding 7?",
+      "wrong_answer": "38",
+      "correct_answer": "33"
+     },
+     "cause": "Sees two odd gaps (24 to 33 and 33 to 38) and picks the second term of the second gap.",
+     "reveals": "The answer 38 as a wrong option, with a reason that names the idea.",
+     "help": "Work out what each term should be (17, 24, 31, 38, 45, 52) and see which one is different.",
+     "source": "to be confirmed by a teacher (no source yet)",
+     "status": "draft"
+    },
+    {
+     "code": "MATH.G7.NUMBER.WHOLE_NUMBERS.SEQ_EXTEND_RULE.M_GIVES_CORRECT_TERM",
+     "skill": "MATH.G7.NUMBER.WHOLE_NUMBERS.SEQ_EXTEND_RULE",
+     "error": "Gives the term that should be there instead of the wrong term that was written.",
+     "example": {
+      "question": "17, 24, 33, 38, 45, 52 goes up by 7 each time but one term is wrong. Which term is wrong?",
+      "wrong_answer": "31",
+      "correct_answer": "33"
+     },
+     "cause": "Answers a different question: what the term should be.",
+     "reveals": "The answer 31 as a wrong option, with a reason that names the idea.",
+     "help": "Read the question again: which term that is written down does not fit?",
+     "source": "to be confirmed by a teacher (no source yet)",
+     "status": "draft"
+    },
+    {
+     "code": "MATH.G7.NUMBER.WHOLE_NUMBERS.SEQ_NTH_TERM.M_MULTIPLIES_FIRST_TERM",
+     "skill": "MATH.G7.NUMBER.WHOLE_NUMBERS.SEQ_NTH_TERM",
+     "error": "Multiplies the first term by the position, ignoring the rule.",
+     "example": {
+      "question": "A row of hexagons starts with 6 sticks and each new one adds 5. How many sticks in 4 hexagons?",
+      "wrong_answer": "24",
+      "correct_answer": "21"
+     },
+     "cause": "Treats every shape as if it needed all its own sticks.",
+     "reveals": "The answer 24 as a wrong option, with a reason that names the idea.",
+     "help": "Draw the first two shapes and count: the second shape shares a side, so it adds only 5.",
+     "source": "to be confirmed by a teacher (no source yet)",
+     "status": "draft"
+    },
+    {
+     "code": "MATH.G7.NUMBER.WHOLE_NUMBERS.SEQ_NTH_TERM.M_DIFFERENCE_IGNORED",
+     "skill": "MATH.G7.NUMBER.WHOLE_NUMBERS.SEQ_NTH_TERM",
+     "error": "Adds 1 for each step instead of the difference.",
+     "example": {
+      "question": "A row starts with 6 sticks and each new shape adds 5. How many sticks in 4 shapes?",
+      "wrong_answer": "9",
+      "correct_answer": "21"
+     },
+     "cause": "Counts the number of shapes instead of the sticks they add.",
+     "reveals": "The answer 9 as a wrong option, with a reason that names the idea.",
+     "help": "Each new shape adds 5 sticks, not 1. Write the rule as: add 5 each time.",
+     "source": "to be confirmed by a teacher (no source yet)",
+     "status": "draft"
+    }
+   ]
   },
   {
    "code": "MATH.G7.NUMBER.FACTORS",

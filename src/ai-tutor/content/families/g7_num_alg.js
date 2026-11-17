@@ -37,25 +37,25 @@ export const FAMILIES = [
   // ======================================================================
   // WHOLE NUMBERS
   // ======================================================================
-  fam({ id: 'g7.whole.place-chart', skill: 'G7_PLACE_VALUE', outcome: 'G7.WHOLE.a', rung: 2, form: 'table',
+  fam({ id: 'g7.whole.place-chart', skill: 'G7_PLACE_VALUE', outcome: 'MATH.G7.NUMBER.WHOLE_NUMBERS.a', cskill: 'MATH.G7.NUMBER.WHOLE_NUMBERS.TOTAL_VALUE_HM', rung: 2, form: 'table',
     draw: () => {
       const L = randInt(7, 9); const ds = Array.from({ length: L }, () => randInt(1, 9));   // ds[k] is the digit worth 10^k
       const j = randInt(L - 3, L - 1), k = randInt(2, 4);   // a big place and a small one
       const A = ds[j] * 10 ** j, B = ds[k] * 10 ** k;
-      return new Set(ds).size >= 5 && distinct(A + B, ds[j] + ds[k], A + ds[k], ds[j] + B) ? { ds, L, j, k } : null;
+      return new Set(ds).size >= 5 && distinct(A + B, ds[j] + ds[k], A + ds[k], A * 10 + B) ? { ds, L, j, k } : null;
     },
     make: ({ ds, L, j, k }) => {
       const A = ds[j] * 10 ** j, B = ds[k] * 10 ** k;
       return { question: `The table shows a number, with one digit in each row. Look at the digit in the ${PLACES[j]} place and the digit in the ${PLACES[k]} place. Work out what each digit is worth in this number, then add the two values. What is the total value of the two digits together?`, story: false,
         model: { type: 'table', data: { head: ['Place', 'Digit'], rows: Array.from({ length: L }, (_, i) => ({ label: PLACES[L - 1 - i], value: String(ds[L - 1 - i]) })) } },
         answer: A + B,
-        wrong: [[ds[j] + ds[k], 'That adds the digits only. Total value also depends on the place each digit sits in.'], [A + ds[k], `The digit in the ${PLACES[k]} place is also worth more than itself.`], [ds[j] + B, `The digit in the ${PLACES[j]} place is also worth more than itself.`]],
+        wrong: [[ds[j] + ds[k], 'That adds the digits only. Total value also depends on the place each digit sits in.', 'M_DIGIT_FOR_TOTAL'], [A + ds[k], `The digit in the ${PLACES[k]} place is also worth more than itself.`, 'M_ONE_DIGIT_ONLY_VALUED'], [A * 10 + B, `The digit in the ${PLACES[j]} place has one zero too many after it.`, 'M_ZEROS_MISCOUNTED']],
         hints: ['Find each row in the table and read its digit.', 'Total value = the digit × the value of its place. Do this for both places, then add.'],
         steps: [`${PLACES[j]}: the digit is ${ds[j]}, total value ${commas(A)}.`, `${PLACES[k]}: the digit is ${ds[k]}, total value ${commas(B)}.`, `Sum: ${commas(A)} + ${commas(B)} = ${commas(A + B)}.`] };
     },
-    check: ({ ds, j, k }, a) => String(a).length === j + 1 && Number(String(ds[j]) + '0'.repeat(j)) + Number(String(ds[k]) + '0'.repeat(k)) === a }),
+    check: ({ ds, j, k }, a) => Number(String(ds[j]) + '0'.repeat(j)) + Number(String(ds[k]) + '0'.repeat(k)) === a }),
 
-  fam({ id: 'g7.whole.words-spot', skill: 'G7_NUMBERS_WORDS', outcome: 'G7.WHOLE.c', rung: 2, form: 'spot',
+  fam({ id: 'g7.whole.words-spot', skill: 'G7_NUMBERS_WORDS', outcome: 'MATH.G7.NUMBER.WHOLE_NUMBERS.c', cskill: 'MATH.G7.NUMBER.WHOLE_NUMBERS.FIGURES_FROM_WORDS', rung: 2, form: 'spot',
     draw: () => ({ A: randInt(101, 899), B: randInt(11, 99), bug: pick([1, 2]), p: person() }),
     make: ({ A, B, bug, p }) => {
       const sa = bug === 1 ? A * 100 : A * 1000, sb = bug === 2 ? B * 10 : B, tot = sa + sb;
@@ -66,27 +66,28 @@ export const FAMILIES = [
           { text: `Add the two parts: ${commas(sa)} + ${sb} = ${commas(tot)}.`, ok: tot === sa + sb },
           { text: `So the number is ${commas(tot)}.`, ok: true },
         ],
+        mis: bug === 1 ? 'M_GROUP_ZEROS_MISSING' : 'M_THOUSAND_ONE_ZERO_SHORT',
         fix: bug === 1 ? `${words(A)} thousand means ${A} × 1,000, so it is ${commas(A * 1000)}. One zero was missing.` : `${words(B)} is ${B}. The ${B} belongs in the units, not shifted to the next place.`,
         steps: [`${words(A)} thousand = ${commas(A * 1000)}.`, `${words(B)} = ${B}.`, `${commas(A * 1000)} + ${B} = ${commas(A * 1000 + B)}.`] };
     } }),
 
-  fam({ id: 'g7.whole.words-cheque', skill: 'G7_NUMBERS_WORDS', outcome: 'G7.WHOLE.c', rung: 2, form: 'word',
+  fam({ id: 'g7.whole.words-cheque', skill: 'G7_NUMBERS_WORDS', outcome: 'MATH.G7.NUMBER.WHOLE_NUMBERS.c', cskill: 'MATH.G7.NUMBER.WHOLE_NUMBERS.WORDS_FROM_FIGURES', rung: 2, form: 'word',
     draw: () => {
       const L = 7; const ds = Array.from({ length: L }, (_, i) => (i === 0 ? randInt(1, 9) : randInt(0, 9)));
       const zeros = ds.slice(1).filter(x => x === 0).length; if (zeros < 2) return null;
-      const alt = [];
-      for (let i = 0; i < L - 1; i++) if (ds[i] !== ds[i + 1] && !(i === 0 && ds[i + 1] === 0)) { const c = [...ds]; [c[i], c[i + 1]] = [c[i + 1], c[i]]; alt.push(Number(c.join(''))); }
       const n = Number(ds.join(''));
-      const set = [...new Set(alt.map(a => words(a)))].filter(w => w !== words(n));
-      return set.length >= 3 ? { n, wrongs: shuffle(set).slice(0, 3), p: person() } : null;
+      // one wrong in the words for each kind of slip: the tens and ones swapped, a digit moved into the next group, two digits of one group swapped
+      const kinds = { tu: [], across: [], within: [] };
+      for (let i = 0; i < L - 1; i++) if (ds[i] !== ds[i + 1] && !(i === 0 && ds[i + 1] === 0)) { const c = [...ds]; [c[i], c[i + 1]] = [c[i + 1], c[i]]; const w = words(Number(c.join(''))); if (w !== words(n)) kinds[i === 5 ? 'tu' : (i === 0 || i === 3) ? 'across' : 'within'].push(w); }
+      return kinds.tu.length && kinds.across.length && kinds.within.length ? { n, wrongs: [pick(kinds.tu), pick(kinds.across), pick(kinds.within)], p: person() } : null;
     },
     make: ({ n, wrongs, p }) => ({
       question: `${p.name} sells a plot of land for ${sh(n)}. Which of these shows the amount in words?`,
-      options: shuffle([{ text: words(n), right: true }, ...wrongs.map(w => ({ text: w, right: false, why: 'Read each group of digits again: millions, thousands, then the rest. In these words, one digit has moved to a different place.' }))]),
+      options: shuffle([{ text: words(n), right: true }, ...wrongs.map((w, i) => ({ text: w, right: false, why: ['In these words the tens and the ones of the last group are the wrong way round.', 'In these words a digit has moved out of its group into the next one. Check which group each digit belongs to.', 'In these words two digits of one group are the wrong way round. Read hundreds, tens and ones in order.'][i], mis: ['M_TENS_AND_UNITS_SWAPPED', 'M_DIGIT_MOVED_ACROSS_GROUPS', 'M_ORDER_WITHIN_GROUP_SWAPPED'][i] }))]),
       hints: ['Split the number into groups of three digits, from the right.', 'Say the millions group, then the thousands group, then the last group.'],
       steps: [`Groups: ${commas(n).split(',').join(' | ')}.`, `In words: ${words(n)}.`] }) }),
 
-  fam({ id: 'g7.whole.round-report', skill: 'G7_ROUNDING_WHOLE', outcome: 'G7.WHOLE.d', rung: 2, form: 'word',
+  fam({ id: 'g7.whole.round-report', skill: 'G7_ROUNDING_WHOLE', outcome: 'MATH.G7.NUMBER.WHOLE_NUMBERS.d', cskill: 'MATH.G7.NUMBER.WHOLE_NUMBERS.ROUND_TO_PLACE', rung: 2, form: 'word',
     draw: () => {
       const N = randInt(101000000, 989999999), r = N % 1e8; if (r === 5e7) return null;
       const ans = Math.round(N / 1e8) * 1e8, up = r > 5e7;
@@ -96,37 +97,38 @@ export const FAMILIES = [
     make: ({ N, ans, other, tenM, lead }) => ({
       question: `A report says that ${commas(N)} mobile phone lines are in use in a region. The newspaper rounds this to the nearest hundred million. What number does it print?`,
       answer: ans,
-      wrong: [[other, 'You rounded the wrong way. Look at the digit in the ten millions place: 5 or more rounds up, less than 5 stays.'], [tenM, 'That is rounded to the nearest ten million. The question asks for the nearest hundred million.'], [lead, 'That is only the hundred millions digit. Write the number in full, with zeros in the other places.']],
+      wrong: [[other, 'You rounded the wrong way. Look at the digit in the ten millions place: 5 or more rounds up, less than 5 stays.', 'M_ROUND_WRONG_DIGIT_CHECKED'], [tenM, 'That is rounded to the nearest ten million. The question asks for the nearest hundred million.', 'M_ROUND_TO_WRONG_PLACE'], [lead, 'That is only the hundred millions digit. Write the number in full, with zeros in the other places.', 'M_ZEROS_NOT_WRITTEN']],
       hints: ['Underline the digit in the hundred millions place.', 'Look at the digit to its right, in the ten millions place.'],
       steps: [`The hundred millions digit is ${Math.floor(N / 1e8)}. The next digit is ${Math.floor((N % 1e8) / 1e7)}.`, `${Math.floor((N % 1e8) / 1e7) >= 5 ? 'It is 5 or more, so round up.' : 'It is less than 5, so keep the digit.'}`, `Rounded: ${commas(ans)}.`] }),
     check: ({ N }, a) => a % 1e8 === 0 && Math.abs(N - a) <= 5e7 }),
 
-  fam({ id: 'g7.whole.prime-jerseys', skill: 'G7_PRIMES', outcome: 'G7.WHOLE.e', rung: 2, form: 'table',
+  fam({ id: 'g7.whole.prime-jerseys', skill: 'G7_PRIMES', outcome: 'MATH.G7.NUMBER.WHOLE_NUMBERS.e', cskill: 'MATH.G7.NUMBER.WHOLE_NUMBERS.PRIME_NUMBERS', rung: 2, form: 'table',
     draw: () => {
       const nums = new Set(); while (nums.size < 5) nums.add(randInt(2, 40)); const v = [...nums];
-      const pr = v.filter(isPrime).length, odd = v.filter(x => x % 2).length, comp = v.length - pr, even = v.length - odd;
-      return pr >= 1 && pr <= 3 && distinct(pr, odd, comp, even) ? { v, pr, odd, comp, even, ps: (() => { const ns = []; while (ns.length < 5) { const x = person().name; if (!ns.includes(x)) ns.push(x); } return ns; })() } : null;
+      const sum = (a) => a.reduce((t, x) => t + x, 0), pr = sum(v.filter(isPrime)), np = v.filter(isPrime).length, odd = sum(v.filter(x => x % 2)), comp = sum(v.filter(x => !isPrime(x))), small = sum(v.filter(x => x === 2 || x === 3 || (x % 2 && x % 3)));
+      const far = (...c) => c.every(a => c.every(b => a === b || Math.abs(a - b) > 2));
+      return np >= 1 && np <= 3 && distinct(pr, odd, comp, small) && far(pr, odd, comp, small) ? { v, pr, odd, comp, small, ps: (() => { const ns = []; while (ns.length < 5) { const x = person().name; if (!ns.includes(x)) ns.push(x); } return ns; })() } : null;
     },
-    make: ({ v, pr, odd, comp, even, ps }) => ({
-      question: 'The table shows the jersey numbers of five players. How many of the numbers are prime?', story: false,
+    make: ({ v, pr, odd, comp, small, ps }) => ({
+      question: 'The table shows the jersey numbers of five players. What is the total of the jersey numbers that are prime?', story: false,
       model: { type: 'table', data: { head: ['Player', 'Jersey number'], rows: v.map((n, i) => ({ label: ps[i], value: String(n) })) } },
       answer: pr,
-      wrong: [[odd, 'Some odd numbers are not prime, for example 9 and 15. Check each number for a factor other than 1 and itself.'], [comp, 'That counts the numbers that are not prime. The question asks for the prime ones.'], [even, 'That counts the even numbers. Only one even number is prime, so check each number for factors.']],
+      wrong: [[odd, 'That is the total of the odd numbers. Some odd numbers are not prime, for example 9 and 15.', 'M_ODD_MEANS_PRIME'], [comp, 'That is the total of the numbers that are not prime. The question asks for the prime ones.', 'M_PRIME_COMPOSITE_CONFUSED'], [small, 'That only tests 2 and 3. A number such as 25 or 35 is not divisible by 2 or 3, but it is not prime.', 'M_ONLY_SMALL_DIVISORS_TESTED']],
       hints: ['A prime number has exactly two factors: 1 and itself.', 'Test each jersey number: does anything other than 1 and itself divide it?'],
-      steps: [`Check each number: ${v.map(n => `${n} is ${isPrime(n) ? 'prime' : 'not prime'}`).join(', ')}.`, `The prime numbers are ${v.filter(isPrime).join(', ')}.`] }),
-    check: ({ v }, a) => v.filter(n => n > 1 && Array.from({ length: n - 2 }, (_, i) => i + 2).every(f => n % f !== 0)).length === a }),
+      steps: [`Check each number: ${v.map(n => `${n} is ${isPrime(n) ? 'prime' : 'not prime'}`).join(', ')}.`, `The prime numbers are ${v.filter(isPrime).join(', ')}. Their total is ${pr}.`] }),
+    check: ({ v }, a) => v.filter(n => n > 1 && Array.from({ length: n - 2 }, (_, i) => i + 2).every(f => n % f !== 0)).reduce((t, x) => t + x, 0) === a }),
 
-  fam({ id: 'g7.whole.matatu-takings', skill: 'G7_BODMAS_ADV', outcome: 'G7.WHOLE.f', rung: 2, form: 'word',
+  fam({ id: 'g7.whole.matatu-takings', skill: 'G7_BODMAS_ADV', outcome: 'MATH.G7.NUMBER.WHOLE_NUMBERS.f', cskill: 'MATH.G7.NUMBER.WHOLE_NUMBERS.OPERATIONS_IN_CONTEXT', rung: 2, form: 'word',
     draw: () => { const f = pick([60, 70, 80, 100]), k = pick([20, 25, 30, 35, 40]), F = pick([600, 800, 1000, 1200]), P = pick([100, 150, 200]); return f * k - F - P >= 200 ? { f, k, F, P } : null; },
     make: ({ f, k, F, P }) => ({
       question: `A matatu charges ${sh(f)} from each passenger. On one trip it carries ${k} passengers. The driver pays ${sh(F)} for fuel and ${sh(P)} for parking. How much money is left from the fares? Answer in shillings.`,
       answer: f * k - (F + P),
-      wrong: [[f * k - F, 'The driver also pays for parking. Take that away as well.'], [f * k - F + P, 'Both payments come out of the fares. Neither one is added back.'], [f * k, 'That is all the money collected. Take away what the driver pays.']],
+      wrong: [[f * k - F, 'The driver also pays for parking. Take that away as well.', 'M_LAST_COST_LEFT_OUT'], [f * k - F + P, 'Both payments come out of the fares. Neither one is added back.', 'M_ADDED_NOT_TAKEN_AWAY'], [f * k, 'That is all the money collected. Take away what the driver pays.', 'M_ONE_STEP_STOPPED']],
       hints: ['First find all the money the passengers pay.', 'Then take away the fuel and the parking.'],
       steps: [`Fares: ${f} × ${k} = ${commas(f * k)}.`, `Costs: ${F} + ${P} = ${commas(F + P)}.`, `Left: ${commas(f * k)} − ${commas(F + P)} = ${commas(f * k - F - P)}.`] }),
     check: ({ f, k, F, P }, a) => a + F + P === f * k }),
 
-  fam({ id: 'g7.whole.mangoes-spot', skill: 'G7_BODMAS_ADV', outcome: 'G7.WHOLE.f', rung: 2, form: 'spot',
+  fam({ id: 'g7.whole.mangoes-spot', skill: 'G7_BODMAS_ADV', outcome: 'MATH.G7.NUMBER.WHOLE_NUMBERS.f', cskill: 'MATH.G7.NUMBER.WHOLE_NUMBERS.OPERATIONS_IN_CONTEXT', rung: 2, form: 'spot',
     draw: () => {
       const fm = pick([4, 5, 6]), j = randInt(2, 4), g = fm * j, s = randInt(6, 20), tot = fm * s + g, bags = pick([4, 5, 6, 8]);
       return tot % bags === 0 ? { fm, g, s, bags, per: tot / bags, bug: pick(['A', 'B']), p: person() } : null;
@@ -141,51 +143,52 @@ export const FAMILIES = [
           { text: `Share equally among ${fm} families: ${s2} ${bug === 'B' ? '×' : '÷'} ${fm} = ${s3}.`, ok: s3 === s2 / fm },
           { text: `Each family gets ${s3} mangoes.`, ok: true },
         ],
+        mis: bug === 'A' ? 'M_ADDED_NOT_TAKEN_AWAY' : 'M_SHARE_BY_MULTIPLYING',
         fix: bug === 'A' ? `Giving mangoes away means taking them away, so it is ${t1} − ${g}, not ${t1} + ${g}.` : `Sharing equally means dividing: ${s2} ÷ ${fm}, not ${s2} × ${fm}.`,
         steps: [`${bags} × ${per} = ${t1}.`, `${t1} − ${g} = ${t2}.`, `${t2} ÷ ${fm} = ${s}.`] };
     } }),
 
-  fam({ id: 'g7.whole.hall-rows', skill: 'G7_NUMBER_SEQUENCES', outcome: 'G7.WHOLE.g', rung: 2, form: 'table',
-    draw: () => ({ a: randInt(10, 30), d: randInt(2, 6), n: pick([8, 10, 12]) }),
+  fam({ id: 'g7.whole.hall-rows', skill: 'G7_NUMBER_SEQUENCES', outcome: 'MATH.G7.NUMBER.WHOLE_NUMBERS.g', cskill: 'MATH.G7.NUMBER.WHOLE_NUMBERS.SEQ_NTH_TERM', rung: 2, form: 'table',
+    draw: () => ({ a: randInt(10, 30), d: randInt(3, 6), n: pick([8, 10, 12]) }),
     make: ({ a, d, n }) => ({
       question: `The table shows the seats in the first four rows of a hall. The pattern continues, so each row has the same number of extra seats. How many seats are in row ${n}?`, story: false,
       model: { type: 'table', data: { head: ['Row', 'Seats'], rows: [1, 2, 3, 4].map(r => ({ label: String(r), value: String(a + (r - 1) * d) })) } },
       answer: a + (n - 1) * d,
-      wrong: [[a + n * d, `Row 1 has ${a} seats already. Row ${n} has one fewer step than ${n}.`], [n * d, 'That ignores the seats in the first row. The pattern starts from the first row.'], [a + (n - 2) * d, `Count the steps from row 1 to row ${n} again. You stopped one step early.`]],
+      wrong: [[a + n * d, `Row 1 has ${a} seats already. Row ${n} has one fewer step than ${n}.`, 'M_COUNT_TERMS_NOT_STEPS'], [n * d, 'That ignores the seats in the first row. The pattern starts from the first row.', 'M_FIRST_TERM_LEFT_OUT'], [a + (n - 2) * d, `Count the steps from row 1 to row ${n} again. You stopped one step early.`, 'SLIP']],
       hints: ['How many seats does each row add to the one before it?', `From row 1 to row ${n}, how many times is that added?`],
       steps: [`Each row adds ${d} seats.`, `From row 1 to row ${n} the amount is added ${n - 1} times: ${d} × ${n - 1} = ${d * (n - 1)}.`, `Row ${n}: ${a} + ${d * (n - 1)} = ${a + (n - 1) * d}.`] }),
     check: ({ a, d, n }, x) => (x - a) % d === 0 && (x - a) / d + 1 === n }),
 
-  fam({ id: 'g7.whole.odd-term-out', skill: 'G7_NUMBER_SEQUENCES', outcome: 'G7.WHOLE.g', rung: 3, form: 'word',
-    draw: () => { const a = randInt(3, 20), d = randInt(3, 9), j = pick([2, 3]), e = pick([-2, -1, 1, 2]); return { a, d, j, e, p: person() }; },
+  fam({ id: 'g7.whole.odd-term-out', skill: 'G7_NUMBER_SEQUENCES', outcome: 'MATH.G7.NUMBER.WHOLE_NUMBERS.g', cskill: 'MATH.G7.NUMBER.WHOLE_NUMBERS.SEQ_EXTEND_RULE', rung: 3, form: 'word',
+    draw: () => { const a = randInt(3, 20), d = randInt(7, 9), j = pick([2, 3]), e = pick([-4, -3, 3, 4]); return { a, d, j, e, p: person() }; },
     make: ({ a, d, j, e, p }) => {
       const terms = Array.from({ length: 6 }, (_, i) => a + i * d); const shown = [...terms]; shown[j] += e;
       return { question: `${p.name} writes a number sequence that goes up by the same amount each time. One term is wrong: ${shown.join(', ')}. Which term does not fit the pattern?`,
         answer: shown[j],
-        wrong: [[shown[j - 1], 'That term fits the pattern. Check the gaps between the terms: one gap is different.'], [shown[j + 1], 'That term fits the pattern. Compare it with the terms after it.'], [terms[j], 'That is the number that should be there. The question asks for the wrong term that was written.']],
+        wrong: [[shown[j - 1], 'That term fits the pattern. Check the gaps between the terms: one gap is different.', 'M_FIRST_GAP_ONLY'], [shown[j + 1], 'That term fits the pattern. Compare it with the terms after it.', 'M_NEIGHBOUR_BLAMED'], [terms[j], 'That is the number that should be there. The question asks for the wrong term that was written.', 'M_GIVES_CORRECT_TERM']],
         hints: ['Find the usual gap from the first two terms.', 'Check each next term against that gap.'],
         steps: [`The first terms ${shown[0]}, ${shown[1]} go up by ${d}.`, `After ${shown[j - 1]} the next term should be ${terms[j]}, but ${shown[j]} is written.`] };
     },
     check: ({ a, d }, x) => (x - a) % d !== 0 }),
 
-  fam({ id: 'g7.whole.rule-fourth-term', skill: 'G7_NUMBER_SEQUENCES', outcome: 'G7.WHOLE.h', rung: 2, form: 'word',
+  fam({ id: 'g7.whole.rule-fourth-term', skill: 'G7_NUMBER_SEQUENCES', outcome: 'MATH.G7.NUMBER.WHOLE_NUMBERS.h', cskill: 'MATH.G7.NUMBER.WHOLE_NUMBERS.SEQ_CREATE_RULE', rung: 2, form: 'word',
     draw: () => { const a = randInt(1, 5), m = pick([2, 3]), c = randInt(1, 4); const t = [a]; for (let i = 0; i < 4; i++) t.push(t[i] * m + c); return distinct(t[3], a + 3 * c, a * m ** 3, t[4], t[2]) ? { a, m, c, t, p: person() } : null; },
     make: ({ a, m, c, t, p }) => ({
       question: `${p.name} makes a sequence with this rule: multiply the last term by ${m}, then add ${c}. The first term is ${a}. What is the fourth term?`,
       answer: t[3],
-      wrong: [[a + 3 * c, `The rule has two parts. This only used the adding part.`], [a * m ** 3, 'The rule has two parts. This only used the multiplying part.'], [t[2], 'That is the third term. Apply the rule once more.']],
+      wrong: [[a + 3 * c, `The rule has two parts. This only used the adding part.`, 'M_ONLY_ADDING_USED'], [a * m ** 3, 'The rule has two parts. This only used the multiplying part.', 'M_ONLY_MULTIPLYING_USED'], [t[2], 'That is the third term. Apply the rule once more.', 'SLIP']],
       hints: ['Find the second term first: use both parts of the rule.', 'Then use the rule again on the second term.'],
       steps: [`Second term: ${a} × ${m} + ${c} = ${t[1]}.`, `Third term: ${t[1]} × ${m} + ${c} = ${t[2]}.`, `Fourth term: ${t[2]} × ${m} + ${c} = ${t[3]}.`] }),
     check: ({ m, c, t }, x) => (x - c) / m === t[2] }),
 
-  fam({ id: 'g7.whole.sticks-rule', skill: 'G7_NUMBER_SEQUENCES', outcome: 'G7.WHOLE.h', rung: 3, form: 'steps',
-    draw: () => { const s = pick([{ n: 'square', f: 4, d: 3 }, { n: 'triangle', f: 3, d: 2 }, { n: 'hexagon', f: 6, d: 5 }]); const k = randInt(12, 20); return { ...s, k, S: s.f + (k - 1) * s.d, p: person() }; },
+  fam({ id: 'g7.whole.sticks-rule', skill: 'G7_NUMBER_SEQUENCES', outcome: 'MATH.G7.NUMBER.WHOLE_NUMBERS.g', cskill: 'MATH.G7.NUMBER.WHOLE_NUMBERS.SEQ_NTH_TERM', rung: 3, form: 'steps',
+    draw: () => { const s = pick([{ n: 'square', f: 4, d: 3 }, { n: 'pentagon', f: 5, d: 4 }, { n: 'hexagon', f: 6, d: 5 }]); const k = randInt(12, 20); return { ...s, k, S: s.f + (k - 1) * s.d, p: person() }; },
     make: ({ n, f, d, k, S, p }) => ({
       question: `${p.name} joins matchsticks to make a row of ${n}s. The first ${n} uses ${f} sticks. Each new ${n} shares a side with the one before, so it adds ${d} sticks. Use this rule to answer.`,
       parts: [
-        { prompt: `How many sticks make a row of 4 ${n}s?`, answer: f + 3 * d, hint: `Start with ${f} and add ${d} three times.`, wrong: [[4 * f, `The ${n}s share sides, so they do not each need ${f} sticks.`], [f + 4 * d, 'The first shape is already in place. Only 3 more are added.'], [f + 3, 'Each new shape adds more than 1 stick.']] },
-        { prompt: `How many sticks make a row of 10 ${n}s?`, answer: f + 9 * d, hint: 'The rule is added once for each shape after the first.', wrong: [[10 * f, 'Shapes in the row share sides. Use the rule.'], [f + 10 * d, 'The first shape is not an addition. Count the added shapes again.'], [10 * d, 'The first shape uses more sticks than a new one adds.']] },
-        { prompt: `${p.name} has ${S} sticks and uses them all. How many ${n}s are in the row?`, answer: k, hint: `Take off the first ${n}, then see how many lots of ${d} fit.`, wrong: [[Math.floor(S / f), `That would give each ${n} its own sticks. They share sides.`], [k - 1, 'Do not forget the first shape.'], [Math.floor(S / d), 'The first shape uses a different number of sticks from the new ones.']] },
+        { prompt: `How many sticks make a row of 4 ${n}s?`, answer: f + 3 * d, hint: `Start with ${f} and add ${d} three times.`, wrong: [[4 * f, `The ${n}s share sides, so they do not each need ${f} sticks.`, 'M_MULTIPLIES_FIRST_TERM'], [f + 4 * d, 'The first shape is already in place. Only 3 more are added.', 'M_COUNT_TERMS_NOT_STEPS'], [f + 3, 'Each new shape adds more than 1 stick.', 'M_DIFFERENCE_IGNORED']] },
+        { prompt: `How many sticks make a row of 10 ${n}s?`, answer: f + 9 * d, hint: 'The rule is added once for each shape after the first.', wrong: [[10 * f, 'Shapes in the row share sides. Use the rule.', 'M_MULTIPLIES_FIRST_TERM'], [f + 10 * d, 'The first shape is not an addition. Count the added shapes again.', 'M_COUNT_TERMS_NOT_STEPS'], [10 * d, 'The first shape uses more sticks than a new one adds.', 'M_FIRST_TERM_LEFT_OUT']] },
+        { prompt: `${p.name} has ${S} sticks and uses them all. How many ${n}s are in the row?`, answer: k, hint: `Take off the first ${n}, then see how many lots of ${d} fit.`, wrong: [[Math.floor(S / f), `That would give each ${n} its own sticks. They share sides.`, 'M_MULTIPLIES_FIRST_TERM'], [k - 1, 'Do not forget the first shape.', 'SLIP'], [Math.floor(S / d), 'The first shape uses a different number of sticks from the new ones.', 'M_FIRST_TERM_LEFT_OUT']] },
       ],
       steps: [`4 shapes: ${f} + 3 × ${d} = ${f + 3 * d}.`, `10 shapes: ${f} + 9 × ${d} = ${f + 9 * d}.`, `${S} − ${f} = ${S - f}, and ${S - f} ÷ ${d} = ${k - 1} added shapes. With the first one: ${k} shapes.`] }),
     check: ({ f, d, k, S }, v) => v[0] === f + 3 * d && v[1] === f + 9 * d && v[2] === k && f + (v[2] - 1) * d === S }),
