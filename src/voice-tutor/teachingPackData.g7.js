@@ -4045,6 +4045,1518 @@ export const TEACHING_PACK_G7 = {
   "sub_strand": "MATH.G7.NUMBER.FRACTIONS",
   "sub_strand_name": "Fractions",
   "status": "draft: written 17 Nov 2026 offline for the Grade 7 pilot; not yet checked by a Kenyan maths teacher; not loaded by the live tutor"
+ },
+ "MATH.G7.NUMBER.DECIMALS.DEC_PLACE_AND_TOTAL_VALUE": {
+  "skill": "MATH.G7.NUMBER.DECIMALS.DEC_PLACE_AND_TOTAL_VALUE",
+  "key_step": "The child reads each row by its place name (tens, ones, tenths, hundredths, thousandths) and writes the digits in place order with the point after the ones.",
+  "floor": {
+   "prerequisite": "Names places of whole numbers.",
+   "question": "What is the place of 7 in 372?",
+   "answer": "tens"
+  },
+  "representations": [
+   "a place value chart with a point",
+   "the digits in order",
+   "the number said aloud"
+  ],
+  "steps": [
+   "Put every row in its place.",
+   "Write the tens, then the ones.",
+   "Put the point.",
+   "Write tenths, hundredths, thousandths."
+  ],
+  "contexts": [
+   "kilograms of sugar",
+   "a long jump",
+   "litres of milk"
+  ],
+  "board": [
+   {
+    "beat": "draw",
+    "do": "Draw a chart: Tens Ones . Tenths Hundredths Thousandths."
+   },
+   {
+    "beat": "point",
+    "do": "Point at the tenths column.",
+    "say": "Which digit goes here?"
+   },
+   {
+    "beat": "pause",
+    "do": "Wait for the child to fill the chart."
+   }
+  ],
+  "misconceptions": [
+   {
+    "code": "MATH.G7.NUMBER.DECIMALS.DEC_PLACE_AND_TOTAL_VALUE.M_DIGITS_READ_TOP_DOWN",
+    "listen_for": [
+     "I wrote them as they were listed"
+    ],
+    "ask": "Do the rows tell you which place each digit is in?",
+    "repair": "Put the rows in place order first.",
+    "error": "Reads the digits of a place value table from the top of the table down instead of by place.",
+    "example": {
+     "question": "A table lists: tenths 7, ones 1, tens 3, hundredths 4. Write the number.",
+     "wrong_answer": "7.134",
+     "correct_answer": "31.74"
+    }
+   },
+   {
+    "code": "MATH.G7.NUMBER.DECIMALS.DEC_PLACE_AND_TOTAL_VALUE.M_TENS_AND_ONES_SWAPPED",
+    "listen_for": [
+     "one then four"
+    ],
+    "ask": "Which comes first, tens or ones?",
+    "repair": "Tens come first.",
+    "error": "Swaps the tens and the ones when writing a number from a table.",
+    "example": {
+     "question": "Write: tens 4, ones 1, tenths 3, hundredths 7, thousandths 7",
+     "wrong_answer": "14.377",
+     "correct_answer": "41.377"
+    }
+   },
+   {
+    "code": "MATH.G7.NUMBER.DECIMALS.DEC_PLACE_AND_TOTAL_VALUE.M_DECIMAL_PLACES_SWAPPED",
+    "listen_for": [
+     "seven tenths"
+    ],
+    "ask": "Which place comes straight after the point?",
+    "repair": "Tenths, then hundredths.",
+    "error": "Swaps tenths and hundredths.",
+    "example": {
+     "question": "Write: ones 4, tenths 3, hundredths 7",
+     "wrong_answer": "4.73",
+     "correct_answer": "4.37"
+    }
+   }
+  ],
+  "checks": [
+   {
+    "question": "Tens 4, ones 1, tenths 3, hundredths 7, thousandths 7: write the number.",
+    "answer": "41.377",
+    "shows": "place order"
+   },
+   {
+    "question": "Total value of the 7 in 4.073",
+    "answer": "0.07",
+    "shows": "total value"
+   }
+  ],
+  "name": "Place value and total value of digits in decimals up to thousandths",
+  "sub_strand": "MATH.G7.NUMBER.DECIMALS",
+  "sub_strand_name": "Decimals",
+  "status": "draft: written 17 Nov 2026 offline for the Grade 7 pilot; not yet checked by a Kenyan maths teacher; not loaded by the live tutor"
+ },
+ "MATH.G7.NUMBER.DECIMALS.DEC_COUNT_TENTHS": {
+  "skill": "MATH.G7.NUMBER.DECIMALS.DEC_COUNT_TENTHS",
+  "key_step": "The child counts each whole as ten tenths and adds the tenths after the point.",
+  "floor": {
+   "prerequisite": "Knows a whole is 10 tenths.",
+   "question": "How many tenths in 1?",
+   "answer": "10"
+  },
+  "representations": [
+   "a bar cut into tenths",
+   "tenths counted",
+   "the decimal"
+  ],
+  "steps": [
+   "Each whole is 10 tenths.",
+   "Count the wholes as tenths.",
+   "Add the tenths after the point.",
+   "Check by shading."
+  ],
+  "contexts": [
+   "kilograms of sugar",
+   "litres of water",
+   "metres of cloth"
+  ],
+  "board": [
+   {
+    "beat": "draw",
+    "do": "Draw 7 bars cut into tenths and part of an 8th."
+   },
+   {
+    "beat": "point",
+    "do": "Point at one whole bar.",
+    "say": "How many tenths in one bar?"
+   },
+   {
+    "beat": "pause",
+    "do": "Wait for the child to count."
+   }
+  ],
+  "misconceptions": [
+   {
+    "code": "MATH.G7.NUMBER.DECIMALS.DEC_COUNT_TENTHS.M_SAME_NUMBER_REPEATED",
+    "listen_for": [
+     "7.7 tenths"
+    ],
+    "ask": "How many tenths in one whole?",
+    "repair": "Count the tenths one whole at a time.",
+    "error": "Gives the decimal itself as the number of tenths.",
+    "example": {
+     "question": "How many tenths are in 7.7?",
+     "wrong_answer": "7.7",
+     "correct_answer": "77"
+    }
+   },
+   {
+    "code": "MATH.G7.NUMBER.DECIMALS.DEC_COUNT_TENTHS.M_TENTHS_HUNDREDTHS_CONFUSED",
+    "listen_for": [
+     "770"
+    ],
+    "ask": "How many hundredths in one tenth?",
+    "repair": "A whole has 10 tenths but 100 hundredths.",
+    "error": "Counts hundredths when asked for tenths.",
+    "example": {
+     "question": "How many tenths are in 7.7?",
+     "wrong_answer": "770",
+     "correct_answer": "77"
+    }
+   },
+   {
+    "code": "MATH.G7.NUMBER.DECIMALS.DEC_COUNT_TENTHS.M_WHOLES_NOT_COUNTED",
+    "listen_for": [
+     "7"
+    ],
+    "ask": "How many tenths in the 7 wholes?",
+    "repair": "Count the wholes too.",
+    "error": "Counts only the digits after the point and leaves out the wholes.",
+    "example": {
+     "question": "How many tenths are in 7.7?",
+     "wrong_answer": "7",
+     "correct_answer": "77"
+    }
+   }
+  ],
+  "checks": [
+   {
+    "question": "How many tenths are in 7.7?",
+    "answer": "77",
+    "shows": "tenths"
+   },
+   {
+    "question": "How many hundredths are in 0.45?",
+    "answer": "45",
+    "shows": "hundredths"
+   }
+  ],
+  "name": "Count how many tenths or hundredths are in a decimal",
+  "sub_strand": "MATH.G7.NUMBER.DECIMALS",
+  "sub_strand_name": "Decimals",
+  "status": "draft: written 17 Nov 2026 offline for the Grade 7 pilot; not yet checked by a Kenyan maths teacher; not loaded by the live tutor"
+ },
+ "MATH.G7.NUMBER.DECIMALS.MULT_DEC_BY_WHOLE": {
+  "skill": "MATH.G7.NUMBER.DECIMALS.MULT_DEC_BY_WHOLE",
+  "key_step": "The child multiplies without the point, then gives the answer the same number of decimal places as the decimal had.",
+  "floor": {
+   "prerequisite": "Multiplies whole numbers.",
+   "question": "35 x 170",
+   "answer": "5,950"
+  },
+  "representations": [
+   "price per kilogram table",
+   "multiply without the point",
+   "estimate"
+  ],
+  "steps": [
+   "Ignore the point.",
+   "Multiply.",
+   "Count the places in the decimal.",
+   "Put the point and estimate to check."
+  ],
+  "contexts": [
+   "beans at a price per kilogram",
+   "tiles in a row",
+   "cloth by the metre"
+  ],
+  "board": [
+   {
+    "beat": "write",
+    "do": "Write 3.5 x 170 and 35 x 170."
+   },
+   {
+    "beat": "point",
+    "do": "Point at the 3.5.",
+    "say": "How many decimal places does it have?"
+   },
+   {
+    "beat": "pause",
+    "do": "Wait for the child to place the point."
+   }
+  ],
+  "misconceptions": [
+   {
+    "code": "MATH.G7.NUMBER.DECIMALS.MULT_DEC_BY_WHOLE.M_FRACTION_PART_DROPPED",
+    "listen_for": [
+     "three kilograms only"
+    ],
+    "ask": "What does the half kilogram cost?",
+    "repair": "Include the decimal part.",
+    "error": "Multiplies the whole part only and drops the decimal part.",
+    "example": {
+     "question": "3.5 kg of beans at sh 170 a kilogram",
+     "wrong_answer": "sh 510",
+     "correct_answer": "sh 595"
+    }
+   },
+   {
+    "code": "MATH.G7.NUMBER.DECIMALS.MULT_DEC_BY_WHOLE.M_ADDED_NOT_MULTIPLIED",
+    "listen_for": [
+     "170 plus 3.5"
+    ],
+    "ask": "Does the price cover each kilogram?",
+    "repair": "Multiply by the number of kilograms.",
+    "error": "Adds where the price is for each unit.",
+    "example": {
+     "question": "3.5 kg at sh 170 for each kilogram",
+     "wrong_answer": "173.5",
+     "correct_answer": "595"
+    }
+   },
+   {
+    "code": "MATH.G7.NUMBER.DECIMALS.MULT_DEC_BY_WHOLE.M_POINT_NOT_MOVED_BACK",
+    "listen_for": [
+     "5950"
+    ],
+    "ask": "Is 3.5 kg at sh 170 more than sh 1,000?",
+    "repair": "Give the answer one decimal place less.",
+    "error": "Puts the decimal point in the wrong place after multiplying without it.",
+    "example": {
+     "question": "3.5 x 170",
+     "wrong_answer": "5950",
+     "correct_answer": "595"
+    }
+   },
+   {
+    "code": "MATH.G7.NUMBER.DECIMALS.MULT_DEC_BY_WHOLE.M_DIVIDED_NOT_MULTIPLIED",
+    "listen_for": [
+     "40"
+    ],
+    "ask": "Do you know the number of tiles?",
+    "repair": "Multiply the number of tiles by the width.",
+    "error": "Divides where the amount is repeated.",
+    "example": {
+     "question": "10 tiles of 0.25 m in a row: how long?",
+     "wrong_answer": "40",
+     "correct_answer": "2.5"
+    }
+   }
+  ],
+  "checks": [
+   {
+    "question": "3.5 x 170",
+    "answer": "595",
+    "shows": "point back"
+   },
+   {
+    "question": "10 tiles of 0.25 m in a row: length?",
+    "answer": "2.5 m",
+    "shows": "multiply"
+   }
+  ],
+  "name": "Multiply a decimal by a whole number",
+  "sub_strand": "MATH.G7.NUMBER.DECIMALS",
+  "sub_strand_name": "Decimals",
+  "status": "draft: written 17 Nov 2026 offline for the Grade 7 pilot; not yet checked by a Kenyan maths teacher; not loaded by the live tutor"
+ },
+ "MATH.G7.NUMBER.DECIMALS.MULT_DEC_BY_DEC": {
+  "skill": "MATH.G7.NUMBER.DECIMALS.MULT_DEC_BY_DEC",
+  "key_step": "The child multiplies without the points and counts the decimal places of both factors for the product.",
+  "floor": {
+   "prerequisite": "Multiplies a decimal by a whole number.",
+   "question": "0.6 x 4",
+   "answer": "2.4"
+  },
+  "representations": [
+   "an area grid",
+   "multiply without points",
+   "estimate"
+  ],
+  "steps": [
+   "Ignore both points.",
+   "Multiply.",
+   "Add the decimal places of both factors.",
+   "Check the size."
+  ],
+  "contexts": [
+   "area of a garden",
+   "cloth of width and length",
+   "a mat"
+  ],
+  "board": [
+   {
+    "beat": "draw",
+    "do": "Draw a rectangle 0.6 by 0.4 on a hundred square."
+   },
+   {
+    "beat": "point",
+    "do": "Point at the shaded part.",
+    "say": "How many hundredths is it?"
+   },
+   {
+    "beat": "pause",
+    "do": "Wait for the child to say."
+   }
+  ],
+  "misconceptions": [
+   {
+    "code": "MATH.G7.NUMBER.DECIMALS.MULT_DEC_BY_DEC.M_POINT_FROM_ONE_FACTOR_ONLY",
+    "listen_for": [
+     "0.024"
+    ],
+    "ask": "How many places in each number?",
+    "repair": "Add the places of both.",
+    "error": "Counts the decimal places of one factor only.",
+    "example": {
+     "question": "0.6 x 0.4",
+     "wrong_answer": "2.4",
+     "correct_answer": "0.24"
+    }
+   },
+   {
+    "code": "MATH.G7.NUMBER.DECIMALS.MULT_DEC_BY_DEC.M_PRODUCT_MUST_BE_BIGGER",
+    "listen_for": [
+     "2.5"
+    ],
+    "ask": "Is half of a half bigger or smaller?",
+    "repair": "The product can be smaller.",
+    "error": "Believes a product is always bigger than both factors.",
+    "example": {
+     "question": "0.5 x 0.5",
+     "wrong_answer": "2.5",
+     "correct_answer": "0.25"
+    }
+   },
+   {
+    "code": "MATH.G7.NUMBER.DECIMALS.MULT_DEC_BY_DEC.M_WRONG_QUANTITY_MULTIPLIED",
+    "listen_for": [
+     "216"
+    ],
+    "ask": "Is the price for each metre or each square metre?",
+    "repair": "Use the area.",
+    "error": "Multiplies a price by the length instead of the area.",
+    "example": {
+     "question": "Grass at sh 60 a square metre, garden 3.6 m by 2.5 m",
+     "wrong_answer": "sh 216",
+     "correct_answer": "sh 540"
+    }
+   },
+   {
+    "code": "MATH.G7.NUMBER.DECIMALS.MULT_DEC_BY_DEC.M_PERIMETER_FOR_AREA",
+    "listen_for": [
+     "12.2"
+    ],
+    "ask": "Is the garden covered or fenced?",
+    "repair": "Area is length times width.",
+    "error": "Uses the distance round instead of the area.",
+    "example": {
+     "question": "Area of a garden 3.6 m by 2.5 m",
+     "wrong_answer": "12.2 m2",
+     "correct_answer": "9 m2"
+    }
+   }
+  ],
+  "checks": [
+   {
+    "question": "0.6 x 0.4",
+    "answer": "0.24",
+    "shows": "two places"
+   },
+   {
+    "question": "Area of a garden 3.6 m by 2.5 m",
+    "answer": "9 m2",
+    "shows": "area"
+   }
+  ],
+  "name": "Multiply a decimal by a decimal",
+  "sub_strand": "MATH.G7.NUMBER.DECIMALS",
+  "sub_strand_name": "Decimals",
+  "status": "draft: written 17 Nov 2026 offline for the Grade 7 pilot; not yet checked by a Kenyan maths teacher; not loaded by the live tutor"
+ },
+ "MATH.G7.NUMBER.DECIMALS.DIV_DEC_BY_WHOLE": {
+  "skill": "MATH.G7.NUMBER.DECIMALS.DIV_DEC_BY_WHOLE",
+  "key_step": "The child divides digit by digit with the point in the quotient above the point in the dividend, and continues past the remainder with zeros.",
+  "floor": {
+   "prerequisite": "Divides whole numbers.",
+   "question": "96 / 8",
+   "answer": "12"
+  },
+  "representations": [
+   "sharing into bottles",
+   "long division",
+   "multiply back to check"
+  ],
+  "steps": [
+   "Put the point above the point.",
+   "Divide digit by digit.",
+   "Add a zero to continue after the remainder.",
+   "Multiply back."
+  ],
+  "contexts": [
+   "milk in bottles",
+   "rice in bags",
+   "ribbon in pieces"
+  ],
+  "board": [
+   {
+    "beat": "write",
+    "do": "Write 12 / 8 and 12.0 / 8."
+   },
+   {
+    "beat": "point",
+    "do": "Point at the remainder 4.",
+    "say": "What can we do with the remainder?"
+   },
+   {
+    "beat": "pause",
+    "do": "Wait for the child to continue."
+   }
+  ],
+  "misconceptions": [
+   {
+    "code": "MATH.G7.NUMBER.DECIMALS.DIV_DEC_BY_WHOLE.M_MULTIPLIED_NOT_DIVIDED",
+    "listen_for": [
+     "96"
+    ],
+    "ask": "Is the share bigger or smaller than the amount?",
+    "repair": "Sharing is dividing.",
+    "error": "Multiplies where the amount is shared.",
+    "example": {
+     "question": "12 litres shared into 8 bottles",
+     "wrong_answer": "96",
+     "correct_answer": "1.5"
+    }
+   },
+   {
+    "code": "MATH.G7.NUMBER.DECIMALS.DIV_DEC_BY_WHOLE.M_DIVIDEND_GIVEN_AS_SHARE",
+    "listen_for": [
+     "12 litres each"
+    ],
+    "ask": "Does each bottle hold all of the milk?",
+    "repair": "Divide among the bottles.",
+    "error": "Gives the whole amount as the share.",
+    "example": {
+     "question": "12 litres shared into 8 bottles",
+     "wrong_answer": "12",
+     "correct_answer": "1.5"
+    }
+   },
+   {
+    "code": "MATH.G7.NUMBER.DECIMALS.DIV_DEC_BY_WHOLE.M_POINT_LOST_IN_QUOTIENT",
+    "listen_for": [
+     "15"
+    ],
+    "ask": "Is 15 litres sensible for one bottle?",
+    "repair": "Put the point after the 1.",
+    "error": "Leaves out the point in the quotient.",
+    "example": {
+     "question": "12 / 8",
+     "wrong_answer": "15",
+     "correct_answer": "1.5"
+    }
+   },
+   {
+    "code": "MATH.G7.NUMBER.DECIMALS.DIV_DEC_BY_WHOLE.M_POINT_PLACED_WRONG",
+    "listen_for": [
+     "0.15"
+    ],
+    "ask": "What is 0.15 x 8?",
+    "repair": "Multiply back to check.",
+    "error": "Puts the point one place too far in the quotient.",
+    "example": {
+     "question": "12 / 8",
+     "wrong_answer": "0.15",
+     "correct_answer": "1.5"
+    }
+   },
+   {
+    "code": "MATH.G7.NUMBER.DECIMALS.DIV_DEC_BY_WHOLE.M_SUBTRACTED_NOT_DIVIDED",
+    "listen_for": [
+     "497.5"
+    ],
+    "ask": "How do we find the price of one?",
+    "repair": "Divide the money by the kilograms.",
+    "error": "Subtracts where the amount is shared or priced per unit.",
+    "example": {
+     "question": "sh 500 for 2.5 kg: price of 1 kg",
+     "wrong_answer": "sh 497.5",
+     "correct_answer": "sh 200"
+    }
+   }
+  ],
+  "checks": [
+   {
+    "question": "12 / 8",
+    "answer": "1.5",
+    "shows": "decimal quotient"
+   },
+   {
+    "question": "sh 500 for 2.5 kg: price of 1 kg",
+    "answer": "sh 200",
+    "shows": "unit price"
+   }
+  ],
+  "name": "Divide a decimal or a whole number by a whole number to get a decimal",
+  "sub_strand": "MATH.G7.NUMBER.DECIMALS",
+  "sub_strand_name": "Decimals",
+  "status": "draft: written 17 Nov 2026 offline for the Grade 7 pilot; not yet checked by a Kenyan maths teacher; not loaded by the live tutor"
+ },
+ "MATH.G7.NUMBER.DECIMALS.DIV_BY_DECIMAL": {
+  "skill": "MATH.G7.NUMBER.DECIMALS.DIV_BY_DECIMAL",
+  "key_step": "The child moves the point in both numbers the same number of places until the divisor is whole, then divides.",
+  "floor": {
+   "prerequisite": "Multiplies by 10.",
+   "question": "7.5 x 10",
+   "answer": "75"
+  },
+  "representations": [
+   "how many fit on a ribbon",
+   "equal numbers shifted",
+   "division"
+  ],
+  "steps": [
+   "Move the point in the divisor to make it whole.",
+   "Move the point in the dividend the same number of places.",
+   "Divide.",
+   "Check by multiplying."
+  ],
+  "contexts": [
+   "ribbon pieces",
+   "price per kilogram",
+   "water in cups"
+  ],
+  "board": [
+   {
+    "beat": "draw",
+    "do": "Draw a 7.5 m ribbon with 0.5 m marks."
+   },
+   {
+    "beat": "point",
+    "do": "Point at the first mark.",
+    "say": "How many pieces make a metre?"
+   },
+   {
+    "beat": "pause",
+    "do": "Wait for the child to count."
+   }
+  ],
+  "misconceptions": [
+   {
+    "code": "MATH.G7.NUMBER.DECIMALS.DIV_BY_DECIMAL.M_POINT_MOVED_ONE_NUMBER",
+    "listen_for": [
+     "1.5"
+    ],
+    "ask": "Did you move the point in both numbers?",
+    "repair": "Move both the same way.",
+    "error": "Moves the point in the divisor only.",
+    "example": {
+     "question": "7.5 / 0.5",
+     "wrong_answer": "1.5",
+     "correct_answer": "15"
+    }
+   },
+   {
+    "code": "MATH.G7.NUMBER.DECIMALS.DIV_BY_DECIMAL.M_REPEATED_SUBTRACTION_ONCE",
+    "listen_for": [
+     "7"
+    ],
+    "ask": "How many times can 0.5 be taken away?",
+    "repair": "Count how many fit.",
+    "error": "Subtracts the piece once instead of counting how many fit.",
+    "example": {
+     "question": "A 7.5 m ribbon cut into 0.5 m pieces",
+     "wrong_answer": "7",
+     "correct_answer": "15"
+    }
+   },
+   {
+    "code": "MATH.G7.NUMBER.DECIMALS.DIV_BY_DECIMAL.M_MULTIPLIED_INSTEAD_OF_COUNTING",
+    "listen_for": [
+     "3.75"
+    ],
+    "ask": "Does multiplying count pieces?",
+    "repair": "Divide to count.",
+    "error": "Multiplies to count how many pieces fit.",
+    "example": {
+     "question": "A 7.5 m ribbon cut into 0.5 m pieces",
+     "wrong_answer": "3.75",
+     "correct_answer": "15"
+    }
+   }
+  ],
+  "checks": [
+   {
+    "question": "A 7.5 m ribbon cut into 0.5 m pieces: how many?",
+    "answer": "15",
+    "shows": "how many fit"
+   },
+   {
+    "question": "4.5 / 0.9",
+    "answer": "5",
+    "shows": "point in both"
+   }
+  ],
+  "name": "Divide by a decimal",
+  "sub_strand": "MATH.G7.NUMBER.DECIMALS",
+  "sub_strand_name": "Decimals",
+  "status": "draft: written 17 Nov 2026 offline for the Grade 7 pilot; not yet checked by a Kenyan maths teacher; not loaded by the live tutor"
+ },
+ "MATH.G7.NUMBER.DECIMALS.DEC_DIVISION_SIZE": {
+  "skill": "MATH.G7.NUMBER.DECIMALS.DEC_DIVISION_SIZE",
+  "key_step": "The child asks how many lots fit and says the answer is larger when dividing by less than 1.",
+  "floor": {
+   "prerequisite": "Knows halves in a whole.",
+   "question": "How many halves in 3?",
+   "answer": "6"
+  },
+  "representations": [
+   "strips fitting in 6",
+   "a bigger answer",
+   "moving both points"
+  ],
+  "steps": [
+   "Ask: how many lots of 0.2 are in 6?",
+   "There are 5 in each whole.",
+   "So the answer is more than 6.",
+   "Move both points to check."
+  ],
+  "contexts": [
+   "packets of 0.2 kg",
+   "cups of 0.25 litres",
+   "strips of 0.5 m"
+  ],
+  "board": [
+   {
+    "beat": "draw",
+    "do": "Draw 6 wholes each split into 5 pieces of 0.2."
+   },
+   {
+    "beat": "point",
+    "do": "Point at one whole.",
+    "say": "How many 0.2s fit?"
+   },
+   {
+    "beat": "pause",
+    "do": "Wait for the child to say."
+   }
+  ],
+  "misconceptions": [
+   {
+    "code": "MATH.G7.NUMBER.DECIMALS.DEC_DIVISION_SIZE.M_DIVIDING_ALWAYS_BIGGER",
+    "listen_for": [
+     "always bigger"
+    ],
+    "ask": "What happens when you share 6 among 2?",
+    "repair": "Dividing by more than 1 gives smaller parts.",
+    "error": "Believes dividing always gives a bigger number.",
+    "example": {
+     "question": "Dividing by 2: bigger or smaller?",
+     "wrong_answer": "bigger",
+     "correct_answer": "smaller"
+    }
+   },
+   {
+    "code": "MATH.G7.NUMBER.DECIMALS.DEC_DIVISION_SIZE.M_DIVISION_ALWAYS_SMALLER_DEC",
+    "listen_for": [
+     "has to be smaller"
+    ],
+    "ask": "How many 0.2s fit in one whole?",
+    "repair": "Dividing by less than 1 gives more.",
+    "error": "Believes division always makes the answer smaller.",
+    "example": {
+     "question": "6 / 0.2",
+     "wrong_answer": "3",
+     "correct_answer": "30"
+    }
+   },
+   {
+    "code": "MATH.G7.NUMBER.DECIMALS.DEC_DIVISION_SIZE.M_POINT_MOVED_WITHOUT_RULE",
+    "listen_for": [
+     "move the point"
+    ],
+    "ask": "Did the divisor change too?",
+    "repair": "Move both points the same way.",
+    "error": "Moves the point to make the dividend bigger without moving it in the divisor.",
+    "example": {
+     "question": "6 / 0.2",
+     "wrong_answer": "300",
+     "correct_answer": "30"
+    }
+   }
+  ],
+  "checks": [
+   {
+    "question": "6 / 0.2",
+    "answer": "30",
+    "shows": "larger answer"
+   },
+   {
+    "question": "Is 8 / 4 bigger or smaller than 8?",
+    "answer": "smaller",
+    "shows": "divisor over 1"
+   }
+  ],
+  "name": "Decide whether dividing by a decimal gives a bigger or smaller answer",
+  "sub_strand": "MATH.G7.NUMBER.DECIMALS",
+  "sub_strand_name": "Decimals",
+  "status": "draft: written 17 Nov 2026 offline for the Grade 7 pilot; not yet checked by a Kenyan maths teacher; not loaded by the live tutor"
+ },
+ "MATH.G7.NUMBER.SQUARES_AND_SQUARE_ROOTS.SQUARE_WHOLE_NUMBER": {
+  "skill": "MATH.G7.NUMBER.SQUARES_AND_SQUARE_ROOTS.SQUARE_WHOLE_NUMBER",
+  "key_step": "The child says a square is the number multiplied by itself and shows it as a square of dots.",
+  "floor": {
+   "prerequisite": "Knows multiplication facts.",
+   "question": "7 x 7",
+   "answer": "49"
+  },
+  "representations": [
+   "a square of dots",
+   "the product",
+   "the area of a tile"
+  ],
+  "steps": [
+   "Draw a square with sides of that number.",
+   "Count the dots as rows of that number.",
+   "Write the multiplication.",
+   "For multiples of 10 count the zeros."
+  ],
+  "contexts": [
+   "tiles on a floor",
+   "plots of land",
+   "seedlings in rows"
+  ],
+  "board": [
+   {
+    "beat": "draw",
+    "do": "Draw a 7 by 7 square of dots."
+   },
+   {
+    "beat": "point",
+    "do": "Point at one row.",
+    "say": "How many rows are there?"
+   },
+   {
+    "beat": "pause",
+    "do": "Wait for the child to say."
+   }
+  ],
+  "misconceptions": [
+   {
+    "code": "MATH.G7.NUMBER.SQUARES_AND_SQUARE_ROOTS.SQUARE_WHOLE_NUMBER.M_SQUARE_IS_DOUBLE",
+    "listen_for": [
+     "7 squared is 14"
+    ],
+    "ask": "How many dots are in a 7 by 7 square?",
+    "repair": "A square is 7 rows of 7.",
+    "error": "Doubles the number instead of multiplying it by itself.",
+    "example": {
+     "question": "Work out 7 squared.",
+     "wrong_answer": "14",
+     "correct_answer": "49"
+    }
+   },
+   {
+    "code": "MATH.G7.NUMBER.SQUARES_AND_SQUARE_ROOTS.SQUARE_WHOLE_NUMBER.M_ZEROS_NOT_SQUARED",
+    "listen_for": [
+     "300"
+    ],
+    "ask": "What is 30 x 30?",
+    "repair": "Both numbers have a zero: two zeros.",
+    "error": "Squares the digit but keeps only the zeros of the number.",
+    "example": {
+     "question": "Work out 30 squared.",
+     "wrong_answer": "300",
+     "correct_answer": "900"
+    }
+   }
+  ],
+  "checks": [
+   {
+    "question": "7 squared",
+    "answer": "49",
+    "shows": "multiply by itself"
+   },
+   {
+    "question": "30 squared",
+    "answer": "900",
+    "shows": "zeros"
+   }
+  ],
+  "name": "Find the square of a whole number",
+  "sub_strand": "MATH.G7.NUMBER.SQUARES_AND_SQUARE_ROOTS",
+  "sub_strand_name": "Squares and Square Roots",
+  "status": "draft: written 17 Nov 2026 offline for the Grade 7 pilot; not yet checked by a Kenyan maths teacher; not loaded by the live tutor"
+ },
+ "MATH.G7.NUMBER.SQUARES_AND_SQUARE_ROOTS.SQUARE_FRACTION": {
+  "skill": "MATH.G7.NUMBER.SQUARES_AND_SQUARE_ROOTS.SQUARE_FRACTION",
+  "key_step": "The child multiplies the fraction by itself, top by top and bottom by bottom.",
+  "floor": {
+   "prerequisite": "Multiplies fractions.",
+   "question": "1/2 x 1/2",
+   "answer": "1/4"
+  },
+  "representations": [
+   "a square cut into parts",
+   "the product",
+   "the simplified fraction"
+  ],
+  "steps": [
+   "Write the fraction twice.",
+   "Multiply the numerators.",
+   "Multiply the denominators.",
+   "Simplify."
+  ],
+  "contexts": [
+   "part of a shamba",
+   "a folded paper",
+   "a tile"
+  ],
+  "board": [
+   {
+    "beat": "draw",
+    "do": "Draw a square, shade 3/4 of one side and 3/4 of the other."
+   },
+   {
+    "beat": "point",
+    "do": "Point at the double shaded part.",
+    "say": "What part of the whole square is this?"
+   },
+   {
+    "beat": "pause",
+    "do": "Wait for the child to say."
+   }
+  ],
+  "misconceptions": [
+   {
+    "code": "MATH.G7.NUMBER.SQUARES_AND_SQUARE_ROOTS.SQUARE_FRACTION.M_ONLY_NUMERATOR_SQUARED",
+    "listen_for": [
+     "9/4"
+    ],
+    "ask": "Is 9/4 less than 1?",
+    "repair": "Square both numbers.",
+    "error": "Squares the numerator only.",
+    "example": {
+     "question": "Square of 3/4",
+     "wrong_answer": "9/4",
+     "correct_answer": "9/16"
+    }
+   },
+   {
+    "code": "MATH.G7.NUMBER.SQUARES_AND_SQUARE_ROOTS.SQUARE_FRACTION.M_ONLY_DENOMINATOR_SQUARED",
+    "listen_for": [
+     "3/16"
+    ],
+    "ask": "Did the top change?",
+    "repair": "Both numbers multiply.",
+    "error": "Squares the denominator only.",
+    "example": {
+     "question": "Square of 3/4",
+     "wrong_answer": "3/16",
+     "correct_answer": "9/16"
+    }
+   },
+   {
+    "code": "MATH.G7.NUMBER.SQUARES_AND_SQUARE_ROOTS.SQUARE_FRACTION.M_NUMERATOR_DOUBLED",
+    "listen_for": [
+     "6/4"
+    ],
+    "ask": "Is squared the same as doubled?",
+    "repair": "Multiply the fraction by itself.",
+    "error": "Doubles the numerator.",
+    "example": {
+     "question": "Square of 3/4",
+     "wrong_answer": "6/4",
+     "correct_answer": "9/16"
+    }
+   }
+  ],
+  "checks": [
+   {
+    "question": "Square of 3/4",
+    "answer": "9/16",
+    "shows": "both numbers"
+   },
+   {
+    "question": "Square of 2/5",
+    "answer": "4/25",
+    "shows": "both numbers"
+   }
+  ],
+  "name": "Find the square of a fraction",
+  "sub_strand": "MATH.G7.NUMBER.SQUARES_AND_SQUARE_ROOTS",
+  "sub_strand_name": "Squares and Square Roots",
+  "status": "draft: written 17 Nov 2026 offline for the Grade 7 pilot; not yet checked by a Kenyan maths teacher; not loaded by the live tutor"
+ },
+ "MATH.G7.NUMBER.SQUARES_AND_SQUARE_ROOTS.SQUARE_DECIMAL": {
+  "skill": "MATH.G7.NUMBER.SQUARES_AND_SQUARE_ROOTS.SQUARE_DECIMAL",
+  "key_step": "The child squares without the point and gives the square twice as many decimal places as the number.",
+  "floor": {
+   "prerequisite": "Multiplies decimals.",
+   "question": "0.3 x 0.3",
+   "answer": "0.09"
+  },
+  "representations": [
+   "an area grid",
+   "digits without the point",
+   "the square"
+  ],
+  "steps": [
+   "Ignore the point and square.",
+   "Count the decimal places in the number.",
+   "Double the count.",
+   "Check the size."
+  ],
+  "contexts": [
+   "a square garden",
+   "a square mat",
+   "a tile"
+  ],
+  "board": [
+   {
+    "beat": "draw",
+    "do": "Draw a square with side 1.5 m split into 1 and 0.5."
+   },
+   {
+    "beat": "point",
+    "do": "Point at the 0.5 by 0.5 part.",
+    "say": "How big is this part?"
+   },
+   {
+    "beat": "pause",
+    "do": "Wait for the child to say."
+   }
+  ],
+  "misconceptions": [
+   {
+    "code": "MATH.G7.NUMBER.SQUARES_AND_SQUARE_ROOTS.SQUARE_DECIMAL.M_POINT_PLACES_NOT_DOUBLED",
+    "listen_for": [
+     "0.09"
+    ],
+    "ask": "How many places does 0.03 have, and how many in the product?",
+    "repair": "Double the places.",
+    "error": "Gives the square the same number of decimal places as the number.",
+    "example": {
+     "question": "Square of 0.03",
+     "wrong_answer": "0.09",
+     "correct_answer": "0.0009"
+    }
+   },
+   {
+    "code": "MATH.G7.NUMBER.SQUARES_AND_SQUARE_ROOTS.SQUARE_DECIMAL.M_DOUBLED_NOT_SQUARED",
+    "listen_for": [
+     "3"
+    ],
+    "ask": "What is 1.5 x 1.5?",
+    "repair": "Multiply the side by itself.",
+    "error": "Doubles the side to get the area of a square.",
+    "example": {
+     "question": "Area of a square with side 1.5 m",
+     "wrong_answer": "3 m2",
+     "correct_answer": "2.25 m2"
+    }
+   },
+   {
+    "code": "MATH.G7.NUMBER.SQUARES_AND_SQUARE_ROOTS.SQUARE_DECIMAL.M_PERIMETER_FOR_AREA_SQ",
+    "listen_for": [
+     "6 m"
+    ],
+    "ask": "Is the garden covered or fenced?",
+    "repair": "Area is side times side.",
+    "error": "Gives the distance round when the area is asked.",
+    "example": {
+     "question": "Area of a square with side 1.5 m",
+     "wrong_answer": "6 m",
+     "correct_answer": "2.25 m2"
+    }
+   },
+   {
+    "code": "MATH.G7.NUMBER.SQUARES_AND_SQUARE_ROOTS.SQUARE_DECIMAL.M_ADDED_NOT_SQUARED",
+    "listen_for": [
+     "add 3"
+    ],
+    "ask": "What is the new side?",
+    "repair": "Find the new side, then square it.",
+    "error": "Adds to the area instead of squaring the new side.",
+    "example": {
+     "question": "Side 1.5 m doubled: the new area",
+     "wrong_answer": "2.25 + 3",
+     "correct_answer": "9"
+    }
+   },
+   {
+    "code": "MATH.G7.NUMBER.SQUARES_AND_SQUARE_ROOTS.SQUARE_DECIMAL.M_CUBED_NOT_SQUARED",
+    "listen_for": [
+     "times 8"
+    ],
+    "ask": "How many directions does an area have?",
+    "repair": "Two directions: times 2 times 2.",
+    "error": "Multiplies the area by 8 when the side doubles.",
+    "example": {
+     "question": "Side 1.5 m doubled: the new area",
+     "wrong_answer": "18",
+     "correct_answer": "9"
+    }
+   },
+   {
+    "code": "MATH.G7.NUMBER.SQUARES_AND_SQUARE_ROOTS.SQUARE_DECIMAL.M_AREA_DOUBLES_WITH_SIDE",
+    "listen_for": [
+     "18"
+    ],
+    "ask": "How many old squares fit in the new one?",
+    "repair": "Square the new side.",
+    "error": "Believes doubling the side doubles the area.",
+    "example": {
+     "question": "Area of a square of side 3 m is 9. New side double: area?",
+     "wrong_answer": "18",
+     "correct_answer": "36"
+    }
+   }
+  ],
+  "checks": [
+   {
+    "question": "Square of 0.03",
+    "answer": "0.0009",
+    "shows": "doubled places"
+   },
+   {
+    "question": "Area of a square garden with side 1.5 m",
+    "answer": "2.25 m2",
+    "shows": "area"
+   }
+  ],
+  "name": "Find the square of a decimal and use it for the area of a square",
+  "sub_strand": "MATH.G7.NUMBER.SQUARES_AND_SQUARE_ROOTS",
+  "sub_strand_name": "Squares and Square Roots",
+  "status": "draft: written 17 Nov 2026 offline for the Grade 7 pilot; not yet checked by a Kenyan maths teacher; not loaded by the live tutor"
+ },
+ "MATH.G7.NUMBER.SQUARES_AND_SQUARE_ROOTS.ROOT_WHOLE_NUMBER": {
+  "skill": "MATH.G7.NUMBER.SQUARES_AND_SQUARE_ROOTS.ROOT_WHOLE_NUMBER",
+  "key_step": "The child finds the number that multiplied by itself gives the perfect square and checks by squaring.",
+  "floor": {
+   "prerequisite": "Knows squares.",
+   "question": "22 x 22",
+   "answer": "484"
+  },
+  "representations": [
+   "a square of known area",
+   "trial and check",
+   "the root"
+  ],
+  "steps": [
+   "Estimate between known squares.",
+   "Try a number.",
+   "Square it to check.",
+   "Write the root."
+  ],
+  "contexts": [
+   "a square plot",
+   "a floor",
+   "a tile"
+  ],
+  "board": [
+   {
+    "beat": "draw",
+    "do": "Draw a square with area 484 and ask for its side."
+   },
+   {
+    "beat": "point",
+    "do": "Point at the side.",
+    "say": "Which number times itself gives 484?"
+   },
+   {
+    "beat": "pause",
+    "do": "Wait for the child to try."
+   }
+  ],
+  "misconceptions": [
+   {
+    "code": "MATH.G7.NUMBER.SQUARES_AND_SQUARE_ROOTS.ROOT_WHOLE_NUMBER.M_HALVED_NOT_ROOTED",
+    "listen_for": [
+     "242"
+    ],
+    "ask": "What is 242 x 242?",
+    "repair": "Test your root by squaring it.",
+    "error": "Halves the number instead of taking its square root.",
+    "example": {
+     "question": "Square root of 484",
+     "wrong_answer": "242",
+     "correct_answer": "22"
+    }
+   },
+   {
+    "code": "MATH.G7.NUMBER.SQUARES_AND_SQUARE_ROOTS.ROOT_WHOLE_NUMBER.M_ROOT_OF_SUM_IS_SUM_OF_ROOTS",
+    "listen_for": [
+     "6 plus 8"
+    ],
+    "ask": "What is 36 + 64 first?",
+    "repair": "Add first, then take the root.",
+    "error": "Believes the root of a sum is the sum of the roots.",
+    "example": {
+     "question": "Root of 36 + 64",
+     "wrong_answer": "14",
+     "correct_answer": "10"
+    }
+   },
+   {
+    "code": "MATH.G7.NUMBER.SQUARES_AND_SQUARE_ROOTS.ROOT_WHOLE_NUMBER.M_ROOTS_MULTIPLIED_FOR_SUM",
+    "listen_for": [
+     "48"
+    ],
+    "ask": "Was it a product or a sum?",
+    "repair": "Root of a sum is of the total.",
+    "error": "Multiplies the roots when the numbers were added.",
+    "example": {
+     "question": "Root of 36 + 64",
+     "wrong_answer": "48",
+     "correct_answer": "10"
+    }
+   }
+  ],
+  "checks": [
+   {
+    "question": "Square root of 484",
+    "answer": "22",
+    "shows": "root"
+   },
+   {
+    "question": "Square root of 36 + 64",
+    "answer": "10",
+    "shows": "sum first"
+   }
+  ],
+  "name": "Find the square root of a perfect square",
+  "sub_strand": "MATH.G7.NUMBER.SQUARES_AND_SQUARE_ROOTS",
+  "sub_strand_name": "Squares and Square Roots",
+  "status": "draft: written 17 Nov 2026 offline for the Grade 7 pilot; not yet checked by a Kenyan maths teacher; not loaded by the live tutor"
+ },
+ "MATH.G7.NUMBER.SQUARES_AND_SQUARE_ROOTS.ROOT_FRACTION_DECIMAL": {
+  "skill": "MATH.G7.NUMBER.SQUARES_AND_SQUARE_ROOTS.ROOT_FRACTION_DECIMAL",
+  "key_step": "The child takes the root of the numerator and the denominator, or halves the decimal places, and checks by squaring.",
+  "floor": {
+   "prerequisite": "Finds roots of whole numbers.",
+   "question": "Square root of 16",
+   "answer": "4"
+  },
+  "representations": [
+   "a square with fraction sides",
+   "root of top and bottom",
+   "a check by squaring"
+  ],
+  "steps": [
+   "For a fraction take the root of each part.",
+   "For a decimal halve the places.",
+   "Check by squaring.",
+   "Write the root."
+  ],
+  "contexts": [
+   "a square plot of fractional area",
+   "a mat",
+   "a tile"
+  ],
+  "board": [
+   {
+    "beat": "write",
+    "do": "Write 9/16 and 0.09."
+   },
+   {
+    "beat": "point",
+    "do": "Point at 9/16.",
+    "say": "Which numbers multiplied by themselves give 9 and 16?"
+   },
+   {
+    "beat": "pause",
+    "do": "Wait for the child to find them."
+   }
+  ],
+  "misconceptions": [
+   {
+    "code": "MATH.G7.NUMBER.SQUARES_AND_SQUARE_ROOTS.ROOT_FRACTION_DECIMAL.M_ROOT_NUMERATOR_ONLY",
+    "listen_for": [
+     "3/16"
+    ],
+    "ask": "Did you take the root of the bottom?",
+    "repair": "Both parts.",
+    "error": "Takes the root of the numerator only.",
+    "example": {
+     "question": "Square root of 9/16",
+     "wrong_answer": "3/16",
+     "correct_answer": "3/4"
+    }
+   },
+   {
+    "code": "MATH.G7.NUMBER.SQUARES_AND_SQUARE_ROOTS.ROOT_FRACTION_DECIMAL.M_ROOT_DECIMAL_POINT",
+    "listen_for": [
+     "0.03"
+    ],
+    "ask": "What is 0.03 x 0.03?",
+    "repair": "Halve the decimal places.",
+    "error": "Gives the root of a decimal the same number of decimal places as the number.",
+    "example": {
+     "question": "Square root of 0.09",
+     "wrong_answer": "0.03",
+     "correct_answer": "0.3"
+    }
+   }
+  ],
+  "checks": [
+   {
+    "question": "Square root of 9/16",
+    "answer": "3/4",
+    "shows": "both parts"
+   },
+   {
+    "question": "Square root of 0.09",
+    "answer": "0.3",
+    "shows": "halve places"
+   }
+  ],
+  "name": "Find the square root of a perfect-square fraction or decimal",
+  "sub_strand": "MATH.G7.NUMBER.SQUARES_AND_SQUARE_ROOTS",
+  "sub_strand_name": "Squares and Square Roots",
+  "status": "draft: written 17 Nov 2026 offline for the Grade 7 pilot; not yet checked by a Kenyan maths teacher; not loaded by the live tutor"
+ },
+ "MATH.G7.NUMBER.SQUARES_AND_SQUARE_ROOTS.ROOT_IN_CONTEXT": {
+  "skill": "MATH.G7.NUMBER.SQUARES_AND_SQUARE_ROOTS.ROOT_IN_CONTEXT",
+  "key_step": "The child takes the root of the area for the side, then reads the question to see what to do with the side.",
+  "floor": {
+   "prerequisite": "Finds a root.",
+   "question": "Square root of 484",
+   "answer": "22"
+  },
+  "representations": [
+   "a square plot with its side",
+   "a fence round it",
+   "two plots compared"
+  ],
+  "steps": [
+   "Find the side by the root.",
+   "Read what is asked.",
+   "Use 4 sides for a fence.",
+   "Subtract sides to compare plots."
+  ],
+  "contexts": [
+   "a school plot",
+   "fencing",
+   "tiling"
+  ],
+  "board": [
+   {
+    "beat": "draw",
+    "do": "Draw a square plot with area 484 m2."
+   },
+   {
+    "beat": "point",
+    "do": "Point at one side.",
+    "say": "How long is it?"
+   },
+   {
+    "beat": "pause",
+    "do": "Wait for the child to say."
+   }
+  ],
+  "misconceptions": [
+   {
+    "code": "MATH.G7.NUMBER.SQUARES_AND_SQUARE_ROOTS.ROOT_IN_CONTEXT.M_DIVIDED_BY_FOUR_FOR_ROOT",
+    "listen_for": [
+     "121"
+    ],
+    "ask": "What is 121 x 121?",
+    "repair": "Find the root, not a quarter.",
+    "error": "Divides the area by 4 to find a side.",
+    "example": {
+     "question": "A square plot has area 484 m2: find a side",
+     "wrong_answer": "121 m",
+     "correct_answer": "22 m"
+    }
+   },
+   {
+    "code": "MATH.G7.NUMBER.SQUARES_AND_SQUARE_ROOTS.ROOT_IN_CONTEXT.M_TWO_SIDES_FOR_PERIMETER",
+    "listen_for": [
+     "two sides"
+    ],
+    "ask": "How many sides does a square have?",
+    "repair": "Four equal sides.",
+    "error": "Counts two sides for the distance round a square.",
+    "example": {
+     "question": "Fence round a square plot of side 22 m",
+     "wrong_answer": "44 m",
+     "correct_answer": "88 m"
+    }
+   },
+   {
+    "code": "MATH.G7.NUMBER.SQUARES_AND_SQUARE_ROOTS.ROOT_IN_CONTEXT.M_AREA_FOR_PERIMETER",
+    "listen_for": [
+     "484"
+    ],
+    "ask": "Does a fence cover the plot?",
+    "repair": "Fence goes round the edge.",
+    "error": "Gives the area when the distance round is asked.",
+    "example": {
+     "question": "Fence round a square plot of side 22 m",
+     "wrong_answer": "484 m",
+     "correct_answer": "88 m"
+    }
+   },
+   {
+    "code": "MATH.G7.NUMBER.SQUARES_AND_SQUARE_ROOTS.ROOT_IN_CONTEXT.M_SIDE_PLUS_FOUR",
+    "listen_for": [
+     "26"
+    ],
+    "ask": "Four sides of 22 m each?",
+    "repair": "Multiply by 4.",
+    "error": "Adds 4 to the side instead of multiplying by 4.",
+    "example": {
+     "question": "Fence round a square plot of side 22 m",
+     "wrong_answer": "26 m",
+     "correct_answer": "88 m"
+    }
+   },
+   {
+    "code": "MATH.G7.NUMBER.SQUARES_AND_SQUARE_ROOTS.ROOT_IN_CONTEXT.M_AREA_DIFFERENCE_USED",
+    "listen_for": [
+     "288"
+    ],
+    "ask": "Did you find the sides?",
+    "repair": "Take roots first.",
+    "error": "Subtracts the areas to compare sides.",
+    "example": {
+     "question": "Areas 36, 81, 144 and 324 m2: how much longer is the biggest side than the smallest?",
+     "wrong_answer": "288",
+     "correct_answer": "12"
+    }
+   },
+   {
+    "code": "MATH.G7.NUMBER.SQUARES_AND_SQUARE_ROOTS.ROOT_IN_CONTEXT.M_ROOT_OF_DIFFERENCE",
+    "listen_for": [
+     "root of 288"
+    ],
+    "ask": "Is the difference of sides the root of the difference?",
+    "repair": "Root each area, then subtract.",
+    "error": "Takes the root of the difference of the areas.",
+    "example": {
+     "question": "Areas 36 and 324 m2: how much longer is the biggest side?",
+     "wrong_answer": "16.97",
+     "correct_answer": "12"
+    }
+   },
+   {
+    "code": "MATH.G7.NUMBER.SQUARES_AND_SQUARE_ROOTS.ROOT_IN_CONTEXT.M_ONLY_BIGGEST_ROOT",
+    "listen_for": [
+     "18"
+    ],
+    "ask": "What is the smallest side?",
+    "repair": "Subtract the smallest side too.",
+    "error": "Gives the side of the biggest plot only.",
+    "example": {
+     "question": "Areas 36 and 324 m2: how much longer is the biggest side?",
+     "wrong_answer": "18",
+     "correct_answer": "12"
+    }
+   }
+  ],
+  "checks": [
+   {
+    "question": "A square plot has area 484 m2. What is the length of the fence round it?",
+    "answer": "88 m",
+    "shows": "side then 4 sides"
+   },
+   {
+    "question": "Areas 36 m2 and 324 m2: how much longer is the bigger side?",
+    "answer": "12 m",
+    "shows": "two roots"
+   }
+  ],
+  "name": "Use a square root to find the side of a square plot and what follows from it",
+  "sub_strand": "MATH.G7.NUMBER.SQUARES_AND_SQUARE_ROOTS",
+  "sub_strand_name": "Squares and Square Roots",
+  "status": "draft: written 17 Nov 2026 offline for the Grade 7 pilot; not yet checked by a Kenyan maths teacher; not loaded by the live tutor"
+ },
+ "MATH.G7.NUMBER.SQUARES_AND_SQUARE_ROOTS.ROOT_BY_ANCHORS": {
+  "skill": "MATH.G7.NUMBER.SQUARES_AND_SQUARE_ROOTS.ROOT_BY_ANCHORS",
+  "key_step": "The child names the perfect squares on either side of the number and gives their roots as the whole numbers that bound the root.",
+  "floor": {
+   "prerequisite": "Knows squares to 144.",
+   "question": "9 x 9",
+   "answer": "81"
+  },
+  "representations": [
+   "a number line of perfect squares",
+   "the number between two squares",
+   "the bounds"
+  ],
+  "steps": [
+   "List nearby perfect squares.",
+   "Find the two that the number lies between.",
+   "Take their roots.",
+   "Check by squaring the bounds."
+  ],
+  "contexts": [
+   "a square plot",
+   "a tile",
+   "a field"
+  ],
+  "board": [
+   {
+    "beat": "draw",
+    "do": "Draw a line with 81 and 100 marked and 98 between them."
+   },
+   {
+    "beat": "point",
+    "do": "Point at 98.",
+    "say": "Which two squares is it between?"
+   },
+   {
+    "beat": "pause",
+    "do": "Wait for the child to say."
+   }
+  ],
+  "misconceptions": [
+   {
+    "code": "MATH.G7.NUMBER.SQUARES_AND_SQUARE_ROOTS.ROOT_BY_ANCHORS.M_ROOT_BOUNDS_ONE_BELOW",
+    "listen_for": [
+     "8 and 9"
+    ],
+    "ask": "What is 9 x 9?",
+    "repair": "Test the bounds by squaring.",
+    "error": "Places the root one whole number too low.",
+    "example": {
+     "question": "Between which whole numbers is the root of 98?",
+     "wrong_answer": "8 and 9",
+     "correct_answer": "9 and 10"
+    }
+   },
+   {
+    "code": "MATH.G7.NUMBER.SQUARES_AND_SQUARE_ROOTS.ROOT_BY_ANCHORS.M_ROOT_BOUNDS_ONE_ABOVE",
+    "listen_for": [
+     "10 and 11"
+    ],
+    "ask": "What is 10 x 10?",
+    "repair": "Test the bounds by squaring.",
+    "error": "Places the root one whole number too high.",
+    "example": {
+     "question": "Between which whole numbers is the root of 98?",
+     "wrong_answer": "10 and 11",
+     "correct_answer": "9 and 10"
+    }
+   }
+  ],
+  "checks": [
+   {
+    "question": "Between which two whole numbers is the root of 98?",
+    "answer": "9 and 10",
+    "shows": "anchors"
+   },
+   {
+    "question": "Between which two whole numbers is the root of 50?",
+    "answer": "7 and 8",
+    "shows": "anchors"
+   }
+  ],
+  "name": "Place the square root of a number between two whole numbers using perfect squares",
+  "sub_strand": "MATH.G7.NUMBER.SQUARES_AND_SQUARE_ROOTS",
+  "sub_strand_name": "Squares and Square Roots",
+  "status": "draft: written 17 Nov 2026 offline for the Grade 7 pilot; not yet checked by a Kenyan maths teacher; not loaded by the live tutor"
  }
 };
 export default TEACHING_PACK_G7;

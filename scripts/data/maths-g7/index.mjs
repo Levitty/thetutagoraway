@@ -2,4 +2,6 @@
 import * as whole from "./whole-numbers.mjs";
 import * as factors from "./factors.mjs";
 import * as fractions from "./fractions.mjs";
-export const SUBS = [whole, factors, fractions];
+import * as decimals from "./decimals.mjs";
+import * as squares from "./squares.mjs";
+export const SUBS = [whole, factors, fractions, decimals, squares];

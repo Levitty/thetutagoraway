@@ -1,0 +1,587 @@
+{
+ "sub_strand": "MATH.G7.NUMBER.DECIMALS",
+ "title": "Decimals",
+ "status": "draft: written 17 Nov 2026 offline for the Grade 7 pilot; not yet checked by a Kenyan maths teacher; not loaded by the live tutor",
+ "sources": [],
+ "notes": "Official outcomes a to c are tested; d is an attitude. Decimals go to thousandths. Multiplication and division are by a whole number and by a decimal, separate skills because the errors differ (a lost point, the wrong operation, moving the point in one number only).",
+ "skills": [
+  {
+   "skill": "MATH.G7.NUMBER.DECIMALS.DEC_PLACE_AND_TOTAL_VALUE",
+   "key_step": "The child reads each row by its place name (tens, ones, tenths, hundredths, thousandths) and writes the digits in place order with the point after the ones.",
+   "floor": {
+    "prerequisite": "Names places of whole numbers.",
+    "question": "What is the place of 7 in 372?",
+    "answer": "tens"
+   },
+   "representations": [
+    "a place value chart with a point",
+    "the digits in order",
+    "the number said aloud"
+   ],
+   "steps": [
+    "Put every row in its place.",
+    "Write the tens, then the ones.",
+    "Put the point.",
+    "Write tenths, hundredths, thousandths."
+   ],
+   "contexts": [
+    "kilograms of sugar",
+    "a long jump",
+    "litres of milk"
+   ],
+   "board": [
+    {
+     "beat": "draw",
+     "do": "Draw a chart: Tens Ones . Tenths Hundredths Thousandths."
+    },
+    {
+     "beat": "point",
+     "do": "Point at the tenths column.",
+     "say": "Which digit goes here?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for the child to fill the chart."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "MATH.G7.NUMBER.DECIMALS.DEC_PLACE_AND_TOTAL_VALUE.M_DIGITS_READ_TOP_DOWN",
+     "listen_for": [
+      "I wrote them as they were listed"
+     ],
+     "ask": "Do the rows tell you which place each digit is in?",
+     "repair": "Put the rows in place order first."
+    },
+    {
+     "code": "MATH.G7.NUMBER.DECIMALS.DEC_PLACE_AND_TOTAL_VALUE.M_TENS_AND_ONES_SWAPPED",
+     "listen_for": [
+      "one then four"
+     ],
+     "ask": "Which comes first, tens or ones?",
+     "repair": "Tens come first."
+    },
+    {
+     "code": "MATH.G7.NUMBER.DECIMALS.DEC_PLACE_AND_TOTAL_VALUE.M_DECIMAL_PLACES_SWAPPED",
+     "listen_for": [
+      "seven tenths"
+     ],
+     "ask": "Which place comes straight after the point?",
+     "repair": "Tenths, then hundredths."
+    }
+   ],
+   "checks": [
+    {
+     "question": "Tens 4, ones 1, tenths 3, hundredths 7, thousandths 7: write the number.",
+     "answer": "41.377",
+     "shows": "place order"
+    },
+    {
+     "question": "Total value of the 7 in 4.073",
+     "answer": "0.07",
+     "shows": "total value"
+    }
+   ]
+  },
+  {
+   "skill": "MATH.G7.NUMBER.DECIMALS.DEC_COUNT_TENTHS",
+   "key_step": "The child counts each whole as ten tenths and adds the tenths after the point.",
+   "floor": {
+    "prerequisite": "Knows a whole is 10 tenths.",
+    "question": "How many tenths in 1?",
+    "answer": "10"
+   },
+   "representations": [
+    "a bar cut into tenths",
+    "tenths counted",
+    "the decimal"
+   ],
+   "steps": [
+    "Each whole is 10 tenths.",
+    "Count the wholes as tenths.",
+    "Add the tenths after the point.",
+    "Check by shading."
+   ],
+   "contexts": [
+    "kilograms of sugar",
+    "litres of water",
+    "metres of cloth"
+   ],
+   "board": [
+    {
+     "beat": "draw",
+     "do": "Draw 7 bars cut into tenths and part of an 8th."
+    },
+    {
+     "beat": "point",
+     "do": "Point at one whole bar.",
+     "say": "How many tenths in one bar?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for the child to count."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "MATH.G7.NUMBER.DECIMALS.DEC_COUNT_TENTHS.M_SAME_NUMBER_REPEATED",
+     "listen_for": [
+      "7.7 tenths"
+     ],
+     "ask": "How many tenths in one whole?",
+     "repair": "Count the tenths one whole at a time."
+    },
+    {
+     "code": "MATH.G7.NUMBER.DECIMALS.DEC_COUNT_TENTHS.M_TENTHS_HUNDREDTHS_CONFUSED",
+     "listen_for": [
+      "770"
+     ],
+     "ask": "How many hundredths in one tenth?",
+     "repair": "A whole has 10 tenths but 100 hundredths."
+    },
+    {
+     "code": "MATH.G7.NUMBER.DECIMALS.DEC_COUNT_TENTHS.M_WHOLES_NOT_COUNTED",
+     "listen_for": [
+      "7"
+     ],
+     "ask": "How many tenths in the 7 wholes?",
+     "repair": "Count the wholes too."
+    }
+   ],
+   "checks": [
+    {
+     "question": "How many tenths are in 7.7?",
+     "answer": "77",
+     "shows": "tenths"
+    },
+    {
+     "question": "How many hundredths are in 0.45?",
+     "answer": "45",
+     "shows": "hundredths"
+    }
+   ]
+  },
+  {
+   "skill": "MATH.G7.NUMBER.DECIMALS.MULT_DEC_BY_WHOLE",
+   "key_step": "The child multiplies without the point, then gives the answer the same number of decimal places as the decimal had.",
+   "floor": {
+    "prerequisite": "Multiplies whole numbers.",
+    "question": "35 x 170",
+    "answer": "5,950"
+   },
+   "representations": [
+    "price per kilogram table",
+    "multiply without the point",
+    "estimate"
+   ],
+   "steps": [
+    "Ignore the point.",
+    "Multiply.",
+    "Count the places in the decimal.",
+    "Put the point and estimate to check."
+   ],
+   "contexts": [
+    "beans at a price per kilogram",
+    "tiles in a row",
+    "cloth by the metre"
+   ],
+   "board": [
+    {
+     "beat": "write",
+     "do": "Write 3.5 x 170 and 35 x 170."
+    },
+    {
+     "beat": "point",
+     "do": "Point at the 3.5.",
+     "say": "How many decimal places does it have?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for the child to place the point."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "MATH.G7.NUMBER.DECIMALS.MULT_DEC_BY_WHOLE.M_FRACTION_PART_DROPPED",
+     "listen_for": [
+      "three kilograms only"
+     ],
+     "ask": "What does the half kilogram cost?",
+     "repair": "Include the decimal part."
+    },
+    {
+     "code": "MATH.G7.NUMBER.DECIMALS.MULT_DEC_BY_WHOLE.M_ADDED_NOT_MULTIPLIED",
+     "listen_for": [
+      "170 plus 3.5"
+     ],
+     "ask": "Does the price cover each kilogram?",
+     "repair": "Multiply by the number of kilograms."
+    },
+    {
+     "code": "MATH.G7.NUMBER.DECIMALS.MULT_DEC_BY_WHOLE.M_POINT_NOT_MOVED_BACK",
+     "listen_for": [
+      "5950"
+     ],
+     "ask": "Is 3.5 kg at sh 170 more than sh 1,000?",
+     "repair": "Give the answer one decimal place less."
+    },
+    {
+     "code": "MATH.G7.NUMBER.DECIMALS.MULT_DEC_BY_WHOLE.M_DIVIDED_NOT_MULTIPLIED",
+     "listen_for": [
+      "40"
+     ],
+     "ask": "Do you know the number of tiles?",
+     "repair": "Multiply the number of tiles by the width."
+    }
+   ],
+   "checks": [
+    {
+     "question": "3.5 x 170",
+     "answer": "595",
+     "shows": "point back"
+    },
+    {
+     "question": "10 tiles of 0.25 m in a row: length?",
+     "answer": "2.5 m",
+     "shows": "multiply"
+    }
+   ]
+  },
+  {
+   "skill": "MATH.G7.NUMBER.DECIMALS.MULT_DEC_BY_DEC",
+   "key_step": "The child multiplies without the points and counts the decimal places of both factors for the product.",
+   "floor": {
+    "prerequisite": "Multiplies a decimal by a whole number.",
+    "question": "0.6 x 4",
+    "answer": "2.4"
+   },
+   "representations": [
+    "an area grid",
+    "multiply without points",
+    "estimate"
+   ],
+   "steps": [
+    "Ignore both points.",
+    "Multiply.",
+    "Add the decimal places of both factors.",
+    "Check the size."
+   ],
+   "contexts": [
+    "area of a garden",
+    "cloth of width and length",
+    "a mat"
+   ],
+   "board": [
+    {
+     "beat": "draw",
+     "do": "Draw a rectangle 0.6 by 0.4 on a hundred square."
+    },
+    {
+     "beat": "point",
+     "do": "Point at the shaded part.",
+     "say": "How many hundredths is it?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for the child to say."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "MATH.G7.NUMBER.DECIMALS.MULT_DEC_BY_DEC.M_POINT_FROM_ONE_FACTOR_ONLY",
+     "listen_for": [
+      "0.024"
+     ],
+     "ask": "How many places in each number?",
+     "repair": "Add the places of both."
+    },
+    {
+     "code": "MATH.G7.NUMBER.DECIMALS.MULT_DEC_BY_DEC.M_PRODUCT_MUST_BE_BIGGER",
+     "listen_for": [
+      "2.5"
+     ],
+     "ask": "Is half of a half bigger or smaller?",
+     "repair": "The product can be smaller."
+    },
+    {
+     "code": "MATH.G7.NUMBER.DECIMALS.MULT_DEC_BY_DEC.M_WRONG_QUANTITY_MULTIPLIED",
+     "listen_for": [
+      "216"
+     ],
+     "ask": "Is the price for each metre or each square metre?",
+     "repair": "Use the area."
+    },
+    {
+     "code": "MATH.G7.NUMBER.DECIMALS.MULT_DEC_BY_DEC.M_PERIMETER_FOR_AREA",
+     "listen_for": [
+      "12.2"
+     ],
+     "ask": "Is the garden covered or fenced?",
+     "repair": "Area is length times width."
+    }
+   ],
+   "checks": [
+    {
+     "question": "0.6 x 0.4",
+     "answer": "0.24",
+     "shows": "two places"
+    },
+    {
+     "question": "Area of a garden 3.6 m by 2.5 m",
+     "answer": "9 m2",
+     "shows": "area"
+    }
+   ]
+  },
+  {
+   "skill": "MATH.G7.NUMBER.DECIMALS.DIV_DEC_BY_WHOLE",
+   "key_step": "The child divides digit by digit with the point in the quotient above the point in the dividend, and continues past the remainder with zeros.",
+   "floor": {
+    "prerequisite": "Divides whole numbers.",
+    "question": "96 / 8",
+    "answer": "12"
+   },
+   "representations": [
+    "sharing into bottles",
+    "long division",
+    "multiply back to check"
+   ],
+   "steps": [
+    "Put the point above the point.",
+    "Divide digit by digit.",
+    "Add a zero to continue after the remainder.",
+    "Multiply back."
+   ],
+   "contexts": [
+    "milk in bottles",
+    "rice in bags",
+    "ribbon in pieces"
+   ],
+   "board": [
+    {
+     "beat": "write",
+     "do": "Write 12 / 8 and 12.0 / 8."
+    },
+    {
+     "beat": "point",
+     "do": "Point at the remainder 4.",
+     "say": "What can we do with the remainder?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for the child to continue."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "MATH.G7.NUMBER.DECIMALS.DIV_DEC_BY_WHOLE.M_MULTIPLIED_NOT_DIVIDED",
+     "listen_for": [
+      "96"
+     ],
+     "ask": "Is the share bigger or smaller than the amount?",
+     "repair": "Sharing is dividing."
+    },
+    {
+     "code": "MATH.G7.NUMBER.DECIMALS.DIV_DEC_BY_WHOLE.M_DIVIDEND_GIVEN_AS_SHARE",
+     "listen_for": [
+      "12 litres each"
+     ],
+     "ask": "Does each bottle hold all of the milk?",
+     "repair": "Divide among the bottles."
+    },
+    {
+     "code": "MATH.G7.NUMBER.DECIMALS.DIV_DEC_BY_WHOLE.M_POINT_LOST_IN_QUOTIENT",
+     "listen_for": [
+      "15"
+     ],
+     "ask": "Is 15 litres sensible for one bottle?",
+     "repair": "Put the point after the 1."
+    },
+    {
+     "code": "MATH.G7.NUMBER.DECIMALS.DIV_DEC_BY_WHOLE.M_POINT_PLACED_WRONG",
+     "listen_for": [
+      "0.15"
+     ],
+     "ask": "What is 0.15 x 8?",
+     "repair": "Multiply back to check."
+    },
+    {
+     "code": "MATH.G7.NUMBER.DECIMALS.DIV_DEC_BY_WHOLE.M_SUBTRACTED_NOT_DIVIDED",
+     "listen_for": [
+      "497.5"
+     ],
+     "ask": "How do we find the price of one?",
+     "repair": "Divide the money by the kilograms."
+    }
+   ],
+   "checks": [
+    {
+     "question": "12 / 8",
+     "answer": "1.5",
+     "shows": "decimal quotient"
+    },
+    {
+     "question": "sh 500 for 2.5 kg: price of 1 kg",
+     "answer": "sh 200",
+     "shows": "unit price"
+    }
+   ]
+  },
+  {
+   "skill": "MATH.G7.NUMBER.DECIMALS.DIV_BY_DECIMAL",
+   "key_step": "The child moves the point in both numbers the same number of places until the divisor is whole, then divides.",
+   "floor": {
+    "prerequisite": "Multiplies by 10.",
+    "question": "7.5 x 10",
+    "answer": "75"
+   },
+   "representations": [
+    "how many fit on a ribbon",
+    "equal numbers shifted",
+    "division"
+   ],
+   "steps": [
+    "Move the point in the divisor to make it whole.",
+    "Move the point in the dividend the same number of places.",
+    "Divide.",
+    "Check by multiplying."
+   ],
+   "contexts": [
+    "ribbon pieces",
+    "price per kilogram",
+    "water in cups"
+   ],
+   "board": [
+    {
+     "beat": "draw",
+     "do": "Draw a 7.5 m ribbon with 0.5 m marks."
+    },
+    {
+     "beat": "point",
+     "do": "Point at the first mark.",
+     "say": "How many pieces make a metre?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for the child to count."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "MATH.G7.NUMBER.DECIMALS.DIV_BY_DECIMAL.M_POINT_MOVED_ONE_NUMBER",
+     "listen_for": [
+      "1.5"
+     ],
+     "ask": "Did you move the point in both numbers?",
+     "repair": "Move both the same way."
+    },
+    {
+     "code": "MATH.G7.NUMBER.DECIMALS.DIV_BY_DECIMAL.M_REPEATED_SUBTRACTION_ONCE",
+     "listen_for": [
+      "7"
+     ],
+     "ask": "How many times can 0.5 be taken away?",
+     "repair": "Count how many fit."
+    },
+    {
+     "code": "MATH.G7.NUMBER.DECIMALS.DIV_BY_DECIMAL.M_MULTIPLIED_INSTEAD_OF_COUNTING",
+     "listen_for": [
+      "3.75"
+     ],
+     "ask": "Does multiplying count pieces?",
+     "repair": "Divide to count."
+    }
+   ],
+   "checks": [
+    {
+     "question": "A 7.5 m ribbon cut into 0.5 m pieces: how many?",
+     "answer": "15",
+     "shows": "how many fit"
+    },
+    {
+     "question": "4.5 / 0.9",
+     "answer": "5",
+     "shows": "point in both"
+    }
+   ]
+  },
+  {
+   "skill": "MATH.G7.NUMBER.DECIMALS.DEC_DIVISION_SIZE",
+   "key_step": "The child asks how many lots fit and says the answer is larger when dividing by less than 1.",
+   "floor": {
+    "prerequisite": "Knows halves in a whole.",
+    "question": "How many halves in 3?",
+    "answer": "6"
+   },
+   "representations": [
+    "strips fitting in 6",
+    "a bigger answer",
+    "moving both points"
+   ],
+   "steps": [
+    "Ask: how many lots of 0.2 are in 6?",
+    "There are 5 in each whole.",
+    "So the answer is more than 6.",
+    "Move both points to check."
+   ],
+   "contexts": [
+    "packets of 0.2 kg",
+    "cups of 0.25 litres",
+    "strips of 0.5 m"
+   ],
+   "board": [
+    {
+     "beat": "draw",
+     "do": "Draw 6 wholes each split into 5 pieces of 0.2."
+    },
+    {
+     "beat": "point",
+     "do": "Point at one whole.",
+     "say": "How many 0.2s fit?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for the child to say."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "MATH.G7.NUMBER.DECIMALS.DEC_DIVISION_SIZE.M_DIVIDING_ALWAYS_BIGGER",
+     "listen_for": [
+      "always bigger"
+     ],
+     "ask": "What happens when you share 6 among 2?",
+     "repair": "Dividing by more than 1 gives smaller parts."
+    },
+    {
+     "code": "MATH.G7.NUMBER.DECIMALS.DEC_DIVISION_SIZE.M_DIVISION_ALWAYS_SMALLER_DEC",
+     "listen_for": [
+      "has to be smaller"
+     ],
+     "ask": "How many 0.2s fit in one whole?",
+     "repair": "Dividing by less than 1 gives more."
+    },
+    {
+     "code": "MATH.G7.NUMBER.DECIMALS.DEC_DIVISION_SIZE.M_POINT_MOVED_WITHOUT_RULE",
+     "listen_for": [
+      "move the point"
+     ],
+     "ask": "Did the divisor change too?",
+     "repair": "Move both points the same way."
+    }
+   ],
+   "checks": [
+    {
+     "question": "6 / 0.2",
+     "answer": "30",
+     "shows": "larger answer"
+    },
+    {
+     "question": "Is 8 / 4 bigger or smaller than 8?",
+     "answer": "smaller",
+     "shows": "divisor over 1"
+    }
+   ]
+  }
+ ]
+}

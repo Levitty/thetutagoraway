@@ -6,40 +6,41 @@ import { person, sh } from './kenya.js';
 const fam = (def) => family({ reviewed: false, ...def });
 
 export const FAMILIES = [
-  fam({ id: 'g7.dec.tiles-row', skill: 'G6_DECIMALS_MUL', outcome: 'G7.DEC.b', rung: 2, form: 'word',
+  fam({ id: 'g7.dec.tiles-row', skill: 'G6_DECIMALS_MUL', outcome: 'MATH.G7.NUMBER.DECIMALS.b', cskill: 'MATH.G7.NUMBER.DECIMALS.MULT_DEC_BY_WHOLE', rung: 2, form: 'word',
     draw: () => { const w = pick([0.25, 0.4, 0.6, 1.2, 1.5, 0.8]), n = randInt(4, 15); return { w, n, p: person() }; },
     make: ({ w, n, p }) => ({
       question: `${p.name} lays ${n} tiles in a row. Each tile is ${w} m wide. How long is the row, in metres?`,
       answer: round(w * n, 2),
-      wrong: [[round(w + n, 2), 'Each tile adds its width, so that is a multiplication.'], [round((w * n) * 10, 2), 'Check the decimal point. One place in the question means one place in the answer.'], [round(n / w, 2), 'Dividing tells how many tiles fit. Here you know how many tiles there are.']],
+      wrong: [[round(w + n, 2), 'Each tile adds its width, so that is a multiplication.', 'M_ADDED_NOT_MULTIPLIED'], [round((w * n) * 10, 2), 'The decimal point is in the wrong place. One place in the question means one place in the answer.', 'M_POINT_NOT_MOVED_BACK'], [round(n / w, 2), 'Dividing tells how many tiles fit. Here you know how many tiles there are.', 'M_DIVIDED_NOT_MULTIPLIED']],
       hints: ['Equal widths added again and again: multiply.', 'Multiply as if there were no point, then put the point back.'],
       steps: [`There are ${n} tiles, each ${w} m wide.`, `${n} × ${w} = ${round(w * n, 2)} m.`],
     }),
     check: ({ w, n }, a) => Math.abs(a / w - n) < 1e-9 }),
-  fam({ id: 'g7.dec.point-spot', skill: 'G6_DECIMALS_MUL', outcome: 'G7.DEC.b', rung: 3, form: 'spot',
+  fam({ id: 'g7.dec.point-spot', skill: 'G6_DECIMALS_MUL', outcome: 'MATH.G7.NUMBER.DECIMALS.b', cskill: 'MATH.G7.NUMBER.DECIMALS.MULT_DEC_BY_WHOLE', rung: 3, form: 'spot',
     draw: () => { const a = randInt(12, 48), b = randInt(2, 9); return a % 10 === 0 ? null : { a, b, p: person() }; },
     make: ({ a, b, p }) => {
       const whole = a * b, right = whole / 10, wrongShown = whole / 100;
       return { question: `${p.name} worked out ${a / 10} × ${b}. Which step has the mistake?`, story: false,
         working: [{ text: `Leave out the point: ${a} × ${b} = ${whole}`, ok: a * b === whole }, { text: `${a / 10} has 1 decimal place, so the answer needs 1 place.`, ok: true }, { text: `Put in the point: ${wrongShown}`, ok: wrongShown === right }],
+        mis: 'M_POINT_NOT_MOVED_BACK',
         fix: `The answer needs 1 decimal place, so it is ${right}. The working put in 2 places.`,
         steps: [`${a} × ${b} = ${whole}.`, `With 1 decimal place: ${right}.`] };
     } }),
-  fam({ id: 'g7.dec.share-litres', skill: 'G6_DECIMALS_DIV', outcome: 'G7.DEC.c', rung: 2, form: 'word',
+  fam({ id: 'g7.dec.share-litres', skill: 'G6_DECIMALS_DIV', outcome: 'MATH.G7.NUMBER.DECIMALS.c', cskill: 'MATH.G7.NUMBER.DECIMALS.DIV_DEC_BY_WHOLE', rung: 2, form: 'word',
     draw: () => { const each = pick([0.5, 1.2, 1.5, 2.5, 0.75, 1.25]), n = randInt(3, 8); return { each, n, p: person() }; },
     make: ({ each, n, p }) => ({
       question: `${p.name} shares ${round(each * n, 2)} litres of milk equally into ${n} bottles. How many litres go into each bottle?`,
       answer: each,
-      wrong: [[round(each * n * n, 2), 'Sharing makes each amount smaller, so divide.'], [round(each * n, 2), 'That is the whole amount of milk. Share it among the bottles.'], [round(each * 10, 2), 'Check the decimal point in your answer.'], [round(each / 10, 3), 'Check the decimal point in your answer.']],
+      wrong: [[round(each * n * n, 2), 'Sharing makes each amount smaller, so divide.', 'M_MULTIPLIED_NOT_DIVIDED'], [round(each * n, 2), 'That is the whole amount of milk. Share it among the bottles.', 'M_DIVIDEND_GIVEN_AS_SHARE'], [round(each * 10, 2), 'That is ten times too big: the point was left out of the answer.', 'M_POINT_LOST_IN_QUOTIENT'], [round(each / 10, 3), 'That is ten times too small: the point is one place too far to the left.', 'M_POINT_PLACED_WRONG']],
       hints: ['Share equally means divide.', 'Keep the decimal point in line as you divide.'],
       steps: [`Total: ${round(each * n, 2)} litres, into ${n} bottles.`, `${round(each * n, 2)} ÷ ${n} = ${each} litres.`],
     }),
     check: ({ each, n }, a) => Math.abs(a * n - each * n) < 1e-9 }),
-  fam({ id: 'g7.dec.how-many-packets', skill: 'G6_DECIMALS_DIV', outcome: 'G7.DEC.c', rung: 2, form: 'why',
+  fam({ id: 'g7.dec.how-many-packets', skill: 'G6_DECIMALS_DIV', outcome: 'MATH.G7.NUMBER.DECIMALS.c', cskill: 'MATH.G7.NUMBER.DECIMALS.DEC_DIVISION_SIZE', rung: 2, form: 'why',
     draw: () => { const s = pick([0.5, 0.25, 0.2]), k = randInt(3, 9); return { s, k }; },
     make: ({ s, k }) => ({
       question: `To divide ${k} by ${s}, a learner asks: how many lots of ${s} are in ${k}? Why is the answer bigger than ${k}?`, story: false,
-      options: [{ text: `${s} is less than 1, so more than ${k} lots fit`, right: true }, { text: 'Dividing always gives a bigger number, whatever we divide by', right: false, why: 'Dividing by a number greater than 1 gives a smaller answer.' }, { text: `The point must be moved to make ${k} bigger first`, right: false, why: 'Moving the point on its own changes the value. Think about how many lots fit.' }, { text: `It is a mistake, because the answer must be smaller than ${k}`, right: false, why: 'That is true only when dividing by more than 1.' }],
+      options: [{ text: `${s} is less than 1, so more than ${k} lots fit`, right: true }, { text: 'Dividing always gives a bigger number, whatever we divide by', right: false, why: 'Dividing by a number greater than 1 gives a smaller answer.', mis: 'M_DIVIDING_ALWAYS_BIGGER' }, { text: `The point must be moved to make ${k} bigger first`, right: false, why: 'Moving the point on its own changes the value. Think about how many lots fit.', mis: 'M_POINT_MOVED_WITHOUT_RULE' }, { text: `It is a mistake, because the answer must be smaller than ${k}`, right: false, why: 'That is true only when dividing by more than 1.', mis: 'M_DIVISION_ALWAYS_SMALLER_DEC' }],
       hints: [`How many lots of ${s} make 1?`, `Then how many make ${k}?`],
       steps: [`${s} goes into 1 exactly ${round(1 / s, 0)} times.`, `So ${s} goes into ${k} exactly ${round(k / s, 0)} times, which is more than ${k}.`],
     }) }),

@@ -501,7 +501,7 @@ export const FAMILIES = [
   // ======================================================================
   // DECIMALS
   // ======================================================================
-  fam({ id: 'g7.dec.read-chart', skill: 'G7_DECIMAL_PV', outcome: 'G7.DEC.a', rung: 2, form: 'table',
+  fam({ id: 'g7.dec.read-chart', skill: 'G7_DECIMAL_PV', outcome: 'MATH.G7.NUMBER.DECIMALS.a', cskill: 'MATH.G7.NUMBER.DECIMALS.DEC_PLACE_AND_TOTAL_VALUE', rung: 2, form: 'table',
     draw: () => {
       const ds = [randInt(1, 9), randInt(0, 9), randInt(1, 9), randInt(0, 9), randInt(1, 9)];  // tens, ones, tenths, hundredths, thousandths
       const order = shuffle([0, 1, 2, 3, 4]); const naive = order.map(i => ds[i]);
@@ -514,35 +514,35 @@ export const FAMILIES = [
       return { question: 'The table shows the digits of a decimal number. The rows are not in order. Write the number it shows.', story: false,
         model: { type: 'table', data: { head: ['Place', 'Digit'], rows: order.map(i => ({ label: NAMES[i], value: String(ds[i]) })) } },
         answer: val,
-        wrong: [[naive, 'You read the digits from the top of the table down. Each row has a place name: put every digit in its own place.'], [round(ds[1] * 10 + ds[0] + ds[2] / 10 + ds[3] / 100 + ds[4] / 1000, 3), 'The tens digit comes before the ones digit. Check which digit is in which place.'], [round(ds[0] * 10 + ds[1] + ds[2] / 100 + ds[3] / 10 + ds[4] / 1000, 3), 'Tenths come straight after the point, then hundredths, then thousandths.']],
+        wrong: [[naive, 'You read the digits from the top of the table down. Each row has a place name: put every digit in its own place.', 'M_DIGITS_READ_TOP_DOWN'], [round(ds[1] * 10 + ds[0] + ds[2] / 10 + ds[3] / 100 + ds[4] / 1000, 3), 'The tens digit comes before the ones digit. Check which digit is in which place.', 'M_TENS_AND_ONES_SWAPPED'], [round(ds[0] * 10 + ds[1] + ds[2] / 100 + ds[3] / 10 + ds[4] / 1000, 3), 'Tenths come straight after the point, then hundredths, then thousandths.', 'M_DECIMAL_PLACES_SWAPPED']],
         hints: ['Say the place of each digit by its row name.', 'Tens and ones go before the decimal point. Tenths, hundredths and thousandths go after it.'],
         steps: [`Tens ${ds[0]}, ones ${ds[1]}, tenths ${ds[2]}, hundredths ${ds[3]}, thousandths ${ds[4]}.`, `The number is ${val}.`] };
     },
     check: ({ ds }, a) => String(a).replace('.', '').length >= 3 && Math.floor(a / 10) === ds[0] && Math.round((a * 1000) % 10) === ds[4] }),
 
-  fam({ id: 'g7.dec.how-many-hundredths', skill: 'G7_DECIMAL_PV', outcome: 'G7.DEC.a', rung: 2, form: 'word',
+  fam({ id: 'g7.dec.how-many-hundredths', skill: 'G7_DECIMAL_PV', outcome: 'MATH.G7.NUMBER.DECIMALS.a', cskill: 'MATH.G7.NUMBER.DECIMALS.DEC_COUNT_TENTHS', rung: 2, form: 'word',
     draw: () => { const dp = pick([1, 2]), N = dp === 1 ? randInt(21, 98) : randInt(121, 998); return N % 10 === 0 ? null : { dp, N, p: person(), what: pick([['cloth', 'metre', 'long'], ['rope', 'metre', 'long'], ['sugar', 'kilogram', 'in the bag']]) }; },
     make: ({ dp, N, p, what }) => {
       const x = round(N / 10 ** dp, 2), unit = dp === 1 ? 'tenths' : 'hundredths';
       return { question: `${p.name} measures ${x} ${what[1]}s of ${what[0]}. How many ${unit} of a ${what[1]} is this?`,
         answer: N,
-        wrong: [[x, `That is the same number written as a decimal. Count how many ${unit} make it.`], [dp === 1 ? N * 10 : round(N / 10, 2), `Check the place: each whole is split into ${dp === 1 ? '10 tenths' : '100 hundredths'}, and ${unit} are not the same as ${dp === 1 ? 'hundredths' : 'tenths'}.`], [Number(String(N).slice(1)), 'That only counts the digits after the first one. Count the whole ones too.']],
+        wrong: [[x, `That is the same number written as a decimal. Count how many ${unit} make it.`, 'M_SAME_NUMBER_REPEATED'], [dp === 1 ? N * 10 : round(N / 10, 2), `That mixes up the two places: each whole is split into ${dp === 1 ? '10 tenths' : '100 hundredths'}, and ${unit} are not the same as ${dp === 1 ? 'hundredths' : 'tenths'}.`, 'M_TENTHS_HUNDREDTHS_CONFUSED'], [Number(String(N).slice(1)), 'That only counts the digits after the first one. Count the whole ones too.', 'M_WHOLES_NOT_COUNTED']],
         hints: [`One ${what[1]} is ${dp === 1 ? 10 : 100} ${unit}.`, `Multiply the number of ${what[1]}s by ${dp === 1 ? 10 : 100}.`],
         steps: [`1 ${what[1]} = ${dp === 1 ? 10 : 100} ${unit}.`, `${x} × ${dp === 1 ? 10 : 100} = ${N} ${unit}.`] };
     },
     check: ({ dp, N }, a) => a / 10 ** dp === round(N / 10 ** dp, 2) }),
 
-  fam({ id: 'g7.dec.price-per-kg', skill: 'G7_DECIMALS_MUL', outcome: 'G7.DEC.b', rung: 1, form: 'word',
+  fam({ id: 'g7.dec.price-per-kg', skill: 'G7_DECIMALS_MUL', outcome: 'MATH.G7.NUMBER.DECIMALS.b', cskill: 'MATH.G7.NUMBER.DECIMALS.MULT_DEC_BY_WHOLE', rung: 1, form: 'word',
     draw: () => { const item = pick(['kg of beans', 'kg of rice', 'kg of sugar', 'kg of tomatoes']), pr = price(item), q = pick([1.5, 2.5, 3.5, 4.5, 5.5]); return { item, pr, q, p: person() }; },
     make: ({ item, pr, q, p }) => ({
       question: `${p.name} buys ${q} kg of ${item.replace('kg of ', '')}. Each kilogram costs ${sh(pr)}. How much does ${p.she} pay? Answer in shillings.`,
       answer: round(pr * q, 2),
-      wrong: [[pr * Math.floor(q), 'You paid for the whole kilograms only. The half kilogram costs money too.'], [round(pr + q, 2), 'The price is for each kilogram, so multiply by the number of kilograms. Do not add.'], [round(pr * q * 10, 1), 'Check the decimal point. Multiplying by a number with one decimal place gives a smaller answer than this.']],
+      wrong: [[pr * Math.floor(q), 'You paid for the whole kilograms only. The half kilogram costs money too.', 'M_FRACTION_PART_DROPPED'], [round(pr + q, 2), 'The price is for each kilogram, so multiply by the number of kilograms. Do not add.', 'M_ADDED_NOT_MULTIPLIED'], [round(pr * q * 10, 1), 'The decimal point is in the wrong place. Multiplying by a number with one decimal place gives a smaller answer than this.', 'M_POINT_NOT_MOVED_BACK']],
       hints: ['The price is for 1 kg. How many kilograms are bought?', `Multiply ${pr} by ${q}.`],
       steps: [`${pr} × ${q}: first ${pr} × ${q * 10} = ${pr * q * 10}.`, `${q} has 1 decimal place, so divide by 10: ${round(pr * q, 2)}.`] }),
     check: ({ pr, q }, a) => a / q === pr }),
 
-  fam({ id: 'g7.dec.garden-steps', skill: 'G7_DECIMALS_MUL', outcome: 'G7.DEC.b', rung: 3, form: 'steps',
+  fam({ id: 'g7.dec.garden-steps', skill: 'G7_DECIMALS_MUL', outcome: 'MATH.G7.NUMBER.DECIMALS.b', cskill: 'MATH.G7.NUMBER.DECIMALS.MULT_DEC_BY_DEC', rung: 3, form: 'steps',
     draw: () => {
       const L = pick([3.2, 4.5, 2.4, 5.5, 3.6, 4.8]), w = pick([2.5, 1.5, 2.4, 3.5, 2.2]), pr = pick([40, 60, 80, 100, 120]); const area = round(L * w, 2), cost = round(area * pr, 2);
       return L !== w && Number.isInteger(cost) && distinct(area, round(2 * (L + w), 2), round(L + w, 2)) ? { L, w, pr, area, cost, per: round(2 * (L + w), 2), p: person() } : null;
@@ -550,24 +550,23 @@ export const FAMILIES = [
     make: ({ L, w, pr, area, cost, per, p }) => ({
       question: `${p.name} has a rectangular garden ${L} m long and ${w} m wide.`,
       parts: [
-        { prompt: 'What is the area of the garden, in square metres?', answer: area, unit: 'm²', hint: 'Area of a rectangle = length × width.', wrong: [[round(L + w, 2), 'Area is found by multiplying, not adding.'], [per, 'That is the distance around the garden, the perimeter.'], [round(area * 10, 2), 'Count the decimal places in both numbers: the answer has that many in total.']] },
-        { prompt: `Grass costs ${sh(pr)} for each square metre. What is the cost of covering the garden with grass? Answer in shillings.`, answer: cost, hint: 'Cost = area × price for each square metre.', wrong: [[round(L * pr, 2), 'Use the whole area, not only the length.'], [round(area + pr, 2), 'The price is for each square metre. Multiply.'], [round(per * pr, 2), 'That uses the perimeter. Grass covers the area.']] },
-        { prompt: 'What length of fence goes all the way round the garden, in metres?', answer: per, unit: 'm', hint: 'Add all four sides, or double length + width.', wrong: [[round(L + w, 2), 'That is only two sides.'], [area, 'That is the area. The fence goes round the edge.'], [round(L * 2 + w, 2), 'Two sides are long and two are short.']] },
+        { prompt: 'What is the area of the garden, in square metres?', answer: area, unit: 'm²', hint: 'Area of a rectangle = length × width.', wrong: [[round(L + w, 2), 'Area is found by multiplying, not adding.', 'M_ADDED_NOT_MULTIPLIED'], [per, 'That is the distance around the garden, the perimeter.', 'M_PERIMETER_FOR_AREA'], [round(area * 10, 2), 'Count the decimal places in both numbers: the answer has that many in total.', 'M_POINT_NOT_MOVED_BACK']] },
+        { prompt: `Grass costs ${sh(pr)} for each square metre. What is the cost of covering the garden with grass? Answer in shillings.`, answer: cost, hint: 'Cost = area × price for each square metre.', wrong: [[round(L * pr, 2), 'Use the whole area, not only the length.', 'M_WRONG_QUANTITY_MULTIPLIED'], [round(area + pr, 2), 'The price is for each square metre. Multiply.', 'M_ADDED_NOT_MULTIPLIED'], [round(per * pr, 2), 'That uses the perimeter. Grass covers the area.', 'M_PERIMETER_FOR_AREA']] },
       ],
-      steps: [`Area: ${L} × ${w} = ${area} m².`, `Cost: ${area} × ${pr} = ${commas(cost)}.`, `Fence: 2 × (${L} + ${w}) = ${per} m.`] }),
-    check: ({ L, w, pr }, v) => Math.abs(v[0] / L - w) < 1e-9 && Math.abs(v[1] / pr - v[0]) < 1e-9 && Math.abs(v[2] / 2 - (L + w)) < 1e-9 }),
+      steps: [`Area: ${L} × ${w} = ${area} m².`, `Cost: ${area} × ${pr} = ${commas(cost)}.`] }),
+    check: ({ L, w, pr }, v) => Math.abs(v[0] / L - w) < 1e-9 && Math.abs(v[1] / pr - v[0]) < 1e-9 }),
 
-  fam({ id: 'g7.dec.ribbon-bows', skill: 'G7_DECIMALS_DIV', outcome: 'G7.DEC.c', rung: 2, form: 'word',
+  fam({ id: 'g7.dec.ribbon-bows', skill: 'G7_DECIMALS_DIV', outcome: 'MATH.G7.NUMBER.DECIMALS.c', cskill: 'MATH.G7.NUMBER.DECIMALS.DIV_BY_DECIMAL', rung: 2, form: 'word',
     draw: () => { const q = pick([0.2, 0.25, 0.4, 0.5, 0.6, 0.75, 1.5]), n = randInt(8, 40), t = round(q * n, 2); return { q, n, t, p: person() }; },
     make: ({ q, n, t, p }) => ({
       question: `${p.name} divides a ribbon ${t} m long into pieces of ${q} m each to make bows. How many pieces does ${p.she} get?`,
       answer: n,
-      wrong: [[round(t * q, 3), 'To find how many pieces fit, divide. Multiplying gives a smaller number.'], [round(n / 10, 2), 'Move the decimal point in both numbers by the same amount, so the divisor is whole. Check how far you moved it.'], [round(t - q, 2), 'Taking one piece away is not counting how many pieces fit.']],
+      wrong: [[round(t * q, 3), 'To find how many pieces fit, divide. Multiplying gives a smaller number.', 'M_MULTIPLIED_INSTEAD_OF_COUNTING'], [round(n / 10, 2), 'Move the decimal point in both numbers by the same amount, so the divisor is whole. Check how far you moved it.', 'M_POINT_MOVED_ONE_NUMBER'], [round(t - q, 2), 'Taking one piece away is not counting how many pieces fit.', 'M_REPEATED_SUBTRACTION_ONCE']],
       hints: ['How many lots of the piece length fit into the whole ribbon?', 'Multiply both numbers by 100 so neither has a decimal point.'],
       steps: [`${t} ÷ ${q}: multiply both by 100 to get ${round(t * 100, 0)} ÷ ${round(q * 100, 0)}.`, `${round(t * 100, 0)} ÷ ${round(q * 100, 0)} = ${n}.`] }),
     check: ({ q, t }, a) => Math.abs(a * q - t) < 1e-9 }),
 
-  fam({ id: 'g7.dec.beans-steps', skill: 'G7_DECIMALS_DIV', outcome: 'G7.DEC.c', rung: 3, form: 'steps',
+  fam({ id: 'g7.dec.beans-steps', skill: 'G7_DECIMALS_DIV', outcome: 'MATH.G7.NUMBER.DECIMALS.c', cskill: 'MATH.G7.NUMBER.DECIMALS.DIV_BY_DECIMAL', rung: 3, form: 'steps',
     draw: () => {
       const pr = pick([120, 150, 160, 180, 200]), q = pick([1.2, 2.5, 3.6, 4.5]), q2 = pick([0.5, 1.5, 2.5, 3.5]); const cost = round(pr * q, 2);
       return q !== q2 && Number.isInteger(cost) ? { pr, q, q2, cost, X: pr * q2, p: person() } : null;
@@ -575,9 +574,9 @@ export const FAMILIES = [
     make: ({ pr, q, q2, cost, X, p }) => ({
       question: `${p.name} pays ${sh(cost)} for ${q} kg of beans at a shop. ${p.She} divides the money by the kilograms to find what 1 kg costs.`,
       parts: [
-        { prompt: 'What is the price of 1 kg of beans, in shillings?', answer: pr, hint: `Divide the money paid by ${q}. Multiply both by 10 first.`, wrong: [[round(cost * q, 2), 'To find the price of 1 kg, divide. Multiplying makes a number that is too big.'], [round(cost - q, 2), 'Taking away the kilograms does not give the price of one.'], [pr * 10, 'Check the decimal point when you divide.']] },
-        { prompt: 'At that price, how much do 5 kg of beans cost? Answer in shillings.', answer: pr * 5, hint: 'Price of 1 kg × 5.', wrong: [[cost * 5, 'That is 5 times the cost of the first purchase. Use the price of 1 kg.'], [pr + 5, 'Multiply the price of 1 kg by 5.'], [round(cost / 5, 2), 'That divides. Buying more costs more.']] },
-        { prompt: `${p.name} has ${sh(X)}. How many kilograms of beans can ${p.she} buy at that price?`, answer: q2, unit: 'kg', hint: 'Divide the money by the price of 1 kg.', wrong: [[X * pr, 'The number of kilograms is smaller than the money. Divide.'], [round((X / pr) * 10, 1), 'Check the decimal point in your division.'], [round(X - pr, 2), 'Taking away is not the same as dividing.']] },
+        { prompt: 'What is the price of 1 kg of beans, in shillings?', answer: pr, hint: `Divide the money paid by ${q}. Multiply both by 10 first.`, wrong: [[round(cost * q, 2), 'To find the price of 1 kg, divide. Multiplying makes a number that is too big.', 'M_MULTIPLIED_NOT_DIVIDED'], [round(cost - q, 2), 'Taking away the kilograms does not give the price of one.', 'M_SUBTRACTED_NOT_DIVIDED'], [pr * 10, 'The point has slipped one place when dividing, so the answer is ten times too big.', 'M_POINT_PLACED_WRONG']] },
+        { prompt: 'At that price, how much do 5 kg of beans cost? Answer in shillings.', answer: pr * 5, hint: 'Price of 1 kg × 5.', wrong: [[cost * 5, 'That is 5 times the cost of the first purchase. Use the price of 1 kg.', 'M_WRONG_QUANTITY_MULTIPLIED'], [pr + 5, 'Multiply the price of 1 kg by 5.', 'M_ADDED_NOT_MULTIPLIED'], [round(cost / 5, 2), 'That divides. Buying more costs more.', 'M_DIVIDED_NOT_MULTIPLIED']] },
+        { prompt: `${p.name} has ${sh(X)}. How many kilograms of beans can ${p.she} buy at that price?`, answer: q2, unit: 'kg', hint: 'Divide the money by the price of 1 kg.', wrong: [[X * pr, 'The number of kilograms is smaller than the money. Divide.', 'M_MULTIPLIED_NOT_DIVIDED'], [round((X / pr) * 10, 1), 'The point has slipped one place in the division, so the answer is ten times too big.', 'M_POINT_PLACED_WRONG'], [round(X - pr, 2), 'Taking away is not the same as dividing.', 'M_SUBTRACTED_NOT_DIVIDED']] },
       ],
       steps: [`${cost} ÷ ${q} = ${round(cost * 10, 0)} ÷ ${round(q * 10, 0)} = ${pr}.`, `5 × ${pr} = ${pr * 5}.`, `${X} ÷ ${pr} = ${q2} kg.`] }),
     check: ({ cost, q, X }, v) => Math.abs(v[0] * q - cost) < 1e-6 && v[1] === 5 * v[0] && Math.abs(v[2] * v[0] - X) < 1e-6 }),
@@ -585,19 +584,18 @@ export const FAMILIES = [
   // ======================================================================
   // SQUARES AND SQUARE ROOTS
   // ======================================================================
-  fam({ id: 'g7.sq.garden-double', skill: 'G7_SQUARES_EXT', outcome: 'G7.SQUARES.a', rung: 3, form: 'steps',
+  fam({ id: 'g7.sq.garden-double', skill: 'G7_SQUARES_EXT', outcome: 'MATH.G7.NUMBER.SQUARES_AND_SQUARE_ROOTS.a', cskill: 'MATH.G7.NUMBER.SQUARES_AND_SQUARE_ROOTS.SQUARE_DECIMAL', rung: 3, form: 'steps',
     draw: () => { const s = pick([1.2, 1.5, 2.5, 3.5, 0.8, 4.5]), pr = pick([100, 120, 160, 200]); const area = round(s * s, 4), cost = round(area * pr, 2); return Number.isInteger(cost) ? { s, pr, area, cost, p: person() } : null; },
     make: ({ s, pr, area, cost, p }) => ({
       question: `${p.name} has a square vegetable garden. Each side is ${s} m long.`,
       parts: [
-        { prompt: 'What is the area of the garden, in square metres?', answer: area, unit: 'm²', hint: `Area of a square = side × side, so square ${s}.`, wrong: [[round(s * 2, 2), `That doubles the side. Squaring means ${s} × ${s}.`], [round(s * 4, 2), 'That is the perimeter. Area is side × side.'], [round(area * 10, 3), 'Check the decimal point. The product of two decimals has as many decimal places as both together.']] },
-        { prompt: `Topsoil costs ${sh(pr)} for each square metre. How much does it cost to cover the garden? Answer in shillings.`, answer: cost, hint: 'Cost = area × price for each square metre.', wrong: [[round(s * pr, 2), 'Use the area, not the length of a side.'], [round(area + pr, 2), 'The price is for each square metre. Multiply.'], [round(s * 4 * pr, 2), 'That uses the perimeter. Topsoil covers the area.']] },
-        { prompt: `${p.name} makes a new square garden with sides twice as long. What is the area of the new garden, in square metres?`, answer: round(4 * area, 4), unit: 'm²', hint: 'The new side is double the old side. Square it.', wrong: [[round(2 * area, 4), 'Doubling the side makes the area more than double. Square the new side.'], [round(area + 2 * s, 4), 'Work out the new side first, then square it.'], [round(area * 8, 4), 'The area grows by the square of 2, not by the cube.']] },
+        { prompt: 'What is the area of the garden, in square metres?', answer: area, unit: 'm²', hint: `Area of a square = side × side, so square ${s}.`, wrong: [[round(s * 2, 2), `That doubles the side. Squaring means ${s} × ${s}.`, 'M_DOUBLED_NOT_SQUARED'], [round(s * 4, 2), 'That is the perimeter. Area is side × side.', 'M_PERIMETER_FOR_AREA_SQ'], [round(area * 10, 3), 'The decimal point is in the wrong place. The product of two decimals has as many decimal places as both together.', 'M_POINT_PLACES_NOT_DOUBLED']] },
+        { prompt: `${p.name} makes a new square garden with sides twice as long. What is the area of the new garden, in square metres?`, answer: round(4 * area, 4), unit: 'm²', hint: 'The new side is double the old side. Square it.', wrong: [[round(2 * area, 4), 'Doubling the side makes the area more than double. Square the new side.', 'M_AREA_DOUBLES_WITH_SIDE'], [round(area + 2 * s, 4), 'Work out the new side first, then square it.', 'M_ADDED_NOT_SQUARED'], [round(area * 8, 4), 'The area grows by the square of 2, not by the cube.', 'M_CUBED_NOT_SQUARED']] },
       ],
-      steps: [`${s} × ${s} = ${area} m².`, `${area} × ${pr} = ${commas(cost)}.`, `New side ${round(2 * s, 2)} m, and ${round(2 * s, 2)}² = ${round(4 * area, 4)} m².`] }),
-    check: ({ s, pr }, v) => Math.abs(v[0] / s - s) < 1e-9 && Math.abs(v[1] / pr - v[0]) < 1e-9 && Math.abs(v[2] / v[0] - 4) < 1e-9 }),
+      steps: [`${s} × ${s} = ${area} m².`, `New side ${round(2 * s, 2)} m, and ${round(2 * s, 2)}² = ${round(4 * area, 4)} m².`] }),
+    check: ({ s }, v) => Math.abs(v[0] / s - s) < 1e-9 && Math.abs(v[1] / v[0] - 4) < 1e-9 }),
 
-  fam({ id: 'g7.sq.decimal-spot', skill: 'G7_SQUARES_EXT', outcome: 'G7.SQUARES.a', rung: 3, form: 'spot',
+  fam({ id: 'g7.sq.decimal-spot', skill: 'G7_SQUARES_EXT', outcome: 'MATH.G7.NUMBER.SQUARES_AND_SQUARE_ROOTS.a', cskill: 'MATH.G7.NUMBER.SQUARES_AND_SQUARE_ROOTS.SQUARE_DECIMAL', rung: 3, form: 'spot',
     draw: () => ({ dp: pick([1, 2]), a: randInt(2, 9), p: person() }),
     make: ({ dp, a, p }) => {
       const x = round(a / 10 ** dp, 3), shownDp = dp, num = a * a, shown = round(num / 10 ** shownDp, 6);
@@ -609,52 +607,52 @@ export const FAMILIES = [
           { text: `Put the point in ${num}, with ${shownDp} decimal place${shownDp > 1 ? 's' : ''}: ${fmt(shown)}.`, ok: shown === round(num / 10 ** shownDp, 6) },
           { text: `So (${fmt(x)})² = ${fmt(shown)}.`, ok: true },
         ],
+        mis: 'M_POINT_PLACES_NOT_DOUBLED',
         fix: `Squaring multiplies the number by itself, so the decimal places double: ${dp} + ${dp} = ${2 * dp}. The square has ${2 * dp} decimal places.`,
         steps: [`${a} × ${a} = ${num}.`, `${2 * dp} decimal places: ${fmt(round(num / 10 ** (2 * dp), 6))}.`] };
     } }),
 
-  fam({ id: 'g7.sq.fraction-options', skill: 'G7_SQUARES_EXT', outcome: 'G7.SQUARES.a', rung: 2, form: 'direct',
+  fam({ id: 'g7.sq.fraction-options', skill: 'G7_SQUARES_EXT', outcome: 'MATH.G7.NUMBER.SQUARES_AND_SQUARE_ROOTS.a', cskill: 'MATH.G7.NUMBER.SQUARES_AND_SQUARE_ROOTS.SQUARE_FRACTION', rung: 2, form: 'direct',
     draw: () => { const d = randInt(3, 9), n = randInt(2, d - 1); if (gcd(n, d) !== 1) return null; const right = frac(n * n, d * d), w = [frac(n * n, d), frac(n, d * d), frac(2 * n, d)]; return distinct(right, ...w) ? { n, d, right, w } : null; },
     make: ({ n, d, right, w }) => ({
       question: `Which fraction is the square of ${n}/${d}?`, story: false,
-      options: shuffle([{ text: right, right: true }, { text: w[0], right: false, why: 'Only the top was squared. Both the numerator and the denominator are multiplied by themselves.' }, { text: w[1], right: false, why: 'Only the bottom was squared. Both the numerator and the denominator are multiplied by themselves.' }, { text: w[2], right: false, why: 'That doubles the top. Squaring means multiplying the fraction by itself.' }]),
+      options: shuffle([{ text: right, right: true }, { text: w[0], right: false, why: 'Only the top was squared. Both the numerator and the denominator are multiplied by themselves.', mis: 'M_ONLY_NUMERATOR_SQUARED' }, { text: w[1], right: false, why: 'Only the bottom was squared. Both the numerator and the denominator are multiplied by themselves.', mis: 'M_ONLY_DENOMINATOR_SQUARED' }, { text: w[2], right: false, why: 'That doubles the top. Squaring means multiplying the fraction by itself.', mis: 'M_NUMERATOR_DOUBLED' }]),
       hints: ['The square of a number is the number times itself.', 'Multiply the numerators, and multiply the denominators.'],
       steps: [`(${n}/${d})² = ${n}/${d} × ${n}/${d}.`, `= ${n * n}/${d * d}${gcd(n * n, d * d) > 1 ? ` = ${right}` : ''}.`] }) }),
 
-  fam({ id: 'g7.sq.plot-side', skill: 'G7_SQUARE_ROOTS', outcome: 'G7.SQUARES.b', rung: 3, form: 'steps',
+  fam({ id: 'g7.sq.plot-side', skill: 'G7_SQUARE_ROOTS', outcome: 'MATH.G7.NUMBER.SQUARES_AND_SQUARE_ROOTS.b', cskill: 'MATH.G7.NUMBER.SQUARES_AND_SQUARE_ROOTS.ROOT_IN_CONTEXT', rung: 3, form: 'steps',
     draw: () => ({ s: randInt(12, 45), pr: pick([60, 80, 100, 120]), p: person() }),
     make: ({ s, pr, p }) => ({
       question: `The area of ${p.name}'s square school plot is ${commas(s * s)} m². Take the square root, √${commas(s * s)}, to find a side.`,
       parts: [
-        { prompt: 'How long is one side of the plot, in metres?', answer: s, unit: 'm', hint: `Which number multiplied by itself gives ${commas(s * s)}?`, wrong: [[(s * s) / 2, 'Halving the area is not taking its square root.'], [(s * s) / 4, 'Dividing by 4 does not undo squaring. Look for a number that multiplied by itself gives the area.'], [s + 1, 'Check by multiplying your number by itself.']] },
-        { prompt: 'How many metres of fence go all the way round the plot?', answer: 4 * s, unit: 'm', hint: 'A square has 4 equal sides.', wrong: [[2 * s, 'A square has four sides, not two.'], [s * s, 'That is the area. The fence goes round the edge.'], [s + 4, 'The four sides are added: 4 lots of the side.']] },
-        { prompt: `Fencing wire costs ${sh(pr)} for each metre. What is the cost of fencing the whole plot? Answer in shillings.`, answer: 4 * s * pr, hint: 'Cost = length of fence × price for each metre.', wrong: [[s * pr, 'That only pays for one side.'], [s * s * pr, 'That uses the area. Fencing goes round the edge.'], [4 * s + pr, 'The price is for each metre. Multiply.']] },
+        { prompt: 'How long is one side of the plot, in metres?', answer: s, unit: 'm', hint: `Which number multiplied by itself gives ${commas(s * s)}?`, wrong: [[(s * s) / 2, 'Halving the area is not taking its square root.', 'M_HALVED_NOT_ROOTED'], [(s * s) / 4, 'Dividing by 4 does not undo squaring. Look for a number that multiplied by itself gives the area.', 'M_DIVIDED_BY_FOUR_FOR_ROOT'], [s + 1, 'Check by multiplying your number by itself.', 'SLIP']] },
+        { prompt: 'How many metres of fence go all the way round the plot?', answer: 4 * s, unit: 'm', hint: 'A square has 4 equal sides.', wrong: [[2 * s, 'A square has four sides, not two.', 'M_TWO_SIDES_FOR_PERIMETER'], [s * s, 'That is the area. The fence goes round the edge.', 'M_AREA_FOR_PERIMETER'], [s + 4, 'The four sides are added: 4 lots of the side.', 'M_SIDE_PLUS_FOUR']] },
       ],
-      steps: [`√${commas(s * s)} = ${s}, because ${s} × ${s} = ${commas(s * s)}.`, `Fence: 4 × ${s} = ${4 * s} m.`, `Cost: ${4 * s} × ${pr} = ${commas(4 * s * pr)}.`] }),
-    check: ({ s, pr }, v) => v[0] * v[0] === s * s && v[1] === 4 * v[0] && v[2] / pr === v[1] }),
+      steps: [`√${commas(s * s)} = ${s}, because ${s} × ${s} = ${commas(s * s)}.`, `Fence: 4 × ${s} = ${4 * s} m.`] }),
+    check: ({ s }, v) => v[0] * v[0] === s * s && v[1] === 4 * v[0] }),
 
   fam({ id: 'g7.sq.between-roots', skill: 'G7_SQUARE_ROOTS', outcome: 'G7.SQUARES.b', rung: 2, form: 'word',
     draw: () => { const k = randInt(6, 14), A = randInt(k * k + 1, k * k + 2 * k); return { k, A, p: person() }; },
     make: ({ k, A, p }) => ({
       question: `${p.name} has a square plot with an area of ${A} square metres. Between which two whole numbers does the square root √${A}, the length of one side in metres, lie?`,
-      options: shuffle([{ text: `${k} and ${k + 1}`, right: true }, { text: `${k - 1} and ${k}`, right: false, why: `${k} × ${k} is less than ${A}, so the side is longer than ${k}.` }, { text: `${k + 1} and ${k + 2}`, right: false, why: `${k + 1} × ${k + 1} is more than ${A}, so the side is shorter than ${k + 1}.` }, { text: `${Math.floor(A / 2)} and ${Math.floor(A / 2) + 1}`, right: false, why: 'Halving the area does not give the side. Square the numbers to test.' }]),
+      options: shuffle([{ text: `${k} and ${k + 1}`, right: true }, { text: `${k - 1} and ${k}`, right: false, why: `${k} × ${k} is less than ${A}, so the side is longer than ${k}.`, mis: 'M_ROOT_BOUNDS_ONE_BELOW' }, { text: `${k + 1} and ${k + 2}`, right: false, why: `${k + 1} × ${k + 1} is more than ${A}, so the side is shorter than ${k + 1}.`, mis: 'M_ROOT_BOUNDS_ONE_ABOVE' }, { text: `${Math.floor(A / 2)} and ${Math.floor(A / 2) + 1}`, right: false, why: 'Halving the area does not give the side. Square the numbers to test.', mis: 'M_HALVED_NOT_ROOTED' }]),
       hints: ['Find two square numbers, one just below and one just above the area.', 'The square roots of those two square numbers are the whole numbers you need.'],
       steps: [`${k}² = ${k * k} and ${k + 1}² = ${(k + 1) ** 2}.`, `${A} is between ${k * k} and ${(k + 1) ** 2}, so √${A} is between ${k} and ${k + 1}.`] }) }),
 
-  fam({ id: 'g7.sq.root-of-sum-why', skill: 'G7_SQUARE_ROOTS', outcome: 'G7.SQUARES.b', rung: 3, form: 'why',
+  fam({ id: 'g7.sq.root-of-sum-why', skill: 'G7_SQUARE_ROOTS', outcome: 'MATH.G7.NUMBER.SQUARES_AND_SQUARE_ROOTS.b', cskill: 'MATH.G7.NUMBER.SQUARES_AND_SQUARE_ROOTS.ROOT_WHOLE_NUMBER', rung: 3, form: 'why',
     draw: () => { const [a, b, c] = pick([[3, 4, 5], [6, 8, 10], [5, 12, 13], [9, 12, 15], [8, 15, 17], [12, 16, 20]]); return { a, b, c, p: person() }; },
     make: ({ a, b, c, p }) => ({
       question: `${p.name} writes √(${a * a} + ${b * b}) = √${a * a} + √${b * b} = ${a} + ${b} = ${a + b}. Why is this wrong?`, story: false,
       options: shuffle([
         { text: 'A square root of a sum is not the sum of the roots', right: true },
-        { text: `√${a * a} is not ${a}, so the first step is wrong`, right: false, why: `${a} × ${a} = ${a * a}, so √${a * a} = ${a}. That part is right.` },
-        { text: `√${c * c} must be found by halving ${c * c}, which gives ${(c * c) / 2}`, right: false, why: `Halving is not taking a square root. Test by multiplying: which number times itself gives ${c * c}?` },
-        { text: `The roots should be multiplied: ${a} × ${b} = ${a * b}`, right: false, why: 'Multiplying the roots does not give the root of a sum either.' },
+        { text: `${a + b} is correct, because square roots can be added across a sum`, right: false, why: `Work out ${a * a} + ${b * b} first, then take the root. The two ways give different answers.`, mis: 'M_ROOT_OF_SUM_IS_SUM_OF_ROOTS' },
+        { text: `√${c * c} must be found by halving ${c * c}, which gives ${(c * c) / 2}`, right: false, why: `Halving is not taking a square root. Test by multiplying: which number times itself gives ${c * c}?`, mis: 'M_HALVED_NOT_ROOTED' },
+        { text: `The roots should be multiplied: ${a} × ${b} = ${a * b}`, right: false, why: 'Multiplying the roots does not give the root of a sum either.', mis: 'M_ROOTS_MULTIPLIED_FOR_SUM' },
       ]),
       hints: ['Work out the sum under the root first, then take the square root.', 'Compare the two answers.'],
       steps: [`${a * a} + ${b * b} = ${c * c}, and √${c * c} = ${c}.`, `${a} + ${b} = ${a + b}, which is a different number, so the two methods do not agree.`] }) }),
 
-  fam({ id: 'g7.sq.root-table-sides', skill: 'G7_SQUARE_ROOTS', outcome: 'G7.SQUARES.b', rung: 3, form: 'table',
+  fam({ id: 'g7.sq.root-table-sides', skill: 'G7_SQUARE_ROOTS', outcome: 'MATH.G7.NUMBER.SQUARES_AND_SQUARE_ROOTS.b', cskill: 'MATH.G7.NUMBER.SQUARES_AND_SQUARE_ROOTS.ROOT_IN_CONTEXT', rung: 3, form: 'table',
     draw: () => {
       const ss = shuffle([8, 9, 10, 11, 12, 13, 14, 15, 16, 18, 20]).slice(0, 4); const mx = Math.max(...ss), mn = Math.min(...ss);
       return distinct(mx - mn, mx * mx - mn * mn, Math.round(Math.sqrt(mx * mx - mn * mn))) ? { ss, mx, mn } : null;
@@ -663,7 +661,7 @@ export const FAMILIES = [
       question: 'The table shows the areas of four square plots. How many metres longer is a side of the biggest plot than a side of the smallest plot? Use the square root of each area.', story: false,
       model: { type: 'table', data: { head: ['Plot', 'Area (m²)'], rows: ss.map((s, i) => ({ label: `Plot ${'ABCD'[i]}`, value: commas(s * s) })) } },
       answer: mx - mn,
-      wrong: [[mx * mx - mn * mn, 'That is the difference between the areas. Take the square root of each area first.'], [Math.round(Math.sqrt(mx * mx - mn * mn)), 'The square root of the difference is not the difference of the square roots. Take each root first.'], [mx, 'That is the side of the biggest plot only. Take away the side of the smallest.']],
+      wrong: [[mx * mx - mn * mn, 'That is the difference between the areas. Take the square root of each area first.', 'M_AREA_DIFFERENCE_USED'], [Math.round(Math.sqrt(mx * mx - mn * mn)), 'The square root of the difference is not the difference of the square roots. Take each root first.', 'M_ROOT_OF_DIFFERENCE'], [mx, 'That is the side of the biggest plot only. Take away the side of the smallest.', 'M_ONLY_BIGGEST_ROOT']],
       hints: ['Find the largest and the smallest area in the table.', 'Take the square root of each, then subtract.'],
       steps: [`Largest area: ${commas(mx * mx)}, so its side is ${mx} m. Smallest: ${commas(mn * mn)}, so its side is ${mn} m.`, `${mx} − ${mn} = ${mx - mn} m.`] }),
     check: ({ mx, mn }, a) => (a + mn) ** 2 === mx * mx }),

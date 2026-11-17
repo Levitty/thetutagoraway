@@ -460,6 +460,132 @@
     "rule for given terms"
    ],
    "mastery": "The child writes a sequence of fractions from a rule (add 1/4, or multiply by 1/2), keeps every term in line with the rule, and writes a rule for a puzzle sequence of their own that a partner can solve."
+  },
+  "MATH.G7.NUMBER.DECIMALS.DEC_PLACE_AND_TOTAL_VALUE": {
+   "forms": [
+    "name the place",
+    "total value of a digit",
+    "write the number from a chart",
+    "which digit is in the place"
+   ],
+   "mastery": "The child names the place of a digit after the point (tenths, hundredths, thousandths), gives its total value (the 7 in 4.073 is worth 0.07), and writes a decimal from a place value chart whose rows are not in order."
+  },
+  "MATH.G7.NUMBER.DECIMALS.DEC_COUNT_TENTHS": {
+   "forms": [
+    "how many tenths",
+    "how many hundredths",
+    "write as tenths",
+    "whole ones as tenths"
+   ],
+   "mastery": "The child says how many tenths (or hundredths) make a decimal such as 7.7 (77 tenths) by counting the whole ones as ten tenths each."
+  },
+  "MATH.G7.NUMBER.DECIMALS.MULT_DEC_BY_WHOLE": {
+   "forms": [
+    "multiply a decimal",
+    "cost of 3.5 kg",
+    "find the mistake with the point",
+    "estimate to check"
+   ],
+   "mastery": "The child multiplies a decimal with up to three places by a whole number up to 100 by multiplying without the point and putting the point back with the same number of places, and decides if the answer is sensible."
+  },
+  "MATH.G7.NUMBER.DECIMALS.MULT_DEC_BY_DEC": {
+   "forms": [
+    "multiply two decimals",
+    "area of a garden",
+    "where does the point go",
+    "is the product bigger or smaller"
+   ],
+   "mastery": "The child multiplies two decimals by multiplying without points and giving the product as many decimal places as both factors together, uses it for the area of a rectangle with decimal sides, and says when the product is smaller than a factor."
+  },
+  "MATH.G7.NUMBER.DECIMALS.DIV_DEC_BY_WHOLE": {
+   "forms": [
+    "share equally",
+    "divide with a point",
+    "where is the point",
+    "check by multiplying"
+   ],
+   "mastery": "The child divides a decimal by a whole number, and a whole number by a whole number with a decimal quotient (12 / 8 = 1.5), by long division with the point in the quotient directly above the point in the dividend."
+  },
+  "MATH.G7.NUMBER.DECIMALS.DIV_BY_DECIMAL": {
+   "forms": [
+    "how many pieces",
+    "price per kilogram",
+    "move the point in both",
+    "check by multiplying"
+   ],
+   "mastery": "The child divides by a decimal by moving the point in both numbers the same number of places until the divisor is whole, uses it to count how many small amounts fit into a large one, and finds a price per kilogram."
+  },
+  "MATH.G7.NUMBER.DECIMALS.DEC_DIVISION_SIZE": {
+   "forms": [
+    "bigger or smaller",
+    "why is the answer bigger than 6",
+    "choose the best explanation",
+    "estimate the quotient"
+   ],
+   "mastery": "The child says that dividing by a number less than 1 makes the answer larger and dividing by a number greater than 1 makes it smaller, using how many lots fit, and does not move the point without a reason."
+  },
+  "MATH.G7.NUMBER.SQUARES_AND_SQUARE_ROOTS.SQUARE_WHOLE_NUMBER": {
+   "forms": [
+    "square of a number",
+    "square of a multiple of ten",
+    "which is a perfect square",
+    "area of a square"
+   ],
+   "mastery": "The child finds the square of a whole number up to 50, and of multiples of 10 (30 squared is 900), by multiplying the number by itself, and knows that squaring is not doubling."
+  },
+  "MATH.G7.NUMBER.SQUARES_AND_SQUARE_ROOTS.SQUARE_FRACTION": {
+   "forms": [
+    "which fraction is the square",
+    "square a fraction",
+    "spot the mistake",
+    "is it smaller"
+   ],
+   "mastery": "The child squares a fraction by multiplying the numerator by itself and the denominator by itself, simplifies, and says why the answer is smaller than the fraction."
+  },
+  "MATH.G7.NUMBER.SQUARES_AND_SQUARE_ROOTS.SQUARE_DECIMAL": {
+   "forms": [
+    "square of a decimal",
+    "area of a square garden",
+    "where does the point go",
+    "area when the side doubles"
+   ],
+   "mastery": "The child squares a decimal such as 0.03 or 1.5 by multiplying without the point and giving the square twice as many decimal places, and uses it for the area of a square plot and for the area when the side is doubled."
+  },
+  "MATH.G7.NUMBER.SQUARES_AND_SQUARE_ROOTS.ROOT_WHOLE_NUMBER": {
+   "forms": [
+    "find the square root",
+    "check by squaring",
+    "which is a perfect square",
+    "the root of a sum"
+   ],
+   "mastery": "The child finds the square root of a perfect square up to 2,500 by finding the number that multiplied by itself gives it, checks by squaring, and knows the root of a sum is not the sum of the roots."
+  },
+  "MATH.G7.NUMBER.SQUARES_AND_SQUARE_ROOTS.ROOT_FRACTION_DECIMAL": {
+   "forms": [
+    "root of a fraction",
+    "root of a decimal",
+    "check by squaring",
+    "where does the point go"
+   ],
+   "mastery": "The child finds the root of a fraction by taking the root of the numerator and of the denominator (9/16 gives 3/4), and of a decimal that is a perfect square (0.09 gives 0.3 and 1.44 gives 1.2) by halving the decimal places."
+  },
+  "MATH.G7.NUMBER.SQUARES_AND_SQUARE_ROOTS.ROOT_IN_CONTEXT": {
+   "forms": [
+    "side from the area",
+    "fence round the plot",
+    "difference between two sides",
+    "which measure is asked for"
+   ],
+   "mastery": "The child takes the square root of the area of a square plot to find a side, then uses the side (for the distance round, or to compare plots), reading the question to know which is needed."
+  },
+  "MATH.G7.NUMBER.SQUARES_AND_SQUARE_ROOTS.ROOT_BY_ANCHORS": {
+   "forms": [
+    "between which two whole numbers",
+    "which perfect squares are either side",
+    "estimate a root",
+    "check a root"
+   ],
+   "mastery": "The child finds the two perfect squares either side of a number (98 lies between 81 and 100) and so places its root between two whole numbers (between 9 and 10). The number is not itself a perfect square: this skill supports checking roots."
   }
  }
 }

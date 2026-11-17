@@ -3,15 +3,15 @@
  "subject_key": "mathematics",
  "grade": 7,
  "source": "KICD KICD-Grade7-Mathematics-Curriculum-Design.pdf, revised 2024 (text layer)",
- "status": "outcomes from KICD's text, word for word; skills and prerequisites proposed; misconceptions draft; all awaiting teacher review (17 Nov 2026); no skills yet for: NUMBER.DECIMALS, NUMBER.SQUARES_AND_SQUARE_ROOTS, ALGEBR.ALGEBRAIC_EXPRESSIONS, ALGEBR.LINEAR_EQUATIONS, ALGEBR.LINEAR_INEQUALITIES, MEASUR.PYTHAGOREAN_RELATIONSHIP, MEASUR.LENGTH, MEASUR.AREA, MEASUR.VOLUME_AND_CAPACITY, MEASUR.TIME_DISTANCE_AND_SPEED, MEASUR.TEMPERATURE, MEASUR.MONEY, GEOMET.ANGLES, GEOMET.GEOMETRICAL_CONSTRUCTION, DATA_H.DATA_HANDLING",
+ "status": "outcomes from KICD's text, word for word; skills and prerequisites proposed; misconceptions draft; all awaiting teacher review (17 Nov 2026); no skills yet for: ALGEBR.ALGEBRAIC_EXPRESSIONS, ALGEBR.LINEAR_EQUATIONS, ALGEBR.LINEAR_INEQUALITIES, MEASUR.PYTHAGOREAN_RELATIONSHIP, MEASUR.LENGTH, MEASUR.AREA, MEASUR.VOLUME_AND_CAPACITY, MEASUR.TIME_DISTANCE_AND_SPEED, MEASUR.TEMPERATURE, MEASUR.MONEY, GEOMET.ANGLES, GEOMET.GEOMETRICAL_CONSTRUCTION, DATA_H.DATA_HANDLING",
  "totals": {
   "strands": 5,
   "sub_strands": 18,
   "outcomes": 117,
   "lessons": 148,
-  "skills": 38,
-  "prerequisites": 79,
-  "misconceptions": 129
+  "skills": 52,
+  "prerequisites": 108,
+  "misconceptions": 179
  },
  "sub_strands": [
   {
@@ -55,7 +55,7 @@
    "values": "",
    "pcis": "",
    "links": "",
-   "design_notes": "Official outcomes a to h are tested; i is an attitude and has no skill. Outcome f (apply operations of whole numbers) is 'kicd_read': the design gives no limit, so the skills use Grade 6 limits stretched to Grade 7 numbers (up to 9-digit sums, 3-digit by 3-digit products, up to 6-digit dividends, three operations with brackets). Outcome e names even, odd and prime. Number sequences (g, h) are with a constant difference or ratio, or a two-step rule. Official outcomes a to h are tested; i is an attitude and has no skill. Outcome f (apply operations of whole numbers) is 'kicd_read': the design gives no limit, so the skills use Grade 6 limits stretched to Grade 7 numbers (up to 9-digit sums, 3-digit by 3-digit products, up to 6-digit dividends, three operations with brackets). Outcome e names even, odd and prime. Number sequences (g, h) are with a constant difference or ratio, or a two-step rule. Official outcomes a to h are tested; i is an attitude and has no skill. Outcome f (apply operations of whole numbers) is 'kicd_read': the design gives no limit, so the skills use Grade 6 limits stretched to Grade 7 numbers (up to 9-digit sums, 3-digit by 3-digit products, up to 6-digit dividends, three operations with brackets). Outcome e names even, odd and prime. Number sequences (g, h) are with a constant difference or ratio, or a two-step rule. Official outcomes a to h are tested; i is an attitude and has no skill. Outcome f (apply operations of whole numbers) is 'kicd_read': the design gives no limit, so the skills use Grade 6 limits stretched to Grade 7 numbers (up to 9-digit sums, 3-digit by 3-digit products, up to 6-digit dividends, three operations with brackets). Outcome e names even, odd and prime. Number sequences (g, h) are with a constant difference or ratio, or a two-step rule. Official outcomes a to h are tested; i is an attitude and has no skill. Outcome f (apply operations of whole numbers) is 'kicd_read': the design gives no limit, so the skills use Grade 6 limits stretched to Grade 7 numbers (up to 9-digit sums, 3-digit by 3-digit products, up to 6-digit dividends, three operations with brackets). Outcome e names even, odd and prime. Number sequences (g, h) are with a constant difference or ratio, or a two-step rule. Official outcomes a to h are tested; i is an attitude and has no skill. Outcome f (apply operations of whole numbers) is 'kicd_read': the design gives no limit, so the skills use Grade 6 limits stretched to Grade 7 numbers (up to 9-digit sums, 3-digit by 3-digit products, up to 6-digit dividends, three operations with brackets). Outcome e names even, odd and prime. Number sequences (g, h) are with a constant difference or ratio, or a two-step rule. Official outcomes a to h are tested; i is an attitude and has no skill. Outcome f (apply operations of whole numbers) is 'kicd_read': the design gives no limit, so the skills use Grade 6 limits stretched to Grade 7 numbers (up to 9-digit sums, 3-digit by 3-digit products, up to 6-digit dividends, three operations with brackets). Outcome e names even, odd and prime. Number sequences (g, h) are with a constant difference or ratio, or a two-step rule. Official outcomes a to h are tested; i is an attitude and has no skill. Outcome f (apply operations of whole numbers) is 'kicd_read': the design gives no limit, so the skills use Grade 6 limits stretched to Grade 7 numbers (up to 9-digit sums, 3-digit by 3-digit products, up to 6-digit dividends, three operations with brackets). Outcome e names even, odd and prime. Number sequences (g, h) are with a constant difference or ratio, or a two-step rule. Official outcomes a to h are tested; i is an attitude and has no skill. Outcome f (apply operations of whole numbers) is 'kicd_read': the design gives no limit, so the skills use Grade 6 limits stretched to Grade 7 numbers (up to 9-digit sums, 3-digit by 3-digit products, up to 6-digit dividends, three operations with brackets). Outcome e names even, odd and prime. Number sequences (g, h) are with a constant difference or ratio, or a two-step rule.",
+   "design_notes": "Official outcomes a to h are tested; i is an attitude and has no skill. Outcome f (apply operations of whole numbers) is 'kicd_read': the design gives no limit, so the skills use Grade 6 limits stretched to Grade 7 numbers (up to 9-digit sums, 3-digit by 3-digit products, up to 6-digit dividends, three operations with brackets). Outcome e names even, odd and prime. Number sequences (g, h) are with a constant difference or ratio, or a two-step rule. Official outcomes a to h are tested; i is an attitude and has no skill. Outcome f (apply operations of whole numbers) is 'kicd_read': the design gives no limit, so the skills use Grade 6 limits stretched to Grade 7 numbers (up to 9-digit sums, 3-digit by 3-digit products, up to 6-digit dividends, three operations with brackets). Outcome e names even, odd and prime. Number sequences (g, h) are with a constant difference or ratio, or a two-step rule. Official outcomes a to h are tested; i is an attitude and has no skill. Outcome f (apply operations of whole numbers) is 'kicd_read': the design gives no limit, so the skills use Grade 6 limits stretched to Grade 7 numbers (up to 9-digit sums, 3-digit by 3-digit products, up to 6-digit dividends, three operations with brackets). Outcome e names even, odd and prime. Number sequences (g, h) are with a constant difference or ratio, or a two-step rule. Official outcomes a to h are tested; i is an attitude and has no skill. Outcome f (apply operations of whole numbers) is 'kicd_read': the design gives no limit, so the skills use Grade 6 limits stretched to Grade 7 numbers (up to 9-digit sums, 3-digit by 3-digit products, up to 6-digit dividends, three operations with brackets). Outcome e names even, odd and prime. Number sequences (g, h) are with a constant difference or ratio, or a two-step rule. Official outcomes a to h are tested; i is an attitude and has no skill. Outcome f (apply operations of whole numbers) is 'kicd_read': the design gives no limit, so the skills use Grade 6 limits stretched to Grade 7 numbers (up to 9-digit sums, 3-digit by 3-digit products, up to 6-digit dividends, three operations with brackets). Outcome e names even, odd and prime. Number sequences (g, h) are with a constant difference or ratio, or a two-step rule. Official outcomes a to h are tested; i is an attitude and has no skill. Outcome f (apply operations of whole numbers) is 'kicd_read': the design gives no limit, so the skills use Grade 6 limits stretched to Grade 7 numbers (up to 9-digit sums, 3-digit by 3-digit products, up to 6-digit dividends, three operations with brackets). Outcome e names even, odd and prime. Number sequences (g, h) are with a constant difference or ratio, or a two-step rule. Official outcomes a to h are tested; i is an attitude and has no skill. Outcome f (apply operations of whole numbers) is 'kicd_read': the design gives no limit, so the skills use Grade 6 limits stretched to Grade 7 numbers (up to 9-digit sums, 3-digit by 3-digit products, up to 6-digit dividends, three operations with brackets). Outcome e names even, odd and prime. Number sequences (g, h) are with a constant difference or ratio, or a two-step rule. Official outcomes a to h are tested; i is an attitude and has no skill. Outcome f (apply operations of whole numbers) is 'kicd_read': the design gives no limit, so the skills use Grade 6 limits stretched to Grade 7 numbers (up to 9-digit sums, 3-digit by 3-digit products, up to 6-digit dividends, three operations with brackets). Outcome e names even, odd and prime. Number sequences (g, h) are with a constant difference or ratio, or a two-step rule. Official outcomes a to h are tested; i is an attitude and has no skill. Outcome f (apply operations of whole numbers) is 'kicd_read': the design gives no limit, so the skills use Grade 6 limits stretched to Grade 7 numbers (up to 9-digit sums, 3-digit by 3-digit products, up to 6-digit dividends, three operations with brackets). Outcome e names even, odd and prime. Number sequences (g, h) are with a constant difference or ratio, or a two-step rule. Official outcomes a to h are tested; i is an attitude and has no skill. Outcome f (apply operations of whole numbers) is 'kicd_read': the design gives no limit, so the skills use Grade 6 limits stretched to Grade 7 numbers (up to 9-digit sums, 3-digit by 3-digit products, up to 6-digit dividends, three operations with brackets). Outcome e names even, odd and prime. Number sequences (g, h) are with a constant difference or ratio, or a two-step rule.",
    "source": {
     "grade_page": "https://kicd.ac.ke/cbc-materials/curriculum-designs/grade-seven-designs/",
     "design": "KICD-Grade7-Mathematics-Curriculum-Design.pdf",
@@ -1766,7 +1766,7 @@
    "values": "",
    "pcis": "",
    "links": "",
-   "design_notes": "Official outcomes a to d are tested; e is an attitude. Outcome a lists 2, 3, 4, 5, 6, 8, 9, 10 and 11, so there are three divisibility skills grouped by the kind of test (last digits, digit sum, alternating sum). Outcomes c and d are by the factor method, so the skills use prime factorisation. GCD is the same as HCF in Grade 5. Official outcomes a to d are tested; e is an attitude. Outcome a lists 2, 3, 4, 5, 6, 8, 9, 10 and 11, so there are three divisibility skills grouped by the kind of test (last digits, digit sum, alternating sum). Outcomes c and d are by the factor method, so the skills use prime factorisation. GCD is the same as HCF in Grade 5. Official outcomes a to d are tested; e is an attitude. Outcome a lists 2, 3, 4, 5, 6, 8, 9, 10 and 11, so there are three divisibility skills grouped by the kind of test (last digits, digit sum, alternating sum). Outcomes c and d are by the factor method, so the skills use prime factorisation. GCD is the same as HCF in Grade 5. Official outcomes a to d are tested; e is an attitude. Outcome a lists 2, 3, 4, 5, 6, 8, 9, 10 and 11, so there are three divisibility skills grouped by the kind of test (last digits, digit sum, alternating sum). Outcomes c and d are by the factor method, so the skills use prime factorisation. GCD is the same as HCF in Grade 5. Official outcomes a to d are tested; e is an attitude. Outcome a lists 2, 3, 4, 5, 6, 8, 9, 10 and 11, so there are three divisibility skills grouped by the kind of test (last digits, digit sum, alternating sum). Outcomes c and d are by the factor method, so the skills use prime factorisation. GCD is the same as HCF in Grade 5. Official outcomes a to d are tested; e is an attitude. Outcome a lists 2, 3, 4, 5, 6, 8, 9, 10 and 11, so there are three divisibility skills grouped by the kind of test (last digits, digit sum, alternating sum). Outcomes c and d are by the factor method, so the skills use prime factorisation. GCD is the same as HCF in Grade 5.",
+   "design_notes": "Official outcomes a to d are tested; e is an attitude. Outcome a lists 2, 3, 4, 5, 6, 8, 9, 10 and 11, so there are three divisibility skills grouped by the kind of test (last digits, digit sum, alternating sum). Outcomes c and d are by the factor method, so the skills use prime factorisation. GCD is the same as HCF in Grade 5. Official outcomes a to d are tested; e is an attitude. Outcome a lists 2, 3, 4, 5, 6, 8, 9, 10 and 11, so there are three divisibility skills grouped by the kind of test (last digits, digit sum, alternating sum). Outcomes c and d are by the factor method, so the skills use prime factorisation. GCD is the same as HCF in Grade 5. Official outcomes a to d are tested; e is an attitude. Outcome a lists 2, 3, 4, 5, 6, 8, 9, 10 and 11, so there are three divisibility skills grouped by the kind of test (last digits, digit sum, alternating sum). Outcomes c and d are by the factor method, so the skills use prime factorisation. GCD is the same as HCF in Grade 5. Official outcomes a to d are tested; e is an attitude. Outcome a lists 2, 3, 4, 5, 6, 8, 9, 10 and 11, so there are three divisibility skills grouped by the kind of test (last digits, digit sum, alternating sum). Outcomes c and d are by the factor method, so the skills use prime factorisation. GCD is the same as HCF in Grade 5. Official outcomes a to d are tested; e is an attitude. Outcome a lists 2, 3, 4, 5, 6, 8, 9, 10 and 11, so there are three divisibility skills grouped by the kind of test (last digits, digit sum, alternating sum). Outcomes c and d are by the factor method, so the skills use prime factorisation. GCD is the same as HCF in Grade 5. Official outcomes a to d are tested; e is an attitude. Outcome a lists 2, 3, 4, 5, 6, 8, 9, 10 and 11, so there are three divisibility skills grouped by the kind of test (last digits, digit sum, alternating sum). Outcomes c and d are by the factor method, so the skills use prime factorisation. GCD is the same as HCF in Grade 5. Official outcomes a to d are tested; e is an attitude. Outcome a lists 2, 3, 4, 5, 6, 8, 9, 10 and 11, so there are three divisibility skills grouped by the kind of test (last digits, digit sum, alternating sum). Outcomes c and d are by the factor method, so the skills use prime factorisation. GCD is the same as HCF in Grade 5.",
    "source": {
     "grade_page": "https://kicd.ac.ke/cbc-materials/curriculum-designs/grade-seven-designs/",
     "design": "KICD-Grade7-Mathematics-Curriculum-Design.pdf",
@@ -2497,7 +2497,7 @@
    "values": "",
    "pcis": "",
    "links": "",
-   "design_notes": "Official outcomes a to h are tested; i (create sequences with fractions) is 'kicd_read' and has a skill; j is an attitude. Fractions are proper fractions and mixed numbers with denominators up to 12. Multiplication and division by a whole number, a fraction and a mixed number are separate skills because the errors differ. Number sequences with fractions (h, i) come from the same outcome words as whole-number sequences. Official outcomes a to h are tested; i (create sequences with fractions) is 'kicd_read' and has a skill; j is an attitude. Fractions are proper fractions and mixed numbers with denominators up to 12. Multiplication and division by a whole number, a fraction and a mixed number are separate skills because the errors differ. Number sequences with fractions (h, i) come from the same outcome words as whole-number sequences. Official outcomes a to h are tested; i (create sequences with fractions) is 'kicd_read' and has a skill; j is an attitude. Fractions are proper fractions and mixed numbers with denominators up to 12. Multiplication and division by a whole number, a fraction and a mixed number are separate skills because the errors differ. Number sequences with fractions (h, i) come from the same outcome words as whole-number sequences.",
+   "design_notes": "Official outcomes a to h are tested; i (create sequences with fractions) is 'kicd_read' and has a skill; j is an attitude. Fractions are proper fractions and mixed numbers with denominators up to 12. Multiplication and division by a whole number, a fraction and a mixed number are separate skills because the errors differ. Number sequences with fractions (h, i) come from the same outcome words as whole-number sequences. Official outcomes a to h are tested; i (create sequences with fractions) is 'kicd_read' and has a skill; j is an attitude. Fractions are proper fractions and mixed numbers with denominators up to 12. Multiplication and division by a whole number, a fraction and a mixed number are separate skills because the errors differ. Number sequences with fractions (h, i) come from the same outcome words as whole-number sequences. Official outcomes a to h are tested; i (create sequences with fractions) is 'kicd_read' and has a skill; j is an attitude. Fractions are proper fractions and mixed numbers with denominators up to 12. Multiplication and division by a whole number, a fraction and a mixed number are separate skills because the errors differ. Number sequences with fractions (h, i) come from the same outcome words as whole-number sequences. Official outcomes a to h are tested; i (create sequences with fractions) is 'kicd_read' and has a skill; j is an attitude. Fractions are proper fractions and mixed numbers with denominators up to 12. Multiplication and division by a whole number, a fraction and a mixed number are separate skills because the errors differ. Number sequences with fractions (h, i) come from the same outcome words as whole-number sequences.",
    "source": {
     "grade_page": "https://kicd.ac.ke/cbc-materials/curriculum-designs/grade-seven-designs/",
     "design": "KICD-Grade7-Mathematics-Curriculum-Design.pdf",
@@ -3741,7 +3741,7 @@
    "values": "",
    "pcis": "",
    "links": "",
-   "design_notes": "",
+   "design_notes": "Official outcomes a to c are tested; d is an attitude. Decimals go to thousandths. Multiplication and division are by a whole number and by a decimal, separate skills because the errors differ (a lost point, the wrong operation, moving the point in one number only).",
    "source": {
     "grade_page": "https://kicd.ac.ke/cbc-materials/curriculum-designs/grade-seven-designs/",
     "design": "KICD-Grade7-Mathematics-Curriculum-Design.pdf",
@@ -3776,8 +3776,651 @@
      "status": "kicd_verified"
     }
    ],
-   "skills": [],
-   "misconceptions": []
+   "skills": [
+    {
+     "code": "MATH.G7.NUMBER.DECIMALS.DEC_PLACE_AND_TOTAL_VALUE",
+     "name": "Place value and total value of digits in decimals up to thousandths",
+     "outcomes": [
+      "MATH.G7.NUMBER.DECIMALS.a"
+     ],
+     "mastery": "The child names the place of a digit after the point (tenths, hundredths, thousandths), gives its total value (the 7 in 4.073 is worth 0.07), and writes a decimal from a place value chart whose rows are not in order.",
+     "question_forms": [
+      "name the place",
+      "total value of a digit",
+      "write the number from a chart",
+      "which digit is in the place"
+     ],
+     "thinking": [
+      "recall",
+      "procedure"
+     ],
+     "horeb_skill_ids": [
+      "G7_DECIMAL_PV"
+     ],
+     "prerequisites": [
+      {
+       "requires": "MATH.G6.NUMBER.DECIMALS.DECIMAL_PLACES_TEN_THOUSANDTHS",
+       "kind": "skill",
+       "strength": "essential",
+       "reason": "Grade 6 places go to ten thousandths.",
+       "status": "proposed"
+      },
+      {
+       "requires": "MATH.G5.NUMBER.DECIMALS.DEC_DIGIT_VALUE",
+       "kind": "skill",
+       "strength": "essential",
+       "reason": "Digit value in decimals.",
+       "status": "proposed"
+      }
+     ],
+     "status": "proposed"
+    },
+    {
+     "code": "MATH.G7.NUMBER.DECIMALS.DEC_COUNT_TENTHS",
+     "name": "Count how many tenths or hundredths are in a decimal",
+     "outcomes": [
+      "MATH.G7.NUMBER.DECIMALS.a"
+     ],
+     "mastery": "The child says how many tenths (or hundredths) make a decimal such as 7.7 (77 tenths) by counting the whole ones as ten tenths each.",
+     "question_forms": [
+      "how many tenths",
+      "how many hundredths",
+      "write as tenths",
+      "whole ones as tenths"
+     ],
+     "thinking": [
+      "procedure",
+      "reasoning"
+     ],
+     "horeb_skill_ids": [
+      "G7_DECIMAL_PV"
+     ],
+     "prerequisites": [
+      {
+       "requires": "MATH.G7.NUMBER.DECIMALS.DEC_PLACE_AND_TOTAL_VALUE",
+       "kind": "skill",
+       "strength": "essential",
+       "reason": "Place value comes first.",
+       "status": "proposed"
+      },
+      {
+       "requires": "MATH.G6.NUMBER.DECIMALS.FRACTION_TO_DECIMAL",
+       "kind": "skill",
+       "strength": "helpful",
+       "reason": "Tenths as fractions.",
+       "status": "proposed"
+      }
+     ],
+     "status": "proposed"
+    },
+    {
+     "code": "MATH.G7.NUMBER.DECIMALS.MULT_DEC_BY_WHOLE",
+     "name": "Multiply a decimal by a whole number",
+     "outcomes": [
+      "MATH.G7.NUMBER.DECIMALS.b"
+     ],
+     "mastery": "The child multiplies a decimal with up to three places by a whole number up to 100 by multiplying without the point and putting the point back with the same number of places, and decides if the answer is sensible.",
+     "question_forms": [
+      "multiply a decimal",
+      "cost of 3.5 kg",
+      "find the mistake with the point",
+      "estimate to check"
+     ],
+     "thinking": [
+      "procedure"
+     ],
+     "horeb_skill_ids": [
+      "G7_DECIMALS_MUL",
+      "G6_DECIMALS_MUL"
+     ],
+     "prerequisites": [
+      {
+       "requires": "MATH.G5.NUMBER.DECIMALS.DEC_MULT_1000",
+       "kind": "skill",
+       "strength": "essential",
+       "reason": "Multiplying decimals by 10, 100, 1000.",
+       "status": "proposed"
+      },
+      {
+       "requires": "MATH.G6.NUMBER.MULTIPLICATION.MULT_4D_BY_2D",
+       "kind": "skill",
+       "strength": "essential",
+       "reason": "Multiplying whole numbers.",
+       "status": "proposed"
+      }
+     ],
+     "status": "proposed"
+    },
+    {
+     "code": "MATH.G7.NUMBER.DECIMALS.MULT_DEC_BY_DEC",
+     "name": "Multiply a decimal by a decimal",
+     "outcomes": [
+      "MATH.G7.NUMBER.DECIMALS.b"
+     ],
+     "mastery": "The child multiplies two decimals by multiplying without points and giving the product as many decimal places as both factors together, uses it for the area of a rectangle with decimal sides, and says when the product is smaller than a factor.",
+     "question_forms": [
+      "multiply two decimals",
+      "area of a garden",
+      "where does the point go",
+      "is the product bigger or smaller"
+     ],
+     "thinking": [
+      "procedure",
+      "reasoning"
+     ],
+     "horeb_skill_ids": [
+      "G7_DECIMALS_MUL"
+     ],
+     "prerequisites": [
+      {
+       "requires": "MATH.G7.NUMBER.DECIMALS.MULT_DEC_BY_WHOLE",
+       "kind": "skill",
+       "strength": "essential",
+       "reason": "The same method with one factor whole.",
+       "status": "proposed"
+      },
+      {
+       "requires": "MATH.G6.NUMBER.DECIMALS.ROUND_DECIMALS_3DP",
+       "kind": "skill",
+       "strength": "helpful",
+       "reason": "Rounding long products.",
+       "status": "proposed"
+      }
+     ],
+     "status": "proposed"
+    },
+    {
+     "code": "MATH.G7.NUMBER.DECIMALS.DIV_DEC_BY_WHOLE",
+     "name": "Divide a decimal or a whole number by a whole number to get a decimal",
+     "outcomes": [
+      "MATH.G7.NUMBER.DECIMALS.c"
+     ],
+     "mastery": "The child divides a decimal by a whole number, and a whole number by a whole number with a decimal quotient (12 / 8 = 1.5), by long division with the point in the quotient directly above the point in the dividend.",
+     "question_forms": [
+      "share equally",
+      "divide with a point",
+      "where is the point",
+      "check by multiplying"
+     ],
+     "thinking": [
+      "procedure"
+     ],
+     "horeb_skill_ids": [
+      "G7_DECIMALS_DIV",
+      "G6_DECIMALS_DIV"
+     ],
+     "prerequisites": [
+      {
+       "requires": "MATH.G6.NUMBER.DIVISION.DIV_4D_BY_UP_TO_3D",
+       "kind": "skill",
+       "strength": "essential",
+       "reason": "Long division of whole numbers.",
+       "status": "proposed"
+      },
+      {
+       "requires": "MATH.G6.NUMBER.DECIMALS.ADD_DECIMALS_4DP",
+       "kind": "skill",
+       "strength": "helpful",
+       "reason": "Working with decimals.",
+       "status": "proposed"
+      }
+     ],
+     "status": "proposed"
+    },
+    {
+     "code": "MATH.G7.NUMBER.DECIMALS.DIV_BY_DECIMAL",
+     "name": "Divide by a decimal",
+     "outcomes": [
+      "MATH.G7.NUMBER.DECIMALS.c"
+     ],
+     "mastery": "The child divides by a decimal by moving the point in both numbers the same number of places until the divisor is whole, uses it to count how many small amounts fit into a large one, and finds a price per kilogram.",
+     "question_forms": [
+      "how many pieces",
+      "price per kilogram",
+      "move the point in both",
+      "check by multiplying"
+     ],
+     "thinking": [
+      "procedure",
+      "reasoning"
+     ],
+     "horeb_skill_ids": [
+      "G7_DECIMALS_DIV"
+     ],
+     "prerequisites": [
+      {
+       "requires": "MATH.G7.NUMBER.DECIMALS.DIV_DEC_BY_WHOLE",
+       "kind": "skill",
+       "strength": "essential",
+       "reason": "Dividing by a whole number first.",
+       "status": "proposed"
+      },
+      {
+       "requires": "MATH.G5.NUMBER.DECIMALS.DEC_MULT_1000",
+       "kind": "skill",
+       "strength": "helpful",
+       "reason": "Moving the point.",
+       "status": "proposed"
+      }
+     ],
+     "status": "proposed"
+    },
+    {
+     "code": "MATH.G7.NUMBER.DECIMALS.DEC_DIVISION_SIZE",
+     "name": "Decide whether dividing by a decimal gives a bigger or smaller answer",
+     "outcomes": [
+      "MATH.G7.NUMBER.DECIMALS.c"
+     ],
+     "mastery": "The child says that dividing by a number less than 1 makes the answer larger and dividing by a number greater than 1 makes it smaller, using how many lots fit, and does not move the point without a reason.",
+     "question_forms": [
+      "bigger or smaller",
+      "why is the answer bigger than 6",
+      "choose the best explanation",
+      "estimate the quotient"
+     ],
+     "thinking": [
+      "reasoning"
+     ],
+     "horeb_skill_ids": [
+      "G7_DECIMALS_DIV",
+      "G6_DECIMALS_DIV"
+     ],
+     "prerequisites": [
+      {
+       "requires": "MATH.G7.NUMBER.DECIMALS.DIV_BY_DECIMAL",
+       "kind": "skill",
+       "strength": "essential",
+       "reason": "The calculation behind the reasoning.",
+       "status": "proposed"
+      },
+      {
+       "requires": "MATH.G7.NUMBER.FRACTIONS.DIVIDE_WHOLE_BY_FRACTION",
+       "kind": "skill",
+       "strength": "helpful",
+       "reason": "Dividing by a fraction less than 1.",
+       "status": "proposed"
+      }
+     ],
+     "status": "proposed"
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "MATH.G7.NUMBER.DECIMALS.DEC_PLACE_AND_TOTAL_VALUE.M_DIGITS_READ_TOP_DOWN",
+     "skill": "MATH.G7.NUMBER.DECIMALS.DEC_PLACE_AND_TOTAL_VALUE",
+     "error": "Reads the digits of a place value table from the top of the table down instead of by place.",
+     "example": {
+      "question": "A table lists: tenths 7, ones 1, tens 3, hundredths 4. Write the number.",
+      "wrong_answer": "7.134",
+      "correct_answer": "31.74"
+     },
+     "cause": "Ignores the place names on each row.",
+     "reveals": "The answer 7.134 as a wrong option, with a reason that names the idea.",
+     "help": "Sort the rows into place order before you write the number.",
+     "source": "to be confirmed by a teacher (no source yet)",
+     "status": "draft"
+    },
+    {
+     "code": "MATH.G7.NUMBER.DECIMALS.DEC_PLACE_AND_TOTAL_VALUE.M_TENS_AND_ONES_SWAPPED",
+     "skill": "MATH.G7.NUMBER.DECIMALS.DEC_PLACE_AND_TOTAL_VALUE",
+     "error": "Swaps the tens and the ones when writing a number from a table.",
+     "example": {
+      "question": "Write: tens 4, ones 1, tenths 3, hundredths 7, thousandths 7",
+      "wrong_answer": "14.377",
+      "correct_answer": "41.377"
+     },
+     "cause": "Writes the digits in the order they appear in the table.",
+     "reveals": "The answer 14.377 as a wrong option, with a reason that names the idea.",
+     "help": "Tens come before ones; the point comes after the ones.",
+     "source": "to be confirmed by a teacher (no source yet)",
+     "status": "draft"
+    },
+    {
+     "code": "MATH.G7.NUMBER.DECIMALS.DEC_PLACE_AND_TOTAL_VALUE.M_DECIMAL_PLACES_SWAPPED",
+     "skill": "MATH.G7.NUMBER.DECIMALS.DEC_PLACE_AND_TOTAL_VALUE",
+     "error": "Swaps tenths and hundredths.",
+     "example": {
+      "question": "Write: ones 4, tenths 3, hundredths 7",
+      "wrong_answer": "4.73",
+      "correct_answer": "4.37"
+     },
+     "cause": "Thinks the second place after the point is tenths.",
+     "reveals": "The answer 4.73 as a wrong option, with a reason that names the idea.",
+     "help": "Tenths come straight after the point.",
+     "source": "to be confirmed by a teacher (no source yet)",
+     "status": "draft"
+    },
+    {
+     "code": "MATH.G7.NUMBER.DECIMALS.DEC_COUNT_TENTHS.M_SAME_NUMBER_REPEATED",
+     "skill": "MATH.G7.NUMBER.DECIMALS.DEC_COUNT_TENTHS",
+     "error": "Gives the decimal itself as the number of tenths.",
+     "example": {
+      "question": "How many tenths are in 7.7?",
+      "wrong_answer": "7.7",
+      "correct_answer": "77"
+     },
+     "cause": "Does not see tenths as a count.",
+     "reveals": "The answer 7.7 as a wrong option, with a reason that names the idea.",
+     "help": "Each whole is 10 tenths, so 7 wholes are 70 tenths, plus 7 more.",
+     "source": "to be confirmed by a teacher (no source yet)",
+     "status": "draft"
+    },
+    {
+     "code": "MATH.G7.NUMBER.DECIMALS.DEC_COUNT_TENTHS.M_TENTHS_HUNDREDTHS_CONFUSED",
+     "skill": "MATH.G7.NUMBER.DECIMALS.DEC_COUNT_TENTHS",
+     "error": "Counts hundredths when asked for tenths.",
+     "example": {
+      "question": "How many tenths are in 7.7?",
+      "wrong_answer": "770",
+      "correct_answer": "77"
+     },
+     "cause": "Mixes the two place names.",
+     "reveals": "The answer 770 as a wrong option, with a reason that names the idea.",
+     "help": "A whole has 10 tenths but 100 hundredths.",
+     "source": "to be confirmed by a teacher (no source yet)",
+     "status": "draft"
+    },
+    {
+     "code": "MATH.G7.NUMBER.DECIMALS.DEC_COUNT_TENTHS.M_WHOLES_NOT_COUNTED",
+     "skill": "MATH.G7.NUMBER.DECIMALS.DEC_COUNT_TENTHS",
+     "error": "Counts only the digits after the point and leaves out the wholes.",
+     "example": {
+      "question": "How many tenths are in 7.7?",
+      "wrong_answer": "7",
+      "correct_answer": "77"
+     },
+     "cause": "Forgets that the whole ones are also tenths.",
+     "reveals": "The answer 7 as a wrong option, with a reason that names the idea.",
+     "help": "Count the wholes as tenths: 7 x 10 = 70.",
+     "source": "to be confirmed by a teacher (no source yet)",
+     "status": "draft"
+    },
+    {
+     "code": "MATH.G7.NUMBER.DECIMALS.MULT_DEC_BY_WHOLE.M_FRACTION_PART_DROPPED",
+     "skill": "MATH.G7.NUMBER.DECIMALS.MULT_DEC_BY_WHOLE",
+     "error": "Multiplies the whole part only and drops the decimal part.",
+     "example": {
+      "question": "3.5 kg of beans at sh 170 a kilogram",
+      "wrong_answer": "sh 510",
+      "correct_answer": "sh 595"
+     },
+     "cause": "Forgets that half a kilogram also costs money.",
+     "reveals": "The answer sh 510 as a wrong option, with a reason that names the idea.",
+     "help": "Find the price of the 0.5 kg and add it.",
+     "source": "to be confirmed by a teacher (no source yet)",
+     "status": "draft"
+    },
+    {
+     "code": "MATH.G7.NUMBER.DECIMALS.MULT_DEC_BY_WHOLE.M_ADDED_NOT_MULTIPLIED",
+     "skill": "MATH.G7.NUMBER.DECIMALS.MULT_DEC_BY_WHOLE",
+     "error": "Adds where the price is for each unit.",
+     "example": {
+      "question": "3.5 kg at sh 170 for each kilogram",
+      "wrong_answer": "173.5",
+      "correct_answer": "595"
+     },
+     "cause": "Sees two numbers and adds.",
+     "reveals": "The answer 173.5 as a wrong option, with a reason that names the idea.",
+     "help": "The price is for each kilogram, so 3.5 kilograms cost 3.5 times as much.",
+     "source": "to be confirmed by a teacher (no source yet)",
+     "status": "draft"
+    },
+    {
+     "code": "MATH.G7.NUMBER.DECIMALS.MULT_DEC_BY_WHOLE.M_POINT_NOT_MOVED_BACK",
+     "skill": "MATH.G7.NUMBER.DECIMALS.MULT_DEC_BY_WHOLE",
+     "error": "Puts the decimal point in the wrong place after multiplying without it.",
+     "example": {
+      "question": "3.5 x 170",
+      "wrong_answer": "5950",
+      "correct_answer": "595"
+     },
+     "cause": "Forgets to give the answer the number of decimal places of the factors.",
+     "reveals": "The answer 5950 as a wrong option, with a reason that names the idea.",
+     "help": "There is one decimal place in 3.5, so the answer has one place in 5950: 595.0.",
+     "source": "to be confirmed by a teacher (no source yet)",
+     "status": "draft"
+    },
+    {
+     "code": "MATH.G7.NUMBER.DECIMALS.MULT_DEC_BY_WHOLE.M_DIVIDED_NOT_MULTIPLIED",
+     "skill": "MATH.G7.NUMBER.DECIMALS.MULT_DEC_BY_WHOLE",
+     "error": "Divides where the amount is repeated.",
+     "example": {
+      "question": "10 tiles of 0.25 m in a row: how long?",
+      "wrong_answer": "40",
+      "correct_answer": "2.5"
+     },
+     "cause": "Mixes up how many fit with how long altogether.",
+     "reveals": "The answer 40 as a wrong option, with a reason that names the idea.",
+     "help": "You know the number of tiles and the width of each: multiply.",
+     "source": "to be confirmed by a teacher (no source yet)",
+     "status": "draft"
+    },
+    {
+     "code": "MATH.G7.NUMBER.DECIMALS.MULT_DEC_BY_DEC.M_POINT_FROM_ONE_FACTOR_ONLY",
+     "skill": "MATH.G7.NUMBER.DECIMALS.MULT_DEC_BY_DEC",
+     "error": "Counts the decimal places of one factor only.",
+     "example": {
+      "question": "0.6 x 0.4",
+      "wrong_answer": "2.4",
+      "correct_answer": "0.24"
+     },
+     "cause": "Counts the places of the last number.",
+     "reveals": "The answer 2.4 as a wrong option, with a reason that names the idea.",
+     "help": "Count the places in both numbers: 1 + 1 = 2 places.",
+     "source": "to be confirmed by a teacher (no source yet)",
+     "status": "draft"
+    },
+    {
+     "code": "MATH.G7.NUMBER.DECIMALS.MULT_DEC_BY_DEC.M_PRODUCT_MUST_BE_BIGGER",
+     "skill": "MATH.G7.NUMBER.DECIMALS.MULT_DEC_BY_DEC",
+     "error": "Believes a product is always bigger than both factors.",
+     "example": {
+      "question": "0.5 x 0.5",
+      "wrong_answer": "2.5",
+      "correct_answer": "0.25"
+     },
+     "cause": "Has only multiplied by numbers greater than 1.",
+     "reveals": "The answer 2.5 as a wrong option, with a reason that names the idea.",
+     "help": "Half of a half is a quarter, which is smaller than a half.",
+     "source": "to be confirmed by a teacher (no source yet)",
+     "status": "draft"
+    },
+    {
+     "code": "MATH.G7.NUMBER.DECIMALS.MULT_DEC_BY_DEC.M_WRONG_QUANTITY_MULTIPLIED",
+     "skill": "MATH.G7.NUMBER.DECIMALS.MULT_DEC_BY_DEC",
+     "error": "Multiplies a price by the length instead of the area.",
+     "example": {
+      "question": "Grass at sh 60 a square metre, garden 3.6 m by 2.5 m",
+      "wrong_answer": "sh 216",
+      "correct_answer": "sh 540"
+     },
+     "cause": "Uses a number from the story that is not the one asked for.",
+     "reveals": "The answer sh 216 as a wrong option, with a reason that names the idea.",
+     "help": "The price is for each square metre, so use the area.",
+     "source": "to be confirmed by a teacher (no source yet)",
+     "status": "draft"
+    },
+    {
+     "code": "MATH.G7.NUMBER.DECIMALS.MULT_DEC_BY_DEC.M_PERIMETER_FOR_AREA",
+     "skill": "MATH.G7.NUMBER.DECIMALS.MULT_DEC_BY_DEC",
+     "error": "Uses the distance round instead of the area.",
+     "example": {
+      "question": "Area of a garden 3.6 m by 2.5 m",
+      "wrong_answer": "12.2 m2",
+      "correct_answer": "9 m2"
+     },
+     "cause": "Mixes the two measures of a rectangle.",
+     "reveals": "The answer 12.2 m2 as a wrong option, with a reason that names the idea.",
+     "help": "Area is length times width. The distance round is for the fence.",
+     "source": "to be confirmed by a teacher (no source yet)",
+     "status": "draft"
+    },
+    {
+     "code": "MATH.G7.NUMBER.DECIMALS.DIV_DEC_BY_WHOLE.M_MULTIPLIED_NOT_DIVIDED",
+     "skill": "MATH.G7.NUMBER.DECIMALS.DIV_DEC_BY_WHOLE",
+     "error": "Multiplies where the amount is shared.",
+     "example": {
+      "question": "12 litres shared into 8 bottles",
+      "wrong_answer": "96",
+      "correct_answer": "1.5"
+     },
+     "cause": "Sees two numbers and multiplies.",
+     "reveals": "The answer 96 as a wrong option, with a reason that names the idea.",
+     "help": "Sharing makes each amount smaller, so divide.",
+     "source": "to be confirmed by a teacher (no source yet)",
+     "status": "draft"
+    },
+    {
+     "code": "MATH.G7.NUMBER.DECIMALS.DIV_DEC_BY_WHOLE.M_DIVIDEND_GIVEN_AS_SHARE",
+     "skill": "MATH.G7.NUMBER.DECIMALS.DIV_DEC_BY_WHOLE",
+     "error": "Gives the whole amount as the share.",
+     "example": {
+      "question": "12 litres shared into 8 bottles",
+      "wrong_answer": "12",
+      "correct_answer": "1.5"
+     },
+     "cause": "Stops before sharing.",
+     "reveals": "The answer 12 as a wrong option, with a reason that names the idea.",
+     "help": "Each bottle gets only part of the 12 litres.",
+     "source": "to be confirmed by a teacher (no source yet)",
+     "status": "draft"
+    },
+    {
+     "code": "MATH.G7.NUMBER.DECIMALS.DIV_DEC_BY_WHOLE.M_POINT_LOST_IN_QUOTIENT",
+     "skill": "MATH.G7.NUMBER.DECIMALS.DIV_DEC_BY_WHOLE",
+     "error": "Leaves out the point in the quotient.",
+     "example": {
+      "question": "12 / 8",
+      "wrong_answer": "15",
+      "correct_answer": "1.5"
+     },
+     "cause": "Gets the digits right but forgets the remainder becomes a decimal.",
+     "reveals": "The answer 15 as a wrong option, with a reason that names the idea.",
+     "help": "Put a point after the 1 and continue dividing the remainder.",
+     "source": "to be confirmed by a teacher (no source yet)",
+     "status": "draft"
+    },
+    {
+     "code": "MATH.G7.NUMBER.DECIMALS.DIV_DEC_BY_WHOLE.M_POINT_PLACED_WRONG",
+     "skill": "MATH.G7.NUMBER.DECIMALS.DIV_DEC_BY_WHOLE",
+     "error": "Puts the point one place too far in the quotient.",
+     "example": {
+      "question": "12 / 8",
+      "wrong_answer": "0.15",
+      "correct_answer": "1.5"
+     },
+     "cause": "Counts the places wrongly.",
+     "reveals": "The answer 0.15 as a wrong option, with a reason that names the idea.",
+     "help": "Check by multiplying 0.15 x 8: it is only 1.2.",
+     "source": "to be confirmed by a teacher (no source yet)",
+     "status": "draft"
+    },
+    {
+     "code": "MATH.G7.NUMBER.DECIMALS.DIV_DEC_BY_WHOLE.M_SUBTRACTED_NOT_DIVIDED",
+     "skill": "MATH.G7.NUMBER.DECIMALS.DIV_DEC_BY_WHOLE",
+     "error": "Subtracts where the amount is shared or priced per unit.",
+     "example": {
+      "question": "sh 500 for 2.5 kg: price of 1 kg",
+      "wrong_answer": "sh 497.5",
+      "correct_answer": "sh 200"
+     },
+     "cause": "Mixes two operations.",
+     "reveals": "The answer sh 497.5 as a wrong option, with a reason that names the idea.",
+     "help": "The price of one kilogram is the money divided by the kilograms.",
+     "source": "to be confirmed by a teacher (no source yet)",
+     "status": "draft"
+    },
+    {
+     "code": "MATH.G7.NUMBER.DECIMALS.DIV_BY_DECIMAL.M_POINT_MOVED_ONE_NUMBER",
+     "skill": "MATH.G7.NUMBER.DECIMALS.DIV_BY_DECIMAL",
+     "error": "Moves the point in the divisor only.",
+     "example": {
+      "question": "7.5 / 0.5",
+      "wrong_answer": "1.5",
+      "correct_answer": "15"
+     },
+     "cause": "Moves one point and not the other.",
+     "reveals": "The answer 1.5 as a wrong option, with a reason that names the idea.",
+     "help": "Move both points the same number of places: 75 / 5.",
+     "source": "to be confirmed by a teacher (no source yet)",
+     "status": "draft"
+    },
+    {
+     "code": "MATH.G7.NUMBER.DECIMALS.DIV_BY_DECIMAL.M_REPEATED_SUBTRACTION_ONCE",
+     "skill": "MATH.G7.NUMBER.DECIMALS.DIV_BY_DECIMAL",
+     "error": "Subtracts the piece once instead of counting how many fit.",
+     "example": {
+      "question": "A 7.5 m ribbon cut into 0.5 m pieces",
+      "wrong_answer": "7",
+      "correct_answer": "15"
+     },
+     "cause": "Does not see division as counting how many fit.",
+     "reveals": "The answer 7 as a wrong option, with a reason that names the idea.",
+     "help": "Take 0.5 away again and again: how many times?",
+     "source": "to be confirmed by a teacher (no source yet)",
+     "status": "draft"
+    },
+    {
+     "code": "MATH.G7.NUMBER.DECIMALS.DIV_BY_DECIMAL.M_MULTIPLIED_INSTEAD_OF_COUNTING",
+     "skill": "MATH.G7.NUMBER.DECIMALS.DIV_BY_DECIMAL",
+     "error": "Multiplies to count how many pieces fit.",
+     "example": {
+      "question": "A 7.5 m ribbon cut into 0.5 m pieces",
+      "wrong_answer": "3.75",
+      "correct_answer": "15"
+     },
+     "cause": "Chooses multiplication because the numbers are decimals.",
+     "reveals": "The answer 3.75 as a wrong option, with a reason that names the idea.",
+     "help": "To find how many fit, divide.",
+     "source": "to be confirmed by a teacher (no source yet)",
+     "status": "draft"
+    },
+    {
+     "code": "MATH.G7.NUMBER.DECIMALS.DEC_DIVISION_SIZE.M_DIVIDING_ALWAYS_BIGGER",
+     "skill": "MATH.G7.NUMBER.DECIMALS.DEC_DIVISION_SIZE",
+     "error": "Believes dividing always gives a bigger number.",
+     "example": {
+      "question": "Dividing by 2: bigger or smaller?",
+      "wrong_answer": "bigger",
+      "correct_answer": "smaller"
+     },
+     "cause": "Has just learnt that dividing by 0.2 gives more.",
+     "reveals": "The answer bigger as a wrong option, with a reason that names the idea.",
+     "help": "Dividing by a number more than 1 splits into smaller parts.",
+     "source": "to be confirmed by a teacher (no source yet)",
+     "status": "draft"
+    },
+    {
+     "code": "MATH.G7.NUMBER.DECIMALS.DEC_DIVISION_SIZE.M_DIVISION_ALWAYS_SMALLER_DEC",
+     "skill": "MATH.G7.NUMBER.DECIMALS.DEC_DIVISION_SIZE",
+     "error": "Believes division always makes the answer smaller.",
+     "example": {
+      "question": "6 / 0.2",
+      "wrong_answer": "3",
+      "correct_answer": "30"
+     },
+     "cause": "Has only divided by numbers greater than 1.",
+     "reveals": "The answer 3 as a wrong option, with a reason that names the idea.",
+     "help": "How many 0.2s are in 6? There are 5 in each whole one.",
+     "source": "to be confirmed by a teacher (no source yet)",
+     "status": "draft"
+    },
+    {
+     "code": "MATH.G7.NUMBER.DECIMALS.DEC_DIVISION_SIZE.M_POINT_MOVED_WITHOUT_RULE",
+     "skill": "MATH.G7.NUMBER.DECIMALS.DEC_DIVISION_SIZE",
+     "error": "Moves the point to make the dividend bigger without moving it in the divisor.",
+     "example": {
+      "question": "6 / 0.2",
+      "wrong_answer": "300",
+      "correct_answer": "30"
+     },
+     "cause": "Thinks the point moves on its own.",
+     "reveals": "The answer 300 as a wrong option, with a reason that names the idea.",
+     "help": "Move both points the same way: 60 / 2.",
+     "source": "to be confirmed by a teacher (no source yet)",
+     "status": "draft"
+    }
+   ]
   },
   {
    "code": "MATH.G7.NUMBER.SQUARES_AND_SQUARE_ROOTS",
@@ -3810,7 +4453,7 @@
    "values": "",
    "pcis": "",
    "links": "",
-   "design_notes": "",
+   "design_notes": "Official outcomes a and b are tested; c is an attitude. Square roots are of perfect squares only (outcome b). One skill places a root between two whole numbers using perfect squares as anchors: it is a way of checking a root and is kept, with its limit named. Squares and roots in the Grade 6 map go up to 100 and 10,000.",
    "source": {
     "grade_page": "https://kicd.ac.ke/cbc-materials/curriculum-designs/grade-seven-designs/",
     "design": "KICD-Grade7-Mathematics-Curriculum-Design.pdf",
@@ -3839,8 +4482,657 @@
      "status": "kicd_verified"
     }
    ],
-   "skills": [],
-   "misconceptions": []
+   "skills": [
+    {
+     "code": "MATH.G7.NUMBER.SQUARES_AND_SQUARE_ROOTS.SQUARE_WHOLE_NUMBER",
+     "name": "Find the square of a whole number",
+     "outcomes": [
+      "MATH.G7.NUMBER.SQUARES_AND_SQUARE_ROOTS.a"
+     ],
+     "mastery": "The child finds the square of a whole number up to 50, and of multiples of 10 (30 squared is 900), by multiplying the number by itself, and knows that squaring is not doubling.",
+     "question_forms": [
+      "square of a number",
+      "square of a multiple of ten",
+      "which is a perfect square",
+      "area of a square"
+     ],
+     "thinking": [
+      "recall",
+      "procedure"
+     ],
+     "horeb_skill_ids": [
+      "G7_SQUARES_EXT"
+     ],
+     "prerequisites": [
+      {
+       "requires": "MATH.G6.NUMBER.WHOLE_NUMBERS.SQUARES_TO_100",
+       "kind": "skill",
+       "strength": "essential",
+       "reason": "Grade 6 squares go to 100.",
+       "status": "proposed"
+      },
+      {
+       "requires": "MATH.G6.NUMBER.MULTIPLICATION.MULT_4D_BY_2D",
+       "kind": "skill",
+       "strength": "helpful",
+       "reason": "Multiplication for larger numbers.",
+       "status": "proposed"
+      }
+     ],
+     "status": "proposed"
+    },
+    {
+     "code": "MATH.G7.NUMBER.SQUARES_AND_SQUARE_ROOTS.SQUARE_FRACTION",
+     "name": "Find the square of a fraction",
+     "outcomes": [
+      "MATH.G7.NUMBER.SQUARES_AND_SQUARE_ROOTS.a"
+     ],
+     "mastery": "The child squares a fraction by multiplying the numerator by itself and the denominator by itself, simplifies, and says why the answer is smaller than the fraction.",
+     "question_forms": [
+      "which fraction is the square",
+      "square a fraction",
+      "spot the mistake",
+      "is it smaller"
+     ],
+     "thinking": [
+      "procedure"
+     ],
+     "horeb_skill_ids": [
+      "G7_SQUARES_EXT"
+     ],
+     "prerequisites": [
+      {
+       "requires": "MATH.G6.NUMBER.FRACTIONS.SQUARE_OF_FRACTION",
+       "kind": "skill",
+       "strength": "essential",
+       "reason": "Grade 6 squares of fractions.",
+       "status": "proposed"
+      },
+      {
+       "requires": "MATH.G7.NUMBER.FRACTIONS.MULT_FRACTION_BY_FRACTION",
+       "kind": "skill",
+       "strength": "helpful",
+       "reason": "Squaring is multiplying by itself.",
+       "status": "proposed"
+      }
+     ],
+     "status": "proposed"
+    },
+    {
+     "code": "MATH.G7.NUMBER.SQUARES_AND_SQUARE_ROOTS.SQUARE_DECIMAL",
+     "name": "Find the square of a decimal and use it for the area of a square",
+     "outcomes": [
+      "MATH.G7.NUMBER.SQUARES_AND_SQUARE_ROOTS.a"
+     ],
+     "mastery": "The child squares a decimal such as 0.03 or 1.5 by multiplying without the point and giving the square twice as many decimal places, and uses it for the area of a square plot and for the area when the side is doubled.",
+     "question_forms": [
+      "square of a decimal",
+      "area of a square garden",
+      "where does the point go",
+      "area when the side doubles"
+     ],
+     "thinking": [
+      "procedure",
+      "reasoning"
+     ],
+     "horeb_skill_ids": [
+      "G7_SQUARES_EXT"
+     ],
+     "prerequisites": [
+      {
+       "requires": "MATH.G7.NUMBER.DECIMALS.MULT_DEC_BY_DEC",
+       "kind": "skill",
+       "strength": "essential",
+       "reason": "Squaring is multiplying a decimal by itself.",
+       "status": "proposed"
+      },
+      {
+       "requires": "MATH.G6.NUMBER.WHOLE_NUMBERS.SQUARES_TO_100",
+       "kind": "skill",
+       "strength": "helpful",
+       "reason": "Squares of whole numbers.",
+       "status": "proposed"
+      }
+     ],
+     "status": "proposed"
+    },
+    {
+     "code": "MATH.G7.NUMBER.SQUARES_AND_SQUARE_ROOTS.ROOT_WHOLE_NUMBER",
+     "name": "Find the square root of a perfect square",
+     "outcomes": [
+      "MATH.G7.NUMBER.SQUARES_AND_SQUARE_ROOTS.b"
+     ],
+     "mastery": "The child finds the square root of a perfect square up to 2,500 by finding the number that multiplied by itself gives it, checks by squaring, and knows the root of a sum is not the sum of the roots.",
+     "question_forms": [
+      "find the square root",
+      "check by squaring",
+      "which is a perfect square",
+      "the root of a sum"
+     ],
+     "thinking": [
+      "recall",
+      "procedure",
+      "reasoning"
+     ],
+     "horeb_skill_ids": [
+      "G7_SQUARE_ROOTS"
+     ],
+     "prerequisites": [
+      {
+       "requires": "MATH.G6.NUMBER.WHOLE_NUMBERS.SQUARE_ROOTS_10000",
+       "kind": "skill",
+       "strength": "essential",
+       "reason": "Grade 6 square roots go to 10,000.",
+       "status": "proposed"
+      },
+      {
+       "requires": "MATH.G7.NUMBER.SQUARES_AND_SQUARE_ROOTS.SQUARE_WHOLE_NUMBER",
+       "kind": "skill",
+       "strength": "essential",
+       "reason": "The root undoes the square.",
+       "status": "proposed"
+      }
+     ],
+     "status": "proposed"
+    },
+    {
+     "code": "MATH.G7.NUMBER.SQUARES_AND_SQUARE_ROOTS.ROOT_FRACTION_DECIMAL",
+     "name": "Find the square root of a perfect-square fraction or decimal",
+     "outcomes": [
+      "MATH.G7.NUMBER.SQUARES_AND_SQUARE_ROOTS.b"
+     ],
+     "mastery": "The child finds the root of a fraction by taking the root of the numerator and of the denominator (9/16 gives 3/4), and of a decimal that is a perfect square (0.09 gives 0.3 and 1.44 gives 1.2) by halving the decimal places.",
+     "question_forms": [
+      "root of a fraction",
+      "root of a decimal",
+      "check by squaring",
+      "where does the point go"
+     ],
+     "thinking": [
+      "procedure"
+     ],
+     "horeb_skill_ids": [
+      "G7_SQUARE_ROOTS"
+     ],
+     "prerequisites": [
+      {
+       "requires": "MATH.G7.NUMBER.SQUARES_AND_SQUARE_ROOTS.ROOT_WHOLE_NUMBER",
+       "kind": "skill",
+       "strength": "essential",
+       "reason": "The same idea with whole numbers.",
+       "status": "proposed"
+      },
+      {
+       "requires": "MATH.G7.NUMBER.SQUARES_AND_SQUARE_ROOTS.SQUARE_FRACTION",
+       "kind": "skill",
+       "strength": "essential",
+       "reason": "Squaring a fraction is the reverse.",
+       "status": "proposed"
+      },
+      {
+       "requires": "MATH.G7.NUMBER.SQUARES_AND_SQUARE_ROOTS.SQUARE_DECIMAL",
+       "kind": "skill",
+       "strength": "essential",
+       "reason": "Squaring a decimal doubles the places.",
+       "status": "proposed"
+      }
+     ],
+     "status": "proposed"
+    },
+    {
+     "code": "MATH.G7.NUMBER.SQUARES_AND_SQUARE_ROOTS.ROOT_IN_CONTEXT",
+     "name": "Use a square root to find the side of a square plot and what follows from it",
+     "outcomes": [
+      "MATH.G7.NUMBER.SQUARES_AND_SQUARE_ROOTS.b"
+     ],
+     "mastery": "The child takes the square root of the area of a square plot to find a side, then uses the side (for the distance round, or to compare plots), reading the question to know which is needed.",
+     "question_forms": [
+      "side from the area",
+      "fence round the plot",
+      "difference between two sides",
+      "which measure is asked for"
+     ],
+     "thinking": [
+      "procedure",
+      "reasoning"
+     ],
+     "horeb_skill_ids": [
+      "G7_SQUARE_ROOTS"
+     ],
+     "prerequisites": [
+      {
+       "requires": "MATH.G7.NUMBER.SQUARES_AND_SQUARE_ROOTS.ROOT_WHOLE_NUMBER",
+       "kind": "skill",
+       "strength": "essential",
+       "reason": "The root gives the side.",
+       "status": "proposed"
+      },
+      {
+       "requires": "MATH.G6.MEASUR.AREA.AREA_COMBINED",
+       "kind": "skill",
+       "strength": "helpful",
+       "reason": "Area in context.",
+       "status": "proposed"
+      }
+     ],
+     "status": "proposed"
+    },
+    {
+     "code": "MATH.G7.NUMBER.SQUARES_AND_SQUARE_ROOTS.ROOT_BY_ANCHORS",
+     "name": "Place the square root of a number between two whole numbers using perfect squares",
+     "outcomes": [
+      "MATH.G7.NUMBER.SQUARES_AND_SQUARE_ROOTS.b"
+     ],
+     "mastery": "The child finds the two perfect squares either side of a number (98 lies between 81 and 100) and so places its root between two whole numbers (between 9 and 10). The number is not itself a perfect square: this skill supports checking roots.",
+     "question_forms": [
+      "between which two whole numbers",
+      "which perfect squares are either side",
+      "estimate a root",
+      "check a root"
+     ],
+     "thinking": [
+      "reasoning",
+      "procedure"
+     ],
+     "horeb_skill_ids": [
+      "G7_SQUARE_ROOTS"
+     ],
+     "prerequisites": [
+      {
+       "requires": "MATH.G7.NUMBER.SQUARES_AND_SQUARE_ROOTS.ROOT_WHOLE_NUMBER",
+       "kind": "skill",
+       "strength": "essential",
+       "reason": "Perfect squares are the anchors.",
+       "status": "proposed"
+      },
+      {
+       "requires": "MATH.G6.NUMBER.WHOLE_NUMBERS.SQUARES_TO_100",
+       "kind": "skill",
+       "strength": "essential",
+       "reason": "Knowing the squares.",
+       "status": "proposed"
+      }
+     ],
+     "status": "proposed"
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "MATH.G7.NUMBER.SQUARES_AND_SQUARE_ROOTS.SQUARE_WHOLE_NUMBER.M_SQUARE_IS_DOUBLE",
+     "skill": "MATH.G7.NUMBER.SQUARES_AND_SQUARE_ROOTS.SQUARE_WHOLE_NUMBER",
+     "error": "Doubles the number instead of multiplying it by itself.",
+     "example": {
+      "question": "Work out 7 squared.",
+      "wrong_answer": "14",
+      "correct_answer": "49"
+     },
+     "cause": "Reads the small 2 as \"times 2\".",
+     "reveals": "The answer 14 as a wrong option, with a reason that names the idea.",
+     "help": "7 squared is 7 groups of 7: draw a 7 by 7 square of dots.",
+     "source": "to be confirmed by a teacher (no source yet)",
+     "status": "draft"
+    },
+    {
+     "code": "MATH.G7.NUMBER.SQUARES_AND_SQUARE_ROOTS.SQUARE_WHOLE_NUMBER.M_ZEROS_NOT_SQUARED",
+     "skill": "MATH.G7.NUMBER.SQUARES_AND_SQUARE_ROOTS.SQUARE_WHOLE_NUMBER",
+     "error": "Squares the digit but keeps only the zeros of the number.",
+     "example": {
+      "question": "Work out 30 squared.",
+      "wrong_answer": "300",
+      "correct_answer": "900"
+     },
+     "cause": "Squares 3 to 9 and adds one zero.",
+     "reveals": "The answer 300 as a wrong option, with a reason that names the idea.",
+     "help": "30 x 30 = 3 x 10 x 3 x 10 = 9 x 100: two zeros.",
+     "source": "to be confirmed by a teacher (no source yet)",
+     "status": "draft"
+    },
+    {
+     "code": "MATH.G7.NUMBER.SQUARES_AND_SQUARE_ROOTS.SQUARE_FRACTION.M_ONLY_NUMERATOR_SQUARED",
+     "skill": "MATH.G7.NUMBER.SQUARES_AND_SQUARE_ROOTS.SQUARE_FRACTION",
+     "error": "Squares the numerator only.",
+     "example": {
+      "question": "Square of 3/4",
+      "wrong_answer": "9/4",
+      "correct_answer": "9/16"
+     },
+     "cause": "Squares what is easiest.",
+     "reveals": "The answer 9/4 as a wrong option, with a reason that names the idea.",
+     "help": "Multiply the fraction by itself: 3/4 x 3/4.",
+     "source": "to be confirmed by a teacher (no source yet)",
+     "status": "draft"
+    },
+    {
+     "code": "MATH.G7.NUMBER.SQUARES_AND_SQUARE_ROOTS.SQUARE_FRACTION.M_ONLY_DENOMINATOR_SQUARED",
+     "skill": "MATH.G7.NUMBER.SQUARES_AND_SQUARE_ROOTS.SQUARE_FRACTION",
+     "error": "Squares the denominator only.",
+     "example": {
+      "question": "Square of 3/4",
+      "wrong_answer": "3/16",
+      "correct_answer": "9/16"
+     },
+     "cause": "Squares the bottom and leaves the top.",
+     "reveals": "The answer 3/16 as a wrong option, with a reason that names the idea.",
+     "help": "Both numbers are multiplied by themselves.",
+     "source": "to be confirmed by a teacher (no source yet)",
+     "status": "draft"
+    },
+    {
+     "code": "MATH.G7.NUMBER.SQUARES_AND_SQUARE_ROOTS.SQUARE_FRACTION.M_NUMERATOR_DOUBLED",
+     "skill": "MATH.G7.NUMBER.SQUARES_AND_SQUARE_ROOTS.SQUARE_FRACTION",
+     "error": "Doubles the numerator.",
+     "example": {
+      "question": "Square of 3/4",
+      "wrong_answer": "6/4",
+      "correct_answer": "9/16"
+     },
+     "cause": "Reads squared as doubled.",
+     "reveals": "The answer 6/4 as a wrong option, with a reason that names the idea.",
+     "help": "Squared means multiplied by itself.",
+     "source": "to be confirmed by a teacher (no source yet)",
+     "status": "draft"
+    },
+    {
+     "code": "MATH.G7.NUMBER.SQUARES_AND_SQUARE_ROOTS.SQUARE_DECIMAL.M_POINT_PLACES_NOT_DOUBLED",
+     "skill": "MATH.G7.NUMBER.SQUARES_AND_SQUARE_ROOTS.SQUARE_DECIMAL",
+     "error": "Gives the square the same number of decimal places as the number.",
+     "example": {
+      "question": "Square of 0.03",
+      "wrong_answer": "0.09",
+      "correct_answer": "0.0009"
+     },
+     "cause": "Forgets that the decimal places of both factors are counted.",
+     "reveals": "The answer 0.09 as a wrong option, with a reason that names the idea.",
+     "help": "0.03 has 2 places, so 0.03 x 0.03 has 4 places.",
+     "source": "to be confirmed by a teacher (no source yet)",
+     "status": "draft"
+    },
+    {
+     "code": "MATH.G7.NUMBER.SQUARES_AND_SQUARE_ROOTS.SQUARE_DECIMAL.M_DOUBLED_NOT_SQUARED",
+     "skill": "MATH.G7.NUMBER.SQUARES_AND_SQUARE_ROOTS.SQUARE_DECIMAL",
+     "error": "Doubles the side to get the area of a square.",
+     "example": {
+      "question": "Area of a square with side 1.5 m",
+      "wrong_answer": "3 m2",
+      "correct_answer": "2.25 m2"
+     },
+     "cause": "Takes squared as doubled.",
+     "reveals": "The answer 3 m2 as a wrong option, with a reason that names the idea.",
+     "help": "Area of a square is side times side: 1.5 x 1.5.",
+     "source": "to be confirmed by a teacher (no source yet)",
+     "status": "draft"
+    },
+    {
+     "code": "MATH.G7.NUMBER.SQUARES_AND_SQUARE_ROOTS.SQUARE_DECIMAL.M_PERIMETER_FOR_AREA_SQ",
+     "skill": "MATH.G7.NUMBER.SQUARES_AND_SQUARE_ROOTS.SQUARE_DECIMAL",
+     "error": "Gives the distance round when the area is asked.",
+     "example": {
+      "question": "Area of a square with side 1.5 m",
+      "wrong_answer": "6 m",
+      "correct_answer": "2.25 m2"
+     },
+     "cause": "Mixes the two measures.",
+     "reveals": "The answer 6 m as a wrong option, with a reason that names the idea.",
+     "help": "The distance round is 4 sides. The area is the side times the side.",
+     "source": "to be confirmed by a teacher (no source yet)",
+     "status": "draft"
+    },
+    {
+     "code": "MATH.G7.NUMBER.SQUARES_AND_SQUARE_ROOTS.SQUARE_DECIMAL.M_ADDED_NOT_SQUARED",
+     "skill": "MATH.G7.NUMBER.SQUARES_AND_SQUARE_ROOTS.SQUARE_DECIMAL",
+     "error": "Adds to the area instead of squaring the new side.",
+     "example": {
+      "question": "Side 1.5 m doubled: the new area",
+      "wrong_answer": "2.25 + 3",
+      "correct_answer": "9"
+     },
+     "cause": "Works out a change to the old area instead of the new side.",
+     "reveals": "The answer 2.25 + 3 as a wrong option, with a reason that names the idea.",
+     "help": "Find the new side first (3 m), then square it.",
+     "source": "to be confirmed by a teacher (no source yet)",
+     "status": "draft"
+    },
+    {
+     "code": "MATH.G7.NUMBER.SQUARES_AND_SQUARE_ROOTS.SQUARE_DECIMAL.M_CUBED_NOT_SQUARED",
+     "skill": "MATH.G7.NUMBER.SQUARES_AND_SQUARE_ROOTS.SQUARE_DECIMAL",
+     "error": "Multiplies the area by 8 when the side doubles.",
+     "example": {
+      "question": "Side 1.5 m doubled: the new area",
+      "wrong_answer": "18",
+      "correct_answer": "9"
+     },
+     "cause": "Confuses doubling a side with doubling every measure of a solid.",
+     "reveals": "The answer 18 as a wrong option, with a reason that names the idea.",
+     "help": "Area has two directions, so doubling the side multiplies the area by 2 x 2.",
+     "source": "to be confirmed by a teacher (no source yet)",
+     "status": "draft"
+    },
+    {
+     "code": "MATH.G7.NUMBER.SQUARES_AND_SQUARE_ROOTS.SQUARE_DECIMAL.M_AREA_DOUBLES_WITH_SIDE",
+     "skill": "MATH.G7.NUMBER.SQUARES_AND_SQUARE_ROOTS.SQUARE_DECIMAL",
+     "error": "Believes doubling the side doubles the area.",
+     "example": {
+      "question": "Area of a square of side 3 m is 9. New side double: area?",
+      "wrong_answer": "18",
+      "correct_answer": "36"
+     },
+     "cause": "Assumes area grows in the same way as length.",
+     "reveals": "The answer 18 as a wrong option, with a reason that names the idea.",
+     "help": "Draw the bigger square: it holds 4 of the old squares.",
+     "source": "to be confirmed by a teacher (no source yet)",
+     "status": "draft"
+    },
+    {
+     "code": "MATH.G7.NUMBER.SQUARES_AND_SQUARE_ROOTS.ROOT_WHOLE_NUMBER.M_HALVED_NOT_ROOTED",
+     "skill": "MATH.G7.NUMBER.SQUARES_AND_SQUARE_ROOTS.ROOT_WHOLE_NUMBER",
+     "error": "Halves the number instead of taking its square root.",
+     "example": {
+      "question": "Square root of 484",
+      "wrong_answer": "242",
+      "correct_answer": "22"
+     },
+     "cause": "Sees root as the opposite of square and halves.",
+     "reveals": "The answer 242 as a wrong option, with a reason that names the idea.",
+     "help": "Which number times itself gives 484? Test 22 x 22.",
+     "source": "to be confirmed by a teacher (no source yet)",
+     "status": "draft"
+    },
+    {
+     "code": "MATH.G7.NUMBER.SQUARES_AND_SQUARE_ROOTS.ROOT_WHOLE_NUMBER.M_ROOT_OF_SUM_IS_SUM_OF_ROOTS",
+     "skill": "MATH.G7.NUMBER.SQUARES_AND_SQUARE_ROOTS.ROOT_WHOLE_NUMBER",
+     "error": "Believes the root of a sum is the sum of the roots.",
+     "example": {
+      "question": "Root of 36 + 64",
+      "wrong_answer": "14",
+      "correct_answer": "10"
+     },
+     "cause": "Treats the root sign as spread across a sum.",
+     "reveals": "The answer 14 as a wrong option, with a reason that names the idea.",
+     "help": "Add first: 36 + 64 = 100, and the root of 100 is 10.",
+     "source": "to be confirmed by a teacher (no source yet)",
+     "status": "draft"
+    },
+    {
+     "code": "MATH.G7.NUMBER.SQUARES_AND_SQUARE_ROOTS.ROOT_WHOLE_NUMBER.M_ROOTS_MULTIPLIED_FOR_SUM",
+     "skill": "MATH.G7.NUMBER.SQUARES_AND_SQUARE_ROOTS.ROOT_WHOLE_NUMBER",
+     "error": "Multiplies the roots when the numbers were added.",
+     "example": {
+      "question": "Root of 36 + 64",
+      "wrong_answer": "48",
+      "correct_answer": "10"
+     },
+     "cause": "Applies a rule for products to a sum.",
+     "reveals": "The answer 48 as a wrong option, with a reason that names the idea.",
+     "help": "Add first, then take the root.",
+     "source": "to be confirmed by a teacher (no source yet)",
+     "status": "draft"
+    },
+    {
+     "code": "MATH.G7.NUMBER.SQUARES_AND_SQUARE_ROOTS.ROOT_FRACTION_DECIMAL.M_ROOT_NUMERATOR_ONLY",
+     "skill": "MATH.G7.NUMBER.SQUARES_AND_SQUARE_ROOTS.ROOT_FRACTION_DECIMAL",
+     "error": "Takes the root of the numerator only.",
+     "example": {
+      "question": "Square root of 9/16",
+      "wrong_answer": "3/16",
+      "correct_answer": "3/4"
+     },
+     "cause": "Does the part that is easy.",
+     "reveals": "The answer 3/16 as a wrong option, with a reason that names the idea.",
+     "help": "Take the root of the top and of the bottom.",
+     "source": "to be confirmed by a teacher (no source yet)",
+     "status": "draft"
+    },
+    {
+     "code": "MATH.G7.NUMBER.SQUARES_AND_SQUARE_ROOTS.ROOT_FRACTION_DECIMAL.M_ROOT_DECIMAL_POINT",
+     "skill": "MATH.G7.NUMBER.SQUARES_AND_SQUARE_ROOTS.ROOT_FRACTION_DECIMAL",
+     "error": "Gives the root of a decimal the same number of decimal places as the number.",
+     "example": {
+      "question": "Square root of 0.09",
+      "wrong_answer": "0.03",
+      "correct_answer": "0.3"
+     },
+     "cause": "Keeps the places without halving them.",
+     "reveals": "The answer 0.03 as a wrong option, with a reason that names the idea.",
+     "help": "The root has half as many places: 0.3 x 0.3 = 0.09.",
+     "source": "to be confirmed by a teacher (no source yet)",
+     "status": "draft"
+    },
+    {
+     "code": "MATH.G7.NUMBER.SQUARES_AND_SQUARE_ROOTS.ROOT_IN_CONTEXT.M_DIVIDED_BY_FOUR_FOR_ROOT",
+     "skill": "MATH.G7.NUMBER.SQUARES_AND_SQUARE_ROOTS.ROOT_IN_CONTEXT",
+     "error": "Divides the area by 4 to find a side.",
+     "example": {
+      "question": "A square plot has area 484 m2: find a side",
+      "wrong_answer": "121 m",
+      "correct_answer": "22 m"
+     },
+     "cause": "Thinks a square has four equal parts to divide by.",
+     "reveals": "The answer 121 m as a wrong option, with a reason that names the idea.",
+     "help": "Which number times itself gives 484?",
+     "source": "to be confirmed by a teacher (no source yet)",
+     "status": "draft"
+    },
+    {
+     "code": "MATH.G7.NUMBER.SQUARES_AND_SQUARE_ROOTS.ROOT_IN_CONTEXT.M_TWO_SIDES_FOR_PERIMETER",
+     "skill": "MATH.G7.NUMBER.SQUARES_AND_SQUARE_ROOTS.ROOT_IN_CONTEXT",
+     "error": "Counts two sides for the distance round a square.",
+     "example": {
+      "question": "Fence round a square plot of side 22 m",
+      "wrong_answer": "44 m",
+      "correct_answer": "88 m"
+     },
+     "cause": "Thinks of a rectangle with two pairs.",
+     "reveals": "The answer 44 m as a wrong option, with a reason that names the idea.",
+     "help": "A square has four equal sides.",
+     "source": "to be confirmed by a teacher (no source yet)",
+     "status": "draft"
+    },
+    {
+     "code": "MATH.G7.NUMBER.SQUARES_AND_SQUARE_ROOTS.ROOT_IN_CONTEXT.M_AREA_FOR_PERIMETER",
+     "skill": "MATH.G7.NUMBER.SQUARES_AND_SQUARE_ROOTS.ROOT_IN_CONTEXT",
+     "error": "Gives the area when the distance round is asked.",
+     "example": {
+      "question": "Fence round a square plot of side 22 m",
+      "wrong_answer": "484 m",
+      "correct_answer": "88 m"
+     },
+     "cause": "Mixes area and distance round.",
+     "reveals": "The answer 484 m as a wrong option, with a reason that names the idea.",
+     "help": "A fence goes round the edge: 4 sides.",
+     "source": "to be confirmed by a teacher (no source yet)",
+     "status": "draft"
+    },
+    {
+     "code": "MATH.G7.NUMBER.SQUARES_AND_SQUARE_ROOTS.ROOT_IN_CONTEXT.M_SIDE_PLUS_FOUR",
+     "skill": "MATH.G7.NUMBER.SQUARES_AND_SQUARE_ROOTS.ROOT_IN_CONTEXT",
+     "error": "Adds 4 to the side instead of multiplying by 4.",
+     "example": {
+      "question": "Fence round a square plot of side 22 m",
+      "wrong_answer": "26 m",
+      "correct_answer": "88 m"
+     },
+     "cause": "Sees \"4 sides\" and adds.",
+     "reveals": "The answer 26 m as a wrong option, with a reason that names the idea.",
+     "help": "4 sides of 22 m each: 4 x 22.",
+     "source": "to be confirmed by a teacher (no source yet)",
+     "status": "draft"
+    },
+    {
+     "code": "MATH.G7.NUMBER.SQUARES_AND_SQUARE_ROOTS.ROOT_IN_CONTEXT.M_AREA_DIFFERENCE_USED",
+     "skill": "MATH.G7.NUMBER.SQUARES_AND_SQUARE_ROOTS.ROOT_IN_CONTEXT",
+     "error": "Subtracts the areas to compare sides.",
+     "example": {
+      "question": "Areas 36, 81, 144 and 324 m2: how much longer is the biggest side than the smallest?",
+      "wrong_answer": "288",
+      "correct_answer": "12"
+     },
+     "cause": "Skips the root.",
+     "reveals": "The answer 288 as a wrong option, with a reason that names the idea.",
+     "help": "Take the root of each area first.",
+     "source": "to be confirmed by a teacher (no source yet)",
+     "status": "draft"
+    },
+    {
+     "code": "MATH.G7.NUMBER.SQUARES_AND_SQUARE_ROOTS.ROOT_IN_CONTEXT.M_ROOT_OF_DIFFERENCE",
+     "skill": "MATH.G7.NUMBER.SQUARES_AND_SQUARE_ROOTS.ROOT_IN_CONTEXT",
+     "error": "Takes the root of the difference of the areas.",
+     "example": {
+      "question": "Areas 36 and 324 m2: how much longer is the biggest side?",
+      "wrong_answer": "16.97",
+      "correct_answer": "12"
+     },
+     "cause": "Subtracts first, then roots.",
+     "reveals": "The answer 16.97 as a wrong option, with a reason that names the idea.",
+     "help": "The sides are the roots of the areas, then subtract.",
+     "source": "to be confirmed by a teacher (no source yet)",
+     "status": "draft"
+    },
+    {
+     "code": "MATH.G7.NUMBER.SQUARES_AND_SQUARE_ROOTS.ROOT_IN_CONTEXT.M_ONLY_BIGGEST_ROOT",
+     "skill": "MATH.G7.NUMBER.SQUARES_AND_SQUARE_ROOTS.ROOT_IN_CONTEXT",
+     "error": "Gives the side of the biggest plot only.",
+     "example": {
+      "question": "Areas 36 and 324 m2: how much longer is the biggest side?",
+      "wrong_answer": "18",
+      "correct_answer": "12"
+     },
+     "cause": "Stops after the first root.",
+     "reveals": "The answer 18 as a wrong option, with a reason that names the idea.",
+     "help": "Subtract the smallest side too: 18 - 6.",
+     "source": "to be confirmed by a teacher (no source yet)",
+     "status": "draft"
+    },
+    {
+     "code": "MATH.G7.NUMBER.SQUARES_AND_SQUARE_ROOTS.ROOT_BY_ANCHORS.M_ROOT_BOUNDS_ONE_BELOW",
+     "skill": "MATH.G7.NUMBER.SQUARES_AND_SQUARE_ROOTS.ROOT_BY_ANCHORS",
+     "error": "Places the root one whole number too low.",
+     "example": {
+      "question": "Between which whole numbers is the root of 98?",
+      "wrong_answer": "8 and 9",
+      "correct_answer": "9 and 10"
+     },
+     "cause": "Uses the perfect square below as if it were the root.",
+     "reveals": "The answer 8 and 9 as a wrong option, with a reason that names the idea.",
+     "help": "Test: 9 x 9 = 81 is less than 98, so the root is more than 9.",
+     "source": "to be confirmed by a teacher (no source yet)",
+     "status": "draft"
+    },
+    {
+     "code": "MATH.G7.NUMBER.SQUARES_AND_SQUARE_ROOTS.ROOT_BY_ANCHORS.M_ROOT_BOUNDS_ONE_ABOVE",
+     "skill": "MATH.G7.NUMBER.SQUARES_AND_SQUARE_ROOTS.ROOT_BY_ANCHORS",
+     "error": "Places the root one whole number too high.",
+     "example": {
+      "question": "Between which whole numbers is the root of 98?",
+      "wrong_answer": "10 and 11",
+      "correct_answer": "9 and 10"
+     },
+     "cause": "Counts up from the perfect square above.",
+     "reveals": "The answer 10 and 11 as a wrong option, with a reason that names the idea.",
+     "help": "Test: 10 x 10 = 100 is more than 98, so the root is less than 10.",
+     "source": "to be confirmed by a teacher (no source yet)",
+     "status": "draft"
+    }
+   ]
   },
   {
    "code": "MATH.G7.ALGEBR.ALGEBRAIC_EXPRESSIONS",
