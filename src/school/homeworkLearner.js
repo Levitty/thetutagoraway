@@ -1,7 +1,7 @@
 // The child's door for school homework (10 Nov 2026): open, start, answer, leave, keyed by the sitting's
 // code alone. See homeworkDoor.js for the deps; this file carries no family bank.
 // The learner home (learnerHome.js) answers here too: action 'learner_home'.
-import { step, sittingView, resultsFor } from './homeworkSitting.js';
+import { step, sittingView, resultsFor, whyOf } from './homeworkSitting.js';
 import { learnerHome } from './learnerHome.js';
 import { homeworkEvidence } from '../learner/evidence.js';
 
@@ -51,7 +51,7 @@ export async function learnerHomework(p, deps) {
     } catch { /* the sitting keeps the answer: the backfill in 20261111_learner_evidence.sql shows how to rebuild a missing row */ }
     const it = s0.items[Number(p.n) - 1];
     const right = it.kind === 'choice' ? it.options.find(o => o.right) : null;
-    const reason = !r.mark.correct ? (it.kind === 'choice' ? it.options.find(o => o.key === r.mark.chosen)?.why : (it.wrong || []).find(w => w.mis && w.mis === r.mark.mis)?.why) : '';
+    const reason = whyOf(it, r.mark);
     return ok({ ...head, mark: { correct: r.mark.correct, answer: right ? `${right.key}. ${right.text}` : it.answer, why: reason || '' }, view: sittingView(r.s) });
   }
   if (p.action === 'leave') {

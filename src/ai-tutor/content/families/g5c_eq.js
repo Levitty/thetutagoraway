@@ -13,16 +13,16 @@ export const FAMILIES = [
   fam({ id: 'g5c.eq.mean.pick', cs: `${Q}EQ_MEANING`, form: 'direct', rung: 1,
     gen: () => {
       const l = L(), a = randInt(3, 20), b = a + randInt(3, 40);
-      const options = mc(`${l} + ${a} = ${b}`, [[`${l} + ${a}`, 'This has no equals sign, so it does not say two things are equal. It is an expression.', 'M_EXPRESSION_IS_EQUATION'], [`${b}`, 'A single number is not an equation. An equation has an equals sign with a side on each side.', 'M_EXPRESSION_IS_EQUATION'], [`${l} + ${a} + ${b}`, 'This is an expression with no equals sign.', 'M_EXPRESSION_IS_EQUATION']]);
+      const options = mc(`${l} + ${a} = ${b}`, [[`${l} + ${a}`, 'This has no equals sign, so it does not say two things are equal. It is an expression.', 'M_EXPRESSION_IS_EQUATION'], [`${b}`, 'A single number is not an equation. An equation has an equals sign with a side on each side.', 'M_NUMBER_IS_EQUATION'], [`${l} + ${a} =`, 'An equals sign needs something on both sides. Here nothing follows it, so it is waiting for an answer, not saying two things are equal.', 'M_EQUALS_MEANS_ANSWER']]);
       return { question: `${person().name} writes four lines on the board. Which of these is an equation?`, options, instruction: 'Choose the equation.',
-        hints: ['An equation says two things have the same value.', 'Look for an equals sign with something on each side.'], steps: [`${l} + ${a} = ${b} has an equals sign with a side on each side.`, 'The others are expressions.'] };
+        hints: ['An equation says two things have the same value.', 'Look for an equals sign with something on each side.'], steps: [`${l} + ${a} = ${b} has an equals sign with a side on each side.`, 'The others are an expression, a single number and a sum with nothing after the equals sign.'] };
     } }),
   fam({ id: 'g5c.eq.mean.balance', cs: `${Q}EQ_MEANING`, form: 'word', rung: 2,
     gen: () => {
       const a = randInt(5, 15), b = randInt(2, 9), c = randInt(2, 9), box = a + b - c;
       if (box <= 0) return null;
       return { question: `A balance scale has ${a} + ${b} on one side and □ + ${c} on the other side, and it balances. What number goes in the box?`, answer: box,
-        wrong: [[a + b, 'The sign = means both sides have the same value, not "write the answer now". The box is not the whole sum.', 'M_EQUALS_MEANS_ANSWER'], [a + b + c, 'Both sides must be equal. Take the ' + c + ' away from the total, do not add it.', 'M_EQUALS_MEANS_ANSWER'], [a + c, 'Check that both sides are equal.', 'M_EQUALS_MEANS_ANSWER'], [box + 1, 'Check that both sides are the same.', 'M_EQUALS_MEANS_ANSWER']],
+        wrong: [[a + b, 'The sign = means both sides have the same value, not "write the answer now". The box is not the whole sum.', 'M_EQUALS_MEANS_ANSWER'], [a + b + c, 'Both sides must be equal. Take the ' + c + ' away from the total, do not add it.', 'SLIP'], [a + c, 'That adds the ' + a + ' to the ' + c + ' beside the box. Work out the left side first, then find what goes with the ' + c + '.', 'SLIP'], [box + 1, 'One too many. Put your number in the box: it plus ' + c + ' must make ' + (a + b) + '.', 'SLIP']],
         hints: ['The sides of a balance are equal.', `First work out the left side. What added to ${c} makes it?`], steps: [`${a} + ${b} = ${a + b}.`, `□ + ${c} = ${a + b}, so □ = ${box}.`], chk: (v) => v + c === a + b };
     } }),
   fam({ id: 'g5c.eq.mean.letter', cs: `${Q}EQ_MEANING`, form: 'why', rung: 2,

@@ -714,18 +714,24 @@ var publicItem = (it) => it && {
   ...it.steps_shown ? { steps_shown: it.steps_shown } : {},
   ...it.kind === "choice" ? { options: it.options.map((o) => ({ key: o.key, text: o.text })) } : {}
 };
+var wrongFor = (it, raw) => (it.wrong || []).find((x) => (x.mis || x.slip) && (norm(x.value) === norm(raw) || checkAnswerMatch(raw, { answer: x.value, accepts: [x.value] })));
+var whyOf = (it, mark) => {
+  if (!it || mark?.correct) return "";
+  if (it.kind === "choice") return it.options.find((o) => o.key === mark.chosen)?.why || "";
+  return wrongFor(it, mark.chosen)?.why || "";
+};
 function markItem(it, response) {
   const raw = String(response ?? "").trim();
   if (raw === "") return { correct: false, chosen: "", mis: null, blank: true };
   if (it.kind === "choice") {
     const o = it.options.find((x) => x.key === raw.toUpperCase()) || it.options.find((x) => norm(x.text) === norm(raw));
     if (!o) return { correct: false, chosen: raw.slice(0, 40), mis: null };
-    return { correct: !!o.right, chosen: o.key, mis: o.right ? null : o.mis || null };
+    return { correct: !!o.right, chosen: o.key, mis: o.right ? null : o.mis || null, ...!o.right && o.slip ? { slip: true } : {} };
   }
   const correct = checkAnswerMatch(raw, { answer: it.answer, accepts: it.accepts });
   if (correct) return { correct: true, chosen: raw.slice(0, 60), mis: null };
-  const w = (it.wrong || []).find((x) => x.mis && (norm(x.value) === norm(raw) || checkAnswerMatch(raw, { answer: x.value, accepts: [x.value] })));
-  return { correct: false, chosen: raw.slice(0, 60), mis: w?.mis || null };
+  const w = wrongFor(it, raw);
+  return { correct: false, chosen: raw.slice(0, 60), mis: w?.mis || null, ...w?.slip ? { slip: true } : {} };
 }
 function step(s, ev, now) {
   const at = new Date(now).toISOString();
@@ -743,7 +749,7 @@ function step(s, ev, now) {
       if (Number(ev.n) !== next) return { ok: false, error: "One question at a time, in order." };
       const it = s.items[next - 1];
       const m = markItem(it, ev.response);
-      const a = [...answers, { n: next, chosen: m.chosen, correct: m.correct, mis: m.mis, at }];
+      const a = [...answers, { n: next, chosen: m.chosen, correct: m.correct, mis: m.mis, ...m.slip ? { slip: true } : {}, at }];
       const done = a.length >= total;
       return { ok: true, mark: m, s: { ...s, answers: a, status: done ? "submitted" : "started", ...done ? { finished_at: at } : {} } };
     }
@@ -782,7 +788,7 @@ function resultsFor(sittings) {
       finished_at: s.finished_at || null,
       locked_at: s.locked_at || null,
       lock_question: s.lock_question || null,
-      items: answers.map((a) => ({ n: a.n, cskill: s.items[a.n - 1]?.cskill || null, correct: !!a.correct, chosen: a.chosen ?? "", mis: a.mis || null }))
+      items: answers.map((a) => ({ n: a.n, cskill: s.items[a.n - 1]?.cskill || null, correct: !!a.correct, chosen: a.chosen ?? "", mis: a.mis || null, ...a.slip ? { slip: true } : {} }))
     };
   }
   return out;
@@ -2406,7 +2412,8 @@ var SKILLS_G5 = {
     "mis": [
       "M_EQUALS_MEANS_ANSWER",
       "M_LETTER_AS_OBJECT",
-      "M_EXPRESSION_IS_EQUATION"
+      "M_EXPRESSION_IS_EQUATION",
+      "M_NUMBER_IS_EQUATION"
     ]
   },
   "MATH.G5.NUMBER.SIMPLE_EQUATIONS.EQ_FORM_ADD_SUB": {
@@ -4537,7 +4544,7 @@ async function learnerHomework(p, deps) {
     }
     const it = s0.items[Number(p.n) - 1];
     const right = it.kind === "choice" ? it.options.find((o) => o.right) : null;
-    const reason = !r.mark.correct ? it.kind === "choice" ? it.options.find((o) => o.key === r.mark.chosen)?.why : (it.wrong || []).find((w) => w.mis && w.mis === r.mark.mis)?.why : "";
+    const reason = whyOf(it, r.mark);
     return ok2({ ...head, mark: { correct: r.mark.correct, answer: right ? `${right.key}. ${right.text}` : it.answer, why: reason || "" }, view: sittingView(r.s) });
   }
   if (p.action === "leave") {

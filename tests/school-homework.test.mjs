@@ -12,7 +12,11 @@
 // ============================================================================
 import { test } from 'node:test';
 import assert from 'node:assert/strict';
-import { drawSet, allowedFamilies, samplesFor, markItem, step, sittingView, resultsFor, cleanHomeworkSet, sittingsFor, misCode, familiesForSkill, publicItem, keyItem, seedOf } from '../src/school/homework.js';
+import { toItem, withSeed, drawSet, allowedFamilies, samplesFor, markItem, step, sittingView, resultsFor, cleanHomeworkSet, sittingsFor, misCode, familiesForSkill, publicItem, keyItem, seedOf } from '../src/school/homework.js';
+import { whyOf } from '../src/school/homeworkSitting.js';
+import { homeworkEvidence } from '../src/learner/evidence.js';
+import { FAMILIES } from '../src/ai-tutor/content/families/index.js';
+import { drawFamily } from '../src/ai-tutor/content/families/core.js';
 import { doorHomework, makeCodeFrom } from '../src/school/homeworkDoor.js';
 import { learnerHomework, resultsBody } from '../src/school/homeworkLearner.js';
 import { memoryStore } from '../src/school/homeworkStore.js';
@@ -190,4 +194,55 @@ test('the door: set, the same set again draws nothing new, the child answers, re
   assert.equal((await learnerHomework({ action: 'open', code }, deps)).body.view.answered, 1, 'carries on where it stopped');
   assert.equal((await learnerHomework({ action: 'open', code: 'NOTACODE22' }, deps)).status, 404);
   assert.deepEqual(resultsBody({ homework_ref: ref }, []).results, { [ref]: {} });
+});
+
+// ---------------------------------------------------------------- slips (17 Nov 2026)
+// A wrong answer marked 'SLIP' is counted wrong but is never evidence of a misunderstanding.
+test('a slip is wrong, carries no misconception, and keeps its own reason (choice and typed)', () => {
+  const base = { familyId: 'x.slip', cskill: 'MATH.G5.NUMBER.SIMPLE_EQUATIONS.EQ_MEANING', familyForm: 'word', rung: 1, question: 'q', instruction: '' };
+  const typed = toItem({ ...base, answer: '7', accepts: ['7'], misconceptions: [
+    { when: '12', feedback: 'That writes the sum, the box is not the whole sum.', mis: 'M_EQUALS_MEANS_ANSWER' },
+    { when: '8', feedback: 'One too many. Put it in the box and check.', mis: 'SLIP' }] }, 1);
+  assert.equal(typed.wrong[0].mis, 'MATH.G5.NUMBER.SIMPLE_EQUATIONS.EQ_MEANING.M_EQUALS_MEANS_ANSWER');
+  assert.equal(typed.wrong[1].mis, null); assert.equal(typed.wrong[1].slip, true);
+  assert.deepEqual(markItem(typed, '8'), { correct: false, chosen: '8', mis: null, slip: true });
+  assert.equal(markItem(typed, '12').mis, typed.wrong[0].mis);
+  assert.equal(markItem(typed, '12').slip, undefined);
+  const key = keyItem(typed);
+  assert.deepEqual(key.wrong.map(w => [w.value, !!w.slip, w.why.length > 0]), [['12', false, true], ['8', true, true]], 'the key keeps the slip and each reason');
+
+  const choice = toItem({ ...base, answer: '7', choices: ['7', '8', '12'], misconceptions: [
+    { when: '8', feedback: 'One too many.', mis: 'SLIP' }, { when: '12', feedback: 'That is the sum.', mis: 'M_EQUALS_MEANS_ANSWER' }] }, 1);
+  const s = choice.options.find(o => o.text === '8');
+  assert.equal(s.mis, null); assert.equal(s.slip, true); assert.equal(s.why, 'One too many.');
+  assert.deepEqual(markItem(choice, s.key), { correct: false, chosen: s.key, mis: null, slip: true });
+  assert.ok(keyItem(choice).options.find(o => o.text === '8').slip);
+  assert.ok(misCode(base.cskill, 'SLIP') === null);
+});
+
+test('a slip never becomes misconception evidence, and the results carry it', () => {
+  const it = { n: 1, kind: 'typed', answer: '7', accepts: ['7'], cskill: 'MATH.G5.NUMBER.SIMPLE_EQUATIONS.EQ_MEANING', question: 'q',
+    wrong: [{ value: '8', why: 'One too many.', mis: null, slip: true }] };
+  const s0 = { status: 'started', mode: 'online', items: [it], answers: [], learner_ref: 'AAAAAAAA' };
+  const r = step(s0, { type: 'answer', n: 1, response: '8' }, Date.now());
+  assert.equal(r.s.answers[0].correct, false); assert.equal(r.s.answers[0].mis, null); assert.equal(r.s.answers[0].slip, true);
+  assert.equal(whyOf(it, r.mark), 'One too many.');
+  assert.equal(resultsFor([r.s]).AAAAAAAA.items[0].mis, null);
+  assert.equal(resultsFor([r.s]).AAAAAAAA.items[0].slip, true);
+  const row = homeworkEvidence({ homework: { id: 'h', door_id: 'd' }, sitting: { learner_ref: 'AAAAAAAA', items: [it] }, answer: r.s.answers[0] });
+  assert.equal(row.correct, false); assert.equal(row.misconception, null);
+});
+
+test('the equation question names three different misunderstandings, and a counting slip is not one of them', () => {
+  const pick = FAMILIES.find(f => f.id === 'g5c.eq.mean.pick'), bal = FAMILIES.find(f => f.id === 'g5c.eq.mean.balance');
+  for (let k = 0; k < 30; k++) {
+    const a = toItem(withSeed(`eq:${k}`, () => drawFamily(pick).p), 1);
+    const codes = a.options.filter(o => !o.right).map(o => o.mis);
+    assert.equal(new Set(codes).size, 3, 'each wrong option is its own misunderstanding');
+    assert.ok(codes.every(Boolean));
+    assert.ok(codes.some(c => c.endsWith('.M_NUMBER_IS_EQUATION')));
+    const b = toItem(withSeed(`bal:${k}`, () => drawFamily(bal).p), 1);
+    const near = b.wrong.find(w => Math.abs(Number(w.value) - Number(b.answer)) === 1);
+    assert.ok(near && near.slip && near.mis === null, 'one off the answer is a slip');
+  }
 });

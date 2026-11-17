@@ -2799,7 +2799,8 @@ var SKILLS_G5 = {
     "mis": [
       "M_EQUALS_MEANS_ANSWER",
       "M_LETTER_AS_OBJECT",
-      "M_EXPRESSION_IS_EQUATION"
+      "M_EXPRESSION_IS_EQUATION",
+      "M_NUMBER_IS_EQUATION"
     ]
   },
   "MATH.G5.NUMBER.SIMPLE_EQUATIONS.EQ_FORM_ADD_SUB": {
@@ -6609,18 +6610,19 @@ function checkAnswerMatch(userAnswer, problem) {
 
 // src/school/homeworkSitting.js
 var norm2 = (t) => String(t ?? "").trim().replace(/\s+/g, " ").toLowerCase();
+var wrongFor = (it, raw) => (it.wrong || []).find((x) => (x.mis || x.slip) && (norm2(x.value) === norm2(raw) || checkAnswerMatch(raw, { answer: x.value, accepts: [x.value] })));
 function markItem(it, response) {
   const raw = String(response ?? "").trim();
   if (raw === "") return { correct: false, chosen: "", mis: null, blank: true };
   if (it.kind === "choice") {
     const o = it.options.find((x) => x.key === raw.toUpperCase()) || it.options.find((x) => norm2(x.text) === norm2(raw));
     if (!o) return { correct: false, chosen: raw.slice(0, 40), mis: null };
-    return { correct: !!o.right, chosen: o.key, mis: o.right ? null : o.mis || null };
+    return { correct: !!o.right, chosen: o.key, mis: o.right ? null : o.mis || null, ...!o.right && o.slip ? { slip: true } : {} };
   }
   const correct = checkAnswerMatch(raw, { answer: it.answer, accepts: it.accepts });
   if (correct) return { correct: true, chosen: raw.slice(0, 60), mis: null };
-  const w = (it.wrong || []).find((x) => x.mis && (norm2(x.value) === norm2(raw) || checkAnswerMatch(raw, { answer: x.value, accepts: [x.value] })));
-  return { correct: false, chosen: raw.slice(0, 60), mis: w?.mis || null };
+  const w = wrongFor(it, raw);
+  return { correct: false, chosen: raw.slice(0, 60), mis: w?.mis || null, ...w?.slip ? { slip: true } : {} };
 }
 
 // src/voice-tutor/spokenAnswer.js
@@ -17980,13 +17982,13 @@ var FAMILIES9 = [
     rung: 1,
     gen: () => {
       const l = L(), a = randInt(3, 20), b = a + randInt(3, 40);
-      const options = mc(`${l} + ${a} = ${b}`, [[`${l} + ${a}`, "This has no equals sign, so it does not say two things are equal. It is an expression.", "M_EXPRESSION_IS_EQUATION"], [`${b}`, "A single number is not an equation. An equation has an equals sign with a side on each side.", "M_EXPRESSION_IS_EQUATION"], [`${l} + ${a} + ${b}`, "This is an expression with no equals sign.", "M_EXPRESSION_IS_EQUATION"]]);
+      const options = mc(`${l} + ${a} = ${b}`, [[`${l} + ${a}`, "This has no equals sign, so it does not say two things are equal. It is an expression.", "M_EXPRESSION_IS_EQUATION"], [`${b}`, "A single number is not an equation. An equation has an equals sign with a side on each side.", "M_NUMBER_IS_EQUATION"], [`${l} + ${a} =`, "An equals sign needs something on both sides. Here nothing follows it, so it is waiting for an answer, not saying two things are equal.", "M_EQUALS_MEANS_ANSWER"]]);
       return {
         question: `${person().name} writes four lines on the board. Which of these is an equation?`,
         options,
         instruction: "Choose the equation.",
         hints: ["An equation says two things have the same value.", "Look for an equals sign with something on each side."],
-        steps: [`${l} + ${a} = ${b} has an equals sign with a side on each side.`, "The others are expressions."]
+        steps: [`${l} + ${a} = ${b} has an equals sign with a side on each side.`, "The others are an expression, a single number and a sum with nothing after the equals sign."]
       };
     }
   }),
@@ -18001,7 +18003,7 @@ var FAMILIES9 = [
       return {
         question: `A balance scale has ${a} + ${b} on one side and \u25A1 + ${c} on the other side, and it balances. What number goes in the box?`,
         answer: box,
-        wrong: [[a + b, 'The sign = means both sides have the same value, not "write the answer now". The box is not the whole sum.', "M_EQUALS_MEANS_ANSWER"], [a + b + c, "Both sides must be equal. Take the " + c + " away from the total, do not add it.", "M_EQUALS_MEANS_ANSWER"], [a + c, "Check that both sides are equal.", "M_EQUALS_MEANS_ANSWER"], [box + 1, "Check that both sides are the same.", "M_EQUALS_MEANS_ANSWER"]],
+        wrong: [[a + b, 'The sign = means both sides have the same value, not "write the answer now". The box is not the whole sum.', "M_EQUALS_MEANS_ANSWER"], [a + b + c, "Both sides must be equal. Take the " + c + " away from the total, do not add it.", "SLIP"], [a + c, "That adds the " + a + " to the " + c + " beside the box. Work out the left side first, then find what goes with the " + c + ".", "SLIP"], [box + 1, "One too many. Put your number in the box: it plus " + c + " must make " + (a + b) + ".", "SLIP"]],
         hints: ["The sides of a balance are equal.", `First work out the left side. What added to ${c} makes it?`],
         steps: [`${a} + ${b} = ${a + b}.`, `\u25A1 + ${c} = ${a + b}, so \u25A1 = ${box}.`],
         chk: (v) => v + c === a + b
@@ -35700,8 +35702,10 @@ for (const f of FAMILIES23) if (usable(f)) {
   BY_CSKILL.get(f.cskill).push(f);
 }
 var familiesForSkill = (cskill) => BY_CSKILL.get(cskill) || [];
+var SLIP = "SLIP";
+var isSlip = (short) => short === SLIP;
 var misCode = (cskill, short) => {
-  if (!short) return null;
+  if (!short || isSlip(short)) return null;
   if (String(short).startsWith("MATH.")) return short;
   const sk = SKILLS_G5[cskill];
   if (sk?.mis?.includes(short)) return `${cskill}.${short}`;
@@ -35732,7 +35736,8 @@ function toItem(p, n) {
       options: texts.map((text, i) => {
         const right = norm5(text) === norm5(p.answer);
         const m = mis[norm5(text)];
-        return { key: LETTERS3[i], text, right, ...right ? {} : { mis: m?.mis ? misCode(p.cskill, m.mis) : p.type === "spot-mistake" ? workMis : null, why: m?.feedback || "" } };
+        const slip = isSlip(m?.mis);
+        return { key: LETTERS3[i], text, right, ...right ? {} : { mis: m?.mis ? misCode(p.cskill, m.mis) : p.type === "spot-mistake" ? workMis : null, why: m?.feedback || "", ...slip ? { slip: true } : {} } };
       })
     };
   }
@@ -35741,7 +35746,7 @@ function toItem(p, n) {
     kind: "typed",
     answer: String(p.answer),
     accepts: p.accepts || [String(p.answer)],
-    wrong: (p.misconceptions || []).map((m) => ({ value: String(m.when), why: m.feedback || "", mis: m.mis ? misCode(p.cskill, m.mis) : null }))
+    wrong: (p.misconceptions || []).map((m) => ({ value: String(m.when), why: m.feedback || "", mis: m.mis ? misCode(p.cskill, m.mis) : null, ...isSlip(m.mis) ? { slip: true } : {} }))
   };
 }
 
@@ -41070,6 +41075,19 @@ var g5_misconceptions_default = {
     cause: "The Grade 4 work on expressions and this Grade 5 work both use letters, so any letter-and-number string is seen as 'algebra' or 'an equation'.",
     reveals: "A sorting task mixing expressions, equations and plain numbers.",
     help: "Contrast pairs side by side: 'x + 7' (a description you cannot solve) and 'x + 7 = 15' (a balance you can solve).",
+    status: "draft"
+  },
+  "MATH.G5.NUMBER.SIMPLE_EQUATIONS.EQ_MEANING.M_NUMBER_IS_EQUATION": {
+    skill: "MATH.G5.NUMBER.SIMPLE_EQUATIONS.EQ_MEANING",
+    error: "Calls a single number, or a number with no equals sign, an equation, because numbers are 'the answer' and an equation is thought of as 'the maths'.",
+    example: {
+      question: "Which is an equation? A: x + 7   B: x + 7 = 15   C: 50",
+      wrong_answer: "C",
+      correct_answer: "B"
+    },
+    cause: "The child has met 'equation' only as a word for 'a maths problem', so a number such as 50, which looks finished, is picked as the nearest thing to a maths answer. It is a different idea from mixing up an expression with an equation, which comes from seeing letters.",
+    reveals: "A sorting task with a plain number among expressions and equations, where the child picks the number.",
+    help: "Ask 'What two things are being said to have the same value?' for each choice. A number on its own says nothing is equal to anything. Show 50 beside 20 + 30 = 50.",
     status: "draft"
   },
   "MATH.G5.NUMBER.SIMPLE_EQUATIONS.EQ_FORM_ADD_SUB.M_SUBTRACTION_ORDER_REVERSED": {

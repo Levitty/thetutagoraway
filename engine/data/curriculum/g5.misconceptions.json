@@ -2235,6 +2235,19 @@
   "help": "Contrast pairs side by side: 'x + 7' (a description you cannot solve) and 'x + 7 = 15' (a balance you can solve).",
   "status": "draft"
  },
+ "MATH.G5.NUMBER.SIMPLE_EQUATIONS.EQ_MEANING.M_NUMBER_IS_EQUATION": {
+  "skill": "MATH.G5.NUMBER.SIMPLE_EQUATIONS.EQ_MEANING",
+  "error": "Calls a single number, or a number with no equals sign, an equation, because numbers are 'the answer' and an equation is thought of as 'the maths'.",
+  "example": {
+   "question": "Which is an equation? A: x + 7   B: x + 7 = 15   C: 50",
+   "wrong_answer": "C",
+   "correct_answer": "B"
+  },
+  "cause": "The child has met 'equation' only as a word for 'a maths problem', so a number such as 50, which looks finished, is picked as the nearest thing to a maths answer. It is a different idea from mixing up an expression with an equation, which comes from seeing letters.",
+  "reveals": "A sorting task with a plain number among expressions and equations, where the child picks the number.",
+  "help": "Ask 'What two things are being said to have the same value?' for each choice. A number on its own says nothing is equal to anything. Show 50 beside 20 + 30 = 50.",
+  "status": "draft"
+ },
  "MATH.G5.NUMBER.SIMPLE_EQUATIONS.EQ_FORM_ADD_SUB.M_SUBTRACTION_ORDER_REVERSED": {
   "skill": "MATH.G5.NUMBER.SIMPLE_EQUATIONS.EQ_FORM_ADD_SUB",
   "error": "Writes the subtraction in the order the numbers appear, not in the order of the action.",
