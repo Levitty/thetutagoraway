@@ -23,6 +23,9 @@ import { SKILLS_G5 } from '../curriculumMap.g5.js';
 import { SIGNED } from './g5c_signed.js';   // ids of factory-made families a teacher has signed off (see scripts/apply-question-review.mjs)
 
 export { randInt, pick, round, commas, fmtNum, person, sh, price };
+// True when every coded wrong whole number is at least 3 away from the right one. A wrong answer one or two off is a
+// slip (write it 'SLIP'); a family that means a real misconception rejects the draw where it would look like a slip.
+export const farFrom = (answer, ...coded) => coded.every(v => !Number.isInteger(v) || !Number.isInteger(answer) || Math.abs(v - answer) > 2);
 export const rot = (a, k) => [...a.slice(k % a.length), ...a.slice(0, k % a.length)];
 export const shuffle = (a) => { const b = [...a]; for (let i = b.length - 1; i > 0; i--) { const j = Math.floor(Math.random() * (i + 1)); [b[i], b[j]] = [b[j], b[i]]; } return b; };
 export const distinct = (...v) => new Set(v).size === v.length;
@@ -36,7 +39,16 @@ export const bars = (labels, vals) => ({ type: 'bar-chart', data: { bars: labels
 export const ones = (n) => (n === 1 ? '' : 's');
 
 // Options for a tap question: the right text and wrong ones [text, why, mis]. Null when two texts match.
-export const mc = (right, wrongs) => {
+// One misconception, one option: a question never offers two wrong answers for the same idea, because the learner record
+// would count one slip of thought twice (map review, 17 Nov 2026). The first option for a code stays; a later one is dropped
+// when at least two wrong options remain. A 'SLIP' option carries no code and is never dropped.
+export const onePerIdea = (wrongs, keep) => {
+  const seen = new Set(), out = [];
+  for (const w of wrongs) { const c = w[2]; if (c && c !== 'SLIP' && seen.has(c)) continue; if (c && c !== 'SLIP') seen.add(c); out.push(w); }
+  return out.length >= keep ? out : wrongs;
+};
+export const mc = (right, wrongs0) => {
+  const wrongs = onePerIdea(wrongs0, 2);
   const texts = [String(right), ...wrongs.map(w => String(w[0]))];
   if (new Set(texts).size !== texts.length) return null;
   return shuffle([{ text: String(right), right: true }, ...wrongs.map(([text, why, mis]) => ({ text: String(text), right: false, why, mis }))]);
@@ -51,7 +63,16 @@ const clean = (wrong, answer, need, neg) => {
     if (typeof w[0] === 'number' && (!Number.isFinite(w[0]) || (!neg && w[0] < 0))) continue;
     seen.add(v); out.push(w);
   }
-  return out.length >= need ? out : null;
+  if (out.length < need) return null;
+  const one = onePerIdea(out, need);   // one misconception, one option, when enough remain
+  return one;
+};
+
+// Same rule as engine/scripts/family_checks.mjs: a wrong option's reason or a hint must not state the right answer.
+const leaksAnswer = (answer, text, question) => {
+  const a = String(answer);
+  if (!/^-?\d[\d.]*$/.test(a) || a.replace('-', '').length < 2 || String(question).includes(a)) return false;
+  return new RegExp(`(^|[^\\d.,])${a.replace('.', '\\.')}([^\\d.,]|$)`).test(String(text));
 };
 
 export const fam = (d) => {
@@ -77,6 +98,9 @@ export const fam = (d) => {
       if (typeof x.answer === 'number') { x.wrong = clean(x.wrong, x.answer, 3, d.allowNegative); if (!x.wrong) return null; }
       else { x.wrong = clean(x.wrong, x.answer, 3, true); if (!x.wrong) return null; }
     } else if (x.options === null) return null;
+    if (x.answer !== undefined && !x.options && !x.working && !x.parts) {
+      if ((x.wrong || []).some(w => leaksAnswer(x.answer, w[1], x.question)) || (x.hints || []).some(h => leaksAnswer(x.answer, h, x.question))) return null;
+    }
     return x;
   };
   return family({ reviewed: SIGNED.includes(id), ...rest, id, form, rung, skill: ck.primary, cskill: `MATH.G5.${cs}`, outcome: letter, draw, make: x => x,

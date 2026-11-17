@@ -207,6 +207,20 @@ export const TEACHING_PACK_G5 = {
      "wrong_answer": "600,000",
      "correct_answer": "60,000"
     }
+   },
+   {
+    "code": "MATH.G5.NUMBER.WHOLE_NUMBERS.TOTAL_VALUE_HTH.M_TV_NUMBER_UP_TO_DIGIT",
+    "listen_for": [
+     "661,100"
+    ],
+    "ask": "Is the 6 in front part of what the 1 is worth?",
+    "repair": "A digit is worth only its own place. Write the digit and one zero for each place to its right.",
+    "error": "Gives the number formed by all the digits from the left up to the digit asked about, instead of that digit's own total value.",
+    "example": {
+     "question": "How much is the digit 1 worth in 661,125?",
+     "wrong_answer": "661,100",
+     "correct_answer": "100"
+    }
    }
   ],
   "checks": [
@@ -302,6 +316,34 @@ export const TEACHING_PACK_G5 = {
      "question": "Write 45,090 in words.",
      "wrong_answer": "fourty-five thousand and ninty",
      "correct_answer": "forty-five thousand and ninety"
+    }
+   },
+   {
+    "code": "MATH.G5.NUMBER.WHOLE_NUMBERS.NUMBERS_TO_WORDS.M_WORDS_THOUSANDS_AS_HUNDREDS",
+    "listen_for": [
+     "twenty-five hundred"
+    ],
+    "ask": "What does the comma tell us? How many digits are after it?",
+    "repair": "Everything before the comma is read as thousands. Hundreds are only the third digit from the right.",
+    "error": "Reads the first two digits of a five-digit number as hundreds ('twenty-five hundred'), so the thousands group is called hundreds.",
+    "example": {
+     "question": "Which of these is 25,068 written in words?",
+     "wrong_answer": "twenty-five hundred and sixty-eight",
+     "correct_answer": "twenty-five thousand and sixty-eight"
+    }
+   },
+   {
+    "code": "MATH.G5.NUMBER.WHOLE_NUMBERS.NUMBERS_TO_WORDS.M_WORDS_THOUSAND_WORD_MISSING",
+    "listen_for": [
+     "twenty-five, sixty-eight"
+    ],
+    "ask": "What word does the comma stand for?",
+    "repair": "The comma says thousand. Read the group before it, then the word thousand, then the last three digits.",
+    "error": "Writes the thousands group and the rest of the number without saying 'thousand'.",
+    "example": {
+     "question": "Which of these is 25,068 written in words?",
+     "wrong_answer": "twenty-five, sixty-eight",
+     "correct_answer": "twenty-five thousand and sixty-eight"
     }
    }
   ],
@@ -407,6 +449,20 @@ export const TEACHING_PACK_G5 = {
      "question": "Write 'seventeen thousand' in symbols.",
      "wrong_answer": "70,000",
      "correct_answer": "17,000"
+    }
+   },
+   {
+    "code": "MATH.G5.NUMBER.WHOLE_NUMBERS.WORDS_TO_SYMBOLS.M_SYMBOLS_STOPS_AT_THOUSAND",
+    "listen_for": [
+     "91,000"
+    ],
+    "ask": "Did you write the 'sixty-seven' as well?",
+    "repair": "Write every part of the words. Ninety-one thousand is 91 000 and sixty-seven goes in the last places.",
+    "error": "Writes only the thousands part of a number given in words and leaves out the rest.",
+    "example": {
+     "question": "Write ninety-one thousand and sixty-seven in figures.",
+     "wrong_answer": "91000",
+     "correct_answer": "91067"
     }
    }
   ],
@@ -4958,6 +5014,21 @@ export const TEACHING_PACK_G5 = {
      "wrong_answer": "Otieno",
      "correct_answer": "They ate the same amount"
     }
+   },
+   {
+    "code": "MATH.G5.NUMBER.FRACTIONS.EQUIVALENT_FRACTIONS.M_EQUIV_FEWER_PIECES_BIGGER",
+    "listen_for": [
+     "fewer pieces",
+     "smaller bottom number is bigger"
+    ],
+    "ask": "Each piece of 2/3 is bigger. How many pieces did Chebet have?",
+    "repair": "Piece size and number of pieces both matter. Compare the whole shaded amounts side by side.",
+    "error": "Thinks the fraction with fewer pieces (the smaller bottom number) is the bigger amount, even when the other fraction has more of the smaller pieces.",
+    "example": {
+     "question": "Juma ate 2/3 of a chapati. Chebet ate 8/12 of an equal chapati. Who ate more?",
+     "wrong_answer": "Juma, because 2/3 has fewer pieces",
+     "correct_answer": "They ate the same amount"
+    }
    }
   ],
   "checks": [
@@ -5079,6 +5150,36 @@ export const TEACHING_PACK_G5 = {
      "wrong_answer": "Less",
      "correct_answer": "The same"
     }
+   },
+   {
+    "code": "MATH.G5.NUMBER.FRACTIONS.SIMPLIFY_FRACTIONS.M_FRACTION_UPSIDE_DOWN",
+    "listen_for": [
+     "6 over 5",
+     "the big number goes on top"
+    ],
+    "ask": "Is 6/5 more or less than one whole? Did he eat more than all the mandazi?",
+    "repair": "The part goes on top and the whole on the bottom. Eating some of the mandazi is less than all of them.",
+    "error": "Writes the fraction upside down, with the whole (or the total) on top and the part on the bottom.",
+    "example": {
+     "question": "Ochieng ate 30 of the 36 mandazi. What fraction was eaten, in its simplest form?",
+     "wrong_answer": "6/5",
+     "correct_answer": "5/6"
+    }
+   },
+   {
+    "code": "MATH.G5.NUMBER.FRACTIONS.SIMPLIFY_FRACTIONS.M_SIMPLEST_BY_LOOKS",
+    "listen_for": [
+     "it is a proper fraction",
+     "top is smaller"
+    ],
+    "ask": "What number divides both 6 and 8?",
+    "repair": "A fraction is simplest only when nothing but 1 divides both parts. Being smaller than one is a different thing.",
+    "error": "Judges a fraction to be in its simplest form from how it looks (top smaller than bottom, a proper fraction) without looking for a common factor.",
+    "example": {
+     "question": "Is 6/8 in its simplest form?",
+     "wrong_answer": "Yes, because 6 is smaller than 8",
+     "correct_answer": "No. Both divide by 2, giving 3/4"
+    }
    }
   ],
   "checks": [
@@ -5190,6 +5291,35 @@ export const TEACHING_PACK_G5 = {
      "question": "Akinyi got 1/2 of a small mandazi. Baraka got 1/4 of a large cake. Akinyi says she got more because 1/2 > 1/4. Is she right?",
      "wrong_answer": "Yes, 1/2 is always more than 1/4",
      "correct_answer": "Not necessarily; 1/2 > 1/4 only when both are parts of the same (or equal) whole"
+    }
+   },
+   {
+    "code": "MATH.G5.NUMBER.FRACTIONS.COMPARE_LIKE_FRACTIONS.M_COMPARE_MATCHING_PART_EQUAL",
+    "listen_for": [
+     "both one piece",
+     "same"
+    ],
+    "ask": "Is a piece cut into 4 the same size as a piece cut into 5?",
+    "repair": "One piece from a whole cut into 4 is bigger than one piece from a whole cut into 5. The matching number is not enough.",
+    "error": "Sees one matching number (the same top, or the same bottom) and decides the two fractions are equal.",
+    "example": {
+     "question": "Kioko takes 1 piece of a chapati cut into 4 equal pieces. Asha takes 1 piece of the same size of chapati cut into 5. Whose piece is bigger?",
+     "wrong_answer": "They are the same size, each took one piece",
+     "correct_answer": "Kioko's piece"
+    }
+   },
+   {
+    "code": "MATH.G5.NUMBER.FRACTIONS.COMPARE_LIKE_FRACTIONS.M_COMPARE_SYMBOL_REVERSED",
+    "listen_for": [
+     "but 6/7 is bigger"
+    ],
+    "ask": "Which fraction is bigger? Which way does the mouth of the sign open?",
+    "repair": "The sign opens towards the bigger number. Say the sentence in words, then pick the sign.",
+    "error": "Understands which fraction is bigger but writes the wrong way round, mixing up the symbols < and >.",
+    "example": {
+     "question": "Compare 4/7 and 6/7. Which symbol makes 4/7 ___ 6/7 true?",
+     "wrong_answer": ">",
+     "correct_answer": "<"
     }
    }
   ],
@@ -5538,6 +5668,34 @@ export const TEACHING_PACK_G5 = {
      "wrong_answer": "5",
      "correct_answer": "5/8 of the packet"
     }
+   },
+   {
+    "code": "MATH.G5.NUMBER.FRACTIONS.ADD_SAME_DENOMINATOR.M_MISSING_ADDEND_ADDED",
+    "listen_for": [
+     "2 plus 5"
+    ],
+    "ask": "If you have 2 pieces and need 5, how many more do you add?",
+    "repair": "Work out the part that is missing: the total take away the part you have.",
+    "error": "In a missing-number sum, adds the numbers that are shown instead of subtracting to find the missing one.",
+    "example": {
+     "question": "Find the missing numerator: 2/8 + ?/8 = 5/8.",
+     "wrong_answer": "7",
+     "correct_answer": "3"
+    }
+   },
+   {
+    "code": "MATH.G5.NUMBER.FRACTIONS.ADD_SAME_DENOMINATOR.M_MISSING_PICKS_SHOWN_NUMBER",
+    "listen_for": [
+     "5 because it is the answer"
+    ],
+    "ask": "Put your number in: does the sum come to the total?",
+    "repair": "The number after the equals sign is the total, not the missing part. Check by putting your number back in.",
+    "error": "In a missing-number fraction sentence, picks a number that is already shown (the total or the result) instead of working out the missing one.",
+    "example": {
+     "question": "Find the missing numerator: 2/8 + ?/8 = 5/8.",
+     "wrong_answer": "5",
+     "correct_answer": "3"
+    }
    }
   ],
   "checks": [
@@ -5645,6 +5803,48 @@ export const TEACHING_PACK_G5 = {
      "question": "Juma had a whole pawpaw and ate 3/8 of it. What fraction is left?",
      "wrong_answer": "3/8 (or 2/8)",
      "correct_answer": "8/8 - 3/8 = 5/8"
+    }
+   },
+   {
+    "code": "MATH.G5.NUMBER.FRACTIONS.SUBTRACT_SAME_DENOMINATOR.M_SUB_DROPS_DENOMINATOR",
+    "listen_for": [
+     "nine"
+    ],
+    "ask": "Is it nine pawpaws left, or nine pieces?",
+    "repair": "The pieces stay tenths, so the answer is 9 tenths, written 9/10.",
+    "error": "Subtracts the numerators and writes the answer as a whole number, dropping the denominator.",
+    "example": {
+     "question": "Hassan ate 1/10 of a pawpaw. What fraction is left?",
+     "wrong_answer": "9",
+     "correct_answer": "9/10"
+    }
+   },
+   {
+    "code": "MATH.G5.NUMBER.FRACTIONS.SUBTRACT_SAME_DENOMINATOR.M_SUB_DONE_AS_ADDITION",
+    "listen_for": [
+     "eleven tenths"
+    ],
+    "ask": "Did the pawpaw get bigger when Hassan ate some?",
+    "repair": "Eating takes away, so subtract. The amount left is less than the whole.",
+    "error": "Adds the numbers when the story takes something away.",
+    "example": {
+     "question": "Hassan ate 1/10 of a pawpaw. What fraction is left?",
+     "wrong_answer": "11/10",
+     "correct_answer": "9/10"
+    }
+   },
+   {
+    "code": "MATH.G5.NUMBER.FRACTIONS.SUBTRACT_SAME_DENOMINATOR.M_SUB_ONE_STEP_ONLY",
+    "listen_for": [
+     "5/8"
+    ],
+    "ask": "Did you take away the water used on Tuesday too?",
+    "repair": "Take away every amount that was used, one after the other.",
+    "error": "In a two-step take-away, subtracts only the first amount and forgets the second.",
+    "example": {
+     "question": "A tank holds 7/8. 2/8 is used on Monday and 1/8 on Tuesday. What is left?",
+     "wrong_answer": "5/8",
+     "correct_answer": "4/8, which is 1/2"
     }
    }
   ],
@@ -5995,6 +6195,36 @@ export const TEACHING_PACK_G5 = {
      "wrong_answer": "3 thousandths",
      "correct_answer": "3 tenths (0.3 is greater than 0.003)"
     }
+   },
+   {
+    "code": "MATH.G5.NUMBER.DECIMALS.DEC_PLACE_NAME.M_PLACE_OFF_BY_ONE",
+    "listen_for": [
+     "it is the second one",
+     "hundredths because it is the second"
+    ],
+    "ask": "What is the very first place after the point called?",
+    "repair": "Start at the point. The first place after it is tenths, the second hundredths, the third thousandths.",
+    "error": "Counts the decimal places from the wrong starting point, so names the place next to the right one (calls the hundredths place the tenths, or the other way round).",
+    "example": {
+     "question": "In 7.698, the digit 6 is in which place?",
+     "wrong_answer": "hundredths",
+     "correct_answer": "tenths"
+    }
+   },
+   {
+    "code": "MATH.G5.NUMBER.DECIMALS.DEC_PLACE_NAME.M_SAME_DIGIT_SAME_VALUE",
+    "listen_for": [
+     "both are 2",
+     "same number"
+    ],
+    "ask": "Is a tenth the same size as a hundredth? Which pieces are smaller?",
+    "repair": "The place tells the size of each piece. A tenth is ten times bigger than a hundredth, so 2 tenths is more.",
+    "error": "Says 2 tenths and 2 hundredths are equal because the digit is the same, ignoring the size of the place.",
+    "example": {
+     "question": "Which is more, 2 tenths or 2 hundredths?",
+     "wrong_answer": "They are the same",
+     "correct_answer": "2 tenths is more"
+    }
    }
   ],
   "checks": [
@@ -6085,6 +6315,20 @@ export const TEACHING_PACK_G5 = {
      "question": "Write 'five and twenty-four thousandths' as a decimal.",
      "wrong_answer": "5.24",
      "correct_answer": "5.024"
+    }
+   },
+   {
+    "code": "MATH.G5.NUMBER.DECIMALS.DEC_DIGIT_VALUE.M_PLACES_SWAPPED",
+    "listen_for": [
+     "the 7 comes first"
+    ],
+    "ask": "Which column is the 5 in? Which is the 7 in?",
+    "repair": "Put each digit in the column with its name, then read the chart from left to right.",
+    "error": "Writes the digits in the wrong columns, for example the thousandths digit before the hundredths digit, when writing a decimal from words.",
+    "example": {
+     "question": "Write as a decimal: 6 ones, 0 tenths, 5 hundredths and 7 thousandths.",
+     "wrong_answer": "6.075",
+     "correct_answer": "6.057"
     }
    }
   ],
@@ -6287,6 +6531,20 @@ export const TEACHING_PACK_G5 = {
      "question": "Arrange from smallest to largest: 3, 2.875, 2.95",
      "wrong_answer": "3, 2.875, 2.95",
      "correct_answer": "2.875, 2.95, 3"
+    }
+   },
+   {
+    "code": "MATH.G5.NUMBER.DECIMALS.DEC_ORDER.M_ORDER_DIRECTION_REVERSED",
+    "listen_for": [
+     "largest first"
+    ],
+    "ask": "Which number is the smallest? Is it first in your list?",
+    "repair": "Smallest to largest means the smallest number is written first.",
+    "error": "Writes the decimals largest first when asked to arrange them from smallest, or the other way round.",
+    "example": {
+     "question": "Arrange from smallest to largest: 7.05, 6.875, 6.9.",
+     "wrong_answer": "7.05, 6.9, 6.875",
+     "correct_answer": "6.875, 6.9, 7.05"
     }
    }
   ],
@@ -6572,6 +6830,20 @@ export const TEACHING_PACK_G5 = {
      "question": "6.003 − 2.145 =",
      "wrong_answer": "4.968",
      "correct_answer": "3.858"
+    }
+   },
+   {
+    "code": "MATH.G5.NUMBER.DECIMALS.DEC_SUB_SAME_PLACES.M_SUB_DONE_AS_ADDITION",
+    "listen_for": [
+     "added"
+    ],
+    "ask": "Is there more cloth or less cloth after a piece is cut off?",
+    "repair": "Used, sold and leaks out all take away, so subtract. The answer is less than the amount at the start.",
+    "error": "Adds the two decimals when the story takes one away (used, sold, leaks out).",
+    "example": {
+     "question": "A roll of cloth was 3.15 m long and 1.43 m was used. How much is left?",
+     "wrong_answer": "4.58",
+     "correct_answer": "1.72"
     }
    }
   ],
@@ -6903,6 +7175,36 @@ export const TEACHING_PACK_G5 = {
      "wrong_answer": "C",
      "correct_answer": "B"
     }
+   },
+   {
+    "code": "MATH.G5.NUMBER.SIMPLE_EQUATIONS.EQ_MEANING.M_LETTER_IS_GIVEN_NUMBER",
+    "listen_for": [
+     "n is 25",
+     "n is the total"
+    ],
+    "ask": "Can you see the 25 in the equation? Is the letter hiding something we can already see?",
+    "repair": "The letter hides the number we do not know yet. The 5 and the 25 are shown, so they are not the letter.",
+    "error": "Takes the letter to stand for a number already printed in the equation (the total, or the number being added), not for the unknown number.",
+    "example": {
+     "question": "In n + 5 = 25, n is the cost of one pencil. What does n stand for?",
+     "wrong_answer": "The total, 25 shillings",
+     "correct_answer": "The cost of one pencil, a number we do not know yet"
+    }
+   },
+   {
+    "code": "MATH.G5.NUMBER.SIMPLE_EQUATIONS.EQ_MEANING.M_LETTER_ANY_NUMBER",
+    "listen_for": [
+     "any number",
+     "it changes"
+    ],
+    "ask": "If n is 10, does n + 5 make 25? What about n is 20?",
+    "repair": "In an equation the letter is one number that makes both sides equal. Here only 20 works.",
+    "error": "Thinks the letter can be any number at all, so it has no one value in this equation ('n can be anything').",
+    "example": {
+     "question": "In n + 5 = 25, n is the cost of one pencil. What does n stand for?",
+     "wrong_answer": "Any number we like, it changes each time",
+     "correct_answer": "One number we do not know yet, the cost of the pencil"
+    }
    }
   ],
   "checks": [
@@ -7001,6 +7303,21 @@ export const TEACHING_PACK_G5 = {
      "question": "Otieno has 15 eggs. That is 6 more than Akinyi has. Let a be the number of eggs Akinyi has. Write an equation.",
      "wrong_answer": "a − 6 = 15 (or a = 15 + 6)",
      "correct_answer": "a + 6 = 15 (so a = 9)"
+    }
+   },
+   {
+    "code": "MATH.G5.NUMBER.SIMPLE_EQUATIONS.EQ_FORM_ADD_SUB.M_OPERATION_OPPOSITE_TO_STORY",
+    "listen_for": [
+     "plus",
+     "she added"
+    ],
+    "ask": "Did the money go up or go down when she spent it?",
+    "repair": "Write what happened. Spending takes money away, so the equation takes 78 away from m.",
+    "error": "Writes the opposite operation to the one in the story: plus for something taken away, or minus for something added.",
+    "example": {
+     "question": "Njeri had some shillings. She spent sh 78 and had sh 132 left. Which equation fits?",
+     "wrong_answer": "m + 78 = 132",
+     "correct_answer": "m − 78 = 132"
     }
    }
   ],

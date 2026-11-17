@@ -77,6 +77,24 @@
           ],
           "ask": "Which is bigger, one centimetre or one millimetre?",
           "repair": "On the metre stick, a thousandth is a millimetre and a tenth is 10 cm. More cuts, smaller pieces, as with fractions."
+        },
+        {
+          "code": "MATH.G5.NUMBER.DECIMALS.DEC_PLACE_NAME.M_PLACE_OFF_BY_ONE",
+          "listen_for": [
+            "it is the second one",
+            "hundredths because it is the second"
+          ],
+          "ask": "What is the very first place after the point called?",
+          "repair": "Start at the point. The first place after it is tenths, the second hundredths, the third thousandths."
+        },
+        {
+          "code": "MATH.G5.NUMBER.DECIMALS.DEC_PLACE_NAME.M_SAME_DIGIT_SAME_VALUE",
+          "listen_for": [
+            "both are 2",
+            "same number"
+          ],
+          "ask": "Is a tenth the same size as a hundredth? Which pieces are smaller?",
+          "repair": "The place tells the size of each piece. A tenth is ten times bigger than a hundredth, so 2 tenths is more."
         }
       ],
       "checks": [
@@ -152,6 +170,14 @@
           ],
           "ask": "Put 'five and twenty-four thousandths' in the chart. Is the tenths box empty?",
           "repair": "Fill the chart from the right: the last digit sits in the thousandths. Empty places get a zero."
+        },
+        {
+          "code": "MATH.G5.NUMBER.DECIMALS.DEC_DIGIT_VALUE.M_PLACES_SWAPPED",
+          "listen_for": [
+            "the 7 comes first"
+          ],
+          "ask": "Which column is the 5 in? Which is the 7 in?",
+          "repair": "Put each digit in the column with its name, then read the chart from left to right."
         }
       ],
       "checks": [
@@ -316,6 +342,14 @@
           ],
           "ask": "Is 3 more or less than 2 and a bit?",
           "repair": "Write 3 as 3.000 and place all three on a number line from 2 to 3."
+        },
+        {
+          "code": "MATH.G5.NUMBER.DECIMALS.DEC_ORDER.M_ORDER_DIRECTION_REVERSED",
+          "listen_for": [
+            "largest first"
+          ],
+          "ask": "Which number is the smallest? Is it first in your list?",
+          "repair": "Smallest to largest means the smallest number is written first."
         }
       ],
       "checks": [
@@ -553,6 +587,14 @@
           ],
           "ask": "When you took one from the 6, where did it go first?",
           "repair": "Exchange one place at a time: 1 whole becomes 10 tenths, one tenth becomes 10 hundredths, and so on."
+        },
+        {
+          "code": "MATH.G5.NUMBER.DECIMALS.DEC_SUB_SAME_PLACES.M_SUB_DONE_AS_ADDITION",
+          "listen_for": [
+            "added"
+          ],
+          "ask": "Is there more cloth or less cloth after a piece is cut off?",
+          "repair": "Used, sold and leaks out all take away, so subtract. The answer is less than the amount at the start."
         }
       ],
       "checks": [

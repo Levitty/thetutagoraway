@@ -233,14 +233,14 @@ test('a slip never becomes misconception evidence, and the results carry it', ()
   assert.equal(row.correct, false); assert.equal(row.misconception, null);
 });
 
-test('the equation question names three different misunderstandings, and a counting slip is not one of them', () => {
+test('the forming question names three different misunderstandings, and a counting slip is not one of them', () => {
   const pick = FAMILIES.find(f => f.id === 'g5c.eq.mean.pick'), bal = FAMILIES.find(f => f.id === 'g5c.eq.mean.balance');
   for (let k = 0; k < 30; k++) {
     const a = toItem(withSeed(`eq:${k}`, () => drawFamily(pick).p), 1);
     const codes = a.options.filter(o => !o.right).map(o => o.mis);
     assert.equal(new Set(codes).size, 3, 'each wrong option is its own misunderstanding');
     assert.ok(codes.every(Boolean));
-    assert.ok(codes.some(c => c.endsWith('.M_NUMBER_IS_EQUATION')));
+    assert.ok(codes.some(c => c.endsWith('.M_WRITES_ANSWER_NOT_EQUATION')));
     const b = toItem(withSeed(`bal:${k}`, () => drawFamily(bal).p), 1);
     const near = b.wrong.find(w => Math.abs(Number(w.value) - Number(b.answer)) === 1);
     assert.ok(near && near.slip && near.mis === null, 'one off the answer is a slip');
