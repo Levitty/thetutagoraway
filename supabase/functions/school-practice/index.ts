@@ -128704,7 +128704,7 @@ var FAMILIES176 = [
     make: ({ a, b, c: c19, n, p }) => ({
       question: `${p.name} makes stone blocks. Each block is ${a} cm long, ${b} cm wide and ${c19} cm high. How many blocks have the same total volume as 1 m\xB3?`,
       answer: n,
-      wrong: [[n / 100, "That uses 10,000 cm\xB3 for a cubic metre. A cube has three dimensions, not two, so use 100 three times.", "M_TWO_DIMENSIONS_ONLY"], [n * 100, "That has one zero too many in the number of cm\xB3 in a cubic metre. Multiply three lengths, each 100 cm.", "M_ZEROS_MISCOUNTED_CUBIC"], [round(100 / a + 100 / b + 100 / c19, 3), "That adds the blocks along each side. Compare volumes instead.", "M_SIDES_COUNTED_NOT_VOLUMES"]],
+      wrong: [[n / 100, "That uses the area of one face for a cubic metre. A cube has three dimensions, not two, so use the edge length three times.", "M_TWO_DIMENSIONS_ONLY"], [n * 100, "That has too many zeros in the number of cm\xB3 in a cubic metre. Multiply the three edges of the cube, each measured in cm.", "M_ZEROS_MISCOUNTED_CUBIC"], [round(100 / a + 100 / b + 100 / c19, 3), "That adds the blocks along each side. Compare volumes instead.", "M_SIDES_COUNTED_NOT_VOLUMES"]],
       hints: ["Change 1 m\xB3 to cm\xB3.", "Find the volume of one block, then divide."],
       steps: [`1 m\xB3 = 1,000,000 cm\xB3. One block: ${a} \xD7 ${b} \xD7 ${c19} = ${commas(a * b * c19)} cm\xB3.`, `Blocks = ${commas(1e6)} \xF7 ${commas(a * b * c19)} = ${commas(n)}.`]
     }),

@@ -536,7 +536,7 @@ export const FAMILIES = [
     make: ({ a, b, c, n, p }) => ({
       question: `${p.name} makes stone blocks. Each block is ${a} cm long, ${b} cm wide and ${c} cm high. How many blocks have the same total volume as 1 m³?`,
       answer: n,
-      wrong: [[n / 100, 'That uses 10,000 cm³ for a cubic metre. A cube has three dimensions, not two, so use 100 three times.', 'M_TWO_DIMENSIONS_ONLY'], [n * 100, 'That has one zero too many in the number of cm³ in a cubic metre. Multiply three lengths, each 100 cm.', 'M_ZEROS_MISCOUNTED_CUBIC'], [round(100 / a + 100 / b + 100 / c, 3), 'That adds the blocks along each side. Compare volumes instead.', 'M_SIDES_COUNTED_NOT_VOLUMES']],
+      wrong: [[n / 100, 'That uses the area of one face for a cubic metre. A cube has three dimensions, not two, so use the edge length three times.', 'M_TWO_DIMENSIONS_ONLY'], [n * 100, 'That has too many zeros in the number of cm³ in a cubic metre. Multiply the three edges of the cube, each measured in cm.', 'M_ZEROS_MISCOUNTED_CUBIC'], [round(100 / a + 100 / b + 100 / c, 3), 'That adds the blocks along each side. Compare volumes instead.', 'M_SIDES_COUNTED_NOT_VOLUMES']],
       hints: ['Change 1 m³ to cm³.', 'Find the volume of one block, then divide.'],
       steps: [`1 m³ = 1,000,000 cm³. One block: ${a} × ${b} × ${c} = ${commas(a * b * c)} cm³.`, `Blocks = ${commas(1000000)} ÷ ${commas(a * b * c)} = ${commas(n)}.`],
     }),
