@@ -3,15 +3,15 @@
  "subject_key": "mathematics",
  "grade": 7,
  "source": "KICD KICD-Grade7-Mathematics-Curriculum-Design.pdf, revised 2024 (text layer)",
- "status": "outcomes from KICD's text, word for word; skills and prerequisites proposed; misconceptions draft; all awaiting teacher review (17 Nov 2026); no skills yet for: ALGEBR.ALGEBRAIC_EXPRESSIONS, ALGEBR.LINEAR_EQUATIONS, ALGEBR.LINEAR_INEQUALITIES, MEASUR.PYTHAGOREAN_RELATIONSHIP, MEASUR.LENGTH, MEASUR.AREA, MEASUR.VOLUME_AND_CAPACITY, MEASUR.TIME_DISTANCE_AND_SPEED, MEASUR.TEMPERATURE, MEASUR.MONEY, GEOMET.ANGLES, GEOMET.GEOMETRICAL_CONSTRUCTION, DATA_H.DATA_HANDLING",
+ "status": "outcomes from KICD's text, word for word; skills and prerequisites proposed; misconceptions draft; all awaiting teacher review (17 Nov 2026); no skills yet for: ALGEBR.LINEAR_INEQUALITIES, MEASUR.PYTHAGOREAN_RELATIONSHIP, MEASUR.LENGTH, MEASUR.AREA, MEASUR.VOLUME_AND_CAPACITY, MEASUR.TIME_DISTANCE_AND_SPEED, MEASUR.TEMPERATURE, MEASUR.MONEY, GEOMET.ANGLES, GEOMET.GEOMETRICAL_CONSTRUCTION, DATA_H.DATA_HANDLING",
  "totals": {
   "strands": 5,
   "sub_strands": 18,
   "outcomes": 117,
   "lessons": 148,
-  "skills": 52,
-  "prerequisites": 108,
-  "misconceptions": 179
+  "skills": 62,
+  "prerequisites": 130,
+  "misconceptions": 221
  },
  "sub_strands": [
   {
@@ -55,7 +55,7 @@
    "values": "",
    "pcis": "",
    "links": "",
-   "design_notes": "Official outcomes a to h are tested; i is an attitude and has no skill. Outcome f (apply operations of whole numbers) is 'kicd_read': the design gives no limit, so the skills use Grade 6 limits stretched to Grade 7 numbers (up to 9-digit sums, 3-digit by 3-digit products, up to 6-digit dividends, three operations with brackets). Outcome e names even, odd and prime. Number sequences (g, h) are with a constant difference or ratio, or a two-step rule. Official outcomes a to h are tested; i is an attitude and has no skill. Outcome f (apply operations of whole numbers) is 'kicd_read': the design gives no limit, so the skills use Grade 6 limits stretched to Grade 7 numbers (up to 9-digit sums, 3-digit by 3-digit products, up to 6-digit dividends, three operations with brackets). Outcome e names even, odd and prime. Number sequences (g, h) are with a constant difference or ratio, or a two-step rule. Official outcomes a to h are tested; i is an attitude and has no skill. Outcome f (apply operations of whole numbers) is 'kicd_read': the design gives no limit, so the skills use Grade 6 limits stretched to Grade 7 numbers (up to 9-digit sums, 3-digit by 3-digit products, up to 6-digit dividends, three operations with brackets). Outcome e names even, odd and prime. Number sequences (g, h) are with a constant difference or ratio, or a two-step rule. Official outcomes a to h are tested; i is an attitude and has no skill. Outcome f (apply operations of whole numbers) is 'kicd_read': the design gives no limit, so the skills use Grade 6 limits stretched to Grade 7 numbers (up to 9-digit sums, 3-digit by 3-digit products, up to 6-digit dividends, three operations with brackets). Outcome e names even, odd and prime. Number sequences (g, h) are with a constant difference or ratio, or a two-step rule. Official outcomes a to h are tested; i is an attitude and has no skill. Outcome f (apply operations of whole numbers) is 'kicd_read': the design gives no limit, so the skills use Grade 6 limits stretched to Grade 7 numbers (up to 9-digit sums, 3-digit by 3-digit products, up to 6-digit dividends, three operations with brackets). Outcome e names even, odd and prime. Number sequences (g, h) are with a constant difference or ratio, or a two-step rule. Official outcomes a to h are tested; i is an attitude and has no skill. Outcome f (apply operations of whole numbers) is 'kicd_read': the design gives no limit, so the skills use Grade 6 limits stretched to Grade 7 numbers (up to 9-digit sums, 3-digit by 3-digit products, up to 6-digit dividends, three operations with brackets). Outcome e names even, odd and prime. Number sequences (g, h) are with a constant difference or ratio, or a two-step rule. Official outcomes a to h are tested; i is an attitude and has no skill. Outcome f (apply operations of whole numbers) is 'kicd_read': the design gives no limit, so the skills use Grade 6 limits stretched to Grade 7 numbers (up to 9-digit sums, 3-digit by 3-digit products, up to 6-digit dividends, three operations with brackets). Outcome e names even, odd and prime. Number sequences (g, h) are with a constant difference or ratio, or a two-step rule. Official outcomes a to h are tested; i is an attitude and has no skill. Outcome f (apply operations of whole numbers) is 'kicd_read': the design gives no limit, so the skills use Grade 6 limits stretched to Grade 7 numbers (up to 9-digit sums, 3-digit by 3-digit products, up to 6-digit dividends, three operations with brackets). Outcome e names even, odd and prime. Number sequences (g, h) are with a constant difference or ratio, or a two-step rule. Official outcomes a to h are tested; i is an attitude and has no skill. Outcome f (apply operations of whole numbers) is 'kicd_read': the design gives no limit, so the skills use Grade 6 limits stretched to Grade 7 numbers (up to 9-digit sums, 3-digit by 3-digit products, up to 6-digit dividends, three operations with brackets). Outcome e names even, odd and prime. Number sequences (g, h) are with a constant difference or ratio, or a two-step rule. Official outcomes a to h are tested; i is an attitude and has no skill. Outcome f (apply operations of whole numbers) is 'kicd_read': the design gives no limit, so the skills use Grade 6 limits stretched to Grade 7 numbers (up to 9-digit sums, 3-digit by 3-digit products, up to 6-digit dividends, three operations with brackets). Outcome e names even, odd and prime. Number sequences (g, h) are with a constant difference or ratio, or a two-step rule.",
+   "design_notes": "Official outcomes a to h are tested; i is an attitude and has no skill. Outcome f (apply operations of whole numbers) is 'kicd_read': the design gives no limit, so the skills use Grade 6 limits stretched to Grade 7 numbers (up to 9-digit sums, 3-digit by 3-digit products, up to 6-digit dividends, three operations with brackets). Outcome e names even, odd and prime. Number sequences (g, h) are with a constant difference or ratio, or a two-step rule. Official outcomes a to h are tested; i is an attitude and has no skill. Outcome f (apply operations of whole numbers) is 'kicd_read': the design gives no limit, so the skills use Grade 6 limits stretched to Grade 7 numbers (up to 9-digit sums, 3-digit by 3-digit products, up to 6-digit dividends, three operations with brackets). Outcome e names even, odd and prime. Number sequences (g, h) are with a constant difference or ratio, or a two-step rule. Official outcomes a to h are tested; i is an attitude and has no skill. Outcome f (apply operations of whole numbers) is 'kicd_read': the design gives no limit, so the skills use Grade 6 limits stretched to Grade 7 numbers (up to 9-digit sums, 3-digit by 3-digit products, up to 6-digit dividends, three operations with brackets). Outcome e names even, odd and prime. Number sequences (g, h) are with a constant difference or ratio, or a two-step rule. Official outcomes a to h are tested; i is an attitude and has no skill. Outcome f (apply operations of whole numbers) is 'kicd_read': the design gives no limit, so the skills use Grade 6 limits stretched to Grade 7 numbers (up to 9-digit sums, 3-digit by 3-digit products, up to 6-digit dividends, three operations with brackets). Outcome e names even, odd and prime. Number sequences (g, h) are with a constant difference or ratio, or a two-step rule. Official outcomes a to h are tested; i is an attitude and has no skill. Outcome f (apply operations of whole numbers) is 'kicd_read': the design gives no limit, so the skills use Grade 6 limits stretched to Grade 7 numbers (up to 9-digit sums, 3-digit by 3-digit products, up to 6-digit dividends, three operations with brackets). Outcome e names even, odd and prime. Number sequences (g, h) are with a constant difference or ratio, or a two-step rule. Official outcomes a to h are tested; i is an attitude and has no skill. Outcome f (apply operations of whole numbers) is 'kicd_read': the design gives no limit, so the skills use Grade 6 limits stretched to Grade 7 numbers (up to 9-digit sums, 3-digit by 3-digit products, up to 6-digit dividends, three operations with brackets). Outcome e names even, odd and prime. Number sequences (g, h) are with a constant difference or ratio, or a two-step rule. Official outcomes a to h are tested; i is an attitude and has no skill. Outcome f (apply operations of whole numbers) is 'kicd_read': the design gives no limit, so the skills use Grade 6 limits stretched to Grade 7 numbers (up to 9-digit sums, 3-digit by 3-digit products, up to 6-digit dividends, three operations with brackets). Outcome e names even, odd and prime. Number sequences (g, h) are with a constant difference or ratio, or a two-step rule. Official outcomes a to h are tested; i is an attitude and has no skill. Outcome f (apply operations of whole numbers) is 'kicd_read': the design gives no limit, so the skills use Grade 6 limits stretched to Grade 7 numbers (up to 9-digit sums, 3-digit by 3-digit products, up to 6-digit dividends, three operations with brackets). Outcome e names even, odd and prime. Number sequences (g, h) are with a constant difference or ratio, or a two-step rule. Official outcomes a to h are tested; i is an attitude and has no skill. Outcome f (apply operations of whole numbers) is 'kicd_read': the design gives no limit, so the skills use Grade 6 limits stretched to Grade 7 numbers (up to 9-digit sums, 3-digit by 3-digit products, up to 6-digit dividends, three operations with brackets). Outcome e names even, odd and prime. Number sequences (g, h) are with a constant difference or ratio, or a two-step rule. Official outcomes a to h are tested; i is an attitude and has no skill. Outcome f (apply operations of whole numbers) is 'kicd_read': the design gives no limit, so the skills use Grade 6 limits stretched to Grade 7 numbers (up to 9-digit sums, 3-digit by 3-digit products, up to 6-digit dividends, three operations with brackets). Outcome e names even, odd and prime. Number sequences (g, h) are with a constant difference or ratio, or a two-step rule. Official outcomes a to h are tested; i is an attitude and has no skill. Outcome f (apply operations of whole numbers) is 'kicd_read': the design gives no limit, so the skills use Grade 6 limits stretched to Grade 7 numbers (up to 9-digit sums, 3-digit by 3-digit products, up to 6-digit dividends, three operations with brackets). Outcome e names even, odd and prime. Number sequences (g, h) are with a constant difference or ratio, or a two-step rule. Official outcomes a to h are tested; i is an attitude and has no skill. Outcome f (apply operations of whole numbers) is 'kicd_read': the design gives no limit, so the skills use Grade 6 limits stretched to Grade 7 numbers (up to 9-digit sums, 3-digit by 3-digit products, up to 6-digit dividends, three operations with brackets). Outcome e names even, odd and prime. Number sequences (g, h) are with a constant difference or ratio, or a two-step rule.",
    "source": {
     "grade_page": "https://kicd.ac.ke/cbc-materials/curriculum-designs/grade-seven-designs/",
     "design": "KICD-Grade7-Mathematics-Curriculum-Design.pdf",
@@ -1766,7 +1766,7 @@
    "values": "",
    "pcis": "",
    "links": "",
-   "design_notes": "Official outcomes a to d are tested; e is an attitude. Outcome a lists 2, 3, 4, 5, 6, 8, 9, 10 and 11, so there are three divisibility skills grouped by the kind of test (last digits, digit sum, alternating sum). Outcomes c and d are by the factor method, so the skills use prime factorisation. GCD is the same as HCF in Grade 5. Official outcomes a to d are tested; e is an attitude. Outcome a lists 2, 3, 4, 5, 6, 8, 9, 10 and 11, so there are three divisibility skills grouped by the kind of test (last digits, digit sum, alternating sum). Outcomes c and d are by the factor method, so the skills use prime factorisation. GCD is the same as HCF in Grade 5. Official outcomes a to d are tested; e is an attitude. Outcome a lists 2, 3, 4, 5, 6, 8, 9, 10 and 11, so there are three divisibility skills grouped by the kind of test (last digits, digit sum, alternating sum). Outcomes c and d are by the factor method, so the skills use prime factorisation. GCD is the same as HCF in Grade 5. Official outcomes a to d are tested; e is an attitude. Outcome a lists 2, 3, 4, 5, 6, 8, 9, 10 and 11, so there are three divisibility skills grouped by the kind of test (last digits, digit sum, alternating sum). Outcomes c and d are by the factor method, so the skills use prime factorisation. GCD is the same as HCF in Grade 5. Official outcomes a to d are tested; e is an attitude. Outcome a lists 2, 3, 4, 5, 6, 8, 9, 10 and 11, so there are three divisibility skills grouped by the kind of test (last digits, digit sum, alternating sum). Outcomes c and d are by the factor method, so the skills use prime factorisation. GCD is the same as HCF in Grade 5. Official outcomes a to d are tested; e is an attitude. Outcome a lists 2, 3, 4, 5, 6, 8, 9, 10 and 11, so there are three divisibility skills grouped by the kind of test (last digits, digit sum, alternating sum). Outcomes c and d are by the factor method, so the skills use prime factorisation. GCD is the same as HCF in Grade 5. Official outcomes a to d are tested; e is an attitude. Outcome a lists 2, 3, 4, 5, 6, 8, 9, 10 and 11, so there are three divisibility skills grouped by the kind of test (last digits, digit sum, alternating sum). Outcomes c and d are by the factor method, so the skills use prime factorisation. GCD is the same as HCF in Grade 5.",
+   "design_notes": "Official outcomes a to d are tested; e is an attitude. Outcome a lists 2, 3, 4, 5, 6, 8, 9, 10 and 11, so there are three divisibility skills grouped by the kind of test (last digits, digit sum, alternating sum). Outcomes c and d are by the factor method, so the skills use prime factorisation. GCD is the same as HCF in Grade 5. Official outcomes a to d are tested; e is an attitude. Outcome a lists 2, 3, 4, 5, 6, 8, 9, 10 and 11, so there are three divisibility skills grouped by the kind of test (last digits, digit sum, alternating sum). Outcomes c and d are by the factor method, so the skills use prime factorisation. GCD is the same as HCF in Grade 5. Official outcomes a to d are tested; e is an attitude. Outcome a lists 2, 3, 4, 5, 6, 8, 9, 10 and 11, so there are three divisibility skills grouped by the kind of test (last digits, digit sum, alternating sum). Outcomes c and d are by the factor method, so the skills use prime factorisation. GCD is the same as HCF in Grade 5. Official outcomes a to d are tested; e is an attitude. Outcome a lists 2, 3, 4, 5, 6, 8, 9, 10 and 11, so there are three divisibility skills grouped by the kind of test (last digits, digit sum, alternating sum). Outcomes c and d are by the factor method, so the skills use prime factorisation. GCD is the same as HCF in Grade 5. Official outcomes a to d are tested; e is an attitude. Outcome a lists 2, 3, 4, 5, 6, 8, 9, 10 and 11, so there are three divisibility skills grouped by the kind of test (last digits, digit sum, alternating sum). Outcomes c and d are by the factor method, so the skills use prime factorisation. GCD is the same as HCF in Grade 5. Official outcomes a to d are tested; e is an attitude. Outcome a lists 2, 3, 4, 5, 6, 8, 9, 10 and 11, so there are three divisibility skills grouped by the kind of test (last digits, digit sum, alternating sum). Outcomes c and d are by the factor method, so the skills use prime factorisation. GCD is the same as HCF in Grade 5. Official outcomes a to d are tested; e is an attitude. Outcome a lists 2, 3, 4, 5, 6, 8, 9, 10 and 11, so there are three divisibility skills grouped by the kind of test (last digits, digit sum, alternating sum). Outcomes c and d are by the factor method, so the skills use prime factorisation. GCD is the same as HCF in Grade 5. Official outcomes a to d are tested; e is an attitude. Outcome a lists 2, 3, 4, 5, 6, 8, 9, 10 and 11, so there are three divisibility skills grouped by the kind of test (last digits, digit sum, alternating sum). Outcomes c and d are by the factor method, so the skills use prime factorisation. GCD is the same as HCF in Grade 5. Official outcomes a to d are tested; e is an attitude. Outcome a lists 2, 3, 4, 5, 6, 8, 9, 10 and 11, so there are three divisibility skills grouped by the kind of test (last digits, digit sum, alternating sum). Outcomes c and d are by the factor method, so the skills use prime factorisation. GCD is the same as HCF in Grade 5.",
    "source": {
     "grade_page": "https://kicd.ac.ke/cbc-materials/curriculum-designs/grade-seven-designs/",
     "design": "KICD-Grade7-Mathematics-Curriculum-Design.pdf",
@@ -2497,7 +2497,7 @@
    "values": "",
    "pcis": "",
    "links": "",
-   "design_notes": "Official outcomes a to h are tested; i (create sequences with fractions) is 'kicd_read' and has a skill; j is an attitude. Fractions are proper fractions and mixed numbers with denominators up to 12. Multiplication and division by a whole number, a fraction and a mixed number are separate skills because the errors differ. Number sequences with fractions (h, i) come from the same outcome words as whole-number sequences. Official outcomes a to h are tested; i (create sequences with fractions) is 'kicd_read' and has a skill; j is an attitude. Fractions are proper fractions and mixed numbers with denominators up to 12. Multiplication and division by a whole number, a fraction and a mixed number are separate skills because the errors differ. Number sequences with fractions (h, i) come from the same outcome words as whole-number sequences. Official outcomes a to h are tested; i (create sequences with fractions) is 'kicd_read' and has a skill; j is an attitude. Fractions are proper fractions and mixed numbers with denominators up to 12. Multiplication and division by a whole number, a fraction and a mixed number are separate skills because the errors differ. Number sequences with fractions (h, i) come from the same outcome words as whole-number sequences. Official outcomes a to h are tested; i (create sequences with fractions) is 'kicd_read' and has a skill; j is an attitude. Fractions are proper fractions and mixed numbers with denominators up to 12. Multiplication and division by a whole number, a fraction and a mixed number are separate skills because the errors differ. Number sequences with fractions (h, i) come from the same outcome words as whole-number sequences.",
+   "design_notes": "Official outcomes a to h are tested; i (create sequences with fractions) is 'kicd_read' and has a skill; j is an attitude. Fractions are proper fractions and mixed numbers with denominators up to 12. Multiplication and division by a whole number, a fraction and a mixed number are separate skills because the errors differ. Number sequences with fractions (h, i) come from the same outcome words as whole-number sequences. Official outcomes a to h are tested; i (create sequences with fractions) is 'kicd_read' and has a skill; j is an attitude. Fractions are proper fractions and mixed numbers with denominators up to 12. Multiplication and division by a whole number, a fraction and a mixed number are separate skills because the errors differ. Number sequences with fractions (h, i) come from the same outcome words as whole-number sequences. Official outcomes a to h are tested; i (create sequences with fractions) is 'kicd_read' and has a skill; j is an attitude. Fractions are proper fractions and mixed numbers with denominators up to 12. Multiplication and division by a whole number, a fraction and a mixed number are separate skills because the errors differ. Number sequences with fractions (h, i) come from the same outcome words as whole-number sequences. Official outcomes a to h are tested; i (create sequences with fractions) is 'kicd_read' and has a skill; j is an attitude. Fractions are proper fractions and mixed numbers with denominators up to 12. Multiplication and division by a whole number, a fraction and a mixed number are separate skills because the errors differ. Number sequences with fractions (h, i) come from the same outcome words as whole-number sequences. Official outcomes a to h are tested; i (create sequences with fractions) is 'kicd_read' and has a skill; j is an attitude. Fractions are proper fractions and mixed numbers with denominators up to 12. Multiplication and division by a whole number, a fraction and a mixed number are separate skills because the errors differ. Number sequences with fractions (h, i) come from the same outcome words as whole-number sequences. Official outcomes a to h are tested; i (create sequences with fractions) is 'kicd_read' and has a skill; j is an attitude. Fractions are proper fractions and mixed numbers with denominators up to 12. Multiplication and division by a whole number, a fraction and a mixed number are separate skills because the errors differ. Number sequences with fractions (h, i) come from the same outcome words as whole-number sequences.",
    "source": {
     "grade_page": "https://kicd.ac.ke/cbc-materials/curriculum-designs/grade-seven-designs/",
     "design": "KICD-Grade7-Mathematics-Curriculum-Design.pdf",
@@ -3741,7 +3741,7 @@
    "values": "",
    "pcis": "",
    "links": "",
-   "design_notes": "Official outcomes a to c are tested; d is an attitude. Decimals go to thousandths. Multiplication and division are by a whole number and by a decimal, separate skills because the errors differ (a lost point, the wrong operation, moving the point in one number only).",
+   "design_notes": "Official outcomes a to c are tested; d is an attitude. Decimals go to thousandths. Multiplication and division are by a whole number and by a decimal, separate skills because the errors differ (a lost point, the wrong operation, moving the point in one number only). Official outcomes a to c are tested; d is an attitude. Decimals go to thousandths. Multiplication and division are by a whole number and by a decimal, separate skills because the errors differ (a lost point, the wrong operation, moving the point in one number only). Official outcomes a to c are tested; d is an attitude. Decimals go to thousandths. Multiplication and division are by a whole number and by a decimal, separate skills because the errors differ (a lost point, the wrong operation, moving the point in one number only).",
    "source": {
     "grade_page": "https://kicd.ac.ke/cbc-materials/curriculum-designs/grade-seven-designs/",
     "design": "KICD-Grade7-Mathematics-Curriculum-Design.pdf",
@@ -4453,7 +4453,7 @@
    "values": "",
    "pcis": "",
    "links": "",
-   "design_notes": "Official outcomes a and b are tested; c is an attitude. Square roots are of perfect squares only (outcome b). One skill places a root between two whole numbers using perfect squares as anchors: it is a way of checking a root and is kept, with its limit named. Squares and roots in the Grade 6 map go up to 100 and 10,000.",
+   "design_notes": "Official outcomes a and b are tested; c is an attitude. Square roots are of perfect squares only (outcome b). One skill places a root between two whole numbers using perfect squares as anchors: it is a way of checking a root and is kept, with its limit named. Squares and roots in the Grade 6 map go up to 100 and 10,000. Official outcomes a and b are tested; c is an attitude. Square roots are of perfect squares only (outcome b). One skill places a root between two whole numbers using perfect squares as anchors: it is a way of checking a root and is kept, with its limit named. Squares and roots in the Grade 6 map go up to 100 and 10,000. Official outcomes a and b are tested; c is an attitude. Square roots are of perfect squares only (outcome b). One skill places a root between two whole numbers using perfect squares as anchors: it is a way of checking a root and is kept, with its limit named. Squares and roots in the Grade 6 map go up to 100 and 10,000.",
    "source": {
     "grade_page": "https://kicd.ac.ke/cbc-materials/curriculum-designs/grade-seven-designs/",
     "design": "KICD-Grade7-Mathematics-Curriculum-Design.pdf",
@@ -5164,7 +5164,7 @@
    "values": "",
    "pcis": "",
    "links": "",
-   "design_notes": "",
+   "design_notes": "Official outcomes a to c are tested; d is an attitude. Forming expressions (a, b) is split by the kind of situation (a rate plus a fixed amount, relations between people, words such as \"3 more than\"); simplifying (c) is collecting like terms and removing a bracket multiplied by a number. Letters stand for numbers. Official outcomes a to c are tested; d is an attitude. Forming expressions (a, b) is split by the kind of situation (a rate plus a fixed amount, relations between people, words such as \"3 more than\"); simplifying (c) is collecting like terms and removing a bracket multiplied by a number. Letters stand for numbers.",
    "source": {
     "grade_page": "https://kicd.ac.ke/cbc-materials/curriculum-designs/grade-seven-designs/",
     "design": "KICD-Grade7-Mathematics-Curriculum-Design.pdf",
@@ -5199,8 +5199,485 @@
      "status": "kicd_verified"
     }
    ],
-   "skills": [],
-   "misconceptions": []
+   "skills": [
+    {
+     "code": "MATH.G7.ALGEBR.ALGEBRAIC_EXPRESSIONS.FORM_EXPRESSION_RATE_FIXED",
+     "name": "Form an expression for a charge made of a rate and a fixed amount",
+     "outcomes": [
+      "MATH.G7.ALGEBR.ALGEBRAIC_EXPRESSIONS.a"
+     ],
+     "mastery": "From a table or story (delivery of n jerricans at sh 30 each plus sh 10), the child writes the expression rate x n + fixed, tests it with n = 1 and n = 2, and says what each part means.",
+     "question_forms": [
+      "choose the expression from a table",
+      "what does each part mean",
+      "write the charge for n items",
+      "test with values"
+     ],
+     "thinking": [
+      "reasoning",
+      "procedure"
+     ],
+     "horeb_skill_ids": [
+      "G7_EXPRESSIONS"
+     ],
+     "prerequisites": [
+      {
+       "requires": "MATH.G5.NUMBER.SIMPLE_EQUATIONS.EQ_FORM_MUL_DIV",
+       "kind": "skill",
+       "strength": "essential",
+       "reason": "Writing expressions with a letter and a multiplier.",
+       "status": "proposed"
+      },
+      {
+       "requires": "MATH.G6.NUMBER.INEQUALITIES.a",
+       "kind": "outcome",
+       "strength": "helpful",
+       "reason": "Grade 6 forms statements with an unknown.",
+       "status": "proposed"
+      }
+     ],
+     "status": "proposed"
+    },
+    {
+     "code": "MATH.G7.ALGEBR.ALGEBRAIC_EXPRESSIONS.FORM_EXPRESSION_RELATIONS",
+     "name": "Form an expression for quantities related to one unknown",
+     "outcomes": [
+      "MATH.G7.ALGEBR.ALGEBRAIC_EXPRESSIONS.a"
+     ],
+     "mastery": "Given one person is x years old, another is 2 years younger and another is 3 times as old, the child writes an expression for each and for their total, using brackets only when a whole group is taken.",
+     "question_forms": [
+      "expression for each person",
+      "total of three ages",
+      "the difference between two ages",
+      "which expression is right"
+     ],
+     "thinking": [
+      "reasoning",
+      "procedure"
+     ],
+     "horeb_skill_ids": [
+      "G7_EXPRESSIONS"
+     ],
+     "prerequisites": [
+      {
+       "requires": "MATH.G5.NUMBER.SIMPLE_EQUATIONS.EQ_FORM_ADD_SUB",
+       "kind": "skill",
+       "strength": "essential",
+       "reason": "Writing a letter into a story.",
+       "status": "proposed"
+      },
+      {
+       "requires": "MATH.G7.ALGEBR.ALGEBRAIC_EXPRESSIONS.FORM_EXPRESSION_RATE_FIXED",
+       "kind": "skill",
+       "strength": "helpful",
+       "reason": "A similar structure with a rate.",
+       "status": "proposed"
+      }
+     ],
+     "status": "proposed"
+    },
+    {
+     "code": "MATH.G7.ALGEBR.ALGEBRAIC_EXPRESSIONS.FORM_FROM_STATEMENT",
+     "name": "Form an expression from a simple algebraic statement in words",
+     "outcomes": [
+      "MATH.G7.ALGEBR.ALGEBRAIC_EXPRESSIONS.b"
+     ],
+     "mastery": "The child turns words such as \"3 more than x\", \"5 less than n\", \"twice y and then 4 more\" and \"a third of m\" into expressions, keeping the order for \"less than\".",
+     "question_forms": [
+      "words to expression",
+      "expression to words",
+      "which statement matches",
+      "less than in the right order"
+     ],
+     "thinking": [
+      "procedure",
+      "reasoning"
+     ],
+     "horeb_skill_ids": [
+      "G7_EXPRESSIONS"
+     ],
+     "prerequisites": [
+      {
+       "requires": "MATH.G5.NUMBER.SIMPLE_EQUATIONS.EQ_MEANING",
+       "kind": "skill",
+       "strength": "essential",
+       "reason": "A letter stands for a number.",
+       "status": "proposed"
+      },
+      {
+       "requires": "MATH.G7.ALGEBR.ALGEBRAIC_EXPRESSIONS.FORM_EXPRESSION_RATE_FIXED",
+       "kind": "skill",
+       "strength": "helpful",
+       "reason": "Expressions for charges.",
+       "status": "proposed"
+      }
+     ],
+     "status": "proposed"
+    },
+    {
+     "code": "MATH.G7.ALGEBR.ALGEBRAIC_EXPRESSIONS.SIMPLIFY_LIKE_TERMS",
+     "name": "Simplify an expression by collecting like terms",
+     "outcomes": [
+      "MATH.G7.ALGEBR.ALGEBRAIC_EXPRESSIONS.c"
+     ],
+     "mastery": "The child collects the x terms and the number terms of an expression with up to three terms of each kind, keeps each sign, counts a plain x as 1x, and substitutes a value to check or to use.",
+     "question_forms": [
+      "collect like terms",
+      "perimeter of a plot",
+      "find a and b in ax + b",
+      "substitute x"
+     ],
+     "thinking": [
+      "procedure"
+     ],
+     "horeb_skill_ids": [
+      "G7_SIMPLIFY"
+     ],
+     "prerequisites": [
+      {
+       "requires": "MATH.G7.ALGEBR.ALGEBRAIC_EXPRESSIONS.FORM_FROM_STATEMENT",
+       "kind": "skill",
+       "strength": "essential",
+       "reason": "Expressions come first.",
+       "status": "proposed"
+      },
+      {
+       "requires": "MATH.G6.NUMBER.INEQUALITIES.b",
+       "kind": "outcome",
+       "strength": "helpful",
+       "reason": "Grade 6 simplified inequalities.",
+       "status": "proposed"
+      }
+     ],
+     "status": "proposed"
+    },
+    {
+     "code": "MATH.G7.ALGEBR.ALGEBRAIC_EXPRESSIONS.SIMPLIFY_WITH_BRACKETS",
+     "name": "Remove a bracket multiplied by a number and simplify",
+     "outcomes": [
+      "MATH.G7.ALGEBR.ALGEBRAIC_EXPRESSIONS.c"
+     ],
+     "mastery": "The child multiplies every term inside a bracket by the number outside, collects like terms, and does not join an x term with a number term.",
+     "question_forms": [
+      "expand the bracket",
+      "perimeter with a bracket",
+      "find the wrong step",
+      "is x + 8 the same as 8x"
+     ],
+     "thinking": [
+      "procedure",
+      "reasoning"
+     ],
+     "horeb_skill_ids": [
+      "G7_SIMPLIFY",
+      "G7_EXPRESSIONS"
+     ],
+     "prerequisites": [
+      {
+       "requires": "MATH.G7.ALGEBR.ALGEBRAIC_EXPRESSIONS.SIMPLIFY_LIKE_TERMS",
+       "kind": "skill",
+       "strength": "essential",
+       "reason": "Collecting terms after the bracket.",
+       "status": "proposed"
+      },
+      {
+       "requires": "MATH.G6.NUMBER.DIVISION.COMBINED_OPERATIONS",
+       "kind": "skill",
+       "strength": "helpful",
+       "reason": "Order of operations with brackets.",
+       "status": "proposed"
+      }
+     ],
+     "status": "proposed"
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "MATH.G7.ALGEBR.ALGEBRAIC_EXPRESSIONS.FORM_EXPRESSION_RATE_FIXED.M_RATE_AND_FIXED_SWAPPED",
+     "skill": "MATH.G7.ALGEBR.ALGEBRAIC_EXPRESSIONS.FORM_EXPRESSION_RATE_FIXED",
+     "error": "Swaps the rate and the fixed amount.",
+     "example": {
+      "question": "Charge is sh 30 for each jerrican plus sh 10 delivery. Expression for n jerricans?",
+      "wrong_answer": "10n + 30",
+      "correct_answer": "30n + 10"
+     },
+     "cause": "Reads the numbers in the order they are written.",
+     "reveals": "The answer 10n + 30 as a wrong option, with a reason that names the idea.",
+     "help": "Test n = 2: the table says 70, but 10 x 2 + 30 is only 50.",
+     "source": "to be confirmed by a teacher (no source yet)",
+     "status": "draft"
+    },
+    {
+     "code": "MATH.G7.ALGEBR.ALGEBRAIC_EXPRESSIONS.FORM_EXPRESSION_RATE_FIXED.M_FIXED_CHARGE_MULTIPLIED",
+     "skill": "MATH.G7.ALGEBR.ALGEBRAIC_EXPRESSIONS.FORM_EXPRESSION_RATE_FIXED",
+     "error": "Multiplies the fixed charge by n as well.",
+     "example": {
+      "question": "Charge is sh 30 each plus sh 10 delivery",
+      "wrong_answer": "40n",
+      "correct_answer": "30n + 10"
+     },
+     "cause": "Combines the two numbers because both are in shillings.",
+     "reveals": "The answer 40n as a wrong option, with a reason that names the idea.",
+     "help": "The delivery fee is paid once, not for each jerrican.",
+     "source": "to be confirmed by a teacher (no source yet)",
+     "status": "draft"
+    },
+    {
+     "code": "MATH.G7.ALGEBR.ALGEBRAIC_EXPRESSIONS.FORM_EXPRESSION_RATE_FIXED.M_FIXED_ADDED_BEFORE_MULTIPLYING",
+     "skill": "MATH.G7.ALGEBR.ALGEBRAIC_EXPRESSIONS.FORM_EXPRESSION_RATE_FIXED",
+     "error": "Adds the fixed amount to n first, then multiplies.",
+     "example": {
+      "question": "Charge is sh 30 each plus sh 10 delivery",
+      "wrong_answer": "30(n + 10)",
+      "correct_answer": "30n + 10"
+     },
+     "cause": "Puts a bracket round everything that is added.",
+     "reveals": "The answer 30(n + 10) as a wrong option, with a reason that names the idea.",
+     "help": "Try n = 2: 30 x 12 = 360, but the charge is 70.",
+     "source": "to be confirmed by a teacher (no source yet)",
+     "status": "draft"
+    },
+    {
+     "code": "MATH.G7.ALGEBR.ALGEBRAIC_EXPRESSIONS.FORM_EXPRESSION_RELATIONS.M_YOUNGER_ADDED",
+     "skill": "MATH.G7.ALGEBR.ALGEBRAIC_EXPRESSIONS.FORM_EXPRESSION_RELATIONS",
+     "error": "Adds where a person is younger.",
+     "example": {
+      "question": "Barasa is x. His brother is 2 years younger. The brother's age?",
+      "wrong_answer": "x + 2",
+      "correct_answer": "x - 2"
+     },
+     "cause": "Takes \"2 years\" as always being added.",
+     "reveals": "The answer x + 2 as a wrong option, with a reason that names the idea.",
+     "help": "Younger means a smaller age: take 2 away.",
+     "source": "to be confirmed by a teacher (no source yet)",
+     "status": "draft"
+    },
+    {
+     "code": "MATH.G7.ALGEBR.ALGEBRAIC_EXPRESSIONS.FORM_EXPRESSION_RELATIONS.M_PERSON_MISSED",
+     "skill": "MATH.G7.ALGEBR.ALGEBRAIC_EXPRESSIONS.FORM_EXPRESSION_RELATIONS",
+     "error": "Leaves out one of the people in the total.",
+     "example": {
+      "question": "Ages: Barasa x, brother x - 2, mother 3x. Total?",
+      "wrong_answer": "4x - 2",
+      "correct_answer": "5x - 2"
+     },
+     "cause": "Adds two of the three expressions.",
+     "reveals": "The answer 4x - 2 as a wrong option, with a reason that names the idea.",
+     "help": "Write all three ages in a line and add them.",
+     "source": "to be confirmed by a teacher (no source yet)",
+     "status": "draft"
+    },
+    {
+     "code": "MATH.G7.ALGEBR.ALGEBRAIC_EXPRESSIONS.FORM_EXPRESSION_RELATIONS.M_RELATION_APPLIED_TO_ALL",
+     "skill": "MATH.G7.ALGEBR.ALGEBRAIC_EXPRESSIONS.FORM_EXPRESSION_RELATIONS",
+     "error": "Applies the \"younger\" change to every person by using a bracket.",
+     "example": {
+      "question": "Ages: x, x - 2 and 3x. Total?",
+      "wrong_answer": "5(x - 2)",
+      "correct_answer": "5x - 2"
+     },
+     "cause": "Puts a bracket round the whole sum.",
+     "reveals": "The answer 5(x - 2) as a wrong option, with a reason that names the idea.",
+     "help": "Only the brother is 2 years younger.",
+     "source": "to be confirmed by a teacher (no source yet)",
+     "status": "draft"
+    },
+    {
+     "code": "MATH.G7.ALGEBR.ALGEBRAIC_EXPRESSIONS.FORM_FROM_STATEMENT.M_MORE_THAN_AS_PRODUCT",
+     "skill": "MATH.G7.ALGEBR.ALGEBRAIC_EXPRESSIONS.FORM_FROM_STATEMENT",
+     "error": "Writes \"3 more than x\" as 3x.",
+     "example": {
+      "question": "3 more than x",
+      "wrong_answer": "3x",
+      "correct_answer": "x + 3"
+     },
+     "cause": "Puts the number and the letter side by side.",
+     "reveals": "The answer 3x as a wrong option, with a reason that names the idea.",
+     "help": "If x is 5, 3 more than 5 is 8, but 3x would be 15.",
+     "source": "to be confirmed by a teacher (no source yet)",
+     "status": "draft"
+    },
+    {
+     "code": "MATH.G7.ALGEBR.ALGEBRAIC_EXPRESSIONS.FORM_FROM_STATEMENT.M_LESS_THAN_REVERSED",
+     "skill": "MATH.G7.ALGEBR.ALGEBRAIC_EXPRESSIONS.FORM_FROM_STATEMENT",
+     "error": "Writes \"5 less than n\" as 5 - n.",
+     "example": {
+      "question": "5 less than n",
+      "wrong_answer": "5 - n",
+      "correct_answer": "n - 5"
+     },
+     "cause": "Writes the numbers in the order they are spoken.",
+     "reveals": "The answer 5 - n as a wrong option, with a reason that names the idea.",
+     "help": "If n is 8, 5 less than 8 is 3: that is 8 - 5.",
+     "source": "to be confirmed by a teacher (no source yet)",
+     "status": "draft"
+    },
+    {
+     "code": "MATH.G7.ALGEBR.ALGEBRAIC_EXPRESSIONS.SIMPLIFY_LIKE_TERMS.M_TERM_MISSED",
+     "skill": "MATH.G7.ALGEBR.ALGEBRAIC_EXPRESSIONS.SIMPLIFY_LIKE_TERMS",
+     "error": "Leaves one x term out when collecting.",
+     "example": {
+      "question": "(x + 6) + (4x + 1) + (2x - 1): the number in front of x",
+      "wrong_answer": "5",
+      "correct_answer": "7"
+     },
+     "cause": "Adds two of the three terms.",
+     "reveals": "The answer 5 as a wrong option, with a reason that names the idea.",
+     "help": "Underline every x term first.",
+     "source": "to be confirmed by a teacher (no source yet)",
+     "status": "draft"
+    },
+    {
+     "code": "MATH.G7.ALGEBR.ALGEBRAIC_EXPRESSIONS.SIMPLIFY_LIKE_TERMS.M_LIKE_TERMS_MULTIPLIED",
+     "skill": "MATH.G7.ALGEBR.ALGEBRAIC_EXPRESSIONS.SIMPLIFY_LIKE_TERMS",
+     "error": "Multiplies the numbers in front of x instead of adding them.",
+     "example": {
+      "question": "x + 4x + 2x: the number in front of x",
+      "wrong_answer": "8",
+      "correct_answer": "7"
+     },
+     "cause": "Thinks collecting means multiplying.",
+     "reveals": "The answer 8 as a wrong option, with a reason that names the idea.",
+     "help": "x + 4x + 2x is 1 + 4 + 2 = 7 lots of x.",
+     "source": "to be confirmed by a teacher (no source yet)",
+     "status": "draft"
+    },
+    {
+     "code": "MATH.G7.ALGEBR.ALGEBRAIC_EXPRESSIONS.SIMPLIFY_LIKE_TERMS.M_COEFFICIENT_ONE_ASSUMED",
+     "skill": "MATH.G7.ALGEBR.ALGEBRAIC_EXPRESSIONS.SIMPLIFY_LIKE_TERMS",
+     "error": "Counts each x term as one x whatever the number in front.",
+     "example": {
+      "question": "x + 4x + 2x: the number in front of x",
+      "wrong_answer": "3",
+      "correct_answer": "7"
+     },
+     "cause": "Counts the terms, not the amounts.",
+     "reveals": "The answer 3 as a wrong option, with a reason that names the idea.",
+     "help": "Add the numbers in front: 4x means four x.",
+     "source": "to be confirmed by a teacher (no source yet)",
+     "status": "draft"
+    },
+    {
+     "code": "MATH.G7.ALGEBR.ALGEBRAIC_EXPRESSIONS.SIMPLIFY_LIKE_TERMS.M_SIGN_DROPPED",
+     "skill": "MATH.G7.ALGEBR.ALGEBRAIC_EXPRESSIONS.SIMPLIFY_LIKE_TERMS",
+     "error": "Ignores the minus sign of a number term.",
+     "example": {
+      "question": "Number terms +6, +1 and -1: the total",
+      "wrong_answer": "8",
+      "correct_answer": "6"
+     },
+     "cause": "Adds the digits and forgets the sign.",
+     "reveals": "The answer 8 as a wrong option, with a reason that names the idea.",
+     "help": "The last term takes 1 away.",
+     "source": "to be confirmed by a teacher (no source yet)",
+     "status": "draft"
+    },
+    {
+     "code": "MATH.G7.ALGEBR.ALGEBRAIC_EXPRESSIONS.SIMPLIFY_LIKE_TERMS.M_CONSTANT_TERM_MISSED",
+     "skill": "MATH.G7.ALGEBR.ALGEBRAIC_EXPRESSIONS.SIMPLIFY_LIKE_TERMS",
+     "error": "Leaves a number term out when adding the numbers.",
+     "example": {
+      "question": "Number terms +6, +1 and -1: the total",
+      "wrong_answer": "7",
+      "correct_answer": "6"
+     },
+     "cause": "Adds two of the three numbers.",
+     "reveals": "The answer 7 as a wrong option, with a reason that names the idea.",
+     "help": "List all the plain numbers before adding.",
+     "source": "to be confirmed by a teacher (no source yet)",
+     "status": "draft"
+    },
+    {
+     "code": "MATH.G7.ALGEBR.ALGEBRAIC_EXPRESSIONS.SIMPLIFY_LIKE_TERMS.M_CONSTANTS_MULTIPLIED",
+     "skill": "MATH.G7.ALGEBR.ALGEBRAIC_EXPRESSIONS.SIMPLIFY_LIKE_TERMS",
+     "error": "Multiplies the plain numbers instead of adding.",
+     "example": {
+      "question": "Number terms +6, +1 and -1: the total",
+      "wrong_answer": "-6",
+      "correct_answer": "6"
+     },
+     "cause": "Applies the rule for x terms wrongly to numbers.",
+     "reveals": "The answer -6 as a wrong option, with a reason that names the idea.",
+     "help": "Like terms are added.",
+     "source": "to be confirmed by a teacher (no source yet)",
+     "status": "draft"
+    },
+    {
+     "code": "MATH.G7.ALGEBR.ALGEBRAIC_EXPRESSIONS.SIMPLIFY_LIKE_TERMS.M_COEFFICIENT_ADDED_TO_VALUE",
+     "skill": "MATH.G7.ALGEBR.ALGEBRAIC_EXPRESSIONS.SIMPLIFY_LIKE_TERMS",
+     "error": "Adds the number in front of x to the value of x instead of multiplying.",
+     "example": {
+      "question": "7x + 6 when x = 3",
+      "wrong_answer": "16",
+      "correct_answer": "27"
+     },
+     "cause": "Reads 7x as 7 + x.",
+     "reveals": "The answer 16 as a wrong option, with a reason that names the idea.",
+     "help": "7x means 7 times x.",
+     "source": "to be confirmed by a teacher (no source yet)",
+     "status": "draft"
+    },
+    {
+     "code": "MATH.G7.ALGEBR.ALGEBRAIC_EXPRESSIONS.SIMPLIFY_LIKE_TERMS.M_CONSTANT_LEFT_OUT",
+     "skill": "MATH.G7.ALGEBR.ALGEBRAIC_EXPRESSIONS.SIMPLIFY_LIKE_TERMS",
+     "error": "Leaves out the plain number when substituting.",
+     "example": {
+      "question": "7x + 6 when x = 3",
+      "wrong_answer": "21",
+      "correct_answer": "27"
+     },
+     "cause": "Stops after the x term.",
+     "reveals": "The answer 21 as a wrong option, with a reason that names the idea.",
+     "help": "The number term is part of the expression.",
+     "source": "to be confirmed by a teacher (no source yet)",
+     "status": "draft"
+    },
+    {
+     "code": "MATH.G7.ALGEBR.ALGEBRAIC_EXPRESSIONS.SIMPLIFY_LIKE_TERMS.M_CONSTANT_SIGN_FLIPPED",
+     "skill": "MATH.G7.ALGEBR.ALGEBRAIC_EXPRESSIONS.SIMPLIFY_LIKE_TERMS",
+     "error": "Subtracts a number term that is added.",
+     "example": {
+      "question": "7x + 6 when x = 3",
+      "wrong_answer": "15",
+      "correct_answer": "27"
+     },
+     "cause": "Changes the sign of the number.",
+     "reveals": "The answer 15 as a wrong option, with a reason that names the idea.",
+     "help": "Keep the sign it has: plus 6.",
+     "source": "to be confirmed by a teacher (no source yet)",
+     "status": "draft"
+    },
+    {
+     "code": "MATH.G7.ALGEBR.ALGEBRAIC_EXPRESSIONS.SIMPLIFY_WITH_BRACKETS.M_BRACKET_FIRST_TERM_ONLY",
+     "skill": "MATH.G7.ALGEBR.ALGEBRAIC_EXPRESSIONS.SIMPLIFY_WITH_BRACKETS",
+     "error": "Multiplies only the first term in the bracket.",
+     "example": {
+      "question": "2 x (x + 8)",
+      "wrong_answer": "2x + 8",
+      "correct_answer": "2x + 16"
+     },
+     "cause": "Forgets the second term is multiplied too.",
+     "reveals": "The answer 2x + 8 as a wrong option, with a reason that names the idea.",
+     "help": "Draw arrows from the 2 to both terms.",
+     "source": "to be confirmed by a teacher (no source yet)",
+     "status": "draft"
+    },
+    {
+     "code": "MATH.G7.ALGEBR.ALGEBRAIC_EXPRESSIONS.SIMPLIFY_WITH_BRACKETS.M_UNLIKE_TERMS_JOINED",
+     "skill": "MATH.G7.ALGEBR.ALGEBRAIC_EXPRESSIONS.SIMPLIFY_WITH_BRACKETS",
+     "error": "Joins an x term with a number term.",
+     "example": {
+      "question": "2 x (x + 8) written 2 x 9x",
+      "wrong_answer": "18x",
+      "correct_answer": "2x + 16"
+     },
+     "cause": "Adds x and 8 to make 9x.",
+     "reveals": "The answer 18x as a wrong option, with a reason that names the idea.",
+     "help": "x and 8 are different kinds of term: they cannot be joined.",
+     "source": "to be confirmed by a teacher (no source yet)",
+     "status": "draft"
+    }
+   ]
   },
   {
    "code": "MATH.G7.ALGEBR.LINEAR_EQUATIONS",
@@ -5229,7 +5706,7 @@
    "values": "",
    "pcis": "",
    "links": "",
-   "design_notes": "",
+   "design_notes": "Official outcomes a to c are tested; d is an attitude. Linear equations in one unknown: forming from stories, solving with one or two steps and with the unknown on both sides, explaining why the same is done to both sides, and applying them (ages, charges, equal boxes). Grade 5 had one- and two-step equations with whole numbers. Official outcomes a to c are tested; d is an attitude. Linear equations in one unknown: forming from stories, solving with one or two steps and with the unknown on both sides, explaining why the same is done to both sides, and applying them (ages, charges, equal boxes). Grade 5 had one- and two-step equations with whole numbers.",
    "source": {
     "grade_page": "https://kicd.ac.ke/cbc-materials/curriculum-designs/grade-seven-designs/",
     "design": "KICD-Grade7-Mathematics-Curriculum-Design.pdf",
@@ -5264,8 +5741,562 @@
      "status": "kicd_verified"
     }
    ],
-   "skills": [],
-   "misconceptions": []
+   "skills": [
+    {
+     "code": "MATH.G7.ALGEBR.LINEAR_EQUATIONS.FORM_EQUATION_FROM_STORY",
+     "name": "Form a linear equation from a story",
+     "outcomes": [
+      "MATH.G7.ALGEBR.LINEAR_EQUATIONS.a"
+     ],
+     "mastery": "From a story with a price for each item, a fixed amount and a total (8 books and a geometry set, total sh 398) the child writes an equation such as 8x + 150 = 398, with the fixed amount added once and on the same side as the books.",
+     "question_forms": [
+      "choose the equation",
+      "what does each part mean",
+      "write the equation",
+      "which story matches the equation"
+     ],
+     "thinking": [
+      "reasoning",
+      "procedure"
+     ],
+     "horeb_skill_ids": [
+      "G7_EQUATIONS_FORM"
+     ],
+     "prerequisites": [
+      {
+       "requires": "MATH.G5.NUMBER.SIMPLE_EQUATIONS.EQ_FORM_MUL_DIV",
+       "kind": "skill",
+       "strength": "essential",
+       "reason": "Forming equations with a multiplier.",
+       "status": "proposed"
+      },
+      {
+       "requires": "MATH.G5.NUMBER.SIMPLE_EQUATIONS.EQ_TWO_STEP",
+       "kind": "skill",
+       "strength": "essential",
+       "reason": "Two-step equations are the same shape.",
+       "status": "proposed"
+      },
+      {
+       "requires": "MATH.G7.ALGEBR.ALGEBRAIC_EXPRESSIONS.FORM_EXPRESSION_RATE_FIXED",
+       "kind": "skill",
+       "strength": "essential",
+       "reason": "The left side is such an expression.",
+       "status": "proposed"
+      }
+     ],
+     "status": "proposed"
+    },
+    {
+     "code": "MATH.G7.ALGEBR.LINEAR_EQUATIONS.SOLVE_TWO_STEP",
+     "name": "Solve a two-step linear equation",
+     "outcomes": [
+      "MATH.G7.ALGEBR.LINEAR_EQUATIONS.b"
+     ],
+     "mastery": "The child solves equations like 6x + 6 = 78 and 3n + 3 = 45 by undoing the added or subtracted number first and then the multiplier, doing the same to both sides, and checks by putting the answer back.",
+     "question_forms": [
+      "solve and check",
+      "solve from a table of values",
+      "find the wrong step",
+      "which step first"
+     ],
+     "thinking": [
+      "procedure"
+     ],
+     "horeb_skill_ids": [
+      "G7_EQUATIONS_SOLVE",
+      "G7_EQUATIONS_FORM",
+      "G6_SIMPLE_EQUATIONS"
+     ],
+     "prerequisites": [
+      {
+       "requires": "MATH.G5.NUMBER.SIMPLE_EQUATIONS.EQ_SOLVE_ADD_SUB",
+       "kind": "skill",
+       "strength": "essential",
+       "reason": "One-step equations with + and -.",
+       "status": "proposed"
+      },
+      {
+       "requires": "MATH.G5.NUMBER.SIMPLE_EQUATIONS.EQ_SOLVE_MUL_DIV",
+       "kind": "skill",
+       "strength": "essential",
+       "reason": "One-step equations with x and /.",
+       "status": "proposed"
+      },
+      {
+       "requires": "MATH.G5.NUMBER.SIMPLE_EQUATIONS.EQ_TWO_STEP",
+       "kind": "skill",
+       "strength": "essential",
+       "reason": "Grade 5 two-step equations.",
+       "status": "proposed"
+      }
+     ],
+     "status": "proposed"
+    },
+    {
+     "code": "MATH.G7.ALGEBR.LINEAR_EQUATIONS.SOLVE_BOTH_SIDES",
+     "name": "Solve an equation with the unknown on both sides",
+     "outcomes": [
+      "MATH.G7.ALGEBR.LINEAR_EQUATIONS.b"
+     ],
+     "mastery": "The child solves equations like 4x - 4 = 2x + 12 by taking the smaller x term from both sides, then undoing the number, then dividing, and checks in both sides.",
+     "question_forms": [
+      "solve with x on both sides",
+      "find the wrong step",
+      "what to do first",
+      "check in both sides"
+     ],
+     "thinking": [
+      "procedure"
+     ],
+     "horeb_skill_ids": [
+      "G7_EQUATIONS_SOLVE"
+     ],
+     "prerequisites": [
+      {
+       "requires": "MATH.G7.ALGEBR.LINEAR_EQUATIONS.SOLVE_TWO_STEP",
+       "kind": "skill",
+       "strength": "essential",
+       "reason": "The same steps after the x terms are collected.",
+       "status": "proposed"
+      }
+     ],
+     "status": "proposed"
+    },
+    {
+     "code": "MATH.G7.ALGEBR.LINEAR_EQUATIONS.EQUATION_BALANCE_REASON",
+     "name": "Say why the same is done to both sides of an equation",
+     "outcomes": [
+      "MATH.G7.ALGEBR.LINEAR_EQUATIONS.b"
+     ],
+     "mastery": "The child explains that an equation is a balance, so what is done to one side must be done to the other, and that the unknown can be on either side.",
+     "question_forms": [
+      "why both sides",
+      "which explanation is right",
+      "balance picture",
+      "what stays the same"
+     ],
+     "thinking": [
+      "reasoning"
+     ],
+     "horeb_skill_ids": [
+      "G6_SIMPLE_EQUATIONS",
+      "G7_EQUATIONS_SOLVE"
+     ],
+     "prerequisites": [
+      {
+       "requires": "MATH.G5.NUMBER.SIMPLE_EQUATIONS.EQ_MEANING",
+       "kind": "skill",
+       "strength": "essential",
+       "reason": "Equals means balance.",
+       "status": "proposed"
+      },
+      {
+       "requires": "MATH.G7.ALGEBR.LINEAR_EQUATIONS.SOLVE_TWO_STEP",
+       "kind": "skill",
+       "strength": "helpful",
+       "reason": "Using the idea in solving.",
+       "status": "proposed"
+      }
+     ],
+     "status": "proposed"
+    },
+    {
+     "code": "MATH.G7.ALGEBR.LINEAR_EQUATIONS.SOLVE_IN_CONTEXT",
+     "name": "Form and solve an equation to answer a question in a story",
+     "outcomes": [
+      "MATH.G7.ALGEBR.LINEAR_EQUATIONS.c"
+     ],
+     "mastery": "The child forms an equation for a story (ages after some years, a parking charge with a fixed part, equal boxes and loose items, money left after spending), solves it, and answers the quantity the question asks for, not the unknown.",
+     "question_forms": [
+      "ages in 4 years",
+      "parking charge",
+      "mangoes in boxes",
+      "money at the start",
+      "which quantity is asked"
+     ],
+     "thinking": [
+      "reasoning",
+      "procedure"
+     ],
+     "horeb_skill_ids": [
+      "G7_EQUATIONS_FORM",
+      "G7_EQUATIONS_SOLVE",
+      "G6_SIMPLE_EQUATIONS"
+     ],
+     "prerequisites": [
+      {
+       "requires": "MATH.G7.ALGEBR.LINEAR_EQUATIONS.FORM_EQUATION_FROM_STORY",
+       "kind": "skill",
+       "strength": "essential",
+       "reason": "Forming comes first.",
+       "status": "proposed"
+      },
+      {
+       "requires": "MATH.G7.ALGEBR.LINEAR_EQUATIONS.SOLVE_TWO_STEP",
+       "kind": "skill",
+       "strength": "essential",
+       "reason": "Then solving.",
+       "status": "proposed"
+      },
+      {
+       "requires": "MATH.G5.NUMBER.SIMPLE_EQUATIONS.EQ_SOLVE_IN_CONTEXT",
+       "kind": "skill",
+       "strength": "helpful",
+       "reason": "Grade 5 equations in context.",
+       "status": "proposed"
+      }
+     ],
+     "status": "proposed"
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "MATH.G7.ALGEBR.LINEAR_EQUATIONS.FORM_EQUATION_FROM_STORY.M_BRACKET_ADDED_TO_EVERY_TERM",
+     "skill": "MATH.G7.ALGEBR.LINEAR_EQUATIONS.FORM_EQUATION_FROM_STORY",
+     "error": "Adds the fixed amount to each item with a bracket.",
+     "example": {
+      "question": "8 books at x each plus a set at sh 150, total sh 398",
+      "wrong_answer": "8(x + 150) = 398",
+      "correct_answer": "8x + 150 = 398"
+     },
+     "cause": "Thinks the set is bought with every book.",
+     "reveals": "The answer 8(x + 150) = 398 as a wrong option, with a reason that names the idea.",
+     "help": "The set is bought once.",
+     "source": "to be confirmed by a teacher (no source yet)",
+     "status": "draft"
+    },
+    {
+     "code": "MATH.G7.ALGEBR.LINEAR_EQUATIONS.FORM_EQUATION_FROM_STORY.M_MULTIPLIER_AS_ADDEND",
+     "skill": "MATH.G7.ALGEBR.LINEAR_EQUATIONS.FORM_EQUATION_FROM_STORY",
+     "error": "Writes the number of items as an added number.",
+     "example": {
+      "question": "8 books at x each plus a set at sh 150, total sh 398",
+      "wrong_answer": "x + 8 + 150 = 398",
+      "correct_answer": "8x + 150 = 398"
+     },
+     "cause": "Reads \"8 books and x\" as adding.",
+     "reveals": "The answer x + 8 + 150 = 398 as a wrong option, with a reason that names the idea.",
+     "help": "8 books each costing x is 8 times x.",
+     "source": "to be confirmed by a teacher (no source yet)",
+     "status": "draft"
+    },
+    {
+     "code": "MATH.G7.ALGEBR.LINEAR_EQUATIONS.FORM_EQUATION_FROM_STORY.M_FIXED_ON_WRONG_SIDE",
+     "skill": "MATH.G7.ALGEBR.LINEAR_EQUATIONS.FORM_EQUATION_FROM_STORY",
+     "error": "Adds the fixed amount to the total instead of taking it from the total.",
+     "example": {
+      "question": "8 books at x each plus a set at sh 150, total sh 398",
+      "wrong_answer": "8x = 398 + 150",
+      "correct_answer": "8x + 150 = 398"
+     },
+     "cause": "Moves a number to the other side without changing its sign.",
+     "reveals": "The answer 8x = 398 + 150 as a wrong option, with a reason that names the idea.",
+     "help": "The set is part of the total, so it stays with the books on the left.",
+     "source": "to be confirmed by a teacher (no source yet)",
+     "status": "draft"
+    },
+    {
+     "code": "MATH.G7.ALGEBR.LINEAR_EQUATIONS.SOLVE_TWO_STEP.M_DIVISION_STEP_MISSED",
+     "skill": "MATH.G7.ALGEBR.LINEAR_EQUATIONS.SOLVE_TWO_STEP",
+     "error": "Stops before dividing by the number in front of x.",
+     "example": {
+      "question": "6x + 6 = 78",
+      "wrong_answer": "72",
+      "correct_answer": "12"
+     },
+     "cause": "Takes the first step and thinks the equation is solved.",
+     "reveals": "The answer 72 as a wrong option, with a reason that names the idea.",
+     "help": "We want x, not 6x: divide by 6.",
+     "source": "to be confirmed by a teacher (no source yet)",
+     "status": "draft"
+    },
+    {
+     "code": "MATH.G7.ALGEBR.LINEAR_EQUATIONS.SOLVE_TWO_STEP.M_SIGN_NOT_REVERSED",
+     "skill": "MATH.G7.ALGEBR.LINEAR_EQUATIONS.SOLVE_TWO_STEP",
+     "error": "Adds the number to both sides when it is already added.",
+     "example": {
+      "question": "6x + 6 = 78",
+      "wrong_answer": "14",
+      "correct_answer": "12"
+     },
+     "cause": "Applies the same operation instead of the opposite one.",
+     "reveals": "The answer 14 as a wrong option, with a reason that names the idea.",
+     "help": "To undo + 6, take 6 from both sides.",
+     "source": "to be confirmed by a teacher (no source yet)",
+     "status": "draft"
+    },
+    {
+     "code": "MATH.G7.ALGEBR.LINEAR_EQUATIONS.SOLVE_TWO_STEP.M_INVERSE_OPERATION_WRONG",
+     "skill": "MATH.G7.ALGEBR.LINEAR_EQUATIONS.SOLVE_TWO_STEP",
+     "error": "Multiplies when the step is to divide.",
+     "example": {
+      "question": "3n = 42",
+      "wrong_answer": "126",
+      "correct_answer": "14"
+     },
+     "cause": "Does the same operation instead of the opposite one.",
+     "reveals": "The answer 126 as a wrong option, with a reason that names the idea.",
+     "help": "To undo times 3, divide by 3.",
+     "source": "to be confirmed by a teacher (no source yet)",
+     "status": "draft"
+    },
+    {
+     "code": "MATH.G7.ALGEBR.LINEAR_EQUATIONS.SOLVE_TWO_STEP.M_LAST_ROW_TAKEN",
+     "skill": "MATH.G7.ALGEBR.LINEAR_EQUATIONS.SOLVE_TWO_STEP",
+     "error": "Gives the last value in a table as the solution.",
+     "example": {
+      "question": "Table of 6x + 6 for x = 1, 2, 3: solve 6x + 6 = 78",
+      "wrong_answer": "3",
+      "correct_answer": "12"
+     },
+     "cause": "Reads off the table instead of continuing it.",
+     "reveals": "The answer 3 as a wrong option, with a reason that names the idea.",
+     "help": "Continue the pattern until the value is 78.",
+     "source": "to be confirmed by a teacher (no source yet)",
+     "status": "draft"
+    },
+    {
+     "code": "MATH.G7.ALGEBR.LINEAR_EQUATIONS.SOLVE_BOTH_SIDES.M_UNKNOWN_TERM_MOVED_SAME_SIGN",
+     "skill": "MATH.G7.ALGEBR.LINEAR_EQUATIONS.SOLVE_BOTH_SIDES",
+     "error": "Moves an x term to the other side without changing its sign.",
+     "example": {
+      "question": "4x - 4 = 2x + 12",
+      "wrong_answer": "6x = 16",
+      "correct_answer": "2x = 16"
+     },
+     "cause": "Treats moving as copying.",
+     "reveals": "The answer 6x = 16 as a wrong option, with a reason that names the idea.",
+     "help": "Take 2x from both sides: it goes from the right and leaves the left smaller.",
+     "source": "to be confirmed by a teacher (no source yet)",
+     "status": "draft"
+    },
+    {
+     "code": "MATH.G7.ALGEBR.LINEAR_EQUATIONS.SOLVE_BOTH_SIDES.M_ONE_SIDE_ONLY_CHANGED",
+     "skill": "MATH.G7.ALGEBR.LINEAR_EQUATIONS.SOLVE_BOTH_SIDES",
+     "error": "Does a step on one side only.",
+     "example": {
+      "question": "4x - 4 = 2x + 12: take 2x from the left only",
+      "wrong_answer": "2x - 4 = 2x + 12",
+      "correct_answer": "2x - 4 = 12"
+     },
+     "cause": "Forgets the balance.",
+     "reveals": "The answer 2x - 4 = 2x + 12 as a wrong option, with a reason that names the idea.",
+     "help": "Do the same to both sides.",
+     "source": "to be confirmed by a teacher (no source yet)",
+     "status": "draft"
+    },
+    {
+     "code": "MATH.G7.ALGEBR.LINEAR_EQUATIONS.EQUATION_BALANCE_REASON.M_NUMBER_SIZE_DECIDES_STEP",
+     "skill": "MATH.G7.ALGEBR.LINEAR_EQUATIONS.EQUATION_BALANCE_REASON",
+     "error": "Says a number is taken off both sides because it is the bigger number.",
+     "example": {
+      "question": "Why take 8 from both sides in x + 8 = 28?",
+      "wrong_answer": "because 8 is the bigger number",
+      "correct_answer": "doing the same to both sides keeps them equal"
+     },
+     "cause": "Looks for a reason in the size of numbers.",
+     "reveals": "The answer because 8 is the bigger number as a wrong option, with a reason that names the idea.",
+     "help": "It is not about size: a balance stays level if you do the same to both sides.",
+     "source": "to be confirmed by a teacher (no source yet)",
+     "status": "draft"
+    },
+    {
+     "code": "MATH.G7.ALGEBR.LINEAR_EQUATIONS.EQUATION_BALANCE_REASON.M_UNKNOWN_ALWAYS_LEFT",
+     "skill": "MATH.G7.ALGEBR.LINEAR_EQUATIONS.EQUATION_BALANCE_REASON",
+     "error": "Believes the unknown must always be on the left.",
+     "example": {
+      "question": "Why take 8 from both sides?",
+      "wrong_answer": "x must stay on the left",
+      "correct_answer": "to keep the sides equal"
+     },
+     "cause": "Has only seen x on the left.",
+     "reveals": "The answer x must stay on the left as a wrong option, with a reason that names the idea.",
+     "help": "28 = x + 8 is the same equation.",
+     "source": "to be confirmed by a teacher (no source yet)",
+     "status": "draft"
+    },
+    {
+     "code": "MATH.G7.ALGEBR.LINEAR_EQUATIONS.EQUATION_BALANCE_REASON.M_RULE_WITHOUT_REASON",
+     "skill": "MATH.G7.ALGEBR.LINEAR_EQUATIONS.EQUATION_BALANCE_REASON",
+     "error": "Says it is just the rule, with no reason.",
+     "example": {
+      "question": "Why take 8 from both sides?",
+      "wrong_answer": "it is just the rule",
+      "correct_answer": "to keep the sides equal"
+     },
+     "cause": "Has memorised the steps without a picture.",
+     "reveals": "The answer it is just the rule as a wrong option, with a reason that names the idea.",
+     "help": "Use a balance with bags of sweets.",
+     "source": "to be confirmed by a teacher (no source yet)",
+     "status": "draft"
+    },
+    {
+     "code": "MATH.G7.ALGEBR.LINEAR_EQUATIONS.SOLVE_IN_CONTEXT.M_FIXED_PART_IGNORED",
+     "skill": "MATH.G7.ALGEBR.LINEAR_EQUATIONS.SOLVE_IN_CONTEXT",
+     "error": "Divides the whole charge by the rate and ignores the fixed part.",
+     "example": {
+      "question": "Parking sh 20 for each hour plus sh 30 fixed, total sh 210: hours?",
+      "wrong_answer": "10.5",
+      "correct_answer": "9"
+     },
+     "cause": "Forgets the fixed charge is in the total.",
+     "reveals": "The answer 10.5 as a wrong option, with a reason that names the idea.",
+     "help": "Take the fixed part away before dividing.",
+     "source": "to be confirmed by a teacher (no source yet)",
+     "status": "draft"
+    },
+    {
+     "code": "MATH.G7.ALGEBR.LINEAR_EQUATIONS.SOLVE_IN_CONTEXT.M_ASKED_QUANTITY_MIXED",
+     "skill": "MATH.G7.ALGEBR.LINEAR_EQUATIONS.SOLVE_IN_CONTEXT",
+     "error": "Gives the unknown instead of the quantity asked.",
+     "example": {
+      "question": "Mother is 4 times Makena. In 4 years the sum of their ages is 63. Mother's age now?",
+      "wrong_answer": "11 (Makena)",
+      "correct_answer": "44"
+     },
+     "cause": "Answers with the letter value.",
+     "reveals": "The answer 11 (Makena) as a wrong option, with a reason that names the idea.",
+     "help": "Read the last line of the question again.",
+     "source": "to be confirmed by a teacher (no source yet)",
+     "status": "draft"
+    },
+    {
+     "code": "MATH.G7.ALGEBR.LINEAR_EQUATIONS.SOLVE_IN_CONTEXT.M_STEP_AMOUNT_AS_UNKNOWN",
+     "skill": "MATH.G7.ALGEBR.LINEAR_EQUATIONS.SOLVE_IN_CONTEXT",
+     "error": "Gives the amount spent as the unknown.",
+     "example": {
+      "question": "x - 200 = 70: find x",
+      "wrong_answer": "200",
+      "correct_answer": "270"
+     },
+     "cause": "Picks out a number from the story.",
+     "reveals": "The answer 200 as a wrong option, with a reason that names the idea.",
+     "help": "x is what there was at the start.",
+     "source": "to be confirmed by a teacher (no source yet)",
+     "status": "draft"
+    },
+    {
+     "code": "MATH.G7.ALGEBR.LINEAR_EQUATIONS.SOLVE_IN_CONTEXT.M_FUTURE_AGE_AS_NOW",
+     "skill": "MATH.G7.ALGEBR.LINEAR_EQUATIONS.SOLVE_IN_CONTEXT",
+     "error": "Gives the age in the future as the age now.",
+     "example": {
+      "question": "Mother's age now (sum in 4 years is 63)",
+      "wrong_answer": "48",
+      "correct_answer": "44"
+     },
+     "cause": "Stops after finding her age at the time of the sum.",
+     "reveals": "The answer 48 as a wrong option, with a reason that names the idea.",
+     "help": "Take away the 4 years.",
+     "source": "to be confirmed by a teacher (no source yet)",
+     "status": "draft"
+    },
+    {
+     "code": "MATH.G7.ALGEBR.LINEAR_EQUATIONS.SOLVE_IN_CONTEXT.M_TIME_CHANGE_NOT_APPLIED_TO_BOTH",
+     "skill": "MATH.G7.ALGEBR.LINEAR_EQUATIONS.SOLVE_IN_CONTEXT",
+     "error": "Ignores that both people get older.",
+     "example": {
+      "question": "Sum in 4 years is 63; mother is 4 times Makena",
+      "wrong_answer": "50.4",
+      "correct_answer": "44"
+     },
+     "cause": "Writes the sum now as 63.",
+     "reveals": "The answer 50.4 as a wrong option, with a reason that names the idea.",
+     "help": "Each person is 4 years older, so the sum is 8 more.",
+     "source": "to be confirmed by a teacher (no source yet)",
+     "status": "draft"
+    },
+    {
+     "code": "MATH.G7.ALGEBR.LINEAR_EQUATIONS.SOLVE_IN_CONTEXT.M_LOOSE_NOT_REMOVED",
+     "skill": "MATH.G7.ALGEBR.LINEAR_EQUATIONS.SOLVE_IN_CONTEXT",
+     "error": "Divides the total by the number of boxes with the loose items still in.",
+     "example": {
+      "question": "5 boxes and 10 loose, 90 in all: mangoes in each box",
+      "wrong_answer": "18",
+      "correct_answer": "16"
+     },
+     "cause": "Forgets the loose items are not in the boxes.",
+     "reveals": "The answer 18 as a wrong option, with a reason that names the idea.",
+     "help": "Take the loose ones away first.",
+     "source": "to be confirmed by a teacher (no source yet)",
+     "status": "draft"
+    },
+    {
+     "code": "MATH.G7.ALGEBR.LINEAR_EQUATIONS.SOLVE_IN_CONTEXT.M_SUBTRACTED_TO_SHARE",
+     "skill": "MATH.G7.ALGEBR.LINEAR_EQUATIONS.SOLVE_IN_CONTEXT",
+     "error": "Subtracts the number of boxes to share equally.",
+     "example": {
+      "question": "80 mangoes in 5 boxes: how many in each?",
+      "wrong_answer": "75",
+      "correct_answer": "16"
+     },
+     "cause": "Subtracts instead of dividing.",
+     "reveals": "The answer 75 as a wrong option, with a reason that names the idea.",
+     "help": "Share equally means divide.",
+     "source": "to be confirmed by a teacher (no source yet)",
+     "status": "draft"
+    },
+    {
+     "code": "MATH.G7.ALGEBR.LINEAR_EQUATIONS.SOLVE_IN_CONTEXT.M_MULTIPLIED_TO_SHARE",
+     "skill": "MATH.G7.ALGEBR.LINEAR_EQUATIONS.SOLVE_IN_CONTEXT",
+     "error": "Multiplies where the amount is shared.",
+     "example": {
+      "question": "80 mangoes in 5 boxes: how many in each?",
+      "wrong_answer": "400",
+      "correct_answer": "16"
+     },
+     "cause": "Sees two numbers and multiplies.",
+     "reveals": "The answer 400 as a wrong option, with a reason that names the idea.",
+     "help": "Share equally means divide.",
+     "source": "to be confirmed by a teacher (no source yet)",
+     "status": "draft"
+    },
+    {
+     "code": "MATH.G7.ALGEBR.LINEAR_EQUATIONS.SOLVE_IN_CONTEXT.M_ONE_PER_BOX",
+     "skill": "MATH.G7.ALGEBR.LINEAR_EQUATIONS.SOLVE_IN_CONTEXT",
+     "error": "Takes one mango from the total for each box sold instead of a box full.",
+     "example": {
+      "question": "16 in each box; 3 boxes sold from 90: left?",
+      "wrong_answer": "87",
+      "correct_answer": "42"
+     },
+     "cause": "Treats a box as one mango.",
+     "reveals": "The answer 87 as a wrong option, with a reason that names the idea.",
+     "help": "Each box holds 16.",
+     "source": "to be confirmed by a teacher (no source yet)",
+     "status": "draft"
+    },
+    {
+     "code": "MATH.G7.ALGEBR.LINEAR_EQUATIONS.SOLVE_IN_CONTEXT.M_ONE_BOX_NOT_THREE",
+     "skill": "MATH.G7.ALGEBR.LINEAR_EQUATIONS.SOLVE_IN_CONTEXT",
+     "error": "Takes only one box away.",
+     "example": {
+      "question": "16 in each box; 3 boxes sold from 90: left?",
+      "wrong_answer": "74",
+      "correct_answer": "42"
+     },
+     "cause": "Ignores the 3.",
+     "reveals": "The answer 74 as a wrong option, with a reason that names the idea.",
+     "help": "Three boxes are sold.",
+     "source": "to be confirmed by a teacher (no source yet)",
+     "status": "draft"
+    },
+    {
+     "code": "MATH.G7.ALGEBR.LINEAR_EQUATIONS.SOLVE_IN_CONTEXT.M_LOOSE_COUNTED_AGAIN",
+     "skill": "MATH.G7.ALGEBR.LINEAR_EQUATIONS.SOLVE_IN_CONTEXT",
+     "error": "Takes the loose items away a second time.",
+     "example": {
+      "question": "16 in each box; 3 boxes sold from 90 (10 loose): left?",
+      "wrong_answer": "32",
+      "correct_answer": "42"
+     },
+     "cause": "Removes the loose ones again.",
+     "reveals": "The answer 32 as a wrong option, with a reason that names the idea.",
+     "help": "The loose ones are still there.",
+     "source": "to be confirmed by a teacher (no source yet)",
+     "status": "draft"
+    }
+   ]
   },
   {
    "code": "MATH.G7.ALGEBR.LINEAR_INEQUALITIES",

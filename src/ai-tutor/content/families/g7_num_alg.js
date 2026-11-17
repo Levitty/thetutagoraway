@@ -668,47 +668,50 @@ export const FAMILIES = [
   // ======================================================================
   // ALGEBRAIC EXPRESSIONS
   // ======================================================================
-  fam({ id: 'g7.expr.vendor-table', skill: 'G7_EXPRESSIONS', outcome: 'G7.EXPR.a', rung: 2, form: 'table',
+  fam({ id: 'g7.expr.vendor-table', skill: 'G7_EXPRESSIONS', outcome: 'MATH.G7.ALGEBR.ALGEBRAIC_EXPRESSIONS.a', cskill: 'MATH.G7.ALGEBR.ALGEBRAIC_EXPRESSIONS.FORM_EXPRESSION_RATE_FIXED', rung: 2, form: 'table',
     draw: () => { const r = pick([20, 30, 40, 50]), b = pick([10, 20, 30, 50, 100]); return r === b ? null : { r, b, p: person() }; },
     make: ({ r, b }) => {
       const opts = [{ t: `${r}n + ${b}`, f: (n) => r * n + b }, { t: `${b}n + ${r}`, f: (n) => b * n + r }, { t: `${r + b}n`, f: (n) => (r + b) * n }, { t: `${r}(n + ${b})`, f: (n) => r * (n + b) }];
       const fits = (o) => [1, 2, 3].every(n => o.f(n) === r * n + b);
       return { question: 'A water vendor charges to deliver jerricans of water to a home. The table shows some charges. Which expression gives the charge in shillings for n jerricans?', story: false,
         model: { type: 'table', data: { head: ['Jerricans', 'Charge (sh)'], rows: [1, 2, 3].map(n => ({ label: String(n), value: String(r * n + b) })) } },
-        options: shuffle(opts.map((o, i) => ({ text: o.t, right: fits(o), why: fits(o) ? undefined : [undefined, `Try n = 1 in ${o.t}. It does not give the first charge in the table. The fixed charge and the charge for each jerrican are mixed up.`, `Try n = 2 in ${o.t}. It does not give the second charge in the table. A fixed charge is not multiplied by n.`, `Try n = 2 in ${o.t}. It does not give the second charge in the table. The fixed amount is added once, after multiplying.`][i] }))),
+        options: shuffle(opts.map((o, i) => ({ text: o.t, right: fits(o), why: fits(o) ? undefined : [undefined, `Try n = 1 in ${o.t}. It does not give the first charge in the table. The fixed charge and the charge for each jerrican are mixed up.`, `Try n = 2 in ${o.t}. It does not give the second charge in the table. A fixed charge is not multiplied by n.`, `Try n = 2 in ${o.t}. It does not give the second charge in the table. The fixed amount is added once, after multiplying.`][i], ...(fits(o) ? {} : { mis: [undefined, 'M_RATE_AND_FIXED_SWAPPED', 'M_FIXED_CHARGE_MULTIPLIED', 'M_FIXED_ADDED_BEFORE_MULTIPLYING'][i] }) }))),
         hints: ['Look at how much the charge goes up for each extra jerrican.', 'Then see what is charged even for 0 jerricans, or test each expression with n = 1 and n = 2.'],
         steps: [`Each extra jerrican adds ${r} shillings.`, `For n = 1 the charge is ${r + b}, which is ${r} + ${b}.`, `So the expression is ${r}n + ${b}.`] };
     } }),
 
-  fam({ id: 'g7.expr.three-ages', skill: 'G7_EXPRESSIONS', outcome: 'G7.EXPR.a', rung: 2, form: 'word',
+  fam({ id: 'g7.expr.three-ages', skill: 'G7_EXPRESSIONS', outcome: 'MATH.G7.ALGEBR.ALGEBRAIC_EXPRESSIONS.a', cskill: 'MATH.G7.ALGEBR.ALGEBRAIC_EXPRESSIONS.FORM_EXPRESSION_RELATIONS', rung: 2, form: 'word',
     draw: () => ({ j: randInt(2, 6), m: pick([2, 3, 4]), p: person() }),
     make: ({ j, m, p }) => ({
       question: `${p.name} is x years old. ${p.Her} brother is ${j} years younger than ${p.herObj}. ${p.Her} mother is ${m} times as old as ${p.name}. Write an expression for the total of the three ages, in years.`,
       options: shuffle([
         { text: `${m + 2}x − ${j}`, right: true },
-        { text: `${m + 2}x + ${j}`, right: false, why: 'The brother is younger, so his age is x take away a number, not plus.' },
-        { text: `${m + 1}x − ${j}`, right: false, why: 'One age is missing from the total. Count the three people.' },
-        { text: `${m + 2}(x − ${j})`, right: false, why: 'Only the brother is younger. The other ages do not have the number taken away.' },
+        { text: `${m + 2}x + ${j}`, right: false, why: 'The brother is younger, so his age is x take away a number, not plus.', mis: 'M_YOUNGER_ADDED' },
+        { text: `${m + 1}x − ${j}`, right: false, why: 'One age is missing from the total. Count the three people.', mis: 'M_PERSON_MISSED' },
+        { text: `${m + 2}(x − ${j})`, right: false, why: 'Only the brother is younger. The other ages do not have the number taken away.', mis: 'M_RELATION_APPLIED_TO_ALL' },
       ]),
       hints: ['Write each age as an expression: the child, the brother, the mother.', 'Add the three expressions, then collect like terms.'],
       steps: [`Child: x. Brother: x − ${j}. Mother: ${m}x.`, `Total: x + (x − ${j}) + ${m}x = ${m + 2}x − ${j}.`] }) }),
 
-  fam({ id: 'g7.expr.perimeter-spot', skill: 'G7_EXPRESSIONS', outcome: 'G7.EXPR.a', rung: 3, form: 'spot',
-    draw: () => ({ a: randInt(2, 6), b: randInt(2, 7), bug: pick(['sum', 'double']), p: person() }),
+  fam({ id: 'g7.expr.perimeter-spot', skill: 'G7_EXPRESSIONS', outcome: 'MATH.G7.ALGEBR.ALGEBRAIC_EXPRESSIONS.c', cskill: 'MATH.G7.ALGEBR.ALGEBRAIC_EXPRESSIONS.SIMPLIFY_WITH_BRACKETS', rung: 3, form: 'spot',
+    draw: () => ({ a: randInt(2, 6), b: randInt(2, 7), bug: pick(['unlike', 'double']), p: person() }),
     make: ({ a, b, bug, p }) => {
-      const s3 = bug === 'sum' ? a + b + 1 : a + b, s4 = bug === 'double' ? s3 : 2 * s3;
+      const s = a + b;
+      const step3 = bug === 'unlike' ? `= 2 × ${s + 1}x.` : `= 2 × (x + ${s}).`;
+      const step4 = bug === 'unlike' ? `= ${2 * (s + 1)}x.` : `= 2x + ${s}.`;
       return { question: `A rectangular plot has a length of (x + ${a}) m and a width of ${b} m. A fence goes all the way round it. ${p.name} writes an expression for the length of the fence. Here is ${p.her} working. Which step has the mistake?`,
         working: [
           { text: 'Fence = 2 × (length + width).', ok: true },
           { text: `= 2 × (x + ${a} + ${b}).`, ok: true },
-          { text: `= 2 × (x + ${s3}).`, ok: s3 === a + b },
-          { text: `= 2x + ${s4}.`, ok: s4 === 2 * s3 },
+          { text: step3, ok: bug !== 'unlike' },
+          { text: step4, ok: bug !== 'double' },
         ],
-        fix: bug === 'sum' ? `${a} + ${b} is ${a + b}, not ${s3}. Add the numbers inside the bracket again.` : `Both parts inside the bracket must be multiplied by 2: 2 × (x + ${s3}) = 2x + ${2 * s3}.`,
-        steps: [`${a} + ${b} = ${a + b}.`, `2 × (x + ${a + b}) = 2x + ${2 * (a + b)}.`] };
+        mis: bug === 'unlike' ? 'M_UNLIKE_TERMS_JOINED' : 'M_BRACKET_FIRST_TERM_ONLY',
+        fix: bug === 'unlike' ? `x and the numbers are different kinds of term, so ${a} + ${b} = ${s} is added inside the bracket but it is not joined with x: 2 × (x + ${s}) = 2x + ${2 * s}.` : `Both parts inside the bracket must be multiplied by 2: 2 × (x + ${s}) = 2x + ${2 * s}.`,
+        steps: [`${a} + ${b} = ${s}.`, `2 × (x + ${s}) = 2x + ${2 * s}.`] };
     } }),
 
-  fam({ id: 'g7.simplify.triangle-plot', skill: 'G7_SIMPLIFY', outcome: 'G7.EXPR.c', rung: 3, form: 'steps',
+  fam({ id: 'g7.simplify.triangle-plot', skill: 'G7_SIMPLIFY', outcome: 'MATH.G7.ALGEBR.ALGEBRAIC_EXPRESSIONS.c', cskill: 'MATH.G7.ALGEBR.ALGEBRAIC_EXPRESSIONS.SIMPLIFY_LIKE_TERMS', rung: 3, form: 'steps',
     draw: () => {
       const a = [randInt(1, 4), randInt(1, 4), randInt(1, 4)], c = [randInt(1, 6), randInt(1, 6), -randInt(1, 4)], t = randInt(3, 8);
       const A = a[0] + a[1] + a[2], C = c[0] + c[1] + c[2];
@@ -718,9 +721,9 @@ export const FAMILIES = [
       const side = (k, n) => `${k === 1 ? '' : k}x ${n < 0 ? '−' : '+'} ${Math.abs(n)}`;
       return { question: `${p.name}'s triangular plot has sides of (${side(a[0], c[0])}) m, (${side(a[1], c[1])}) m and (${side(a[2], c[2])}) m. The perimeter is the sum of the three sides. Simplify the expression for the perimeter by collecting like terms.`,
         parts: [
-          { prompt: 'The simplified perimeter is ax + b metres. What is a?', answer: A, hint: 'Add the numbers in front of x. A plain x counts as 1x.', wrong: [[a[0] + a[1], 'The third side also has an x term.'], [a[0] * a[1] * a[2], 'Like terms are added, not multiplied.'], [3, 'Each x is not just 1. Add the numbers in front of each x.']] },
-          { prompt: 'What is b?', answer: C, hint: 'Add the plain numbers. Keep the sign of each one.', wrong: [[c[0] + c[1] + Math.abs(c[2]), 'The last side takes away a number. Keep its minus sign.'], [c[0] + c[1], 'The third side has a number term too.'], [c[0] * c[1] * c[2], 'Like terms are added, not multiplied.']] },
-          { prompt: `Now take x = ${t}. How long is the perimeter, in metres?`, answer: A * t + C, unit: 'm', hint: `Put x = ${t} into the simplified expression.`, wrong: [[A + C, `Replace x with ${t}: ${A}x means ${A} × ${t}.`], [A * t, `Do not forget the number b.`], [A * t - C, 'The number b is added, with its own sign.']] },
+          { prompt: 'The simplified perimeter is ax + b metres. What is a?', answer: A, hint: 'Add the numbers in front of x. A plain x counts as 1x.', wrong: [[a[0] + a[1], 'The third side also has an x term.', 'M_TERM_MISSED'], [a[0] * a[1] * a[2], 'Like terms are added, not multiplied.', 'M_LIKE_TERMS_MULTIPLIED'], [3, 'Each x is not just 1. Add the numbers in front of each x.', 'M_COEFFICIENT_ONE_ASSUMED']] },
+          { prompt: 'What is b?', answer: C, hint: 'Add the plain numbers. Keep the sign of each one.', wrong: [[c[0] + c[1] + Math.abs(c[2]), 'The last side takes away a number. Keep its minus sign.', 'M_SIGN_DROPPED'], [c[0] + c[1], 'The third side has a number term too.', 'M_CONSTANT_TERM_MISSED'], [c[0] * c[1] * c[2], 'Like terms are added, not multiplied.', 'M_CONSTANTS_MULTIPLIED']] },
+          { prompt: `Now take x = ${t}. How long is the perimeter, in metres?`, answer: A * t + C, unit: 'm', hint: `Put x = ${t} into the simplified expression.`, wrong: [[A + C, `Replace x with ${t}: ${A}x means ${A} × ${t}.`, 'M_COEFFICIENT_ADDED_TO_VALUE'], [A * t, `Do not forget the number b.`, 'M_CONSTANT_LEFT_OUT'], [A * t - C, 'The number b is added, with its own sign.', 'M_CONSTANT_SIGN_FLIPPED']] },
         ],
         steps: [`x terms: ${a.join('x + ')}x = ${A}x.`, `Numbers: ${c[0]} + ${c[1]} + (${c[2]}) = ${C}.`, `When x = ${t}: ${A} × ${t} + ${C} = ${A * t + C} m.`] };
     },
@@ -729,20 +732,20 @@ export const FAMILIES = [
   // ======================================================================
   // LINEAR EQUATIONS
   // ======================================================================
-  fam({ id: 'g7.eq.form-books', skill: 'G7_EQUATIONS_FORM', outcome: 'G7.EQUATIONS.a', rung: 2, form: 'word',
+  fam({ id: 'g7.eq.form-books', skill: 'G7_EQUATIONS_FORM', outcome: 'MATH.G7.ALGEBR.LINEAR_EQUATIONS.a', cskill: 'MATH.G7.ALGEBR.LINEAR_EQUATIONS.FORM_EQUATION_FROM_STORY', rung: 2, form: 'word',
     draw: () => { const a = randInt(3, 8), x0 = randInt(20, 60), b = pick([150, 200, 250, 300]); return { a, b, c: a * x0 + b, p: person() }; },
     make: ({ a, b, c, p }) => ({
       question: `${p.name} buys ${a} exercise books and a geometry set. Each exercise book costs x shillings. The geometry set costs ${sh(b)}. The total is ${sh(c)}. Let x be the price of one exercise book. Which equation fits the story?`,
       options: shuffle([
         { text: `${a}x + ${b} = ${c}`, right: true },
-        { text: `${a}(x + ${b}) = ${c}`, right: false, why: 'This adds the price of the geometry set to every exercise book. The geometry set is bought once.' },
-        { text: `x + ${a} + ${b} = ${c}`, right: false, why: `There are ${a} exercise books, each costing x. That is ${a} times x, not x plus ${a}.` },
-        { text: `${a}x = ${c} + ${b}`, right: false, why: `The geometry set is part of the total, so it is added to the cost of the books on the left. Check the sides.` },
+        { text: `${a}(x + ${b}) = ${c}`, right: false, why: 'This adds the price of the geometry set to every exercise book. The geometry set is bought once.', mis: 'M_BRACKET_ADDED_TO_EVERY_TERM' },
+        { text: `x + ${a} + ${b} = ${c}`, right: false, why: `There are ${a} exercise books, each costing x. That is ${a} times x, not x plus ${a}.`, mis: 'M_MULTIPLIER_AS_ADDEND' },
+        { text: `${a}x = ${c} + ${b}`, right: false, why: `The geometry set is part of the total, so it is added to the cost of the books on the left. Check the sides.`, mis: 'M_FIXED_ON_WRONG_SIDE' },
       ]),
       hints: ['What is the cost of all the exercise books together?', 'Add the geometry set. What does the total equal?'],
       steps: [`${a} books cost ${a}x.`, `Add the geometry set: ${a}x + ${b}.`, `The total is ${c}, so ${a}x + ${b} = ${c}.`] }) }),
 
-  fam({ id: 'g7.eq.consecutive-spot', skill: 'G7_EQUATIONS_FORM', outcome: 'G7.EQUATIONS.a', rung: 3, form: 'spot',
+  fam({ id: 'g7.eq.consecutive-spot', skill: 'G7_EQUATIONS_FORM', outcome: 'MATH.G7.ALGEBR.LINEAR_EQUATIONS.b', cskill: 'MATH.G7.ALGEBR.LINEAR_EQUATIONS.SOLVE_TWO_STEP', rung: 3, form: 'spot',
     draw: () => { const n0 = randInt(5, 30); return { n0, S: 3 * n0 + 3, bug: pick(['divide', 'move']), p: person() }; },
     make: ({ n0, S, bug, p }) => {
       const k2 = 3, r3 = bug === 'move' ? S + 3 : S - k2, n4 = bug === 'divide' ? r3 * 3 : r3 / 3;
@@ -753,22 +756,23 @@ export const FAMILIES = [
           { text: `So 3n + 3 = ${S}. Take 3 from both sides: 3n = ${S} ${bug === 'move' ? '+' : '−'} 3 = ${r3}.`, ok: r3 === S - 3 },
           { text: `Divide both sides by 3: n = ${r3} ${bug === 'divide' ? '×' : '÷'} 3 = ${n4}.`, ok: n4 === r3 / 3 },
         ],
+        mis: bug === 'move' ? 'M_SIGN_NOT_REVERSED' : 'M_INVERSE_OPERATION_WRONG',
         fix: bug === 'divide' ? `3n means 3 times n, so undo it by dividing: ${r3} ÷ 3, not ${r3} × 3.` : `To remove +3 from the left, take 3 away from both sides: 3n = ${S} − 3, not ${S} + 3.`,
         steps: [`n + (n + 1) + (n + 2) = 3n + 3 = ${S}.`, `3n = ${S - 3}, so n = ${n0}.`] };
     } }),
 
-  fam({ id: 'g7.eq.solve-from-table', skill: 'G7_EQUATIONS_SOLVE', outcome: 'G7.EQUATIONS.b', rung: 2, form: 'table',
-    draw: () => { const a = randInt(2, 6), b = randInt(2, 9), r = randInt(5, 12); return { a, b, r, T: a * r + b }; },
+  fam({ id: 'g7.eq.solve-from-table', skill: 'G7_EQUATIONS_SOLVE', outcome: 'MATH.G7.ALGEBR.LINEAR_EQUATIONS.b', cskill: 'MATH.G7.ALGEBR.LINEAR_EQUATIONS.SOLVE_TWO_STEP', rung: 2, form: 'table',
+    draw: () => { const a = randInt(2, 6), b = randInt(2, 9), r = randInt(6, 12), T = a * r + b; return Math.abs((T + b) / a - r) > 2 && Math.abs(T / a - r) > 2 ? { a, b, r, T } : null; },
     make: ({ a, b, r, T }) => ({
       question: `Find the solution of the equation ${a}x + ${b} = ${T}. The table shows the value of ${a}x + ${b} for the first few values of x, to show how it grows.`, story: false,
       model: { type: 'table', data: { head: ['x', `${a}x + ${b}`], rows: [1, 2, 3].map(x => ({ label: String(x), value: String(a * x + b) })) } },
       answer: r,
-      wrong: [[T - b, `That is ${a}x. You still have to divide by ${a}.`], [round((T + b) / a, 2), 'The number ' + b + ' is added to the term in x, so take it away from both sides, not add.'], [3, 'That is the last x in the table, but its value is not yet the one in the equation.']],
+      wrong: [[T - b, `That is ${a}x. You still have to divide by ${a}.`, 'M_DIVISION_STEP_MISSED'], [round((T + b) / a, 2), 'The number ' + b + ' is added to the term in x, so take it away from both sides, not add.', 'M_SIGN_NOT_REVERSED'], [3, 'That is the last x in the table, but its value is not yet the one in the equation.', 'M_LAST_ROW_TAKEN']],
       hints: ['Notice how much the value goes up when x goes up by 1.', 'Or undo the steps: take away the number first, then divide.'],
       steps: [`${a}x + ${b} = ${T}, so ${a}x = ${T} − ${b} = ${T - b}.`, `x = ${T - b} ÷ ${a} = ${r}.`] }),
     check: ({ a, b, T }, x) => a * x + b === T }),
 
-  fam({ id: 'g7.eq.both-sides-spot', skill: 'G7_EQUATIONS_SOLVE', outcome: 'G7.EQUATIONS.b', rung: 3, form: 'spot',
+  fam({ id: 'g7.eq.both-sides-spot', skill: 'G7_EQUATIONS_SOLVE', outcome: 'MATH.G7.ALGEBR.LINEAR_EQUATIONS.b', cskill: 'MATH.G7.ALGEBR.LINEAR_EQUATIONS.SOLVE_BOTH_SIDES', rung: 3, form: 'spot',
     draw: () => { const dd = pick([2, 3, 4]), q = randInt(1, 4), u = randInt(1, 3), x0 = randInt(2 * u + 1, 2 * u + 8); return { p: q + dd, q, c: dd * u, d: dd * (x0 - u), dd, x0, bug: pick(['sign', 'divide']), who: person() }; },
     make: ({ p, q, c, d, dd, x0, bug, who }) => {
       const s2 = bug === 'sign' ? d - c : d + c, s3 = bug === 'divide' ? s2 * dd : s2 / dd;
@@ -779,39 +783,40 @@ export const FAMILIES = [
           { text: `Divide both sides by ${dd}: x = ${s2} ${bug === 'divide' ? '×' : '÷'} ${dd} = ${s3}.`, ok: s3 === s2 / dd },
           { text: `So x = ${s3}.`, ok: true },
         ],
+        mis: bug === 'sign' ? 'M_SIGN_NOT_REVERSED' : 'M_INVERSE_OPERATION_WRONG',
         fix: bug === 'sign' ? `To get rid of − ${c}, add ${c} to both sides: ${d} + ${c}, not ${d} − ${c}.` : `To undo "times ${dd}", divide both sides by ${dd}. ${s2} ÷ ${dd}, not ${s2} × ${dd}.`,
         steps: [`${dd}x − ${c} = ${d}, so ${dd}x = ${d + c}.`, `x = ${d + c} ÷ ${dd} = ${x0}.`] };
     } }),
 
-  fam({ id: 'g7.eq.apply-ages', skill: 'G7_EQUATIONS_FORM', outcome: 'G7.EQUATIONS.c', rung: 3, form: 'word',
-    draw: () => { const x = randInt(9, 14), m = pick([3, 4]), t = randInt(2, 6), S = (m + 1) * x + 2 * t; return distinct(m * x, x, round((m * S) / (m + 1), 2), m * x + t) ? { x, m, t, S, p: person() } : null; },
+  fam({ id: 'g7.eq.apply-ages', skill: 'G7_EQUATIONS_FORM', outcome: 'MATH.G7.ALGEBR.LINEAR_EQUATIONS.c', cskill: 'MATH.G7.ALGEBR.LINEAR_EQUATIONS.SOLVE_IN_CONTEXT', rung: 3, form: 'word',
+    draw: () => { const x = randInt(9, 14), m = pick([3, 4]), t = randInt(3, 6), S = (m + 1) * x + 2 * t; return distinct(m * x, x, round((m * S) / (m + 1), 2), m * x + t) && Math.abs(round((m * S) / (m + 1), 2) - m * x) > 2 ? { x, m, t, S, p: person() } : null; },
     make: ({ x, m, t, S, p }) => ({
       question: `${p.name}'s mother is ${m} times as old as ${p.name}. In ${t} years' time the sum of their ages will be ${S} years. Form an equation and solve it to find the age of ${p.name}'s mother now. Answer in years.`,
       answer: m * x,
-      wrong: [[x, `That is ${p.name}'s age. The question asks for the age of the mother.`], [round((m * S) / (m + 1), 2), `In ${t} years, both of them are ${t} years older, so the sum now is not ${S}.`], [m * x + t, `That is the mother's age in ${t} years. The question asks for her age now.`]],
+      wrong: [[x, `That is ${p.name}'s age. The question asks for the age of the mother.`, 'M_ASKED_QUANTITY_MIXED'], [round((m * S) / (m + 1), 2), `In ${t} years, both of them are ${t} years older, so the sum now is not ${S}.`, 'M_TIME_CHANGE_NOT_APPLIED_TO_BOTH'], [m * x + t, `That is the mother's age in ${t} years. The question asks for her age now.`, 'M_FUTURE_AGE_AS_NOW']],
       hints: [`Let ${p.name}'s age now be x. What is the mother's age now? What will each be in ${t} years?`, `Their ages in ${t} years add up to ${S}.`],
       steps: [`Now: ${p.name} is x, the mother is ${m}x. In ${t} years: x + ${t} and ${m}x + ${t}.`, `(x + ${t}) + (${m}x + ${t}) = ${S}, so ${m + 1}x + ${2 * t} = ${S}.`, `${m + 1}x = ${S - 2 * t}, x = ${x}. The mother is ${m} × ${x} = ${m * x}.`] }),
     check: ({ m, t, S }, a) => (a + t) + (a / m + t) === S }),
 
-  fam({ id: 'g7.eq.parking-table', skill: 'G7_EQUATIONS_SOLVE', outcome: 'G7.EQUATIONS.c', rung: 3, form: 'table',
-    draw: () => { const b = pick([20, 30, 50]), r = pick([20, 30, 40, 50]), h = randInt(5, 10), T = b + r * h; return { b, r, h, T, p: person() }; },
+  fam({ id: 'g7.eq.parking-table', skill: 'G7_EQUATIONS_SOLVE', outcome: 'MATH.G7.ALGEBR.LINEAR_EQUATIONS.c', cskill: 'MATH.G7.ALGEBR.LINEAR_EQUATIONS.SOLVE_IN_CONTEXT', rung: 3, form: 'table',
+    draw: () => { const b = pick([20, 30, 50]), r = pick([20, 30, 40, 50]), h = randInt(5, 10), T = b + r * h; return Math.abs(T / r - h) > 2 && Math.abs((T + b) / r - h) > 2 ? { b, r, h, T, p: person() } : null; },
     make: ({ b, r, h, T, p }) => ({
       question: `The table shows the parking charges at a market. ${p.name} pays ${sh(T)} to park. Write an equation, using h for the number of hours, and solve it. For how many hours did ${p.she} park?`, story: false,
       model: { type: 'table', data: { head: ['Hours', 'Charge (sh)'], rows: [1, 2, 3].map(x => ({ label: String(x), value: String(b + r * x) })) } },
       answer: h,
-      wrong: [[round(T / r, 2), 'The charge has a fixed part as well. Take it away before dividing.'], [round((T + b) / r, 2), 'The fixed part is already inside the total, so take it away, do not add it.'], [T - b, 'That is the money for the hours. Divide by the charge for each hour.']],
+      wrong: [[round(T / r, 2), 'The charge has a fixed part as well. Take it away before dividing.', 'M_FIXED_PART_IGNORED'], [round((T + b) / r, 2), 'The fixed part is already inside the total, so take it away, do not add it.', 'M_SIGN_NOT_REVERSED'], [T - b, 'That is the money for the hours. Divide by the charge for each hour.', 'M_DIVISION_STEP_MISSED']],
       hints: ['Find the charge for each extra hour, and the fixed part.', 'Write fixed part + charge per hour × h = total, then solve.'],
       steps: [`Each hour adds ${r}, so the fixed part is ${b + r} − ${r} = ${b}.`, `${b} + ${r}h = ${T}, so ${r}h = ${T - b}.`, `h = ${T - b} ÷ ${r} = ${h}.`] }),
     check: ({ b, r, T }, a) => b + r * a === T }),
 
-  fam({ id: 'g7.eq.mango-boxes', skill: 'G7_EQUATIONS_FORM', outcome: 'G7.EQUATIONS.c', rung: 2, form: 'steps',
+  fam({ id: 'g7.eq.mango-boxes', skill: 'G7_EQUATIONS_FORM', outcome: 'MATH.G7.ALGEBR.LINEAR_EQUATIONS.c', cskill: 'MATH.G7.ALGEBR.LINEAR_EQUATIONS.SOLVE_IN_CONTEXT', rung: 2, form: 'steps',
     draw: () => { const n = randInt(4, 9), x = randInt(8, 20), loose = randInt(6, 20); return { n, x, loose, T: n * x + loose, p: person() }; },
     make: ({ n, x, loose, T, p }) => ({
       question: `${p.name} packs mangoes into ${n} boxes, with the same number in each box. There are also ${loose} loose mangoes. There are ${T} mangoes in all. Let x be the number of mangoes in each box, so ${n}x + ${loose} = ${T}.`,
       parts: [
-        { prompt: 'How many mangoes are in the full boxes?', answer: T - loose, hint: 'Take the loose mangoes away from the total.', wrong: [[T + loose, 'The loose mangoes are part of the total, so take them away.'], [T, 'The total also includes the loose mangoes.'], [loose, 'That is only the loose mangoes.']] },
-        { prompt: 'How many mangoes are in each box?', answer: x, hint: 'Share the mangoes in the boxes equally among the boxes.', wrong: [[T - loose - n, 'Dividing, not taking away, shares them equally.'], [round(T / n, 2), 'The loose mangoes are not in the boxes. Take them away first.'], [(T - loose) * n, 'Sharing equally is dividing.']] },
-        { prompt: `${p.name} sells 3 boxes. How many mangoes are left?`, answer: T - 3 * x, hint: 'Take away the mangoes in 3 boxes.', wrong: [[T - 3, 'Each box has more than 1 mango.'], [T - x, 'Three boxes are sold, not one.'], [T - 3 * x - loose, 'The loose mangoes are still there.']] },
+        { prompt: 'How many mangoes are in the full boxes?', answer: T - loose, hint: 'Take the loose mangoes away from the total.', wrong: [[T + loose, 'The loose mangoes are part of the total, so take them away.', 'M_SIGN_NOT_REVERSED'], [T, 'The total also includes the loose mangoes.', 'M_FIXED_PART_IGNORED'], [loose, 'That is only the loose mangoes.', 'M_ASKED_QUANTITY_MIXED']] },
+        { prompt: 'How many mangoes are in each box?', answer: x, hint: 'Share the mangoes in the boxes equally among the boxes.', wrong: [[T - loose - n, 'Dividing, not taking away, shares them equally.', 'M_SUBTRACTED_TO_SHARE'], [round(T / n, 2), 'The loose mangoes are not in the boxes. Take them away first.', 'M_LOOSE_NOT_REMOVED'], [(T - loose) * n, 'Sharing equally is dividing.', 'M_MULTIPLIED_TO_SHARE']] },
+        { prompt: `${p.name} sells 3 boxes. How many mangoes are left?`, answer: T - 3 * x, hint: 'Take away the mangoes in 3 boxes.', wrong: [[T - 3, 'Each box has more than 1 mango.', 'M_ONE_PER_BOX'], [T - x, 'Three boxes are sold, not one.', 'M_ONE_BOX_NOT_THREE'], [T - 3 * x - loose, 'The loose mangoes are still there.', 'M_LOOSE_COUNTED_AGAIN']] },
       ],
       steps: [`${n}x = ${T} − ${loose} = ${T - loose}.`, `x = ${T - loose} ÷ ${n} = ${x}.`, `Left: ${T} − 3 × ${x} = ${T - 3 * x}.`] }),
     check: ({ n, loose, T }, v) => n * v[1] + loose === T && v[0] === n * v[1] && v[2] === T - 3 * v[1] }),

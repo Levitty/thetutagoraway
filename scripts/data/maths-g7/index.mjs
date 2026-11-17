@@ -4,4 +4,6 @@ import * as factors from "./factors.mjs";
 import * as fractions from "./fractions.mjs";
 import * as decimals from "./decimals.mjs";
 import * as squares from "./squares.mjs";
-export const SUBS = [whole, factors, fractions, decimals, squares];
+import * as expressions from "./expressions.mjs";
+import * as equations from "./equations.mjs";
+export const SUBS = [whole, factors, fractions, decimals, squares, expressions, equations];

@@ -1,0 +1,465 @@
+{
+ "sub_strand": "MATH.G7.ALGEBR.LINEAR_EQUATIONS",
+ "title": "Linear Equations",
+ "status": "draft: written 17 Nov 2026 offline for the Grade 7 pilot; not yet checked by a Kenyan maths teacher; not loaded by the live tutor",
+ "sources": [],
+ "notes": "Official outcomes a to c are tested; d is an attitude. Linear equations in one unknown: forming from stories, solving with one or two steps and with the unknown on both sides, explaining why the same is done to both sides, and applying them (ages, charges, equal boxes). Grade 5 had one- and two-step equations with whole numbers.",
+ "skills": [
+  {
+   "skill": "MATH.G7.ALGEBR.LINEAR_EQUATIONS.FORM_EQUATION_FROM_STORY",
+   "key_step": "The child writes each part of the story in order: items times price, plus the fixed amount, equals the total.",
+   "floor": {
+    "prerequisite": "Writes an expression with a letter.",
+    "question": "Cost of 8 books at x each",
+    "answer": "8x"
+   },
+   "representations": [
+    "the story as a bar",
+    "the expression for the items",
+    "the equation"
+   ],
+   "steps": [
+    "Name the unknown with a letter.",
+    "Write what the items cost.",
+    "Add the fixed amount once.",
+    "Write = total."
+   ],
+   "contexts": [
+    "books and a geometry set",
+    "bus fares",
+    "bags of rice"
+   ],
+   "board": [
+    {
+     "beat": "write",
+     "do": "Write: 8 books at x each and one set at sh 150, total sh 398."
+    },
+    {
+     "beat": "draw",
+     "do": "Draw a bar for the total with a part for the books and a part of 150."
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for the child to write the equation."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "MATH.G7.ALGEBR.LINEAR_EQUATIONS.FORM_EQUATION_FROM_STORY.M_BRACKET_ADDED_TO_EVERY_TERM",
+     "listen_for": [
+      "8(x + 150)"
+     ],
+     "ask": "How many sets are bought?",
+     "repair": "One set, added once."
+    },
+    {
+     "code": "MATH.G7.ALGEBR.LINEAR_EQUATIONS.FORM_EQUATION_FROM_STORY.M_MULTIPLIER_AS_ADDEND",
+     "listen_for": [
+      "x + 8"
+     ],
+     "ask": "What do 8 books at x each cost?",
+     "repair": "8 times x."
+    },
+    {
+     "code": "MATH.G7.ALGEBR.LINEAR_EQUATIONS.FORM_EQUATION_FROM_STORY.M_FIXED_ON_WRONG_SIDE",
+     "listen_for": [
+      "8x = 398 + 150"
+     ],
+     "ask": "Is the set part of the total?",
+     "repair": "Keep it with the books."
+    }
+   ],
+   "checks": [
+    {
+     "question": "8 books at x each plus a set at sh 150: total sh 398. Equation?",
+     "answer": "8x + 150 = 398",
+     "shows": "form"
+    },
+    {
+     "question": "Solve it",
+     "answer": "x = 31",
+     "shows": "solve"
+    }
+   ]
+  },
+  {
+   "skill": "MATH.G7.ALGEBR.LINEAR_EQUATIONS.SOLVE_TWO_STEP",
+   "key_step": "The child undoes the added or taken number first, then the multiplier, doing the same on both sides, and checks the answer back in the equation.",
+   "floor": {
+    "prerequisite": "Solves one-step equations.",
+    "question": "x + 6 = 20",
+    "answer": "14"
+   },
+   "representations": [
+    "a balance",
+    "steps written down",
+    "a check"
+   ],
+   "steps": [
+    "Take 6 from both sides.",
+    "Divide both sides by the number in front of x.",
+    "Write x = answer.",
+    "Put it back to check."
+   ],
+   "contexts": [
+    "parking fees",
+    "books at a price",
+    "ages"
+   ],
+   "board": [
+    {
+     "beat": "draw",
+     "do": "Draw a balance: 6x + 6 on the left, 78 on the right."
+    },
+    {
+     "beat": "point",
+     "do": "Point at the +6.",
+     "say": "What do we do to remove it?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for the child to say."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "MATH.G7.ALGEBR.LINEAR_EQUATIONS.SOLVE_TWO_STEP.M_DIVISION_STEP_MISSED",
+     "listen_for": [
+      "72",
+      "that is the answer"
+     ],
+     "ask": "What does 72 stand for: x or 6x?",
+     "repair": "Divide by 6."
+    },
+    {
+     "code": "MATH.G7.ALGEBR.LINEAR_EQUATIONS.SOLVE_TWO_STEP.M_SIGN_NOT_REVERSED",
+     "listen_for": [
+      "84",
+      "14"
+     ],
+     "ask": "To remove +6 do we add or take away?",
+     "repair": "Take 6 from both sides."
+    },
+    {
+     "code": "MATH.G7.ALGEBR.LINEAR_EQUATIONS.SOLVE_TWO_STEP.M_INVERSE_OPERATION_WRONG",
+     "listen_for": [
+      "126"
+     ],
+     "ask": "To undo times 3 what do we do?",
+     "repair": "Divide by 3."
+    },
+    {
+     "code": "MATH.G7.ALGEBR.LINEAR_EQUATIONS.SOLVE_TWO_STEP.M_LAST_ROW_TAKEN",
+     "listen_for": [
+      "3"
+     ],
+     "ask": "Is 6x + 6 = 24 when x = 3?",
+     "repair": "Continue the table."
+    }
+   ],
+   "checks": [
+    {
+     "question": "Solve 6x + 6 = 78",
+     "answer": "x = 12",
+     "shows": "two steps"
+    },
+    {
+     "question": "Solve 3n + 3 = 45",
+     "answer": "n = 14",
+     "shows": "two steps"
+    }
+   ]
+  },
+  {
+   "skill": "MATH.G7.ALGEBR.LINEAR_EQUATIONS.SOLVE_BOTH_SIDES",
+   "key_step": "The child takes the smaller x term from both sides first, then the number, then divides.",
+   "floor": {
+    "prerequisite": "Solves a two-step equation.",
+    "question": "2x + 4 = 12",
+    "answer": "x = 4"
+   },
+   "representations": [
+    "a balance with x on both pans",
+    "steps",
+    "check on both sides"
+   ],
+   "steps": [
+    "Take the smaller x term from both sides.",
+    "Undo the number.",
+    "Divide.",
+    "Check in both sides."
+   ],
+   "contexts": [
+    "two phone plans",
+    "saving plans",
+    "taxi charges"
+   ],
+   "board": [
+    {
+     "beat": "draw",
+     "do": "Draw a balance with 4x - 4 on one pan and 2x + 12 on the other."
+    },
+    {
+     "beat": "point",
+     "do": "Point at 2x on the right.",
+     "say": "What do we do about this term?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for the child to say."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "MATH.G7.ALGEBR.LINEAR_EQUATIONS.SOLVE_BOTH_SIDES.M_UNKNOWN_TERM_MOVED_SAME_SIGN",
+     "listen_for": [
+      "6x"
+     ],
+     "ask": "Do we take or add 2x on both sides?",
+     "repair": "Take 2x from both sides."
+    },
+    {
+     "code": "MATH.G7.ALGEBR.LINEAR_EQUATIONS.SOLVE_BOTH_SIDES.M_ONE_SIDE_ONLY_CHANGED",
+     "listen_for": [
+      "only the left"
+     ],
+     "ask": "What happens to the balance if only one pan changes?",
+     "repair": "Do the same to both sides."
+    }
+   ],
+   "checks": [
+    {
+     "question": "Solve 4x - 4 = 2x + 12",
+     "answer": "x = 8",
+     "shows": "both sides"
+    },
+    {
+     "question": "Check x = 8 in both sides",
+     "answer": "28 and 28",
+     "shows": "check"
+    }
+   ]
+  },
+  {
+   "skill": "MATH.G7.ALGEBR.LINEAR_EQUATIONS.EQUATION_BALANCE_REASON",
+   "key_step": "The child says an equation is a balance, so the same is done to both sides to keep it level.",
+   "floor": {
+    "prerequisite": "Reads = as balance.",
+    "question": "Is 8 + 4 = 7 + 5 true?",
+    "answer": "Yes"
+   },
+   "representations": [
+    "a balance with bags",
+    "the equation under it",
+    "words"
+   ],
+   "steps": [
+    "Show a level balance.",
+    "Take the same from both pans.",
+    "It stays level.",
+    "Say why in words."
+   ],
+   "contexts": [
+    "sweets in bags",
+    "a seesaw",
+    "a market scale"
+   ],
+   "board": [
+    {
+     "beat": "draw",
+     "do": "Draw a level balance: x + 8 and 28."
+    },
+    {
+     "beat": "point",
+     "do": "Point at the left pan.",
+     "say": "If we take 8 from here only, what happens?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for the child to say."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "MATH.G7.ALGEBR.LINEAR_EQUATIONS.EQUATION_BALANCE_REASON.M_NUMBER_SIZE_DECIDES_STEP",
+     "listen_for": [
+      "bigger number"
+     ],
+     "ask": "Would it work for a smaller number?",
+     "repair": "It is about balance, not size."
+    },
+    {
+     "code": "MATH.G7.ALGEBR.LINEAR_EQUATIONS.EQUATION_BALANCE_REASON.M_UNKNOWN_ALWAYS_LEFT",
+     "listen_for": [
+      "x on the left"
+     ],
+     "ask": "Is 28 = x + 8 the same?",
+     "repair": "x can be on either side."
+    },
+    {
+     "code": "MATH.G7.ALGEBR.LINEAR_EQUATIONS.EQUATION_BALANCE_REASON.M_RULE_WITHOUT_REASON",
+     "listen_for": [
+      "it is the rule"
+     ],
+     "ask": "What happens to a balance if you take from one side?",
+     "repair": "It tips: do the same to both."
+    }
+   ],
+   "checks": [
+    {
+     "question": "Why take 8 from both sides in x + 8 = 28?",
+     "answer": "to keep both sides equal",
+     "shows": "balance"
+    },
+    {
+     "question": "Can x be on the right side?",
+     "answer": "Yes",
+     "shows": "either side"
+    }
+   ]
+  },
+  {
+   "skill": "MATH.G7.ALGEBR.LINEAR_EQUATIONS.SOLVE_IN_CONTEXT",
+   "key_step": "The child forms the equation from the story, solves it, and then answers the quantity the question asks for.",
+   "floor": {
+    "prerequisite": "Solves two-step equations.",
+    "question": "5x + 10 = 90",
+    "answer": "x = 16"
+   },
+   "representations": [
+    "the story as a bar",
+    "the equation",
+    "the answer in a sentence"
+   ],
+   "steps": [
+    "Name the unknown.",
+    "Form the equation.",
+    "Solve.",
+    "Answer what was asked, with the unit."
+   ],
+   "contexts": [
+    "ages",
+    "parking charge",
+    "mangoes in boxes",
+    "money at the start"
+   ],
+   "board": [
+    {
+     "beat": "write",
+     "do": "Write: mother is 4 times Makena; in 4 years the sum is 63."
+    },
+    {
+     "beat": "draw",
+     "do": "Draw a table: now and in 4 years for both."
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for the child to write the equation."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "MATH.G7.ALGEBR.LINEAR_EQUATIONS.SOLVE_IN_CONTEXT.M_FIXED_PART_IGNORED",
+     "listen_for": [
+      "10.5"
+     ],
+     "ask": "Is the fixed charge part of the total?",
+     "repair": "Take it away first."
+    },
+    {
+     "code": "MATH.G7.ALGEBR.LINEAR_EQUATIONS.SOLVE_IN_CONTEXT.M_ASKED_QUANTITY_MIXED",
+     "listen_for": [
+      "11",
+      "Makena"
+     ],
+     "ask": "Whose age is asked?",
+     "repair": "Answer the mother."
+    },
+    {
+     "code": "MATH.G7.ALGEBR.LINEAR_EQUATIONS.SOLVE_IN_CONTEXT.M_STEP_AMOUNT_AS_UNKNOWN",
+     "listen_for": [
+      "200"
+     ],
+     "ask": "Is 200 what there was at the start?",
+     "repair": "x is the start."
+    },
+    {
+     "code": "MATH.G7.ALGEBR.LINEAR_EQUATIONS.SOLVE_IN_CONTEXT.M_FUTURE_AGE_AS_NOW",
+     "listen_for": [
+      "48"
+     ],
+     "ask": "Is that her age now?",
+     "repair": "Take away 4."
+    },
+    {
+     "code": "MATH.G7.ALGEBR.LINEAR_EQUATIONS.SOLVE_IN_CONTEXT.M_TIME_CHANGE_NOT_APPLIED_TO_BOTH",
+     "listen_for": [
+      "50.4"
+     ],
+     "ask": "Do both get older?",
+     "repair": "Add 4 to each."
+    },
+    {
+     "code": "MATH.G7.ALGEBR.LINEAR_EQUATIONS.SOLVE_IN_CONTEXT.M_LOOSE_NOT_REMOVED",
+     "listen_for": [
+      "18"
+     ],
+     "ask": "Are the loose ones in the boxes?",
+     "repair": "Take them away first."
+    },
+    {
+     "code": "MATH.G7.ALGEBR.LINEAR_EQUATIONS.SOLVE_IN_CONTEXT.M_SUBTRACTED_TO_SHARE",
+     "listen_for": [
+      "75"
+     ],
+     "ask": "Share equally: add, take, times or divide?",
+     "repair": "Divide."
+    },
+    {
+     "code": "MATH.G7.ALGEBR.LINEAR_EQUATIONS.SOLVE_IN_CONTEXT.M_MULTIPLIED_TO_SHARE",
+     "listen_for": [
+      "400"
+     ],
+     "ask": "Should each box hold more than all?",
+     "repair": "Divide."
+    },
+    {
+     "code": "MATH.G7.ALGEBR.LINEAR_EQUATIONS.SOLVE_IN_CONTEXT.M_ONE_PER_BOX",
+     "listen_for": [
+      "87"
+     ],
+     "ask": "How many in a box?",
+     "repair": "Each box holds 16."
+    },
+    {
+     "code": "MATH.G7.ALGEBR.LINEAR_EQUATIONS.SOLVE_IN_CONTEXT.M_ONE_BOX_NOT_THREE",
+     "listen_for": [
+      "74"
+     ],
+     "ask": "How many boxes sold?",
+     "repair": "Three."
+    },
+    {
+     "code": "MATH.G7.ALGEBR.LINEAR_EQUATIONS.SOLVE_IN_CONTEXT.M_LOOSE_COUNTED_AGAIN",
+     "listen_for": [
+      "32"
+     ],
+     "ask": "Were the loose ones sold?",
+     "repair": "They are still there."
+    }
+   ],
+   "checks": [
+    {
+     "question": "Mother is 4 times Makena. In 4 years the sum of their ages is 63. Mother's age now?",
+     "answer": "44",
+     "shows": "ages"
+    },
+    {
+     "question": "Parking sh 20 an hour plus sh 30, total sh 210. Hours?",
+     "answer": "9",
+     "shows": "fixed part"
+    }
+   ]
+  }
+ ]
+}

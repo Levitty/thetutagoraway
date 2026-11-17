@@ -5557,6 +5557,1176 @@ export const TEACHING_PACK_G7 = {
   "sub_strand": "MATH.G7.NUMBER.SQUARES_AND_SQUARE_ROOTS",
   "sub_strand_name": "Squares and Square Roots",
   "status": "draft: written 17 Nov 2026 offline for the Grade 7 pilot; not yet checked by a Kenyan maths teacher; not loaded by the live tutor"
+ },
+ "MATH.G7.ALGEBR.ALGEBRAIC_EXPRESSIONS.FORM_EXPRESSION_RATE_FIXED": {
+  "skill": "MATH.G7.ALGEBR.ALGEBRAIC_EXPRESSIONS.FORM_EXPRESSION_RATE_FIXED",
+  "key_step": "The child says the charge for n items is the rate times n, plus the fixed amount once, and tests it with n = 1 and n = 2.",
+  "floor": {
+   "prerequisite": "Finds a charge for a given number.",
+   "question": "Sh 30 each plus sh 10: charge for 2?",
+   "answer": "70"
+  },
+  "representations": [
+   "a table of charges",
+   "a word rule",
+   "the expression"
+  ],
+  "steps": [
+   "Look at the rise per item.",
+   "Find the charge for 0 items: that is the fixed amount.",
+   "Write rate x n + fixed.",
+   "Test with n = 1 and n = 2."
+  ],
+  "contexts": [
+   "water jerricans delivery",
+   "photocopies",
+   "bus hire"
+  ],
+  "board": [
+   {
+    "beat": "draw",
+    "do": "Draw a table of jerricans 1, 2, 3 and charges 40, 70, 100."
+   },
+   {
+    "beat": "point",
+    "do": "Point at the rise.",
+    "say": "How much more for each extra jerrican?"
+   },
+   {
+    "beat": "pause",
+    "do": "Wait for the child to say."
+   }
+  ],
+  "misconceptions": [
+   {
+    "code": "MATH.G7.ALGEBR.ALGEBRAIC_EXPRESSIONS.FORM_EXPRESSION_RATE_FIXED.M_RATE_AND_FIXED_SWAPPED",
+    "listen_for": [
+     "10n + 30"
+    ],
+    "ask": "What is the charge for 2 jerricans with your expression?",
+    "repair": "Test with n = 2.",
+    "error": "Swaps the rate and the fixed amount.",
+    "example": {
+     "question": "Charge is sh 30 for each jerrican plus sh 10 delivery. Expression for n jerricans?",
+     "wrong_answer": "10n + 30",
+     "correct_answer": "30n + 10"
+    }
+   },
+   {
+    "code": "MATH.G7.ALGEBR.ALGEBRAIC_EXPRESSIONS.FORM_EXPRESSION_RATE_FIXED.M_FIXED_CHARGE_MULTIPLIED",
+    "listen_for": [
+     "40n"
+    ],
+    "ask": "Is the delivery fee paid for each jerrican?",
+    "repair": "It is paid once.",
+    "error": "Multiplies the fixed charge by n as well.",
+    "example": {
+     "question": "Charge is sh 30 each plus sh 10 delivery",
+     "wrong_answer": "40n",
+     "correct_answer": "30n + 10"
+    }
+   },
+   {
+    "code": "MATH.G7.ALGEBR.ALGEBRAIC_EXPRESSIONS.FORM_EXPRESSION_RATE_FIXED.M_FIXED_ADDED_BEFORE_MULTIPLYING",
+    "listen_for": [
+     "30(n + 10)"
+    ],
+    "ask": "What is 30(n + 10) for n = 2?",
+    "repair": "Add the fixed amount after multiplying.",
+    "error": "Adds the fixed amount to n first, then multiplies.",
+    "example": {
+     "question": "Charge is sh 30 each plus sh 10 delivery",
+     "wrong_answer": "30(n + 10)",
+     "correct_answer": "30n + 10"
+    }
+   }
+  ],
+  "checks": [
+   {
+    "question": "Sh 30 each plus sh 10 delivery: expression for n jerricans",
+    "answer": "30n + 10",
+    "shows": "rate and fixed"
+   },
+   {
+    "question": "Using it: n = 5",
+    "answer": "sh 160",
+    "shows": "substitute"
+   }
+  ],
+  "name": "Form an expression for a charge made of a rate and a fixed amount",
+  "sub_strand": "MATH.G7.ALGEBR.ALGEBRAIC_EXPRESSIONS",
+  "sub_strand_name": "Algebraic Expressions",
+  "status": "draft: written 17 Nov 2026 offline for the Grade 7 pilot; not yet checked by a Kenyan maths teacher; not loaded by the live tutor"
+ },
+ "MATH.G7.ALGEBR.ALGEBRAIC_EXPRESSIONS.FORM_EXPRESSION_RELATIONS": {
+  "skill": "MATH.G7.ALGEBR.ALGEBRAIC_EXPRESSIONS.FORM_EXPRESSION_RELATIONS",
+  "key_step": "The child writes one expression for each person from the words, then adds all of them.",
+  "floor": {
+   "prerequisite": "Uses a letter for an age.",
+   "question": "Barasa is x. His sister is 3 years older. Her age?",
+   "answer": "x + 3"
+  },
+  "representations": [
+   "ages on a line",
+   "each person written",
+   "the total"
+  ],
+  "steps": [
+   "Write x for the first person.",
+   "Write each relation in words, then as an expression.",
+   "Check the direction (younger or older).",
+   "Add all expressions."
+  ],
+  "contexts": [
+   "ages in a family",
+   "pocket money",
+   "books on shelves"
+  ],
+  "board": [
+   {
+    "beat": "write",
+    "do": "Write: Barasa x, brother 2 younger, mother 3 times."
+   },
+   {
+    "beat": "point",
+    "do": "Point at the brother.",
+    "say": "Older or younger than Barasa?"
+   },
+   {
+    "beat": "pause",
+    "do": "Wait for the child to write."
+   }
+  ],
+  "misconceptions": [
+   {
+    "code": "MATH.G7.ALGEBR.ALGEBRAIC_EXPRESSIONS.FORM_EXPRESSION_RELATIONS.M_YOUNGER_ADDED",
+    "listen_for": [
+     "x + 2"
+    ],
+    "ask": "Is the brother older or younger?",
+    "repair": "Younger: take away.",
+    "error": "Adds where a person is younger.",
+    "example": {
+     "question": "Barasa is x. His brother is 2 years younger. The brother's age?",
+     "wrong_answer": "x + 2",
+     "correct_answer": "x - 2"
+    }
+   },
+   {
+    "code": "MATH.G7.ALGEBR.ALGEBRAIC_EXPRESSIONS.FORM_EXPRESSION_RELATIONS.M_PERSON_MISSED",
+    "listen_for": [
+     "4x - 2"
+    ],
+    "ask": "How many people are in the total?",
+    "repair": "Add all three.",
+    "error": "Leaves out one of the people in the total.",
+    "example": {
+     "question": "Ages: Barasa x, brother x - 2, mother 3x. Total?",
+     "wrong_answer": "4x - 2",
+     "correct_answer": "5x - 2"
+    }
+   },
+   {
+    "code": "MATH.G7.ALGEBR.ALGEBRAIC_EXPRESSIONS.FORM_EXPRESSION_RELATIONS.M_RELATION_APPLIED_TO_ALL",
+    "listen_for": [
+     "5(x - 2)"
+    ],
+    "ask": "Is everyone 2 years younger?",
+    "repair": "Only the brother.",
+    "error": "Applies the \"younger\" change to every person by using a bracket.",
+    "example": {
+     "question": "Ages: x, x - 2 and 3x. Total?",
+     "wrong_answer": "5(x - 2)",
+     "correct_answer": "5x - 2"
+    }
+   }
+  ],
+  "checks": [
+   {
+    "question": "Barasa x, brother 2 younger, mother 3 times as old: total",
+    "answer": "5x - 2",
+    "shows": "all three"
+   },
+   {
+    "question": "Mother's age minus Barasa's",
+    "answer": "2x",
+    "shows": "difference"
+   }
+  ],
+  "name": "Form an expression for quantities related to one unknown",
+  "sub_strand": "MATH.G7.ALGEBR.ALGEBRAIC_EXPRESSIONS",
+  "sub_strand_name": "Algebraic Expressions",
+  "status": "draft: written 17 Nov 2026 offline for the Grade 7 pilot; not yet checked by a Kenyan maths teacher; not loaded by the live tutor"
+ },
+ "MATH.G7.ALGEBR.ALGEBRAIC_EXPRESSIONS.FORM_FROM_STATEMENT": {
+  "skill": "MATH.G7.ALGEBR.ALGEBRAIC_EXPRESSIONS.FORM_FROM_STATEMENT",
+  "key_step": "The child says \"more than\" adds to the letter and \"less than\" takes away from the letter, with the letter first.",
+  "floor": {
+   "prerequisite": "Uses a letter for an unknown.",
+   "question": "3 more than 5",
+   "answer": "8"
+  },
+  "representations": [
+   "numbers first, then letters",
+   "the words",
+   "the expression"
+  ],
+  "steps": [
+   "Try the words with a number.",
+   "Write the letter instead.",
+   "Check \"less than\" with a number.",
+   "Write the expression."
+  ],
+  "contexts": [
+   "pencils in a pack",
+   "money in a purse",
+   "goats in a herd"
+  ],
+  "board": [
+   {
+    "beat": "write",
+    "do": "Write: 5 less than 8 is ? and 5 less than n is ?"
+   },
+   {
+    "beat": "point",
+    "do": "Point at 8.",
+    "say": "Which number do we start from?"
+   },
+   {
+    "beat": "pause",
+    "do": "Wait for the child to say."
+   }
+  ],
+  "misconceptions": [
+   {
+    "code": "MATH.G7.ALGEBR.ALGEBRAIC_EXPRESSIONS.FORM_FROM_STATEMENT.M_MORE_THAN_AS_PRODUCT",
+    "listen_for": [
+     "3x"
+    ],
+    "ask": "If x is 5, what is 3 more than 5?",
+    "repair": "Use a number to test.",
+    "error": "Writes \"3 more than x\" as 3x.",
+    "example": {
+     "question": "3 more than x",
+     "wrong_answer": "3x",
+     "correct_answer": "x + 3"
+    }
+   },
+   {
+    "code": "MATH.G7.ALGEBR.ALGEBRAIC_EXPRESSIONS.FORM_FROM_STATEMENT.M_LESS_THAN_REVERSED",
+    "listen_for": [
+     "5 - n"
+    ],
+    "ask": "What is 5 less than 8?",
+    "repair": "Start from n and take away 5.",
+    "error": "Writes \"5 less than n\" as 5 - n.",
+    "example": {
+     "question": "5 less than n",
+     "wrong_answer": "5 - n",
+     "correct_answer": "n - 5"
+    }
+   }
+  ],
+  "checks": [
+   {
+    "question": "3 more than x",
+    "answer": "x + 3",
+    "shows": "more than"
+   },
+   {
+    "question": "5 less than n",
+    "answer": "n - 5",
+    "shows": "order"
+   }
+  ],
+  "name": "Form an expression from a simple algebraic statement in words",
+  "sub_strand": "MATH.G7.ALGEBR.ALGEBRAIC_EXPRESSIONS",
+  "sub_strand_name": "Algebraic Expressions",
+  "status": "draft: written 17 Nov 2026 offline for the Grade 7 pilot; not yet checked by a Kenyan maths teacher; not loaded by the live tutor"
+ },
+ "MATH.G7.ALGEBR.ALGEBRAIC_EXPRESSIONS.SIMPLIFY_LIKE_TERMS": {
+  "skill": "MATH.G7.ALGEBR.ALGEBRAIC_EXPRESSIONS.SIMPLIFY_LIKE_TERMS",
+  "key_step": "The child collects the x terms and the number terms separately, adding the numbers in front and keeping each sign.",
+  "floor": {
+   "prerequisite": "Adds numbers with signs.",
+   "question": "6 + 1 - 1",
+   "answer": "6"
+  },
+  "representations": [
+   "x terms circled and numbers boxed",
+   "the sums",
+   "the simplified expression"
+  ],
+  "steps": [
+   "Circle the x terms.",
+   "Box the plain numbers.",
+   "Add each kind with its sign.",
+   "Substitute a value to check."
+  ],
+  "contexts": [
+   "perimeter of a plot",
+   "cost of items",
+   "ages"
+  ],
+  "board": [
+   {
+    "beat": "write",
+    "do": "Write (x + 6) + (4x + 1) + (2x - 1)."
+   },
+   {
+    "beat": "point",
+    "do": "Point at the x terms.",
+    "say": "How many x altogether?"
+   },
+   {
+    "beat": "pause",
+    "do": "Wait for the child to say."
+   }
+  ],
+  "misconceptions": [
+   {
+    "code": "MATH.G7.ALGEBR.ALGEBRAIC_EXPRESSIONS.SIMPLIFY_LIKE_TERMS.M_TERM_MISSED",
+    "listen_for": [
+     "5x"
+    ],
+    "ask": "How many x terms are there?",
+    "repair": "Count each side.",
+    "error": "Leaves one x term out when collecting.",
+    "example": {
+     "question": "(x + 6) + (4x + 1) + (2x - 1): the number in front of x",
+     "wrong_answer": "5",
+     "correct_answer": "7"
+    }
+   },
+   {
+    "code": "MATH.G7.ALGEBR.ALGEBRAIC_EXPRESSIONS.SIMPLIFY_LIKE_TERMS.M_LIKE_TERMS_MULTIPLIED",
+    "listen_for": [
+     "8x"
+    ],
+    "ask": "Do like terms add or multiply?",
+    "repair": "Like terms add.",
+    "error": "Multiplies the numbers in front of x instead of adding them.",
+    "example": {
+     "question": "x + 4x + 2x: the number in front of x",
+     "wrong_answer": "8",
+     "correct_answer": "7"
+    }
+   },
+   {
+    "code": "MATH.G7.ALGEBR.ALGEBRAIC_EXPRESSIONS.SIMPLIFY_LIKE_TERMS.M_COEFFICIENT_ONE_ASSUMED",
+    "listen_for": [
+     "3x"
+    ],
+    "ask": "What does 4x mean?",
+    "repair": "Add the numbers in front.",
+    "error": "Counts each x term as one x whatever the number in front.",
+    "example": {
+     "question": "x + 4x + 2x: the number in front of x",
+     "wrong_answer": "3",
+     "correct_answer": "7"
+    }
+   },
+   {
+    "code": "MATH.G7.ALGEBR.ALGEBRAIC_EXPRESSIONS.SIMPLIFY_LIKE_TERMS.M_SIGN_DROPPED",
+    "listen_for": [
+     "8"
+    ],
+    "ask": "What does the last number do?",
+    "repair": "Keep the minus sign.",
+    "error": "Ignores the minus sign of a number term.",
+    "example": {
+     "question": "Number terms +6, +1 and -1: the total",
+     "wrong_answer": "8",
+     "correct_answer": "6"
+    }
+   },
+   {
+    "code": "MATH.G7.ALGEBR.ALGEBRAIC_EXPRESSIONS.SIMPLIFY_LIKE_TERMS.M_CONSTANT_TERM_MISSED",
+    "listen_for": [
+     "7"
+    ],
+    "ask": "How many plain numbers are there?",
+    "repair": "List all of them.",
+    "error": "Leaves a number term out when adding the numbers.",
+    "example": {
+     "question": "Number terms +6, +1 and -1: the total",
+     "wrong_answer": "7",
+     "correct_answer": "6"
+    }
+   },
+   {
+    "code": "MATH.G7.ALGEBR.ALGEBRAIC_EXPRESSIONS.SIMPLIFY_LIKE_TERMS.M_CONSTANTS_MULTIPLIED",
+    "listen_for": [
+     "-6"
+    ],
+    "ask": "Add or multiply?",
+    "repair": "Like terms add.",
+    "error": "Multiplies the plain numbers instead of adding.",
+    "example": {
+     "question": "Number terms +6, +1 and -1: the total",
+     "wrong_answer": "-6",
+     "correct_answer": "6"
+    }
+   },
+   {
+    "code": "MATH.G7.ALGEBR.ALGEBRAIC_EXPRESSIONS.SIMPLIFY_LIKE_TERMS.M_COEFFICIENT_ADDED_TO_VALUE",
+    "listen_for": [
+     "7 + 3"
+    ],
+    "ask": "What does 7x mean?",
+    "repair": "7 times x.",
+    "error": "Adds the number in front of x to the value of x instead of multiplying.",
+    "example": {
+     "question": "7x + 6 when x = 3",
+     "wrong_answer": "16",
+     "correct_answer": "27"
+    }
+   },
+   {
+    "code": "MATH.G7.ALGEBR.ALGEBRAIC_EXPRESSIONS.SIMPLIFY_LIKE_TERMS.M_CONSTANT_LEFT_OUT",
+    "listen_for": [
+     "21"
+    ],
+    "ask": "Where did the 6 go?",
+    "repair": "Add it.",
+    "error": "Leaves out the plain number when substituting.",
+    "example": {
+     "question": "7x + 6 when x = 3",
+     "wrong_answer": "21",
+     "correct_answer": "27"
+    }
+   },
+   {
+    "code": "MATH.G7.ALGEBR.ALGEBRAIC_EXPRESSIONS.SIMPLIFY_LIKE_TERMS.M_CONSTANT_SIGN_FLIPPED",
+    "listen_for": [
+     "21 - 6"
+    ],
+    "ask": "Is the 6 added or taken?",
+    "repair": "Keep its sign.",
+    "error": "Subtracts a number term that is added.",
+    "example": {
+     "question": "7x + 6 when x = 3",
+     "wrong_answer": "15",
+     "correct_answer": "27"
+    }
+   }
+  ],
+  "checks": [
+   {
+    "question": "Simplify (x + 6) + (4x + 1) + (2x - 1)",
+    "answer": "7x + 6",
+    "shows": "collect"
+   },
+   {
+    "question": "Its value when x = 3",
+    "answer": "27",
+    "shows": "substitute"
+   }
+  ],
+  "name": "Simplify an expression by collecting like terms",
+  "sub_strand": "MATH.G7.ALGEBR.ALGEBRAIC_EXPRESSIONS",
+  "sub_strand_name": "Algebraic Expressions",
+  "status": "draft: written 17 Nov 2026 offline for the Grade 7 pilot; not yet checked by a Kenyan maths teacher; not loaded by the live tutor"
+ },
+ "MATH.G7.ALGEBR.ALGEBRAIC_EXPRESSIONS.SIMPLIFY_WITH_BRACKETS": {
+  "skill": "MATH.G7.ALGEBR.ALGEBRAIC_EXPRESSIONS.SIMPLIFY_WITH_BRACKETS",
+  "key_step": "The child multiplies every term in the bracket by the number outside, and does not join x with a plain number.",
+  "floor": {
+   "prerequisite": "Multiplies a sum.",
+   "question": "2 x (3 + 4)",
+   "answer": "14"
+  },
+  "representations": [
+   "arrows from the number to each term",
+   "expanded form",
+   "a check with a value"
+  ],
+  "steps": [
+   "Draw arrows to each term.",
+   "Multiply each term.",
+   "Collect like terms.",
+   "Check with a value of x."
+  ],
+  "contexts": [
+   "fence round a plot",
+   "cost of 2 equal items",
+   "tiles in rows"
+  ],
+  "board": [
+   {
+    "beat": "write",
+    "do": "Write 2 x (x + 8)."
+   },
+   {
+    "beat": "point",
+    "do": "Point at the 2.",
+    "say": "Which terms does it multiply?"
+   },
+   {
+    "beat": "pause",
+    "do": "Wait for the child to say."
+   }
+  ],
+  "misconceptions": [
+   {
+    "code": "MATH.G7.ALGEBR.ALGEBRAIC_EXPRESSIONS.SIMPLIFY_WITH_BRACKETS.M_BRACKET_FIRST_TERM_ONLY",
+    "listen_for": [
+     "2x + 8"
+    ],
+    "ask": "Does the 2 multiply the 8?",
+    "repair": "Both terms.",
+    "error": "Multiplies only the first term in the bracket.",
+    "example": {
+     "question": "2 x (x + 8)",
+     "wrong_answer": "2x + 8",
+     "correct_answer": "2x + 16"
+    }
+   },
+   {
+    "code": "MATH.G7.ALGEBR.ALGEBRAIC_EXPRESSIONS.SIMPLIFY_WITH_BRACKETS.M_UNLIKE_TERMS_JOINED",
+    "listen_for": [
+     "9x"
+    ],
+    "ask": "If x is 1, is x + 8 the same as 9x?",
+    "repair": "x and 8 are unlike.",
+    "error": "Joins an x term with a number term.",
+    "example": {
+     "question": "2 x (x + 8) written 2 x 9x",
+     "wrong_answer": "18x",
+     "correct_answer": "2x + 16"
+    }
+   }
+  ],
+  "checks": [
+   {
+    "question": "Simplify 2(x + 8)",
+    "answer": "2x + 16",
+    "shows": "both terms"
+   },
+   {
+    "question": "Fence 2 x ((x + 6) + 2)",
+    "answer": "2x + 16",
+    "shows": "perimeter"
+   }
+  ],
+  "name": "Remove a bracket multiplied by a number and simplify",
+  "sub_strand": "MATH.G7.ALGEBR.ALGEBRAIC_EXPRESSIONS",
+  "sub_strand_name": "Algebraic Expressions",
+  "status": "draft: written 17 Nov 2026 offline for the Grade 7 pilot; not yet checked by a Kenyan maths teacher; not loaded by the live tutor"
+ },
+ "MATH.G7.ALGEBR.LINEAR_EQUATIONS.FORM_EQUATION_FROM_STORY": {
+  "skill": "MATH.G7.ALGEBR.LINEAR_EQUATIONS.FORM_EQUATION_FROM_STORY",
+  "key_step": "The child writes each part of the story in order: items times price, plus the fixed amount, equals the total.",
+  "floor": {
+   "prerequisite": "Writes an expression with a letter.",
+   "question": "Cost of 8 books at x each",
+   "answer": "8x"
+  },
+  "representations": [
+   "the story as a bar",
+   "the expression for the items",
+   "the equation"
+  ],
+  "steps": [
+   "Name the unknown with a letter.",
+   "Write what the items cost.",
+   "Add the fixed amount once.",
+   "Write = total."
+  ],
+  "contexts": [
+   "books and a geometry set",
+   "bus fares",
+   "bags of rice"
+  ],
+  "board": [
+   {
+    "beat": "write",
+    "do": "Write: 8 books at x each and one set at sh 150, total sh 398."
+   },
+   {
+    "beat": "draw",
+    "do": "Draw a bar for the total with a part for the books and a part of 150."
+   },
+   {
+    "beat": "pause",
+    "do": "Wait for the child to write the equation."
+   }
+  ],
+  "misconceptions": [
+   {
+    "code": "MATH.G7.ALGEBR.LINEAR_EQUATIONS.FORM_EQUATION_FROM_STORY.M_BRACKET_ADDED_TO_EVERY_TERM",
+    "listen_for": [
+     "8(x + 150)"
+    ],
+    "ask": "How many sets are bought?",
+    "repair": "One set, added once.",
+    "error": "Adds the fixed amount to each item with a bracket.",
+    "example": {
+     "question": "8 books at x each plus a set at sh 150, total sh 398",
+     "wrong_answer": "8(x + 150) = 398",
+     "correct_answer": "8x + 150 = 398"
+    }
+   },
+   {
+    "code": "MATH.G7.ALGEBR.LINEAR_EQUATIONS.FORM_EQUATION_FROM_STORY.M_MULTIPLIER_AS_ADDEND",
+    "listen_for": [
+     "x + 8"
+    ],
+    "ask": "What do 8 books at x each cost?",
+    "repair": "8 times x.",
+    "error": "Writes the number of items as an added number.",
+    "example": {
+     "question": "8 books at x each plus a set at sh 150, total sh 398",
+     "wrong_answer": "x + 8 + 150 = 398",
+     "correct_answer": "8x + 150 = 398"
+    }
+   },
+   {
+    "code": "MATH.G7.ALGEBR.LINEAR_EQUATIONS.FORM_EQUATION_FROM_STORY.M_FIXED_ON_WRONG_SIDE",
+    "listen_for": [
+     "8x = 398 + 150"
+    ],
+    "ask": "Is the set part of the total?",
+    "repair": "Keep it with the books.",
+    "error": "Adds the fixed amount to the total instead of taking it from the total.",
+    "example": {
+     "question": "8 books at x each plus a set at sh 150, total sh 398",
+     "wrong_answer": "8x = 398 + 150",
+     "correct_answer": "8x + 150 = 398"
+    }
+   }
+  ],
+  "checks": [
+   {
+    "question": "8 books at x each plus a set at sh 150: total sh 398. Equation?",
+    "answer": "8x + 150 = 398",
+    "shows": "form"
+   },
+   {
+    "question": "Solve it",
+    "answer": "x = 31",
+    "shows": "solve"
+   }
+  ],
+  "name": "Form a linear equation from a story",
+  "sub_strand": "MATH.G7.ALGEBR.LINEAR_EQUATIONS",
+  "sub_strand_name": "Linear Equations",
+  "status": "draft: written 17 Nov 2026 offline for the Grade 7 pilot; not yet checked by a Kenyan maths teacher; not loaded by the live tutor"
+ },
+ "MATH.G7.ALGEBR.LINEAR_EQUATIONS.SOLVE_TWO_STEP": {
+  "skill": "MATH.G7.ALGEBR.LINEAR_EQUATIONS.SOLVE_TWO_STEP",
+  "key_step": "The child undoes the added or taken number first, then the multiplier, doing the same on both sides, and checks the answer back in the equation.",
+  "floor": {
+   "prerequisite": "Solves one-step equations.",
+   "question": "x + 6 = 20",
+   "answer": "14"
+  },
+  "representations": [
+   "a balance",
+   "steps written down",
+   "a check"
+  ],
+  "steps": [
+   "Take 6 from both sides.",
+   "Divide both sides by the number in front of x.",
+   "Write x = answer.",
+   "Put it back to check."
+  ],
+  "contexts": [
+   "parking fees",
+   "books at a price",
+   "ages"
+  ],
+  "board": [
+   {
+    "beat": "draw",
+    "do": "Draw a balance: 6x + 6 on the left, 78 on the right."
+   },
+   {
+    "beat": "point",
+    "do": "Point at the +6.",
+    "say": "What do we do to remove it?"
+   },
+   {
+    "beat": "pause",
+    "do": "Wait for the child to say."
+   }
+  ],
+  "misconceptions": [
+   {
+    "code": "MATH.G7.ALGEBR.LINEAR_EQUATIONS.SOLVE_TWO_STEP.M_DIVISION_STEP_MISSED",
+    "listen_for": [
+     "72",
+     "that is the answer"
+    ],
+    "ask": "What does 72 stand for: x or 6x?",
+    "repair": "Divide by 6.",
+    "error": "Stops before dividing by the number in front of x.",
+    "example": {
+     "question": "6x + 6 = 78",
+     "wrong_answer": "72",
+     "correct_answer": "12"
+    }
+   },
+   {
+    "code": "MATH.G7.ALGEBR.LINEAR_EQUATIONS.SOLVE_TWO_STEP.M_SIGN_NOT_REVERSED",
+    "listen_for": [
+     "84",
+     "14"
+    ],
+    "ask": "To remove +6 do we add or take away?",
+    "repair": "Take 6 from both sides.",
+    "error": "Adds the number to both sides when it is already added.",
+    "example": {
+     "question": "6x + 6 = 78",
+     "wrong_answer": "14",
+     "correct_answer": "12"
+    }
+   },
+   {
+    "code": "MATH.G7.ALGEBR.LINEAR_EQUATIONS.SOLVE_TWO_STEP.M_INVERSE_OPERATION_WRONG",
+    "listen_for": [
+     "126"
+    ],
+    "ask": "To undo times 3 what do we do?",
+    "repair": "Divide by 3.",
+    "error": "Multiplies when the step is to divide.",
+    "example": {
+     "question": "3n = 42",
+     "wrong_answer": "126",
+     "correct_answer": "14"
+    }
+   },
+   {
+    "code": "MATH.G7.ALGEBR.LINEAR_EQUATIONS.SOLVE_TWO_STEP.M_LAST_ROW_TAKEN",
+    "listen_for": [
+     "3"
+    ],
+    "ask": "Is 6x + 6 = 24 when x = 3?",
+    "repair": "Continue the table.",
+    "error": "Gives the last value in a table as the solution.",
+    "example": {
+     "question": "Table of 6x + 6 for x = 1, 2, 3: solve 6x + 6 = 78",
+     "wrong_answer": "3",
+     "correct_answer": "12"
+    }
+   }
+  ],
+  "checks": [
+   {
+    "question": "Solve 6x + 6 = 78",
+    "answer": "x = 12",
+    "shows": "two steps"
+   },
+   {
+    "question": "Solve 3n + 3 = 45",
+    "answer": "n = 14",
+    "shows": "two steps"
+   }
+  ],
+  "name": "Solve a two-step linear equation",
+  "sub_strand": "MATH.G7.ALGEBR.LINEAR_EQUATIONS",
+  "sub_strand_name": "Linear Equations",
+  "status": "draft: written 17 Nov 2026 offline for the Grade 7 pilot; not yet checked by a Kenyan maths teacher; not loaded by the live tutor"
+ },
+ "MATH.G7.ALGEBR.LINEAR_EQUATIONS.SOLVE_BOTH_SIDES": {
+  "skill": "MATH.G7.ALGEBR.LINEAR_EQUATIONS.SOLVE_BOTH_SIDES",
+  "key_step": "The child takes the smaller x term from both sides first, then the number, then divides.",
+  "floor": {
+   "prerequisite": "Solves a two-step equation.",
+   "question": "2x + 4 = 12",
+   "answer": "x = 4"
+  },
+  "representations": [
+   "a balance with x on both pans",
+   "steps",
+   "check on both sides"
+  ],
+  "steps": [
+   "Take the smaller x term from both sides.",
+   "Undo the number.",
+   "Divide.",
+   "Check in both sides."
+  ],
+  "contexts": [
+   "two phone plans",
+   "saving plans",
+   "taxi charges"
+  ],
+  "board": [
+   {
+    "beat": "draw",
+    "do": "Draw a balance with 4x - 4 on one pan and 2x + 12 on the other."
+   },
+   {
+    "beat": "point",
+    "do": "Point at 2x on the right.",
+    "say": "What do we do about this term?"
+   },
+   {
+    "beat": "pause",
+    "do": "Wait for the child to say."
+   }
+  ],
+  "misconceptions": [
+   {
+    "code": "MATH.G7.ALGEBR.LINEAR_EQUATIONS.SOLVE_BOTH_SIDES.M_UNKNOWN_TERM_MOVED_SAME_SIGN",
+    "listen_for": [
+     "6x"
+    ],
+    "ask": "Do we take or add 2x on both sides?",
+    "repair": "Take 2x from both sides.",
+    "error": "Moves an x term to the other side without changing its sign.",
+    "example": {
+     "question": "4x - 4 = 2x + 12",
+     "wrong_answer": "6x = 16",
+     "correct_answer": "2x = 16"
+    }
+   },
+   {
+    "code": "MATH.G7.ALGEBR.LINEAR_EQUATIONS.SOLVE_BOTH_SIDES.M_ONE_SIDE_ONLY_CHANGED",
+    "listen_for": [
+     "only the left"
+    ],
+    "ask": "What happens to the balance if only one pan changes?",
+    "repair": "Do the same to both sides.",
+    "error": "Does a step on one side only.",
+    "example": {
+     "question": "4x - 4 = 2x + 12: take 2x from the left only",
+     "wrong_answer": "2x - 4 = 2x + 12",
+     "correct_answer": "2x - 4 = 12"
+    }
+   }
+  ],
+  "checks": [
+   {
+    "question": "Solve 4x - 4 = 2x + 12",
+    "answer": "x = 8",
+    "shows": "both sides"
+   },
+   {
+    "question": "Check x = 8 in both sides",
+    "answer": "28 and 28",
+    "shows": "check"
+   }
+  ],
+  "name": "Solve an equation with the unknown on both sides",
+  "sub_strand": "MATH.G7.ALGEBR.LINEAR_EQUATIONS",
+  "sub_strand_name": "Linear Equations",
+  "status": "draft: written 17 Nov 2026 offline for the Grade 7 pilot; not yet checked by a Kenyan maths teacher; not loaded by the live tutor"
+ },
+ "MATH.G7.ALGEBR.LINEAR_EQUATIONS.EQUATION_BALANCE_REASON": {
+  "skill": "MATH.G7.ALGEBR.LINEAR_EQUATIONS.EQUATION_BALANCE_REASON",
+  "key_step": "The child says an equation is a balance, so the same is done to both sides to keep it level.",
+  "floor": {
+   "prerequisite": "Reads = as balance.",
+   "question": "Is 8 + 4 = 7 + 5 true?",
+   "answer": "Yes"
+  },
+  "representations": [
+   "a balance with bags",
+   "the equation under it",
+   "words"
+  ],
+  "steps": [
+   "Show a level balance.",
+   "Take the same from both pans.",
+   "It stays level.",
+   "Say why in words."
+  ],
+  "contexts": [
+   "sweets in bags",
+   "a seesaw",
+   "a market scale"
+  ],
+  "board": [
+   {
+    "beat": "draw",
+    "do": "Draw a level balance: x + 8 and 28."
+   },
+   {
+    "beat": "point",
+    "do": "Point at the left pan.",
+    "say": "If we take 8 from here only, what happens?"
+   },
+   {
+    "beat": "pause",
+    "do": "Wait for the child to say."
+   }
+  ],
+  "misconceptions": [
+   {
+    "code": "MATH.G7.ALGEBR.LINEAR_EQUATIONS.EQUATION_BALANCE_REASON.M_NUMBER_SIZE_DECIDES_STEP",
+    "listen_for": [
+     "bigger number"
+    ],
+    "ask": "Would it work for a smaller number?",
+    "repair": "It is about balance, not size.",
+    "error": "Says a number is taken off both sides because it is the bigger number.",
+    "example": {
+     "question": "Why take 8 from both sides in x + 8 = 28?",
+     "wrong_answer": "because 8 is the bigger number",
+     "correct_answer": "doing the same to both sides keeps them equal"
+    }
+   },
+   {
+    "code": "MATH.G7.ALGEBR.LINEAR_EQUATIONS.EQUATION_BALANCE_REASON.M_UNKNOWN_ALWAYS_LEFT",
+    "listen_for": [
+     "x on the left"
+    ],
+    "ask": "Is 28 = x + 8 the same?",
+    "repair": "x can be on either side.",
+    "error": "Believes the unknown must always be on the left.",
+    "example": {
+     "question": "Why take 8 from both sides?",
+     "wrong_answer": "x must stay on the left",
+     "correct_answer": "to keep the sides equal"
+    }
+   },
+   {
+    "code": "MATH.G7.ALGEBR.LINEAR_EQUATIONS.EQUATION_BALANCE_REASON.M_RULE_WITHOUT_REASON",
+    "listen_for": [
+     "it is the rule"
+    ],
+    "ask": "What happens to a balance if you take from one side?",
+    "repair": "It tips: do the same to both.",
+    "error": "Says it is just the rule, with no reason.",
+    "example": {
+     "question": "Why take 8 from both sides?",
+     "wrong_answer": "it is just the rule",
+     "correct_answer": "to keep the sides equal"
+    }
+   }
+  ],
+  "checks": [
+   {
+    "question": "Why take 8 from both sides in x + 8 = 28?",
+    "answer": "to keep both sides equal",
+    "shows": "balance"
+   },
+   {
+    "question": "Can x be on the right side?",
+    "answer": "Yes",
+    "shows": "either side"
+   }
+  ],
+  "name": "Say why the same is done to both sides of an equation",
+  "sub_strand": "MATH.G7.ALGEBR.LINEAR_EQUATIONS",
+  "sub_strand_name": "Linear Equations",
+  "status": "draft: written 17 Nov 2026 offline for the Grade 7 pilot; not yet checked by a Kenyan maths teacher; not loaded by the live tutor"
+ },
+ "MATH.G7.ALGEBR.LINEAR_EQUATIONS.SOLVE_IN_CONTEXT": {
+  "skill": "MATH.G7.ALGEBR.LINEAR_EQUATIONS.SOLVE_IN_CONTEXT",
+  "key_step": "The child forms the equation from the story, solves it, and then answers the quantity the question asks for.",
+  "floor": {
+   "prerequisite": "Solves two-step equations.",
+   "question": "5x + 10 = 90",
+   "answer": "x = 16"
+  },
+  "representations": [
+   "the story as a bar",
+   "the equation",
+   "the answer in a sentence"
+  ],
+  "steps": [
+   "Name the unknown.",
+   "Form the equation.",
+   "Solve.",
+   "Answer what was asked, with the unit."
+  ],
+  "contexts": [
+   "ages",
+   "parking charge",
+   "mangoes in boxes",
+   "money at the start"
+  ],
+  "board": [
+   {
+    "beat": "write",
+    "do": "Write: mother is 4 times Makena; in 4 years the sum is 63."
+   },
+   {
+    "beat": "draw",
+    "do": "Draw a table: now and in 4 years for both."
+   },
+   {
+    "beat": "pause",
+    "do": "Wait for the child to write the equation."
+   }
+  ],
+  "misconceptions": [
+   {
+    "code": "MATH.G7.ALGEBR.LINEAR_EQUATIONS.SOLVE_IN_CONTEXT.M_FIXED_PART_IGNORED",
+    "listen_for": [
+     "10.5"
+    ],
+    "ask": "Is the fixed charge part of the total?",
+    "repair": "Take it away first.",
+    "error": "Divides the whole charge by the rate and ignores the fixed part.",
+    "example": {
+     "question": "Parking sh 20 for each hour plus sh 30 fixed, total sh 210: hours?",
+     "wrong_answer": "10.5",
+     "correct_answer": "9"
+    }
+   },
+   {
+    "code": "MATH.G7.ALGEBR.LINEAR_EQUATIONS.SOLVE_IN_CONTEXT.M_ASKED_QUANTITY_MIXED",
+    "listen_for": [
+     "11",
+     "Makena"
+    ],
+    "ask": "Whose age is asked?",
+    "repair": "Answer the mother.",
+    "error": "Gives the unknown instead of the quantity asked.",
+    "example": {
+     "question": "Mother is 4 times Makena. In 4 years the sum of their ages is 63. Mother's age now?",
+     "wrong_answer": "11 (Makena)",
+     "correct_answer": "44"
+    }
+   },
+   {
+    "code": "MATH.G7.ALGEBR.LINEAR_EQUATIONS.SOLVE_IN_CONTEXT.M_STEP_AMOUNT_AS_UNKNOWN",
+    "listen_for": [
+     "200"
+    ],
+    "ask": "Is 200 what there was at the start?",
+    "repair": "x is the start.",
+    "error": "Gives the amount spent as the unknown.",
+    "example": {
+     "question": "x - 200 = 70: find x",
+     "wrong_answer": "200",
+     "correct_answer": "270"
+    }
+   },
+   {
+    "code": "MATH.G7.ALGEBR.LINEAR_EQUATIONS.SOLVE_IN_CONTEXT.M_FUTURE_AGE_AS_NOW",
+    "listen_for": [
+     "48"
+    ],
+    "ask": "Is that her age now?",
+    "repair": "Take away 4.",
+    "error": "Gives the age in the future as the age now.",
+    "example": {
+     "question": "Mother's age now (sum in 4 years is 63)",
+     "wrong_answer": "48",
+     "correct_answer": "44"
+    }
+   },
+   {
+    "code": "MATH.G7.ALGEBR.LINEAR_EQUATIONS.SOLVE_IN_CONTEXT.M_TIME_CHANGE_NOT_APPLIED_TO_BOTH",
+    "listen_for": [
+     "50.4"
+    ],
+    "ask": "Do both get older?",
+    "repair": "Add 4 to each.",
+    "error": "Ignores that both people get older.",
+    "example": {
+     "question": "Sum in 4 years is 63; mother is 4 times Makena",
+     "wrong_answer": "50.4",
+     "correct_answer": "44"
+    }
+   },
+   {
+    "code": "MATH.G7.ALGEBR.LINEAR_EQUATIONS.SOLVE_IN_CONTEXT.M_LOOSE_NOT_REMOVED",
+    "listen_for": [
+     "18"
+    ],
+    "ask": "Are the loose ones in the boxes?",
+    "repair": "Take them away first.",
+    "error": "Divides the total by the number of boxes with the loose items still in.",
+    "example": {
+     "question": "5 boxes and 10 loose, 90 in all: mangoes in each box",
+     "wrong_answer": "18",
+     "correct_answer": "16"
+    }
+   },
+   {
+    "code": "MATH.G7.ALGEBR.LINEAR_EQUATIONS.SOLVE_IN_CONTEXT.M_SUBTRACTED_TO_SHARE",
+    "listen_for": [
+     "75"
+    ],
+    "ask": "Share equally: add, take, times or divide?",
+    "repair": "Divide.",
+    "error": "Subtracts the number of boxes to share equally.",
+    "example": {
+     "question": "80 mangoes in 5 boxes: how many in each?",
+     "wrong_answer": "75",
+     "correct_answer": "16"
+    }
+   },
+   {
+    "code": "MATH.G7.ALGEBR.LINEAR_EQUATIONS.SOLVE_IN_CONTEXT.M_MULTIPLIED_TO_SHARE",
+    "listen_for": [
+     "400"
+    ],
+    "ask": "Should each box hold more than all?",
+    "repair": "Divide.",
+    "error": "Multiplies where the amount is shared.",
+    "example": {
+     "question": "80 mangoes in 5 boxes: how many in each?",
+     "wrong_answer": "400",
+     "correct_answer": "16"
+    }
+   },
+   {
+    "code": "MATH.G7.ALGEBR.LINEAR_EQUATIONS.SOLVE_IN_CONTEXT.M_ONE_PER_BOX",
+    "listen_for": [
+     "87"
+    ],
+    "ask": "How many in a box?",
+    "repair": "Each box holds 16.",
+    "error": "Takes one mango from the total for each box sold instead of a box full.",
+    "example": {
+     "question": "16 in each box; 3 boxes sold from 90: left?",
+     "wrong_answer": "87",
+     "correct_answer": "42"
+    }
+   },
+   {
+    "code": "MATH.G7.ALGEBR.LINEAR_EQUATIONS.SOLVE_IN_CONTEXT.M_ONE_BOX_NOT_THREE",
+    "listen_for": [
+     "74"
+    ],
+    "ask": "How many boxes sold?",
+    "repair": "Three.",
+    "error": "Takes only one box away.",
+    "example": {
+     "question": "16 in each box; 3 boxes sold from 90: left?",
+     "wrong_answer": "74",
+     "correct_answer": "42"
+    }
+   },
+   {
+    "code": "MATH.G7.ALGEBR.LINEAR_EQUATIONS.SOLVE_IN_CONTEXT.M_LOOSE_COUNTED_AGAIN",
+    "listen_for": [
+     "32"
+    ],
+    "ask": "Were the loose ones sold?",
+    "repair": "They are still there.",
+    "error": "Takes the loose items away a second time.",
+    "example": {
+     "question": "16 in each box; 3 boxes sold from 90 (10 loose): left?",
+     "wrong_answer": "32",
+     "correct_answer": "42"
+    }
+   }
+  ],
+  "checks": [
+   {
+    "question": "Mother is 4 times Makena. In 4 years the sum of their ages is 63. Mother's age now?",
+    "answer": "44",
+    "shows": "ages"
+   },
+   {
+    "question": "Parking sh 20 an hour plus sh 30, total sh 210. Hours?",
+    "answer": "9",
+    "shows": "fixed part"
+   }
+  ],
+  "name": "Form and solve an equation to answer a question in a story",
+  "sub_strand": "MATH.G7.ALGEBR.LINEAR_EQUATIONS",
+  "sub_strand_name": "Linear Equations",
+  "status": "draft: written 17 Nov 2026 offline for the Grade 7 pilot; not yet checked by a Kenyan maths teacher; not loaded by the live tutor"
  }
 };
 export default TEACHING_PACK_G7;

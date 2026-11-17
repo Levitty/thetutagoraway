@@ -586,6 +586,97 @@
     "check a root"
    ],
    "mastery": "The child finds the two perfect squares either side of a number (98 lies between 81 and 100) and so places its root between two whole numbers (between 9 and 10). The number is not itself a perfect square: this skill supports checking roots."
+  },
+  "MATH.G7.ALGEBR.ALGEBRAIC_EXPRESSIONS.FORM_EXPRESSION_RATE_FIXED": {
+   "forms": [
+    "choose the expression from a table",
+    "what does each part mean",
+    "write the charge for n items",
+    "test with values"
+   ],
+   "mastery": "From a table or story (delivery of n jerricans at sh 30 each plus sh 10), the child writes the expression rate x n + fixed, tests it with n = 1 and n = 2, and says what each part means."
+  },
+  "MATH.G7.ALGEBR.ALGEBRAIC_EXPRESSIONS.FORM_EXPRESSION_RELATIONS": {
+   "forms": [
+    "expression for each person",
+    "total of three ages",
+    "the difference between two ages",
+    "which expression is right"
+   ],
+   "mastery": "Given one person is x years old, another is 2 years younger and another is 3 times as old, the child writes an expression for each and for their total, using brackets only when a whole group is taken."
+  },
+  "MATH.G7.ALGEBR.ALGEBRAIC_EXPRESSIONS.FORM_FROM_STATEMENT": {
+   "forms": [
+    "words to expression",
+    "expression to words",
+    "which statement matches",
+    "less than in the right order"
+   ],
+   "mastery": "The child turns words such as \"3 more than x\", \"5 less than n\", \"twice y and then 4 more\" and \"a third of m\" into expressions, keeping the order for \"less than\"."
+  },
+  "MATH.G7.ALGEBR.ALGEBRAIC_EXPRESSIONS.SIMPLIFY_LIKE_TERMS": {
+   "forms": [
+    "collect like terms",
+    "perimeter of a plot",
+    "find a and b in ax + b",
+    "substitute x"
+   ],
+   "mastery": "The child collects the x terms and the number terms of an expression with up to three terms of each kind, keeps each sign, counts a plain x as 1x, and substitutes a value to check or to use."
+  },
+  "MATH.G7.ALGEBR.ALGEBRAIC_EXPRESSIONS.SIMPLIFY_WITH_BRACKETS": {
+   "forms": [
+    "expand the bracket",
+    "perimeter with a bracket",
+    "find the wrong step",
+    "is x + 8 the same as 8x"
+   ],
+   "mastery": "The child multiplies every term inside a bracket by the number outside, collects like terms, and does not join an x term with a number term."
+  },
+  "MATH.G7.ALGEBR.LINEAR_EQUATIONS.FORM_EQUATION_FROM_STORY": {
+   "forms": [
+    "choose the equation",
+    "what does each part mean",
+    "write the equation",
+    "which story matches the equation"
+   ],
+   "mastery": "From a story with a price for each item, a fixed amount and a total (8 books and a geometry set, total sh 398) the child writes an equation such as 8x + 150 = 398, with the fixed amount added once and on the same side as the books."
+  },
+  "MATH.G7.ALGEBR.LINEAR_EQUATIONS.SOLVE_TWO_STEP": {
+   "forms": [
+    "solve and check",
+    "solve from a table of values",
+    "find the wrong step",
+    "which step first"
+   ],
+   "mastery": "The child solves equations like 6x + 6 = 78 and 3n + 3 = 45 by undoing the added or subtracted number first and then the multiplier, doing the same to both sides, and checks by putting the answer back."
+  },
+  "MATH.G7.ALGEBR.LINEAR_EQUATIONS.SOLVE_BOTH_SIDES": {
+   "forms": [
+    "solve with x on both sides",
+    "find the wrong step",
+    "what to do first",
+    "check in both sides"
+   ],
+   "mastery": "The child solves equations like 4x - 4 = 2x + 12 by taking the smaller x term from both sides, then undoing the number, then dividing, and checks in both sides."
+  },
+  "MATH.G7.ALGEBR.LINEAR_EQUATIONS.EQUATION_BALANCE_REASON": {
+   "forms": [
+    "why both sides",
+    "which explanation is right",
+    "balance picture",
+    "what stays the same"
+   ],
+   "mastery": "The child explains that an equation is a balance, so what is done to one side must be done to the other, and that the unknown can be on either side."
+  },
+  "MATH.G7.ALGEBR.LINEAR_EQUATIONS.SOLVE_IN_CONTEXT": {
+   "forms": [
+    "ages in 4 years",
+    "parking charge",
+    "mangoes in boxes",
+    "money at the start",
+    "which quantity is asked"
+   ],
+   "mastery": "The child forms an equation for a story (ages after some years, a parking charge with a fixed part, equal boxes and loose items, money left after spending), solves it, and answers the quantity the question asks for, not the unknown."
   }
  }
 }

@@ -2504,5 +2504,593 @@
   "help": "Test: 10 x 10 = 100 is more than 98, so the root is less than 10.",
   "source": "to be confirmed by a teacher (no source yet)",
   "status": "draft"
+ },
+ "MATH.G7.ALGEBR.ALGEBRAIC_EXPRESSIONS.FORM_EXPRESSION_RATE_FIXED.M_RATE_AND_FIXED_SWAPPED": {
+  "skill": "MATH.G7.ALGEBR.ALGEBRAIC_EXPRESSIONS.FORM_EXPRESSION_RATE_FIXED",
+  "error": "Swaps the rate and the fixed amount.",
+  "example": {
+   "question": "Charge is sh 30 for each jerrican plus sh 10 delivery. Expression for n jerricans?",
+   "wrong_answer": "10n + 30",
+   "correct_answer": "30n + 10"
+  },
+  "cause": "Reads the numbers in the order they are written.",
+  "reveals": "The answer 10n + 30 as a wrong option, with a reason that names the idea.",
+  "help": "Test n = 2: the table says 70, but 10 x 2 + 30 is only 50.",
+  "source": "to be confirmed by a teacher (no source yet)",
+  "status": "draft"
+ },
+ "MATH.G7.ALGEBR.ALGEBRAIC_EXPRESSIONS.FORM_EXPRESSION_RATE_FIXED.M_FIXED_CHARGE_MULTIPLIED": {
+  "skill": "MATH.G7.ALGEBR.ALGEBRAIC_EXPRESSIONS.FORM_EXPRESSION_RATE_FIXED",
+  "error": "Multiplies the fixed charge by n as well.",
+  "example": {
+   "question": "Charge is sh 30 each plus sh 10 delivery",
+   "wrong_answer": "40n",
+   "correct_answer": "30n + 10"
+  },
+  "cause": "Combines the two numbers because both are in shillings.",
+  "reveals": "The answer 40n as a wrong option, with a reason that names the idea.",
+  "help": "The delivery fee is paid once, not for each jerrican.",
+  "source": "to be confirmed by a teacher (no source yet)",
+  "status": "draft"
+ },
+ "MATH.G7.ALGEBR.ALGEBRAIC_EXPRESSIONS.FORM_EXPRESSION_RATE_FIXED.M_FIXED_ADDED_BEFORE_MULTIPLYING": {
+  "skill": "MATH.G7.ALGEBR.ALGEBRAIC_EXPRESSIONS.FORM_EXPRESSION_RATE_FIXED",
+  "error": "Adds the fixed amount to n first, then multiplies.",
+  "example": {
+   "question": "Charge is sh 30 each plus sh 10 delivery",
+   "wrong_answer": "30(n + 10)",
+   "correct_answer": "30n + 10"
+  },
+  "cause": "Puts a bracket round everything that is added.",
+  "reveals": "The answer 30(n + 10) as a wrong option, with a reason that names the idea.",
+  "help": "Try n = 2: 30 x 12 = 360, but the charge is 70.",
+  "source": "to be confirmed by a teacher (no source yet)",
+  "status": "draft"
+ },
+ "MATH.G7.ALGEBR.ALGEBRAIC_EXPRESSIONS.FORM_EXPRESSION_RELATIONS.M_YOUNGER_ADDED": {
+  "skill": "MATH.G7.ALGEBR.ALGEBRAIC_EXPRESSIONS.FORM_EXPRESSION_RELATIONS",
+  "error": "Adds where a person is younger.",
+  "example": {
+   "question": "Barasa is x. His brother is 2 years younger. The brother's age?",
+   "wrong_answer": "x + 2",
+   "correct_answer": "x - 2"
+  },
+  "cause": "Takes \"2 years\" as always being added.",
+  "reveals": "The answer x + 2 as a wrong option, with a reason that names the idea.",
+  "help": "Younger means a smaller age: take 2 away.",
+  "source": "to be confirmed by a teacher (no source yet)",
+  "status": "draft"
+ },
+ "MATH.G7.ALGEBR.ALGEBRAIC_EXPRESSIONS.FORM_EXPRESSION_RELATIONS.M_PERSON_MISSED": {
+  "skill": "MATH.G7.ALGEBR.ALGEBRAIC_EXPRESSIONS.FORM_EXPRESSION_RELATIONS",
+  "error": "Leaves out one of the people in the total.",
+  "example": {
+   "question": "Ages: Barasa x, brother x - 2, mother 3x. Total?",
+   "wrong_answer": "4x - 2",
+   "correct_answer": "5x - 2"
+  },
+  "cause": "Adds two of the three expressions.",
+  "reveals": "The answer 4x - 2 as a wrong option, with a reason that names the idea.",
+  "help": "Write all three ages in a line and add them.",
+  "source": "to be confirmed by a teacher (no source yet)",
+  "status": "draft"
+ },
+ "MATH.G7.ALGEBR.ALGEBRAIC_EXPRESSIONS.FORM_EXPRESSION_RELATIONS.M_RELATION_APPLIED_TO_ALL": {
+  "skill": "MATH.G7.ALGEBR.ALGEBRAIC_EXPRESSIONS.FORM_EXPRESSION_RELATIONS",
+  "error": "Applies the \"younger\" change to every person by using a bracket.",
+  "example": {
+   "question": "Ages: x, x - 2 and 3x. Total?",
+   "wrong_answer": "5(x - 2)",
+   "correct_answer": "5x - 2"
+  },
+  "cause": "Puts a bracket round the whole sum.",
+  "reveals": "The answer 5(x - 2) as a wrong option, with a reason that names the idea.",
+  "help": "Only the brother is 2 years younger.",
+  "source": "to be confirmed by a teacher (no source yet)",
+  "status": "draft"
+ },
+ "MATH.G7.ALGEBR.ALGEBRAIC_EXPRESSIONS.FORM_FROM_STATEMENT.M_MORE_THAN_AS_PRODUCT": {
+  "skill": "MATH.G7.ALGEBR.ALGEBRAIC_EXPRESSIONS.FORM_FROM_STATEMENT",
+  "error": "Writes \"3 more than x\" as 3x.",
+  "example": {
+   "question": "3 more than x",
+   "wrong_answer": "3x",
+   "correct_answer": "x + 3"
+  },
+  "cause": "Puts the number and the letter side by side.",
+  "reveals": "The answer 3x as a wrong option, with a reason that names the idea.",
+  "help": "If x is 5, 3 more than 5 is 8, but 3x would be 15.",
+  "source": "to be confirmed by a teacher (no source yet)",
+  "status": "draft"
+ },
+ "MATH.G7.ALGEBR.ALGEBRAIC_EXPRESSIONS.FORM_FROM_STATEMENT.M_LESS_THAN_REVERSED": {
+  "skill": "MATH.G7.ALGEBR.ALGEBRAIC_EXPRESSIONS.FORM_FROM_STATEMENT",
+  "error": "Writes \"5 less than n\" as 5 - n.",
+  "example": {
+   "question": "5 less than n",
+   "wrong_answer": "5 - n",
+   "correct_answer": "n - 5"
+  },
+  "cause": "Writes the numbers in the order they are spoken.",
+  "reveals": "The answer 5 - n as a wrong option, with a reason that names the idea.",
+  "help": "If n is 8, 5 less than 8 is 3: that is 8 - 5.",
+  "source": "to be confirmed by a teacher (no source yet)",
+  "status": "draft"
+ },
+ "MATH.G7.ALGEBR.ALGEBRAIC_EXPRESSIONS.SIMPLIFY_LIKE_TERMS.M_TERM_MISSED": {
+  "skill": "MATH.G7.ALGEBR.ALGEBRAIC_EXPRESSIONS.SIMPLIFY_LIKE_TERMS",
+  "error": "Leaves one x term out when collecting.",
+  "example": {
+   "question": "(x + 6) + (4x + 1) + (2x - 1): the number in front of x",
+   "wrong_answer": "5",
+   "correct_answer": "7"
+  },
+  "cause": "Adds two of the three terms.",
+  "reveals": "The answer 5 as a wrong option, with a reason that names the idea.",
+  "help": "Underline every x term first.",
+  "source": "to be confirmed by a teacher (no source yet)",
+  "status": "draft"
+ },
+ "MATH.G7.ALGEBR.ALGEBRAIC_EXPRESSIONS.SIMPLIFY_LIKE_TERMS.M_LIKE_TERMS_MULTIPLIED": {
+  "skill": "MATH.G7.ALGEBR.ALGEBRAIC_EXPRESSIONS.SIMPLIFY_LIKE_TERMS",
+  "error": "Multiplies the numbers in front of x instead of adding them.",
+  "example": {
+   "question": "x + 4x + 2x: the number in front of x",
+   "wrong_answer": "8",
+   "correct_answer": "7"
+  },
+  "cause": "Thinks collecting means multiplying.",
+  "reveals": "The answer 8 as a wrong option, with a reason that names the idea.",
+  "help": "x + 4x + 2x is 1 + 4 + 2 = 7 lots of x.",
+  "source": "to be confirmed by a teacher (no source yet)",
+  "status": "draft"
+ },
+ "MATH.G7.ALGEBR.ALGEBRAIC_EXPRESSIONS.SIMPLIFY_LIKE_TERMS.M_COEFFICIENT_ONE_ASSUMED": {
+  "skill": "MATH.G7.ALGEBR.ALGEBRAIC_EXPRESSIONS.SIMPLIFY_LIKE_TERMS",
+  "error": "Counts each x term as one x whatever the number in front.",
+  "example": {
+   "question": "x + 4x + 2x: the number in front of x",
+   "wrong_answer": "3",
+   "correct_answer": "7"
+  },
+  "cause": "Counts the terms, not the amounts.",
+  "reveals": "The answer 3 as a wrong option, with a reason that names the idea.",
+  "help": "Add the numbers in front: 4x means four x.",
+  "source": "to be confirmed by a teacher (no source yet)",
+  "status": "draft"
+ },
+ "MATH.G7.ALGEBR.ALGEBRAIC_EXPRESSIONS.SIMPLIFY_LIKE_TERMS.M_SIGN_DROPPED": {
+  "skill": "MATH.G7.ALGEBR.ALGEBRAIC_EXPRESSIONS.SIMPLIFY_LIKE_TERMS",
+  "error": "Ignores the minus sign of a number term.",
+  "example": {
+   "question": "Number terms +6, +1 and -1: the total",
+   "wrong_answer": "8",
+   "correct_answer": "6"
+  },
+  "cause": "Adds the digits and forgets the sign.",
+  "reveals": "The answer 8 as a wrong option, with a reason that names the idea.",
+  "help": "The last term takes 1 away.",
+  "source": "to be confirmed by a teacher (no source yet)",
+  "status": "draft"
+ },
+ "MATH.G7.ALGEBR.ALGEBRAIC_EXPRESSIONS.SIMPLIFY_LIKE_TERMS.M_CONSTANT_TERM_MISSED": {
+  "skill": "MATH.G7.ALGEBR.ALGEBRAIC_EXPRESSIONS.SIMPLIFY_LIKE_TERMS",
+  "error": "Leaves a number term out when adding the numbers.",
+  "example": {
+   "question": "Number terms +6, +1 and -1: the total",
+   "wrong_answer": "7",
+   "correct_answer": "6"
+  },
+  "cause": "Adds two of the three numbers.",
+  "reveals": "The answer 7 as a wrong option, with a reason that names the idea.",
+  "help": "List all the plain numbers before adding.",
+  "source": "to be confirmed by a teacher (no source yet)",
+  "status": "draft"
+ },
+ "MATH.G7.ALGEBR.ALGEBRAIC_EXPRESSIONS.SIMPLIFY_LIKE_TERMS.M_CONSTANTS_MULTIPLIED": {
+  "skill": "MATH.G7.ALGEBR.ALGEBRAIC_EXPRESSIONS.SIMPLIFY_LIKE_TERMS",
+  "error": "Multiplies the plain numbers instead of adding.",
+  "example": {
+   "question": "Number terms +6, +1 and -1: the total",
+   "wrong_answer": "-6",
+   "correct_answer": "6"
+  },
+  "cause": "Applies the rule for x terms wrongly to numbers.",
+  "reveals": "The answer -6 as a wrong option, with a reason that names the idea.",
+  "help": "Like terms are added.",
+  "source": "to be confirmed by a teacher (no source yet)",
+  "status": "draft"
+ },
+ "MATH.G7.ALGEBR.ALGEBRAIC_EXPRESSIONS.SIMPLIFY_LIKE_TERMS.M_COEFFICIENT_ADDED_TO_VALUE": {
+  "skill": "MATH.G7.ALGEBR.ALGEBRAIC_EXPRESSIONS.SIMPLIFY_LIKE_TERMS",
+  "error": "Adds the number in front of x to the value of x instead of multiplying.",
+  "example": {
+   "question": "7x + 6 when x = 3",
+   "wrong_answer": "16",
+   "correct_answer": "27"
+  },
+  "cause": "Reads 7x as 7 + x.",
+  "reveals": "The answer 16 as a wrong option, with a reason that names the idea.",
+  "help": "7x means 7 times x.",
+  "source": "to be confirmed by a teacher (no source yet)",
+  "status": "draft"
+ },
+ "MATH.G7.ALGEBR.ALGEBRAIC_EXPRESSIONS.SIMPLIFY_LIKE_TERMS.M_CONSTANT_LEFT_OUT": {
+  "skill": "MATH.G7.ALGEBR.ALGEBRAIC_EXPRESSIONS.SIMPLIFY_LIKE_TERMS",
+  "error": "Leaves out the plain number when substituting.",
+  "example": {
+   "question": "7x + 6 when x = 3",
+   "wrong_answer": "21",
+   "correct_answer": "27"
+  },
+  "cause": "Stops after the x term.",
+  "reveals": "The answer 21 as a wrong option, with a reason that names the idea.",
+  "help": "The number term is part of the expression.",
+  "source": "to be confirmed by a teacher (no source yet)",
+  "status": "draft"
+ },
+ "MATH.G7.ALGEBR.ALGEBRAIC_EXPRESSIONS.SIMPLIFY_LIKE_TERMS.M_CONSTANT_SIGN_FLIPPED": {
+  "skill": "MATH.G7.ALGEBR.ALGEBRAIC_EXPRESSIONS.SIMPLIFY_LIKE_TERMS",
+  "error": "Subtracts a number term that is added.",
+  "example": {
+   "question": "7x + 6 when x = 3",
+   "wrong_answer": "15",
+   "correct_answer": "27"
+  },
+  "cause": "Changes the sign of the number.",
+  "reveals": "The answer 15 as a wrong option, with a reason that names the idea.",
+  "help": "Keep the sign it has: plus 6.",
+  "source": "to be confirmed by a teacher (no source yet)",
+  "status": "draft"
+ },
+ "MATH.G7.ALGEBR.ALGEBRAIC_EXPRESSIONS.SIMPLIFY_WITH_BRACKETS.M_BRACKET_FIRST_TERM_ONLY": {
+  "skill": "MATH.G7.ALGEBR.ALGEBRAIC_EXPRESSIONS.SIMPLIFY_WITH_BRACKETS",
+  "error": "Multiplies only the first term in the bracket.",
+  "example": {
+   "question": "2 x (x + 8)",
+   "wrong_answer": "2x + 8",
+   "correct_answer": "2x + 16"
+  },
+  "cause": "Forgets the second term is multiplied too.",
+  "reveals": "The answer 2x + 8 as a wrong option, with a reason that names the idea.",
+  "help": "Draw arrows from the 2 to both terms.",
+  "source": "to be confirmed by a teacher (no source yet)",
+  "status": "draft"
+ },
+ "MATH.G7.ALGEBR.ALGEBRAIC_EXPRESSIONS.SIMPLIFY_WITH_BRACKETS.M_UNLIKE_TERMS_JOINED": {
+  "skill": "MATH.G7.ALGEBR.ALGEBRAIC_EXPRESSIONS.SIMPLIFY_WITH_BRACKETS",
+  "error": "Joins an x term with a number term.",
+  "example": {
+   "question": "2 x (x + 8) written 2 x 9x",
+   "wrong_answer": "18x",
+   "correct_answer": "2x + 16"
+  },
+  "cause": "Adds x and 8 to make 9x.",
+  "reveals": "The answer 18x as a wrong option, with a reason that names the idea.",
+  "help": "x and 8 are different kinds of term: they cannot be joined.",
+  "source": "to be confirmed by a teacher (no source yet)",
+  "status": "draft"
+ },
+ "MATH.G7.ALGEBR.LINEAR_EQUATIONS.FORM_EQUATION_FROM_STORY.M_BRACKET_ADDED_TO_EVERY_TERM": {
+  "skill": "MATH.G7.ALGEBR.LINEAR_EQUATIONS.FORM_EQUATION_FROM_STORY",
+  "error": "Adds the fixed amount to each item with a bracket.",
+  "example": {
+   "question": "8 books at x each plus a set at sh 150, total sh 398",
+   "wrong_answer": "8(x + 150) = 398",
+   "correct_answer": "8x + 150 = 398"
+  },
+  "cause": "Thinks the set is bought with every book.",
+  "reveals": "The answer 8(x + 150) = 398 as a wrong option, with a reason that names the idea.",
+  "help": "The set is bought once.",
+  "source": "to be confirmed by a teacher (no source yet)",
+  "status": "draft"
+ },
+ "MATH.G7.ALGEBR.LINEAR_EQUATIONS.FORM_EQUATION_FROM_STORY.M_MULTIPLIER_AS_ADDEND": {
+  "skill": "MATH.G7.ALGEBR.LINEAR_EQUATIONS.FORM_EQUATION_FROM_STORY",
+  "error": "Writes the number of items as an added number.",
+  "example": {
+   "question": "8 books at x each plus a set at sh 150, total sh 398",
+   "wrong_answer": "x + 8 + 150 = 398",
+   "correct_answer": "8x + 150 = 398"
+  },
+  "cause": "Reads \"8 books and x\" as adding.",
+  "reveals": "The answer x + 8 + 150 = 398 as a wrong option, with a reason that names the idea.",
+  "help": "8 books each costing x is 8 times x.",
+  "source": "to be confirmed by a teacher (no source yet)",
+  "status": "draft"
+ },
+ "MATH.G7.ALGEBR.LINEAR_EQUATIONS.FORM_EQUATION_FROM_STORY.M_FIXED_ON_WRONG_SIDE": {
+  "skill": "MATH.G7.ALGEBR.LINEAR_EQUATIONS.FORM_EQUATION_FROM_STORY",
+  "error": "Adds the fixed amount to the total instead of taking it from the total.",
+  "example": {
+   "question": "8 books at x each plus a set at sh 150, total sh 398",
+   "wrong_answer": "8x = 398 + 150",
+   "correct_answer": "8x + 150 = 398"
+  },
+  "cause": "Moves a number to the other side without changing its sign.",
+  "reveals": "The answer 8x = 398 + 150 as a wrong option, with a reason that names the idea.",
+  "help": "The set is part of the total, so it stays with the books on the left.",
+  "source": "to be confirmed by a teacher (no source yet)",
+  "status": "draft"
+ },
+ "MATH.G7.ALGEBR.LINEAR_EQUATIONS.SOLVE_TWO_STEP.M_DIVISION_STEP_MISSED": {
+  "skill": "MATH.G7.ALGEBR.LINEAR_EQUATIONS.SOLVE_TWO_STEP",
+  "error": "Stops before dividing by the number in front of x.",
+  "example": {
+   "question": "6x + 6 = 78",
+   "wrong_answer": "72",
+   "correct_answer": "12"
+  },
+  "cause": "Takes the first step and thinks the equation is solved.",
+  "reveals": "The answer 72 as a wrong option, with a reason that names the idea.",
+  "help": "We want x, not 6x: divide by 6.",
+  "source": "to be confirmed by a teacher (no source yet)",
+  "status": "draft"
+ },
+ "MATH.G7.ALGEBR.LINEAR_EQUATIONS.SOLVE_TWO_STEP.M_SIGN_NOT_REVERSED": {
+  "skill": "MATH.G7.ALGEBR.LINEAR_EQUATIONS.SOLVE_TWO_STEP",
+  "error": "Adds the number to both sides when it is already added.",
+  "example": {
+   "question": "6x + 6 = 78",
+   "wrong_answer": "14",
+   "correct_answer": "12"
+  },
+  "cause": "Applies the same operation instead of the opposite one.",
+  "reveals": "The answer 14 as a wrong option, with a reason that names the idea.",
+  "help": "To undo + 6, take 6 from both sides.",
+  "source": "to be confirmed by a teacher (no source yet)",
+  "status": "draft"
+ },
+ "MATH.G7.ALGEBR.LINEAR_EQUATIONS.SOLVE_TWO_STEP.M_INVERSE_OPERATION_WRONG": {
+  "skill": "MATH.G7.ALGEBR.LINEAR_EQUATIONS.SOLVE_TWO_STEP",
+  "error": "Multiplies when the step is to divide.",
+  "example": {
+   "question": "3n = 42",
+   "wrong_answer": "126",
+   "correct_answer": "14"
+  },
+  "cause": "Does the same operation instead of the opposite one.",
+  "reveals": "The answer 126 as a wrong option, with a reason that names the idea.",
+  "help": "To undo times 3, divide by 3.",
+  "source": "to be confirmed by a teacher (no source yet)",
+  "status": "draft"
+ },
+ "MATH.G7.ALGEBR.LINEAR_EQUATIONS.SOLVE_TWO_STEP.M_LAST_ROW_TAKEN": {
+  "skill": "MATH.G7.ALGEBR.LINEAR_EQUATIONS.SOLVE_TWO_STEP",
+  "error": "Gives the last value in a table as the solution.",
+  "example": {
+   "question": "Table of 6x + 6 for x = 1, 2, 3: solve 6x + 6 = 78",
+   "wrong_answer": "3",
+   "correct_answer": "12"
+  },
+  "cause": "Reads off the table instead of continuing it.",
+  "reveals": "The answer 3 as a wrong option, with a reason that names the idea.",
+  "help": "Continue the pattern until the value is 78.",
+  "source": "to be confirmed by a teacher (no source yet)",
+  "status": "draft"
+ },
+ "MATH.G7.ALGEBR.LINEAR_EQUATIONS.SOLVE_BOTH_SIDES.M_UNKNOWN_TERM_MOVED_SAME_SIGN": {
+  "skill": "MATH.G7.ALGEBR.LINEAR_EQUATIONS.SOLVE_BOTH_SIDES",
+  "error": "Moves an x term to the other side without changing its sign.",
+  "example": {
+   "question": "4x - 4 = 2x + 12",
+   "wrong_answer": "6x = 16",
+   "correct_answer": "2x = 16"
+  },
+  "cause": "Treats moving as copying.",
+  "reveals": "The answer 6x = 16 as a wrong option, with a reason that names the idea.",
+  "help": "Take 2x from both sides: it goes from the right and leaves the left smaller.",
+  "source": "to be confirmed by a teacher (no source yet)",
+  "status": "draft"
+ },
+ "MATH.G7.ALGEBR.LINEAR_EQUATIONS.SOLVE_BOTH_SIDES.M_ONE_SIDE_ONLY_CHANGED": {
+  "skill": "MATH.G7.ALGEBR.LINEAR_EQUATIONS.SOLVE_BOTH_SIDES",
+  "error": "Does a step on one side only.",
+  "example": {
+   "question": "4x - 4 = 2x + 12: take 2x from the left only",
+   "wrong_answer": "2x - 4 = 2x + 12",
+   "correct_answer": "2x - 4 = 12"
+  },
+  "cause": "Forgets the balance.",
+  "reveals": "The answer 2x - 4 = 2x + 12 as a wrong option, with a reason that names the idea.",
+  "help": "Do the same to both sides.",
+  "source": "to be confirmed by a teacher (no source yet)",
+  "status": "draft"
+ },
+ "MATH.G7.ALGEBR.LINEAR_EQUATIONS.EQUATION_BALANCE_REASON.M_NUMBER_SIZE_DECIDES_STEP": {
+  "skill": "MATH.G7.ALGEBR.LINEAR_EQUATIONS.EQUATION_BALANCE_REASON",
+  "error": "Says a number is taken off both sides because it is the bigger number.",
+  "example": {
+   "question": "Why take 8 from both sides in x + 8 = 28?",
+   "wrong_answer": "because 8 is the bigger number",
+   "correct_answer": "doing the same to both sides keeps them equal"
+  },
+  "cause": "Looks for a reason in the size of numbers.",
+  "reveals": "The answer because 8 is the bigger number as a wrong option, with a reason that names the idea.",
+  "help": "It is not about size: a balance stays level if you do the same to both sides.",
+  "source": "to be confirmed by a teacher (no source yet)",
+  "status": "draft"
+ },
+ "MATH.G7.ALGEBR.LINEAR_EQUATIONS.EQUATION_BALANCE_REASON.M_UNKNOWN_ALWAYS_LEFT": {
+  "skill": "MATH.G7.ALGEBR.LINEAR_EQUATIONS.EQUATION_BALANCE_REASON",
+  "error": "Believes the unknown must always be on the left.",
+  "example": {
+   "question": "Why take 8 from both sides?",
+   "wrong_answer": "x must stay on the left",
+   "correct_answer": "to keep the sides equal"
+  },
+  "cause": "Has only seen x on the left.",
+  "reveals": "The answer x must stay on the left as a wrong option, with a reason that names the idea.",
+  "help": "28 = x + 8 is the same equation.",
+  "source": "to be confirmed by a teacher (no source yet)",
+  "status": "draft"
+ },
+ "MATH.G7.ALGEBR.LINEAR_EQUATIONS.EQUATION_BALANCE_REASON.M_RULE_WITHOUT_REASON": {
+  "skill": "MATH.G7.ALGEBR.LINEAR_EQUATIONS.EQUATION_BALANCE_REASON",
+  "error": "Says it is just the rule, with no reason.",
+  "example": {
+   "question": "Why take 8 from both sides?",
+   "wrong_answer": "it is just the rule",
+   "correct_answer": "to keep the sides equal"
+  },
+  "cause": "Has memorised the steps without a picture.",
+  "reveals": "The answer it is just the rule as a wrong option, with a reason that names the idea.",
+  "help": "Use a balance with bags of sweets.",
+  "source": "to be confirmed by a teacher (no source yet)",
+  "status": "draft"
+ },
+ "MATH.G7.ALGEBR.LINEAR_EQUATIONS.SOLVE_IN_CONTEXT.M_FIXED_PART_IGNORED": {
+  "skill": "MATH.G7.ALGEBR.LINEAR_EQUATIONS.SOLVE_IN_CONTEXT",
+  "error": "Divides the whole charge by the rate and ignores the fixed part.",
+  "example": {
+   "question": "Parking sh 20 for each hour plus sh 30 fixed, total sh 210: hours?",
+   "wrong_answer": "10.5",
+   "correct_answer": "9"
+  },
+  "cause": "Forgets the fixed charge is in the total.",
+  "reveals": "The answer 10.5 as a wrong option, with a reason that names the idea.",
+  "help": "Take the fixed part away before dividing.",
+  "source": "to be confirmed by a teacher (no source yet)",
+  "status": "draft"
+ },
+ "MATH.G7.ALGEBR.LINEAR_EQUATIONS.SOLVE_IN_CONTEXT.M_ASKED_QUANTITY_MIXED": {
+  "skill": "MATH.G7.ALGEBR.LINEAR_EQUATIONS.SOLVE_IN_CONTEXT",
+  "error": "Gives the unknown instead of the quantity asked.",
+  "example": {
+   "question": "Mother is 4 times Makena. In 4 years the sum of their ages is 63. Mother's age now?",
+   "wrong_answer": "11 (Makena)",
+   "correct_answer": "44"
+  },
+  "cause": "Answers with the letter value.",
+  "reveals": "The answer 11 (Makena) as a wrong option, with a reason that names the idea.",
+  "help": "Read the last line of the question again.",
+  "source": "to be confirmed by a teacher (no source yet)",
+  "status": "draft"
+ },
+ "MATH.G7.ALGEBR.LINEAR_EQUATIONS.SOLVE_IN_CONTEXT.M_STEP_AMOUNT_AS_UNKNOWN": {
+  "skill": "MATH.G7.ALGEBR.LINEAR_EQUATIONS.SOLVE_IN_CONTEXT",
+  "error": "Gives the amount spent as the unknown.",
+  "example": {
+   "question": "x - 200 = 70: find x",
+   "wrong_answer": "200",
+   "correct_answer": "270"
+  },
+  "cause": "Picks out a number from the story.",
+  "reveals": "The answer 200 as a wrong option, with a reason that names the idea.",
+  "help": "x is what there was at the start.",
+  "source": "to be confirmed by a teacher (no source yet)",
+  "status": "draft"
+ },
+ "MATH.G7.ALGEBR.LINEAR_EQUATIONS.SOLVE_IN_CONTEXT.M_FUTURE_AGE_AS_NOW": {
+  "skill": "MATH.G7.ALGEBR.LINEAR_EQUATIONS.SOLVE_IN_CONTEXT",
+  "error": "Gives the age in the future as the age now.",
+  "example": {
+   "question": "Mother's age now (sum in 4 years is 63)",
+   "wrong_answer": "48",
+   "correct_answer": "44"
+  },
+  "cause": "Stops after finding her age at the time of the sum.",
+  "reveals": "The answer 48 as a wrong option, with a reason that names the idea.",
+  "help": "Take away the 4 years.",
+  "source": "to be confirmed by a teacher (no source yet)",
+  "status": "draft"
+ },
+ "MATH.G7.ALGEBR.LINEAR_EQUATIONS.SOLVE_IN_CONTEXT.M_TIME_CHANGE_NOT_APPLIED_TO_BOTH": {
+  "skill": "MATH.G7.ALGEBR.LINEAR_EQUATIONS.SOLVE_IN_CONTEXT",
+  "error": "Ignores that both people get older.",
+  "example": {
+   "question": "Sum in 4 years is 63; mother is 4 times Makena",
+   "wrong_answer": "50.4",
+   "correct_answer": "44"
+  },
+  "cause": "Writes the sum now as 63.",
+  "reveals": "The answer 50.4 as a wrong option, with a reason that names the idea.",
+  "help": "Each person is 4 years older, so the sum is 8 more.",
+  "source": "to be confirmed by a teacher (no source yet)",
+  "status": "draft"
+ },
+ "MATH.G7.ALGEBR.LINEAR_EQUATIONS.SOLVE_IN_CONTEXT.M_LOOSE_NOT_REMOVED": {
+  "skill": "MATH.G7.ALGEBR.LINEAR_EQUATIONS.SOLVE_IN_CONTEXT",
+  "error": "Divides the total by the number of boxes with the loose items still in.",
+  "example": {
+   "question": "5 boxes and 10 loose, 90 in all: mangoes in each box",
+   "wrong_answer": "18",
+   "correct_answer": "16"
+  },
+  "cause": "Forgets the loose items are not in the boxes.",
+  "reveals": "The answer 18 as a wrong option, with a reason that names the idea.",
+  "help": "Take the loose ones away first.",
+  "source": "to be confirmed by a teacher (no source yet)",
+  "status": "draft"
+ },
+ "MATH.G7.ALGEBR.LINEAR_EQUATIONS.SOLVE_IN_CONTEXT.M_SUBTRACTED_TO_SHARE": {
+  "skill": "MATH.G7.ALGEBR.LINEAR_EQUATIONS.SOLVE_IN_CONTEXT",
+  "error": "Subtracts the number of boxes to share equally.",
+  "example": {
+   "question": "80 mangoes in 5 boxes: how many in each?",
+   "wrong_answer": "75",
+   "correct_answer": "16"
+  },
+  "cause": "Subtracts instead of dividing.",
+  "reveals": "The answer 75 as a wrong option, with a reason that names the idea.",
+  "help": "Share equally means divide.",
+  "source": "to be confirmed by a teacher (no source yet)",
+  "status": "draft"
+ },
+ "MATH.G7.ALGEBR.LINEAR_EQUATIONS.SOLVE_IN_CONTEXT.M_MULTIPLIED_TO_SHARE": {
+  "skill": "MATH.G7.ALGEBR.LINEAR_EQUATIONS.SOLVE_IN_CONTEXT",
+  "error": "Multiplies where the amount is shared.",
+  "example": {
+   "question": "80 mangoes in 5 boxes: how many in each?",
+   "wrong_answer": "400",
+   "correct_answer": "16"
+  },
+  "cause": "Sees two numbers and multiplies.",
+  "reveals": "The answer 400 as a wrong option, with a reason that names the idea.",
+  "help": "Share equally means divide.",
+  "source": "to be confirmed by a teacher (no source yet)",
+  "status": "draft"
+ },
+ "MATH.G7.ALGEBR.LINEAR_EQUATIONS.SOLVE_IN_CONTEXT.M_ONE_PER_BOX": {
+  "skill": "MATH.G7.ALGEBR.LINEAR_EQUATIONS.SOLVE_IN_CONTEXT",
+  "error": "Takes one mango from the total for each box sold instead of a box full.",
+  "example": {
+   "question": "16 in each box; 3 boxes sold from 90: left?",
+   "wrong_answer": "87",
+   "correct_answer": "42"
+  },
+  "cause": "Treats a box as one mango.",
+  "reveals": "The answer 87 as a wrong option, with a reason that names the idea.",
+  "help": "Each box holds 16.",
+  "source": "to be confirmed by a teacher (no source yet)",
+  "status": "draft"
+ },
+ "MATH.G7.ALGEBR.LINEAR_EQUATIONS.SOLVE_IN_CONTEXT.M_ONE_BOX_NOT_THREE": {
+  "skill": "MATH.G7.ALGEBR.LINEAR_EQUATIONS.SOLVE_IN_CONTEXT",
+  "error": "Takes only one box away.",
+  "example": {
+   "question": "16 in each box; 3 boxes sold from 90: left?",
+   "wrong_answer": "74",
+   "correct_answer": "42"
+  },
+  "cause": "Ignores the 3.",
+  "reveals": "The answer 74 as a wrong option, with a reason that names the idea.",
+  "help": "Three boxes are sold.",
+  "source": "to be confirmed by a teacher (no source yet)",
+  "status": "draft"
+ },
+ "MATH.G7.ALGEBR.LINEAR_EQUATIONS.SOLVE_IN_CONTEXT.M_LOOSE_COUNTED_AGAIN": {
+  "skill": "MATH.G7.ALGEBR.LINEAR_EQUATIONS.SOLVE_IN_CONTEXT",
+  "error": "Takes the loose items away a second time.",
+  "example": {
+   "question": "16 in each box; 3 boxes sold from 90 (10 loose): left?",
+   "wrong_answer": "32",
+   "correct_answer": "42"
+  },
+  "cause": "Removes the loose ones again.",
+  "reveals": "The answer 32 as a wrong option, with a reason that names the idea.",
+  "help": "The loose ones are still there.",
+  "source": "to be confirmed by a teacher (no source yet)",
+  "status": "draft"
  }
 }
