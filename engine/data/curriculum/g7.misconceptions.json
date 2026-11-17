@@ -1216,5 +1216,593 @@
   "help": "Check the answer in all three lists.",
   "source": "to be confirmed by a teacher (no source yet)",
   "status": "draft"
+ },
+ "MATH.G7.NUMBER.FRACTIONS.COMPARE_FRACTIONS.M_BIGGER_DENOMINATOR_BIGGER": {
+  "skill": "MATH.G7.NUMBER.FRACTIONS.COMPARE_FRACTIONS",
+  "error": "Believes the fraction with the bigger denominator is the bigger fraction.",
+  "example": {
+   "question": "Which is greater: 3/8 or 3/5?",
+   "wrong_answer": "3/8",
+   "correct_answer": "3/5"
+  },
+  "cause": "Takes the bigger bottom number as meaning more.",
+  "reveals": "The answer 3/8 as a wrong option, with a reason that names the idea.",
+  "help": "Draw two equal bars: eighths are smaller pieces than fifths.",
+  "source": "to be confirmed by a teacher (no source yet)",
+  "status": "draft"
+ },
+ "MATH.G7.NUMBER.FRACTIONS.COMPARE_FRACTIONS.M_NUMERATOR_ONLY_COMPARED": {
+  "skill": "MATH.G7.NUMBER.FRACTIONS.COMPARE_FRACTIONS",
+  "error": "Compares the numerators only.",
+  "example": {
+   "question": "Which is greater: 2/9 or 1/2?",
+   "wrong_answer": "2/9",
+   "correct_answer": "1/2"
+  },
+  "cause": "Looks at the top numbers and ignores the size of the pieces.",
+  "reveals": "The answer 2/9 as a wrong option, with a reason that names the idea.",
+  "help": "Rename both with the same denominator: 4/18 and 9/18.",
+  "source": "to be confirmed by a teacher (no source yet)",
+  "status": "draft"
+ },
+ "MATH.G7.NUMBER.FRACTIONS.COMPARE_FRACTIONS.M_ONE_PIECE_SHORT_EQUAL": {
+  "skill": "MATH.G7.NUMBER.FRACTIONS.COMPARE_FRACTIONS",
+  "error": "Says fractions that are each one piece short of a whole are equal.",
+  "example": {
+   "question": "4/5 and 5/6: which is greater?",
+   "wrong_answer": "They are equal",
+   "correct_answer": "5/6"
+  },
+  "cause": "Sees the same gap of one piece without seeing the pieces differ in size.",
+  "reveals": "The answer They are equal as a wrong option, with a reason that names the idea.",
+  "help": "A sixth is smaller than a fifth, so less is missing from 5/6.",
+  "source": "to be confirmed by a teacher (no source yet)",
+  "status": "draft"
+ },
+ "MATH.G7.NUMBER.FRACTIONS.ADD_UNLIKE_FRACTIONS.M_ADD_ACROSS": {
+  "skill": "MATH.G7.NUMBER.FRACTIONS.ADD_UNLIKE_FRACTIONS",
+  "error": "Adds the numerators and the denominators.",
+  "example": {
+   "question": "1/2 + 1/3",
+   "wrong_answer": "2/5",
+   "correct_answer": "5/6"
+  },
+  "cause": "Treats the bar like a separator between two whole numbers.",
+  "reveals": "The answer 2/5 as a wrong option, with a reason that names the idea.",
+  "help": "Shade 1/2 and 1/3 of one bar: together they are more than 1/2, not 2/5.",
+  "source": "to be confirmed by a teacher (no source yet)",
+  "status": "draft"
+ },
+ "MATH.G7.NUMBER.FRACTIONS.ADD_UNLIKE_FRACTIONS.M_RENAME_BOTTOM_ONLY": {
+  "skill": "MATH.G7.NUMBER.FRACTIONS.ADD_UNLIKE_FRACTIONS",
+  "error": "Renames the denominators but leaves the numerators unchanged.",
+  "example": {
+   "question": "1/2 + 1/3",
+   "wrong_answer": "2/6",
+   "correct_answer": "5/6"
+  },
+  "cause": "Remembers a common denominator but forgets the top must change too.",
+  "reveals": "The answer 2/6 as a wrong option, with a reason that names the idea.",
+  "help": "Multiply top and bottom: 1/2 = 3/6 and 1/3 = 2/6.",
+  "source": "to be confirmed by a teacher (no source yet)",
+  "status": "draft"
+ },
+ "MATH.G7.NUMBER.FRACTIONS.ADD_UNLIKE_FRACTIONS.M_CARRIED_WHOLE_DROPPED": {
+  "skill": "MATH.G7.NUMBER.FRACTIONS.ADD_UNLIKE_FRACTIONS",
+  "error": "Adds whole parts and fraction parts but loses the whole carried from the fractions.",
+  "example": {
+   "question": "2 3/4 + 1 3/4",
+   "wrong_answer": "3 1/2",
+   "correct_answer": "4 1/2"
+  },
+  "cause": "Writes 3/4 + 3/4 = 6/4 but forgets to change 6/4 into 1 2/4.",
+  "reveals": "The answer 3 1/2 as a wrong option, with a reason that names the idea.",
+  "help": "Change 6/4 into 1 2/4 and add that 1 to the wholes.",
+  "source": "to be confirmed by a teacher (no source yet)",
+  "status": "draft"
+ },
+ "MATH.G7.NUMBER.FRACTIONS.SUBTRACT_UNLIKE_FRACTIONS.M_SUBTRACT_ACROSS": {
+  "skill": "MATH.G7.NUMBER.FRACTIONS.SUBTRACT_UNLIKE_FRACTIONS",
+  "error": "Subtracts the numerators and the denominators.",
+  "example": {
+   "question": "3/4 - 1/3",
+   "wrong_answer": "2/1",
+   "correct_answer": "5/12"
+  },
+  "cause": "Treats the fraction bar like a separator between two whole numbers.",
+  "reveals": "The answer 2/1 as a wrong option, with a reason that names the idea.",
+  "help": "Rename 3/4 and 1/3 with the denominator 12 first.",
+  "source": "to be confirmed by a teacher (no source yet)",
+  "status": "draft"
+ },
+ "MATH.G7.NUMBER.FRACTIONS.SUBTRACT_UNLIKE_FRACTIONS.M_SMALLER_FROM_LARGER_FRACTION": {
+  "skill": "MATH.G7.NUMBER.FRACTIONS.SUBTRACT_UNLIKE_FRACTIONS",
+  "error": "Subtracts the smaller fraction from the larger one in each place.",
+  "example": {
+   "question": "4 1/5 - 1 3/5",
+   "wrong_answer": "3 2/5",
+   "correct_answer": "2 3/5"
+  },
+  "cause": "Avoids regrouping by reversing 1/5 and 3/5.",
+  "reveals": "The answer 3 2/5 as a wrong option, with a reason that names the idea.",
+  "help": "You cannot take 3/5 from 1/5. Take one whole from the 4 and turn it into 5/5.",
+  "source": "to be confirmed by a teacher (no source yet)",
+  "status": "draft"
+ },
+ "MATH.G7.NUMBER.FRACTIONS.SUBTRACT_UNLIKE_FRACTIONS.M_BORROWED_WHOLE_NOT_REDUCED": {
+  "skill": "MATH.G7.NUMBER.FRACTIONS.SUBTRACT_UNLIKE_FRACTIONS",
+  "error": "Regroups a whole into the fraction part but leaves the whole number as it was.",
+  "example": {
+   "question": "4 1/5 - 1 3/5",
+   "wrong_answer": "3 3/5",
+   "correct_answer": "2 3/5"
+  },
+  "cause": "Adds 5/5 to the fraction but forgets the whole became one smaller.",
+  "reveals": "The answer 3 3/5 as a wrong option, with a reason that names the idea.",
+  "help": "Write 4 1/5 as 3 6/5: the whole goes down by 1 when the fraction goes up by 1.",
+  "source": "to be confirmed by a teacher (no source yet)",
+  "status": "draft"
+ },
+ "MATH.G7.NUMBER.FRACTIONS.MULT_FRACTION_BY_WHOLE.M_WHOLE_MULTIPLIES_DENOMINATOR": {
+  "skill": "MATH.G7.NUMBER.FRACTIONS.MULT_FRACTION_BY_WHOLE",
+  "error": "Multiplies the denominator by the whole number as well as the numerator.",
+  "example": {
+   "question": "3 x 2/5",
+   "wrong_answer": "6/15",
+   "correct_answer": "6/5"
+  },
+  "cause": "Multiplies both parts of the fraction.",
+  "reveals": "The answer 6/15 as a wrong option, with a reason that names the idea.",
+  "help": "Three groups of 2 fifths is 6 fifths: the pieces stay fifths.",
+  "source": "to be confirmed by a teacher (no source yet)",
+  "status": "draft"
+ },
+ "MATH.G7.NUMBER.FRACTIONS.MULT_FRACTION_BY_WHOLE.M_ONLY_DIVIDED_BY_DENOMINATOR": {
+  "skill": "MATH.G7.NUMBER.FRACTIONS.MULT_FRACTION_BY_WHOLE",
+  "error": "Finds a fraction of an amount by dividing by the denominator only.",
+  "example": {
+   "question": "2/5 of 30",
+   "wrong_answer": "6",
+   "correct_answer": "12"
+  },
+  "cause": "Does half the job: finds 1/5 and stops.",
+  "reveals": "The answer 6 as a wrong option, with a reason that names the idea.",
+  "help": "First find one fifth (6), then take 2 of them.",
+  "source": "to be confirmed by a teacher (no source yet)",
+  "status": "draft"
+ },
+ "MATH.G7.NUMBER.FRACTIONS.MULT_FRACTION_BY_FRACTION.M_ADD_FRACTIONS_INSTEAD": {
+  "skill": "MATH.G7.NUMBER.FRACTIONS.MULT_FRACTION_BY_FRACTION",
+  "error": "Adds the fractions when told to find a part of a part.",
+  "example": {
+   "question": "2/3 x 3/4",
+   "wrong_answer": "17/12",
+   "correct_answer": "1/2"
+  },
+  "cause": "Sees two fractions and applies the operation learnt last.",
+  "reveals": "The answer 17/12 as a wrong option, with a reason that names the idea.",
+  "help": "Shade 3/4 of a bar, then 2/3 of that shaded part.",
+  "source": "to be confirmed by a teacher (no source yet)",
+  "status": "draft"
+ },
+ "MATH.G7.NUMBER.FRACTIONS.MULT_FRACTION_BY_FRACTION.M_MIXED_PARTS_MULTIPLIED_SEPARATELY": {
+  "skill": "MATH.G7.NUMBER.FRACTIONS.MULT_FRACTION_BY_FRACTION",
+  "error": "Multiplies the whole parts and the fraction parts of mixed numbers separately.",
+  "example": {
+   "question": "2 1/2 x 3 1/2",
+   "wrong_answer": "6 1/4",
+   "correct_answer": "8 3/4"
+  },
+  "cause": "Treats a mixed number as two separate numbers.",
+  "reveals": "The answer 6 1/4 as a wrong option, with a reason that names the idea.",
+  "help": "Change both to improper fractions: 5/2 x 7/2.",
+  "source": "to be confirmed by a teacher (no source yet)",
+  "status": "draft"
+ },
+ "MATH.G7.NUMBER.FRACTIONS.MULT_FRACTION_BY_FRACTION.M_FRACTION_OF_WRONG_WHOLE": {
+  "skill": "MATH.G7.NUMBER.FRACTIONS.MULT_FRACTION_BY_FRACTION",
+  "error": "Takes the second fraction of the whole amount instead of of the first part.",
+  "example": {
+   "question": "36 acres, 5/6 maize, 2/5 of the maize land by the river: how many acres?",
+   "wrong_answer": "14.4 acres",
+   "correct_answer": "12 acres"
+  },
+  "cause": "Does not see that the second fraction belongs to the maize land only.",
+  "reveals": "The answer 14.4 acres as a wrong option, with a reason that names the idea.",
+  "help": "Find the maize land first (30 acres), then take 2/5 of that.",
+  "source": "to be confirmed by a teacher (no source yet)",
+  "status": "draft"
+ },
+ "MATH.G7.NUMBER.FRACTIONS.MULT_FRACTION_BY_FRACTION.M_STOPPED_AFTER_FIRST_FRACTION": {
+  "skill": "MATH.G7.NUMBER.FRACTIONS.MULT_FRACTION_BY_FRACTION",
+  "error": "Finds the first part of a two-part story and stops.",
+  "example": {
+   "question": "36 acres, 5/6 maize, 2/5 of the maize land by the river: how many acres?",
+   "wrong_answer": "30 acres",
+   "correct_answer": "12 acres"
+  },
+  "cause": "Reads the first sentence and gives the first answer.",
+  "reveals": "The answer 30 acres as a wrong option, with a reason that names the idea.",
+  "help": "Underline the question: how many acres of maize are by the river?",
+  "source": "to be confirmed by a teacher (no source yet)",
+  "status": "draft"
+ },
+ "MATH.G7.NUMBER.FRACTIONS.RECIPROCAL.M_NOT_FLIPPED": {
+  "skill": "MATH.G7.NUMBER.FRACTIONS.RECIPROCAL",
+  "error": "Multiplies by the fraction itself instead of its reciprocal.",
+  "example": {
+   "question": "12 divided by 2/5 using the reciprocal",
+   "wrong_answer": "4.8",
+   "correct_answer": "30"
+  },
+  "cause": "Forgets to turn the fraction upside down.",
+  "reveals": "The answer 4.8 as a wrong option, with a reason that names the idea.",
+  "help": "The reciprocal of 2/5 is 5/2. Check: 2/5 x 5/2 = 1.",
+  "source": "to be confirmed by a teacher (no source yet)",
+  "status": "draft"
+ },
+ "MATH.G7.NUMBER.FRACTIONS.RECIPROCAL.M_ONLY_DENOMINATOR_USED": {
+  "skill": "MATH.G7.NUMBER.FRACTIONS.RECIPROCAL",
+  "error": "Uses only the denominator of the reciprocal.",
+  "example": {
+   "question": "12 x reciprocal of 2/5",
+   "wrong_answer": "60",
+   "correct_answer": "30"
+  },
+  "cause": "Thinks the reciprocal is the whole number 5.",
+  "reveals": "The answer 60 as a wrong option, with a reason that names the idea.",
+  "help": "The reciprocal has a top and a bottom: 5/2.",
+  "source": "to be confirmed by a teacher (no source yet)",
+  "status": "draft"
+ },
+ "MATH.G7.NUMBER.FRACTIONS.RECIPROCAL.M_ONLY_NUMERATOR_USED": {
+  "skill": "MATH.G7.NUMBER.FRACTIONS.RECIPROCAL",
+  "error": "Uses only the numerator of the fraction.",
+  "example": {
+   "question": "12 x reciprocal of 2/5",
+   "wrong_answer": "24",
+   "correct_answer": "30"
+  },
+  "cause": "Keeps one number and drops the other.",
+  "reveals": "The answer 24 as a wrong option, with a reason that names the idea.",
+  "help": "Multiply 12 by 5/2: use both numbers.",
+  "source": "to be confirmed by a teacher (no source yet)",
+  "status": "draft"
+ },
+ "MATH.G7.NUMBER.FRACTIONS.RECIPROCAL.M_MIXED_NUMBER_FLIPPED_BY_PARTS": {
+  "skill": "MATH.G7.NUMBER.FRACTIONS.RECIPROCAL",
+  "error": "Flips only the fraction part of a mixed number and keeps the whole.",
+  "example": {
+   "question": "Reciprocal of 2 2/3",
+   "wrong_answer": "2 3/2",
+   "correct_answer": "3/8"
+  },
+  "cause": "Believes the whole number part stays.",
+  "reveals": "The answer 2 3/2 as a wrong option, with a reason that names the idea.",
+  "help": "Write 2 2/3 as 8/3 first, then turn it over.",
+  "source": "to be confirmed by a teacher (no source yet)",
+  "status": "draft"
+ },
+ "MATH.G7.NUMBER.FRACTIONS.RECIPROCAL.M_MIXED_NUMBER_HAS_NONE": {
+  "skill": "MATH.G7.NUMBER.FRACTIONS.RECIPROCAL",
+  "error": "Says a mixed number has no reciprocal.",
+  "example": {
+   "question": "Does 2 2/3 have a reciprocal?",
+   "wrong_answer": "No",
+   "correct_answer": "Yes: 3/8"
+  },
+  "cause": "Thinks only fractions can be flipped.",
+  "reveals": "The answer No as a wrong option, with a reason that names the idea.",
+  "help": "Every number except 0 has a reciprocal: change 2 2/3 into 8/3.",
+  "source": "to be confirmed by a teacher (no source yet)",
+  "status": "draft"
+ },
+ "MATH.G7.NUMBER.FRACTIONS.RECIPROCAL.M_RECIPROCAL_IS_NEGATIVE": {
+  "skill": "MATH.G7.NUMBER.FRACTIONS.RECIPROCAL",
+  "error": "Believes the reciprocal is the number with a minus sign.",
+  "example": {
+   "question": "Reciprocal of 3/4",
+   "wrong_answer": "-3/4",
+   "correct_answer": "4/3"
+  },
+  "cause": "Mixes up reciprocal with opposite.",
+  "reveals": "The answer -3/4 as a wrong option, with a reason that names the idea.",
+  "help": "A number times its reciprocal is 1: 3/4 x 4/3 = 1.",
+  "source": "to be confirmed by a teacher (no source yet)",
+  "status": "draft"
+ },
+ "MATH.G7.NUMBER.FRACTIONS.DIVIDE_FRACTION_BY_WHOLE.M_WHOLE_ADDED_TO_DENOMINATOR": {
+  "skill": "MATH.G7.NUMBER.FRACTIONS.DIVIDE_FRACTION_BY_WHOLE",
+  "error": "Adds the whole number to the denominator.",
+  "example": {
+   "question": "3/8 divided by 4",
+   "wrong_answer": "3/12",
+   "correct_answer": "3/32"
+  },
+  "cause": "Does not see division as making each part smaller by multiplying the denominator.",
+  "reveals": "The answer 3/12 as a wrong option, with a reason that names the idea.",
+  "help": "Share 3/8 among 4: each part is cut into 4 smaller pieces.",
+  "source": "to be confirmed by a teacher (no source yet)",
+  "status": "draft"
+ },
+ "MATH.G7.NUMBER.FRACTIONS.DIVIDE_FRACTION_BY_WHOLE.M_FLIPPED_THE_DIVIDEND": {
+  "skill": "MATH.G7.NUMBER.FRACTIONS.DIVIDE_FRACTION_BY_WHOLE",
+  "error": "Turns the fraction upside down instead of the number it is divided by.",
+  "example": {
+   "question": "3/8 divided by 4",
+   "wrong_answer": "32/3",
+   "correct_answer": "3/32"
+  },
+  "cause": "Remembers \"flip\" but flips the wrong number.",
+  "reveals": "The answer 32/3 as a wrong option, with a reason that names the idea.",
+  "help": "Only the divisor, 4, turns upside down: 3/8 x 1/4.",
+  "source": "to be confirmed by a teacher (no source yet)",
+  "status": "draft"
+ },
+ "MATH.G7.NUMBER.FRACTIONS.DIVIDE_FRACTION_BY_WHOLE.M_MULTIPLIED_BY_DIVISOR": {
+  "skill": "MATH.G7.NUMBER.FRACTIONS.DIVIDE_FRACTION_BY_WHOLE",
+  "error": "Multiplies the fraction by the whole number when asked to share.",
+  "example": {
+   "question": "3/8 divided by 4",
+   "wrong_answer": "3/2",
+   "correct_answer": "3/32"
+  },
+  "cause": "Does not check if the answer is smaller after sharing.",
+  "reveals": "The answer 3/2 as a wrong option, with a reason that names the idea.",
+  "help": "Sharing makes each part smaller: the answer must be less than 3/8.",
+  "source": "to be confirmed by a teacher (no source yet)",
+  "status": "draft"
+ },
+ "MATH.G7.NUMBER.FRACTIONS.DIVIDE_BY_FRACTION.M_DIVISOR_NOT_INVERTED": {
+  "skill": "MATH.G7.NUMBER.FRACTIONS.DIVIDE_BY_FRACTION",
+  "error": "Multiplies by the divisor without turning it upside down.",
+  "example": {
+   "question": "3/4 divided by 3/8",
+   "wrong_answer": "9/32",
+   "correct_answer": "2"
+  },
+  "cause": "Changes the sign but forgets the flip.",
+  "reveals": "The answer 9/32 as a wrong option, with a reason that names the idea.",
+  "help": "Turn the second fraction over: 3/4 x 8/3.",
+  "source": "to be confirmed by a teacher (no source yet)",
+  "status": "draft"
+ },
+ "MATH.G7.NUMBER.FRACTIONS.DIVIDE_BY_FRACTION.M_BOTH_FRACTIONS_INVERTED": {
+  "skill": "MATH.G7.NUMBER.FRACTIONS.DIVIDE_BY_FRACTION",
+  "error": "Turns both fractions upside down.",
+  "example": {
+   "question": "3/4 divided by 3/8",
+   "wrong_answer": "32/9",
+   "correct_answer": "2"
+  },
+  "cause": "Overgeneralises the flip.",
+  "reveals": "The answer 32/9 as a wrong option, with a reason that names the idea.",
+  "help": "Only the second fraction turns over. The first stays.",
+  "source": "to be confirmed by a teacher (no source yet)",
+  "status": "draft"
+ },
+ "MATH.G7.NUMBER.FRACTIONS.DIVIDE_BY_FRACTION.M_MIXED_NUMBER_NOT_CONVERTED": {
+  "skill": "MATH.G7.NUMBER.FRACTIONS.DIVIDE_BY_FRACTION",
+  "error": "Divides only the whole part of a mixed number and keeps the fraction part.",
+  "example": {
+   "question": "2 1/2 divided by 1/2",
+   "wrong_answer": "4 1/2",
+   "correct_answer": "5"
+  },
+  "cause": "Treats a mixed number as two separate numbers.",
+  "reveals": "The answer 4 1/2 as a wrong option, with a reason that names the idea.",
+  "help": "Write 2 1/2 as 5/2, then 5/2 x 2/1.",
+  "source": "to be confirmed by a teacher (no source yet)",
+  "status": "draft"
+ },
+ "MATH.G7.NUMBER.FRACTIONS.DIVIDE_WHOLE_BY_FRACTION.M_SMALL_DIVIDED_BY_LARGE": {
+  "skill": "MATH.G7.NUMBER.FRACTIONS.DIVIDE_WHOLE_BY_FRACTION",
+  "error": "Divides the small amount by the large one.",
+  "example": {
+   "question": "9 kg of flour, bags of 3/5 kg: which calculation?",
+   "wrong_answer": "3/5 divided by 9",
+   "correct_answer": "9 divided by 3/5"
+  },
+  "cause": "Puts the numbers in the order they are written.",
+  "reveals": "The answer 3/5 divided by 9 as a wrong option, with a reason that names the idea.",
+  "help": "Ask: how many bags fit into 9 kg? The 9 is the amount being shared out.",
+  "source": "to be confirmed by a teacher (no source yet)",
+  "status": "draft"
+ },
+ "MATH.G7.NUMBER.FRACTIONS.DIVIDE_WHOLE_BY_FRACTION.M_TAKEN_AWAY_ONCE": {
+  "skill": "MATH.G7.NUMBER.FRACTIONS.DIVIDE_WHOLE_BY_FRACTION",
+  "error": "Subtracts the fraction once instead of counting how many fit.",
+  "example": {
+   "question": "9 kg of flour, bags of 3/5 kg: which calculation?",
+   "wrong_answer": "9 - 3/5",
+   "correct_answer": "9 divided by 3/5"
+  },
+  "cause": "Does not see division as repeated subtraction.",
+  "reveals": "The answer 9 - 3/5 as a wrong option, with a reason that names the idea.",
+  "help": "Take 3/5 away again and again: how many times can you do it?",
+  "source": "to be confirmed by a teacher (no source yet)",
+  "status": "draft"
+ },
+ "MATH.G7.NUMBER.FRACTIONS.DIVIDE_WHOLE_BY_FRACTION.M_FRACTION_OF_NOT_HOW_MANY": {
+  "skill": "MATH.G7.NUMBER.FRACTIONS.DIVIDE_WHOLE_BY_FRACTION",
+  "error": "Multiplies to find a part of the whole when asked how many fit.",
+  "example": {
+   "question": "9 kg of flour, bags of 3/5 kg: which calculation?",
+   "wrong_answer": "9 x 3/5",
+   "correct_answer": "9 divided by 3/5"
+  },
+  "cause": "Mixes finding a fraction of an amount with counting lots.",
+  "reveals": "The answer 9 x 3/5 as a wrong option, with a reason that names the idea.",
+  "help": "3/5 of 9 is a part. We want to know how many 3/5s fit into 9.",
+  "source": "to be confirmed by a teacher (no source yet)",
+  "status": "draft"
+ },
+ "MATH.G7.NUMBER.FRACTIONS.DIVIDE_WHOLE_BY_FRACTION.M_DIVISION_ALWAYS_SMALLER": {
+  "skill": "MATH.G7.NUMBER.FRACTIONS.DIVIDE_WHOLE_BY_FRACTION",
+  "error": "Believes division always makes the answer smaller.",
+  "example": {
+   "question": "6 divided by 1/2",
+   "wrong_answer": "3",
+   "correct_answer": "12"
+  },
+  "cause": "Has only divided by whole numbers.",
+  "reveals": "The answer 3 as a wrong option, with a reason that names the idea.",
+  "help": "How many halves are in 6? Each whole has 2 halves.",
+  "source": "to be confirmed by a teacher (no source yet)",
+  "status": "draft"
+ },
+ "MATH.G7.NUMBER.FRACTIONS.FRACTION_SEQ_ADD_RULE.M_DENOMINATOR_ALSO_CHANGED": {
+  "skill": "MATH.G7.NUMBER.FRACTIONS.FRACTION_SEQ_ADD_RULE",
+  "error": "Changes the denominator as well as the numerator.",
+  "example": {
+   "question": "1/5, 2/5, 3/5, ?",
+   "wrong_answer": "4/10",
+   "correct_answer": "4/5"
+  },
+  "cause": "Adds the gap to both the top and the bottom.",
+  "reveals": "The answer 4/10 as a wrong option, with a reason that names the idea.",
+  "help": "Adding 1/5 only adds more fifths: the bottom stays 5.",
+  "source": "to be confirmed by a teacher (no source yet)",
+  "status": "draft"
+ },
+ "MATH.G7.NUMBER.FRACTIONS.FRACTION_SEQ_ADD_RULE.M_GAP_NOT_CONSTANT": {
+  "skill": "MATH.G7.NUMBER.FRACTIONS.FRACTION_SEQ_ADD_RULE",
+  "error": "Treats the gap as changing from term to term.",
+  "example": {
+   "question": "1, 4/5, 3/5, 2/5, ?",
+   "wrong_answer": "3/10",
+   "correct_answer": "1/5"
+  },
+  "cause": "Does not compare each pair of neighbours.",
+  "reveals": "The answer 3/10 as a wrong option, with a reason that names the idea.",
+  "help": "Write all terms with the same denominator and check each gap.",
+  "source": "to be confirmed by a teacher (no source yet)",
+  "status": "draft"
+ },
+ "MATH.G7.NUMBER.FRACTIONS.FRACTION_SEQ_ADD_RULE.M_END_NOT_NEXT": {
+  "skill": "MATH.G7.NUMBER.FRACTIONS.FRACTION_SEQ_ADD_RULE",
+  "error": "Gives a term further on instead of the next term.",
+  "example": {
+   "question": "1, 4/5, 3/5, 2/5, ? What comes next?",
+   "wrong_answer": "0",
+   "correct_answer": "1/5"
+  },
+  "cause": "Jumps to the end of the pattern.",
+  "reveals": "The answer 0 as a wrong option, with a reason that names the idea.",
+  "help": "The next term is the one straight after the last shown.",
+  "source": "to be confirmed by a teacher (no source yet)",
+  "status": "draft"
+ },
+ "MATH.G7.NUMBER.FRACTIONS.FRACTION_SEQ_MULTIPLY_RULE.M_MULTIPLY_FOR_SMALLER": {
+  "skill": "MATH.G7.NUMBER.FRACTIONS.FRACTION_SEQ_MULTIPLY_RULE",
+  "error": "Names multiplying by a whole number as the rule for terms that get smaller.",
+  "example": {
+   "question": "1, 1/3, 1/9: the rule?",
+   "wrong_answer": "Multiply by 3",
+   "correct_answer": "Divide by 3"
+  },
+  "cause": "Does not check the direction of the terms.",
+  "reveals": "The answer Multiply by 3 as a wrong option, with a reason that names the idea.",
+  "help": "Multiplying by 3 makes terms bigger; these get smaller.",
+  "source": "to be confirmed by a teacher (no source yet)",
+  "status": "draft"
+ },
+ "MATH.G7.NUMBER.FRACTIONS.FRACTION_SEQ_MULTIPLY_RULE.M_WHOLE_SUBTRACTED_FROM_FRACTION": {
+  "skill": "MATH.G7.NUMBER.FRACTIONS.FRACTION_SEQ_MULTIPLY_RULE",
+  "error": "Names taking away a whole number as the rule.",
+  "example": {
+   "question": "1, 1/3, 1/9: the rule?",
+   "wrong_answer": "Take away 3",
+   "correct_answer": "Divide by 3"
+  },
+  "cause": "Believes smaller terms mean subtraction.",
+  "reveals": "The answer Take away 3 as a wrong option, with a reason that names the idea.",
+  "help": "Take away 3 from 1 would be negative. The terms stay positive.",
+  "source": "to be confirmed by a teacher (no source yet)",
+  "status": "draft"
+ },
+ "MATH.G7.NUMBER.FRACTIONS.FRACTION_SEQ_MULTIPLY_RULE.M_FRACTION_SUBTRACTED_NOT_SCALED": {
+  "skill": "MATH.G7.NUMBER.FRACTIONS.FRACTION_SEQ_MULTIPLY_RULE",
+  "error": "Names taking away the same fraction as the rule.",
+  "example": {
+   "question": "1, 1/3, 1/9: the rule?",
+   "wrong_answer": "Take away 1/3",
+   "correct_answer": "Divide by 3"
+  },
+  "cause": "Uses the first gap and applies it to every term.",
+  "reveals": "The answer Take away 1/3 as a wrong option, with a reason that names the idea.",
+  "help": "Take 1/3 from 1/3 leaves nothing, but 1/9 is next.",
+  "source": "to be confirmed by a teacher (no source yet)",
+  "status": "draft"
+ },
+ "MATH.G7.NUMBER.FRACTIONS.FRACTION_SEQ_IN_TABLE.M_LAST_ROW_TAKEN_AS_ANSWER": {
+  "skill": "MATH.G7.NUMBER.FRACTIONS.FRACTION_SEQ_IN_TABLE",
+  "error": "Gives the last time in the table as the time the task is done.",
+  "example": {
+   "question": "2 hours: 1/5, 4 hours: 2/5, 6 hours: 3/5. When is the tank full?",
+   "wrong_answer": "6 hours",
+   "correct_answer": "10 hours"
+  },
+  "cause": "Reads off the table instead of continuing it.",
+  "reveals": "The answer 6 hours as a wrong option, with a reason that names the idea.",
+  "help": "The tank is only 3/5 full at 6 hours. Continue the pattern.",
+  "source": "to be confirmed by a teacher (no source yet)",
+  "status": "draft"
+ },
+ "MATH.G7.NUMBER.FRACTIONS.FRACTION_SEQ_IN_TABLE.M_STEPS_COUNTED_NOT_HOURS": {
+  "skill": "MATH.G7.NUMBER.FRACTIONS.FRACTION_SEQ_IN_TABLE",
+  "error": "Counts the steps of the table as hours.",
+  "example": {
+   "question": "2 hours: 1/5, 4 hours: 2/5, 6 hours: 3/5. When is the tank full?",
+   "wrong_answer": "5 hours",
+   "correct_answer": "10 hours"
+  },
+  "cause": "Forgets the table goes up in 2 hours at a time.",
+  "reveals": "The answer 5 hours as a wrong option, with a reason that names the idea.",
+  "help": "Each row is 2 hours. 5 rows is 10 hours.",
+  "source": "to be confirmed by a teacher (no source yet)",
+  "status": "draft"
+ },
+ "MATH.G7.NUMBER.FRACTIONS.FRACTION_SEQ_IN_TABLE.M_STEP_RATE_AS_HOURLY": {
+  "skill": "MATH.G7.NUMBER.FRACTIONS.FRACTION_SEQ_IN_TABLE",
+  "error": "Treats the time for one step as the time for the whole task.",
+  "example": {
+   "question": "2 hours: 1/5, 4 hours: 2/5. When is the tank full?",
+   "wrong_answer": "20 hours",
+   "correct_answer": "10 hours"
+  },
+  "cause": "Multiplies the number of steps by the wrong amount of time.",
+  "reveals": "The answer 20 hours as a wrong option, with a reason that names the idea.",
+  "help": "Part filled in one hour first, then how many hours to fill the rest.",
+  "source": "to be confirmed by a teacher (no source yet)",
+  "status": "draft"
+ },
+ "MATH.G7.NUMBER.FRACTIONS.FRACTION_SEQ_CREATE.M_ADDS_TO_NUMERATOR_AND_DENOMINATOR": {
+  "skill": "MATH.G7.NUMBER.FRACTIONS.FRACTION_SEQ_CREATE",
+  "error": "Adds the rule fraction to both the numerator and the denominator when making terms.",
+  "example": {
+   "question": "Rule: start at 1/4, add 1/4. Write three terms.",
+   "wrong_answer": "1/4, 2/8, 3/12",
+   "correct_answer": "1/4, 2/4, 3/4"
+  },
+  "cause": "Applies the add across idea to a sequence.",
+  "reveals": "The answer 1/4, 2/8, 3/12 as a wrong option, with a reason that names the idea.",
+  "help": "Adding 1/4 adds one more quarter: 2/4, then 3/4.",
+  "source": "to be confirmed by a teacher (no source yet)",
+  "status": "draft"
+ },
+ "MATH.G7.NUMBER.FRACTIONS.FRACTION_SEQ_CREATE.M_GAP_DRIFTS": {
+  "skill": "MATH.G7.NUMBER.FRACTIONS.FRACTION_SEQ_CREATE",
+  "error": "Writes terms that do not all follow the rule.",
+  "example": {
+   "question": "Rule: start at 1/2, add 1/4. Write four terms.",
+   "wrong_answer": "1/2, 3/4, 1, 1 1/2",
+   "correct_answer": "1/2, 3/4, 1, 1 1/4"
+  },
+  "cause": "Loses the rule partway through.",
+  "reveals": "The answer 1/2, 3/4, 1, 1 1/2 as a wrong option, with a reason that names the idea.",
+  "help": "Check each pair of neighbours against the rule.",
+  "source": "to be confirmed by a teacher (no source yet)",
+  "status": "draft"
  }
 }

@@ -352,79 +352,86 @@ export const FAMILIES = [
   // ======================================================================
   // FRACTIONS
   // ======================================================================
-  fam({ id: 'g7.frac.compare-books', skill: 'G7_FRACTIONS_COMPARE', outcome: 'G7.FRAC.a', rung: 2, form: 'word',
+  fam({ id: 'g7.frac.compare-books', skill: 'G7_FRACTIONS_COMPARE', outcome: 'MATH.G7.NUMBER.FRACTIONS.a', cskill: 'MATH.G7.NUMBER.FRACTIONS.COMPARE_FRACTIONS', rung: 2, form: 'word',
     draw: () => {
+      // the wrong choices need a largest numerator and a largest denominator on different people, so most draws are rejected: try many
+      for (let t = 0; t < 4000; t++) { const r = (() => {
       const ds = shuffle([4, 5, 8, 10]).slice(0, 3), fs = ds.map(d => { const a = randInt(1, d - 1); return { a, d }; });
       if (fs.some(f => gcd(f.a, f.d) !== 1)) return null;
       const vals = fs.map(f => f.a / f.d).sort((x, y) => x - y); if (vals[2] - vals[1] < 0.02 || vals[1] - vals[0] < 0.02) return null;
+      // the two wrong choices are the largest numerator and the largest denominator, one each, so each wrong answer shows its own slip
+      const top = fs.reduce((m, f, i) => (f.a > fs[m].a ? i : m), 0), wide = fs.reduce((m, f, i) => (f.d > fs[m].d ? i : m), 0), bi = fs.reduce((m, f, i) => (f.a / f.d > fs[m].a / fs[m].d ? i : m), 0);
+      if (new Set([top, wide, bi]).size < 3) return null;
       const ps = []; while (ps.length < 3) { const q = person(); if (!ps.some(x => x.name === q.name)) ps.push(q); }
       return { fs, ps };
+    })(); if (r) return r; }
+      return null;
     },
     make: ({ fs, ps }) => {
       const best = fs.reduce((m, f, i) => (f.a / f.d > fs[m].a / fs[m].d ? i : m), 0);
       return { question: `${ps[0].name}, ${ps[1].name} and ${ps[2].name} each read a book of the same length. ${ps[0].name} has read ${fs[0].a}/${fs[0].d} of ${ps[0].her} book, ${ps[1].name} has read ${fs[1].a}/${fs[1].d} and ${ps[2].name} has read ${fs[2].a}/${fs[2].d}. Compare the fractions. Who has read the most?`,
-        options: shuffle(ps.map((q, i) => ({ text: q.name, right: i === best, why: i === best ? undefined : `${q.name} has not read the most. Write the three fractions with the same denominator, then compare the numerators.` }))),
+        options: shuffle(ps.map((q, i) => ({ text: q.name, right: i === best, ...(i === best ? {} : i === fs.reduce((m, f, j) => (f.a > fs[m].a ? j : m), 0) ? { why: `${q.name} has the biggest numerator, but the pieces are different sizes. Write the three fractions with the same denominator, then compare.`, mis: 'M_NUMERATOR_ONLY_COMPARED' } : { why: `${q.name} has the biggest denominator, but a bigger denominator means smaller pieces. Write the three fractions with the same denominator, then compare.`, mis: 'M_BIGGER_DENOMINATOR_BIGGER' }) }))),
         hints: ['Fractions with different denominators cannot be compared directly.', 'Write all three with a common denominator.'],
         steps: [`A common denominator is ${lcm(lcm(fs[0].d, fs[1].d), fs[2].d)}.`, `The fractions are ${fs.map(f => `${f.a * lcm(lcm(fs[0].d, fs[1].d), fs[2].d) / f.d}/${lcm(lcm(fs[0].d, fs[1].d), fs[2].d)}`).join(', ')}.`, `The biggest is ${ps[best].name}'s.`] };
     } }),
 
-  fam({ id: 'g7.frac.one-piece-short', skill: 'G7_FRACTIONS_COMPARE', outcome: 'G7.FRAC.a', rung: 3, form: 'why',
+  fam({ id: 'g7.frac.one-piece-short', skill: 'G7_FRACTIONS_COMPARE', outcome: 'MATH.G7.NUMBER.FRACTIONS.a', cskill: 'MATH.G7.NUMBER.FRACTIONS.COMPARE_FRACTIONS', rung: 3, form: 'why',
     draw: () => { const n = randInt(3, 9); return { n, swap: Math.random() < 0.5 }; },
     make: ({ n, swap }) => {
       const A = `${n - 1}/${n}`, B = `${n}/${n + 1}`, first = swap ? B : A, second = swap ? A : B;
       return { question: `Which is greater: ${first} or ${second}? Choose the best reason.`, story: false,
         options: shuffle([
           { text: `${B} is greater, because less is missing from a whole`, right: true },
-          { text: `${A} is greater, because its denominator is smaller`, right: false, why: `A smaller denominator does not decide it. Look at how much is missing from a whole in each fraction.` },
-          { text: `${B} is greater, because its denominator is bigger`, right: false, why: 'A bigger denominator does not always mean a bigger fraction: 1/9 is less than 1/2. The reason is in the piece that is missing.' },
-          { text: 'They are equal, because each is one piece short of a whole', right: false, why: `The missing pieces are not the same size: ${n + 1}ths are smaller than ${n}ths.` },
+          { text: `${A} is greater, because its denominator is smaller`, right: false, why: `A smaller denominator does not decide it. Look at how much is missing from a whole in each fraction.`, mis: 'M_BIGGER_DENOMINATOR_BIGGER' },
+          { text: `${B} is greater, because its denominator is bigger`, right: false, why: 'A bigger denominator does not always mean a bigger fraction: 1/9 is less than 1/2. The reason is in the piece that is missing.', mis: 'M_NUMERATOR_ONLY_COMPARED' },
+          { text: 'They are equal, because each is one piece short of a whole', right: false, why: `The missing pieces are not the same size: ${n + 1}ths are smaller than ${n}ths.`, mis: 'M_ONE_PIECE_SHORT_EQUAL' },
         ]),
         hints: ['Each fraction is one piece short of a whole. Compare the missing pieces.', 'Which missing piece is smaller?'],
         steps: [`${A} = 1 − 1/${n} and ${B} = 1 − 1/${n + 1}.`, `1/${n + 1} is smaller than 1/${n}, so less is missing from ${B}.`, `So ${B} is greater.`] };
     } }),
 
-  fam({ id: 'g7.frac.recip-cups', skill: 'G7_RECIPROCALS', outcome: 'G7.FRAC.e', rung: 2, form: 'word',
+  fam({ id: 'g7.frac.recip-cups', skill: 'G7_RECIPROCALS', outcome: 'MATH.G7.NUMBER.FRACTIONS.e', cskill: 'MATH.G7.NUMBER.FRACTIONS.RECIPROCAL', rung: 2, form: 'word',
     draw: () => {
       const [a, b] = pick([[2, 3], [2, 5], [3, 4], [3, 5], [3, 8], [5, 6]]), k = randInt(2, 6), L = a * k;
-      return { a, b, k, L, ans: k * b, p: person() };
+      const ans = k * b; return [round((L * a) / b, 2), L * b, L * a].every(v => Math.abs(v - ans) > 2) ? { a, b, k, L, ans, p: person() } : null;
     },
     make: ({ a, b, k, L, ans, p }) => ({
       question: `${p.name} has ${L} litres of juice. ${p.She} pours it into small cups that each hold ${a}/${b} of a litre. To find the number of cups, ${p.she} multiplies ${L} by the reciprocal of ${a}/${b}. How many cups does ${p.she} fill?`,
       answer: ans,
-      wrong: [[round((L * a) / b, 2), `That multiplies by ${a}/${b} itself. The reciprocal turns the fraction upside down first.`], [L * b, 'The reciprocal is a fraction. Multiply by the whole fraction, not only the top.'], [L * a, 'The reciprocal has both a top and a bottom. Use both.']],
+      wrong: [[round((L * a) / b, 2), `That multiplies by ${a}/${b} itself. The reciprocal turns the fraction upside down first.`, 'M_NOT_FLIPPED'], [L * b, 'The reciprocal is a fraction. Multiply by the whole fraction, not only the top.', 'M_ONLY_DENOMINATOR_USED'], [L * a, 'The reciprocal has both a top and a bottom. Use both.', 'M_ONLY_NUMERATOR_USED']],
       hints: [`Turn ${a}/${b} upside down to get its reciprocal.`, `Multiply ${L} by the reciprocal.`],
       steps: [`The reciprocal of ${a}/${b} is ${b}/${a}.`, `${L} × ${b}/${a} = ${L * b}/${a} = ${ans}.`] }),
     check: ({ a, b, L }, x) => (x * a) / b === L }),
 
-  fam({ id: 'g7.frac.recip-mixed-why', skill: 'G7_RECIPROCALS', outcome: 'G7.FRAC.e', rung: 3, form: 'why',
+  fam({ id: 'g7.frac.recip-mixed-why', skill: 'G7_RECIPROCALS', outcome: 'MATH.G7.NUMBER.FRACTIONS.e', cskill: 'MATH.G7.NUMBER.FRACTIONS.RECIPROCAL', rung: 3, form: 'why',
     draw: () => { const b = pick([3, 4, 5, 7]), a = randInt(2, b - 1); return gcd(a, b) === 1 ? { w: randInt(1, 4), a, b, p: person() } : null; },
     make: ({ w, a, b, p }) => {
       const n = w * b + a;
       return { question: `${p.name} finds the reciprocal of ${w} ${a}/${b} and writes ${w} ${b}/${a}. Why is this not the reciprocal?`, story: false,
         options: shuffle([
           { text: `${w} ${a}/${b} must first be written as ${n}/${b}. Its reciprocal is ${b}/${n}`, right: true },
-          { text: 'A mixed number does not have a reciprocal', right: false, why: 'Every number except 0 has a reciprocal, including mixed numbers.' },
-          { text: `The whole number ${w} stays the same in a reciprocal`, right: false, why: 'The reciprocal of the whole number is found with the fraction. The whole number part cannot stay as it is.' },
-          { text: `The reciprocal of a number is the same number with a minus sign`, right: false, why: 'That is the opposite, not the reciprocal. A number times its reciprocal is 1.' },
+          { text: 'A mixed number does not have a reciprocal', right: false, why: 'Every number except 0 has a reciprocal, including mixed numbers.', mis: 'M_MIXED_NUMBER_HAS_NONE' },
+          { text: `The whole number ${w} stays the same in a reciprocal`, right: false, why: 'The reciprocal of the whole number is found with the fraction. The whole number part cannot stay as it is.', mis: 'M_MIXED_NUMBER_FLIPPED_BY_PARTS' },
+          { text: `The reciprocal of a number is the same number with a minus sign`, right: false, why: 'That is the opposite, not the reciprocal. A number times its reciprocal is 1.', mis: 'M_RECIPROCAL_IS_NEGATIVE' },
         ]),
         hints: ['A number times its reciprocal is 1.', 'Write the mixed number as one fraction first, then turn it upside down.'],
         steps: [`${w} ${a}/${b} = ${n}/${b}.`, `The reciprocal is ${b}/${n}.`, `Check: ${n}/${b} × ${b}/${n} = 1.`] };
     } }),
 
-  fam({ id: 'g7.frac.div-operation', skill: 'G7_FRACTIONS_DIV', outcome: 'G7.FRAC.f', rung: 2, form: 'word',
+  fam({ id: 'g7.frac.div-operation', skill: 'G7_FRACTIONS_DIV', outcome: 'MATH.G7.NUMBER.FRACTIONS.g', cskill: 'MATH.G7.NUMBER.FRACTIONS.DIVIDE_WHOLE_BY_FRACTION', rung: 2, form: 'word',
     draw: () => { const [a, b] = pick([[2, 3], [3, 4], [1, 4], [3, 5], [1, 2]]); return { a, b, L: randInt(3, 12), p: person(), item: pick([['flour', 'kg', 'loaf', 'loaves'], ['maize flour', 'kg', 'bag', 'bags'], ['paint', 'litres', 'door', 'doors']]) }; },
     make: ({ a, b, L, p, item }) => ({
       question: `${p.name} has ${L} ${item[1]} of ${item[0]}. Each ${item[2]} needs ${a}/${b} of a ${item[1] === 'litres' ? 'litre' : 'kg'}. Which calculation gives how many ${item[3]} ${p.she} can make?`,
       options: shuffle([
         { text: `${L} ÷ ${a}/${b}`, right: true },
-        { text: `${L} × ${a}/${b}`, right: false, why: `That finds ${a}/${b} of ${L}, not how many lots of ${a}/${b} fit into ${L}.` },
-        { text: `${a}/${b} ÷ ${L}`, right: false, why: 'This divides the small amount by the large one. The question asks how many of the small amounts fit into the large one.' },
-        { text: `${L} − ${a}/${b}`, right: false, why: `Taking away ${a}/${b} once does not count how many times it fits.` },
+        { text: `${L} × ${a}/${b}`, right: false, why: `That finds ${a}/${b} of ${L}, not how many lots of ${a}/${b} fit into ${L}.`, mis: 'M_FRACTION_OF_NOT_HOW_MANY' },
+        { text: `${a}/${b} ÷ ${L}`, right: false, why: 'This divides the small amount by the large one. The question asks how many of the small amounts fit into the large one.', mis: 'M_SMALL_DIVIDED_BY_LARGE' },
+        { text: `${L} − ${a}/${b}`, right: false, why: `Taking away ${a}/${b} once does not count how many times it fits.`, mis: 'M_TAKEN_AWAY_ONCE' },
       ]),
       hints: ['"How many lots of a small amount fit into a big amount" is a division.', 'Which amount is being shared out, and which is the size of each part?'],
       steps: [`Each ${item[2]} needs ${a}/${b}, and there are ${L} ${item[1]} altogether.`, `The number of ${item[3]} is ${L} ÷ ${a}/${b}.`] }) }),
 
-  fam({ id: 'g7.frac.div-tank-buckets', skill: 'G7_FRACTIONS_DIV', outcome: 'G7.FRAC.f', rung: 2, form: 'word',
+  fam({ id: 'g7.frac.div-tank-buckets', skill: 'G7_FRACTIONS_DIV', outcome: 'MATH.G7.NUMBER.FRACTIONS.f', cskill: 'MATH.G7.NUMBER.FRACTIONS.DIVIDE_FRACTION_BY_WHOLE', rung: 2, form: 'word',
     draw: () => {
       const [a, b] = pick([[3, 4], [2, 3], [3, 5], [4, 5], [5, 6], [3, 8]]), k = pick([2, 3, 4, 5, 6]);
       if (a % k === 0 || k % a === 0) return null;
@@ -433,26 +440,27 @@ export const FAMILIES = [
     },
     make: ({ a, b, k, right, w, p }) => ({
       question: `A water tank is ${a}/${b} full. ${p.name} divides the water equally among ${k} drums. What fraction of the whole tank is in each drum?`,
-      options: shuffle([{ text: right, right: true }, { text: w[0], right: false, why: 'That multiplies by the number of drums. Sharing equally makes each part smaller.' }, { text: w[1], right: false, why: 'The denominator is not found by adding. Dividing by a number multiplies the denominator.' }, { text: w[2], right: false, why: 'That turns the fraction upside down and multiplies. Divide the fraction by the number of drums.' }]),
+      options: shuffle([{ text: right, right: true }, { text: w[0], right: false, why: 'That multiplies by the number of drums. Sharing equally makes each part smaller.', mis: 'M_MULTIPLIED_BY_DIVISOR' }, { text: w[1], right: false, why: 'The denominator is not found by adding. Dividing by a number multiplies the denominator.', mis: 'M_WHOLE_ADDED_TO_DENOMINATOR' }, { text: w[2], right: false, why: 'That turns the fraction upside down and multiplies. Divide the fraction by the number of drums.', mis: 'M_FLIPPED_THE_DIVIDEND' }]),
       hints: ['Sharing equally into drums is dividing the fraction by the number of drums.', 'Dividing a fraction by a whole number is the same as multiplying by one over that number.'],
       steps: [`${a}/${b} ÷ ${k} = ${a}/${b} × 1/${k}.`, `= ${a}/${b * k}${gcd(a, b * k) > 1 ? ` = ${right}` : ''}.`] }) }),
 
-  fam({ id: 'g7.frac.mul-land', skill: 'G7_FRACTIONS_MUL', outcome: 'G7.FRAC.d', rung: 2, form: 'word',
+  fam({ id: 'g7.frac.mul-land', skill: 'G7_FRACTIONS_MUL', outcome: 'MATH.G7.NUMBER.FRACTIONS.d', cskill: 'MATH.G7.NUMBER.FRACTIONS.MULT_FRACTION_BY_FRACTION', rung: 2, form: 'word',
     draw: () => {
       const [a, b] = pick([[3, 4], [2, 3], [3, 5], [5, 6], [7, 8]]), [c, d] = pick([[1, 3], [1, 2], [2, 5], [3, 4], [1, 4]]), N = pick([24, 30, 36, 40, 48, 60, 72, 120]);
       if ((N * a * c) % (b * d) !== 0) return null;
       const ans = (N * a * c) / (b * d);
-      return distinct(ans, (N * a) / b, round(N * c / d, 2), round(N * (a / b + c / d), 2)) ? { a, b, c, d, N, ans, p: person() } : null;
+      const far = [(N * a) / b, round(N * c / d, 2), round(N * (a / b + c / d), 2)].every(v => Math.abs(v - ans) > 2);
+      return far && distinct(ans, (N * a) / b, round(N * c / d, 2), round(N * (a / b + c / d), 2)) ? { a, b, c, d, N, ans, p: person() } : null;
     },
     make: ({ a, b, c, d, N, ans, p }) => ({
       question: `${p.name} has a shamba of ${N} acres. ${a}/${b} of the shamba is planted with maize. ${c}/${d} of the maize land is near the river. How many acres of maize are near the river?`,
       answer: ans,
-      wrong: [[(N * a) / b, `That is all the maize land. Only ${c}/${d} of it is near the river.`], [round((N * c) / d, 2), `${c}/${d} must be taken of the maize land, not of the whole shamba.`], [round(N * (a / b + c / d), 2), 'Part of a part is found by multiplying the two fractions, not adding them.']],
+      wrong: [[(N * a) / b, `That is all the maize land. Only ${c}/${d} of it is near the river.`, 'M_STOPPED_AFTER_FIRST_FRACTION'], [round((N * c) / d, 2), `${c}/${d} must be taken of the maize land, not of the whole shamba.`, 'M_FRACTION_OF_WRONG_WHOLE'], [round(N * (a / b + c / d), 2), 'Part of a part is found by multiplying the two fractions, not adding them.', 'M_ADD_FRACTIONS_INSTEAD']],
       hints: ['First find the acres of maize.', `Then find ${c}/${d} of that.`],
       steps: [`Maize: ${a}/${b} of ${N} = ${(N * a) / b} acres.`, `Near the river: ${c}/${d} of ${(N * a) / b} = ${ans} acres.`] }),
     check: ({ a, b, c, d, N }, x) => x * b * d === N * a * c }),
 
-  fam({ id: 'g7.frac.seq-tank', skill: 'G7_FRACTIONS_ADD_UNLIKE', outcome: 'G7.FRAC.h', rung: 2, form: 'word',
+  fam({ id: 'g7.frac.seq-tank', skill: 'G7_FRACTIONS_ADD_UNLIKE', outcome: 'MATH.G7.NUMBER.FRACTIONS.h', cskill: 'MATH.G7.NUMBER.FRACTIONS.FRACTION_SEQ_ADD_RULE', rung: 2, form: 'word',
     draw: () => {
       const dir = pick([1, -1]), D = dir === 1 ? pick([10, 12]) : pick([8, 10, 12]), k = 2, s = dir === 1 ? randInt(1, 2) : randInt(9, D);
       if (dir === 1 && s + 4 * k > D) return null; if (dir === -1 && (s - 4 * k < 1 || s > D)) return null;
@@ -462,30 +470,30 @@ export const FAMILIES = [
     },
     make: ({ dir, shown, right, w, p }) => ({
       question: `A tank at ${p.name}'s school is ${dir === 1 ? 'filling' : 'emptying'}. The part of the tank that is ${dir === 1 ? 'full' : 'still full'} after each hour follows a pattern: ${shown.join(', ')}. What comes next in the sequence, after the fifth hour?`,
-      options: shuffle([{ text: right, right: true }, { text: w[0], right: false, why: 'That skips a term. The next term is the one straight after the last one shown.' }, { text: w[1], right: false, why: 'The same amount is added or taken away each time. Check the gap between the terms you can see.' }, { text: w[2], right: false, why: 'Only the numerator changes. The denominator stays the same when the same fraction is added each time.' }]),
+      options: shuffle([{ text: right, right: true }, { text: w[0], right: false, why: 'That skips a term. The next term is the one straight after the last one shown.', mis: 'M_END_NOT_NEXT' }, { text: w[1], right: false, why: 'The same amount is added or taken away each time. Check the gap between the terms you can see.', mis: 'M_GAP_NOT_CONSTANT' }, { text: w[2], right: false, why: 'Only the numerator changes. The denominator stays the same when the same fraction is added each time.', mis: 'M_DENOMINATOR_ALSO_CHANGED' }]),
       hints: ['Write the terms with the same denominator and find the gap between them.', 'Use the same gap once more.'],
       steps: [`Over a common denominator the gap between terms is the same each hour.`, `Adding the gap ${dir === 1 ? 'to' : 'taking it from'} ${shown[3]} gives ${right}.`] }) }),
 
-  fam({ id: 'g7.frac.seq-fill-table', skill: 'G7_FRACTIONS_ADD_UNLIKE', outcome: 'G7.FRAC.h', rung: 3, form: 'table',
-    draw: () => ({ m: pick([8, 10, 14]), p: person() }),
+  fam({ id: 'g7.frac.seq-fill-table', skill: 'G7_FRACTIONS_ADD_UNLIKE', outcome: 'MATH.G7.NUMBER.FRACTIONS.h', cskill: 'MATH.G7.NUMBER.FRACTIONS.FRACTION_SEQ_IN_TABLE', rung: 3, form: 'table',
+    draw: () => ({ m: pick([10, 14]), p: person() }),
     make: ({ m, p }) => ({
       question: `${p.name} fills a tank at a steady rate. The table shows the part of the tank that is full after 2, 4 and 6 hours. If the pattern continues, after how many hours is the tank full?`, story: false,
       model: { type: 'table', data: { head: ['Hours', 'Part of the tank full'], rows: [2, 4, 6].map(h => ({ label: String(h), value: mixed(h, m) })) } },
       answer: m,
-      wrong: [[6, 'That is the last time in the table, and the tank is not full yet.'], [m / 2, 'The table goes up in steps of 2 hours. Count hours, not steps.'], [m * 2, 'That is too long. Work out the part filled in one hour.']],
+      wrong: [[6, 'That is the last time in the table, and the tank is not full yet.', 'M_LAST_ROW_TAKEN_AS_ANSWER'], [m / 2, 'The table goes up in steps of 2 hours. Count hours, not steps.', 'M_STEPS_COUNTED_NOT_HOURS'], [m * 2, 'That is too long. Work out the part filled in one hour.', 'M_STEP_RATE_AS_HOURLY']],
       hints: ['Find the part filled in 2 hours, then in 1 hour.', 'How many of those fill the whole tank?'],
       steps: [`In 2 hours the part full is ${mixed(2, m)}, so in 1 hour it is 1/${m}.`, `The tank is full when ${m} lots of 1/${m} are added: ${m} hours.`] }),
     check: ({ m }, a) => a * 1 === m && (a / 2) % 1 === 0 && a > 6 }),
 
-  fam({ id: 'g7.frac.seq-rule', skill: 'G7_FRACTIONS_ADD_UNLIKE', outcome: 'G7.FRAC.h', rung: 2, form: 'direct',
+  fam({ id: 'g7.frac.seq-rule', skill: 'G7_FRACTIONS_ADD_UNLIKE', outcome: 'MATH.G7.NUMBER.FRACTIONS.h', cskill: 'MATH.G7.NUMBER.FRACTIONS.FRACTION_SEQ_MULTIPLY_RULE', rung: 2, form: 'direct',
     draw: () => ({ r: pick([2, 3, 4, 5]) }),
     make: ({ r }) => ({
       question: `Look at the pattern of fractions: 1, 1/${r}, 1/${r * r}, 1/${r ** 3}, ... Which rule makes each term from the one before it?`, story: false,
       options: shuffle([
         { text: `Divide by ${r} each time`, right: true },
-        { text: `Multiply by ${r} each time`, right: false, why: 'Multiplying by a whole number makes terms bigger. These terms are getting smaller.' },
-        { text: `Take away 1/${r} each time`, right: false, why: `Take 1/${r} away from 1/${r} and nothing is left, but the next term is still there.` },
-        { text: `Take away ${r} each time`, right: false, why: 'Taking away a whole number would give negative terms.' },
+        { text: `Multiply by ${r} each time`, right: false, why: 'Multiplying by a whole number makes terms bigger. These terms are getting smaller.', mis: 'M_MULTIPLY_FOR_SMALLER' },
+        { text: `Take away 1/${r} each time`, right: false, why: `Take 1/${r} away from 1/${r} and nothing is left, but the next term is still there.`, mis: 'M_FRACTION_SUBTRACTED_NOT_SCALED' },
+        { text: `Take away ${r} each time`, right: false, why: 'Taking away a whole number would give negative terms.', mis: 'M_WHOLE_SUBTRACTED_FROM_FRACTION' },
       ]),
       hints: ['Compare each term with the one before it: is it bigger or smaller?', 'Try dividing the first term by the second.'],
       steps: [`1 ÷ 1/${r} = ${r}, so each term is 1/${r} of the one before.`, `That means divide by ${r} each time.`] }) }),

@@ -5,6 +5,7 @@
 //   - `outcome: 'G7.X.l'` becomes the design's code and `cskill` is added (the HOREB `skill` stays: the practice engine uses it).
 //   - codes are appended as the third element of each `[value, why]` in the family's `wrong: [...]` arrays, in order; a flat list serves
 //     one array, a list of lists serves several (parts). Use 'SLIP' for a counting slip, null to leave one alone.
+//   - options (5th): [[text inside an option's why, code]] puts mis on that option of a choice question.
 //   - a find-the-mistake working gets `mis: <code or expression>` before its `fix:`.
 // Idempotent: a family that already has a cskill is skipped.
 import { readFileSync, writeFileSync } from 'node:fs';
@@ -20,7 +21,7 @@ const topLevel = (s, from, to) => { const out = []; for (let k = from + 1; k < t
 
 for (const d of SUBS) {
   if (only && d.key !== only) continue;
-  for (const [id, [cs, letter, codes, mis]] of Object.entries(d.links || {})) {
+  for (const [id, [cs, letter, codes, mis, opts]] of Object.entries(d.links || {})) {
     const file = FILES.find(f => src[f].includes(`id: '${id}'`));
     if (!file) { problems.push(`${id}: not found`); continue; }
     let s = src[file];
@@ -48,6 +49,15 @@ for (const d of SUBS) {
       if (bad) continue;
       if (!n) { problems.push(`${id}: no wrong: [..] array (options or other form): edit by hand`); continue; }
       for (const [pos, text] of edits.sort((x, y) => y[0] - x[0])) block = block.slice(0, pos) + text + block.slice(pos);
+    }
+    // options: [[a piece of an option's `why`, code]]: the code goes on that option as `mis`
+    for (const [bit, code] of opts || []) {
+      const at = block.indexOf(bit);
+      if (at < 0) { problems.push(`${id}: option text "${bit}" not found`); continue; }
+      const m2 = /(`|')\s*\}/.exec(block.slice(at));
+      if (!m2) { problems.push(`${id}: no end of option for "${bit}"`); continue; }
+      const pos = at + m2.index + 1;
+      block = block.slice(0, pos) + `, mis: '${code}'` + block.slice(pos);
     }
     if (mis) {
       const expr = /^[A-Z_]+$/.test(mis) ? `'${mis}'` : mis;

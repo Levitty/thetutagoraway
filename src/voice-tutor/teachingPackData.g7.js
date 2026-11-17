@@ -2702,6 +2702,1349 @@ export const TEACHING_PACK_G7 = {
   "sub_strand": "MATH.G7.NUMBER.FACTORS",
   "sub_strand_name": "Factors",
   "status": "draft: written 17 Nov 2026 offline for the Grade 7 pilot; not yet checked by a Kenyan maths teacher; not loaded by the live tutor"
+ },
+ "MATH.G7.NUMBER.FRACTIONS.COMPARE_FRACTIONS": {
+  "skill": "MATH.G7.NUMBER.FRACTIONS.COMPARE_FRACTIONS",
+  "key_step": "The child renames the fractions with a common denominator and compares the numerators, saying why the size of the piece matters.",
+  "floor": {
+   "prerequisite": "Compares fractions with the same denominator.",
+   "question": "Which is greater: 3/8 or 5/8?",
+   "answer": "5/8"
+  },
+  "representations": [
+   "two equal bars",
+   "common denominator",
+   "number line"
+  ],
+  "steps": [
+   "Draw two equal bars.",
+   "Rename both with a common denominator.",
+   "Compare the numerators.",
+   "Say why a bigger denominator means smaller pieces."
+  ],
+  "contexts": [
+   "pages of a book read",
+   "jugs of juice",
+   "shares of a shamba"
+  ],
+  "board": [
+   {
+    "beat": "draw",
+    "do": "Draw two equal bars, one in fifths and one in eighths, shade 3 pieces of each."
+   },
+   {
+    "beat": "point",
+    "do": "Point at the two shaded parts.",
+    "say": "Which shaded part is bigger?"
+   },
+   {
+    "beat": "pause",
+    "do": "Wait for the child to say."
+   }
+  ],
+  "misconceptions": [
+   {
+    "code": "MATH.G7.NUMBER.FRACTIONS.COMPARE_FRACTIONS.M_BIGGER_DENOMINATOR_BIGGER",
+    "listen_for": [
+     "eighths is more"
+    ],
+    "ask": "Are eighths bigger or smaller pieces than fifths?",
+    "repair": "A bigger bottom number means smaller pieces.",
+    "error": "Believes the fraction with the bigger denominator is the bigger fraction.",
+    "example": {
+     "question": "Which is greater: 3/8 or 3/5?",
+     "wrong_answer": "3/8",
+     "correct_answer": "3/5"
+    }
+   },
+   {
+    "code": "MATH.G7.NUMBER.FRACTIONS.COMPARE_FRACTIONS.M_NUMERATOR_ONLY_COMPARED",
+    "listen_for": [
+     "2 is more than 1"
+    ],
+    "ask": "How big is each piece in 2/9 and in 1/2?",
+    "repair": "Rename both with the same denominator.",
+    "error": "Compares the numerators only.",
+    "example": {
+     "question": "Which is greater: 2/9 or 1/2?",
+     "wrong_answer": "2/9",
+     "correct_answer": "1/2"
+    }
+   },
+   {
+    "code": "MATH.G7.NUMBER.FRACTIONS.COMPARE_FRACTIONS.M_ONE_PIECE_SHORT_EQUAL",
+    "listen_for": [
+     "both one short"
+    ],
+    "ask": "Is a sixth the same size as a fifth?",
+    "repair": "Smaller missing piece means a larger fraction.",
+    "error": "Says fractions that are each one piece short of a whole are equal.",
+    "example": {
+     "question": "4/5 and 5/6: which is greater?",
+     "wrong_answer": "They are equal",
+     "correct_answer": "5/6"
+    }
+   }
+  ],
+  "checks": [
+   {
+    "question": "Which is greater: 3/8 or 3/5?",
+    "answer": "3/5",
+    "shows": "piece size"
+   },
+   {
+    "question": "Order 1/2, 2/9, 3/4 from smallest.",
+    "answer": "2/9, 1/2, 3/4",
+    "shows": "order"
+   }
+  ],
+  "name": "Compare and order fractions with different denominators",
+  "sub_strand": "MATH.G7.NUMBER.FRACTIONS",
+  "sub_strand_name": "Fractions",
+  "status": "draft: written 17 Nov 2026 offline for the Grade 7 pilot; not yet checked by a Kenyan maths teacher; not loaded by the live tutor"
+ },
+ "MATH.G7.NUMBER.FRACTIONS.ADD_UNLIKE_FRACTIONS": {
+  "skill": "MATH.G7.NUMBER.FRACTIONS.ADD_UNLIKE_FRACTIONS",
+  "key_step": "The child renames both fractions with the LCM, adds the numerators over the same denominator, and carries a whole from the fraction part.",
+  "floor": {
+   "prerequisite": "Adds fractions with the same denominator.",
+   "question": "2/7 + 3/7",
+   "answer": "5/7"
+  },
+  "representations": [
+   "bars cut the same way",
+   "renamed fractions",
+   "mixed number sum"
+  ],
+  "steps": [
+   "Find the LCM of the denominators.",
+   "Rename both fractions.",
+   "Add the numerators.",
+   "Carry any whole and simplify."
+  ],
+  "contexts": [
+   "cups of flour",
+   "litres of paint",
+   "hours of study"
+  ],
+  "board": [
+   {
+    "beat": "draw",
+    "do": "Draw bars for 1/2 and 1/3 and cut both into sixths."
+   },
+   {
+    "beat": "point",
+    "do": "Point at the sixths.",
+    "say": "How many sixths in each?"
+   },
+   {
+    "beat": "pause",
+    "do": "Wait for the child to add."
+   }
+  ],
+  "misconceptions": [
+   {
+    "code": "MATH.G7.NUMBER.FRACTIONS.ADD_UNLIKE_FRACTIONS.M_ADD_ACROSS",
+    "listen_for": [
+     "2/5"
+    ],
+    "ask": "Is 2/5 more or less than 1/2?",
+    "repair": "Rename first, then add the tops.",
+    "error": "Adds the numerators and the denominators.",
+    "example": {
+     "question": "1/2 + 1/3",
+     "wrong_answer": "2/5",
+     "correct_answer": "5/6"
+    }
+   },
+   {
+    "code": "MATH.G7.NUMBER.FRACTIONS.ADD_UNLIKE_FRACTIONS.M_RENAME_BOTTOM_ONLY",
+    "listen_for": [
+     "2/6"
+    ],
+    "ask": "How many sixths is a half?",
+    "repair": "The tops change when the bottoms do.",
+    "error": "Renames the denominators but leaves the numerators unchanged.",
+    "example": {
+     "question": "1/2 + 1/3",
+     "wrong_answer": "2/6",
+     "correct_answer": "5/6"
+    }
+   },
+   {
+    "code": "MATH.G7.NUMBER.FRACTIONS.ADD_UNLIKE_FRACTIONS.M_CARRIED_WHOLE_DROPPED",
+    "listen_for": [
+     "3 1/2"
+    ],
+    "ask": "What is 6/4 as a mixed number?",
+    "repair": "Add the 1 to the wholes.",
+    "error": "Adds whole parts and fraction parts but loses the whole carried from the fractions.",
+    "example": {
+     "question": "2 3/4 + 1 3/4",
+     "wrong_answer": "3 1/2",
+     "correct_answer": "4 1/2"
+    }
+   }
+  ],
+  "checks": [
+   {
+    "question": "1/2 + 1/3",
+    "answer": "5/6",
+    "shows": "unlike fractions"
+   },
+   {
+    "question": "2 3/4 + 1 3/4",
+    "answer": "4 1/2",
+    "shows": "carry"
+   }
+  ],
+  "name": "Add fractions and mixed numbers with unlike denominators",
+  "sub_strand": "MATH.G7.NUMBER.FRACTIONS",
+  "sub_strand_name": "Fractions",
+  "status": "draft: written 17 Nov 2026 offline for the Grade 7 pilot; not yet checked by a Kenyan maths teacher; not loaded by the live tutor"
+ },
+ "MATH.G7.NUMBER.FRACTIONS.SUBTRACT_UNLIKE_FRACTIONS": {
+  "skill": "MATH.G7.NUMBER.FRACTIONS.SUBTRACT_UNLIKE_FRACTIONS",
+  "key_step": "The child renames with the LCM, regroups one whole into the fraction part when the top is too small, and reduces the whole by one.",
+  "floor": {
+   "prerequisite": "Subtracts with the same denominator.",
+   "question": "5/8 - 3/8",
+   "answer": "2/8 or 1/4"
+  },
+  "representations": [
+   "a bar with some taken away",
+   "renamed fractions",
+   "regrouping one whole"
+  ],
+  "steps": [
+   "Rename both fractions.",
+   "Compare the fraction parts.",
+   "Regroup one whole if needed.",
+   "Subtract and simplify."
+  ],
+  "contexts": [
+   "water left in a tank",
+   "cloth left",
+   "distance left"
+  ],
+  "board": [
+   {
+    "beat": "draw",
+    "do": "Draw 4 wholes and a fifth; take 1 whole and 3/5 away."
+   },
+   {
+    "beat": "point",
+    "do": "Point at the 1/5.",
+    "say": "Can we take 3/5 from 1/5?"
+   },
+   {
+    "beat": "pause",
+    "do": "Wait for the child to regroup."
+   }
+  ],
+  "misconceptions": [
+   {
+    "code": "MATH.G7.NUMBER.FRACTIONS.SUBTRACT_UNLIKE_FRACTIONS.M_SUBTRACT_ACROSS",
+    "listen_for": [
+     "2/1"
+    ],
+    "ask": "Is the answer more than 3/4?",
+    "repair": "Rename first with a common denominator.",
+    "error": "Subtracts the numerators and the denominators.",
+    "example": {
+     "question": "3/4 - 1/3",
+     "wrong_answer": "2/1",
+     "correct_answer": "5/12"
+    }
+   },
+   {
+    "code": "MATH.G7.NUMBER.FRACTIONS.SUBTRACT_UNLIKE_FRACTIONS.M_SMALLER_FROM_LARGER_FRACTION",
+    "listen_for": [
+     "3/5 take 1/5"
+    ],
+    "ask": "Can you take 3/5 from 1/5?",
+    "repair": "Regroup a whole.",
+    "error": "Subtracts the smaller fraction from the larger one in each place.",
+    "example": {
+     "question": "4 1/5 - 1 3/5",
+     "wrong_answer": "3 2/5",
+     "correct_answer": "2 3/5"
+    }
+   },
+   {
+    "code": "MATH.G7.NUMBER.FRACTIONS.SUBTRACT_UNLIKE_FRACTIONS.M_BORROWED_WHOLE_NOT_REDUCED",
+    "listen_for": [
+     "3 3/5"
+    ],
+    "ask": "How many wholes are left after one is changed?",
+    "repair": "The whole goes down by one.",
+    "error": "Regroups a whole into the fraction part but leaves the whole number as it was.",
+    "example": {
+     "question": "4 1/5 - 1 3/5",
+     "wrong_answer": "3 3/5",
+     "correct_answer": "2 3/5"
+    }
+   }
+  ],
+  "checks": [
+   {
+    "question": "3/4 - 1/3",
+    "answer": "5/12",
+    "shows": "unlike"
+   },
+   {
+    "question": "4 1/5 - 1 3/5",
+    "answer": "2 3/5",
+    "shows": "regroup"
+   }
+  ],
+  "name": "Subtract fractions and mixed numbers with unlike denominators",
+  "sub_strand": "MATH.G7.NUMBER.FRACTIONS",
+  "sub_strand_name": "Fractions",
+  "status": "draft: written 17 Nov 2026 offline for the Grade 7 pilot; not yet checked by a Kenyan maths teacher; not loaded by the live tutor"
+ },
+ "MATH.G7.NUMBER.FRACTIONS.MULT_FRACTION_BY_WHOLE": {
+  "skill": "MATH.G7.NUMBER.FRACTIONS.MULT_FRACTION_BY_WHOLE",
+  "key_step": "The child multiplies the numerator only, keeps the denominator, and describes it as repeated addition of the same pieces.",
+  "floor": {
+   "prerequisite": "Adds the same fraction.",
+   "question": "2/5 + 2/5 + 2/5",
+   "answer": "6/5"
+  },
+  "representations": [
+   "repeated bars",
+   "number line jumps",
+   "the product"
+  ],
+  "steps": [
+   "Write as repeated addition.",
+   "Count the pieces.",
+   "Multiply the numerator only.",
+   "Write a mixed number if needed."
+  ],
+  "contexts": [
+   "cups for 3 people",
+   "litres in jugs",
+   "metres of cloth"
+  ],
+  "board": [
+   {
+    "beat": "draw",
+    "do": "Draw 3 groups of 2/5."
+   },
+   {
+    "beat": "point",
+    "do": "Point at the pieces.",
+    "say": "How many fifths in all?"
+   },
+   {
+    "beat": "pause",
+    "do": "Wait for the child to count."
+   }
+  ],
+  "misconceptions": [
+   {
+    "code": "MATH.G7.NUMBER.FRACTIONS.MULT_FRACTION_BY_WHOLE.M_WHOLE_MULTIPLIES_DENOMINATOR",
+    "listen_for": [
+     "6/15"
+    ],
+    "ask": "Are the pieces still fifths after 3 groups?",
+    "repair": "Only the number of pieces changes.",
+    "error": "Multiplies the denominator by the whole number as well as the numerator.",
+    "example": {
+     "question": "3 x 2/5",
+     "wrong_answer": "6/15",
+     "correct_answer": "6/5"
+    }
+   },
+   {
+    "code": "MATH.G7.NUMBER.FRACTIONS.MULT_FRACTION_BY_WHOLE.M_ONLY_DIVIDED_BY_DENOMINATOR",
+    "listen_for": [
+     "6 for 2/5 of 30"
+    ],
+    "ask": "You found 1/5. How many fifths do we want?",
+    "repair": "Take 2 of the 6.",
+    "error": "Finds a fraction of an amount by dividing by the denominator only.",
+    "example": {
+     "question": "2/5 of 30",
+     "wrong_answer": "6",
+     "correct_answer": "12"
+    }
+   }
+  ],
+  "checks": [
+   {
+    "question": "3 x 2/5",
+    "answer": "6/5",
+    "shows": "numerator only"
+   },
+   {
+    "question": "2/5 of 30",
+    "answer": "12",
+    "shows": "fraction of an amount"
+   }
+  ],
+  "name": "Multiply a fraction by a whole number",
+  "sub_strand": "MATH.G7.NUMBER.FRACTIONS",
+  "sub_strand_name": "Fractions",
+  "status": "draft: written 17 Nov 2026 offline for the Grade 7 pilot; not yet checked by a Kenyan maths teacher; not loaded by the live tutor"
+ },
+ "MATH.G7.NUMBER.FRACTIONS.MULT_FRACTION_BY_FRACTION": {
+  "skill": "MATH.G7.NUMBER.FRACTIONS.MULT_FRACTION_BY_FRACTION",
+  "key_step": "The child writes any mixed number as an improper fraction, multiplies tops and bottoms, and reads the product as a part of a part.",
+  "floor": {
+   "prerequisite": "Finds a fraction of a number.",
+   "question": "1/2 of 12",
+   "answer": "6"
+  },
+  "representations": [
+   "a bar shaded twice",
+   "improper fractions",
+   "the product simplified"
+  ],
+  "steps": [
+   "Change mixed numbers to improper fractions.",
+   "Multiply the numerators, then the denominators.",
+   "Simplify.",
+   "Check the size."
+  ],
+  "contexts": [
+   "part of a shamba",
+   "part of a jug",
+   "share of a bar of soap"
+  ],
+  "board": [
+   {
+    "beat": "draw",
+    "do": "Draw a bar, shade 3/4, then shade 2/3 of the shaded part."
+   },
+   {
+    "beat": "point",
+    "do": "Point at the double shaded part.",
+    "say": "What part of the whole bar is this?"
+   },
+   {
+    "beat": "pause",
+    "do": "Wait for the child to say."
+   }
+  ],
+  "misconceptions": [
+   {
+    "code": "MATH.G7.NUMBER.FRACTIONS.MULT_FRACTION_BY_FRACTION.M_ADD_FRACTIONS_INSTEAD",
+    "listen_for": [
+     "17/12"
+    ],
+    "ask": "Is part of a part bigger or smaller than the part?",
+    "repair": "Multiply to find a part of a part.",
+    "error": "Adds the fractions when told to find a part of a part.",
+    "example": {
+     "question": "2/3 x 3/4",
+     "wrong_answer": "17/12",
+     "correct_answer": "1/2"
+    }
+   },
+   {
+    "code": "MATH.G7.NUMBER.FRACTIONS.MULT_FRACTION_BY_FRACTION.M_MIXED_PARTS_MULTIPLIED_SEPARATELY",
+    "listen_for": [
+     "6 1/4"
+    ],
+    "ask": "What is 2 1/2 as an improper fraction?",
+    "repair": "Write both as improper fractions.",
+    "error": "Multiplies the whole parts and the fraction parts of mixed numbers separately.",
+    "example": {
+     "question": "2 1/2 x 3 1/2",
+     "wrong_answer": "6 1/4",
+     "correct_answer": "8 3/4"
+    }
+   },
+   {
+    "code": "MATH.G7.NUMBER.FRACTIONS.MULT_FRACTION_BY_FRACTION.M_FRACTION_OF_WRONG_WHOLE",
+    "listen_for": [
+     "14.4"
+    ],
+    "ask": "Is the river part of the whole shamba or of the maize land?",
+    "repair": "The second fraction is of the first part.",
+    "error": "Takes the second fraction of the whole amount instead of of the first part.",
+    "example": {
+     "question": "36 acres, 5/6 maize, 2/5 of the maize land by the river: how many acres?",
+     "wrong_answer": "14.4 acres",
+     "correct_answer": "12 acres"
+    }
+   },
+   {
+    "code": "MATH.G7.NUMBER.FRACTIONS.MULT_FRACTION_BY_FRACTION.M_STOPPED_AFTER_FIRST_FRACTION",
+    "listen_for": [
+     "30 acres"
+    ],
+    "ask": "What does the question ask for?",
+    "repair": "Use the second fraction too.",
+    "error": "Finds the first part of a two-part story and stops.",
+    "example": {
+     "question": "36 acres, 5/6 maize, 2/5 of the maize land by the river: how many acres?",
+     "wrong_answer": "30 acres",
+     "correct_answer": "12 acres"
+    }
+   }
+  ],
+  "checks": [
+   {
+    "question": "2/3 x 3/4",
+    "answer": "1/2",
+    "shows": "part of a part"
+   },
+   {
+    "question": "2 1/2 x 3 1/2",
+    "answer": "8 3/4",
+    "shows": "mixed numbers"
+   }
+  ],
+  "name": "Multiply fractions and mixed numbers",
+  "sub_strand": "MATH.G7.NUMBER.FRACTIONS",
+  "sub_strand_name": "Fractions",
+  "status": "draft: written 17 Nov 2026 offline for the Grade 7 pilot; not yet checked by a Kenyan maths teacher; not loaded by the live tutor"
+ },
+ "MATH.G7.NUMBER.FRACTIONS.RECIPROCAL": {
+  "skill": "MATH.G7.NUMBER.FRACTIONS.RECIPROCAL",
+  "key_step": "The child turns the whole number or improper fraction upside down and checks that the product with the original is 1.",
+  "floor": {
+   "prerequisite": "Writes a whole number as a fraction.",
+   "question": "5 as a fraction",
+   "answer": "5/1"
+  },
+  "representations": [
+   "the fraction upside down",
+   "multiply to 1",
+   "mixed number as improper"
+  ],
+  "steps": [
+   "Write whole numbers over 1.",
+   "Write mixed numbers as improper fractions.",
+   "Turn upside down.",
+   "Check the product is 1."
+  ],
+  "contexts": [
+   "cups from a jug",
+   "bags from a sack",
+   "strips from a rope"
+  ],
+  "board": [
+   {
+    "beat": "write",
+    "do": "Write 2/5 and 5/2 next to each other."
+   },
+   {
+    "beat": "point",
+    "do": "Point at both.",
+    "say": "What is 2/5 x 5/2?"
+   },
+   {
+    "beat": "pause",
+    "do": "Wait for the child to multiply."
+   }
+  ],
+  "misconceptions": [
+   {
+    "code": "MATH.G7.NUMBER.FRACTIONS.RECIPROCAL.M_NOT_FLIPPED",
+    "listen_for": [
+     "4.8"
+    ],
+    "ask": "What do we multiply by after turning over?",
+    "repair": "Use 5/2, not 2/5.",
+    "error": "Multiplies by the fraction itself instead of its reciprocal.",
+    "example": {
+     "question": "12 divided by 2/5 using the reciprocal",
+     "wrong_answer": "4.8",
+     "correct_answer": "30"
+    }
+   },
+   {
+    "code": "MATH.G7.NUMBER.FRACTIONS.RECIPROCAL.M_ONLY_DENOMINATOR_USED",
+    "listen_for": [
+     "60"
+    ],
+    "ask": "Is the reciprocal 5 or 5/2?",
+    "repair": "Both numbers turn.",
+    "error": "Uses only the denominator of the reciprocal.",
+    "example": {
+     "question": "12 x reciprocal of 2/5",
+     "wrong_answer": "60",
+     "correct_answer": "30"
+    }
+   },
+   {
+    "code": "MATH.G7.NUMBER.FRACTIONS.RECIPROCAL.M_ONLY_NUMERATOR_USED",
+    "listen_for": [
+     "24"
+    ],
+    "ask": "Does the reciprocal have a bottom?",
+    "repair": "Use both numbers.",
+    "error": "Uses only the numerator of the fraction.",
+    "example": {
+     "question": "12 x reciprocal of 2/5",
+     "wrong_answer": "24",
+     "correct_answer": "30"
+    }
+   },
+   {
+    "code": "MATH.G7.NUMBER.FRACTIONS.RECIPROCAL.M_MIXED_NUMBER_FLIPPED_BY_PARTS",
+    "listen_for": [
+     "2 3/2"
+    ],
+    "ask": "What is 2 2/3 as an improper fraction?",
+    "repair": "Convert first.",
+    "error": "Flips only the fraction part of a mixed number and keeps the whole.",
+    "example": {
+     "question": "Reciprocal of 2 2/3",
+     "wrong_answer": "2 3/2",
+     "correct_answer": "3/8"
+    }
+   },
+   {
+    "code": "MATH.G7.NUMBER.FRACTIONS.RECIPROCAL.M_MIXED_NUMBER_HAS_NONE",
+    "listen_for": [
+     "no reciprocal"
+    ],
+    "ask": "Can you write 2 2/3 as one fraction?",
+    "repair": "Every number but 0 has one.",
+    "error": "Says a mixed number has no reciprocal.",
+    "example": {
+     "question": "Does 2 2/3 have a reciprocal?",
+     "wrong_answer": "No",
+     "correct_answer": "Yes: 3/8"
+    }
+   },
+   {
+    "code": "MATH.G7.NUMBER.FRACTIONS.RECIPROCAL.M_RECIPROCAL_IS_NEGATIVE",
+    "listen_for": [
+     "minus"
+    ],
+    "ask": "What does a number times its reciprocal make?",
+    "repair": "It makes 1, not 0.",
+    "error": "Believes the reciprocal is the number with a minus sign.",
+    "example": {
+     "question": "Reciprocal of 3/4",
+     "wrong_answer": "-3/4",
+     "correct_answer": "4/3"
+    }
+   }
+  ],
+  "checks": [
+   {
+    "question": "Reciprocal of 2 2/3",
+    "answer": "3/8",
+    "shows": "mixed number"
+   },
+   {
+    "question": "Reciprocal of 5",
+    "answer": "1/5",
+    "shows": "whole number"
+   }
+  ],
+  "name": "Find the reciprocal of a fraction, a whole number or a mixed number",
+  "sub_strand": "MATH.G7.NUMBER.FRACTIONS",
+  "sub_strand_name": "Fractions",
+  "status": "draft: written 17 Nov 2026 offline for the Grade 7 pilot; not yet checked by a Kenyan maths teacher; not loaded by the live tutor"
+ },
+ "MATH.G7.NUMBER.FRACTIONS.DIVIDE_FRACTION_BY_WHOLE": {
+  "skill": "MATH.G7.NUMBER.FRACTIONS.DIVIDE_FRACTION_BY_WHOLE",
+  "key_step": "The child shares the fraction into equal parts by multiplying the denominator, or by the reciprocal of the whole number, and checks the answer is smaller.",
+  "floor": {
+   "prerequisite": "Multiplies fractions.",
+   "question": "3/8 x 1/4",
+   "answer": "3/32"
+  },
+  "representations": [
+   "a bar cut into smaller pieces",
+   "times the reciprocal",
+   "the check"
+  ],
+  "steps": [
+   "Think: share into equal parts.",
+   "Multiply the denominator, or multiply by 1/number.",
+   "Simplify.",
+   "Check it is smaller."
+  ],
+  "contexts": [
+   "water shared among drums",
+   "sugar in packets",
+   "land shared among sons"
+  ],
+  "board": [
+   {
+    "beat": "draw",
+    "do": "Draw a bar of 3/8 and cut each part into 4."
+   },
+   {
+    "beat": "point",
+    "do": "Point at the small pieces.",
+    "say": "What size are the new pieces?"
+   },
+   {
+    "beat": "pause",
+    "do": "Wait for the child to say."
+   }
+  ],
+  "misconceptions": [
+   {
+    "code": "MATH.G7.NUMBER.FRACTIONS.DIVIDE_FRACTION_BY_WHOLE.M_WHOLE_ADDED_TO_DENOMINATOR",
+    "listen_for": [
+     "3/12"
+    ],
+    "ask": "Cut each eighth into 4 pieces: how many pieces is the whole?",
+    "repair": "Multiply the denominator.",
+    "error": "Adds the whole number to the denominator.",
+    "example": {
+     "question": "3/8 divided by 4",
+     "wrong_answer": "3/12",
+     "correct_answer": "3/32"
+    }
+   },
+   {
+    "code": "MATH.G7.NUMBER.FRACTIONS.DIVIDE_FRACTION_BY_WHOLE.M_FLIPPED_THE_DIVIDEND",
+    "listen_for": [
+     "32/3"
+    ],
+    "ask": "Which number is the divisor?",
+    "repair": "Flip the divisor only.",
+    "error": "Turns the fraction upside down instead of the number it is divided by.",
+    "example": {
+     "question": "3/8 divided by 4",
+     "wrong_answer": "32/3",
+     "correct_answer": "3/32"
+    }
+   },
+   {
+    "code": "MATH.G7.NUMBER.FRACTIONS.DIVIDE_FRACTION_BY_WHOLE.M_MULTIPLIED_BY_DIVISOR",
+    "listen_for": [
+     "3/2"
+    ],
+    "ask": "Should sharing give a bigger amount?",
+    "repair": "Share means smaller parts.",
+    "error": "Multiplies the fraction by the whole number when asked to share.",
+    "example": {
+     "question": "3/8 divided by 4",
+     "wrong_answer": "3/2",
+     "correct_answer": "3/32"
+    }
+   }
+  ],
+  "checks": [
+   {
+    "question": "3/8 divided by 4",
+    "answer": "3/32",
+    "shows": "share"
+   },
+   {
+    "question": "2/3 divided by 2",
+    "answer": "1/3",
+    "shows": "simplify"
+   }
+  ],
+  "name": "Divide a fraction by a whole number",
+  "sub_strand": "MATH.G7.NUMBER.FRACTIONS",
+  "sub_strand_name": "Fractions",
+  "status": "draft: written 17 Nov 2026 offline for the Grade 7 pilot; not yet checked by a Kenyan maths teacher; not loaded by the live tutor"
+ },
+ "MATH.G7.NUMBER.FRACTIONS.DIVIDE_BY_FRACTION": {
+  "skill": "MATH.G7.NUMBER.FRACTIONS.DIVIDE_BY_FRACTION",
+  "key_step": "The child turns only the second fraction upside down, writes mixed numbers as improper fractions first, and multiplies.",
+  "floor": {
+   "prerequisite": "Finds the reciprocal.",
+   "question": "Reciprocal of 3/8",
+   "answer": "8/3"
+  },
+  "representations": [
+   "how many fit",
+   "reciprocal of the divisor",
+   "the product"
+  ],
+  "steps": [
+   "Write mixed numbers as improper fractions.",
+   "Keep the first number.",
+   "Turn the second number upside down.",
+   "Multiply and simplify."
+  ],
+  "contexts": [
+   "cups from a jug",
+   "strips of cloth",
+   "pieces of rope"
+  ],
+  "board": [
+   {
+    "beat": "write",
+    "do": "Write 3/4 divided by 3/8."
+   },
+   {
+    "beat": "point",
+    "do": "Point at 3/8.",
+    "say": "Which number do we turn over?"
+   },
+   {
+    "beat": "pause",
+    "do": "Wait for the child to say."
+   }
+  ],
+  "misconceptions": [
+   {
+    "code": "MATH.G7.NUMBER.FRACTIONS.DIVIDE_BY_FRACTION.M_DIVISOR_NOT_INVERTED",
+    "listen_for": [
+     "9/32"
+    ],
+    "ask": "What do we do to the second fraction?",
+    "repair": "Turn it over.",
+    "error": "Multiplies by the divisor without turning it upside down.",
+    "example": {
+     "question": "3/4 divided by 3/8",
+     "wrong_answer": "9/32",
+     "correct_answer": "2"
+    }
+   },
+   {
+    "code": "MATH.G7.NUMBER.FRACTIONS.DIVIDE_BY_FRACTION.M_BOTH_FRACTIONS_INVERTED",
+    "listen_for": [
+     "32/9"
+    ],
+    "ask": "Which fraction stays?",
+    "repair": "Only the divisor turns.",
+    "error": "Turns both fractions upside down.",
+    "example": {
+     "question": "3/4 divided by 3/8",
+     "wrong_answer": "32/9",
+     "correct_answer": "2"
+    }
+   },
+   {
+    "code": "MATH.G7.NUMBER.FRACTIONS.DIVIDE_BY_FRACTION.M_MIXED_NUMBER_NOT_CONVERTED",
+    "listen_for": [
+     "4 1/2"
+    ],
+    "ask": "What is 2 1/2 as one fraction?",
+    "repair": "Convert first.",
+    "error": "Divides only the whole part of a mixed number and keeps the fraction part.",
+    "example": {
+     "question": "2 1/2 divided by 1/2",
+     "wrong_answer": "4 1/2",
+     "correct_answer": "5"
+    }
+   }
+  ],
+  "checks": [
+   {
+    "question": "3/4 divided by 3/8",
+    "answer": "2",
+    "shows": "divisor flipped"
+   },
+   {
+    "question": "2 1/2 divided by 1/2",
+    "answer": "5",
+    "shows": "mixed number"
+   }
+  ],
+  "name": "Divide by a fraction or a mixed number",
+  "sub_strand": "MATH.G7.NUMBER.FRACTIONS",
+  "sub_strand_name": "Fractions",
+  "status": "draft: written 17 Nov 2026 offline for the Grade 7 pilot; not yet checked by a Kenyan maths teacher; not loaded by the live tutor"
+ },
+ "MATH.G7.NUMBER.FRACTIONS.DIVIDE_WHOLE_BY_FRACTION": {
+  "skill": "MATH.G7.NUMBER.FRACTIONS.DIVIDE_WHOLE_BY_FRACTION",
+  "key_step": "The child asks how many of the small amount fit into the large one, writes the whole number first and the fraction second, and expects a larger answer.",
+  "floor": {
+   "prerequisite": "Divides by a fraction.",
+   "question": "3/4 divided by 3/8",
+   "answer": "2"
+  },
+  "representations": [
+   "strips fitting along a rope",
+   "division sentence",
+   "the answer in the story"
+  ],
+  "steps": [
+   "Ask how many small amounts fit.",
+   "Write the large amount first.",
+   "Multiply by the reciprocal.",
+   "Check the answer is larger."
+  ],
+  "contexts": [
+   "bags from a sack of flour",
+   "cups from a jug",
+   "doors painted from a tin"
+  ],
+  "board": [
+   {
+    "beat": "draw",
+    "do": "Draw a 6 m rope and mark halves."
+   },
+   {
+    "beat": "point",
+    "do": "Point at the marks.",
+    "say": "How many halves are in one metre?"
+   },
+   {
+    "beat": "pause",
+    "do": "Wait for the child to count."
+   }
+  ],
+  "misconceptions": [
+   {
+    "code": "MATH.G7.NUMBER.FRACTIONS.DIVIDE_WHOLE_BY_FRACTION.M_SMALL_DIVIDED_BY_LARGE",
+    "listen_for": [
+     "3/5 divided by 9"
+    ],
+    "ask": "How many bags fit into 9 kg?",
+    "repair": "The amount to share goes first.",
+    "error": "Divides the small amount by the large one.",
+    "example": {
+     "question": "9 kg of flour, bags of 3/5 kg: which calculation?",
+     "wrong_answer": "3/5 divided by 9",
+     "correct_answer": "9 divided by 3/5"
+    }
+   },
+   {
+    "code": "MATH.G7.NUMBER.FRACTIONS.DIVIDE_WHOLE_BY_FRACTION.M_TAKEN_AWAY_ONCE",
+    "listen_for": [
+     "9 minus 3/5"
+    ],
+    "ask": "How many times can you take 3/5 away?",
+    "repair": "Division counts how many.",
+    "error": "Subtracts the fraction once instead of counting how many fit.",
+    "example": {
+     "question": "9 kg of flour, bags of 3/5 kg: which calculation?",
+     "wrong_answer": "9 - 3/5",
+     "correct_answer": "9 divided by 3/5"
+    }
+   },
+   {
+    "code": "MATH.G7.NUMBER.FRACTIONS.DIVIDE_WHOLE_BY_FRACTION.M_FRACTION_OF_NOT_HOW_MANY",
+    "listen_for": [
+     "9 times 3/5"
+    ],
+    "ask": "Is 3/5 of 9 a count of bags?",
+    "repair": "Count how many fit instead.",
+    "error": "Multiplies to find a part of the whole when asked how many fit.",
+    "example": {
+     "question": "9 kg of flour, bags of 3/5 kg: which calculation?",
+     "wrong_answer": "9 x 3/5",
+     "correct_answer": "9 divided by 3/5"
+    }
+   },
+   {
+    "code": "MATH.G7.NUMBER.FRACTIONS.DIVIDE_WHOLE_BY_FRACTION.M_DIVISION_ALWAYS_SMALLER",
+    "listen_for": [
+     "divide makes smaller",
+     "3"
+    ],
+    "ask": "How many halves are in 6?",
+    "repair": "Dividing by a fraction makes more.",
+    "error": "Believes division always makes the answer smaller.",
+    "example": {
+     "question": "6 divided by 1/2",
+     "wrong_answer": "3",
+     "correct_answer": "12"
+    }
+   }
+  ],
+  "checks": [
+   {
+    "question": "9 kg of flour in bags of 3/5 kg: how many bags?",
+    "answer": "15",
+    "shows": "how many fit"
+   },
+   {
+    "question": "6 divided by 1/2",
+    "answer": "12",
+    "shows": "larger answer"
+   }
+  ],
+  "name": "Divide a whole number by a fraction and use it to count how many fit",
+  "sub_strand": "MATH.G7.NUMBER.FRACTIONS",
+  "sub_strand_name": "Fractions",
+  "status": "draft: written 17 Nov 2026 offline for the Grade 7 pilot; not yet checked by a Kenyan maths teacher; not loaded by the live tutor"
+ },
+ "MATH.G7.NUMBER.FRACTIONS.FRACTION_SEQ_ADD_RULE": {
+  "skill": "MATH.G7.NUMBER.FRACTIONS.FRACTION_SEQ_ADD_RULE",
+  "key_step": "The child writes the terms with a common denominator, finds the gap between neighbours, and applies it to the numerator only.",
+  "floor": {
+   "prerequisite": "Finds a gap.",
+   "question": "Next: 2/5, 3/5, 4/5, ?",
+   "answer": "5/5 or 1"
+  },
+  "representations": [
+   "terms on a number line",
+   "common denominator",
+   "gap written between terms"
+  ],
+  "steps": [
+   "Write a whole-number term as a fraction.",
+   "Find the gap between neighbours.",
+   "Check every gap.",
+   "Apply it to the last term."
+  ],
+  "contexts": [
+   "a tank filling",
+   "a tank emptying",
+   "savings each week"
+  ],
+  "board": [
+   {
+    "beat": "write",
+    "do": "Write 1, 4/5, 3/5, 2/5, ?"
+   },
+   {
+    "beat": "point",
+    "do": "Point at 1.",
+    "say": "How many fifths is 1?"
+   },
+   {
+    "beat": "pause",
+    "do": "Wait for the child to say."
+   }
+  ],
+  "misconceptions": [
+   {
+    "code": "MATH.G7.NUMBER.FRACTIONS.FRACTION_SEQ_ADD_RULE.M_DENOMINATOR_ALSO_CHANGED",
+    "listen_for": [
+     "4/10"
+    ],
+    "ask": "Does adding 1/5 change the size of the pieces?",
+    "repair": "Only the number of fifths changes.",
+    "error": "Changes the denominator as well as the numerator.",
+    "example": {
+     "question": "1/5, 2/5, 3/5, ?",
+     "wrong_answer": "4/10",
+     "correct_answer": "4/5"
+    }
+   },
+   {
+    "code": "MATH.G7.NUMBER.FRACTIONS.FRACTION_SEQ_ADD_RULE.M_GAP_NOT_CONSTANT",
+    "listen_for": [
+     "3/10"
+    ],
+    "ask": "What is the gap between each pair?",
+    "repair": "Check every pair.",
+    "error": "Treats the gap as changing from term to term.",
+    "example": {
+     "question": "1, 4/5, 3/5, 2/5, ?",
+     "wrong_answer": "3/10",
+     "correct_answer": "1/5"
+    }
+   },
+   {
+    "code": "MATH.G7.NUMBER.FRACTIONS.FRACTION_SEQ_ADD_RULE.M_END_NOT_NEXT",
+    "listen_for": [
+     "0"
+    ],
+    "ask": "Which term comes straight after 2/5?",
+    "repair": "Give the next term, not the last.",
+    "error": "Gives a term further on instead of the next term.",
+    "example": {
+     "question": "1, 4/5, 3/5, 2/5, ? What comes next?",
+     "wrong_answer": "0",
+     "correct_answer": "1/5"
+    }
+   }
+  ],
+  "checks": [
+   {
+    "question": "1/5, 2/5, 3/5, ?",
+    "answer": "4/5",
+    "shows": "denominator stays"
+   },
+   {
+    "question": "1, 4/5, 3/5, 2/5, ?",
+    "answer": "1/5",
+    "shows": "whole number term"
+   }
+  ],
+  "name": "Continue a fraction sequence that adds or takes away the same fraction",
+  "sub_strand": "MATH.G7.NUMBER.FRACTIONS",
+  "sub_strand_name": "Fractions",
+  "status": "draft: written 17 Nov 2026 offline for the Grade 7 pilot; not yet checked by a Kenyan maths teacher; not loaded by the live tutor"
+ },
+ "MATH.G7.NUMBER.FRACTIONS.FRACTION_SEQ_MULTIPLY_RULE": {
+  "skill": "MATH.G7.NUMBER.FRACTIONS.FRACTION_SEQ_MULTIPLY_RULE",
+  "key_step": "The child checks the direction of the terms and the ratio between neighbours, and names the rule as divide (or multiply by a fraction).",
+  "floor": {
+   "prerequisite": "Finds a rule.",
+   "question": "2, 6, 18: the rule?",
+   "answer": "Multiply by 3"
+  },
+  "representations": [
+   "terms on a number line",
+   "ratio between pairs",
+   "the rule in words"
+  ],
+  "steps": [
+   "Do the terms grow or shrink?",
+   "Divide each term by the one before.",
+   "State the rule.",
+   "Continue."
+  ],
+  "contexts": [
+   "a bouncing ball",
+   "a folded paper",
+   "water in a tank"
+  ],
+  "board": [
+   {
+    "beat": "write",
+    "do": "Write 1, 1/3, 1/9, 1/27."
+   },
+   {
+    "beat": "point",
+    "do": "Point at the first two terms.",
+    "say": "How many of the second fit in the first?"
+   },
+   {
+    "beat": "pause",
+    "do": "Wait for the child to say the rule."
+   }
+  ],
+  "misconceptions": [
+   {
+    "code": "MATH.G7.NUMBER.FRACTIONS.FRACTION_SEQ_MULTIPLY_RULE.M_MULTIPLY_FOR_SMALLER",
+    "listen_for": [
+     "multiply by 3"
+    ],
+    "ask": "Do the terms get bigger or smaller?",
+    "repair": "Smaller: divide.",
+    "error": "Names multiplying by a whole number as the rule for terms that get smaller.",
+    "example": {
+     "question": "1, 1/3, 1/9: the rule?",
+     "wrong_answer": "Multiply by 3",
+     "correct_answer": "Divide by 3"
+    }
+   },
+   {
+    "code": "MATH.G7.NUMBER.FRACTIONS.FRACTION_SEQ_MULTIPLY_RULE.M_WHOLE_SUBTRACTED_FROM_FRACTION",
+    "listen_for": [
+     "take away 3"
+    ],
+    "ask": "What is 1 minus 3?",
+    "repair": "Terms stay positive: divide.",
+    "error": "Names taking away a whole number as the rule.",
+    "example": {
+     "question": "1, 1/3, 1/9: the rule?",
+     "wrong_answer": "Take away 3",
+     "correct_answer": "Divide by 3"
+    }
+   },
+   {
+    "code": "MATH.G7.NUMBER.FRACTIONS.FRACTION_SEQ_MULTIPLY_RULE.M_FRACTION_SUBTRACTED_NOT_SCALED",
+    "listen_for": [
+     "take away 1/3"
+    ],
+    "ask": "What is 1/3 minus 1/3?",
+    "repair": "Check the ratio, not the gap.",
+    "error": "Names taking away the same fraction as the rule.",
+    "example": {
+     "question": "1, 1/3, 1/9: the rule?",
+     "wrong_answer": "Take away 1/3",
+     "correct_answer": "Divide by 3"
+    }
+   }
+  ],
+  "checks": [
+   {
+    "question": "1, 1/3, 1/9: the rule?",
+    "answer": "Divide by 3",
+    "shows": "ratio"
+   },
+   {
+    "question": "1, 1/2, 1/4, ?",
+    "answer": "1/8",
+    "shows": "next term"
+   }
+  ],
+  "name": "Find the rule of a fraction sequence that multiplies or divides",
+  "sub_strand": "MATH.G7.NUMBER.FRACTIONS",
+  "sub_strand_name": "Fractions",
+  "status": "draft: written 17 Nov 2026 offline for the Grade 7 pilot; not yet checked by a Kenyan maths teacher; not loaded by the live tutor"
+ },
+ "MATH.G7.NUMBER.FRACTIONS.FRACTION_SEQ_IN_TABLE": {
+  "skill": "MATH.G7.NUMBER.FRACTIONS.FRACTION_SEQ_IN_TABLE",
+  "key_step": "The child finds the part done per step, works out how many steps to complete one whole, and converts steps to hours.",
+  "floor": {
+   "prerequisite": "Reads a table.",
+   "question": "Part full after 2 hours is 1/5. After 4 hours?",
+   "answer": "2/5"
+  },
+  "representations": [
+   "a table",
+   "part per step",
+   "hours for the whole"
+  ],
+  "steps": [
+   "Find the part per step.",
+   "How many steps make 1 whole?",
+   "Multiply by the hours per step.",
+   "Check the table."
+  ],
+  "contexts": [
+   "filling a tank",
+   "a path being tiled",
+   "a wall being built"
+  ],
+  "board": [
+   {
+    "beat": "draw",
+    "do": "Draw a table: 2 h 1/5, 4 h 2/5, 6 h 3/5."
+   },
+   {
+    "beat": "point",
+    "do": "Point at 6 h.",
+    "say": "Is the tank full yet?"
+   },
+   {
+    "beat": "pause",
+    "do": "Wait for the child to say."
+   }
+  ],
+  "misconceptions": [
+   {
+    "code": "MATH.G7.NUMBER.FRACTIONS.FRACTION_SEQ_IN_TABLE.M_LAST_ROW_TAKEN_AS_ANSWER",
+    "listen_for": [
+     "6 hours"
+    ],
+    "ask": "How full is it at 6 hours?",
+    "repair": "Continue the pattern.",
+    "error": "Gives the last time in the table as the time the task is done.",
+    "example": {
+     "question": "2 hours: 1/5, 4 hours: 2/5, 6 hours: 3/5. When is the tank full?",
+     "wrong_answer": "6 hours",
+     "correct_answer": "10 hours"
+    }
+   },
+   {
+    "code": "MATH.G7.NUMBER.FRACTIONS.FRACTION_SEQ_IN_TABLE.M_STEPS_COUNTED_NOT_HOURS",
+    "listen_for": [
+     "5 hours"
+    ],
+    "ask": "How many hours is one row?",
+    "repair": "Count hours, not steps.",
+    "error": "Counts the steps of the table as hours.",
+    "example": {
+     "question": "2 hours: 1/5, 4 hours: 2/5, 6 hours: 3/5. When is the tank full?",
+     "wrong_answer": "5 hours",
+     "correct_answer": "10 hours"
+    }
+   },
+   {
+    "code": "MATH.G7.NUMBER.FRACTIONS.FRACTION_SEQ_IN_TABLE.M_STEP_RATE_AS_HOURLY",
+    "listen_for": [
+     "20 hours"
+    ],
+    "ask": "How much is filled in one hour?",
+    "repair": "Work out the hourly part first.",
+    "error": "Treats the time for one step as the time for the whole task.",
+    "example": {
+     "question": "2 hours: 1/5, 4 hours: 2/5. When is the tank full?",
+     "wrong_answer": "20 hours",
+     "correct_answer": "10 hours"
+    }
+   }
+  ],
+  "checks": [
+   {
+    "question": "1/5 full after 2 h, 2/5 after 4 h, 3/5 after 6 h. When is it full?",
+    "answer": "10 hours",
+    "shows": "steps to hours"
+   },
+   {
+    "question": "How full is it after 8 hours?",
+    "answer": "4/5",
+    "shows": "next row"
+   }
+  ],
+  "name": "Use a fraction pattern in a table to answer how long it takes",
+  "sub_strand": "MATH.G7.NUMBER.FRACTIONS",
+  "sub_strand_name": "Fractions",
+  "status": "draft: written 17 Nov 2026 offline for the Grade 7 pilot; not yet checked by a Kenyan maths teacher; not loaded by the live tutor"
+ },
+ "MATH.G7.NUMBER.FRACTIONS.FRACTION_SEQ_CREATE": {
+  "skill": "MATH.G7.NUMBER.FRACTIONS.FRACTION_SEQ_CREATE",
+  "key_step": "The child puts each term through the whole rule and checks every neighbouring pair before giving the sequence to a partner.",
+  "floor": {
+   "prerequisite": "Continues a fraction sequence.",
+   "question": "1/4, 2/4, 3/4, ?",
+   "answer": "1"
+  },
+  "representations": [
+   "the rule in a box",
+   "terms written",
+   "a partner puzzle"
+  ],
+  "steps": [
+   "Write the rule in a box.",
+   "Start with the first term.",
+   "Apply the rule each time.",
+   "Check each pair."
+  ],
+  "contexts": [
+   "number games",
+   "savings plans",
+   "puzzles for classmates"
+  ],
+  "board": [
+   {
+    "beat": "write",
+    "do": "Write: start at 1/4, add 1/4."
+   },
+   {
+    "beat": "point",
+    "do": "Point at the first term.",
+    "say": "What is the second term?"
+   },
+   {
+    "beat": "pause",
+    "do": "Wait for the child to say."
+   }
+  ],
+  "misconceptions": [
+   {
+    "code": "MATH.G7.NUMBER.FRACTIONS.FRACTION_SEQ_CREATE.M_ADDS_TO_NUMERATOR_AND_DENOMINATOR",
+    "listen_for": [
+     "2/8"
+    ],
+    "ask": "Does adding a quarter change the size of the pieces?",
+    "repair": "Only the number of quarters grows.",
+    "error": "Adds the rule fraction to both the numerator and the denominator when making terms.",
+    "example": {
+     "question": "Rule: start at 1/4, add 1/4. Write three terms.",
+     "wrong_answer": "1/4, 2/8, 3/12",
+     "correct_answer": "1/4, 2/4, 3/4"
+    }
+   },
+   {
+    "code": "MATH.G7.NUMBER.FRACTIONS.FRACTION_SEQ_CREATE.M_GAP_DRIFTS",
+    "listen_for": [
+     "1 1/2"
+    ],
+    "ask": "Is the gap the same between every pair?",
+    "repair": "Check each pair.",
+    "error": "Writes terms that do not all follow the rule.",
+    "example": {
+     "question": "Rule: start at 1/2, add 1/4. Write four terms.",
+     "wrong_answer": "1/2, 3/4, 1, 1 1/2",
+     "correct_answer": "1/2, 3/4, 1, 1 1/4"
+    }
+   }
+  ],
+  "checks": [
+   {
+    "question": "Rule: start at 1/4, add 1/4. Write three terms.",
+    "answer": "1/4, 2/4, 3/4",
+    "shows": "rule kept"
+   },
+   {
+    "question": "Rule: start at 1/2, add 1/4. Write four terms.",
+    "answer": "1/2, 3/4, 1, 1 1/4",
+    "shows": "steady gap"
+   }
+  ],
+  "name": "Create a number sequence with fractions for a number game",
+  "sub_strand": "MATH.G7.NUMBER.FRACTIONS",
+  "sub_strand_name": "Fractions",
+  "status": "draft: written 17 Nov 2026 offline for the Grade 7 pilot; not yet checked by a Kenyan maths teacher; not loaded by the live tutor"
  }
 };
 export default TEACHING_PACK_G7;

@@ -343,6 +343,123 @@
     "next time in clock time"
    ],
    "mastery": "The child decides from a story that the first time two or three repeating events coincide is the LCM (matatus leaving, bells ringing) and works it out in minutes or days, answering the time asked."
+  },
+  "MATH.G7.NUMBER.FRACTIONS.COMPARE_FRACTIONS": {
+   "forms": [
+    "which is greater",
+    "order three fractions",
+    "choose the best reason",
+    "who has read the most"
+   ],
+   "mastery": "The child compares two or three fractions with denominators up to 12 by renaming them with a common denominator, decides which is greater, orders them, and can explain why a bigger denominator does not mean a bigger fraction."
+  },
+  "MATH.G7.NUMBER.FRACTIONS.ADD_UNLIKE_FRACTIONS": {
+   "forms": [
+    "add two fractions",
+    "add mixed numbers",
+    "a sum in a story",
+    "find the mistake"
+   ],
+   "mastery": "The child adds two fractions or mixed numbers with unlike denominators (up to 12) by renaming with the LCM, adds numerators, carries any whole from the fraction part, and writes the sum in simplest form."
+  },
+  "MATH.G7.NUMBER.FRACTIONS.SUBTRACT_UNLIKE_FRACTIONS": {
+   "forms": [
+    "subtract two fractions",
+    "subtract mixed numbers with regrouping",
+    "what is left in a story",
+    "find the mistake"
+   ],
+   "mastery": "The child subtracts fractions or mixed numbers with unlike denominators (up to 12) by renaming with the LCM, regroups a whole into the fraction part when needed, reduces the whole by one, and simplifies."
+  },
+  "MATH.G7.NUMBER.FRACTIONS.MULT_FRACTION_BY_WHOLE": {
+   "forms": [
+    "multiply a fraction by a whole number",
+    "fraction of an amount",
+    "repeated addition picture",
+    "find the mistake"
+   ],
+   "mastery": "The child multiplies a fraction by a whole number (and finds a fraction of a quantity), multiplying the numerator and keeping the denominator, simplifies, and writes an improper result as a mixed number."
+  },
+  "MATH.G7.NUMBER.FRACTIONS.MULT_FRACTION_BY_FRACTION": {
+   "forms": [
+    "multiply two fractions",
+    "multiply a mixed number",
+    "part of a part",
+    "find the mistake"
+   ],
+   "mastery": "The child multiplies a fraction by a fraction or a mixed number by writing mixed numbers as improper fractions, multiplying numerators and denominators, simplifying (also across before multiplying), and finds a fraction of a fraction of an amount in a story."
+  },
+  "MATH.G7.NUMBER.FRACTIONS.RECIPROCAL": {
+   "forms": [
+    "write the reciprocal",
+    "reciprocal of a mixed number",
+    "check by multiplying to 1",
+    "use a reciprocal in a story"
+   ],
+   "mastery": "The child writes the reciprocal by turning a fraction upside down, writes a whole number as a fraction over 1 first, writes a mixed number as an improper fraction first, and checks that the number times its reciprocal is 1."
+  },
+  "MATH.G7.NUMBER.FRACTIONS.DIVIDE_FRACTION_BY_WHOLE": {
+   "forms": [
+    "divide a fraction by a whole number",
+    "share equally among drums",
+    "which working is right",
+    "check the size"
+   ],
+   "mastery": "The child divides a fraction or a mixed number by a whole number by multiplying the denominator (or by the reciprocal), simplifies, and knows the result is smaller than the fraction."
+  },
+  "MATH.G7.NUMBER.FRACTIONS.DIVIDE_BY_FRACTION": {
+   "forms": [
+    "divide a fraction by a fraction",
+    "divide a mixed number",
+    "which number is flipped",
+    "find the mistake"
+   ],
+   "mastery": "The child divides a whole number, fraction or mixed number by a fraction or a mixed number by multiplying by the reciprocal of the divisor (the second number only), writing mixed numbers as improper fractions first."
+  },
+  "MATH.G7.NUMBER.FRACTIONS.DIVIDE_WHOLE_BY_FRACTION": {
+   "forms": [
+    "how many fit",
+    "which calculation",
+    "divide a whole number by a fraction",
+    "will the answer be larger or smaller"
+   ],
+   "mastery": "The child divides a whole number by a fraction, chooses division when the story asks how many small amounts fit into a large one (cups from a jug, bags from a sack), and knows the answer is larger than the whole number."
+  },
+  "MATH.G7.NUMBER.FRACTIONS.FRACTION_SEQ_ADD_RULE": {
+   "forms": [
+    "next term",
+    "the gap",
+    "a decreasing sequence",
+    "a whole number as a term"
+   ],
+   "mastery": "The child finds the constant gap between terms of a sequence of fractions with a common denominator, keeps the denominator, and writes the next terms and a term that is a whole number as a fraction."
+  },
+  "MATH.G7.NUMBER.FRACTIONS.FRACTION_SEQ_MULTIPLY_RULE": {
+   "forms": [
+    "name the rule",
+    "next term",
+    "getting smaller: which rule",
+    "spot the term that does not fit"
+   ],
+   "mastery": "The child finds that terms such as 1, 1/3, 1/9 follow a constant ratio, states the rule (divide by 3, or multiply by 1/3), and continues the sequence."
+  },
+  "MATH.G7.NUMBER.FRACTIONS.FRACTION_SEQ_IN_TABLE": {
+   "forms": [
+    "when is it full",
+    "part after n hours",
+    "fill the table",
+    "which row is missing"
+   ],
+   "mastery": "Given a table of the part of a task done after equal times (2, 4, 6 hours), the child finds the part done per step, and answers when the task is complete or how much is done at a later time, counting hours and not steps."
+  },
+  "MATH.G7.NUMBER.FRACTIONS.FRACTION_SEQ_CREATE": {
+   "forms": [
+    "write the first terms from a rule",
+    "make a puzzle",
+    "check a classmate's sequence",
+    "rule for given terms"
+   ],
+   "mastery": "The child writes a sequence of fractions from a rule (add 1/4, or multiply by 1/2), keeps every term in line with the rule, and writes a rule for a puzzle sequence of their own that a partner can solve."
   }
  }
 }
