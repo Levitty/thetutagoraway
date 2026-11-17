@@ -57,7 +57,7 @@ export const gradeNumber = (g) => {
   return n ? Number(n[1]) : null;
 };
 // Grade 9 and up get the older-student treatment: no animals, direct language.
-export const isOlderLearner = (grade) => (gradeNumber(grade) ?? 0) >= 9;
+export const isOlderLearner = (grade) => (gradeNumber(grade) ?? 0) >= 7;   // Grade 7 and up: the older wording (owner, 17 Nov 2026)
 
 // How the child chose to appear: { kind: 'buddy', id } or { kind: 'color', color }.
 export const getLook = (learnerId) => {
