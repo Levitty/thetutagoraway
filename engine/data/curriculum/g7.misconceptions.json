@@ -3302,5 +3302,523 @@
   "help": "How much shorter means subtract.",
   "source": "to be confirmed by a teacher (no source yet)",
   "status": "draft"
+ },
+ "MATH.G7.MEASUR.LENGTH.CONVERT_LENGTH_UNITS.M_DIVIDED_FOR_SMALLER_UNIT": {
+  "skill": "MATH.G7.MEASUR.LENGTH.CONVERT_LENGTH_UNITS",
+  "error": "Divides when changing to a smaller unit.",
+  "example": {
+   "question": "4.5 m in decimetres",
+   "wrong_answer": "0.45",
+   "correct_answer": "45"
+  },
+  "cause": "Thinks changing to a smaller unit makes the number smaller.",
+  "reveals": "The answer 0.45 as a wrong option, with a reason that names the idea.",
+  "help": "A decimetre is smaller, so you need more of them.",
+  "source": "to be confirmed by a teacher (no source yet)",
+  "status": "draft"
+ },
+ "MATH.G7.MEASUR.LENGTH.CONVERT_LENGTH_UNITS.M_STEP_SIZE_WRONG": {
+  "skill": "MATH.G7.MEASUR.LENGTH.CONVERT_LENGTH_UNITS",
+  "error": "Multiplies by the wrong power of ten for the two units.",
+  "example": {
+   "question": "4.5 m in decimetres",
+   "wrong_answer": "450",
+   "correct_answer": "45"
+  },
+  "cause": "Uses 100 for every conversion.",
+  "reveals": "The answer 450 as a wrong option, with a reason that names the idea.",
+  "help": "1 m = 10 dm, so multiply by 10.",
+  "source": "to be confirmed by a teacher (no source yet)",
+  "status": "draft"
+ },
+ "MATH.G7.MEASUR.LENGTH.CONVERT_LENGTH_UNITS.M_NUMBER_NOT_CHANGED": {
+  "skill": "MATH.G7.MEASUR.LENGTH.CONVERT_LENGTH_UNITS",
+  "error": "Keeps the number and changes only the unit name.",
+  "example": {
+   "question": "4.5 m in decimetres",
+   "wrong_answer": "4.5 dm",
+   "correct_answer": "45 dm"
+  },
+  "cause": "Believes only the label changes.",
+  "reveals": "The answer 4.5 dm as a wrong option, with a reason that names the idea.",
+  "help": "The unit is a different size, so the number changes.",
+  "source": "to be confirmed by a teacher (no source yet)",
+  "status": "draft"
+ },
+ "MATH.G7.MEASUR.LENGTH.CONVERT_LENGTH_UNITS.M_ALWAYS_TEN": {
+  "skill": "MATH.G7.MEASUR.LENGTH.CONVERT_LENGTH_UNITS",
+  "error": "Always uses 10 as the factor between units.",
+  "example": {
+   "question": "9 Hm in dm",
+   "wrong_answer": "times 10",
+   "correct_answer": "times 1,000"
+  },
+  "cause": "Generalises 1 m = 10 dm to every pair.",
+  "reveals": "The answer times 10 as a wrong option, with a reason that names the idea.",
+  "help": "Check the table: 1 Hm = 100 m = 1,000 dm.",
+  "source": "to be confirmed by a teacher (no source yet)",
+  "status": "draft"
+ },
+ "MATH.G7.MEASUR.LENGTH.CONVERT_LENGTH_UNITS.M_UNIT_SIZE_REVERSED": {
+  "skill": "MATH.G7.MEASUR.LENGTH.CONVERT_LENGTH_UNITS",
+  "error": "Treats the bigger unit as the smaller one.",
+  "example": {
+   "question": "9 Hm to dm: divide because dm is bigger",
+   "wrong_answer": "divide",
+   "correct_answer": "multiply by 1,000"
+  },
+  "cause": "Mixes up Hm and dm.",
+  "reveals": "The answer divide as a wrong option, with a reason that names the idea.",
+  "help": "Put the units in order of size: dm, m, Dm, Hm.",
+  "source": "to be confirmed by a teacher (no source yet)",
+  "status": "draft"
+ },
+ "MATH.G7.MEASUR.LENGTH.COMPARE_LENGTHS_UNITS.M_UNITS_NOT_MATCHED": {
+  "skill": "MATH.G7.MEASUR.LENGTH.COMPARE_LENGTHS_UNITS",
+  "error": "Subtracts lengths without making the units the same.",
+  "example": {
+   "question": "3 Dm and 470 dm: how many metres longer?",
+   "wrong_answer": "467",
+   "correct_answer": "17"
+  },
+  "cause": "Subtracts the numbers as they stand.",
+  "reveals": "The answer 467 as a wrong option, with a reason that names the idea.",
+  "help": "Change both to metres first.",
+  "source": "to be confirmed by a teacher (no source yet)",
+  "status": "draft"
+ },
+ "MATH.G7.MEASUR.LENGTH.COMPARE_LENGTHS_UNITS.M_LARGE_UNIT_VALUE_MISREAD": {
+  "skill": "MATH.G7.MEASUR.LENGTH.COMPARE_LENGTHS_UNITS",
+  "error": "Uses the wrong number of metres for the large unit.",
+  "example": {
+   "question": "3 Dm and 470 dm: how many metres longer? (1 Dm = 10 m)",
+   "wrong_answer": "253",
+   "correct_answer": "17"
+  },
+  "cause": "Misreads the table for Dm.",
+  "reveals": "The answer 253 as a wrong option, with a reason that names the idea.",
+  "help": "Read the row for Dm again.",
+  "source": "to be confirmed by a teacher (no source yet)",
+  "status": "draft"
+ },
+ "MATH.G7.MEASUR.LENGTH.COMPARE_LENGTHS_UNITS.M_SMALL_UNIT_VALUE_MISREAD": {
+  "skill": "MATH.G7.MEASUR.LENGTH.COMPARE_LENGTHS_UNITS",
+  "error": "Uses the wrong number of metres for the small unit.",
+  "example": {
+   "question": "3 Dm and 470 dm: how many metres longer? (1 dm = 0.1 m)",
+   "wrong_answer": "440",
+   "correct_answer": "17"
+  },
+  "cause": "Misreads the table for dm.",
+  "reveals": "The answer 440 as a wrong option, with a reason that names the idea.",
+  "help": "Read the row for dm again.",
+  "source": "to be confirmed by a teacher (no source yet)",
+  "status": "draft"
+ },
+ "MATH.G7.MEASUR.LENGTH.OPERATIONS_ON_LENGTH.M_ANSWER_UNIT_NOT_CONVERTED": {
+  "skill": "MATH.G7.MEASUR.LENGTH.OPERATIONS_ON_LENGTH",
+  "error": "Gives the answer in centimetres when metres are asked.",
+  "example": {
+   "question": "20 m rope, 8 pieces of 25 cm cut: metres left",
+   "wrong_answer": "1,800",
+   "correct_answer": "18"
+  },
+  "cause": "Stops in the unit of the working.",
+  "reveals": "The answer 1,800 as a wrong option, with a reason that names the idea.",
+  "help": "Change back to metres at the end.",
+  "source": "to be confirmed by a teacher (no source yet)",
+  "status": "draft"
+ },
+ "MATH.G7.MEASUR.LENGTH.OPERATIONS_ON_LENGTH.M_ONE_PIECE_ONLY": {
+  "skill": "MATH.G7.MEASUR.LENGTH.OPERATIONS_ON_LENGTH",
+  "error": "Takes away one piece instead of all the pieces.",
+  "example": {
+   "question": "20 m rope, 8 pieces of 25 cm cut: metres left",
+   "wrong_answer": "19.75",
+   "correct_answer": "18"
+  },
+  "cause": "Ignores how many pieces.",
+  "reveals": "The answer 19.75 as a wrong option, with a reason that names the idea.",
+  "help": "Find the length of all the pieces together.",
+  "source": "to be confirmed by a teacher (no source yet)",
+  "status": "draft"
+ },
+ "MATH.G7.MEASUR.LENGTH.OPERATIONS_ON_LENGTH.M_ADDED_NOT_SUBTRACTED": {
+  "skill": "MATH.G7.MEASUR.LENGTH.OPERATIONS_ON_LENGTH",
+  "error": "Adds the cut pieces to the rope.",
+  "example": {
+   "question": "20 m rope, 8 pieces of 25 cm cut: metres left",
+   "wrong_answer": "22",
+   "correct_answer": "18"
+  },
+  "cause": "Sees two lengths and adds.",
+  "reveals": "The answer 22 as a wrong option, with a reason that names the idea.",
+  "help": "Cutting takes rope away.",
+  "source": "to be confirmed by a teacher (no source yet)",
+  "status": "draft"
+ },
+ "MATH.G7.MEASUR.LENGTH.OPERATIONS_ON_LENGTH.M_CUT_AMOUNT_AS_LEFT": {
+  "skill": "MATH.G7.MEASUR.LENGTH.OPERATIONS_ON_LENGTH",
+  "error": "Gives the length cut as the length left.",
+  "example": {
+   "question": "20 m rope, 8 pieces of 25 cm cut: metres left",
+   "wrong_answer": "2",
+   "correct_answer": "18"
+  },
+  "cause": "Stops after the first step.",
+  "reveals": "The answer 2 as a wrong option, with a reason that names the idea.",
+  "help": "The question asks for what is left.",
+  "source": "to be confirmed by a teacher (no source yet)",
+  "status": "draft"
+ },
+ "MATH.G7.MEASUR.LENGTH.OPERATIONS_ON_LENGTH.M_GAPS_FOR_POSTS": {
+  "skill": "MATH.G7.MEASUR.LENGTH.OPERATIONS_ON_LENGTH",
+  "error": "Gives the number of gaps as the number of posts.",
+  "example": {
+   "question": "75 m fence, a post every 5 m with a post at each end: posts",
+   "wrong_answer": "15",
+   "correct_answer": "16"
+  },
+  "cause": "Divides and stops.",
+  "reveals": "The answer 15 as a wrong option, with a reason that names the idea.",
+  "help": "There is a post at both ends: gaps plus one.",
+  "source": "to be confirmed by a teacher (no source yet)",
+  "status": "draft"
+ },
+ "MATH.G7.MEASUR.LENGTH.OPERATIONS_ON_LENGTH.M_FENCE_END_POST_SUBTRACTED": {
+  "skill": "MATH.G7.MEASUR.LENGTH.OPERATIONS_ON_LENGTH",
+  "error": "Subtracts one from the number of gaps.",
+  "example": {
+   "question": "75 m fence, a post every 5 m with a post at each end: posts",
+   "wrong_answer": "14",
+   "correct_answer": "16"
+  },
+  "cause": "Believes there is one fewer post than gaps.",
+  "reveals": "The answer 14 as a wrong option, with a reason that names the idea.",
+  "help": "Draw 3 gaps: there are 4 posts.",
+  "source": "to be confirmed by a teacher (no source yet)",
+  "status": "draft"
+ },
+ "MATH.G7.MEASUR.LENGTH.OPERATIONS_ON_LENGTH.M_MULTIPLIED_NOT_DIVIDED_LENGTH": {
+  "skill": "MATH.G7.MEASUR.LENGTH.OPERATIONS_ON_LENGTH",
+  "error": "Multiplies the length by the gap.",
+  "example": {
+   "question": "75 m fence, a post every 5 m",
+   "wrong_answer": "375",
+   "correct_answer": "16"
+  },
+  "cause": "Sees two numbers and multiplies.",
+  "reveals": "The answer 375 as a wrong option, with a reason that names the idea.",
+  "help": "How many gaps of 5 m fit in 75 m?",
+  "source": "to be confirmed by a teacher (no source yet)",
+  "status": "draft"
+ },
+ "MATH.G7.MEASUR.LENGTH.PERIMETER_PLANE_FIGURES.M_CUT_SIDES_NOT_REPLACED": {
+  "skill": "MATH.G7.MEASUR.LENGTH.PERIMETER_PLANE_FIGURES",
+  "error": "Takes the cut corner away from the distance round.",
+  "example": {
+   "question": "Plot 15 m by 14 m with a 4 m by 5 m corner cut: distance round",
+   "wrong_answer": "40",
+   "correct_answer": "58"
+  },
+  "cause": "Subtracts the corner dimensions.",
+  "reveals": "The answer 40 as a wrong option, with a reason that names the idea.",
+  "help": "The fence goes round the new edges, which replace the cut sides.",
+  "source": "to be confirmed by a teacher (no source yet)",
+  "status": "draft"
+ },
+ "MATH.G7.MEASUR.LENGTH.PERIMETER_PLANE_FIGURES.M_NEW_EDGES_ADDED_TO_FULL": {
+  "skill": "MATH.G7.MEASUR.LENGTH.PERIMETER_PLANE_FIGURES",
+  "error": "Adds the new edges but keeps the sides that were cut.",
+  "example": {
+   "question": "Plot 15 m by 14 m with a 4 m by 5 m corner cut: distance round",
+   "wrong_answer": "76",
+   "correct_answer": "58"
+  },
+  "cause": "Adds the new edges to the whole perimeter.",
+  "reveals": "The answer 76 as a wrong option, with a reason that names the idea.",
+  "help": "The two new edges are exactly as long as the sides they replace.",
+  "source": "to be confirmed by a teacher (no source yet)",
+  "status": "draft"
+ },
+ "MATH.G7.MEASUR.LENGTH.PERIMETER_PLANE_FIGURES.M_AREA_FOR_PERIMETER_LEN": {
+  "skill": "MATH.G7.MEASUR.LENGTH.PERIMETER_PLANE_FIGURES",
+  "error": "Gives the area when the distance round is asked.",
+  "example": {
+   "question": "Plot 15 m by 14 m with a corner cut: fence",
+   "wrong_answer": "190",
+   "correct_answer": "58"
+  },
+  "cause": "Multiplies the sides.",
+  "reveals": "The answer 190 as a wrong option, with a reason that names the idea.",
+  "help": "A fence goes round the edge.",
+  "source": "to be confirmed by a teacher (no source yet)",
+  "status": "draft"
+ },
+ "MATH.G7.MEASUR.LENGTH.PERIMETER_PLANE_FIGURES.M_AREA_DECIDES_FENCE": {
+  "skill": "MATH.G7.MEASUR.LENGTH.PERIMETER_PLANE_FIGURES",
+  "error": "Picks the plot with the biggest area as needing the longest fence.",
+  "example": {
+   "question": "Which of three plots needs the longest fence?",
+   "wrong_answer": "the largest area",
+   "correct_answer": "the largest 2 x (l + w)"
+  },
+  "cause": "Believes bigger area means longer edge.",
+  "reveals": "The answer the largest area as a wrong option, with a reason that names the idea.",
+  "help": "Work out 2 x (length + width) for each plot.",
+  "source": "to be confirmed by a teacher (no source yet)",
+  "status": "draft"
+ },
+ "MATH.G7.MEASUR.LENGTH.PERIMETER_PLANE_FIGURES.M_ONE_DIMENSION_ONLY": {
+  "skill": "MATH.G7.MEASUR.LENGTH.PERIMETER_PLANE_FIGURES",
+  "error": "Compares only one measure, such as the length.",
+  "example": {
+   "question": "Which of three plots needs the longest fence?",
+   "wrong_answer": "the longest length",
+   "correct_answer": "the largest 2 x (l + w)"
+  },
+  "cause": "Uses one side to decide.",
+  "reveals": "The answer the longest length as a wrong option, with a reason that names the idea.",
+  "help": "Both length and width go round.",
+  "source": "to be confirmed by a teacher (no source yet)",
+  "status": "draft"
+ },
+ "MATH.G7.MEASUR.LENGTH.PERIMETER_PLANE_FIGURES.M_END_POST_ADDED_ROUND": {
+  "skill": "MATH.G7.MEASUR.LENGTH.PERIMETER_PLANE_FIGURES",
+  "error": "Adds one extra post round a closed plot.",
+  "example": {
+   "question": "16 m by 12 m plot, post every 2 m all round: posts",
+   "wrong_answer": "29",
+   "correct_answer": "28"
+  },
+  "cause": "Uses the straight-fence rule.",
+  "reveals": "The answer 29 as a wrong option, with a reason that names the idea.",
+  "help": "Round a closed plot the first post is also the last.",
+  "source": "to be confirmed by a teacher (no source yet)",
+  "status": "draft"
+ },
+ "MATH.G7.MEASUR.LENGTH.PERIMETER_PLANE_FIGURES.M_POSTS_DIVISION_MISSED": {
+  "skill": "MATH.G7.MEASUR.LENGTH.PERIMETER_PLANE_FIGURES",
+  "error": "Does not divide the distance round by the gap.",
+  "example": {
+   "question": "16 m by 12 m plot, post every 2 m all round: posts",
+   "wrong_answer": "42",
+   "correct_answer": "28"
+  },
+  "cause": "Stops before dividing.",
+  "reveals": "The answer 42 as a wrong option, with a reason that names the idea.",
+  "help": "Posts = distance round divided by the gap.",
+  "source": "to be confirmed by a teacher (no source yet)",
+  "status": "draft"
+ },
+ "MATH.G7.MEASUR.LENGTH.CIRCUMFERENCE_DISTANCE.M_DIAMETER_AS_CIRCUMFERENCE": {
+  "skill": "MATH.G7.MEASUR.LENGTH.CIRCUMFERENCE_DISTANCE",
+  "error": "Uses the diameter as the distance of one turn.",
+  "example": {
+   "question": "Wheel diameter 70 cm turns 200 times: metres",
+   "wrong_answer": "140",
+   "correct_answer": "440"
+  },
+  "cause": "Thinks one turn covers the width of the wheel.",
+  "reveals": "The answer 140 as a wrong option, with a reason that names the idea.",
+  "help": "One turn covers the distance round the wheel.",
+  "source": "to be confirmed by a teacher (no source yet)",
+  "status": "draft"
+ },
+ "MATH.G7.MEASUR.LENGTH.CIRCUMFERENCE_DISTANCE.M_UNITS_NOT_CONVERTED_CIRC": {
+  "skill": "MATH.G7.MEASUR.LENGTH.CIRCUMFERENCE_DISTANCE",
+  "error": "Leaves the distance in centimetres.",
+  "example": {
+   "question": "Wheel diameter 70 cm turns 200 times: metres",
+   "wrong_answer": "44,000",
+   "correct_answer": "440"
+  },
+  "cause": "Does not change the unit at the end.",
+  "reveals": "The answer 44,000 as a wrong option, with a reason that names the idea.",
+  "help": "Divide by 100 to change cm to m.",
+  "source": "to be confirmed by a teacher (no source yet)",
+  "status": "draft"
+ },
+ "MATH.G7.MEASUR.LENGTH.CIRCUMFERENCE_DISTANCE.M_CM_TO_M_BY_THOUSAND": {
+  "skill": "MATH.G7.MEASUR.LENGTH.CIRCUMFERENCE_DISTANCE",
+  "error": "Divides by 1,000 to change cm to m.",
+  "example": {
+   "question": "44,000 cm in m",
+   "wrong_answer": "44",
+   "correct_answer": "440"
+  },
+  "cause": "Mixes m with km.",
+  "reveals": "The answer 44 as a wrong option, with a reason that names the idea.",
+  "help": "100 cm = 1 m.",
+  "source": "to be confirmed by a teacher (no source yet)",
+  "status": "draft"
+ },
+ "MATH.G7.MEASUR.LENGTH.CIRCUMFERENCE_DISTANCE.M_HALF_CIRCLES_AS_HALF": {
+  "skill": "MATH.G7.MEASUR.LENGTH.CIRCUMFERENCE_DISTANCE",
+  "error": "Uses one half circle for the two ends of a track.",
+  "example": {
+   "question": "Track with half circles at both ends, diameter 42 m",
+   "wrong_answer": "66",
+   "correct_answer": "132"
+  },
+  "cause": "Takes half of the circumference.",
+  "reveals": "The answer 66 as a wrong option, with a reason that names the idea.",
+  "help": "Two half circles make one whole circle.",
+  "source": "to be confirmed by a teacher (no source yet)",
+  "status": "draft"
+ },
+ "MATH.G7.MEASUR.LENGTH.CIRCUMFERENCE_DISTANCE.M_ONE_STRAIGHT_SIDE_ONLY": {
+  "skill": "MATH.G7.MEASUR.LENGTH.CIRCUMFERENCE_DISTANCE",
+  "error": "Counts one straight side of a track.",
+  "example": {
+   "question": "Track with two straight sides of 80 m",
+   "wrong_answer": "80",
+   "correct_answer": "160"
+  },
+  "cause": "Forgets there are two.",
+  "reveals": "The answer 80 as a wrong option, with a reason that names the idea.",
+  "help": "Count both sides.",
+  "source": "to be confirmed by a teacher (no source yet)",
+  "status": "draft"
+ },
+ "MATH.G7.MEASUR.LENGTH.CIRCUMFERENCE_DISTANCE.M_LAP_PARTS_MULTIPLIED": {
+  "skill": "MATH.G7.MEASUR.LENGTH.CIRCUMFERENCE_DISTANCE",
+  "error": "Multiplies the curved and straight parts of a lap.",
+  "example": {
+   "question": "One lap: straight 160 m and curved 132 m",
+   "wrong_answer": "21,120",
+   "correct_answer": "292"
+  },
+  "cause": "Sees two numbers and multiplies.",
+  "reveals": "The answer 21,120 as a wrong option, with a reason that names the idea.",
+  "help": "A lap is the sum of the parts.",
+  "source": "to be confirmed by a teacher (no source yet)",
+  "status": "draft"
+ },
+ "MATH.G7.MEASUR.LENGTH.CIRCUMFERENCE_FIND_DIAMETER.M_RADIUS_FOR_DIAMETER": {
+  "skill": "MATH.G7.MEASUR.LENGTH.CIRCUMFERENCE_FIND_DIAMETER",
+  "error": "Gives the radius when the diameter is asked.",
+  "example": {
+   "question": "Distance round a table is 88 cm: diameter (pi = 22/7)",
+   "wrong_answer": "14",
+   "correct_answer": "28"
+  },
+  "cause": "Halves too early or stops after dividing by 2 pi.",
+  "reveals": "The answer 14 as a wrong option, with a reason that names the idea.",
+  "help": "The diameter goes right across.",
+  "source": "to be confirmed by a teacher (no source yet)",
+  "status": "draft"
+ },
+ "MATH.G7.MEASUR.LENGTH.CIRCUMFERENCE_FIND_DIAMETER.M_PI_PART_DROPPED": {
+  "skill": "MATH.G7.MEASUR.LENGTH.CIRCUMFERENCE_FIND_DIAMETER",
+  "error": "Divides by 22 only, forgetting the 7.",
+  "example": {
+   "question": "Distance round a table is 88 cm: diameter (pi = 22/7)",
+   "wrong_answer": "4",
+   "correct_answer": "28"
+  },
+  "cause": "Treats 22/7 as 22.",
+  "reveals": "The answer 4 as a wrong option, with a reason that names the idea.",
+  "help": "Divide by 22/7, which is multiply by 7/22.",
+  "source": "to be confirmed by a teacher (no source yet)",
+  "status": "draft"
+ },
+ "MATH.G7.MEASUR.LENGTH.CIRCUMFERENCE_FIND_DIAMETER.M_CIRCUMFERENCE_HALVED": {
+  "skill": "MATH.G7.MEASUR.LENGTH.CIRCUMFERENCE_FIND_DIAMETER",
+  "error": "Halves the circumference to get the diameter.",
+  "example": {
+   "question": "Distance round a table is 88 cm: diameter",
+   "wrong_answer": "44",
+   "correct_answer": "28"
+  },
+  "cause": "Mixes up the diameter with half the circle.",
+  "reveals": "The answer 44 as a wrong option, with a reason that names the idea.",
+  "help": "The circumference is pi times the diameter, about 3 times.",
+  "source": "to be confirmed by a teacher (no source yet)",
+  "status": "draft"
+ },
+ "MATH.G7.MEASUR.LENGTH.CIRCUMFERENCE_REASON.M_CIRCUMFERENCE_SIZE_FIXED": {
+  "skill": "MATH.G7.MEASUR.LENGTH.CIRCUMFERENCE_REASON",
+  "error": "Believes the circumference does not change with size.",
+  "example": {
+   "question": "Diameter doubles: circumference?",
+   "wrong_answer": "stays the same",
+   "correct_answer": "doubles"
+  },
+  "cause": "Thinks pi fixes the size.",
+  "reveals": "The answer stays the same as a wrong option, with a reason that names the idea.",
+  "help": "A bigger circle has a longer way round.",
+  "source": "to be confirmed by a teacher (no source yet)",
+  "status": "draft"
+ },
+ "MATH.G7.MEASUR.LENGTH.CIRCUMFERENCE_REASON.M_PI_MULTIPLIES_CHANGE": {
+  "skill": "MATH.G7.MEASUR.LENGTH.CIRCUMFERENCE_REASON",
+  "error": "Multiplies the change by pi.",
+  "example": {
+   "question": "Diameter doubles: circumference?",
+   "wrong_answer": "3 times as long",
+   "correct_answer": "twice as long"
+  },
+  "cause": "Applies pi again.",
+  "reveals": "The answer 3 times as long as a wrong option, with a reason that names the idea.",
+  "help": "Pi is the same for both ponds.",
+  "source": "to be confirmed by a teacher (no source yet)",
+  "status": "draft"
+ },
+ "MATH.G7.MEASUR.LENGTH.CIRCUMFERENCE_REASON.M_RULE_DEPENDS_ON_OBJECT": {
+  "skill": "MATH.G7.MEASUR.LENGTH.CIRCUMFERENCE_REASON",
+  "error": "Believes the circumference rule depends on the kind of circle.",
+  "example": {
+   "question": "Doubling the diameter: 4 times only for ponds?",
+   "wrong_answer": "only for ponds",
+   "correct_answer": "for every circle"
+  },
+  "cause": "Thinks the rule changes with the object.",
+  "reveals": "The answer only for ponds as a wrong option, with a reason that names the idea.",
+  "help": "The rule is the same for every circle.",
+  "source": "to be confirmed by a teacher (no source yet)",
+  "status": "draft"
+ },
+ "MATH.G7.MEASUR.LENGTH.CIRCUMFERENCE_REASON.M_PI_ROUNDED_TO_THREE": {
+  "skill": "MATH.G7.MEASUR.LENGTH.CIRCUMFERENCE_REASON",
+  "error": "Uses exactly 3 for pi when the table gives more.",
+  "example": {
+   "question": "Table: width 40 cm, distance round about 126 cm: pi is about",
+   "wrong_answer": "3",
+   "correct_answer": "3.14"
+  },
+  "cause": "Rounds too early.",
+  "reveals": "The answer 3 as a wrong option, with a reason that names the idea.",
+  "help": "Divide the distance round by the width for the exact figure.",
+  "source": "to be confirmed by a teacher (no source yet)",
+  "status": "draft"
+ },
+ "MATH.G7.MEASUR.LENGTH.CIRCUMFERENCE_REASON.M_ADD_NOT_MULTIPLY_CIRC": {
+  "skill": "MATH.G7.MEASUR.LENGTH.CIRCUMFERENCE_REASON",
+  "error": "Adds a fixed amount to the width instead of multiplying.",
+  "example": {
+   "question": "Width 20 cm, distance round 63 cm: for width 40 cm?",
+   "wrong_answer": "83",
+   "correct_answer": "126"
+  },
+  "cause": "Sees a constant gap.",
+  "reveals": "The answer 83 as a wrong option, with a reason that names the idea.",
+  "help": "The distance round is a multiple of the width.",
+  "source": "to be confirmed by a teacher (no source yet)",
+  "status": "draft"
+ },
+ "MATH.G7.MEASUR.LENGTH.CIRCUMFERENCE_REASON.M_DOUBLE_ONLY_CIRC": {
+  "skill": "MATH.G7.MEASUR.LENGTH.CIRCUMFERENCE_REASON",
+  "error": "Doubles the width but not enough to match the pattern.",
+  "example": {
+   "question": "Width 20 cm, distance round 63 cm: for width 40 cm?",
+   "wrong_answer": "84",
+   "correct_answer": "126"
+  },
+  "cause": "Uses twice the width.",
+  "reveals": "The answer 84 as a wrong option, with a reason that names the idea.",
+  "help": "Divide one distance round by its width to find the pattern.",
+  "source": "to be confirmed by a teacher (no source yet)",
+  "status": "draft"
  }
 }

@@ -7229,6 +7229,930 @@ export const TEACHING_PACK_G7 = {
   "sub_strand": "MATH.G7.MEASUR.PYTHAGOREAN_RELATIONSHIP",
   "sub_strand_name": "Pythagorean Relationship",
   "status": "draft: written 17 Nov 2026 offline for the Grade 7 pilot; not yet checked by a Kenyan maths teacher; not loaded by the live tutor"
+ },
+ "MATH.G7.MEASUR.LENGTH.CONVERT_LENGTH_UNITS": {
+  "skill": "MATH.G7.MEASUR.LENGTH.CONVERT_LENGTH_UNITS",
+  "key_step": "The child says whether the new unit is smaller or bigger, and so whether there will be more or fewer, then multiplies or divides by the number of small units in one big one.",
+  "floor": {
+   "prerequisite": "Knows 1 m = 100 cm.",
+   "question": "2 m in cm",
+   "answer": "200"
+  },
+  "representations": [
+   "a ruler with dm marks",
+   "a table of units",
+   "a number line"
+  ],
+  "steps": [
+   "Order the units by size.",
+   "Decide more or fewer.",
+   "Find the factor from the table.",
+   "Multiply or divide."
+  ],
+  "contexts": [
+   "a plank",
+   "a rope",
+   "a field fence"
+  ],
+  "board": [
+   {
+    "beat": "draw",
+    "do": "Draw a 1 m line split into 10 dm."
+   },
+   {
+    "beat": "point",
+    "do": "Point at one dm.",
+    "say": "Is a dm bigger or smaller than a metre?"
+   },
+   {
+    "beat": "pause",
+    "do": "Wait for the child to say."
+   }
+  ],
+  "misconceptions": [
+   {
+    "code": "MATH.G7.MEASUR.LENGTH.CONVERT_LENGTH_UNITS.M_DIVIDED_FOR_SMALLER_UNIT",
+    "listen_for": [
+     "0.45"
+    ],
+    "ask": "Are there more or fewer decimetres than metres?",
+    "repair": "More: multiply.",
+    "error": "Divides when changing to a smaller unit.",
+    "example": {
+     "question": "4.5 m in decimetres",
+     "wrong_answer": "0.45",
+     "correct_answer": "45"
+    }
+   },
+   {
+    "code": "MATH.G7.MEASUR.LENGTH.CONVERT_LENGTH_UNITS.M_STEP_SIZE_WRONG",
+    "listen_for": [
+     "450"
+    ],
+    "ask": "How many dm in 1 m?",
+    "repair": "Ten.",
+    "error": "Multiplies by the wrong power of ten for the two units.",
+    "example": {
+     "question": "4.5 m in decimetres",
+     "wrong_answer": "450",
+     "correct_answer": "45"
+    }
+   },
+   {
+    "code": "MATH.G7.MEASUR.LENGTH.CONVERT_LENGTH_UNITS.M_NUMBER_NOT_CHANGED",
+    "listen_for": [
+     "4.5 dm"
+    ],
+    "ask": "Is a dm the same size as a metre?",
+    "repair": "The number must change.",
+    "error": "Keeps the number and changes only the unit name.",
+    "example": {
+     "question": "4.5 m in decimetres",
+     "wrong_answer": "4.5 dm",
+     "correct_answer": "45 dm"
+    }
+   },
+   {
+    "code": "MATH.G7.MEASUR.LENGTH.CONVERT_LENGTH_UNITS.M_ALWAYS_TEN",
+    "listen_for": [
+     "times 10"
+    ],
+    "ask": "How many dm in a Hm?",
+    "repair": "Use the table.",
+    "error": "Always uses 10 as the factor between units.",
+    "example": {
+     "question": "9 Hm in dm",
+     "wrong_answer": "times 10",
+     "correct_answer": "times 1,000"
+    }
+   },
+   {
+    "code": "MATH.G7.MEASUR.LENGTH.CONVERT_LENGTH_UNITS.M_UNIT_SIZE_REVERSED",
+    "listen_for": [
+     "dm is bigger"
+    ],
+    "ask": "Which is longer, Hm or dm?",
+    "repair": "A Hm is longer.",
+    "error": "Treats the bigger unit as the smaller one.",
+    "example": {
+     "question": "9 Hm to dm: divide because dm is bigger",
+     "wrong_answer": "divide",
+     "correct_answer": "multiply by 1,000"
+    }
+   }
+  ],
+  "checks": [
+   {
+    "question": "Change 4.5 m to decimetres",
+    "answer": "45 dm",
+    "shows": "smaller unit"
+   },
+   {
+    "question": "Change 4.5 Hm to centimetres",
+    "answer": "45,000 cm",
+    "shows": "two stages"
+   }
+  ],
+  "name": "Convert between cm, dm, m, Dm and Hm",
+  "sub_strand": "MATH.G7.MEASUR.LENGTH",
+  "sub_strand_name": "Length",
+  "status": "draft: written 17 Nov 2026 offline for the Grade 7 pilot; not yet checked by a Kenyan maths teacher; not loaded by the live tutor"
+ },
+ "MATH.G7.MEASUR.LENGTH.COMPARE_LENGTHS_UNITS": {
+  "skill": "MATH.G7.MEASUR.LENGTH.COMPARE_LENGTHS_UNITS",
+  "key_step": "The child changes both lengths to the same unit before subtracting or comparing.",
+  "floor": {
+   "prerequisite": "Converts lengths.",
+   "question": "3 Dm in m",
+   "answer": "30"
+  },
+  "representations": [
+   "a table of units",
+   "both in metres",
+   "the difference"
+  ],
+  "steps": [
+   "Read the table.",
+   "Change both to metres.",
+   "Subtract.",
+   "Answer in the unit asked."
+  ],
+  "contexts": [
+   "rope and cable",
+   "two fences",
+   "plots"
+  ],
+  "board": [
+   {
+    "beat": "write",
+    "do": "Write 3 Dm and 470 dm."
+   },
+   {
+    "beat": "point",
+    "do": "Point at the two units.",
+    "say": "Can we subtract them as they are?"
+   },
+   {
+    "beat": "pause",
+    "do": "Wait for the child to say."
+   }
+  ],
+  "misconceptions": [
+   {
+    "code": "MATH.G7.MEASUR.LENGTH.COMPARE_LENGTHS_UNITS.M_UNITS_NOT_MATCHED",
+    "listen_for": [
+     "470 - 3"
+    ],
+    "ask": "Are Dm and dm the same unit?",
+    "repair": "Change both first.",
+    "error": "Subtracts lengths without making the units the same.",
+    "example": {
+     "question": "3 Dm and 470 dm: how many metres longer?",
+     "wrong_answer": "467",
+     "correct_answer": "17"
+    }
+   },
+   {
+    "code": "MATH.G7.MEASUR.LENGTH.COMPARE_LENGTHS_UNITS.M_LARGE_UNIT_VALUE_MISREAD",
+    "listen_for": [
+     "253"
+    ],
+    "ask": "How many metres in 1 Dm?",
+    "repair": "Read the row again.",
+    "error": "Uses the wrong number of metres for the large unit.",
+    "example": {
+     "question": "3 Dm and 470 dm: how many metres longer? (1 Dm = 10 m)",
+     "wrong_answer": "253",
+     "correct_answer": "17"
+    }
+   },
+   {
+    "code": "MATH.G7.MEASUR.LENGTH.COMPARE_LENGTHS_UNITS.M_SMALL_UNIT_VALUE_MISREAD",
+    "listen_for": [
+     "440"
+    ],
+    "ask": "How many metres in 1 dm?",
+    "repair": "Read the row again.",
+    "error": "Uses the wrong number of metres for the small unit.",
+    "example": {
+     "question": "3 Dm and 470 dm: how many metres longer? (1 dm = 0.1 m)",
+     "wrong_answer": "440",
+     "correct_answer": "17"
+    }
+   }
+  ],
+  "checks": [
+   {
+    "question": "3 Dm and 470 dm: how many metres longer is the longer one?",
+    "answer": "17 m",
+    "shows": "same unit"
+   },
+   {
+    "question": "2 Hm and 150 m: which is longer?",
+    "answer": "2 Hm",
+    "shows": "compare"
+   }
+  ],
+  "name": "Compare lengths given in different units",
+  "sub_strand": "MATH.G7.MEASUR.LENGTH",
+  "sub_strand_name": "Length",
+  "status": "draft: written 17 Nov 2026 offline for the Grade 7 pilot; not yet checked by a Kenyan maths teacher; not loaded by the live tutor"
+ },
+ "MATH.G7.MEASUR.LENGTH.OPERATIONS_ON_LENGTH": {
+  "skill": "MATH.G7.MEASUR.LENGTH.OPERATIONS_ON_LENGTH",
+  "key_step": "The child changes to one unit, does each step in order, and counts posts as gaps plus one on a straight fence.",
+  "floor": {
+   "prerequisite": "Converts cm to m.",
+   "question": "25 cm in m",
+   "answer": "0.25"
+  },
+  "representations": [
+   "a rope drawn in pieces",
+   "the working",
+   "a fence with posts"
+  ],
+  "steps": [
+   "Same unit.",
+   "Total of the pieces.",
+   "Subtract from the whole.",
+   "Posts = gaps + 1 on a straight fence."
+  ],
+  "contexts": [
+   "washing line",
+   "fence posts",
+   "curtain rails"
+  ],
+  "board": [
+   {
+    "beat": "draw",
+    "do": "Draw a 20 m rope with 8 pieces cut off."
+   },
+   {
+    "beat": "point",
+    "do": "Point at the pieces.",
+    "say": "How long are all 8 together?"
+   },
+   {
+    "beat": "pause",
+    "do": "Wait for the child to say."
+   }
+  ],
+  "misconceptions": [
+   {
+    "code": "MATH.G7.MEASUR.LENGTH.OPERATIONS_ON_LENGTH.M_ANSWER_UNIT_NOT_CONVERTED",
+    "listen_for": [
+     "1,800"
+    ],
+    "ask": "What unit does the question ask for?",
+    "repair": "Change to metres.",
+    "error": "Gives the answer in centimetres when metres are asked.",
+    "example": {
+     "question": "20 m rope, 8 pieces of 25 cm cut: metres left",
+     "wrong_answer": "1,800",
+     "correct_answer": "18"
+    }
+   },
+   {
+    "code": "MATH.G7.MEASUR.LENGTH.OPERATIONS_ON_LENGTH.M_ONE_PIECE_ONLY",
+    "listen_for": [
+     "19.75"
+    ],
+    "ask": "How many pieces are cut?",
+    "repair": "All 8.",
+    "error": "Takes away one piece instead of all the pieces.",
+    "example": {
+     "question": "20 m rope, 8 pieces of 25 cm cut: metres left",
+     "wrong_answer": "19.75",
+     "correct_answer": "18"
+    }
+   },
+   {
+    "code": "MATH.G7.MEASUR.LENGTH.OPERATIONS_ON_LENGTH.M_ADDED_NOT_SUBTRACTED",
+    "listen_for": [
+     "22"
+    ],
+    "ask": "Does cutting add or take away?",
+    "repair": "Take away.",
+    "error": "Adds the cut pieces to the rope.",
+    "example": {
+     "question": "20 m rope, 8 pieces of 25 cm cut: metres left",
+     "wrong_answer": "22",
+     "correct_answer": "18"
+    }
+   },
+   {
+    "code": "MATH.G7.MEASUR.LENGTH.OPERATIONS_ON_LENGTH.M_CUT_AMOUNT_AS_LEFT",
+    "listen_for": [
+     "2"
+    ],
+    "ask": "Is 2 m what is cut or what is left?",
+    "repair": "What is left.",
+    "error": "Gives the length cut as the length left.",
+    "example": {
+     "question": "20 m rope, 8 pieces of 25 cm cut: metres left",
+     "wrong_answer": "2",
+     "correct_answer": "18"
+    }
+   },
+   {
+    "code": "MATH.G7.MEASUR.LENGTH.OPERATIONS_ON_LENGTH.M_GAPS_FOR_POSTS",
+    "listen_for": [
+     "15"
+    ],
+    "ask": "Is there a post at each end?",
+    "repair": "Gaps plus one.",
+    "error": "Gives the number of gaps as the number of posts.",
+    "example": {
+     "question": "75 m fence, a post every 5 m with a post at each end: posts",
+     "wrong_answer": "15",
+     "correct_answer": "16"
+    }
+   },
+   {
+    "code": "MATH.G7.MEASUR.LENGTH.OPERATIONS_ON_LENGTH.M_FENCE_END_POST_SUBTRACTED",
+    "listen_for": [
+     "14"
+    ],
+    "ask": "Draw 3 gaps: how many posts?",
+    "repair": "Four.",
+    "error": "Subtracts one from the number of gaps.",
+    "example": {
+     "question": "75 m fence, a post every 5 m with a post at each end: posts",
+     "wrong_answer": "14",
+     "correct_answer": "16"
+    }
+   },
+   {
+    "code": "MATH.G7.MEASUR.LENGTH.OPERATIONS_ON_LENGTH.M_MULTIPLIED_NOT_DIVIDED_LENGTH",
+    "listen_for": [
+     "375"
+    ],
+    "ask": "How many gaps of 5 m fit?",
+    "repair": "Divide.",
+    "error": "Multiplies the length by the gap.",
+    "example": {
+     "question": "75 m fence, a post every 5 m",
+     "wrong_answer": "375",
+     "correct_answer": "16"
+    }
+   }
+  ],
+  "checks": [
+   {
+    "question": "A 20 m rope: 8 pieces of 25 cm are cut. Metres left?",
+    "answer": "18",
+    "shows": "units"
+   },
+   {
+    "question": "75 m fence, post every 5 m with posts at both ends: posts?",
+    "answer": "16",
+    "shows": "gaps plus one"
+   }
+  ],
+  "name": "Add, subtract, multiply and divide lengths in different units in a story",
+  "sub_strand": "MATH.G7.MEASUR.LENGTH",
+  "sub_strand_name": "Length",
+  "status": "draft: written 17 Nov 2026 offline for the Grade 7 pilot; not yet checked by a Kenyan maths teacher; not loaded by the live tutor"
+ },
+ "MATH.G7.MEASUR.LENGTH.PERIMETER_PLANE_FIGURES": {
+  "skill": "MATH.G7.MEASUR.LENGTH.PERIMETER_PLANE_FIGURES",
+  "key_step": "The child adds every outside edge, knows a cut corner keeps the perimeter of the rectangle, and divides the distance round by the gap for posts round a plot.",
+  "floor": {
+   "prerequisite": "Perimeter of a rectangle.",
+   "question": "2 x (15 + 14)",
+   "answer": "58"
+  },
+  "representations": [
+   "an L-shape with edges marked",
+   "the sum of edges",
+   "a closed fence with posts"
+  ],
+  "steps": [
+   "Mark every outside edge.",
+   "Fill in missing edges.",
+   "Add all.",
+   "For posts divide by the gap."
+  ],
+  "contexts": [
+   "plot of land",
+   "school field",
+   "garden"
+  ],
+  "board": [
+   {
+    "beat": "draw",
+    "do": "Draw a 15 by 14 rectangle with a 4 by 5 corner cut."
+   },
+   {
+    "beat": "point",
+    "do": "Point at the two new edges.",
+    "say": "How long are they together compared with the cut sides?"
+   },
+   {
+    "beat": "pause",
+    "do": "Wait for the child to say."
+   }
+  ],
+  "misconceptions": [
+   {
+    "code": "MATH.G7.MEASUR.LENGTH.PERIMETER_PLANE_FIGURES.M_CUT_SIDES_NOT_REPLACED",
+    "listen_for": [
+     "40"
+    ],
+    "ask": "Do the new edges need fencing?",
+    "repair": "Yes.",
+    "error": "Takes the cut corner away from the distance round.",
+    "example": {
+     "question": "Plot 15 m by 14 m with a 4 m by 5 m corner cut: distance round",
+     "wrong_answer": "40",
+     "correct_answer": "58"
+    }
+   },
+   {
+    "code": "MATH.G7.MEASUR.LENGTH.PERIMETER_PLANE_FIGURES.M_NEW_EDGES_ADDED_TO_FULL",
+    "listen_for": [
+     "76"
+    ],
+    "ask": "Which sides are gone?",
+    "repair": "The new edges replace them.",
+    "error": "Adds the new edges but keeps the sides that were cut.",
+    "example": {
+     "question": "Plot 15 m by 14 m with a 4 m by 5 m corner cut: distance round",
+     "wrong_answer": "76",
+     "correct_answer": "58"
+    }
+   },
+   {
+    "code": "MATH.G7.MEASUR.LENGTH.PERIMETER_PLANE_FIGURES.M_AREA_FOR_PERIMETER_LEN",
+    "listen_for": [
+     "190"
+    ],
+    "ask": "Does a fence cover the plot?",
+    "repair": "It goes round.",
+    "error": "Gives the area when the distance round is asked.",
+    "example": {
+     "question": "Plot 15 m by 14 m with a corner cut: fence",
+     "wrong_answer": "190",
+     "correct_answer": "58"
+    }
+   },
+   {
+    "code": "MATH.G7.MEASUR.LENGTH.PERIMETER_PLANE_FIGURES.M_AREA_DECIDES_FENCE",
+    "listen_for": [
+     "biggest area"
+    ],
+    "ask": "Work out 2 x (l + w) for each.",
+    "repair": "Compare the perimeters.",
+    "error": "Picks the plot with the biggest area as needing the longest fence.",
+    "example": {
+     "question": "Which of three plots needs the longest fence?",
+     "wrong_answer": "the largest area",
+     "correct_answer": "the largest 2 x (l + w)"
+    }
+   },
+   {
+    "code": "MATH.G7.MEASUR.LENGTH.PERIMETER_PLANE_FIGURES.M_ONE_DIMENSION_ONLY",
+    "listen_for": [
+     "longest side"
+    ],
+    "ask": "Does the width count?",
+    "repair": "Both do.",
+    "error": "Compares only one measure, such as the length.",
+    "example": {
+     "question": "Which of three plots needs the longest fence?",
+     "wrong_answer": "the longest length",
+     "correct_answer": "the largest 2 x (l + w)"
+    }
+   },
+   {
+    "code": "MATH.G7.MEASUR.LENGTH.PERIMETER_PLANE_FIGURES.M_END_POST_ADDED_ROUND",
+    "listen_for": [
+     "29"
+    ],
+    "ask": "Where is the last post?",
+    "repair": "It is the first.",
+    "error": "Adds one extra post round a closed plot.",
+    "example": {
+     "question": "16 m by 12 m plot, post every 2 m all round: posts",
+     "wrong_answer": "29",
+     "correct_answer": "28"
+    }
+   },
+   {
+    "code": "MATH.G7.MEASUR.LENGTH.PERIMETER_PLANE_FIGURES.M_POSTS_DIVISION_MISSED",
+    "listen_for": [
+     "42"
+    ],
+    "ask": "What do we do with the distance round?",
+    "repair": "Divide by the gap.",
+    "error": "Does not divide the distance round by the gap.",
+    "example": {
+     "question": "16 m by 12 m plot, post every 2 m all round: posts",
+     "wrong_answer": "42",
+     "correct_answer": "28"
+    }
+   }
+  ],
+  "checks": [
+   {
+    "question": "A 15 m by 14 m plot has a 4 m by 5 m corner cut. Fence round?",
+    "answer": "58 m",
+    "shows": "L-shape"
+   },
+   {
+    "question": "A 16 m by 12 m plot, post every 2 m all round: posts?",
+    "answer": "28",
+    "shows": "closed"
+   }
+  ],
+  "name": "Find the perimeter of rectangles and L-shapes and use it for fencing",
+  "sub_strand": "MATH.G7.MEASUR.LENGTH",
+  "sub_strand_name": "Length",
+  "status": "draft: written 17 Nov 2026 offline for the Grade 7 pilot; not yet checked by a Kenyan maths teacher; not loaded by the live tutor"
+ },
+ "MATH.G7.MEASUR.LENGTH.CIRCUMFERENCE_DISTANCE": {
+  "skill": "MATH.G7.MEASUR.LENGTH.CIRCUMFERENCE_DISTANCE",
+  "key_step": "The child finds pi times the diameter for one turn, multiplies by the number of turns, and changes cm to m at the end.",
+  "floor": {
+   "prerequisite": "Knows the circumference is about 3 diameters.",
+   "question": "Diameter 10: about how far round?",
+   "answer": "30"
+  },
+  "representations": [
+   "a wheel rolled one turn",
+   "the formula",
+   "units"
+  ],
+  "steps": [
+   "One turn = circumference.",
+   "Multiply by turns.",
+   "Divide by 100 for metres.",
+   "Check size."
+  ],
+  "contexts": [
+   "a bicycle wheel",
+   "a running track",
+   "a round table"
+  ],
+  "board": [
+   {
+    "beat": "draw",
+    "do": "Draw a wheel with a mark rolling one turn along a line."
+   },
+   {
+    "beat": "point",
+    "do": "Point at the line covered.",
+    "say": "How long is it compared with the diameter?"
+   },
+   {
+    "beat": "pause",
+    "do": "Wait for the child to say."
+   }
+  ],
+  "misconceptions": [
+   {
+    "code": "MATH.G7.MEASUR.LENGTH.CIRCUMFERENCE_DISTANCE.M_DIAMETER_AS_CIRCUMFERENCE",
+    "listen_for": [
+     "140"
+    ],
+    "ask": "Is one turn as long as the width?",
+    "repair": "It is the distance round.",
+    "error": "Uses the diameter as the distance of one turn.",
+    "example": {
+     "question": "Wheel diameter 70 cm turns 200 times: metres",
+     "wrong_answer": "140",
+     "correct_answer": "440"
+    }
+   },
+   {
+    "code": "MATH.G7.MEASUR.LENGTH.CIRCUMFERENCE_DISTANCE.M_UNITS_NOT_CONVERTED_CIRC",
+    "listen_for": [
+     "44,000"
+    ],
+    "ask": "What unit is asked?",
+    "repair": "Metres.",
+    "error": "Leaves the distance in centimetres.",
+    "example": {
+     "question": "Wheel diameter 70 cm turns 200 times: metres",
+     "wrong_answer": "44,000",
+     "correct_answer": "440"
+    }
+   },
+   {
+    "code": "MATH.G7.MEASUR.LENGTH.CIRCUMFERENCE_DISTANCE.M_CM_TO_M_BY_THOUSAND",
+    "listen_for": [
+     "44"
+    ],
+    "ask": "How many cm in a metre?",
+    "repair": "100.",
+    "error": "Divides by 1,000 to change cm to m.",
+    "example": {
+     "question": "44,000 cm in m",
+     "wrong_answer": "44",
+     "correct_answer": "440"
+    }
+   },
+   {
+    "code": "MATH.G7.MEASUR.LENGTH.CIRCUMFERENCE_DISTANCE.M_HALF_CIRCLES_AS_HALF",
+    "listen_for": [
+     "one half"
+    ],
+    "ask": "Two halves make?",
+    "repair": "One whole circle.",
+    "error": "Uses one half circle for the two ends of a track.",
+    "example": {
+     "question": "Track with half circles at both ends, diameter 42 m",
+     "wrong_answer": "66",
+     "correct_answer": "132"
+    }
+   },
+   {
+    "code": "MATH.G7.MEASUR.LENGTH.CIRCUMFERENCE_DISTANCE.M_ONE_STRAIGHT_SIDE_ONLY",
+    "listen_for": [
+     "80"
+    ],
+    "ask": "How many straight sides?",
+    "repair": "Two.",
+    "error": "Counts one straight side of a track.",
+    "example": {
+     "question": "Track with two straight sides of 80 m",
+     "wrong_answer": "80",
+     "correct_answer": "160"
+    }
+   },
+   {
+    "code": "MATH.G7.MEASUR.LENGTH.CIRCUMFERENCE_DISTANCE.M_LAP_PARTS_MULTIPLIED",
+    "listen_for": [
+     "times"
+    ],
+    "ask": "Is a lap the sum of its parts?",
+    "repair": "Add them.",
+    "error": "Multiplies the curved and straight parts of a lap.",
+    "example": {
+     "question": "One lap: straight 160 m and curved 132 m",
+     "wrong_answer": "21,120",
+     "correct_answer": "292"
+    }
+   }
+  ],
+  "checks": [
+   {
+    "question": "A wheel of diameter 70 cm turns 200 times (pi = 22/7). Metres?",
+    "answer": "440 m",
+    "shows": "distance"
+   },
+   {
+    "question": "A track: two straights of 80 m and two half circles of diameter 42 m. One lap?",
+    "answer": "292 m",
+    "shows": "track"
+   }
+  ],
+  "name": "Find the circumference of a circle and use it for distance travelled and a track",
+  "sub_strand": "MATH.G7.MEASUR.LENGTH",
+  "sub_strand_name": "Length",
+  "status": "draft: written 17 Nov 2026 offline for the Grade 7 pilot; not yet checked by a Kenyan maths teacher; not loaded by the live tutor"
+ },
+ "MATH.G7.MEASUR.LENGTH.CIRCUMFERENCE_FIND_DIAMETER": {
+  "skill": "MATH.G7.MEASUR.LENGTH.CIRCUMFERENCE_FIND_DIAMETER",
+  "key_step": "The child divides the circumference by pi (times 7/22) to get the diameter, and halves it only if the radius is asked.",
+  "floor": {
+   "prerequisite": "Multiplies by 7/22.",
+   "question": "88 x 7/22",
+   "answer": "28"
+  },
+  "representations": [
+   "a string round a table",
+   "the formula backwards",
+   "a check"
+  ],
+  "steps": [
+   "Write C = pi x d.",
+   "Divide by pi.",
+   "Halve for radius.",
+   "Check by multiplying."
+  ],
+  "contexts": [
+   "a table",
+   "a pond",
+   "a drum"
+  ],
+  "board": [
+   {
+    "beat": "write",
+    "do": "Write C = pi x d and 88 = 22/7 x d."
+   },
+   {
+    "beat": "point",
+    "do": "Point at the d.",
+    "say": "What do we do to both sides?"
+   },
+   {
+    "beat": "pause",
+    "do": "Wait for the child to say."
+   }
+  ],
+  "misconceptions": [
+   {
+    "code": "MATH.G7.MEASUR.LENGTH.CIRCUMFERENCE_FIND_DIAMETER.M_RADIUS_FOR_DIAMETER",
+    "listen_for": [
+     "14"
+    ],
+    "ask": "What does 14 stand for?",
+    "repair": "The radius, half the diameter.",
+    "error": "Gives the radius when the diameter is asked.",
+    "example": {
+     "question": "Distance round a table is 88 cm: diameter (pi = 22/7)",
+     "wrong_answer": "14",
+     "correct_answer": "28"
+    }
+   },
+   {
+    "code": "MATH.G7.MEASUR.LENGTH.CIRCUMFERENCE_FIND_DIAMETER.M_PI_PART_DROPPED",
+    "listen_for": [
+     "4"
+    ],
+    "ask": "Is pi 22 or 22/7?",
+    "repair": "Divide by 22/7.",
+    "error": "Divides by 22 only, forgetting the 7.",
+    "example": {
+     "question": "Distance round a table is 88 cm: diameter (pi = 22/7)",
+     "wrong_answer": "4",
+     "correct_answer": "28"
+    }
+   },
+   {
+    "code": "MATH.G7.MEASUR.LENGTH.CIRCUMFERENCE_FIND_DIAMETER.M_CIRCUMFERENCE_HALVED",
+    "listen_for": [
+     "44"
+    ],
+    "ask": "Is the circumference twice the diameter?",
+    "repair": "About three times.",
+    "error": "Halves the circumference to get the diameter.",
+    "example": {
+     "question": "Distance round a table is 88 cm: diameter",
+     "wrong_answer": "44",
+     "correct_answer": "28"
+    }
+   }
+  ],
+  "checks": [
+   {
+    "question": "Distance round a table is 88 cm (pi = 22/7). Diameter?",
+    "answer": "28 cm",
+    "shows": "divide by pi"
+   },
+   {
+    "question": "Its radius",
+    "answer": "14 cm",
+    "shows": "half"
+   }
+  ],
+  "name": "Find the diameter or radius of a circle from its circumference",
+  "sub_strand": "MATH.G7.MEASUR.LENGTH",
+  "sub_strand_name": "Length",
+  "status": "draft: written 17 Nov 2026 offline for the Grade 7 pilot; not yet checked by a Kenyan maths teacher; not loaded by the live tutor"
+ },
+ "MATH.G7.MEASUR.LENGTH.CIRCUMFERENCE_REASON": {
+  "skill": "MATH.G7.MEASUR.LENGTH.CIRCUMFERENCE_REASON",
+  "key_step": "The child says the distance round is always the same number of times the diameter, so doubling the diameter doubles it.",
+  "floor": {
+   "prerequisite": "Finds a ratio.",
+   "question": "126 / 40",
+   "answer": "3.15"
+  },
+  "representations": [
+   "a table of widths and distances",
+   "the ratio",
+   "a graph idea"
+  ],
+  "steps": [
+   "Divide each distance by its width.",
+   "The result is the same.",
+   "So double width, double distance.",
+   "Say it in words."
+  ],
+  "contexts": [
+   "a coin",
+   "a pond",
+   "a drum"
+  ],
+  "board": [
+   {
+    "beat": "write",
+    "do": "Write a table of width and distance round."
+   },
+   {
+    "beat": "point",
+    "do": "Point at a row.",
+    "say": "What is the distance divided by the width?"
+   },
+   {
+    "beat": "pause",
+    "do": "Wait for the child to say."
+   }
+  ],
+  "misconceptions": [
+   {
+    "code": "MATH.G7.MEASUR.LENGTH.CIRCUMFERENCE_REASON.M_CIRCUMFERENCE_SIZE_FIXED",
+    "listen_for": [
+     "stays the same"
+    ],
+    "ask": "Is a bigger pond longer to walk round?",
+    "repair": "Yes.",
+    "error": "Believes the circumference does not change with size.",
+    "example": {
+     "question": "Diameter doubles: circumference?",
+     "wrong_answer": "stays the same",
+     "correct_answer": "doubles"
+    }
+   },
+   {
+    "code": "MATH.G7.MEASUR.LENGTH.CIRCUMFERENCE_REASON.M_PI_MULTIPLIES_CHANGE",
+    "listen_for": [
+     "3 times"
+    ],
+    "ask": "Is pi used twice?",
+    "repair": "The same pi.",
+    "error": "Multiplies the change by pi.",
+    "example": {
+     "question": "Diameter doubles: circumference?",
+     "wrong_answer": "3 times as long",
+     "correct_answer": "twice as long"
+    }
+   },
+   {
+    "code": "MATH.G7.MEASUR.LENGTH.CIRCUMFERENCE_REASON.M_RULE_DEPENDS_ON_OBJECT",
+    "listen_for": [
+     "only for ponds"
+    ],
+    "ask": "Does the rule change for a coin?",
+    "repair": "Same for every circle.",
+    "error": "Believes the circumference rule depends on the kind of circle.",
+    "example": {
+     "question": "Doubling the diameter: 4 times only for ponds?",
+     "wrong_answer": "only for ponds",
+     "correct_answer": "for every circle"
+    }
+   },
+   {
+    "code": "MATH.G7.MEASUR.LENGTH.CIRCUMFERENCE_REASON.M_PI_ROUNDED_TO_THREE",
+    "listen_for": [
+     "about 3"
+    ],
+    "ask": "What is 126 / 40?",
+    "repair": "About 3.15.",
+    "error": "Uses exactly 3 for pi when the table gives more.",
+    "example": {
+     "question": "Table: width 40 cm, distance round about 126 cm: pi is about",
+     "wrong_answer": "3",
+     "correct_answer": "3.14"
+    }
+   },
+   {
+    "code": "MATH.G7.MEASUR.LENGTH.CIRCUMFERENCE_REASON.M_ADD_NOT_MULTIPLY_CIRC",
+    "listen_for": [
+     "plus 20"
+    ],
+    "ask": "Is the gap constant?",
+    "repair": "It is a multiple.",
+    "error": "Adds a fixed amount to the width instead of multiplying.",
+    "example": {
+     "question": "Width 20 cm, distance round 63 cm: for width 40 cm?",
+     "wrong_answer": "83",
+     "correct_answer": "126"
+    }
+   },
+   {
+    "code": "MATH.G7.MEASUR.LENGTH.CIRCUMFERENCE_REASON.M_DOUBLE_ONLY_CIRC",
+    "listen_for": [
+     "double"
+    ],
+    "ask": "What is the distance round divided by the width?",
+    "repair": "Find the ratio.",
+    "error": "Doubles the width but not enough to match the pattern.",
+    "example": {
+     "question": "Width 20 cm, distance round 63 cm: for width 40 cm?",
+     "wrong_answer": "84",
+     "correct_answer": "126"
+    }
+   }
+  ],
+  "checks": [
+   {
+    "question": "Diameter doubles from 14 m to 28 m. The distance round?",
+    "answer": "doubles",
+    "shows": "proportion"
+   },
+   {
+    "question": "Width 20 cm, distance round 63 cm: for width 40 cm?",
+    "answer": "126 cm",
+    "shows": "predict"
+   }
+  ],
+  "name": "Reason about how the circumference changes with the diameter",
+  "sub_strand": "MATH.G7.MEASUR.LENGTH",
+  "sub_strand_name": "Length",
+  "status": "draft: written 17 Nov 2026 offline for the Grade 7 pilot; not yet checked by a Kenyan maths teacher; not loaded by the live tutor"
  }
 };
 export default TEACHING_PACK_G7;

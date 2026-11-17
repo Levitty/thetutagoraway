@@ -7,4 +7,5 @@ import * as squares from "./squares.mjs";
 import * as expressions from "./expressions.mjs";
 import * as equations from "./equations.mjs";
 import * as pythagoras from "./pythagoras.mjs";
-export const SUBS = [whole, factors, fractions, decimals, squares, expressions, equations, pythagoras];
+import * as length from "./length.mjs";
+export const SUBS = [whole, factors, fractions, decimals, squares, expressions, equations, pythagoras, length];

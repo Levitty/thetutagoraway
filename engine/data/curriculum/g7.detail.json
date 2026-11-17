@@ -722,6 +722,69 @@
     "which quantity is asked"
    ],
    "mastery": "The child finds the straight path as the hypotenuse, adds the two sides for the long way, and subtracts to find how much shorter the straight path is, answering the quantity the question asks for."
+  },
+  "MATH.G7.MEASUR.LENGTH.CONVERT_LENGTH_UNITS": {
+   "forms": [
+    "change metres to decimetres",
+    "two-stage conversion",
+    "why multiply or divide",
+    "find the mistake"
+   ],
+   "mastery": "The child changes a length between cm, dm, m, Dm and Hm by multiplying when going to a smaller unit and dividing when going to a bigger one, using the number of small units in one big unit (1 m = 10 dm = 100 cm; 1 Hm = 100 m), also in two stages."
+  },
+  "MATH.G7.MEASUR.LENGTH.COMPARE_LENGTHS_UNITS": {
+   "forms": [
+    "how much longer",
+    "which is longer",
+    "use the table of units",
+    "same unit first"
+   ],
+   "mastery": "The child reads the size of each unit from a table, changes both lengths to the same unit, and finds how much longer one is, answering in the unit asked."
+  },
+  "MATH.G7.MEASUR.LENGTH.OPERATIONS_ON_LENGTH": {
+   "forms": [
+    "rope left after cutting",
+    "posts along a straight fence",
+    "which unit is the answer in",
+    "find the mistake"
+   ],
+   "mastery": "The child works with lengths in a story (rope cut into pieces, posts along a fence): changes to one unit, finds the total of several pieces, subtracts what is left, and counts posts on a straight fence as gaps plus one."
+  },
+  "MATH.G7.MEASUR.LENGTH.PERIMETER_PLANE_FIGURES": {
+   "forms": [
+    "perimeter of an L-shape",
+    "which plot needs the longest fence",
+    "posts round a plot",
+    "fence or area"
+   ],
+   "mastery": "The child finds the distance round a rectangle as 2 x (length + width), round an L-shape by adding every edge, compares plots by perimeter and not by area, and counts posts round a closed plot as distance divided by gap."
+  },
+  "MATH.G7.MEASUR.LENGTH.CIRCUMFERENCE_DISTANCE": {
+   "forms": [
+    "distance of a wheel",
+    "length of a running track",
+    "cm to m",
+    "half circles make a circle"
+   ],
+   "mastery": "The child finds the circumference as pi x diameter (22/7 or 3.14 as the question says), uses it for the distance a wheel travels in many turns (changing cm to m), and for a track made of straight sides and half circles."
+  },
+  "MATH.G7.MEASUR.LENGTH.CIRCUMFERENCE_FIND_DIAMETER": {
+   "forms": [
+    "diameter from the distance round",
+    "radius from the circumference",
+    "check by multiplying",
+    "which one is asked"
+   ],
+   "mastery": "Given the distance round a circle, the child divides by pi (multiplies by 7/22) to find the diameter, halves it for the radius, and checks by multiplying back."
+  },
+  "MATH.G7.MEASUR.LENGTH.CIRCUMFERENCE_REASON": {
+   "forms": [
+    "when the diameter doubles",
+    "find pi from a table",
+    "which statement is right",
+    "predict the distance round"
+   ],
+   "mastery": "The child says the circumference is always about 3.14 times the diameter, so doubling the diameter doubles the circumference, and finds the pattern in a table of measured circles."
   }
  }
 }
