@@ -677,6 +677,51 @@
     "which quantity is asked"
    ],
    "mastery": "The child forms an equation for a story (ages after some years, a parking charge with a fixed part, equal boxes and loose items, money left after spending), solves it, and answers the quantity the question asks for, not the unknown."
+  },
+  "MATH.G7.MEASUR.PYTHAGOREAN_RELATIONSHIP.RIGHT_TRIANGLE_SIDES": {
+   "forms": [
+    "which side is the hypotenuse",
+    "which is the longest side",
+    "name the legs",
+    "draw a right-angled triangle"
+   ],
+   "mastery": "The child finds the right angle in a triangle labelled with letters, names the hypotenuse as the side opposite the right angle (and the longest side), and names the other two sides as the legs."
+  },
+  "MATH.G7.MEASUR.PYTHAGOREAN_RELATIONSHIP.PYTHAGORAS_TEST": {
+   "forms": [
+    "which triangle is right-angled",
+    "is this corner square",
+    "why does 5, 12, 13 show a right angle",
+    "find the mistake in the test"
+   ],
+   "mastery": "The child squares the two shorter sides, adds them, and compares with the square of the longest side (exactly equal means a right angle), and explains why a 3, 4, 5 or 5, 12, 13 corner is square."
+  },
+  "MATH.G7.MEASUR.PYTHAGOREAN_RELATIONSHIP.FIND_HYPOTENUSE": {
+   "forms": [
+    "length of the brace",
+    "length of the wire",
+    "cost of a wire",
+    "which working is right"
+   ],
+   "mastery": "The child squares the two shorter sides, adds them and takes the square root to find the hypotenuse, and uses it for a brace on a gate, a wire from a pole to a peg and a diagonal path."
+  },
+  "MATH.G7.MEASUR.PYTHAGOREAN_RELATIONSHIP.FIND_SHORT_SIDE": {
+   "forms": [
+    "find the third side",
+    "find the wrong step",
+    "which operation first",
+    "check by squaring"
+   ],
+   "mastery": "The child subtracts the square of the known shorter side from the square of the hypotenuse and takes the square root, and knows a square root is not halving."
+  },
+  "MATH.G7.MEASUR.PYTHAGOREAN_RELATIONSHIP.PYTHAGORAS_SAVING": {
+   "forms": [
+    "how much shorter",
+    "length of the straight path",
+    "length along two sides",
+    "which quantity is asked"
+   ],
+   "mastery": "The child finds the straight path as the hypotenuse, adds the two sides for the long way, and subtracts to find how much shorter the straight path is, answering the quantity the question asks for."
   }
  }
 }

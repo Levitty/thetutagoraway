@@ -6727,6 +6727,508 @@ export const TEACHING_PACK_G7 = {
   "sub_strand": "MATH.G7.ALGEBR.LINEAR_EQUATIONS",
   "sub_strand_name": "Linear Equations",
   "status": "draft: written 17 Nov 2026 offline for the Grade 7 pilot; not yet checked by a Kenyan maths teacher; not loaded by the live tutor"
+ },
+ "MATH.G7.MEASUR.PYTHAGOREAN_RELATIONSHIP.RIGHT_TRIANGLE_SIDES": {
+  "skill": "MATH.G7.MEASUR.PYTHAGOREAN_RELATIONSHIP.RIGHT_TRIANGLE_SIDES",
+  "key_step": "The child finds the right angle first and names the side opposite it as the hypotenuse.",
+  "floor": {
+   "prerequisite": "Knows a right angle.",
+   "question": "How many degrees in a right angle?",
+   "answer": "90"
+  },
+  "representations": [
+   "a right-angled triangle drawn",
+   "the side opposite the angle",
+   "letters on the corners"
+  ],
+  "steps": [
+   "Mark the right angle.",
+   "Find the side opposite.",
+   "That is the longest side.",
+   "The other two are the legs."
+  ],
+  "contexts": [
+   "a ladder against a wall",
+   "a gate with a brace",
+   "a roof"
+  ],
+  "board": [
+   {
+    "beat": "draw",
+    "do": "Draw triangle PWC with the right angle at W."
+   },
+   {
+    "beat": "point",
+    "do": "Point at the angle at W.",
+    "say": "Which side is across from it?"
+   },
+   {
+    "beat": "pause",
+    "do": "Wait for the child to say."
+   }
+  ],
+  "misconceptions": [
+   {
+    "code": "MATH.G7.MEASUR.PYTHAGOREAN_RELATIONSHIP.RIGHT_TRIANGLE_SIDES.M_HYPOTENUSE_NEXT_TO_RIGHT_ANGLE",
+    "listen_for": [
+     "PW",
+     "the side by the angle"
+    ],
+    "ask": "Is PW beside the angle or opposite it?",
+    "repair": "Opposite the right angle.",
+    "error": "Names a side that meets the right angle as the hypotenuse.",
+    "example": {
+     "question": "Angle at W is 90 degrees in triangle PWC. Which side is the hypotenuse?",
+     "wrong_answer": "PW",
+     "correct_answer": "PC"
+    }
+   },
+   {
+    "code": "MATH.G7.MEASUR.PYTHAGOREAN_RELATIONSHIP.RIGHT_TRIANGLE_SIDES.M_LEG_NAMED_BY_LETTER_ORDER",
+    "listen_for": [
+     "WC",
+     "the last two letters"
+    ],
+    "ask": "Where is the right angle?",
+    "repair": "Find the angle first.",
+    "error": "Picks the side from the order of the letters, such as the last two letters.",
+    "example": {
+     "question": "Angle at W is 90 degrees in triangle PWC. Which side is the hypotenuse?",
+     "wrong_answer": "WC",
+     "correct_answer": "PC"
+    }
+   }
+  ],
+  "checks": [
+   {
+    "question": "Angle at W is 90 degrees in triangle PWC. Which side is the hypotenuse?",
+    "answer": "PC",
+    "shows": "opposite"
+   },
+   {
+    "question": "Which is the longest side of a right-angled triangle?",
+    "answer": "the hypotenuse",
+    "shows": "longest"
+   }
+  ],
+  "name": "Name the sides of a right-angled triangle",
+  "sub_strand": "MATH.G7.MEASUR.PYTHAGOREAN_RELATIONSHIP",
+  "sub_strand_name": "Pythagorean Relationship",
+  "status": "draft: written 17 Nov 2026 offline for the Grade 7 pilot; not yet checked by a Kenyan maths teacher; not loaded by the live tutor"
+ },
+ "MATH.G7.MEASUR.PYTHAGOREAN_RELATIONSHIP.PYTHAGORAS_TEST": {
+  "skill": "MATH.G7.MEASUR.PYTHAGOREAN_RELATIONSHIP.PYTHAGORAS_TEST",
+  "key_step": "The child squares the two shorter sides, adds them, and checks if the total is exactly the square of the longest side.",
+  "floor": {
+   "prerequisite": "Squares numbers.",
+   "question": "5 squared",
+   "answer": "25"
+  },
+  "representations": [
+   "squares on the sides",
+   "the squares written",
+   "the comparison"
+  ],
+  "steps": [
+   "Find the longest side.",
+   "Square the other two and add.",
+   "Square the longest.",
+   "Equal means right-angled."
+  ],
+  "contexts": [
+   "setting out a corner with 3, 4, 5",
+   "a builder",
+   "a plot"
+  ],
+  "board": [
+   {
+    "beat": "draw",
+    "do": "Draw a triangle 5, 12, 13 with squares on each side."
+   },
+   {
+    "beat": "point",
+    "do": "Point at the squares on 5 and 12.",
+    "say": "What do their areas add to?"
+   },
+   {
+    "beat": "pause",
+    "do": "Wait for the child to say."
+   }
+  ],
+  "misconceptions": [
+   {
+    "code": "MATH.G7.MEASUR.PYTHAGOREAN_RELATIONSHIP.PYTHAGORAS_TEST.M_NEARLY_RIGHT_ACCEPTED",
+    "listen_for": [
+     "it is close"
+    ],
+    "ask": "Is 169 equal to 196?",
+    "repair": "Exactly equal.",
+    "error": "Accepts a triangle as right-angled when the squares nearly match.",
+    "example": {
+     "question": "Sides 5, 12, 14: is it right-angled?",
+     "wrong_answer": "Yes, 5 squared plus 12 squared is close to 14 squared",
+     "correct_answer": "No: 169 is not 196"
+    }
+   },
+   {
+    "code": "MATH.G7.MEASUR.PYTHAGOREAN_RELATIONSHIP.PYTHAGORAS_TEST.M_SIDES_ADDED_NOT_SQUARED",
+    "listen_for": [
+     "5 + 12"
+    ],
+    "ask": "What do we do to each side first?",
+    "repair": "Square them.",
+    "error": "Adds the sides instead of the squares of the sides.",
+    "example": {
+     "question": "Sides 5, 12, 13: is it right-angled?",
+     "wrong_answer": "No: 5 + 12 = 17, not 13",
+     "correct_answer": "Yes: 25 + 144 = 169"
+    }
+   },
+   {
+    "code": "MATH.G7.MEASUR.PYTHAGOREAN_RELATIONSHIP.PYTHAGORAS_TEST.M_TRIANGLE_INEQUALITY_AS_PROOF",
+    "listen_for": [
+     "5 + 12 is more than 13"
+    ],
+    "ask": "Is that true for every triangle?",
+    "repair": "It does not show an angle.",
+    "error": "Believes that two sides adding to more than the third shows a right angle.",
+    "example": {
+     "question": "Why does 5, 12, 13 show a right angle?",
+     "wrong_answer": "5 + 12 is bigger than 13",
+     "correct_answer": "5 squared + 12 squared = 13 squared"
+    }
+   },
+   {
+    "code": "MATH.G7.MEASUR.PYTHAGOREAN_RELATIONSHIP.PYTHAGORAS_TEST.M_LONGEST_SIDE_AS_PROOF",
+    "listen_for": [
+     "13 is the longest"
+    ],
+    "ask": "Does every triangle have a longest side?",
+    "repair": "Yes, so it proves nothing.",
+    "error": "Believes that having a longest side shows a right angle.",
+    "example": {
+     "question": "Why does 5, 12, 13 show a right angle?",
+     "wrong_answer": "13 is the longest",
+     "correct_answer": "5 squared + 12 squared = 13 squared"
+    }
+   }
+  ],
+  "checks": [
+   {
+    "question": "Is a triangle with sides 5, 12, 13 right-angled?",
+    "answer": "Yes",
+    "shows": "test"
+   },
+   {
+    "question": "Is a triangle with sides 5, 12, 14 right-angled?",
+    "answer": "No",
+    "shows": "exact"
+   }
+  ],
+  "name": "Test whether a triangle is right-angled using the squares of its sides",
+  "sub_strand": "MATH.G7.MEASUR.PYTHAGOREAN_RELATIONSHIP",
+  "sub_strand_name": "Pythagorean Relationship",
+  "status": "draft: written 17 Nov 2026 offline for the Grade 7 pilot; not yet checked by a Kenyan maths teacher; not loaded by the live tutor"
+ },
+ "MATH.G7.MEASUR.PYTHAGOREAN_RELATIONSHIP.FIND_HYPOTENUSE": {
+  "skill": "MATH.G7.MEASUR.PYTHAGOREAN_RELATIONSHIP.FIND_HYPOTENUSE",
+  "key_step": "The child squares both shorter sides, adds them, and takes the square root to get the longest side.",
+  "floor": {
+   "prerequisite": "Finds a root.",
+   "question": "Square root of 25",
+   "answer": "5"
+  },
+  "representations": [
+   "the diagonal of a rectangle",
+   "the squares",
+   "the root"
+  ],
+  "steps": [
+   "Draw the right-angled triangle.",
+   "Square and add the legs.",
+   "Take the square root.",
+   "Answer with the unit."
+  ],
+  "contexts": [
+   "gate brace",
+   "wire from a pole",
+   "ladder"
+  ],
+  "board": [
+   {
+    "beat": "draw",
+    "do": "Draw a gate 160 by 120 with a diagonal."
+   },
+   {
+    "beat": "point",
+    "do": "Point at the diagonal.",
+    "say": "Is it longer or shorter than 160?"
+   },
+   {
+    "beat": "pause",
+    "do": "Wait for the child to say."
+   }
+  ],
+  "misconceptions": [
+   {
+    "code": "MATH.G7.MEASUR.PYTHAGOREAN_RELATIONSHIP.FIND_HYPOTENUSE.M_SQUARE_NOT_ROOTED",
+    "listen_for": [
+     "40000"
+    ],
+    "ask": "Is 40,000 cm a sensible brace?",
+    "repair": "Take the square root.",
+    "error": "Stops at the sum of the squares and does not take the root.",
+    "example": {
+     "question": "A gate 160 cm by 120 cm: length of the diagonal brace",
+     "wrong_answer": "40,000 cm",
+     "correct_answer": "200 cm"
+    }
+   },
+   {
+    "code": "MATH.G7.MEASUR.PYTHAGOREAN_RELATIONSHIP.FIND_HYPOTENUSE.M_TWO_SIDES_ADDED",
+    "listen_for": [
+     "280"
+    ],
+    "ask": "Is the diagonal shorter than going round?",
+    "repair": "Square, add, root.",
+    "error": "Adds the two shorter sides for the diagonal.",
+    "example": {
+     "question": "A gate 160 cm by 120 cm: length of the brace",
+     "wrong_answer": "280 cm",
+     "correct_answer": "200 cm"
+    }
+   },
+   {
+    "code": "MATH.G7.MEASUR.PYTHAGOREAN_RELATIONSHIP.FIND_HYPOTENUSE.M_SQUARES_SUBTRACTED_FOR_LONGEST",
+    "listen_for": [
+     "4 squared less 3 squared"
+    ],
+    "ask": "Are we finding the longest side?",
+    "repair": "Add the squares.",
+    "error": "Subtracts the squares when looking for the longest side.",
+    "example": {
+     "question": "Pole 3 m, peg 4 m away: the wire",
+     "wrong_answer": "7 (4 squared less 3 squared)",
+     "correct_answer": "5"
+    }
+   },
+   {
+    "code": "MATH.G7.MEASUR.PYTHAGOREAN_RELATIONSHIP.FIND_HYPOTENUSE.M_SIDES_SUBTRACTED_NOT_SQUARED",
+    "listen_for": [
+     "40"
+    ],
+    "ask": "Did you square the sides?",
+    "repair": "Square and add.",
+    "error": "Subtracts the sides without squaring.",
+    "example": {
+     "question": "A gate 160 cm by 120 cm: length of the brace",
+     "wrong_answer": "40 cm",
+     "correct_answer": "200 cm"
+    }
+   }
+  ],
+  "checks": [
+   {
+    "question": "A gate 160 cm by 120 cm: length of the diagonal brace",
+    "answer": "200 cm",
+    "shows": "hypotenuse"
+   },
+   {
+    "question": "A pole 3 m tall, peg 4 m from its foot: length of the wire",
+    "answer": "5 m",
+    "shows": "wire"
+   }
+  ],
+  "name": "Find the hypotenuse of a right-angled triangle",
+  "sub_strand": "MATH.G7.MEASUR.PYTHAGOREAN_RELATIONSHIP",
+  "sub_strand_name": "Pythagorean Relationship",
+  "status": "draft: written 17 Nov 2026 offline for the Grade 7 pilot; not yet checked by a Kenyan maths teacher; not loaded by the live tutor"
+ },
+ "MATH.G7.MEASUR.PYTHAGOREAN_RELATIONSHIP.FIND_SHORT_SIDE": {
+  "skill": "MATH.G7.MEASUR.PYTHAGOREAN_RELATIONSHIP.FIND_SHORT_SIDE",
+  "key_step": "The child subtracts the square of the known side from the square of the hypotenuse, then takes the square root.",
+  "floor": {
+   "prerequisite": "Finds a hypotenuse.",
+   "question": "Sides 3 and 4: hypotenuse",
+   "answer": "5"
+  },
+  "representations": [
+   "squares on the sides",
+   "subtract the squares",
+   "the root"
+  ],
+  "steps": [
+   "Square the hypotenuse.",
+   "Square the known side and subtract.",
+   "Take the square root.",
+   "Check by adding squares."
+  ],
+  "contexts": [
+   "a ladder",
+   "a wire",
+   "a ramp"
+  ],
+  "board": [
+   {
+    "beat": "write",
+    "do": "Write 10 cm and 6 cm with an unknown side."
+   },
+   {
+    "beat": "point",
+    "do": "Point at the 10.",
+    "say": "Is this the longest side?"
+   },
+   {
+    "beat": "pause",
+    "do": "Wait for the child to say."
+   }
+  ],
+  "misconceptions": [
+   {
+    "code": "MATH.G7.MEASUR.PYTHAGOREAN_RELATIONSHIP.FIND_SHORT_SIDE.M_ROOT_AS_HALF",
+    "listen_for": [
+     "32"
+    ],
+    "ask": "What number times itself is 64?",
+    "repair": "Root is not halving.",
+    "error": "Halves the number instead of taking its square root.",
+    "example": {
+     "question": "Hypotenuse 10 cm, one side 6 cm: third side",
+     "wrong_answer": "32 (64 halved)",
+     "correct_answer": "8"
+    }
+   },
+   {
+    "code": "MATH.G7.MEASUR.PYTHAGOREAN_RELATIONSHIP.FIND_SHORT_SIDE.M_SIDES_SUBTRACTED_NOT_SQUARED_SHORT",
+    "listen_for": [
+     "10 - 6"
+    ],
+    "ask": "Did you square first?",
+    "repair": "Square, then subtract.",
+    "error": "Subtracts the sides without squaring them.",
+    "example": {
+     "question": "Hypotenuse 10 cm, one side 6 cm: third side",
+     "wrong_answer": "4",
+     "correct_answer": "8"
+    }
+   }
+  ],
+  "checks": [
+   {
+    "question": "Hypotenuse 10 cm and one side 6 cm: the third side",
+    "answer": "8 cm",
+    "shows": "subtract squares"
+   },
+   {
+    "question": "Hypotenuse 13 m, one side 5 m: the other side",
+    "answer": "12 m",
+    "shows": "subtract squares"
+   }
+  ],
+  "name": "Find a shorter side of a right-angled triangle",
+  "sub_strand": "MATH.G7.MEASUR.PYTHAGOREAN_RELATIONSHIP",
+  "sub_strand_name": "Pythagorean Relationship",
+  "status": "draft: written 17 Nov 2026 offline for the Grade 7 pilot; not yet checked by a Kenyan maths teacher; not loaded by the live tutor"
+ },
+ "MATH.G7.MEASUR.PYTHAGOREAN_RELATIONSHIP.PYTHAGORAS_SAVING": {
+  "skill": "MATH.G7.MEASUR.PYTHAGOREAN_RELATIONSHIP.PYTHAGORAS_SAVING",
+  "key_step": "The child finds the straight path, the long way, and subtracts, answering the quantity asked.",
+  "floor": {
+   "prerequisite": "Finds a hypotenuse.",
+   "question": "Sides 5 and 12",
+   "answer": "13"
+  },
+  "representations": [
+   "a right-angled path drawn",
+   "two numbers: straight and long way",
+   "the difference"
+  ],
+  "steps": [
+   "Draw the two paths.",
+   "Find the straight path.",
+   "Add the two sides for the long way.",
+   "Subtract and answer."
+  ],
+  "contexts": [
+   "a road and a lane",
+   "a school path",
+   "a market"
+  ],
+  "board": [
+   {
+    "beat": "draw",
+    "do": "Draw 100 m east then 240 m north and the straight path."
+   },
+   {
+    "beat": "point",
+    "do": "Point at the straight path.",
+    "say": "How long is it?"
+   },
+   {
+    "beat": "pause",
+    "do": "Wait for the child to say."
+   }
+  ],
+  "misconceptions": [
+   {
+    "code": "MATH.G7.MEASUR.PYTHAGOREAN_RELATIONSHIP.PYTHAGORAS_SAVING.M_QUANTITY_ASKED_MIXED",
+    "listen_for": [
+     "260"
+    ],
+    "ask": "What does the question ask for?",
+    "repair": "How much shorter.",
+    "error": "Gives the length of the straight path when the saving is asked.",
+    "example": {
+     "question": "100 m east then 240 m north: how much shorter is the straight path?",
+     "wrong_answer": "260 m",
+     "correct_answer": "80 m"
+    }
+   },
+   {
+    "code": "MATH.G7.MEASUR.PYTHAGOREAN_RELATIONSHIP.PYTHAGORAS_SAVING.M_ROAD_LENGTH_AS_ANSWER",
+    "listen_for": [
+     "340"
+    ],
+    "ask": "What is 340 m?",
+    "repair": "That is the long way.",
+    "error": "Gives the length along the road and lane as the saving.",
+    "example": {
+     "question": "100 m east then 240 m north: how much shorter?",
+     "wrong_answer": "340 m",
+     "correct_answer": "80 m"
+    }
+   },
+   {
+    "code": "MATH.G7.MEASUR.PYTHAGOREAN_RELATIONSHIP.PYTHAGORAS_SAVING.M_PATH_ADDED_TO_ROAD",
+    "listen_for": [
+     "600"
+    ],
+    "ask": "Do we add to find a difference?",
+    "repair": "Subtract.",
+    "error": "Adds the straight path to the road when comparing.",
+    "example": {
+     "question": "100 m east then 240 m north: how much shorter?",
+     "wrong_answer": "600 m",
+     "correct_answer": "80 m"
+    }
+   }
+  ],
+  "checks": [
+   {
+    "question": "100 m east then 240 m north: how much shorter is the straight path?",
+    "answer": "80 m",
+    "shows": "saving"
+   },
+   {
+    "question": "How long is the straight path?",
+    "answer": "260 m",
+    "shows": "hypotenuse"
+   }
+  ],
+  "name": "Use the relationship to compare a straight path with a path along two sides",
+  "sub_strand": "MATH.G7.MEASUR.PYTHAGOREAN_RELATIONSHIP",
+  "sub_strand_name": "Pythagorean Relationship",
+  "status": "draft: written 17 Nov 2026 offline for the Grade 7 pilot; not yet checked by a Kenyan maths teacher; not loaded by the live tutor"
  }
 };
 export default TEACHING_PACK_G7;

@@ -20,15 +20,15 @@ const F = { cm: 0.01, dm: 0.1, m: 1, Dm: 10, Hm: 100, km: 1000 };
 
 export const FAMILIES = [
   // =========================================================== PYTHAGORAS
-  fam({ id: 'g7.pyth.name-hypotenuse', skill: 'G7_PYTHAGORAS', outcome: 'G7.PYTH.a', rung: 1, form: 'direct',
+  fam({ id: 'g7.pyth.name-hypotenuse', skill: 'G7_PYTHAGORAS', outcome: 'MATH.G7.MEASUR.PYTHAGOREAN_RELATIONSHIP.a', cskill: 'MATH.G7.MEASUR.PYTHAGOREAN_RELATIONSHIP.RIGHT_TRIANGLE_SIDES', rung: 1, form: 'direct',
     draw: () => { const l = shuffle(LETTERS.split('')).slice(0, 3); return { p: l[0], q: l[1], r: l[2] }; },
     make: ({ p, q, r }) => ({
       question: `In triangle ${p}${q}${r}, the angle at ${q} is 90°. Which side is the hypotenuse?`, story: false,
-      options: [{ text: `${p}${r}`, right: true }, { text: `${p}${q}`, right: false, why: `${p}${q} meets the right angle at ${q}. The hypotenuse is opposite the right angle.` }, { text: `${q}${r}`, right: false, why: `${q}${r} meets the right angle at ${q}. The hypotenuse is opposite the right angle.` }],
+      options: [{ text: `${p}${r}`, right: true }, { text: `${p}${q}`, right: false, why: `${p}${q} meets the right angle at ${q}. The hypotenuse is opposite the right angle.`, mis: 'M_HYPOTENUSE_NEXT_TO_RIGHT_ANGLE' }, { text: `${q}${r}`, right: false, why: `${q}${r} meets the right angle at ${q}. The hypotenuse is opposite the right angle.`, mis: 'M_LEG_NAMED_BY_LETTER_ORDER' }],
       hints: ['The hypotenuse is the side opposite the right angle.', `Which side does not touch corner ${q}?`],
       steps: [`The right angle is at ${q}, so the two sides that meet there are ${p}${q} and ${q}${r}.`, `The side left over, opposite ${q}, is the hypotenuse: ${p}${r}.`],
     }) }),
-  fam({ id: 'g7.pyth.which-triangle', skill: 'G7_PYTHAGORAS', outcome: 'G7.PYTH.b', rung: 2, form: 'table',
+  fam({ id: 'g7.pyth.which-triangle', skill: 'G7_PYTHAGORAS', outcome: 'MATH.G7.MEASUR.PYTHAGOREAN_RELATIONSHIP.b', cskill: 'MATH.G7.MEASUR.PYTHAGOREAN_RELATIONSHIP.PYTHAGORAS_TEST', rung: 2, form: 'table',
     draw: () => {
       const t = triple(), good = shuffle([t.a, t.b, t.c]);
       const rows = [good];
@@ -42,11 +42,12 @@ export const FAMILIES = [
     make: ({ rows, ans }) => ({
       question: 'The table gives the three sides of four triangles. Which triangle is right-angled?',
       model: { type: 'table', data: { head: ['Triangle', 'Side 1 (cm)', 'Side 2 (cm)', 'Side 3 (cm)'], rows: rows.map((r, i) => ({ cells: [`Triangle ${'ABCD'[i]}`, ...r.map(String)] })) } },
-      options: rows.map((r, i) => ({ text: `Triangle ${'ABCD'[i]}`, right: isRight(...r), why: isRight(...r) ? undefined : `Square the two shorter sides and add. The answer is not the square of the longest side.` })),
+      // the wrong triangle that nearly fits is the one a child who accepts "close enough" picks; the others miss by more and carry no idea
+      options: (() => { const gap = (r) => { const t = [...r].sort((x, y) => x - y); return Math.abs(t[0] * t[0] + t[1] * t[1] - t[2] * t[2]); }; const wrongs = rows.filter(r => !isRight(...r)); const near = wrongs.reduce((m, r) => (gap(r) < gap(m) ? r : m), wrongs[0]); return rows.map((r, i) => ({ text: `Triangle ${'ABCD'[i]}`, right: isRight(...r), ...(isRight(...r) ? {} : r === near ? { why: 'The two squares are close, but a right angle needs them exactly equal. Square the two shorter sides and add.', mis: 'M_NEARLY_RIGHT_ACCEPTED' } : { why: 'Square the two shorter sides and add. The answer is not the square of the longest side.', mis: 'SLIP' }) })); })(),
       hints: ['In a right-angled triangle, the squares of the two shorter sides add up to the square of the longest side.', 'Test each triangle. Always put the longest side on its own.'],
       steps: rows.map((r, i) => { const s = [...r].sort((a, b) => a - b); return `Triangle ${'ABCD'[i]}: ${s[0]}² + ${s[1]}² = ${s[0] * s[0] + s[1] * s[1]} and ${s[2]}² = ${s[2] * s[2]}${isRight(...r) ? ', equal, so it is right-angled' : ', not equal'}.`; }),
     }) }),
-  fam({ id: 'g7.pyth.spot-missing-side', skill: 'G7_PYTHAGORAS', outcome: 'G7.PYTH.b', rung: 3, form: 'spot',
+  fam({ id: 'g7.pyth.spot-missing-side', skill: 'G7_PYTHAGORAS', outcome: 'MATH.G7.MEASUR.PYTHAGOREAN_RELATIONSHIP.b', cskill: 'MATH.G7.MEASUR.PYTHAGOREAN_RELATIONSHIP.FIND_SHORT_SIDE', rung: 3, form: 'spot',
     draw: () => ({ ...triple(30), mode: pick(['half', 'minus']), p: person() }),
     make: ({ a, b, c, mode, p }) => {
       const sq = c * c - a * a, half = round(sq / 2, 1);
@@ -61,51 +62,52 @@ export const FAMILIES = [
         { text: `The other side is ${c - a} cm.`, ok: c - a === c - a },
       ];
       return { question: `The longest side of a right-angled triangle is ${c} cm and another side is ${a} cm. ${p.name} is finding the third side. Where does ${p.her} working go wrong?`, working,
+        mis: mode === 'half' ? 'M_ROOT_AS_HALF' : 'M_SIDES_SUBTRACTED_NOT_SQUARED_SHORT',
         fix: mode === 'half' ? `A square root is not halving. b² = ${sq}, so b is the number that multiplies by itself to give ${sq}.` : `The sides must be squared first: b² = ${c}² − ${a}², then take the square root. Taking the sides away without squaring is wrong.`,
         steps: [`b² = ${c}² − ${a}² = ${sq}.`, `b = √${sq} = ${b} cm.`] };
     } }),
-  fam({ id: 'g7.pyth.gate-brace', skill: 'G7_PYTHAGORAS', outcome: 'G7.PYTH.c', rung: 2, form: 'word',
+  fam({ id: 'g7.pyth.gate-brace', skill: 'G7_PYTHAGORAS', outcome: 'MATH.G7.MEASUR.PYTHAGOREAN_RELATIONSHIP.c', cskill: 'MATH.G7.MEASUR.PYTHAGOREAN_RELATIONSHIP.FIND_HYPOTENUSE', rung: 2, form: 'word',
     draw: () => { const [a, b, c, m] = pick([[3, 4, 5, 40], [3, 4, 5, 50], [3, 4, 5, 60], [5, 12, 13, 20], [5, 12, 13, 25], [8, 15, 17, 10]]); return { a: a * m, b: b * m, c: c * m, who: person(), flip: pick([0, 1]) }; },
     make: ({ a, b, c, who, flip }) => {
       const w = flip ? a : b, h = flip ? b : a;
       return { question: `${who.name} makes a metal gate ${w} cm wide and ${h} cm high. ${who.She} welds a brace diagonally across the gate, from one corner to the opposite corner. How long is the brace, in cm?`,
         answer: c,
-        wrong: [[w + h, 'The brace goes straight across. It is shorter than going along two sides.'], [w * w + h * h, 'That is the square of the brace. Take the square root.'], [Math.abs(w - h), 'The brace is the hypotenuse. Square the sides and add. Do not take the sides away.']],
+        wrong: [[w + h, 'The brace goes straight across. It is shorter than going along two sides.', 'M_TWO_SIDES_ADDED'], [w * w + h * h, 'That is the square of the brace. Take the square root.', 'M_SQUARE_NOT_ROOTED'], [Math.abs(w - h), 'The brace is the hypotenuse. Square the sides and add. Do not take the sides away.', 'M_SIDES_SUBTRACTED_NOT_SQUARED']],
         hints: ['The width, the height and the brace make a right-angled triangle.', 'The brace is the longest side, the hypotenuse.'],
         steps: [`The brace is the hypotenuse: c² = ${w}² + ${h}² = ${commas(w * w + h * h)}.`, `c = √${commas(w * w + h * h)} = ${c} cm.`] };
     },
     check: ({ a, b }, v) => v * v === a * a + b * b }),
-  fam({ id: 'g7.pyth.shortcut-path', skill: 'G7_PYTHAGORAS', outcome: 'G7.PYTH.c', rung: 3, form: 'word',
+  fam({ id: 'g7.pyth.shortcut-path', skill: 'G7_PYTHAGORAS', outcome: 'MATH.G7.MEASUR.PYTHAGOREAN_RELATIONSHIP.c', cskill: 'MATH.G7.MEASUR.PYTHAGOREAN_RELATIONSHIP.PYTHAGORAS_SAVING', rung: 3, form: 'word',
     draw: () => { const t = triple(45); return { ...t, p: person() }; },
     make: ({ a, b, c, p }) => ({
       question: `${p.name} walks ${a * 10} m east along the road and then ${b * 10} m north along a lane. A footpath goes straight from the start to the end. How many metres shorter is the footpath?`,
       answer: (a + b - c) * 10,
-      wrong: [[c * 10, 'That is the length of the footpath. The question asks how much shorter it is than the road and lane.'], [(a + b) * 10, 'That is the length of the road and lane together.'], [(a + b + c) * 10, 'Subtract the footpath from the two sides. Do not add it.']],
+      wrong: [[c * 10, 'That is the length of the footpath. The question asks how much shorter it is than the road and lane.', 'M_QUANTITY_ASKED_MIXED'], [(a + b) * 10, 'That is the length of the road and lane together.', 'M_ROAD_LENGTH_AS_ANSWER'], [(a + b + c) * 10, 'Subtract the footpath from the two sides. Do not add it.', 'M_PATH_ADDED_TO_ROAD']],
       hints: ['East and north meet at a right angle. The footpath is the hypotenuse.', 'Find the footpath first. Then compare it with the road and lane together.'],
       steps: [`Footpath: √(${a * 10}² + ${b * 10}²) = ${c * 10} m.`, `Road and lane: ${a * 10} + ${b * 10} = ${(a + b) * 10} m.`, `Shorter by ${(a + b) * 10} − ${c * 10} = ${(a + b - c) * 10} m.`],
     }),
     check: ({ a, b, c }, v) => v + c * 10 === (a + b) * 10 }),
-  fam({ id: 'g7.pyth.pole-wire', skill: 'G7_PYTHAGORAS', outcome: 'G7.PYTH.c', rung: 3, form: 'steps',
+  fam({ id: 'g7.pyth.pole-wire', skill: 'G7_PYTHAGORAS', outcome: 'MATH.G7.MEASUR.PYTHAGOREAN_RELATIONSHIP.c', cskill: 'MATH.G7.MEASUR.PYTHAGOREAN_RELATIONSHIP.FIND_HYPOTENUSE', rung: 3, form: 'steps',
     draw: () => ({ ...triple(26), per: pick([30, 40, 50, 60]) }),
     make: ({ a, b, c, per }) => ({
       question: `A pole is ${b} m tall. A wire runs from its top to a peg in the ground ${a} m from the foot of the pole. The wire costs sh ${per} a metre.`,
       parts: [
-        { prompt: `Work out ${a}² + ${b}².`, answer: a * a + b * b, hint: 'Square each number, then add.', wrong: [[a + b, 'Square each number first.'], [b * b - a * a, 'Add the squares. Taking away is for finding a shorter side.']] },
-        { prompt: 'How long is the wire, in metres?', answer: c, unit: 'm', hint: 'The wire is the hypotenuse. Take the square root of the last answer.', wrong: [[a + b, 'The wire is a straight line from the top to the peg, so it is shorter than the pole and ground together.']] },
-        { prompt: 'How much does the wire cost, in shillings?', answer: c * per, unit: 'sh', hint: 'Length of wire times the price of one metre.', wrong: [[(a + b) * per, 'Use the length of the wire, not the pole and ground added.']] },
+        { prompt: `Work out ${a}² + ${b}².`, answer: a * a + b * b, hint: 'Square each number, then add.', wrong: [[a + b, 'Square each number first.', 'M_SIDES_ADDED_NOT_SQUARED'], [b * b - a * a, 'Add the squares. Taking away is for finding a shorter side.', 'M_SQUARES_SUBTRACTED_FOR_LONGEST']] },
+        { prompt: 'How long is the wire, in metres?', answer: c, unit: 'm', hint: 'The wire is the hypotenuse. Take the square root of the last answer.', wrong: [[a + b, 'The wire is a straight line from the top to the peg, so it is shorter than the pole and ground together.', 'M_TWO_SIDES_ADDED']] },
+        { prompt: 'How much does the wire cost, in shillings?', answer: c * per, unit: 'sh', hint: 'Length of wire times the price of one metre.', wrong: [[(a + b) * per, 'Use the length of the wire, not the pole and ground added.', 'M_TWO_SIDES_ADDED']] },
       ],
       steps: [`${a}² + ${b}² = ${a * a} + ${b * b} = ${a * a + b * b}.`, `Wire = √${a * a + b * b} = ${c} m.`, `Cost = ${c} × ${per} = ${sh(c * per)}.`],
     }),
     check: ({ a, b, c, per }, v) => v[0] === a * a + b * b && v[1] * v[1] === v[0] && v[2] / per === v[1] }),
-  fam({ id: 'g7.pyth.why-345', skill: 'G7_PYTHAGORAS', outcome: 'G7.PYTH.c', rung: 2, form: 'why',
+  fam({ id: 'g7.pyth.why-345', skill: 'G7_PYTHAGORAS', outcome: 'MATH.G7.MEASUR.PYTHAGOREAN_RELATIONSHIP.b', cskill: 'MATH.G7.MEASUR.PYTHAGOREAN_RELATIONSHIP.PYTHAGORAS_TEST', rung: 2, form: 'why',
     draw: () => { const [a, b, c] = pick([[3, 4, 5], [5, 12, 13], [6, 8, 10]]); return { a, b, c, p: person() }; },
     make: ({ a, b, c, p }) => ({
       question: `A builder marks ${a} m along one wall from a corner and ${b} m along the other wall. ${p.name} measures ${c} m between the two marks. Why does this show that the corner is a right angle?`,
       options: [
         { text: `${a}² + ${b}² = ${c}², so the sides fit the Pythagorean relationship`, right: true },
-        { text: `${a} + ${b} is bigger than ${c}, so the three lengths make a triangle`, right: false, why: 'Any three lengths that make a triangle have that property. It does not make the angle 90°.' },
-        { text: `${c} is the longest of the three lengths`, right: false, why: 'The longest side is longest in every triangle. That does not show a right angle.' },
-        { text: `${a} + ${b} + ${c} gives a whole number of metres`, right: false, why: 'The sum of the sides tells nothing about an angle.' },
+        { text: `${a} + ${b} is bigger than ${c}, so the three lengths make a triangle`, right: false, why: 'Any three lengths that make a triangle have that property. It does not make the angle 90°.', mis: 'M_TRIANGLE_INEQUALITY_AS_PROOF' },
+        { text: `${c} is the longest of the three lengths`, right: false, why: 'The longest side is longest in every triangle. That does not show a right angle.', mis: 'M_LONGEST_SIDE_AS_PROOF' },
+        { text: `${a} + ${b} + ${c} gives a whole number of metres`, right: false, why: 'The sum of the sides tells nothing about an angle.', mis: 'M_SIDES_ADDED_NOT_SQUARED' },
       ],
       hints: ['Square the two shorter lengths and add them.', 'Compare with the square of the longest length.'],
       steps: [`${a}² + ${b}² = ${a * a} + ${b * b} = ${a * a + b * b}.`, `${c}² = ${c * c}. They are equal, so the corner is a right angle.`],

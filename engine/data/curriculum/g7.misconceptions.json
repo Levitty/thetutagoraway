@@ -3092,5 +3092,215 @@
   "help": "The loose ones are still there.",
   "source": "to be confirmed by a teacher (no source yet)",
   "status": "draft"
+ },
+ "MATH.G7.MEASUR.PYTHAGOREAN_RELATIONSHIP.RIGHT_TRIANGLE_SIDES.M_HYPOTENUSE_NEXT_TO_RIGHT_ANGLE": {
+  "skill": "MATH.G7.MEASUR.PYTHAGOREAN_RELATIONSHIP.RIGHT_TRIANGLE_SIDES",
+  "error": "Names a side that meets the right angle as the hypotenuse.",
+  "example": {
+   "question": "Angle at W is 90 degrees in triangle PWC. Which side is the hypotenuse?",
+   "wrong_answer": "PW",
+   "correct_answer": "PC"
+  },
+  "cause": "Thinks the hypotenuse is the side that makes the right angle.",
+  "reveals": "The answer PW as a wrong option, with a reason that names the idea.",
+  "help": "The hypotenuse is opposite the right angle, not beside it.",
+  "source": "to be confirmed by a teacher (no source yet)",
+  "status": "draft"
+ },
+ "MATH.G7.MEASUR.PYTHAGOREAN_RELATIONSHIP.RIGHT_TRIANGLE_SIDES.M_LEG_NAMED_BY_LETTER_ORDER": {
+  "skill": "MATH.G7.MEASUR.PYTHAGOREAN_RELATIONSHIP.RIGHT_TRIANGLE_SIDES",
+  "error": "Picks the side from the order of the letters, such as the last two letters.",
+  "example": {
+   "question": "Angle at W is 90 degrees in triangle PWC. Which side is the hypotenuse?",
+   "wrong_answer": "WC",
+   "correct_answer": "PC"
+  },
+  "cause": "Reads the name PWC and picks the pair that comes last.",
+  "reveals": "The answer WC as a wrong option, with a reason that names the idea.",
+  "help": "Find the right angle first and name the side opposite it.",
+  "source": "to be confirmed by a teacher (no source yet)",
+  "status": "draft"
+ },
+ "MATH.G7.MEASUR.PYTHAGOREAN_RELATIONSHIP.PYTHAGORAS_TEST.M_NEARLY_RIGHT_ACCEPTED": {
+  "skill": "MATH.G7.MEASUR.PYTHAGOREAN_RELATIONSHIP.PYTHAGORAS_TEST",
+  "error": "Accepts a triangle as right-angled when the squares nearly match.",
+  "example": {
+   "question": "Sides 5, 12, 14: is it right-angled?",
+   "wrong_answer": "Yes, 5 squared plus 12 squared is close to 14 squared",
+   "correct_answer": "No: 169 is not 196"
+  },
+  "cause": "Treats nearly equal as equal.",
+  "reveals": "The answer Yes, 5 squared plus 12 squared is close to 14 squared as a wrong option, with a reason that names the idea.",
+  "help": "It must be exactly equal for a right angle.",
+  "source": "to be confirmed by a teacher (no source yet)",
+  "status": "draft"
+ },
+ "MATH.G7.MEASUR.PYTHAGOREAN_RELATIONSHIP.PYTHAGORAS_TEST.M_SIDES_ADDED_NOT_SQUARED": {
+  "skill": "MATH.G7.MEASUR.PYTHAGOREAN_RELATIONSHIP.PYTHAGORAS_TEST",
+  "error": "Adds the sides instead of the squares of the sides.",
+  "example": {
+   "question": "Sides 5, 12, 13: is it right-angled?",
+   "wrong_answer": "No: 5 + 12 = 17, not 13",
+   "correct_answer": "Yes: 25 + 144 = 169"
+  },
+  "cause": "Forgets to square the sides.",
+  "reveals": "The answer No: 5 + 12 = 17, not 13 as a wrong option, with a reason that names the idea.",
+  "help": "The test uses the squares of the sides.",
+  "source": "to be confirmed by a teacher (no source yet)",
+  "status": "draft"
+ },
+ "MATH.G7.MEASUR.PYTHAGOREAN_RELATIONSHIP.PYTHAGORAS_TEST.M_TRIANGLE_INEQUALITY_AS_PROOF": {
+  "skill": "MATH.G7.MEASUR.PYTHAGOREAN_RELATIONSHIP.PYTHAGORAS_TEST",
+  "error": "Believes that two sides adding to more than the third shows a right angle.",
+  "example": {
+   "question": "Why does 5, 12, 13 show a right angle?",
+   "wrong_answer": "5 + 12 is bigger than 13",
+   "correct_answer": "5 squared + 12 squared = 13 squared"
+  },
+  "cause": "Mixes the rule for any triangle with the rule for right angles.",
+  "reveals": "The answer 5 + 12 is bigger than 13 as a wrong option, with a reason that names the idea.",
+  "help": "Every triangle has that property, so it cannot prove a right angle.",
+  "source": "to be confirmed by a teacher (no source yet)",
+  "status": "draft"
+ },
+ "MATH.G7.MEASUR.PYTHAGOREAN_RELATIONSHIP.PYTHAGORAS_TEST.M_LONGEST_SIDE_AS_PROOF": {
+  "skill": "MATH.G7.MEASUR.PYTHAGOREAN_RELATIONSHIP.PYTHAGORAS_TEST",
+  "error": "Believes that having a longest side shows a right angle.",
+  "example": {
+   "question": "Why does 5, 12, 13 show a right angle?",
+   "wrong_answer": "13 is the longest",
+   "correct_answer": "5 squared + 12 squared = 13 squared"
+  },
+  "cause": "Thinks the hypotenuse is the longest side so any longest side will do.",
+  "reveals": "The answer 13 is the longest as a wrong option, with a reason that names the idea.",
+  "help": "Every triangle has a longest side.",
+  "source": "to be confirmed by a teacher (no source yet)",
+  "status": "draft"
+ },
+ "MATH.G7.MEASUR.PYTHAGOREAN_RELATIONSHIP.FIND_HYPOTENUSE.M_SQUARE_NOT_ROOTED": {
+  "skill": "MATH.G7.MEASUR.PYTHAGOREAN_RELATIONSHIP.FIND_HYPOTENUSE",
+  "error": "Stops at the sum of the squares and does not take the root.",
+  "example": {
+   "question": "A gate 160 cm by 120 cm: length of the diagonal brace",
+   "wrong_answer": "40,000 cm",
+   "correct_answer": "200 cm"
+  },
+  "cause": "Thinks the sum of the squares is the answer.",
+  "reveals": "The answer 40,000 cm as a wrong option, with a reason that names the idea.",
+  "help": "The sum of squares is the square of the brace. Take the square root.",
+  "source": "to be confirmed by a teacher (no source yet)",
+  "status": "draft"
+ },
+ "MATH.G7.MEASUR.PYTHAGOREAN_RELATIONSHIP.FIND_HYPOTENUSE.M_TWO_SIDES_ADDED": {
+  "skill": "MATH.G7.MEASUR.PYTHAGOREAN_RELATIONSHIP.FIND_HYPOTENUSE",
+  "error": "Adds the two shorter sides for the diagonal.",
+  "example": {
+   "question": "A gate 160 cm by 120 cm: length of the brace",
+   "wrong_answer": "280 cm",
+   "correct_answer": "200 cm"
+  },
+  "cause": "Adds because the story gives two lengths.",
+  "reveals": "The answer 280 cm as a wrong option, with a reason that names the idea.",
+  "help": "A straight line across is shorter than going along two sides.",
+  "source": "to be confirmed by a teacher (no source yet)",
+  "status": "draft"
+ },
+ "MATH.G7.MEASUR.PYTHAGOREAN_RELATIONSHIP.FIND_HYPOTENUSE.M_SQUARES_SUBTRACTED_FOR_LONGEST": {
+  "skill": "MATH.G7.MEASUR.PYTHAGOREAN_RELATIONSHIP.FIND_HYPOTENUSE",
+  "error": "Subtracts the squares when looking for the longest side.",
+  "example": {
+   "question": "Pole 3 m, peg 4 m away: the wire",
+   "wrong_answer": "7 (4 squared less 3 squared)",
+   "correct_answer": "5"
+  },
+  "cause": "Uses the rule for a shorter side.",
+  "reveals": "The answer 7 (4 squared less 3 squared) as a wrong option, with a reason that names the idea.",
+  "help": "For the longest side add the squares.",
+  "source": "to be confirmed by a teacher (no source yet)",
+  "status": "draft"
+ },
+ "MATH.G7.MEASUR.PYTHAGOREAN_RELATIONSHIP.FIND_HYPOTENUSE.M_SIDES_SUBTRACTED_NOT_SQUARED": {
+  "skill": "MATH.G7.MEASUR.PYTHAGOREAN_RELATIONSHIP.FIND_HYPOTENUSE",
+  "error": "Subtracts the sides without squaring.",
+  "example": {
+   "question": "A gate 160 cm by 120 cm: length of the brace",
+   "wrong_answer": "40 cm",
+   "correct_answer": "200 cm"
+  },
+  "cause": "Subtracts because the sides are different.",
+  "reveals": "The answer 40 cm as a wrong option, with a reason that names the idea.",
+  "help": "Square the sides and add them for the brace.",
+  "source": "to be confirmed by a teacher (no source yet)",
+  "status": "draft"
+ },
+ "MATH.G7.MEASUR.PYTHAGOREAN_RELATIONSHIP.FIND_SHORT_SIDE.M_ROOT_AS_HALF": {
+  "skill": "MATH.G7.MEASUR.PYTHAGOREAN_RELATIONSHIP.FIND_SHORT_SIDE",
+  "error": "Halves the number instead of taking its square root.",
+  "example": {
+   "question": "Hypotenuse 10 cm, one side 6 cm: third side",
+   "wrong_answer": "32 (64 halved)",
+   "correct_answer": "8"
+  },
+  "cause": "Thinks root is halving.",
+  "reveals": "The answer 32 (64 halved) as a wrong option, with a reason that names the idea.",
+  "help": "The side times itself must be 64: 8 x 8.",
+  "source": "to be confirmed by a teacher (no source yet)",
+  "status": "draft"
+ },
+ "MATH.G7.MEASUR.PYTHAGOREAN_RELATIONSHIP.FIND_SHORT_SIDE.M_SIDES_SUBTRACTED_NOT_SQUARED_SHORT": {
+  "skill": "MATH.G7.MEASUR.PYTHAGOREAN_RELATIONSHIP.FIND_SHORT_SIDE",
+  "error": "Subtracts the sides without squaring them.",
+  "example": {
+   "question": "Hypotenuse 10 cm, one side 6 cm: third side",
+   "wrong_answer": "4",
+   "correct_answer": "8"
+  },
+  "cause": "Takes one side from the other.",
+  "reveals": "The answer 4 as a wrong option, with a reason that names the idea.",
+  "help": "Square both first: 100 - 36.",
+  "source": "to be confirmed by a teacher (no source yet)",
+  "status": "draft"
+ },
+ "MATH.G7.MEASUR.PYTHAGOREAN_RELATIONSHIP.PYTHAGORAS_SAVING.M_QUANTITY_ASKED_MIXED": {
+  "skill": "MATH.G7.MEASUR.PYTHAGOREAN_RELATIONSHIP.PYTHAGORAS_SAVING",
+  "error": "Gives the length of the straight path when the saving is asked.",
+  "example": {
+   "question": "100 m east then 240 m north: how much shorter is the straight path?",
+   "wrong_answer": "260 m",
+   "correct_answer": "80 m"
+  },
+  "cause": "Stops after finding the hypotenuse.",
+  "reveals": "The answer 260 m as a wrong option, with a reason that names the idea.",
+  "help": "The saving is the road length minus the path length.",
+  "source": "to be confirmed by a teacher (no source yet)",
+  "status": "draft"
+ },
+ "MATH.G7.MEASUR.PYTHAGOREAN_RELATIONSHIP.PYTHAGORAS_SAVING.M_ROAD_LENGTH_AS_ANSWER": {
+  "skill": "MATH.G7.MEASUR.PYTHAGOREAN_RELATIONSHIP.PYTHAGORAS_SAVING",
+  "error": "Gives the length along the road and lane as the saving.",
+  "example": {
+   "question": "100 m east then 240 m north: how much shorter?",
+   "wrong_answer": "340 m",
+   "correct_answer": "80 m"
+  },
+  "cause": "Adds the two sides and stops.",
+  "reveals": "The answer 340 m as a wrong option, with a reason that names the idea.",
+  "help": "Subtract the straight path from this.",
+  "source": "to be confirmed by a teacher (no source yet)",
+  "status": "draft"
+ },
+ "MATH.G7.MEASUR.PYTHAGOREAN_RELATIONSHIP.PYTHAGORAS_SAVING.M_PATH_ADDED_TO_ROAD": {
+  "skill": "MATH.G7.MEASUR.PYTHAGOREAN_RELATIONSHIP.PYTHAGORAS_SAVING",
+  "error": "Adds the straight path to the road when comparing.",
+  "example": {
+   "question": "100 m east then 240 m north: how much shorter?",
+   "wrong_answer": "600 m",
+   "correct_answer": "80 m"
+  },
+  "cause": "Adds instead of subtracting for a difference.",
+  "reveals": "The answer 600 m as a wrong option, with a reason that names the idea.",
+  "help": "How much shorter means subtract.",
+  "source": "to be confirmed by a teacher (no source yet)",
+  "status": "draft"
  }
 }
