@@ -18,7 +18,23 @@ export const publicItem = (it) => it && ({ n: it.n, kind: it.kind, question: it.
   ...(it.kind === 'choice' ? { options: it.options.map(o => ({ key: o.key, text: o.text })) } : {}) });
 
 // ---------------------------------------------------------------- marking
-/** A child's response to one item: { correct, chosen, mis }. A choice is its letter or its text. */
+// The typed wrong answer a response matches (one the family wrote a misconception or a slip for).
+const wrongFor = (it, raw) => {
+  const check = it.marker === 'text' ? checkTextAnswer : checkAnswerMatch;
+  return (it.wrong || []).find(x => (x.mis || x.slip) && (norm(x.value) === norm(raw) || check(raw, { answer: x.value, accepts: [x.value] })));
+};
+
+/** The option's own reason for a wrong answer that was marked, as the child is shown it. */
+export const whyOf = (it, mark) => {
+  if (!it || mark?.correct) return '';
+  if (it.kind === 'choice') return it.options.find(o => o.key === mark.chosen)?.why || '';
+  return wrongFor(it, mark.chosen)?.why || '';
+};
+
+/**
+ * A child's response to one item: { correct, chosen, mis, why, slip }. A choice is its letter or its text.
+ * A slip is counted wrong but carries no misconception (mis stays null), so no evidence of a misunderstanding is recorded.
+ */
 export function markItem(it, response) {
   const raw = String(response ?? '').trim();
   if (raw === '') return { correct: false, chosen: '', mis: null, blank: true };
@@ -27,14 +43,14 @@ export function markItem(it, response) {
     const same = it.marker === 'text' ? (a, b) => String(a).trim() === String(b).trim() : (a, b) => norm(a) === norm(b);
     const o = it.options.find(x => x.key === raw.toUpperCase()) || it.options.find(x => same(x.text, raw));
     if (!o) return { correct: false, chosen: raw.slice(0, 40), mis: null };
-    return { correct: !!o.right, chosen: o.key, mis: o.right ? null : (o.mis || null) };
+    return { correct: !!o.right, chosen: o.key, mis: o.right ? null : (o.mis || null), ...(!o.right && o.slip ? { slip: true } : {}) };
   }
   // A word answer (marker 'text') is marked by answerCheckText.js; Maths by answerCheck.js.
   const check = it.marker === 'text' ? checkTextAnswer : checkAnswerMatch;
   const correct = check(raw, { answer: it.answer, accepts: it.accepts });
   if (correct) return { correct: true, chosen: raw.slice(0, 60), mis: null };
-  const w = (it.wrong || []).find(x => x.mis && (norm(x.value) === norm(raw) || check(raw, { answer: x.value, accepts: [x.value] })));
-  return { correct: false, chosen: raw.slice(0, 60), mis: w?.mis || null };
+  const w = wrongFor(it, raw);
+  return { correct: false, chosen: raw.slice(0, 60), mis: w?.mis || null, ...(w?.slip ? { slip: true } : {}) };
 }
 
 // ---------------------------------------------------------------- the sitting
@@ -56,7 +72,7 @@ export function step(s, ev, now) {
       if (Number(ev.n) !== next) return { ok: false, error: 'One question at a time, in order.' };
       const it = s.items[next - 1];
       const m = markItem(it, ev.response);
-      const a = [...answers, { n: next, chosen: m.chosen, correct: m.correct, mis: m.mis, at }];
+      const a = [...answers, { n: next, chosen: m.chosen, correct: m.correct, mis: m.mis, ...(m.slip ? { slip: true } : {}), at }];
       const done = a.length >= total;
       return { ok: true, mark: m, s: { ...s, answers: a, status: done ? 'submitted' : 'started', ...(done ? { finished_at: at } : {}) } };
     }
@@ -89,7 +105,7 @@ export function resultsFor(sittings) {
     out[s.learner_ref] = {
       status: s.status, answered: answers.length, out_of: (s.items || []).length, score: answers.filter(a => a.correct).length,
       started_at: s.started_at || null, finished_at: s.finished_at || null, locked_at: s.locked_at || null, lock_question: s.lock_question || null,
-      items: answers.map(a => ({ n: a.n, cskill: s.items[a.n - 1]?.cskill || null, correct: !!a.correct, chosen: a.chosen ?? '', mis: a.mis || null })),
+      items: answers.map(a => ({ n: a.n, cskill: s.items[a.n - 1]?.cskill || null, correct: !!a.correct, chosen: a.chosen ?? '', mis: a.mis || null, ...(a.slip ? { slip: true } : {}) })),
     };
   }
   return out;

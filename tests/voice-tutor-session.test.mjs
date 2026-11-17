@@ -44,7 +44,8 @@ test('caps are settings: US$1.50 a session and US$3 a day by default', () => {
   assert.deepEqual(s.allowlist, ['a@x.com', 'b@y.com']);
   assert.equal(s.sessionCapUsd, 0.5);
   assert.equal(s.dayCapUsd, 3);
-  assert.equal(s.effort, 'low');
+  assert.equal(s.effort, 'medium', 'medium by default (12 Nov 2026); VOICE_TUTOR_EFFORT=low or high overrides it');
+  assert.equal(settingsFrom((k) => ({ VOICE_TUTOR_EFFORT: 'low' }[k])).effort, 'low');
   assert.equal(settingsFrom(() => undefined).enabled, false);
 });
 
@@ -134,4 +135,18 @@ test('the scripted tutor, interrupted, goes back over the same part instead of m
   const next = await tutor.turn({ message: '3/4', answer: { seal: 'mock:w1', response: '3/4' } });
   assert.equal(next.marked.correct, true);
   assert.ok(next.steps.some((s) => s.cmd === 'set_phase' && s.phase === 'teach'));
+});
+
+test('the conversation engine in the session: what the child is doing, the floor on barge-in, each turn\'s guards for the tester', () => {
+  let s = newSession({ id: 's1' });
+  s = sessionReducer(s, { type: 'request' });
+  s = sessionReducer(s, { type: 'turn', steps: [{ cmd: 'say', text: 'Hi.' }] });
+  assert.equal(s.status, 'speaking');
+  // A real voice over HOREB: it stops, and it is the child's turn.
+  assert.equal(sessionReducer(s, { type: 'floor' }).status, 'listening');
+  assert.equal(sessionReducer({ ...s, status: 'thinking' }, { type: 'floor' }).status, 'thinking');
+  s = sessionReducer(s, { type: 'turn_more', steps: [], guard: ['answer-leak'], tester: { rule: 'press', moves: ['Press for reasoning'] }, probe: 'answer_nudge' });
+  assert.deepEqual(s.log, [{ turn: 1, guard: ['answer-leak'], tester: { rule: 'press', moves: ['Press for reasoning'] }, probe: 'answer_nudge' }]);
+  s = sessionReducer(s, { type: 'handed_over', doing: 'task' });
+  assert.deepEqual([s.status, s.doing], ['listening', 'task']);
 });

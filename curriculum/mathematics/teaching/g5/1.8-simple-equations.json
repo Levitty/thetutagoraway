@@ -71,6 +71,15 @@
           ],
           "ask": "Where is the equals sign in x + 7?",
           "repair": "An equation says two things balance, so it needs '='."
+        },
+        {
+          "code": "MATH.G5.NUMBER.SIMPLE_EQUATIONS.EQ_MEANING.M_NUMBER_IS_EQUATION",
+          "listen_for": [
+            "50 is an equation",
+            "just the answer"
+          ],
+          "ask": "What does 50 say is equal to what?",
+          "repair": "A number on its own is a value, not an equation. An equation says one side has the same value as the other side."
         }
       ],
       "checks": [

@@ -3,8 +3,8 @@
 // model and no cost, so the board and its timing can be tried for free.
 //
 // It speaks the same command list as the model and goes through the same
-// validator (commands.js) and the same marking (markItem, the homework
-// marker), so what is tried here is what the real tutor drives. It follows the
+// validator (commands.js) and the same marking (markSpoken, the spoken-answer
+// reading over the homework marker), so what is tried here is what the real tutor drives. It follows the
 // approved session shape: it says it is an AI, warm-up on the prerequisite,
 // teach, guided practice, independent problem, wrap-up. It uses the teaching
 // moves the board supports (phase 1 of the rendering engine): it counts parts
@@ -22,7 +22,7 @@
 // the picture as its evidence, as the real tutor does.
 // ============================================================================
 import { validateTurn } from './commands.js';
-import { markItem } from '../school/homeworkSitting.js';
+import { markSpoken } from './spokenAnswer.js';
 import { EXAMPLES } from './examples.js';
 
 const EQ = 'MATH.G5.NUMBER.FRACTIONS.EQUIVALENT_FRACTIONS';
@@ -163,6 +163,15 @@ export const STREAM_CHARS_PER_S = 300;
 export const FIRST_STEP_MS = 60;
 const IN_PAGE = typeof window !== 'undefined';   // node tests run it without the pauses
 
+// What the scripted tutor says when the child is silent (the live tutor writes its own, for the moment).
+const PROBE_SAY = {
+  answer_nudge: 'Take your time. Have a look at the board.',
+  answer_smaller: 'Let us make it smaller. Look at the first part only. What do you see?',
+  task_checkin: 'Tell me when you are done, or ask me for a hint.',
+  talk_nudge: 'What do you think? Any idea is fine.',
+  talk_again: 'Is it more or less than a half? Just tell me.',
+};
+
 /**
  * A scripted tutor with the same shape as the remote one: turn(request, onEvent) ->
  * { steps, dropped, notes, marked, target, prerequisite, cost_usd, spent }.
@@ -195,15 +204,22 @@ export function createMockTutor() {
     const id = String(answer.seal).replace(/^mock:/, '');
     const it = hidden[id];
     if (!it) return null;
-    const r = markItem(it, answer.response);
+    const r = markSpoken(it, answer.response);
+    if (!r.attempt) return null; // a question back or "umm": not an answer, so not marked (as the server does)
     const m = { ask: id, skill: EQ, correct: r.correct, misconception: r.mis && r.mis !== 'other' ? r.mis : null, answer: String(answer.response ?? ''), ...(pic ? { snapshot: pic.id, seen: pic.seen } : {}) };
     evidence.push(m);
     return m;
   };
-  const compose = async ({ message = '', answer = null, board = [], heard = null, snapshot = null, snapshots_taken: taken = 0, ink_cells: cells = [], figures = [] } = {}) => {
+  const compose = async ({ message = '', answer = null, board = [], heard = null, snapshot = null, snapshots_taken: taken = 0, ink_cells: cells = [], figures = [], probe = null } = {}) => {
       inkAt = cells;
       snapshots = Math.max(snapshots, Number(taken) || 0);
       const meta = { target: EQ, prerequisite: null, cost_usd: 0, spent: { session: 0, day: 0 } };
+      // The child has been silent (silence.js): a short scripted nudge; the lesson does not move on.
+      if (probe && !message && !snapshot) {
+        const line = PROBE_SAY[probe.kind] || PROBE_SAY.answer_nudge;
+        const v = validateTurn({ steps: [say(line), { ...pause(), doing: probe.kind === 'task_checkin' ? 'task' : probe.kind.startsWith('talk') ? 'talk' : 'answer' }] }, { board, snapshots });
+        return { steps: v.steps, dropped: v.dropped, notes: v.notes, marked: null, ...meta, guard: ['scripted', 'probe'] };
+      }
       // Spoken over (typed over, in milestone 1): go back over the same beat; the lesson does not move on.
       if (heard != null && last) return { ...respond(last.key, last.arg, board, true), marked: null, ...meta, guard: ['scripted', 'interrupted'] };
       // A picture of the child's work: what the stub "sees".

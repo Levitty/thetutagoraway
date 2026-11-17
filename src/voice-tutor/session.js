@@ -21,7 +21,8 @@ import { DEFAULT_TUTOR_VOICE, CHILD_SPEECH, classifyChild, nextPace, newPace } f
 // (VOICE_TUTOR_SESSION_CAP_USD / VOICE_TUTOR_DAY_CAP_USD); these mirror them.
 export const DEFAULT_SETTINGS = Object.freeze({
   model: 'claude-sonnet-5-5',
-  effort: 'low',
+  // Medium from 12 Nov 2026 (the conversation engine: the model judges reasoning now). VOICE_TUTOR_EFFORT overrides it.
+  effort: 'medium',
   sessionCapUsd: 1.5,
   dayCapUsd: 3,
   sessionMinutes: 20,
@@ -34,6 +35,10 @@ export const DEFAULT_SETTINGS = Object.freeze({
   ttsSpeed: CHILD_SPEECH.baseSpeed,
   ttsEmotion: CHILD_SPEECH.emotion,
   ttsSampleRate: 24000,
+  // ElevenLabs, the second voice to try (owner, 16 Nov 2026): Flash v2.5 over the multi-context WebSocket,
+  // asked for with ?tts=elevenlabs. The voice id is a setting (VOICE_TUTOR_EL_VOICE); the default is a stock voice.
+  elModel: 'eleven_flash_v2_5',
+  elVoice: '21m00Tcm4TlvDq8ikWAM',
 });
 
 const num = (v, d) => (Number.isFinite(Number(v)) && String(v ?? '').trim() !== '' ? Number(v) : d);
@@ -53,6 +58,12 @@ export const settingsFrom = (get = () => undefined) => ({
   ttsSpeed: Math.max(0.6, Math.min(1.5, num(get('VOICE_TUTOR_TTS_SPEED'), DEFAULT_SETTINGS.ttsSpeed))),
   ttsEmotion: ['neutral', 'calm', 'content', 'sad', 'angry', 'none'].includes(get('VOICE_TUTOR_TTS_EMOTION')) ? get('VOICE_TUTOR_TTS_EMOTION') : DEFAULT_SETTINGS.ttsEmotion,
   ttsSampleRate: [16000, 22050, 24000, 44100].includes(num(get('VOICE_TUTOR_TTS_SAMPLE_RATE'), 0)) ? num(get('VOICE_TUTOR_TTS_SAMPLE_RATE'), 0) : DEFAULT_SETTINGS.ttsSampleRate,
+  elModel: get('VOICE_TUTOR_EL_MODEL') || DEFAULT_SETTINGS.elModel,
+  elVoice: get('VOICE_TUTOR_EL_VOICE') || DEFAULT_SETTINGS.elVoice,
+  // The turn gate (gate.js, PLAN_TO_FOUR.md step 3): on unless VOICE_TUTOR_GATE=0.
+  gate: get('VOICE_TUTOR_GATE') !== '0',
+  // Matched good-turn examples in the turn's context (examples lookup, step 5): an A/B switch, off unless set to 1.
+  matchedExamples: get('VOICE_TUTOR_MATCHED_EXAMPLES') === '1',
 });
 
 /**
@@ -77,6 +88,9 @@ export const newSession = ({ id, mode = 'mock', child = null, target = null, pre
   snapshots: 0, looking: false,
   // How HOREB follows this child's pace (childVoice.js): level, quiet turns, repeat, reason.
   pace: newPace(), unclear: 0, thinkMs: null,
+  // What the child is doing since the last hand-over (answer | task | talk), and each turn as the tester sees it:
+  // its guards (why a turn was stopped), the answer's class, the allowed moves and the reason.
+  doing: null, log: [],
 });
 
 export const QUICK_MS = 8000;
@@ -126,6 +140,7 @@ export function sessionReducer(s, ev) {
         diagnoses: [...s.diagnoses, ...diagnoses],
         dropped: [...s.dropped, ...(ev.dropped || []).map((d) => ({ ...d, turn: s.turns }))].slice(-100),
         cost: ev.spent ? { sessionUsd: ev.spent.session ?? s.cost.sessionUsd, dayUsd: ev.spent.day ?? s.cost.dayUsd } : s.cost,
+        log: [...s.log, { turn: s.turns, guard: (ev.guard || []).map(String), tester: ev.tester || null, probe: ev.probe || null }].slice(-40),
       };
     }
     case 'lesson':
@@ -136,7 +151,10 @@ export function sessionReducer(s, ev) {
     case 'interrupted':
       return { ...s, interruptions: s.interruptions + 1, pace: nextPace(s.pace, 'interrupt') };
     case 'handed_over':
-      return s.status === 'ended' ? s : { ...s, status: 'listening' };
+      return s.status === 'ended' ? s : { ...s, status: 'listening', doing: ev.doing || s.doing };
+    case 'floor':
+      // The child spoke over HOREB: it has stopped, and it is the child's turn to talk.
+      return s.status === 'speaking' ? { ...s, status: 'listening' } : s;
     case 'marked':
       // A right answer within 8 s of the hand-over is a quick one (a little brisker next); a wrong one steadies a brisk pace.
       return { ...s, evidence: [...s.evidence, evidenceOf(ev)], pace: nextPace(s.pace, ev.correct ? (s.thinkMs != null && s.thinkMs <= QUICK_MS ? 'quick' : 'none') : 'wrong') };

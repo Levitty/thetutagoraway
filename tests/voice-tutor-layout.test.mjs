@@ -1,28 +1,26 @@
 // ============================================================================
-// THE LESSON SCREEN ("Across the table"): which arrangement fits the window,
-// how tall the board is, and what each bubble holds. No log on the child's screen.
+// THE LESSON ROOM: which arrangement fits the window, the square board,
+// and what each caption holds. No log on the child's screen.
 // ============================================================================
 import { test } from 'node:test';
 import assert from 'node:assert/strict';
-import { lessonShape, tutorBubble, childBubble, partLabel } from '../src/voice-tutor/layout.js';
+import { roomShape, tutorBubble, childBubble, partLabel } from '../src/voice-tutor/layout.js';
 import { MAX_HEIGHT, validateSnapshot } from '../src/voice-tutor/snapshot.js';
 
-test('a laptop sits at the table, an upright phone stacks, a phone on its side keeps the wide board', () => {
-  assert.equal(lessonShape(1280, 800).kind, 'table');
-  assert.equal(lessonShape(1440, 900).kind, 'table');
-  assert.equal(lessonShape(390, 844).kind, 'stack');
-  assert.equal(lessonShape(360, 640).kind, 'stack');
-  assert.deepEqual(lessonShape(844, 390), { kind: 'side', boardH: 640 });
+test('a laptop has the side column, an upright phone rearranges, a phone on its side keeps the column in miniature', () => {
+  assert.equal(roomShape(1280, 800).wide, true);
+  assert.equal(roomShape(1440, 900).side, 340);
+  assert.equal(roomShape(390, 844).wide, false);
+  assert.equal(roomShape(360, 640).side, 0);
+  assert.deepEqual(roomShape(844, 390), { wide: true, side: 260, boardH: 1000 });
 });
 
-test('the board follows the sheet but stays within what a picture of it may be', () => {
+test('the board is the same square page on every screen, within what a picture of it may be', () => {
   for (const [w, h] of [[1280, 800], [1440, 900], [1024, 600], [390, 844], [360, 640], [320, 568], [768, 1024], [3000, 600]]) {
-    const { boardH } = lessonShape(w, h);
-    assert.ok(boardH >= 600 && boardH <= MAX_HEIGHT, `${w}x${h}: ${boardH}`);
-    assert.ok(Number.isInteger(boardH));
+    const { boardH } = roomShape(w, h);
+    assert.equal(boardH, 1000, `${w}x${h}`);
+    assert.ok(boardH <= MAX_HEIGHT);
   }
-  // The laptop sheet is upright: taller than the old wide board.
-  assert.ok(lessonShape(1280, 800).boardH > 640);
 });
 
 test('a picture of the tallest board is a valid snapshot', () => {

@@ -61,7 +61,7 @@ Deno.serve(async (req) => {
     const out = await mintToken({
       user, body: await req.json().catch(() => ({})), db: dbFor(admin),
       settings: settingsFrom((k) => Deno.env.get(k)),
-      keys: { cartesia: Deno.env.get("CARTESIA_API_KEY") },
+      keys: { cartesia: Deno.env.get("CARTESIA_API_KEY"), elevenlabs: Deno.env.get("ELEVENLABS_API_KEY") },
       fetch,
     });
     return json(out.body, out.status);

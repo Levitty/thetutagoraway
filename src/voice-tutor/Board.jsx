@@ -11,9 +11,9 @@
 // (cached by the item), React renders them once, and each frame only sets the
 // dash offset of the strokes in progress and moves the pen tip.
 //
-// The board is 1000 units wide in a 2 x 3 grid of slots and scales to fit:
-// 640 high on a wide screen; on an upright phone the page sizes it (H) to about
-// a third of the screen's height, the same slots in taller rows.
+// The board is 1000 units wide in a 2 x 3 grid of slots and scales to fit. In
+// the lesson room (12 Nov 2026) it is a square page, 1000 high, on the human
+// room's dotted paper, the same on every screen.
 // The child's ink layer sits on top, in its own colour, and no command reaches
 // it. The child draws with a finger, stylus or mouse (pointer events, one
 // pointer at a time, coalesced points for smooth lines); what they draw goes
@@ -40,6 +40,11 @@ import { pointAt } from '../draw/path.js';
 import { PRINT_FONT } from '../draw/print.js';
 import { sceneAccent, withAccent } from '../draw/accent.js';
 import { BOARD_W, BOARD_H } from '../draw/geometry.js';
+import { PAPER, DOTS } from '../lesson/room/colours.js';
+
+// The page's dots, in board units: the human board's spacing (a 23rd of the page) and size.
+const DOT_GAP = BOARD_W / 23;
+const DOT_R = BOARD_W / 330;
 
 export { BOARD_W, BOARD_H, slotRect, barGeom, shapeGeom, lineGeom, targetBox } from '../draw/geometry.js';
 export const INK = PALETTE;
@@ -404,13 +409,14 @@ export const Board = forwardRef(function Board({ board, now, label = 'Whiteboard
     <svg ref={ref} xmlns="http://www.w3.org/2000/svg" viewBox={`0 0 ${BOARD_W} ${H}`} className="block w-full h-full" role="img" aria-label={label} preserveAspectRatio="xMidYMid meet"
       style={inkOn ? { touchAction: 'none', cursor: tool === 'eraser' ? 'cell' : 'crosshair', userSelect: 'none', WebkitUserSelect: 'none' } : undefined}
       onPointerDown={down} onPointerMove={move} onPointerUp={up(false)} onPointerCancel={up(true)} onLostPointerCapture={up(false)}>
+      {/* The human room's dotted page (src/lesson/Whiteboard.jsx): 23 dots across, so one paper serves both lessons. */}
       <defs>
-        <pattern id="vt-grid" width="40" height="40" patternUnits="userSpaceOnUse">
-          <path d="M40 0H0V40" fill="none" stroke="#E9E6DA" strokeWidth="1" />
+        <pattern id="vt-dots" width={DOT_GAP} height={DOT_GAP} patternUnits="userSpaceOnUse">
+          <circle cx={DOT_GAP / 2} cy={DOT_GAP / 2} r={DOT_R} fill={DOTS} />
         </pattern>
       </defs>
-      <rect x="0" y="0" width={BOARD_W} height={H} fill="#FFFDF6" />
-      <rect x="0" y="0" width={BOARD_W} height={H} fill="url(#vt-grid)" />
+      <rect x="0" y="0" width={BOARD_W} height={H} fill={PAPER} />
+      <rect x="0" y="0" width={BOARD_W} height={H} fill="url(#vt-dots)" />
       <g data-layer="tutor">
         {items.map(({ obj, entry }) => <g key={entry.uid} data-id={obj.id}><Ink entry={entry} /></g>)}
         {marks.map(({ entry }) => <Ink key={entry.uid} entry={entry} />)}

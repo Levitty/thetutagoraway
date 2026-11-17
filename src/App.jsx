@@ -3,7 +3,7 @@ import { supabase } from './supabase';
 // Whole screens, each loaded on demand behind its own Suspense boundary. The
 // call sites below are unchanged; only where these names come from has moved.
 import { ROCKET_ON } from './features.js';
-import { VideoRoom, AIMastery, TeacherDashboard, Writing, Spreadsheet, ConsultingPage, SchoolsPage, ClubsPage, RocketChallenge, VoiceTutor } from './lazyRoutes.jsx';
+import { VideoRoom, AIMastery, TeacherDashboard, Writing, Spreadsheet, ConsultingPage, SchoolsPage, ClubsPage, RocketChallenge, VoiceTutor, TeacherHome } from './lazyRoutes.jsx';
 import { SKILLS as AI_SKILLS } from './ai-tutor/knowledgeGraph.js';
 import { useLessonNotes, LessonNotesModal } from './lesson/LessonNotes.jsx';
 import { INTEREST_CATEGORIES, CATEGORY_BY_KEY, categoryLabel, categoryEmoji } from './groupClassCategories.js';
@@ -829,7 +829,10 @@ const useAuth = () => {
         }
       }
       if (data) { subCache.write(userId, data); setSubscription(data); return; }
-      if (!paywallActive() || role === 'tutor') { setSubscription(null); return; }
+      // Teachers (HOREB for any teacher, 16 Nov 2026) have no family pass. A new teacher's
+      // profile says 'student' until their details are saved, so the sign-up's account type counts too.
+      if (!paywallActive() || role === 'tutor' || role === 'teacher') { setSubscription(null); return; }
+      try { const { data: { session } } = await supabase.auth.getSession(); if (session?.user?.user_metadata?.account_type === 'teacher') { setSubscription(null); return; } } catch { /* carry on */ }
       // Paid practice is on and this family has never had a pass: their
       // free week starts now (once per account, decided by the database).
       const { data: started, error: rpcError } = await supabase.rpc('start_free_week');
@@ -1235,6 +1238,7 @@ const AuthModal = ({ mode, setMode, onClose, onAuth, initialRole, reason = null,
     if (onAuth?.waSignInError) onAuth.clearWaSignInError?.();
   }, [mode]); // eslint-disable-line react-hooks/exhaustive-deps
 
+  // A teacher starts as a plain account; saving their details (teacher_save_profile) makes it a teacher.
   const dbRole = form.role === 'tutor' ? 'tutor' : 'student';
   const accountType = form.role;
 
@@ -1303,7 +1307,7 @@ const AuthModal = ({ mode, setMode, onClose, onAuth, initialRole, reason = null,
         {/* Saving a check is always a parent, so there's nothing to choose. */}
         {view === 'register' && reason !== 'plan' && (
           <div className="roles" role="group" aria-label="I am">
-            {[['parent', "I'm a parent"], ['student', "I'm a student"], ['tutor', "I'm a tutor"]].map(([v, l]) => (
+            {[['parent', "I'm a parent"], ['student', "I'm a student"], ['teacher', "I'm a teacher"], ['tutor', "I'm a tutor"]].map(([v, l]) => (
               <button key={v} type="button" aria-pressed={form.role === v} onClick={() => setForm({ ...form, role: v })}>{l}</button>
             ))}
           </div>
@@ -6324,7 +6328,7 @@ function AppInner() {
       menu,
       person: {
         name: auth.profile.full_name,
-        line: kind === 'tutor' ? myTutor?.subject : kind === 'learner' ? 'Learner' : 'Parent',
+        line: kind === 'tutor' ? myTutor?.subject : kind === 'teacher' ? 'Teacher' : kind === 'learner' ? 'Learner' : 'Parent',
         avatar: <Avatar src={auth.profile.avatar_url} preset={auth.profile.avatar} name={auth.profile.full_name} size={34} />,
       },
       headerEnd: <button type="button" className="hb-round" aria-label="Messages" onClick={handleOpenMessages}><TIcon name="message" /></button>,
@@ -6609,6 +6613,10 @@ function AppInner() {
 
   // Dashboard routing
   if (auth.user && page === 'dashboard') {
+    // An independent teacher's own home (HOREB for any teacher, step 1).
+    if (kind === 'teacher' && !IS_NATIVE) {
+      return framed('overview', 'Home', <TeacherHome profile={auth.profile} />);
+    }
     if (auth.profile?.role === 'tutor') {
       return (
         <>

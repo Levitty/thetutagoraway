@@ -72,6 +72,12 @@ const f1 = (v) => Math.round(v * 10) / 10;
 /** Part i (1-based) of a shape: its outline `d`, a centre `c` and a radius `r` for marks. */
 export function shapePart(item, g, i) {
   const n = item.parts;
+  if (item.kind === 'circle' && n === 1) {
+    // A whole circle (one part): an arc with the same start and end draws nothing, so it is two half arcs.
+    const R = g.s / 2;
+    const d = `M ${f1(g.cx)} ${f1(g.cy - R)} A ${f1(R)} ${f1(R)} 0 1 1 ${f1(g.cx)} ${f1(g.cy + R)} A ${f1(R)} ${f1(R)} 0 1 1 ${f1(g.cx)} ${f1(g.cy - R)} Z`;
+    return { d, c: { x: g.cx, y: g.cy }, r: Math.max(14, R * 0.32) };
+  }
   if (item.kind === 'circle') {
     const a0 = -Math.PI / 2 + (i - 1) * 2 * Math.PI / n;
     const a1 = a0 + 2 * Math.PI / n;

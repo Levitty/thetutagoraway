@@ -2,11 +2,21 @@
 // THE BOARD COMMAND LIST (HOREB live tutor, milestone 1, approved 10 Nov 2026).
 //
 // The model never writes code, HTML or coordinates. Each turn it fills in one
-// fixed form: an ordered list of at most MAX_STEPS steps, each one of the 20
+// fixed form: an ordered list of at most MAX_STEPS steps, each one of the 21
 // commands below. This file is the rule every step must clear before it is
 // drawn, on the server (before the reply leaves) and again in the browser
 // (before anything is rendered). A step that fails is dropped and logged,
 // never executed, and never "repaired" into something the model did not say.
+// The one exception is the step's SHAPE, where the model's meaning is plain
+// (12 Nov 2026: 70 sentences were lost to {"cmd":"say","say":"..."}):
+// repairStep() reads an obvious field alias as the field (say, sentence, words
+// for text; a step with no cmd that is only a say), and notes it. Nothing a
+// child hears or sees is changed.
+//
+// A full board makes room (12 Nov 2026: 19 drawings were dropped for "no free
+// slot" while the tutor's words pointed at them): the oldest items this turn
+// has not used are erased first, starting with whatever holds the slot asked
+// for, and the erase goes out as a step before the drawing.
 //
 //   validateTurn(raw, { board, allowedMis, hidden })  -> { steps, dropped, notes }
 //   TURN_SCHEMA                                        the JSON schema the model fills
@@ -31,6 +41,15 @@ export const CONFIDENCE = ['low', 'med', 'high'];
 export const NEXT = ['probe', 'reteach', 'move_on'];
 // What helped a child learn (note_what_helped). A fixed list: the child never writes it, the model only picks.
 export const MOVES = ['drawing it', 'counting together', 'a real-life example', 'smaller steps', 'saying it aloud', 'writing it down', 'a picture on the board', 'a story', 'repeating it', 'a quick game'];
+// What the child is doing once HOREB hands over (pause_for_child `doing`, 12 Nov 2026): silence is handled by it (silence.js).
+//   answer  answering a question    task  doing something on the board (shade, draw, write, place)    talk  free talk, an opinion
+export const DOINGS = ['answer', 'task', 'talk'];
+// How the child's answer is judged (the silent `assess`, step 3 of the conversation engine). Only 'understood' counts as
+// independent evidence; right_unexplained waits for a reason (the orchestrator asks for it first).
+export const ANSWER_CLASSES = ['understood', 'right_unexplained', 'partly_right', 'misconception', 'missing_prerequisite', 'guess_or_no_attempt'];
+// The sixteen teaching moves of docs/tutor-training/PLAYBOOK.md, by name. A say carries one as `move`; the orchestrator
+// (orchestrator.js) says which are allowed each turn.
+export const PLAYBOOK_MOVES = ['Open the lesson', 'Show then hand over', 'Predict then show', 'Count with the child', 'Wait and nudge', 'Smaller-question hint', 'Revoice and build', 'Press for reasoning', 'Name what was right', 'Diagnose the wrong answer', 'Check for understanding', 'Celebrate the strategy', 'Stretch the quick child', 'Recover a lost child', 'Bring back an off-topic child', 'Close the lesson'];
 export const HIGHLIGHT_STYLES = ['circle', 'box', 'glow'];
 export const SHAPE_KINDS = ['circle', 'rectangle', 'square', 'triangle'];
 
@@ -46,8 +65,8 @@ export const DRAWN = ['write_text', 'write_math', 'fraction_bar', 'number_line',
 export const MARKS = ['highlight', 'underline', 'point'];
 // Steps that are never seen or heard: applied when the turn arrives, never
 // dropped by an interruption.
-export const SILENT = ['set_phase', 'record_diagnosis', 'note_interest', 'note_what_helped'];
-export const COMMANDS = ['say', ...DRAWN, ...MARKS, 'erase', 'clear', 'ask', 'set_phase', 'record_diagnosis', 'note_interest', 'note_what_helped', 'pause_for_child', 'end_session'];
+export const SILENT = ['set_phase', 'record_diagnosis', 'note_interest', 'note_what_helped', 'assess'];
+export const COMMANDS = ['say', ...DRAWN, ...MARKS, 'erase', 'clear', 'ask', 'set_phase', 'record_diagnosis', 'note_interest', 'note_what_helped', 'assess', 'pause_for_child', 'end_session'];
 // Steps that may carry a word anchor (`on`) and a delay.
 export const TIMED = [...DRAWN, ...MARKS, 'erase', 'clear'];
 // A drawn step may be drawn slowly (`pace: 'slow'`, about 1.6 times slower): for the key idea of a lesson.
@@ -70,7 +89,8 @@ const FIELDS = {
   ask: ['id', 'prompt', 'form', 'choices', 'expected', 'accepts', 'wrong', 'skill', 'bank'],
   set_phase: ['phase'],
   record_diagnosis: ['skill', 'misconception', 'confidence', 'evidence', 'next', 'snapshot'],
-  pause_for_child: ['expect', 'max_wait_s'],
+  pause_for_child: ['expect', 'max_wait_s', 'doing'],
+  assess: ['class', 'misconception', 'evidence', 'ask'],
   note_interest: ['interest'], note_what_helped: ['move', 'helped'],
   end_session: ['summary'],
 };
@@ -82,14 +102,14 @@ const REQUIRED = {
   highlight: ['target'], underline: ['target'], point: ['target'], erase: ['targets'], clear: [],
   ask: ['id', 'prompt', 'form'], set_phase: ['phase'],
   record_diagnosis: ['skill', 'misconception', 'confidence', 'evidence', 'next'],
-  note_interest: ['interest'], note_what_helped: ['move', 'helped'],
+  note_interest: ['interest'], note_what_helped: ['move', 'helped'], assess: ['class', 'evidence'],
   pause_for_child: ['expect', 'max_wait_s'], end_session: ['summary'],
 };
 export const LIMITS = {
   say: 220, write_text: 60, write_math: 80, ask_prompt: 140, choice: 40, expected: 40,
-  evidence: 240, summary: 300, interest: 24, label: 12, axis_name: 16, anchor: 40,
-  parts: [1, 12], shape_parts: [2, 12], line: [0, 12], divisions: [1, 12], marks: 8, jumps: 4,
-  axis_steps: 20, points: 12, choices: 4, wrong: 4, accepts: 4, delay: [-300, 1500], wait: [5, 60], targets: 8,
+  evidence: 240, assess: 160, summary: 300, interest: 24, label: 12, axis_name: 16, anchor: 40,
+  parts: [1, 12], shape_parts: [1, 12], line: [0, 12], divisions: [1, 12], marks: 8, jumps: 4,
+  axis_steps: 20, points: 12, choices: 4, wrong: 6, accepts: 8, delay: [-300, 1500], wait: [5, 60], targets: 8,
 };
 
 // ---------------------------------------------------------------- strings
@@ -124,6 +144,51 @@ const str = (v, max, name, notes) => {
   return text;
 };
 
+// Silent text (never heard or seen by the child): too long is cut at a sentence or a word, and noted.
+const clip = (v, max, name, notes) => {
+  need(typeof v === 'string', `${name}: not text`);
+  const { text, removed } = cleanText(v);
+  need(text.length > 0, `${name}: empty`);
+  if (removed) notes.push(`${name}: ${removed} character(s) removed`);
+  if (text.length <= max) return text;
+  notes.push(`${name}: longer than ${max}, cut`);
+  const head = text.slice(0, max);
+  const stop = Math.max(head.lastIndexOf('. '), head.lastIndexOf('! '), head.lastIndexOf('? '));
+  if (stop > max / 2) return head.slice(0, stop + 1);
+  const sp = head.lastIndexOf(' ');
+  return (sp > max / 2 ? head.slice(0, sp) : head).replace(/[,;:\s]+$/, '');
+};
+const readsAsNumber = (v) => /^\s*\d+(\s*\/\s*\d+)?\s*$/.test(String(v));
+
+// WHAT A QUESTION MAY SEAL (12 Nov 2026, run 2026-11-12-1824, scenario 1: "Do you want to shade it, or shall I?" was asked
+// with expected "me", so the child's right count "Two" was marked wrong against it and the turn was forced to Diagnose).
+// A sealed answer is a real value (a number, a fraction, a comparison or a place word, yes or no to a yes/no question)
+// or one of the question's own options (a choice, or a word the question itself offers: "Is it Asha or Baraka?"). An
+// offer or a social question ("Shall I?", "Do you want to...?") is never sealed: it is asked, and nothing is marked.
+const OFFER_Q = /^\W*(do|would) you (want|like)\b|\bshall (i|we)\b|\bshould i\b|\bare you ready\b|\bcan you (see|hear)( it| me| that| this)?\s*\?|\bis that (ok|okay|all right)\b|\bwho (should|will|wants to)\b|\b(you|me) or (me|you|i)\b|\bor (shall|should|can) i\b/i;
+const YES_NO_Q = /^\W*(is|are|does|do|did|can|could|will|would|was|were|has|have|should)\b/i;
+const VALUE_WORD = new Set(('zero nought one two three four five six seven eight nine ten eleven twelve thirteen fourteen fifteen sixteen twenty hundred '
+  + 'half halves third thirds quarter quarters fourth fourths fifth fifths sixth sixths seventh sevenths eighth eighths ninth ninths tenth tenths twelfth twelfths '
+  + 'nusu robo theluthi moja mbili tatu nne tano sita saba nane tisa kumi whole wholes over out of '
+  + 'numerator numerators denominator denominators fraction fractions multiply times divide add plus minus '
+  + 'same equal equivalent bigger larger greater more smaller less fewer longer shorter top bottom middle left right first second last both neither').split(' '));
+const VALUE_SKIP = new Set(['over', 'out', 'of', 'first', 'second', 'last', 'right', 'left']);
+// A value is in the answer: a numeral, a number or fraction word, or a word that compares or places ("1/2 of the bar",
+// "they ate the same amount", "the top one"). "me", "you", a name or an opinion has none.
+const hasValueWord = (e) => String(e).toLowerCase().replace(/[^a-z0-9/ ]+/g, ' ').split(/\s+/).filter(Boolean)
+  .some((x) => /^\d+(\/\d+)?$/.test(x) || (VALUE_WORD.has(x) && !VALUE_SKIP.has(x)));
+/** May this question seal this answer? (choice questions: the answer must also be one of the choices, checked below) */
+export function sealable(prompt, expected, choices = null) {
+  const p = String(prompt || ''); const e = String(expected ?? '').trim();
+  if (!e || OFFER_Q.test(p)) return false;
+  if (Array.isArray(choices) && choices.some((c) => String(c).trim().toLowerCase() === e.toLowerCase())) return true;
+  if (/^(yes|no)$/i.test(e)) return YES_NO_Q.test(p);
+  if (readsAsNumber(e) || hasValueWord(e) || /^[<>=]$/.test(e)) return true;
+  // One of the question's own options: its words are in the question ("Who gets more, Asha or Baraka?" -> "Asha").
+  const words = (t) => ` ${String(t).toLowerCase().replace(/[^a-z0-9/ ]+/g, ' ').replace(/\s+/g, ' ').trim()} `;
+  return words(p).includes(words(e));
+}
+
 // A shaded value is a count (0..parts) or a list of distinct part numbers (1..parts).
 const shadedOf = (v, parts) => {
   if (isInt(v)) { need(v >= 0 && v <= parts, 'shaded: count out of range'); return v; }
@@ -133,12 +198,72 @@ const shadedOf = (v, parts) => {
   return [...v];
 };
 
+// ---------------------------------------------------------------- the shape, repaired
+/** The fields a command may carry. */
+const fieldsOf = (cmd) => new Set(['cmd', ...FIELDS[cmd], ...(TIMED.includes(cmd) ? ['on', 'delay_ms'] : []), ...(DRAWN.includes(cmd) ? ['pace'] : [])]);
+// Extra fields that change nothing a child hears or sees when left out (12 Nov 2026, run 2: "assess: extra field say",
+// a say with an "id" or an "on"). Only where the command does not have the field itself.
+export const HARMLESS = ['say', 'sentence', 'words', 'speech', 'line', 'content', 'move', 'note', 'notes', 'comment', 'reason', 'why', 'thought', 'thinking', 'tone', 'emotion', 'explanation', 'id', 'on', 'delay_ms', 'pace', 'text'];
+// Timing on a say is harmless (a say is timed by its words); on a drawing command it is checked as before.
+const SAY_ONLY = ['on', 'delay_ms', 'pace'];
+// The names the model reaches for instead of a field, where the meaning is not in doubt.
+const ALIASES = {
+  say: { text: ['say', 'sentence', 'words', 'speech', 'line', 'content'] },
+  ask: { prompt: ['question', 'text'], expected: ['answer'] },
+  assess: { class: ['assess', 'judgement', 'judgment', 'answer_class'] },
+};
+/**
+ * A step with an obvious slip in its shape, mended: an alias read as its field (only when the field is missing,
+ * or the alias says the same), a step with no cmd that is plainly a say, a hand-back with its defaults left out.
+ * Anything else is returned as it was, for checkStep to judge. Notes say what was mended.
+ */
+export function repairStep(s, notes = []) {
+  if (!s || typeof s !== 'object' || Array.isArray(s)) return s;
+  let x = s;
+  if (x.cmd == null) {
+    const keys = Object.keys(x);
+    if (typeof x.say === 'string' && keys.every((k) => ['say', 'move'].includes(k))) { x = { cmd: 'say', text: x.say, ...(x.move != null ? { move: x.move } : {}) }; notes.push('a step with no cmd read as a say'); }
+    else if (typeof x.text === 'string' && keys.every((k) => ['text', 'move'].includes(k))) { x = { cmd: 'say', ...x }; notes.push('a step with no cmd read as a say'); }
+    else return s;
+  }
+  const al = ALIASES[x.cmd];
+  if (al) {
+    for (const [field, names] of Object.entries(al)) {
+      for (const n of names) {
+        if (!(n in x) || n === field) continue;
+        if (n === 'text' && x.cmd === 'ask' && x.prompt != null) continue;
+        if (x[field] == null) { const { [n]: v, ...rest } = x; x = { ...rest, [field]: v }; notes.push(`${x.cmd}: field "${n}" read as ${field}`); }
+        else if (x[n] === x[field] || x[n] == null || (typeof x[n] === 'string' && x[n].trim() === '')) { const { [n]: _v, ...rest } = x; x = rest; notes.push(`${x.cmd}: field "${n}" repeated ${field}, left out`); }
+        // Both, saying different things (12 Nov 2026, run 2: 42 says dropped as "extra field say"): the field wins.
+        else if (n !== 'text' || x.cmd === 'say') { const { [n]: _v, ...rest } = x; x = rest; notes.push(`${x.cmd}: field "${n}" beside ${field} said something else; ${field} kept`); }
+      }
+    }
+    if (x.cmd === 'assess' && x.class != null && !ANSWER_CLASSES.includes(x.class)) return s;
+  }
+  // Harmless extra fields the model adds (its own words for a silent step, a note to itself, a timing on a say): left out
+  // and noted, never a reason to lose the step. Anything else extra still drops it.
+  if (COMMANDS.includes(x.cmd)) {
+    const allowed = fieldsOf(x.cmd);
+    const extra = Object.keys(x).filter((k) => !allowed.has(k) && HARMLESS.includes(k) && (x.cmd === 'say' || !SAY_ONLY.includes(k)));
+    if (extra.length) {
+      x = Object.fromEntries(Object.entries(x).filter(([k]) => !extra.includes(k)));
+      notes.push(`${x.cmd}: harmless extra field${extra.length === 1 ? '' : 's'} ${extra.join(', ')} left out`);
+    }
+  }
+  if (x.cmd === 'pause_for_child') {
+    if (x.expect == null) { x = { ...x, expect: 'any' }; notes.push('pause_for_child: expect not given, read as any'); }
+    if (x.max_wait_s == null) { x = { ...x, max_wait_s: 30 }; notes.push('pause_for_child: max_wait_s not given, read as 30'); }
+  }
+  return x;
+}
+
 // ---------------------------------------------------------------- one step
-function checkStep(s, ctx, notes) {
+function checkStep(s0, ctx, notes) {
+  const s = repairStep(s0, notes);
   need(s && typeof s === 'object' && !Array.isArray(s), 'not an object');
   const cmd = s.cmd;
   need(COMMANDS.includes(cmd), `unknown command ${String(cmd).slice(0, 30)}`);
-  const allowed = new Set(['cmd', ...FIELDS[cmd], ...(TIMED.includes(cmd) ? ['on', 'delay_ms'] : []), ...(DRAWN.includes(cmd) ? ['pace'] : [])]);
+  const allowed = fieldsOf(cmd);
   for (const k of Object.keys(s)) need(allowed.has(k), `${cmd}: extra field ${k.slice(0, 30)}`);
   for (const k of REQUIRED[cmd]) need(s[k] !== undefined && s[k] !== null, `${cmd}: missing ${k}`);
   const out = { cmd };
@@ -180,7 +305,9 @@ function checkStep(s, ctx, notes) {
       out.text = str(s.text, LIMITS.say, 'say', notes);
       // The teaching move this sentence makes (docs/tutor-training/PLAYBOOK.md), for the tester view; never spoken.
       if (s.move != null) out.move = String(s.move).replace(/[^A-Za-z -]/g, '').slice(0, 40);
-      need(out.text.split(/(?<=[.!?])\s+/).filter(Boolean).length <= 3, 'say: more than three sentences');
+      // Short turns are held by the turn's word limit (MAX_SPOKEN_WORDS, tutorTurn.js), not by counting sentences here:
+      // "One. Two. Three. Four." is four sentences and six words (12 Nov 2026: 61 sentences were lost to this rule).
+      { const n = out.text.split(/(?<=[.!?])\s+/).filter(Boolean).length; if (n > 3) notes.push(`say: ${n} sentences (more than three)`); }
       break;
     case 'write_text':
       out.id = newId(); out.text = str(s.text, LIMITS.write_text, 'write_text', notes);
@@ -237,7 +364,8 @@ function checkStep(s, ctx, notes) {
     }
     case 'shape':
       out.id = newId(); out.kind = optEnum('kind', SHAPE_KINDS);
-      need(isInt(s.parts) && inRange(s.parts, LIMITS.shape_parts), 'shape: parts must be 2 to 12');
+      // A whole (one part) is a shape too: "here is one chapati" (12 Nov 2026, run 2: 11 shapes dropped for parts 1).
+      need(isInt(s.parts) && inRange(s.parts, LIMITS.shape_parts), 'shape: parts must be 1 to 12');
       out.parts = s.parts; out.shaded = shadedOf(s.shaded, s.parts);
       out.label = optBool('label', true); out.slot = optEnum('slot', SLOTS); out.colour = optEnum('colour', COLOURS, 'orange');
       break;
@@ -310,26 +438,41 @@ function checkStep(s, ctx, notes) {
       out.id = s.id;
       out.prompt = str(s.prompt, LIMITS.ask_prompt, 'ask prompt', notes);
       out.form = optEnum('form', ASK_FORMS);
+      // A choice question with too few or too many choices but its answer given is asked as a word answer: the seal
+      // still knows the answer (12 Nov 2026, run 2: a question lost for "a choice needs 2 to 4 choices").
+      if (out.form === 'choice' && !(Array.isArray(s.choices) && s.choices.length >= 2 && s.choices.length <= LIMITS.choices) && s.expected != null && String(s.expected).trim()) {
+        out.form = readsAsNumber(s.expected) ? (/\//.test(String(s.expected)) ? 'fraction' : 'number') : 'word';
+        notes.push(`ask: a choice with ${Array.isArray(s.choices) ? s.choices.length : 'no'} choices asked as ${out.form}`);
+      }
       if (out.form === 'choice') {
         need(Array.isArray(s.choices) && s.choices.length >= 2 && s.choices.length <= LIMITS.choices, 'ask: a choice needs 2 to 4 choices');
         out.choices = s.choices.map((c) => str(c, LIMITS.choice, 'choice', notes));
-      } else need(s.choices === undefined || s.choices === null, 'ask: choices only on a choice question');
+      } else if (s.choices != null && s.form !== 'choice') bad('ask: choices only on a choice question');
       if (s.bank !== undefined && s.bank !== null) {
         need(typeof s.bank === 'string' && /^p[0-9]{1,2}$/.test(s.bank), 'ask: bad bank id');
         out.bank = s.bank;
       }
       // The hidden half. Kept on the server, sealed, never sent to the browser.
       if (s.expected !== undefined && s.expected !== null) out.expected = str(String(s.expected), LIMITS.expected, 'expected', notes);
+      // An offer or a social question, or an answer that is not a value nor one of the question's options: asked, not sealed.
+      let social = false;
+      if (out.expected && !out.bank && !ctx.publicAsk && (out.form === 'choice' ? OFFER_Q.test(out.prompt) : !sealable(out.prompt, out.expected, s.choices))) {
+        notes.push(`ask: "${out.expected}" is not a value nor one of the question's own options, so the question is asked without a sealed answer`);
+        delete out.expected; social = true;
+      } else if (!out.expected && !out.bank && !ctx.publicAsk && out.form !== 'draw' && OFFER_Q.test(out.prompt)) social = true;
       // The browser checks the public half (the server sealed the answer away).
-      if (out.form !== 'draw' && !ctx.publicAsk) need(out.expected || out.bank, 'ask: expected answer missing');
+      if (out.form !== 'draw' && !ctx.publicAsk && !social) need(out.expected || out.bank, 'ask: expected answer missing');
       if (out.form === 'choice' && out.expected) need(out.choices.some((c) => c.toLowerCase() === out.expected.toLowerCase()), 'ask: the expected answer is not one of the choices');
-      if (s.accepts != null) {
-        need(Array.isArray(s.accepts) && s.accepts.length <= LIMITS.accepts, 'ask: at most 4 accepts');
-        out.accepts = s.accepts.map((a) => str(String(a), LIMITS.expected, 'accepts', notes));
+      if (s.accepts != null && !social) {
+        // More ways of saying the answer only help the marking: the first LIMITS.accepts are kept (12 Nov 2026, run 2).
+        need(Array.isArray(s.accepts), 'ask: accepts is not a list');
+        if (s.accepts.length > LIMITS.accepts) notes.push(`ask: ${s.accepts.length} accepts, the first ${LIMITS.accepts} kept`);
+        out.accepts = s.accepts.slice(0, LIMITS.accepts).map((a) => str(String(a), LIMITS.expected, 'accepts', notes));
       }
-      if (s.wrong != null) {
-        need(Array.isArray(s.wrong) && s.wrong.length <= LIMITS.wrong, 'ask: at most 4 wrong answers');
-        out.wrong = s.wrong.map((w) => {
+      if (s.wrong != null && !social) {
+        need(Array.isArray(s.wrong), 'ask: wrong is not a list');
+        if (s.wrong.length > LIMITS.wrong) notes.push(`ask: ${s.wrong.length} wrong answers, the first ${LIMITS.wrong} kept`);
+        out.wrong = s.wrong.slice(0, LIMITS.wrong).map((w) => {
           need(w && typeof w === 'object', 'wrong: not an object');
           for (const k of Object.keys(w)) need(['answer', 'misconception'].includes(k), `wrong: extra field ${k.slice(0, 20)}`);
           const mis = misOf(w.misconception, ctx, 'wrong');
@@ -346,7 +489,7 @@ function checkStep(s, ctx, notes) {
       out.skill = skillOf(s.skill, ctx);
       out.misconception = misOf(s.misconception, ctx, 'record_diagnosis', out.skill);
       out.confidence = optEnum('confidence', CONFIDENCE);
-      out.evidence = str(s.evidence, LIMITS.evidence, 'evidence', notes);
+      out.evidence = clip(s.evidence, LIMITS.evidence, 'evidence', notes);
       out.next = optEnum('next', NEXT);
       // The picture of the child's work this diagnosis rests on (milestone 2): one the
       // page really took this session (ctx.snapshots is how many), never one made up.
@@ -368,9 +511,23 @@ function checkStep(s, ctx, notes) {
       out.expect = optEnum('expect', EXPECTS);
       need(isInt(s.max_wait_s) && inRange(s.max_wait_s, LIMITS.wait), 'pause_for_child: max_wait_s must be 5 to 60');
       out.max_wait_s = s.max_wait_s;
+      // What the child is now doing; left out, validateTurn reads it from the turn (doingOf).
+      if (s.doing != null) out.doing = optEnum('doing', DOINGS);
+      break;
+    case 'assess':
+      // The tutor's judgement of the child's answer: silent, never sent to the child (tutorTurn.js keeps it).
+      out.class = optEnum('class', ANSWER_CLASSES);
+      if (out.class === 'misconception') {
+        need(s.misconception != null, 'assess: a misconception needs its code');
+        out.misconception = misOf(s.misconception, ctx, 'assess');
+      } else need(s.misconception == null, 'assess: a misconception code only with class misconception');
+      out.evidence = clip(s.evidence, LIMITS.assess, 'assess evidence', notes);
+      if (s.ask != null) { need(typeof s.ask === 'string' && ID_RE.test(s.ask), 'assess: bad ask id'); out.ask = s.ask; }
       break;
     case 'end_session':
-      out.summary = str(s.summary, LIMITS.summary, 'summary', notes);
+      // A long summary is cut, never the end of the lesson (12 Nov 2026, run 2: 12 end_session steps were dropped for
+      // "longer than 300" and the lesson never ended).
+      out.summary = clip(s.summary, LIMITS.summary, 'summary', notes);
       break;
     default: bad('unknown command');
   }
@@ -466,7 +623,20 @@ export function validateTurn(raw, { board = [], allowedMis = null, skills = null
   const ctx = { ids: new Set(items.keys()), items, allowedMis: allowedMis ? new Set(allowedMis) : null, skills: skills ? new Set(skills) : null, publicAsk, snapshots };
   const soft = new Set((Array.isArray(inkCells) ? inkCells : []).filter((c) => SLOTS.includes(c) && !ROWS.includes(c)));
   const steps = [];
+  const touched = new Set(); // ids this turn drew or pointed at: never erased to make room
   let closed = false;
+  // Room for a new drawing on a full board: the items holding the wanted slot first (if this turn has not used
+  // them), then the oldest. Returns the ids erased, or null if no room can be made.
+  const makeRoom = (wanted) => {
+    const free = () => items.size < MAX_BOARD_ITEMS && resolveSlot(used, wanted, soft);
+    const gone = [];
+    const drop = (id) => { const it = items.get(id); if (it?.slot) for (const c of cellsOf(it.slot)) used.delete(c); items.delete(id); ctx.ids.delete(id); gone.push(id); };
+    const want = new Set(cellsOf(wanted));
+    const holders = [...items.values()].filter((it) => it.slot && cellsOf(it.slot).some((c) => want.has(c)));
+    if (holders.length && holders.every((it) => !touched.has(it.id))) for (const it of holders) drop(it.id);
+    for (const it of [...items.values()]) { if (free()) break; if (!touched.has(it.id)) drop(it.id); }
+    return free() ? gone : null;
+  };
   list.forEach((s, index) => {
     const cmd = s && typeof s === 'object' ? String(s.cmd ?? '').slice(0, 30) : null;
     if (index >= MAX_STEPS) { dropped.push({ index, cmd, reason: `more than ${MAX_STEPS} steps` }); return; }
@@ -474,17 +644,33 @@ export function validateTurn(raw, { board = [], allowedMis = null, skills = null
     try {
       const out = checkStep(s, ctx, notes);
       if (DRAWN.includes(out.cmd)) {
-        if (items.size >= MAX_BOARD_ITEMS) bad('the board is full (30 items): clear first');
-        const slot = resolveSlot(used, out.slot, soft);
-        if (!slot) bad('no free slot on the board: erase or clear first');
+        let slot = items.size < MAX_BOARD_ITEMS ? resolveSlot(used, out.slot, soft) : null;
+        if (!slot) {
+          const keep = { items: new Map(items), used: new Set(used), ids: new Set(ctx.ids) };
+          const gone = makeRoom(out.slot);
+          if (!gone) {
+            items.clear(); for (const [k, v] of keep.items) items.set(k, v);
+            used.clear(); for (const c of keep.used) used.add(c);
+            ctx.ids.clear(); for (const k of keep.ids) ctx.ids.add(k);
+            bad('no free slot on the board: everything on it is in use this turn; erase or clear first');
+          }
+          slot = resolveSlot(used, out.slot, soft);
+          if (gone.length) {
+            steps.push({ cmd: 'erase', targets: gone, ...(out.on ? { on: out.on } : {}), ...(out.delay_ms != null ? { delay_ms: out.delay_ms } : {}) });
+            notes.push(`${out.id}: the board was full, so ${gone.join(', ')} ${gone.length === 1 ? 'was' : 'were'} erased to make room`);
+          }
+        }
         if (slot !== out.slot) notes.push(`${out.id}: moved from ${out.slot} to ${slot}`);
         out.slot = slot;
         for (const c of cellsOf(slot)) used.add(c);
-        items.set(out.id, out); ctx.ids.add(out.id);
+        items.set(out.id, out); ctx.ids.add(out.id); touched.add(out.id);
       }
+      if (MARKS.includes(out.cmd)) touched.add(out.target);
       if (out.cmd === 'erase') for (const t of out.targets) { const it = items.get(t); if (it?.slot) for (const c of cellsOf(it.slot)) used.delete(c); items.delete(t); ctx.ids.delete(t); }
       if (out.cmd === 'clear') { items.clear(); used.clear(); ctx.ids.clear(); }
       if (out.cmd === 'ask' && steps.some((x) => x.cmd === 'ask')) bad('one question a turn');
+      if (out.cmd === 'assess' && steps.some((x) => x.cmd === 'assess')) bad('one assessment a turn');
+      if (out.cmd === 'pause_for_child' && !out.doing) { out.doing = doingOf(steps); notes.push(`pause_for_child: doing not given, read as ${out.doing}`); }
       if (out.cmd === 'pause_for_child' || out.cmd === 'end_session') closed = true;
       steps.push(out);
     } catch (e) {
@@ -495,18 +681,89 @@ export function validateTurn(raw, { board = [], allowedMis = null, skills = null
   return { steps, dropped, notes };
 }
 
+// ---------------------------------------------------------------- the board, in words
+// "a whole circle, not cut, nothing shaded" or "a circle cut into 2 equal parts, 1 of 2 shaded".
+const cutText = (name, parts, shaded, at = '') => {
+  const n = Math.max(1, Number(parts) || 1);
+  if (n <= 1) return `a whole ${name}${at}, not cut into parts, ${Number(Array.isArray(shaded) ? shaded.length : shaded) ? 'all shaded' : 'nothing shaded'}`;
+  const k = Array.isArray(shaded) ? shaded.length : Number(shaded) || 0;
+  return `a ${name}${at}, cut into ${n} equal parts, ${k ? `${k} of ${n} shaded${Array.isArray(shaded) ? ` (part${k === 1 ? '' : 's'} ${shaded.join(', ')})` : ''}` : 'none shaded'}`;
+};
+/** What one board item really shows, for the tutor's context (12 Nov 2026: it asked about shaded parts when none were shaded). */
+export function describeItem(b) {
+  const at = b.slot ? ` at ${b.slot}` : '';
+  switch (b.cmd) {
+    case 'write_text': return `${b.id}: the words "${b.text}"${at}`;
+    case 'write_math': return `${b.id}: the maths ${b.expr}${at}`;
+    case 'fraction_bar': return `${b.id}: ${cutText('bar', b.parts, b.shaded, at)}${b.second_bar ? `; under it a second ${cutText('bar', b.second_bar.parts, b.second_bar.shaded).replace(/^a /, '')}` : ''}`;
+    // A figure in one part is a whole, not cut (12 Nov 2026, run 2026-11-12-1824: "1 equal parts" was read as a cut chapati;
+    // run 2026-11-12-1900: the same for bars and fraction figures, and "a circle with one half shaded" for an uncut one).
+    case 'shape': return `${b.id}: ${cutText(b.kind || 'shape', b.parts, b.shaded, at)}`;
+    case 'number_line': return `${b.id}: a number line${at} from ${b.from} to ${b.to}, ${b.divisions} step${b.divisions === 1 ? '' : 's'} to each whole${(b.marks || []).length ? `, marks at ${b.marks.map((m) => m.label || m.value).join(', ')}` : ''}`;
+    case 'plot_points': return `${b.id}: a graph${at} with ${(b.points || []).length} points`;
+    case 'figure': {
+      const p = b.params || {};
+      const ctl = b.controls?.length ? ` (the child may: ${b.controls.join(', ')})` : '';
+      if (b.type === 'fraction') {
+        const n = p.shape === 'grid' ? (p.rows || 0) * (p.cols || 0) : p.parts;
+        const sec = p.second ? `; a second ${cutText(p.shape || 'bar', p.second.parts ?? (p.second.rows || 0) * (p.second.cols || 0), p.second.shaded).replace(/^a /, '')} beside it` : '';
+        return `${b.id}: ${cutText(`fraction ${p.shape || 'bar'}`, n, p.shaded, at)}${sec}${ctl}`;
+      }
+      if (b.type === 'numberline') return `${b.id}: a number line${at} from ${p.from} to ${p.to}, ${p.divisions} steps${p.marker != null ? `, marker at ${p.marker}` : ''}${ctl}`;
+      return `${b.id}: a ${b.type} figure${at}${ctl}`;
+    }
+    default: return `${b.id}: ${b.cmd}${at}`;
+  }
+}
+/** The slots nothing is in yet: a whole row by its name when both halves are free, else the free half. */
+export function freeSlots(board = [], inkCells = []) {
+  const used = new Set(board.flatMap((b) => (b.slot ? cellsOf(b.slot) : [])));
+  const ink = new Set(inkCells);
+  const out = [];
+  for (const r of ROWS) {
+    const halves = cellsOf(r).filter((c) => !used.has(c) && !ink.has(c));
+    if (halves.length === 2) out.push(r); else out.push(...halves);
+  }
+  return out;
+}
+/** The board for the tutor's context: what each item shows, the child's writing, and the free slots. */
+export function boardLines(board = [], inkCells = []) {
+  const ink = (Array.isArray(inkCells) ? inkCells : []).filter((c) => SLOTS.includes(c));
+  const free = freeSlots(board, ink);
+  return [
+    `Board now (what the child sees): ${board.length ? board.map(describeItem).join('; ') : 'empty'}.`,
+    ...(ink.length ? [`The child has written in: ${ink.join(', ')} (keep clear).`] : []),
+    free.length ? `Free slots: ${free.join(', ')}.` : 'Free slots: none. A new drawing erases the oldest items you have not used this turn (whatever is in the slot you ask for first); erase or clear first to choose.',
+  ];
+}
+
+/**
+ * What the child is doing after a turn that did not say: a figure they may handle, or a question to draw, is a task;
+ * a question (an ask, or a sentence ending in a question mark) is answering; anything else is talk.
+ */
+export function doingOf(steps = []) {
+  if (steps.some((x) => (x.cmd === 'figure' && x.controls?.length) || (x.cmd === 'ask' && x.form === 'draw'))) return 'task';
+  if (steps.some((x) => x.cmd === 'ask')) return 'answer';
+  const says = steps.filter((x) => x.cmd === 'say');
+  return says.length && /\?\s*$/.test(says[says.length - 1].text) ? 'answer' : 'talk';
+}
+
 /**
  * A turn is usable when it says something and hands back to the child (or ends).
  * `maxWords`: the most the tutor may say in one turn (the server uses MAX_SPOKEN_WORDS).
  * `nod`: after a picture taken because the child paused, the tutor may only nod
  * (a turn that is just pause_for_child) and let them carry on.
  */
-export const MAX_SPOKEN_WORDS = 45;   // a turn is short: say a little, then wait for the child (owner, 11 Nov; 12 Nov: "verbal slop and a lot of it")
+export const MAX_SPOKEN_WORDS = 30;   // a turn is short: say a little, then wait for the child (owner, 11 Nov; 12 Nov: "verbal slop and a lot of it"; 45 -> 30 on 12 Nov after the yardstick: the child spoke 23-26% of the words)
+export const LATE_SPOKEN_WORDS = 25;  // after tutor turn 10 the turns get no longer (habits rose from 37-39% of turns 1-10 to 50-59% of turns 11-20)
+export const LATE_AFTER_TUTOR_TURN = 10;
+/** The word limit of one normal turn: 30, and 25 after tutor turn 10 (turnIndex counts from 0, so turn 11 is index 10). */
+export const wordCap = (turnIndex = 0) => (Number(turnIndex) >= LATE_AFTER_TUTOR_TURN ? LATE_SPOKEN_WORDS : MAX_SPOKEN_WORDS);
 export const spokenWords = (steps) => steps.filter((s) => s.cmd === 'say').reduce((n, s) => n + s.text.split(/\s+/).filter(Boolean).length, 0);
 export const turnProblems = (steps, { nod = false, maxWords = null } = {}) => {
   const out = [];
   if (maxWords && spokenWords(steps) > maxWords) out.push(`the turn says ${spokenWords(steps)} words: say at most ${maxWords}, then wait for the child`);
-  const isNod = nod && steps.length >= 1 && steps.every((s) => s.cmd === 'pause_for_child' || ['set_phase', 'record_diagnosis', 'note_interest', 'note_what_helped'].includes(s.cmd));
+  const isNod = nod && steps.length >= 1 && steps.every((s) => s.cmd === 'pause_for_child' || SILENT.includes(s.cmd));
   if (!isNod && !steps.some((s) => s.cmd === 'say')) out.push('the turn says nothing');
   const last = steps[steps.length - 1];
   if (!last || !['pause_for_child', 'end_session'].includes(last.cmd)) out.push('the turn does not end with pause_for_child or end_session');
@@ -546,9 +803,10 @@ export const STEP_SCHEMAS = [
   C('record_diagnosis', { skill: T, misconception: T, confidence: E(CONFIDENCE), evidence: T, next: E(NEXT), snapshot: T }, ['skill', 'misconception', 'confidence', 'evidence', 'next']),
   C('note_interest', { interest: T }, ['interest']),
   C('note_what_helped', { move: E(MOVES), helped: B }, ['move', 'helped']),
-  C('pause_for_child', { expect: E(EXPECTS), max_wait_s: I }, ['expect', 'max_wait_s']),
+  C('assess', { class: E(ANSWER_CLASSES), misconception: T, evidence: T, ask: T }, ['class', 'evidence']),
+  C('pause_for_child', { expect: E(EXPECTS), max_wait_s: I, doing: E(DOINGS) }, ['expect', 'max_wait_s']),
   C('end_session', { summary: T }, ['summary']),
 ];
 export const TURN_SCHEMA = S({ steps: { type: 'array', items: { anyOf: STEP_SCHEMAS } } }, ['steps']);
 
-export default { validateTurn, turnProblems, resolveSlot, cleanText, partsOf, TURN_SCHEMA, COMMANDS, LIMITS };
+export default { validateTurn, turnProblems, resolveSlot, repairStep, boardLines, describeItem, freeSlots, cleanText, partsOf, TURN_SCHEMA, COMMANDS, LIMITS };

@@ -422,14 +422,17 @@ var EXPECTS = ["typed", "spoken", "drawn", "any"];
 var CONFIDENCE = ["low", "med", "high"];
 var NEXT = ["probe", "reteach", "move_on"];
 var MOVES = ["drawing it", "counting together", "a real-life example", "smaller steps", "saying it aloud", "writing it down", "a picture on the board", "a story", "repeating it", "a quick game"];
+var DOINGS = ["answer", "task", "talk"];
+var ANSWER_CLASSES = ["understood", "right_unexplained", "partly_right", "misconception", "missing_prerequisite", "guess_or_no_attempt"];
 var HIGHLIGHT_STYLES = ["circle", "box", "glow"];
 var SHAPE_KINDS = ["circle", "rectangle", "square", "triangle"];
 var SLOTS = ["top", "middle", "bottom", "top_left", "top_right", "middle_left", "middle_right", "bottom_left", "bottom_right"];
 var DRAWN = ["write_text", "write_math", "fraction_bar", "number_line", "shape", "plot_points", "figure"];
 var MARKS = ["highlight", "underline", "point"];
-var COMMANDS = ["say", ...DRAWN, ...MARKS, "erase", "clear", "ask", "set_phase", "record_diagnosis", "note_interest", "note_what_helped", "pause_for_child", "end_session"];
+var COMMANDS = ["say", ...DRAWN, ...MARKS, "erase", "clear", "ask", "set_phase", "record_diagnosis", "note_interest", "note_what_helped", "assess", "pause_for_child", "end_session"];
 var TIMED = [...DRAWN, ...MARKS, "erase", "clear"];
 var PACES = ["slow"];
+var VALUE_WORD = new Set("zero nought one two three four five six seven eight nine ten eleven twelve thirteen fourteen fifteen sixteen twenty hundred half halves third thirds quarter quarters fourth fourths fifth fifths sixth sixths seventh sevenths eighth eighths ninth ninths tenth tenths twelfth twelfths nusu robo theluthi moja mbili tatu nne tano sita saba nane tisa kumi whole wholes over out of numerator numerators denominator denominators fraction fractions multiply times divide add plus minus same equal equivalent bigger larger greater more smaller less fewer longer shorter top bottom middle left right first second last both neither".split(" "));
 var S = (props, required) => ({ type: "object", properties: props, required, additionalProperties: false });
 var T = { type: "string" };
 var I = { type: "integer" };
@@ -460,7 +463,8 @@ var STEP_SCHEMAS = [
   C("record_diagnosis", { skill: T, misconception: T, confidence: E(CONFIDENCE), evidence: T, next: E(NEXT), snapshot: T }, ["skill", "misconception", "confidence", "evidence", "next"]),
   C("note_interest", { interest: T }, ["interest"]),
   C("note_what_helped", { move: E(MOVES), helped: B }, ["move", "helped"]),
-  C("pause_for_child", { expect: E(EXPECTS), max_wait_s: I }, ["expect", "max_wait_s"]),
+  C("assess", { class: E(ANSWER_CLASSES), misconception: T, evidence: T, ask: T }, ["class", "evidence"]),
+  C("pause_for_child", { expect: E(EXPECTS), max_wait_s: I, doing: E(DOINGS) }, ["expect", "max_wait_s"]),
   C("end_session", { summary: T }, ["summary"])
 ];
 var TURN_SCHEMA = S({ steps: { type: "array", items: { anyOf: STEP_SCHEMAS } } }, ["steps"]);
@@ -514,7 +518,7 @@ var CHILD_LISTEN = Object.freeze({
 var NUMBER_WORDS = new Set("zero nought none one two three four five six seven eight nine ten eleven twelve twenty thirty forty fifty hundred half halves quarter quarters third thirds fifth fifths sixth sixths eighth eighths tenth tenths whole yes no yeah yep nope ok okay maybe".split(" "));
 var ASK_AGAIN = Object.freeze([
   "Sorry, I did not catch that. Say it again for me, nice and slowly.",
-  "I still could not hear you well. Tap Talk and try once more, or type your answer if you like."
+  "I still could not hear you well. Say it once more, or type your answer if you like."
 ]);
 var CHILD_SPEECH = Object.freeze({
   // Sonic speed is a multiplier (docs: 0.6 to 1.5, default 1). A ten-year-old learning a new idea
@@ -545,7 +549,8 @@ var DEFAULT_TUTOR_VOICE = TUTOR_VOICES[0].id;
 // src/voice-tutor/session.js
 var DEFAULT_SETTINGS = Object.freeze({
   model: "claude-sonnet-5-5",
-  effort: "low",
+  // Medium from 12 Nov 2026 (the conversation engine: the model judges reasoning now). VOICE_TUTOR_EFFORT overrides it.
+  effort: "medium",
   sessionCapUsd: 1.5,
   dayCapUsd: 3,
   sessionMinutes: 20,
@@ -557,7 +562,11 @@ var DEFAULT_SETTINGS = Object.freeze({
   // Speed (Sonic: 0.6 to 1.5, 1 is normal) and emotion for a ten-year-old; the pace state moves them from here (childVoice.js).
   ttsSpeed: CHILD_SPEECH.baseSpeed,
   ttsEmotion: CHILD_SPEECH.emotion,
-  ttsSampleRate: 24e3
+  ttsSampleRate: 24e3,
+  // ElevenLabs, the second voice to try (owner, 16 Nov 2026): Flash v2.5 over the multi-context WebSocket,
+  // asked for with ?tts=elevenlabs. The voice id is a setting (VOICE_TUTOR_EL_VOICE); the default is a stock voice.
+  elModel: "eleven_flash_v2_5",
+  elVoice: "21m00Tcm4TlvDq8ikWAM"
 });
 var num = (v, d) => Number.isFinite(Number(v)) && String(v ?? "").trim() !== "" ? Number(v) : d;
 var settingsFrom = (get = () => void 0) => ({
@@ -574,7 +583,13 @@ var settingsFrom = (get = () => void 0) => ({
   ttsVoice: get("VOICE_TUTOR_TTS_VOICE") || DEFAULT_SETTINGS.ttsVoice,
   ttsSpeed: Math.max(0.6, Math.min(1.5, num(get("VOICE_TUTOR_TTS_SPEED"), DEFAULT_SETTINGS.ttsSpeed))),
   ttsEmotion: ["neutral", "calm", "content", "sad", "angry", "none"].includes(get("VOICE_TUTOR_TTS_EMOTION")) ? get("VOICE_TUTOR_TTS_EMOTION") : DEFAULT_SETTINGS.ttsEmotion,
-  ttsSampleRate: [16e3, 22050, 24e3, 44100].includes(num(get("VOICE_TUTOR_TTS_SAMPLE_RATE"), 0)) ? num(get("VOICE_TUTOR_TTS_SAMPLE_RATE"), 0) : DEFAULT_SETTINGS.ttsSampleRate
+  ttsSampleRate: [16e3, 22050, 24e3, 44100].includes(num(get("VOICE_TUTOR_TTS_SAMPLE_RATE"), 0)) ? num(get("VOICE_TUTOR_TTS_SAMPLE_RATE"), 0) : DEFAULT_SETTINGS.ttsSampleRate,
+  elModel: get("VOICE_TUTOR_EL_MODEL") || DEFAULT_SETTINGS.elModel,
+  elVoice: get("VOICE_TUTOR_EL_VOICE") || DEFAULT_SETTINGS.elVoice,
+  // The turn gate (gate.js, PLAN_TO_FOUR.md step 3): on unless VOICE_TUTOR_GATE=0.
+  gate: get("VOICE_TUTOR_GATE") !== "0",
+  // Matched good-turn examples in the turn's context (examples lookup, step 5): an A/B switch, off unless set to 1.
+  matchedExamples: get("VOICE_TUTOR_MATCHED_EXAMPLES") === "1"
 });
 var capCheck = ({ sessionUsd = 0, dayUsd = 0, turns = 0 } = {}, s = DEFAULT_SETTINGS) => {
   if (sessionUsd >= s.sessionCapUsd) return { ok: false, reason: "session-cap" };
@@ -588,6 +603,8 @@ var TOKEN_TTL_S = 600;
 var TOKENS_PER_MINUTE = 20;
 var CARTESIA_WS = "wss://api.cartesia.ai/tts/websocket";
 var CARTESIA_VERSION = "2026-08-14";
+var ELEVENLABS_WS = "wss://api.elevenlabs.io/v1/text-to-speech";
+var EL_SAMPLE_RATE = 24e3;
 var reply = (status, body) => ({ status, body });
 var dayStartIso = (now) => {
   const d = new Date(now);
@@ -617,7 +634,28 @@ async function mintToken({ user, body, db, settings, keys = {}, fetch: f, now = 
   if (!cap.ok) return reply(402, { error: "This lesson has used its allowance for today.", reason: cap.reason });
   const recent = await db.countTokens({ userId: user.id, since: new Date(now - 6e4).toISOString() });
   if (recent >= TOKENS_PER_MINUTE) return reply(429, { error: "Too many voice requests. Wait a moment." });
-  const key = String(keys.cartesia || "").trim().replace(/^["']|["']$/g, "");
+  const clean = (k) => String(k || "").trim().replace(/^["']|["']$/g, "");
+  if (body?.tts === "elevenlabs") {
+    const el = clean(keys.elevenlabs);
+    if (!el) return reply(503, { error: "ElevenLabs is not set up (ELEVENLABS_API_KEY is missing)." });
+    let out2;
+    try {
+      const r = await f("https://api.elevenlabs.io/v1/single-use-token/tts_websocket", { method: "POST", headers: { "xi-api-key": el } });
+      if (!r.ok) {
+        const t = typeof r.text === "function" ? await r.text().catch(() => "") : "";
+        throw new Error(`elevenlabs ${r.status} ${t.slice(0, 120)}`);
+      }
+      const j = await r.json();
+      if (!j?.token) throw new Error("elevenlabs gave no token");
+      out2 = { provider: "elevenlabs", token: j.token, expires_in: 840, url: ELEVENLABS_WS, model: settings.elModel, voice: settings.elVoice, sample_rate: EL_SAMPLE_RATE };
+    } catch (e) {
+      console.error("voice token", String(e?.message || e).slice(0, 200));
+      return reply(502, { error: "The voice service did not answer. Please type for now.", detail: String(e?.message || e).slice(0, 160) });
+    }
+    await db.recordUsage({ user_id: user.id, child_key: childKey, session_id: sid, model: "elevenlabs", cost_usd: 0, guard: ["token-voice"], dropped_steps: 0 });
+    return reply(200, out2);
+  }
+  const key = clean(keys.cartesia);
   if (!key) return reply(503, { error: "Voice is not set up (CARTESIA_API_KEY is missing)." });
   let out;
   try {
@@ -685,7 +723,7 @@ Deno.serve(async (req) => {
       body: await req.json().catch(() => ({})),
       db: dbFor(admin),
       settings: settingsFrom((k) => Deno.env.get(k)),
-      keys: { cartesia: Deno.env.get("CARTESIA_API_KEY") },
+      keys: { cartesia: Deno.env.get("CARTESIA_API_KEY"), elevenlabs: Deno.env.get("ELEVENLABS_API_KEY") },
       fetch
     });
     return json(out.body, out.status);

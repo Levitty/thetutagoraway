@@ -95,9 +95,16 @@ export const skillName = (code) => mapOf(code)[code]?.name || code;
 /** The sub-strand name of a skill, for the learner home; '' for Maths (it reads its own map). */
 export const topicOf = (code) => { const s = mapOf(code)[code]; return MAPS[subjectOfCskill(code)]?.substrands?.[s?.sub]?.name || ''; };
 
+/**
+ * A wrong answer marked 'SLIP' in a family (third element of [value, why, 'SLIP']) is counted wrong but is not
+ * evidence of a misunderstanding: a counting or arithmetic slip, one or two off. It carries no misconception.
+ */
+export const SLIP = 'SLIP';
+export const isSlip = (short) => short === SLIP;
+
 /** The full library code of a family's misconception: the skill's own, else a skill of the same sub-strand that has it. */
 export const misCode = (cskill, short) => {
-  if (!short) return null;
+  if (!short || isSlip(short)) return null;
   if (new RegExp(`^(${Object.keys(SUBJECT_PREFIXES).join('|')})\\.`).test(String(short))) return short;
   const map = mapOf(cskill);
   const sk = map[cskill];
@@ -128,19 +135,20 @@ export function toItem(p, n) {
       options: texts.map((text, i) => {
         const right = norm(text) === norm(p.answer);
         const m = mis[norm(text)];
-        return { key: LETTERS[i], text, right, ...(right ? {} : { mis: m?.mis ? misCode(p.cskill, m.mis) : (p.type === 'spot-mistake' ? workMis : null), why: m?.feedback || '' }) };
+        const slip = isSlip(m?.mis);
+        return { key: LETTERS[i], text, right, ...(right ? {} : { mis: m?.mis ? misCode(p.cskill, m.mis) : (p.type === 'spot-mistake' ? workMis : null), why: m?.feedback || '', ...(slip ? { slip: true } : {}) }) };
       }) };
   }
   return { ...base, kind: 'typed', answer: String(p.answer), accepts: p.accepts || [String(p.answer)],
-    wrong: (p.misconceptions || []).map(m => ({ value: String(m.when), why: m.feedback || '', mis: m.mis ? misCode(p.cskill, m.mis) : null })) };
+    wrong: (p.misconceptions || []).map(m => ({ value: String(m.when), why: m.feedback || '', mis: m.mis ? misCode(p.cskill, m.mis) : null, ...(isSlip(m.mis) ? { slip: true } : {}) })) };
 }
 
 /** What Tuta keeps for the worksheet and the key: the question, the right answer, and each wrong answer's misconception. */
 export const keyItem = (it) => it && ({ n: it.n, ...(it.recheck ? { recheck: true } : {}), cskill: it.cskill, family_id: it.family_id, form: it.form, rung: it.rung, kind: it.kind,
   question: it.question, instruction: it.instruction, ...(it.marker ? { marker: it.marker } : {}), ...(it.passage ? { passage: it.passage } : {}), ...(it.table ? { table: it.table } : {}), ...(it.steps_shown ? { steps_shown: it.steps_shown } : {}),
   answer: it.answer,
-  ...(it.kind === 'choice' ? { options: it.options.map(o => ({ key: o.key, text: o.text, right: o.right, ...(o.right ? {} : { mis: o.mis || null }) })) }
-    : { wrong: (it.wrong || []).filter(w => w.mis).map(w => ({ value: w.value, mis: w.mis })) }) });
+  ...(it.kind === 'choice' ? { options: it.options.map(o => ({ key: o.key, text: o.text, right: o.right, ...(o.right ? {} : { mis: o.mis || null, ...(o.slip ? { slip: true } : {}), ...(o.why ? { why: o.why } : {}) }) })) }
+    : { wrong: (it.wrong || []).filter(w => w.mis || w.slip).map(w => ({ value: w.value, mis: w.mis || null, ...(w.slip ? { slip: true } : {}), ...(w.why ? { why: w.why } : {}) })) }) });
 
 // ---------------------------------------------------------------- which families
 /**

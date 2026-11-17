@@ -5,7 +5,8 @@
 // ============================================================================
 import { test } from 'node:test';
 import assert from 'node:assert/strict';
-import { validateTurn, turnProblems, COMMANDS, TURN_SCHEMA, MAX_BOARD_ITEMS, resolveSlot, cleanText } from '../src/voice-tutor/commands.js';
+import { validateTurn, turnProblems, COMMANDS, TURN_SCHEMA, MAX_BOARD_ITEMS, resolveSlot, cleanText, doingOf, ANSWER_CLASSES, DOINGS, repairStep, boardLines, describeItem, freeSlots } from '../src/voice-tutor/commands.js';
+import { REPLY_FORM } from '../src/voice-tutor/prompt.js';
 import { parseMath, layoutMath, mathToText } from '../src/voice-tutor/mathExpr.js';
 import { emptyBoard, applyStep, boardSummary } from '../src/voice-tutor/board.js';
 
@@ -21,7 +22,8 @@ const onBoard = [
   { id: 'nl', cmd: 'number_line', from: 0, to: 1, divisions: 4, marks: [{ value: 0.75, label: '3/4', style: 'dot' }], jumps: [], slot: 'bottom_left' },
 ];
 
-// One good example of each of the 20 commands (figure: rendering engine phase 2; note_interest and note_what_helped: the learner profile).
+// One good example of each of the 21 commands (figure: rendering engine phase 2; note_interest and note_what_helped: the learner
+// profile; assess: the conversation engine, 12 Nov 2026).
 const GOOD = {
   say: { cmd: 'say', text: 'Here is a chapati cut into four equal pieces.' },
   write_text: { cmd: 'write_text', id: 't1', text: 'Mama cuts a cake.', slot: 'bottom_right', size: 'm', colour: 'green', on: 'chapati', delay_ms: 200 },
@@ -41,12 +43,13 @@ const GOOD = {
   record_diagnosis: { cmd: 'record_diagnosis', skill: EQ, misconception: ADD, confidence: 'high', evidence: 'Wrote 4 for 1/3 = ?/6 and 6 for 2/4 = ?/8.', next: 'reteach' },
   note_interest: { cmd: 'note_interest', interest: 'football' },
   note_what_helped: { cmd: 'note_what_helped', move: 'drawing it', helped: true },
-  pause_for_child: { cmd: 'pause_for_child', expect: 'typed', max_wait_s: 30 },
+  assess: { cmd: 'assess', class: 'misconception', misconception: ADD, evidence: 'said 4 sixths: added 3 to top and bottom', ask: 'q1' },
+  pause_for_child: { cmd: 'pause_for_child', expect: 'typed', max_wait_s: 30, doing: 'answer' },
   end_session: { cmd: 'end_session', summary: 'Worked on equivalent fractions.' },
 };
 
-test('the list has exactly the 20 approved commands, and each one passes when right', () => {
-  assert.equal(COMMANDS.length, 20);
+test('the list has exactly the 21 approved commands, and each one passes when right', () => {
+  assert.equal(COMMANDS.length, 21);
   assert.deepEqual(Object.keys(GOOD).sort(), [...COMMANDS].sort());
   for (const s of Object.values(GOOD)) ok(s, { board: onBoard, allowedMis: [ADD], skills: [EQ] });
 });
@@ -71,7 +74,42 @@ test('unknown commands, extra fields and wrong types are dropped', () => {
   no(null, {}, /not an object/);
   no({ cmd: 'write_text', id: 'Bad Id!', text: 'Hi', slot: 'top' }, {}, /bad id/);
   no({ cmd: 'say', text: 'x' + 'a'.repeat(220) }, {}, /longer than 220/);
-  no({ cmd: 'say', text: 'One. Two. Three. Four.' }, {}, /three sentences/);
+  // Sentences are not counted to drop a say (the turn's word limit keeps turns short): a counting line is kept, and noted.
+  const counted = validateTurn({ steps: [{ cmd: 'say', text: 'One. Two. Three. Four.' }] });
+  assert.equal(counted.steps[0].text, 'One. Two. Three. Four.');
+  assert.match(counted.notes.join(' '), /4 sentences/);
+});
+
+test('an obvious slip in a step\'s shape is mended, and noted; anything unclear is still dropped', () => {
+  // The first test-set run (12 Nov 2026): 70 sentences written as {"cmd":"say","say":"..."}, 10 steps with no cmd.
+  for (const alias of ['say', 'sentence', 'words']) {
+    const v = validateTurn({ steps: [{ cmd: 'say', [alias]: 'Take your time.', move: 'Wait and nudge' }] });
+    assert.deepEqual(v.steps, [{ cmd: 'say', text: 'Take your time.', move: 'Wait and nudge' }], alias);
+    assert.match(v.notes.join(' '), new RegExp(`"${alias}" read as text`));
+  }
+  assert.deepEqual(validateTurn({ steps: [{ say: 'Look at the bar.' }] }).steps, [{ cmd: 'say', text: 'Look at the bar.' }]);
+  assert.deepEqual(validateTurn({ steps: [{ text: 'Look at the bar.', move: 'Revoice and build' }] }).steps, [{ cmd: 'say', text: 'Look at the bar.', move: 'Revoice and build' }]);
+  // The same words twice, or an empty one: the alias is left out. Different words: "text" is kept and the alias left out
+  // (12 Nov 2026, run 2: 42 says were dropped as "extra field say").
+  assert.equal(validateTurn({ steps: [{ cmd: 'say', text: 'Hi.', say: 'Hi.' }] }).steps[0].text, 'Hi.');
+  assert.equal(validateTurn({ steps: [{ cmd: 'say', text: 'Hi.', say: '' }] }).steps[0].text, 'Hi.');
+  const both = validateTurn({ steps: [{ cmd: 'say', text: 'Hi.', say: 'Something else.' }] });
+  assert.deepEqual(both.steps, [{ cmd: 'say', text: 'Hi.' }]);
+  assert.match(both.notes.join(' '), /said something else; text kept/);
+  // Harmless extras (a say on a silent step, an id or a timing on a say, a note): left out, the step kept.
+  assert.deepEqual(ok({ cmd: 'assess', class: 'understood', evidence: 'said four', say: 'Well done.' }), { cmd: 'assess', class: 'understood', evidence: 'said four' });
+  assert.deepEqual(ok({ cmd: 'say', text: 'Look.', id: 's1', on: 'x', delay_ms: 20, note: 'calm' }), { cmd: 'say', text: 'Look.' });
+  assert.equal(ok({ cmd: 'pause_for_child', expect: 'any', max_wait_s: 30, doing: 'answer', text: 'What do you think?' }).doing, 'answer');
+  // Timing that a drawing command does not take is still not harmless.
+  no({ cmd: 'clear', pace: 'slow' }, {}, /extra field pace/);
+  // A question's prompt and answer, a judgement's class, a hand-back's defaults.
+  assert.deepEqual(repairStep({ cmd: 'ask', id: 'q', question: 'How many?', form: 'number', answer: '4' }), { cmd: 'ask', id: 'q', form: 'number', prompt: 'How many?', expected: '4' });
+  assert.equal(ok({ cmd: 'assess', assess: 'understood', evidence: 'said four' }).class, 'understood');
+  no({ cmd: 'assess', assess: 'clever', evidence: 'x' }, {}, /extra field assess/);
+  assert.deepEqual(ok({ cmd: 'pause_for_child', doing: 'answer' }), { cmd: 'pause_for_child', expect: 'any', max_wait_s: 30, doing: 'answer' });
+  // Never mended: a step with no cmd that is not plainly a say, or an unknown command.
+  no({ shaded: 2, parts: 4 }, {}, /unknown command/);
+  no({ cmd: 'speak', text: 'Hi.' }, {}, /unknown command/);
 });
 
 test('values out of range are dropped', () => {
@@ -79,7 +117,9 @@ test('values out of range are dropped', () => {
   no({ cmd: 'fraction_bar', id: 'b', parts: 4, shaded: 5, slot: 'top' }, {}, /count out of range/);
   no({ cmd: 'fraction_bar', id: 'b', parts: 4, shaded: [0, 2], slot: 'top' }, {}, /part out of range/);
   no({ cmd: 'fraction_bar', id: 'b', parts: 4, shaded: [2, 2], slot: 'top' }, {}, /twice/);
-  no({ cmd: 'shape', id: 's', kind: 'circle', parts: 1, shaded: 0, slot: 'top' }, {}, /2 to 12/);
+  // A whole is one part (12 Nov 2026, run 2: "Here is a chapati" with no chapati, 11 times).
+  assert.equal(ok({ cmd: 'shape', id: 's', kind: 'circle', parts: 1, shaded: 0, slot: 'top' }).parts, 1);
+  no({ cmd: 'shape', id: 's', kind: 'circle', parts: 0, shaded: 0, slot: 'top' }, {}, /1 to 12/);
   no({ cmd: 'number_line', id: 'n', from: 0, to: 13, divisions: 2, slot: 'top' }, {}, /0 to 12/);
   no({ cmd: 'number_line', id: 'n', from: 3, to: 1, divisions: 2, slot: 'top' }, {}, /from < to/);
   no({ cmd: 'number_line', id: 'n', from: 0, to: 12, divisions: 12, slot: 'top' }, {}, /too many ticks/);
@@ -89,7 +129,14 @@ test('values out of range are dropped', () => {
   no({ cmd: 'plot_points', id: 'p', x_axis: { from: 0, to: 5 }, y_axis: { from: 0, to: 5 }, points: Array(13).fill({ x: 1, y: 1 }), slot: 'top' }, {}, /1 to 12 points/);
   no({ cmd: 'pause_for_child', expect: 'typed', max_wait_s: 90 }, {}, /5 to 60/);
   no({ ...GOOD.write_text, delay_ms: 5000 }, {}, /delay_ms/);
-  no({ cmd: 'ask', id: 'q', prompt: 'Pick', form: 'choice', choices: ['a', 'b', 'c', 'd', 'e'], expected: 'a' }, {}, /2 to 4/);
+  // Too many or too few choices, with the answer given: asked as a word or number answer, so the seal still has it
+  // (12 Nov 2026, run 2). With no answer it is still dropped.
+  assert.deepEqual(['form', 'choices', 'expected'].map((k) => ok({ cmd: 'ask', id: 'q', prompt: 'Pick', form: 'choice', choices: ['a', 'b', 'c', 'd', 'e'], expected: 'a' })[k]), ['word', undefined, 'a']);
+  assert.equal(ok({ cmd: 'ask', id: 'q', prompt: 'Which?', form: 'choice', choices: ['3/4'], expected: '3/4' }).form, 'fraction');
+  no({ cmd: 'ask', id: 'q', prompt: 'Pick', form: 'choice', choices: ['a', 'b', 'c', 'd', 'e'] }, {}, /2 to 4/);
+  // More accepted forms than the limit: the first eight are kept.
+  const many = ok({ cmd: 'ask', id: 'q', prompt: 'How many?', form: 'number', expected: '4', accepts: ['4', 'four', 'four pieces', '4 pieces', 'four parts', '4 parts', 'four equal pieces', 'nne', 'four quarters'] });
+  assert.equal(many.accepts.length, 8);
   no({ cmd: 'ask', id: 'q', prompt: 'Pick', form: 'choice', choices: ['a', 'b'], expected: 'c' }, {}, /not one of the choices/);
 });
 
@@ -148,9 +195,50 @@ test('slots stop overlap: a taken slot moves to a free one, a full board refuses
   const full = validateTurn({ steps: ['a', 'b', 'c', 'd', 'e', 'f', 'g'].map((id) => ({ cmd: 'write_text', id, text: id, slot: 'top_left' })) });
   assert.equal(full.steps.length, 6);
   assert.match(full.dropped[0].reason, /no free slot/);
-  // 30 items at most, whatever the slots.
+  // 30 items at most, whatever the slots: the oldest goes to make room.
   const many = Array.from({ length: MAX_BOARD_ITEMS }, (_, k) => ({ id: `i${k}`, cmd: 'write_text', text: 'x' }));
-  no({ cmd: 'write_text', id: 'z', text: 'z', slot: 'top' }, { board: many }, /board is full/);
+  assert.deepEqual(validateTurn({ steps: [{ cmd: 'write_text', id: 'z', text: 'z', slot: 'top' }] }, { board: many }).steps.map((x) => x.targets || x.id), [['i0'], 'z']);
+});
+
+test('a full board makes room: the slot asked for first, then the oldest, never what this turn uses', () => {
+  // The first test-set run (12 Nov 2026): 19 drawings dropped for "no free slot" while the words pointed at them.
+  const full = [
+    { id: 'title', cmd: 'write_text', text: 'Today: same amount', slot: 'top' },
+    { id: 'chap1', cmd: 'shape', kind: 'circle', parts: 2, shaded: 0, slot: 'middle' },
+    { id: 'bar1', cmd: 'fraction_bar', parts: 4, shaded: 2, slot: 'bottom' },
+  ];
+  // The item in the wanted slot is replaced, with the erase as a step before the drawing, on the same word.
+  const v = validateTurn({ steps: [{ cmd: 'say', text: 'Now I cut each half again.' }, { cmd: 'shape', id: 'chap2', kind: 'circle', parts: 4, shaded: 0, slot: 'middle', on: 'cut' }] }, { board: full });
+  assert.deepEqual(v.dropped, []);
+  assert.deepEqual(v.steps.slice(1), [{ cmd: 'erase', targets: ['chap1'], on: 'cut' }, { ...v.steps[2], id: 'chap2', slot: 'middle' }]);
+  assert.match(v.notes.join(' '), /chap2: the board was full, so chap1 was erased to make room/);
+  // An item this turn pointed at is kept; the oldest unused one goes instead.
+  const w = validateTurn({ steps: [{ cmd: 'point', target: 'chap1' }, { cmd: 'fraction_bar', id: 'b2', parts: 8, shaded: 0, slot: 'middle' }] }, { board: full });
+  assert.deepEqual(w.steps[1], { cmd: 'erase', targets: ['title'] });
+  assert.equal(w.steps[2].slot, 'top');
+  // Everything in use this turn: dropped, as before, and the board is left as it was.
+  const x = validateTurn({ steps: [{ cmd: 'point', target: 'title' }, { cmd: 'point', target: 'chap1' }, { cmd: 'point', target: 'bar1' }, { cmd: 'write_text', id: 'n', text: 'n', slot: 'top' }, { cmd: 'highlight', target: 'bar1' }] }, { board: full });
+  assert.match(x.dropped[0].reason, /no free slot/);
+  assert.deepEqual(x.steps.map((s) => s.cmd), ['point', 'point', 'point', 'highlight']);
+  // The page's own board takes the erase and then the drawing.
+  let b = emptyBoard();
+  for (const it of full) b = applyStep(b, { ...it }, 1);
+  for (const st of v.steps) b = applyStep(b, st, 2);
+  assert.deepEqual(b.order, ['title', 'bar1', 'chap2']);
+  assert.deepEqual(b.log, []);
+});
+
+test('the tutor is told what each board item really shows, and which slots are free', () => {
+  assert.equal(describeItem({ id: 'chap1', cmd: 'shape', kind: 'circle', parts: 2, shaded: 0, slot: 'middle' }), 'chap1: a circle at middle, cut into 2 equal parts, none shaded');
+  assert.equal(describeItem({ id: 'b', cmd: 'fraction_bar', parts: 8, shaded: [1, 2, 3, 4], slot: 'bottom', second_bar: { parts: 2, shaded: 1 } }), 'b: a bar at bottom, cut into 8 equal parts, 4 of 8 shaded (parts 1, 2, 3, 4); under it a second bar, cut into 2 equal parts, 1 of 2 shaded');
+  assert.equal(describeItem({ id: 't', cmd: 'write_text', text: 'Today: halves', slot: 'top' }), 't: the words "Today: halves" at top');
+  assert.equal(describeItem({ id: 'f', cmd: 'figure', type: 'fraction', params: { shape: 'bar', parts: 3, shaded: 1, second: { parts: 6, shaded: 0 } }, controls: ['shade_second'], slot: 'middle' }), 'f: a fraction bar at middle, cut into 3 equal parts, 1 of 3 shaded; a second bar, cut into 6 equal parts, none shaded beside it (the child may: shade_second)');
+  assert.deepEqual(freeSlots([{ id: 'a', cmd: 'write_text', slot: 'top' }, { id: 'b', cmd: 'shape', slot: 'middle_left' }]), ['middle_right', 'bottom']);
+  assert.deepEqual(freeSlots([], ['bottom_left']), ['top', 'middle', 'bottom_right']);
+  const lines = boardLines([{ id: 'a', cmd: 'write_text', text: 'x', slot: 'top' }, { id: 'b', cmd: 'shape', kind: 'circle', parts: 4, shaded: 0, slot: 'middle' }, { id: 'c', cmd: 'shape', kind: 'circle', parts: 2, shaded: 1, slot: 'bottom' }]);
+  assert.match(lines[0], /^Board now \(what the child sees\): a: the words "x" at top; b: a circle at middle, cut into 4 equal parts, none shaded; c: a circle at bottom, cut into 2 equal parts, 1 of 2 shaded\.$/);
+  assert.match(lines.at(-1), /Free slots: none\. A new drawing erases the oldest items/);
+  assert.deepEqual(boardLines([]), ['Board now (what the child sees): empty.', 'Free slots: top, middle, bottom.']);
 });
 
 test('a turn: at most 12 steps, one question, and nothing after it is handed to the child', () => {
@@ -195,4 +283,41 @@ test('the board: clear wipes tutor ink only, after a snapshot; the child\'s ink 
   assert.equal(b.ask.expected, undefined);
   assert.equal(b.ask.wrong, undefined);
   assert.deepEqual(boardSummary(applyStep(emptyBoard(), GOOD.shape, 1)).map((x) => x.id), ['s9']);
+});
+
+// ---------------------------------------------------------------- the conversation engine (12 Nov 2026)
+test('assess: the answer\'s class, checked; a misconception code only with class misconception, and only an allowed one', () => {
+  const opts = { allowedMis: [ADD], skills: [EQ] };
+  assert.deepEqual(ANSWER_CLASSES, ['understood', 'right_unexplained', 'partly_right', 'misconception', 'missing_prerequisite', 'guess_or_no_attempt']);
+  for (const c of ANSWER_CLASSES.filter((x) => x !== 'misconception')) assert.equal(ok({ cmd: 'assess', class: c, evidence: 'said two quarters' }, opts).class, c);
+  assert.equal(ok({ cmd: 'assess', class: 'misconception', misconception: ADD, evidence: 'added 3 to both' }, opts).misconception, ADD);
+  no({ cmd: 'assess', class: 'clever', evidence: 'x' }, opts, /class must be one of/);
+  no({ cmd: 'assess', class: 'misconception', evidence: 'x' }, opts, /needs its code/);
+  no({ cmd: 'assess', class: 'misconception', misconception: `${EQ}.M_MADE_UP`, evidence: 'x' }, opts, /not on the allowed list/);
+  no({ cmd: 'assess', class: 'understood', misconception: ADD, evidence: 'x' }, opts, /only with class misconception/);
+  // Silent text too long is cut, never the step (12 Nov 2026, run 2: 12 end_session steps dropped for a long summary).
+  assert.equal(ok({ cmd: 'assess', class: 'understood', evidence: 'x '.repeat(100) }, opts).evidence.length <= 160, true);
+  const end = validateTurn({ steps: [{ cmd: 'end_session', summary: `${'The child shaded halves well. '.repeat(14)}` }] });
+  assert.equal(end.steps.length, 1); assert.ok(end.steps[0].summary.length <= 300); assert.match(end.steps[0].summary, /\.$/);
+  assert.match(end.notes.join(' '), /summary: longer than 300, cut/);
+  no({ cmd: 'assess', class: 'understood', evidence: 'x', ask: 'Q 1' }, opts, /bad ask id/);
+  no({ cmd: 'assess', class: 'understood', evidence: 'x', confidence: 'high' }, opts, /extra field/);
+  // One a turn, and it is silent: a turn that only assesses and hands back is a nod, never "says nothing" twice.
+  const v = validateTurn({ steps: [{ cmd: 'assess', class: 'understood', evidence: 'a' }, { cmd: 'assess', class: 'understood', evidence: 'b' }, GOOD.say, GOOD.pause_for_child] }, opts);
+  assert.match(v.dropped[0].reason, /one assessment a turn/);
+});
+
+test('pause_for_child carries what the child is now doing; left out, it is read from the turn', () => {
+  assert.deepEqual(DOINGS, ['answer', 'task', 'talk']);
+  for (const d of DOINGS) assert.equal(ok({ cmd: 'pause_for_child', expect: 'any', max_wait_s: 30, doing: d }).doing, d);
+  no({ cmd: 'pause_for_child', expect: 'any', max_wait_s: 30, doing: 'sleep' }, {}, /doing must be one of/);
+  const read = (steps) => validateTurn({ steps: [...steps, { cmd: 'pause_for_child', expect: 'any', max_wait_s: 30 }] }).steps.at(-1).doing;
+  assert.equal(read([GOOD.say, GOOD.ask]), 'answer');
+  assert.equal(read([{ cmd: 'say', text: 'What do you notice?' }]), 'answer');
+  assert.equal(read([{ cmd: 'say', text: 'Shade the sixths to match.' }, GOOD.figure]), 'task');
+  assert.equal(read([{ cmd: 'say', text: 'Tell me about your day.' }]), 'talk');
+  assert.equal(doingOf([]), 'talk');
+  // The reply form the model reads lists it, from the same schema.
+  assert.match(REPLY_FORM, /- pause_for_child: expect: [a-z|]+, max_wait_s: integer, doing\?: answer\|task\|talk/);
+  assert.match(REPLY_FORM, /- assess: class: understood\|right_unexplained\|partly_right\|misconception\|missing_prerequisite\|guess_or_no_attempt, misconception\?: string, evidence: string, ask\?: string/);
 });

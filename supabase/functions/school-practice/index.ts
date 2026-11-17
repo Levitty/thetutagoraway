@@ -101522,7 +101522,8 @@ var SKILLS_G5 = {
     "mis": [
       "M_EQUALS_MEANS_ANSWER",
       "M_LETTER_AS_OBJECT",
-      "M_EXPRESSION_IS_EQUATION"
+      "M_EXPRESSION_IS_EQUATION",
+      "M_NUMBER_IS_EQUATION"
     ]
   },
   "MATH.G5.NUMBER.SIMPLE_EQUATIONS.EQ_FORM_ADD_SUB": {
@@ -107702,13 +107703,13 @@ var FAMILIES159 = [
     rung: 1,
     gen: () => {
       const l = L14(), a = randInt(3, 20), b = a + randInt(3, 40);
-      const options = mc10(`${l} + ${a} = ${b}`, [[`${l} + ${a}`, "This has no equals sign, so it does not say two things are equal. It is an expression.", "M_EXPRESSION_IS_EQUATION"], [`${b}`, "A single number is not an equation. An equation has an equals sign with a side on each side.", "M_EXPRESSION_IS_EQUATION"], [`${l} + ${a} + ${b}`, "This is an expression with no equals sign.", "M_EXPRESSION_IS_EQUATION"]]);
+      const options = mc10(`${l} + ${a} = ${b}`, [[`${l} + ${a}`, "This has no equals sign, so it does not say two things are equal. It is an expression.", "M_EXPRESSION_IS_EQUATION"], [`${b}`, "A single number is not an equation. An equation has an equals sign with a side on each side.", "M_NUMBER_IS_EQUATION"], [`${l} + ${a} =`, "An equals sign needs something on both sides. Here nothing follows it, so it is waiting for an answer, not saying two things are equal.", "M_EQUALS_MEANS_ANSWER"]]);
       return {
         question: `${person().name} writes four lines on the board. Which of these is an equation?`,
         options,
         instruction: "Choose the equation.",
         hints: ["An equation says two things have the same value.", "Look for an equals sign with something on each side."],
-        steps: [`${l} + ${a} = ${b} has an equals sign with a side on each side.`, "The others are expressions."]
+        steps: [`${l} + ${a} = ${b} has an equals sign with a side on each side.`, "The others are an expression, a single number and a sum with nothing after the equals sign."]
       };
     }
   }),
@@ -107723,7 +107724,7 @@ var FAMILIES159 = [
       return {
         question: `A balance scale has ${a} + ${b} on one side and \u25A1 + ${c19} on the other side, and it balances. What number goes in the box?`,
         answer: box,
-        wrong: [[a + b, 'The sign = means both sides have the same value, not "write the answer now". The box is not the whole sum.', "M_EQUALS_MEANS_ANSWER"], [a + b + c19, "Both sides must be equal. Take the " + c19 + " away from the total, do not add it.", "M_EQUALS_MEANS_ANSWER"], [a + c19, "Check that both sides are equal.", "M_EQUALS_MEANS_ANSWER"], [box + 1, "Check that both sides are the same.", "M_EQUALS_MEANS_ANSWER"]],
+        wrong: [[a + b, 'The sign = means both sides have the same value, not "write the answer now". The box is not the whole sum.', "M_EQUALS_MEANS_ANSWER"], [a + b + c19, "Both sides must be equal. Take the " + c19 + " away from the total, do not add it.", "SLIP"], [a + c19, "That adds the " + a + " to the " + c19 + " beside the box. Work out the left side first, then find what goes with the " + c19 + ".", "SLIP"], [box + 1, "One too many. Put your number in the box: it plus " + c19 + " must make " + (a + b) + ".", "SLIP"]],
         hints: ["The sides of a balance are equal.", `First work out the left side. What added to ${c19} makes it?`],
         steps: [`${a} + ${b} = ${a + b}.`, `\u25A1 + ${c19} = ${a + b}, so \u25A1 = ${box}.`],
         chk: (v) => v + c19 === a + b
@@ -131468,6 +131469,10 @@ function checkAnswerMatch(userAnswer, problem) {
 // src/school/homeworkSitting.js
 var LEAVE_REASONS = ["left the page", "switched away", "closed the page", "went back"];
 var norm9 = (t) => String(t ?? "").trim().replace(/\s+/g, " ").toLowerCase();
+var wrongFor = (it, raw) => {
+  const check = it.marker === "text" ? checkTextAnswer : checkAnswerMatch;
+  return (it.wrong || []).find((x) => (x.mis || x.slip) && (norm9(x.value) === norm9(raw) || check(raw, { answer: x.value, accepts: [x.value] })));
+};
 function markItem(it, response) {
   const raw = String(response ?? "").trim();
   if (raw === "") return { correct: false, chosen: "", mis: null, blank: true };
@@ -131475,13 +131480,13 @@ function markItem(it, response) {
     const same = it.marker === "text" ? (a, b) => String(a).trim() === String(b).trim() : (a, b) => norm9(a) === norm9(b);
     const o = it.options.find((x) => x.key === raw.toUpperCase()) || it.options.find((x) => same(x.text, raw));
     if (!o) return { correct: false, chosen: raw.slice(0, 40), mis: null };
-    return { correct: !!o.right, chosen: o.key, mis: o.right ? null : o.mis || null };
+    return { correct: !!o.right, chosen: o.key, mis: o.right ? null : o.mis || null, ...!o.right && o.slip ? { slip: true } : {} };
   }
   const check = it.marker === "text" ? checkTextAnswer : checkAnswerMatch;
   const correct = check(raw, { answer: it.answer, accepts: it.accepts });
   if (correct) return { correct: true, chosen: raw.slice(0, 60), mis: null };
-  const w14 = (it.wrong || []).find((x) => x.mis && (norm9(x.value) === norm9(raw) || check(raw, { answer: x.value, accepts: [x.value] })));
-  return { correct: false, chosen: raw.slice(0, 60), mis: w14?.mis || null };
+  const w14 = wrongFor(it, raw);
+  return { correct: false, chosen: raw.slice(0, 60), mis: w14?.mis || null, ...w14?.slip ? { slip: true } : {} };
 }
 function step(s, ev, now) {
   const at2 = new Date(now).toISOString();
@@ -131499,7 +131504,7 @@ function step(s, ev, now) {
       if (Number(ev.n) !== next) return { ok: false, error: "One question at a time, in order." };
       const it = s.items[next - 1];
       const m20 = markItem(it, ev.response);
-      const a = [...answers, { n: next, chosen: m20.chosen, correct: m20.correct, mis: m20.mis, at: at2 }];
+      const a = [...answers, { n: next, chosen: m20.chosen, correct: m20.correct, mis: m20.mis, ...m20.slip ? { slip: true } : {}, at: at2 }];
       const done = a.length >= total;
       return { ok: true, mark: m20, s: { ...s, answers: a, status: done ? "submitted" : "started", ...done ? { finished_at: at2 } : {} } };
     }
@@ -131526,7 +131531,7 @@ function resultsFor(sittings) {
       finished_at: s.finished_at || null,
       locked_at: s.locked_at || null,
       lock_question: s.lock_question || null,
-      items: answers.map((a) => ({ n: a.n, cskill: s.items[a.n - 1]?.cskill || null, correct: !!a.correct, chosen: a.chosen ?? "", mis: a.mis || null }))
+      items: answers.map((a) => ({ n: a.n, cskill: s.items[a.n - 1]?.cskill || null, correct: !!a.correct, chosen: a.chosen ?? "", mis: a.mis || null, ...a.slip ? { slip: true } : {} }))
     };
   }
   return out;
@@ -131585,8 +131590,10 @@ var topicOf = (code) => {
   const s = mapOf(code)[code];
   return MAPS[subjectOfCskill(code)]?.substrands?.[s?.sub]?.name || "";
 };
+var SLIP = "SLIP";
+var isSlip = (short) => short === SLIP;
 var misCode = (cskill, short) => {
-  if (!short) return null;
+  if (!short || isSlip(short)) return null;
   if (new RegExp(`^(${Object.keys(SUBJECT_PREFIXES).join("|")})\\.`).test(String(short))) return short;
   const map = mapOf(cskill);
   const sk = map[cskill];
@@ -131624,7 +131631,8 @@ function toItem(p, n) {
       options: texts.map((text, i) => {
         const right = norm10(text) === norm10(p.answer);
         const m20 = mis[norm10(text)];
-        return { key: LETTERS3[i], text, right, ...right ? {} : { mis: m20?.mis ? misCode(p.cskill, m20.mis) : p.type === "spot-mistake" ? workMis : null, why: m20?.feedback || "" } };
+        const slip = isSlip(m20?.mis);
+        return { key: LETTERS3[i], text, right, ...right ? {} : { mis: m20?.mis ? misCode(p.cskill, m20.mis) : p.type === "spot-mistake" ? workMis : null, why: m20?.feedback || "", ...slip ? { slip: true } : {} } };
       })
     };
   }
@@ -131633,7 +131641,7 @@ function toItem(p, n) {
     kind: "typed",
     answer: String(p.answer),
     accepts: p.accepts || [String(p.answer)],
-    wrong: (p.misconceptions || []).map((m20) => ({ value: String(m20.when), why: m20.feedback || "", mis: m20.mis ? misCode(p.cskill, m20.mis) : null }))
+    wrong: (p.misconceptions || []).map((m20) => ({ value: String(m20.when), why: m20.feedback || "", mis: m20.mis ? misCode(p.cskill, m20.mis) : null, ...isSlip(m20.mis) ? { slip: true } : {} }))
   };
 }
 var keyItem = (it) => it && {
@@ -131651,7 +131659,7 @@ var keyItem = (it) => it && {
   ...it.table ? { table: it.table } : {},
   ...it.steps_shown ? { steps_shown: it.steps_shown } : {},
   answer: it.answer,
-  ...it.kind === "choice" ? { options: it.options.map((o) => ({ key: o.key, text: o.text, right: o.right, ...o.right ? {} : { mis: o.mis || null } })) } : { wrong: (it.wrong || []).filter((w14) => w14.mis).map((w14) => ({ value: w14.value, mis: w14.mis })) }
+  ...it.kind === "choice" ? { options: it.options.map((o) => ({ key: o.key, text: o.text, right: o.right, ...o.right ? {} : { mis: o.mis || null, ...o.slip ? { slip: true } : {}, ...o.why ? { why: o.why } : {} } })) } : { wrong: (it.wrong || []).filter((w14) => w14.mis || w14.slip).map((w14) => ({ value: w14.value, mis: w14.mis || null, ...w14.slip ? { slip: true } : {}, ...w14.why ? { why: w14.why } : {} })) }
 };
 function allowedFamilies(cskills, approvedIds = []) {
   const approved = new Set(approvedIds);

@@ -94,8 +94,8 @@ export function checkFamily(def, draws = FAMILY_DRAWS) {
       misTally.wrong++;
       const ms = [].concat(m.mis || []);
       if (!ms.length) { fail(`${where}: wrong answer "${m.when}" names no misconception (mis)`); continue; }
-      misTally.tied++;
-      for (const c of ms) if (!codes.near.has(c)) fail(`${where}: "${c}" is not a misconception of ${def.cskill} or its sub-strand`);
+      misTally.tied++; // 'SLIP' is a counted-wrong answer with no misconception: it is still a deliberate, reasoned choice
+      for (const c of ms) if (c !== 'SLIP' && !codes.near.has(c)) fail(`${where}: "${c}" is not a misconception of ${def.cskill} or its sub-strand`);
     }
   };
   // A family tied to the library at family level (misMapped: false, reveals): every code must be one of its skill's sub-strand.

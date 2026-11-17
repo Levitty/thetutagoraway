@@ -6888,6 +6888,21 @@ export const TEACHING_PACK_G5 = {
      "wrong_answer": "A",
      "correct_answer": "B"
     }
+   },
+   {
+    "code": "MATH.G5.NUMBER.SIMPLE_EQUATIONS.EQ_MEANING.M_NUMBER_IS_EQUATION",
+    "listen_for": [
+     "50 is an equation",
+     "just the answer"
+    ],
+    "ask": "What does 50 say is equal to what?",
+    "repair": "A number on its own is a value, not an equation. An equation says one side has the same value as the other side.",
+    "error": "Calls a single number, or a number with no equals sign, an equation, because numbers are 'the answer' and an equation is thought of as 'the maths'.",
+    "example": {
+     "question": "Which is an equation? A: x + 7   B: x + 7 = 15   C: 50",
+     "wrong_answer": "C",
+     "correct_answer": "B"
+    }
    }
   ],
   "checks": [

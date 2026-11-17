@@ -101,7 +101,7 @@ test('word times drive the strokes; while streaming, a stroke waits for its word
   timing[1] = { words: [{ word: 'Shade', start: 0, end: 300 }, { word: 'three', start: 320, end: 600 }, { word: 'of', start: 620, end: 700 }, { word: 'them.', start: 720, end: 1000 }], duration: 1050, complete: true };
   updateTimeline(p, buildTimeline(steps, { speech }));
   assert.equal(ev('highlight').t, 1400 + SENTENCE_GAP_MS + 320);
-  assert.ok(readFileSync(new URL('../src/voice-tutor/providers/cartesia.js', import.meta.url), 'utf8').includes('SENTENCE_GAP_MS'), 'the voice uses the same gap');
+  assert.ok(readFileSync(new URL('../src/voice-tutor/providers/socketVoice.js', import.meta.url), 'utf8').includes('SENTENCE_GAP_MS'), 'the voice uses the same gap');
   assert.ok(p.fired.has(1), 'what fired stays fired across rebuilds');
 });
 
@@ -205,8 +205,8 @@ test('when the microphone or the voice fails, the lesson carries on in text and 
   assert.equal(canSpeak(v), false);
   assert.equal(voiceReducer(initialVoice(), { type: 'fail', kind: 'offline' }).mode, 'typed');
   assert.equal(voiceReducer(v, { type: 'retry' }).mode, 'voice');
-  // Cartesia listening with no microphone in this "browser": an error, never a hang.
-  const err = await new Promise((resolve) => cartesiaStt({ getToken: async () => ({ token: 't', version: 'v' }) }).start({ onError: resolve, onFinal: () => resolve('final?') }));
+  // Cartesia listening (one session for the lesson) with no microphone in this "browser": an error, never a hang.
+  const err = await new Promise((resolve) => cartesiaStt({ getToken: async () => ({ token: 't', version: 'v' }) }).open({ onError: resolve, onUtterance: () => resolve('final?') }));
   assert.ok(['mic-missing', 'listen-failed', 'mic-denied'].includes(err));
   // Cartesia that cannot get a token: the stream fails before any sound, so the page falls back to the silent voice.
   globalThis.window = { AudioContext: class { constructor() { this.currentTime = 0; } resume() {} } };
@@ -229,7 +229,7 @@ test('when the microphone or the voice fails, the lesson carries on in text and 
 
 test('short spoken turns: the server asks again when the tutor says too much', () => {
   const long = [{ cmd: 'say', text: Array(25).fill('word').join(' ') + '.' }, { cmd: 'say', text: Array(25).fill('more').join(' ') + '.' }, { cmd: 'say', text: Array(15).fill('and').join(' ') + '.' }, { cmd: 'pause_for_child', expect: 'typed', max_wait_s: 30 }];
-  assert.match(turnProblems(long, { maxWords: MAX_SPOKEN_WORDS })[0], /says 65 words: say at most 45/);
+  assert.match(turnProblems(long, { maxWords: MAX_SPOKEN_WORDS })[0], new RegExp(`says 65 words: say at most ${MAX_SPOKEN_WORDS}`));
   assert.deepEqual(turnProblems(long.slice(1)), [], 'off unless asked');
 });
 
@@ -251,10 +251,10 @@ test('the voice is priced into the cost log: the tutor\'s spoken characters and 
   assert.ok(Math.abs(v.cost_usd - (speechCost(chars) + listenCost(6))) < 1e-12);
   assert.ok(Math.abs(r.body.voice.usd - v.cost_usd) < 1e-12);
   assert.ok(r.body.cost_usd > v.cost_usd, 'model and voice together');
-  // Listening is bounded: the page cannot claim an hour of speech.
+  // Listening is bounded: the page cannot claim an hour of speech (the microphone is open all lesson, so up to 300 s a turn).
   const db2 = world();
   await turn(db2, { voice: true, audio_in_s: 3600 });
-  assert.equal(db2.usage.find((u) => u.model === 'voice').audio_in_s, 90);
+  assert.equal(db2.usage.find((u) => u.model === 'voice').audio_in_s, 300);
   // No voice: nothing extra.
   const db3 = world();
   await turn(db3, { voice: false });

@@ -156,8 +156,8 @@ function shape(item, H) {
         if (b[1] < a[1] - 0.5 || (Math.abs(b[1] - a[1]) <= 0.5 && b[0] < a[0])) [a, b] = [b, a];
         out.push(stroke(`M ${P(a[0], a[1])} L ${P(b[0], b[1])}`, 'line', { phase: 1, unit: `c${j}` }));
       }
-    } else {
-      // From the middle out to the edge, clockwise from the top.
+    } else if (n > 1) {
+      // From the middle out to the edge, clockwise from the top (a whole circle, one part, has no cuts).
       for (let j = 0; j < n; j += 1) { const b = at(ang(j)); out.push(stroke(`M ${P(g.cx, g.cy)} L ${P(b[0], b[1])}`, 'line', { phase: 1, unit: `c${j}` })); }
     }
   } else if (item.kind === 'triangle') {
