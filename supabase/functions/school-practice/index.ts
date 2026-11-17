@@ -282,14 +282,15 @@ var CORE_FAMILIES = [
   fx({
     id: "g7.temp.mountain-nairobi",
     skill: "G7_TEMPERATURE",
-    outcome: "G7.TEMP.b",
+    outcome: "MATH.G7.MEASUR.TEMPERATURE.b",
+    cskill: "MATH.G7.MEASUR.TEMPERATURE.TEMP_COMPARE_DIFFERENCE",
     rung: 2,
     form: "word",
-    draw: () => ({ low: -randInt(2, 9), high: randInt(12, 26) }),
+    draw: () => ({ low: -randInt(3, 9), high: randInt(12, 26) }),
     make: ({ low, high }) => ({
       question: `At dawn it is ${low} \xB0C near the top of Mount Kenya and ${high} \xB0C in Nairobi. How many degrees warmer is Nairobi?`,
       answer: high - low,
-      wrong: [[high + low, "The two temperatures are on opposite sides of zero. Count up to zero, then on to the warmer one."], [Math.abs(low), "That is only the part below zero. Keep going up to the Nairobi temperature."], [high, "That is the Nairobi temperature. The question asks how far apart the two are."]],
+      wrong: [[high + low, "The two temperatures are on opposite sides of zero. Count up to zero, then on to the warmer one.", "M_NEGATIVE_SIGN_IGNORED"], [Math.abs(low), "That is only the part below zero. Keep going up to the Nairobi temperature.", "M_ONLY_BELOW_ZERO_PART"], [high, "That is the Nairobi temperature. The question asks how far apart the two are.", "M_ONE_READING_GIVEN"]],
       hints: ["Picture a thermometer with both temperatures marked on it.", `From ${low} \xB0C up to 0 \xB0C, then from 0 \xB0C up to ${high} \xB0C.`],
       steps: [`From ${low} \xB0C up to 0 \xB0C is ${-low} degrees.`, `From 0 \xB0C up to ${high} \xB0C is ${high} degrees.`, `Altogether: ${-low} + ${high} = ${high - low} degrees.`]
     }),
@@ -298,7 +299,8 @@ var CORE_FAMILIES = [
   fx({
     id: "g7.temp.kelvin-drop",
     skill: "G7_TEMPERATURE",
-    outcome: "G7.TEMP.d",
+    outcome: "MATH.G7.MEASUR.TEMPERATURE.d",
+    cskill: "MATH.G7.MEASUR.TEMPERATURE.TEMP_CONVERT_C_K",
     rung: 3,
     form: "why",
     draw: () => {
@@ -311,9 +313,9 @@ var CORE_FAMILIES = [
         question: `Boiled milk at ${a} \xB0C cools to ${b} \xB0C. A learner says the fall in kelvin is ${drop + 273} K, because you always add 273 to change to kelvin. Why is that wrong?`,
         options: [
           { text: `A change of 1 \xB0C is the same size as a change of 1 K, so the fall is ${drop} K`, right: true },
-          { text: "Kelvin is always smaller than Celsius, so you must subtract 273", right: false, why: "Kelvin readings are bigger than Celsius readings. And the question is about a change, not a reading." },
-          { text: "Milk cannot be measured in kelvin", right: false, why: "Any temperature can be written in kelvin." },
-          { text: `The fall should be ${drop - 273 > 0 ? drop - 273 : 273 - drop} K, found by taking away 273`, right: false, why: "Adding or taking away 273 changes a reading. A difference between two readings stays the same on both scales." }
+          { text: "Kelvin is always smaller than Celsius, so you must subtract 273", right: false, why: "Kelvin readings are bigger than Celsius readings. And the question is about a change, not a reading.", mis: "M_273_SUBTRACTED_TO_GET_KELVIN" },
+          { text: "Milk cannot be measured in kelvin", right: false, why: "Any temperature can be written in kelvin.", mis: "M_KELVIN_NOT_FOR_EVERYDAY" },
+          { text: `The fall should be ${drop - 273 > 0 ? drop - 273 : 273 - drop} K, found by taking away 273`, right: false, why: "Adding or taking away 273 changes a reading. A difference between two readings stays the same on both scales.", mis: "M_CHANGE_CONVERTED_AS_READING" }
         ],
         hints: ["Change each reading to kelvin, then find the difference.", `${a + 273} K and ${b + 273} K: how far apart are they?`],
         steps: [`In kelvin the readings are ${a + 273} K and ${b + 273} K.`, `The fall is ${a + 273} \u2212 ${b + 273} = ${drop} K, the same number as in \xB0C.`]
@@ -323,7 +325,8 @@ var CORE_FAMILIES = [
   fx({
     id: "g7.temp.order-scales",
     skill: "G7_TEMPERATURE",
-    outcome: "G7.TEMP.d",
+    outcome: "MATH.G7.MEASUR.TEMPERATURE.d",
+    cskill: "MATH.G7.MEASUR.TEMPERATURE.TEMP_CONVERT_C_K",
     rung: 2,
     form: "direct",
     draw: () => {
@@ -337,7 +340,10 @@ var CORE_FAMILIES = [
       return {
         question: `Which of these temperatures is the hottest: ${k} K, ${c1} \xB0C or ${c22} \xB0C?`,
         story: false,
-        options: vals.map((x) => ({ text: x.t, right: x === hottest, why: x === hottest ? void 0 : `Change them all to the same scale first. ${k} K is ${k - 273} \xB0C.` })),
+        options: (() => {
+          let c19 = 0;
+          return vals.map((x) => ({ text: x.t, right: x === hottest, ...x === hottest ? {} : { why: `Change them all to the same scale first. ${k} K is ${k - 273} \xB0C.`, mis: / K$/.test(x.t) ? "M_SCALES_NOT_MATCHED" : c19++ === 0 ? "M_KELVIN_BELOW_CELSIUS" : "SLIP" } }));
+        })(),
         hints: ["Two scales cannot be compared until they are the same.", `Take 273 from the kelvin reading.`],
         steps: [`${k} K = ${k} \u2212 273 = ${k - 273} \xB0C.`, `Now compare ${k - 273} \xB0C, ${c1} \xB0C and ${c22} \xB0C: the hottest is ${hottest.t}.`]
       };
@@ -1392,7 +1398,8 @@ var CORE_FAMILIES = [
   fx({
     id: "g7.construct.halving",
     skill: "G7_CONSTRUCTIONS",
-    outcome: "G7.CONSTRUCT.b",
+    outcome: "MATH.G7.GEOMET.GEOMETRICAL_CONSTRUCTION.b",
+    cskill: "MATH.G7.GEOMET.GEOMETRICAL_CONSTRUCTION.BISECT_ANGLE",
     rung: 1,
     form: "direct",
     draw: () => {
@@ -1403,7 +1410,7 @@ var CORE_FAMILIES = [
       question: `Using a ruler and compasses, you bisect an angle of ${a}\xB0. What is the size of each new angle?`,
       story: false,
       answer: a / 2,
-      wrong: [[a * 2, "Bisect means cut into two equal parts, so each part is smaller."], [a, "That is the angle before it was bisected."], [180 - a, "That is the angle on a straight line with it, not half of it."]],
+      wrong: [[a * 2, "Bisect means cut into two equal parts, so each part is smaller.", "M_BISECT_DOUBLES"], [a, "That is the angle before it was bisected.", "M_BISECT_NO_CHANGE"], [180 - a, "That is the angle on a straight line with it, not half of it.", "M_SUPPLEMENT_FOR_HALF"]],
       hints: ["To bisect means to cut into two equal parts.", `Halve ${a}.`],
       steps: ["Bisecting cuts the angle into two equal parts.", `${a} \xF7 2 = ${a / 2}\xB0.`]
     }),
@@ -1412,7 +1419,8 @@ var CORE_FAMILIES = [
   fx({
     id: "g7.construct.how-to",
     skill: "G7_CONSTRUCTIONS",
-    outcome: "G7.CONSTRUCT.b",
+    outcome: "MATH.G7.GEOMET.GEOMETRICAL_CONSTRUCTION.c",
+    cskill: "MATH.G7.GEOMET.GEOMETRICAL_CONSTRUCTION.CONSTRUCT_STANDARD_ANGLES",
     rung: 2,
     form: "why",
     draw: () => {
@@ -1422,7 +1430,7 @@ var CORE_FAMILIES = [
     make: ({ a, k }) => {
       const how = { 60: "Draw arcs of the same radius to make an equilateral triangle", 30: "Construct 60\xB0, then bisect it", 15: "Construct 60\xB0, bisect it to get 30\xB0, then bisect again", 90: "Construct a perpendicular to a line", 45: "Construct 90\xB0, then bisect it", 120: "Construct 60\xB0 twice, one beside the other", 75: "Construct 60\xB0 and 90\xB0 beside it, then bisect the 30\xB0 gap" }[a];
       const others = Object.entries({ 60: "Draw arcs of the same radius to make an equilateral triangle", 30: "Construct 60\xB0, then bisect it", 15: "Construct 60\xB0, bisect it to get 30\xB0, then bisect again", 90: "Construct a perpendicular to a line", 45: "Construct 90\xB0, then bisect it", 120: "Construct 60\xB0 twice, one beside the other", 75: "Construct 60\xB0 and 90\xB0 beside it, then bisect the 30\xB0 gap" }).filter(([d]) => Number(d) !== a).slice(0, 3);
-      const opts2 = [{ text: how, right: true }, ...others.map(([d, text]) => ({ text, right: false, why: `That method gives ${d}\xB0.` }))];
+      const opts2 = [{ text: how, right: true }, ...others.map(([d, text]) => ({ text, right: false, why: `That method makes ${d}\xB0, not ${a}\xB0. Work out what each step of the method gives.`, mis: { 60: "M_STOPPED_AT_SIXTY", 30: "M_BISECTED_ONCE_ONLY", 15: "M_BISECTED_TOO_FAR", 90: "M_PERPENDICULAR_FOR_ANGLE", 45: "M_WRONG_START_ANGLE" }[d] || "SLIP" }))];
       return {
         question: `With only a ruler and compasses, how do you make an angle of ${a}\xB0? Work it through on paper too.`,
         story: false,
@@ -91556,7 +91564,8 @@ var FAMILIES144 = [
   fam31({
     id: "g7.dec.tiles-row",
     skill: "G6_DECIMALS_MUL",
-    outcome: "G7.DEC.b",
+    outcome: "MATH.G7.NUMBER.DECIMALS.b",
+    cskill: "MATH.G7.NUMBER.DECIMALS.MULT_DEC_BY_WHOLE",
     rung: 2,
     form: "word",
     draw: () => {
@@ -91566,7 +91575,7 @@ var FAMILIES144 = [
     make: ({ w: w14, n, p }) => ({
       question: `${p.name} lays ${n} tiles in a row. Each tile is ${w14} m wide. How long is the row, in metres?`,
       answer: round(w14 * n, 2),
-      wrong: [[round(w14 + n, 2), "Each tile adds its width, so that is a multiplication."], [round(w14 * n * 10, 2), "Check the decimal point. One place in the question means one place in the answer."], [round(n / w14, 2), "Dividing tells how many tiles fit. Here you know how many tiles there are."]],
+      wrong: [[round(w14 + n, 2), "Each tile adds its width, so that is a multiplication.", "M_ADDED_NOT_MULTIPLIED"], [round(w14 * n * 10, 2), "The decimal point is in the wrong place. One place in the question means one place in the answer.", "M_POINT_NOT_MOVED_BACK"], [round(n / w14, 2), "Dividing tells how many tiles fit. Here you know how many tiles there are.", "M_DIVIDED_NOT_MULTIPLIED"]],
       hints: ["Equal widths added again and again: multiply.", "Multiply as if there were no point, then put the point back."],
       steps: [`There are ${n} tiles, each ${w14} m wide.`, `${n} \xD7 ${w14} = ${round(w14 * n, 2)} m.`]
     }),
@@ -91575,7 +91584,8 @@ var FAMILIES144 = [
   fam31({
     id: "g7.dec.point-spot",
     skill: "G6_DECIMALS_MUL",
-    outcome: "G7.DEC.b",
+    outcome: "MATH.G7.NUMBER.DECIMALS.b",
+    cskill: "MATH.G7.NUMBER.DECIMALS.MULT_DEC_BY_WHOLE",
     rung: 3,
     form: "spot",
     draw: () => {
@@ -91588,6 +91598,7 @@ var FAMILIES144 = [
         question: `${p.name} worked out ${a / 10} \xD7 ${b}. Which step has the mistake?`,
         story: false,
         working: [{ text: `Leave out the point: ${a} \xD7 ${b} = ${whole}`, ok: a * b === whole }, { text: `${a / 10} has 1 decimal place, so the answer needs 1 place.`, ok: true }, { text: `Put in the point: ${wrongShown}`, ok: wrongShown === right }],
+        mis: "M_POINT_NOT_MOVED_BACK",
         fix: `The answer needs 1 decimal place, so it is ${right}. The working put in 2 places.`,
         steps: [`${a} \xD7 ${b} = ${whole}.`, `With 1 decimal place: ${right}.`]
       };
@@ -91596,7 +91607,8 @@ var FAMILIES144 = [
   fam31({
     id: "g7.dec.share-litres",
     skill: "G6_DECIMALS_DIV",
-    outcome: "G7.DEC.c",
+    outcome: "MATH.G7.NUMBER.DECIMALS.c",
+    cskill: "MATH.G7.NUMBER.DECIMALS.DIV_DEC_BY_WHOLE",
     rung: 2,
     form: "word",
     draw: () => {
@@ -91606,7 +91618,7 @@ var FAMILIES144 = [
     make: ({ each, n, p }) => ({
       question: `${p.name} shares ${round(each * n, 2)} litres of milk equally into ${n} bottles. How many litres go into each bottle?`,
       answer: each,
-      wrong: [[round(each * n * n, 2), "Sharing makes each amount smaller, so divide."], [round(each * n, 2), "That is the whole amount of milk. Share it among the bottles."], [round(each * 10, 2), "Check the decimal point in your answer."], [round(each / 10, 3), "Check the decimal point in your answer."]],
+      wrong: [[round(each * n * n, 2), "Sharing makes each amount smaller, so divide.", "M_MULTIPLIED_NOT_DIVIDED"], [round(each * n, 2), "That is the whole amount of milk. Share it among the bottles.", "M_DIVIDEND_GIVEN_AS_SHARE"], [round(each * 10, 2), "That is ten times too big: the point was left out of the answer.", "M_POINT_LOST_IN_QUOTIENT"], [round(each / 10, 3), "That is ten times too small: the point is one place too far to the left.", "M_POINT_PLACED_WRONG"]],
       hints: ["Share equally means divide.", "Keep the decimal point in line as you divide."],
       steps: [`Total: ${round(each * n, 2)} litres, into ${n} bottles.`, `${round(each * n, 2)} \xF7 ${n} = ${each} litres.`]
     }),
@@ -91615,7 +91627,8 @@ var FAMILIES144 = [
   fam31({
     id: "g7.dec.how-many-packets",
     skill: "G6_DECIMALS_DIV",
-    outcome: "G7.DEC.c",
+    outcome: "MATH.G7.NUMBER.DECIMALS.c",
+    cskill: "MATH.G7.NUMBER.DECIMALS.DEC_DIVISION_SIZE",
     rung: 2,
     form: "why",
     draw: () => {
@@ -91625,7 +91638,7 @@ var FAMILIES144 = [
     make: ({ s, k }) => ({
       question: `To divide ${k} by ${s}, a learner asks: how many lots of ${s} are in ${k}? Why is the answer bigger than ${k}?`,
       story: false,
-      options: [{ text: `${s} is less than 1, so more than ${k} lots fit`, right: true }, { text: "Dividing always gives a bigger number, whatever we divide by", right: false, why: "Dividing by a number greater than 1 gives a smaller answer." }, { text: `The point must be moved to make ${k} bigger first`, right: false, why: "Moving the point on its own changes the value. Think about how many lots fit." }, { text: `It is a mistake, because the answer must be smaller than ${k}`, right: false, why: "That is true only when dividing by more than 1." }],
+      options: [{ text: `${s} is less than 1, so more than ${k} lots fit`, right: true }, { text: "Dividing always gives a bigger number, whatever we divide by", right: false, why: "Dividing by a number greater than 1 gives a smaller answer.", mis: "M_DIVIDING_ALWAYS_BIGGER" }, { text: `The point must be moved to make ${k} bigger first`, right: false, why: "Moving the point on its own changes the value. Think about how many lots fit.", mis: "M_POINT_MOVED_WITHOUT_RULE" }, { text: `It is a mistake, because the answer must be smaller than ${k}`, right: false, why: "That is true only when dividing by more than 1.", mis: "M_DIVISION_ALWAYS_SMALLER_DEC" }],
       hints: [`How many lots of ${s} make 1?`, `Then how many make ${k}?`],
       steps: [`${s} goes into 1 exactly ${round(1 / s, 0)} times.`, `So ${s} goes into ${k} exactly ${round(k / s, 0)} times, which is more than ${k}.`]
     })
@@ -91633,7 +91646,8 @@ var FAMILIES144 = [
   fam31({
     id: "g7.eq.money-left",
     skill: "G6_SIMPLE_EQUATIONS",
-    outcome: "G7.EQUATIONS.c",
+    outcome: "MATH.G7.ALGEBR.LINEAR_EQUATIONS.c",
+    cskill: "MATH.G7.ALGEBR.LINEAR_EQUATIONS.SOLVE_IN_CONTEXT",
     rung: 2,
     form: "word",
     draw: () => {
@@ -91643,7 +91657,7 @@ var FAMILIES144 = [
     make: ({ spent, left, p }) => ({
       question: `${p.name} has x shillings. After spending ${sh(spent)} on lunch, ${p.she} has ${sh(left)} left. Use the equation x \u2212 ${spent} = ${left} to find x.`,
       answer: spent + left,
-      wrong: [[left - spent < 0 ? spent - left : left - spent, "To undo taking away, add to both sides."], [left, "That is what is left. x is what there was at the start."], [spent, "That is the spending. x is what there was at the start."]],
+      wrong: [[left - spent < 0 ? spent - left : left - spent, "To undo taking away, add to both sides.", "M_SIGN_NOT_REVERSED"], [left, "That is what is left. x is what there was at the start.", "M_ASKED_QUANTITY_MIXED"], [spent, "That is the spending. x is what there was at the start.", "M_STEP_AMOUNT_AS_UNKNOWN"]],
       hints: ["What undoes taking away?", `Add ${spent} to both sides.`],
       steps: [`x \u2212 ${spent} = ${left}.`, `x = ${left} + ${spent}.`, `So x = ${spent + left}.`]
     }),
@@ -91652,14 +91666,15 @@ var FAMILIES144 = [
   fam31({
     id: "g7.eq.balance-why",
     skill: "G6_SIMPLE_EQUATIONS",
-    outcome: "G7.EQUATIONS.b",
+    outcome: "MATH.G7.ALGEBR.LINEAR_EQUATIONS.b",
+    cskill: "MATH.G7.ALGEBR.LINEAR_EQUATIONS.EQUATION_BALANCE_REASON",
     rung: 3,
     form: "why",
     draw: () => ({ a: randInt(3, 15), r: randInt(4, 20) }),
     make: ({ a, r }) => ({
       question: `To solve x + ${a} = ${a + r}, a learner takes ${a} from both sides. Why must it come off both sides?`,
       story: false,
-      options: [{ text: "Doing the same to both sides keeps them equal", right: true }, { text: `Because ${a} is the bigger number in the equation`, right: false, why: "The size of the number is not the reason." }, { text: "Because x must always stay on the left of the equals sign", right: false, why: "x can be on either side." }, { text: "So that the answer always comes out as an even number", right: false, why: "The answer can be odd or even." }],
+      options: [{ text: "Doing the same to both sides keeps them equal", right: true }, { text: `Because ${a} is the bigger number in the equation`, right: false, why: "The size of the number is not the reason.", mis: "M_NUMBER_SIZE_DECIDES_STEP" }, { text: "Because x must always stay on the left of the equals sign", right: false, why: "x can be on either side.", mis: "M_UNKNOWN_ALWAYS_LEFT" }, { text: "Because that is just the rule for solving equations", right: false, why: "The answer can be odd or even.", mis: "M_RULE_WITHOUT_REASON" }],
       hints: ["Think of the equals sign as a balance.", "What keeps a balance level?"],
       steps: ["An equation is like a level balance.", "Taking the same from both sides keeps it level."]
     })
@@ -126215,7 +126230,7 @@ var FAMILIES175 = [
       story: false,
       model: { type: "table", data: { head: ["Player", "Jersey number"], rows: v.map((n, i) => ({ label: ps[i], value: String(n) })) } },
       answer: pr2,
-      wrong: [[odd, "That is the total of the odd numbers. Some odd numbers are not prime, for example 9 and 15.", "M_ODD_MEANS_PRIME"], [comp2, "That is the total of the numbers that are not prime. The question asks for the prime ones.", "M_PRIME_COMPOSITE_CONFUSED"], [small, "That only tests 2 and 3. A number such as 25 or 35 is not divisible by 2 or 3, but it is not prime.", "M_ONLY_SMALL_DIVISORS_TESTED"]],
+      wrong: [[odd, "That is the total of the odd numbers. Some odd numbers are not prime, for example 9 and 15.", "M_ODD_MEANS_PRIME"], [comp2, "That is the total of the numbers that are not prime. The question asks for the prime ones.", "M_PRIME_COMPOSITE_CONFUSED"], [small, "That only tests 2 and 3. A number that passes those two tests can still have 5 or 7 as a factor.", "M_ONLY_SMALL_DIVISORS_TESTED"]],
       hints: ["A prime number has exactly two factors: 1 and itself.", "Test each jersey number: does anything other than 1 and itself divide it?"],
       steps: [`Check each number: ${v.map((n) => `${n} is ${isPrime(n) ? "prime" : "not prime"}`).join(", ")}.`, `The prime numbers are ${v.filter(isPrime).join(", ")}. Their total is ${pr2}.`]
     }),
@@ -126364,19 +126379,21 @@ var FAMILIES175 = [
   fam44({
     id: "g7.factors.div-baskets",
     skill: "G7_DIVISIBILITY",
-    outcome: "G7.FACTORS.a",
+    outcome: "MATH.G7.NUMBER.FACTORS.a",
+    cskill: "MATH.G7.NUMBER.FACTORS.DIV_BY_3_6_9",
     rung: 2,
     form: "word",
     draw: () => {
-      const N4 = randInt(1e3, 9999), ks = [2, 3, 4, 5, 6, 7, 8, 9, 10, 11], yes = ks.filter((k) => N4 % k === 0), no6 = ks.filter((k) => N4 % k !== 0);
-      if (yes.length < 1 || no6.length < 3) return null;
-      return { N: N4, r: pick(yes), ws: shuffle15(no6).slice(0, 3), p: person() };
+      const N4 = randInt(1e3, 9999), ks = [2, 3, 4, 5, 6, 8, 9, 10, 11], yes = ks.filter((k) => N4 % k === 0);
+      const kinds = [[3, 9], [4, 8], [6], [11]].map((c19) => c19.filter((k) => N4 % k !== 0)).filter((c19) => c19.length).map((c19) => pick(c19));
+      if (yes.length < 1 || kinds.length < 3) return null;
+      return { N: N4, r: pick(yes), ws: shuffle15(kinds).slice(0, 3), p: person() };
     },
     make: ({ N: N4, r, ws, p }) => {
       const reason = (k) => ({ 2: "its last digit is not even", 3: `its digits add up to ${digitSum(N4)}, which is not a multiple of 3`, 4: `its last two digits make ${N4 % 100}, which does not divide by 4`, 5: "its last digit is not 0 or 5", 6: "it must divide by both 2 and 3, and it fails one of them", 7: `dividing leaves a remainder of ${N4 % 7}`, 8: `its last three digits make ${N4 % 1e3}, which does not divide by 8`, 9: `its digits add up to ${digitSum(N4)}, which is not a multiple of 9`, 10: "its last digit is not 0", 11: "the difference between the sums of its alternate digits is not 0 or a multiple of 11" })[k];
       return {
         question: `${p.name} has ${commas(N4)} books. ${p.She} packs them into equal bundles with none left over. Which of these numbers is ${commas(N4)} divisible by? It must divide exactly.`,
-        options: shuffle15([{ text: String(r), right: true }, ...ws.map((k) => ({ text: String(k), right: false, why: `${commas(N4)} does not divide exactly by ${k}: ${reason(k)}.` }))]),
+        options: shuffle15([{ text: String(r), right: true }, ...ws.map((k) => ({ text: String(k), right: false, why: `${commas(N4)} does not divide exactly by ${k}: ${reason(k)}.`, mis: { 3: "M_DIGIT_SUM_NOT_DIVIDED", 9: "M_DIGIT_SUM_NOT_DIVIDED", 4: "M_LAST_DIGIT_FOR_4_8", 8: "M_LAST_DIGIT_FOR_4_8", 6: "M_SIX_ONLY_EVEN_TESTED", 11: "M_ELEVEN_ADD_ALL_DIGITS" }[k] }))]),
         hints: ["Use the divisibility test for each number in turn.", "Only one of the numbers passes its test."],
         steps: [`Test each number with its divisibility rule.`, `${commas(N4)} \xF7 ${r} = ${commas(N4 / r)} with nothing left, so ${r} divides exactly.`]
       };
@@ -126385,49 +126402,58 @@ var FAMILIES175 = [
   fam44({
     id: "g7.factors.eleven-spot",
     skill: "G7_DIVISIBILITY",
-    outcome: "G7.FACTORS.a",
+    outcome: "MATH.G7.NUMBER.FACTORS.a",
+    cskill: "MATH.G7.NUMBER.FACTORS.DIV_BY_11",
     rung: 3,
     form: "spot",
     draw: () => {
       const want = Math.random() < 0.5;
       const ds = [randInt(1, 9), randInt(0, 9), randInt(0, 9), randInt(0, 9)];
       const N4 = Number(ds.join(""));
-      return N4 % 11 === 0 === want ? { ds, N: N4, bug: pick([1, 2]), e: pick([-2, -1, 1, 2]), p: person() } : null;
+      const [a, b, c19, d] = ds;
+      return N4 % 11 === 0 === want && a + c19 !== b + d && (a + b + c19 + d) % 11 !== 0 ? { ds, N: N4, p: person() } : null;
     },
-    make: ({ ds, N: N4, bug, e, p }) => {
-      const [a, b, c19, d] = ds, s1 = a + c19 + (bug === 1 ? e : 0), s2 = b + d + (bug === 2 ? e : 0), diff = Math.abs(s1 - s2), yes = diff % 11 === 0;
-      const trueDiff = Math.abs(a + c19 - b - d);
+    make: ({ ds, N: N4, p }) => {
+      const [a, b, c19, d] = ds, s1 = a + c19, s2 = b + d, tot = s1 + s2, diff = Math.abs(s1 - s2), yes = tot % 11 === 0;
       return {
         question: `${p.name} tests whether ${commas(N4)} is divisible by 11. Here is ${p.her} working. Which step has the mistake?`,
         working: [
-          { text: `Add the digits in places 1 and 3: ${a} + ${c19} = ${s1}.`, ok: s1 === a + c19 },
-          { text: `Add the digits in places 2 and 4: ${b} + ${d} = ${s2}.`, ok: s2 === b + d },
-          { text: `Find the difference: ${Math.max(s1, s2)} \u2212 ${Math.min(s1, s2)} = ${diff}.`, ok: diff === Math.abs(s1 - s2) },
-          { text: `${diff} ${yes ? "is" : "is not"} 0 or a multiple of 11, so ${commas(N4)} ${yes ? "is" : "is not"} divisible by 11.`, ok: yes === (diff % 11 === 0) }
+          { text: `Add the digits in places 1 and 3: ${a} + ${c19} = ${s1}.`, ok: true },
+          { text: `Add the digits in places 2 and 4: ${b} + ${d} = ${s2}.`, ok: true },
+          { text: `Combine the two sums: ${s1} + ${s2} = ${tot}.`, ok: false },
+          { text: `${tot} ${yes ? "is" : "is not"} 0 or a multiple of 11, so ${commas(N4)} ${yes ? "is" : "is not"} divisible by 11.`, ok: true }
         ],
-        fix: `One of the two digit sums was added up wrongly. Added carefully, the sums give a difference of ${trueDiff}, and the conclusion must follow from that.`,
-        steps: [`${a} + ${c19} = ${a + c19} and ${b} + ${d} = ${b + d}.`, `The difference is ${trueDiff}, so ${commas(N4)} ${trueDiff % 11 === 0 ? "is" : "is not"} divisible by 11.`]
+        mis: "M_ELEVEN_ADD_ALL_DIGITS",
+        fix: `The test for 11 subtracts the two sums, it does not add them. ${Math.max(s1, s2)} \u2212 ${Math.min(s1, s2)} = ${diff}, and the conclusion must follow from that.`,
+        steps: [`${s1} \u2212 ${s2} gives a difference of ${diff}.`, `${diff} ${diff % 11 === 0 ? "is" : "is not"} 0 or a multiple of 11, so ${commas(N4)} ${diff % 11 === 0 ? "is" : "is not"} divisible by 11.`]
       };
     }
   }),
   fam44({
     id: "g7.factors.div-six-table",
     skill: "G7_DIVISIBILITY",
-    outcome: "G7.FACTORS.a",
+    outcome: "MATH.G7.NUMBER.FACTORS.a",
+    cskill: "MATH.G7.NUMBER.FACTORS.DIV_BY_3_6_9",
     rung: 2,
     form: "table",
     draw: () => {
-      const v = Array.from({ length: 5 }, () => randInt(1e3, 9999));
-      if (new Set(v).size < 5) return null;
-      const six = v.filter((n) => n % 6 === 0).length, three = v.filter((n) => n % 3 === 0).length, two = v.filter((n) => n % 2 === 0).length;
-      return six >= 1 && six <= 3 && distinct8(six, three, two, 5) ? { v, six, three, two } : null;
+      for (let t = 0; t < 300; t++) {
+        const r = (() => {
+          const v = Array.from({ length: 5 }, () => randInt(1e3, 9999));
+          if (new Set(v).size < 5) return null;
+          const six = v.filter((n) => n % 6 === 0).length, three = v.filter((n) => n % 3 === 0).length, two = v.filter((n) => n % 2 === 0).length, sum6 = v.filter((n) => digitSum(n) % 6 === 0).length;
+          return six >= 1 && six <= 3 && distinct8(six, three, two, sum6) ? { v, six, three, two, sum6 } : null;
+        })();
+        if (r) return r;
+      }
+      return null;
     },
-    make: ({ v, six, three, two }) => ({
+    make: ({ v, six, three, two, sum6 }) => ({
       question: "The table shows five numbers and the sum of the digits of each. How many of the numbers are divisible by 6?",
       story: false,
       model: { type: "table", data: { head: ["Number", "Sum of digits"], rows: v.map((n) => ({ cells: [commas(n), String(digitSum(n))] })) } },
       answer: six,
-      wrong: [[three, "That counts the numbers divisible by 3 only. A number divisible by 6 must also be even."], [two, "That counts the even numbers only. A number divisible by 6 must also divide by 3."], [5, "Not every number passes both tests. Test each one."]],
+      wrong: [[three, "That counts the numbers divisible by 3 only. A number divisible by 6 must also be even.", "M_SIX_ONLY_THREE_TESTED"], [two, "That counts the even numbers only. A number divisible by 6 must also divide by 3.", "M_SIX_ONLY_EVEN_TESTED"], [sum6, "That counts the numbers whose digit sum is a multiple of 6. The digit sum rule is for 3 and 9: for 6, test even and the sum for 3.", "M_DIGIT_SUM_DIVISIBLE_BY_SIX"]],
       hints: ["A number divides by 6 when it divides by both 2 and 3.", "Use the last digit for 2 and the sum of digits for 3."],
       steps: v.map((n) => `${commas(n)}: ${n % 2 === 0 ? "even" : "odd"}, digit sum ${digitSum(n)} ${digitSum(n) % 3 === 0 ? "divides" : "does not divide"} by 3.`).concat([`Divisible by both: ${six}.`])
     }),
@@ -126436,13 +126462,14 @@ var FAMILIES175 = [
   fam44({
     id: "g7.factors.prime-factor-spot",
     skill: "G7_PRIME_FACTORIZATION",
-    outcome: "G7.FACTORS.b",
+    outcome: "MATH.G7.NUMBER.FACTORS.b",
+    cskill: "MATH.G7.NUMBER.FACTORS.PRIME_FACTORISE",
     rung: 3,
     form: "spot",
     draw: () => ({ r: pick([5, 7, 11, 13]), bug: pick(["composite", "product"]), p: person() }),
     make: ({ r, bug, p }) => {
       const m20 = 9 * r, N4 = 4 * m20;
-      const f3 = bug === "composite" ? [r, 9] : [3, 3, r + 2], claim = f3.every(isPrime);
+      const f3 = bug === "composite" ? [r, 9] : [3, r], claim = f3.every(isPrime);
       const prod = f3.reduce((x, y) => x * y, 1);
       return {
         question: `${p.name} writes ${N4} as a product of prime factors. Here is ${p.her} working. Which step has the mistake?`,
@@ -126452,7 +126479,8 @@ var FAMILIES175 = [
           { text: `${m20} = ${f3.join(" \xD7 ")}, and all of these factors are prime.`, ok: prod === m20 && claim },
           { text: `So ${N4} = 2 \xD7 2 \xD7 ${f3.join(" \xD7 ")}.`, ok: true }
         ],
-        fix: bug === "composite" ? `${r} \xD7 9 is a correct product, but 9 is not prime: 9 = 3 \xD7 3. Keep splitting until every factor is prime.` : `The factors in this step do not multiply to give ${m20}. Check ${f3.join(" \xD7 ")} = ${prod}.`,
+        mis: bug === "composite" ? "M_FACTORS_NOT_PRIME" : "M_REPEATED_FACTOR_ONCE",
+        fix: bug === "composite" ? `${r} \xD7 9 is a correct product, but 9 is not prime: 9 = 3 \xD7 3. Keep splitting until every factor is prime.` : `The factors in this step do not multiply to give ${m20}: ${f3.join(" \xD7 ")} = ${prod}. A repeated factor must be written each time it appears, so one 3 is missing.`,
         steps: [`${m20} = 3 \xD7 3 \xD7 ${r}, and 3, 3 and ${r} are all prime.`, `${N4} = 2 \xD7 2 \xD7 3 \xD7 3 \xD7 ${r}.`]
       };
     }
@@ -126460,7 +126488,8 @@ var FAMILIES175 = [
   fam44({
     id: "g7.factors.not-prime-why",
     skill: "G7_PRIMES",
-    outcome: "G7.FACTORS.b",
+    outcome: "MATH.G7.NUMBER.FACTORS.b",
+    cskill: "MATH.G7.NUMBER.FACTORS.PRIME_FACTORISE",
     rung: 3,
     form: "why",
     draw: () => {
@@ -126471,9 +126500,9 @@ var FAMILIES175 = [
       question: `${who.name} says that ${N4} is a prime number, because it does not divide by 2, 3 or 5. Why is ${who.her} reasoning not enough?`,
       options: [
         { text: `${N4} = ${p} \xD7 ${q}, so it has factors besides 1 and itself`, right: true },
-        { text: "A number that does not divide by 2, 3 or 5 is always prime", right: false, why: `That is not true. ${N4} passes those three tests and is still not prime.` },
-        { text: `${N4} is even, so it divides by 2`, right: false, why: `${N4} ends in an odd digit, so it is odd.` },
-        { text: "Prime numbers are never larger than 100", right: false, why: "There are prime numbers bigger than 100, such as 101. Look for a factor of this number instead." }
+        { text: "A number that does not divide by 2, 3 or 5 is always prime", right: false, why: `That is not true. ${N4} passes those three tests and is still not prime.`, mis: "M_SMALL_PRIMES_ENOUGH" },
+        { text: `${N4} is even, so it divides by 2`, right: false, why: `${N4} ends in an odd digit, so it is odd.`, mis: "SLIP" },
+        { text: "Prime numbers are never larger than 100", right: false, why: "There are prime numbers bigger than 100, such as 101. Look for a factor of this number instead.", mis: "M_PRIMES_STOP_AT_100" }
       ],
       hints: ["Passing a few tests is not the same as having no factors.", "Try dividing by the next prime numbers: 7, 11, 13."],
       steps: [`${N4} \xF7 ${p} = ${q}.`, `So ${N4} has the factors ${p} and ${q}, and it is composite.`]
@@ -126482,7 +126511,8 @@ var FAMILIES175 = [
   fam44({
     id: "g7.factors.gcd-rope",
     skill: "G7_GCD",
-    outcome: "G7.FACTORS.c",
+    outcome: "MATH.G7.NUMBER.FACTORS.d",
+    cskill: "MATH.G7.NUMBER.FACTORS.GCD_IN_CONTEXT",
     rung: 2,
     form: "word",
     draw: () => {
@@ -126490,12 +126520,12 @@ var FAMILIES175 = [
       if (gcd6(u2, v) !== 1 || u2 === v) return null;
       const a = g * Math.min(u2, v), b = g * Math.max(u2, v);
       const L16 = lcm4(a, b), dif = b - a, pieces = a / g + b / g;
-      return distinct8(g, L16, dif, pieces, a) && b <= 150 ? { a, b, g, L: L16, dif, pieces, p: person() } : null;
+      return distinct8(g, L16, dif, pieces, a) && Math.abs(pieces - g) > 2 && Math.abs(dif - g) > 2 && b <= 150 ? { a, b, g, L: L16, dif, pieces, p: person() } : null;
     },
     make: ({ a, b, g, L: L16, dif, pieces, p }) => ({
       question: `${p.name} has two ropes, ${a} m and ${b} m long. ${p.She} cuts both into equal pieces with no rope left over. The pieces must be as long as possible, so the length is the GCD (greatest common divisor) of ${a} and ${b}. How many metres long is each piece?`,
       answer: g,
-      wrong: [[L16, "That is the least common multiple. A piece cannot be longer than the shorter rope."], [dif, "The difference between the lengths does not have to fit into both ropes."], [pieces, "That is the number of pieces, not their length."]],
+      wrong: [[L16, "That is the least common multiple. A piece cannot be longer than the shorter rope.", "M_GCD_IS_LCM"], [dif, "The difference between the lengths does not have to fit into both ropes.", "M_GCD_DIFFERENCE"], [pieces, "That is the number of pieces, not their length.", "M_OTHER_QUANTITY_GIVEN"]],
       hints: ["List the factors of each length, or divide both by small numbers.", "The greatest factor they share is the GCD."],
       steps: [`Factors of ${a} and ${b} that both share: the biggest is ${g}.`, `Check: ${a} \xF7 ${g} = ${a / g} and ${b} \xF7 ${g} = ${b / g}, with nothing left.`]
     }),
@@ -126504,22 +126534,29 @@ var FAMILIES175 = [
   fam44({
     id: "g7.factors.hcf-gift-boxes",
     skill: "G7_GCD",
-    outcome: "G7.FACTORS.c",
+    outcome: "MATH.G7.NUMBER.FACTORS.d",
+    cskill: "MATH.G7.NUMBER.FACTORS.GCD_IN_CONTEXT",
     rung: 3,
     form: "table",
     draw: () => {
-      const g = pick([4, 5, 6, 8, 10]), u2 = randInt(2, 9), v = randInt(2, 9), w14 = randInt(2, 9);
-      if (!distinct8(u2, v, w14) || gcd6(gcd6(u2, v), w14) !== 1) return null;
-      const nums2 = [g * u2, g * v, g * w14];
-      const gab = gcd6(nums2[0], nums2[1]), mn = Math.min(...nums2), per = nums2.reduce((s, x) => s + x, 0) / g;
-      return distinct8(g, gab, mn, per) ? { g, nums: nums2, gab, mn, per, items: shuffle15(["Bars of soap", "Packets of tea", "Boxes of matches", "Tubes of toothpaste", "Packets of sugar"]).slice(0, 3), p: person() } : null;
+      for (let t = 0; t < 300; t++) {
+        const r = (() => {
+          const g = pick([4, 5, 6, 8, 10]), u2 = randInt(2, 9), v = randInt(2, 9), w14 = randInt(2, 9);
+          if (!distinct8(u2, v, w14) || gcd6(gcd6(u2, v), w14) !== 1) return null;
+          const nums2 = [g * u2, g * v, g * w14];
+          const gab = gcd6(nums2[0], nums2[1]), mn = Math.min(...nums2), per = nums2.reduce((s, x) => s + x, 0) / g;
+          return distinct8(g, gab, mn, per) ? { g, nums: nums2, gab, mn, per, items: shuffle15(["Bars of soap", "Packets of tea", "Boxes of matches", "Tubes of toothpaste", "Packets of sugar"]).slice(0, 3), p: person() } : null;
+        })();
+        if (r) return r;
+      }
+      return null;
     },
     make: ({ g, nums: nums2, gab, mn, per, items: items9, p }) => ({
       question: `${p.name} packs gift boxes from the stock in the table. Every box must have the same things in it, and nothing is left over. What is the greatest number of boxes ${p.she} can make? Use the HCF (highest common factor) of the three numbers.`,
       story: false,
       model: { type: "table", data: { head: ["Item", "Number in stock"], rows: items9.map((l, i) => ({ label: l, value: String(nums2[i]) })) } },
       answer: g,
-      wrong: [[mn, "That is the smallest stock. The number of boxes must also divide the other two numbers exactly."], [gab, "That is the HCF of only the first two numbers. The third item must also divide exactly."], [per, "That is the number of items in one box, found by adding. The question asks for the number of boxes."]],
+      wrong: [[mn, "That is the smallest stock. The number of boxes must also divide the other two numbers exactly.", "M_SMALLEST_QUANTITY_IS_GCD"], [gab, "That is the HCF of only the first two numbers. The third item must also divide exactly.", "M_GCD_TWO_OF_THREE"], [per, "That is the number of items in one box, found by adding. The question asks for the number of boxes.", "M_OTHER_QUANTITY_GIVEN"]],
       hints: ["The number of boxes must divide all three numbers exactly.", "Find the greatest number that divides all three."],
       steps: [`The greatest number that divides ${nums2.join(", ")} exactly is ${g}.`, `Each box then has ${nums2.map((n) => n / g).join(", ")} of the items.`]
     }),
@@ -126528,7 +126565,8 @@ var FAMILIES175 = [
   fam44({
     id: "g7.factors.lcm-matatus",
     skill: "G7_LCM",
-    outcome: "G7.FACTORS.d",
+    outcome: "MATH.G7.NUMBER.FACTORS.d",
+    cskill: "MATH.G7.NUMBER.FACTORS.LCM_IN_CONTEXT",
     rung: 2,
     form: "word",
     draw: () => {
@@ -126540,7 +126578,7 @@ var FAMILIES175 = [
     make: ({ a, b, L: L16, town }) => ({
       question: `Two matatus leave the ${town} stage together at 6:00 a.m. One matatu leaves the stage every ${a} minutes. The other leaves every ${b} minutes. After how many minutes do they leave together again?`,
       answer: L16,
-      wrong: [[a * b, `The two matatus leave together earlier than that. Look for the smallest time that fits both gaps.`], [a + b, "Adding the gaps does not give a time when both leave. Both must arrive at a multiple of their own gap."], [Math.max(a, b), "The shorter gap does not fit exactly into this time. Check it."]],
+      wrong: [[a * b, `The two matatus leave together earlier than that. Look for the smallest time that fits both gaps.`, "M_LCM_PRODUCT"], [a + b, "Adding the gaps does not give a time when both leave. Both must arrive at a multiple of their own gap.", "M_LCM_ADD_THE_GAPS"], [Math.max(a, b), "The shorter gap does not fit exactly into this time. Check it.", "M_LCM_ONE_GAP_ONLY"]],
       hints: ["List the times when the first matatu leaves: multiples of its gap.", "Find the first time that is also on the second list."],
       steps: [`Multiples of ${a}: ${[1, 2, 3, 4, 5, 6].map((i) => a * i).join(", ")} ...`, `Multiples of ${b}: ${[1, 2, 3, 4, 5, 6].map((i) => b * i).join(", ")} ...`, `The first time on both lists is ${L16} minutes.`]
     }),
@@ -126549,7 +126587,8 @@ var FAMILIES175 = [
   fam44({
     id: "g7.factors.lcm-product-why",
     skill: "G7_LCM",
-    outcome: "G7.FACTORS.d",
+    outcome: "MATH.G7.NUMBER.FACTORS.c",
+    cskill: "MATH.G7.NUMBER.FACTORS.LCM_BY_FACTORS",
     rung: 3,
     form: "why",
     draw: () => {
@@ -126561,9 +126600,9 @@ var FAMILIES175 = [
       question: `${p.name} says the LCM of ${a} and ${b} is ${a * b}, because ${a * b} is a common multiple of both numbers. Why is ${p.her} answer not the least common multiple?`,
       options: [
         { text: `${L16} is also a common multiple, and it is smaller`, right: true },
-        { text: `${a * b} is not a multiple of ${a}, so it cannot be common`, right: false, why: `${a * b} = ${a} \xD7 ${b}, so it is a multiple of ${a}. It is just not the smallest common one.` },
-        { text: "The LCM must be smaller than both of the numbers", right: false, why: "A common multiple is never smaller than the numbers themselves." },
-        { text: "The LCM is always found by adding the two numbers", right: false, why: "Adding does not give a multiple of both numbers. Look at lists of multiples." }
+        { text: `${a * b} is not a multiple of ${a}, so it cannot be common`, right: false, why: `${a * b} = ${a} \xD7 ${b}, so it is a multiple of ${a}. It is just not the smallest common one.`, mis: "M_MULTIPLE_VS_FACTOR_CONFUSED" },
+        { text: "The LCM must be smaller than both of the numbers", right: false, why: "A common multiple is never smaller than the numbers themselves.", mis: "M_LCM_SMALLER_THAN_NUMBERS" },
+        { text: "The LCM is always found by adding the two numbers", right: false, why: "Adding does not give a multiple of both numbers. Look at lists of multiples.", mis: "M_LCM_ADD_THE_GAPS" }
       ],
       hints: ["The least common multiple is the smallest number on both lists of multiples.", `Is there a common multiple of ${a} and ${b} that is smaller than ${a * b}?`],
       steps: [`${a * b} is a common multiple, but not the smallest.`, `${L16} \xF7 ${a} = ${L16 / a} and ${L16} \xF7 ${b} = ${L16 / b}, so ${L16} is a smaller common multiple.`]
@@ -126572,7 +126611,8 @@ var FAMILIES175 = [
   fam44({
     id: "g7.factors.lcm-three-bells",
     skill: "G7_LCM",
-    outcome: "G7.FACTORS.d",
+    outcome: "MATH.G7.NUMBER.FACTORS.d",
+    cskill: "MATH.G7.NUMBER.FACTORS.LCM_IN_CONTEXT",
     rung: 3,
     form: "table",
     draw: () => {
@@ -126585,7 +126625,7 @@ var FAMILIES175 = [
       story: false,
       model: { type: "table", data: { head: ["Bell", "Rings every (minutes)"], rows: v.map((n, i) => ({ label: `Bell ${"ABC"[i]}`, value: String(n) })) } },
       answer: L16,
-      wrong: [[L22, `That is when only the first two bells ring together. The third bell must fit as well.`], [v[0] * v[1] * v[2], "That is a time all three ring together, but a smaller one exists."], [Math.max(...v), "The other bells do not ring at that time. Check it."]],
+      wrong: [[L22, `That is when only the first two bells ring together. The third bell must fit as well.`, "M_LCM_TWO_OF_THREE"], [v[0] * v[1] * v[2], "That is a time all three ring together, but a smaller one exists.", "M_LCM_PRODUCT"], [Math.max(...v), "The other bells do not ring at that time. Check it.", "M_LCM_ONE_GAP_ONLY"]],
       hints: ["Find the LCM of the first two numbers.", "Then find the LCM of that answer and the third number."],
       steps: [`LCM of ${v[0]} and ${v[1]} is ${L22}.`, `LCM of ${L22} and ${v[2]} is ${L16}.`]
     }),
@@ -126597,29 +126637,38 @@ var FAMILIES175 = [
   fam44({
     id: "g7.frac.compare-books",
     skill: "G7_FRACTIONS_COMPARE",
-    outcome: "G7.FRAC.a",
+    outcome: "MATH.G7.NUMBER.FRACTIONS.a",
+    cskill: "MATH.G7.NUMBER.FRACTIONS.COMPARE_FRACTIONS",
     rung: 2,
     form: "word",
     draw: () => {
-      const ds = shuffle15([4, 5, 8, 10]).slice(0, 3), fs = ds.map((d) => {
-        const a = randInt(1, d - 1);
-        return { a, d };
-      });
-      if (fs.some((f) => gcd6(f.a, f.d) !== 1)) return null;
-      const vals = fs.map((f) => f.a / f.d).sort((x, y) => x - y);
-      if (vals[2] - vals[1] < 0.02 || vals[1] - vals[0] < 0.02) return null;
-      const ps = [];
-      while (ps.length < 3) {
-        const q = person();
-        if (!ps.some((x) => x.name === q.name)) ps.push(q);
+      for (let t = 0; t < 4e3; t++) {
+        const r = (() => {
+          const ds = shuffle15([4, 5, 8, 10]).slice(0, 3), fs = ds.map((d) => {
+            const a = randInt(1, d - 1);
+            return { a, d };
+          });
+          if (fs.some((f) => gcd6(f.a, f.d) !== 1)) return null;
+          const vals = fs.map((f) => f.a / f.d).sort((x, y) => x - y);
+          if (vals[2] - vals[1] < 0.02 || vals[1] - vals[0] < 0.02) return null;
+          const top = fs.reduce((m20, f, i) => f.a > fs[m20].a ? i : m20, 0), wide = fs.reduce((m20, f, i) => f.d > fs[m20].d ? i : m20, 0), bi = fs.reduce((m20, f, i) => f.a / f.d > fs[m20].a / fs[m20].d ? i : m20, 0);
+          if ((/* @__PURE__ */ new Set([top, wide, bi])).size < 3) return null;
+          const ps = [];
+          while (ps.length < 3) {
+            const q = person();
+            if (!ps.some((x) => x.name === q.name)) ps.push(q);
+          }
+          return { fs, ps };
+        })();
+        if (r) return r;
       }
-      return { fs, ps };
+      return null;
     },
     make: ({ fs, ps }) => {
       const best = fs.reduce((m20, f, i) => f.a / f.d > fs[m20].a / fs[m20].d ? i : m20, 0);
       return {
         question: `${ps[0].name}, ${ps[1].name} and ${ps[2].name} each read a book of the same length. ${ps[0].name} has read ${fs[0].a}/${fs[0].d} of ${ps[0].her} book, ${ps[1].name} has read ${fs[1].a}/${fs[1].d} and ${ps[2].name} has read ${fs[2].a}/${fs[2].d}. Compare the fractions. Who has read the most?`,
-        options: shuffle15(ps.map((q, i) => ({ text: q.name, right: i === best, why: i === best ? void 0 : `${q.name} has not read the most. Write the three fractions with the same denominator, then compare the numerators.` }))),
+        options: shuffle15(ps.map((q, i) => ({ text: q.name, right: i === best, ...i === best ? {} : i === fs.reduce((m20, f, j) => f.a > fs[m20].a ? j : m20, 0) ? { why: `${q.name} has the biggest numerator, but the pieces are different sizes. Write the three fractions with the same denominator, then compare.`, mis: "M_NUMERATOR_ONLY_COMPARED" } : { why: `${q.name} has the biggest denominator, but a bigger denominator means smaller pieces. Write the three fractions with the same denominator, then compare.`, mis: "M_BIGGER_DENOMINATOR_BIGGER" } }))),
         hints: ["Fractions with different denominators cannot be compared directly.", "Write all three with a common denominator."],
         steps: [`A common denominator is ${lcm4(lcm4(fs[0].d, fs[1].d), fs[2].d)}.`, `The fractions are ${fs.map((f) => `${f.a * lcm4(lcm4(fs[0].d, fs[1].d), fs[2].d) / f.d}/${lcm4(lcm4(fs[0].d, fs[1].d), fs[2].d)}`).join(", ")}.`, `The biggest is ${ps[best].name}'s.`]
       };
@@ -126628,7 +126677,8 @@ var FAMILIES175 = [
   fam44({
     id: "g7.frac.one-piece-short",
     skill: "G7_FRACTIONS_COMPARE",
-    outcome: "G7.FRAC.a",
+    outcome: "MATH.G7.NUMBER.FRACTIONS.a",
+    cskill: "MATH.G7.NUMBER.FRACTIONS.COMPARE_FRACTIONS",
     rung: 3,
     form: "why",
     draw: () => {
@@ -126642,9 +126692,9 @@ var FAMILIES175 = [
         story: false,
         options: shuffle15([
           { text: `${B5} is greater, because less is missing from a whole`, right: true },
-          { text: `${A5} is greater, because its denominator is smaller`, right: false, why: `A smaller denominator does not decide it. Look at how much is missing from a whole in each fraction.` },
-          { text: `${B5} is greater, because its denominator is bigger`, right: false, why: "A bigger denominator does not always mean a bigger fraction: 1/9 is less than 1/2. The reason is in the piece that is missing." },
-          { text: "They are equal, because each is one piece short of a whole", right: false, why: `The missing pieces are not the same size: ${n + 1}ths are smaller than ${n}ths.` }
+          { text: `${A5} is greater, because its denominator is smaller`, right: false, why: `A smaller denominator does not decide it. Look at how much is missing from a whole in each fraction.`, mis: "M_BIGGER_DENOMINATOR_BIGGER" },
+          { text: `${B5} is greater, because its denominator is bigger`, right: false, why: "A bigger denominator does not always mean a bigger fraction: 1/9 is less than 1/2. The reason is in the piece that is missing.", mis: "M_NUMERATOR_ONLY_COMPARED" },
+          { text: "They are equal, because each is one piece short of a whole", right: false, why: `The missing pieces are not the same size: ${n + 1}ths are smaller than ${n}ths.`, mis: "M_ONE_PIECE_SHORT_EQUAL" }
         ]),
         hints: ["Each fraction is one piece short of a whole. Compare the missing pieces.", "Which missing piece is smaller?"],
         steps: [`${A5} = 1 \u2212 1/${n} and ${B5} = 1 \u2212 1/${n + 1}.`, `1/${n + 1} is smaller than 1/${n}, so less is missing from ${B5}.`, `So ${B5} is greater.`]
@@ -126654,17 +126704,19 @@ var FAMILIES175 = [
   fam44({
     id: "g7.frac.recip-cups",
     skill: "G7_RECIPROCALS",
-    outcome: "G7.FRAC.e",
+    outcome: "MATH.G7.NUMBER.FRACTIONS.e",
+    cskill: "MATH.G7.NUMBER.FRACTIONS.RECIPROCAL",
     rung: 2,
     form: "word",
     draw: () => {
       const [a, b] = pick([[2, 3], [2, 5], [3, 4], [3, 5], [3, 8], [5, 6]]), k = randInt(2, 6), L16 = a * k;
-      return { a, b, k, L: L16, ans: k * b, p: person() };
+      const ans = k * b;
+      return [round(L16 * a / b, 2), L16 * b, L16 * a].every((v) => Math.abs(v - ans) > 2) ? { a, b, k, L: L16, ans, p: person() } : null;
     },
     make: ({ a, b, k, L: L16, ans, p }) => ({
       question: `${p.name} has ${L16} litres of juice. ${p.She} pours it into small cups that each hold ${a}/${b} of a litre. To find the number of cups, ${p.she} multiplies ${L16} by the reciprocal of ${a}/${b}. How many cups does ${p.she} fill?`,
       answer: ans,
-      wrong: [[round(L16 * a / b, 2), `That multiplies by ${a}/${b} itself. The reciprocal turns the fraction upside down first.`], [L16 * b, "The reciprocal is a fraction. Multiply by the whole fraction, not only the top."], [L16 * a, "The reciprocal has both a top and a bottom. Use both."]],
+      wrong: [[round(L16 * a / b, 2), `That multiplies by ${a}/${b} itself. The reciprocal turns the fraction upside down first.`, "M_NOT_FLIPPED"], [L16 * b, "The reciprocal is a fraction. Multiply by the whole fraction, not only the top.", "M_ONLY_DENOMINATOR_USED"], [L16 * a, "The reciprocal has both a top and a bottom. Use both.", "M_ONLY_NUMERATOR_USED"]],
       hints: [`Turn ${a}/${b} upside down to get its reciprocal.`, `Multiply ${L16} by the reciprocal.`],
       steps: [`The reciprocal of ${a}/${b} is ${b}/${a}.`, `${L16} \xD7 ${b}/${a} = ${L16 * b}/${a} = ${ans}.`]
     }),
@@ -126673,7 +126725,8 @@ var FAMILIES175 = [
   fam44({
     id: "g7.frac.recip-mixed-why",
     skill: "G7_RECIPROCALS",
-    outcome: "G7.FRAC.e",
+    outcome: "MATH.G7.NUMBER.FRACTIONS.e",
+    cskill: "MATH.G7.NUMBER.FRACTIONS.RECIPROCAL",
     rung: 3,
     form: "why",
     draw: () => {
@@ -126687,9 +126740,9 @@ var FAMILIES175 = [
         story: false,
         options: shuffle15([
           { text: `${w14} ${a}/${b} must first be written as ${n}/${b}. Its reciprocal is ${b}/${n}`, right: true },
-          { text: "A mixed number does not have a reciprocal", right: false, why: "Every number except 0 has a reciprocal, including mixed numbers." },
-          { text: `The whole number ${w14} stays the same in a reciprocal`, right: false, why: "The reciprocal of the whole number is found with the fraction. The whole number part cannot stay as it is." },
-          { text: `The reciprocal of a number is the same number with a minus sign`, right: false, why: "That is the opposite, not the reciprocal. A number times its reciprocal is 1." }
+          { text: "A mixed number does not have a reciprocal", right: false, why: "Every number except 0 has a reciprocal, including mixed numbers.", mis: "M_MIXED_NUMBER_HAS_NONE" },
+          { text: `The whole number ${w14} stays the same in a reciprocal`, right: false, why: "The reciprocal of the whole number is found with the fraction. The whole number part cannot stay as it is.", mis: "M_MIXED_NUMBER_FLIPPED_BY_PARTS" },
+          { text: `The reciprocal of a number is the same number with a minus sign`, right: false, why: "That is the opposite, not the reciprocal. A number times its reciprocal is 1.", mis: "M_RECIPROCAL_IS_NEGATIVE" }
         ]),
         hints: ["A number times its reciprocal is 1.", "Write the mixed number as one fraction first, then turn it upside down."],
         steps: [`${w14} ${a}/${b} = ${n}/${b}.`, `The reciprocal is ${b}/${n}.`, `Check: ${n}/${b} \xD7 ${b}/${n} = 1.`]
@@ -126699,7 +126752,8 @@ var FAMILIES175 = [
   fam44({
     id: "g7.frac.div-operation",
     skill: "G7_FRACTIONS_DIV",
-    outcome: "G7.FRAC.f",
+    outcome: "MATH.G7.NUMBER.FRACTIONS.g",
+    cskill: "MATH.G7.NUMBER.FRACTIONS.DIVIDE_WHOLE_BY_FRACTION",
     rung: 2,
     form: "word",
     draw: () => {
@@ -126710,9 +126764,9 @@ var FAMILIES175 = [
       question: `${p.name} has ${L16} ${item[1]} of ${item[0]}. Each ${item[2]} needs ${a}/${b} of a ${item[1] === "litres" ? "litre" : "kg"}. Which calculation gives how many ${item[3]} ${p.she} can make?`,
       options: shuffle15([
         { text: `${L16} \xF7 ${a}/${b}`, right: true },
-        { text: `${L16} \xD7 ${a}/${b}`, right: false, why: `That finds ${a}/${b} of ${L16}, not how many lots of ${a}/${b} fit into ${L16}.` },
-        { text: `${a}/${b} \xF7 ${L16}`, right: false, why: "This divides the small amount by the large one. The question asks how many of the small amounts fit into the large one." },
-        { text: `${L16} \u2212 ${a}/${b}`, right: false, why: `Taking away ${a}/${b} once does not count how many times it fits.` }
+        { text: `${L16} \xD7 ${a}/${b}`, right: false, why: `That finds ${a}/${b} of ${L16}, not how many lots of ${a}/${b} fit into ${L16}.`, mis: "M_FRACTION_OF_NOT_HOW_MANY" },
+        { text: `${a}/${b} \xF7 ${L16}`, right: false, why: "This divides the small amount by the large one. The question asks how many of the small amounts fit into the large one.", mis: "M_SMALL_DIVIDED_BY_LARGE" },
+        { text: `${L16} \u2212 ${a}/${b}`, right: false, why: `Taking away ${a}/${b} once does not count how many times it fits.`, mis: "M_TAKEN_AWAY_ONCE" }
       ]),
       hints: ['"How many lots of a small amount fit into a big amount" is a division.', "Which amount is being shared out, and which is the size of each part?"],
       steps: [`Each ${item[2]} needs ${a}/${b}, and there are ${L16} ${item[1]} altogether.`, `The number of ${item[3]} is ${L16} \xF7 ${a}/${b}.`]
@@ -126721,7 +126775,8 @@ var FAMILIES175 = [
   fam44({
     id: "g7.frac.div-tank-buckets",
     skill: "G7_FRACTIONS_DIV",
-    outcome: "G7.FRAC.f",
+    outcome: "MATH.G7.NUMBER.FRACTIONS.f",
+    cskill: "MATH.G7.NUMBER.FRACTIONS.DIVIDE_FRACTION_BY_WHOLE",
     rung: 2,
     form: "word",
     draw: () => {
@@ -126732,7 +126787,7 @@ var FAMILIES175 = [
     },
     make: ({ a, b, k, right, w: w14, p }) => ({
       question: `A water tank is ${a}/${b} full. ${p.name} divides the water equally among ${k} drums. What fraction of the whole tank is in each drum?`,
-      options: shuffle15([{ text: right, right: true }, { text: w14[0], right: false, why: "That multiplies by the number of drums. Sharing equally makes each part smaller." }, { text: w14[1], right: false, why: "The denominator is not found by adding. Dividing by a number multiplies the denominator." }, { text: w14[2], right: false, why: "That turns the fraction upside down and multiplies. Divide the fraction by the number of drums." }]),
+      options: shuffle15([{ text: right, right: true }, { text: w14[0], right: false, why: "That multiplies by the number of drums. Sharing equally makes each part smaller.", mis: "M_MULTIPLIED_BY_DIVISOR" }, { text: w14[1], right: false, why: "The denominator is not found by adding. Dividing by a number multiplies the denominator.", mis: "M_WHOLE_ADDED_TO_DENOMINATOR" }, { text: w14[2], right: false, why: "That turns the fraction upside down and multiplies. Divide the fraction by the number of drums.", mis: "M_FLIPPED_THE_DIVIDEND" }]),
       hints: ["Sharing equally into drums is dividing the fraction by the number of drums.", "Dividing a fraction by a whole number is the same as multiplying by one over that number."],
       steps: [`${a}/${b} \xF7 ${k} = ${a}/${b} \xD7 1/${k}.`, `= ${a}/${b * k}${gcd6(a, b * k) > 1 ? ` = ${right}` : ""}.`]
     })
@@ -126740,19 +126795,21 @@ var FAMILIES175 = [
   fam44({
     id: "g7.frac.mul-land",
     skill: "G7_FRACTIONS_MUL",
-    outcome: "G7.FRAC.d",
+    outcome: "MATH.G7.NUMBER.FRACTIONS.d",
+    cskill: "MATH.G7.NUMBER.FRACTIONS.MULT_FRACTION_BY_FRACTION",
     rung: 2,
     form: "word",
     draw: () => {
       const [a, b] = pick([[3, 4], [2, 3], [3, 5], [5, 6], [7, 8]]), [c19, d] = pick([[1, 3], [1, 2], [2, 5], [3, 4], [1, 4]]), N4 = pick([24, 30, 36, 40, 48, 60, 72, 120]);
       if (N4 * a * c19 % (b * d) !== 0) return null;
       const ans = N4 * a * c19 / (b * d);
-      return distinct8(ans, N4 * a / b, round(N4 * c19 / d, 2), round(N4 * (a / b + c19 / d), 2)) ? { a, b, c: c19, d, N: N4, ans, p: person() } : null;
+      const far = [N4 * a / b, round(N4 * c19 / d, 2), round(N4 * (a / b + c19 / d), 2)].every((v) => Math.abs(v - ans) > 2);
+      return far && distinct8(ans, N4 * a / b, round(N4 * c19 / d, 2), round(N4 * (a / b + c19 / d), 2)) ? { a, b, c: c19, d, N: N4, ans, p: person() } : null;
     },
     make: ({ a, b, c: c19, d, N: N4, ans, p }) => ({
       question: `${p.name} has a shamba of ${N4} acres. ${a}/${b} of the shamba is planted with maize. ${c19}/${d} of the maize land is near the river. How many acres of maize are near the river?`,
       answer: ans,
-      wrong: [[N4 * a / b, `That is all the maize land. Only ${c19}/${d} of it is near the river.`], [round(N4 * c19 / d, 2), `${c19}/${d} must be taken of the maize land, not of the whole shamba.`], [round(N4 * (a / b + c19 / d), 2), "Part of a part is found by multiplying the two fractions, not adding them."]],
+      wrong: [[N4 * a / b, `That is all the maize land. Only ${c19}/${d} of it is near the river.`, "M_STOPPED_AFTER_FIRST_FRACTION"], [round(N4 * c19 / d, 2), `${c19}/${d} must be taken of the maize land, not of the whole shamba.`, "M_FRACTION_OF_WRONG_WHOLE"], [round(N4 * (a / b + c19 / d), 2), "Part of a part is found by multiplying the two fractions, not adding them.", "M_ADD_FRACTIONS_INSTEAD"]],
       hints: ["First find the acres of maize.", `Then find ${c19}/${d} of that.`],
       steps: [`Maize: ${a}/${b} of ${N4} = ${N4 * a / b} acres.`, `Near the river: ${c19}/${d} of ${N4 * a / b} = ${ans} acres.`]
     }),
@@ -126761,7 +126818,8 @@ var FAMILIES175 = [
   fam44({
     id: "g7.frac.seq-tank",
     skill: "G7_FRACTIONS_ADD_UNLIKE",
-    outcome: "G7.FRAC.h",
+    outcome: "MATH.G7.NUMBER.FRACTIONS.h",
+    cskill: "MATH.G7.NUMBER.FRACTIONS.FRACTION_SEQ_ADD_RULE",
     rung: 2,
     form: "word",
     draw: () => {
@@ -126774,7 +126832,7 @@ var FAMILIES175 = [
     },
     make: ({ dir, shown, right, w: w14, p }) => ({
       question: `A tank at ${p.name}'s school is ${dir === 1 ? "filling" : "emptying"}. The part of the tank that is ${dir === 1 ? "full" : "still full"} after each hour follows a pattern: ${shown.join(", ")}. What comes next in the sequence, after the fifth hour?`,
-      options: shuffle15([{ text: right, right: true }, { text: w14[0], right: false, why: "That skips a term. The next term is the one straight after the last one shown." }, { text: w14[1], right: false, why: "The same amount is added or taken away each time. Check the gap between the terms you can see." }, { text: w14[2], right: false, why: "Only the numerator changes. The denominator stays the same when the same fraction is added each time." }]),
+      options: shuffle15([{ text: right, right: true }, { text: w14[0], right: false, why: "That skips a term. The next term is the one straight after the last one shown.", mis: "M_END_NOT_NEXT" }, { text: w14[1], right: false, why: "The same amount is added or taken away each time. Check the gap between the terms you can see.", mis: "M_GAP_NOT_CONSTANT" }, { text: w14[2], right: false, why: "Only the numerator changes. The denominator stays the same when the same fraction is added each time.", mis: "M_DENOMINATOR_ALSO_CHANGED" }]),
       hints: ["Write the terms with the same denominator and find the gap between them.", "Use the same gap once more."],
       steps: [`Over a common denominator the gap between terms is the same each hour.`, `Adding the gap ${dir === 1 ? "to" : "taking it from"} ${shown[3]} gives ${right}.`]
     })
@@ -126782,16 +126840,17 @@ var FAMILIES175 = [
   fam44({
     id: "g7.frac.seq-fill-table",
     skill: "G7_FRACTIONS_ADD_UNLIKE",
-    outcome: "G7.FRAC.h",
+    outcome: "MATH.G7.NUMBER.FRACTIONS.h",
+    cskill: "MATH.G7.NUMBER.FRACTIONS.FRACTION_SEQ_IN_TABLE",
     rung: 3,
     form: "table",
-    draw: () => ({ m: pick([8, 10, 14]), p: person() }),
+    draw: () => ({ m: pick([10, 14]), p: person() }),
     make: ({ m: m20, p }) => ({
       question: `${p.name} fills a tank at a steady rate. The table shows the part of the tank that is full after 2, 4 and 6 hours. If the pattern continues, after how many hours is the tank full?`,
       story: false,
       model: { type: "table", data: { head: ["Hours", "Part of the tank full"], rows: [2, 4, 6].map((h) => ({ label: String(h), value: mixed(h, m20) })) } },
       answer: m20,
-      wrong: [[6, "That is the last time in the table, and the tank is not full yet."], [m20 / 2, "The table goes up in steps of 2 hours. Count hours, not steps."], [m20 * 2, "That is too long. Work out the part filled in one hour."]],
+      wrong: [[6, "That is the last time in the table, and the tank is not full yet.", "M_LAST_ROW_TAKEN_AS_ANSWER"], [m20 / 2, "The table goes up in steps of 2 hours. Count hours, not steps.", "M_STEPS_COUNTED_NOT_HOURS"], [m20 * 2, "That is too long. Work out the part filled in one hour.", "M_STEP_RATE_AS_HOURLY"]],
       hints: ["Find the part filled in 2 hours, then in 1 hour.", "How many of those fill the whole tank?"],
       steps: [`In 2 hours the part full is ${mixed(2, m20)}, so in 1 hour it is 1/${m20}.`, `The tank is full when ${m20} lots of 1/${m20} are added: ${m20} hours.`]
     }),
@@ -126800,7 +126859,8 @@ var FAMILIES175 = [
   fam44({
     id: "g7.frac.seq-rule",
     skill: "G7_FRACTIONS_ADD_UNLIKE",
-    outcome: "G7.FRAC.h",
+    outcome: "MATH.G7.NUMBER.FRACTIONS.h",
+    cskill: "MATH.G7.NUMBER.FRACTIONS.FRACTION_SEQ_MULTIPLY_RULE",
     rung: 2,
     form: "direct",
     draw: () => ({ r: pick([2, 3, 4, 5]) }),
@@ -126809,9 +126869,9 @@ var FAMILIES175 = [
       story: false,
       options: shuffle15([
         { text: `Divide by ${r} each time`, right: true },
-        { text: `Multiply by ${r} each time`, right: false, why: "Multiplying by a whole number makes terms bigger. These terms are getting smaller." },
-        { text: `Take away 1/${r} each time`, right: false, why: `Take 1/${r} away from 1/${r} and nothing is left, but the next term is still there.` },
-        { text: `Take away ${r} each time`, right: false, why: "Taking away a whole number would give negative terms." }
+        { text: `Multiply by ${r} each time`, right: false, why: "Multiplying by a whole number makes terms bigger. These terms are getting smaller.", mis: "M_MULTIPLY_FOR_SMALLER" },
+        { text: `Take away 1/${r} each time`, right: false, why: `Take 1/${r} away from 1/${r} and nothing is left, but the next term is still there.`, mis: "M_FRACTION_SUBTRACTED_NOT_SCALED" },
+        { text: `Take away ${r} each time`, right: false, why: "Taking away a whole number would give negative terms.", mis: "M_WHOLE_SUBTRACTED_FROM_FRACTION" }
       ]),
       hints: ["Compare each term with the one before it: is it bigger or smaller?", "Try dividing the first term by the second."],
       steps: [`1 \xF7 1/${r} = ${r}, so each term is 1/${r} of the one before.`, `That means divide by ${r} each time.`]
@@ -126823,7 +126883,8 @@ var FAMILIES175 = [
   fam44({
     id: "g7.dec.read-chart",
     skill: "G7_DECIMAL_PV",
-    outcome: "G7.DEC.a",
+    outcome: "MATH.G7.NUMBER.DECIMALS.a",
+    cskill: "MATH.G7.NUMBER.DECIMALS.DEC_PLACE_AND_TOTAL_VALUE",
     rung: 2,
     form: "table",
     draw: () => {
@@ -126841,7 +126902,7 @@ var FAMILIES175 = [
         story: false,
         model: { type: "table", data: { head: ["Place", "Digit"], rows: order.map((i) => ({ label: NAMES[i], value: String(ds[i]) })) } },
         answer: val,
-        wrong: [[naive, "You read the digits from the top of the table down. Each row has a place name: put every digit in its own place."], [round(ds[1] * 10 + ds[0] + ds[2] / 10 + ds[3] / 100 + ds[4] / 1e3, 3), "The tens digit comes before the ones digit. Check which digit is in which place."], [round(ds[0] * 10 + ds[1] + ds[2] / 100 + ds[3] / 10 + ds[4] / 1e3, 3), "Tenths come straight after the point, then hundredths, then thousandths."]],
+        wrong: [[naive, "You read the digits from the top of the table down. Each row has a place name: put every digit in its own place.", "M_DIGITS_READ_TOP_DOWN"], [round(ds[1] * 10 + ds[0] + ds[2] / 10 + ds[3] / 100 + ds[4] / 1e3, 3), "The tens digit comes before the ones digit. Check which digit is in which place.", "M_TENS_AND_ONES_SWAPPED"], [round(ds[0] * 10 + ds[1] + ds[2] / 100 + ds[3] / 10 + ds[4] / 1e3, 3), "Tenths come straight after the point, then hundredths, then thousandths.", "M_DECIMAL_PLACES_SWAPPED"]],
         hints: ["Say the place of each digit by its row name.", "Tens and ones go before the decimal point. Tenths, hundredths and thousandths go after it."],
         steps: [`Tens ${ds[0]}, ones ${ds[1]}, tenths ${ds[2]}, hundredths ${ds[3]}, thousandths ${ds[4]}.`, `The number is ${val}.`]
       };
@@ -126851,7 +126912,8 @@ var FAMILIES175 = [
   fam44({
     id: "g7.dec.how-many-hundredths",
     skill: "G7_DECIMAL_PV",
-    outcome: "G7.DEC.a",
+    outcome: "MATH.G7.NUMBER.DECIMALS.a",
+    cskill: "MATH.G7.NUMBER.DECIMALS.DEC_COUNT_TENTHS",
     rung: 2,
     form: "word",
     draw: () => {
@@ -126863,7 +126925,7 @@ var FAMILIES175 = [
       return {
         question: `${p.name} measures ${x} ${what[1]}s of ${what[0]}. How many ${unit} of a ${what[1]} is this?`,
         answer: N4,
-        wrong: [[x, `That is the same number written as a decimal. Count how many ${unit} make it.`], [dp3 === 1 ? N4 * 10 : round(N4 / 10, 2), `Check the place: each whole is split into ${dp3 === 1 ? "10 tenths" : "100 hundredths"}, and ${unit} are not the same as ${dp3 === 1 ? "hundredths" : "tenths"}.`], [Number(String(N4).slice(1)), "That only counts the digits after the first one. Count the whole ones too."]],
+        wrong: [[x, `That is the same number written as a decimal. Count how many ${unit} make it.`, "M_SAME_NUMBER_REPEATED"], [dp3 === 1 ? N4 * 10 : round(N4 / 10, 2), `That mixes up the two places: each whole is split into ${dp3 === 1 ? "10 tenths" : "100 hundredths"}, and ${unit} are not the same as ${dp3 === 1 ? "hundredths" : "tenths"}.`, "M_TENTHS_HUNDREDTHS_CONFUSED"], [Number(String(N4).slice(1)), "That only counts the digits after the first one. Count the whole ones too.", "M_WHOLES_NOT_COUNTED"]],
         hints: [`One ${what[1]} is ${dp3 === 1 ? 10 : 100} ${unit}.`, `Multiply the number of ${what[1]}s by ${dp3 === 1 ? 10 : 100}.`],
         steps: [`1 ${what[1]} = ${dp3 === 1 ? 10 : 100} ${unit}.`, `${x} \xD7 ${dp3 === 1 ? 10 : 100} = ${N4} ${unit}.`]
       };
@@ -126873,7 +126935,8 @@ var FAMILIES175 = [
   fam44({
     id: "g7.dec.price-per-kg",
     skill: "G7_DECIMALS_MUL",
-    outcome: "G7.DEC.b",
+    outcome: "MATH.G7.NUMBER.DECIMALS.b",
+    cskill: "MATH.G7.NUMBER.DECIMALS.MULT_DEC_BY_WHOLE",
     rung: 1,
     form: "word",
     draw: () => {
@@ -126883,7 +126946,7 @@ var FAMILIES175 = [
     make: ({ item, pr: pr2, q, p }) => ({
       question: `${p.name} buys ${q} kg of ${item.replace("kg of ", "")}. Each kilogram costs ${sh(pr2)}. How much does ${p.she} pay? Answer in shillings.`,
       answer: round(pr2 * q, 2),
-      wrong: [[pr2 * Math.floor(q), "You paid for the whole kilograms only. The half kilogram costs money too."], [round(pr2 + q, 2), "The price is for each kilogram, so multiply by the number of kilograms. Do not add."], [round(pr2 * q * 10, 1), "Check the decimal point. Multiplying by a number with one decimal place gives a smaller answer than this."]],
+      wrong: [[pr2 * Math.floor(q), "You paid for the whole kilograms only. The half kilogram costs money too.", "M_FRACTION_PART_DROPPED"], [round(pr2 + q, 2), "The price is for each kilogram, so multiply by the number of kilograms. Do not add.", "M_ADDED_NOT_MULTIPLIED"], [round(pr2 * q * 10, 1), "The decimal point is in the wrong place. Multiplying by a number with one decimal place gives a smaller answer than this.", "M_POINT_NOT_MOVED_BACK"]],
       hints: ["The price is for 1 kg. How many kilograms are bought?", `Multiply ${pr2} by ${q}.`],
       steps: [`${pr2} \xD7 ${q}: first ${pr2} \xD7 ${q * 10} = ${pr2 * q * 10}.`, `${q} has 1 decimal place, so divide by 10: ${round(pr2 * q, 2)}.`]
     }),
@@ -126892,7 +126955,8 @@ var FAMILIES175 = [
   fam44({
     id: "g7.dec.garden-steps",
     skill: "G7_DECIMALS_MUL",
-    outcome: "G7.DEC.b",
+    outcome: "MATH.G7.NUMBER.DECIMALS.b",
+    cskill: "MATH.G7.NUMBER.DECIMALS.MULT_DEC_BY_DEC",
     rung: 3,
     form: "steps",
     draw: () => {
@@ -126903,18 +126967,18 @@ var FAMILIES175 = [
     make: ({ L: L16, w: w14, pr: pr2, area, cost, per, p }) => ({
       question: `${p.name} has a rectangular garden ${L16} m long and ${w14} m wide.`,
       parts: [
-        { prompt: "What is the area of the garden, in square metres?", answer: area, unit: "m\xB2", hint: "Area of a rectangle = length \xD7 width.", wrong: [[round(L16 + w14, 2), "Area is found by multiplying, not adding."], [per, "That is the distance around the garden, the perimeter."], [round(area * 10, 2), "Count the decimal places in both numbers: the answer has that many in total."]] },
-        { prompt: `Grass costs ${sh(pr2)} for each square metre. What is the cost of covering the garden with grass? Answer in shillings.`, answer: cost, hint: "Cost = area \xD7 price for each square metre.", wrong: [[round(L16 * pr2, 2), "Use the whole area, not only the length."], [round(area + pr2, 2), "The price is for each square metre. Multiply."], [round(per * pr2, 2), "That uses the perimeter. Grass covers the area."]] },
-        { prompt: "What length of fence goes all the way round the garden, in metres?", answer: per, unit: "m", hint: "Add all four sides, or double length + width.", wrong: [[round(L16 + w14, 2), "That is only two sides."], [area, "That is the area. The fence goes round the edge."], [round(L16 * 2 + w14, 2), "Two sides are long and two are short."]] }
+        { prompt: "What is the area of the garden, in square metres?", answer: area, unit: "m\xB2", hint: "Area of a rectangle = length \xD7 width.", wrong: [[round(L16 + w14, 2), "Area is found by multiplying, not adding.", "M_ADDED_NOT_MULTIPLIED"], [per, "That is the distance around the garden, the perimeter.", "M_PERIMETER_FOR_AREA"], [round(area * 10, 2), "Count the decimal places in both numbers: the answer has that many in total.", "M_POINT_NOT_MOVED_BACK"]] },
+        { prompt: `Grass costs ${sh(pr2)} for each square metre. What is the cost of covering the garden with grass? Answer in shillings.`, answer: cost, hint: "Cost = area \xD7 price for each square metre.", wrong: [[round(L16 * pr2, 2), "Use the whole area, not only the length.", "M_WRONG_QUANTITY_MULTIPLIED"], [round(area + pr2, 2), "The price is for each square metre. Multiply.", "M_ADDED_NOT_MULTIPLIED"], [round(per * pr2, 2), "That uses the perimeter. Grass covers the area.", "M_PERIMETER_FOR_AREA"]] }
       ],
-      steps: [`Area: ${L16} \xD7 ${w14} = ${area} m\xB2.`, `Cost: ${area} \xD7 ${pr2} = ${commas(cost)}.`, `Fence: 2 \xD7 (${L16} + ${w14}) = ${per} m.`]
+      steps: [`Area: ${L16} \xD7 ${w14} = ${area} m\xB2.`, `Cost: ${area} \xD7 ${pr2} = ${commas(cost)}.`]
     }),
-    check: ({ L: L16, w: w14, pr: pr2 }, v) => Math.abs(v[0] / L16 - w14) < 1e-9 && Math.abs(v[1] / pr2 - v[0]) < 1e-9 && Math.abs(v[2] / 2 - (L16 + w14)) < 1e-9
+    check: ({ L: L16, w: w14, pr: pr2 }, v) => Math.abs(v[0] / L16 - w14) < 1e-9 && Math.abs(v[1] / pr2 - v[0]) < 1e-9
   }),
   fam44({
     id: "g7.dec.ribbon-bows",
     skill: "G7_DECIMALS_DIV",
-    outcome: "G7.DEC.c",
+    outcome: "MATH.G7.NUMBER.DECIMALS.c",
+    cskill: "MATH.G7.NUMBER.DECIMALS.DIV_BY_DECIMAL",
     rung: 2,
     form: "word",
     draw: () => {
@@ -126924,7 +126988,7 @@ var FAMILIES175 = [
     make: ({ q, n, t, p }) => ({
       question: `${p.name} divides a ribbon ${t} m long into pieces of ${q} m each to make bows. How many pieces does ${p.she} get?`,
       answer: n,
-      wrong: [[round(t * q, 3), "To find how many pieces fit, divide. Multiplying gives a smaller number."], [round(n / 10, 2), "Move the decimal point in both numbers by the same amount, so the divisor is whole. Check how far you moved it."], [round(t - q, 2), "Taking one piece away is not counting how many pieces fit."]],
+      wrong: [[round(t * q, 3), "To find how many pieces fit, divide. Multiplying gives a smaller number.", "M_MULTIPLIED_INSTEAD_OF_COUNTING"], [round(n / 10, 2), "Move the decimal point in both numbers by the same amount, so the divisor is whole. Check how far you moved it.", "M_POINT_MOVED_ONE_NUMBER"], [round(t - q, 2), "Taking one piece away is not counting how many pieces fit.", "M_REPEATED_SUBTRACTION_ONCE"]],
       hints: ["How many lots of the piece length fit into the whole ribbon?", "Multiply both numbers by 100 so neither has a decimal point."],
       steps: [`${t} \xF7 ${q}: multiply both by 100 to get ${round(t * 100, 0)} \xF7 ${round(q * 100, 0)}.`, `${round(t * 100, 0)} \xF7 ${round(q * 100, 0)} = ${n}.`]
     }),
@@ -126933,7 +126997,8 @@ var FAMILIES175 = [
   fam44({
     id: "g7.dec.beans-steps",
     skill: "G7_DECIMALS_DIV",
-    outcome: "G7.DEC.c",
+    outcome: "MATH.G7.NUMBER.DECIMALS.c",
+    cskill: "MATH.G7.NUMBER.DECIMALS.DIV_BY_DECIMAL",
     rung: 3,
     form: "steps",
     draw: () => {
@@ -126944,9 +127009,9 @@ var FAMILIES175 = [
     make: ({ pr: pr2, q, q2, cost, X: X2, p }) => ({
       question: `${p.name} pays ${sh(cost)} for ${q} kg of beans at a shop. ${p.She} divides the money by the kilograms to find what 1 kg costs.`,
       parts: [
-        { prompt: "What is the price of 1 kg of beans, in shillings?", answer: pr2, hint: `Divide the money paid by ${q}. Multiply both by 10 first.`, wrong: [[round(cost * q, 2), "To find the price of 1 kg, divide. Multiplying makes a number that is too big."], [round(cost - q, 2), "Taking away the kilograms does not give the price of one."], [pr2 * 10, "Check the decimal point when you divide."]] },
-        { prompt: "At that price, how much do 5 kg of beans cost? Answer in shillings.", answer: pr2 * 5, hint: "Price of 1 kg \xD7 5.", wrong: [[cost * 5, "That is 5 times the cost of the first purchase. Use the price of 1 kg."], [pr2 + 5, "Multiply the price of 1 kg by 5."], [round(cost / 5, 2), "That divides. Buying more costs more."]] },
-        { prompt: `${p.name} has ${sh(X2)}. How many kilograms of beans can ${p.she} buy at that price?`, answer: q2, unit: "kg", hint: "Divide the money by the price of 1 kg.", wrong: [[X2 * pr2, "The number of kilograms is smaller than the money. Divide."], [round(X2 / pr2 * 10, 1), "Check the decimal point in your division."], [round(X2 - pr2, 2), "Taking away is not the same as dividing."]] }
+        { prompt: "What is the price of 1 kg of beans, in shillings?", answer: pr2, hint: `Divide the money paid by ${q}. Multiply both by 10 first.`, wrong: [[round(cost * q, 2), "To find the price of 1 kg, divide. Multiplying makes a number that is too big.", "M_MULTIPLIED_NOT_DIVIDED"], [round(cost - q, 2), "Taking away the kilograms does not give the price of one.", "M_SUBTRACTED_NOT_DIVIDED"], [pr2 * 10, "The point has slipped one place when dividing, so the answer is ten times too big.", "M_POINT_PLACED_WRONG"]] },
+        { prompt: "At that price, how much do 5 kg of beans cost? Answer in shillings.", answer: pr2 * 5, hint: "Price of 1 kg \xD7 5.", wrong: [[cost * 5, "That is 5 times the cost of the first purchase. Use the price of 1 kg.", "M_WRONG_QUANTITY_MULTIPLIED"], [pr2 + 5, "Multiply the price of 1 kg by 5.", "M_ADDED_NOT_MULTIPLIED"], [round(cost / 5, 2), "That divides. Buying more costs more.", "M_DIVIDED_NOT_MULTIPLIED"]] },
+        { prompt: `${p.name} has ${sh(X2)}. How many kilograms of beans can ${p.she} buy at that price?`, answer: q2, unit: "kg", hint: "Divide the money by the price of 1 kg.", wrong: [[X2 * pr2, "The number of kilograms is smaller than the money. Divide.", "M_MULTIPLIED_NOT_DIVIDED"], [round(X2 / pr2 * 10, 1), "The point has slipped one place in the division, so the answer is ten times too big.", "M_POINT_PLACED_WRONG"], [round(X2 - pr2, 2), "Taking away is not the same as dividing.", "M_SUBTRACTED_NOT_DIVIDED"]] }
       ],
       steps: [`${cost} \xF7 ${q} = ${round(cost * 10, 0)} \xF7 ${round(q * 10, 0)} = ${pr2}.`, `5 \xD7 ${pr2} = ${pr2 * 5}.`, `${X2} \xF7 ${pr2} = ${q2} kg.`]
     }),
@@ -126958,7 +127023,8 @@ var FAMILIES175 = [
   fam44({
     id: "g7.sq.garden-double",
     skill: "G7_SQUARES_EXT",
-    outcome: "G7.SQUARES.a",
+    outcome: "MATH.G7.NUMBER.SQUARES_AND_SQUARE_ROOTS.a",
+    cskill: "MATH.G7.NUMBER.SQUARES_AND_SQUARE_ROOTS.SQUARE_DECIMAL",
     rung: 3,
     form: "steps",
     draw: () => {
@@ -126969,18 +127035,18 @@ var FAMILIES175 = [
     make: ({ s, pr: pr2, area, cost, p }) => ({
       question: `${p.name} has a square vegetable garden. Each side is ${s} m long.`,
       parts: [
-        { prompt: "What is the area of the garden, in square metres?", answer: area, unit: "m\xB2", hint: `Area of a square = side \xD7 side, so square ${s}.`, wrong: [[round(s * 2, 2), `That doubles the side. Squaring means ${s} \xD7 ${s}.`], [round(s * 4, 2), "That is the perimeter. Area is side \xD7 side."], [round(area * 10, 3), "Check the decimal point. The product of two decimals has as many decimal places as both together."]] },
-        { prompt: `Topsoil costs ${sh(pr2)} for each square metre. How much does it cost to cover the garden? Answer in shillings.`, answer: cost, hint: "Cost = area \xD7 price for each square metre.", wrong: [[round(s * pr2, 2), "Use the area, not the length of a side."], [round(area + pr2, 2), "The price is for each square metre. Multiply."], [round(s * 4 * pr2, 2), "That uses the perimeter. Topsoil covers the area."]] },
-        { prompt: `${p.name} makes a new square garden with sides twice as long. What is the area of the new garden, in square metres?`, answer: round(4 * area, 4), unit: "m\xB2", hint: "The new side is double the old side. Square it.", wrong: [[round(2 * area, 4), "Doubling the side makes the area more than double. Square the new side."], [round(area + 2 * s, 4), "Work out the new side first, then square it."], [round(area * 8, 4), "The area grows by the square of 2, not by the cube."]] }
+        { prompt: "What is the area of the garden, in square metres?", answer: area, unit: "m\xB2", hint: `Area of a square = side \xD7 side, so square ${s}.`, wrong: [[round(s * 2, 2), `That doubles the side. Squaring means ${s} \xD7 ${s}.`, "M_DOUBLED_NOT_SQUARED"], [round(s * 4, 2), "That is the perimeter. Area is side \xD7 side.", "M_PERIMETER_FOR_AREA_SQ"], [round(area * 10, 3), "The decimal point is in the wrong place. The product of two decimals has as many decimal places as both together.", "M_POINT_PLACES_NOT_DOUBLED"]] },
+        { prompt: `${p.name} makes a new square garden with sides twice as long. What is the area of the new garden, in square metres?`, answer: round(4 * area, 4), unit: "m\xB2", hint: "The new side is double the old side. Square it.", wrong: [[round(2 * area, 4), "Doubling the side makes the area more than double. Square the new side.", "M_AREA_DOUBLES_WITH_SIDE"], [round(area + 2 * s, 4), "Work out the new side first, then square it.", "M_ADDED_NOT_SQUARED"], [round(area * 8, 4), "The area grows by the square of 2, not by the cube.", "M_CUBED_NOT_SQUARED"]] }
       ],
-      steps: [`${s} \xD7 ${s} = ${area} m\xB2.`, `${area} \xD7 ${pr2} = ${commas(cost)}.`, `New side ${round(2 * s, 2)} m, and ${round(2 * s, 2)}\xB2 = ${round(4 * area, 4)} m\xB2.`]
+      steps: [`${s} \xD7 ${s} = ${area} m\xB2.`, `New side ${round(2 * s, 2)} m, and ${round(2 * s, 2)}\xB2 = ${round(4 * area, 4)} m\xB2.`]
     }),
-    check: ({ s, pr: pr2 }, v) => Math.abs(v[0] / s - s) < 1e-9 && Math.abs(v[1] / pr2 - v[0]) < 1e-9 && Math.abs(v[2] / v[0] - 4) < 1e-9
+    check: ({ s }, v) => Math.abs(v[0] / s - s) < 1e-9 && Math.abs(v[1] / v[0] - 4) < 1e-9
   }),
   fam44({
     id: "g7.sq.decimal-spot",
     skill: "G7_SQUARES_EXT",
-    outcome: "G7.SQUARES.a",
+    outcome: "MATH.G7.NUMBER.SQUARES_AND_SQUARE_ROOTS.a",
+    cskill: "MATH.G7.NUMBER.SQUARES_AND_SQUARE_ROOTS.SQUARE_DECIMAL",
     rung: 3,
     form: "spot",
     draw: () => ({ dp: pick([1, 2]), a: randInt(2, 9), p: person() }),
@@ -126995,6 +127061,7 @@ var FAMILIES175 = [
           { text: `Put the point in ${num5}, with ${shownDp} decimal place${shownDp > 1 ? "s" : ""}: ${fmt2(shown)}.`, ok: shown === round(num5 / 10 ** shownDp, 6) },
           { text: `So (${fmt2(x)})\xB2 = ${fmt2(shown)}.`, ok: true }
         ],
+        mis: "M_POINT_PLACES_NOT_DOUBLED",
         fix: `Squaring multiplies the number by itself, so the decimal places double: ${dp3} + ${dp3} = ${2 * dp3}. The square has ${2 * dp3} decimal places.`,
         steps: [`${a} \xD7 ${a} = ${num5}.`, `${2 * dp3} decimal places: ${fmt2(round(num5 / 10 ** (2 * dp3), 6))}.`]
       };
@@ -127003,7 +127070,8 @@ var FAMILIES175 = [
   fam44({
     id: "g7.sq.fraction-options",
     skill: "G7_SQUARES_EXT",
-    outcome: "G7.SQUARES.a",
+    outcome: "MATH.G7.NUMBER.SQUARES_AND_SQUARE_ROOTS.a",
+    cskill: "MATH.G7.NUMBER.SQUARES_AND_SQUARE_ROOTS.SQUARE_FRACTION",
     rung: 2,
     form: "direct",
     draw: () => {
@@ -127015,7 +127083,7 @@ var FAMILIES175 = [
     make: ({ n, d, right, w: w14 }) => ({
       question: `Which fraction is the square of ${n}/${d}?`,
       story: false,
-      options: shuffle15([{ text: right, right: true }, { text: w14[0], right: false, why: "Only the top was squared. Both the numerator and the denominator are multiplied by themselves." }, { text: w14[1], right: false, why: "Only the bottom was squared. Both the numerator and the denominator are multiplied by themselves." }, { text: w14[2], right: false, why: "That doubles the top. Squaring means multiplying the fraction by itself." }]),
+      options: shuffle15([{ text: right, right: true }, { text: w14[0], right: false, why: "Only the top was squared. Both the numerator and the denominator are multiplied by themselves.", mis: "M_ONLY_NUMERATOR_SQUARED" }, { text: w14[1], right: false, why: "Only the bottom was squared. Both the numerator and the denominator are multiplied by themselves.", mis: "M_ONLY_DENOMINATOR_SQUARED" }, { text: w14[2], right: false, why: "That doubles the top. Squaring means multiplying the fraction by itself.", mis: "M_NUMERATOR_DOUBLED" }]),
       hints: ["The square of a number is the number times itself.", "Multiply the numerators, and multiply the denominators."],
       steps: [`(${n}/${d})\xB2 = ${n}/${d} \xD7 ${n}/${d}.`, `= ${n * n}/${d * d}${gcd6(n * n, d * d) > 1 ? ` = ${right}` : ""}.`]
     })
@@ -127023,25 +127091,26 @@ var FAMILIES175 = [
   fam44({
     id: "g7.sq.plot-side",
     skill: "G7_SQUARE_ROOTS",
-    outcome: "G7.SQUARES.b",
+    outcome: "MATH.G7.NUMBER.SQUARES_AND_SQUARE_ROOTS.b",
+    cskill: "MATH.G7.NUMBER.SQUARES_AND_SQUARE_ROOTS.ROOT_IN_CONTEXT",
     rung: 3,
     form: "steps",
     draw: () => ({ s: randInt(12, 45), pr: pick([60, 80, 100, 120]), p: person() }),
     make: ({ s, pr: pr2, p }) => ({
       question: `The area of ${p.name}'s square school plot is ${commas(s * s)} m\xB2. Take the square root, \u221A${commas(s * s)}, to find a side.`,
       parts: [
-        { prompt: "How long is one side of the plot, in metres?", answer: s, unit: "m", hint: `Which number multiplied by itself gives ${commas(s * s)}?`, wrong: [[s * s / 2, "Halving the area is not taking its square root."], [s * s / 4, "Dividing by 4 does not undo squaring. Look for a number that multiplied by itself gives the area."], [s + 1, "Check by multiplying your number by itself."]] },
-        { prompt: "How many metres of fence go all the way round the plot?", answer: 4 * s, unit: "m", hint: "A square has 4 equal sides.", wrong: [[2 * s, "A square has four sides, not two."], [s * s, "That is the area. The fence goes round the edge."], [s + 4, "The four sides are added: 4 lots of the side."]] },
-        { prompt: `Fencing wire costs ${sh(pr2)} for each metre. What is the cost of fencing the whole plot? Answer in shillings.`, answer: 4 * s * pr2, hint: "Cost = length of fence \xD7 price for each metre.", wrong: [[s * pr2, "That only pays for one side."], [s * s * pr2, "That uses the area. Fencing goes round the edge."], [4 * s + pr2, "The price is for each metre. Multiply."]] }
+        { prompt: "How long is one side of the plot, in metres?", answer: s, unit: "m", hint: `Which number multiplied by itself gives ${commas(s * s)}?`, wrong: [[s * s / 2, "Halving the area is not taking its square root.", "M_HALVED_NOT_ROOTED"], [s * s / 4, "Dividing by 4 does not undo squaring. Look for a number that multiplied by itself gives the area.", "M_DIVIDED_BY_FOUR_FOR_ROOT"], [s + 1, "Check by multiplying your number by itself.", "SLIP"]] },
+        { prompt: "How many metres of fence go all the way round the plot?", answer: 4 * s, unit: "m", hint: "A square has 4 equal sides.", wrong: [[2 * s, "A square has four sides, not two.", "M_TWO_SIDES_FOR_PERIMETER"], [s * s, "That is the area. The fence goes round the edge.", "M_AREA_FOR_PERIMETER"], [s + 4, "The four sides are added: 4 lots of the side.", "M_SIDE_PLUS_FOUR"]] }
       ],
-      steps: [`\u221A${commas(s * s)} = ${s}, because ${s} \xD7 ${s} = ${commas(s * s)}.`, `Fence: 4 \xD7 ${s} = ${4 * s} m.`, `Cost: ${4 * s} \xD7 ${pr2} = ${commas(4 * s * pr2)}.`]
+      steps: [`\u221A${commas(s * s)} = ${s}, because ${s} \xD7 ${s} = ${commas(s * s)}.`, `Fence: 4 \xD7 ${s} = ${4 * s} m.`]
     }),
-    check: ({ s, pr: pr2 }, v) => v[0] * v[0] === s * s && v[1] === 4 * v[0] && v[2] / pr2 === v[1]
+    check: ({ s }, v) => v[0] * v[0] === s * s && v[1] === 4 * v[0]
   }),
   fam44({
     id: "g7.sq.between-roots",
     skill: "G7_SQUARE_ROOTS",
-    outcome: "G7.SQUARES.b",
+    outcome: "MATH.G7.NUMBER.SQUARES_AND_SQUARE_ROOTS.b",
+    cskill: "MATH.G7.NUMBER.SQUARES_AND_SQUARE_ROOTS.ROOT_BY_ANCHORS",
     rung: 2,
     form: "word",
     draw: () => {
@@ -127050,7 +127119,7 @@ var FAMILIES175 = [
     },
     make: ({ k, A: A5, p }) => ({
       question: `${p.name} has a square plot with an area of ${A5} square metres. Between which two whole numbers does the square root \u221A${A5}, the length of one side in metres, lie?`,
-      options: shuffle15([{ text: `${k} and ${k + 1}`, right: true }, { text: `${k - 1} and ${k}`, right: false, why: `${k} \xD7 ${k} is less than ${A5}, so the side is longer than ${k}.` }, { text: `${k + 1} and ${k + 2}`, right: false, why: `${k + 1} \xD7 ${k + 1} is more than ${A5}, so the side is shorter than ${k + 1}.` }, { text: `${Math.floor(A5 / 2)} and ${Math.floor(A5 / 2) + 1}`, right: false, why: "Halving the area does not give the side. Square the numbers to test." }]),
+      options: shuffle15([{ text: `${k} and ${k + 1}`, right: true }, { text: `${k - 1} and ${k}`, right: false, why: `${k} \xD7 ${k} is less than ${A5}, so the side is longer than ${k}.`, mis: "M_ROOT_BOUNDS_ONE_BELOW" }, { text: `${k + 1} and ${k + 2}`, right: false, why: `${k + 1} \xD7 ${k + 1} is more than ${A5}, so the side is shorter than ${k + 1}.`, mis: "M_ROOT_BOUNDS_ONE_ABOVE" }, { text: `${Math.floor(A5 / 2)} and ${Math.floor(A5 / 2) + 1}`, right: false, why: "Halving the area does not give the side. Square the numbers to test.", mis: "M_HALVED_NOT_ROOTED" }]),
       hints: ["Find two square numbers, one just below and one just above the area.", "The square roots of those two square numbers are the whole numbers you need."],
       steps: [`${k}\xB2 = ${k * k} and ${k + 1}\xB2 = ${(k + 1) ** 2}.`, `${A5} is between ${k * k} and ${(k + 1) ** 2}, so \u221A${A5} is between ${k} and ${k + 1}.`]
     })
@@ -127058,7 +127127,8 @@ var FAMILIES175 = [
   fam44({
     id: "g7.sq.root-of-sum-why",
     skill: "G7_SQUARE_ROOTS",
-    outcome: "G7.SQUARES.b",
+    outcome: "MATH.G7.NUMBER.SQUARES_AND_SQUARE_ROOTS.b",
+    cskill: "MATH.G7.NUMBER.SQUARES_AND_SQUARE_ROOTS.ROOT_WHOLE_NUMBER",
     rung: 3,
     form: "why",
     draw: () => {
@@ -127070,9 +127140,9 @@ var FAMILIES175 = [
       story: false,
       options: shuffle15([
         { text: "A square root of a sum is not the sum of the roots", right: true },
-        { text: `\u221A${a * a} is not ${a}, so the first step is wrong`, right: false, why: `${a} \xD7 ${a} = ${a * a}, so \u221A${a * a} = ${a}. That part is right.` },
-        { text: `\u221A${c19 * c19} must be found by halving ${c19 * c19}, which gives ${c19 * c19 / 2}`, right: false, why: `Halving is not taking a square root. Test by multiplying: which number times itself gives ${c19 * c19}?` },
-        { text: `The roots should be multiplied: ${a} \xD7 ${b} = ${a * b}`, right: false, why: "Multiplying the roots does not give the root of a sum either." }
+        { text: `${a + b} is correct, because square roots can be added across a sum`, right: false, why: `Work out ${a * a} + ${b * b} first, then take the root. The two ways give different answers.`, mis: "M_ROOT_OF_SUM_IS_SUM_OF_ROOTS" },
+        { text: `\u221A${c19 * c19} must be found by halving ${c19 * c19}, which gives ${c19 * c19 / 2}`, right: false, why: `Halving is not taking a square root. Test by multiplying: which number times itself gives ${c19 * c19}?`, mis: "M_HALVED_NOT_ROOTED" },
+        { text: `The roots should be multiplied: ${a} \xD7 ${b} = ${a * b}`, right: false, why: "Multiplying the roots does not give the root of a sum either.", mis: "M_ROOTS_MULTIPLIED_FOR_SUM" }
       ]),
       hints: ["Work out the sum under the root first, then take the square root.", "Compare the two answers."],
       steps: [`${a * a} + ${b * b} = ${c19 * c19}, and \u221A${c19 * c19} = ${c19}.`, `${a} + ${b} = ${a + b}, which is a different number, so the two methods do not agree.`]
@@ -127081,7 +127151,8 @@ var FAMILIES175 = [
   fam44({
     id: "g7.sq.root-table-sides",
     skill: "G7_SQUARE_ROOTS",
-    outcome: "G7.SQUARES.b",
+    outcome: "MATH.G7.NUMBER.SQUARES_AND_SQUARE_ROOTS.b",
+    cskill: "MATH.G7.NUMBER.SQUARES_AND_SQUARE_ROOTS.ROOT_IN_CONTEXT",
     rung: 3,
     form: "table",
     draw: () => {
@@ -127094,7 +127165,7 @@ var FAMILIES175 = [
       story: false,
       model: { type: "table", data: { head: ["Plot", "Area (m\xB2)"], rows: ss.map((s, i) => ({ label: `Plot ${"ABCD"[i]}`, value: commas(s * s) })) } },
       answer: mx - mn,
-      wrong: [[mx * mx - mn * mn, "That is the difference between the areas. Take the square root of each area first."], [Math.round(Math.sqrt(mx * mx - mn * mn)), "The square root of the difference is not the difference of the square roots. Take each root first."], [mx, "That is the side of the biggest plot only. Take away the side of the smallest."]],
+      wrong: [[mx * mx - mn * mn, "That is the difference between the areas. Take the square root of each area first.", "M_AREA_DIFFERENCE_USED"], [Math.round(Math.sqrt(mx * mx - mn * mn)), "The square root of the difference is not the difference of the square roots. Take each root first.", "M_ROOT_OF_DIFFERENCE"], [mx, "That is the side of the biggest plot only. Take away the side of the smallest.", "M_ONLY_BIGGEST_ROOT"]],
       hints: ["Find the largest and the smallest area in the table.", "Take the square root of each, then subtract."],
       steps: [`Largest area: ${commas(mx * mx)}, so its side is ${mx} m. Smallest: ${commas(mn * mn)}, so its side is ${mn} m.`, `${mx} \u2212 ${mn} = ${mx - mn} m.`]
     }),
@@ -127106,7 +127177,8 @@ var FAMILIES175 = [
   fam44({
     id: "g7.expr.vendor-table",
     skill: "G7_EXPRESSIONS",
-    outcome: "G7.EXPR.a",
+    outcome: "MATH.G7.ALGEBR.ALGEBRAIC_EXPRESSIONS.a",
+    cskill: "MATH.G7.ALGEBR.ALGEBRAIC_EXPRESSIONS.FORM_EXPRESSION_RATE_FIXED",
     rung: 2,
     form: "table",
     draw: () => {
@@ -127120,7 +127192,7 @@ var FAMILIES175 = [
         question: "A water vendor charges to deliver jerricans of water to a home. The table shows some charges. Which expression gives the charge in shillings for n jerricans?",
         story: false,
         model: { type: "table", data: { head: ["Jerricans", "Charge (sh)"], rows: [1, 2, 3].map((n) => ({ label: String(n), value: String(r * n + b) })) } },
-        options: shuffle15(opts2.map((o, i) => ({ text: o.t, right: fits(o), why: fits(o) ? void 0 : [void 0, `Try n = 1 in ${o.t}. It does not give the first charge in the table. The fixed charge and the charge for each jerrican are mixed up.`, `Try n = 2 in ${o.t}. It does not give the second charge in the table. A fixed charge is not multiplied by n.`, `Try n = 2 in ${o.t}. It does not give the second charge in the table. The fixed amount is added once, after multiplying.`][i] }))),
+        options: shuffle15(opts2.map((o, i) => ({ text: o.t, right: fits(o), why: fits(o) ? void 0 : [void 0, `Try n = 1 in ${o.t}. It does not give the first charge in the table. The fixed charge and the charge for each jerrican are mixed up.`, `Try n = 2 in ${o.t}. It does not give the second charge in the table. A fixed charge is not multiplied by n.`, `Try n = 2 in ${o.t}. It does not give the second charge in the table. The fixed amount is added once, after multiplying.`][i], ...fits(o) ? {} : { mis: [void 0, "M_RATE_AND_FIXED_SWAPPED", "M_FIXED_CHARGE_MULTIPLIED", "M_FIXED_ADDED_BEFORE_MULTIPLYING"][i] } }))),
         hints: ["Look at how much the charge goes up for each extra jerrican.", "Then see what is charged even for 0 jerricans, or test each expression with n = 1 and n = 2."],
         steps: [`Each extra jerrican adds ${r} shillings.`, `For n = 1 the charge is ${r + b}, which is ${r} + ${b}.`, `So the expression is ${r}n + ${b}.`]
       };
@@ -127129,7 +127201,8 @@ var FAMILIES175 = [
   fam44({
     id: "g7.expr.three-ages",
     skill: "G7_EXPRESSIONS",
-    outcome: "G7.EXPR.a",
+    outcome: "MATH.G7.ALGEBR.ALGEBRAIC_EXPRESSIONS.a",
+    cskill: "MATH.G7.ALGEBR.ALGEBRAIC_EXPRESSIONS.FORM_EXPRESSION_RELATIONS",
     rung: 2,
     form: "word",
     draw: () => ({ j: randInt(2, 6), m: pick([2, 3, 4]), p: person() }),
@@ -127137,9 +127210,9 @@ var FAMILIES175 = [
       question: `${p.name} is x years old. ${p.Her} brother is ${j} years younger than ${p.herObj}. ${p.Her} mother is ${m20} times as old as ${p.name}. Write an expression for the total of the three ages, in years.`,
       options: shuffle15([
         { text: `${m20 + 2}x \u2212 ${j}`, right: true },
-        { text: `${m20 + 2}x + ${j}`, right: false, why: "The brother is younger, so his age is x take away a number, not plus." },
-        { text: `${m20 + 1}x \u2212 ${j}`, right: false, why: "One age is missing from the total. Count the three people." },
-        { text: `${m20 + 2}(x \u2212 ${j})`, right: false, why: "Only the brother is younger. The other ages do not have the number taken away." }
+        { text: `${m20 + 2}x + ${j}`, right: false, why: "The brother is younger, so his age is x take away a number, not plus.", mis: "M_YOUNGER_ADDED" },
+        { text: `${m20 + 1}x \u2212 ${j}`, right: false, why: "One age is missing from the total. Count the three people.", mis: "M_PERSON_MISSED" },
+        { text: `${m20 + 2}(x \u2212 ${j})`, right: false, why: "Only the brother is younger. The other ages do not have the number taken away.", mis: "M_RELATION_APPLIED_TO_ALL" }
       ]),
       hints: ["Write each age as an expression: the child, the brother, the mother.", "Add the three expressions, then collect like terms."],
       steps: [`Child: x. Brother: x \u2212 ${j}. Mother: ${m20}x.`, `Total: x + (x \u2212 ${j}) + ${m20}x = ${m20 + 2}x \u2212 ${j}.`]
@@ -127148,29 +127221,34 @@ var FAMILIES175 = [
   fam44({
     id: "g7.expr.perimeter-spot",
     skill: "G7_EXPRESSIONS",
-    outcome: "G7.EXPR.a",
+    outcome: "MATH.G7.ALGEBR.ALGEBRAIC_EXPRESSIONS.c",
+    cskill: "MATH.G7.ALGEBR.ALGEBRAIC_EXPRESSIONS.SIMPLIFY_WITH_BRACKETS",
     rung: 3,
     form: "spot",
-    draw: () => ({ a: randInt(2, 6), b: randInt(2, 7), bug: pick(["sum", "double"]), p: person() }),
+    draw: () => ({ a: randInt(2, 6), b: randInt(2, 7), bug: pick(["unlike", "double"]), p: person() }),
     make: ({ a, b, bug, p }) => {
-      const s3 = bug === "sum" ? a + b + 1 : a + b, s4 = bug === "double" ? s3 : 2 * s3;
+      const s = a + b;
+      const step3 = bug === "unlike" ? `= 2 \xD7 ${s + 1}x.` : `= 2 \xD7 (x + ${s}).`;
+      const step4 = bug === "unlike" ? `= ${2 * (s + 1)}x.` : `= 2x + ${s}.`;
       return {
         question: `A rectangular plot has a length of (x + ${a}) m and a width of ${b} m. A fence goes all the way round it. ${p.name} writes an expression for the length of the fence. Here is ${p.her} working. Which step has the mistake?`,
         working: [
           { text: "Fence = 2 \xD7 (length + width).", ok: true },
           { text: `= 2 \xD7 (x + ${a} + ${b}).`, ok: true },
-          { text: `= 2 \xD7 (x + ${s3}).`, ok: s3 === a + b },
-          { text: `= 2x + ${s4}.`, ok: s4 === 2 * s3 }
+          { text: step3, ok: bug !== "unlike" },
+          { text: step4, ok: bug !== "double" }
         ],
-        fix: bug === "sum" ? `${a} + ${b} is ${a + b}, not ${s3}. Add the numbers inside the bracket again.` : `Both parts inside the bracket must be multiplied by 2: 2 \xD7 (x + ${s3}) = 2x + ${2 * s3}.`,
-        steps: [`${a} + ${b} = ${a + b}.`, `2 \xD7 (x + ${a + b}) = 2x + ${2 * (a + b)}.`]
+        mis: bug === "unlike" ? "M_UNLIKE_TERMS_JOINED" : "M_BRACKET_FIRST_TERM_ONLY",
+        fix: bug === "unlike" ? `x and the numbers are different kinds of term, so ${a} + ${b} = ${s} is added inside the bracket but it is not joined with x: 2 \xD7 (x + ${s}) = 2x + ${2 * s}.` : `Both parts inside the bracket must be multiplied by 2: 2 \xD7 (x + ${s}) = 2x + ${2 * s}.`,
+        steps: [`${a} + ${b} = ${s}.`, `2 \xD7 (x + ${s}) = 2x + ${2 * s}.`]
       };
     }
   }),
   fam44({
     id: "g7.simplify.triangle-plot",
     skill: "G7_SIMPLIFY",
-    outcome: "G7.EXPR.c",
+    outcome: "MATH.G7.ALGEBR.ALGEBRAIC_EXPRESSIONS.c",
+    cskill: "MATH.G7.ALGEBR.ALGEBRAIC_EXPRESSIONS.SIMPLIFY_LIKE_TERMS",
     rung: 3,
     form: "steps",
     draw: () => {
@@ -127183,9 +127261,9 @@ var FAMILIES175 = [
       return {
         question: `${p.name}'s triangular plot has sides of (${side(a[0], c19[0])}) m, (${side(a[1], c19[1])}) m and (${side(a[2], c19[2])}) m. The perimeter is the sum of the three sides. Simplify the expression for the perimeter by collecting like terms.`,
         parts: [
-          { prompt: "The simplified perimeter is ax + b metres. What is a?", answer: A5, hint: "Add the numbers in front of x. A plain x counts as 1x.", wrong: [[a[0] + a[1], "The third side also has an x term."], [a[0] * a[1] * a[2], "Like terms are added, not multiplied."], [3, "Each x is not just 1. Add the numbers in front of each x."]] },
-          { prompt: "What is b?", answer: C15, hint: "Add the plain numbers. Keep the sign of each one.", wrong: [[c19[0] + c19[1] + Math.abs(c19[2]), "The last side takes away a number. Keep its minus sign."], [c19[0] + c19[1], "The third side has a number term too."], [c19[0] * c19[1] * c19[2], "Like terms are added, not multiplied."]] },
-          { prompt: `Now take x = ${t}. How long is the perimeter, in metres?`, answer: A5 * t + C15, unit: "m", hint: `Put x = ${t} into the simplified expression.`, wrong: [[A5 + C15, `Replace x with ${t}: ${A5}x means ${A5} \xD7 ${t}.`], [A5 * t, `Do not forget the number b.`], [A5 * t - C15, "The number b is added, with its own sign."]] }
+          { prompt: "The simplified perimeter is ax + b metres. What is a?", answer: A5, hint: "Add the numbers in front of x. A plain x counts as 1x.", wrong: [[a[0] + a[1], "The third side also has an x term.", "M_TERM_MISSED"], [a[0] * a[1] * a[2], "Like terms are added, not multiplied.", "M_LIKE_TERMS_MULTIPLIED"], [3, "Each x is not just 1. Add the numbers in front of each x.", "M_COEFFICIENT_ONE_ASSUMED"]] },
+          { prompt: "What is b?", answer: C15, hint: "Add the plain numbers. Keep the sign of each one.", wrong: [[c19[0] + c19[1] + Math.abs(c19[2]), "The last side takes away a number. Keep its minus sign.", "M_SIGN_DROPPED"], [c19[0] + c19[1], "The third side has a number term too.", "M_CONSTANT_TERM_MISSED"], [c19[0] * c19[1] * c19[2], "Like terms are added, not multiplied.", "M_CONSTANTS_MULTIPLIED"]] },
+          { prompt: `Now take x = ${t}. How long is the perimeter, in metres?`, answer: A5 * t + C15, unit: "m", hint: `Put x = ${t} into the simplified expression.`, wrong: [[A5 + C15, `Replace x with ${t}: ${A5}x means ${A5} \xD7 ${t}.`, "M_COEFFICIENT_ADDED_TO_VALUE"], [A5 * t, `Do not forget the number b.`, "M_CONSTANT_LEFT_OUT"], [A5 * t - C15, "The number b is added, with its own sign.", "M_CONSTANT_SIGN_FLIPPED"]] }
         ],
         steps: [`x terms: ${a.join("x + ")}x = ${A5}x.`, `Numbers: ${c19[0]} + ${c19[1]} + (${c19[2]}) = ${C15}.`, `When x = ${t}: ${A5} \xD7 ${t} + ${C15} = ${A5 * t + C15} m.`]
       };
@@ -127198,7 +127276,8 @@ var FAMILIES175 = [
   fam44({
     id: "g7.eq.form-books",
     skill: "G7_EQUATIONS_FORM",
-    outcome: "G7.EQUATIONS.a",
+    outcome: "MATH.G7.ALGEBR.LINEAR_EQUATIONS.a",
+    cskill: "MATH.G7.ALGEBR.LINEAR_EQUATIONS.FORM_EQUATION_FROM_STORY",
     rung: 2,
     form: "word",
     draw: () => {
@@ -127209,9 +127288,9 @@ var FAMILIES175 = [
       question: `${p.name} buys ${a} exercise books and a geometry set. Each exercise book costs x shillings. The geometry set costs ${sh(b)}. The total is ${sh(c19)}. Let x be the price of one exercise book. Which equation fits the story?`,
       options: shuffle15([
         { text: `${a}x + ${b} = ${c19}`, right: true },
-        { text: `${a}(x + ${b}) = ${c19}`, right: false, why: "This adds the price of the geometry set to every exercise book. The geometry set is bought once." },
-        { text: `x + ${a} + ${b} = ${c19}`, right: false, why: `There are ${a} exercise books, each costing x. That is ${a} times x, not x plus ${a}.` },
-        { text: `${a}x = ${c19} + ${b}`, right: false, why: `The geometry set is part of the total, so it is added to the cost of the books on the left. Check the sides.` }
+        { text: `${a}(x + ${b}) = ${c19}`, right: false, why: "This adds the price of the geometry set to every exercise book. The geometry set is bought once.", mis: "M_BRACKET_ADDED_TO_EVERY_TERM" },
+        { text: `x + ${a} + ${b} = ${c19}`, right: false, why: `There are ${a} exercise books, each costing x. That is ${a} times x, not x plus ${a}.`, mis: "M_MULTIPLIER_AS_ADDEND" },
+        { text: `${a}x = ${c19} + ${b}`, right: false, why: `The geometry set is part of the total, so it is added to the cost of the books on the left. Check the sides.`, mis: "M_FIXED_ON_WRONG_SIDE" }
       ]),
       hints: ["What is the cost of all the exercise books together?", "Add the geometry set. What does the total equal?"],
       steps: [`${a} books cost ${a}x.`, `Add the geometry set: ${a}x + ${b}.`, `The total is ${c19}, so ${a}x + ${b} = ${c19}.`]
@@ -127220,7 +127299,8 @@ var FAMILIES175 = [
   fam44({
     id: "g7.eq.consecutive-spot",
     skill: "G7_EQUATIONS_FORM",
-    outcome: "G7.EQUATIONS.a",
+    outcome: "MATH.G7.ALGEBR.LINEAR_EQUATIONS.b",
+    cskill: "MATH.G7.ALGEBR.LINEAR_EQUATIONS.SOLVE_TWO_STEP",
     rung: 3,
     form: "spot",
     draw: () => {
@@ -127237,6 +127317,7 @@ var FAMILIES175 = [
           { text: `So 3n + 3 = ${S26}. Take 3 from both sides: 3n = ${S26} ${bug === "move" ? "+" : "\u2212"} 3 = ${r3}.`, ok: r3 === S26 - 3 },
           { text: `Divide both sides by 3: n = ${r3} ${bug === "divide" ? "\xD7" : "\xF7"} 3 = ${n4}.`, ok: n4 === r3 / 3 }
         ],
+        mis: bug === "move" ? "M_SIGN_NOT_REVERSED" : "M_INVERSE_OPERATION_WRONG",
         fix: bug === "divide" ? `3n means 3 times n, so undo it by dividing: ${r3} \xF7 3, not ${r3} \xD7 3.` : `To remove +3 from the left, take 3 away from both sides: 3n = ${S26} \u2212 3, not ${S26} + 3.`,
         steps: [`n + (n + 1) + (n + 2) = 3n + 3 = ${S26}.`, `3n = ${S26 - 3}, so n = ${n0}.`]
       };
@@ -127245,19 +127326,20 @@ var FAMILIES175 = [
   fam44({
     id: "g7.eq.solve-from-table",
     skill: "G7_EQUATIONS_SOLVE",
-    outcome: "G7.EQUATIONS.b",
+    outcome: "MATH.G7.ALGEBR.LINEAR_EQUATIONS.b",
+    cskill: "MATH.G7.ALGEBR.LINEAR_EQUATIONS.SOLVE_TWO_STEP",
     rung: 2,
     form: "table",
     draw: () => {
-      const a = randInt(2, 6), b = randInt(2, 9), r = randInt(5, 12);
-      return { a, b, r, T: a * r + b };
+      const a = randInt(2, 6), b = randInt(2, 9), r = randInt(6, 12), T17 = a * r + b;
+      return Math.abs((T17 + b) / a - r) > 2 && Math.abs(T17 / a - r) > 2 ? { a, b, r, T: T17 } : null;
     },
     make: ({ a, b, r, T: T17 }) => ({
       question: `Find the solution of the equation ${a}x + ${b} = ${T17}. The table shows the value of ${a}x + ${b} for the first few values of x, to show how it grows.`,
       story: false,
       model: { type: "table", data: { head: ["x", `${a}x + ${b}`], rows: [1, 2, 3].map((x) => ({ label: String(x), value: String(a * x + b) })) } },
       answer: r,
-      wrong: [[T17 - b, `That is ${a}x. You still have to divide by ${a}.`], [round((T17 + b) / a, 2), "The number " + b + " is added to the term in x, so take it away from both sides, not add."], [3, "That is the last x in the table, but its value is not yet the one in the equation."]],
+      wrong: [[T17 - b, `That is ${a}x. You still have to divide by ${a}.`, "M_DIVISION_STEP_MISSED"], [round((T17 + b) / a, 2), "The number " + b + " is added to the term in x, so take it away from both sides, not add.", "M_SIGN_NOT_REVERSED"], [3, "That is the last x in the table, but its value is not yet the one in the equation.", "M_LAST_ROW_TAKEN"]],
       hints: ["Notice how much the value goes up when x goes up by 1.", "Or undo the steps: take away the number first, then divide."],
       steps: [`${a}x + ${b} = ${T17}, so ${a}x = ${T17} \u2212 ${b} = ${T17 - b}.`, `x = ${T17 - b} \xF7 ${a} = ${r}.`]
     }),
@@ -127266,7 +127348,8 @@ var FAMILIES175 = [
   fam44({
     id: "g7.eq.both-sides-spot",
     skill: "G7_EQUATIONS_SOLVE",
-    outcome: "G7.EQUATIONS.b",
+    outcome: "MATH.G7.ALGEBR.LINEAR_EQUATIONS.b",
+    cskill: "MATH.G7.ALGEBR.LINEAR_EQUATIONS.SOLVE_BOTH_SIDES",
     rung: 3,
     form: "spot",
     draw: () => {
@@ -127283,6 +127366,7 @@ var FAMILIES175 = [
           { text: `Divide both sides by ${dd}: x = ${s2} ${bug === "divide" ? "\xD7" : "\xF7"} ${dd} = ${s3}.`, ok: s3 === s2 / dd },
           { text: `So x = ${s3}.`, ok: true }
         ],
+        mis: bug === "sign" ? "M_SIGN_NOT_REVERSED" : "M_INVERSE_OPERATION_WRONG",
         fix: bug === "sign" ? `To get rid of \u2212 ${c19}, add ${c19} to both sides: ${d} + ${c19}, not ${d} \u2212 ${c19}.` : `To undo "times ${dd}", divide both sides by ${dd}. ${s2} \xF7 ${dd}, not ${s2} \xD7 ${dd}.`,
         steps: [`${dd}x \u2212 ${c19} = ${d}, so ${dd}x = ${d + c19}.`, `x = ${d + c19} \xF7 ${dd} = ${x0}.`]
       };
@@ -127291,17 +127375,18 @@ var FAMILIES175 = [
   fam44({
     id: "g7.eq.apply-ages",
     skill: "G7_EQUATIONS_FORM",
-    outcome: "G7.EQUATIONS.c",
+    outcome: "MATH.G7.ALGEBR.LINEAR_EQUATIONS.c",
+    cskill: "MATH.G7.ALGEBR.LINEAR_EQUATIONS.SOLVE_IN_CONTEXT",
     rung: 3,
     form: "word",
     draw: () => {
-      const x = randInt(9, 14), m20 = pick([3, 4]), t = randInt(2, 6), S26 = (m20 + 1) * x + 2 * t;
-      return distinct8(m20 * x, x, round(m20 * S26 / (m20 + 1), 2), m20 * x + t) ? { x, m: m20, t, S: S26, p: person() } : null;
+      const x = randInt(9, 14), m20 = pick([3, 4]), t = randInt(3, 6), S26 = (m20 + 1) * x + 2 * t;
+      return distinct8(m20 * x, x, round(m20 * S26 / (m20 + 1), 2), m20 * x + t) && Math.abs(round(m20 * S26 / (m20 + 1), 2) - m20 * x) > 2 ? { x, m: m20, t, S: S26, p: person() } : null;
     },
     make: ({ x, m: m20, t, S: S26, p }) => ({
       question: `${p.name}'s mother is ${m20} times as old as ${p.name}. In ${t} years' time the sum of their ages will be ${S26} years. Form an equation and solve it to find the age of ${p.name}'s mother now. Answer in years.`,
       answer: m20 * x,
-      wrong: [[x, `That is ${p.name}'s age. The question asks for the age of the mother.`], [round(m20 * S26 / (m20 + 1), 2), `In ${t} years, both of them are ${t} years older, so the sum now is not ${S26}.`], [m20 * x + t, `That is the mother's age in ${t} years. The question asks for her age now.`]],
+      wrong: [[x, `That is ${p.name}'s age. The question asks for the age of the mother.`, "M_ASKED_QUANTITY_MIXED"], [round(m20 * S26 / (m20 + 1), 2), `In ${t} years, both of them are ${t} years older, so the sum now is not ${S26}.`, "M_TIME_CHANGE_NOT_APPLIED_TO_BOTH"], [m20 * x + t, `That is the mother's age in ${t} years. The question asks for her age now.`, "M_FUTURE_AGE_AS_NOW"]],
       hints: [`Let ${p.name}'s age now be x. What is the mother's age now? What will each be in ${t} years?`, `Their ages in ${t} years add up to ${S26}.`],
       steps: [`Now: ${p.name} is x, the mother is ${m20}x. In ${t} years: x + ${t} and ${m20}x + ${t}.`, `(x + ${t}) + (${m20}x + ${t}) = ${S26}, so ${m20 + 1}x + ${2 * t} = ${S26}.`, `${m20 + 1}x = ${S26 - 2 * t}, x = ${x}. The mother is ${m20} \xD7 ${x} = ${m20 * x}.`]
     }),
@@ -127310,19 +127395,20 @@ var FAMILIES175 = [
   fam44({
     id: "g7.eq.parking-table",
     skill: "G7_EQUATIONS_SOLVE",
-    outcome: "G7.EQUATIONS.c",
+    outcome: "MATH.G7.ALGEBR.LINEAR_EQUATIONS.c",
+    cskill: "MATH.G7.ALGEBR.LINEAR_EQUATIONS.SOLVE_IN_CONTEXT",
     rung: 3,
     form: "table",
     draw: () => {
       const b = pick([20, 30, 50]), r = pick([20, 30, 40, 50]), h = randInt(5, 10), T17 = b + r * h;
-      return { b, r, h, T: T17, p: person() };
+      return Math.abs(T17 / r - h) > 2 && Math.abs((T17 + b) / r - h) > 2 ? { b, r, h, T: T17, p: person() } : null;
     },
     make: ({ b, r, h, T: T17, p }) => ({
       question: `The table shows the parking charges at a market. ${p.name} pays ${sh(T17)} to park. Write an equation, using h for the number of hours, and solve it. For how many hours did ${p.she} park?`,
       story: false,
       model: { type: "table", data: { head: ["Hours", "Charge (sh)"], rows: [1, 2, 3].map((x) => ({ label: String(x), value: String(b + r * x) })) } },
       answer: h,
-      wrong: [[round(T17 / r, 2), "The charge has a fixed part as well. Take it away before dividing."], [round((T17 + b) / r, 2), "The fixed part is already inside the total, so take it away, do not add it."], [T17 - b, "That is the money for the hours. Divide by the charge for each hour."]],
+      wrong: [[round(T17 / r, 2), "The charge has a fixed part as well. Take it away before dividing.", "M_FIXED_PART_IGNORED"], [round((T17 + b) / r, 2), "The fixed part is already inside the total, so take it away, do not add it.", "M_SIGN_NOT_REVERSED"], [T17 - b, "That is the money for the hours. Divide by the charge for each hour.", "M_DIVISION_STEP_MISSED"]],
       hints: ["Find the charge for each extra hour, and the fixed part.", "Write fixed part + charge per hour \xD7 h = total, then solve."],
       steps: [`Each hour adds ${r}, so the fixed part is ${b + r} \u2212 ${r} = ${b}.`, `${b} + ${r}h = ${T17}, so ${r}h = ${T17 - b}.`, `h = ${T17 - b} \xF7 ${r} = ${h}.`]
     }),
@@ -127331,7 +127417,8 @@ var FAMILIES175 = [
   fam44({
     id: "g7.eq.mango-boxes",
     skill: "G7_EQUATIONS_FORM",
-    outcome: "G7.EQUATIONS.c",
+    outcome: "MATH.G7.ALGEBR.LINEAR_EQUATIONS.c",
+    cskill: "MATH.G7.ALGEBR.LINEAR_EQUATIONS.SOLVE_IN_CONTEXT",
     rung: 2,
     form: "steps",
     draw: () => {
@@ -127341,9 +127428,9 @@ var FAMILIES175 = [
     make: ({ n, x, loose, T: T17, p }) => ({
       question: `${p.name} packs mangoes into ${n} boxes, with the same number in each box. There are also ${loose} loose mangoes. There are ${T17} mangoes in all. Let x be the number of mangoes in each box, so ${n}x + ${loose} = ${T17}.`,
       parts: [
-        { prompt: "How many mangoes are in the full boxes?", answer: T17 - loose, hint: "Take the loose mangoes away from the total.", wrong: [[T17 + loose, "The loose mangoes are part of the total, so take them away."], [T17, "The total also includes the loose mangoes."], [loose, "That is only the loose mangoes."]] },
-        { prompt: "How many mangoes are in each box?", answer: x, hint: "Share the mangoes in the boxes equally among the boxes.", wrong: [[T17 - loose - n, "Dividing, not taking away, shares them equally."], [round(T17 / n, 2), "The loose mangoes are not in the boxes. Take them away first."], [(T17 - loose) * n, "Sharing equally is dividing."]] },
-        { prompt: `${p.name} sells 3 boxes. How many mangoes are left?`, answer: T17 - 3 * x, hint: "Take away the mangoes in 3 boxes.", wrong: [[T17 - 3, "Each box has more than 1 mango."], [T17 - x, "Three boxes are sold, not one."], [T17 - 3 * x - loose, "The loose mangoes are still there."]] }
+        { prompt: "How many mangoes are in the full boxes?", answer: T17 - loose, hint: "Take the loose mangoes away from the total.", wrong: [[T17 + loose, "The loose mangoes are part of the total, so take them away.", "M_SIGN_NOT_REVERSED"], [T17, "The total also includes the loose mangoes.", "M_FIXED_PART_IGNORED"], [loose, "That is only the loose mangoes.", "M_ASKED_QUANTITY_MIXED"]] },
+        { prompt: "How many mangoes are in each box?", answer: x, hint: "Share the mangoes in the boxes equally among the boxes.", wrong: [[T17 - loose - n, "Dividing, not taking away, shares them equally.", "M_SUBTRACTED_TO_SHARE"], [round(T17 / n, 2), "The loose mangoes are not in the boxes. Take them away first.", "M_LOOSE_NOT_REMOVED"], [(T17 - loose) * n, "Sharing equally is dividing.", "M_MULTIPLIED_TO_SHARE"]] },
+        { prompt: `${p.name} sells 3 boxes. How many mangoes are left?`, answer: T17 - 3 * x, hint: "Take away the mangoes in 3 boxes.", wrong: [[T17 - 3, "Each box has more than 1 mango.", "M_ONE_PER_BOX"], [T17 - x, "Three boxes are sold, not one.", "M_ONE_BOX_NOT_THREE"], [T17 - 3 * x - loose, "The loose mangoes are still there.", "M_LOOSE_COUNTED_AGAIN"]] }
       ],
       steps: [`${n}x = ${T17} \u2212 ${loose} = ${T17 - loose}.`, `x = ${T17 - loose} \xF7 ${n} = ${x}.`, `Left: ${T17} \u2212 3 \xD7 ${x} = ${T17 - 3 * x}.`]
     }),
@@ -127715,7 +127802,8 @@ var FAMILIES176 = [
   fam45({
     id: "g7.pyth.name-hypotenuse",
     skill: "G7_PYTHAGORAS",
-    outcome: "G7.PYTH.a",
+    outcome: "MATH.G7.MEASUR.PYTHAGOREAN_RELATIONSHIP.a",
+    cskill: "MATH.G7.MEASUR.PYTHAGOREAN_RELATIONSHIP.RIGHT_TRIANGLE_SIDES",
     rung: 1,
     form: "direct",
     draw: () => {
@@ -127725,7 +127813,7 @@ var FAMILIES176 = [
     make: ({ p, q, r }) => ({
       question: `In triangle ${p}${q}${r}, the angle at ${q} is 90\xB0. Which side is the hypotenuse?`,
       story: false,
-      options: [{ text: `${p}${r}`, right: true }, { text: `${p}${q}`, right: false, why: `${p}${q} meets the right angle at ${q}. The hypotenuse is opposite the right angle.` }, { text: `${q}${r}`, right: false, why: `${q}${r} meets the right angle at ${q}. The hypotenuse is opposite the right angle.` }],
+      options: [{ text: `${p}${r}`, right: true }, { text: `${p}${q}`, right: false, why: `${p}${q} meets the right angle at ${q}. The hypotenuse is opposite the right angle.`, mis: "M_HYPOTENUSE_NEXT_TO_RIGHT_ANGLE" }, { text: `${q}${r}`, right: false, why: `${q}${r} meets the right angle at ${q}. The hypotenuse is opposite the right angle.`, mis: "M_LEG_NAMED_BY_LETTER_ORDER" }],
       hints: ["The hypotenuse is the side opposite the right angle.", `Which side does not touch corner ${q}?`],
       steps: [`The right angle is at ${q}, so the two sides that meet there are ${p}${q} and ${q}${r}.`, `The side left over, opposite ${q}, is the hypotenuse: ${p}${r}.`]
     })
@@ -127733,7 +127821,8 @@ var FAMILIES176 = [
   fam45({
     id: "g7.pyth.which-triangle",
     skill: "G7_PYTHAGORAS",
-    outcome: "G7.PYTH.b",
+    outcome: "MATH.G7.MEASUR.PYTHAGOREAN_RELATIONSHIP.b",
+    cskill: "MATH.G7.MEASUR.PYTHAGOREAN_RELATIONSHIP.PYTHAGORAS_TEST",
     rung: 2,
     form: "table",
     draw: () => {
@@ -127750,7 +127839,16 @@ var FAMILIES176 = [
     make: ({ rows, ans }) => ({
       question: "The table gives the three sides of four triangles. Which triangle is right-angled?",
       model: { type: "table", data: { head: ["Triangle", "Side 1 (cm)", "Side 2 (cm)", "Side 3 (cm)"], rows: rows.map((r, i) => ({ cells: [`Triangle ${"ABCD"[i]}`, ...r.map(String)] })) } },
-      options: rows.map((r, i) => ({ text: `Triangle ${"ABCD"[i]}`, right: isRight(...r), why: isRight(...r) ? void 0 : `Square the two shorter sides and add. The answer is not the square of the longest side.` })),
+      // the wrong triangle that nearly fits is the one a child who accepts "close enough" picks; the others miss by more and carry no idea
+      options: (() => {
+        const gap9 = (r) => {
+          const t = [...r].sort((x, y) => x - y);
+          return Math.abs(t[0] * t[0] + t[1] * t[1] - t[2] * t[2]);
+        };
+        const wrongs = rows.filter((r) => !isRight(...r));
+        const near3 = wrongs.reduce((m20, r) => gap9(r) < gap9(m20) ? r : m20, wrongs[0]);
+        return rows.map((r, i) => ({ text: `Triangle ${"ABCD"[i]}`, right: isRight(...r), ...isRight(...r) ? {} : r === near3 ? { why: "The two squares are close, but a right angle needs them exactly equal. Square the two shorter sides and add.", mis: "M_NEARLY_RIGHT_ACCEPTED" } : { why: "Square the two shorter sides and add. The answer is not the square of the longest side.", mis: "SLIP" } }));
+      })(),
       hints: ["In a right-angled triangle, the squares of the two shorter sides add up to the square of the longest side.", "Test each triangle. Always put the longest side on its own."],
       steps: rows.map((r, i) => {
         const s = [...r].sort((a, b) => a - b);
@@ -127761,7 +127859,8 @@ var FAMILIES176 = [
   fam45({
     id: "g7.pyth.spot-missing-side",
     skill: "G7_PYTHAGORAS",
-    outcome: "G7.PYTH.b",
+    outcome: "MATH.G7.MEASUR.PYTHAGOREAN_RELATIONSHIP.b",
+    cskill: "MATH.G7.MEASUR.PYTHAGOREAN_RELATIONSHIP.FIND_SHORT_SIDE",
     rung: 3,
     form: "spot",
     draw: () => ({ ...triple(30), mode: pick(["half", "minus"]), p: person() }),
@@ -127780,6 +127879,7 @@ var FAMILIES176 = [
       return {
         question: `The longest side of a right-angled triangle is ${c19} cm and another side is ${a} cm. ${p.name} is finding the third side. Where does ${p.her} working go wrong?`,
         working,
+        mis: mode2 === "half" ? "M_ROOT_AS_HALF" : "M_SIDES_SUBTRACTED_NOT_SQUARED_SHORT",
         fix: mode2 === "half" ? `A square root is not halving. b\xB2 = ${sq}, so b is the number that multiplies by itself to give ${sq}.` : `The sides must be squared first: b\xB2 = ${c19}\xB2 \u2212 ${a}\xB2, then take the square root. Taking the sides away without squaring is wrong.`,
         steps: [`b\xB2 = ${c19}\xB2 \u2212 ${a}\xB2 = ${sq}.`, `b = \u221A${sq} = ${b} cm.`]
       };
@@ -127788,7 +127888,8 @@ var FAMILIES176 = [
   fam45({
     id: "g7.pyth.gate-brace",
     skill: "G7_PYTHAGORAS",
-    outcome: "G7.PYTH.c",
+    outcome: "MATH.G7.MEASUR.PYTHAGOREAN_RELATIONSHIP.c",
+    cskill: "MATH.G7.MEASUR.PYTHAGOREAN_RELATIONSHIP.FIND_HYPOTENUSE",
     rung: 2,
     form: "word",
     draw: () => {
@@ -127800,7 +127901,7 @@ var FAMILIES176 = [
       return {
         question: `${who.name} makes a metal gate ${w14} cm wide and ${h} cm high. ${who.She} welds a brace diagonally across the gate, from one corner to the opposite corner. How long is the brace, in cm?`,
         answer: c19,
-        wrong: [[w14 + h, "The brace goes straight across. It is shorter than going along two sides."], [w14 * w14 + h * h, "That is the square of the brace. Take the square root."], [Math.abs(w14 - h), "The brace is the hypotenuse. Square the sides and add. Do not take the sides away."]],
+        wrong: [[w14 + h, "The brace goes straight across. It is shorter than going along two sides.", "M_TWO_SIDES_ADDED"], [w14 * w14 + h * h, "That is the square of the brace. Take the square root.", "M_SQUARE_NOT_ROOTED"], [Math.abs(w14 - h), "The brace is the hypotenuse. Square the sides and add. Do not take the sides away.", "M_SIDES_SUBTRACTED_NOT_SQUARED"]],
         hints: ["The width, the height and the brace make a right-angled triangle.", "The brace is the longest side, the hypotenuse."],
         steps: [`The brace is the hypotenuse: c\xB2 = ${w14}\xB2 + ${h}\xB2 = ${commas(w14 * w14 + h * h)}.`, `c = \u221A${commas(w14 * w14 + h * h)} = ${c19} cm.`]
       };
@@ -127810,7 +127911,8 @@ var FAMILIES176 = [
   fam45({
     id: "g7.pyth.shortcut-path",
     skill: "G7_PYTHAGORAS",
-    outcome: "G7.PYTH.c",
+    outcome: "MATH.G7.MEASUR.PYTHAGOREAN_RELATIONSHIP.c",
+    cskill: "MATH.G7.MEASUR.PYTHAGOREAN_RELATIONSHIP.PYTHAGORAS_SAVING",
     rung: 3,
     form: "word",
     draw: () => {
@@ -127820,7 +127922,7 @@ var FAMILIES176 = [
     make: ({ a, b, c: c19, p }) => ({
       question: `${p.name} walks ${a * 10} m east along the road and then ${b * 10} m north along a lane. A footpath goes straight from the start to the end. How many metres shorter is the footpath?`,
       answer: (a + b - c19) * 10,
-      wrong: [[c19 * 10, "That is the length of the footpath. The question asks how much shorter it is than the road and lane."], [(a + b) * 10, "That is the length of the road and lane together."], [(a + b + c19) * 10, "Subtract the footpath from the two sides. Do not add it."]],
+      wrong: [[c19 * 10, "That is the length of the footpath. The question asks how much shorter it is than the road and lane.", "M_QUANTITY_ASKED_MIXED"], [(a + b) * 10, "That is the length of the road and lane together.", "M_ROAD_LENGTH_AS_ANSWER"], [(a + b + c19) * 10, "Subtract the footpath from the two sides. Do not add it.", "M_PATH_ADDED_TO_ROAD"]],
       hints: ["East and north meet at a right angle. The footpath is the hypotenuse.", "Find the footpath first. Then compare it with the road and lane together."],
       steps: [`Footpath: \u221A(${a * 10}\xB2 + ${b * 10}\xB2) = ${c19 * 10} m.`, `Road and lane: ${a * 10} + ${b * 10} = ${(a + b) * 10} m.`, `Shorter by ${(a + b) * 10} \u2212 ${c19 * 10} = ${(a + b - c19) * 10} m.`]
     }),
@@ -127829,16 +127931,17 @@ var FAMILIES176 = [
   fam45({
     id: "g7.pyth.pole-wire",
     skill: "G7_PYTHAGORAS",
-    outcome: "G7.PYTH.c",
+    outcome: "MATH.G7.MEASUR.PYTHAGOREAN_RELATIONSHIP.c",
+    cskill: "MATH.G7.MEASUR.PYTHAGOREAN_RELATIONSHIP.FIND_HYPOTENUSE",
     rung: 3,
     form: "steps",
     draw: () => ({ ...triple(26), per: pick([30, 40, 50, 60]) }),
     make: ({ a, b, c: c19, per }) => ({
       question: `A pole is ${b} m tall. A wire runs from its top to a peg in the ground ${a} m from the foot of the pole. The wire costs sh ${per} a metre.`,
       parts: [
-        { prompt: `Work out ${a}\xB2 + ${b}\xB2.`, answer: a * a + b * b, hint: "Square each number, then add.", wrong: [[a + b, "Square each number first."], [b * b - a * a, "Add the squares. Taking away is for finding a shorter side."]] },
-        { prompt: "How long is the wire, in metres?", answer: c19, unit: "m", hint: "The wire is the hypotenuse. Take the square root of the last answer.", wrong: [[a + b, "The wire is a straight line from the top to the peg, so it is shorter than the pole and ground together."]] },
-        { prompt: "How much does the wire cost, in shillings?", answer: c19 * per, unit: "sh", hint: "Length of wire times the price of one metre.", wrong: [[(a + b) * per, "Use the length of the wire, not the pole and ground added."]] }
+        { prompt: `Work out ${a}\xB2 + ${b}\xB2.`, answer: a * a + b * b, hint: "Square each number, then add.", wrong: [[a + b, "Square each number first.", "M_SIDES_ADDED_NOT_SQUARED"], [b * b - a * a, "Add the squares. Taking away is for finding a shorter side.", "M_SQUARES_SUBTRACTED_FOR_LONGEST"]] },
+        { prompt: "How long is the wire, in metres?", answer: c19, unit: "m", hint: "The wire is the hypotenuse. Take the square root of the last answer.", wrong: [[a + b, "The wire is a straight line from the top to the peg, so it is shorter than the pole and ground together.", "M_TWO_SIDES_ADDED"]] },
+        { prompt: "How much does the wire cost, in shillings?", answer: c19 * per, unit: "sh", hint: "Length of wire times the price of one metre.", wrong: [[(a + b) * per, "Use the length of the wire, not the pole and ground added.", "M_TWO_SIDES_ADDED"]] }
       ],
       steps: [`${a}\xB2 + ${b}\xB2 = ${a * a} + ${b * b} = ${a * a + b * b}.`, `Wire = \u221A${a * a + b * b} = ${c19} m.`, `Cost = ${c19} \xD7 ${per} = ${sh(c19 * per)}.`]
     }),
@@ -127847,7 +127950,8 @@ var FAMILIES176 = [
   fam45({
     id: "g7.pyth.why-345",
     skill: "G7_PYTHAGORAS",
-    outcome: "G7.PYTH.c",
+    outcome: "MATH.G7.MEASUR.PYTHAGOREAN_RELATIONSHIP.b",
+    cskill: "MATH.G7.MEASUR.PYTHAGOREAN_RELATIONSHIP.PYTHAGORAS_TEST",
     rung: 2,
     form: "why",
     draw: () => {
@@ -127858,9 +127962,9 @@ var FAMILIES176 = [
       question: `A builder marks ${a} m along one wall from a corner and ${b} m along the other wall. ${p.name} measures ${c19} m between the two marks. Why does this show that the corner is a right angle?`,
       options: [
         { text: `${a}\xB2 + ${b}\xB2 = ${c19}\xB2, so the sides fit the Pythagorean relationship`, right: true },
-        { text: `${a} + ${b} is bigger than ${c19}, so the three lengths make a triangle`, right: false, why: "Any three lengths that make a triangle have that property. It does not make the angle 90\xB0." },
-        { text: `${c19} is the longest of the three lengths`, right: false, why: "The longest side is longest in every triangle. That does not show a right angle." },
-        { text: `${a} + ${b} + ${c19} gives a whole number of metres`, right: false, why: "The sum of the sides tells nothing about an angle." }
+        { text: `${a} + ${b} is bigger than ${c19}, so the three lengths make a triangle`, right: false, why: "Any three lengths that make a triangle have that property. It does not make the angle 90\xB0.", mis: "M_TRIANGLE_INEQUALITY_AS_PROOF" },
+        { text: `${c19} is the longest of the three lengths`, right: false, why: "The longest side is longest in every triangle. That does not show a right angle.", mis: "M_LONGEST_SIDE_AS_PROOF" },
+        { text: `${a} + ${b} + ${c19} gives a whole number of metres`, right: false, why: "The sum of the sides tells nothing about an angle.", mis: "M_SIDES_ADDED_NOT_SQUARED" }
       ],
       hints: ["Square the two shorter lengths and add them.", "Compare with the square of the longest length."],
       steps: [`${a}\xB2 + ${b}\xB2 = ${a * a} + ${b * b} = ${a * a + b * b}.`, `${c19}\xB2 = ${c19 * c19}. They are equal, so the corner is a right angle.`]
@@ -127870,7 +127974,8 @@ var FAMILIES176 = [
   fam45({
     id: "g7.length.convert-story",
     skill: "G7_LENGTH_CONV",
-    outcome: "G7.LENGTH.a",
+    outcome: "MATH.G7.MEASUR.LENGTH.a",
+    cskill: "MATH.G7.MEASUR.LENGTH.CONVERT_LENGTH_UNITS",
     rung: 1,
     form: "word",
     draw: () => {
@@ -127892,7 +127997,7 @@ var FAMILIES176 = [
       return {
         question: `${say(v)} Change this length to ${to}.`,
         answer: ans,
-        wrong: [[w14[0], `A ${F7[f] > F7[t] ? t : f} is the smaller unit, so there are more of them. Check whether to multiply or divide.`], [w14[1], "Check how many of the smaller unit fit in the larger one. The size of the step is wrong."], [w14[2], "Check how many of the smaller unit fit in the larger one. The size of the step is wrong."]],
+        wrong: [[w14[0], `A ${F7[f] > F7[t] ? t : f} is the smaller unit, so there are more of them. Check whether to multiply or divide.`, "M_DIVIDED_FOR_SMALLER_UNIT"], [w14[1], "That multiplies by the wrong number. Look at how many of the smaller unit fit in the larger one.", "M_STEP_SIZE_WRONG"], [w14[2], "That keeps the number the same, but the new unit is a different size, so the number must change.", "M_NUMBER_NOT_CHANGED"]],
         hints: [`Which is bigger, a ${f} or a ${t}?`, `Find how many ${F7[f] > F7[t] ? t : f} make one ${F7[f] > F7[t] ? f : t}. Then multiply or divide.`],
         steps: [`1 ${f} = ${commas(round(r, 4))} ${t}.`, `${commas(val)} ${f} = ${commas(val)} \xD7 ${commas(round(r, 4))} = ${commas(ans)} ${t}.`]
       };
@@ -127902,7 +128007,8 @@ var FAMILIES176 = [
   fam45({
     id: "g7.length.table-compare",
     skill: "G7_LENGTH_CONV",
-    outcome: "G7.LENGTH.a",
+    outcome: "MATH.G7.MEASUR.LENGTH.b",
+    cskill: "MATH.G7.MEASUR.LENGTH.COMPARE_LENGTHS_UNITS",
     rung: 3,
     form: "table",
     draw: () => {
@@ -127916,7 +128022,7 @@ var FAMILIES176 = [
       question: `Use the table. A rope is ${va} ${ua} long. A cable is ${commas(vb)} ${ub} long. How many metres longer is the longer one?`,
       model: { type: "table", data: { head: ["Unit", "Length in metres"], rows: [["cm", "0.01"], ["dm", "0.1"], ["m", "1"], ["Dm", "10"], ["Hm", "100"], ["km", "1,000"]].map(([label, value]) => ({ label, value })) } },
       answer: round(Math.abs(ma - mb), 3),
-      wrong: [[wa[0], "The two lengths are in different units. Change both to metres before you subtract."], [round(wa[1], 3), `Read the table again for ${ua}. How many metres is one ${ua}?`], [round(wa[2], 3), `Read the table again for ${ub}. How many metres is one ${ub}?`]],
+      wrong: [[wa[0], "The two lengths are in different units. Change both to metres before you subtract.", "M_UNITS_NOT_MATCHED"], [round(wa[1], 3), `Read the table again for ${ua}. How many metres is one ${ua}?`, "M_LARGE_UNIT_VALUE_MISREAD"], [round(wa[2], 3), `Read the table again for ${ub}. How many metres is one ${ub}?`, "M_SMALL_UNIT_VALUE_MISREAD"]],
       hints: ["Change both lengths to metres first.", "Use the table for the number of metres in one of each unit."],
       steps: [`${va} ${ua} = ${va} \xD7 ${F7[ua]} = ${commas(ma)} m.`, `${commas(vb)} ${ub} = ${commas(vb)} \xD7 ${F7[ub]} = ${commas(mb)} m.`, `Difference = ${commas(Math.max(ma, mb))} \u2212 ${commas(Math.min(ma, mb))} = ${commas(round(Math.abs(ma - mb), 3))} m.`]
     }),
@@ -127925,7 +128031,8 @@ var FAMILIES176 = [
   fam45({
     id: "g7.length.why-divide",
     skill: "G7_LENGTH_CONV",
-    outcome: "G7.LENGTH.a",
+    outcome: "MATH.G7.MEASUR.LENGTH.a",
+    cskill: "MATH.G7.MEASUR.LENGTH.CONVERT_LENGTH_UNITS",
     rung: 2,
     form: "why",
     draw: () => {
@@ -127936,9 +128043,9 @@ var FAMILIES176 = [
       question: `${p.name} changes ${v} ${f} to ${t}. ${p.She} divides ${v} by ${r} and gets ${round(v / r, 4)} ${t}. Why is this wrong?`,
       options: [
         { text: `A ${t} is smaller than a ${f}, so multiply by ${commas(r)}`, right: true },
-        { text: "The number should stay the same, because only the unit name changes", right: false, why: "The unit changes the size of one step, so the number must change too." },
-        { text: `${p.She} should divide, but by 10 every time`, right: false, why: "The number of small units in a big unit depends on the two units. It is not always 10." },
-        { text: `Dividing is right, because a ${t} is bigger than a ${f}`, right: false, why: `Compare the units again. A ${f} is the longer one.` }
+        { text: "The number should stay the same, because only the unit name changes", right: false, why: "The unit changes the size of one step, so the number must change too.", mis: "M_NUMBER_NOT_CHANGED" },
+        { text: `${p.She} should divide, but by 10 every time`, right: false, why: "The number of small units in a big unit depends on the two units. It is not always 10.", mis: "M_ALWAYS_TEN" },
+        { text: `Dividing is right, because a ${t} is bigger than a ${f}`, right: false, why: `Compare the units again. A ${f} is the longer one.`, mis: "M_UNIT_SIZE_REVERSED" }
       ],
       hints: [`Which is longer, one ${f} or one ${t}?`, "When you measure with a smaller unit, do you need more of them or fewer?"],
       steps: [`A ${f} is longer than a ${t}, so one ${f} holds many ${t}.`, `${v} ${f} = ${v} \xD7 ${commas(r)} = ${commas(v * r)} ${t}.`]
@@ -127947,7 +128054,8 @@ var FAMILIES176 = [
   fam45({
     id: "g7.length.spot-hm-cm",
     skill: "G7_LENGTH_CONV",
-    outcome: "G7.LENGTH.a",
+    outcome: "MATH.G7.MEASUR.LENGTH.a",
+    cskill: "MATH.G7.MEASUR.LENGTH.CONVERT_LENGTH_UNITS",
     rung: 2,
     form: "spot",
     draw: () => ({ n: pick([1.5, 2.5, 3.5, 4.5, 6, 7.5, 8]), p: person() }),
@@ -127960,6 +128068,7 @@ var FAMILIES176 = [
           { text: `1 m = 100 cm, so ${commas(m20)} m = ${commas(bad)} cm`, ok: bad === good },
           { text: `${n} Hm = ${commas(bad)} cm`, ok: bad === bad }
         ],
+        mis: "M_STEP_SIZE_WRONG",
         fix: "There are 100 cm in 1 m, so multiply by 100, not by 10.",
         steps: [`${n} Hm = ${commas(m20)} m.`, `${commas(m20)} m = ${commas(m20)} \xD7 100 = ${commas(good)} cm.`]
       };
@@ -127968,18 +128077,19 @@ var FAMILIES176 = [
   fam45({
     id: "g7.length.rope-left",
     skill: "G7_LENGTH_CONV",
-    outcome: "G7.LENGTH.b",
+    outcome: "MATH.G7.MEASUR.LENGTH.b",
+    cskill: "MATH.G7.MEASUR.LENGTH.OPERATIONS_ON_LENGTH",
     rung: 2,
     form: "word",
     draw: () => {
       const n = randInt(3, 8), pc = pick([25, 40, 50, 60, 75, 80]), R8 = randInt(8, 20);
       const left = R8 - n * pc / 100;
-      return Number.isInteger(left * 2) && left > 0 && uniq6(left, R8 * 100 - n * pc, R8 - pc / 100, R8 + n * pc / 100, n * pc / 100) ? { n, pc, R: R8, p: person() } : null;
+      return Number.isInteger(left * 2) && left > 0 && [R8 * 100 - n * pc, R8 - pc / 100, R8 + n * pc / 100, n * pc / 100].every((v) => Math.abs(v - left) > 2) && uniq6(left, R8 * 100 - n * pc, R8 - pc / 100, R8 + n * pc / 100, n * pc / 100) ? { n, pc, R: R8, p: person() } : null;
     },
     make: ({ n, pc, R: R8, p }) => ({
       question: `${p.name} has a rope ${R8} m long. ${p.She} cuts ${n} pieces, each ${pc} cm long, for a washing line. How many metres of rope are left?`,
       answer: R8 - n * pc / 100,
-      wrong: [[R8 * 100 - n * pc, "That is in centimetres. The question asks for metres."], [R8 - pc / 100, "There are several pieces. Find the length of all the pieces together."], [R8 + n * pc / 100, "Cutting takes rope away, so subtract."], [n * pc / 100, "That is the rope that is cut. The question asks what is left."]],
+      wrong: [[R8 * 100 - n * pc, "That is in centimetres. The question asks for metres.", "M_ANSWER_UNIT_NOT_CONVERTED"], [R8 - pc / 100, "There are several pieces. Find the length of all the pieces together.", "M_ONE_PIECE_ONLY"], [R8 + n * pc / 100, "Cutting takes rope away, so subtract.", "M_ADDED_NOT_SUBTRACTED"], [n * pc / 100, "That is the rope that is cut. The question asks what is left.", "M_CUT_AMOUNT_AS_LEFT"]],
       hints: ["Use one unit for everything.", `Total length of the ${n} pieces, then change it to metres.`],
       steps: [`${n} pieces \xD7 ${pc} cm = ${n * pc} cm = ${n * pc / 100} m.`, `Left: ${R8} \u2212 ${n * pc / 100} = ${R8 - n * pc / 100} m.`]
     }),
@@ -127988,7 +128098,8 @@ var FAMILIES176 = [
   fam45({
     id: "g7.length.fence-posts-line",
     skill: "G7_LENGTH_CONV",
-    outcome: "G7.LENGTH.b",
+    outcome: "MATH.G7.MEASUR.LENGTH.b",
+    cskill: "MATH.G7.MEASUR.LENGTH.OPERATIONS_ON_LENGTH",
     rung: 2,
     form: "word",
     draw: () => {
@@ -127998,7 +128109,7 @@ var FAMILIES176 = [
     make: ({ gap: gap9, n, L: L16, p }) => ({
       question: `${p.name} puts up a straight fence ${L16} m long. There is a post every ${gap9} m, and one at each end. How many posts does ${p.she} need?`,
       answer: n + 1,
-      wrong: [[n, "That counts the gaps between posts. There is a post at both ends too."], [n - 1, "There are more posts than gaps on a straight fence."], [L16 * gap9, "Divide the length by the gap. Do not multiply."]],
+      wrong: [[n, "That counts the gaps between posts. There is a post at both ends too.", "M_GAPS_FOR_POSTS"], [n - 1, "There are more posts than gaps on a straight fence.", "M_FENCE_END_POST_SUBTRACTED"], [L16 * gap9, "Divide the length by the gap. Do not multiply.", "M_MULTIPLIED_NOT_DIVIDED_LENGTH"]],
       hints: ["Draw a short fence with 3 gaps. Count the posts.", "Find the number of gaps first."],
       steps: [`Number of gaps = ${L16} \xF7 ${gap9} = ${n}.`, `A post at each end means one more post than gaps: ${n} + 1 = ${n + 1}.`]
     }),
@@ -128008,7 +128119,8 @@ var FAMILIES176 = [
   fam45({
     id: "g7.perim.l-shape",
     skill: "G7_PERIMETER",
-    outcome: "G7.LENGTH.c",
+    outcome: "MATH.G7.MEASUR.LENGTH.c",
+    cskill: "MATH.G7.MEASUR.LENGTH.PERIMETER_PLANE_FIGURES",
     rung: 3,
     form: "word",
     draw: () => {
@@ -128018,7 +128130,7 @@ var FAMILIES176 = [
     make: ({ w: w14, h, a, b, p }) => ({
       question: `${p.name} cuts a corner ${a} m by ${b} m from a rectangular plot ${w14} m by ${h} m. This leaves an L-shaped plot. How long is the fence needed all around the L-shaped plot, in metres?`,
       answer: 2 * (w14 + h),
-      wrong: [[2 * (w14 + h) - 2 * (a + b), "Taking a corner away does not take the sides away. Look at what the new edges add."], [2 * (w14 + h) + 2 * (a + b), "The two new edges only replace the two sides that were cut. Count the length again."], [w14 * h - a * b, "That is the area. A fence goes around the edge."]],
+      wrong: [[2 * (w14 + h) - 2 * (a + b), "Taking a corner away does not take the sides away. Look at what the new edges add.", "M_CUT_SIDES_NOT_REPLACED"], [2 * (w14 + h) + 2 * (a + b), "The two new edges only replace the two sides that were cut. Count the length again.", "M_NEW_EDGES_ADDED_TO_FULL"], [w14 * h - a * b, "That is the area. A fence goes around the edge.", "M_AREA_FOR_PERIMETER_LEN"]],
       hints: ["Picture the L. The two new edges run along the cut.", "Compare the new edges with the old sides they replace."],
       steps: [`The two new edges are ${a} m and ${b} m. They replace the cut parts of the sides, which were also ${a} m and ${b} m.`, `So the perimeter stays the same as the rectangle: 2 \xD7 (${w14} + ${h}) = ${2 * (w14 + h)} m.`]
     }),
@@ -128027,7 +128139,8 @@ var FAMILIES176 = [
   fam45({
     id: "g7.perim.longest-fence",
     skill: "G7_PERIMETER",
-    outcome: "G7.LENGTH.c",
+    outcome: "MATH.G7.MEASUR.LENGTH.c",
+    cskill: "MATH.G7.MEASUR.LENGTH.PERIMETER_PLANE_FIGURES",
     rung: 3,
     form: "table",
     draw: () => {
@@ -128040,7 +128153,7 @@ var FAMILIES176 = [
     make: ({ rows, pm }) => ({
       question: "A farmer wants to fence one of three rectangular plots all around. The table shows the plots. Which plot needs the longest fence?",
       model: { type: "table", data: { head: ["Plot", "Length (m)", "Width (m)"], rows: rows.map(([l, w14], i) => ({ cells: [`Plot ${"ABC"[i]}`, String(l), String(w14)] })) } },
-      options: rows.map(([l, w14], i) => ({ text: `Plot ${"ABC"[i]}`, right: i === pm, why: i === pm ? void 0 : `Find the distance around each plot: 2 \xD7 (length + width). A plot with a large area does not always have the longest edge.` })),
+      options: rows.map(([l, w14], i) => ({ text: `Plot ${"ABC"[i]}`, right: i === pm, ...i === pm ? {} : i === rows.reduce((m20, r, j) => r[0] * r[1] > rows[m20][0] * rows[m20][1] ? j : m20, 0) ? { why: "That plot has the biggest area, but a fence goes round the edge. Find 2 \xD7 (length + width) for each plot.", mis: "M_AREA_DECIDES_FENCE" } : { why: "Find the distance around each plot: 2 \xD7 (length + width). Looking at one side only is not enough, because the width goes round too.", mis: "M_ONE_DIMENSION_ONLY" } })),
       hints: ["A fence goes around the edge, so use the perimeter.", "Work out 2 \xD7 (length + width) for each plot."],
       steps: rows.map(([l, w14], i) => `Plot ${"ABC"[i]}: 2 \xD7 (${l} + ${w14}) = ${2 * (l + w14)} m.`)
     })
@@ -128048,7 +128161,8 @@ var FAMILIES176 = [
   fam45({
     id: "g7.perim.fence-posts-round",
     skill: "G7_PERIMETER",
-    outcome: "G7.LENGTH.c",
+    outcome: "MATH.G7.MEASUR.LENGTH.c",
+    cskill: "MATH.G7.MEASUR.LENGTH.PERIMETER_PLANE_FIGURES",
     rung: 3,
     form: "word",
     draw: () => {
@@ -128059,7 +128173,7 @@ var FAMILIES176 = [
     make: ({ gap: gap9, n, l, w: w14, p }) => ({
       question: `${p.name} fences a rectangular plot ${l} m long and ${w14} m wide with a post every ${gap9} m, all the way around. How many posts are needed?`,
       answer: n,
-      wrong: [[n + 1, "Around a closed plot the first post is also the last one. Do not add one for the end."], [l * w14 / gap9, "That uses the area. Posts go around the edge."], [l + w14 + (l + w14) / gap9, "Find the distance around, then divide by the gap."]],
+      wrong: [[n + 1, "Around a closed plot the first post is also the last one. Do not add one for the end.", "M_END_POST_ADDED_ROUND"], [l * w14 / gap9, "That uses the area. Posts go around the edge.", "M_AREA_FOR_PERIMETER_LEN"], [l + w14 + (l + w14) / gap9, "Find the distance around, then divide by the gap.", "M_POSTS_DIVISION_MISSED"]],
       hints: ["Find the distance all the way around.", "Divide the distance by the gap between posts."],
       steps: [`Distance around = 2 \xD7 (${l} + ${w14}) = ${2 * (l + w14)} m.`, `Posts = ${2 * (l + w14)} \xF7 ${gap9} = ${n}. The last post meets the first, so there is no extra post.`]
     }),
@@ -128069,7 +128183,8 @@ var FAMILIES176 = [
   fam45({
     id: "g7.circ.wheel-distance",
     skill: "G7_CIRCUMFERENCE",
-    outcome: "G7.LENGTH.d",
+    outcome: "MATH.G7.MEASUR.LENGTH.d",
+    cskill: "MATH.G7.MEASUR.LENGTH.CIRCUMFERENCE_DISTANCE",
     rung: 2,
     form: "word",
     draw: () => {
@@ -128081,7 +128196,7 @@ var FAMILIES176 = [
     make: ({ d, n, c: c19, m: m20, p }) => ({
       question: `The wheel of ${p.name}'s bicycle has a diameter of ${d} cm. Take \u03C0 = 22/7. The wheel turns ${n} times. How far does the bicycle go, in metres?`,
       answer: m20,
-      wrong: [[d * n / 100, "One turn of the wheel covers the distance round the wheel, which is more than the diameter."], [c19 * n, "That is in centimetres. The question asks for metres."], [round(c19 * n / 1e3, 3), "There are 100 cm in 1 m, not 1,000."]],
+      wrong: [[d * n / 100, "One turn of the wheel covers the distance round the wheel, which is more than the diameter.", "M_DIAMETER_AS_CIRCUMFERENCE"], [c19 * n, "That is in centimetres. The question asks for metres.", "M_UNITS_NOT_CONVERTED_CIRC"], [round(c19 * n / 1e3, 3), "There are 100 cm in 1 m, not 1,000.", "M_CM_TO_M_BY_THOUSAND"]],
       hints: ["One full turn covers one circumference.", "Multiply by the number of turns, then change cm to m."],
       steps: [`Circumference = 22/7 \xD7 ${d} = ${c19} cm.`, `${n} turns: ${c19} \xD7 ${n} = ${commas(c19 * n)} cm.`, `${commas(c19 * n)} \xF7 100 = ${m20} m.`]
     }),
@@ -128090,7 +128205,8 @@ var FAMILIES176 = [
   fam45({
     id: "g7.circ.find-diameter",
     skill: "G7_CIRCUMFERENCE",
-    outcome: "G7.LENGTH.d",
+    outcome: "MATH.G7.MEASUR.LENGTH.d",
+    cskill: "MATH.G7.MEASUR.LENGTH.CIRCUMFERENCE_FIND_DIAMETER",
     rung: 3,
     form: "word",
     draw: () => {
@@ -128100,7 +128216,7 @@ var FAMILIES176 = [
     make: ({ d, thing, p }) => ({
       question: `${p.name} measures the distance round a ${thing} with a tape and gets ${22 * d / 7} cm. Take \u03C0 = 22/7. What is the diameter of the ${thing}, in cm?`,
       answer: d,
-      wrong: [[d / 2, "That is the radius. The question asks for the diameter."], [d / 7, "Divide by \u03C0 = 22/7, which is the same as multiplying by 7/22. Dividing by 22 alone leaves out the 7."], [22 * d / 7 / 2, "The distance round is the circumference. Halving it does not give the diameter."]],
+      wrong: [[d / 2, "That is the radius. The question asks for the diameter.", "M_RADIUS_FOR_DIAMETER"], [d / 7, "Divide by \u03C0 = 22/7, which is the same as multiplying by 7/22. Dividing by 22 alone leaves out the 7.", "M_PI_PART_DROPPED"], [22 * d / 7 / 2, "The distance round is the circumference. Halving it does not give the diameter.", "M_CIRCUMFERENCE_HALVED"]],
       hints: ["Circumference = \u03C0 \xD7 diameter.", "To find the diameter, divide the circumference by \u03C0."],
       steps: [`${22 * d / 7} = 22/7 \xD7 d.`, `d = ${22 * d / 7} \xF7 22/7 = ${22 * d / 7} \xD7 7/22 = ${d} cm.`]
     }),
@@ -128109,7 +128225,8 @@ var FAMILIES176 = [
   fam45({
     id: "g7.circ.why-double",
     skill: "G7_CIRCUMFERENCE",
-    outcome: "G7.LENGTH.d",
+    outcome: "MATH.G7.MEASUR.LENGTH.d",
+    cskill: "MATH.G7.MEASUR.LENGTH.CIRCUMFERENCE_REASON",
     rung: 3,
     form: "why",
     draw: () => {
@@ -128120,9 +128237,9 @@ var FAMILIES176 = [
       question: `A round pond has a diameter of ${d} m. A second pond has a diameter of ${2 * d} m. ${p.name} says the distance round the second pond is 4 times the distance round the first. Why is ${p.she} wrong?`,
       options: [
         { text: "Circumference = \u03C0 \xD7 diameter, so doubling the diameter only doubles the circumference", right: true },
-        { text: "The circumference of a circle never changes with its size", right: false, why: "A bigger circle has a longer circumference." },
-        { text: "Doubling the diameter makes the circumference 3 times as long because \u03C0 is about 3", right: false, why: "\u03C0 is the same for both ponds. It does not multiply the change." },
-        { text: "The circumference is 4 times as long only for ponds, not for other circles", right: false, why: "The rule for circumference is the same for every circle." }
+        { text: "The circumference of a circle never changes with its size", right: false, why: "A bigger circle has a longer circumference.", mis: "M_CIRCUMFERENCE_SIZE_FIXED" },
+        { text: "Doubling the diameter makes the circumference 3 times as long because \u03C0 is about 3", right: false, why: "\u03C0 is the same for both ponds. It does not multiply the change.", mis: "M_PI_MULTIPLIES_CHANGE" },
+        { text: "The circumference is 4 times as long only for ponds, not for other circles", right: false, why: "The rule for circumference is the same for every circle.", mis: "M_RULE_DEPENDS_ON_OBJECT" }
       ],
       hints: ["Write the circumference of each pond with the rule C = \u03C0 \xD7 d.", "Compare the two answers."],
       steps: [`First pond: \u03C0 \xD7 ${d}. Second pond: \u03C0 \xD7 ${2 * d}.`, "The second is 2 times the first: it is the area, not the distance round, that becomes 4 times as big."]
@@ -128131,7 +128248,8 @@ var FAMILIES176 = [
   fam45({
     id: "g7.circ.table-pattern",
     skill: "G7_CIRCUMFERENCE",
-    outcome: "G7.LENGTH.d",
+    outcome: "MATH.G7.MEASUR.LENGTH.d",
+    cskill: "MATH.G7.MEASUR.LENGTH.CIRCUMFERENCE_REASON",
     rung: 2,
     form: "table",
     draw: () => {
@@ -128142,7 +128260,7 @@ var FAMILIES176 = [
       question: `A class measured the width across some round objects and the distance round each. The table shows the results. The distance round divided by the width is the same every time. A ${thing} is ${target} cm wide. How far is it round, in cm?`,
       model: { type: "table", data: { head: ["Object", "Width across (cm)", "Distance round (cm)"], rows: ds.map((d, i) => ({ cells: [["Tin", "Bucket lid", "Plate", "Basin"][i], String(d), String(22 * d / 7)] })) } },
       answer: 22 * target / 7,
-      wrong: [[target * 3, "The distance round is a little more than 3 times the width. Check the exact number in the table."], [target + 22, "Look at how the distance round grows. It is a multiple of the width, not an add-on."], [target * 2, "Doubling the width is not enough. Divide one distance round by its width in the table to find the multiplier."]],
+      wrong: [[target * 3, "The distance round is a little more than 3 times the width. Check the exact number in the table.", "M_PI_ROUNDED_TO_THREE"], [target + 22, "Look at how the distance round grows. It is a multiple of the width, not an add-on.", "M_ADD_NOT_MULTIPLY_CIRC"], [target * 2, "Doubling the width is not enough. Divide one distance round by its width in the table to find the multiplier.", "M_DOUBLE_ONLY_CIRC"]],
       hints: ["Divide a distance round by its width in the table.", "Multiply the width of the new object by that number."],
       steps: [`In the table, ${22 * ds[0] / 7} \xF7 ${ds[0]} and ${22 * ds[1] / 7} \xF7 ${ds[1]} both give 22/7.`, `${target} \xD7 22/7 = ${22 * target / 7} cm.`]
     }),
@@ -128151,7 +128269,8 @@ var FAMILIES176 = [
   fam45({
     id: "g7.circ.running-track",
     skill: "G7_CIRCUMFERENCE",
-    outcome: "G7.LENGTH.d",
+    outcome: "MATH.G7.MEASUR.LENGTH.d",
+    cskill: "MATH.G7.MEASUR.LENGTH.CIRCUMFERENCE_DISTANCE",
     rung: 3,
     form: "steps",
     draw: () => {
@@ -128161,9 +128280,9 @@ var FAMILIES176 = [
     make: ({ d, s }) => ({
       question: `A running track has two straight sides, each ${s} m long. At each end is a half circle with a diameter of ${d} m. Take \u03C0 = 22/7.`,
       parts: [
-        { prompt: "The two half circles make one full circle. What is its circumference, in metres?", answer: 22 * d / 7, unit: "m", hint: "Circumference = \u03C0 \xD7 diameter.", wrong: [[11 * d / 7, "Two half circles make a whole circle, not a half."]] },
-        { prompt: "What is the total length of the two straight sides, in metres?", answer: 2 * s, unit: "m", hint: "There are two sides.", wrong: [[s, "The track has two straight sides."]] },
-        { prompt: "How far is one lap of the track, in metres?", answer: 2 * s + 22 * d / 7, unit: "m", hint: "Add the curved part and the straight part.", wrong: [[2 * s * d, "Add the two parts. Do not multiply."]] }
+        { prompt: "The two half circles make one full circle. What is its circumference, in metres?", answer: 22 * d / 7, unit: "m", hint: "Circumference = \u03C0 \xD7 diameter.", wrong: [[11 * d / 7, "Two half circles make a whole circle, not a half.", "M_HALF_CIRCLES_AS_HALF"]] },
+        { prompt: "What is the total length of the two straight sides, in metres?", answer: 2 * s, unit: "m", hint: "There are two sides.", wrong: [[s, "The track has two straight sides.", "M_ONE_STRAIGHT_SIDE_ONLY"]] },
+        { prompt: "How far is one lap of the track, in metres?", answer: 2 * s + 22 * d / 7, unit: "m", hint: "Add the curved part and the straight part.", wrong: [[2 * s * d, "Add the two parts. Do not multiply.", "M_LAP_PARTS_MULTIPLIED"]] }
       ],
       steps: [`Two half circles: 22/7 \xD7 ${d} = ${22 * d / 7} m.`, `Straight sides: 2 \xD7 ${s} = ${2 * s} m.`, `One lap: ${22 * d / 7} + ${2 * s} = ${2 * s + 22 * d / 7} m.`]
     }),
@@ -128748,7 +128867,8 @@ var FAMILIES176 = [
   fam45({
     id: "g7.speed.seconds-to-hm",
     skill: "G7_SPEED",
-    outcome: "G7.SPEED.a",
+    outcome: "MATH.G7.MEASUR.TIME_DISTANCE_AND_SPEED.b",
+    cskill: "MATH.G7.MEASUR.TIME_DISTANCE_AND_SPEED.TIME_UNITS_CONVERT",
     rung: 2,
     form: "steps",
     draw: () => ({ h: randInt(1, 3), m: pick([5, 10, 15, 20, 25, 35, 40, 45, 50]), p: person() }),
@@ -128757,9 +128877,9 @@ var FAMILIES176 = [
       return {
         question: `${p.name} runs a long race. The clock shows ${commas(s)} seconds at the finish.`,
         parts: [
-          { prompt: "How many minutes is that?", answer: s / 60, unit: "minutes", hint: "There are 60 seconds in a minute.", wrong: [[s / 100, "A minute has 60 seconds, not 100."], [s * 60, "Seconds are small units, so there are fewer minutes than seconds."]] },
-          { prompt: "How many whole hours are in that time?", answer: h, unit: "hours", hint: "There are 60 minutes in an hour.", wrong: [[round(s / 60 / 100, 2), "An hour has 60 minutes, not 100."]] },
-          { prompt: "How many minutes are left over after the whole hours?", answer: m20, unit: "minutes", hint: "Take the minutes in the whole hours away from the total minutes.", wrong: [[s / 60 - h, "Take away 60 minutes for every whole hour, not 1."]] }
+          { prompt: "How many minutes is that?", answer: s / 60, unit: "minutes", hint: "There are 60 seconds in a minute.", wrong: [[s / 100, "A minute has 60 seconds, not 100.", "M_MINUTE_AS_HUNDRED"], [s * 60, "Seconds are small units, so there are fewer minutes than seconds.", "M_CONVERT_DIRECTION_REVERSED"]] },
+          { prompt: "How many whole hours are in that time?", answer: h, unit: "hours", hint: "There are 60 minutes in an hour.", wrong: [[round(s / 60 / 100, 2), "An hour has 60 minutes, not 100.", "M_HOUR_AS_HUNDRED_MINUTES"]] },
+          { prompt: "How many minutes are left over after the whole hours?", answer: m20, unit: "minutes", hint: "Take the minutes in the whole hours away from the total minutes.", wrong: [[s / 60 - h, "Take away 60 minutes for every whole hour, not 1.", "M_ONE_PER_WHOLE_HOUR"]] }
         ],
         steps: [`${commas(s)} \xF7 60 = ${s / 60} minutes.`, `${s / 60} minutes has ${h} whole hour${h > 1 ? "s" : ""} (${h * 60} minutes).`, `Left over: ${s / 60} \u2212 ${h * 60} = ${m20} minutes.`]
       };
@@ -128769,7 +128889,8 @@ var FAMILIES176 = [
   fam45({
     id: "g7.speed.timetable-moving",
     skill: "G7_SPEED",
-    outcome: "G7.SPEED.a",
+    outcome: "MATH.G7.MEASUR.TIME_DISTANCE_AND_SPEED.a",
+    cskill: "MATH.G7.MEASUR.TIME_DISTANCE_AND_SPEED.TIMETABLE_DURATION",
     rung: 3,
     form: "table",
     draw: () => {
@@ -128783,7 +128904,7 @@ var FAMILIES176 = [
         question: "The table shows a bus timetable on the 24-hour clock. How many minutes is the bus actually moving between Nairobi and Nakuru? It is not moving while it waits at Naivasha.",
         model: { type: "table", data: { head: ["Stop", "Arrives", "Leaves"], rows: [{ cells: ["Nairobi", "-", f(t0)] }, { cells: ["Naivasha", f(a1), f(d1)] }, { cells: ["Nakuru", f(a2), "-"] }] } },
         answer: leg1 + leg2,
-        wrong: [[leg1 + leg2 + wait, "That includes the time the bus waits at Naivasha. The bus is not moving then."], [leg1, "That is only the first part of the journey, Nairobi to Naivasha."], [leg2, "That is only the second part of the journey, Naivasha to Nakuru."]],
+        wrong: [[leg1 + leg2 + wait, "That includes the time the bus waits at Naivasha. The bus is not moving then.", "M_WAIT_TIME_COUNTED"], [leg1, "That is only the first part of the journey, Nairobi to Naivasha.", "M_FIRST_LEG_ONLY"], [leg2, "That is only the second part of the journey, Naivasha to Nakuru.", "M_SECOND_LEG_ONLY"]],
         hints: ["Find the time from Nairobi to Naivasha, and from Naivasha to Nakuru.", "Do not count the time the bus waits."],
         steps: [`Nairobi to Naivasha: ${f(t0)} to ${f(a1)} is ${leg1} minutes.`, `Naivasha to Nakuru: ${f(d1)} to ${f(a2)} is ${leg2} minutes.`, `Moving: ${leg1} + ${leg2} = ${leg1 + leg2} minutes.`]
       };
@@ -128793,7 +128914,8 @@ var FAMILIES176 = [
   fam45({
     id: "g7.speed.timetable-speed",
     skill: "G7_SPEED",
-    outcome: "G7.SPEED.d",
+    outcome: "MATH.G7.MEASUR.TIME_DISTANCE_AND_SPEED.d",
+    cskill: "MATH.G7.MEASUR.TIME_DISTANCE_AND_SPEED.SPEED_FROM_DISTANCE_TIME",
     rung: 2,
     form: "table",
     draw: () => {
@@ -128811,7 +128933,7 @@ var FAMILIES176 = [
         question: "A bus company prints this notice on the 24-hour clock. The bus travels at the same speed all the way. What is its speed, in km/h?",
         model: { type: "table", data: { head: ["Notice", ""], rows: [{ label: "From", value: from }, { label: "To", value: to }, { label: "Distance (km)", value: String(km) }, { label: "Leaves", value: f(t0) }, { label: "Arrives", value: f(t0 + mins) }] } },
         answer: v,
-        wrong: [[round(km / mins, 2), "Speed in km/h needs the time in hours, not minutes."], [round(km * hrs, 2), "Speed is distance divided by time. Do not multiply."], [round(km / (Math.floor(mins / 60) + mins % 60 / 100), 2), "Minutes are out of 60, not 100. Change the minutes to a fraction of an hour."]],
+        wrong: [[round(km / mins, 2), "Speed in km/h needs the time in hours, not minutes.", "M_MINUTES_NOT_HOURS"], [round(km * hrs, 2), "Speed is distance divided by time. Do not multiply.", "M_SPEED_BY_MULTIPLYING"], [round(km / (Math.floor(mins / 60) + mins % 60 / 100), 2), "Minutes are out of 60, not 100. Change the minutes to a fraction of an hour.", "M_MINUTE_AS_HUNDRED_TIME"]],
         hints: ["Work out how long the journey takes, from the two times.", "Speed = distance \xF7 time, with the time in hours."],
         steps: [`Time = ${f(t0 + mins)} \u2212 ${f(t0)} = ${mins} minutes = ${round(hrs, 4)} hours.`, `Speed = ${km} \xF7 ${round(hrs, 4)} = ${v} km/h.`]
       };
@@ -128821,7 +128943,8 @@ var FAMILIES176 = [
   fam45({
     id: "g7.speed.laps-km",
     skill: "G7_SPEED",
-    outcome: "G7.SPEED.c",
+    outcome: "MATH.G7.MEASUR.TIME_DISTANCE_AND_SPEED.c",
+    cskill: "MATH.G7.MEASUR.TIME_DISTANCE_AND_SPEED.DISTANCE_UNITS_CONVERT",
     rung: 1,
     form: "word",
     draw: () => {
@@ -128831,7 +128954,7 @@ var FAMILIES176 = [
     make: ({ L: L16, n, p }) => ({
       question: `One lap of the school track is ${L16} metres. ${p.name} runs ${n} laps. How many kilometres does ${p.she} run?`,
       answer: L16 * n / 1e3,
-      wrong: [[L16 * n, "That is in metres. The question asks for kilometres."], [L16 * n / 100, "There are 1,000 m in 1 km, not 100 m."], [L16 * n / 1e4, "There are 1,000 m in 1 km. This divides by too much."]],
+      wrong: [[L16 * n, "That is in metres. The question asks for kilometres.", "M_ANSWER_UNIT_NOT_CONVERTED_DIST"], [L16 * n / 100, "There are 1,000 m in 1 km, not 100 m.", "M_HUNDRED_METRES_IN_KM"], [L16 * n / 1e4, "There are 1,000 m in 1 km. This divides by too much.", "M_DIVIDED_TOO_FAR"]],
       hints: ["Find the total distance in metres first.", "Change metres to kilometres."],
       steps: [`${n} \xD7 ${L16} = ${L16 * n} m.`, `${L16 * n} \xF7 1,000 = ${L16 * n / 1e3} km.`]
     }),
@@ -128840,7 +128963,8 @@ var FAMILIES176 = [
   fam45({
     id: "g7.speed.walk-to-school-week",
     skill: "G7_SPEED",
-    outcome: "G7.SPEED.c",
+    outcome: "MATH.G7.MEASUR.TIME_DISTANCE_AND_SPEED.c",
+    cskill: "MATH.G7.MEASUR.TIME_DISTANCE_AND_SPEED.DISTANCE_UNITS_CONVERT",
     rung: 2,
     form: "word",
     draw: () => {
@@ -128850,7 +128974,7 @@ var FAMILIES176 = [
     make: ({ d, days, p }) => ({
       question: `${p.name} walks ${commas(d)} m to school each morning and ${commas(d)} m home each afternoon. School is open ${days} days a week. How many kilometres does ${p.she} walk to and from school in one week?`,
       answer: round(2 * d * days / 1e3, 3),
-      wrong: [[2 * d * days, "That is in metres. The question asks for kilometres."], [round(d * days / 1e3, 3), `${p.name} walks to school and home again, so count both ways.`], [round(2 * d * days / 100, 3), "There are 1,000 m in 1 km, not 100 m."]],
+      wrong: [[2 * d * days, "That is in metres. The question asks for kilometres.", "M_ANSWER_UNIT_NOT_CONVERTED_DIST"], [round(d * days / 1e3, 3), `${p.name} walks to school and home again, so count both ways.`, "M_ONE_WAY_ONLY"], [round(2 * d * days / 100, 3), "There are 1,000 m in 1 km, not 100 m.", "M_HUNDRED_METRES_IN_KM"]],
       hints: ["Find the distance for one day, there and back.", "Multiply by the number of days, then change to kilometres."],
       steps: [`One day: ${commas(d)} + ${commas(d)} = ${commas(2 * d)} m.`, `${days} days: ${commas(2 * d)} \xD7 ${days} = ${commas(2 * d * days)} m = ${round(2 * d * days / 1e3, 3)} km.`]
     }),
@@ -128859,7 +128983,8 @@ var FAMILIES176 = [
   fam45({
     id: "g7.speed.hours-and-minutes",
     skill: "G7_SPEED",
-    outcome: "G7.SPEED.d",
+    outcome: "MATH.G7.MEASUR.TIME_DISTANCE_AND_SPEED.d",
+    cskill: "MATH.G7.MEASUR.TIME_DISTANCE_AND_SPEED.SPEED_FROM_DISTANCE_TIME",
     rung: 2,
     form: "word",
     draw: () => {
@@ -128872,7 +128997,7 @@ var FAMILIES176 = [
       return {
         question: `${p.name}'s matatu travels ${d} km in ${h > 0 ? `${h} hour${h > 1 ? "s" : ""} and ` : ""}${m20} minutes. What is the speed of the matatu, in km/h?`,
         answer: v,
-        wrong: [[round(d / (h + m20 / 100), 2), "Minutes are out of 60, not 100. Change the minutes to part of an hour."], [round(d / (h * 60 + m20), 3), "Speed in km/h needs the time in hours, not minutes."], [round(d * t, 2), "Speed is distance divided by time. Do not multiply."]],
+        wrong: [[round(d / (h + m20 / 100), 2), "Minutes are out of 60, not 100. Change the minutes to part of an hour.", "M_MINUTE_AS_HUNDRED_TIME"], [round(d / (h * 60 + m20), 3), "Speed in km/h needs the time in hours, not minutes.", "M_MINUTES_NOT_HOURS"], [round(d * t, 2), "Speed is distance divided by time. Do not multiply.", "M_SPEED_BY_MULTIPLYING"]],
         hints: ["Change the time to hours. 30 minutes is half an hour.", "Speed = distance \xF7 time."],
         steps: [`${m20} minutes = ${m20}/60 = ${round(m20 / 60, 4)} hour.`, `Time = ${t} hours. Speed = ${d} \xF7 ${t} = ${v} km/h.`]
       };
@@ -128882,7 +129007,8 @@ var FAMILIES176 = [
   fam45({
     id: "g7.speed.minutes-for-trip",
     skill: "G7_SPEED",
-    outcome: "G7.SPEED.a",
+    outcome: "MATH.G7.MEASUR.TIME_DISTANCE_AND_SPEED.e",
+    cskill: "MATH.G7.MEASUR.TIME_DISTANCE_AND_SPEED.TIME_FROM_SPEED",
     rung: 2,
     form: "word",
     draw: () => {
@@ -128895,7 +129021,7 @@ var FAMILIES176 = [
       return {
         question: `${p.name} drives a ${pick(["lorry", "car", "bus"])} at ${v} km/h (kilometres per hour) for ${d} km. Give the time of the journey in minutes.`,
         answer: mins,
-        wrong: [[round(hrs, 2), "That is the time in hours. The question asks for minutes."], [h * 60 + round((hrs - h) * 100, 0), "Part of an hour is out of 60 minutes, not 100. Multiply the decimal part by 60."], [d * v, "Time = distance \xF7 speed. Do not multiply."]],
+        wrong: [[round(hrs, 2), "That is the time in hours. The question asks for minutes.", "M_HOURS_NOT_CONVERTED_TO_MINUTES"], [h * 60 + round((hrs - h) * 100, 0), "Part of an hour is out of 60 minutes, not 100. Multiply the decimal part by 60.", "M_DECIMAL_HOURS_AS_MINUTES"], [d * v, "Time = distance \xF7 speed. Do not multiply.", "M_TIME_BY_MULTIPLYING"]],
         hints: ["Find the time in hours, using distance \xF7 speed.", "Change the hours to minutes. An hour has 60 minutes."],
         steps: [`Time = ${d} \xF7 ${v} = ${round(hrs, 4)} hours.`, `${round(hrs, 4)} \xD7 60 = ${mins} minutes.`]
       };
@@ -128905,7 +129031,8 @@ var FAMILIES176 = [
   fam45({
     id: "g7.speed.spot-minutes-hours",
     skill: "G7_SPEED",
-    outcome: "G7.SPEED.d",
+    outcome: "MATH.G7.MEASUR.TIME_DISTANCE_AND_SPEED.d",
+    cskill: "MATH.G7.MEASUR.TIME_DISTANCE_AND_SPEED.SPEED_FROM_DISTANCE_TIME",
     rung: 2,
     form: "spot",
     draw: () => ({ v: pick([12, 24, 36]), m: pick([15, 30, 45]), p: person() }),
@@ -128920,6 +129047,7 @@ var FAMILIES176 = [
           { text: `Speed = ${d} \xF7 ${bad} = ${shown} km/h`, ok: shown === round(d / bad, 2) },
           { text: `The speed is ${shown} km/h.`, ok: shown === shown }
         ],
+        mis: "M_MINUTE_AS_HUNDRED_TIME",
         fix: "An hour has 60 minutes, so change minutes to hours by dividing by 60, not 100.",
         steps: [`${m20} minutes = ${m20} \xF7 60 = ${round(good, 4)} hours.`, `Speed = ${d} \xF7 ${round(good, 4)} = ${v} km/h.`]
       };
@@ -128928,7 +129056,8 @@ var FAMILIES176 = [
   fam45({
     id: "g7.speed.average-two-legs",
     skill: "G7_SPEED",
-    outcome: "G7.SPEED.d",
+    outcome: "MATH.G7.MEASUR.TIME_DISTANCE_AND_SPEED.e",
+    cskill: "MATH.G7.MEASUR.TIME_DISTANCE_AND_SPEED.AVERAGE_SPEED_TWO_LEGS",
     rung: 3,
     form: "steps",
     draw: () => {
@@ -128941,9 +129070,9 @@ var FAMILIES176 = [
       return {
         question: `${p.name} drives ${D8} km at ${v1} km/h, then another ${D8} km at ${v2} km/h.`,
         parts: [
-          { prompt: "How many hours does the first part take?", answer: t1, unit: "hours", hint: "Time = distance \xF7 speed.", wrong: [[D8 * v1, "Divide the distance by the speed."]] },
-          { prompt: "How many hours does the second part take?", answer: t2, unit: "hours", hint: "Time = distance \xF7 speed.", wrong: [[D8 * v2, "Divide the distance by the speed."]] },
-          { prompt: "What is the average speed for the whole journey, in km/h?", answer: avg, unit: "km/h", hint: "Total distance \xF7 total time.", wrong: [[(v1 + v2) / 2, "The slower part takes longer, so the average is not halfway between the speeds. Use total distance \xF7 total time."]] }
+          { prompt: "How many hours does the first part take?", answer: t1, unit: "hours", hint: "Time = distance \xF7 speed.", wrong: [[D8 * v1, "Divide the distance by the speed.", "M_TIME_BY_MULTIPLYING"]] },
+          { prompt: "How many hours does the second part take?", answer: t2, unit: "hours", hint: "Time = distance \xF7 speed.", wrong: [[D8 * v2, "Divide the distance by the speed.", "M_TIME_BY_MULTIPLYING"]] },
+          { prompt: "What is the average speed for the whole journey, in km/h?", answer: avg, unit: "km/h", hint: "Total distance \xF7 total time.", wrong: [[(v1 + v2) / 2, "The slower part takes longer, so the average is not halfway between the speeds. Use total distance \xF7 total time.", "M_AVERAGE_OF_SPEEDS"]] }
         ],
         steps: [`${D8} \xF7 ${v1} = ${t1} hours.`, `${D8} \xF7 ${v2} = ${t2} hours.`, `Total distance ${2 * D8} km \xF7 total time ${t1 + t2} hours = ${avg} km/h.`]
       };
@@ -128953,7 +129082,8 @@ var FAMILIES176 = [
   fam45({
     id: "g7.speed.ms-steps",
     skill: "G7_SPEED",
-    outcome: "G7.SPEED.f",
+    outcome: "MATH.G7.MEASUR.TIME_DISTANCE_AND_SPEED.f",
+    cskill: "MATH.G7.MEASUR.TIME_DISTANCE_AND_SPEED.SPEED_UNITS_CONVERT",
     rung: 2,
     form: "steps",
     draw: () => {
@@ -128963,9 +129093,9 @@ var FAMILIES176 = [
     make: ({ v, t, d, what }) => ({
       question: `${what} covers ${d} metres in ${t} seconds, going at the same speed all the time.`,
       parts: [
-        { prompt: "What is its speed in metres per second (m/s)?", answer: v, unit: "m/s", hint: "Speed = distance \xF7 time.", wrong: [[d * t, "Divide the distance by the time."]] },
-        { prompt: "How many metres does it cover in one hour (3,600 seconds)?", answer: v * 3600, unit: "m", hint: "Multiply the metres in one second by the seconds in an hour.", wrong: [[v * 60, "An hour has 3,600 seconds, not 60."]] },
-        { prompt: "What is its speed in kilometres per hour (km/h)?", answer: v * 3.6, unit: "km/h", hint: "Change those metres to kilometres.", wrong: [[v * 3600, "That is in metres. Divide by 1,000 to get kilometres."]] }
+        { prompt: "What is its speed in metres per second (m/s)?", answer: v, unit: "m/s", hint: "Speed = distance \xF7 time.", wrong: [[d * t, "Divide the distance by the time.", "M_SPEED_BY_MULTIPLYING"]] },
+        { prompt: "How many metres does it cover in one hour (3,600 seconds)?", answer: v * 3600, unit: "m", hint: "Multiply the metres in one second by the seconds in an hour.", wrong: [[v * 60, "An hour has 3,600 seconds, not 60.", "M_HOUR_AS_SIXTY_SECONDS"]] },
+        { prompt: "What is its speed in kilometres per hour (km/h)?", answer: v * 3.6, unit: "km/h", hint: "Change those metres to kilometres.", wrong: [[v * 3600, "That is in metres. Divide by 1,000 to get kilometres.", "M_UNIT_NOT_CONVERTED_TO_KM"]] }
       ],
       steps: [`${d} \xF7 ${t} = ${v} m/s.`, `${v} \xD7 3,600 = ${commas(v * 3600)} m in an hour.`, `${commas(v * 3600)} \xF7 1,000 = ${v * 3.6} km/h.`]
     }),
@@ -128974,7 +129104,8 @@ var FAMILIES176 = [
   fam45({
     id: "g7.speed.kmh-to-ms-animal",
     skill: "G7_SPEED",
-    outcome: "G7.SPEED.f",
+    outcome: "MATH.G7.MEASUR.TIME_DISTANCE_AND_SPEED.f",
+    cskill: "MATH.G7.MEASUR.TIME_DISTANCE_AND_SPEED.SPEED_UNITS_CONVERT",
     rung: 2,
     form: "word",
     draw: () => {
@@ -128985,7 +129116,7 @@ var FAMILIES176 = [
     make: ({ v, kmh, who }) => ({
       question: `${who} at ${kmh} km/h. How many metres does it cover in one second? Give the speed in m/s.`,
       answer: v,
-      wrong: [[round(kmh / 60, 2), "An hour has 3,600 seconds, not 60."], [round(kmh * 3.6, 2), "To go from km/h to m/s you divide by 3.6. Multiplying goes the other way."], [round(kmh / 1e3, 3), "Changing km to m multiplies by 1,000, and an hour to seconds divides by 3,600."]],
+      wrong: [[round(kmh / 60, 2), "An hour has 3,600 seconds, not 60.", "M_HOUR_AS_SIXTY_SECONDS"], [round(kmh * 3.6, 2), "To go from km/h to m/s you divide by 3.6. Multiplying goes the other way.", "M_CONVERSION_DIRECTION_REVERSED"], [round(kmh / 1e3, 3), "Changing km to m multiplies by 1,000, and an hour to seconds divides by 3,600.", "M_KM_TO_M_DIVIDED"]],
       hints: ["In one hour it covers that many kilometres. Change them to metres.", "Then divide by the number of seconds in an hour."],
       steps: [`${kmh} km = ${commas(kmh * 1e3)} m in 3,600 s.`, `${commas(kmh * 1e3)} \xF7 3,600 = ${v} m/s.`]
     }),
@@ -128994,7 +129125,8 @@ var FAMILIES176 = [
   fam45({
     id: "g7.speed.why-divide-60",
     skill: "G7_SPEED",
-    outcome: "G7.SPEED.f",
+    outcome: "MATH.G7.MEASUR.TIME_DISTANCE_AND_SPEED.f",
+    cskill: "MATH.G7.MEASUR.TIME_DISTANCE_AND_SPEED.SPEED_UNITS_CONVERT",
     rung: 3,
     form: "why",
     draw: () => {
@@ -129005,9 +129137,9 @@ var FAMILIES176 = [
       question: `${p.name} changes ${kmh} km/h to m/s. ${p.She} multiplies by 1,000 and divides by 60. Why is this wrong?`,
       options: [
         { text: "An hour has 3,600 seconds, not 60 seconds", right: true },
-        { text: "A kilometre is 100 metres, not 1,000", right: false, why: "A kilometre is 1,000 metres. That part is correct." },
-        { text: "You should add 1,000 and 60, not multiply and divide", right: false, why: "Adding units does not change them. You multiply by the size of the new small unit and divide by the bigger one." },
-        { text: "You do not divide by anything. You only multiply by 1,000", right: false, why: "The time changes from hours to seconds as well, so you must divide by the seconds in one hour." }
+        { text: "A kilometre is 100 metres, not 1,000", right: false, why: "A kilometre is 1,000 metres. That part is correct.", mis: "M_KM_AS_HUNDRED_M" },
+        { text: "You should add 1,000 and 60, not multiply and divide", right: false, why: "Adding units does not change them. You multiply by the size of the new small unit and divide by the bigger one.", mis: "M_UNITS_ADDED" },
+        { text: "You do not divide by anything. You only multiply by 1,000", right: false, why: "The time changes from hours to seconds as well, so you must divide by the seconds in one hour.", mis: "M_TIME_UNIT_NOT_CHANGED" }
       ],
       hints: ["Change the distance and the time separately.", "How many seconds are there in one hour?"],
       steps: ["1 hour = 60 \xD7 60 = 3,600 seconds.", `${kmh} km/h = ${commas(kmh * 1e3)} m in 3,600 s = ${v} m/s.`]
@@ -129016,7 +129148,8 @@ var FAMILIES176 = [
   fam45({
     id: "g7.speed.fastest-mixed-units",
     skill: "G7_SPEED",
-    outcome: "G7.SPEED.f",
+    outcome: "MATH.G7.MEASUR.TIME_DISTANCE_AND_SPEED.f",
+    cskill: "MATH.G7.MEASUR.TIME_DISTANCE_AND_SPEED.SPEED_COMPARE_MIXED_UNITS",
     rung: 2,
     form: "direct",
     draw: () => {
@@ -129031,7 +129164,10 @@ var FAMILIES176 = [
       return {
         question: `Which is the fastest: a boda boda at ${a} km/h, a runner at ${b} m/s or a bicycle at ${c19} km/h?`,
         story: false,
-        options: v.map((x) => ({ text: x.t.charAt(0).toUpperCase() + x.t.slice(1), right: x.k === best, why: x.k === best ? void 0 : `Change all the speeds to km/h first. A speed in m/s becomes km/h when you multiply by 3.6.` })),
+        options: (() => {
+          let c20 = 0;
+          return v.map((x) => ({ text: x.t.charAt(0).toUpperCase() + x.t.slice(1), right: x.k === best, ...x.k === best ? {} : { why: /m\/s/.test(x.t) ? "That compares a number in m/s with numbers in km/h. Change m/s to km/h first: multiply by 3.6." : "The speeds are in different units, so the numbers cannot be compared as they are. Change all the speeds to km/h first.", mis: /m\/s/.test(x.t) ? "M_MS_NUMBER_TAKEN_AS_KMH" : c20++ === 0 ? "M_SPEEDS_COMPARED_WITHOUT_SAME_UNIT" : "SLIP" } }));
+        })(),
         hints: ["You cannot compare m/s with km/h until they are in the same unit.", `Multiply ${b} by 3.6 to change m/s to km/h.`],
         steps: [`${b} m/s = ${b} \xD7 3.6 = ${round(b * 3.6, 1)} km/h.`, `Compare ${a} km/h, ${round(b * 3.6, 1)} km/h and ${c19} km/h. The fastest is ${v.find((x) => x.k === best).t}.`]
       };
@@ -129041,7 +129177,8 @@ var FAMILIES176 = [
   fam45({
     id: "g7.temp.word-from-table",
     skill: "G7_TEMPERATURE",
-    outcome: "G7.TEMP.a",
+    outcome: "MATH.G7.MEASUR.TEMPERATURE.a",
+    cskill: "MATH.G7.MEASUR.TEMPERATURE.TEMP_WORDS",
     rung: 1,
     form: "table",
     draw: () => ({ t: pick([3, 6, 8, 12, 14, 17, 18, 22, 25, 27, 32, 35, 38]), place: pick(["Nairobi", "Nakuru", "Mombasa", "Nyeri", "Kisumu"]) }),
@@ -129050,7 +129187,20 @@ var FAMILIES176 = [
       return {
         question: `A thermometer in ${place3} shows ${t} \xB0C. Use the table. Which word describes this temperature?`,
         model: { type: "table", data: { head: ["Temperature", "Word"], rows: [{ label: "Below 10 \xB0C", value: "cold" }, { label: "10 \xB0C to 19 \xB0C", value: "cool" }, { label: "20 \xB0C to 29 \xB0C", value: "warm" }, { label: "30 \xB0C and above", value: "hot" }] } },
-        options: ["cold", "cool", "warm", "hot"].map((w14) => ({ text: w14, right: w14 === word, why: w14 === word ? void 0 : `Look at which row of the table ${t} \xB0C falls in.` })),
+        options: (() => {
+          const W15 = ["cold", "cool", "warm", "hot"], ri = W15.indexOf(word), seen = /* @__PURE__ */ new Set(), out = [];
+          for (const [wi2, w14] of W15.entries()) {
+            if (wi2 === ri) {
+              out.push({ text: w14, right: true });
+              continue;
+            }
+            const code = `M_${Math.abs(wi2 - ri) === 1 ? "NEXT" : "FAR"}_BAND_TOO_${wi2 < ri ? "COLD" : "HOT"}`;
+            if (seen.has(code)) continue;
+            seen.add(code);
+            out.push({ text: w14, right: false, why: `${t} \xB0C is not in the ${w14} row of the table. Look at which row ${t} \xB0C falls in.`, mis: code });
+          }
+          return out;
+        })(),
         fixedOrder: true,
         hints: ["Find the row whose range contains the reading.", "Read the word in that row."],
         steps: [`${t} \xB0C is in the range for "${word}".`, `The word is ${word}.`]
@@ -129060,17 +129210,18 @@ var FAMILIES176 = [
   fam45({
     id: "g7.temp.rise-then-fall",
     skill: "G7_TEMPERATURE",
-    outcome: "G7.TEMP.b",
+    outcome: "MATH.G7.MEASUR.TEMPERATURE.e",
+    cskill: "MATH.G7.MEASUR.TEMPERATURE.TEMP_RISES_FALLS",
     rung: 2,
     form: "word",
     draw: () => {
       const s = randInt(8, 16), r = randInt(10, 18), f = randInt(5, 12);
-      return uniq6(s + r - f, s + r + f, s - r + f, r - f) ? { s, r, f, place: pick(["Nakuru", "Nyeri", "Eldoret", "Kitale"]), p: person() } : null;
+      return uniq6(s + r - f, s + r + f, s - r + f, r - f) && [s + r + f, s - r + f, r - f].every((v) => Math.abs(v - (s + r - f)) > 2) ? { s, r, f, place: pick(["Nakuru", "Nyeri", "Eldoret", "Kitale"]), p: person() } : null;
     },
     make: ({ s, r, f, place: place3 }) => ({
       question: `A thermometer in ${place3} shows ${s} \xB0C at 6 a.m. By 2 p.m. the temperature has risen by ${r} \xB0C. Then it falls by ${f} \xB0C by midnight. What does the thermometer show at midnight?`,
       answer: s + r - f,
-      wrong: [[s + r + f, "The temperature fell the second time. Take that fall away."], [s - r + f, "The first change was a rise. Add it."], [r - f, "Start from the 6 a.m. reading, then apply both changes."]],
+      wrong: [[s + r + f, "The temperature fell the second time. Take that fall away.", "M_FALL_ADDED"], [s - r + f, "The first change was a rise. Add it.", "M_RISE_SUBTRACTED"], [r - f, "Start from the 6 a.m. reading, then apply both changes.", "M_START_READING_IGNORED"]],
       hints: ["Follow the thermometer through the day: start, rise, fall.", "A rise goes up the scale. A fall goes down."],
       steps: [`After the rise: ${s} + ${r} = ${s + r} \xB0C.`, `After the fall: ${s + r} \u2212 ${f} = ${s + r - f} \xB0C.`]
     }),
@@ -129079,7 +129230,8 @@ var FAMILIES176 = [
   fam45({
     id: "g7.temp.spot-kelvin-minus",
     skill: "G7_TEMPERATURE",
-    outcome: "G7.TEMP.d",
+    outcome: "MATH.G7.MEASUR.TEMPERATURE.d",
+    cskill: "MATH.G7.MEASUR.TEMPERATURE.TEMP_CONVERT_C_K",
     rung: 2,
     form: "spot",
     draw: () => ({ c: randInt(10, 38), p: person() }),
@@ -129092,6 +129244,7 @@ var FAMILIES176 = [
           { text: `Kelvin = ${c19} \u2212 273 = ${bad}`, ok: bad === c19 - 273 },
           { text: `So ${c19} \xB0C is ${bad} K.`, ok: bad === bad }
         ],
+        mis: "M_273_SUBTRACTED_TO_GET_KELVIN",
         fix: "To change \xB0C to kelvin, add 273. Kelvin readings are larger than the Celsius ones here.",
         steps: ["Kelvin = Celsius + 273.", `${c19} + 273 = ${good} K.`]
       };
@@ -129100,7 +129253,8 @@ var FAMILIES176 = [
   fam45({
     id: "g7.temp.daily-range-graph",
     skill: "G7_TEMPERATURE",
-    outcome: "G7.TEMP.b",
+    outcome: "MATH.G7.MEASUR.TEMPERATURE.b",
+    cskill: "MATH.G7.MEASUR.TEMPERATURE.TEMP_COMPARE_DIFFERENCE",
     rung: 2,
     form: "graph",
     draw: () => {
@@ -129115,7 +129269,7 @@ var FAMILIES176 = [
         question: `The line graph shows the temperature in \xB0C at a school in ${place3} during one day. What is the difference between the hottest and the coldest temperature on the graph, in degrees?`,
         model: { type: "line-graph", data: { points: hours.map((x, i) => ({ x, y: vals[i] })), xTicks: hours, yTicks: [10, 15, 20, 25, 30], xLabel: "Time of day (hours)", yLabel: "Temperature (\xB0C)" } },
         answer: hi - lo,
-        wrong: [[hi, "That is the hottest temperature alone. Find how far it is from the coldest."], [hi + lo, "A difference is found by subtracting."], [Math.abs(vals[vals.length - 1] - vals[0]), "That compares the first and last readings. Look for the highest and the lowest points."]],
+        wrong: [[hi, "That is the hottest temperature alone. Find how far it is from the coldest.", "M_ONE_READING_GIVEN"], [hi + lo, "A difference is found by subtracting.", "M_SUMMED_FOR_DIFFERENCE"], [Math.abs(vals[vals.length - 1] - vals[0]), "That compares the first and last readings. Look for the highest and the lowest points.", "M_FIRST_AND_LAST_COMPARED"]],
         hints: ["Find the highest point on the graph and the lowest point.", "Subtract the lowest reading from the highest."],
         steps: [`Highest: ${hi} \xB0C. Lowest: ${lo} \xB0C.`, `Difference: ${hi} \u2212 ${lo} = ${hi - lo} degrees.`]
       };
@@ -129944,11 +130098,12 @@ var FAMILIES177 = [
   fam46({
     id: "g7.construct.spot-plan",
     skill: "G7_ANGLE_CONSTRUCTION",
-    outcome: "G7.CONSTRUCT.b",
+    outcome: "MATH.G7.GEOMET.GEOMETRICAL_CONSTRUCTION.c",
+    cskill: "MATH.G7.GEOMET.GEOMETRICAL_CONSTRUCTION.CONSTRUCT_STANDARD_ANGLES",
     rung: 3,
     form: "spot",
     draw: () => {
-      const base = pick([60, 90, 120]), piece = pick([30, 15]), kind = pick(["count", "add"]);
+      const base = pick([60, 90, 120]), piece = pick([30, 15]), kind = "count";
       const times = piece === 30 ? 1 : 2;
       const total = base + piece;
       const claimed = piece;
@@ -129965,6 +130120,7 @@ var FAMILIES177 = [
           { text: `Construct the ${claimed}\xB0 angle beside the ${base}\xB0 angle. The two together make ${shownTotal}\xB0.`, ok: shownTotal === base + claimed },
           { text: `The angle of ${shownTotal}\xB0 is ready.`, ok: true }
         ],
+        mis: "M_BISECT_COUNT_WRONG",
         fix: kind === "count" ? `Bisecting 60\xB0 ${wrongTimes === 1 ? "once" : "twice"} gives ${60 / 2 ** wrongTimes}\xB0, not ${claimed}\xB0. To get ${piece}\xB0 you must bisect ${times === 1 ? "once" : "twice"}.` : `${base}\xB0 + ${piece}\xB0 is ${total}\xB0, not ${shownTotal}\xB0.`,
         hints: ["Check each step. Does it give the angle it claims?", "Bisecting cuts an angle into two equal halves each time."],
         steps: [`60\xB0 bisected ${times === 1 ? "once" : "twice"} is ${piece}\xB0.`, `${base}\xB0 + ${piece}\xB0 = ${total}\xB0.`]
@@ -129974,7 +130130,8 @@ var FAMILIES177 = [
   fam46({
     id: "g7.construct.arc-reasons",
     skill: "G7_CONSTRUCTIONS",
-    outcome: "G7.CONSTRUCT.b",
+    outcome: "MATH.G7.GEOMET.GEOMETRICAL_CONSTRUCTION.b",
+    cskill: "MATH.G7.GEOMET.GEOMETRICAL_CONSTRUCTION.BISECT_ANGLE",
     rung: 3,
     form: "why",
     draw: () => ({ step: randInt(0, 3), k: randInt(0, 3) }),
@@ -129985,7 +130142,7 @@ var FAMILIES177 = [
         { do: "join the corner to the point where the two arcs cross", why: "That point is equally far from both arms, so the line splits the angle into two equal angles" },
         { do: "open the compasses wider than half the gap between the two marks before drawing the crossing arcs", why: "Otherwise the two arcs would be too short to meet" }
       ];
-      const opts2 = S26.map((s, i) => ({ text: s.why, right: i === step2, why: i === step2 ? void 0 : "That is a good reason, but for a different step of the method. Check which step the question asks about." }));
+      const opts2 = S26.map((s, i) => ({ text: s.why, right: i === step2, ...i === step2 ? {} : { why: "That is a good reason, but for a different step of the method. Check which step the question asks about.", mis: ["M_ARC_REASON_FOR_FIRST_ARC", "M_ARC_REASON_FOR_CROSSING_STEP", "M_ARC_REASON_FOR_BISECTOR_STEP", "M_ARC_REASON_ARCS_TOO_SHORT"][i] } }));
       return {
         question: `When you bisect an angle with a ruler and compasses, you ${S26[step2].do}. Why?`,
         story: false,
@@ -129998,7 +130155,8 @@ var FAMILIES177 = [
   fam46({
     id: "g7.construct.triangle-possible",
     skill: "G7_CONSTRUCTIONS",
-    outcome: "G7.CONSTRUCT.b",
+    outcome: "MATH.G7.GEOMET.GEOMETRICAL_CONSTRUCTION.d",
+    cskill: "MATH.G7.GEOMET.GEOMETRICAL_CONSTRUCTION.CONSTRUCT_TRIANGLES",
     rung: 3,
     form: "why",
     draw: () => {
@@ -130013,14 +130171,14 @@ var FAMILIES177 = [
     make: ({ sides, L: L16, s1, s2, possible, k, p }) => {
       const opts2 = possible ? [
         { text: `Yes. ${s1} + ${s2} = ${s1 + s2}, which is more than ${L16}`, right: true },
-        { text: "No. The three sides are all different lengths", right: false, why: "A triangle can have three different sides. What matters is whether the two shorter sides together are longer than the longest side." },
-        { text: `No. ${L16} cm is longer than each of the other two sides`, right: false, why: "The longest side is always longer than each of the others. The test is whether the two shorter sides together beat it." },
-        { text: "Yes. Any three lengths make a triangle", right: false, why: "Not any three. If the two shorter sides together are too short, the arcs never meet." }
+        { text: "No. The three sides are all different lengths", right: false, why: "A triangle can have three different sides. What matters is whether the two shorter sides together are longer than the longest side.", mis: "M_ALL_SIDES_DIFFERENT_NO_TRIANGLE" },
+        { text: `No. ${L16} cm is longer than each of the other two sides`, right: false, why: "The longest side is always longer than each of the others. The test is whether the two shorter sides together beat it.", mis: "M_LONGEST_SIDE_BLOCKS_TRIANGLE" },
+        { text: "Yes. Any three lengths make a triangle", right: false, why: "Not any three. If the two shorter sides together are too short, the arcs never meet.", mis: "M_ANY_THREE_LENGTHS_MAKE_TRIANGLE" }
       ] : [
         { text: `No. ${s1} + ${s2} = ${s1 + s2}, which is less than ${L16}`, right: true },
-        { text: "Yes. Any three lengths at all will make a triangle", right: false, why: "Not any three. If the two shorter sides together are too short, the arcs never meet." },
-        { text: `Yes. ${L16} cm is the longest side, so it can be the base`, right: false, why: "Any side can be the base. The problem is that the two shorter sides together are too short to reach each other." },
-        { text: "No. The three sides are all different lengths", right: false, why: "A triangle can have three different sides. Check whether the two shorter sides together are longer than the longest." }
+        { text: "Yes. Any three lengths at all will make a triangle", right: false, why: "Not any three. If the two shorter sides together are too short, the arcs never meet.", mis: "M_ANY_THREE_LENGTHS_MAKE_TRIANGLE" },
+        { text: `Yes. ${L16} cm is the longest side, so it can be the base`, right: false, why: "Any side can be the base. The problem is that the two shorter sides together are too short to reach each other.", mis: "M_LONGEST_SIDE_AS_BASE_ENOUGH" },
+        { text: "No. The three sides are all different lengths", right: false, why: "A triangle can have three different sides. Check whether the two shorter sides together are longer than the longest.", mis: "M_ALL_SIDES_DIFFERENT_NO_TRIANGLE" }
       ];
       return {
         question: `${p.name} wants to construct a triangle with sides of ${sides[0]} cm, ${sides[1]} cm and ${sides[2]} cm, using a ruler and compasses. Can it be done?`,
@@ -130904,6 +131062,1659 @@ var SKILLS_G7 = {
       "M_ONLY_ADDING_USED",
       "M_ONLY_MULTIPLYING_USED",
       "M_RULE_NOT_KEPT"
+    ]
+  },
+  "MATH.G7.NUMBER.FACTORS.DIV_BY_2_4_8_5_10": {
+    "name": "Test divisibility by 2, 4, 5, 8 and 10 from the last digits",
+    "sub": "MATH.G7.NUMBER.FACTORS",
+    "outcome": "MATH.G7.NUMBER.FACTORS.a",
+    "outcomes": [
+      "MATH.G7.NUMBER.FACTORS.a"
+    ],
+    "horeb": [
+      "G7_DIVISIBILITY"
+    ],
+    "primary": "G7_DIVISIBILITY",
+    "pre": [
+      "MATH.G5.NUMBER.WHOLE_NUMBERS.DIVISIBLE_BY_2",
+      "MATH.G5.NUMBER.WHOLE_NUMBERS.DIVISIBLE_BY_5_AND_10"
+    ],
+    "mis": [
+      "M_LAST_DIGIT_FOR_4_8",
+      "M_EVEN_MEANS_DIVISIBLE_BY_4"
+    ]
+  },
+  "MATH.G7.NUMBER.FACTORS.DIV_BY_3_6_9": {
+    "name": "Test divisibility by 3, 6 and 9 with the sum of the digits",
+    "sub": "MATH.G7.NUMBER.FACTORS",
+    "outcome": "MATH.G7.NUMBER.FACTORS.a",
+    "outcomes": [
+      "MATH.G7.NUMBER.FACTORS.a"
+    ],
+    "horeb": [
+      "G7_DIVISIBILITY"
+    ],
+    "primary": "G7_DIVISIBILITY",
+    "pre": [
+      "MATH.G7.NUMBER.FACTORS.DIV_BY_2_4_8_5_10",
+      "MATH.G5.NUMBER.WHOLE_NUMBERS.DIVISIBILITY_PROBLEMS"
+    ],
+    "mis": [
+      "M_DIGIT_SUM_NOT_DIVIDED",
+      "M_SIX_ONLY_THREE_TESTED",
+      "M_SIX_ONLY_EVEN_TESTED",
+      "M_DIGIT_SUM_DIVISIBLE_BY_SIX"
+    ]
+  },
+  "MATH.G7.NUMBER.FACTORS.DIV_BY_11": {
+    "name": "Test divisibility by 11 with the alternating sum of digits",
+    "sub": "MATH.G7.NUMBER.FACTORS",
+    "outcome": "MATH.G7.NUMBER.FACTORS.a",
+    "outcomes": [
+      "MATH.G7.NUMBER.FACTORS.a"
+    ],
+    "horeb": [
+      "G7_DIVISIBILITY"
+    ],
+    "primary": "G7_DIVISIBILITY",
+    "pre": [
+      "MATH.G7.NUMBER.FACTORS.DIV_BY_3_6_9",
+      "MATH.G5.NUMBER.WHOLE_NUMBERS.DIVISIBILITY_PROBLEMS"
+    ],
+    "mis": [
+      "M_ELEVEN_ADD_ALL_DIGITS",
+      "M_ELEVEN_ZERO_ONLY"
+    ]
+  },
+  "MATH.G7.NUMBER.FACTORS.PRIME_FACTORISE": {
+    "name": "Write a composite number as a product of prime factors",
+    "sub": "MATH.G7.NUMBER.FACTORS",
+    "outcome": "MATH.G7.NUMBER.FACTORS.b",
+    "outcomes": [
+      "MATH.G7.NUMBER.FACTORS.b"
+    ],
+    "horeb": [
+      "G7_PRIME_FACTORIZATION",
+      "G7_PRIMES"
+    ],
+    "primary": "G7_PRIME_FACTORIZATION",
+    "pre": [
+      "MATH.G7.NUMBER.WHOLE_NUMBERS.PRIME_NUMBERS",
+      "MATH.G5.NUMBER.WHOLE_NUMBERS.COMMON_FACTORS"
+    ],
+    "mis": [
+      "M_FACTORS_NOT_PRIME",
+      "M_REPEATED_FACTOR_ONCE",
+      "M_SMALL_PRIMES_ENOUGH",
+      "M_PRIMES_STOP_AT_100"
+    ]
+  },
+  "MATH.G7.NUMBER.FACTORS.GCD_BY_FACTORS": {
+    "name": "Find the GCD of numbers by the factor method",
+    "sub": "MATH.G7.NUMBER.FACTORS",
+    "outcome": "MATH.G7.NUMBER.FACTORS.c",
+    "outcomes": [
+      "MATH.G7.NUMBER.FACTORS.c"
+    ],
+    "horeb": [
+      "G7_GCD"
+    ],
+    "primary": "G7_GCD",
+    "pre": [
+      "MATH.G7.NUMBER.FACTORS.PRIME_FACTORISE",
+      "MATH.G5.NUMBER.WHOLE_NUMBERS.HCF_GCD"
+    ],
+    "mis": [
+      "M_GCD_IS_LCM",
+      "M_GCD_DIFFERENCE",
+      "M_MULTIPLE_VS_FACTOR_CONFUSED"
+    ]
+  },
+  "MATH.G7.NUMBER.FACTORS.LCM_BY_FACTORS": {
+    "name": "Find the LCM of numbers by the factor method",
+    "sub": "MATH.G7.NUMBER.FACTORS",
+    "outcome": "MATH.G7.NUMBER.FACTORS.c",
+    "outcomes": [
+      "MATH.G7.NUMBER.FACTORS.c"
+    ],
+    "horeb": [
+      "G7_LCM"
+    ],
+    "primary": "G7_LCM",
+    "pre": [
+      "MATH.G7.NUMBER.FACTORS.PRIME_FACTORISE",
+      "MATH.G5.NUMBER.WHOLE_NUMBERS.LCM"
+    ],
+    "mis": [
+      "M_LCM_PRODUCT",
+      "M_LCM_ADD_THE_GAPS",
+      "M_LCM_SMALLER_THAN_NUMBERS"
+    ]
+  },
+  "MATH.G7.NUMBER.FACTORS.GCD_IN_CONTEXT": {
+    "name": "Use the GCD to solve problems of cutting and packing",
+    "sub": "MATH.G7.NUMBER.FACTORS",
+    "outcome": "MATH.G7.NUMBER.FACTORS.d",
+    "outcomes": [
+      "MATH.G7.NUMBER.FACTORS.d"
+    ],
+    "horeb": [
+      "G7_GCD"
+    ],
+    "primary": "G7_GCD",
+    "pre": [
+      "MATH.G7.NUMBER.FACTORS.GCD_BY_FACTORS",
+      "MATH.G5.NUMBER.WHOLE_NUMBERS.HCF_PROBLEMS"
+    ],
+    "mis": [
+      "M_SMALLEST_QUANTITY_IS_GCD",
+      "M_GCD_TWO_OF_THREE",
+      "M_OTHER_QUANTITY_GIVEN"
+    ]
+  },
+  "MATH.G7.NUMBER.FACTORS.LCM_IN_CONTEXT": {
+    "name": "Use the LCM to solve problems of events that repeat together",
+    "sub": "MATH.G7.NUMBER.FACTORS",
+    "outcome": "MATH.G7.NUMBER.FACTORS.d",
+    "outcomes": [
+      "MATH.G7.NUMBER.FACTORS.d"
+    ],
+    "horeb": [
+      "G7_LCM"
+    ],
+    "primary": "G7_LCM",
+    "pre": [
+      "MATH.G7.NUMBER.FACTORS.LCM_BY_FACTORS",
+      "MATH.G5.NUMBER.WHOLE_NUMBERS.LCM_PROBLEMS"
+    ],
+    "mis": [
+      "M_LCM_ONE_GAP_ONLY",
+      "M_LCM_TWO_OF_THREE"
+    ]
+  },
+  "MATH.G7.NUMBER.FRACTIONS.COMPARE_FRACTIONS": {
+    "name": "Compare and order fractions with different denominators",
+    "sub": "MATH.G7.NUMBER.FRACTIONS",
+    "outcome": "MATH.G7.NUMBER.FRACTIONS.a",
+    "outcomes": [
+      "MATH.G7.NUMBER.FRACTIONS.a"
+    ],
+    "horeb": [
+      "G7_FRACTIONS_COMPARE"
+    ],
+    "primary": "G7_FRACTIONS_COMPARE",
+    "pre": [
+      "MATH.G5.NUMBER.FRACTIONS.COMPARE_UNLIKE_FRACTIONS",
+      "MATH.G5.NUMBER.FRACTIONS.ORDER_FRACTIONS",
+      "MATH.G5.NUMBER.FRACTIONS.EQUIVALENT_FRACTIONS"
+    ],
+    "mis": [
+      "M_BIGGER_DENOMINATOR_BIGGER",
+      "M_NUMERATOR_ONLY_COMPARED",
+      "M_ONE_PIECE_SHORT_EQUAL"
+    ]
+  },
+  "MATH.G7.NUMBER.FRACTIONS.ADD_UNLIKE_FRACTIONS": {
+    "name": "Add fractions and mixed numbers with unlike denominators",
+    "sub": "MATH.G7.NUMBER.FRACTIONS",
+    "outcome": "MATH.G7.NUMBER.FRACTIONS.b",
+    "outcomes": [
+      "MATH.G7.NUMBER.FRACTIONS.b"
+    ],
+    "horeb": [
+      "G7_FRACTIONS_ADD_UNLIKE"
+    ],
+    "primary": "G7_FRACTIONS_ADD_UNLIKE",
+    "pre": [
+      "MATH.G6.NUMBER.FRACTIONS.ADD_FRACTIONS_LCM",
+      "MATH.G6.NUMBER.FRACTIONS.ADD_MIXED_NUMBERS"
+    ],
+    "mis": [
+      "M_ADD_ACROSS",
+      "M_RENAME_BOTTOM_ONLY",
+      "M_CARRIED_WHOLE_DROPPED"
+    ]
+  },
+  "MATH.G7.NUMBER.FRACTIONS.SUBTRACT_UNLIKE_FRACTIONS": {
+    "name": "Subtract fractions and mixed numbers with unlike denominators",
+    "sub": "MATH.G7.NUMBER.FRACTIONS",
+    "outcome": "MATH.G7.NUMBER.FRACTIONS.c",
+    "outcomes": [
+      "MATH.G7.NUMBER.FRACTIONS.c"
+    ],
+    "horeb": [
+      "G7_FRACTIONS_ADD_UNLIKE"
+    ],
+    "primary": "G7_FRACTIONS_ADD_UNLIKE",
+    "pre": [
+      "MATH.G6.NUMBER.FRACTIONS.SUBTRACT_FRACTIONS_LCM",
+      "MATH.G6.NUMBER.FRACTIONS.SUBTRACT_MIXED_NUMBERS"
+    ],
+    "mis": [
+      "M_SUBTRACT_ACROSS",
+      "M_SMALLER_FROM_LARGER_FRACTION",
+      "M_BORROWED_WHOLE_NOT_REDUCED"
+    ]
+  },
+  "MATH.G7.NUMBER.FRACTIONS.MULT_FRACTION_BY_WHOLE": {
+    "name": "Multiply a fraction by a whole number",
+    "sub": "MATH.G7.NUMBER.FRACTIONS",
+    "outcome": "MATH.G7.NUMBER.FRACTIONS.d",
+    "outcomes": [
+      "MATH.G7.NUMBER.FRACTIONS.d"
+    ],
+    "horeb": [
+      "G7_FRACTIONS_MUL"
+    ],
+    "primary": "G7_FRACTIONS_MUL",
+    "pre": [
+      "MATH.G5.NUMBER.FRACTIONS.ADD_SAME_DENOMINATOR",
+      "MATH.G5.NUMBER.FRACTIONS.SIMPLIFY_FRACTIONS"
+    ],
+    "mis": [
+      "M_WHOLE_MULTIPLIES_DENOMINATOR",
+      "M_ONLY_DIVIDED_BY_DENOMINATOR"
+    ]
+  },
+  "MATH.G7.NUMBER.FRACTIONS.MULT_FRACTION_BY_FRACTION": {
+    "name": "Multiply fractions and mixed numbers",
+    "sub": "MATH.G7.NUMBER.FRACTIONS",
+    "outcome": "MATH.G7.NUMBER.FRACTIONS.d",
+    "outcomes": [
+      "MATH.G7.NUMBER.FRACTIONS.d"
+    ],
+    "horeb": [
+      "G7_FRACTIONS_MUL"
+    ],
+    "primary": "G7_FRACTIONS_MUL",
+    "pre": [
+      "MATH.G7.NUMBER.FRACTIONS.MULT_FRACTION_BY_WHOLE",
+      "MATH.G6.NUMBER.FRACTIONS.SQUARE_OF_FRACTION",
+      "MATH.G5.NUMBER.FRACTIONS.SIMPLIFY_FRACTIONS"
+    ],
+    "mis": [
+      "M_ADD_FRACTIONS_INSTEAD",
+      "M_MIXED_PARTS_MULTIPLIED_SEPARATELY",
+      "M_FRACTION_OF_WRONG_WHOLE",
+      "M_STOPPED_AFTER_FIRST_FRACTION"
+    ]
+  },
+  "MATH.G7.NUMBER.FRACTIONS.RECIPROCAL": {
+    "name": "Find the reciprocal of a fraction, a whole number or a mixed number",
+    "sub": "MATH.G7.NUMBER.FRACTIONS",
+    "outcome": "MATH.G7.NUMBER.FRACTIONS.e",
+    "outcomes": [
+      "MATH.G7.NUMBER.FRACTIONS.e"
+    ],
+    "horeb": [
+      "G7_RECIPROCALS"
+    ],
+    "primary": "G7_RECIPROCALS",
+    "pre": [
+      "MATH.G6.NUMBER.FRACTIONS.RECIPROCAL",
+      "MATH.G5.NUMBER.FRACTIONS.EQUIVALENT_FRACTIONS"
+    ],
+    "mis": [
+      "M_NOT_FLIPPED",
+      "M_ONLY_DENOMINATOR_USED",
+      "M_ONLY_NUMERATOR_USED",
+      "M_MIXED_NUMBER_FLIPPED_BY_PARTS",
+      "M_MIXED_NUMBER_HAS_NONE",
+      "M_RECIPROCAL_IS_NEGATIVE"
+    ]
+  },
+  "MATH.G7.NUMBER.FRACTIONS.DIVIDE_FRACTION_BY_WHOLE": {
+    "name": "Divide a fraction by a whole number",
+    "sub": "MATH.G7.NUMBER.FRACTIONS",
+    "outcome": "MATH.G7.NUMBER.FRACTIONS.f",
+    "outcomes": [
+      "MATH.G7.NUMBER.FRACTIONS.f"
+    ],
+    "horeb": [
+      "G7_FRACTIONS_DIV"
+    ],
+    "primary": "G7_FRACTIONS_DIV",
+    "pre": [
+      "MATH.G7.NUMBER.FRACTIONS.RECIPROCAL",
+      "MATH.G7.NUMBER.FRACTIONS.MULT_FRACTION_BY_WHOLE"
+    ],
+    "mis": [
+      "M_WHOLE_ADDED_TO_DENOMINATOR",
+      "M_FLIPPED_THE_DIVIDEND",
+      "M_MULTIPLIED_BY_DIVISOR"
+    ]
+  },
+  "MATH.G7.NUMBER.FRACTIONS.DIVIDE_BY_FRACTION": {
+    "name": "Divide by a fraction or a mixed number",
+    "sub": "MATH.G7.NUMBER.FRACTIONS",
+    "outcome": "MATH.G7.NUMBER.FRACTIONS.f",
+    "outcomes": [
+      "MATH.G7.NUMBER.FRACTIONS.f"
+    ],
+    "horeb": [
+      "G7_FRACTIONS_DIV"
+    ],
+    "primary": "G7_FRACTIONS_DIV",
+    "pre": [
+      "MATH.G7.NUMBER.FRACTIONS.RECIPROCAL",
+      "MATH.G7.NUMBER.FRACTIONS.MULT_FRACTION_BY_FRACTION"
+    ],
+    "mis": [
+      "M_DIVISOR_NOT_INVERTED",
+      "M_BOTH_FRACTIONS_INVERTED",
+      "M_MIXED_NUMBER_NOT_CONVERTED"
+    ]
+  },
+  "MATH.G7.NUMBER.FRACTIONS.DIVIDE_WHOLE_BY_FRACTION": {
+    "name": "Divide a whole number by a fraction and use it to count how many fit",
+    "sub": "MATH.G7.NUMBER.FRACTIONS",
+    "outcome": "MATH.G7.NUMBER.FRACTIONS.g",
+    "outcomes": [
+      "MATH.G7.NUMBER.FRACTIONS.g"
+    ],
+    "horeb": [
+      "G7_FRACTIONS_DIV"
+    ],
+    "primary": "G7_FRACTIONS_DIV",
+    "pre": [
+      "MATH.G7.NUMBER.FRACTIONS.DIVIDE_BY_FRACTION",
+      "MATH.G6.NUMBER.FRACTIONS.RECIPROCAL"
+    ],
+    "mis": [
+      "M_SMALL_DIVIDED_BY_LARGE",
+      "M_TAKEN_AWAY_ONCE",
+      "M_FRACTION_OF_NOT_HOW_MANY",
+      "M_DIVISION_ALWAYS_SMALLER"
+    ]
+  },
+  "MATH.G7.NUMBER.FRACTIONS.FRACTION_SEQ_ADD_RULE": {
+    "name": "Continue a fraction sequence that adds or takes away the same fraction",
+    "sub": "MATH.G7.NUMBER.FRACTIONS",
+    "outcome": "MATH.G7.NUMBER.FRACTIONS.h",
+    "outcomes": [
+      "MATH.G7.NUMBER.FRACTIONS.h"
+    ],
+    "horeb": [
+      "G7_NUMBER_SEQUENCES",
+      "G7_FRACTIONS_ADD_UNLIKE"
+    ],
+    "primary": "G7_NUMBER_SEQUENCES",
+    "pre": [
+      "MATH.G7.NUMBER.WHOLE_NUMBERS.SEQ_EXTEND_RULE",
+      "MATH.G6.NUMBER.FRACTIONS.ADD_FRACTIONS_LCM"
+    ],
+    "mis": [
+      "M_DENOMINATOR_ALSO_CHANGED",
+      "M_GAP_NOT_CONSTANT",
+      "M_END_NOT_NEXT"
+    ]
+  },
+  "MATH.G7.NUMBER.FRACTIONS.FRACTION_SEQ_MULTIPLY_RULE": {
+    "name": "Find the rule of a fraction sequence that multiplies or divides",
+    "sub": "MATH.G7.NUMBER.FRACTIONS",
+    "outcome": "MATH.G7.NUMBER.FRACTIONS.h",
+    "outcomes": [
+      "MATH.G7.NUMBER.FRACTIONS.h"
+    ],
+    "horeb": [
+      "G7_NUMBER_SEQUENCES",
+      "G7_FRACTIONS_ADD_UNLIKE",
+      "G7_FRACTIONS_MUL"
+    ],
+    "primary": "G7_NUMBER_SEQUENCES",
+    "pre": [
+      "MATH.G7.NUMBER.FRACTIONS.FRACTION_SEQ_ADD_RULE",
+      "MATH.G7.NUMBER.FRACTIONS.MULT_FRACTION_BY_FRACTION"
+    ],
+    "mis": [
+      "M_MULTIPLY_FOR_SMALLER",
+      "M_WHOLE_SUBTRACTED_FROM_FRACTION",
+      "M_FRACTION_SUBTRACTED_NOT_SCALED"
+    ]
+  },
+  "MATH.G7.NUMBER.FRACTIONS.FRACTION_SEQ_IN_TABLE": {
+    "name": "Use a fraction pattern in a table to answer how long it takes",
+    "sub": "MATH.G7.NUMBER.FRACTIONS",
+    "outcome": "MATH.G7.NUMBER.FRACTIONS.h",
+    "outcomes": [
+      "MATH.G7.NUMBER.FRACTIONS.h"
+    ],
+    "horeb": [
+      "G7_NUMBER_SEQUENCES",
+      "G7_FRACTIONS_ADD_UNLIKE"
+    ],
+    "primary": "G7_NUMBER_SEQUENCES",
+    "pre": [
+      "MATH.G7.NUMBER.FRACTIONS.FRACTION_SEQ_ADD_RULE",
+      "MATH.G7.NUMBER.WHOLE_NUMBERS.SEQ_NTH_TERM"
+    ],
+    "mis": [
+      "M_LAST_ROW_TAKEN_AS_ANSWER",
+      "M_STEPS_COUNTED_NOT_HOURS",
+      "M_STEP_RATE_AS_HOURLY"
+    ]
+  },
+  "MATH.G7.NUMBER.FRACTIONS.FRACTION_SEQ_CREATE": {
+    "name": "Create a number sequence with fractions for a number game",
+    "sub": "MATH.G7.NUMBER.FRACTIONS",
+    "outcome": "MATH.G7.NUMBER.FRACTIONS.i",
+    "outcomes": [
+      "MATH.G7.NUMBER.FRACTIONS.i"
+    ],
+    "horeb": [
+      "G7_NUMBER_SEQUENCES"
+    ],
+    "primary": "G7_NUMBER_SEQUENCES",
+    "pre": [
+      "MATH.G7.NUMBER.FRACTIONS.FRACTION_SEQ_ADD_RULE",
+      "MATH.G7.NUMBER.WHOLE_NUMBERS.SEQ_CREATE_RULE"
+    ],
+    "mis": [
+      "M_ADDS_TO_NUMERATOR_AND_DENOMINATOR",
+      "M_GAP_DRIFTS"
+    ]
+  },
+  "MATH.G7.NUMBER.DECIMALS.DEC_PLACE_AND_TOTAL_VALUE": {
+    "name": "Place value and total value of digits in decimals up to thousandths",
+    "sub": "MATH.G7.NUMBER.DECIMALS",
+    "outcome": "MATH.G7.NUMBER.DECIMALS.a",
+    "outcomes": [
+      "MATH.G7.NUMBER.DECIMALS.a"
+    ],
+    "horeb": [
+      "G7_DECIMAL_PV"
+    ],
+    "primary": "G7_DECIMAL_PV",
+    "pre": [
+      "MATH.G6.NUMBER.DECIMALS.DECIMAL_PLACES_TEN_THOUSANDTHS",
+      "MATH.G5.NUMBER.DECIMALS.DEC_DIGIT_VALUE"
+    ],
+    "mis": [
+      "M_DIGITS_READ_TOP_DOWN",
+      "M_TENS_AND_ONES_SWAPPED",
+      "M_DECIMAL_PLACES_SWAPPED"
+    ]
+  },
+  "MATH.G7.NUMBER.DECIMALS.DEC_COUNT_TENTHS": {
+    "name": "Count how many tenths or hundredths are in a decimal",
+    "sub": "MATH.G7.NUMBER.DECIMALS",
+    "outcome": "MATH.G7.NUMBER.DECIMALS.a",
+    "outcomes": [
+      "MATH.G7.NUMBER.DECIMALS.a"
+    ],
+    "horeb": [
+      "G7_DECIMAL_PV"
+    ],
+    "primary": "G7_DECIMAL_PV",
+    "pre": [
+      "MATH.G7.NUMBER.DECIMALS.DEC_PLACE_AND_TOTAL_VALUE",
+      "MATH.G6.NUMBER.DECIMALS.FRACTION_TO_DECIMAL"
+    ],
+    "mis": [
+      "M_SAME_NUMBER_REPEATED",
+      "M_TENTHS_HUNDREDTHS_CONFUSED",
+      "M_WHOLES_NOT_COUNTED"
+    ]
+  },
+  "MATH.G7.NUMBER.DECIMALS.MULT_DEC_BY_WHOLE": {
+    "name": "Multiply a decimal by a whole number",
+    "sub": "MATH.G7.NUMBER.DECIMALS",
+    "outcome": "MATH.G7.NUMBER.DECIMALS.b",
+    "outcomes": [
+      "MATH.G7.NUMBER.DECIMALS.b"
+    ],
+    "horeb": [
+      "G7_DECIMALS_MUL",
+      "G6_DECIMALS_MUL"
+    ],
+    "primary": "G7_DECIMALS_MUL",
+    "pre": [
+      "MATH.G5.NUMBER.DECIMALS.DEC_MULT_1000",
+      "MATH.G6.NUMBER.MULTIPLICATION.MULT_4D_BY_2D"
+    ],
+    "mis": [
+      "M_FRACTION_PART_DROPPED",
+      "M_ADDED_NOT_MULTIPLIED",
+      "M_POINT_NOT_MOVED_BACK",
+      "M_DIVIDED_NOT_MULTIPLIED"
+    ]
+  },
+  "MATH.G7.NUMBER.DECIMALS.MULT_DEC_BY_DEC": {
+    "name": "Multiply a decimal by a decimal",
+    "sub": "MATH.G7.NUMBER.DECIMALS",
+    "outcome": "MATH.G7.NUMBER.DECIMALS.b",
+    "outcomes": [
+      "MATH.G7.NUMBER.DECIMALS.b"
+    ],
+    "horeb": [
+      "G7_DECIMALS_MUL"
+    ],
+    "primary": "G7_DECIMALS_MUL",
+    "pre": [
+      "MATH.G7.NUMBER.DECIMALS.MULT_DEC_BY_WHOLE",
+      "MATH.G6.NUMBER.DECIMALS.ROUND_DECIMALS_3DP"
+    ],
+    "mis": [
+      "M_POINT_FROM_ONE_FACTOR_ONLY",
+      "M_PRODUCT_MUST_BE_BIGGER",
+      "M_WRONG_QUANTITY_MULTIPLIED",
+      "M_PERIMETER_FOR_AREA"
+    ]
+  },
+  "MATH.G7.NUMBER.DECIMALS.DIV_DEC_BY_WHOLE": {
+    "name": "Divide a decimal or a whole number by a whole number to get a decimal",
+    "sub": "MATH.G7.NUMBER.DECIMALS",
+    "outcome": "MATH.G7.NUMBER.DECIMALS.c",
+    "outcomes": [
+      "MATH.G7.NUMBER.DECIMALS.c"
+    ],
+    "horeb": [
+      "G7_DECIMALS_DIV",
+      "G6_DECIMALS_DIV"
+    ],
+    "primary": "G7_DECIMALS_DIV",
+    "pre": [
+      "MATH.G6.NUMBER.DIVISION.DIV_4D_BY_UP_TO_3D",
+      "MATH.G6.NUMBER.DECIMALS.ADD_DECIMALS_4DP"
+    ],
+    "mis": [
+      "M_MULTIPLIED_NOT_DIVIDED",
+      "M_DIVIDEND_GIVEN_AS_SHARE",
+      "M_POINT_LOST_IN_QUOTIENT",
+      "M_POINT_PLACED_WRONG",
+      "M_SUBTRACTED_NOT_DIVIDED"
+    ]
+  },
+  "MATH.G7.NUMBER.DECIMALS.DIV_BY_DECIMAL": {
+    "name": "Divide by a decimal",
+    "sub": "MATH.G7.NUMBER.DECIMALS",
+    "outcome": "MATH.G7.NUMBER.DECIMALS.c",
+    "outcomes": [
+      "MATH.G7.NUMBER.DECIMALS.c"
+    ],
+    "horeb": [
+      "G7_DECIMALS_DIV"
+    ],
+    "primary": "G7_DECIMALS_DIV",
+    "pre": [
+      "MATH.G7.NUMBER.DECIMALS.DIV_DEC_BY_WHOLE",
+      "MATH.G5.NUMBER.DECIMALS.DEC_MULT_1000"
+    ],
+    "mis": [
+      "M_POINT_MOVED_ONE_NUMBER",
+      "M_REPEATED_SUBTRACTION_ONCE",
+      "M_MULTIPLIED_INSTEAD_OF_COUNTING"
+    ]
+  },
+  "MATH.G7.NUMBER.DECIMALS.DEC_DIVISION_SIZE": {
+    "name": "Decide whether dividing by a decimal gives a bigger or smaller answer",
+    "sub": "MATH.G7.NUMBER.DECIMALS",
+    "outcome": "MATH.G7.NUMBER.DECIMALS.c",
+    "outcomes": [
+      "MATH.G7.NUMBER.DECIMALS.c"
+    ],
+    "horeb": [
+      "G7_DECIMALS_DIV",
+      "G6_DECIMALS_DIV"
+    ],
+    "primary": "G7_DECIMALS_DIV",
+    "pre": [
+      "MATH.G7.NUMBER.DECIMALS.DIV_BY_DECIMAL",
+      "MATH.G7.NUMBER.FRACTIONS.DIVIDE_WHOLE_BY_FRACTION"
+    ],
+    "mis": [
+      "M_DIVIDING_ALWAYS_BIGGER",
+      "M_DIVISION_ALWAYS_SMALLER_DEC",
+      "M_POINT_MOVED_WITHOUT_RULE"
+    ]
+  },
+  "MATH.G7.NUMBER.SQUARES_AND_SQUARE_ROOTS.SQUARE_WHOLE_NUMBER": {
+    "name": "Find the square of a whole number",
+    "sub": "MATH.G7.NUMBER.SQUARES_AND_SQUARE_ROOTS",
+    "outcome": "MATH.G7.NUMBER.SQUARES_AND_SQUARE_ROOTS.a",
+    "outcomes": [
+      "MATH.G7.NUMBER.SQUARES_AND_SQUARE_ROOTS.a"
+    ],
+    "horeb": [
+      "G7_SQUARES_EXT"
+    ],
+    "primary": "G7_SQUARES_EXT",
+    "pre": [
+      "MATH.G6.NUMBER.WHOLE_NUMBERS.SQUARES_TO_100",
+      "MATH.G6.NUMBER.MULTIPLICATION.MULT_4D_BY_2D"
+    ],
+    "mis": [
+      "M_SQUARE_IS_DOUBLE",
+      "M_ZEROS_NOT_SQUARED"
+    ]
+  },
+  "MATH.G7.NUMBER.SQUARES_AND_SQUARE_ROOTS.SQUARE_FRACTION": {
+    "name": "Find the square of a fraction",
+    "sub": "MATH.G7.NUMBER.SQUARES_AND_SQUARE_ROOTS",
+    "outcome": "MATH.G7.NUMBER.SQUARES_AND_SQUARE_ROOTS.a",
+    "outcomes": [
+      "MATH.G7.NUMBER.SQUARES_AND_SQUARE_ROOTS.a"
+    ],
+    "horeb": [
+      "G7_SQUARES_EXT"
+    ],
+    "primary": "G7_SQUARES_EXT",
+    "pre": [
+      "MATH.G6.NUMBER.FRACTIONS.SQUARE_OF_FRACTION",
+      "MATH.G7.NUMBER.FRACTIONS.MULT_FRACTION_BY_FRACTION"
+    ],
+    "mis": [
+      "M_ONLY_NUMERATOR_SQUARED",
+      "M_ONLY_DENOMINATOR_SQUARED",
+      "M_NUMERATOR_DOUBLED"
+    ]
+  },
+  "MATH.G7.NUMBER.SQUARES_AND_SQUARE_ROOTS.SQUARE_DECIMAL": {
+    "name": "Find the square of a decimal and use it for the area of a square",
+    "sub": "MATH.G7.NUMBER.SQUARES_AND_SQUARE_ROOTS",
+    "outcome": "MATH.G7.NUMBER.SQUARES_AND_SQUARE_ROOTS.a",
+    "outcomes": [
+      "MATH.G7.NUMBER.SQUARES_AND_SQUARE_ROOTS.a"
+    ],
+    "horeb": [
+      "G7_SQUARES_EXT"
+    ],
+    "primary": "G7_SQUARES_EXT",
+    "pre": [
+      "MATH.G7.NUMBER.DECIMALS.MULT_DEC_BY_DEC",
+      "MATH.G6.NUMBER.WHOLE_NUMBERS.SQUARES_TO_100"
+    ],
+    "mis": [
+      "M_POINT_PLACES_NOT_DOUBLED",
+      "M_DOUBLED_NOT_SQUARED",
+      "M_PERIMETER_FOR_AREA_SQ",
+      "M_ADDED_NOT_SQUARED",
+      "M_CUBED_NOT_SQUARED",
+      "M_AREA_DOUBLES_WITH_SIDE"
+    ]
+  },
+  "MATH.G7.NUMBER.SQUARES_AND_SQUARE_ROOTS.ROOT_WHOLE_NUMBER": {
+    "name": "Find the square root of a perfect square",
+    "sub": "MATH.G7.NUMBER.SQUARES_AND_SQUARE_ROOTS",
+    "outcome": "MATH.G7.NUMBER.SQUARES_AND_SQUARE_ROOTS.b",
+    "outcomes": [
+      "MATH.G7.NUMBER.SQUARES_AND_SQUARE_ROOTS.b"
+    ],
+    "horeb": [
+      "G7_SQUARE_ROOTS"
+    ],
+    "primary": "G7_SQUARE_ROOTS",
+    "pre": [
+      "MATH.G6.NUMBER.WHOLE_NUMBERS.SQUARE_ROOTS_10000",
+      "MATH.G7.NUMBER.SQUARES_AND_SQUARE_ROOTS.SQUARE_WHOLE_NUMBER"
+    ],
+    "mis": [
+      "M_HALVED_NOT_ROOTED",
+      "M_ROOT_OF_SUM_IS_SUM_OF_ROOTS",
+      "M_ROOTS_MULTIPLIED_FOR_SUM"
+    ]
+  },
+  "MATH.G7.NUMBER.SQUARES_AND_SQUARE_ROOTS.ROOT_FRACTION_DECIMAL": {
+    "name": "Find the square root of a perfect-square fraction or decimal",
+    "sub": "MATH.G7.NUMBER.SQUARES_AND_SQUARE_ROOTS",
+    "outcome": "MATH.G7.NUMBER.SQUARES_AND_SQUARE_ROOTS.b",
+    "outcomes": [
+      "MATH.G7.NUMBER.SQUARES_AND_SQUARE_ROOTS.b"
+    ],
+    "horeb": [
+      "G7_SQUARE_ROOTS"
+    ],
+    "primary": "G7_SQUARE_ROOTS",
+    "pre": [
+      "MATH.G7.NUMBER.SQUARES_AND_SQUARE_ROOTS.ROOT_WHOLE_NUMBER",
+      "MATH.G7.NUMBER.SQUARES_AND_SQUARE_ROOTS.SQUARE_FRACTION",
+      "MATH.G7.NUMBER.SQUARES_AND_SQUARE_ROOTS.SQUARE_DECIMAL"
+    ],
+    "mis": [
+      "M_ROOT_NUMERATOR_ONLY",
+      "M_ROOT_DECIMAL_POINT"
+    ]
+  },
+  "MATH.G7.NUMBER.SQUARES_AND_SQUARE_ROOTS.ROOT_IN_CONTEXT": {
+    "name": "Use a square root to find the side of a square plot and what follows from it",
+    "sub": "MATH.G7.NUMBER.SQUARES_AND_SQUARE_ROOTS",
+    "outcome": "MATH.G7.NUMBER.SQUARES_AND_SQUARE_ROOTS.b",
+    "outcomes": [
+      "MATH.G7.NUMBER.SQUARES_AND_SQUARE_ROOTS.b"
+    ],
+    "horeb": [
+      "G7_SQUARE_ROOTS"
+    ],
+    "primary": "G7_SQUARE_ROOTS",
+    "pre": [
+      "MATH.G7.NUMBER.SQUARES_AND_SQUARE_ROOTS.ROOT_WHOLE_NUMBER",
+      "MATH.G6.MEASUR.AREA.AREA_COMBINED"
+    ],
+    "mis": [
+      "M_DIVIDED_BY_FOUR_FOR_ROOT",
+      "M_TWO_SIDES_FOR_PERIMETER",
+      "M_AREA_FOR_PERIMETER",
+      "M_SIDE_PLUS_FOUR",
+      "M_AREA_DIFFERENCE_USED",
+      "M_ROOT_OF_DIFFERENCE",
+      "M_ONLY_BIGGEST_ROOT"
+    ]
+  },
+  "MATH.G7.NUMBER.SQUARES_AND_SQUARE_ROOTS.ROOT_BY_ANCHORS": {
+    "name": "Place the square root of a number between two whole numbers using perfect squares",
+    "sub": "MATH.G7.NUMBER.SQUARES_AND_SQUARE_ROOTS",
+    "outcome": "MATH.G7.NUMBER.SQUARES_AND_SQUARE_ROOTS.b",
+    "outcomes": [
+      "MATH.G7.NUMBER.SQUARES_AND_SQUARE_ROOTS.b"
+    ],
+    "horeb": [
+      "G7_SQUARE_ROOTS"
+    ],
+    "primary": "G7_SQUARE_ROOTS",
+    "pre": [
+      "MATH.G7.NUMBER.SQUARES_AND_SQUARE_ROOTS.ROOT_WHOLE_NUMBER",
+      "MATH.G6.NUMBER.WHOLE_NUMBERS.SQUARES_TO_100"
+    ],
+    "mis": [
+      "M_ROOT_BOUNDS_ONE_BELOW",
+      "M_ROOT_BOUNDS_ONE_ABOVE"
+    ]
+  },
+  "MATH.G7.ALGEBR.ALGEBRAIC_EXPRESSIONS.FORM_EXPRESSION_RATE_FIXED": {
+    "name": "Form an expression for a charge made of a rate and a fixed amount",
+    "sub": "MATH.G7.ALGEBR.ALGEBRAIC_EXPRESSIONS",
+    "outcome": "MATH.G7.ALGEBR.ALGEBRAIC_EXPRESSIONS.a",
+    "outcomes": [
+      "MATH.G7.ALGEBR.ALGEBRAIC_EXPRESSIONS.a"
+    ],
+    "horeb": [
+      "G7_EXPRESSIONS"
+    ],
+    "primary": "G7_EXPRESSIONS",
+    "pre": [
+      "MATH.G5.NUMBER.SIMPLE_EQUATIONS.EQ_FORM_MUL_DIV"
+    ],
+    "mis": [
+      "M_RATE_AND_FIXED_SWAPPED",
+      "M_FIXED_CHARGE_MULTIPLIED",
+      "M_FIXED_ADDED_BEFORE_MULTIPLYING"
+    ]
+  },
+  "MATH.G7.ALGEBR.ALGEBRAIC_EXPRESSIONS.FORM_EXPRESSION_RELATIONS": {
+    "name": "Form an expression for quantities related to one unknown",
+    "sub": "MATH.G7.ALGEBR.ALGEBRAIC_EXPRESSIONS",
+    "outcome": "MATH.G7.ALGEBR.ALGEBRAIC_EXPRESSIONS.a",
+    "outcomes": [
+      "MATH.G7.ALGEBR.ALGEBRAIC_EXPRESSIONS.a"
+    ],
+    "horeb": [
+      "G7_EXPRESSIONS"
+    ],
+    "primary": "G7_EXPRESSIONS",
+    "pre": [
+      "MATH.G5.NUMBER.SIMPLE_EQUATIONS.EQ_FORM_ADD_SUB",
+      "MATH.G7.ALGEBR.ALGEBRAIC_EXPRESSIONS.FORM_EXPRESSION_RATE_FIXED"
+    ],
+    "mis": [
+      "M_YOUNGER_ADDED",
+      "M_PERSON_MISSED",
+      "M_RELATION_APPLIED_TO_ALL"
+    ]
+  },
+  "MATH.G7.ALGEBR.ALGEBRAIC_EXPRESSIONS.FORM_FROM_STATEMENT": {
+    "name": "Form an expression from a simple algebraic statement in words",
+    "sub": "MATH.G7.ALGEBR.ALGEBRAIC_EXPRESSIONS",
+    "outcome": "MATH.G7.ALGEBR.ALGEBRAIC_EXPRESSIONS.b",
+    "outcomes": [
+      "MATH.G7.ALGEBR.ALGEBRAIC_EXPRESSIONS.b"
+    ],
+    "horeb": [
+      "G7_EXPRESSIONS"
+    ],
+    "primary": "G7_EXPRESSIONS",
+    "pre": [
+      "MATH.G5.NUMBER.SIMPLE_EQUATIONS.EQ_MEANING",
+      "MATH.G7.ALGEBR.ALGEBRAIC_EXPRESSIONS.FORM_EXPRESSION_RATE_FIXED"
+    ],
+    "mis": [
+      "M_MORE_THAN_AS_PRODUCT",
+      "M_LESS_THAN_REVERSED"
+    ]
+  },
+  "MATH.G7.ALGEBR.ALGEBRAIC_EXPRESSIONS.SIMPLIFY_LIKE_TERMS": {
+    "name": "Simplify an expression by collecting like terms",
+    "sub": "MATH.G7.ALGEBR.ALGEBRAIC_EXPRESSIONS",
+    "outcome": "MATH.G7.ALGEBR.ALGEBRAIC_EXPRESSIONS.c",
+    "outcomes": [
+      "MATH.G7.ALGEBR.ALGEBRAIC_EXPRESSIONS.c"
+    ],
+    "horeb": [
+      "G7_SIMPLIFY"
+    ],
+    "primary": "G7_SIMPLIFY",
+    "pre": [
+      "MATH.G7.ALGEBR.ALGEBRAIC_EXPRESSIONS.FORM_FROM_STATEMENT"
+    ],
+    "mis": [
+      "M_TERM_MISSED",
+      "M_LIKE_TERMS_MULTIPLIED",
+      "M_COEFFICIENT_ONE_ASSUMED",
+      "M_SIGN_DROPPED",
+      "M_CONSTANT_TERM_MISSED",
+      "M_CONSTANTS_MULTIPLIED",
+      "M_COEFFICIENT_ADDED_TO_VALUE",
+      "M_CONSTANT_LEFT_OUT",
+      "M_CONSTANT_SIGN_FLIPPED"
+    ]
+  },
+  "MATH.G7.ALGEBR.ALGEBRAIC_EXPRESSIONS.SIMPLIFY_WITH_BRACKETS": {
+    "name": "Remove a bracket multiplied by a number and simplify",
+    "sub": "MATH.G7.ALGEBR.ALGEBRAIC_EXPRESSIONS",
+    "outcome": "MATH.G7.ALGEBR.ALGEBRAIC_EXPRESSIONS.c",
+    "outcomes": [
+      "MATH.G7.ALGEBR.ALGEBRAIC_EXPRESSIONS.c"
+    ],
+    "horeb": [
+      "G7_SIMPLIFY",
+      "G7_EXPRESSIONS"
+    ],
+    "primary": "G7_SIMPLIFY",
+    "pre": [
+      "MATH.G7.ALGEBR.ALGEBRAIC_EXPRESSIONS.SIMPLIFY_LIKE_TERMS",
+      "MATH.G6.NUMBER.DIVISION.COMBINED_OPERATIONS"
+    ],
+    "mis": [
+      "M_BRACKET_FIRST_TERM_ONLY",
+      "M_UNLIKE_TERMS_JOINED"
+    ]
+  },
+  "MATH.G7.ALGEBR.LINEAR_EQUATIONS.FORM_EQUATION_FROM_STORY": {
+    "name": "Form a linear equation from a story",
+    "sub": "MATH.G7.ALGEBR.LINEAR_EQUATIONS",
+    "outcome": "MATH.G7.ALGEBR.LINEAR_EQUATIONS.a",
+    "outcomes": [
+      "MATH.G7.ALGEBR.LINEAR_EQUATIONS.a"
+    ],
+    "horeb": [
+      "G7_EQUATIONS_FORM"
+    ],
+    "primary": "G7_EQUATIONS_FORM",
+    "pre": [
+      "MATH.G5.NUMBER.SIMPLE_EQUATIONS.EQ_FORM_MUL_DIV",
+      "MATH.G5.NUMBER.SIMPLE_EQUATIONS.EQ_TWO_STEP",
+      "MATH.G7.ALGEBR.ALGEBRAIC_EXPRESSIONS.FORM_EXPRESSION_RATE_FIXED"
+    ],
+    "mis": [
+      "M_BRACKET_ADDED_TO_EVERY_TERM",
+      "M_MULTIPLIER_AS_ADDEND",
+      "M_FIXED_ON_WRONG_SIDE"
+    ]
+  },
+  "MATH.G7.ALGEBR.LINEAR_EQUATIONS.SOLVE_TWO_STEP": {
+    "name": "Solve a two-step linear equation",
+    "sub": "MATH.G7.ALGEBR.LINEAR_EQUATIONS",
+    "outcome": "MATH.G7.ALGEBR.LINEAR_EQUATIONS.b",
+    "outcomes": [
+      "MATH.G7.ALGEBR.LINEAR_EQUATIONS.b"
+    ],
+    "horeb": [
+      "G7_EQUATIONS_SOLVE",
+      "G7_EQUATIONS_FORM",
+      "G6_SIMPLE_EQUATIONS"
+    ],
+    "primary": "G7_EQUATIONS_SOLVE",
+    "pre": [
+      "MATH.G5.NUMBER.SIMPLE_EQUATIONS.EQ_SOLVE_ADD_SUB",
+      "MATH.G5.NUMBER.SIMPLE_EQUATIONS.EQ_SOLVE_MUL_DIV",
+      "MATH.G5.NUMBER.SIMPLE_EQUATIONS.EQ_TWO_STEP"
+    ],
+    "mis": [
+      "M_DIVISION_STEP_MISSED",
+      "M_SIGN_NOT_REVERSED",
+      "M_INVERSE_OPERATION_WRONG",
+      "M_LAST_ROW_TAKEN"
+    ]
+  },
+  "MATH.G7.ALGEBR.LINEAR_EQUATIONS.SOLVE_BOTH_SIDES": {
+    "name": "Solve an equation with the unknown on both sides",
+    "sub": "MATH.G7.ALGEBR.LINEAR_EQUATIONS",
+    "outcome": "MATH.G7.ALGEBR.LINEAR_EQUATIONS.b",
+    "outcomes": [
+      "MATH.G7.ALGEBR.LINEAR_EQUATIONS.b"
+    ],
+    "horeb": [
+      "G7_EQUATIONS_SOLVE"
+    ],
+    "primary": "G7_EQUATIONS_SOLVE",
+    "pre": [
+      "MATH.G7.ALGEBR.LINEAR_EQUATIONS.SOLVE_TWO_STEP"
+    ],
+    "mis": [
+      "M_UNKNOWN_TERM_MOVED_SAME_SIGN",
+      "M_ONE_SIDE_ONLY_CHANGED"
+    ]
+  },
+  "MATH.G7.ALGEBR.LINEAR_EQUATIONS.EQUATION_BALANCE_REASON": {
+    "name": "Say why the same is done to both sides of an equation",
+    "sub": "MATH.G7.ALGEBR.LINEAR_EQUATIONS",
+    "outcome": "MATH.G7.ALGEBR.LINEAR_EQUATIONS.b",
+    "outcomes": [
+      "MATH.G7.ALGEBR.LINEAR_EQUATIONS.b"
+    ],
+    "horeb": [
+      "G6_SIMPLE_EQUATIONS",
+      "G7_EQUATIONS_SOLVE"
+    ],
+    "primary": "G6_SIMPLE_EQUATIONS",
+    "pre": [
+      "MATH.G5.NUMBER.SIMPLE_EQUATIONS.EQ_MEANING",
+      "MATH.G7.ALGEBR.LINEAR_EQUATIONS.SOLVE_TWO_STEP"
+    ],
+    "mis": [
+      "M_NUMBER_SIZE_DECIDES_STEP",
+      "M_UNKNOWN_ALWAYS_LEFT",
+      "M_RULE_WITHOUT_REASON"
+    ]
+  },
+  "MATH.G7.ALGEBR.LINEAR_EQUATIONS.SOLVE_IN_CONTEXT": {
+    "name": "Form and solve an equation to answer a question in a story",
+    "sub": "MATH.G7.ALGEBR.LINEAR_EQUATIONS",
+    "outcome": "MATH.G7.ALGEBR.LINEAR_EQUATIONS.c",
+    "outcomes": [
+      "MATH.G7.ALGEBR.LINEAR_EQUATIONS.c"
+    ],
+    "horeb": [
+      "G7_EQUATIONS_FORM",
+      "G7_EQUATIONS_SOLVE",
+      "G6_SIMPLE_EQUATIONS"
+    ],
+    "primary": "G7_EQUATIONS_FORM",
+    "pre": [
+      "MATH.G7.ALGEBR.LINEAR_EQUATIONS.FORM_EQUATION_FROM_STORY",
+      "MATH.G7.ALGEBR.LINEAR_EQUATIONS.SOLVE_TWO_STEP",
+      "MATH.G5.NUMBER.SIMPLE_EQUATIONS.EQ_SOLVE_IN_CONTEXT"
+    ],
+    "mis": [
+      "M_FIXED_PART_IGNORED",
+      "M_ASKED_QUANTITY_MIXED",
+      "M_STEP_AMOUNT_AS_UNKNOWN",
+      "M_FUTURE_AGE_AS_NOW",
+      "M_TIME_CHANGE_NOT_APPLIED_TO_BOTH",
+      "M_LOOSE_NOT_REMOVED",
+      "M_SUBTRACTED_TO_SHARE",
+      "M_MULTIPLIED_TO_SHARE",
+      "M_ONE_PER_BOX",
+      "M_ONE_BOX_NOT_THREE",
+      "M_LOOSE_COUNTED_AGAIN"
+    ]
+  },
+  "MATH.G7.MEASUR.PYTHAGOREAN_RELATIONSHIP.RIGHT_TRIANGLE_SIDES": {
+    "name": "Name the sides of a right-angled triangle",
+    "sub": "MATH.G7.MEASUR.PYTHAGOREAN_RELATIONSHIP",
+    "outcome": "MATH.G7.MEASUR.PYTHAGOREAN_RELATIONSHIP.a",
+    "outcomes": [
+      "MATH.G7.MEASUR.PYTHAGOREAN_RELATIONSHIP.a"
+    ],
+    "horeb": [
+      "G7_PYTHAGORAS"
+    ],
+    "primary": "G7_PYTHAGORAS",
+    "pre": [
+      "MATH.G6.GEOMET.ANGLES.ANGLE_SUM_RECT_TRIANGLE",
+      "MATH.G6.GEOMET.ANGLES.INTERIOR_ANGLES_TRIANGLES"
+    ],
+    "mis": [
+      "M_HYPOTENUSE_NEXT_TO_RIGHT_ANGLE",
+      "M_LEG_NAMED_BY_LETTER_ORDER"
+    ]
+  },
+  "MATH.G7.MEASUR.PYTHAGOREAN_RELATIONSHIP.PYTHAGORAS_TEST": {
+    "name": "Test whether a triangle is right-angled using the squares of its sides",
+    "sub": "MATH.G7.MEASUR.PYTHAGOREAN_RELATIONSHIP",
+    "outcome": "MATH.G7.MEASUR.PYTHAGOREAN_RELATIONSHIP.b",
+    "outcomes": [
+      "MATH.G7.MEASUR.PYTHAGOREAN_RELATIONSHIP.b"
+    ],
+    "horeb": [
+      "G7_PYTHAGORAS"
+    ],
+    "primary": "G7_PYTHAGORAS",
+    "pre": [
+      "MATH.G7.MEASUR.PYTHAGOREAN_RELATIONSHIP.RIGHT_TRIANGLE_SIDES",
+      "MATH.G7.NUMBER.SQUARES_AND_SQUARE_ROOTS.SQUARE_WHOLE_NUMBER"
+    ],
+    "mis": [
+      "M_NEARLY_RIGHT_ACCEPTED",
+      "M_SIDES_ADDED_NOT_SQUARED",
+      "M_TRIANGLE_INEQUALITY_AS_PROOF",
+      "M_LONGEST_SIDE_AS_PROOF"
+    ]
+  },
+  "MATH.G7.MEASUR.PYTHAGOREAN_RELATIONSHIP.FIND_HYPOTENUSE": {
+    "name": "Find the hypotenuse of a right-angled triangle",
+    "sub": "MATH.G7.MEASUR.PYTHAGOREAN_RELATIONSHIP",
+    "outcome": "MATH.G7.MEASUR.PYTHAGOREAN_RELATIONSHIP.b",
+    "outcomes": [
+      "MATH.G7.MEASUR.PYTHAGOREAN_RELATIONSHIP.b",
+      "MATH.G7.MEASUR.PYTHAGOREAN_RELATIONSHIP.c"
+    ],
+    "horeb": [
+      "G7_PYTHAGORAS"
+    ],
+    "primary": "G7_PYTHAGORAS",
+    "pre": [
+      "MATH.G7.MEASUR.PYTHAGOREAN_RELATIONSHIP.PYTHAGORAS_TEST",
+      "MATH.G7.NUMBER.SQUARES_AND_SQUARE_ROOTS.ROOT_WHOLE_NUMBER"
+    ],
+    "mis": [
+      "M_SQUARE_NOT_ROOTED",
+      "M_TWO_SIDES_ADDED",
+      "M_SQUARES_SUBTRACTED_FOR_LONGEST",
+      "M_SIDES_SUBTRACTED_NOT_SQUARED"
+    ]
+  },
+  "MATH.G7.MEASUR.PYTHAGOREAN_RELATIONSHIP.FIND_SHORT_SIDE": {
+    "name": "Find a shorter side of a right-angled triangle",
+    "sub": "MATH.G7.MEASUR.PYTHAGOREAN_RELATIONSHIP",
+    "outcome": "MATH.G7.MEASUR.PYTHAGOREAN_RELATIONSHIP.b",
+    "outcomes": [
+      "MATH.G7.MEASUR.PYTHAGOREAN_RELATIONSHIP.b"
+    ],
+    "horeb": [
+      "G7_PYTHAGORAS"
+    ],
+    "primary": "G7_PYTHAGORAS",
+    "pre": [
+      "MATH.G7.MEASUR.PYTHAGOREAN_RELATIONSHIP.FIND_HYPOTENUSE",
+      "MATH.G7.NUMBER.SQUARES_AND_SQUARE_ROOTS.ROOT_WHOLE_NUMBER"
+    ],
+    "mis": [
+      "M_ROOT_AS_HALF",
+      "M_SIDES_SUBTRACTED_NOT_SQUARED_SHORT"
+    ]
+  },
+  "MATH.G7.MEASUR.PYTHAGOREAN_RELATIONSHIP.PYTHAGORAS_SAVING": {
+    "name": "Use the relationship to compare a straight path with a path along two sides",
+    "sub": "MATH.G7.MEASUR.PYTHAGOREAN_RELATIONSHIP",
+    "outcome": "MATH.G7.MEASUR.PYTHAGOREAN_RELATIONSHIP.c",
+    "outcomes": [
+      "MATH.G7.MEASUR.PYTHAGOREAN_RELATIONSHIP.c"
+    ],
+    "horeb": [
+      "G7_PYTHAGORAS"
+    ],
+    "primary": "G7_PYTHAGORAS",
+    "pre": [
+      "MATH.G7.MEASUR.PYTHAGOREAN_RELATIONSHIP.FIND_HYPOTENUSE",
+      "MATH.G7.NUMBER.WHOLE_NUMBERS.OPERATIONS_IN_CONTEXT"
+    ],
+    "mis": [
+      "M_QUANTITY_ASKED_MIXED",
+      "M_ROAD_LENGTH_AS_ANSWER",
+      "M_PATH_ADDED_TO_ROAD"
+    ]
+  },
+  "MATH.G7.MEASUR.LENGTH.CONVERT_LENGTH_UNITS": {
+    "name": "Convert between cm, dm, m, Dm and Hm",
+    "sub": "MATH.G7.MEASUR.LENGTH",
+    "outcome": "MATH.G7.MEASUR.LENGTH.a",
+    "outcomes": [
+      "MATH.G7.MEASUR.LENGTH.a"
+    ],
+    "horeb": [
+      "G7_LENGTH_CONV"
+    ],
+    "primary": "G7_LENGTH_CONV",
+    "pre": [
+      "MATH.G6.MEASUR.LENGTH.CONVERT_TO_MM",
+      "MATH.G5.MEASUR.LENGTH.CONVERT_KM_TO_M",
+      "MATH.G5.MEASUR.LENGTH.CONVERT_M_TO_KM"
+    ],
+    "mis": [
+      "M_DIVIDED_FOR_SMALLER_UNIT",
+      "M_STEP_SIZE_WRONG",
+      "M_NUMBER_NOT_CHANGED",
+      "M_ALWAYS_TEN",
+      "M_UNIT_SIZE_REVERSED"
+    ]
+  },
+  "MATH.G7.MEASUR.LENGTH.COMPARE_LENGTHS_UNITS": {
+    "name": "Compare lengths given in different units",
+    "sub": "MATH.G7.MEASUR.LENGTH",
+    "outcome": "MATH.G7.MEASUR.LENGTH.a",
+    "outcomes": [
+      "MATH.G7.MEASUR.LENGTH.a",
+      "MATH.G7.MEASUR.LENGTH.b"
+    ],
+    "horeb": [
+      "G7_LENGTH_CONV"
+    ],
+    "primary": "G7_LENGTH_CONV",
+    "pre": [
+      "MATH.G7.MEASUR.LENGTH.CONVERT_LENGTH_UNITS",
+      "MATH.G5.MEASUR.LENGTH.SUBTRACT_KM_M"
+    ],
+    "mis": [
+      "M_UNITS_NOT_MATCHED",
+      "M_LARGE_UNIT_VALUE_MISREAD",
+      "M_SMALL_UNIT_VALUE_MISREAD"
+    ]
+  },
+  "MATH.G7.MEASUR.LENGTH.OPERATIONS_ON_LENGTH": {
+    "name": "Add, subtract, multiply and divide lengths in different units in a story",
+    "sub": "MATH.G7.MEASUR.LENGTH",
+    "outcome": "MATH.G7.MEASUR.LENGTH.b",
+    "outcomes": [
+      "MATH.G7.MEASUR.LENGTH.b"
+    ],
+    "horeb": [
+      "G7_LENGTH_CONV"
+    ],
+    "primary": "G7_LENGTH_CONV",
+    "pre": [
+      "MATH.G7.MEASUR.LENGTH.COMPARE_LENGTHS_UNITS",
+      "MATH.G5.MEASUR.LENGTH.MULTIPLY_KM_M",
+      "MATH.G5.MEASUR.LENGTH.DIVIDE_KM_M"
+    ],
+    "mis": [
+      "M_ANSWER_UNIT_NOT_CONVERTED",
+      "M_ONE_PIECE_ONLY",
+      "M_ADDED_NOT_SUBTRACTED",
+      "M_CUT_AMOUNT_AS_LEFT",
+      "M_GAPS_FOR_POSTS",
+      "M_FENCE_END_POST_SUBTRACTED",
+      "M_MULTIPLIED_NOT_DIVIDED_LENGTH"
+    ]
+  },
+  "MATH.G7.MEASUR.LENGTH.PERIMETER_PLANE_FIGURES": {
+    "name": "Find the perimeter of rectangles and L-shapes and use it for fencing",
+    "sub": "MATH.G7.MEASUR.LENGTH",
+    "outcome": "MATH.G7.MEASUR.LENGTH.c",
+    "outcomes": [
+      "MATH.G7.MEASUR.LENGTH.c"
+    ],
+    "horeb": [
+      "G7_PERIMETER"
+    ],
+    "primary": "G7_PERIMETER",
+    "pre": [
+      "MATH.G6.MEASUR.LENGTH.CIRCUMFERENCE_PRACTICAL",
+      "MATH.G5.MEASUR.LENGTH.ADD_KM_M",
+      "MATH.G6.MEASUR.AREA.AREA_COMBINED"
+    ],
+    "mis": [
+      "M_CUT_SIDES_NOT_REPLACED",
+      "M_NEW_EDGES_ADDED_TO_FULL",
+      "M_AREA_FOR_PERIMETER_LEN",
+      "M_AREA_DECIDES_FENCE",
+      "M_ONE_DIMENSION_ONLY",
+      "M_END_POST_ADDED_ROUND",
+      "M_POSTS_DIVISION_MISSED"
+    ]
+  },
+  "MATH.G7.MEASUR.LENGTH.CIRCUMFERENCE_DISTANCE": {
+    "name": "Find the circumference of a circle and use it for distance travelled and a track",
+    "sub": "MATH.G7.MEASUR.LENGTH",
+    "outcome": "MATH.G7.MEASUR.LENGTH.d",
+    "outcomes": [
+      "MATH.G7.MEASUR.LENGTH.d"
+    ],
+    "horeb": [
+      "G7_CIRCUMFERENCE"
+    ],
+    "primary": "G7_CIRCUMFERENCE",
+    "pre": [
+      "MATH.G6.MEASUR.LENGTH.CIRCUMFERENCE_DIAMETER_RELATION",
+      "MATH.G7.MEASUR.LENGTH.CONVERT_LENGTH_UNITS"
+    ],
+    "mis": [
+      "M_DIAMETER_AS_CIRCUMFERENCE",
+      "M_UNITS_NOT_CONVERTED_CIRC",
+      "M_CM_TO_M_BY_THOUSAND",
+      "M_HALF_CIRCLES_AS_HALF",
+      "M_ONE_STRAIGHT_SIDE_ONLY",
+      "M_LAP_PARTS_MULTIPLIED"
+    ]
+  },
+  "MATH.G7.MEASUR.LENGTH.CIRCUMFERENCE_FIND_DIAMETER": {
+    "name": "Find the diameter or radius of a circle from its circumference",
+    "sub": "MATH.G7.MEASUR.LENGTH",
+    "outcome": "MATH.G7.MEASUR.LENGTH.d",
+    "outcomes": [
+      "MATH.G7.MEASUR.LENGTH.d"
+    ],
+    "horeb": [
+      "G7_CIRCUMFERENCE"
+    ],
+    "primary": "G7_CIRCUMFERENCE",
+    "pre": [
+      "MATH.G7.MEASUR.LENGTH.CIRCUMFERENCE_DISTANCE",
+      "MATH.G7.NUMBER.FRACTIONS.DIVIDE_BY_FRACTION"
+    ],
+    "mis": [
+      "M_RADIUS_FOR_DIAMETER",
+      "M_PI_PART_DROPPED",
+      "M_CIRCUMFERENCE_HALVED"
+    ]
+  },
+  "MATH.G7.MEASUR.LENGTH.CIRCUMFERENCE_REASON": {
+    "name": "Reason about how the circumference changes with the diameter",
+    "sub": "MATH.G7.MEASUR.LENGTH",
+    "outcome": "MATH.G7.MEASUR.LENGTH.d",
+    "outcomes": [
+      "MATH.G7.MEASUR.LENGTH.d"
+    ],
+    "horeb": [
+      "G7_CIRCUMFERENCE"
+    ],
+    "primary": "G7_CIRCUMFERENCE",
+    "pre": [
+      "MATH.G7.MEASUR.LENGTH.CIRCUMFERENCE_DISTANCE",
+      "MATH.G6.MEASUR.LENGTH.CIRCUMFERENCE_DIAMETER_RELATION"
+    ],
+    "mis": [
+      "M_CIRCUMFERENCE_SIZE_FIXED",
+      "M_PI_MULTIPLIES_CHANGE",
+      "M_RULE_DEPENDS_ON_OBJECT",
+      "M_PI_ROUNDED_TO_THREE",
+      "M_ADD_NOT_MULTIPLY_CIRC",
+      "M_DOUBLE_ONLY_CIRC"
+    ]
+  },
+  "MATH.G7.MEASUR.TIME_DISTANCE_AND_SPEED.TIME_UNITS_CONVERT": {
+    "name": "Convert between seconds, minutes and hours",
+    "sub": "MATH.G7.MEASUR.TIME_DISTANCE_AND_SPEED",
+    "outcome": "MATH.G7.MEASUR.TIME_DISTANCE_AND_SPEED.a",
+    "outcomes": [
+      "MATH.G7.MEASUR.TIME_DISTANCE_AND_SPEED.a",
+      "MATH.G7.MEASUR.TIME_DISTANCE_AND_SPEED.b"
+    ],
+    "horeb": [
+      "G7_SPEED"
+    ],
+    "primary": "G7_SPEED",
+    "pre": [
+      "MATH.G5.MEASUR.TIME.CONVERT_SEC_TO_MIN",
+      "MATH.G5.MEASUR.TIME.MINUTE_SECOND_RELATION"
+    ],
+    "mis": [
+      "M_MINUTE_AS_HUNDRED",
+      "M_HOUR_AS_HUNDRED_MINUTES",
+      "M_CONVERT_DIRECTION_REVERSED",
+      "M_ONE_PER_WHOLE_HOUR"
+    ]
+  },
+  "MATH.G7.MEASUR.TIME_DISTANCE_AND_SPEED.TIMETABLE_DURATION": {
+    "name": "Find the time a vehicle is moving from a 24-hour timetable",
+    "sub": "MATH.G7.MEASUR.TIME_DISTANCE_AND_SPEED",
+    "outcome": "MATH.G7.MEASUR.TIME_DISTANCE_AND_SPEED.a",
+    "outcomes": [
+      "MATH.G7.MEASUR.TIME_DISTANCE_AND_SPEED.a",
+      "MATH.G7.MEASUR.TIME_DISTANCE_AND_SPEED.b"
+    ],
+    "horeb": [
+      "G7_SPEED"
+    ],
+    "primary": "G7_SPEED",
+    "pre": [
+      "MATH.G6.MEASUR.TIME.TRAVEL_TIMETABLE",
+      "MATH.G6.MEASUR.TIME.CONVERT_12_24"
+    ],
+    "mis": [
+      "M_WAIT_TIME_COUNTED",
+      "M_FIRST_LEG_ONLY",
+      "M_SECOND_LEG_ONLY"
+    ]
+  },
+  "MATH.G7.MEASUR.TIME_DISTANCE_AND_SPEED.DISTANCE_UNITS_CONVERT": {
+    "name": "Convert and combine distances in metres and kilometres",
+    "sub": "MATH.G7.MEASUR.TIME_DISTANCE_AND_SPEED",
+    "outcome": "MATH.G7.MEASUR.TIME_DISTANCE_AND_SPEED.c",
+    "outcomes": [
+      "MATH.G7.MEASUR.TIME_DISTANCE_AND_SPEED.c"
+    ],
+    "horeb": [
+      "G7_SPEED"
+    ],
+    "primary": "G7_SPEED",
+    "pre": [
+      "MATH.G5.MEASUR.LENGTH.CONVERT_M_TO_KM",
+      "MATH.G5.MEASUR.LENGTH.KM_M_RELATIONSHIP"
+    ],
+    "mis": [
+      "M_ANSWER_UNIT_NOT_CONVERTED_DIST",
+      "M_HUNDRED_METRES_IN_KM",
+      "M_DIVIDED_TOO_FAR",
+      "M_ONE_WAY_ONLY"
+    ]
+  },
+  "MATH.G7.MEASUR.TIME_DISTANCE_AND_SPEED.SPEED_FROM_DISTANCE_TIME": {
+    "name": "Work out speed in km/h from a distance and a time in hours and minutes",
+    "sub": "MATH.G7.MEASUR.TIME_DISTANCE_AND_SPEED",
+    "outcome": "MATH.G7.MEASUR.TIME_DISTANCE_AND_SPEED.d",
+    "outcomes": [
+      "MATH.G7.MEASUR.TIME_DISTANCE_AND_SPEED.d",
+      "MATH.G7.MEASUR.TIME_DISTANCE_AND_SPEED.e"
+    ],
+    "horeb": [
+      "G7_SPEED"
+    ],
+    "primary": "G7_SPEED",
+    "pre": [
+      "MATH.G7.MEASUR.TIME_DISTANCE_AND_SPEED.TIME_UNITS_CONVERT",
+      "MATH.G7.NUMBER.DECIMALS.DIV_DEC_BY_WHOLE"
+    ],
+    "mis": [
+      "M_MINUTE_AS_HUNDRED_TIME",
+      "M_TIME_OVER_DISTANCE",
+      "M_SPEED_BY_MULTIPLYING",
+      "M_MINUTES_NOT_HOURS"
+    ]
+  },
+  "MATH.G7.MEASUR.TIME_DISTANCE_AND_SPEED.TIME_FROM_SPEED": {
+    "name": "Work out the time of a journey from the distance and the speed",
+    "sub": "MATH.G7.MEASUR.TIME_DISTANCE_AND_SPEED",
+    "outcome": "MATH.G7.MEASUR.TIME_DISTANCE_AND_SPEED.d",
+    "outcomes": [
+      "MATH.G7.MEASUR.TIME_DISTANCE_AND_SPEED.d",
+      "MATH.G7.MEASUR.TIME_DISTANCE_AND_SPEED.e"
+    ],
+    "horeb": [
+      "G7_SPEED"
+    ],
+    "primary": "G7_SPEED",
+    "pre": [
+      "MATH.G7.MEASUR.TIME_DISTANCE_AND_SPEED.SPEED_FROM_DISTANCE_TIME",
+      "MATH.G7.MEASUR.TIME_DISTANCE_AND_SPEED.TIME_UNITS_CONVERT"
+    ],
+    "mis": [
+      "M_HOURS_NOT_CONVERTED_TO_MINUTES",
+      "M_DECIMAL_HOURS_AS_MINUTES",
+      "M_TIME_BY_MULTIPLYING"
+    ]
+  },
+  "MATH.G7.MEASUR.TIME_DISTANCE_AND_SPEED.AVERAGE_SPEED_TWO_LEGS": {
+    "name": "Work out the average speed over two parts of a journey",
+    "sub": "MATH.G7.MEASUR.TIME_DISTANCE_AND_SPEED",
+    "outcome": "MATH.G7.MEASUR.TIME_DISTANCE_AND_SPEED.e",
+    "outcomes": [
+      "MATH.G7.MEASUR.TIME_DISTANCE_AND_SPEED.e"
+    ],
+    "horeb": [
+      "G7_SPEED"
+    ],
+    "primary": "G7_SPEED",
+    "pre": [
+      "MATH.G7.MEASUR.TIME_DISTANCE_AND_SPEED.TIME_FROM_SPEED",
+      "MATH.G7.NUMBER.WHOLE_NUMBERS.OPERATIONS_IN_CONTEXT"
+    ],
+    "mis": [
+      "M_AVERAGE_OF_SPEEDS",
+      "M_TOTAL_DISTANCE_ONLY"
+    ]
+  },
+  "MATH.G7.MEASUR.TIME_DISTANCE_AND_SPEED.SPEED_UNITS_CONVERT": {
+    "name": "Convert speed between km/h and m/s",
+    "sub": "MATH.G7.MEASUR.TIME_DISTANCE_AND_SPEED",
+    "outcome": "MATH.G7.MEASUR.TIME_DISTANCE_AND_SPEED.f",
+    "outcomes": [
+      "MATH.G7.MEASUR.TIME_DISTANCE_AND_SPEED.f"
+    ],
+    "horeb": [
+      "G7_SPEED"
+    ],
+    "primary": "G7_SPEED",
+    "pre": [
+      "MATH.G7.MEASUR.TIME_DISTANCE_AND_SPEED.SPEED_FROM_DISTANCE_TIME",
+      "MATH.G7.MEASUR.TIME_DISTANCE_AND_SPEED.DISTANCE_UNITS_CONVERT",
+      "MATH.G7.MEASUR.TIME_DISTANCE_AND_SPEED.TIME_UNITS_CONVERT"
+    ],
+    "mis": [
+      "M_HOUR_AS_SIXTY_SECONDS",
+      "M_CONVERSION_DIRECTION_REVERSED",
+      "M_KM_TO_M_DIVIDED",
+      "M_KM_AS_HUNDRED_M",
+      "M_UNITS_ADDED",
+      "M_TIME_UNIT_NOT_CHANGED",
+      "M_UNIT_NOT_CONVERTED_TO_KM"
+    ]
+  },
+  "MATH.G7.MEASUR.TIME_DISTANCE_AND_SPEED.SPEED_COMPARE_MIXED_UNITS": {
+    "name": "Compare speeds given in different units",
+    "sub": "MATH.G7.MEASUR.TIME_DISTANCE_AND_SPEED",
+    "outcome": "MATH.G7.MEASUR.TIME_DISTANCE_AND_SPEED.f",
+    "outcomes": [
+      "MATH.G7.MEASUR.TIME_DISTANCE_AND_SPEED.f"
+    ],
+    "horeb": [
+      "G7_SPEED"
+    ],
+    "primary": "G7_SPEED",
+    "pre": [
+      "MATH.G7.MEASUR.TIME_DISTANCE_AND_SPEED.SPEED_UNITS_CONVERT"
+    ],
+    "mis": [
+      "M_MS_NUMBER_TAKEN_AS_KMH",
+      "M_SPEEDS_COMPARED_WITHOUT_SAME_UNIT"
+    ]
+  },
+  "MATH.G7.MEASUR.TEMPERATURE.TEMP_WORDS": {
+    "name": "Describe a temperature as cold, cool, warm or hot using a table of ranges",
+    "sub": "MATH.G7.MEASUR.TEMPERATURE",
+    "outcome": "MATH.G7.MEASUR.TEMPERATURE.a",
+    "outcomes": [
+      "MATH.G7.MEASUR.TEMPERATURE.a"
+    ],
+    "horeb": [
+      "G7_TEMPERATURE"
+    ],
+    "primary": "G7_TEMPERATURE",
+    "pre": [
+      "MATH.G6.NUMBER.WHOLE_NUMBERS.ORDER_100K"
+    ],
+    "mis": [
+      "M_NEXT_BAND_TOO_COLD",
+      "M_NEXT_BAND_TOO_HOT",
+      "M_FAR_BAND_TOO_COLD",
+      "M_FAR_BAND_TOO_HOT"
+    ]
+  },
+  "MATH.G7.MEASUR.TEMPERATURE.TEMP_COMPARE_DIFFERENCE": {
+    "name": "Compare temperatures and find the difference, including readings below zero",
+    "sub": "MATH.G7.MEASUR.TEMPERATURE",
+    "outcome": "MATH.G7.MEASUR.TEMPERATURE.b",
+    "outcomes": [
+      "MATH.G7.MEASUR.TEMPERATURE.b"
+    ],
+    "horeb": [
+      "G7_TEMPERATURE"
+    ],
+    "primary": "G7_TEMPERATURE",
+    "pre": [
+      "MATH.G7.MEASUR.TEMPERATURE.TEMP_WORDS",
+      "MATH.G6.NUMBER.WHOLE_NUMBERS.ORDER_100K"
+    ],
+    "mis": [
+      "M_NEGATIVE_SIGN_IGNORED",
+      "M_ONLY_BELOW_ZERO_PART",
+      "M_ONE_READING_GIVEN",
+      "M_SUMMED_FOR_DIFFERENCE",
+      "M_FIRST_AND_LAST_COMPARED"
+    ]
+  },
+  "MATH.G7.MEASUR.TEMPERATURE.TEMP_UNITS": {
+    "name": "Know the Celsius and Kelvin scales",
+    "sub": "MATH.G7.MEASUR.TEMPERATURE",
+    "outcome": "MATH.G7.MEASUR.TEMPERATURE.c",
+    "outcomes": [
+      "MATH.G7.MEASUR.TEMPERATURE.c"
+    ],
+    "horeb": [
+      "G7_TEMPERATURE"
+    ],
+    "primary": "G7_TEMPERATURE",
+    "pre": [
+      "MATH.G7.MEASUR.TEMPERATURE.TEMP_WORDS"
+    ],
+    "mis": [
+      "M_KELVIN_BELOW_CELSIUS",
+      "M_ZERO_KELVIN_AS_ZERO_CELSIUS"
+    ]
+  },
+  "MATH.G7.MEASUR.TEMPERATURE.TEMP_CONVERT_C_K": {
+    "name": "Convert between degrees Celsius and kelvin and compare readings in both",
+    "sub": "MATH.G7.MEASUR.TEMPERATURE",
+    "outcome": "MATH.G7.MEASUR.TEMPERATURE.d",
+    "outcomes": [
+      "MATH.G7.MEASUR.TEMPERATURE.d"
+    ],
+    "horeb": [
+      "G7_TEMPERATURE"
+    ],
+    "primary": "G7_TEMPERATURE",
+    "pre": [
+      "MATH.G7.MEASUR.TEMPERATURE.TEMP_UNITS",
+      "MATH.G7.MEASUR.TEMPERATURE.TEMP_COMPARE_DIFFERENCE"
+    ],
+    "mis": [
+      "M_273_SUBTRACTED_TO_GET_KELVIN",
+      "M_CHANGE_CONVERTED_AS_READING",
+      "M_KELVIN_NOT_FOR_EVERYDAY",
+      "M_SCALES_NOT_MATCHED"
+    ]
+  },
+  "MATH.G7.MEASUR.TEMPERATURE.TEMP_RISES_FALLS": {
+    "name": "Work out a temperature after a rise and a fall",
+    "sub": "MATH.G7.MEASUR.TEMPERATURE",
+    "outcome": "MATH.G7.MEASUR.TEMPERATURE.e",
+    "outcomes": [
+      "MATH.G7.MEASUR.TEMPERATURE.e"
+    ],
+    "horeb": [
+      "G7_TEMPERATURE"
+    ],
+    "primary": "G7_TEMPERATURE",
+    "pre": [
+      "MATH.G7.MEASUR.TEMPERATURE.TEMP_COMPARE_DIFFERENCE",
+      "MATH.G6.NUMBER.WHOLE_NUMBERS.ORDER_100K"
+    ],
+    "mis": [
+      "M_FALL_ADDED",
+      "M_RISE_SUBTRACTED",
+      "M_START_READING_IGNORED"
+    ]
+  },
+  "MATH.G7.GEOMET.GEOMETRICAL_CONSTRUCTION.MEASURE_ANGLES_PROTRACTOR": {
+    "name": "Measure an angle with a protractor",
+    "sub": "MATH.G7.GEOMET.GEOMETRICAL_CONSTRUCTION",
+    "outcome": "MATH.G7.GEOMET.GEOMETRICAL_CONSTRUCTION.a",
+    "outcomes": [
+      "MATH.G7.GEOMET.GEOMETRICAL_CONSTRUCTION.a"
+    ],
+    "horeb": [
+      "G7_ANGLES",
+      "G7_ANGLE_CONSTRUCTION"
+    ],
+    "primary": "G7_ANGLES",
+    "pre": [
+      "MATH.G5.GEOMET.ANGLES.READ_PROTRACTOR_BOTH_SCALES",
+      "MATH.G6.GEOMET.ANGLES.MEASURE_ANGLES_PROTRACTOR"
+    ],
+    "mis": [
+      "M_WRONG_SCALE_READ",
+      "M_PROTRACTOR_NOT_ALIGNED"
+    ]
+  },
+  "MATH.G7.GEOMET.GEOMETRICAL_CONSTRUCTION.BISECT_ANGLE": {
+    "name": "Bisect an angle with compasses and explain the steps",
+    "sub": "MATH.G7.GEOMET.GEOMETRICAL_CONSTRUCTION",
+    "outcome": "MATH.G7.GEOMET.GEOMETRICAL_CONSTRUCTION.b",
+    "outcomes": [
+      "MATH.G7.GEOMET.GEOMETRICAL_CONSTRUCTION.b"
+    ],
+    "horeb": [
+      "G7_CONSTRUCTIONS"
+    ],
+    "primary": "G7_CONSTRUCTIONS",
+    "pre": [
+      "MATH.G6.GEOMET.LINES.BISECT_LINES",
+      "MATH.G6.GEOMET.ANGLES.MEASURE_ANGLES_PROTRACTOR"
+    ],
+    "mis": [
+      "M_BISECT_DOUBLES",
+      "M_BISECT_NO_CHANGE",
+      "M_SUPPLEMENT_FOR_HALF",
+      "M_ARC_REASON_FOR_FIRST_ARC",
+      "M_ARC_REASON_FOR_CROSSING_STEP",
+      "M_ARC_REASON_FOR_BISECTOR_STEP",
+      "M_ARC_REASON_ARCS_TOO_SHORT"
+    ]
+  },
+  "MATH.G7.GEOMET.GEOMETRICAL_CONSTRUCTION.CONSTRUCT_STANDARD_ANGLES": {
+    "name": "Plan the construction of 90, 60, 45, 30 and multiples of 7.5 degrees",
+    "sub": "MATH.G7.GEOMET.GEOMETRICAL_CONSTRUCTION",
+    "outcome": "MATH.G7.GEOMET.GEOMETRICAL_CONSTRUCTION.c",
+    "outcomes": [
+      "MATH.G7.GEOMET.GEOMETRICAL_CONSTRUCTION.c"
+    ],
+    "horeb": [
+      "G7_ANGLE_CONSTRUCTION",
+      "G7_CONSTRUCTIONS"
+    ],
+    "primary": "G7_ANGLE_CONSTRUCTION",
+    "pre": [
+      "MATH.G7.GEOMET.GEOMETRICAL_CONSTRUCTION.BISECT_ANGLE",
+      "MATH.G6.GEOMET.LINES.PERPENDICULAR_LINES"
+    ],
+    "mis": [
+      "M_BISECTED_TOO_FAR",
+      "M_WRONG_START_ANGLE",
+      "M_STOPPED_AT_SIXTY",
+      "M_BISECTED_ONCE_ONLY",
+      "M_PERPENDICULAR_FOR_ANGLE",
+      "M_BISECT_COUNT_WRONG"
+    ]
+  },
+  "MATH.G7.GEOMET.GEOMETRICAL_CONSTRUCTION.CONSTRUCT_TRIANGLES": {
+    "name": "Decide whether a triangle can be constructed and plan its construction",
+    "sub": "MATH.G7.GEOMET.GEOMETRICAL_CONSTRUCTION",
+    "outcome": "MATH.G7.GEOMET.GEOMETRICAL_CONSTRUCTION.d",
+    "outcomes": [
+      "MATH.G7.GEOMET.GEOMETRICAL_CONSTRUCTION.d"
+    ],
+    "horeb": [
+      "G7_CONSTRUCTIONS"
+    ],
+    "primary": "G7_CONSTRUCTIONS",
+    "pre": [
+      "MATH.G6.GEOMET.ANGLES.CONSTRUCT_TRIANGLES",
+      "MATH.G7.GEOMET.GEOMETRICAL_CONSTRUCTION.CONSTRUCT_STANDARD_ANGLES"
+    ],
+    "mis": [
+      "M_ANY_THREE_LENGTHS_MAKE_TRIANGLE",
+      "M_ALL_SIDES_DIFFERENT_NO_TRIANGLE",
+      "M_LONGEST_SIDE_BLOCKS_TRIANGLE",
+      "M_LONGEST_SIDE_AS_BASE_ENOUGH"
+    ]
+  },
+  "MATH.G7.GEOMET.GEOMETRICAL_CONSTRUCTION.CONSTRUCT_CIRCLES": {
+    "name": "Construct a circle of a given radius or diameter",
+    "sub": "MATH.G7.GEOMET.GEOMETRICAL_CONSTRUCTION",
+    "outcome": "MATH.G7.GEOMET.GEOMETRICAL_CONSTRUCTION.e",
+    "outcomes": [
+      "MATH.G7.GEOMET.GEOMETRICAL_CONSTRUCTION.e"
+    ],
+    "horeb": [
+      "G7_CONSTRUCTIONS"
+    ],
+    "primary": "G7_CONSTRUCTIONS",
+    "pre": [
+      "MATH.G6.GEOMET.ANGLES.CONSTRUCT_TRIANGLES",
+      "MATH.G6.MEASUR.LENGTH.CIRCUMFERENCE_DIAMETER_RELATION"
+    ],
+    "mis": [
+      "M_RADIUS_AS_DIAMETER_SET",
+      "M_COMPASS_POINT_MOVES"
     ]
   }
 };
