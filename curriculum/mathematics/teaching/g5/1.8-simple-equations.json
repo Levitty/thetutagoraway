@@ -80,6 +80,24 @@
           ],
           "ask": "What does 50 say is equal to what?",
           "repair": "A number on its own is a value, not an equation. An equation says one side has the same value as the other side."
+        },
+        {
+          "code": "MATH.G5.NUMBER.SIMPLE_EQUATIONS.EQ_MEANING.M_LETTER_IS_GIVEN_NUMBER",
+          "listen_for": [
+            "n is 25",
+            "n is the total"
+          ],
+          "ask": "Can you see the 25 in the equation? Is the letter hiding something we can already see?",
+          "repair": "The letter hides the number we do not know yet. The 5 and the 25 are shown, so they are not the letter."
+        },
+        {
+          "code": "MATH.G5.NUMBER.SIMPLE_EQUATIONS.EQ_MEANING.M_LETTER_ANY_NUMBER",
+          "listen_for": [
+            "any number",
+            "it changes"
+          ],
+          "ask": "If n is 10, does n + 5 make 25? What about n is 20?",
+          "repair": "In an equation the letter is one number that makes both sides equal. Here only 20 works."
         }
       ],
       "checks": [
@@ -157,6 +175,15 @@
           ],
           "ask": "Who has more eggs, Otieno or Akinyi?",
           "repair": "Draw two bars: Akinyi's plus 6 equals Otieno's, so a + 6 = 15."
+        },
+        {
+          "code": "MATH.G5.NUMBER.SIMPLE_EQUATIONS.EQ_FORM_ADD_SUB.M_OPERATION_OPPOSITE_TO_STORY",
+          "listen_for": [
+            "plus",
+            "she added"
+          ],
+          "ask": "Did the money go up or go down when she spent it?",
+          "repair": "Write what happened. Spending takes money away, so the equation takes 78 away from m."
         }
       ],
       "checks": [

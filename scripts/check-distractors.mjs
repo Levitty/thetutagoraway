@@ -35,6 +35,8 @@ const words = (t) => String(t || '').trim().split(/\s+/).filter(Boolean).length;
 export const thinReason = (why) => { const t = String(why || '').trim(); return !t || GENERIC.test(t) || words(t) < 5; };
 
 const num = (t) => { const s = String(t).replace(/,/g, '').trim(); return /^-?\d+(\.\d+)?$/.test(s) ? Number(s) : null; };
+// A slip is a miscount of one or two. Only whole numbers can be that: 3.04 beside 3.4 is a place-value idea, not a slip (18 Nov 2026).
+const isInt = (v) => Number.isInteger(v);
 
 const families = FAMILIES.filter(f => f.cskill && String(f.id).startsWith('g5c.') && (!ONLY || f.id === ONLY));
 const found = {}; // familyId -> { shared: Set(examples), nearmiss: ..., reason: ..., unmapped: ... }
@@ -57,7 +59,7 @@ for (const f of families) {
     // (b) near misses carrying a code
     if (ans !== null) for (const m of wrongs) {
       const v = num(m.when); if (v === null || !m.mis || isSlip(m.mis)) continue;
-      if (Math.abs(v - ans) <= 2 && Math.abs(v - ans) > 0) bump(f.id, 'nearmiss', `${m.when} vs ${p.answer} (${String(m.mis).slice(0, 40)})`);
+      if (isInt(v) && isInt(ans) && Math.abs(v - ans) <= 2 && Math.abs(v - ans) > 0) bump(f.id, 'nearmiss', `${m.when} vs ${p.answer} (${String(m.mis).slice(0, 40)})`);
     }
   }
 }

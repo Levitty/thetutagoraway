@@ -23,6 +23,9 @@ import { SKILLS_G5 } from '../curriculumMap.g5.js';
 import { SIGNED } from './g5c_signed.js';   // ids of factory-made families a teacher has signed off (see scripts/apply-question-review.mjs)
 
 export { randInt, pick, round, commas, fmtNum, person, sh, price };
+// True when every coded wrong whole number is at least 3 away from the right one. A wrong answer one or two off is a
+// slip (write it 'SLIP'); a family that means a real misconception rejects the draw where it would look like a slip.
+export const farFrom = (answer, ...coded) => coded.every(v => !Number.isInteger(v) || !Number.isInteger(answer) || Math.abs(v - answer) > 2);
 export const rot = (a, k) => [...a.slice(k % a.length), ...a.slice(0, k % a.length)];
 export const shuffle = (a) => { const b = [...a]; for (let i = b.length - 1; i > 0; i--) { const j = Math.floor(Math.random() * (i + 1)); [b[i], b[j]] = [b[j], b[i]]; } return b; };
 export const distinct = (...v) => new Set(v).size === v.length;
@@ -54,6 +57,13 @@ const clean = (wrong, answer, need, neg) => {
   return out.length >= need ? out : null;
 };
 
+// Same rule as engine/scripts/family_checks.mjs: a wrong option's reason or a hint must not state the right answer.
+const leaksAnswer = (answer, text, question) => {
+  const a = String(answer);
+  if (!/^-?\d[\d.]*$/.test(a) || a.replace('-', '').length < 2 || String(question).includes(a)) return false;
+  return new RegExp(`(^|[^\\d.,])${a.replace('.', '\\.')}([^\\d.,]|$)`).test(String(text));
+};
+
 export const fam = (d) => {
   const { cs, gen, id, form, rung, ...rest } = d;
   const ck = SKILLS_G5[`MATH.G5.${cs}`];
@@ -77,6 +87,9 @@ export const fam = (d) => {
       if (typeof x.answer === 'number') { x.wrong = clean(x.wrong, x.answer, 3, d.allowNegative); if (!x.wrong) return null; }
       else { x.wrong = clean(x.wrong, x.answer, 3, true); if (!x.wrong) return null; }
     } else if (x.options === null) return null;
+    if (x.answer !== undefined && !x.options && !x.working && !x.parts) {
+      if ((x.wrong || []).some(w => leaksAnswer(x.answer, w[1], x.question)) || (x.hints || []).some(h => leaksAnswer(x.answer, h, x.question))) return null;
+    }
     return x;
   };
   return family({ reviewed: SIGNED.includes(id), ...rest, id, form, rung, skill: ck.primary, cskill: `MATH.G5.${cs}`, outcome: letter, draw, make: x => x,

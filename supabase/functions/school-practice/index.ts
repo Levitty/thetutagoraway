@@ -101167,7 +101167,8 @@ var SKILLS_G5 = {
     "mis": [
       "M_EQUIV_ADDITIVE",
       "M_EQUIV_ONE_TERM_ONLY",
-      "M_EQUIV_BIGGER_NUMBERS_BIGGER"
+      "M_EQUIV_BIGGER_NUMBERS_BIGGER",
+      "M_EQUIV_FEWER_PIECES_BIGGER"
     ]
   },
   "MATH.G5.NUMBER.FRACTIONS.SIMPLIFY_FRACTIONS": {
@@ -101187,7 +101188,9 @@ var SKILLS_G5 = {
     "mis": [
       "M_SIMPLIFY_SUBTRACT",
       "M_SIMPLIFY_STOPS_EARLY",
-      "M_SIMPLIFY_MAKES_SMALLER"
+      "M_SIMPLIFY_MAKES_SMALLER",
+      "M_FRACTION_UPSIDE_DOWN",
+      "M_SIMPLEST_BY_LOOKS"
     ]
   },
   "MATH.G5.NUMBER.FRACTIONS.COMPARE_LIKE_FRACTIONS": {
@@ -101204,7 +101207,9 @@ var SKILLS_G5 = {
     "pre": [],
     "mis": [
       "M_COMPARE_BIGGER_DENOMINATOR",
-      "M_COMPARE_DIFFERENT_WHOLES"
+      "M_COMPARE_DIFFERENT_WHOLES",
+      "M_COMPARE_MATCHING_PART_EQUAL",
+      "M_COMPARE_SYMBOL_REVERSED"
     ]
   },
   "MATH.G5.NUMBER.FRACTIONS.COMPARE_UNLIKE_FRACTIONS": {
@@ -101264,7 +101269,9 @@ var SKILLS_G5 = {
     ],
     "mis": [
       "M_ADD_DENOMINATORS",
-      "M_ADD_DROPS_DENOMINATOR"
+      "M_ADD_DROPS_DENOMINATOR",
+      "M_MISSING_ADDEND_ADDED",
+      "M_MISSING_PICKS_SHOWN_NUMBER"
     ]
   },
   "MATH.G5.NUMBER.FRACTIONS.SUBTRACT_SAME_DENOMINATOR": {
@@ -101283,7 +101290,10 @@ var SKILLS_G5 = {
     ],
     "mis": [
       "M_SUB_DENOMINATORS",
-      "M_SUB_WHOLE_NOT_RENAMED"
+      "M_SUB_WHOLE_NOT_RENAMED",
+      "M_SUB_DROPS_DENOMINATOR",
+      "M_SUB_DONE_AS_ADDITION",
+      "M_SUB_ONE_STEP_ONLY"
     ]
   },
   "MATH.G5.NUMBER.FRACTIONS.ADD_ONE_RENAMING": {
@@ -101523,7 +101533,9 @@ var SKILLS_G5 = {
       "M_EQUALS_MEANS_ANSWER",
       "M_LETTER_AS_OBJECT",
       "M_EXPRESSION_IS_EQUATION",
-      "M_NUMBER_IS_EQUATION"
+      "M_NUMBER_IS_EQUATION",
+      "M_LETTER_IS_GIVEN_NUMBER",
+      "M_LETTER_ANY_NUMBER"
     ]
   },
   "MATH.G5.NUMBER.SIMPLE_EQUATIONS.EQ_FORM_ADD_SUB": {
@@ -101543,7 +101555,8 @@ var SKILLS_G5 = {
     "mis": [
       "M_SUBTRACTION_ORDER_REVERSED",
       "M_KEYWORD_MORE_MEANS_ADD",
-      "M_WRITES_ANSWER_NOT_EQUATION"
+      "M_WRITES_ANSWER_NOT_EQUATION",
+      "M_OPERATION_OPPOSITE_TO_STORY"
     ]
   },
   "MATH.G5.NUMBER.SIMPLE_EQUATIONS.EQ_FORM_MUL_DIV": {
@@ -103459,6 +103472,7 @@ var SKILLS_G5 = {
 var SIGNED42 = [];
 
 // src/ai-tutor/content/families/g5c_lib.js
+var farFrom = (answer, ...coded) => coded.every((v) => !Number.isInteger(v) || !Number.isInteger(answer) || Math.abs(v - answer) > 2);
 var shuffle12 = (a) => {
   const b = [...a];
   for (let i = b.length - 1; i > 0; i--) {
@@ -103490,6 +103504,11 @@ var clean2 = (wrong, answer, need, neg2) => {
   }
   return out.length >= need ? out : null;
 };
+var leaksAnswer = (answer, text, question) => {
+  const a = String(answer);
+  if (!/^-?\d[\d.]*$/.test(a) || a.replace("-", "").length < 2 || String(question).includes(a)) return false;
+  return new RegExp(`(^|[^\\d.,])${a.replace(".", "\\.")}([^\\d.,]|$)`).test(String(text));
+};
 var fam36 = (d) => {
   const { cs, gen: gen2, id: id5, form, rung, ...rest } = d;
   const ck = SKILLS_G5[`MATH.G5.${cs}`];
@@ -103519,6 +103538,9 @@ var fam36 = (d) => {
         if (!x.wrong) return null;
       }
     } else if (x.options === null) return null;
+    if (x.answer !== void 0 && !x.options && !x.working && !x.parts) {
+      if ((x.wrong || []).some((w14) => leaksAnswer(x.answer, w14[1], x.question)) || (x.hints || []).some((h) => leaksAnswer(x.answer, h, x.question))) return null;
+    }
     return x;
   };
   return family({
@@ -106662,11 +106684,12 @@ var FAMILIES158 = [
     gen: () => {
       const d = pick([2, 3, 4, 5, 6]), k = randInt(2, 4), n = randInt(1, d - 1);
       if (d * k > 24 || gcd(n, d) !== 1) return null;
-      const p = person(), f = pick(FOODS);
+      const p = person(), f = pick(FOODS), add = n + (d * k - d);
+      if (!farFrom(n * k, add, n)) return null;
       return {
         question: `${p.name} ate ${fr2(n, d)} of a ${f}. The ${f} is cut into ${d * k} equal pieces instead. How many of the smaller pieces make the same amount?`,
         answer: n * k,
-        wrong: [[n + (d * k - d), "You added the same number to the top and bottom. To keep the same amount, multiply both by the same number instead.", "M_EQUIV_ADDITIVE"], [n, "The number of pieces changed on the bottom, so the top must change too.", "M_EQUIV_ONE_TERM_ONLY"], [d * k, "That is the number of pieces in the whole, not the number eaten.", "M_EQUIV_ONE_TERM_ONLY"], [n * k + 1, "Multiply the top by the same number as the bottom.", "M_EQUIV_ADDITIVE"]],
+        wrong: [[add, `You added ${d * k - d} to the top, as you did to the bottom. That changes the amount. Multiply the top by ${k}, the same as the bottom.`, "M_EQUIV_ADDITIVE"], [n, `The bottom changed from ${d} to ${d * k}, but you left the top as ${n}. ${n} of the smaller pieces is less than ${p.name} ate.`, "M_EQUIV_ONE_TERM_ONLY"], [n * k + 1, `One too many. ${d * k} pieces is ${k} times as many as ${d}, so ${n} pieces become ${n} \xD7 ${k}.`, "SLIP"], [n * k - 1, `One too few. Multiply the top ${n} by ${k} and count again.`, "SLIP"]],
         hints: [`How many times bigger is ${d * k} than ${d}?`, "Do the same to the top number."],
         steps: [`${d} \xD7 ${k} = ${d * k}, so multiply the top by ${k} as well.`, `${n} \xD7 ${k} = ${n * k}. ${fr2(n, d)} = ${fr2(n * k, d * k)}.`],
         chk: (v) => v * d === n * d * k
@@ -106681,7 +106704,7 @@ var FAMILIES158 = [
     gen: () => {
       const d = pick([2, 3, 4]), k = pick([2, 3, 4]), n = randInt(1, d - 1), [a, b] = [person(), person()];
       if (gcd(n, d) !== 1 || a.name === b.name) return null;
-      const options = mc10("They ate the same amount", [[`${b.name} ate more, because ${fr2(n * k, d * k)} has bigger numbers`, "Bigger numbers on top and bottom do not mean a bigger amount here. The pieces are smaller.", "M_EQUIV_BIGGER_NUMBERS_BIGGER"], [`${a.name} ate more, because ${fr2(n, d)} has fewer pieces`, "Compare how much of the whole is eaten, not the number of pieces.", "M_EQUIV_BIGGER_NUMBERS_BIGGER"], [`${b.name} ate more, because ${d * k} is more than ${d}`, "The bigger bottom number means smaller pieces.", "M_EQUIV_ADDITIVE"]]);
+      const options = mc10("They ate the same amount", [[`${b.name} ate more, because ${fr2(n * k, d * k)} has bigger numbers`, `Bigger numbers on top and bottom do not make a bigger amount. The pieces of ${fr2(n * k, d * k)} are smaller, so more of them make the same share.`, "M_EQUIV_BIGGER_NUMBERS_BIGGER"], [`${a.name} ate more, because ${fr2(n, d)} has fewer pieces`, `Fewer pieces means each piece is bigger, but ${b.name} has more pieces. Put the shaded parts side by side: they are the same.`, "M_EQUIV_FEWER_PIECES_BIGGER"], [`${b.name} ate more, because ${d * k} is more than ${d}`, `A bigger bottom number means smaller pieces, not a bigger share. It does not tell us who ate more.`, "M_COMPARE_BIGGER_DENOMINATOR"]]);
       return {
         question: `${a.name} ate ${fr2(n, d)} of a chapati. ${b.name} ate ${fr2(n * k, d * k)} of an equal chapati. Who ate more?`,
         options,
@@ -106717,14 +106740,14 @@ var FAMILIES158 = [
     form: "word",
     rung: 2,
     gen: () => {
-      const g = pick([2, 3, 4, 5, 6]), [sn, sd] = pick([[1, 2], [2, 3], [3, 4], [1, 3], [3, 5], [1, 4], [5, 6], [2, 5]]), n = sn * g, d = sd * g;
-      if (d > 50 || g < 2) return null;
-      const stops = simp(n, d), half = gcd(n, d) % 2 === 0 ? 2 : gcd(n, d) % 3 === 0 ? 3 : gcd(n, d);
-      const early = [n / half, d / half];
+      const g = pick([4, 6, 8, 9, 12]), [sn, sd] = pick([[1, 2], [2, 3], [3, 4], [1, 3], [3, 5], [1, 4], [5, 6], [2, 5]]), n = sn * g, d = sd * g;
+      if (d > 50) return null;
+      const small = [2, 3].find((x) => g % x === 0), early = [n / small, d / small];
+      if (!farFrom(1, n - g)) return null;
       return {
         question: `${person().name} ate ${n} of the ${d} mandazi in a pot. What fraction was eaten, in its simplest form?`,
         answer: fr2(sn, sd),
-        wrong: [[fr2(n - g + 0, d - g + 0), `You took ${g} from the top and bottom. Divide both by a number instead.`, "M_SIMPLIFY_SUBTRACT"], [fr2(n, d), "That is not yet in its simplest form. Divide the top and bottom by a common factor.", "M_SIMPLIFY_STOPS_EARLY"], [fr2(early[0], early[1]), "You can still divide both numbers by something. Keep going until only 1 divides both.", "M_SIMPLIFY_STOPS_EARLY"], [fr2(sd, sn), "The part eaten goes on top.", "M_SIMPLIFY_SUBTRACT"]].filter((w14) => w14[0] !== fr2(sn, sd)),
+        wrong: [[fr2(n - g, d - g), `You took ${g} away from the top and from the bottom. That changes the amount. Divide both by the same number instead.`, "M_SIMPLIFY_SUBTRACT"], [fr2(early[0], early[1]), `You divided by ${small}, but ${early[0]} and ${early[1]} can still both be divided by ${g / small}. Keep going until only 1 divides both.`, "M_SIMPLIFY_STOPS_EARLY"], [fr2(sd, sn), `The part that was eaten goes on top and the whole pot goes on the bottom. You wrote it upside down.`, "M_FRACTION_UPSIDE_DOWN"]],
         hints: ["Find a number that divides both the top and the bottom.", "Check whether anything still divides both."],
         steps: [`${n} and ${d} are both divisible by ${g}.`, `${n} \xF7 ${g} = ${sn} and ${d} \xF7 ${g} = ${sd}.`],
         chk: (v) => v === fr2(sn, sd)
@@ -106737,13 +106760,13 @@ var FAMILIES158 = [
     form: "why",
     rung: 2,
     gen: () => {
-      const g = pick([2, 3, 4]), [sn, sd] = pick([[2, 3], [3, 4], [1, 2], [3, 5], [2, 5]]), n = sn * g, d = sd * g;
-      const options = mc10(`No. Both ${n} and ${d} divide by ${g}, giving ${fr2(sn, sd)}`, [[`Yes, because ${n} is smaller than ${d}`, "A fraction is simplest only when no number except 1 divides both parts.", "M_SIMPLIFY_STOPS_EARLY"], [`Yes, because it is a proper fraction`, "Any proper fraction may still be simplified.", "M_SIMPLIFY_STOPS_EARLY"], [`No. Take ${g} from each to get ${fr2(n - g, d - g)}`, `Subtracting ${g} changes the amount. Divide both parts instead.`, "M_SIMPLIFY_SUBTRACT"]]);
+      const g = pick([4, 6, 9, 12]), [sn, sd] = pick([[2, 3], [3, 4], [1, 2], [3, 5], [2, 5]]), n = sn * g, d = sd * g, small = [2, 3].find((x) => g % x === 0);
+      const options = mc10(`No. Both ${n} and ${d} divide by ${g}, giving ${fr2(sn, sd)}`, [[`Yes, because ${n} is smaller than ${d}`, `Being smaller than one whole does not make a fraction simplest. Look for a number that divides both ${n} and ${d}.`, "M_SIMPLEST_BY_LOOKS"], [`No. Dividing both by ${small} gives ${fr2(n / small, d / small)}, which is the simplest form`, `You divided by ${small}, but ${n / small} and ${d / small} still both divide by ${g / small}. Keep going.`, "M_SIMPLIFY_STOPS_EARLY"], [`No. Take ${g} from each to get ${fr2(n - g, d - g)}`, `Taking ${g} away changes the amount. Divide both parts by the same number instead.`, "M_SIMPLIFY_SUBTRACT"]]);
       return {
-        question: `Is ${fr2(n, d)} in its simplest form? Choose the best answer.`,
+        question: `${person().name} says ${fr2(n, d)} is not in its simplest form. Which answer shows the simplest form and why?`,
         options,
         instruction: "Choose the answer and the reason.",
-        hints: ["Look for a number that divides both the top and bottom.", "If there is one, the fraction can be simplified."],
+        hints: ["Look for a number that divides both the top and bottom.", "Keep dividing until only 1 divides both."],
         steps: [`${n} \xF7 ${g} = ${sn} and ${d} \xF7 ${g} = ${sd}.`, `${fr2(n, d)} = ${fr2(sn, sd)}.`]
       };
     }
@@ -106773,15 +106796,15 @@ var FAMILIES158 = [
     form: "word",
     rung: 1,
     gen: () => {
-      const d1 = randInt(2, 6), d2 = d1 + randInt(1, 4), f = pick(FOODS);
-      const options = mc10(`1/${d1} of the ${f}`, [[`1/${d2} of the ${f}`, "The bigger bottom number means more pieces, so each piece is smaller.", "M_COMPARE_BIGGER_DENOMINATOR"], [`They are the same size`, "Pieces from different numbers of cuts are not the same size.", "M_COMPARE_BIGGER_DENOMINATOR"]]);
+      const d1 = randInt(2, 6), d2 = d1 + randInt(1, 4), f = pick(FOODS), [a, b] = [person(), person()];
+      if (a.name === b.name) return null;
+      const options = mc10(`${a.name}'s piece, cut into ${d1}`, [[`${b.name}'s piece, because ${d2} is more than ${d1}`, "The bigger bottom number means more pieces, so each piece is smaller.", "M_COMPARE_BIGGER_DENOMINATOR"], [`They are the same size, each took one piece`, `Each took one piece, but the pieces come from different cuts. A ${f} cut into more pieces has smaller pieces.`, "M_COMPARE_MATCHING_PART_EQUAL"]]);
       return {
-        question: `One ${f} is shared equally. ${person().name} gets 1/${d1} of it and Asha gets 1/${d2} of the same ${f}. Which piece is the largest?`,
+        question: `Two ${f}s of the same size are cut up. One is cut into ${d1} equal pieces and ${a.name} takes 1/${d1}. The other is cut into ${d2} equal pieces and ${b.name} takes 1/${d2}. Whose piece is bigger?`,
         options,
         instruction: "Choose the larger piece.",
-        hints: ["Picture the loaf cut into the two numbers of equal pieces.", "More pieces means each piece is smaller."],
-        steps: [`Cut into ${d1} pieces, each is bigger than if cut into ${d2} pieces.`, `1/${d1} is the larger.`],
-        two: true
+        hints: ["Picture each cut into its equal pieces.", "More pieces means each piece is smaller."],
+        steps: [`Cut into ${d1} pieces, each is bigger than if cut into ${d2} pieces.`, `1/${d1} is the larger.`]
       };
     }
   }),
@@ -106794,7 +106817,7 @@ var FAMILIES158 = [
       const d = randInt(5, 12), a = randInt(1, d - 2), b = a + randInt(1, d - a - 1), same = Math.random() < 0.5;
       const [x, y] = same ? [[a, d], [b, d]] : [[1, a + 1], [1, b + 1]];
       const right = same ? "<" : ">";
-      const options = mc10(right, [[right === "<" ? ">" : "<", same ? "With the same bottom number, the bigger top number is the bigger fraction." : "With the same top number, the smaller bottom number is the bigger fraction: its pieces are bigger.", same ? "M_COMPARE_BIGGER_DENOMINATOR" : "M_COMPARE_BIGGER_DENOMINATOR"], ["=", "The two fractions are not the same amount.", "M_COMPARE_DIFFERENT_WHOLES"]]);
+      const options = mc10(right, [[right === "<" ? ">" : "<", same ? `${fr2(...y)} has more of the same size pieces, so it is the bigger fraction. The sign opens towards the bigger number.` : `The same number of pieces, but cut into fewer parts, are bigger pieces. The sign opens towards the bigger number.`, same ? "M_COMPARE_SYMBOL_REVERSED" : "M_COMPARE_BIGGER_DENOMINATOR"], ["=", same ? "The pieces are the same size but the numbers of pieces are different, so the fractions are different." : "Each fraction is one piece, but the pieces are different sizes, so the fractions are different.", "M_COMPARE_MATCHING_PART_EQUAL"]]);
       return {
         question: `Of the same whole, compare ${fr2(...x)} and ${fr2(...y)}. Which symbol, <, > or =, makes ${fr2(...x)} ___ ${fr2(...y)} true?`,
         options,
@@ -106829,18 +106852,28 @@ var FAMILIES158 = [
     form: "word",
     rung: 2,
     gen: () => {
-      const [a, b] = pick([[[2, 3], [3, 4]], [[3, 4], [5, 6]], [[1, 2], [3, 8]], [[2, 3], [5, 12]], [[3, 4], [7, 12]], [[1, 3], [3, 8]]]).map((x2) => x2), swap = Math.random() < 0.5;
+      const [a, b] = pick([[[2, 3], [3, 4]], [[3, 4], [5, 6]], [[1, 2], [3, 8]], [[2, 3], [5, 12]], [[3, 4], [7, 12]], [[3, 4], [5, 8]], [[1, 2], [5, 12]], [[4, 5], [5, 6]]]), swap = Math.random() < 0.5;
       const [x, y] = swap ? [b, a] : [a, b], l = x[1] * y[1] / gcd(x[1], y[1]);
       const vx = x[0] * (l / x[1]), vy = y[0] * (l / y[1]);
       if (vx === vy) return null;
-      const bigger = vx > vy ? x : y, smaller = vx > vy ? y : x, [n1, n2] = [person().name, person().name];
-      const options = mc10(fr2(...bigger), [[fr2(...smaller), bigger[0] * smaller[1] === 0 ? "" : `Rename both to ${l}ths to compare: ${fr2(vx, l)} and ${fr2(vy, l)}.`, "M_COMPARE_BIGGER_TERMS"], ["They are equal", "Rename to a common denominator. The amounts are not equal.", "M_COMPARE_GAP_THINKING"]]);
+      const big = vx > vy ? x : y, small = vx > vy ? y : x, [n1, n2] = [person().name, person().name];
+      if (n1 === n2) return null;
+      const gap9 = (z) => z[1] - z[0] === 1;
+      const wrongs = [];
+      if (small[0] > big[0] && small[1] > big[1]) wrongs.push([fr2(...small), `You picked the fraction with the bigger numbers. Rename both as ${l}ths: ${fr2(vx, l)} and ${fr2(vy, l)}. The bigger numbers are not the bigger amount here.`, "M_COMPARE_BIGGER_TERMS"]);
+      else if (small[1] < big[1]) wrongs.push([fr2(...small), `You picked the fraction with fewer, bigger pieces. But the other has more pieces. Rename both as ${l}ths: ${fr2(vx, l)} and ${fr2(vy, l)}.`, "M_EQUIV_FEWER_PIECES_BIGGER"]);
+      else return null;
+      if (gap9(x) && gap9(y)) wrongs.push(["They planted the same amount", `Each is one part short of a whole, but the missing parts are different sizes. In ${l}ths they are ${fr2(vx, l)} and ${fr2(vy, l)}.`, "M_COMPARE_GAP_THINKING"]);
+      else wrongs.push([`The one with the bigger bottom number`, `A bigger bottom number means smaller pieces. Rename both as ${l}ths: ${fr2(vx, l)} and ${fr2(vy, l)}.`, "M_COMPARE_BIGGER_DENOMINATOR"]);
+      if (wrongs[1][2] === "M_COMPARE_BIGGER_DENOMINATOR" && wrongs[0][2] === "M_EQUIV_FEWER_PIECES_BIGGER") return null;
+      const options = mc10(fr2(...big), wrongs.map((w14) => w14[2] === "M_COMPARE_BIGGER_DENOMINATOR" ? [fr2(...x[1] > y[1] ? x : y), w14[1], w14[2]] : w14));
+      if (!options) return null;
       return {
         question: `${n1} planted ${fr2(...x)} of a plot with sukuma wiki. ${n2} planted ${fr2(...y)} of a plot of the same size with spinach. Who planted the larger part? Choose the larger fraction.`,
         options,
         instruction: "Choose the larger fraction.",
         hints: [`Rename both fractions as ${l}ths.`, "Compare the tops once the bottoms are equal."],
-        steps: [`${fr2(...x)} = ${fr2(vx, l)} and ${fr2(...y)} = ${fr2(vy, l)}.`, `${fr2(...bigger)} is larger.`]
+        steps: [`${fr2(...x)} = ${fr2(vx, l)} and ${fr2(...y)} = ${fr2(vy, l)}.`, `${fr2(...big)} is larger.`]
       };
     }
   }),
@@ -106850,13 +106883,23 @@ var FAMILIES158 = [
     form: "direct",
     rung: 2,
     gen: () => {
-      const [x, y] = pick([[[2, 3], [3, 4]], [[3, 4], [4, 5]], [[5, 12], [2, 3]], [[1, 2], [4, 8]], [[3, 6], [2, 4]], [[3, 5], [7, 10]], [[5, 6], [3, 4]]]);
+      const [x, y] = pick([[[2, 3], [3, 4]], [[3, 4], [4, 5]], [[1, 2], [4, 8]], [[3, 6], [2, 4]], [[5, 6], [3, 4]], [[3, 4], [5, 8]], [[2, 3], [5, 12]], [[1, 2], [2, 5]]]);
       const l = x[1] * y[1] / gcd(x[1], y[1]), vx = x[0] * (l / x[1]), vy = y[0] * (l / y[1]), right = vx > vy ? ">" : vx < vy ? "<" : "=";
-      const gap9 = x[0] / x[1] < y[0] / y[1] ? ">" : "<";
-      const others = ["<", ">", "="].filter((z) => z !== right);
-      const options = mc10(right, [[others[0], right === "=" ? "The fractions are equal. Rename both to a common denominator to see it." : "Rename both fractions to a common denominator before you decide.", right === "=" ? "M_COMPARE_BIGGER_TERMS" : others[0] === "=" ? "M_COMPARE_GAP_THINKING" : "M_COMPARE_BIGGER_TERMS"], [others[1], "The bigger numbers do not make the bigger fraction. Rename and compare.", others[1] === "=" ? "M_COMPARE_GAP_THINKING" : "M_COMPARE_BIGGER_TERMS"]]);
+      const gap9 = (z) => z[1] - z[0] === 1;
+      const why = (sym) => {
+        if (sym === "=") return gap9(x) && gap9(y) ? ["Each is one part short of a whole, but the missing parts are different sizes, so the fractions are not equal.", "M_COMPARE_GAP_THINKING"] : null;
+        const [F1, G17] = sym === ">" ? [x, y] : [y, x];
+        if (F1[0] > G17[0] && F1[1] > G17[1]) return ["You chose the fraction with the bigger numbers. Bigger numbers do not make a bigger fraction. Rename and compare.", "M_COMPARE_BIGGER_TERMS"];
+        if (F1[1] < G17[1]) return ["You chose the fraction with fewer pieces. Fewer pieces means bigger pieces, but there are more of them in the other. Rename and compare.", "M_EQUIV_FEWER_PIECES_BIGGER"];
+        if (F1[0] > G17[0]) return ["You looked only at the top numbers. Rename to the same bottom number first.", "M_ORDER_BY_NUMERATOR"];
+        return null;
+      };
+      const wrongs = ["<", ">", "="].filter((z) => z !== right).map((z) => [z, ...why(z) || []]).filter((w14) => w14[1]);
+      if (wrongs.length < 2) return null;
+      const options = mc10(right, wrongs);
+      if (!options || new Set(wrongs.map((w14) => w14[2])).size !== wrongs.length) return null;
       return {
-        question: `Which symbol, <, > or =, makes ${fr2(...x)} ___ ${fr2(...y)} true? Rename to a common denominator to decide.`,
+        question: `${person().name} compares two shares of the same loaf: ${fr2(...x)} and ${fr2(...y)}. Which symbol, <, > or =, makes ${fr2(...x)} ___ ${fr2(...y)} true? Rename to a common denominator to decide.`,
         options,
         instruction: "Choose the symbol.",
         hints: ["Find a number that both bottom numbers divide into.", "Compare the tops."],
@@ -106896,7 +106939,7 @@ var FAMILIES158 = [
       const unit = set.every((x) => x[0] === 1);
       const options = mc10(f(asc), [[f([...asc].reverse()), "That runs from the largest down. Increasing means smallest first.", "M_ORDER_DIRECTION"], [unit ? f([...set].sort((a, b) => b[1] - a[1]).reverse()) : f(ByNum), unit ? "The bigger the bottom number, the smaller the fraction." : "You compared only the top numbers. Rename to the same bottom number first.", unit ? "M_ORDER_BY_DENOMINATOR" : "M_ORDER_BY_NUMERATOR"], [f(ByDen), "The bottom number alone does not give the order. Rename the fractions.", "M_ORDER_BY_DENOMINATOR"]].filter((w14) => w14[0] !== f(asc)));
       return {
-        question: `Arrange these fractions in increasing order: ${f(shown)}.`,
+        question: `Three friends each ate part of a loaf of bread of the same size: ${f(shown)}. Arrange the fractions from the smallest share to the largest.`,
         options,
         instruction: "Choose the correct order, smallest first.",
         hints: ["Rename every fraction with the same bottom number.", "Put the smallest top number first, then write the original fractions."],
@@ -106914,14 +106957,20 @@ var FAMILIES158 = [
       const shown = shuffle12(set.map((x, i) => [x, names[i]]));
       const far = shown.find(([x]) => v(x) === v(desc[0]))[1];
       const l = set.reduce((a, x) => a * x[1] / gcd(a, x[1]), 1);
-      const ans = desc[0][0] * (l / desc[0][1]);
+      const ans = desc[0][0] * (l / desc[0][1]), tops = set.map((x) => x[0] * (l / x[1])).sort((a, b) => a - b), maxTop = Math.max(...set.map((x) => x[0]));
+      const t = (n) => `${n}/${l}`;
+      const wr = [];
+      if (maxTop !== ans) wr.push([t(maxTop), "You looked at the top numbers before renaming. The pieces are different sizes until every fraction has the same bottom number.", "M_ORDER_BY_NUMERATOR"]);
+      wr.push([t(tops[0]), "That is the child who walked the shortest distance. Furthest means the largest amount.", "M_ORDER_DIRECTION"], [t(l), `That is the whole kilometre, ${l} parts out of ${l}. No child walked a whole kilometre.`, "M_ORDER_BY_DENOMINATOR"]);
+      if (wr.length < 3) wr.push([t(ans + 1), "One too many. Multiply the top number by the same number as the bottom and count again.", "SLIP"]);
+      const options = mc10(t(ans), wr);
+      if (!options) return null;
       return {
-        question: `Three children walk to school: ${shown.map(([x, n]) => `${n} ${fr2(...x)} km`).join(", ")}. Rename the fractions as ${l}ths. How many ${l}ths of a kilometre did the child who walked furthest walk?`,
-        answer: ans,
-        wrong: [[Math.max(...set.map((x) => x[0])), "You looked at the numerators only. Rename to the same bottom number first.", "M_ORDER_BY_NUMERATOR"], [set.map((x) => x[0] * (l / x[1])).sort((a, b) => a - b)[0], "That is the child who walked the shortest distance. Furthest is the largest.", "M_ORDER_DIRECTION"], [l, "That is the number of parts in the whole. We want the top number.", "M_ORDER_BY_DENOMINATOR"], [set.map((x) => x[0] * (l / x[1])).sort((a, b) => a - b)[1], "That is the middle child.", "M_ORDER_DIRECTION"]],
+        question: `Three children walk to school: ${shown.map(([x, n]) => `${n} ${fr2(...x)} km`).join(", ")}. Rename the fractions as ${l}ths. Which renamed fraction shows the child who walked furthest?`,
+        options,
+        instruction: "Choose the renamed fraction.",
         hints: [`Rename each fraction as ${l}ths.`, "The largest top number is the furthest walk."],
-        steps: [`In ${l}ths: ${set.map((x) => `${x[0] * (l / x[1])}/${l}`).join(", ")}.`, `The largest is ${ans}/${l}, walked by ${far}.`],
-        chk: (v2) => v2 === Math.max(...set.map((x) => x[0] * (l / x[1])))
+        steps: [`In ${l}ths: ${set.map((x) => `${x[0] * (l / x[1])}/${l}`).join(", ")}.`, `The largest is ${ans}/${l}, walked by ${far}.`]
       };
     }
   }),
@@ -106951,10 +107000,13 @@ var FAMILIES158 = [
     gen: () => {
       const d = randInt(4, 12), a = randInt(1, d - 2), b = randInt(1, d - a - 1);
       if (a + b >= d) return null;
+      const rest = gcd(a + b, d) > 1;
+      const wrong = [[fr2(a + b, d + d), `The pieces stay the same size, so the bottom number stays ${d}. Do not add the bottom numbers.`, "M_ADD_DENOMINATORS"], [String(a + b), `The answer is a part of the packet, counted in ${d}ths. Keep the bottom number.`, "M_ADD_DROPS_DENOMINATOR"], [frs(a + b + 1, d), "One too many. Add the top numbers again.", "SLIP"]];
+      if (rest) wrong.push([fr2(a + b, d), `${a + b} and ${d} can both still be divided by ${gcd(a + b, d)}. Write it in its simplest form.`, "M_SIMPLIFY_STOPS_EARLY"]);
       return {
         question: `Mama used ${fr2(a, d)} of a packet of flour on Monday and ${fr2(b, d)} of the same packet on Tuesday. What fraction of the packet did she use altogether? Write it in its simplest form.`,
         answer: frs(a + b, d),
-        wrong: [[fr2(a + b, d + d), "The size of the pieces stays the same. Do not add the bottom numbers.", "M_ADD_DENOMINATORS"], [String(a + b), "The answer is a part of the packet. Keep the bottom number.", "M_ADD_DROPS_DENOMINATOR"], [fr2(a * b, d), "Add the top numbers, do not multiply.", "M_ADD_DENOMINATORS"], [frs(a + b + 1, d), "Check the addition of the top numbers.", "M_ADD_DROPS_DENOMINATOR"]].filter((w14) => w14[0] !== frs(a + b, d)),
+        wrong: wrong.filter((w14) => w14[0] !== frs(a + b, d)),
         hints: ["The pieces are all the same size.", "Add the number of pieces, keep the name of the piece."],
         steps: [`${a} ${d}ths + ${b} ${d}ths = ${a + b} ${d}ths.`, `${fr2(a + b, d)} = ${frs(a + b, d)}.`],
         chk: (v) => v === frs(a + b, d)
@@ -106967,13 +107019,14 @@ var FAMILIES158 = [
     form: "direct",
     rung: 2,
     gen: () => {
-      const d = randInt(5, 12), a = randInt(1, d - 3), t = randInt(a + 1, d - 1), b = t - a;
-      const options = mc10(String(b), [[String(t + a), "The top number in the answer is what the two parts make together. Take away the part you know.", "M_ADD_DROPS_DENOMINATOR"], [String(t), "That is the total, not the missing part.", "M_ADD_DROPS_DENOMINATOR"], [String(b + d), "Do not add the bottom number: it stays the same.", "M_ADD_DENOMINATORS"]]);
+      const d = randInt(5, 12), a = randInt(1, d - 3), t = randInt(a + 1, d - 1), b = t - a, p = person();
+      if (!farFrom(b, t + a, t, b + d)) return null;
+      const options = mc10(String(b), [[String(t + a), `You added the two numbers you can see. The missing top number is what must be added to ${a} to reach ${t}.`, "M_MISSING_ADDEND_ADDED"], [String(t), `That is the total, not the missing part. Put it in: ${a} + ${t} is more than ${t}.`, "M_MISSING_PICKS_SHOWN_NUMBER"], [String(b + d), `The bottom number stays ${d}. Only the top numbers are added.`, "M_ADD_DENOMINATORS"]]);
       return {
-        question: `Find the missing numerator: ${fr2(a, d)} + ?/${d} = ${fr2(t, d)}.`,
+        question: `${p.name} used ${fr2(a, d)} of a bag of rice on Monday. By Tuesday evening ${fr2(t, d)} of the bag was gone. Find the missing numerator for Tuesday: ${fr2(a, d)} + ?/${d} = ${fr2(t, d)}.`,
         options,
         instruction: "Choose the missing number.",
-        hints: ["The bottom numbers stay the same.", "What must be added to the top number a to reach the total?"],
+        hints: ["The bottom numbers stay the same.", `What must be added to the top number ${a} to reach the total?`],
         steps: [`${t} \u2212 ${a} = ${b}.`, `${fr2(a, d)} + ${fr2(b, d)} = ${fr2(t, d)}.`]
       };
     }
@@ -107007,7 +107060,7 @@ var FAMILIES158 = [
       return {
         question: `${p.name} had a whole pawpaw cut into ${d} equal pieces and ate ${fr2(a, d)} of it. What fraction of the pawpaw is left? Write it in its simplest form.`,
         answer: frs(d - a, d),
-        wrong: [[fr2(a, d), "That is the part eaten. Take it away from the whole, which is " + fr2(d, d) + ".", "M_SUB_WHOLE_NOT_RENAMED"], [String(d - a), "The answer is a part of the pawpaw, so keep the bottom number.", "M_SUB_DENOMINATORS"], [fr2(a - 1 > 0 ? a - 1 : 1, d), "Write the whole as " + fr2(d, d) + " and subtract.", "M_SUB_WHOLE_NOT_RENAMED"], [fr2(d + a, d), "Eating takes away, so subtract.", "M_SUB_DENOMINATORS"]].filter((w14) => w14[0] !== frs(d - a, d)),
+        wrong: [[fr2(a, d), `That is the part ${p.she} ate. Take it away from the whole pawpaw, which is ${fr2(d, d)}.`, "M_SUB_WHOLE_NOT_RENAMED"], [String(d - a), `The pieces stay ${d}ths, so the answer is a fraction. ${d - a} is a number of pieces, not a number of pawpaws.`, "M_SUB_DROPS_DENOMINATOR"], [fr2(d + a, d), `Eating takes some of the pawpaw away, so the amount left is less than the whole, not more. Subtract.`, "M_SUB_DONE_AS_ADDITION"], [frs(d - a + 1, d), "One too many. Take the pieces eaten from the whole again.", "SLIP"]].filter((w14) => w14[0] !== frs(d - a, d)),
         hints: [`Write the whole pawpaw as ${fr2(d, d)}.`, "Subtract the pieces eaten."],
         steps: [`${fr2(d, d)} \u2212 ${fr2(a, d)} = ${fr2(d - a, d)}.`, `Simplest form: ${frs(d - a, d)}.`],
         chk: (v) => v === frs(d - a, d)
@@ -107020,10 +107073,11 @@ var FAMILIES158 = [
     form: "direct",
     rung: 2,
     gen: () => {
-      const d = randInt(5, 12), t = randInt(4, d - 1), r = randInt(1, t - 1), b = t - r;
-      const options = mc10(String(b), [[String(t + r), "We are taking away. Find what must be taken away from the top number.", "M_SUB_DENOMINATORS"], [String(r), "That is what is left. We want what is taken away.", "M_SUB_WHOLE_NOT_RENAMED"], [String(b + d), "The bottom number stays the same.", "M_SUB_DENOMINATORS"]]);
+      const d = randInt(5, 12), t = randInt(4, d - 1), r = randInt(1, t - 1), b = t - r, p = person();
+      if (!farFrom(b, t + r, r)) return null;
+      const options = mc10(String(b), [[String(t + r), `You added the two numbers you can see. We are taking away, so find what must be taken from ${t} to leave ${r}.`, "M_SUB_DONE_AS_ADDITION"], [String(r), `That is what is left in the jug. We want what was poured out.`, "M_MISSING_PICKS_SHOWN_NUMBER"], [String(b + 1), `One too many. Take your number from ${t} and see if ${r} is left.`, "SLIP"]]);
       return {
-        question: `Find the missing numerator: ${fr2(t, d)} \u2212 ?/${d} = ${fr2(r, d)}.`,
+        question: `${p.name}'s jug held ${fr2(t, d)} litre of uji. Some was poured out and ${fr2(r, d)} litre is left. Find the missing numerator: ${fr2(t, d)} \u2212 ?/${d} = ${fr2(r, d)}.`,
         options,
         instruction: "Choose the missing number.",
         hints: ["The bottom numbers stay the same.", "What taken from the top number leaves the answer?"],
@@ -107044,7 +107098,7 @@ var FAMILIES158 = [
         question: "A water tank is filled to the fraction shown. Some water is used on two days. What fraction of the tank is left? Write it in its simplest form.",
         model: tbl3(["Day", "Water in the tank"], [["Start", fr2(start, d)], ["Used on Monday", fr2(used1, d)], ["Used on Tuesday", fr2(used2, d)]]),
         answer: frs(left, d),
-        wrong: [[frs(start - used1, d), "There was a second day of use. Subtract that too.", "M_SUB_DENOMINATORS"], [frs(start + used1 + used2, d), "Water used is taken away.", "M_SUB_DENOMINATORS"], [String(left), "Keep the bottom number: the pieces stay the same size.", "M_SUB_DENOMINATORS"], [frs(Math.abs(start - used1 + used2), d), "Both amounts used are subtracted.", "M_SUB_WHOLE_NOT_RENAMED"]].filter((w14) => w14[0] !== frs(left, d)),
+        wrong: [[frs(start - used1, d), "You took away only the water used on Monday. The water used on Tuesday must be taken away too.", "M_SUB_ONE_STEP_ONLY"], [frs(start + used1 + used2, d), "Water that is used is taken out of the tank, so there is less, not more. Subtract.", "M_SUB_DONE_AS_ADDITION"], [String(left), `The pieces stay ${d}ths, so the answer is a fraction. ${left} is a number of pieces, not of tanks.`, "M_SUB_DROPS_DENOMINATOR"], [frs(left + 1, d), "One too many. Take both amounts used from the start again.", "SLIP"]].filter((w14) => w14[0] !== frs(left, d)),
         hints: ["Take away the amount used on each day, one at a time.", "The bottom number stays the same."],
         steps: [`${start} \u2212 ${used1} \u2212 ${used2} = ${left}.`, `${fr2(left, d)} = ${frs(left, d)}.`],
         chk: (v) => v === frs(left, d)
@@ -107064,7 +107118,7 @@ var FAMILIES158 = [
       return {
         question: `${p.name} bought ${fr2(n1, d1)} kg of sugar and then ${fr2(n2, d2)} kg more. How many kilograms of sugar is that altogether? Write it in its simplest form.`,
         answer: frs(tn, d2),
-        wrong: [[fr2(n1 + n2, d1 + d2), "You added the tops and the bottoms. Rename one fraction so both have the same bottom number first.", "M_RENAME_ADD_DENOMINATORS"], [frs(n1 + n2, d2), `You changed the bottom number of ${fr2(n1, d1)} but not its top. Multiply both by ${k}.`, "M_RENAME_DENOMINATOR_ONLY"], [frs(n1 + (d2 - d1) + n2, d2), `You added ${d2 - d1} to the top and bottom. Multiply both by ${k} instead.`, "M_RENAME_ADDITIVE"], [frs(tn + 1, d2), "Check the addition after renaming.", "M_RENAME_DENOMINATOR_ONLY"]].filter((w14) => w14[0] !== frs(tn, d2)),
+        wrong: [[fr2(n1 + n2, d1 + d2), "You added the tops and the bottoms. Rename one fraction so both have the same bottom number first.", "M_RENAME_ADD_DENOMINATORS"], [frs(n1 + n2, d2), `You changed the bottom number of ${fr2(n1, d1)} but not its top. Multiply both by ${k}.`, "M_RENAME_DENOMINATOR_ONLY"], [frs(n1 + (d2 - d1) + n2, d2), `You added ${d2 - d1} to the top and bottom. Multiply both by ${k} instead.`, "M_RENAME_ADDITIVE"], [frs(tn + 1, d2), `One too many. Add the tops again after renaming ${fr2(n1, d1)} as ${fr2(n1 * k, d2)}.`, "SLIP"]].filter((w14) => w14[0] !== frs(tn, d2)),
         hints: [`Rename ${fr2(n1, d1)} with the bottom number ${d2}.`, "Add the tops, keep the bottom, then simplify."],
         steps: [`${fr2(n1, d1)} = ${fr2(n1 * k, d2)}.`, `${fr2(n1 * k, d2)} + ${fr2(n2, d2)} = ${fr2(tn, d2)} = ${frs(tn, d2)}.`],
         chk: (v) => v === frs(tn, d2)
@@ -107121,7 +107175,7 @@ var FAMILIES158 = [
       return {
         question: `${p.name} had ${fr2(n1, d1)} litre of milk and drank ${fr2(n2, d2)} litre. How much milk was left? Write it in its simplest form.`,
         answer: frs(t, d2),
-        wrong: [[fr2(n1 - n2 > 0 ? n1 - n2 : 1, d1 - d2 > 0 ? d1 - d2 : 1), "You subtracted the tops and the bottoms. Rename first.", "M_RENAME_SUB_DENOMINATORS"], [frs(n1 * 1 - n2 > 0 ? Math.abs(n1 - n2) : 1, d2), `You changed the bottom number of ${fr2(n1, d1)} but not its top.`, "M_RENAME_SUB_DENOMINATOR_ONLY"], [fr2(n2, d2), "That is the amount drunk. Take it from what she had.", "M_SUB_THINKS_IMPOSSIBLE"], [frs(t + 1, d2), "Check the subtraction after renaming.", "M_RENAME_SUB_DENOMINATOR_ONLY"]].filter((w14) => w14[0] !== frs(t, d2)),
+        wrong: [[fr2(Math.abs(n1 - n2) || 1, d2 - d1), "You subtracted the tops and also the bottoms. The pieces are different sizes until you rename one fraction.", "M_RENAME_SUB_DENOMINATORS"], [frs(n1 * 1 - n2 > 0 ? Math.abs(n1 - n2) : 1, d2), `You changed the bottom number of ${fr2(n1, d1)} to ${d2} but not its top, so the amount changed. Multiply the top by ${k} too.`, "M_RENAME_SUB_DENOMINATOR_ONLY"], [fr2(n2, d2), `That is the amount ${p.she} drank. The question asks how much was left.`, "M_SUB_THINKS_IMPOSSIBLE"], [frs(t + 1, d2), `One too many. Rename ${fr2(n1, d1)} as ${fr2(big, d2)} and subtract the tops again.`, "SLIP"]].filter((w14) => w14[0] !== frs(t, d2)),
         hints: [`Rename ${fr2(n1, d1)} as ${d2}ths. Is it more than ${fr2(n2, d2)}?`, "Subtract the tops, keep the bottom, then simplify."],
         steps: [`${fr2(n1, d1)} = ${fr2(big, d2)}.`, `${fr2(big, d2)} \u2212 ${fr2(n2, d2)} = ${fr2(t, d2)} = ${frs(t, d2)}.`],
         chk: (v) => v === frs(t, d2)
@@ -107134,11 +107188,11 @@ var FAMILIES158 = [
     form: "why",
     rung: 3,
     gen: () => {
-      const d1 = pick([2, 3, 4]), k = pick([2, 3, 4]), d2 = d1 * k, n1 = randInt(1, d1 - 1), n2 = n1 * k - randInt(1, 2);
+      const d1 = pick([2, 3, 4]), k = pick([2, 3, 4]), d2 = d1 * k, n1 = randInt(1, d1 - 1), n2 = n1 * k - randInt(1, 2), p = person();
       if (n2 < 1 || d2 > 12) return null;
-      const options = mc10(`Yes: ${fr2(n1, d1)} = ${fr2(n1 * k, d2)}, which is more than ${fr2(n2, d2)}`, [[`No, because ${n2} is more than ${n1}`, "The tops cannot be compared until the bottoms are the same. Rename first.", "M_SUB_THINKS_IMPOSSIBLE"], [`No, because ${d2} is more than ${d1}`, "A bigger bottom number means smaller pieces, so the second amount may be smaller.", "M_SUB_THINKS_IMPOSSIBLE"], [`Yes, but only by taking the smaller from the bigger digits`, "Rename first, then subtract the tops.", "M_RENAME_SUB_DENOMINATORS"]]);
+      const options = mc10(`Yes: ${fr2(n1, d1)} = ${fr2(n1 * k, d2)}, which is more than ${fr2(n2, d2)}`, [[`No, because ${n2} is more than ${n1}`, "The top numbers cannot be compared until the bottoms are the same. Rename first.", "M_SUB_THINKS_IMPOSSIBLE"], [`No, because ${d2} is more than ${d1}`, "A bigger bottom number means smaller pieces, so the second amount may be smaller, not bigger.", "M_COMPARE_BIGGER_DENOMINATOR"], [`Yes, because you take ${n2} from ${n1} and ${d2} from ${d1}`, "Subtracting the tops and the bottoms does not work with pieces of different sizes. Rename first, then subtract the tops.", "M_RENAME_SUB_DENOMINATORS"]]);
       return {
-        question: `Can ${fr2(n2, d2)} be taken away from ${fr2(n1, d1)} without going below zero?`,
+        question: `${p.name} has ${fr2(n1, d1)} litre of milk and wants to pour out ${fr2(n2, d2)} litre. Is there enough milk to do that?`,
         options,
         instruction: "Choose the answer and reason.",
         hints: ["Rename so both have the same bottom number.", "Compare the tops."],
@@ -107692,8 +107746,15 @@ function noDec(a, b, n) {
 // src/ai-tutor/content/families/g5c_eq.js
 var Q9 = "NUMBER.SIMPLE_EQUATIONS.";
 var LETTERS = ["n", "p", "x", "m", "a", "b"];
-var SHOP = ["mandazi", "exercise books", "pencils", "bananas", "eggs"];
+var ONE_OF = { mandazi: ["mandazi", "mandazi"], "exercise book": ["exercise book", "exercise books"], pencil: ["pencil", "pencils"], banana: ["banana", "bananas"], egg: ["egg", "eggs"] };
 var L14 = () => pick(LETTERS);
+var twoStep = () => {
+  for (let i = 0; i < 4e3; i++) {
+    const k = randInt(2, 6), x = randInt(5, 30), b = randInt(5, 30), c19 = k * x + b;
+    if (c19 % k === 0 && c19 % (k + b) === 0 && c19 / k - b > 0 && c19 / (k + b) !== x && c19 / k - b !== x && x > 1) return { k, x, b, c: c19 };
+  }
+  return null;
+};
 var FAMILIES159 = [
   // ---------------------------------------------------------------- EQ_MEANING
   fam36({
@@ -107702,14 +107763,14 @@ var FAMILIES159 = [
     form: "direct",
     rung: 1,
     gen: () => {
-      const l = L14(), a = randInt(3, 20), b = a + randInt(3, 40);
-      const options = mc10(`${l} + ${a} = ${b}`, [[`${l} + ${a}`, "This has no equals sign, so it does not say two things are equal. It is an expression.", "M_EXPRESSION_IS_EQUATION"], [`${b}`, "A single number is not an equation. An equation has an equals sign with a side on each side.", "M_NUMBER_IS_EQUATION"], [`${l} + ${a} =`, "An equals sign needs something on both sides. Here nothing follows it, so it is waiting for an answer, not saying two things are equal.", "M_EQUALS_MEANS_ANSWER"]]);
+      const l = L14(), a = randInt(6, 30), b = a + randInt(8, 40), p = person(), thing = pick(["mandazi", "eggs", "mangoes", "exercise books"]);
+      const options = mc10(`${l} + ${a} = ${b}`, [[`${l} + ${a}`, "This has no equals sign, so it does not say two things have the same value. It is an expression, not an equation.", "M_EXPRESSION_IS_EQUATION"], [`${b}`, "A single number says nothing is equal to anything. An equation needs an equals sign with something on each side.", "M_NUMBER_IS_EQUATION"], [`${l} + ${a} =`, "There is an equals sign but nothing after it, so it is waiting for an answer. An equation has something on both sides.", "M_EQUALS_MEANS_ANSWER"]]);
       return {
-        question: `${person().name} writes four lines on the board. Which of these is an equation?`,
+        question: `${p.name} had some ${thing}. ${p.She} was given ${a} more and now has ${b}. Let ${l} be the number ${p.she} had at first. Which of these is an equation for this story?`,
         options,
         instruction: "Choose the equation.",
         hints: ["An equation says two things have the same value.", "Look for an equals sign with something on each side."],
-        steps: [`${l} + ${a} = ${b} has an equals sign with a side on each side.`, "The others are an expression, a single number and a sum with nothing after the equals sign."]
+        steps: [`${l} + ${a} = ${b} has an equals sign with a side on each side: what ${p.she} had plus ${a} is the same as ${b}.`, "The others are an expression, a single number and a sum with nothing after the equals sign."]
       };
     }
   }),
@@ -107719,7 +107780,7 @@ var FAMILIES159 = [
     form: "word",
     rung: 2,
     gen: () => {
-      const a = randInt(5, 15), b = randInt(2, 9), c19 = randInt(2, 9), box = a + b - c19;
+      const a = randInt(5, 15), b = randInt(2, 9), c19 = randInt(3, 9), box = a + b - c19;
       if (box <= 0) return null;
       return {
         question: `A balance scale has ${a} + ${b} on one side and \u25A1 + ${c19} on the other side, and it balances. What number goes in the box?`,
@@ -107737,14 +107798,14 @@ var FAMILIES159 = [
     form: "why",
     rung: 2,
     gen: () => {
-      const l = pick(["p", "n", "c"]), item = pick(SHOP);
-      const options = mc10(`The cost of one, in shillings`, [[`The ${item.replace(/s$/, "")} itself, the actual thing`, "A letter in an equation stands for a number, not an object.", "M_LETTER_AS_OBJECT"], [`The name of the shop it comes from`, "A letter stands for an unknown number.", "M_LETTER_AS_OBJECT"], [`Any word the writer chooses`, "A letter stands for an unknown number, such as a cost or a count.", "M_LETTER_AS_OBJECT"]]);
+      const l = pick(["p", "n", "c"]), one4 = pick(Object.keys(ONE_OF)), sw = pick([5, 10]), cost = price(one4), q = cost + sw, p = person();
+      const options = mc10(`The cost of one ${one4}, in shillings`, [[`The ${one4} itself, the actual thing`, "A letter in an equation stands for a number, not for the thing you buy.", "M_LETTER_AS_OBJECT"], [`The total, sh ${q}`, `The ${q} is already written in the equation. The letter stands for the number we have not found yet.`, "M_LETTER_IS_GIVEN_NUMBER"], [`Any number we like, and it can change`, `In this equation the letter is one number only. Only ${cost} keeps both sides equal.`, "M_LETTER_ANY_NUMBER"]]);
       return {
-        question: `Let ${l} be the cost of one of ${person().name}'s ${item} in shillings. In the equation ${l} + 5 = 25, what does ${l} stand for?`,
+        question: `${p.name} bought one ${one4} and a sweet. ${p.She} paid sh ${q} in all, and the sweet cost sh ${sw}. ${p.She} writes ${l} + ${sw} = ${q}. What does ${l} stand for?`,
         options,
         instruction: "Choose what the letter stands for.",
-        hints: ["Is the letter an object or a number?", "Say the full meaning: let " + l + " be the number of shillings."],
-        steps: ["A letter stands for an unknown number.", "Here it is the number of shillings one costs."]
+        hints: ["Is the letter an object or a number?", "Which number in the story do we not know yet?"],
+        steps: ["A letter stands for an unknown number.", `Here it is the number of shillings the ${one4} cost.`]
       };
     }
   }),
@@ -107755,10 +107816,10 @@ var FAMILIES159 = [
     form: "direct",
     rung: 2,
     gen: () => {
-      const l = L14(), a = randInt(20, 90) * 10 / 10, b = randInt(100, 400), c19 = b - a, p = person();
+      const l = L14(), a = randInt(2, 9) * 10, b = randInt(10, 40) * 10, c19 = b - a, p = person();
       if (c19 <= 0) return null;
       const right = `${l} \u2212 ${a} = ${c19}`;
-      const options = mc10(right, [[`${a} \u2212 ${l} = ${c19}`, "Write the subtraction in the order of the story: start with what she had, then take away.", "M_SUBTRACTION_ORDER_REVERSED"], [`${l} = ${c19}`, "This gives only an answer. An equation shows the story.", "M_WRITES_ANSWER_NOT_EQUATION"], [`${l} + ${a} = ${c19}`, "She spent money, so the amount went down.", "M_SUBTRACTION_ORDER_REVERSED"]]);
+      const options = mc10(right, [[`${a} \u2212 ${l} = ${c19}`, `This takes the amount ${p.she} had away from ${a}. ${p.She} started with ${l} and then spent ${a}, so ${l} comes first.`, "M_SUBTRACTION_ORDER_REVERSED"], [`${l} = ${b}`, "This is only an answer, and it is not the right one. The question asks for an equation that shows what happened: start, spend, left.", "M_WRITES_ANSWER_NOT_EQUATION"], [`${l} + ${a} = ${c19}`, `${p.She} spent money, so ${p.her} money went down. A plus sign would mean ${p.she} was given more.`, "M_OPERATION_OPPOSITE_TO_STORY"]]);
       return {
         question: `${p.name} had some shillings. ${p.She} spent sh ${a} on bus fares and was left with sh ${c19}. Let ${l} be the number of shillings ${p.she} had. Which equation fits?`,
         options,
@@ -107774,15 +107835,15 @@ var FAMILIES159 = [
     form: "word",
     rung: 2,
     gen: () => {
-      const a = randInt(3, 9), b = randInt(15, 30), l = pick(["a", "e"]), [p, q] = [person(), person()];
+      const a = randInt(3, 9), b = randInt(15, 30), l = pick(["a", "e"]), [p, q] = [person(), person()], thing = pick(["eggs", "mangoes", "exercise books", "bananas"]);
       if (p.name === q.name) return null;
+      const options = mc10(`${l} + ${a} = ${b}`, [[`${b} + ${a} = ${l}`, `${p.name} has more than ${q.name}, so ${q.name} has fewer. Adding ${a} to ${b} gives a number bigger than ${p.name}'s.`, "M_KEYWORD_MORE_MEANS_ADD"], [`${l} \u2212 ${a} = ${b}`, `This says ${q.name} has ${b} after giving up ${a}, which makes ${q.name} the one with more. It is the wrong way round.`, "M_OPERATION_OPPOSITE_TO_STORY"], [`${l} = ${b} \u2212 ${a}`, `This already works out the answer. The question asks for an equation that shows the story: ${q.name}'s ${thing} plus ${a} make ${p.name}'s.`, "M_WRITES_ANSWER_NOT_EQUATION"]]);
       return {
-        question: `${p.name} has ${b} eggs. That is ${a} more than ${q.name} has. Let ${l} be the number of eggs ${q.name} has. The equation is ${l} + ${a} = ${b}. How many eggs does ${q.name} have?`,
-        answer: b - a,
-        wrong: [[b + a, "More than does not always mean add the numbers. The smaller number is what we want.", "M_KEYWORD_MORE_MEANS_ADD"], [a, "That is the difference.", "M_KEYWORD_MORE_MEANS_ADD"], [b, "That is what the first child has.", "M_KEYWORD_MORE_MEANS_ADD"], [b - a + 1, "Check by adding.", "M_WRITES_ANSWER_NOT_EQUATION"]],
-        hints: ["Draw two bars: one for each child.", "Take the difference from the bigger."],
-        steps: [`${l} + ${a} = ${b}.`, `${l} = ${b} \u2212 ${a} = ${b - a}.`],
-        chk: (v) => v + a === b
+        question: `${p.name} has ${b} ${thing}. That is ${a} more than ${q.name} has. Let ${l} be the number of ${thing} ${q.name} has. Which equation shows this?`,
+        options,
+        instruction: "Choose the equation.",
+        hints: ["Draw two bars: one for each child.", `Which child has fewer? What must be added to that child's ${thing} to match the other?`],
+        steps: [`${q.name}'s ${thing} plus ${a} more make ${p.name}'s ${b}.`, `${l} + ${a} = ${b}.`]
       };
     }
   }),
@@ -107810,14 +107871,15 @@ var FAMILIES159 = [
     form: "direct",
     rung: 2,
     gen: () => {
-      const k = randInt(3, 6), c19 = randInt(3, 9), g = k * c19, p = person();
-      const options = mc10(`${k}c = ${g}`, [[`c = ${k} \xD7 ${g}`, "The farmer has more goats than cows, so the goats are the bigger number: goats = k \xD7 cows.", "M_TIMES_AS_MANY_REVERSED"], [`c \xF7 ${k} = ${g}`, "There are fewer cows than goats, so the cows are not the bigger number.", "M_TIMES_AS_MANY_REVERSED"], [`${k} + c = ${g}`, "Times as many means multiply.", "M_REPEATED_COST_AS_ADD"]]);
+      const k = randInt(3, 6), c19 = randInt(3, 9), g = k * c19, p = person(), [big, small] = pick([["goats", "cows"], ["hens", "ducks"], ["sheep", "goats"]]), l = L14();
+      if (big === "goats" && small === "goats") return null;
+      const options = mc10(`${k}${l} = ${g}`, [[`${l} = ${k} \xD7 ${g}`, `${p.name} has more ${big} than ${small}, so the ${big} are the bigger number: ${big} = ${k} \xD7 ${small}. This makes the ${small} the bigger number.`, "M_TIMES_AS_MANY_REVERSED"], [`${l} = ${g} \xF7 ${k}`, `This already works out the answer. The question asks for an equation that shows the story: ${k} times the ${small} is the ${big}.`, "M_WRITES_ANSWER_NOT_EQUATION"], [`${k} + ${l} = ${g}`, `Times as many means multiply. ${k} times as many is ${k} \xD7 ${l}, not ${k} + ${l}.`, "M_REPEATED_COST_AS_ADD"]]);
       return {
-        question: `A farmer in Nakuru has ${k} times as many goats as cows. He has ${g} goats. Let c be the number of cows. Which equation fits?`,
+        question: `${p.name} keeps ${k} times as many ${big} as ${small}. ${p.She} has ${g} ${big}. Let ${l} be the number of ${small}. Which equation fits?`,
         options,
         instruction: "Choose the equation.",
-        hints: ["Which is more, cows or goats?", "The bigger number is the cows times the multiplier."],
-        steps: [`Goats = ${k} \xD7 cows, so ${k}c = ${g}.`, `c = ${c19}.`]
+        hints: [`Which is more, the ${small} or the ${big}?`, `The ${big} are the ${small} times ${k}.`],
+        steps: [`${big} = ${k} \xD7 ${small}, so ${k}${l} = ${g}.`, `${l} = ${c19}.`]
       };
     }
   }),
@@ -107828,7 +107890,7 @@ var FAMILIES159 = [
     rung: 2,
     gen: () => {
       const k = randInt(3, 6), each = randInt(4, 9), p = person();
-      const options = mc10(`x \xF7 ${k} = ${each}`, [[`${k} \xF7 x = ${each}`, "The total that is shared comes first in a division. The total is the unknown x.", "M_SHARING_ORDER_REVERSED"], [`x \xD7 ${k} = ${each}`, "The oranges are shared, so divide the total by the number of children.", "M_SHARING_ORDER_REVERSED"], [`x \u2212 ${k} = ${each}`, "Sharing equally is division, not subtraction.", "M_REPEATED_COST_AS_ADD"]]);
+      const options = mc10(`x \xF7 ${k} = ${each}`, [[`${k} \xF7 x = ${each}`, "The oranges that are shared come first in a division. The number of oranges is the unknown x.", "M_SHARING_ORDER_REVERSED"], [`x \xD7 ${k} = ${each}`, `Sharing among ${k} children cuts x into ${k} parts. Multiplying would make it bigger, not shared out.`, "M_OPERATION_OPPOSITE_TO_STORY"], [`x = ${each} \xD7 ${k}`, "This already works out the answer. The question asks for an equation that shows the story: x shared among the children gives each one their share.", "M_WRITES_ANSWER_NOT_EQUATION"]]);
       return {
         question: `${p.name} bought x oranges and shared them equally among ${k} children. Each child got ${each}. Which equation fits the story?`,
         options,
@@ -107844,11 +107906,12 @@ var FAMILIES159 = [
     form: "word",
     rung: 2,
     gen: () => {
-      const k = randInt(3, 8), b = randInt(8, 40), t = k * b, item = pick(SHOP);
+      const k = randInt(3, 8), one4 = pick(Object.keys(ONE_OF)), b = price(one4), t = k * b, item = ONE_OF[one4][1];
+      if (!farFrom(b, t - k, t * k, t - 10 * k)) return null;
       return {
-        question: `${k} ${item} each cost b shillings. Together they cost sh ${t}. The equation is ${k}b = ${t}. How many shillings does one cost?`,
+        question: `${k} ${item} are bought, all at the same price, and the seller is paid sh ${t} in all. Let b be the cost of one in shillings, so ${k}b = ${t}. How many shillings does one cost?`,
         answer: b,
-        wrong: [[t + k, `${k}b means ${k} \xD7 b, not ${k} + b.`, "M_REPEATED_COST_AS_ADD"], [t - k, `${k}b means ${k} \xD7 b.`, "M_REPEATED_COST_AS_ADD"], [t * k, "Multiplying would make the cost of one bigger than all of them.", "M_REPEATED_COST_AS_ADD"], [b + 1, "Check by multiplying.", "M_REPEATED_COST_AS_ADD"]],
+        wrong: [[t - k, `${k}b means ${k} \xD7 b, not ${k} + b. Taking ${k} away from ${t} treats it as an addition.`, "M_REPEATED_COST_AS_ADD"], [t * k, `One cannot cost more than all ${k} together. Multiplying makes it bigger. Divide to undo the multiplying.`, "M_MULTIPLIES_FOR_AX"], [t - 10 * k, `${k}b is ${k} \xD7 b, not ${k} tens and b. Do not read it as a number like ${k}0 + b.`, "M_3X_AS_TWO_DIGIT_NUMBER"], [b + 1, `One too many. Multiply your answer by ${k} to see if it gives ${t}.`, "SLIP"]],
         hints: [`${k}b means ${k} groups of b.`, "Divide the total by the number of items."],
         steps: [`${k} \xD7 b = ${t}.`, `b = ${t} \xF7 ${k} = ${b}.`],
         chk: (v) => v * k === t
@@ -107862,13 +107925,13 @@ var FAMILIES159 = [
     form: "word",
     rung: 1,
     gen: () => {
-      const l = L14(), a = randInt(10, 90), b = a + randInt(10, 90), p = person();
+      const l = L14(), a = randInt(10, 90), b = a + randInt(10, 90), p = person(), r = b - a;
       return {
-        question: `${p.name} thinks of a number. ${l} + ${a} = ${b}. Solve the equation: what is ${l}?`,
-        answer: b - a,
-        wrong: [[b + a, "You added. Use the opposite operation: take " + a + " from both sides.", "M_SAME_OPERATION_NOT_INVERSE"], [a, "That is the number added, not the unknown.", "M_SAME_OPERATION_NOT_INVERSE"], [b, "That is the total.", "M_SAME_OPERATION_NOT_INVERSE"], [b - a - 10, "Check by putting your answer back.", "M_SAME_OPERATION_NOT_INVERSE"]],
+        question: `${p.name} had some shillings. After an aunt gave ${p.herObj} sh ${a}, ${p.she} had sh ${b}. Solve ${l} + ${a} = ${b}. How many shillings did ${p.name} have at first?`,
+        answer: r,
+        wrong: [[b + a, `You added the two numbers. Undo the plus: take ${a} away from both sides.`, "M_SAME_OPERATION_NOT_INVERSE"], [b, `That is how much ${p.she} has now, after the gift. What ${p.she} had at first is less.`, "M_EQUALS_MEANS_ANSWER"], [r - 10, "Ten too small. Look at your tens when you take away, and check whether you borrowed correctly.", "SLIP"], [r + 1, `One too many. Add ${a} to your answer to see if it makes ${b}.`, "SLIP"]],
         hints: ["Take the same number from both sides.", "Check by putting the answer back in."],
-        steps: [`${l} + ${a} = ${b}.`, `${l} = ${b} \u2212 ${a} = ${b - a}.`],
+        steps: [`${l} + ${a} = ${b}.`, `${l} = ${b} \u2212 ${a} = ${r}.`],
         chk: (v) => v + a === b
       };
     }
@@ -107879,16 +107942,16 @@ var FAMILIES159 = [
     form: "direct",
     rung: 2,
     gen: () => {
-      const l = L14(), a = randInt(10, 60), b = randInt(10, 60), t = a + b, up = Math.random() < 0.5;
-      const eq2 = up ? `${l} \u2212 ${a} = ${b}` : `${t} \u2212 ${l} = ${b}`, r = up ? t : t - b;
-      const val = up ? a + b : t - b;
-      const options = mc10(String(val), [[String(up ? Math.abs(a - b) : t + b), up ? `${l} \u2212 ${a} = ${b} means ${l} is bigger than ${b}. Add ${a} to both sides.` : `${t} \u2212 ${l} = ${b} means ${l} is what is taken away. ${l} is less than ${t}.`, up ? "M_SUBTRACTS_FOR_X_MINUS" : "M_UNKNOWN_SUBTRACTED_TREATED_AS_X_MINUS"], [String(up ? b : t), "Check by putting it into the equation.", up ? "M_SAME_OPERATION_NOT_INVERSE" : "M_UNKNOWN_SUBTRACTED_TREATED_AS_X_MINUS"], [String(up ? a : b), "Check by putting it into the equation.", "M_SAME_OPERATION_NOT_INVERSE"]]);
+      const l = L14(), a = randInt(10, 60), b = randInt(10, 60), t = a + b, up = Math.random() < 0.5, p = person();
+      const val = up ? t : a, other = up ? Math.abs(a - b) : t + b;
+      if (!farFrom(val, other, b)) return null;
+      const options = mc10(String(val), [[String(other), up ? `${l} \u2212 ${a} = ${b} means ${l} is more than ${b}, because ${a} was taken away. Taking the smaller number from the bigger one cannot give it. Add ${a} to both sides.` : `${t} \u2212 ${l} = ${b} means ${l} is less than ${t}. Adding ${b} to ${t} makes it bigger.`, up ? "M_SUBTRACTS_FOR_X_MINUS" : "M_UNKNOWN_SUBTRACTED_TREATED_AS_X_MINUS"], [String(b), `That is the amount left over at the end. The answer is not the number after the equals sign.`, "M_EQUALS_MEANS_ANSWER"], [String(val + 10), "Ten too many. Check the tens when you add or take away, and see if you carried correctly.", "SLIP"]]);
       if (!options) return null;
       return {
-        question: up ? `A learner takes ${a} away from a number and has ${b} left. Which number did the learner start with?` : `A number is taken away from ${t} and ${b} is left. Which number was taken away?`,
+        question: up ? `${p.name} had some shillings. ${p.She} spent sh ${a} and was left with sh ${b}. Solve ${l} \u2212 ${a} = ${b}. How much did ${p.she} have at first?` : `${p.name} had sh ${t}. ${p.She} spent some on a book and was left with sh ${b}. Solve ${t} \u2212 ${l} = ${b}. How much did the book cost?`,
         options,
         instruction: "Choose the value.",
-        hints: [up ? "Read it as: I had some, took away " + a + ", and have " + b + " left." : "Read it as: from " + t + ", what do I take away to leave " + b + "?", "Check by putting your answer back."],
+        hints: [up ? `Read it as: I had some, spent ${a}, and have ${b} left.` : `Read it as: from ${t}, what do I take away to leave ${b}?`, "Check by putting your answer back."],
         steps: [up ? `${l} = ${b} + ${a} = ${val}.` : `${l} = ${t} \u2212 ${b} = ${val}.`, "Check by substitution."]
       };
     }
@@ -107917,12 +107980,13 @@ var FAMILIES159 = [
     form: "word",
     rung: 1,
     gen: () => {
-      const k = randInt(3, 9), x = randInt(4, 15), t = k * x, l = L14(), p = person();
+      const k = randInt(3, 9), x = randInt(11, 25), t = k * x, l = L14(), p = person();
+      if (!farFrom(x, t * k, t - k, t - 10 * k)) return null;
       return {
-        question: `${p.name} solves ${k}${l} = ${t}. Read ${k}${l} as ${k} \xD7 ${l}. What is ${l}?`,
+        question: `${p.name} shares bottle tops equally into ${k} bags for a game. There are ${t} bottle tops in all. Solve ${k}${l} = ${t}, where ${l} is the number in each bag (${k}${l} means ${k} \xD7 ${l}). What is ${l}?`,
         answer: x,
-        wrong: [[t * k, `${k}${l} means ${k} groups of ${l}. Divide to undo it.`, "M_MULTIPLIES_FOR_AX"], [t - k, "Use division to undo multiplication.", "M_MULTIPLIES_FOR_AX"], [t / k + (k > 5 ? 0 : 0) + 1, "Check by multiplying.", "M_3X_AS_TWO_DIGIT_NUMBER"], [Number(String(t).slice(-1)) || 1, `${k}${l} is not a two-digit number. It means ${k} \xD7 ${l}.`, "M_3X_AS_TWO_DIGIT_NUMBER"]],
-        hints: [`${k} groups of what make ${t}?`, "Divide both sides by " + k + "."],
+        wrong: [[t * k, `${k}${l} means ${k} groups of ${l}. Multiplying makes a number far bigger than ${t}. Divide to undo it.`, "M_MULTIPLIES_FOR_AX"], [t - k, `${k}${l} is ${k} \xD7 ${l}, not ${k} + ${l}. Taking ${k} away from ${t} treats it as an addition.`, "M_REPEATED_COST_AS_ADD"], [t - 10 * k, `${k}${l} does not mean ${k}0 + ${l}. It means ${k} \xD7 ${l}.`, "M_3X_AS_TWO_DIGIT_NUMBER"], [x + 1, `One too many. Multiply your answer by ${k} to see if it makes ${t}.`, "SLIP"]],
+        hints: [`${k} groups of what make ${t}?`, `Divide both sides by ${k}.`],
         steps: [`${k} \xD7 ${l} = ${t}.`, `${l} = ${t} \xF7 ${k} = ${x}.`],
         chk: (v) => v * k === t
       };
@@ -107934,11 +107998,11 @@ var FAMILIES159 = [
     form: "direct",
     rung: 2,
     gen: () => {
-      const a = randInt(3, 9), b = randInt(4, 12), x = a * b, l = L14();
-      const options = mc10(String(x), [[String(Math.floor(x / a) === b ? b : b), `${l} \xF7 ${a} = ${b} means ${l} shared by ${a} gives ${b}. Undo it by multiplying.`, "M_DIVIDES_FOR_X_DIV"], [String(x + a), "Check: divide your answer by " + a + ".", "M_DIVIDES_FOR_X_DIV"], [String(b - a > 0 ? b - a : b + a), "Use the opposite operation.", "M_DIVIDES_FOR_X_DIV"]]);
-      if (!options) return null;
+      const a = randInt(3, 9), b = randInt(5, 12), x = a * b, l = L14(), p = person();
+      const options = mc10(String(x), [[String(b - a), `${l} \xF7 ${a} = ${b} means ${l} shared among ${a} gives ${b}. Taking ${a} away from ${b} does not undo a sharing. Multiply instead.`, "M_DIVIDES_FOR_X_DIV"], [String(b), `That is how many each child gets. The question asks how many sweets there were in all, before sharing.`, "M_EQUALS_MEANS_ANSWER"], [String(x + 1), `One too many. Divide your answer by ${a} to see if each child gets ${b}.`, "SLIP"]]);
+      if (!options || b - a <= 0) return null;
       return {
-        question: `${person().name} shares a number of sweets equally among ${a} children and each gets ${b}. How many sweets were there? (${l} \xF7 ${a} = ${b}.)`,
+        question: `${p.name} shares a bag of sweets equally among ${a} children and each gets ${b}. Solve ${l} \xF7 ${a} = ${b}. How many sweets were in the bag?`,
         options,
         instruction: "Choose the value.",
         hints: [`${l} was shared among ${a} and each got ${b}.`, "Multiply to find the total."],
@@ -107970,11 +108034,11 @@ var FAMILIES159 = [
     form: "word",
     rung: 2,
     gen: () => {
-      const k = randInt(3, 8), s = randInt(15, 60), t = k * s;
+      const k = randInt(3, 8), s = randInt(2, 10) * 5, t = k * s;
       return {
         question: `${k} bunches of sukuma wiki cost sh ${t}. Let s be the cost of one bunch in shillings. Form the equation ${k}s = ${t} and solve it. How much does one bunch cost?`,
         answer: s,
-        wrong: [[t * k, "One bunch costs less than all of them. Divide, do not multiply.", "M_NO_REASONABLENESS_CHECK"], [t - k, "Use division to undo the multiplication.", "M_NUMBERS_IN_STORY_ORDER"], [t + k, "Use division to undo the multiplication.", "M_NUMBERS_IN_STORY_ORDER"], [s + 5, "Check by multiplying.", "M_NO_REASONABLENESS_CHECK"]],
+        wrong: [[t * k, `One bunch costs less than all ${k} together. Multiplying gives far too much. Divide.`, "M_NO_REASONABLENESS_CHECK"], [t - k, `${k}s means ${k} \xD7 s, not ${k} + s. Taking ${k} away from ${t} treats it as an addition.`, "M_REPEATED_COST_AS_ADD"], [t + k, `Adding ${k} to ${t} just follows the word "cost" and uses the two numbers in the order they come. Think what the story is saying: ${k} bunches at the same price make ${t}.`, "M_NUMBERS_IN_STORY_ORDER"], [s + 1, `One too many. Multiply your answer by ${k} to see if it makes ${t}.`, "SLIP"]],
         hints: ["Does one bunch cost more or less than all the bunches?", "Divide the total by the number of bunches."],
         steps: [`${k}s = ${t}, so s = ${t} \xF7 ${k} = ${s}.`, `One bunch costs sh ${s}.`],
         chk: (v) => v * k === t
@@ -107988,11 +108052,12 @@ var FAMILIES159 = [
     rung: 3,
     gen: () => {
       const off = randInt(5, 14), left = randInt(8, 30), p0 = off + left;
+      const w1 = [[Math.abs(left - off) || 1, `Some got off, so there were more passengers at first, not fewer. Take ${off} from p to get ${left}, so p is bigger than ${left}. Add them.`, "M_SUBTRACTS_FOR_X_MINUS"], [left, `That is how many are still on the matatu after the others got off. We want the number at first.`, "M_EQUALS_MEANS_ANSWER"], [p0 + 1, `One too many. Take ${off} off your answer to see if ${left} are left.`, "SLIP"]];
       return {
         question: `A matatu had some passengers. At Kisumu ${off} got off and ${left} remained. Let p be the number of passengers at first.`,
         parts: [
-          { prompt: "Which number is p? Write the number of passengers at first.", answer: p0, hint: `p \u2212 ${off} = ${left}.`, wrong: [[off + left + 0 - 2 * 0 - (off - left > 0 ? off - left : 0), "Do not operate on the numbers in the order of the story. The starting number is bigger than " + left + ".", "M_NUMBERS_IN_STORY_ORDER"], [left - off > 0 ? left - off : Math.abs(left - off) + 1, "Some got off, so there were more at first.", "M_NUMBERS_IN_STORY_ORDER"], [left, "That is how many remained.", "M_NUMBERS_IN_STORY_ORDER"]] },
-          { prompt: "Check: how many passengers remain after " + off + " get off, if p is your answer?", answer: left, hint: "Take " + off + " from your answer.", wrong: [[p0 + off, "Some got off. Subtract.", "M_NO_REASONABLENESS_CHECK"], [off, "That is how many got off.", "M_NO_REASONABLENESS_CHECK"], [p0, "That is the start. Take away those who got off.", "M_NO_REASONABLENESS_CHECK"]] }
+          { prompt: "Which number is p? Write the number of passengers at first.", answer: p0, hint: `p \u2212 ${off} = ${left}.`, wrong: w1 },
+          { prompt: `Check: how many passengers remain after ${off} get off, if p is your answer?`, answer: left, hint: `Take ${off} from your answer.`, wrong: [[p0 + off, `${off} got off, so the number goes down. Taking ${off} away is subtraction, not addition.`, "M_OPERATION_OPPOSITE_TO_STORY"], [p0, `That is the number at the start. Take away the ${off} who got off.`, "M_NO_REASONABLENESS_CHECK"]] }
         ],
         steps: [`p \u2212 ${off} = ${left}, so p = ${left} + ${off} = ${p0}.`, `Check: ${p0} \u2212 ${off} = ${left}.`],
         chk: (x, v) => v[0] - off === left && v[1] === left
@@ -108005,10 +108070,10 @@ var FAMILIES159 = [
     form: "why",
     rung: 3,
     gen: () => {
-      const k = randInt(3, 8), s = randInt(15, 60), t = k * s, wrong = t * k;
-      const options = mc10(`No, one bunch costs less than all`, [[`Yes, because ${k} times the total works`, "Check the answer against the story. A single bunch should cost less than all of them.", "M_NO_REASONABLENESS_CHECK"], [`Yes, because it is a whole number`, "A whole number is not enough. The answer must make sense in the story.", "M_NO_REASONABLENESS_CHECK"], [`No, it should be a sum of the two`, "Use division, not addition.", "M_NUMBERS_IN_STORY_ORDER"]]);
+      const k = randInt(3, 8), s = randInt(2, 10) * 5, t = k * s, wrong = t * k, p = person();
+      const options = mc10(`No. One bunch costs less than all ${k} together.`, [[`Yes. Multiplying the total by ${k} is how to find the cost of one bunch.`, `Multiplying makes the answer bigger than ${t}. To find one share of ${t}, divide it into ${k} equal parts.`, "M_MULTIPLIES_FOR_AX"], [`Yes. A whole number is always a sensible answer.`, "A whole number is not enough. The answer must make sense in the story, and one bunch cannot cost more than all of them.", "M_NO_REASONABLENESS_CHECK"], [`No. It should be ${t} + ${k} = ${t + k}.`, `Adding the two numbers does not fit the story. ${k} bunches at one price make ${t}, so share ${t} into ${k} equal parts.`, "M_NUMBERS_IN_STORY_ORDER"]]);
       return {
-        question: `${k} bunches of sukuma wiki cost sh ${t}. ${person().name} says one bunch costs sh ${wrong}. Is the answer sensible?`,
+        question: `${k} bunches of sukuma wiki cost sh ${t}. ${p.name} says one bunch costs sh ${wrong}. Is the answer sensible?`,
         options,
         instruction: "Choose the best answer.",
         hints: ["Does one bunch cost more or less than all the bunches?", "Check by multiplying the answer by the number of bunches."],
@@ -108023,11 +108088,14 @@ var FAMILIES159 = [
     form: "word",
     rung: 3,
     gen: () => {
-      const k = randInt(2, 6), x = randInt(5, 30), b = randInt(5, 40), c19 = k * x + b, p = person();
+      const D8 = twoStep();
+      if (!D8) return null;
+      const { k, x, b, c: c19 } = D8, p = person();
+      if (!farFrom(x, c19 / k - b, c19 / (k + b), c19 - b)) return null;
       return {
         question: `${p.name} buys ${k} pens at sh p each and a sweet for sh ${b}. The total is sh ${c19}. The equation is ${k}p + ${b} = ${c19}. How much does one pen cost?`,
         answer: x,
-        wrong: [[c19 / k - b > 0 ? Math.round((c19 / k - b) * 100) / 100 : x + 1, "You divided first and then subtracted. Undo the addition first: take the sweet off the total.", "M_UNDOES_IN_WRONG_ORDER"], [Math.round((c19 - b + k) * 10) / 10, "After taking away the sweet, divide to find one pen.", "M_COMBINES_UNLIKE_TERMS"], [c19 - b, "That is the cost of all the pens together.", "M_UNDOES_IN_WRONG_ORDER"], [Math.round(c19 / (k + b) * 100) / 100 || 1, `Terms with p and plain numbers cannot be joined into one kind of term.`, "M_COMBINES_UNLIKE_TERMS"]],
+        wrong: [[c19 / k - b, "You divided the whole total by the number of pens first, then took the sweet away. Undo the plus first: take the sweet off the total, then share.", "M_UNDOES_IN_WRONG_ORDER"], [c19 / (k + b), `You joined ${k}p and ${b} into one ${k + b}p. The pens and the sweet are different kinds of thing, so they cannot be joined.`, "M_COMBINES_UNLIKE_TERMS"], [c19 - b, `That is the cost of all ${k} pens together. You still have to share it among the pens. A pen cannot cost that much.`, "M_NO_REASONABLENESS_CHECK"], [x + 1, `One too many. Put your answer in: ${k} \xD7 it + ${b} should make ${c19}.`, "SLIP"]],
         hints: [`Take the sh ${b} for the sweet off both sides first.`, "Then share what is left among the pens."],
         steps: [`${k}p = ${c19} \u2212 ${b} = ${c19 - b}.`, `p = ${c19 - b} \xF7 ${k} = ${x}.`],
         chk: (v) => k * v + b === c19
@@ -108040,11 +108108,14 @@ var FAMILIES159 = [
     form: "direct",
     rung: 3,
     gen: () => {
-      const k = randInt(2, 6), x = randInt(4, 15), b = randInt(5, 30), c19 = k * x + b;
-      const options = mc10(String(x), [[String(Math.round((c19 / k - b) * 100) / 100), "Divide only after taking the added number off. Undo in the opposite order.", "M_UNDOES_IN_WRONG_ORDER"], [String(Math.round(c19 / (k + b) * 100) / 100), `Terms with x and plain numbers cannot be joined into one kind of term.`, "M_COMBINES_UNLIKE_TERMS"], [String(c19 - b), "That is the value of " + k + "x, not x.", "M_UNDOES_IN_WRONG_ORDER"]]);
+      const D8 = twoStep();
+      if (!D8) return null;
+      const { k, x, b, c: c19 } = D8, p = person();
+      if (!farFrom(x, c19 / k - b, c19 / (k + b), c19 - b)) return null;
+      const options = mc10(String(x), [[String(c19 / k - b), "You divided the whole total first, then took the added number away. Undo the plus first, then divide.", "M_UNDOES_IN_WRONG_ORDER"], [String(c19 / (k + b)), `You joined ${k}x and ${b} into one ${k + b}x. Letters and plain numbers are different kinds of thing, so they cannot be joined.`, "M_COMBINES_UNLIKE_TERMS"], [String(c19 - b), `That is the value of ${k}x, not x. One more step is needed: divide by ${k}.`, "M_NO_REASONABLENESS_CHECK"]]);
       if (!options) return null;
       return {
-        question: `${person().name} must find x when ${k}x + ${b} = ${c19}, undoing the steps in the right order. Which value of x is right?`,
+        question: `${p.name} is working out how many sweets x are in each packet. ${p.She} has ${k} packets and ${b} loose sweets, ${c19} sweets in all, so ${k}x + ${b} = ${c19}. Which value of x is right?`,
         options,
         instruction: "Choose the value.",
         hints: [`First take ${b} from both sides.`, `Then divide both sides by ${k}.`],

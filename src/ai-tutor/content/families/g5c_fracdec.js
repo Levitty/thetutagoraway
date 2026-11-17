@@ -2,7 +2,7 @@
 // GRADE 5 MATHEMATICS, NUMBERS: FRACTIONS (9 skills) and DECIMALS (9 skills).
 // Fractions keep denominators to 12 or under, as the design says.
 // ============================================================================
-import { fam, randInt, pick, shuffle, round, commas, person, sh, mc, tbl, gcd } from './g5c_lib.js';
+import { fam, randInt, pick, shuffle, round, commas, person, sh, mc, tbl, gcd, farFrom } from './g5c_lib.js';
 
 const F = 'NUMBER.FRACTIONS.', DC = 'NUMBER.DECIMALS.';
 const fr = (n, d) => `${n}/${d}`;
@@ -21,16 +21,17 @@ export const FAMILIES = [
     gen: () => {
       const d = pick([2, 3, 4, 5, 6]), k = randInt(2, 4), n = randInt(1, d - 1);
       if (d * k > 24 || gcd(n, d) !== 1) return null;
-      const p = person(), f = pick(FOODS);
+      const p = person(), f = pick(FOODS), add = n + (d * k - d);
+      if (!farFrom(n * k, add, n)) return null;
       return { question: `${p.name} ate ${fr(n, d)} of a ${f}. The ${f} is cut into ${d * k} equal pieces instead. How many of the smaller pieces make the same amount?`, answer: n * k,
-        wrong: [[n + (d * k - d), 'You added the same number to the top and bottom. To keep the same amount, multiply both by the same number instead.', 'M_EQUIV_ADDITIVE'], [n, 'The number of pieces changed on the bottom, so the top must change too.', 'M_EQUIV_ONE_TERM_ONLY'], [d * k, 'That is the number of pieces in the whole, not the number eaten.', 'M_EQUIV_ONE_TERM_ONLY'], [n * k + 1, 'Multiply the top by the same number as the bottom.', 'M_EQUIV_ADDITIVE']],
+        wrong: [[add, `You added ${d * k - d} to the top, as you did to the bottom. That changes the amount. Multiply the top by ${k}, the same as the bottom.`, 'M_EQUIV_ADDITIVE'], [n, `The bottom changed from ${d} to ${d * k}, but you left the top as ${n}. ${n} of the smaller pieces is less than ${p.name} ate.`, 'M_EQUIV_ONE_TERM_ONLY'], [n * k + 1, `One too many. ${d * k} pieces is ${k} times as many as ${d}, so ${n} pieces become ${n} × ${k}.`, 'SLIP'], [n * k - 1, `One too few. Multiply the top ${n} by ${k} and count again.`, 'SLIP']],
         hints: [`How many times bigger is ${d * k} than ${d}?`, 'Do the same to the top number.'], steps: [`${d} × ${k} = ${d * k}, so multiply the top by ${k} as well.`, `${n} × ${k} = ${n * k}. ${fr(n, d)} = ${fr(n * k, d * k)}.`], chk: (v) => v * d === n * d * k };
     } }),
   fam({ id: 'g5c.fra.eq.who-more', cs: `${F}EQUIVALENT_FRACTIONS`, form: 'why', rung: 2,
     gen: () => {
       const d = pick([2, 3, 4]), k = pick([2, 3, 4]), n = randInt(1, d - 1), [a, b] = [person(), person()];
       if (gcd(n, d) !== 1 || a.name === b.name) return null;
-      const options = mc('They ate the same amount', [[`${b.name} ate more, because ${fr(n * k, d * k)} has bigger numbers`, 'Bigger numbers on top and bottom do not mean a bigger amount here. The pieces are smaller.', 'M_EQUIV_BIGGER_NUMBERS_BIGGER'], [`${a.name} ate more, because ${fr(n, d)} has fewer pieces`, 'Compare how much of the whole is eaten, not the number of pieces.', 'M_EQUIV_BIGGER_NUMBERS_BIGGER'], [`${b.name} ate more, because ${d * k} is more than ${d}`, 'The bigger bottom number means smaller pieces.', 'M_EQUIV_ADDITIVE']]);
+      const options = mc('They ate the same amount', [[`${b.name} ate more, because ${fr(n * k, d * k)} has bigger numbers`, `Bigger numbers on top and bottom do not make a bigger amount. The pieces of ${fr(n * k, d * k)} are smaller, so more of them make the same share.`, 'M_EQUIV_BIGGER_NUMBERS_BIGGER'], [`${a.name} ate more, because ${fr(n, d)} has fewer pieces`, `Fewer pieces means each piece is bigger, but ${b.name} has more pieces. Put the shaded parts side by side: they are the same.`, 'M_EQUIV_FEWER_PIECES_BIGGER'], [`${b.name} ate more, because ${d * k} is more than ${d}`, `A bigger bottom number means smaller pieces, not a bigger share. It does not tell us who ate more.`, 'M_COMPARE_BIGGER_DENOMINATOR']]);
       return { question: `${a.name} ate ${fr(n, d)} of a chapati. ${b.name} ate ${fr(n * k, d * k)} of an equal chapati. Who ate more?`, options, instruction: 'Choose the best answer.',
         hints: [`Cut each piece of ${fr(n, d)} into ${k} smaller pieces.`, 'Do you eat more or the same?'], steps: [`${fr(n, d)} = ${fr(n * k, d * k)} when both are multiplied by ${k}.`, 'The two amounts are equal.'] };
     } }),
@@ -47,20 +48,20 @@ export const FAMILIES = [
   // ---------------------------------------------------------------- SIMPLIFY_FRACTIONS
   fam({ id: 'g5c.fra.simp.mandazi', cs: `${F}SIMPLIFY_FRACTIONS`, form: 'word', rung: 2,
     gen: () => {
-      const g = pick([2, 3, 4, 5, 6]), [sn, sd] = pick([[1, 2], [2, 3], [3, 4], [1, 3], [3, 5], [1, 4], [5, 6], [2, 5]]), n = sn * g, d = sd * g;
-      if (d > 50 || g < 2) return null;
-      const stops = simp(n, d), half = gcd(n, d) % 2 === 0 ? 2 : gcd(n, d) % 3 === 0 ? 3 : gcd(n, d);
-      const early = [n / half, d / half];
+      const g = pick([4, 6, 8, 9, 12]), [sn, sd] = pick([[1, 2], [2, 3], [3, 4], [1, 3], [3, 5], [1, 4], [5, 6], [2, 5]]), n = sn * g, d = sd * g;
+      if (d > 50) return null;
+      const small = [2, 3].find(x => g % x === 0), early = [n / small, d / small];
+      if (!farFrom(1, n - g)) return null;
       return { question: `${person().name} ate ${n} of the ${d} mandazi in a pot. What fraction was eaten, in its simplest form?`, answer: fr(sn, sd),
-        wrong: [[fr(n - g + 0, d - g + 0), `You took ${g} from the top and bottom. Divide both by a number instead.`, 'M_SIMPLIFY_SUBTRACT'], [fr(n, d), 'That is not yet in its simplest form. Divide the top and bottom by a common factor.', 'M_SIMPLIFY_STOPS_EARLY'], [fr(early[0], early[1]), 'You can still divide both numbers by something. Keep going until only 1 divides both.', 'M_SIMPLIFY_STOPS_EARLY'], [fr(sd, sn), 'The part eaten goes on top.', 'M_SIMPLIFY_SUBTRACT']].filter(w => w[0] !== fr(sn, sd)),
+        wrong: [[fr(n - g, d - g), `You took ${g} away from the top and from the bottom. That changes the amount. Divide both by the same number instead.`, 'M_SIMPLIFY_SUBTRACT'], [fr(early[0], early[1]), `You divided by ${small}, but ${early[0]} and ${early[1]} can still both be divided by ${g / small}. Keep going until only 1 divides both.`, 'M_SIMPLIFY_STOPS_EARLY'], [fr(sd, sn), `The part that was eaten goes on top and the whole pot goes on the bottom. You wrote it upside down.`, 'M_FRACTION_UPSIDE_DOWN']],
         hints: ['Find a number that divides both the top and the bottom.', 'Check whether anything still divides both.'], steps: [`${n} and ${d} are both divisible by ${g}.`, `${n} ÷ ${g} = ${sn} and ${d} ÷ ${g} = ${sd}.`], chk: (v) => v === fr(sn, sd) };
     } }),
   fam({ id: 'g5c.fra.simp.is-it', cs: `${F}SIMPLIFY_FRACTIONS`, form: 'why', rung: 2,
     gen: () => {
-      const g = pick([2, 3, 4]), [sn, sd] = pick([[2, 3], [3, 4], [1, 2], [3, 5], [2, 5]]), n = sn * g, d = sd * g;
-      const options = mc(`No. Both ${n} and ${d} divide by ${g}, giving ${fr(sn, sd)}`, [[`Yes, because ${n} is smaller than ${d}`, 'A fraction is simplest only when no number except 1 divides both parts.', 'M_SIMPLIFY_STOPS_EARLY'], [`Yes, because it is a proper fraction`, 'Any proper fraction may still be simplified.', 'M_SIMPLIFY_STOPS_EARLY'], [`No. Take ${g} from each to get ${fr(n - g, d - g)}`, `Subtracting ${g} changes the amount. Divide both parts instead.`, 'M_SIMPLIFY_SUBTRACT']]);
-      return { question: `Is ${fr(n, d)} in its simplest form? Choose the best answer.`, options, instruction: 'Choose the answer and the reason.',
-        hints: ['Look for a number that divides both the top and bottom.', 'If there is one, the fraction can be simplified.'], steps: [`${n} ÷ ${g} = ${sn} and ${d} ÷ ${g} = ${sd}.`, `${fr(n, d)} = ${fr(sn, sd)}.`] };
+      const g = pick([4, 6, 9, 12]), [sn, sd] = pick([[2, 3], [3, 4], [1, 2], [3, 5], [2, 5]]), n = sn * g, d = sd * g, small = [2, 3].find(x => g % x === 0);
+      const options = mc(`No. Both ${n} and ${d} divide by ${g}, giving ${fr(sn, sd)}`, [[`Yes, because ${n} is smaller than ${d}`, `Being smaller than one whole does not make a fraction simplest. Look for a number that divides both ${n} and ${d}.`, 'M_SIMPLEST_BY_LOOKS'], [`No. Dividing both by ${small} gives ${fr(n / small, d / small)}, which is the simplest form`, `You divided by ${small}, but ${n / small} and ${d / small} still both divide by ${g / small}. Keep going.`, 'M_SIMPLIFY_STOPS_EARLY'], [`No. Take ${g} from each to get ${fr(n - g, d - g)}`, `Taking ${g} away changes the amount. Divide both parts by the same number instead.`, 'M_SIMPLIFY_SUBTRACT']]);
+      return { question: `${person().name} says ${fr(n, d)} is not in its simplest form. Which answer shows the simplest form and why?`, options, instruction: 'Choose the answer and the reason.',
+        hints: ['Look for a number that divides both the top and bottom.', 'Keep dividing until only 1 divides both.'], steps: [`${n} ÷ ${g} = ${sn} and ${d} ÷ ${g} = ${sd}.`, `${fr(n, d)} = ${fr(sn, sd)}.`] };
     } }),
   fam({ id: 'g5c.fra.simp.spot', cs: `${F}SIMPLIFY_FRACTIONS`, form: 'spot', rung: 3,
     gen: () => {
@@ -74,17 +75,18 @@ export const FAMILIES = [
   // ---------------------------------------------------------------- COMPARE_LIKE_FRACTIONS
   fam({ id: 'g5c.fra.cl.loaf', cs: `${F}COMPARE_LIKE_FRACTIONS`, form: 'word', rung: 1,
     gen: () => {
-      const d1 = randInt(2, 6), d2 = d1 + randInt(1, 4), f = pick(FOODS);
-      const options = mc(`1/${d1} of the ${f}`, [[`1/${d2} of the ${f}`, 'The bigger bottom number means more pieces, so each piece is smaller.', 'M_COMPARE_BIGGER_DENOMINATOR'], [`They are the same size`, 'Pieces from different numbers of cuts are not the same size.', 'M_COMPARE_BIGGER_DENOMINATOR']]);
-      return { question: `One ${f} is shared equally. ${person().name} gets 1/${d1} of it and Asha gets 1/${d2} of the same ${f}. Which piece is the largest?`, options, instruction: 'Choose the larger piece.',
-        hints: ['Picture the loaf cut into the two numbers of equal pieces.', 'More pieces means each piece is smaller.'], steps: [`Cut into ${d1} pieces, each is bigger than if cut into ${d2} pieces.`, `1/${d1} is the larger.`], two: true };
+      const d1 = randInt(2, 6), d2 = d1 + randInt(1, 4), f = pick(FOODS), [a, b] = [person(), person()];
+      if (a.name === b.name) return null;
+      const options = mc(`${a.name}'s piece, cut into ${d1}`, [[`${b.name}'s piece, because ${d2} is more than ${d1}`, 'The bigger bottom number means more pieces, so each piece is smaller.', 'M_COMPARE_BIGGER_DENOMINATOR'], [`They are the same size, each took one piece`, `Each took one piece, but the pieces come from different cuts. A ${f} cut into more pieces has smaller pieces.`, 'M_COMPARE_MATCHING_PART_EQUAL']]);
+      return { question: `Two ${f}s of the same size are cut up. One is cut into ${d1} equal pieces and ${a.name} takes 1/${d1}. The other is cut into ${d2} equal pieces and ${b.name} takes 1/${d2}. Whose piece is bigger?`, options, instruction: 'Choose the larger piece.',
+        hints: ['Picture each cut into its equal pieces.', 'More pieces means each piece is smaller.'], steps: [`Cut into ${d1} pieces, each is bigger than if cut into ${d2} pieces.`, `1/${d1} is the larger.`] };
     } }),
   fam({ id: 'g5c.fra.cl.symbol', cs: `${F}COMPARE_LIKE_FRACTIONS`, form: 'direct', rung: 2,
     gen: () => {
       const d = randInt(5, 12), a = randInt(1, d - 2), b = a + randInt(1, d - a - 1), same = Math.random() < 0.5;
       const [x, y] = same ? [[a, d], [b, d]] : [[1, a + 1], [1, b + 1]];
       const right = same ? '<' : '>';
-      const options = mc(right, [[right === '<' ? '>' : '<', same ? 'With the same bottom number, the bigger top number is the bigger fraction.' : 'With the same top number, the smaller bottom number is the bigger fraction: its pieces are bigger.', same ? 'M_COMPARE_BIGGER_DENOMINATOR' : 'M_COMPARE_BIGGER_DENOMINATOR'], ['=', 'The two fractions are not the same amount.', 'M_COMPARE_DIFFERENT_WHOLES']]);
+      const options = mc(right, [[right === '<' ? '>' : '<', same ? `${fr(...y)} has more of the same size pieces, so it is the bigger fraction. The sign opens towards the bigger number.` : `The same number of pieces, but cut into fewer parts, are bigger pieces. The sign opens towards the bigger number.`, same ? 'M_COMPARE_SYMBOL_REVERSED' : 'M_COMPARE_BIGGER_DENOMINATOR'], ['=', same ? 'The pieces are the same size but the numbers of pieces are different, so the fractions are different.' : 'Each fraction is one piece, but the pieces are different sizes, so the fractions are different.', 'M_COMPARE_MATCHING_PART_EQUAL']]);
       return { question: `Of the same whole, compare ${fr(...x)} and ${fr(...y)}. Which symbol, <, > or =, makes ${fr(...x)} ___ ${fr(...y)} true?`, options, instruction: 'Choose the symbol.',
         hints: [same ? 'The pieces are the same size, so count the pieces.' : 'The same number of pieces, but of different sizes.', 'A smaller bottom number gives bigger pieces.'], steps: [same ? `${a} pieces is less than ${b} pieces of the same size.` : `Cutting into ${a + 1} pieces gives bigger pieces than cutting into ${b + 1} pieces.`, `${fr(...x)} ${right} ${fr(...y)}.`] };
     } }),
@@ -100,23 +102,44 @@ export const FAMILIES = [
   // ---------------------------------------------------------------- COMPARE_UNLIKE_FRACTIONS
   fam({ id: 'g5c.fra.cu.plot', cs: `${F}COMPARE_UNLIKE_FRACTIONS`, form: 'word', rung: 2,
     gen: () => {
-      const [a, b] = pick([[[2, 3], [3, 4]], [[3, 4], [5, 6]], [[1, 2], [3, 8]], [[2, 3], [5, 12]], [[3, 4], [7, 12]], [[1, 3], [3, 8]]]).map(x => x), swap = Math.random() < 0.5;
+      const [a, b] = pick([[[2, 3], [3, 4]], [[3, 4], [5, 6]], [[1, 2], [3, 8]], [[2, 3], [5, 12]], [[3, 4], [7, 12]], [[3, 4], [5, 8]], [[1, 2], [5, 12]], [[4, 5], [5, 6]]]), swap = Math.random() < 0.5;
       const [x, y] = swap ? [b, a] : [a, b], l = (x[1] * y[1]) / gcd(x[1], y[1]);
       const vx = x[0] * (l / x[1]), vy = y[0] * (l / y[1]);
       if (vx === vy) return null;
-      const bigger = vx > vy ? x : y, smaller = vx > vy ? y : x, [n1, n2] = [person().name, person().name];
-      const options = mc(fr(...bigger), [[fr(...smaller), bigger[0] * smaller[1] === 0 ? '' : `Rename both to ${l}ths to compare: ${fr(vx, l)} and ${fr(vy, l)}.`, 'M_COMPARE_BIGGER_TERMS'], ['They are equal', 'Rename to a common denominator. The amounts are not equal.', 'M_COMPARE_GAP_THINKING']]);
+      const big = vx > vy ? x : y, small = vx > vy ? y : x, [n1, n2] = [person().name, person().name];
+      if (n1 === n2) return null;
+      const gap = (z) => z[1] - z[0] === 1;
+      const wrongs = [];
+      if (small[0] > big[0] && small[1] > big[1]) wrongs.push([fr(...small), `You picked the fraction with the bigger numbers. Rename both as ${l}ths: ${fr(vx, l)} and ${fr(vy, l)}. The bigger numbers are not the bigger amount here.`, 'M_COMPARE_BIGGER_TERMS']);
+      else if (small[1] < big[1]) wrongs.push([fr(...small), `You picked the fraction with fewer, bigger pieces. But the other has more pieces. Rename both as ${l}ths: ${fr(vx, l)} and ${fr(vy, l)}.`, 'M_EQUIV_FEWER_PIECES_BIGGER']);
+      else return null;
+      if (gap(x) && gap(y)) wrongs.push(['They planted the same amount', `Each is one part short of a whole, but the missing parts are different sizes. In ${l}ths they are ${fr(vx, l)} and ${fr(vy, l)}.`, 'M_COMPARE_GAP_THINKING']);
+      else wrongs.push([`The one with the bigger bottom number`, `A bigger bottom number means smaller pieces. Rename both as ${l}ths: ${fr(vx, l)} and ${fr(vy, l)}.`, 'M_COMPARE_BIGGER_DENOMINATOR']);
+      if (wrongs[1][2] === 'M_COMPARE_BIGGER_DENOMINATOR' && wrongs[0][2] === 'M_EQUIV_FEWER_PIECES_BIGGER') return null;
+      const options = mc(fr(...big), wrongs.map(w => w[2] === 'M_COMPARE_BIGGER_DENOMINATOR' ? [fr(...(x[1] > y[1] ? x : y)), w[1], w[2]] : w));
+      if (!options) return null;
       return { question: `${n1} planted ${fr(...x)} of a plot with sukuma wiki. ${n2} planted ${fr(...y)} of a plot of the same size with spinach. Who planted the larger part? Choose the larger fraction.`, options, instruction: 'Choose the larger fraction.',
-        hints: [`Rename both fractions as ${l}ths.`, 'Compare the tops once the bottoms are equal.'], steps: [`${fr(...x)} = ${fr(vx, l)} and ${fr(...y)} = ${fr(vy, l)}.`, `${fr(...bigger)} is larger.`] };
+        hints: [`Rename both fractions as ${l}ths.`, 'Compare the tops once the bottoms are equal.'], steps: [`${fr(...x)} = ${fr(vx, l)} and ${fr(...y)} = ${fr(vy, l)}.`, `${fr(...big)} is larger.`] };
     } }),
   fam({ id: 'g5c.fra.cu.symbol', cs: `${F}COMPARE_UNLIKE_FRACTIONS`, form: 'direct', rung: 2,
     gen: () => {
-      const [x, y] = pick([[[2, 3], [3, 4]], [[3, 4], [4, 5]], [[5, 12], [2, 3]], [[1, 2], [4, 8]], [[3, 6], [2, 4]], [[3, 5], [7, 10]], [[5, 6], [3, 4]]]);
+      const [x, y] = pick([[[2, 3], [3, 4]], [[3, 4], [4, 5]], [[1, 2], [4, 8]], [[3, 6], [2, 4]], [[5, 6], [3, 4]], [[3, 4], [5, 8]], [[2, 3], [5, 12]], [[1, 2], [2, 5]]]);
       const l = (x[1] * y[1]) / gcd(x[1], y[1]), vx = x[0] * (l / x[1]), vy = y[0] * (l / y[1]), right = vx > vy ? '>' : vx < vy ? '<' : '=';
-      const gap = x[0] / x[1] < y[0] / y[1] ? '>' : '<';
-      const others = ['<', '>', '='].filter(z => z !== right);
-      const options = mc(right, [[others[0], right === '=' ? 'The fractions are equal. Rename both to a common denominator to see it.' : 'Rename both fractions to a common denominator before you decide.', right === '=' ? 'M_COMPARE_BIGGER_TERMS' : (others[0] === '=' ? 'M_COMPARE_GAP_THINKING' : 'M_COMPARE_BIGGER_TERMS')], [others[1], 'The bigger numbers do not make the bigger fraction. Rename and compare.', others[1] === '=' ? 'M_COMPARE_GAP_THINKING' : 'M_COMPARE_BIGGER_TERMS']]);
-      return { question: `Which symbol, <, > or =, makes ${fr(...x)} ___ ${fr(...y)} true? Rename to a common denominator to decide.`, options, instruction: 'Choose the symbol.',
+      const gap = (z) => z[1] - z[0] === 1;
+      // what each wrong symbol says, and the one idea behind it
+      const why = (sym) => {
+        if (sym === '=') return gap(x) && gap(y) ? ['Each is one part short of a whole, but the missing parts are different sizes, so the fractions are not equal.', 'M_COMPARE_GAP_THINKING'] : null;
+        const [F1, G1] = sym === '>' ? [x, y] : [y, x];   // the fraction this symbol calls bigger
+        if (F1[0] > G1[0] && F1[1] > G1[1]) return ['You chose the fraction with the bigger numbers. Bigger numbers do not make a bigger fraction. Rename and compare.', 'M_COMPARE_BIGGER_TERMS'];
+        if (F1[1] < G1[1]) return ['You chose the fraction with fewer pieces. Fewer pieces means bigger pieces, but there are more of them in the other. Rename and compare.', 'M_EQUIV_FEWER_PIECES_BIGGER'];
+        if (F1[0] > G1[0]) return ['You looked only at the top numbers. Rename to the same bottom number first.', 'M_ORDER_BY_NUMERATOR'];
+        return null;
+      };
+      const wrongs = ['<', '>', '='].filter(z => z !== right).map(z => [z, ...(why(z) || [])]).filter(w => w[1]);
+      if (wrongs.length < 2) return null;
+      const options = mc(right, wrongs);
+      if (!options || new Set(wrongs.map(w => w[2])).size !== wrongs.length) return null;
+      return { question: `${person().name} compares two shares of the same loaf: ${fr(...x)} and ${fr(...y)}. Which symbol, <, > or =, makes ${fr(...x)} ___ ${fr(...y)} true? Rename to a common denominator to decide.`, options, instruction: 'Choose the symbol.',
         hints: ['Find a number that both bottom numbers divide into.', 'Compare the tops.'], steps: [`${fr(...x)} = ${fr(vx, l)} and ${fr(...y)} = ${fr(vy, l)}.`, `${vx} ${right} ${vy}, so ${fr(...x)} ${right} ${fr(...y)}.`] };
     } }),
   fam({ id: 'g5c.fra.cu.method', cs: `${F}COMPARE_UNLIKE_FRACTIONS`, form: 'spot', rung: 3,
@@ -137,7 +160,7 @@ export const FAMILIES = [
       const f = (l) => l.map(x => fr(...x)).join(', ');
       const unit = set.every(x => x[0] === 1);
       const options = mc(f(asc), [[f([...asc].reverse()), 'That runs from the largest down. Increasing means smallest first.', 'M_ORDER_DIRECTION'], [unit ? f([...set].sort((a, b) => b[1] - a[1]).reverse()) : f(ByNum), unit ? 'The bigger the bottom number, the smaller the fraction.' : 'You compared only the top numbers. Rename to the same bottom number first.', unit ? 'M_ORDER_BY_DENOMINATOR' : 'M_ORDER_BY_NUMERATOR'], [f(ByDen), 'The bottom number alone does not give the order. Rename the fractions.', 'M_ORDER_BY_DENOMINATOR']].filter(w => w[0] !== f(asc)));
-      return { question: `Arrange these fractions in increasing order: ${f(shown)}.`, options, instruction: 'Choose the correct order, smallest first.',
+      return { question: `Three friends each ate part of a loaf of bread of the same size: ${f(shown)}. Arrange the fractions from the smallest share to the largest.`, options, instruction: 'Choose the correct order, smallest first.',
         hints: ['Rename every fraction with the same bottom number.', 'Put the smallest top number first, then write the original fractions.'], steps: [`Rename to a common denominator and compare.`, `Smallest to largest: ${f(asc)}.`] };
     } }),
   fam({ id: 'g5c.fra.ord.walk', cs: `${F}ORDER_FRACTIONS`, form: 'word', rung: 3,
@@ -146,10 +169,16 @@ export const FAMILIES = [
       const shown = shuffle(set.map((x, i) => [x, names[i]]));
       const far = shown.find(([x]) => v(x) === v(desc[0]))[1];
       const l = set.reduce((a, x) => a * x[1] / gcd(a, x[1]), 1);
-      const ans = desc[0][0] * (l / desc[0][1]);
-      return { question: `Three children walk to school: ${shown.map(([x, n]) => `${n} ${fr(...x)} km`).join(', ')}. Rename the fractions as ${l}ths. How many ${l}ths of a kilometre did the child who walked furthest walk?`, answer: ans,
-        wrong: [[Math.max(...set.map(x => x[0])), 'You looked at the numerators only. Rename to the same bottom number first.', 'M_ORDER_BY_NUMERATOR'], [set.map(x => x[0] * (l / x[1])).sort((a, b) => a - b)[0], 'That is the child who walked the shortest distance. Furthest is the largest.', 'M_ORDER_DIRECTION'], [l, 'That is the number of parts in the whole. We want the top number.', 'M_ORDER_BY_DENOMINATOR'], [set.map(x => x[0] * (l / x[1])).sort((a, b) => a - b)[1], 'That is the middle child.', 'M_ORDER_DIRECTION']],
-        hints: [`Rename each fraction as ${l}ths.`, 'The largest top number is the furthest walk.'], steps: [`In ${l}ths: ${set.map(x => `${x[0] * (l / x[1])}/${l}`).join(', ')}.`, `The largest is ${ans}/${l}, walked by ${far}.`], chk: (v) => v === Math.max(...set.map(x => x[0] * (l / x[1]))) };
+      const ans = desc[0][0] * (l / desc[0][1]), tops = set.map(x => x[0] * (l / x[1])).sort((a, b) => a - b), maxTop = Math.max(...set.map(x => x[0]));
+      const t = (n) => `${n}/${l}`;
+      const wr = [];
+      if (maxTop !== ans) wr.push([t(maxTop), 'You looked at the top numbers before renaming. The pieces are different sizes until every fraction has the same bottom number.', 'M_ORDER_BY_NUMERATOR']);
+      wr.push([t(tops[0]), 'That is the child who walked the shortest distance. Furthest means the largest amount.', 'M_ORDER_DIRECTION'], [t(l), `That is the whole kilometre, ${l} parts out of ${l}. No child walked a whole kilometre.`, 'M_ORDER_BY_DENOMINATOR']);
+      if (wr.length < 3) wr.push([t(ans + 1), 'One too many. Multiply the top number by the same number as the bottom and count again.', 'SLIP']);
+      const options = mc(t(ans), wr);
+      if (!options) return null;
+      return { question: `Three children walk to school: ${shown.map(([x, n]) => `${n} ${fr(...x)} km`).join(', ')}. Rename the fractions as ${l}ths. Which renamed fraction shows the child who walked furthest?`, options, instruction: 'Choose the renamed fraction.',
+        hints: [`Rename each fraction as ${l}ths.`, 'The largest top number is the furthest walk.'], steps: [`In ${l}ths: ${set.map(x => `${x[0] * (l / x[1])}/${l}`).join(', ')}.`, `The largest is ${ans}/${l}, walked by ${far}.`] };
     } }),
   fam({ id: 'g5c.fra.ord.out', cs: `${F}ORDER_FRACTIONS`, form: 'spot', rung: 3,
     gen: () => {
@@ -164,16 +193,20 @@ export const FAMILIES = [
     gen: () => {
       const d = randInt(4, 12), a = randInt(1, d - 2), b = randInt(1, d - a - 1);
       if (a + b >= d) return null;
+      const rest = gcd(a + b, d) > 1;
+      const wrong = [[fr(a + b, d + d), `The pieces stay the same size, so the bottom number stays ${d}. Do not add the bottom numbers.`, 'M_ADD_DENOMINATORS'], [String(a + b), `The answer is a part of the packet, counted in ${d}ths. Keep the bottom number.`, 'M_ADD_DROPS_DENOMINATOR'], [frs(a + b + 1, d), 'One too many. Add the top numbers again.', 'SLIP']];
+      if (rest) wrong.push([fr(a + b, d), `${a + b} and ${d} can both still be divided by ${gcd(a + b, d)}. Write it in its simplest form.`, 'M_SIMPLIFY_STOPS_EARLY']);
       return { question: `Mama used ${fr(a, d)} of a packet of flour on Monday and ${fr(b, d)} of the same packet on Tuesday. What fraction of the packet did she use altogether? Write it in its simplest form.`, answer: frs(a + b, d),
-        wrong: [[fr(a + b, d + d), 'The size of the pieces stays the same. Do not add the bottom numbers.', 'M_ADD_DENOMINATORS'], [String(a + b), 'The answer is a part of the packet. Keep the bottom number.', 'M_ADD_DROPS_DENOMINATOR'], [fr(a * b, d), 'Add the top numbers, do not multiply.', 'M_ADD_DENOMINATORS'], [frs(a + b + 1, d), 'Check the addition of the top numbers.', 'M_ADD_DROPS_DENOMINATOR']].filter(w => w[0] !== frs(a + b, d)),
+        wrong: wrong.filter(w => w[0] !== frs(a + b, d)),
         hints: ['The pieces are all the same size.', 'Add the number of pieces, keep the name of the piece.'], steps: [`${a} ${d}ths + ${b} ${d}ths = ${a + b} ${d}ths.`, `${fr(a + b, d)} = ${frs(a + b, d)}.`], chk: (v) => v === frs(a + b, d) };
     } }),
   fam({ id: 'g5c.fra.add.missing', cs: `${F}ADD_SAME_DENOMINATOR`, form: 'direct', rung: 2,
     gen: () => {
-      const d = randInt(5, 12), a = randInt(1, d - 3), t = randInt(a + 1, d - 1), b = t - a;
-      const options = mc(String(b), [[String(t + a), 'The top number in the answer is what the two parts make together. Take away the part you know.', 'M_ADD_DROPS_DENOMINATOR'], [String(t), 'That is the total, not the missing part.', 'M_ADD_DROPS_DENOMINATOR'], [String(b + d), 'Do not add the bottom number: it stays the same.', 'M_ADD_DENOMINATORS']]);
-      return { question: `Find the missing numerator: ${fr(a, d)} + ?/${d} = ${fr(t, d)}.`, options, instruction: 'Choose the missing number.',
-        hints: ['The bottom numbers stay the same.', 'What must be added to the top number a to reach the total?'], steps: [`${t} − ${a} = ${b}.`, `${fr(a, d)} + ${fr(b, d)} = ${fr(t, d)}.`] };
+      const d = randInt(5, 12), a = randInt(1, d - 3), t = randInt(a + 1, d - 1), b = t - a, p = person();
+      if (!farFrom(b, t + a, t, b + d)) return null;
+      const options = mc(String(b), [[String(t + a), `You added the two numbers you can see. The missing top number is what must be added to ${a} to reach ${t}.`, 'M_MISSING_ADDEND_ADDED'], [String(t), `That is the total, not the missing part. Put it in: ${a} + ${t} is more than ${t}.`, 'M_MISSING_PICKS_SHOWN_NUMBER'], [String(b + d), `The bottom number stays ${d}. Only the top numbers are added.`, 'M_ADD_DENOMINATORS']]);
+      return { question: `${p.name} used ${fr(a, d)} of a bag of rice on Monday. By Tuesday evening ${fr(t, d)} of the bag was gone. Find the missing numerator for Tuesday: ${fr(a, d)} + ?/${d} = ${fr(t, d)}.`, options, instruction: 'Choose the missing number.',
+        hints: ['The bottom numbers stay the same.', `What must be added to the top number ${a} to reach the total?`], steps: [`${t} − ${a} = ${b}.`, `${fr(a, d)} + ${fr(b, d)} = ${fr(t, d)}.`] };
     } }),
   fam({ id: 'g5c.fra.add.spot', cs: `${F}ADD_SAME_DENOMINATOR`, form: 'spot', rung: 3,
     gen: () => {
@@ -189,14 +222,15 @@ export const FAMILIES = [
     gen: () => {
       const d = randInt(4, 12), a = randInt(1, d - 2), p = person();
       return { question: `${p.name} had a whole pawpaw cut into ${d} equal pieces and ate ${fr(a, d)} of it. What fraction of the pawpaw is left? Write it in its simplest form.`, answer: frs(d - a, d),
-        wrong: [[fr(a, d), 'That is the part eaten. Take it away from the whole, which is ' + fr(d, d) + '.', 'M_SUB_WHOLE_NOT_RENAMED'], [String(d - a), 'The answer is a part of the pawpaw, so keep the bottom number.', 'M_SUB_DENOMINATORS'], [fr(a - 1 > 0 ? a - 1 : 1, d), 'Write the whole as ' + fr(d, d) + ' and subtract.', 'M_SUB_WHOLE_NOT_RENAMED'], [fr(d + a, d), 'Eating takes away, so subtract.', 'M_SUB_DENOMINATORS']].filter(w => w[0] !== frs(d - a, d)),
+        wrong: [[fr(a, d), `That is the part ${p.she} ate. Take it away from the whole pawpaw, which is ${fr(d, d)}.`, 'M_SUB_WHOLE_NOT_RENAMED'], [String(d - a), `The pieces stay ${d}ths, so the answer is a fraction. ${d - a} is a number of pieces, not a number of pawpaws.`, 'M_SUB_DROPS_DENOMINATOR'], [fr(d + a, d), `Eating takes some of the pawpaw away, so the amount left is less than the whole, not more. Subtract.`, 'M_SUB_DONE_AS_ADDITION'], [frs(d - a + 1, d), 'One too many. Take the pieces eaten from the whole again.', 'SLIP']].filter(w => w[0] !== frs(d - a, d)),
         hints: [`Write the whole pawpaw as ${fr(d, d)}.`, 'Subtract the pieces eaten.'], steps: [`${fr(d, d)} − ${fr(a, d)} = ${fr(d - a, d)}.`, `Simplest form: ${frs(d - a, d)}.`], chk: (v) => v === frs(d - a, d) };
     } }),
   fam({ id: 'g5c.fra.sub.missing', cs: `${F}SUBTRACT_SAME_DENOMINATOR`, form: 'direct', rung: 2,
     gen: () => {
-      const d = randInt(5, 12), t = randInt(4, d - 1), r = randInt(1, t - 1), b = t - r;
-      const options = mc(String(b), [[String(t + r), 'We are taking away. Find what must be taken away from the top number.', 'M_SUB_DENOMINATORS'], [String(r), 'That is what is left. We want what is taken away.', 'M_SUB_WHOLE_NOT_RENAMED'], [String(b + d), 'The bottom number stays the same.', 'M_SUB_DENOMINATORS']]);
-      return { question: `Find the missing numerator: ${fr(t, d)} − ?/${d} = ${fr(r, d)}.`, options, instruction: 'Choose the missing number.',
+      const d = randInt(5, 12), t = randInt(4, d - 1), r = randInt(1, t - 1), b = t - r, p = person();
+      if (!farFrom(b, t + r, r)) return null;
+      const options = mc(String(b), [[String(t + r), `You added the two numbers you can see. We are taking away, so find what must be taken from ${t} to leave ${r}.`, 'M_SUB_DONE_AS_ADDITION'], [String(r), `That is what is left in the jug. We want what was poured out.`, 'M_MISSING_PICKS_SHOWN_NUMBER'], [String(b + 1), `One too many. Take your number from ${t} and see if ${r} is left.`, 'SLIP']]);
+      return { question: `${p.name}'s jug held ${fr(t, d)} litre of uji. Some was poured out and ${fr(r, d)} litre is left. Find the missing numerator: ${fr(t, d)} − ?/${d} = ${fr(r, d)}.`, options, instruction: 'Choose the missing number.',
         hints: ['The bottom numbers stay the same.', 'What taken from the top number leaves the answer?'], steps: [`${t} − ${b} = ${r}.`, `${fr(t, d)} − ${fr(b, d)} = ${fr(r, d)}.`] };
     } }),
   fam({ id: 'g5c.fra.sub.line', cs: `${F}SUBTRACT_SAME_DENOMINATOR`, form: 'table', rung: 3,
@@ -205,7 +239,7 @@ export const FAMILIES = [
       if (used2 < 1) return null;
       const left = start - used1 - used2;
       return { question: 'A water tank is filled to the fraction shown. Some water is used on two days. What fraction of the tank is left? Write it in its simplest form.', model: tbl(['Day', 'Water in the tank'], [['Start', fr(start, d)], ['Used on Monday', fr(used1, d)], ['Used on Tuesday', fr(used2, d)]]), answer: frs(left, d),
-        wrong: [[frs(start - used1, d), 'There was a second day of use. Subtract that too.', 'M_SUB_DENOMINATORS'], [frs(start + used1 + used2, d), 'Water used is taken away.', 'M_SUB_DENOMINATORS'], [String(left), 'Keep the bottom number: the pieces stay the same size.', 'M_SUB_DENOMINATORS'], [frs(Math.abs(start - used1 + used2), d), 'Both amounts used are subtracted.', 'M_SUB_WHOLE_NOT_RENAMED']].filter(w => w[0] !== frs(left, d)),
+        wrong: [[frs(start - used1, d), 'You took away only the water used on Monday. The water used on Tuesday must be taken away too.', 'M_SUB_ONE_STEP_ONLY'], [frs(start + used1 + used2, d), 'Water that is used is taken out of the tank, so there is less, not more. Subtract.', 'M_SUB_DONE_AS_ADDITION'], [String(left), `The pieces stay ${d}ths, so the answer is a fraction. ${left} is a number of pieces, not of tanks.`, 'M_SUB_DROPS_DENOMINATOR'], [frs(left + 1, d), 'One too many. Take both amounts used from the start again.', 'SLIP']].filter(w => w[0] !== frs(left, d)),
         hints: ['Take away the amount used on each day, one at a time.', 'The bottom number stays the same.'], steps: [`${start} − ${used1} − ${used2} = ${left}.`, `${fr(left, d)} = ${frs(left, d)}.`], chk: (v) => v === frs(left, d) };
     } }),
 
@@ -216,7 +250,7 @@ export const FAMILIES = [
       if (tn >= d2 || gcd(n1, d1) !== 1 && false) return null;
       const p = person();
       return { question: `${p.name} bought ${fr(n1, d1)} kg of sugar and then ${fr(n2, d2)} kg more. How many kilograms of sugar is that altogether? Write it in its simplest form.`, answer: frs(tn, d2),
-        wrong: [[fr(n1 + n2, d1 + d2), 'You added the tops and the bottoms. Rename one fraction so both have the same bottom number first.', 'M_RENAME_ADD_DENOMINATORS'], [frs(n1 + n2, d2), `You changed the bottom number of ${fr(n1, d1)} but not its top. Multiply both by ${k}.`, 'M_RENAME_DENOMINATOR_ONLY'], [frs(n1 + (d2 - d1) + n2, d2), `You added ${d2 - d1} to the top and bottom. Multiply both by ${k} instead.`, 'M_RENAME_ADDITIVE'], [frs(tn + 1, d2), 'Check the addition after renaming.', 'M_RENAME_DENOMINATOR_ONLY']].filter(w => w[0] !== frs(tn, d2)),
+        wrong: [[fr(n1 + n2, d1 + d2), 'You added the tops and the bottoms. Rename one fraction so both have the same bottom number first.', 'M_RENAME_ADD_DENOMINATORS'], [frs(n1 + n2, d2), `You changed the bottom number of ${fr(n1, d1)} but not its top. Multiply both by ${k}.`, 'M_RENAME_DENOMINATOR_ONLY'], [frs(n1 + (d2 - d1) + n2, d2), `You added ${d2 - d1} to the top and bottom. Multiply both by ${k} instead.`, 'M_RENAME_ADDITIVE'], [frs(tn + 1, d2), `One too many. Add the tops again after renaming ${fr(n1, d1)} as ${fr(n1 * k, d2)}.`, 'SLIP']].filter(w => w[0] !== frs(tn, d2)),
         hints: [`Rename ${fr(n1, d1)} with the bottom number ${d2}.`, 'Add the tops, keep the bottom, then simplify.'], steps: [`${fr(n1, d1)} = ${fr(n1 * k, d2)}.`, `${fr(n1 * k, d2)} + ${fr(n2, d2)} = ${fr(tn, d2)} = ${frs(tn, d2)}.`], chk: (v) => v === frs(tn, d2) };
     } }),
   fam({ id: 'g5c.fra.addr.which', cs: `${F}ADD_ONE_RENAMING`, form: 'direct', rung: 2,
@@ -244,15 +278,15 @@ export const FAMILIES = [
       if (n2 >= big) return null;
       const t = big - n2, p = person();
       return { question: `${p.name} had ${fr(n1, d1)} litre of milk and drank ${fr(n2, d2)} litre. How much milk was left? Write it in its simplest form.`, answer: frs(t, d2),
-        wrong: [[fr(n1 - n2 > 0 ? n1 - n2 : 1, d1 - d2 > 0 ? d1 - d2 : 1), 'You subtracted the tops and the bottoms. Rename first.', 'M_RENAME_SUB_DENOMINATORS'], [frs(n1 * 1 - n2 > 0 ? Math.abs(n1 - n2) : 1, d2), `You changed the bottom number of ${fr(n1, d1)} but not its top.`, 'M_RENAME_SUB_DENOMINATOR_ONLY'], [fr(n2, d2), 'That is the amount drunk. Take it from what she had.', 'M_SUB_THINKS_IMPOSSIBLE'], [frs(t + 1, d2), 'Check the subtraction after renaming.', 'M_RENAME_SUB_DENOMINATOR_ONLY']].filter(w => w[0] !== frs(t, d2)),
+        wrong: [[fr(Math.abs(n1 - n2) || 1, d2 - d1), 'You subtracted the tops and also the bottoms. The pieces are different sizes until you rename one fraction.', 'M_RENAME_SUB_DENOMINATORS'], [frs(n1 * 1 - n2 > 0 ? Math.abs(n1 - n2) : 1, d2), `You changed the bottom number of ${fr(n1, d1)} to ${d2} but not its top, so the amount changed. Multiply the top by ${k} too.`, 'M_RENAME_SUB_DENOMINATOR_ONLY'], [fr(n2, d2), `That is the amount ${p.she} drank. The question asks how much was left.`, 'M_SUB_THINKS_IMPOSSIBLE'], [frs(t + 1, d2), `One too many. Rename ${fr(n1, d1)} as ${fr(big, d2)} and subtract the tops again.`, 'SLIP']].filter(w => w[0] !== frs(t, d2)),
         hints: [`Rename ${fr(n1, d1)} as ${d2}ths. Is it more than ${fr(n2, d2)}?`, 'Subtract the tops, keep the bottom, then simplify.'], steps: [`${fr(n1, d1)} = ${fr(big, d2)}.`, `${fr(big, d2)} − ${fr(n2, d2)} = ${fr(t, d2)} = ${frs(t, d2)}.`], chk: (v) => v === frs(t, d2) };
     } }),
   fam({ id: 'g5c.fra.subr.moremissing', cs: `${F}SUBTRACT_ONE_RENAMING`, form: 'why', rung: 3,
     gen: () => {
-      const d1 = pick([2, 3, 4]), k = pick([2, 3, 4]), d2 = d1 * k, n1 = randInt(1, d1 - 1), n2 = n1 * k - randInt(1, 2);
+      const d1 = pick([2, 3, 4]), k = pick([2, 3, 4]), d2 = d1 * k, n1 = randInt(1, d1 - 1), n2 = n1 * k - randInt(1, 2), p = person();
       if (n2 < 1 || d2 > 12) return null;
-      const options = mc(`Yes: ${fr(n1, d1)} = ${fr(n1 * k, d2)}, which is more than ${fr(n2, d2)}`, [[`No, because ${n2} is more than ${n1}`, 'The tops cannot be compared until the bottoms are the same. Rename first.', 'M_SUB_THINKS_IMPOSSIBLE'], [`No, because ${d2} is more than ${d1}`, 'A bigger bottom number means smaller pieces, so the second amount may be smaller.', 'M_SUB_THINKS_IMPOSSIBLE'], [`Yes, but only by taking the smaller from the bigger digits`, 'Rename first, then subtract the tops.', 'M_RENAME_SUB_DENOMINATORS']]);
-      return { question: `Can ${fr(n2, d2)} be taken away from ${fr(n1, d1)} without going below zero?`, options, instruction: 'Choose the answer and reason.',
+      const options = mc(`Yes: ${fr(n1, d1)} = ${fr(n1 * k, d2)}, which is more than ${fr(n2, d2)}`, [[`No, because ${n2} is more than ${n1}`, 'The top numbers cannot be compared until the bottoms are the same. Rename first.', 'M_SUB_THINKS_IMPOSSIBLE'], [`No, because ${d2} is more than ${d1}`, 'A bigger bottom number means smaller pieces, so the second amount may be smaller, not bigger.', 'M_COMPARE_BIGGER_DENOMINATOR'], [`Yes, because you take ${n2} from ${n1} and ${d2} from ${d1}`, 'Subtracting the tops and the bottoms does not work with pieces of different sizes. Rename first, then subtract the tops.', 'M_RENAME_SUB_DENOMINATORS']]);
+      return { question: `${p.name} has ${fr(n1, d1)} litre of milk and wants to pour out ${fr(n2, d2)} litre. Is there enough milk to do that?`, options, instruction: 'Choose the answer and reason.',
         hints: ['Rename so both have the same bottom number.', 'Compare the tops.'], steps: [`${fr(n1, d1)} = ${fr(n1 * k, d2)}.`, `${n1 * k} is more than ${n2}, so yes.`] };
     } }),
   fam({ id: 'g5c.fra.subr.spot', cs: `${F}SUBTRACT_ONE_RENAMING`, form: 'spot', rung: 3,
