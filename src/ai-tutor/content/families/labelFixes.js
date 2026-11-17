@@ -32,37 +32,37 @@ const NETS = [
 
 export const CORE_FAMILIES = [
   // ---- G7_TEMPERATURE: the authored Celsius and kelvin content was hidden behind an alias (removed).
-  fx({ id: 'g7.temp.mountain-nairobi', skill: 'G7_TEMPERATURE', outcome: 'G7.TEMP.b', rung: 2, form: 'word',
-    draw: () => ({ low: -randInt(2, 9), high: randInt(12, 26) }),
+  fx({ id: 'g7.temp.mountain-nairobi', skill: 'G7_TEMPERATURE', outcome: 'MATH.G7.MEASUR.TEMPERATURE.b', cskill: 'MATH.G7.MEASUR.TEMPERATURE.TEMP_COMPARE_DIFFERENCE', rung: 2, form: 'word',
+    draw: () => ({ low: -randInt(3, 9), high: randInt(12, 26) }),
     make: ({ low, high }) => ({
       question: `At dawn it is ${low} °C near the top of Mount Kenya and ${high} °C in Nairobi. How many degrees warmer is Nairobi?`,
       answer: high - low,
-      wrong: [[high + low, 'The two temperatures are on opposite sides of zero. Count up to zero, then on to the warmer one.'], [Math.abs(low), 'That is only the part below zero. Keep going up to the Nairobi temperature.'], [high, 'That is the Nairobi temperature. The question asks how far apart the two are.']],
+      wrong: [[high + low, 'The two temperatures are on opposite sides of zero. Count up to zero, then on to the warmer one.', 'M_NEGATIVE_SIGN_IGNORED'], [Math.abs(low), 'That is only the part below zero. Keep going up to the Nairobi temperature.', 'M_ONLY_BELOW_ZERO_PART'], [high, 'That is the Nairobi temperature. The question asks how far apart the two are.', 'M_ONE_READING_GIVEN']],
       hints: ['Picture a thermometer with both temperatures marked on it.', `From ${low} °C up to 0 °C, then from 0 °C up to ${high} °C.`],
       steps: [`From ${low} °C up to 0 °C is ${-low} degrees.`, `From 0 °C up to ${high} °C is ${high} degrees.`, `Altogether: ${-low} + ${high} = ${high - low} degrees.`],
     }),
     check: ({ low, high }, a) => low + a === high }),
-  fx({ id: 'g7.temp.kelvin-drop', skill: 'G7_TEMPERATURE', outcome: 'G7.TEMP.d', rung: 3, form: 'why',
+  fx({ id: 'g7.temp.kelvin-drop', skill: 'G7_TEMPERATURE', outcome: 'MATH.G7.MEASUR.TEMPERATURE.d', cskill: 'MATH.G7.MEASUR.TEMPERATURE.TEMP_CONVERT_C_K', rung: 3, form: 'why',
     draw: () => { const a = randInt(40, 100), b = randInt(5, 37); return { a, b }; },
     make: ({ a, b }) => {
       const drop = a - b;
       return { question: `Boiled milk at ${a} °C cools to ${b} °C. A learner says the fall in kelvin is ${drop + 273} K, because you always add 273 to change to kelvin. Why is that wrong?`,
         options: [
           { text: `A change of 1 °C is the same size as a change of 1 K, so the fall is ${drop} K`, right: true },
-          { text: 'Kelvin is always smaller than Celsius, so you must subtract 273', right: false, why: 'Kelvin readings are bigger than Celsius readings. And the question is about a change, not a reading.' },
-          { text: 'Milk cannot be measured in kelvin', right: false, why: 'Any temperature can be written in kelvin.' },
-          { text: `The fall should be ${drop - 273 > 0 ? drop - 273 : 273 - drop} K, found by taking away 273`, right: false, why: 'Adding or taking away 273 changes a reading. A difference between two readings stays the same on both scales.' },
+          { text: 'Kelvin is always smaller than Celsius, so you must subtract 273', right: false, why: 'Kelvin readings are bigger than Celsius readings. And the question is about a change, not a reading.', mis: 'M_273_SUBTRACTED_TO_GET_KELVIN' },
+          { text: 'Milk cannot be measured in kelvin', right: false, why: 'Any temperature can be written in kelvin.', mis: 'M_KELVIN_NOT_FOR_EVERYDAY' },
+          { text: `The fall should be ${drop - 273 > 0 ? drop - 273 : 273 - drop} K, found by taking away 273`, right: false, why: 'Adding or taking away 273 changes a reading. A difference between two readings stays the same on both scales.', mis: 'M_CHANGE_CONVERTED_AS_READING' },
         ],
         hints: ['Change each reading to kelvin, then find the difference.', `${a + 273} K and ${b + 273} K: how far apart are they?`],
         steps: [`In kelvin the readings are ${a + 273} K and ${b + 273} K.`, `The fall is ${a + 273} − ${b + 273} = ${drop} K, the same number as in °C.`] };
     } }),
-  fx({ id: 'g7.temp.order-scales', skill: 'G7_TEMPERATURE', outcome: 'G7.TEMP.d', rung: 2, form: 'direct',
+  fx({ id: 'g7.temp.order-scales', skill: 'G7_TEMPERATURE', outcome: 'MATH.G7.MEASUR.TEMPERATURE.d', cskill: 'MATH.G7.MEASUR.TEMPERATURE.TEMP_CONVERT_C_K', rung: 2, form: 'direct',
     draw: () => { const k = randInt(278, 300), c1 = randInt(1, 35), c2 = randInt(1, 35); const v = [k - 273, c1, c2]; return new Set(v).size === 3 ? { k, c1, c2 } : null; },
     make: ({ k, c1, c2 }) => {
       const vals = [{ t: `${k} K`, v: k - 273 }, { t: `${c1} °C`, v: c1 }, { t: `${c2} °C`, v: c2 }];
       const hottest = [...vals].sort((a, b) => b.v - a.v)[0];
       return { question: `Which of these temperatures is the hottest: ${k} K, ${c1} °C or ${c2} °C?`, story: false,
-        options: vals.map(x => ({ text: x.t, right: x === hottest, why: x === hottest ? undefined : `Change them all to the same scale first. ${k} K is ${k - 273} °C.` })),
+        options: (() => { let c = 0; return vals.map(x => ({ text: x.t, right: x === hottest, ...(x === hottest ? {} : { why: `Change them all to the same scale first. ${k} K is ${k - 273} °C.`, mis: / K$/.test(x.t) ? 'M_SCALES_NOT_MATCHED' : (c++ === 0 ? 'M_KELVIN_BELOW_CELSIUS' : 'SLIP') }) })); })(),
         hints: ['Two scales cannot be compared until they are the same.', `Take 273 from the kelvin reading.`],
         steps: [`${k} K = ${k} − 273 = ${k - 273} °C.`, `Now compare ${k - 273} °C, ${c1} °C and ${c2} °C: the hottest is ${hottest.t}.`] };
     } }),
@@ -563,22 +563,22 @@ export const CORE_FAMILIES = [
     }) }),
 
   // ---- Constructions: nothing can be constructed on a phone, so ask what the method rests on
-  fx({ id: 'g7.construct.halving', skill: 'G7_CONSTRUCTIONS', outcome: 'G7.CONSTRUCT.b', rung: 1, form: 'direct',
+  fx({ id: 'g7.construct.halving', skill: 'G7_CONSTRUCTIONS', outcome: 'MATH.G7.GEOMET.GEOMETRICAL_CONSTRUCTION.b', cskill: 'MATH.G7.GEOMET.GEOMETRICAL_CONSTRUCTION.BISECT_ANGLE', rung: 1, form: 'direct',
     draw: () => { const a = pick([50, 70, 40, 110, 130, 30]); return { a }; },
     make: ({ a }) => ({
       question: `Using a ruler and compasses, you bisect an angle of ${a}°. What is the size of each new angle?`, story: false,
       answer: a / 2,
-      wrong: [[a * 2, 'Bisect means cut into two equal parts, so each part is smaller.'], [a, 'That is the angle before it was bisected.'], [180 - a, 'That is the angle on a straight line with it, not half of it.']],
+      wrong: [[a * 2, 'Bisect means cut into two equal parts, so each part is smaller.', 'M_BISECT_DOUBLES'], [a, 'That is the angle before it was bisected.', 'M_BISECT_NO_CHANGE'], [180 - a, 'That is the angle on a straight line with it, not half of it.', 'M_SUPPLEMENT_FOR_HALF']],
       hints: ['To bisect means to cut into two equal parts.', `Halve ${a}.`],
       steps: ['Bisecting cuts the angle into two equal parts.', `${a} ÷ 2 = ${a / 2}°.`],
     }),
     check: ({ a }, v) => v + v === a }),
-  fx({ id: 'g7.construct.how-to', skill: 'G7_CONSTRUCTIONS', outcome: 'G7.CONSTRUCT.b', rung: 2, form: 'why',
+  fx({ id: 'g7.construct.how-to', skill: 'G7_CONSTRUCTIONS', outcome: 'MATH.G7.GEOMET.GEOMETRICAL_CONSTRUCTION.c', cskill: 'MATH.G7.GEOMET.GEOMETRICAL_CONSTRUCTION.CONSTRUCT_STANDARD_ANGLES', rung: 2, form: 'why',
     draw: () => { const a = pick([30, 15, 45, 75, 120, 60, 90]); return { a, k: randInt(0, 3) }; },
     make: ({ a, k }) => {
       const how = { 60: 'Draw arcs of the same radius to make an equilateral triangle', 30: 'Construct 60°, then bisect it', 15: 'Construct 60°, bisect it to get 30°, then bisect again', 90: 'Construct a perpendicular to a line', 45: 'Construct 90°, then bisect it', 120: 'Construct 60° twice, one beside the other', 75: 'Construct 60° and 90° beside it, then bisect the 30° gap' }[a];
       const others = Object.entries({ 60: 'Draw arcs of the same radius to make an equilateral triangle', 30: 'Construct 60°, then bisect it', 15: 'Construct 60°, bisect it to get 30°, then bisect again', 90: 'Construct a perpendicular to a line', 45: 'Construct 90°, then bisect it', 120: 'Construct 60° twice, one beside the other', 75: 'Construct 60° and 90° beside it, then bisect the 30° gap' }).filter(([d]) => Number(d) !== a).slice(0, 3);
-      const opts = [{ text: how, right: true }, ...others.map(([d, text]) => ({ text, right: false, why: `That method gives ${d}°.` }))];
+      const opts = [{ text: how, right: true }, ...others.map(([d, text]) => ({ text, right: false, why: `That method makes ${d}°, not ${a}°. Work out what each step of the method gives.`, mis: { 60: 'M_STOPPED_AT_SIXTY', 30: 'M_BISECTED_ONCE_ONLY', 15: 'M_BISECTED_TOO_FAR', 90: 'M_PERPENDICULAR_FOR_ANGLE', 45: 'M_WRONG_START_ANGLE' }[d] || 'SLIP' }))];
       return { question: `With only a ruler and compasses, how do you make an angle of ${a}°? Work it through on paper too.`, story: false, options: [...opts.slice(k), ...opts.slice(0, k)],
         hints: ['Compasses give 60° and 90° directly. Bisecting halves what you have.', `Which of those leads to ${a}°?`],
         steps: [`To make ${a}°: ${how.toLowerCase()}.`, 'Try it with your ruler and compasses on paper.'] };

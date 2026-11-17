@@ -8,4 +8,6 @@ import * as expressions from "./expressions.mjs";
 import * as equations from "./equations.mjs";
 import * as pythagoras from "./pythagoras.mjs";
 import * as length from "./length.mjs";
-export const SUBS = [whole, factors, fractions, decimals, squares, expressions, equations, pythagoras, length];
+import * as temperature from "./temperature.mjs";
+import * as construction from "./construction.mjs";
+export const SUBS = [whole, factors, fractions, decimals, squares, expressions, equations, pythagoras, length, temperature, construction];

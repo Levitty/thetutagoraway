@@ -8153,6 +8153,1131 @@ export const TEACHING_PACK_G7 = {
   "sub_strand": "MATH.G7.MEASUR.LENGTH",
   "sub_strand_name": "Length",
   "status": "draft: written 17 Nov 2026 offline for the Grade 7 pilot; not yet checked by a Kenyan maths teacher; not loaded by the live tutor"
+ },
+ "MATH.G7.MEASUR.TEMPERATURE.TEMP_WORDS": {
+  "skill": "MATH.G7.MEASUR.TEMPERATURE.TEMP_WORDS",
+  "key_step": "The child finds the number in the table of ranges and reads the word from that row.",
+  "floor": {
+   "prerequisite": "Reads a table.",
+   "question": "Find 25 in 20 to 29",
+   "answer": "the row 20 to 29"
+  },
+  "representations": [
+   "a thermometer drawn",
+   "a table of ranges",
+   "the word"
+  ],
+  "steps": [
+   "Read the thermometer or number.",
+   "Find the row.",
+   "Read the word.",
+   "Check with a day you know."
+  ],
+  "contexts": [
+   "Nyeri in the morning",
+   "a hot day in Mombasa",
+   "a cold night in Limuru"
+  ],
+  "board": [
+   {
+    "beat": "draw",
+    "do": "Draw a thermometer at 35 and a table of ranges."
+   },
+   {
+    "beat": "point",
+    "do": "Point at 35 on the scale.",
+    "say": "Which row of the table is it in?"
+   },
+   {
+    "beat": "pause",
+    "do": "Wait for the child to say."
+   }
+  ],
+  "misconceptions": [
+   {
+    "code": "MATH.G7.MEASUR.TEMPERATURE.TEMP_WORDS.M_NEXT_BAND_TOO_COLD",
+    "listen_for": [
+     "warm"
+    ],
+    "ask": "Where does the hot row start?",
+    "repair": "Use the cut-offs.",
+    "error": "Picks the next colder word band than the table gives.",
+    "example": {
+     "question": "Table: cool 10 to 19, warm 20 to 29, hot 30 and over. 35 degrees is?",
+     "wrong_answer": "warm",
+     "correct_answer": "hot"
+    }
+   },
+   {
+    "code": "MATH.G7.MEASUR.TEMPERATURE.TEMP_WORDS.M_NEXT_BAND_TOO_HOT",
+    "listen_for": [
+     "hot"
+    ],
+    "ask": "Where does the warm row end?",
+    "repair": "Use the cut-offs.",
+    "error": "Picks the next hotter word band than the table gives.",
+    "example": {
+     "question": "Table: cool 10 to 19, warm 20 to 29, hot 30 and over. 25 degrees is?",
+     "wrong_answer": "hot",
+     "correct_answer": "warm"
+    }
+   },
+   {
+    "code": "MATH.G7.MEASUR.TEMPERATURE.TEMP_WORDS.M_FAR_BAND_TOO_COLD",
+    "listen_for": [
+     "cool"
+    ],
+    "ask": "Is 35 near the cool row?",
+    "repair": "Find the row with 35.",
+    "error": "Picks a word two or more bands too cold.",
+    "example": {
+     "question": "35 degrees Celsius is?",
+     "wrong_answer": "cool",
+     "correct_answer": "hot"
+    }
+   },
+   {
+    "code": "MATH.G7.MEASUR.TEMPERATURE.TEMP_WORDS.M_FAR_BAND_TOO_HOT",
+    "listen_for": [
+     "warm"
+    ],
+    "ask": "Is 5 near the warm row?",
+    "repair": "Find the row with 5.",
+    "error": "Picks a word two or more bands too hot.",
+    "example": {
+     "question": "5 degrees Celsius is?",
+     "wrong_answer": "warm",
+     "correct_answer": "cold"
+    }
+   }
+  ],
+  "checks": [
+   {
+    "question": "Table: cold below 10, cool 10 to 19, warm 20 to 29, hot 30 and over. 35 degrees is?",
+    "answer": "hot",
+    "shows": "read the table"
+   },
+   {
+    "question": "15 degrees is?",
+    "answer": "cool",
+    "shows": "read the table"
+   }
+  ],
+  "name": "Describe a temperature as cold, cool, warm or hot using a table of ranges",
+  "sub_strand": "MATH.G7.MEASUR.TEMPERATURE",
+  "sub_strand_name": "Temperature",
+  "status": "draft: written 17 Nov 2026 offline for the Grade 7 pilot; not yet checked by a Kenyan maths teacher; not loaded by the live tutor"
+ },
+ "MATH.G7.MEASUR.TEMPERATURE.TEMP_COMPARE_DIFFERENCE": {
+  "skill": "MATH.G7.MEASUR.TEMPERATURE.TEMP_COMPARE_DIFFERENCE",
+  "key_step": "The child counts from the colder reading up to the warmer one, passing through zero when needed, or subtracts the lowest reading from the highest.",
+  "floor": {
+   "prerequisite": "Finds a difference.",
+   "question": "18 - 5",
+   "answer": "13"
+  },
+  "representations": [
+   "a vertical thermometer scale",
+   "a number line through zero",
+   "a line graph"
+  ],
+  "steps": [
+   "Find the colder and warmer reading.",
+   "Count up to zero if below it.",
+   "Then up to the warmer reading.",
+   "Add the two parts."
+  ],
+  "contexts": [
+   "Mount Kenya and Nairobi",
+   "a school day graph",
+   "two towns"
+  ],
+  "board": [
+   {
+    "beat": "draw",
+    "do": "Draw a thermometer from -5 to 20 with -2 and 18 marked."
+   },
+   {
+    "beat": "point",
+    "do": "Point at -2.",
+    "say": "How many degrees up to zero?"
+   },
+   {
+    "beat": "pause",
+    "do": "Wait for the child to say."
+   }
+  ],
+  "misconceptions": [
+   {
+    "code": "MATH.G7.MEASUR.TEMPERATURE.TEMP_COMPARE_DIFFERENCE.M_NEGATIVE_SIGN_IGNORED",
+    "listen_for": [
+     "16"
+    ],
+    "ask": "Is -2 above or below zero?",
+    "repair": "Count through zero.",
+    "error": "Subtracts as if the reading below zero were above zero.",
+    "example": {
+     "question": "-2 degrees and 18 degrees: how much warmer is 18?",
+     "wrong_answer": "16",
+     "correct_answer": "20"
+    }
+   },
+   {
+    "code": "MATH.G7.MEASUR.TEMPERATURE.TEMP_COMPARE_DIFFERENCE.M_ONLY_BELOW_ZERO_PART",
+    "listen_for": [
+     "2"
+    ],
+    "ask": "Where does 18 come in?",
+    "repair": "Keep going to 18.",
+    "error": "Counts only the part below zero.",
+    "example": {
+     "question": "-2 and 18 degrees: how much warmer is 18?",
+     "wrong_answer": "2",
+     "correct_answer": "20"
+    }
+   },
+   {
+    "code": "MATH.G7.MEASUR.TEMPERATURE.TEMP_COMPARE_DIFFERENCE.M_ONE_READING_GIVEN",
+    "listen_for": [
+     "29"
+    ],
+    "ask": "What does the question ask?",
+    "repair": "Compare two readings.",
+    "error": "Gives one of the readings when the difference is asked.",
+    "example": {
+     "question": "Graph: hottest 29, coldest 11. Difference?",
+     "wrong_answer": "29",
+     "correct_answer": "18"
+    }
+   },
+   {
+    "code": "MATH.G7.MEASUR.TEMPERATURE.TEMP_COMPARE_DIFFERENCE.M_SUMMED_FOR_DIFFERENCE",
+    "listen_for": [
+     "40"
+    ],
+    "ask": "Difference: add or subtract?",
+    "repair": "Subtract.",
+    "error": "Adds the readings to find the difference.",
+    "example": {
+     "question": "Graph: hottest 29, coldest 11. Difference?",
+     "wrong_answer": "40",
+     "correct_answer": "18"
+    }
+   },
+   {
+    "code": "MATH.G7.MEASUR.TEMPERATURE.TEMP_COMPARE_DIFFERENCE.M_FIRST_AND_LAST_COMPARED",
+    "listen_for": [
+     "first and last"
+    ],
+    "ask": "Where is the highest point?",
+    "repair": "Use highest and lowest.",
+    "error": "Compares the first and last readings instead of the highest and lowest.",
+    "example": {
+     "question": "Graph: first 15, last 11, hottest 29, coldest 11. Range?",
+     "wrong_answer": "4",
+     "correct_answer": "18"
+    }
+   }
+  ],
+  "checks": [
+   {
+    "question": "-2 degrees on Mount Kenya and 18 degrees in Nairobi: how much warmer is Nairobi?",
+    "answer": "20 degrees",
+    "shows": "through zero"
+   },
+   {
+    "question": "A graph has hottest 29 and coldest 11: difference?",
+    "answer": "18 degrees",
+    "shows": "range"
+   }
+  ],
+  "name": "Compare temperatures and find the difference, including readings below zero",
+  "sub_strand": "MATH.G7.MEASUR.TEMPERATURE",
+  "sub_strand_name": "Temperature",
+  "status": "draft: written 17 Nov 2026 offline for the Grade 7 pilot; not yet checked by a Kenyan maths teacher; not loaded by the live tutor"
+ },
+ "MATH.G7.MEASUR.TEMPERATURE.TEMP_UNITS": {
+  "skill": "MATH.G7.MEASUR.TEMPERATURE.TEMP_UNITS",
+  "key_step": "The child says Celsius and kelvin are two scales with water freezing at 0 and 273, and kelvin numbers are bigger.",
+  "floor": {
+   "prerequisite": "Reads a thermometer.",
+   "question": "What does the thermometer read when water freezes?",
+   "answer": "0 degrees Celsius"
+  },
+  "representations": [
+   "two scales side by side",
+   "freezing and boiling",
+   "the unit names"
+  ],
+  "steps": [
+   "Draw the two scales.",
+   "Mark freezing on both.",
+   "Mark boiling on both.",
+   "Say which numbers are bigger."
+  ],
+  "contexts": [
+   "water freezing",
+   "boiling water",
+   "the weather"
+  ],
+  "board": [
+   {
+    "beat": "draw",
+    "do": "Draw two thermometers: Celsius 0 to 100 and kelvin 273 to 373."
+   },
+   {
+    "beat": "point",
+    "do": "Point at freezing on both.",
+    "say": "What number is it on each scale?"
+   },
+   {
+    "beat": "pause",
+    "do": "Wait for the child to say."
+   }
+  ],
+  "misconceptions": [
+   {
+    "code": "MATH.G7.MEASUR.TEMPERATURE.TEMP_UNITS.M_KELVIN_BELOW_CELSIUS",
+    "listen_for": [
+     "kelvin is smaller"
+    ],
+    "ask": "What is 0 degrees in kelvin?",
+    "repair": "273, so bigger.",
+    "error": "Believes a Kelvin reading is smaller than the Celsius reading.",
+    "example": {
+     "question": "Is 294 K higher or lower than 21 degrees Celsius as a number?",
+     "wrong_answer": "lower",
+     "correct_answer": "higher"
+    }
+   },
+   {
+    "code": "MATH.G7.MEASUR.TEMPERATURE.TEMP_UNITS.M_ZERO_KELVIN_AS_ZERO_CELSIUS",
+    "listen_for": [
+     "0 K"
+    ],
+    "ask": "Where does kelvin start?",
+    "repair": "Far below freezing.",
+    "error": "Believes 0 K is the same as 0 degrees Celsius.",
+    "example": {
+     "question": "Water freezes at 0 degrees Celsius. In kelvin?",
+     "wrong_answer": "0 K",
+     "correct_answer": "273 K"
+    }
+   }
+  ],
+  "checks": [
+   {
+    "question": "Water freezes at what kelvin reading?",
+    "answer": "273 K",
+    "shows": "freezing"
+   },
+   {
+    "question": "Is the Kelvin number bigger or smaller than the Celsius number?",
+    "answer": "bigger",
+    "shows": "scales"
+   }
+  ],
+  "name": "Know the Celsius and Kelvin scales",
+  "sub_strand": "MATH.G7.MEASUR.TEMPERATURE",
+  "sub_strand_name": "Temperature",
+  "status": "draft: written 17 Nov 2026 offline for the Grade 7 pilot; not yet checked by a Kenyan maths teacher; not loaded by the live tutor"
+ },
+ "MATH.G7.MEASUR.TEMPERATURE.TEMP_CONVERT_C_K": {
+  "skill": "MATH.G7.MEASUR.TEMPERATURE.TEMP_CONVERT_C_K",
+  "key_step": "The child adds 273 for kelvin, subtracts 273 for Celsius, and changes all readings to one scale before comparing.",
+  "floor": {
+   "prerequisite": "Adds 273.",
+   "question": "11 + 273",
+   "answer": "284"
+  },
+  "representations": [
+   "two thermometers",
+   "the rule",
+   "a table of readings"
+  ],
+  "steps": [
+   "Decide which scale you want.",
+   "Add 273 for kelvin.",
+   "Subtract 273 for Celsius.",
+   "A change stays the same size."
+  ],
+  "contexts": [
+   "milk cooling",
+   "a fridge",
+   "boiling water"
+  ],
+  "board": [
+   {
+    "beat": "draw",
+    "do": "Draw two scales and mark 11 on Celsius."
+   },
+   {
+    "beat": "point",
+    "do": "Point at 11.",
+    "say": "Where is it on the kelvin scale?"
+   },
+   {
+    "beat": "pause",
+    "do": "Wait for the child to say."
+   }
+  ],
+  "misconceptions": [
+   {
+    "code": "MATH.G7.MEASUR.TEMPERATURE.TEMP_CONVERT_C_K.M_273_SUBTRACTED_TO_GET_KELVIN",
+    "listen_for": [
+     "minus 273"
+    ],
+    "ask": "Is kelvin bigger or smaller?",
+    "repair": "Add 273.",
+    "error": "Subtracts 273 to change Celsius to kelvin.",
+    "example": {
+     "question": "11 degrees Celsius in kelvin",
+     "wrong_answer": "-262 K",
+     "correct_answer": "284 K"
+    }
+   },
+   {
+    "code": "MATH.G7.MEASUR.TEMPERATURE.TEMP_CONVERT_C_K.M_CHANGE_CONVERTED_AS_READING",
+    "listen_for": [
+     "307 K"
+    ],
+    "ask": "Does a fall of 34 degrees change when the scale changes?",
+    "repair": "The same: 34 K.",
+    "error": "Changes a difference of temperature by adding or subtracting 273.",
+    "example": {
+     "question": "Milk cools from 52 to 18 degrees Celsius: the fall in kelvin",
+     "wrong_answer": "307 K",
+     "correct_answer": "34 K"
+    }
+   },
+   {
+    "code": "MATH.G7.MEASUR.TEMPERATURE.TEMP_CONVERT_C_K.M_KELVIN_NOT_FOR_EVERYDAY",
+    "listen_for": [
+     "not for milk"
+    ],
+    "ask": "Can any temperature be written in kelvin?",
+    "repair": "Yes.",
+    "error": "Believes kelvin cannot be used for everyday things.",
+    "example": {
+     "question": "Can milk be measured in kelvin?",
+     "wrong_answer": "No",
+     "correct_answer": "Yes"
+    }
+   },
+   {
+    "code": "MATH.G7.MEASUR.TEMPERATURE.TEMP_CONVERT_C_K.M_SCALES_NOT_MATCHED",
+    "listen_for": [
+     "10 is bigger"
+    ],
+    "ask": "What is 294 K in degrees Celsius?",
+    "repair": "Change first.",
+    "error": "Compares a Kelvin number with Celsius numbers without converting.",
+    "example": {
+     "question": "Hottest of 294 K, 2 degrees Celsius and 10 degrees Celsius",
+     "wrong_answer": "10 degrees Celsius (10 is the biggest number below 294)",
+     "correct_answer": "294 K"
+    }
+   }
+  ],
+  "checks": [
+   {
+    "question": "11 degrees Celsius in kelvin",
+    "answer": "284 K",
+    "shows": "add"
+   },
+   {
+    "question": "Hottest of 294 K, 2 and 10 degrees Celsius",
+    "answer": "294 K",
+    "shows": "same scale"
+   }
+  ],
+  "name": "Convert between degrees Celsius and kelvin and compare readings in both",
+  "sub_strand": "MATH.G7.MEASUR.TEMPERATURE",
+  "sub_strand_name": "Temperature",
+  "status": "draft: written 17 Nov 2026 offline for the Grade 7 pilot; not yet checked by a Kenyan maths teacher; not loaded by the live tutor"
+ },
+ "MATH.G7.MEASUR.TEMPERATURE.TEMP_RISES_FALLS": {
+  "skill": "MATH.G7.MEASUR.TEMPERATURE.TEMP_RISES_FALLS",
+  "key_step": "The child starts with the first reading and applies each change in order, adding a rise and taking away a fall.",
+  "floor": {
+   "prerequisite": "Adds and subtracts.",
+   "question": "11 + 11",
+   "answer": "22"
+  },
+  "representations": [
+   "a thermometer with arrows",
+   "steps written",
+   "the final reading"
+  ],
+  "steps": [
+   "Write the start.",
+   "Apply the first change.",
+   "Apply the second.",
+   "Give the final reading with its unit."
+  ],
+  "contexts": [
+   "a day in Nyeri",
+   "a cooling cup of tea",
+   "a night in the highlands"
+  ],
+  "board": [
+   {
+    "beat": "draw",
+    "do": "Draw a thermometer at 11 with an arrow up by 11 then down by 9."
+   },
+   {
+    "beat": "point",
+    "do": "Point at the second arrow.",
+    "say": "Does this go up or down?"
+   },
+   {
+    "beat": "pause",
+    "do": "Wait for the child to say."
+   }
+  ],
+  "misconceptions": [
+   {
+    "code": "MATH.G7.MEASUR.TEMPERATURE.TEMP_RISES_FALLS.M_FALL_ADDED",
+    "listen_for": [
+     "31"
+    ],
+    "ask": "Did the temperature go up the second time?",
+    "repair": "Take the fall away.",
+    "error": "Adds a fall as if it were a rise.",
+    "example": {
+     "question": "11 degrees, rises by 11, then falls by 9",
+     "wrong_answer": "31",
+     "correct_answer": "13"
+    }
+   },
+   {
+    "code": "MATH.G7.MEASUR.TEMPERATURE.TEMP_RISES_FALLS.M_RISE_SUBTRACTED",
+    "listen_for": [
+     "9"
+    ],
+    "ask": "Does a rise add or take away?",
+    "repair": "A rise adds.",
+    "error": "Takes away a rise and adds a fall.",
+    "example": {
+     "question": "11 degrees, rises by 11, then falls by 9",
+     "wrong_answer": "9",
+     "correct_answer": "13"
+    }
+   },
+   {
+    "code": "MATH.G7.MEASUR.TEMPERATURE.TEMP_RISES_FALLS.M_START_READING_IGNORED",
+    "listen_for": [
+     "2"
+    ],
+    "ask": "What was the first reading?",
+    "repair": "Start from it.",
+    "error": "Leaves out the first reading and works only with the changes.",
+    "example": {
+     "question": "11 degrees, rises by 11, then falls by 9",
+     "wrong_answer": "2",
+     "correct_answer": "13"
+    }
+   }
+  ],
+  "checks": [
+   {
+    "question": "11 degrees at 6 a.m., rises by 11, then falls by 9. Reading at midnight?",
+    "answer": "13 degrees",
+    "shows": "two changes"
+   },
+   {
+    "question": "7 degrees, falls by 10, then rises by 4. Reading?",
+    "answer": "1 degree",
+    "shows": "below zero"
+   }
+  ],
+  "name": "Work out a temperature after a rise and a fall",
+  "sub_strand": "MATH.G7.MEASUR.TEMPERATURE",
+  "sub_strand_name": "Temperature",
+  "status": "draft: written 17 Nov 2026 offline for the Grade 7 pilot; not yet checked by a Kenyan maths teacher; not loaded by the live tutor"
+ },
+ "MATH.G7.GEOMET.GEOMETRICAL_CONSTRUCTION.MEASURE_ANGLES_PROTRACTOR": {
+  "skill": "MATH.G7.GEOMET.GEOMETRICAL_CONSTRUCTION.MEASURE_ANGLES_PROTRACTOR",
+  "key_step": "The child puts the centre on the corner, a base line on one arm, and reads the scale that starts at zero on that arm.",
+  "floor": {
+   "prerequisite": "Knows a right angle.",
+   "question": "How many degrees in a right angle?",
+   "answer": "90"
+  },
+  "representations": [
+   "a protractor on an angle",
+   "two scales",
+   "an estimate"
+  ],
+  "steps": [
+   "Centre on the corner.",
+   "Base line along an arm.",
+   "Read the scale from zero.",
+   "Check with acute or obtuse."
+  ],
+  "contexts": [
+   "a door open",
+   "scissors",
+   "a roof"
+  ],
+  "board": [
+   {
+    "beat": "draw",
+    "do": "Draw an obtuse angle with a protractor."
+   },
+   {
+    "beat": "point",
+    "do": "Point at the arm on zero.",
+    "say": "Which scale starts here?"
+   },
+   {
+    "beat": "pause",
+    "do": "Wait for the child to say."
+   }
+  ],
+  "misconceptions": [
+   {
+    "code": "MATH.G7.GEOMET.GEOMETRICAL_CONSTRUCTION.MEASURE_ANGLES_PROTRACTOR.M_WRONG_SCALE_READ",
+    "listen_for": [
+     "70"
+    ],
+    "ask": "Is the angle bigger than a right angle?",
+    "repair": "Use the matching scale.",
+    "error": "Reads the scale that does not start at zero on the arm.",
+    "example": {
+     "question": "An obtuse angle reads 70 and 110. Which?",
+     "wrong_answer": "70",
+     "correct_answer": "110"
+    }
+   },
+   {
+    "code": "MATH.G7.GEOMET.GEOMETRICAL_CONSTRUCTION.MEASURE_ANGLES_PROTRACTOR.M_PROTRACTOR_NOT_ALIGNED",
+    "listen_for": [
+     "edge on the corner"
+    ],
+    "ask": "Where is the centre mark?",
+    "repair": "On the corner.",
+    "error": "Does not put the centre of the protractor on the corner.",
+    "example": {
+     "question": "Angle measured with the corner at the edge of the protractor",
+     "wrong_answer": "65",
+     "correct_answer": "60"
+    }
+   }
+  ],
+  "checks": [
+   {
+    "question": "An angle is more than a right angle. The two readings are 70 and 110. Which is it?",
+    "answer": "110",
+    "shows": "scale"
+   },
+   {
+    "question": "Is a 120 degree angle acute or obtuse?",
+    "answer": "obtuse",
+    "shows": "type"
+   }
+  ],
+  "name": "Measure an angle with a protractor",
+  "sub_strand": "MATH.G7.GEOMET.GEOMETRICAL_CONSTRUCTION",
+  "sub_strand_name": "Geometrical Constructions",
+  "status": "draft: written 17 Nov 2026 offline for the Grade 7 pilot; not yet checked by a Kenyan maths teacher; not loaded by the live tutor"
+ },
+ "MATH.G7.GEOMET.GEOMETRICAL_CONSTRUCTION.BISECT_ANGLE": {
+  "skill": "MATH.G7.GEOMET.GEOMETRICAL_CONSTRUCTION.BISECT_ANGLE",
+  "key_step": "The child says bisect means cut into two equal parts, each half the size, and gives the reason for the equal arcs.",
+  "floor": {
+   "prerequisite": "Halves numbers.",
+   "question": "Half of 50",
+   "answer": "25"
+  },
+  "representations": [
+   "a bisected angle",
+   "the arcs",
+   "a protractor check"
+  ],
+  "steps": [
+   "Arc across both arms from the corner.",
+   "Two equal arcs from those marks.",
+   "Line through the crossing.",
+   "Check each half with a protractor."
+  ],
+  "contexts": [
+   "a door",
+   "a fan",
+   "a roof"
+  ],
+  "board": [
+   {
+    "beat": "draw",
+    "do": "Draw a 50 degree angle and its bisector."
+   },
+   {
+    "beat": "point",
+    "do": "Point at the two halves.",
+    "say": "How big is each?"
+   },
+   {
+    "beat": "pause",
+    "do": "Wait for the child to say."
+   }
+  ],
+  "misconceptions": [
+   {
+    "code": "MATH.G7.GEOMET.GEOMETRICAL_CONSTRUCTION.BISECT_ANGLE.M_BISECT_DOUBLES",
+    "listen_for": [
+     "100"
+    ],
+    "ask": "Are the parts bigger or smaller than the whole?",
+    "repair": "Smaller.",
+    "error": "Doubles the angle when bisecting.",
+    "example": {
+     "question": "Bisect 50 degrees: each new angle",
+     "wrong_answer": "100",
+     "correct_answer": "25"
+    }
+   },
+   {
+    "code": "MATH.G7.GEOMET.GEOMETRICAL_CONSTRUCTION.BISECT_ANGLE.M_BISECT_NO_CHANGE",
+    "listen_for": [
+     "50"
+    ],
+    "ask": "What do the two halves add to?",
+    "repair": "The whole.",
+    "error": "Gives the original angle as the size of each half.",
+    "example": {
+     "question": "Bisect 50 degrees: each new angle",
+     "wrong_answer": "50",
+     "correct_answer": "25"
+    }
+   },
+   {
+    "code": "MATH.G7.GEOMET.GEOMETRICAL_CONSTRUCTION.BISECT_ANGLE.M_SUPPLEMENT_FOR_HALF",
+    "listen_for": [
+     "130"
+    ],
+    "ask": "Is 130 half of 50?",
+    "repair": "No.",
+    "error": "Gives the angle on a straight line instead of half the angle.",
+    "example": {
+     "question": "Bisect 50 degrees: each new angle",
+     "wrong_answer": "130",
+     "correct_answer": "25"
+    }
+   },
+   {
+    "code": "MATH.G7.GEOMET.GEOMETRICAL_CONSTRUCTION.BISECT_ANGLE.M_ARC_REASON_FOR_FIRST_ARC",
+    "listen_for": [
+     "same distance from the corner"
+    ],
+    "ask": "Which step is that reason for?",
+    "repair": "The first arc.",
+    "error": "Gives the reason for the first arc as the reason for another step.",
+    "example": {
+     "question": "Why keep the compasses at the same width for the crossing arcs?",
+     "wrong_answer": "so the two marks on the arms are the same distance from the corner",
+     "correct_answer": "so the crossing point is the same distance from each mark"
+    }
+   },
+   {
+    "code": "MATH.G7.GEOMET.GEOMETRICAL_CONSTRUCTION.BISECT_ANGLE.M_ARC_REASON_FOR_CROSSING_STEP",
+    "listen_for": [
+     "the crossing point"
+    ],
+    "ask": "Which step are we asking about?",
+    "repair": "The first arc.",
+    "error": "Gives the reason for the crossing arcs as the reason for the first arc.",
+    "example": {
+     "question": "Why put the compass point on the corner for the first arc?",
+     "wrong_answer": "so the crossing point is the same distance from each mark",
+     "correct_answer": "so the two marks on the arms are the same distance from the corner"
+    }
+   },
+   {
+    "code": "MATH.G7.GEOMET.GEOMETRICAL_CONSTRUCTION.BISECT_ANGLE.M_ARC_REASON_FOR_BISECTOR_STEP",
+    "listen_for": [
+     "equally far from both arms"
+    ],
+    "ask": "Which step is that reason for?",
+    "repair": "The last.",
+    "error": "Gives the reason for the bisector line as the reason for the first arc.",
+    "example": {
+     "question": "Why put the compass point on the corner for the first arc?",
+     "wrong_answer": "that point is equally far from both arms",
+     "correct_answer": "so the two marks on the arms are the same distance from the corner"
+    }
+   },
+   {
+    "code": "MATH.G7.GEOMET.GEOMETRICAL_CONSTRUCTION.BISECT_ANGLE.M_ARC_REASON_ARCS_TOO_SHORT",
+    "listen_for": [
+     "arcs too short"
+    ],
+    "ask": "What does the first arc make equal?",
+    "repair": "Two distances.",
+    "error": "Says the arcs are drawn so that they are long enough to meet.",
+    "example": {
+     "question": "Why put the compass point on the corner for the first arc?",
+     "wrong_answer": "otherwise the arcs would be too short to meet",
+     "correct_answer": "so the two marks are the same distance from the corner"
+    }
+   }
+  ],
+  "checks": [
+   {
+    "question": "Bisect an angle of 50 degrees: each new angle?",
+    "answer": "25 degrees",
+    "shows": "halves"
+   },
+   {
+    "question": "Bisect 90 degrees twice: size?",
+    "answer": "22.5 degrees",
+    "shows": "twice"
+   }
+  ],
+  "name": "Bisect an angle with compasses and explain the steps",
+  "sub_strand": "MATH.G7.GEOMET.GEOMETRICAL_CONSTRUCTION",
+  "sub_strand_name": "Geometrical Constructions",
+  "status": "draft: written 17 Nov 2026 offline for the Grade 7 pilot; not yet checked by a Kenyan maths teacher; not loaded by the live tutor"
+ },
+ "MATH.G7.GEOMET.GEOMETRICAL_CONSTRUCTION.CONSTRUCT_STANDARD_ANGLES": {
+  "skill": "MATH.G7.GEOMET.GEOMETRICAL_CONSTRUCTION.CONSTRUCT_STANDARD_ANGLES",
+  "key_step": "The child plans the angle from 60 and 90 by bisecting, and adds or subtracts to build the others.",
+  "floor": {
+   "prerequisite": "Halves angles.",
+   "question": "Half of 60",
+   "answer": "30"
+  },
+  "representations": [
+   "a plan on paper",
+   "bisect arrows",
+   "a check with a protractor"
+  ],
+  "steps": [
+   "Choose the starting angle.",
+   "Bisect how many times.",
+   "Add or subtract angles.",
+   "Check with a protractor."
+  ],
+  "contexts": [
+   "a set square",
+   "a roof truss",
+   "a kite"
+  ],
+  "board": [
+   {
+    "beat": "write",
+    "do": "Write: make 30 degrees."
+   },
+   {
+    "beat": "draw",
+    "do": "Draw 60 then half of it."
+   },
+   {
+    "beat": "pause",
+    "do": "Wait for the child to say the plan."
+   }
+  ],
+  "misconceptions": [
+   {
+    "code": "MATH.G7.GEOMET.GEOMETRICAL_CONSTRUCTION.CONSTRUCT_STANDARD_ANGLES.M_BISECTED_TOO_FAR",
+    "listen_for": [
+     "15"
+    ],
+    "ask": "What is half of 30?",
+    "repair": "Stop at 30.",
+    "error": "Bisects one time too many.",
+    "example": {
+     "question": "How do you make 30 degrees with ruler and compasses?",
+     "wrong_answer": "construct 60, bisect it, then bisect again (15)",
+     "correct_answer": "construct 60 and bisect it once"
+    }
+   },
+   {
+    "code": "MATH.G7.GEOMET.GEOMETRICAL_CONSTRUCTION.CONSTRUCT_STANDARD_ANGLES.M_WRONG_START_ANGLE",
+    "listen_for": [
+     "from 90"
+    ],
+    "ask": "What is half of 90?",
+    "repair": "45.",
+    "error": "Starts from 90 degrees to make 30 degrees.",
+    "example": {
+     "question": "How do you make 30 degrees?",
+     "wrong_answer": "construct 90 and bisect it (45)",
+     "correct_answer": "construct 60 and bisect it"
+    }
+   },
+   {
+    "code": "MATH.G7.GEOMET.GEOMETRICAL_CONSTRUCTION.CONSTRUCT_STANDARD_ANGLES.M_STOPPED_AT_SIXTY",
+    "listen_for": [
+     "equilateral"
+    ],
+    "ask": "What does an equilateral triangle give?",
+    "repair": "60.",
+    "error": "Stops at the equilateral triangle angle of 60 degrees.",
+    "example": {
+     "question": "How do you make 30 degrees?",
+     "wrong_answer": "draw an equilateral triangle (60)",
+     "correct_answer": "construct 60 and bisect it"
+    }
+   },
+   {
+    "code": "MATH.G7.GEOMET.GEOMETRICAL_CONSTRUCTION.CONSTRUCT_STANDARD_ANGLES.M_BISECTED_ONCE_ONLY",
+    "listen_for": [
+     "bisect once"
+    ],
+    "ask": "What does bisecting 60 once give?",
+    "repair": "30, so 15 needs one more.",
+    "error": "Bisects once and stops when a smaller angle is needed.",
+    "example": {
+     "question": "How do you make 15 degrees?",
+     "wrong_answer": "construct 60 and bisect it once (30)",
+     "correct_answer": "construct 60 and bisect it twice"
+    }
+   },
+   {
+    "code": "MATH.G7.GEOMET.GEOMETRICAL_CONSTRUCTION.CONSTRUCT_STANDARD_ANGLES.M_PERPENDICULAR_FOR_ANGLE",
+    "listen_for": [
+     "a perpendicular"
+    ],
+    "ask": "What angle is a perpendicular?",
+    "repair": "90, not the angle wanted.",
+    "error": "Offers a perpendicular as the way to make an angle that is not 90 degrees.",
+    "example": {
+     "question": "How do you make 60 degrees?",
+     "wrong_answer": "construct a perpendicular",
+     "correct_answer": "draw arcs of the same radius for an equilateral triangle"
+    }
+   },
+   {
+    "code": "MATH.G7.GEOMET.GEOMETRICAL_CONSTRUCTION.CONSTRUCT_STANDARD_ANGLES.M_BISECT_COUNT_WRONG",
+    "listen_for": [
+     "once"
+    ],
+    "ask": "What does one bisection give?",
+    "repair": "30, then 15.",
+    "error": "Bisects the wrong number of times for the angle wanted.",
+    "example": {
+     "question": "To get 15 degrees from 60: bisect how many times?",
+     "wrong_answer": "once",
+     "correct_answer": "twice"
+    }
+   }
+  ],
+  "checks": [
+   {
+    "question": "How do you make 30 degrees with ruler and compasses?",
+    "answer": "construct 60 then bisect it",
+    "shows": "plan"
+   },
+   {
+    "question": "How can you make 135 degrees?",
+    "answer": "90 and 45 side by side",
+    "shows": "add"
+   }
+  ],
+  "name": "Plan the construction of 90, 60, 45, 30 and multiples of 7.5 degrees",
+  "sub_strand": "MATH.G7.GEOMET.GEOMETRICAL_CONSTRUCTION",
+  "sub_strand_name": "Geometrical Constructions",
+  "status": "draft: written 17 Nov 2026 offline for the Grade 7 pilot; not yet checked by a Kenyan maths teacher; not loaded by the live tutor"
+ },
+ "MATH.G7.GEOMET.GEOMETRICAL_CONSTRUCTION.CONSTRUCT_TRIANGLES": {
+  "skill": "MATH.G7.GEOMET.GEOMETRICAL_CONSTRUCTION.CONSTRUCT_TRIANGLES",
+  "key_step": "The child checks that the two shorter sides together are longer than the longest, and then plans the arcs.",
+  "floor": {
+   "prerequisite": "Compares sums.",
+   "question": "3 + 4 vs 6",
+   "answer": "7 is more"
+  },
+  "representations": [
+   "sticks laid out",
+   "arcs that meet or not",
+   "the test written"
+  ],
+  "steps": [
+   "Order the sides.",
+   "Add the two shorter sides.",
+   "Compare with the longest.",
+   "Plan the arcs."
+  ],
+  "contexts": [
+   "a roof frame",
+   "a swing frame",
+   "a kite"
+  ],
+  "board": [
+   {
+    "beat": "draw",
+    "do": "Draw a line of 6 cm and arcs of 3 cm and 4 cm."
+   },
+   {
+    "beat": "point",
+    "do": "Point at where they cross.",
+    "say": "Do the arcs meet?"
+   },
+   {
+    "beat": "pause",
+    "do": "Wait for the child to say."
+   }
+  ],
+  "misconceptions": [
+   {
+    "code": "MATH.G7.GEOMET.GEOMETRICAL_CONSTRUCTION.CONSTRUCT_TRIANGLES.M_ANY_THREE_LENGTHS_MAKE_TRIANGLE",
+    "listen_for": [
+     "any three"
+    ],
+    "ask": "Do the arcs meet for 4, 3 and 10?",
+    "repair": "Test it.",
+    "error": "Believes any three lengths make a triangle.",
+    "example": {
+     "question": "Sides 4, 3 and 10 cm: a triangle?",
+     "wrong_answer": "yes",
+     "correct_answer": "no: 3 + 4 is less than 10"
+    }
+   },
+   {
+    "code": "MATH.G7.GEOMET.GEOMETRICAL_CONSTRUCTION.CONSTRUCT_TRIANGLES.M_ALL_SIDES_DIFFERENT_NO_TRIANGLE",
+    "listen_for": [
+     "all different"
+    ],
+    "ask": "Must sides be equal?",
+    "repair": "No.",
+    "error": "Believes the sides of a triangle cannot all be different.",
+    "example": {
+     "question": "Sides 4, 3 and 6 cm: a triangle?",
+     "wrong_answer": "no, all different",
+     "correct_answer": "yes: 3 + 4 is more than 6"
+    }
+   },
+   {
+    "code": "MATH.G7.GEOMET.GEOMETRICAL_CONSTRUCTION.CONSTRUCT_TRIANGLES.M_LONGEST_SIDE_BLOCKS_TRIANGLE",
+    "listen_for": [
+     "6 is longer"
+    ],
+    "ask": "Is the longest side always longer?",
+    "repair": "Test the two shorter together.",
+    "error": "Believes a side longer than the others stops a triangle.",
+    "example": {
+     "question": "Sides 4, 3 and 6 cm: a triangle?",
+     "wrong_answer": "no, 6 is longer than both",
+     "correct_answer": "yes: 3 + 4 is more than 6"
+    }
+   },
+   {
+    "code": "MATH.G7.GEOMET.GEOMETRICAL_CONSTRUCTION.CONSTRUCT_TRIANGLES.M_LONGEST_SIDE_AS_BASE_ENOUGH",
+    "listen_for": [
+     "it can be the base"
+    ],
+    "ask": "Do the two short sides reach each other?",
+    "repair": "Test them.",
+    "error": "Believes the longest side can always be the base, so any lengths will do.",
+    "example": {
+     "question": "Sides 4, 3 and 10 cm: a triangle?",
+     "wrong_answer": "yes, 10 cm can be the base",
+     "correct_answer": "no: the two short sides cannot reach"
+    }
+   }
+  ],
+  "checks": [
+   {
+    "question": "Sides 4, 3 and 6 cm: can a triangle be drawn?",
+    "answer": "Yes",
+    "shows": "test"
+   },
+   {
+    "question": "Sides 4, 3 and 10 cm: can a triangle be drawn?",
+    "answer": "No",
+    "shows": "test"
+   }
+  ],
+  "name": "Decide whether a triangle can be constructed and plan its construction",
+  "sub_strand": "MATH.G7.GEOMET.GEOMETRICAL_CONSTRUCTION",
+  "sub_strand_name": "Geometrical Constructions",
+  "status": "draft: written 17 Nov 2026 offline for the Grade 7 pilot; not yet checked by a Kenyan maths teacher; not loaded by the live tutor"
+ },
+ "MATH.G7.GEOMET.GEOMETRICAL_CONSTRUCTION.CONSTRUCT_CIRCLES": {
+  "skill": "MATH.G7.GEOMET.GEOMETRICAL_CONSTRUCTION.CONSTRUCT_CIRCLES",
+  "key_step": "The child sets the compasses to the radius, keeps the point still at the centre, and says all points are the same distance from it.",
+  "floor": {
+   "prerequisite": "Halves a diameter.",
+   "question": "Radius of diameter 6",
+   "answer": "3"
+  },
+  "representations": [
+   "compasses opened to the radius",
+   "a drawn circle",
+   "a string and pencil"
+  ],
+  "steps": [
+   "Halve the diameter.",
+   "Open the compasses.",
+   "Point on the centre.",
+   "Turn without moving the point."
+  ],
+  "contexts": [
+   "a round table",
+   "a coin",
+   "a garden bed"
+  ],
+  "board": [
+   {
+    "beat": "draw",
+    "do": "Draw a centre and compasses."
+   },
+   {
+    "beat": "point",
+    "do": "Point at the opening.",
+    "say": "Is that the radius or the diameter?"
+   },
+   {
+    "beat": "pause",
+    "do": "Wait for the child to say."
+   }
+  ],
+  "misconceptions": [
+   {
+    "code": "MATH.G7.GEOMET.GEOMETRICAL_CONSTRUCTION.CONSTRUCT_CIRCLES.M_RADIUS_AS_DIAMETER_SET",
+    "listen_for": [
+     "6 cm"
+    ],
+    "ask": "What is half of 6?",
+    "repair": "Set to the radius.",
+    "error": "Sets the compasses to the diameter.",
+    "example": {
+     "question": "Draw a circle of diameter 6 cm: compass opening",
+     "wrong_answer": "6 cm",
+     "correct_answer": "3 cm"
+    }
+   },
+   {
+    "code": "MATH.G7.GEOMET.GEOMETRICAL_CONSTRUCTION.CONSTRUCT_CIRCLES.M_COMPASS_POINT_MOVES",
+    "listen_for": [
+     "it does not matter"
+    ],
+    "ask": "What is the centre?",
+    "repair": "Fixed.",
+    "error": "Lets the compass point move while drawing.",
+    "example": {
+     "question": "Why must the compass point stay still?",
+     "wrong_answer": "it does not matter",
+     "correct_answer": "every point of the circle is the same distance from the centre"
+    }
+   }
+  ],
+  "checks": [
+   {
+    "question": "To draw a circle of diameter 6 cm, set the compasses to?",
+    "answer": "3 cm",
+    "shows": "radius"
+   },
+   {
+    "question": "Why must the point stay still?",
+    "answer": "every point is the same distance from the centre",
+    "shows": "centre"
+   }
+  ],
+  "name": "Construct a circle of a given radius or diameter",
+  "sub_strand": "MATH.G7.GEOMET.GEOMETRICAL_CONSTRUCTION",
+  "sub_strand_name": "Geometrical Constructions",
+  "status": "draft: written 17 Nov 2026 offline for the Grade 7 pilot; not yet checked by a Kenyan maths teacher; not loaded by the live tutor"
  }
 };
 export default TEACHING_PACK_G7;

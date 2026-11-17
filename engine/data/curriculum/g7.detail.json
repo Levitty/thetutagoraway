@@ -785,6 +785,97 @@
     "predict the distance round"
    ],
    "mastery": "The child says the circumference is always about 3.14 times the diameter, so doubling the diameter doubles the circumference, and finds the pattern in a table of measured circles."
+  },
+  "MATH.G7.MEASUR.TEMPERATURE.TEMP_WORDS": {
+   "forms": [
+    "which word for 35 degrees",
+    "a reading for a hot day",
+    "which range",
+    "order the words"
+   ],
+   "mastery": "The child reads a table of temperature ranges and says whether a reading in degrees Celsius is cold, cool, warm or hot, and gives a sensible temperature for a day described in words."
+  },
+  "MATH.G7.MEASUR.TEMPERATURE.TEMP_COMPARE_DIFFERENCE": {
+   "forms": [
+    "how much warmer",
+    "range of a graph",
+    "one below zero",
+    "which is colder"
+   ],
+   "mastery": "The child says which of two places is hotter, warmer or colder, finds the difference between two readings (counting through zero when one is below it), and the difference between the highest and lowest points of a graph."
+  },
+  "MATH.G7.MEASUR.TEMPERATURE.TEMP_UNITS": {
+   "forms": [
+    "freezing and boiling points",
+    "which unit",
+    "write the unit",
+    "which is bigger"
+   ],
+   "mastery": "The child names degree Celsius and kelvin as units, knows water freezes at 0 degrees Celsius (273 K) and boils at 100 degrees Celsius (373 K), writes kelvin without a degree sign, and knows a Kelvin reading is larger than the Celsius reading."
+  },
+  "MATH.G7.MEASUR.TEMPERATURE.TEMP_CONVERT_C_K": {
+   "forms": [
+    "Celsius to kelvin",
+    "kelvin to Celsius",
+    "the hottest of three readings",
+    "a fall of temperature in kelvin",
+    "find the mistake"
+   ],
+   "mastery": "The child adds 273 to change degrees Celsius to kelvin and subtracts 273 for the reverse, knows a change in temperature is the same in both units, and puts both on one scale before comparing."
+  },
+  "MATH.G7.MEASUR.TEMPERATURE.TEMP_RISES_FALLS": {
+   "forms": [
+    "reading at midnight",
+    "after two changes",
+    "what was the start",
+    "rise then fall"
+   ],
+   "mastery": "The child starts from the first reading, adds each rise and subtracts each fall in turn, and gives the final temperature in degrees Celsius or kelvin."
+  },
+  "MATH.G7.GEOMET.GEOMETRICAL_CONSTRUCTION.MEASURE_ANGLES_PROTRACTOR": {
+   "forms": [
+    "read the angle",
+    "which scale",
+    "acute or obtuse",
+    "estimate then measure"
+   ],
+   "mastery": "The child places the centre of the protractor on the corner and the base line along one arm, reads the scale that starts at zero on that arm, and states whether the angle is acute, right, obtuse or reflex."
+  },
+  "MATH.G7.GEOMET.GEOMETRICAL_CONSTRUCTION.BISECT_ANGLE": {
+   "forms": [
+    "size of each half",
+    "why this arc",
+    "order of the steps",
+    "which step is wrong"
+   ],
+   "mastery": "The child bisects an angle with a ruler and compasses (arc across both arms from the corner, two equal arcs from those marks, line through the crossing point), says each half is half the original, and gives the reason for each arc."
+  },
+  "MATH.G7.GEOMET.GEOMETRICAL_CONSTRUCTION.CONSTRUCT_STANDARD_ANGLES": {
+   "forms": [
+    "how to make 30 degrees",
+    "plan for 135 degrees",
+    "which bisection gives 15",
+    "find the mistake in the plan"
+   ],
+   "mastery": "The child plans which angles to construct and how often to bisect to get 90, 60, 45, 30, 15 and 7.5 degrees, and builds angles such as 135 or 105 by adding or subtracting these."
+  },
+  "MATH.G7.GEOMET.GEOMETRICAL_CONSTRUCTION.CONSTRUCT_TRIANGLES": {
+   "forms": [
+    "can this triangle be drawn",
+    "which sides make a triangle",
+    "order of the steps",
+    "why the arcs do not meet"
+   ],
+   "mastery": "The child decides whether three side lengths make a triangle (the two shorter sides together must be longer than the longest), and plans the construction of a triangle from its sides or from two sides and the angle between them."
+  },
+  "MATH.G7.GEOMET.GEOMETRICAL_CONSTRUCTION.CONSTRUCT_CIRCLES": {
+   "forms": [
+    "set the compasses",
+    "radius from diameter",
+    "why the point stays still",
+    "draw a circle of diameter 6 cm"
+   ],
+   "mastery": "The child sets the compasses to the radius (half the diameter), places the point at the centre, and draws a circle, and says that every point on it is the same distance from the centre."
   }
  }
 }

@@ -793,27 +793,37 @@ export const FAMILIES = [
     } }),
 
   // =========================================================== TEMPERATURE
-  fam({ id: 'g7.temp.word-from-table', skill: 'G7_TEMPERATURE', outcome: 'G7.TEMP.a', rung: 1, form: 'table',
+  fam({ id: 'g7.temp.word-from-table', skill: 'G7_TEMPERATURE', outcome: 'MATH.G7.MEASUR.TEMPERATURE.a', cskill: 'MATH.G7.MEASUR.TEMPERATURE.TEMP_WORDS', rung: 1, form: 'table',
     draw: () => ({ t: pick([3, 6, 8, 12, 14, 17, 18, 22, 25, 27, 32, 35, 38]), place: pick(['Nairobi', 'Nakuru', 'Mombasa', 'Nyeri', 'Kisumu']) }),
     make: ({ t, place }) => {
       const word = t < 10 ? 'cold' : t < 20 ? 'cool' : t < 30 ? 'warm' : 'hot';
       return { question: `A thermometer in ${place} shows ${t} °C. Use the table. Which word describes this temperature?`,
         model: { type: 'table', data: { head: ['Temperature', 'Word'], rows: [{ label: 'Below 10 °C', value: 'cold' }, { label: '10 °C to 19 °C', value: 'cool' }, { label: '20 °C to 29 °C', value: 'warm' }, { label: '30 °C and above', value: 'hot' }] } },
-        options: ['cold', 'cool', 'warm', 'hot'].map(w => ({ text: w, right: w === word, why: w === word ? undefined : `Look at which row of the table ${t} °C falls in.` })), fixedOrder: true,
+        options: (() => {
+        // up to three wrong words, one for each way of misreading the table: the next band or a band further away, too cold or too hot
+        const W = ['cold', 'cool', 'warm', 'hot'], ri = W.indexOf(word), seen = new Set(), out = [];
+        for (const [wi, w] of W.entries()) {
+          if (wi === ri) { out.push({ text: w, right: true }); continue; }
+          const code = `M_${Math.abs(wi - ri) === 1 ? 'NEXT' : 'FAR'}_BAND_TOO_${wi < ri ? 'COLD' : 'HOT'}`;
+          if (seen.has(code)) continue;
+          seen.add(code); out.push({ text: w, right: false, why: `${t} °C is not in the ${w} row of the table. Look at which row ${t} °C falls in.`, mis: code });
+        }
+        return out;
+      })(), fixedOrder: true,
         hints: ['Find the row whose range contains the reading.', 'Read the word in that row.'],
         steps: [`${t} °C is in the range for "${word}".`, `The word is ${word}.`] };
     } }),
-  fam({ id: 'g7.temp.rise-then-fall', skill: 'G7_TEMPERATURE', outcome: 'G7.TEMP.b', rung: 2, form: 'word',
-    draw: () => { const s = randInt(8, 16), r = randInt(10, 18), f = randInt(5, 12); return uniq(s + r - f, s + r + f, s - r + f, r - f) ? { s, r, f, place: pick(['Nakuru', 'Nyeri', 'Eldoret', 'Kitale']), p: person() } : null; },
+  fam({ id: 'g7.temp.rise-then-fall', skill: 'G7_TEMPERATURE', outcome: 'MATH.G7.MEASUR.TEMPERATURE.e', cskill: 'MATH.G7.MEASUR.TEMPERATURE.TEMP_RISES_FALLS', rung: 2, form: 'word',
+    draw: () => { const s = randInt(8, 16), r = randInt(10, 18), f = randInt(5, 12); return uniq(s + r - f, s + r + f, s - r + f, r - f) && [s + r + f, s - r + f, r - f].every(v => Math.abs(v - (s + r - f)) > 2) ? { s, r, f, place: pick(['Nakuru', 'Nyeri', 'Eldoret', 'Kitale']), p: person() } : null; },
     make: ({ s, r, f, place }) => ({
       question: `A thermometer in ${place} shows ${s} °C at 6 a.m. By 2 p.m. the temperature has risen by ${r} °C. Then it falls by ${f} °C by midnight. What does the thermometer show at midnight?`,
       answer: s + r - f,
-      wrong: [[s + r + f, 'The temperature fell the second time. Take that fall away.'], [s - r + f, 'The first change was a rise. Add it.'], [r - f, 'Start from the 6 a.m. reading, then apply both changes.']],
+      wrong: [[s + r + f, 'The temperature fell the second time. Take that fall away.', 'M_FALL_ADDED'], [s - r + f, 'The first change was a rise. Add it.', 'M_RISE_SUBTRACTED'], [r - f, 'Start from the 6 a.m. reading, then apply both changes.', 'M_START_READING_IGNORED']],
       hints: ['Follow the thermometer through the day: start, rise, fall.', 'A rise goes up the scale. A fall goes down.'],
       steps: [`After the rise: ${s} + ${r} = ${s + r} °C.`, `After the fall: ${s + r} − ${f} = ${s + r - f} °C.`],
     }),
     check: ({ s, r, f }, a) => a + f - r === s }),
-  fam({ id: 'g7.temp.spot-kelvin-minus', skill: 'G7_TEMPERATURE', outcome: 'G7.TEMP.d', rung: 2, form: 'spot',
+  fam({ id: 'g7.temp.spot-kelvin-minus', skill: 'G7_TEMPERATURE', outcome: 'MATH.G7.MEASUR.TEMPERATURE.d', cskill: 'MATH.G7.MEASUR.TEMPERATURE.TEMP_CONVERT_C_K', rung: 2, form: 'spot',
     draw: () => ({ c: randInt(10, 38), p: person() }),
     make: ({ c, p }) => {
       const bad = c - 273, good = c + 273;
@@ -823,17 +833,18 @@ export const FAMILIES = [
           { text: `Kelvin = ${c} − 273 = ${bad}`, ok: bad === c - 273 },
           { text: `So ${c} °C is ${bad} K.`, ok: bad === bad },
         ],
+        mis: 'M_273_SUBTRACTED_TO_GET_KELVIN',
         fix: 'To change °C to kelvin, add 273. Kelvin readings are larger than the Celsius ones here.',
         steps: ['Kelvin = Celsius + 273.', `${c} + 273 = ${good} K.`] };
     } }),
-  fam({ id: 'g7.temp.daily-range-graph', skill: 'G7_TEMPERATURE', outcome: 'G7.TEMP.b', rung: 2, form: 'graph',
+  fam({ id: 'g7.temp.daily-range-graph', skill: 'G7_TEMPERATURE', outcome: 'MATH.G7.MEASUR.TEMPERATURE.b', cskill: 'MATH.G7.MEASUR.TEMPERATURE.TEMP_COMPARE_DIFFERENCE', rung: 2, form: 'graph',
     draw: () => { const hours = [6, 9, 12, 15, 18, 21]; const vals = [randInt(10, 14), randInt(15, 20), randInt(22, 28), randInt(23, 30), randInt(17, 22), randInt(12, 16)]; const hi = Math.max(...vals), lo = Math.min(...vals); return vals.filter(v => v === hi).length === 1 && vals.filter(v => v === lo).length === 1 && uniq(hi - lo, hi, vals[5] - vals[0] || 99, hi + lo) ? { hours, vals, place: pick(['Kitale', 'Thika', 'Nyeri', 'Machakos']) } : null; },
     make: ({ hours, vals, place }) => {
       const hi = Math.max(...vals), lo = Math.min(...vals);
       return { question: `The line graph shows the temperature in °C at a school in ${place} during one day. What is the difference between the hottest and the coldest temperature on the graph, in degrees?`,
         model: { type: 'line-graph', data: { points: hours.map((x, i) => ({ x, y: vals[i] })), xTicks: hours, yTicks: [10, 15, 20, 25, 30], xLabel: 'Time of day (hours)', yLabel: 'Temperature (°C)' } },
         answer: hi - lo,
-        wrong: [[hi, 'That is the hottest temperature alone. Find how far it is from the coldest.'], [hi + lo, 'A difference is found by subtracting.'], [Math.abs(vals[vals.length - 1] - vals[0]), 'That compares the first and last readings. Look for the highest and the lowest points.']],
+        wrong: [[hi, 'That is the hottest temperature alone. Find how far it is from the coldest.', 'M_ONE_READING_GIVEN'], [hi + lo, 'A difference is found by subtracting.', 'M_SUMMED_FOR_DIFFERENCE'], [Math.abs(vals[vals.length - 1] - vals[0]), 'That compares the first and last readings. Look for the highest and the lowest points.', 'M_FIRST_AND_LAST_COMPARED']],
         hints: ['Find the highest point on the graph and the lowest point.', 'Subtract the lowest reading from the highest.'],
         steps: [`Highest: ${hi} °C. Lowest: ${lo} °C.`, `Difference: ${hi} − ${lo} = ${hi - lo} degrees.`] };
     },

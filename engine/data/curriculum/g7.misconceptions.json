@@ -3820,5 +3820,551 @@
   "help": "Divide one distance round by its width to find the pattern.",
   "source": "to be confirmed by a teacher (no source yet)",
   "status": "draft"
+ },
+ "MATH.G7.MEASUR.TEMPERATURE.TEMP_WORDS.M_NEXT_BAND_TOO_COLD": {
+  "skill": "MATH.G7.MEASUR.TEMPERATURE.TEMP_WORDS",
+  "error": "Picks the next colder word band than the table gives.",
+  "example": {
+   "question": "Table: cool 10 to 19, warm 20 to 29, hot 30 and over. 35 degrees is?",
+   "wrong_answer": "warm",
+   "correct_answer": "hot"
+  },
+  "cause": "Misreads which row the number falls in.",
+  "reveals": "The answer warm as a wrong option, with a reason that names the idea.",
+  "help": "Find 35 in the ranges: it is above 30.",
+  "source": "to be confirmed by a teacher (no source yet)",
+  "status": "draft"
+ },
+ "MATH.G7.MEASUR.TEMPERATURE.TEMP_WORDS.M_NEXT_BAND_TOO_HOT": {
+  "skill": "MATH.G7.MEASUR.TEMPERATURE.TEMP_WORDS",
+  "error": "Picks the next hotter word band than the table gives.",
+  "example": {
+   "question": "Table: cool 10 to 19, warm 20 to 29, hot 30 and over. 25 degrees is?",
+   "wrong_answer": "hot",
+   "correct_answer": "warm"
+  },
+  "cause": "Rounds up to the hotter word.",
+  "reveals": "The answer hot as a wrong option, with a reason that names the idea.",
+  "help": "Check the cut-offs in the table.",
+  "source": "to be confirmed by a teacher (no source yet)",
+  "status": "draft"
+ },
+ "MATH.G7.MEASUR.TEMPERATURE.TEMP_WORDS.M_FAR_BAND_TOO_COLD": {
+  "skill": "MATH.G7.MEASUR.TEMPERATURE.TEMP_WORDS",
+  "error": "Picks a word two or more bands too cold.",
+  "example": {
+   "question": "35 degrees Celsius is?",
+   "wrong_answer": "cool",
+   "correct_answer": "hot"
+  },
+  "cause": "Does not use the table at all.",
+  "reveals": "The answer cool as a wrong option, with a reason that names the idea.",
+  "help": "Find the row with 35 in it.",
+  "source": "to be confirmed by a teacher (no source yet)",
+  "status": "draft"
+ },
+ "MATH.G7.MEASUR.TEMPERATURE.TEMP_WORDS.M_FAR_BAND_TOO_HOT": {
+  "skill": "MATH.G7.MEASUR.TEMPERATURE.TEMP_WORDS",
+  "error": "Picks a word two or more bands too hot.",
+  "example": {
+   "question": "5 degrees Celsius is?",
+   "wrong_answer": "warm",
+   "correct_answer": "cold"
+  },
+  "cause": "Reads the small number as a larger band.",
+  "reveals": "The answer warm as a wrong option, with a reason that names the idea.",
+  "help": "Find the row with 5 in it.",
+  "source": "to be confirmed by a teacher (no source yet)",
+  "status": "draft"
+ },
+ "MATH.G7.MEASUR.TEMPERATURE.TEMP_COMPARE_DIFFERENCE.M_NEGATIVE_SIGN_IGNORED": {
+  "skill": "MATH.G7.MEASUR.TEMPERATURE.TEMP_COMPARE_DIFFERENCE",
+  "error": "Subtracts as if the reading below zero were above zero.",
+  "example": {
+   "question": "-2 degrees and 18 degrees: how much warmer is 18?",
+   "wrong_answer": "16",
+   "correct_answer": "20"
+  },
+  "cause": "Drops the minus sign.",
+  "reveals": "The answer 16 as a wrong option, with a reason that names the idea.",
+  "help": "Count up from -2 to 0, then on to 18.",
+  "source": "to be confirmed by a teacher (no source yet)",
+  "status": "draft"
+ },
+ "MATH.G7.MEASUR.TEMPERATURE.TEMP_COMPARE_DIFFERENCE.M_ONLY_BELOW_ZERO_PART": {
+  "skill": "MATH.G7.MEASUR.TEMPERATURE.TEMP_COMPARE_DIFFERENCE",
+  "error": "Counts only the part below zero.",
+  "example": {
+   "question": "-2 and 18 degrees: how much warmer is 18?",
+   "wrong_answer": "2",
+   "correct_answer": "20"
+  },
+  "cause": "Stops when reaching zero.",
+  "reveals": "The answer 2 as a wrong option, with a reason that names the idea.",
+  "help": "Keep going up to the warmer reading.",
+  "source": "to be confirmed by a teacher (no source yet)",
+  "status": "draft"
+ },
+ "MATH.G7.MEASUR.TEMPERATURE.TEMP_COMPARE_DIFFERENCE.M_ONE_READING_GIVEN": {
+  "skill": "MATH.G7.MEASUR.TEMPERATURE.TEMP_COMPARE_DIFFERENCE",
+  "error": "Gives one of the readings when the difference is asked.",
+  "example": {
+   "question": "Graph: hottest 29, coldest 11. Difference?",
+   "wrong_answer": "29",
+   "correct_answer": "18"
+  },
+  "cause": "Reads off the top point.",
+  "reveals": "The answer 29 as a wrong option, with a reason that names the idea.",
+  "help": "A difference compares two readings.",
+  "source": "to be confirmed by a teacher (no source yet)",
+  "status": "draft"
+ },
+ "MATH.G7.MEASUR.TEMPERATURE.TEMP_COMPARE_DIFFERENCE.M_SUMMED_FOR_DIFFERENCE": {
+  "skill": "MATH.G7.MEASUR.TEMPERATURE.TEMP_COMPARE_DIFFERENCE",
+  "error": "Adds the readings to find the difference.",
+  "example": {
+   "question": "Graph: hottest 29, coldest 11. Difference?",
+   "wrong_answer": "40",
+   "correct_answer": "18"
+  },
+  "cause": "Combines the numbers.",
+  "reveals": "The answer 40 as a wrong option, with a reason that names the idea.",
+  "help": "Difference means subtract.",
+  "source": "to be confirmed by a teacher (no source yet)",
+  "status": "draft"
+ },
+ "MATH.G7.MEASUR.TEMPERATURE.TEMP_COMPARE_DIFFERENCE.M_FIRST_AND_LAST_COMPARED": {
+  "skill": "MATH.G7.MEASUR.TEMPERATURE.TEMP_COMPARE_DIFFERENCE",
+  "error": "Compares the first and last readings instead of the highest and lowest.",
+  "example": {
+   "question": "Graph: first 15, last 11, hottest 29, coldest 11. Range?",
+   "wrong_answer": "4",
+   "correct_answer": "18"
+  },
+  "cause": "Uses the ends of the graph.",
+  "reveals": "The answer 4 as a wrong option, with a reason that names the idea.",
+  "help": "Look for the highest and lowest points.",
+  "source": "to be confirmed by a teacher (no source yet)",
+  "status": "draft"
+ },
+ "MATH.G7.MEASUR.TEMPERATURE.TEMP_UNITS.M_KELVIN_BELOW_CELSIUS": {
+  "skill": "MATH.G7.MEASUR.TEMPERATURE.TEMP_UNITS",
+  "error": "Believes a Kelvin reading is smaller than the Celsius reading.",
+  "example": {
+   "question": "Is 294 K higher or lower than 21 degrees Celsius as a number?",
+   "wrong_answer": "lower",
+   "correct_answer": "higher"
+  },
+  "cause": "Expects a new unit to give smaller numbers.",
+  "reveals": "The answer lower as a wrong option, with a reason that names the idea.",
+  "help": "Kelvin readings are the Celsius reading plus 273.",
+  "source": "to be confirmed by a teacher (no source yet)",
+  "status": "draft"
+ },
+ "MATH.G7.MEASUR.TEMPERATURE.TEMP_UNITS.M_ZERO_KELVIN_AS_ZERO_CELSIUS": {
+  "skill": "MATH.G7.MEASUR.TEMPERATURE.TEMP_UNITS",
+  "error": "Believes 0 K is the same as 0 degrees Celsius.",
+  "example": {
+   "question": "Water freezes at 0 degrees Celsius. In kelvin?",
+   "wrong_answer": "0 K",
+   "correct_answer": "273 K"
+  },
+  "cause": "Thinks all scales start at the same place.",
+  "reveals": "The answer 0 K as a wrong option, with a reason that names the idea.",
+  "help": "Kelvin starts at the coldest possible temperature, far below freezing.",
+  "source": "to be confirmed by a teacher (no source yet)",
+  "status": "draft"
+ },
+ "MATH.G7.MEASUR.TEMPERATURE.TEMP_CONVERT_C_K.M_273_SUBTRACTED_TO_GET_KELVIN": {
+  "skill": "MATH.G7.MEASUR.TEMPERATURE.TEMP_CONVERT_C_K",
+  "error": "Subtracts 273 to change Celsius to kelvin.",
+  "example": {
+   "question": "11 degrees Celsius in kelvin",
+   "wrong_answer": "-262 K",
+   "correct_answer": "284 K"
+  },
+  "cause": "Reverses the rule.",
+  "reveals": "The answer -262 K as a wrong option, with a reason that names the idea.",
+  "help": "Kelvin readings are bigger: add 273.",
+  "source": "to be confirmed by a teacher (no source yet)",
+  "status": "draft"
+ },
+ "MATH.G7.MEASUR.TEMPERATURE.TEMP_CONVERT_C_K.M_CHANGE_CONVERTED_AS_READING": {
+  "skill": "MATH.G7.MEASUR.TEMPERATURE.TEMP_CONVERT_C_K",
+  "error": "Changes a difference of temperature by adding or subtracting 273.",
+  "example": {
+   "question": "Milk cools from 52 to 18 degrees Celsius: the fall in kelvin",
+   "wrong_answer": "307 K",
+   "correct_answer": "34 K"
+  },
+  "cause": "Treats a change like a reading.",
+  "reveals": "The answer 307 K as a wrong option, with a reason that names the idea.",
+  "help": "A change of 1 degree Celsius is a change of 1 kelvin.",
+  "source": "to be confirmed by a teacher (no source yet)",
+  "status": "draft"
+ },
+ "MATH.G7.MEASUR.TEMPERATURE.TEMP_CONVERT_C_K.M_KELVIN_NOT_FOR_EVERYDAY": {
+  "skill": "MATH.G7.MEASUR.TEMPERATURE.TEMP_CONVERT_C_K",
+  "error": "Believes kelvin cannot be used for everyday things.",
+  "example": {
+   "question": "Can milk be measured in kelvin?",
+   "wrong_answer": "No",
+   "correct_answer": "Yes"
+  },
+  "cause": "Thinks kelvin is only for science labs.",
+  "reveals": "The answer No as a wrong option, with a reason that names the idea.",
+  "help": "Any temperature can be written in kelvin.",
+  "source": "to be confirmed by a teacher (no source yet)",
+  "status": "draft"
+ },
+ "MATH.G7.MEASUR.TEMPERATURE.TEMP_CONVERT_C_K.M_SCALES_NOT_MATCHED": {
+  "skill": "MATH.G7.MEASUR.TEMPERATURE.TEMP_CONVERT_C_K",
+  "error": "Compares a Kelvin number with Celsius numbers without converting.",
+  "example": {
+   "question": "Hottest of 294 K, 2 degrees Celsius and 10 degrees Celsius",
+   "wrong_answer": "10 degrees Celsius (10 is the biggest number below 294)",
+   "correct_answer": "294 K"
+  },
+  "cause": "Reads the biggest number, not the hottest temperature.",
+  "reveals": "The answer 10 degrees Celsius (10 is the biggest number below 294) as a wrong option, with a reason that names the idea.",
+  "help": "Change all to the same scale first.",
+  "source": "to be confirmed by a teacher (no source yet)",
+  "status": "draft"
+ },
+ "MATH.G7.MEASUR.TEMPERATURE.TEMP_RISES_FALLS.M_FALL_ADDED": {
+  "skill": "MATH.G7.MEASUR.TEMPERATURE.TEMP_RISES_FALLS",
+  "error": "Adds a fall as if it were a rise.",
+  "example": {
+   "question": "11 degrees, rises by 11, then falls by 9",
+   "wrong_answer": "31",
+   "correct_answer": "13"
+  },
+  "cause": "Adds all the numbers.",
+  "reveals": "The answer 31 as a wrong option, with a reason that names the idea.",
+  "help": "A fall means the temperature goes down.",
+  "source": "to be confirmed by a teacher (no source yet)",
+  "status": "draft"
+ },
+ "MATH.G7.MEASUR.TEMPERATURE.TEMP_RISES_FALLS.M_RISE_SUBTRACTED": {
+  "skill": "MATH.G7.MEASUR.TEMPERATURE.TEMP_RISES_FALLS",
+  "error": "Takes away a rise and adds a fall.",
+  "example": {
+   "question": "11 degrees, rises by 11, then falls by 9",
+   "wrong_answer": "9",
+   "correct_answer": "13"
+  },
+  "cause": "Swaps the two changes.",
+  "reveals": "The answer 9 as a wrong option, with a reason that names the idea.",
+  "help": "A rise adds and a fall takes away.",
+  "source": "to be confirmed by a teacher (no source yet)",
+  "status": "draft"
+ },
+ "MATH.G7.MEASUR.TEMPERATURE.TEMP_RISES_FALLS.M_START_READING_IGNORED": {
+  "skill": "MATH.G7.MEASUR.TEMPERATURE.TEMP_RISES_FALLS",
+  "error": "Leaves out the first reading and works only with the changes.",
+  "example": {
+   "question": "11 degrees, rises by 11, then falls by 9",
+   "wrong_answer": "2",
+   "correct_answer": "13"
+  },
+  "cause": "Uses only the changes.",
+  "reveals": "The answer 2 as a wrong option, with a reason that names the idea.",
+  "help": "Start from the first reading.",
+  "source": "to be confirmed by a teacher (no source yet)",
+  "status": "draft"
+ },
+ "MATH.G7.GEOMET.GEOMETRICAL_CONSTRUCTION.MEASURE_ANGLES_PROTRACTOR.M_WRONG_SCALE_READ": {
+  "skill": "MATH.G7.GEOMET.GEOMETRICAL_CONSTRUCTION.MEASURE_ANGLES_PROTRACTOR",
+  "error": "Reads the scale that does not start at zero on the arm.",
+  "example": {
+   "question": "An obtuse angle reads 70 and 110. Which?",
+   "wrong_answer": "70",
+   "correct_answer": "110"
+  },
+  "cause": "Starts from the nearest number.",
+  "reveals": "The answer 70 as a wrong option, with a reason that names the idea.",
+  "help": "Check: is the angle bigger or smaller than a right angle?",
+  "source": "to be confirmed by a teacher (no source yet)",
+  "status": "draft"
+ },
+ "MATH.G7.GEOMET.GEOMETRICAL_CONSTRUCTION.MEASURE_ANGLES_PROTRACTOR.M_PROTRACTOR_NOT_ALIGNED": {
+  "skill": "MATH.G7.GEOMET.GEOMETRICAL_CONSTRUCTION.MEASURE_ANGLES_PROTRACTOR",
+  "error": "Does not put the centre of the protractor on the corner.",
+  "example": {
+   "question": "Angle measured with the corner at the edge of the protractor",
+   "wrong_answer": "65",
+   "correct_answer": "60"
+  },
+  "cause": "Aligns the edge, not the centre mark.",
+  "reveals": "The answer 65 as a wrong option, with a reason that names the idea.",
+  "help": "The small hole or cross goes on the corner.",
+  "source": "to be confirmed by a teacher (no source yet)",
+  "status": "draft"
+ },
+ "MATH.G7.GEOMET.GEOMETRICAL_CONSTRUCTION.BISECT_ANGLE.M_BISECT_DOUBLES": {
+  "skill": "MATH.G7.GEOMET.GEOMETRICAL_CONSTRUCTION.BISECT_ANGLE",
+  "error": "Doubles the angle when bisecting.",
+  "example": {
+   "question": "Bisect 50 degrees: each new angle",
+   "wrong_answer": "100",
+   "correct_answer": "25"
+  },
+  "cause": "Hears bi- as two times.",
+  "reveals": "The answer 100 as a wrong option, with a reason that names the idea.",
+  "help": "Bisect means cut into two equal parts.",
+  "source": "to be confirmed by a teacher (no source yet)",
+  "status": "draft"
+ },
+ "MATH.G7.GEOMET.GEOMETRICAL_CONSTRUCTION.BISECT_ANGLE.M_BISECT_NO_CHANGE": {
+  "skill": "MATH.G7.GEOMET.GEOMETRICAL_CONSTRUCTION.BISECT_ANGLE",
+  "error": "Gives the original angle as the size of each half.",
+  "example": {
+   "question": "Bisect 50 degrees: each new angle",
+   "wrong_answer": "50",
+   "correct_answer": "25"
+  },
+  "cause": "Does not see that each part is smaller.",
+  "reveals": "The answer 50 as a wrong option, with a reason that names the idea.",
+  "help": "Two equal parts together make the whole angle.",
+  "source": "to be confirmed by a teacher (no source yet)",
+  "status": "draft"
+ },
+ "MATH.G7.GEOMET.GEOMETRICAL_CONSTRUCTION.BISECT_ANGLE.M_SUPPLEMENT_FOR_HALF": {
+  "skill": "MATH.G7.GEOMET.GEOMETRICAL_CONSTRUCTION.BISECT_ANGLE",
+  "error": "Gives the angle on a straight line instead of half the angle.",
+  "example": {
+   "question": "Bisect 50 degrees: each new angle",
+   "wrong_answer": "130",
+   "correct_answer": "25"
+  },
+  "cause": "Mixes bisect with supplement.",
+  "reveals": "The answer 130 as a wrong option, with a reason that names the idea.",
+  "help": "The bisector cuts the angle itself, not the straight line.",
+  "source": "to be confirmed by a teacher (no source yet)",
+  "status": "draft"
+ },
+ "MATH.G7.GEOMET.GEOMETRICAL_CONSTRUCTION.BISECT_ANGLE.M_ARC_REASON_FOR_FIRST_ARC": {
+  "skill": "MATH.G7.GEOMET.GEOMETRICAL_CONSTRUCTION.BISECT_ANGLE",
+  "error": "Gives the reason for the first arc as the reason for another step.",
+  "example": {
+   "question": "Why keep the compasses at the same width for the crossing arcs?",
+   "wrong_answer": "so the two marks on the arms are the same distance from the corner",
+   "correct_answer": "so the crossing point is the same distance from each mark"
+  },
+  "cause": "Mixes up steps.",
+  "reveals": "The answer so the two marks on the arms are the same distance from the corner as a wrong option, with a reason that names the idea.",
+  "help": "Each step has its own reason.",
+  "source": "to be confirmed by a teacher (no source yet)",
+  "status": "draft"
+ },
+ "MATH.G7.GEOMET.GEOMETRICAL_CONSTRUCTION.BISECT_ANGLE.M_ARC_REASON_FOR_CROSSING_STEP": {
+  "skill": "MATH.G7.GEOMET.GEOMETRICAL_CONSTRUCTION.BISECT_ANGLE",
+  "error": "Gives the reason for the crossing arcs as the reason for the first arc.",
+  "example": {
+   "question": "Why put the compass point on the corner for the first arc?",
+   "wrong_answer": "so the crossing point is the same distance from each mark",
+   "correct_answer": "so the two marks on the arms are the same distance from the corner"
+  },
+  "cause": "Mixes up steps.",
+  "reveals": "The answer so the crossing point is the same distance from each mark as a wrong option, with a reason that names the idea.",
+  "help": "The first arc makes two marks the same distance from the corner.",
+  "source": "to be confirmed by a teacher (no source yet)",
+  "status": "draft"
+ },
+ "MATH.G7.GEOMET.GEOMETRICAL_CONSTRUCTION.BISECT_ANGLE.M_ARC_REASON_FOR_BISECTOR_STEP": {
+  "skill": "MATH.G7.GEOMET.GEOMETRICAL_CONSTRUCTION.BISECT_ANGLE",
+  "error": "Gives the reason for the bisector line as the reason for the first arc.",
+  "example": {
+   "question": "Why put the compass point on the corner for the first arc?",
+   "wrong_answer": "that point is equally far from both arms",
+   "correct_answer": "so the two marks on the arms are the same distance from the corner"
+  },
+  "cause": "Mixes up steps.",
+  "reveals": "The answer that point is equally far from both arms as a wrong option, with a reason that names the idea.",
+  "help": "The line comes last.",
+  "source": "to be confirmed by a teacher (no source yet)",
+  "status": "draft"
+ },
+ "MATH.G7.GEOMET.GEOMETRICAL_CONSTRUCTION.BISECT_ANGLE.M_ARC_REASON_ARCS_TOO_SHORT": {
+  "skill": "MATH.G7.GEOMET.GEOMETRICAL_CONSTRUCTION.BISECT_ANGLE",
+  "error": "Says the arcs are drawn so that they are long enough to meet.",
+  "example": {
+   "question": "Why put the compass point on the corner for the first arc?",
+   "wrong_answer": "otherwise the arcs would be too short to meet",
+   "correct_answer": "so the two marks are the same distance from the corner"
+  },
+  "cause": "Thinks the reason is only practical.",
+  "reveals": "The answer otherwise the arcs would be too short to meet as a wrong option, with a reason that names the idea.",
+  "help": "The point is the equal distance.",
+  "source": "to be confirmed by a teacher (no source yet)",
+  "status": "draft"
+ },
+ "MATH.G7.GEOMET.GEOMETRICAL_CONSTRUCTION.CONSTRUCT_STANDARD_ANGLES.M_BISECTED_TOO_FAR": {
+  "skill": "MATH.G7.GEOMET.GEOMETRICAL_CONSTRUCTION.CONSTRUCT_STANDARD_ANGLES",
+  "error": "Bisects one time too many.",
+  "example": {
+   "question": "How do you make 30 degrees with ruler and compasses?",
+   "wrong_answer": "construct 60, bisect it, then bisect again (15)",
+   "correct_answer": "construct 60 and bisect it once"
+  },
+  "cause": "Bisects again to be careful.",
+  "reveals": "The answer construct 60, bisect it, then bisect again (15) as a wrong option, with a reason that names the idea.",
+  "help": "Each bisection halves: 60, 30, 15.",
+  "source": "to be confirmed by a teacher (no source yet)",
+  "status": "draft"
+ },
+ "MATH.G7.GEOMET.GEOMETRICAL_CONSTRUCTION.CONSTRUCT_STANDARD_ANGLES.M_WRONG_START_ANGLE": {
+  "skill": "MATH.G7.GEOMET.GEOMETRICAL_CONSTRUCTION.CONSTRUCT_STANDARD_ANGLES",
+  "error": "Starts from 90 degrees to make 30 degrees.",
+  "example": {
+   "question": "How do you make 30 degrees?",
+   "wrong_answer": "construct 90 and bisect it (45)",
+   "correct_answer": "construct 60 and bisect it"
+  },
+  "cause": "Chooses the angle that is easiest to draw.",
+  "reveals": "The answer construct 90 and bisect it (45) as a wrong option, with a reason that names the idea.",
+  "help": "Bisecting 90 gives 45, not 30.",
+  "source": "to be confirmed by a teacher (no source yet)",
+  "status": "draft"
+ },
+ "MATH.G7.GEOMET.GEOMETRICAL_CONSTRUCTION.CONSTRUCT_STANDARD_ANGLES.M_STOPPED_AT_SIXTY": {
+  "skill": "MATH.G7.GEOMET.GEOMETRICAL_CONSTRUCTION.CONSTRUCT_STANDARD_ANGLES",
+  "error": "Stops at the equilateral triangle angle of 60 degrees.",
+  "example": {
+   "question": "How do you make 30 degrees?",
+   "wrong_answer": "draw an equilateral triangle (60)",
+   "correct_answer": "construct 60 and bisect it"
+  },
+  "cause": "Forgets the last step.",
+  "reveals": "The answer draw an equilateral triangle (60) as a wrong option, with a reason that names the idea.",
+  "help": "You need half of 60.",
+  "source": "to be confirmed by a teacher (no source yet)",
+  "status": "draft"
+ },
+ "MATH.G7.GEOMET.GEOMETRICAL_CONSTRUCTION.CONSTRUCT_STANDARD_ANGLES.M_BISECTED_ONCE_ONLY": {
+  "skill": "MATH.G7.GEOMET.GEOMETRICAL_CONSTRUCTION.CONSTRUCT_STANDARD_ANGLES",
+  "error": "Bisects once and stops when a smaller angle is needed.",
+  "example": {
+   "question": "How do you make 15 degrees?",
+   "wrong_answer": "construct 60 and bisect it once (30)",
+   "correct_answer": "construct 60 and bisect it twice"
+  },
+  "cause": "Stops after the first bisection.",
+  "reveals": "The answer construct 60 and bisect it once (30) as a wrong option, with a reason that names the idea.",
+  "help": "Bisect again: 60, 30, 15.",
+  "source": "to be confirmed by a teacher (no source yet)",
+  "status": "draft"
+ },
+ "MATH.G7.GEOMET.GEOMETRICAL_CONSTRUCTION.CONSTRUCT_STANDARD_ANGLES.M_PERPENDICULAR_FOR_ANGLE": {
+  "skill": "MATH.G7.GEOMET.GEOMETRICAL_CONSTRUCTION.CONSTRUCT_STANDARD_ANGLES",
+  "error": "Offers a perpendicular as the way to make an angle that is not 90 degrees.",
+  "example": {
+   "question": "How do you make 60 degrees?",
+   "wrong_answer": "construct a perpendicular",
+   "correct_answer": "draw arcs of the same radius for an equilateral triangle"
+  },
+  "cause": "Takes the easiest construction.",
+  "reveals": "The answer construct a perpendicular as a wrong option, with a reason that names the idea.",
+  "help": "A perpendicular always gives 90 degrees.",
+  "source": "to be confirmed by a teacher (no source yet)",
+  "status": "draft"
+ },
+ "MATH.G7.GEOMET.GEOMETRICAL_CONSTRUCTION.CONSTRUCT_STANDARD_ANGLES.M_BISECT_COUNT_WRONG": {
+  "skill": "MATH.G7.GEOMET.GEOMETRICAL_CONSTRUCTION.CONSTRUCT_STANDARD_ANGLES",
+  "error": "Bisects the wrong number of times for the angle wanted.",
+  "example": {
+   "question": "To get 15 degrees from 60: bisect how many times?",
+   "wrong_answer": "once",
+   "correct_answer": "twice"
+  },
+  "cause": "Counts one bisection for any smaller angle.",
+  "reveals": "The answer once as a wrong option, with a reason that names the idea.",
+  "help": "Once gives 30, twice gives 15.",
+  "source": "to be confirmed by a teacher (no source yet)",
+  "status": "draft"
+ },
+ "MATH.G7.GEOMET.GEOMETRICAL_CONSTRUCTION.CONSTRUCT_TRIANGLES.M_ANY_THREE_LENGTHS_MAKE_TRIANGLE": {
+  "skill": "MATH.G7.GEOMET.GEOMETRICAL_CONSTRUCTION.CONSTRUCT_TRIANGLES",
+  "error": "Believes any three lengths make a triangle.",
+  "example": {
+   "question": "Sides 4, 3 and 10 cm: a triangle?",
+   "wrong_answer": "yes",
+   "correct_answer": "no: 3 + 4 is less than 10"
+  },
+  "cause": "Has only seen triangles that work.",
+  "reveals": "The answer yes as a wrong option, with a reason that names the idea.",
+  "help": "The two short sides must be longer than the long side or the arcs never meet.",
+  "source": "to be confirmed by a teacher (no source yet)",
+  "status": "draft"
+ },
+ "MATH.G7.GEOMET.GEOMETRICAL_CONSTRUCTION.CONSTRUCT_TRIANGLES.M_ALL_SIDES_DIFFERENT_NO_TRIANGLE": {
+  "skill": "MATH.G7.GEOMET.GEOMETRICAL_CONSTRUCTION.CONSTRUCT_TRIANGLES",
+  "error": "Believes the sides of a triangle cannot all be different.",
+  "example": {
+   "question": "Sides 4, 3 and 6 cm: a triangle?",
+   "wrong_answer": "no, all different",
+   "correct_answer": "yes: 3 + 4 is more than 6"
+  },
+  "cause": "Has only seen equal or isosceles triangles.",
+  "reveals": "The answer no, all different as a wrong option, with a reason that names the idea.",
+  "help": "Sides may all differ.",
+  "source": "to be confirmed by a teacher (no source yet)",
+  "status": "draft"
+ },
+ "MATH.G7.GEOMET.GEOMETRICAL_CONSTRUCTION.CONSTRUCT_TRIANGLES.M_LONGEST_SIDE_BLOCKS_TRIANGLE": {
+  "skill": "MATH.G7.GEOMET.GEOMETRICAL_CONSTRUCTION.CONSTRUCT_TRIANGLES",
+  "error": "Believes a side longer than the others stops a triangle.",
+  "example": {
+   "question": "Sides 4, 3 and 6 cm: a triangle?",
+   "wrong_answer": "no, 6 is longer than both",
+   "correct_answer": "yes: 3 + 4 is more than 6"
+  },
+  "cause": "Misses the test of the two shorter sides together.",
+  "reveals": "The answer no, 6 is longer than both as a wrong option, with a reason that names the idea.",
+  "help": "The longest side is always longer than each of the others.",
+  "source": "to be confirmed by a teacher (no source yet)",
+  "status": "draft"
+ },
+ "MATH.G7.GEOMET.GEOMETRICAL_CONSTRUCTION.CONSTRUCT_TRIANGLES.M_LONGEST_SIDE_AS_BASE_ENOUGH": {
+  "skill": "MATH.G7.GEOMET.GEOMETRICAL_CONSTRUCTION.CONSTRUCT_TRIANGLES",
+  "error": "Believes the longest side can always be the base, so any lengths will do.",
+  "example": {
+   "question": "Sides 4, 3 and 10 cm: a triangle?",
+   "wrong_answer": "yes, 10 cm can be the base",
+   "correct_answer": "no: the two short sides cannot reach"
+  },
+  "cause": "Thinks the problem is which side is the base.",
+  "reveals": "The answer yes, 10 cm can be the base as a wrong option, with a reason that names the idea.",
+  "help": "Test the two shorter sides together against the longest.",
+  "source": "to be confirmed by a teacher (no source yet)",
+  "status": "draft"
+ },
+ "MATH.G7.GEOMET.GEOMETRICAL_CONSTRUCTION.CONSTRUCT_CIRCLES.M_RADIUS_AS_DIAMETER_SET": {
+  "skill": "MATH.G7.GEOMET.GEOMETRICAL_CONSTRUCTION.CONSTRUCT_CIRCLES",
+  "error": "Sets the compasses to the diameter.",
+  "example": {
+   "question": "Draw a circle of diameter 6 cm: compass opening",
+   "wrong_answer": "6 cm",
+   "correct_answer": "3 cm"
+  },
+  "cause": "Uses the number in the question.",
+  "reveals": "The answer 6 cm as a wrong option, with a reason that names the idea.",
+  "help": "The compasses are set to the radius, half the diameter.",
+  "source": "to be confirmed by a teacher (no source yet)",
+  "status": "draft"
+ },
+ "MATH.G7.GEOMET.GEOMETRICAL_CONSTRUCTION.CONSTRUCT_CIRCLES.M_COMPASS_POINT_MOVES": {
+  "skill": "MATH.G7.GEOMET.GEOMETRICAL_CONSTRUCTION.CONSTRUCT_CIRCLES",
+  "error": "Lets the compass point move while drawing.",
+  "example": {
+   "question": "Why must the compass point stay still?",
+   "wrong_answer": "it does not matter",
+   "correct_answer": "every point of the circle is the same distance from the centre"
+  },
+  "cause": "Does not see the centre as fixed.",
+  "reveals": "The answer it does not matter as a wrong option, with a reason that names the idea.",
+  "help": "The point is the centre: it must not move.",
+  "source": "to be confirmed by a teacher (no source yet)",
+  "status": "draft"
  }
 }

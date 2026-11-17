@@ -25,8 +25,8 @@ for (const d of SUBS) {
     const file = FILES.find(f => src[f].includes(`id: '${id}'`));
     if (!file) { problems.push(`${id}: not found`); continue; }
     let s = src[file];
-    const start = s.indexOf(`fam({ id: '${id}'`);
-    let end = s.indexOf('\n  fam({ id:', start + 10); if (end < 0) end = s.length;
+    const startRe = new RegExp(`(fam|fx)\\(\\{ id: '${id.replace(/\./g, '\\.')}'`); const sm = startRe.exec(s); const start = sm ? sm.index : -1;
+    const nextRe = /\n  (fam|fx)\(\{ id:/g; nextRe.lastIndex = start + 10; const nm = nextRe.exec(s); let end = nm ? nm.index : s.length;
     let block = s.slice(start, end);
     if (/cskill:/.test(block.slice(0, 300))) { skipped++; continue; }
     const m = /outcome: 'G7\.[A-Z_]+\.([a-z])'/.exec(block.slice(0, 300));
@@ -60,7 +60,7 @@ for (const d of SUBS) {
       block = block.slice(0, pos) + `, mis: '${code}'` + block.slice(pos);
     }
     if (mis) {
-      const expr = /^[A-Z_]+$/.test(mis) ? `'${mis}'` : mis;
+      const expr = /^[A-Z0-9_]+$/.test(mis) ? `'${mis}'` : mis;
       const i = block.indexOf('fix:');
       if (i < 0) { problems.push(`${id}: no fix: for mis`); continue; }
       block = block.slice(0, i) + `mis: ${expr},\n        ` + block.slice(i);
