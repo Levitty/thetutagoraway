@@ -2631,7 +2631,9 @@ var SKILLS_G5 = {
     "pre": [],
     "mis": [
       "M_TENTHS_AS_TENS",
-      "M_THOUSANDTH_BIGGER"
+      "M_THOUSANDTH_BIGGER",
+      "M_PLACE_OFF_BY_ONE",
+      "M_SAME_DIGIT_SAME_VALUE"
     ]
   },
   "MATH.G5.NUMBER.DECIMALS.DEC_DIGIT_VALUE": {
@@ -2650,7 +2652,8 @@ var SKILLS_G5 = {
     ],
     "mis": [
       "M_DIGIT_VALUE_AS_WHOLE",
-      "M_MISSING_PLACEHOLDER_ZERO"
+      "M_MISSING_PLACEHOLDER_ZERO",
+      "M_PLACES_SWAPPED"
     ]
   },
   "MATH.G5.NUMBER.DECIMALS.DEC_COMPARE": {
@@ -2690,7 +2693,8 @@ var SKILLS_G5 = {
     ],
     "mis": [
       "M_IGNORES_WHOLE_PART",
-      "M_WHOLE_NUMBER_SMALLEST"
+      "M_WHOLE_NUMBER_SMALLEST",
+      "M_ORDER_DIRECTION_REVERSED"
     ]
   },
   "MATH.G5.NUMBER.DECIMALS.DEC_ADD_SAME_PLACES": {
@@ -2749,7 +2753,8 @@ var SKILLS_G5 = {
     ],
     "mis": [
       "M_SMALLER_FROM_LARGER",
-      "M_REGROUP_ACROSS_ZERO"
+      "M_REGROUP_ACROSS_ZERO",
+      "M_SUB_DONE_AS_ADDITION"
     ]
   },
   "MATH.G5.NUMBER.DECIMALS.DEC_SUB_MIXED_PLACES": {
@@ -112054,11 +112059,12 @@ var FAMILIES158 = [
     form: "direct",
     rung: 1,
     gen: () => {
-      const d = [randInt(1, 9), randInt(1, 9), randInt(1, 9), randInt(1, 9)], n = `${d[0]}.${d[1]}${d[2]}${d[3]}`, k = randInt(1, 3), names = ["tenths", "hundredths", "thousandths"], right = names[k - 1];
+      const d = [randInt(1, 9), randInt(1, 9), randInt(1, 9), randInt(1, 9)], n = `${d[0]}.${d[1]}${d[2]}${d[3]}`, k = randInt(1, 3), names = ["tenths", "hundredths", "thousandths"], right = names[k - 1], p = person();
       if (new Set(d).size < 4) return null;
-      const options = mc10(right, [[["tens", "hundreds", "thousands"][k - 1], "The places after the point end in -ths: tenths, hundredths, thousandths.", "M_TENTHS_AS_TENS"], [names[k % 3], "Count the places again from the decimal point.", "M_THOUSANDTH_BIGGER"], ["ones", "The ones place is before the point.", "M_TENTHS_AS_TENS"]]);
+      const near4 = names[k === 3 ? 1 : k];
+      const options = mc10(right, [[["tens", "hundreds", "thousands"][k - 1], `The places after the point end in -ths, because they are parts of one: tenths, hundredths, thousandths. Tens and hundreds are before the point.`, "M_TENTHS_AS_TENS"], [near4, `You counted from the wrong place. The first place after the point is tenths, then hundredths, then thousandths.`, "M_PLACE_OFF_BY_ONE"]]);
       return {
-        question: `In the number ${n}, the digit ${d[k]} is in which place?`,
+        question: `${p.name} reads a mass of ${n} kg from a scale. In the number ${n}, the digit ${d[k]} is in which place?`,
         options,
         instruction: "Choose the place.",
         hints: ["Count the places to the right of the decimal point.", "tenths, hundredths, thousandths."],
@@ -112072,10 +112078,10 @@ var FAMILIES158 = [
     form: "why",
     rung: 2,
     gen: () => {
-      const d = randInt(2, 9), k = pick([["tenths", "thousandths"], ["tenths", "hundredths"], ["hundredths", "thousandths"]]);
-      const options = mc10(`${d} ${k[0]} is more, because tenths come first`.replace(/tenths come first/, k[0] === "tenths" ? "tenths are bigger pieces" : "hundredths are bigger pieces"), [[`${d} ${k[1]} is more, because a ${k[1].slice(0, -1)} sounds bigger than a ${k[0].slice(0, -1)}`, "The word thousandth does not mean a large amount. A thousandth is a very small part, 1 cut into 1000 pieces.", "M_THOUSANDTH_BIGGER"], [`They are the same`, "Each place is worth ten times less than the one to its left.", "M_THOUSANDTH_BIGGER"], [`${d} ${k[1]} is more, because the number 1000 is more than 10`, "More pieces means smaller pieces.", "M_THOUSANDTH_BIGGER"]]);
+      const d = randInt(2, 9), k = pick([["tenths", "thousandths"], ["tenths", "hundredths"], ["hundredths", "thousandths"]]), N5 = { tenths: 10, hundredths: 100, thousandths: 1e3 };
+      const options = mc10(`${d} ${k[0]} is more, because ${k[0]} are bigger pieces`, [[`${d} ${k[1]} is more, because ${N5[k[1]]} is a bigger number than ${N5[k[0]]}`, `${k[1]} are made by cutting a whole into ${N5[k[1]]} pieces. More pieces means each piece is smaller, so the pieces are smaller than ${k[0]}.`, "M_THOUSANDTH_BIGGER"], [`They are the same, because both have the digit ${d}`, `The digit is the same but the place is not. A ${k[0].slice(0, -1)} is ${N5[k[1]] / N5[k[0]]} times as big as a ${k[1].slice(0, -1)}.`, "M_SAME_DIGIT_SAME_VALUE"]]);
       return {
-        question: `Which is more, ${d} ${k[0]} or ${d} ${k[1]}? Choose the best answer.`,
+        question: `${person().name} says ${d} ${k[0]} and ${d} ${k[1]} of a litre of water are different amounts. Which is more, ${d} ${k[0]} or ${d} ${k[1]}? Choose the best answer.`,
         options,
         instruction: "Choose the answer and the reason.",
         hints: ["Cut a strip into 10 pieces, then into 100 pieces.", "More pieces means smaller pieces."],
@@ -112089,15 +112095,22 @@ var FAMILIES158 = [
     form: "table",
     rung: 2,
     gen: () => {
-      const w14 = randInt(1, 9), a = randInt(1, 9), b = randInt(0, 9), c19 = randInt(1, 9), k = randInt(0, 2), p = person();
-      const digs3 = [a, b, c19], right = digs3[k];
+      let w14, a, b, c19;
+      for (let i = 0; i < 300; i++) {
+        [w14, a, b, c19] = [randInt(1, 9), randInt(1, 9), randInt(0, 9), randInt(1, 9)];
+        const all = [w14, a, b, c19];
+        if (all.every((x, i2) => all.every((y, j) => i2 === j || Math.abs(x - y) >= 3))) break;
+        w14 = null;
+      }
+      if (w14 === null) return null;
+      const k = randInt(0, 2), digs3 = [a, b, c19], right = digs3[k], near4 = digs3[k === 2 ? 1 : k + 1], nm = ["tenths", "hundredths", "thousandths"][k];
       return {
-        question: `The chart shows the mass of a parcel in kilograms. Which digit is in the ${["tenths", "hundredths", "thousandths"][k]} place?`,
+        question: `The chart shows the mass of a parcel in kilograms. Which digit is in the ${nm} place?`,
         model: tbl3(["Ones", "Tenths", "Hundredths", "Thousandths"], [[String(w14), String(a), String(b), String(c19)]]),
         answer: right,
-        wrong: [[digs3[(k + 1) % 3], "That digit is in a different column. Read the heading above each digit.", "M_TENTHS_AS_TENS"], [digs3[(k + 2) % 3], "That digit is in a different column.", "M_THOUSANDTH_BIGGER"], [w14, "That digit is in the ones place, before the point.", "M_TENTHS_AS_TENS"], [right * 10, "The question asks for the digit, not its value.", "M_THOUSANDTH_BIGGER"]],
+        wrong: [[near4, `That digit is in the next column along. Read the heading above each digit and match it to ${nm}.`, "M_PLACE_OFF_BY_ONE"], [w14, `That digit is in the ones place, before the point. The first column after the point is tenths, not ones.`, "M_TENTHS_AS_TENS"], [right * 10, `The question asks for the digit, not its worth. ${right} tenths, hundredths or thousandths is not a whole number of tens.`, "M_DIGIT_VALUE_AS_WHOLE"]],
         hints: ["Find the column heading you need.", "Read the digit below it."],
-        steps: [`The columns are ones, tenths, hundredths, thousandths.`, `The ${["tenths", "hundredths", "thousandths"][k]} column holds ${right}.`],
+        steps: [`The columns are ones, tenths, hundredths, thousandths.`, `The ${nm} column holds ${right}.`],
         chk: (v) => v === [a, b, c19][k]
       };
     }
@@ -112111,11 +112124,11 @@ var FAMILIES158 = [
     gen: () => {
       const d = [randInt(1, 9), randInt(1, 9), randInt(1, 9), randInt(1, 9)], k = randInt(1, 3);
       if (d[k] === d[0]) return null;
-      const n = `${d[0]}.${d[1]}${d[2]}${d[3]}`, v = dp(d[k] / 10 ** k), tot = d[k] * 10 ** (3 - k + 0) / 1e3 * 1;
+      const n = `${d[0]}.${d[1]}${d[2]}${d[3]}`, v = dp(d[k] / 10 ** k), near4 = dp(d[k] / 10 ** (k === 3 ? 2 : k + 1));
       return {
         question: `A scale shows a mass of ${n} kg. What is the value of the digit ${d[k]} in this number, written as a decimal?`,
         answer: v,
-        wrong: [[d[k], "After the point a digit is worth part of 1, not a whole number.", "M_DIGIT_VALUE_AS_WHOLE"], [d[k] * 10, "Digits after the point are worth less than 1.", "M_DIGIT_VALUE_AS_WHOLE"], [dp(d[k] / 10 ** Math.min(3, k + 1)), "Count the places from the point again.", "M_DIGIT_VALUE_AS_WHOLE"], [dp(d[k] / 10 ** Math.max(1, k - 1)), "Count the places from the point again.", "M_THOUSANDTH_BIGGER"]],
+        wrong: [[d[k], "After the point a digit is worth part of 1, not a whole number of ones.", "M_DIGIT_VALUE_AS_WHOLE"], [d[k] * 10 ** k, `A place after the point is not tens or hundreds. It is a part of one, so its value is less than 1.`, "M_TENTHS_AS_TENS"], [near4, `That is the value in the next place along. Count the places from the point again: tenths, hundredths, thousandths.`, "M_PLACE_OFF_BY_ONE"]],
         hints: ["Name the place: tenths, hundredths or thousandths.", "Say the value aloud, for example 8 hundredths."],
         steps: [`The ${d[k]} is in the ${["", "tenths", "hundredths", "thousandths"][k]} place.`, `Its value is ${v}.`],
         chk: (x) => Math.round(x * 10 ** k) === d[k]
@@ -112128,11 +112141,11 @@ var FAMILIES158 = [
     form: "direct",
     rung: 2,
     gen: () => {
-      const w14 = randInt(2, 9), th = randInt(1, 9), tn = th < 5 ? 0 : 0, hu = randInt(1, 9), right = `${w14}.0${hu}${th}`;
-      const wrongWords = `${w14}.${hu}${th}`;
-      const options = mc10(right, [[wrongWords, "The tenths place is empty. A zero holds it.", "M_MISSING_PLACEHOLDER_ZERO"], [`${w14}.${hu}${th}0`.replace(/^(\d\.)(\d)(\d)0$/, `$1$2$3`) === right ? `${w14}.${th}0${hu}` : `${w14}.${th}0${hu}`, "Check which digit goes in the hundredths and which in the thousandths.", "M_DIGIT_VALUE_AS_WHOLE"], [`${w14}.${th}${hu}`, "Zero holds the tenths place.", "M_MISSING_PLACEHOLDER_ZERO"]]);
+      const w14 = randInt(2, 9), th = randInt(1, 9), hu = randInt(1, 9), right = `${w14}.0${hu}${th}`;
+      if (th === hu) return null;
+      const options = mc10(right, [[`${w14}.${hu}${th}`, `The tenths place is empty, and a zero must hold it. Without the zero every digit moves one place to the left and is worth ten times too much.`, "M_MISSING_PLACEHOLDER_ZERO"], [`${w14}.0${th}${hu}`, `The hundredths digit is ${hu} and the thousandths digit is ${th}. You wrote them the wrong way round.`, "M_PLACES_SWAPPED"], [`${w14}.${hu}0${th}`, `The zero belongs in the tenths place, straight after the point. You put it after the ${hu}, in the hundredths place.`, "M_PLACE_OFF_BY_ONE"]]);
       return {
-        question: `Write as a decimal: ${w14} ones, 0 tenths, ${hu} hundredths and ${th} thousandths.`,
+        question: `A parcel weighs ${w14} ones, 0 tenths, ${hu} hundredths and ${th} thousandths of a kilogram. Write its mass as a decimal.`,
         options,
         instruction: "Choose the decimal.",
         hints: ["Make a chart: ones, tenths, hundredths, thousandths.", "Write a digit in every column."],
@@ -112165,15 +112178,14 @@ var FAMILIES158 = [
     form: "word",
     rung: 1,
     gen: () => {
-      const a = pick([0.5, 0.3, 0.7, 0.6, 0.4, 0.8]), b = dp(a - 0.2 + randInt(1, 9) / 1e3 + randInt(1, 9) / 100), c19 = dp(a - 0.15 + randInt(1, 9) / 1e3 + randInt(1, 9) / 100);
-      if (!(a > b && a > c19) || b === c19 || b <= 0 || c19 <= 0) return null;
-      const options = mc10(String(a), [[String(b), "Compare the tenths first. More digits does not mean a larger number.", "M_LONGER_IS_LARGER"], [String(c19), "Compare the tenths first. More digits does not mean a larger number.", "M_LONGER_IS_LARGER"]]);
+      const t = randInt(5, 7), h = randInt(1, 9), a = dp(t / 10 + h / 100), b = dp((t - 1) / 10 + randInt(7, 9) / 100 + randInt(1, 9) / 1e3), c19 = dp((t - 1) / 10);
+      const options = mc10(String(a), [[String(b), `${b} has more digits, but that does not make it larger. Compare the tenths first: ${Math.floor(b * 10)} tenths is less than ${t} tenths.`, "M_LONGER_IS_LARGER"], [String(c19), `${c19} has fewer digits, but that does not make it larger either. Compare the tenths first: ${Math.floor(c19 * 10 + 1e-9)} tenths is less than ${t} tenths.`, "M_SHORTER_IS_LARGER"]]);
       return {
         question: `Three parcels weigh ${shuffle12([a, b, c19]).join(" kg, ")} kg. Which is the largest mass? Choose the larger decimal.`,
         options,
         instruction: "Choose the largest decimal.",
         hints: ["Write them all with the same number of decimal places.", "Compare tenths, then hundredths."],
-        steps: [`${a} = ${a.toFixed(3)}, ${b} = ${b.toFixed(3)}, ${c19} = ${c19.toFixed(3)}.`, `${a} is the largest.`]
+        steps: [`${a.toFixed(3)}, ${b.toFixed(3)}, ${c19.toFixed(3)}.`, `${a} is the largest.`]
       };
     }
   }),
@@ -112222,14 +112234,12 @@ var FAMILIES158 = [
     form: "word",
     rung: 2,
     gen: () => {
-      const w14 = randInt(11, 14), t = [dp(w14 + 0.9 + randInt(0, 1) * 0), dp(w14 + 1 + 0.05 + randInt(0, 4) / 100), dp(w14 + 0.875)], names = shuffle12(["Achieng", "Baraka", "Chebet"]);
-      if (new Set(t).size < 3) return null;
+      const w14 = randInt(11, 14), t = [dp(w14 + 0.9), dp(w14 + 1 + 0.05 + randInt(0, 4) / 100), dp(w14 + 0.875)], names = shuffle12(["Achieng", "Baraka", "Chebet"]);
       const s = [...t].sort((a, b) => a - b), shown = names.map((n, i) => `${n} ${t[i]}`);
-      const fastest = names[t.indexOf(s[0])], right = String(s[0]);
       return {
         question: `Three runners finish a race in these times, in seconds: ${shown.join(", ")}. The smallest time wins. What is the winning time in seconds?`,
         answer: s[0],
-        wrong: [[t[0] === s[0] ? s[1] : t[0], "Compare the whole numbers first, then tenths, hundredths and thousandths.", "M_IGNORES_WHOLE_PART"], [s[2], "That is the slowest time. The winner has the smallest time.", "M_IGNORES_WHOLE_PART"], [s[1], "That is the middle time.", "M_IGNORES_WHOLE_PART"], [Number(String(s[0]).replace(/^\d+\./, "0.")), "Do not ignore the whole number part.", "M_IGNORES_WHOLE_PART"]],
+        wrong: [[t[0], `${t[2]} has more digits, but a longer decimal is not a bigger number. Compare place by place: ${t[0]} and ${t[2]} have the same whole number and ${t[2]} has fewer tenths, so it is the smaller time.`, "M_LONGER_IS_LARGER"], [t[1], `You looked at the digits after the point only and saw the small ${String(t[1]).split(".")[1]}. The whole number counts first: ${Math.floor(t[1])} is more than ${Math.floor(t[2])}, so that is the slowest time.`, "M_IGNORES_WHOLE_PART"], [dp(s[0] + 0.01), `Look at the hundredths digit again. The winning time is a little less than that.`, "SLIP"]],
         hints: ["Compare the whole numbers first.", "If they match, compare tenths, then hundredths."],
         steps: [`In order: ${s.join(", ")}.`, `The winning time is ${s[0]} seconds.`],
         chk: (v) => t.includes(v) && t.every((x) => v <= x)
@@ -112247,9 +112257,9 @@ var FAMILIES158 = [
       const asc = [...set].sort((a, b) => a - b), shown = shuffle12(set), f = (l) => l.join(", ");
       if (f(shown) === f(asc)) return null;
       const fracOrder = [...set].sort((a, b) => a % 1 - b % 1);
-      const options = mc10(f(asc), [[f([...asc].reverse()), "That is largest first. Smallest to largest means the smallest number comes first.", "M_IGNORES_WHOLE_PART"], [f(fracOrder), "You ordered by the digits after the point only. Compare the whole number part first.", "M_IGNORES_WHOLE_PART"], [f([...set].sort((a, b) => String(a).length - String(b).length || a - b)), "The number of digits does not decide the order. Compare place by place.", "M_WHOLE_NUMBER_SMALLEST"]].filter((w15) => w15[0] !== f(asc)));
+      const options = mc10(f(asc), [[f([...asc].reverse()), "That is largest first. Smallest to largest means the smallest amount is written first.", "M_ORDER_DIRECTION_REVERSED"], [f(fracOrder), "You ordered by the digits after the point only. The whole number part counts first.", "M_IGNORES_WHOLE_PART"], [f([...set].sort((a, b) => String(a).length - String(b).length || a - b)), "The number of digits does not decide the order. Compare place by place.", "M_WHOLE_NUMBER_SMALLEST"]].filter((w15) => w15[0] !== f(asc)));
       return {
-        question: `Arrange from smallest to largest: ${f(shown)}.`,
+        question: `Three jerricans hold ${f(shown)} litres of water. Arrange the amounts from the least water to the most.`,
         options,
         instruction: "Choose the correct order.",
         hints: ["Compare the whole numbers first, then tenths, hundredths and thousandths.", "Write each with three decimal places."],
@@ -112288,7 +112298,7 @@ var FAMILIES158 = [
       return {
         question: `A trader sells ${a} kg of maize flour in the morning and ${b} kg in the afternoon. How many kilograms did the trader sell in all?`,
         answer: t,
-        wrong: [[sep, "Tenths can be regrouped into ones when there are enough of them.", "M_ADD_PARTS_SEPARATELY"], [digs(a, 1) + digs(b, 1), "The decimal point is missing. Put it back, with one digit after it.", "M_POINT_DROPPED"], [dp(t + 1), "Check the regrouping from tenths to ones.", "M_ADD_PARTS_SEPARATELY"], [dp(t - 1), "Check the ones column.", "M_ADD_PARTS_SEPARATELY"]],
+        wrong: [[sep, "You added the whole numbers and the tenths on their own. When the tenths come to 10 or more, every 10 tenths makes 1 whole, so regroup them into the ones.", "M_ADD_PARTS_SEPARATELY"], [digs(a, 1) + digs(b, 1), "The decimal point is missing. Put it back, with one digit after it.", "M_POINT_DROPPED"], [dp(t + 1), "One whole too many. Count the ones again, including the one you regrouped from the tenths.", "SLIP"], [dp(t - 1), "One whole too few. Count the ones again, including the one you regrouped from the tenths.", "SLIP"]],
         hints: ["Line up the decimal points.", "Add the tenths first. Regroup tenths as ones when you can."],
         steps: [`${a} + ${b}.`, `${t} kg.`],
         chk: (v) => dp(v - b) === a
@@ -112303,7 +112313,7 @@ var FAMILIES158 = [
     gen: () => {
       const a = dp(randInt(1e3, 9999) / 1e3), b = dp(randInt(1e3, 9999) / 1e3), t = dp(a + b);
       if (places(a) < 3 || places(b) < 3) return null;
-      const options = mc10(String(t), [[String(digs(a, 3) + digs(b, 3)), "The decimal point is missing. Put it in the answer first.", "M_POINT_DROPPED"], [String(dp(Math.floor(a) + Math.floor(b) + Number(`0.${digs(a, 3) % 1e3 + digs(b, 3) % 1e3}`))), "You added the whole numbers and the decimal parts separately. Regroup across the point.", "M_ADD_PARTS_SEPARATELY"], [String(dp(t + 0.1)), "Check the regrouping in the tenths and hundredths.", "M_ADD_PARTS_SEPARATELY"]]);
+      const options = mc10(String(t), [[String(digs(a, 3) + digs(b, 3)), "The decimal point is missing. Put it in the answer first.", "M_POINT_DROPPED"], [String(dp(Math.floor(a) + Math.floor(b) + Number(`0.${digs(a, 3) % 1e3 + digs(b, 3) % 1e3}`))), "You added the whole numbers and the decimal parts separately. Regroup across the point.", "M_ADD_PARTS_SEPARATELY"], [String(dp(t + 0.1)), "One tenth too many. Check the regrouping from the hundredths to the tenths again.", "SLIP"]]);
       return {
         question: `Which is the sum when ${a.toFixed(3)} metres of rope is joined to ${b.toFixed(3)} metres of rope?`,
         options,
@@ -112345,7 +112355,7 @@ var FAMILIES158 = [
       return {
         question: `${person().name} bought ${a} kg of ${pick(GRAMS)} and ${b} kg of tomatoes. What is the total mass in kilograms?`,
         answer: t,
-        wrong: [[r, "You lined up the last digits. Line up the decimal points: write the first mass as " + a.toFixed(2) + ".", "M_RIGHT_ALIGN_DIGITS"], [dp(t + 0.1), "Check the tenths column.", "M_RIGHT_ALIGN_DIGITS"], [dp(t - 0.1), "Check the tenths column.", "M_RIGHT_ALIGN_DIGITS"], [dp(a + b + 0.01 * 0 + 1), "Check the ones column.", "M_RIGHT_ALIGN_DIGITS"]],
+        wrong: [[r, "You lined up the last digits. Line up the decimal points instead: write the first mass as " + a.toFixed(2) + ".", "M_RIGHT_ALIGN_DIGITS"], [dp(r * 10), "The decimal point is in the wrong place. Count the digits after the point in the numbers you were given.", "M_POINT_DROPPED"], [dp(t + 0.1), "One tenth too many. Add the tenths column again.", "SLIP"], [dp(t - 0.1), "One tenth too few. Add the tenths column again.", "SLIP"]],
         hints: ["Write both masses with two decimal places.", "Line up the decimal points, then add."],
         steps: [`${a.toFixed(2)} + ${b.toFixed(2)}.`, `${t} kg.`],
         chk: (v) => dp(v - b) === a
@@ -112361,7 +112371,7 @@ var FAMILIES158 = [
       const w14 = randInt(3, 12), d = dp(randInt(11, 99) / 100), t = dp(w14 + d);
       if (places(d) !== 2) return null;
       const bad2 = dp((w14 + digs(d, 2)) / 100);
-      const options = mc10(String(t), [[String(bad2), "You put the whole number under the decimal digits. Write " + w14 + " as " + w14 + ".00 and line up the points.", "M_WHOLE_AS_DECIMAL_DIGITS"], [String(dp(w14 * d)), "We add, not multiply.", "M_WHOLE_AS_DECIMAL_DIGITS"], [String(dp(t + 0.1)), "Check by writing " + w14 + ".00 + " + d.toFixed(2) + ".", "M_RIGHT_ALIGN_DIGITS"]]);
+      const options = mc10(String(t), [[String(bad2), "You put the whole number under the decimal digits. Write " + w14 + " as " + w14 + ".00 and line up the points.", "M_WHOLE_AS_DECIMAL_DIGITS"], [String(w14 * 100 + digs(d, 2)), "The decimal point is missing. The length is a few metres and a part of a metre, so put the point back.", "M_POINT_DROPPED"], [String(dp(t + 0.1)), "One tenth too many. Write " + w14 + ".00 + " + d.toFixed(2) + " and add the tenths again.", "SLIP"]]);
       return {
         question: `A rope is ${w14} metres long. A piece ${d.toFixed(2)} metres long is added to it. What is the new length in metres?`,
         options,
@@ -112402,7 +112412,7 @@ var FAMILIES158 = [
       return {
         question: `A metre of cloth is cut from a roll. The roll was ${a.toFixed(2)} metres long and ${b.toFixed(2)} metres were used. How many metres are left?`,
         answer: t,
-        wrong: [[subCols(a, b, 2), "In every column you took the smaller digit from the larger. Regroup when the top digit is smaller.", "M_SMALLER_FROM_LARGER"], [dp(t + 0.1), "Check the regrouping from tenths to hundredths.", "M_SMALLER_FROM_LARGER"], [dp(t - 0.1), "Check the regrouping.", "M_SMALLER_FROM_LARGER"], [dp(a + b), "Used means take away.", "M_SMALLER_FROM_LARGER"]],
+        wrong: [[subCols(a, b, 2), "In every column you took the smaller digit from the larger. When the top digit is smaller, regroup: exchange 1 tenth for 10 hundredths.", "M_SMALLER_FROM_LARGER"], [dp(t + 0.1), "One tenth too many. Check how much you took from the tenths when you regrouped.", "SLIP"], [dp(t - 0.1), "One tenth too few. Check how much you took from the tenths when you regrouped.", "SLIP"], [dp(a + b), "The roll gets shorter when cloth is used, so the answer is less than the roll. You added instead of taking away.", "M_SUB_DONE_AS_ADDITION"]],
         hints: ["Line up the decimal points.", "Regroup 1 tenth as 10 hundredths when you need to."],
         steps: [`${a.toFixed(2)} \u2212 ${b.toFixed(2)}.`, `${t.toFixed(2)} m.`],
         chk: (v) => dp(v + b) === a
@@ -112419,7 +112429,7 @@ var FAMILIES158 = [
       if (a <= b) return null;
       const wrong = noDec(a, b, 3);
       if (wrong === t) return null;
-      const options = mc10(String(t), [[String(wrong), "When you regroup across the zeros, each zero becomes 9 and the digit you took from goes down by 1.", "M_REGROUP_ACROSS_ZERO"], [String(subCols(a, b, 3)), "Do not take the smaller digit from the larger. Regroup.", "M_SMALLER_FROM_LARGER"], [String(dp(t + 1e-3)), "Check the thousandths column.", "M_REGROUP_ACROSS_ZERO"]]);
+      const options = mc10(String(t), [[String(wrong), "When you regroup across the zeros, each zero becomes 9 and the digit you took from goes down by 1.", "M_REGROUP_ACROSS_ZERO"], [String(subCols(a, b, 3)), "Do not take the smaller digit from the larger. Regroup.", "M_SMALLER_FROM_LARGER"], [String(dp(t + 1e-3)), "One thousandth too many. Check the thousandths column again after you regroup across the zeros.", "SLIP"]]);
       return {
         question: `Which is the difference when ${b.toFixed(3)} kg is taken from ${a.toFixed(3)} kg?`,
         options,
@@ -112460,7 +112470,7 @@ var FAMILIES158 = [
       return {
         question: `Otieno had ${w14} litres of milk and sold ${d.toFixed(2)} litres. How much milk is left?`,
         answer: t,
-        wrong: [[dp(w14 - 1 + d), "You subtracted the whole parts and copied the decimal part. Write " + w14 + " as " + w14 + ".00 and subtract.", "M_WHOLE_MINUS_DECIMAL"], [dp(w14 + d), "Sold means take away.", "M_WHOLE_MINUS_DECIMAL"], [dp(t + 0.1), "Check the regrouping.", "M_WHOLE_MINUS_DECIMAL"], [dp(t - 0.1), "Check the regrouping.", "M_WHOLE_MINUS_DECIMAL"]],
+        wrong: [[dp(w14 - 1 + d), "You subtracted the whole parts and copied the decimal part. Write " + w14 + " as " + w14 + ".00 and subtract every column.", "M_WHOLE_MINUS_DECIMAL"], [dp(w14 + d), "Selling milk leaves less than before, not more. You added instead of taking away.", "M_SUB_DONE_AS_ADDITION"], [dp(t + 0.1), "One tenth too many. Check the regrouping from the ones to the tenths again.", "SLIP"], [dp(t - 0.1), "One tenth too few. Check the regrouping from the ones to the tenths again.", "SLIP"]],
         hints: [`Write ${w14} as ${w14}.00.`, "Subtract the hundredths, then the tenths, then the ones."],
         steps: [`${w14}.00 \u2212 ${d.toFixed(2)}.`, `${t.toFixed(2)} litres.`],
         chk: (v) => dp(v + d) === w14
@@ -112476,7 +112486,7 @@ var FAMILIES158 = [
       const a = dp(randInt(41, 90) / 10), b = dp(randInt(1001, 3999) / 1e3), t = dp(a - b);
       if (places(a) !== 1 || places(b) !== 3 || t <= 0) return null;
       const bring = Number(`${dp(a - Math.floor(b * 10) / 10)}${String(digs(b, 3) % 100).padStart(2, "0")}`);
-      const options = mc10(String(t), [[String(bring), "You brought the extra digits straight down. Write " + a + " as " + a.toFixed(3) + " and subtract every column.", "M_BRING_DOWN_DIGITS"], [String(dp(t + 1e-3)), "Check the thousandths column.", "M_BRING_DOWN_DIGITS"], [String(dp(a + b)), "Take away, not add.", "M_BRING_DOWN_DIGITS"]]);
+      const options = mc10(String(t), [[String(bring), "You brought the extra digits straight down. Write " + a + " as " + a.toFixed(3) + " and subtract every column.", "M_BRING_DOWN_DIGITS"], [String(dp(t + 1e-3)), "One thousandth too many. Subtract the thousandths column again.", "SLIP"], [String(dp(a + b)), "Leaking takes water out of the tank, so less is left than at the start. You added instead of taking away.", "M_SUB_DONE_AS_ADDITION"]]);
       return {
         question: `A tank holds ${a} litres. ${b.toFixed(3)} litres leak out. Which is the amount left?`,
         options,
@@ -112516,7 +112526,7 @@ var FAMILIES158 = [
       return {
         question: `A bag holds ${kg} kg of rice. How many grams is that? Multiply ${kg} \xD7 1000.`,
         answer: t,
-        wrong: [[t / 10, "The point moves three places, not two. Move it once for each zero of 1000.", "M_WRONG_NUMBER_OF_PLACES"], [dp(kg / 1e3), "Multiplying makes the number bigger. The digits move left.", "M_MOVES_WRONG_WAY"], [t * 10, "That is too many places.", "M_WRONG_NUMBER_OF_PLACES"], [Number(String(kg).replace(".", "")), "Fill empty places with zeros when the point moves.", "M_NO_ZERO_FILL"]].filter((w14) => w14[0] !== t),
+        wrong: [[t / 10, "The point moves three places, not two. Move it once for each zero of 1000.", "M_WRONG_NUMBER_OF_PLACES"], [dp(kg / 1e3), "Multiplying by 1000 makes the number bigger, so the digits move to the left, not the right.", "M_MOVES_WRONG_WAY"], [Number(String(kg).replace(".", "") + "000"), "You took out the point and wrote three zeros on the end. The digits must move three places instead, so the point moves to the right.", "M_ANNEX_ZEROS"], [Number(String(kg).replace(".", "")), "You moved the point to the end but left the empty places. Fill each empty place with a zero.", "M_NO_ZERO_FILL"]].filter((w14) => w14[0] !== t),
         hints: ["Move the digits three places to the left.", "Put a 0 in every empty place."],
         steps: [`${kg} \xD7 1000: three places left.`, `${commas(t)} g.`],
         chk: (v) => dp(v / 1e3) === kg
@@ -112530,7 +112540,7 @@ var FAMILIES158 = [
     rung: 2,
     gen: () => {
       const x = pick([2.045, 0.375, 1.8, 0.06, 3.2, 4.075]), t = dp(x * 1e3);
-      const options = mc10(String(x), [[String(dp(x * 10)), "Dividing by 1000 moves the digits three places right. Check by multiplying.", "M_WRONG_NUMBER_OF_PLACES"], [String(dp(t)), "Multiplying makes it bigger. The missing number is smaller than " + commas(t) + ".", "M_MOVES_WRONG_WAY"], [String(dp(x / 10)), "Check the number of places.", "M_WRONG_NUMBER_OF_PLACES"]]);
+      const options = mc10(String(x), [[String(dp(x * 10)), "Undoing \xD7 1000 means dividing by 1000, so the point moves three places to the left. You moved it two.", "M_WRONG_NUMBER_OF_PLACES"], [String(dp(t)), "Multiplying by 1000 makes a number 1000 times bigger. The missing number is smaller than " + commas(t) + ", not the same.", "M_MOVES_WRONG_WAY"]]);
       return {
         question: `Which number goes in the box? \u25A1 \xD7 1000 = ${commas(t)}`,
         options,
@@ -140577,6 +140587,32 @@ var g5_misconceptions_default = {
     help: "Cut a strip or a chapati into 10 and then into 100 pieces so learners see that more pieces means smaller pieces.",
     status: "draft"
   },
+  "MATH.G5.NUMBER.DECIMALS.DEC_PLACE_NAME.M_PLACE_OFF_BY_ONE": {
+    skill: "MATH.G5.NUMBER.DECIMALS.DEC_PLACE_NAME",
+    error: "Counts the decimal places from the wrong starting point, so names the place next to the right one (calls the hundredths place the tenths, or the other way round).",
+    example: {
+      question: "In 7.698, the digit 6 is in which place?",
+      wrong_answer: "hundredths",
+      correct_answer: "tenths"
+    },
+    cause: "The child starts counting at the digit next to the point as '0', or counts the point itself as a place, so every name is one step out.",
+    reveals: "A question naming a digit's place, with the neighbouring place among the choices.",
+    help: "Touch the point and say 'the first place after the point is tenths'. Then count to the right one place at a time: tenths, hundredths, thousandths.",
+    status: "draft"
+  },
+  "MATH.G5.NUMBER.DECIMALS.DEC_PLACE_NAME.M_SAME_DIGIT_SAME_VALUE": {
+    skill: "MATH.G5.NUMBER.DECIMALS.DEC_PLACE_NAME",
+    error: "Says 2 tenths and 2 hundredths are equal because the digit is the same, ignoring the size of the place.",
+    example: {
+      question: "Which is more, 2 tenths or 2 hundredths?",
+      wrong_answer: "They are the same",
+      correct_answer: "2 tenths is more"
+    },
+    cause: "The child reads the digit and ignores the place name, so only the number 2 counts and the size of the pieces is not thought about.",
+    reveals: "A comparison of the same digit in two different places, with 'the same' among the choices.",
+    help: "Shade 2 strips of a tenths bar and 2 small squares of a hundredths grid side by side. The same digit, but a very different amount.",
+    status: "draft"
+  },
   "MATH.G5.NUMBER.DECIMALS.DEC_DIGIT_VALUE.M_DIGIT_VALUE_AS_WHOLE": {
     skill: "MATH.G5.NUMBER.DECIMALS.DEC_DIGIT_VALUE",
     error: "Gives the digit itself, or a whole-number value, as the value of a digit after the decimal point.",
@@ -140601,6 +140637,19 @@ var g5_misconceptions_default = {
     cause: "Writes the digits heard ('twenty-four') straight after the point without checking that the last digit must be in the thousandths place.",
     reveals: "Dictate decimals whose words skip a place (e.g. 'three and seven hundredths') and check for 3.7 instead of 3.07.",
     help: "Have learners write the words into a place value chart first, filling every empty column before the last named place with 0.",
+    status: "draft"
+  },
+  "MATH.G5.NUMBER.DECIMALS.DEC_DIGIT_VALUE.M_PLACES_SWAPPED": {
+    skill: "MATH.G5.NUMBER.DECIMALS.DEC_DIGIT_VALUE",
+    error: "Writes the digits in the wrong columns, for example the thousandths digit before the hundredths digit, when writing a decimal from words.",
+    example: {
+      question: "Write as a decimal: 6 ones, 0 tenths, 5 hundredths and 7 thousandths.",
+      wrong_answer: "6.075",
+      correct_answer: "6.057"
+    },
+    cause: "The child writes the digits in the order they feel natural (the bigger digit first) and does not match each digit to its column.",
+    reveals: "A write-the-decimal-from-words question with a swapped-digit option.",
+    help: "Draw a chart with the four headings. Say each phrase and put its digit in the column of the same name before writing the number.",
     status: "draft"
   },
   "MATH.G5.NUMBER.DECIMALS.DEC_COMPARE.M_LONGER_IS_LARGER": {
@@ -140666,6 +140715,19 @@ var g5_misconceptions_default = {
     cause: "Judges size by how many digits are written, not by place value.",
     reveals: "Include a whole number in a set of decimals just below it.",
     help: "Rewrite the whole number with zeros (3.000) and place all numbers on a number line from 2 to 3.",
+    status: "draft"
+  },
+  "MATH.G5.NUMBER.DECIMALS.DEC_ORDER.M_ORDER_DIRECTION_REVERSED": {
+    skill: "MATH.G5.NUMBER.DECIMALS.DEC_ORDER",
+    error: "Writes the decimals largest first when asked to arrange them from smallest, or the other way round.",
+    example: {
+      question: "Arrange from smallest to largest: 7.05, 6.875, 6.9.",
+      wrong_answer: "7.05, 6.9, 6.875",
+      correct_answer: "6.875, 6.9, 7.05"
+    },
+    cause: "The child compares the decimals correctly but mixes up which end the order starts from.",
+    reveals: "An ordering question where the right order backwards is among the choices.",
+    help: "Say the first number out loud and ask 'is this the smallest of all?' before writing it down.",
     status: "draft"
   },
   "MATH.G5.NUMBER.DECIMALS.DEC_ADD_SAME_PLACES.M_ADD_PARTS_SEPARATELY": {
@@ -140744,6 +140806,19 @@ var g5_misconceptions_default = {
     cause: "Does not see that 6 ones must become 5 ones, 9 tenths, 9 hundredths and 10 thousandths.",
     reveals: "Items with zeros in the first number (6.003, 4.008) where regrouping must pass through them.",
     help: "Model exchanging one coin step by step down each column with apparatus before using the written method.",
+    status: "draft"
+  },
+  "MATH.G5.NUMBER.DECIMALS.DEC_SUB_SAME_PLACES.M_SUB_DONE_AS_ADDITION": {
+    skill: "MATH.G5.NUMBER.DECIMALS.DEC_SUB_SAME_PLACES",
+    error: "Adds the two decimals when the story takes one away (used, sold, leaks out).",
+    example: {
+      question: "A roll of cloth was 3.15 m long and 1.43 m was used. How much is left?",
+      wrong_answer: "4.58",
+      correct_answer: "1.72"
+    },
+    cause: "The child sees two decimals and combines them, without picturing what happens in the story. An answer bigger than the roll does not alarm them.",
+    reveals: "A take-away story where the sum of the two decimals is among the choices.",
+    help: "Draw the cloth. Cutting off a piece leaves less cloth than before, so the answer must be smaller than the whole roll.",
     status: "draft"
   },
   "MATH.G5.NUMBER.DECIMALS.DEC_SUB_MIXED_PLACES.M_BRING_DOWN_DIGITS": {

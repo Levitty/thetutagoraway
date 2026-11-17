@@ -6139,6 +6139,36 @@ export const TEACHING_PACK_G5 = {
      "wrong_answer": "3 thousandths",
      "correct_answer": "3 tenths (0.3 is greater than 0.003)"
     }
+   },
+   {
+    "code": "MATH.G5.NUMBER.DECIMALS.DEC_PLACE_NAME.M_PLACE_OFF_BY_ONE",
+    "listen_for": [
+     "it is the second one",
+     "hundredths because it is the second"
+    ],
+    "ask": "What is the very first place after the point called?",
+    "repair": "Start at the point. The first place after it is tenths, the second hundredths, the third thousandths.",
+    "error": "Counts the decimal places from the wrong starting point, so names the place next to the right one (calls the hundredths place the tenths, or the other way round).",
+    "example": {
+     "question": "In 7.698, the digit 6 is in which place?",
+     "wrong_answer": "hundredths",
+     "correct_answer": "tenths"
+    }
+   },
+   {
+    "code": "MATH.G5.NUMBER.DECIMALS.DEC_PLACE_NAME.M_SAME_DIGIT_SAME_VALUE",
+    "listen_for": [
+     "both are 2",
+     "same number"
+    ],
+    "ask": "Is a tenth the same size as a hundredth? Which pieces are smaller?",
+    "repair": "The place tells the size of each piece. A tenth is ten times bigger than a hundredth, so 2 tenths is more.",
+    "error": "Says 2 tenths and 2 hundredths are equal because the digit is the same, ignoring the size of the place.",
+    "example": {
+     "question": "Which is more, 2 tenths or 2 hundredths?",
+     "wrong_answer": "They are the same",
+     "correct_answer": "2 tenths is more"
+    }
    }
   ],
   "checks": [
@@ -6229,6 +6259,20 @@ export const TEACHING_PACK_G5 = {
      "question": "Write 'five and twenty-four thousandths' as a decimal.",
      "wrong_answer": "5.24",
      "correct_answer": "5.024"
+    }
+   },
+   {
+    "code": "MATH.G5.NUMBER.DECIMALS.DEC_DIGIT_VALUE.M_PLACES_SWAPPED",
+    "listen_for": [
+     "the 7 comes first"
+    ],
+    "ask": "Which column is the 5 in? Which is the 7 in?",
+    "repair": "Put each digit in the column with its name, then read the chart from left to right.",
+    "error": "Writes the digits in the wrong columns, for example the thousandths digit before the hundredths digit, when writing a decimal from words.",
+    "example": {
+     "question": "Write as a decimal: 6 ones, 0 tenths, 5 hundredths and 7 thousandths.",
+     "wrong_answer": "6.075",
+     "correct_answer": "6.057"
     }
    }
   ],
@@ -6431,6 +6475,20 @@ export const TEACHING_PACK_G5 = {
      "question": "Arrange from smallest to largest: 3, 2.875, 2.95",
      "wrong_answer": "3, 2.875, 2.95",
      "correct_answer": "2.875, 2.95, 3"
+    }
+   },
+   {
+    "code": "MATH.G5.NUMBER.DECIMALS.DEC_ORDER.M_ORDER_DIRECTION_REVERSED",
+    "listen_for": [
+     "largest first"
+    ],
+    "ask": "Which number is the smallest? Is it first in your list?",
+    "repair": "Smallest to largest means the smallest number is written first.",
+    "error": "Writes the decimals largest first when asked to arrange them from smallest, or the other way round.",
+    "example": {
+     "question": "Arrange from smallest to largest: 7.05, 6.875, 6.9.",
+     "wrong_answer": "7.05, 6.9, 6.875",
+     "correct_answer": "6.875, 6.9, 7.05"
     }
    }
   ],
@@ -6716,6 +6774,20 @@ export const TEACHING_PACK_G5 = {
      "question": "6.003 − 2.145 =",
      "wrong_answer": "4.968",
      "correct_answer": "3.858"
+    }
+   },
+   {
+    "code": "MATH.G5.NUMBER.DECIMALS.DEC_SUB_SAME_PLACES.M_SUB_DONE_AS_ADDITION",
+    "listen_for": [
+     "added"
+    ],
+    "ask": "Is there more cloth or less cloth after a piece is cut off?",
+    "repair": "Used, sold and leaks out all take away, so subtract. The answer is less than the amount at the start.",
+    "error": "Adds the two decimals when the story takes one away (used, sold, leaks out).",
+    "example": {
+     "question": "A roll of cloth was 3.15 m long and 1.43 m was used. How much is left?",
+     "wrong_answer": "4.58",
+     "correct_answer": "1.72"
     }
    }
   ],

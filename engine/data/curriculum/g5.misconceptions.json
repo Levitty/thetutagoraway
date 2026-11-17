@@ -2079,6 +2079,32 @@
   "help": "Cut a strip or a chapati into 10 and then into 100 pieces so learners see that more pieces means smaller pieces.",
   "status": "draft"
  },
+ "MATH.G5.NUMBER.DECIMALS.DEC_PLACE_NAME.M_PLACE_OFF_BY_ONE": {
+  "skill": "MATH.G5.NUMBER.DECIMALS.DEC_PLACE_NAME",
+  "error": "Counts the decimal places from the wrong starting point, so names the place next to the right one (calls the hundredths place the tenths, or the other way round).",
+  "example": {
+   "question": "In 7.698, the digit 6 is in which place?",
+   "wrong_answer": "hundredths",
+   "correct_answer": "tenths"
+  },
+  "cause": "The child starts counting at the digit next to the point as '0', or counts the point itself as a place, so every name is one step out.",
+  "reveals": "A question naming a digit's place, with the neighbouring place among the choices.",
+  "help": "Touch the point and say 'the first place after the point is tenths'. Then count to the right one place at a time: tenths, hundredths, thousandths.",
+  "status": "draft"
+ },
+ "MATH.G5.NUMBER.DECIMALS.DEC_PLACE_NAME.M_SAME_DIGIT_SAME_VALUE": {
+  "skill": "MATH.G5.NUMBER.DECIMALS.DEC_PLACE_NAME",
+  "error": "Says 2 tenths and 2 hundredths are equal because the digit is the same, ignoring the size of the place.",
+  "example": {
+   "question": "Which is more, 2 tenths or 2 hundredths?",
+   "wrong_answer": "They are the same",
+   "correct_answer": "2 tenths is more"
+  },
+  "cause": "The child reads the digit and ignores the place name, so only the number 2 counts and the size of the pieces is not thought about.",
+  "reveals": "A comparison of the same digit in two different places, with 'the same' among the choices.",
+  "help": "Shade 2 strips of a tenths bar and 2 small squares of a hundredths grid side by side. The same digit, but a very different amount.",
+  "status": "draft"
+ },
  "MATH.G5.NUMBER.DECIMALS.DEC_DIGIT_VALUE.M_DIGIT_VALUE_AS_WHOLE": {
   "skill": "MATH.G5.NUMBER.DECIMALS.DEC_DIGIT_VALUE",
   "error": "Gives the digit itself, or a whole-number value, as the value of a digit after the decimal point.",
@@ -2103,6 +2129,19 @@
   "cause": "Writes the digits heard ('twenty-four') straight after the point without checking that the last digit must be in the thousandths place.",
   "reveals": "Dictate decimals whose words skip a place (e.g. 'three and seven hundredths') and check for 3.7 instead of 3.07.",
   "help": "Have learners write the words into a place value chart first, filling every empty column before the last named place with 0.",
+  "status": "draft"
+ },
+ "MATH.G5.NUMBER.DECIMALS.DEC_DIGIT_VALUE.M_PLACES_SWAPPED": {
+  "skill": "MATH.G5.NUMBER.DECIMALS.DEC_DIGIT_VALUE",
+  "error": "Writes the digits in the wrong columns, for example the thousandths digit before the hundredths digit, when writing a decimal from words.",
+  "example": {
+   "question": "Write as a decimal: 6 ones, 0 tenths, 5 hundredths and 7 thousandths.",
+   "wrong_answer": "6.075",
+   "correct_answer": "6.057"
+  },
+  "cause": "The child writes the digits in the order they feel natural (the bigger digit first) and does not match each digit to its column.",
+  "reveals": "A write-the-decimal-from-words question with a swapped-digit option.",
+  "help": "Draw a chart with the four headings. Say each phrase and put its digit in the column of the same name before writing the number.",
   "status": "draft"
  },
  "MATH.G5.NUMBER.DECIMALS.DEC_COMPARE.M_LONGER_IS_LARGER": {
@@ -2168,6 +2207,19 @@
   "cause": "Judges size by how many digits are written, not by place value.",
   "reveals": "Include a whole number in a set of decimals just below it.",
   "help": "Rewrite the whole number with zeros (3.000) and place all numbers on a number line from 2 to 3.",
+  "status": "draft"
+ },
+ "MATH.G5.NUMBER.DECIMALS.DEC_ORDER.M_ORDER_DIRECTION_REVERSED": {
+  "skill": "MATH.G5.NUMBER.DECIMALS.DEC_ORDER",
+  "error": "Writes the decimals largest first when asked to arrange them from smallest, or the other way round.",
+  "example": {
+   "question": "Arrange from smallest to largest: 7.05, 6.875, 6.9.",
+   "wrong_answer": "7.05, 6.9, 6.875",
+   "correct_answer": "6.875, 6.9, 7.05"
+  },
+  "cause": "The child compares the decimals correctly but mixes up which end the order starts from.",
+  "reveals": "An ordering question where the right order backwards is among the choices.",
+  "help": "Say the first number out loud and ask 'is this the smallest of all?' before writing it down.",
   "status": "draft"
  },
  "MATH.G5.NUMBER.DECIMALS.DEC_ADD_SAME_PLACES.M_ADD_PARTS_SEPARATELY": {
@@ -2246,6 +2298,19 @@
   "cause": "Does not see that 6 ones must become 5 ones, 9 tenths, 9 hundredths and 10 thousandths.",
   "reveals": "Items with zeros in the first number (6.003, 4.008) where regrouping must pass through them.",
   "help": "Model exchanging one coin step by step down each column with apparatus before using the written method.",
+  "status": "draft"
+ },
+ "MATH.G5.NUMBER.DECIMALS.DEC_SUB_SAME_PLACES.M_SUB_DONE_AS_ADDITION": {
+  "skill": "MATH.G5.NUMBER.DECIMALS.DEC_SUB_SAME_PLACES",
+  "error": "Adds the two decimals when the story takes one away (used, sold, leaks out).",
+  "example": {
+   "question": "A roll of cloth was 3.15 m long and 1.43 m was used. How much is left?",
+   "wrong_answer": "4.58",
+   "correct_answer": "1.72"
+  },
+  "cause": "The child sees two decimals and combines them, without picturing what happens in the story. An answer bigger than the roll does not alarm them.",
+  "reveals": "A take-away story where the sum of the two decimals is among the choices.",
+  "help": "Draw the cloth. Cutting off a piece leaves less cloth than before, so the answer must be smaller than the whole roll.",
   "status": "draft"
  },
  "MATH.G5.NUMBER.DECIMALS.DEC_SUB_MIXED_PLACES.M_BRING_DOWN_DIGITS": {

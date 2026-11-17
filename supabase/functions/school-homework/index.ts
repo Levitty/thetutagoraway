@@ -2264,7 +2264,9 @@ var SKILLS_G5 = {
     "pre": [],
     "mis": [
       "M_TENTHS_AS_TENS",
-      "M_THOUSANDTH_BIGGER"
+      "M_THOUSANDTH_BIGGER",
+      "M_PLACE_OFF_BY_ONE",
+      "M_SAME_DIGIT_SAME_VALUE"
     ]
   },
   "MATH.G5.NUMBER.DECIMALS.DEC_DIGIT_VALUE": {
@@ -2283,7 +2285,8 @@ var SKILLS_G5 = {
     ],
     "mis": [
       "M_DIGIT_VALUE_AS_WHOLE",
-      "M_MISSING_PLACEHOLDER_ZERO"
+      "M_MISSING_PLACEHOLDER_ZERO",
+      "M_PLACES_SWAPPED"
     ]
   },
   "MATH.G5.NUMBER.DECIMALS.DEC_COMPARE": {
@@ -2323,7 +2326,8 @@ var SKILLS_G5 = {
     ],
     "mis": [
       "M_IGNORES_WHOLE_PART",
-      "M_WHOLE_NUMBER_SMALLEST"
+      "M_WHOLE_NUMBER_SMALLEST",
+      "M_ORDER_DIRECTION_REVERSED"
     ]
   },
   "MATH.G5.NUMBER.DECIMALS.DEC_ADD_SAME_PLACES": {
@@ -2382,7 +2386,8 @@ var SKILLS_G5 = {
     ],
     "mis": [
       "M_SMALLER_FROM_LARGER",
-      "M_REGROUP_ACROSS_ZERO"
+      "M_REGROUP_ACROSS_ZERO",
+      "M_SUB_DONE_AS_ADDITION"
     ]
   },
   "MATH.G5.NUMBER.DECIMALS.DEC_SUB_MIXED_PLACES": {

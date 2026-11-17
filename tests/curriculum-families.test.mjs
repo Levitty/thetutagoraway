@@ -47,7 +47,7 @@ test('every wrong answer in a new family names a library misconception', () => {
   const bad = mine.filter(f => f.misMapped !== false && !f.core).length;
   assert.ok(bad >= 500, `only ${bad} families are tied to the library`);
   // the checks themselves (family_checks.mjs) fail any wrong answer with no code or an unknown one
-  assert.ok(Object.keys(misLib).length === 428);  // 414 + M_NUMBER_IS_EQUATION + 13 from the map review (17 Nov 2026); codes are only ever added
+  assert.ok(Object.keys(misLib).length === 433);  // 414 + M_NUMBER_IS_EQUATION + 18 from the map review (17 Nov 2026); codes are only ever added
 });
 
 test('new families stay off for children until a teacher signs them off', () => {
