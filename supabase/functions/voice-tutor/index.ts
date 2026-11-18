@@ -121052,7 +121052,9 @@ var SKILLS_G6 = {
     ],
     "mis": [
       "M_SAME_DIRECTION_ENOUGH",
-      "M_PARALLEL_MEANS_HORIZONTAL"
+      "M_PARALLEL_MEANS_HORIZONTAL",
+      "M_SAME_LENGTH_NEEDED",
+      "M_SET_SQUARE_TURNED"
     ],
     "hands": true
   },
@@ -121073,7 +121075,9 @@ var SKILLS_G6 = {
     ],
     "mis": [
       "M_BISECT_MEANS_CUT_ANYWHERE",
-      "M_HALF_OF_WRONG_LENGTH"
+      "M_HALF_OF_WRONG_LENGTH",
+      "M_BISECTOR_ANY_ANGLE",
+      "M_ARCS_TOO_SMALL"
     ],
     "hands": true
   },
@@ -121094,7 +121098,9 @@ var SKILLS_G6 = {
     ],
     "mis": [
       "M_PERPENDICULAR_AS_STRAIGHT",
-      "M_PERPENDICULAR_AS_VERTICAL"
+      "M_PERPENDICULAR_AS_VERTICAL",
+      "M_MUST_CROSS",
+      "M_RIGHT_ANGLE_BY_EYE"
     ],
     "hands": true
   },

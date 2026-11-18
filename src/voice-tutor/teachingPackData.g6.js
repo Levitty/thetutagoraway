@@ -8553,6 +8553,373 @@ export const TEACHING_PACK_G6 = {
   "sub_strand": "MATH.G6.MEASUR.MONEY",
   "sub_strand_name": "Money",
   "status": "draft: written 18 Nov 2026 offline for Grade 6; not yet checked by a Kenyan maths teacher; not loaded by the live tutor"
+ },
+ "MATH.G6.GEOMET.LINES.PARALLEL_LINES": {
+  "skill": "MATH.G6.GEOMET.LINES.PARALLEL_LINES",
+  "key_step": "The child says parallel lines stay the same distance apart all along, and checks by measuring the gap at two places.",
+  "floor": {
+   "prerequisite": "Picks out parallel lines in pictures.",
+   "question": "Are the ruled lines in an exercise book parallel?",
+   "answer": "Yes"
+  },
+  "representations": [
+   "railway lines, ruled lines, a window frame",
+   "two lines with the gap measured at both ends",
+   "a set square sliding along a ruler"
+  ],
+  "steps": [
+   "Look for two lines that never meet.",
+   "Measure the gap at one end and the other.",
+   "If the gaps are equal, the lines are parallel; length does not matter.",
+   "To draw them, slide a set square along a ruler without turning it."
+  ],
+  "contexts": [
+   "the SGR railway lines",
+   "lines on a football pitch",
+   "the edges of a ruler"
+  ],
+  "board": [
+   {
+    "beat": "draw",
+    "do": "Draw two lines, 2 cm apart at the left and 4 cm apart at the right."
+   },
+   {
+    "beat": "point",
+    "do": "Point at the two gaps.",
+    "say": "Is the gap the same at both ends?"
+   },
+   {
+    "beat": "pause",
+    "do": "Wait for the child to say no."
+   },
+   {
+    "beat": "predict",
+    "do": "Ask whether the lines would meet if they were longer."
+   },
+   {
+    "beat": "child_draws",
+    "do": "Ask the child to draw two parallel lines with a ruler and a set square."
+   }
+  ],
+  "misconceptions": [
+   {
+    "code": "MATH.G6.GEOMET.LINES.PARALLEL_LINES.M_SAME_DIRECTION_ENOUGH",
+    "listen_for": [
+     "they go the same way"
+    ],
+    "ask": "Is the gap the same at both ends?",
+    "repair": "Parallel lines stay the same distance apart.",
+    "error": "Believes any two lines pointing the same way are parallel, even if they are not the same distance apart.",
+    "example": {
+     "question": "Two lines closer together at one end",
+     "wrong_answer": "parallel",
+     "correct_answer": "not parallel"
+    }
+   },
+   {
+    "code": "MATH.G6.GEOMET.LINES.PARALLEL_LINES.M_PARALLEL_MEANS_HORIZONTAL",
+    "listen_for": [
+     "they are not flat",
+     "slanting"
+    ],
+    "ask": "Are the edges of a slanting ladder parallel?",
+    "repair": "Parallel lines can point any way.",
+    "error": "Believes parallel lines must be horizontal.",
+    "example": {
+     "question": "Two slanting rails",
+     "wrong_answer": "not parallel (not horizontal)",
+     "correct_answer": "parallel"
+    }
+   },
+   {
+    "code": "MATH.G6.GEOMET.LINES.PARALLEL_LINES.M_SAME_LENGTH_NEEDED",
+    "listen_for": [
+     "not the same length"
+    ],
+    "ask": "Does length change the gap between them?",
+    "repair": "Length does not matter, only the gap.",
+    "error": "Believes parallel lines must be the same length or start and end together.",
+    "example": {
+     "question": "One line is 3 cm long and another 8 cm long, always 2 cm apart. Are they parallel?",
+     "wrong_answer": "No, they are not the same length",
+     "correct_answer": "Yes: they stay the same distance apart"
+    }
+   },
+   {
+    "code": "MATH.G6.GEOMET.LINES.PARALLEL_LINES.M_SET_SQUARE_TURNED",
+    "listen_for": [
+     "I used a set square"
+    ],
+    "ask": "Did the set square turn as it moved?",
+    "repair": "Slide the set square along the ruler without turning it.",
+    "error": "Turns the set square between drawing the two lines, so the lines are not parallel.",
+    "example": {
+     "question": "Wanjiku slides her set square along the ruler but turns it a little before drawing the second line. Are her lines parallel?",
+     "wrong_answer": "Yes, she used a set square",
+     "correct_answer": "No: the set square must slide without turning"
+    }
+   }
+  ],
+  "checks": [
+   {
+    "question": "Are the two rails of a railway line parallel?",
+    "answer": "Yes",
+    "shows": "same distance apart"
+   },
+   {
+    "question": "Two lines are 2 cm apart at one end and 4 cm apart at the other. Are they parallel?",
+    "answer": "No",
+    "shows": "gaps differ"
+   }
+  ],
+  "name": "Draw parallel lines: what makes lines parallel",
+  "sub_strand": "MATH.G6.GEOMET.LINES",
+  "sub_strand_name": "Lines",
+  "status": "draft: written 18 Nov 2026 offline for Grade 6; not yet checked by a Kenyan maths teacher; not loaded by the live tutor"
+ },
+ "MATH.G6.GEOMET.LINES.BISECT_LINES": {
+  "skill": "MATH.G6.GEOMET.LINES.BISECT_LINES",
+  "key_step": "The child says that bisecting cuts a line into two equal halves and that the perpendicular bisector meets it at its midpoint at a right angle, drawn with arcs of the same radius, more than half the line, from both ends.",
+  "floor": {
+   "prerequisite": "Halves a length.",
+   "question": "What is half of 12 cm?",
+   "answer": "6 cm"
+  },
+  "representations": [
+   "a strip of paper folded end to end",
+   "a line with arcs from both ends crossing above and below",
+   "the two halves measured"
+  ],
+  "steps": [
+   "Open the compasses to more than half the line.",
+   "Draw arcs above and below from one end.",
+   "Keep the same opening and draw arcs from the other end.",
+   "Join the crossings; check equal halves and a right angle."
+  ],
+  "contexts": [
+   "marking the centre line of a pitch",
+   "cutting a plank in half",
+   "folding a paper in a craft lesson"
+  ],
+  "board": [
+   {
+    "beat": "draw",
+    "do": "Draw a line AB of 8 cm."
+   },
+   {
+    "beat": "point",
+    "do": "Point at the middle.",
+    "say": "How long must each half be?"
+   },
+   {
+    "beat": "pause",
+    "do": "Wait for 4 cm."
+   },
+   {
+    "beat": "child_draws",
+    "do": "Ask the child to fold a paper strip end to end and look at the fold."
+   },
+   {
+    "beat": "write",
+    "do": "Write: the fold meets the line at 90 degrees."
+   }
+  ],
+  "misconceptions": [
+   {
+    "code": "MATH.G6.GEOMET.LINES.BISECT_LINES.M_BISECT_MEANS_CUT_ANYWHERE",
+    "listen_for": [
+     "5 and 7",
+     "cut it"
+    ],
+    "ask": "Are the two parts equal?",
+    "repair": "Bisect means cut into two equal parts.",
+    "error": "Believes bisecting is cutting a line anywhere.",
+    "example": {
+     "question": "A 12 cm line is bisected: length of each part?",
+     "wrong_answer": "5 cm and 7 cm",
+     "correct_answer": "6 cm and 6 cm"
+    }
+   },
+   {
+    "code": "MATH.G6.GEOMET.LINES.BISECT_LINES.M_HALF_OF_WRONG_LENGTH",
+    "listen_for": [
+     "18 cm",
+     "the whole"
+    ],
+    "ask": "Is that one part or the whole line?",
+    "repair": "Each part is half: 9 cm.",
+    "error": "Halves the wrong number or gives the whole length as the answer.",
+    "example": {
+     "question": "A 18 cm line bisected",
+     "wrong_answer": "18 cm",
+     "correct_answer": "9 cm"
+    }
+   },
+   {
+    "code": "MATH.G6.GEOMET.LINES.BISECT_LINES.M_BISECTOR_ANY_ANGLE",
+    "listen_for": [
+     "it goes through the middle"
+    ],
+    "ask": "What angle does the fold make with the line?",
+    "repair": "The perpendicular bisector meets at 90 degrees.",
+    "error": "Believes any line through the midpoint is the perpendicular bisector.",
+    "example": {
+     "question": "A line cuts AB at its midpoint at 60 degrees. Is it the perpendicular bisector of AB?",
+     "wrong_answer": "Yes, it goes through the middle",
+     "correct_answer": "No: the perpendicular bisector meets AB at 90 degrees"
+    }
+   },
+   {
+    "code": "MATH.G6.GEOMET.LINES.BISECT_LINES.M_ARCS_TOO_SMALL",
+    "listen_for": [
+     "3 cm radius",
+     "they meet at the middle"
+    ],
+    "ask": "Do arcs of 3 cm from each end of 8 cm reach each other?",
+    "repair": "Use more than half the line, the same for both ends.",
+    "error": "Uses a compass radius of half the line or less, so the arcs from the two ends do not meet.",
+    "example": {
+     "question": "Arcs of radius 3 cm are drawn from each end of an 8 cm line. Where do they cross?",
+     "wrong_answer": "At the midpoint, above and below",
+     "correct_answer": "They do not meet: the radius must be more than half of the line (more than 4 cm)"
+    }
+   }
+  ],
+  "checks": [
+   {
+    "question": "A 12 cm line is bisected. How long is each part?",
+    "answer": "6 cm",
+    "shows": "equal halves"
+   },
+   {
+    "question": "At what angle does the perpendicular bisector meet the line?",
+    "answer": "90 degrees",
+    "shows": "right angle"
+   }
+  ],
+  "name": "Bisect a line: the idea of the midpoint",
+  "sub_strand": "MATH.G6.GEOMET.LINES",
+  "sub_strand_name": "Lines",
+  "status": "draft: written 18 Nov 2026 offline for Grade 6; not yet checked by a Kenyan maths teacher; not loaded by the live tutor"
+ },
+ "MATH.G6.GEOMET.LINES.PERPENDICULAR_LINES": {
+  "skill": "MATH.G6.GEOMET.LINES.PERPENDICULAR_LINES",
+  "key_step": "The child says perpendicular lines meet at a right angle, at a cross, a T or a corner, and checks with a set square.",
+  "floor": {
+   "prerequisite": "Recognises a right angle.",
+   "question": "Is the corner of an exercise book a right angle?",
+   "answer": "Yes"
+  },
+  "representations": [
+   "the corner of a door or a window",
+   "a set square placed in a corner",
+   "lines drawn as a cross, a T and an L"
+  ],
+  "steps": [
+   "Find where the two lines meet.",
+   "Put the corner of a set square there.",
+   "If both lines run along its edges, they are perpendicular.",
+   "To draw, use the set square or the compass method."
+  ],
+  "contexts": [
+   "a wall and the floor",
+   "a flag pole and the ground",
+   "the lines of a cross on a road sign"
+  ],
+  "board": [
+   {
+    "beat": "draw",
+    "do": "Draw a cross, a T and an L."
+   },
+   {
+    "beat": "point",
+    "do": "Point at the L.",
+    "say": "Do these two lines meet at a right angle?"
+   },
+   {
+    "beat": "pause",
+    "do": "Wait for the child to decide."
+   },
+   {
+    "beat": "child_draws",
+    "do": "Ask the child to check each with the corner of a book."
+   }
+  ],
+  "misconceptions": [
+   {
+    "code": "MATH.G6.GEOMET.LINES.PERPENDICULAR_LINES.M_PERPENDICULAR_AS_STRAIGHT",
+    "listen_for": [
+     "180",
+     "straight"
+    ],
+    "ask": "Is a corner a straight line?",
+    "repair": "Perpendicular lines make 90 degrees.",
+    "error": "Believes perpendicular lines make a straight line (180 degrees).",
+    "example": {
+     "question": "Angle between perpendicular lines?",
+     "wrong_answer": "180 degrees",
+     "correct_answer": "90 degrees"
+    }
+   },
+   {
+    "code": "MATH.G6.GEOMET.LINES.PERPENDICULAR_LINES.M_PERPENDICULAR_AS_VERTICAL",
+    "listen_for": [
+     "one must be up"
+    ],
+    "ask": "Turn the page: are they still at a right angle?",
+    "repair": "Turning does not change the angle.",
+    "error": "Believes perpendicular lines must be one horizontal and one vertical.",
+    "example": {
+     "question": "Two lines slanted, meeting at a right angle",
+     "wrong_answer": "not perpendicular",
+     "correct_answer": "perpendicular"
+    }
+   },
+   {
+    "code": "MATH.G6.GEOMET.LINES.PERPENDICULAR_LINES.M_MUST_CROSS",
+    "listen_for": [
+     "they do not cross"
+    ],
+    "ask": "Do they meet at a right angle?",
+    "repair": "Lines that meet at a right angle at a corner are perpendicular.",
+    "error": "Believes perpendicular lines must cross, so a corner (L) or a T is not perpendicular.",
+    "example": {
+     "question": "Are the two lines of a capital L perpendicular?",
+     "wrong_answer": "No, they do not cross",
+     "correct_answer": "Yes: they meet at a right angle"
+    }
+   },
+   {
+    "code": "MATH.G6.GEOMET.LINES.PERPENDICULAR_LINES.M_RIGHT_ANGLE_BY_EYE",
+    "listen_for": [
+     "it looks square"
+    ],
+    "ask": "Does the set square fit exactly?",
+    "repair": "Perpendicular is exactly 90 degrees: check it.",
+    "error": "Calls lines perpendicular because they look square, without checking the angle.",
+    "example": {
+     "question": "Two lines meet at 85 degrees. Are they perpendicular?",
+     "wrong_answer": "Yes, it looks like a right angle",
+     "correct_answer": "No: perpendicular means exactly 90 degrees"
+    }
+   }
+  ],
+  "checks": [
+   {
+    "question": "What angle do perpendicular lines make?",
+    "answer": "90 degrees",
+    "shows": "right angle"
+   },
+   {
+    "question": "Are the two lines of a capital L perpendicular?",
+    "answer": "Yes",
+    "shows": "meeting at a corner"
+   }
+  ],
+  "name": "Construct perpendicular lines: right angles",
+  "sub_strand": "MATH.G6.GEOMET.LINES",
+  "sub_strand_name": "Lines",
+  "status": "draft: written 18 Nov 2026 offline for Grade 6; not yet checked by a Kenyan maths teacher; not loaded by the live tutor"
  }
 };
 export default TEACHING_PACK_G6;

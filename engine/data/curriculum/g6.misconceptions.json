@@ -3905,6 +3905,90 @@
   "source": "a familiar error type in maths education (no single source cited); how often Kenyan learners make it is to be confirmed by a teacher",
   "status": "draft"
  },
+ "MATH.G6.GEOMET.LINES.PARALLEL_LINES.M_SAME_LENGTH_NEEDED": {
+  "skill": "MATH.G6.GEOMET.LINES.PARALLEL_LINES",
+  "error": "Believes parallel lines must be the same length or start and end together.",
+  "example": {
+   "question": "One line is 3 cm long and another 8 cm long, always 2 cm apart. Are they parallel?",
+   "wrong_answer": "No, they are not the same length",
+   "correct_answer": "Yes: they stay the same distance apart"
+  },
+  "cause": "Has mostly seen parallel lines drawn as equal pairs.",
+  "reveals": "A no because of different lengths.",
+  "help": "Parallel is about the gap, not the length: measure the gap at two places.",
+  "source": "a familiar error type in maths education (no single source cited); how often Kenyan learners make it is to be confirmed by a teacher",
+  "status": "draft"
+ },
+ "MATH.G6.GEOMET.LINES.PARALLEL_LINES.M_SET_SQUARE_TURNED": {
+  "skill": "MATH.G6.GEOMET.LINES.PARALLEL_LINES",
+  "error": "Turns the set square between drawing the two lines, so the lines are not parallel.",
+  "example": {
+   "question": "Wanjiku slides her set square along the ruler but turns it a little before drawing the second line. Are her lines parallel?",
+   "wrong_answer": "Yes, she used a set square",
+   "correct_answer": "No: the set square must slide without turning"
+  },
+  "cause": "Thinks using the tool is enough, whatever the movement.",
+  "reveals": "A yes because a set square was used.",
+  "help": "Hold the ruler still and slide the set square along it without turning it.",
+  "source": "to be confirmed by a teacher (no source yet)",
+  "status": "draft"
+ },
+ "MATH.G6.GEOMET.LINES.BISECT_LINES.M_BISECTOR_ANY_ANGLE": {
+  "skill": "MATH.G6.GEOMET.LINES.BISECT_LINES",
+  "error": "Believes any line through the midpoint is the perpendicular bisector.",
+  "example": {
+   "question": "A line cuts AB at its midpoint at 60 degrees. Is it the perpendicular bisector of AB?",
+   "wrong_answer": "Yes, it goes through the middle",
+   "correct_answer": "No: the perpendicular bisector meets AB at 90 degrees"
+  },
+  "cause": "Remembers the \"middle\" and forgets the right angle.",
+  "reveals": "A yes for a slanting line through the midpoint.",
+  "help": "Check two things: equal halves, and a right angle at the midpoint.",
+  "source": "to be confirmed by a teacher (no source yet)",
+  "status": "draft"
+ },
+ "MATH.G6.GEOMET.LINES.BISECT_LINES.M_ARCS_TOO_SMALL": {
+  "skill": "MATH.G6.GEOMET.LINES.BISECT_LINES",
+  "error": "Uses a compass radius of half the line or less, so the arcs from the two ends do not meet.",
+  "example": {
+   "question": "Arcs of radius 3 cm are drawn from each end of an 8 cm line. Where do they cross?",
+   "wrong_answer": "At the midpoint, above and below",
+   "correct_answer": "They do not meet: the radius must be more than half of the line (more than 4 cm)"
+  },
+  "cause": "Opens the compasses to any size.",
+  "reveals": "A crossing point that cannot exist.",
+  "help": "Open the compasses to more than half the line, and keep the same opening for both ends.",
+  "source": "to be confirmed by a teacher (no source yet)",
+  "status": "draft"
+ },
+ "MATH.G6.GEOMET.LINES.PERPENDICULAR_LINES.M_MUST_CROSS": {
+  "skill": "MATH.G6.GEOMET.LINES.PERPENDICULAR_LINES",
+  "error": "Believes perpendicular lines must cross, so a corner (L) or a T is not perpendicular.",
+  "example": {
+   "question": "Are the two lines of a capital L perpendicular?",
+   "wrong_answer": "No, they do not cross",
+   "correct_answer": "Yes: they meet at a right angle"
+  },
+  "cause": "Has seen perpendicular lines drawn as a cross.",
+  "reveals": "A no for lines that meet at a corner.",
+  "help": "Perpendicular means meeting at a right angle; they can meet at an end.",
+  "source": "to be confirmed by a teacher (no source yet)",
+  "status": "draft"
+ },
+ "MATH.G6.GEOMET.LINES.PERPENDICULAR_LINES.M_RIGHT_ANGLE_BY_EYE": {
+  "skill": "MATH.G6.GEOMET.LINES.PERPENDICULAR_LINES",
+  "error": "Calls lines perpendicular because they look square, without checking the angle.",
+  "example": {
+   "question": "Two lines meet at 85 degrees. Are they perpendicular?",
+   "wrong_answer": "Yes, it looks like a right angle",
+   "correct_answer": "No: perpendicular means exactly 90 degrees"
+  },
+  "cause": "Judges by eye.",
+  "reveals": "A yes for an angle close to 90.",
+  "help": "Check with the corner of a set square or a protractor.",
+  "source": "to be confirmed by a teacher (no source yet)",
+  "status": "draft"
+ },
  "MATH.G6.GEOMET.ANGLES.ANGLES_STRAIGHT_LINE_IDENTIFY.M_ANY_TWO_ANGLES": {
   "skill": "MATH.G6.GEOMET.ANGLES.ANGLES_STRAIGHT_LINE_IDENTIFY",
   "error": "Believes any two angles drawn near each other are on a straight line.",
