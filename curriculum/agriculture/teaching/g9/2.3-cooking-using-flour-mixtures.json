@@ -1,0 +1,275 @@
+{
+ "sub_strand": "AGRI.G9.FOOD_P.COOKING_USING_FLOUR_MIXT",
+ "title": "Cooking: Using Flour Mixtures",
+ "status": "draft: written 18 Nov 2026 offline for Grade 9 Agriculture; not yet checked by a CBC Agriculture teacher; not loaded by the live tutor",
+ "sources": [],
+ "notes": "Make a batter (pancakes) and a dough (chapati or mandazi) with measured ingredients; frying is done by or beside the teacher. Link to Maths: measuring flour and liquid.",
+ "skills": [
+  {
+   "skill": "AGRI.G9.FOOD_P.COOKING_USING_FLOUR_MIXT.FLOUR_MIXTURES",
+   "key_step": "The child identifies batters (runny, more liquid than flour, poured: pancakes) and doughs (stiff, more flour, kneaded and shaped: chapati, mandazi, bread) and matches products to each.",
+   "floor": {
+    "prerequisite": "Knows rubbing-in for scones.",
+    "question": "How is fat put into flour for scones?",
+    "answer": "rubbed in with fingertips"
+   },
+   "representations": [
+    "a bowl of batter and a ball of dough",
+    "a product chart",
+    "pictures"
+   ],
+   "steps": [
+    "Runny and poured: batter.",
+    "Stiff and shaped: dough.",
+    "Match the product."
+   ],
+   "contexts": [
+    "pancakes for breakfast",
+    "chapati at Christmas",
+    "mandazi at a kiosk"
+   ],
+   "board": [
+    {
+     "beat": "draw",
+     "do": "Draw a spoon of runny mixture and a ball of mixture."
+    },
+    {
+     "beat": "point",
+     "do": "Point at the ball.",
+     "say": "Batter or dough?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for \"dough\"."
+    },
+    {
+     "beat": "reveal",
+     "do": "Label both."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "AGRI.G9.FOOD_P.COOKING_USING_FLOUR_MIXT.FLOUR_MIXTURES.M_AG9_FM_SWAP",
+     "listen_for": [
+      "A batter"
+     ],
+     "ask": "Is chapati made from a batter or a dough?",
+     "repair": "Show a runny batter poured and a stiff dough rolled."
+    },
+    {
+     "code": "AGRI.G9.FOOD_P.COOKING_USING_FLOUR_MIXT.FLOUR_MIXTURES.M_AG9_FM_RATIO",
+     "listen_for": [
+      "A dough"
+     ],
+     "ask": "Which has more liquid than flour?",
+     "repair": "Measure the liquid and flour for each."
+    },
+    {
+     "code": "AGRI.G9.FOOD_P.COOKING_USING_FLOUR_MIXT.FLOUR_MIXTURES.M_AG9_FM_MANDAZI",
+     "listen_for": [
+      "A batter, because they are fried"
+     ],
+     "ask": "What mixture are mandazi made from?",
+     "repair": "Show mandazi dough rolled and cut before frying."
+    },
+    {
+     "code": "AGRI.G9.FOOD_P.COOKING_USING_FLOUR_MIXT.FLOUR_MIXTURES.M_AG9_FM_ONLY",
+     "listen_for": [
+      "No, only wheat flour"
+     ],
+     "ask": "Can other flours make flour mixtures?",
+     "repair": "Show millet pancakes or cassava flour recipes."
+    }
+   ],
+   "checks": [
+    {
+     "question": "Is pancake mixture a batter or a dough?",
+     "answer": "a batter",
+     "shows": "type"
+    },
+    {
+     "question": "Name a product made from dough.",
+     "answer": "chapati, mandazi or bread",
+     "shows": "product"
+    }
+   ]
+  },
+  {
+   "skill": "AGRI.G9.FOOD_P.COOKING_USING_FLOUR_MIXT.MIXTURE_PREP",
+   "key_step": "The child says how to prepare a batter (measure, sift, beat in eggs and liquid gradually, smooth, rest) and a dough (measure, sift, add liquid a little at a time, knead until smooth and stretchy, rest covered).",
+   "floor": {
+    "prerequisite": "Knows batters from doughs.",
+    "question": "Which has more liquid?",
+    "answer": "a batter"
+   },
+   "representations": [
+    "measuring cups, flour, water",
+    "step cards",
+    "a bowl and a board"
+   ],
+   "steps": [
+    "Measure and sift.",
+    "Batter: beat in liquid slowly; rest.",
+    "Dough: add liquid little by little; knead; rest."
+   ],
+   "contexts": [
+    "the school kitchen",
+    "home baking",
+    "a 4-K cooking day"
+   ],
+   "board": [
+    {
+     "beat": "write",
+     "do": "Write \"pour all the water in at once\"."
+    },
+    {
+     "beat": "predict",
+     "do": "Ask what happens."
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for \"sticky lumpy mixture\"."
+    },
+    {
+     "beat": "reveal",
+     "do": "Write \"a little at a time\"."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "AGRI.G9.FOOD_P.COOKING_USING_FLOUR_MIXT.MIXTURE_PREP.M_AG9_MP_ALLWATER",
+     "listen_for": [
+      "All at once"
+     ],
+     "ask": "How is liquid added to flour for a dough?",
+     "repair": "Pour all the water into a cup of flour: it turns to sticky paste."
+    },
+    {
+     "code": "AGRI.G9.FOOD_P.COOKING_USING_FLOUR_MIXT.MIXTURE_PREP.M_AG9_MP_KNEAD",
+     "listen_for": [
+      "It does not need it"
+     ],
+     "ask": "Why is chapati dough kneaded?",
+     "repair": "Roll an unkneaded and a kneaded dough."
+    },
+    {
+     "code": "AGRI.G9.FOOD_P.COOKING_USING_FLOUR_MIXT.MIXTURE_PREP.M_AG9_MP_LUMPS",
+     "listen_for": [
+      "Stir once and leave the lumps"
+     ],
+     "ask": "How is a smooth batter made?",
+     "repair": "Fry a lumpy pancake and a smooth one."
+    },
+    {
+     "code": "AGRI.G9.FOOD_P.COOKING_USING_FLOUR_MIXT.MIXTURE_PREP.M_AG9_MP_NOMEASURE",
+     "listen_for": [
+      "Guessing is fine"
+     ],
+     "ask": "Why are ingredients measured for a batter?",
+     "repair": "Make two batters, one guessed and one measured, and compare."
+    }
+   ],
+   "checks": [
+    {
+     "question": "Why is dough kneaded?",
+     "answer": "to make it smooth and stretchy",
+     "shows": "knead"
+    },
+    {
+     "question": "Why sift flour for a batter?",
+     "answer": "to remove lumps and add air",
+     "shows": "sift"
+    }
+   ]
+  },
+  {
+   "skill": "AGRI.G9.FOOD_P.COOKING_USING_FLOUR_MIXT.FLOUR_PRODUCTS",
+   "key_step": "The child says how products are made: pancakes (thin into a hot greased pan, turn when bubbles burst), chapati (roll, oil, fold, roll thin, cook both sides), mandazi (roll, cut, deep fry by an adult until golden), and tells when each is cooked.",
+   "floor": {
+    "prerequisite": "Knows how batters and doughs are prepared.",
+    "question": "How is liquid added to dough?",
+    "answer": "a little at a time"
+   },
+   "representations": [
+    "a pan and a rolling pin",
+    "step cards",
+    "pictures of cooked products"
+   ],
+   "steps": [
+    "Heat the pan or oil first.",
+    "Pancakes: pour thin, turn once.",
+    "Chapati: roll thin, cook both sides.",
+    "Mandazi: fry golden (adult)."
+   ],
+   "contexts": [
+    "pancakes at home",
+    "chapati for a celebration",
+    "mandazi for sale"
+   ],
+   "board": [
+    {
+     "beat": "draw",
+     "do": "Draw a pancake with bubbles on top."
+    },
+    {
+     "beat": "predict",
+     "do": "Ask when to turn it."
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for \"when the bubbles burst\"."
+    },
+    {
+     "beat": "reveal",
+     "do": "Write \"turn now\"."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "AGRI.G9.FOOD_P.COOKING_USING_FLOUR_MIXT.FLOUR_PRODUCTS.M_AG9_FP_COLDPAN",
+     "listen_for": [
+      "Into a cold pan"
+     ],
+     "ask": "When is pancake batter poured into the pan?",
+     "repair": "Pour batter into a cold pan: it sticks and stays pale."
+    },
+    {
+     "code": "AGRI.G9.FOOD_P.COOKING_USING_FLOUR_MIXT.FLOUR_PRODUCTS.M_AG9_FP_TURN",
+     "listen_for": [
+      "At once"
+     ],
+     "ask": "When is a pancake turned?",
+     "repair": "Watch the bubbles in the demonstration."
+    },
+    {
+     "code": "AGRI.G9.FOOD_P.COOKING_USING_FLOUR_MIXT.FLOUR_PRODUCTS.M_AG9_FP_THICK",
+     "listen_for": [
+      "Thick is better"
+     ],
+     "ask": "Why is chapati rolled thin?",
+     "repair": "Cook a thick and a thin chapati."
+    },
+    {
+     "code": "AGRI.G9.FOOD_P.COOKING_USING_FLOUR_MIXT.FLOUR_PRODUCTS.M_AG9_FP_OILTEMP",
+     "listen_for": [
+      "It does not matter"
+     ],
+     "ask": "Why must oil be hot before frying mandazi?",
+     "repair": "Recall Grade 5: food in cold oil is soggy."
+    }
+   ],
+   "checks": [
+    {
+     "question": "When is a pancake turned?",
+     "answer": "when bubbles burst and edges set",
+     "shows": "turn"
+    },
+    {
+     "question": "Why roll chapati thin?",
+     "answer": "it cooks through and stays soft",
+     "shows": "roll"
+    }
+   ]
+  }
+ ]
+}

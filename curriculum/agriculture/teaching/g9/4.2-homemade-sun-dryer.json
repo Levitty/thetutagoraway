@@ -1,0 +1,187 @@
+{
+ "sub_strand": "AGRI.G9.PRODUC.HOMEMADE_SUN_DRYER",
+ "title": "Homemade Sun Dryer",
+ "status": "draft: written 18 Nov 2026 offline for Grade 9 Agriculture; not yet checked by a CBC Agriculture teacher; not loaded by the live tutor",
+ "sources": [],
+ "notes": "Sketch and build a box sun dryer from timber or cardboard, a clear polythene or glass cover, a black inside or black tray, a mesh drying tray and air holes at the bottom and top. Dry sukuma wiki or tomatoes in it and compare with open drying.",
+ "skills": [
+  {
+   "skill": "AGRI.G9.PRODUC.HOMEMADE_SUN_DRYER.SUN_DRYER_DESIGN",
+   "key_step": "The child describes a homemade sun dryer: a box with a clear cover (lets sunlight in, traps heat), a black inside (absorbs heat), mesh trays, air holes low and high (moist air out), raised, from local materials, and why it beats open drying.",
+   "floor": {
+    "prerequisite": "Knows sun-drying steps.",
+    "question": "Why are slices cut thin for drying?",
+    "answer": "they dry faster"
+   },
+   "representations": [
+    "a model dryer",
+    "black and white tins in the sun",
+    "a labelled diagram"
+   ],
+   "steps": [
+    "Clear cover: sun in, heat trapped.",
+    "Black inside: absorbs heat.",
+    "Air holes: damp air out.",
+    "Mesh trays; raised."
+   ],
+   "contexts": [
+    "a school dryer",
+    "a women's group dryer in Makueni",
+    "a home dryer"
+   ],
+   "board": [
+    {
+     "beat": "draw",
+     "do": "Draw a box with a clear lid and holes at the bottom and top."
+    },
+    {
+     "beat": "predict",
+     "do": "Ask which way the warm damp air moves."
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for \"up and out at the top\"."
+    },
+    {
+     "beat": "reveal",
+     "do": "Draw arrows: in at the bottom, out at the top."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "AGRI.G9.PRODUC.HOMEMADE_SUN_DRYER.SUN_DRYER_DESIGN.M_AG9_SD_BLACK",
+     "listen_for": [
+      "It makes no difference"
+     ],
+     "ask": "Why is the inside of a sun dryer black?",
+     "repair": "Leave a black and a white tin in the sun and feel them."
+    },
+    {
+     "code": "AGRI.G9.PRODUC.HOMEMADE_SUN_DRYER.SUN_DRYER_DESIGN.M_AG9_SD_HOLES",
+     "listen_for": [
+      "It should be sealed to keep heat in"
+     ],
+     "ask": "Why does a sun dryer need air holes at the bottom and top?",
+     "repair": "Show water drops forming inside a sealed box with wet leaves."
+    },
+    {
+     "code": "AGRI.G9.PRODUC.HOMEMADE_SUN_DRYER.SUN_DRYER_DESIGN.M_AG9_SD_COVER",
+     "listen_for": [
+      "A dark sheet that blocks the sun"
+     ],
+     "ask": "What kind of cover does a sun dryer need?",
+     "repair": "Compare inside temperatures under clear and dark covers."
+    },
+    {
+     "code": "AGRI.G9.PRODUC.HOMEMADE_SUN_DRYER.SUN_DRYER_DESIGN.M_AG9_SD_WHY",
+     "listen_for": [
+      "There is no difference"
+     ],
+     "ask": "Why use a sun dryer instead of a mat on the ground?",
+     "repair": "Dry two lots of sukuma: dryer and mat; compare colour, dirt and time."
+    }
+   ],
+   "checks": [
+    {
+     "question": "Why is the inside of a sun dryer painted black?",
+     "answer": "black absorbs heat",
+     "shows": "black"
+    },
+    {
+     "question": "Why does a sun dryer have air holes?",
+     "answer": "to let moist air out and dry air in",
+     "shows": "air"
+    }
+   ]
+  },
+  {
+   "skill": "AGRI.G9.PRODUC.HOMEMADE_SUN_DRYER.SUN_DRYER_USE",
+   "key_step": "The child says how a sun dryer is built and used: sketch and measure, build box and trays, fit cover and air holes, place in full sun, raised and tilted, load thin washed slices in one layer, turn, take out when crisp, seal, clean the trays.",
+   "floor": {
+    "prerequisite": "Knows how a sun dryer works.",
+    "question": "Why is the cover clear?",
+    "answer": "to let sunlight in"
+   },
+   "representations": [
+    "a sketch and materials",
+    "step cards",
+    "vegetables to dry"
+   ],
+   "steps": [
+    "Sketch, measure, build.",
+    "Place in full sun, raised and tilted.",
+    "Load one thin layer; turn.",
+    "Take out when crisp; seal; clean."
+   ],
+   "contexts": [
+    "sukuma wiki for the dry season",
+    "tomatoes at school",
+    "mango slices"
+   ],
+   "board": [
+    {
+     "beat": "draw",
+     "do": "Draw a tray with vegetables piled thick."
+    },
+    {
+     "beat": "predict",
+     "do": "Ask what happens to the middle of the pile."
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for \"it stays wet and rots\"."
+    },
+    {
+     "beat": "reveal",
+     "do": "Redraw one thin layer."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "AGRI.G9.PRODUC.HOMEMADE_SUN_DRYER.SUN_DRYER_USE.M_AG9_SU_PILE",
+     "listen_for": [
+      "In a thick pile"
+     ],
+     "ask": "How are vegetables loaded in a sun dryer?",
+     "repair": "Load one tray thick and one thin; compare after a day."
+    },
+    {
+     "code": "AGRI.G9.PRODUC.HOMEMADE_SUN_DRYER.SUN_DRYER_USE.M_AG9_SU_SHADE",
+     "listen_for": [
+      "In the shade"
+     ],
+     "ask": "Where is a sun dryer placed?",
+     "repair": "Measure how long drying takes in shade and in sun."
+    },
+    {
+     "code": "AGRI.G9.PRODUC.HOMEMADE_SUN_DRYER.SUN_DRYER_USE.M_AG9_SU_CLEAN",
+     "listen_for": [
+      "There is no need"
+     ],
+     "ask": "Why clean the dryer trays after each batch?",
+     "repair": "Show mould on a tray left with old bits."
+    },
+    {
+     "code": "AGRI.G9.PRODUC.HOMEMADE_SUN_DRYER.SUN_DRYER_USE.M_AG9_SU_STORE",
+     "listen_for": [
+      "Leave them in the dryer"
+     ],
+     "ask": "What is done once the vegetables are crisp?",
+     "repair": "Show crisp vegetables gone limp after a night in the dryer."
+    }
+   ],
+   "checks": [
+    {
+     "question": "How are vegetables loaded in a sun dryer?",
+     "answer": "one thin layer",
+     "shows": "loading"
+    },
+    {
+     "question": "Where should a sun dryer stand?",
+     "answer": "in full sun, raised and facing the sun",
+     "shows": "place"
+    }
+   ]
+  }
+ ]
+}

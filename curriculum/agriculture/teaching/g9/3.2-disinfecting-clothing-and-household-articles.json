@@ -1,0 +1,186 @@
+{
+ "sub_strand": "AGRI.G9.HYGIEN.DISINFECTING_CLOTHING_AN",
+ "title": "Disinfecting Clothing and Household Articles",
+ "status": "draft: written 18 Nov 2026 offline for Grade 9 Agriculture; not yet checked by a CBC Agriculture teacher; not loaded by the live tutor",
+ "sources": [],
+ "notes": "Disinfect aprons, towels, handkerchiefs and socks by sunlight, salt water, boiling (by the teacher) and ironing. Chemical disinfectants are used diluted by an adult only, following the label.",
+ "skills": [
+  {
+   "skill": "AGRI.G9.HYGIEN.DISINFECTING_CLOTHING_AN.DISINFECT_METHODS",
+   "key_step": "The child describes methods of disinfecting (sunlight, salt solution, boiling, diluted disinfectants, ironing) and matches them to articles: boiling for white cotton, sun for most, ironing for cottons, disinfectant by an adult.",
+   "floor": {
+    "prerequisite": "Knows fabric care in laundry.",
+    "question": "Which water suits loose colours?",
+    "answer": "cool water"
+   },
+   "representations": [
+    "a methods chart",
+    "sample articles",
+    "a disinfectant label"
+   ],
+   "steps": [
+    "Name the article and fabric.",
+    "Choose a method that suits it.",
+    "Say why it kills germs."
+   ],
+   "contexts": [
+    "kitchen aprons",
+    "a sick person's towels",
+    "socks and handkerchiefs"
+   ],
+   "board": [
+    {
+     "beat": "write",
+     "do": "Write \"white cotton handkerchief\"."
+    },
+    {
+     "beat": "predict",
+     "do": "Ask for a method."
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for \"boiling\"."
+    },
+    {
+     "beat": "reveal",
+     "do": "Write \"boil 10 to 15 minutes\"."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "AGRI.G9.HYGIEN.DISINFECTING_CLOTHING_AN.DISINFECT_METHODS.M_AG9_DM_CLEAN",
+     "listen_for": [
+      "Yes, it looks clean"
+     ],
+     "ask": "A towel looks clean. Is it free of germs?",
+     "repair": "Recall hand washing: germs cannot be seen."
+    },
+    {
+     "code": "AGRI.G9.HYGIEN.DISINFECTING_CLOTHING_AN.DISINFECT_METHODS.M_AG9_DM_BOILALL",
+     "listen_for": [
+      "Yes, boil everything"
+     ],
+     "ask": "Can a coloured nylon item be boiled to disinfect it?",
+     "repair": "Show a coloured item faded and shrunk by boiling."
+    },
+    {
+     "code": "AGRI.G9.HYGIEN.DISINFECTING_CLOTHING_AN.DISINFECT_METHODS.M_AG9_DM_SUN",
+     "listen_for": [
+      "It only dries"
+     ],
+     "ask": "How does drying in strong sun help hygiene?",
+     "repair": "Explain the sun's ultraviolet rays kill many germs."
+    },
+    {
+     "code": "AGRI.G9.HYGIEN.DISINFECTING_CLOTHING_AN.DISINFECT_METHODS.M_AG9_DM_IRON",
+     "listen_for": [
+      "It only removes creases"
+     ],
+     "ask": "How does ironing help hygiene?",
+     "repair": "Talk about ironing school uniforms against lice and germs."
+    }
+   ],
+   "checks": [
+    {
+     "question": "Name two methods of disinfecting clothes.",
+     "answer": "any two of sunlight, salt, boiling, disinfectant, ironing",
+     "shows": "methods"
+    },
+    {
+     "question": "Why is a coloured nylon article not boiled?",
+     "answer": "it fades and shrinks",
+     "shows": "fabric"
+    }
+   ]
+  },
+  {
+   "skill": "AGRI.G9.HYGIEN.DISINFECTING_CLOTHING_AN.DISINFECT_PRACTICE",
+   "key_step": "The child says how to disinfect: wash first, choose the method for the fabric, boil white cottons 10 to 15 minutes or soak in salt water, dry in full sun, iron hot, disinfectant only diluted by an adult and rinsed, store dry.",
+   "floor": {
+    "prerequisite": "Knows the methods of disinfecting.",
+    "question": "Which method suits white cotton?",
+    "answer": "boiling"
+   },
+   "representations": [
+    "step cards",
+    "a basin, salt, an iron (teacher)",
+    "a drying line"
+   ],
+   "steps": [
+    "Wash clean.",
+    "Disinfect by the right method.",
+    "Dry in full sun.",
+    "Iron; store dry."
+   ],
+   "contexts": [
+    "school aprons",
+    "home towels",
+    "a boarding school's linen"
+   ],
+   "board": [
+    {
+     "beat": "write",
+     "do": "Write the cards: dry in sun, wash, boil."
+    },
+    {
+     "beat": "predict",
+     "do": "Ask for the order."
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for \"wash, boil, dry\"."
+    },
+    {
+     "beat": "reveal",
+     "do": "Order them."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "AGRI.G9.HYGIEN.DISINFECTING_CLOTHING_AN.DISINFECT_PRACTICE.M_AG9_DP_DIRTY",
+     "listen_for": [
+      "Nothing, disinfect it as it is"
+     ],
+     "ask": "What is done before disinfecting a towel?",
+     "repair": "Recall Grade 7: disinfectant works only on a clean surface."
+    },
+    {
+     "code": "AGRI.G9.HYGIEN.DISINFECTING_CLOTHING_AN.DISINFECT_PRACTICE.M_AG9_DP_STRONG",
+     "listen_for": [
+      "Undiluted, as strong as possible"
+     ],
+     "ask": "How is a chemical disinfectant used on clothes?",
+     "repair": "Read a disinfectant label's dilution and warnings."
+    },
+    {
+     "code": "AGRI.G9.HYGIEN.DISINFECTING_CLOTHING_AN.DISINFECT_PRACTICE.M_AG9_DP_SHORT",
+     "listen_for": [
+      "A minute"
+     ],
+     "ask": "How long are white cotton handkerchiefs boiled to disinfect them?",
+     "repair": "Explain heat needs time to kill germs."
+    },
+    {
+     "code": "AGRI.G9.HYGIEN.DISINFECTING_CLOTHING_AN.DISINFECT_PRACTICE.M_AG9_DP_SHADE",
+     "listen_for": [
+      "In a damp shaded corner"
+     ],
+     "ask": "Where are disinfected towels dried?",
+     "repair": "Smell a towel dried in a damp corner."
+    }
+   ],
+   "checks": [
+    {
+     "question": "What is done first before disinfecting?",
+     "answer": "wash the article clean",
+     "shows": "order"
+    },
+    {
+     "question": "Who dilutes chemical disinfectants?",
+     "answer": "an adult, following the label",
+     "shows": "safety"
+    }
+   ]
+  }
+ ]
+}

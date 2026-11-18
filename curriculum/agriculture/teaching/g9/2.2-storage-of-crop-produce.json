@@ -1,0 +1,187 @@
+{
+ "sub_strand": "AGRI.G9.FOOD_P.STORAGE_OF_CROP_PRODUCE",
+ "title": "Storage of Crop Produce",
+ "status": "draft: written 18 Nov 2026 offline for Grade 9 Agriculture; not yet checked by a CBC Agriculture teacher; not loaded by the live tutor",
+ "sources": [],
+ "notes": "Prepare the school store or a granary before harvest: empty, sweep, dust, seal cracks, repair leaks, set rat guards. After storing, check moisture (salt test), air, turn and remove spoilt produce.",
+ "skills": [
+  {
+   "skill": "AGRI.G9.FOOD_P.STORAGE_OF_CROP_PRODUCE.STORE_PREP",
+   "key_step": "The child says how a store is prepared: empty old produce, clean and dust, seal cracks, repair leaks, fit pallets and rat guards, air and dry, then store.",
+   "floor": {
+    "prerequisite": "Knows how grain is stored at home.",
+    "question": "Why are sacks put on pallets?",
+    "answer": "to keep off damp"
+   },
+   "representations": [
+    "step cards",
+    "pictures of a granary and a store",
+    "a checklist"
+   ],
+   "steps": [
+    "Empty and clean.",
+    "Seal cracks; repair leaks.",
+    "Fit pallets and rat guards.",
+    "Air and dry; then store."
+   ],
+   "contexts": [
+    "the school store",
+    "a granary in Kitui",
+    "storage bags at home"
+   ],
+   "board": [
+    {
+     "beat": "write",
+     "do": "Write the cards: store new grain, seal cracks, empty old grain."
+    },
+    {
+     "beat": "predict",
+     "do": "Ask for the order."
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for \"empty, seal, store\"."
+    },
+    {
+     "beat": "reveal",
+     "do": "Order them."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "AGRI.G9.FOOD_P.STORAGE_OF_CROP_PRODUCE.STORE_PREP.M_AG9_SP_CRACKS",
+     "listen_for": [
+      "Small cracks do not matter"
+     ],
+     "ask": "Why are cracks in a store sealed before storing?",
+     "repair": "Scrape out an old crack and find weevils."
+    },
+    {
+     "code": "AGRI.G9.FOOD_P.STORAGE_OF_CROP_PRODUCE.STORE_PREP.M_AG9_SP_ROOF",
+     "listen_for": [
+      "Store first and fix later"
+     ],
+     "ask": "What is done about a leaking store roof?",
+     "repair": "Show mouldy grain under a roof leak."
+    },
+    {
+     "code": "AGRI.G9.FOOD_P.STORAGE_OF_CROP_PRODUCE.STORE_PREP.M_AG9_SP_RAT",
+     "listen_for": [
+      "A cat is enough"
+     ],
+     "ask": "Why fit rat guards on granary legs?",
+     "repair": "Show a granary leg with and without a metal guard."
+    },
+    {
+     "code": "AGRI.G9.FOOD_P.STORAGE_OF_CROP_PRODUCE.STORE_PREP.M_AG9_SP_BAGS",
+     "listen_for": [
+      "Use them as they are"
+     ],
+     "ask": "What is done with old storage bags before reuse?",
+     "repair": "Turn an old sack inside out to find weevils in the seams."
+    }
+   ],
+   "checks": [
+    {
+     "question": "Why is old produce removed before new is stored?",
+     "answer": "it carries pests into the new",
+     "shows": "empty"
+    },
+    {
+     "question": "Why seal cracks?",
+     "answer": "pests hide and breed in them",
+     "shows": "cracks"
+    }
+   ]
+  },
+  {
+   "skill": "AGRI.G9.FOOD_P.STORAGE_OF_CROP_PRODUCE.STORE_MANAGE",
+   "key_step": "The child says how stored produce is managed: check moisture (bite or salt test), ventilate, control rodents, turn the produce, watch for pests, mould and heating, remove spoilt produce at once.",
+   "floor": {
+    "prerequisite": "Knows how a store is prepared.",
+    "question": "What is fitted on granary legs?",
+    "answer": "rat guards"
+   },
+   "representations": [
+    "a salt test bottle",
+    "a check sheet",
+    "pictures of mouldy maize"
+   ],
+   "steps": [
+    "Check moisture and heat.",
+    "Ventilate; control rats.",
+    "Turn the produce.",
+    "Remove spoilt produce."
+   ],
+   "contexts": [
+    "the school maize store",
+    "beans at home",
+    "a cereal bank"
+   ],
+   "board": [
+    {
+     "beat": "write",
+     "do": "Write \"a warm patch in the middle of a sack\"."
+    },
+    {
+     "beat": "predict",
+     "do": "Ask what it means."
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for \"damp or pests\"."
+    },
+    {
+     "beat": "reveal",
+     "do": "Write \"take out, dry, check\"."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "AGRI.G9.FOOD_P.STORAGE_OF_CROP_PRODUCE.STORE_MANAGE.M_AG9_SM_FORGET",
+     "listen_for": [
+      "Never, once it is stored"
+     ],
+     "ask": "How often should stored grain be checked?",
+     "repair": "Show grain that spoiled unseen in a month."
+    },
+    {
+     "code": "AGRI.G9.FOOD_P.STORAGE_OF_CROP_PRODUCE.STORE_MANAGE.M_AG9_SM_HEAT",
+     "listen_for": [
+      "It is normal"
+     ],
+     "ask": "A farmer finds warm grain in the middle of a sack. What does it mean?",
+     "repair": "Push a hand into damp grain left for a week (teacher's demonstration)."
+    },
+    {
+     "code": "AGRI.G9.FOOD_P.STORAGE_OF_CROP_PRODUCE.STORE_MANAGE.M_AG9_SM_SPOILT",
+     "listen_for": [
+      "Leave it with the rest"
+     ],
+     "ask": "What is done with mouldy maize found in the store?",
+     "repair": "Explain mould spreads, and mouldy maize can be poisonous (aflatoxin)."
+    },
+    {
+     "code": "AGRI.G9.FOOD_P.STORAGE_OF_CROP_PRODUCE.STORE_MANAGE.M_AG9_SM_AIR",
+     "listen_for": [
+      "Closed is better"
+     ],
+     "ask": "Why must a store with sacks be ventilated?",
+     "repair": "Compare damp in a closed and an airy room."
+    }
+   ],
+   "checks": [
+    {
+     "question": "What is done with mouldy maize?",
+     "answer": "remove it and dispose of it away from the store",
+     "shows": "spoilt"
+    },
+    {
+     "question": "How can moisture in stored beans be checked?",
+     "answer": "the bite or salt test",
+     "shows": "moisture"
+    }
+   ]
+  }
+ ]
+}

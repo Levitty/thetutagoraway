@@ -1,0 +1,187 @@
+{
+ "sub_strand": "AGRI.G9.FOOD_P.ORGANIC_GARDENING",
+ "title": "Organic Gardening",
+ "status": "draft: written 18 Nov 2026 offline for Grade 9 Agriculture; not yet checked by a CBC Agriculture teacher; not loaded by the live tutor",
+ "sources": [],
+ "notes": "Grow a short-season crop (kale, beans or dhania) with only organic inputs: compost, a Tithonia (Mexican sunflower) foliar feed, an ash or chilli spray, and hand weeding. Keep a record of each input.",
+ "skills": [
+  {
+   "skill": "AGRI.G9.FOOD_P.ORGANIC_GARDENING.ORGANIC_PRACTICES",
+   "key_step": "The child explains organic practices: compost and manure, organic pesticides, mechanical weeding, foliar feeds from animal waste and plants like Mexican sunflower, crop rotation, mulching, and why they give healthy food and soil.",
+   "floor": {
+    "prerequisite": "Knows how pests are controlled without chemicals.",
+    "question": "Name a control without chemicals.",
+    "answer": "handpicking"
+   },
+   "representations": [
+    "a practices chart",
+    "Mexican sunflower leaves",
+    "compost"
+   ],
+   "steps": [
+    "Feed the soil: compost and manure.",
+    "Control pests: organic sprays, rotation.",
+    "Weed by hand or jembe.",
+    "No synthetic chemicals."
+   ],
+   "contexts": [
+    "the school organic bed",
+    "a farm in Kiambu",
+    "a home garden"
+   ],
+   "board": [
+    {
+     "beat": "write",
+     "do": "Write \"organic gardening = no inputs at all?\"."
+    },
+    {
+     "beat": "predict",
+     "do": "Ask the class."
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for \"no, natural inputs\"."
+    },
+    {
+     "beat": "reveal",
+     "do": "List compost, foliar feed, organic spray."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "AGRI.G9.FOOD_P.ORGANIC_GARDENING.ORGANIC_PRACTICES.M_AG9_OP_NOTHING",
+     "listen_for": [
+      "Growing with no inputs or care at all"
+     ],
+     "ask": "What does organic gardening mean?",
+     "repair": "Compare an organic bed (compost, care) with an untended one."
+    },
+    {
+     "code": "AGRI.G9.FOOD_P.ORGANIC_GARDENING.ORGANIC_PRACTICES.M_AG9_OP_YIELD",
+     "listen_for": [
+      "No, never"
+     ],
+     "ask": "Can an organic garden give a good harvest?",
+     "repair": "Show the class organic bed at harvest."
+    },
+    {
+     "code": "AGRI.G9.FOOD_P.ORGANIC_GARDENING.ORGANIC_PRACTICES.M_AG9_OP_HEALTH",
+     "listen_for": [
+      "There is no difference"
+     ],
+     "ask": "Why do people choose organic food?",
+     "repair": "Read a pesticide label's waiting period before harvest."
+    },
+    {
+     "code": "AGRI.G9.FOOD_P.ORGANIC_GARDENING.ORGANIC_PRACTICES.M_AG9_OP_ROTATE",
+     "listen_for": [
+      "It is not used"
+     ],
+     "ask": "Why is crop rotation used in organic gardening?",
+     "repair": "Recall Grade 8: rotation stops soil pests building up."
+    }
+   ],
+   "checks": [
+    {
+     "question": "Name two organic gardening practices.",
+     "answer": "any two of compost, organic sprays, hand weeding, foliar feed, rotation",
+     "shows": "practices"
+    },
+    {
+     "question": "Why is organic food chosen?",
+     "answer": "no harmful chemical residues",
+     "shows": "why"
+    }
+   ]
+  },
+  {
+   "skill": "AGRI.G9.FOOD_P.ORGANIC_GARDENING.ORGANIC_INPUTS",
+   "key_step": "The child says how organic inputs are prepared and used: compost dug in; a foliar feed of Mexican sunflower or manure soaked two weeks, then diluted; an organic spray of chilli, garlic, ash or neem; sprayed when cool; hand weeding.",
+   "floor": {
+    "prerequisite": "Knows organic practices.",
+    "question": "What is a foliar feed?",
+    "answer": "a liquid feed sprayed on leaves"
+   },
+   "representations": [
+    "a bucket, Tithonia leaves, water",
+    "step cards",
+    "a sprayer"
+   ],
+   "steps": [
+    "Chop and soak leaves or manure for two weeks.",
+    "Strain and dilute.",
+    "Spray or water in the cool of the day.",
+    "Weed by hand."
+   ],
+   "contexts": [
+    "kale at school",
+    "beans at home",
+    "dhania in a tin"
+   ],
+   "board": [
+    {
+     "beat": "write",
+     "do": "Write \"spray at noon?\"."
+    },
+    {
+     "beat": "predict",
+     "do": "Ask the class."
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for \"no, morning or evening\"."
+    },
+    {
+     "beat": "reveal",
+     "do": "Write \"sun breaks the spray and burns leaves\"."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "AGRI.G9.FOOD_P.ORGANIC_GARDENING.ORGANIC_INPUTS.M_AG9_OI_STRONG",
+     "listen_for": [
+      "Poured on undiluted"
+     ],
+     "ask": "How is Mexican sunflower liquid feed used?",
+     "repair": "Compare leaves sprayed with strong and diluted feed."
+    },
+    {
+     "code": "AGRI.G9.FOOD_P.ORGANIC_GARDENING.ORGANIC_INPUTS.M_AG9_OI_SOAK",
+     "listen_for": [
+      "One day"
+     ],
+     "ask": "How long is a plant or manure liquid feed left to soak?",
+     "repair": "Compare the colour of a one-day and a two-week soak."
+    },
+    {
+     "code": "AGRI.G9.FOOD_P.ORGANIC_GARDENING.ORGANIC_INPUTS.M_AG9_OI_NOON",
+     "listen_for": [
+      "At midday"
+     ],
+     "ask": "When is the best time to spray an organic pesticide?",
+     "repair": "Explain sun breaks down the spray and burns wet leaves."
+    },
+    {
+     "code": "AGRI.G9.FOOD_P.ORGANIC_GARDENING.ORGANIC_INPUTS.M_AG9_OI_FRESHMANURE",
+     "listen_for": [
+      "Fresh manure straight from the shed"
+     ],
+     "ask": "What kind of manure is used on an organic garden?",
+     "repair": "Show seedlings scorched by fresh manure."
+    }
+   ],
+   "checks": [
+    {
+     "question": "Why is a liquid feed diluted?",
+     "answer": "strong feed scorches leaves",
+     "shows": "dilute"
+    },
+    {
+     "question": "Name a plant used for an organic foliar feed.",
+     "answer": "Mexican sunflower (Tithonia)",
+     "shows": "input"
+    }
+   ]
+  }
+ ]
+}

@@ -3,15 +3,15 @@
  "subject_key": "agriculture",
  "grade": 9,
  "source": "KICD Agriculture, First published 2024 (text layer)",
- "status": "outcomes from KICD's text, word for word; skills, prerequisites and misconceptions not yet mapped",
+ "status": "outcomes from KICD's text, word for word; skills, prerequisites and misconceptions proposed (authored offline, 18 Nov 2026), awaiting an Agriculture teacher's review; depth pass 18 Nov 2026 (a skill for every testable outcome, two or more prerequisites and four misconceptions per skill, practical outcomes marked by the teacher with the KICD rubric, teaching pack in curriculum/agriculture/teaching/g9)",
  "totals": {
   "strands": 4,
   "sub_strands": 10,
   "outcomes": 33,
   "lessons": 120,
-  "skills": 0,
-  "prerequisites": 0,
-  "misconceptions": 0
+  "skills": 23,
+  "prerequisites": 46,
+  "misconceptions": 92
  },
  "sub_strands": [
   {
@@ -65,8 +65,211 @@
      "status": "kicd_verified"
     }
    ],
-   "skills": [],
-   "misconceptions": [],
+   "skills": [
+    {
+     "code": "AGRI.G9.CONSER.CONSERVING_ANIMAL_FEED_H.HAY_METHODS",
+     "name": "Describe the methods of conserving forage to cope with drought",
+     "outcomes": [
+      "AGRI.G9.CONSER.CONSERVING_ANIMAL_FEED_H.a"
+     ],
+     "mastery": "Describes the methods of conserving forage to cope with drought (haymaking by baling or stacking, standing forage left uncut, keeping crop residues such as maize stover) and says why conserved feed keeps animals alive in a drought, and gives the reason in a new situation; in the app the child picks the right answer in new situations. Evidence rule: at least four of the last five fresh questions right across at least two question forms, and no repeated pick of the same misconception.",
+     "question_forms": [
+      "choose the method",
+      "match method and picture",
+      "story with a reason"
+     ],
+     "thinking": [
+      "recall",
+      "reasoning"
+     ],
+     "horeb_skill_ids": [],
+     "prerequisites": [
+      {
+       "requires": "AGRI.G8.FOOD_P.POULTRY_REARING_IN_A_FOL.FOLD_REARING",
+       "kind": "skill",
+       "strength": "essential",
+       "reason": "Feeding animals every day (Grade 8) is why feed must be kept for dry months. Proposed, to confirm by a CBC Agriculture teacher.",
+       "status": "proposed"
+      },
+      {
+       "requires": "AGRI.G6.FOOD_P.PRESERVING_CROP_PRODUCTS.PRESERVE",
+       "kind": "skill",
+       "strength": "essential",
+       "reason": "Drying to preserve (Grade 6) is the idea behind hay. Proposed, to confirm by a CBC Agriculture teacher.",
+       "status": "proposed"
+      }
+     ],
+     "no_family": true,
+     "status": "proposed"
+    },
+    {
+     "code": "AGRI.G9.CONSER.CONSERVING_ANIMAL_FEED_H.HAYMAKING",
+     "name": "Say how hay is made, baled or stacked and stored",
+     "outcomes": [
+      "AGRI.G9.CONSER.CONSERVING_ANIMAL_FEED_H.b"
+     ],
+     "mastery": "Says how hay is made: cut grass at flowering, dry it in the sun and turn it until it is dry but still green, bale it in a box baler or stack it on a raised base with a sloping top, cover it from rain, store it dry and off the ground, and feed it in the dry season; in the app the child picks the right step, order, material, reason or method in new situations. The practical (conserving forage by stacking or box-baling) is marked by the teacher with the KICD rubric indicator; the app asks only the knowledge half. Evidence rule: at least four of the last five fresh questions right across at least two question forms, and no repeated pick of the same misconception.",
+     "question_forms": [
+      "order the steps",
+      "choose the reason",
+      "story"
+     ],
+     "thinking": [
+      "recall",
+      "reasoning"
+     ],
+     "horeb_skill_ids": [],
+     "prerequisites": [
+      {
+       "requires": "AGRI.G9.CONSER.CONSERVING_ANIMAL_FEED_H.HAY_METHODS",
+       "kind": "skill",
+       "strength": "essential",
+       "reason": "The child knows the methods before making hay. Proposed, to confirm by a CBC Agriculture teacher.",
+       "status": "proposed"
+      },
+      {
+       "requires": "AGRI.G6.FOOD_P.PRESERVING_CROP_PRODUCTS.DRYING_STEPS",
+       "kind": "skill",
+       "strength": "essential",
+       "reason": "Sun-drying steps (Grade 6) are used again for grass. Proposed, to confirm by a CBC Agriculture teacher.",
+       "status": "proposed"
+      }
+     ],
+     "no_family": true,
+     "status": "proposed",
+     "assessed_by": "teacher marks the practical with the KICD rubric"
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "AGRI.G9.CONSER.CONSERVING_ANIMAL_FEED_H.HAY_METHODS.M_AG9_HM_RAINY",
+     "skill": "AGRI.G9.CONSER.CONSERVING_ANIMAL_FEED_H.HAY_METHODS",
+     "error": "Thinks feed is conserved during the drought, when grass is short.",
+     "example": {
+      "question": "When should forage be conserved for a drought?",
+      "wrong_answer": "During the drought",
+      "correct_answer": "In the rainy season when there is plenty of grass"
+     },
+     "cause": "The child thinks of acting when the problem is seen.",
+     "reveals": "Offer \"During the drought\" next to the right answer and ask the question again in a new context.",
+     "help": "Show a calendar: grass is plenty in April and gone in September.",
+     "feedback": "Conserve forage when grass is plenty, in the rains, to feed animals in the drought.",
+     "source": "To confirm by a CBC Agriculture teacher: a common classroom error, not traced to a study by the author.",
+     "status": "draft"
+    },
+    {
+     "code": "AGRI.G9.CONSER.CONSERVING_ANIMAL_FEED_H.HAY_METHODS.M_AG9_HM_STANDING",
+     "skill": "AGRI.G9.CONSER.CONSERVING_ANIMAL_FEED_H.HAY_METHODS",
+     "error": "Thinks standing forage means grass cut and stood in heaps.",
+     "example": {
+      "question": "What is standing forage?",
+      "wrong_answer": "Grass cut and stood in heaps",
+      "correct_answer": "Grass left uncut in a fenced paddock to be grazed in the dry season"
+     },
+     "cause": "The child pictures \"standing\" as stacked.",
+     "reveals": "Offer \"Grass cut and stood in heaps\" next to the right answer and ask the question again in a new context.",
+     "help": "Show a fenced paddock left ungrazed in the rains.",
+     "feedback": "Standing forage is grass left growing in a closed paddock for the dry season.",
+     "source": "To confirm by a CBC Agriculture teacher: a common classroom error, not traced to a study by the author.",
+     "status": "draft"
+    },
+    {
+     "code": "AGRI.G9.CONSER.CONSERVING_ANIMAL_FEED_H.HAY_METHODS.M_AG9_HM_STOVER",
+     "skill": "AGRI.G9.CONSER.CONSERVING_ANIMAL_FEED_H.HAY_METHODS",
+     "error": "Burns maize stover after harvest instead of keeping it as feed.",
+     "example": {
+      "question": "What can be done with maize stover after harvest to help in a drought?",
+      "wrong_answer": "Burn it to clear the shamba",
+      "correct_answer": "Store it dry as animal feed"
+     },
+     "cause": "Burning is the usual way to clear fields.",
+     "reveals": "Offer \"Burn it to clear the shamba\" next to the right answer and ask the question again in a new context.",
+     "help": "Ask what cattle eat when the grass is gone.",
+     "feedback": "Keep maize stover dry as feed for the dry season.",
+     "source": "To confirm by a CBC Agriculture teacher: a common classroom error, not traced to a study by the author.",
+     "status": "draft"
+    },
+    {
+     "code": "AGRI.G9.CONSER.CONSERVING_ANIMAL_FEED_H.HAY_METHODS.M_AG9_HM_LOSS",
+     "skill": "AGRI.G9.CONSER.CONSERVING_ANIMAL_FEED_H.HAY_METHODS",
+     "error": "Thinks animals can always be moved to find grass, so there is no need to conserve feed.",
+     "example": {
+      "question": "Why is conserving feed better than moving animals in a drought?",
+      "wrong_answer": "Moving is always better",
+      "correct_answer": "Moving is far, costly and risky; stored feed keeps animals strong at home"
+     },
+     "cause": "The child has heard of herders moving with animals.",
+     "reveals": "Offer \"Moving is always better\" next to the right answer and ask the question again in a new context.",
+     "help": "Discuss the losses of animals in the last drought.",
+     "feedback": "Stored feed keeps animals alive and strong at home in a drought.",
+     "source": "To confirm by a CBC Agriculture teacher: a common classroom error, not traced to a study by the author.",
+     "status": "draft"
+    },
+    {
+     "code": "AGRI.G9.CONSER.CONSERVING_ANIMAL_FEED_H.HAYMAKING.M_AG9_HK_LATE",
+     "skill": "AGRI.G9.CONSER.CONSERVING_ANIMAL_FEED_H.HAYMAKING",
+     "error": "Cuts grass for hay when it is old, dry and brown.",
+     "example": {
+      "question": "When is grass best cut for hay?",
+      "wrong_answer": "When it is old, dry and brown",
+      "correct_answer": "At flowering, when it is still green and leafy"
+     },
+     "cause": "The child thinks dry grass is already hay.",
+     "reveals": "Offer \"When it is old, dry and brown\" next to the right answer and ask the question again in a new context.",
+     "help": "Compare green leafy grass and old brown stems: which would a cow choose?",
+     "feedback": "Cut grass at flowering. Old brown grass has little feed value.",
+     "source": "To confirm by a CBC Agriculture teacher: a common classroom error, not traced to a study by the author.",
+     "status": "draft"
+    },
+    {
+     "code": "AGRI.G9.CONSER.CONSERVING_ANIMAL_FEED_H.HAYMAKING.M_AG9_HK_OPEN",
+     "skill": "AGRI.G9.CONSER.CONSERVING_ANIMAL_FEED_H.HAYMAKING",
+     "error": "Leaves bales out in the open after making them.",
+     "example": {
+      "question": "Where are hay bales kept after baling?",
+      "wrong_answer": "Out in the field",
+      "correct_answer": "Under a roof or cover, off the ground"
+     },
+     "cause": "The child thinks dry hay stays dry.",
+     "reveals": "Offer \"Out in the field\" next to the right answer and ask the question again in a new context.",
+     "help": "Show a bale left out in rain: black and mouldy inside.",
+     "feedback": "Store bales under cover and off the ground so rain and damp do not spoil them.",
+     "source": "To confirm by a CBC Agriculture teacher: a common classroom error, not traced to a study by the author.",
+     "status": "draft"
+    },
+    {
+     "code": "AGRI.G9.CONSER.CONSERVING_ANIMAL_FEED_H.HAYMAKING.M_AG9_HK_WET",
+     "skill": "AGRI.G9.CONSER.CONSERVING_ANIMAL_FEED_H.HAYMAKING",
+     "error": "Bales or stacks the grass while it is still wet.",
+     "example": {
+      "question": "What happens if hay is baled while still damp?",
+      "wrong_answer": "It keeps better",
+      "correct_answer": "It goes mouldy and can heat up"
+     },
+     "cause": "The child wants to finish quickly.",
+     "reveals": "Offer \"It keeps better\" next to the right answer and ask the question again in a new context.",
+     "help": "Smell a damp bale left for a week.",
+     "feedback": "Dry hay well before baling. Damp hay goes mouldy.",
+     "source": "To confirm by a CBC Agriculture teacher: a common classroom error, not traced to a study by the author.",
+     "status": "draft"
+    },
+    {
+     "code": "AGRI.G9.CONSER.CONSERVING_ANIMAL_FEED_H.HAYMAKING.M_AG9_HK_GROUND",
+     "skill": "AGRI.G9.CONSER.CONSERVING_ANIMAL_FEED_H.HAYMAKING",
+     "error": "Stacks hay straight on the ground with a flat top.",
+     "example": {
+      "question": "How should a hay stack be built?",
+      "wrong_answer": "On the ground with a flat top",
+      "correct_answer": "On a raised base with a sloping, covered top"
+     },
+     "cause": "The child does not think about damp from below and rain from above.",
+     "reveals": "Offer \"On the ground with a flat top\" next to the right answer and ask the question again in a new context.",
+     "help": "Pour water on a flat-topped and a sloping model stack.",
+     "feedback": "Raise the stack and slope its top so rain runs off and the bottom stays dry.",
+     "source": "To confirm by a CBC Agriculture teacher: a common classroom error, not traced to a study by the author.",
+     "status": "draft"
+    }
+   ],
    "rubric_indicators": [
     "AGRI.G9.RUBRIC.1.1",
     "AGRI.G9.RUBRIC.1.2",
@@ -123,8 +326,211 @@
      "status": "kicd_verified"
     }
    ],
-   "skills": [],
-   "misconceptions": [],
+   "skills": [
+    {
+     "code": "AGRI.G9.CONSER.CONSERVING_LEFTOVER_FOOD.LEFTOVER_WHY",
+     "name": "Explain why leftover food should be conserved and kept safe",
+     "outcomes": [
+      "AGRI.G9.CONSER.CONSERVING_LEFTOVER_FOOD.a"
+     ],
+     "mastery": "Explains why leftover food is conserved at home (saves money and food, less waste) and how it is kept safe (cooled quickly, covered, kept cool and used within a day), and says unsafe leftovers cause food poisoning, and gives the reason in a new situation; in the app the child picks the right answer in new situations. Evidence rule: at least four of the last five fresh questions right across at least two question forms, and no repeated pick of the same misconception.",
+     "question_forms": [
+      "choose the reason",
+      "story",
+      "spot the error"
+     ],
+     "thinking": [
+      "recall",
+      "reasoning"
+     ],
+     "horeb_skill_ids": [],
+     "prerequisites": [
+      {
+       "requires": "AGRI.G8.FOOD_P.PRESERVING_ANIMAL_PRODUC.MILK_PRESERVE",
+       "kind": "skill",
+       "strength": "essential",
+       "reason": "Keeping food cool and covered so germs do not grow came in Grade 8. Proposed, to confirm by a CBC Agriculture teacher.",
+       "status": "proposed"
+      },
+      {
+       "requires": "SCIE.G6.LIVING.FUNGI.FUNGI_MOULD_GROWTH",
+       "kind": "skill",
+       "strength": "essential",
+       "reason": "What makes mould grow on food (Science Grade 6) is why leftovers spoil. Proposed, to confirm by a CBC Agriculture teacher.",
+       "status": "proposed"
+      }
+     ],
+     "no_family": true,
+     "status": "proposed"
+    },
+    {
+     "code": "AGRI.G9.CONSER.CONSERVING_LEFTOVER_FOOD.LEFTOVER_PREP",
+     "name": "Say how leftover food is reheated safely or made into a new dish",
+     "outcomes": [
+      "AGRI.G9.CONSER.CONSERVING_LEFTOVER_FOOD.b"
+     ],
+     "mastery": "Says how leftover food is prepared: check it smells and looks fine, reheat it once until steaming hot all through, or turn it into a new dish (fried rice, fried ugali, mukimo, soup), serve at once, and throw away food left out too long or reheated before; in the app the child picks the right step, order, material, reason or method in new situations. The practical (preparing leftover food to avoid wastage) is marked by the teacher with the KICD rubric indicator; the app asks only the knowledge half. Evidence rule: at least four of the last five fresh questions right across at least two question forms, and no repeated pick of the same misconception.",
+     "question_forms": [
+      "order the steps",
+      "choose the recipe",
+      "story"
+     ],
+     "thinking": [
+      "recall",
+      "reasoning"
+     ],
+     "horeb_skill_ids": [],
+     "prerequisites": [
+      {
+       "requires": "AGRI.G9.CONSER.CONSERVING_LEFTOVER_FOOD.LEFTOVER_WHY",
+       "kind": "skill",
+       "strength": "essential",
+       "reason": "The child knows how leftovers are kept safe before reheating them. Proposed, to confirm by a CBC Agriculture teacher.",
+       "status": "proposed"
+      },
+      {
+       "requires": "AGRI.G8.FOOD_P.COOKING_PREPARING_A_BALA.MEAL_PREP",
+       "kind": "skill",
+       "strength": "essential",
+       "reason": "Planning and cooking a meal (Grade 8) is used to make a new dish. Proposed, to confirm by a CBC Agriculture teacher.",
+       "status": "proposed"
+      }
+     ],
+     "no_family": true,
+     "status": "proposed",
+     "assessed_by": "teacher marks the practical with the KICD rubric"
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "AGRI.G9.CONSER.CONSERVING_LEFTOVER_FOOD.LEFTOVER_WHY.M_AG9_LW_OPEN",
+     "skill": "AGRI.G9.CONSER.CONSERVING_LEFTOVER_FOOD.LEFTOVER_WHY",
+     "error": "Leaves leftover food uncovered in the warm pot overnight.",
+     "example": {
+      "question": "How should leftover food be kept overnight?",
+      "wrong_answer": "In the warm pot, uncovered",
+      "correct_answer": "Cooled quickly, covered and kept in a cool place"
+     },
+     "cause": "The child thinks cooked food is safe whatever happens.",
+     "reveals": "Offer \"In the warm pot, uncovered\" next to the right answer and ask the question again in a new context.",
+     "help": "Ask what flies and warmth do to food overnight.",
+     "feedback": "Cool leftovers quickly, cover them and keep them cool.",
+     "source": "To confirm by a CBC Agriculture teacher: a common classroom error, not traced to a study by the author.",
+     "status": "draft"
+    },
+    {
+     "code": "AGRI.G9.CONSER.CONSERVING_LEFTOVER_FOOD.LEFTOVER_WHY.M_AG9_LW_SMELL",
+     "skill": "AGRI.G9.CONSER.CONSERVING_LEFTOVER_FOOD.LEFTOVER_WHY",
+     "error": "Thinks food that smells fine is always safe.",
+     "example": {
+      "question": "Leftover rice has been out all day in the heat but smells fine. Is it safe?",
+      "wrong_answer": "Yes, it smells fine",
+      "correct_answer": "No, germs may have grown without changing the smell"
+     },
+     "cause": "The child trusts the nose.",
+     "reveals": "Offer \"Yes, it smells fine\" next to the right answer and ask the question again in a new context.",
+     "help": "Explain some food-poisoning germs give no smell.",
+     "feedback": "Food left out in the heat can be unsafe even if it smells fine.",
+     "source": "To confirm by a CBC Agriculture teacher: a common classroom error, not traced to a study by the author.",
+     "status": "draft"
+    },
+    {
+     "code": "AGRI.G9.CONSER.CONSERVING_LEFTOVER_FOOD.LEFTOVER_WHY.M_AG9_LW_WASTE",
+     "skill": "AGRI.G9.CONSER.CONSERVING_LEFTOVER_FOOD.LEFTOVER_WHY",
+     "error": "Thinks leftovers are rubbish to be thrown away.",
+     "example": {
+      "question": "Why conserve leftover food?",
+      "wrong_answer": "There is no reason",
+      "correct_answer": "It saves food and money and cuts waste"
+     },
+     "cause": "The child sees leftovers as scraps.",
+     "reveals": "Offer \"There is no reason\" next to the right answer and ask the question again in a new context.",
+     "help": "Add up the cost of food thrown away in a week.",
+     "feedback": "Leftovers kept safely save food and money.",
+     "source": "To confirm by a CBC Agriculture teacher: a common classroom error, not traced to a study by the author.",
+     "status": "draft"
+    },
+    {
+     "code": "AGRI.G9.CONSER.CONSERVING_LEFTOVER_FOOD.LEFTOVER_WHY.M_AG9_LW_DAYS",
+     "skill": "AGRI.G9.CONSER.CONSERVING_LEFTOVER_FOOD.LEFTOVER_WHY",
+     "error": "Keeps leftovers for many days without a fridge.",
+     "example": {
+      "question": "How long can leftovers be kept without a fridge?",
+      "wrong_answer": "A week",
+      "correct_answer": "Until the next meal or next day only"
+     },
+     "cause": "The child thinks cooked food lasts like dry food.",
+     "reveals": "Offer \"A week\" next to the right answer and ask the question again in a new context.",
+     "help": "Show mould on githeri kept for three days.",
+     "feedback": "Without a fridge, use leftovers by the next meal or next day.",
+     "source": "To confirm by a CBC Agriculture teacher: a common classroom error, not traced to a study by the author.",
+     "status": "draft"
+    },
+    {
+     "code": "AGRI.G9.CONSER.CONSERVING_LEFTOVER_FOOD.LEFTOVER_PREP.M_AG9_LP_WARM",
+     "skill": "AGRI.G9.CONSER.CONSERVING_LEFTOVER_FOOD.LEFTOVER_PREP",
+     "error": "Warms leftovers only until lukewarm.",
+     "example": {
+      "question": "How hot should reheated leftovers be?",
+      "wrong_answer": "Just warm",
+      "correct_answer": "Steaming hot all the way through"
+     },
+     "cause": "The child heats until it is nice to eat.",
+     "reveals": "Offer \"Just warm\" next to the right answer and ask the question again in a new context.",
+     "help": "Explain heat must reach the middle to kill germs.",
+     "feedback": "Reheat leftovers until they are steaming hot all through.",
+     "source": "To confirm by a CBC Agriculture teacher: a common classroom error, not traced to a study by the author.",
+     "status": "draft"
+    },
+    {
+     "code": "AGRI.G9.CONSER.CONSERVING_LEFTOVER_FOOD.LEFTOVER_PREP.M_AG9_LP_MIXOLD",
+     "skill": "AGRI.G9.CONSER.CONSERVING_LEFTOVER_FOOD.LEFTOVER_PREP",
+     "error": "Mixes old leftovers with freshly cooked food to use them up.",
+     "example": {
+      "question": "Should yesterday's leftovers be stirred into today's fresh stew?",
+      "wrong_answer": "Yes, it saves food",
+      "correct_answer": "No, keep them apart and use the leftovers first, reheated once"
+     },
+     "cause": "The child thinks mixing hides the old food safely.",
+     "reveals": "Offer \"Yes, it saves food\" next to the right answer and ask the question again in a new context.",
+     "help": "Explain germs in the old food spread through the whole pot.",
+     "feedback": "Do not mix old leftovers into fresh food. Reheat and eat them on their own first.",
+     "source": "To confirm by a CBC Agriculture teacher: a common classroom error, not traced to a study by the author.",
+     "status": "draft"
+    },
+    {
+     "code": "AGRI.G9.CONSER.CONSERVING_LEFTOVER_FOOD.LEFTOVER_PREP.M_AG9_LP_TWICE",
+     "skill": "AGRI.G9.CONSER.CONSERVING_LEFTOVER_FOOD.LEFTOVER_PREP",
+     "error": "Reheats the same leftovers again and again.",
+     "example": {
+      "question": "How many times should leftovers be reheated?",
+      "wrong_answer": "As many times as needed",
+      "correct_answer": "Once only"
+     },
+     "cause": "The child thinks heating always makes food safe.",
+     "reveals": "Offer \"As many times as needed\" next to the right answer and ask the question again in a new context.",
+     "help": "Explain each cooling and warming lets germs grow again.",
+     "feedback": "Reheat leftovers once only. Throw away what is left after that.",
+     "source": "To confirm by a CBC Agriculture teacher: a common classroom error, not traced to a study by the author.",
+     "status": "draft"
+    },
+    {
+     "code": "AGRI.G9.CONSER.CONSERVING_LEFTOVER_FOOD.LEFTOVER_PREP.M_AG9_LP_RECIPE",
+     "skill": "AGRI.G9.CONSER.CONSERVING_LEFTOVER_FOOD.LEFTOVER_PREP",
+     "error": "Thinks leftovers can only be reheated, never made into something new.",
+     "example": {
+      "question": "What new dish can be made from leftover rice?",
+      "wrong_answer": "None, only reheating",
+      "correct_answer": "Fried rice or rice pudding"
+     },
+     "cause": "The child has seen leftovers only warmed up.",
+     "reveals": "Offer \"None, only reheating\" next to the right answer and ask the question again in a new context.",
+     "help": "Make fried rice with leftover rice and vegetables.",
+     "feedback": "Leftovers can become new dishes, like fried rice or mukimo.",
+     "source": "To confirm by a CBC Agriculture teacher: a common classroom error, not traced to a study by the author.",
+     "status": "draft"
+    }
+   ],
    "rubric_indicators": [
     "AGRI.G9.RUBRIC.1.1",
     "AGRI.G9.RUBRIC.1.2",
@@ -182,8 +588,211 @@
      "status": "kicd_verified"
     }
    ],
-   "skills": [],
-   "misconceptions": [],
+   "skills": [
+    {
+     "code": "AGRI.G9.CONSER.INTEGRATED_FARMING.INTEGRATED_PARTS",
+     "name": "Describe the components of integrated farming and how each conserves resources",
+     "outcomes": [
+      "AGRI.G9.CONSER.INTEGRATED_FARMING.a"
+     ],
+     "mastery": "Describes the components of integrated farming (fish rearing, rabbit keeping, poultry, vegetables, fruit trees, compost) on one plot and how each one's waste becomes another's input, conserving land, water, feed and money, and gives the reason in a new situation; in the app the child picks the right answer in new situations. Evidence rule: at least four of the last five fresh questions right across at least two question forms, and no repeated pick of the same misconception.",
+     "question_forms": [
+      "match the component",
+      "story",
+      "choose the reason"
+     ],
+     "thinking": [
+      "recall",
+      "reasoning"
+     ],
+     "horeb_skill_ids": [],
+     "prerequisites": [
+      {
+       "requires": "AGRI.G8.FOOD_P.KITCHEN_AND_BACKYARD_GAR.GARDEN_SETUP",
+       "kind": "skill",
+       "strength": "essential",
+       "reason": "The kitchen garden (Grade 8) is one component of integrated farming. Proposed, to confirm by a CBC Agriculture teacher.",
+       "status": "proposed"
+      },
+      {
+       "requires": "INTE.G9.LIVING.THE_INTERDEPENDENCE_OF_L.FOOD_CHAINS",
+       "kind": "skill",
+       "strength": "essential",
+       "reason": "Links between living things (Integrated Science Grade 9) are the idea behind integration. Proposed, to confirm by a CBC Agriculture teacher.",
+       "status": "proposed"
+      }
+     ],
+     "no_family": true,
+     "status": "proposed"
+    },
+    {
+     "code": "AGRI.G9.CONSER.INTEGRATED_FARMING.INTEGRATED_MODEL",
+     "name": "Say how an integrated farming model is designed to show the links between its parts",
+     "outcomes": [
+      "AGRI.G9.CONSER.INTEGRATED_FARMING.b"
+     ],
+     "mastery": "Says how an integrated farming model is designed: sketch the plot, place each component where it can feed the next (rabbit hutch over the fish pond, poultry near the vegetables, compost near the garden), show the links with arrows (droppings to pond and garden, pond water to crops, crop waste to animals), choose materials and build it; in the app the child picks the right step, order, material, reason or method in new situations. The practical (making a model of integrated farming) is marked by the teacher with the KICD rubric indicator; the app asks only the knowledge half. Evidence rule: at least four of the last five fresh questions right across at least two question forms, and no repeated pick of the same misconception.",
+     "question_forms": [
+      "order the steps",
+      "choose the link",
+      "spot the error"
+     ],
+     "thinking": [
+      "recall",
+      "reasoning"
+     ],
+     "horeb_skill_ids": [],
+     "prerequisites": [
+      {
+       "requires": "AGRI.G9.CONSER.INTEGRATED_FARMING.INTEGRATED_PARTS",
+       "kind": "skill",
+       "strength": "essential",
+       "reason": "The child knows the components before arranging them in a model. Proposed, to confirm by a CBC Agriculture teacher.",
+       "status": "proposed"
+      },
+      {
+       "requires": "PRET.G7.COMMUN.FREE_HAND_SKETCHING.SKETCH_PRINCIPLES",
+       "kind": "skill",
+       "strength": "essential",
+       "reason": "The model starts from a free-hand sketch (Pre-Technical Grade 7). Proposed, to confirm by a CBC Agriculture teacher.",
+       "status": "proposed"
+      }
+     ],
+     "no_family": true,
+     "status": "proposed",
+     "assessed_by": "teacher marks the practical with the KICD rubric"
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "AGRI.G9.CONSER.INTEGRATED_FARMING.INTEGRATED_PARTS.M_AG9_IP_MIXED",
+     "skill": "AGRI.G9.CONSER.INTEGRATED_FARMING.INTEGRATED_PARTS",
+     "error": "Thinks integrated farming is any farm that keeps several things with no links between them.",
+     "example": {
+      "question": "What makes a farm \"integrated\"?",
+      "wrong_answer": "Keeping many things, each on its own",
+      "correct_answer": "The parts feed each other: one part's waste is another's input"
+     },
+     "cause": "The child takes \"integrated\" to mean \"many\".",
+     "reveals": "Offer \"Keeping many things, each on its own\" next to the right answer and ask the question again in a new context.",
+     "help": "Draw arrows between the parts of a farm; a farm with no arrows is not integrated.",
+     "feedback": "Integrated farming links the parts so the waste of one feeds another.",
+     "source": "To confirm by a CBC Agriculture teacher: a common classroom error, not traced to a study by the author.",
+     "status": "draft"
+    },
+    {
+     "code": "AGRI.G9.CONSER.INTEGRATED_FARMING.INTEGRATED_PARTS.M_AG9_IP_DUNG",
+     "skill": "AGRI.G9.CONSER.INTEGRATED_FARMING.INTEGRATED_PARTS",
+     "error": "Thinks animal droppings are waste with no use on the farm.",
+     "example": {
+      "question": "How can rabbit droppings be used in integrated farming?",
+      "wrong_answer": "They are waste",
+      "correct_answer": "To feed fish in the pond or manure the vegetables"
+     },
+     "cause": "The child sees droppings as dirt.",
+     "reveals": "Offer \"They are waste\" next to the right answer and ask the question again in a new context.",
+     "help": "Show a hutch built over a fish pond.",
+     "feedback": "Rabbit and poultry droppings manure crops or feed the fish pond.",
+     "source": "To confirm by a CBC Agriculture teacher: a common classroom error, not traced to a study by the author.",
+     "status": "draft"
+    },
+    {
+     "code": "AGRI.G9.CONSER.INTEGRATED_FARMING.INTEGRATED_PARTS.M_AG9_IP_POND",
+     "skill": "AGRI.G9.CONSER.INTEGRATED_FARMING.INTEGRATED_PARTS",
+     "error": "Thinks fish pond water is useless for crops.",
+     "example": {
+      "question": "How can water from a fish pond help the garden?",
+      "wrong_answer": "It cannot",
+      "correct_answer": "It is rich in nutrients and waters the vegetables"
+     },
+     "cause": "The child thinks pond water is dirty.",
+     "reveals": "Offer \"It cannot\" next to the right answer and ask the question again in a new context.",
+     "help": "Water two beds, one with pond water, and compare.",
+     "feedback": "Fish pond water is full of nutrients. Use it to water crops.",
+     "source": "To confirm by a CBC Agriculture teacher: a common classroom error, not traced to a study by the author.",
+     "status": "draft"
+    },
+    {
+     "code": "AGRI.G9.CONSER.INTEGRATED_FARMING.INTEGRATED_PARTS.M_AG9_IP_LAND",
+     "skill": "AGRI.G9.CONSER.INTEGRATED_FARMING.INTEGRATED_PARTS",
+     "error": "Thinks integrated farming needs more land than one enterprise.",
+     "example": {
+      "question": "Why does integrated farming suit a small plot?",
+      "wrong_answer": "It does not; it needs more land",
+      "correct_answer": "The parts share space and inputs, so a small plot gives more"
+     },
+     "cause": "The child thinks more activities need more land.",
+     "reveals": "Offer \"It does not; it needs more land\" next to the right answer and ask the question again in a new context.",
+     "help": "Show a small plot plan with a pond, hutch, poultry and beds.",
+     "feedback": "Integrated farming uses a small plot well because the parts share space and inputs.",
+     "source": "To confirm by a CBC Agriculture teacher: a common classroom error, not traced to a study by the author.",
+     "status": "draft"
+    },
+    {
+     "code": "AGRI.G9.CONSER.INTEGRATED_FARMING.INTEGRATED_MODEL.M_AG9_IM_ARROW",
+     "skill": "AGRI.G9.CONSER.INTEGRATED_FARMING.INTEGRATED_MODEL",
+     "error": "Draws arrows the wrong way, such as from the fish pond to the rabbits.",
+     "example": {
+      "question": "In a model, which way does the arrow go between the rabbit hutch and the fish pond?",
+      "wrong_answer": "From the pond to the hutch",
+      "correct_answer": "From the hutch to the pond (droppings feed the fish)"
+     },
+     "cause": "The child draws arrows without asking what moves.",
+     "reveals": "Offer \"From the pond to the hutch\" next to the right answer and ask the question again in a new context.",
+     "help": "Ask what moves from one to the other.",
+     "feedback": "Arrows show what moves: rabbit droppings go from the hutch to the pond.",
+     "source": "To confirm by a CBC Agriculture teacher: a common classroom error, not traced to a study by the author.",
+     "status": "draft"
+    },
+    {
+     "code": "AGRI.G9.CONSER.INTEGRATED_FARMING.INTEGRATED_MODEL.M_AG9_IM_LABEL",
+     "skill": "AGRI.G9.CONSER.INTEGRATED_FARMING.INTEGRATED_MODEL",
+     "error": "Builds the model with no labels or key.",
+     "example": {
+      "question": "Why label the parts of an integrated farming model?",
+      "wrong_answer": "It is not needed",
+      "correct_answer": "So others can see each component and the links between them"
+     },
+     "cause": "The child thinks the model explains itself.",
+     "reveals": "Offer \"It is not needed\" next to the right answer and ask the question again in a new context.",
+     "help": "Ask a visitor to explain an unlabelled model.",
+     "feedback": "Label each part and the arrows so the model shows how the farm works.",
+     "source": "To confirm by a CBC Agriculture teacher: a common classroom error, not traced to a study by the author.",
+     "status": "draft"
+    },
+    {
+     "code": "AGRI.G9.CONSER.INTEGRATED_FARMING.INTEGRATED_MODEL.M_AG9_IM_PLACE",
+     "skill": "AGRI.G9.CONSER.INTEGRATED_FARMING.INTEGRATED_MODEL",
+     "error": "Places the compost pit far from the garden in the model.",
+     "example": {
+      "question": "Where is the compost pit best placed in an integrated plot?",
+      "wrong_answer": "Far from the garden",
+      "correct_answer": "Near the garden and the animal houses"
+     },
+     "cause": "The child does not think about carrying work.",
+     "reveals": "Offer \"Far from the garden\" next to the right answer and ask the question again in a new context.",
+     "help": "Count the steps to carry compost across the plot model.",
+     "feedback": "Place the compost pit near the animals and the garden to save work.",
+     "source": "To confirm by a CBC Agriculture teacher: a common classroom error, not traced to a study by the author.",
+     "status": "draft"
+    },
+    {
+     "code": "AGRI.G9.CONSER.INTEGRATED_FARMING.INTEGRATED_MODEL.M_AG9_IM_SKETCH",
+     "skill": "AGRI.G9.CONSER.INTEGRATED_FARMING.INTEGRATED_MODEL",
+     "error": "Builds the model without a sketch, so parts do not fit.",
+     "example": {
+      "question": "What is done before building the model?",
+      "wrong_answer": "Start building at once",
+      "correct_answer": "Sketch the plot and plan where each part goes"
+     },
+     "cause": "The child is keen to build.",
+     "reveals": "Offer \"Start building at once\" next to the right answer and ask the question again in a new context.",
+     "help": "Show a model where the pond covers the garden.",
+     "feedback": "Sketch and plan the plot before you build.",
+     "source": "To confirm by a CBC Agriculture teacher: a common classroom error, not traced to a study by the author.",
+     "status": "draft"
+    }
+   ],
    "rubric_indicators": [
     "AGRI.G9.RUBRIC.1.1",
     "AGRI.G9.RUBRIC.1.2",
@@ -242,8 +851,211 @@
      "status": "kicd_verified"
     }
    ],
-   "skills": [],
-   "misconceptions": [],
+   "skills": [
+    {
+     "code": "AGRI.G9.FOOD_P.ORGANIC_GARDENING.ORGANIC_PRACTICES",
+     "name": "Explain organic gardening practices in crop production",
+     "outcomes": [
+      "AGRI.G9.FOOD_P.ORGANIC_GARDENING.a"
+     ],
+     "mastery": "Explains organic gardening practices (organic manure and compost, organic pesticides, mechanical weed control, foliar feeds from animal waste and plants such as Mexican sunflower, crop rotation, mulching) and how they give healthy food without synthetic chemicals, and gives the reason in a new situation; in the app the child picks the right answer in new situations. Evidence rule: at least four of the last five fresh questions right across at least two question forms, and no repeated pick of the same misconception.",
+     "question_forms": [
+      "choose the practice",
+      "story",
+      "spot the error"
+     ],
+     "thinking": [
+      "recall",
+      "reasoning"
+     ],
+     "horeb_skill_ids": [],
+     "prerequisites": [
+      {
+       "requires": "AGRI.G8.FOOD_P.CROP_PEST_AND_DISEASE_CO.PEST_CONTROL_METHODS",
+       "kind": "skill",
+       "strength": "essential",
+       "reason": "Controlling pests without harmful chemicals (Grade 8) is an organic practice. Proposed, to confirm by a CBC Agriculture teacher.",
+       "status": "proposed"
+      },
+      {
+       "requires": "AGRI.G5.CONSER.SOIL_CONSERVATION.PLANT_REMAINS",
+       "kind": "skill",
+       "strength": "essential",
+       "reason": "Using plant remains to improve soil (Grade 5) is at the heart of organic gardening. Proposed, to confirm by a CBC Agriculture teacher.",
+       "status": "proposed"
+      }
+     ],
+     "no_family": true,
+     "status": "proposed"
+    },
+    {
+     "code": "AGRI.G9.FOOD_P.ORGANIC_GARDENING.ORGANIC_INPUTS",
+     "name": "Say how organic inputs are prepared and used on a crop",
+     "outcomes": [
+      "AGRI.G9.FOOD_P.ORGANIC_GARDENING.b"
+     ],
+     "mastery": "Says how organic inputs are prepared and used: compost made and dug in, a foliar feed made by soaking chopped Mexican sunflower or manure in water for two weeks and diluting it, an organic spray of chilli, garlic, ash or neem, applied early in the morning or evening, and weeds removed by hand or jembe; in the app the child picks the right step, order, material, reason or method in new situations. The practical (growing a crop using organic gardening practices) is marked by the teacher with the KICD rubric indicator; the app asks only the knowledge half. Evidence rule: at least four of the last five fresh questions right across at least two question forms, and no repeated pick of the same misconception.",
+     "question_forms": [
+      "order the steps",
+      "choose the input",
+      "story"
+     ],
+     "thinking": [
+      "recall",
+      "reasoning"
+     ],
+     "horeb_skill_ids": [],
+     "prerequisites": [
+      {
+       "requires": "AGRI.G9.FOOD_P.ORGANIC_GARDENING.ORGANIC_PRACTICES",
+       "kind": "skill",
+       "strength": "essential",
+       "reason": "The child knows the practices before preparing the inputs. Proposed, to confirm by a CBC Agriculture teacher.",
+       "status": "proposed"
+      },
+      {
+       "requires": "AGRI.G4.CONSER.SOIL_CONSERVATION.COMPOST_MAKING",
+       "kind": "skill",
+       "strength": "essential",
+       "reason": "Compost making (Grade 4) is the first organic input. Proposed, to confirm by a CBC Agriculture teacher.",
+       "status": "proposed"
+      }
+     ],
+     "no_family": true,
+     "status": "proposed",
+     "assessed_by": "teacher marks the practical with the KICD rubric"
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "AGRI.G9.FOOD_P.ORGANIC_GARDENING.ORGANIC_PRACTICES.M_AG9_OP_NOTHING",
+     "skill": "AGRI.G9.FOOD_P.ORGANIC_GARDENING.ORGANIC_PRACTICES",
+     "error": "Thinks organic gardening means doing nothing: no manure, no pest control.",
+     "example": {
+      "question": "What does organic gardening mean?",
+      "wrong_answer": "Growing with no inputs or care at all",
+      "correct_answer": "Growing with natural inputs such as compost and organic sprays, not synthetic chemicals"
+     },
+     "cause": "The child hears \"natural\" as \"left alone\".",
+     "reveals": "Offer \"Growing with no inputs or care at all\" next to the right answer and ask the question again in a new context.",
+     "help": "Compare an organic bed (compost, care) with an untended one.",
+     "feedback": "Organic gardening uses natural inputs and care, not synthetic chemicals.",
+     "source": "To confirm by a CBC Agriculture teacher: a common classroom error, not traced to a study by the author.",
+     "status": "draft"
+    },
+    {
+     "code": "AGRI.G9.FOOD_P.ORGANIC_GARDENING.ORGANIC_PRACTICES.M_AG9_OP_YIELD",
+     "skill": "AGRI.G9.FOOD_P.ORGANIC_GARDENING.ORGANIC_PRACTICES",
+     "error": "Thinks organic crops cannot grow well at all.",
+     "example": {
+      "question": "Can an organic garden give a good harvest?",
+      "wrong_answer": "No, never",
+      "correct_answer": "Yes, with good compost, foliar feeds and care"
+     },
+     "cause": "The child has heard that chemicals are needed for big harvests.",
+     "reveals": "Offer \"No, never\" next to the right answer and ask the question again in a new context.",
+     "help": "Show the class organic bed at harvest.",
+     "feedback": "Well-fed organic soil gives good harvests of healthy food.",
+     "source": "To confirm by a CBC Agriculture teacher: a common classroom error, not traced to a study by the author.",
+     "status": "draft"
+    },
+    {
+     "code": "AGRI.G9.FOOD_P.ORGANIC_GARDENING.ORGANIC_PRACTICES.M_AG9_OP_HEALTH",
+     "skill": "AGRI.G9.FOOD_P.ORGANIC_GARDENING.ORGANIC_PRACTICES",
+     "error": "Thinks food grown with chemicals and organic food are no different for health or soil.",
+     "example": {
+      "question": "Why do people choose organic food?",
+      "wrong_answer": "There is no difference",
+      "correct_answer": "No harmful chemical residues, and the soil and water stay healthy"
+     },
+     "cause": "The child cannot see residues and assumes none.",
+     "reveals": "Offer \"There is no difference\" next to the right answer and ask the question again in a new context.",
+     "help": "Read a pesticide label's waiting period before harvest.",
+     "feedback": "Organic food has no synthetic chemical residues and keeps soil and water healthy.",
+     "source": "To confirm by a CBC Agriculture teacher: a common classroom error, not traced to a study by the author.",
+     "status": "draft"
+    },
+    {
+     "code": "AGRI.G9.FOOD_P.ORGANIC_GARDENING.ORGANIC_PRACTICES.M_AG9_OP_ROTATE",
+     "skill": "AGRI.G9.FOOD_P.ORGANIC_GARDENING.ORGANIC_PRACTICES",
+     "error": "Thinks crop rotation is not part of organic gardening.",
+     "example": {
+      "question": "Why is crop rotation used in organic gardening?",
+      "wrong_answer": "It is not used",
+      "correct_answer": "It breaks the life of pests and diseases without chemicals"
+     },
+     "cause": "The child links pest control only with spraying.",
+     "reveals": "Offer \"It is not used\" next to the right answer and ask the question again in a new context.",
+     "help": "Recall Grade 8: rotation stops soil pests building up.",
+     "feedback": "Rotating crops controls pests and diseases naturally.",
+     "source": "To confirm by a CBC Agriculture teacher: a common classroom error, not traced to a study by the author.",
+     "status": "draft"
+    },
+    {
+     "code": "AGRI.G9.FOOD_P.ORGANIC_GARDENING.ORGANIC_INPUTS.M_AG9_OI_STRONG",
+     "skill": "AGRI.G9.FOOD_P.ORGANIC_GARDENING.ORGANIC_INPUTS",
+     "error": "Sprays the foliar feed without diluting it.",
+     "example": {
+      "question": "How is Mexican sunflower liquid feed used?",
+      "wrong_answer": "Poured on undiluted",
+      "correct_answer": "Diluted with water before spraying or watering"
+     },
+     "cause": "The child thinks stronger is better.",
+     "reveals": "Offer \"Poured on undiluted\" next to the right answer and ask the question again in a new context.",
+     "help": "Compare leaves sprayed with strong and diluted feed.",
+     "feedback": "Dilute liquid feeds before use, or they scorch the leaves.",
+     "source": "To confirm by a CBC Agriculture teacher: a common classroom error, not traced to a study by the author.",
+     "status": "draft"
+    },
+    {
+     "code": "AGRI.G9.FOOD_P.ORGANIC_GARDENING.ORGANIC_INPUTS.M_AG9_OI_SOAK",
+     "skill": "AGRI.G9.FOOD_P.ORGANIC_GARDENING.ORGANIC_INPUTS",
+     "error": "Uses the Mexican sunflower soak the next day.",
+     "example": {
+      "question": "How long is a plant or manure liquid feed left to soak?",
+      "wrong_answer": "One day",
+      "correct_answer": "About two weeks, stirred now and then"
+     },
+     "cause": "The child expects quick results.",
+     "reveals": "Offer \"One day\" next to the right answer and ask the question again in a new context.",
+     "help": "Compare the colour of a one-day and a two-week soak.",
+     "feedback": "Leave the soak about two weeks so the nutrients come out, then dilute and use.",
+     "source": "To confirm by a CBC Agriculture teacher: a common classroom error, not traced to a study by the author.",
+     "status": "draft"
+    },
+    {
+     "code": "AGRI.G9.FOOD_P.ORGANIC_GARDENING.ORGANIC_INPUTS.M_AG9_OI_NOON",
+     "skill": "AGRI.G9.FOOD_P.ORGANIC_GARDENING.ORGANIC_INPUTS",
+     "error": "Sprays organic pesticides in the hot midday sun.",
+     "example": {
+      "question": "When is the best time to spray an organic pesticide?",
+      "wrong_answer": "At midday",
+      "correct_answer": "Early morning or evening"
+     },
+     "cause": "The child sees no difference between times.",
+     "reveals": "Offer \"At midday\" next to the right answer and ask the question again in a new context.",
+     "help": "Explain sun breaks down the spray and burns wet leaves.",
+     "feedback": "Spray early in the morning or in the evening when it is cool.",
+     "source": "To confirm by a CBC Agriculture teacher: a common classroom error, not traced to a study by the author.",
+     "status": "draft"
+    },
+    {
+     "code": "AGRI.G9.FOOD_P.ORGANIC_GARDENING.ORGANIC_INPUTS.M_AG9_OI_FRESHMANURE",
+     "skill": "AGRI.G9.FOOD_P.ORGANIC_GARDENING.ORGANIC_INPUTS",
+     "error": "Puts fresh animal manure straight on the crops.",
+     "example": {
+      "question": "What kind of manure is used on an organic garden?",
+      "wrong_answer": "Fresh manure straight from the shed",
+      "correct_answer": "Well-rotted manure or compost"
+     },
+     "cause": "The child thinks manure is manure.",
+     "reveals": "Offer \"Fresh manure straight from the shed\" next to the right answer and ask the question again in a new context.",
+     "help": "Show seedlings scorched by fresh manure.",
+     "feedback": "Use well-rotted manure. Fresh manure burns plants and carries germs.",
+     "source": "To confirm by a CBC Agriculture teacher: a common classroom error, not traced to a study by the author.",
+     "status": "draft"
+    }
+   ],
    "rubric_indicators": [
     "AGRI.G9.RUBRIC.2.1",
     "AGRI.G9.RUBRIC.2.2",
@@ -308,8 +1120,213 @@
      "status": "kicd_verified"
     }
    ],
-   "skills": [],
-   "misconceptions": [],
+   "skills": [
+    {
+     "code": "AGRI.G9.FOOD_P.STORAGE_OF_CROP_PRODUCE.STORE_PREP",
+     "name": "Say how a storage structure is prepared before crop produce is stored",
+     "outcomes": [
+      "AGRI.G9.FOOD_P.STORAGE_OF_CROP_PRODUCE.a",
+      "AGRI.G9.FOOD_P.STORAGE_OF_CROP_PRODUCE.b"
+     ],
+     "mastery": "Says how a store, granary, container or bag is prepared: empty last season's produce, clean and dust, seal cracks, repair leaks, put in pallets and rat guards, and let it dry and air before the new produce goes in; in the app the child picks the right step, order, material, reason or method in new situations. The practical (preparing an existing storage structure) is marked by the teacher with the KICD rubric indicator; the app asks only the knowledge half. Evidence rule: at least four of the last five fresh questions right across at least two question forms, and no repeated pick of the same misconception.",
+     "question_forms": [
+      "order the steps",
+      "choose the reason",
+      "story"
+     ],
+     "thinking": [
+      "recall",
+      "reasoning"
+     ],
+     "horeb_skill_ids": [],
+     "prerequisites": [
+      {
+       "requires": "AGRI.G5.FOOD_P.PRESERVATION_OF_CEREALS_.PRESERVE_PRACTICE",
+       "kind": "skill",
+       "strength": "essential",
+       "reason": "Storing grain in a clean, raised store (Grade 5) is prepared for here. Proposed, to confirm by a CBC Agriculture teacher.",
+       "status": "proposed"
+      },
+      {
+       "requires": "AGRI.G8.HYGIEN.CLEANING_THE_KITCHEN.KITCHEN_ROUTINE",
+       "kind": "skill",
+       "strength": "essential",
+       "reason": "Special cleaning of a food store came in Grade 8. Proposed, to confirm by a CBC Agriculture teacher.",
+       "status": "proposed"
+      }
+     ],
+     "no_family": true,
+     "status": "proposed",
+     "assessed_by": "teacher marks the practical with the KICD rubric"
+    },
+    {
+     "code": "AGRI.G9.FOOD_P.STORAGE_OF_CROP_PRODUCE.STORE_MANAGE",
+     "name": "Say how stored crop produce is managed to reduce spoilage",
+     "outcomes": [
+      "AGRI.G9.FOOD_P.STORAGE_OF_CROP_PRODUCE.c"
+     ],
+     "mastery": "Says how stored produce is managed: check moisture of cereals and pulses (bite or salt test), keep air moving, control rodents, turn the produce, look for pests, mould and heating, and remove and dispose of spoilt produce quickly; in the app the child picks the right step, order, material, reason or method in new situations. The practical (managing stored crop produce) is marked by the teacher with the KICD rubric indicator; the app asks only the knowledge half. Evidence rule: at least four of the last five fresh questions right across at least two question forms, and no repeated pick of the same misconception.",
+     "question_forms": [
+      "choose the action",
+      "order the checks",
+      "story"
+     ],
+     "thinking": [
+      "recall",
+      "reasoning"
+     ],
+     "horeb_skill_ids": [],
+     "prerequisites": [
+      {
+       "requires": "AGRI.G9.FOOD_P.STORAGE_OF_CROP_PRODUCE.STORE_PREP",
+       "kind": "skill",
+       "strength": "essential",
+       "reason": "The store is prepared before the produce is managed in it. Proposed, to confirm by a CBC Agriculture teacher.",
+       "status": "proposed"
+      },
+      {
+       "requires": "AGRI.G5.FOOD_P.PRESERVATION_OF_CEREALS_.PRESERVE_METHODS",
+       "kind": "skill",
+       "strength": "essential",
+       "reason": "Drying and treating grain (Grade 5) are what management keeps up. Proposed, to confirm by a CBC Agriculture teacher.",
+       "status": "proposed"
+      }
+     ],
+     "no_family": true,
+     "status": "proposed",
+     "assessed_by": "teacher marks the practical with the KICD rubric"
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "AGRI.G9.FOOD_P.STORAGE_OF_CROP_PRODUCE.STORE_PREP.M_AG9_SP_CRACKS",
+     "skill": "AGRI.G9.FOOD_P.STORAGE_OF_CROP_PRODUCE.STORE_PREP",
+     "error": "Leaves cracks in the store walls because they are small.",
+     "example": {
+      "question": "Why are cracks in a store sealed before storing?",
+      "wrong_answer": "Small cracks do not matter",
+      "correct_answer": "Weevils and other pests hide and breed in cracks"
+     },
+     "cause": "The child thinks only big holes let pests in.",
+     "reveals": "Offer \"Small cracks do not matter\" next to the right answer and ask the question again in a new context.",
+     "help": "Scrape out an old crack and find weevils.",
+     "feedback": "Seal cracks. Pests from last season hide in them.",
+     "source": "To confirm by a CBC Agriculture teacher: a common classroom error, not traced to a study by the author.",
+     "status": "draft"
+    },
+    {
+     "code": "AGRI.G9.FOOD_P.STORAGE_OF_CROP_PRODUCE.STORE_PREP.M_AG9_SP_ROOF",
+     "skill": "AGRI.G9.FOOD_P.STORAGE_OF_CROP_PRODUCE.STORE_PREP",
+     "error": "Stores the produce before fixing a leaking roof.",
+     "example": {
+      "question": "What is done about a leaking store roof?",
+      "wrong_answer": "Store first and fix later",
+      "correct_answer": "Repair it before storing"
+     },
+     "cause": "The child thinks the produce will stay dry in sacks.",
+     "reveals": "Offer \"Store first and fix later\" next to the right answer and ask the question again in a new context.",
+     "help": "Show mouldy grain under a roof leak.",
+     "feedback": "Repair leaks first. One wet patch spoils the grain.",
+     "source": "To confirm by a CBC Agriculture teacher: a common classroom error, not traced to a study by the author.",
+     "status": "draft"
+    },
+    {
+     "code": "AGRI.G9.FOOD_P.STORAGE_OF_CROP_PRODUCE.STORE_PREP.M_AG9_SP_RAT",
+     "skill": "AGRI.G9.FOOD_P.STORAGE_OF_CROP_PRODUCE.STORE_PREP",
+     "error": "Thinks rat guards and clean surroundings are not needed if there is a cat.",
+     "example": {
+      "question": "Why fit rat guards on granary legs?",
+      "wrong_answer": "A cat is enough",
+      "correct_answer": "So rats cannot climb into the store"
+     },
+     "cause": "The child trusts one method.",
+     "reveals": "Offer \"A cat is enough\" next to the right answer and ask the question again in a new context.",
+     "help": "Show a granary leg with and without a metal guard.",
+     "feedback": "Fit rat guards and keep the surroundings clear. Rats climb in otherwise.",
+     "source": "To confirm by a CBC Agriculture teacher: a common classroom error, not traced to a study by the author.",
+     "status": "draft"
+    },
+    {
+     "code": "AGRI.G9.FOOD_P.STORAGE_OF_CROP_PRODUCE.STORE_PREP.M_AG9_SP_BAGS",
+     "skill": "AGRI.G9.FOOD_P.STORAGE_OF_CROP_PRODUCE.STORE_PREP",
+     "error": "Reuses old sacks without cleaning or checking them.",
+     "example": {
+      "question": "What is done with old storage bags before reuse?",
+      "wrong_answer": "Use them as they are",
+      "correct_answer": "Shake out, clean, dry and check for holes and pests"
+     },
+     "cause": "The child sees an empty sack as clean.",
+     "reveals": "Offer \"Use them as they are\" next to the right answer and ask the question again in a new context.",
+     "help": "Turn an old sack inside out to find weevils in the seams.",
+     "feedback": "Clean, dry and check old bags. Pests hide in the seams.",
+     "source": "To confirm by a CBC Agriculture teacher: a common classroom error, not traced to a study by the author.",
+     "status": "draft"
+    },
+    {
+     "code": "AGRI.G9.FOOD_P.STORAGE_OF_CROP_PRODUCE.STORE_MANAGE.M_AG9_SM_FORGET",
+     "skill": "AGRI.G9.FOOD_P.STORAGE_OF_CROP_PRODUCE.STORE_MANAGE",
+     "error": "Thinks produce once stored needs no more checking.",
+     "example": {
+      "question": "How often should stored grain be checked?",
+      "wrong_answer": "Never, once it is stored",
+      "correct_answer": "Regularly, every week or two"
+     },
+     "cause": "The child thinks storage is the end of the job.",
+     "reveals": "Offer \"Never, once it is stored\" next to the right answer and ask the question again in a new context.",
+     "help": "Show grain that spoiled unseen in a month.",
+     "feedback": "Check stored produce often so problems are caught early.",
+     "source": "To confirm by a CBC Agriculture teacher: a common classroom error, not traced to a study by the author.",
+     "status": "draft"
+    },
+    {
+     "code": "AGRI.G9.FOOD_P.STORAGE_OF_CROP_PRODUCE.STORE_MANAGE.M_AG9_SM_HEAT",
+     "skill": "AGRI.G9.FOOD_P.STORAGE_OF_CROP_PRODUCE.STORE_MANAGE",
+     "error": "Thinks a warm patch in stored grain is normal.",
+     "example": {
+      "question": "A farmer finds warm grain in the middle of a sack. What does it mean?",
+      "wrong_answer": "It is normal",
+      "correct_answer": "Damp or pests are spoiling it; dry and check it"
+     },
+     "cause": "The child does not know spoiling grain heats up.",
+     "reveals": "Offer \"It is normal\" next to the right answer and ask the question again in a new context.",
+     "help": "Push a hand into damp grain left for a week (teacher's demonstration).",
+     "feedback": "Warm grain means damp or pests. Take it out, dry and check it.",
+     "source": "To confirm by a CBC Agriculture teacher: a common classroom error, not traced to a study by the author.",
+     "status": "draft"
+    },
+    {
+     "code": "AGRI.G9.FOOD_P.STORAGE_OF_CROP_PRODUCE.STORE_MANAGE.M_AG9_SM_SPOILT",
+     "skill": "AGRI.G9.FOOD_P.STORAGE_OF_CROP_PRODUCE.STORE_MANAGE",
+     "error": "Leaves spoilt produce among the good to avoid waste.",
+     "example": {
+      "question": "What is done with mouldy maize found in the store?",
+      "wrong_answer": "Leave it with the rest",
+      "correct_answer": "Remove it and dispose of it away from the store"
+     },
+     "cause": "The child does not want to waste anything.",
+     "reveals": "Offer \"Leave it with the rest\" next to the right answer and ask the question again in a new context.",
+     "help": "Explain mould spreads, and mouldy maize can be poisonous (aflatoxin).",
+     "feedback": "Remove mouldy produce at once. Mould spreads and can be poisonous.",
+     "source": "To confirm by a CBC Agriculture teacher: a common classroom error, not traced to a study by the author.",
+     "status": "draft"
+    },
+    {
+     "code": "AGRI.G9.FOOD_P.STORAGE_OF_CROP_PRODUCE.STORE_MANAGE.M_AG9_SM_AIR",
+     "skill": "AGRI.G9.FOOD_P.STORAGE_OF_CROP_PRODUCE.STORE_MANAGE",
+     "error": "Closes up the store completely so no air enters.",
+     "example": {
+      "question": "Why must a store with sacks be ventilated?",
+      "wrong_answer": "Closed is better",
+      "correct_answer": "Moving air keeps the produce dry and cool"
+     },
+     "cause": "The child thinks closed keeps pests out.",
+     "reveals": "Offer \"Closed is better\" next to the right answer and ask the question again in a new context.",
+     "help": "Compare damp in a closed and an airy room.",
+     "feedback": "Ventilate stores with sacks so the produce stays dry and cool.",
+     "source": "To confirm by a CBC Agriculture teacher: a common classroom error, not traced to a study by the author.",
+     "status": "draft"
+    }
+   ],
    "rubric_indicators": [
     "AGRI.G9.RUBRIC.2.1",
     "AGRI.G9.RUBRIC.2.2",
@@ -373,8 +1390,312 @@
      "status": "kicd_verified"
     }
    ],
-   "skills": [],
-   "misconceptions": [],
+   "skills": [
+    {
+     "code": "AGRI.G9.FOOD_P.COOKING_USING_FLOUR_MIXT.FLOUR_MIXTURES",
+     "name": "Identify the types of flour mixtures used in food production",
+     "outcomes": [
+      "AGRI.G9.FOOD_P.COOKING_USING_FLOUR_MIXT.a"
+     ],
+     "mastery": "Identifies the types of flour mixtures: batters (runny: more liquid than flour, poured, for pancakes and crepes) and doughs (stiff: more flour than liquid, kneaded and shaped, for chapati, mandazi and bread), and matches products to each, and gives the reason in a new situation; in the app the child picks the right answer in new situations. Evidence rule: at least four of the last five fresh questions right across at least two question forms, and no repeated pick of the same misconception.",
+     "question_forms": [
+      "match mixture and product",
+      "choose the type",
+      "story"
+     ],
+     "thinking": [
+      "recall",
+      "reasoning"
+     ],
+     "horeb_skill_ids": [],
+     "prerequisites": [
+      {
+       "requires": "AGRI.G6.FOOD_P.COOKING_FOOD.COOKING_PRACTICE",
+       "kind": "skill",
+       "strength": "essential",
+       "reason": "Rubbing fat into flour for scones (Grade 6) was the first flour mixture. Proposed, to confirm by a CBC Agriculture teacher.",
+       "status": "proposed"
+      },
+      {
+       "requires": "INTE.G7.MIXTUR.MIXTURES.HOMOGENEOUS_SOLUTION",
+       "kind": "skill",
+       "strength": "essential",
+       "reason": "A batter is a mixture; Integrated Science Grade 7 described mixtures. Proposed, to confirm by a CBC Agriculture teacher.",
+       "status": "proposed"
+      }
+     ],
+     "no_family": true,
+     "status": "proposed"
+    },
+    {
+     "code": "AGRI.G9.FOOD_P.COOKING_USING_FLOUR_MIXT.MIXTURE_PREP",
+     "name": "Say how batters and doughs are prepared",
+     "outcomes": [
+      "AGRI.G9.FOOD_P.COOKING_USING_FLOUR_MIXT.b"
+     ],
+     "mastery": "Says how flour mixtures are prepared: measure ingredients, sift flour, for a batter beat in eggs and liquid gradually to a smooth pouring mixture and rest it, for a dough add liquid little by little, knead until smooth and elastic, rest it covered; in the app the child picks the right step, order, material, reason or method in new situations. The practical (preparing batters and doughs) is marked by the teacher with the KICD rubric indicator; the app asks only the knowledge half. Evidence rule: at least four of the last five fresh questions right across at least two question forms, and no repeated pick of the same misconception.",
+     "question_forms": [
+      "order the steps",
+      "choose the measure",
+      "story"
+     ],
+     "thinking": [
+      "recall",
+      "reasoning"
+     ],
+     "horeb_skill_ids": [],
+     "prerequisites": [
+      {
+       "requires": "AGRI.G9.FOOD_P.COOKING_USING_FLOUR_MIXT.FLOUR_MIXTURES",
+       "kind": "skill",
+       "strength": "essential",
+       "reason": "The child knows the mixture before preparing it. Proposed, to confirm by a CBC Agriculture teacher.",
+       "status": "proposed"
+      },
+      {
+       "requires": "MATH.G4.MEASUR.LENGTH.CM_UNIT",
+       "kind": "skill",
+       "strength": "essential",
+       "reason": "Measuring ingredients and rolling dough to a thickness use measurement. Proposed, to confirm by a CBC Agriculture teacher.",
+       "status": "proposed"
+      }
+     ],
+     "no_family": true,
+     "status": "proposed",
+     "assessed_by": "teacher marks the practical with the KICD rubric"
+    },
+    {
+     "code": "AGRI.G9.FOOD_P.COOKING_USING_FLOUR_MIXT.FLOUR_PRODUCTS",
+     "name": "Say how products are made from flour mixtures and tell when they are cooked",
+     "outcomes": [
+      "AGRI.G9.FOOD_P.COOKING_USING_FLOUR_MIXT.c"
+     ],
+     "mastery": "Says how products are made: pancakes (pour batter thinly into a hot greased pan, turn when bubbles burst), chapati (roll, oil and fold, roll thin, cook both sides on a hot pan), mandazi (roll, cut, deep fry in hot oil by an adult until golden), and how to tell each is cooked; in the app the child picks the right step, order, material, reason or method in new situations. The practical (making pancakes, chapati or mandazi) is marked by the teacher with the KICD rubric indicator; the app asks only the knowledge half. Evidence rule: at least four of the last five fresh questions right across at least two question forms, and no repeated pick of the same misconception.",
+     "question_forms": [
+      "order the steps",
+      "choose the method",
+      "story"
+     ],
+     "thinking": [
+      "recall",
+      "reasoning"
+     ],
+     "horeb_skill_ids": [],
+     "prerequisites": [
+      {
+       "requires": "AGRI.G9.FOOD_P.COOKING_USING_FLOUR_MIXT.MIXTURE_PREP",
+       "kind": "skill",
+       "strength": "essential",
+       "reason": "The mixture is prepared before products are made from it. Proposed, to confirm by a CBC Agriculture teacher.",
+       "status": "proposed"
+      },
+      {
+       "requires": "AGRI.G5.FOOD_P.COOKING_FOOD.FRYING_SAFETY",
+       "kind": "skill",
+       "strength": "essential",
+       "reason": "Frying safely (Grade 5) is needed for mandazi and pancakes. Proposed, to confirm by a CBC Agriculture teacher.",
+       "status": "proposed"
+      }
+     ],
+     "no_family": true,
+     "status": "proposed",
+     "assessed_by": "teacher marks the practical with the KICD rubric"
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "AGRI.G9.FOOD_P.COOKING_USING_FLOUR_MIXT.FLOUR_MIXTURES.M_AG9_FM_SWAP",
+     "skill": "AGRI.G9.FOOD_P.COOKING_USING_FLOUR_MIXT.FLOUR_MIXTURES",
+     "error": "Calls chapati mixture a batter and pancake mixture a dough.",
+     "example": {
+      "question": "Is chapati made from a batter or a dough?",
+      "wrong_answer": "A batter",
+      "correct_answer": "A dough"
+     },
+     "cause": "The child knows both words but not which is runny.",
+     "reveals": "Offer \"A batter\" next to the right answer and ask the question again in a new context.",
+     "help": "Show a runny batter poured and a stiff dough rolled.",
+     "feedback": "A dough is stiff and rolled, like chapati. A batter is runny and poured, like pancakes.",
+     "source": "To confirm by a CBC Agriculture teacher: a common classroom error, not traced to a study by the author.",
+     "status": "draft"
+    },
+    {
+     "code": "AGRI.G9.FOOD_P.COOKING_USING_FLOUR_MIXT.FLOUR_MIXTURES.M_AG9_FM_RATIO",
+     "skill": "AGRI.G9.FOOD_P.COOKING_USING_FLOUR_MIXT.FLOUR_MIXTURES",
+     "error": "Thinks a batter has more flour than liquid.",
+     "example": {
+      "question": "Which has more liquid than flour?",
+      "wrong_answer": "A dough",
+      "correct_answer": "A batter"
+     },
+     "cause": "The child does not link runniness with the amount of liquid.",
+     "reveals": "Offer \"A dough\" next to the right answer and ask the question again in a new context.",
+     "help": "Measure the liquid and flour for each.",
+     "feedback": "A batter has more liquid, so it pours. A dough has more flour, so it holds its shape.",
+     "source": "To confirm by a CBC Agriculture teacher: a common classroom error, not traced to a study by the author.",
+     "status": "draft"
+    },
+    {
+     "code": "AGRI.G9.FOOD_P.COOKING_USING_FLOUR_MIXT.FLOUR_MIXTURES.M_AG9_FM_MANDAZI",
+     "skill": "AGRI.G9.FOOD_P.COOKING_USING_FLOUR_MIXT.FLOUR_MIXTURES",
+     "error": "Thinks mandazi is made from a batter because it is fried.",
+     "example": {
+      "question": "What mixture are mandazi made from?",
+      "wrong_answer": "A batter, because they are fried",
+      "correct_answer": "A soft dough that is rolled and cut"
+     },
+     "cause": "The child names the mixture from the cooking method.",
+     "reveals": "Offer \"A batter, because they are fried\" next to the right answer and ask the question again in a new context.",
+     "help": "Show mandazi dough rolled and cut before frying.",
+     "feedback": "Mandazi are made from a soft dough, rolled and cut, then fried.",
+     "source": "To confirm by a CBC Agriculture teacher: a common classroom error, not traced to a study by the author.",
+     "status": "draft"
+    },
+    {
+     "code": "AGRI.G9.FOOD_P.COOKING_USING_FLOUR_MIXT.FLOUR_MIXTURES.M_AG9_FM_ONLY",
+     "skill": "AGRI.G9.FOOD_P.COOKING_USING_FLOUR_MIXT.FLOUR_MIXTURES",
+     "error": "Thinks only wheat flour makes flour mixtures.",
+     "example": {
+      "question": "Can other flours make flour mixtures?",
+      "wrong_answer": "No, only wheat flour",
+      "correct_answer": "Yes, such as maize, millet, sorghum or cassava flour in some recipes"
+     },
+     "cause": "The child has seen only wheat flour in chapati and mandazi.",
+     "reveals": "Offer \"No, only wheat flour\" next to the right answer and ask the question again in a new context.",
+     "help": "Show millet pancakes or cassava flour recipes.",
+     "feedback": "Many flours can make mixtures, though wheat gives the stretchiest dough.",
+     "source": "To confirm by a CBC Agriculture teacher: a common classroom error, not traced to a study by the author.",
+     "status": "draft"
+    },
+    {
+     "code": "AGRI.G9.FOOD_P.COOKING_USING_FLOUR_MIXT.MIXTURE_PREP.M_AG9_MP_ALLWATER",
+     "skill": "AGRI.G9.FOOD_P.COOKING_USING_FLOUR_MIXT.MIXTURE_PREP",
+     "error": "Pours all the liquid into the flour at once.",
+     "example": {
+      "question": "How is liquid added to flour for a dough?",
+      "wrong_answer": "All at once",
+      "correct_answer": "A little at a time while mixing"
+     },
+     "cause": "The child wants to finish quickly.",
+     "reveals": "Offer \"All at once\" next to the right answer and ask the question again in a new context.",
+     "help": "Pour all the water into a cup of flour: it turns to sticky paste.",
+     "feedback": "Add liquid a little at a time so the dough is soft, not sticky.",
+     "source": "To confirm by a CBC Agriculture teacher: a common classroom error, not traced to a study by the author.",
+     "status": "draft"
+    },
+    {
+     "code": "AGRI.G9.FOOD_P.COOKING_USING_FLOUR_MIXT.MIXTURE_PREP.M_AG9_MP_KNEAD",
+     "skill": "AGRI.G9.FOOD_P.COOKING_USING_FLOUR_MIXT.MIXTURE_PREP",
+     "error": "Skips kneading the chapati dough.",
+     "example": {
+      "question": "Why is chapati dough kneaded?",
+      "wrong_answer": "It does not need it",
+      "correct_answer": "To make it smooth and stretchy so the chapati is soft"
+     },
+     "cause": "The child thinks mixing is enough.",
+     "reveals": "Offer \"It does not need it\" next to the right answer and ask the question again in a new context.",
+     "help": "Roll an unkneaded and a kneaded dough.",
+     "feedback": "Knead dough until smooth and stretchy. Chapatis come out soft.",
+     "source": "To confirm by a CBC Agriculture teacher: a common classroom error, not traced to a study by the author.",
+     "status": "draft"
+    },
+    {
+     "code": "AGRI.G9.FOOD_P.COOKING_USING_FLOUR_MIXT.MIXTURE_PREP.M_AG9_MP_LUMPS",
+     "skill": "AGRI.G9.FOOD_P.COOKING_USING_FLOUR_MIXT.MIXTURE_PREP",
+     "error": "Leaves lumps in the pancake batter.",
+     "example": {
+      "question": "How is a smooth batter made?",
+      "wrong_answer": "Stir once and leave the lumps",
+      "correct_answer": "Sift the flour and add liquid gradually while beating"
+     },
+     "cause": "The child thinks lumps cook out.",
+     "reveals": "Offer \"Stir once and leave the lumps\" next to the right answer and ask the question again in a new context.",
+     "help": "Fry a lumpy pancake and a smooth one.",
+     "feedback": "Sift the flour and beat in liquid slowly for a smooth batter.",
+     "source": "To confirm by a CBC Agriculture teacher: a common classroom error, not traced to a study by the author.",
+     "status": "draft"
+    },
+    {
+     "code": "AGRI.G9.FOOD_P.COOKING_USING_FLOUR_MIXT.MIXTURE_PREP.M_AG9_MP_NOMEASURE",
+     "skill": "AGRI.G9.FOOD_P.COOKING_USING_FLOUR_MIXT.MIXTURE_PREP",
+     "error": "Guesses the amounts instead of measuring.",
+     "example": {
+      "question": "Why are ingredients measured for a batter?",
+      "wrong_answer": "Guessing is fine",
+      "correct_answer": "The right amounts give the right thickness every time"
+     },
+     "cause": "The child has seen adults cook without measuring.",
+     "reveals": "Offer \"Guessing is fine\" next to the right answer and ask the question again in a new context.",
+     "help": "Make two batters, one guessed and one measured, and compare.",
+     "feedback": "Measure ingredients so the mixture comes out right.",
+     "source": "To confirm by a CBC Agriculture teacher: a common classroom error, not traced to a study by the author.",
+     "status": "draft"
+    },
+    {
+     "code": "AGRI.G9.FOOD_P.COOKING_USING_FLOUR_MIXT.FLOUR_PRODUCTS.M_AG9_FP_COLDPAN",
+     "skill": "AGRI.G9.FOOD_P.COOKING_USING_FLOUR_MIXT.FLOUR_PRODUCTS",
+     "error": "Pours pancake batter into a cold pan.",
+     "example": {
+      "question": "When is pancake batter poured into the pan?",
+      "wrong_answer": "Into a cold pan",
+      "correct_answer": "When the greased pan is hot"
+     },
+     "cause": "The child does not see why heat matters at the start.",
+     "reveals": "Offer \"Into a cold pan\" next to the right answer and ask the question again in a new context.",
+     "help": "Pour batter into a cold pan: it sticks and stays pale.",
+     "feedback": "Heat the greased pan first so the pancake sets and browns.",
+     "source": "To confirm by a CBC Agriculture teacher: a common classroom error, not traced to a study by the author.",
+     "status": "draft"
+    },
+    {
+     "code": "AGRI.G9.FOOD_P.COOKING_USING_FLOUR_MIXT.FLOUR_PRODUCTS.M_AG9_FP_TURN",
+     "skill": "AGRI.G9.FOOD_P.COOKING_USING_FLOUR_MIXT.FLOUR_PRODUCTS",
+     "error": "Turns the pancake before the bubbles burst.",
+     "example": {
+      "question": "When is a pancake turned?",
+      "wrong_answer": "At once",
+      "correct_answer": "When bubbles appear and burst and the edges set"
+     },
+     "cause": "The child turns too early to avoid burning.",
+     "reveals": "Offer \"At once\" next to the right answer and ask the question again in a new context.",
+     "help": "Watch the bubbles in the demonstration.",
+     "feedback": "Turn a pancake when bubbles burst and the edges look set.",
+     "source": "To confirm by a CBC Agriculture teacher: a common classroom error, not traced to a study by the author.",
+     "status": "draft"
+    },
+    {
+     "code": "AGRI.G9.FOOD_P.COOKING_USING_FLOUR_MIXT.FLOUR_PRODUCTS.M_AG9_FP_THICK",
+     "skill": "AGRI.G9.FOOD_P.COOKING_USING_FLOUR_MIXT.FLOUR_PRODUCTS",
+     "error": "Rolls chapati thick so it is filling.",
+     "example": {
+      "question": "Why is chapati rolled thin?",
+      "wrong_answer": "Thick is better",
+      "correct_answer": "So it cooks through and stays soft"
+     },
+     "cause": "The child thinks thick gives more food.",
+     "reveals": "Offer \"Thick is better\" next to the right answer and ask the question again in a new context.",
+     "help": "Cook a thick and a thin chapati.",
+     "feedback": "Roll chapati thin so it cooks through and stays soft.",
+     "source": "To confirm by a CBC Agriculture teacher: a common classroom error, not traced to a study by the author.",
+     "status": "draft"
+    },
+    {
+     "code": "AGRI.G9.FOOD_P.COOKING_USING_FLOUR_MIXT.FLOUR_PRODUCTS.M_AG9_FP_OILTEMP",
+     "skill": "AGRI.G9.FOOD_P.COOKING_USING_FLOUR_MIXT.FLOUR_PRODUCTS",
+     "error": "Fries mandazi in oil that is not yet hot.",
+     "example": {
+      "question": "Why must oil be hot before frying mandazi?",
+      "wrong_answer": "It does not matter",
+      "correct_answer": "In cool oil mandazi soak up oil and go greasy"
+     },
+     "cause": "The child does not link oil heat with greasiness.",
+     "reveals": "Offer \"It does not matter\" next to the right answer and ask the question again in a new context.",
+     "help": "Recall Grade 5: food in cold oil is soggy.",
+     "feedback": "Wait for the oil to be hot. Mandazi in cool oil go greasy.",
+     "source": "To confirm by a CBC Agriculture teacher: a common classroom error, not traced to a study by the author.",
+     "status": "draft"
+    }
+   ],
    "rubric_indicators": [
     "AGRI.G9.RUBRIC.2.1",
     "AGRI.G9.RUBRIC.2.2",
@@ -431,8 +1752,211 @@
      "status": "kicd_verified"
     }
    ],
-   "skills": [],
-   "misconceptions": [],
+   "skills": [
+    {
+     "code": "AGRI.G9.HYGIEN.CLEANING_WASTE_DISPOSAL_.WASTE_FACILITY_WHY",
+     "name": "Explain why waste disposal facilities must be kept clean",
+     "outcomes": [
+      "AGRI.G9.HYGIEN.CLEANING_WASTE_DISPOSAL_.a"
+     ],
+     "mastery": "Explains why waste bins, sinks and open drains are cleaned (they breed flies, mosquitoes, rats and germs that spread diseases such as cholera and typhoid, smell, block and flood), naming the risk from each facility, and gives the reason in a new situation; in the app the child picks the right answer in new situations. Evidence rule: at least four of the last five fresh questions right across at least two question forms, and no repeated pick of the same misconception.",
+     "question_forms": [
+      "choose the reason",
+      "story",
+      "match facility and risk"
+     ],
+     "thinking": [
+      "recall",
+      "reasoning"
+     ],
+     "horeb_skill_ids": [],
+     "prerequisites": [
+      {
+       "requires": "SCIE.G6.LIVING.INVERTEBRATES.INVERT_IMPORTANCE",
+       "kind": "skill",
+       "strength": "essential",
+       "reason": "Flies and mosquitoes as harmful invertebrates (Science Grade 6) breed in dirty facilities. Proposed, to confirm by a CBC Agriculture teacher.",
+       "status": "proposed"
+      },
+      {
+       "requires": "AGRI.G8.HYGIEN.CLEANING_THE_KITCHEN.KITCHEN_CLEAN",
+       "kind": "skill",
+       "strength": "essential",
+       "reason": "Disposing of kitchen waste properly (Grade 8) leads to cleaning the facilities. Proposed, to confirm by a CBC Agriculture teacher.",
+       "status": "proposed"
+      }
+     ],
+     "no_family": true,
+     "status": "proposed"
+    },
+    {
+     "code": "AGRI.G9.HYGIEN.CLEANING_WASTE_DISPOSAL_.WASTE_FACILITY_CLEAN",
+     "name": "Say how bins, sinks and open drains are cleaned and kept clean",
+     "outcomes": [
+      "AGRI.G9.HYGIEN.CLEANING_WASTE_DISPOSAL_.b"
+     ],
+     "mastery": "Says how waste facilities are cleaned at home: protective clothing on, empty the bin and scrub it with soap and water, dry it in the sun with the lid open, clear food from the sink strainer and scrub the sink and pipe, remove silt and rubbish from the drain so water flows, dispose of waste safely, wash hands; in the app the child picks the right step, order, material, reason or method in new situations. The practical (cleaning waste disposal facilities at the household level) is marked by the teacher with the KICD rubric indicator; the app asks only the knowledge half. Evidence rule: at least four of the last five fresh questions right across at least two question forms, and no repeated pick of the same misconception.",
+     "question_forms": [
+      "order the steps",
+      "choose the tool",
+      "story"
+     ],
+     "thinking": [
+      "recall",
+      "reasoning"
+     ],
+     "horeb_skill_ids": [],
+     "prerequisites": [
+      {
+       "requires": "AGRI.G9.HYGIEN.CLEANING_WASTE_DISPOSAL_.WASTE_FACILITY_WHY",
+       "kind": "skill",
+       "strength": "essential",
+       "reason": "The child knows why facilities are cleaned before cleaning them. Proposed, to confirm by a CBC Agriculture teacher.",
+       "status": "proposed"
+      },
+      {
+       "requires": "AGRI.G7.HYGIEN.HYGIENE_IN_REARING_ANIMA.HOUSE_CLEANING",
+       "kind": "skill",
+       "strength": "essential",
+       "reason": "Cleaning in order with protective clothing (Grade 7) is used again. Proposed, to confirm by a CBC Agriculture teacher.",
+       "status": "proposed"
+      }
+     ],
+     "no_family": true,
+     "status": "proposed",
+     "assessed_by": "teacher marks the practical with the KICD rubric"
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "AGRI.G9.HYGIEN.CLEANING_WASTE_DISPOSAL_.WASTE_FACILITY_WHY.M_AG9_WF_DRAIN",
+     "skill": "AGRI.G9.HYGIEN.CLEANING_WASTE_DISPOSAL_.WASTE_FACILITY_WHY",
+     "error": "Thinks an open drain cleans itself when it rains.",
+     "example": {
+      "question": "Why must open drains be cleared?",
+      "wrong_answer": "Rain cleans them",
+      "correct_answer": "Blocked drains hold dirty water that breeds mosquitoes and floods"
+     },
+     "cause": "The child pictures rain washing everything away.",
+     "reveals": "Offer \"Rain cleans them\" next to the right answer and ask the question again in a new context.",
+     "help": "Show a blocked drain with standing water after rain.",
+     "feedback": "Clear drains so water flows. Blocked drains breed mosquitoes and flood.",
+     "source": "To confirm by a CBC Agriculture teacher: a common classroom error, not traced to a study by the author.",
+     "status": "draft"
+    },
+    {
+     "code": "AGRI.G9.HYGIEN.CLEANING_WASTE_DISPOSAL_.WASTE_FACILITY_WHY.M_AG9_WF_LID",
+     "skill": "AGRI.G9.HYGIEN.CLEANING_WASTE_DISPOSAL_.WASTE_FACILITY_WHY",
+     "error": "Thinks a bin is fine without a lid.",
+     "example": {
+      "question": "Why should a dustbin have a lid?",
+      "wrong_answer": "It does not need one",
+      "correct_answer": "To keep out flies, rats and rain and keep smells in"
+     },
+     "cause": "The child sees the bin as a box for rubbish only.",
+     "reveals": "Offer \"It does not need one\" next to the right answer and ask the question again in a new context.",
+     "help": "Compare an open and a covered bin after a day.",
+     "feedback": "Keep a lid on the bin so flies, rats and rain stay out.",
+     "source": "To confirm by a CBC Agriculture teacher: a common classroom error, not traced to a study by the author.",
+     "status": "draft"
+    },
+    {
+     "code": "AGRI.G9.HYGIEN.CLEANING_WASTE_DISPOSAL_.WASTE_FACILITY_WHY.M_AG9_WF_DISEASE",
+     "skill": "AGRI.G9.HYGIEN.CLEANING_WASTE_DISPOSAL_.WASTE_FACILITY_WHY",
+     "error": "Thinks dirty bins and drains cause only bad smells, not disease.",
+     "example": {
+      "question": "Which disease can spread from dirty drains and bins?",
+      "wrong_answer": "None, they only smell",
+      "correct_answer": "Cholera, typhoid or malaria"
+     },
+     "cause": "The child links dirt with smell, not germs.",
+     "reveals": "Offer \"None, they only smell\" next to the right answer and ask the question again in a new context.",
+     "help": "Trace how a fly goes from a bin to food.",
+     "feedback": "Dirty facilities spread diseases such as cholera, typhoid and malaria.",
+     "source": "To confirm by a CBC Agriculture teacher: a common classroom error, not traced to a study by the author.",
+     "status": "draft"
+    },
+    {
+     "code": "AGRI.G9.HYGIEN.CLEANING_WASTE_DISPOSAL_.WASTE_FACILITY_WHY.M_AG9_WF_SINK",
+     "skill": "AGRI.G9.HYGIEN.CLEANING_WASTE_DISPOSAL_.WASTE_FACILITY_WHY",
+     "error": "Pours food scraps and cooking fat down the sink.",
+     "example": {
+      "question": "Why should fat and food scraps not go down the sink?",
+      "wrong_answer": "They wash away",
+      "correct_answer": "They block the pipe, smell and attract pests"
+     },
+     "cause": "The child thinks water carries everything away.",
+     "reveals": "Offer \"They wash away\" next to the right answer and ask the question again in a new context.",
+     "help": "Show a pipe blocked with hardened fat.",
+     "feedback": "Scrape scraps into the bin and keep fat out of the sink.",
+     "source": "To confirm by a CBC Agriculture teacher: a common classroom error, not traced to a study by the author.",
+     "status": "draft"
+    },
+    {
+     "code": "AGRI.G9.HYGIEN.CLEANING_WASTE_DISPOSAL_.WASTE_FACILITY_CLEAN.M_AG9_WC_HANDS",
+     "skill": "AGRI.G9.HYGIEN.CLEANING_WASTE_DISPOSAL_.WASTE_FACILITY_CLEAN",
+     "error": "Cleans a bin with bare hands and does not wash after.",
+     "example": {
+      "question": "What should you wear to clean a dustbin?",
+      "wrong_answer": "Nothing special",
+      "correct_answer": "Gloves and an apron, and wash hands after"
+     },
+     "cause": "The child does not see the bin as a germ source.",
+     "reveals": "Offer \"Nothing special\" next to the right answer and ask the question again in a new context.",
+     "help": "Recall protective clothing from Grade 4.",
+     "feedback": "Wear gloves to clean bins and drains, and wash your hands after.",
+     "source": "To confirm by a CBC Agriculture teacher: a common classroom error, not traced to a study by the author.",
+     "status": "draft"
+    },
+    {
+     "code": "AGRI.G9.HYGIEN.CLEANING_WASTE_DISPOSAL_.WASTE_FACILITY_CLEAN.M_AG9_WC_WET",
+     "skill": "AGRI.G9.HYGIEN.CLEANING_WASTE_DISPOSAL_.WASTE_FACILITY_CLEAN",
+     "error": "Puts the bin back wet with the lid closed.",
+     "example": {
+      "question": "What is done after washing a bin?",
+      "wrong_answer": "Close it wet",
+      "correct_answer": "Dry it in the sun with the lid open"
+     },
+     "cause": "The child wants to finish quickly.",
+     "reveals": "Offer \"Close it wet\" next to the right answer and ask the question again in a new context.",
+     "help": "Smell a bin closed wet for two days.",
+     "feedback": "Dry the bin in the sun before use. Sunlight helps kill germs.",
+     "source": "To confirm by a CBC Agriculture teacher: a common classroom error, not traced to a study by the author.",
+     "status": "draft"
+    },
+    {
+     "code": "AGRI.G9.HYGIEN.CLEANING_WASTE_DISPOSAL_.WASTE_FACILITY_CLEAN.M_AG9_WC_SILT",
+     "skill": "AGRI.G9.HYGIEN.CLEANING_WASTE_DISPOSAL_.WASTE_FACILITY_CLEAN",
+     "error": "Shovels silt from the drain onto its edge, where rain washes it back.",
+     "example": {
+      "question": "Where does silt removed from a drain go?",
+      "wrong_answer": "On the edge of the drain",
+      "correct_answer": "Away from the drain, to a safe place"
+     },
+     "cause": "The child thinks the job is done once the drain is clear.",
+     "reveals": "Offer \"On the edge of the drain\" next to the right answer and ask the question again in a new context.",
+     "help": "Show silt washed back into a drain after rain.",
+     "feedback": "Carry drain silt well away so the rain does not wash it back.",
+     "source": "To confirm by a CBC Agriculture teacher: a common classroom error, not traced to a study by the author.",
+     "status": "draft"
+    },
+    {
+     "code": "AGRI.G9.HYGIEN.CLEANING_WASTE_DISPOSAL_.WASTE_FACILITY_CLEAN.M_AG9_WC_STRAINER",
+     "skill": "AGRI.G9.HYGIEN.CLEANING_WASTE_DISPOSAL_.WASTE_FACILITY_CLEAN",
+     "error": "Never clears the sink strainer.",
+     "example": {
+      "question": "How is a sink kept clean daily?",
+      "wrong_answer": "Rinse it only",
+      "correct_answer": "Empty the strainer into the bin and scrub the sink"
+     },
+     "cause": "The child cleans only what is seen.",
+     "reveals": "Offer \"Rinse it only\" next to the right answer and ask the question again in a new context.",
+     "help": "Lift a strainer full of old food.",
+     "feedback": "Empty the sink strainer and scrub the sink every day.",
+     "source": "To confirm by a CBC Agriculture teacher: a common classroom error, not traced to a study by the author.",
+     "status": "draft"
+    }
+   ],
    "rubric_indicators": [
     "AGRI.G9.RUBRIC.3.1",
     "AGRI.G9.RUBRIC.3.2",
@@ -490,8 +2014,211 @@
      "status": "kicd_verified"
     }
    ],
-   "skills": [],
-   "misconceptions": [],
+   "skills": [
+    {
+     "code": "AGRI.G9.HYGIEN.DISINFECTING_CLOTHING_AN.DISINFECT_METHODS",
+     "name": "Describe the methods of disinfecting clothing and household articles",
+     "outcomes": [
+      "AGRI.G9.HYGIEN.DISINFECTING_CLOTHING_AN.a"
+     ],
+     "mastery": "Describes the methods of disinfecting clothing and household articles (sunlight, salt solution, boiling, disinfectants diluted as the label says, ironing) and which suits which article (boiling for white cotton towels and handkerchiefs, sunlight for most, ironing for cotton), and gives the reason in a new situation; in the app the child picks the right answer in new situations. Evidence rule: at least four of the last five fresh questions right across at least two question forms, and no repeated pick of the same misconception.",
+     "question_forms": [
+      "match method and article",
+      "choose the reason",
+      "story"
+     ],
+     "thinking": [
+      "recall",
+      "reasoning"
+     ],
+     "horeb_skill_ids": [],
+     "prerequisites": [
+      {
+       "requires": "AGRI.G7.HYGIEN.LAUNDRY_LOOSE_COLOURED_I.LAUNDRY_COLOURS",
+       "kind": "skill",
+       "strength": "essential",
+       "reason": "Caring for fabrics in laundry (Grade 7) decides which method suits. Proposed, to confirm by a CBC Agriculture teacher.",
+       "status": "proposed"
+      },
+      {
+       "requires": "INTE.G7.MIXTUR.MIXTURES.HOMOGENEOUS_SOLUTION",
+       "kind": "skill",
+       "strength": "essential",
+       "reason": "Salt solution and diluted disinfectants are solutions (Integrated Science Grade 7). Proposed, to confirm by a CBC Agriculture teacher.",
+       "status": "proposed"
+      }
+     ],
+     "no_family": true,
+     "status": "proposed"
+    },
+    {
+     "code": "AGRI.G9.HYGIEN.DISINFECTING_CLOTHING_AN.DISINFECT_PRACTICE",
+     "name": "Say how clothing and household articles are disinfected safely",
+     "outcomes": [
+      "AGRI.G9.HYGIEN.DISINFECTING_CLOTHING_AN.b"
+     ],
+     "mastery": "Says how to disinfect an article: wash it clean first, choose the method for the fabric, boil white cottons for 10 to 15 minutes, soak in salt water, dry in full sun, iron with a hot iron, use a chemical disinfectant only diluted by an adult and rinse it out, and store the clean article dry; in the app the child picks the right step, order, material, reason or method in new situations. The practical (disinfecting clothing and household articles) is marked by the teacher with the KICD rubric indicator; the app asks only the knowledge half. Evidence rule: at least four of the last five fresh questions right across at least two question forms, and no repeated pick of the same misconception.",
+     "question_forms": [
+      "order the steps",
+      "choose the method",
+      "story"
+     ],
+     "thinking": [
+      "recall",
+      "reasoning"
+     ],
+     "horeb_skill_ids": [],
+     "prerequisites": [
+      {
+       "requires": "AGRI.G9.HYGIEN.DISINFECTING_CLOTHING_AN.DISINFECT_METHODS",
+       "kind": "skill",
+       "strength": "essential",
+       "reason": "The child knows the methods before using them. Proposed, to confirm by a CBC Agriculture teacher.",
+       "status": "proposed"
+      },
+      {
+       "requires": "AGRI.G5.HYGIEN.LAUNDERING_COTTON_ITEM.LAUNDRY_CARE",
+       "kind": "skill",
+       "strength": "essential",
+       "reason": "Washing, drying and ironing cotton (Grade 5) are part of disinfecting. Proposed, to confirm by a CBC Agriculture teacher.",
+       "status": "proposed"
+      }
+     ],
+     "no_family": true,
+     "status": "proposed",
+     "assessed_by": "teacher marks the practical with the KICD rubric"
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "AGRI.G9.HYGIEN.DISINFECTING_CLOTHING_AN.DISINFECT_METHODS.M_AG9_DM_CLEAN",
+     "skill": "AGRI.G9.HYGIEN.DISINFECTING_CLOTHING_AN.DISINFECT_METHODS",
+     "error": "Thinks a clean-looking article is free of germs.",
+     "example": {
+      "question": "A towel looks clean. Is it free of germs?",
+      "wrong_answer": "Yes, it looks clean",
+      "correct_answer": "Not always; germs cannot be seen, so it may need disinfecting"
+     },
+     "cause": "The child trusts the eye.",
+     "reveals": "Offer \"Yes, it looks clean\" next to the right answer and ask the question again in a new context.",
+     "help": "Recall hand washing: germs cannot be seen.",
+     "feedback": "Clean-looking is not germ-free. Disinfect towels and aprons regularly.",
+     "source": "To confirm by a CBC Agriculture teacher: a common classroom error, not traced to a study by the author.",
+     "status": "draft"
+    },
+    {
+     "code": "AGRI.G9.HYGIEN.DISINFECTING_CLOTHING_AN.DISINFECT_METHODS.M_AG9_DM_BOILALL",
+     "skill": "AGRI.G9.HYGIEN.DISINFECTING_CLOTHING_AN.DISINFECT_METHODS",
+     "error": "Thinks every article can be boiled.",
+     "example": {
+      "question": "Can a coloured nylon item be boiled to disinfect it?",
+      "wrong_answer": "Yes, boil everything",
+      "correct_answer": "No, boil white cotton only; use sun or ironing for others"
+     },
+     "cause": "The child thinks one method fits all.",
+     "reveals": "Offer \"Yes, boil everything\" next to the right answer and ask the question again in a new context.",
+     "help": "Show a coloured item faded and shrunk by boiling.",
+     "feedback": "Boil only white cottons. Use sunlight or a suitable method for others.",
+     "source": "To confirm by a CBC Agriculture teacher: a common classroom error, not traced to a study by the author.",
+     "status": "draft"
+    },
+    {
+     "code": "AGRI.G9.HYGIEN.DISINFECTING_CLOTHING_AN.DISINFECT_METHODS.M_AG9_DM_SUN",
+     "skill": "AGRI.G9.HYGIEN.DISINFECTING_CLOTHING_AN.DISINFECT_METHODS",
+     "error": "Thinks sunlight only dries clothes and does not disinfect.",
+     "example": {
+      "question": "How does drying in strong sun help hygiene?",
+      "wrong_answer": "It only dries",
+      "correct_answer": "The sun's rays help kill germs"
+     },
+     "cause": "The child sees the sun only as a dryer.",
+     "reveals": "Offer \"It only dries\" next to the right answer and ask the question again in a new context.",
+     "help": "Explain the sun's ultraviolet rays kill many germs.",
+     "feedback": "Strong sunlight helps kill germs as clothes dry.",
+     "source": "To confirm by a CBC Agriculture teacher: a common classroom error, not traced to a study by the author.",
+     "status": "draft"
+    },
+    {
+     "code": "AGRI.G9.HYGIEN.DISINFECTING_CLOTHING_AN.DISINFECT_METHODS.M_AG9_DM_IRON",
+     "skill": "AGRI.G9.HYGIEN.DISINFECTING_CLOTHING_AN.DISINFECT_METHODS",
+     "error": "Thinks ironing is only to remove creases.",
+     "example": {
+      "question": "How does ironing help hygiene?",
+      "wrong_answer": "It only removes creases",
+      "correct_answer": "The heat helps kill germs and lice eggs"
+     },
+     "cause": "The child sees ironing as looks only.",
+     "reveals": "Offer \"It only removes creases\" next to the right answer and ask the question again in a new context.",
+     "help": "Talk about ironing school uniforms against lice and germs.",
+     "feedback": "A hot iron helps kill germs and lice eggs in clothes.",
+     "source": "To confirm by a CBC Agriculture teacher: a common classroom error, not traced to a study by the author.",
+     "status": "draft"
+    },
+    {
+     "code": "AGRI.G9.HYGIEN.DISINFECTING_CLOTHING_AN.DISINFECT_PRACTICE.M_AG9_DP_DIRTY",
+     "skill": "AGRI.G9.HYGIEN.DISINFECTING_CLOTHING_AN.DISINFECT_PRACTICE",
+     "error": "Disinfects an article before washing it.",
+     "example": {
+      "question": "What is done before disinfecting a towel?",
+      "wrong_answer": "Nothing, disinfect it as it is",
+      "correct_answer": "Wash it clean first"
+     },
+     "cause": "The child thinks the disinfectant does all the work.",
+     "reveals": "Offer \"Nothing, disinfect it as it is\" next to the right answer and ask the question again in a new context.",
+     "help": "Recall Grade 7: disinfectant works only on a clean surface.",
+     "feedback": "Wash first, then disinfect. Dirt protects germs.",
+     "source": "To confirm by a CBC Agriculture teacher: a common classroom error, not traced to a study by the author.",
+     "status": "draft"
+    },
+    {
+     "code": "AGRI.G9.HYGIEN.DISINFECTING_CLOTHING_AN.DISINFECT_PRACTICE.M_AG9_DP_STRONG",
+     "skill": "AGRI.G9.HYGIEN.DISINFECTING_CLOTHING_AN.DISINFECT_PRACTICE",
+     "error": "Uses chemical disinfectant undiluted to make it stronger.",
+     "example": {
+      "question": "How is a chemical disinfectant used on clothes?",
+      "wrong_answer": "Undiluted, as strong as possible",
+      "correct_answer": "Diluted as the label says, by an adult, then rinsed out"
+     },
+     "cause": "The child thinks stronger is better.",
+     "reveals": "Offer \"Undiluted, as strong as possible\" next to the right answer and ask the question again in a new context.",
+     "help": "Read a disinfectant label's dilution and warnings.",
+     "feedback": "Dilute disinfectants exactly as the label says, and rinse them out.",
+     "source": "To confirm by a CBC Agriculture teacher: a common classroom error, not traced to a study by the author.",
+     "status": "draft"
+    },
+    {
+     "code": "AGRI.G9.HYGIEN.DISINFECTING_CLOTHING_AN.DISINFECT_PRACTICE.M_AG9_DP_SHORT",
+     "skill": "AGRI.G9.HYGIEN.DISINFECTING_CLOTHING_AN.DISINFECT_PRACTICE",
+     "error": "Boils handkerchiefs for a minute only.",
+     "example": {
+      "question": "How long are white cotton handkerchiefs boiled to disinfect them?",
+      "wrong_answer": "A minute",
+      "correct_answer": "About 10 to 15 minutes"
+     },
+     "cause": "The child thinks boiling water kills germs at once.",
+     "reveals": "Offer \"A minute\" next to the right answer and ask the question again in a new context.",
+     "help": "Explain heat needs time to kill germs.",
+     "feedback": "Boil white cottons for 10 to 15 minutes to disinfect them.",
+     "source": "To confirm by a CBC Agriculture teacher: a common classroom error, not traced to a study by the author.",
+     "status": "draft"
+    },
+    {
+     "code": "AGRI.G9.HYGIEN.DISINFECTING_CLOTHING_AN.DISINFECT_PRACTICE.M_AG9_DP_SHADE",
+     "skill": "AGRI.G9.HYGIEN.DISINFECTING_CLOTHING_AN.DISINFECT_PRACTICE",
+     "error": "Dries disinfected articles in a damp, shaded corner.",
+     "example": {
+      "question": "Where are disinfected towels dried?",
+      "wrong_answer": "In a damp shaded corner",
+      "correct_answer": "In full sun where air moves"
+     },
+     "cause": "The child dries where there is space.",
+     "reveals": "Offer \"In a damp shaded corner\" next to the right answer and ask the question again in a new context.",
+     "help": "Smell a towel dried in a damp corner.",
+     "feedback": "Dry disinfected articles in full sun and open air.",
+     "source": "To confirm by a CBC Agriculture teacher: a common classroom error, not traced to a study by the author.",
+     "status": "draft"
+    }
+   ],
    "rubric_indicators": [
     "AGRI.G9.RUBRIC.3.1",
     "AGRI.G9.RUBRIC.3.2",
@@ -556,8 +2283,412 @@
      "status": "kicd_verified"
     }
    ],
-   "skills": [],
-   "misconceptions": [],
+   "skills": [
+    {
+     "code": "AGRI.G9.PRODUC.GRAFTING_IN_PLANTS.GRAFT_MEANING",
+     "name": "Describe grafting as a method of plant propagation",
+     "outcomes": [
+      "AGRI.G9.PRODUC.GRAFTING_IN_PLANTS.a"
+     ],
+     "mastery": "Describes grafting: joining a scion (a shoot or bud from a good plant) to a rootstock (a strong rooted plant) so they grow as one; names the scion, rootstock and union, the common grafts (cleft, whip, side) and crops grafted (mango, avocado, citrus), and gives the reason in a new situation; in the app the child picks the right answer in new situations. Evidence rule: at least four of the last five fresh questions right across at least two question forms, and no repeated pick of the same misconception.",
+     "question_forms": [
+      "name the part",
+      "choose the reason",
+      "story"
+     ],
+     "thinking": [
+      "recall",
+      "reasoning"
+     ],
+     "horeb_skill_ids": [],
+     "prerequisites": [
+      {
+       "requires": "INTE.G9.LIVING.REPRODUCTION_IN_PLANTS.FLOWER_PARTS",
+       "kind": "skill",
+       "strength": "essential",
+       "reason": "Reproduction in plants (Integrated Science Grade 9) contrasts seed with grafting. Proposed, to confirm by a CBC Agriculture teacher.",
+       "status": "proposed"
+      },
+      {
+       "requires": "SCIE.G4.LIVING.PLANTS.PLANT_PART_FUNCTIONS",
+       "kind": "skill",
+       "strength": "essential",
+       "reason": "The roots of the rootstock and the stem and leaves of the scion do the jobs named in Science Grade 4. Proposed, to confirm by a CBC Agriculture teacher.",
+       "status": "proposed"
+      }
+     ],
+     "no_family": true,
+     "status": "proposed"
+    },
+    {
+     "code": "AGRI.G9.PRODUC.GRAFTING_IN_PLANTS.GRAFT_STEPS",
+     "name": "Say the steps of carrying out a graft",
+     "outcomes": [
+      "AGRI.G9.PRODUC.GRAFTING_IN_PLANTS.b"
+     ],
+     "mastery": "Says the steps of a graft: choose a healthy rootstock and a scion from a good mother plant of the same kind, make clean matching cuts with a sharp clean knife (by an adult or with an adult beside), fit the cambium layers together, wrap firmly with grafting tape, cover the scion top, and label; in the app the child picks the right step, order, material, reason or method in new situations. The practical (carrying out grafting) is marked by the teacher with the KICD rubric indicator; the app asks only the knowledge half. Evidence rule: at least four of the last five fresh questions right across at least two question forms, and no repeated pick of the same misconception.",
+     "question_forms": [
+      "order the steps",
+      "choose the tool",
+      "story"
+     ],
+     "thinking": [
+      "recall",
+      "reasoning"
+     ],
+     "horeb_skill_ids": [],
+     "prerequisites": [
+      {
+       "requires": "AGRI.G9.PRODUC.GRAFTING_IN_PLANTS.GRAFT_MEANING",
+       "kind": "skill",
+       "strength": "essential",
+       "reason": "The child knows the parts of a graft before making one. Proposed, to confirm by a CBC Agriculture teacher.",
+       "status": "proposed"
+      },
+      {
+       "requires": "AGRI.G7.CONSER.GROWING_TREES.TREE_PLANTING",
+       "kind": "skill",
+       "strength": "essential",
+       "reason": "Raising and planting tree seedlings (Grade 7) gives the rootstock. Proposed, to confirm by a CBC Agriculture teacher.",
+       "status": "proposed"
+      }
+     ],
+     "no_family": true,
+     "status": "proposed",
+     "assessed_by": "teacher marks the practical with the KICD rubric"
+    },
+    {
+     "code": "AGRI.G9.PRODUC.GRAFTING_IN_PLANTS.GRAFT_CARE",
+     "name": "Say how a grafted plant is cared for until the union succeeds",
+     "outcomes": [
+      "AGRI.G9.PRODUC.GRAFTING_IN_PLANTS.c"
+     ],
+     "mastery": "Says how a grafted plant is cared for: water it, keep it in light shade, protect the union from knocks and animals, remove shoots growing from the rootstock below the union, remove the tape once the union has healed (about 6 to 8 weeks), and watch for the scion to sprout; in the app the child picks the right step, order, material, reason or method in new situations. The practical (caring for grafted plants until the union succeeds) is marked by the teacher with the KICD rubric indicator; the app asks only the knowledge half. Evidence rule: at least four of the last five fresh questions right across at least two question forms, and no repeated pick of the same misconception.",
+     "question_forms": [
+      "choose the action",
+      "order the steps",
+      "story"
+     ],
+     "thinking": [
+      "recall",
+      "reasoning"
+     ],
+     "horeb_skill_ids": [],
+     "prerequisites": [
+      {
+       "requires": "AGRI.G9.PRODUC.GRAFTING_IN_PLANTS.GRAFT_STEPS",
+       "kind": "skill",
+       "strength": "essential",
+       "reason": "The graft is made before it is cared for. Proposed, to confirm by a CBC Agriculture teacher.",
+       "status": "proposed"
+      },
+      {
+       "requires": "AGRI.G5.FOOD_P.GROWING_VEGETABLES.SEEDLING_CARE",
+       "kind": "skill",
+       "strength": "essential",
+       "reason": "Caring for young plants after transplanting (Grade 5) is used again. Proposed, to confirm by a CBC Agriculture teacher.",
+       "status": "proposed"
+      }
+     ],
+     "no_family": true,
+     "status": "proposed",
+     "assessed_by": "teacher marks the practical with the KICD rubric"
+    },
+    {
+     "code": "AGRI.G9.PRODUC.GRAFTING_IN_PLANTS.GRAFT_PURPOSES",
+     "name": "Appraise grafting for repair, aesthetics, improvement and rejuvenation",
+     "outcomes": [
+      "AGRI.G9.PRODUC.GRAFTING_IN_PLANTS.d"
+     ],
+     "mastery": "Appraises the purposes of grafting (repairing a damaged plant, aesthetics such as several colours on one plant, improvement such as early fruiting and better fruit on a hardy rootstock, rejuvenating an old tree by topworking) and judges which purpose fits a given case, and gives the reason in a new situation; in the app the child picks the right answer in new situations. Evidence rule: at least four of the last five fresh questions right across at least two question forms, and no repeated pick of the same misconception.",
+     "question_forms": [
+      "match purpose and case",
+      "story",
+      "choose the best"
+     ],
+     "thinking": [
+      "recall",
+      "reasoning"
+     ],
+     "horeb_skill_ids": [],
+     "prerequisites": [
+      {
+       "requires": "AGRI.G9.PRODUC.GRAFTING_IN_PLANTS.GRAFT_MEANING",
+       "kind": "skill",
+       "strength": "essential",
+       "reason": "The child knows what grafting is before judging its uses. Proposed, to confirm by a CBC Agriculture teacher.",
+       "status": "proposed"
+      },
+      {
+       "requires": "AGRI.G7.PRODUC.ADDING_VALUE_TO_CROP_PRO.VALUE_ADDITION",
+       "kind": "skill",
+       "strength": "essential",
+       "reason": "Better fruit selling for more links grafting to value (Grade 7). Proposed, to confirm by a CBC Agriculture teacher.",
+       "status": "proposed"
+      }
+     ],
+     "no_family": true,
+     "status": "proposed"
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "AGRI.G9.PRODUC.GRAFTING_IN_PLANTS.GRAFT_MEANING.M_AG9_GM_SWAP",
+     "skill": "AGRI.G9.PRODUC.GRAFTING_IN_PLANTS.GRAFT_MEANING",
+     "error": "Calls the rootstock the scion and the scion the rootstock.",
+     "example": {
+      "question": "In a graft, which part gives the roots?",
+      "wrong_answer": "The scion",
+      "correct_answer": "The rootstock"
+     },
+     "cause": "The two new words are learnt together.",
+     "reveals": "Offer \"The scion\" next to the right answer and ask the question again in a new context.",
+     "help": "Label a grafted seedling: root (rootstock) at the bottom, shoot (scion) on top.",
+     "feedback": "The rootstock gives the roots. The scion is the shoot joined on top.",
+     "source": "To confirm by a CBC Agriculture teacher: a common classroom error, not traced to a study by the author.",
+     "status": "draft"
+    },
+    {
+     "code": "AGRI.G9.PRODUC.GRAFTING_IN_PLANTS.GRAFT_MEANING.M_AG9_GM_ANY",
+     "skill": "AGRI.G9.PRODUC.GRAFTING_IN_PLANTS.GRAFT_MEANING",
+     "error": "Thinks any two plants can be grafted, such as a mango scion on a bean.",
+     "example": {
+      "question": "Can a mango scion be grafted onto an avocado rootstock?",
+      "wrong_answer": "Yes, any plants join",
+      "correct_answer": "No, they must be the same or closely related kind"
+     },
+     "cause": "The child thinks tape holds anything together.",
+     "reveals": "Offer \"Yes, any plants join\" next to the right answer and ask the question again in a new context.",
+     "help": "Explain the tissues must match to grow as one.",
+     "feedback": "Graft plants of the same or closely related kind, like mango on mango.",
+     "source": "To confirm by a CBC Agriculture teacher: a common classroom error, not traced to a study by the author.",
+     "status": "draft"
+    },
+    {
+     "code": "AGRI.G9.PRODUC.GRAFTING_IN_PLANTS.GRAFT_MEANING.M_AG9_GM_SEED",
+     "skill": "AGRI.G9.PRODUC.GRAFTING_IN_PLANTS.GRAFT_MEANING",
+     "error": "Thinks a grafted tree is grown from a seed of the good tree.",
+     "example": {
+      "question": "How is a grafted mango different from one grown from seed?",
+      "wrong_answer": "It is the same",
+      "correct_answer": "It carries the good parent's fruit exactly and fruits sooner"
+     },
+     "cause": "The child thinks all trees come from seed.",
+     "reveals": "Offer \"It is the same\" next to the right answer and ask the question again in a new context.",
+     "help": "Compare seedling mangoes (mixed fruit) with grafted ones.",
+     "feedback": "A grafted tree gives the same fruit as its parent and fruits earlier.",
+     "source": "To confirm by a CBC Agriculture teacher: a common classroom error, not traced to a study by the author.",
+     "status": "draft"
+    },
+    {
+     "code": "AGRI.G9.PRODUC.GRAFTING_IN_PLANTS.GRAFT_MEANING.M_AG9_GM_UNION",
+     "skill": "AGRI.G9.PRODUC.GRAFTING_IN_PLANTS.GRAFT_MEANING",
+     "error": "Thinks the union is the tape.",
+     "example": {
+      "question": "What is the graft union?",
+      "wrong_answer": "The grafting tape",
+      "correct_answer": "The place where the scion and rootstock grow together"
+     },
+     "cause": "The child sees the tape at the join.",
+     "reveals": "Offer \"The grafting tape\" next to the right answer and ask the question again in a new context.",
+     "help": "Show a healed union after the tape is off.",
+     "feedback": "The union is where scion and rootstock grow together. The tape only holds them.",
+     "source": "To confirm by a CBC Agriculture teacher: a common classroom error, not traced to a study by the author.",
+     "status": "draft"
+    },
+    {
+     "code": "AGRI.G9.PRODUC.GRAFTING_IN_PLANTS.GRAFT_STEPS.M_AG9_GS_CAMBIUM",
+     "skill": "AGRI.G9.PRODUC.GRAFTING_IN_PLANTS.GRAFT_STEPS",
+     "error": "Fits the cut pieces without matching the green layer under the bark.",
+     "example": {
+      "question": "What must touch for a graft to take?",
+      "wrong_answer": "Any part of the cuts",
+      "correct_answer": "The green cambium layers of scion and rootstock"
+     },
+     "cause": "The child sees only the wood.",
+     "reveals": "Offer \"Any part of the cuts\" next to the right answer and ask the question again in a new context.",
+     "help": "Show the thin green ring under the bark in a cut stem.",
+     "feedback": "Line up the green cambium layers. That is where they grow together.",
+     "source": "To confirm by a CBC Agriculture teacher: a common classroom error, not traced to a study by the author.",
+     "status": "draft"
+    },
+    {
+     "code": "AGRI.G9.PRODUC.GRAFTING_IN_PLANTS.GRAFT_STEPS.M_AG9_GS_BLUNT",
+     "skill": "AGRI.G9.PRODUC.GRAFTING_IN_PLANTS.GRAFT_STEPS",
+     "error": "Uses a blunt or dirty knife.",
+     "example": {
+      "question": "Why is a sharp, clean knife used for grafting?",
+      "wrong_answer": "Any knife works",
+      "correct_answer": "Clean smooth cuts heal and join; dirty knives carry disease"
+     },
+     "cause": "The child thinks cutting is cutting.",
+     "reveals": "Offer \"Any knife works\" next to the right answer and ask the question again in a new context.",
+     "help": "Compare a smooth cut and a torn cut on a stem.",
+     "feedback": "Use a sharp, clean knife: smooth cuts join and no disease gets in.",
+     "source": "To confirm by a CBC Agriculture teacher: a common classroom error, not traced to a study by the author.",
+     "status": "draft"
+    },
+    {
+     "code": "AGRI.G9.PRODUC.GRAFTING_IN_PLANTS.GRAFT_STEPS.M_AG9_GS_LOOSE",
+     "skill": "AGRI.G9.PRODUC.GRAFTING_IN_PLANTS.GRAFT_STEPS",
+     "error": "Wraps the graft loosely.",
+     "example": {
+      "question": "How is the graft wrapped?",
+      "wrong_answer": "Loosely",
+      "correct_answer": "Firmly with grafting tape so the cuts stay together and dry"
+     },
+     "cause": "The child fears hurting the plant.",
+     "reveals": "Offer \"Loosely\" next to the right answer and ask the question again in a new context.",
+     "help": "Show a loose graft that slipped apart.",
+     "feedback": "Wrap firmly so the cut surfaces stay together and do not dry.",
+     "source": "To confirm by a CBC Agriculture teacher: a common classroom error, not traced to a study by the author.",
+     "status": "draft"
+    },
+    {
+     "code": "AGRI.G9.PRODUC.GRAFTING_IN_PLANTS.GRAFT_STEPS.M_AG9_GS_DRY",
+     "skill": "AGRI.G9.PRODUC.GRAFTING_IN_PLANTS.GRAFT_STEPS",
+     "error": "Leaves the cut scion in the sun before grafting.",
+     "example": {
+      "question": "What happens if a scion dries before grafting?",
+      "wrong_answer": "Nothing",
+      "correct_answer": "It dies and the graft fails"
+     },
+     "cause": "The child does not know the scion is alive.",
+     "reveals": "Offer \"Nothing\" next to the right answer and ask the question again in a new context.",
+     "help": "Leave a cut scion in the sun for an hour.",
+     "feedback": "Keep scions fresh and graft quickly so they do not dry.",
+     "source": "To confirm by a CBC Agriculture teacher: a common classroom error, not traced to a study by the author.",
+     "status": "draft"
+    },
+    {
+     "code": "AGRI.G9.PRODUC.GRAFTING_IN_PLANTS.GRAFT_CARE.M_AG9_GC_SUCKERS",
+     "skill": "AGRI.G9.PRODUC.GRAFTING_IN_PLANTS.GRAFT_CARE",
+     "error": "Leaves shoots growing from the rootstock below the union.",
+     "example": {
+      "question": "What is done with shoots growing below the graft union?",
+      "wrong_answer": "Leave them to grow",
+      "correct_answer": "Remove them so the scion gets the food"
+     },
+     "cause": "The child thinks all growth is good.",
+     "reveals": "Offer \"Leave them to grow\" next to the right answer and ask the question again in a new context.",
+     "help": "Show a graft where rootstock shoots took over.",
+     "feedback": "Remove shoots below the union so the scion grows.",
+     "source": "To confirm by a CBC Agriculture teacher: a common classroom error, not traced to a study by the author.",
+     "status": "draft"
+    },
+    {
+     "code": "AGRI.G9.PRODUC.GRAFTING_IN_PLANTS.GRAFT_CARE.M_AG9_GC_TAPE",
+     "skill": "AGRI.G9.PRODUC.GRAFTING_IN_PLANTS.GRAFT_CARE",
+     "error": "Leaves the grafting tape on for ever.",
+     "example": {
+      "question": "When is the grafting tape removed?",
+      "wrong_answer": "Never",
+      "correct_answer": "After the union has healed, about 6 to 8 weeks"
+     },
+     "cause": "The child thinks the tape protects the plant.",
+     "reveals": "Offer \"Never\" next to the right answer and ask the question again in a new context.",
+     "help": "Show a stem strangled by tape left on.",
+     "feedback": "Remove the tape once the union heals, or it cuts into the stem.",
+     "source": "To confirm by a CBC Agriculture teacher: a common classroom error, not traced to a study by the author.",
+     "status": "draft"
+    },
+    {
+     "code": "AGRI.G9.PRODUC.GRAFTING_IN_PLANTS.GRAFT_CARE.M_AG9_GC_SUN",
+     "skill": "AGRI.G9.PRODUC.GRAFTING_IN_PLANTS.GRAFT_CARE",
+     "error": "Puts the newly grafted plant in full sun with no water.",
+     "example": {
+      "question": "Where is a new graft kept?",
+      "wrong_answer": "In full sun, unwatered",
+      "correct_answer": "In light shade, watered regularly"
+     },
+     "cause": "The child thinks a tree is tough.",
+     "reveals": "Offer \"In full sun, unwatered\" next to the right answer and ask the question again in a new context.",
+     "help": "Compare grafts in shade and sun after a week.",
+     "feedback": "Keep new grafts in light shade and water them.",
+     "source": "To confirm by a CBC Agriculture teacher: a common classroom error, not traced to a study by the author.",
+     "status": "draft"
+    },
+    {
+     "code": "AGRI.G9.PRODUC.GRAFTING_IN_PLANTS.GRAFT_CARE.M_AG9_GC_KNOCK",
+     "skill": "AGRI.G9.PRODUC.GRAFTING_IN_PLANTS.GRAFT_CARE",
+     "error": "Lets animals and people brush against the union.",
+     "example": {
+      "question": "Why protect the graft union?",
+      "wrong_answer": "It is strong",
+      "correct_answer": "A knock can break the union before it heals"
+     },
+     "cause": "The child sees the tape as protection enough.",
+     "reveals": "Offer \"It is strong\" next to the right answer and ask the question again in a new context.",
+     "help": "Show a broken graft.",
+     "feedback": "Protect the union from knocks and animals until it heals.",
+     "source": "To confirm by a CBC Agriculture teacher: a common classroom error, not traced to a study by the author.",
+     "status": "draft"
+    },
+    {
+     "code": "AGRI.G9.PRODUC.GRAFTING_IN_PLANTS.GRAFT_PURPOSES.M_AG9_GP_REPAIR",
+     "skill": "AGRI.G9.PRODUC.GRAFTING_IN_PLANTS.GRAFT_PURPOSES",
+     "error": "Thinks a tree with a damaged trunk must be cut down.",
+     "example": {
+      "question": "A young mango tree has its bark eaten by goats. What can grafting do?",
+      "wrong_answer": "Nothing, cut it down",
+      "correct_answer": "Bridge graft over the damage to repair it"
+     },
+     "cause": "The child does not know grafting repairs.",
+     "reveals": "Offer \"Nothing, cut it down\" next to the right answer and ask the question again in a new context.",
+     "help": "Show a bridge graft picture.",
+     "feedback": "Grafting can repair a damaged trunk by bridging the wound.",
+     "source": "To confirm by a CBC Agriculture teacher: a common classroom error, not traced to a study by the author.",
+     "status": "draft"
+    },
+    {
+     "code": "AGRI.G9.PRODUC.GRAFTING_IN_PLANTS.GRAFT_PURPOSES.M_AG9_GP_OLD",
+     "skill": "AGRI.G9.PRODUC.GRAFTING_IN_PLANTS.GRAFT_PURPOSES",
+     "error": "Thinks an old tree giving poor fruit must be replaced by a new seedling.",
+     "example": {
+      "question": "How can an old avocado tree with poor fruit be rejuvenated?",
+      "wrong_answer": "Cut it down and plant a seed",
+      "correct_answer": "Topwork it: cut back and graft a good variety on the old stump"
+     },
+     "cause": "The child thinks old trees cannot change.",
+     "reveals": "Offer \"Cut it down and plant a seed\" next to the right answer and ask the question again in a new context.",
+     "help": "Show a topworked tree fruiting in two years.",
+     "feedback": "Topworking grafts a good variety onto an old tree so it fruits well again.",
+     "source": "To confirm by a CBC Agriculture teacher: a common classroom error, not traced to a study by the author.",
+     "status": "draft"
+    },
+    {
+     "code": "AGRI.G9.PRODUC.GRAFTING_IN_PLANTS.GRAFT_PURPOSES.M_AG9_GP_LOOKS",
+     "skill": "AGRI.G9.PRODUC.GRAFTING_IN_PLANTS.GRAFT_PURPOSES",
+     "error": "Thinks grafting is only for fruit, never for beauty.",
+     "example": {
+      "question": "Can grafting be used for beauty?",
+      "wrong_answer": "No, only for fruit",
+      "correct_answer": "Yes, such as several flower colours on one rose or bougainvillea"
+     },
+     "cause": "The child has seen grafting only in orchards.",
+     "reveals": "Offer \"No, only for fruit\" next to the right answer and ask the question again in a new context.",
+     "help": "Show a rose with two colours.",
+     "feedback": "Grafting can make a plant beautiful, with several colours on one plant.",
+     "source": "To confirm by a CBC Agriculture teacher: a common classroom error, not traced to a study by the author.",
+     "status": "draft"
+    },
+    {
+     "code": "AGRI.G9.PRODUC.GRAFTING_IN_PLANTS.GRAFT_PURPOSES.M_AG9_GP_IMPROVE",
+     "skill": "AGRI.G9.PRODUC.GRAFTING_IN_PLANTS.GRAFT_PURPOSES",
+     "error": "Thinks grafting makes the fruit bigger by itself, whatever the scion.",
+     "example": {
+      "question": "Why graft a good variety onto a hardy local rootstock?",
+      "wrong_answer": "The rootstock decides the fruit",
+      "correct_answer": "The scion gives the good fruit; the hardy rootstock gives strength and disease resistance"
+     },
+     "cause": "The child thinks the roots decide everything.",
+     "reveals": "Offer \"The rootstock decides the fruit\" next to the right answer and ask the question again in a new context.",
+     "help": "Compare fruit of the scion parent and the rootstock parent.",
+     "feedback": "The scion gives the fruit type. The rootstock gives strong, resistant roots.",
+     "source": "To confirm by a CBC Agriculture teacher: a common classroom error, not traced to a study by the author.",
+     "status": "draft"
+    }
+   ],
    "rubric_indicators": [
     "AGRI.G9.RUBRIC.4.1",
     "AGRI.G9.RUBRIC.4.2",
@@ -614,8 +2745,211 @@
      "status": "kicd_verified"
     }
    ],
-   "skills": [],
-   "misconceptions": [],
+   "skills": [
+    {
+     "code": "AGRI.G9.PRODUC.HOMEMADE_SUN_DRYER.SUN_DRYER_DESIGN",
+     "name": "Describe how a homemade sun dryer for vegetables is made and how it works",
+     "outcomes": [
+      "AGRI.G9.PRODUC.HOMEMADE_SUN_DRYER.a"
+     ],
+     "mastery": "Describes a homemade sun dryer: a box with a clear cover that lets sunlight in and traps heat, a black inside that absorbs heat, mesh trays for the vegetables, air inlets low and outlets high so warm air carries moisture away, raised off the ground, from local materials, and gives the reason in a new situation; in the app the child picks the right answer in new situations. Evidence rule: at least four of the last five fresh questions right across at least two question forms, and no repeated pick of the same misconception.",
+     "question_forms": [
+      "name the part",
+      "choose the material",
+      "story with a reason"
+     ],
+     "thinking": [
+      "recall",
+      "reasoning"
+     ],
+     "horeb_skill_ids": [],
+     "prerequisites": [
+      {
+       "requires": "AGRI.G6.FOOD_P.PRESERVING_CROP_PRODUCTS.DRYING_STEPS",
+       "kind": "skill",
+       "strength": "essential",
+       "reason": "Open sun-drying (Grade 6) is what the dryer improves. Proposed, to confirm by a CBC Agriculture teacher.",
+       "status": "proposed"
+      },
+      {
+       "requires": "SCIE.G5.FORCE_.HEAT_TRANSFER.HEAT_MODES",
+       "kind": "skill",
+       "strength": "essential",
+       "reason": "Radiation, conduction and convection (Science Grade 5) explain how the dryer heats and moves air. Proposed, to confirm by a CBC Agriculture teacher.",
+       "status": "proposed"
+      }
+     ],
+     "no_family": true,
+     "status": "proposed"
+    },
+    {
+     "code": "AGRI.G9.PRODUC.HOMEMADE_SUN_DRYER.SUN_DRYER_USE",
+     "name": "Say how a sun dryer is built, placed and used to dry vegetables",
+     "outcomes": [
+      "AGRI.G9.PRODUC.HOMEMADE_SUN_DRYER.b"
+     ],
+     "mastery": "Says how a sun dryer is built and used: sketch and measure, build the box and trays, fit the clear cover and air holes, face it to the sun, raised and tilted, load washed thinly sliced vegetables in one layer, close it, turn the produce, take it out when crisp, store it sealed, and clean the dryer; in the app the child picks the right step, order, material, reason or method in new situations. The practical (constructing a homemade sun dryer and drying vegetables in it) is marked by the teacher with the KICD rubric indicator; the app asks only the knowledge half. Evidence rule: at least four of the last five fresh questions right across at least two question forms, and no repeated pick of the same misconception.",
+     "question_forms": [
+      "order the steps",
+      "choose the place",
+      "story"
+     ],
+     "thinking": [
+      "recall",
+      "reasoning"
+     ],
+     "horeb_skill_ids": [],
+     "prerequisites": [
+      {
+       "requires": "AGRI.G9.PRODUC.HOMEMADE_SUN_DRYER.SUN_DRYER_DESIGN",
+       "kind": "skill",
+       "strength": "essential",
+       "reason": "The child knows how the dryer works before building and using it. Proposed, to confirm by a CBC Agriculture teacher.",
+       "status": "proposed"
+      },
+      {
+       "requires": "PRET.G7.TOOLS_.MEASURING_AND_MARKING_OU.TOOL_CHOOSE",
+       "kind": "skill",
+       "strength": "essential",
+       "reason": "Measuring and marking out (Pre-Technical Grade 7) come before building. Proposed, to confirm by a CBC Agriculture teacher.",
+       "status": "proposed"
+      }
+     ],
+     "no_family": true,
+     "status": "proposed",
+     "assessed_by": "teacher marks the practical with the KICD rubric"
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "AGRI.G9.PRODUC.HOMEMADE_SUN_DRYER.SUN_DRYER_DESIGN.M_AG9_SD_BLACK",
+     "skill": "AGRI.G9.PRODUC.HOMEMADE_SUN_DRYER.SUN_DRYER_DESIGN",
+     "error": "Paints the inside of the dryer white to keep it clean.",
+     "example": {
+      "question": "Why is the inside of a sun dryer black?",
+      "wrong_answer": "It makes no difference",
+      "correct_answer": "Black absorbs more heat from the sun"
+     },
+     "cause": "The child links white with clean.",
+     "reveals": "Offer \"It makes no difference\" next to the right answer and ask the question again in a new context.",
+     "help": "Leave a black and a white tin in the sun and feel them.",
+     "feedback": "Black surfaces absorb heat, so the dryer gets hotter inside.",
+     "source": "To confirm by a CBC Agriculture teacher: a common classroom error, not traced to a study by the author.",
+     "status": "draft"
+    },
+    {
+     "code": "AGRI.G9.PRODUC.HOMEMADE_SUN_DRYER.SUN_DRYER_DESIGN.M_AG9_SD_HOLES",
+     "skill": "AGRI.G9.PRODUC.HOMEMADE_SUN_DRYER.SUN_DRYER_DESIGN",
+     "error": "Seals the dryer completely with no air holes.",
+     "example": {
+      "question": "Why does a sun dryer need air holes at the bottom and top?",
+      "wrong_answer": "It should be sealed to keep heat in",
+      "correct_answer": "Warm moist air leaves at the top and dry air enters at the bottom"
+     },
+     "cause": "The child thinks trapping heat is all that matters.",
+     "reveals": "Offer \"It should be sealed to keep heat in\" next to the right answer and ask the question again in a new context.",
+     "help": "Show water drops forming inside a sealed box with wet leaves.",
+     "feedback": "Air holes let damp air out and dry air in, so the vegetables dry.",
+     "source": "To confirm by a CBC Agriculture teacher: a common classroom error, not traced to a study by the author.",
+     "status": "draft"
+    },
+    {
+     "code": "AGRI.G9.PRODUC.HOMEMADE_SUN_DRYER.SUN_DRYER_DESIGN.M_AG9_SD_COVER",
+     "skill": "AGRI.G9.PRODUC.HOMEMADE_SUN_DRYER.SUN_DRYER_DESIGN",
+     "error": "Uses a dark, opaque cover over the dryer.",
+     "example": {
+      "question": "What kind of cover does a sun dryer need?",
+      "wrong_answer": "A dark sheet that blocks the sun",
+      "correct_answer": "A clear polythene or glass cover that lets sunlight in"
+     },
+     "cause": "The child thinks a cover should shade the food.",
+     "reveals": "Offer \"A dark sheet that blocks the sun\" next to the right answer and ask the question again in a new context.",
+     "help": "Compare inside temperatures under clear and dark covers.",
+     "feedback": "Use a clear cover so sunlight enters and the heat is trapped inside.",
+     "source": "To confirm by a CBC Agriculture teacher: a common classroom error, not traced to a study by the author.",
+     "status": "draft"
+    },
+    {
+     "code": "AGRI.G9.PRODUC.HOMEMADE_SUN_DRYER.SUN_DRYER_DESIGN.M_AG9_SD_WHY",
+     "skill": "AGRI.G9.PRODUC.HOMEMADE_SUN_DRYER.SUN_DRYER_DESIGN",
+     "error": "Thinks a sun dryer is no better than drying on a mat.",
+     "example": {
+      "question": "Why use a sun dryer instead of a mat on the ground?",
+      "wrong_answer": "There is no difference",
+      "correct_answer": "It dries faster and keeps out dust, flies, rain and animals"
+     },
+     "cause": "The child has seen open drying work.",
+     "reveals": "Offer \"There is no difference\" next to the right answer and ask the question again in a new context.",
+     "help": "Dry two lots of sukuma: dryer and mat; compare colour, dirt and time.",
+     "feedback": "A sun dryer dries faster and cleaner than open drying.",
+     "source": "To confirm by a CBC Agriculture teacher: a common classroom error, not traced to a study by the author.",
+     "status": "draft"
+    },
+    {
+     "code": "AGRI.G9.PRODUC.HOMEMADE_SUN_DRYER.SUN_DRYER_USE.M_AG9_SU_PILE",
+     "skill": "AGRI.G9.PRODUC.HOMEMADE_SUN_DRYER.SUN_DRYER_USE",
+     "error": "Piles the vegetables thickly on the tray.",
+     "example": {
+      "question": "How are vegetables loaded in a sun dryer?",
+      "wrong_answer": "In a thick pile",
+      "correct_answer": "In one thin layer with space between pieces"
+     },
+     "cause": "The child wants to dry a lot at once.",
+     "reveals": "Offer \"In a thick pile\" next to the right answer and ask the question again in a new context.",
+     "help": "Load one tray thick and one thin; compare after a day.",
+     "feedback": "Spread vegetables in one thin layer so air reaches every piece.",
+     "source": "To confirm by a CBC Agriculture teacher: a common classroom error, not traced to a study by the author.",
+     "status": "draft"
+    },
+    {
+     "code": "AGRI.G9.PRODUC.HOMEMADE_SUN_DRYER.SUN_DRYER_USE.M_AG9_SU_SHADE",
+     "skill": "AGRI.G9.PRODUC.HOMEMADE_SUN_DRYER.SUN_DRYER_USE",
+     "error": "Puts the dryer in the shade so the vegetables do not burn.",
+     "example": {
+      "question": "Where is a sun dryer placed?",
+      "wrong_answer": "In the shade",
+      "correct_answer": "In full sun, facing the sun, raised and tilted"
+     },
+     "cause": "The child fears the sun will cook the food.",
+     "reveals": "Offer \"In the shade\" next to the right answer and ask the question again in a new context.",
+     "help": "Measure how long drying takes in shade and in sun.",
+     "feedback": "Place the dryer in full sun, facing the sun.",
+     "source": "To confirm by a CBC Agriculture teacher: a common classroom error, not traced to a study by the author.",
+     "status": "draft"
+    },
+    {
+     "code": "AGRI.G9.PRODUC.HOMEMADE_SUN_DRYER.SUN_DRYER_USE.M_AG9_SU_CLEAN",
+     "skill": "AGRI.G9.PRODUC.HOMEMADE_SUN_DRYER.SUN_DRYER_USE",
+     "error": "Never cleans the trays between batches.",
+     "example": {
+      "question": "Why clean the dryer trays after each batch?",
+      "wrong_answer": "There is no need",
+      "correct_answer": "Old bits grow mould and attract pests that spoil the next batch"
+     },
+     "cause": "The child thinks dry trays stay clean.",
+     "reveals": "Offer \"There is no need\" next to the right answer and ask the question again in a new context.",
+     "help": "Show mould on a tray left with old bits.",
+     "feedback": "Clean the trays after each batch.",
+     "source": "To confirm by a CBC Agriculture teacher: a common classroom error, not traced to a study by the author.",
+     "status": "draft"
+    },
+    {
+     "code": "AGRI.G9.PRODUC.HOMEMADE_SUN_DRYER.SUN_DRYER_USE.M_AG9_SU_STORE",
+     "skill": "AGRI.G9.PRODUC.HOMEMADE_SUN_DRYER.SUN_DRYER_USE",
+     "error": "Leaves the dried vegetables in the dryer for days after they are crisp.",
+     "example": {
+      "question": "What is done once the vegetables are crisp?",
+      "wrong_answer": "Leave them in the dryer",
+      "correct_answer": "Cool and store them in a sealed, dry container"
+     },
+     "cause": "The child thinks the dryer is a store.",
+     "reveals": "Offer \"Leave them in the dryer\" next to the right answer and ask the question again in a new context.",
+     "help": "Show crisp vegetables gone limp after a night in the dryer.",
+     "feedback": "Take out crisp vegetables, cool them and seal them in a dry container.",
+     "source": "To confirm by a CBC Agriculture teacher: a common classroom error, not traced to a study by the author.",
+     "status": "draft"
+    }
+   ],
    "rubric_indicators": [
     "AGRI.G9.RUBRIC.4.1",
     "AGRI.G9.RUBRIC.4.2",
