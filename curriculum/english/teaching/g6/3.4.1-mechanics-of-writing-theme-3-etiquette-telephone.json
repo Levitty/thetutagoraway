@@ -1,0 +1,181 @@
+{
+ "sub_strand": "ENGL.G6.WRITIN.T3_MECHANICS_OF_WRITING",
+ "title": "Mechanics of Writing (Theme 3: Etiquette - telephone)",
+ "status": "draft: written 18 Nov 2026 offline for Grade 6 English; not yet checked by a Kenyan English teacher; not loaded by the live tutor",
+ "notes": "",
+ "skills": [
+  {
+   "skill": "ENGL.G6.WRITIN.T3_MECHANICS_OF_WRITING.ABBREVIATIONS",
+   "assessed_by": "questions",
+   "key_step": "The child knows a common short form or acronym and what it stands for.",
+   "floor": {
+    "prerequisite": "Uses capitals and full stops.",
+    "question": "Write Doctor short.",
+    "answer": "Dr"
+   },
+   "steps": [
+    "Short form: Mr, Dr, etc.",
+    "Acronym: initials said as a word (UNICEF).",
+    "Expand it."
+   ],
+   "contexts": [
+    "telephone messages",
+    "a newspaper"
+   ],
+   "board": [
+    {
+     "beat": "write",
+     "do": "Write: KNEC, Dr, e.g."
+    },
+    {
+     "beat": "point",
+     "do": "Point at KNEC.",
+     "say": "What does it stand for?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for the child to answer."
+    },
+    {
+     "beat": "child_draws",
+     "do": "The child expands e.g."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "ENGL.G6.WRITIN.T3_MECHANICS_OF_WRITING.ABBREVIATIONS.M_ABBR_ACRONYM_ANY",
+     "listen_for": [
+      "Mr"
+     ],
+     "ask": "Is it said as a word?",
+     "repair": "Acronym."
+    },
+    {
+     "code": "ENGL.G6.WRITIN.T3_MECHANICS_OF_WRITING.ABBREVIATIONS.M_ABBR_WRONG_EXPAND",
+     "listen_for": [
+      "Kenya National Education Centre"
+     ],
+     "ask": "What does E stand for?",
+     "repair": "Examinations."
+    },
+    {
+     "code": "ENGL.G6.WRITIN.T3_MECHANICS_OF_WRITING.ABBREVIATIONS.M_ABBR_ETC_EG",
+     "listen_for": [
+      "etc."
+     ],
+     "ask": "Example or and so on?",
+     "repair": "E.g."
+    },
+    {
+     "code": "ENGL.G6.WRITIN.T3_MECHANICS_OF_WRITING.ABBREVIATIONS.M_ABBR_SHORT_FORM",
+     "listen_for": [
+      "Dc."
+     ],
+     "ask": "How is Doctor shortened?",
+     "repair": "Dr."
+    }
+   ],
+   "checks": [
+    {
+     "question": "What does e.g. mean?",
+     "answer": "for example",
+     "shows": "meaning"
+    },
+    {
+     "question": "Short form of Doctor?",
+     "answer": "Dr",
+     "shows": "form"
+    }
+   ]
+  },
+  {
+   "skill": "ENGL.G6.WRITIN.T3_MECHANICS_OF_WRITING.NUMERALS",
+   "assessed_by": "questions",
+   "key_step": "The child writes numbers in words and figures with the right spelling and suffix.",
+   "floor": {
+    "prerequisite": "Fills forms with numbers.",
+    "question": "Write 2 in words.",
+    "answer": "two"
+   },
+   "steps": [
+    "Words at the start of a sentence.",
+    "Spell tricky numbers.",
+    "Ordinal suffixes."
+   ],
+   "contexts": [
+    "phone messages",
+    "a newspaper report"
+   ],
+   "board": [
+    {
+     "beat": "write",
+     "do": "Write: 25 learners were absent."
+    },
+    {
+     "beat": "point",
+     "do": "Point at 25.",
+     "say": "How do we start a sentence?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for the child to answer."
+    },
+    {
+     "beat": "child_draws",
+     "do": "The child spells forty and eighth."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "ENGL.G6.WRITIN.T3_MECHANICS_OF_WRITING.NUMERALS.M_NUM_FOURTY",
+     "listen_for": [
+      "fourty"
+     ],
+     "ask": "Is there a u?",
+     "repair": "Forty."
+    },
+    {
+     "code": "ENGL.G6.WRITIN.T3_MECHANICS_OF_WRITING.NUMERALS.M_NUM_START_FIGURE",
+     "listen_for": [
+      "25 learners were absent."
+     ],
+     "ask": "Starting a sentence?",
+     "repair": "In words."
+    },
+    {
+     "code": "ENGL.G6.WRITIN.T3_MECHANICS_OF_WRITING.NUMERALS.M_NUM_ORDINAL_END",
+     "listen_for": [
+      "2th"
+     ],
+     "ask": "2th?",
+     "repair": "2nd."
+    },
+    {
+     "code": "ENGL.G6.WRITIN.T3_MECHANICS_OF_WRITING.NUMERALS.M_NUM_EIGHTH",
+     "listen_for": [
+      "eigth"
+     ],
+     "ask": "Eigth?",
+     "repair": "Eighth."
+    }
+   ],
+   "checks": [
+    {
+     "question": "Spell 40.",
+     "answer": "forty",
+     "shows": "spelling"
+    },
+    {
+     "question": "2 + nd?",
+     "answer": "2nd",
+     "shows": "ordinal"
+    }
+   ]
+  }
+ ],
+ "also_taught_by": [
+  "ENGL.G6.WRITIN.T5_CREATIVE_WRITING.NARRATIVE_COMPOSITION",
+  "ENGL.G6.LISTEN.T1_PRONUNCIATION_AND_LI.IDIOMS_FIXED",
+  "ENGL.G6.LISTEN.T2_PRONUNCIATION_AND_LI.SIMILE_METAPHOR"
+ ]
+}

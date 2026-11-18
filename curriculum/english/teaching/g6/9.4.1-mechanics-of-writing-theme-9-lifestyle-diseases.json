@@ -1,0 +1,92 @@
+{
+ "sub_strand": "ENGL.G6.WRITIN.T9_MECHANICS_OF_WRITING",
+ "title": "Mechanics of writing (Theme 9: Lifestyle diseases)",
+ "status": "draft: written 18 Nov 2026 offline for Grade 6 English; not yet checked by a Kenyan English teacher; not loaded by the live tutor",
+ "notes": "",
+ "skills": [
+  {
+   "skill": "ENGL.G6.WRITIN.T9_MECHANICS_OF_WRITING.HYPHENS",
+   "assessed_by": "questions",
+   "key_step": "The child joins compound adjectives before a noun and numbers 21 to 99 with a hyphen.",
+   "floor": {
+    "prerequisite": "Writes numerals.",
+    "question": "Write 21 in words.",
+    "answer": "twenty-one"
+   },
+   "steps": [
+    "Compound adjective before a noun.",
+    "Numbers 21 to 99.",
+    "Family words: mother-in-law.",
+    "No plural inside: ten-year-old."
+   ],
+   "contexts": [
+    "health reports"
+   ],
+   "board": [
+    {
+     "beat": "write",
+     "do": "Write: a well known singer."
+    },
+    {
+     "beat": "point",
+     "do": "Point at well known.",
+     "say": "Before a noun?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for the child to answer."
+    },
+    {
+     "beat": "child_draws",
+     "do": "The child fixes ten-years-old."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "ENGL.G6.WRITIN.T9_MECHANICS_OF_WRITING.HYPHENS.M_HYP_MISSING",
+     "listen_for": [
+      "She is a well known singer."
+     ],
+     "ask": "Before a noun?",
+     "repair": "Well-known."
+    },
+    {
+     "code": "ENGL.G6.WRITIN.T9_MECHANICS_OF_WRITING.HYPHENS.M_HYP_NUMBER",
+     "listen_for": [
+      "twenty one"
+     ],
+     "ask": "21 to 99?",
+     "repair": "Twenty-one."
+    },
+    {
+     "code": "ENGL.G6.WRITIN.T9_MECHANICS_OF_WRITING.HYPHENS.M_HYP_PLURAL_COMPOUND",
+     "listen_for": [
+      "He is a ten-years-old boy."
+     ],
+     "ask": "Years inside?",
+     "repair": "Year."
+    },
+    {
+     "code": "ENGL.G6.WRITIN.T9_MECHANICS_OF_WRITING.HYPHENS.M_HYP_RELATIVE",
+     "listen_for": [
+      "mother in law"
+     ],
+     "ask": "Family word?",
+     "repair": "Mother-in-law."
+    }
+   ],
+   "checks": [
+    {
+     "question": "Write 34 in words.",
+     "answer": "thirty-four",
+     "shows": "number"
+    },
+    {
+     "question": "a ten-___-old boy",
+     "answer": "year",
+     "shows": "no plural"
+    }
+   ]
+  }
+ ]
+}

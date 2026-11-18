@@ -1,0 +1,182 @@
+{
+ "sub_strand": "ENGL.G6.WRITIN.T13_MECHANICS_OF_WRITING",
+ "title": "Mechanics of writing (Theme 13: Money – trade)",
+ "status": "draft: written 18 Nov 2026 offline for Grade 6 English; not yet checked by a Kenyan English teacher; not loaded by the live tutor",
+ "notes": "",
+ "skills": [
+  {
+   "skill": "ENGL.G6.WRITIN.T13_MECHANICS_OF_WRITING.AFFIXES",
+   "assessed_by": "questions",
+   "key_step": "The child adds the prefix or suffix and applies the spelling change it needs.",
+   "floor": {
+    "prerequisite": "Spells double letters.",
+    "question": "Spell: dissatisfied",
+    "answer": "dissatisfied"
+   },
+   "steps": [
+    "Find the root.",
+    "Add the prefix: meaning changes.",
+    "Add the suffix: check y to i, full to ful."
+   ],
+   "contexts": [
+    "trade words"
+   ],
+   "board": [
+    {
+     "beat": "write",
+     "do": "Write: happy + ness."
+    },
+    {
+     "beat": "point",
+     "do": "Point at y.",
+     "say": "What happens to y?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for the child to answer."
+    },
+    {
+     "beat": "child_draws",
+     "do": "The child adds -ful to care."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "ENGL.G6.WRITIN.T13_MECHANICS_OF_WRITING.AFFIXES.M_AFF_WRONG_PREFIX",
+     "listen_for": [
+      "dis"
+     ],
+     "ask": "Which prefix fits?",
+     "repair": "Un."
+    },
+    {
+     "code": "ENGL.G6.WRITIN.T13_MECHANICS_OF_WRITING.AFFIXES.M_AFF_DOUBLE_LETTER",
+     "listen_for": [
+      "dissapear"
+     ],
+     "ask": "Dis + similar?",
+     "repair": "Dissimilar."
+    },
+    {
+     "code": "ENGL.G6.WRITIN.T13_MECHANICS_OF_WRITING.AFFIXES.M_AFF_FULL",
+     "listen_for": [
+      "full"
+     ],
+     "ask": "Two l's?",
+     "repair": "Ful."
+    },
+    {
+     "code": "ENGL.G6.WRITIN.T13_MECHANICS_OF_WRITING.AFFIXES.M_AFF_Y_TO_I",
+     "listen_for": [
+      "happyness"
+     ],
+     "ask": "Y after a consonant?",
+     "repair": "I."
+    }
+   ],
+   "checks": [
+    {
+     "question": "Opposite of \"happy\" with a prefix?",
+     "answer": "unhappy",
+     "shows": "prefix"
+    },
+    {
+     "question": "care + full?",
+     "answer": "careful",
+     "shows": "suffix"
+    }
+   ]
+  },
+  {
+   "skill": "ENGL.G6.WRITIN.T13_MECHANICS_OF_WRITING.SPELLING_RULES",
+   "assessed_by": "questions",
+   "key_step": "The child says the word slowly and applies the rule (ie and ei, silent letters, double letters) before checking.",
+   "floor": {
+    "prerequisite": "Spells Grade 5 words.",
+    "question": "Spell: account",
+    "answer": "account"
+   },
+   "steps": [
+    "Say it slowly.",
+    "Which rule applies?",
+    "Look, cover, write, check."
+   ],
+   "contexts": [
+    "trade reports"
+   ],
+   "board": [
+    {
+     "beat": "write",
+     "do": "Write: rec_ _ved."
+    },
+    {
+     "beat": "point",
+     "do": "Point at the gap.",
+     "say": "I before e except after c."
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for the child to answer."
+    },
+    {
+     "beat": "child_draws",
+     "do": "The child spells separate and necessary."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "ENGL.G6.WRITIN.T13_MECHANICS_OF_WRITING.SPELLING_RULES.M_SP_IE_EI",
+     "listen_for": [
+      "recieved"
+     ],
+     "ask": "After c?",
+     "repair": "Ei."
+    },
+    {
+     "code": "ENGL.G6.WRITIN.T13_MECHANICS_OF_WRITING.SPELLING_RULES.M_SP_VOWEL",
+     "listen_for": [
+      "seperate"
+     ],
+     "ask": "Sep-a-rate?",
+     "repair": "Separate."
+    },
+    {
+     "code": "ENGL.G6.WRITIN.T13_MECHANICS_OF_WRITING.SPELLING_RULES.M_SP_SILENT",
+     "listen_for": [
+      "enviroment"
+     ],
+     "ask": "Hidden letter?",
+     "repair": "Environment."
+    },
+    {
+     "code": "ENGL.G6.WRITIN.T13_MECHANICS_OF_WRITING.SPELLING_RULES.M_SP_DOUBLE",
+     "listen_for": [
+      "neccessary"
+     ],
+     "ask": "One c, two s?",
+     "repair": "Necessary."
+    },
+    {
+     "code": "ENGL.G6.WRITIN.T13_MECHANICS_OF_WRITING.SPELLING_RULES.M_SP_SOUND",
+     "listen_for": [
+      "libary"
+     ],
+     "ask": "Every part?",
+     "repair": "Library."
+    }
+   ],
+   "checks": [
+    {
+     "question": "Spell: received",
+     "answer": "received",
+     "shows": "ei"
+    },
+    {
+     "question": "Spell: environment",
+     "answer": "environment",
+     "shows": "silent n"
+    }
+   ]
+  }
+ ]
+}

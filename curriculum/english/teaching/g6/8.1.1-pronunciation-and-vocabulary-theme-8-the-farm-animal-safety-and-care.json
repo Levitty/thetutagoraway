@@ -1,0 +1,179 @@
+{
+ "sub_strand": "ENGL.G6.LISTEN.T8_PRONUNCIATION_AND_VO",
+ "title": "Pronunciation and Vocabulary (Theme 8: The farm – animal safety and care)",
+ "status": "draft: written 18 Nov 2026 offline for Grade 6 English; not yet checked by a Kenyan English teacher; not loaded by the live tutor",
+ "notes": "",
+ "skills": [
+  {
+   "skill": "ENGL.G6.LISTEN.T8_PRONUNCIATION_AND_VO.RIDDLES_PROVERBS",
+   "assessed_by": "questions",
+   "key_step": "The child says a riddle asks for a hidden answer and a proverb teaches a lesson.",
+   "floor": {
+    "prerequisite": "Knows proverbs.",
+    "question": "Lesson of a proverb?",
+    "answer": "a lesson"
+   },
+   "steps": [
+    "Does it ask for an answer?",
+    "Riddle.",
+    "Does it teach?",
+    "Proverb."
+   ],
+   "contexts": [
+    "farm animal stories"
+   ],
+   "board": [
+    {
+     "beat": "write",
+     "do": "Write: What has a neck but no head?"
+    },
+    {
+     "beat": "point",
+     "do": "Point at the question.",
+     "say": "Riddle or proverb?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for the child to answer."
+    },
+    {
+     "beat": "child_draws",
+     "do": "The child answers the riddle."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "ENGL.G6.LISTEN.T8_PRONUNCIATION_AND_VO.RIDDLES_PROVERBS.M_RID_PROVERB_AS_RIDDLE",
+     "listen_for": [
+      "Slow and steady wins the race."
+     ],
+     "ask": "Does it ask for an answer?",
+     "repair": "No: proverb."
+    },
+    {
+     "code": "ENGL.G6.LISTEN.T8_PRONUNCIATION_AND_VO.RIDDLES_PROVERBS.M_RID_RIDDLE_AS_PROVERB",
+     "listen_for": [
+      "What runs but never walks?"
+     ],
+     "ask": "Is there a hidden answer?",
+     "repair": "Riddle."
+    },
+    {
+     "code": "ENGL.G6.LISTEN.T8_PRONUNCIATION_AND_VO.RIDDLES_PROVERBS.M_RID_LITERAL",
+     "listen_for": [
+      "a giraffe"
+     ],
+     "ask": "Is it a real neck?",
+     "repair": "Think again."
+    },
+    {
+     "code": "ENGL.G6.LISTEN.T8_PRONUNCIATION_AND_VO.RIDDLES_PROVERBS.M_RID_NO_ANSWER",
+     "listen_for": [
+      "It tells a long story."
+     ],
+     "ask": "What is a riddle for?",
+     "repair": "A hidden answer."
+    }
+   ],
+   "checks": [
+    {
+     "question": "\"Slow and steady wins the race\" is a ...",
+     "answer": "proverb",
+     "shows": "proverb"
+    },
+    {
+     "question": "Answer: What has a neck but no head?",
+     "answer": "a bottle",
+     "shows": "riddle"
+    }
+   ]
+  },
+  {
+   "skill": "ENGL.G6.LISTEN.T8_PRONUNCIATION_AND_VO.PHRASAL_VERBS_USE",
+   "assessed_by": "questions",
+   "key_step": "The child learns the phrasal verb as one unit with its own meaning and its fixed particle.",
+   "floor": {
+    "prerequisite": "Uses prepositions of direction.",
+    "question": "into or to?",
+    "answer": "correct choice"
+   },
+   "steps": [
+    "Say the phrasal verb.",
+    "Say its meaning.",
+    "Use it."
+   ],
+   "contexts": [
+    "farm work",
+    "indoor games"
+   ],
+   "board": [
+    {
+     "beat": "write",
+     "do": "Write: put up with."
+    },
+    {
+     "beat": "point",
+     "do": "Point at up.",
+     "say": "Is it about putting something up?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for the child to answer."
+    },
+    {
+     "beat": "child_draws",
+     "do": "The child uses give up in a sentence."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "ENGL.G6.LISTEN.T8_PRONUNCIATION_AND_VO.PHRASAL_VERBS_USE.M_PV_LITERAL",
+     "listen_for": [
+      "put something on top"
+     ],
+     "ask": "Is it about the words?",
+     "repair": "Learn the meaning."
+    },
+    {
+     "code": "ENGL.G6.LISTEN.T8_PRONUNCIATION_AND_VO.PHRASAL_VERBS_USE.M_PV_PARTICLE",
+     "listen_for": [
+      "give in"
+     ],
+     "ask": "In or up?",
+     "repair": "Give up."
+    },
+    {
+     "code": "ENGL.G6.LISTEN.T8_PRONUNCIATION_AND_VO.PHRASAL_VERBS_USE.M_PV_PREP",
+     "listen_for": [
+      "to"
+     ],
+     "ask": "Cope to?",
+     "repair": "Cope with."
+    },
+    {
+     "code": "ENGL.G6.LISTEN.T8_PRONUNCIATION_AND_VO.PHRASAL_VERBS_USE.M_PV_SAME_MEANING",
+     "listen_for": [
+      "broke up"
+     ],
+     "ask": "Broke up or broke down?",
+     "repair": "Different meanings."
+    }
+   ],
+   "checks": [
+    {
+     "question": "put up with means ...",
+     "answer": "bear patiently",
+     "shows": "meaning"
+    },
+    {
+     "question": "agree ___ someone",
+     "answer": "with",
+     "shows": "particle"
+    }
+   ]
+  }
+ ],
+ "also_taught_by": [
+  "ENGL.G6.LISTEN.T3_PRONUNCIATION_AND_VO.PRONOUNCE_SOUNDS"
+ ]
+}

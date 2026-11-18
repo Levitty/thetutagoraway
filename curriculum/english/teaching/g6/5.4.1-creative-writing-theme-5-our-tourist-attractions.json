@@ -1,0 +1,98 @@
+{
+ "sub_strand": "ENGL.G6.WRITIN.T5_CREATIVE_WRITING",
+ "title": "Creative Writing (Theme 5: Our tourist attractions)",
+ "status": "draft: written 18 Nov 2026 offline for Grade 6 English; not yet checked by a Kenyan English teacher; not loaded by the live tutor",
+ "notes": "",
+ "skills": [
+  {
+   "skill": "ENGL.G6.WRITIN.T5_CREATIVE_WRITING.NARRATIVE_COMPOSITION",
+   "assessed_by": "composition",
+   "key_step": "The child plans a problem and its solution, writes in the past with punctuated speech, then judges with a checklist.",
+   "floor": {
+    "prerequisite": "Writes a Grade 5 narrative.",
+    "question": "Name the parts of a story.",
+    "answer": "introduction, body, conclusion"
+   },
+   "steps": [
+    "Plan.",
+    "Write the beginning.",
+    "Build and solve the problem.",
+    "Check with the checklist: language, relevance, organisation."
+   ],
+   "contexts": [
+    "a trip to a tourist site",
+    "a farm rescue",
+    "a story with numerals and acronyms"
+   ],
+   "board": [
+    {
+     "beat": "write",
+     "do": "Write the checklist: language, relevance, organisation."
+    },
+    {
+     "beat": "point",
+     "do": "Point at organisation.",
+     "say": "Is the story in a good order?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for the child to answer."
+    },
+    {
+     "beat": "child_draws",
+     "do": "The child marks a sample story."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "ENGL.G6.WRITIN.T5_CREATIVE_WRITING.NARRATIVE_COMPOSITION.M6_NC_TENSE",
+     "listen_for": [
+      "escaped ... runs"
+     ],
+     "ask": "When did it happen?",
+     "repair": "Past."
+    },
+    {
+     "code": "ENGL.G6.WRITIN.T5_CREATIVE_WRITING.NARRATIVE_COMPOSITION.M6_NC_FLAT_ENDING",
+     "listen_for": [
+      "Then I woke up and it was a dream."
+     ],
+     "ask": "How is the problem solved?",
+     "repair": "End there."
+    },
+    {
+     "code": "ENGL.G6.WRITIN.T5_CREATIVE_WRITING.NARRATIVE_COMPOSITION.M6_NC_JUDGE_SPELLING_ONLY",
+     "listen_for": [
+      "It has two spelling mistakes, so it is bad."
+     ],
+     "ask": "What else matters?",
+     "repair": "Use the checklist."
+    },
+    {
+     "code": "ENGL.G6.WRITIN.T5_CREATIVE_WRITING.NARRATIVE_COMPOSITION.M6_NC_ABBREV_MISUSE",
+     "listen_for": [
+      "Yes"
+     ],
+     "ask": "Text-speak in a story?",
+     "repair": "Proper words."
+    }
+   ],
+   "checks": [
+    {
+     "question": "Correct: The calf fell and cries.",
+     "answer": "cried",
+     "shows": "tense"
+    },
+    {
+     "question": "Better ending than \"I woke up\"?",
+     "answer": "one that solves the problem",
+     "shows": "ending"
+    }
+   ]
+  }
+ ],
+ "also_taught_by": [
+  "ENGL.G6.WRITIN.T2_CREATIVE_WRITING.PLAN_COMPOSITION",
+  "ENGL.G6.WRITIN.T2_CREATIVE_WRITING.PARAGRAPH_ORDER"
+ ]
+}

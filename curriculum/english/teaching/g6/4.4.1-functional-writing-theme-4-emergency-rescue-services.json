@@ -1,0 +1,185 @@
+{
+ "sub_strand": "ENGL.G6.WRITIN.T4_FUNCTIONAL_WRITING",
+ "title": "Functional Writing (Theme 4: Emergency rescue services)",
+ "status": "draft: written 18 Nov 2026 offline for Grade 6 English; not yet checked by a Kenyan English teacher; not loaded by the live tutor",
+ "notes": "",
+ "skills": [
+  {
+   "skill": "ENGL.G6.WRITIN.T4_FUNCTIONAL_WRITING.FORMAL_LETTER",
+   "assessed_by": "questions",
+   "key_step": "The child names each feature of a formal letter and checks the language is formal.",
+   "floor": {
+    "prerequisite": "Knows friendly letter parts.",
+    "question": "How many addresses in a friendly letter?",
+    "answer": "one"
+   },
+   "steps": [
+    "Two addresses.",
+    "Formal greeting.",
+    "Subject line.",
+    "Formal closing and signature."
+   ],
+   "contexts": [
+    "a letter to the county fire officer"
+   ],
+   "board": [
+    {
+     "beat": "write",
+     "do": "Draw the formal layout."
+    },
+    {
+     "beat": "point",
+     "do": "Point at the subject line.",
+     "say": "What goes here?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for the child to answer."
+    },
+    {
+     "beat": "child_draws",
+     "do": "The child labels the closing."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "ENGL.G6.WRITIN.T4_FUNCTIONAL_WRITING.FORMAL_LETTER.M_LET_CLOSING",
+     "listen_for": [
+      "Yours sincerely"
+     ],
+     "ask": "Dear Sir or a name?",
+     "repair": "Faithfully for Sir."
+    },
+    {
+     "code": "ENGL.G6.WRITIN.T4_FUNCTIONAL_WRITING.FORMAL_LETTER.M_LET_INFORMAL",
+     "listen_for": [
+      "Hi! Come to our party, it will be fun."
+     ],
+     "ask": "Is it formal?",
+     "repair": "Kindly invited."
+    },
+    {
+     "code": "ENGL.G6.WRITIN.T4_FUNCTIONAL_WRITING.FORMAL_LETTER.M_LET_ADDRESS",
+     "listen_for": [
+      "at the bottom"
+     ],
+     "ask": "Where?",
+     "repair": "Top right."
+    },
+    {
+     "code": "ENGL.G6.WRITIN.T4_FUNCTIONAL_WRITING.FORMAL_LETTER.M_LET_NO_SUBJECT",
+     "listen_for": [
+      "the closing"
+     ],
+     "ask": "What is it about?",
+     "repair": "Subject line."
+    },
+    {
+     "code": "ENGL.G6.WRITIN.T4_FUNCTIONAL_WRITING.FORMAL_LETTER.M_LET_SIGNATURE",
+     "listen_for": [
+      "above the greeting"
+     ],
+     "ask": "Where do you sign?",
+     "repair": "Under the closing."
+    }
+   ],
+   "checks": [
+    {
+     "question": "\"Dear Sir\" closes with ...",
+     "answer": "Yours faithfully",
+     "shows": "closing"
+    },
+    {
+     "question": "Where is the writer's address?",
+     "answer": "top right",
+     "shows": "address"
+    }
+   ]
+  },
+  {
+   "skill": "ENGL.G6.WRITIN.T4_FUNCTIONAL_WRITING.FORMAL_INVITATION",
+   "assessed_by": "composition",
+   "key_step": "The child sets out both addresses, the formal greeting and subject, then the event details and a request to reply.",
+   "floor": {
+    "prerequisite": "Knows formal letter features.",
+    "question": "Closing for \"Dear Sir\"?",
+    "answer": "Yours faithfully"
+   },
+   "steps": [
+    "Writer's address and date.",
+    "Receiver's address.",
+    "Dear Sir or Madam and subject.",
+    "What, when, time, where; request a reply; close."
+   ],
+   "contexts": [
+    "inviting the chief to a prize-giving",
+    "inviting a fire officer to talk"
+   ],
+   "board": [
+    {
+     "beat": "write",
+     "do": "Draw the formal layout."
+    },
+    {
+     "beat": "point",
+     "do": "Point at the subject line.",
+     "say": "What goes here?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for the child to answer."
+    },
+    {
+     "beat": "child_draws",
+     "do": "The child writes the event paragraph."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "ENGL.G6.WRITIN.T4_FUNCTIONAL_WRITING.FORMAL_INVITATION.M6_FI_NO_DETAILS",
+     "listen_for": [
+      "the reason only"
+     ],
+     "ask": "What, when, where?",
+     "repair": "Add them."
+    },
+    {
+     "code": "ENGL.G6.WRITIN.T4_FUNCTIONAL_WRITING.FORMAL_INVITATION.M6_FI_INFORMAL_TONE",
+     "listen_for": [
+      "Hi Chief! Come to our party, it will be fun."
+     ],
+     "ask": "Is it formal?",
+     "repair": "Kindly invite."
+    },
+    {
+     "code": "ENGL.G6.WRITIN.T4_FUNCTIONAL_WRITING.FORMAL_INVITATION.M6_FI_ONE_ADDRESS",
+     "listen_for": [
+      "one"
+     ],
+     "ask": "Whose address is missing?",
+     "repair": "The receiver's."
+    },
+    {
+     "code": "ENGL.G6.WRITIN.T4_FUNCTIONAL_WRITING.FORMAL_INVITATION.M6_FI_NO_RSVP",
+     "listen_for": [
+      "nothing"
+     ],
+     "ask": "How will you know they are coming?",
+     "repair": "Ask for a reply."
+    }
+   ],
+   "checks": [
+    {
+     "question": "What four details must the event paragraph give?",
+     "answer": "event, date, time, place",
+     "shows": "details"
+    },
+    {
+     "question": "How many addresses?",
+     "answer": "two",
+     "shows": "layout"
+    }
+   ]
+  }
+ ]
+}

@@ -1,0 +1,262 @@
+{
+ "sub_strand": "ENGL.G6.READIN.T1_EXTENSIVE_READING",
+ "title": "Extensive Reading (Theme 1: Child labour)",
+ "status": "draft: written 18 Nov 2026 offline for Grade 6 English; not yet checked by a Kenyan English teacher; not loaded by the live tutor",
+ "notes": "",
+ "skills": [
+  {
+   "skill": "ENGL.G6.READIN.T1_EXTENSIVE_READING.REFERENCE_MATERIALS",
+   "assessed_by": "questions",
+   "key_step": "The child picks the book and the part (contents, index, guide words) that will find the answer fastest.",
+   "floor": {
+    "prerequisite": "Scans and skims.",
+    "question": "Scan for a date.",
+    "answer": "finds it"
+   },
+   "steps": [
+    "Choose the book.",
+    "Contents for chapters, index for topics.",
+    "Guide words in a dictionary."
+   ],
+   "contexts": [
+    "a project on child labour"
+   ],
+   "board": [
+    {
+     "beat": "write",
+     "do": "Write: contents, index, guide words."
+    },
+    {
+     "beat": "point",
+     "do": "Point at index.",
+     "say": "Where would you find \"child labour, page 45\"?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for the child to answer."
+    },
+    {
+     "beat": "child_draws",
+     "do": "The child finds a word using guide words."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "ENGL.G6.READIN.T1_EXTENSIVE_READING.REFERENCE_MATERIALS.M_REF_WRONG_BOOK",
+     "listen_for": [
+      "dictionary"
+     ],
+     "ask": "What does that book contain?",
+     "repair": "Match it."
+    },
+    {
+     "code": "ENGL.G6.READIN.T1_EXTENSIVE_READING.REFERENCE_MATERIALS.M_REF_ALPHA_FIRST",
+     "listen_for": [
+      "bread, brave, brick"
+     ],
+     "ask": "Same first letter?",
+     "repair": "Next letter."
+    },
+    {
+     "code": "ENGL.G6.READIN.T1_EXTENSIVE_READING.REFERENCE_MATERIALS.M6_REF_GUIDE_WORDS",
+     "listen_for": [
+      "fence"
+     ],
+     "ask": "Between the guide words?",
+     "repair": "Check."
+    },
+    {
+     "code": "ENGL.G6.READIN.T1_EXTENSIVE_READING.REFERENCE_MATERIALS.M_REF_INDEX_CONTENTS",
+     "listen_for": [
+      "contents"
+     ],
+     "ask": "Chapters or topics?",
+     "repair": "Index for topics."
+    }
+   ],
+   "checks": [
+    {
+     "question": "Find the chapter list.",
+     "answer": "contents",
+     "shows": "contents"
+    },
+    {
+     "question": "Find every page that mentions water.",
+     "answer": "index",
+     "shows": "index"
+    }
+   ]
+  },
+  {
+   "skill": "ENGL.G6.READIN.T1_EXTENSIVE_READING.SUITABLE_TEXT",
+   "assessed_by": "questions",
+   "key_step": "The child judges a text by its purpose, topic and level, after reading the blurb and a page.",
+   "floor": {
+    "prerequisite": "Selects reading materials.",
+    "question": "Which book fits your level?",
+    "answer": "a fitting choice"
+   },
+   "steps": [
+    "Say the purpose.",
+    "Check the topic.",
+    "Check the level.",
+    "Decide and say why."
+   ],
+   "contexts": [
+    "the library",
+    "a reading corner"
+   ],
+   "board": [
+    {
+     "beat": "write",
+     "do": "Write: purpose, topic, level."
+    },
+    {
+     "beat": "point",
+     "do": "Point at topic.",
+     "say": "For a project on Lake Victoria, which text?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for the child to answer."
+    },
+    {
+     "beat": "child_draws",
+     "do": "The child judges two texts."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "ENGL.G6.READIN.T1_EXTENSIVE_READING.SUITABLE_TEXT.M_TXT_WRONG_GENRE",
+     "listen_for": [
+      "a story about a bee"
+     ],
+     "ask": "Story or information?",
+     "repair": "Match the purpose."
+    },
+    {
+     "code": "ENGL.G6.READIN.T1_EXTENSIVE_READING.SUITABLE_TEXT.M_TXT_COVER_ONLY",
+     "listen_for": [
+      "look at the cover only"
+     ],
+     "ask": "Did you read the blurb?",
+     "repair": "Read a page."
+    },
+    {
+     "code": "ENGL.G6.READIN.T1_EXTENSIVE_READING.SUITABLE_TEXT.M_TXT_TOO_HARD",
+     "listen_for": [
+      "a text with many unknown words on every line"
+     ],
+     "ask": "How many new words?",
+     "repair": "Choose easier."
+    },
+    {
+     "code": "ENGL.G6.READIN.T1_EXTENSIVE_READING.SUITABLE_TEXT.M_TXT_OFF_TOPIC",
+     "listen_for": [
+      "a text about the desert"
+     ],
+     "ask": "Is it on your topic?",
+     "repair": "Check."
+    }
+   ],
+   "checks": [
+    {
+     "question": "Facts on bees: story or information book?",
+     "answer": "information book",
+     "shows": "genre"
+    },
+    {
+     "question": "A page with many unknown words is ...",
+     "answer": "too hard",
+     "shows": "level"
+    }
+   ]
+  },
+  {
+   "skill": "ENGL.G6.READIN.T1_EXTENSIVE_READING.INDEPENDENT_READING",
+   "assessed_by": "teacher",
+   "key_step": "The child reads a range of texts alone and logs each one with a reason to read it.",
+   "floor": {
+    "prerequisite": "Chooses suitable texts.",
+    "question": "Is this book right for you?",
+    "answer": "a reasoned answer"
+   },
+   "steps": [
+    "Choose a text.",
+    "Read for twenty minutes.",
+    "Log it.",
+    "Recommend it with a reason."
+   ],
+   "contexts": [
+    "the library",
+    "digital texts",
+    "newspapers"
+   ],
+   "board": [
+    {
+     "beat": "write",
+     "do": "Draw a log: title, type, about, worth it because."
+    },
+    {
+     "beat": "point",
+     "do": "Point at worth it because.",
+     "say": "Why read your book?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for the child to answer."
+    },
+    {
+     "beat": "child_draws",
+     "do": "The child fills a log line."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "ENGL.G6.READIN.T1_EXTENSIVE_READING.INDEPENDENT_READING.M6_IR_ONE_GENRE",
+     "listen_for": [
+      "more comics"
+     ],
+     "ask": "How many kinds?",
+     "repair": "Add a new kind."
+    },
+    {
+     "code": "ENGL.G6.READIN.T1_EXTENSIVE_READING.INDEPENDENT_READING.M6_IR_NO_RECORD",
+     "listen_for": [
+      "I will remember"
+     ],
+     "ask": "Where is it written?",
+     "repair": "Log it."
+    },
+    {
+     "code": "ENGL.G6.READIN.T1_EXTENSIVE_READING.INDEPENDENT_READING.M6_IR_ABANDONS",
+     "listen_for": [
+      "drop it"
+     ],
+     "ask": "How far did you read?",
+     "repair": "One more chapter."
+    },
+    {
+     "code": "ENGL.G6.READIN.T1_EXTENSIVE_READING.INDEPENDENT_READING.M6_IR_CANNOT_RECOMMEND",
+     "listen_for": [
+      "It is nice."
+     ],
+     "ask": "Why is it good?",
+     "repair": "Give a reason."
+    }
+   ],
+   "checks": [
+    {
+     "question": "Log has only comics. Add?",
+     "answer": "a novel or information text",
+     "shows": "variety"
+    },
+    {
+     "question": "Why read your book?",
+     "answer": "a reason from the book",
+     "shows": "recommend"
+    }
+   ]
+  }
+ ]
+}

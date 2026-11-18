@@ -1,0 +1,99 @@
+{
+ "sub_strand": "ENGL.G6.READIN.T6_INTENSIVE_READING",
+ "title": "Intensive Reading (Theme 6: Jobs and occupation - work ethics)",
+ "status": "draft: written 18 Nov 2026 offline for Grade 6 English; not yet checked by a Kenyan English teacher; not loaded by the live tutor",
+ "notes": "",
+ "skills": [
+  {
+   "skill": "ENGL.G6.READIN.T6_INTENSIVE_READING.RELATE_TO_LIFE",
+   "assessed_by": "teacher",
+   "key_step": "The child names the main event, finds a real event like it, and says one likeness and one difference.",
+   "floor": {
+    "prerequisite": "Knows the events of a text.",
+    "question": "What happened in the story?",
+    "answer": "the main event"
+   },
+   "steps": [
+    "Say the main event.",
+    "Recall a time like it.",
+    "Say how it is alike.",
+    "Say how it is different."
+   ],
+   "contexts": [
+    "work ethics",
+    "lifestyle diseases",
+    "leisure"
+   ],
+   "board": [
+    {
+     "beat": "write",
+     "do": "Write: In the text ... In my life ..."
+    },
+    {
+     "beat": "point",
+     "do": "Point at In my life.",
+     "say": "When did you see someone work hard like this?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for the child to answer."
+    },
+    {
+     "beat": "child_draws",
+     "do": "The child gives one difference."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "ENGL.G6.READIN.T6_INTENSIVE_READING.RELATE_TO_LIFE.M6_RL_RETELL",
+     "listen_for": [
+      "The mechanic fixed the car."
+     ],
+     "ask": "Is that from your life?",
+     "repair": "Tell your own."
+    },
+    {
+     "code": "ENGL.G6.READIN.T6_INTENSIVE_READING.RELATE_TO_LIFE.M6_RL_SURFACE",
+     "listen_for": [
+      "I also wear a school uniform."
+     ],
+     "ask": "Is that the main idea?",
+     "repair": "Link the big idea."
+    },
+    {
+     "code": "ENGL.G6.READIN.T6_INTENSIVE_READING.RELATE_TO_LIFE.M6_RL_JUDGES_ONLY",
+     "listen_for": [
+      "She is stupid."
+     ],
+     "ask": "Did it happen to you?",
+     "repair": "Tell when."
+    },
+    {
+     "code": "ENGL.G6.READIN.T6_INTENSIVE_READING.RELATE_TO_LIFE.M6_RL_CHANGES_TEXT",
+     "listen_for": [
+      "He bought sweets, like me."
+     ],
+     "ask": "What did the text say?",
+     "repair": "Keep it."
+    }
+   ],
+   "checks": [
+    {
+     "question": "Link a story about saving money to your life.",
+     "answer": "a real saving experience",
+     "shows": "link"
+    },
+    {
+     "question": "Is \"I also have shoes\" a good link?",
+     "answer": "No",
+     "shows": "main idea"
+    }
+   ]
+  }
+ ],
+ "also_taught_by": [
+  "ENGL.G6.READIN.T3_INTENSIVE_READING.CONTEXT_CLUES",
+  "ENGL.G6.READIN.T2_INTENSIVE_READING.FACTUAL_QUESTIONS",
+  "ENGL.G6.READIN.T2_INTENSIVE_READING.INFERENCE_QUESTIONS"
+ ]
+}

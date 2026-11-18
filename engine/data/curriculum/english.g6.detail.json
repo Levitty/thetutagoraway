@@ -235,6 +235,14 @@
    ],
    "mastery": "Chooses the book or text that fits a reader's purpose, level and interest (information, enjoyment, a topic), and does not choose by the cover, the length or the title alone, in 8 of 10 new items."
   },
+  "ENGL.G6.READIN.T1_EXTENSIVE_READING.INDEPENDENT_READING": {
+   "forms": [
+    "reading log",
+    "book talk",
+    "retell to a partner"
+   ],
+   "mastery": "The child reads fiction, non-fiction, poems and digital texts alone each week, keeps a reading log and can say what each was about and whether it was worth reading. Evidence rule: the teacher sees it in two pieces of the learner's own work, scored with the KICD rubric indicator."
+  },
   "ENGL.G6.LANGUA.T1_WORD_CLASSES.DETERMINERS": {
    "forms": [
     "choose the correct word",
@@ -327,6 +335,22 @@
    ],
    "mastery": "Chooses the sentence that opens a paragraph, puts supporting sentences in a logical order and finds the sentence that does not belong, in 8 of 10 new paragraphs."
   },
+  "ENGL.G6.WRITIN.T2_CREATIVE_WRITING.PLAN_COMPOSITION": {
+   "forms": [
+    "which idea fits the topic",
+    "order the plan",
+    "which topic suits these pictures"
+   ],
+   "mastery": "Before writing, the child chooses a topic, lists ideas that keep to it, drops the ones that do not and orders the rest into an introduction, body and conclusion. Evidence rule: at least four of the last five fresh questions right across at least two question forms, and no repeated pick of the same misconception."
+  },
+  "ENGL.G6.WRITIN.T2_CREATIVE_WRITING.OPEN_COMPOSITION": {
+   "forms": [
+    "write about",
+    "write from your plan",
+    "continue the composition"
+   ],
+   "mastery": "The child writes a composition from a plan in clear paragraphs, with each idea on topic, varied linking words and some vivid language. Evidence rule: two pieces of the learner's own writing marked Meeting Expectations or above on the KICD rubric indicator."
+  },
   "ENGL.G6.LISTEN.T3_PRONUNCIATION_AND_VO.POLITE_TALK": {
    "forms": [
     "choose the polite expression",
@@ -334,6 +358,14 @@
     "spot the mistake"
    ],
    "mastery": "Chooses the polite way to answer a call, to take a message, to interrupt (Excuse me, may I add something?) and to ask for clarification (Could you say that again, please?), and spots a rude or blunt turn, in 8 of 10 new items."
+  },
+  "ENGL.G6.LISTEN.T3_PRONUNCIATION_AND_VO.PRONOUNCE_SOUNDS": {
+   "forms": [
+    "say the word after the teacher",
+    "read the pairs aloud",
+    "say a tongue twister"
+   ],
+   "mastery": "The child says the Grade 6 target sounds (/ʊə/ as in tour, /f/ and /v/, /əʊ/ as in phone, /h/) so that a listener hears the right word: tour not tore, van not fan, phone not fon, hat not at. Evidence rule: the teacher hears it done right on two different days, scored with the observation rubric (PLAN_OBSERVATION_RUBRICS.md); a tapped answer cannot show it."
   },
   "ENGL.G6.READIN.T3_INTENSIVE_READING.CONTEXT_CLUES": {
    "forms": [
@@ -381,6 +413,22 @@
    ],
    "mastery": "Chooses the right word (ambulance, paramedic, firefighter, siren, evacuate, first aid, emergency, rescue) for a rescue situation, and does not mix the person, the vehicle and the action, in 8 of 10 new items."
   },
+  "ENGL.G6.LISTEN.T4_PRONUNCIATION_AND_VO.WORD_STRESS": {
+   "forms": [
+    "say it as a noun and as a verb",
+    "which words carry the stress",
+    "say the sentence with the right beat"
+   ],
+   "mastery": "The child stresses PERmit (noun) and perMIT (verb), OBject and obJECT, and in a sentence stresses the content words (nouns, main verbs, adjectives) and keeps small helping words weak unless they carry the meaning. Evidence rule: the teacher hears it done right on two different days, scored with the observation rubric (PLAN_OBSERVATION_RUBRICS.md); a tapped answer cannot show it."
+  },
+  "ENGL.G6.READIN.T4_INTENSIVE_READING.READ_VISUALS": {
+   "forms": [
+    "what will happen next",
+    "does this picture fit the text",
+    "what does the visual show"
+   ],
+   "mastery": "The child uses pictures, diagrams and captions to predict what a text will say, and judges whether a visual matches and helps the text it sits in. Evidence rule: at least four of the last five fresh questions right across at least two question forms, and no repeated pick of the same misconception."
+  },
   "ENGL.G6.LANGUA.T4_WORD_CLASSES.RELATIVE_PRONOUNS": {
    "forms": [
     "choose the correct word",
@@ -404,6 +452,22 @@
    ],
    "mastery": "Tells where each part goes (address, date, greeting, subject line, closing, signature), matches the closing to the greeting (Dear Sir with Yours faithfully), and picks the polite formal wording, in 8 of 10 new items."
   },
+  "ENGL.G6.WRITIN.T4_FUNCTIONAL_WRITING.FORMAL_INVITATION": {
+   "forms": [
+    "write an invitation to",
+    "correct this invitation",
+    "what is missing from the letter"
+   ],
+   "mastery": "The child writes a formal invitation with the writer's address, date, the receiver's address, a formal greeting, a subject line, the event, date, time and place, a polite request to reply, Yours faithfully or Yours sincerely, signature and name. Evidence rule: two pieces of the learner's own writing marked Meeting Expectations or above on the KICD rubric indicator."
+  },
+  "ENGL.G6.LISTEN.T5_PRONUNCIATION_AND_VO.ORAL_RESPONSE": {
+   "forms": [
+    "answer the question you hear",
+    "listen and note the details",
+    "ask a follow-up question"
+   ],
+   "mastery": "After hearing a short talk about a tourist attraction, the child answers oral questions in full sentences with the details given, and asks one sensible follow-up question. Evidence rule: the teacher hears it done right on two different days, scored with the observation rubric (PLAN_OBSERVATION_RUBRICS.md); a tapped answer cannot show it."
+  },
   "ENGL.G6.LANGUA.T5_ADJECTIVES.ADJECTIVE_DEGREES": {
    "forms": [
     "pick the form",
@@ -413,12 +477,44 @@
    ],
    "mastery": "Tells the three forms apart and writes as ... as with the simple form, than with the comparative and the with the superlative, and does not write as taller as or the tallest than, in 8 of 10 new items."
   },
+  "ENGL.G6.WRITIN.T5_CREATIVE_WRITING.NARRATIVE_COMPOSITION": {
+   "forms": [
+    "write a story about",
+    "mark this story with the checklist",
+    "improve this story"
+   ],
+   "mastery": "The child writes a story with a clear beginning, a problem that builds and an ending, in the past tense, with direct speech punctuated, and judges a story for language, relevance and organisation. Evidence rule: two pieces of the learner's own writing marked Meeting Expectations or above on the KICD rubric indicator."
+  },
   "ENGL.G6.LISTEN.T6_PRONUNCIATION_AND_VO.SOUNDS": {
    "forms": [
     "pick the word with the same sound",
     "find the odd one out"
    ],
    "mastery": "Picks the word with the same vowel sound as near (/ɪə/), tour (/ʊə/) or go (/əʊ/), or the word that starts with /f/, /v/ or an /h/ that is said (hour and honest start without it), in 8 of 10 new items."
+  },
+  "ENGL.G6.LISTEN.T6_PRONUNCIATION_AND_VO.WORK_ETHICS_WORDS": {
+   "forms": [
+    "choose the right word",
+    "fill the gap",
+    "which word fits the worker"
+   ],
+   "mastery": "The child uses punctual, honest, diligent, integrity, absent, promotion, salary and similar words correctly in sentences about jobs. Evidence rule: at least four of the last five fresh questions right across at least two question forms, and no repeated pick of the same misconception."
+  },
+  "ENGL.G6.LISTEN.T6_PRONUNCIATION_AND_VO.INTONATION": {
+   "forms": [
+    "say it as a question, statement and exclamation",
+    "up or down at the end",
+    "which word is stressed"
+   ],
+   "mastery": "The child uses a falling tune for statements and WH questions, a rising tune for yes or no questions, and a strong, high start for exclamations (What a hard worker!). Evidence rule: the teacher hears it done right on two different days, scored with the observation rubric (PLAN_OBSERVATION_RUBRICS.md); a tapped answer cannot show it."
+  },
+  "ENGL.G6.READIN.T6_INTENSIVE_READING.RELATE_TO_LIFE": {
+   "forms": [
+    "has this happened to you",
+    "what would you do",
+    "how is this like your community"
+   ],
+   "mastery": "The child links an event or idea in the text to a real experience or something in the community, says how they are alike and different, and keeps to what the text says. Evidence rule: the teacher sees it in two pieces of the learner's own work, scored with the KICD rubric indicator."
   },
   "ENGL.G6.LANGUA.T6_PHRASAL_QUANTIFIERS.PHRASAL_QUANTIFIERS": {
    "forms": [
@@ -427,6 +523,14 @@
     "spot the mistake"
    ],
    "mastery": "Uses a number of and a good many with countable nouns, a great deal of and an amount of with uncountable nouns, and a piece, bottle, loaf or bar of for single items of an uncountable thing, with of every time, in 8 of 10 new items."
+  },
+  "ENGL.G6.WRITIN.T6_CREATIVE_WRITING.PICTORIAL_COMPOSITION": {
+   "forms": [
+    "write the story the pictures tell",
+    "give it a title",
+    "judge this pictorial composition"
+   ],
+   "mastery": "The child writes a linked story that covers every picture in order, with names, actions and feelings the pictures suggest, and judges another for relevance, language and creativity. Evidence rule: two pieces of the learner's own writing marked Meeting Expectations or above on the KICD rubric indicator."
   },
   "ENGL.G6.LANGUA.T7_TENSE.FUTURE_CONTINUOUS": {
    "forms": [
@@ -465,6 +569,14 @@
    ],
    "mastery": "Chooses the phrasal verb and its particle for a meaning (give up, set off, break down, run out of, put up with, cope with, agree with, look after), and does not use the wrong preposition, in 8 of 10 new items."
   },
+  "ENGL.G6.READIN.T8_FLUENCY.READ_FLUENTLY": {
+   "forms": [
+    "read aloud to the teacher",
+    "read the dialogue in parts",
+    "reread for expression"
+   ],
+   "mastery": "The child reads a Grade 6 text aloud at about talking speed, in phrases, with few slips, pausing at punctuation and letting the voice show questions, speech and feeling. Evidence rule: the teacher hears it done right on two different days, scored with the observation rubric (PLAN_OBSERVATION_RUBRICS.md); a tapped answer cannot show it."
+  },
   "ENGL.G6.LANGUA.T8_SENTENCE_PATTERNS.ACTIVE_PASSIVE": {
    "forms": [
     "pick the passive sentence",
@@ -481,6 +593,14 @@
     "spot the mistake"
    ],
    "mastery": "Chooses between each of these pairs from who is giving, who is receiving and which way the thing moves, and does not use one word for both as in Kiswahili, in 8 of 10 new items."
+  },
+  "ENGL.G6.LISTEN.T9_PRONUNCIATION_AND_SP.SPEAK_FLUENTLY": {
+   "forms": [
+    "give a short speech",
+    "present a talk on the theme",
+    "answer questions after the talk"
+   ],
+   "mastery": "The child gives a two to three minute talk or speech on a theme from notes, at a steady pace, with few hesitations, clear sounds and expression that fits the message. Evidence rule: the teacher hears it done right on two different days, scored with the observation rubric (PLAN_OBSERVATION_RUBRICS.md); a tapped answer cannot show it."
   },
   "ENGL.G6.READIN.T9_INTENSIVE_READING_FI.FACT_OPINION": {
    "forms": [
@@ -506,6 +626,14 @@
    ],
    "mastery": "Writes the hyphen in compound words (well-known, mother-in-law), in numbers from twenty-one to ninety-nine and in a compound before a noun (a ten-year-old boy, but ten years old), and does not write ten-years-old, in 8 of 10 new items."
   },
+  "ENGL.G6.LISTEN.T10_PRONUNCIATION_AND_VO.EXPRESS_MOODS": {
+   "forms": [
+    "say it as if you are worried",
+    "role play the conversation",
+    "show surprise"
+   ],
+   "mastery": "The child changes tone, words and face to suit the mood of the conversation (surprised, sorry, pleased, concerned) and does not laugh at sad news or sound angry when pleased. Evidence rule: the teacher hears it done right on two different days, scored with the observation rubric (PLAN_OBSERVATION_RUBRICS.md); a tapped answer cannot show it."
+  },
   "ENGL.G6.LANGUA.T10_CONJUNCTIONS.CONJUNCTIONS_USE": {
    "forms": [
     "choose the correct word",
@@ -513,6 +641,22 @@
     "spot the mistake"
    ],
    "mastery": "Chooses the conjunction that fits the meaning (contrast, condition, purpose, time), uses only one joining word (Although ... but ... is wrong), and does not write unless ... not, in 8 of 10 new items."
+  },
+  "ENGL.G6.WRITIN.T10_CREATIVE_WRITING.DESCRIBING_WORDS": {
+   "forms": [
+    "choose the best adjective",
+    "improve the description",
+    "which adjective fits"
+   ],
+   "mastery": "The child chooses exact adjectives for looks, character, size, colour, sound and smell (a towering jacaranda, not a big tree) and puts them in the right order. Evidence rule: at least four of the last five fresh questions right across at least two question forms, and no repeated pick of the same misconception."
+  },
+  "ENGL.G6.WRITIN.T10_CREATIVE_WRITING.DESCRIPTIVE_COMPOSITION": {
+   "forms": [
+    "describe a place",
+    "plan by the senses",
+    "judge this description"
+   ],
+   "mastery": "The child plans a description by the senses, writes it in a clear order with exact words, and judges a description for language, relevance, creativity and organisation. Evidence rule: two pieces of the learner's own writing marked Meeting Expectations or above on the KICD rubric indicator."
   },
   "ENGL.G6.LANGUA.T11_INTERROGATIVES.INTERROGATIVES_USE": {
    "forms": [
@@ -529,6 +673,14 @@
     "spot the mistake"
    ],
    "mastery": "Chooses a word with the same meaning (synonym) or the opposite meaning (antonym) in a sentence, and does not give a related word, the same word or the wrong kind of pair, in 8 of 10 new items."
+  },
+  "ENGL.G6.LISTEN.T12_PRONUNCIATION_AND_VO.NONVERBAL_CUES": {
+   "forms": [
+    "which gesture fits",
+    "was this cue right",
+    "what does the gesture show"
+   ],
+   "mastery": "The child chooses gestures, eye contact and facial expression that support what is said, and judges whether a speaker's cues in a conversation or video fit the message. Evidence rule: at least four of the last five fresh questions right across at least two question forms, and no repeated pick of the same misconception."
   },
   "ENGL.G6.READIN.T12_INTENSIVE_READING.POEM_FEATURES": {
    "forms": [
@@ -559,6 +711,14 @@
     "spot the mistake"
    ],
    "mastery": "Chooses the right word (profit, loss, import, export, customer, retailer, wholesaler, wages, budget) for a trading situation, and does not swap the opposite pairs, in 8 of 10 new items."
+  },
+  "ENGL.G6.LISTEN.T13_PRONUNCIATION_AND_IN.DICTATION": {
+   "forms": [
+    "write what you hear",
+    "check your copy",
+    "fill the gaps as you listen"
+   ],
+   "mastery": "The child writes a short text read aloud twice, with every word spelt right, sentence punctuation in place and nothing added or left out. Evidence rule: the teacher sees it in two pieces of the learner's own work, scored with the KICD rubric indicator."
   },
   "ENGL.G6.LANGUA.T13_WORD_CLASSES.PREPOSITIONS_USE": {
    "forms": [

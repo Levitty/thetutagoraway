@@ -1,0 +1,97 @@
+{
+ "sub_strand": "ENGL.G6.READIN.T3_INTENSIVE_READING",
+ "title": "Intensive Reading (Theme 3: Etiquette - telephone)",
+ "status": "draft: written 18 Nov 2026 offline for Grade 6 English; not yet checked by a Kenyan English teacher; not loaded by the live tutor",
+ "notes": "",
+ "skills": [
+  {
+   "skill": "ENGL.G6.READIN.T3_INTENSIVE_READING.CONTEXT_CLUES",
+   "assessed_by": "questions",
+   "key_step": "The child spots the new word or expression and uses the sentence around it to work out the meaning.",
+   "floor": {
+    "prerequisite": "Uses Grade 5 context clues.",
+    "question": "What helps you guess?",
+    "answer": "the words around it"
+   },
+   "steps": [
+    "Find the new word.",
+    "Read around it.",
+    "Try a meaning.",
+    "Check it fits."
+   ],
+   "contexts": [
+    "telephone etiquette",
+    "work ethics"
+   ],
+   "board": [
+    {
+     "beat": "write",
+     "do": "Write: She managed to cope with the noise, though it was hard."
+    },
+    {
+     "beat": "point",
+     "do": "Point at cope with.",
+     "say": "What clue helps?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for the child to answer."
+    },
+    {
+     "beat": "child_draws",
+     "do": "The child gives the meaning."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "ENGL.G6.READIN.T3_INTENSIVE_READING.CONTEXT_CLUES.M6_CTX_COMMON_MEANING",
+     "listen_for": [
+      "moved fast on foot"
+     ],
+     "ask": "Does the usual meaning fit?",
+     "repair": "Use this sentence."
+    },
+    {
+     "code": "ENGL.G6.READIN.T3_INTENSIVE_READING.CONTEXT_CLUES.M6_CTX_LOOKS_LIKE",
+     "listen_for": [
+      "a word it looks like"
+     ],
+     "ask": "Does it fit?",
+     "repair": "Not the look."
+    },
+    {
+     "code": "ENGL.G6.READIN.T3_INTENSIVE_READING.CONTEXT_CLUES.M6_CTX_OPPOSITE",
+     "listen_for": [
+      "the opposite"
+     ],
+     "ask": "Does it agree?",
+     "repair": "Not the opposite."
+    },
+    {
+     "code": "ENGL.G6.READIN.T3_INTENSIVE_READING.CONTEXT_CLUES.M6_CTX_WRONG_CLUE",
+     "listen_for": [
+      "the title"
+     ],
+     "ask": "Does that explain it?",
+     "repair": "Find the clue."
+    }
+   ],
+   "checks": [
+    {
+     "question": "\"He trudged home, tired and wet.\" Trudged means ...",
+     "answer": "walked slowly and heavily",
+     "shows": "clue"
+    },
+    {
+     "question": "Which word would you look up?",
+     "answer": "the new word",
+     "shows": "noticing"
+    }
+   ]
+  }
+ ],
+ "also_taught_by": [
+  "ENGL.G6.READIN.T2_INTENSIVE_READING.FACTUAL_QUESTIONS",
+  "ENGL.G6.READIN.T2_INTENSIVE_READING.INFERENCE_QUESTIONS"
+ ]
+}

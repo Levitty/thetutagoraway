@@ -1,0 +1,92 @@
+{
+ "sub_strand": "ENGL.G6.WRITIN.T12_FUNCTIONAL_WRITING",
+ "title": "Functional Writing (Theme 12: Environment conservation)",
+ "status": "draft: written 18 Nov 2026 offline for Grade 6 English; not yet checked by a Kenyan English teacher; not loaded by the live tutor",
+ "notes": "",
+ "skills": [
+  {
+   "skill": "ENGL.G6.WRITIN.T12_FUNCTIONAL_WRITING.JOURNAL",
+   "assessed_by": "questions",
+   "key_step": "The child dates each entry and writes in the first person about events and feelings.",
+   "floor": {
+    "prerequisite": "Writes diary entries.",
+    "question": "What starts an entry?",
+    "answer": "the date"
+   },
+   "steps": [
+    "Date.",
+    "I and the past tense.",
+    "Events.",
+    "Feelings."
+   ],
+   "contexts": [
+    "a conservation journal"
+   ],
+   "board": [
+    {
+     "beat": "write",
+     "do": "Write: Saturday, 3rd May."
+    },
+    {
+     "beat": "point",
+     "do": "Point at the date.",
+     "say": "What happened today?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for the child to answer."
+    },
+    {
+     "beat": "child_draws",
+     "do": "The child adds a feeling."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "ENGL.G6.WRITIN.T12_FUNCTIONAL_WRITING.JOURNAL.M_JRN_THIRD_PERSON",
+     "listen_for": [
+      "Otieno went to the market."
+     ],
+     "ask": "Who is writing?",
+     "repair": "I."
+    },
+    {
+     "code": "ENGL.G6.WRITIN.T12_FUNCTIONAL_WRITING.JOURNAL.M_JRN_NO_DATE",
+     "listen_for": [
+      "a greeting"
+     ],
+     "ask": "When?",
+     "repair": "Date."
+    },
+    {
+     "code": "ENGL.G6.WRITIN.T12_FUNCTIONAL_WRITING.JOURNAL.M_JRN_LETTER_FORM",
+     "listen_for": [
+      "the date"
+     ],
+     "ask": "A letter?",
+     "repair": "No closing."
+    },
+    {
+     "code": "ENGL.G6.WRITIN.T12_FUNCTIONAL_WRITING.JOURNAL.M_JRN_FACTS_ONLY",
+     "listen_for": [
+      "it lists the times"
+     ],
+     "ask": "How did you feel?",
+     "repair": "Add it."
+    }
+   ],
+   "checks": [
+    {
+     "question": "Is \"Otieno went to the market\" a journal sentence?",
+     "answer": "No",
+     "shows": "person"
+    },
+    {
+     "question": "Journal closing \"Yours sincerely\"?",
+     "answer": "No",
+     "shows": "format"
+    }
+   ]
+  }
+ ]
+}

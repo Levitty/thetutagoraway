@@ -1,0 +1,98 @@
+{
+ "sub_strand": "ENGL.G6.WRITIN.T6_CREATIVE_WRITING",
+ "title": "Creative Writing (Theme 6: Jobs and occupation - work ethics)",
+ "status": "draft: written 18 Nov 2026 offline for Grade 6 English; not yet checked by a Kenyan English teacher; not loaded by the live tutor",
+ "notes": "",
+ "skills": [
+  {
+   "skill": "ENGL.G6.WRITIN.T6_CREATIVE_WRITING.PICTORIAL_COMPOSITION",
+   "assessed_by": "composition",
+   "key_step": "The child names the characters, links every picture with time words and gives a title that fits all of them.",
+   "floor": {
+    "prerequisite": "Writes from pictures.",
+    "question": "Say what happens in picture 1.",
+    "answer": "a past-tense sentence"
+   },
+   "steps": [
+    "Look at all the pictures.",
+    "Name the characters.",
+    "Write and link each picture.",
+    "Title it; judge with the checklist."
+   ],
+   "contexts": [
+    "jobs and work ethics",
+    "a market day"
+   ],
+   "board": [
+    {
+     "beat": "write",
+     "do": "Draw four boxes about a lazy then diligent worker."
+    },
+    {
+     "beat": "point",
+     "do": "Point at box 3.",
+     "say": "How does it link to box 2?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for the child to answer."
+    },
+    {
+     "beat": "child_draws",
+     "do": "The child gives a title."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "ENGL.G6.WRITIN.T6_CREATIVE_WRITING.PICTORIAL_COMPOSITION.M6_PIC_LABELS",
+     "listen_for": [
+      "A man. A car."
+     ],
+     "ask": "What did they do?",
+     "repair": "Tell it."
+    },
+    {
+     "code": "ENGL.G6.WRITIN.T6_CREATIVE_WRITING.PICTORIAL_COMPOSITION.M6_PIC_NO_LINKS",
+     "listen_for": [
+      "no link"
+     ],
+     "ask": "How are they linked?",
+     "repair": "Time words."
+    },
+    {
+     "code": "ENGL.G6.WRITIN.T6_CREATIVE_WRITING.PICTORIAL_COMPOSITION.M6_PIC_SKIP",
+     "listen_for": [
+      "five"
+     ],
+     "ask": "Every picture?",
+     "repair": "Tick them."
+    },
+    {
+     "code": "ENGL.G6.WRITIN.T6_CREATIVE_WRITING.PICTORIAL_COMPOSITION.M6_PIC_TITLE",
+     "listen_for": [
+      "The Car"
+     ],
+     "ask": "Does it fit all?",
+     "repair": "Name the whole story."
+    }
+   ],
+   "checks": [
+    {
+     "question": "Picture: a mechanic under a car. Sentence?",
+     "answer": "Mr Kipchoge crawled under the matatu.",
+     "shows": "action"
+    },
+    {
+     "question": "Title for lazy-to-diligent pictures?",
+     "answer": "From Lazy to Diligent",
+     "shows": "title"
+    }
+   ]
+  }
+ ],
+ "also_taught_by": [
+  "ENGL.G6.WRITIN.T2_CREATIVE_WRITING.PLAN_COMPOSITION",
+  "ENGL.G6.LISTEN.T2_PRONUNCIATION_AND_LI.SIMILE_METAPHOR",
+  "ENGL.G6.LISTEN.T8_PRONUNCIATION_AND_VO.PHRASAL_VERBS_USE"
+ ]
+}

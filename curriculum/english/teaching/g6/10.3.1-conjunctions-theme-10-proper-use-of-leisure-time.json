@@ -1,0 +1,100 @@
+{
+ "sub_strand": "ENGL.G6.LANGUA.T10_CONJUNCTIONS",
+ "title": "Conjunctions (Theme 10: Proper use of leisure time)",
+ "status": "draft: written 18 Nov 2026 offline for Grade 6 English; not yet checked by a Kenyan English teacher; not loaded by the live tutor",
+ "notes": "",
+ "skills": [
+  {
+   "skill": "ENGL.G6.LANGUA.T10_CONJUNCTIONS.CONJUNCTIONS_USE",
+   "assessed_by": "questions",
+   "key_step": "The child names the link (contrast, condition, time, purpose) and uses the conjunction alone, with no extra but or not.",
+   "floor": {
+    "prerequisite": "Uses Grade 5 conjunctions.",
+    "question": "yet or because?",
+    "answer": "correct choice"
+   },
+   "steps": [
+    "Contrast: although, whereas.",
+    "Condition: unless.",
+    "Time: while, until.",
+    "Purpose: so that."
+   ],
+   "contexts": [
+    "leisure time"
+   ],
+   "board": [
+    {
+     "beat": "write",
+     "do": "Write: Although it rained, ___ we played."
+    },
+    {
+     "beat": "point",
+     "do": "Point at the gap.",
+     "say": "Do we need but?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for the child to answer."
+    },
+    {
+     "beat": "child_draws",
+     "do": "The child writes an unless sentence."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "ENGL.G6.LANGUA.T10_CONJUNCTIONS.CONJUNCTIONS_USE.M_CJ_ALTHOUGH_BUT",
+     "listen_for": [
+      "but"
+     ],
+     "ask": "Although and but?",
+     "repair": "One only."
+    },
+    {
+     "code": "ENGL.G6.LANGUA.T10_CONJUNCTIONS.CONJUNCTIONS_USE.M_CJ_UNLESS_NOT",
+     "listen_for": [
+      "unless not"
+     ],
+     "ask": "Unless not?",
+     "repair": "Unless alone."
+    },
+    {
+     "code": "ENGL.G6.LANGUA.T10_CONJUNCTIONS.CONJUNCTIONS_USE.M_CJ_WHILE_UNTIL",
+     "listen_for": [
+      "while"
+     ],
+     "ask": "Up to a time?",
+     "repair": "Until."
+    },
+    {
+     "code": "ENGL.G6.LANGUA.T10_CONJUNCTIONS.CONJUNCTIONS_USE.M_CJ_SO_THAT_MEANING",
+     "listen_for": [
+      "because"
+     ],
+     "ask": "Purpose?",
+     "repair": "So that."
+    },
+    {
+     "code": "ENGL.G6.LANGUA.T10_CONJUNCTIONS.CONJUNCTIONS_USE.M_CJ_WHEREAS",
+     "listen_for": [
+      "because"
+     ],
+     "ask": "Contrast?",
+     "repair": "Whereas."
+    }
+   ],
+   "checks": [
+    {
+     "question": "We will go ___ it rains. (unless)",
+     "answer": "unless",
+     "shows": "condition"
+    },
+    {
+     "question": "She saved ___ she could buy a bike.",
+     "answer": "so that",
+     "shows": "purpose"
+    }
+   ]
+  }
+ ]
+}

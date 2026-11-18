@@ -1,0 +1,98 @@
+{
+ "sub_strand": "ENGL.G6.READIN.T4_INTENSIVE_READING",
+ "title": "Intensive Reading (Theme 4: Emergency rescue services)",
+ "status": "draft: written 18 Nov 2026 offline for Grade 6 English; not yet checked by a Kenyan English teacher; not loaded by the live tutor",
+ "notes": "",
+ "skills": [
+  {
+   "skill": "ENGL.G6.READIN.T4_INTENSIVE_READING.READ_VISUALS",
+   "assessed_by": "questions",
+   "key_step": "The child uses the whole picture and its caption to predict, then asks whether the visual helps the text.",
+   "floor": {
+    "prerequisite": "Names visuals.",
+    "question": "What kind of visual has a key?",
+    "answer": "a map"
+   },
+   "steps": [
+    "Look at the whole picture.",
+    "Read the caption.",
+    "Predict.",
+    "Judge: does it help the text?"
+   ],
+   "contexts": [
+    "a rescue story with pictures",
+    "a fire safety leaflet"
+   ],
+   "board": [
+    {
+     "beat": "write",
+     "do": "Draw: a flood scene with a helicopter."
+    },
+    {
+     "beat": "point",
+     "do": "Point at the helicopter.",
+     "say": "What will happen?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for the child to answer."
+    },
+    {
+     "beat": "child_draws",
+     "do": "The child judges a flower picture on a fire leaflet."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "ENGL.G6.READIN.T4_INTENSIVE_READING.READ_VISUALS.M6_RV_PREDICT_ONE_DETAIL",
+     "listen_for": [
+      "There will be a football match."
+     ],
+     "ask": "What is the whole picture?",
+     "repair": "Use all of it."
+    },
+    {
+     "code": "ENGL.G6.READIN.T4_INTENSIVE_READING.READ_VISUALS.M6_RV_DECORATION",
+     "listen_for": [
+      "Yes, it is beautiful"
+     ],
+     "ask": "Does it help the text?",
+     "repair": "Relevance, not beauty."
+    },
+    {
+     "code": "ENGL.G6.READIN.T4_INTENSIVE_READING.READ_VISUALS.M6_RV_CAPTION_IGNORED",
+     "listen_for": [
+      "nothing"
+     ],
+     "ask": "What does the caption say?",
+     "repair": "Read it."
+    },
+    {
+     "code": "ENGL.G6.READIN.T4_INTENSIVE_READING.READ_VISUALS.M6_RV_DIAGRAM_ORDER",
+     "listen_for": [
+      "the last box"
+     ],
+     "ask": "Where do the arrows start?",
+     "repair": "Follow them."
+    }
+   ],
+   "checks": [
+    {
+     "question": "A picture of an ambulance at a crash. Predict.",
+     "answer": "the injured will be taken to hospital",
+     "shows": "predict"
+    },
+    {
+     "question": "Is a cartoon of a cat relevant to a text on first aid?",
+     "answer": "No",
+     "shows": "relevance"
+    }
+   ]
+  }
+ ],
+ "also_taught_by": [
+  "ENGL.G6.READIN.T2_INTENSIVE_READING.IMAGERY",
+  "ENGL.G6.READIN.T2_INTENSIVE_READING.FACTUAL_QUESTIONS",
+  "ENGL.G6.READIN.T2_INTENSIVE_READING.INFERENCE_QUESTIONS"
+ ]
+}

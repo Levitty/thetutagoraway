@@ -1,0 +1,192 @@
+{
+ "sub_strand": "ENGL.G6.WRITIN.T7_MECHANICS_OF_WRITING",
+ "title": "Mechanics of writing (Theme 7: Technology: scientific innovations)",
+ "status": "draft: written 18 Nov 2026 offline for Grade 6 English; not yet checked by a Kenyan English teacher; not loaded by the live tutor",
+ "notes": "",
+ "skills": [
+  {
+   "skill": "ENGL.G6.WRITIN.T7_MECHANICS_OF_WRITING.COMMA_USE",
+   "assessed_by": "questions",
+   "key_step": "The child puts commas in lists, after an opening phrase, before speech, and before and or so joining two sentences, never between subject and verb.",
+   "floor": {
+    "prerequisite": "Uses Grade 5 commas.",
+    "question": "Punctuate: Yes I will",
+    "answer": "Yes, I will"
+   },
+   "steps": [
+    "Lists.",
+    "After an opening phrase.",
+    "Before speech.",
+    "Before and/so joining sentences."
+   ],
+   "contexts": [
+    "technology reports"
+   ],
+   "board": [
+    {
+     "beat": "write",
+     "do": "Write: After lunch we played football"
+    },
+    {
+     "beat": "point",
+     "do": "Point after lunch.",
+     "say": "What goes here?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for the child to answer."
+    },
+    {
+     "beat": "child_draws",
+     "do": "The child punctuates a speech line."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "ENGL.G6.WRITIN.T7_MECHANICS_OF_WRITING.COMMA_USE.M_COMMA_SUBJECT_VERB",
+     "listen_for": [
+      "The boy in the blue shirt, is my cousin."
+     ],
+     "ask": "Between subject and verb?",
+     "repair": "No comma."
+    },
+    {
+     "code": "ENGL.G6.WRITIN.T7_MECHANICS_OF_WRITING.COMMA_USE.M6_COMMA_LIST_MISSING",
+     "listen_for": [
+      "Mama bought rice beans maize and sugar."
+     ],
+     "ask": "Items?",
+     "repair": "Commas."
+    },
+    {
+     "code": "ENGL.G6.WRITIN.T7_MECHANICS_OF_WRITING.COMMA_USE.M_COMMA_OPENING_MISSING",
+     "listen_for": [
+      "After lunch we played football."
+     ],
+     "ask": "After the opening?",
+     "repair": "Comma."
+    },
+    {
+     "code": "ENGL.G6.WRITIN.T7_MECHANICS_OF_WRITING.COMMA_USE.M6_COMMA_SPLICE",
+     "listen_for": [
+      "It was raining, we stayed at home."
+     ],
+     "ask": "Two sentences?",
+     "repair": "Add so."
+    },
+    {
+     "code": "ENGL.G6.WRITIN.T7_MECHANICS_OF_WRITING.COMMA_USE.M_COMMA_SPEECH_MISSING",
+     "listen_for": [
+      "Mama said \"Come and eat.\""
+     ],
+     "ask": "Before the speech?",
+     "repair": "Comma."
+    }
+   ],
+   "checks": [
+    {
+     "question": "Punctuate: It rained so we stayed",
+     "answer": "It rained, so we stayed.",
+     "shows": "joining"
+    },
+    {
+     "question": "Is \"The boy in the blue shirt, ran\" right?",
+     "answer": "No",
+     "shows": "subject-verb"
+    }
+   ]
+  },
+  {
+   "skill": "ENGL.G6.WRITIN.T7_MECHANICS_OF_WRITING.QUOTATION_MARKS",
+   "assessed_by": "questions",
+   "key_step": "The child marks only the spoken words, with the punctuation inside, and none in reported speech.",
+   "floor": {
+    "prerequisite": "Punctuates direct speech.",
+    "question": "Punctuate: Mama said come",
+    "answer": "Mama said, \"Come.\""
+   },
+   "steps": [
+    "Find spoken words.",
+    "Marks round them.",
+    "Punctuation inside.",
+    "Reported speech: no marks."
+   ],
+   "contexts": [
+    "technology dialogues"
+   ],
+   "board": [
+    {
+     "beat": "write",
+     "do": "Write: She said that she was tired."
+    },
+    {
+     "beat": "point",
+     "do": "Point at that.",
+     "say": "Direct or reported?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for the child to answer."
+    },
+    {
+     "beat": "child_draws",
+     "do": "The child punctuates a direct version."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "ENGL.G6.WRITIN.T7_MECHANICS_OF_WRITING.QUOTATION_MARKS.M_QM_MISSING",
+     "listen_for": [
+      "Mama said, Come and eat."
+     ],
+     "ask": "Which words were said?",
+     "repair": "Mark them."
+    },
+    {
+     "code": "ENGL.G6.WRITIN.T7_MECHANICS_OF_WRITING.QUOTATION_MARKS.M_QM_PUNCT_OUTSIDE",
+     "listen_for": [
+      "Juma asked, \"Where is my bag?\"."
+     ],
+     "ask": "Inside or outside?",
+     "repair": "Inside."
+    },
+    {
+     "code": "ENGL.G6.WRITIN.T7_MECHANICS_OF_WRITING.QUOTATION_MARKS.M_QM_CAPITAL_SPLIT",
+     "listen_for": [
+      "\"I am tired,\" said Amina, \"But I will finish.\""
+     ],
+     "ask": "Second part continues?",
+     "repair": "Small letter."
+    },
+    {
+     "code": "ENGL.G6.WRITIN.T7_MECHANICS_OF_WRITING.QUOTATION_MARKS.M_QM_REPORTED",
+     "listen_for": [
+      "She said that \"she was tired.\""
+     ],
+     "ask": "Reported?",
+     "repair": "No marks."
+    },
+    {
+     "code": "ENGL.G6.WRITIN.T7_MECHANICS_OF_WRITING.QUOTATION_MARKS.M_QM_SINGLE",
+     "listen_for": [
+      "Mama said, 'Come and eat.'"
+     ],
+     "ask": "Single or double?",
+     "repair": "Double."
+    }
+   ],
+   "checks": [
+    {
+     "question": "Punctuate: Where is my bag asked Juma",
+     "answer": "\"Where is my bag?\" asked Juma.",
+     "shows": "inside"
+    },
+    {
+     "question": "She said that \"she was tired\". Right?",
+     "answer": "No",
+     "shows": "reported"
+    }
+   ]
+  }
+ ]
+}

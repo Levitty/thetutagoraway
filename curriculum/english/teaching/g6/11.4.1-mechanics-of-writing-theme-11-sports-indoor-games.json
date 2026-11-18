@@ -1,0 +1,91 @@
+{
+ "sub_strand": "ENGL.G6.WRITIN.T11_MECHANICS_OF_WRITING",
+ "title": "Mechanics of writing (Theme 11: Sports – indoor games)",
+ "status": "draft: written 18 Nov 2026 offline for Grade 6 English; not yet checked by a Kenyan English teacher; not loaded by the live tutor",
+ "notes": "",
+ "skills": [
+  {
+   "skill": "ENGL.G6.WRITIN.T11_MECHANICS_OF_WRITING.SYNONYMS_ANTONYMS",
+   "assessed_by": "questions",
+   "key_step": "The child asks \"same or opposite?\" and checks the pair is truly the same or truly opposite.",
+   "floor": {
+    "prerequisite": "Uses context clues.",
+    "question": "What does \"huge\" mean?",
+    "answer": "very big"
+   },
+   "steps": [
+    "Same meaning: synonym.",
+    "Opposite: antonym.",
+    "Check the pair."
+   ],
+   "contexts": [
+    "sports reports"
+   ],
+   "board": [
+    {
+     "beat": "write",
+     "do": "Write: weak, feeble, strong."
+    },
+    {
+     "beat": "point",
+     "do": "Point at feeble.",
+     "say": "Same or opposite as weak?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for the child to answer."
+    },
+    {
+     "beat": "child_draws",
+     "do": "The child finds the antonym."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "ENGL.G6.WRITIN.T11_MECHANICS_OF_WRITING.SYNONYMS_ANTONYMS.M_SA_SYN_FOR_ANT",
+     "listen_for": [
+      "feeble"
+     ],
+     "ask": "Same or opposite?",
+     "repair": "Opposite asked."
+    },
+    {
+     "code": "ENGL.G6.WRITIN.T11_MECHANICS_OF_WRITING.SYNONYMS_ANTONYMS.M_SA_ANT_FOR_SYN",
+     "listen_for": [
+      "sad"
+     ],
+     "ask": "Same asked?",
+     "repair": "Synonym."
+    },
+    {
+     "code": "ENGL.G6.WRITIN.T11_MECHANICS_OF_WRITING.SYNONYMS_ANTONYMS.M_SA_RELATED_NOT_PAIR",
+     "listen_for": [
+      "long"
+     ],
+     "ask": "Opposite or just related?",
+     "repair": "Truly opposite."
+    },
+    {
+     "code": "ENGL.G6.WRITIN.T11_MECHANICS_OF_WRITING.SYNONYMS_ANTONYMS.M_SA_REPEAT",
+     "listen_for": [
+      "hot"
+     ],
+     "ask": "Did you give the same word?",
+     "repair": "A different one."
+    }
+   ],
+   "checks": [
+    {
+     "question": "Synonym of happy?",
+     "answer": "glad",
+     "shows": "synonym"
+    },
+    {
+     "question": "Antonym of hot?",
+     "answer": "cold",
+     "shows": "antonym"
+    }
+   ]
+  }
+ ]
+}

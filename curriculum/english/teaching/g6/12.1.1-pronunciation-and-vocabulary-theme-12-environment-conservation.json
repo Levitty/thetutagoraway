@@ -1,0 +1,96 @@
+{
+ "sub_strand": "ENGL.G6.LISTEN.T12_PRONUNCIATION_AND_VO",
+ "title": "Pronunciation and Vocabulary (Theme 12: Environment conservation)",
+ "status": "draft: written 18 Nov 2026 offline for Grade 6 English; not yet checked by a Kenyan English teacher; not loaded by the live tutor",
+ "notes": "",
+ "skills": [
+  {
+   "skill": "ENGL.G6.LISTEN.T12_PRONUNCIATION_AND_VO.NONVERBAL_CUES",
+   "assessed_by": "questions",
+   "key_step": "The child asks whether the gesture, face or eye contact supports what is being said.",
+   "floor": {
+    "prerequisite": "Reads feelings from cues.",
+    "question": "A frown shows ...",
+    "answer": "a problem"
+   },
+   "steps": [
+    "Look at eyes, face, hands.",
+    "Ask: does it fit the words?",
+    "Choose a better cue if not."
+   ],
+   "contexts": [
+    "a speech on conservation",
+    "a video interview"
+   ],
+   "board": [
+    {
+     "beat": "write",
+     "do": "Write: eyes, face, hands."
+    },
+    {
+     "beat": "point",
+     "do": "Point at hands.",
+     "say": "A speaker says \"tiny\" with arms wide. Fit?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for the child to answer."
+    },
+    {
+     "beat": "child_draws",
+     "do": "The child shows a fitting gesture."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "ENGL.G6.LISTEN.T12_PRONUNCIATION_AND_VO.NONVERBAL_CUES.M6_NC_NO_EYE_CONTACT",
+     "listen_for": [
+      "at the floor"
+     ],
+     "ask": "Who are you speaking to?",
+     "repair": "Look at them."
+    },
+    {
+     "code": "ENGL.G6.LISTEN.T12_PRONUNCIATION_AND_VO.NONVERBAL_CUES.M6_NC_GESTURE_MISMATCH",
+     "listen_for": [
+      "Yes"
+     ],
+     "ask": "Does it match the words?",
+     "repair": "Change it."
+    },
+    {
+     "code": "ENGL.G6.LISTEN.T12_PRONUNCIATION_AND_VO.NONVERBAL_CUES.M6_NC_FIDGET",
+     "listen_for": [
+      "none"
+     ],
+     "ask": "What are your hands doing?",
+     "repair": "Keep them still."
+    },
+    {
+     "code": "ENGL.G6.LISTEN.T12_PRONUNCIATION_AND_VO.NONVERBAL_CUES.M6_NC_FACE_WORDS",
+     "listen_for": [
+      "Yes"
+     ],
+     "ask": "Does your face match?",
+     "repair": "Show the message."
+    }
+   ],
+   "checks": [
+    {
+     "question": "Where should a speaker look?",
+     "answer": "at the audience",
+     "shows": "eye contact"
+    },
+    {
+     "question": "A smile with sad news: fit?",
+     "answer": "No",
+     "shows": "face"
+    }
+   ]
+  }
+ ],
+ "also_taught_by": [
+  "ENGL.G6.LISTEN.T5_PRONUNCIATION_AND_VO.ORAL_RESPONSE",
+  "ENGL.G6.LISTEN.T9_PRONUNCIATION_AND_SP.SPEAK_FLUENTLY"
+ ]
+}

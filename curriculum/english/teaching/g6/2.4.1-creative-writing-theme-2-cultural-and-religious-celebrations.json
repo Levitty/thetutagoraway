@@ -1,0 +1,264 @@
+{
+ "sub_strand": "ENGL.G6.WRITIN.T2_CREATIVE_WRITING",
+ "title": "Creative Writing (Theme 2: Cultural and religious celebrations)",
+ "status": "draft: written 18 Nov 2026 offline for Grade 6 English; not yet checked by a Kenyan English teacher; not loaded by the live tutor",
+ "notes": "",
+ "skills": [
+  {
+   "skill": "ENGL.G6.WRITIN.T2_CREATIVE_WRITING.PARAGRAPH_ORDER",
+   "assessed_by": "questions",
+   "key_step": "The child finds the topic sentence, orders the rest, removes the one that does not belong and closes.",
+   "floor": {
+    "prerequisite": "Finds the main idea.",
+    "question": "Which sentence tells what the paragraph is about?",
+    "answer": "the topic sentence"
+   },
+   "steps": [
+    "Find the topic sentence.",
+    "Order by time words.",
+    "Remove the odd one.",
+    "End with a closing sentence."
+   ],
+   "contexts": [
+    "a school trip",
+    "a celebration"
+   ],
+   "board": [
+    {
+     "beat": "write",
+     "do": "Write five jumbled sentences, one off topic."
+    },
+    {
+     "beat": "point",
+     "do": "Point at the off-topic one.",
+     "say": "Does it belong?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for the child to answer."
+    },
+    {
+     "beat": "child_draws",
+     "do": "The child orders the rest."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "ENGL.G6.WRITIN.T2_CREATIVE_WRITING.PARAGRAPH_ORDER.M_PARA_DETAIL_OPENS",
+     "listen_for": [
+      "The bus was blue."
+     ],
+     "ask": "Is that the main idea?",
+     "repair": "Topic sentence first."
+    },
+    {
+     "code": "ENGL.G6.WRITIN.T2_CREATIVE_WRITING.PARAGRAPH_ORDER.M_PARA_OFF_TOPIC",
+     "listen_for": [
+      "Yes, keep it"
+     ],
+     "ask": "Does it belong?",
+     "repair": "Remove it."
+    },
+    {
+     "code": "ENGL.G6.WRITIN.T2_CREATIVE_WRITING.PARAGRAPH_ORDER.M_PARA_ORDER",
+     "listen_for": [
+      "C, A, B, D"
+     ],
+     "ask": "What came first?",
+     "repair": "Order by time."
+    },
+    {
+     "code": "ENGL.G6.WRITIN.T2_CREATIVE_WRITING.PARAGRAPH_ORDER.M_PARA_CONCLUSION",
+     "listen_for": [
+      "Next week we start a new project."
+     ],
+     "ask": "Does it close the paragraph?",
+     "repair": "Choose the one that sums up."
+    }
+   ],
+   "checks": [
+    {
+     "question": "Which opens: \"The bus was blue\" or \"Our trip to Nakuru was exciting\"?",
+     "answer": "Our trip to Nakuru was exciting",
+     "shows": "topic"
+    },
+    {
+     "question": "Which closes?",
+     "answer": "So the trip was a day we will never forget.",
+     "shows": "closing"
+    }
+   ]
+  },
+  {
+   "skill": "ENGL.G6.WRITIN.T2_CREATIVE_WRITING.PLAN_COMPOSITION",
+   "assessed_by": "questions",
+   "key_step": "The child chooses a narrow topic, lists ideas, crosses out those off topic and numbers the rest.",
+   "floor": {
+    "prerequisite": "Orders ideas in a paragraph.",
+    "question": "Order these three sentences.",
+    "answer": "a sensible order"
+   },
+   "steps": [
+    "Choose a narrow topic.",
+    "List ideas.",
+    "Cross out off-topic ideas.",
+    "Number them into introduction, body, conclusion."
+   ],
+   "contexts": [
+    "cultural and religious celebrations",
+    "tourist attractions",
+    "animal care"
+   ],
+   "board": [
+    {
+     "beat": "write",
+     "do": "Write a topic and six ideas, one off topic."
+    },
+    {
+     "beat": "point",
+     "do": "Point at the off-topic idea.",
+     "say": "Does it belong?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for the child to answer."
+    },
+    {
+     "beat": "child_draws",
+     "do": "The child numbers the rest."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "ENGL.G6.WRITIN.T2_CREATIVE_WRITING.PLAN_COMPOSITION.M6_PC_OFF_TOPIC",
+     "listen_for": [
+      "We sang in church."
+     ],
+     "ask": "Is it about the topic?",
+     "repair": "Cross it out."
+    },
+    {
+     "code": "ENGL.G6.WRITIN.T2_CREATIVE_WRITING.PLAN_COMPOSITION.M6_PC_NO_ORDER",
+     "listen_for": [
+      "went home, prayers, arrived"
+     ],
+     "ask": "What came first?",
+     "repair": "Number them."
+    },
+    {
+     "code": "ENGL.G6.WRITIN.T2_CREATIVE_WRITING.PLAN_COMPOSITION.M6_PC_TOPIC_TOO_WIDE",
+     "listen_for": [
+      "Everything about Kenya"
+     ],
+     "ask": "Can you cover it in a page?",
+     "repair": "Narrow it."
+    },
+    {
+     "code": "ENGL.G6.WRITIN.T2_CREATIVE_WRITING.PLAN_COMPOSITION.M6_PC_PLAN_TOO_LONG",
+     "listen_for": [
+      "full paragraphs"
+     ],
+     "ask": "Is this a plan?",
+     "repair": "Short notes."
+    }
+   ],
+   "checks": [
+    {
+     "question": "Better topic: \"Kenya\" or \"Our trip to Hell's Gate\"?",
+     "answer": "Our trip to Hell's Gate",
+     "shows": "narrow"
+    },
+    {
+     "question": "Is a plan full paragraphs?",
+     "answer": "No",
+     "shows": "notes"
+    }
+   ]
+  },
+  {
+   "skill": "ENGL.G6.WRITIN.T2_CREATIVE_WRITING.OPEN_COMPOSITION",
+   "assessed_by": "composition",
+   "key_step": "The child writes a paragraph per planned point, varies the links and checks each paragraph is on topic.",
+   "floor": {
+    "prerequisite": "Plans a composition.",
+    "question": "Plan \"A celebration\".",
+    "answer": "a plan"
+   },
+   "steps": [
+    "Write from the plan.",
+    "One paragraph per point.",
+    "Vary linking words.",
+    "Reread against the title."
+   ],
+   "contexts": [
+    "celebrations",
+    "a family event"
+   ],
+   "board": [
+    {
+     "beat": "write",
+     "do": "Write the plan."
+    },
+    {
+     "beat": "point",
+     "do": "Point at point 2.",
+     "say": "How will this paragraph start?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for the child to answer."
+    },
+    {
+     "beat": "child_draws",
+     "do": "The child writes it."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "ENGL.G6.WRITIN.T2_CREATIVE_WRITING.OPEN_COMPOSITION.M6_OC_DRIFT",
+     "listen_for": [
+      "Yes"
+     ],
+     "ask": "Is it on the title?",
+     "repair": "Reread."
+    },
+    {
+     "code": "ENGL.G6.WRITIN.T2_CREATIVE_WRITING.OPEN_COMPOSITION.M6_OC_ONE_BLOCK",
+     "listen_for": [
+      "nowhere"
+     ],
+     "ask": "New idea?",
+     "repair": "New paragraph."
+    },
+    {
+     "code": "ENGL.G6.WRITIN.T2_CREATIVE_WRITING.OPEN_COMPOSITION.M6_OC_REPEATED_LINKS",
+     "listen_for": [
+      "Then ... Then ... Then"
+     ],
+     "ask": "Another link?",
+     "repair": "Vary them."
+    },
+    {
+     "code": "ENGL.G6.WRITIN.T2_CREATIVE_WRITING.OPEN_COMPOSITION.M6_OC_FORCED_IDIOMS",
+     "listen_for": [
+      "Yes"
+     ],
+     "ask": "Does the meaning fit?",
+     "repair": "Leave it out."
+    }
+   ],
+   "checks": [
+    {
+     "question": "A paragraph about exams in a Diwali story: fit?",
+     "answer": "No",
+     "shows": "focus"
+    },
+    {
+     "question": "Is an idiom right if its meaning does not fit?",
+     "answer": "No",
+     "shows": "language"
+    }
+   ]
+  }
+ ]
+}

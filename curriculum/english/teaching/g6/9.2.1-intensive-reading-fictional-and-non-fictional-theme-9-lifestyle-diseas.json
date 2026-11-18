@@ -1,0 +1,98 @@
+{
+ "sub_strand": "ENGL.G6.READIN.T9_INTENSIVE_READING_FI",
+ "title": "Intensive Reading - Fictional and Non-fictional (Theme 9: Lifestyle diseases)",
+ "status": "draft: written 18 Nov 2026 offline for Grade 6 English; not yet checked by a Kenyan English teacher; not loaded by the live tutor",
+ "notes": "",
+ "skills": [
+  {
+   "skill": "ENGL.G6.READIN.T9_INTENSIVE_READING_FI.FACT_OPINION",
+   "assessed_by": "questions",
+   "key_step": "The child asks \"can it be checked?\": yes is a fact, a feeling or judgement is an opinion.",
+   "floor": {
+    "prerequisite": "Answers inference questions.",
+    "question": "What does the clue show?",
+    "answer": "an inference"
+   },
+   "steps": [
+    "Can it be checked?",
+    "Fact.",
+    "Is it a feeling or judgement?",
+    "Opinion."
+   ],
+   "contexts": [
+    "lifestyle disease texts"
+   ],
+   "board": [
+    {
+     "beat": "write",
+     "do": "Write: Githeri is made from maize and beans. Githeri is the best food."
+    },
+    {
+     "beat": "point",
+     "do": "Point at the second.",
+     "say": "Can it be checked?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for the child to answer."
+    },
+    {
+     "beat": "child_draws",
+     "do": "The child sorts two more."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "ENGL.G6.READIN.T9_INTENSIVE_READING_FI.FACT_OPINION.M_FO_OPINION_AS_FACT",
+     "listen_for": [
+      "Githeri is the best food."
+     ],
+     "ask": "Can you check \"best\"?",
+     "repair": "Opinion."
+    },
+    {
+     "code": "ENGL.G6.READIN.T9_INTENSIVE_READING_FI.FACT_OPINION.M_FO_FACT_AS_OPINION",
+     "listen_for": [
+      "Nairobi is the capital of Kenya."
+     ],
+     "ask": "Can it be checked?",
+     "repair": "Fact."
+    },
+    {
+     "code": "ENGL.G6.READIN.T9_INTENSIVE_READING_FI.FACT_OPINION.M_FO_STORY_INFO",
+     "listen_for": [
+      "information"
+     ],
+     "ask": "Made-up or true information?",
+     "repair": "Story."
+    },
+    {
+     "code": "ENGL.G6.READIN.T9_INTENSIVE_READING_FI.FACT_OPINION.M6_FO_NUMBER_FACT",
+     "listen_for": [
+      "fact"
+     ],
+     "ask": "Can it be checked?",
+     "repair": "Numbers can still be opinions."
+    }
+   ],
+   "checks": [
+    {
+     "question": "Nairobi is the capital of Kenya.",
+     "answer": "fact",
+     "shows": "fact"
+    },
+    {
+     "question": "Football is the most exciting game.",
+     "answer": "opinion",
+     "shows": "opinion"
+    }
+   ]
+  }
+ ],
+ "also_taught_by": [
+  "ENGL.G6.READIN.T6_INTENSIVE_READING.RELATE_TO_LIFE",
+  "ENGL.G6.READIN.T2_INTENSIVE_READING.IMAGERY",
+  "ENGL.G6.READIN.T2_INTENSIVE_READING.FACTUAL_QUESTIONS",
+  "ENGL.G6.READIN.T2_INTENSIVE_READING.INFERENCE_QUESTIONS"
+ ]
+}
