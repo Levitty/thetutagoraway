@@ -1,0 +1,187 @@
+{
+ "sub_strand": "AGRI.G7.PRODUC.CONSTRUCTING_FRAMED_SUSP",
+ "title": "Constructing Framed Suspended Garden",
+ "status": "draft: written 18 Nov 2026 offline for Grade 7 Agriculture; not yet checked by a CBC Agriculture teacher; not loaded by the live tutor",
+ "sources": [],
+ "notes": "Build a frame from poles, planks or metal bars with wire, and hang reused containers with drainage holes in rows. Sawing and hammering with the teacher's tool rules.",
+ "skills": [
+  {
+   "skill": "AGRI.G7.PRODUC.CONSTRUCTING_FRAMED_SUSP.FRAMED_GARDEN",
+   "key_step": "The child describes a framed suspended garden (containers hung in rows on a frame of poles, planks, metal or wire), its advantages (little land, less water, fewer soil pests, uses waste containers) and the crops that suit it.",
+   "floor": {
+    "prerequisite": "Knows vertical from horizontal gardens.",
+    "question": "Is a sack garden vertical or horizontal?",
+    "answer": "vertical"
+   },
+   "representations": [
+    "pictures of suspended gardens",
+    "a model frame",
+    "reused bottles"
+   ],
+   "steps": [
+    "Frame: poles or planks.",
+    "Containers hung in rows with holes.",
+    "Soil and manure; small crops.",
+    "Saves land and water."
+   ],
+   "contexts": [
+    "a town home with no garden",
+    "a school veranda",
+    "a church compound"
+   ],
+   "board": [
+    {
+     "beat": "draw",
+     "do": "Draw a frame with three rows of bottles."
+    },
+    {
+     "beat": "predict",
+     "do": "Ask what it saves."
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for \"land and water\"."
+    },
+    {
+     "beat": "reveal",
+     "do": "Write \"space and water saved\"."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "AGRI.G7.PRODUC.CONSTRUCTING_FRAMED_SUSP.FRAMED_GARDEN.M_AG7_FG_SPACE",
+     "listen_for": [
+      "It needs a big field"
+     ],
+     "ask": "Why use a suspended garden?",
+     "repair": "Show a frame on a veranda or beside a wall growing kale in bottles."
+    },
+    {
+     "code": "AGRI.G7.PRODUC.CONSTRUCTING_FRAMED_SUSP.FRAMED_GARDEN.M_AG7_FG_DRAIN",
+     "listen_for": [
+      "No holes at all"
+     ],
+     "ask": "What must the containers have?",
+     "repair": "Water a container with no holes for a week; the roots rot in standing water."
+    },
+    {
+     "code": "AGRI.G7.PRODUC.CONSTRUCTING_FRAMED_SUSP.FRAMED_GARDEN.M_AG7_FG_SOIL",
+     "listen_for": [
+      "Only sand"
+     ],
+     "ask": "What should the soil mixture have?",
+     "repair": "Compare kale in sand only and in soil with manure after three weeks."
+    },
+    {
+     "code": "AGRI.G7.PRODUC.CONSTRUCTING_FRAMED_SUSP.FRAMED_GARDEN.M_AG7_FG_CROP",
+     "listen_for": [
+      "Maize or bananas"
+     ],
+     "ask": "Which crop suits a framed suspended garden?",
+     "repair": "Ask how heavy a banana bunch is compared with a bottle of soil."
+    }
+   ],
+   "checks": [
+    {
+     "question": "Give an advantage of a framed suspended garden.",
+     "answer": "needs little land, saves water, fewer soil pests",
+     "shows": "advantage"
+    },
+    {
+     "question": "Name a crop that suits it.",
+     "answer": "kale, spinach, herbs or strawberries",
+     "shows": "crop"
+    }
+   ]
+  },
+  {
+   "skill": "AGRI.G7.PRODUC.CONSTRUCTING_FRAMED_SUSP.FRAME_BUILD",
+   "key_step": "The child says how a framed suspended garden is built: sketch and measure, choose strong materials, fix uprights firmly, join level cross bars, hang containers with drainage holes spaced so all get light, fill, plant and water.",
+   "floor": {
+    "prerequisite": "Knows what a framed suspended garden is.",
+    "question": "Why do the containers need holes?",
+    "answer": "drainage"
+   },
+   "representations": [
+    "a sketch, tape measure, poles and wire",
+    "step cards",
+    "a model"
+   ],
+   "steps": [
+    "Sketch and measure.",
+    "Fix the uprights firmly.",
+    "Join level cross bars.",
+    "Hang containers spaced for light; fill and plant."
+   ],
+   "contexts": [
+    "the school garden",
+    "a home in Eldoret",
+    "a youth group project"
+   ],
+   "board": [
+    {
+     "beat": "draw",
+     "do": "Draw two rows of containers hung very close together."
+    },
+    {
+     "beat": "predict",
+     "do": "Ask what the lower plants will lack."
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for \"light\"."
+    },
+    {
+     "beat": "reveal",
+     "do": "Redraw the rows spaced apart."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "AGRI.G7.PRODUC.CONSTRUCTING_FRAMED_SUSP.FRAME_BUILD.M_AG7_FB_WEAK",
+     "listen_for": [
+      "It does not carry much"
+     ],
+     "ask": "Why must the frame be strong?",
+     "repair": "Weigh a bottle of dry soil and of wet soil."
+    },
+    {
+     "code": "AGRI.G7.PRODUC.CONSTRUCTING_FRAMED_SUSP.FRAME_BUILD.M_AG7_FB_SHADE",
+     "listen_for": [
+      "As close together as possible"
+     ],
+     "ask": "How should the rows of containers be hung?",
+     "repair": "Hang two rows close together and look at the shadow on the lower row."
+    },
+    {
+     "code": "AGRI.G7.PRODUC.CONSTRUCTING_FRAMED_SUSP.FRAME_BUILD.M_AG7_FB_POSTS",
+     "listen_for": [
+      "Stood on the ground"
+     ],
+     "ask": "How are the uprights of the frame fixed?",
+     "repair": "Push a free-standing model frame with wet bottles on it."
+    },
+    {
+     "code": "AGRI.G7.PRODUC.CONSTRUCTING_FRAMED_SUSP.FRAME_BUILD.M_AG7_FB_NOPLAN",
+     "listen_for": [
+      "Nothing, start building"
+     ],
+     "ask": "What is done before cutting the materials?",
+     "repair": "Show pieces cut too short for the frame."
+    }
+   ],
+   "checks": [
+    {
+     "question": "Why must the frame be strong?",
+     "answer": "wet soil and containers are heavy",
+     "shows": "strength"
+    },
+    {
+     "question": "What is done before cutting materials?",
+     "answer": "sketch and measure",
+     "shows": "plan"
+    }
+   ]
+  }
+ ]
+}

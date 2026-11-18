@@ -1,0 +1,187 @@
+{
+ "sub_strand": "AGRI.G7.HYGIEN.HYGIENE_IN_REARING_ANIMA",
+ "title": "Hygiene in Rearing Animals",
+ "status": "draft: written 18 Nov 2026 offline for Grade 7 Agriculture; not yet checked by a CBC Agriculture teacher; not loaded by the live tutor",
+ "sources": [],
+ "notes": "Clean the school rabbit hutch or poultry house: gloves and a mask on, wash feeders and waterers, remove droppings, dry the house before new bedding. Wash hands after.",
+ "skills": [
+  {
+   "skill": "AGRI.G7.HYGIEN.HYGIENE_IN_REARING_ANIMA.ANIMAL_HYGIENE",
+   "key_step": "The child names hygiene practices in rearing animals: clean, dry, airy houses; clean feeders and waterers; clean water and feed; removing droppings; clean animals; separating sick animals; disposing of waste safely.",
+   "floor": {
+    "prerequisite": "Knows the routine practices in rearing small animals.",
+    "question": "Name a routine practice.",
+    "answer": "feeding"
+   },
+   "representations": [
+    "a checklist",
+    "pictures of clean and dirty houses",
+    "the school hutch"
+   ],
+   "steps": [
+    "House: clean, dry, airy.",
+    "Food and water: clean.",
+    "Animals: clean; sick ones apart.",
+    "Waste: removed safely."
+   ],
+   "contexts": [
+    "a dog kennel at home",
+    "the school poultry",
+    "a goat shed"
+   ],
+   "board": [
+    {
+     "beat": "draw",
+     "do": "Draw a hen house with dung and a green waterer."
+    },
+    {
+     "beat": "predict",
+     "do": "Ask what the hens might catch."
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for \"diseases\"."
+    },
+    {
+     "beat": "reveal",
+     "do": "Write \"clean house, clean water\"."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "AGRI.G7.HYGIEN.HYGIENE_IN_REARING_ANIMA.ANIMAL_HYGIENE.M_AG7_AH_DUNG",
+     "listen_for": [
+      "Leave the dung inside"
+     ],
+     "ask": "What should be done to the animals' house?",
+     "repair": "Ask what grows in wet dung: flies, worms, germs that make animals sick."
+    },
+    {
+     "code": "AGRI.G7.HYGIEN.HYGIENE_IN_REARING_ANIMA.ANIMAL_HYGIENE.M_AG7_AH_WATER",
+     "listen_for": [
+      "Any dirty water"
+     ],
+     "ask": "What water should animals drink?",
+     "repair": "Show a dirty waterer with green slime; animals catch diseases from it as people do."
+    },
+    {
+     "code": "AGRI.G7.HYGIEN.HYGIENE_IN_REARING_ANIMA.ANIMAL_HYGIENE.M_AG7_AH_SICK",
+     "listen_for": [
+      "Keep it with the others"
+     ],
+     "ask": "What should be done with a sick animal?",
+     "repair": "Ask how a cold spreads in a classroom; disease spreads the same way among animals."
+    },
+    {
+     "code": "AGRI.G7.HYGIEN.HYGIENE_IN_REARING_ANIMA.ANIMAL_HYGIENE.M_AG7_AH_AIR",
+     "listen_for": [
+      "It does not; closed is warmer"
+     ],
+     "ask": "Why does an animal house need ventilation?",
+     "repair": "Compare the smell of a closed and an airy hen house."
+    }
+   ],
+   "checks": [
+    {
+     "question": "Why separate a sick animal?",
+     "answer": "to stop disease spreading",
+     "shows": "sick"
+    },
+    {
+     "question": "Why must animal houses be airy?",
+     "answer": "to keep them dry and free of bad smells",
+     "shows": "air"
+    }
+   ]
+  },
+  {
+   "skill": "AGRI.G7.HYGIEN.HYGIENE_IN_REARING_ANIMA.HOUSE_CLEANING",
+   "key_step": "The child orders the steps of cleaning an animal house (PPE on, animals out, bedding and droppings out, scrub, disinfect by an adult, dry and air, fresh bedding) and says feeders and waterers are washed daily.",
+   "floor": {
+    "prerequisite": "Knows the hygiene practices.",
+    "question": "What is put on before cleaning an animal house?",
+    "answer": "gloves and a mask"
+   },
+   "representations": [
+    "step cards",
+    "a brush, bucket and gloves",
+    "a model house"
+   ],
+   "steps": [
+    "Put on PPE; move the animals.",
+    "Remove bedding and droppings.",
+    "Scrub; an adult disinfects.",
+    "Dry; add fresh bedding."
+   ],
+   "contexts": [
+    "the school rabbit hutch",
+    "a home hen house",
+    "a dog kennel"
+   ],
+   "board": [
+    {
+     "beat": "write",
+     "do": "Write the cards: add bedding, scrub, remove droppings."
+    },
+    {
+     "beat": "predict",
+     "do": "Ask for the order."
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for \"remove, scrub, add\"."
+    },
+    {
+     "beat": "reveal",
+     "do": "Order them."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "AGRI.G7.HYGIEN.HYGIENE_IN_REARING_ANIMA.HOUSE_CLEANING.M_AG7_HC_WETBED",
+     "listen_for": [
+      "Straight after scrubbing, while wet"
+     ],
+     "ask": "When is new bedding put in an animal house after cleaning?",
+     "repair": "Leave bedding on a wet floor overnight and smell it."
+    },
+    {
+     "code": "AGRI.G7.HYGIEN.HYGIENE_IN_REARING_ANIMA.HOUSE_CLEANING.M_AG7_HC_FEEDER",
+     "listen_for": [
+      "Never, only topped up"
+     ],
+     "ask": "How often should a waterer be washed?",
+     "repair": "Feel the inside of an unwashed waterer."
+    },
+    {
+     "code": "AGRI.G7.HYGIEN.HYGIENE_IN_REARING_ANIMA.HOUSE_CLEANING.M_AG7_HC_NOGLOVES",
+     "listen_for": [
+      "Nothing special"
+     ],
+     "ask": "What should you wear to clean a poultry house?",
+     "repair": "Show the dust rising when bedding is moved."
+    },
+    {
+     "code": "AGRI.G7.HYGIEN.HYGIENE_IN_REARING_ANIMA.HOUSE_CLEANING.M_AG7_HC_ORDER",
+     "listen_for": [
+      "Nothing, spray it straight away"
+     ],
+     "ask": "What is done before using disinfectant in an animal house?",
+     "repair": "Explain disinfectant cannot reach germs under dirt."
+    }
+   ],
+   "checks": [
+    {
+     "question": "What is done just before fresh bedding goes in?",
+     "answer": "the house is dried and aired",
+     "shows": "order"
+    },
+    {
+     "question": "How often are waterers washed?",
+     "answer": "every day",
+     "shows": "feeders"
+    }
+   ]
+  }
+ ]
+}

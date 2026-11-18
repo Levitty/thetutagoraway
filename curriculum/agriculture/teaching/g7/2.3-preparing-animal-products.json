@@ -1,0 +1,187 @@
+{
+ "sub_strand": "AGRI.G7.FOOD_P.PREPARING_ANIMAL_PRODUCT",
+ "title": "Preparing Animal Products",
+ "status": "draft: written 18 Nov 2026 offline for Grade 7 Agriculture; not yet checked by a CBC Agriculture teacher; not loaded by the live tutor",
+ "sources": [],
+ "notes": "Sort and grade real eggs (candling with a torch in a dark box) and strain honey from crushed comb through a clean cloth. Bee products come from a beekeeper; children do not open hives.",
+ "skills": [
+  {
+   "skill": "AGRI.G7.FOOD_P.PREPARING_ANIMAL_PRODUCT.ANIMAL_PRODUCTS",
+   "key_step": "The child says how animal products are prepared safely for use and storage: clean hands, tools and containers; keep products cool and covered; boil milk; wipe eggs dry; strain honey; sort and remove spoilt products.",
+   "floor": {
+    "prerequisite": "Knows the food animals give.",
+    "question": "Name two animal products.",
+    "answer": "eggs and honey"
+   },
+   "representations": [
+    "real eggs and honey",
+    "a hygiene checklist",
+    "clean containers"
+   ],
+   "steps": [
+    "Wash hands and tools.",
+    "Clean the product the right way.",
+    "Keep it cool and covered.",
+    "Remove spoilt items."
+   ],
+   "contexts": [
+    "eggs from home",
+    "honey from a Baringo beekeeper",
+    "milk for school tea"
+   ],
+   "board": [
+    {
+     "beat": "write",
+     "do": "Write \"dirty eggs: wash or wipe?\"."
+    },
+    {
+     "beat": "predict",
+     "do": "Ask the class."
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for the child's answer."
+    },
+    {
+     "beat": "reveal",
+     "do": "Write \"wipe dry: water carries germs in\"."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "AGRI.G7.FOOD_P.PREPARING_ANIMAL_PRODUCT.ANIMAL_PRODUCTS.M_AG7_AP_RAW",
+     "listen_for": [
+      "Nothing, raw is safest"
+     ],
+     "ask": "What should be done to milk before drinking?",
+     "repair": "Explain that milk can carry germs from the animal and the hands; boiling kills them."
+    },
+    {
+     "code": "AGRI.G7.FOOD_P.PREPARING_ANIMAL_PRODUCT.ANIMAL_PRODUCTS.M_AG7_AP_HANDS",
+     "listen_for": [
+      "Nothing at all"
+     ],
+     "ask": "What should be done before handling meat?",
+     "repair": "Recall hand washing from Grade 4: germs cannot be seen."
+    },
+    {
+     "code": "AGRI.G7.FOOD_P.PREPARING_ANIMAL_PRODUCT.ANIMAL_PRODUCTS.M_AG7_AP_COOL",
+     "listen_for": [
+      "In the hot sun"
+     ],
+     "ask": "How should fresh milk be kept?",
+     "repair": "Leave a cup of milk in the sun and one in the shade for a morning; smell both."
+    },
+    {
+     "code": "AGRI.G7.FOOD_P.PREPARING_ANIMAL_PRODUCT.ANIMAL_PRODUCTS.M_AG7_AP_WASHEGG",
+     "listen_for": [
+      "Soak and wash them in water"
+     ],
+     "ask": "How should dirty eggs be cleaned before storing?",
+     "repair": "Explain the eggshell has tiny pores and a natural coat; water carries germs in."
+    }
+   ],
+   "checks": [
+    {
+     "question": "Why keep animal products cool?",
+     "answer": "germs grow fast in warmth",
+     "shows": "cool"
+    },
+    {
+     "question": "What is done first before preparing any animal product?",
+     "answer": "wash hands and tools",
+     "shows": "hygiene"
+    }
+   ]
+  },
+  {
+   "skill": "AGRI.G7.FOOD_P.PREPARING_ANIMAL_PRODUCT.EGG_HONEY_PREP",
+   "key_step": "The child says how eggs are prepared (collect, wipe dry, sort out cracked ones, grade by size, candle, pack broad end up, keep cool) and honey (crush ripe comb, strain through clean cloth, settle, pack airtight, label).",
+   "floor": {
+    "prerequisite": "Knows how animal products are kept safe.",
+    "question": "Why are eggs wiped, not washed?",
+    "answer": "water carries germs in"
+   },
+   "representations": [
+    "eggs, a tray and a torch in a box",
+    "crushed comb, a cloth and a jar",
+    "step cards"
+   ],
+   "steps": [
+    "Eggs: collect often and wipe dry.",
+    "Sort out cracked eggs; grade and candle the rest.",
+    "Pack broad end up; keep cool.",
+    "Honey: crush ripe comb, strain, settle, pack airtight and label."
+   ],
+   "contexts": [
+    "a poultry project at school",
+    "a beekeeping group in Kitui",
+    "eggs sold at a kiosk"
+   ],
+   "board": [
+    {
+     "beat": "draw",
+     "do": "Draw an egg with the air space at one end."
+    },
+    {
+     "beat": "predict",
+     "do": "Ask which end goes up in the tray."
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for \"the broad end\"."
+    },
+    {
+     "beat": "reveal",
+     "do": "Write \"broad end up\"."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "AGRI.G7.FOOD_P.PREPARING_ANIMAL_PRODUCT.EGG_HONEY_PREP.M_AG7_EH_GRADE",
+     "listen_for": [
+      "Pack them with the others"
+     ],
+     "ask": "What is done with cracked eggs when grading?",
+     "repair": "Show how a cracked egg leaks and spoils the tray."
+    },
+    {
+     "code": "AGRI.G7.FOOD_P.PREPARING_ANIMAL_PRODUCT.EGG_HONEY_PREP.M_AG7_EH_POINT",
+     "listen_for": [
+      "Pointed end up"
+     ],
+     "ask": "Which way up are eggs packed in a tray?",
+     "repair": "Candle an egg: the air space is at the broad end."
+    },
+    {
+     "code": "AGRI.G7.FOOD_P.PREPARING_ANIMAL_PRODUCT.EGG_HONEY_PREP.M_AG7_EH_WATER",
+     "listen_for": [
+      "Water makes more honey to sell"
+     ],
+     "ask": "Why must no water get into honey?",
+     "repair": "Explain honey keeps for years because it is very dry and thick."
+    },
+    {
+     "code": "AGRI.G7.FOOD_P.PREPARING_ANIMAL_PRODUCT.EGG_HONEY_PREP.M_AG7_EH_OPEN",
+     "listen_for": [
+      "In an open basin"
+     ],
+     "ask": "How should strained honey be stored?",
+     "repair": "Ask what comes to an open honey basin: ants, bees, dust, damp air."
+    }
+   ],
+   "checks": [
+    {
+     "question": "How is honey separated from wax?",
+     "answer": "crushed and strained through a clean cloth",
+     "shows": "honey"
+    },
+    {
+     "question": "Why grade eggs by size?",
+     "answer": "they sell at fair prices for each size",
+     "shows": "grading"
+    }
+   ]
+  }
+ ]
+}

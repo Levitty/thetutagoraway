@@ -1,0 +1,188 @@
+{
+ "sub_strand": "AGRI.G7.CONSER.CONSTRUCTING_WATER_RETEN",
+ "title": "Constructing Water Retention Structures",
+ "status": "draft: written 18 Nov 2026 offline for Grade 7 Agriculture; not yet checked by a CBC Agriculture teacher; not loaded by the live tutor",
+ "sources": [],
+ "notes": "Dig a retention ditch across the slope or a retention pit (about 60 cm wide and deep) with a raised bank on the downhill side, then plant a banana sucker, napier grass or arrowroot in or beside it. Digging only with the teacher present.",
+ "skills": [
+  {
+   "skill": "AGRI.G7.CONSER.CONSTRUCTING_WATER_RETEN.RUNOFF",
+   "key_step": "The child describes how surface run-off can be used in gardening (led into retention ditches, pits and water pans to water crops, slowed by mulch and grass) instead of being lost and causing erosion.",
+   "floor": {
+    "prerequisite": "Knows how erosion is controlled.",
+    "question": "How should a slope be ploughed?",
+    "answer": "along the contour"
+   },
+   "representations": [
+    "a tilted tray with and without a ditch",
+    "pictures of a water pan and a retention pit",
+    "a compound sketch with water paths"
+   ],
+   "steps": [
+    "Find where run-off flows.",
+    "Lead it into a ditch, pit or pan.",
+    "Use it for crops.",
+    "Slow the rest with mulch and grass."
+   ],
+   "contexts": [
+    "a school slope",
+    "a farm in Machakos",
+    "roof water at home"
+   ],
+   "board": [
+    {
+     "beat": "draw",
+     "do": "Draw a slope with arrows of run-off to a road."
+    },
+    {
+     "beat": "predict",
+     "do": "Ask how the water could help a garden instead."
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for the child's idea."
+    },
+    {
+     "beat": "reveal",
+     "do": "Draw a retention pit catching the water beside a banana."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "AGRI.G7.CONSER.CONSTRUCTING_WATER_RETEN.RUNOFF.M_AG7_RO_WASTE",
+     "listen_for": [
+      "Nothing, it is useless"
+     ],
+     "ask": "What can be done with surface run-off?",
+     "repair": "Follow run-off after rain to a low place where plants grow green; ask what it could water."
+    },
+    {
+     "code": "AGRI.G7.CONSER.CONSTRUCTING_WATER_RETEN.RUNOFF.M_AG7_RO_STRUCTURE",
+     "listen_for": [
+      "A bare path"
+     ],
+     "ask": "Which traps run-off?",
+     "repair": "Compare water poured on a bare tray and on a tray with a small ditch dug across it."
+    },
+    {
+     "code": "AGRI.G7.CONSER.CONSTRUCTING_WATER_RETEN.RUNOFF.M_AG7_RO_MULCH",
+     "listen_for": [
+      "Speeds it up"
+     ],
+     "ask": "What does mulch do to run-off?",
+     "repair": "Pour water on a tilted bare tray and a mulched tray; time how fast it runs off each."
+    },
+    {
+     "code": "AGRI.G7.CONSER.CONSTRUCTING_WATER_RETEN.RUNOFF.M_AG7_RO_ROOF",
+     "listen_for": [
+      "Only rain falling straight into the pit"
+     ],
+     "ask": "Which water can be led into a retention pit?",
+     "repair": "Trace where the roof water goes after a storm."
+    }
+   ],
+   "checks": [
+    {
+     "question": "What is surface run-off?",
+     "answer": "rain water flowing over the ground",
+     "shows": "meaning"
+    },
+    {
+     "question": "Name a structure that holds run-off.",
+     "answer": "a retention ditch, retention pit or water pan",
+     "shows": "structure"
+    }
+   ]
+  },
+  {
+   "skill": "AGRI.G7.CONSER.CONSTRUCTING_WATER_RETEN.RETENTION_BUILD",
+   "key_step": "The child says how a retention ditch or pit is built: find where run-off flows, mark across the slope, dig (about 60 cm wide and deep), soil on the downhill side as a bank, add manure, plant a water-loving crop, clear silt after rain.",
+   "floor": {
+    "prerequisite": "Knows how run-off can be used.",
+    "question": "Where can run-off be led?",
+    "answer": "into a pit or ditch"
+   },
+   "representations": [
+    "a model slope",
+    "a tape measure and pegs",
+    "step cards"
+   ],
+   "steps": [
+    "Find the run-off path.",
+    "Mark across the slope.",
+    "Dig; bank on the downhill side.",
+    "Add manure; plant.",
+    "Clear silt after rains."
+   ],
+   "contexts": [
+    "a school garden slope",
+    "a farm in Makueni",
+    "a banana plot at home"
+   ],
+   "board": [
+    {
+     "beat": "draw",
+     "do": "Draw a slope with a ditch across it."
+    },
+    {
+     "beat": "predict",
+     "do": "Ask which side the soil bank goes."
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for \"downhill\"."
+    },
+    {
+     "beat": "reveal",
+     "do": "Draw the bank downhill."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "AGRI.G7.CONSER.CONSTRUCTING_WATER_RETEN.RETENTION_BUILD.M_AG7_RB_DOWN",
+     "listen_for": [
+      "Straight down the slope"
+     ],
+     "ask": "How is a retention ditch laid out on a slope?",
+     "repair": "Pour water down a tray with a ditch down the slope and one across it."
+    },
+    {
+     "code": "AGRI.G7.CONSER.CONSTRUCTING_WATER_RETEN.RETENTION_BUILD.M_AG7_RB_BANK",
+     "listen_for": [
+      "On the uphill side"
+     ],
+     "ask": "Where is the dug soil put when making a retention ditch?",
+     "repair": "Model both on a tray; see which holds the water in the ditch."
+    },
+    {
+     "code": "AGRI.G7.CONSER.CONSTRUCTING_WATER_RETEN.RETENTION_BUILD.M_AG7_RB_CROP",
+     "listen_for": [
+      "Maize or beans"
+     ],
+     "ask": "Which crop suits a retention pit that stays wet?",
+     "repair": "Ask which crops grow in wet valley bottoms."
+    },
+    {
+     "code": "AGRI.G7.CONSER.CONSTRUCTING_WATER_RETEN.RETENTION_BUILD.M_AG7_RB_SILT",
+     "listen_for": [
+      "It does not need clearing"
+     ],
+     "ask": "Why must a retention ditch be cleared after heavy rain?",
+     "repair": "Show a ditch half filled with silt after a season."
+    }
+   ],
+   "checks": [
+    {
+     "question": "Why is a retention ditch dug across the slope?",
+     "answer": "to catch run-off instead of speeding it up",
+     "shows": "layout"
+    },
+    {
+     "question": "Name a crop to plant in a retention pit.",
+     "answer": "bananas, arrowroot, sugarcane or napier grass",
+     "shows": "crop"
+    }
+   ]
+  }
+ ]
+}

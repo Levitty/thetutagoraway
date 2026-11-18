@@ -1,0 +1,188 @@
+{
+ "sub_strand": "AGRI.G7.FOOD_P.SELECTED_CROP_MANAGEMENT",
+ "title": "Selected Crop Management Practises",
+ "status": "draft: written 18 Nov 2026 offline for Grade 7 Agriculture; not yet checked by a CBC Agriculture teacher; not loaded by the live tutor",
+ "sources": [],
+ "notes": "Carry out gapping, thinning, weeding by hand and earthing-up on the school maize, beans or kale. Thinned seedlings can be transplanted or eaten.",
+ "skills": [
+  {
+   "skill": "AGRI.G7.FOOD_P.SELECTED_CROP_MANAGEMENT.CROP_PRACTICES",
+   "key_step": "The child names crop management practices and what each does: gapping (fills spaces), thinning (removes extra seedlings), weeding (removes competition for water, nutrients and light), earthing-up (supports the plant, covers roots and tubers).",
+   "floor": {
+    "prerequisite": "Knows how seedlings are cared for after transplanting.",
+    "question": "What is done when a seedling dies?",
+    "answer": "it is replaced"
+   },
+   "representations": [
+    "a row of seedlings drawn with gaps and crowding",
+    "a matching chart",
+    "the school plot"
+   ],
+   "steps": [
+    "Gap: fill spaces.",
+    "Thin: remove extras.",
+    "Weed: remove competition.",
+    "Earth up: support and cover."
+   ],
+   "contexts": [
+    "maize at school",
+    "beans at home",
+    "potatoes in Nyandarua"
+   ],
+   "board": [
+    {
+     "beat": "draw",
+     "do": "Draw a row with a gap and a crowded patch."
+    },
+    {
+     "beat": "point",
+     "do": "Point at the crowded patch.",
+     "say": "Which practice?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for \"thinning\"."
+    },
+    {
+     "beat": "reveal",
+     "do": "Label gap: gapping; crowd: thinning."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "AGRI.G7.FOOD_P.SELECTED_CROP_MANAGEMENT.CROP_PRACTICES.M_AG7_CP_WEED",
+     "listen_for": [
+      "Weeds help the crop grow"
+     ],
+     "ask": "Why is weeding done?",
+     "repair": "Grow two rows of beans, one weeded; compare their size after three weeks."
+    },
+    {
+     "code": "AGRI.G7.FOOD_P.SELECTED_CROP_MANAGEMENT.CROP_PRACTICES.M_AG7_CP_THIN",
+     "listen_for": [
+      "Replacing seeds that failed"
+     ],
+     "ask": "What is thinning?",
+     "repair": "Use the words: thin = make fewer; gap = fill a gap."
+    },
+    {
+     "code": "AGRI.G7.FOOD_P.SELECTED_CROP_MANAGEMENT.CROP_PRACTICES.M_AG7_CP_GAP",
+     "listen_for": [
+      "Removing extra seedlings"
+     ],
+     "ask": "What is gapping?",
+     "repair": "Point at an empty space in a row: \"a gap\" is filled by gapping."
+    },
+    {
+     "code": "AGRI.G7.FOOD_P.SELECTED_CROP_MANAGEMENT.CROP_PRACTICES.M_AG7_CP_EARTH",
+     "listen_for": [
+      "Sowing more seeds near the plant"
+     ],
+     "ask": "What is earthing-up?",
+     "repair": "Show earthed-up potatoes and maize; ask what has been added."
+    }
+   ],
+   "checks": [
+    {
+     "question": "What is gapping?",
+     "answer": "replacing seeds or seedlings that failed",
+     "shows": "gapping"
+    },
+    {
+     "question": "Why is earthing-up done on potatoes?",
+     "answer": "to cover the tubers and support the plant",
+     "shows": "earthing up"
+    }
+   ]
+  },
+  {
+   "skill": "AGRI.G7.FOOD_P.SELECTED_CROP_MANAGEMENT.PRACTICE_STEPS",
+   "key_step": "The child says when and how each practice is done: gap within two weeks with the same crop, thin when moist leaving the strongest, weed before weeds seed and shallowly near the crop, earth up by heaping soil round the stems.",
+   "floor": {
+    "prerequisite": "Knows what each practice does.",
+    "question": "What does thinning do?",
+    "answer": "removes extra seedlings"
+   },
+   "representations": [
+    "a crop calendar",
+    "step cards",
+    "a jembe and hands"
+   ],
+   "steps": [
+    "Gap early with the same crop.",
+    "Thin in moist soil; keep the strongest.",
+    "Weed before weeds seed.",
+    "Earth up round the stems."
+   ],
+   "contexts": [
+    "the school maize",
+    "kale at home",
+    "a farm in Bungoma"
+   ],
+   "board": [
+    {
+     "beat": "write",
+     "do": "Write \"maize came up 5 weeks ago; some holes are empty\"."
+    },
+    {
+     "beat": "predict",
+     "do": "Ask whether to gap now."
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for the child's answer."
+    },
+    {
+     "beat": "reveal",
+     "do": "Write \"gap within two weeks; now it is late\"."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "AGRI.G7.FOOD_P.SELECTED_CROP_MANAGEMENT.PRACTICE_STEPS.M_AG7_PS_LATEGAP",
+     "listen_for": [
+      "A month or more after germination"
+     ],
+     "ask": "When should gapping be done?",
+     "repair": "Show a late-gapped plant, small beside its neighbours."
+    },
+    {
+     "code": "AGRI.G7.FOOD_P.SELECTED_CROP_MANAGEMENT.PRACTICE_STEPS.M_AG7_PS_THINWEAK",
+     "listen_for": [
+      "The smallest"
+     ],
+     "ask": "Which seedlings are left when thinning?",
+     "repair": "Compare a big and a weak seedling side by side."
+    },
+    {
+     "code": "AGRI.G7.FOOD_P.SELECTED_CROP_MANAGEMENT.PRACTICE_STEPS.M_AG7_PS_THINDRY",
+     "listen_for": [
+      "When the soil is dry and hard"
+     ],
+     "ask": "When is thinning best done?",
+     "repair": "Pull a seedling from dry soil and from moist soil; look at its neighbours."
+    },
+    {
+     "code": "AGRI.G7.FOOD_P.SELECTED_CROP_MANAGEMENT.PRACTICE_STEPS.M_AG7_PS_DEEPWEED",
+     "listen_for": [
+      "Dig deep with a jembe right next to the stem"
+     ],
+     "ask": "How should weeds close to young maize be removed?",
+     "repair": "Show cut maize roots after deep weeding close to the stem."
+    }
+   ],
+   "checks": [
+    {
+     "question": "Which seedlings are left after thinning?",
+     "answer": "the strongest ones at the right spacing",
+     "shows": "thinning"
+    },
+    {
+     "question": "Why weed before the weeds flower?",
+     "answer": "so they do not spread seeds",
+     "shows": "weeding"
+    }
+   ]
+  }
+ ]
+}

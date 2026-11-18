@@ -1,0 +1,186 @@
+{
+ "sub_strand": "AGRI.G7.PRODUC.ADDING_VALUE_TO_CROP_PRO",
+ "title": "Adding Value to Crop Produce",
+ "status": "draft: written 18 Nov 2026 offline for Grade 7 Agriculture; not yet checked by a CBC Agriculture teacher; not loaded by the live tutor",
+ "sources": [],
+ "notes": "Make sun-dried sweet potato or cassava chips, or fried crisps (frying by the teacher), and compare the price and shelf life with the raw produce.",
+ "skills": [
+  {
+   "skill": "AGRI.G7.PRODUC.ADDING_VALUE_TO_CROP_PRO.VALUE_ADDITION",
+   "key_step": "The child names ways of adding value to crop produce (cleaning and sorting, grading, drying, milling into flour, frying into crisps, roasting, packaging and labelling) and says value addition raises price and storage life.",
+   "floor": {
+    "prerequisite": "Knows how produce is dried.",
+    "question": "Why does dried food keep?",
+    "answer": "no water for moulds"
+   },
+   "representations": [
+    "raw and processed samples with prices",
+    "a chart: produce, product",
+    "packets"
+   ],
+   "steps": [
+    "Name the produce.",
+    "Name a product from it.",
+    "Compare price and how long it keeps."
+   ],
+   "contexts": [
+    "groundnut paste",
+    "cassava flour",
+    "potato crisps"
+   ],
+   "board": [
+    {
+     "beat": "write",
+     "do": "Write \"raw groundnuts: 150 shillings; roasted and packed: 300\"."
+    },
+    {
+     "beat": "predict",
+     "do": "Ask what made the difference."
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for \"processing and packing\"."
+    },
+    {
+     "beat": "reveal",
+     "do": "Write \"value added\"."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "AGRI.G7.PRODUC.ADDING_VALUE_TO_CROP_PRO.VALUE_ADDITION.M_AG7_VA_RAW",
+     "listen_for": [
+      "It lowers the price"
+     ],
+     "ask": "How does value addition help a farmer?",
+     "repair": "Compare the price of a kilogram of raw groundnuts with roasted, packed groundnuts."
+    },
+    {
+     "code": "AGRI.G7.PRODUC.ADDING_VALUE_TO_CROP_PRO.VALUE_ADDITION.M_AG7_VA_EXAMPLE",
+     "listen_for": [
+      "Leaving mangoes to rot"
+     ],
+     "ask": "Which is value addition?",
+     "repair": "Define value addition: changing produce so it is worth more or keeps longer."
+    },
+    {
+     "code": "AGRI.G7.PRODUC.ADDING_VALUE_TO_CROP_PRO.VALUE_ADDITION.M_AG7_VA_STEPS",
+     "listen_for": [
+      "Selling it dirty"
+     ],
+     "ask": "What comes first in preparing produce for sale?",
+     "repair": "Show crisps made from unsorted potatoes with bad spots; who would buy them?"
+    },
+    {
+     "code": "AGRI.G7.PRODUC.ADDING_VALUE_TO_CROP_PRO.VALUE_ADDITION.M_AG7_VA_LIFE",
+     "listen_for": [
+      "It does not; price is all"
+     ],
+     "ask": "How else does drying cassava add value, besides a better price?",
+     "repair": "Compare a raw cassava root after a week with dried chips."
+    }
+   ],
+   "checks": [
+    {
+     "question": "Give a way of adding value to cassava.",
+     "answer": "drying into chips or milling into flour",
+     "shows": "example"
+    },
+    {
+     "question": "How does value addition help a farmer?",
+     "answer": "higher price and longer storage",
+     "shows": "benefit"
+    }
+   ]
+  },
+  {
+   "skill": "AGRI.G7.PRODUC.ADDING_VALUE_TO_CROP_PRO.VALUE_STEPS",
+   "key_step": "The child says the steps of adding value: choose sound produce, clean, sort, peel, slice evenly, dry or fry (by an adult), cool, pack in clean sealed packets, label, then compare with raw produce.",
+   "floor": {
+    "prerequisite": "Knows ways of adding value.",
+    "question": "Name a product from potatoes.",
+    "answer": "crisps"
+   },
+   "representations": [
+    "step cards",
+    "a knife and board (teacher)",
+    "packets and labels"
+   ],
+   "steps": [
+    "Choose, clean and sort.",
+    "Peel and slice evenly.",
+    "Dry or fry.",
+    "Cool, pack, seal, label."
+   ],
+   "contexts": [
+    "sweet potato chips at school",
+    "pumpkin flour",
+    "simsim snacks"
+   ],
+   "board": [
+    {
+     "beat": "write",
+     "do": "Write the cards: label, slice, sort."
+    },
+    {
+     "beat": "predict",
+     "do": "Ask for the order."
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for \"sort, slice, label\"."
+    },
+    {
+     "beat": "reveal",
+     "do": "Order them."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "AGRI.G7.PRODUC.ADDING_VALUE_TO_CROP_PRO.VALUE_STEPS.M_AG7_VS_PACK",
+     "listen_for": [
+      "Warm, in an open bag"
+     ],
+     "ask": "How are dried chips packed?",
+     "repair": "Pack warm chips in a sealed bag: droplets form inside."
+    },
+    {
+     "code": "AGRI.G7.PRODUC.ADDING_VALUE_TO_CROP_PRO.VALUE_STEPS.M_AG7_VS_THICK",
+     "listen_for": [
+      "It does not matter"
+     ],
+     "ask": "Why are potatoes sliced thin and even for crisps?",
+     "repair": "Fry or dry thick and thin slices; compare."
+    },
+    {
+     "code": "AGRI.G7.PRODUC.ADDING_VALUE_TO_CROP_PRO.VALUE_STEPS.M_AG7_VS_LABEL",
+     "listen_for": [
+      "Only to look nice"
+     ],
+     "ask": "Why is a packet of dried pumpkin labelled?",
+     "repair": "Compare two packets, one labelled and one plain; which would you buy?"
+    },
+    {
+     "code": "AGRI.G7.PRODUC.ADDING_VALUE_TO_CROP_PRO.VALUE_STEPS.M_AG7_VS_SPOILT",
+     "listen_for": [
+      "Yes, it saves money"
+     ],
+     "ask": "Can sweet potatoes with rotten spots be used for chips?",
+     "repair": "Show chips with dark bitter spots."
+    }
+   ],
+   "checks": [
+    {
+     "question": "Why are chips cooled before packing?",
+     "answer": "warm chips sweat in the packet and go soft or mouldy",
+     "shows": "pack"
+    },
+    {
+     "question": "What goes on a label?",
+     "answer": "name, weight, date, maker",
+     "shows": "label"
+    }
+   ]
+  }
+ ]
+}

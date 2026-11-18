@@ -50,7 +50,7 @@
     "pick the right answer in a short story",
     "find the false step in a learner's reason"
    ],
-   "mastery": "The child names causes (too much fertiliser or pesticide, dumped polythene and plastic, oil spills, dumped rubbish) and controls (reduce, reuse and recycle waste, use manure, dispose of waste properly), and does not say pollution helps the soil. Evidence rule: at least four of the last five fresh questions right across at least two question forms, and no repeated pick of the same misconception."
+   "mastery": "The child names causes (too much fertiliser or pesticide, dumped polythene and plastic, oil spills, dumped rubbish) and controls (reduce, reuse and recycle waste, use manure, dispose of waste properly), and does not say pollution helps the soil. The practical (safe disposal of wastewater, plastics and chemical containers at home or school) is marked by the teacher with the KICD rubric indicator; the app asks only the knowledge half. Evidence rule: at least four of the last five fresh questions right across at least two question forms, and no repeated pick of the same misconception."
   },
   "AGRI.G7.CONSER.CONSTRUCTING_WATER_RETEN.RUNOFF": {
    "forms": [
@@ -60,13 +60,21 @@
    ],
    "mastery": "The child says surface run-off is water flowing over the ground, which can be trapped in trenches, terraces, water pans and zai pits and used for the garden, and that mulch and ridges slow it. Evidence rule: at least four of the last five fresh questions right across at least two question forms, and no repeated pick of the same misconception."
   },
+  "AGRI.G7.CONSER.CONSTRUCTING_WATER_RETEN.RETENTION_BUILD": {
+   "forms": [
+    "order the steps",
+    "choose the site",
+    "story with a reason"
+   ],
+   "mastery": "Says how a water retention ditch or pit is built: sited across the slope where run-off flows, marked along the contour, dug with the soil thrown on the downhill side as a bank, filled with manure and planted with a crop such as bananas, napier or arrowroot, and kept clear of silt; in the app the child picks the right step, order, tool, measure or reason in new situations. The practical (constructing a water retention ditch or pit and planting in it) is marked by the teacher with the KICD rubric indicator; the app asks only the knowledge half. Evidence rule: at least four of the last five fresh questions right across at least two question forms, and no repeated pick of the same misconception."
+  },
   "AGRI.G7.CONSER.CONSERVING_FOOD_NUTRIENT.NUTRIENT_KEEP": {
    "forms": [
     "pick the right answer",
     "pick the right answer in a short story",
     "find the false step in a learner's reason"
    ],
-   "mastery": "The child says to wash vegetables before cutting, cook them for a short time in little water with a lid on, not to peel thickly, to use the cooking water and to eat some raw, and does not say long boiling keeps vitamins. Evidence rule: at least four of the last five fresh questions right across at least two question forms, and no repeated pick of the same misconception."
+   "mastery": "The child says to wash vegetables before cutting, cook them for a short time in little water with a lid on, not to peel thickly, to use the cooking water and to eat some raw, and does not say long boiling keeps vitamins. The practical (handling, preparing and cooking vegetables to keep vitamins and minerals) is marked by the teacher with the KICD rubric indicator; the app asks only the knowledge half. Evidence rule: at least four of the last five fresh questions right across at least two question forms, and no repeated pick of the same misconception."
   },
   "AGRI.G7.CONSER.GROWING_TREES.TREES_IMPORTANCE": {
    "forms": [
@@ -76,6 +84,14 @@
    ],
    "mastery": "The child says trees give oxygen, bring rain, hold soil against erosion, give shade and shelter and wood and fruit, and make homes for birds, and do not dry up the land. Evidence rule: at least four of the last five fresh questions right across at least two question forms, and no repeated pick of the same misconception."
   },
+  "AGRI.G7.CONSER.GROWING_TREES.TREE_PLANTING": {
+   "forms": [
+    "order the steps",
+    "choose a reason",
+    "story"
+   ],
+   "mastery": "Says how a tree is planted from a seedling, seed or cutting: choose a tree that suits the place, dig the hole early (about 60 cm), keep topsoil apart and mix it with manure, remove the polythene sleeve, plant at the nursery depth, firm, water, mulch, protect with a fence, and water and weed until it is established; in the app the child picks the right step, order, tool, measure or reason in new situations. The practical (planting and caring for a tree until it is established) is marked by the teacher with the KICD rubric indicator; the app asks only the knowledge half. Evidence rule: at least four of the last five fresh questions right across at least two question forms, and no repeated pick of the same misconception."
+  },
   "AGRI.G7.FOOD_P.CROP_ESTABLISHMENT.TILTH": {
    "forms": [
     "pick the right answer",
@@ -83,6 +99,14 @@
     "find the false step in a learner's reason"
    ],
    "mastery": "The child says small seeds such as carrot and onion need a fine tilth, medium seeds such as beans and maize need a medium tilth and tubers and cuttings such as sweet potato need a coarse tilth. Evidence rule: at least four of the last five fresh questions right across at least two question forms, and no repeated pick of the same misconception."
+  },
+  "AGRI.G7.FOOD_P.CROP_ESTABLISHMENT.TILTH_PREP": {
+   "forms": [
+    "order the steps",
+    "choose the tool",
+    "story"
+   ],
+   "mastery": "Says how each tilth is prepared: clear the site, primary cultivation (digging with a jembe or forked jembe), remove roots and stones, then break the clods to fine (several times, raked) for small seeds, medium for maize and beans, or leave coarse for tubers, vines and suckers; and why over-working soil is a waste; in the app the child picks the right step, order, tool, measure or reason in new situations. The practical (preparing a suitable tilth and establishing a planting material) is marked by the teacher with the KICD rubric indicator; the app asks only the knowledge half. Evidence rule: at least four of the last five fresh questions right across at least two question forms, and no repeated pick of the same misconception."
   },
   "AGRI.G7.FOOD_P.SELECTED_CROP_MANAGEMENT.CROP_PRACTICES": {
    "forms": [
@@ -92,6 +116,14 @@
    ],
    "mastery": "The child names weeding (removes competition), thinning (removes extra seedlings), gapping (replaces seeds that did not grow), mulching (keeps water), pruning, staking and earthing up, and says each helps the crop grow. Evidence rule: at least four of the last five fresh questions right across at least two question forms, and no repeated pick of the same misconception."
   },
+  "AGRI.G7.FOOD_P.SELECTED_CROP_MANAGEMENT.PRACTICE_STEPS": {
+   "forms": [
+    "choose the time",
+    "order the steps",
+    "story"
+   ],
+   "mastery": "Says when and how each practice is done: gapping within two weeks of germination with the same crop, thinning when the soil is moist leaving the strongest seedlings, weeding by hand or jembe before weeds seed without cutting crop roots, earthing-up by heaping soil round the stems of maize, potatoes and others; in the app the child picks the right step, order, tool, measure or reason in new situations. The practical (carrying out gapping, thinning, weeding and earthing-up) is marked by the teacher with the KICD rubric indicator; the app asks only the knowledge half. Evidence rule: at least four of the last five fresh questions right across at least two question forms, and no repeated pick of the same misconception."
+  },
   "AGRI.G7.FOOD_P.PREPARING_ANIMAL_PRODUCT.ANIMAL_PRODUCTS": {
    "forms": [
     "pick the right answer",
@@ -99,6 +131,14 @@
     "find the false step in a learner's reason"
    ],
    "mastery": "The child says milk is boiled or pasteurised, eggs and meat are cooked well, hands and tools are washed, and products are kept cool and covered, and that raw milk can carry germs. Evidence rule: at least four of the last five fresh questions right across at least two question forms, and no repeated pick of the same misconception."
+  },
+  "AGRI.G7.FOOD_P.PREPARING_ANIMAL_PRODUCT.EGG_HONEY_PREP": {
+   "forms": [
+    "order the steps",
+    "choose the reason",
+    "story"
+   ],
+   "mastery": "Says how eggs are prepared (collected often, cleaned dry, sorted and graded by size and soundness, candled, packed broad end up in trays, kept cool) and honey (ripe comb, crushed, strained through a clean cloth, left to settle, packed in clean, dry, airtight containers and labelled); in the app the child picks the right step, order, tool, measure or reason in new situations. The practical (preparing eggs and honey for use and storage) is marked by the teacher with the KICD rubric indicator; the app asks only the knowledge half. Evidence rule: at least four of the last five fresh questions right across at least two question forms, and no repeated pick of the same misconception."
   },
   "AGRI.G7.FOOD_P.COOKING_FOOD.COOKING_METHODS": {
    "forms": [
@@ -108,6 +148,14 @@
    ],
    "mastery": "The child names boiling (in water), steaming (over steam), frying (in oil), roasting (dry heat), baking (in an oven) and stewing (slow, with liquid), and gives an example food for each; hot cooking is done only with an adult. Evidence rule: at least four of the last five fresh questions right across at least two question forms, and no repeated pick of the same misconception."
   },
+  "AGRI.G7.FOOD_P.COOKING_FOOD.COOKING_PRACTICE": {
+   "forms": [
+    "order the steps",
+    "choose the method",
+    "story"
+   ],
+   "mastery": "Says how to grill (food on a hot grill close to the heat, turned, fat dripping away), roast (dry heat over coals, in ashes or an oven, turned for even cooking) and steam (food above boiling water, lid on, water topped up) and how to tell each food is cooked, keeping hands, hair and sleeves away from the heat; in the app the child picks the right step, order, tool, measure or reason in new situations. The practical (grilling, steaming and roasting foods safely) is marked by the teacher with the KICD rubric indicator; the app asks only the knowledge half. Evidence rule: at least four of the last five fresh questions right across at least two question forms, and no repeated pick of the same misconception."
+  },
   "AGRI.G7.HYGIEN.HYGIENE_IN_REARING_ANIMA.ANIMAL_HYGIENE": {
    "forms": [
     "pick the right answer",
@@ -115,6 +163,14 @@
     "find the false step in a learner's reason"
    ],
    "mastery": "The child names cleaning the house and removing dung, clean water and feed, vaccination, dipping or spraying, deworming, separating sick animals and washing hands after handling, and says they prevent disease. Evidence rule: at least four of the last five fresh questions right across at least two question forms, and no repeated pick of the same misconception."
+  },
+  "AGRI.G7.HYGIEN.HYGIENE_IN_REARING_ANIMA.HOUSE_CLEANING": {
+   "forms": [
+    "order the steps",
+    "choose the material",
+    "story"
+   ],
+   "mastery": "Puts the steps of cleaning an animal house in order (protective clothing on, animals moved out, old bedding and droppings removed, walls and floor scrubbed, disinfectant used by an adult, house dried and aired, clean bedding added) and says feeders and waterers are washed and dried daily; in the app the child picks the right step, order, tool, measure or reason in new situations. The practical (carrying out hygiene practices in rearing domestic animals) is marked by the teacher with the KICD rubric indicator; the app asks only the knowledge half. Evidence rule: at least four of the last five fresh questions right across at least two question forms, and no repeated pick of the same misconception."
   },
   "AGRI.G7.HYGIEN.LAUNDRY_LOOSE_COLOURED_I.LAUNDRY_COLOURS": {
    "forms": [
@@ -124,6 +180,14 @@
    ],
    "mastery": "The child says to wash loose-coloured articles separately, in cold water, quickly, rinse well and dry in the shade, and not to soak them long or wash them with white clothes. Evidence rule: at least four of the last five fresh questions right across at least two question forms, and no repeated pick of the same misconception."
   },
+  "AGRI.G7.HYGIEN.LAUNDRY_LOOSE_COLOURED_I.COLOUR_STEPS": {
+   "forms": [
+    "order the steps",
+    "choose the reason",
+    "story"
+   ],
+   "mastery": "Puts the steps of laundering a loose-coloured article in order (test for colour fastness, sort it apart, wash quickly in cool or lukewarm soapy water by kneading and squeezing, rinse in cool water until clear, squeeze gently, dry inside out in shade, iron on the wrong side); in the app the child picks the right step, order, tool, measure or reason in new situations. The practical (laundering a loose-coloured article) is marked by the teacher with the KICD rubric indicator; the app asks only the knowledge half. Evidence rule: at least four of the last five fresh questions right across at least two question forms, and no repeated pick of the same misconception."
+  },
   "AGRI.G7.PRODUC.KNITTING_SKILLS.KNITTING": {
    "forms": [
     "pick the right answer",
@@ -131,6 +195,14 @@
     "find the false step in a learner's reason"
    ],
    "mastery": "The child names knitting needles and yarn, casting on and casting off, and the knit stitch and purl stitch, and says alternating knit and purl rows makes stocking stitch. Evidence rule: at least four of the last five fresh questions right across at least two question forms, and no repeated pick of the same misconception."
+  },
+  "AGRI.G7.PRODUC.KNITTING_SKILLS.KNIT_ARTICLE": {
+   "forms": [
+    "order the steps",
+    "choose the stitch",
+    "story"
+   ],
+   "mastery": "Says how a simple article is knitted: choose needles and yarn, make a slip knot, cast on the number of stitches needed, knit every row for garter stitch or knit and purl alternate rows for stocking stitch, keep the tension even, cast off, sew in the ends and press; in the app the child picks the right step, order, tool, measure or reason in new situations. The practical (knitting a simple household article) is marked by the teacher with the KICD rubric indicator; the app asks only the knowledge half. Evidence rule: at least four of the last five fresh questions right across at least two question forms, and no repeated pick of the same misconception."
   },
   "AGRI.G7.PRODUC.CONSTRUCTING_FRAMED_SUSP.FRAMED_GARDEN": {
    "forms": [
@@ -140,6 +212,14 @@
    ],
    "mastery": "The child says a framed suspended garden is a frame that holds containers of soil above the ground, saves space and suits small compounds, and needs soil with manure, drainage and regular watering. Evidence rule: at least four of the last five fresh questions right across at least two question forms, and no repeated pick of the same misconception."
   },
+  "AGRI.G7.PRODUC.CONSTRUCTING_FRAMED_SUSP.FRAME_BUILD": {
+   "forms": [
+    "order the steps",
+    "choose the material",
+    "story"
+   ],
+   "mastery": "Says how a framed suspended garden is built: sketch and measure, choose strong local materials (poles, planks, metal bars, wire), fix the uprights firmly in the ground, join cross bars level, hang containers with drainage holes so upper ones do not shade lower ones, fill with soil and manure, plant, water from the top; in the app the child picks the right step, order, tool, measure or reason in new situations. The practical (constructing a framed structure for a suspended garden) is marked by the teacher with the KICD rubric indicator; the app asks only the knowledge half. Evidence rule: at least four of the last five fresh questions right across at least two question forms, and no repeated pick of the same misconception."
+  },
   "AGRI.G7.PRODUC.ADDING_VALUE_TO_CROP_PRO.VALUE_ADDITION": {
    "forms": [
     "pick the right answer",
@@ -148,6 +228,14 @@
    ],
    "mastery": "The child says value is added by cleaning, sorting, drying, grinding into flour, packaging and processing, such as tomato into sauce and mango into juice, so the produce sells for more. Evidence rule: at least four of the last five fresh questions right across at least two question forms, and no repeated pick of the same misconception."
   },
+  "AGRI.G7.PRODUC.ADDING_VALUE_TO_CROP_PRO.VALUE_STEPS": {
+   "forms": [
+    "order the steps",
+    "choose the method",
+    "story"
+   ],
+   "mastery": "Says how value is added to a crop produce such as potatoes, cassava, sweet potatoes, groundnuts, simsim or pumpkin: choose sound produce, clean, sort, peel, slice evenly, then dry well or fry (by an adult), cool, pack in clean sealed packets and label, and compares price and storage life with the raw produce; in the app the child picks the right step, order, tool, measure or reason in new situations. The practical (adding value to a selected crop produce) is marked by the teacher with the KICD rubric indicator; the app asks only the knowledge half. Evidence rule: at least four of the last five fresh questions right across at least two question forms, and no repeated pick of the same misconception."
+  },
   "AGRI.G7.PRODUC.MAKING_HOMEMADE_SOAP.SOAP_FORMS": {
    "forms": [
     "pick the right answer",
@@ -155,6 +243,14 @@
     "find the false step in a learner's reason"
    ],
    "mastery": "The child names bar, liquid, powder and paste soap, says soap removes dirt and germs when used with water, and says that making soap involves strong chemicals and heat and is done only with a teacher. Evidence rule: at least four of the last five fresh questions right across at least two question forms, and no repeated pick of the same misconception."
+  },
+  "AGRI.G7.PRODUC.MAKING_HOMEMADE_SOAP.SOAP_MAKING": {
+   "forms": [
+    "order the steps",
+    "choose the ingredient",
+    "story"
+   ],
+   "mastery": "Says how homemade soap is made from natural ingredients (water passed through wood ashes to make lye, animal fat or plant oil, salt): the lye and fat are heated and stirred by an adult until they thicken, salt helps the soap set, it is poured into moulds, left to harden and cure for weeks, and the lye is never touched by learners; in the app the child picks the right step, order, tool, measure or reason in new situations. The practical (making homemade soap (the teacher handles the lye)) is marked by the teacher with the KICD rubric indicator; the app asks only the knowledge half. Evidence rule: at least four of the last five fresh questions right across at least two question forms, and no repeated pick of the same misconception."
   }
  }
 }

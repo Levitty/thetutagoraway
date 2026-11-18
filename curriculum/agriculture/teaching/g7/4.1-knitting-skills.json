@@ -1,0 +1,187 @@
+{
+ "sub_strand": "AGRI.G7.PRODUC.KNITTING_SKILLS",
+ "title": "Knitting Skills",
+ "status": "draft: written 18 Nov 2026 offline for Grade 7 Agriculture; not yet checked by a CBC Agriculture teacher; not loaded by the live tutor",
+ "sources": [],
+ "notes": "Use 4 or 5 mm needles and thick yarn. Knit a garter-stitch wiper or mat first, then try stocking stitch.",
+ "skills": [
+  {
+   "skill": "AGRI.G7.PRODUC.KNITTING_SKILLS.KNITTING",
+   "key_step": "The child names the tools (two needles, yarn, scissors, tape measure, darning needle) and stitches (knit and purl), garter and stocking stitch patterns, and casting on and casting off.",
+   "floor": {
+    "prerequisite": "Knows crochet stitches.",
+    "question": "What tool is used for crochet?",
+    "answer": "a hook"
+   },
+   "representations": [
+    "needles, yarn and samples",
+    "a chart of patterns",
+    "a knitted scarf"
+   ],
+   "steps": [
+    "Two needles and yarn.",
+    "Knit and purl are the stitches.",
+    "Garter: knit every row. Stocking: knit, purl alternate rows.",
+    "Cast on to start; cast off to finish."
+   ],
+   "contexts": [
+    "a knitted scarf",
+    "a table wiper",
+    "a sweater"
+   ],
+   "board": [
+    {
+     "beat": "write",
+     "do": "Write \"knit every row\"."
+    },
+    {
+     "beat": "predict",
+     "do": "Ask which pattern this makes."
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for \"garter stitch\"."
+    },
+    {
+     "beat": "reveal",
+     "do": "Write \"garter stitch\"."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "AGRI.G7.PRODUC.KNITTING_SKILLS.KNITTING.M_AG7_KN_TOOL",
+     "listen_for": [
+      "A hammer and nails"
+     ],
+     "ask": "Which tools are used for knitting?",
+     "repair": "Show a pair of knitting needles beside a crochet hook: knitting uses two needles."
+    },
+    {
+     "code": "AGRI.G7.PRODUC.KNITTING_SKILLS.KNITTING.M_AG7_KN_STITCH",
+     "listen_for": [
+      "Brick stitch"
+     ],
+     "ask": "Which is a knitting stitch?",
+     "repair": "Knit one row and purl the next on a sample; name each."
+    },
+    {
+     "code": "AGRI.G7.PRODUC.KNITTING_SKILLS.KNITTING.M_AG7_KN_CAST",
+     "listen_for": [
+      "Finishing the knitting"
+     ],
+     "ask": "What is casting on?",
+     "repair": "On starts the work (stitches go on the needle); off finishes it (stitches come off)."
+    },
+    {
+     "code": "AGRI.G7.PRODUC.KNITTING_SKILLS.KNITTING.M_AG7_KN_GARTER",
+     "listen_for": [
+      "Knit one row, purl the next"
+     ],
+     "ask": "How is garter stitch made?",
+     "repair": "Knit two samples: every row knit, and alternate rows; compare both faces."
+    }
+   ],
+   "checks": [
+    {
+     "question": "Name the two basic knitting stitches.",
+     "answer": "knit and purl",
+     "shows": "stitches"
+    },
+    {
+     "question": "What is casting off?",
+     "answer": "finishing by taking the stitches off the needle",
+     "shows": "casting"
+    }
+   ]
+  },
+  {
+   "skill": "AGRI.G7.PRODUC.KNITTING_SKILLS.KNIT_ARTICLE",
+   "key_step": "The child says how to knit a simple article: choose needles and yarn, slip knot, cast on the counted stitches, knit rows in garter or stocking stitch with even tension, pick up dropped stitches, cast off, sew in ends, press.",
+   "floor": {
+    "prerequisite": "Knows the stitches and casting on and off.",
+    "question": "How is garter stitch made?",
+    "answer": "knit every row"
+   },
+   "representations": [
+    "step cards",
+    "a half-knitted wiper",
+    "a tape measure"
+   ],
+   "steps": [
+    "Cast on the counted stitches.",
+    "Knit rows with even tension.",
+    "Measure as you go.",
+    "Cast off; sew in ends."
+   ],
+   "contexts": [
+    "a tool bag",
+    "a scarf",
+    "a table mat"
+   ],
+   "board": [
+    {
+     "beat": "draw",
+     "do": "Draw a knitted square with a ladder running down it."
+    },
+    {
+     "beat": "predict",
+     "do": "Ask what caused it."
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for \"a dropped stitch\"."
+    },
+    {
+     "beat": "reveal",
+     "do": "Write \"pick up dropped stitches at once\"."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "AGRI.G7.PRODUC.KNITTING_SKILLS.KNIT_ARTICLE.M_AG7_KA_DROP",
+     "listen_for": [
+      "Nothing"
+     ],
+     "ask": "A stitch has slipped off the needle. What happens if you ignore it?",
+     "repair": "Pull a dropped stitch on a sample and watch it run."
+    },
+    {
+     "code": "AGRI.G7.PRODUC.KNITTING_SKILLS.KNIT_ARTICLE.M_AG7_KA_TIGHT",
+     "listen_for": [
+      "Tight is stronger"
+     ],
+     "ask": "Why should casting on not be too tight?",
+     "repair": "Try to knit into a very tight cast-on row."
+    },
+    {
+     "code": "AGRI.G7.PRODUC.KNITTING_SKILLS.KNIT_ARTICLE.M_AG7_KA_ENDS",
+     "listen_for": [
+      "Cut them short and leave them"
+     ],
+     "ask": "What is done with the yarn ends after casting off?",
+     "repair": "Wash a sample with loose short ends; it starts to unravel."
+    },
+    {
+     "code": "AGRI.G7.PRODUC.KNITTING_SKILLS.KNIT_ARTICLE.M_AG7_KA_COUNT",
+     "listen_for": [
+      "Cast on until it looks wide enough"
+     ],
+     "ask": "How do you make a knitted mat the right width?",
+     "repair": "Measure a 10-stitch test square and work out the stitches for 30 cm."
+    }
+   ],
+   "checks": [
+    {
+     "question": "What is the last step after casting off?",
+     "answer": "sew in the ends",
+     "shows": "finish"
+    },
+    {
+     "question": "Why count the cast-on stitches?",
+     "answer": "to get the right width",
+     "shows": "size"
+    }
+   ]
+  }
+ ]
+}

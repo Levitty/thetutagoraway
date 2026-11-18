@@ -1,0 +1,97 @@
+{
+ "sub_strand": "AGRI.G7.CONSER.CONTROLLING_SOIL_POLLUTI",
+ "title": "Controlling Soil Pollution",
+ "status": "draft: written 18 Nov 2026 offline for Grade 7 Agriculture; not yet checked by a CBC Agriculture teacher; not loaded by the live tutor",
+ "sources": [],
+ "notes": "Walk round the school and home compound listing pollutants: wastewater, plastic, used chemical containers, oil. Used chemical containers are never handled by children or reused for food or water.",
+ "skills": [
+  {
+   "skill": "AGRI.G7.CONSER.CONTROLLING_SOIL_POLLUTI.SOIL_POLLUTION",
+   "key_step": "The child names the causes of soil pollution in gardening and at home (too much fertiliser and chemicals, plastics, wastewater with soap and oil, used chemical containers, dumped rubbish) and safe controls (correct amounts, reduce, reuse and recycle plastics, wastewater into a soak pit, safe container disposal, compost).",
+   "floor": {
+    "prerequisite": "Knows how waste is managed.",
+    "question": "Name a way of managing plastic waste.",
+    "answer": "reuse or recycle"
+   },
+   "representations": [
+    "a compound walk list",
+    "a fertiliser packet and a pesticide label",
+    "pictures of polluted soil"
+   ],
+   "steps": [
+    "Name the pollutant.",
+    "Say how it harms soil.",
+    "Choose a safe way to control it."
+   ],
+   "contexts": [
+    "the school compound",
+    "a home with a car wash",
+    "a vegetable farm in Kirinyaga"
+   ],
+   "board": [
+    {
+     "beat": "draw",
+     "do": "Draw a garden with a pipe of soapy water running onto it."
+    },
+    {
+     "beat": "predict",
+     "do": "Ask what the soap and oil do to the soil."
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for \"pollute it\"."
+    },
+    {
+     "beat": "reveal",
+     "do": "Draw a soak pit for the wastewater."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "AGRI.G7.CONSER.CONTROLLING_SOIL_POLLUTI.SOIL_POLLUTION.M_AG7_SP_GOOD",
+     "listen_for": [
+      "Make it healthier"
+     ],
+     "ask": "What can too much fertiliser do to the soil?",
+     "repair": "Show the packet rate (a bottle top per hole); explain that the extra salts burn roots and wash into rivers."
+    },
+    {
+     "code": "AGRI.G7.CONSER.CONTROLLING_SOIL_POLLUTI.SOIL_POLLUTION.M_AG7_SP_PLASTIC",
+     "listen_for": [
+      "It feeds the plants"
+     ],
+     "ask": "Why is polythene a problem in the soil?",
+     "repair": "Dig up a polythene bag buried last term next to a buried leaf; one is unchanged."
+    },
+    {
+     "code": "AGRI.G7.CONSER.CONTROLLING_SOIL_POLLUTI.SOIL_POLLUTION.M_AG7_SP_CONTROL",
+     "listen_for": [
+      "Burning plastic on the farm"
+     ],
+     "ask": "Which helps to control soil pollution?",
+     "repair": "Ask where the smoke, ash and melted plastic go; burning moves the pollution into the air and soil."
+    },
+    {
+     "code": "AGRI.G7.CONSER.CONTROLLING_SOIL_POLLUTI.SOIL_POLLUTION.M_AG7_SP_CONTAINER",
+     "listen_for": [
+      "Wash it and use it for drinking water"
+     ],
+     "ask": "What should be done with an empty pesticide container?",
+     "repair": "Read a pesticide label's disposal instructions with the class."
+    }
+   ],
+   "checks": [
+    {
+     "question": "Name two causes of soil pollution.",
+     "answer": "any two of plastics, too much fertiliser, chemicals, wastewater, oil",
+     "shows": "causes"
+    },
+    {
+     "question": "How should household wastewater be disposed of?",
+     "answer": "into a soak pit or safely away from gardens",
+     "shows": "control"
+    }
+   ]
+  }
+ ]
+}

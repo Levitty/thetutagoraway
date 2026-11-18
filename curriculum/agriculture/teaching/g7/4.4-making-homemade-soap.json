@@ -1,0 +1,187 @@
+{
+ "sub_strand": "AGRI.G7.PRODUC.MAKING_HOMEMADE_SOAP",
+ "title": "Making Homemade Soap",
+ "status": "draft: written 18 Nov 2026 offline for Grade 7 Agriculture; not yet checked by a CBC Agriculture teacher; not loaded by the live tutor",
+ "sources": [],
+ "notes": "Soap making with ash lye or any caustic ingredient is done only by the teacher, outdoors, with gloves and goggles; learners watch from a distance, measure oils and stir only cooled mixtures. Questions ask for names, steps and reasons only.",
+ "skills": [
+  {
+   "skill": "AGRI.G7.PRODUC.MAKING_HOMEMADE_SOAP.SOAP_FORMS",
+   "key_step": "The child identifies the forms of soap used at home (bar or cake, liquid, paste, powder), their uses, and that soap works with water to lift dirt and germs.",
+   "floor": {
+    "prerequisite": "Knows how to wash hands.",
+    "question": "What is used with water to wash hands?",
+    "answer": "soap"
+   },
+   "representations": [
+    "samples of each form",
+    "a chart: form, use",
+    "a basin of water"
+   ],
+   "steps": [
+    "Name the form.",
+    "Name a use.",
+    "Say soap needs water."
+   ],
+   "contexts": [
+    "bathing",
+    "washing dishes",
+    "laundry"
+   ],
+   "board": [
+    {
+     "beat": "write",
+     "do": "Write the four forms: bar, liquid, paste, powder."
+    },
+    {
+     "beat": "point",
+     "do": "Hold up washing powder.",
+     "say": "Which form?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for \"powder\"."
+    },
+    {
+     "beat": "predict",
+     "do": "Ask what it is mostly used for."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "AGRI.G7.PRODUC.MAKING_HOMEMADE_SOAP.SOAP_FORMS.M_AG7_SF_FORM",
+     "listen_for": [
+      "Brick"
+     ],
+     "ask": "Which is a form of soap?",
+     "repair": "Show bar, liquid, paste and powder soap side by side."
+    },
+    {
+     "code": "AGRI.G7.PRODUC.MAKING_HOMEMADE_SOAP.SOAP_FORMS.M_AG7_SF_USE",
+     "listen_for": [
+      "Adds dirt"
+     ],
+     "ask": "What does soap do with water?",
+     "repair": "Rub dry soap on a dirty cloth and then with water; only the wet one lathers and lifts dirt."
+    },
+    {
+     "code": "AGRI.G7.PRODUC.MAKING_HOMEMADE_SOAP.SOAP_FORMS.M_AG7_SF_SAFE",
+     "listen_for": [
+      "Any child alone"
+     ],
+     "ask": "Who handles strong soap chemicals?",
+     "repair": "Read a caustic soda warning label; only the teacher handles lye, with gloves and goggles."
+    },
+    {
+     "code": "AGRI.G7.PRODUC.MAKING_HOMEMADE_SOAP.SOAP_FORMS.M_AG7_SF_POWDER",
+     "listen_for": [
+      "Only bar soap for bathing"
+     ],
+     "ask": "Which form of soap is often used for washing dishes?",
+     "repair": "List where each form is used at home and at school."
+    }
+   ],
+   "checks": [
+    {
+     "question": "Name two forms of soap.",
+     "answer": "any two of bar, liquid, paste, powder",
+     "shows": "forms"
+    },
+    {
+     "question": "Why is water needed with soap?",
+     "answer": "soap and water together lift dirt and germs",
+     "shows": "use"
+    }
+   ]
+  },
+  {
+   "skill": "AGRI.G7.PRODUC.MAKING_HOMEMADE_SOAP.SOAP_MAKING",
+   "key_step": "The child says how homemade soap is made: an adult makes lye by passing water through wood ashes, heats it with fat or oil and stirs until it thickens, adds salt, pours into moulds; it hardens and cures; learners never touch the lye.",
+   "floor": {
+    "prerequisite": "Knows the forms of soap.",
+    "question": "Name a form of soap.",
+    "answer": "bar"
+   },
+   "representations": [
+    "an ingredients chart",
+    "pictures of each step",
+    "moulds"
+   ],
+   "steps": [
+    "Adult makes lye from ash water.",
+    "Adult heats lye with fat or oil and stirs.",
+    "Add salt; pour into moulds.",
+    "Harden and cure for weeks."
+   ],
+   "contexts": [
+    "a women's group making soap",
+    "a school business club",
+    "soap from a home in Siaya"
+   ],
+   "board": [
+    {
+     "beat": "write",
+     "do": "Write \"who handles the lye?\"."
+    },
+    {
+     "beat": "predict",
+     "do": "Ask the class."
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for \"only the teacher, with gloves and goggles\"."
+    },
+    {
+     "beat": "reveal",
+     "do": "Write \"lye burns: adults only\"."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "AGRI.G7.PRODUC.MAKING_HOMEMADE_SOAP.SOAP_MAKING.M_AG7_SM_FAT",
+     "listen_for": [
+      "Nothing else is needed"
+     ],
+     "ask": "Which ingredient is mixed with lye from ashes to make soap?",
+     "repair": "Show the ingredients list: lye plus fat or oil."
+    },
+    {
+     "code": "AGRI.G7.PRODUC.MAKING_HOMEMADE_SOAP.SOAP_MAKING.M_AG7_SM_CURE",
+     "listen_for": [
+      "As soon as it is poured"
+     ],
+     "ask": "When is homemade soap ready to use?",
+     "repair": "Explain fresh soap is still harsh; curing makes it mild and hard."
+    },
+    {
+     "code": "AGRI.G7.PRODUC.MAKING_HOMEMADE_SOAP.SOAP_MAKING.M_AG7_SM_POT",
+     "listen_for": [
+      "Yes, after a rinse"
+     ],
+     "ask": "Can the soap-making pot be used for cooking afterwards?",
+     "repair": "Ask what could be left on the pot's surface."
+    },
+    {
+     "code": "AGRI.G7.PRODUC.MAKING_HOMEMADE_SOAP.SOAP_MAKING.M_AG7_SM_SALT",
+     "listen_for": [
+      "For taste"
+     ],
+     "ask": "Why is salt added in homemade soap making?",
+     "repair": "Show soap made with and without salt: one stays soft."
+    }
+   ],
+   "checks": [
+    {
+     "question": "Which two main ingredients make soap?",
+     "answer": "lye and fat or oil",
+     "shows": "ingredients"
+    },
+    {
+     "question": "Why is soap left to cure?",
+     "answer": "it becomes hard and mild",
+     "shows": "curing"
+    }
+   ]
+  }
+ ]
+}

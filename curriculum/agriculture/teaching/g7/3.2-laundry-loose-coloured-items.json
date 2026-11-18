@@ -1,0 +1,187 @@
+{
+ "sub_strand": "AGRI.G7.HYGIEN.LAUNDRY_LOOSE_COLOURED_I",
+ "title": "Laundry: Loose-coloured Items",
+ "status": "draft: written 18 Nov 2026 offline for Grade 7 Agriculture; not yet checked by a CBC Agriculture teacher; not loaded by the live tutor",
+ "sources": [],
+ "notes": "Test a loose-coloured item for colour fastness on a hidden seam with a damp white cloth before washing it in cool water by kneading and squeezing.",
+ "skills": [
+  {
+   "skill": "AGRI.G7.HYGIEN.LAUNDRY_LOOSE_COLOURED_I.LAUNDRY_COLOURS",
+   "key_step": "The child says how to launder a loose-coloured article: test colour fastness, wash alone in cool soapy water quickly, do not soak, knead and squeeze, rinse in cool water, dry inside out in shade, iron on the wrong side.",
+   "floor": {
+    "prerequisite": "Knows how to care for fast-coloured cotton.",
+    "question": "Where are coloured clothes dried?",
+    "answer": "in the shade, inside out"
+   },
+   "representations": [
+    "a loose-coloured scrap and white cloth",
+    "a care chart",
+    "basins of cool water"
+   ],
+   "steps": [
+    "Test the colour.",
+    "Wash alone, quickly, in cool water.",
+    "Knead and squeeze; rinse cool.",
+    "Dry in shade, inside out."
+   ],
+   "contexts": [
+    "a new red T-shirt",
+    "a kitenge",
+    "a coloured school sweater"
+   ],
+   "board": [
+    {
+     "beat": "draw",
+     "do": "Draw a red shirt in a basin with a white shirt."
+    },
+    {
+     "beat": "predict",
+     "do": "Ask what happens to the white shirt."
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for \"it turns pink\"."
+    },
+    {
+     "beat": "reveal",
+     "do": "Write \"wash loose colours alone\"."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "AGRI.G7.HYGIEN.LAUNDRY_LOOSE_COLOURED_I.LAUNDRY_COLOURS.M_AG7_LC_WHITE",
+     "listen_for": [
+      "With white clothes"
+     ],
+     "ask": "How should a loose-coloured shirt be washed?",
+     "repair": "Wash a scrap of loose-coloured cloth with a white handkerchief and show the stain."
+    },
+    {
+     "code": "AGRI.G7.HYGIEN.LAUNDRY_LOOSE_COLOURED_I.LAUNDRY_COLOURS.M_AG7_LC_SOAK",
+     "listen_for": [
+      "For a whole day"
+     ],
+     "ask": "How long should a loose-coloured shirt be soaked?",
+     "repair": "Soak a loose-coloured scrap and watch the water change colour over an hour."
+    },
+    {
+     "code": "AGRI.G7.HYGIEN.LAUNDRY_LOOSE_COLOURED_I.LAUNDRY_COLOURS.M_AG7_LC_DRY",
+     "listen_for": [
+      "In the hot sun"
+     ],
+     "ask": "Where should loose-coloured clothes dry?",
+     "repair": "Recall Grade 5: colours dry inside out in the shade so they do not fade."
+    },
+    {
+     "code": "AGRI.G7.HYGIEN.LAUNDRY_LOOSE_COLOURED_I.LAUNDRY_COLOURS.M_AG7_LC_MEANING",
+     "listen_for": [
+      "Clothing that fits loosely"
+     ],
+     "ask": "What is a loose-coloured article?",
+     "repair": "Dip a corner of a loose-coloured scrap in water and press it on white paper."
+    }
+   ],
+   "checks": [
+    {
+     "question": "Why wash a loose-coloured article alone?",
+     "answer": "its dye runs and stains other clothes",
+     "shows": "alone"
+    },
+    {
+     "question": "Why not soak loose colours for long?",
+     "answer": "more dye comes out",
+     "shows": "soak"
+    }
+   ]
+  },
+  {
+   "skill": "AGRI.G7.HYGIEN.LAUNDRY_LOOSE_COLOURED_I.COLOUR_STEPS",
+   "key_step": "The child orders the steps: test, sort apart, wash quickly in cool soapy water by kneading and squeezing, rinse in cool water until clear, squeeze gently, dry at once inside out in shade, iron on the wrong side.",
+   "floor": {
+    "prerequisite": "Knows how loose colours behave.",
+    "question": "What is a loose-coloured article?",
+    "answer": "one whose dye runs in water"
+   },
+   "representations": [
+    "step cards",
+    "a basin, soap, a scrap",
+    "a drying line in shade"
+   ],
+   "steps": [
+    "Test and sort.",
+    "Wash quickly: knead and squeeze.",
+    "Rinse cool until clear.",
+    "Dry inside out in shade; iron the wrong side."
+   ],
+   "contexts": [
+    "a kitenge dress",
+    "a coloured school bag",
+    "a new towel"
+   ],
+   "board": [
+    {
+     "beat": "write",
+     "do": "Write the cards: dry in shade, test colour, knead in cool water."
+    },
+    {
+     "beat": "predict",
+     "do": "Ask for the order."
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for the child's order."
+    },
+    {
+     "beat": "reveal",
+     "do": "Order them: test, knead, dry."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "AGRI.G7.HYGIEN.LAUNDRY_LOOSE_COLOURED_I.COLOUR_STEPS.M_AG7_CS_NOTEST",
+     "listen_for": [
+      "There is no way to know"
+     ],
+     "ask": "How can you test if a colour will run?",
+     "repair": "Do the test on a hidden seam in class."
+    },
+    {
+     "code": "AGRI.G7.HYGIEN.LAUNDRY_LOOSE_COLOURED_I.COLOUR_STEPS.M_AG7_CS_HOT",
+     "listen_for": [
+      "Hot water"
+     ],
+     "ask": "Which water is used for loose colours?",
+     "repair": "Dip loose-coloured scraps in hot and cool water; compare."
+    },
+    {
+     "code": "AGRI.G7.HYGIEN.LAUNDRY_LOOSE_COLOURED_I.COLOUR_STEPS.M_AG7_CS_RUB",
+     "listen_for": [
+      "Scrubbed hard on a board"
+     ],
+     "ask": "How is a loose-coloured article washed?",
+     "repair": "Scrub a loose-coloured scrap and knead another; compare the colour left."
+    },
+    {
+     "code": "AGRI.G7.HYGIEN.LAUNDRY_LOOSE_COLOURED_I.COLOUR_STEPS.M_AG7_CS_FOLDWET",
+     "listen_for": [
+      "Nothing"
+     ],
+     "ask": "What happens if a wet loose-coloured shirt is left folded in a basin?",
+     "repair": "Leave a wet folded scrap for an hour and open it."
+    }
+   ],
+   "checks": [
+    {
+     "question": "What is the first step for a new coloured article?",
+     "answer": "test for colour fastness",
+     "shows": "order"
+    },
+    {
+     "question": "How is a loose-coloured article washed?",
+     "answer": "quickly by kneading and squeezing in cool water",
+     "shows": "method"
+    }
+   ]
+  }
+ ]
+}

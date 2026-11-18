@@ -1,0 +1,186 @@
+{
+ "sub_strand": "AGRI.G7.FOOD_P.COOKING_FOOD",
+ "title": "Cooking Food",
+ "status": "draft: written 18 Nov 2026 offline for Grade 7 Agriculture; not yet checked by a CBC Agriculture teacher; not loaded by the live tutor",
+ "sources": [],
+ "notes": "Grill, roast and steam with the teacher at the heat: grill tomatoes or meat on a wire grill over charcoal, roast maize or groundnuts, steam matoke or fish in banana leaves.",
+ "skills": [
+  {
+   "skill": "AGRI.G7.FOOD_P.COOKING_FOOD.COOKING_METHODS",
+   "key_step": "The child names methods of cooking and the food each suits: grilling (direct heat, no oil: meat, fish, tomatoes), roasting (dry heat: maize, groundnuts, sweet potatoes, meat), steaming (over steam: matoke, fish, vegetables), boiling, frying, baking.",
+   "floor": {
+    "prerequisite": "Knows stewing and baking.",
+    "question": "What is stewing?",
+    "answer": "cooking slowly in a little liquid"
+   },
+   "representations": [
+    "a method chart",
+    "pictures of foods",
+    "cards to match"
+   ],
+   "steps": [
+    "Name the heat: steam, direct heat, dry heat, oil, water.",
+    "Name the method.",
+    "Name a food it suits."
+   ],
+   "contexts": [
+    "nyama choma",
+    "roasted maize by the road",
+    "steamed matoke in Kisii"
+   ],
+   "board": [
+    {
+     "beat": "write",
+     "do": "Write \"nyama choma\"."
+    },
+    {
+     "beat": "predict",
+     "do": "Ask which method it uses."
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for \"grilling or roasting\"."
+    },
+    {
+     "beat": "reveal",
+     "do": "Write \"direct dry heat, no oil\"."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "AGRI.G7.FOOD_P.COOKING_FOOD.COOKING_METHODS.M_AG7_CK_STEAM",
+     "listen_for": [
+      "Cooking in oil"
+     ],
+     "ask": "What is steaming?",
+     "repair": "Show steam rising from a pot; food in a basket above the water cooks in that steam."
+    },
+    {
+     "code": "AGRI.G7.FOOD_P.COOKING_FOOD.COOKING_METHODS.M_AG7_CK_FRY",
+     "listen_for": [
+      "Cooking in an oven"
+     ],
+     "ask": "What is frying?",
+     "repair": "Frying uses hot oil in a pan; an oven is for baking and roasting."
+    },
+    {
+     "code": "AGRI.G7.FOOD_P.COOKING_FOOD.COOKING_METHODS.M_AG7_CK_BAKE",
+     "listen_for": [
+      "Boiling"
+     ],
+     "ask": "Which method uses an oven?",
+     "repair": "Match each method to its heat: water (boiling), steam (steaming), oil (frying), oven (baking)."
+    },
+    {
+     "code": "AGRI.G7.FOOD_P.COOKING_FOOD.COOKING_METHODS.M_AG7_CK_GRILL",
+     "listen_for": [
+      "There is no difference; both brown the food"
+     ],
+     "ask": "How is grilling different from frying?",
+     "repair": "Show meat on a wire grill over charcoal and in a frying pan."
+    }
+   ],
+   "checks": [
+    {
+     "question": "Which method cooks food over the steam of boiling water?",
+     "answer": "steaming",
+     "shows": "method"
+    },
+    {
+     "question": "Name a food that is often roasted.",
+     "answer": "maize, groundnuts or sweet potatoes",
+     "shows": "food"
+    }
+   ]
+  },
+  {
+   "skill": "AGRI.G7.FOOD_P.COOKING_FOOD.COOKING_PRACTICE",
+   "key_step": "The child says how to grill (hot grill, turn, fat drips away), roast (dry heat, turn for even cooking) and steam (above boiling water, lid on, top up water), how to tell food is cooked, and safety (sleeves up, hair tied, tongs, stay with the fire).",
+   "floor": {
+    "prerequisite": "Knows the cooking methods.",
+    "question": "Which method uses no oil and direct heat?",
+    "answer": "grilling"
+   },
+   "representations": [
+    "a charcoal grill, tongs, a steamer",
+    "step cards",
+    "a safety poster"
+   ],
+   "steps": [
+    "Prepare and season.",
+    "Grill or roast: turn for even cooking.",
+    "Steam: lid on, top up the water.",
+    "Check it is cooked; serve."
+   ],
+   "contexts": [
+    "a school cookout",
+    "a family grill",
+    "steamed fish in Kisumu"
+   ],
+   "board": [
+    {
+     "beat": "draw",
+     "do": "Draw a steamer pot on a jiko."
+    },
+    {
+     "beat": "predict",
+     "do": "Ask what happens if the water runs out."
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for \"the pot burns\"."
+    },
+    {
+     "beat": "reveal",
+     "do": "Write \"check and top up the water\"."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "AGRI.G7.FOOD_P.COOKING_FOOD.COOKING_PRACTICE.M_AG7_CPR_DRY",
+     "listen_for": [
+      "Nothing, steaming looks after itself"
+     ],
+     "ask": "What must you watch when steaming food?",
+     "repair": "Show a steamer pan burnt dry."
+    },
+    {
+     "code": "AGRI.G7.FOOD_P.COOKING_FOOD.COOKING_PRACTICE.M_AG7_CPR_TURN",
+     "listen_for": [
+      "It is not needed"
+     ],
+     "ask": "Why is grilled meat turned?",
+     "repair": "Grill a tomato half without turning: burnt underneath, raw on top."
+    },
+    {
+     "code": "AGRI.G7.FOOD_P.COOKING_FOOD.COOKING_PRACTICE.M_AG7_CPR_RAW",
+     "listen_for": [
+      "The outside is brown"
+     ],
+     "ask": "How do you know grilled chicken is cooked through?",
+     "repair": "Cut a piece browned outside but pink inside."
+    },
+    {
+     "code": "AGRI.G7.FOOD_P.COOKING_FOOD.COOKING_PRACTICE.M_AG7_CPR_SLEEVE",
+     "listen_for": [
+      "Any clothes are fine"
+     ],
+     "ask": "How should you dress when grilling over a fire?",
+     "repair": "Show how a loose sleeve hangs into a flame in a picture."
+    }
+   ],
+   "checks": [
+    {
+     "question": "Why is grilled food turned?",
+     "answer": "to cook both sides evenly",
+     "shows": "turning"
+    },
+    {
+     "question": "How do you know grilled chicken is cooked?",
+     "answer": "juices run clear, not pink inside",
+     "shows": "doneness"
+    }
+   ]
+  }
+ ]
+}
