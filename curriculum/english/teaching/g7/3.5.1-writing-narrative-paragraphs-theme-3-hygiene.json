@@ -1,0 +1,175 @@
+{
+ "sub_strand": "ENGL.G7.WRITIN.T3_WRITING_NARRATIVE_PA",
+ "title": "Writing Narrative Paragraphs (Theme 3: Hygiene)",
+ "status": "draft: written 18 Nov 2026 offline for Grade 7 English; not yet checked by a Kenyan English teacher; not loaded by the live tutor",
+ "notes": "",
+ "skills": [
+  {
+   "skill": "ENGL.G7.WRITIN.T3_WRITING_NARRATIVE_PA.NARRATIVE_PARAGRAPH",
+   "assessed_by": "questions",
+   "key_step": "The child names the opening, the events in order and the closing of a narrative paragraph.",
+   "floor": {
+    "prerequisite": "Orders paragraphs.",
+    "question": "Find the topic sentence.",
+    "answer": "the topic sentence"
+   },
+   "steps": [
+    "Opening: when and who.",
+    "Events in order.",
+    "Closing."
+   ],
+   "contexts": [
+    "a hygiene story"
+   ],
+   "board": [
+    {
+     "beat": "write",
+     "do": "Write a jumbled narrative paragraph."
+    },
+    {
+     "beat": "point",
+     "do": "Point at the closing.",
+     "say": "Where does it go?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for the child to answer."
+    },
+    {
+     "beat": "child_draws",
+     "do": "The child orders the rest."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "ENGL.G7.WRITIN.T3_WRITING_NARRATIVE_PA.NARRATIVE_PARAGRAPH.M7_NP_OPENING_EVENT",
+     "listen_for": [
+      "Suddenly the bus broke down."
+     ],
+     "ask": "Does it set the scene?",
+     "repair": "Opening."
+    },
+    {
+     "code": "ENGL.G7.WRITIN.T3_WRITING_NARRATIVE_PA.NARRATIVE_PARAGRAPH.M7_NP_ORDER",
+     "listen_for": [
+      "First we ate lunch."
+     ],
+     "ask": "What came first?",
+     "repair": "Order."
+    },
+    {
+     "code": "ENGL.G7.WRITIN.T3_WRITING_NARRATIVE_PA.NARRATIVE_PARAGRAPH.M7_NP_OFF_TOPIC",
+     "listen_for": [
+      "My uncle sells shoes in Eldoret."
+     ],
+     "ask": "Does it belong?",
+     "repair": "Remove it."
+    },
+    {
+     "code": "ENGL.G7.WRITIN.T3_WRITING_NARRATIVE_PA.NARRATIVE_PARAGRAPH.M7_NP_NO_CLOSING",
+     "listen_for": [
+      "Then the driver turned left."
+     ],
+     "ask": "How does it end?",
+     "repair": "Closing."
+    }
+   ],
+   "checks": [
+    {
+     "question": "Which opens: \"Suddenly the bus broke down\" or \"On Friday morning we left for Nakuru\"?",
+     "answer": "On Friday morning we left for Nakuru",
+     "shows": "opening"
+    },
+    {
+     "question": "Which closes?",
+     "answer": "We were tired but happy.",
+     "shows": "closing"
+    }
+   ]
+  },
+  {
+   "skill": "ENGL.G7.WRITIN.T3_WRITING_NARRATIVE_PA.PARAGRAPH_WRITING",
+   "assessed_by": "composition",
+   "key_step": "The child writes a topic sentence, supports it with an example or incident in order, and closes.",
+   "floor": {
+    "prerequisite": "Knows the parts of a paragraph.",
+    "question": "What does a topic sentence do?",
+    "answer": "says the main idea"
+   },
+   "steps": [
+    "Topic sentence.",
+    "Supporting sentences with an example or incident.",
+    "Closing sentence."
+   ],
+   "contexts": [
+    "hygiene",
+    "leadership"
+   ],
+   "board": [
+    {
+     "beat": "write",
+     "do": "Write: Our prefect is a true leader."
+    },
+    {
+     "beat": "point",
+     "do": "Point at the sentence.",
+     "say": "Give an incident that shows it."
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for the child to answer."
+    },
+    {
+     "beat": "child_draws",
+     "do": "The child writes the closing sentence."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "ENGL.G7.WRITIN.T3_WRITING_NARRATIVE_PA.PARAGRAPH_WRITING.M7_X_PW_NO_TOPIC",
+     "listen_for": [
+      "He carried water."
+     ],
+     "ask": "What is it about?",
+     "repair": "Topic sentence."
+    },
+    {
+     "code": "ENGL.G7.WRITIN.T3_WRITING_NARRATIVE_PA.PARAGRAPH_WRITING.M7_X_PW_EXAMPLE_OFF",
+     "listen_for": [
+      "He has a new bag."
+     ],
+     "ask": "Does it prove the point?",
+     "repair": "Choose another."
+    },
+    {
+     "code": "ENGL.G7.WRITIN.T3_WRITING_NARRATIVE_PA.PARAGRAPH_WRITING.M7_X_PW_NO_CLOSE",
+     "listen_for": [
+      "with another detail"
+     ],
+     "ask": "How does it end?",
+     "repair": "Sum up."
+    },
+    {
+     "code": "ENGL.G7.WRITIN.T3_WRITING_NARRATIVE_PA.PARAGRAPH_WRITING.M7_X_PW_MANY_IDEAS",
+     "listen_for": [
+      "Yes"
+     ],
+     "ask": "How many ideas?",
+     "repair": "One."
+    }
+   ],
+   "checks": [
+    {
+     "question": "Which example supports \"our prefect is fair\"?",
+     "answer": "he gives everyone a turn",
+     "shows": "example"
+    },
+    {
+     "question": "How many main ideas per paragraph?",
+     "answer": "one",
+     "shows": "unity"
+    }
+   ]
+  }
+ ]
+}

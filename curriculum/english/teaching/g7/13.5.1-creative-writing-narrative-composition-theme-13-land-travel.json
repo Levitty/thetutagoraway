@@ -1,0 +1,94 @@
+{
+ "sub_strand": "ENGL.G7.WRITIN.T13_CREATIVE_WRITING_NAR",
+ "title": "Creative Writing: Narrative Composition (Theme 13: Land travel)",
+ "status": "draft: written 18 Nov 2026 offline for Grade 7 English; not yet checked by a Kenyan English teacher; not loaded by the live tutor",
+ "notes": "",
+ "skills": [
+  {
+   "skill": "ENGL.G7.WRITIN.T13_CREATIVE_WRITING_NAR.IDIOMS",
+   "assessed_by": "questions",
+   "key_step": "The child says the idiom's real meaning and uses it in a fitting situation.",
+   "floor": {
+    "prerequisite": "Knows idioms.",
+    "question": "dog tired means?",
+    "answer": "very tired"
+   },
+   "steps": [
+    "Say the idiom.",
+    "Real meaning.",
+    "Fitting situation."
+   ],
+   "contexts": [
+    "land travel"
+   ],
+   "board": [
+    {
+     "beat": "write",
+     "do": "Write: It is raining cats and dogs."
+    },
+    {
+     "beat": "point",
+     "do": "Point at cats.",
+     "say": "Real animals?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for the child to answer."
+    },
+    {
+     "beat": "child_draws",
+     "do": "The child uses one in a story."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "ENGL.G7.WRITIN.T13_CREATIVE_WRITING_NAR.IDIOMS.M7_ID_LITERAL",
+     "listen_for": [
+      "animals are falling from the sky"
+     ],
+     "ask": "Real animals?",
+     "repair": "Heavy rain."
+    },
+    {
+     "code": "ENGL.G7.WRITIN.T13_CREATIVE_WRITING_NAR.IDIOMS.M7_ID_WRONG_MEANING",
+     "listen_for": [
+      "to cook a meal"
+     ],
+     "ask": "Meaning?",
+     "repair": "Tell a secret."
+    },
+    {
+     "code": "ENGL.G7.WRITIN.T13_CREATIVE_WRITING_NAR.IDIOMS.M7_ID_CHANGED_WORD",
+     "listen_for": [
+      "pie"
+     ],
+     "ask": "Fixed?",
+     "repair": "Cake."
+    },
+    {
+     "code": "ENGL.G7.WRITIN.T13_CREATIVE_WRITING_NAR.IDIOMS.M7_X_ID_WRONG_SITUATION",
+     "listen_for": [
+      "He spilled the beans."
+     ],
+     "ask": "Fits?",
+     "repair": "Choose another."
+    }
+   ],
+   "checks": [
+    {
+     "question": "spill the beans means ...",
+     "answer": "tell a secret",
+     "shows": "meaning"
+    },
+    {
+     "question": "a piece of ___ (easy)",
+     "answer": "cake",
+     "shows": "fixed"
+    }
+   ]
+  }
+ ],
+ "also_taught_by": [
+  "ENGL.G7.WRITIN.T7_COMPOSITION_THE_WRIT.NARRATIVE_COMPOSITION"
+ ]
+}

@@ -28,7 +28,7 @@ export const packDir = (g) => join(ROOT, `curriculum/english/teaching/g${g}`);
 const load = (g) => JSON.parse(readFileSync(join(ROOT, `curriculum/english/g${g}.json`), 'utf8'));
 
 // Outcomes about feelings, values and habits: observed over a term, never a skill of their own (as Maths leaves out IT and attitude).
-export const ATTITUDE = /^(appreciate|acknowledge|realise|realize|promote|adopt|value|recommend|advocate|show (interest|concern|respect|empathy)|desire|enjoy|embrace|take pride|emphasi[sz]e|recogni[sz]e the (importance|role|value|need|significance|essence|use)|recogni[sz]e (the )?importance|develop (a )?(love|interest|positive|appreciation)|have fun|support|cherish|celebrate|respect|demonstrate (interest|respect|appreciation)|create awareness|uphold|observe etiquette|challenge others|collaborate with|encourage others|encourage peers)/i;
+export const ATTITUDE = /^(appreciate|acknowledge|realise|realize|promote|adopt|value|recommend|advocate|show (interest|concern|respect|empathy)|desire|enjoy|embrace|take pride|emphasi[sz]e|recogni[sz]e the (importance|role|value|need|significance|essence|use)|recogni[sz]e (the )?importance|develop (a )?(love|interest|positive|appreciation)|have fun|support|cherish|celebrate|respect|demonstrate (interest|respect|appreciation)|create awareness|uphold|observe etiquette|challenge others|collaborate with|collaborate in|encourage others|encourage peers|underscore|attest|affirm|reiterate|model respectful)/i;
 export const isAttitude = (text) => ATTITUDE.test(String(text).trim());
 
 const EVIDENCE = {

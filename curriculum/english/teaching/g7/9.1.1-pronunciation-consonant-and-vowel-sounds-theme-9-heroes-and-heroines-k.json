@@ -1,0 +1,97 @@
+{
+ "sub_strand": "ENGL.G7.LISTEN.T9_PRONUNCIATION_CONSON",
+ "title": "Pronunciation: Consonant and Vowel Sounds (Theme 9: Heroes and heroines - kenya)",
+ "status": "draft: written 18 Nov 2026 offline for Grade 7 English; not yet checked by a Kenyan English teacher; not loaded by the live tutor",
+ "notes": "",
+ "skills": [
+  {
+   "skill": "ENGL.G7.LISTEN.T9_PRONUNCIATION_CONSON.SOUNDS_VOWELS",
+   "assessed_by": "questions",
+   "key_step": "The child says each word and groups by the vowel heard, short or long, pure or sliding.",
+   "floor": {
+    "prerequisite": "Identifies Grade 6 sounds.",
+    "question": "Which has /əʊ/: phone or pot?",
+    "answer": "phone"
+   },
+   "steps": [
+    "Say the vowel.",
+    "Short or long?",
+    "Pure or slide?",
+    "Group by sound."
+   ],
+   "contexts": [
+    "heroes' names",
+    "family words"
+   ],
+   "board": [
+    {
+     "beat": "write",
+     "do": "Write: book, moon, look, food."
+    },
+    {
+     "beat": "point",
+     "do": "Point at book.",
+     "say": "Short or long?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for the child to answer."
+    },
+    {
+     "beat": "child_draws",
+     "do": "The child groups them."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "ENGL.G7.LISTEN.T9_PRONUNCIATION_CONSON.SOUNDS_VOWELS.M7_SV_SPELLING_SAME",
+     "listen_for": [
+      "food"
+     ],
+     "ask": "Say it.",
+     "repair": "Sound, not spelling."
+    },
+    {
+     "code": "ENGL.G7.LISTEN.T9_PRONUNCIATION_CONSON.SOUNDS_VOWELS.M7_SV_SHORT_LONG",
+     "listen_for": [
+      "pull"
+     ],
+     "ask": "Short or long?",
+     "repair": "Room is long."
+    },
+    {
+     "code": "ENGL.G7.LISTEN.T9_PRONUNCIATION_CONSON.SOUNDS_VOWELS.M7_SV_ODD_ONE",
+     "listen_for": [
+      "book"
+     ],
+     "ask": "Which sounds different?",
+     "repair": "Book."
+    },
+    {
+     "code": "ENGL.G7.LISTEN.T9_PRONUNCIATION_CONSON.SOUNDS_VOWELS.M7_X_SV_DIPHTHONG",
+     "listen_for": [
+      "bought"
+     ],
+     "ask": "Does it slide?",
+     "repair": "Note slides."
+    }
+   ],
+   "checks": [
+    {
+     "question": "Odd one out: food, moon, book",
+     "answer": "book",
+     "shows": "short/long"
+    },
+    {
+     "question": "Same vowel as boat: bought or note?",
+     "answer": "note",
+     "shows": "diphthong"
+    }
+   ]
+  }
+ ],
+ "also_taught_by": [
+  "ENGL.G7.LISTEN.T14_CONSONANT_SOUNDS_AND.SOUNDS_CONSONANTS",
+  "ENGL.G7.LISTEN.T5_PRONUNCIATION_SOUNDS.WORD_STRESS"
+ ]
+}

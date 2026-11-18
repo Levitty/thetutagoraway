@@ -1,0 +1,111 @@
+{
+ "sub_strand": "ENGL.G7.GRAMMA.T10_DETERMINERS",
+ "title": "Determiners (Theme 10: Music)",
+ "status": "draft: written 18 Nov 2026 offline for Grade 7 English; not yet checked by a Kenyan English teacher; not loaded by the live tutor",
+ "notes": "",
+ "skills": [
+  {
+   "skill": "ENGL.G7.GRAMMA.T10_DETERMINERS.ARTICLES",
+   "assessed_by": "questions",
+   "key_step": "The child uses a or an by the first sound, the for known or only things, and no article for general plurals.",
+   "floor": {
+    "prerequisite": "Uses determiners.",
+    "question": "___ hour (a/an)",
+    "answer": "an"
+   },
+   "steps": [
+    "First sound.",
+    "First mention: a.",
+    "Known: the.",
+    "General: none."
+   ],
+   "contexts": [
+    "music"
+   ],
+   "board": [
+    {
+     "beat": "write",
+     "do": "Write: ___ honest boy, ___ uniform."
+    },
+    {
+     "beat": "point",
+     "do": "Point at honest.",
+     "say": "Which sound?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for the child to answer."
+    },
+    {
+     "beat": "child_draws",
+     "do": "The child fills uniform."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "ENGL.G7.GRAMMA.T10_DETERMINERS.ARTICLES.M7_AR_A_AN_SOUND",
+     "listen_for": [
+      "a"
+     ],
+     "ask": "Sound?",
+     "repair": "An."
+    },
+    {
+     "code": "ENGL.G7.GRAMMA.T10_DETERMINERS.ARTICLES.M7_AR_A_BEFORE_VOWEL",
+     "listen_for": [
+      "a"
+     ],
+     "ask": "Vowel sound?",
+     "repair": "An."
+    },
+    {
+     "code": "ENGL.G7.GRAMMA.T10_DETERMINERS.ARTICLES.M7_AR_THE_GENERAL",
+     "listen_for": [
+      "a"
+     ],
+     "ask": "Known?",
+     "repair": "The."
+    },
+    {
+     "code": "ENGL.G7.GRAMMA.T10_DETERMINERS.ARTICLES.M7_AR_NO_ARTICLE",
+     "listen_for": [
+      "no word"
+     ],
+     "ask": "One thing?",
+     "repair": "A."
+    },
+    {
+     "code": "ENGL.G7.GRAMMA.T10_DETERMINERS.ARTICLES.M7_AR_FIRST_MENTION",
+     "listen_for": [
+      "A"
+     ],
+     "ask": "Second mention?",
+     "repair": "The."
+    },
+    {
+     "code": "ENGL.G7.GRAMMA.T10_DETERMINERS.ARTICLES.M7_AR_WRONG_WORD",
+     "listen_for": [
+      "many"
+     ],
+     "ask": "Article?",
+     "repair": "An."
+    }
+   ],
+   "checks": [
+    {
+     "question": "___ sun is hot.",
+     "answer": "The",
+     "shows": "only one"
+    },
+    {
+     "question": "___ hour",
+     "answer": "an",
+     "shows": "sound"
+    }
+   ]
+  }
+ ],
+ "also_taught_by": [
+  "ENGL.G7.GRAMMA.T7_PERSONAL_AND_POSSESS.POSSESSIVES"
+ ]
+}

@@ -1,0 +1,92 @@
+{
+ "sub_strand": "ENGL.G7.READIN.T1_INTENSIVE_READING_TR",
+ "title": "Intensive Reading: Trickster Narratives (Theme 1: Personal responsibility)",
+ "status": "draft: written 18 Nov 2026 offline for Grade 7 English; not yet checked by a Kenyan English teacher; not loaded by the live tutor",
+ "notes": "",
+ "skills": [
+  {
+   "skill": "ENGL.G7.READIN.T1_INTENSIVE_READING_TR.TRICKSTER",
+   "assessed_by": "questions",
+   "key_step": "The child names the trickster, how the trick works and what lesson the narrative teaches.",
+   "floor": {
+    "prerequisite": "Judges characters.",
+    "question": "What is the hare like?",
+    "answer": "clever"
+   },
+   "steps": [
+    "Who tricks whom?",
+    "How?",
+    "What happens?",
+    "Lesson."
+   ],
+   "contexts": [
+    "Hare and Elephant narratives"
+   ],
+   "board": [
+    {
+     "beat": "write",
+     "do": "Write: Hare tricked Elephant by ..."
+    },
+    {
+     "beat": "point",
+     "do": "Point at by.",
+     "say": "How did he win?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for the child to answer."
+    },
+    {
+     "beat": "child_draws",
+     "do": "The child states the lesson."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "ENGL.G7.READIN.T1_INTENSIVE_READING_TR.TRICKSTER.M7_TK_HERO",
+     "listen_for": [
+      "Lion"
+     ],
+     "ask": "Who tricks?",
+     "repair": "Hare."
+    },
+    {
+     "code": "ENGL.G7.READIN.T1_INTENSIVE_READING_TR.TRICKSTER.M7_TK_TRICK_FORCE",
+     "listen_for": [
+      "by being the strongest"
+     ],
+     "ask": "Strength or wit?",
+     "repair": "Wit."
+    },
+    {
+     "code": "ENGL.G7.READIN.T1_INTENSIVE_READING_TR.TRICKSTER.M7_TK_LESSON",
+     "listen_for": [
+      "Cheating is always good."
+     ],
+     "ask": "What does the end show?",
+     "repair": "The lesson."
+    },
+    {
+     "code": "ENGL.G7.READIN.T1_INTENSIVE_READING_TR.TRICKSTER.M7_TK_TRAIT",
+     "listen_for": [
+      "honest and slow"
+     ],
+     "ask": "Slow or clever?",
+     "repair": "Clever."
+    }
+   ],
+   "checks": [
+    {
+     "question": "Who is the trickster?",
+     "answer": "Hare",
+     "shows": "trickster"
+    },
+    {
+     "question": "Lesson?",
+     "answer": "greed or pride can be punished",
+     "shows": "lesson"
+    }
+   ]
+  }
+ ]
+}

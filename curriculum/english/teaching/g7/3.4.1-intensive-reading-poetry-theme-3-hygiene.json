@@ -1,0 +1,103 @@
+{
+ "sub_strand": "ENGL.G7.READIN.T3_INTENSIVE_READING_PO",
+ "title": "Intensive Reading: Poetry (Theme 3: Hygiene)",
+ "status": "draft: written 18 Nov 2026 offline for Grade 7 English; not yet checked by a Kenyan English teacher; not loaded by the live tutor",
+ "notes": "",
+ "skills": [
+  {
+   "skill": "ENGL.G7.READIN.T3_INTENSIVE_READING_PO.POEM_STRUCTURE",
+   "assessed_by": "questions",
+   "key_step": "The child names lines, stanzas, rhyme and refrain, and counts stanzas, not lines, when asked.",
+   "floor": {
+    "prerequisite": "Finds poem features.",
+    "question": "What rhymes?",
+    "answer": "line endings"
+   },
+   "steps": [
+    "Line.",
+    "Stanza.",
+    "Rhyme by sound.",
+    "Refrain."
+   ],
+   "contexts": [
+    "hygiene poems"
+   ],
+   "board": [
+    {
+     "beat": "write",
+     "do": "Write a poem with a refrain."
+    },
+    {
+     "beat": "point",
+     "do": "Point at the repeated line.",
+     "say": "What is it called?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for the child to answer."
+    },
+    {
+     "beat": "child_draws",
+     "do": "The child counts the stanzas."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "ENGL.G7.READIN.T3_INTENSIVE_READING_PO.POEM_STRUCTURE.M7_PST_LINE_STANZA",
+     "listen_for": [
+      "a line"
+     ],
+     "ask": "One line or a group?",
+     "repair": "Stanza."
+    },
+    {
+     "code": "ENGL.G7.READIN.T3_INTENSIVE_READING_PO.POEM_STRUCTURE.M7_PST_RHYME_SPELLING",
+     "listen_for": [
+      "cough and through"
+     ],
+     "ask": "Say them.",
+     "repair": "Sound, not spelling."
+    },
+    {
+     "code": "ENGL.G7.READIN.T3_INTENSIVE_READING_PO.POEM_STRUCTURE.M7_PST_REFRAIN",
+     "listen_for": [
+      "the last line"
+     ],
+     "ask": "Which line repeats?",
+     "repair": "Refrain."
+    },
+    {
+     "code": "ENGL.G7.READIN.T3_INTENSIVE_READING_PO.POEM_STRUCTURE.M7_PST_PROSE",
+     "listen_for": [
+      "Our class went to the farm. We saw cows."
+     ],
+     "ask": "Lines or sentences?",
+     "repair": "A poem has lines."
+    },
+    {
+     "code": "ENGL.G7.READIN.T3_INTENSIVE_READING_PO.POEM_STRUCTURE.M7_PST_COUNT",
+     "listen_for": [
+      "the number of lines"
+     ],
+     "ask": "Lines or groups?",
+     "repair": "Count groups."
+    }
+   ],
+   "checks": [
+    {
+     "question": "A group of lines is a ...",
+     "answer": "stanza",
+     "shows": "stanza"
+    },
+    {
+     "question": "Do light and night rhyme?",
+     "answer": "yes",
+     "shows": "rhyme"
+    }
+   ]
+  }
+ ],
+ "also_taught_by": [
+  "ENGL.G7.LISTEN.T2_ORAL_PRESENTATIONS_O.PERFORM_ORAL"
+ ]
+}

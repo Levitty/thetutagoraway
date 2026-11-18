@@ -1,0 +1,184 @@
+{
+ "sub_strand": "ENGL.G7.GRAMMA.T6_WORD_CLASSES_ADVERBS",
+ "title": "Word Classes: Adverbs (Theme 6: Drug and substance abuse)",
+ "status": "draft: written 18 Nov 2026 offline for Grade 7 English; not yet checked by a Kenyan English teacher; not loaded by the live tutor",
+ "notes": "",
+ "skills": [
+  {
+   "skill": "ENGL.G7.GRAMMA.T6_WORD_CLASSES_ADVERBS.ADVERB_KINDS",
+   "assessed_by": "questions",
+   "key_step": "The child asks how, when, where or how often to name the kind of adverb.",
+   "floor": {
+    "prerequisite": "Uses adverbs.",
+    "question": "She ran ___ (quick).",
+    "answer": "quickly"
+   },
+   "steps": [
+    "How: manner.",
+    "When: time.",
+    "Where: place.",
+    "How often: frequency."
+   ],
+   "contexts": [
+    "drug abuse texts"
+   ],
+   "board": [
+    {
+     "beat": "write",
+     "do": "Write: He came yesterday."
+    },
+    {
+     "beat": "point",
+     "do": "Point at yesterday.",
+     "say": "Which question?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for the child to answer."
+    },
+    {
+     "beat": "child_draws",
+     "do": "The child names the kind."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "ENGL.G7.GRAMMA.T6_WORD_CLASSES_ADVERBS.ADVERB_KINDS.M7_AK_TIME_MANNER",
+     "listen_for": [
+      "how"
+     ],
+     "ask": "When or how?",
+     "repair": "When."
+    },
+    {
+     "code": "ENGL.G7.GRAMMA.T6_WORD_CLASSES_ADVERBS.ADVERB_KINDS.M7_AK_PLACE_TIME",
+     "listen_for": [
+      "when"
+     ],
+     "ask": "Where or when?",
+     "repair": "Where."
+    },
+    {
+     "code": "ENGL.G7.GRAMMA.T6_WORD_CLASSES_ADVERBS.ADVERB_KINDS.M7_AK_ADJECTIVE_ADVERB",
+     "listen_for": [
+      "old"
+     ],
+     "ask": "Describes the verb?",
+     "repair": "Slowly."
+    },
+    {
+     "code": "ENGL.G7.GRAMMA.T6_WORD_CLASSES_ADVERBS.ADVERB_KINDS.M7_AK_MANNER_PLACE",
+     "listen_for": [
+      "where"
+     ],
+     "ask": "How or where?",
+     "repair": "How."
+    }
+   ],
+   "checks": [
+    {
+     "question": "\"slowly\" is an adverb of ...",
+     "answer": "manner",
+     "shows": "manner"
+    },
+    {
+     "question": "\"there\" is an adverb of ...",
+     "answer": "place",
+     "shows": "place"
+    }
+   ]
+  },
+  {
+   "skill": "ENGL.G7.GRAMMA.T6_WORD_CLASSES_ADVERBS.ADVERB_FORM",
+   "assessed_by": "questions",
+   "key_step": "The child forms the adverb with -ly and its spelling changes, and knows fast, hard and well.",
+   "floor": {
+    "prerequisite": "Names adverb kinds.",
+    "question": "Kind of \"quickly\"?",
+    "answer": "manner"
+   },
+   "steps": [
+    "-ly.",
+    "y to i: easily.",
+    "Fast, hard stay.",
+    "Good to well."
+   ],
+   "contexts": [
+    "drug abuse"
+   ],
+   "board": [
+    {
+     "beat": "write",
+     "do": "Write: easy + ly."
+    },
+    {
+     "beat": "point",
+     "do": "Point at y.",
+     "say": "What happens?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for the child to answer."
+    },
+    {
+     "beat": "child_draws",
+     "do": "The child forms quietly."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "ENGL.G7.GRAMMA.T6_WORD_CLASSES_ADVERBS.ADVERB_FORM.M7_AF_GOOD_WELL",
+     "listen_for": [
+      "good"
+     ],
+     "ask": "Action?",
+     "repair": "Well."
+    },
+    {
+     "code": "ENGL.G7.GRAMMA.T6_WORD_CLASSES_ADVERBS.ADVERB_FORM.M7_AF_FASTLY",
+     "listen_for": [
+      "fastly"
+     ],
+     "ask": "Fastly?",
+     "repair": "Fast."
+    },
+    {
+     "code": "ENGL.G7.GRAMMA.T6_WORD_CLASSES_ADVERBS.ADVERB_FORM.M7_AF_HARDLY",
+     "listen_for": [
+      "hardly"
+     ],
+     "ask": "Almost not?",
+     "repair": "Hard."
+    },
+    {
+     "code": "ENGL.G7.GRAMMA.T6_WORD_CLASSES_ADVERBS.ADVERB_FORM.M7_AF_ADJECTIVE_AFTER_VERB",
+     "listen_for": [
+      "quiet"
+     ],
+     "ask": "Describes the verb?",
+     "repair": "Quietly."
+    },
+    {
+     "code": "ENGL.G7.GRAMMA.T6_WORD_CLASSES_ADVERBS.ADVERB_FORM.M7_AF_SPELL_LY",
+     "listen_for": [
+      "easyly"
+     ],
+     "ask": "Y?",
+     "repair": "Easily."
+    }
+   ],
+   "checks": [
+    {
+     "question": "She sings ___ (good).",
+     "answer": "well",
+     "shows": "well"
+    },
+    {
+     "question": "He works ___ (hard).",
+     "answer": "hard",
+     "shows": "hard"
+    }
+   ]
+  }
+ ]
+}

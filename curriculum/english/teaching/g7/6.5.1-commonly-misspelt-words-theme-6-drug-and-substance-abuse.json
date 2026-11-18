@@ -1,0 +1,99 @@
+{
+ "sub_strand": "ENGL.G7.WRITIN.T6_COMMONLY_MISSPELT_WO",
+ "title": "Commonly Misspelt Words (Theme 6: Drug and substance abuse)",
+ "status": "draft: written 18 Nov 2026 offline for Grade 7 English; not yet checked by a Kenyan English teacher; not loaded by the live tutor",
+ "notes": "",
+ "skills": [
+  {
+   "skill": "ENGL.G7.WRITIN.T6_COMMONLY_MISSPELT_WO.MISSPELT_WORDS",
+   "assessed_by": "questions",
+   "key_step": "The child spots the tricky part of a commonly misspelt word and learns it with look, cover, write, check.",
+   "floor": {
+    "prerequisite": "Applies spelling rules.",
+    "question": "Spell: received",
+    "answer": "received"
+   },
+   "steps": [
+    "Say it slowly.",
+    "Find the tricky part.",
+    "Look, cover, write, check."
+   ],
+   "contexts": [
+    "drug abuse texts"
+   ],
+   "board": [
+    {
+     "beat": "write",
+     "do": "Write: Febuary."
+    },
+    {
+     "beat": "point",
+     "do": "Point at the gap after b.",
+     "say": "What letter is missing?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for the child to answer."
+    },
+    {
+     "beat": "child_draws",
+     "do": "The child spells Wednesday."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "ENGL.G7.WRITIN.T6_COMMONLY_MISSPELT_WO.MISSPELT_WORDS.M7_MS_IE_EI",
+     "listen_for": [
+      "freind"
+     ],
+     "ask": "I before e?",
+     "repair": "Friend."
+    },
+    {
+     "code": "ENGL.G7.WRITIN.T6_COMMONLY_MISSPELT_WO.MISSPELT_WORDS.M7_MS_DOUBLE_LETTER",
+     "listen_for": [
+      "adress"
+     ],
+     "ask": "Double?",
+     "repair": "Address."
+    },
+    {
+     "code": "ENGL.G7.WRITIN.T6_COMMONLY_MISSPELT_WO.MISSPELT_WORDS.M7_MS_SILENT_LETTER",
+     "listen_for": [
+      "Febuary"
+     ],
+     "ask": "Hidden letter?",
+     "repair": "February."
+    },
+    {
+     "code": "ENGL.G7.WRITIN.T6_COMMONLY_MISSPELT_WO.MISSPELT_WORDS.M7_MS_SOUND_SPELL",
+     "listen_for": [
+      "becuase"
+     ],
+     "ask": "Spelt as it sounds?",
+     "repair": "Because."
+    },
+    {
+     "code": "ENGL.G7.WRITIN.T6_COMMONLY_MISSPELT_WO.MISSPELT_WORDS.M7_MS_HOMOPHONE_FORM",
+     "listen_for": [
+      "Wensday"
+     ],
+     "ask": "Wed-nes-day.",
+     "repair": "Spell every part."
+    }
+   ],
+   "checks": [
+    {
+     "question": "Spell: because",
+     "answer": "because",
+     "shows": "spelling"
+    },
+    {
+     "question": "Spell: address",
+     "answer": "address",
+     "shows": "double"
+    }
+   ]
+  }
+ ]
+}

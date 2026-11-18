@@ -1,0 +1,103 @@
+{
+ "sub_strand": "ENGL.G7.WRITIN.T4_PARAGRAPHING_USING_E",
+ "title": "Paragraphing: Using examples and incidents (Theme 4: Leadership)",
+ "status": "draft: written 18 Nov 2026 offline for Grade 7 English; not yet checked by a Kenyan English teacher; not loaded by the live tutor",
+ "notes": "",
+ "skills": [
+  {
+   "skill": "ENGL.G7.WRITIN.T4_PARAGRAPHING_USING_E.PARAGRAPH_EXAMPLES",
+   "assessed_by": "questions",
+   "key_step": "The child supports a point with an example (for example) or an incident (one day), and keeps it on topic.",
+   "floor": {
+    "prerequisite": "Writes narrative paragraphs.",
+    "question": "Write a topic sentence.",
+    "answer": "a topic sentence"
+   },
+   "steps": [
+    "Point.",
+    "For example ...",
+    "Incident: One day ...",
+    "Check it supports the point."
+   ],
+   "contexts": [
+    "leadership"
+   ],
+   "board": [
+    {
+     "beat": "write",
+     "do": "Write: Our school values honesty."
+    },
+    {
+     "beat": "point",
+     "do": "Point at honesty.",
+     "say": "Give an incident."
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for the child to answer."
+    },
+    {
+     "beat": "child_draws",
+     "do": "The child gives an example."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "ENGL.G7.WRITIN.T4_PARAGRAPHING_USING_E.PARAGRAPH_EXAMPLES.M7_PE_EXAMPLE_OFF",
+     "listen_for": [
+      "Our school has a big football field."
+     ],
+     "ask": "Does it support?",
+     "repair": "Change it."
+    },
+    {
+     "code": "ENGL.G7.WRITIN.T4_PARAGRAPHING_USING_E.PARAGRAPH_EXAMPLES.M7_PE_REPEAT",
+     "listen_for": [
+      "Our school is very clean."
+     ],
+     "ask": "Same idea again?",
+     "repair": "Add an incident."
+    },
+    {
+     "code": "ENGL.G7.WRITIN.T4_PARAGRAPHING_USING_E.PARAGRAPH_EXAMPLES.M7_PE_CONNECTOR",
+     "listen_for": [
+      "However"
+     ],
+     "ask": "However or for example?",
+     "repair": "For example."
+    },
+    {
+     "code": "ENGL.G7.WRITIN.T4_PARAGRAPHING_USING_E.PARAGRAPH_EXAMPLES.M7_PE_INCIDENT_GENERAL",
+     "listen_for": [
+      "Children like to play."
+     ],
+     "ask": "A real event?",
+     "repair": "One day ..."
+    },
+    {
+     "code": "ENGL.G7.WRITIN.T4_PARAGRAPHING_USING_E.PARAGRAPH_EXAMPLES.M7_PE_KEEPS_OFF_TOPIC",
+     "listen_for": [
+      "a sentence that belongs"
+     ],
+     "ask": "Does it belong?",
+     "repair": "Remove it."
+    }
+   ],
+   "checks": [
+    {
+     "question": "Which joins an example?",
+     "answer": "For example",
+     "shows": "connector"
+    },
+    {
+     "question": "Does an off-topic sentence stay?",
+     "answer": "No",
+     "shows": "topic"
+    }
+   ]
+  }
+ ],
+ "also_taught_by": [
+  "ENGL.G7.WRITIN.T3_WRITING_NARRATIVE_PA.PARAGRAPH_WRITING"
+ ]
+}

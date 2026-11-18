@@ -1,0 +1,191 @@
+{
+ "sub_strand": "ENGL.G7.WRITIN.T11_SPELLING_ANTONYMS_SY",
+ "title": "Spelling antonyms, synonyms, and numbers (Theme 11: Professions)",
+ "status": "draft: written 18 Nov 2026 offline for Grade 7 English; not yet checked by a Kenyan English teacher; not loaded by the live tutor",
+ "notes": "",
+ "skills": [
+  {
+   "skill": "ENGL.G7.WRITIN.T11_SPELLING_ANTONYMS_SY.SYNONYMS_ANTONYMS",
+   "assessed_by": "questions",
+   "key_step": "The child checks the word truly means the same or the opposite in this sentence.",
+   "floor": {
+    "prerequisite": "Uses Grade 6 synonyms.",
+    "question": "Synonym of glad?",
+    "answer": "happy"
+   },
+   "steps": [
+    "Same or opposite?",
+    "Check in the sentence.",
+    "Not just related."
+   ],
+   "contexts": [
+    "professions"
+   ],
+   "board": [
+    {
+     "beat": "write",
+     "do": "Write: tiny: small, minute, short."
+    },
+    {
+     "beat": "point",
+     "do": "Point at short.",
+     "say": "Same as tiny?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for the child to answer."
+    },
+    {
+     "beat": "child_draws",
+     "do": "The child finds the antonym of old."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "ENGL.G7.WRITIN.T11_SPELLING_ANTONYMS_SY.SYNONYMS_ANTONYMS.M7_SY_RELATED_NOT_SAME",
+     "listen_for": [
+      "small"
+     ],
+     "ask": "Same meaning?",
+     "repair": "Minute."
+    },
+    {
+     "code": "ENGL.G7.WRITIN.T11_SPELLING_ANTONYMS_SY.SYNONYMS_ANTONYMS.M7_SY_ANT_SYN",
+     "listen_for": [
+      "old"
+     ],
+     "ask": "Same or opposite?",
+     "repair": "Check."
+    },
+    {
+     "code": "ENGL.G7.WRITIN.T11_SPELLING_ANTONYMS_SY.SYNONYMS_ANTONYMS.M7_SY_PREFIX_ANT",
+     "listen_for": [
+      "ungenerous"
+     ],
+     "ask": "Opposite by prefix?",
+     "repair": "Check meaning."
+    },
+    {
+     "code": "ENGL.G7.WRITIN.T11_SPELLING_ANTONYMS_SY.SYNONYMS_ANTONYMS.M7_SY_CONTEXT",
+     "listen_for": [
+      "shiny"
+     ],
+     "ask": "In this sentence?",
+     "repair": "Clever."
+    }
+   ],
+   "checks": [
+    {
+     "question": "Antonym of ancient?",
+     "answer": "modern",
+     "shows": "antonym"
+    },
+    {
+     "question": "Synonym of selfish?",
+     "answer": "ungenerous or greedy",
+     "shows": "synonym"
+    }
+   ]
+  },
+  {
+   "skill": "ENGL.G7.WRITIN.T11_SPELLING_ANTONYMS_SY.NUMBER_WORDS",
+   "assessed_by": "questions",
+   "key_step": "The child writes numbers in words with the right spelling and hyphens, and words at the start of a sentence.",
+   "floor": {
+    "prerequisite": "Writes numerals.",
+    "question": "Write 40.",
+    "answer": "forty"
+   },
+   "steps": [
+    "Spell.",
+    "Hyphen 21 to 99.",
+    "Ordinals.",
+    "Words to start a sentence."
+   ],
+   "contexts": [
+    "professions statistics"
+   ],
+   "board": [
+    {
+     "beat": "write",
+     "do": "Write: 45, 22nd, 90."
+    },
+    {
+     "beat": "point",
+     "do": "Point at 45.",
+     "say": "In words?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for the child to answer."
+    },
+    {
+     "beat": "child_draws",
+     "do": "The child writes the others."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "ENGL.G7.WRITIN.T11_SPELLING_ANTONYMS_SY.NUMBER_WORDS.M7_NW_FORTY",
+     "listen_for": [
+      "fourty"
+     ],
+     "ask": "U?",
+     "repair": "Forty."
+    },
+    {
+     "code": "ENGL.G7.WRITIN.T11_SPELLING_ANTONYMS_SY.NUMBER_WORDS.M7_NW_ORDINAL",
+     "listen_for": [
+      "22th"
+     ],
+     "ask": "22th?",
+     "repair": "22nd."
+    },
+    {
+     "code": "ENGL.G7.WRITIN.T11_SPELLING_ANTONYMS_SY.NUMBER_WORDS.M7_NW_HYPHEN",
+     "listen_for": [
+      "forty five"
+     ],
+     "ask": "Hyphen?",
+     "repair": "Forty-five."
+    },
+    {
+     "code": "ENGL.G7.WRITIN.T11_SPELLING_ANTONYMS_SY.NUMBER_WORDS.M7_NW_EIGHTH",
+     "listen_for": [
+      "eigth"
+     ],
+     "ask": "Eigth?",
+     "repair": "Eighth."
+    },
+    {
+     "code": "ENGL.G7.WRITIN.T11_SPELLING_ANTONYMS_SY.NUMBER_WORDS.M7_NW_START_FIGURE",
+     "listen_for": [
+      "40 learners came to the meeting."
+     ],
+     "ask": "Start?",
+     "repair": "Words."
+    },
+    {
+     "code": "ENGL.G7.WRITIN.T11_SPELLING_ANTONYMS_SY.NUMBER_WORDS.M7_NW_SPELL_NUMBER",
+     "listen_for": [
+      "ninty"
+     ],
+     "ask": "Ninty?",
+     "repair": "Ninety."
+    }
+   ],
+   "checks": [
+    {
+     "question": "Write 90.",
+     "answer": "ninety",
+     "shows": "spelling"
+    },
+    {
+     "question": "Start: 40 learners came.",
+     "answer": "Forty learners came.",
+     "shows": "start"
+    }
+   ]
+  }
+ ]
+}

@@ -1,0 +1,92 @@
+{
+ "sub_strand": "ENGL.G7.READIN.T15_POETRY",
+ "title": "Poetry (Theme 15: Tourist attraction sites - kenya)",
+ "status": "draft: written 18 Nov 2026 offline for Grade 7 English; not yet checked by a Kenyan English teacher; not loaded by the live tutor",
+ "notes": "",
+ "skills": [
+  {
+   "skill": "ENGL.G7.READIN.T15_POETRY.POEM_MEANING",
+   "assessed_by": "questions",
+   "key_step": "The child names what the poem is about as a whole and its message, not one image.",
+   "floor": {
+    "prerequisite": "Finds main ideas.",
+    "question": "Main idea?",
+    "answer": "an idea"
+   },
+   "steps": [
+    "Read the whole poem.",
+    "Subject.",
+    "Message.",
+    "Check lines support it."
+   ],
+   "contexts": [
+    "poems on tourist sites"
+   ],
+   "board": [
+    {
+     "beat": "write",
+     "do": "Write a short poem."
+    },
+    {
+     "beat": "point",
+     "do": "Point at the last stanza.",
+     "say": "What is the message?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for the child to answer."
+    },
+    {
+     "beat": "child_draws",
+     "do": "The child names the subject."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "ENGL.G7.READIN.T15_POETRY.POEM_MEANING.M7_PM_DETAIL_SUBJECT",
+     "listen_for": [
+      "a bird on a branch"
+     ],
+     "ask": "One image?",
+     "repair": "Whole poem."
+    },
+    {
+     "code": "ENGL.G7.READIN.T15_POETRY.POEM_MEANING.M7_PM_NO_MESSAGE",
+     "listen_for": [
+      "there is no message"
+     ],
+     "ask": "Any message?",
+     "repair": "Look again."
+    },
+    {
+     "code": "ENGL.G7.READIN.T15_POETRY.POEM_MEANING.M7_PM_LITERAL",
+     "listen_for": [
+      "the sun had a mouth"
+     ],
+     "ask": "Real mouth?",
+     "repair": "Meaning."
+    },
+    {
+     "code": "ENGL.G7.READIN.T15_POETRY.POEM_MEANING.M7_PM_NOT_IN_POEM",
+     "listen_for": [
+      "a message the poem does not hold"
+     ],
+     "ask": "In the poem?",
+     "repair": "Use it."
+    }
+   ],
+   "checks": [
+    {
+     "question": "Subject of a poem about a beautiful beach?",
+     "answer": "the beauty of the beach",
+     "shows": "subject"
+    },
+    {
+     "question": "\"The sun had a mouth\" means ...",
+     "answer": "the sunshine was warm (personification)",
+     "shows": "literal"
+    }
+   ]
+  }
+ ]
+}

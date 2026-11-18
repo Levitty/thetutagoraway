@@ -1,0 +1,173 @@
+{
+ "sub_strand": "ENGL.G7.WRITIN.T15_FUNCTIONAL_WRITING_N",
+ "title": "Functional Writing: Notices and Posters (Theme 15: Tourist attraction sites - kenya)",
+ "status": "draft: written 18 Nov 2026 offline for Grade 7 English; not yet checked by a Kenyan English teacher; not loaded by the live tutor",
+ "notes": "",
+ "skills": [
+  {
+   "skill": "ENGL.G7.WRITIN.T15_FUNCTIONAL_WRITING_N.NOTICE_POSTER",
+   "assessed_by": "questions",
+   "key_step": "The child names the parts of a notice and a poster and tells them apart.",
+   "floor": {
+    "prerequisite": "Designs forms.",
+    "question": "What is a form for?",
+    "answer": "to collect information"
+   },
+   "steps": [
+    "Notice: heading, details, signature.",
+    "Poster: heading, picture, few words."
+   ],
+   "contexts": [
+    "tourist site notices"
+   ],
+   "board": [
+    {
+     "beat": "write",
+     "do": "Draw a notice and a poster."
+    },
+    {
+     "beat": "point",
+     "do": "Point at the poster.",
+     "say": "What makes it a poster?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for the child to answer."
+    },
+    {
+     "beat": "child_draws",
+     "do": "The child names a notice part."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "ENGL.G7.WRITIN.T15_FUNCTIONAL_WRITING_N.NOTICE_POSTER.M7_NO_MISSING_WHEN",
+     "listen_for": [
+      "a picture"
+     ],
+     "ask": "When?",
+     "repair": "Date and time."
+    },
+    {
+     "code": "ENGL.G7.WRITIN.T15_FUNCTIONAL_WRITING_N.NOTICE_POSTER.M7_NO_POSTER_LONG",
+     "listen_for": [
+      "a long paragraph with every detail"
+     ],
+     "ask": "Long paragraph?",
+     "repair": "Big heading."
+    },
+    {
+     "code": "ENGL.G7.WRITIN.T15_FUNCTIONAL_WRITING_N.NOTICE_POSTER.M7_NO_NOTICE_POSTER",
+     "listen_for": [
+      "a notice"
+     ],
+     "ask": "Picture and few words?",
+     "repair": "Poster."
+    },
+    {
+     "code": "ENGL.G7.WRITIN.T15_FUNCTIONAL_WRITING_N.NOTICE_POSTER.M7_NO_SIGNED",
+     "listen_for": [
+      "nobody"
+     ],
+     "ask": "Who wrote it?",
+     "repair": "Sign it."
+    }
+   ],
+   "checks": [
+    {
+     "question": "What must a notice give?",
+     "answer": "date and time",
+     "shows": "details"
+    },
+    {
+     "question": "Who signs a notice?",
+     "answer": "the writer",
+     "shows": "signature"
+    }
+   ]
+  },
+  {
+   "skill": "ENGL.G7.WRITIN.T15_FUNCTIONAL_WRITING_N.NOTICE_DESIGN",
+   "assessed_by": "composition",
+   "key_step": "The child checks a notice has what, when, where and who, and a poster has a heading, few words and a call to action.",
+   "floor": {
+    "prerequisite": "Knows the format of notices.",
+    "question": "What heads a notice?",
+    "answer": "NOTICE and a title"
+   },
+   "steps": [
+    "Notice: heading, details, contact, signature, date.",
+    "Poster: heading, picture, few words, action."
+   ],
+   "contexts": [
+    "a clean-up day",
+    "a drugs awareness poster"
+   ],
+   "board": [
+    {
+     "beat": "write",
+     "do": "Draw a notice frame."
+    },
+    {
+     "beat": "point",
+     "do": "Point at the bottom.",
+     "say": "What goes here?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for the child to answer."
+    },
+    {
+     "beat": "child_draws",
+     "do": "The child designs a poster heading."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "ENGL.G7.WRITIN.T15_FUNCTIONAL_WRITING_N.NOTICE_DESIGN.M7_X_ND_NO_DETAILS",
+     "listen_for": [
+      "a picture"
+     ],
+     "ask": "When and where?",
+     "repair": "Add them."
+    },
+    {
+     "code": "ENGL.G7.WRITIN.T15_FUNCTIONAL_WRITING_N.NOTICE_DESIGN.M7_X_ND_POSTER_TEXT_HEAVY",
+     "listen_for": [
+      "a page of small writing"
+     ],
+     "ask": "Too many words?",
+     "repair": "Cut them."
+    },
+    {
+     "code": "ENGL.G7.WRITIN.T15_FUNCTIONAL_WRITING_N.NOTICE_DESIGN.M7_X_ND_UNSIGNED",
+     "listen_for": [
+      "nothing"
+     ],
+     "ask": "Who wrote it?",
+     "repair": "Sign and date."
+    },
+    {
+     "code": "ENGL.G7.WRITIN.T15_FUNCTIONAL_WRITING_N.NOTICE_DESIGN.M7_X_ND_NO_ACTION",
+     "listen_for": [
+      "nothing"
+     ],
+     "ask": "What should readers do?",
+     "repair": "Tell them."
+    }
+   ],
+   "checks": [
+    {
+     "question": "Notice for a clean-up must give ...",
+     "answer": "date, time and place",
+     "shows": "details"
+    },
+    {
+     "question": "Poster \"Drugs are bad.\" Add?",
+     "answer": "a call to action",
+     "shows": "action"
+    }
+   ]
+  }
+ ]
+}

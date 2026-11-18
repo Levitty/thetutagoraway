@@ -1,0 +1,96 @@
+{
+ "sub_strand": "ENGL.G7.READIN.T13_ORAL_LITERATURE_PRAI",
+ "title": "Oral Literature: Praise Songs (Theme 13: Land travel)",
+ "status": "draft: written 18 Nov 2026 offline for Grade 7 English; not yet checked by a Kenyan English teacher; not loaded by the live tutor",
+ "notes": "",
+ "skills": [
+  {
+   "skill": "ENGL.G7.READIN.T13_ORAL_LITERATURE_PRAI.PRAISE_SONG",
+   "assessed_by": "questions",
+   "key_step": "The child names who is praised, by whom, for what and on what occasion.",
+   "floor": {
+    "prerequisite": "Knows proverbs.",
+    "question": "What does a proverb teach?",
+    "answer": "a lesson"
+   },
+   "steps": [
+    "Who is praised?",
+    "Who sings?",
+    "Why?",
+    "When?"
+   ],
+   "contexts": [
+    "praise songs for athletes",
+    "weddings"
+   ],
+   "board": [
+    {
+     "beat": "write",
+     "do": "Write a praise song verse."
+    },
+    {
+     "beat": "point",
+     "do": "Point at the name.",
+     "say": "Who is praised?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for the child to answer."
+    },
+    {
+     "beat": "child_draws",
+     "do": "The child names the occasion."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "ENGL.G7.READIN.T13_ORAL_LITERATURE_PRAI.PRAISE_SONG.M7_PRS_PURPOSE",
+     "listen_for": [
+      "to insult a person"
+     ],
+     "ask": "Insult or honour?",
+     "repair": "Honour."
+    },
+    {
+     "code": "ENGL.G7.READIN.T13_ORAL_LITERATURE_PRAI.PRAISE_SONG.M7_PRS_WHO",
+     "listen_for": [
+      "the singer"
+     ],
+     "ask": "Singer or praised?",
+     "repair": "The praised one."
+    },
+    {
+     "code": "ENGL.G7.READIN.T13_ORAL_LITERATURE_PRAI.PRAISE_SONG.M7_PRS_EXAGGERATION",
+     "listen_for": [
+      "because it is a fact"
+     ],
+     "ask": "Why exaggerate?",
+     "repair": "Admiration."
+    },
+    {
+     "code": "ENGL.G7.READIN.T13_ORAL_LITERATURE_PRAI.PRAISE_SONG.M7_PRS_OCCASION",
+     "listen_for": [
+      "at a quarrel"
+     ],
+     "ask": "Quarrel?",
+     "repair": "Celebration."
+    }
+   ],
+   "checks": [
+    {
+     "question": "Purpose of a praise song?",
+     "answer": "to honour a person",
+     "shows": "purpose"
+    },
+    {
+     "question": "Why exaggerate?",
+     "answer": "to show great admiration",
+     "shows": "exaggeration"
+    }
+   ]
+  }
+ ],
+ "also_taught_by": [
+  "ENGL.G7.LISTEN.T2_ORAL_PRESENTATIONS_O.PERFORM_ORAL"
+ ]
+}

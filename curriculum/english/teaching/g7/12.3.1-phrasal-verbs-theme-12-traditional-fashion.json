@@ -1,0 +1,99 @@
+{
+ "sub_strand": "ENGL.G7.GRAMMA.T12_PHRASAL_VERBS",
+ "title": "Phrasal Verbs (Theme 12: Traditional fashion)",
+ "status": "draft: written 18 Nov 2026 offline for Grade 7 English; not yet checked by a Kenyan English teacher; not loaded by the live tutor",
+ "notes": "",
+ "skills": [
+  {
+   "skill": "ENGL.G7.GRAMMA.T12_PHRASAL_VERBS.PHRASAL_PCG",
+   "assessed_by": "questions",
+   "key_step": "The child learns put, come and give phrasal verbs as units with their own meanings.",
+   "floor": {
+    "prerequisite": "Uses phrasal verbs.",
+    "question": "give up means?",
+    "answer": "stop trying"
+   },
+   "steps": [
+    "Say the phrasal verb.",
+    "Meaning.",
+    "Use it."
+   ],
+   "contexts": [
+    "fashion"
+   ],
+   "board": [
+    {
+     "beat": "write",
+     "do": "Write: put out the fire."
+    },
+    {
+     "beat": "point",
+     "do": "Point at out.",
+     "say": "Meaning?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for the child to answer."
+    },
+    {
+     "beat": "child_draws",
+     "do": "The child uses come across."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "ENGL.G7.GRAMMA.T12_PHRASAL_VERBS.PHRASAL_PCG.M7_PV_PUT_OFF_OUT",
+     "listen_for": [
+      "put off"
+     ],
+     "ask": "Fire?",
+     "repair": "Put out."
+    },
+    {
+     "code": "ENGL.G7.GRAMMA.T12_PHRASAL_VERBS.PHRASAL_PCG.M7_PV_GIVE_UP_IN",
+     "listen_for": [
+      "give away"
+     ],
+     "ask": "Stop trying?",
+     "repair": "Give up."
+    },
+    {
+     "code": "ENGL.G7.GRAMMA.T12_PHRASAL_VERBS.PHRASAL_PCG.M7_PV_COME_ACROSS",
+     "listen_for": [
+      "came out"
+     ],
+     "ask": "Find by chance?",
+     "repair": "Come across."
+    },
+    {
+     "code": "ENGL.G7.GRAMMA.T12_PHRASAL_VERBS.PHRASAL_PCG.M7_PV_WRONG_PARTICLE",
+     "listen_for": [
+      "come out with"
+     ],
+     "ask": "Come out with?",
+     "repair": "Come up with."
+    },
+    {
+     "code": "ENGL.G7.GRAMMA.T12_PHRASAL_VERBS.PHRASAL_PCG.M7_PV_LITERAL_PUT",
+     "listen_for": [
+      "put out"
+     ],
+     "ask": "Wear?",
+     "repair": "Put on."
+    }
+   ],
+   "checks": [
+    {
+     "question": "put off means ...",
+     "answer": "delay",
+     "shows": "meaning"
+    },
+    {
+     "question": "come ___ with an idea",
+     "answer": "up",
+     "shows": "particle"
+    }
+   ]
+  }
+ ]
+}

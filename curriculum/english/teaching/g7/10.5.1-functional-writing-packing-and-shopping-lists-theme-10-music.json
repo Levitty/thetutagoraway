@@ -1,0 +1,176 @@
+{
+ "sub_strand": "ENGL.G7.WRITIN.T10_FUNCTIONAL_WRITING_P",
+ "title": "Functional Writing: Packing and Shopping lists (Theme 10: Music)",
+ "status": "draft: written 18 Nov 2026 offline for Grade 7 English; not yet checked by a Kenyan English teacher; not loaded by the live tutor",
+ "notes": "",
+ "skills": [
+  {
+   "skill": "ENGL.G7.WRITIN.T10_FUNCTIONAL_WRITING_P.LIST_GROUPING",
+   "assessed_by": "questions",
+   "key_step": "The child groups list items by kind and checks each item fits the event, with quantities.",
+   "floor": {
+    "prerequisite": "Fills forms.",
+    "question": "What is a list?",
+    "answer": "items one per line"
+   },
+   "steps": [
+    "Group by kind.",
+    "Check fit.",
+    "Add quantities."
+   ],
+   "contexts": [
+    "a music trip"
+   ],
+   "board": [
+    {
+     "beat": "write",
+     "do": "Write a mixed list."
+    },
+    {
+     "beat": "point",
+     "do": "Point at torch.",
+     "say": "Which group?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for the child to answer."
+    },
+    {
+     "beat": "child_draws",
+     "do": "The child removes the odd item."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "ENGL.G7.WRITIN.T10_FUNCTIONAL_WRITING_P.LIST_GROUPING.M7_LG_WRONG_GROUP",
+     "listen_for": [
+      "torch"
+     ],
+     "ask": "Which kind?",
+     "repair": "Group it."
+    },
+    {
+     "code": "ENGL.G7.WRITIN.T10_FUNCTIONAL_WRITING_P.LIST_GROUPING.M7_LG_ODD_ITEM",
+     "listen_for": [
+      "ruler"
+     ],
+     "ask": "Does it fit?",
+     "repair": "Remove."
+    },
+    {
+     "code": "ENGL.G7.WRITIN.T10_FUNCTIONAL_WRITING_P.LIST_GROUPING.M7_LG_EVENT_FIT",
+     "listen_for": [
+      "school bag, books, ruler"
+     ],
+     "ask": "Swimming trip?",
+     "repair": "Costume."
+    },
+    {
+     "code": "ENGL.G7.WRITIN.T10_FUNCTIONAL_WRITING_P.LIST_GROUPING.M7_LG_QUANTITY",
+     "listen_for": [
+      "sugar"
+     ],
+     "ask": "How much?",
+     "repair": "Add it."
+    }
+   ],
+   "checks": [
+    {
+     "question": "Odd one out: soap, ruler, toothbrush",
+     "answer": "ruler",
+     "shows": "odd"
+    },
+    {
+     "question": "Shopping: sugar. Improve?",
+     "answer": "2 kg sugar",
+     "shows": "quantity"
+    }
+   ]
+  },
+  {
+   "skill": "ENGL.G7.WRITIN.T10_FUNCTIONAL_WRITING_P.LISTS_WRITE",
+   "assessed_by": "composition",
+   "key_step": "The child heads the list, groups items by kind, adds quantities and keeps only what the purpose needs.",
+   "floor": {
+    "prerequisite": "Groups items.",
+    "question": "Group: bread, shirt, milk.",
+    "answer": "food: bread, milk; clothes: shirt"
+   },
+   "steps": [
+    "Heading.",
+    "Groups.",
+    "Items with quantities.",
+    "Check against the purpose."
+   ],
+   "contexts": [
+    "packing for a music festival",
+    "shopping for a class party"
+   ],
+   "board": [
+    {
+     "beat": "write",
+     "do": "Write: Shopping list: class party."
+    },
+    {
+     "beat": "point",
+     "do": "Point at the heading.",
+     "say": "What group comes first?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for the child to answer."
+    },
+    {
+     "beat": "child_draws",
+     "do": "The child adds items with quantities."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "ENGL.G7.WRITIN.T10_FUNCTIONAL_WRITING_P.LISTS_WRITE.M7_X_LS_NO_QUANTITY",
+     "listen_for": [
+      "sugar"
+     ],
+     "ask": "How much?",
+     "repair": "Add it."
+    },
+    {
+     "code": "ENGL.G7.WRITIN.T10_FUNCTIONAL_WRITING_P.LISTS_WRITE.M7_X_LS_NOT_NEEDED",
+     "listen_for": [
+      "school timetable"
+     ],
+     "ask": "Will you use it?",
+     "repair": "Leave it out."
+    },
+    {
+     "code": "ENGL.G7.WRITIN.T10_FUNCTIONAL_WRITING_P.LISTS_WRITE.M7_X_LS_NO_GROUPS",
+     "listen_for": [
+      "leave it"
+     ],
+     "ask": "What kind?",
+     "repair": "Group it."
+    },
+    {
+     "code": "ENGL.G7.WRITIN.T10_FUNCTIONAL_WRITING_P.LISTS_WRITE.M7_X_LS_SENTENCES",
+     "listen_for": [
+      "I will carry a shirt and also socks."
+     ],
+     "ask": "Is it a list?",
+     "repair": "One item per line."
+    }
+   ],
+   "checks": [
+    {
+     "question": "\"sugar\" on a shopping list. Improve?",
+     "answer": "2 kg sugar",
+     "shows": "quantity"
+    },
+    {
+     "question": "A school timetable on a festival packing list?",
+     "answer": "No",
+     "shows": "purpose"
+    }
+   ]
+  }
+ ]
+}

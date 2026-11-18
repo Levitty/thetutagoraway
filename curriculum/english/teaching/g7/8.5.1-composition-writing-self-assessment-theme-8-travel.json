@@ -1,0 +1,95 @@
+{
+ "sub_strand": "ENGL.G7.WRITIN.T8_COMPOSITION_WRITING_",
+ "title": "Composition Writing: Self-Assessment (Theme 8: Travel)",
+ "status": "draft: written 18 Nov 2026 offline for Grade 7 English; not yet checked by a Kenyan English teacher; not loaded by the live tutor",
+ "notes": "",
+ "skills": [
+  {
+   "skill": "ENGL.G7.WRITIN.T8_COMPOSITION_WRITING_.ASSESS_NARRATIVE",
+   "assessed_by": "questions",
+   "key_step": "The child rereads a narrative and checks title, introduction, body and conclusion, not only spelling.",
+   "floor": {
+    "prerequisite": "Knows narrative features.",
+    "question": "What does a conclusion do?",
+    "answer": "ends the story"
+   },
+   "steps": [
+    "Reread slowly.",
+    "Check the title fits.",
+    "Check each part.",
+    "Then spelling."
+   ],
+   "contexts": [
+    "travel stories"
+   ],
+   "board": [
+    {
+     "beat": "write",
+     "do": "Write a checklist."
+    },
+    {
+     "beat": "point",
+     "do": "Point at title.",
+     "say": "Does it fit?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for the child to answer."
+    },
+    {
+     "beat": "child_draws",
+     "do": "The child assesses a body."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "ENGL.G7.WRITIN.T8_COMPOSITION_WRITING_.ASSESS_NARRATIVE.M7_AN_PART_MIX",
+     "listen_for": [
+      "the conclusion"
+     ],
+     "ask": "First part?",
+     "repair": "Introduction."
+    },
+    {
+     "code": "ENGL.G7.WRITIN.T8_COMPOSITION_WRITING_.ASSESS_NARRATIVE.M7_AN_SPELLING_ONLY",
+     "listen_for": [
+      "count the words"
+     ],
+     "ask": "What else?",
+     "repair": "Reread for ideas."
+    },
+    {
+     "code": "ENGL.G7.WRITIN.T8_COMPOSITION_WRITING_.ASSESS_NARRATIVE.M7_AN_SKIP_READ",
+     "listen_for": [
+      "hand it in at once"
+     ],
+     "ask": "Did you reread?",
+     "repair": "Reread first."
+    },
+    {
+     "code": "ENGL.G7.WRITIN.T8_COMPOSITION_WRITING_.ASSESS_NARRATIVE.M7_X_AN_TITLE_FIT",
+     "listen_for": [
+      "Yes"
+     ],
+     "ask": "Does it fit?",
+     "repair": "Check."
+    }
+   ],
+   "checks": [
+    {
+     "question": "First step in assessing?",
+     "answer": "read it again slowly",
+     "shows": "reread"
+    },
+    {
+     "question": "Does a title about a best day fit a lost dog story?",
+     "answer": "No",
+     "shows": "title"
+    }
+   ]
+  }
+ ],
+ "also_taught_by": [
+  "ENGL.G7.WRITIN.T7_COMPOSITION_THE_WRIT.NARRATIVE_COMPOSITION"
+ ]
+}

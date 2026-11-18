@@ -1,0 +1,182 @@
+{
+ "sub_strand": "ENGL.G7.GRAMMA.T3_VERBS_AND_TENSE",
+ "title": "Verbs and Tense (Theme 3: Hygiene)",
+ "status": "draft: written 18 Nov 2026 offline for Grade 7 English; not yet checked by a Kenyan English teacher; not loaded by the live tutor",
+ "notes": "",
+ "skills": [
+  {
+   "skill": "ENGL.G7.GRAMMA.T3_VERBS_AND_TENSE.IRREGULAR_VERBS",
+   "assessed_by": "questions",
+   "key_step": "The child learns the three forms of irregular verbs and uses the past participle after have or be.",
+   "floor": {
+    "prerequisite": "Uses the simple past.",
+    "question": "Past of go?",
+    "answer": "went"
+   },
+   "steps": [
+    "Base, past, past participle.",
+    "Past alone.",
+    "Participle after have, has, had, was."
+   ],
+   "contexts": [
+    "hygiene routines"
+   ],
+   "board": [
+    {
+     "beat": "write",
+     "do": "Write: ring, rang, ___."
+    },
+    {
+     "beat": "point",
+     "do": "Point at the gap.",
+     "say": "After has?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for the child to answer."
+    },
+    {
+     "beat": "child_draws",
+     "do": "The child writes see, saw, seen."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "ENGL.G7.GRAMMA.T3_VERBS_AND_TENSE.IRREGULAR_VERBS.M7_IV_ED_ON_IRREGULAR",
+     "listen_for": [
+      "goed"
+     ],
+     "ask": "Goed?",
+     "repair": "Went."
+    },
+    {
+     "code": "ENGL.G7.GRAMMA.T3_VERBS_AND_TENSE.IRREGULAR_VERBS.M7_IV_PARTICIPLE_PAST",
+     "listen_for": [
+      "rang"
+     ],
+     "ask": "After has?",
+     "repair": "Rung."
+    },
+    {
+     "code": "ENGL.G7.GRAMMA.T3_VERBS_AND_TENSE.IRREGULAR_VERBS.M7_IV_PAST_PARTICIPLE",
+     "listen_for": [
+      "seen"
+     ],
+     "ask": "No has?",
+     "repair": "Saw."
+    },
+    {
+     "code": "ENGL.G7.GRAMMA.T3_VERBS_AND_TENSE.IRREGULAR_VERBS.M7_IV_REGULAR_IRREGULAR",
+     "listen_for": [
+      "telled"
+     ],
+     "ask": "Telled?",
+     "repair": "Told."
+    }
+   ],
+   "checks": [
+    {
+     "question": "The bell has ___ (ring).",
+     "answer": "rung",
+     "shows": "participle"
+    },
+    {
+     "question": "He ___ (tell) me yesterday.",
+     "answer": "told",
+     "shows": "past"
+    }
+   ]
+  },
+  {
+   "skill": "ENGL.G7.GRAMMA.T3_VERBS_AND_TENSE.TENSE_CHOICE",
+   "assessed_by": "questions",
+   "key_step": "The child finds the time clue and chooses past, present, future or continuous to match it.",
+   "floor": {
+    "prerequisite": "Uses tenses.",
+    "question": "Yesterday I ___ (go).",
+    "answer": "went"
+   },
+   "steps": [
+    "Find the time clue.",
+    "Choose the tense.",
+    "Check the verb form."
+   ],
+   "contexts": [
+    "hygiene diary"
+   ],
+   "board": [
+    {
+     "beat": "write",
+     "do": "Write: Every morning she ___ (wash) her face."
+    },
+    {
+     "beat": "point",
+     "do": "Point at Every morning.",
+     "say": "Which tense?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for the child to answer."
+    },
+    {
+     "beat": "child_draws",
+     "do": "The child writes a future sentence."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "ENGL.G7.GRAMMA.T3_VERBS_AND_TENSE.TENSE_CHOICE.M7_TC_PRESENT_FOR_PAST",
+     "listen_for": [
+      "goes"
+     ],
+     "ask": "Yesterday?",
+     "repair": "Past."
+    },
+    {
+     "code": "ENGL.G7.GRAMMA.T3_VERBS_AND_TENSE.TENSE_CHOICE.M7_TC_PAST_FOR_FUTURE",
+     "listen_for": [
+      "went"
+     ],
+     "ask": "Tomorrow?",
+     "repair": "Will go."
+    },
+    {
+     "code": "ENGL.G7.GRAMMA.T3_VERBS_AND_TENSE.TENSE_CHOICE.M7_TC_WILL_PAST",
+     "listen_for": [
+      "will took"
+     ],
+     "ask": "Will took?",
+     "repair": "Will take."
+    },
+    {
+     "code": "ENGL.G7.GRAMMA.T3_VERBS_AND_TENSE.TENSE_CHOICE.M7_TC_HABIT_PRESENT_CONT",
+     "listen_for": [
+      "is going"
+     ],
+     "ask": "A habit?",
+     "repair": "Simple present."
+    },
+    {
+     "code": "ENGL.G7.GRAMMA.T3_VERBS_AND_TENSE.TENSE_CHOICE.M7_TC_WRONG_TIME",
+     "listen_for": [
+      "harvesting"
+     ],
+     "ask": "Finished?",
+     "repair": "Harvested."
+    }
+   ],
+   "checks": [
+    {
+     "question": "Tomorrow we ___ (go).",
+     "answer": "will go",
+     "shows": "future"
+    },
+    {
+     "question": "Every day he ___ (go).",
+     "answer": "goes",
+     "shows": "habit"
+    }
+   ]
+  }
+ ]
+}

@@ -1,0 +1,526 @@
+{
+ "sub_strand": "ENGL.G7.READIN.T13_INTENSIVE_READING_CO",
+ "title": "Intensive Reading: Comprehension Strategies (Theme 13: Land travel)",
+ "status": "draft: written 18 Nov 2026 offline for Grade 7 English; not yet checked by a Kenyan English teacher; not loaded by the live tutor",
+ "notes": "",
+ "skills": [
+  {
+   "skill": "ENGL.G7.READIN.T13_INTENSIVE_READING_CO.MAIN_IDEA",
+   "assessed_by": "questions",
+   "key_step": "The child asks what the whole passage is about and checks the detail asked for.",
+   "floor": {
+    "prerequisite": "Finds main ideas.",
+    "question": "Main idea?",
+    "answer": "an idea"
+   },
+   "steps": [
+    "Read all.",
+    "Whole idea.",
+    "Asked detail."
+   ],
+   "contexts": [
+    "land travel"
+   ],
+   "board": [
+    {
+     "beat": "write",
+     "do": "Write a short passage."
+    },
+    {
+     "beat": "point",
+     "do": "Point at the whole text.",
+     "say": "What is it all about?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for the child to answer."
+    },
+    {
+     "beat": "child_draws",
+     "do": "The child finds the detail asked."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "ENGL.G7.READIN.T13_INTENSIVE_READING_CO.MAIN_IDEA.M7_MI_DETAIL",
+     "listen_for": [
+      "a detail from one paragraph"
+     ],
+     "ask": "All about that?",
+     "repair": "Whole idea."
+    },
+    {
+     "code": "ENGL.G7.READIN.T13_INTENSIVE_READING_CO.MAIN_IDEA.M7_MI_TOO_BROAD",
+     "listen_for": [
+      "a very wide statement"
+     ],
+     "ask": "Too wide?",
+     "repair": "Narrow."
+    },
+    {
+     "code": "ENGL.G7.READIN.T13_INTENSIVE_READING_CO.MAIN_IDEA.M7_MI_NOT_IN_TEXT",
+     "listen_for": [
+      "an idea that is not in the passage"
+     ],
+     "ask": "In the text?",
+     "repair": "Use it."
+    },
+    {
+     "code": "ENGL.G7.READIN.T13_INTENSIVE_READING_CO.MAIN_IDEA.M7_MI_DETAIL_FOR_ASKED",
+     "listen_for": [
+      "a nearby detail"
+     ],
+     "ask": "Asked?",
+     "repair": "Exact detail."
+    }
+   ],
+   "checks": [
+    {
+     "question": "Main idea of a passage on matatu safety?",
+     "answer": "travel safely in matatus",
+     "shows": "main"
+    },
+    {
+     "question": "What time did the bus leave?",
+     "answer": "the exact time",
+     "shows": "detail"
+    }
+   ]
+  },
+  {
+   "skill": "ENGL.G7.READIN.T13_INTENSIVE_READING_CO.SUMMARY",
+   "assessed_by": "questions",
+   "key_step": "The child writes the key ideas briefly, in the passage order, adding nothing.",
+   "floor": {
+    "prerequisite": "Makes notes.",
+    "question": "Note the main point.",
+    "answer": "key words"
+   },
+   "steps": [
+    "Find key ideas.",
+    "Keep the order.",
+    "Write briefly.",
+    "Add nothing."
+   ],
+   "contexts": [
+    "travel",
+    "sports"
+   ],
+   "board": [
+    {
+     "beat": "write",
+     "do": "Write: P1, P2, P3."
+    },
+    {
+     "beat": "point",
+     "do": "Point at P2.",
+     "say": "Key idea?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for the child to answer."
+    },
+    {
+     "beat": "child_draws",
+     "do": "The child joins them."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "ENGL.G7.READIN.T13_INTENSIVE_READING_CO.SUMMARY.M7_SU_ONE_DETAIL",
+     "listen_for": [
+      "one detail"
+     ],
+     "ask": "Only one?",
+     "repair": "All key ideas."
+    },
+    {
+     "code": "ENGL.G7.READIN.T13_INTENSIVE_READING_CO.SUMMARY.M7_SU_COPIES_START",
+     "listen_for": [
+      "the first lines copied"
+     ],
+     "ask": "Copied?",
+     "repair": "Your own short words."
+    },
+    {
+     "code": "ENGL.G7.READIN.T13_INTENSIVE_READING_CO.SUMMARY.M7_SU_ADDS",
+     "listen_for": [
+      "a summary with a new idea"
+     ],
+     "ask": "In the text?",
+     "repair": "Leave it out."
+    },
+    {
+     "code": "ENGL.G7.READIN.T13_INTENSIVE_READING_CO.SUMMARY.M7_SU_ORDER",
+     "listen_for": [
+      "the ideas in a mixed order"
+     ],
+     "ask": "Order?",
+     "repair": "Passage order."
+    }
+   ],
+   "checks": [
+    {
+     "question": "Summary of three paragraphs?",
+     "answer": "three key ideas, short",
+     "shows": "summary"
+    },
+    {
+     "question": "Add your opinion?",
+     "answer": "No",
+     "shows": "adds"
+    }
+   ]
+  },
+  {
+   "skill": "ENGL.G7.READIN.T13_INTENSIVE_READING_CO.IMAGERY",
+   "assessed_by": "questions",
+   "key_step": "The child finds the line with sights, sounds or smells and says the picture or sense it creates.",
+   "floor": {
+    "prerequisite": "Creates mental images.",
+    "question": "What do you see?",
+    "answer": "a picture"
+   },
+   "steps": [
+    "Find picture words.",
+    "Which sense?",
+    "Say the picture."
+   ],
+   "contexts": [
+    "land travel poems"
+   ],
+   "board": [
+    {
+     "beat": "write",
+     "do": "Write: The bus horn screamed."
+    },
+    {
+     "beat": "point",
+     "do": "Point at screamed.",
+     "say": "Which sense?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for the child to answer."
+    },
+    {
+     "beat": "child_draws",
+     "do": "The child finds another image."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "ENGL.G7.READIN.T13_INTENSIVE_READING_CO.IMAGERY.M7_IM_FACT_LINE",
+     "listen_for": [
+      "a line that states a fact"
+     ],
+     "ask": "Picture?",
+     "repair": "Find senses."
+    },
+    {
+     "code": "ENGL.G7.READIN.T13_INTENSIVE_READING_CO.IMAGERY.M7_IM_WRONG_PICTURE",
+     "listen_for": [
+      "something the line does not show"
+     ],
+     "ask": "Matches?",
+     "repair": "Check."
+    },
+    {
+     "code": "ENGL.G7.READIN.T13_INTENSIVE_READING_CO.IMAGERY.M7_IM_LITERAL",
+     "listen_for": [
+      "a word-for-word meaning"
+     ],
+     "ask": "Word for word?",
+     "repair": "The picture."
+    },
+    {
+     "code": "ENGL.G7.READIN.T13_INTENSIVE_READING_CO.IMAGERY.M7_X_IM_SENSE_MIX",
+     "listen_for": [
+      "sight"
+     ],
+     "ask": "Which sense?",
+     "repair": "Hearing."
+    }
+   ],
+   "checks": [
+    {
+     "question": "Which line is imagery?",
+     "answer": "a line with sights or sounds",
+     "shows": "imagery"
+    },
+    {
+     "question": "\"The air smelt of diesel.\" Sense?",
+     "answer": "smell",
+     "shows": "sense"
+    }
+   ]
+  },
+  {
+   "skill": "ENGL.G7.READIN.T13_INTENSIVE_READING_CO.CONTEXT_CLUES",
+   "assessed_by": "questions",
+   "key_step": "The child uses the sentence around a word to find its meaning here.",
+   "floor": {
+    "prerequisite": "Uses Grade 6 clues.",
+    "question": "What helps?",
+    "answer": "nearby words"
+   },
+   "steps": [
+    "Find the word.",
+    "Read around it.",
+    "Try a meaning.",
+    "Check."
+   ],
+   "contexts": [
+    "travel texts"
+   ],
+   "board": [
+    {
+     "beat": "write",
+     "do": "Write: The weary travellers rested; they had walked all day."
+    },
+    {
+     "beat": "point",
+     "do": "Point at weary.",
+     "say": "Clue?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for the child to answer."
+    },
+    {
+     "beat": "child_draws",
+     "do": "The child gives the meaning."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "ENGL.G7.READIN.T13_INTENSIVE_READING_CO.CONTEXT_CLUES.M7_CX_LOOKS_LIKE",
+     "listen_for": [
+      "a meaning from a similar-looking word"
+     ],
+     "ask": "Fits?",
+     "repair": "Not the look."
+    },
+    {
+     "code": "ENGL.G7.READIN.T13_INTENSIVE_READING_CO.CONTEXT_CLUES.M7_CX_COMMON_MEANING",
+     "listen_for": [
+      "its common meaning"
+     ],
+     "ask": "Here?",
+     "repair": "This sentence."
+    },
+    {
+     "code": "ENGL.G7.READIN.T13_INTENSIVE_READING_CO.CONTEXT_CLUES.M7_CX_OPPOSITE",
+     "listen_for": [
+      "the opposite meaning"
+     ],
+     "ask": "Agrees?",
+     "repair": "Not the opposite."
+    },
+    {
+     "code": "ENGL.G7.READIN.T13_INTENSIVE_READING_CO.CONTEXT_CLUES.M7_CX_WRONG_CLUE",
+     "listen_for": [
+      "words unrelated to the word"
+     ],
+     "ask": "Explains?",
+     "repair": "Find the clue."
+    }
+   ],
+   "checks": [
+    {
+     "question": "\"weary\" means ...",
+     "answer": "very tired",
+     "shows": "clue"
+    },
+    {
+     "question": "Does the common meaning always fit?",
+     "answer": "No",
+     "shows": "context"
+    }
+   ]
+  },
+  {
+   "skill": "ENGL.G7.READIN.T13_INTENSIVE_READING_CO.FACTUAL_QUESTIONS",
+   "assessed_by": "questions",
+   "key_step": "The child finds the sentence that answers and decides True, False or Not stated from it.",
+   "floor": {
+    "prerequisite": "Answers factual questions.",
+    "question": "Who travelled?",
+    "answer": "a name"
+   },
+   "steps": [
+    "Key word.",
+    "The sentence.",
+    "Same, different or missing."
+   ],
+   "contexts": [
+    "poems and passages on travel"
+   ],
+   "board": [
+    {
+     "beat": "write",
+     "do": "Write a passage and a statement."
+    },
+    {
+     "beat": "point",
+     "do": "Point at the key word.",
+     "say": "In the text?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for the child to answer."
+    },
+    {
+     "beat": "child_draws",
+     "do": "The child decides."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "ENGL.G7.READIN.T13_INTENSIVE_READING_CO.FACTUAL_QUESTIONS.M7_FQ_NEARBY_DETAIL",
+     "listen_for": [
+      "a nearby detail"
+     ],
+     "ask": "Answers it?",
+     "repair": "Exact answer."
+    },
+    {
+     "code": "ENGL.G7.READIN.T13_INTENSIVE_READING_CO.FACTUAL_QUESTIONS.M7_FQ_OUTSIDE_KNOWLEDGE",
+     "listen_for": [
+      "something from your own knowledge"
+     ],
+     "ask": "From the text?",
+     "repair": "Use it."
+    },
+    {
+     "code": "ENGL.G7.READIN.T13_INTENSIVE_READING_CO.FACTUAL_QUESTIONS.M7_FQ_MISSES_STATED",
+     "listen_for": [
+      "False or Not stated for a stated fact"
+     ],
+     "ask": "Look again.",
+     "repair": "True."
+    },
+    {
+     "code": "ENGL.G7.READIN.T13_INTENSIVE_READING_CO.FACTUAL_QUESTIONS.M7_FQ_FALSE_AS_TRUE",
+     "listen_for": [
+      "True for a false statement"
+     ],
+     "ask": "Same?",
+     "repair": "False."
+    },
+    {
+     "code": "ENGL.G7.READIN.T13_INTENSIVE_READING_CO.FACTUAL_QUESTIONS.M7_FQ_FALSE_AS_NOT_STATED",
+     "listen_for": [
+      "Not stated for a false statement"
+     ],
+     "ask": "Mentioned?",
+     "repair": "False."
+    },
+    {
+     "code": "ENGL.G7.READIN.T13_INTENSIVE_READING_CO.FACTUAL_QUESTIONS.M7_FQ_NOT_STATED_AS_TRUE",
+     "listen_for": [
+      "True or False for a statement not in the passage"
+     ],
+     "ask": "Found?",
+     "repair": "Not stated."
+    }
+   ],
+   "checks": [
+    {
+     "question": "Not mentioned: True, False or Not stated?",
+     "answer": "Not stated",
+     "shows": "not stated"
+    },
+    {
+     "question": "The exact answer?",
+     "answer": "from the text",
+     "shows": "stated"
+    }
+   ]
+  },
+  {
+   "skill": "ENGL.G7.READIN.T13_INTENSIVE_READING_CO.INFERENCE_QUESTIONS",
+   "assessed_by": "questions",
+   "key_step": "The child points to the clue and works out what it shows.",
+   "floor": {
+    "prerequisite": "Answers factual questions.",
+    "question": "What did she pack?",
+    "answer": "stated"
+   },
+   "steps": [
+    "Clue.",
+    "What it shows.",
+    "Fits the text?"
+   ],
+   "contexts": [
+    "travel poems",
+    "class reader"
+   ],
+   "board": [
+    {
+     "beat": "write",
+     "do": "Write: She packed her bag before dawn."
+    },
+    {
+     "beat": "point",
+     "do": "Point at before dawn.",
+     "say": "Why?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for the child to answer."
+    },
+    {
+     "beat": "child_draws",
+     "do": "The child names the clue."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "ENGL.G7.READIN.T13_INTENSIVE_READING_CO.INFERENCE_QUESTIONS.M7_IQ_OVERREACH",
+     "listen_for": [
+      "a claim with no clue"
+     ],
+     "ask": "Shown?",
+     "repair": "Only the clue."
+    },
+    {
+     "code": "ENGL.G7.READIN.T13_INTENSIVE_READING_CO.INFERENCE_QUESTIONS.M7_IQ_CONTRADICTS",
+     "listen_for": [
+      "a claim the passage goes against"
+     ],
+     "ask": "Fits?",
+     "repair": "Check."
+    },
+    {
+     "code": "ENGL.G7.READIN.T13_INTENSIVE_READING_CO.INFERENCE_QUESTIONS.M7_IQ_REPEATS_TEXT",
+     "listen_for": [
+      "a sentence copied from the passage"
+     ],
+     "ask": "Copied?",
+     "repair": "Work it out."
+    },
+    {
+     "code": "ENGL.G7.READIN.T13_INTENSIVE_READING_CO.INFERENCE_QUESTIONS.M7_X_IQ_NOT_STATED",
+     "listen_for": [
+      "The poem does not say."
+     ],
+     "ask": "Clue?",
+     "repair": "Infer."
+    }
+   ],
+   "checks": [
+    {
+     "question": "\"He kept checking his watch.\" He was ...",
+     "answer": "worried about time",
+     "shows": "inference"
+    },
+    {
+     "question": "Is \"not stated\" right for an inference?",
+     "answer": "No",
+     "shows": "infer"
+    }
+   ]
+  }
+ ]
+}

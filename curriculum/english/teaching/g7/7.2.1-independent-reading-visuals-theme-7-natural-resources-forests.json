@@ -1,0 +1,91 @@
+{
+ "sub_strand": "ENGL.G7.READIN.T7_INDEPENDENT_READING_",
+ "title": "Independent Reading: Visuals (Theme 7: Natural resources – forests)",
+ "status": "draft: written 18 Nov 2026 offline for Grade 7 English; not yet checked by a Kenyan English teacher; not loaded by the live tutor",
+ "notes": "",
+ "skills": [
+  {
+   "skill": "ENGL.G7.READIN.T7_INDEPENDENT_READING_.VISUALS",
+   "assessed_by": "questions",
+   "key_step": "The child reads the title and key, then the row and column, and knows when to add for a total.",
+   "floor": {
+    "prerequisite": "Reads visuals.",
+    "question": "What does the title say?",
+    "answer": "the topic"
+   },
+   "steps": [
+    "Title and key.",
+    "Find the row and column.",
+    "Total or part?"
+   ],
+   "contexts": [
+    "forest data"
+   ],
+   "board": [
+    {
+     "beat": "write",
+     "do": "Draw a small bar graph."
+    },
+    {
+     "beat": "point",
+     "do": "Point at Monday.",
+     "say": "How many?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for the child to answer."
+    },
+    {
+     "beat": "child_draws",
+     "do": "The child finds the total."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "ENGL.G7.READIN.T7_INDEPENDENT_READING_.VISUALS.M7_VI_WRONG_VISUAL",
+     "listen_for": [
+      "a map"
+     ],
+     "ask": "Comparing amounts?",
+     "repair": "Bar graph."
+    },
+    {
+     "code": "ENGL.G7.READIN.T7_INDEPENDENT_READING_.VISUALS.M7_VI_ROW_COLUMN",
+     "listen_for": [
+      "the number for Monday"
+     ],
+     "ask": "Which row?",
+     "repair": "Check."
+    },
+    {
+     "code": "ENGL.G7.READIN.T7_INDEPENDENT_READING_.VISUALS.M7_VI_TOTAL_PART",
+     "listen_for": [
+      "one day only"
+     ],
+     "ask": "Total?",
+     "repair": "Add all."
+    },
+    {
+     "code": "ENGL.G7.READIN.T7_INDEPENDENT_READING_.VISUALS.M7_VI_KEY_TITLE",
+     "listen_for": [
+      "the smallest number"
+     ],
+     "ask": "What does it show?",
+     "repair": "Title and key."
+    }
+   ],
+   "checks": [
+    {
+     "question": "Which visual compares amounts?",
+     "answer": "a bar graph",
+     "shows": "type"
+    },
+    {
+     "question": "Total for the week?",
+     "answer": "the sum of all days",
+     "shows": "total"
+    }
+   ]
+  }
+ ]
+}

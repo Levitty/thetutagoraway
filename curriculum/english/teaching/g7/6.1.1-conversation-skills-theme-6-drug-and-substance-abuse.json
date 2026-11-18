@@ -1,0 +1,177 @@
+{
+ "sub_strand": "ENGL.G7.LISTEN.T6_CONVERSATION_SKILLS",
+ "title": "Conversation Skills (Theme 6: Drug and substance abuse)",
+ "status": "draft: written 18 Nov 2026 offline for Grade 7 English; not yet checked by a Kenyan English teacher; not loaded by the live tutor",
+ "notes": "",
+ "skills": [
+  {
+   "skill": "ENGL.G7.LISTEN.T6_CONVERSATION_SKILLS.POLITE_INTERRUPT",
+   "assessed_by": "questions",
+   "key_step": "The child waits for a pause and uses words or a small signal to interrupt politely.",
+   "floor": {
+    "prerequisite": "Uses polite talk.",
+    "question": "Polite way to ask a question?",
+    "answer": "Excuse me, may I ..."
+   },
+   "steps": [
+    "Wait for a pause.",
+    "Raise a hand slightly or say Excuse me.",
+    "Make the point.",
+    "Hand back."
+   ],
+   "contexts": [
+    "a talk on drug abuse"
+   ],
+   "board": [
+    {
+     "beat": "write",
+     "do": "Write: Excuse me, may I say something?"
+    },
+    {
+     "beat": "point",
+     "do": "Point at Excuse me.",
+     "say": "When do you say it?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for the child to answer."
+    },
+    {
+     "beat": "child_draws",
+     "do": "The child shows a non-verbal signal."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "ENGL.G7.LISTEN.T6_CONVERSATION_SKILLS.POLITE_INTERRUPT.M7_PI_RUDE",
+     "listen_for": [
+      "Stop! Let me talk now."
+     ],
+     "ask": "Polite?",
+     "repair": "Excuse me."
+    },
+    {
+     "code": "ENGL.G7.LISTEN.T6_CONVERSATION_SKILLS.POLITE_INTERRUPT.M7_PI_NO_WAIT",
+     "listen_for": [
+      "while someone is in the middle of a sentence"
+     ],
+     "ask": "Pause?",
+     "repair": "Wait."
+    },
+    {
+     "code": "ENGL.G7.LISTEN.T6_CONVERSATION_SKILLS.POLITE_INTERRUPT.M7_PI_NON_VERBAL",
+     "listen_for": [
+      "saying Excuse me"
+     ],
+     "ask": "Without words?",
+     "repair": "Raise a hand."
+    },
+    {
+     "code": "ENGL.G7.LISTEN.T6_CONVERSATION_SKILLS.POLITE_INTERRUPT.M7_PI_TURN_TAKING",
+     "listen_for": [
+      "keep talking"
+     ],
+     "ask": "Keep talking?",
+     "repair": "Invite the next."
+    }
+   ],
+   "checks": [
+    {
+     "question": "Polite interruption?",
+     "answer": "Excuse me, may I add something?",
+     "shows": "verbal"
+    },
+    {
+     "question": "A non-verbal way?",
+     "answer": "raise a hand slightly",
+     "shows": "non-verbal"
+    }
+   ]
+  },
+  {
+   "skill": "ENGL.G7.LISTEN.T6_CONVERSATION_SKILLS.TURN_TAKING",
+   "assessed_by": "voice",
+   "key_step": "The child waits for a pause, links to the last speaker, keeps it short and invites others in.",
+   "floor": {
+    "prerequisite": "Interrupts politely.",
+    "question": "How do you interrupt?",
+    "answer": "Excuse me, may I ..."
+   },
+   "steps": [
+    "Wait.",
+    "Link: Building on what ... said,",
+    "Make one point.",
+    "Invite: What do you think, Amina?"
+   ],
+   "contexts": [
+    "a group talk on drug abuse",
+    "a family discussion"
+   ],
+   "board": [
+    {
+     "beat": "write",
+     "do": "Write: Building on ..., I think ... What do you think, ...?"
+    },
+    {
+     "beat": "point",
+     "do": "Point at Building on.",
+     "say": "Link to Juma's point."
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for the child to answer."
+    },
+    {
+     "beat": "child_draws",
+     "do": "The child invites the next speaker."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "ENGL.G7.LISTEN.T6_CONVERSATION_SKILLS.TURN_TAKING.M7_X_TT_DOMINATES",
+     "listen_for": [
+      "speak again"
+     ],
+     "ask": "Who has not spoken?",
+     "repair": "Invite them."
+    },
+    {
+     "code": "ENGL.G7.LISTEN.T6_CONVERSATION_SKILLS.TURN_TAKING.M7_X_TT_NO_LINK",
+     "listen_for": [
+      "Drugs are bad."
+     ],
+     "ask": "What did the last speaker say?",
+     "repair": "Link to it."
+    },
+    {
+     "code": "ENGL.G7.LISTEN.T6_CONVERSATION_SKILLS.TURN_TAKING.M7_X_TT_SILENT",
+     "listen_for": [
+      "stay quiet"
+     ],
+     "ask": "How can you join?",
+     "repair": "Use a starter."
+    },
+    {
+     "code": "ENGL.G7.LISTEN.T6_CONVERSATION_SKILLS.TURN_TAKING.M7_X_TT_INTERRUPTS",
+     "listen_for": [
+      "as soon as I think of something"
+     ],
+     "ask": "Had they finished?",
+     "repair": "Wait."
+    }
+   ],
+   "checks": [
+    {
+     "question": "You have spoken three times. Next?",
+     "answer": "invite someone else",
+     "shows": "share"
+    },
+    {
+     "question": "How do you join in?",
+     "answer": "May I add something?",
+     "shows": "join"
+    }
+   ]
+  }
+ ]
+}

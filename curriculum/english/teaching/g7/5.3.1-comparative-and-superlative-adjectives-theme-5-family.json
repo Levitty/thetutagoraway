@@ -1,0 +1,108 @@
+{
+ "sub_strand": "ENGL.G7.GRAMMA.T5_COMPARATIVE_AND_SUPE",
+ "title": "Comparative and Superlative Adjectives (Theme 5: Family)",
+ "status": "draft: written 18 Nov 2026 offline for Grade 7 English; not yet checked by a Kenyan English teacher; not loaded by the live tutor",
+ "notes": "",
+ "skills": [
+  {
+   "skill": "ENGL.G7.GRAMMA.T5_COMPARATIVE_AND_SUPE.ADJECTIVE_DEGREES",
+   "assessed_by": "questions",
+   "key_step": "The child counts the things compared and uses -er/-est or more/most, with spelling changes.",
+   "floor": {
+    "prerequisite": "Uses Grade 6 degrees.",
+    "question": "tall, ___, tallest",
+    "answer": "taller"
+   },
+   "steps": [
+    "Two: -er, more.",
+    "Three+: -est, most.",
+    "Irregular.",
+    "Spelling: hotter."
+   ],
+   "contexts": [
+    "family comparisons"
+   ],
+   "board": [
+    {
+     "beat": "write",
+     "do": "Write: hot, ___, ___."
+    },
+    {
+     "beat": "point",
+     "do": "Point at hot.",
+     "say": "Double?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for the child to answer."
+    },
+    {
+     "beat": "child_draws",
+     "do": "The child writes beautiful forms."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "ENGL.G7.GRAMMA.T5_COMPARATIVE_AND_SUPE.ADJECTIVE_DEGREES.M7_AD_MORE_ER",
+     "listen_for": [
+      "more taller"
+     ],
+     "ask": "Both?",
+     "repair": "One."
+    },
+    {
+     "code": "ENGL.G7.GRAMMA.T5_COMPARATIVE_AND_SUPE.ADJECTIVE_DEGREES.M7_AD_LONG_ER",
+     "listen_for": [
+      "beautifuler"
+     ],
+     "ask": "Long word?",
+     "repair": "More."
+    },
+    {
+     "code": "ENGL.G7.GRAMMA.T5_COMPARATIVE_AND_SUPE.ADJECTIVE_DEGREES.M7_AD_IRREGULAR",
+     "listen_for": [
+      "gooder"
+     ],
+     "ask": "Gooder?",
+     "repair": "Better."
+    },
+    {
+     "code": "ENGL.G7.GRAMMA.T5_COMPARATIVE_AND_SUPE.ADJECTIVE_DEGREES.M7_AD_THAN_THE",
+     "listen_for": [
+      "higher"
+     ],
+     "ask": "The?",
+     "repair": "Highest."
+    },
+    {
+     "code": "ENGL.G7.GRAMMA.T5_COMPARATIVE_AND_SUPE.ADJECTIVE_DEGREES.M7_AD_SPELL_ER",
+     "listen_for": [
+      "hoter"
+     ],
+     "ask": "Short vowel?",
+     "repair": "Double."
+    },
+    {
+     "code": "ENGL.G7.GRAMMA.T5_COMPARATIVE_AND_SUPE.ADJECTIVE_DEGREES.M7_AD_PLAIN_FORM",
+     "listen_for": [
+      "tall"
+     ],
+     "ask": "Comparing two?",
+     "repair": "Taller."
+    }
+   ],
+   "checks": [
+    {
+     "question": "good, ___, best",
+     "answer": "better",
+     "shows": "irregular"
+    },
+    {
+     "question": "the ___ (high) mountain",
+     "answer": "highest",
+     "shows": "superlative"
+    }
+   ]
+  }
+ ]
+}

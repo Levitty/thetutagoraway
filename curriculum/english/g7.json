@@ -3,15 +3,15 @@
  "subject_key": "english",
  "grade": 7,
  "source": "KICD English Language, First Published in 2022; Revised 2024 (text layer)",
- "status": "outcomes from KICD's text, word for word; skills, prerequisites and misconceptions (13 Nov 2026) are proposed or draft, written offline by Claude, awaiting a Kenyan English teacher's review",
+ "status": "outcomes from KICD's text, word for word; skills and prerequisites proposed, misconceptions draft, teaching pack draft (depth pass 18 Nov 2026, to the Grade 5 Maths standard), written offline by Claude, awaiting a Kenyan English teacher's review",
  "totals": {
   "strands": 5,
   "sub_strands": 75,
   "outcomes": 254,
   "lessons": 148,
-  "skills": 71,
-  "prerequisites": 94,
-  "misconceptions": 305
+  "skills": 91,
+  "prerequisites": 190,
+  "misconceptions": 397
  },
  "sub_strands": [
   {
@@ -75,7 +75,8 @@
      "code": "ENGL.G7.LISTEN.T1_CONVERSATIONAL_SKILL.INTRO_POLITE",
      "name": "Use polite expressions to introduce yourself and others",
      "outcomes": [
-      "ENGL.G7.LISTEN.T1_CONVERSATIONAL_SKILL.a"
+      "ENGL.G7.LISTEN.T1_CONVERSATIONAL_SKILL.a",
+      "ENGL.G7.LISTEN.T1_CONVERSATIONAL_SKILL.b"
      ],
      "mastery": "Chooses the polite way to introduce yourself, a friend or a visitor (May I introduce my friend, Wanjiru? Pleased to meet you), puts the person of honour first, and spots a rude or blunt turn, in 8 of 10 new items.",
      "question_forms": [
@@ -95,10 +96,18 @@
        "reason": "Grade 6 English taught it first. Proposed, to confirm by a Kenyan English teacher.",
        "strength": "essential",
        "status": "proposed"
+      },
+      {
+       "requires": "ENGL.G5.LISTEN.T3_PRONUNCIATION_AND_VO.POLITE_EXPRESSIONS",
+       "kind": "skill",
+       "strength": "essential",
+       "reason": "Grade 5 English taught it first. Proposed, to confirm by a Kenyan English teacher.",
+       "status": "proposed"
       }
      ],
      "leads_to": [],
-     "status": "proposed"
+     "status": "proposed",
+     "assessed_by": "questions"
     }
    ],
    "misconceptions": [
@@ -288,7 +297,47 @@
       }
      ],
      "leads_to": [],
-     "status": "proposed"
+     "status": "proposed",
+     "assessed_by": "questions"
+    },
+    {
+     "code": "ENGL.G7.READIN.T1_EXTENSIVE_READING_IN.INDEPENDENT_READING",
+     "name": "Read selected fiction and non-fiction independently",
+     "outcomes": [
+      "ENGL.G7.READIN.T1_EXTENSIVE_READING_IN.b",
+      "ENGL.G7.READIN.T9_GRADE_APPROPRIATE_FI.b",
+      "ENGL.G7.READIN.T11_EXTENSIVE_READING_NO.b"
+     ],
+     "mastery": "The child reads selected fiction and non-fiction alone over the term, keeps a reading log with one line on what each was about, and tells a classmate why it is worth reading. Evidence rule: the teacher sees it in two pieces of the learner's own work, scored with the KICD rubric indicator.",
+     "question_forms": [
+      "reading log",
+      "book talk",
+      "recommend a book"
+     ],
+     "thinking": [
+      "performance"
+     ],
+     "horeb_skill_ids": [],
+     "prerequisites": [
+      {
+       "requires": "ENGL.G6.READIN.T1_EXTENSIVE_READING.INDEPENDENT_READING",
+       "kind": "skill",
+       "strength": "essential",
+       "reason": "Grade 6 English taught it first. Proposed, to confirm by a Kenyan English teacher.",
+       "status": "proposed"
+      },
+      {
+       "requires": "ENGL.G7.READIN.T1_EXTENSIVE_READING_IN.SUITABLE_TEXT",
+       "kind": "skill",
+       "strength": "essential",
+       "reason": "Choosing a suitable text. Proposed, to confirm by a Kenyan English teacher.",
+       "status": "proposed"
+      }
+     ],
+     "leads_to": [],
+     "status": "proposed",
+     "assessed_by": "teacher",
+     "no_family": true
     }
    ],
    "misconceptions": [
@@ -354,6 +403,70 @@
      "help": "Information is found in non-fiction.",
      "feedback": "To find information choose a non-fiction text on the topic. Stories and poems are mainly for enjoyment.",
      "source": "common learner error; to confirm by a Kenyan English teacher",
+     "status": "draft"
+    },
+    {
+     "code": "ENGL.G7.READIN.T1_EXTENSIVE_READING_IN.INDEPENDENT_READING.M7_X_IR_ONE_KIND",
+     "skill": "ENGL.G7.READIN.T1_EXTENSIVE_READING_IN.INDEPENDENT_READING",
+     "error": "Reads only fiction or only one series.",
+     "example": {
+      "question": "Your log has only one series. What should you add?",
+      "wrong_answer": "the next book in the series",
+      "correct_answer": "a non-fiction book on a profession"
+     },
+     "cause": "Comfort reading.",
+     "reveals": "Offer \"the next book in the series\" beside \"a non-fiction book on a profession\" in a fresh sentence or text and ask again; picking it again shows the error is still there.",
+     "help": "Add a new kind of text.",
+     "feedback": "Add a new kind of text.",
+     "source": "to confirm by a Kenyan English teacher: a common classroom error of Kenyan learners of English, written offline (18 Nov 2026), not traced to a study",
+     "status": "draft"
+    },
+    {
+     "code": "ENGL.G7.READIN.T1_EXTENSIVE_READING_IN.INDEPENDENT_READING.M7_X_IR_NO_LOG",
+     "skill": "ENGL.G7.READIN.T1_EXTENSIVE_READING_IN.INDEPENDENT_READING",
+     "error": "Keeps no record of reading.",
+     "example": {
+      "question": "How will you show what you read this term?",
+      "wrong_answer": "I will remember",
+      "correct_answer": "a reading log"
+     },
+     "cause": "Records feel like extra work.",
+     "reveals": "Offer \"I will remember\" beside \"a reading log\" in a fresh sentence or text and ask again; picking it again shows the error is still there.",
+     "help": "One line after each text.",
+     "feedback": "One line after each text.",
+     "source": "to confirm by a Kenyan English teacher: a common classroom error of Kenyan learners of English, written offline (18 Nov 2026), not traced to a study",
+     "status": "draft"
+    },
+    {
+     "code": "ENGL.G7.READIN.T1_EXTENSIVE_READING_IN.INDEPENDENT_READING.M7_X_IR_BLURB_ONLY",
+     "skill": "ENGL.G7.READIN.T1_EXTENSIVE_READING_IN.INDEPENDENT_READING",
+     "error": "Logs a book after reading only the blurb.",
+     "example": {
+      "question": "Tell me how the book ends.",
+      "wrong_answer": "I only read the back.",
+      "correct_answer": "The heroine wins a scholarship."
+     },
+     "cause": "The aim becomes a full log.",
+     "reveals": "Offer \"I only read the back.\" beside \"The heroine wins a scholarship.\" in a fresh sentence or text and ask again; picking it again shows the error is still there.",
+     "help": "Read the whole text before logging it.",
+     "feedback": "Read the whole text before logging it.",
+     "source": "to confirm by a Kenyan English teacher: a common classroom error of Kenyan learners of English, written offline (18 Nov 2026), not traced to a study",
+     "status": "draft"
+    },
+    {
+     "code": "ENGL.G7.READIN.T1_EXTENSIVE_READING_IN.INDEPENDENT_READING.M7_X_IR_NO_REASON",
+     "skill": "ENGL.G7.READIN.T1_EXTENSIVE_READING_IN.INDEPENDENT_READING",
+     "error": "Cannot give a reason for recommending a book.",
+     "example": {
+      "question": "Why should I read it?",
+      "wrong_answer": "It is nice.",
+      "correct_answer": "It shows how a nurse saved a village; it is exciting."
+     },
+     "cause": "Opinion without reasons.",
+     "reveals": "Offer \"It is nice.\" beside \"It shows how a nurse saved a village; it is exciting.\" in a fresh sentence or text and ask again; picking it again shows the error is still there.",
+     "help": "Give one reason from the book.",
+     "feedback": "Give one reason from the book.",
+     "source": "to confirm by a Kenyan English teacher: a common classroom error of Kenyan learners of English, written offline (18 Nov 2026), not traced to a study",
      "status": "draft"
     }
    ],
@@ -484,7 +597,8 @@
        "reason": "Grade 8 English builds on this skill. Proposed, to confirm by a Kenyan English teacher."
       }
      ],
-     "status": "proposed"
+     "status": "proposed",
+     "assessed_by": "questions"
     }
    ],
    "misconceptions": [
@@ -693,10 +807,18 @@
        "reason": "Grade 6 English taught it first. Proposed, to confirm by a Kenyan English teacher.",
        "strength": "essential",
        "status": "proposed"
+      },
+      {
+       "requires": "ENGL.G6.READIN.T2_INTENSIVE_READING.CHARACTER_JUDGE",
+       "kind": "skill",
+       "strength": "essential",
+       "reason": "Grade 6 English taught it first. Proposed, to confirm by a Kenyan English teacher.",
+       "status": "proposed"
       }
      ],
      "leads_to": [],
-     "status": "proposed"
+     "status": "proposed",
+     "assessed_by": "questions"
     }
    ],
    "misconceptions": [
@@ -866,14 +988,67 @@
       "reasoning"
      ],
      "horeb_skill_ids": [],
-     "prerequisites": [],
+     "prerequisites": [
+      {
+       "requires": "ENGL.G5.WRITIN.T3_MECHANICS_OF_WRITING.CURSIVE",
+       "kind": "skill",
+       "strength": "essential",
+       "reason": "Grade 5 English taught it first. Proposed, to confirm by a Kenyan English teacher.",
+       "status": "proposed"
+      },
+      {
+       "requires": "ENGL.G6.WRITIN.T1_GUIDED_WRITING.FORM_FIELDS",
+       "kind": "skill",
+       "strength": "essential",
+       "reason": "Grade 6 English taught it first. Proposed, to confirm by a Kenyan English teacher.",
+       "status": "proposed"
+      }
+     ],
      "leads_to": [
       {
        "skill": "ENGL.G8.WRITIN.T1_WRITING_LEGIBLY_AND_.a",
        "reason": "Grade 8 English builds on this skill. Proposed, to confirm by a Kenyan English teacher."
       }
      ],
-     "status": "proposed"
+     "status": "proposed",
+     "assessed_by": "questions"
+    },
+    {
+     "code": "ENGL.G7.WRITIN.T1_HANDWRITING_LEGIBILI.LEGIBLE_WRITING",
+     "name": "Write texts legibly and neatly",
+     "outcomes": [
+      "ENGL.G7.WRITIN.T1_HANDWRITING_LEGIBILI.b"
+     ],
+     "mastery": "The child writes a page with letters of even size and slant, clear spaces between words, straight margins, no crowding at the line end and no crossings-out in the fair copy. Evidence rule: the teacher sees it in two pieces of the learner's own work, scored with the KICD rubric indicator.",
+     "question_forms": [
+      "write a fair copy",
+      "copy the paragraph neatly",
+      "rewrite this page neatly"
+     ],
+     "thinking": [
+      "performance"
+     ],
+     "horeb_skill_ids": [],
+     "prerequisites": [
+      {
+       "requires": "ENGL.G7.WRITIN.T1_HANDWRITING_LEGIBILI.HANDWRITING",
+       "kind": "skill",
+       "strength": "essential",
+       "reason": "The features of neat handwriting. Proposed, to confirm by a Kenyan English teacher.",
+       "status": "proposed"
+      },
+      {
+       "requires": "ENGL.G5.WRITIN.T3_MECHANICS_OF_WRITING.CURSIVE",
+       "kind": "skill",
+       "strength": "essential",
+       "reason": "Grade 5 English taught it first. Proposed, to confirm by a Kenyan English teacher.",
+       "status": "proposed"
+      }
+     ],
+     "leads_to": [],
+     "status": "proposed",
+     "assessed_by": "teacher",
+     "no_family": true
     }
    ],
    "misconceptions": [
@@ -939,6 +1114,70 @@
      "help": "Plain letters are easiest to read.",
      "feedback": "Legible handwriting is plain and clear. Decorations and unusual shapes make it harder to read.",
      "source": "common learner error; to confirm by a Kenyan English teacher",
+     "status": "draft"
+    },
+    {
+     "code": "ENGL.G7.WRITIN.T1_HANDWRITING_LEGIBILI.LEGIBLE_WRITING.M7_X_LW_SLANT",
+     "skill": "ENGL.G7.WRITIN.T1_HANDWRITING_LEGIBILI.LEGIBLE_WRITING",
+     "error": "Lets letters slant in different directions.",
+     "example": {
+      "question": "Copy a paragraph neatly.",
+      "wrong_answer": "letters lean every way",
+      "correct_answer": "all letters lean the same way"
+     },
+     "cause": "The paper moves or the grip changes.",
+     "reveals": "Offer \"letters lean every way\" beside \"all letters lean the same way\" in a fresh sentence or text and ask again; picking it again shows the error is still there.",
+     "help": "Keep the paper still; lean letters one way.",
+     "feedback": "Keep the paper still; lean letters one way.",
+     "source": "to confirm by a Kenyan English teacher: a common classroom error of Kenyan learners of English, written offline (18 Nov 2026), not traced to a study",
+     "status": "draft"
+    },
+    {
+     "code": "ENGL.G7.WRITIN.T1_HANDWRITING_LEGIBILI.LEGIBLE_WRITING.M7_X_LW_SQUEEZE_END",
+     "skill": "ENGL.G7.WRITIN.T1_HANDWRITING_LEGIBILI.LEGIBLE_WRITING",
+     "error": "Squeezes words at the end of a line.",
+     "example": {
+      "question": "A word will not fit at the end of the line. What do you do?",
+      "wrong_answer": "squeeze it in small",
+      "correct_answer": "start it on the next line"
+     },
+     "cause": "Unwillingness to start a new line.",
+     "reveals": "Offer \"squeeze it in small\" beside \"start it on the next line\" in a fresh sentence or text and ask again; picking it again shows the error is still there.",
+     "help": "Move the word to the next line.",
+     "feedback": "Move the word to the next line.",
+     "source": "to confirm by a Kenyan English teacher: a common classroom error of Kenyan learners of English, written offline (18 Nov 2026), not traced to a study",
+     "status": "draft"
+    },
+    {
+     "code": "ENGL.G7.WRITIN.T1_HANDWRITING_LEGIBILI.LEGIBLE_WRITING.M7_X_LW_CROSSINGS",
+     "skill": "ENGL.G7.WRITIN.T1_HANDWRITING_LEGIBILI.LEGIBLE_WRITING",
+     "error": "Leaves crossings-out in the fair copy.",
+     "example": {
+      "question": "Is a fair copy with three crossings-out neat?",
+      "wrong_answer": "Yes",
+      "correct_answer": "No"
+     },
+     "cause": "Fair copy and draft are not told apart.",
+     "reveals": "Offer \"Yes\" beside \"No\" in a fresh sentence or text and ask again; picking it again shows the error is still there.",
+     "help": "Correct in the draft; the fair copy is clean.",
+     "feedback": "Correct in the draft; the fair copy is clean.",
+     "source": "to confirm by a Kenyan English teacher: a common classroom error of Kenyan learners of English, written offline (18 Nov 2026), not traced to a study",
+     "status": "draft"
+    },
+    {
+     "code": "ENGL.G7.WRITIN.T1_HANDWRITING_LEGIBILI.LEGIBLE_WRITING.M7_X_LW_NO_MARGIN",
+     "skill": "ENGL.G7.WRITIN.T1_HANDWRITING_LEGIBILI.LEGIBLE_WRITING",
+     "error": "Writes into the margin.",
+     "example": {
+      "question": "Where should writing start?",
+      "wrong_answer": "at the edge of the page",
+      "correct_answer": "after the margin line"
+     },
+     "cause": "The margin is ignored.",
+     "reveals": "Offer \"at the edge of the page\" beside \"after the margin line\" in a fresh sentence or text and ask again; picking it again shows the error is still there.",
+     "help": "Keep inside the margin.",
+     "feedback": "Keep inside the margin.",
+     "source": "to confirm by a Kenyan English teacher: a common classroom error of Kenyan learners of English, written offline (18 Nov 2026), not traced to a study",
      "status": "draft"
     }
    ],
@@ -1043,9 +1282,73 @@
       "reasoning"
      ],
      "horeb_skill_ids": [],
-     "prerequisites": [],
+     "prerequisites": [
+      {
+       "requires": "ENGL.G6.LISTEN.T9_PRONUNCIATION_AND_SP.SPEAK_FLUENTLY",
+       "kind": "skill",
+       "strength": "essential",
+       "reason": "Grade 6 English taught it first. Proposed, to confirm by a Kenyan English teacher.",
+       "status": "proposed"
+      },
+      {
+       "requires": "ENGL.G6.LISTEN.T12_PRONUNCIATION_AND_VO.NONVERBAL_CUES",
+       "kind": "skill",
+       "strength": "essential",
+       "reason": "Grade 6 English taught it first. Proposed, to confirm by a Kenyan English teacher.",
+       "status": "proposed"
+      }
+     ],
      "leads_to": [],
-     "status": "proposed"
+     "status": "proposed",
+     "assessed_by": "questions"
+    },
+    {
+     "code": "ENGL.G7.LISTEN.T2_ORAL_PRESENTATIONS_O.PERFORM_ORAL",
+     "name": "Perform oral narratives, poems, lullabies and praise songs with the right techniques",
+     "outcomes": [
+      "ENGL.G7.LISTEN.T2_ORAL_PRESENTATIONS_O.b",
+      "ENGL.G7.READIN.T2_INTENSIVE_READING_SI.b",
+      "ENGL.G7.READIN.T3_INTENSIVE_READING_PO.c",
+      "ENGL.G7.READIN.T6_ORAL_LITERATURE_SONG.b",
+      "ENGL.G7.READIN.T13_ORAL_LITERATURE_PRAI.c"
+     ],
+     "mastery": "The child performs an oral narrative, poem, lullaby or praise song with voice changes, pauses, gestures, eye contact and audience participation that fit it, and can say the key message it carries. Evidence rule: the teacher hears it done right on two different days, scored with the observation rubric (PLAN_OBSERVATION_RUBRICS.md); a tapped answer cannot show it.",
+     "question_forms": [
+      "perform the narrative",
+      "recite the poem",
+      "sing the lullaby and say its message"
+     ],
+     "thinking": [
+      "performance"
+     ],
+     "horeb_skill_ids": [],
+     "prerequisites": [
+      {
+       "requires": "ENGL.G7.LISTEN.T2_ORAL_PRESENTATIONS_O.ORAL_TECHNIQUES",
+       "kind": "skill",
+       "strength": "essential",
+       "reason": "Knowing the performance techniques. Proposed, to confirm by a Kenyan English teacher.",
+       "status": "proposed"
+      },
+      {
+       "requires": "ENGL.G6.LISTEN.T9_PRONUNCIATION_AND_SP.SPEAK_FLUENTLY",
+       "kind": "skill",
+       "strength": "essential",
+       "reason": "Grade 6 English taught it first. Proposed, to confirm by a Kenyan English teacher.",
+       "status": "proposed"
+      },
+      {
+       "requires": "ENGL.G7.READIN.T3_INTENSIVE_READING_PO.POEM_STRUCTURE",
+       "kind": "skill",
+       "strength": "essential",
+       "reason": "Knowing how a poem is built. Proposed, to confirm by a Kenyan English teacher.",
+       "status": "proposed"
+      }
+     ],
+     "leads_to": [],
+     "status": "proposed",
+     "assessed_by": "voice",
+     "no_family": true
     }
    ],
    "misconceptions": [
@@ -1127,6 +1430,70 @@
      "help": "A face and body show feelings.",
      "feedback": "Gestures and facial expressions show feelings and actions: a scared face, a step back, hands up.",
      "source": "common learner error; to confirm by a Kenyan English teacher",
+     "status": "draft"
+    },
+    {
+     "code": "ENGL.G7.LISTEN.T2_ORAL_PRESENTATIONS_O.PERFORM_ORAL.M7_X_PO_READS",
+     "skill": "ENGL.G7.LISTEN.T2_ORAL_PRESENTATIONS_O.PERFORM_ORAL",
+     "error": "Reads the narrative or poem from the page instead of performing it.",
+     "example": {
+      "question": "Perform the oral narrative to the class.",
+      "wrong_answer": "reads from the book with head down",
+      "correct_answer": "tells it to the audience with eye contact and gestures"
+     },
+     "cause": "Performance is treated as reading aloud.",
+     "reveals": "Offer \"reads from the book with head down\" beside \"tells it to the audience with eye contact and gestures\" in a fresh sentence or text and ask again; picking it again shows the error is still there.",
+     "help": "Learn the story; look at your audience and tell it.",
+     "feedback": "Learn the story; look at your audience and tell it.",
+     "source": "to confirm by a Kenyan English teacher: a common classroom error of Kenyan learners of English, written offline (18 Nov 2026), not traced to a study",
+     "status": "draft"
+    },
+    {
+     "code": "ENGL.G7.LISTEN.T2_ORAL_PRESENTATIONS_O.PERFORM_ORAL.M7_X_PO_ONE_VOICE",
+     "skill": "ENGL.G7.LISTEN.T2_ORAL_PRESENTATIONS_O.PERFORM_ORAL",
+     "error": "Uses one voice for every character.",
+     "example": {
+      "question": "Perform the hare and the elephant talking.",
+      "wrong_answer": "same voice for both",
+      "correct_answer": "a quick, sly voice for the hare, a slow, deep one for the elephant"
+     },
+     "cause": "Voice changes are not seen as part of the story.",
+     "reveals": "Offer \"same voice for both\" beside \"a quick, sly voice for the hare, a slow, deep one for the elephant\" in a fresh sentence or text and ask again; picking it again shows the error is still there.",
+     "help": "Change your voice for each character.",
+     "feedback": "Change your voice for each character.",
+     "source": "to confirm by a Kenyan English teacher: a common classroom error of Kenyan learners of English, written offline (18 Nov 2026), not traced to a study",
+     "status": "draft"
+    },
+    {
+     "code": "ENGL.G7.LISTEN.T2_ORAL_PRESENTATIONS_O.PERFORM_ORAL.M7_X_PO_NO_AUDIENCE",
+     "skill": "ENGL.G7.LISTEN.T2_ORAL_PRESENTATIONS_O.PERFORM_ORAL",
+     "error": "Leaves out audience participation where it belongs.",
+     "example": {
+      "question": "The narrative has a song. What do you do?",
+      "wrong_answer": "sing it alone and go on",
+      "correct_answer": "teach the chorus and let the audience join"
+     },
+     "cause": "The child performs at the audience, not with it.",
+     "reveals": "Offer \"sing it alone and go on\" beside \"teach the chorus and let the audience join\" in a fresh sentence or text and ask again; picking it again shows the error is still there.",
+     "help": "Invite the audience into songs and responses.",
+     "feedback": "Invite the audience into songs and responses.",
+     "source": "to confirm by a Kenyan English teacher: a common classroom error of Kenyan learners of English, written offline (18 Nov 2026), not traced to a study",
+     "status": "draft"
+    },
+    {
+     "code": "ENGL.G7.LISTEN.T2_ORAL_PRESENTATIONS_O.PERFORM_ORAL.M7_X_PO_WRONG_MOOD",
+     "skill": "ENGL.G7.LISTEN.T2_ORAL_PRESENTATIONS_O.PERFORM_ORAL",
+     "error": "Performs a lullaby loudly and fast, or a praise song flatly.",
+     "example": {
+      "question": "How should a lullaby be sung?",
+      "wrong_answer": "loud and fast",
+      "correct_answer": "soft, slow and gentle"
+     },
+     "cause": "One performance style is used for every form.",
+     "reveals": "Offer \"loud and fast\" beside \"soft, slow and gentle\" in a fresh sentence or text and ask again; picking it again shows the error is still there.",
+     "help": "Match the style to the form: a lullaby soothes, a praise song celebrates.",
+     "feedback": "Match the style to the form: a lullaby soothes, a praise song celebrates.",
+     "source": "to confirm by a Kenyan English teacher: a common classroom error of Kenyan learners of English, written offline (18 Nov 2026), not traced to a study",
      "status": "draft"
     }
    ],
@@ -1334,7 +1701,8 @@
       }
      ],
      "leads_to": [],
-     "status": "proposed"
+     "status": "proposed",
+     "assessed_by": "questions"
     },
     {
      "code": "ENGL.G7.GRAMMA.T2_WORD_CLASSES_NOUNS.PLURALS",
@@ -1361,10 +1729,18 @@
        "reason": "Grade 5 English taught it first. Proposed, to confirm by a Kenyan English teacher.",
        "strength": "essential",
        "status": "proposed"
+      },
+      {
+       "requires": "ENGL.G6.LANGUA.T2_WORD_CLASSES.CONCRETE_ABSTRACT",
+       "kind": "skill",
+       "strength": "essential",
+       "reason": "Grade 6 English taught it first. Proposed, to confirm by a Kenyan English teacher.",
+       "status": "proposed"
       }
      ],
      "leads_to": [],
-     "status": "proposed"
+     "status": "proposed",
+     "assessed_by": "questions"
     }
    ],
    "misconceptions": [
@@ -1652,10 +2028,56 @@
        "reason": "Grade 6 English taught it first. Proposed, to confirm by a Kenyan English teacher.",
        "strength": "essential",
        "status": "proposed"
+      },
+      {
+       "requires": "ENGL.G6.READIN.T1_EXTENSIVE_READING.SUITABLE_TEXT",
+       "kind": "skill",
+       "strength": "essential",
+       "reason": "Grade 6 English taught it first. Proposed, to confirm by a Kenyan English teacher.",
+       "status": "proposed"
       }
      ],
      "leads_to": [],
-     "status": "proposed"
+     "status": "proposed",
+     "assessed_by": "questions"
+    },
+    {
+     "code": "ENGL.G7.READIN.T2_INTENSIVE_READING_CL.AUTHOR_SETTING",
+     "name": "Describe the author and the setting of a class reader",
+     "outcomes": [
+      "ENGL.G7.READIN.T2_INTENSIVE_READING_CL.b"
+     ],
+     "mastery": "From the cover, the title page, the blurb and the first chapter, the child names the author and describes the setting in time and place, quoting the clues. Evidence rule: at least four of the last five fresh questions right across at least two question forms, and no repeated pick of the same misconception.",
+     "question_forms": [
+      "who wrote it",
+      "where and when is it set",
+      "which clues show the setting"
+     ],
+     "thinking": [
+      "recall",
+      "reasoning"
+     ],
+     "horeb_skill_ids": [],
+     "prerequisites": [
+      {
+       "requires": "ENGL.G7.READIN.T2_INTENSIVE_READING_CL.BOOK_PARTS",
+       "kind": "skill",
+       "strength": "essential",
+       "reason": "The parts that preview a book. Proposed, to confirm by a Kenyan English teacher.",
+       "status": "proposed"
+      },
+      {
+       "requires": "ENGL.G6.READIN.T2_INTENSIVE_READING.STORY_ELEMENTS",
+       "kind": "skill",
+       "strength": "essential",
+       "reason": "Grade 6 English taught it first. Proposed, to confirm by a Kenyan English teacher.",
+       "status": "proposed"
+      }
+     ],
+     "leads_to": [],
+     "status": "proposed",
+     "assessed_by": "questions",
+     "no_family": true
     }
    ],
    "misconceptions": [
@@ -1721,6 +2143,70 @@
      "help": "A glossary explains hard words.",
      "feedback": "A glossary at the back of a book explains the hard or special words used in it.",
      "source": "common learner error; to confirm by a Kenyan English teacher",
+     "status": "draft"
+    },
+    {
+     "code": "ENGL.G7.READIN.T2_INTENSIVE_READING_CL.AUTHOR_SETTING.M7_X_AS_PUBLISHER",
+     "skill": "ENGL.G7.READIN.T2_INTENSIVE_READING_CL.AUTHOR_SETTING",
+     "error": "Names the publisher as the author.",
+     "example": {
+      "question": "Who wrote the class reader?",
+      "wrong_answer": "the publisher's name on the spine",
+      "correct_answer": "the author named on the cover"
+     },
+     "cause": "Both names appear on the book.",
+     "reveals": "Offer \"the publisher's name on the spine\" beside \"the author named on the cover\" in a fresh sentence or text and ask again; picking it again shows the error is still there.",
+     "help": "The author is named with \"by\" on the title page.",
+     "feedback": "The author is named with \"by\" on the title page.",
+     "source": "to confirm by a Kenyan English teacher: a common classroom error of Kenyan learners of English, written offline (18 Nov 2026), not traced to a study",
+     "status": "draft"
+    },
+    {
+     "code": "ENGL.G7.READIN.T2_INTENSIVE_READING_CL.AUTHOR_SETTING.M7_X_AS_PLACE_ONLY",
+     "skill": "ENGL.G7.READIN.T2_INTENSIVE_READING_CL.AUTHOR_SETTING",
+     "error": "Gives the place but not the time of the setting.",
+     "example": {
+      "question": "Describe the setting.",
+      "wrong_answer": "a village",
+      "correct_answer": "a village near Kisumu during the 1960s"
+     },
+     "cause": "Setting is thought to be only a place.",
+     "reveals": "Offer \"a village\" beside \"a village near Kisumu during the 1960s\" in a fresh sentence or text and ask again; picking it again shows the error is still there.",
+     "help": "Setting is place and time.",
+     "feedback": "Setting is place and time.",
+     "source": "to confirm by a Kenyan English teacher: a common classroom error of Kenyan learners of English, written offline (18 Nov 2026), not traced to a study",
+     "status": "draft"
+    },
+    {
+     "code": "ENGL.G7.READIN.T2_INTENSIVE_READING_CL.AUTHOR_SETTING.M7_X_AS_NO_CLUES",
+     "skill": "ENGL.G7.READIN.T2_INTENSIVE_READING_CL.AUTHOR_SETTING",
+     "error": "Guesses the setting without clues from the text.",
+     "example": {
+      "question": "How do you know it is set long ago?",
+      "wrong_answer": "It just is.",
+      "correct_answer": "People travel by ox-cart and there are no phones."
+     },
+     "cause": "Clues are not looked for.",
+     "reveals": "Offer \"It just is.\" beside \"People travel by ox-cart and there are no phones.\" in a fresh sentence or text and ask again; picking it again shows the error is still there.",
+     "help": "Find clues: transport, clothes, tools.",
+     "feedback": "Find clues: transport, clothes, tools.",
+     "source": "to confirm by a Kenyan English teacher: a common classroom error of Kenyan learners of English, written offline (18 Nov 2026), not traced to a study",
+     "status": "draft"
+    },
+    {
+     "code": "ENGL.G7.READIN.T2_INTENSIVE_READING_CL.AUTHOR_SETTING.M7_X_AS_CHARACTER_AUTHOR",
+     "skill": "ENGL.G7.READIN.T2_INTENSIVE_READING_CL.AUTHOR_SETTING",
+     "error": "Thinks the narrator is the author.",
+     "example": {
+      "question": "The story says \"I\". Is the narrator the author?",
+      "wrong_answer": "Yes",
+      "correct_answer": "Not always; the narrator can be a character"
+     },
+     "cause": "First person is read as the writer.",
+     "reveals": "Offer \"Yes\" beside \"Not always; the narrator can be a character\" in a fresh sentence or text and ask again; picking it again shows the error is still there.",
+     "help": "The narrator may be a character the author made up.",
+     "feedback": "The narrator may be a character the author made up.",
+     "source": "to confirm by a Kenyan English teacher: a common classroom error of Kenyan learners of English, written offline (18 Nov 2026), not traced to a study",
      "status": "draft"
     }
    ],
@@ -1843,7 +2329,8 @@
       }
      ],
      "leads_to": [],
-     "status": "proposed"
+     "status": "proposed",
+     "assessed_by": "questions"
     }
    ],
    "misconceptions": [
@@ -2121,10 +2608,18 @@
        "reason": "Grade 6 English taught it first. Proposed, to confirm by a Kenyan English teacher.",
        "strength": "essential",
        "status": "proposed"
+      },
+      {
+       "requires": "ENGL.G6.READIN.T1_EXTENSIVE_READING.SUITABLE_TEXT",
+       "kind": "skill",
+       "strength": "essential",
+       "reason": "Grade 6 English taught it first. Proposed, to confirm by a Kenyan English teacher.",
+       "status": "proposed"
       }
      ],
      "leads_to": [],
-     "status": "proposed"
+     "status": "proposed",
+     "assessed_by": "questions"
     }
    ],
    "misconceptions": [
@@ -2174,6 +2669,22 @@
      "help": "Look for the one fact you need.",
      "feedback": "When you read for information, scan quickly for the fact you need. Reading for meaning is slower and fuller.",
      "source": "common learner error; to confirm by a Kenyan English teacher",
+     "status": "draft"
+    },
+    {
+     "code": "ENGL.G7.READIN.T3_READING_INFORMATION_.INFO_OR_MEANING.M7_X_IO_SPEED",
+     "skill": "ENGL.G7.READIN.T3_READING_INFORMATION_.INFO_OR_MEANING",
+     "error": "Reads a story at scanning speed and misses its meaning.",
+     "example": {
+      "question": "You are reading a short story for its message. How do you read?",
+      "wrong_answer": "run the eyes down for key words",
+      "correct_answer": "read every line and think about it"
+     },
+     "cause": "One reading speed is used for every purpose.",
+     "reveals": "Offer \"run the eyes down for key words\" beside \"read every line and think about it\" in a fresh sentence or text and ask again; picking it again shows the error is still there.",
+     "help": "Read for meaning slowly; scan only for a fact.",
+     "feedback": "Read for meaning slowly; scan only for a fact.",
+     "source": "to confirm by a Kenyan English teacher: a common classroom error of Kenyan learners of English, written offline (18 Nov 2026), not traced to a study",
      "status": "draft"
     }
    ],
@@ -2281,9 +2792,25 @@
       "rule"
      ],
      "horeb_skill_ids": [],
-     "prerequisites": [],
+     "prerequisites": [
+      {
+       "requires": "ENGL.G6.LANGUA.T8_SENTENCE_PATTERNS.ACTIVE_PASSIVE",
+       "kind": "skill",
+       "strength": "essential",
+       "reason": "Grade 6 English taught it first. Proposed, to confirm by a Kenyan English teacher.",
+       "status": "proposed"
+      },
+      {
+       "requires": "ENGL.G5.GRAMMA.T7_TENSE_FUTURE_TIME_US.FUTURE_WILL_SHALL",
+       "kind": "skill",
+       "strength": "essential",
+       "reason": "Grade 5 English taught it first. Proposed, to confirm by a Kenyan English teacher.",
+       "status": "proposed"
+      }
+     ],
      "leads_to": [],
-     "status": "proposed"
+     "status": "proposed",
+     "assessed_by": "questions"
     },
     {
      "code": "ENGL.G7.GRAMMA.T3_VERBS_AND_TENSE.TENSE_CHOICE",
@@ -2319,7 +2846,8 @@
       }
      ],
      "leads_to": [],
-     "status": "proposed"
+     "status": "proposed",
+     "assessed_by": "questions"
     }
    ],
    "misconceptions": [
@@ -2588,6 +3116,13 @@
        "reason": "Grade 6 English taught it first. Proposed, to confirm by a Kenyan English teacher.",
        "strength": "essential",
        "status": "proposed"
+      },
+      {
+       "requires": "ENGL.G6.LISTEN.T8_PRONUNCIATION_AND_VO.RIDDLES_PROVERBS",
+       "kind": "skill",
+       "strength": "essential",
+       "reason": "Grade 6 English taught it first. Proposed, to confirm by a Kenyan English teacher.",
+       "status": "proposed"
       }
      ],
      "leads_to": [
@@ -2596,7 +3131,8 @@
        "reason": "Grade 8 English builds on this skill. Proposed, to confirm by a Kenyan English teacher."
       }
      ],
-     "status": "proposed"
+     "status": "proposed",
+     "assessed_by": "questions"
     }
    ],
    "misconceptions": [
@@ -2786,10 +3322,64 @@
        "reason": "Grade 6 English taught it first. Proposed, to confirm by a Kenyan English teacher.",
        "strength": "essential",
        "status": "proposed"
+      },
+      {
+       "requires": "ENGL.G6.WRITIN.T5_CREATIVE_WRITING.NARRATIVE_COMPOSITION",
+       "kind": "skill",
+       "strength": "essential",
+       "reason": "Grade 6 English taught it first. Proposed, to confirm by a Kenyan English teacher.",
+       "status": "proposed"
       }
      ],
      "leads_to": [],
-     "status": "proposed"
+     "status": "proposed",
+     "assessed_by": "questions"
+    },
+    {
+     "code": "ENGL.G7.WRITIN.T3_WRITING_NARRATIVE_PA.PARAGRAPH_WRITING",
+     "name": "Compose a well-developed narrative paragraph using examples and incidents",
+     "outcomes": [
+      "ENGL.G7.WRITIN.T3_WRITING_NARRATIVE_PA.b",
+      "ENGL.G7.WRITIN.T4_PARAGRAPHING_USING_E.b"
+     ],
+     "mastery": "The child writes a paragraph with a topic sentence, events or supporting sentences in order with an example or an incident, and a closing sentence. Evidence rule: two pieces of the learner's own writing marked Meeting Expectations or above on the KICD rubric indicator.",
+     "question_forms": [
+      "write a paragraph about",
+      "add an example",
+      "add an incident"
+     ],
+     "thinking": [
+      "creation",
+      "organisation"
+     ],
+     "horeb_skill_ids": [],
+     "prerequisites": [
+      {
+       "requires": "ENGL.G7.WRITIN.T3_WRITING_NARRATIVE_PA.NARRATIVE_PARAGRAPH",
+       "kind": "skill",
+       "strength": "essential",
+       "reason": "The parts of a narrative paragraph. Proposed, to confirm by a Kenyan English teacher.",
+       "status": "proposed"
+      },
+      {
+       "requires": "ENGL.G7.WRITIN.T4_PARAGRAPHING_USING_E.PARAGRAPH_EXAMPLES",
+       "kind": "skill",
+       "strength": "essential",
+       "reason": "Examples and incidents. Proposed, to confirm by a Kenyan English teacher.",
+       "status": "proposed"
+      },
+      {
+       "requires": "ENGL.G6.WRITIN.T2_CREATIVE_WRITING.PARAGRAPH_ORDER",
+       "kind": "skill",
+       "strength": "essential",
+       "reason": "Grade 6 English taught it first. Proposed, to confirm by a Kenyan English teacher.",
+       "status": "proposed"
+      }
+     ],
+     "leads_to": [],
+     "status": "proposed",
+     "assessed_by": "composition",
+     "no_family": true
     }
    ],
    "misconceptions": [
@@ -2855,6 +3445,70 @@
      "help": "A closing tells how the events ended or how the people felt.",
      "feedback": "A narrative paragraph ends with a closing sentence that tells how it all ended or what the person felt.",
      "source": "common learner error; to confirm by a Kenyan English teacher",
+     "status": "draft"
+    },
+    {
+     "code": "ENGL.G7.WRITIN.T3_WRITING_NARRATIVE_PA.PARAGRAPH_WRITING.M7_X_PW_NO_TOPIC",
+     "skill": "ENGL.G7.WRITIN.T3_WRITING_NARRATIVE_PA.PARAGRAPH_WRITING",
+     "error": "Writes a paragraph with no topic sentence.",
+     "example": {
+      "question": "Which opening tells the reader what the paragraph is about?",
+      "wrong_answer": "He carried water.",
+      "correct_answer": "Our class prefect is a true leader."
+     },
+     "cause": "The child starts with a detail.",
+     "reveals": "Offer \"He carried water.\" beside \"Our class prefect is a true leader.\" in a fresh sentence or text and ask again; picking it again shows the error is still there.",
+     "help": "Begin with the main idea.",
+     "feedback": "Begin with the main idea.",
+     "source": "to confirm by a Kenyan English teacher: a common classroom error of Kenyan learners of English, written offline (18 Nov 2026), not traced to a study",
+     "status": "draft"
+    },
+    {
+     "code": "ENGL.G7.WRITIN.T3_WRITING_NARRATIVE_PA.PARAGRAPH_WRITING.M7_X_PW_EXAMPLE_OFF",
+     "skill": "ENGL.G7.WRITIN.T3_WRITING_NARRATIVE_PA.PARAGRAPH_WRITING",
+     "error": "Adds an example that does not support the point.",
+     "example": {
+      "question": "Point: our prefect is fair. Which example fits?",
+      "wrong_answer": "He has a new bag.",
+      "correct_answer": "He gives everyone a turn to speak."
+     },
+     "cause": "Any example is added.",
+     "reveals": "Offer \"He has a new bag.\" beside \"He gives everyone a turn to speak.\" in a fresh sentence or text and ask again; picking it again shows the error is still there.",
+     "help": "Check the example proves the point.",
+     "feedback": "Check the example proves the point.",
+     "source": "to confirm by a Kenyan English teacher: a common classroom error of Kenyan learners of English, written offline (18 Nov 2026), not traced to a study",
+     "status": "draft"
+    },
+    {
+     "code": "ENGL.G7.WRITIN.T3_WRITING_NARRATIVE_PA.PARAGRAPH_WRITING.M7_X_PW_NO_CLOSE",
+     "skill": "ENGL.G7.WRITIN.T3_WRITING_NARRATIVE_PA.PARAGRAPH_WRITING",
+     "error": "Stops without a closing sentence.",
+     "example": {
+      "question": "How should the paragraph end?",
+      "wrong_answer": "with another detail",
+      "correct_answer": "with a sentence that sums up"
+     },
+     "cause": "The child stops when ideas run out.",
+     "reveals": "Offer \"with another detail\" beside \"with a sentence that sums up\" in a fresh sentence or text and ask again; picking it again shows the error is still there.",
+     "help": "End with a sentence that sums up.",
+     "feedback": "End with a sentence that sums up.",
+     "source": "to confirm by a Kenyan English teacher: a common classroom error of Kenyan learners of English, written offline (18 Nov 2026), not traced to a study",
+     "status": "draft"
+    },
+    {
+     "code": "ENGL.G7.WRITIN.T3_WRITING_NARRATIVE_PA.PARAGRAPH_WRITING.M7_X_PW_MANY_IDEAS",
+     "skill": "ENGL.G7.WRITIN.T3_WRITING_NARRATIVE_PA.PARAGRAPH_WRITING",
+     "error": "Puts several main ideas in one paragraph.",
+     "example": {
+      "question": "A paragraph covers hygiene, sports and exams. Right?",
+      "wrong_answer": "Yes",
+      "correct_answer": "No: one main idea per paragraph"
+     },
+     "cause": "Paragraphs are seen as blocks of text.",
+     "reveals": "Offer \"Yes\" beside \"No: one main idea per paragraph\" in a fresh sentence or text and ask again; picking it again shows the error is still there.",
+     "help": "One main idea per paragraph.",
+     "feedback": "One main idea per paragraph.",
+     "source": "to confirm by a Kenyan English teacher: a common classroom error of Kenyan learners of English, written offline (18 Nov 2026), not traced to a study",
      "status": "draft"
     }
    ],
@@ -2972,6 +3626,13 @@
        "reason": "Grade 6 English taught it first. Proposed, to confirm by a Kenyan English teacher.",
        "strength": "essential",
        "status": "proposed"
+      },
+      {
+       "requires": "ENGL.G6.LISTEN.T5_PRONUNCIATION_AND_VO.ORAL_RESPONSE",
+       "kind": "skill",
+       "strength": "essential",
+       "reason": "Grade 6 English taught it first. Proposed, to confirm by a Kenyan English teacher.",
+       "status": "proposed"
       }
      ],
      "leads_to": [
@@ -2980,7 +3641,47 @@
        "reason": "Grade 8 English builds on this skill. Proposed, to confirm by a Kenyan English teacher."
       }
      ],
-     "status": "proposed"
+     "status": "proposed",
+     "assessed_by": "questions"
+    },
+    {
+     "code": "ENGL.G7.LISTEN.T4_LISTENING_COMPREHENS.LISTEN_RESPOND",
+     "name": "Listen attentively to a text or song and respond to its key issues",
+     "outcomes": [
+      "ENGL.G7.LISTEN.T4_LISTENING_COMPREHENS.c",
+      "ENGL.G7.LISTEN.T13_LISTENING_COMPREHENS.a",
+      "ENGL.G7.LISTEN.T13_LISTENING_COMPREHENS.b"
+     ],
+     "mastery": "After listening to a talk or song (on leadership, land travel), the child names the key issues raised, gives specific details, and responds with a fitting comment, question or action. Evidence rule: the teacher hears it done right on two different days, scored with the observation rubric (PLAN_OBSERVATION_RUBRICS.md); a tapped answer cannot show it.",
+     "question_forms": [
+      "what issue did the song raise",
+      "respond to the speaker",
+      "what would you advise"
+     ],
+     "thinking": [
+      "performance"
+     ],
+     "horeb_skill_ids": [],
+     "prerequisites": [
+      {
+       "requires": "ENGL.G6.LISTEN.T5_PRONUNCIATION_AND_VO.ORAL_RESPONSE",
+       "kind": "skill",
+       "strength": "essential",
+       "reason": "Grade 6 English taught it first. Proposed, to confirm by a Kenyan English teacher.",
+       "status": "proposed"
+      },
+      {
+       "requires": "ENGL.G7.LISTEN.T4_LISTENING_COMPREHENS.SPECIFIC_GENERAL",
+       "kind": "skill",
+       "strength": "essential",
+       "reason": "Telling specific from general information. Proposed, to confirm by a Kenyan English teacher.",
+       "status": "proposed"
+      }
+     ],
+     "leads_to": [],
+     "status": "proposed",
+     "assessed_by": "voice",
+     "no_family": true
     }
    ],
    "misconceptions": [
@@ -3046,6 +3747,70 @@
      "help": "Find the number that goes with the noun asked.",
      "feedback": "Several numbers may be in the text. Choose the number that goes with the noun in the question.",
      "source": "common learner error; to confirm by a Kenyan English teacher",
+     "status": "draft"
+    },
+    {
+     "code": "ENGL.G7.LISTEN.T4_LISTENING_COMPREHENS.LISTEN_RESPOND.M7_X_LR_DETAIL_AS_ISSUE",
+     "skill": "ENGL.G7.LISTEN.T4_LISTENING_COMPREHENS.LISTEN_RESPOND",
+     "error": "Gives a detail as the key issue.",
+     "example": {
+      "question": "A song on land travel mentions a red matatu and warns about overloading. Key issue?",
+      "wrong_answer": "a red matatu",
+      "correct_answer": "overloading is dangerous"
+     },
+     "cause": "Vivid details stick.",
+     "reveals": "Offer \"a red matatu\" beside \"overloading is dangerous\" in a fresh sentence or text and ask again; picking it again shows the error is still there.",
+     "help": "Ask: what is the song worried or happy about?",
+     "feedback": "Ask: what is the song worried or happy about?",
+     "source": "to confirm by a Kenyan English teacher: a common classroom error of Kenyan learners of English, written offline (18 Nov 2026), not traced to a study",
+     "status": "draft"
+    },
+    {
+     "code": "ENGL.G7.LISTEN.T4_LISTENING_COMPREHENS.LISTEN_RESPOND.M7_X_LR_OFF_RESPONSE",
+     "skill": "ENGL.G7.LISTEN.T4_LISTENING_COMPREHENS.LISTEN_RESPOND",
+     "error": "Responds with something unrelated to the talk.",
+     "example": {
+      "question": "Respond to the talk on good leaders.",
+      "wrong_answer": "I like football.",
+      "correct_answer": "A good leader listens, like our class prefect."
+     },
+     "cause": "The child says what is on his or her mind.",
+     "reveals": "Offer \"I like football.\" beside \"A good leader listens, like our class prefect.\" in a fresh sentence or text and ask again; picking it again shows the error is still there.",
+     "help": "Link your response to what was said.",
+     "feedback": "Link your response to what was said.",
+     "source": "to confirm by a Kenyan English teacher: a common classroom error of Kenyan learners of English, written offline (18 Nov 2026), not traced to a study",
+     "status": "draft"
+    },
+    {
+     "code": "ENGL.G7.LISTEN.T4_LISTENING_COMPREHENS.LISTEN_RESPOND.M7_X_LR_MISHEARD",
+     "skill": "ENGL.G7.LISTEN.T4_LISTENING_COMPREHENS.LISTEN_RESPOND",
+     "error": "Responds to a word misheard and misses the point.",
+     "example": {
+      "question": "The speaker says \"leaders serve\". Response?",
+      "wrong_answer": "Leaders swerve on the road.",
+      "correct_answer": "A leader serves the people, not himself."
+     },
+     "cause": "Attention drifts and a sound-alike is caught.",
+     "reveals": "Offer \"Leaders swerve on the road.\" beside \"A leader serves the people, not himself.\" in a fresh sentence or text and ask again; picking it again shows the error is still there.",
+     "help": "Check the point before you respond.",
+     "feedback": "Check the point before you respond.",
+     "source": "to confirm by a Kenyan English teacher: a common classroom error of Kenyan learners of English, written offline (18 Nov 2026), not traced to a study",
+     "status": "draft"
+    },
+    {
+     "code": "ENGL.G7.LISTEN.T4_LISTENING_COMPREHENS.LISTEN_RESPOND.M7_X_LR_REPEATS",
+     "skill": "ENGL.G7.LISTEN.T4_LISTENING_COMPREHENS.LISTEN_RESPOND",
+     "error": "Repeats the speaker's words without responding.",
+     "example": {
+      "question": "What is your view on the song's message?",
+      "wrong_answer": "Overloading is dangerous. (repeated)",
+      "correct_answer": "I agree; I will refuse to board an overloaded matatu."
+     },
+     "cause": "Repeating feels safe.",
+     "reveals": "Offer \"Overloading is dangerous. (repeated)\" beside \"I agree; I will refuse to board an overloaded matatu.\" in a fresh sentence or text and ask again; picking it again shows the error is still there.",
+     "help": "Add your own view or action.",
+     "feedback": "Add your own view or action.",
+     "source": "to confirm by a Kenyan English teacher: a common classroom error of Kenyan learners of English, written offline (18 Nov 2026), not traced to a study",
      "status": "draft"
     }
    ],
@@ -3155,6 +3920,13 @@
        "reason": "Grade 5 English taught it first. Proposed, to confirm by a Kenyan English teacher.",
        "strength": "essential",
        "status": "proposed"
+      },
+      {
+       "requires": "ENGL.G6.READIN.T1_EXTENSIVE_READING.REFERENCE_MATERIALS",
+       "kind": "skill",
+       "strength": "essential",
+       "reason": "Grade 6 English taught it first. Proposed, to confirm by a Kenyan English teacher.",
+       "status": "proposed"
       }
      ],
      "leads_to": [
@@ -3163,7 +3935,8 @@
        "reason": "Grade 8 English builds on this skill. Proposed, to confirm by a Kenyan English teacher."
       }
      ],
-     "status": "proposed"
+     "status": "proposed",
+     "assessed_by": "questions"
     }
    ],
    "misconceptions": [
@@ -3197,6 +3970,38 @@
      "help": "A reading strategy helps you to understand.",
      "feedback": "Rereading the sentence and the words around it, predicting, skimming and scanning are strategies. Skipping and guessing are not.",
      "source": "common learner error; to confirm by a Kenyan English teacher",
+     "status": "draft"
+    },
+    {
+     "code": "ENGL.G7.READIN.T4_INTENSIVE_READING.READING_STRATEGIES.M7_X_RS_REREAD_NEVER",
+     "skill": "ENGL.G7.READIN.T4_INTENSIVE_READING.READING_STRATEGIES",
+     "error": "Never rereads a confusing sentence.",
+     "example": {
+      "question": "A sentence does not make sense. What do you do?",
+      "wrong_answer": "go on to the next page",
+      "correct_answer": "reread it slowly"
+     },
+     "cause": "Rereading feels like failure.",
+     "reveals": "Offer \"go on to the next page\" beside \"reread it slowly\" in a fresh sentence or text and ask again; picking it again shows the error is still there.",
+     "help": "Reread a hard sentence before going on.",
+     "feedback": "Reread a hard sentence before going on.",
+     "source": "to confirm by a Kenyan English teacher: a common classroom error of Kenyan learners of English, written offline (18 Nov 2026), not traced to a study",
+     "status": "draft"
+    },
+    {
+     "code": "ENGL.G7.READIN.T4_INTENSIVE_READING.READING_STRATEGIES.M7_X_RS_PREVIEW_SKIP",
+     "skill": "ENGL.G7.READIN.T4_INTENSIVE_READING.READING_STRATEGIES",
+     "error": "Starts reading without previewing title, headings and pictures.",
+     "example": {
+      "question": "Before reading an article on hygiene, you should ...",
+      "wrong_answer": "start at the first word",
+      "correct_answer": "look at the title, headings and pictures"
+     },
+     "cause": "Previewing is not known as a strategy.",
+     "reveals": "Offer \"start at the first word\" beside \"look at the title, headings and pictures\" in a fresh sentence or text and ask again; picking it again shows the error is still there.",
+     "help": "Preview first: it tells you what to expect.",
+     "feedback": "Preview first: it tells you what to expect.",
+     "source": "to confirm by a Kenyan English teacher: a common classroom error of Kenyan learners of English, written offline (18 Nov 2026), not traced to a study",
      "status": "draft"
     }
    ],
@@ -3309,9 +4114,25 @@
       "rule"
      ],
      "horeb_skill_ids": [],
-     "prerequisites": [],
+     "prerequisites": [
+      {
+       "requires": "ENGL.G6.LANGUA.T12_QUESTION_TAGS.QUESTION_TAGS_USE",
+       "kind": "skill",
+       "strength": "essential",
+       "reason": "Grade 6 English taught it first. Proposed, to confirm by a Kenyan English teacher.",
+       "status": "proposed"
+      },
+      {
+       "requires": "ENGL.G5.GRAMMA.T6_WORD_CLASS_DETERMINE.QUANTIFIERS_OTHER",
+       "kind": "skill",
+       "strength": "essential",
+       "reason": "Grade 5 English taught it first. Proposed, to confirm by a Kenyan English teacher.",
+       "status": "proposed"
+      }
+     ],
      "leads_to": [],
-     "status": "proposed"
+     "status": "proposed",
+     "assessed_by": "questions"
     },
     {
      "code": "ENGL.G7.GRAMMA.T4_VERBS_AND_TENSE.SIMPLE_PAST",
@@ -3337,10 +4158,18 @@
        "reason": "This skill builds on it. Proposed, to confirm by a Kenyan English teacher.",
        "strength": "essential",
        "status": "proposed"
+      },
+      {
+       "requires": "ENGL.G6.LANGUA.T8_SENTENCE_PATTERNS.ACTIVE_PASSIVE",
+       "kind": "skill",
+       "strength": "essential",
+       "reason": "Grade 6 English taught it first. Proposed, to confirm by a Kenyan English teacher.",
+       "status": "proposed"
       }
      ],
      "leads_to": [],
-     "status": "proposed"
+     "status": "proposed",
+     "assessed_by": "questions"
     }
    ],
    "misconceptions": [
@@ -3624,10 +4453,18 @@
        "reason": "Grade 6 English taught it first. Proposed, to confirm by a Kenyan English teacher.",
        "strength": "essential",
        "status": "proposed"
+      },
+      {
+       "requires": "ENGL.G6.READIN.T2_INTENSIVE_READING.CHARACTER_JUDGE",
+       "kind": "skill",
+       "strength": "essential",
+       "reason": "Grade 6 English taught it first. Proposed, to confirm by a Kenyan English teacher.",
+       "status": "proposed"
       }
      ],
      "leads_to": [],
-     "status": "proposed"
+     "status": "proposed",
+     "assessed_by": "questions"
     },
     {
      "code": "ENGL.G7.READIN.T4_INTENSIVE_READING_CL.CHARACTER_TRAITS",
@@ -3637,7 +4474,8 @@
       "ENGL.G7.READIN.T10_CHARACTERS_AND_THEIR.b",
       "ENGL.G7.READIN.T8_INTENSIVE_READING_PO.b",
       "ENGL.G7.READIN.T12_INTENSIVE_READING_CO.c",
-      "ENGL.G7.LISTEN.T8_LISTENING_COMPREHENS.a"
+      "ENGL.G7.LISTEN.T8_LISTENING_COMPREHENS.a",
+      "ENGL.G7.READIN.T8_INTENSIVE_READING_PO.a"
      ],
      "mastery": "Chooses the trait that a character's words and actions support (brave, selfish, honest, jealous), and the line that is the evidence, and does not judge from the name or one word, in 8 of 10 new items.",
      "question_forms": [
@@ -3655,6 +4493,13 @@
        "reason": "Grade 6 English taught it first. Proposed, to confirm by a Kenyan English teacher.",
        "strength": "essential",
        "status": "proposed"
+      },
+      {
+       "requires": "ENGL.G6.READIN.T2_INTENSIVE_READING.INFERENCE_QUESTIONS",
+       "kind": "skill",
+       "strength": "essential",
+       "reason": "Grade 6 English taught it first. Proposed, to confirm by a Kenyan English teacher.",
+       "status": "proposed"
       }
      ],
      "leads_to": [
@@ -3663,7 +4508,8 @@
        "reason": "Grade 8 English builds on this skill. Proposed, to confirm by a Kenyan English teacher."
       }
      ],
-     "status": "proposed"
+     "status": "proposed",
+     "assessed_by": "questions"
     },
     {
      "code": "ENGL.G7.READIN.T4_INTENSIVE_READING_CL.PREDICT",
@@ -3697,7 +4543,8 @@
       }
      ],
      "leads_to": [],
-     "status": "proposed"
+     "status": "proposed",
+     "assessed_by": "questions"
     }
    ],
    "misconceptions": [
@@ -3876,6 +4723,22 @@
      "feedback": "A clue is a sentence that points to what will happen next.",
      "source": "common learner error; to confirm by a Kenyan English teacher",
      "status": "draft"
+    },
+    {
+     "code": "ENGL.G7.READIN.T4_INTENSIVE_READING_CL.CHARACTER_TRAITS.M7_X_CT_ACTION_AS_TRAIT",
+     "skill": "ENGL.G7.READIN.T4_INTENSIVE_READING_CL.CHARACTER_TRAITS",
+     "error": "Gives an action as a trait.",
+     "example": {
+      "question": "The monster ate the villagers' cattle. Its trait?",
+      "wrong_answer": "eating cattle",
+      "correct_answer": "greedy"
+     },
+     "cause": "Action and trait are not told apart.",
+     "reveals": "Offer \"eating cattle\" beside \"greedy\" in a fresh sentence or text and ask again; picking it again shows the error is still there.",
+     "help": "A trait is a describing word for what the character is like.",
+     "feedback": "A trait is a describing word for what the character is like.",
+     "source": "to confirm by a Kenyan English teacher: a common classroom error of Kenyan learners of English, written offline (18 Nov 2026), not traced to a study",
+     "status": "draft"
     }
    ],
    "rubric_indicators": [
@@ -3992,7 +4855,8 @@
       }
      ],
      "leads_to": [],
-     "status": "proposed"
+     "status": "proposed",
+     "assessed_by": "questions"
     }
    ],
    "misconceptions": [
@@ -4169,8 +5033,215 @@
      "status": "kicd_verified"
     }
    ],
-   "skills": [],
-   "misconceptions": [],
+   "skills": [
+    {
+     "code": "ENGL.G7.LISTEN.T5_PRONUNCIATION_SOUNDS.PRONOUNCE_SOUNDS",
+     "name": "Articulate the consonant and vowel sounds clearly in words and sentences",
+     "outcomes": [
+      "ENGL.G7.LISTEN.T5_PRONUNCIATION_SOUNDS.b",
+      "ENGL.G7.LISTEN.T14_CONSONANT_SOUNDS_AND.b"
+     ],
+     "mastery": "The child articulates the Grade 7 target sounds (/t/ and /d/, /l/ and /r/, /ʊ/ and /uː/, /f/ and /v/, /n/ and /ŋ/) so that tin and din, light and right, pull and pool, sin and sing are heard as different words. Evidence rule: the teacher hears it done right on two different days, scored with the observation rubric (PLAN_OBSERVATION_RUBRICS.md); a tapped answer cannot show it.",
+     "question_forms": [
+      "say the word after the teacher",
+      "read the pairs aloud",
+      "say the sentence clearly"
+     ],
+     "thinking": [
+      "performance"
+     ],
+     "horeb_skill_ids": [],
+     "prerequisites": [
+      {
+       "requires": "ENGL.G6.LISTEN.T3_PRONUNCIATION_AND_VO.PRONOUNCE_SOUNDS",
+       "kind": "skill",
+       "strength": "essential",
+       "reason": "Grade 6 English taught it first. Proposed, to confirm by a Kenyan English teacher.",
+       "status": "proposed"
+      },
+      {
+       "requires": "ENGL.G7.LISTEN.T14_CONSONANT_SOUNDS_AND.SOUNDS_CONSONANTS",
+       "kind": "skill",
+       "strength": "essential",
+       "reason": "Hearing the consonant sounds. Proposed, to confirm by a Kenyan English teacher.",
+       "status": "proposed"
+      }
+     ],
+     "leads_to": [],
+     "status": "proposed",
+     "assessed_by": "voice",
+     "no_family": true
+    },
+    {
+     "code": "ENGL.G7.LISTEN.T5_PRONUNCIATION_SOUNDS.WORD_STRESS",
+     "name": "Use stress to pronounce words correctly and tell their meanings apart",
+     "outcomes": [
+      "ENGL.G7.LISTEN.T5_PRONUNCIATION_SOUNDS.c",
+      "ENGL.G7.LISTEN.T9_PRONUNCIATION_CONSON.c",
+      "ENGL.G7.LISTEN.T9_PRONUNCIATION_CONSON.d"
+     ],
+     "mastery": "The child says CONtract (noun) and conTRACT (verb), PROgress and proGRESS, and stresses longer words correctly (eLECtion, not elecTION). Evidence rule: the teacher hears it done right on two different days, scored with the observation rubric (PLAN_OBSERVATION_RUBRICS.md); a tapped answer cannot show it.",
+     "question_forms": [
+      "say it as a noun and as a verb",
+      "which syllable is strong",
+      "what does the stress change"
+     ],
+     "thinking": [
+      "performance"
+     ],
+     "horeb_skill_ids": [],
+     "prerequisites": [
+      {
+       "requires": "ENGL.G6.LISTEN.T4_PRONUNCIATION_AND_VO.WORD_STRESS",
+       "kind": "skill",
+       "strength": "essential",
+       "reason": "Grade 6 English taught it first. Proposed, to confirm by a Kenyan English teacher.",
+       "status": "proposed"
+      },
+      {
+       "requires": "ENGL.G7.LISTEN.T9_PRONUNCIATION_CONSON.SOUNDS_VOWELS",
+       "kind": "skill",
+       "strength": "essential",
+       "reason": "The vowel sounds of strong and weak syllables. Proposed, to confirm by a Kenyan English teacher.",
+       "status": "proposed"
+      }
+     ],
+     "leads_to": [],
+     "status": "proposed",
+     "assessed_by": "voice",
+     "no_family": true
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "ENGL.G7.LISTEN.T5_PRONUNCIATION_SOUNDS.PRONOUNCE_SOUNDS.M7_X_PS_T_D",
+     "skill": "ENGL.G7.LISTEN.T5_PRONUNCIATION_SOUNDS.PRONOUNCE_SOUNDS",
+     "error": "Swaps /t/ and /d/ at the end of words.",
+     "example": {
+      "question": "Say: bed",
+      "wrong_answer": "bet",
+      "correct_answer": "bed"
+     },
+     "cause": "Final voiced sounds are devoiced.",
+     "reveals": "Offer \"bet\" beside \"bed\" in a fresh sentence or text and ask again; picking it again shows the error is still there.",
+     "help": "Keep the voice on: bed.",
+     "feedback": "Keep the voice on: bed.",
+     "source": "to confirm by a Kenyan English teacher: a common classroom error of Kenyan learners of English, written offline (18 Nov 2026), not traced to a study",
+     "status": "draft"
+    },
+    {
+     "code": "ENGL.G7.LISTEN.T5_PRONUNCIATION_SOUNDS.PRONOUNCE_SOUNDS.M7_X_PS_L_R",
+     "skill": "ENGL.G7.LISTEN.T5_PRONUNCIATION_SOUNDS.PRONOUNCE_SOUNDS",
+     "error": "Swaps /l/ and /r/.",
+     "example": {
+      "question": "Say: The leader read the rules.",
+      "wrong_answer": "The reader lead the lules.",
+      "correct_answer": "The leader read the rules."
+     },
+     "cause": "L and r are one sound in some home languages.",
+     "reveals": "Offer \"The reader lead the lules.\" beside \"The leader read the rules.\" in a fresh sentence or text and ask again; picking it again shows the error is still there.",
+     "help": "Tongue up for l; curled for r.",
+     "feedback": "Tongue up for l; curled for r.",
+     "source": "to confirm by a Kenyan English teacher: a common classroom error of Kenyan learners of English, written offline (18 Nov 2026), not traced to a study",
+     "status": "draft"
+    },
+    {
+     "code": "ENGL.G7.LISTEN.T5_PRONUNCIATION_SOUNDS.PRONOUNCE_SOUNDS.M7_X_PS_PULL_POOL",
+     "skill": "ENGL.G7.LISTEN.T5_PRONUNCIATION_SOUNDS.PRONOUNCE_SOUNDS",
+     "error": "Says /ʊ/ (pull) and /uː/ (pool) the same.",
+     "example": {
+      "question": "Say: pull, pool",
+      "wrong_answer": "both the same",
+      "correct_answer": "pull short, pool long"
+     },
+     "cause": "One u sound in the home language.",
+     "reveals": "Offer \"both the same\" beside \"pull short, pool long\" in a fresh sentence or text and ask again; picking it again shows the error is still there.",
+     "help": "Pull is short and relaxed; pool is long with round lips.",
+     "feedback": "Pull is short and relaxed; pool is long with round lips.",
+     "source": "to confirm by a Kenyan English teacher: a common classroom error of Kenyan learners of English, written offline (18 Nov 2026), not traced to a study",
+     "status": "draft"
+    },
+    {
+     "code": "ENGL.G7.LISTEN.T5_PRONUNCIATION_SOUNDS.PRONOUNCE_SOUNDS.M7_X_PS_NG_NG_G",
+     "skill": "ENGL.G7.LISTEN.T5_PRONUNCIATION_SOUNDS.PRONOUNCE_SOUNDS",
+     "error": "Says /ŋ/ as n plus g, or as n.",
+     "example": {
+      "question": "Say: singing",
+      "wrong_answer": "sin-ging (hard g) or sinin",
+      "correct_answer": "si-ŋiŋ"
+     },
+     "cause": "Spelling ng is read as two sounds.",
+     "reveals": "Offer \"sin-ging (hard g) or sinin\" beside \"si-ŋiŋ\" in a fresh sentence or text and ask again; picking it again shows the error is still there.",
+     "help": "Ng is one sound at the back of the mouth.",
+     "feedback": "Ng is one sound at the back of the mouth.",
+     "source": "to confirm by a Kenyan English teacher: a common classroom error of Kenyan learners of English, written offline (18 Nov 2026), not traced to a study",
+     "status": "draft"
+    },
+    {
+     "code": "ENGL.G7.LISTEN.T5_PRONUNCIATION_SOUNDS.WORD_STRESS.M7_X_WS_NOUN_VERB",
+     "skill": "ENGL.G7.LISTEN.T5_PRONUNCIATION_SOUNDS.WORD_STRESS",
+     "error": "Stresses the noun and the verb the same way.",
+     "example": {
+      "question": "They will ___ (contract) the builder.",
+      "wrong_answer": "CONtract",
+      "correct_answer": "conTRACT"
+     },
+     "cause": "The stress-meaning rule is not applied.",
+     "reveals": "Offer \"CONtract\" beside \"conTRACT\" in a fresh sentence or text and ask again; picking it again shows the error is still there.",
+     "help": "Verbs often move the stress to the end.",
+     "feedback": "Verbs often move the stress to the end.",
+     "source": "to confirm by a Kenyan English teacher: a common classroom error of Kenyan learners of English, written offline (18 Nov 2026), not traced to a study",
+     "status": "draft"
+    },
+    {
+     "code": "ENGL.G7.LISTEN.T5_PRONUNCIATION_SOUNDS.WORD_STRESS.M7_X_WS_LAST",
+     "skill": "ENGL.G7.LISTEN.T5_PRONUNCIATION_SOUNDS.WORD_STRESS",
+     "error": "Stresses the last syllable of long words.",
+     "example": {
+      "question": "Say: election",
+      "wrong_answer": "elec-TION",
+      "correct_answer": "e-LEC-tion"
+     },
+     "cause": "The ending -tion looks strong.",
+     "reveals": "Offer \"elec-TION\" beside \"e-LEC-tion\" in a fresh sentence or text and ask again; picking it again shows the error is still there.",
+     "help": "Before -tion, the syllable is strong: e-LEC-tion.",
+     "feedback": "Before -tion, the syllable is strong: e-LEC-tion.",
+     "source": "to confirm by a Kenyan English teacher: a common classroom error of Kenyan learners of English, written offline (18 Nov 2026), not traced to a study",
+     "status": "draft"
+    },
+    {
+     "code": "ENGL.G7.LISTEN.T5_PRONUNCIATION_SOUNDS.WORD_STRESS.M7_X_WS_EQUAL",
+     "skill": "ENGL.G7.LISTEN.T5_PRONUNCIATION_SOUNDS.WORD_STRESS",
+     "error": "Gives every syllable equal weight.",
+     "example": {
+      "question": "Say: independence",
+      "wrong_answer": "IN-DE-PEN-DENCE",
+      "correct_answer": "in-de-PEN-dence"
+     },
+     "cause": "Syllable-timed home languages.",
+     "reveals": "Offer \"IN-DE-PEN-DENCE\" beside \"in-de-PEN-dence\" in a fresh sentence or text and ask again; picking it again shows the error is still there.",
+     "help": "One strong beat.",
+     "feedback": "One strong beat.",
+     "source": "to confirm by a Kenyan English teacher: a common classroom error of Kenyan learners of English, written offline (18 Nov 2026), not traced to a study",
+     "status": "draft"
+    },
+    {
+     "code": "ENGL.G7.LISTEN.T5_PRONUNCIATION_SOUNDS.WORD_STRESS.M7_X_WS_MEANING",
+     "skill": "ENGL.G7.LISTEN.T5_PRONUNCIATION_SOUNDS.WORD_STRESS",
+     "error": "Does not hear that stress changes the meaning.",
+     "example": {
+      "question": "Is \"PROgress\" the same word class as \"proGRESS\"?",
+      "wrong_answer": "Yes",
+      "correct_answer": "No: noun and verb"
+     },
+     "cause": "Stress is seen as accent, not meaning.",
+     "reveals": "Offer \"Yes\" beside \"No: noun and verb\" in a fresh sentence or text and ask again; picking it again shows the error is still there.",
+     "help": "Listen: the stress tells you noun or verb.",
+     "feedback": "Listen: the stress tells you noun or verb.",
+     "source": "to confirm by a Kenyan English teacher: a common classroom error of Kenyan learners of English, written offline (18 Nov 2026), not traced to a study",
+     "status": "draft"
+    }
+   ],
    "rubric_indicators": [
     "ENGL.G7.RUBRIC.1.1",
     "ENGL.G7.RUBRIC.1.2",
@@ -4394,7 +5465,8 @@
        "reason": "Grade 8 English builds on this skill. Proposed, to confirm by a Kenyan English teacher."
       }
      ],
-     "status": "proposed"
+     "status": "proposed",
+     "assessed_by": "questions"
     }
    ],
    "misconceptions": [
@@ -4626,7 +5698,49 @@
       }
      ],
      "leads_to": [],
-     "status": "proposed"
+     "status": "proposed",
+     "assessed_by": "questions"
+    },
+    {
+     "code": "ENGL.G7.READIN.T5_INTENSIVE_READING_OR.RELATE_TO_LIFE",
+     "name": "Relate characters, lessons and events in texts to real life",
+     "outcomes": [
+      "ENGL.G7.READIN.T5_INTENSIVE_READING_OR.c",
+      "ENGL.G7.READIN.T5_INTENSIVE_READING_OR.d",
+      "ENGL.G7.READIN.T8_INTENSIVE_READING.c",
+      "ENGL.G7.READIN.T10_CHARACTERS_AND_THEIR.c",
+      "ENGL.G7.READIN.T12_CLASS_READER_MAIN_ID.c"
+     ],
+     "mastery": "The child links a character, a lesson or an event in a legend, poem or class reader to a real person, situation or choice in his or her life or community, and says why the story matters there. Evidence rule: the teacher sees it in two pieces of the learner's own work, scored with the KICD rubric indicator.",
+     "question_forms": [
+      "who is like this in your community",
+      "how does this lesson help you",
+      "why do people tell this story"
+     ],
+     "thinking": [
+      "performance"
+     ],
+     "horeb_skill_ids": [],
+     "prerequisites": [
+      {
+       "requires": "ENGL.G6.READIN.T6_INTENSIVE_READING.RELATE_TO_LIFE",
+       "kind": "skill",
+       "strength": "essential",
+       "reason": "Grade 6 English taught it first. Proposed, to confirm by a Kenyan English teacher.",
+       "status": "proposed"
+      },
+      {
+       "requires": "ENGL.G7.READIN.T5_INTENSIVE_READING_OR.MORAL_LESSON",
+       "kind": "skill",
+       "strength": "essential",
+       "reason": "The lesson of the text. Proposed, to confirm by a Kenyan English teacher.",
+       "status": "proposed"
+      }
+     ],
+     "leads_to": [],
+     "status": "proposed",
+     "assessed_by": "teacher",
+     "no_family": true
     }
    ],
    "misconceptions": [
@@ -4692,6 +5806,70 @@
      "help": "A hero acts bravely for others.",
      "feedback": "A hero in a legend is brave, wise or generous and acts to help the people, not because of wealth or size.",
      "source": "common learner error; to confirm by a Kenyan English teacher",
+     "status": "draft"
+    },
+    {
+     "code": "ENGL.G7.READIN.T5_INTENSIVE_READING_OR.RELATE_TO_LIFE.M7_X_RL_RETELL",
+     "skill": "ENGL.G7.READIN.T5_INTENSIVE_READING_OR.RELATE_TO_LIFE",
+     "error": "Retells the legend instead of relating it.",
+     "example": {
+      "question": "Relate the hero to real life.",
+      "wrong_answer": "He fought the monster and won.",
+      "correct_answer": "Like the hero, our nurse risks her life in floods."
+     },
+     "cause": "Retelling is easier.",
+     "reveals": "Offer \"He fought the monster and won.\" beside \"Like the hero, our nurse risks her life in floods.\" in a fresh sentence or text and ask again; picking it again shows the error is still there.",
+     "help": "Name a real person or situation.",
+     "feedback": "Name a real person or situation.",
+     "source": "to confirm by a Kenyan English teacher: a common classroom error of Kenyan learners of English, written offline (18 Nov 2026), not traced to a study",
+     "status": "draft"
+    },
+    {
+     "code": "ENGL.G7.READIN.T5_INTENSIVE_READING_OR.RELATE_TO_LIFE.M7_X_RL_SURFACE",
+     "skill": "ENGL.G7.READIN.T5_INTENSIVE_READING_OR.RELATE_TO_LIFE",
+     "error": "Links on a surface detail.",
+     "example": {
+      "question": "Relate the story of a monster that eats greedy people to life.",
+      "wrong_answer": "We also have big animals.",
+      "correct_answer": "Greed harms people in our community too, like a man who cheated his neighbours."
+     },
+     "cause": "Any shared detail seems enough.",
+     "reveals": "Offer \"We also have big animals.\" beside \"Greed harms people in our community too, like a man who cheated his neighbours.\" in a fresh sentence or text and ask again; picking it again shows the error is still there.",
+     "help": "Link the lesson, not the object.",
+     "feedback": "Link the lesson, not the object.",
+     "source": "to confirm by a Kenyan English teacher: a common classroom error of Kenyan learners of English, written offline (18 Nov 2026), not traced to a study",
+     "status": "draft"
+    },
+    {
+     "code": "ENGL.G7.READIN.T5_INTENSIVE_READING_OR.RELATE_TO_LIFE.M7_X_RL_NO_WHY",
+     "skill": "ENGL.G7.READIN.T5_INTENSIVE_READING_OR.RELATE_TO_LIFE",
+     "error": "Cannot say why the story matters to the community.",
+     "example": {
+      "question": "Why are legends told in your community?",
+      "wrong_answer": "For fun.",
+      "correct_answer": "They teach courage and remind us of our history."
+     },
+     "cause": "Purpose is not considered.",
+     "reveals": "Offer \"For fun.\" beside \"They teach courage and remind us of our history.\" in a fresh sentence or text and ask again; picking it again shows the error is still there.",
+     "help": "Ask what the story teaches people.",
+     "feedback": "Ask what the story teaches people.",
+     "source": "to confirm by a Kenyan English teacher: a common classroom error of Kenyan learners of English, written offline (18 Nov 2026), not traced to a study",
+     "status": "draft"
+    },
+    {
+     "code": "ENGL.G7.READIN.T5_INTENSIVE_READING_OR.RELATE_TO_LIFE.M7_X_RL_CHANGES_TEXT",
+     "skill": "ENGL.G7.READIN.T5_INTENSIVE_READING_OR.RELATE_TO_LIFE",
+     "error": "Changes the text to fit the real-life story.",
+     "example": {
+      "question": "What did the hero do in the legend?",
+      "wrong_answer": "He ran away, like my cousin did.",
+      "correct_answer": "He stood and fought."
+     },
+     "cause": "Memory overwrites the text.",
+     "reveals": "Offer \"He ran away, like my cousin did.\" beside \"He stood and fought.\" in a fresh sentence or text and ask again; picking it again shows the error is still there.",
+     "help": "Keep what the text says.",
+     "feedback": "Keep what the text says.",
+     "source": "to confirm by a Kenyan English teacher: a common classroom error of Kenyan learners of English, written offline (18 Nov 2026), not traced to a study",
      "status": "draft"
     }
    ],
@@ -4803,6 +5981,13 @@
        "reason": "Grade 6 English taught it first. Proposed, to confirm by a Kenyan English teacher.",
        "strength": "essential",
        "status": "proposed"
+      },
+      {
+       "requires": "ENGL.G5.WRITIN.T4_FUNCTIONAL_WRITING_F.FRIENDLY_LETTER",
+       "kind": "skill",
+       "strength": "essential",
+       "reason": "Grade 5 English taught it first. Proposed, to confirm by a Kenyan English teacher.",
+       "status": "proposed"
       }
      ],
      "leads_to": [
@@ -4811,7 +5996,46 @@
        "reason": "Grade 8 English builds on this skill. Proposed, to confirm by a Kenyan English teacher."
       }
      ],
-     "status": "proposed"
+     "status": "proposed",
+     "assessed_by": "questions"
+    },
+    {
+     "code": "ENGL.G7.WRITIN.T5_FUNCTIONAL_WRITING_F.FRIENDLY_LETTER_WRITE",
+     "name": "Compose a friendly letter in the correct format",
+     "outcomes": [
+      "ENGL.G7.WRITIN.T5_FUNCTIONAL_WRITING_F.b"
+     ],
+     "mastery": "The child writes a friendly letter with the address and date, a warm greeting, paragraphs of news, a fitting closing and the name, in a friendly but correct tone. Evidence rule: two pieces of the learner's own writing marked Meeting Expectations or above on the KICD rubric indicator.",
+     "question_forms": [
+      "write a letter to",
+      "reply to this letter",
+      "correct the letter"
+     ],
+     "thinking": [
+      "creation",
+      "organisation"
+     ],
+     "horeb_skill_ids": [],
+     "prerequisites": [
+      {
+       "requires": "ENGL.G7.WRITIN.T5_FUNCTIONAL_WRITING_F.FRIENDLY_LETTER",
+       "kind": "skill",
+       "strength": "essential",
+       "reason": "The parts of a friendly letter. Proposed, to confirm by a Kenyan English teacher.",
+       "status": "proposed"
+      },
+      {
+       "requires": "ENGL.G5.WRITIN.T4_FUNCTIONAL_WRITING_F.FRIENDLY_LETTER",
+       "kind": "skill",
+       "strength": "essential",
+       "reason": "Grade 5 English taught it first. Proposed, to confirm by a Kenyan English teacher.",
+       "status": "proposed"
+      }
+     ],
+     "leads_to": [],
+     "status": "proposed",
+     "assessed_by": "composition",
+     "no_family": true
     }
    ],
    "misconceptions": [
@@ -4893,6 +6117,70 @@
      "help": "The name comes after the closing.",
      "feedback": "The order is: address and date, greeting, body, closing, then the writer's name.",
      "source": "common learner error; to confirm by a Kenyan English teacher",
+     "status": "draft"
+    },
+    {
+     "code": "ENGL.G7.WRITIN.T5_FUNCTIONAL_WRITING_F.FRIENDLY_LETTER_WRITE.M7_X_FL_FORMAL",
+     "skill": "ENGL.G7.WRITIN.T5_FUNCTIONAL_WRITING_F.FRIENDLY_LETTER_WRITE",
+     "error": "Writes a friendly letter in a formal tone.",
+     "example": {
+      "question": "Opening for a letter to a cousin?",
+      "wrong_answer": "I write to inform you of my progress.",
+      "correct_answer": "How are you? I have so much news to share!"
+     },
+     "cause": "Formal letter habits.",
+     "reveals": "Offer \"I write to inform you of my progress.\" beside \"How are you? I have so much news to share!\" in a fresh sentence or text and ask again; picking it again shows the error is still there.",
+     "help": "Write as you would speak to the person.",
+     "feedback": "Write as you would speak to the person.",
+     "source": "to confirm by a Kenyan English teacher: a common classroom error of Kenyan learners of English, written offline (18 Nov 2026), not traced to a study",
+     "status": "draft"
+    },
+    {
+     "code": "ENGL.G7.WRITIN.T5_FUNCTIONAL_WRITING_F.FRIENDLY_LETTER_WRITE.M7_X_FL_NO_PARAGRAPHS",
+     "skill": "ENGL.G7.WRITIN.T5_FUNCTIONAL_WRITING_F.FRIENDLY_LETTER_WRITE",
+     "error": "Writes the body as one block.",
+     "example": {
+      "question": "Three pieces of news: how many paragraphs?",
+      "wrong_answer": "one",
+      "correct_answer": "three"
+     },
+     "cause": "Paragraphing is skipped.",
+     "reveals": "Offer \"one\" beside \"three\" in a fresh sentence or text and ask again; picking it again shows the error is still there.",
+     "help": "New news, new paragraph.",
+     "feedback": "New news, new paragraph.",
+     "source": "to confirm by a Kenyan English teacher: a common classroom error of Kenyan learners of English, written offline (18 Nov 2026), not traced to a study",
+     "status": "draft"
+    },
+    {
+     "code": "ENGL.G7.WRITIN.T5_FUNCTIONAL_WRITING_F.FRIENDLY_LETTER_WRITE.M7_X_FL_TWO_ADDRESSES",
+     "skill": "ENGL.G7.WRITIN.T5_FUNCTIONAL_WRITING_F.FRIENDLY_LETTER_WRITE",
+     "error": "Adds the receiver's address.",
+     "example": {
+      "question": "How many addresses?",
+      "wrong_answer": "two",
+      "correct_answer": "one"
+     },
+     "cause": "Formal letter layout is mixed in.",
+     "reveals": "Offer \"two\" beside \"one\" in a fresh sentence or text and ask again; picking it again shows the error is still there.",
+     "help": "Only your own address.",
+     "feedback": "Only your own address.",
+     "source": "to confirm by a Kenyan English teacher: a common classroom error of Kenyan learners of English, written offline (18 Nov 2026), not traced to a study",
+     "status": "draft"
+    },
+    {
+     "code": "ENGL.G7.WRITIN.T5_FUNCTIONAL_WRITING_F.FRIENDLY_LETTER_WRITE.M7_X_FL_NO_CLOSING",
+     "skill": "ENGL.G7.WRITIN.T5_FUNCTIONAL_WRITING_F.FRIENDLY_LETTER_WRITE",
+     "error": "Ends without a closing line and name.",
+     "example": {
+      "question": "What comes after the last paragraph?",
+      "wrong_answer": "nothing",
+      "correct_answer": "Your loving cousin, and the name"
+     },
+     "cause": "The child stops with the news.",
+     "reveals": "Offer \"nothing\" beside \"Your loving cousin, and the name\" in a fresh sentence or text and ask again; picking it again shows the error is still there.",
+     "help": "Close warmly and sign your name.",
+     "feedback": "Close warmly and sign your name.",
+     "source": "to confirm by a Kenyan English teacher: a common classroom error of Kenyan learners of English, written offline (18 Nov 2026), not traced to a study",
      "status": "draft"
     }
    ],
@@ -4995,7 +6283,8 @@
      "code": "ENGL.G7.LISTEN.T6_CONVERSATION_SKILLS.POLITE_INTERRUPT",
      "name": "Interrupt politely and take turns",
      "outcomes": [
-      "ENGL.G7.LISTEN.T6_CONVERSATION_SKILLS.a"
+      "ENGL.G7.LISTEN.T6_CONVERSATION_SKILLS.a",
+      "ENGL.G7.LISTEN.T6_CONVERSATION_SKILLS.c"
      ],
      "mastery": "Chooses the polite way to interrupt (Excuse me, may I say something?), to wait for a turn and to give one, tells it from a rude way, and says which gestures show politeness, in 8 of 10 new items.",
      "question_forms": [
@@ -5015,6 +6304,13 @@
        "reason": "Grade 6 English taught it first. Proposed, to confirm by a Kenyan English teacher.",
        "strength": "essential",
        "status": "proposed"
+      },
+      {
+       "requires": "ENGL.G5.LISTEN.T10_PRONUNCIATION_AND_VO.INTERRUPT_POLITELY",
+       "kind": "skill",
+       "strength": "essential",
+       "reason": "Grade 5 English taught it first. Proposed, to confirm by a Kenyan English teacher.",
+       "status": "proposed"
       }
      ],
      "leads_to": [
@@ -5023,7 +6319,45 @@
        "reason": "Grade 8 English builds on this skill. Proposed, to confirm by a Kenyan English teacher."
       }
      ],
-     "status": "proposed"
+     "status": "proposed",
+     "assessed_by": "questions"
+    },
+    {
+     "code": "ENGL.G7.LISTEN.T6_CONVERSATION_SKILLS.TURN_TAKING",
+     "name": "Apply turn-taking skills in different speaking contexts",
+     "outcomes": [
+      "ENGL.G7.LISTEN.T6_CONVERSATION_SKILLS.b"
+     ],
+     "mastery": "In a pair or group talk the child waits for a pause, keeps the turn short, links to what was said, and invites others in by name or with a question. Evidence rule: the teacher hears it done right on two different days, scored with the observation rubric (PLAN_OBSERVATION_RUBRICS.md); a tapped answer cannot show it.",
+     "question_forms": [
+      "hold a group discussion",
+      "keep the conversation going",
+      "hand the turn on"
+     ],
+     "thinking": [
+      "performance"
+     ],
+     "horeb_skill_ids": [],
+     "prerequisites": [
+      {
+       "requires": "ENGL.G6.LISTEN.T3_PRONUNCIATION_AND_VO.POLITE_TALK",
+       "kind": "skill",
+       "strength": "essential",
+       "reason": "Grade 6 English taught it first. Proposed, to confirm by a Kenyan English teacher.",
+       "status": "proposed"
+      },
+      {
+       "requires": "ENGL.G7.LISTEN.T6_CONVERSATION_SKILLS.POLITE_INTERRUPT",
+       "kind": "skill",
+       "strength": "essential",
+       "reason": "Interrupting politely. Proposed, to confirm by a Kenyan English teacher.",
+       "status": "proposed"
+      }
+     ],
+     "leads_to": [],
+     "status": "proposed",
+     "assessed_by": "voice",
+     "no_family": true
     }
    ],
    "misconceptions": [
@@ -5089,6 +6423,70 @@
      "help": "Turn taking means everyone speaks in turn.",
      "feedback": "Turn taking means each person speaks in turn. After your point, you give the next person a chance.",
      "source": "common learner error; to confirm by a Kenyan English teacher",
+     "status": "draft"
+    },
+    {
+     "code": "ENGL.G7.LISTEN.T6_CONVERSATION_SKILLS.TURN_TAKING.M7_X_TT_DOMINATES",
+     "skill": "ENGL.G7.LISTEN.T6_CONVERSATION_SKILLS.TURN_TAKING",
+     "error": "Keeps the floor and does not let others speak.",
+     "example": {
+      "question": "In a group discussion on drugs, you have spoken three times. What next?",
+      "wrong_answer": "speak again",
+      "correct_answer": "invite someone who has not spoken"
+     },
+     "cause": "The child equates talking most with doing well.",
+     "reveals": "Offer \"speak again\" beside \"invite someone who has not spoken\" in a fresh sentence or text and ask again; picking it again shows the error is still there.",
+     "help": "Share the turns; invite quieter members.",
+     "feedback": "Share the turns; invite quieter members.",
+     "source": "to confirm by a Kenyan English teacher: a common classroom error of Kenyan learners of English, written offline (18 Nov 2026), not traced to a study",
+     "status": "draft"
+    },
+    {
+     "code": "ENGL.G7.LISTEN.T6_CONVERSATION_SKILLS.TURN_TAKING.M7_X_TT_NO_LINK",
+     "skill": "ENGL.G7.LISTEN.T6_CONVERSATION_SKILLS.TURN_TAKING",
+     "error": "Starts a new point without linking to what was said.",
+     "example": {
+      "question": "Juma says peer pressure leads to drugs. Your turn.",
+      "wrong_answer": "Drugs are bad.",
+      "correct_answer": "Building on Juma's point, peer pressure is strongest at parties."
+     },
+     "cause": "Turns are seen as separate speeches.",
+     "reveals": "Offer \"Drugs are bad.\" beside \"Building on Juma's point, peer pressure is strongest at parties.\" in a fresh sentence or text and ask again; picking it again shows the error is still there.",
+     "help": "Link to the last speaker first.",
+     "feedback": "Link to the last speaker first.",
+     "source": "to confirm by a Kenyan English teacher: a common classroom error of Kenyan learners of English, written offline (18 Nov 2026), not traced to a study",
+     "status": "draft"
+    },
+    {
+     "code": "ENGL.G7.LISTEN.T6_CONVERSATION_SKILLS.TURN_TAKING.M7_X_TT_SILENT",
+     "skill": "ENGL.G7.LISTEN.T6_CONVERSATION_SKILLS.TURN_TAKING",
+     "error": "Never takes a turn.",
+     "example": {
+      "question": "How can you join the discussion?",
+      "wrong_answer": "stay quiet",
+      "correct_answer": "wait for a pause and say \"May I add ...\""
+     },
+     "cause": "Shyness or fear of being wrong.",
+     "reveals": "Offer \"stay quiet\" beside \"wait for a pause and say \"May I add ...\"\" in a fresh sentence or text and ask again; picking it again shows the error is still there.",
+     "help": "Use a starter phrase to join.",
+     "feedback": "Use a starter phrase to join.",
+     "source": "to confirm by a Kenyan English teacher: a common classroom error of Kenyan learners of English, written offline (18 Nov 2026), not traced to a study",
+     "status": "draft"
+    },
+    {
+     "code": "ENGL.G7.LISTEN.T6_CONVERSATION_SKILLS.TURN_TAKING.M7_X_TT_INTERRUPTS",
+     "skill": "ENGL.G7.LISTEN.T6_CONVERSATION_SKILLS.TURN_TAKING",
+     "error": "Cuts across others mid-sentence.",
+     "example": {
+      "question": "When do you take your turn?",
+      "wrong_answer": "as soon as I think of something",
+      "correct_answer": "at a pause, after the speaker finishes"
+     },
+     "cause": "Eagerness.",
+     "reveals": "Offer \"as soon as I think of something\" beside \"at a pause, after the speaker finishes\" in a fresh sentence or text and ask again; picking it again shows the error is still there.",
+     "help": "Wait for the pause.",
+     "feedback": "Wait for the pause.",
+     "source": "to confirm by a Kenyan English teacher: a common classroom error of Kenyan learners of English, written offline (18 Nov 2026), not traced to a study",
      "status": "draft"
     }
    ],
@@ -5180,8 +6578,112 @@
      "status": "kicd_verified"
     }
    ],
-   "skills": [],
-   "misconceptions": [],
+   "skills": [
+    {
+     "code": "ENGL.G7.READIN.T6_READING_FLUENCY.READ_FLUENTLY",
+     "name": "Read a text at the right speed, accurately and with expression",
+     "outcomes": [
+      "ENGL.G7.READIN.T6_READING_FLUENCY.b",
+      "ENGL.G7.READIN.T15_READING_FLUENCY.b"
+     ],
+     "mastery": "The child reads a Grade 7 text aloud at a steady speaking pace, in phrases, with few slips, and uses the voice to show punctuation, speech and feeling. Evidence rule: the teacher hears it done right on two different days, scored with the observation rubric (PLAN_OBSERVATION_RUBRICS.md); a tapped answer cannot show it.",
+     "question_forms": [
+      "read aloud to the teacher",
+      "read the dialogue in parts",
+      "reread for expression"
+     ],
+     "thinking": [
+      "performance"
+     ],
+     "horeb_skill_ids": [],
+     "prerequisites": [
+      {
+       "requires": "ENGL.G6.READIN.T8_FLUENCY.READ_FLUENTLY",
+       "kind": "skill",
+       "strength": "essential",
+       "reason": "Grade 6 English taught it first. Proposed, to confirm by a Kenyan English teacher.",
+       "status": "proposed"
+      },
+      {
+       "requires": "ENGL.G7.READIN.T15_READING_FLUENCY.FLUENCY_STRATEGIES",
+       "kind": "skill",
+       "strength": "essential",
+       "reason": "Fluency strategies. Proposed, to confirm by a Kenyan English teacher.",
+       "status": "proposed"
+      }
+     ],
+     "leads_to": [],
+     "status": "proposed",
+     "assessed_by": "voice",
+     "no_family": true
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "ENGL.G7.READIN.T6_READING_FLUENCY.READ_FLUENTLY.M7_X_RF_NO_PHRASING",
+     "skill": "ENGL.G7.READIN.T6_READING_FLUENCY.READ_FLUENTLY",
+     "error": "Reads word by word.",
+     "example": {
+      "question": "Read: Drug abuse destroys families and dreams.",
+      "wrong_answer": "Drug. abuse. destroys.",
+      "correct_answer": "Drug abuse / destroys families / and dreams."
+     },
+     "cause": "Attention is on each word.",
+     "reveals": "Offer \"Drug. abuse. destroys.\" beside \"Drug abuse / destroys families / and dreams.\" in a fresh sentence or text and ask again; picking it again shows the error is still there.",
+     "help": "Read in phrases.",
+     "feedback": "Read in phrases.",
+     "source": "to confirm by a Kenyan English teacher: a common classroom error of Kenyan learners of English, written offline (18 Nov 2026), not traced to a study",
+     "status": "draft"
+    },
+    {
+     "code": "ENGL.G7.READIN.T6_READING_FLUENCY.READ_FLUENTLY.M7_X_RF_IGNORES_PUNCTUATION",
+     "skill": "ENGL.G7.READIN.T6_READING_FLUENCY.READ_FLUENTLY",
+     "error": "Reads through commas and full stops.",
+     "example": {
+      "question": "Read: He refused, and his friends left. He was alone.",
+      "wrong_answer": "no pauses",
+      "correct_answer": "short pause at the comma, longer at the full stop"
+     },
+     "cause": "Punctuation is not linked to the voice.",
+     "reveals": "Offer \"no pauses\" beside \"short pause at the comma, longer at the full stop\" in a fresh sentence or text and ask again; picking it again shows the error is still there.",
+     "help": "Pause at punctuation.",
+     "feedback": "Pause at punctuation.",
+     "source": "to confirm by a Kenyan English teacher: a common classroom error of Kenyan learners of English, written offline (18 Nov 2026), not traced to a study",
+     "status": "draft"
+    },
+    {
+     "code": "ENGL.G7.READIN.T6_READING_FLUENCY.READ_FLUENTLY.M7_X_RF_FLAT",
+     "skill": "ENGL.G7.READIN.T6_READING_FLUENCY.READ_FLUENTLY",
+     "error": "Reads with a flat voice.",
+     "example": {
+      "question": "Read: \"Never!\" she shouted.",
+      "wrong_answer": "flat",
+      "correct_answer": "strong, loud"
+     },
+     "cause": "Expression is not linked to meaning.",
+     "reveals": "Offer \"flat\" beside \"strong, loud\" in a fresh sentence or text and ask again; picking it again shows the error is still there.",
+     "help": "Let the voice show the feeling.",
+     "feedback": "Let the voice show the feeling.",
+     "source": "to confirm by a Kenyan English teacher: a common classroom error of Kenyan learners of English, written offline (18 Nov 2026), not traced to a study",
+     "status": "draft"
+    },
+    {
+     "code": "ENGL.G7.READIN.T6_READING_FLUENCY.READ_FLUENTLY.M7_X_RF_TOO_FAST",
+     "skill": "ENGL.G7.READIN.T6_READING_FLUENCY.READ_FLUENTLY",
+     "error": "Reads too fast and slurs words.",
+     "example": {
+      "question": "Read the paragraph at the right speed.",
+      "wrong_answer": "very fast, words run together",
+      "correct_answer": "steady, clear pace"
+     },
+     "cause": "Speed is mistaken for fluency.",
+     "reveals": "Offer \"very fast, words run together\" beside \"steady, clear pace\" in a fresh sentence or text and ask again; picking it again shows the error is still there.",
+     "help": "Read at speaking pace.",
+     "feedback": "Read at speaking pace.",
+     "source": "to confirm by a Kenyan English teacher: a common classroom error of Kenyan learners of English, written offline (18 Nov 2026), not traced to a study",
+     "status": "draft"
+    }
+   ],
    "rubric_indicators": [
     "ENGL.G7.RUBRIC.1.1",
     "ENGL.G7.RUBRIC.1.2",
@@ -5289,6 +6791,13 @@
        "reason": "Grade 6 English taught it first. Proposed, to confirm by a Kenyan English teacher.",
        "strength": "essential",
        "status": "proposed"
+      },
+      {
+       "requires": "ENGL.G5.GRAMMA.T9_WORD_CLASS_ADVERBS.ADVERBS",
+       "kind": "skill",
+       "strength": "essential",
+       "reason": "Grade 5 English taught it first. Proposed, to confirm by a Kenyan English teacher.",
+       "status": "proposed"
       }
      ],
      "leads_to": [
@@ -5297,7 +6806,8 @@
        "reason": "Grade 8 English builds on this skill. Proposed, to confirm by a Kenyan English teacher."
       }
      ],
-     "status": "proposed"
+     "status": "proposed",
+     "assessed_by": "questions"
     },
     {
      "code": "ENGL.G7.GRAMMA.T6_WORD_CLASSES_ADVERBS.ADVERB_FORM",
@@ -5342,7 +6852,8 @@
        "reason": "Grade 8 English builds on this skill. Proposed, to confirm by a Kenyan English teacher."
       }
      ],
-     "status": "proposed"
+     "status": "proposed",
+     "assessed_by": "questions"
     }
    ],
    "misconceptions": [
@@ -5689,6 +7200,13 @@
        "reason": "Grade 6 English taught it first. Proposed, to confirm by a Kenyan English teacher.",
        "strength": "essential",
        "status": "proposed"
+      },
+      {
+       "requires": "ENGL.G6.WRITIN.T13_MECHANICS_OF_WRITING.AFFIXES",
+       "kind": "skill",
+       "strength": "essential",
+       "reason": "Grade 6 English taught it first. Proposed, to confirm by a Kenyan English teacher.",
+       "status": "proposed"
       }
      ],
      "leads_to": [
@@ -5697,7 +7215,8 @@
        "reason": "Grade 8 English builds on this skill. Proposed, to confirm by a Kenyan English teacher."
       }
      ],
-     "status": "proposed"
+     "status": "proposed",
+     "assessed_by": "questions"
     }
    ],
    "misconceptions": [
@@ -5869,8 +7388,111 @@
      "status": "kicd_verified"
     }
    ],
-   "skills": [],
-   "misconceptions": [],
+   "skills": [
+    {
+     "code": "ENGL.G7.LISTEN.T7_LISTENING_COMPREHENS.LISTENING_NOTES",
+     "name": "Take detailed notes while listening",
+     "outcomes": [
+      "ENGL.G7.LISTEN.T7_LISTENING_COMPREHENS.b"
+     ],
+     "mastery": "While listening to a talk on forests, the child writes key words and numbers under headings, not whole sentences, and catches the details the speaker signals (first, the main reason, for example). Evidence rule: the teacher sees it in two pieces of the learner's own work, scored with the KICD rubric indicator.",
+     "question_forms": [
+      "make notes as you listen",
+      "complete the note frame",
+      "check your notes against the talk"
+     ],
+     "thinking": [
+      "performance"
+     ],
+     "horeb_skill_ids": [],
+     "prerequisites": [
+      {
+       "requires": "ENGL.G7.READIN.T10_STUDY_SKILLS_NOTE_MA.NOTE_MAKING",
+       "kind": "skill",
+       "strength": "essential",
+       "reason": "Making notes from written texts. Proposed, to confirm by a Kenyan English teacher.",
+       "status": "proposed"
+      },
+      {
+       "requires": "ENGL.G7.LISTEN.T4_LISTENING_COMPREHENS.SPECIFIC_GENERAL",
+       "kind": "skill",
+       "strength": "essential",
+       "reason": "Catching specific details. Proposed, to confirm by a Kenyan English teacher.",
+       "status": "proposed"
+      }
+     ],
+     "leads_to": [],
+     "status": "proposed",
+     "assessed_by": "teacher",
+     "no_family": true
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "ENGL.G7.LISTEN.T7_LISTENING_COMPREHENS.LISTENING_NOTES.M7_X_LN_WHOLE_SENTENCES",
+     "skill": "ENGL.G7.LISTEN.T7_LISTENING_COMPREHENS.LISTENING_NOTES",
+     "error": "Tries to write every word the speaker says.",
+     "example": {
+      "question": "How should you take notes on a talk?",
+      "wrong_answer": "write every sentence",
+      "correct_answer": "key words and numbers under headings"
+     },
+     "cause": "Notes are seen as dictation.",
+     "reveals": "Offer \"write every sentence\" beside \"key words and numbers under headings\" in a fresh sentence or text and ask again; picking it again shows the error is still there.",
+     "help": "Write only key words.",
+     "feedback": "Write only key words.",
+     "source": "to confirm by a Kenyan English teacher: a common classroom error of Kenyan learners of English, written offline (18 Nov 2026), not traced to a study",
+     "status": "draft"
+    },
+    {
+     "code": "ENGL.G7.LISTEN.T7_LISTENING_COMPREHENS.LISTENING_NOTES.M7_X_LN_MISSES_SIGNALS",
+     "skill": "ENGL.G7.LISTEN.T7_LISTENING_COMPREHENS.LISTENING_NOTES",
+     "error": "Misses details signalled by words like \"first\" and \"the main reason\".",
+     "example": {
+      "question": "The speaker says, \"The main reason forests matter is rain.\" Note?",
+      "wrong_answer": "forests",
+      "correct_answer": "main reason: rain"
+     },
+     "cause": "Signal words are not noticed.",
+     "reveals": "Offer \"forests\" beside \"main reason: rain\" in a fresh sentence or text and ask again; picking it again shows the error is still there.",
+     "help": "Listen for signals: first, main, for example.",
+     "feedback": "Listen for signals: first, main, for example.",
+     "source": "to confirm by a Kenyan English teacher: a common classroom error of Kenyan learners of English, written offline (18 Nov 2026), not traced to a study",
+     "status": "draft"
+    },
+    {
+     "code": "ENGL.G7.LISTEN.T7_LISTENING_COMPREHENS.LISTENING_NOTES.M7_X_LN_NUMBERS_WRONG",
+     "skill": "ENGL.G7.LISTEN.T7_LISTENING_COMPREHENS.LISTENING_NOTES",
+     "error": "Writes numbers or names wrongly.",
+     "example": {
+      "question": "The speaker says Kenya has 7 per cent forest cover. Note?",
+      "wrong_answer": "70 per cent",
+      "correct_answer": "7 per cent"
+     },
+     "cause": "Numbers are not checked.",
+     "reveals": "Offer \"70 per cent\" beside \"7 per cent\" in a fresh sentence or text and ask again; picking it again shows the error is still there.",
+     "help": "Write numbers exactly; check them if repeated.",
+     "feedback": "Write numbers exactly; check them if repeated.",
+     "source": "to confirm by a Kenyan English teacher: a common classroom error of Kenyan learners of English, written offline (18 Nov 2026), not traced to a study",
+     "status": "draft"
+    },
+    {
+     "code": "ENGL.G7.LISTEN.T7_LISTENING_COMPREHENS.LISTENING_NOTES.M7_X_LN_NO_HEADINGS",
+     "skill": "ENGL.G7.LISTEN.T7_LISTENING_COMPREHENS.LISTENING_NOTES",
+     "error": "Writes notes with no headings or order.",
+     "example": {
+      "question": "Your notes are one long list. Improve?",
+      "wrong_answer": "leave them",
+      "correct_answer": "add headings: uses, threats, solutions"
+     },
+     "cause": "Notes are written in the order heard, unsorted.",
+     "reveals": "Offer \"leave them\" beside \"add headings: uses, threats, solutions\" in a fresh sentence or text and ask again; picking it again shows the error is still there.",
+     "help": "Group notes under headings.",
+     "feedback": "Group notes under headings.",
+     "source": "to confirm by a Kenyan English teacher: a common classroom error of Kenyan learners of English, written offline (18 Nov 2026), not traced to a study",
+     "status": "draft"
+    }
+   ],
    "rubric_indicators": [
     "ENGL.G7.RUBRIC.1.1",
     "ENGL.G7.RUBRIC.1.2",
@@ -5983,6 +7605,13 @@
        "reason": "Grade 6 English taught it first. Proposed, to confirm by a Kenyan English teacher.",
        "strength": "essential",
        "status": "proposed"
+      },
+      {
+       "requires": "ENGL.G6.READIN.T4_INTENSIVE_READING.READ_VISUALS",
+       "kind": "skill",
+       "strength": "essential",
+       "reason": "Grade 6 English taught it first. Proposed, to confirm by a Kenyan English teacher.",
+       "status": "proposed"
       }
      ],
      "leads_to": [
@@ -5991,7 +7620,8 @@
        "reason": "Grade 8 English builds on this skill. Proposed, to confirm by a Kenyan English teacher."
       }
      ],
-     "status": "proposed"
+     "status": "proposed",
+     "assessed_by": "questions"
     }
    ],
    "misconceptions": [
@@ -6169,10 +7799,18 @@
        "reason": "Grade 5 English taught it first. Proposed, to confirm by a Kenyan English teacher.",
        "strength": "essential",
        "status": "proposed"
+      },
+      {
+       "requires": "ENGL.G6.LANGUA.T4_WORD_CLASSES.RELATIVE_PRONOUNS",
+       "kind": "skill",
+       "strength": "essential",
+       "reason": "Grade 6 English taught it first. Proposed, to confirm by a Kenyan English teacher.",
+       "status": "proposed"
       }
      ],
      "leads_to": [],
-     "status": "proposed"
+     "status": "proposed",
+     "assessed_by": "questions"
     },
     {
      "code": "ENGL.G7.GRAMMA.T7_PERSONAL_AND_POSSESS.POSSESSIVES",
@@ -6211,7 +7849,8 @@
       }
      ],
      "leads_to": [],
-     "status": "proposed"
+     "status": "proposed",
+     "assessed_by": "questions"
     }
    ],
    "misconceptions": [
@@ -6563,14 +8202,85 @@
       "procedure"
      ],
      "horeb_skill_ids": [],
-     "prerequisites": [],
+     "prerequisites": [
+      {
+       "requires": "ENGL.G6.WRITIN.T2_CREATIVE_WRITING.PLAN_COMPOSITION",
+       "kind": "skill",
+       "strength": "essential",
+       "reason": "Grade 6 English taught it first. Proposed, to confirm by a Kenyan English teacher.",
+       "status": "proposed"
+      },
+      {
+       "requires": "ENGL.G6.WRITIN.T5_CREATIVE_WRITING.NARRATIVE_COMPOSITION",
+       "kind": "skill",
+       "strength": "essential",
+       "reason": "Grade 6 English taught it first. Proposed, to confirm by a Kenyan English teacher.",
+       "status": "proposed"
+      }
+     ],
      "leads_to": [
       {
        "skill": "ENGL.G8.WRITIN.T12_THE_WRITING_PROCESS.a",
        "reason": "Grade 8 English builds on this skill. Proposed, to confirm by a Kenyan English teacher."
       }
      ],
-     "status": "proposed"
+     "status": "proposed",
+     "assessed_by": "questions"
+    },
+    {
+     "code": "ENGL.G7.WRITIN.T7_COMPOSITION_THE_WRIT.NARRATIVE_COMPOSITION",
+     "name": "Write and self-assess narrative compositions through the writing process",
+     "outcomes": [
+      "ENGL.G7.WRITIN.T7_COMPOSITION_THE_WRIT.b",
+      "ENGL.G7.WRITIN.T8_COMPOSITION_WRITING_.b",
+      "ENGL.G7.WRITIN.T9_CREATIVE_WRITING_NAR.b",
+      "ENGL.G7.WRITIN.T13_CREATIVE_WRITING_NAR.b"
+     ],
+     "mastery": "The child plans, drafts, revises, edits and writes a fair copy of a narrative with a clear introduction, a body that builds and a conclusion, uses idioms that fit, and assesses each part against a checklist. Evidence rule: two pieces of the learner's own writing marked Meeting Expectations or above on the KICD rubric indicator.",
+     "question_forms": [
+      "plan, draft and revise a story",
+      "assess your introduction, body and conclusion",
+      "use the idioms in a story"
+     ],
+     "thinking": [
+      "creation",
+      "organisation"
+     ],
+     "horeb_skill_ids": [],
+     "prerequisites": [
+      {
+       "requires": "ENGL.G7.WRITIN.T7_COMPOSITION_THE_WRIT.WRITING_PROCESS",
+       "kind": "skill",
+       "strength": "essential",
+       "reason": "The steps of the writing process. Proposed, to confirm by a Kenyan English teacher.",
+       "status": "proposed"
+      },
+      {
+       "requires": "ENGL.G7.WRITIN.T9_CREATIVE_WRITING_NAR.NARRATIVE_FEATURES",
+       "kind": "skill",
+       "strength": "essential",
+       "reason": "Features of a narrative. Proposed, to confirm by a Kenyan English teacher.",
+       "status": "proposed"
+      },
+      {
+       "requires": "ENGL.G6.WRITIN.T5_CREATIVE_WRITING.NARRATIVE_COMPOSITION",
+       "kind": "skill",
+       "strength": "essential",
+       "reason": "Grade 6 English taught it first. Proposed, to confirm by a Kenyan English teacher.",
+       "status": "proposed"
+      },
+      {
+       "requires": "ENGL.G7.WRITIN.T13_CREATIVE_WRITING_NAR.IDIOMS",
+       "kind": "skill",
+       "strength": "essential",
+       "reason": "Idioms in context. Proposed, to confirm by a Kenyan English teacher.",
+       "status": "proposed"
+      }
+     ],
+     "leads_to": [],
+     "status": "proposed",
+     "assessed_by": "composition",
+     "no_family": true
     }
    ],
    "misconceptions": [
@@ -6636,6 +8346,70 @@
      "help": "Publishing is sharing the finished work.",
      "feedback": "Publishing comes last: the finished piece is copied neatly and shared.",
      "source": "common learner error; to confirm by a Kenyan English teacher",
+     "status": "draft"
+    },
+    {
+     "code": "ENGL.G7.WRITIN.T7_COMPOSITION_THE_WRIT.NARRATIVE_COMPOSITION.M7_X_NC_NO_PLAN",
+     "skill": "ENGL.G7.WRITIN.T7_COMPOSITION_THE_WRIT.NARRATIVE_COMPOSITION",
+     "error": "Writes straight away with no plan or draft.",
+     "example": {
+      "question": "What is the first step?",
+      "wrong_answer": "write the fair copy",
+      "correct_answer": "plan"
+     },
+     "cause": "Time pressure.",
+     "reveals": "Offer \"write the fair copy\" beside \"plan\" in a fresh sentence or text and ask again; picking it again shows the error is still there.",
+     "help": "Plan, draft, revise, edit, then write the fair copy.",
+     "feedback": "Plan, draft, revise, edit, then write the fair copy.",
+     "source": "to confirm by a Kenyan English teacher: a common classroom error of Kenyan learners of English, written offline (18 Nov 2026), not traced to a study",
+     "status": "draft"
+    },
+    {
+     "code": "ENGL.G7.WRITIN.T7_COMPOSITION_THE_WRIT.NARRATIVE_COMPOSITION.M7_X_NC_IDIOM_MISUSE",
+     "skill": "ENGL.G7.WRITIN.T7_COMPOSITION_THE_WRIT.NARRATIVE_COMPOSITION",
+     "error": "Uses an idiom with the wrong meaning.",
+     "example": {
+      "question": "Is \"He let the cat out of the bag\" right for \"He freed his cat\"?",
+      "wrong_answer": "Yes",
+      "correct_answer": "No: it means he told a secret"
+     },
+     "cause": "Idioms are read literally.",
+     "reveals": "Offer \"Yes\" beside \"No: it means he told a secret\" in a fresh sentence or text and ask again; picking it again shows the error is still there.",
+     "help": "Use an idiom only for its real meaning.",
+     "feedback": "Use an idiom only for its real meaning.",
+     "source": "to confirm by a Kenyan English teacher: a common classroom error of Kenyan learners of English, written offline (18 Nov 2026), not traced to a study",
+     "status": "draft"
+    },
+    {
+     "code": "ENGL.G7.WRITIN.T7_COMPOSITION_THE_WRIT.NARRATIVE_COMPOSITION.M7_X_NC_WEAK_INTRO",
+     "skill": "ENGL.G7.WRITIN.T7_COMPOSITION_THE_WRIT.NARRATIVE_COMPOSITION",
+     "error": "Starts with a dull or unrelated introduction.",
+     "example": {
+      "question": "Better start for a story about a hero?",
+      "wrong_answer": "I woke up and brushed my teeth.",
+      "correct_answer": "The river was rising fast when Wanjiru heard the cry."
+     },
+     "cause": "A memorised opening.",
+     "reveals": "Offer \"I woke up and brushed my teeth.\" beside \"The river was rising fast when Wanjiru heard the cry.\" in a fresh sentence or text and ask again; picking it again shows the error is still there.",
+     "help": "Begin near the action.",
+     "feedback": "Begin near the action.",
+     "source": "to confirm by a Kenyan English teacher: a common classroom error of Kenyan learners of English, written offline (18 Nov 2026), not traced to a study",
+     "status": "draft"
+    },
+    {
+     "code": "ENGL.G7.WRITIN.T7_COMPOSITION_THE_WRIT.NARRATIVE_COMPOSITION.M7_X_NC_SELF_ASSESS_SPELLING",
+     "skill": "ENGL.G7.WRITIN.T7_COMPOSITION_THE_WRIT.NARRATIVE_COMPOSITION",
+     "error": "Self-assesses only spelling.",
+     "example": {
+      "question": "Assess your story.",
+      "wrong_answer": "Two spellings wrong.",
+      "correct_answer": "Introduction sets the scene; the body needs a clearer problem."
+     },
+     "cause": "Correctness is the only thing checked.",
+     "reveals": "Offer \"Two spellings wrong.\" beside \"Introduction sets the scene; the body needs a clearer problem.\" in a fresh sentence or text and ask again; picking it again shows the error is still there.",
+     "help": "Assess introduction, body and conclusion.",
+     "feedback": "Assess introduction, body and conclusion.",
+     "source": "to confirm by a Kenyan English teacher: a common classroom error of Kenyan learners of English, written offline (18 Nov 2026), not traced to a study",
      "status": "draft"
     }
    ],
@@ -6975,7 +8749,8 @@
        "reason": "Grade 8 English builds on this skill. Proposed, to confirm by a Kenyan English teacher."
       }
      ],
-     "status": "proposed"
+     "status": "proposed",
+     "assessed_by": "questions"
     }
    ],
    "misconceptions": [
@@ -7252,7 +9027,8 @@
        "reason": "Grade 8 English builds on this skill. Proposed, to confirm by a Kenyan English teacher."
       }
      ],
-     "status": "proposed"
+     "status": "proposed",
+     "assessed_by": "questions"
     }
    ],
    "misconceptions": [
@@ -7302,6 +9078,22 @@
      "help": "Always read your work again.",
      "feedback": "Read your work again before handing it in. Reading again helps you to find what needs to be improved.",
      "source": "common learner error; to confirm by a Kenyan English teacher",
+     "status": "draft"
+    },
+    {
+     "code": "ENGL.G7.WRITIN.T8_COMPOSITION_WRITING_.ASSESS_NARRATIVE.M7_X_AN_TITLE_FIT",
+     "skill": "ENGL.G7.WRITIN.T8_COMPOSITION_WRITING_.ASSESS_NARRATIVE",
+     "error": "Does not check that the title fits the story.",
+     "example": {
+      "question": "Title \"My Best Day\"; the story is about a lost dog. Fit?",
+      "wrong_answer": "Yes",
+      "correct_answer": "No"
+     },
+     "cause": "The title is not checked.",
+     "reveals": "Offer \"Yes\" beside \"No\" in a fresh sentence or text and ask again; picking it again shows the error is still there.",
+     "help": "Check that the title fits the whole story.",
+     "feedback": "Check that the title fits the whole story.",
+     "source": "to confirm by a Kenyan English teacher: a common classroom error of Kenyan learners of English, written offline (18 Nov 2026), not traced to a study",
      "status": "draft"
     }
    ],
@@ -7434,10 +9226,18 @@
        "reason": "Grade 6 English taught it first. Proposed, to confirm by a Kenyan English teacher.",
        "strength": "essential",
        "status": "proposed"
+      },
+      {
+       "requires": "ENGL.G6.LISTEN.T3_PRONUNCIATION_AND_VO.PRONOUNCE_SOUNDS",
+       "kind": "skill",
+       "strength": "essential",
+       "reason": "Grade 6 English taught it first. Proposed, to confirm by a Kenyan English teacher.",
+       "status": "proposed"
       }
      ],
      "leads_to": [],
-     "status": "proposed"
+     "status": "proposed",
+     "assessed_by": "questions"
     }
    ],
    "misconceptions": [
@@ -7487,6 +9287,22 @@
      "help": "Say each word. Three have the short sound.",
      "feedback": "Book, good and foot have the short /ʊ/. Moon has the long /uː/, so it is the odd one out.",
      "source": "to confirm by a Kenyan English teacher: sound judgements depend on the accent the class is taught in",
+     "status": "draft"
+    },
+    {
+     "code": "ENGL.G7.LISTEN.T9_PRONUNCIATION_CONSON.SOUNDS_VOWELS.M7_X_SV_DIPHTHONG",
+     "skill": "ENGL.G7.LISTEN.T9_PRONUNCIATION_CONSON.SOUNDS_VOWELS",
+     "error": "Hears a diphthong as a pure vowel.",
+     "example": {
+      "question": "Which has the same vowel as \"boat\": bought or note?",
+      "wrong_answer": "bought",
+      "correct_answer": "note"
+     },
+     "cause": "Diphthongs are heard as one vowel.",
+     "reveals": "Offer \"bought\" beside \"note\" in a fresh sentence or text and ask again; picking it again shows the error is still there.",
+     "help": "Boat and note slide; bought does not.",
+     "feedback": "Boat and note slide; bought does not.",
+     "source": "to confirm by a Kenyan English teacher: a common classroom error of Kenyan learners of English, written offline (18 Nov 2026), not traced to a study",
      "status": "draft"
     }
    ],
@@ -7706,7 +9522,8 @@
        "reason": "Grade 8 English builds on this skill. Proposed, to confirm by a Kenyan English teacher."
       }
      ],
-     "status": "proposed"
+     "status": "proposed",
+     "assessed_by": "questions"
     }
    ],
    "misconceptions": [
@@ -7866,7 +9683,8 @@
      "name": "Put the events of a story in order",
      "outcomes": [
       "ENGL.G7.READIN.T9_INTENSIVE_READING_CL.a",
-      "ENGL.G7.LISTEN.T8_LISTENING_COMPREHENS.b"
+      "ENGL.G7.LISTEN.T8_LISTENING_COMPREHENS.b",
+      "ENGL.G7.READIN.T9_INTENSIVE_READING_CL.b"
      ],
      "mastery": "Puts four events of a story in the order they happened, using time words such as first, then, after and finally, in 8 of 10 new passages.",
      "question_forms": [
@@ -7885,6 +9703,13 @@
        "reason": "Grade 6 English taught it first. Proposed, to confirm by a Kenyan English teacher.",
        "strength": "essential",
        "status": "proposed"
+      },
+      {
+       "requires": "ENGL.G6.WRITIN.T2_CREATIVE_WRITING.PARAGRAPH_ORDER",
+       "kind": "skill",
+       "strength": "essential",
+       "reason": "Grade 6 English taught it first. Proposed, to confirm by a Kenyan English teacher.",
+       "status": "proposed"
       }
      ],
      "leads_to": [
@@ -7893,7 +9718,8 @@
        "reason": "Grade 8 English builds on this skill. Proposed, to confirm by a Kenyan English teacher."
       }
      ],
-     "status": "proposed"
+     "status": "proposed",
+     "assessed_by": "questions"
     }
    ],
    "misconceptions": [
@@ -7943,6 +9769,22 @@
      "help": "The story begins with the opening event.",
      "feedback": "The first event is the one that begins the story. The ending comes last.",
      "source": "common learner error; to confirm by a Kenyan English teacher",
+     "status": "draft"
+    },
+    {
+     "code": "ENGL.G7.READIN.T9_INTENSIVE_READING_CL.STORY_ORDER.M7_X_SO_FLASHBACK",
+     "skill": "ENGL.G7.READIN.T9_INTENSIVE_READING_CL.STORY_ORDER",
+     "error": "Orders events by when they are told, not when they happened, in a flashback.",
+     "example": {
+      "question": "The story starts at the end and goes back. What happened first?",
+      "wrong_answer": "what was told first",
+      "correct_answer": "the event told in the flashback"
+     },
+     "cause": "Order of telling is mistaken for order of events.",
+     "reveals": "Offer \"what was told first\" beside \"the event told in the flashback\" in a fresh sentence or text and ask again; picking it again shows the error is still there.",
+     "help": "Use time clues: years earlier, before that.",
+     "feedback": "Use time clues: years earlier, before that.",
+     "source": "to confirm by a Kenyan English teacher: a common classroom error of Kenyan learners of English, written offline (18 Nov 2026), not traced to a study",
      "status": "draft"
     }
    ],
@@ -8063,7 +9905,8 @@
       }
      ],
      "leads_to": [],
-     "status": "proposed"
+     "status": "proposed",
+     "assessed_by": "questions"
     }
    ],
    "misconceptions": [
@@ -8243,6 +10086,13 @@
        "reason": "This skill builds on it. Proposed, to confirm by a Kenyan English teacher.",
        "strength": "essential",
        "status": "proposed"
+      },
+      {
+       "requires": "ENGL.G6.LISTEN.T9_PRONUNCIATION_AND_SP.SPEAK_FLUENTLY",
+       "kind": "skill",
+       "strength": "essential",
+       "reason": "Grade 6 English taught it first. Proposed, to confirm by a Kenyan English teacher.",
+       "status": "proposed"
       }
      ],
      "leads_to": [
@@ -8251,7 +10101,8 @@
        "reason": "Grade 8 English builds on this skill. Proposed, to confirm by a Kenyan English teacher."
       }
      ],
-     "status": "proposed"
+     "status": "proposed",
+     "assessed_by": "questions"
     }
    ],
    "misconceptions": [
@@ -8410,7 +10261,8 @@
      "name": "Make notes: main and supporting points",
      "outcomes": [
       "ENGL.G7.READIN.T10_STUDY_SKILLS_NOTE_MA.a",
-      "ENGL.G7.READIN.T10_STUDY_SKILLS_NOTE_MA.b"
+      "ENGL.G7.READIN.T10_STUDY_SKILLS_NOTE_MA.b",
+      "ENGL.G7.READIN.T10_STUDY_SKILLS_NOTE_MA.c"
      ],
      "mastery": "Tells a main point from a supporting point, and chooses the notes that keep the main points in a few words (not whole sentences and not only a detail), in 8 of 10 new texts.",
      "question_forms": [
@@ -8428,6 +10280,13 @@
        "reason": "Grade 6 English taught it first. Proposed, to confirm by a Kenyan English teacher.",
        "strength": "essential",
        "status": "proposed"
+      },
+      {
+       "requires": "ENGL.G6.READIN.T2_INTENSIVE_READING.FACTUAL_QUESTIONS",
+       "kind": "skill",
+       "strength": "essential",
+       "reason": "Grade 6 English taught it first. Proposed, to confirm by a Kenyan English teacher.",
+       "status": "proposed"
       }
      ],
      "leads_to": [
@@ -8440,7 +10299,8 @@
        "reason": "Grade 8 English builds on this skill. Proposed, to confirm by a Kenyan English teacher."
       }
      ],
-     "status": "proposed"
+     "status": "proposed",
+     "assessed_by": "questions"
     }
    ],
    "misconceptions": [
@@ -8620,10 +10480,18 @@
        "reason": "Grade 6 English taught it first. Proposed, to confirm by a Kenyan English teacher.",
        "strength": "essential",
        "status": "proposed"
+      },
+      {
+       "requires": "ENGL.G5.GRAMMA.T1_WORD_CLASS_DEMONSTRA.DEMONSTRATIVES",
+       "kind": "skill",
+       "strength": "essential",
+       "reason": "Grade 5 English taught it first. Proposed, to confirm by a Kenyan English teacher.",
+       "status": "proposed"
       }
      ],
      "leads_to": [],
-     "status": "proposed"
+     "status": "proposed",
+     "assessed_by": "questions"
     }
    ],
    "misconceptions": [
@@ -8938,10 +10806,57 @@
        "reason": "Grade 6 English taught it first. Proposed, to confirm by a Kenyan English teacher.",
        "strength": "essential",
        "status": "proposed"
+      },
+      {
+       "requires": "ENGL.G6.LANGUA.T6_PHRASAL_QUANTIFIERS.PHRASAL_QUANTIFIERS",
+       "kind": "skill",
+       "strength": "essential",
+       "reason": "Grade 6 English taught it first. Proposed, to confirm by a Kenyan English teacher.",
+       "status": "proposed"
       }
      ],
      "leads_to": [],
-     "status": "proposed"
+     "status": "proposed",
+     "assessed_by": "questions"
+    },
+    {
+     "code": "ENGL.G7.WRITIN.T10_FUNCTIONAL_WRITING_P.LISTS_WRITE",
+     "name": "Write a packing list and a shopping list for a given purpose",
+     "outcomes": [
+      "ENGL.G7.WRITIN.T10_FUNCTIONAL_WRITING_P.b",
+      "ENGL.G7.WRITIN.T10_FUNCTIONAL_WRITING_P.c"
+     ],
+     "mastery": "The child writes a list with a heading, items grouped (clothes, food, documents), quantities where needed, and only what the event or purpose calls for. Evidence rule: two pieces of the learner's own writing marked Meeting Expectations or above on the KICD rubric indicator.",
+     "question_forms": [
+      "write a packing list for",
+      "prepare a shopping list for",
+      "group the items"
+     ],
+     "thinking": [
+      "creation",
+      "organisation"
+     ],
+     "horeb_skill_ids": [],
+     "prerequisites": [
+      {
+       "requires": "ENGL.G7.WRITIN.T10_FUNCTIONAL_WRITING_P.LIST_GROUPING",
+       "kind": "skill",
+       "strength": "essential",
+       "reason": "Grouping items. Proposed, to confirm by a Kenyan English teacher.",
+       "status": "proposed"
+      },
+      {
+       "requires": "ENGL.G7.GRAMMA.T2_WORD_CLASSES_NOUNS.COUNT_NONCOUNT",
+       "kind": "skill",
+       "strength": "essential",
+       "reason": "Quantities of countable and uncountable things. Proposed, to confirm by a Kenyan English teacher.",
+       "status": "proposed"
+      }
+     ],
+     "leads_to": [],
+     "status": "proposed",
+     "assessed_by": "composition",
+     "no_family": true
     }
    ],
    "misconceptions": [
@@ -9007,6 +10922,70 @@
      "help": "A shopping list says how much to buy.",
      "feedback": "A shopping list says what and how much: 2 kg of sugar, 3 loaves of bread.",
      "source": "common learner error; to confirm by a Kenyan English teacher",
+     "status": "draft"
+    },
+    {
+     "code": "ENGL.G7.WRITIN.T10_FUNCTIONAL_WRITING_P.LISTS_WRITE.M7_X_LS_NO_QUANTITY",
+     "skill": "ENGL.G7.WRITIN.T10_FUNCTIONAL_WRITING_P.LISTS_WRITE",
+     "error": "Writes shopping items with no quantities.",
+     "example": {
+      "question": "Shopping list for a class party: \"sugar\".",
+      "wrong_answer": "sugar",
+      "correct_answer": "2 kg sugar"
+     },
+     "cause": "The writer knows the amount and forgets the reader does not.",
+     "reveals": "Offer \"sugar\" beside \"2 kg sugar\" in a fresh sentence or text and ask again; picking it again shows the error is still there.",
+     "help": "Add quantities.",
+     "feedback": "Add quantities.",
+     "source": "to confirm by a Kenyan English teacher: a common classroom error of Kenyan learners of English, written offline (18 Nov 2026), not traced to a study",
+     "status": "draft"
+    },
+    {
+     "code": "ENGL.G7.WRITIN.T10_FUNCTIONAL_WRITING_P.LISTS_WRITE.M7_X_LS_NOT_NEEDED",
+     "skill": "ENGL.G7.WRITIN.T10_FUNCTIONAL_WRITING_P.LISTS_WRITE",
+     "error": "Packs items the event does not need.",
+     "example": {
+      "question": "Packing for a music festival: which is not needed?",
+      "wrong_answer": "school timetable",
+      "correct_answer": "raincoat"
+     },
+     "cause": "Every item that comes to mind is listed.",
+     "reveals": "Offer \"school timetable\" beside \"raincoat\" in a fresh sentence or text and ask again; picking it again shows the error is still there.",
+     "help": "Ask: will I use it at this event?",
+     "feedback": "Ask: will I use it at this event?",
+     "source": "to confirm by a Kenyan English teacher: a common classroom error of Kenyan learners of English, written offline (18 Nov 2026), not traced to a study",
+     "status": "draft"
+    },
+    {
+     "code": "ENGL.G7.WRITIN.T10_FUNCTIONAL_WRITING_P.LISTS_WRITE.M7_X_LS_NO_GROUPS",
+     "skill": "ENGL.G7.WRITIN.T10_FUNCTIONAL_WRITING_P.LISTS_WRITE",
+     "error": "Lists items in no groups.",
+     "example": {
+      "question": "Improve: shirt, bread, ID, socks, milk.",
+      "wrong_answer": "leave it",
+      "correct_answer": "Clothes: shirt, socks. Food: bread, milk. Documents: ID."
+     },
+     "cause": "Grouping is not seen as useful.",
+     "reveals": "Offer \"leave it\" beside \"Clothes: shirt, socks. Food: bread, milk. Documents: ID.\" in a fresh sentence or text and ask again; picking it again shows the error is still there.",
+     "help": "Group items by kind.",
+     "feedback": "Group items by kind.",
+     "source": "to confirm by a Kenyan English teacher: a common classroom error of Kenyan learners of English, written offline (18 Nov 2026), not traced to a study",
+     "status": "draft"
+    },
+    {
+     "code": "ENGL.G7.WRITIN.T10_FUNCTIONAL_WRITING_P.LISTS_WRITE.M7_X_LS_SENTENCES",
+     "skill": "ENGL.G7.WRITIN.T10_FUNCTIONAL_WRITING_P.LISTS_WRITE",
+     "error": "Writes the list as sentences.",
+     "example": {
+      "question": "Which is a list?",
+      "wrong_answer": "I will carry a shirt and also socks.",
+      "correct_answer": "shirt\nsocks"
+     },
+     "cause": "Composition habits.",
+     "reveals": "Offer \"I will carry a shirt and also socks.\" beside \"shirt\nsocks\" in a fresh sentence or text and ask again; picking it again shows the error is still there.",
+     "help": "A list is one item per line.",
+     "feedback": "A list is one item per line.",
+     "source": "to confirm by a Kenyan English teacher: a common classroom error of Kenyan learners of English, written offline (18 Nov 2026), not traced to a study",
      "status": "draft"
     }
    ],
@@ -9146,7 +11125,54 @@
        "reason": "Grade 8 English builds on this skill. Proposed, to confirm by a Kenyan English teacher."
       }
      ],
-     "status": "proposed"
+     "status": "proposed",
+     "assessed_by": "questions"
+    },
+    {
+     "code": "ENGL.G7.LISTEN.T11_INTERVIEWS.INTERVIEW_SPEAK",
+     "name": "Speak clearly and confidently in an interview and seek clarification",
+     "outcomes": [
+      "ENGL.G7.LISTEN.T11_INTERVIEWS.b",
+      "ENGL.G7.LISTEN.T11_INTERVIEWS.c",
+      "ENGL.G7.LISTEN.T11_INTERVIEWS.d"
+     ],
+     "mastery": "The child greets the panel, answers each question in full with a reason or example, speaks clearly and confidently but humbly, and asks politely for a question to be repeated or explained. Evidence rule: the teacher hears it done right on two different days, scored with the observation rubric (PLAN_OBSERVATION_RUBRICS.md); a tapped answer cannot show it.",
+     "question_forms": [
+      "role play an interview",
+      "answer the panel's questions",
+      "ask the panel to repeat a question"
+     ],
+     "thinking": [
+      "performance"
+     ],
+     "horeb_skill_ids": [],
+     "prerequisites": [
+      {
+       "requires": "ENGL.G7.LISTEN.T11_INTERVIEWS.INTERVIEW_KNOW",
+       "kind": "skill",
+       "strength": "essential",
+       "reason": "What an interview is for. Proposed, to confirm by a Kenyan English teacher.",
+       "status": "proposed"
+      },
+      {
+       "requires": "ENGL.G6.LISTEN.T9_PRONUNCIATION_AND_SP.SPEAK_FLUENTLY",
+       "kind": "skill",
+       "strength": "essential",
+       "reason": "Grade 6 English taught it first. Proposed, to confirm by a Kenyan English teacher.",
+       "status": "proposed"
+      },
+      {
+       "requires": "ENGL.G6.LISTEN.T3_PRONUNCIATION_AND_VO.POLITE_TALK",
+       "kind": "skill",
+       "strength": "essential",
+       "reason": "Grade 6 English taught it first. Proposed, to confirm by a Kenyan English teacher.",
+       "status": "proposed"
+      }
+     ],
+     "leads_to": [],
+     "status": "proposed",
+     "assessed_by": "voice",
+     "no_family": true
     }
    ],
    "misconceptions": [
@@ -9212,6 +11238,70 @@
      "help": "Be confident but modest.",
      "feedback": "A confident answer is clear and honest. It is not boastful or rude.",
      "source": "common learner error; to confirm by a Kenyan English teacher",
+     "status": "draft"
+    },
+    {
+     "code": "ENGL.G7.LISTEN.T11_INTERVIEWS.INTERVIEW_SPEAK.M7_X_IS_BOASTFUL",
+     "skill": "ENGL.G7.LISTEN.T11_INTERVIEWS.INTERVIEW_SPEAK",
+     "error": "Answers boastfully.",
+     "example": {
+      "question": "Why should we give you a place?",
+      "wrong_answer": "I am the best; nobody can beat me.",
+      "correct_answer": "I work hard and I scored well in Science."
+     },
+     "cause": "Confidence is confused with boasting.",
+     "reveals": "Offer \"I am the best; nobody can beat me.\" beside \"I work hard and I scored well in Science.\" in a fresh sentence or text and ask again; picking it again shows the error is still there.",
+     "help": "Show confidence with facts, not boasts.",
+     "feedback": "Show confidence with facts, not boasts.",
+     "source": "to confirm by a Kenyan English teacher: a common classroom error of Kenyan learners of English, written offline (18 Nov 2026), not traced to a study",
+     "status": "draft"
+    },
+    {
+     "code": "ENGL.G7.LISTEN.T11_INTERVIEWS.INTERVIEW_SPEAK.M7_X_IS_ONE_WORD",
+     "skill": "ENGL.G7.LISTEN.T11_INTERVIEWS.INTERVIEW_SPEAK",
+     "error": "Answers in one word.",
+     "example": {
+      "question": "Do you like Mathematics?",
+      "wrong_answer": "Yes.",
+      "correct_answer": "Yes, I like it because I enjoy solving problems."
+     },
+     "cause": "Short classroom answers.",
+     "reveals": "Offer \"Yes.\" beside \"Yes, I like it because I enjoy solving problems.\" in a fresh sentence or text and ask again; picking it again shows the error is still there.",
+     "help": "Answer and give a reason.",
+     "feedback": "Answer and give a reason.",
+     "source": "to confirm by a Kenyan English teacher: a common classroom error of Kenyan learners of English, written offline (18 Nov 2026), not traced to a study",
+     "status": "draft"
+    },
+    {
+     "code": "ENGL.G7.LISTEN.T11_INTERVIEWS.INTERVIEW_SPEAK.M7_X_IS_MUMBLES",
+     "skill": "ENGL.G7.LISTEN.T11_INTERVIEWS.INTERVIEW_SPEAK",
+     "error": "Speaks too softly or mumbles.",
+     "example": {
+      "question": "How should you speak to a panel?",
+      "wrong_answer": "quietly, looking down",
+      "correct_answer": "clearly, looking at the panel"
+     },
+     "cause": "Nerves.",
+     "reveals": "Offer \"quietly, looking down\" beside \"clearly, looking at the panel\" in a fresh sentence or text and ask again; picking it again shows the error is still there.",
+     "help": "Sit up, look at the panel, speak clearly.",
+     "feedback": "Sit up, look at the panel, speak clearly.",
+     "source": "to confirm by a Kenyan English teacher: a common classroom error of Kenyan learners of English, written offline (18 Nov 2026), not traced to a study",
+     "status": "draft"
+    },
+    {
+     "code": "ENGL.G7.LISTEN.T11_INTERVIEWS.INTERVIEW_SPEAK.M7_X_IS_NO_CLARIFY",
+     "skill": "ENGL.G7.LISTEN.T11_INTERVIEWS.INTERVIEW_SPEAK",
+     "error": "Guesses at a question instead of asking for clarification.",
+     "example": {
+      "question": "You did not understand the question. What do you do?",
+      "wrong_answer": "answer anything",
+      "correct_answer": "Could you please repeat the question?"
+     },
+     "cause": "Asking is seen as weakness.",
+     "reveals": "Offer \"answer anything\" beside \"Could you please repeat the question?\" in a fresh sentence or text and ask again; picking it again shows the error is still there.",
+     "help": "Ask politely for the question again.",
+     "feedback": "Ask politely for the question again.",
+     "source": "to confirm by a Kenyan English teacher: a common classroom error of Kenyan learners of English, written offline (18 Nov 2026), not traced to a study",
      "status": "draft"
     }
    ],
@@ -9429,7 +11519,8 @@
       }
      ],
      "leads_to": [],
-     "status": "proposed"
+     "status": "proposed",
+     "assessed_by": "questions"
     }
    ],
    "misconceptions": [
@@ -9615,10 +11706,18 @@
        "reason": "Grade 6 English taught it first. Proposed, to confirm by a Kenyan English teacher.",
        "strength": "essential",
        "status": "proposed"
+      },
+      {
+       "requires": "ENGL.G6.READIN.T2_INTENSIVE_READING.CHARACTER_JUDGE",
+       "kind": "skill",
+       "strength": "essential",
+       "reason": "Grade 6 English taught it first. Proposed, to confirm by a Kenyan English teacher.",
+       "status": "proposed"
       }
      ],
      "leads_to": [],
-     "status": "proposed"
+     "status": "proposed",
+     "assessed_by": "questions"
     }
    ],
    "misconceptions": [
@@ -9668,6 +11767,22 @@
      "help": "A dilemma has two hard choices.",
      "feedback": "A dilemma narrative puts a character or the listener before a hard choice where each side has a good reason.",
      "source": "common learner error; to confirm by a Kenyan English teacher",
+     "status": "draft"
+    },
+    {
+     "code": "ENGL.G7.READIN.T11_INTENSIVE_READING_DI.DILEMMA.M7_X_DL_EASY_ANSWER",
+     "skill": "ENGL.G7.READIN.T11_INTENSIVE_READING_DI.DILEMMA",
+     "error": "Gives the dilemma an easy answer the story does not support.",
+     "example": {
+      "question": "Which son should inherit the land? (both deserve it)",
+      "wrong_answer": "the eldest, of course",
+      "correct_answer": "it is hard: give reasons for one"
+     },
+     "cause": "The child thinks a story must have one right answer.",
+     "reveals": "Offer \"the eldest, of course\" beside \"it is hard: give reasons for one\" in a fresh sentence or text and ask again; picking it again shows the error is still there.",
+     "help": "A dilemma has no easy answer; argue with reasons.",
+     "feedback": "A dilemma has no easy answer; argue with reasons.",
+     "source": "to confirm by a Kenyan English teacher: a common classroom error of Kenyan learners of English, written offline (18 Nov 2026), not traced to a study",
      "status": "draft"
     }
    ],
@@ -9793,7 +11908,8 @@
       }
      ],
      "leads_to": [],
-     "status": "proposed"
+     "status": "proposed",
+     "assessed_by": "questions"
     },
     {
      "code": "ENGL.G7.WRITIN.T11_SPELLING_ANTONYMS_SY.NUMBER_WORDS",
@@ -9837,7 +11953,8 @@
       }
      ],
      "leads_to": [],
-     "status": "proposed"
+     "status": "proposed",
+     "assessed_by": "questions"
     }
    ],
    "misconceptions": [
@@ -10111,6 +12228,13 @@
        "reason": "Grade 6 English taught it first. Proposed, to confirm by a Kenyan English teacher.",
        "strength": "essential",
        "status": "proposed"
+      },
+      {
+       "requires": "ENGL.G6.LISTEN.T3_PRONUNCIATION_AND_VO.POLITE_TALK",
+       "kind": "skill",
+       "strength": "essential",
+       "reason": "Grade 6 English taught it first. Proposed, to confirm by a Kenyan English teacher.",
+       "status": "proposed"
       }
      ],
      "leads_to": [
@@ -10119,7 +12243,8 @@
        "reason": "Grade 8 English builds on this skill. Proposed, to confirm by a Kenyan English teacher."
       }
      ],
-     "status": "proposed"
+     "status": "proposed",
+     "assessed_by": "questions"
     }
    ],
    "misconceptions": [
@@ -10390,6 +12515,13 @@
        "reason": "Grade 6 English taught it first. Proposed, to confirm by a Kenyan English teacher.",
        "strength": "essential",
        "status": "proposed"
+      },
+      {
+       "requires": "ENGL.G6.READIN.T3_INTENSIVE_READING.CONTEXT_CLUES",
+       "kind": "skill",
+       "strength": "essential",
+       "reason": "Grade 6 English taught it first. Proposed, to confirm by a Kenyan English teacher.",
+       "status": "proposed"
       }
      ],
      "leads_to": [
@@ -10402,7 +12534,8 @@
        "reason": "Grade 8 English builds on this skill. Proposed, to confirm by a Kenyan English teacher."
       }
      ],
-     "status": "proposed"
+     "status": "proposed",
+     "assessed_by": "questions"
     }
    ],
    "misconceptions": [
@@ -10688,6 +12821,13 @@
        "reason": "Grade 6 English taught it first. Proposed, to confirm by a Kenyan English teacher.",
        "strength": "essential",
        "status": "proposed"
+      },
+      {
+       "requires": "ENGL.G6.WRITIN.T2_CREATIVE_WRITING.PLAN_COMPOSITION",
+       "kind": "skill",
+       "strength": "essential",
+       "reason": "Grade 6 English taught it first. Proposed, to confirm by a Kenyan English teacher.",
+       "status": "proposed"
       }
      ],
      "leads_to": [
@@ -10696,7 +12836,46 @@
        "reason": "Grade 8 English builds on this skill. Proposed, to confirm by a Kenyan English teacher."
       }
      ],
-     "status": "proposed"
+     "status": "proposed",
+     "assessed_by": "questions"
+    },
+    {
+     "code": "ENGL.G7.WRITIN.T12_THE_WRITING_PROCESS_.DIALOGUE_WRITING",
+     "name": "Write a dialogue through the writing process",
+     "outcomes": [
+      "ENGL.G7.WRITIN.T12_THE_WRITING_PROCESS_.b"
+     ],
+     "mastery": "The child writes a dialogue with each speaker's name on the left, a colon, the words on the same line with no quotation marks, a new line for each speaker and actions in brackets. Evidence rule: two pieces of the learner's own writing marked Meeting Expectations or above on the KICD rubric indicator.",
+     "question_forms": [
+      "write a dialogue between",
+      "set out the dialogue",
+      "revise the dialogue"
+     ],
+     "thinking": [
+      "creation",
+      "organisation"
+     ],
+     "horeb_skill_ids": [],
+     "prerequisites": [
+      {
+       "requires": "ENGL.G7.WRITIN.T12_THE_WRITING_PROCESS_.DIALOGUE_FORMAT",
+       "kind": "skill",
+       "strength": "essential",
+       "reason": "The format of a dialogue. Proposed, to confirm by a Kenyan English teacher.",
+       "status": "proposed"
+      },
+      {
+       "requires": "ENGL.G7.WRITIN.T7_COMPOSITION_THE_WRIT.WRITING_PROCESS",
+       "kind": "skill",
+       "strength": "essential",
+       "reason": "Plan, draft, revise. Proposed, to confirm by a Kenyan English teacher.",
+       "status": "proposed"
+      }
+     ],
+     "leads_to": [],
+     "status": "proposed",
+     "assessed_by": "composition",
+     "no_family": true
     }
    ],
    "misconceptions": [
@@ -10762,6 +12941,70 @@
      "help": "Without a name we do not know who speaks.",
      "feedback": "Each line begins with the name of the speaker and a colon, then what the person says.",
      "source": "common learner error; to confirm by a Kenyan English teacher",
+     "status": "draft"
+    },
+    {
+     "code": "ENGL.G7.WRITIN.T12_THE_WRITING_PROCESS_.DIALOGUE_WRITING.M7_X_DW_QUOTES",
+     "skill": "ENGL.G7.WRITIN.T12_THE_WRITING_PROCESS_.DIALOGUE_WRITING",
+     "error": "Puts every line in quotation marks.",
+     "example": {
+      "question": "Set out: Atieno says good morning.",
+      "wrong_answer": "\"Atieno: Good morning.\"",
+      "correct_answer": "Atieno: Good morning."
+     },
+     "cause": "Direct speech rules are carried over.",
+     "reveals": "Offer \"\"Atieno: Good morning.\"\" beside \"Atieno: Good morning.\" in a fresh sentence or text and ask again; picking it again shows the error is still there.",
+     "help": "A dialogue uses names and colons, no quotation marks.",
+     "feedback": "A dialogue uses names and colons, no quotation marks.",
+     "source": "to confirm by a Kenyan English teacher: a common classroom error of Kenyan learners of English, written offline (18 Nov 2026), not traced to a study",
+     "status": "draft"
+    },
+    {
+     "code": "ENGL.G7.WRITIN.T12_THE_WRITING_PROCESS_.DIALOGUE_WRITING.M7_X_DW_SAME_LINE",
+     "skill": "ENGL.G7.WRITIN.T12_THE_WRITING_PROCESS_.DIALOGUE_WRITING",
+     "error": "Writes two speakers on the same line.",
+     "example": {
+      "question": "Where does the next speaker go?",
+      "wrong_answer": "on the same line",
+      "correct_answer": "on a new line"
+     },
+     "cause": "Space is saved.",
+     "reveals": "Offer \"on the same line\" beside \"on a new line\" in a fresh sentence or text and ask again; picking it again shows the error is still there.",
+     "help": "New speaker, new line.",
+     "feedback": "New speaker, new line.",
+     "source": "to confirm by a Kenyan English teacher: a common classroom error of Kenyan learners of English, written offline (18 Nov 2026), not traced to a study",
+     "status": "draft"
+    },
+    {
+     "code": "ENGL.G7.WRITIN.T12_THE_WRITING_PROCESS_.DIALOGUE_WRITING.M7_X_DW_ACTIONS",
+     "skill": "ENGL.G7.WRITIN.T12_THE_WRITING_PROCESS_.DIALOGUE_WRITING",
+     "error": "Writes actions as speech.",
+     "example": {
+      "question": "Atieno smiles. How do you show it?",
+      "wrong_answer": "Atieno: smiles",
+      "correct_answer": "Atieno: (smiling) Good morning."
+     },
+     "cause": "Actions are not separated.",
+     "reveals": "Offer \"Atieno: smiles\" beside \"Atieno: (smiling) Good morning.\" in a fresh sentence or text and ask again; picking it again shows the error is still there.",
+     "help": "Put actions in brackets.",
+     "feedback": "Put actions in brackets.",
+     "source": "to confirm by a Kenyan English teacher: a common classroom error of Kenyan learners of English, written offline (18 Nov 2026), not traced to a study",
+     "status": "draft"
+    },
+    {
+     "code": "ENGL.G7.WRITIN.T12_THE_WRITING_PROCESS_.DIALOGUE_WRITING.M7_X_DW_NO_PURPOSE",
+     "skill": "ENGL.G7.WRITIN.T12_THE_WRITING_PROCESS_.DIALOGUE_WRITING",
+     "error": "Writes a dialogue that goes nowhere.",
+     "example": {
+      "question": "What should the dialogue about fashion do?",
+      "wrong_answer": "greetings only",
+      "correct_answer": "show the speakers sharing and resolving views"
+     },
+     "cause": "The dialogue is a chain of greetings.",
+     "reveals": "Offer \"greetings only\" beside \"show the speakers sharing and resolving views\" in a fresh sentence or text and ask again; picking it again shows the error is still there.",
+     "help": "Plan what the speakers want and how it ends.",
+     "feedback": "Plan what the speakers want and how it ends.",
+     "source": "to confirm by a Kenyan English teacher: a common classroom error of Kenyan learners of English, written offline (18 Nov 2026), not traced to a study",
      "status": "draft"
     }
    ],
@@ -10879,10 +13122,18 @@
        "reason": "Grade 6 English taught it first. Proposed, to confirm by a Kenyan English teacher.",
        "strength": "essential",
        "status": "proposed"
+      },
+      {
+       "requires": "ENGL.G6.READIN.T3_INTENSIVE_READING.CONTEXT_CLUES",
+       "kind": "skill",
+       "strength": "essential",
+       "reason": "Grade 6 English taught it first. Proposed, to confirm by a Kenyan English teacher.",
+       "status": "proposed"
       }
      ],
      "leads_to": [],
-     "status": "proposed"
+     "status": "proposed",
+     "assessed_by": "questions"
     }
    ],
    "misconceptions": [
@@ -11101,6 +13352,13 @@
        "reason": "Grade 6 English taught it first. Proposed, to confirm by a Kenyan English teacher.",
        "strength": "essential",
        "status": "proposed"
+      },
+      {
+       "requires": "ENGL.G6.READIN.T2_INTENSIVE_READING.FACTUAL_QUESTIONS",
+       "kind": "skill",
+       "strength": "essential",
+       "reason": "Grade 6 English taught it first. Proposed, to confirm by a Kenyan English teacher.",
+       "status": "proposed"
       }
      ],
      "leads_to": [
@@ -11109,7 +13367,8 @@
        "reason": "Grade 8 English builds on this skill. Proposed, to confirm by a Kenyan English teacher."
       }
      ],
-     "status": "proposed"
+     "status": "proposed",
+     "assessed_by": "questions"
     },
     {
      "code": "ENGL.G7.READIN.T13_INTENSIVE_READING_CO.SUMMARY",
@@ -11150,7 +13409,8 @@
        "reason": "Grade 8 English builds on this skill. Proposed, to confirm by a Kenyan English teacher."
       }
      ],
-     "status": "proposed"
+     "status": "proposed",
+     "assessed_by": "questions"
     },
     {
      "code": "ENGL.G7.READIN.T13_INTENSIVE_READING_CO.IMAGERY",
@@ -11174,6 +13434,13 @@
        "reason": "Grade 6 English taught it first. Proposed, to confirm by a Kenyan English teacher.",
        "strength": "essential",
        "status": "proposed"
+      },
+      {
+       "requires": "ENGL.G6.LISTEN.T2_PRONUNCIATION_AND_LI.SIMILE_METAPHOR",
+       "kind": "skill",
+       "strength": "essential",
+       "reason": "Grade 6 English taught it first. Proposed, to confirm by a Kenyan English teacher.",
+       "status": "proposed"
       }
      ],
      "leads_to": [
@@ -11182,7 +13449,8 @@
        "reason": "Grade 8 English builds on this skill. Proposed, to confirm by a Kenyan English teacher."
       }
      ],
-     "status": "proposed"
+     "status": "proposed",
+     "assessed_by": "questions"
     },
     {
      "code": "ENGL.G7.READIN.T13_INTENSIVE_READING_CO.CONTEXT_CLUES",
@@ -11209,10 +13477,18 @@
        "reason": "Grade 6 English taught it first. Proposed, to confirm by a Kenyan English teacher.",
        "strength": "essential",
        "status": "proposed"
+      },
+      {
+       "requires": "ENGL.G6.LISTEN.T1_PRONUNCIATION_AND_LI.IDIOMS_FIXED",
+       "kind": "skill",
+       "strength": "essential",
+       "reason": "Grade 6 English taught it first. Proposed, to confirm by a Kenyan English teacher.",
+       "status": "proposed"
       }
      ],
      "leads_to": [],
-     "status": "proposed"
+     "status": "proposed",
+     "assessed_by": "questions"
     },
     {
      "code": "ENGL.G7.READIN.T13_INTENSIVE_READING_CO.FACTUAL_QUESTIONS",
@@ -11249,7 +13525,8 @@
       }
      ],
      "leads_to": [],
-     "status": "proposed"
+     "status": "proposed",
+     "assessed_by": "questions"
     },
     {
      "code": "ENGL.G7.READIN.T13_INTENSIVE_READING_CO.INFERENCE_QUESTIONS",
@@ -11285,7 +13562,8 @@
       }
      ],
      "leads_to": [],
-     "status": "proposed"
+     "status": "proposed",
+     "assessed_by": "questions"
     }
    ],
    "misconceptions": [
@@ -11672,6 +13950,38 @@
      "feedback": "A sentence copied from the passage is stated, not worked out. An inference is worked out from clues.",
      "source": "common learner error; to confirm by a Kenyan English teacher",
      "status": "draft"
+    },
+    {
+     "code": "ENGL.G7.READIN.T13_INTENSIVE_READING_CO.IMAGERY.M7_X_IM_SENSE_MIX",
+     "skill": "ENGL.G7.READIN.T13_INTENSIVE_READING_CO.IMAGERY",
+     "error": "Names the wrong sense for an image.",
+     "example": {
+      "question": "\"The bus horn screamed.\" Which sense?",
+      "wrong_answer": "sight",
+      "correct_answer": "hearing"
+     },
+     "cause": "All images are thought to be pictures.",
+     "reveals": "Offer \"sight\" beside \"hearing\" in a fresh sentence or text and ask again; picking it again shows the error is still there.",
+     "help": "Images can be sounds, smells and feelings too.",
+     "feedback": "Images can be sounds, smells and feelings too.",
+     "source": "to confirm by a Kenyan English teacher: a common classroom error of Kenyan learners of English, written offline (18 Nov 2026), not traced to a study",
+     "status": "draft"
+    },
+    {
+     "code": "ENGL.G7.READIN.T13_INTENSIVE_READING_CO.INFERENCE_QUESTIONS.M7_X_IQ_NOT_STATED",
+     "skill": "ENGL.G7.READIN.T13_INTENSIVE_READING_CO.INFERENCE_QUESTIONS",
+     "error": "Answers \"not stated\" to an inference question.",
+     "example": {
+      "question": "\"She packed her bag before dawn.\" Why?",
+      "wrong_answer": "The poem does not say.",
+      "correct_answer": "She was leaving early on a journey."
+     },
+     "cause": "Only stated answers seem allowed.",
+     "reveals": "Offer \"The poem does not say.\" beside \"She was leaving early on a journey.\" in a fresh sentence or text and ask again; picking it again shows the error is still there.",
+     "help": "Use the clues to infer.",
+     "feedback": "Use the clues to infer.",
+     "source": "to confirm by a Kenyan English teacher: a common classroom error of Kenyan learners of English, written offline (18 Nov 2026), not traced to a study",
+     "status": "draft"
     }
    ],
    "rubric_indicators": [
@@ -11800,7 +14110,8 @@
        "reason": "Grade 8 English builds on this skill. Proposed, to confirm by a Kenyan English teacher."
       }
      ],
-     "status": "proposed"
+     "status": "proposed",
+     "assessed_by": "questions"
     }
    ],
    "misconceptions": [
@@ -11991,10 +14302,18 @@
        "reason": "Grade 6 English taught it first. Proposed, to confirm by a Kenyan English teacher.",
        "strength": "essential",
        "status": "proposed"
+      },
+      {
+       "requires": "ENGL.G6.LISTEN.T2_PRONUNCIATION_AND_LI.PROVERBS_USE",
+       "kind": "skill",
+       "strength": "essential",
+       "reason": "Grade 6 English taught it first. Proposed, to confirm by a Kenyan English teacher.",
+       "status": "proposed"
       }
      ],
      "leads_to": [],
-     "status": "proposed"
+     "status": "proposed",
+     "assessed_by": "questions"
     }
    ],
    "misconceptions": [
@@ -12175,6 +14494,13 @@
        "reason": "Grade 6 English taught it first. Proposed, to confirm by a Kenyan English teacher.",
        "strength": "essential",
        "status": "proposed"
+      },
+      {
+       "requires": "ENGL.G6.READIN.T3_INTENSIVE_READING.CONTEXT_CLUES",
+       "kind": "skill",
+       "strength": "essential",
+       "reason": "Grade 6 English taught it first. Proposed, to confirm by a Kenyan English teacher.",
+       "status": "proposed"
       }
      ],
      "leads_to": [
@@ -12183,7 +14509,8 @@
        "reason": "Grade 8 English builds on this skill. Proposed, to confirm by a Kenyan English teacher."
       }
      ],
-     "status": "proposed"
+     "status": "proposed",
+     "assessed_by": "questions"
     }
    ],
    "misconceptions": [
@@ -12233,6 +14560,22 @@
      "help": "The words of an idiom are fixed.",
      "feedback": "An idiom cannot be changed: a piece of cake, not a piece of pie.",
      "source": "common learner error; to confirm by a Kenyan English teacher",
+     "status": "draft"
+    },
+    {
+     "code": "ENGL.G7.WRITIN.T13_CREATIVE_WRITING_NAR.IDIOMS.M7_X_ID_WRONG_SITUATION",
+     "skill": "ENGL.G7.WRITIN.T13_CREATIVE_WRITING_NAR.IDIOMS",
+     "error": "Uses an idiom in a situation it does not fit.",
+     "example": {
+      "question": "Which fits a boy who finally finished his long project?",
+      "wrong_answer": "He spilled the beans.",
+      "correct_answer": "He saw the light at the end of the tunnel."
+     },
+     "cause": "Idioms are known by form, not use.",
+     "reveals": "Offer \"He spilled the beans.\" beside \"He saw the light at the end of the tunnel.\" in a fresh sentence or text and ask again; picking it again shows the error is still there.",
+     "help": "Match the idiom's meaning to the situation.",
+     "feedback": "Match the idiom's meaning to the situation.",
+     "source": "to confirm by a Kenyan English teacher: a common classroom error of Kenyan learners of English, written offline (18 Nov 2026), not traced to a study",
      "status": "draft"
     }
    ],
@@ -12351,10 +14694,55 @@
        "reason": "Grade 6 English taught it first. Proposed, to confirm by a Kenyan English teacher.",
        "strength": "essential",
        "status": "proposed"
+      },
+      {
+       "requires": "ENGL.G6.LISTEN.T3_PRONUNCIATION_AND_VO.PRONOUNCE_SOUNDS",
+       "kind": "skill",
+       "strength": "essential",
+       "reason": "Grade 6 English taught it first. Proposed, to confirm by a Kenyan English teacher.",
+       "status": "proposed"
       }
      ],
      "leads_to": [],
-     "status": "proposed"
+     "status": "proposed",
+     "assessed_by": "questions"
+    },
+    {
+     "code": "ENGL.G7.LISTEN.T14_CONSONANT_SOUNDS_AND.INTONATION",
+     "name": "Use correct intonation for yes or no and WH questions",
+     "outcomes": [
+      "ENGL.G7.LISTEN.T14_CONSONANT_SOUNDS_AND.c"
+     ],
+     "mastery": "The child lets the voice rise at the end of yes or no questions (Did you score?) and fall at the end of WH questions (Who scored?), in varied situations. Evidence rule: the teacher hears it done right on two different days, scored with the observation rubric (PLAN_OBSERVATION_RUBRICS.md); a tapped answer cannot show it.",
+     "question_forms": [
+      "up or down at the end",
+      "say the question",
+      "turn the statement into a question"
+     ],
+     "thinking": [
+      "performance"
+     ],
+     "horeb_skill_ids": [],
+     "prerequisites": [
+      {
+       "requires": "ENGL.G6.LISTEN.T6_PRONUNCIATION_AND_VO.INTONATION",
+       "kind": "skill",
+       "strength": "essential",
+       "reason": "Grade 6 English taught it first. Proposed, to confirm by a Kenyan English teacher.",
+       "status": "proposed"
+      },
+      {
+       "requires": "ENGL.G7.GRAMMA.T15_AFFIRMATIVE_AND_NEGA.NEGATIVES",
+       "kind": "skill",
+       "strength": "essential",
+       "reason": "Questions and their answers. Proposed, to confirm by a Kenyan English teacher.",
+       "status": "proposed"
+      }
+     ],
+     "leads_to": [],
+     "status": "proposed",
+     "assessed_by": "voice",
+     "no_family": true
     }
    ],
    "misconceptions": [
@@ -12436,6 +14824,70 @@
      "help": "Say each word. Of ends in /v/. Laugh ends in /f/.",
      "feedback": "The sound is not always the same as the letter: laugh ends in /f/ but of ends in /v/.",
      "source": "to confirm by a Kenyan English teacher: sound judgements depend on the accent the class is taught in",
+     "status": "draft"
+    },
+    {
+     "code": "ENGL.G7.LISTEN.T14_CONSONANT_SOUNDS_AND.INTONATION.M7_X_IN_WH_RISE",
+     "skill": "ENGL.G7.LISTEN.T14_CONSONANT_SOUNDS_AND.INTONATION",
+     "error": "Raises the voice at the end of WH questions.",
+     "example": {
+      "question": "Say: Who scored the goal?",
+      "wrong_answer": "rising at goal",
+      "correct_answer": "falling at goal"
+     },
+     "cause": "All questions are thought to rise.",
+     "reveals": "Offer \"rising at goal\" beside \"falling at goal\" in a fresh sentence or text and ask again; picking it again shows the error is still there.",
+     "help": "WH questions fall.",
+     "feedback": "WH questions fall.",
+     "source": "to confirm by a Kenyan English teacher: a common classroom error of Kenyan learners of English, written offline (18 Nov 2026), not traced to a study",
+     "status": "draft"
+    },
+    {
+     "code": "ENGL.G7.LISTEN.T14_CONSONANT_SOUNDS_AND.INTONATION.M7_X_IN_YESNO_FLAT",
+     "skill": "ENGL.G7.LISTEN.T14_CONSONANT_SOUNDS_AND.INTONATION",
+     "error": "Keeps yes or no questions flat.",
+     "example": {
+      "question": "Say: Did the team win?",
+      "wrong_answer": "flat",
+      "correct_answer": "rising at win"
+     },
+     "cause": "Home languages mark questions with a word.",
+     "reveals": "Offer \"flat\" beside \"rising at win\" in a fresh sentence or text and ask again; picking it again shows the error is still there.",
+     "help": "Rise at the end.",
+     "feedback": "Rise at the end.",
+     "source": "to confirm by a Kenyan English teacher: a common classroom error of Kenyan learners of English, written offline (18 Nov 2026), not traced to a study",
+     "status": "draft"
+    },
+    {
+     "code": "ENGL.G7.LISTEN.T14_CONSONANT_SOUNDS_AND.INTONATION.M7_X_IN_STATEMENT_QUESTION",
+     "skill": "ENGL.G7.LISTEN.T14_CONSONANT_SOUNDS_AND.INTONATION",
+     "error": "Turns a statement into a question only by adding a question mark, keeping a falling tune.",
+     "example": {
+      "question": "Say \"You are the captain?\" as a surprised question.",
+      "wrong_answer": "falling tune",
+      "correct_answer": "rising tune"
+     },
+     "cause": "The written mark is not linked to the voice.",
+     "reveals": "Offer \"falling tune\" beside \"rising tune\" in a fresh sentence or text and ask again; picking it again shows the error is still there.",
+     "help": "Rise to make it a question.",
+     "feedback": "Rise to make it a question.",
+     "source": "to confirm by a Kenyan English teacher: a common classroom error of Kenyan learners of English, written offline (18 Nov 2026), not traced to a study",
+     "status": "draft"
+    },
+    {
+     "code": "ENGL.G7.LISTEN.T14_CONSONANT_SOUNDS_AND.INTONATION.M7_X_IN_TAG",
+     "skill": "ENGL.G7.LISTEN.T14_CONSONANT_SOUNDS_AND.INTONATION",
+     "error": "Uses a rising tune on a question tag when sure.",
+     "example": {
+      "question": "You are sure. Say: It was a great match, wasn't it?",
+      "wrong_answer": "rising on wasn't it",
+      "correct_answer": "falling on wasn't it"
+     },
+     "cause": "All tags are said like questions.",
+     "reveals": "Offer \"rising on wasn't it\" beside \"falling on wasn't it\" in a fresh sentence or text and ask again; picking it again shows the error is still there.",
+     "help": "Fall when you expect agreement.",
+     "feedback": "Fall when you expect agreement.",
+     "source": "to confirm by a Kenyan English teacher: a common classroom error of Kenyan learners of English, written offline (18 Nov 2026), not traced to a study",
      "status": "draft"
     }
    ],
@@ -12634,10 +15086,18 @@
        "reason": "This skill builds on it. Proposed, to confirm by a Kenyan English teacher.",
        "strength": "essential",
        "status": "proposed"
+      },
+      {
+       "requires": "ENGL.G6.LANGUA.T4_WORD_CLASSES.INDEFINITE_PRONOUNS",
+       "kind": "skill",
+       "strength": "essential",
+       "reason": "Grade 6 English taught it first. Proposed, to confirm by a Kenyan English teacher.",
+       "status": "proposed"
       }
      ],
      "leads_to": [],
-     "status": "proposed"
+     "status": "proposed",
+     "assessed_by": "questions"
     }
    ],
    "misconceptions": [
@@ -12877,7 +15337,8 @@
        "reason": "Grade 8 English builds on this skill. Proposed, to confirm by a Kenyan English teacher."
       }
      ],
-     "status": "proposed"
+     "status": "proposed",
+     "assessed_by": "questions"
     }
    ],
    "misconceptions": [
@@ -13067,7 +15528,53 @@
        "reason": "Grade 8 English builds on this skill. Proposed, to confirm by a Kenyan English teacher."
       }
      ],
-     "status": "proposed"
+     "status": "proposed",
+     "assessed_by": "questions"
+    },
+    {
+     "code": "ENGL.G7.WRITIN.T14_DESCRIPTIVE_WRITING_.DESCRIPTIVE_COMPOSITION",
+     "name": "Write a descriptive composition of 200 to 240 words",
+     "outcomes": [
+      "ENGL.G7.WRITIN.T14_DESCRIPTIVE_WRITING_.b"
+     ],
+     "mastery": "The child describes one person, thing or place in 200 to 240 words, through the senses and with similes and exact words, in a clear order, with an introduction and a conclusion. Evidence rule: two pieces of the learner's own writing marked Meeting Expectations or above on the KICD rubric indicator.",
+     "question_forms": [
+      "describe a place",
+      "describe a person",
+      "describe a match"
+     ],
+     "thinking": [
+      "creation",
+      "organisation"
+     ],
+     "horeb_skill_ids": [],
+     "prerequisites": [
+      {
+       "requires": "ENGL.G7.WRITIN.T14_DESCRIPTIVE_WRITING_.DESCRIPTIVE_FEATURES",
+       "kind": "skill",
+       "strength": "essential",
+       "reason": "What can be described. Proposed, to confirm by a Kenyan English teacher.",
+       "status": "proposed"
+      },
+      {
+       "requires": "ENGL.G6.WRITIN.T10_CREATIVE_WRITING.DESCRIPTIVE_COMPOSITION",
+       "kind": "skill",
+       "strength": "essential",
+       "reason": "Grade 6 English taught it first. Proposed, to confirm by a Kenyan English teacher.",
+       "status": "proposed"
+      },
+      {
+       "requires": "ENGL.G7.READIN.T14_FEATURES_OF_STYLE.STYLE",
+       "kind": "skill",
+       "strength": "essential",
+       "reason": "Similes and metaphors. Proposed, to confirm by a Kenyan English teacher.",
+       "status": "proposed"
+      }
+     ],
+     "leads_to": [],
+     "status": "proposed",
+     "assessed_by": "composition",
+     "no_family": true
     }
    ],
    "misconceptions": [
@@ -13133,6 +15640,70 @@
      "help": "Exact words let the reader picture it.",
      "feedback": "Use exact words (hot, soft, smoky) instead of vague words such as nice, good or very.",
      "source": "common learner error; to confirm by a Kenyan English teacher",
+     "status": "draft"
+    },
+    {
+     "code": "ENGL.G7.WRITIN.T14_DESCRIPTIVE_WRITING_.DESCRIPTIVE_COMPOSITION.M7_X_DC_NARRATES",
+     "skill": "ENGL.G7.WRITIN.T14_DESCRIPTIVE_WRITING_.DESCRIPTIVE_COMPOSITION",
+     "error": "Narrates events instead of describing.",
+     "example": {
+      "question": "Describe the football pitch.",
+      "wrong_answer": "We played a match and won.",
+      "correct_answer": "The pitch is a sea of green, its white lines fresh after the rain."
+     },
+     "cause": "Narrative is the most practised.",
+     "reveals": "Offer \"We played a match and won.\" beside \"The pitch is a sea of green, its white lines fresh after the rain.\" in a fresh sentence or text and ask again; picking it again shows the error is still there.",
+     "help": "Describe what it is like.",
+     "feedback": "Describe what it is like.",
+     "source": "to confirm by a Kenyan English teacher: a common classroom error of Kenyan learners of English, written offline (18 Nov 2026), not traced to a study",
+     "status": "draft"
+    },
+    {
+     "code": "ENGL.G7.WRITIN.T14_DESCRIPTIVE_WRITING_.DESCRIPTIVE_COMPOSITION.M7_X_DC_VAGUE",
+     "skill": "ENGL.G7.WRITIN.T14_DESCRIPTIVE_WRITING_.DESCRIPTIVE_COMPOSITION",
+     "error": "Uses vague words.",
+     "example": {
+      "question": "Improve: The crowd was nice.",
+      "wrong_answer": "The crowd was nice.",
+      "correct_answer": "The crowd roared like thunder."
+     },
+     "cause": "A small stock of words.",
+     "reveals": "Offer \"The crowd was nice.\" beside \"The crowd roared like thunder.\" in a fresh sentence or text and ask again; picking it again shows the error is still there.",
+     "help": "Exact words and a simile.",
+     "feedback": "Exact words and a simile.",
+     "source": "to confirm by a Kenyan English teacher: a common classroom error of Kenyan learners of English, written offline (18 Nov 2026), not traced to a study",
+     "status": "draft"
+    },
+    {
+     "code": "ENGL.G7.WRITIN.T14_DESCRIPTIVE_WRITING_.DESCRIPTIVE_COMPOSITION.M7_X_DC_SHORT",
+     "skill": "ENGL.G7.WRITIN.T14_DESCRIPTIVE_WRITING_.DESCRIPTIVE_COMPOSITION",
+     "error": "Writes far fewer than 200 words.",
+     "example": {
+      "question": "Is 90 words enough for a 200 to 240 word task?",
+      "wrong_answer": "Yes",
+      "correct_answer": "No"
+     },
+     "cause": "The child stops when the main features are named.",
+     "reveals": "Offer \"Yes\" beside \"No\" in a fresh sentence or text and ask again; picking it again shows the error is still there.",
+     "help": "Add a sense or a simile to each feature.",
+     "feedback": "Add a sense or a simile to each feature.",
+     "source": "to confirm by a Kenyan English teacher: a common classroom error of Kenyan learners of English, written offline (18 Nov 2026), not traced to a study",
+     "status": "draft"
+    },
+    {
+     "code": "ENGL.G7.WRITIN.T14_DESCRIPTIVE_WRITING_.DESCRIPTIVE_COMPOSITION.M7_X_DC_NO_ORDER",
+     "skill": "ENGL.G7.WRITIN.T14_DESCRIPTIVE_WRITING_.DESCRIPTIVE_COMPOSITION",
+     "error": "Jumps around the subject.",
+     "example": {
+      "question": "Better order for describing a stadium?",
+      "wrong_answer": "seats, pitch, seats, gate",
+      "correct_answer": "gate, seats, pitch"
+     },
+     "cause": "Details come as remembered.",
+     "reveals": "Offer \"seats, pitch, seats, gate\" beside \"gate, seats, pitch\" in a fresh sentence or text and ask again; picking it again shows the error is still there.",
+     "help": "Move through it in one direction.",
+     "feedback": "Move through it in one direction.",
+     "source": "to confirm by a Kenyan English teacher: a common classroom error of Kenyan learners of English, written offline (18 Nov 2026), not traced to a study",
      "status": "draft"
     }
    ],
@@ -13227,7 +15798,8 @@
      "code": "ENGL.G7.LISTEN.T15_ORAL_REPORTS.ORAL_REPORT",
      "name": "Know how an oral report of an event is organised",
      "outcomes": [
-      "ENGL.G7.LISTEN.T15_ORAL_REPORTS.a"
+      "ENGL.G7.LISTEN.T15_ORAL_REPORTS.a",
+      "ENGL.G7.LISTEN.T15_ORAL_REPORTS.b"
      ],
      "mastery": "Puts the parts of an oral report in order (greeting, what happened, who, when and where, the end), and picks the sentence that opens or closes a report, in 8 of 10 new items.",
      "question_forms": [
@@ -13247,6 +15819,13 @@
        "reason": "Grade 6 English taught it first. Proposed, to confirm by a Kenyan English teacher.",
        "strength": "essential",
        "status": "proposed"
+      },
+      {
+       "requires": "ENGL.G6.LISTEN.T9_PRONUNCIATION_AND_SP.SPEAK_FLUENTLY",
+       "kind": "skill",
+       "strength": "essential",
+       "reason": "Grade 6 English taught it first. Proposed, to confirm by a Kenyan English teacher.",
+       "status": "proposed"
       }
      ],
      "leads_to": [
@@ -13255,7 +15834,8 @@
        "reason": "Grade 8 English builds on this skill. Proposed, to confirm by a Kenyan English teacher."
       }
      ],
-     "status": "proposed"
+     "status": "proposed",
+     "assessed_by": "questions"
     }
    ],
    "misconceptions": [
@@ -13427,14 +16007,30 @@
       "reasoning"
      ],
      "horeb_skill_ids": [],
-     "prerequisites": [],
+     "prerequisites": [
+      {
+       "requires": "ENGL.G6.READIN.T8_FLUENCY.READ_FLUENTLY",
+       "kind": "skill",
+       "strength": "essential",
+       "reason": "Grade 6 English taught it first. Proposed, to confirm by a Kenyan English teacher.",
+       "status": "proposed"
+      },
+      {
+       "requires": "ENGL.G6.WRITIN.T7_MECHANICS_OF_WRITING.COMMA_USE",
+       "kind": "skill",
+       "strength": "essential",
+       "reason": "Grade 6 English taught it first. Proposed, to confirm by a Kenyan English teacher.",
+       "status": "proposed"
+      }
+     ],
      "leads_to": [
       {
        "skill": "ENGL.G8.READIN.T15_READING_FLUENCY.a",
        "reason": "Grade 8 English builds on this skill. Proposed, to confirm by a Kenyan English teacher."
       }
      ],
-     "status": "proposed"
+     "status": "proposed",
+     "assessed_by": "questions"
     }
    ],
    "misconceptions": [
@@ -13484,6 +16080,22 @@
      "help": "Fluent reading flows in groups of words.",
      "feedback": "A fluent reader reads words in groups and reads a text again to make it smooth. Stopping at every word breaks the flow.",
      "source": "common learner error; to confirm by a Kenyan English teacher",
+     "status": "draft"
+    },
+    {
+     "code": "ENGL.G7.READIN.T15_READING_FLUENCY.FLUENCY_STRATEGIES.M7_X_FL_NO_PREVIEW",
+     "skill": "ENGL.G7.READIN.T15_READING_FLUENCY.FLUENCY_STRATEGIES",
+     "error": "Reads aloud without first reading silently.",
+     "example": {
+      "question": "Before reading aloud to the class, you should ...",
+      "wrong_answer": "start at once",
+      "correct_answer": "read the text silently first"
+     },
+     "cause": "Reading aloud is treated as a first reading.",
+     "reveals": "Offer \"start at once\" beside \"read the text silently first\" in a fresh sentence or text and ask again; picking it again shows the error is still there.",
+     "help": "Read silently first to plan the expression.",
+     "feedback": "Read silently first to plan the expression.",
+     "source": "to confirm by a Kenyan English teacher: a common classroom error of Kenyan learners of English, written offline (18 Nov 2026), not traced to a study",
      "status": "draft"
     }
    ],
@@ -13615,7 +16227,8 @@
       }
      ],
      "leads_to": [],
-     "status": "proposed"
+     "status": "proposed",
+     "assessed_by": "questions"
     }
    ],
    "misconceptions": [
@@ -13846,7 +16459,8 @@
        "reason": "Grade 8 English builds on this skill. Proposed, to confirm by a Kenyan English teacher."
       }
      ],
-     "status": "proposed"
+     "status": "proposed",
+     "assessed_by": "questions"
     }
    ],
    "misconceptions": [
@@ -14024,10 +16638,56 @@
        "reason": "Grade 6 English taught it first. Proposed, to confirm by a Kenyan English teacher.",
        "strength": "essential",
        "status": "proposed"
+      },
+      {
+       "requires": "ENGL.G6.WRITIN.T4_FUNCTIONAL_WRITING.FORMAL_INVITATION",
+       "kind": "skill",
+       "strength": "essential",
+       "reason": "Grade 6 English taught it first. Proposed, to confirm by a Kenyan English teacher.",
+       "status": "proposed"
       }
      ],
      "leads_to": [],
-     "status": "proposed"
+     "status": "proposed",
+     "assessed_by": "questions"
+    },
+    {
+     "code": "ENGL.G7.WRITIN.T15_FUNCTIONAL_WRITING_N.NOTICE_DESIGN",
+     "name": "Design notices and posters on current issues",
+     "outcomes": [
+      "ENGL.G7.WRITIN.T15_FUNCTIONAL_WRITING_N.b"
+     ],
+     "mastery": "The child designs a notice (heading, what, when, where, who to contact, signed and dated) or a poster (big heading, few words, a picture, clear call to action) on a current issue. Evidence rule: two pieces of the learner's own writing marked Meeting Expectations or above on the KICD rubric indicator.",
+     "question_forms": [
+      "design a notice for",
+      "design a poster on",
+      "improve this poster"
+     ],
+     "thinking": [
+      "creation",
+      "organisation"
+     ],
+     "horeb_skill_ids": [],
+     "prerequisites": [
+      {
+       "requires": "ENGL.G7.WRITIN.T15_FUNCTIONAL_WRITING_N.NOTICE_POSTER",
+       "kind": "skill",
+       "strength": "essential",
+       "reason": "The format of notices and posters. Proposed, to confirm by a Kenyan English teacher.",
+       "status": "proposed"
+      },
+      {
+       "requires": "ENGL.G6.WRITIN.T4_FUNCTIONAL_WRITING.FORMAL_INVITATION",
+       "kind": "skill",
+       "strength": "essential",
+       "reason": "Grade 6 English taught it first. Proposed, to confirm by a Kenyan English teacher.",
+       "status": "proposed"
+      }
+     ],
+     "leads_to": [],
+     "status": "proposed",
+     "assessed_by": "composition",
+     "no_family": true
     }
    ],
    "misconceptions": [
@@ -14093,6 +16753,70 @@
      "help": "A reader must know who to ask.",
      "feedback": "A notice ends with the name and title of the writer and the date.",
      "source": "common learner error; to confirm by a Kenyan English teacher",
+     "status": "draft"
+    },
+    {
+     "code": "ENGL.G7.WRITIN.T15_FUNCTIONAL_WRITING_N.NOTICE_DESIGN.M7_X_ND_NO_DETAILS",
+     "skill": "ENGL.G7.WRITIN.T15_FUNCTIONAL_WRITING_N.NOTICE_DESIGN",
+     "error": "Leaves out when or where.",
+     "example": {
+      "question": "A notice about a clean-up: what must it include?",
+      "wrong_answer": "a picture",
+      "correct_answer": "the date, time and place"
+     },
+     "cause": "The writer knows the details.",
+     "reveals": "Offer \"a picture\" beside \"the date, time and place\" in a fresh sentence or text and ask again; picking it again shows the error is still there.",
+     "help": "Check what, when, where, who.",
+     "feedback": "Check what, when, where, who.",
+     "source": "to confirm by a Kenyan English teacher: a common classroom error of Kenyan learners of English, written offline (18 Nov 2026), not traced to a study",
+     "status": "draft"
+    },
+    {
+     "code": "ENGL.G7.WRITIN.T15_FUNCTIONAL_WRITING_N.NOTICE_DESIGN.M7_X_ND_POSTER_TEXT_HEAVY",
+     "skill": "ENGL.G7.WRITIN.T15_FUNCTIONAL_WRITING_N.NOTICE_DESIGN",
+     "error": "Fills a poster with long paragraphs.",
+     "example": {
+      "question": "Which is a better poster?",
+      "wrong_answer": "a page of small writing",
+      "correct_answer": "a big heading, few words and a picture"
+     },
+     "cause": "A poster is treated like an essay.",
+     "reveals": "Offer \"a page of small writing\" beside \"a big heading, few words and a picture\" in a fresh sentence or text and ask again; picking it again shows the error is still there.",
+     "help": "Few words, big heading.",
+     "feedback": "Few words, big heading.",
+     "source": "to confirm by a Kenyan English teacher: a common classroom error of Kenyan learners of English, written offline (18 Nov 2026), not traced to a study",
+     "status": "draft"
+    },
+    {
+     "code": "ENGL.G7.WRITIN.T15_FUNCTIONAL_WRITING_N.NOTICE_DESIGN.M7_X_ND_UNSIGNED",
+     "skill": "ENGL.G7.WRITIN.T15_FUNCTIONAL_WRITING_N.NOTICE_DESIGN",
+     "error": "Leaves the notice unsigned and undated.",
+     "example": {
+      "question": "What goes at the bottom of a notice?",
+      "wrong_answer": "nothing",
+      "correct_answer": "the name and title of the writer, and the date"
+     },
+     "cause": "Who wrote it seems obvious.",
+     "reveals": "Offer \"nothing\" beside \"the name and title of the writer, and the date\" in a fresh sentence or text and ask again; picking it again shows the error is still there.",
+     "help": "Sign and date it.",
+     "feedback": "Sign and date it.",
+     "source": "to confirm by a Kenyan English teacher: a common classroom error of Kenyan learners of English, written offline (18 Nov 2026), not traced to a study",
+     "status": "draft"
+    },
+    {
+     "code": "ENGL.G7.WRITIN.T15_FUNCTIONAL_WRITING_N.NOTICE_DESIGN.M7_X_ND_NO_ACTION",
+     "skill": "ENGL.G7.WRITIN.T15_FUNCTIONAL_WRITING_N.NOTICE_DESIGN",
+     "error": "Does not tell readers what to do.",
+     "example": {
+      "question": "Poster: \"Drugs are bad.\" What is missing?",
+      "wrong_answer": "nothing",
+      "correct_answer": "a call to action: Say no to drugs; call 1192 for help"
+     },
+     "cause": "The message stops at the problem.",
+     "reveals": "Offer \"nothing\" beside \"a call to action: Say no to drugs; call 1192 for help\" in a fresh sentence or text and ask again; picking it again shows the error is still there.",
+     "help": "Tell readers what to do.",
+     "feedback": "Tell readers what to do.",
+     "source": "to confirm by a Kenyan English teacher: a common classroom error of Kenyan learners of English, written offline (18 Nov 2026), not traced to a study",
      "status": "draft"
     }
    ],

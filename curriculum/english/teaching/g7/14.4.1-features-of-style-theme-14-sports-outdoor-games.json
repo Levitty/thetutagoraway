@@ -1,0 +1,91 @@
+{
+ "sub_strand": "ENGL.G7.READIN.T14_FEATURES_OF_STYLE",
+ "title": "Features of style (Theme 14: Sports - outdoor games)",
+ "status": "draft: written 18 Nov 2026 offline for Grade 7 English; not yet checked by a Kenyan English teacher; not loaded by the live tutor",
+ "notes": "",
+ "skills": [
+  {
+   "skill": "ENGL.G7.READIN.T14_FEATURES_OF_STYLE.STYLE",
+   "assessed_by": "questions",
+   "key_step": "The child names the device (simile, metaphor, dialogue) and what it adds.",
+   "floor": {
+    "prerequisite": "Knows similes and metaphors.",
+    "question": "\"He is a lion\" is ...",
+    "answer": "a metaphor"
+   },
+   "steps": [
+    "Find the device.",
+    "Name it.",
+    "Say what it adds."
+   ],
+   "contexts": [
+    "sports writing"
+   ],
+   "board": [
+    {
+     "beat": "write",
+     "do": "Write: Time is a thief."
+    },
+    {
+     "beat": "point",
+     "do": "Point at thief.",
+     "say": "Like or as?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for the child to answer."
+    },
+    {
+     "beat": "child_draws",
+     "do": "The child names it."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "ENGL.G7.READIN.T14_FEATURES_OF_STYLE.STYLE.M7_ST_SIMILE_METAPHOR",
+     "listen_for": [
+      "He ran like the wind."
+     ],
+     "ask": "Like or as?",
+     "repair": "Metaphor."
+    },
+    {
+     "code": "ENGL.G7.READIN.T14_FEATURES_OF_STYLE.STYLE.M7_ST_DIALOGUE",
+     "listen_for": [
+      "The sun rose over the hill."
+     ],
+     "ask": "Speaking?",
+     "repair": "Dialogue."
+    },
+    {
+     "code": "ENGL.G7.READIN.T14_FEATURES_OF_STYLE.STYLE.M7_ST_SIMILE_AS_LIKE",
+     "listen_for": [
+      "like"
+     ],
+     "ask": "As ... as?",
+     "repair": "As."
+    },
+    {
+     "code": "ENGL.G7.READIN.T14_FEATURES_OF_STYLE.STYLE.M7_ST_LITERAL_METAPHOR",
+     "listen_for": [
+      "there were animals in it"
+     ],
+     "ask": "Real animals?",
+     "repair": "Noisy."
+    }
+   ],
+   "checks": [
+    {
+     "question": "\"as fast as a cheetah\" is a ...",
+     "answer": "simile",
+     "shows": "simile"
+    },
+    {
+     "question": "\"The class was a zoo\" means ...",
+     "answer": "the class was noisy",
+     "shows": "metaphor"
+    }
+   ]
+  }
+ ]
+}

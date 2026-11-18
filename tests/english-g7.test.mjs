@@ -2,6 +2,7 @@
 // All draft and off for children until a Kenyan English teacher signs them off.
 import { test } from 'node:test';
 import assert from 'node:assert/strict';
+import { depthFailures } from '../scripts/lib/english-depth.mjs';
 import { readFileSync } from 'node:fs';
 import { textFailures } from '../engine/scripts/english_checks.mjs';
 import { SKILLS, OUTCOMES, MIS_FEEDBACK } from '../src/ai-tutor/content/curriculumMap.english.g7.js';
@@ -74,4 +75,20 @@ test('Grade 7 skills lead only to real Grade 8 outcomes', () => {
   let n = 0;
   for (const k of subs.flatMap(s => s.skills)) for (const l of k.leads_to || []) { assert.ok(codes.has(l.skill), `${k.code} -> ${l.skill}`); n++; }
   assert.ok(n >= 20);
+});
+
+// Depth pass (18 Nov 2026, Tuta Workspace/HOREB_MAPPING_PLAN.md): the Grade 5 Maths standard. Every testable outcome has a skill,
+// every skill two prerequisites, four misconceptions and a teaching pack entry (curriculum/english/teaching/g7/), and the SQL loads it all.
+test('Grade 7 English is at the depth standard: skills, prerequisites, misconceptions and teaching pack', () => {
+  assert.deepEqual(depthFailures(7), []);
+});
+
+test('the Grade 7 English SQL loads every skill, prerequisite and misconception (run node scripts/build-maths-sql-grade.mjs english 7)', () => {
+  const doc = JSON.parse(readFileSync(new URL('../curriculum/english/g7.json', import.meta.url), 'utf8'));
+  const sql = readFileSync(new URL('../supabase/migrations/20261130_english_g7_skills_misconceptions.sql', import.meta.url), 'utf8');
+  const count = (re) => (sql.match(re) || []).length;
+  assert.equal(count(/^INSERT INTO public\.curriculum_skills /gm), doc.totals.skills);
+  assert.equal(count(/^INSERT INTO public\.curriculum_prerequisites /gm), doc.totals.prerequisites);
+  assert.equal(count(/^INSERT INTO public\.curriculum_misconceptions /gm), doc.totals.misconceptions);
+  assert.ok(/^BEGIN;$/m.test(sql) && /^COMMIT;$/m.test(sql) && /ON CONFLICT \(code\) DO UPDATE/.test(sql), 'not one idempotent transaction');
 });

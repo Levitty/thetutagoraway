@@ -1,0 +1,108 @@
+{
+ "sub_strand": "ENGL.G7.GRAMMA.T15_AFFIRMATIVE_AND_NEGA",
+ "title": "Affirmative and Negative Sentences (Theme 15: Tourist attraction sites - kenya)",
+ "status": "draft: written 18 Nov 2026 offline for Grade 7 English; not yet checked by a Kenyan English teacher; not loaded by the live tutor",
+ "notes": "",
+ "skills": [
+  {
+   "skill": "ENGL.G7.GRAMMA.T15_AFFIRMATIVE_AND_NEGA.NEGATIVES",
+   "assessed_by": "questions",
+   "key_step": "The child forms negatives with one negative word and the helping verb in the right place.",
+   "floor": {
+    "prerequisite": "Uses tags.",
+    "question": "She is here, ___?",
+    "answer": "isn't she"
+   },
+   "steps": [
+    "One negative.",
+    "Doesn't for he, she, it.",
+    "Did not + plain verb.",
+    "Not after be."
+   ],
+   "contexts": [
+    "tourist sites"
+   ],
+   "board": [
+    {
+     "beat": "write",
+     "do": "Write: She not is here."
+    },
+    {
+     "beat": "point",
+     "do": "Point at not.",
+     "say": "Where does not go?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for the child to answer."
+    },
+    {
+     "beat": "child_draws",
+     "do": "The child fixes don't/doesn't."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "ENGL.G7.GRAMMA.T15_AFFIRMATIVE_AND_NEGA.NEGATIVES.M7_NG_DOUBLE",
+     "listen_for": [
+      "no"
+     ],
+     "ask": "Two negatives?",
+     "repair": "One."
+    },
+    {
+     "code": "ENGL.G7.GRAMMA.T15_AFFIRMATIVE_AND_NEGA.NEGATIVES.M7_NG_DONT_THIRD",
+     "listen_for": [
+      "don't"
+     ],
+     "ask": "He?",
+     "repair": "Doesn't."
+    },
+    {
+     "code": "ENGL.G7.GRAMMA.T15_AFFIRMATIVE_AND_NEGA.NEGATIVES.M7_NG_DID_PAST",
+     "listen_for": [
+      "went"
+     ],
+     "ask": "After did?",
+     "repair": "Go."
+    },
+    {
+     "code": "ENGL.G7.GRAMMA.T15_AFFIRMATIVE_AND_NEGA.NEGATIVES.M7_NG_NOT_PLACE",
+     "listen_for": [
+      "She not is here."
+     ],
+     "ask": "After is?",
+     "repair": "Is not."
+    },
+    {
+     "code": "ENGL.G7.GRAMMA.T15_AFFIRMATIVE_AND_NEGA.NEGATIVES.M7_NG_NO_NOT",
+     "listen_for": [
+      "no"
+     ],
+     "ask": "No or not?",
+     "repair": "Not."
+    },
+    {
+     "code": "ENGL.G7.GRAMMA.T15_AFFIRMATIVE_AND_NEGA.NEGATIVES.M7_NG_KIND",
+     "listen_for": [
+      "Everybody came."
+     ],
+     "ask": "Negative of everybody came?",
+     "repair": "Nobody came."
+    }
+   ],
+   "checks": [
+    {
+     "question": "He ___ like tea. (don't/doesn't)",
+     "answer": "doesn't",
+     "shows": "third person"
+    },
+    {
+     "question": "I did not ___ (go).",
+     "answer": "go",
+     "shows": "did"
+    }
+   ]
+  }
+ ]
+}

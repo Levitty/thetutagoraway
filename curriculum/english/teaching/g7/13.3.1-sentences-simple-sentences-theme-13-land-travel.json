@@ -1,0 +1,92 @@
+{
+ "sub_strand": "ENGL.G7.GRAMMA.T13_SENTENCES_SIMPLE_SEN",
+ "title": "Sentences: Simple Sentences (Theme 13: Land travel)",
+ "status": "draft: written 18 Nov 2026 offline for Grade 7 English; not yet checked by a Kenyan English teacher; not loaded by the live tutor",
+ "notes": "",
+ "skills": [
+  {
+   "skill": "ENGL.G7.GRAMMA.T13_SENTENCES_SIMPLE_SEN.SIMPLE_SENTENCE",
+   "assessed_by": "questions",
+   "key_step": "The child checks a sentence has one subject and one finite verb and one complete idea.",
+   "floor": {
+    "prerequisite": "Uses conjunctions.",
+    "question": "Join two ideas.",
+    "answer": "with and"
+   },
+   "steps": [
+    "Subject.",
+    "Verb.",
+    "One idea.",
+    "Full stop."
+   ],
+   "contexts": [
+    "land travel"
+   ],
+   "board": [
+    {
+     "beat": "write",
+     "do": "Write: The tall girl from Nyeri."
+    },
+    {
+     "beat": "point",
+     "do": "Point at the end.",
+     "say": "Is there a verb?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for the child to answer."
+    },
+    {
+     "beat": "child_draws",
+     "do": "The child completes it."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "ENGL.G7.GRAMMA.T13_SENTENCES_SIMPLE_SEN.SIMPLE_SENTENCE.M7_SS_FRAGMENT",
+     "listen_for": [
+      "The tall girl from Kisumu."
+     ],
+     "ask": "Verb?",
+     "repair": "Add one."
+    },
+    {
+     "code": "ENGL.G7.GRAMMA.T13_SENTENCES_SIMPLE_SEN.SIMPLE_SENTENCE.M7_SS_COMPOUND",
+     "listen_for": [
+      "Kamau ran fast, but he lost the race."
+     ],
+     "ask": "Two ideas?",
+     "repair": "One idea."
+    },
+    {
+     "code": "ENGL.G7.GRAMMA.T13_SENTENCES_SIMPLE_SEN.SIMPLE_SENTENCE.M7_SS_RUN_ON",
+     "listen_for": [
+      "We arrived it was dark."
+     ],
+     "ask": "Two sentences?",
+     "repair": "Full stop."
+    },
+    {
+     "code": "ENGL.G7.GRAMMA.T13_SENTENCES_SIMPLE_SEN.SIMPLE_SENTENCE.M7_SS_NOT_SENTENCE",
+     "listen_for": [
+      "Red apples and ripe mangoes."
+     ],
+     "ask": "Complete?",
+     "repair": "Add a verb."
+    }
+   ],
+   "checks": [
+    {
+     "question": "Is \"Red apples and ripe mangoes.\" a sentence?",
+     "answer": "No",
+     "shows": "fragment"
+    },
+    {
+     "question": "Fix: We arrived it was dark.",
+     "answer": "We arrived. It was dark.",
+     "shows": "run-on"
+    }
+   ]
+  }
+ ]
+}

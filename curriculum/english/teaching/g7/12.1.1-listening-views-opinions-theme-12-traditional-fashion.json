@@ -1,0 +1,91 @@
+{
+ "sub_strand": "ENGL.G7.LISTEN.T12_LISTENING_VIEWS_OPIN",
+ "title": "Listening: Views/ Opinions (Theme 12: Traditional fashion)",
+ "status": "draft: written 18 Nov 2026 offline for Grade 7 English; not yet checked by a Kenyan English teacher; not loaded by the live tutor",
+ "notes": "",
+ "skills": [
+  {
+   "skill": "ENGL.G7.LISTEN.T12_LISTENING_VIEWS_OPIN.OPINION_PHRASES",
+   "assessed_by": "questions",
+   "key_step": "The child uses an opinion phrase with a reason and disagrees politely.",
+   "floor": {
+    "prerequisite": "Tells fact from opinion.",
+    "question": "Fact or opinion: Kenya has 47 counties.",
+    "answer": "fact"
+   },
+   "steps": [
+    "In my opinion / I believe ...",
+    "because ...",
+    "Disagree: I see your point, but ..."
+   ],
+   "contexts": [
+    "traditional fashion"
+   ],
+   "board": [
+    {
+     "beat": "write",
+     "do": "Write: I believe that ___ because ___."
+    },
+    {
+     "beat": "point",
+     "do": "Point at because.",
+     "say": "Give a reason."
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for the child to answer."
+    },
+    {
+     "beat": "child_draws",
+     "do": "The child disagrees politely."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "ENGL.G7.LISTEN.T12_LISTENING_VIEWS_OPIN.OPINION_PHRASES.M7_OP_FACT",
+     "listen_for": [
+      "Kenya has 47 counties."
+     ],
+     "ask": "Fact or opinion?",
+     "repair": "Opinion phrase."
+    },
+    {
+     "code": "ENGL.G7.LISTEN.T12_LISTENING_VIEWS_OPIN.OPINION_PHRASES.M7_OP_PHRASE",
+     "listen_for": [
+      "First of all"
+     ],
+     "ask": "Order word or opinion?",
+     "repair": "I believe."
+    },
+    {
+     "code": "ENGL.G7.LISTEN.T12_LISTENING_VIEWS_OPIN.OPINION_PHRASES.M7_OP_RUDE_DISAGREE",
+     "listen_for": [
+      "That is nonsense."
+     ],
+     "ask": "Polite?",
+     "repair": "I see your point."
+    },
+    {
+     "code": "ENGL.G7.LISTEN.T12_LISTENING_VIEWS_OPIN.OPINION_PHRASES.M7_OP_NO_REASON",
+     "listen_for": [
+      "I think school uniform is bad."
+     ],
+     "ask": "Why?",
+     "repair": "Add because."
+    }
+   ],
+   "checks": [
+    {
+     "question": "Polite disagreement?",
+     "answer": "I see your point, but ...",
+     "shows": "polite"
+    },
+    {
+     "question": "Opinion phrase?",
+     "answer": "I believe that",
+     "shows": "phrase"
+    }
+   ]
+  }
+ ]
+}
