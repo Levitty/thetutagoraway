@@ -6222,6 +6222,1253 @@ export const TEACHING_PACK_G9 = {
   "sub_strand": "MATH.G9.ALGEBR.LINEAR_INEQUALITIES",
   "sub_strand_name": "Linear Inequalities",
   "status": "draft: written 18 Nov 2026 offline for Grade 9; not yet checked by a Kenyan maths teacher; not loaded by the live tutor"
+ },
+ "MATH.G9.MEASUR.AREA.AREA_REGULAR_POLYGON": {
+  "skill": "MATH.G9.MEASUR.AREA.AREA_REGULAR_POLYGON",
+  "key_step": "The child draws the lines from the centre to each corner, counts the triangles, finds one, then multiplies.",
+  "floor": {
+   "prerequisite": "Finds the area of a triangle.",
+   "question": "Base 8 cm, height 7 cm",
+   "answer": "28 square cm"
+  },
+  "representations": [
+   "a polygon split into triangles from the centre",
+   "the centre angle 360 / n",
+   "one triangle drawn large"
+  ],
+  "steps": [
+   "Join the centre to every corner.",
+   "Count the triangles: one per side.",
+   "One triangle: half base times height.",
+   "Multiply by the number of triangles."
+  ],
+  "contexts": [
+   "hexagonal paving slabs",
+   "a pentagon-shaped garden bed",
+   "a hexagonal table top at a jua kali shop"
+  ],
+  "board": [
+   {
+    "beat": "draw",
+    "do": "Draw a regular hexagon and join the centre to each corner."
+   },
+   {
+    "beat": "point",
+    "do": "Point at the triangles.",
+    "say": "How many triangles?"
+   },
+   {
+    "beat": "count",
+    "do": "Count them with the child."
+   },
+   {
+    "beat": "point",
+    "do": "Point at one triangle.",
+    "say": "Its area is half of base times height. Then what?"
+   },
+   {
+    "beat": "reveal",
+    "do": "Write 6 x one triangle."
+   }
+  ],
+  "misconceptions": [
+   {
+    "code": "MATH.G9.MEASUR.AREA.AREA_REGULAR_POLYGON.M_ONE_TRIANGLE_ONLY",
+    "listen_for": [
+     "24"
+    ],
+    "ask": "How many triangles make the hexagon?",
+    "repair": "Six.",
+    "error": "Gives the area of one triangle as the area of the polygon.",
+    "example": {
+     "question": "Hexagon of 6 triangles, each 24 square cm. Area?",
+     "wrong_answer": "24",
+     "correct_answer": "144"
+    }
+   },
+   {
+    "code": "MATH.G9.MEASUR.AREA.AREA_REGULAR_POLYGON.M_TRIANGLE_HALF_LEFT_OUT",
+    "listen_for": [
+     "56"
+    ],
+    "ask": "Is a triangle a rectangle?",
+    "repair": "Half of it.",
+    "error": "Forgets the half in the area of a triangle.",
+    "example": {
+     "question": "Triangle base 8 cm, height 7 cm. Area?",
+     "wrong_answer": "56",
+     "correct_answer": "28"
+    }
+   },
+   {
+    "code": "MATH.G9.MEASUR.AREA.AREA_REGULAR_POLYGON.M_TRIANGLE_COUNT_WRONG",
+    "listen_for": [
+     "6 for a pentagon"
+    ],
+    "ask": "How many sides has a pentagon?",
+    "repair": "Five: five triangles.",
+    "error": "Uses the wrong number of triangles (5 for a hexagon, 6 for a pentagon).",
+    "example": {
+     "question": "A regular pentagon splits into how many triangles from the centre?",
+     "wrong_answer": "6",
+     "correct_answer": "5"
+    }
+   },
+   {
+    "code": "MATH.G9.MEASUR.AREA.AREA_REGULAR_POLYGON.M_PERIMETER_FOR_AREA",
+    "listen_for": [
+     "48"
+    ],
+    "ask": "Is that the distance round or the space inside?",
+    "repair": "The distance round.",
+    "error": "Gives the distance round the polygon as its area.",
+    "example": {
+     "question": "Hexagon of side 8 cm. Area?",
+     "wrong_answer": "48",
+     "correct_answer": "six triangles of half 8 x height"
+    }
+   },
+   {
+    "code": "MATH.G9.MEASUR.AREA.AREA_REGULAR_POLYGON.M_CENTRE_ANGLE_180",
+    "listen_for": [
+     "36"
+    ],
+    "ask": "How far round the centre do the triangles go?",
+    "repair": "All the way: 360.",
+    "error": "Divides 180 degrees by the number of sides for the centre angle.",
+    "example": {
+     "question": "Centre angle of a regular pentagon?",
+     "wrong_answer": "36",
+     "correct_answer": "72"
+    }
+   },
+   {
+    "code": "MATH.G9.MEASUR.AREA.AREA_REGULAR_POLYGON.M_CENTRE_AS_INTERIOR",
+    "listen_for": [
+     "120"
+    ],
+    "ask": "Is that the angle at a corner or at the centre?",
+    "repair": "A corner: the centre is 60.",
+    "error": "Gives the interior angle of the polygon as the angle at the centre.",
+    "example": {
+     "question": "Centre angle of a regular hexagon?",
+     "wrong_answer": "120",
+     "correct_answer": "60"
+    }
+   },
+   {
+    "code": "MATH.G9.MEASUR.AREA.AREA_REGULAR_POLYGON.M_SIDE_AS_ANGLE",
+    "listen_for": [
+     "used the length"
+    ],
+    "ask": "Can a length be an angle?",
+    "repair": "No: 360 / 5.",
+    "error": "Uses the side length to find the centre angle.",
+    "example": {
+     "question": "Regular pentagon of side 72 cm: centre angle?",
+     "wrong_answer": "from 72 cm",
+     "correct_answer": "72 degrees, from 360 / 5"
+    }
+   }
+  ],
+  "checks": [
+   {
+    "question": "A regular hexagon has 6 triangles, each with base 10 cm and height 8.7 cm. Area?",
+    "answer": "261 square cm",
+    "shows": "six triangles"
+   },
+   {
+    "question": "Centre angle of a regular pentagon?",
+    "answer": "72 degrees",
+    "shows": "centre angle"
+   }
+  ],
+  "name": "Find the area of a regular pentagon or hexagon by splitting it into triangles from the centre",
+  "sub_strand": "MATH.G9.MEASUR.AREA",
+  "sub_strand_name": "Area",
+  "status": "draft: written 18 Nov 2026 offline for Grade 9; not yet checked by a Kenyan maths teacher; not loaded by the live tutor"
+ },
+ "MATH.G9.MEASUR.AREA.AREA_COMPOSITE_PENTAGON": {
+  "skill": "MATH.G9.MEASUR.AREA.AREA_COMPOSITE_PENTAGON",
+  "key_step": "The child draws the dividing line, labels each part, and writes one area for each part before adding.",
+  "floor": {
+   "prerequisite": "Finds the area of a rectangle and a triangle.",
+   "question": "Rectangle 8 by 12; triangle base 8, height 5",
+   "answer": "96 and 20"
+  },
+  "representations": [
+   "the shape split by a dashed line",
+   "a table of parts and areas",
+   "a sketch with lengths"
+  ],
+  "steps": [
+   "Split the shape into a rectangle and triangles.",
+   "Area of each part.",
+   "Add the parts.",
+   "Check that no part is left out or counted twice."
+  ],
+  "contexts": [
+   "a plot with a pointed end",
+   "the gable end of a house",
+   "a school sign board"
+  ],
+  "board": [
+   {
+    "beat": "draw",
+    "do": "Draw a pentagon made of a rectangle with a triangle on top."
+   },
+   {
+    "beat": "child_draws",
+    "do": "The child draws the line that splits it."
+   },
+   {
+    "beat": "point",
+    "do": "Point at each part.",
+    "say": "What is the area of each?"
+   },
+   {
+    "beat": "reveal",
+    "do": "Write 96 + 20 = 116 square m."
+   }
+  ],
+  "misconceptions": [
+   {
+    "code": "MATH.G9.MEASUR.AREA.AREA_COMPOSITE_PENTAGON.M_RECT_PERIMETER_FOR_AREA",
+    "listen_for": [
+     "40"
+    ],
+    "ask": "Is that the fence or the ground?",
+    "repair": "The fence: multiply for the ground.",
+    "error": "Works out the perimeter of the rectangle instead of its area.",
+    "example": {
+     "question": "Rectangle 8 m by 12 m. Area?",
+     "wrong_answer": "40",
+     "correct_answer": "96"
+    }
+   },
+   {
+    "code": "MATH.G9.MEASUR.AREA.AREA_COMPOSITE_PENTAGON.M_SIDES_ADDED_FOR_AREA",
+    "listen_for": [
+     "20"
+    ],
+    "ask": "Does area add or multiply?",
+    "repair": "Multiply.",
+    "error": "Adds two sides for an area.",
+    "example": {
+     "question": "Rectangle 8 m by 12 m. Area?",
+     "wrong_answer": "20",
+     "correct_answer": "96"
+    }
+   },
+   {
+    "code": "MATH.G9.MEASUR.AREA.AREA_COMPOSITE_PENTAGON.M_TRIANGLE_PART_LEFT_OUT",
+    "listen_for": [
+     "96"
+    ],
+    "ask": "Where is the triangle?",
+    "repair": "Add it.",
+    "error": "Gives the rectangle's area as the pentagon's, leaving out the triangle.",
+    "example": {
+     "question": "Rectangle 96 square m plus a triangle 20 square m. Plot?",
+     "wrong_answer": "96",
+     "correct_answer": "116"
+    }
+   },
+   {
+    "code": "MATH.G9.MEASUR.AREA.AREA_COMPOSITE_PENTAGON.M_RECTANGLE_PART_LEFT_OUT",
+    "listen_for": [
+     "20"
+    ],
+    "ask": "Where is the rectangle?",
+    "repair": "Add it.",
+    "error": "Gives only the triangle's area.",
+    "example": {
+     "question": "Rectangle 96 square m plus a triangle 20 square m. Plot?",
+     "wrong_answer": "20",
+     "correct_answer": "116"
+    }
+   }
+  ],
+  "checks": [
+   {
+    "question": "A plot: rectangle 10 m by 15 m with a triangle of base 10 m and height 6 m. Area?",
+    "answer": "180 square m",
+    "shows": "parts added"
+   },
+   {
+    "question": "A gable end: rectangle 6 m by 3 m with a triangle of base 6 m and height 2 m. Area?",
+    "answer": "24 square m",
+    "shows": "parts added"
+   }
+  ],
+  "name": "Find the area of a pentagon or hexagon made of rectangles and triangles",
+  "sub_strand": "MATH.G9.MEASUR.AREA",
+  "sub_strand_name": "Area",
+  "status": "draft: written 18 Nov 2026 offline for Grade 9; not yet checked by a Kenyan maths teacher; not loaded by the live tutor"
+ },
+ "MATH.G9.MEASUR.AREA.SA_PRISM": {
+  "skill": "MATH.G9.MEASUR.AREA.SA_PRISM",
+  "key_step": "The child sketches the prism and ticks every face that is really there before adding areas.",
+  "floor": {
+   "prerequisite": "Finds the surface area of a cuboid.",
+   "question": "2 by 3 by 4",
+   "answer": "52"
+  },
+  "representations": [
+   "a net of the prism",
+   "a list of faces",
+   "a sketch with lengths"
+  ],
+  "steps": [
+   "Sketch and list the faces.",
+   "Two ends: area of each.",
+   "One rectangle for each side of the end: side times length.",
+   "Add, leaving out open faces."
+  ],
+  "contexts": [
+   "a wooden doorstop",
+   "a metal water trough for cattle",
+   "a tent"
+  ],
+  "board": [
+   {
+    "beat": "draw",
+    "do": "Draw a triangular prism with ends 3, 4, 5 cm and length 10 cm."
+   },
+   {
+    "beat": "point",
+    "do": "Point at the ends.",
+    "say": "How many ends?"
+   },
+   {
+    "beat": "pause",
+    "do": "Wait for two."
+   },
+   {
+    "beat": "child_draws",
+    "do": "The child ticks each rectangular face."
+   },
+   {
+    "beat": "reveal",
+    "do": "Write 2 x 6 + (3 + 4 + 5) x 10 = 132."
+   }
+  ],
+  "misconceptions": [
+   {
+    "code": "MATH.G9.MEASUR.AREA.SA_PRISM.M_ONE_END_ONLY",
+    "listen_for": [
+     "126"
+    ],
+    "ask": "How many ends has a prism?",
+    "repair": "Two.",
+    "error": "Counts one end of the prism instead of two.",
+    "example": {
+     "question": "Ends 6 square cm each, rectangles 120 square cm. Surface area?",
+     "wrong_answer": "126",
+     "correct_answer": "132"
+    }
+   },
+   {
+    "code": "MATH.G9.MEASUR.AREA.SA_PRISM.M_PERIMETER_OF_END",
+    "listen_for": [
+     "12"
+    ],
+    "ask": "Is that round the end or inside it?",
+    "repair": "Round: area is half 3 x 4.",
+    "error": "Adds the sides of the end instead of finding its area.",
+    "example": {
+     "question": "Right-angled end with sides 3, 4, 5 cm. Area of one end?",
+     "wrong_answer": "12",
+     "correct_answer": "6"
+    }
+   },
+   {
+    "code": "MATH.G9.MEASUR.AREA.SA_PRISM.M_SLOPING_FACE_MISSING",
+    "listen_for": [
+     "70"
+    ],
+    "ask": "One rectangle for each side of the end: how many sides?",
+    "repair": "Three.",
+    "error": "Leaves out a sloping rectangular face.",
+    "example": {
+     "question": "Prism ends 3, 4, 5 cm, length 10 cm. Rectangles?",
+     "wrong_answer": "70",
+     "correct_answer": "120"
+    }
+   },
+   {
+    "code": "MATH.G9.MEASUR.AREA.SA_PRISM.M_VOLUME_FOR_SURFACE",
+    "listen_for": [
+     "60"
+    ],
+    "ask": "Does paint fill or cover?",
+    "repair": "Cover: faces.",
+    "error": "Works out the volume instead of the area of faces.",
+    "example": {
+     "question": "Prism with end 6 square cm, length 10 cm. Surface area?",
+     "wrong_answer": "60",
+     "correct_answer": "132"
+    }
+   },
+   {
+    "code": "MATH.G9.MEASUR.AREA.SA_PRISM.M_ENDS_LEFT_OUT",
+    "listen_for": [
+     "120"
+    ],
+    "ask": "Are the ends painted?",
+    "repair": "Yes: add them.",
+    "error": "Leaves out both ends.",
+    "example": {
+     "question": "Ends 6 square cm each, rectangles 120 square cm. Surface area?",
+     "wrong_answer": "120",
+     "correct_answer": "132"
+    }
+   },
+   {
+    "code": "MATH.G9.MEASUR.AREA.SA_PRISM.M_OPEN_TOP_COUNTED",
+    "listen_for": [
+     "counted the top"
+    ],
+    "ask": "Is the top of the trough metal?",
+    "repair": "No: leave it out.",
+    "error": "Counts a face that is open.",
+    "example": {
+     "question": "An open trough: is the top face metal?",
+     "wrong_answer": "Yes",
+     "correct_answer": "No"
+    }
+   },
+   {
+    "code": "MATH.G9.MEASUR.AREA.SA_PRISM.M_FACES_NOT_LISTED",
+    "listen_for": [
+     "all six"
+    ],
+    "ask": "Sketch it: which faces are there?",
+    "repair": "Bottom, two slopes, two ends.",
+    "error": "Adds faces without listing which ones exist, so one is counted wrongly.",
+    "example": {
+     "question": "A trough (open top): which faces?",
+     "wrong_answer": "all six",
+     "correct_answer": "bottom, two slopes, two ends"
+    }
+   }
+  ],
+  "checks": [
+   {
+    "question": "A tent (triangular prism): ends 6, 8, 10 m, length 12 m. Surface area, closed?",
+    "answer": "336 square m",
+    "shows": "listing faces"
+   },
+   {
+    "question": "A cuboid box 20 by 30 by 40 cm with no lid. Surface area?",
+    "answer": "4,000 square cm",
+    "shows": "open face left out"
+   }
+  ],
+  "name": "Work out the surface area of triangular and rectangular prisms",
+  "sub_strand": "MATH.G9.MEASUR.AREA",
+  "sub_strand_name": "Area",
+  "status": "draft: written 18 Nov 2026 offline for Grade 9; not yet checked by a Kenyan maths teacher; not loaded by the live tutor"
+ },
+ "MATH.G9.MEASUR.AREA.SA_PYRAMID": {
+  "skill": "MATH.G9.MEASUR.AREA.SA_PYRAMID",
+  "key_step": "The child draws the right-angled triangle inside the pyramid (height, half base, slant) and finds the slant before any face.",
+  "floor": {
+   "prerequisite": "Finds a hypotenuse.",
+   "question": "Sides 3 and 4",
+   "answer": "5"
+  },
+  "representations": [
+   "a sketch with the inner triangle",
+   "a net of four triangles and a square",
+   "a face drawn flat"
+  ],
+  "steps": [
+   "Slant height by Pythagoras from the height and half the base.",
+   "One face: half base times slant.",
+   "Four faces.",
+   "Add the base if it is there."
+  ],
+  "contexts": [
+   "a pyramid roof on a garden shelter",
+   "a model for a Geography lesson",
+   "a gift box"
+  ],
+  "board": [
+   {
+    "beat": "draw",
+    "do": "Draw a square-based pyramid and the triangle from the top, down the centre, to the middle of a side."
+   },
+   {
+    "beat": "point",
+    "do": "Point at the slant line.",
+    "say": "Which sides do we know?"
+   },
+   {
+    "beat": "pause",
+    "do": "Wait for the height and half the base."
+   },
+   {
+    "beat": "reveal",
+    "do": "Write slant = square root of (4 squared + 3 squared) = 5."
+   }
+  ],
+  "misconceptions": [
+   {
+    "code": "MATH.G9.MEASUR.AREA.SA_PYRAMID.M_SLANT_BY_ADDING",
+    "listen_for": [
+     "7"
+    ],
+    "ask": "Is the long side the sum of the short sides?",
+    "repair": "No: Pythagoras.",
+    "error": "Adds the vertical height and half the base for the slant height.",
+    "example": {
+     "question": "Height 4 cm, half base 3 cm. Slant height?",
+     "wrong_answer": "7",
+     "correct_answer": "5"
+    }
+   },
+   {
+    "code": "MATH.G9.MEASUR.AREA.SA_PYRAMID.M_VERTICAL_FOR_SLANT",
+    "listen_for": [
+     "4"
+    ],
+    "ask": "Does the height lie on the face?",
+    "repair": "No: the slant does.",
+    "error": "Uses the vertical height as the slant height.",
+    "example": {
+     "question": "Height 4 cm, half base 3 cm. Slant height?",
+     "wrong_answer": "4",
+     "correct_answer": "5"
+    }
+   },
+   {
+    "code": "MATH.G9.MEASUR.AREA.SA_PYRAMID.M_VERTICAL_ON_FACE",
+    "listen_for": [
+     "12"
+    ],
+    "ask": "Which height belongs to the triangular face?",
+    "repair": "The slant: 15.",
+    "error": "Uses the vertical height for the height of a triangular face.",
+    "example": {
+     "question": "Base 6 cm, vertical height 4 cm, slant 5 cm. One face?",
+     "wrong_answer": "12",
+     "correct_answer": "15"
+    }
+   },
+   {
+    "code": "MATH.G9.MEASUR.AREA.SA_PYRAMID.M_FACE_NOT_HALVED",
+    "listen_for": [
+     "30"
+    ],
+    "ask": "Is a face a triangle?",
+    "repair": "Yes: half.",
+    "error": "Forgets the half in a triangular face.",
+    "example": {
+     "question": "Base 6 cm, slant 5 cm. One face?",
+     "wrong_answer": "30",
+     "correct_answer": "15"
+    }
+   },
+   {
+    "code": "MATH.G9.MEASUR.AREA.SA_PYRAMID.M_BASE_LEFT_OUT",
+    "listen_for": [
+     "60"
+    ],
+    "ask": "Is the base covered?",
+    "repair": "Yes: add 36.",
+    "error": "Leaves out the base of a closed pyramid.",
+    "example": {
+     "question": "Four faces 60 square cm, base 36 square cm. Closed pyramid?",
+     "wrong_answer": "60",
+     "correct_answer": "96"
+    }
+   },
+   {
+    "code": "MATH.G9.MEASUR.AREA.SA_PYRAMID.M_BASE_COUNTED_OPEN",
+    "listen_for": [
+     "added the square"
+    ],
+    "ask": "Does the roof have a floor?",
+    "repair": "No.",
+    "error": "Adds the base for a roof that has no base.",
+    "example": {
+     "question": "A pyramid roof with no base: faces to paint?",
+     "wrong_answer": "four triangles and the square",
+     "correct_answer": "four triangles"
+    }
+   },
+   {
+    "code": "MATH.G9.MEASUR.AREA.SA_PYRAMID.M_ONE_FACE_ONLY",
+    "listen_for": [
+     "15"
+    ],
+    "ask": "How many faces slope?",
+    "repair": "Four.",
+    "error": "Uses one triangular face instead of four.",
+    "example": {
+     "question": "Each face 15 square cm. Four faces?",
+     "wrong_answer": "15",
+     "correct_answer": "60"
+    }
+   },
+   {
+    "code": "MATH.G9.MEASUR.AREA.SA_PYRAMID.M_SQUARE_SIDES_ADDED",
+    "listen_for": [
+     "12"
+    ],
+    "ask": "Area of a square?",
+    "repair": "Side times side.",
+    "error": "Adds the sides of the square base for its area.",
+    "example": {
+     "question": "Square base of side 6 cm. Area?",
+     "wrong_answer": "12",
+     "correct_answer": "36"
+    }
+   },
+   {
+    "code": "MATH.G9.MEASUR.AREA.SA_PYRAMID.M_AREA_NOT_COST",
+    "listen_for": [
+     "60"
+    ],
+    "ask": "Was the cost asked?",
+    "repair": "Yes: times the price.",
+    "error": "Gives the area when the cost is asked.",
+    "example": {
+     "question": "60 square m at 150 shillings a square m. Cost?",
+     "wrong_answer": "60",
+     "correct_answer": "9,000"
+    }
+   }
+  ],
+  "checks": [
+   {
+    "question": "A pyramid has a square base of side 8 cm and vertical height 3 cm. Slant height?",
+    "answer": "5 cm",
+    "shows": "Pythagoras"
+   },
+   {
+    "question": "Surface area of that pyramid, closed?",
+    "answer": "144 square cm",
+    "shows": "faces and base"
+   }
+  ],
+  "name": "Work out the surface area of pyramids, finding the slant height by Pythagoras",
+  "sub_strand": "MATH.G9.MEASUR.AREA",
+  "sub_strand_name": "Area",
+  "status": "draft: written 18 Nov 2026 offline for Grade 9; not yet checked by a Kenyan maths teacher; not loaded by the live tutor"
+ },
+ "MATH.G9.MEASUR.AREA.SECTOR_AREA": {
+  "skill": "MATH.G9.MEASUR.AREA.SECTOR_AREA",
+  "key_step": "The child writes the fraction angle/360 first, then multiplies the whole circle by it, or divides by the circle and multiplies by 360 to go back.",
+  "floor": {
+   "prerequisite": "Finds the area of a circle.",
+   "question": "Radius 7",
+   "answer": "154"
+  },
+  "representations": [
+   "a pizza or cake slice",
+   "the fraction angle/360",
+   "a circle split into quarters"
+  ],
+  "steps": [
+   "Area of the whole circle.",
+   "Fraction of the circle: angle over 360.",
+   "Multiply.",
+   "To go back: sector over circle, times 360."
+  ],
+  "contexts": [
+   "a security light sweeping a compound",
+   "a slice of birthday cake",
+   "a sprinkler watering a lawn"
+  ],
+  "board": [
+   {
+    "beat": "draw",
+    "do": "Draw a circle of radius 7 with a 90 degree sector shaded."
+   },
+   {
+    "beat": "point",
+    "do": "Point at the shaded part.",
+    "say": "What fraction of the circle is this?"
+   },
+   {
+    "beat": "pause",
+    "do": "Wait for a quarter."
+   },
+   {
+    "beat": "reveal",
+    "do": "Write 1/4 x 154 = 38.5."
+   }
+  ],
+  "misconceptions": [
+   {
+    "code": "MATH.G9.MEASUR.AREA.SECTOR_AREA.M_WHOLE_CIRCLE_AREA",
+    "listen_for": [
+     "154"
+    ],
+    "ask": "Is the whole circle lit?",
+    "repair": "No: a quarter.",
+    "error": "Gives the area of the whole circle.",
+    "example": {
+     "question": "Sector radius 7 m, 90 degrees. Area?",
+     "wrong_answer": "154",
+     "correct_answer": "38.5"
+    }
+   },
+   {
+    "code": "MATH.G9.MEASUR.AREA.SECTOR_AREA.M_ARC_FOR_AREA",
+    "listen_for": [
+     "11"
+    ],
+    "ask": "Is that the edge or the space?",
+    "repair": "The edge: use pi r squared.",
+    "error": "Works out the arc length instead of the area.",
+    "example": {
+     "question": "Sector radius 7 m, 90 degrees. Area?",
+     "wrong_answer": "11",
+     "correct_answer": "38.5"
+    }
+   },
+   {
+    "code": "MATH.G9.MEASUR.AREA.SECTOR_AREA.M_FRACTION_INVERTED",
+    "listen_for": [
+     "616"
+    ],
+    "ask": "Is the sector bigger than the circle?",
+    "repair": "No: angle over 360.",
+    "error": "Multiplies by 360/angle instead of angle/360.",
+    "example": {
+     "question": "Sector radius 7 m, 90 degrees. Area?",
+     "wrong_answer": "616",
+     "correct_answer": "38.5"
+    }
+   },
+   {
+    "code": "MATH.G9.MEASUR.AREA.SECTOR_AREA.M_TURN_AS_180",
+    "listen_for": [
+     "77"
+    ],
+    "ask": "How many degrees in a full turn?",
+    "repair": "360.",
+    "error": "Uses 180 degrees for a full turn.",
+    "example": {
+     "question": "Sector radius 7 m, 90 degrees. Area?",
+     "wrong_answer": "77",
+     "correct_answer": "38.5"
+    }
+   },
+   {
+    "code": "MATH.G9.MEASUR.AREA.SECTOR_AREA.M_FRACTION_NOT_TIMES_360",
+    "listen_for": [
+     "0.25"
+    ],
+    "ask": "Is 0.25 an angle?",
+    "repair": "No: times 360.",
+    "error": "Gives the fraction of the circle as the angle.",
+    "example": {
+     "question": "Sector area 38.5, circle 154. Angle?",
+     "wrong_answer": "0.25",
+     "correct_answer": "90"
+    }
+   },
+   {
+    "code": "MATH.G9.MEASUR.AREA.SECTOR_AREA.M_OTHER_SECTOR_ANGLE",
+    "listen_for": [
+     "270"
+    ],
+    "ask": "Is the slice the small part or the rest?",
+    "repair": "The small part.",
+    "error": "Gives the angle of the rest of the circle.",
+    "example": {
+     "question": "Sector area 38.5, circle 154. Angle?",
+     "wrong_answer": "270",
+     "correct_answer": "90"
+    }
+   },
+   {
+    "code": "MATH.G9.MEASUR.AREA.SECTOR_AREA.M_DIVIDE_BY_PI_R",
+    "listen_for": [
+     "divided by 22"
+    ],
+    "ask": "What is the area of the whole circle?",
+    "repair": "154.",
+    "error": "Divides by pi r instead of by the whole circle's area.",
+    "example": {
+     "question": "Sector area 38.5, radius 7. Fraction of the circle?",
+     "wrong_answer": "38.5 / 22",
+     "correct_answer": "38.5 / 154"
+    }
+   }
+  ],
+  "checks": [
+   {
+    "question": "A sector of radius 14 cm and angle 45 degrees. Area? (pi = 22/7)",
+    "answer": "77 square cm",
+    "shows": "fraction of circle"
+   },
+   {
+    "question": "A sector of radius 7 cm has area 77 square cm. Angle?",
+    "answer": "180 degrees",
+    "shows": "working back"
+   }
+  ],
+  "name": "Calculate the area of a sector, and the angle from the area",
+  "sub_strand": "MATH.G9.MEASUR.AREA",
+  "sub_strand_name": "Area",
+  "status": "draft: written 18 Nov 2026 offline for Grade 9; not yet checked by a Kenyan maths teacher; not loaded by the live tutor"
+ },
+ "MATH.G9.MEASUR.AREA.SEGMENT_AREA": {
+  "skill": "MATH.G9.MEASUR.AREA.SEGMENT_AREA",
+  "key_step": "The child shades the sector, then the triangle inside it, and takes the triangle away.",
+  "floor": {
+   "prerequisite": "Finds the area of a sector.",
+   "question": "Radius 7, 90 degrees",
+   "answer": "38.5"
+  },
+  "representations": [
+   "a circle with the chord drawn",
+   "sector minus triangle",
+   "shading"
+  ],
+  "steps": [
+   "Find the sector.",
+   "Find the triangle of the two radii.",
+   "Take the triangle from the sector.",
+   "Give the unit."
+  ],
+  "contexts": [
+   "a flower bed cut by a path",
+   "a window shaped like a segment",
+   "a piece of a round field"
+  ],
+  "board": [
+   {
+    "beat": "draw",
+    "do": "Draw a circle, a 90 degree sector and the chord across it."
+   },
+   {
+    "beat": "point",
+    "do": "Point at the triangle.",
+    "say": "What is the area of this triangle?"
+   },
+   {
+    "beat": "pause",
+    "do": "Wait for half of 7 x 7."
+   },
+   {
+    "beat": "reveal",
+    "do": "Write 38.5 - 24.5 = 14."
+   }
+  ],
+  "misconceptions": [
+   {
+    "code": "MATH.G9.MEASUR.AREA.SEGMENT_AREA.M_SEGMENT_WHOLE_CIRCLE",
+    "listen_for": [
+     "154"
+    ],
+    "ask": "Which part of the circle is the sector?",
+    "repair": "A quarter.",
+    "error": "Uses the whole circle instead of the sector.",
+    "example": {
+     "question": "Radius 7 m, 90 degrees. Sector?",
+     "wrong_answer": "154",
+     "correct_answer": "38.5"
+    }
+   },
+   {
+    "code": "MATH.G9.MEASUR.AREA.SEGMENT_AREA.M_QUARTER_AS_HALF",
+    "listen_for": [
+     "77"
+    ],
+    "ask": "Is 90 degrees half a turn?",
+    "repair": "A quarter.",
+    "error": "Takes 90 degrees as half a turn.",
+    "example": {
+     "question": "Radius 7 m, 90 degrees. Sector?",
+     "wrong_answer": "77",
+     "correct_answer": "38.5"
+    }
+   },
+   {
+    "code": "MATH.G9.MEASUR.AREA.SEGMENT_AREA.M_TRIANGLE_NOT_HALVED_SEG",
+    "listen_for": [
+     "49"
+    ],
+    "ask": "Is the triangle a square?",
+    "repair": "Half of it.",
+    "error": "Forgets the half in the triangle of the two radii.",
+    "example": {
+     "question": "Radii 7 m at 90 degrees. Triangle?",
+     "wrong_answer": "49",
+     "correct_answer": "24.5"
+    }
+   },
+   {
+    "code": "MATH.G9.MEASUR.AREA.SEGMENT_AREA.M_RADIUS_ONCE",
+    "listen_for": [
+     "7"
+    ],
+    "ask": "Base and height?",
+    "repair": "7 and 7: half of 49.",
+    "error": "Uses the radius once for the triangle's area.",
+    "example": {
+     "question": "Radii 7 m at 90 degrees. Triangle?",
+     "wrong_answer": "7",
+     "correct_answer": "24.5"
+    }
+   },
+   {
+    "code": "MATH.G9.MEASUR.AREA.SEGMENT_AREA.M_TRIANGLE_ADDED",
+    "listen_for": [
+     "63"
+    ],
+    "ask": "Is the triangle part of the segment?",
+    "repair": "No: take it away.",
+    "error": "Adds the triangle to the sector instead of taking it away.",
+    "example": {
+     "question": "Sector 38.5, triangle 24.5. Segment?",
+     "wrong_answer": "63",
+     "correct_answer": "14"
+    }
+   },
+   {
+    "code": "MATH.G9.MEASUR.AREA.SEGMENT_AREA.M_TRIANGLE_NOT_REMOVED",
+    "listen_for": [
+     "38.5"
+    ],
+    "ask": "Did you cut off the triangle?",
+    "repair": "Take it away.",
+    "error": "Gives the sector as the segment.",
+    "example": {
+     "question": "Sector 38.5, triangle 24.5. Segment?",
+     "wrong_answer": "38.5",
+     "correct_answer": "14"
+    }
+   }
+  ],
+  "checks": [
+   {
+    "question": "Radius 14 m, angle 90 degrees. Segment area? (pi = 22/7)",
+    "answer": "56 square m",
+    "shows": "sector minus triangle"
+   },
+   {
+    "question": "A sector is 77 square cm and the triangle 49 square cm. Segment?",
+    "answer": "28 square cm",
+    "shows": "subtract"
+   }
+  ],
+  "name": "Calculate the area of a segment of a circle",
+  "sub_strand": "MATH.G9.MEASUR.AREA",
+  "sub_strand_name": "Area",
+  "status": "draft: written 18 Nov 2026 offline for Grade 9; not yet checked by a Kenyan maths teacher; not loaded by the live tutor"
+ },
+ "MATH.G9.MEASUR.AREA.SA_CONE": {
+  "skill": "MATH.G9.MEASUR.AREA.SA_CONE",
+  "key_step": "The child finds l by Pythagoras, uses it in pi r l, and adds pi r squared only for a closed cone.",
+  "floor": {
+   "prerequisite": "Finds a hypotenuse.",
+   "question": "3 and 4",
+   "answer": "5"
+  },
+  "representations": [
+   "a cone with r, h and l marked",
+   "the net: a sector and a circle",
+   "pi r l + pi r squared"
+  ],
+  "steps": [
+   "l = square root of (r squared + h squared).",
+   "Curved surface pi r l.",
+   "Base pi r squared if closed.",
+   "Add."
+  ],
+  "contexts": [
+   "a spinning top",
+   "a tin funnel at a fundi's shop",
+   "a party hat"
+  ],
+  "board": [
+   {
+    "beat": "draw",
+    "do": "Draw a cone with r = 3 and h = 4 marked."
+   },
+   {
+    "beat": "point",
+    "do": "Point at the sloping edge.",
+    "say": "What is this length?"
+   },
+   {
+    "beat": "pause",
+    "do": "Wait for 5."
+   },
+   {
+    "beat": "reveal",
+    "do": "Write pi x 3 x 5 + pi x 3 x 3 = 24 pi."
+   }
+  ],
+  "misconceptions": [
+   {
+    "code": "MATH.G9.MEASUR.AREA.SA_CONE.M_CONE_SLANT_ADDED",
+    "listen_for": [
+     "7"
+    ],
+    "ask": "Is the slant the sum?",
+    "repair": "No: Pythagoras.",
+    "error": "Adds the radius and the vertical height for the slant height.",
+    "example": {
+     "question": "r = 3 cm, h = 4 cm. Slant?",
+     "wrong_answer": "7",
+     "correct_answer": "5"
+    }
+   },
+   {
+    "code": "MATH.G9.MEASUR.AREA.SA_CONE.M_CONE_VERTICAL_FOR_SLANT",
+    "listen_for": [
+     "4"
+    ],
+    "ask": "Does the height lie on the surface?",
+    "repair": "No.",
+    "error": "Uses the vertical height as the slant height.",
+    "example": {
+     "question": "r = 3 cm, h = 4 cm. Slant?",
+     "wrong_answer": "4",
+     "correct_answer": "5"
+    }
+   },
+   {
+    "code": "MATH.G9.MEASUR.AREA.SA_CONE.M_CONE_VERTICAL_IN_CSA",
+    "listen_for": [
+     "12 pi"
+    ],
+    "ask": "Which length is on the curved surface?",
+    "repair": "l = 5.",
+    "error": "Uses the vertical height in pi r l.",
+    "example": {
+     "question": "r = 3, h = 4, l = 5. Curved surface?",
+     "wrong_answer": "12 pi",
+     "correct_answer": "15 pi"
+    }
+   },
+   {
+    "code": "MATH.G9.MEASUR.AREA.SA_CONE.M_BASE_FOR_CURVED",
+    "listen_for": [
+     "9 pi"
+    ],
+    "ask": "Is that the flat base?",
+    "repair": "Yes: the curved part is pi r l.",
+    "error": "Gives the base circle as the curved surface.",
+    "example": {
+     "question": "r = 3, l = 5. Curved surface?",
+     "wrong_answer": "9 pi",
+     "correct_answer": "15 pi"
+    }
+   },
+   {
+    "code": "MATH.G9.MEASUR.AREA.SA_CONE.M_CONE_BASE_LEFT_OUT",
+    "listen_for": [
+     "15 pi"
+    ],
+    "ask": "Is the cone closed?",
+    "repair": "Yes: add the base.",
+    "error": "Leaves out the base of a closed cone.",
+    "example": {
+     "question": "Curved 15 pi, base 9 pi. Closed cone?",
+     "wrong_answer": "15 pi",
+     "correct_answer": "24 pi"
+    }
+   },
+   {
+    "code": "MATH.G9.MEASUR.AREA.SA_CONE.M_CIRCLE_AS_CIRCUMFERENCE",
+    "listen_for": [
+     "6 pi"
+    ],
+    "ask": "Area of a circle?",
+    "repair": "pi r squared.",
+    "error": "Uses 2 pi r for the area of the base circle.",
+    "example": {
+     "question": "Base of radius 3 cm. Area?",
+     "wrong_answer": "6 pi",
+     "correct_answer": "9 pi"
+    }
+   }
+  ],
+  "checks": [
+   {
+    "question": "A closed cone: r = 6 cm, h = 8 cm. Total surface area in terms of pi?",
+    "answer": "96 pi square cm",
+    "shows": "slant then add"
+   },
+   {
+    "question": "Curved surface of a cone with r = 7 cm, l = 10 cm? (pi = 22/7)",
+    "answer": "220 square cm",
+    "shows": "pi r l"
+   }
+  ],
+  "name": "Work out the surface area of a cone",
+  "sub_strand": "MATH.G9.MEASUR.AREA",
+  "sub_strand_name": "Area",
+  "status": "draft: written 18 Nov 2026 offline for Grade 9; not yet checked by a Kenyan maths teacher; not loaded by the live tutor"
+ },
+ "MATH.G9.MEASUR.AREA.SA_SPHERE": {
+  "skill": "MATH.G9.MEASUR.AREA.SA_SPHERE",
+  "key_step": "The child uses 4 pi r squared for a whole sphere, halves it for a curved half, and adds the flat circle for a solid hemisphere.",
+  "floor": {
+   "prerequisite": "Finds the area of a circle.",
+   "question": "Radius 7",
+   "answer": "154"
+  },
+  "representations": [
+   "an orange peel covering four circles",
+   "a sphere and a hemisphere side by side",
+   "4 pi r squared"
+  ],
+  "steps": [
+   "Sphere: 4 pi r squared.",
+   "Hemisphere curved part: 2 pi r squared.",
+   "Solid hemisphere: add pi r squared.",
+   "Use the area for paint or cost."
+  ],
+  "contexts": [
+   "a round water tank",
+   "a metal dome",
+   "a football"
+  ],
+  "board": [
+   {
+    "beat": "draw",
+    "do": "Draw a sphere and four circles of the same radius."
+   },
+   {
+    "beat": "point",
+    "do": "Point at the four circles.",
+    "say": "The peel of an orange covers about four of its middle circles. Area of the sphere?"
+   },
+   {
+    "beat": "pause",
+    "do": "Wait for 4 pi r squared."
+   },
+   {
+    "beat": "reveal",
+    "do": "Write 4 x 154 = 616."
+   }
+  ],
+  "misconceptions": [
+   {
+    "code": "MATH.G9.MEASUR.AREA.SA_SPHERE.M_SPHERE_AS_HEMISPHERE",
+    "listen_for": [
+     "308"
+    ],
+    "ask": "Is that half or all of the sphere?",
+    "repair": "Half: double it.",
+    "error": "Uses 2 pi r squared for a whole sphere.",
+    "example": {
+     "question": "Sphere radius 7 m. Surface?",
+     "wrong_answer": "308",
+     "correct_answer": "616"
+    }
+   },
+   {
+    "code": "MATH.G9.MEASUR.AREA.SA_SPHERE.M_SPHERE_AS_CIRCLE",
+    "listen_for": [
+     "154"
+    ],
+    "ask": "How many circles does the peel cover?",
+    "repair": "Four.",
+    "error": "Uses pi r squared for a sphere.",
+    "example": {
+     "question": "Sphere radius 7 m. Surface?",
+     "wrong_answer": "154",
+     "correct_answer": "616"
+    }
+   },
+   {
+    "code": "MATH.G9.MEASUR.AREA.SA_SPHERE.M_AREA_NOT_LITRES",
+    "listen_for": [
+     "616"
+    ],
+    "ask": "Is that litres?",
+    "repair": "No: divide by 14.",
+    "error": "Gives the area when litres of paint are asked.",
+    "example": {
+     "question": "616 square m, 14 square m a litre. Litres?",
+     "wrong_answer": "616",
+     "correct_answer": "44"
+    }
+   },
+   {
+    "code": "MATH.G9.MEASUR.AREA.SA_SPHERE.M_VOLUME_FOR_PAINT",
+    "listen_for": [
+     "used the volume"
+    ],
+    "ask": "Does paint fill the tank?",
+    "repair": "No: it covers it.",
+    "error": "Uses the volume for the paint.",
+    "example": {
+     "question": "Paint for a sphere tank of radius 7 m?",
+     "wrong_answer": "from 4/3 pi r cubed",
+     "correct_answer": "from 4 pi r squared"
+    }
+   },
+   {
+    "code": "MATH.G9.MEASUR.AREA.SA_SPHERE.M_HEMISPHERE_AS_SPHERE",
+    "listen_for": [
+     "616"
+    ],
+    "ask": "Is the hemisphere a whole ball?",
+    "repair": "Half: 308.",
+    "error": "Uses the whole sphere for a hemisphere's curved part.",
+    "example": {
+     "question": "Hemisphere radius 7 cm. Curved part?",
+     "wrong_answer": "616",
+     "correct_answer": "308"
+    }
+   },
+   {
+    "code": "MATH.G9.MEASUR.AREA.SA_SPHERE.M_HEMI_CIRCLE_ONLY",
+    "listen_for": [
+     "154"
+    ],
+    "ask": "Is that the flat or the curved part?",
+    "repair": "Flat: curved is 308.",
+    "error": "Gives the flat circle as the curved part of a hemisphere.",
+    "example": {
+     "question": "Hemisphere radius 7 cm. Curved part?",
+     "wrong_answer": "154",
+     "correct_answer": "308"
+    }
+   },
+   {
+    "code": "MATH.G9.MEASUR.AREA.SA_SPHERE.M_FLAT_BASE_LEFT_OUT",
+    "listen_for": [
+     "308"
+    ],
+    "ask": "Is the flat face chromed too?",
+    "repair": "Yes: 462.",
+    "error": "Leaves out the flat face of a solid hemisphere.",
+    "example": {
+     "question": "Solid hemisphere radius 7 cm. Total?",
+     "wrong_answer": "308",
+     "correct_answer": "462"
+    }
+   }
+  ],
+  "checks": [
+   {
+    "question": "Surface area of a sphere of radius 14 cm? (pi = 22/7)",
+    "answer": "2,464 square cm",
+    "shows": "4 pi r squared"
+   },
+   {
+    "question": "Total surface of a solid hemisphere of radius 7 cm?",
+    "answer": "462 square cm",
+    "shows": "3 pi r squared"
+   }
+  ],
+  "name": "Calculate the surface area of a sphere and a hemisphere",
+  "sub_strand": "MATH.G9.MEASUR.AREA",
+  "sub_strand_name": "Area",
+  "status": "draft: written 18 Nov 2026 offline for Grade 9; not yet checked by a Kenyan maths teacher; not loaded by the live tutor"
  }
 };
 export default TEACHING_PACK_G9;

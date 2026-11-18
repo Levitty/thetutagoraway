@@ -534,6 +534,78 @@
     "write the inequality"
    ],
    "mastery": "The child writes an inequality for a target (money left at least an amount after a cost), adds the fixed cost to the target before dividing, solves, and gives the smallest whole number that fits, rounding up: a bus of 6,000 and at least 1,500 left at 350 a learner needs at least 22 learners."
+  },
+  "MATH.G9.MEASUR.AREA.AREA_REGULAR_POLYGON": {
+   "forms": [
+    "area of the hexagon",
+    "why is the centre angle 72 degrees",
+    "which step is wrong",
+    "area of a paving slab"
+   ],
+   "mastery": "The child joins the centre of a regular pentagon or hexagon to each corner, making 5 or 6 equal triangles with a centre angle of 360 / n degrees, finds one triangle as half base times height (the height from the centre to the middle of a side) and multiplies by the number of sides."
+  },
+  "MATH.G9.MEASUR.AREA.AREA_COMPOSITE_PENTAGON": {
+   "forms": [
+    "area of the plot",
+    "complete the steps",
+    "area of the gable end",
+    "split the shape"
+   ],
+   "mastery": "The child splits an irregular pentagon or hexagon (a plot, a gable wall) into a rectangle and triangles, finds each area (length x width; half base x height) and adds them, leaving no part out and counting no part twice."
+  },
+  "MATH.G9.MEASUR.AREA.SA_PRISM": {
+   "forms": [
+    "area to be painted",
+    "metal for an open trough",
+    "surface area in steps",
+    "which faces"
+   ],
+   "mastery": "The child lists every face of the prism (two equal ends and one rectangle for each side of the end), finds each area, and adds them, leaving out faces that are open (a trough with no top): a triangular prism with ends 3, 4, 5 cm and length 10 cm has 2 x 6 + (3 + 4 + 5) x 10 = 132 square cm."
+  },
+  "MATH.G9.MEASUR.AREA.SA_PYRAMID": {
+   "forms": [
+    "slant height",
+    "surface area of the pyramid",
+    "cost of painting the roof",
+    "which step is wrong"
+   ],
+   "mastery": "The child finds the slant height of a square-based pyramid from the vertical height and half the base by Pythagoras, finds each triangular face as half base times slant height, and adds the base when it is there: base 6 cm, height 4 cm, slant 5 cm, so 4 x 15 + 36 = 96 square cm."
+  },
+  "MATH.G9.MEASUR.AREA.SECTOR_AREA": {
+   "forms": [
+    "area of the sector",
+    "what is the angle",
+    "area lit by a lamp",
+    "a slice of cake"
+   ],
+   "mastery": "The child finds a sector as angle/360 of the circle (pi r squared), and works back from a sector's area to its angle by dividing by the whole circle and multiplying by 360: radius 7 cm, 90 degrees, 38.5 square cm."
+  },
+  "MATH.G9.MEASUR.AREA.SEGMENT_AREA": {
+   "forms": [
+    "area of the segment",
+    "complete the steps",
+    "flower bed",
+    "area between the chord and the arc"
+   ],
+   "mastery": "The child finds a segment as the sector minus the triangle made by the two radii and the chord, for a right angle at the centre the triangle being half of r times r: radius 7 m, 90 degrees: 38.5 - 24.5 = 14 square m."
+  },
+  "MATH.G9.MEASUR.AREA.SA_CONE": {
+   "forms": [
+    "curved surface area",
+    "total surface area",
+    "slant height",
+    "which step is wrong"
+   ],
+   "mastery": "The child finds the slant height l from the radius and the vertical height by Pythagoras, the curved surface as pi r l, and adds the base pi r squared for a closed cone: r = 3 cm, h = 4 cm, l = 5 cm, 15 pi + 9 pi = 24 pi square cm."
+  },
+  "MATH.G9.MEASUR.AREA.SA_SPHERE": {
+   "forms": [
+    "surface area of the sphere",
+    "paint for a tank",
+    "a solid hemisphere",
+    "curved surface"
+   ],
+   "mastery": "The child uses 4 pi r squared for a sphere, half of it for the curved part of a hemisphere, and adds the flat circle for a solid hemisphere (3 pi r squared), and uses the area for paint or plating: a tank of radius 7 m has 616 square m, so at 14 square m a litre it needs 44 litres."
   }
  }
 }

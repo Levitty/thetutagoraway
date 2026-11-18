@@ -22,34 +22,34 @@ const TRIPLES = [[3, 4, 5], [6, 8, 10], [5, 12, 13], [9, 12, 15], [8, 15, 17]];
 
 export const FAMILIES = [
   // ======================================================== AREA: pentagon, hexagon
-  fam({ id: 'g9.area.hexagon-slab', skill: 'G9_SURFACE_AREA_ADV', outcome: 'G9.AREA.a', rung: 2, form: 'word',
+  fam({ id: 'g9.area.hexagon-slab', skill: 'G9_SURFACE_AREA_ADV', outcome: 'MATH.G9.MEASUR.AREA.a', cskill: 'MATH.G9.MEASUR.AREA.AREA_REGULAR_POLYGON', rung: 2, form: 'word',
     draw: () => { const [s, h] = pick([[20, 17.3], [30, 26], [40, 34.6], [50, 43.3], [60, 52]]); return { s, h, what: pick(['paving slab', 'table top', 'flower bed']) }; },
     make: ({ s, h, what }) => {
       const tri = round(0.5 * s * h, 2), a = round(6 * tri, 2);
       return { question: `A ${what} is a regular hexagon with six equal sides of ${s} cm. Six identical triangles meet at its centre. Each triangle is ${h} cm high, measured from the centre to the middle of a side. Find the area of the ${what}, in cm².`,
         answer: a,
-        wrong: [[tri, 'That is one triangle. A hexagon is made of six of them.'], [round(6 * s * h, 2), 'Each triangle has an area of half base times height. Do not forget the half.'], [round(5 * tri, 2), 'A hexagon has six sides, so it is made of six triangles, not five.'], [round(s * 6, 2), 'That is the distance around the edge. Area needs the height as well.']],
+        wrong: [[tri, 'That is one triangle. A hexagon is made of six of them.', 'M_ONE_TRIANGLE_ONLY'], [round(6 * s * h, 2), 'Each triangle has an area of half base times height. Do not forget the half.', 'M_TRIANGLE_HALF_LEFT_OUT'], [round(5 * tri, 2), 'A hexagon has six sides, so it is made of six triangles, not five.', 'M_TRIANGLE_COUNT_WRONG'], [round(s * 6, 2), 'That is the distance around the edge. Area needs the height as well.', 'M_PERIMETER_FOR_AREA']],
         hints: ['Find the area of one triangle first.', 'Then count how many equal triangles make the hexagon.'],
         steps: [`One triangle: ½ × ${s} × ${h} = ${T(tri)} cm².`, `Six triangles: 6 × ${T(tri)} = ${T(a)} cm².`] };
     },
     check: ({ s, h }, a) => Math.abs(a / 3 / s - h) < 1e-6 }),
 
-  fam({ id: 'g9.area.pentagon-plot', skill: 'G9_SURFACE_AREA_ADV', outcome: 'G9.AREA.a', rung: 2, form: 'steps',
+  fam({ id: 'g9.area.pentagon-plot', skill: 'G9_SURFACE_AREA_ADV', outcome: 'MATH.G9.MEASUR.AREA.a', cskill: 'MATH.G9.MEASUR.AREA.AREA_COMPOSITE_PENTAGON', rung: 2, form: 'steps',
     draw: () => { const w = pick([8, 10, 12, 16, 20]), l = pick([15, 20, 25, 30]), t = pick([3, 4, 5, 6, 9]); return { w, l, t, who: person() }; },
     make: ({ w, l, t, who }) => {
       const rect = w * l, tri = (w * t) / 2;
       return { question: `${who.name}'s plot has five sides. It is a rectangle ${w} m wide and ${l} m long, with a triangle on one of its ${w} m sides. The triangle has a base of ${w} m and a height of ${t} m. Together the two shapes make a pentagon.`,
         parts: [
-          { prompt: 'Area of the rectangle, in m²:', answer: rect, unit: 'm²', hint: 'Width times length.', wrong: [[2 * (w + l), 'That is the distance around the rectangle. Area is width times length.'], [w + l, 'Multiply the two sides.']] },
-          { prompt: 'Area of the triangle, in m²:', answer: tri, unit: 'm²', hint: 'Half the base times the height.', wrong: [[w * t, 'A triangle is half of a rectangle with the same base and height.'], [w + t, 'Area uses multiplication, not addition.']] },
-          { prompt: 'Area of the whole plot, in m²:', answer: rect + tri, unit: 'm²', hint: 'Add the two areas.', wrong: [[rect, 'That leaves out the triangle on top.'], [tri, 'That leaves out the rectangle.']] },
+          { prompt: 'Area of the rectangle, in m²:', answer: rect, unit: 'm²', hint: 'Width times length.', wrong: [[2 * (w + l), 'That is the distance around the rectangle. Area is width times length.', 'M_RECT_PERIMETER_FOR_AREA'], [w + l, 'Multiply the two sides.', 'M_SIDES_ADDED_FOR_AREA']] },
+          { prompt: 'Area of the triangle, in m²:', answer: tri, unit: 'm²', hint: 'Half the base times the height.', wrong: [[w * t, 'A triangle is half of a rectangle with the same base and height.', 'M_TRIANGLE_HALF_LEFT_OUT'], [w + t, 'Area uses multiplication, not addition.', 'M_SIDES_ADDED_FOR_AREA']] },
+          { prompt: 'Area of the whole plot, in m²:', answer: rect + tri, unit: 'm²', hint: 'Add the two areas.', wrong: [[rect, 'That leaves out the triangle on top.', 'M_TRIANGLE_PART_LEFT_OUT'], [tri, 'That leaves out the rectangle.', 'M_RECTANGLE_PART_LEFT_OUT']] },
         ],
         hints: ['Split the pentagon into shapes you know.'],
         steps: [`Rectangle: ${w} × ${l} = ${rect} m².`, `Triangle: ½ × ${w} × ${t} = ${T(tri)} m².`, `Plot: ${rect} + ${T(tri)} = ${T(rect + tri)} m².`] };
     },
     check: ({ w, l, t }, v) => v[0] === l * w && v[1] * 2 === w * t && v[2] - v[1] === w * l }),
 
-  fam({ id: 'g9.area.pentagon-spot', skill: 'G9_SURFACE_AREA_ADV', outcome: 'G9.AREA.a', rung: 2, form: 'spot',
+  fam({ id: 'g9.area.pentagon-spot', skill: 'G9_SURFACE_AREA_ADV', outcome: 'MATH.G9.MEASUR.AREA.a', cskill: 'MATH.G9.MEASUR.AREA.AREA_REGULAR_POLYGON', rung: 2, form: 'spot',
     draw: () => { const [s, a] = pick([[6, 4.1], [8, 5.5], [10, 6.9], [12, 8.3]]); return { s, a, kind: pick(['half', 'count']), who: person() }; },
     make: ({ s, a, kind, who }) => {
       const n = kind === 'count' ? 6 : 5, f = kind === 'half' ? 1 : 0.5;
@@ -61,69 +61,70 @@ export const FAMILIES = [
           { text: `Area of one triangle = ${T(tri)} cm²`, ok: tri === round(f * s * a, 2) },
           { text: `Area of the pentagon = ${n} × ${T(tri)} = ${T(total)} cm²`, ok: total === round(n * tri, 2) },
         ],
+        mis: kind === 'half' ? 'M_TRIANGLE_HALF_LEFT_OUT' : 'M_TRIANGLE_COUNT_WRONG',
         fix: kind === 'half' ? 'The area of a triangle is half of base times height. The half was left out.' : 'A pentagon has five sides, so it splits into five triangles, not six.',
         steps: [`Five triangles, each ½ × ${s} × ${a} = ${T(round(0.5 * s * a, 2))} cm².`, `Pentagon: 5 × ${T(round(0.5 * s * a, 2))} = ${T(round(2.5 * s * a, 2))} cm².`] };
     } }),
 
-  fam({ id: 'g9.area.centre-angle-why', skill: 'G9_SURFACE_AREA_ADV', outcome: 'G9.AREA.a', rung: 3, form: 'why',
+  fam({ id: 'g9.area.centre-angle-why', skill: 'G9_SURFACE_AREA_ADV', outcome: 'MATH.G9.MEASUR.AREA.a', cskill: 'MATH.G9.MEASUR.AREA.AREA_REGULAR_POLYGON', rung: 3, form: 'why',
     draw: () => ({ n: pick([5, 6]), s: pick([10, 12, 15, 20]), what: pick(['paving block', 'tile', 'garden bed']) }),
     make: ({ n, s, what }) => {
       const sides = n === 5 ? 'pentagonal' : 'hexagonal', ang = 360 / n;
       return { question: `A regular ${sides} ${what} has sides of ${s} cm. Joining its centre to every corner splits it into ${n} equal triangles. Why is the angle at the centre of each triangle ${ang}°?`,
         options: [
           { text: `The angles around the centre make a full turn of 360°, shared equally by ${n} triangles`, right: true },
-          { text: `The angles around the centre make a half turn of 180°, shared equally by ${n} triangles`, right: false, why: 'Angles all the way round a point add up to 360°, not 180°.' },
-          { text: `Each angle of the ${n === 5 ? 'pentagon' : 'hexagon'} is ${ang}°`, right: false, why: 'The angle inside the corner of the shape is bigger. This question is about the angle at the centre.' },
-          { text: `The angle at the centre is the same as ${s}°, the length of the side`, right: false, why: 'A length in cm cannot be an angle in degrees.' },
+          { text: `The angles around the centre make a half turn of 180°, shared equally by ${n} triangles`, right: false, why: 'Angles all the way round a point add up to 360°, not 180°.', mis: 'M_CENTRE_ANGLE_180' },
+          { text: `Each angle of the ${n === 5 ? 'pentagon' : 'hexagon'} is ${ang}°`, right: false, why: 'The angle inside the corner of the shape is bigger. This question is about the angle at the centre.', mis: 'M_CENTRE_AS_INTERIOR' },
+          { text: `The angle at the centre is the same as ${s}°, the length of the side`, right: false, why: 'A length in cm cannot be an angle in degrees.', mis: 'M_SIDE_AS_ANGLE' },
         ],
         hints: ['What do all the angles around a point add up to?', 'The triangles are equal, so their centre angles are equal.'],
         steps: [`The angles round the centre add up to 360°.`, `360° ÷ ${n} = ${ang}° for each triangle.`] };
     } }),
 
   // ======================================================== AREA: prisms
-  fam({ id: 'g9.area.prism-doorstop', skill: 'G9_SURFACE_AREA_ADV', outcome: 'G9.AREA.b', rung: 2, form: 'steps',
+  fam({ id: 'g9.area.prism-doorstop', skill: 'G9_SURFACE_AREA_ADV', outcome: 'MATH.G9.MEASUR.AREA.b', cskill: 'MATH.G9.MEASUR.AREA.SA_PRISM', rung: 2, form: 'steps',
     draw: () => { const t = pick([[6, 8, 10], [5, 12, 13], [9, 12, 15]]); return { a: t[0], b: t[1], c: t[2], L: pick([10, 12, 15, 20]) }; },
     make: ({ a, b, c, L }) => ({
       question: `A wooden doorstop is a solid triangular prism. Its two triangular ends are right-angled with sides ${a} cm, ${b} cm and ${c} cm. The doorstop is ${L} cm long. It will be painted all over.`,
       parts: [
-        { prompt: 'Area of the two triangular ends together, in cm²:', answer: a * b, unit: 'cm²', hint: 'One end is half of the two short sides multiplied.', wrong: [[(a * b) / 2, 'That is one triangle. There are two ends.'], [a + b + c, 'That is the distance around one end. Area uses multiplication.']] },
-        { prompt: 'Area of the three rectangular faces together, in cm²:', answer: (a + b + c) * L, unit: 'cm²', hint: 'The three rectangles have the same length. Their widths are the three sides of the triangle.', wrong: [[(a + b) * L, 'There are three rectangles. The sloping one is missing.'], [((a * b) / 2) * L, 'That is the volume of the prism. You need the area of the rectangles.']] },
-        { prompt: 'Total surface area, in cm²:', answer: a * b + (a + b + c) * L, unit: 'cm²', hint: 'Add the ends and the rectangles.', wrong: [[(a + b + c) * L, 'That leaves out the two ends.'], [(a * b) / 2 + (a + b + c) * L, 'That has only one triangular end.']] },
+        { prompt: 'Area of the two triangular ends together, in cm²:', answer: a * b, unit: 'cm²', hint: 'One end is half of the two short sides multiplied.', wrong: [[(a * b) / 2, 'That is one triangle. There are two ends.', 'M_ONE_END_ONLY'], [a + b + c, 'That is the distance around one end. Area uses multiplication.', 'M_PERIMETER_OF_END']] },
+        { prompt: 'Area of the three rectangular faces together, in cm²:', answer: (a + b + c) * L, unit: 'cm²', hint: 'The three rectangles have the same length. Their widths are the three sides of the triangle.', wrong: [[(a + b) * L, 'There are three rectangles. The sloping one is missing.', 'M_SLOPING_FACE_MISSING'], [((a * b) / 2) * L, 'That is the volume of the prism. You need the area of the rectangles.', 'M_VOLUME_FOR_SURFACE']] },
+        { prompt: 'Total surface area, in cm²:', answer: a * b + (a + b + c) * L, unit: 'cm²', hint: 'Add the ends and the rectangles.', wrong: [[(a + b + c) * L, 'That leaves out the two ends.', 'M_ENDS_LEFT_OUT'], [(a * b) / 2 + (a + b + c) * L, 'That has only one triangular end.', 'M_ONE_END_ONLY']] },
       ],
       hints: ['Open the prism out: two triangles and three rectangles.'],
       steps: [`Two ends: 2 × ½ × ${a} × ${b} = ${a * b} cm².`, `Rectangles: (${a} + ${b} + ${c}) × ${L} = ${(a + b + c) * L} cm².`, `Total: ${a * b} + ${(a + b + c) * L} = ${a * b + (a + b + c) * L} cm².`],
     }),
     check: ({ a, b, c, L }, v) => v[0] === 2 * ((a * b) / 2) && v[1] === a * L + b * L + c * L && v[2] === v[0] + v[1] }),
 
-  fam({ id: 'g9.area.prism-trough', skill: 'G9_SURFACE_AREA_ADV', outcome: 'G9.AREA.b', rung: 3, form: 'word',
+  fam({ id: 'g9.area.prism-trough', skill: 'G9_SURFACE_AREA_ADV', outcome: 'MATH.G9.MEASUR.AREA.b', cskill: 'MATH.G9.MEASUR.AREA.SA_PRISM', rung: 3, form: 'word',
     draw: () => { const [o, h, c] = pick([[6, 8, 10], [9, 12, 15], [15, 20, 25]]); const b = pick([20, 30, 40]); return { o, h, c, b, a: b + 2 * o, L: pick([60, 80, 100]) }; },
     make: ({ o, h, c, b, a, L }) => {
       const end = ((a + b) / 2) * h, sa = 2 * end + (b + 2 * c) * L;
       return { question: `A metal water trough is a prism. Its ends are trapeziums. The top of the trough is open. Each end has a top edge of ${a} cm, a bottom edge of ${b} cm, a height of ${h} cm and sloping sides of ${c} cm. The trough is ${L} cm long. Find the area of metal used, in cm².`,
         answer: sa,
-        wrong: [[sa + a * L, 'The top is open, so there is no metal there.'], [end + (b + 2 * c) * L, 'There are two ends, not one.'], [2 * end + b * L, 'The two sloping sides are metal too. They are missing.'], [2 * end + (a + b + 2 * c) * L, 'Check which faces exist: bottom, two slopes, two ends. The top is open.']],
+        wrong: [[sa + a * L, 'The top is open, so there is no metal there.', 'M_OPEN_TOP_COUNTED'], [end + (b + 2 * c) * L, 'There are two ends, not one.', 'M_ONE_END_ONLY'], [2 * end + b * L, 'The two sloping sides are metal too. They are missing.', 'M_SLOPING_FACE_MISSING'], [2 * end + (a + b + 2 * c) * L, 'Check which faces exist: bottom, two slopes, two ends. The top is open.', 'M_FACES_NOT_LISTED']],
         hints: ['List the faces that are metal: two ends, the bottom and two sloping sides.', 'The area of a trapezium is half of the sum of the parallel sides times the height.'],
         steps: [`One end: ½ × (${a} + ${b}) × ${h} = ${T(end)} cm². Two ends: ${T(2 * end)} cm².`, `Bottom and two slopes: (${b} + ${c} + ${c}) × ${L} = ${T((b + 2 * c) * L)} cm².`, `Total: ${T(2 * end)} + ${T((b + 2 * c) * L)} = ${T(sa)} cm².`] };
     },
     check: ({ b, c, h, a, L }, ans) => ans - (b * L + 2 * c * L) - (a + b) * h === 0 }),
 
   // ======================================================== AREA: pyramids
-  fam({ id: 'g9.area.pyramid-slant', skill: 'G9_SURFACE_AREA_ADV', outcome: 'G9.AREA.c', rung: 3, form: 'steps',
+  fam({ id: 'g9.area.pyramid-slant', skill: 'G9_SURFACE_AREA_ADV', outcome: 'MATH.G9.MEASUR.AREA.c', cskill: 'MATH.G9.MEASUR.AREA.SA_PYRAMID', rung: 3, form: 'steps',
     draw: () => { const [hb, h, l] = pick([[3, 4, 5], [4, 3, 5], [6, 8, 10], [5, 12, 13], [8, 6, 10]]); return { b: 2 * hb, hb, h, l }; },
     make: ({ b, hb, h, l }) => {
       const face = (b * l) / 2;
       return { question: `A solid model of a pyramid has a square base of side ${b} cm. Its vertical height is ${h} cm. The top of the pyramid is directly above the centre of the base. The model is painted on all five faces.`,
         parts: [
-          { prompt: 'Slant height of a triangular face, in cm:', answer: l, unit: 'cm', hint: `Make a right-angled triangle with the vertical height and half of the base.`, wrong: [[h + hb, 'Adding the two sides does not give the slope. Use Pythagoras.'], [h, 'That is the vertical height. The slant height is along the face.']] },
-          { prompt: 'Area of one triangular face, in cm²:', answer: face, unit: 'cm²', hint: 'Half the base times the slant height.', wrong: [[(b * h) / 2, 'The height of the triangular face is the slant height, not the vertical height.'], [b * l, 'A triangle is half of base times height.']] },
-          { prompt: 'Total surface area, in cm²:', answer: 4 * face + b * b, unit: 'cm²', hint: 'Four triangular faces and one square base.', wrong: [[4 * face, 'That leaves out the square base.'], [face + b * b, 'There are four triangular faces.']] },
+          { prompt: 'Slant height of a triangular face, in cm:', answer: l, unit: 'cm', hint: `Make a right-angled triangle with the vertical height and half of the base.`, wrong: [[h + hb, 'Adding the two sides does not give the slope. Use Pythagoras.', 'M_SLANT_BY_ADDING'], [h, 'That is the vertical height. The slant height is along the face.', 'M_VERTICAL_FOR_SLANT']] },
+          { prompt: 'Area of one triangular face, in cm²:', answer: face, unit: 'cm²', hint: 'Half the base times the slant height.', wrong: [[(b * h) / 2, 'The height of the triangular face is the slant height, not the vertical height.', 'M_VERTICAL_ON_FACE'], [b * l, 'A triangle is half of base times height.', 'M_FACE_NOT_HALVED']] },
+          { prompt: 'Total surface area, in cm²:', answer: 4 * face + b * b, unit: 'cm²', hint: 'Four triangular faces and one square base.', wrong: [[4 * face, 'That leaves out the square base.', 'M_BASE_LEFT_OUT'], [face + b * b, 'There are four triangular faces.', 'M_ONE_FACE_ONLY']] },
         ],
         hints: ['The slant height is found from a right-angled triangle inside the pyramid.'],
         steps: [`Half of the base is ${hb} cm. Slant height² = ${h}² + ${hb}² = ${h * h + hb * hb}, so it is ${l} cm.`, `One face: ½ × ${b} × ${l} = ${T(face)} cm².`, `Total: 4 × ${T(face)} + ${b} × ${b} = ${T(4 * face + b * b)} cm².`] };
     },
     check: ({ b, hb, h }, v) => v[0] ** 2 === h ** 2 + hb ** 2 && v[1] * 2 === b * v[0] && v[2] === 2 * b * v[0] + b ** 2 }),
 
-  fam({ id: 'g9.area.pyramid-spot', skill: 'G9_SURFACE_AREA_ADV', outcome: 'G9.AREA.c', rung: 2, form: 'spot',
+  fam({ id: 'g9.area.pyramid-spot', skill: 'G9_SURFACE_AREA_ADV', outcome: 'MATH.G9.MEASUR.AREA.c', cskill: 'MATH.G9.MEASUR.AREA.SA_PYRAMID', rung: 2, form: 'spot',
     draw: () => { const [hb, h, l] = pick([[3, 4, 5], [6, 8, 10], [5, 12, 13], [8, 6, 10]]); return { b: 2 * hb, h, l, kind: pick(['vertical', 'faces', 'base']), who: person() }; },
     make: ({ b, h, l, kind, who }) => {
       const used = kind === 'vertical' ? h : l, nf = kind === 'faces' ? 3 : 4;
@@ -135,56 +136,57 @@ export const FAMILIES = [
           { text: kind === 'base' ? `Area of the base = ${b} + ${b} = ${2 * b} cm²` : `Area of the base = ${b} × ${b} = ${b * b} cm²`, ok: base === b * b },
           { text: `Total = ${T(fs)} + ${T(base)} = ${T(tot)} cm²`, ok: tot === fs + base },
         ],
+        mis: kind === 'vertical' ? 'M_VERTICAL_ON_FACE' : kind === 'faces' ? 'M_ONE_FACE_ONLY' : 'M_SQUARE_SIDES_ADDED',
         fix: kind === 'vertical' ? 'The height of a triangular face is the slant height. The vertical height of the pyramid is not on the face.' : kind === 'faces' ? 'A square-based pyramid has four triangular faces, one on each side of the base.' : 'The area of a square is side times side, not side added to side.',
         steps: [`Face: ½ × ${b} × ${l} = ${T((b * l) / 2)} cm². Four faces: ${T(2 * b * l)} cm².`, `Base: ${b * b} cm². Total: ${T(2 * b * l + b * b)} cm².`] };
     } }),
 
-  fam({ id: 'g9.area.pyramid-roof', skill: 'G9_SURFACE_AREA_ADV', outcome: 'G9.AREA.c', rung: 3, form: 'word',
+  fam({ id: 'g9.area.pyramid-roof', skill: 'G9_SURFACE_AREA_ADV', outcome: 'MATH.G9.MEASUR.AREA.c', cskill: 'MATH.G9.MEASUR.AREA.SA_PYRAMID', rung: 3, form: 'word',
     draw: () => { const b = pick([4, 6, 8, 10]), l = pick([3, 4, 5, 6]), rate = pick([50, 80, 120]); return { b, l, rate, who: person() }; },
     make: ({ b, l, rate, who }) => {
       const area = 2 * b * l;
       return { question: `The roof of a garden shelter is a square-based pyramid with no base. Each side of the square is ${b} m. The slant height of each triangular face is ${l} m. ${who.name} paints the roof. The paint costs ${sh(rate)} for each m². How much does the paint cost?`,
         answer: area * rate,
-        wrong: [[(area + b * b) * rate, 'The roof has no base, so only the four triangular faces are painted.'], [(area / 4) * rate, 'The roof has four triangular faces, not one.'], [area, 'That is the area in m². The question asks for the cost.'], [(b * l * 4) * rate, 'Each triangular face is half of base times height. Do not forget the half.']],
+        wrong: [[(area + b * b) * rate, 'The roof has no base, so only the four triangular faces are painted.', 'M_BASE_COUNTED_OPEN'], [(area / 4) * rate, 'The roof has four triangular faces, not one.', 'M_ONE_FACE_ONLY'], [area, 'That is the area in m². The question asks for the cost.', 'M_AREA_NOT_COST'], [(b * l * 4) * rate, 'Each triangular face is half of base times height. Do not forget the half.', 'M_FACE_NOT_HALVED']],
         hints: ['A roof of this shape has four triangular faces.', 'Find the area, then multiply by the cost of each m².'],
         steps: [`One face: ½ × ${b} × ${l} = ${T((b * l) / 2)} m². Four faces: ${area} m².`, `Cost: ${area} × ${rate} = ${sh(area * rate)}.`] };
     },
     check: ({ b, l, rate }, a) => a / rate / 4 * 2 === b * l }),
 
   // ======================================================== AREA: sectors and segments
-  fam({ id: 'g9.area.sector-light', skill: 'G9_SURFACE_AREA_ADV', outcome: 'G9.AREA.d', rung: 2, form: 'word',
+  fam({ id: 'g9.area.sector-light', skill: 'G9_SURFACE_AREA_ADV', outcome: 'MATH.G9.MEASUR.AREA.d', cskill: 'MATH.G9.MEASUR.AREA.SECTOR_AREA', rung: 2, form: 'word',
     draw: () => { const r = pick([7, 14, 21]), th = pick([30, 45, 60, 90, 120, 180, 270]); const a = (th / 360) * PI * r * r; return dp(a, 2) ? { r, th, a: round(a, 2), what: pick(['A security light lights part of a compound.', 'A sprinkler waters part of a lawn.']) } : null; },
     make: ({ r, th, a, what }) => {
       const full = round(PI * r * r, 2), arc = round(2 * PI * r * (th / 360), 2);
       return { question: `${what} It reaches ${r} m and sweeps through an angle of ${th}° at the centre. This part is a sector of a circle. Find its area in m². (Use π = 22/7)`,
         answer: a,
-        wrong: [[full, 'That is the whole circle. The sector is only a part of it.'], [arc, 'That is the length of the curved edge. Area needs the radius squared.'], [round(full * (360 / th), 2), 'The sector is smaller than the circle, so multiply by the fraction angle ÷ 360, not the other way round.'], [round(full * th / 180, 2), 'A full turn is 360°, not 180°.']],
+        wrong: [[full, 'That is the whole circle. The sector is only a part of it.', 'M_WHOLE_CIRCLE_AREA'], [arc, 'That is the length of the curved edge. Area needs the radius squared.', 'M_ARC_FOR_AREA'], [round(full * (360 / th), 2), 'The sector is smaller than the circle, so multiply by the fraction angle ÷ 360, not the other way round.', 'M_FRACTION_INVERTED'], [round(full * th / 180, 2), 'A full turn is 360°, not 180°.', 'M_TURN_AS_180']],
         hints: ['What fraction of a full turn is the angle?', 'Find the area of the whole circle, then take that fraction of it.'],
         steps: [`Whole circle: 22/7 × ${r} × ${r} = ${T(full)} m².`, `Fraction: ${th}/360.`, `Sector: ${T(full)} × ${th}/360 = ${T(a)} m².`] };
     },
     check: ({ r, th }, a) => Math.abs((a * 360) / th - (22 / 7) * r * r) < 0.06 }),
 
-  fam({ id: 'g9.area.sector-angle', skill: 'G9_SURFACE_AREA_ADV', outcome: 'G9.AREA.d', rung: 3, form: 'word',
+  fam({ id: 'g9.area.sector-angle', skill: 'G9_SURFACE_AREA_ADV', outcome: 'MATH.G9.MEASUR.AREA.d', cskill: 'MATH.G9.MEASUR.AREA.SECTOR_AREA', rung: 3, form: 'word',
     draw: () => { const r = pick([7, 14, 21]), th = pick([45, 60, 90, 120, 270]); const a = (th / 360) * PI * r * r; return dp(a, 2) ? { r, th, a: round(a, 2) } : null; },
     make: ({ r, th, a }) => {
       const full = round(PI * r * r, 2);
       return { question: `A slice of a round cake is a sector with a radius of ${r} cm. The top of the slice has an area of ${T(a)} cm². What is the angle of the slice at the tip? Use π = 22/7.`,
         answer: th,
-        wrong: [[round(a / full, 3), 'That is the fraction of the circle. Multiply it by 360 to get degrees.'], [round((a / full) * 180, 1), 'A full turn is 360°, not 180°.'], [360 - th, 'That is the angle of the other part of the circle.'], [round(a / (PI * r), 1), 'The area of a circle uses r × r. Divide by the whole circle area, not by π × r.']],
+        wrong: [[round(a / full, 3), 'That is the fraction of the circle. Multiply it by 360 to get degrees.', 'M_FRACTION_NOT_TIMES_360'], [round((a / full) * 180, 1), 'A full turn is 360°, not 180°.', 'M_TURN_AS_180'], [360 - th, 'That is the angle of the other part of the circle.', 'M_OTHER_SECTOR_ANGLE'], [round(a / (PI * r), 1), 'The area of a circle uses r × r. Divide by the whole circle area, not by π × r.', 'M_DIVIDE_BY_PI_R']],
         hints: ['Find what fraction of the whole circle the sector is.', 'A whole circle is 360°.'],
         steps: [`Whole circle: 22/7 × ${r} × ${r} = ${T(full)} cm².`, `Fraction: ${T(a)} ÷ ${T(full)}, which is ${th}/360.`, `Angle: ${th}°.`] };
     },
     check: ({ r, a }, ans) => Math.abs((ans / 360) * (22 / 7) * r * r - a) < 0.06 }),
 
-  fam({ id: 'g9.area.segment-bed', skill: 'G9_SURFACE_AREA_ADV', outcome: 'G9.AREA.d', rung: 3, form: 'steps',
+  fam({ id: 'g9.area.segment-bed', skill: 'G9_SURFACE_AREA_ADV', outcome: 'MATH.G9.MEASUR.AREA.d', cskill: 'MATH.G9.MEASUR.AREA.SEGMENT_AREA', rung: 3, form: 'steps',
     draw: () => ({ r: pick([7, 14, 21]), who: person() }),
     make: ({ r, who }) => {
       const sec = round(PI * r * r / 4, 2), tri = (r * r) / 2;
       return { question: `${who.name} has a circular flower bed with centre O and radius ${r} m. A straight path joins two points A and B on its edge. The angle AOB is 90°. The part of the bed between the path and the curved edge is a segment. Use π = 22/7.`,
         parts: [
-          { prompt: 'Area of the sector OAB, in m²:', answer: sec, unit: 'm²', hint: 'A 90° angle is a quarter of a full turn.', wrong: [[round(PI * r * r, 2), 'That is the whole circle. The angle is a quarter turn.'], [round(PI * r * r / 2, 2), 'A 90° angle is a quarter of a turn, not a half.']] },
-          { prompt: 'Area of the triangle OAB, in m²:', answer: tri, unit: 'm²', hint: 'OA and OB are both radii and meet at a right angle. Use half base times height.', wrong: [[r * r, 'A triangle is half of base times height.'], [r, 'Multiply the two radii, then halve.']] },
-          { prompt: 'Area of the segment, in m²:', answer: round(sec - tri, 2), unit: 'm²', hint: 'Take the triangle away from the sector.', wrong: [[round(sec + tri, 2), 'The segment is what is left when the triangle is taken away.'], [sec, 'The triangle must be taken away.']] },
+          { prompt: 'Area of the sector OAB, in m²:', answer: sec, unit: 'm²', hint: 'A 90° angle is a quarter of a full turn.', wrong: [[round(PI * r * r, 2), 'That is the whole circle. The angle is a quarter turn.', 'M_SEGMENT_WHOLE_CIRCLE'], [round(PI * r * r / 2, 2), 'A 90° angle is a quarter of a turn, not a half.', 'M_QUARTER_AS_HALF']] },
+          { prompt: 'Area of the triangle OAB, in m²:', answer: tri, unit: 'm²', hint: 'OA and OB are both radii and meet at a right angle. Use half base times height.', wrong: [[r * r, 'A triangle is half of base times height.', 'M_TRIANGLE_NOT_HALVED_SEG'], [r, 'Multiply the two radii, then halve.', 'M_RADIUS_ONCE']] },
+          { prompt: 'Area of the segment, in m²:', answer: round(sec - tri, 2), unit: 'm²', hint: 'Take the triangle away from the sector.', wrong: [[round(sec + tri, 2), 'The segment is what is left when the triangle is taken away.', 'M_TRIANGLE_ADDED'], [sec, 'The triangle must be taken away.', 'M_TRIANGLE_NOT_REMOVED']] },
         ],
         hints: ['Segment = sector minus triangle.'],
         steps: [`Sector: ¼ × 22/7 × ${r} × ${r} = ${T(sec)} m².`, `Triangle: ½ × ${r} × ${r} = ${T(tri)} m².`, `Segment: ${T(sec)} − ${T(tri)} = ${T(round(sec - tri, 2))} m².`] };
@@ -192,22 +194,22 @@ export const FAMILIES = [
     check: ({ r }, v) => Math.abs(v[0] * 4 - (22 / 7) * r * r) < 0.06 && v[1] * 2 === r * r && Math.abs(v[2] + v[1] - v[0]) < 0.01 }),
 
   // ======================================================== AREA: cones
-  fam({ id: 'g9.area.cone-top', skill: 'G9_SURFACE_AREA_ADV', outcome: 'G9.AREA.e', rung: 3, form: 'steps',
+  fam({ id: 'g9.area.cone-top', skill: 'G9_SURFACE_AREA_ADV', outcome: 'MATH.G9.MEASUR.AREA.e', cskill: 'MATH.G9.MEASUR.AREA.SA_CONE', rung: 3, form: 'steps',
     draw: () => { const c = pick([{ r: 7, h: 24, l: 25, p: 22 / 7, pt: '22/7' }, { r: 21, h: 20, l: 29, p: 22 / 7, pt: '22/7' }, { r: 14, h: 48, l: 50, p: 22 / 7, pt: '22/7' }, { r: 6, h: 8, l: 10, p: 3.14, pt: '3.14' }, { r: 5, h: 12, l: 13, p: 3.14, pt: '3.14' }, { r: 9, h: 12, l: 15, p: 3.14, pt: '3.14' }, { r: 8, h: 15, l: 17, p: 3.14, pt: '3.14' }]); return c; },
     make: ({ r, h, l, p, pt }) => {
       const csa = round(p * r * l, 2), tot = round(p * r * (r + l), 2);
       return { question: `A solid wooden spinning top is a cone. Its base has a radius of ${r} cm. Its vertical height is ${h} cm. It will be varnished all over. (Use π = ${pt})`,
         parts: [
-          { prompt: 'Slant height of the cone, in cm:', answer: l, unit: 'cm', hint: 'Use the vertical height and the radius as the two short sides of a right-angled triangle.', wrong: [[r + h, 'Adding the two sides does not give the slant side. Use Pythagoras.'], [h, 'That is the vertical height. The slant height runs along the curved surface.']] },
-          { prompt: 'Curved surface area, in cm²:', answer: csa, unit: 'cm²', hint: 'Curved surface = π × r × slant height.', wrong: [[round(p * r * h, 2), 'The curved surface uses the slant height, not the vertical height.'], [round(p * r * r, 2), 'That is the flat circle at the bottom.']] },
-          { prompt: 'Total surface area, in cm²:', answer: tot, unit: 'cm²', hint: 'Add the flat circular base.', wrong: [[csa, 'The flat base also needs varnish.'], [round(csa + 2 * p * r, 2), 'The area of a circle is π × r × r, not 2 × π × r.']] },
+          { prompt: 'Slant height of the cone, in cm:', answer: l, unit: 'cm', hint: 'Use the vertical height and the radius as the two short sides of a right-angled triangle.', wrong: [[r + h, 'Adding the two sides does not give the slant side. Use Pythagoras.', 'M_CONE_SLANT_ADDED'], [h, 'That is the vertical height. The slant height runs along the curved surface.', 'M_CONE_VERTICAL_FOR_SLANT']] },
+          { prompt: 'Curved surface area, in cm²:', answer: csa, unit: 'cm²', hint: 'Curved surface = π × r × slant height.', wrong: [[round(p * r * h, 2), 'The curved surface uses the slant height, not the vertical height.', 'M_CONE_VERTICAL_IN_CSA'], [round(p * r * r, 2), 'That is the flat circle at the bottom.', 'M_BASE_FOR_CURVED']] },
+          { prompt: 'Total surface area, in cm²:', answer: tot, unit: 'cm²', hint: 'Add the flat circular base.', wrong: [[csa, 'The flat base also needs varnish.', 'M_CONE_BASE_LEFT_OUT'], [round(csa + 2 * p * r, 2), 'The area of a circle is π × r × r, not 2 × π × r.', 'M_CIRCLE_AS_CIRCUMFERENCE']] },
         ],
         hints: ['First find the slant height.'],
         steps: [`Slant height² = ${r}² + ${h}² = ${r * r + h * h}, so it is ${l} cm.`, `Curved surface: ${pt} × ${r} × ${l} = ${T(csa)} cm².`, `Base: ${pt} × ${r} × ${r} = ${T(round(p * r * r, 2))} cm². Total: ${T(tot)} cm².`] };
     },
     check: ({ r, h, p }, v) => v[0] ** 2 === r ** 2 + h ** 2 && Math.abs(v[1] - p * r * v[0]) < 0.011 && Math.abs(v[2] - v[1] - p * r * r) < 0.02 }),
 
-  fam({ id: 'g9.area.cone-spot', skill: 'G9_SURFACE_AREA_ADV', outcome: 'G9.AREA.e', rung: 2, form: 'spot',
+  fam({ id: 'g9.area.cone-spot', skill: 'G9_SURFACE_AREA_ADV', outcome: 'MATH.G9.MEASUR.AREA.e', cskill: 'MATH.G9.MEASUR.AREA.SA_CONE', rung: 2, form: 'spot',
     draw: () => { const c = pick([[6, 8, 10], [5, 12, 13], [9, 12, 15], [8, 15, 17]]); return { r: c[0], h: c[1], l: c[2], kind: pick(['vertical', 'base', 'slant']), who: person() }; },
     make: ({ r, h, l, kind, who }) => {
       const p = 3.14, ls = kind === 'slant' ? r + h : l, used = kind === 'vertical' ? h : ls;
@@ -219,32 +221,33 @@ export const FAMILIES = [
           { text: kind === 'base' ? `Area of the base = 2 × 3.14 × ${r} = ${T(base)} cm²` : `Area of the base = 3.14 × ${r} × ${r} = ${T(base)} cm²`, ok: base === round(p * r * r, 2) },
           { text: `Total = ${T(csa)} + ${T(base)} = ${T(tot)} cm²`, ok: tot === round(csa + base, 2) },
         ],
+        mis: kind === 'slant' ? 'M_CONE_SLANT_ADDED' : kind === 'vertical' ? 'M_CONE_VERTICAL_IN_CSA' : 'M_CIRCLE_AS_CIRCUMFERENCE',
         fix: kind === 'slant' ? 'The slant height is the long side of a right-angled triangle. Use Pythagoras, not addition.' : kind === 'vertical' ? 'The curved surface uses the slant height. The vertical height does not lie on the surface.' : 'The area of a circle is π × r × r. The 2 × π × r is the distance around the circle.',
         steps: [`Slant height: ${l} cm.`, `Curved surface ${T(round(p * r * l, 2))} cm², base ${T(round(p * r * r, 2))} cm², total ${T(round(p * r * (r + l), 2))} cm².`] };
     } }),
 
   // ======================================================== AREA: spheres
-  fam({ id: 'g9.area.sphere-tank-paint', skill: 'G9_SURFACE_AREA_ADV', outcome: 'G9.AREA.f', rung: 3, form: 'word',
+  fam({ id: 'g9.area.sphere-tank-paint', skill: 'G9_SURFACE_AREA_ADV', outcome: 'MATH.G9.MEASUR.AREA.f', cskill: 'MATH.G9.MEASUR.AREA.SA_SPHERE', rung: 3, form: 'word',
     draw: () => ({ r: pick([3.5, 7, 10.5, 14]), who: person() }),
     make: ({ r, who }) => {
       const sa = round(4 * PI * r * r, 2), cover = 14, litres = sa / cover;
       return { question: `A water tank is a sphere of radius ${r} m. ${who.name} paints all of the outside. One litre of paint covers 14 m². How many litres of paint are needed? (Use π = 22/7)`,
         answer: litres,
-        wrong: [[round((2 * PI * r * r) / cover, 2), 'A sphere has more surface than half a sphere. The area is 4 × π × r × r.'], [round((PI * r * r) / cover, 2), 'That is the area of a circle through the middle. The surface of a sphere is four times that.'], [sa, 'That is the area in m². Now find how many litres cover it.'], [round(((4 / 3) * PI * r ** 3) / cover, 2), 'That is based on the volume. Paint covers surface, so use the surface area.']],
+        wrong: [[round((2 * PI * r * r) / cover, 2), 'A sphere has more surface than half a sphere. The area is 4 × π × r × r.', 'M_SPHERE_AS_HEMISPHERE'], [round((PI * r * r) / cover, 2), 'That is the area of a circle through the middle. The surface of a sphere is four times that.', 'M_SPHERE_AS_CIRCLE'], [sa, 'That is the area in m². Now find how many litres cover it.', 'M_AREA_NOT_LITRES'], [round(((4 / 3) * PI * r ** 3) / cover, 2), 'That is based on the volume. Paint covers surface, so use the surface area.', 'M_VOLUME_FOR_PAINT']],
         hints: ['Find the surface area of the sphere first.', 'Then divide by the area one litre covers.'],
         steps: [`Surface area: 4 × 22/7 × ${r} × ${r} = ${T(sa)} m².`, `Litres: ${T(sa)} ÷ 14 = ${T(litres)}.`] };
     },
     check: ({ r }, a) => Math.abs(a * 14 - 4 * (22 / 7) * r * r) < 0.06 }),
 
-  fam({ id: 'g9.area.hemisphere-dome', skill: 'G9_SURFACE_AREA_ADV', outcome: 'G9.AREA.f', rung: 3, form: 'steps',
+  fam({ id: 'g9.area.hemisphere-dome', skill: 'G9_SURFACE_AREA_ADV', outcome: 'MATH.G9.MEASUR.AREA.f', cskill: 'MATH.G9.MEASUR.AREA.SA_SPHERE', rung: 3, form: 'steps',
     draw: () => ({ r: pick([3.5, 7, 10.5, 14, 21]) }),
     make: ({ r }) => {
       const curved = round(2 * PI * r * r, 2), flat = round(PI * r * r, 2);
       return { question: `A workshop makes a metal half-ball, a solid hemisphere, of radius ${r} cm. Both its curved top and its flat base are to be chromed. Use π = 22/7.`,
         parts: [
-          { prompt: 'Area of the curved surface, in cm²:', answer: curved, unit: 'cm²', hint: 'A hemisphere is half of a sphere, and a sphere has a surface of 4πr².', wrong: [[round(4 * PI * r * r, 2), 'That is a whole sphere. The hemisphere is half of it.'], [flat, 'That is only a circle.']] },
-          { prompt: 'Area of the flat base, in cm²:', answer: flat, unit: 'cm²', hint: 'The base is a circle.', wrong: [[curved, 'That is the curved top.'], [round(2 * PI * r, 2), 'That is the distance around the circle. Area is π × r × r.']] },
-          { prompt: 'Total surface area, in cm²:', answer: round(curved + flat, 2), unit: 'cm²', hint: 'Add the curved top and the flat base.', wrong: [[curved, 'The flat base is a surface too.'], [round(4 * PI * r * r + flat, 2), 'The curved part is half a sphere, not a whole one.']] },
+          { prompt: 'Area of the curved surface, in cm²:', answer: curved, unit: 'cm²', hint: 'A hemisphere is half of a sphere, and a sphere has a surface of 4πr².', wrong: [[round(4 * PI * r * r, 2), 'That is a whole sphere. The hemisphere is half of it.', 'M_HEMISPHERE_AS_SPHERE'], [flat, 'That is only a circle.', 'M_HEMI_CIRCLE_ONLY']] },
+          { prompt: 'Area of the flat base, in cm²:', answer: flat, unit: 'cm²', hint: 'The base is a circle.', wrong: [[curved, 'That is the curved top.', 'SLIP'], [round(2 * PI * r, 2), 'That is the distance around the circle. Area is π × r × r.', 'M_CIRCLE_AS_CIRCUMFERENCE']] },
+          { prompt: 'Total surface area, in cm²:', answer: round(curved + flat, 2), unit: 'cm²', hint: 'Add the curved top and the flat base.', wrong: [[curved, 'The flat base is a surface too.', 'M_FLAT_BASE_LEFT_OUT'], [round(4 * PI * r * r + flat, 2), 'The curved part is half a sphere, not a whole one.', 'M_HEMISPHERE_AS_SPHERE']] },
         ],
         hints: ['A hemisphere has two surfaces: one curved and one flat.'],
         steps: [`Curved: 2 × 22/7 × ${r} × ${r} = ${T(curved)} cm².`, `Base: 22/7 × ${r} × ${r} = ${T(flat)} cm².`, `Total: ${T(curved)} + ${T(flat)} = ${T(round(curved + flat, 2))} cm².`] };

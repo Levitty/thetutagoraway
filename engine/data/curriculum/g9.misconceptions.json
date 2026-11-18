@@ -3246,5 +3246,747 @@
   "help": "\"At least 20\" means 20 or more.",
   "source": "to be confirmed by a teacher (no source yet)",
   "status": "draft"
+ },
+ "MATH.G9.MEASUR.AREA.AREA_REGULAR_POLYGON.M_ONE_TRIANGLE_ONLY": {
+  "skill": "MATH.G9.MEASUR.AREA.AREA_REGULAR_POLYGON",
+  "error": "Gives the area of one triangle as the area of the polygon.",
+  "example": {
+   "question": "Hexagon of 6 triangles, each 24 square cm. Area?",
+   "wrong_answer": "24",
+   "correct_answer": "144"
+  },
+  "cause": "Stops after one part.",
+  "reveals": "The answer 24 as a wrong option, with a reason that names the idea.",
+  "help": "A hexagon is six such triangles.",
+  "source": "to be confirmed by a teacher (no source yet)",
+  "status": "draft"
+ },
+ "MATH.G9.MEASUR.AREA.AREA_REGULAR_POLYGON.M_TRIANGLE_HALF_LEFT_OUT": {
+  "skill": "MATH.G9.MEASUR.AREA.AREA_REGULAR_POLYGON",
+  "error": "Forgets the half in the area of a triangle.",
+  "example": {
+   "question": "Triangle base 8 cm, height 7 cm. Area?",
+   "wrong_answer": "56",
+   "correct_answer": "28"
+  },
+  "cause": "Uses base times height as for a rectangle.",
+  "reveals": "The answer 56 as a wrong option, with a reason that names the idea.",
+  "help": "A triangle is half the rectangle round it.",
+  "source": "to be confirmed by a teacher (no source yet)",
+  "status": "draft"
+ },
+ "MATH.G9.MEASUR.AREA.AREA_REGULAR_POLYGON.M_TRIANGLE_COUNT_WRONG": {
+  "skill": "MATH.G9.MEASUR.AREA.AREA_REGULAR_POLYGON",
+  "error": "Uses the wrong number of triangles (5 for a hexagon, 6 for a pentagon).",
+  "example": {
+   "question": "A regular pentagon splits into how many triangles from the centre?",
+   "wrong_answer": "6",
+   "correct_answer": "5"
+  },
+  "cause": "Mixes up the names.",
+  "reveals": "The answer 6 as a wrong option, with a reason that names the idea.",
+  "help": "One triangle for each side: pentagon 5, hexagon 6.",
+  "source": "to be confirmed by a teacher (no source yet)",
+  "status": "draft"
+ },
+ "MATH.G9.MEASUR.AREA.AREA_REGULAR_POLYGON.M_PERIMETER_FOR_AREA": {
+  "skill": "MATH.G9.MEASUR.AREA.AREA_REGULAR_POLYGON",
+  "error": "Gives the distance round the polygon as its area.",
+  "example": {
+   "question": "Hexagon of side 8 cm. Area?",
+   "wrong_answer": "48",
+   "correct_answer": "six triangles of half 8 x height"
+  },
+  "cause": "Mixes up perimeter and area.",
+  "reveals": "The answer 48 as a wrong option, with a reason that names the idea.",
+  "help": "Area needs the height of each triangle too.",
+  "source": "to be confirmed by a teacher (no source yet)",
+  "status": "draft"
+ },
+ "MATH.G9.MEASUR.AREA.AREA_REGULAR_POLYGON.M_CENTRE_ANGLE_180": {
+  "skill": "MATH.G9.MEASUR.AREA.AREA_REGULAR_POLYGON",
+  "error": "Divides 180 degrees by the number of sides for the centre angle.",
+  "example": {
+   "question": "Centre angle of a regular pentagon?",
+   "wrong_answer": "36",
+   "correct_answer": "72"
+  },
+  "cause": "Uses the angles in a triangle or on a line.",
+  "reveals": "The answer 36 as a wrong option, with a reason that names the idea.",
+  "help": "The triangles go all the way round the centre: 360 / 5.",
+  "source": "to be confirmed by a teacher (no source yet)",
+  "status": "draft"
+ },
+ "MATH.G9.MEASUR.AREA.AREA_REGULAR_POLYGON.M_CENTRE_AS_INTERIOR": {
+  "skill": "MATH.G9.MEASUR.AREA.AREA_REGULAR_POLYGON",
+  "error": "Gives the interior angle of the polygon as the angle at the centre.",
+  "example": {
+   "question": "Centre angle of a regular hexagon?",
+   "wrong_answer": "120",
+   "correct_answer": "60"
+  },
+  "cause": "Mixes up the angle at a corner and the angle at the centre.",
+  "reveals": "The answer 120 as a wrong option, with a reason that names the idea.",
+  "help": "The centre angle is 360 / 6; 120 is the corner angle.",
+  "source": "to be confirmed by a teacher (no source yet)",
+  "status": "draft"
+ },
+ "MATH.G9.MEASUR.AREA.AREA_REGULAR_POLYGON.M_SIDE_AS_ANGLE": {
+  "skill": "MATH.G9.MEASUR.AREA.AREA_REGULAR_POLYGON",
+  "error": "Uses the side length to find the centre angle.",
+  "example": {
+   "question": "Regular pentagon of side 72 cm: centre angle?",
+   "wrong_answer": "from 72 cm",
+   "correct_answer": "72 degrees, from 360 / 5"
+  },
+  "cause": "Uses any number given.",
+  "reveals": "The answer from 72 cm as a wrong option, with a reason that names the idea.",
+  "help": "A length cannot be an angle: the angle comes from 360 and the number of sides.",
+  "source": "to be confirmed by a teacher (no source yet)",
+  "status": "draft"
+ },
+ "MATH.G9.MEASUR.AREA.AREA_COMPOSITE_PENTAGON.M_RECT_PERIMETER_FOR_AREA": {
+  "skill": "MATH.G9.MEASUR.AREA.AREA_COMPOSITE_PENTAGON",
+  "error": "Works out the perimeter of the rectangle instead of its area.",
+  "example": {
+   "question": "Rectangle 8 m by 12 m. Area?",
+   "wrong_answer": "40",
+   "correct_answer": "96"
+  },
+  "cause": "Adds round the edge.",
+  "reveals": "The answer 40 as a wrong option, with a reason that names the idea.",
+  "help": "Area is width times length.",
+  "source": "to be confirmed by a teacher (no source yet)",
+  "status": "draft"
+ },
+ "MATH.G9.MEASUR.AREA.AREA_COMPOSITE_PENTAGON.M_SIDES_ADDED_FOR_AREA": {
+  "skill": "MATH.G9.MEASUR.AREA.AREA_COMPOSITE_PENTAGON",
+  "error": "Adds two sides for an area.",
+  "example": {
+   "question": "Rectangle 8 m by 12 m. Area?",
+   "wrong_answer": "20",
+   "correct_answer": "96"
+  },
+  "cause": "Combines the numbers by adding.",
+  "reveals": "The answer 20 as a wrong option, with a reason that names the idea.",
+  "help": "Area multiplies: 8 x 12.",
+  "source": "to be confirmed by a teacher (no source yet)",
+  "status": "draft"
+ },
+ "MATH.G9.MEASUR.AREA.AREA_COMPOSITE_PENTAGON.M_TRIANGLE_PART_LEFT_OUT": {
+  "skill": "MATH.G9.MEASUR.AREA.AREA_COMPOSITE_PENTAGON",
+  "error": "Gives the rectangle's area as the pentagon's, leaving out the triangle.",
+  "example": {
+   "question": "Rectangle 96 square m plus a triangle 20 square m. Plot?",
+   "wrong_answer": "96",
+   "correct_answer": "116"
+  },
+  "cause": "Forgets a part.",
+  "reveals": "The answer 96 as a wrong option, with a reason that names the idea.",
+  "help": "Add every part of the shape.",
+  "source": "to be confirmed by a teacher (no source yet)",
+  "status": "draft"
+ },
+ "MATH.G9.MEASUR.AREA.AREA_COMPOSITE_PENTAGON.M_RECTANGLE_PART_LEFT_OUT": {
+  "skill": "MATH.G9.MEASUR.AREA.AREA_COMPOSITE_PENTAGON",
+  "error": "Gives only the triangle's area.",
+  "example": {
+   "question": "Rectangle 96 square m plus a triangle 20 square m. Plot?",
+   "wrong_answer": "20",
+   "correct_answer": "116"
+  },
+  "cause": "Forgets a part.",
+  "reveals": "The answer 20 as a wrong option, with a reason that names the idea.",
+  "help": "The plot is both shapes together.",
+  "source": "to be confirmed by a teacher (no source yet)",
+  "status": "draft"
+ },
+ "MATH.G9.MEASUR.AREA.SA_PRISM.M_ONE_END_ONLY": {
+  "skill": "MATH.G9.MEASUR.AREA.SA_PRISM",
+  "error": "Counts one end of the prism instead of two.",
+  "example": {
+   "question": "Ends 6 square cm each, rectangles 120 square cm. Surface area?",
+   "wrong_answer": "126",
+   "correct_answer": "132"
+  },
+  "cause": "Pictures the prism lying on one end.",
+  "reveals": "The answer 126 as a wrong option, with a reason that names the idea.",
+  "help": "A prism has two equal ends.",
+  "source": "to be confirmed by a teacher (no source yet)",
+  "status": "draft"
+ },
+ "MATH.G9.MEASUR.AREA.SA_PRISM.M_PERIMETER_OF_END": {
+  "skill": "MATH.G9.MEASUR.AREA.SA_PRISM",
+  "error": "Adds the sides of the end instead of finding its area.",
+  "example": {
+   "question": "Right-angled end with sides 3, 4, 5 cm. Area of one end?",
+   "wrong_answer": "12",
+   "correct_answer": "6"
+  },
+  "cause": "Mixes up perimeter and area.",
+  "reveals": "The answer 12 as a wrong option, with a reason that names the idea.",
+  "help": "Half of 3 x 4.",
+  "source": "to be confirmed by a teacher (no source yet)",
+  "status": "draft"
+ },
+ "MATH.G9.MEASUR.AREA.SA_PRISM.M_SLOPING_FACE_MISSING": {
+  "skill": "MATH.G9.MEASUR.AREA.SA_PRISM",
+  "error": "Leaves out a sloping rectangular face.",
+  "example": {
+   "question": "Prism ends 3, 4, 5 cm, length 10 cm. Rectangles?",
+   "wrong_answer": "70",
+   "correct_answer": "120"
+  },
+  "cause": "Counts only the faces it can see resting flat.",
+  "reveals": "The answer 70 as a wrong option, with a reason that names the idea.",
+  "help": "One rectangle for each side of the end: (3 + 4 + 5) x 10.",
+  "source": "to be confirmed by a teacher (no source yet)",
+  "status": "draft"
+ },
+ "MATH.G9.MEASUR.AREA.SA_PRISM.M_VOLUME_FOR_SURFACE": {
+  "skill": "MATH.G9.MEASUR.AREA.SA_PRISM",
+  "error": "Works out the volume instead of the area of faces.",
+  "example": {
+   "question": "Prism with end 6 square cm, length 10 cm. Surface area?",
+   "wrong_answer": "60",
+   "correct_answer": "132"
+  },
+  "cause": "Uses the prism formula for volume.",
+  "reveals": "The answer 60 as a wrong option, with a reason that names the idea.",
+  "help": "Paint covers faces: add their areas.",
+  "source": "to be confirmed by a teacher (no source yet)",
+  "status": "draft"
+ },
+ "MATH.G9.MEASUR.AREA.SA_PRISM.M_ENDS_LEFT_OUT": {
+  "skill": "MATH.G9.MEASUR.AREA.SA_PRISM",
+  "error": "Leaves out both ends.",
+  "example": {
+   "question": "Ends 6 square cm each, rectangles 120 square cm. Surface area?",
+   "wrong_answer": "120",
+   "correct_answer": "132"
+  },
+  "cause": "Thinks only the long faces count.",
+  "reveals": "The answer 120 as a wrong option, with a reason that names the idea.",
+  "help": "Add the two ends.",
+  "source": "to be confirmed by a teacher (no source yet)",
+  "status": "draft"
+ },
+ "MATH.G9.MEASUR.AREA.SA_PRISM.M_OPEN_TOP_COUNTED": {
+  "skill": "MATH.G9.MEASUR.AREA.SA_PRISM",
+  "error": "Counts a face that is open.",
+  "example": {
+   "question": "An open trough: is the top face metal?",
+   "wrong_answer": "Yes",
+   "correct_answer": "No"
+  },
+  "cause": "Uses the closed-prism formula.",
+  "reveals": "The answer Yes as a wrong option, with a reason that names the idea.",
+  "help": "List the faces that are really there.",
+  "source": "to be confirmed by a teacher (no source yet)",
+  "status": "draft"
+ },
+ "MATH.G9.MEASUR.AREA.SA_PRISM.M_FACES_NOT_LISTED": {
+  "skill": "MATH.G9.MEASUR.AREA.SA_PRISM",
+  "error": "Adds faces without listing which ones exist, so one is counted wrongly.",
+  "example": {
+   "question": "A trough (open top): which faces?",
+   "wrong_answer": "all six",
+   "correct_answer": "bottom, two slopes, two ends"
+  },
+  "cause": "Uses a formula without a sketch.",
+  "reveals": "The answer all six as a wrong option, with a reason that names the idea.",
+  "help": "Sketch the prism and tick each face.",
+  "source": "to be confirmed by a teacher (no source yet)",
+  "status": "draft"
+ },
+ "MATH.G9.MEASUR.AREA.SA_PYRAMID.M_SLANT_BY_ADDING": {
+  "skill": "MATH.G9.MEASUR.AREA.SA_PYRAMID",
+  "error": "Adds the vertical height and half the base for the slant height.",
+  "example": {
+   "question": "Height 4 cm, half base 3 cm. Slant height?",
+   "wrong_answer": "7",
+   "correct_answer": "5"
+  },
+  "cause": "Adds the two sides of the right-angled triangle.",
+  "reveals": "The answer 7 as a wrong option, with a reason that names the idea.",
+  "help": "The slant is the hypotenuse: Pythagoras.",
+  "source": "to be confirmed by a teacher (no source yet)",
+  "status": "draft"
+ },
+ "MATH.G9.MEASUR.AREA.SA_PYRAMID.M_VERTICAL_FOR_SLANT": {
+  "skill": "MATH.G9.MEASUR.AREA.SA_PYRAMID",
+  "error": "Uses the vertical height as the slant height.",
+  "example": {
+   "question": "Height 4 cm, half base 3 cm. Slant height?",
+   "wrong_answer": "4",
+   "correct_answer": "5"
+  },
+  "cause": "Thinks both heights are the same.",
+  "reveals": "The answer 4 as a wrong option, with a reason that names the idea.",
+  "help": "The vertical height is inside; the slant is on the face.",
+  "source": "to be confirmed by a teacher (no source yet)",
+  "status": "draft"
+ },
+ "MATH.G9.MEASUR.AREA.SA_PYRAMID.M_VERTICAL_ON_FACE": {
+  "skill": "MATH.G9.MEASUR.AREA.SA_PYRAMID",
+  "error": "Uses the vertical height for the height of a triangular face.",
+  "example": {
+   "question": "Base 6 cm, vertical height 4 cm, slant 5 cm. One face?",
+   "wrong_answer": "12",
+   "correct_answer": "15"
+  },
+  "cause": "Uses the height given first.",
+  "reveals": "The answer 12 as a wrong option, with a reason that names the idea.",
+  "help": "The face's height is the slant height.",
+  "source": "to be confirmed by a teacher (no source yet)",
+  "status": "draft"
+ },
+ "MATH.G9.MEASUR.AREA.SA_PYRAMID.M_FACE_NOT_HALVED": {
+  "skill": "MATH.G9.MEASUR.AREA.SA_PYRAMID",
+  "error": "Forgets the half in a triangular face.",
+  "example": {
+   "question": "Base 6 cm, slant 5 cm. One face?",
+   "wrong_answer": "30",
+   "correct_answer": "15"
+  },
+  "cause": "Uses base times height.",
+  "reveals": "The answer 30 as a wrong option, with a reason that names the idea.",
+  "help": "A triangle is half the rectangle.",
+  "source": "to be confirmed by a teacher (no source yet)",
+  "status": "draft"
+ },
+ "MATH.G9.MEASUR.AREA.SA_PYRAMID.M_BASE_LEFT_OUT": {
+  "skill": "MATH.G9.MEASUR.AREA.SA_PYRAMID",
+  "error": "Leaves out the base of a closed pyramid.",
+  "example": {
+   "question": "Four faces 60 square cm, base 36 square cm. Closed pyramid?",
+   "wrong_answer": "60",
+   "correct_answer": "96"
+  },
+  "cause": "Counts only the sloping faces.",
+  "reveals": "The answer 60 as a wrong option, with a reason that names the idea.",
+  "help": "A closed pyramid has its base too.",
+  "source": "to be confirmed by a teacher (no source yet)",
+  "status": "draft"
+ },
+ "MATH.G9.MEASUR.AREA.SA_PYRAMID.M_BASE_COUNTED_OPEN": {
+  "skill": "MATH.G9.MEASUR.AREA.SA_PYRAMID",
+  "error": "Adds the base for a roof that has no base.",
+  "example": {
+   "question": "A pyramid roof with no base: faces to paint?",
+   "wrong_answer": "four triangles and the square",
+   "correct_answer": "four triangles"
+  },
+  "cause": "Uses the closed-pyramid formula.",
+  "reveals": "The answer four triangles and the square as a wrong option, with a reason that names the idea.",
+  "help": "A roof has no floor: four faces only.",
+  "source": "to be confirmed by a teacher (no source yet)",
+  "status": "draft"
+ },
+ "MATH.G9.MEASUR.AREA.SA_PYRAMID.M_ONE_FACE_ONLY": {
+  "skill": "MATH.G9.MEASUR.AREA.SA_PYRAMID",
+  "error": "Uses one triangular face instead of four.",
+  "example": {
+   "question": "Each face 15 square cm. Four faces?",
+   "wrong_answer": "15",
+   "correct_answer": "60"
+  },
+  "cause": "Stops after one.",
+  "reveals": "The answer 15 as a wrong option, with a reason that names the idea.",
+  "help": "A square-based pyramid has four triangular faces.",
+  "source": "to be confirmed by a teacher (no source yet)",
+  "status": "draft"
+ },
+ "MATH.G9.MEASUR.AREA.SA_PYRAMID.M_SQUARE_SIDES_ADDED": {
+  "skill": "MATH.G9.MEASUR.AREA.SA_PYRAMID",
+  "error": "Adds the sides of the square base for its area.",
+  "example": {
+   "question": "Square base of side 6 cm. Area?",
+   "wrong_answer": "12",
+   "correct_answer": "36"
+  },
+  "cause": "Adds instead of multiplying.",
+  "reveals": "The answer 12 as a wrong option, with a reason that names the idea.",
+  "help": "Side times side.",
+  "source": "to be confirmed by a teacher (no source yet)",
+  "status": "draft"
+ },
+ "MATH.G9.MEASUR.AREA.SA_PYRAMID.M_AREA_NOT_COST": {
+  "skill": "MATH.G9.MEASUR.AREA.SA_PYRAMID",
+  "error": "Gives the area when the cost is asked.",
+  "example": {
+   "question": "60 square m at 150 shillings a square m. Cost?",
+   "wrong_answer": "60",
+   "correct_answer": "9,000"
+  },
+  "cause": "Stops after the area.",
+  "reveals": "The answer 60 as a wrong option, with a reason that names the idea.",
+  "help": "Multiply the area by the price.",
+  "source": "to be confirmed by a teacher (no source yet)",
+  "status": "draft"
+ },
+ "MATH.G9.MEASUR.AREA.SECTOR_AREA.M_WHOLE_CIRCLE_AREA": {
+  "skill": "MATH.G9.MEASUR.AREA.SECTOR_AREA",
+  "error": "Gives the area of the whole circle.",
+  "example": {
+   "question": "Sector radius 7 m, 90 degrees. Area?",
+   "wrong_answer": "154",
+   "correct_answer": "38.5"
+  },
+  "cause": "Forgets the fraction of the circle.",
+  "reveals": "The answer 154 as a wrong option, with a reason that names the idea.",
+  "help": "Multiply by 90/360.",
+  "source": "to be confirmed by a teacher (no source yet)",
+  "status": "draft"
+ },
+ "MATH.G9.MEASUR.AREA.SECTOR_AREA.M_ARC_FOR_AREA": {
+  "skill": "MATH.G9.MEASUR.AREA.SECTOR_AREA",
+  "error": "Works out the arc length instead of the area.",
+  "example": {
+   "question": "Sector radius 7 m, 90 degrees. Area?",
+   "wrong_answer": "11",
+   "correct_answer": "38.5"
+  },
+  "cause": "Uses 2 pi r for a circle.",
+  "reveals": "The answer 11 as a wrong option, with a reason that names the idea.",
+  "help": "Area uses pi r squared.",
+  "source": "to be confirmed by a teacher (no source yet)",
+  "status": "draft"
+ },
+ "MATH.G9.MEASUR.AREA.SECTOR_AREA.M_FRACTION_INVERTED": {
+  "skill": "MATH.G9.MEASUR.AREA.SECTOR_AREA",
+  "error": "Multiplies by 360/angle instead of angle/360.",
+  "example": {
+   "question": "Sector radius 7 m, 90 degrees. Area?",
+   "wrong_answer": "616",
+   "correct_answer": "38.5"
+  },
+  "cause": "Puts the fraction the wrong way up.",
+  "reveals": "The answer 616 as a wrong option, with a reason that names the idea.",
+  "help": "A sector is smaller than the circle: angle over 360.",
+  "source": "to be confirmed by a teacher (no source yet)",
+  "status": "draft"
+ },
+ "MATH.G9.MEASUR.AREA.SECTOR_AREA.M_TURN_AS_180": {
+  "skill": "MATH.G9.MEASUR.AREA.SECTOR_AREA",
+  "error": "Uses 180 degrees for a full turn.",
+  "example": {
+   "question": "Sector radius 7 m, 90 degrees. Area?",
+   "wrong_answer": "77",
+   "correct_answer": "38.5"
+  },
+  "cause": "Confuses a straight line with a full turn.",
+  "reveals": "The answer 77 as a wrong option, with a reason that names the idea.",
+  "help": "A full turn is 360 degrees.",
+  "source": "to be confirmed by a teacher (no source yet)",
+  "status": "draft"
+ },
+ "MATH.G9.MEASUR.AREA.SECTOR_AREA.M_FRACTION_NOT_TIMES_360": {
+  "skill": "MATH.G9.MEASUR.AREA.SECTOR_AREA",
+  "error": "Gives the fraction of the circle as the angle.",
+  "example": {
+   "question": "Sector area 38.5, circle 154. Angle?",
+   "wrong_answer": "0.25",
+   "correct_answer": "90"
+  },
+  "cause": "Stops before turning the fraction into degrees.",
+  "reveals": "The answer 0.25 as a wrong option, with a reason that names the idea.",
+  "help": "A quarter of 360 degrees.",
+  "source": "to be confirmed by a teacher (no source yet)",
+  "status": "draft"
+ },
+ "MATH.G9.MEASUR.AREA.SECTOR_AREA.M_OTHER_SECTOR_ANGLE": {
+  "skill": "MATH.G9.MEASUR.AREA.SECTOR_AREA",
+  "error": "Gives the angle of the rest of the circle.",
+  "example": {
+   "question": "Sector area 38.5, circle 154. Angle?",
+   "wrong_answer": "270",
+   "correct_answer": "90"
+  },
+  "cause": "Takes the angle from 360.",
+  "reveals": "The answer 270 as a wrong option, with a reason that names the idea.",
+  "help": "The slice is the small part.",
+  "source": "to be confirmed by a teacher (no source yet)",
+  "status": "draft"
+ },
+ "MATH.G9.MEASUR.AREA.SECTOR_AREA.M_DIVIDE_BY_PI_R": {
+  "skill": "MATH.G9.MEASUR.AREA.SECTOR_AREA",
+  "error": "Divides by pi r instead of by the whole circle's area.",
+  "example": {
+   "question": "Sector area 38.5, radius 7. Fraction of the circle?",
+   "wrong_answer": "38.5 / 22",
+   "correct_answer": "38.5 / 154"
+  },
+  "cause": "Uses only part of the circle formula.",
+  "reveals": "The answer 38.5 / 22 as a wrong option, with a reason that names the idea.",
+  "help": "The whole circle is pi x r x r.",
+  "source": "to be confirmed by a teacher (no source yet)",
+  "status": "draft"
+ },
+ "MATH.G9.MEASUR.AREA.SEGMENT_AREA.M_SEGMENT_WHOLE_CIRCLE": {
+  "skill": "MATH.G9.MEASUR.AREA.SEGMENT_AREA",
+  "error": "Uses the whole circle instead of the sector.",
+  "example": {
+   "question": "Radius 7 m, 90 degrees. Sector?",
+   "wrong_answer": "154",
+   "correct_answer": "38.5"
+  },
+  "cause": "Forgets the angle.",
+  "reveals": "The answer 154 as a wrong option, with a reason that names the idea.",
+  "help": "The angle at the centre is a quarter turn.",
+  "source": "to be confirmed by a teacher (no source yet)",
+  "status": "draft"
+ },
+ "MATH.G9.MEASUR.AREA.SEGMENT_AREA.M_QUARTER_AS_HALF": {
+  "skill": "MATH.G9.MEASUR.AREA.SEGMENT_AREA",
+  "error": "Takes 90 degrees as half a turn.",
+  "example": {
+   "question": "Radius 7 m, 90 degrees. Sector?",
+   "wrong_answer": "77",
+   "correct_answer": "38.5"
+  },
+  "cause": "Mixes up a half and a quarter.",
+  "reveals": "The answer 77 as a wrong option, with a reason that names the idea.",
+  "help": "90 out of 360 is a quarter.",
+  "source": "to be confirmed by a teacher (no source yet)",
+  "status": "draft"
+ },
+ "MATH.G9.MEASUR.AREA.SEGMENT_AREA.M_TRIANGLE_NOT_HALVED_SEG": {
+  "skill": "MATH.G9.MEASUR.AREA.SEGMENT_AREA",
+  "error": "Forgets the half in the triangle of the two radii.",
+  "example": {
+   "question": "Radii 7 m at 90 degrees. Triangle?",
+   "wrong_answer": "49",
+   "correct_answer": "24.5"
+  },
+  "cause": "Uses r times r.",
+  "reveals": "The answer 49 as a wrong option, with a reason that names the idea.",
+  "help": "Half of r x r.",
+  "source": "to be confirmed by a teacher (no source yet)",
+  "status": "draft"
+ },
+ "MATH.G9.MEASUR.AREA.SEGMENT_AREA.M_RADIUS_ONCE": {
+  "skill": "MATH.G9.MEASUR.AREA.SEGMENT_AREA",
+  "error": "Uses the radius once for the triangle's area.",
+  "example": {
+   "question": "Radii 7 m at 90 degrees. Triangle?",
+   "wrong_answer": "7",
+   "correct_answer": "24.5"
+  },
+  "cause": "Stops halfway.",
+  "reveals": "The answer 7 as a wrong option, with a reason that names the idea.",
+  "help": "Base 7 and height 7: half of 7 x 7.",
+  "source": "to be confirmed by a teacher (no source yet)",
+  "status": "draft"
+ },
+ "MATH.G9.MEASUR.AREA.SEGMENT_AREA.M_TRIANGLE_ADDED": {
+  "skill": "MATH.G9.MEASUR.AREA.SEGMENT_AREA",
+  "error": "Adds the triangle to the sector instead of taking it away.",
+  "example": {
+   "question": "Sector 38.5, triangle 24.5. Segment?",
+   "wrong_answer": "63",
+   "correct_answer": "14"
+  },
+  "cause": "Adds the two parts.",
+  "reveals": "The answer 63 as a wrong option, with a reason that names the idea.",
+  "help": "The segment is the sector with the triangle cut off.",
+  "source": "to be confirmed by a teacher (no source yet)",
+  "status": "draft"
+ },
+ "MATH.G9.MEASUR.AREA.SEGMENT_AREA.M_TRIANGLE_NOT_REMOVED": {
+  "skill": "MATH.G9.MEASUR.AREA.SEGMENT_AREA",
+  "error": "Gives the sector as the segment.",
+  "example": {
+   "question": "Sector 38.5, triangle 24.5. Segment?",
+   "wrong_answer": "38.5",
+   "correct_answer": "14"
+  },
+  "cause": "Stops after the sector.",
+  "reveals": "The answer 38.5 as a wrong option, with a reason that names the idea.",
+  "help": "Take the triangle away.",
+  "source": "to be confirmed by a teacher (no source yet)",
+  "status": "draft"
+ },
+ "MATH.G9.MEASUR.AREA.SA_CONE.M_CONE_SLANT_ADDED": {
+  "skill": "MATH.G9.MEASUR.AREA.SA_CONE",
+  "error": "Adds the radius and the vertical height for the slant height.",
+  "example": {
+   "question": "r = 3 cm, h = 4 cm. Slant?",
+   "wrong_answer": "7",
+   "correct_answer": "5"
+  },
+  "cause": "Adds the two short sides.",
+  "reveals": "The answer 7 as a wrong option, with a reason that names the idea.",
+  "help": "Pythagoras: square, add, root.",
+  "source": "to be confirmed by a teacher (no source yet)",
+  "status": "draft"
+ },
+ "MATH.G9.MEASUR.AREA.SA_CONE.M_CONE_VERTICAL_FOR_SLANT": {
+  "skill": "MATH.G9.MEASUR.AREA.SA_CONE",
+  "error": "Uses the vertical height as the slant height.",
+  "example": {
+   "question": "r = 3 cm, h = 4 cm. Slant?",
+   "wrong_answer": "4",
+   "correct_answer": "5"
+  },
+  "cause": "Thinks both heights are the same.",
+  "reveals": "The answer 4 as a wrong option, with a reason that names the idea.",
+  "help": "The slant runs along the surface.",
+  "source": "to be confirmed by a teacher (no source yet)",
+  "status": "draft"
+ },
+ "MATH.G9.MEASUR.AREA.SA_CONE.M_CONE_VERTICAL_IN_CSA": {
+  "skill": "MATH.G9.MEASUR.AREA.SA_CONE",
+  "error": "Uses the vertical height in pi r l.",
+  "example": {
+   "question": "r = 3, h = 4, l = 5. Curved surface?",
+   "wrong_answer": "12 pi",
+   "correct_answer": "15 pi"
+  },
+  "cause": "Uses the height given.",
+  "reveals": "The answer 12 pi as a wrong option, with a reason that names the idea.",
+  "help": "The curved surface uses the slant height.",
+  "source": "to be confirmed by a teacher (no source yet)",
+  "status": "draft"
+ },
+ "MATH.G9.MEASUR.AREA.SA_CONE.M_BASE_FOR_CURVED": {
+  "skill": "MATH.G9.MEASUR.AREA.SA_CONE",
+  "error": "Gives the base circle as the curved surface.",
+  "example": {
+   "question": "r = 3, l = 5. Curved surface?",
+   "wrong_answer": "9 pi",
+   "correct_answer": "15 pi"
+  },
+  "cause": "Uses the circle formula.",
+  "reveals": "The answer 9 pi as a wrong option, with a reason that names the idea.",
+  "help": "Curved surface is pi r l.",
+  "source": "to be confirmed by a teacher (no source yet)",
+  "status": "draft"
+ },
+ "MATH.G9.MEASUR.AREA.SA_CONE.M_CONE_BASE_LEFT_OUT": {
+  "skill": "MATH.G9.MEASUR.AREA.SA_CONE",
+  "error": "Leaves out the base of a closed cone.",
+  "example": {
+   "question": "Curved 15 pi, base 9 pi. Closed cone?",
+   "wrong_answer": "15 pi",
+   "correct_answer": "24 pi"
+  },
+  "cause": "Stops at the curved part.",
+  "reveals": "The answer 15 pi as a wrong option, with a reason that names the idea.",
+  "help": "A closed cone has its base too.",
+  "source": "to be confirmed by a teacher (no source yet)",
+  "status": "draft"
+ },
+ "MATH.G9.MEASUR.AREA.SA_CONE.M_CIRCLE_AS_CIRCUMFERENCE": {
+  "skill": "MATH.G9.MEASUR.AREA.SA_CONE",
+  "error": "Uses 2 pi r for the area of the base circle.",
+  "example": {
+   "question": "Base of radius 3 cm. Area?",
+   "wrong_answer": "6 pi",
+   "correct_answer": "9 pi"
+  },
+  "cause": "Mixes the circumference and area formulas.",
+  "reveals": "The answer 6 pi as a wrong option, with a reason that names the idea.",
+  "help": "Area is pi r squared; 2 pi r is the distance round.",
+  "source": "to be confirmed by a teacher (no source yet)",
+  "status": "draft"
+ },
+ "MATH.G9.MEASUR.AREA.SA_SPHERE.M_SPHERE_AS_HEMISPHERE": {
+  "skill": "MATH.G9.MEASUR.AREA.SA_SPHERE",
+  "error": "Uses 2 pi r squared for a whole sphere.",
+  "example": {
+   "question": "Sphere radius 7 m. Surface?",
+   "wrong_answer": "308",
+   "correct_answer": "616"
+  },
+  "cause": "Uses the hemisphere's curved part.",
+  "reveals": "The answer 308 as a wrong option, with a reason that names the idea.",
+  "help": "A whole sphere is 4 pi r squared.",
+  "source": "to be confirmed by a teacher (no source yet)",
+  "status": "draft"
+ },
+ "MATH.G9.MEASUR.AREA.SA_SPHERE.M_SPHERE_AS_CIRCLE": {
+  "skill": "MATH.G9.MEASUR.AREA.SA_SPHERE",
+  "error": "Uses pi r squared for a sphere.",
+  "example": {
+   "question": "Sphere radius 7 m. Surface?",
+   "wrong_answer": "154",
+   "correct_answer": "616"
+  },
+  "cause": "Uses the circle formula.",
+  "reveals": "The answer 154 as a wrong option, with a reason that names the idea.",
+  "help": "The sphere has four times the area of its middle circle.",
+  "source": "to be confirmed by a teacher (no source yet)",
+  "status": "draft"
+ },
+ "MATH.G9.MEASUR.AREA.SA_SPHERE.M_AREA_NOT_LITRES": {
+  "skill": "MATH.G9.MEASUR.AREA.SA_SPHERE",
+  "error": "Gives the area when litres of paint are asked.",
+  "example": {
+   "question": "616 square m, 14 square m a litre. Litres?",
+   "wrong_answer": "616",
+   "correct_answer": "44"
+  },
+  "cause": "Stops after the area.",
+  "reveals": "The answer 616 as a wrong option, with a reason that names the idea.",
+  "help": "Divide by the area one litre covers.",
+  "source": "to be confirmed by a teacher (no source yet)",
+  "status": "draft"
+ },
+ "MATH.G9.MEASUR.AREA.SA_SPHERE.M_VOLUME_FOR_PAINT": {
+  "skill": "MATH.G9.MEASUR.AREA.SA_SPHERE",
+  "error": "Uses the volume for the paint.",
+  "example": {
+   "question": "Paint for a sphere tank of radius 7 m?",
+   "wrong_answer": "from 4/3 pi r cubed",
+   "correct_answer": "from 4 pi r squared"
+  },
+  "cause": "Mixes inside and outside.",
+  "reveals": "The answer from 4/3 pi r cubed as a wrong option, with a reason that names the idea.",
+  "help": "Paint covers the surface.",
+  "source": "to be confirmed by a teacher (no source yet)",
+  "status": "draft"
+ },
+ "MATH.G9.MEASUR.AREA.SA_SPHERE.M_HEMISPHERE_AS_SPHERE": {
+  "skill": "MATH.G9.MEASUR.AREA.SA_SPHERE",
+  "error": "Uses the whole sphere for a hemisphere's curved part.",
+  "example": {
+   "question": "Hemisphere radius 7 cm. Curved part?",
+   "wrong_answer": "616",
+   "correct_answer": "308"
+  },
+  "cause": "Forgets it is half.",
+  "reveals": "The answer 616 as a wrong option, with a reason that names the idea.",
+  "help": "The curved part is half of 4 pi r squared.",
+  "source": "to be confirmed by a teacher (no source yet)",
+  "status": "draft"
+ },
+ "MATH.G9.MEASUR.AREA.SA_SPHERE.M_HEMI_CIRCLE_ONLY": {
+  "skill": "MATH.G9.MEASUR.AREA.SA_SPHERE",
+  "error": "Gives the flat circle as the curved part of a hemisphere.",
+  "example": {
+   "question": "Hemisphere radius 7 cm. Curved part?",
+   "wrong_answer": "154",
+   "correct_answer": "308"
+  },
+  "cause": "Uses the circle formula.",
+  "reveals": "The answer 154 as a wrong option, with a reason that names the idea.",
+  "help": "The curved part is 2 pi r squared.",
+  "source": "to be confirmed by a teacher (no source yet)",
+  "status": "draft"
+ },
+ "MATH.G9.MEASUR.AREA.SA_SPHERE.M_FLAT_BASE_LEFT_OUT": {
+  "skill": "MATH.G9.MEASUR.AREA.SA_SPHERE",
+  "error": "Leaves out the flat face of a solid hemisphere.",
+  "example": {
+   "question": "Solid hemisphere radius 7 cm. Total?",
+   "wrong_answer": "308",
+   "correct_answer": "462"
+  },
+  "cause": "Counts only the curved part.",
+  "reveals": "The answer 308 as a wrong option, with a reason that names the idea.",
+  "help": "Add the flat circle: 3 pi r squared.",
+  "source": "to be confirmed by a teacher (no source yet)",
+  "status": "draft"
  }
 }
