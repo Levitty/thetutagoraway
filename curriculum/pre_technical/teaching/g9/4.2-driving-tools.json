@@ -1,0 +1,197 @@
+{
+ "sub_strand": "PRE_.G9.TOOLS_.DRIVING_TOOLS",
+ "title": "Driving Tools",
+ "status": "draft: written 18 Nov 2026 offline for Grade 9 Pre-Technical Studies; not yet checked by a Pre-Technical Studies teacher; safety lines marked SAFETY in the library to confirm first; not loaded by the live tutor",
+ "sources": [],
+ "notes": "",
+ "skills": [
+  {
+   "skill": "PRET.G9.TOOLS_.DRIVING_TOOLS.DRIVING_TOOLS",
+   "key_step": "The learner identifies driving tools (claw and ball-pein hammers, mallets, screwdrivers: flat and cross-head, spanners: open-ended, ring, adjustable, Allen keys, nail punch), selects one for a task by the fastener, and cares for them (tight heads, clean dry tips, correct storage); caring for the tools in class is watched and marked with the rubric.",
+   "floor": {
+    "prerequisite": "Knows how to care for tools.",
+    "question": "Where do tools go after use?",
+    "answer": "Back in their place, clean"
+   },
+   "representations": [
+    "driving tools with labels",
+    "a fastener and tool matching chart",
+    "screw heads and screwdriver tips"
+   ],
+   "steps": [
+    "Name the fastener.",
+    "Choose the tool and size.",
+    "Say how to use it.",
+    "Say how to care for it."
+   ],
+   "contexts": [
+    "nailing a box",
+    "tightening a bicycle wheel nut",
+    "fixing a cupboard hinge"
+   ],
+   "board": [
+    {
+     "beat": "write",
+     "do": "Draw a nail, a cross-head screw and a nut."
+    },
+    {
+     "beat": "point",
+     "do": "Point at the nut.",
+     "say": "Which tool drives this?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for the learner to say a spanner of the right size."
+    },
+    {
+     "beat": "reveal",
+     "do": "Match tools to the nail and the screw."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "PRET.G9.TOOLS_.DRIVING_TOOLS.DRIVING_TOOLS.M_PT9_DT_HAMMER",
+     "listen_for": [
+      "Screws"
+     ],
+     "ask": "What does a hammer drive?",
+     "repair": "Hammer a screw into scrap and see the wood split and the screw hold badly; screws are turned."
+    },
+    {
+     "code": "PRET.G9.TOOLS_.DRIVING_TOOLS.DRIVING_TOOLS.M_PT9_DT_SCREWDRIVER",
+     "listen_for": [
+      "A flat screwdriver"
+     ],
+     "ask": "A cross-head screw needs...",
+     "repair": "Match screw heads (slotted, cross-head) to screwdrivers; a wrong tip slips and damages the head."
+    },
+    {
+     "code": "PRET.G9.TOOLS_.DRIVING_TOOLS.DRIVING_TOOLS.M_PT9_DT_SPANNER",
+     "listen_for": [
+      "Pliers"
+     ],
+     "ask": "Which tool tightens a nut on a bolt?",
+     "repair": "Turn a nut with pliers and with a spanner; the pliers slip and round off the corners."
+    },
+    {
+     "code": "PRET.G9.TOOLS_.DRIVING_TOOLS.DRIVING_TOOLS.M_PT9_DT_MALLET",
+     "listen_for": [
+      "A steel claw hammer"
+     ],
+     "ask": "What is used to strike a chisel with a wooden handle?",
+     "repair": "Show a chisel handle split by a hammer; a mallet's wide wooden face strikes without damage."
+    }
+   ],
+   "checks": [
+    {
+     "question": "What does a hammer drive?",
+     "answer": "Nails",
+     "shows": "hammer"
+    },
+    {
+     "question": "What strikes a wooden chisel handle?",
+     "answer": "A mallet",
+     "shows": "mallet"
+    }
+   ]
+  },
+  {
+   "skill": "PRET.G9.TOOLS_.DRIVING_TOOLS.DRIVE_USE",
+   "key_step": "The learner explains the correct use of driving tools: hammer held near the end of the handle, nails started with light taps, a mallet for chisels, a screwdriver that fills the slot, a spanner that fits and is pulled towards you; the use is watched and marked with the rubric.",
+   "floor": {
+    "prerequisite": "Knows the driving tools.",
+    "question": "Which tool turns nuts and bolts?",
+    "answer": "A spanner"
+   },
+   "representations": [
+    "hammer grips: near the head and near the end",
+    "screwdriver tips in slots",
+    "spanner sizes on a board"
+   ],
+   "steps": [
+    "Choose the tool and size.",
+    "Hold it the right way.",
+    "Start gently.",
+    "Check the work and put the tool back."
+   ],
+   "contexts": [
+    "nailing a box together",
+    "fixing a door hinge with screws",
+    "tightening a bicycle nut"
+   ],
+   "board": [
+    {
+     "beat": "write",
+     "do": "Draw a hand holding a hammer close to its head."
+    },
+    {
+     "beat": "point",
+     "do": "Point at the hand.",
+     "say": "Is this the best grip? Why not?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for the learner to say hold near the end for a stronger blow."
+    },
+    {
+     "beat": "reveal",
+     "do": "Redraw the grip near the end."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "PRET.G9.TOOLS_.DRIVING_TOOLS.DRIVE_USE.M_PT9_DU_GRIP",
+     "listen_for": [
+      "Close to the head, for control"
+     ],
+     "ask": "Where should a hammer be held for driving a nail?",
+     "repair": "Drive two nails, one with each grip; compare how many blows and how straight. The handle works as a lever."
+    },
+    {
+     "code": "PRET.G9.TOOLS_.DRIVING_TOOLS.DRIVE_USE.M_PT9_DU_START_NAIL",
+     "listen_for": [
+      "Hold it with your fingers and hit it hard"
+     ],
+     "ask": "How do you start a nail safely?",
+     "repair": "Start nails with light taps; for small nails hold them with pliers or through a piece of card."
+    },
+    {
+     "code": "PRET.G9.TOOLS_.DRIVING_TOOLS.DRIVE_USE.M_PT9_DU_SPANNER_FIT",
+     "listen_for": [
+      "Nothing; it still turns the nut"
+     ],
+     "ask": "A spanner is slightly too big for a nut. What happens if you use it?",
+     "repair": "Try a loose spanner on an old nut and see the corners round off; always pick the size that fits."
+    },
+    {
+     "code": "PRET.G9.TOOLS_.DRIVING_TOOLS.DRIVE_USE.M_PT9_DU_SCREWDRIVER_SIZE",
+     "listen_for": [
+      "Any size that goes into the slot"
+     ],
+     "ask": "What size of screwdriver blade should you use for a screw?",
+     "repair": "Turn a tight screw with a small and a correct tip; the small one slips and damages the slot."
+    },
+    {
+     "code": "PRET.G9.TOOLS_.DRIVING_TOOLS.DRIVE_USE.M_PT9_DU_PUSH",
+     "listen_for": [
+      "Push it away from you hard"
+     ],
+     "ask": "Should you push or pull a spanner on a tight nut?",
+     "repair": "Show what happens when a pushed spanner slips: the hand hits the metal. Pull, with feet firm."
+    }
+   ],
+   "checks": [
+    {
+     "question": "Where is a hammer held for driving a nail?",
+     "answer": "Near the end of the handle",
+     "shows": "hammer"
+    },
+    {
+     "question": "Push or pull a spanner?",
+     "answer": "Pull it towards you",
+     "shows": "spanner"
+    }
+   ]
+  }
+ ]
+}

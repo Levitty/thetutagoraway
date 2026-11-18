@@ -1,0 +1,189 @@
+{
+ "sub_strand": "PRE_.G9.ENTREP.GOVERNMENT_AND_BUSINESS",
+ "title": "Government and Business",
+ "status": "draft: written 18 Nov 2026 offline for Grade 9 Pre-Technical Studies; not yet checked by a Pre-Technical Studies teacher; safety lines marked SAFETY in the library to confirm first; not loaded by the live tutor",
+ "sources": [],
+ "notes": "MONEY: tax names and rates and e-Government services change; the teacher checks current KRA and eCitizen practice.",
+ "skills": [
+  {
+   "skill": "PRET.G9.ENTREP.GOVERNMENT_AND_BUSINESS.GOV_BUSINESS",
+   "key_step": "The learner explains why government is involved in business (protect consumers, raise revenue, provide services private firms may not, control monopolies, create jobs, ensure quality and safety) and how (licences and permits, standards and inspection, taxation, state corporations, funds and training, infrastructure).",
+   "floor": {
+    "prerequisite": "Knows sources of government revenue.",
+    "question": "Name one source of government revenue.",
+    "answer": "Taxes"
+   },
+   "representations": [
+    "a why and how chart",
+    "a business permit picture",
+    "a standards mark picture"
+   ],
+   "steps": [
+    "Say why government is involved.",
+    "Say how it is involved.",
+    "Give an example for each.",
+    "Say what it means for a small business."
+   ],
+   "contexts": [
+    "a county business permit",
+    "a weights and measures inspection",
+    "a youth fund loan"
+   ],
+   "board": [
+    {
+     "beat": "write",
+     "do": "Write two columns: why, how."
+    },
+    {
+     "beat": "point",
+     "do": "Point at the card \"licences\".",
+     "say": "Is this a why or a how, and what is it for?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for the learner to say how; to control and register businesses."
+    },
+    {
+     "beat": "reveal",
+     "do": "Fill in both columns."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "PRET.G9.ENTREP.GOVERNMENT_AND_BUSINESS.GOV_BUSINESS.M_PT9_GV_PROTECT",
+     "listen_for": [
+      "To slow businesses down"
+     ],
+     "ask": "Why does the government inspect weighing scales in shops?",
+     "repair": "Discuss weights and measures checks, food inspection and standards marks: they protect customers and honest traders."
+    },
+    {
+     "code": "PRET.G9.ENTREP.GOVERNMENT_AND_BUSINESS.GOV_BUSINESS.M_PT9_GV_LICENCE",
+     "listen_for": [
+      "No licence at all"
+     ],
+     "ask": "What do businesses need to operate legally?",
+     "repair": "Show a single business permit from the county and list what it allows; trading without it risks fines and closure."
+    },
+    {
+     "code": "PRET.G9.ENTREP.GOVERNMENT_AND_BUSINESS.GOV_BUSINESS.M_PT9_GV_HELP",
+     "listen_for": [
+      "By telling them what to sell"
+     ],
+     "ask": "How does the government help businesses?",
+     "repair": "List what government provides for business: roads, power, water, security, loans and training (youth and women funds), trade fairs."
+    },
+    {
+     "code": "PRET.G9.ENTREP.GOVERNMENT_AND_BUSINESS.GOV_BUSINESS.M_PT9_GV_STATE_CORP",
+     "listen_for": [
+      "It never runs any business"
+     ],
+     "ask": "Which is a way the government takes part in business?",
+     "repair": "List state corporations that provide services for a fee (ports, railways, water companies) and why government runs them."
+    }
+   ],
+   "checks": [
+    {
+     "question": "Give one reason government is involved in business.",
+     "answer": "To protect consumers (raise revenue)",
+     "shows": "reasons"
+    },
+    {
+     "question": "Give one way government is involved.",
+     "answer": "Licences (taxes, state corporations)",
+     "shows": "ways"
+    }
+   ]
+  },
+  {
+   "skill": "PRET.G9.ENTREP.GOVERNMENT_AND_BUSINESS.TAXES",
+   "key_step": "The learner explores types of taxes in Kenya (direct: PAYE, corporation tax, turnover tax; indirect: VAT, excise duty, customs duty; county fees and permits), what they pay for, and analyses e-Government services for business (eCitizen for permits and registration, KRA iTax for returns and PINs, e-procurement).",
+   "floor": {
+    "prerequisite": "Knows tax on a receipt.",
+    "question": "Where is VAT shown?",
+    "answer": "On the receipt"
+   },
+   "representations": [
+    "a direct and indirect tax chart",
+    "a receipt with VAT circled",
+    "screens of eCitizen and iTax"
+   ],
+   "steps": [
+    "Name the tax.",
+    "Say what it is charged on.",
+    "Sort direct or indirect.",
+    "Name the e-Government service used."
+   ],
+   "contexts": [
+    "a supermarket receipt",
+    "a worker's payslip",
+    "registering a business name online"
+   ],
+   "board": [
+    {
+     "beat": "write",
+     "do": "Write: PAYE, VAT, excise duty, corporation tax."
+    },
+    {
+     "beat": "point",
+     "do": "Point at \"VAT\".",
+     "say": "Direct or indirect, and what is it charged on?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for the learner to say indirect, on goods and services bought."
+    },
+    {
+     "beat": "reveal",
+     "do": "Sort the rest."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "PRET.G9.ENTREP.GOVERNMENT_AND_BUSINESS.TAXES.M_PT9_TX_VAT",
+     "listen_for": [
+      "A worker's salary"
+     ],
+     "ask": "What is VAT charged on?",
+     "repair": "Find VAT on a supermarket receipt: it is charged on goods and services when they are bought."
+    },
+    {
+     "code": "PRET.G9.ENTREP.GOVERNMENT_AND_BUSINESS.TAXES.M_PT9_TX_USE",
+     "listen_for": [
+      "Paying the tax collectors only"
+     ],
+     "ask": "What are taxes used for?",
+     "repair": "List public services near school (roads, the school, the health centre, security) and say taxes pay for them."
+    },
+    {
+     "code": "PRET.G9.ENTREP.GOVERNMENT_AND_BUSINESS.TAXES.M_PT9_TX_EGOV",
+     "listen_for": [
+      "A social media page"
+     ],
+     "ask": "Which online service lets a business owner apply for permits or file tax returns?",
+     "repair": "Show eCitizen (permits, licences) and KRA iTax (tax returns) pages; compare with social media."
+    },
+    {
+     "code": "PRET.G9.ENTREP.GOVERNMENT_AND_BUSINESS.TAXES.M_PT9_TX_PAYE",
+     "listen_for": [
+      "Indirect"
+     ],
+     "ask": "Is PAYE (Pay As You Earn) a direct or an indirect tax?",
+     "repair": "Sort taxes: direct (on income or profit: PAYE, corporation tax) and indirect (on spending: VAT, excise duty, customs duty)."
+    }
+   ],
+   "checks": [
+    {
+     "question": "What does VAT stand for?",
+     "answer": "Value Added Tax",
+     "shows": "VAT"
+    },
+    {
+     "question": "Name an e-Government service for business.",
+     "answer": "eCitizen (KRA iTax)",
+     "shows": "e-Government"
+    }
+   ]
+  }
+ ]
+}

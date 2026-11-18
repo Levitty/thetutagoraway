@@ -1,0 +1,107 @@
+{
+ "sub_strand": "PRE_.G9.MATERI.HANDLING_WASTE_MATERIALS",
+ "title": "Handling Waste Materials",
+ "status": "draft: written 18 Nov 2026 offline for Grade 9 Pre-Technical Studies; not yet checked by a Pre-Technical Studies teacher; safety lines marked SAFETY in the library to confirm first; not loaded by the live tutor",
+ "sources": [],
+ "notes": "",
+ "skills": [
+  {
+   "skill": "PRET.G9.MATERI.HANDLING_WASTE_MATERIALS.WASTE",
+   "key_step": "The learner identifies waste materials (organic, paper, plastics, glass, metals, wood offcuts, e-waste, batteries, chemical containers), describes safe handling (sort, wear gloves, wrap sharps, keep hazardous waste apart) and appropriate disposal (reduce, reuse, recycle, compost, approved collection, no burning of plastics); disposing of waste correctly in class is watched and marked with the rubric.",
+   "floor": {
+    "prerequisite": "Knows how to manage solid waste.",
+    "question": "Name one of the 3Rs.",
+    "answer": "Reuse (reduce, recycle)"
+   },
+   "representations": [
+    "labelled sorting bins",
+    "a waste type and disposal chart",
+    "a compost heap diagram"
+   ],
+   "steps": [
+    "Name the waste.",
+    "Sort it.",
+    "Handle it safely.",
+    "Choose the right disposal."
+   ],
+   "contexts": [
+    "the school compound after a sports day",
+    "a workshop with offcuts and metal shavings",
+    "old phones and batteries at home"
+   ],
+   "board": [
+    {
+     "beat": "write",
+     "do": "Draw five bins: organic, paper, plastic, glass, hazardous."
+    },
+    {
+     "beat": "point",
+     "do": "Point at the hazardous bin.",
+     "say": "Which waste goes here?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for the learner to name batteries or chemical containers."
+    },
+    {
+     "beat": "reveal",
+     "do": "Sort a list of waste into the bins."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "PRET.G9.MATERI.HANDLING_WASTE_MATERIALS.WASTE.M_PT9_WS_BURN",
+     "listen_for": [
+      "Burn it"
+     ],
+     "ask": "What should be done with plastic waste?",
+     "repair": "Explain the harmful smoke from burning plastic; show sorting, reuse and recycling points."
+    },
+    {
+     "code": "PRET.G9.MATERI.HANDLING_WASTE_MATERIALS.WASTE.M_PT9_WS_ORGANIC",
+     "listen_for": [
+      "Burn them"
+     ],
+     "ask": "What can be done with kitchen peelings?",
+     "repair": "Start a compost pit or heap with kitchen and garden waste; use it in the school garden."
+    },
+    {
+     "code": "PRET.G9.MATERI.HANDLING_WASTE_MATERIALS.WASTE.M_PT9_WS_SHARP",
+     "listen_for": [
+      "Straight into the bin as it is"
+     ],
+     "ask": "How should broken glass be thrown away?",
+     "repair": "Show how a collector can be cut by loose glass in a bag; wrap it in thick paper or cloth, label it, then put it in the bin."
+    },
+    {
+     "code": "PRET.G9.MATERI.HANDLING_WASTE_MATERIALS.WASTE.M_PT9_WS_ONE_BIN",
+     "listen_for": [
+      "There is no need; it all goes to the same place"
+     ],
+     "ask": "Why is waste sorted into separate bins?",
+     "repair": "Run a waste-sorting activity: organic, paper, plastic, glass, metal, hazardous."
+    },
+    {
+     "code": "PRET.G9.MATERI.HANDLING_WASTE_MATERIALS.WASTE.M_PT9_WS_BATTERY",
+     "listen_for": [
+      "Burnt with the rubbish"
+     ],
+     "ask": "How should used dry cells (batteries) be disposed of?",
+     "repair": "Explain that batteries hold harmful chemicals and can burst in a fire; set up a class battery box for a collection point."
+    }
+   ],
+   "checks": [
+    {
+     "question": "What should be done with kitchen peelings?",
+     "answer": "Make compost",
+     "shows": "organic"
+    },
+    {
+     "question": "Why should plastic not be burnt?",
+     "answer": "It gives off harmful smoke",
+     "shows": "burning"
+    }
+   ]
+  }
+ ]
+}

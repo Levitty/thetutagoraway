@@ -1,0 +1,189 @@
+{
+ "sub_strand": "PRE_.G9.ENTREP.FINANCIAL_SERVICES",
+ "title": "Financial Services",
+ "status": "draft: written 18 Nov 2026 offline for Grade 9 Pre-Technical Studies; not yet checked by a Pre-Technical Studies teacher; safety lines marked SAFETY in the library to confirm first; not loaded by the live tutor",
+ "sources": [],
+ "notes": "MONEY: institution names, interest rates and charges change; the teacher checks current Kenyan examples. No learner is asked about a family's accounts or loans.",
+ "skills": [
+  {
+   "skill": "PRET.G9.ENTREP.FINANCIAL_SERVICES.FIN_TYPES",
+   "key_step": "The learner identifies financial institutions in Kenya (the Central Bank, commercial banks, microfinance banks, SACCOs, insurance companies, mobile money providers, the Nairobi Securities Exchange) and classifies them (banking and non-banking; regulators and service providers).",
+   "floor": {
+    "prerequisite": "Knows bank services.",
+    "question": "Name one service a bank offers.",
+    "answer": "Keeping savings"
+   },
+   "representations": [
+    "an institution classification tree",
+    "institution cards",
+    "a who-owns-it chart"
+   ],
+   "steps": [
+    "Name the institution.",
+    "Say what it does.",
+    "Classify it.",
+    "Give a local example."
+   ],
+   "contexts": [
+    "a SACCO for teachers",
+    "a mobile money agent",
+    "an insurance office in town"
+   ],
+   "board": [
+    {
+     "beat": "write",
+     "do": "Draw a tree: banking and non-banking."
+    },
+    {
+     "beat": "point",
+     "do": "Point at the card \"SACCO\".",
+     "say": "Where does it go, and who owns it?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for the learner to say non-banking, owned by members."
+    },
+    {
+     "beat": "reveal",
+     "do": "Place the other cards."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "PRET.G9.ENTREP.FINANCIAL_SERVICES.FIN_TYPES.M_PT9_FT_NAME",
+     "listen_for": [
+      "A wholesale shop"
+     ],
+     "ask": "Which of these is a financial institution?",
+     "repair": "Sort places by what they do: deal in money (banks, SACCOs, insurers, microfinance) or sell goods (shops, wholesalers)."
+    },
+    {
+     "code": "PRET.G9.ENTREP.FINANCIAL_SERVICES.FIN_TYPES.M_PT9_FT_CENTRAL",
+     "listen_for": [
+      "Keeps savings accounts for ordinary people"
+     ],
+     "ask": "What does the Central Bank of Kenya do?",
+     "repair": "Explain the Central Bank is the bankers' bank: issues currency, supervises banks, keeps the government's account."
+    },
+    {
+     "code": "PRET.G9.ENTREP.FINANCIAL_SERVICES.FIN_TYPES.M_PT9_FT_INSURE",
+     "listen_for": [
+      "A commercial bank"
+     ],
+     "ask": "Which gives cover against loss?",
+     "repair": "Compare a bank (keeps savings, lends) and an insurer (pays out after a loss, in return for premiums)."
+    },
+    {
+     "code": "PRET.G9.ENTREP.FINANCIAL_SERVICES.FIN_TYPES.M_PT9_FT_SACCO",
+     "listen_for": [
+      "It is the same; both are owned by shareholders for profit"
+     ],
+     "ask": "How is a SACCO different from a commercial bank?",
+     "repair": "Draw who owns each: a bank (shareholders) and a SACCO (its members); list what members gain."
+    }
+   ],
+   "checks": [
+    {
+     "question": "What does the Central Bank of Kenya do?",
+     "answer": "Issues currency and supervises banks",
+     "shows": "central bank"
+    },
+    {
+     "question": "Who owns a SACCO?",
+     "answer": "Its members",
+     "shows": "SACCO"
+    }
+   ]
+  },
+  {
+   "skill": "PRET.G9.ENTREP.FINANCIAL_SERVICES.FIN_SERVICES",
+   "key_step": "The learner analyses services offered by financial institutions (savings and current accounts, loans and credit with interest, money transfer and mobile money, insurance cover, investment, advice) and how an entrepreneur uses them (saving start-up capital, a loan for equipment, insuring stock, paying suppliers by transfer); using the services is a planned task marked with the rubric.",
+   "floor": {
+    "prerequisite": "Knows simple interest.",
+    "question": "Interest on 1,000 at 10 percent for a year?",
+    "answer": "100 shillings"
+   },
+   "representations": [
+    "a service and institution chart",
+    "a loan repayment example",
+    "an entrepreneur's money map"
+   ],
+   "steps": [
+    "Name the service.",
+    "Say which institution offers it.",
+    "Say what it costs or earns.",
+    "Say how an entrepreneur would use it."
+   ],
+   "contexts": [
+    "a youth taking a SACCO loan for a sewing machine",
+    "a trader insuring her stock",
+    "paying a supplier by mobile money"
+   ],
+   "board": [
+    {
+     "beat": "write",
+     "do": "Write: loan 1,000 shillings at 10 percent for one year."
+    },
+    {
+     "beat": "point",
+     "do": "Point at \"10 percent\".",
+     "say": "How much is repaid in all?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for the learner to say 1,100 shillings."
+    },
+    {
+     "beat": "reveal",
+     "do": "Write the rule: loan plus interest."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "PRET.G9.ENTREP.FINANCIAL_SERVICES.FIN_SERVICES.M_PT9_FV_LOAN",
+     "listen_for": [
+      "Only the amount borrowed"
+     ],
+     "ask": "What must be repaid on a loan?",
+     "repair": "Work a small example: borrow 1,000 at 10 percent for a year; repay 1,100. Interest is the cost of borrowing."
+    },
+    {
+     "code": "PRET.G9.ENTREP.FINANCIAL_SERVICES.FIN_SERVICES.M_PT9_FV_SAVE",
+     "listen_for": [
+      "There is no difference"
+     ],
+     "ask": "Why keep savings in a bank or SACCO rather than at home?",
+     "repair": "List what can happen to cash at home (theft, fire, spending it); savings in a bank or SACCO are safer and may earn interest."
+    },
+    {
+     "code": "PRET.G9.ENTREP.FINANCIAL_SERVICES.FIN_SERVICES.M_PT9_FV_SERVICE",
+     "listen_for": [
+      "Selling farm inputs"
+     ],
+     "ask": "Which is a service offered by a commercial bank?",
+     "repair": "List bank services: savings and current accounts, loans, money transfer, safe keeping, advice, foreign exchange."
+    },
+    {
+     "code": "PRET.G9.ENTREP.FINANCIAL_SERVICES.FIN_SERVICES.M_PT9_FV_PREMIUM",
+     "listen_for": [
+      "She gets it all back at the end of the year"
+     ],
+     "ask": "A trader pays a premium to insure her shop, and no loss happens that year. What happens to the premium?",
+     "repair": "Compare a savings account (money kept and returned) with insurance (many pay in, those who suffer a loss are paid)."
+    }
+   ],
+   "checks": [
+    {
+     "question": "What is repaid on a loan?",
+     "answer": "The amount borrowed plus interest",
+     "shows": "loans"
+    },
+    {
+     "question": "Is an insurance premium returned if there is no loss?",
+     "answer": "No",
+     "shows": "insurance"
+    }
+   ]
+  }
+ ]
+}

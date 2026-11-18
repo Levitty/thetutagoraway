@@ -2,7 +2,7 @@
 // Outcomes are official (word for word). Skills are proposed, awaiting teacher review.
 // A family carries `cskill` (a key of SKILLS), `outcome` (its official outcome) and `skill` (the same as cskill:
 // these skills are not in the practice engine's Maths graph). MIS_FEEDBACK maps a short misconception code to the line a child reads.
-export const MAP_SOURCE = {"source":"curriculum/pre_technical/g9.json","status":"outcomes from KICD's text, word for word; skills, prerequisites and misconceptions proposed (authored offline, 13 Nov 2026), awaiting a Pre-Technical teacher's review"};
+export const MAP_SOURCE = {"source":"curriculum/pre_technical/g9.json","status":"outcomes from KICD's text, word for word; skills and prerequisites proposed, misconceptions draft, teaching pack draft; first pass 13 Nov 2026, deepened to the Grade 5 Maths standard on 18 Nov 2026 (two prerequisites and four misconceptions per skill; practical outcomes have a knowledge skill and are marked with the rubric); written offline by Claude, awaiting a Pre-Technical Studies teacher's review, safety lines first. Rubrics from KICD, untouched."};
 export const SUBSTRANDS = {
  "PRE_.G9.FOUNDA.SAFETY_ON_RAISED_PLATFOR": {
   "name": "Safety on Raised Platforms",
@@ -373,7 +373,26 @@ export const SKILLS = {
   "mis": [
    "M_PT9_RP_SAFE",
    "M_PT9_RP_RISK",
-   "M_PT9_RP_TYPE"
+   "M_PT9_RP_TYPE",
+   "M_PT9_RP_BELOW"
+  ]
+ },
+ "PRET.G9.FOUNDA.SAFETY_ON_RAISED_PLATFOR.PLATFORM_RULES": {
+  "name": "Give the safety rules for working on raised platforms: ladder angle and footing, three points of contact, no overreaching, top step, guard rails",
+  "sub": "PRE_.G9.FOUNDA.SAFETY_ON_RAISED_PLATFOR",
+  "outcome": "PRE_.G9.FOUNDA.SAFETY_ON_RAISED_PLATFOR.c",
+  "outcomes": [
+   "PRE_.G9.FOUNDA.SAFETY_ON_RAISED_PLATFOR.c"
+  ],
+  "pre": [
+   "PRET.G9.FOUNDA.SAFETY_ON_RAISED_PLATFOR.RAISED_PLATFORMS"
+  ],
+  "mis": [
+   "M_PT9_PR_ANGLE",
+   "M_PT9_PR_OVERREACH",
+   "M_PT9_PR_TOP_STEP",
+   "M_PT9_PR_CONTACT",
+   "M_PT9_PR_FOOTING"
   ]
  },
  "PRET.G9.FOUNDA.HANDLING_HAZARDOUS_SUBST.HAZARD_CLASSIFY": {
@@ -388,7 +407,9 @@ export const SKILLS = {
   "mis": [
    "M_PT9_HC_FLAMMABLE",
    "M_PT9_HC_CORROSIVE",
-   "M_PT9_HC_PETROL"
+   "M_PT9_HC_PETROL",
+   "M_PT9_HC_HOME_SAFE",
+   "M_PT9_HC_SKULL"
   ]
  },
  "PRET.G9.FOUNDA.HANDLING_HAZARDOUS_SUBST.HAZARD_HANDLING": {
@@ -396,7 +417,8 @@ export const SKILLS = {
   "sub": "PRE_.G9.FOUNDA.HANDLING_HAZARDOUS_SUBST",
   "outcome": "PRE_.G9.FOUNDA.HANDLING_HAZARDOUS_SUBST.c",
   "outcomes": [
-   "PRE_.G9.FOUNDA.HANDLING_HAZARDOUS_SUBST.c"
+   "PRE_.G9.FOUNDA.HANDLING_HAZARDOUS_SUBST.c",
+   "PRE_.G9.FOUNDA.HANDLING_HAZARDOUS_SUBST.d"
   ],
   "pre": [
    "PRET.G9.FOUNDA.HANDLING_HAZARDOUS_SUBST.HAZARD_CLASSIFY"
@@ -404,7 +426,8 @@ export const SKILLS = {
   "mis": [
    "M_PT9_HH_LABEL",
    "M_PT9_HH_MIX",
-   "M_PT9_HH_STORE"
+   "M_PT9_HH_STORE",
+   "M_PT9_HH_PPE"
   ]
  },
  "PRET.G9.FOUNDA.SELF_EXPLORATION_AND_CAR.TALENTS": {
@@ -414,13 +437,15 @@ export const SKILLS = {
   "outcomes": [
    "PRE_.G9.FOUNDA.SELF_EXPLORATION_AND_CAR.a",
    "PRE_.G9.FOUNDA.SELF_EXPLORATION_AND_CAR.b",
-   "PRE_.G9.FOUNDA.SELF_EXPLORATION_AND_CAR.c"
+   "PRE_.G9.FOUNDA.SELF_EXPLORATION_AND_CAR.c",
+   "PRE_.G9.FOUNDA.SELF_EXPLORATION_AND_CAR.d"
   ],
   "pre": [],
   "mis": [
    "M_PT9_TA_GROW",
    "M_PT9_TA_ETHIC",
-   "M_PT9_TA_CAREER"
+   "M_PT9_TA_CAREER",
+   "M_PT9_TA_ONE_ONLY"
   ]
  },
  "PRET.G9.COMMUN.OBLIQUE_PROJECTION.OBLIQUE": {
@@ -434,7 +459,26 @@ export const SKILLS = {
   "mis": [
    "M_PT9_OB_FRONT",
    "M_PT9_OB_ANGLE",
-   "M_PT9_OB_CABINET"
+   "M_PT9_OB_CABINET",
+   "M_PT9_OB_ISOMETRIC"
+  ]
+ },
+ "PRET.G9.COMMUN.OBLIQUE_PROJECTION.OBLIQUE_DRAW": {
+  "name": "Give the steps to sketch and draw blocks in oblique: the front face true shape first, receding lines parallel at 45 degrees, half depth in cabinet, circles on the front face",
+  "sub": "PRE_.G9.COMMUN.OBLIQUE_PROJECTION",
+  "outcome": "PRE_.G9.COMMUN.OBLIQUE_PROJECTION.b",
+  "outcomes": [
+   "PRE_.G9.COMMUN.OBLIQUE_PROJECTION.b",
+   "PRE_.G9.COMMUN.OBLIQUE_PROJECTION.c"
+  ],
+  "pre": [
+   "PRET.G9.COMMUN.OBLIQUE_PROJECTION.OBLIQUE"
+  ],
+  "mis": [
+   "M_PT9_OD_CIRCLE_FACE",
+   "M_PT9_OD_DEPTH_FULL",
+   "M_PT9_OD_START",
+   "M_PT9_OD_CONVERGE"
   ]
  },
  "PRET.G9.COMMUN.VISUAL_PROGRAMMING.VISUAL_APPS": {
@@ -448,7 +492,25 @@ export const SKILLS = {
   "mis": [
    "M_PT9_VA_USE",
    "M_PT9_VA_BLOCK",
-   "M_PT9_VA_SOLVE"
+   "M_PT9_VA_SOLVE",
+   "M_PT9_VA_AREAS"
+  ]
+ },
+ "PRET.G9.COMMUN.VISUAL_PROGRAMMING.VP_APP_BUILD": {
+  "name": "Plan, build and test a simple visual program that solves a day-to-day problem: state the problem, plan the steps, use variables, reset at the start, test with right and wrong inputs",
+  "sub": "PRE_.G9.COMMUN.VISUAL_PROGRAMMING",
+  "outcome": "PRE_.G9.COMMUN.VISUAL_PROGRAMMING.b",
+  "outcomes": [
+   "PRE_.G9.COMMUN.VISUAL_PROGRAMMING.b"
+  ],
+  "pre": [
+   "PRET.G9.COMMUN.VISUAL_PROGRAMMING.VISUAL_APPS"
+  ],
+  "mis": [
+   "M_PT9_VB_PLAN",
+   "M_PT9_VB_VARIABLE",
+   "M_PT9_VB_RESET",
+   "M_PT9_VB_TEST_ONCE"
   ]
  },
  "PRET.G9.MATERI.WOOD.WOOD_TYPES": {
@@ -463,7 +525,8 @@ export const SKILLS = {
   "mis": [
    "M_PT9_WT_HARD",
    "M_PT9_WT_SOFT",
-   "M_PT9_WT_BOARD"
+   "M_PT9_WT_BOARD",
+   "M_PT9_WT_FEEL"
   ]
  },
  "PRET.G9.MATERI.WOOD.WOOD_PREP": {
@@ -479,7 +542,8 @@ export const SKILLS = {
   "mis": [
    "M_PT9_WP_SEASON",
    "M_PT9_WP_ORDER",
-   "M_PT9_WP_TREAT"
+   "M_PT9_WP_TREAT",
+   "M_PT9_WP_STACK"
   ]
  },
  "PRET.G9.MATERI.HANDLING_WASTE_MATERIALS.WASTE": {
@@ -495,7 +559,9 @@ export const SKILLS = {
   "mis": [
    "M_PT9_WS_BURN",
    "M_PT9_WS_ORGANIC",
-   "M_PT9_WS_SHARP"
+   "M_PT9_WS_SHARP",
+   "M_PT9_WS_ONE_BIN",
+   "M_PT9_WS_BATTERY"
   ]
  },
  "PRET.G9.TOOLS_.HOLDING_TOOLS.HOLDING_TOOLS": {
@@ -511,7 +577,25 @@ export const SKILLS = {
   "mis": [
    "M_PT9_HT_VICE",
    "M_PT9_HT_CLAMP",
-   "M_PT9_HT_CARE"
+   "M_PT9_HT_CARE",
+   "M_PT9_HT_TONGS"
+  ]
+ },
+ "PRET.G9.TOOLS_.HOLDING_TOOLS.HOLD_USE": {
+  "name": "Give the correct way to use holding tools: work low in the vice, soft packing for finished work, clamp work for drilling, support long work",
+  "sub": "PRE_.G9.TOOLS_.HOLDING_TOOLS",
+  "outcome": "PRE_.G9.TOOLS_.HOLDING_TOOLS.c",
+  "outcomes": [
+   "PRE_.G9.TOOLS_.HOLDING_TOOLS.c"
+  ],
+  "pre": [
+   "PRET.G9.TOOLS_.HOLDING_TOOLS.HOLDING_TOOLS"
+  ],
+  "mis": [
+   "M_PT9_HU_HIGH",
+   "M_PT9_HU_PACKING",
+   "M_PT9_HU_DRILL_HAND",
+   "M_PT9_HU_SUPPORT"
   ]
  },
  "PRET.G9.TOOLS_.DRIVING_TOOLS.DRIVING_TOOLS": {
@@ -527,7 +611,26 @@ export const SKILLS = {
   "mis": [
    "M_PT9_DT_HAMMER",
    "M_PT9_DT_SCREWDRIVER",
-   "M_PT9_DT_SPANNER"
+   "M_PT9_DT_SPANNER",
+   "M_PT9_DT_MALLET"
+  ]
+ },
+ "PRET.G9.TOOLS_.DRIVING_TOOLS.DRIVE_USE": {
+  "name": "Give the correct way to use driving tools: hammer grip and starting a nail, screwdriver that fills the slot, spanner of the right size pulled towards you",
+  "sub": "PRE_.G9.TOOLS_.DRIVING_TOOLS",
+  "outcome": "PRE_.G9.TOOLS_.DRIVING_TOOLS.c",
+  "outcomes": [
+   "PRE_.G9.TOOLS_.DRIVING_TOOLS.c"
+  ],
+  "pre": [
+   "PRET.G9.TOOLS_.DRIVING_TOOLS.DRIVING_TOOLS"
+  ],
+  "mis": [
+   "M_PT9_DU_GRIP",
+   "M_PT9_DU_START_NAIL",
+   "M_PT9_DU_SPANNER_FIT",
+   "M_PT9_DU_SCREWDRIVER_SIZE",
+   "M_PT9_DU_PUSH"
   ]
  },
  "PRET.G9.TOOLS_.PROJECT.PROJECT_STEPS": {
@@ -542,7 +645,26 @@ export const SKILLS = {
   "mis": [
    "M_PT9_PJ_FIRST",
    "M_PT9_PJ_TEST",
-   "M_PT9_PJ_MATERIAL"
+   "M_PT9_PJ_MATERIAL",
+   "M_PT9_PJ_TOO_BIG"
+  ]
+ },
+ "PRET.G9.TOOLS_.PROJECT.PROJECT_PLAN": {
+  "name": "Plan and evaluate the making of a project item: sketch and working drawing, materials list and cost, order of making, testing and evaluation against the problem",
+  "sub": "PRE_.G9.TOOLS_.PROJECT",
+  "outcome": "PRE_.G9.TOOLS_.PROJECT.c",
+  "outcomes": [
+   "PRE_.G9.TOOLS_.PROJECT.c",
+   "PRE_.G9.TOOLS_.PROJECT.d"
+  ],
+  "pre": [
+   "PRET.G9.TOOLS_.PROJECT.PROJECT_STEPS"
+  ],
+  "mis": [
+   "M_PT9_PP_NO_DRAWING",
+   "M_PT9_PP_NO_COST",
+   "M_PT9_PP_FINISH_FIRST",
+   "M_PT9_PP_LOOKS_ONLY"
   ]
  },
  "PRET.G9.ENTREP.FINANCIAL_SERVICES.FIN_TYPES": {
@@ -557,7 +679,8 @@ export const SKILLS = {
   "mis": [
    "M_PT9_FT_NAME",
    "M_PT9_FT_CENTRAL",
-   "M_PT9_FT_INSURE"
+   "M_PT9_FT_INSURE",
+   "M_PT9_FT_SACCO"
   ]
  },
  "PRET.G9.ENTREP.FINANCIAL_SERVICES.FIN_SERVICES": {
@@ -565,7 +688,8 @@ export const SKILLS = {
   "sub": "PRE_.G9.ENTREP.FINANCIAL_SERVICES",
   "outcome": "PRE_.G9.ENTREP.FINANCIAL_SERVICES.c",
   "outcomes": [
-   "PRE_.G9.ENTREP.FINANCIAL_SERVICES.c"
+   "PRE_.G9.ENTREP.FINANCIAL_SERVICES.c",
+   "PRE_.G9.ENTREP.FINANCIAL_SERVICES.d"
   ],
   "pre": [
    "PRET.G9.ENTREP.FINANCIAL_SERVICES.FIN_TYPES"
@@ -573,7 +697,8 @@ export const SKILLS = {
   "mis": [
    "M_PT9_FV_LOAN",
    "M_PT9_FV_SAVE",
-   "M_PT9_FV_SERVICE"
+   "M_PT9_FV_SERVICE",
+   "M_PT9_FV_PREMIUM"
   ]
  },
  "PRET.G9.ENTREP.GOVERNMENT_AND_BUSINESS.GOV_BUSINESS": {
@@ -588,7 +713,8 @@ export const SKILLS = {
   "mis": [
    "M_PT9_GV_PROTECT",
    "M_PT9_GV_LICENCE",
-   "M_PT9_GV_HELP"
+   "M_PT9_GV_HELP",
+   "M_PT9_GV_STATE_CORP"
   ]
  },
  "PRET.G9.ENTREP.GOVERNMENT_AND_BUSINESS.TAXES": {
@@ -605,7 +731,8 @@ export const SKILLS = {
   "mis": [
    "M_PT9_TX_VAT",
    "M_PT9_TX_USE",
-   "M_PT9_TX_EGOV"
+   "M_PT9_TX_EGOV",
+   "M_PT9_TX_PAYE"
   ]
  },
  "PRET.G9.ENTREP.BUSINESS_PLAN.BUSINESS_PLAN": {
@@ -620,7 +747,25 @@ export const SKILLS = {
   "mis": [
    "M_PT9_BPL_IMPORT",
    "M_PT9_BPL_PART",
-   "M_PT9_BPL_MONEY"
+   "M_PT9_BPL_MONEY",
+   "M_PT9_BPL_ONCE"
+  ]
+ },
+ "PRET.G9.ENTREP.BUSINESS_PLAN.BP_TEMPLATE": {
+  "name": "Fill in a business plan template for a small project: description, market and competitors, start-up capital, projected sales, costs and profit, executive summary written last",
+  "sub": "PRE_.G9.ENTREP.BUSINESS_PLAN",
+  "outcome": "PRE_.G9.ENTREP.BUSINESS_PLAN.c",
+  "outcomes": [
+   "PRE_.G9.ENTREP.BUSINESS_PLAN.c"
+  ],
+  "pre": [
+   "PRET.G9.ENTREP.BUSINESS_PLAN.BUSINESS_PLAN"
+  ],
+  "mis": [
+   "M_PT9_BT_STARTUP",
+   "M_PT9_BT_PROFIT",
+   "M_PT9_BT_SUMMARY",
+   "M_PT9_BT_COMPETITORS"
   ]
  }
 };
@@ -628,52 +773,101 @@ export const MIS_FEEDBACK = {
  "M_PT9_RP_SAFE": "Work at height needs a trained adult and a helper.",
  "M_PT9_RP_RISK": "Falling is the main risk at height.",
  "M_PT9_RP_TYPE": "A scaffold is a raised platform.",
+ "M_PT9_PR_ANGLE": "Place the foot about 1 out for every 4 up.",
+ "M_PT9_PR_OVERREACH": "Never lean out. Climb down and move the ladder.",
+ "M_PT9_PR_TOP_STEP": "Do not stand on the top steps. Use a taller ladder.",
+ "M_PT9_PR_CONTACT": "Keep three points of contact. Carry tools in a belt or bag.",
+ "M_PT9_PR_FOOTING": "A ladder stands on firm, level ground, held by a helper.",
+ "M_PT9_RP_BELOW": "People below can be hit by falling tools. Keep the area below clear.",
  "M_PT9_HC_FLAMMABLE": "Flammable means catches fire easily.",
  "M_PT9_HC_CORROSIVE": "Corrosive substances eat away skin and metal.",
  "M_PT9_HC_PETROL": "Petrol is flammable.",
  "M_PT9_HH_LABEL": "Read the label first.",
  "M_PT9_HH_MIX": "Never mix cleaners.",
  "M_PT9_HH_STORE": "Store in a labelled container out of reach.",
+ "M_PT9_HC_HOME_SAFE": "Many home products are hazardous. Read the label.",
+ "M_PT9_HC_SKULL": "The skull and crossbones means toxic: it can poison.",
+ "M_PT9_HH_PPE": "Wear gloves, a mask, boots and long sleeves when handling pesticides.",
  "M_PT9_TA_GROW": "Talents grow by practice and guidance.",
  "M_PT9_TA_ETHIC": "Fair play is ethical.",
  "M_PT9_TA_CAREER": "Drawing links to design careers.",
+ "M_PT9_TA_ONE_ONLY": "Use all your talents, abilities and interests to choose a career.",
  "M_PT9_OB_FRONT": "The front face is true shape.",
  "M_PT9_OB_ANGLE": "Depth lines are usually at 45 degrees.",
  "M_PT9_OB_CABINET": "In cabinet the depth is half size.",
+ "M_PT9_OD_CIRCLE_FACE": "Put circles and the most detail on the front face.",
+ "M_PT9_OD_DEPTH_FULL": "In cabinet oblique the receding lines are half the real depth.",
+ "M_PT9_OD_START": "Draw the front face first, then the receding lines.",
+ "M_PT9_OD_CONVERGE": "In oblique, all receding lines are parallel.",
+ "M_PT9_OB_ISOMETRIC": "Oblique keeps the front face true shape. Isometric uses 30 degree lines.",
  "M_PT9_VA_USE": "Games and apps can be made.",
  "M_PT9_VA_BLOCK": "Blocks are joined.",
  "M_PT9_VA_SOLVE": "It solves problems step by step.",
+ "M_PT9_VB_PLAN": "State the problem and plan the steps first.",
+ "M_PT9_VB_VARIABLE": "Use a variable to keep a value that changes.",
+ "M_PT9_VB_RESET": "Reset variables at the start of the program.",
+ "M_PT9_VB_TEST_ONCE": "Test with right, wrong and unusual inputs.",
+ "M_PT9_VA_AREAS": "Visual programming is used in robotics, games, education and real apps.",
  "M_PT9_WT_HARD": "Mahogany is a hardwood.",
  "M_PT9_WT_SOFT": "Pine is a softwood.",
  "M_PT9_WT_BOARD": "Plywood is made of glued layers.",
  "M_PT9_WP_SEASON": "Seasoning dries timber.",
  "M_PT9_WP_ORDER": "Logs are sawn first.",
  "M_PT9_WP_TREAT": "Preservatives protect wood.",
+ "M_PT9_WT_FEEL": "Hardwood and softwood are named from the tree, not from how hard the wood is.",
+ "M_PT9_WP_STACK": "Stack timber off the ground with sticks between boards so air flows.",
  "M_PT9_WS_BURN": "Do not burn plastic.",
  "M_PT9_WS_ORGANIC": "Peelings make compost.",
  "M_PT9_WS_SHARP": "Wrap broken glass and dispose of it safely.",
+ "M_PT9_WS_ONE_BIN": "Sort waste so it can be reused, recycled or composted.",
+ "M_PT9_WS_BATTERY": "Keep used batteries apart for a collection point. Never burn them.",
  "M_PT9_HT_VICE": "A vice holds the work.",
  "M_PT9_HT_CLAMP": "A G-clamp is a holding tool.",
  "M_PT9_HT_CARE": "Clean and oil tools.",
+ "M_PT9_HU_HIGH": "Hold the work low in the vice.",
+ "M_PT9_HU_PACKING": "Use soft packing to protect finished work.",
+ "M_PT9_HU_DRILL_HAND": "Never hold work by hand for drilling. Clamp it.",
+ "M_PT9_HU_SUPPORT": "Support the free end of long work.",
+ "M_PT9_HT_TONGS": "Use tongs to hold hot metal.",
  "M_PT9_DT_HAMMER": "A hammer drives nails.",
  "M_PT9_DT_SCREWDRIVER": "Match the screwdriver to the screw head.",
  "M_PT9_DT_SPANNER": "A spanner turns nuts and bolts.",
+ "M_PT9_DU_GRIP": "Hold a hammer near the end of its handle.",
+ "M_PT9_DU_START_NAIL": "Start a nail with light taps, then move your fingers away.",
+ "M_PT9_DU_SPANNER_FIT": "Use the spanner that fits the nut exactly.",
+ "M_PT9_DU_SCREWDRIVER_SIZE": "Choose a screwdriver that fills the slot.",
+ "M_PT9_DU_PUSH": "Pull a spanner towards you.",
+ "M_PT9_DT_MALLET": "Strike a wooden chisel handle with a mallet.",
  "M_PT9_PJ_FIRST": "Start by identifying a problem.",
  "M_PT9_PJ_TEST": "Test the item.",
  "M_PT9_PJ_MATERIAL": "Use local materials.",
+ "M_PT9_PP_NO_DRAWING": "Draw first: a sketch and a working drawing with sizes.",
+ "M_PT9_PP_NO_COST": "List materials and costs before you start.",
+ "M_PT9_PP_FINISH_FIRST": "Finishing comes last.",
+ "M_PT9_PP_LOOKS_ONLY": "Judge the item by the problem it solves.",
+ "M_PT9_PJ_TOO_BIG": "Choose a problem you can solve with your skills, tools and local materials.",
  "M_PT9_FT_NAME": "A SACCO is a financial institution.",
  "M_PT9_FT_CENTRAL": "It supervises banks.",
  "M_PT9_FT_INSURE": "Insurance companies give cover.",
  "M_PT9_FV_LOAN": "A loan is repaid with interest.",
  "M_PT9_FV_SAVE": "Savings are for planned needs.",
  "M_PT9_FV_SERVICE": "Banks keep savings.",
+ "M_PT9_FT_SACCO": "A SACCO is owned by its members, who save and borrow together.",
+ "M_PT9_FV_PREMIUM": "An insurance premium pays for cover. It is not returned like savings.",
  "M_PT9_GV_PROTECT": "Regulation protects customers.",
  "M_PT9_GV_LICENCE": "Businesses need a licence.",
  "M_PT9_GV_HELP": "Government provides roads and power.",
  "M_PT9_TX_VAT": "VAT is Value Added Tax.",
  "M_PT9_TX_USE": "Taxes pay for public services.",
  "M_PT9_TX_EGOV": "eCitizen is an e-Government service.",
+ "M_PT9_GV_STATE_CORP": "The government also runs businesses through state corporations.",
+ "M_PT9_TX_PAYE": "PAYE is a direct tax on income.",
  "M_PT9_BPL_IMPORT": "A plan guides the owner.",
  "M_PT9_BPL_PART": "The market is a component.",
- "M_PT9_BPL_MONEY": "The money plan shows costs and income."
+ "M_PT9_BPL_MONEY": "The money plan shows costs and income.",
+ "M_PT9_BT_STARTUP": "Start-up capital covers equipment, permits and the first stock.",
+ "M_PT9_BT_PROFIT": "Projected profit = projected sales - projected costs.",
+ "M_PT9_BT_SUMMARY": "Write the executive summary last; place it first.",
+ "M_PT9_BT_COMPETITORS": "Name your competitors and say how you will be different.",
+ "M_PT9_BPL_ONCE": "Review and update a business plan when things change."
 };

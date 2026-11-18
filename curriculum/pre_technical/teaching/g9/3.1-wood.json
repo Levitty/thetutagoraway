@@ -1,0 +1,189 @@
+{
+ "sub_strand": "PRE_.G9.MATERI.WOOD",
+ "title": "Wood",
+ "status": "draft: written 18 Nov 2026 offline for Grade 9 Pre-Technical Studies; not yet checked by a Pre-Technical Studies teacher; safety lines marked SAFETY in the library to confirm first; not loaded by the live tutor",
+ "sources": [],
+ "notes": "",
+ "skills": [
+  {
+   "skill": "PRET.G9.MATERI.WOOD.WOOD_TYPES",
+   "key_step": "The learner classifies wood by physical characteristics and source (hardwoods from broad-leaved trees: mahogany, mvule, meru oak, camphor; softwoods from conifers: pine, cypress, podo; manufactured boards: plywood, chipboard, blockboard, hardboard) and relates types to uses (doors and furniture, roofing and fencing, cupboards).",
+   "floor": {
+    "prerequisite": "Knows natural and synthetic materials.",
+    "question": "Is wood natural or synthetic?",
+    "answer": "Natural"
+   },
+   "representations": [
+    "leaf and cone samples",
+    "wood samples with labels",
+    "a type and use chart"
+   ],
+   "steps": [
+    "Look at the tree's leaves and seeds.",
+    "Name hardwood or softwood.",
+    "Tell solid wood from boards.",
+    "Match the type to a use."
+   ],
+   "contexts": [
+    "a timber yard",
+    "a mvule door",
+    "pine roofing timber"
+   ],
+   "board": [
+    {
+     "beat": "write",
+     "do": "Write: pine, mahogany, cypress, mvule."
+    },
+    {
+     "beat": "point",
+     "do": "Point at \"cypress\".",
+     "say": "Hardwood or softwood, and how do you know?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for the learner to say softwood; a conifer with cones."
+    },
+    {
+     "beat": "reveal",
+     "do": "Sort the rest."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "PRET.G9.MATERI.WOOD.WOOD_TYPES.M_PT9_WT_HARD",
+     "listen_for": [
+      "Pine"
+     ],
+     "ask": "Which is a hardwood?",
+     "repair": "Show a pine cone and needle leaves: pine is a conifer, so it is a softwood."
+    },
+    {
+     "code": "PRET.G9.MATERI.WOOD.WOOD_TYPES.M_PT9_WT_SOFT",
+     "listen_for": [
+      "Mvule"
+     ],
+     "ask": "Which is a softwood?",
+     "repair": "Mvule is a broad-leaved indigenous tree: a hardwood, dense and durable, used for doors and furniture."
+    },
+    {
+     "code": "PRET.G9.MATERI.WOOD.WOOD_TYPES.M_PT9_WT_BOARD",
+     "listen_for": [
+      "One solid plank"
+     ],
+     "ask": "What is plywood?",
+     "repair": "Look at the edge of plywood (layers) and chipboard (chips in glue): manufactured boards, not solid timber."
+    },
+    {
+     "code": "PRET.G9.MATERI.WOOD.WOOD_TYPES.M_PT9_WT_FEEL",
+     "listen_for": [
+      "How hard it feels"
+     ],
+     "ask": "What decides whether timber is a hardwood or a softwood?",
+     "repair": "Show leaves and seeds: mahogany and mvule (broad leaves) against pine and cypress (needles, cones). Note that some hardwoods are soft."
+    }
+   ],
+   "checks": [
+    {
+     "question": "Is pine a hardwood or a softwood?",
+     "answer": "A softwood",
+     "shows": "classify"
+    },
+    {
+     "question": "What decides hardwood or softwood?",
+     "answer": "The kind of tree",
+     "shows": "basis"
+    }
+   ]
+  },
+  {
+   "skill": "PRET.G9.MATERI.WOOD.WOOD_PREP",
+   "key_step": "The learner describes the preparation of wood: felling, cross-cutting, conversion (sawing logs into planks: through and through, quarter sawing), seasoning (air or kiln) to reduce moisture and prevent warping, treating with preservatives against rot and insects, planing and finishing.",
+   "floor": {
+    "prerequisite": "Knows hardwoods and softwoods.",
+    "question": "Is mahogany a hardwood?",
+    "answer": "Yes"
+   },
+   "representations": [
+    "a step strip from tree to plank",
+    "a seasoning stack drawing",
+    "treated and untreated post photos"
+   ],
+   "steps": [
+    "Fell and cross-cut.",
+    "Convert into planks.",
+    "Season the planks.",
+    "Treat, plane and finish."
+   ],
+   "contexts": [
+    "a sawmill",
+    "a timber yard stack",
+    "fence posts on a farm"
+   ],
+   "board": [
+    {
+     "beat": "write",
+     "do": "Draw a stack of planks with gaps and sticks between them."
+    },
+    {
+     "beat": "point",
+     "do": "Point at the sticks.",
+     "say": "Why are these here?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for the learner to say so air flows and dries the wood."
+    },
+    {
+     "beat": "reveal",
+     "do": "Label the stack: bearers, stickers, roof."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "PRET.G9.MATERI.WOOD.WOOD_PREP.M_PT9_WP_SEASON",
+     "listen_for": [
+      "Nothing; fresh timber is best"
+     ],
+     "ask": "A fundi makes a door from freshly cut timber. What may happen?",
+     "repair": "Weigh a fresh offcut and the same one after two weeks; explain shrinking, warping and cracking as water leaves."
+    },
+    {
+     "code": "PRET.G9.MATERI.WOOD.WOOD_PREP.M_PT9_WP_ORDER",
+     "listen_for": [
+      "Varnishing it"
+     ],
+     "ask": "After a tree is felled, which step comes next?",
+     "repair": "Order the steps on cards: felling, cross-cutting, conversion (sawing), seasoning, treating, planing, finishing."
+    },
+    {
+     "code": "PRET.G9.MATERI.WOOD.WOOD_PREP.M_PT9_WP_TREAT",
+     "listen_for": [
+      "To give them a nice colour"
+     ],
+     "ask": "Why are fence posts treated with a preservative?",
+     "repair": "Show a treated and an untreated fence post after some years (or photos): rot and termite damage on the untreated one."
+    },
+    {
+     "code": "PRET.G9.MATERI.WOOD.WOOD_PREP.M_PT9_WP_STACK",
+     "listen_for": [
+      "In a tight pile on the ground"
+     ],
+     "ask": "How is timber stacked for air seasoning?",
+     "repair": "Draw a seasoning stack: bearers off the ground, stickers between boards so air flows, a roof against rain and sun."
+    }
+   ],
+   "checks": [
+    {
+     "question": "Why is timber seasoned?",
+     "answer": "To dry it so it does not warp or crack",
+     "shows": "seasoning"
+    },
+    {
+     "question": "Why is wood treated with a preservative?",
+     "answer": "Against rot and insects",
+     "shows": "treating"
+    }
+   ]
+  }
+ ]
+}

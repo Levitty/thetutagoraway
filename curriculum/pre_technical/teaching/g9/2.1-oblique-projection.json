@@ -1,0 +1,189 @@
+{
+ "sub_strand": "PRE_.G9.COMMUN.OBLIQUE_PROJECTION",
+ "title": "Oblique Projection",
+ "status": "draft: written 18 Nov 2026 offline for Grade 9 Pre-Technical Studies; not yet checked by a Pre-Technical Studies teacher; safety lines marked SAFETY in the library to confirm first; not loaded by the live tutor",
+ "sources": [],
+ "notes": "",
+ "skills": [
+  {
+   "skill": "PRET.G9.COMMUN.OBLIQUE_PROJECTION.OBLIQUE",
+   "key_step": "The learner explains the characteristics of oblique projection: the front face true shape and size, receding lines parallel at an angle (usually 45 degrees), full depth (cavalier) or half depth (cabinet), circles drawn true on the front face, used for quick pictorial drawings of furniture and simple parts.",
+   "floor": {
+    "prerequisite": "Can use a 45 degree set square.",
+    "question": "Which set square draws a 45 degree line?",
+    "answer": "The 45 degree set square"
+   },
+   "representations": [
+    "a block in cavalier and cabinet",
+    "oblique and isometric side by side",
+    "a characteristics chart"
+   ],
+   "steps": [
+    "Name the front face.",
+    "Say how receding lines are drawn.",
+    "Tell cavalier from cabinet.",
+    "Tell oblique from isometric."
+   ],
+   "contexts": [
+    "a drawing of a stool",
+    "a wooden box",
+    "a furniture catalogue picture"
+   ],
+   "board": [
+    {
+     "beat": "write",
+     "do": "Draw a block in oblique and the same block in isometric."
+    },
+    {
+     "beat": "point",
+     "do": "Point at the front face of the oblique block.",
+     "say": "What is special about this face?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for the learner to say it is true shape."
+    },
+    {
+     "beat": "reveal",
+     "do": "List the characteristics of oblique."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "PRET.G9.COMMUN.OBLIQUE_PROJECTION.OBLIQUE.M_PT9_OB_FRONT",
+     "listen_for": [
+      "At an angle and distorted"
+     ],
+     "ask": "In oblique drawing the front face is drawn...",
+     "repair": "Draw a block in oblique: the front face is a true rectangle with true sizes; only depth slants."
+    },
+    {
+     "code": "PRET.G9.COMMUN.OBLIQUE_PROJECTION.OBLIQUE.M_PT9_OB_ANGLE",
+     "listen_for": [
+      "90 degrees"
+     ],
+     "ask": "At what angle are depth lines usually drawn?",
+     "repair": "Use the 45 degree set square on the T-square; draw depth lines at 45 degrees."
+    },
+    {
+     "code": "PRET.G9.COMMUN.OBLIQUE_PROJECTION.OBLIQUE.M_PT9_OB_CABINET",
+     "listen_for": [
+      "Full size"
+     ],
+     "ask": "In cabinet projection the depth is...",
+     "repair": "Draw both: cavalier full depth looks too long; cabinet half depth looks right. \"Cabinet: cut in half.\""
+    },
+    {
+     "code": "PRET.G9.COMMUN.OBLIQUE_PROJECTION.OBLIQUE.M_PT9_OB_ISOMETRIC",
+     "listen_for": [
+      "Isometric"
+     ],
+     "ask": "Which projection draws the front face true shape with receding lines at 45 degrees?",
+     "repair": "Draw the same block in isometric (30 degree lines both ways, no true face) and in oblique (true front, 45 degree depth); compare."
+    }
+   ],
+   "checks": [
+    {
+     "question": "How is the front face drawn in oblique?",
+     "answer": "True shape",
+     "shows": "front face"
+    },
+    {
+     "question": "In cabinet oblique, how long is the depth?",
+     "answer": "Half the real depth",
+     "shows": "cabinet"
+    }
+   ]
+  },
+  {
+   "skill": "PRET.G9.COMMUN.OBLIQUE_PROJECTION.OBLIQUE_DRAW",
+   "key_step": "The learner sketches and draws blocks in oblique: choose the front face (circles and most detail), draw it true shape, draw all receding lines parallel at 45 degrees, full depth (cavalier) or half depth (cabinet), firm the visible outline; the sketch and drawing are marked with the rubric.",
+   "floor": {
+    "prerequisite": "Knows what oblique projection is.",
+    "question": "In oblique, how is the front face drawn?",
+    "answer": "True shape"
+   },
+   "representations": [
+    "a block drawn in cavalier and cabinet side by side",
+    "a 45 degree set square on a T-square",
+    "a block with a hole drawn both ways"
+   ],
+   "steps": [
+    "Choose the front face.",
+    "Draw it true shape.",
+    "Draw receding lines at 45 degrees.",
+    "Mark the depth (full or half) and firm the outline."
+   ],
+   "contexts": [
+    "drawing a stool",
+    "drawing a wooden box with a round hole",
+    "sketching a brick"
+   ],
+   "board": [
+    {
+     "beat": "write",
+     "do": "Draw the front face of a block with a circle in it."
+    },
+    {
+     "beat": "point",
+     "do": "Point at a corner of the face.",
+     "say": "Which way and how long is the receding line for a 60 mm deep block in cabinet?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for the learner to say 45 degrees, 30 mm."
+    },
+    {
+     "beat": "reveal",
+     "do": "Draw all the receding lines and finish the block."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "PRET.G9.COMMUN.OBLIQUE_PROJECTION.OBLIQUE_DRAW.M_PT9_OD_CIRCLE_FACE",
+     "listen_for": [
+      "Any face; it does not matter"
+     ],
+     "ask": "A block has a round hole on one face. Which face should go to the front in an oblique drawing?",
+     "repair": "Draw the block twice: hole at the front (a compass circle) and hole on the side (a distorted shape). Choose the easier, truer one."
+    },
+    {
+     "code": "PRET.G9.COMMUN.OBLIQUE_PROJECTION.OBLIQUE_DRAW.M_PT9_OD_DEPTH_FULL",
+     "listen_for": [
+      "60 mm"
+     ],
+     "ask": "A block 60 mm deep is drawn in cabinet oblique. How long are the receding lines?",
+     "repair": "Draw the same block in cavalier (full depth) and cabinet (half depth); cabinet looks more like the real block."
+    },
+    {
+     "code": "PRET.G9.COMMUN.OBLIQUE_PROJECTION.OBLIQUE_DRAW.M_PT9_OD_START",
+     "listen_for": [
+      "The receding (depth) lines"
+     ],
+     "ask": "What is drawn first in an oblique drawing?",
+     "repair": "Draw the front face first with true sizes, then project receding lines from each corner at 45 degrees."
+    },
+    {
+     "code": "PRET.G9.COMMUN.OBLIQUE_PROJECTION.OBLIQUE_DRAW.M_PT9_OD_CONVERGE",
+     "listen_for": [
+      "Meeting at a point in the distance"
+     ],
+     "ask": "How are all the receding lines in an oblique drawing drawn?",
+     "repair": "Use the 45 degree set square on the T-square for every receding line; they stay parallel."
+    }
+   ],
+   "checks": [
+    {
+     "question": "What is drawn first in oblique?",
+     "answer": "The front face",
+     "shows": "order"
+    },
+    {
+     "question": "In cabinet, a block is 60 mm deep. Receding length?",
+     "answer": "30 mm",
+     "shows": "cabinet"
+    }
+   ]
+  }
+ ]
+}

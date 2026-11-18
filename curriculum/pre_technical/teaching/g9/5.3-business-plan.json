@@ -1,0 +1,189 @@
+{
+ "sub_strand": "PRE_.G9.ENTREP.BUSINESS_PLAN",
+ "title": "Business Plan",
+ "status": "draft: written 18 Nov 2026 offline for Grade 9 Pre-Technical Studies; not yet checked by a Pre-Technical Studies teacher; safety lines marked SAFETY in the library to confirm first; not loaded by the live tutor",
+ "sources": [],
+ "notes": "",
+ "skills": [
+  {
+   "skill": "PRET.G9.ENTREP.BUSINESS_PLAN.BUSINESS_PLAN",
+   "key_step": "The learner explains why a business plan matters (guides the owner, shows if the idea can work, helps get loans and partners, sets goals) and describes its components (executive summary, business description, market and competitors, marketing plan, operations, management, financial plan).",
+   "floor": {
+    "prerequisite": "Knows profit and capital.",
+    "question": "Sales 10,000, costs 7,000. Profit?",
+    "answer": "3,000 shillings"
+   },
+   "representations": [
+    "a business plan contents list",
+    "component cards",
+    "a short sample plan"
+   ],
+   "steps": [
+    "Say why a plan matters.",
+    "Name each component.",
+    "Say what each contains.",
+    "Say when to review it."
+   ],
+   "contexts": [
+    "a youth applying for a loan",
+    "a school club starting a business",
+    "a tailor planning a second shop"
+   ],
+   "board": [
+    {
+     "beat": "write",
+     "do": "Write the components on cards in a pile."
+    },
+    {
+     "beat": "point",
+     "do": "Point at the card \"financial plan\".",
+     "say": "What goes in this part?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for the learner to say costs, sales and profit."
+    },
+    {
+     "beat": "reveal",
+     "do": "Put the components in order."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "PRET.G9.ENTREP.BUSINESS_PLAN.BUSINESS_PLAN.M_PT9_BPL_IMPORT",
+     "listen_for": [
+      "It is a waste of time"
+     ],
+     "ask": "Why write a business plan?",
+     "repair": "Compare two traders: one who planned costs and market and one who did not; list what went wrong for the second."
+    },
+    {
+     "code": "PRET.G9.ENTREP.BUSINESS_PLAN.BUSINESS_PLAN.M_PT9_BPL_PART",
+     "listen_for": [
+      "Nothing; a good product sells itself"
+     ],
+     "ask": "A business plan describes the product. What else must it show?",
+     "repair": "Read a short plan with no market section; ask who will buy and who else sells the same thing."
+    },
+    {
+     "code": "PRET.G9.ENTREP.BUSINESS_PLAN.BUSINESS_PLAN.M_PT9_BPL_MONEY",
+     "listen_for": [
+      "The title page"
+     ],
+     "ask": "Which part shows costs and income?",
+     "repair": "Point to the financial plan in a template: start-up costs, expected sales, costs and profit."
+    },
+    {
+     "code": "PRET.G9.ENTREP.BUSINESS_PLAN.BUSINESS_PLAN.M_PT9_BPL_ONCE",
+     "listen_for": [
+      "Keep it as it is; plans are written once"
+     ],
+     "ask": "A business plan was written a year ago and prices have changed. What should the owner do?",
+     "repair": "Change one price in a plan and see how the profit changes; plan a review each term."
+    }
+   ],
+   "checks": [
+    {
+     "question": "Give one reason for a business plan.",
+     "answer": "It guides the owner (helps get a loan)",
+     "shows": "importance"
+    },
+    {
+     "question": "Name a component of a business plan.",
+     "answer": "The market (financial plan)",
+     "shows": "components"
+    }
+   ]
+  },
+  {
+   "skill": "PRET.G9.ENTREP.BUSINESS_PLAN.BP_TEMPLATE",
+   "key_step": "The learner fills in a business plan template for a small project: description, market and competitors, operations, start-up capital, projected sales, costs and profit, and the executive summary written last; the filled template is marked with the rubric.",
+   "floor": {
+    "prerequisite": "Knows the parts of a business plan.",
+    "question": "Name one part of a business plan.",
+    "answer": "The market (the financial plan)"
+   },
+   "representations": [
+    "a one-page business plan template",
+    "a start-up cost list",
+    "a projected profit row: sales - costs"
+   ],
+   "steps": [
+    "Describe the business.",
+    "Describe the market and competitors.",
+    "Cost the start-up and project sales, costs and profit.",
+    "Write the executive summary last."
+   ],
+   "contexts": [
+    "a juice stall at a school fair",
+    "a mandazi stall",
+    "a phone-charging kiosk"
+   ],
+   "board": [
+    {
+     "beat": "write",
+     "do": "Write: sales 30,000, costs 22,000, profit ____."
+    },
+    {
+     "beat": "point",
+     "do": "Point at the blank.",
+     "say": "What goes here?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for the learner to say 8,000."
+    },
+    {
+     "beat": "reveal",
+     "do": "Fill in the rest of the financial part."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "PRET.G9.ENTREP.BUSINESS_PLAN.BP_TEMPLATE.M_PT9_BT_STARTUP",
+     "listen_for": [
+      "Only the fruit"
+     ],
+     "ask": "A learner plans a juice stall. Which costs go into the start-up capital?",
+     "repair": "List everything needed before the first sale; sort it into equipment, permits and stock."
+    },
+    {
+     "code": "PRET.G9.ENTREP.BUSINESS_PLAN.BP_TEMPLATE.M_PT9_BT_PROFIT",
+     "listen_for": [
+      "30,000 shillings"
+     ],
+     "ask": "Projected sales 30,000 shillings a month, projected costs 22,000. What is the projected profit?",
+     "repair": "Write profit = sales - costs in the template row itself; fill it in for three businesses."
+    },
+    {
+     "code": "PRET.G9.ENTREP.BUSINESS_PLAN.BP_TEMPLATE.M_PT9_BT_SUMMARY",
+     "listen_for": [
+      "First, before any other part"
+     ],
+     "ask": "When is the executive summary of a business plan written?",
+     "repair": "Try to summarise an empty plan; then fill the parts and summarise. Only the second works."
+    },
+    {
+     "code": "PRET.G9.ENTREP.BUSINESS_PLAN.BP_TEMPLATE.M_PT9_BT_COMPETITORS",
+     "listen_for": [
+      "Nothing; competitors need not be in a plan"
+     ],
+     "ask": "A learner writes \"no competitors\" for a mandazi stall beside two kiosks that sell mandazi. What is wrong?",
+     "repair": "Walk the market (or a map) and list every seller of the same goods; write one way the new stall will be different."
+    }
+   ],
+   "checks": [
+    {
+     "question": "Sales 30,000, costs 22,000. Projected profit?",
+     "answer": "8,000 shillings",
+     "shows": "profit"
+    },
+    {
+     "question": "When is the executive summary written?",
+     "answer": "Last",
+     "shows": "summary"
+    }
+   ]
+  }
+ ]
+}

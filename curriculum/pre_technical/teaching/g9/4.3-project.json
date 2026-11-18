@@ -1,0 +1,189 @@
+{
+ "sub_strand": "PRE_.G9.TOOLS_.PROJECT",
+ "title": "Project",
+ "status": "draft: written 18 Nov 2026 offline for Grade 9 Pre-Technical Studies; not yet checked by a Pre-Technical Studies teacher; safety lines marked SAFETY in the library to confirm first; not loaded by the live tutor",
+ "sources": [],
+ "notes": "Making the item (outcome c) is marked with the KICD rubric on the item and the learner's folio; the questions test planning, order and evaluation.",
+ "skills": [
+  {
+   "skill": "PRET.G9.TOOLS_.PROJECT.PROJECT_STEPS",
+   "key_step": "The learner identifies a problem in the locality that Pre-Technical skills can solve, selects an item to make, and orders the project steps: identify the problem, choose the item, plan (drawing, materials, cost), make, test, evaluate and improve.",
+   "floor": {
+    "prerequisite": "Knows sources of business ideas.",
+    "question": "Name one source of a business idea.",
+    "answer": "A need in the community"
+   },
+   "representations": [
+    "a project step strip",
+    "a problem and item matching card",
+    "items made from local materials"
+   ],
+   "steps": [
+    "Identify a problem.",
+    "Choose an item that solves it.",
+    "Check it suits skills and materials.",
+    "Order the steps."
+   ],
+   "contexts": [
+    "shoes on the classroom floor",
+    "chalk breaking in boxes",
+    "water spilling at the tap"
+   ],
+   "board": [
+    {
+     "beat": "write",
+     "do": "Write the problem: \"shoes lie on the classroom floor\"."
+    },
+    {
+     "beat": "point",
+     "do": "Point at the problem.",
+     "say": "What item could solve this, using local materials?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for the learner to say a shoe rack from offcuts."
+    },
+    {
+     "beat": "reveal",
+     "do": "Write the project steps in order."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "PRET.G9.TOOLS_.PROJECT.PROJECT_STEPS.M_PT9_PJ_FIRST",
+     "listen_for": [
+      "Make the item"
+     ],
+     "ask": "What is the first step of a project?",
+     "repair": "Order the project steps on cards: identify a problem, choose an item, plan, make, test, evaluate."
+    },
+    {
+     "code": "PRET.G9.TOOLS_.PROJECT.PROJECT_STEPS.M_PT9_PJ_TEST",
+     "listen_for": [
+      "Hand it in straight away"
+     ],
+     "ask": "After making the item, what comes next?",
+     "repair": "Test a made item against its purpose (does the rack hold the shoes?) and improve it before handing in."
+    },
+    {
+     "code": "PRET.G9.TOOLS_.PROJECT.PROJECT_STEPS.M_PT9_PJ_MATERIAL",
+     "listen_for": [
+      "Only costly imported ones"
+     ],
+     "ask": "Which materials are best for a school project?",
+     "repair": "List local and waste materials (offcuts, bottles, sisal, scrap metal) and items made from them."
+    },
+    {
+     "code": "PRET.G9.TOOLS_.PROJECT.PROJECT_STEPS.M_PT9_PJ_TOO_BIG",
+     "listen_for": [
+      "Build a new road for the village"
+     ],
+     "ask": "Which problem suits a Grade 9 Pre-Technical project?",
+     "repair": "Check each idea against skills, tools, time and money; shrink a big idea into a small item that helps."
+    }
+   ],
+   "checks": [
+    {
+     "question": "What is the first step of a project?",
+     "answer": "Identify a problem",
+     "shows": "order"
+    },
+    {
+     "question": "What comes after making the item?",
+     "answer": "Testing it",
+     "shows": "testing"
+    }
+   ]
+  },
+  {
+   "skill": "PRET.G9.TOOLS_.PROJECT.PROJECT_PLAN",
+   "key_step": "The learner plans and evaluates the making of a project item from local materials: sketch and working drawing, materials and cost list, order of operations (mark, cut, join, sand, finish), safe use of tools, testing and evaluation against the problem; the item and folio are marked with the rubric.",
+   "floor": {
+    "prerequisite": "Knows the steps of a project.",
+    "question": "What is the first step of a project?",
+    "answer": "Identify a problem"
+   },
+   "representations": [
+    "a project folio template",
+    "an order-of-operations strip",
+    "an evaluation checklist tied to the problem"
+   ],
+   "steps": [
+    "Draw the item with sizes.",
+    "List materials and cost.",
+    "Plan the order of making.",
+    "Make, test and evaluate."
+   ],
+   "contexts": [
+    "a shoe rack for the classroom",
+    "a chalk box from offcuts",
+    "a bird feeder from waste materials"
+   ],
+   "board": [
+    {
+     "beat": "write",
+     "do": "Write the order cards: finish, cut, mark, join, sand."
+    },
+    {
+     "beat": "point",
+     "do": "Point at \"finish\".",
+     "say": "Where does this card go?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for the learner to say last."
+    },
+    {
+     "beat": "reveal",
+     "do": "Put all the cards in order."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "PRET.G9.TOOLS_.PROJECT.PROJECT_PLAN.M_PT9_PP_NO_DRAWING",
+     "listen_for": [
+      "Nothing; start cutting the materials"
+     ],
+     "ask": "What should you prepare before you start making a project item?",
+     "repair": "Show two shelves: one made from a drawing, one without; compare the fit and the waste."
+    },
+    {
+     "code": "PRET.G9.TOOLS_.PROJECT.PROJECT_PLAN.M_PT9_PP_NO_COST",
+     "listen_for": [
+      "It is a waste of time"
+     ],
+     "ask": "Why list the materials and their cost before starting?",
+     "repair": "Cost a small item together (timber, nails, glue, varnish); compare with the money available."
+    },
+    {
+     "code": "PRET.G9.TOOLS_.PROJECT.PROJECT_PLAN.M_PT9_PP_FINISH_FIRST",
+     "listen_for": [
+      "Before cutting and joining the parts"
+     ],
+     "ask": "When is a wooden item painted or varnished?",
+     "repair": "Show how glue does not stick to varnish and cutting damages the finish; write the order of operations."
+    },
+    {
+     "code": "PRET.G9.TOOLS_.PROJECT.PROJECT_PLAN.M_PT9_PP_LOOKS_ONLY",
+     "listen_for": [
+      "By whether it looks nice"
+     ],
+     "ask": "How is a finished project item evaluated?",
+     "repair": "Return to the problem statement; test the item against it (does the shoe rack hold 20 pairs?) and list improvements."
+    }
+   ],
+   "checks": [
+    {
+     "question": "What is prepared before making an item?",
+     "answer": "A sketch and working drawing with sizes",
+     "shows": "planning"
+    },
+    {
+     "question": "How is the item evaluated?",
+     "answer": "By whether it solves the problem",
+     "shows": "evaluation"
+    }
+   ]
+  }
+ ]
+}

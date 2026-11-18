@@ -1,0 +1,189 @@
+{
+ "sub_strand": "PRE_.G9.TOOLS_.HOLDING_TOOLS",
+ "title": "Holding Tools",
+ "status": "draft: written 18 Nov 2026 offline for Grade 9 Pre-Technical Studies; not yet checked by a Pre-Technical Studies teacher; safety lines marked SAFETY in the library to confirm first; not loaded by the live tutor",
+ "sources": [],
+ "notes": "",
+ "skills": [
+  {
+   "skill": "PRET.G9.TOOLS_.HOLDING_TOOLS.HOLDING_TOOLS",
+   "key_step": "The learner identifies holding tools (bench vice, machine vice, pipe vice, hand vice, G-clamp, sash clamp, pliers, tongs, pincers for pulling nails) and selects one for a task by the work and the job, and cares for them (clean, oil screws, tighten by hand, store); caring for the tools in class is watched and marked with the rubric.",
+   "floor": {
+    "prerequisite": "Knows how to care for tools.",
+    "question": "What do you do to a steel tool after use?",
+    "answer": "Clean and oil it"
+   },
+   "representations": [
+    "holding tools laid out with labels",
+    "a task and tool chart",
+    "a vice with its parts labelled"
+   ],
+   "steps": [
+    "Name the work.",
+    "Name the job.",
+    "Choose the holding tool.",
+    "Say how to care for it."
+   ],
+   "contexts": [
+    "filing a metal strip",
+    "gluing a table top",
+    "a blacksmith shaping hot metal"
+   ],
+   "board": [
+    {
+     "beat": "write",
+     "do": "Write three tasks: hold glued wood, hold hot metal, hold a strip for filing."
+    },
+    {
+     "beat": "point",
+     "do": "Point at \"hold hot metal\".",
+     "say": "Which tool, and why?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for the learner to say tongs, long handles keep heat away."
+    },
+    {
+     "beat": "reveal",
+     "do": "Choose tools for the other tasks."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "PRET.G9.TOOLS_.HOLDING_TOOLS.HOLDING_TOOLS.M_PT9_HT_VICE",
+     "listen_for": [
+      "Bends and shapes the metal by itself"
+     ],
+     "ask": "What does a bench vice do?",
+     "repair": "Hold a strip in the vice and file it: the vice holds, the file shapes."
+    },
+    {
+     "code": "PRET.G9.TOOLS_.HOLDING_TOOLS.HOLDING_TOOLS.M_PT9_HT_CLAMP",
+     "listen_for": [
+      "A pair of pliers"
+     ],
+     "ask": "Which tool holds two glued pieces of wood together while the glue sets?",
+     "repair": "Glue two pieces and clamp them with a G-clamp; show pliers cannot hold them evenly for hours."
+    },
+    {
+     "code": "PRET.G9.TOOLS_.HOLDING_TOOLS.HOLDING_TOOLS.M_PT9_HT_CARE",
+     "listen_for": [
+      "Hammer the handle to tighten it fully"
+     ],
+     "ask": "How should a bench vice be cared for?",
+     "repair": "Show a bent vice handle; tighten by hand only, clean out chips and oil the screw."
+    },
+    {
+     "code": "PRET.G9.TOOLS_.HOLDING_TOOLS.HOLDING_TOOLS.M_PT9_HT_TONGS",
+     "listen_for": [
+      "Ordinary pliers"
+     ],
+     "ask": "Which tool holds a piece of red-hot metal?",
+     "repair": "Show blacksmith's tongs and their long handles; explain heat travels up short pliers to the hand."
+    }
+   ],
+   "checks": [
+    {
+     "question": "What does a bench vice do?",
+     "answer": "Holds the work firmly",
+     "shows": "vice"
+    },
+    {
+     "question": "Which tool holds glued wood while it sets?",
+     "answer": "A G-clamp",
+     "shows": "clamp"
+    }
+   ]
+  },
+  {
+   "skill": "PRET.G9.TOOLS_.HOLDING_TOOLS.HOLD_USE",
+   "key_step": "The learner explains how to use holding tools: work low in the vice, soft packing for finished work, clamp for drilling, support long work, tighten vices by hand only, use tongs for hot metal; the use is watched and marked with the rubric.",
+   "floor": {
+    "prerequisite": "Knows the holding tools.",
+    "question": "What does a bench vice do?",
+    "answer": "Holds the work firmly"
+   },
+   "representations": [
+    "pictures: work held high and low",
+    "soft jaws and wood packing",
+    "a clamped and an unclamped drilling set-up"
+   ],
+   "steps": [
+    "Choose the holding tool.",
+    "Set the work low and protected.",
+    "Tighten by hand.",
+    "Support long work and check before cutting."
+   ],
+   "contexts": [
+    "filing a steel bracket",
+    "planing a long shelf",
+    "drilling a hinge plate"
+   ],
+   "board": [
+    {
+     "beat": "write",
+     "do": "Draw a vice with a strip sticking far up out of the jaws."
+    },
+    {
+     "beat": "point",
+     "do": "Point at the strip.",
+     "say": "What will happen when you file it, and how do you fix it?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for the learner to say it will vibrate; hold it low."
+    },
+    {
+     "beat": "reveal",
+     "do": "Redraw it low in the jaws."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "PRET.G9.TOOLS_.HOLDING_TOOLS.HOLD_USE.M_PT9_HU_HIGH",
+     "listen_for": [
+      "As much as possible, so it is easy to reach"
+     ],
+     "ask": "When filing a piece of metal held in a vice, how much should stick out above the jaws?",
+     "repair": "File a strip held high and then held low; hear the chatter and feel the bend in the first."
+    },
+    {
+     "code": "PRET.G9.TOOLS_.HOLDING_TOOLS.HOLD_USE.M_PT9_HU_PACKING",
+     "listen_for": [
+      "Tighten it straight in the steel jaws"
+     ],
+     "ask": "How do you hold a finished wooden piece in a metal vice without marking it?",
+     "repair": "Clamp a scrap with and without packing; compare the marks."
+    },
+    {
+     "code": "PRET.G9.TOOLS_.HOLDING_TOOLS.HOLD_USE.M_PT9_HU_DRILL_HAND",
+     "listen_for": [
+      "By hand, pressed down firmly"
+     ],
+     "ask": "A small metal plate is to be drilled. How is it held?",
+     "repair": "Explain that a drill can catch and spin the plate into the hand; always clamp. Shown by the teacher only."
+    },
+    {
+     "code": "PRET.G9.TOOLS_.HOLDING_TOOLS.HOLD_USE.M_PT9_HU_SUPPORT",
+     "listen_for": [
+      "Nothing; the vice holds it"
+     ],
+     "ask": "A long plank is held in the vice at one end for planing. What else is needed?",
+     "repair": "Show how a long plank sags and swings; add a support and plane again."
+    }
+   ],
+   "checks": [
+    {
+     "question": "How high should work sit in a vice?",
+     "answer": "Low, just above the jaws",
+     "shows": "vice"
+    },
+    {
+     "question": "How is small work held for drilling?",
+     "answer": "Clamped, never by hand",
+     "shows": "drilling"
+    }
+   ]
+  }
+ ]
+}
