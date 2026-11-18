@@ -8020,5 +8020,509 @@
   "help": "Add every part on both sides of the line.",
   "source": "to be confirmed by a teacher (no source yet)",
   "status": "draft"
+ },
+ "MATH.G9.GEOMET.SIMILARITY_AND_ENLARGEME.SIMILAR_IDENTIFY.M_SIMILAR_MEANS_EQUAL": {
+  "skill": "MATH.G9.GEOMET.SIMILARITY_AND_ENLARGEME.SIMILAR_IDENTIFY",
+  "error": "Thinks similar figures must have equal sides.",
+  "example": {
+   "question": "Can a 2 by 3 rectangle be similar to a 4 by 6 rectangle?",
+   "wrong_answer": "No, the sides are different",
+   "correct_answer": "Yes"
+  },
+  "cause": "Mixes up similar and congruent.",
+  "reveals": "The answer No, the sides are different as a wrong option, with a reason that names the idea.",
+  "help": "Similar means the same shape: sides multiplied by one factor.",
+  "source": "to be confirmed by a teacher (no source yet)",
+  "status": "draft"
+ },
+ "MATH.G9.GEOMET.SIMILARITY_AND_ENLARGEME.SIMILAR_IDENTIFY.M_BIGGER_NEVER_SIMILAR": {
+  "skill": "MATH.G9.GEOMET.SIMILARITY_AND_ENLARGEME.SIMILAR_IDENTIFY",
+  "error": "Thinks a larger figure cannot be similar to a smaller one.",
+  "example": {
+   "question": "Is an enlarged photo similar to the original?",
+   "wrong_answer": "No",
+   "correct_answer": "Yes"
+  },
+  "cause": "Thinks similar means the same size.",
+  "reveals": "The answer No as a wrong option, with a reason that names the idea.",
+  "help": "An enlargement is always similar to the object.",
+  "source": "to be confirmed by a teacher (no source yet)",
+  "status": "draft"
+ },
+ "MATH.G9.GEOMET.SIMILARITY_AND_ENLARGEME.SIMILAR_IDENTIFY.M_ADDED_LENGTH_SIMILAR": {
+  "skill": "MATH.G9.GEOMET.SIMILARITY_AND_ENLARGEME.SIMILAR_IDENTIFY",
+  "error": "Thinks adding the same length to every side gives a similar figure.",
+  "example": {
+   "question": "6 by 4 grows to 8 by 6. Similar?",
+   "wrong_answer": "Yes, each grew by 2",
+   "correct_answer": "No: 8/6 is not 6/4"
+  },
+  "cause": "Thinks equal change keeps the shape.",
+  "reveals": "The answer Yes, each grew by 2 as a wrong option, with a reason that names the idea.",
+  "help": "Similar needs one multiplier: 6/4 = 1.5 but 8/6 = 1.33.",
+  "source": "to be confirmed by a teacher (no source yet)",
+  "status": "draft"
+ },
+ "MATH.G9.GEOMET.SIMILARITY_AND_ENLARGEME.SIMILAR_IDENTIFY.M_ANGLES_ONLY_RECTANGLES": {
+  "skill": "MATH.G9.GEOMET.SIMILARITY_AND_ENLARGEME.SIMILAR_IDENTIFY",
+  "error": "Thinks all rectangles are similar because their angles are equal.",
+  "example": {
+   "question": "Are a 1 by 5 and a 2 by 3 rectangle similar?",
+   "wrong_answer": "Yes, all angles are 90",
+   "correct_answer": "No"
+  },
+  "cause": "Checks angles but not ratios.",
+  "reveals": "The answer Yes, all angles are 90 as a wrong option, with a reason that names the idea.",
+  "help": "For shapes with more than three sides, check the side ratios too.",
+  "source": "to be confirmed by a teacher (no source yet)",
+  "status": "draft"
+ },
+ "MATH.G9.GEOMET.SIMILARITY_AND_ENLARGEME.SIMILAR_MISSING_SIDE.M_ADD_NOT_MULTIPLY": {
+  "skill": "MATH.G9.GEOMET.SIMILARITY_AND_ENLARGEME.SIMILAR_MISSING_SIDE",
+  "error": "Adds the difference of one pair of sides to another side.",
+  "example": {
+   "question": "Sides 4 and 6; the 4 becomes 10. The 6 becomes?",
+   "wrong_answer": "12",
+   "correct_answer": "15"
+  },
+  "cause": "Thinks shapes grow by adding.",
+  "reveals": "The answer 12 as a wrong option, with a reason that names the idea.",
+  "help": "Find the factor: 10 / 4 = 2.5; 6 x 2.5 = 15.",
+  "source": "to be confirmed by a teacher (no source yet)",
+  "status": "draft"
+ },
+ "MATH.G9.GEOMET.SIMILARITY_AND_ENLARGEME.SIMILAR_MISSING_SIDE.M_DIVIDE_FOR_LARGER": {
+  "skill": "MATH.G9.GEOMET.SIMILARITY_AND_ENLARGEME.SIMILAR_MISSING_SIDE",
+  "error": "Divides by the scale factor when going to the larger figure.",
+  "example": {
+   "question": "Scale factor 2.5 from small to large. Small side 6. Large side?",
+   "wrong_answer": "2.4",
+   "correct_answer": "15"
+  },
+  "cause": "Picks the wrong operation.",
+  "reveals": "The answer 2.4 as a wrong option, with a reason that names the idea.",
+  "help": "The large figure is bigger: multiply.",
+  "source": "to be confirmed by a teacher (no source yet)",
+  "status": "draft"
+ },
+ "MATH.G9.GEOMET.SIMILARITY_AND_ENLARGEME.SIMILAR_MISSING_SIDE.M_WRONG_PAIR_MATCHED": {
+  "skill": "MATH.G9.GEOMET.SIMILARITY_AND_ENLARGEME.SIMILAR_MISSING_SIDE",
+  "error": "Uses a side that matches a different side.",
+  "example": {
+   "question": "Small sides 3, 4, 5; large shortest 6. Large middle?",
+   "wrong_answer": "6 (matching the shortest)",
+   "correct_answer": "8"
+  },
+  "cause": "Does not match corresponding sides.",
+  "reveals": "The answer 6 (matching the shortest) as a wrong option, with a reason that names the idea.",
+  "help": "Shortest with shortest, middle with middle.",
+  "source": "to be confirmed by a teacher (no source yet)",
+  "status": "draft"
+ },
+ "MATH.G9.GEOMET.SIMILARITY_AND_ENLARGEME.SIMILAR_MISSING_SIDE.M_SHADOW_AS_HEIGHT": {
+  "skill": "MATH.G9.GEOMET.SIMILARITY_AND_ENLARGEME.SIMILAR_MISSING_SIDE",
+  "error": "Gives the shadow length as the height.",
+  "example": {
+   "question": "A 2 m pole casts 3 m; a tree casts 12 m. Tree height?",
+   "wrong_answer": "12",
+   "correct_answer": "8"
+  },
+  "cause": "Reads the number given for the tree.",
+  "reveals": "The answer 12 as a wrong option, with a reason that names the idea.",
+  "help": "Height and shadow are in the same ratio: 2/3 of 12.",
+  "source": "to be confirmed by a teacher (no source yet)",
+  "status": "draft"
+ },
+ "MATH.G9.GEOMET.SIMILARITY_AND_ENLARGEME.SIMILAR_MISSING_SIDE.M_SHADOW_RATIO_INVERTED": {
+  "skill": "MATH.G9.GEOMET.SIMILARITY_AND_ENLARGEME.SIMILAR_MISSING_SIDE",
+  "error": "Uses the ratio the wrong way up, making the taller thing shorter.",
+  "example": {
+   "question": "2 m pole, 3 m shadow; tree shadow 12 m. Tree?",
+   "wrong_answer": "0.5",
+   "correct_answer": "8"
+  },
+  "cause": "Divides the wrong way.",
+  "reveals": "The answer 0.5 as a wrong option, with a reason that names the idea.",
+  "help": "The longer shadow belongs to the taller thing.",
+  "source": "to be confirmed by a teacher (no source yet)",
+  "status": "draft"
+ },
+ "MATH.G9.GEOMET.SIMILARITY_AND_ENLARGEME.LINEAR_SCALE_FACTOR.M_FACTOR_ADDED": {
+  "skill": "MATH.G9.GEOMET.SIMILARITY_AND_ENLARGEME.LINEAR_SCALE_FACTOR",
+  "error": "Adds the factor or the difference instead of multiplying.",
+  "example": {
+   "question": "Factor 3, small side 4. Large side?",
+   "wrong_answer": "7",
+   "correct_answer": "12"
+  },
+  "cause": "Combines by adding.",
+  "reveals": "The answer 7 as a wrong option, with a reason that names the idea.",
+  "help": "A scale factor multiplies.",
+  "source": "to be confirmed by a teacher (no source yet)",
+  "status": "draft"
+ },
+ "MATH.G9.GEOMET.SIMILARITY_AND_ENLARGEME.LINEAR_SCALE_FACTOR.M_FACTOR_UPSIDE_DOWN": {
+  "skill": "MATH.G9.GEOMET.SIMILARITY_AND_ENLARGEME.LINEAR_SCALE_FACTOR",
+  "error": "Finds the factor as small over large for an enlargement.",
+  "example": {
+   "question": "Small 4, large 10. Factor?",
+   "wrong_answer": "0.4",
+   "correct_answer": "2.5"
+  },
+  "cause": "Divides in the order the numbers appear.",
+  "reveals": "The answer 0.4 as a wrong option, with a reason that names the idea.",
+  "help": "Large over small for an enlargement.",
+  "source": "to be confirmed by a teacher (no source yet)",
+  "status": "draft"
+ },
+ "MATH.G9.GEOMET.SIMILARITY_AND_ENLARGEME.LINEAR_SCALE_FACTOR.M_FACTOR_DIVIDED_TO_ENLARGE": {
+  "skill": "MATH.G9.GEOMET.SIMILARITY_AND_ENLARGEME.LINEAR_SCALE_FACTOR",
+  "error": "Divides by the factor to go to the larger figure.",
+  "example": {
+   "question": "Factor 2.5, small side 6. Large side?",
+   "wrong_answer": "2.4",
+   "correct_answer": "15"
+  },
+  "cause": "Mixes up the directions.",
+  "reveals": "The answer 2.4 as a wrong option, with a reason that names the idea.",
+  "help": "Small to large: multiply.",
+  "source": "to be confirmed by a teacher (no source yet)",
+  "status": "draft"
+ },
+ "MATH.G9.GEOMET.SIMILARITY_AND_ENLARGEME.LINEAR_SCALE_FACTOR.M_FACTOR_FROM_DIFFERENCE": {
+  "skill": "MATH.G9.GEOMET.SIMILARITY_AND_ENLARGEME.LINEAR_SCALE_FACTOR",
+  "error": "Gives the difference of two sides as the scale factor.",
+  "example": {
+   "question": "Small 4, large 10. Factor?",
+   "wrong_answer": "6",
+   "correct_answer": "2.5"
+  },
+  "cause": "Subtracts instead of dividing.",
+  "reveals": "The answer 6 as a wrong option, with a reason that names the idea.",
+  "help": "A factor is a division: 10 / 4.",
+  "source": "to be confirmed by a teacher (no source yet)",
+  "status": "draft"
+ },
+ "MATH.G9.GEOMET.SIMILARITY_AND_ENLARGEME.ENLARGEMENT_PROPERTIES.M_ENLARGE_ADDS_FACTOR": {
+  "skill": "MATH.G9.GEOMET.SIMILARITY_AND_ENLARGEME.ENLARGEMENT_PROPERTIES",
+  "error": "Adds the scale factor to the coordinates.",
+  "example": {
+   "question": "Enlarge (2, 3) from the origin by 3.",
+   "wrong_answer": "(5, 6)",
+   "correct_answer": "(6, 9)"
+  },
+  "cause": "Thinks of a move.",
+  "reveals": "The answer (5, 6) as a wrong option, with a reason that names the idea.",
+  "help": "An enlargement multiplies the distance from the centre.",
+  "source": "to be confirmed by a teacher (no source yet)",
+  "status": "draft"
+ },
+ "MATH.G9.GEOMET.SIMILARITY_AND_ENLARGEME.ENLARGEMENT_PROPERTIES.M_TRANSLATE_WRONG_WAY": {
+  "skill": "MATH.G9.GEOMET.SIMILARITY_AND_ENLARGEME.ENLARGEMENT_PROPERTIES",
+  "error": "Moves the wrong way in the translation.",
+  "example": {
+   "question": "Move (6, 9) 2 left.",
+   "wrong_answer": "(8, 9)",
+   "correct_answer": "(4, 9)"
+  },
+  "cause": "Mixes left with right.",
+  "reveals": "The answer (8, 9) as a wrong option, with a reason that names the idea.",
+  "help": "Left takes away from x.",
+  "source": "to be confirmed by a teacher (no source yet)",
+  "status": "draft"
+ },
+ "MATH.G9.GEOMET.SIMILARITY_AND_ENLARGEME.ENLARGEMENT_PROPERTIES.M_TRANSLATE_OBJECT_NOT_IMAGE": {
+  "skill": "MATH.G9.GEOMET.SIMILARITY_AND_ENLARGEME.ENLARGEMENT_PROPERTIES",
+  "error": "Translates the object instead of the enlarged image.",
+  "example": {
+   "question": "Enlarge (2, 3) by 3, then move 2 left.",
+   "wrong_answer": "(0, 3)",
+   "correct_answer": "(4, 9)"
+  },
+  "cause": "Loses the order of the steps.",
+  "reveals": "The answer (0, 3) as a wrong option, with a reason that names the idea.",
+  "help": "Move the image A', not A.",
+  "source": "to be confirmed by a teacher (no source yet)",
+  "status": "draft"
+ },
+ "MATH.G9.GEOMET.SIMILARITY_AND_ENLARGEME.ENLARGEMENT_PROPERTIES.M_CENTRE_AS_ORIGIN": {
+  "skill": "MATH.G9.GEOMET.SIMILARITY_AND_ENLARGEME.ENLARGEMENT_PROPERTIES",
+  "error": "Assumes the centre is the origin and divides the image by the factor.",
+  "example": {
+   "question": "Factor 2 maps (3, 1) to (5, 3). Centre x?",
+   "wrong_answer": "2.5",
+   "correct_answer": "1"
+  },
+  "cause": "Uses the rule for enlargements from the origin.",
+  "reveals": "The answer 2.5 as a wrong option, with a reason that names the idea.",
+  "help": "Join A to A' and extend: the centre is where the lines meet.",
+  "source": "to be confirmed by a teacher (no source yet)",
+  "status": "draft"
+ },
+ "MATH.G9.GEOMET.SIMILARITY_AND_ENLARGEME.ENLARGEMENT_PROPERTIES.M_CENTRE_AS_SHIFT": {
+  "skill": "MATH.G9.GEOMET.SIMILARITY_AND_ENLARGEME.ENLARGEMENT_PROPERTIES",
+  "error": "Gives the shift from object to image as the centre.",
+  "example": {
+   "question": "(3, 1) maps to (5, 3) with factor 2. Centre x?",
+   "wrong_answer": "2",
+   "correct_answer": "1"
+  },
+  "cause": "Subtracts the coordinates.",
+  "reveals": "The answer 2 as a wrong option, with a reason that names the idea.",
+  "help": "The shift is not a position.",
+  "source": "to be confirmed by a teacher (no source yet)",
+  "status": "draft"
+ },
+ "MATH.G9.GEOMET.SIMILARITY_AND_ENLARGEME.ENLARGEMENT_PROPERTIES.M_CENTRE_MIDPOINT": {
+  "skill": "MATH.G9.GEOMET.SIMILARITY_AND_ENLARGEME.ENLARGEMENT_PROPERTIES",
+  "error": "Puts the centre half way between object and image.",
+  "example": {
+   "question": "(3, 1) maps to (5, 3) with factor 2. Centre x?",
+   "wrong_answer": "4",
+   "correct_answer": "1"
+  },
+  "cause": "Thinks of a mirror.",
+  "reveals": "The answer 4 as a wrong option, with a reason that names the idea.",
+  "help": "The centre is on the line, beyond the object, not between.",
+  "source": "to be confirmed by a teacher (no source yet)",
+  "status": "draft"
+ },
+ "MATH.G9.GEOMET.SIMILARITY_AND_ENLARGEME.DRAW_SIMILAR.M_ONE_SIDE_SCALED": {
+  "skill": "MATH.G9.GEOMET.SIMILARITY_AND_ENLARGEME.DRAW_SIMILAR",
+  "error": "Scales some sides but not all.",
+  "example": {
+   "question": "Draw a triangle similar to 3, 4, 5 cm with factor 2.",
+   "wrong_answer": "6, 8, 5",
+   "correct_answer": "6, 8, 10"
+  },
+  "cause": "Forgets a side.",
+  "reveals": "The answer 6, 8, 5 as a wrong option, with a reason that names the idea.",
+  "help": "Every side times the same factor.",
+  "source": "to be confirmed by a teacher (no source yet)",
+  "status": "draft"
+ },
+ "MATH.G9.GEOMET.SIMILARITY_AND_ENLARGEME.DRAW_SIMILAR.M_ANGLES_SCALED": {
+  "skill": "MATH.G9.GEOMET.SIMILARITY_AND_ENLARGEME.DRAW_SIMILAR",
+  "error": "Multiplies the angles by the scale factor too.",
+  "example": {
+   "question": "Similar triangle with factor 2 of one with a 40 degree angle. That angle?",
+   "wrong_answer": "80",
+   "correct_answer": "40"
+  },
+  "cause": "Thinks everything is multiplied.",
+  "reveals": "The answer 80 as a wrong option, with a reason that names the idea.",
+  "help": "Angles stay the same; lengths change.",
+  "source": "to be confirmed by a teacher (no source yet)",
+  "status": "draft"
+ },
+ "MATH.G9.GEOMET.SIMILARITY_AND_ENLARGEME.DRAW_SIMILAR.M_SIDES_ADDED_DRAW": {
+  "skill": "MATH.G9.GEOMET.SIMILARITY_AND_ENLARGEME.DRAW_SIMILAR",
+  "error": "Adds the same length to each side.",
+  "example": {
+   "question": "Make a 3 by 2 rectangle bigger and similar.",
+   "wrong_answer": "5 by 4",
+   "correct_answer": "6 by 4"
+  },
+  "cause": "Grows by adding.",
+  "reveals": "The answer 5 by 4 as a wrong option, with a reason that names the idea.",
+  "help": "Multiply each side by one factor.",
+  "source": "to be confirmed by a teacher (no source yet)",
+  "status": "draft"
+ },
+ "MATH.G9.GEOMET.SIMILARITY_AND_ENLARGEME.DRAW_SIMILAR.M_RATIO_NOT_CHECKED": {
+  "skill": "MATH.G9.GEOMET.SIMILARITY_AND_ENLARGEME.DRAW_SIMILAR",
+  "error": "Draws by eye without checking the ratio.",
+  "example": {
+   "question": "Is your drawing similar?",
+   "wrong_answer": "it looks right",
+   "correct_answer": "two pairs of sides give the same ratio"
+  },
+  "cause": "Trusts the look.",
+  "reveals": "The answer it looks right as a wrong option, with a reason that names the idea.",
+  "help": "Check two pairs of sides.",
+  "source": "to be confirmed by a teacher (no source yet)",
+  "status": "draft"
+ },
+ "MATH.G9.GEOMET.SIMILARITY_AND_ENLARGEME.ENLARGEMENT_DRAW.M_DISTANCE_FROM_VERTEX": {
+  "skill": "MATH.G9.GEOMET.SIMILARITY_AND_ENLARGEME.ENLARGEMENT_DRAW",
+  "error": "Measures from the object's vertex instead of from the centre.",
+  "example": {
+   "question": "Factor 2: where is the image of A?",
+   "wrong_answer": "2 times AB from A",
+   "correct_answer": "twice as far from the centre as A"
+  },
+  "cause": "Uses the wrong starting point.",
+  "reveals": "The answer 2 times AB from A as a wrong option, with a reason that names the idea.",
+  "help": "Every distance is measured from the centre.",
+  "source": "to be confirmed by a teacher (no source yet)",
+  "status": "draft"
+ },
+ "MATH.G9.GEOMET.SIMILARITY_AND_ENLARGEME.ENLARGEMENT_DRAW.M_IMAGE_SAME_SIZE": {
+  "skill": "MATH.G9.GEOMET.SIMILARITY_AND_ENLARGEME.ENLARGEMENT_DRAW",
+  "error": "Moves the shape without changing its size.",
+  "example": {
+   "question": "Enlarge by 3.",
+   "wrong_answer": "a copy moved away",
+   "correct_answer": "a copy three times as big"
+  },
+  "cause": "Thinks of a translation.",
+  "reveals": "The answer a copy moved away as a wrong option, with a reason that names the idea.",
+  "help": "Each length of the image is 3 times the object.",
+  "source": "to be confirmed by a teacher (no source yet)",
+  "status": "draft"
+ },
+ "MATH.G9.GEOMET.SIMILARITY_AND_ENLARGEME.ENLARGEMENT_DRAW.M_EXTRA_FACTOR_ADDED": {
+  "skill": "MATH.G9.GEOMET.SIMILARITY_AND_ENLARGEME.ENLARGEMENT_DRAW",
+  "error": "Adds the distance again instead of multiplying (factor 2 drawn as 3 times).",
+  "example": {
+   "question": "A is 3 cm from the centre; factor 2. A' is?",
+   "wrong_answer": "9 cm",
+   "correct_answer": "6 cm"
+  },
+  "cause": "Adds a length beyond the object.",
+  "reveals": "The answer 9 cm as a wrong option, with a reason that names the idea.",
+  "help": "A' is 2 x 3 = 6 cm from the centre.",
+  "source": "to be confirmed by a teacher (no source yet)",
+  "status": "draft"
+ },
+ "MATH.G9.GEOMET.SIMILARITY_AND_ENLARGEME.ENLARGEMENT_DRAW.M_LINES_NOT_THROUGH_CENTRE": {
+  "skill": "MATH.G9.GEOMET.SIMILARITY_AND_ENLARGEME.ENLARGEMENT_DRAW",
+  "error": "Draws the image lines not through the centre.",
+  "example": {
+   "question": "Where do the guide lines go?",
+   "wrong_answer": "anywhere",
+   "correct_answer": "from the centre through each vertex"
+  },
+  "cause": "Skips the construction.",
+  "reveals": "The answer anywhere as a wrong option, with a reason that names the idea.",
+  "help": "Each image point lies on the line from the centre through the object point.",
+  "source": "to be confirmed by a teacher (no source yet)",
+  "status": "draft"
+ },
+ "MATH.G9.GEOMET.SIMILARITY_AND_ENLARGEME.AREA_VOLUME_SCALE_FACTOR.M_AREA_LINEAR_FACTOR": {
+  "skill": "MATH.G9.GEOMET.SIMILARITY_AND_ENLARGEME.AREA_VOLUME_SCALE_FACTOR",
+  "error": "Uses the linear factor for an area.",
+  "example": {
+   "question": "Area 20, linear factor 3. New area?",
+   "wrong_answer": "60",
+   "correct_answer": "180"
+  },
+  "cause": "Thinks area grows like length.",
+  "reveals": "The answer 60 as a wrong option, with a reason that names the idea.",
+  "help": "Area uses two lengths: 3 x 3 = 9.",
+  "source": "to be confirmed by a teacher (no source yet)",
+  "status": "draft"
+ },
+ "MATH.G9.GEOMET.SIMILARITY_AND_ENLARGEME.AREA_VOLUME_SCALE_FACTOR.M_AREA_CUBED_FACTOR": {
+  "skill": "MATH.G9.GEOMET.SIMILARITY_AND_ENLARGEME.AREA_VOLUME_SCALE_FACTOR",
+  "error": "Uses the cube of the factor for an area.",
+  "example": {
+   "question": "Area 20, factor 3. New area?",
+   "wrong_answer": "540",
+   "correct_answer": "180"
+  },
+  "cause": "Uses the volume rule.",
+  "reveals": "The answer 540 as a wrong option, with a reason that names the idea.",
+  "help": "Flat surfaces: square the factor.",
+  "source": "to be confirmed by a teacher (no source yet)",
+  "status": "draft"
+ },
+ "MATH.G9.GEOMET.SIMILARITY_AND_ENLARGEME.AREA_VOLUME_SCALE_FACTOR.M_AREA_FACTOR_DIVIDED": {
+  "skill": "MATH.G9.GEOMET.SIMILARITY_AND_ENLARGEME.AREA_VOLUME_SCALE_FACTOR",
+  "error": "Divides by the area factor for an enlargement.",
+  "example": {
+   "question": "Area 20, factor 3. New area?",
+   "wrong_answer": "2.2",
+   "correct_answer": "180"
+  },
+  "cause": "Picks the wrong operation.",
+  "reveals": "The answer 2.2 as a wrong option, with a reason that names the idea.",
+  "help": "Bigger shape: multiply.",
+  "source": "to be confirmed by a teacher (no source yet)",
+  "status": "draft"
+ },
+ "MATH.G9.GEOMET.SIMILARITY_AND_ENLARGEME.AREA_VOLUME_SCALE_FACTOR.M_VOLUME_LINEAR_FACTOR": {
+  "skill": "MATH.G9.GEOMET.SIMILARITY_AND_ENLARGEME.AREA_VOLUME_SCALE_FACTOR",
+  "error": "Uses the linear factor for a volume.",
+  "example": {
+   "question": "Tank 500 litres, factor 2. New tank?",
+   "wrong_answer": "1,000",
+   "correct_answer": "4,000"
+  },
+  "cause": "Thinks volume grows like length.",
+  "reveals": "The answer 1,000 as a wrong option, with a reason that names the idea.",
+  "help": "Volume uses three lengths: 2 x 2 x 2.",
+  "source": "to be confirmed by a teacher (no source yet)",
+  "status": "draft"
+ },
+ "MATH.G9.GEOMET.SIMILARITY_AND_ENLARGEME.AREA_VOLUME_SCALE_FACTOR.M_VOLUME_SQUARED_FACTOR": {
+  "skill": "MATH.G9.GEOMET.SIMILARITY_AND_ENLARGEME.AREA_VOLUME_SCALE_FACTOR",
+  "error": "Uses the square of the factor for a volume.",
+  "example": {
+   "question": "Tank 500 litres, factor 2. New tank?",
+   "wrong_answer": "2,000",
+   "correct_answer": "4,000"
+  },
+  "cause": "Uses the area rule.",
+  "reveals": "The answer 2,000 as a wrong option, with a reason that names the idea.",
+  "help": "Volume: cube the factor.",
+  "source": "to be confirmed by a teacher (no source yet)",
+  "status": "draft"
+ },
+ "MATH.G9.GEOMET.SIMILARITY_AND_ENLARGEME.AREA_VOLUME_SCALE_FACTOR.M_CUBE_AS_THREE_TIMES": {
+  "skill": "MATH.G9.GEOMET.SIMILARITY_AND_ENLARGEME.AREA_VOLUME_SCALE_FACTOR",
+  "error": "Multiplies by 3 times the factor instead of cubing it.",
+  "example": {
+   "question": "Tank 500 litres, factor 2. New tank?",
+   "wrong_answer": "3,000",
+   "correct_answer": "4,000"
+  },
+  "cause": "Reads cubed as times 3.",
+  "reveals": "The answer 3,000 as a wrong option, with a reason that names the idea.",
+  "help": "2 cubed = 8, not 6.",
+  "source": "to be confirmed by a teacher (no source yet)",
+  "status": "draft"
+ },
+ "MATH.G9.GEOMET.SIMILARITY_AND_ENLARGEME.AREA_VOLUME_SCALE_FACTOR.M_VOLUME_FACTOR_AS_LINEAR": {
+  "skill": "MATH.G9.GEOMET.SIMILARITY_AND_ENLARGEME.AREA_VOLUME_SCALE_FACTOR",
+  "error": "Takes the volume factor as the linear factor.",
+  "example": {
+   "question": "Tins hold 2 and 16 litres. Linear factor?",
+   "wrong_answer": "8",
+   "correct_answer": "2"
+  },
+  "cause": "Stops at the ratio of volumes.",
+  "reveals": "The answer 8 as a wrong option, with a reason that names the idea.",
+  "help": "The linear factor is the cube root of 8.",
+  "source": "to be confirmed by a teacher (no source yet)",
+  "status": "draft"
+ },
+ "MATH.G9.GEOMET.SIMILARITY_AND_ENLARGEME.AREA_VOLUME_SCALE_FACTOR.M_ROOT_AS_THIRD_SF": {
+  "skill": "MATH.G9.GEOMET.SIMILARITY_AND_ENLARGEME.AREA_VOLUME_SCALE_FACTOR",
+  "error": "Divides the volume factor by 3 instead of taking the cube root.",
+  "example": {
+   "question": "Volume factor 8. Linear factor?",
+   "wrong_answer": "2.67",
+   "correct_answer": "2"
+  },
+  "cause": "Links cube root with dividing by 3.",
+  "reveals": "The answer 2.67 as a wrong option, with a reason that names the idea.",
+  "help": "Which number cubed gives 8? 2.",
+  "source": "to be confirmed by a teacher (no source yet)",
+  "status": "draft"
+ },
+ "MATH.G9.GEOMET.SIMILARITY_AND_ENLARGEME.AREA_VOLUME_SCALE_FACTOR.M_SHAPE_SAME_VOLUME_SAME": {
+  "skill": "MATH.G9.GEOMET.SIMILARITY_AND_ENLARGEME.AREA_VOLUME_SCALE_FACTOR",
+  "error": "Thinks a similar box holds the same amount because the shape is the same.",
+  "example": {
+   "question": "A similar box with lengths doubled holds?",
+   "wrong_answer": "the same",
+   "correct_answer": "8 times as much"
+  },
+  "cause": "Confuses shape with size.",
+  "reveals": "The answer the same as a wrong option, with a reason that names the idea.",
+  "help": "Same shape, bigger box: more inside.",
+  "source": "to be confirmed by a teacher (no source yet)",
+  "status": "draft"
  }
 }

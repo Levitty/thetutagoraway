@@ -1011,6 +1011,69 @@
     "offsets"
    ],
    "mastery": "The child reads a field book (distances along a baseline and offsets to the left and right), draws the plot to scale, and finds the area by splitting it into triangles and trapeziums."
+  },
+  "MATH.G9.GEOMET.SIMILARITY_AND_ENLARGEME.SIMILAR_IDENTIFY": {
+   "forms": [
+    "are they similar",
+    "why is this wrong",
+    "which pairs are similar",
+    "equal angles and ratios"
+   ],
+   "mastery": "The child says two figures are similar when their angles are equal and all their sides are in the same ratio (each side multiplied by one scale factor), checks this for rectangles and triangles, and knows that adding the same length to every side does not give a similar figure."
+  },
+  "MATH.G9.GEOMET.SIMILARITY_AND_ENLARGEME.SIMILAR_MISSING_SIDE": {
+   "forms": [
+    "find the missing side",
+    "how tall is the tree",
+    "from the table",
+    "which step is wrong"
+   ],
+   "mastery": "The child matches the corresponding sides (shortest with shortest), finds the scale factor from one pair, and multiplies (small to large) or divides (large to small) the partner of the missing side; uses similar triangles of shadows to find a height."
+  },
+  "MATH.G9.GEOMET.SIMILARITY_AND_ENLARGEME.DRAW_SIMILAR": {
+   "forms": [
+    "draw a similar triangle",
+    "scale factor 2",
+    "on squared paper",
+    "check it is similar"
+   ],
+   "mastery": "The child multiplies every side of a figure by the same scale factor and keeps every angle, drawing the new figure with a ruler and protractor (or on squared paper), and checks it with the ratio of two pairs of sides."
+  },
+  "MATH.G9.GEOMET.SIMILARITY_AND_ENLARGEME.ENLARGEMENT_PROPERTIES": {
+   "forms": [
+    "image of the point",
+    "centre of enlargement",
+    "then translate",
+    "scale factor"
+   ],
+   "mastery": "The child knows an enlargement from a centre multiplies the distance of each point from the centre by the scale factor (from the origin it multiplies the coordinates), finds the centre by joining object and image points and extending the lines, and combines an enlargement with a translation in order."
+  },
+  "MATH.G9.GEOMET.SIMILARITY_AND_ENLARGEME.ENLARGEMENT_DRAW": {
+   "forms": [
+    "draw the image",
+    "centre and scale factor",
+    "mark the image points",
+    "on the grid"
+   ],
+   "mastery": "The child draws lines from the centre through each vertex, measures each distance from the centre, multiplies it by the scale factor along the same line, and joins the image points; the image is similar to the object."
+  },
+  "MATH.G9.GEOMET.SIMILARITY_AND_ENLARGEME.LINEAR_SCALE_FACTOR": {
+   "forms": [
+    "find the scale factor",
+    "which step is wrong",
+    "image over object",
+    "from a pair of sides"
+   ],
+   "mastery": "The child finds the linear scale factor as a length on the image over the matching length on the object (large over small for an enlargement), and uses it the right way: multiply to go from small to large."
+  },
+  "MATH.G9.GEOMET.SIMILARITY_AND_ENLARGEME.AREA_VOLUME_SCALE_FACTOR": {
+   "forms": [
+    "area of the enlarged photo",
+    "how many litres",
+    "area of the label",
+    "why is this wrong"
+   ],
+   "mastery": "The child uses the square of the linear scale factor for areas and its cube for volumes and capacities (a tank twice as wide holds 8 times as much), and works back from a volume factor to the linear factor by the cube root and on to the area factor by squaring."
   }
  }
 }

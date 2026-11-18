@@ -14,4 +14,5 @@ import * as money from './money.mjs';
 import * as approx from './approx.mjs';
 import * as graphs from './graphs.mjs';
 import * as scale from './scale.mjs';
-export const SUBS = [integers, cubes, indices, proportion, matrices, line, inequalities, area, volume, density, speed, money, approx, graphs, scale];
+import * as similar from './similar.mjs';
+export const SUBS = [integers, cubes, indices, proportion, matrices, line, inequalities, area, volume, density, speed, money, approx, graphs, scale, similar];

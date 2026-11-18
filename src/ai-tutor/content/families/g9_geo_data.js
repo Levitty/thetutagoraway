@@ -304,7 +304,7 @@ export const FAMILIES = [
     check: ({ h, gap }, a) => a - gap === h }),
 
   // =========================== SIMILARITY AND ENLARGEMENT ===========================
-  fam({ id: 'g9.similar.table-missing-side', skill: 'G8_SIMILARITY', outcome: 'G9.SIMILAR.a', rung: 2, form: 'table',
+  fam({ id: 'g9.similar.table-missing-side', skill: 'G8_SIMILARITY', outcome: 'MATH.G9.GEOMET.SIMILARITY_AND_ENLARGEME.a', cskill: 'MATH.G9.GEOMET.SIMILARITY_AND_ENLARGEME.SIMILAR_MISSING_SIDE', rung: 2, form: 'table',
     draw: () => {
       const a = pick([4, 6, 8, 10]), b = a + 2 * randInt(1, 3), c = b + 2 * randInt(1, 2), k = pick([1.5, 2, 2.5, 3]);
       if (![a, b, c].every(v => Number.isInteger(v * k))) return null;
@@ -315,13 +315,13 @@ export const FAMILIES = [
       question: 'The table gives the sides of two similar triangles. Find the missing side of the large triangle, in cm.',
       model: { type: 'table', data: { head: ['Side', 'Small triangle', 'Large triangle'], rows: [{ cells: ['Shortest', `${a} cm`, `${a * k} cm`] }, { cells: ['Middle', `${b} cm`, '?'] }, { cells: ['Longest', `${c} cm`, `${c * k} cm`] }] } },
       answer: b * k,
-      wrong: [[b + (a * k - a), 'The large triangle is not found by adding the same length to each side. Sides of similar shapes are multiplied by the same scale factor.'], [round(b / k, 2), 'The large triangle is bigger, so the missing side must be bigger than its partner. Multiply by the scale factor.'], [a * k, 'That is the side that matches the shortest side. Find the one that matches the middle side.']],
+      wrong: [[b + (a * k - a), 'The large triangle is not found by adding the same length to each side. Sides of similar shapes are multiplied by the same scale factor.', 'M_ADD_NOT_MULTIPLY'], [round(b / k, 2), 'The large triangle is bigger, so the missing side must be bigger than its partner. Multiply by the scale factor.', 'M_DIVIDE_FOR_LARGER'], [a * k, 'That is the side that matches the shortest side. Find the one that matches the middle side.', 'M_WRONG_PAIR_MATCHED']],
       hints: ['Find the scale factor from a row where both sides are known.', 'Multiply the middle side of the small triangle by the scale factor.'],
       steps: [`Scale factor = ${a * k} ÷ ${a} = ${k}.`, `Missing side = ${b} × ${k} = ${b * k} cm.`],
     }),
     check: ({ a, b, k }, ans) => ans / b === (a * k) / a }),
 
-  fam({ id: 'g9.similar.rectangles-added-length', skill: 'G8_SIMILARITY', outcome: 'G9.SIMILAR.a', rung: 2, form: 'why',
+  fam({ id: 'g9.similar.rectangles-added-length', skill: 'G8_SIMILARITY', outcome: 'MATH.G9.GEOMET.SIMILARITY_AND_ENLARGEME.a', cskill: 'MATH.G9.GEOMET.SIMILARITY_AND_ENLARGEME.SIMILAR_IDENTIFY', rung: 2, form: 'why',
     draw: () => {
       const a = pick([10, 20, 25]), b = pick([20, 25, 40, 50]), g = pick([5, 10]);
       const r1 = (a + g) / a, r2 = (b + g) / b;
@@ -332,15 +332,15 @@ export const FAMILIES = [
       question: `A photo is ${b} cm by ${a} cm. It is printed again at ${b + g} cm by ${a + g} cm. ${p.name} says the two photos are similar, because each side grew by ${g} cm. Why is ${p.she} wrong?`,
       options: [
         { text: `The length is multiplied by ${r2} and the width by ${r1}`, right: true },
-        { text: 'Similar shapes must have sides that are all equal', right: false, why: 'Similar shapes need equal scale factors, not equal sides. A rectangle can be similar to a larger rectangle.' },
-        { text: 'A larger photo can never be similar to a smaller one', right: false, why: 'An enlargement of a shape is always similar to it.' },
-        { text: 'Adding the same length to each side always gives a similar shape', right: false, why: 'Adding the same length changes the proportions. Similar shapes come from multiplying by the same factor.' },
+        { text: 'Similar shapes must have sides that are all equal', right: false, why: 'Similar shapes need equal scale factors, not equal sides. A rectangle can be similar to a larger rectangle.', mis: 'M_SIMILAR_MEANS_EQUAL' },
+        { text: 'A larger photo can never be similar to a smaller one', right: false, why: 'An enlargement of a shape is always similar to it.', mis: 'M_BIGGER_NEVER_SIMILAR' },
+        { text: 'Adding the same length to each side always gives a similar shape', right: false, why: 'Adding the same length changes the proportions. Similar shapes come from multiplying by the same factor.', mis: 'M_ADDED_LENGTH_SIMILAR' },
       ],
       hints: ['Compare new length ÷ old length with new width ÷ old width.', 'For similar shapes, both sides must be multiplied by the same number.'],
       steps: [`Length: ${b + g} ÷ ${b} = ${r2}. Width: ${a + g} ÷ ${a} = ${r1}.`, 'The scale factors are different, so the photos are not similar.'],
     }) }),
 
-  fam({ id: 'g9.similar.pole-and-tree', skill: 'G8_SIMILARITY', outcome: 'G9.SIMILAR.a', rung: 2, form: 'word',
+  fam({ id: 'g9.similar.pole-and-tree', skill: 'G8_SIMILARITY', outcome: 'MATH.G9.GEOMET.SIMILARITY_AND_ENLARGEME.a', cskill: 'MATH.G9.GEOMET.SIMILARITY_AND_ENLARGEME.SIMILAR_MISSING_SIDE', rung: 2, form: 'word',
     draw: () => {
       const hp = pick([2, 3, 4]), sp = pick([2, 3, 4]), k = pick([3, 4, 5, 6]);
       const ht = hp * k, st = sp * k;
@@ -350,13 +350,13 @@ export const FAMILIES = [
     make: ({ hp, sp, ht, st, thing }) => ({
       question: `At noon, a ${hp} m pole casts a shadow of ${sp} m. At the same time, a ${thing} casts a shadow of ${st} m. The pole and its shadow, and the ${thing} and its shadow, make similar triangles. How tall is the ${thing}, in metres?`,
       answer: ht,
-      wrong: [[hp + (st - sp), 'The shadow is longer by a scale factor, not by adding. Multiply the pole by the same factor.'], [round((hp * sp) / st, 2), 'The tall thing has the longer shadow, so it must be taller than the pole.'], [st, 'That is the length of the shadow. The question asks for the height.']],
+      wrong: [[hp + (st - sp), 'The shadow is longer by a scale factor, not by adding. Multiply the pole by the same factor.', 'M_ADD_NOT_MULTIPLY'], [round((hp * sp) / st, 2), 'The tall thing has the longer shadow, so it must be taller than the pole.', 'M_SHADOW_RATIO_INVERTED'], [st, 'That is the length of the shadow. The question asks for the height.', 'M_SHADOW_AS_HEIGHT']],
       hints: ['Compare the two shadows to find the scale factor.', 'Use the same scale factor on the height of the pole.'],
       steps: [`Scale factor = ${st} ÷ ${sp} = ${st / sp}.`, `Height = ${hp} × ${st / sp} = ${ht} m.`],
     }),
     check: ({ hp, sp, st }, a) => a * sp === hp * st }),
 
-  fam({ id: 'g9.similar.missing-side-spot', skill: 'G8_SIMILARITY', outcome: 'G9.SIMILAR.a', rung: 2, form: 'spot',
+  fam({ id: 'g9.similar.missing-side-spot', skill: 'G8_SIMILARITY', outcome: 'MATH.G9.GEOMET.SIMILARITY_AND_ENLARGEME.e', cskill: 'MATH.G9.GEOMET.SIMILARITY_AND_ENLARGEME.LINEAR_SCALE_FACTOR', rung: 2, form: 'spot',
     draw: () => {
       const a = pick([4, 6, 8, 10]), k = pick([1.5, 2, 2.5, 3]), b = pick([6, 8, 10, 12]);
       if (!Number.isInteger(a * k) || !Number.isInteger(b * k) || a === b) return null;
@@ -376,10 +376,11 @@ export const FAMILIES = [
       }
       const fixes = { add: 'Similar triangles are enlarged by multiplying, not by adding the same length to every side.', flip: 'The scale factor was found the wrong way up. It is the large side ÷ the small side.', div: 'The scale factor is a multiplier for going to the large triangle. Multiply, do not divide.' };
       return { question: `Mutua finds the missing side x of two similar triangles. In the small triangle two sides are ${a} cm and ${b} cm. In the large triangle, the side that matches ${a} cm is ${A} cm, and x matches ${b} cm. Which step has the mistake?`,
-        working: w, fix: fixes[kind], steps: [`Scale factor = ${A} ÷ ${a} = ${k}.`, `x = ${b} × ${k} = ${X} cm.`] };
+        working: w, mis: { add: 'M_FACTOR_ADDED', flip: 'M_FACTOR_UPSIDE_DOWN', div: 'M_FACTOR_DIVIDED_TO_ENLARGE' }[kind],
+        fix: fixes[kind], steps: [`Scale factor = ${A} ÷ ${a} = ${k}.`, `x = ${b} × ${k} = ${X} cm.`] };
     } }),
 
-  fam({ id: 'g9.enlarge.then-translate', skill: 'G9_TRANSFORMATIONS_ADV', outcome: 'G9.SIMILAR.c', rung: 2, form: 'steps', allowNegative: true,
+  fam({ id: 'g9.enlarge.then-translate', skill: 'G9_TRANSFORMATIONS_ADV', outcome: 'MATH.G9.GEOMET.SIMILARITY_AND_ENLARGEME.c', cskill: 'MATH.G9.GEOMET.SIMILARITY_AND_ENLARGEME.ENLARGEMENT_PROPERTIES', rung: 2, form: 'steps', allowNegative: true,
     draw: () => {
       const a = randInt(-4, 5), b = randInt(-4, 5), k = pick([2, 3]);
       if (a === 0 || b === 0 || Math.abs(a) === Math.abs(b)) return null;
@@ -389,16 +390,16 @@ export const FAMILIES = [
     make: ({ a, b, k, px, py }) => ({
       question: `The point A is at ${pt(a, b)}. It is enlarged with the origin as centre of enlargement and scale factor ${k}. This gives A'. Then A' is translated ${Math.abs(px)} units ${px < 0 ? 'left' : 'right'} and ${Math.abs(py)} units ${py < 0 ? 'down' : 'up'} to give A''.`,
       parts: [
-        { prompt: "Find the x-coordinate of A'.", answer: a * k, hint: 'With the origin as centre, each coordinate is multiplied by the scale factor.', wrong: [[a + k, 'An enlargement multiplies the coordinate. It does not add the scale factor.']] },
-        { prompt: "Find the y-coordinate of A'.", answer: b * k, hint: 'Multiply the y-coordinate of A by the scale factor.', wrong: [[b + k, 'An enlargement multiplies the coordinate. It does not add the scale factor.']] },
-        { prompt: "Find the x-coordinate of A''.", answer: a * k + px, hint: 'Left makes x smaller. Right makes x bigger.', wrong: [[a * k - px, `Check the direction: the move is ${px < 0 ? 'left' : 'right'}.`], [a + px, 'Move A\' by the translation, not A.']] },
-        { prompt: "Find the y-coordinate of A''.", answer: b * k + py, hint: 'Down makes y smaller. Up makes y bigger.', wrong: [[b * k - py, `Check the direction: the move is ${py < 0 ? 'down' : 'up'}.`], [b + py, 'Move A\' by the translation, not A.']] },
+        { prompt: "Find the x-coordinate of A'.", answer: a * k, hint: 'With the origin as centre, each coordinate is multiplied by the scale factor.', wrong: [[a + k, 'An enlargement multiplies the coordinate. It does not add the scale factor.', 'M_ENLARGE_ADDS_FACTOR']] },
+        { prompt: "Find the y-coordinate of A'.", answer: b * k, hint: 'Multiply the y-coordinate of A by the scale factor.', wrong: [[b + k, 'An enlargement multiplies the coordinate. It does not add the scale factor.', 'M_ENLARGE_ADDS_FACTOR']] },
+        { prompt: "Find the x-coordinate of A''.", answer: a * k + px, hint: 'Left makes x smaller. Right makes x bigger.', wrong: [[a * k - px, `Check the direction: the move is ${px < 0 ? 'left' : 'right'}.`, 'M_TRANSLATE_WRONG_WAY'], [a + px, 'Move A\' by the translation, not A.', 'M_TRANSLATE_OBJECT_NOT_IMAGE']] },
+        { prompt: "Find the y-coordinate of A''.", answer: b * k + py, hint: 'Down makes y smaller. Up makes y bigger.', wrong: [[b * k - py, `Check the direction: the move is ${py < 0 ? 'down' : 'up'}.`, 'M_TRANSLATE_WRONG_WAY'], [b + py, 'Move A\' by the translation, not A.', 'M_TRANSLATE_OBJECT_NOT_IMAGE']] },
       ],
       steps: [`A' = (${a} × ${k}, ${b} × ${k}) = ${pt(a * k, b * k)}.`, `Translate: x changes by ${sg(px)} and y changes by ${sg(py)}.`, `A'' = ${pt(a * k + px, b * k + py)}.`],
     }),
     check: ({ a, b, k, px, py }, v) => v[0] / k === a && v[1] / k === b && v[2] - v[0] === px && v[3] - v[1] === py }),
 
-  fam({ id: 'g9.enlarge.find-centre', skill: 'G9_TRANSFORMATIONS_ADV', outcome: 'G9.SIMILAR.c', rung: 3, form: 'word', allowNegative: true,
+  fam({ id: 'g9.enlarge.find-centre', skill: 'G9_TRANSFORMATIONS_ADV', outcome: 'MATH.G9.GEOMET.SIMILARITY_AND_ENLARGEME.c', cskill: 'MATH.G9.GEOMET.SIMILARITY_AND_ENLARGEME.ENLARGEMENT_PROPERTIES', rung: 3, form: 'word', allowNegative: true,
     draw: () => {
       const cx = randInt(-3, 3), cy = randInt(-3, 3), k = pick([2, 3]), ax = cx + pick([-1, 1]) * randInt(1, 3), ay = cy + pick([-1, 1]) * randInt(1, 3);
       const bx = cx + k * (ax - cx), by = cy + k * (ay - cy);
@@ -408,13 +409,13 @@ export const FAMILIES = [
     make: ({ cx, k, ax, ay, bx, by }) => ({
       question: `An enlargement with scale factor ${k} maps the object point A ${pt(ax, ay)} onto the image point A' ${pt(bx, by)}. What is the x-coordinate of the centre of enlargement?`,
       answer: cx,
-      wrong: [[round(bx / k, 2), 'That divides the image by the scale factor as if the centre were the origin. The centre is not the origin here.'], [bx - ax, 'That is the shift in x from A to A\'. It is not the position of the centre.'], [(ax + bx) / 2, 'The centre of enlargement is not half way between the object and the image.']],
+      wrong: [[round(bx / k, 2), 'That divides the image by the scale factor as if the centre were the origin. The centre is not the origin here.', 'M_CENTRE_AS_ORIGIN'], [bx - ax, 'That is the shift in x from A to A\'. It is not the position of the centre.', 'M_CENTRE_AS_SHIFT'], [(ax + bx) / 2, 'The centre of enlargement is not half way between the object and the image.', 'M_CENTRE_MIDPOINT']],
       hints: ['The centre, A and A\' lie on one straight line, and A\' is the scale factor times as far from the centre as A.', 'Let the centre have x-coordinate c. Then bx − c = k × (ax − c).'],
       steps: [`Distance from the centre in x: A' is ${k} times as far as A, so ${sg(bx)} − c = ${k}(${sg(ax)} − c).`, `${sg(bx)} − c = ${sg(k * ax)} − ${k}c, so ${k - 1}c = ${sg(k * ax - bx)}, and c = ${cx}.`],
     }),
     check: ({ k, ax, bx }, a) => a + k * (ax - a) === bx }),
 
-  fam({ id: 'g9.scalefactor.area-photo', skill: 'G9_TRANSFORMATIONS_ADV', outcome: 'G9.SIMILAR.e', rung: 2, form: 'word',
+  fam({ id: 'g9.scalefactor.area-photo', skill: 'G9_TRANSFORMATIONS_ADV', outcome: 'MATH.G9.GEOMET.SIMILARITY_AND_ENLARGEME.e', cskill: 'MATH.G9.GEOMET.SIMILARITY_AND_ENLARGEME.AREA_VOLUME_SCALE_FACTOR', rung: 2, form: 'word',
     draw: () => {
       const k = pick([2, 3, 4]), A = k * k * randInt(2, 6);
       return { k, A, what: pick(['school badge', 'photo', 'floor plan', 'poster']) };
@@ -422,13 +423,13 @@ export const FAMILIES = [
     make: ({ k, A, what }) => ({
       question: `A small ${what} has an area of ${A} cm². It is enlarged with a linear scale factor of ${k}. What is the area of the enlarged ${what}, in cm²?`,
       answer: A * k * k,
-      wrong: [[A * k, 'The linear scale factor multiplies lengths. Area is length × length, so the area factor is bigger.'], [A * k * k * k, 'Three factors of the scale factor are for volume. Area has two.'], [A / (k * k), 'An enlargement makes the area bigger, so multiply.']],
+      wrong: [[A * k, 'The linear scale factor multiplies lengths. Area is length × length, so the area factor is bigger.', 'M_AREA_LINEAR_FACTOR'], [A * k * k * k, 'Three factors of the scale factor are for volume. Area has two.', 'M_AREA_CUBED_FACTOR'], [A / (k * k), 'An enlargement makes the area bigger, so multiply.', 'M_AREA_FACTOR_DIVIDED']],
       hints: ['Area is found by multiplying two lengths.', 'The area scale factor is the linear scale factor squared.'],
       steps: [`Area scale factor = ${k} × ${k} = ${k * k}.`, `New area = ${A} × ${k * k} = ${A * k * k} cm².`],
     }),
     check: ({ k, A }, a) => a / A === k * k }),
 
-  fam({ id: 'g9.scalefactor.volume-tank', skill: 'G9_TRANSFORMATIONS_ADV', outcome: 'G9.SIMILAR.e', rung: 2, form: 'word',
+  fam({ id: 'g9.scalefactor.volume-tank', skill: 'G9_TRANSFORMATIONS_ADV', outcome: 'MATH.G9.GEOMET.SIMILARITY_AND_ENLARGEME.e', cskill: 'MATH.G9.GEOMET.SIMILARITY_AND_ENLARGEME.AREA_VOLUME_SCALE_FACTOR', rung: 2, form: 'word',
     draw: () => {
       const k = pick([2, 4, 5]), V = pick([5, 8, 10, 20]);
       return { k, V };
@@ -436,34 +437,34 @@ export const FAMILIES = [
     make: ({ k, V }) => ({
       question: `A farmer's water tank holds ${V} litres. A similar tank is built with a linear scale factor of ${k}. How many litres does the new tank hold?`,
       answer: V * k * k * k,
-      wrong: [[V * k, 'That multiplies by the scale factor once. Volume depends on length, width and height.'], [V * k * k, 'That is the area factor. Volume has one more length to multiply.'], [V * 3 * k, 'Volume is multiplied by the scale factor three times, not by 3 times the scale factor.']],
+      wrong: [[V * k, 'That multiplies by the scale factor once. Volume depends on length, width and height.', 'M_VOLUME_LINEAR_FACTOR'], [V * k * k, 'That is the area factor. Volume has one more length to multiply.', 'M_VOLUME_SQUARED_FACTOR'], [V * 3 * k, 'Volume is multiplied by the scale factor three times, not by 3 times the scale factor.', 'M_CUBE_AS_THREE_TIMES']],
       hints: ['Volume depends on three lengths: length, width and height.', 'The volume scale factor is the linear scale factor cubed.'],
       steps: [`Volume scale factor = ${k} × ${k} × ${k} = ${k * k * k}.`, `New volume = ${V} × ${k * k * k} = ${V * k * k * k} litres.`],
     }),
     check: ({ k, V }, a) => a / V === k ** 3 }),
 
-  fam({ id: 'g9.scalefactor.paint-tins', skill: 'G9_TRANSFORMATIONS_ADV', outcome: 'G9.SIMILAR.e', rung: 3, form: 'steps',
+  fam({ id: 'g9.scalefactor.paint-tins', skill: 'G9_TRANSFORMATIONS_ADV', outcome: 'MATH.G9.GEOMET.SIMILARITY_AND_ENLARGEME.e', cskill: 'MATH.G9.GEOMET.SIMILARITY_AND_ENLARGEME.AREA_VOLUME_SCALE_FACTOR', rung: 3, form: 'steps',
     draw: () => ({ k: pick([2, 3, 4]), V: pick([1, 2, 3, 5]), A: pick([60, 80, 100, 150]) }),
     make: ({ k, V, A }) => ({
       question: `Two paint tins are similar. The small tin holds ${V} litres and the large tin holds ${V * k ** 3} litres. The label on the small tin has an area of ${A} cm².`,
       parts: [
-        { prompt: 'How many times as much paint does the large tin hold?', answer: k ** 3, hint: 'Divide the large volume by the small volume.', wrong: [[k, 'That is the scale factor of lengths. Here you compare volumes.']] },
-        { prompt: 'Find the linear scale factor from the small tin to the large tin.', answer: k, hint: 'The volume factor is the linear scale factor cubed. Which number cubed gives it?', wrong: [[round(k ** 3 / 3, 2), 'Volume does not go up by 3 times the linear factor. Find the cube root of the volume factor.']] },
-        { prompt: 'Find the area scale factor.', answer: k * k, hint: 'Area factor = linear factor squared.', wrong: [[k, 'That is the linear factor. Area uses the square of it.'], [k ** 3, 'That is the volume factor. Area uses the square of the linear factor.']] },
-        { prompt: 'Find the area of the label on the large tin, in cm².', answer: A * k * k, unit: 'cm²', hint: 'Multiply the small label area by the area scale factor.', wrong: [[A * k, 'Area is multiplied by the area scale factor, not the linear factor.'], [A * k ** 3, 'That uses the volume factor. A label is flat: use the area factor.']] },
+        { prompt: 'How many times as much paint does the large tin hold?', answer: k ** 3, hint: 'Divide the large volume by the small volume.', wrong: [[k, 'That is the scale factor of lengths. Here you compare volumes.', 'M_VOLUME_FACTOR_AS_LINEAR']] },
+        { prompt: 'Find the linear scale factor from the small tin to the large tin.', answer: k, hint: 'The volume factor is the linear scale factor cubed. Which number cubed gives it?', wrong: [[round(k ** 3 / 3, 2), 'Volume does not go up by 3 times the linear factor. Find the cube root of the volume factor.', 'M_ROOT_AS_THIRD_SF']] },
+        { prompt: 'Find the area scale factor.', answer: k * k, hint: 'Area factor = linear factor squared.', wrong: [[k, 'That is the linear factor. Area uses the square of it.', 'M_AREA_LINEAR_FACTOR'], [k ** 3, 'That is the volume factor. Area uses the square of the linear factor.', 'M_AREA_CUBED_FACTOR']] },
+        { prompt: 'Find the area of the label on the large tin, in cm².', answer: A * k * k, unit: 'cm²', hint: 'Multiply the small label area by the area scale factor.', wrong: [[A * k, 'Area is multiplied by the area scale factor, not the linear factor.', 'M_AREA_LINEAR_FACTOR'], [A * k ** 3, 'That uses the volume factor. A label is flat: use the area factor.', 'M_AREA_CUBED_FACTOR']] },
       ],
       steps: [`Volume factor = ${V * k ** 3} ÷ ${V} = ${k ** 3}.`, `Linear factor = cube root of ${k ** 3} = ${k}.`, `Area factor = ${k} × ${k} = ${k * k}, so the label is ${A} × ${k * k} = ${A * k * k} cm².`],
     }),
     check: ({ k, A }, v) => v[1] ** 3 === v[0] && v[2] === v[1] * v[1] && v[3] === A * v[2] }),
 
-  fam({ id: 'g9.scalefactor.doubling-box-why', skill: 'G9_TRANSFORMATIONS_ADV', outcome: 'G9.SIMILAR.e', rung: 2, form: 'why',
+  fam({ id: 'g9.scalefactor.doubling-box-why', skill: 'G9_TRANSFORMATIONS_ADV', outcome: 'MATH.G9.GEOMET.SIMILARITY_AND_ENLARGEME.e', cskill: 'MATH.G9.GEOMET.SIMILARITY_AND_ENLARGEME.AREA_VOLUME_SCALE_FACTOR', rung: 2, form: 'why',
     draw: () => ({ k: pick([2, 3, 4]), r: randInt(0, 3), p: person() }),
     make: ({ k, r, p }) => {
       const opts = [
         { text: `Volume depends on three lengths, so it is multiplied by ${k} × ${k} × ${k} = ${k ** 3}`, right: true },
-        { text: `Volume is multiplied by ${k}, because every length is multiplied by ${k}`, right: false, why: 'Volume has three lengths in it, so the factor is used three times.' },
-        { text: `Volume is multiplied by ${k * k}, the factor for area`, right: false, why: 'That is the factor for flat surfaces. Volume has one more length.' },
-        { text: 'Volume stays the same, because the shape of the box stays the same', right: false, why: 'The shape stays similar, but the box is bigger, so it holds more.' },
+        { text: `Volume is multiplied by ${k}, because every length is multiplied by ${k}`, right: false, why: 'Volume has three lengths in it, so the factor is used three times.', mis: 'M_VOLUME_LINEAR_FACTOR' },
+        { text: `Volume is multiplied by ${k * k}, the factor for area`, right: false, why: 'That is the factor for flat surfaces. Volume has one more length.', mis: 'M_VOLUME_SQUARED_FACTOR' },
+        { text: 'Volume stays the same, because the shape of the box stays the same', right: false, why: 'The shape stays similar, but the box is bigger, so it holds more.', mis: 'M_SHAPE_SAME_VOLUME_SAME' },
       ];
       return { question: `${p.name} makes a box with a linear scale factor of ${k} from a smaller box, so all its lengths are ${k} times as big. ${p.She} says it will hold ${k} times as much. Why is ${p.she} wrong?`,
         options: turn(opts, r), fixedOrder: true,
@@ -471,7 +472,7 @@ export const FAMILIES = [
         steps: ['Volume = length × width × height.', `Each length is multiplied by ${k}, so the volume is multiplied by ${k} × ${k} × ${k} = ${k ** 3}.`] };
     } }),
 
-  fam({ id: 'g9.scalefactor.similar-cartons-table', skill: 'G9_TRANSFORMATIONS_ADV', outcome: 'G9.SIMILAR.e', rung: 2, form: 'table',
+  fam({ id: 'g9.scalefactor.similar-cartons-table', skill: 'G9_TRANSFORMATIONS_ADV', outcome: 'MATH.G9.GEOMET.SIMILARITY_AND_ENLARGEME.e', cskill: 'MATH.G9.GEOMET.SIMILARITY_AND_ENLARGEME.AREA_VOLUME_SCALE_FACTOR', misMapped: false, reveals: ['M_AREA_LINEAR_FACTOR', 'M_VOLUME_LINEAR_FACTOR', 'M_VOLUME_SQUARED_FACTOR'], rung: 2, form: 'table',
     draw: () => {
       const [l, w, h] = pick([[10, 15, 20], [5, 8, 10], [10, 10, 25], [4, 6, 10], [8, 10, 20]]), k = pick([2, 3]), ask = pick(['area', 'volume']);
       const SA = 2 * (l * w + l * h + w * h), V = l * w * h;
