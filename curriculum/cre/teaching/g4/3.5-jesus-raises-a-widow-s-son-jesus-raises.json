@@ -1,0 +1,99 @@
+{
+ "sub_strand": "CRE.G4.THE_LI.JESUS_RAISES_A_WIDOW_S_S",
+ "title": "Jesus raises a Widow’s Son Jesus raises",
+ "status": "draft: written 18 Nov 2026 offline for Grade 4 Christian Religious Education; not yet checked by a CRE teacher; not loaded by the live tutor",
+ "sources": [],
+ "notes": "",
+ "skills": [
+  {
+   "skill": "CRES.G4.THE_LI.JESUS_RAISES_A_WIDOW_S_S.WIDOW_SON",
+   "key_step": "The child retells Luke 7:11-16: at Nain Jesus meets the funeral of a widow's only son, his heart goes out to her, he touches the coffin, says \"Young man, get up\", gives him back to his mother, and the people praise God; Jesus has power over death (John 11:25).",
+   "floor": {
+    "prerequisite": "Knows Jesus raised Jairus' daughter.",
+    "question": "Whose daughter did Jesus raise?",
+    "answer": "Jairus'"
+   },
+   "representations": [
+    "a funeral procession drawn at a town gate",
+    "a compare chart: Jairus' daughter and the widow's son",
+    "John 11:25 on a card"
+   ],
+   "steps": [
+    "Where was Jesus going?",
+    "Who had died and who was crying?",
+    "What moved Jesus?",
+    "What did Jesus do and say?"
+   ],
+   "contexts": [
+    "a funeral in the village",
+    "comforting a classmate who has lost a relative",
+    "visiting a widow in the church"
+   ],
+   "board": [
+    {
+     "beat": "write",
+     "do": "Draw a crowd carrying a coffin out of a town gate."
+    },
+    {
+     "beat": "point",
+     "do": "Point at the mother.",
+     "say": "Who had she lost?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for the child to say her only son."
+    },
+    {
+     "beat": "reveal",
+     "do": "Write \"Young man, get up!\" (Luke 7:14)."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "CRES.G4.THE_LI.JESUS_RAISES_A_WIDOW_S_S.WIDOW_SON.M_C4_WID_JAIRUS",
+     "listen_for": [
+      "The daughter of Jairus"
+     ],
+     "ask": "Who did Jesus raise at Nain?",
+     "repair": "Make two columns: Nain and Jairus."
+    },
+    {
+     "code": "CRES.G4.THE_LI.JESUS_RAISES_A_WIDOW_S_S.WIDOW_SON.M_C4_WID_ASKED",
+     "listen_for": [
+      "The crowd begged him to"
+     ],
+     "ask": "Why did Jesus raise the widow's son?",
+     "repair": "Read Luke 7:13."
+    },
+    {
+     "code": "CRES.G4.THE_LI.JESUS_RAISES_A_WIDOW_S_S.WIDOW_SON.M_C4_WID_HUSBAND",
+     "listen_for": [
+      "Her husband"
+     ],
+     "ask": "Who had died in the story of the widow at Nain?",
+     "repair": "Read Luke 7:12: \"the only son of his mother, and she was a widow\"."
+    },
+    {
+     "code": "CRES.G4.THE_LI.JESUS_RAISES_A_WIDOW_S_S.WIDOW_SON.M_C4_WID_PRAYED_LONG",
+     "listen_for": [
+      "A long prayer for the family"
+     ],
+     "ask": "What did Jesus say to the dead young man (Luke 7:14)?",
+     "repair": "Read Luke 7:14 aloud. Jesus touched the coffin and spoke a few words with power."
+    }
+   ],
+   "checks": [
+    {
+     "question": "In which town did Jesus raise the widow's son?",
+     "answer": "Nain",
+     "shows": "place"
+    },
+    {
+     "question": "Why did Jesus raise the young man?",
+     "answer": "He had compassion on the widow",
+     "shows": "compassion"
+    }
+   ]
+  }
+ ]
+}

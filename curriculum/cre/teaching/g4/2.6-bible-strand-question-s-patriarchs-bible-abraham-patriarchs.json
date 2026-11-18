@@ -1,0 +1,99 @@
+{
+ "sub_strand": "CRE.G4.THE_HO.BIBLE_STRAND_QUESTION_S_",
+ "title": "Bible Strand Question(s) Patriarchs Bible Abraham Patriarchs",
+ "status": "draft: written 18 Nov 2026 offline for Grade 4 Christian Religious Education; not yet checked by a CRE teacher; not loaded by the live tutor",
+ "sources": [],
+ "notes": "",
+ "skills": [
+  {
+   "skill": "CRES.G4.THE_HO.BIBLE_STRAND_QUESTION_S_.ABRAHAM",
+   "key_step": "The child recounts Genesis 12:1-5: God tells Abram to leave his country for a land God will show him and promises to make him a great nation; Abram obeys at 75 with Sarai and Lot; in Genesis 17:5 God changes his name to Abraham, father of many nations.",
+   "floor": {
+    "prerequisite": "Knows how God called Moses.",
+    "question": "How did God call Moses?",
+    "answer": "From a burning bush"
+   },
+   "representations": [
+    "a map from Haran to Canaan",
+    "a time line with the call (75) and the new name (99)",
+    "name cards: Abram, Abraham"
+   ],
+   "steps": [
+    "God speaks: leave and go to the land I will show you.",
+    "God promises a great nation and a blessing.",
+    "Abram obeys and takes Sarai and Lot.",
+    "Later God changes his name to Abraham."
+   ],
+   "contexts": [
+    "a family moving to a new town for work",
+    "a child obeying when unsure",
+    "a naming ceremony in the community"
+   ],
+   "board": [
+    {
+     "beat": "write",
+     "do": "Draw a road from Haran to Canaan."
+    },
+    {
+     "beat": "point",
+     "do": "Point at the end of the road.",
+     "say": "Did God tell Abram the name of the place before he left?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for the child to say no, God would show him."
+    },
+    {
+     "beat": "reveal",
+     "do": "Write: Abram means exalted father; Abraham means father of many nations."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "CRES.G4.THE_HO.BIBLE_STRAND_QUESTION_S_.ABRAHAM.M_C4_ABR_KNEW_PLACE",
+     "listen_for": [
+      "He named the exact place"
+     ],
+     "ask": "What did God say about the land Abram would go to?",
+     "repair": "Read Genesis 12:1 and find the words \"that I will show you\"."
+    },
+    {
+     "code": "CRES.G4.THE_HO.BIBLE_STRAND_QUESTION_S_.ABRAHAM.M_C4_ABR_ALONE",
+     "listen_for": [
+      "Nobody, he went alone"
+     ],
+     "ask": "Who went with Abram to the new land?",
+     "repair": "Read Genesis 12:4-5 and list the people named."
+    },
+    {
+     "code": "CRES.G4.THE_HO.BIBLE_STRAND_QUESTION_S_.ABRAHAM.M_C4_ABR_NAME",
+     "listen_for": [
+      "Abraham means a great sea"
+     ],
+     "ask": "What did God change Abram's name to, and what does it mean?",
+     "repair": "Read Genesis 17:5 aloud: \"I have made you a father of many nations\"."
+    },
+    {
+     "code": "CRES.G4.THE_HO.BIBLE_STRAND_QUESTION_S_.ABRAHAM.M_C4_ABR_AGE",
+     "listen_for": [
+      "99 years old"
+     ],
+     "ask": "How old was Abram when he left Haran (Genesis 12:4)?",
+     "repair": "Put two cards on a time line: Genesis 12, age 75, the call; Genesis 17, age 99, the new name."
+    }
+   ],
+   "checks": [
+    {
+     "question": "What does the name Abraham mean?",
+     "answer": "Father of many nations",
+     "shows": "new name"
+    },
+    {
+     "question": "Who went with Abram?",
+     "answer": "Sarai his wife and Lot his nephew",
+     "shows": "story detail"
+    }
+   ]
+  }
+ ]
+}

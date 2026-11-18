@@ -1,0 +1,99 @@
+{
+ "sub_strand": "CRE.G4.THE_LI.BIRTH_OF_JOHN_THE_BAPTIS",
+ "title": "Birth of John the Baptist",
+ "status": "draft: written 18 Nov 2026 offline for Grade 4 Christian Religious Education; not yet checked by a CRE teacher; not loaded by the live tutor",
+ "sources": [],
+ "notes": "",
+ "skills": [
+  {
+   "skill": "CRES.G4.THE_LI.BIRTH_OF_JOHN_THE_BAPTIS.JOHN_BIRTH",
+   "key_step": "The child retells Luke 1:5-13, 57, 76-79: old Zechariah and Elizabeth have no child, Gabriel tells Zechariah in the temple that they will have a son named John, John is born, and he will go before the Lord to prepare his way.",
+   "floor": {
+    "prerequisite": "Knows the angel Gabriel visited Mary.",
+    "question": "Which angel visited Mary?",
+    "answer": "Gabriel"
+   },
+   "representations": [
+    "a family chart: Zechariah and Elizabeth, John; Joseph and Mary, Jesus",
+    "a writing tablet drawn on the board",
+    "Luke 1:76 on a card"
+   ],
+   "steps": [
+    "Who were Zechariah and Elizabeth?",
+    "Where was Zechariah when Gabriel came?",
+    "What was the baby to be called?",
+    "What was John's work?"
+   ],
+   "contexts": [
+    "a long-awaited baby in a family",
+    "an MC who prepares a crowd for a guest",
+    "clearing a path before visitors arrive"
+   ],
+   "board": [
+    {
+     "beat": "write",
+     "do": "Draw two families side by side: John's and Jesus'."
+    },
+    {
+     "beat": "point",
+     "do": "Point at John's family.",
+     "say": "Who were John's parents?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for the child to say Zechariah and Elizabeth."
+    },
+    {
+     "beat": "reveal",
+     "do": "Write Luke 1:76: go before the Lord to prepare his way."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "CRES.G4.THE_LI.BIRTH_OF_JOHN_THE_BAPTIS.JOHN_BIRTH.M_C4_JB_MOTHER",
+     "listen_for": [
+      "Mary and Joseph"
+     ],
+     "ask": "Who were John the Baptist's parents?",
+     "repair": "Draw two family trees for the two babies."
+    },
+    {
+     "code": "CRES.G4.THE_LI.BIRTH_OF_JOHN_THE_BAPTIS.JOHN_BIRTH.M_C4_JB_MESSIAH",
+     "listen_for": [
+      "To be the Messiah"
+     ],
+     "ask": "What was John's work, according to Luke 1:76?",
+     "repair": "Read Luke 1:76: \"you will go on before the Lord to prepare the way for him\"."
+    },
+    {
+     "code": "CRES.G4.THE_LI.BIRTH_OF_JOHN_THE_BAPTIS.JOHN_BIRTH.M_C4_JB_YOUNG_PARENTS",
+     "listen_for": [
+      "They were young and had many children"
+     ],
+     "ask": "What was true about Zechariah and Elizabeth in Luke 1:7?",
+     "repair": "Read Luke 1:7."
+    },
+    {
+     "code": "CRES.G4.THE_LI.BIRTH_OF_JOHN_THE_BAPTIS.JOHN_BIRTH.M_C4_JB_MUTE",
+     "listen_for": [
+      "He shouted it in the temple"
+     ],
+     "ask": "How did Zechariah give the name John (Luke 1:63)?",
+     "repair": "Read Luke 1:20 and 1:63-64: he could not speak, so he wrote \"His name is John\", and then his tongue was set free."
+    }
+   ],
+   "checks": [
+    {
+     "question": "Who were John the Baptist's parents?",
+     "answer": "Zechariah and Elizabeth",
+     "shows": "parents"
+    },
+    {
+     "question": "What was John's work?",
+     "answer": "To prepare the way for the Lord",
+     "shows": "role"
+    }
+   ]
+  }
+ ]
+}

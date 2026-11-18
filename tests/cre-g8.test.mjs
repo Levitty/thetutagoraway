@@ -31,3 +31,8 @@ test('every family is a draft, nothing is signed, and the skill codes begin CRES
   for (const f of entry.families) assert.ok(f.id.startsWith('cre8.') && f.reviewed !== true, f.id);
   for (const k of Object.keys(SKILLS)) assert.ok(k.startsWith('CRES.G8.'), k);
 });
+
+// The Grade 5 Maths standard (18 Nov 2026): two prerequisites and four misconceptions per skill, a teaching pack, the SQL.
+import { creDepthTests } from './helpers/creDepth.mjs';
+await creDepthTests({ grade: 8, outcomes: 101 });
+test('the depth pass totals', () => assert.deepEqual([source.totals.skills, source.totals.prerequisites, source.totals.misconceptions], [24, 53, 96]));

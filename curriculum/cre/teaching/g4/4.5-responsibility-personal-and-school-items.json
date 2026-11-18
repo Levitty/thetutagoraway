@@ -1,0 +1,99 @@
+{
+ "sub_strand": "CRE.G4.CHRIST.RESPONSIBILITY_PERSONAL_",
+ "title": "Responsibility Personal and school items",
+ "status": "draft: written 18 Nov 2026 offline for Grade 4 Christian Religious Education; not yet checked by a CRE teacher; not loaded by the live tutor",
+ "sources": [],
+ "notes": "",
+ "skills": [
+  {
+   "skill": "CRES.G4.CHRIST.RESPONSIBILITY_PERSONAL_.CARE_ITEMS",
+   "key_step": "The child names personal items (uniform, books, pens) and school property (desks, books, taps, toilets) and says how to care for each, because they belong to us all and are gifts to look after.",
+   "floor": {
+    "prerequisite": "Can name items carried to school.",
+    "question": "Name two items you carry to school.",
+    "answer": "a book and a pen (any two)"
+   },
+   "representations": [
+    "two baskets drawn: mine, the school's",
+    "item cards to sort",
+    "a care chart: item and how to care"
+   ],
+   "steps": [
+    "Sort items into mine and the school's.",
+    "Say how to care for each.",
+    "Say who pays when something is lost or broken.",
+    "Care for both."
+   ],
+   "contexts": [
+    "the class library",
+    "school taps and toilets",
+    "a uniform at the end of term"
+   ],
+   "board": [
+    {
+     "beat": "write",
+     "do": "Draw two baskets: mine and the school's."
+    },
+    {
+     "beat": "point",
+     "do": "Point at the card \"desk\".",
+     "say": "Which basket? Who must care for it?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for the child to say the school's, and all of us."
+    },
+    {
+     "beat": "reveal",
+     "do": "Write one way to care for each item."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "CRES.G4.CHRIST.RESPONSIBILITY_PERSONAL_.CARE_ITEMS.M_C4_CI_NOBODY",
+     "listen_for": [
+      "Nobody's, so it does not matter"
+     ],
+     "ask": "Whose are the desks and library books at school?",
+     "repair": "Ask who would use the desk tomorrow."
+    },
+    {
+     "code": "CRES.G4.CHRIST.RESPONSIBILITY_PERSONAL_.CARE_ITEMS.M_C4_CI_REPLACE",
+     "listen_for": [
+      "It does not matter, my parents can buy another"
+     ],
+     "ask": "Your textbook is torn because you were careless. What is the best response?",
+     "repair": "Ask what a parent gives up to buy a book."
+    },
+    {
+     "code": "CRES.G4.CHRIST.RESPONSIBILITY_PERSONAL_.CARE_ITEMS.M_C4_CI_ONLY_PERSONAL",
+     "listen_for": [
+      "Only my own things"
+     ],
+     "ask": "Which items should a child take care of?",
+     "repair": "List both kinds on the board."
+    },
+    {
+     "code": "CRES.G4.CHRIST.RESPONSIBILITY_PERSONAL_.CARE_ITEMS.M_C4_CI_SOMEONE_ELSE",
+     "listen_for": [
+      "Only the cleaner's"
+     ],
+     "ask": "A tap in the school compound is left running. Whose job is it to close it?",
+     "repair": "Walk the compound and list things any child can care for: taps, books, desks, flowers."
+    }
+   ],
+   "checks": [
+    {
+     "question": "Whose are the school desks?",
+     "answer": "The whole school's, so we all care for them",
+     "shows": "ownership"
+    },
+    {
+     "question": "Your textbook is torn because you were careless. What should you do?",
+     "answer": "Take better care and mend it",
+     "shows": "responsibility"
+    }
+   ]
+  }
+ ]
+}

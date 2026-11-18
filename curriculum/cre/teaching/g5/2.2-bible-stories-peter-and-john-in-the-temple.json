@@ -1,0 +1,99 @@
+{
+ "sub_strand": "CRE.G5.THE_BI.BIBLE_STORIES_PETER_AND_",
+ "title": "Bible Stories: Peter and John in the Temple",
+ "status": "draft: written 18 Nov 2026 offline for Grade 5 Christian Religious Education; not yet checked by a CRE teacher; not loaded by the live tutor",
+ "sources": [],
+ "notes": "",
+ "skills": [
+  {
+   "skill": "CRES.G5.THE_BI.BIBLE_STORIES_PETER_AND_.PETER_JOHN",
+   "key_step": "The child narrates Acts 4: after a lame man is healed, Peter and John are arrested, Peter, filled with the Holy Spirit, says the man was healed by the name of Jesus and salvation is in no other name, and they refuse to stop speaking about Jesus.",
+   "floor": {
+    "prerequisite": "Knows how Stephen stood firm.",
+    "question": "What did Stephen pray as he was stoned?",
+    "answer": "Lord, do not hold this sin against them"
+   },
+   "representations": [
+    "a picture of Peter and John before the council",
+    "Acts 4:12 and 4:20 on cards",
+    "a lessons list"
+   ],
+   "steps": [
+    "A lame man is healed (Acts 3).",
+    "Peter and John are arrested.",
+    "Peter speaks boldly: by the name of Jesus.",
+    "They will not stop speaking about Jesus."
+   ],
+   "contexts": [
+    "a child teased for saying grace",
+    "a learner asked to lie to cover a friend",
+    "Christians in hard places"
+   ],
+   "board": [
+    {
+     "beat": "write",
+     "do": "Draw a council and two men standing."
+    },
+    {
+     "beat": "point",
+     "do": "Point at Peter.",
+     "say": "By whose power did he say the man was healed?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for the child to say the name of Jesus."
+    },
+    {
+     "beat": "reveal",
+     "do": "Write Acts 4:20."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "CRES.G5.THE_BI.BIBLE_STORIES_PETER_AND_.PETER_JOHN.M_PJ_DENIED",
+     "listen_for": [
+      "He was afraid and said he did not know Jesus"
+     ],
+     "ask": "How did Peter speak to the rulers in Acts 4?",
+     "repair": "Read Acts 4:8 and 4:13: \"filled with the Holy Spirit\", \"the courage of Peter and John\"."
+    },
+    {
+     "code": "CRES.G5.THE_BI.BIBLE_STORIES_PETER_AND_.PETER_JOHN.M_PJ_STOPPED",
+     "listen_for": [
+      "That there are many ways and names"
+     ],
+     "ask": "What did Peter say about salvation in Acts 4:12?",
+     "repair": "Read Acts 4:12 aloud, then verse 13."
+    },
+    {
+     "code": "CRES.G5.THE_BI.BIBLE_STORIES_PETER_AND_.PETER_JOHN.M_PJ_NO_POWER",
+     "listen_for": [
+      "By the power of Peter and John"
+     ],
+     "ask": "By whose power did Peter say the man had been healed?",
+     "repair": "Read Acts 4:10."
+    },
+    {
+     "code": "CRES.G5.THE_BI.BIBLE_STORIES_PETER_AND_.PETER_JOHN.M_C5_PJ_OBEYED_RULERS",
+     "listen_for": [
+      "They agreed to keep quiet"
+     ],
+     "ask": "What did Peter and John answer when told not to speak about Jesus (Acts 4:19-20)?",
+     "repair": "Read Acts 4:19-20 aloud: they asked whether to obey God or people."
+    }
+   ],
+   "checks": [
+    {
+     "question": "By whose name was the man healed?",
+     "answer": "Jesus Christ",
+     "shows": "power"
+    },
+    {
+     "question": "Did Peter and John agree to stop speaking about Jesus?",
+     "answer": "No",
+     "shows": "standing firm"
+    }
+   ]
+  }
+ ]
+}

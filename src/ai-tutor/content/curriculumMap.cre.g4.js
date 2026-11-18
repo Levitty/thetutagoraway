@@ -2,7 +2,7 @@
 // Outcomes are official (word for word). Skills are proposed, awaiting teacher review.
 // A family carries `cskill` (a key of SKILLS), `outcome` (its official outcome) and `skill` (the same as cskill:
 // these skills are not in the practice engine's Maths graph). MIS_FEEDBACK maps a short misconception code to the line a child reads.
-export const MAP_SOURCE = {"source":"curriculum/cre/g4.json","status":"outcomes from KICD's text, word for word; skills, prerequisites and misconceptions (12 Nov 2026) are proposed or draft, written offline by Claude, awaiting a CRE teacher's review. Rubrics from KICD, untouched."};
+export const MAP_SOURCE = {"source":"curriculum/cre/g4.json","status":"outcomes from KICD's text, word for word; skills and prerequisites proposed, misconceptions draft, teaching pack draft; first pass 12 and 13 Nov 2026, deepened to the Grade 5 Maths standard on 18 Nov 2026 (two prerequisites and four misconceptions per skill); written offline by Claude, awaiting a CRE teacher's review. Rubrics from KICD, untouched."};
 export const SUBSTRANDS = {
  "CRE.G4.CREATI.SELF_AWARENESS": {
   "name": "Self-awareness",
@@ -1002,7 +1002,8 @@ export const SKILLS = {
   "mis": [
    "M_C4_UNIQ_BETTER",
    "M_C4_UNIQ_ACCIDENT",
-   "M_C4_UNIQ_FIRST_ONLY"
+   "M_C4_UNIQ_FIRST_ONLY",
+   "M_C4_UNIQ_LOOKS"
   ]
  },
  "CRES.G4.CREATI.SELF_AWARENESS.FEELINGS": {
@@ -1014,11 +1015,14 @@ export const SKILLS = {
    "CRE.G4.CREATI.SELF_AWARENESS.b_",
    "CRE.G4.CREATI.SELF_AWARENESS.c_"
   ],
-  "pre": [],
+  "pre": [
+   "CRES.G4.CREATI.SELF_AWARENESS.UNIQUE_CREATION"
+  ],
   "mis": [
    "M_C4_FEEL_ANGER_SIN",
    "M_C4_FEEL_KEEP_ANGER",
-   "M_C4_FEEL_JOY_GOOD_TIMES"
+   "M_C4_FEEL_JOY_GOOD_TIMES",
+   "M_C4_FEEL_SUN"
   ]
  },
  "CRES.G4.CREATI.SELF_AWARENESS.CHOICES": {
@@ -1034,7 +1038,8 @@ export const SKILLS = {
   "mis": [
    "M_C4_CHO_NO_RESULT",
    "M_C4_CHO_FRIENDS",
-   "M_C4_CHO_ONLY_BIG"
+   "M_C4_CHO_ONLY_BIG",
+   "M_C4_CHO_LUCK"
   ]
  },
  "CRES.G4.CREATI.MY_FAMILY_FAMILY_MEMBERS.FAMILY": {
@@ -1049,7 +1054,8 @@ export const SKILLS = {
   "mis": [
    "M_C4_FAM_NUC_EXT",
    "M_C4_FAM_HOUSE_ONLY",
-   "M_C4_FAM_HONOUR_IF"
+   "M_C4_FAM_HONOUR_IF",
+   "M_C4_FAM_HONOUR_OBEY_WRONG"
   ]
  },
  "CRES.G4.CREATI.MY_FAMILY_FAMILY_MEMBERS.PROTECTION": {
@@ -1065,7 +1071,8 @@ export const SKILLS = {
   "mis": [
    "M_C4_PRO_SECRET",
    "M_C4_PRO_STRANGER_ONLY",
-   "M_C4_PRO_BLAME_SELF"
+   "M_C4_PRO_BLAME_SELF",
+   "M_C4_PRO_ONCE_ONLY"
   ]
  },
  "CRES.G4.CREATI.ATTRIBUTES_OF_GOD.ATTRIBUTES": {
@@ -1081,7 +1088,8 @@ export const SKILLS = {
   "mis": [
    "M_C4_ATT_SHARED",
    "M_C4_ATT_LOVE_EARNED",
-   "M_C4_ATT_HOLY_BIG"
+   "M_C4_ATT_HOLY_BIG",
+   "M_C4_ATT_ANGRY_JUDGE"
   ]
  },
  "CRES.G4.THE_HO.THE_INSPIRED_WORD_OF_GOD.BIBLE_BOOKS": {
@@ -1095,7 +1103,8 @@ export const SKILLS = {
   "mis": [
    "M_C4_BK_NT_IN_OT",
    "M_C4_BK_OT_IN_NT",
-   "M_C4_BK_FIRST"
+   "M_C4_BK_FIRST",
+   "M_C4_BK_COUNT"
   ]
  },
  "CRES.G4.THE_HO.ZACCHAEUS_THE_TAX_COLLEC.ZACCHAEUS": {
@@ -1111,7 +1120,8 @@ export const SKILLS = {
   "mis": [
    "M_C4_ZAC_NUMBERS",
    "M_C4_ZAC_CROWD_GLAD",
-   "M_C4_ZAC_SORRY_ONLY"
+   "M_C4_ZAC_SORRY_ONLY",
+   "M_C4_ZAC_TREE_WHY"
   ]
  },
  "CRES.G4.THE_HO.BALAAM_S_DONKEY.BALAAM": {
@@ -1126,7 +1136,8 @@ export const SKILLS = {
   "mis": [
    "M_C4_BAL_SAW_FIRST",
    "M_C4_BAL_CURSE_OK",
-   "M_C4_BAL_STUBBORN"
+   "M_C4_BAL_STUBBORN",
+   "M_C4_BAL_DONKEY_SELF"
   ]
  },
  "CRES.G4.THE_HO.SAMSON_KILLS_A_LION.SAMSON": {
@@ -1142,7 +1153,8 @@ export const SKILLS = {
   "mis": [
    "M_C4_SAM_WEAPON",
    "M_C4_SAM_OWN_STRENGTH",
-   "M_C4_SAM_TOLD"
+   "M_C4_SAM_TOLD",
+   "M_C4_SAM_HONEY_TOLD"
   ]
  },
  "CRES.G4.THE_HO.JOSEPH_JOSEPH_INTERPRETS.JOSEPH_DREAM": {
@@ -1157,7 +1169,8 @@ export const SKILLS = {
   "mis": [
    "M_C4_JD_OWN_POWER",
    "M_C4_JD_NUMBERS",
-   "M_C4_JD_REVERSED"
+   "M_C4_JD_REVERSED",
+   "M_C4_JD_GRAIN_COWS"
   ]
  },
  "CRES.G4.THE_HO.JOSEPH_JOSEPH_INTERPRETS.JOSEPH_WISDOM": {
@@ -1176,7 +1189,8 @@ export const SKILLS = {
   "mis": [
    "M_C4_JW_TERROR",
    "M_C4_JW_SCHOOL_ONLY",
-   "M_C4_JW_SELF_GLORY"
+   "M_C4_JW_SELF_GLORY",
+   "M_C4_JW_CLEVER_EQUALS"
   ]
  },
  "CRES.G4.THE_HO.BIBLE_STRAND_QUESTION_S_.ABRAHAM": {
@@ -1195,7 +1209,8 @@ export const SKILLS = {
   "mis": [
    "M_C4_ABR_KNEW_PLACE",
    "M_C4_ABR_ALONE",
-   "M_C4_ABR_NAME"
+   "M_C4_ABR_NAME",
+   "M_C4_ABR_AGE"
   ]
  },
  "CRES.G4.THE_LI.THE_ANNUNCIATION.ANNUNCIATION": {
@@ -1210,7 +1225,8 @@ export const SKILLS = {
   "mis": [
    "M_C4_ANN_ZECHARIAH",
    "M_C4_ANN_PLACE",
-   "M_C4_ANN_NAME"
+   "M_C4_ANN_NAME",
+   "M_C4_ANN_AFRAID_DOUBT"
   ]
  },
  "CRES.G4.THE_LI.BIRTH_OF_JOHN_THE_BAPTIS.JOHN_BIRTH": {
@@ -1227,7 +1243,8 @@ export const SKILLS = {
   "mis": [
    "M_C4_JB_MOTHER",
    "M_C4_JB_MESSIAH",
-   "M_C4_JB_YOUNG_PARENTS"
+   "M_C4_JB_YOUNG_PARENTS",
+   "M_C4_JB_MUTE"
   ]
  },
  "CRES.G4.THE_LI.HEALING_OF_BLIND_BARTIMA.BARTIMAEUS": {
@@ -1246,7 +1263,8 @@ export const SKILLS = {
   "mis": [
    "M_C4_BART_QUIET",
    "M_C4_BART_TOUCH",
-   "M_C4_BART_WENT_HOME"
+   "M_C4_BART_WENT_HOME",
+   "M_C4_BART_TOWN"
   ]
  },
  "CRES.G4.THE_LI.HEALING_BY_THE_END_OF_TH.LEPERS": {
@@ -1262,7 +1280,8 @@ export const SKILLS = {
   "mis": [
    "M_C4_LEP_COUNT",
    "M_C4_LEP_WHO",
-   "M_C4_LEP_THANKS_NEED"
+   "M_C4_LEP_THANKS_NEED",
+   "M_C4_LEP_HEALED_THERE"
   ]
  },
  "CRES.G4.THE_LI.JESUS_RAISES_A_WIDOW_S_S.WIDOW_SON": {
@@ -1281,7 +1300,8 @@ export const SKILLS = {
   "mis": [
    "M_C4_WID_JAIRUS",
    "M_C4_WID_ASKED",
-   "M_C4_WID_HUSBAND"
+   "M_C4_WID_HUSBAND",
+   "M_C4_WID_PRAYED_LONG"
   ]
  },
  "CRES.G4.THE_LI.FORGIVENESS.FORGIVE": {
@@ -1296,7 +1316,8 @@ export const SKILLS = {
   "mis": [
    "M_C4_FOR_REVENGE",
    "M_C4_FOR_WEAK",
-   "M_C4_FOR_FORGET"
+   "M_C4_FOR_FORGET",
+   "M_C4_FOR_CHEEK_LITERAL"
   ]
  },
  "CRES.G4.THE_LI.HELPING_THE_NEEDY.HELPING": {
@@ -1310,7 +1331,8 @@ export const SKILLS = {
   "mis": [
    "M_C4_HELP_RICH",
    "M_C4_HELP_MONEY_ONLY",
-   "M_C4_HELP_PRAISE"
+   "M_C4_HELP_PRAISE",
+   "M_C4_HELP_LATER"
   ]
  },
  "CRES.G4.THE_LI.PARABLE_OF_THE_LOST_COIN.COIN": {
@@ -1326,7 +1348,8 @@ export const SKILLS = {
   "mis": [
    "M_C4_COIN_NINE",
    "M_C4_COIN_GAVE_UP",
-   "M_C4_COIN_MONEY_LESSON"
+   "M_C4_COIN_MONEY_LESSON",
+   "M_C4_COIN_ALONE"
   ]
  },
  "CRES.G4.THE_LI.PARABLE_OF_THE_MUSTARD_S.MUSTARD": {
@@ -1342,7 +1365,8 @@ export const SKILLS = {
   "mis": [
    "M_C4_MUS_BIG_START",
    "M_C4_MUS_BIRDS",
-   "M_C4_MUS_ADULTS_ONLY"
+   "M_C4_MUS_ADULTS_ONLY",
+   "M_C4_MUS_REAL_FARMING"
   ]
  },
  "CRES.G4.THE_LI.NICODEMUS_ENCOUNTER_WITH.NICODEMUS": {
@@ -1352,13 +1376,15 @@ export const SKILLS = {
   "outcomes": [
    "CRE.G4.THE_LI.NICODEMUS_ENCOUNTER_WITH.a",
    "CRE.G4.THE_LI.NICODEMUS_ENCOUNTER_WITH.b",
-   "CRE.G4.THE_LI.NICODEMUS_ENCOUNTER_WITH.d"
+   "CRE.G4.THE_LI.NICODEMUS_ENCOUNTER_WITH.d",
+   "CRE.G4.THE_LI.NICODEMUS_ENCOUNTER_WITH.c"
   ],
   "pre": [],
   "mis": [
    "M_C4_NIC_DAY",
    "M_C4_NIC_LITERAL",
-   "M_C4_NIC_FEW"
+   "M_C4_NIC_FEW",
+   "M_C4_NIC_BAPTISM_MAGIC"
   ]
  },
  "CRES.G4.CHRIST.TRUST.JOSEPH_RESISTS": {
@@ -1368,11 +1394,14 @@ export const SKILLS = {
   "outcomes": [
    "CRE.G4.CHRIST.TRUST.a"
   ],
-  "pre": [],
+  "pre": [
+   "CRES.G4.THE_HO.JOSEPH_JOSEPH_INTERPRETS.JOSEPH_DREAM"
+  ],
   "mis": [
    "M_C4_JR_MASTER",
    "M_C4_JR_STAYED",
-   "M_C4_JR_PRIVATE"
+   "M_C4_JR_PRIVATE",
+   "M_C4_JR_REWARDED_AT_ONCE"
   ]
  },
  "CRES.G4.CHRIST.TRUST.SAFE_PEOPLE": {
@@ -1383,11 +1412,14 @@ export const SKILLS = {
    "CRE.G4.CHRIST.TRUST.b",
    "CRE.G4.CHRIST.TRUST.c"
   ],
-  "pre": [],
+  "pre": [
+   "CRES.G4.CREATI.MY_FAMILY_FAMILY_MEMBERS.PROTECTION"
+  ],
   "mis": [
    "M_C4_SP_KIND_STRANGER",
    "M_C4_SP_ALL_ADULTS",
-   "M_C4_SP_NO_TELL"
+   "M_C4_SP_NO_TELL",
+   "M_C4_SP_PHONE_FRIEND"
   ]
  },
  "CRES.G4.CHRIST.TRUST.TRUST_GOD": {
@@ -1397,11 +1429,14 @@ export const SKILLS = {
   "outcomes": [
    "CRE.G4.CHRIST.TRUST.d"
   ],
-  "pre": [],
+  "pre": [
+   "CRES.G4.THE_HO.SAMSON_KILLS_A_LION.SAMSON"
+  ],
   "mis": [
    "M_C4_TG_NO_TROUBLE",
    "M_C4_TG_LAZY",
-   "M_C4_TG_OWN_STRENGTH"
+   "M_C4_TG_OWN_STRENGTH",
+   "M_C4_TG_ZION_PLACE"
   ]
  },
  "CRES.G4.CHRIST.TRUTHFULNESS_TRUTHFULNES.TRUTH": {
@@ -1418,7 +1453,8 @@ export const SKILLS = {
   "mis": [
    "M_C4_TR_WHITE_LIE",
    "M_C4_TR_LIE_LASTS",
-   "M_C4_TR_HIDE"
+   "M_C4_TR_HIDE",
+   "M_C4_TR_SILENCE"
   ]
  },
  "CRES.G4.CHRIST.OBEDIENCE_OBEDIENCE.OBEDIENCE": {
@@ -1437,7 +1473,8 @@ export const SKILLS = {
   "mis": [
    "M_C4_OB_IF_AGREE",
    "M_C4_OB_NO_RESULT",
-   "M_C4_OB_RULES_HOME"
+   "M_C4_OB_RULES_HOME",
+   "M_C4_OB_PROMISE"
   ]
  },
  "CRES.G4.CHRIST.LOVE_LOVE.LOVE_CHILDREN": {
@@ -1452,7 +1489,8 @@ export const SKILLS = {
   "mis": [
    "M_C4_LC_DISCIPLES",
    "M_C4_LC_BUSY",
-   "M_C4_LC_NO_HANDS"
+   "M_C4_LC_NO_HANDS",
+   "M_C4_LC_GROWN_UPS_FIRST"
   ]
  },
  "CRES.G4.CHRIST.RESPONSIBILITY_PERSONAL_.CARE_ITEMS": {
@@ -1467,7 +1505,8 @@ export const SKILLS = {
   "mis": [
    "M_C4_CI_NOBODY",
    "M_C4_CI_REPLACE",
-   "M_C4_CI_ONLY_PERSONAL"
+   "M_C4_CI_ONLY_PERSONAL",
+   "M_C4_CI_SOMEONE_ELSE"
   ]
  },
  "CRES.G4.CHRIST.HOLINESS.HOLINESS": {
@@ -1483,7 +1522,8 @@ export const SKILLS = {
   "mis": [
    "M_C4_HOL_MY_BODY",
    "M_C4_HOL_BUILDING",
-   "M_C4_HOL_TEST"
+   "M_C4_HOL_TEST",
+   "M_C4_HOL_FOOD_ONLY"
   ]
  },
  "CRES.G4.THE_CH.HOUSE_OF_GOD.HOUSE_OF_GOD": {
@@ -1497,7 +1537,8 @@ export const SKILLS = {
   "mis": [
    "M_C4_HG_DROVE_WORSHIPPERS",
    "M_C4_HG_BUSINESS_OK",
-   "M_C4_HG_SERVICE_ONLY"
+   "M_C4_HG_SERVICE_ONLY",
+   "M_C4_HG_HEALED"
   ]
  },
  "CRES.G4.THE_CH.THE_EARLY_CHURCH.TWELVE_DISCIPLES": {
@@ -1511,7 +1552,8 @@ export const SKILLS = {
   "mis": [
    "M_C4_TD_PAUL",
    "M_C4_TD_BROTHERS",
-   "M_C4_TD_COUNT"
+   "M_C4_TD_COUNT",
+   "M_C4_TD_MATTHEW_FISHER"
   ]
  },
  "CRES.G4.THE_CH.THE_EARLY_CHURCH.CHURCH_BEGINS": {
@@ -1522,11 +1564,14 @@ export const SKILLS = {
    "CRE.G4.THE_CH.THE_EARLY_CHURCH.b",
    "CRE.G4.THE_CH.THE_EARLY_CHURCH.c"
   ],
-  "pre": [],
+  "pre": [
+   "CRES.G4.THE_CH.THE_EARLY_CHURCH.TWELVE_DISCIPLES"
+  ],
   "mis": [
    "M_C4_CB_WHO",
    "M_C4_CB_NUMBER",
-   "M_C4_CB_ONLY_BAPTISM"
+   "M_C4_CB_ONLY_BAPTISM",
+   "M_C4_CB_PLACE"
   ]
  },
  "CRES.G4.THE_CH.STANDING_FIRM_IN_FAITH.STEPHEN": {
@@ -1539,11 +1584,14 @@ export const SKILLS = {
    "CRE.G4.THE_CH.STANDING_FIRM_IN_FAITH.c",
    "CRE.G4.THE_CH.STANDING_FIRM_IN_FAITH.d"
   ],
-  "pre": [],
+  "pre": [
+   "CRES.G4.THE_CH.THE_EARLY_CHURCH.CHURCH_BEGINS"
+  ],
   "mis": [
    "M_C4_ST_REVENGE",
    "M_C4_ST_CITY",
-   "M_C4_ST_GROUP"
+   "M_C4_ST_GROUP",
+   "M_C4_ST_SAUL"
   ]
  },
  "CRES.G4.THE_CH.THE_LORD_S_PRAYER.LORDS_PRAYER": {
@@ -1558,7 +1606,8 @@ export const SKILLS = {
   "mis": [
    "M_C4_LP_BREAD",
    "M_C4_LP_FORGIVE",
-   "M_C4_LP_ONLY_CHURCH"
+   "M_C4_LP_ONLY_CHURCH",
+   "M_C4_LP_KINGDOM"
   ]
  },
  "CRES.G4.THE_CH.FRUIT_OF_THE_HOLY_SPIRIT.FRUIT_SPIRIT": {
@@ -1573,7 +1622,8 @@ export const SKILLS = {
   "mis": [
    "M_C4_FR_FOOD",
    "M_C4_FR_BAD",
-   "M_C4_FR_CHURCH_ONLY"
+   "M_C4_FR_CHURCH_ONLY",
+   "M_C4_FR_COUNT"
   ]
  },
  "CRES.G4.THE_CH.SELF_CONTROL.SELF_CONTROL": {
@@ -1591,7 +1641,8 @@ export const SKILLS = {
   "mis": [
    "M_C4_SC_FEELINGS",
    "M_C4_SC_OWN_POWER",
-   "M_C4_SC_SECRET_OK"
+   "M_C4_SC_SECRET_OK",
+   "M_C4_SC_ONCE"
   ]
  },
  "CRES.G4.MORALI.USE_OF_SOCIAL_MEDIA.SOCIAL_MEDIA": {
@@ -1603,7 +1654,10 @@ export const SKILLS = {
    "CRE.G4.MORALI.USE_OF_SOCIAL_MEDIA.b",
    "CRE.G4.MORALI.USE_OF_SOCIAL_MEDIA.c"
   ],
-  "pre": [],
+  "pre": [
+   "CRES.G4.CHRIST.TRUST.SAFE_PEOPLE",
+   "CRES.G4.CHRIST.TRUTHFULNESS_TRUTHFULNES.TRUTH"
+  ],
   "mis": [
    "M_C4_SM_STRANGER",
    "M_C4_SM_PRIVATE",
@@ -1622,66 +1676,89 @@ export const MIS_FEEDBACK = {
  "M_C4_CHO_NO_RESULT": "Every choice has a result, even a secret one. Taking what is not yours is wrong whether or not anyone sees.",
  "M_C4_CHO_FRIENDS": "A right choice is guided by the word of God, not by what the group does. Choose to obey and attend, even when friends choose differently.",
  "M_C4_CHO_ONLY_BIG": "We make many choices every day: what to say, whom to sit with, whether to obey. Small choices matter too.",
+ "M_C4_UNIQ_LOOKS": "God's image is not about faces or colour. Everyone, of every look, is made like God to love and do good.",
+ "M_C4_FEEL_SUN": "The verse is not about bedtime. It means make peace the same day and do not carry anger into tomorrow.",
+ "M_C4_CHO_LUCK": "It was not luck. Not studying was a choice, and failing was its result.",
  "M_C4_FAM_NUC_EXT": "The nuclear family is parents and their children. The extended family includes grandparents, aunts, uncles and cousins too.",
  "M_C4_FAM_HOUSE_ONLY": "Your family includes relatives who do not live with you, such as a grandmother in the village. They are family even if you see them rarely.",
  "M_C4_FAM_HONOUR_IF": "Ephesians 6:1-3 says to obey and honour your parents because this is right, and that it brings a good life. Honour does not depend on gifts.",
  "M_C4_PRO_SECRET": "A wrong touch is never a secret to keep. Say NO, go away and tell a trusted adult, such as a parent or teacher, or call Childline Kenya on 116.",
  "M_C4_PRO_STRANGER_ONLY": "Anyone can do wrong, even a person we know. The rule is that private parts are private. If anyone breaks it, say NO and tell a trusted adult.",
  "M_C4_PRO_BLAME_SELF": "It is never the child's fault. The person who touched wrongly did wrong. Tell a trusted adult, and keep telling until someone helps.",
+ "M_C4_FAM_HONOUR_OBEY_WRONG": "We honour our parents, but we never do wrong because someone tells us to. Say no and tell a trusted adult.",
+ "M_C4_PRO_ONCE_ONLY": "Always tell a trusted adult, even if it happened once and even if the person said sorry.",
  "M_C4_ATT_SHARED": "Genesis 1 shows God as the sole creator. He alone made the heavens, the earth and everything in them.",
  "M_C4_ATT_LOVE_EARNED": "1 John 4:8 says \"God is love\". He is a loving Father to every child, and his love does not depend on being good all the time.",
  "M_C4_ATT_HOLY_BIG": "Holy means set apart and perfect, without any sin. 1 Samuel 2:2 says there is no one holy like the Lord.",
+ "M_C4_ATT_ANGRY_JUDGE": "God is holy and God is love, both at the same time. He is a Father who knows you by name.",
  "M_C4_BK_NT_IN_OT": "Genesis, Exodus, Psalms and Isaiah are in the Old Testament. Matthew, Mark, Luke, John, Acts and Revelation are in the New Testament.",
  "M_C4_BK_OT_IN_NT": "Psalms and Isaiah are in the Old Testament. The New Testament holds the four Gospels, Acts, the letters and Revelation.",
  "M_C4_BK_FIRST": "Genesis is the first book of the Bible, and Matthew is the first book of the New Testament.",
+ "M_C4_BK_COUNT": "The Old Testament has 39 books and the New Testament has 27 (in the Protestant Bible). The older part is longer.",
  "M_C4_ZAC_NUMBERS": "Zacchaeus promised to give half of his possessions to the poor and to pay back four times anything he had taken wrongly (Luke 19:8).",
  "M_C4_ZAC_CROWD_GLAD": "Luke 19:7 says the people grumbled that Jesus had gone to be the guest of a sinner. But Jesus came to seek and to save the lost.",
  "M_C4_ZAC_SORRY_ONLY": "To repent is to be sorry for wrong and turn away from it. Zacchaeus showed it by giving to the poor and repaying what he had taken.",
+ "M_C4_ZAC_TREE_WHY": "He was not hiding. He was short and wanted to see Jesus, so he climbed the tree.",
  "M_C4_BAL_SAW_FIRST": "The donkey saw the angel with the drawn sword first. Balaam saw him only when the Lord opened his eyes (Numbers 22:31).",
  "M_C4_BAL_CURSE_OK": "God told Balaam not to curse the people, and to do only what he was told (Numbers 22:12, 20). Speak well of others, not ill.",
  "M_C4_BAL_STUBBORN": "The donkey turned aside because she saw the angel. The angel said that if she had not, he would have killed Balaam (Numbers 22:33).",
+ "M_C4_BAL_DONKEY_SELF": "Donkeys did not talk. The Lord opened her mouth so that Balaam would listen.",
  "M_C4_SAM_WEAPON": "Judges 14:6 says Samson tore the lion apart with his bare hands, with no weapon, because the Spirit of the Lord came on him.",
  "M_C4_SAM_OWN_STRENGTH": "The strength came from the Spirit of the Lord, who came powerfully upon Samson. The story shows God's power.",
  "M_C4_SAM_TOLD": "Judges 14:6 says Samson did not tell his father or mother what he had done.",
+ "M_C4_SAM_HONEY_TOLD": "The Bible says Samson did not tell his parents that the honey came from the lion.",
  "M_C4_JD_OWN_POWER": "Joseph told Pharaoh he could not do it himself, but God would give the answer (Genesis 41:16).",
  "M_C4_JD_NUMBERS": "The seven fat cows and seven good ears stood for seven years of plenty. The seven thin cows stood for seven years of famine.",
  "M_C4_JD_REVERSED": "The seven thin cows stood for seven years of famine that would follow the seven years of plenty (Genesis 41:29-30).",
  "M_C4_JW_TERROR": "The fear of the Lord means honouring God and obeying him because we love him. It is the beginning of wisdom (Proverbs 1:7).",
  "M_C4_JW_SCHOOL_ONLY": "Proverbs 1:7 says the fear of the Lord is the beginning of wisdom. Joseph was young and in prison, yet God gave him wisdom.",
  "M_C4_JW_SELF_GLORY": "Joseph gave the credit to God (Genesis 41:16). A wise person depends on God and gives him the praise.",
+ "M_C4_JD_GRAIN_COWS": "Pharaoh had two dreams, one of cows and one of heads of grain. Both meant the same thing.",
+ "M_C4_JW_CLEVER_EQUALS": "Marks are good, but true wisdom starts with honouring God and doing right.",
  "M_C4_ABR_KNEW_PLACE": "God told Abram to go to a land that he would show him (Genesis 12:1). Abram obeyed without knowing the way.",
  "M_C4_ABR_ALONE": "Abram took Sarai his wife and Lot his nephew and the people they had gathered (Genesis 12:5).",
  "M_C4_ABR_NAME": "God changed Abram to Abraham, which means father of many nations (Genesis 17:5).",
+ "M_C4_ABR_AGE": "Abram was 75 when God called him. He was 99 when God changed his name to Abraham.",
  "M_C4_ANN_ZECHARIAH": "Gabriel told Mary at Nazareth that she would bear Jesus. His message to Zechariah in the temple was about the birth of John.",
  "M_C4_ANN_PLACE": "The angel came to Mary at Nazareth in Galilee (Luke 1:26). Jesus was born later, in Bethlehem.",
  "M_C4_ANN_NAME": "The angel told Mary to name her son Jesus (Luke 1:31). The name John was for Elizabeth's son.",
+ "M_C4_ANN_AFRAID_DOUBT": "Mary asked how it would happen, and then she said yes: \"I am the Lord's servant.\"",
  "M_C4_JB_MOTHER": "John's parents were Zechariah the priest and Elizabeth (Luke 1:5). Mary and Joseph were the parents of Jesus.",
  "M_C4_JB_MESSIAH": "John was a prophet who went before the Lord to prepare the way for him (Luke 1:76). He was not the Messiah.",
  "M_C4_JB_YOUNG_PARENTS": "Luke 1:7 says they had no child and were both well along in years, yet God sent them a son.",
+ "M_C4_JB_MUTE": "Zechariah could not speak, so he wrote \"His name is John\". Then he could speak again.",
  "M_C4_BART_QUIET": "Mark 10:48 says Bartimaeus shouted all the more. He kept asking because he believed Jesus could help him.",
  "M_C4_BART_TOUCH": "In Mark 10:52 Jesus said \"Go, your faith has healed you\" and Bartimaeus received his sight at once.",
  "M_C4_BART_WENT_HOME": "Mark 10:52 says he followed Jesus along the road. He now wanted to be with Jesus.",
+ "M_C4_BART_TOWN": "Jesus was leaving Jericho when he healed Bartimaeus by the roadside.",
  "M_C4_LEP_COUNT": "Only one of the ten came back to thank Jesus. Jesus asked where the other nine were (Luke 17:17).",
  "M_C4_LEP_WHO": "The man who returned was a Samaritan (Luke 17:16). Gratitude came from a person who was seen as an outsider.",
  "M_C4_LEP_THANKS_NEED": "The Samaritan thanked God after he was healed. We thank God every day for family, food, health and life, not only when we need help.",
+ "M_C4_LEP_HEALED_THERE": "Jesus did not touch them. He sent them to the priests, and they were healed as they went.",
  "M_C4_WID_JAIRUS": "At Nain, Jesus raised the only son of a widow (Luke 7:12-15). Jairus' daughter is a different story.",
  "M_C4_WID_ASKED": "Luke 7:13 says that when the Lord saw her, his heart went out to her. Nobody asked him; Jesus showed compassion.",
  "M_C4_WID_HUSBAND": "The widow had already lost her husband. Now her only son had died (Luke 7:12). Jesus gave him back to her.",
+ "M_C4_WID_PRAYED_LONG": "Jesus touched the coffin and said, \"Young man, I say to you, get up!\" and he sat up.",
  "M_C4_FOR_REVENGE": "Matthew 5:39 teaches us not to pay back evil with evil. Hitting back makes two wrongs and keeps the quarrel going.",
  "M_C4_FOR_WEAK": "Forgiving takes strength. You can forgive and still tell a trusted adult if someone keeps hurting you.",
  "M_C4_FOR_FORGET": "To forgive is to let go of the wish to pay back and to make peace. It does not mean we pretend nothing happened.",
+ "M_C4_FOR_CHEEK_LITERAL": "Turning the other cheek means do not hit back. You may walk away and tell a teacher.",
  "M_C4_HELP_RICH": "Matthew 5:42 tells us to give to the one who asks. A child who has little can still share a pencil, lunch or time.",
  "M_C4_HELP_MONEY_ONLY": "We help with food, with work, with a visit and with a kind word, as well as with money.",
  "M_C4_HELP_PRAISE": "A Christian helps out of love for God and for others, and not to be praised.",
+ "M_C4_HELP_LATER": "Matthew 5:42 says give to the one who asks. Help when the need is there.",
  "M_C4_COIN_NINE": "The woman had ten silver coins and lost one, so nine were left (Luke 15:8).",
  "M_C4_COIN_GAVE_UP": "The woman lit a lamp, swept the house and searched carefully until she found the coin. God likewise searches for the lost.",
  "M_C4_COIN_MONEY_LESSON": "Jesus said there is rejoicing in heaven over one sinner who repents (Luke 15:10). The coin stands for a person God loves.",
+ "M_C4_COIN_ALONE": "She called her friends to celebrate. Heaven rejoices like that when one person turns back to God.",
  "M_C4_MUS_BIG_START": "Jesus said the kingdom of God is like a mustard seed that grows into a tree (Luke 13:19). It starts small and grows.",
  "M_C4_MUS_BIRDS": "Luke 13:19 says the birds perched in the branches of the tree. The kingdom gives shelter to many.",
  "M_C4_MUS_ADULTS_ONLY": "Every believer can help the kingdom grow by praying, living well and telling others about Jesus.",
+ "M_C4_MUS_REAL_FARMING": "Jesus used a seed to teach about God's kingdom, which starts small and grows big.",
  "M_C4_NIC_DAY": "John 3:2 says Nicodemus came to Jesus at night. He was a Pharisee and a member of the ruling council.",
  "M_C4_NIC_LITERAL": "Jesus was speaking of a new life from God, being born of water and the Spirit (John 3:5). Nicodemus first thought of a second birth from a mother.",
  "M_C4_NIC_FEW": "John 3:16 says God so loved the world that he gave his only Son, so that whoever believes may have eternal life.",
+ "M_C4_NIC_BAPTISM_MAGIC": "Baptism shows that a person has turned to God to live a new life following Jesus.",
  "M_C4_JR_MASTER": "Joseph said he could not do such a wicked thing and sin against God (Genesis 39:9). He feared God more than people.",
  "M_C4_JR_STAYED": "Joseph ran out of the house, leaving his cloak behind (Genesis 39:12). Sometimes the right thing is to run away from a bad situation.",
  "M_C4_JR_PRIVATE": "Joseph knew that God sees. He refused even though no one else was in the house (Genesis 39:11).",
@@ -1691,42 +1768,57 @@ export const MIS_FEEDBACK = {
  "M_C4_TG_NO_TROUBLE": "Psalm 125:1 says those who trust in the Lord are like Mount Zion which cannot be shaken. Trouble may come, but God holds us.",
  "M_C4_TG_LAZY": "Trusting God does not mean doing nothing. We do our part and trust God with the rest.",
  "M_C4_TG_OWN_STRENGTH": "Psalm 125 says the Lord surrounds his people. Their firmness comes from God.",
+ "M_C4_JR_REWARDED_AT_ONCE": "Joseph did right and was put in prison at first. God was with him and later raised him up.",
+ "M_C4_SP_PHONE_FRIEND": "Knowing your name does not make someone safe. Tell a parent or teacher and never go to meet them.",
+ "M_C4_TG_ZION_PLACE": "The verse says people who trust God are like Mount Zion: they cannot be shaken.",
  "M_C4_TR_WHITE_LIE": "Ephesians 4:25 says to put away falsehood and speak truthfully. A small lie is still a lie, and telling the truth keeps trust.",
  "M_C4_TR_LIE_LASTS": "Proverbs 12:19 says truthful lips endure for ever but a lying tongue lasts only a moment.",
  "M_C4_TR_HIDE": "Ephesians 4:25 says to speak truthfully because we belong to one another. Telling the truth lets others help.",
+ "M_C4_TR_SILENCE": "Keeping quiet so someone else is blamed is not truthful. Own up and speak the truth.",
  "M_C4_OB_IF_AGREE": "Exodus 20:12 tells us to honour our father and mother. We obey for our own good and for peace, and not only when we agree.",
  "M_C4_OB_NO_RESULT": "Disobedience can bring danger, lost trust and punishment. Obedience brings peace and safety.",
  "M_C4_OB_RULES_HOME": "Children should obey parents at home and teachers and school rules at school, so that learning is peaceful and safe.",
+ "M_C4_OB_PROMISE": "Exodus 20:12 promises a long life in the land to those who honour their parents.",
  "M_C4_LC_DISCIPLES": "Matthew 19:13 says the disciples rebuked those who brought the children. Jesus corrected them.",
  "M_C4_LC_BUSY": "Jesus said \"Let the little children come to me and do not hinder them, for the kingdom of heaven belongs to such as these\" (Matthew 19:14).",
  "M_C4_LC_NO_HANDS": "Matthew 19:15 says Jesus placed his hands on the children and went on from there. He loves children.",
+ "M_C4_LC_GROWN_UPS_FIRST": "Jesus said the kingdom of heaven belongs to such as these children. God loves and welcomes you now.",
  "M_C4_CI_NOBODY": "School property belongs to the whole school community. We all use it, so we all care for it.",
  "M_C4_CI_REPLACE": "Taking care of what we have shows thanks and responsibility. Things cost our parents money and work.",
  "M_C4_CI_ONLY_PERSONAL": "A responsible child takes care of personal items, such as a pullover and a pen, and of school property, such as desks and books.",
+ "M_C4_CI_SOMEONE_ELSE": "Looking after school things is everyone's job. If you see the tap running, close it.",
  "M_C4_HOL_MY_BODY": "1 Corinthians 6:19-20 says our body is a temple of the Holy Spirit. We honour God with it by how we care for it and how we live.",
  "M_C4_HOL_BUILDING": "In 1 Corinthians 6:19 the temple is our own body, where the Holy Spirit lives.",
  "M_C4_HOL_TEST": "To lead a holy life we keep away from places and company that lead to sin, as Joseph ran from temptation.",
+ "M_C4_HOL_FOOD_ONLY": "We honour God with our whole body: what we say, where we go and what we do, not only what we eat.",
  "M_C4_HG_DROVE_WORSHIPPERS": "Jesus drove out those who were buying and selling in the temple courts and overturned the tables of the money changers (Matthew 21:12).",
  "M_C4_HG_BUSINESS_OK": "Jesus said, \"My house will be called a house of prayer\" (Matthew 21:13). It is not a place for trade.",
  "M_C4_HG_SERVICE_ONLY": "The church is a holy place, God's house, so we respect it at all times, not just during a service.",
+ "M_C4_HG_HEALED": "After Jesus cleared the temple, the blind and the lame came and he healed them.",
  "M_C4_TD_PAUL": "Paul was not one of the twelve in Matthew 10:2-4. The twelve included Peter, Andrew, James, John, Philip and others.",
  "M_C4_TD_BROTHERS": "Andrew was the brother of Simon Peter. James and John were brothers, the sons of Zebedee (Matthew 10:2).",
  "M_C4_TD_COUNT": "Jesus chose twelve disciples (Matthew 10:1-4).",
  "M_C4_CB_WHO": "In Acts 2 it was Peter who preached. Jesus had gone up to heaven and the Holy Spirit had come.",
  "M_C4_CB_NUMBER": "About three thousand people were added that day (Acts 2:41).",
  "M_C4_CB_ONLY_BAPTISM": "Peter said \"Repent and be baptised\". To repent is to turn away from sin.",
+ "M_C4_TD_MATTHEW_FISHER": "Not all were fishermen. Matthew was a tax collector before Jesus called him.",
+ "M_C4_CB_PLACE": "The church began in Jerusalem on the day of Pentecost.",
  "M_C4_ST_REVENGE": "Stephen prayed \"Lord, do not hold this sin against them\" (Acts 7:60). He forgave, as Jesus did.",
  "M_C4_ST_CITY": "Acts 11:26 says that at Antioch the believers were first called Christians.",
  "M_C4_ST_GROUP": "Stephen stood firm even when it cost him dearly. We should not join groups that do not follow Jesus, but refuse politely and stay firm.",
+ "M_C4_ST_SAUL": "A young man named Saul held their coats. Later God changed him and he became Paul.",
  "M_C4_LP_BREAD": "In the Lord's Prayer, \"daily bread\" means what we need each day. We ask God to provide.",
  "M_C4_LP_FORGIVE": "The Lord's Prayer says \"forgive us our debts as we also have forgiven our debtors\" (Matthew 6:12). We forgive others too.",
  "M_C4_LP_ONLY_CHURCH": "Jesus taught us to pray. We can pray every day, at home, at school and at church.",
+ "M_C4_LP_KINGDOM": "\"Your kingdom come\" asks that God's will be done on earth as in heaven.",
  "M_C4_FR_FOOD": "The fruit of the Spirit are qualities such as love, joy, peace, patience, kindness, goodness, faithfulness, gentleness and self-control.",
  "M_C4_FR_BAD": "Kindness is a fruit of the Spirit. Jealousy and anger are not.",
  "M_C4_FR_CHURCH_ONLY": "The fruit of the Spirit show in the whole of life, at home, at school, at play and at church.",
+ "M_C4_FR_COUNT": "Galatians 5:22-23 names nine: love, joy, peace, patience, kindness, goodness, faithfulness, gentleness and self-control.",
  "M_C4_SC_FEELINGS": "Self-control means choosing what is right even when a feeling pushes us another way.",
  "M_C4_SC_OWN_POWER": "Self-control is a fruit of the Spirit. We ask for the Spirit's help and keep in step with him (Galatians 5:25).",
  "M_C4_SC_SECRET_OK": "Things that harm the body and mind are wrong even in secret. Self-control means saying no.",
+ "M_C4_SC_ONCE": "Self-control means saying no even to the first time.",
  "M_C4_SM_STRANGER": "People online may not be who they say. Do not chat with strangers or agree to meet them. Tell a parent or teacher.",
  "M_C4_SM_PRIVATE": "Keep your password and home address private. Sharing them can let others harm you or use your account.",
  "M_C4_SM_NOBODY": "Integrity means doing right even when no one is watching. An unkind message hurts whether or not your name is on it.",

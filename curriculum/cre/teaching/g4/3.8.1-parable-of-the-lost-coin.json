@@ -1,0 +1,99 @@
+{
+ "sub_strand": "CRE.G4.THE_LI.PARABLE_OF_THE_LOST_COIN",
+ "title": "Parable of the lost coin",
+ "status": "draft: written 18 Nov 2026 offline for Grade 4 Christian Religious Education; not yet checked by a CRE teacher; not loaded by the live tutor",
+ "sources": [],
+ "notes": "",
+ "skills": [
+  {
+   "skill": "CRES.G4.THE_LI.PARABLE_OF_THE_LOST_COIN.COIN",
+   "key_step": "The child retells Luke 15:8-10: a woman with ten silver coins loses one, lights a lamp, sweeps and searches until she finds it, calls friends to rejoice; God rejoices over one sinner who repents.",
+   "floor": {
+    "prerequisite": "Can retell a parable.",
+    "question": "In the Good Samaritan, who helped the hurt man?",
+    "answer": "The Samaritan"
+   },
+   "representations": [
+    "ten coins drawn, one apart",
+    "a lamp and a broom",
+    "Luke 15:10 written large"
+   ],
+   "steps": [
+    "She had ten coins and lost one.",
+    "She lit a lamp and swept.",
+    "She searched until she found it.",
+    "She called friends to rejoice; so does heaven."
+   ],
+   "contexts": [
+    "a child who loses school fees money",
+    "searching for a lost goat",
+    "a church welcoming someone back"
+   ],
+   "board": [
+    {
+     "beat": "write",
+     "do": "Draw ten coins with one rolled away."
+    },
+    {
+     "beat": "point",
+     "do": "Point at the lost coin.",
+     "say": "What did the woman do to find it?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for the child to say lit a lamp, swept, searched."
+    },
+    {
+     "beat": "reveal",
+     "do": "Write Luke 15:10: joy over one sinner who repents."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "CRES.G4.THE_LI.PARABLE_OF_THE_LOST_COIN.COIN.M_C4_COIN_NINE",
+     "listen_for": [
+      "Nine"
+     ],
+     "ask": "How many silver coins did the woman have before she lost one?",
+     "repair": "Read Luke 15:8: \"ten silver coins\"."
+    },
+    {
+     "code": "CRES.G4.THE_LI.PARABLE_OF_THE_LOST_COIN.COIN.M_C4_COIN_GAVE_UP",
+     "listen_for": [
+      "She gave up because she had nine more"
+     ],
+     "ask": "What did the woman do about the lost coin?",
+     "repair": "Read Luke 15:8 and note \"until she finds it\"."
+    },
+    {
+     "code": "CRES.G4.THE_LI.PARABLE_OF_THE_LOST_COIN.COIN.M_C4_COIN_MONEY_LESSON",
+     "listen_for": [
+      "Count your money carefully"
+     ],
+     "ask": "What does the parable of the lost coin teach?",
+     "repair": "Read Luke 15:10 for Jesus' own meaning."
+    },
+    {
+     "code": "CRES.G4.THE_LI.PARABLE_OF_THE_LOST_COIN.COIN.M_C4_COIN_ALONE",
+     "listen_for": [
+      "Hid it and told no one"
+     ],
+     "ask": "What did the woman do when she found the coin (Luke 15:9)?",
+     "repair": "Read Luke 15:9-10 and link it: the party on earth is like the joy in heaven over one sinner who repents."
+    }
+   ],
+   "checks": [
+    {
+     "question": "How many coins did the woman have at first?",
+     "answer": "Ten",
+     "shows": "count"
+    },
+    {
+     "question": "Whom does the lost coin stand for?",
+     "answer": "A sinner God looks for",
+     "shows": "meaning"
+    }
+   ]
+  }
+ ]
+}

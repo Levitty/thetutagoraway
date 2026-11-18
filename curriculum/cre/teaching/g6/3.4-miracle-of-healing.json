@@ -1,0 +1,107 @@
+{
+ "sub_strand": "CRE.G6.THE_LI.MIRACLE_OF_HEALING",
+ "title": "Miracle of Healing",
+ "status": "draft: written 18 Nov 2026 offline for Grade 6 Christian Religious Education; not yet checked by a CRE teacher; not loaded by the live tutor",
+ "sources": [],
+ "notes": "",
+ "skills": [
+  {
+   "skill": "CRES.G6.THE_LI.MIRACLE_OF_HEALING.BLEEDING_WOMAN",
+   "key_step": "The child describes Luke 8:43-48: a woman bleeding for twelve years touches the edge of Jesus' cloak and is healed, Jesus asks who touched him, she falls at his feet, he says \"Daughter, your faith has healed you; go in peace\"; and names how the church and government help the sick.",
+   "floor": {
+    "prerequisite": "Knows the Roman officer's faith.",
+    "question": "What did the officer say to Jesus?",
+    "answer": "Just say the word"
+   },
+   "representations": [
+    "a crowd and a hand reaching for a cloak",
+    "Luke 8:48 written large",
+    "two columns: church and government help"
+   ],
+   "steps": [
+    "Twelve years ill; no one could heal her.",
+    "She touches his cloak.",
+    "Jesus asks \"Who touched me?\"",
+    "\"Daughter, your faith has healed you.\""
+   ],
+   "contexts": [
+    "a mission hospital",
+    "a county health centre",
+    "a church visiting the sick"
+   ],
+   "board": [
+    {
+     "beat": "write",
+     "do": "Draw a crowd and a hand touching the edge of a cloak."
+    },
+    {
+     "beat": "point",
+     "do": "Point at the hand.",
+     "say": "What happened when she touched the cloak?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for the child to say she was healed."
+    },
+    {
+     "beat": "reveal",
+     "do": "Write Luke 8:48 and list who helps the sick today."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "CRES.G6.THE_LI.MIRACLE_OF_HEALING.BLEEDING_WOMAN.M_BLE6_DOCTORS",
+     "listen_for": [
+      "The doctors"
+     ],
+     "ask": "Who healed the bleeding woman (Luke 8:43-48)?",
+     "repair": "Read Luke 8:43: no one could heal her. Then 8:44: she touched his cloak and was healed."
+    },
+    {
+     "code": "CRES.G6.THE_LI.MIRACLE_OF_HEALING.BLEEDING_WOMAN.M_BLE6_YEARS",
+     "listen_for": [
+      "Seven years"
+     ],
+     "ask": "For how long had she been bleeding (Luke 8:43)?",
+     "repair": "Link the number with Jairus' daughter, who was twelve years old (Luke 8:42): both twelves are in one passage."
+    },
+    {
+     "code": "CRES.G6.THE_LI.MIRACLE_OF_HEALING.BLEEDING_WOMAN.M_BLE6_WORDS",
+     "listen_for": [
+      "\"You are not worthy\""
+     ],
+     "ask": "What did Jesus tell her (Luke 8:48)?",
+     "repair": "Read 8:48: \"Daughter\". Jesus called her family."
+    },
+    {
+     "code": "CRES.G6.THE_LI.MIRACLE_OF_HEALING.BLEEDING_WOMAN.M_BLE6_HELP",
+     "listen_for": [
+      "Only the church"
+     ],
+     "ask": "Who helps the sick today?",
+     "repair": "List hospitals: government (county hospitals) and church (mission hospitals). Both help the sick."
+    },
+    {
+     "code": "CRES.G6.THE_LI.MIRACLE_OF_HEALING.BLEEDING_WOMAN.M_C6_BLE_HIDDEN",
+     "listen_for": [
+      "Slipped away unseen"
+     ],
+     "ask": "What did the woman do when Jesus asked who touched him (Luke 8:47)?",
+     "repair": "Read 8:47: she could not go unnoticed; she told everything, and Jesus blessed her."
+    }
+   ],
+   "checks": [
+    {
+     "question": "How long had the woman been bleeding?",
+     "answer": "Twelve years",
+     "shows": "detail"
+    },
+    {
+     "question": "Name one way the government helps the sick.",
+     "answer": "Hospitals and clinics",
+     "shows": "help"
+    }
+   ]
+  }
+ ]
+}

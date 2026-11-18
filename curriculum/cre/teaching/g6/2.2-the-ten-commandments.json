@@ -1,0 +1,189 @@
+{
+ "sub_strand": "CRE.G6.THE_BI.THE_TEN_COMMANDMENTS",
+ "title": "The Ten Commandments",
+ "status": "draft: written 18 Nov 2026 offline for Grade 6 Christian Religious Education; not yet checked by a CRE teacher; not loaded by the live tutor",
+ "sources": [],
+ "notes": "",
+ "skills": [
+  {
+   "skill": "CRES.G6.THE_BI.THE_TEN_COMMANDMENTS.TEN_OUTLINE",
+   "key_step": "The child outlines what the Ten Commandments command (Exodus 20:3-17): worship God alone, no idols, honour God's name, keep the Sabbath holy, honour parents, do not murder, commit adultery, steal, give false witness or covet; without numbering them, as churches number them differently.",
+   "floor": {
+    "prerequisite": "Knows Exodus 20:12.",
+    "question": "What does Exodus 20:12 tell children to do?",
+    "answer": "Honour their father and mother"
+   },
+   "representations": [
+    "two tablets drawn: towards God, towards people",
+    "command cards",
+    "situation cards"
+   ],
+   "steps": [
+    "Read Exodus 20:3-17.",
+    "Sort commands into God and people.",
+    "Match situations to commands.",
+    "Say why each matters."
+   ],
+   "contexts": [
+    "taking a classmate's pen",
+    "lying to a teacher",
+    "keeping Sunday for worship and rest"
+   ],
+   "board": [
+    {
+     "beat": "write",
+     "do": "Draw two tablets: God and people."
+    },
+    {
+     "beat": "point",
+     "do": "Point at the card \"Honour your father and your mother\".",
+     "say": "Which tablet does this go on?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for the child to say people."
+    },
+    {
+     "beat": "reveal",
+     "do": "Sort the other cards."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "CRES.G6.THE_BI.THE_TEN_COMMANDMENTS.TEN_OUTLINE.M_TEN6_OTHER_LAW",
+     "listen_for": [
+      "Give a tenth of your harvest"
+     ],
+     "ask": "Which is one of the Ten Commandments?",
+     "repair": "Read Exodus 20:3-17 and tick each command; the tithe is not there."
+    },
+    {
+     "code": "CRES.G6.THE_BI.THE_TEN_COMMANDMENTS.TEN_OUTLINE.M_TEN6_INVENTED",
+     "listen_for": [
+      "You shall not steal"
+     ],
+     "ask": "Which is not in the Ten Commandments?",
+     "repair": "Make a list from the passage and check any statement against it."
+    },
+    {
+     "code": "CRES.G6.THE_BI.THE_TEN_COMMANDMENTS.TEN_OUTLINE.M_TEN6_WRONG_MATCH",
+     "listen_for": [
+      "You shall not give false witness"
+     ],
+     "ask": "Otieno takes a pen that is not his. Which command does that break?",
+     "repair": "Match situation cards to command cards, one at a time, reading the command aloud."
+    },
+    {
+     "code": "CRES.G6.THE_BI.THE_TEN_COMMANDMENTS.TEN_OUTLINE.M_C6_TEN_WHERE",
+     "listen_for": [
+      "To Abraham"
+     ],
+     "ask": "To whom did God give the Ten Commandments?",
+     "repair": "Read Exodus 19:20 and 20:1: God spoke on Mount Sinai and gave the law through Moses."
+    }
+   ],
+   "checks": [
+    {
+     "question": "Which of these is one of the Ten Commandments: give a tenth, or honour your parents?",
+     "answer": "Honour your parents",
+     "shows": "outline"
+    },
+    {
+     "question": "Otieno takes a pen that is not his. Which command does that break?",
+     "answer": "You shall not steal",
+     "shows": "match"
+    }
+   ]
+  },
+  {
+   "skill": "CRES.G6.THE_BI.THE_TEN_COMMANDMENTS.TEN_VALUES",
+   "key_step": "The child names the values and life skills in the Ten Commandments (respect, honesty, faithfulness, contentment, self-control, love for God and neighbour) and lessons for today.",
+   "floor": {
+    "prerequisite": "Knows the commands.",
+    "question": "Which command protects other people's property?",
+    "answer": "You shall not steal"
+   },
+   "representations": [
+    "a command and value chart",
+    "Matthew 22:37-39 written large",
+    "situation cards"
+   ],
+   "steps": [
+    "Read a command.",
+    "Name its value.",
+    "Give a situation today.",
+    "Say what the value looks like there."
+   ],
+   "contexts": [
+    "respecting parents at home",
+    "telling the truth in a test",
+    "being content without a new phone"
+   ],
+   "board": [
+    {
+     "beat": "write",
+     "do": "Draw a two-column chart: command and value."
+    },
+    {
+     "beat": "point",
+     "do": "Point at \"You shall not give false witness\".",
+     "say": "What value does this teach?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for the child to say honesty."
+    },
+    {
+     "beat": "reveal",
+     "do": "Fill in the rest of the chart."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "CRES.G6.THE_BI.THE_TEN_COMMANDMENTS.TEN_VALUES.M_TEN6_VALUE",
+     "listen_for": [
+      "Honesty"
+     ],
+     "ask": "Which value does \"honour your father and your mother\" teach?",
+     "repair": "Write each command with its value: honour parents, respect; do not lie, honesty; do not steal, honesty and contentment."
+    },
+    {
+     "code": "CRES.G6.THE_BI.THE_TEN_COMMANDMENTS.TEN_VALUES.M_TEN6_RELIGIOUS_ONLY",
+     "listen_for": [
+      "God only"
+     ],
+     "ask": "The Ten Commandments guide how we treat...",
+     "repair": "Sort the commands on two tablets: God and people. Most are about how we treat others."
+    },
+    {
+     "code": "CRES.G6.THE_BI.THE_TEN_COMMANDMENTS.TEN_VALUES.M_C6_TEN_COVET",
+     "listen_for": [
+      "None: wanting is never wrong"
+     ],
+     "ask": "Juma wants his classmate's new bag so much that he plans to take it. Which command warns about this?",
+     "repair": "Explain covet: wanting what is someone else's so much that it rules you. Contrast with admiring and being content."
+    },
+    {
+     "code": "CRES.G6.THE_BI.THE_TEN_COMMANDMENTS.TEN_VALUES.M_C6_TEN_OLD_ONLY",
+     "listen_for": [
+      "No, they were only for long ago"
+     ],
+     "ask": "Do the Ten Commandments teach anything for today?",
+     "repair": "Read Matthew 22:37-39: Jesus sums up the law as loving God and neighbour. Match each command to today."
+    }
+   ],
+   "checks": [
+    {
+     "question": "Which value does \"honour your father and mother\" teach?",
+     "answer": "Respect",
+     "shows": "value"
+    },
+    {
+     "question": "Do the Ten Commandments guide how we treat God only?",
+     "answer": "No: God and other people",
+     "shows": "scope"
+    }
+   ]
+  }
+ ]
+}

@@ -1,0 +1,99 @@
+{
+ "sub_strand": "CRE.G4.CHRIST.TRUTHFULNESS_TRUTHFULNES",
+ "title": "Truthfulness Truthfulness",
+ "status": "draft: written 18 Nov 2026 offline for Grade 4 Christian Religious Education; not yet checked by a CRE teacher; not loaded by the live tutor",
+ "sources": [],
+ "notes": "",
+ "skills": [
+  {
+   "skill": "CRES.G4.CHRIST.TRUTHFULNESS_TRUTHFULNES.TRUTH",
+   "key_step": "The child states why we tell the truth: truthful lips last for ever but a lying tongue only a moment (Proverbs 12:19); Ephesians 4:25 tells Christians to put off falsehood and speak truthfully, even when the truth is hard.",
+   "floor": {
+    "prerequisite": "Knows the story of Ananias and Sapphira.",
+    "question": "What did Ananias and Sapphira lie about?",
+    "answer": "The money from the land they sold"
+   },
+   "representations": [
+    "two columns: truth lasts, lies do not",
+    "Proverbs 12:19 written large",
+    "story cards of children owning up"
+   ],
+   "steps": [
+    "Read Proverbs 12:19.",
+    "What lasts? Truth. What does not? A lie.",
+    "Read Ephesians 4:25.",
+    "Own up, even when it is hard."
+   ],
+   "contexts": [
+    "a broken cup at home",
+    "a lost exercise book",
+    "a test mark shown to parents"
+   ],
+   "board": [
+    {
+     "beat": "write",
+     "do": "Write Proverbs 12:19 and draw two lines, one long and one short."
+    },
+    {
+     "beat": "point",
+     "do": "Point at the short line.",
+     "say": "Which lasts only a moment, truth or a lie?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for the child to say a lie."
+    },
+    {
+     "beat": "reveal",
+     "do": "Write \"truth\" on the long line."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "CRES.G4.CHRIST.TRUTHFULNESS_TRUTHFULNES.TRUTH.M_C4_TR_WHITE_LIE",
+     "listen_for": [
+      "It was not me"
+     ],
+     "ask": "You broke a cup by accident. What should you say?",
+     "repair": "Role-play telling the truth and the parent's kind answer."
+    },
+    {
+     "code": "CRES.G4.CHRIST.TRUTHFULNESS_TRUTHFULNES.TRUTH.M_C4_TR_LIE_LASTS",
+     "listen_for": [
+      "Lying lips last for ever"
+     ],
+     "ask": "What does Proverbs 12:19 say?",
+     "repair": "Write it on a flash card: truth lasts, lies do not."
+    },
+    {
+     "code": "CRES.G4.CHRIST.TRUTHFULNESS_TRUTHFULNES.TRUTH.M_C4_TR_HIDE",
+     "listen_for": [
+      "Say he did well"
+     ],
+     "ask": "A child failed a test and is ashamed. What should he tell his father?",
+     "repair": "Ask what the father can do once he knows."
+    },
+    {
+     "code": "CRES.G4.CHRIST.TRUTHFULNESS_TRUTHFULNES.TRUTH.M_C4_TR_SILENCE",
+     "listen_for": [
+      "Yes, I did not say anything false"
+     ],
+     "ask": "Your friend is blamed for the broken window you broke, and you say nothing. Is that truthful?",
+     "repair": "Act it out: who is punished? Speaking truthfully to your neighbour (Ephesians 4:25) means owning up."
+    }
+   ],
+   "checks": [
+    {
+     "question": "What does Proverbs 12:19 say lasts for ever?",
+     "answer": "Truthful lips",
+     "shows": "verse"
+    },
+    {
+     "question": "You broke a cup by accident. What should you say?",
+     "answer": "It was me, and I am sorry",
+     "shows": "application"
+    }
+   ]
+  }
+ ]
+}

@@ -1,0 +1,279 @@
+{
+ "sub_strand": "CRE.G4.CHRIST.TRUST",
+ "title": "Trust:",
+ "status": "draft: written 18 Nov 2026 offline for Grade 4 Christian Religious Education; not yet checked by a CRE teacher; not loaded by the live tutor",
+ "sources": [],
+ "notes": "Safety first: a trusted adult and Childline Kenya 116. Do not role-play touching.",
+ "skills": [
+  {
+   "skill": "CRES.G4.CHRIST.TRUST.JOSEPH_RESISTS",
+   "key_step": "The child retells Genesis 39:7-12: Potiphar's wife tempts Joseph, he refuses because it would be a sin against God, he keeps away and runs out leaving his cloak; God sees even when no one else does.",
+   "floor": {
+    "prerequisite": "Knows Joseph later explained Pharaoh's dreams.",
+    "question": "Whose dreams did Joseph explain?",
+    "answer": "Pharaoh's"
+   },
+   "representations": [
+    "a door and a cloak left behind",
+    "Genesis 39:9 written large",
+    "a \"flee\" arrow"
+   ],
+   "steps": [
+    "Joseph is a servant in Potiphar's house.",
+    "He is tempted day after day.",
+    "He says it is a sin against God.",
+    "He runs out, leaving his cloak."
+   ],
+   "contexts": [
+    "being dared to watch a bad video",
+    "a friend pressing you to cheat",
+    "an older person asking you to keep a wrong secret"
+   ],
+   "board": [
+    {
+     "beat": "write",
+     "do": "Draw a doorway and a cloak on the floor."
+    },
+    {
+     "beat": "point",
+     "do": "Point at the cloak.",
+     "say": "Why did Joseph leave his cloak behind?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for the child to say he ran from sin."
+    },
+    {
+     "beat": "reveal",
+     "do": "Write Genesis 39:9: \"sin against God\"."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "CRES.G4.CHRIST.TRUST.JOSEPH_RESISTS.M_C4_JR_MASTER",
+     "listen_for": [
+      "He was afraid of his master"
+     ],
+     "ask": "Why did Joseph refuse, according to Genesis 39:9?",
+     "repair": "Read Genesis 39:9."
+    },
+    {
+     "code": "CRES.G4.CHRIST.TRUST.JOSEPH_RESISTS.M_C4_JR_STAYED",
+     "listen_for": [
+      "He stayed to argue"
+     ],
+     "ask": "What did Joseph do when she held on to his cloak?",
+     "repair": "Read Genesis 39:12."
+    },
+    {
+     "code": "CRES.G4.CHRIST.TRUST.JOSEPH_RESISTS.M_C4_JR_PRIVATE",
+     "listen_for": [
+      "No one is here, so no one will know"
+     ],
+     "ask": "Joseph was alone with her in the house. What was his reasoning?",
+     "repair": "Link to Genesis 39:9 and 39:11."
+    },
+    {
+     "code": "CRES.G4.CHRIST.TRUST.JOSEPH_RESISTS.M_C4_JR_REWARDED_AT_ONCE",
+     "listen_for": [
+      "He was made a ruler at once"
+     ],
+     "ask": "What happened to Joseph soon after he refused Potiphar's wife?",
+     "repair": "Read Genesis 39:20 and then 41:41: doing right was costly first; God was with him in prison."
+    }
+   ],
+   "checks": [
+    {
+     "question": "Why did Joseph refuse, according to Genesis 39:9?",
+     "answer": "It would be a sin against God",
+     "shows": "reason"
+    },
+    {
+     "question": "What did Joseph do when she grabbed his cloak?",
+     "answer": "Left it and ran out",
+     "shows": "flee"
+    }
+   ]
+  },
+  {
+   "skill": "CRES.G4.CHRIST.TRUST.SAFE_PEOPLE",
+   "key_step": "The child names trusted people (parent, teacher, church leader the child knows), says NO to strangers' offers and wrong requests, and knows whom to report to, including Childline Kenya 116.",
+   "floor": {
+    "prerequisite": "Knows the steps NO, GO, TELL.",
+    "question": "What are the three steps when someone asks you to do wrong?",
+    "answer": "Say no, go away, tell"
+   },
+   "representations": [
+    "a circle of trusted people around the child",
+    "Childline 116 card",
+    "role cards: stranger, teacher, parent"
+   ],
+   "steps": [
+    "Name trusted people.",
+    "Say NO to sweets or lifts from strangers.",
+    "Go away.",
+    "Tell a trusted adult or call 116."
+   ],
+   "contexts": [
+    "a stranger at the school gate",
+    "a lift offered on the way home",
+    "a phone call from an unknown number"
+   ],
+   "board": [
+    {
+     "beat": "write",
+     "do": "Draw a child in the middle of a circle."
+    },
+    {
+     "beat": "point",
+     "do": "Point at the space outside the circle.",
+     "say": "Is a stranger who offers sweets inside or outside your circle?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for the child to say outside."
+    },
+    {
+     "beat": "reveal",
+     "do": "Write the names of trusted people inside the circle and 116 below."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "CRES.G4.CHRIST.TRUST.SAFE_PEOPLE.M_C4_SP_KIND_STRANGER",
+     "listen_for": [
+      "Accept, because he is kind"
+     ],
+     "ask": "A stranger offers you sweets and a lift home. What should you do?",
+     "repair": "Role-play a firm NO and walking to a shop, a teacher or a parent."
+    },
+    {
+     "code": "CRES.G4.CHRIST.TRUST.SAFE_PEOPLE.M_C4_SP_ALL_ADULTS",
+     "listen_for": [
+      "Any adult who tells me to come"
+     ],
+     "ask": "Which of these is a trusted person for a child?",
+     "repair": "List trusted people by name, and the rule that a trusted person never asks for a secret."
+    },
+    {
+     "code": "CRES.G4.CHRIST.TRUST.SAFE_PEOPLE.M_C4_SP_NO_TELL",
+     "listen_for": [
+      "No one, they will not believe me"
+     ],
+     "ask": "Whom can you report to if you are in danger?",
+     "repair": "Say the list aloud and practise telling."
+    },
+    {
+     "code": "CRES.G4.CHRIST.TRUST.SAFE_PEOPLE.M_C4_SP_PHONE_FRIEND",
+     "listen_for": [
+      "Yes, they know me"
+     ],
+     "ask": "Someone online knows your name and school and asks to meet. Is that a trusted person?",
+     "repair": "Make two lists: people I know and trust at home, school and church; people who only know about me."
+    }
+   ],
+   "checks": [
+    {
+     "question": "A stranger offers you a lift. What do you do?",
+     "answer": "Say no, go away and tell a trusted adult",
+     "shows": "response"
+    },
+    {
+     "question": "Name one person a child can report to.",
+     "answer": "A parent (a teacher, the chief, Childline 116)",
+     "shows": "reporting"
+    }
+   ]
+  },
+  {
+   "skill": "CRES.G4.CHRIST.TRUST.TRUST_GOD",
+   "key_step": "The child says Psalm 125:1 compares those who trust in the Lord to Mount Zion, which cannot be shaken; trusting God means relying on him in trouble while still doing one's part.",
+   "floor": {
+    "prerequisite": "Knows Jesus calmed a storm.",
+    "question": "What did Jesus do when the storm came?",
+    "answer": "Calmed it"
+   },
+   "representations": [
+    "a mountain drawn beside a figure",
+    "Psalm 125:1 written large",
+    "a \"pray and work\" two-column chart"
+   ],
+   "steps": [
+    "Read Psalm 125:1.",
+    "Who is like Mount Zion? Those who trust the Lord.",
+    "A mountain is not moved by wind.",
+    "Trust God and still do your part."
+   ],
+   "contexts": [
+    "Mount Kenya through wind and rain",
+    "a child worried about exams",
+    "a family in a hard season"
+   ],
+   "board": [
+    {
+     "beat": "write",
+     "do": "Draw a mountain with wind lines blowing at it."
+    },
+    {
+     "beat": "point",
+     "do": "Point at the mountain.",
+     "say": "Who does the psalm say is like this mountain?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for the child to say those who trust in the Lord."
+    },
+    {
+     "beat": "reveal",
+     "do": "Write Psalm 125:1 under the mountain."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "CRES.G4.CHRIST.TRUST.TRUST_GOD.M_C4_TG_NO_TROUBLE",
+     "listen_for": [
+      "Nothing bad will ever happen"
+     ],
+     "ask": "What does it mean to trust in the Lord, according to Psalm 125:1?",
+     "repair": "Read Psalm 125:1 and ask what Mount Zion does when the wind blows."
+    },
+    {
+     "code": "CRES.G4.CHRIST.TRUST.TRUST_GOD.M_C4_TG_LAZY",
+     "listen_for": [
+      "She does not study, she just prays"
+     ],
+     "ask": "Wanjiru trusts God to help her in an exam. What fits?",
+     "repair": "Remind: the servants in the parable used what they had."
+    },
+    {
+     "code": "CRES.G4.CHRIST.TRUST.TRUST_GOD.M_C4_TG_OWN_STRENGTH",
+     "listen_for": [
+      "Because they are strong in themselves"
+     ],
+     "ask": "Why can those who trust in the Lord not be shaken?",
+     "repair": "Read Psalm 125:1-2 and ask who surrounds the people."
+    },
+    {
+     "code": "CRES.G4.CHRIST.TRUST.TRUST_GOD.M_C4_TG_ZION_PLACE",
+     "listen_for": [
+      "Only the city of Jerusalem"
+     ],
+     "ask": "In Psalm 125:1, who is like Mount Zion?",
+     "repair": "Read the verse in two halves: \"Those who trust in the Lord / are like Mount Zion\". Ask what the first half is about."
+    }
+   ],
+   "checks": [
+    {
+     "question": "Who is like Mount Zion in Psalm 125:1?",
+     "answer": "Those who trust in the Lord",
+     "shows": "comparison"
+    },
+    {
+     "question": "Wanjiru trusts God about her exam. What should she also do?",
+     "answer": "Study",
+     "shows": "trust and effort"
+    }
+   ]
+  }
+ ]
+}

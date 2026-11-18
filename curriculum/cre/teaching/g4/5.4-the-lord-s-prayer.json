@@ -1,0 +1,99 @@
+{
+ "sub_strand": "CRE.G4.THE_CH.THE_LORD_S_PRAYER",
+ "title": "The Lord’s Prayer",
+ "status": "draft: written 18 Nov 2026 offline for Grade 4 Christian Religious Education; not yet checked by a CRE teacher; not loaded by the live tutor",
+ "sources": [],
+ "notes": "",
+ "skills": [
+  {
+   "skill": "CRES.G4.THE_CH.THE_LORD_S_PRAYER.LORDS_PRAYER",
+   "key_step": "The child recites the Lord's Prayer and says what each part asks: honour to God's name, his kingdom and will, daily needs, forgiveness as we forgive, help in temptation; and prays for parents, guardians and friends.",
+   "floor": {
+    "prerequisite": "Can recite the Lord's Prayer.",
+    "question": "How does the Lord's Prayer begin?",
+    "answer": "Our Father in heaven"
+   },
+   "representations": [
+    "the prayer in five parts on strips",
+    "a picture for each part",
+    "a prayer list for family and friends"
+   ],
+   "steps": [
+    "Praise: hallowed be your name.",
+    "God's kingdom and will.",
+    "Daily bread.",
+    "Forgive us as we forgive; lead us not into temptation."
+   ],
+   "contexts": [
+    "morning devotion at school",
+    "praying for a sick parent",
+    "family prayer at night"
+   ],
+   "board": [
+    {
+     "beat": "write",
+     "do": "Write the prayer in five strips."
+    },
+    {
+     "beat": "point",
+     "do": "Point at \"Give us today our daily bread\".",
+     "say": "What are we asking for here?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for the child to say what we need each day."
+    },
+    {
+     "beat": "reveal",
+     "do": "Write a need beside each strip."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "CRES.G4.THE_CH.THE_LORD_S_PRAYER.LORDS_PRAYER.M_C4_LP_BREAD",
+     "listen_for": [
+      "Riches for ever"
+     ],
+     "ask": "What do we ask for when we pray \"Give us today our daily bread\"?",
+     "repair": "Ask what a child needs each day: food, clothes, health."
+    },
+    {
+     "code": "CRES.G4.THE_CH.THE_LORD_S_PRAYER.LORDS_PRAYER.M_C4_LP_FORGIVE",
+     "listen_for": [
+      "Forgive us, and we need not forgive others"
+     ],
+     "ask": "What does the Lord's Prayer say about forgiveness?",
+     "repair": "Read Matthew 6:12."
+    },
+    {
+     "code": "CRES.G4.THE_CH.THE_LORD_S_PRAYER.LORDS_PRAYER.M_C4_LP_ONLY_CHURCH",
+     "listen_for": [
+      "Only at church"
+     ],
+     "ask": "When should we pray?",
+     "repair": "Make a list of times: morning, meals, bedtime."
+    },
+    {
+     "code": "CRES.G4.THE_CH.THE_LORD_S_PRAYER.LORDS_PRAYER.M_C4_LP_KINGDOM",
+     "listen_for": [
+      "For a new king to rule Kenya"
+     ],
+     "ask": "What do we ask for when we pray \"your kingdom come\"?",
+     "repair": "Read the next line too: \"your will be done, on earth as it is in heaven\". The kingdom is God's rule in people's lives."
+    }
+   ],
+   "checks": [
+    {
+     "question": "What does \"our daily bread\" ask for?",
+     "answer": "What we need each day",
+     "shows": "meaning"
+    },
+    {
+     "question": "What does the prayer say about forgiveness?",
+     "answer": "Forgive us as we forgive others",
+     "shows": "forgiveness"
+    }
+   ]
+  }
+ ]
+}

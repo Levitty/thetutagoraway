@@ -327,7 +327,7 @@ export const MIS = [
     'The child pictures a prophet and not the Lord acting.', 'Read verse 38: "the fire of the Lord fell".',
     'The fire of the Lord fell and burned up the offering, the wood, the stones and the dust, and even the water in the trench. Elijah did not light it.'),
   M('THE_BI.MOUNT_CARMEL_CONTEST.CARMEL', 'M_CAR_NUMBERS', 'Mixes up the numbers.',
-    'How many prophets of Baal were there on Mount Carmel?', 'Four hundred and fifty', 'Twelve',
+    'How many prophets of Baal were there on Mount Carmel?', 'Twelve', 'Four hundred and fifty',
     'Numbers in the story: 450 prophets, twelve stones, four jars of water.', 'Make a card for each number and what it counted.',
     'There were 450 prophets of Baal against Elijah alone. The twelve stones stood for the twelve tribes, and Elijah had jars of water poured on the altar.', FROM_TEXT),
   // ---- TRUE_GOD
@@ -570,7 +570,7 @@ export const MIS = [
     'Monthly periods begin in girls and the voice deepens in boys. Both grow taller and grow body hair. These are normal changes.', FROM_TEXT),
   // ---- SANCTITY_LIFE
   M('CHRIST.SANCTITY_OF_LIFE.SANCTITY_LIFE', 'M_SL_ANIMALS', 'Thinks sanctity of life means only that we must not kill animals.',
-    'What does it mean that human life is sacred?', 'Human life is holy because it comes from God and is made in his image', 'Animals must never be used',
+    'What does it mean that human life is sacred?', 'Animals must never be used', 'Human life is holy because it comes from God and is made in his image',
     'The child extends the word sacred.', 'Read Genesis 1:27 and 9:6.',
     'Human life is sacred because God gave it and made us in his image (Genesis 1:27). We are not to take human life (Genesis 9:6).'),
   M('CHRIST.SANCTITY_OF_LIFE.SANCTITY_LIFE', 'M_SL_ANGER', 'Thinks that the best way to cope with anger is to hit back.',

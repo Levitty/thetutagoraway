@@ -17,9 +17,10 @@ test('the map is generated from the file HOREB owns, the official outcomes and K
   assert.equal(Object.keys(OUTCOMES).length, 158);
   assert.equal(source.totals.outcomes, 158);
   assert.equal(Object.keys(SKILLS).length, 39);
-  assert.equal(Object.keys(MIS_FEEDBACK).length, 118);
+  assert.equal(Object.keys(MIS_FEEDBACK).length, 156);
   assert.equal(source.totals.skills, 39);
-  assert.equal(source.totals.misconceptions, 118);
+  assert.equal(source.totals.misconceptions, 156);
+  assert.equal(source.totals.prerequisites, 97);
   for (const s of subs) for (const o of s.outcomes) assert.ok(/^kicd_(verified|read)$/.test(o.status), `${o.code}: outcome status changed`);
   assert.equal(source.rubrics.length, 6);
   assert.ok(source.rubrics.every(r => r.indicators.length && r.indicators.every(i => i.levels && i.levels.EE && i.levels.BE)));
@@ -32,7 +33,7 @@ test('skills are proposed and the library is draft, with the fields a reviewer n
       assert.ok(k.mastery && k.question_forms.length >= 2 && k.thinking.length, `${k.code}: mastery, forms or thinking missing`);
       assert.ok(k.outcomes.length && k.outcomes.every(o => OUTCOMES[o]), `${k.code}: unknown outcome`);
       assert.ok(/at least four of the last five/.test(k.mastery), `${k.code}: evidence rule`);
-      for (const p of k.prerequisites) assert.ok(SKILLS[p.requires] || /^CRE\.G[23]\./.test(p.requires), `${k.code}: unknown prerequisite ${p.requires}`);
+      for (const p of k.prerequisites) assert.ok(SKILLS[p.requires] || /^CRE\.G[23]\./.test(p.requires), `${k.code}: unknown prerequisite ${p.requires}`);   // Grade 2 and 3 outcomes since the depth pass
     }
     for (const m of s.misconceptions) {
       assert.equal(m.status, 'draft');
@@ -71,3 +72,7 @@ test('no Islamic or Hindu religious education is loaded', () => {
   assert.ok(!/\b(Quran|Allah|Muhammad|Hindu|Krishna|Vishnu|mosque)\b/i.test(all));
   assert.ok(!/\b(Quran|Allah|Hindu)\b/i.test(JSON.stringify(source.sub_strands.map(s => s.skills))));
 });
+
+// The Grade 5 Maths standard (18 Nov 2026): two prerequisites and four misconceptions per skill, a teaching pack, the SQL.
+import { creDepthTests } from './helpers/creDepth.mjs';
+await creDepthTests({ grade: 4, outcomes: 158 });

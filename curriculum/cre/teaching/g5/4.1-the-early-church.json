@@ -1,0 +1,99 @@
+{
+ "sub_strand": "CRE.G5.THE_CH.THE_EARLY_CHURCH",
+ "title": "The Early Church",
+ "status": "draft: written 18 Nov 2026 offline for Grade 5 Christian Religious Education; not yet checked by a CRE teacher; not loaded by the live tutor",
+ "sources": [],
+ "notes": "",
+ "skills": [
+  {
+   "skill": "CRES.G5.THE_CH.THE_EARLY_CHURCH.EARLY_CHURCH",
+   "key_step": "The child lists what united the early church (Acts 2:42-47: the apostles' teaching, fellowship, breaking bread, prayer, sharing with those in need, meeting daily), names values for church unity (love, humility, forgiveness, sharing, patience) and says why unity matters today.",
+   "floor": {
+    "prerequisite": "Knows the church began at Pentecost.",
+    "question": "Who preached at Pentecost?",
+    "answer": "Peter"
+   },
+   "representations": [
+    "Acts 2:42 written large",
+    "four pillars drawn: teaching, fellowship, bread, prayer",
+    "a values list"
+   ],
+   "steps": [
+    "Read Acts 2:42.",
+    "Name the four things they devoted themselves to.",
+    "They shared with those in need.",
+    "Name five values for unity today."
+   ],
+   "contexts": [
+    "a church harvest",
+    "a church helping a family after a fire",
+    "Sunday school working together"
+   ],
+   "board": [
+    {
+     "beat": "write",
+     "do": "Draw four pillars holding a roof marked \"unity\"."
+    },
+    {
+     "beat": "point",
+     "do": "Point at the first pillar.",
+     "say": "What did the believers devote themselves to?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for the child to name the apostles' teaching."
+    },
+    {
+     "beat": "reveal",
+     "do": "Label the other three pillars."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "CRES.G5.THE_CH.THE_EARLY_CHURCH.EARLY_CHURCH.M_EC_OWN",
+     "listen_for": [
+      "Kept it for themselves"
+     ],
+     "ask": "What did the early believers do with what they owned?",
+     "repair": "Read Acts 2:44-45."
+    },
+    {
+     "code": "CRES.G5.THE_CH.THE_EARLY_CHURCH.EARLY_CHURCH.M_EC_SAME_JOB",
+     "listen_for": [
+      "Everyone doing exactly the same job"
+     ],
+     "ask": "What keeps a church united?",
+     "repair": "List values and ask which can be practised by anyone."
+    },
+    {
+     "code": "CRES.G5.THE_CH.THE_EARLY_CHURCH.EARLY_CHURCH.M_EC_WHAT_DEVOTED",
+     "listen_for": [
+      "Selling things for profit"
+     ],
+     "ask": "Which one did the early believers devote themselves to?",
+     "repair": "Read Acts 2:42 and write the four things."
+    },
+    {
+     "code": "CRES.G5.THE_CH.THE_EARLY_CHURCH.EARLY_CHURCH.M_C5_EC_DAILY_TEMPLE",
+     "listen_for": [
+      "Only once a month"
+     ],
+     "ask": "How often did the early believers meet, according to Acts 2:46?",
+     "repair": "Read Acts 2:46 and underline \"every day\" and \"ate together\"."
+    }
+   ],
+   "checks": [
+    {
+     "question": "What did the early believers do with their possessions?",
+     "answer": "Shared them with anyone in need",
+     "shows": "sharing"
+    },
+    {
+     "question": "Name one value that keeps a church united.",
+     "answer": "Love (humility, forgiveness)",
+     "shows": "values"
+    }
+   ]
+  }
+ ]
+}

@@ -1,0 +1,99 @@
+{
+ "sub_strand": "CRE.G5.THE_LI.JOHN_THE_BAPTIST",
+ "title": "John the Baptist",
+ "status": "draft: written 18 Nov 2026 offline for Grade 5 Christian Religious Education; not yet checked by a CRE teacher; not loaded by the live tutor",
+ "sources": [],
+ "notes": "",
+ "skills": [
+  {
+   "skill": "CRES.G5.THE_LI.JOHN_THE_BAPTIST.JOHN_BAPTIST",
+   "key_step": "The child explains Luke 3:3-14: John preaches repentance and baptism, tells people to bear fruit that shows repentance, the crowd to share coats and food, tax collectors to take no more than required, soldiers not to extort and to be content.",
+   "floor": {
+    "prerequisite": "Knows John prepared the way for Jesus.",
+    "question": "What was John's work, according to Luke 1:76?",
+    "answer": "To prepare the way for the Lord"
+   },
+   "representations": [
+    "a chart: who asked, what John said",
+    "two coats drawn on the board",
+    "Luke 3:8 written large"
+   ],
+   "steps": [
+    "John preaches repentance.",
+    "The crowd: share coats and food.",
+    "Tax collectors: no more than required.",
+    "Soldiers: no extortion, be content."
+   ],
+   "contexts": [
+    "sharing a spare jumper",
+    "a shopkeeper giving correct change",
+    "a traffic officer who refuses a bribe"
+   ],
+   "board": [
+    {
+     "beat": "write",
+     "do": "Draw a chart with three rows: crowd, tax collectors, soldiers."
+    },
+    {
+     "beat": "point",
+     "do": "Point at the row \"tax collectors\".",
+     "say": "What did John tell them?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for the child to say collect no more than required."
+    },
+    {
+     "beat": "reveal",
+     "do": "Fill in the other rows."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "CRES.G5.THE_LI.JOHN_THE_BAPTIST.JOHN_BAPTIST.M_JB_REPENT_SORRY",
+     "listen_for": [
+      "Only saying sorry in words"
+     ],
+     "ask": "What did John the Baptist mean by repentance?",
+     "repair": "Read Luke 3:8, \"bear fruits that befit repentance\"."
+    },
+    {
+     "code": "CRES.G5.THE_LI.JOHN_THE_BAPTIST.JOHN_BAPTIST.M_JB_TAX",
+     "listen_for": [
+      "Collect more than you are ordered to"
+     ],
+     "ask": "What did John tell the tax collectors?",
+     "repair": "Read Luke 3:12-13."
+    },
+    {
+     "code": "CRES.G5.THE_LI.JOHN_THE_BAPTIST.JOHN_BAPTIST.M_JB_SHARE",
+     "listen_for": [
+      "Keep both coats safe"
+     ],
+     "ask": "What did John tell people who had two coats?",
+     "repair": "Read Luke 3:11."
+    },
+    {
+     "code": "CRES.G5.THE_LI.JOHN_THE_BAPTIST.JOHN_BAPTIST.M_C5_JB_SOLDIERS",
+     "listen_for": [
+      "Leave the army"
+     ],
+     "ask": "What did John tell the soldiers (Luke 3:14)?",
+     "repair": "Make a chart: crowd, tax collectors, soldiers, and what John told each. None was told to leave."
+    }
+   ],
+   "checks": [
+    {
+     "question": "What did John tell people with two coats?",
+     "answer": "Share with one who has none",
+     "shows": "teaching"
+    },
+    {
+     "question": "What is repentance, as John taught?",
+     "answer": "Turning from wrong and living a changed life",
+     "shows": "meaning"
+    }
+   ]
+  }
+ ]
+}

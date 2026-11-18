@@ -1,0 +1,99 @@
+{
+ "sub_strand": "CRE.G4.THE_CH.STANDING_FIRM_IN_FAITH",
+ "title": "Standing Firm in Faith",
+ "status": "draft: written 18 Nov 2026 offline for Grade 4 Christian Religious Education; not yet checked by a CRE teacher; not loaded by the live tutor",
+ "sources": [],
+ "notes": "",
+ "skills": [
+  {
+   "skill": "CRES.G4.THE_CH.STANDING_FIRM_IN_FAITH.STEPHEN",
+   "key_step": "The child names Antioch as where believers were first called Christians (Acts 11:26), retells how Stephen was stoned and prayed for his killers (Acts 7:54-60), lists lessons, and explains why not to join groups that mock God.",
+   "floor": {
+    "prerequisite": "Knows the church began at Pentecost.",
+    "question": "Where did the church begin?",
+    "answer": "Jerusalem"
+   },
+   "representations": [
+    "a map with Jerusalem and Antioch",
+    "Acts 7:60 written large",
+    "a lessons list"
+   ],
+   "steps": [
+    "Stephen speaks boldly and the leaders are furious.",
+    "He sees Jesus at God's right hand.",
+    "They stone him; Saul holds the coats.",
+    "He prays \"do not hold this sin against them\"."
+   ],
+   "contexts": [
+    "a child teased for praying",
+    "a group at school that mocks church",
+    "a Christian standing firm in hard times"
+   ],
+   "board": [
+    {
+     "beat": "write",
+     "do": "Write Acts 7:60: \"Lord, do not hold this sin against them\"."
+    },
+    {
+     "beat": "point",
+     "do": "Point at the words.",
+     "say": "What does Stephen's prayer teach us?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for the child to say forgive, stand firm."
+    },
+    {
+     "beat": "reveal",
+     "do": "List three lessons on the board."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "CRES.G4.THE_CH.STANDING_FIRM_IN_FAITH.STEPHEN.M_C4_ST_REVENGE",
+     "listen_for": [
+      "That God would punish them"
+     ],
+     "ask": "What did Stephen pray for those stoning him?",
+     "repair": "Read Acts 7:60."
+    },
+    {
+     "code": "CRES.G4.THE_CH.STANDING_FIRM_IN_FAITH.STEPHEN.M_C4_ST_CITY",
+     "listen_for": [
+      "Jerusalem"
+     ],
+     "ask": "In which city were believers first called Christians?",
+     "repair": "Find Antioch on a Bible map."
+    },
+    {
+     "code": "CRES.G4.THE_CH.STANDING_FIRM_IN_FAITH.STEPHEN.M_C4_ST_GROUP",
+     "listen_for": [
+      "Join them to fit in"
+     ],
+     "ask": "Your friends join a group that mocks Jesus. What should you do?",
+     "repair": "Role-play a polite no."
+    },
+    {
+     "code": "CRES.G4.THE_CH.STANDING_FIRM_IN_FAITH.STEPHEN.M_C4_ST_SAUL",
+     "listen_for": [
+      "Peter"
+     ],
+     "ask": "Who looked after the coats of the men who stoned Stephen (Acts 7:58)?",
+     "repair": "Read Acts 7:58 and say: this Saul later became the apostle Paul."
+    }
+   ],
+   "checks": [
+    {
+     "question": "Where were believers first called Christians?",
+     "answer": "Antioch",
+     "shows": "place"
+    },
+    {
+     "question": "What did Stephen pray for those stoning him?",
+     "answer": "That God would not hold this sin against them",
+     "shows": "forgiveness"
+    }
+   ]
+  }
+ ]
+}

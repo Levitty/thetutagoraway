@@ -1,0 +1,99 @@
+{
+ "sub_strand": "CRE.G4.THE_LI.THE_ANNUNCIATION",
+ "title": "The Annunciation",
+ "status": "draft: written 18 Nov 2026 offline for Grade 4 Christian Religious Education; not yet checked by a CRE teacher; not loaded by the live tutor",
+ "sources": [],
+ "notes": "",
+ "skills": [
+  {
+   "skill": "CRES.G4.THE_LI.THE_ANNUNCIATION.ANNUNCIATION",
+   "key_step": "The child narrates Luke 1:26-38: God sends Gabriel to Mary in Nazareth, she will have a son by the Holy Spirit and name him Jesus, nothing is impossible with God (1:37), and Mary answers \"I am the Lord's servant\"; this birth is unique.",
+   "floor": {
+    "prerequisite": "Knows Jesus grew up in Nazareth.",
+    "question": "What was Jesus' hometown?",
+    "answer": "Nazareth"
+   },
+   "representations": [
+    "a map with Nazareth and Bethlehem",
+    "cards: Gabriel, Mary, Nazareth, Jesus",
+    "Luke 1:37 written large"
+   ],
+   "steps": [
+    "Who was sent, and to whom?",
+    "Where was Mary?",
+    "What name was the child to have?",
+    "What did Mary answer?"
+   ],
+   "contexts": [
+    "a Christmas play at church",
+    "waiting for news of a new baby in the family",
+    "a nativity song in assembly"
+   ],
+   "board": [
+    {
+     "beat": "write",
+     "do": "Write two towns: Nazareth and Bethlehem."
+    },
+    {
+     "beat": "point",
+     "do": "Point at Nazareth.",
+     "say": "Where was Mary when Gabriel came?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for the child to say Nazareth."
+    },
+    {
+     "beat": "reveal",
+     "do": "Write Luke 1:37 beside Nazareth."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "CRES.G4.THE_LI.THE_ANNUNCIATION.ANNUNCIATION.M_C4_ANN_ZECHARIAH",
+     "listen_for": [
+      "Zechariah in the temple"
+     ],
+     "ask": "To whom did the angel Gabriel bring the news of Jesus' birth?",
+     "repair": "Make two columns: Zechariah and Mary, and place the facts."
+    },
+    {
+     "code": "CRES.G4.THE_LI.THE_ANNUNCIATION.ANNUNCIATION.M_C4_ANN_PLACE",
+     "listen_for": [
+      "Bethlehem"
+     ],
+     "ask": "Where was Mary when the angel came to her?",
+     "repair": "Read Luke 1:26 and then say where Jesus was born later."
+    },
+    {
+     "code": "CRES.G4.THE_LI.THE_ANNUNCIATION.ANNUNCIATION.M_C4_ANN_NAME",
+     "listen_for": [
+      "John"
+     ],
+     "ask": "What name did the angel tell Mary to give her son?",
+     "repair": "Read Luke 1:31 and Luke 1:13 and compare."
+    },
+    {
+     "code": "CRES.G4.THE_LI.THE_ANNUNCIATION.ANNUNCIATION.M_C4_ANN_AFRAID_DOUBT",
+     "listen_for": [
+      "\"I cannot do this\""
+     ],
+     "ask": "What did Mary finally say to the angel (Luke 1:38)?",
+     "repair": "Read Luke 1:34 and 1:38 together. Asking a question is not saying no."
+    }
+   ],
+   "checks": [
+    {
+     "question": "What name did Gabriel tell Mary to give her son?",
+     "answer": "Jesus",
+     "shows": "name"
+    },
+    {
+     "question": "What did Mary say at the end?",
+     "answer": "I am the Lord's servant",
+     "shows": "response"
+    }
+   ]
+  }
+ ]
+}

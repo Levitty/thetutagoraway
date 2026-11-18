@@ -1,0 +1,99 @@
+{
+ "sub_strand": "CRE.G6.THE_LI.RAISING_LAZARUS_FROM_THE",
+ "title": "Raising Lazarus from the Dead",
+ "status": "draft: written 18 Nov 2026 offline for Grade 6 Christian Religious Education; not yet checked by a CRE teacher; not loaded by the live tutor",
+ "sources": [],
+ "notes": "",
+ "skills": [
+  {
+   "skill": "CRES.G6.THE_LI.RAISING_LAZARUS_FROM_THE.LAZARUS_RAISED",
+   "key_step": "The child describes John 11:32-45: Mary falls at Jesus' feet, Jesus weeps, asks for the stone to be removed though Lazarus has been dead four days, prays, calls \"Lazarus, come out!\", Lazarus comes out bound in grave clothes, many believe; God has power over sickness and death.",
+   "floor": {
+    "prerequisite": "Knows Jesus raised the widow's son.",
+    "question": "In which town did Jesus raise the widow's son?",
+    "answer": "Nain"
+   },
+   "representations": [
+    "a tomb with a stone drawn",
+    "John 11:35 and 11:43 written large",
+    "a sequence strip"
+   ],
+   "steps": [
+    "Mary weeps at Jesus' feet.",
+    "Jesus weeps.",
+    "The stone is rolled away after four days.",
+    "\"Lazarus, come out!\""
+   ],
+   "contexts": [
+    "a funeral in the family",
+    "comforting a grieving friend",
+    "Easter hope"
+   ],
+   "board": [
+    {
+     "beat": "write",
+     "do": "Draw a tomb with a stone."
+    },
+    {
+     "beat": "point",
+     "do": "Point at the stone.",
+     "say": "Why did Martha not want the stone moved?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for the child to say he had been dead four days."
+    },
+    {
+     "beat": "reveal",
+     "do": "Write \"Lazarus, come out!\" and draw the stone rolled away."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "CRES.G6.THE_LI.RAISING_LAZARUS_FROM_THE.LAZARUS_RAISED.M_LAZ6_WEPT",
+     "listen_for": [
+      "He was angry with her"
+     ],
+     "ask": "What did Jesus do when he saw Mary weeping (John 11:35)?",
+     "repair": "Read John 11:35-36: Jesus wept and the people said \"See how he loved him\"."
+    },
+    {
+     "code": "CRES.G6.THE_LI.RAISING_LAZARUS_FROM_THE.LAZARUS_RAISED.M_LAZ6_DAYS",
+     "listen_for": [
+      "One day"
+     ],
+     "ask": "For how many days had Lazarus been in the tomb (John 11:39)?",
+     "repair": "Read 11:39: Martha said four days and a bad smell. He was truly dead."
+    },
+    {
+     "code": "CRES.G6.THE_LI.RAISING_LAZARUS_FROM_THE.LAZARUS_RAISED.M_LAZ6_WORDS",
+     "listen_for": [
+      "\"Lazarus, wake up and eat\""
+     ],
+     "ask": "What did Jesus call out at the tomb (John 11:43)?",
+     "repair": "Read 11:43 loudly: \"Lazarus, come out!\""
+    },
+    {
+     "code": "CRES.G6.THE_LI.RAISING_LAZARUS_FROM_THE.LAZARUS_RAISED.M_C6_LAZ_SISTERS",
+     "listen_for": [
+      "His daughters"
+     ],
+     "ask": "Who were Mary and Martha to Lazarus (John 11:1-2)?",
+     "repair": "Read John 11:1-2 and draw the family: Lazarus with his sisters Mary and Martha at Bethany."
+    }
+   ],
+   "checks": [
+    {
+     "question": "How many days had Lazarus been in the tomb?",
+     "answer": "Four",
+     "shows": "detail"
+    },
+    {
+     "question": "What did Jesus call out at the tomb?",
+     "answer": "Lazarus, come out!",
+     "shows": "words"
+    }
+   ]
+  }
+ ]
+}

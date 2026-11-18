@@ -1,0 +1,99 @@
+{
+ "sub_strand": "CRE.G6.THE_LI.THE_CALL_OF_DISCIPLES",
+ "title": "The Call of Disciples",
+ "status": "draft: written 18 Nov 2026 offline for Grade 6 Christian Religious Education; not yet checked by a CRE teacher; not loaded by the live tutor",
+ "sources": [],
+ "notes": "",
+ "skills": [
+  {
+   "skill": "CRES.G6.THE_LI.THE_CALL_OF_DISCIPLES.DISCIPLES",
+   "key_step": "The child retells Mark 1:16-20: Jesus sees Simon and Andrew casting a net, says \"Follow me, and I will make you fishers of people\", they leave their nets at once; James and John leave their father in the boat; people are called today to serve in many roles.",
+   "floor": {
+    "prerequisite": "Knows the twelve disciples.",
+    "question": "Name the two brothers called first.",
+    "answer": "Simon Peter and Andrew"
+   },
+   "representations": [
+    "a lake with two boats drawn",
+    "Mark 1:17 written large",
+    "cards of people who serve today"
+   ],
+   "steps": [
+    "Jesus walks by the lake.",
+    "He calls Simon and Andrew.",
+    "They leave their nets at once.",
+    "He calls James and John too."
+   ],
+   "contexts": [
+    "a nurse who serves with love",
+    "a Sunday school teacher",
+    "a young person in the church choir"
+   ],
+   "board": [
+    {
+     "beat": "write",
+     "do": "Draw a lake and a boat with two men casting a net."
+    },
+    {
+     "beat": "point",
+     "do": "Point at the net.",
+     "say": "What did Jesus say to these men?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for the child to say \"Follow me, I will make you fishers of people\"."
+    },
+    {
+     "beat": "reveal",
+     "do": "List ways people serve God today."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "CRES.G6.THE_LI.THE_CALL_OF_DISCIPLES.DISCIPLES.M_DIS6_JOB",
+     "listen_for": [
+      "Collecting taxes"
+     ],
+     "ask": "What were Simon and Andrew doing when Jesus called them (Mark 1:16)?",
+     "repair": "Make two cards: Simon and Andrew, fishermen; Matthew, tax collector."
+    },
+    {
+     "code": "CRES.G6.THE_LI.THE_CALL_OF_DISCIPLES.DISCIPLES.M_DIS6_WORDS",
+     "listen_for": [
+      "\"Come and rest\""
+     ],
+     "ask": "What did Jesus say to Simon and Andrew?",
+     "repair": "Read Mark 1:17: \"fishers of people\". Ask why fishermen would understand this."
+    },
+    {
+     "code": "CRES.G6.THE_LI.THE_CALL_OF_DISCIPLES.DISCIPLES.M_DIS6_ONLY_CLERGY",
+     "listen_for": [
+      "Only pastors and priests"
+     ],
+     "ask": "Who is called to serve God today?",
+     "repair": "List people who serve God in work: a nurse, a teacher, a farmer, a choir member."
+    },
+    {
+     "code": "CRES.G6.THE_LI.THE_CALL_OF_DISCIPLES.DISCIPLES.M_C6_DIS_DELAYED",
+     "listen_for": [
+      "Finished fishing and followed later"
+     ],
+     "ask": "What did Simon and Andrew do when Jesus called them (Mark 1:18)?",
+     "repair": "Read Mark 1:18 and 1:20 and underline \"at once\" and \"without delay\"."
+    }
+   ],
+   "checks": [
+    {
+     "question": "What were Simon and Andrew doing when Jesus called them?",
+     "answer": "Casting a net into the lake",
+     "shows": "detail"
+    },
+    {
+     "question": "Who is called to serve God today?",
+     "answer": "People in many kinds of work and roles",
+     "shows": "calling"
+    }
+   ]
+  }
+ ]
+}

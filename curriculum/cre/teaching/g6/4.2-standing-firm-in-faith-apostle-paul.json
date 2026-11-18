@@ -1,0 +1,99 @@
+{
+ "sub_strand": "CRE.G6.THE_CH.STANDING_FIRM_IN_FAITH_A",
+ "title": "Standing firm in Faith (Apostle Paul)",
+ "status": "draft: written 18 Nov 2026 offline for Grade 6 Christian Religious Education; not yet checked by a CRE teacher; not loaded by the live tutor",
+ "sources": [],
+ "notes": "",
+ "skills": [
+  {
+   "skill": "CRES.G6.THE_CH.STANDING_FIRM_IN_FAITH_A.PAUL_SUFFERING",
+   "key_step": "The child describes the sufferings of 2 Corinthians 6:3-7 (troubles, hardships, beatings, imprisonments, riots, hard work, sleepless nights, hunger), the virtues Paul names (purity, understanding, patience, kindness, sincere love, truthful speech), and how to stand firm today.",
+   "floor": {
+    "prerequisite": "Knows how Peter and John stood firm.",
+    "question": "What did Peter and John say when told to stop speaking about Jesus?",
+    "answer": "They could not stop"
+   },
+   "representations": [
+    "two columns: hardships and virtues",
+    "2 Corinthians 6:4 written large",
+    "situation cards"
+   ],
+   "steps": [
+    "Read 2 Corinthians 6:4-5: the hardships.",
+    "Read 6:6-7: the virtues.",
+    "Say what kept Paul going.",
+    "Apply a virtue today."
+   ],
+   "contexts": [
+    "a learner teased for faith",
+    "a pastor serving in a hard place",
+    "patience with a difficult classmate"
+   ],
+   "board": [
+    {
+     "beat": "write",
+     "do": "Draw two columns: hardships and virtues."
+    },
+    {
+     "beat": "point",
+     "do": "Point at the virtues column.",
+     "say": "Name a virtue Paul showed in hardship."
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for the child to say patience or kindness."
+    },
+    {
+     "beat": "reveal",
+     "do": "Fill in both columns."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "CRES.G6.THE_CH.STANDING_FIRM_IN_FAITH_A.PAUL_SUFFERING.M_PAU6_PUNISH",
+     "listen_for": [
+      "God was angry with them"
+     ],
+     "ask": "Why did the apostles suffer (2 Corinthians 6:3-7)?",
+     "repair": "Read 2 Corinthians 6:4: \"as servants of God we commend ourselves in great endurance\". They suffered for serving."
+    },
+    {
+     "code": "CRES.G6.THE_CH.STANDING_FIRM_IN_FAITH_A.PAUL_SUFFERING.M_PAU6_LIST",
+     "listen_for": [
+      "Wealth and comfort"
+     ],
+     "ask": "Which is in Paul's list of hardships?",
+     "repair": "Read 6:4-5 and list the hardships on the board: troubles, beatings, prisons, riots, hunger."
+    },
+    {
+     "code": "CRES.G6.THE_CH.STANDING_FIRM_IN_FAITH_A.PAUL_SUFFERING.M_PAU6_VIRTUE",
+     "listen_for": [
+      "Pride"
+     ],
+     "ask": "Which virtue does Paul name (2 Corinthians 6:6)?",
+     "repair": "Read 6:6 and list the virtues: purity, understanding, patience, kindness, sincere love."
+    },
+    {
+     "code": "CRES.G6.THE_CH.STANDING_FIRM_IN_FAITH_A.PAUL_SUFFERING.M_C6_PAU_GAVE_UP",
+     "listen_for": [
+      "He stopped preaching"
+     ],
+     "ask": "What did Paul do after beatings and prisons (2 Corinthians 6:4-7)?",
+     "repair": "Read 6:4-7 as one long sentence: all these hardships, and still patience, kindness, truthful speech."
+    }
+   ],
+   "checks": [
+    {
+     "question": "Name one hardship in 2 Corinthians 6:4-5.",
+     "answer": "Beatings (imprisonment, hunger)",
+     "shows": "hardship"
+    },
+    {
+     "question": "Name one virtue Paul names in 2 Corinthians 6:6.",
+     "answer": "Patience (kindness, purity)",
+     "shows": "virtue"
+    }
+   ]
+  }
+ ]
+}

@@ -1,0 +1,99 @@
+{
+ "sub_strand": "CRE.G5.THE_BI.KING_SOLOMON_THE_WISE_RU",
+ "title": "King Solomon the wise ruler",
+ "status": "draft: written 18 Nov 2026 offline for Grade 5 Christian Religious Education; not yet checked by a CRE teacher; not loaded by the live tutor",
+ "sources": [],
+ "notes": "",
+ "skills": [
+  {
+   "skill": "CRES.G5.THE_BI.KING_SOLOMON_THE_WISE_RU.SOLOMON",
+   "key_step": "The child narrates 1 Kings 3:16-28: two women claim one baby, Solomon calls for a sword, the real mother gives up her claim to save the child, the other says \"cut him\", Solomon gives the baby to the real mother; wisdom comes from God.",
+   "floor": {
+    "prerequisite": "Knows wisdom begins with honouring God.",
+    "question": "Where does wisdom begin, according to Proverbs 1:7?",
+    "answer": "With the fear of the Lord"
+   },
+   "representations": [
+    "two women and a baby drawn",
+    "speech bubbles for each woman",
+    "1 Kings 3:28 on a card"
+   ],
+   "steps": [
+    "Two women, one baby.",
+    "Solomon calls for a sword.",
+    "The real mother says \"give her the child\".",
+    "Solomon gives the baby to her."
+   ],
+   "contexts": [
+    "a teacher settling a quarrel fairly",
+    "a chief hearing a land case",
+    "a class captain choosing fairly"
+   ],
+   "board": [
+    {
+     "beat": "write",
+     "do": "Draw two speech bubbles for the two women."
+    },
+    {
+     "beat": "point",
+     "do": "Point at the bubble \"Give her the living child\".",
+     "say": "Who said this, and why?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for the child to say the real mother, out of love."
+    },
+    {
+     "beat": "reveal",
+     "do": "Write 1 Kings 3:28: wisdom from God."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "CRES.G5.THE_BI.KING_SOLOMON_THE_WISE_RU.SOLOMON.M_SOL_WRONG_MOTHER",
+     "listen_for": [
+      "The woman who said, \"Divide him\""
+     ],
+     "ask": "Which woman did Solomon decide was the real mother?",
+     "repair": "Reread 1 Kings 3:26-27 and ask who loved the child."
+    },
+    {
+     "code": "CRES.G5.THE_BI.KING_SOLOMON_THE_WISE_RU.SOLOMON.M_SOL_CUT",
+     "listen_for": [
+      "Solomon had him cut in two"
+     ],
+     "ask": "What happened to the baby?",
+     "repair": "Read verse 27: \"Give her the living child\"."
+    },
+    {
+     "code": "CRES.G5.THE_BI.KING_SOLOMON_THE_WISE_RU.SOLOMON.M_SOL_STRONG_NOT_WISE",
+     "listen_for": [
+      "Having riches and power"
+     ],
+     "ask": "What does Proverbs 9:10 say is the beginning of wisdom?",
+     "repair": "Read Proverbs 9:10 and ask what Solomon asked from God in 1 Kings 3:9."
+    },
+    {
+     "code": "CRES.G5.THE_BI.KING_SOLOMON_THE_WISE_RU.SOLOMON.M_C5_SOL_ASKED_RICHES",
+     "listen_for": [
+      "Riches and a long life"
+     ],
+     "ask": "What did Solomon ask God for (1 Kings 3:9)?",
+     "repair": "Read 1 Kings 3:9-11: God was pleased because Solomon did not ask for riches."
+    }
+   ],
+   "checks": [
+    {
+     "question": "Which woman was the real mother?",
+     "answer": "The one who said \"Give her the living child\"",
+     "shows": "judgement"
+    },
+    {
+     "question": "Was the baby cut in two?",
+     "answer": "No: he was given alive to his mother",
+     "shows": "outcome"
+    }
+   ]
+  }
+ ]
+}

@@ -1,0 +1,99 @@
+{
+ "sub_strand": "CRE.G7.CHRIST.SOCIAL_MEDIA",
+ "title": "Social Media",
+ "status": "draft: written 18 Nov 2026 offline for Grade 7 Christian Religious Education; not yet checked by a CRE teacher; not loaded by the live tutor",
+ "sources": [],
+ "notes": "",
+ "skills": [
+  {
+   "skill": "CRES.G7.CHRIST.SOCIAL_MEDIA.SOCIAL_MEDIA",
+   "key_step": "The learner identifies platforms young people use, describes responsible use (privacy, truth, kindness, limited time), examines misuse (cyberbullying, false news, explicit content, addiction), discusses responses to cyberbullying (do not reply, save, block, report, tell) and recommends values (integrity, respect, self-control) and life skills.",
+   "floor": {
+    "prerequisite": "Knows social media safety rules.",
+    "question": "What information must you keep private online?",
+    "answer": "Your password and home address"
+   },
+   "representations": [
+    "a phone screen drawn",
+    "cyberbullying steps on a card",
+    "Philippians 4:8 written large"
+   ],
+   "steps": [
+    "List platforms.",
+    "Describe responsible use.",
+    "Examine misuse.",
+    "Practise the steps for cyberbullying."
+   ],
+   "contexts": [
+    "a class WhatsApp group",
+    "a fake news message",
+    "a TikTok challenge"
+   ],
+   "board": [
+    {
+     "beat": "write",
+     "do": "Draw a phone with an unkind message on it."
+    },
+    {
+     "beat": "point",
+     "do": "Point at the message.",
+     "say": "What should you do about this cyberbullying?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for the learner to say do not reply, save, block, report, tell."
+    },
+    {
+     "beat": "reveal",
+     "do": "List values for responsible use."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "CRES.G7.CHRIST.SOCIAL_MEDIA.SOCIAL_MEDIA.M_CR7_SM_PLATFORM",
+     "listen_for": [
+      "A calculator"
+     ],
+     "ask": "Which is a social media platform?",
+     "repair": "Say social media is for sharing and talking with others; sort apps: WhatsApp, TikTok, Facebook (social), calculator, torch (not)."
+    },
+    {
+     "code": "CRES.G7.CHRIST.SOCIAL_MEDIA.SOCIAL_MEDIA.M_CR7_SM_BULLY",
+     "listen_for": [
+      "Reply with insults"
+     ],
+     "ask": "What should you do about cyberbullying?",
+     "repair": "Steps: do not reply, save the evidence, block, report, tell a trusted adult."
+    },
+    {
+     "code": "CRES.G7.CHRIST.SOCIAL_MEDIA.SOCIAL_MEDIA.M_CR7_SM_PRIVATE",
+     "listen_for": [
+      "Post it, it is only a joke"
+     ],
+     "ask": "You have a funny photo of a classmate. What is responsible?",
+     "repair": "Ask: did they agree? Could it hurt them? Keep others' pictures and information private."
+    },
+    {
+     "code": "CRES.G7.CHRIST.SOCIAL_MEDIA.SOCIAL_MEDIA.M_CR7_SM_DELETED_GONE",
+     "listen_for": [
+      "Yes, deleting removes it for ever"
+     ],
+     "ask": "You post something unkind and delete it after an hour. Is it gone?",
+     "repair": "Show how screenshots and forwarding work; think before posting (Philippians 4:8)."
+    }
+   ],
+   "checks": [
+    {
+     "question": "What should you do about cyberbullying?",
+     "answer": "Save it, block, report and tell a trusted adult",
+     "shows": "response"
+    },
+    {
+     "question": "Recommend a value for responsible social media use.",
+     "answer": "Integrity (respect, self-control)",
+     "shows": "value"
+    }
+   ]
+  }
+ ]
+}

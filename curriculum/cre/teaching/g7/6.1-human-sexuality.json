@@ -1,0 +1,107 @@
+{
+ "sub_strand": "CRE.G7.CHRIST.HUMAN_SEXUALITY",
+ "title": "Human Sexuality",
+ "status": "draft: written 18 Nov 2026 offline for Grade 7 Christian Religious Education; not yet checked by a CRE teacher; not loaded by the live tutor",
+ "sources": [],
+ "notes": "Use the school's agreed words and invite the school counsellor. A trusted adult is always named. Chastity is taught as the Christian teaching (1 Thessalonians 4:3), without shaming any learner.",
+ "skills": [
+  {
+   "skill": "CRES.G7.CHRIST.HUMAN_SEXUALITY.SEXUALITY_BASICS",
+   "key_step": "The learner explains human sexuality (made male and female in God's image), discusses healthy and unhealthy relationships and the circumstances that lead to unhealthy ones (idleness, bad company, media, being alone in tempting places), outlines consequences of sex before marriage, and compiles values and life skills to avoid it (chastity, self-control, assertiveness, decision-making; 1 Corinthians 6:18; 1 Thessalonians 4:3).",
+   "floor": {
+    "prerequisite": "Knows the biblical teaching on the body.",
+    "question": "What does 1 Corinthians 6:19 call your body?",
+    "answer": "A temple of the Holy Spirit"
+   },
+   "representations": [
+    "two columns: healthy and unhealthy",
+    "1 Thessalonians 4:3 written large",
+    "a skills list"
+   ],
+   "steps": [
+    "Explain sexuality.",
+    "Sort healthy and unhealthy signs.",
+    "List consequences of sex before marriage.",
+    "Compile values and life skills."
+   ],
+   "contexts": [
+    "a party with no adults",
+    "pressure from an older youth",
+    "a phone message asking for photos"
+   ],
+   "board": [
+    {
+     "beat": "write",
+     "do": "Draw two columns: healthy and unhealthy."
+    },
+    {
+     "beat": "point",
+     "do": "Point at the card \"keeps it secret from parents\".",
+     "say": "Which column?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for the learner to say unhealthy."
+    },
+    {
+     "beat": "reveal",
+     "do": "List the consequences and the skills that help."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "CRES.G7.CHRIST.HUMAN_SEXUALITY.SEXUALITY_BASICS.M_CR7_SB_SHAME",
+     "listen_for": [
+      "Keep it secret"
+     ],
+     "ask": "What should a child do if someone makes them feel unsafe?",
+     "repair": "Name trusted adults and say clearly: it is never the young person's fault; telling is right."
+    },
+    {
+     "code": "CRES.G7.CHRIST.HUMAN_SEXUALITY.SEXUALITY_BASICS.M_CR7_SB_HEALTHY",
+     "listen_for": [
+      "Yes, that is what love is"
+     ],
+     "ask": "A boyfriend says \"if you love me you will prove it\". Is this healthy?",
+     "repair": "Sort cards: respect, honesty, trust, parents know (healthy); pressure, secrets, gifts for favours (unhealthy)."
+    },
+    {
+     "code": "CRES.G7.CHRIST.HUMAN_SEXUALITY.SEXUALITY_BASICS.M_CR7_SB_PART",
+     "listen_for": [
+      "Only the body parts"
+     ],
+     "ask": "What is human sexuality?",
+     "repair": "Explain sexuality as being made male and female in God's image (Genesis 1:27), with feelings, relationships and roles."
+    },
+    {
+     "code": "CRES.G7.CHRIST.HUMAN_SEXUALITY.SEXUALITY_BASICS.M_CR7_SB_NO_CONSEQUENCE",
+     "listen_for": [
+      "None, if no one finds out"
+     ],
+     "ask": "Name one consequence of sex before marriage.",
+     "repair": "List consequences in four groups: health, school, family, faith. Read 1 Corinthians 6:18."
+    },
+    {
+     "code": "CRES.G7.CHRIST.HUMAN_SEXUALITY.SEXUALITY_BASICS.M_CR7_SB_CHASTE_IMPOSSIBLE",
+     "listen_for": [
+      "No, nobody can"
+     ],
+     "ask": "Is it possible for a young person to remain chaste until marriage?",
+     "repair": "Read 1 Thessalonians 4:3-4 and Philippians 4:8. List the skills that help: self-control, assertiveness, good friends, prayer."
+    }
+   ],
+   "checks": [
+    {
+     "question": "Which is part of a healthy relationship?",
+     "answer": "Respect and honesty",
+     "shows": "healthy"
+    },
+    {
+     "question": "Name one consequence of sex before marriage.",
+     "answer": "Early pregnancy (infections, leaving school)",
+     "shows": "consequence"
+    }
+   ]
+  }
+ ]
+}

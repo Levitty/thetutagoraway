@@ -1,0 +1,99 @@
+{
+ "sub_strand": "CRE.G5.THE_BI.THE_BIRTH_OF_MOSES",
+ "title": "The Birth of Moses",
+ "status": "draft: written 18 Nov 2026 offline for Grade 5 Christian Religious Education; not yet checked by a CRE teacher; not loaded by the live tutor",
+ "sources": [],
+ "notes": "",
+ "skills": [
+  {
+   "skill": "CRES.G5.THE_BI.THE_BIRTH_OF_MOSES.MOSES_BIRTH",
+   "key_step": "The child narrates Exodus 2:1-10: to save him from Pharaoh's order, Moses' mother hides him, puts him in a basket among the reeds of the Nile, his sister watches, Pharaoh's daughter finds him, his mother is paid to nurse him, and he is named Moses; God protected him.",
+   "floor": {
+    "prerequisite": "Knows trusting God in danger.",
+    "question": "What does Psalm 125:1 compare those who trust God to?",
+    "answer": "Mount Zion"
+   },
+   "representations": [
+    "a basket among reeds drawn by a river",
+    "a sequence strip",
+    "Exodus 2:10 on a card"
+   ],
+   "steps": [
+    "Pharaoh orders Hebrew boys killed.",
+    "The mother hides Moses, then puts him in a basket.",
+    "Pharaoh's daughter finds him; his sister offers a nurse.",
+    "His own mother nurses him; he is named Moses."
+   ],
+   "contexts": [
+    "a family protecting a child in danger",
+    "a big sister watching a baby",
+    "God's care in hard times"
+   ],
+   "board": [
+    {
+     "beat": "write",
+     "do": "Draw a river with a basket among reeds."
+    },
+    {
+     "beat": "point",
+     "do": "Point at the basket.",
+     "say": "Who found it, and who nursed the baby?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for the child to say Pharaoh's daughter, and his own mother."
+    },
+    {
+     "beat": "reveal",
+     "do": "Write Exodus 2:10: \"I drew him out of the water\"."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "CRES.G5.THE_BI.THE_BIRTH_OF_MOSES.MOSES_BIRTH.M_MB_WHO_FOUND",
+     "listen_for": [
+      "His sister"
+     ],
+     "ask": "Who found baby Moses in the basket?",
+     "repair": "Read Exodus 2:5-6."
+    },
+    {
+     "code": "CRES.G5.THE_BI.THE_BIRTH_OF_MOSES.MOSES_BIRTH.M_MB_PLACE",
+     "listen_for": [
+      "In the Red Sea"
+     ],
+     "ask": "Where did Moses' mother put the basket?",
+     "repair": "Read Exodus 2:3."
+    },
+    {
+     "code": "CRES.G5.THE_BI.THE_BIRTH_OF_MOSES.MOSES_BIRTH.M_MB_NURSE",
+     "listen_for": [
+      "Pharaoh's daughter"
+     ],
+     "ask": "Who nursed baby Moses at first?",
+     "repair": "Read Exodus 2:7-9."
+    },
+    {
+     "code": "CRES.G5.THE_BI.THE_BIRTH_OF_MOSES.MOSES_BIRTH.M_C5_MB_WHY_HIDE",
+     "listen_for": [
+      "She did not want him"
+     ],
+     "ask": "Why did Moses' mother hide him and then put him in a basket (Exodus 1:22-2:3)?",
+     "repair": "Read Exodus 1:22 first, then 2:2-3. Ask what the mother was saving him from."
+    }
+   ],
+   "checks": [
+    {
+     "question": "Who found baby Moses?",
+     "answer": "Pharaoh's daughter",
+     "shows": "story detail"
+    },
+    {
+     "question": "Who nursed Moses at first?",
+     "answer": "His own mother",
+     "shows": "protection"
+    }
+   ]
+  }
+ ]
+}

@@ -1,0 +1,189 @@
+{
+ "sub_strand": "CRE.G8.THE_BI.FAITH_AND_GOD_S_PROMISES",
+ "title": "Faith and God’s Promises",
+ "status": "draft: written 18 Nov 2026 offline for Grade 8 Christian Religious Education; not yet checked by a CRE teacher; not loaded by the live tutor",
+ "sources": [],
+ "notes": "",
+ "skills": [
+  {
+   "skill": "CRES.G8.THE_BI.FAITH_AND_GOD_S_PROMISES.ABRAHAM_FAITH",
+   "key_step": "The learner describes the background to the call of Abraham (Ur, Haran, Terah's family, other gods; Joshua 24:2) and examines how he showed faith (leaving home, waiting for Isaac, offering Isaac in Genesis 22; Hebrews 11:8-12, 17-19).",
+   "floor": {
+    "prerequisite": "Knows the call of Abraham.",
+    "question": "What did God promise Abram in Genesis 12:2?",
+    "answer": "To make him a great nation"
+   },
+   "representations": [
+    "a map: Ur, Haran, Canaan",
+    "a time line: 75 to 100",
+    "Hebrews 11:8 written large"
+   ],
+   "steps": [
+    "Background: Ur and Haran.",
+    "Faith: leaving home.",
+    "Faith: waiting for Isaac.",
+    "Faith: offering Isaac; God provides a ram."
+   ],
+   "contexts": [
+    "a family moving for work",
+    "waiting for an answer to prayer",
+    "trusting God in hard times"
+   ],
+   "board": [
+    {
+     "beat": "write",
+     "do": "Draw a time line from 75 to 100."
+    },
+    {
+     "beat": "point",
+     "do": "Point at 100.",
+     "say": "What happened when Abraham was a hundred?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for the learner to say Isaac was born."
+    },
+    {
+     "beat": "reveal",
+     "do": "Write Hebrews 11:8 above the line."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "CRES.G8.THE_BI.FAITH_AND_GOD_S_PROMISES.ABRAHAM_FAITH.M_CR8_AF_CALL",
+     "listen_for": [
+      "Stay in his country"
+     ],
+     "ask": "What did God tell Abram to do?",
+     "repair": "Read Genesis 12:1: \"Go from your country\". Mark Ur, Haran and Canaan on a map."
+    },
+    {
+     "code": "CRES.G8.THE_BI.FAITH_AND_GOD_S_PROMISES.ABRAHAM_FAITH.M_CR8_AF_ISAAC",
+     "listen_for": [
+      "A lamb"
+     ],
+     "ask": "What animal did Abraham find to offer instead of Isaac (Genesis 22:13)?",
+     "repair": "Read Genesis 22:8 and 22:13: Abraham said a lamb; God provided a ram caught by its horns."
+    },
+    {
+     "code": "CRES.G8.THE_BI.FAITH_AND_GOD_S_PROMISES.ABRAHAM_FAITH.M_CR8_AF_FAITH",
+     "listen_for": [
+      "He refused"
+     ],
+     "ask": "How did Abraham respond to God's call?",
+     "repair": "Read Genesis 12:4 and Hebrews 11:8: \"Abram went\"; by faith he obeyed."
+    },
+    {
+     "code": "CRES.G8.THE_BI.FAITH_AND_GOD_S_PROMISES.ABRAHAM_FAITH.M_CR8_AF_SARAH_LAUGH",
+     "listen_for": [
+      "Still young, soon after the call"
+     ],
+     "ask": "How old was Abraham when Isaac was born (Genesis 21:5)?",
+     "repair": "Draw a time line: called at 75, Isaac born at 100. Faith means waiting for God's promise."
+    }
+   ],
+   "checks": [
+    {
+     "question": "What did God tell Abram to do in Genesis 12:1?",
+     "answer": "Leave his country for a land God would show him",
+     "shows": "call"
+    },
+    {
+     "question": "What did God provide instead of Isaac?",
+     "answer": "A ram",
+     "shows": "faith"
+    }
+   ]
+  },
+  {
+   "skill": "CRES.G8.THE_BI.FAITH_AND_GOD_S_PROMISES.ABRAHAM_PROMISES",
+   "key_step": "The learner elaborates God's promises to Abraham (a great nation, a great name, many descendants like the stars, land, blessing to all peoples; Genesis 12:2-3, 15:5, 17:8) and explains their importance to Christians today (God keeps his word; blessing through Christ; Galatians 3:8).",
+   "floor": {
+    "prerequisite": "Knows Abraham's faith.",
+    "question": "What did God provide instead of Isaac?",
+    "answer": "A ram"
+   },
+   "representations": [
+    "a night sky drawn with stars",
+    "a promise list",
+    "Genesis 12:3 written large"
+   ],
+   "steps": [
+    "Read Genesis 12:2-3.",
+    "Read Genesis 15:5.",
+    "List the promises.",
+    "Say why they matter today."
+   ],
+   "contexts": [
+    "a parent keeping a promise",
+    "trusting God about the future",
+    "a church far from Israel blessed through Christ"
+   ],
+   "board": [
+    {
+     "beat": "write",
+     "do": "Draw a night sky full of stars."
+    },
+    {
+     "beat": "point",
+     "do": "Point at the stars.",
+     "say": "What did God promise Abram with these?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for the learner to say many descendants."
+    },
+    {
+     "beat": "reveal",
+     "do": "List all the promises beside the sky."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "CRES.G8.THE_BI.FAITH_AND_GOD_S_PROMISES.ABRAHAM_PROMISES.M_CR8_AP_LAND",
+     "listen_for": [
+      "Great wealth in gold only"
+     ],
+     "ask": "Which was a promise to Abraham?",
+     "repair": "List the promises of Genesis 12:2-3, 15:5, 17:8: great nation, many descendants, land, blessing to all nations."
+    },
+    {
+     "code": "CRES.G8.THE_BI.FAITH_AND_GOD_S_PROMISES.ABRAHAM_PROMISES.M_CR8_AP_BLESS",
+     "listen_for": [
+      "Only his family"
+     ],
+     "ask": "Who would be blessed through Abraham?",
+     "repair": "Read Genesis 12:3: \"all peoples on earth will be blessed through you\". Link to Galatians 3:8."
+    },
+    {
+     "code": "CRES.G8.THE_BI.FAITH_AND_GOD_S_PROMISES.ABRAHAM_PROMISES.M_CR8_AP_TRUST",
+     "listen_for": [
+      "They are useless"
+     ],
+     "ask": "Why do Christians value God's promises?",
+     "repair": "Show that God kept his promises to Abraham; Christians trust the same God (2 Corinthians 1:20)."
+    },
+    {
+     "code": "CRES.G8.THE_BI.FAITH_AND_GOD_S_PROMISES.ABRAHAM_PROMISES.M_CR8_AP_STARS",
+     "listen_for": [
+      "The colours of a rainbow"
+     ],
+     "ask": "What did God tell Abram to count to show how many descendants he would have (Genesis 15:5)?",
+     "repair": "Read Genesis 15:5 at night if possible: count the stars. Rainbow belongs to Noah (Genesis 9)."
+    }
+   ],
+   "checks": [
+    {
+     "question": "Name one promise God made to Abraham.",
+     "answer": "Many descendants (land, blessing)",
+     "shows": "promise"
+    },
+    {
+     "question": "Who would be blessed through Abraham?",
+     "answer": "All peoples on earth",
+     "shows": "blessing"
+    }
+   ]
+  }
+ ]
+}

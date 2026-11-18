@@ -1,0 +1,189 @@
+{
+ "sub_strand": "CRE.G6.THE_BI.INSPIRED_WORD_OF_GOD",
+ "title": "Inspired Word of God",
+ "status": "draft: written 18 Nov 2026 offline for Grade 6 Christian Religious Education; not yet checked by a CRE teacher; not loaded by the live tutor",
+ "sources": [],
+ "notes": "",
+ "skills": [
+  {
+   "skill": "CRES.G6.THE_BI.INSPIRED_WORD_OF_GOD.INSPIRED",
+   "key_step": "The child explains why the Bible is the inspired word of God (2 Timothy 3:16-17: God-breathed; useful for teaching, rebuking, correcting and training in righteousness) and names three of its writers (Moses, David, Paul).",
+   "floor": {
+    "prerequisite": "Knows the Bible has an Old and New Testament.",
+    "question": "How many books are in the New Testament?",
+    "answer": "27"
+   },
+   "representations": [
+    "2 Timothy 3:16 written large",
+    "cards: writer and book",
+    "the contents page"
+   ],
+   "steps": [
+    "Read 2 Timothy 3:16-17.",
+    "Say what God-breathed means.",
+    "List its four uses.",
+    "Name three writers."
+   ],
+   "contexts": [
+    "a Bible study group",
+    "a pastor preparing a sermon",
+    "a family reading Psalms"
+   ],
+   "board": [
+    {
+     "beat": "write",
+     "do": "Write \"God-breathed\" (2 Timothy 3:16)."
+    },
+    {
+     "beat": "point",
+     "do": "Point at the word.",
+     "say": "What does it tell us about who is behind the Bible?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for the child to say God inspired the writers."
+    },
+    {
+     "beat": "reveal",
+     "do": "List the four uses below."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "CRES.G6.THE_BI.INSPIRED_WORD_OF_GOD.INSPIRED.M_INS6_ONE",
+     "listen_for": [
+      "One person wrote all of it"
+     ],
+     "ask": "How many authors does the Bible have?",
+     "repair": "Show the contents page: many books, written over many years by many writers, all inspired by God."
+    },
+    {
+     "code": "CRES.G6.THE_BI.INSPIRED_WORD_OF_GOD.INSPIRED.M_INS6_HUMAN",
+     "listen_for": [
+      "It is only the ideas of wise men"
+     ],
+     "ask": "What does 2 Timothy 3:16 say about Scripture?",
+     "repair": "Read 2 Timothy 3:16: \"God-breathed\". People wrote, God inspired."
+    },
+    {
+     "code": "CRES.G6.THE_BI.INSPIRED_WORD_OF_GOD.INSPIRED.M_INS6_USE",
+     "listen_for": [
+      "Winning arguments and making money"
+     ],
+     "ask": "What is Scripture useful for (2 Timothy 3:16)?",
+     "repair": "Read 2 Timothy 3:16-17 and list its four uses: teaching, rebuking, correcting, training in righteousness."
+    },
+    {
+     "code": "CRES.G6.THE_BI.INSPIRED_WORD_OF_GOD.INSPIRED.M_C6_INS_AUTHORS_WRONG",
+     "listen_for": [
+      "Jesus and Abraham"
+     ],
+     "ask": "Which of these wrote books of the Bible?",
+     "repair": "Match writers to books: Moses (the Law, by tradition), David (many Psalms), Paul (letters). Jesus' words were written down by the Gospel writers."
+    }
+   ],
+   "checks": [
+    {
+     "question": "What does 2 Timothy 3:16 say about Scripture?",
+     "answer": "It is God-breathed",
+     "shows": "inspiration"
+    },
+    {
+     "question": "Name one writer of the Bible.",
+     "answer": "Paul (Moses, David)",
+     "shows": "authors"
+    }
+   ]
+  },
+  {
+   "skill": "CRES.G6.THE_BI.INSPIRED_WORD_OF_GOD.TRANSLATION",
+   "key_step": "The child discusses why the Bible was translated into local languages (so people understand it in their own language, so the message reaches every home) and outlines advantages (understanding, more readers, growth of faith, the language is honoured).",
+   "floor": {
+    "prerequisite": "Knows the Bible is God's inspired word.",
+    "question": "What does God-breathed mean?",
+    "answer": "God inspired the writers"
+   },
+   "representations": [
+    "one verse in English, Kiswahili and a local language",
+    "a world map of languages",
+    "advantages list"
+   ],
+   "steps": [
+    "Read John 3:16 in two languages.",
+    "Ask: is the message the same?",
+    "Why translate?",
+    "List advantages."
+   ],
+   "contexts": [
+    "a grandmother reading a Kikamba Bible",
+    "church in a rural area",
+    "the Bible Society of Kenya"
+   ],
+   "board": [
+    {
+     "beat": "write",
+     "do": "Write John 3:16 in English and in Kiswahili side by side."
+    },
+    {
+     "beat": "point",
+     "do": "Point at the two versions.",
+     "say": "Is the message the same or different?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for the child to say the same."
+    },
+    {
+     "beat": "reveal",
+     "do": "List advantages of translation."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "CRES.G6.THE_BI.INSPIRED_WORD_OF_GOD.TRANSLATION.M_TRA6_CHANGE",
+     "listen_for": [
+      "Yes, it makes a new message"
+     ],
+     "ask": "Does translating the Bible change its message?",
+     "repair": "Show one verse in English, Kiswahili and a local language: same meaning, different words."
+    },
+    {
+     "code": "CRES.G6.THE_BI.INSPIRED_WORD_OF_GOD.TRANSLATION.M_TRA6_ENGLISH",
+     "listen_for": [
+      "There is no need: English is enough for everyone"
+     ],
+     "ask": "Why translate the Bible into local languages?",
+     "repair": "Ask: if a grandmother reads only Dholuo, how will she hear God's word? Translation lets everyone understand."
+    },
+    {
+     "code": "CRES.G6.THE_BI.INSPIRED_WORD_OF_GOD.TRANSLATION.M_TRA6_COST",
+     "listen_for": [
+      "It makes the Bible shorter"
+     ],
+     "ask": "Which is an advantage of reading the Bible in your own language?",
+     "repair": "List real advantages: understanding, more readers, the message reaches homes, faith grows in one's own language."
+    },
+    {
+     "code": "CRES.G6.THE_BI.INSPIRED_WORD_OF_GOD.TRANSLATION.M_C6_TRA_NEW_BOOKS",
+     "listen_for": [
+      "New Kikuyu stories are added"
+     ],
+     "ask": "When the Bible is translated into Kikuyu, what happens to its books?",
+     "repair": "Compare contents pages of an English and a Kiswahili Bible: the same books in the same order."
+    }
+   ],
+   "checks": [
+    {
+     "question": "Does translation change the Bible's message?",
+     "answer": "No: the same message in another language",
+     "shows": "meaning"
+    },
+    {
+     "question": "Name an advantage of a Bible in your own language.",
+     "answer": "You understand it better",
+     "shows": "advantage"
+    }
+   ]
+  }
+ ]
+}

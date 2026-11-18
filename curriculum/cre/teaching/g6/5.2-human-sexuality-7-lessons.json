@@ -1,0 +1,189 @@
+{
+ "sub_strand": "CRE.G6.CHRIST.HUMAN_SEXUALITY_7_LESSON",
+ "title": "Human Sexuality (7 lessons)",
+ "status": "draft: written 18 Nov 2026 offline for Grade 6 Christian Religious Education; not yet checked by a CRE teacher; not loaded by the live tutor",
+ "sources": [],
+ "notes": "Use the school's agreed words; a trusted adult is always named. A CRE teacher and the school counsellor read this file first.",
+ "skills": [
+  {
+   "skill": "CRES.G6.CHRIST.HUMAN_SEXUALITY_7_LESSON.SEXUALITY_BIBLE",
+   "key_step": "The child describes biblical teaching on responsible sexual behaviour (James 1:14-16: desire grows into sin; 1 Corinthians 6:18-20: flee immorality, the body is a temple) and why to respect the body; worries go to a trusted adult.",
+   "floor": {
+    "prerequisite": "Knows the changes of adolescence.",
+    "question": "Where is the best place to get right information about growing up?",
+    "answer": "A parent or trusted adult"
+   },
+   "representations": [
+    "James 1:14-15 drawn as steps",
+    "1 Corinthians 6:19 written large",
+    "a trusted-adult list"
+   ],
+   "steps": [
+    "Read James 1:14-15.",
+    "Temptation is not sin; acting on it is.",
+    "Read 1 Corinthians 6:19-20.",
+    "Talk to a trusted adult."
+   ],
+   "contexts": [
+    "a film with wrong messages",
+    "pressure from older pupils",
+    "a health lesson at school"
+   ],
+   "board": [
+    {
+     "beat": "write",
+     "do": "Draw steps: desire, enticed, sin, death (James 1:14-15)."
+    },
+    {
+     "beat": "point",
+     "do": "Point at the first step.",
+     "say": "Is being tempted already a sin?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for the child to say no, it becomes sin when acted on."
+    },
+    {
+     "beat": "reveal",
+     "do": "Write 1 Corinthians 6:19 at the top."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "CRES.G6.CHRIST.HUMAN_SEXUALITY_7_LESSON.SEXUALITY_BIBLE.M_SEX6_BODY",
+     "listen_for": [
+      "We can do what we like with them"
+     ],
+     "ask": "Why should we respect our bodies (1 Corinthians 6:19)?",
+     "repair": "Read 1 Corinthians 6:19-20: a temple, bought at a price. Ask what we do in a temple."
+    },
+    {
+     "code": "CRES.G6.CHRIST.HUMAN_SEXUALITY_7_LESSON.SEXUALITY_BIBLE.M_SEX6_TEMPT",
+     "listen_for": [
+      "The moment a person is tempted"
+     ],
+     "ask": "When does temptation lead to sin (James 1:14-15)?",
+     "repair": "Read James 1:14-15 in steps: desire, conceived, sin. Jesus was tempted and did not sin."
+    },
+    {
+     "code": "CRES.G6.CHRIST.HUMAN_SEXUALITY_7_LESSON.SEXUALITY_BIBLE.M_SEX6_SECRET",
+     "listen_for": [
+      "Hide it from every adult"
+     ],
+     "ask": "A child is troubled about growing up. What is wise?",
+     "repair": "Name trusted adults; say that asking is wise and normal."
+    },
+    {
+     "code": "CRES.G6.CHRIST.HUMAN_SEXUALITY_7_LESSON.SEXUALITY_BIBLE.M_C6_SEX_MEDIA_NORMAL",
+     "listen_for": [
+      "It is normal and right"
+     ],
+     "ask": "Films show young people in sexual relationships as normal. What does the Bible teach?",
+     "repair": "Contrast what a film shows with 1 Corinthians 6:18-20. Ask who made the film and why."
+    }
+   ],
+   "checks": [
+    {
+     "question": "When does temptation lead to sin, according to James 1:15?",
+     "answer": "When desire grows and is acted on",
+     "shows": "temptation"
+    },
+    {
+     "question": "Why respect our bodies, according to 1 Corinthians 6:19?",
+     "answer": "The body is a temple of the Holy Spirit",
+     "shows": "respect"
+    }
+   ]
+  },
+  {
+   "skill": "CRES.G6.CHRIST.HUMAN_SEXUALITY_7_LESSON.SEXUALITY_SKILLS",
+   "key_step": "The child outlines causes of irresponsible sexual behaviour among the youth (peer pressure, idleness, media, too little guidance, drugs, gifts for favours) and the values and life skills that help (self-control, assertiveness, decision-making, chastity, choosing friends).",
+   "floor": {
+    "prerequisite": "Knows the biblical teaching on the body.",
+    "question": "What does 1 Corinthians 6:19 call the body?",
+    "answer": "A temple of the Holy Spirit"
+   },
+   "representations": [
+    "a causes and skills chart",
+    "refusal phrases on cards",
+    "a trusted-adult list"
+   ],
+   "steps": [
+    "List causes.",
+    "Name a skill for each cause.",
+    "Practise saying no.",
+    "Name whom to tell."
+   ],
+   "contexts": [
+    "an older person offering gifts",
+    "a party with no adults",
+    "a phone message asking for photos"
+   ],
+   "board": [
+    {
+     "beat": "write",
+     "do": "Draw two columns: cause and skill."
+    },
+    {
+     "beat": "point",
+     "do": "Point at \"peer pressure\".",
+     "say": "Which life skill helps here?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for the child to say assertiveness, saying no."
+    },
+    {
+     "beat": "reveal",
+     "do": "Fill in the chart."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "CRES.G6.CHRIST.HUMAN_SEXUALITY_7_LESSON.SEXUALITY_SKILLS.M_SEX6_PRESSURE",
+     "listen_for": [
+      "Give in so as to stay in the group"
+     ],
+     "ask": "A friend pushes you to do wrong. What do you do?",
+     "repair": "Practise firm refusals: \"No, I don't do that.\" Then walk away. Name friends who support you."
+    },
+    {
+     "code": "CRES.G6.CHRIST.HUMAN_SEXUALITY_7_LESSON.SEXUALITY_SKILLS.M_SEX6_GIFT",
+     "listen_for": [
+      "Accept, it is only a gift"
+     ],
+     "ask": "An older person offers gifts in return for favours. What is right?",
+     "repair": "Say: gifts in return for favours are a warning sign. Refuse and tell a trusted adult."
+    },
+    {
+     "code": "CRES.G6.CHRIST.HUMAN_SEXUALITY_7_LESSON.SEXUALITY_SKILLS.M_SEX6_CAUSE",
+     "listen_for": [
+      "Staying busy with school and sport"
+     ],
+     "ask": "Which can lead a young person into irresponsible behaviour?",
+     "repair": "List real causes: peer pressure, idleness, media, too little guidance, drugs. Busy with good things protects."
+    },
+    {
+     "code": "CRES.G6.CHRIST.HUMAN_SEXUALITY_7_LESSON.SEXUALITY_SKILLS.M_C6_SEX_CANNOT_SAY_NO",
+     "listen_for": [
+      "No, I must obey an older person"
+     ],
+     "ask": "Someone older insists you go alone with them to their house. Can you refuse?",
+     "repair": "Practise assertiveness: a child may always refuse what is wrong or unsafe, even from an adult."
+    }
+   ],
+   "checks": [
+    {
+     "question": "A friend pushes you to do wrong. What do you do?",
+     "answer": "Say no firmly and walk away",
+     "shows": "skill"
+    },
+    {
+     "question": "Name a cause of irresponsible behaviour among youth.",
+     "answer": "Peer pressure (too little guidance)",
+     "shows": "cause"
+    }
+   ]
+  }
+ ]
+}

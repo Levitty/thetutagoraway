@@ -1,0 +1,189 @@
+{
+ "sub_strand": "CRE.G5.THE_BI.NOAH_AND_HIS_SONS",
+ "title": "Noah and his sons",
+ "status": "draft: written 18 Nov 2026 offline for Grade 5 Christian Religious Education; not yet checked by a CRE teacher; not loaded by the live tutor",
+ "sources": [],
+ "notes": "",
+ "skills": [
+  {
+   "skill": "CRES.G5.THE_BI.NOAH_AND_HIS_SONS.NOAH_SONS",
+   "key_step": "The child narrates Genesis 9:18-23: Noah's sons are Shem, Ham and Japheth; Noah lies uncovered in his tent, Ham sees and tells his brothers, Shem and Japheth walk in backwards and cover him without looking.",
+   "floor": {
+    "prerequisite": "Knows why children honour parents.",
+    "question": "What does Exodus 20:12 tell children to do?",
+    "answer": "Honour their father and mother"
+   },
+   "representations": [
+    "three name cards: Shem, Ham, Japheth",
+    "a tent drawn with two sons walking backwards",
+    "Genesis 9:23 written large"
+   ],
+   "steps": [
+    "Name the three sons.",
+    "Noah is uncovered in his tent.",
+    "Ham sees and tells.",
+    "Shem and Japheth cover him, faces turned away."
+   ],
+   "contexts": [
+    "a child who hears gossip about a parent",
+    "caring for a sick grandparent",
+    "respecting an elder in church"
+   ],
+   "board": [
+    {
+     "beat": "write",
+     "do": "Draw a tent and two figures walking backwards with a cloth."
+    },
+    {
+     "beat": "point",
+     "do": "Point at the two figures.",
+     "say": "Who are they and what are they doing?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for the child to say Shem and Japheth covering their father."
+    },
+    {
+     "beat": "reveal",
+     "do": "Write \"respect\" beside them."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "CRES.G5.THE_BI.NOAH_AND_HIS_SONS.NOAH_SONS.M_NS_NAMES",
+     "listen_for": [
+      "Cain, Abel and Seth"
+     ],
+     "ask": "Which are the names of Noah's three sons?",
+     "repair": "Read Genesis 9:18 and write the three names on a card."
+    },
+    {
+     "code": "CRES.G5.THE_BI.NOAH_AND_HIS_SONS.NOAH_SONS.M_NS_HAM_COVERED",
+     "listen_for": [
+      "Ham"
+     ],
+     "ask": "Which sons covered their father with a garment?",
+     "repair": "Read Genesis 9:22-23 slowly, naming each son."
+    },
+    {
+     "code": "CRES.G5.THE_BI.NOAH_AND_HIS_SONS.NOAH_SONS.M_NS_FIRST_FLOOD",
+     "listen_for": [
+      "How Noah built the ark"
+     ],
+     "ask": "What is the story in Genesis 9:18-23 mostly about?",
+     "repair": "Say that the flood is over in this reading."
+    },
+    {
+     "code": "CRES.G5.THE_BI.NOAH_AND_HIS_SONS.NOAH_SONS.M_C5_NS_SAW_TOLD_PRAISE",
+     "listen_for": [
+      "It was not wrong; he was praised"
+     ],
+     "ask": "Why was it wrong for Ham to tell his brothers about their father (Genesis 9:22)?",
+     "repair": "Contrast: Ham told; Shem and Japheth walked in backwards and covered him. Which honoured the father?"
+    }
+   ],
+   "checks": [
+    {
+     "question": "Name Noah's three sons.",
+     "answer": "Shem, Ham and Japheth",
+     "shows": "names"
+    },
+    {
+     "question": "Which sons covered their father?",
+     "answer": "Shem and Japheth",
+     "shows": "respect"
+    }
+   ]
+  },
+  {
+   "skill": "CRES.G5.THE_BI.NOAH_AND_HIS_SONS.RESPECT_ELDERLY",
+   "key_step": "The child explains five ways of showing respect to the elderly (greet politely, listen, give a seat, help carry, visit and run errands) and why: it pleases God.",
+   "floor": {
+    "prerequisite": "Knows how Noah's sons respected their father.",
+    "question": "How did Shem and Japheth respect Noah?",
+    "answer": "They covered him without looking"
+   },
+   "representations": [
+    "a list of five ways on a hand",
+    "Leviticus 19:32 written large",
+    "role-play cards"
+   ],
+   "steps": [
+    "Greet politely.",
+    "Listen and do not interrupt.",
+    "Give a seat; help carry.",
+    "Visit and run errands."
+   ],
+   "contexts": [
+    "a grandmother at home",
+    "an old man on the matatu",
+    "an elder at church"
+   ],
+   "board": [
+    {
+     "beat": "write",
+     "do": "Draw a hand and write \"respect the elderly\" on the palm."
+    },
+    {
+     "beat": "point",
+     "do": "Point at the thumb.",
+     "say": "What is one way to show respect?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for the child to name one."
+    },
+    {
+     "beat": "reveal",
+     "do": "Write five ways, one on each finger."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "CRES.G5.THE_BI.NOAH_AND_HIS_SONS.RESPECT_ELDERLY.M_RE_AGREE",
+     "listen_for": [
+      "Agreeing with everything and never asking a question"
+     ],
+     "ask": "Which shows respect to an older person?",
+     "repair": "Ask whether a polite question is respectful."
+    },
+    {
+     "code": "CRES.G5.THE_BI.NOAH_AND_HIS_SONS.RESPECT_ELDERLY.M_RE_RELATIVES",
+     "listen_for": [
+      "Only grandparents and relatives"
+     ],
+     "ask": "To whom should a child show respect?",
+     "repair": "Give a story of an older neighbour carrying water."
+    },
+    {
+     "code": "CRES.G5.THE_BI.NOAH_AND_HIS_SONS.RESPECT_ELDERLY.M_RE_PAYMENT",
+     "listen_for": [
+      "So that they pay or reward us"
+     ],
+     "ask": "Why do Christians respect and help the elderly?",
+     "repair": "Ask what Shem and Japheth gained."
+    },
+    {
+     "code": "CRES.G5.THE_BI.NOAH_AND_HIS_SONS.RESPECT_ELDERLY.M_C5_RE_IGNORE_POOR",
+     "listen_for": [
+      "Less politely than a rich elder"
+     ],
+     "ask": "Mzee Otieno is old and poor. How should a child treat him?",
+     "repair": "Read Leviticus 19:32: rise in the presence of the aged. Respect is for age, not money."
+    }
+   ],
+   "checks": [
+    {
+     "question": "Name a way to show respect to an older person.",
+     "answer": "Greet politely (listen, give a seat, help)",
+     "shows": "ways"
+    },
+    {
+     "question": "Is respect only for relatives?",
+     "answer": "No: every older person",
+     "shows": "scope"
+    }
+   ]
+  }
+ ]
+}

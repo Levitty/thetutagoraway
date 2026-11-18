@@ -1,0 +1,99 @@
+{
+ "sub_strand": "CRE.G4.THE_CH.SELF_CONTROL",
+ "title": "Self-control",
+ "status": "draft: written 18 Nov 2026 offline for Grade 4 Christian Religious Education; not yet checked by a CRE teacher; not loaded by the live tutor",
+ "sources": [],
+ "notes": "",
+ "skills": [
+  {
+   "skill": "CRES.G4.THE_CH.SELF_CONTROL.SELF_CONTROL",
+   "key_step": "The child says self-control is choosing what is right over what a feeling pushes (Galatians 5:23-25), that it is a fruit of the Spirit, and how to avoid what defiles the body (drugs, harmful videos), even in secret.",
+   "floor": {
+    "prerequisite": "Knows the fruit of the Spirit.",
+    "question": "Which fruit of the Spirit is last in the list?",
+    "answer": "Self-control"
+   },
+   "representations": [
+    "a traffic light: stop, think, choose",
+    "Galatians 5:25 written large",
+    "situation cards"
+   ],
+   "steps": [
+    "Stop when a feeling pushes.",
+    "Think: does it please God and keep my body clean?",
+    "Choose the right way.",
+    "Ask the Holy Spirit for help."
+   ],
+   "contexts": [
+    "an offer of a cigarette",
+    "a harmful video on a phone",
+    "wanting to shout at a sibling"
+   ],
+   "board": [
+    {
+     "beat": "write",
+     "do": "Draw a traffic light: red stop, amber think, green choose."
+    },
+    {
+     "beat": "point",
+     "do": "Point at amber.",
+     "say": "What do you think about before you choose?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for the child to say does it please God."
+    },
+    {
+     "beat": "reveal",
+     "do": "Write Galatians 5:25: keep in step with the Spirit."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "CRES.G4.THE_CH.SELF_CONTROL.SELF_CONTROL.M_C4_SC_FEELINGS",
+     "listen_for": [
+      "Doing whatever I feel like"
+     ],
+     "ask": "What is self-control?",
+     "repair": "Role-play counting to ten when angry."
+    },
+    {
+     "code": "CRES.G4.THE_CH.SELF_CONTROL.SELF_CONTROL.M_C4_SC_OWN_POWER",
+     "listen_for": [
+      "Only from my own strength"
+     ],
+     "ask": "Where does self-control come from, according to Galatians 5:22-25?",
+     "repair": "Read Galatians 5:23 and 5:25."
+    },
+    {
+     "code": "CRES.G4.THE_CH.SELF_CONTROL.SELF_CONTROL.M_C4_SC_SECRET_OK",
+     "listen_for": [
+      "Watch it, since no one will know"
+     ],
+     "ask": "A friend offers you a harmful video to watch in secret. What shows self-control?",
+     "repair": "Ask what harm comes even if nobody finds out."
+    },
+    {
+     "code": "CRES.G4.THE_CH.SELF_CONTROL.SELF_CONTROL.M_C4_SC_ONCE",
+     "listen_for": [
+      "Once is fine"
+     ],
+     "ask": "A friend says \"just try one cigarette, once is nothing\". What does self-control say?",
+     "repair": "Explain that habits start with once, and practise saying no politely but firmly."
+    }
+   ],
+   "checks": [
+    {
+     "question": "What is self-control?",
+     "answer": "Choosing what is right instead of what a feeling pushes",
+     "shows": "meaning"
+    },
+    {
+     "question": "Where does self-control come from, in Galatians 5?",
+     "answer": "It is a fruit of the Holy Spirit",
+     "shows": "source"
+    }
+   ]
+  }
+ ]
+}

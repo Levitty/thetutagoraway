@@ -1,0 +1,99 @@
+{
+ "sub_strand": "CRE.G8.THE_CH.THE_HOLY_SPIRIT",
+ "title": "The Holy Spirit",
+ "status": "draft: written 18 Nov 2026 offline for Grade 8 Christian Religious Education; not yet checked by a CRE teacher; not loaded by the live tutor",
+ "sources": [],
+ "notes": "",
+ "skills": [
+  {
+   "skill": "CRES.G8.THE_CH.THE_HOLY_SPIRIT.HOLY_SPIRIT",
+   "key_step": "The learner describes Pentecost (Acts 2:1-13: wind, tongues of fire, other languages), analyses how Christians show the fruit of the Spirit (Galatians 5:22-23) and explains the importance of taking part in church activities (growth in faith, using gifts, responsibility, fellowship; Hebrews 10:24-25).",
+   "floor": {
+    "prerequisite": "Knows the gifts and fruit of the Holy Spirit.",
+    "question": "Is kindness a gift or a fruit of the Spirit?",
+    "answer": "A fruit"
+   },
+   "representations": [
+    "Acts 2:1-4 drawn",
+    "a fruit tree with nine fruit",
+    "a list of church activities for youth"
+   ],
+   "steps": [
+    "Read Acts 2:1-4.",
+    "Name the signs.",
+    "Show how a fruit looks in daily life.",
+    "Say why taking part in church matters."
+   ],
+   "contexts": [
+    "a youth choir",
+    "ushering on Sunday",
+    "a church community clean-up"
+   ],
+   "board": [
+    {
+     "beat": "write",
+     "do": "Draw tongues of fire over a group of people."
+    },
+    {
+     "beat": "point",
+     "do": "Point at the flames.",
+     "say": "What happened on the day of Pentecost?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for the learner to say the Holy Spirit came."
+    },
+    {
+     "beat": "reveal",
+     "do": "List church activities and what each builds."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "CRES.G8.THE_CH.THE_HOLY_SPIRIT.HOLY_SPIRIT.M_CR8_HS_DAY",
+     "listen_for": [
+      "Passover"
+     ],
+     "ask": "On which day did the Spirit come on the disciples?",
+     "repair": "Read Acts 2:1: the day of Pentecost, fifty days after Passover."
+    },
+    {
+     "code": "CRES.G8.THE_CH.THE_HOLY_SPIRIT.HOLY_SPIRIT.M_CR8_HS_SIGN",
+     "listen_for": [
+      "An earthquake and darkness"
+     ],
+     "ask": "What signs came with the Holy Spirit at Pentecost (Acts 2:2-3)?",
+     "repair": "Read Acts 2:2-4: a sound like a violent wind, tongues like fire, speaking in other languages."
+    },
+    {
+     "code": "CRES.G8.THE_CH.THE_HOLY_SPIRIT.HOLY_SPIRIT.M_CR8_HS_FRUIT",
+     "listen_for": [
+      "Anger"
+     ],
+     "ask": "Which is a fruit of the Spirit?",
+     "repair": "Read Galatians 5:19-23: anger is with the works of the flesh; the fruit begins with love."
+    },
+    {
+     "code": "CRES.G8.THE_CH.THE_HOLY_SPIRIT.HOLY_SPIRIT.M_CR8_HS_CHURCH_ACTIVITY",
+     "listen_for": [
+      "It is not important; church is for adults"
+     ],
+     "ask": "Why is it important for a young person to take part in church activities?",
+     "repair": "List youth activities (choir, ushering, outreach, Sunday school helping) and what each builds. Read Hebrews 10:24-25."
+    }
+   ],
+   "checks": [
+    {
+     "question": "On which day did the Holy Spirit come on the disciples?",
+     "answer": "Pentecost",
+     "shows": "day"
+    },
+    {
+     "question": "Why should young people take part in church activities?",
+     "answer": "It builds faith, gifts and responsibility",
+     "shows": "importance"
+    }
+   ]
+  }
+ ]
+}

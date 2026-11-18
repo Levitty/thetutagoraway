@@ -1,0 +1,189 @@
+{
+ "sub_strand": "CRE.G8.THE_BI.LEADERSHIP_IN_ISRAEL_SAU",
+ "title": "Leadership in Israel: Saul",
+ "status": "draft: written 18 Nov 2026 offline for Grade 8 Christian Religious Education; not yet checked by a CRE teacher; not loaded by the live tutor",
+ "sources": [],
+ "notes": "",
+ "skills": [
+  {
+   "skill": "CRES.G8.THE_BI.LEADERSHIP_IN_ISRAEL_SAU.KINGSHIP_ISRAEL",
+   "key_step": "The learner discusses reasons for kingship in Israel (Samuel old, his sons corrupt, wish to be like the nations, a leader for war; 1 Samuel 8:1-5, 19-20) and reasons against it (God was their king, a king would take their sons, land and harvest; 1 Samuel 8:7, 11-18).",
+   "floor": {
+    "prerequisite": "Knows Moses' leadership qualities.",
+    "question": "Name one leadership quality of Moses.",
+    "answer": "Humility"
+   },
+   "representations": [
+    "two columns: for and against kingship",
+    "1 Samuel 8:7 written large",
+    "a list of what a king would take"
+   ],
+   "steps": [
+    "Read 1 Samuel 8:1-5.",
+    "List reasons for.",
+    "Read 1 Samuel 8:7, 11-18.",
+    "List reasons against."
+   ],
+   "contexts": [
+    "choosing a class prefect",
+    "national elections",
+    "a church choosing leaders"
+   ],
+   "board": [
+    {
+     "beat": "write",
+     "do": "Draw two columns: for kingship and against."
+    },
+    {
+     "beat": "point",
+     "do": "Point at the \"against\" column.",
+     "say": "What did God say the people were rejecting?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for the learner to say God as king."
+    },
+    {
+     "beat": "reveal",
+     "do": "Fill in both columns."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "CRES.G8.THE_BI.LEADERSHIP_IN_ISRAEL_SAU.KINGSHIP_ISRAEL.M_CR8_KI_REASON",
+     "listen_for": [
+      "Samuel was young"
+     ],
+     "ask": "Why did Israel ask for a king?",
+     "repair": "Read 1 Samuel 8:1-5: Samuel was old; his sons took bribes; the people wanted a king like the nations."
+    },
+    {
+     "code": "CRES.G8.THE_BI.LEADERSHIP_IN_ISRAEL_SAU.KINGSHIP_ISRAEL.M_CR8_KI_WARNING",
+     "listen_for": [
+      "Give them gifts"
+     ],
+     "ask": "What did Samuel warn a king would do?",
+     "repair": "Read 1 Samuel 8:11-18 and list what a king would take: sons, daughters, fields, a tenth."
+    },
+    {
+     "code": "CRES.G8.THE_BI.LEADERSHIP_IN_ISRAEL_SAU.KINGSHIP_ISRAEL.M_CR8_KI_NATIONS",
+     "listen_for": [
+      "To be different from all other nations"
+     ],
+     "ask": "What did Israel want, according to 1 Samuel 8:20?",
+     "repair": "Read 1 Samuel 8:5 and 8:20: they wanted to be like other nations, with a king to lead and fight."
+    },
+    {
+     "code": "CRES.G8.THE_BI.LEADERSHIP_IN_ISRAEL_SAU.KINGSHIP_ISRAEL.M_CR8_KI_REJECT_GOD",
+     "listen_for": [
+      "Samuel"
+     ],
+     "ask": "What did God tell Samuel the people were really rejecting (1 Samuel 8:7)?",
+     "repair": "Read 1 Samuel 8:7 and discuss why God, not Samuel, was rejected."
+    }
+   ],
+   "checks": [
+    {
+     "question": "Why did Israel ask for a king?",
+     "answer": "Samuel was old and his sons did not follow his ways",
+     "shows": "reason"
+    },
+    {
+     "question": "What did Samuel warn a king would do?",
+     "answer": "Take their sons, land and harvest",
+     "shows": "warning"
+    }
+   ]
+  },
+  {
+   "skill": "CRES.G8.THE_BI.LEADERSHIP_IN_ISRAEL_SAU.SAUL_FAILURES",
+   "key_step": "The learner evaluates Saul's failures (offering the sacrifice at Gilgal without waiting, sparing the best of the Amalekites, excuses and blaming the people, seeking a medium) and their consequences (God rejected him as king; 1 Samuel 13:13-14; 15:22-23), and deduces lessons for leaders (obey God fully, be patient, own mistakes).",
+   "floor": {
+    "prerequisite": "Knows why Israel asked for a king.",
+    "question": "Why did Israel want a king?",
+    "answer": "To be like other nations"
+   },
+   "representations": [
+    "a chart: failure, consequence, lesson",
+    "1 Samuel 15:22 written large",
+    "a time line of Saul's reign"
+   ],
+   "steps": [
+    "Gilgal: Saul does not wait.",
+    "Amalek: Saul spares the best.",
+    "Saul makes excuses.",
+    "God rejects him as king."
+   ],
+   "contexts": [
+    "a prefect who breaks rules",
+    "a leader who blames others",
+    "obeying parents fully"
+   ],
+   "board": [
+    {
+     "beat": "write",
+     "do": "Write 1 Samuel 15:22: \"To obey is better than sacrifice\"."
+    },
+    {
+     "beat": "point",
+     "do": "Point at the chart row \"Amalek\".",
+     "say": "What did Saul do wrong here?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for the learner to say he spared the best against God's command."
+    },
+    {
+     "beat": "reveal",
+     "do": "Fill in consequences and lessons."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "CRES.G8.THE_BI.LEADERSHIP_IN_ISRAEL_SAU.SAUL_FAILURES.M_CR8_SF_SACRIFICE",
+     "listen_for": [
+      "Waited for Samuel"
+     ],
+     "ask": "What did Saul do at Gilgal?",
+     "repair": "Read 1 Samuel 13:8-13: Saul did not wait and offered the burnt offering himself."
+    },
+    {
+     "code": "CRES.G8.THE_BI.LEADERSHIP_IN_ISRAEL_SAU.SAUL_FAILURES.M_CR8_SF_AMALEK",
+     "listen_for": [
+      "Destroyed them"
+     ],
+     "ask": "What did Saul do with the best Amalekite flocks?",
+     "repair": "Read 1 Samuel 15:9, 22: \"To obey is better than sacrifice\". Partial obedience is disobedience."
+    },
+    {
+     "code": "CRES.G8.THE_BI.LEADERSHIP_IN_ISRAEL_SAU.SAUL_FAILURES.M_CR8_SF_RESULT",
+     "listen_for": [
+      "God made him greater"
+     ],
+     "ask": "What was the result of Saul's disobedience?",
+     "repair": "Read 1 Samuel 15:23, 26: God rejected Saul as king; David was anointed (1 Samuel 16)."
+    },
+    {
+     "code": "CRES.G8.THE_BI.LEADERSHIP_IN_ISRAEL_SAU.SAUL_FAILURES.M_CR8_SF_OBEY_SACRIFICE",
+     "listen_for": [
+      "Sacrifice is better than obedience"
+     ],
+     "ask": "What did Samuel tell Saul in 1 Samuel 15:22?",
+     "repair": "Read 1 Samuel 15:22 and ask: can a gift replace doing what God said?"
+    }
+   ],
+   "checks": [
+    {
+     "question": "What did Saul do at Gilgal?",
+     "answer": "Offered the sacrifice himself instead of waiting for Samuel",
+     "shows": "failure"
+    },
+    {
+     "question": "What was the result of Saul's disobedience?",
+     "answer": "God rejected him as king",
+     "shows": "consequence"
+    }
+   ]
+  }
+ ]
+}

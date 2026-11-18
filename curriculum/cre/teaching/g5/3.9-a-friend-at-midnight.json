@@ -1,0 +1,99 @@
+{
+ "sub_strand": "CRE.G5.THE_LI.A_FRIEND_AT_MIDNIGHT",
+ "title": "A friend at Midnight",
+ "status": "draft: written 18 Nov 2026 offline for Grade 5 Christian Religious Education; not yet checked by a CRE teacher; not loaded by the live tutor",
+ "sources": [],
+ "notes": "",
+ "skills": [
+  {
+   "skill": "CRES.G5.THE_LI.A_FRIEND_AT_MIDNIGHT.FRIEND_MIDNIGHT",
+   "key_step": "The child narrates Luke 11:5-10: at midnight a man asks a friend for three loaves for a visitor, the friend says the door is locked, but gets up because the man keeps asking; ask, seek, knock: pray persistently.",
+   "floor": {
+    "prerequisite": "Knows the Lord's Prayer.",
+    "question": "What do we ask for in \"give us today our daily bread\"?",
+    "answer": "What we need each day"
+   },
+   "representations": [
+    "a locked door drawn at night",
+    "three loaves",
+    "Luke 11:9 written large"
+   ],
+   "steps": [
+    "A visitor arrives at midnight.",
+    "The man asks a friend for three loaves.",
+    "The friend refuses at first.",
+    "Because he keeps asking, the friend gets up."
+   ],
+   "contexts": [
+    "praying for a sick parent day after day",
+    "asking politely and patiently",
+    "a family praying for rain"
+   ],
+   "board": [
+    {
+     "beat": "write",
+     "do": "Draw a house at night with a locked door."
+    },
+    {
+     "beat": "point",
+     "do": "Point at the man knocking.",
+     "say": "Why did the friend at last get up?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for the child to say because he kept asking."
+    },
+    {
+     "beat": "reveal",
+     "do": "Write Luke 11:9: ask, seek, knock."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "CRES.G5.THE_LI.A_FRIEND_AT_MIDNIGHT.FRIEND_MIDNIGHT.M_FM_FRIENDSHIP_ONLY",
+     "listen_for": [
+      "Only because of friendship"
+     ],
+     "ask": "Why did the friend at last get up and give the loaves?",
+     "repair": "Read Luke 11:8."
+    },
+    {
+     "code": "CRES.G5.THE_LI.A_FRIEND_AT_MIDNIGHT.FRIEND_MIDNIGHT.M_FM_ONE_PRAYER",
+     "listen_for": [
+      "One short prayer is enough and we should not ask again"
+     ],
+     "ask": "What does the parable teach about prayer?",
+     "repair": "Read Luke 11:9-10: ask, seek, knock."
+    },
+    {
+     "code": "CRES.G5.THE_LI.A_FRIEND_AT_MIDNIGHT.FRIEND_MIDNIGHT.M_FM_LOAVES",
+     "listen_for": [
+      "Seven loaves"
+     ],
+     "ask": "How many loaves did the man ask for?",
+     "repair": "Read Luke 11:5-6."
+    },
+    {
+     "code": "CRES.G5.THE_LI.A_FRIEND_AT_MIDNIGHT.FRIEND_MIDNIGHT.M_C5_FM_GOD_ASLEEP",
+     "listen_for": [
+      "Yes, God is unwilling to help"
+     ],
+     "ask": "Is God like the friend in bed who did not want to get up?",
+     "repair": "Read Luke 11:11-13: if earthly fathers give good gifts, how much more God. The lesson is persistence, not that God is unwilling."
+    }
+   ],
+   "checks": [
+    {
+     "question": "How many loaves did the man ask for?",
+     "answer": "Three",
+     "shows": "story detail"
+    },
+    {
+     "question": "What does the parable teach about prayer?",
+     "answer": "Keep praying and do not give up",
+     "shows": "lesson"
+    }
+   ]
+  }
+ ]
+}

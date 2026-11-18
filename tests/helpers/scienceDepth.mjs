@@ -28,7 +28,7 @@ function allCodes() {
 export function scienceDepthTests({ dir, subject, grade, outcomes, noFamilies = [], minDown = 0.5, notTested = NOT_TESTED }) {
   const source = J(`curriculum/${dir}/g${grade}.json`);
   const lib = J(`engine/data/curriculum/${subject}.g${grade}.misconceptions.json`);
-  const own = `${source.sub_strands[0].code.split('.').slice(0, 2).join('.')}.`;
+  const own = `${(source.sub_strands.find(s => s.skills?.length)?.skills[0].code || source.sub_strands[0].code).split('.').slice(0, 2).join('.')}.`;   // the skills' own prefix (CRE skills are CRES.G<n>.)
   const packDir = new URL(`curriculum/${dir}/teaching/g${grade}/`, ROOT);
   const packs = readdirSync(packDir).filter(f => f.endsWith('.json')).map(f => J(`curriculum/${dir}/teaching/g${grade}/${f}`));
   const skills = source.sub_strands.flatMap(s => s.skills);

@@ -1,0 +1,99 @@
+{
+ "sub_strand": "CRE.G8.CHRIST.WORK_TALENTS_GIFTS_AND_A",
+ "title": "Work Talents, Gifts and Abilities",
+ "status": "draft: written 18 Nov 2026 offline for Grade 8 Christian Religious Education; not yet checked by a CRE teacher; not loaded by the live tutor",
+ "sources": [],
+ "notes": "",
+ "skills": [
+  {
+   "skill": "CRES.G8.CHRIST.WORK_TALENTS_GIFTS_AND_A.TALENTS_PARABLE",
+   "key_step": "The learner describes the parable of the talents (Matthew 25:14-30: five, two and one talents, the first two double theirs, the third hides his out of fear, faithful servants praised, the lazy one rebuked) and discusses lessons (use gifts faithfully, God gives according to ability, accountability, fear must not stop us).",
+   "floor": {
+    "prerequisite": "Knows Grade 6 teaching on talents.",
+    "question": "What does Romans 12:4 teach?",
+    "answer": "One body has many parts with different work"
+   },
+   "representations": [
+    "three bags drawn: 5, 2, 1",
+    "Matthew 25:21 written large",
+    "a lessons list"
+   ],
+   "steps": [
+    "The master gives 5, 2 and 1.",
+    "Two servants trade and double.",
+    "The third buries his in fear.",
+    "The faithful are praised; the third is rebuked."
+   ],
+   "contexts": [
+    "a youth starting a small business",
+    "a learner using a gift in the choir",
+    "saving money from a school project"
+   ],
+   "board": [
+    {
+     "beat": "write",
+     "do": "Draw three bags marked 5, 2 and 1."
+    },
+    {
+     "beat": "point",
+     "do": "Point at the bag marked 1.",
+     "say": "Why did this servant bury his talent?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for the learner to say he was afraid."
+    },
+    {
+     "beat": "reveal",
+     "do": "List the lessons."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "CRES.G8.CHRIST.WORK_TALENTS_GIFTS_AND_A.TALENTS_PARABLE.M_CR8_TP_NUMBER",
+     "listen_for": [
+      "One"
+     ],
+     "ask": "How many talents did the first servant get?",
+     "repair": "Draw three bags: 5, 2, 1, \"each according to his ability\" (Matthew 25:15)."
+    },
+    {
+     "code": "CRES.G8.CHRIST.WORK_TALENTS_GIFTS_AND_A.TALENTS_PARABLE.M_CR8_TP_BURY",
+     "listen_for": [
+      "Traded and doubled"
+     ],
+     "ask": "What did the third servant do?",
+     "repair": "Read 25:16-18 and match each servant with what he did."
+    },
+    {
+     "code": "CRES.G8.CHRIST.WORK_TALENTS_GIFTS_AND_A.TALENTS_PARABLE.M_CR8_TP_LESSON",
+     "listen_for": [
+      "Hide what you have"
+     ],
+     "ask": "What does the parable teach?",
+     "repair": "Read 25:25-27: fear made him hide it; the master wanted it used."
+    },
+    {
+     "code": "CRES.G8.CHRIST.WORK_TALENTS_GIFTS_AND_A.TALENTS_PARABLE.M_CR8_TP_FEAR_REASON",
+     "listen_for": [
+      "He forgot about it"
+     ],
+     "ask": "Why did the third servant bury his talent (Matthew 25:24-25)?",
+     "repair": "Read 25:24-25 and discuss fear as a reason people do not use their gifts."
+    }
+   ],
+   "checks": [
+    {
+     "question": "How many talents did the first servant receive?",
+     "answer": "Five",
+     "shows": "detail"
+    },
+    {
+     "question": "What does the parable teach?",
+     "answer": "Use what God gives faithfully",
+     "shows": "lesson"
+    }
+   ]
+  }
+ ]
+}

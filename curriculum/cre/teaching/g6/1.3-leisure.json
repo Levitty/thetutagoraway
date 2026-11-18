@@ -1,0 +1,189 @@
+{
+ "sub_strand": "CRE.G6.CREATI.LEISURE",
+ "title": "Leisure",
+ "status": "draft: written 18 Nov 2026 offline for Grade 6 Christian Religious Education; not yet checked by a CRE teacher; not loaded by the live tutor",
+ "sources": [],
+ "notes": "",
+ "skills": [
+  {
+   "skill": "CRES.G6.CREATI.LEISURE.LEISURE_REST",
+   "key_step": "The child describes Genesis 2:1-3 (God finished his work, rested on the seventh day, blessed it and made it holy) and 1 Timothy 5:13 (idleness leads to gossip and meddling), and says good rest refreshes and honours God.",
+   "floor": {
+    "prerequisite": "Knows God gave people work.",
+    "question": "What work did God give Adam in Genesis 2:15?",
+    "answer": "To work the garden and take care of it"
+   },
+   "representations": [
+    "a seven-day strip with the seventh marked",
+    "Genesis 2:3 and 1 Timothy 5:13 on cards",
+    "two columns: rest, idleness"
+   ],
+   "steps": [
+    "Six days of creating.",
+    "The seventh: God rested, blessed it, made it holy.",
+    "1 Timothy 5:13 warns against idleness.",
+    "Rest refreshes; idleness harms."
+   ],
+   "contexts": [
+    "a family Sunday afternoon",
+    "a holiday spent only on a phone",
+    "resting after harvest"
+   ],
+   "board": [
+    {
+     "beat": "write",
+     "do": "Draw seven boxes for the days of creation."
+    },
+    {
+     "beat": "point",
+     "do": "Point at the seventh box.",
+     "say": "What did God do on this day, and why?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for the child to say rested because his work was finished, and made it holy."
+    },
+    {
+     "beat": "reveal",
+     "do": "Write 1 Timothy 5:13 beside \"idleness\"."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "CRES.G6.CREATI.LEISURE.LEISURE_REST.M_LEI6_TIRED",
+     "listen_for": [
+      "He was tired"
+     ],
+     "ask": "Why did God rest on the seventh day (Genesis 2:2-3)?",
+     "repair": "Read Genesis 2:2-3: God finished, blessed and made holy. Ask whether God gets tired (Isaiah 40:28)."
+    },
+    {
+     "code": "CRES.G6.CREATI.LEISURE.LEISURE_REST.M_LEI6_IDLE",
+     "listen_for": [
+      "Resting at all"
+     ],
+     "ask": "What does 1 Timothy 5:13 warn against?",
+     "repair": "Contrast rest that refreshes with idleness that leads to gossip (1 Timothy 5:13)."
+    },
+    {
+     "code": "CRES.G6.CREATI.LEISURE.LEISURE_REST.M_LEI6_DAY",
+     "listen_for": [
+      "The sixth day"
+     ],
+     "ask": "On which day did God rest (Genesis 2:2)?",
+     "repair": "Count the days on the fingers: six of creating, the seventh of rest."
+    },
+    {
+     "code": "CRES.G6.CREATI.LEISURE.LEISURE_REST.M_C6_LEI_SABBATH_LAZY",
+     "listen_for": [
+      "Yes, he left the world alone"
+     ],
+     "ask": "After God rested on the seventh day, did he stop caring for the world?",
+     "repair": "Read Psalm 121:4: he who watches over Israel will neither slumber nor sleep. God rested from creating, not from caring."
+    }
+   ],
+   "checks": [
+    {
+     "question": "On which day did God rest?",
+     "answer": "The seventh",
+     "shows": "day"
+    },
+    {
+     "question": "What does 1 Timothy 5:13 warn against?",
+     "answer": "Idleness that leads to gossip and meddling",
+     "shows": "idleness"
+    }
+   ]
+  },
+  {
+   "skill": "CRES.G6.CREATI.LEISURE.LEISURE_USE",
+   "key_step": "The child describes how youths misuse leisure (drugs, gambling, idleness, too much screen time, bad company) and names good uses and the values that help (self-control, responsibility, time management).",
+   "floor": {
+    "prerequisite": "Knows God's rest and the warning against idleness.",
+    "question": "What does 1 Timothy 5:13 warn against?",
+    "answer": "Idleness"
+   },
+   "representations": [
+    "a day drawn as a pie chart",
+    "two columns: builds up, pulls down",
+    "values list"
+   ],
+   "steps": [
+    "Name misuses of leisure.",
+    "Name good uses.",
+    "Name values that help.",
+    "Plan a good Saturday."
+   ],
+   "contexts": [
+    "a school holiday",
+    "a betting shop near the estate",
+    "a youth sports club"
+   ],
+   "board": [
+    {
+     "beat": "write",
+     "do": "Draw two columns: builds up and pulls down."
+    },
+    {
+     "beat": "point",
+     "do": "Point at the card \"betting with friends\".",
+     "say": "Which column?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for the child to say pulls down."
+    },
+    {
+     "beat": "reveal",
+     "do": "Plan a good Saturday together."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "CRES.G6.CREATI.LEISURE.LEISURE_USE.M_LEI6_MISUSE",
+     "listen_for": [
+      "Gambling with friends"
+     ],
+     "ask": "Which is a good use of free time?",
+     "repair": "Sort cards into builds up and pulls down, and name the harm of each misuse."
+    },
+    {
+     "code": "CRES.G6.CREATI.LEISURE.LEISURE_USE.M_LEI6_NO_LIMIT",
+     "listen_for": [
+      "Doing whatever pleases the group"
+     ],
+     "ask": "Which value helps a youth use leisure well?",
+     "repair": "Name values: self-control, responsibility, time management. Ask what each looks like on a Saturday."
+    },
+    {
+     "code": "CRES.G6.CREATI.LEISURE.LEISURE_USE.M_C6_LEI_PHONE_ALL_DAY",
+     "listen_for": [
+      "Yes, it is harmless"
+     ],
+     "ask": "Halima spends every day of the holiday on her phone from morning to night. Is this good use of leisure?",
+     "repair": "Draw a day as a pie: sleep, chores, family, play, reading, screen. What happens if screen fills it?"
+    },
+    {
+     "code": "CRES.G6.CREATI.LEISURE.LEISURE_USE.M_C6_LEI_ONLY_PLAY",
+     "listen_for": [
+      "Only playing games"
+     ],
+     "ask": "Which of these is a good use of leisure?",
+     "repair": "List leisure activities in four groups: rest, play, learn, serve. All can be good."
+    }
+   ],
+   "checks": [
+    {
+     "question": "Which is a good use of free time: gambling or reading?",
+     "answer": "Reading",
+     "shows": "use"
+    },
+    {
+     "question": "Which value helps a youth use leisure well?",
+     "answer": "Self-control",
+     "shows": "value"
+    }
+   ]
+  }
+ ]
+}

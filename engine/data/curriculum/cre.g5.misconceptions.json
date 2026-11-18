@@ -12,11 +12,7 @@
   "help": "Ask what the servants did with what they were given. Then name other gifts: singing, kindness, farming, drawing, helping.",
   "feedback": "In the story a talent was a sum of money, but Jesus told it to teach us to use every gift and ability God gives us, not only money.",
   "source": "common learner error; to confirm by a CRE teacher",
-  "status": "draft",
-  "review": {
-   "mark": "plausible, to confirm by a teacher",
-   "note": "Own judgement: believable for a Kenyan child of this age, but we have no source or homework count. A teacher who knows the class should say whether children really hold it."
-  }
+  "status": "draft"
  },
  "CRES.G5.CREATI.MY_PURPOSE_TALENTS_AND_A.TALENTS_PARABLE.M_TAL_UNFAIR": {
   "skill": "CRES.G5.CREATI.MY_PURPOSE_TALENTS_AND_A.TALENTS_PARABLE",
@@ -31,11 +27,7 @@
   "help": "Reread Matthew 25:15, \"each according to his ability\", then the servant's own words about fear and the buried talent.",
   "feedback": "The master gave each servant a share to match his ability. The third servant was blamed because he buried his talent and did not use it, not because he was given less.",
   "source": "common learner error; to confirm by a CRE teacher",
-  "status": "draft",
-  "review": {
-   "mark": "plausible, to confirm by a teacher",
-   "note": "Own judgement: believable for a Kenyan child of this age, but we have no source or homework count. A teacher who knows the class should say whether children really hold it."
-  }
+  "status": "draft"
  },
  "CRES.G5.CREATI.MY_PURPOSE_TALENTS_AND_A.TALENTS_PARABLE.M_TAL_NUMBERS": {
   "skill": "CRES.G5.CREATI.MY_PURPOSE_TALENTS_AND_A.TALENTS_PARABLE",
@@ -50,11 +42,7 @@
   "help": "Draw three columns: given, gained, total. Fill them from Matthew 25:16-18.",
   "feedback": "The servant who was given five talents gained five more, the one given two gained two more, and the one given one buried it and gained nothing.",
   "source": "The learner reads the passage loosely or mixes it with a similar Bible story (to confirm by a CRE teacher)",
-  "status": "draft",
-  "review": {
-   "mark": "doubtful",
-   "why": "A slip of Bible-fact recall (the passage is easy to check), more a trap option than a held belief."
-  }
+  "status": "draft"
  },
  "CRES.G5.CREATI.MY_PURPOSE_TALENTS_AND_A.PURPOSE_VERSES.M_PUR_SHOW_OFF": {
   "skill": "CRES.G5.CREATI.MY_PURPOSE_TALENTS_AND_A.PURPOSE_VERSES",
@@ -69,11 +57,7 @@
   "help": "Read 1 Peter 4:10 aloud and ask who benefits when a gift is used to serve.",
   "feedback": "1 Peter 4:10 says each person should use the gift received to serve others, as a good steward of God's grace. A gift is for service, not for showing off.",
   "source": "common learner error; to confirm by a CRE teacher",
-  "status": "draft",
-  "review": {
-   "mark": "plausible, to confirm by a teacher",
-   "note": "Own judgement: believable for a Kenyan child of this age, but we have no source or homework count. A teacher who knows the class should say whether children really hold it."
-  }
+  "status": "draft"
  },
  "CRES.G5.CREATI.MY_PURPOSE_TALENTS_AND_A.PURPOSE_VERSES.M_PUR_FEW_ONLY": {
   "skill": "CRES.G5.CREATI.MY_PURPOSE_TALENTS_AND_A.PURPOSE_VERSES",
@@ -88,11 +72,7 @@
   "help": "Read Jeremiah 29:11 and ask who God is speaking about. Say that a Grade 5 child is included.",
   "feedback": "Jeremiah 29:11 says that God has plans for our welfare, to give us a future and a hope. A child is part of that, not only an adult.",
   "source": "common learner error; to confirm by a CRE teacher",
-  "status": "draft",
-  "review": {
-   "mark": "plausible, to confirm by a teacher",
-   "note": "Own judgement: believable for a Kenyan child of this age, but we have no source or homework count. A teacher who knows the class should say whether children really hold it."
-  }
+  "status": "draft"
  },
  "CRES.G5.CREATI.MY_PURPOSE_TALENTS_AND_A.PURPOSE_VERSES.M_PUR_OWN_MAKING": {
   "skill": "CRES.G5.CREATI.MY_PURPOSE_TALENTS_AND_A.PURPOSE_VERSES",
@@ -107,11 +87,37 @@
   "help": "Read James 1:17. Say that work matters, but that the ability to work and learn is a gift too.",
   "feedback": "James 1:17 says that every good and perfect gift comes from above, from God. Hard work matters, but the abilities we work with are gifts too.",
   "source": "common learner error; to confirm by a CRE teacher",
-  "status": "draft",
-  "review": {
-   "mark": "plausible, to confirm by a teacher",
-   "note": "Own judgement: believable for a Kenyan child of this age, but we have no source or homework count. A teacher who knows the class should say whether children really hold it."
-  }
+  "status": "draft"
+ },
+ "CRES.G5.CREATI.MY_PURPOSE_TALENTS_AND_A.TALENTS_PARABLE.M_C5_TAL_REWARD_SAME": {
+  "skill": "CRES.G5.CREATI.MY_PURPOSE_TALENTS_AND_A.TALENTS_PARABLE",
+  "error": "Thinks the first two servants were praised differently because one gained more.",
+  "example": {
+   "question": "What did the master say to the servant who gained two more talents (Matthew 25:23)?",
+   "wrong_answer": "Less praise, because he gained less",
+   "correct_answer": "\"Well done, good and faithful servant\", the same as the first"
+  },
+  "cause": "The child expects praise to match the amount.",
+  "reveals": "Offer \"Less praise, because he gained less\" beside \"\"Well done, good and faithful servant\", the same as the first\" and ask the child to choose.",
+  "help": "Read 25:21 and 25:23 side by side: the same words. The master praised faithfulness, not the size.",
+  "feedback": "Both faithful servants heard \"Well done\". God looks for faithful use of what we have, big or small.",
+  "source": "To confirm by a CRE teacher: a common classroom error, not traced to a study by the author.",
+  "status": "draft"
+ },
+ "CRES.G5.CREATI.MY_PURPOSE_TALENTS_AND_A.PURPOSE_VERSES.M_C5_PUR_FIXED_JOB": {
+  "skill": "CRES.G5.CREATI.MY_PURPOSE_TALENTS_AND_A.PURPOSE_VERSES",
+  "error": "Thinks God's purpose means one fixed job chosen at birth, so a child need not work hard.",
+  "example": {
+   "question": "If God has a plan for you (Jeremiah 29:11), should you still work hard at school?",
+   "wrong_answer": "No, God's plan will happen anyway",
+   "correct_answer": "Yes: God's plan gives hope, and we use our gifts faithfully"
+  },
+  "cause": "The child hears plan as a finished timetable and stops seeing his own part.",
+  "reveals": "Offer \"No, God's plan will happen anyway\" beside \"Yes: God's plan gives hope, and we use our gifts faithfully\" and ask the child to choose.",
+  "help": "Join Jeremiah 29:11 with 1 Peter 4:10: God gives the hope; we use the gifts.",
+  "feedback": "God has good plans for you, and he gives gifts for you to use. Working hard is part of using them.",
+  "source": "To confirm by a CRE teacher: a common classroom error, not traced to a study by the author.",
+  "status": "draft"
  },
  "CRES.G5.CREATI.WORK.STEWARDSHIP.M_STW_RULE_HARM": {
   "skill": "CRES.G5.CREATI.WORK.STEWARDSHIP",
@@ -126,11 +132,7 @@
   "help": "Read Genesis 2:15 beside it: \"to work it and take care of it\".",
   "feedback": "Genesis 2:15 shows what ruling means: to work the garden and take care of it. Human beings are God's caretakers of creation, not owners who may use it up.",
   "source": "common learner error; to confirm by a CRE teacher",
-  "status": "draft",
-  "review": {
-   "mark": "common in the literature",
-   "source": "White (1967), The Historical Roots of Our Ecologic Crisis, Science 155: \"rule over\" in Genesis 1:26 is read as licence to use up creation."
-  }
+  "status": "draft"
  },
  "CRES.G5.CREATI.WORK.STEWARDSHIP.M_STW_WORK_PUNISHMENT": {
   "skill": "CRES.G5.CREATI.WORK.STEWARDSHIP",
@@ -145,15 +147,11 @@
   "help": "Compare Genesis 2:15 (work in the garden) with Genesis 3.",
   "feedback": "In Genesis 2:15 God put the man in the garden to work it and take care of it before anything went wrong. Work is a good gift and a responsibility.",
   "source": "common learner error; to confirm by a CRE teacher",
-  "status": "draft",
-  "review": {
-   "mark": "plausible, to confirm by a teacher",
-   "note": "Own judgement: believable for a Kenyan child of this age, but we have no source or homework count. A teacher who knows the class should say whether children really hold it."
-  }
+  "status": "draft"
  },
  "CRES.G5.CREATI.WORK.STEWARDSHIP.M_STW_HOME_ONLY": {
   "skill": "CRES.G5.CREATI.WORK.STEWARDSHIP",
-  "error": "Thinks a child has a role only at home.",
+  "error": "Gives a home chore when asked for a role at church, as if a child's roles were only at home.",
   "example": {
    "question": "Which one is a role a child can do at church?",
    "wrong_answer": "Cleaning the compound at home",
@@ -164,11 +162,7 @@
   "help": "Make three lists on the board: home, school and church.",
   "feedback": "A child has roles at home, school and church. At church a child can sing, help as an usher, sweep, and help keep the compound clean.",
   "source": "common learner error; to confirm by a CRE teacher",
-  "status": "draft",
-  "review": {
-   "mark": "plausible, to confirm by a teacher",
-   "note": "Own judgement: believable for a Kenyan child of this age, but we have no source or homework count. A teacher who knows the class should say whether children really hold it."
-  }
+  "status": "draft"
  },
  "CRES.G5.CREATI.WORK.CHILD_LABOUR.M_CL_CHORES_ARE_LABOUR": {
   "skill": "CRES.G5.CREATI.WORK.CHILD_LABOUR",
@@ -183,11 +177,7 @@
   "help": "Sort tasks by three questions: is it safe, does it suit my age, does it stop me from school or rest?",
   "feedback": "Light chores that suit your age, such as sweeping or washing dishes, are good training. Child labour is work that is harmful or takes a child away from school, rest and play.",
   "source": "common learner error; to confirm by a CRE teacher",
-  "status": "draft",
-  "review": {
-   "mark": "plausible, to confirm by a teacher",
-   "note": "Own judgement: believable for a Kenyan child of this age, but we have no source or homework count. A teacher who knows the class should say whether children really hold it."
-  }
+  "status": "draft"
  },
  "CRES.G5.CREATI.WORK.CHILD_LABOUR.M_CL_LABOUR_IS_GOOD": {
   "skill": "CRES.G5.CREATI.WORK.CHILD_LABOUR",
@@ -202,11 +192,7 @@
   "help": "Name a child who herds all day and cannot read. Ask what the child lost.",
   "feedback": "Child labour takes children from school and can harm their health and safety. Learning to work happens through safe chores, not through harmful work.",
   "source": "common learner error; to confirm by a CRE teacher",
-  "status": "draft",
-  "review": {
-   "mark": "plausible, to confirm by a teacher",
-   "note": "Own judgement: believable for a Kenyan child of this age, but we have no source or homework count. A teacher who knows the class should say whether children really hold it."
-  }
+  "status": "draft"
  },
  "CRES.G5.CREATI.WORK.CHILD_LABOUR.M_CL_REPORT_EMPLOYER": {
   "skill": "CRES.G5.CREATI.WORK.CHILD_LABOUR",
@@ -221,11 +207,7 @@
   "help": "Make a list of safe adults together, including the Childline Kenya line 116.",
   "feedback": "A child who is forced to work should tell a trusted adult such as a parent, a teacher or the chief, or call the Childline Kenya helpline on 116. Not the person who is forcing the work.",
   "source": "common learner error; to confirm by a CRE teacher",
-  "status": "draft",
-  "review": {
-   "mark": "doubtful",
-   "why": "A slip of Bible-fact recall (the passage is easy to check), more a trap option than a held belief."
-  }
+  "status": "draft"
  },
  "CRES.G5.CREATI.WORK.CHILD_LABOUR.M_CL_CAUSE_LAZY": {
   "skill": "CRES.G5.CREATI.WORK.CHILD_LABOUR",
@@ -240,15 +222,26 @@
   "help": "Ask what a family with no food might feel it must do.",
   "feedback": "Child labour is often caused by poverty, the loss of parents, ignorance of children's rights and the greed of those who use cheap labour. It is not the fault of the child.",
   "source": "common learner error; to confirm by a CRE teacher",
-  "status": "draft",
-  "review": {
-   "mark": "doubtful",
-   "why": "Children who know the story would not say this; a trap option."
-  }
+  "status": "draft"
+ },
+ "CRES.G5.CREATI.WORK.STEWARDSHIP.M_C5_STW_ADULT_ROLES": {
+  "skill": "CRES.G5.CREATI.WORK.STEWARDSHIP",
+  "error": "Lists only adult jobs, such as paying fees, when asked for a child's roles at home.",
+  "example": {
+   "question": "Name one role a Grade 5 child has at home.",
+   "wrong_answer": "Paying the school fees",
+   "correct_answer": "Washing dishes or fetching water"
+  },
+  "cause": "The child names the big jobs he sees adults do.",
+  "reveals": "Offer \"Paying the school fees\" beside \"Washing dishes or fetching water\" and ask the child to choose.",
+  "help": "Make three columns, home, school, church, and fill them only with things a ten-year-old can do.",
+  "feedback": "Paying fees is a parent's role. A child can help with dishes, water, sweeping and caring for younger ones.",
+  "source": "To confirm by a CRE teacher: a common classroom error, not traced to a study by the author.",
+  "status": "draft"
  },
  "CRES.G5.CREATI.THE_FALL_OF_MAN.FALL_OF_MAN.M_FALL_APPLE": {
   "skill": "CRES.G5.CREATI.THE_FALL_OF_MAN.FALL_OF_MAN",
-  "error": "Says the fruit was an apple.",
+  "error": "Names the forbidden fruit as an apple, though Genesis 3 does not name the fruit.",
   "example": {
    "question": "What does Genesis 3 say about the kind of fruit that was eaten?",
    "wrong_answer": "It was an apple",
@@ -259,11 +252,7 @@
   "help": "Read Genesis 3:6 and look for the name of the fruit together.",
   "feedback": "Genesis 3 says \"the fruit of the tree\" but does not name it. The apple comes from pictures and stories, not from the Bible.",
   "source": "common learner error; to confirm by a CRE teacher",
-  "status": "draft",
-  "review": {
-   "mark": "plausible, to confirm by a teacher",
-   "note": "Own judgement: believable for a Kenyan child of this age, but we have no source or homework count. A teacher who knows the class should say whether children really hold it."
-  }
+  "status": "draft"
  },
  "CRES.G5.CREATI.THE_FALL_OF_MAN.FALL_OF_MAN.M_FALL_ONE_PERSON": {
   "skill": "CRES.G5.CREATI.THE_FALL_OF_MAN.FALL_OF_MAN",
@@ -278,11 +267,7 @@
   "help": "Read Genesis 3:6 and count who ate.",
   "feedback": "In Genesis 3:6 the woman ate the fruit and she also gave some to her husband who was with her, and he ate. Both disobeyed God.",
   "source": "common learner error; to confirm by a CRE teacher",
-  "status": "draft",
-  "review": {
-   "mark": "doubtful",
-   "why": "A slip of Bible-fact recall (the passage is easy to check), more a trap option than a held belief."
-  }
+  "status": "draft"
  },
  "CRES.G5.CREATI.THE_FALL_OF_MAN.FALL_OF_MAN.M_FALL_SERPENT_TRUE": {
   "skill": "CRES.G5.CREATI.THE_FALL_OF_MAN.FALL_OF_MAN",
@@ -297,11 +282,7 @@
   "help": "Compare what God said in Genesis 2:17 with what the serpent said in 3:4.",
   "feedback": "The serpent made the woman doubt what God had said. He tempted them, and what he said was not true.",
   "source": "common learner error; to confirm by a CRE teacher",
-  "status": "draft",
-  "review": {
-   "mark": "doubtful",
-   "why": "Children who know the story would not say this; a trap option."
-  }
+  "status": "draft"
  },
  "CRES.G5.CREATI.THE_FALL_OF_MAN.FALL_OF_MAN.M_FALL_BLAME": {
   "skill": "CRES.G5.CREATI.THE_FALL_OF_MAN.FALL_OF_MAN",
@@ -316,11 +297,7 @@
   "help": "Read Genesis 3:12-13 and ask whether blaming helped.",
   "feedback": "Adam blamed Eve and Eve blamed the serpent. Blaming others does not remove our own wrong. A person should admit what he did and say sorry.",
   "source": "common learner error; to confirm by a CRE teacher",
-  "status": "draft",
-  "review": {
-   "mark": "plausible, to confirm by a teacher",
-   "note": "Own judgement: believable for a Kenyan child of this age, but we have no source or homework count. A teacher who knows the class should say whether children really hold it."
-  }
+  "status": "draft"
  },
  "CRES.G5.CREATI.FAMILY_UNITY.FAMILY_UNITY.M_FU_NO_QUARREL": {
   "skill": "CRES.G5.CREATI.FAMILY_UNITY.FAMILY_UNITY",
@@ -335,11 +312,7 @@
   "help": "Read Colossians 3:13-14: bear with each other and forgive. That assumes there are things to forgive.",
   "feedback": "A united family has disagreements too, but its members forgive each other and keep loving one another (Colossians 3:13-14).",
   "source": "common learner error; to confirm by a CRE teacher",
-  "status": "draft",
-  "review": {
-   "mark": "plausible, to confirm by a teacher",
-   "note": "Own judgement: believable for a Kenyan child of this age, but we have no source or homework count. A teacher who knows the class should say whether children really hold it."
-  }
+  "status": "draft"
  },
  "CRES.G5.CREATI.FAMILY_UNITY.FAMILY_UNITY.M_FU_PARENTS_ONLY": {
   "skill": "CRES.G5.CREATI.FAMILY_UNITY.FAMILY_UNITY",
@@ -354,11 +327,7 @@
   "help": "List three things a child can do: chores, kind words, obedience.",
   "feedback": "Every member of the family, including children, can help to make a family happy by obeying, doing chores and speaking kindly.",
   "source": "common learner error; to confirm by a CRE teacher",
-  "status": "draft",
-  "review": {
-   "mark": "plausible, to confirm by a teacher",
-   "note": "Own judgement: believable for a Kenyan child of this age, but we have no source or homework count. A teacher who knows the class should say whether children really hold it."
-  }
+  "status": "draft"
  },
  "CRES.G5.CREATI.FAMILY_UNITY.FAMILY_UNITY.M_FU_FORGIVE_PRETEND": {
   "skill": "CRES.G5.CREATI.FAMILY_UNITY.FAMILY_UNITY",
@@ -373,11 +342,22 @@
   "help": "Say what Colossians 3:13 asks: forgive as the Lord forgave you.",
   "feedback": "To forgive is to let go of anger and choose to love again. It does not pretend that nothing was wrong.",
   "source": "common learner error; to confirm by a CRE teacher",
-  "status": "draft",
-  "review": {
-   "mark": "plausible, to confirm by a teacher",
-   "note": "Own judgement: believable for a Kenyan child of this age, but we have no source or homework count. A teacher who knows the class should say whether children really hold it."
-  }
+  "status": "draft"
+ },
+ "CRES.G5.CREATI.FAMILY_UNITY.FAMILY_UNITY.M_C5_FU_RICH_HAPPY": {
+  "skill": "CRES.G5.CREATI.FAMILY_UNITY.FAMILY_UNITY",
+  "error": "Thinks a family is united only if it has money, and that poor families cannot be happy.",
+  "example": {
+   "question": "What makes a family united?",
+   "wrong_answer": "Having a lot of money",
+   "correct_answer": "Love, respect, forgiveness and helping one another"
+  },
+  "cause": "The child links happiness with the things advertisements show.",
+  "reveals": "Offer \"Having a lot of money\" beside \"Love, respect, forgiveness and helping one another\" and ask the child to choose.",
+  "help": "Read Colossians 3:13-14: what binds a family is love. List things that cost nothing and build unity.",
+  "feedback": "Money helps, but love, forgiveness and helping each other make a family united.",
+  "source": "To confirm by a CRE teacher: a common classroom error, not traced to a study by the author.",
+  "status": "draft"
  },
  "CRES.G5.THE_BI.THE_BIBLE_AS_A_GUIDE.BIBLE_GUIDE.M_BG_CHURCH_ONLY": {
   "skill": "CRES.G5.THE_BI.THE_BIBLE_AS_A_GUIDE.BIBLE_GUIDE",
@@ -392,11 +372,7 @@
   "help": "Ask for a verse that helps at home or at school.",
   "feedback": "The Bible guides a Christian in every place and every day: at home, at school, at church and in the community.",
   "source": "common learner error; to confirm by a CRE teacher",
-  "status": "draft",
-  "review": {
-   "mark": "plausible, to confirm by a teacher",
-   "note": "Own judgement: believable for a Kenyan child of this age, but we have no source or homework count. A teacher who knows the class should say whether children really hold it."
-  }
+  "status": "draft"
  },
  "CRES.G5.THE_BI.THE_BIBLE_AS_A_GUIDE.BIBLE_GUIDE.M_BG_READ_ONCE": {
   "skill": "CRES.G5.THE_BI.THE_BIBLE_AS_A_GUIDE.BIBLE_GUIDE",
@@ -411,15 +387,11 @@
   "help": "Read Joshua 1:8 and Psalm 1:2, \"his delight is in the law of the Lord\".",
   "feedback": "Joshua 1:8 asks us to think on God's word day and night and to do what it says. It is for daily use, not for reading once.",
   "source": "common learner error; to confirm by a CRE teacher",
-  "status": "draft",
-  "review": {
-   "mark": "doubtful",
-   "why": "Children who know the story would not say this; a trap option."
-  }
+  "status": "draft"
  },
  "CRES.G5.THE_BI.THE_BIBLE_AS_A_GUIDE.BIBLE_GUIDE.M_BG_PSALM_TREE": {
   "skill": "CRES.G5.THE_BI.THE_BIBLE_AS_A_GUIDE.BIBLE_GUIDE",
-  "error": "Does not know what Psalm 1:1-3 compares the person who loves God's word to.",
+  "error": "Picks a wall or a rock for what Psalm 1:3 compares a person who delights in God's word to, instead of a tree by streams of water.",
   "example": {
    "question": "In Psalm 1:3, the person who delights in God's word is like...",
    "wrong_answer": "A strong wall",
@@ -430,11 +402,22 @@
   "help": "Read Psalm 1:3 and draw the tree.",
   "feedback": "Psalm 1:3 says that the person who delights in the word of the Lord is like a tree planted by streams of water, which gives fruit in its season.",
   "source": "The learner reads the passage loosely or mixes it with a similar Bible story (to confirm by a CRE teacher)",
-  "status": "draft",
-  "review": {
-   "mark": "doubtful",
-   "why": "A slip of Bible-fact recall (the passage is easy to check), more a trap option than a held belief."
-  }
+  "status": "draft"
+ },
+ "CRES.G5.THE_BI.THE_BIBLE_AS_A_GUIDE.BIBLE_GUIDE.M_C5_BG_ONLY_RULES": {
+  "skill": "CRES.G5.THE_BI.THE_BIBLE_AS_A_GUIDE.BIBLE_GUIDE",
+  "error": "Thinks the Bible is only a book of rules, not also comfort, history, songs and promises.",
+  "example": {
+   "question": "Which of these is a use of the Bible in society today?",
+   "wrong_answer": "Only to punish people who break rules",
+   "correct_answer": "To guide, comfort, teach and inspire, in homes, schools, courts and churches"
+  },
+  "cause": "The child has heard the Bible quoted mostly when someone is corrected.",
+  "reveals": "Offer \"Only to punish people who break rules\" beside \"To guide, comfort, teach and inspire, in homes, schools, courts and churches\" and ask the child to choose.",
+  "help": "Show different parts: Psalms (songs), Gospels (Jesus' life), Proverbs (wisdom). Ask where each is used.",
+  "feedback": "The Bible guides, comforts, teaches and inspires. It is used in homes, schools, churches and even when leaders take an oath.",
+  "source": "To confirm by a CRE teacher: a common classroom error, not traced to a study by the author.",
+  "status": "draft"
  },
  "CRES.G5.THE_BI.BIBLE_STORIES_PETER_AND_.PETER_JOHN.M_PJ_DENIED": {
   "skill": "CRES.G5.THE_BI.BIBLE_STORIES_PETER_AND_.PETER_JOHN",
@@ -449,15 +432,11 @@
   "help": "Read Acts 4:8 and 4:13: \"filled with the Holy Spirit\", \"the courage of Peter and John\".",
   "feedback": "In Acts 4 Peter was filled with the Holy Spirit and spoke boldly. That is different from the night when he denied Jesus.",
   "source": "The learner reads the passage loosely or mixes it with a similar Bible story (to confirm by a CRE teacher)",
-  "status": "draft",
-  "review": {
-   "mark": "doubtful",
-   "why": "A slip of Bible-fact recall (the passage is easy to check), more a trap option than a held belief."
-  }
+  "status": "draft"
  },
  "CRES.G5.THE_BI.BIBLE_STORIES_PETER_AND_.PETER_JOHN.M_PJ_STOPPED": {
   "skill": "CRES.G5.THE_BI.BIBLE_STORIES_PETER_AND_.PETER_JOHN",
-  "error": "Thinks Peter and John promised to stop speaking about Jesus.",
+  "error": "Thinks Peter told the rulers there are many ways to be saved, missing Acts 4:12: no other name.",
   "example": {
    "question": "What did Peter say about salvation in Acts 4:12?",
    "wrong_answer": "That there are many ways and names",
@@ -468,11 +447,7 @@
   "help": "Read Acts 4:12 aloud, then verse 13.",
   "feedback": "Acts 4:12 says that there is salvation in no one else, and no other name under heaven by which we must be saved. Peter did not give in.",
   "source": "common learner error; to confirm by a CRE teacher",
-  "status": "draft",
-  "review": {
-   "mark": "doubtful",
-   "why": "A slip of Bible-fact recall (the passage is easy to check), more a trap option than a held belief."
-  }
+  "status": "draft"
  },
  "CRES.G5.THE_BI.BIBLE_STORIES_PETER_AND_.PETER_JOHN.M_PJ_NO_POWER": {
   "skill": "CRES.G5.THE_BI.BIBLE_STORIES_PETER_AND_.PETER_JOHN",
@@ -487,11 +462,22 @@
   "help": "Read Acts 4:10.",
   "feedback": "Peter told the rulers that the man was healed by the name of Jesus Christ of Nazareth. The apostles gave the glory to Jesus.",
   "source": "common learner error; to confirm by a CRE teacher",
-  "status": "draft",
-  "review": {
-   "mark": "doubtful",
-   "why": "A slip of Bible-fact recall (the passage is easy to check), more a trap option than a held belief."
-  }
+  "status": "draft"
+ },
+ "CRES.G5.THE_BI.BIBLE_STORIES_PETER_AND_.PETER_JOHN.M_C5_PJ_OBEYED_RULERS": {
+  "skill": "CRES.G5.THE_BI.BIBLE_STORIES_PETER_AND_.PETER_JOHN",
+  "error": "Thinks Peter and John agreed to stop speaking about Jesus when the rulers ordered them.",
+  "example": {
+   "question": "What did Peter and John answer when told not to speak about Jesus (Acts 4:19-20)?",
+   "wrong_answer": "They agreed to keep quiet",
+   "correct_answer": "\"We cannot help speaking about what we have seen and heard\""
+  },
+  "cause": "The child thinks one must always obey rulers.",
+  "reveals": "Offer \"They agreed to keep quiet\" beside \"\"We cannot help speaking about what we have seen and heard\"\" and ask the child to choose.",
+  "help": "Read Acts 4:19-20 aloud: they asked whether to obey God or people.",
+  "feedback": "They said they could not stop speaking about what they had seen and heard. They stood firm.",
+  "source": "To confirm by a CRE teacher: a common classroom error, not traced to a study by the author.",
+  "status": "draft"
  },
  "CRES.G5.THE_BI.KING_SOLOMON_THE_WISE_RU.SOLOMON.M_SOL_WRONG_MOTHER": {
   "skill": "CRES.G5.THE_BI.KING_SOLOMON_THE_WISE_RU.SOLOMON",
@@ -506,11 +492,7 @@
   "help": "Reread 1 Kings 3:26-27 and ask who loved the child.",
   "feedback": "The real mother loved her son so much that she begged the king to give him to the other woman rather than see him killed. So Solomon gave the baby to her.",
   "source": "common learner error; to confirm by a CRE teacher",
-  "status": "draft",
-  "review": {
-   "mark": "doubtful",
-   "why": "A slip of Bible-fact recall (the passage is easy to check), more a trap option than a held belief."
-  }
+  "status": "draft"
  },
  "CRES.G5.THE_BI.KING_SOLOMON_THE_WISE_RU.SOLOMON.M_SOL_CUT": {
   "skill": "CRES.G5.THE_BI.KING_SOLOMON_THE_WISE_RU.SOLOMON",
@@ -525,11 +507,7 @@
   "help": "Read verse 27: \"Give her the living child\".",
   "feedback": "The sword was never used. Solomon's order was a test to find out who the real mother was, and the baby was given to her alive.",
   "source": "common learner error; to confirm by a CRE teacher",
-  "status": "draft",
-  "review": {
-   "mark": "doubtful",
-   "why": "A slip of Bible-fact recall (the passage is easy to check), more a trap option than a held belief."
-  }
+  "status": "draft"
  },
  "CRES.G5.THE_BI.KING_SOLOMON_THE_WISE_RU.SOLOMON.M_SOL_STRONG_NOT_WISE": {
   "skill": "CRES.G5.THE_BI.KING_SOLOMON_THE_WISE_RU.SOLOMON",
@@ -544,15 +522,26 @@
   "help": "Read Proverbs 9:10 and ask what Solomon asked from God in 1 Kings 3:9.",
   "feedback": "Proverbs 9:10 says that the fear of the Lord, that is, deep respect for God, is the beginning of wisdom. It is not riches or power.",
   "source": "common learner error; to confirm by a CRE teacher",
-  "status": "draft",
-  "review": {
-   "mark": "plausible, to confirm by a teacher",
-   "note": "Own judgement: believable for a Kenyan child of this age, but we have no source or homework count. A teacher who knows the class should say whether children really hold it."
-  }
+  "status": "draft"
+ },
+ "CRES.G5.THE_BI.KING_SOLOMON_THE_WISE_RU.SOLOMON.M_C5_SOL_ASKED_RICHES": {
+  "skill": "CRES.G5.THE_BI.KING_SOLOMON_THE_WISE_RU.SOLOMON",
+  "error": "Thinks Solomon asked God for riches and long life.",
+  "example": {
+   "question": "What did Solomon ask God for (1 Kings 3:9)?",
+   "wrong_answer": "Riches and a long life",
+   "correct_answer": "A discerning heart to judge the people and tell right from wrong"
+  },
+  "cause": "The child guesses what a king would want.",
+  "reveals": "Offer \"Riches and a long life\" beside \"A discerning heart to judge the people and tell right from wrong\" and ask the child to choose.",
+  "help": "Read 1 Kings 3:9-11: God was pleased because Solomon did not ask for riches.",
+  "feedback": "Solomon asked for a wise, discerning heart to rule well. God was pleased.",
+  "source": "To confirm by a CRE teacher: a common classroom error, not traced to a study by the author.",
+  "status": "draft"
  },
  "CRES.G5.THE_BI.NOAH_AND_HIS_SONS.NOAH_SONS.M_NS_NAMES": {
   "skill": "CRES.G5.THE_BI.NOAH_AND_HIS_SONS.NOAH_SONS",
-  "error": "Gives wrong names for Noah's sons.",
+  "error": "Names Cain, Abel and Seth (Adam's sons) as Noah's sons, instead of Shem, Ham and Japheth.",
   "example": {
    "question": "Which are the names of Noah's three sons?",
    "wrong_answer": "Cain, Abel and Seth",
@@ -563,11 +552,7 @@
   "help": "Read Genesis 9:18 and write the three names on a card.",
   "feedback": "Genesis 9:18 names Noah's sons who came out of the ark as Shem, Ham and Japheth.",
   "source": "The learner reads the passage loosely or mixes it with a similar Bible story (to confirm by a CRE teacher)",
-  "status": "draft",
-  "review": {
-   "mark": "doubtful",
-   "why": "A slip of Bible-fact recall (the passage is easy to check), more a trap option than a held belief."
-  }
+  "status": "draft"
  },
  "CRES.G5.THE_BI.NOAH_AND_HIS_SONS.NOAH_SONS.M_NS_HAM_COVERED": {
   "skill": "CRES.G5.THE_BI.NOAH_AND_HIS_SONS.NOAH_SONS",
@@ -582,11 +567,7 @@
   "help": "Read Genesis 9:22-23 slowly, naming each son.",
   "feedback": "Ham saw his father and told his brothers outside. Shem and Japheth took a garment and covered their father, walking backwards so that they did not see him.",
   "source": "common learner error; to confirm by a CRE teacher",
-  "status": "draft",
-  "review": {
-   "mark": "doubtful",
-   "why": "A slip of Bible-fact recall (the passage is easy to check), more a trap option than a held belief."
-  }
+  "status": "draft"
  },
  "CRES.G5.THE_BI.NOAH_AND_HIS_SONS.NOAH_SONS.M_NS_FIRST_FLOOD": {
   "skill": "CRES.G5.THE_BI.NOAH_AND_HIS_SONS.NOAH_SONS",
@@ -601,11 +582,7 @@
   "help": "Say that the flood is over in this reading.",
   "feedback": "In Genesis 9:18-23 the flood is already over. The story is about how Noah's sons treated their father after he lay uncovered in his tent.",
   "source": "common learner error; to confirm by a CRE teacher",
-  "status": "draft",
-  "review": {
-   "mark": "doubtful",
-   "why": "A slip of Bible-fact recall (the passage is easy to check), more a trap option than a held belief."
-  }
+  "status": "draft"
  },
  "CRES.G5.THE_BI.NOAH_AND_HIS_SONS.RESPECT_ELDERLY.M_RE_AGREE": {
   "skill": "CRES.G5.THE_BI.NOAH_AND_HIS_SONS.RESPECT_ELDERLY",
@@ -620,11 +597,7 @@
   "help": "Ask whether a polite question is respectful.",
   "feedback": "Respect is shown by polite words and actions: greeting, listening, helping. It does not mean never speaking.",
   "source": "common learner error; to confirm by a CRE teacher",
-  "status": "draft",
-  "review": {
-   "mark": "plausible, to confirm by a teacher",
-   "note": "Own judgement: believable for a Kenyan child of this age, but we have no source or homework count. A teacher who knows the class should say whether children really hold it."
-  }
+  "status": "draft"
  },
  "CRES.G5.THE_BI.NOAH_AND_HIS_SONS.RESPECT_ELDERLY.M_RE_RELATIVES": {
   "skill": "CRES.G5.THE_BI.NOAH_AND_HIS_SONS.RESPECT_ELDERLY",
@@ -639,11 +612,7 @@
   "help": "Give a story of an older neighbour carrying water.",
   "feedback": "A child shows respect to every older person: grandparents, neighbours, teachers and elders in the community.",
   "source": "common learner error; to confirm by a CRE teacher",
-  "status": "draft",
-  "review": {
-   "mark": "plausible, to confirm by a teacher",
-   "note": "Own judgement: believable for a Kenyan child of this age, but we have no source or homework count. A teacher who knows the class should say whether children really hold it."
-  }
+  "status": "draft"
  },
  "CRES.G5.THE_BI.NOAH_AND_HIS_SONS.RESPECT_ELDERLY.M_RE_PAYMENT": {
   "skill": "CRES.G5.THE_BI.NOAH_AND_HIS_SONS.RESPECT_ELDERLY",
@@ -658,15 +627,41 @@
   "help": "Ask what Shem and Japheth gained.",
   "feedback": "Christians respect and help the elderly because it is right and pleases God, not to gain a reward.",
   "source": "common learner error; to confirm by a CRE teacher",
-  "status": "draft",
-  "review": {
-   "mark": "doubtful",
-   "why": "Children who know the story would not say this; a trap option."
-  }
+  "status": "draft"
+ },
+ "CRES.G5.THE_BI.NOAH_AND_HIS_SONS.NOAH_SONS.M_C5_NS_SAW_TOLD_PRAISE": {
+  "skill": "CRES.G5.THE_BI.NOAH_AND_HIS_SONS.NOAH_SONS",
+  "error": "Thinks Ham was praised for telling his brothers what he saw.",
+  "example": {
+   "question": "Why was it wrong for Ham to tell his brothers about their father (Genesis 9:22)?",
+   "wrong_answer": "It was not wrong; he was praised",
+   "correct_answer": "He shamed his father instead of covering him"
+  },
+  "cause": "Telling others news sounds helpful to a child.",
+  "reveals": "Offer \"It was not wrong; he was praised\" beside \"He shamed his father instead of covering him\" and ask the child to choose.",
+  "help": "Contrast: Ham told; Shem and Japheth walked in backwards and covered him. Which honoured the father?",
+  "feedback": "Ham spread his father's shame. Shem and Japheth covered their father with respect.",
+  "source": "To confirm by a CRE teacher: a common classroom error, not traced to a study by the author.",
+  "status": "draft"
+ },
+ "CRES.G5.THE_BI.NOAH_AND_HIS_SONS.RESPECT_ELDERLY.M_C5_RE_IGNORE_POOR": {
+  "skill": "CRES.G5.THE_BI.NOAH_AND_HIS_SONS.RESPECT_ELDERLY",
+  "error": "Thinks a poor or sick old person deserves less respect than a rich one.",
+  "example": {
+   "question": "Mzee Otieno is old and poor. How should a child treat him?",
+   "wrong_answer": "Less politely than a rich elder",
+   "correct_answer": "With the same respect as any elder"
+  },
+  "cause": "The child sees how some adults treat the poor and copies it.",
+  "reveals": "Offer \"Less politely than a rich elder\" beside \"With the same respect as any elder\" and ask the child to choose.",
+  "help": "Read Leviticus 19:32: rise in the presence of the aged. Respect is for age, not money.",
+  "feedback": "Every elder deserves respect, rich or poor. God asks us to honour the old.",
+  "source": "To confirm by a CRE teacher: a common classroom error, not traced to a study by the author.",
+  "status": "draft"
  },
  "CRES.G5.THE_BI.A_HAND_WRITES_ON_THE_WAL.WRITING_ON_WALL.M_WW_KING": {
   "skill": "CRES.G5.THE_BI.A_HAND_WRITES_ON_THE_WAL.WRITING_ON_WALL",
-  "error": "Names the wrong king.",
+  "error": "Names Nebuchadnezzar, Belshazzar's father, as the king who held the feast.",
   "example": {
    "question": "Which king held the feast in Daniel 5?",
    "wrong_answer": "Nebuchadnezzar",
@@ -677,11 +672,7 @@
   "help": "Read Daniel 5:1 and write the name.",
   "feedback": "The king who held the feast in Daniel 5 was Belshazzar. Nebuchadnezzar had taken the vessels from the temple earlier.",
   "source": "The learner reads the passage loosely or mixes it with a similar Bible story (to confirm by a CRE teacher)",
-  "status": "draft",
-  "review": {
-   "mark": "doubtful",
-   "why": "A slip of Bible-fact recall (the passage is easy to check), more a trap option than a held belief."
-  }
+  "status": "draft"
  },
  "CRES.G5.THE_BI.A_HAND_WRITES_ON_THE_WAL.WRITING_ON_WALL.M_WW_WHO_WROTE": {
   "skill": "CRES.G5.THE_BI.A_HAND_WRITES_ON_THE_WAL.WRITING_ON_WALL",
@@ -696,11 +687,7 @@
   "help": "Read Daniel 5:5.",
   "feedback": "In Daniel 5:5 the fingers of a human hand appeared and wrote on the wall. Daniel did not write them. He was called to read and explain them.",
   "source": "common learner error; to confirm by a CRE teacher",
-  "status": "draft",
-  "review": {
-   "mark": "doubtful",
-   "why": "A slip of Bible-fact recall (the passage is easy to check), more a trap option than a held belief."
-  }
+  "status": "draft"
  },
  "CRES.G5.THE_BI.A_HAND_WRITES_ON_THE_WAL.WRITING_ON_WALL.M_WW_VESSELS": {
   "skill": "CRES.G5.THE_BI.A_HAND_WRITES_ON_THE_WAL.WRITING_ON_WALL",
@@ -715,15 +702,11 @@
   "help": "Read Daniel 5:2-4.",
   "feedback": "The vessels belonged to the temple in Jerusalem and were holy to God. Belshazzar used them at his feast while praising idols of gold and silver.",
   "source": "common learner error; to confirm by a CRE teacher",
-  "status": "draft",
-  "review": {
-   "mark": "doubtful",
-   "why": "A slip of Bible-fact recall (the passage is easy to check), more a trap option than a held belief."
-  }
+  "status": "draft"
  },
  "CRES.G5.THE_BI.A_HAND_WRITES_ON_THE_WAL.WRITING_ON_WALL.M_WW_MEANING": {
   "skill": "CRES.G5.THE_BI.A_HAND_WRITES_ON_THE_WAL.WRITING_ON_WALL",
-  "error": "Does not know what the writing said.",
+  "error": "Thinks the writing promised the kingdom would grow, when it said the days were numbered, the king weighed and found wanting, the kingdom divided.",
   "example": {
    "question": "What did the writing say about the king's kingdom?",
    "wrong_answer": "It would grow bigger",
@@ -734,11 +717,7 @@
   "help": "Read Daniel 5:25-28 and match mene, tekel and peres.",
   "feedback": "Daniel said that God had numbered the kingdom and ended it, that the king had been weighed and found too light, and that the kingdom would be divided.",
   "source": "The learner reads the passage loosely or mixes it with a similar Bible story (to confirm by a CRE teacher)",
-  "status": "draft",
-  "review": {
-   "mark": "doubtful",
-   "why": "A slip of Bible-fact recall (the passage is easy to check), more a trap option than a held belief."
-  }
+  "status": "draft"
  },
  "CRES.G5.THE_BI.A_HAND_WRITES_ON_THE_WAL.HUMILITY_DANIEL.M_HD_WEAK": {
   "skill": "CRES.G5.THE_BI.A_HAND_WRITES_ON_THE_WAL.HUMILITY_DANIEL",
@@ -753,11 +732,7 @@
   "help": "Ask whether Daniel was weak when he spoke to the king.",
   "feedback": "Humility is not weakness. A humble person does not boast, listens, and treats others with respect. Daniel spoke truthfully to a king.",
   "source": "common learner error; to confirm by a CRE teacher",
-  "status": "draft",
-  "review": {
-   "mark": "plausible, to confirm by a teacher",
-   "note": "Own judgement: believable for a Kenyan child of this age, but we have no source or homework count. A teacher who knows the class should say whether children really hold it."
-  }
+  "status": "draft"
  },
  "CRES.G5.THE_BI.A_HAND_WRITES_ON_THE_WAL.HUMILITY_DANIEL.M_HD_PROUD_BELSHAZZAR": {
   "skill": "CRES.G5.THE_BI.A_HAND_WRITES_ON_THE_WAL.HUMILITY_DANIEL",
@@ -772,11 +747,7 @@
   "help": "Read Daniel 5:22-23, where Daniel says Belshazzar did not humble himself.",
   "feedback": "Daniel told the king that he had not humbled himself but had lifted himself up against God. King Belshazzar showed pride, not Daniel.",
   "source": "common learner error; to confirm by a CRE teacher",
-  "status": "draft",
-  "review": {
-   "mark": "doubtful",
-   "why": "Children who know the story would not say this; a trap option."
-  }
+  "status": "draft"
  },
  "CRES.G5.THE_BI.A_HAND_WRITES_ON_THE_WAL.HUMILITY_DANIEL.M_HD_REWARD": {
   "skill": "CRES.G5.THE_BI.A_HAND_WRITES_ON_THE_WAL.HUMILITY_DANIEL",
@@ -791,11 +762,22 @@
   "help": "Read Daniel 5:17.",
   "feedback": "In Daniel 5:17 Daniel said the king could keep his gifts and give his rewards to someone else, yet he would still read the writing. He served God faithfully, not for pay.",
   "source": "common learner error; to confirm by a CRE teacher",
-  "status": "draft",
-  "review": {
-   "mark": "doubtful",
-   "why": "Children who know the story would not say this; a trap option."
-  }
+  "status": "draft"
+ },
+ "CRES.G5.THE_BI.A_HAND_WRITES_ON_THE_WAL.HUMILITY_DANIEL.M_C5_HD_HUMBLE_SILENT": {
+  "skill": "CRES.G5.THE_BI.A_HAND_WRITES_ON_THE_WAL.HUMILITY_DANIEL",
+  "error": "Thinks a humble person never speaks the truth to someone more powerful.",
+  "example": {
+   "question": "Daniel told the king hard words (Daniel 5:22-23). Was that humble?",
+   "wrong_answer": "No, humble people stay silent",
+   "correct_answer": "Yes: humble people do not boast but still speak the truth"
+  },
+  "cause": "The child pictures humility as being quiet and small.",
+  "reveals": "Offer \"No, humble people stay silent\" beside \"Yes: humble people do not boast but still speak the truth\" and ask the child to choose.",
+  "help": "Read Daniel 5:17 and 5:22: Daniel refused rewards (humble) and spoke the truth (brave).",
+  "feedback": "Daniel was humble and brave. He did not want rewards, and he told the king the truth.",
+  "source": "To confirm by a CRE teacher: a common classroom error, not traced to a study by the author.",
+  "status": "draft"
  },
  "CRES.G5.THE_BI.MOUNT_CARMEL_CONTEST.CARMEL.M_CAR_BAAL_ANSWERED": {
   "skill": "CRES.G5.THE_BI.MOUNT_CARMEL_CONTEST.CARMEL",
@@ -810,11 +792,7 @@
   "help": "Read 1 Kings 18:26, \"there was no voice\".",
   "feedback": "The prophets of Baal called from morning till noon and there was no voice and no answer. Only the Lord answered by fire.",
   "source": "common learner error; to confirm by a CRE teacher",
-  "status": "draft",
-  "review": {
-   "mark": "doubtful",
-   "why": "A slip of Bible-fact recall (the passage is easy to check), more a trap option than a held belief."
-  }
+  "status": "draft"
  },
  "CRES.G5.THE_BI.MOUNT_CARMEL_CONTEST.CARMEL.M_CAR_ELIJAH_LIT": {
   "skill": "CRES.G5.THE_BI.MOUNT_CARMEL_CONTEST.CARMEL",
@@ -829,30 +807,22 @@
   "help": "Read verse 38: \"the fire of the Lord fell\".",
   "feedback": "The fire of the Lord fell and burned up the offering, the wood, the stones and the dust, and even the water in the trench. Elijah did not light it.",
   "source": "common learner error; to confirm by a CRE teacher",
-  "status": "draft",
-  "review": {
-   "mark": "doubtful",
-   "why": "A slip of Bible-fact recall (the passage is easy to check), more a trap option than a held belief."
-  }
+  "status": "draft"
  },
  "CRES.G5.THE_BI.MOUNT_CARMEL_CONTEST.CARMEL.M_CAR_NUMBERS": {
   "skill": "CRES.G5.THE_BI.MOUNT_CARMEL_CONTEST.CARMEL",
-  "error": "Mixes up the numbers.",
+  "error": "Says there were twelve prophets of Baal, mixing them with the twelve stones of Elijah's altar, instead of 450.",
   "example": {
    "question": "How many prophets of Baal were there on Mount Carmel?",
-   "wrong_answer": "Four hundred and fifty",
-   "correct_answer": "Twelve"
+   "wrong_answer": "Twelve",
+   "correct_answer": "Four hundred and fifty"
   },
   "cause": "Numbers in the story: 450 prophets, twelve stones, four jars of water.",
-  "reveals": "Offer \"Four hundred and fifty\" beside \"Twelve\" and ask the child to choose.",
+  "reveals": "Offer \"Twelve\" beside \"Four hundred and fifty\" and ask the child to choose.",
   "help": "Make a card for each number and what it counted.",
   "feedback": "There were 450 prophets of Baal against Elijah alone. The twelve stones stood for the twelve tribes, and Elijah had jars of water poured on the altar.",
   "source": "The learner reads the passage loosely or mixes it with a similar Bible story (to confirm by a CRE teacher)",
-  "status": "draft",
-  "review": {
-   "mark": "doubtful",
-   "why": "A slip of Bible-fact recall (the passage is easy to check), more a trap option than a held belief."
-  }
+  "status": "draft"
  },
  "CRES.G5.THE_BI.MOUNT_CARMEL_CONTEST.TRUE_GOD.M_TG_IDOL_POWER": {
   "skill": "CRES.G5.THE_BI.MOUNT_CARMEL_CONTEST.TRUE_GOD",
@@ -867,11 +837,7 @@
   "help": "Compare Carmel: the idol did not answer, the Lord did.",
   "feedback": "An idol cannot hear, see, speak or answer. At Carmel the Lord answered and Baal did not. God alone is worthy of worship.",
   "source": "common learner error; to confirm by a CRE teacher",
-  "status": "draft",
-  "review": {
-   "mark": "plausible, to confirm by a teacher",
-   "note": "Own judgement: believable for a Kenyan child of this age, but we have no source or homework count. A teacher who knows the class should say whether children really hold it."
-  }
+  "status": "draft"
  },
  "CRES.G5.THE_BI.MOUNT_CARMEL_CONTEST.TRUE_GOD.M_TG_SECRET_GROUP": {
   "skill": "CRES.G5.THE_BI.MOUNT_CARMEL_CONTEST.TRUE_GOD",
@@ -886,11 +852,7 @@
   "help": "Say that secrets from parents are a warning sign.",
   "feedback": "A group that asks a child to hide things from her parents, or to do something against God's teaching, is unsafe. Mwende should refuse and tell her parents or a trusted adult.",
   "source": "common learner error; to confirm by a CRE teacher",
-  "status": "draft",
-  "review": {
-   "mark": "plausible, to confirm by a teacher",
-   "note": "Own judgement: believable for a Kenyan child of this age, but we have no source or homework count. A teacher who knows the class should say whether children really hold it."
-  }
+  "status": "draft"
  },
  "CRES.G5.THE_BI.MOUNT_CARMEL_CONTEST.TRUE_GOD.M_TG_MANY_GODS": {
   "skill": "CRES.G5.THE_BI.MOUNT_CARMEL_CONTEST.TRUE_GOD",
@@ -905,11 +867,37 @@
   "help": "Read Exodus 20:3-5 and ask what Elijah said to the people in 1 Kings 18:21.",
   "feedback": "The Ten Commandments teach that God's people worship the Lord alone and do not make idols to bow down to (Exodus 20:3-5). Elijah asked the people not to waver between two opinions.",
   "source": "common learner error; to confirm by a CRE teacher",
-  "status": "draft",
-  "review": {
-   "mark": "plausible, to confirm by a teacher",
-   "note": "Own judgement: believable for a Kenyan child of this age, but we have no source or homework count. A teacher who knows the class should say whether children really hold it."
-  }
+  "status": "draft"
+ },
+ "CRES.G5.THE_BI.MOUNT_CARMEL_CONTEST.CARMEL.M_C5_CAR_NO_WATER": {
+  "skill": "CRES.G5.THE_BI.MOUNT_CARMEL_CONTEST.CARMEL",
+  "error": "Thinks Elijah kept the altar dry so it would burn easily.",
+  "example": {
+   "question": "What did Elijah have poured on the altar before he prayed (1 Kings 18:33-35)?",
+   "wrong_answer": "Nothing, he kept it dry",
+   "correct_answer": "Water, three times, until the trench was full"
+  },
+  "cause": "The child reasons that fire needs dry wood.",
+  "reveals": "Offer \"Nothing, he kept it dry\" beside \"Water, three times, until the trench was full\" and ask the child to choose.",
+  "help": "Read verses 33-35 and ask why Elijah made it harder: so all would see that only God could do it.",
+  "feedback": "Elijah had water poured three times. When the fire fell, everyone knew it was the Lord.",
+  "source": "To confirm by a CRE teacher: a common classroom error, not traced to a study by the author.",
+  "status": "draft"
+ },
+ "CRES.G5.THE_BI.MOUNT_CARMEL_CONTEST.TRUE_GOD.M_C5_TG_LUCK_CHARMS": {
+  "skill": "CRES.G5.THE_BI.MOUNT_CARMEL_CONTEST.TRUE_GOD",
+  "error": "Thinks a lucky charm or object can protect a Christian as God does.",
+  "example": {
+   "question": "Achieng is given a charm \"for protection\" before an exam. What does the Bible teach?",
+   "wrong_answer": "The charm will protect her",
+   "correct_answer": "Only God protects; do not trust in objects"
+  },
+  "cause": "Charms are spoken of at home or in films as having power.",
+  "reveals": "Offer \"The charm will protect her\" beside \"Only God protects; do not trust in objects\" and ask the child to choose.",
+  "help": "Link with the idol misconception: an object cannot hear or act. Read Psalm 121:2.",
+  "feedback": "An object cannot protect you. Christians trust God alone, who made heaven and earth.",
+  "source": "To confirm by a CRE teacher of the school's own tradition (FAITH: the wording touches belief or practice): a common classroom error, not traced to a study by the author.",
+  "status": "draft"
  },
  "CRES.G5.THE_BI.THE_BIRTH_OF_MOSES.MOSES_BIRTH.M_MB_WHO_FOUND": {
   "skill": "CRES.G5.THE_BI.THE_BIRTH_OF_MOSES.MOSES_BIRTH",
@@ -924,15 +912,11 @@
   "help": "Read Exodus 2:5-6.",
   "feedback": "Pharaoh's daughter came down to the river to bathe, saw the basket among the reeds and took pity on the baby. His sister was watching from a distance.",
   "source": "common learner error; to confirm by a CRE teacher",
-  "status": "draft",
-  "review": {
-   "mark": "doubtful",
-   "why": "A slip of Bible-fact recall (the passage is easy to check), more a trap option than a held belief."
-  }
+  "status": "draft"
  },
  "CRES.G5.THE_BI.THE_BIRTH_OF_MOSES.MOSES_BIRTH.M_MB_PLACE": {
   "skill": "CRES.G5.THE_BI.THE_BIRTH_OF_MOSES.MOSES_BIRTH",
-  "error": "Thinks Moses was put in the sea or left on land.",
+  "error": "Puts the basket in the Red Sea, mixing Moses' birth with the crossing of the sea, instead of among the reeds of the Nile.",
   "example": {
    "question": "Where did Moses' mother put the basket?",
    "wrong_answer": "In the Red Sea",
@@ -943,11 +927,7 @@
   "help": "Read Exodus 2:3.",
   "feedback": "Moses' mother put the basket among the reeds by the bank of the Nile river, not in the Red Sea.",
   "source": "The learner reads the passage loosely or mixes it with a similar Bible story (to confirm by a CRE teacher)",
-  "status": "draft",
-  "review": {
-   "mark": "doubtful",
-   "why": "A slip of Bible-fact recall (the passage is easy to check), more a trap option than a held belief."
-  }
+  "status": "draft"
  },
  "CRES.G5.THE_BI.THE_BIRTH_OF_MOSES.MOSES_BIRTH.M_MB_NURSE": {
   "skill": "CRES.G5.THE_BI.THE_BIRTH_OF_MOSES.MOSES_BIRTH",
@@ -962,11 +942,22 @@
   "help": "Read Exodus 2:7-9.",
   "feedback": "Moses' sister offered to find a nurse and brought his own mother, whom Pharaoh's daughter paid to nurse him. God protected Moses.",
   "source": "common learner error; to confirm by a CRE teacher",
-  "status": "draft",
-  "review": {
-   "mark": "doubtful",
-   "why": "A slip of Bible-fact recall (the passage is easy to check), more a trap option than a held belief."
-  }
+  "status": "draft"
+ },
+ "CRES.G5.THE_BI.THE_BIRTH_OF_MOSES.MOSES_BIRTH.M_C5_MB_WHY_HIDE": {
+  "skill": "CRES.G5.THE_BI.THE_BIRTH_OF_MOSES.MOSES_BIRTH",
+  "error": "Does not link the hiding of baby Moses with Pharaoh's order to kill Hebrew boys, and thinks the mother wanted to get rid of him.",
+  "example": {
+   "question": "Why did Moses' mother hide him and then put him in a basket (Exodus 1:22-2:3)?",
+   "wrong_answer": "She did not want him",
+   "correct_answer": "Pharaoh had ordered every Hebrew baby boy to be thrown into the Nile"
+  },
+  "cause": "The child sees only the basket and not the danger before it.",
+  "reveals": "Offer \"She did not want him\" beside \"Pharaoh had ordered every Hebrew baby boy to be thrown into the Nile\" and ask the child to choose.",
+  "help": "Read Exodus 1:22 first, then 2:2-3. Ask what the mother was saving him from.",
+  "feedback": "She loved him. Pharaoh had ordered Hebrew boys killed, so she hid him to save his life.",
+  "source": "To confirm by a CRE teacher: a common classroom error, not traced to a study by the author.",
+  "status": "draft"
  },
  "CRES.G5.THE_BI.THE_CALL_OF_MOSES.MOSES_CALL.M_MC_BUSH_BURNT": {
   "skill": "CRES.G5.THE_BI.THE_CALL_OF_MOSES.MOSES_CALL",
@@ -981,15 +972,11 @@
   "help": "Read Exodus 3:2.",
   "feedback": "The bush was on fire but it was not burned up. This drew Moses to look and hear God speak.",
   "source": "common learner error; to confirm by a CRE teacher",
-  "status": "draft",
-  "review": {
-   "mark": "doubtful",
-   "why": "A slip of Bible-fact recall (the passage is easy to check), more a trap option than a held belief."
-  }
+  "status": "draft"
  },
  "CRES.G5.THE_BI.THE_CALL_OF_MOSES.MOSES_CALL.M_MC_SANDALS": {
   "skill": "CRES.G5.THE_BI.THE_CALL_OF_MOSES.MOSES_CALL",
-  "error": "Does not know why Moses took off his sandals.",
+  "error": "Says Moses took off his sandals because they were dirty, not because the ground was holy.",
   "example": {
    "question": "Why did God tell Moses to take off his sandals?",
    "wrong_answer": "They were dirty",
@@ -1000,15 +987,11 @@
   "help": "Read Exodus 3:5.",
   "feedback": "God told Moses to take off his sandals because the place where he stood was holy ground. It is a sign of respect for God.",
   "source": "common learner error; to confirm by a CRE teacher",
-  "status": "draft",
-  "review": {
-   "mark": "doubtful",
-   "why": "A slip of Bible-fact recall (the passage is easy to check), more a trap option than a held belief."
-  }
+  "status": "draft"
  },
  "CRES.G5.THE_BI.THE_CALL_OF_MOSES.MOSES_CALL.M_MC_TASK": {
   "skill": "CRES.G5.THE_BI.THE_CALL_OF_MOSES.MOSES_CALL",
-  "error": "Gets the task God gave Moses wrong.",
+  "error": "Says God sent Moses to build a temple, mixing Moses with Solomon, instead of going to Pharaoh to bring Israel out of Egypt.",
   "example": {
    "question": "What did God send Moses to do?",
    "wrong_answer": "To build a temple",
@@ -1019,11 +1002,22 @@
   "help": "Read Exodus 3:10.",
   "feedback": "God said, \"I have seen the misery of my people\", and sent Moses to Pharaoh to bring the Israelites out of Egypt.",
   "source": "The learner reads the passage loosely or mixes it with a similar Bible story (to confirm by a CRE teacher)",
-  "status": "draft",
-  "review": {
-   "mark": "doubtful",
-   "why": "A slip of Bible-fact recall (the passage is easy to check), more a trap option than a held belief."
-  }
+  "status": "draft"
+ },
+ "CRES.G5.THE_BI.THE_CALL_OF_MOSES.MOSES_CALL.M_C5_MC_READY": {
+  "skill": "CRES.G5.THE_BI.THE_CALL_OF_MOSES.MOSES_CALL",
+  "error": "Thinks Moses agreed at once and gladly.",
+  "example": {
+   "question": "How did Moses feel when God spoke from the bush (Exodus 3:6)?",
+   "wrong_answer": "Happy and ready at once",
+   "correct_answer": "Afraid: he hid his face"
+  },
+  "cause": "The child expects a hero to be eager.",
+  "reveals": "Offer \"Happy and ready at once\" beside \"Afraid: he hid his face\" and ask the child to choose.",
+  "help": "Read Exodus 3:6 and 3:11: Moses hid his face and asked \"Who am I?\". God promised to be with him.",
+  "feedback": "Moses was afraid and hid his face. God promised to be with him, and he went.",
+  "source": "To confirm by a CRE teacher: a common classroom error, not traced to a study by the author.",
+  "status": "draft"
  },
  "CRES.G5.THE_LI.JOHN_THE_BAPTIST.JOHN_BAPTIST.M_JB_REPENT_SORRY": {
   "skill": "CRES.G5.THE_LI.JOHN_THE_BAPTIST.JOHN_BAPTIST",
@@ -1038,11 +1032,7 @@
   "help": "Read Luke 3:8, \"bear fruits that befit repentance\".",
   "feedback": "Repentance is more than saying sorry. It is turning away from wrong and showing it by a changed life, \"fruits\" (Luke 3:8).",
   "source": "common learner error; to confirm by a CRE teacher",
-  "status": "draft",
-  "review": {
-   "mark": "plausible, to confirm by a teacher",
-   "note": "Own judgement: believable for a Kenyan child of this age, but we have no source or homework count. A teacher who knows the class should say whether children really hold it."
-  }
+  "status": "draft"
  },
  "CRES.G5.THE_LI.JOHN_THE_BAPTIST.JOHN_BAPTIST.M_JB_TAX": {
   "skill": "CRES.G5.THE_LI.JOHN_THE_BAPTIST.JOHN_BAPTIST",
@@ -1057,11 +1047,7 @@
   "help": "Read Luke 3:12-13.",
   "feedback": "John told the tax collectors to collect no more than they were ordered to. He taught honesty in their work.",
   "source": "common learner error; to confirm by a CRE teacher",
-  "status": "draft",
-  "review": {
-   "mark": "doubtful",
-   "why": "A slip of Bible-fact recall (the passage is easy to check), more a trap option than a held belief."
-  }
+  "status": "draft"
  },
  "CRES.G5.THE_LI.JOHN_THE_BAPTIST.JOHN_BAPTIST.M_JB_SHARE": {
   "skill": "CRES.G5.THE_LI.JOHN_THE_BAPTIST.JOHN_BAPTIST",
@@ -1076,11 +1062,22 @@
   "help": "Read Luke 3:11.",
   "feedback": "John said that whoever has two coats should share with the one who has none, and whoever has food should do the same.",
   "source": "common learner error; to confirm by a CRE teacher",
-  "status": "draft",
-  "review": {
-   "mark": "doubtful",
-   "why": "A slip of Bible-fact recall (the passage is easy to check), more a trap option than a held belief."
-  }
+  "status": "draft"
+ },
+ "CRES.G5.THE_LI.JOHN_THE_BAPTIST.JOHN_BAPTIST.M_C5_JB_SOLDIERS": {
+  "skill": "CRES.G5.THE_LI.JOHN_THE_BAPTIST.JOHN_BAPTIST",
+  "error": "Thinks John told soldiers to leave the army.",
+  "example": {
+   "question": "What did John tell the soldiers (Luke 3:14)?",
+   "wrong_answer": "Leave the army",
+   "correct_answer": "Do not take money by force or accuse falsely; be content with your pay"
+  },
+  "cause": "The child expects a preacher to call everyone out of a job that uses force.",
+  "reveals": "Offer \"Leave the army\" beside \"Do not take money by force or accuse falsely; be content with your pay\" and ask the child to choose.",
+  "help": "Make a chart: crowd, tax collectors, soldiers, and what John told each. None was told to leave.",
+  "feedback": "John told the soldiers to be honest and content with their pay, not to leave their work.",
+  "source": "To confirm by a CRE teacher: a common classroom error, not traced to a study by the author.",
+  "status": "draft"
  },
  "CRES.G5.THE_LI.THE_BAPTISM_OF_JESUS_CHR.BAPTISM_JESUS.M_BJ_SIGN": {
   "skill": "CRES.G5.THE_LI.THE_BAPTISM_OF_JESUS_CHR.BAPTISM_JESUS",
@@ -1095,15 +1092,11 @@
   "help": "Read Luke 3:22: \"in bodily form like a dove\".",
   "feedback": "The Holy Spirit came down on Jesus in bodily form like a dove. It was a sign, not an ordinary bird.",
   "source": "common learner error; to confirm by a CRE teacher",
-  "status": "draft",
-  "review": {
-   "mark": "doubtful",
-   "why": "A slip of Bible-fact recall (the passage is easy to check), more a trap option than a held belief."
-  }
+  "status": "draft"
  },
  "CRES.G5.THE_LI.THE_BAPTISM_OF_JESUS_CHR.BAPTISM_JESUS.M_BJ_VOICE": {
   "skill": "CRES.G5.THE_LI.THE_BAPTISM_OF_JESUS_CHR.BAPTISM_JESUS",
-  "error": "Does not know whose voice spoke or what was said.",
+  "error": "Thinks the voice from heaven told Jesus to repent, instead of calling him the beloved Son.",
   "example": {
    "question": "What did the voice from heaven say to Jesus?",
    "wrong_answer": "\"You must repent\"",
@@ -1114,11 +1107,7 @@
   "help": "Read Luke 3:22.",
   "feedback": "A voice from heaven said, \"You are my beloved Son; with you I am well pleased.\"",
   "source": "common learner error; to confirm by a CRE teacher",
-  "status": "draft",
-  "review": {
-   "mark": "doubtful",
-   "why": "A slip of Bible-fact recall (the passage is easy to check), more a trap option than a held belief."
-  }
+  "status": "draft"
  },
  "CRES.G5.THE_LI.THE_BAPTISM_OF_JESUS_CHR.BAPTISM_JESUS.M_BJ_SINNED": {
   "skill": "CRES.G5.THE_LI.THE_BAPTISM_OF_JESUS_CHR.BAPTISM_JESUS",
@@ -1133,11 +1122,22 @@
   "help": "Ask what the voice said about Jesus right after.",
   "feedback": "Jesus was baptised to obey God and to stand with the people he came to save, not because he had sin to confess. A Christian follows his humility.",
   "source": "to confirm by a CRE teacher, because churches explain this in different words",
-  "status": "draft",
-  "review": {
-   "mark": "plausible, to confirm by a teacher",
-   "note": "Own judgement: believable for a Kenyan child of this age, but we have no source or homework count. A teacher who knows the class should say whether children really hold it."
-  }
+  "status": "draft"
+ },
+ "CRES.G5.THE_LI.THE_BAPTISM_OF_JESUS_CHR.BAPTISM_JESUS.M_C5_BJ_WHO_BAPTISED": {
+  "skill": "CRES.G5.THE_LI.THE_BAPTISM_OF_JESUS_CHR.BAPTISM_JESUS",
+  "error": "Thinks Peter or a priest baptised Jesus.",
+  "example": {
+   "question": "Who baptised Jesus?",
+   "wrong_answer": "Peter",
+   "correct_answer": "John the Baptist"
+  },
+  "cause": "Peter is the disciple the child knows best.",
+  "reveals": "Offer \"Peter\" beside \"John the Baptist\" and ask the child to choose.",
+  "help": "Read Luke 3:21 with Matthew 3:13: Jesus came to John at the Jordan.",
+  "feedback": "John the Baptist baptised Jesus in the River Jordan.",
+  "source": "To confirm by a CRE teacher: a common classroom error, not traced to a study by the author.",
+  "status": "draft"
  },
  "CRES.G5.THE_LI.CALMING_THE_STORM.CALMING_STORM.M_CS_DISCIPLES_CALMED": {
   "skill": "CRES.G5.THE_LI.CALMING_THE_STORM.CALMING_STORM",
@@ -1152,11 +1152,7 @@
   "help": "Read Mark 4:39.",
   "feedback": "Jesus woke up, told the wind to stop and the waves to be still, and there was a great calm. The disciples could not stop the storm themselves.",
   "source": "common learner error; to confirm by a CRE teacher",
-  "status": "draft",
-  "review": {
-   "mark": "doubtful",
-   "why": "A slip of Bible-fact recall (the passage is easy to check), more a trap option than a held belief."
-  }
+  "status": "draft"
  },
  "CRES.G5.THE_LI.CALMING_THE_STORM.CALMING_STORM.M_CS_AWAKE": {
   "skill": "CRES.G5.THE_LI.CALMING_THE_STORM.CALMING_STORM",
@@ -1171,11 +1167,7 @@
   "help": "Read Mark 4:38.",
   "feedback": "Jesus was asleep on a cushion in the stern when the storm came. The disciples woke him and asked whether he did not care.",
   "source": "common learner error; to confirm by a CRE teacher",
-  "status": "draft",
-  "review": {
-   "mark": "doubtful",
-   "why": "A slip of Bible-fact recall (the passage is easy to check), more a trap option than a held belief."
-  }
+  "status": "draft"
  },
  "CRES.G5.THE_LI.CALMING_THE_STORM.CALMING_STORM.M_CS_NO_TROUBLE": {
   "skill": "CRES.G5.THE_LI.CALMING_THE_STORM.CALMING_STORM",
@@ -1190,11 +1182,22 @@
   "help": "Ask: were the disciples in the storm with Jesus in the boat?",
   "feedback": "The disciples were in the storm even though Jesus was with them. The lesson is that Jesus is with us in our troubles and has power over them.",
   "source": "common learner error; to confirm by a CRE teacher",
-  "status": "draft",
-  "review": {
-   "mark": "plausible, to confirm by a teacher",
-   "note": "Own judgement: believable for a Kenyan child of this age, but we have no source or homework count. A teacher who knows the class should say whether children really hold it."
-  }
+  "status": "draft"
+ },
+ "CRES.G5.THE_LI.CALMING_THE_STORM.CALMING_STORM.M_C5_CS_SCOLDED_STORM_ONLY": {
+  "skill": "CRES.G5.THE_LI.CALMING_THE_STORM.CALMING_STORM",
+  "error": "Thinks Jesus spoke only to the storm and said nothing to the disciples.",
+  "example": {
+   "question": "What did Jesus ask the disciples after the storm (Mark 4:40)?",
+   "wrong_answer": "Nothing",
+   "correct_answer": "\"Why are you so afraid? Do you still have no faith?\""
+  },
+  "cause": "The miracle is remembered and the question after it is lost.",
+  "reveals": "Offer \"Nothing\" beside \"\"Why are you so afraid? Do you still have no faith?\"\" and ask the child to choose.",
+  "help": "Read Mark 4:39-40 and stop after each verse: first the wind, then the disciples.",
+  "feedback": "Jesus calmed the storm and then asked, \"Why are you so afraid? Do you still have no faith?\"",
+  "source": "To confirm by a CRE teacher: a common classroom error, not traced to a study by the author.",
+  "status": "draft"
  },
  "CRES.G5.THE_LI.FEEDING_THE_FOUR_THOUSAN.FEEDING_4000.M_F4_FIVE_THOUSAND": {
   "skill": "CRES.G5.THE_LI.FEEDING_THE_FOUR_THOUSAN.FEEDING_4000",
@@ -1209,11 +1212,7 @@
   "help": "Make a two-column chart: four thousand and five thousand; fill loaves, fish, baskets.",
   "feedback": "In Matthew 15 Jesus fed four thousand men with seven loaves and a few small fish, and seven baskets were left. The feeding of five thousand used five loaves and two fish and left twelve baskets.",
   "source": "The learner reads the passage loosely or mixes it with a similar Bible story (to confirm by a CRE teacher)",
-  "status": "draft",
-  "review": {
-   "mark": "plausible, to confirm by a teacher",
-   "note": "Own judgement: believable for a Kenyan child of this age, but we have no source or homework count. A teacher who knows the class should say whether children really hold it."
-  }
+  "status": "draft"
  },
  "CRES.G5.THE_LI.FEEDING_THE_FOUR_THOUSAN.FEEDING_4000.M_F4_WHY": {
   "skill": "CRES.G5.THE_LI.FEEDING_THE_FOUR_THOUSAN.FEEDING_4000",
@@ -1228,11 +1227,7 @@
   "help": "Read Matthew 15:32.",
   "feedback": "Jesus said, \"I have compassion on the crowd\", because they had been with him three days and had nothing to eat.",
   "source": "common learner error; to confirm by a CRE teacher",
-  "status": "draft",
-  "review": {
-   "mark": "doubtful",
-   "why": "Children who know the story would not say this; a trap option."
-  }
+  "status": "draft"
  },
  "CRES.G5.THE_LI.FEEDING_THE_FOUR_THOUSAN.FEEDING_4000.M_F4_NEEDY_MONEY": {
   "skill": "CRES.G5.THE_LI.FEEDING_THE_FOUR_THOUSAN.FEEDING_4000",
@@ -1247,11 +1242,22 @@
   "help": "List five ways with the class: food, clothes, school items, time, prayer.",
   "feedback": "We can help the needy by sharing food, clothes and school items, by visiting the sick, and by giving time, not only money.",
   "source": "common learner error; to confirm by a CRE teacher",
-  "status": "draft",
-  "review": {
-   "mark": "plausible, to confirm by a teacher",
-   "note": "Own judgement: believable for a Kenyan child of this age, but we have no source or homework count. A teacher who knows the class should say whether children really hold it."
-  }
+  "status": "draft"
+ },
+ "CRES.G5.THE_LI.FEEDING_THE_FOUR_THOUSAN.FEEDING_4000.M_C5_F4_BASKETS": {
+  "skill": "CRES.G5.THE_LI.FEEDING_THE_FOUR_THOUSAN.FEEDING_4000",
+  "error": "Says twelve baskets were left over, the number from the five thousand.",
+  "example": {
+   "question": "How many basketfuls were left over after the four thousand ate (Matthew 15:37)?",
+   "wrong_answer": "Twelve",
+   "correct_answer": "Seven"
+  },
+  "cause": "The two feedings share many details and the numbers swap.",
+  "reveals": "Offer \"Twelve\" beside \"Seven\" and ask the child to choose.",
+  "help": "Make a two-column chart: 5,000 (five loaves, twelve baskets) and 4,000 (seven loaves, seven baskets).",
+  "feedback": "After the four thousand ate, seven basketfuls were left over.",
+  "source": "To confirm by a CRE teacher: a common classroom error, not traced to a study by the author.",
+  "status": "draft"
  },
  "CRES.G5.THE_LI.HEALING_THE_PARALYSED_MA.PARALYSED_MAN.M_PM_DOOR": {
   "skill": "CRES.G5.THE_LI.HEALING_THE_PARALYSED_MA.PARALYSED_MAN",
@@ -1266,11 +1272,7 @@
   "help": "Read Mark 2:4.",
   "feedback": "The crowd was so large that the four friends could not reach Jesus by the door, so they made an opening in the roof and let the man down.",
   "source": "common learner error; to confirm by a CRE teacher",
-  "status": "draft",
-  "review": {
-   "mark": "doubtful",
-   "why": "A slip of Bible-fact recall (the passage is easy to check), more a trap option than a held belief."
-  }
+  "status": "draft"
  },
  "CRES.G5.THE_LI.HEALING_THE_PARALYSED_MA.PARALYSED_MAN.M_PM_HEALED_FIRST": {
   "skill": "CRES.G5.THE_LI.HEALING_THE_PARALYSED_MA.PARALYSED_MAN",
@@ -1285,11 +1287,7 @@
   "help": "Read Mark 2:5.",
   "feedback": "In Mark 2:5 Jesus first said, \"Son, your sins are forgiven.\" The healing of the body came after that.",
   "source": "common learner error; to confirm by a CRE teacher",
-  "status": "draft",
-  "review": {
-   "mark": "doubtful",
-   "why": "A slip of Bible-fact recall (the passage is easy to check), more a trap option than a held belief."
-  }
+  "status": "draft"
  },
  "CRES.G5.THE_LI.HEALING_THE_PARALYSED_MA.PARALYSED_MAN.M_PM_ALONE": {
   "skill": "CRES.G5.THE_LI.HEALING_THE_PARALYSED_MA.PARALYSED_MAN",
@@ -1304,11 +1302,22 @@
   "help": "Read Mark 2:3-5: \"when Jesus saw their faith\".",
   "feedback": "Jesus saw their faith: the faith of the man and of the four friends who carried him and lowered him down.",
   "source": "common learner error; to confirm by a CRE teacher",
-  "status": "draft",
-  "review": {
-   "mark": "doubtful",
-   "why": "A slip of Bible-fact recall (the passage is easy to check), more a trap option than a held belief."
-  }
+  "status": "draft"
+ },
+ "CRES.G5.THE_LI.HEALING_THE_PARALYSED_MA.PARALYSED_MAN.M_C5_PM_TEACHERS_GLAD": {
+  "skill": "CRES.G5.THE_LI.HEALING_THE_PARALYSED_MA.PARALYSED_MAN",
+  "error": "Thinks the teachers of the law were glad when Jesus forgave the man's sins.",
+  "example": {
+   "question": "What did some teachers of the law think when Jesus said \"your sins are forgiven\" (Mark 2:6-7)?",
+   "wrong_answer": "They were glad and praised him",
+   "correct_answer": "They thought he was blaspheming, because only God forgives sins"
+  },
+  "cause": "The child expects religious teachers to agree with Jesus.",
+  "reveals": "Offer \"They were glad and praised him\" beside \"They thought he was blaspheming, because only God forgives sins\" and ask the child to choose.",
+  "help": "Read Mark 2:6-7 and ask: what did they say only God can do? Jesus then healed the man to show his authority.",
+  "feedback": "They thought he was speaking against God, because only God forgives sins. Jesus showed he had that authority.",
+  "source": "To confirm by a CRE teacher: a common classroom error, not traced to a study by the author.",
+  "status": "draft"
  },
  "CRES.G5.THE_LI.PARABLE_OF_THE_LOST_SHEE.LOST_SHEEP.M_LS_NINETY_NINE": {
   "skill": "CRES.G5.THE_LI.PARABLE_OF_THE_LOST_SHEE.LOST_SHEEP",
@@ -1323,11 +1332,7 @@
   "help": "Read Luke 15:4.",
   "feedback": "The shepherd left the ninety-nine and went after the one that was lost until he found it. Each one matters to him.",
   "source": "common learner error; to confirm by a CRE teacher",
-  "status": "draft",
-  "review": {
-   "mark": "doubtful",
-   "why": "A slip of Bible-fact recall (the passage is easy to check), more a trap option than a held belief."
-  }
+  "status": "draft"
  },
  "CRES.G5.THE_LI.PARABLE_OF_THE_LOST_SHEE.LOST_SHEEP.M_LS_PUNISH": {
   "skill": "CRES.G5.THE_LI.PARABLE_OF_THE_LOST_SHEE.LOST_SHEEP",
@@ -1342,11 +1347,7 @@
   "help": "Read Luke 15:5.",
   "feedback": "The shepherd put the sheep on his shoulders and rejoiced. Jesus shows that God welcomes those who come back.",
   "source": "common learner error; to confirm by a CRE teacher",
-  "status": "draft",
-  "review": {
-   "mark": "doubtful",
-   "why": "A slip of Bible-fact recall (the passage is easy to check), more a trap option than a held belief."
-  }
+  "status": "draft"
  },
  "CRES.G5.THE_LI.PARABLE_OF_THE_LOST_SHEE.LOST_SHEEP.M_LS_JOY": {
   "skill": "CRES.G5.THE_LI.PARABLE_OF_THE_LOST_SHEE.LOST_SHEEP",
@@ -1361,11 +1362,22 @@
   "help": "Read Luke 15:7.",
   "feedback": "Jesus said that there is more joy in heaven over one sinner who repents than over ninety-nine righteous people who need no repentance.",
   "source": "common learner error; to confirm by a CRE teacher",
-  "status": "draft",
-  "review": {
-   "mark": "doubtful",
-   "why": "A slip of Bible-fact recall (the passage is easy to check), more a trap option than a held belief."
-  }
+  "status": "draft"
+ },
+ "CRES.G5.THE_LI.PARABLE_OF_THE_LOST_SHEE.LOST_SHEEP.M_C5_LS_WHO_TOLD": {
+  "skill": "CRES.G5.THE_LI.PARABLE_OF_THE_LOST_SHEE.LOST_SHEEP",
+  "error": "Forgets why Jesus told the parable: the Pharisees grumbled that he ate with sinners.",
+  "example": {
+   "question": "Why did Jesus tell the parable of the lost sheep (Luke 15:1-2)?",
+   "wrong_answer": "To teach farmers how to keep sheep",
+   "correct_answer": "Because Pharisees grumbled that he welcomed sinners"
+  },
+  "cause": "The child starts the story at the sheep and skips verses 1-2.",
+  "reveals": "Offer \"To teach farmers how to keep sheep\" beside \"Because Pharisees grumbled that he welcomed sinners\" and ask the child to choose.",
+  "help": "Read Luke 15:1-2 first and ask: who is the lost sheep in real life?",
+  "feedback": "Jesus told it because people grumbled that he welcomed sinners. God goes looking for the lost.",
+  "source": "To confirm by a CRE teacher: a common classroom error, not traced to a study by the author.",
+  "status": "draft"
  },
  "CRES.G5.THE_LI.SERMON_ON_THE_MOUNT.SERMON_MOUNT.M_SM_PEACE_NO_FIGHT": {
   "skill": "CRES.G5.THE_LI.SERMON_ON_THE_MOUNT.SERMON_MOUNT",
@@ -1380,11 +1392,7 @@
   "help": "Ask what Matthew 5:9 says peacemakers will be called.",
   "feedback": "A peacemaker helps others to settle quarrels and make up, and works to bring peace. Jesus says peacemakers will be called children of God.",
   "source": "common learner error; to confirm by a CRE teacher",
-  "status": "draft",
-  "review": {
-   "mark": "plausible, to confirm by a teacher",
-   "note": "Own judgement: believable for a Kenyan child of this age, but we have no source or homework count. A teacher who knows the class should say whether children really hold it."
-  }
+  "status": "draft"
  },
  "CRES.G5.THE_LI.SERMON_ON_THE_MOUNT.SERMON_MOUNT.M_SM_PURE_CLEAN": {
   "skill": "CRES.G5.THE_LI.SERMON_ON_THE_MOUNT.SERMON_MOUNT",
@@ -1399,11 +1407,7 @@
   "help": "Read Matthew 5:8: \"see God\".",
   "feedback": "A pure heart is honest and loves God without pretending. Matthew 5:8 says the pure in heart will see God.",
   "source": "common learner error; to confirm by a CRE teacher",
-  "status": "draft",
-  "review": {
-   "mark": "plausible, to confirm by a teacher",
-   "note": "Own judgement: believable for a Kenyan child of this age, but we have no source or homework count. A teacher who knows the class should say whether children really hold it."
-  }
+  "status": "draft"
  },
  "CRES.G5.THE_LI.SERMON_ON_THE_MOUNT.SERMON_MOUNT.M_SM_MERCY_WEAK": {
   "skill": "CRES.G5.THE_LI.SERMON_ON_THE_MOUNT.SERMON_MOUNT",
@@ -1418,11 +1422,22 @@
   "help": "Give the example of a prefect who forgives a first mistake.",
   "feedback": "To be merciful is to show kindness and to forgive when you could punish. Jesus promised that the merciful will receive mercy (Matthew 5:7).",
   "source": "common learner error; to confirm by a CRE teacher",
-  "status": "draft",
-  "review": {
-   "mark": "plausible, to confirm by a teacher",
-   "note": "Own judgement: believable for a Kenyan child of this age, but we have no source or homework count. A teacher who knows the class should say whether children really hold it."
-  }
+  "status": "draft"
+ },
+ "CRES.G5.THE_LI.SERMON_ON_THE_MOUNT.SERMON_MOUNT.M_C5_SM_REWARD_MIX": {
+  "skill": "CRES.G5.THE_LI.SERMON_ON_THE_MOUNT.SERMON_MOUNT",
+  "error": "Mixes up the promises: says the peacemakers will see God and the pure in heart will be called children of God.",
+  "example": {
+   "question": "What does Matthew 5:9 promise the peacemakers?",
+   "wrong_answer": "They will see God",
+   "correct_answer": "They will be called children of God"
+  },
+  "cause": "Three blessings and three promises are learnt at once.",
+  "reveals": "Offer \"They will see God\" beside \"They will be called children of God\" and ask the child to choose.",
+  "help": "Match three cards to three promises: merciful, mercy; pure in heart, see God; peacemakers, children of God.",
+  "feedback": "Peacemakers will be called children of God. The pure in heart will see God.",
+  "source": "To confirm by a CRE teacher: a common classroom error, not traced to a study by the author.",
+  "status": "draft"
  },
  "CRES.G5.THE_LI.THE_RICH_YOUNG_MAN.RICH_YOUNG_MAN.M_RY_SOLD": {
   "skill": "CRES.G5.THE_LI.THE_RICH_YOUNG_MAN.RICH_YOUNG_MAN",
@@ -1437,11 +1452,7 @@
   "help": "Read Matthew 19:22.",
   "feedback": "The young man went away sad because he had great wealth. He did not do what Jesus asked.",
   "source": "common learner error; to confirm by a CRE teacher",
-  "status": "draft",
-  "review": {
-   "mark": "doubtful",
-   "why": "A slip of Bible-fact recall (the passage is easy to check), more a trap option than a held belief."
-  }
+  "status": "draft"
  },
  "CRES.G5.THE_LI.THE_RICH_YOUNG_MAN.RICH_YOUNG_MAN.M_RY_RICH_SIN": {
   "skill": "CRES.G5.THE_LI.THE_RICH_YOUNG_MAN.RICH_YOUNG_MAN",
@@ -1456,11 +1467,7 @@
   "help": "Ask whether Jesus told everyone to sell everything.",
   "feedback": "Jesus did not say that owning things is wrong. He showed the young man that his wealth held his heart, and that he needed to put God first and share with the poor.",
   "source": "common learner error; to confirm by a CRE teacher",
-  "status": "draft",
-  "review": {
-   "mark": "plausible, to confirm by a teacher",
-   "note": "Own judgement: believable for a Kenyan child of this age, but we have no source or homework count. A teacher who knows the class should say whether children really hold it."
-  }
+  "status": "draft"
  },
  "CRES.G5.THE_LI.THE_RICH_YOUNG_MAN.RICH_YOUNG_MAN.M_RY_OLD": {
   "skill": "CRES.G5.THE_LI.THE_RICH_YOUNG_MAN.RICH_YOUNG_MAN",
@@ -1475,11 +1482,22 @@
   "help": "Read Matthew 19:16.",
   "feedback": "The young man asked, \"What good deed must I do to have eternal life?\" Jesus pointed him to the commandments and then to following him.",
   "source": "common learner error; to confirm by a CRE teacher",
-  "status": "draft",
-  "review": {
-   "mark": "doubtful",
-   "why": "A slip of Bible-fact recall (the passage is easy to check), more a trap option than a held belief."
-  }
+  "status": "draft"
+ },
+ "CRES.G5.THE_LI.THE_RICH_YOUNG_MAN.RICH_YOUNG_MAN.M_C5_RY_COMMANDMENTS_ENOUGH": {
+  "skill": "CRES.G5.THE_LI.THE_RICH_YOUNG_MAN.RICH_YOUNG_MAN",
+  "error": "Thinks keeping the commandments in words was all the young man needed, so Jesus asked nothing more.",
+  "example": {
+   "question": "The young man said he had kept the commandments. What did Jesus then ask of him (Matthew 19:21)?",
+   "wrong_answer": "Nothing more",
+   "correct_answer": "To sell his possessions, give to the poor, and follow him"
+  },
+  "cause": "The child stops reading when the man says he kept the rules.",
+  "reveals": "Offer \"Nothing more\" beside \"To sell his possessions, give to the poor, and follow him\" and ask the child to choose.",
+  "help": "Read 19:20-21: \"What do I still lack?\" Jesus showed him what held his heart.",
+  "feedback": "Jesus asked him to sell what he had, give to the poor and follow him. His wealth was holding his heart.",
+  "source": "To confirm by a CRE teacher: a common classroom error, not traced to a study by the author.",
+  "status": "draft"
  },
  "CRES.G5.THE_LI.A_FRIEND_AT_MIDNIGHT.FRIEND_MIDNIGHT.M_FM_FRIENDSHIP_ONLY": {
   "skill": "CRES.G5.THE_LI.A_FRIEND_AT_MIDNIGHT.FRIEND_MIDNIGHT",
@@ -1494,11 +1512,7 @@
   "help": "Read Luke 11:8.",
   "feedback": "The friend got up and gave because the man kept asking and did not give up. Jesus used this to teach us to pray persistently.",
   "source": "common learner error; to confirm by a CRE teacher",
-  "status": "draft",
-  "review": {
-   "mark": "doubtful",
-   "why": "Children who know the story would not say this; a trap option."
-  }
+  "status": "draft"
  },
  "CRES.G5.THE_LI.A_FRIEND_AT_MIDNIGHT.FRIEND_MIDNIGHT.M_FM_ONE_PRAYER": {
   "skill": "CRES.G5.THE_LI.A_FRIEND_AT_MIDNIGHT.FRIEND_MIDNIGHT",
@@ -1513,15 +1527,11 @@
   "help": "Read Luke 11:9-10: ask, seek, knock.",
   "feedback": "Jesus told this to teach us to keep praying and not to give up. He said: ask, seek and knock.",
   "source": "common learner error; to confirm by a CRE teacher",
-  "status": "draft",
-  "review": {
-   "mark": "plausible, to confirm by a teacher",
-   "note": "Own judgement: believable for a Kenyan child of this age, but we have no source or homework count. A teacher who knows the class should say whether children really hold it."
-  }
+  "status": "draft"
  },
  "CRES.G5.THE_LI.A_FRIEND_AT_MIDNIGHT.FRIEND_MIDNIGHT.M_FM_LOAVES": {
   "skill": "CRES.G5.THE_LI.A_FRIEND_AT_MIDNIGHT.FRIEND_MIDNIGHT",
-  "error": "Mixes up the number or reason of the loaves.",
+  "error": "Says the man asked for seven loaves, mixing the parable with the feeding of the four thousand, instead of three.",
   "example": {
    "question": "How many loaves did the man ask for?",
    "wrong_answer": "Seven loaves",
@@ -1532,11 +1542,22 @@
   "help": "Read Luke 11:5-6.",
   "feedback": "The man asked his friend for three loaves because a traveller had arrived at midnight and he had nothing to give.",
   "source": "The learner reads the passage loosely or mixes it with a similar Bible story (to confirm by a CRE teacher)",
-  "status": "draft",
-  "review": {
-   "mark": "doubtful",
-   "why": "A slip of Bible-fact recall (the passage is easy to check), more a trap option than a held belief."
-  }
+  "status": "draft"
+ },
+ "CRES.G5.THE_LI.A_FRIEND_AT_MIDNIGHT.FRIEND_MIDNIGHT.M_C5_FM_GOD_ASLEEP": {
+  "skill": "CRES.G5.THE_LI.A_FRIEND_AT_MIDNIGHT.FRIEND_MIDNIGHT",
+  "error": "Thinks the parable shows God is like the sleepy friend who does not want to help.",
+  "example": {
+   "question": "Is God like the friend in bed who did not want to get up?",
+   "wrong_answer": "Yes, God is unwilling to help",
+   "correct_answer": "No: if even a tired friend gives, God, a loving Father, gives much more"
+  },
+  "cause": "The child maps every character straight onto God.",
+  "reveals": "Offer \"Yes, God is unwilling to help\" beside \"No: if even a tired friend gives, God, a loving Father, gives much more\" and ask the child to choose.",
+  "help": "Read Luke 11:11-13: if earthly fathers give good gifts, how much more God. The lesson is persistence, not that God is unwilling.",
+  "feedback": "God is not sleepy or unwilling. The parable teaches us to keep praying to a Father who loves to give.",
+  "source": "To confirm by a CRE teacher of the school's own tradition (FAITH: the wording touches belief or practice): a common classroom error, not traced to a study by the author.",
+  "status": "draft"
  },
  "CRES.G5.THE_CH.THE_EARLY_CHURCH.EARLY_CHURCH.M_EC_OWN": {
   "skill": "CRES.G5.THE_CH.THE_EARLY_CHURCH.EARLY_CHURCH",
@@ -1551,11 +1572,7 @@
   "help": "Read Acts 2:44-45.",
   "feedback": "They shared what they had with anyone who was in need. They were united in giving and helping.",
   "source": "common learner error; to confirm by a CRE teacher",
-  "status": "draft",
-  "review": {
-   "mark": "doubtful",
-   "why": "Children who know the story would not say this; a trap option."
-  }
+  "status": "draft"
  },
  "CRES.G5.THE_CH.THE_EARLY_CHURCH.EARLY_CHURCH.M_EC_SAME_JOB": {
   "skill": "CRES.G5.THE_CH.THE_EARLY_CHURCH.EARLY_CHURCH",
@@ -1570,15 +1587,11 @@
   "help": "List values and ask which can be practised by anyone.",
   "feedback": "A church is united by love, sharing, forgiveness and humility. People may do different things and still be one.",
   "source": "common learner error; to confirm by a CRE teacher",
-  "status": "draft",
-  "review": {
-   "mark": "plausible, to confirm by a teacher",
-   "note": "Own judgement: believable for a Kenyan child of this age, but we have no source or homework count. A teacher who knows the class should say whether children really hold it."
-  }
+  "status": "draft"
  },
  "CRES.G5.THE_CH.THE_EARLY_CHURCH.EARLY_CHURCH.M_EC_WHAT_DEVOTED": {
   "skill": "CRES.G5.THE_CH.THE_EARLY_CHURCH.EARLY_CHURCH",
-  "error": "Gets the list of things the believers devoted themselves to wrong.",
+  "error": "Picks selling for profit as something the early believers devoted themselves to, instead of the apostles' teaching, fellowship, breaking bread and prayer.",
   "example": {
    "question": "Which one did the early believers devote themselves to?",
    "wrong_answer": "Selling things for profit",
@@ -1589,11 +1602,22 @@
   "help": "Read Acts 2:42 and write the four things.",
   "feedback": "Acts 2:42 says that they devoted themselves to the apostles' teaching, to fellowship, to the breaking of bread and to prayers.",
   "source": "The learner reads the passage loosely or mixes it with a similar Bible story (to confirm by a CRE teacher)",
-  "status": "draft",
-  "review": {
-   "mark": "doubtful",
-   "why": "A slip of Bible-fact recall (the passage is easy to check), more a trap option than a held belief."
-  }
+  "status": "draft"
+ },
+ "CRES.G5.THE_CH.THE_EARLY_CHURCH.EARLY_CHURCH.M_C5_EC_DAILY_TEMPLE": {
+  "skill": "CRES.G5.THE_CH.THE_EARLY_CHURCH.EARLY_CHURCH",
+  "error": "Thinks the early believers met only once a week and never ate together.",
+  "example": {
+   "question": "How often did the early believers meet, according to Acts 2:46?",
+   "wrong_answer": "Only once a month",
+   "correct_answer": "Every day, in the temple courts and in homes, eating together"
+  },
+  "cause": "The child knows church as a Sunday event.",
+  "reveals": "Offer \"Only once a month\" beside \"Every day, in the temple courts and in homes, eating together\" and ask the child to choose.",
+  "help": "Read Acts 2:46 and underline \"every day\" and \"ate together\".",
+  "feedback": "They met every day, in the temple courts and in their homes, and ate together with glad hearts.",
+  "source": "To confirm by a CRE teacher: a common classroom error, not traced to a study by the author.",
+  "status": "draft"
  },
  "CRES.G5.THE_CH.THE_LORD_S_SUPPER.LORDS_SUPPER.M_LS2_ONE_NAME": {
   "skill": "CRES.G5.THE_CH.THE_LORD_S_SUPPER.LORDS_SUPPER",
@@ -1608,15 +1632,11 @@
   "help": "Ask your own church's name and the names other churches use.",
   "feedback": "Different churches use different names such as Lord's Supper, Lord's Table, Holy Communion or Eucharist for the same remembrance of Jesus. The children in a class may know different names.",
   "source": "to confirm by a CRE teacher who knows the school's tradition",
-  "status": "draft",
-  "review": {
-   "mark": "plausible, to confirm by a teacher",
-   "note": "Own judgement: believable for a Kenyan child of this age, but we have no source or homework count. A teacher who knows the class should say whether children really hold it."
-  }
+  "status": "draft"
  },
  "CRES.G5.THE_CH.THE_LORD_S_SUPPER.LORDS_SUPPER.M_LS2_WHEN": {
   "skill": "CRES.G5.THE_CH.THE_LORD_S_SUPPER.LORDS_SUPPER",
-  "error": "Mixes the time or the people at the supper.",
+  "error": "Thinks Jesus shared the Lord's Supper with a crowd of thousands, mixing it with the feeding miracles, instead of with his apostles.",
   "example": {
    "question": "With whom did Jesus share the Passover meal in Luke 22?",
    "wrong_answer": "With a crowd of five thousand",
@@ -1627,11 +1647,7 @@
   "help": "Read Luke 22:14.",
   "feedback": "Jesus sat at the table with his apostles at the Passover meal.",
   "source": "The learner reads the passage loosely or mixes it with a similar Bible story (to confirm by a CRE teacher)",
-  "status": "draft",
-  "review": {
-   "mark": "doubtful",
-   "why": "A slip of Bible-fact recall (the passage is easy to check), more a trap option than a held belief."
-  }
+  "status": "draft"
  },
  "CRES.G5.THE_CH.THE_LORD_S_SUPPER.LORDS_SUPPER.M_LS2_WHY": {
   "skill": "CRES.G5.THE_CH.THE_LORD_S_SUPPER.LORDS_SUPPER",
@@ -1646,11 +1662,22 @@
   "help": "Read Luke 22:19.",
   "feedback": "Jesus said, \"Do this in remembrance of me.\" Christians remember what Jesus did for them whenever they share the bread and the cup.",
   "source": "common learner error; to confirm by a CRE teacher",
-  "status": "draft",
-  "review": {
-   "mark": "doubtful",
-   "why": "Children who know the story would not say this; a trap option."
-  }
+  "status": "draft"
+ },
+ "CRES.G5.THE_CH.THE_LORD_S_SUPPER.LORDS_SUPPER.M_C5_LS2_FEAST": {
+  "skill": "CRES.G5.THE_CH.THE_LORD_S_SUPPER.LORDS_SUPPER",
+  "error": "Thinks the Lord's Supper was a wedding feast or a feast for the crowd.",
+  "example": {
+   "question": "Which meal were Jesus and his apostles eating in Luke 22:15?",
+   "wrong_answer": "A wedding feast",
+   "correct_answer": "The Passover"
+  },
+  "cause": "The child knows other meals of Jesus, such as Cana.",
+  "reveals": "Offer \"A wedding feast\" beside \"The Passover\" and ask the child to choose.",
+  "help": "Read Luke 22:15 and say: Passover remembered God bringing Israel out of Egypt.",
+  "feedback": "They were eating the Passover. At that meal Jesus gave the bread and the cup.",
+  "source": "To confirm by a CRE teacher: a common classroom error, not traced to a study by the author.",
+  "status": "draft"
  },
  "CRES.G5.THE_CH.THE_HOLY_SPIRIT.HOLY_SPIRIT.M_HS_MIX": {
   "skill": "CRES.G5.THE_CH.THE_HOLY_SPIRIT.HOLY_SPIRIT",
@@ -1665,15 +1692,11 @@
   "help": "Make two lists, gifts from 1 Corinthians 12 and fruit from Galatians 5.",
   "feedback": "Kindness is one of the fruit of the Spirit (Galatians 5:22-23). Prophecy is one of the gifts (1 Corinthians 12:10).",
   "source": "common learner error; to confirm by a CRE teacher",
-  "status": "draft",
-  "review": {
-   "mark": "plausible, to confirm by a teacher",
-   "note": "Own judgement: believable for a Kenyan child of this age, but we have no source or homework count. A teacher who knows the class should say whether children really hold it."
-  }
+  "status": "draft"
  },
  "CRES.G5.THE_CH.THE_HOLY_SPIRIT.HOLY_SPIRIT.M_HS_COUNT": {
   "skill": "CRES.G5.THE_CH.THE_HOLY_SPIRIT.HOLY_SPIRIT",
-  "error": "Gets the number of gifts or fruit wrong.",
+  "error": "Says there are five gifts of the Spirit in 1 Corinthians 12, using a number met earlier, instead of nine.",
   "example": {
    "question": "How many gifts of the Holy Spirit are listed in 1 Corinthians 12:1-11?",
    "wrong_answer": "Five",
@@ -1684,15 +1707,11 @@
   "help": "Count the gifts in verses 8 to 10 together.",
   "feedback": "1 Corinthians 12:8-10 lists nine gifts of the Spirit: wisdom, knowledge, faith, healing, miracles, prophecy, telling spirits apart, tongues, and interpreting tongues.",
   "source": "The learner reads the passage loosely or mixes it with a similar Bible story (to confirm by a CRE teacher)",
-  "status": "draft",
-  "review": {
-   "mark": "doubtful",
-   "why": "A slip of Bible-fact recall (the passage is easy to check), more a trap option than a held belief."
-  }
+  "status": "draft"
  },
  "CRES.G5.THE_CH.THE_HOLY_SPIRIT.HOLY_SPIRIT.M_HS_HARMONY": {
   "skill": "CRES.G5.THE_CH.THE_HOLY_SPIRIT.HOLY_SPIRIT",
-  "error": "Does not see how the fruit help people live together.",
+  "error": "Thinks patience means leaving quarrels unsolved, instead of bearing with one another so people live in harmony.",
   "example": {
    "question": "How does the fruit of patience help Christians?",
    "wrong_answer": "It makes them leave quarrels unsolved",
@@ -1703,11 +1722,22 @@
   "help": "Ask what a patient friend does when you make a mistake.",
   "feedback": "Patience, kindness, gentleness and self-control help Christians to bear with one another and live in harmony.",
   "source": "common learner error; to confirm by a CRE teacher",
-  "status": "draft",
-  "review": {
-   "mark": "doubtful",
-   "why": "Children who know the story would not say this; a trap option."
-  }
+  "status": "draft"
+ },
+ "CRES.G5.THE_CH.THE_HOLY_SPIRIT.HOLY_SPIRIT.M_C5_HS_GIFTS_FEW": {
+  "skill": "CRES.G5.THE_CH.THE_HOLY_SPIRIT.HOLY_SPIRIT",
+  "error": "Thinks the gifts of the Spirit are only for pastors, not for every believer.",
+  "example": {
+   "question": "To whom does the Spirit give gifts, according to 1 Corinthians 12:7?",
+   "wrong_answer": "Only pastors",
+   "correct_answer": "To each believer, for the common good"
+  },
+  "cause": "The child sees gifts like prophecy used mostly by church leaders.",
+  "reveals": "Offer \"Only pastors\" beside \"To each believer, for the common good\" and ask the child to choose.",
+  "help": "Read 1 Corinthians 12:7 and 12:11: to each one, as the Spirit decides.",
+  "feedback": "The Spirit gives gifts to each believer, for the good of all, not only to pastors.",
+  "source": "To confirm by a CRE teacher of the school's own tradition (FAITH: the wording touches belief or practice): a common classroom error, not traced to a study by the author.",
+  "status": "draft"
  },
  "CRES.G5.THE_CH.PETER_S_MIRACULOUS_RESCU.PETER_RESCUE.M_PR_BROKE_OUT": {
   "skill": "CRES.G5.THE_CH.PETER_S_MIRACULOUS_RESCU.PETER_RESCUE",
@@ -1722,11 +1752,7 @@
   "help": "Read Acts 12:7.",
   "feedback": "An angel of the Lord appeared, woke Peter, and the chains fell off his hands. The gates opened by themselves.",
   "source": "common learner error; to confirm by a CRE teacher",
-  "status": "draft",
-  "review": {
-   "mark": "doubtful",
-   "why": "A slip of Bible-fact recall (the passage is easy to check), more a trap option than a held belief."
-  }
+  "status": "draft"
  },
  "CRES.G5.THE_CH.PETER_S_MIRACULOUS_RESCU.PETER_RESCUE.M_PR_NO_PRAYER": {
   "skill": "CRES.G5.THE_CH.PETER_S_MIRACULOUS_RESCU.PETER_RESCUE",
@@ -1741,11 +1767,7 @@
   "help": "Read Acts 12:5.",
   "feedback": "The church was earnestly praying to God for Peter while he was in prison.",
   "source": "common learner error; to confirm by a CRE teacher",
-  "status": "draft",
-  "review": {
-   "mark": "doubtful",
-   "why": "A slip of Bible-fact recall (the passage is easy to check), more a trap option than a held belief."
-  }
+  "status": "draft"
  },
  "CRES.G5.THE_CH.PETER_S_MIRACULOUS_RESCU.PETER_RESCUE.M_PR_RHODA": {
   "skill": "CRES.G5.THE_CH.PETER_S_MIRACULOUS_RESCU.PETER_RESCUE",
@@ -1760,11 +1782,22 @@
   "help": "Read Acts 12:13-14.",
   "feedback": "Rhoda was so glad that she ran in to tell the others without opening the gate. They did not believe her at first.",
   "source": "common learner error; to confirm by a CRE teacher",
-  "status": "draft",
-  "review": {
-   "mark": "doubtful",
-   "why": "A slip of Bible-fact recall (the passage is easy to check), more a trap option than a held belief."
-  }
+  "status": "draft"
+ },
+ "CRES.G5.THE_CH.PETER_S_MIRACULOUS_RESCU.PETER_RESCUE.M_C5_PR_HOUSE": {
+  "skill": "CRES.G5.THE_CH.PETER_S_MIRACULOUS_RESCU.PETER_RESCUE",
+  "error": "Thinks Peter went to the temple or to Herod after his rescue.",
+  "example": {
+   "question": "Where did Peter go after the angel left him (Acts 12:12)?",
+   "wrong_answer": "To Herod's palace",
+   "correct_answer": "To the house of Mary the mother of John Mark, where many were praying"
+  },
+  "cause": "The child does not connect the rescue with the praying church.",
+  "reveals": "Offer \"To Herod's palace\" beside \"To the house of Mary the mother of John Mark, where many were praying\" and ask the child to choose.",
+  "help": "Read Acts 12:12 and draw the house full of praying people. Peter went where they were praying for him.",
+  "feedback": "Peter went to the house of Mary, John Mark's mother, where many people were praying.",
+  "source": "To confirm by a CRE teacher: a common classroom error, not traced to a study by the author.",
+  "status": "draft"
  },
  "CRES.G5.CHRIST.FRIENDSHIP_FORMATION.FRIENDS.M_FR_POPULAR": {
   "skill": "CRES.G5.CHRIST.FRIENDSHIP_FORMATION.FRIENDS",
@@ -1779,11 +1812,7 @@
   "help": "List qualities with the class before naming friends.",
   "feedback": "A good friend is chosen for good character: honest, kind, respectful and responsible. Popularity and possessions are not the test.",
   "source": "common learner error; to confirm by a CRE teacher",
-  "status": "draft",
-  "review": {
-   "mark": "plausible, to confirm by a teacher",
-   "note": "Own judgement: believable for a Kenyan child of this age, but we have no source or homework count. A teacher who knows the class should say whether children really hold it."
-  }
+  "status": "draft"
  },
  "CRES.G5.CHRIST.FRIENDSHIP_FORMATION.FRIENDS.M_FR_FOLLOW": {
   "skill": "CRES.G5.CHRIST.FRIENDSHIP_FORMATION.FRIENDS",
@@ -1798,15 +1827,11 @@
   "help": "Practise a short polite refusal in pairs.",
   "feedback": "A good friend does not push you to do wrong. You can say no politely. A real friend will respect that.",
   "source": "common learner error; to confirm by a CRE teacher",
-  "status": "draft",
-  "review": {
-   "mark": "plausible, to confirm by a teacher",
-   "note": "Own judgement: believable for a Kenyan child of this age, but we have no source or homework count. A teacher who knows the class should say whether children really hold it."
-  }
+  "status": "draft"
  },
  "CRES.G5.CHRIST.FRIENDSHIP_FORMATION.FRIENDS.M_FR_PROVERB": {
   "skill": "CRES.G5.CHRIST.FRIENDSHIP_FORMATION.FRIENDS",
-  "error": "Does not know what Proverbs 22:24-25 warns about.",
+  "error": "Thinks Proverbs 22:24-25 says to befriend a hot-tempered person, reversing its warning.",
   "example": {
    "question": "What does Proverbs 22:24-25 advise?",
    "wrong_answer": "Be friends with a person who has a quick temper",
@@ -1817,11 +1842,22 @@
   "help": "Read Proverbs 22:24-25.",
   "feedback": "Proverbs 22:24-25 says that you should not make friends with a person who has a hot temper, or you may learn his ways.",
   "source": "The learner reads the passage loosely or mixes it with a similar Bible story (to confirm by a CRE teacher)",
-  "status": "draft",
-  "review": {
-   "mark": "doubtful",
-   "why": "A slip of Bible-fact recall (the passage is easy to check), more a trap option than a held belief."
-  }
+  "status": "draft"
+ },
+ "CRES.G5.CHRIST.FRIENDSHIP_FORMATION.FRIENDS.M_C5_FR_CHANGE_THEM": {
+  "skill": "CRES.G5.CHRIST.FRIENDSHIP_FORMATION.FRIENDS",
+  "error": "Thinks a child should stay close to friends who do wrong in order to change them, even when they pull him in.",
+  "example": {
+   "question": "Your friends steal from the canteen and want you to join. What is wise?",
+   "wrong_answer": "Stay with them so I can change them",
+   "correct_answer": "Say no and spend time with friends who do right"
+  },
+  "cause": "The child wants to keep friends and believes he will be the stronger one.",
+  "reveals": "Offer \"Stay with them so I can change them\" beside \"Say no and spend time with friends who do right\" and ask the child to choose.",
+  "help": "Read Proverbs 22:25: you may learn their ways. Practise walking away kindly.",
+  "feedback": "We may learn the ways of the friends we keep. Say no and choose friends who help you do right.",
+  "source": "To confirm by a CRE teacher: a common classroom error, not traced to a study by the author.",
+  "status": "draft"
  },
  "CRES.G5.CHRIST.HUMAN_SEXUALITY.ADOLESCENCE.M_AD_SHAME": {
   "skill": "CRES.G5.CHRIST.HUMAN_SEXUALITY.ADOLESCENCE",
@@ -1836,11 +1872,7 @@
   "help": "Say that all adults went through the same changes.",
   "feedback": "The changes of growing up are normal. A child can ask a parent, guardian, teacher or trusted adult for the right information.",
   "source": "common learner error; to confirm by a CRE teacher",
-  "status": "draft",
-  "review": {
-   "mark": "plausible, to confirm by a teacher",
-   "note": "Own judgement: believable for a Kenyan child of this age, but we have no source or homework count. A teacher who knows the class should say whether children really hold it."
-  }
+  "status": "draft"
  },
  "CRES.G5.CHRIST.HUMAN_SEXUALITY.ADOLESCENCE.M_AD_FRIEND_INFO": {
   "skill": "CRES.G5.CHRIST.HUMAN_SEXUALITY.ADOLESCENCE",
@@ -1855,11 +1887,7 @@
   "help": "Compare a friend's guess with a nurse's answer.",
   "feedback": "Friends and the internet can give wrong or harmful information. The right information comes from a parent, guardian, teacher or health worker you trust.",
   "source": "common learner error; to confirm by a CRE teacher",
-  "status": "draft",
-  "review": {
-   "mark": "plausible, to confirm by a teacher",
-   "note": "Own judgement: believable for a Kenyan child of this age, but we have no source or homework count. A teacher who knows the class should say whether children really hold it."
-  }
+  "status": "draft"
  },
  "CRES.G5.CHRIST.HUMAN_SEXUALITY.ADOLESCENCE.M_AD_SECRET": {
   "skill": "CRES.G5.CHRIST.HUMAN_SEXUALITY.ADOLESCENCE",
@@ -1874,11 +1902,7 @@
   "help": "List warning signs: secrecy, pressure, gifts for favours.",
   "feedback": "Secrecy, pressure and gifts for favours are warning signs of an unhealthy relationship. A child should tell a trusted adult at once.",
   "source": "common learner error; to confirm by a CRE teacher",
-  "status": "draft",
-  "review": {
-   "mark": "plausible, to confirm by a teacher",
-   "note": "Own judgement: believable for a Kenyan child of this age, but we have no source or homework count. A teacher who knows the class should say whether children really hold it."
-  }
+  "status": "draft"
  },
  "CRES.G5.CHRIST.HUMAN_SEXUALITY.ADOLESCENCE.M_AD_BODY": {
   "skill": "CRES.G5.CHRIST.HUMAN_SEXUALITY.ADOLESCENCE",
@@ -1893,30 +1917,22 @@
   "help": "Use a health-class chart.",
   "feedback": "Monthly periods begin in girls and the voice deepens in boys. Both grow taller and grow body hair. These are normal changes.",
   "source": "The learner reads the passage loosely or mixes it with a similar Bible story (to confirm by a CRE teacher)",
-  "status": "draft",
-  "review": {
-   "mark": "doubtful",
-   "why": "A slip of Bible-fact recall (the passage is easy to check), more a trap option than a held belief."
-  }
+  "status": "draft"
  },
  "CRES.G5.CHRIST.SANCTITY_OF_LIFE.SANCTITY_LIFE.M_SL_ANIMALS": {
   "skill": "CRES.G5.CHRIST.SANCTITY_OF_LIFE.SANCTITY_LIFE",
   "error": "Thinks sanctity of life means only that we must not kill animals.",
   "example": {
    "question": "What does it mean that human life is sacred?",
-   "wrong_answer": "Human life is holy because it comes from God and is made in his image",
-   "correct_answer": "Animals must never be used"
+   "wrong_answer": "Animals must never be used",
+   "correct_answer": "Human life is holy because it comes from God and is made in his image"
   },
   "cause": "The child extends the word sacred.",
-  "reveals": "Offer \"Human life is holy because it comes from God and is made in his image\" beside \"Animals must never be used\" and ask the child to choose.",
+  "reveals": "Offer \"Animals must never be used\" beside \"Human life is holy because it comes from God and is made in his image\" and ask the child to choose.",
   "help": "Read Genesis 1:27 and 9:6.",
   "feedback": "Human life is sacred because God gave it and made us in his image (Genesis 1:27). We are not to take human life (Genesis 9:6).",
   "source": "common learner error; to confirm by a CRE teacher",
-  "status": "draft",
-  "review": {
-   "mark": "doubtful",
-   "why": "Children who know the story would not say this; a trap option."
-  }
+  "status": "draft"
  },
  "CRES.G5.CHRIST.SANCTITY_OF_LIFE.SANCTITY_LIFE.M_SL_ANGER": {
   "skill": "CRES.G5.CHRIST.SANCTITY_OF_LIFE.SANCTITY_LIFE",
@@ -1931,11 +1947,7 @@
   "help": "Role-play walking away.",
   "feedback": "Hitting back can cause harm. A safe way to cope with anger is to walk away, calm down, and talk to a trusted person or pray.",
   "source": "common learner error; to confirm by a CRE teacher",
-  "status": "draft",
-  "review": {
-   "mark": "plausible, to confirm by a teacher",
-   "note": "Own judgement: believable for a Kenyan child of this age, but we have no source or homework count. A teacher who knows the class should say whether children really hold it."
-  }
+  "status": "draft"
  },
  "CRES.G5.CHRIST.SANCTITY_OF_LIFE.SANCTITY_LIFE.M_SL_SOURCE": {
   "skill": "CRES.G5.CHRIST.SANCTITY_OF_LIFE.SANCTITY_LIFE",
@@ -1950,11 +1962,22 @@
   "help": "Read Genesis 2:7.",
   "feedback": "Parents bring a child into the world, but God is the source and giver of all life.",
   "source": "common learner error; to confirm by a CRE teacher",
-  "status": "draft",
-  "review": {
-   "mark": "plausible, to confirm by a teacher",
-   "note": "Own judgement: believable for a Kenyan child of this age, but we have no source or homework count. A teacher who knows the class should say whether children really hold it."
-  }
+  "status": "draft"
+ },
+ "CRES.G5.CHRIST.SANCTITY_OF_LIFE.SANCTITY_LIFE.M_C5_SL_SOME_LIVES": {
+  "skill": "CRES.G5.CHRIST.SANCTITY_OF_LIFE.SANCTITY_LIFE",
+  "error": "Thinks the lives of the poor, the sick or the disabled matter less.",
+  "example": {
+   "question": "Whose life is sacred in God's eyes?",
+   "wrong_answer": "Only healthy and rich people",
+   "correct_answer": "Every person, because each is made in God's image"
+  },
+  "cause": "The child sees how some people are treated and takes it as their worth.",
+  "reveals": "Offer \"Only healthy and rich people\" beside \"Every person, because each is made in God's image\" and ask the child to choose.",
+  "help": "Read Genesis 1:27: every person is made in God's image. Name people the world may overlook.",
+  "feedback": "Every person's life is sacred, rich or poor, sick or well, because God made each in his image.",
+  "source": "To confirm by a CRE teacher: a common classroom error, not traced to a study by the author.",
+  "status": "draft"
  },
  "CRES.G5.CHRIST.ALCOHOL_DRUGS_AND_SUBSTA.DRUGS.M_DR_MEDICINE": {
   "skill": "CRES.G5.CHRIST.ALCOHOL_DRUGS_AND_SUBSTA.DRUGS",
@@ -1969,11 +1992,7 @@
   "help": "Ask the difference between medicine given by a nurse and a pill taken for fun.",
   "feedback": "Medicine taken as a health worker directs is not drug abuse. Drug abuse is using a substance such as alcohol, bhang or glue in a way that harms the body and mind.",
   "source": "common learner error; to confirm by a CRE teacher",
-  "status": "draft",
-  "review": {
-   "mark": "doubtful",
-   "why": "Children who know the story would not say this; a trap option."
-  }
+  "status": "draft"
  },
  "CRES.G5.CHRIST.ALCOHOL_DRUGS_AND_SUBSTA.DRUGS.M_DR_ONLY_ADULTS": {
   "skill": "CRES.G5.CHRIST.ALCOHOL_DRUGS_AND_SUBSTA.DRUGS",
@@ -1988,11 +2007,7 @@
   "help": "Ask about older pupils who offer cigarettes.",
   "feedback": "Children can be tempted too, often by friends or by wanting to feel grown up. It is important to know the dangers and how to say no.",
   "source": "common learner error; to confirm by a CRE teacher",
-  "status": "draft",
-  "review": {
-   "mark": "doubtful",
-   "why": "Children who know the story would not say this; a trap option."
-  }
+  "status": "draft"
  },
  "CRES.G5.CHRIST.ALCOHOL_DRUGS_AND_SUBSTA.DRUGS.M_DR_SAFE_ONE": {
   "skill": "CRES.G5.CHRIST.ALCOHOL_DRUGS_AND_SUBSTA.DRUGS",
@@ -2007,11 +2022,7 @@
   "help": "Say that many people started with one try.",
   "feedback": "Even one try can start a habit that is hard to stop. Proverbs 20:1 warns that strong drink leads people astray.",
   "source": "common learner error; to confirm by a CRE teacher",
-  "status": "draft",
-  "review": {
-   "mark": "plausible, to confirm by a teacher",
-   "note": "Own judgement: believable for a Kenyan child of this age, but we have no source or homework count. A teacher who knows the class should say whether children really hold it."
-  }
+  "status": "draft"
  },
  "CRES.G5.CHRIST.ALCOHOL_DRUGS_AND_SUBSTA.DRUGS.M_DR_EFFECT": {
   "skill": "CRES.G5.CHRIST.ALCOHOL_DRUGS_AND_SUBSTA.DRUGS",
@@ -2026,11 +2037,7 @@
   "help": "Ask about families affected.",
   "feedback": "Alcohol and drug abuse harm the body and the mind and lead to failing at school, quarrels, crime and addiction.",
   "source": "common learner error; to confirm by a CRE teacher",
-  "status": "draft",
-  "review": {
-   "mark": "doubtful",
-   "why": "Children who know the story would not say this; a trap option."
-  }
+  "status": "draft"
  },
  "CRES.G5.CHRIST.SOCIAL_MEDIA.SOCIAL_MEDIA.M_SM2_SHARE_ALL": {
   "skill": "CRES.G5.CHRIST.SOCIAL_MEDIA.SOCIAL_MEDIA",
@@ -2045,11 +2052,7 @@
   "help": "List what a stranger could do with an address.",
   "feedback": "Never share your passwords or home address online. They can be used to hurt you or take over your account.",
   "source": "common learner error; to confirm by a CRE teacher",
-  "status": "draft",
-  "review": {
-   "mark": "plausible, to confirm by a teacher",
-   "note": "Own judgement: believable for a Kenyan child of this age, but we have no source or homework count. A teacher who knows the class should say whether children really hold it."
-  }
+  "status": "draft"
  },
  "CRES.G5.CHRIST.SOCIAL_MEDIA.SOCIAL_MEDIA.M_SM2_ONLY_GOOD": {
   "skill": "CRES.G5.CHRIST.SOCIAL_MEDIA.SOCIAL_MEDIA",
@@ -2064,11 +2067,7 @@
   "help": "Make two lists, advantages and disadvantages.",
   "feedback": "Social media has advantages, such as contacting relatives and learning, and disadvantages, such as wasted time, unkind messages and false news.",
   "source": "common learner error; to confirm by a CRE teacher",
-  "status": "draft",
-  "review": {
-   "mark": "plausible, to confirm by a teacher",
-   "note": "Own judgement: believable for a Kenyan child of this age, but we have no source or homework count. A teacher who knows the class should say whether children really hold it."
-  }
+  "status": "draft"
  },
  "CRES.G5.CHRIST.SOCIAL_MEDIA.SOCIAL_MEDIA.M_SM2_STRANGER": {
   "skill": "CRES.G5.CHRIST.SOCIAL_MEDIA.SOCIAL_MEDIA",
@@ -2083,11 +2082,7 @@
   "help": "Say that people can lie about who they are.",
   "feedback": "People online may not be who they say. Never agree to meet a stranger from the internet. Tell a parent or trusted adult.",
   "source": "common learner error; to confirm by a CRE teacher",
-  "status": "draft",
-  "review": {
-   "mark": "plausible, to confirm by a teacher",
-   "note": "Own judgement: believable for a Kenyan child of this age, but we have no source or homework count. A teacher who knows the class should say whether children really hold it."
-  }
+  "status": "draft"
  },
  "CRES.G5.CHRIST.SOCIAL_MEDIA.SOCIAL_MEDIA.M_SM2_FORWARD": {
   "skill": "CRES.G5.CHRIST.SOCIAL_MEDIA.SOCIAL_MEDIA",
@@ -2102,10 +2097,6 @@
   "help": "Ask how the classmate would feel.",
   "feedback": "Forwarding an unkind or unproven message can hurt a person. A person with integrity does not pass it on.",
   "source": "common learner error; to confirm by a CRE teacher",
-  "status": "draft",
-  "review": {
-   "mark": "plausible, to confirm by a teacher",
-   "note": "Own judgement: believable for a Kenyan child of this age, but we have no source or homework count. A teacher who knows the class should say whether children really hold it."
-  }
+  "status": "draft"
  }
 }

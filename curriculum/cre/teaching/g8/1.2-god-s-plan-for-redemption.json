@@ -1,0 +1,99 @@
+{
+ "sub_strand": "CRE.G8.CREATI.GOD_S_PLAN_FOR_REDEMPTIO",
+ "title": "God’s Plan for Redemption",
+ "status": "draft: written 18 Nov 2026 offline for Grade 8 Christian Religious Education; not yet checked by a CRE teacher; not loaded by the live tutor",
+ "sources": [],
+ "notes": "",
+ "skills": [
+  {
+   "skill": "CRES.G8.CREATI.GOD_S_PLAN_FOR_REDEMPTIO.REDEMPTION",
+   "key_step": "The learner describes how God showed love after the fall (clothing Adam and Eve, the promise in Genesis 3:15), examines how the plan of salvation is fulfilled in Jesus (John 3:16; Romans 5:8; Galatians 4:4-5) and explains why redemption matters (restores people to God, forgiveness, new life).",
+   "floor": {
+    "prerequisite": "Knows the consequences of the fall.",
+    "question": "Name one consequence of the fall.",
+    "answer": "Sent out of the garden"
+   },
+   "representations": [
+    "a bridge drawn across a gap: God and people",
+    "John 3:16 and Romans 5:8 written large",
+    "a time line from Genesis 3 to Jesus"
+   ],
+   "steps": [
+    "God clothes Adam and Eve.",
+    "God promises victory (Genesis 3:15).",
+    "Prophets point to the Messiah.",
+    "Jesus fulfils salvation: John 3:16."
+   ],
+   "contexts": [
+    "Easter",
+    "forgiving a friend who wronged you",
+    "sharing God's love with others"
+   ],
+   "board": [
+    {
+     "beat": "write",
+     "do": "Draw a gap between God and people, then a bridge."
+    },
+    {
+     "beat": "point",
+     "do": "Point at the bridge.",
+     "say": "Who is the bridge, according to John 3:16?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for the learner to say Jesus, God's Son."
+    },
+    {
+     "beat": "reveal",
+     "do": "Write Romans 5:8 on the bridge."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "CRES.G8.CREATI.GOD_S_PLAN_FOR_REDEMPTIO.REDEMPTION.M_CR8_RD_CLOTHES",
+     "listen_for": [
+      "Left them without help"
+     ],
+     "ask": "What did God do for Adam and Eve after the fall?",
+     "repair": "Read Genesis 3:21: God made garments of skin and clothed them. Love even in judgement."
+    },
+    {
+     "code": "CRES.G8.CREATI.GOD_S_PLAN_FOR_REDEMPTIO.REDEMPTION.M_CR8_RD_JOHN",
+     "listen_for": [
+      "A new law"
+     ],
+     "ask": "What does John 3:16 say God gave?",
+     "repair": "Recite John 3:16 together and underline \"his one and only Son\"."
+    },
+    {
+     "code": "CRES.G8.CREATI.GOD_S_PLAN_FOR_REDEMPTIO.REDEMPTION.M_CR8_RD_WHY",
+     "listen_for": [
+      "It only helps people become rich"
+     ],
+     "ask": "Why is redemption important after the fall?",
+     "repair": "Explain redeem as \"buy back\"; read Galatians 4:4-5 and Romans 5:8."
+    },
+    {
+     "code": "CRES.G8.CREATI.GOD_S_PLAN_FOR_REDEMPTIO.REDEMPTION.M_CR8_RD_EARN",
+     "listen_for": [
+      "By doing enough good works"
+     ],
+     "ask": "According to Ephesians 2:8-9, how are people saved?",
+     "repair": "Read Ephesians 2:8-10: saved by grace, created for good works. Works follow, they do not buy."
+    }
+   ],
+   "checks": [
+    {
+     "question": "What did God do for Adam and Eve after the fall?",
+     "answer": "Made clothes for them",
+     "shows": "love"
+    },
+    {
+     "question": "Why is redemption important?",
+     "answer": "It restores people to God",
+     "shows": "importance"
+    }
+   ]
+  }
+ ]
+}

@@ -2,7 +2,7 @@
 // Outcomes are official (word for word). Skills are proposed, awaiting teacher review.
 // A family carries `cskill` (a key of SKILLS), `outcome` (its official outcome) and `skill` (the same as cskill:
 // these skills are not in the practice engine's Maths graph). MIS_FEEDBACK maps a short misconception code to the line a child reads.
-export const MAP_SOURCE = {"source":"curriculum/cre/g7.json","status":"outcomes from KICD's text, word for word; skills, prerequisites and misconceptions proposed (authored offline, 13 Nov 2026), awaiting a CRE teacher's review"};
+export const MAP_SOURCE = {"source":"curriculum/cre/g7.json","status":"outcomes from KICD's text, word for word; skills and prerequisites proposed, misconceptions draft, teaching pack draft; first pass 12 and 13 Nov 2026, deepened to the Grade 5 Maths standard on 18 Nov 2026 (two prerequisites and four misconceptions per skill); written offline by Claude, awaiting a CRE teacher's review. Rubrics from KICD, untouched."};
 export const SUBSTRANDS = {
  "CRE.G7.OVERVI.IMPORTANCE_OF_STUDYING_C": {
   "name": "Importance of Studying Christian Religious Education",
@@ -598,13 +598,15 @@ export const SKILLS = {
   "outcome": "CRE.G7.OVERVI.IMPORTANCE_OF_STUDYING_C.a",
   "outcomes": [
    "CRE.G7.OVERVI.IMPORTANCE_OF_STUDYING_C.a",
-   "CRE.G7.OVERVI.IMPORTANCE_OF_STUDYING_C.b"
+   "CRE.G7.OVERVI.IMPORTANCE_OF_STUDYING_C.b",
+   "CRE.G7.OVERVI.IMPORTANCE_OF_STUDYING_C.c"
   ],
   "pre": [],
   "mis": [
    "M_CR7_CV_MARKS",
    "M_CR7_CV_CHURCH_ONLY",
-   "M_CR7_CV_VALUE_MIX"
+   "M_CR7_CV_VALUE_MIX",
+   "M_CR7_CV_RULES_ONLY"
   ]
  },
  "CRES.G7.CREATI.ACCOUNTS_OF_CREATION.CREATION_TWO": {
@@ -620,7 +622,8 @@ export const SKILLS = {
   "mis": [
    "M_CR7_CT_SEVEN",
    "M_CR7_CT_DUST",
-   "M_CR7_CT_ATTRIBUTE"
+   "M_CR7_CT_ATTRIBUTE",
+   "M_CR7_CT_ORDER_MAN"
   ]
  },
  "CRES.G7.CREATI.STEWARDSHIP_OVER_CREATIO.STEWARD_ANIMALS": {
@@ -637,7 +640,8 @@ export const SKILLS = {
   "mis": [
    "M_CR7_SA_RULE_HARM",
    "M_CR7_SA_PROTECT",
-   "M_CR7_SA_NOT_MINE"
+   "M_CR7_SA_NOT_MINE",
+   "M_CR7_SA_POACH_OK"
   ]
  },
  "CRES.G7.CREATI.RESPONSIBILITY_OVER_PLAN.STEWARD_PLANTS": {
@@ -655,7 +659,8 @@ export const SKILLS = {
   "mis": [
    "M_CR7_SP_WASTE",
    "M_CR7_SP_FOOD",
-   "M_CR7_SP_INCOME"
+   "M_CR7_SP_INCOME",
+   "M_CR7_SP_BURN_BUSH"
   ]
  },
  "CRES.G7.CREATI.USE_OF_NATURAL_RESOURCES.RESOURCES_USE": {
@@ -673,7 +678,8 @@ export const SKILLS = {
   "mis": [
    "M_CR7_RU_MISUSE",
    "M_CR7_RU_EFFECT",
-   "M_CR7_RU_GOOD"
+   "M_CR7_RU_GOOD",
+   "M_CR7_RU_ENDLESS"
   ]
  },
  "CRES.G7.THE_BI.FUNCTIONS_OF_THE_BIBLE.BIBLE_FUNCTIONS": {
@@ -689,7 +695,8 @@ export const SKILLS = {
   "mis": [
    "M_CR7_BF_STORY_ONLY",
    "M_CR7_BF_CHURCH_ONLY",
-   "M_CR7_BF_SERVICE"
+   "M_CR7_BF_SERVICE",
+   "M_CR7_BF_SPIRIT_ONLY"
   ]
  },
  "CRES.G7.THE_BI.DIVISIONS_OF_THE_BIBLE.BIBLE_DIVISIONS": {
@@ -706,7 +713,8 @@ export const SKILLS = {
   "mis": [
    "M_CR7_BD_NUMBER",
    "M_CR7_BD_SORT_OT",
-   "M_CR7_BD_SORT_NT"
+   "M_CR7_BD_SORT_NT",
+   "M_CR7_BD_GROUPS"
   ]
  },
  "CRES.G7.THE_BI.BIBLE_TRANSLATION.BIBLE_TRANSLATION": {
@@ -725,7 +733,8 @@ export const SKILLS = {
   "mis": [
    "M_CR7_BT_LANGUAGE",
    "M_CR7_BT_WHY",
-   "M_CR7_BT_EFFECT"
+   "M_CR7_BT_EFFECT",
+   "M_CR7_BT_VERSION_DIFFERENT_BIBLE"
   ]
  },
  "CRES.G7.THE_BI.LEADERSHIP_IN_ISRAEL.MOSES_PREPARED": {
@@ -740,7 +749,8 @@ export const SKILLS = {
   "mis": [
    "M_CR7_MP_PALACE",
    "M_CR7_MP_BUSH",
-   "M_CR7_MP_AARON"
+   "M_CR7_MP_AARON",
+   "M_CR7_MP_MIDIAN"
   ]
  },
  "CRES.G7.THE_BI.LEADERSHIP_IN_ISRAEL.MOSES_QUALITIES": {
@@ -756,7 +766,8 @@ export const SKILLS = {
   "mis": [
    "M_CR7_MQ_PRIDE",
    "M_CR7_MQ_LEADER",
-   "M_CR7_MQ_FEAR"
+   "M_CR7_MQ_FEAR",
+   "M_CR7_MQ_NEVER_AFRAID"
   ]
  },
  "CRES.G7.THE_EA.PROPHECIES_ABOUT_THE_MES.MESSIAH_PROPHECY": {
@@ -773,7 +784,8 @@ export const SKILLS = {
   "mis": [
    "M_CR7_MS_BETHLEHEM",
    "M_CR7_MS_VIRGIN",
-   "M_CR7_MS_FULFIL"
+   "M_CR7_MS_FULFIL",
+   "M_CR7_MS_IMMANUEL"
   ]
  },
  "CRES.G7.THE_EA.JOHN_THE_BAPTIST.JOHN_BAPTIST": {
@@ -783,7 +795,8 @@ export const SKILLS = {
   "outcomes": [
    "CRE.G7.THE_EA.JOHN_THE_BAPTIST.a",
    "CRE.G7.THE_EA.JOHN_THE_BAPTIST.b",
-   "CRE.G7.THE_EA.JOHN_THE_BAPTIST.d"
+   "CRE.G7.THE_EA.JOHN_THE_BAPTIST.d",
+   "CRE.G7.THE_EA.JOHN_THE_BAPTIST.c"
   ],
   "pre": [
    "CRES.G7.THE_EA.PROPHECIES_ABOUT_THE_MES.MESSIAH_PROPHECY"
@@ -791,7 +804,9 @@ export const SKILLS = {
   "mis": [
    "M_CR7_JB_PARENTS",
    "M_CR7_JB_ROLE",
-   "M_CR7_JB_MESSAGE"
+   "M_CR7_JB_MESSAGE",
+   "M_CR7_JB_LAMB_LITERAL",
+   "M_CR7_JB_GREATER"
   ]
  },
  "CRES.G7.THE_EA.THE_BIRTH_AND_CHILDHOOD_.JESUS_BIRTH": {
@@ -804,12 +819,14 @@ export const SKILLS = {
    "CRE.G7.THE_EA.THE_BIRTH_AND_CHILDHOOD_.c"
   ],
   "pre": [
-   "CRES.G7.THE_EA.JOHN_THE_BAPTIST.JOHN_BAPTIST"
+   "CRES.G7.THE_EA.JOHN_THE_BAPTIST.JOHN_BAPTIST",
+   "CRES.G7.THE_EA.PROPHECIES_ABOUT_THE_MES.MESSIAH_PROPHECY"
   ],
   "mis": [
    "M_CR7_JBR_PLACE",
    "M_CR7_JBR_ANGEL",
-   "M_CR7_JBR_DEDICATION"
+   "M_CR7_JBR_DEDICATION",
+   "M_CR7_JBR_SIMEON"
   ]
  },
  "CRES.G7.THE_EA.THE_BIRTH_AND_CHILDHOOD_.JESUS_TEMPLE": {
@@ -826,7 +843,8 @@ export const SKILLS = {
   "mis": [
    "M_CR7_JT_AGE",
    "M_CR7_JT_DAYS",
-   "M_CR7_JT_HOME"
+   "M_CR7_JT_HOME",
+   "M_CR7_JT_TEACHING"
   ]
  },
  "CRES.G7.THE_CH.SELECTED_FORMS_OF_WORSHI.WORSHIP_FORMS": {
@@ -842,7 +860,8 @@ export const SKILLS = {
   "mis": [
    "M_CR7_WF_FASTING",
    "M_CR7_WF_PRAYER",
-   "M_CR7_WF_THANKS"
+   "M_CR7_WF_THANKS",
+   "M_CR7_WF_FAST_DIET"
   ]
  },
  "CRES.G7.THE_CH.ROLE_OF_THE_CHURCH_IN_ED.CHURCH_SERVICE": {
@@ -854,11 +873,14 @@ export const SKILLS = {
    "CRE.G7.THE_CH.ROLE_OF_THE_CHURCH_IN_ED.b",
    "CRE.G7.THE_CH.ROLE_OF_THE_CHURCH_IN_ED.c"
   ],
-  "pre": [],
+  "pre": [
+   "CRES.G7.THE_BI.FUNCTIONS_OF_THE_BIBLE.BIBLE_FUNCTIONS"
+  ],
   "mis": [
    "M_CR7_CS_SCHOOLS",
    "M_CR7_CS_BARRIER",
-   "M_CR7_CS_SOLUTION"
+   "M_CR7_CS_SOLUTION",
+   "M_CR7_CS_PAST_ONLY"
   ]
  },
  "CRES.G7.CHRIST.HUMAN_SEXUALITY.SEXUALITY_BASICS": {
@@ -868,13 +890,17 @@ export const SKILLS = {
   "outcomes": [
    "CRE.G7.CHRIST.HUMAN_SEXUALITY.a",
    "CRE.G7.CHRIST.HUMAN_SEXUALITY.b",
-   "CRE.G7.CHRIST.HUMAN_SEXUALITY.c"
+   "CRE.G7.CHRIST.HUMAN_SEXUALITY.c",
+   "CRE.G7.CHRIST.HUMAN_SEXUALITY.d",
+   "CRE.G7.CHRIST.HUMAN_SEXUALITY.e"
   ],
   "pre": [],
   "mis": [
    "M_CR7_SB_SHAME",
    "M_CR7_SB_HEALTHY",
-   "M_CR7_SB_PART"
+   "M_CR7_SB_PART",
+   "M_CR7_SB_NO_CONSEQUENCE",
+   "M_CR7_SB_CHASTE_IMPOSSIBLE"
   ]
  },
  "CRES.G7.CHRIST.CHRISTIAN_MARRIAGE_AND_F.MARRIAGE_FAMILY": {
@@ -892,7 +918,8 @@ export const SKILLS = {
   "mis": [
    "M_CR7_MF_GENESIS",
    "M_CR7_MF_VALUE",
-   "M_CR7_MF_LASTING"
+   "M_CR7_MF_LASTING",
+   "M_CR7_MF_CHURCH_ROLE"
   ]
  },
  "CRES.G7.CHRIST.ALCOHOL_DRUGS_AND_SUBSTA.DRUGS_ABUSE": {
@@ -902,13 +929,15 @@ export const SKILLS = {
   "outcomes": [
    "CRE.G7.CHRIST.ALCOHOL_DRUGS_AND_SUBSTA.a",
    "CRE.G7.CHRIST.ALCOHOL_DRUGS_AND_SUBSTA.b",
-   "CRE.G7.CHRIST.ALCOHOL_DRUGS_AND_SUBSTA.c"
+   "CRE.G7.CHRIST.ALCOHOL_DRUGS_AND_SUBSTA.c",
+   "CRE.G7.CHRIST.ALCOHOL_DRUGS_AND_SUBSTA.e"
   ],
   "pre": [],
   "mis": [
    "M_CR7_DA_DRUG",
    "M_CR7_DA_EFFECT",
-   "M_CR7_DA_REFUSE"
+   "M_CR7_DA_REFUSE",
+   "M_CR7_DA_PROVERBS_WINE"
   ]
  },
  "CRES.G7.CHRIST.GAMBLING.GAMBLING": {
@@ -924,7 +953,26 @@ export const SKILLS = {
   "mis": [
    "M_CR7_GM_TYPE",
    "M_CR7_GM_EFFECT",
-   "M_CR7_GM_WEALTH"
+   "M_CR7_GM_WEALTH",
+   "M_CR7_GM_ONE_BET"
+  ]
+ },
+ "CRES.G7.CHRIST.GAMBLING.MONEY_RICHES": {
+  "name": "Outline the teachings on money, wealth and true riches in the scriptures provided (1 Timothy 6:10, 6:17-19; Proverbs 13:11, 28:20-22; Ephesians 4:28; Matthew 6:19-21; Hebrews 13:5)",
+  "sub": "CRE.G7.CHRIST.GAMBLING",
+  "outcome": "CRE.G7.CHRIST.GAMBLING.c",
+  "outcomes": [
+   "CRE.G7.CHRIST.GAMBLING.c",
+   "CRE.G7.CHRIST.GAMBLING.e"
+  ],
+  "pre": [
+   "CRES.G7.CHRIST.GAMBLING.GAMBLING"
+  ],
+  "mis": [
+   "M_CR7_MR_MONEY_EVIL",
+   "M_CR7_MR_QUICK_RICH",
+   "M_CR7_MR_TREASURE_BANK",
+   "M_CR7_MR_THIEF_KEEP"
   ]
  },
  "CRES.G7.CHRIST.SOCIAL_MEDIA.SOCIAL_MEDIA": {
@@ -935,13 +983,15 @@ export const SKILLS = {
    "CRE.G7.CHRIST.SOCIAL_MEDIA.a",
    "CRE.G7.CHRIST.SOCIAL_MEDIA.b",
    "CRE.G7.CHRIST.SOCIAL_MEDIA.c",
-   "CRE.G7.CHRIST.SOCIAL_MEDIA.d"
+   "CRE.G7.CHRIST.SOCIAL_MEDIA.d",
+   "CRE.G7.CHRIST.SOCIAL_MEDIA.e"
   ],
   "pre": [],
   "mis": [
    "M_CR7_SM_PLATFORM",
    "M_CR7_SM_BULLY",
-   "M_CR7_SM_PRIVATE"
+   "M_CR7_SM_PRIVATE",
+   "M_CR7_SM_DELETED_GONE"
   ]
  }
 };
@@ -949,64 +999,91 @@ export const MIS_FEEDBACK = {
  "M_CR7_CV_MARKS": "CRE helps us know God and live with good values.",
  "M_CR7_CV_CHURCH_ONLY": "We show values everywhere we live.",
  "M_CR7_CV_VALUE_MIX": "Honesty is a value; cheating is not.",
+ "M_CR7_CV_RULES_ONLY": "CRE helps us know God and grow in values. It is more than rules.",
  "M_CR7_CT_SEVEN": "God created in six days and rested on the seventh.",
  "M_CR7_CT_DUST": "The man formed from the dust is in Genesis 2.",
  "M_CR7_CT_ATTRIBUTE": "God is powerful and the creator of all things.",
+ "M_CR7_CT_ORDER_MAN": "In Genesis 1, people were made on the sixth day, after plants and animals.",
  "M_CR7_SA_RULE_HARM": "Ruling over means caring for them as God's creation.",
  "M_CR7_SA_PROTECT": "Keeping rivers clean and nests safe protects them.",
  "M_CR7_SA_NOT_MINE": "Creation belongs to God and we care for it.",
+ "M_CR7_SA_POACH_OK": "Poaching harms God's creation and breaks the law. There are honest ways to earn.",
  "M_CR7_SP_WASTE": "Plant a new tree when we cut one.",
  "M_CR7_SP_FOOD": "God gave plants for food and asked us to care for the garden.",
  "M_CR7_SP_INCOME": "Good crop care gives food and income.",
+ "M_CR7_SP_BURN_BUSH": "Burning harms the soil and creatures. Responsible stewards clear land carefully and keep soil covered.",
  "M_CR7_RU_MISUSE": "Polluting the river is misuse of water.",
  "M_CR7_RU_EFFECT": "Cutting trees without replanting causes erosion and drought.",
  "M_CR7_RU_GOOD": "Planting crops and covering soil uses it well.",
+ "M_CR7_RU_ENDLESS": "Resources can run out when misused. Caring for them is our God-given work.",
  "M_CR7_BF_STORY_ONLY": "The Bible teaches, guides and gives hope.",
  "M_CR7_BF_CHURCH_ONLY": "Everyone may read and learn from the Bible.",
  "M_CR7_BF_SERVICE": "Christians use the Bible in worship, teaching and service.",
+ "M_CR7_BF_SPIRIT_ONLY": "The Bible guides the whole person: spirit, mind, body and relationships.",
  "M_CR7_BD_NUMBER": "The Bible has the Old and the New Testament.",
  "M_CR7_BD_SORT_OT": "Genesis is the first book of the Old Testament.",
  "M_CR7_BD_SORT_NT": "Matthew is the first book of the New Testament.",
+ "M_CR7_BD_GROUPS": "Psalms is in the Poetry and Wisdom books of the Old Testament.",
  "M_CR7_BT_LANGUAGE": "The New Testament was first written in Greek.",
  "M_CR7_BT_WHY": "Translation lets people read the Bible in their own language.",
  "M_CR7_BT_EFFECT": "Translation helps reading and education.",
+ "M_CR7_BT_VERSION_DIFFERENT_BIBLE": "A version is one translation of the same Bible. The message is the same.",
  "M_CR7_MP_PALACE": "Moses was brought up in Pharaoh's palace.",
  "M_CR7_MP_BUSH": "God called Moses at the burning bush.",
  "M_CR7_MP_AARON": "Aaron, his brother, helped Moses speak.",
  "M_CR7_MQ_PRIDE": "Moses showed humility and obeyed God.",
  "M_CR7_MQ_LEADER": "A leader of integrity is honest and fair.",
  "M_CR7_MQ_FEAR": "Moses was helped by God and others.",
+ "M_CR7_MP_MIDIAN": "Moses was a shepherd in Midian. Caring for sheep helped prepare him to lead God's people.",
+ "M_CR7_MQ_NEVER_AFRAID": "Moses was unsure and afraid at first, but he obeyed God and grew as a leader.",
  "M_CR7_MS_BETHLEHEM": "Micah 5:2 names Bethlehem.",
  "M_CR7_MS_VIRGIN": "Isaiah 7:14 says a virgin will bear a son called Immanuel.",
  "M_CR7_MS_FULFIL": "A prophecy is fulfilled when it comes true.",
+ "M_CR7_MS_IMMANUEL": "Immanuel means \"God with us\". It is a name for Jesus.",
  "M_CR7_JB_PARENTS": "John's parents were Zechariah and Elizabeth.",
  "M_CR7_JB_ROLE": "John prepared the way for the Messiah.",
  "M_CR7_JB_MESSAGE": "John told people to repent and share.",
+ "M_CR7_JB_LAMB_LITERAL": "The Lamb of God means Jesus would give his life to take away the sin of the world.",
+ "M_CR7_JB_GREATER": "John said the one coming was more powerful; John was not worthy even to untie his sandals.",
  "M_CR7_JBR_PLACE": "Jesus was born in Bethlehem.",
  "M_CR7_JBR_ANGEL": "The angel Gabriel told Mary.",
  "M_CR7_JBR_DEDICATION": "Jesus was dedicated at the Temple in Jerusalem.",
  "M_CR7_JT_AGE": "Jesus was twelve years old.",
  "M_CR7_JT_DAYS": "His parents found Him after three days.",
  "M_CR7_JT_HOME": "Jesus went home with them and obeyed.",
+ "M_CR7_JBR_SIMEON": "Simeon took Jesus in his arms and praised God, and the prophet Anna gave thanks.",
+ "M_CR7_JT_TEACHING": "Jesus sat with the teachers, listening and asking questions, and they were amazed at his understanding.",
  "M_CR7_WF_FASTING": "Jesus taught to fast without showing off.",
  "M_CR7_WF_PRAYER": "Prayer is talking with God.",
  "M_CR7_WF_THANKS": "Thanksgiving is thanking God.",
+ "M_CR7_WF_FAST_DIET": "Christian fasting is going without food for a time to pray and seek God, not dieting.",
  "M_CR7_CS_SCHOOLS": "Churches started many schools and hospitals.",
  "M_CR7_CS_BARRIER": "Poverty and long distances are barriers.",
  "M_CR7_CS_SOLUTION": "Training workers and working together help.",
+ "M_CR7_CS_PAST_ONLY": "The church still sponsors schools and runs hospitals and clinics today.",
  "M_CR7_SB_SHAME": "Tell a trusted adult if you feel unsafe.",
  "M_CR7_SB_HEALTHY": "Healthy relationships have respect and honesty.",
  "M_CR7_SB_PART": "Sexuality is part of who we are, to be handled with respect.",
+ "M_CR7_SB_NO_CONSEQUENCE": "Sex before marriage can bring early pregnancy, infections, leaving school and broken trust, whether or not anyone finds out.",
+ "M_CR7_SB_CHASTE_IMPOSSIBLE": "Yes, many young people stay chaste. God's help, good friends and self-control make it possible.",
  "M_CR7_MF_GENESIS": "A man is joined to his wife and they become one.",
  "M_CR7_MF_VALUE": "Love and forgiveness keep a family stable.",
  "M_CR7_MF_LASTING": "God planned marriage to be lasting.",
+ "M_CR7_MF_CHURCH_ROLE": "Churches teach and mentor young people and offer counselling before marriage.",
  "M_CR7_DA_DRUG": "Bhang is an abused drug.",
  "M_CR7_DA_EFFECT": "Drug abuse harms health and school work.",
  "M_CR7_DA_REFUSE": "Refuse and tell a trusted adult.",
+ "M_CR7_DA_PROVERBS_WINE": "Proverbs 20:1 warns that wine mocks and beer brawls. Being led astray by them is not wise.",
  "M_CR7_GM_TYPE": "Betting money on a game is gambling.",
  "M_CR7_GM_EFFECT": "Gambling causes debt and quarrels.",
  "M_CR7_GM_WEALTH": "1 Timothy 6:10 warns about the love of money.",
+ "M_CR7_MR_MONEY_EVIL": "The Bible says the love of money is a root of all kinds of evil, not money itself.",
+ "M_CR7_MR_QUICK_RICH": "Money gathered little by little grows. Chasing quick riches leads to trouble.",
+ "M_CR7_MR_TREASURE_BANK": "Treasures in heaven are good deeds, generosity and faithfulness to God, which moth and rust cannot destroy.",
+ "M_CR7_MR_THIEF_KEEP": "Ephesians 4:28 says: stop stealing, work honestly, and share with those in need.",
+ "M_CR7_GM_ONE_BET": "One bet, especially a win, can start a habit that leads to debt. Do not be mastered by anything.",
  "M_CR7_SM_PLATFORM": "WhatsApp is a social media platform.",
  "M_CR7_SM_BULLY": "Save the message and tell a trusted adult.",
- "M_CR7_SM_PRIVATE": "Keep private information safe and be kind."
+ "M_CR7_SM_PRIVATE": "Keep private information safe and be kind.",
+ "M_CR7_SM_DELETED_GONE": "Once posted, something can be saved and shared even after you delete it. Think before you post."
 };

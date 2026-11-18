@@ -1,0 +1,99 @@
+{
+ "sub_strand": "CRE.G4.THE_CH.HOUSE_OF_GOD",
+ "title": "House of God",
+ "status": "draft: written 18 Nov 2026 offline for Grade 4 Christian Religious Education; not yet checked by a CRE teacher; not loaded by the live tutor",
+ "sources": [],
+ "notes": "",
+ "skills": [
+  {
+   "skill": "CRES.G4.THE_CH.HOUSE_OF_GOD.HOUSE_OF_GOD",
+   "key_step": "The child outlines Matthew 21:12-14: Jesus drives out those buying and selling in the temple, says it should be a house of prayer, and heals the blind and lame there; the church is a holy place to respect always.",
+   "floor": {
+    "prerequisite": "Knows the church is a place of prayer.",
+    "question": "What do people do in church?",
+    "answer": "Pray (sing, worship, read the Bible)"
+   },
+   "representations": [
+    "a temple drawn with tables",
+    "Matthew 21:13 written large",
+    "a church respect chart"
+   ],
+   "steps": [
+    "Jesus enters the temple.",
+    "He drives out the traders and overturns tables.",
+    "He says \"a house of prayer\".",
+    "He heals the blind and the lame."
+   ],
+   "contexts": [
+    "a church compound on a weekday",
+    "a harvest sale outside church",
+    "quiet in church during prayer"
+   ],
+   "board": [
+    {
+     "beat": "write",
+     "do": "Draw a temple with tables overturned."
+    },
+    {
+     "beat": "point",
+     "do": "Point at the tables.",
+     "say": "Why did Jesus overturn these?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for the child to say the temple is a house of prayer."
+    },
+    {
+     "beat": "reveal",
+     "do": "Write Matthew 21:13."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "CRES.G4.THE_CH.HOUSE_OF_GOD.HOUSE_OF_GOD.M_C4_HG_DROVE_WORSHIPPERS",
+     "listen_for": [
+      "The people praying"
+     ],
+     "ask": "Whom did Jesus drive out of the temple?",
+     "repair": "Read Matthew 21:12."
+    },
+    {
+     "code": "CRES.G4.THE_CH.HOUSE_OF_GOD.HOUSE_OF_GOD.M_C4_HG_BUSINESS_OK",
+     "listen_for": [
+      "A market for trading"
+     ],
+     "ask": "What did Jesus say the temple should be?",
+     "repair": "Read Matthew 21:13."
+    },
+    {
+     "code": "CRES.G4.THE_CH.HOUSE_OF_GOD.HOUSE_OF_GOD.M_C4_HG_SERVICE_ONLY",
+     "listen_for": [
+      "Only during the service"
+     ],
+     "ask": "When should we respect the church?",
+     "repair": "List ways of respecting the church every day."
+    },
+    {
+     "code": "CRES.G4.THE_CH.HOUSE_OF_GOD.HOUSE_OF_GOD.M_C4_HG_HEALED",
+     "listen_for": [
+      "Nobody, the temple was empty"
+     ],
+     "ask": "Who came to Jesus at the temple after he drove out the traders (Matthew 21:14)?",
+     "repair": "Read Matthew 21:14. Jesus cleared the temple for prayer and for healing."
+    }
+   ],
+   "checks": [
+    {
+     "question": "What did Jesus say the temple should be?",
+     "answer": "A house of prayer",
+     "shows": "verse"
+    },
+    {
+     "question": "Whom did Jesus drive out?",
+     "answer": "Those buying and selling",
+     "shows": "story detail"
+    }
+   ]
+  }
+ ]
+}

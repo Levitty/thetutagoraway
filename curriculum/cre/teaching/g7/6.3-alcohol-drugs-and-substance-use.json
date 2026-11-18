@@ -1,0 +1,99 @@
+{
+ "sub_strand": "CRE.G7.CHRIST.ALCOHOL_DRUGS_AND_SUBSTA",
+ "title": "Alcohol, Drugs and Substance use",
+ "status": "draft: written 18 Nov 2026 offline for Grade 7 Christian Religious Education; not yet checked by a CRE teacher; not loaded by the live tutor",
+ "sources": [],
+ "notes": "",
+ "skills": [
+  {
+   "skill": "CRES.G7.CHRIST.ALCOHOL_DRUGS_AND_SUBSTA.DRUGS_ABUSE",
+   "key_step": "The learner identifies drugs commonly abused by youths in Kenya, discusses why young people abuse them, explores effects on the individual and family, reads the scriptures provided (1 Corinthians 3:17, 6:10; Ephesians 5:18; Proverbs 20:1, 23:29-35; Isaiah 5:11) and recommends values and life skills to stay free.",
+   "floor": {
+    "prerequisite": "Knows the teaching of Ephesians 5:18.",
+    "question": "What does Ephesians 5:18 say?",
+    "answer": "Do not get drunk on wine, but be filled with the Spirit"
+   },
+   "representations": [
+    "a web: causes, effects on self, effects on family",
+    "scripture cards",
+    "refusal lines"
+   ],
+   "steps": [
+    "List drugs abused.",
+    "Discuss causes.",
+    "Explore effects on self and family.",
+    "Recommend values and skills."
+   ],
+   "contexts": [
+    "a NACADA campaign",
+    "a youth who recovered from addiction",
+    "a family hurt by alcohol"
+   ],
+   "board": [
+    {
+     "beat": "write",
+     "do": "Write Proverbs 20:1."
+    },
+    {
+     "beat": "point",
+     "do": "Point at \"not wise\".",
+     "say": "What do the scriptures teach about alcohol?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for the learner to give the warning."
+    },
+    {
+     "beat": "reveal",
+     "do": "List values and life skills to stay free."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "CRES.G7.CHRIST.ALCOHOL_DRUGS_AND_SUBSTA.DRUGS_ABUSE.M_CR7_DA_DRUG",
+     "listen_for": [
+      "None that are sold in shops"
+     ],
+     "ask": "Which of these is a commonly abused drug?",
+     "repair": "List commonly abused substances in Kenya: alcohol, tobacco, bhang, miraa, glue, prescription pills. Legal does not mean safe."
+    },
+    {
+     "code": "CRES.G7.CHRIST.ALCOHOL_DRUGS_AND_SUBSTA.DRUGS_ABUSE.M_CR7_DA_EFFECT",
+     "listen_for": [
+      "Everyone is more relaxed"
+     ],
+     "ask": "Which is an effect of drug abuse on the family?",
+     "repair": "Chart effects on the person (health, school, crime) and on the family (money, violence, shame)."
+    },
+    {
+     "code": "CRES.G7.CHRIST.ALCOHOL_DRUGS_AND_SUBSTA.DRUGS_ABUSE.M_CR7_DA_REFUSE",
+     "listen_for": [
+      "Take them to fit in"
+     ],
+     "ask": "What should you do if a friend offers drugs?",
+     "repair": "Practise three refusal lines and walk away; name the friend who will stand with you."
+    },
+    {
+     "code": "CRES.G7.CHRIST.ALCOHOL_DRUGS_AND_SUBSTA.DRUGS_ABUSE.M_CR7_DA_PROVERBS_WINE",
+     "listen_for": [
+      "They make a person wise"
+     ],
+     "ask": "What does Proverbs 20:1 say about wine and beer?",
+     "repair": "Read Proverbs 20:1 and 23:29-35 and list the harms they name."
+    }
+   ],
+   "checks": [
+    {
+     "question": "Name a drug commonly abused by youths in Kenya.",
+     "answer": "Alcohol (bhang, miraa, glue)",
+     "shows": "drugs"
+    },
+    {
+     "question": "Recommend a life skill to stay drug-free.",
+     "answer": "Assertiveness (decision-making, self-control)",
+     "shows": "skills"
+    }
+   ]
+  }
+ ]
+}

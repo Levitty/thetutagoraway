@@ -1,0 +1,107 @@
+{
+ "sub_strand": "CRE.G7.THE_EA.JOHN_THE_BAPTIST",
+ "title": "John the Baptist",
+ "status": "draft: written 18 Nov 2026 offline for Grade 7 Christian Religious Education; not yet checked by a CRE teacher; not loaded by the live tutor",
+ "sources": [],
+ "notes": "",
+ "skills": [
+  {
+   "skill": "CRES.G7.THE_EA.JOHN_THE_BAPTIST.JOHN_BAPTIST",
+   "key_step": "The learner elaborates the annunciation and birth of John (Luke 1:5-25, 57-66), relates it to the coming Messiah, interprets John's description of Jesus (Luke 3:16: more powerful, baptises with the Holy Spirit and fire; John 1:29-30: the Lamb of God who takes away sin) and discusses John's message (Luke 3:7-18: repent, bear fruit, share, be honest, be content).",
+   "floor": {
+    "prerequisite": "Knows John's teaching in Luke 3:3-14.",
+    "question": "What did John tell people with two coats?",
+    "answer": "Share with one who has none"
+   },
+   "representations": [
+    "Luke 3:16 and John 1:29 written large",
+    "a chart of John's message",
+    "two family cards"
+   ],
+   "steps": [
+    "Annunciation and birth of John.",
+    "John prepares the way.",
+    "John describes Jesus: more powerful, Lamb of God.",
+    "John's message: repent and bear fruit."
+   ],
+   "contexts": [
+    "a herald before a leader's visit",
+    "Advent readings",
+    "living honestly at work"
+   ],
+   "board": [
+    {
+     "beat": "write",
+     "do": "Write John 1:29: \"Look, the Lamb of God\"."
+    },
+    {
+     "beat": "point",
+     "do": "Point at \"Lamb of God\".",
+     "say": "What did John mean?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for the learner to say Jesus would be the sacrifice for sin."
+    },
+    {
+     "beat": "reveal",
+     "do": "Write Luke 3:16 below and discuss it."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "CRES.G7.THE_EA.JOHN_THE_BAPTIST.JOHN_BAPTIST.M_CR7_JB_PARENTS",
+     "listen_for": [
+      "Joseph and Mary"
+     ],
+     "ask": "Who were the parents of John the Baptist?",
+     "repair": "Draw two families: Zechariah and Elizabeth (John); Joseph and Mary (Jesus)."
+    },
+    {
+     "code": "CRES.G7.THE_EA.JOHN_THE_BAPTIST.JOHN_BAPTIST.M_CR7_JB_ROLE",
+     "listen_for": [
+      "He was the Messiah"
+     ],
+     "ask": "What was John's role?",
+     "repair": "Read Luke 3:15-16: John said one more powerful was coming."
+    },
+    {
+     "code": "CRES.G7.THE_EA.JOHN_THE_BAPTIST.JOHN_BAPTIST.M_CR7_JB_MESSAGE",
+     "listen_for": [
+      "That it was enough to be saved"
+     ],
+     "ask": "What did John say about being children of Abraham (Luke 3:8)?",
+     "repair": "Chart Luke 3:10-14: crowd, share; tax collectors, honesty; soldiers, no extortion, contentment."
+    },
+    {
+     "code": "CRES.G7.THE_EA.JOHN_THE_BAPTIST.JOHN_BAPTIST.M_CR7_JB_LAMB_LITERAL",
+     "listen_for": [
+      "Jesus looked after lambs"
+     ],
+     "ask": "What did John mean when he called Jesus \"the Lamb of God, who takes away the sin of the world\"?",
+     "repair": "Link with the lambs sacrificed in the temple and at Passover. Jesus would give his life for sin."
+    },
+    {
+     "code": "CRES.G7.THE_EA.JOHN_THE_BAPTIST.JOHN_BAPTIST.M_CR7_JB_GREATER",
+     "listen_for": [
+      "That John was greater"
+     ],
+     "ask": "In Luke 3:16, what did John say about the one coming after him?",
+     "repair": "Read Luke 3:16 and John 1:30: \"he was before me\". Act untying sandals, a servant's job."
+    }
+   ],
+   "checks": [
+    {
+     "question": "What did John call Jesus in John 1:29?",
+     "answer": "The Lamb of God who takes away the sin of the world",
+     "shows": "description"
+    },
+    {
+     "question": "What did John say the one coming would baptise with?",
+     "answer": "The Holy Spirit and fire",
+     "shows": "Luke 3:16"
+    }
+   ]
+  }
+ ]
+}

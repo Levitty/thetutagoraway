@@ -1,0 +1,99 @@
+{
+ "sub_strand": "CRE.G5.CHRIST.FRIENDSHIP_FORMATION",
+ "title": "Friendship formation",
+ "status": "draft: written 18 Nov 2026 offline for Grade 5 Christian Religious Education; not yet checked by a CRE teacher; not loaded by the live tutor",
+ "sources": [],
+ "notes": "",
+ "skills": [
+  {
+   "skill": "CRES.G5.CHRIST.FRIENDSHIP_FORMATION.FRIENDS",
+   "key_step": "The child names qualities of a good friend (honest, kind, respectful, obedient, God-fearing), says Proverbs 22:24-25 warns against friends who are easily angered, and gives ways to resist bad influence (say no, walk away, tell, choose other friends).",
+   "floor": {
+    "prerequisite": "Knows whom to trust for safety.",
+    "question": "Name one trusted person.",
+    "answer": "A parent (teacher)"
+   },
+   "representations": [
+    "a \"good friend\" checklist",
+    "Proverbs 22:24-25 written large",
+    "role-play cards"
+   ],
+   "steps": [
+    "List good qualities.",
+    "Read Proverbs 22:24-25.",
+    "Practise saying no.",
+    "Choose friends who help you do right."
+   ],
+   "contexts": [
+    "a friend who asks you to copy in a test",
+    "a new pupil with no friends",
+    "a group that dares you to sneak out"
+   ],
+   "board": [
+    {
+     "beat": "write",
+     "do": "Draw a checklist titled \"a good friend\"."
+    },
+    {
+     "beat": "point",
+     "do": "Point at the empty first line.",
+     "say": "What is one quality of a good friend?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for the child to say honest, kind or respectful."
+    },
+    {
+     "beat": "reveal",
+     "do": "Write Proverbs 22:24-25 at the bottom."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "CRES.G5.CHRIST.FRIENDSHIP_FORMATION.FRIENDS.M_FR_POPULAR",
+     "listen_for": [
+      "Because he is popular and has nice things"
+     ],
+     "ask": "Which is the best reason to choose a friend?",
+     "repair": "List qualities with the class before naming friends."
+    },
+    {
+     "code": "CRES.G5.CHRIST.FRIENDSHIP_FORMATION.FRIENDS.M_FR_FOLLOW",
+     "listen_for": [
+      "Copy so that you keep your friend"
+     ],
+     "ask": "A friend asks you to copy answers in a test. What should you do?",
+     "repair": "Practise a short polite refusal in pairs."
+    },
+    {
+     "code": "CRES.G5.CHRIST.FRIENDSHIP_FORMATION.FRIENDS.M_FR_PROVERB",
+     "listen_for": [
+      "Be friends with a person who has a quick temper"
+     ],
+     "ask": "What does Proverbs 22:24-25 advise?",
+     "repair": "Read Proverbs 22:24-25."
+    },
+    {
+     "code": "CRES.G5.CHRIST.FRIENDSHIP_FORMATION.FRIENDS.M_C5_FR_CHANGE_THEM",
+     "listen_for": [
+      "Stay with them so I can change them"
+     ],
+     "ask": "Your friends steal from the canteen and want you to join. What is wise?",
+     "repair": "Read Proverbs 22:25: you may learn their ways. Practise walking away kindly."
+    }
+   ],
+   "checks": [
+    {
+     "question": "What does Proverbs 22:24-25 advise?",
+     "answer": "Do not make friends with a hot-tempered person",
+     "shows": "verse"
+    },
+    {
+     "question": "A friend asks you to copy in a test. What do you do?",
+     "answer": "Say no and offer to help study",
+     "shows": "peer influence"
+    }
+   ]
+  }
+ ]
+}

@@ -1,0 +1,99 @@
+{
+ "sub_strand": "CRE.G4.CHRIST.LOVE_LOVE",
+ "title": "Love Love",
+ "status": "draft: written 18 Nov 2026 offline for Grade 4 Christian Religious Education; not yet checked by a CRE teacher; not loaded by the live tutor",
+ "sources": [],
+ "notes": "",
+ "skills": [
+  {
+   "skill": "CRES.G4.CHRIST.LOVE_LOVE.LOVE_CHILDREN",
+   "key_step": "The child retells Matthew 19:13-15: people bring children for Jesus to bless, the disciples rebuke them, Jesus says \"Let the little children come to me\", places his hands on them; God loves children.",
+   "floor": {
+    "prerequisite": "Knows Jesus showed kindness to people in need.",
+    "question": "What did Jesus do for the hungry crowd?",
+    "answer": "Fed them"
+   },
+   "representations": [
+    "a picture of Jesus with children",
+    "Matthew 19:14 written large",
+    "a speech bubble for the disciples and one for Jesus"
+   ],
+   "steps": [
+    "Who brought the children?",
+    "What did the disciples do?",
+    "What did Jesus say?",
+    "What did Jesus do for them?"
+   ],
+   "contexts": [
+    "a baby dedication at church",
+    "children's Sunday",
+    "an older pupil helping a younger one"
+   ],
+   "board": [
+    {
+     "beat": "write",
+     "do": "Draw two speech bubbles: the disciples and Jesus."
+    },
+    {
+     "beat": "point",
+     "do": "Point at Jesus' bubble.",
+     "say": "What did Jesus say about the children?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for the child to say \"Let the little children come to me\"."
+    },
+    {
+     "beat": "reveal",
+     "do": "Write Matthew 19:14 in the bubble."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "CRES.G4.CHRIST.LOVE_LOVE.LOVE_CHILDREN.M_C4_LC_DISCIPLES",
+     "listen_for": [
+      "They welcomed the children"
+     ],
+     "ask": "What did the disciples do when people brought children to Jesus?",
+     "repair": "Read Matthew 19:13."
+    },
+    {
+     "code": "CRES.G4.CHRIST.LOVE_LOVE.LOVE_CHILDREN.M_C4_LC_BUSY",
+     "listen_for": [
+      "Send them away, I am busy"
+     ],
+     "ask": "What did Jesus say about the children?",
+     "repair": "Read Matthew 19:14."
+    },
+    {
+     "code": "CRES.G4.CHRIST.LOVE_LOVE.LOVE_CHILDREN.M_C4_LC_NO_HANDS",
+     "listen_for": [
+      "Nothing, he only spoke to the adults"
+     ],
+     "ask": "What did Jesus do for the children?",
+     "repair": "Read Matthew 19:15."
+    },
+    {
+     "code": "CRES.G4.CHRIST.LOVE_LOVE.LOVE_CHILDREN.M_C4_LC_GROWN_UPS_FIRST",
+     "listen_for": [
+      "Only to grown-ups who have done a lot"
+     ],
+     "ask": "To whom does the kingdom of heaven belong, according to Matthew 19:14?",
+     "repair": "Read Matthew 19:14 and ask: who does Jesus point to? Children are welcomed now."
+    }
+   ],
+   "checks": [
+    {
+     "question": "What did the disciples do when children were brought?",
+     "answer": "Told the people off",
+     "shows": "story detail"
+    },
+    {
+     "question": "What did Jesus do for the children?",
+     "answer": "Placed his hands on them and blessed them",
+     "shows": "blessing"
+    }
+   ]
+  }
+ ]
+}

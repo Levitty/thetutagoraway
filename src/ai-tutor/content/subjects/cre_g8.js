@@ -6,6 +6,7 @@ import { SKILLS, SUBSTRANDS, OUTCOMES, MIS_FEEDBACK } from '../curriculumMap.cre
 import { FAMILIES as A } from '../families/cre_g8_a.js';
 import { FAMILIES as B } from '../families/cre_g8_b.js';
 import { SIGNED } from '../families/cre_g8_signed.js';
+import { AWAITING } from '../families/cre_g8_awaiting.js';
 
 export default {
   subject: 'cre', grade: 8, prefix: 'CRES',
@@ -15,6 +16,7 @@ export default {
   families: [...A, ...B],                          // add each family file you write: [...A, ...B]
   familyFiles: ['cre_g8_a.js', 'cre_g8_b.js'],              // the same files by name (a phone build drops them while nothing is signed)
   signed: SIGNED, signedFile: 'cre_g8_signed.js',
+  awaiting: AWAITING,                        // skills of the deeper map (18 Nov 2026) with no family yet: listed, not failed (build-cre-grade.mjs writes it)
   checks: 'family',                          // 'family' = the shared family checks; 'text' = word-answer checks (english_checks.mjs)
   idPrefix: 'cre8.',          // every family id starts with this
   marker: null,                            // 'text' when answers are marked as words by answerCheckText.js

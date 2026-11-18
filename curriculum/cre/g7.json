@@ -3,15 +3,15 @@
  "subject_key": "cre",
  "grade": 7,
  "source": "KICD Christian Religious Education, First Published in 2022; Revised 2024 (text layer)",
- "status": "outcomes from KICD's text, word for word; skills, prerequisites and misconceptions proposed (authored offline, 13 Nov 2026), awaiting a CRE teacher's review",
+ "status": "outcomes from KICD's text, word for word; skills and prerequisites proposed, misconceptions draft, teaching pack draft; first pass 12 and 13 Nov 2026, deepened to the Grade 5 Maths standard on 18 Nov 2026 (two prerequisites and four misconceptions per skill); written offline by Claude, awaiting a CRE teacher's review. Rubrics from KICD, untouched.",
  "totals": {
   "strands": 6,
   "sub_strands": 19,
   "outcomes": 94,
   "lessons": 120,
-  "skills": 21,
-  "prerequisites": 11,
-  "misconceptions": 63
+  "skills": 22,
+  "prerequisites": 51,
+  "misconceptions": 90
  },
  "sub_strands": [
   {
@@ -91,7 +91,8 @@
      "name": "Say why learning CRE matters and how it grows good values",
      "outcomes": [
       "CRE.G7.OVERVI.IMPORTANCE_OF_STUDYING_C.a",
-      "CRE.G7.OVERVI.IMPORTANCE_OF_STUDYING_C.b"
+      "CRE.G7.OVERVI.IMPORTANCE_OF_STUDYING_C.b",
+      "CRE.G7.OVERVI.IMPORTANCE_OF_STUDYING_C.c"
      ],
      "mastery": "The child says CRE helps people know God, grow in values such as honesty, respect, love and responsibility, and live well with others. Evidence rule: at least four of the last five fresh questions right across at least two question forms, and no repeated pick of the same misconception.",
      "question_forms": [
@@ -104,7 +105,22 @@
       "reasoning"
      ],
      "horeb_skill_ids": [],
-     "prerequisites": [],
+     "prerequisites": [
+      {
+       "requires": "CRES.G6.THE_BI.THE_TEN_COMMANDMENTS.TEN_VALUES",
+       "kind": "skill",
+       "strength": "essential",
+       "reason": "Values in the Ten Commandments, the first list of values a learner meets in CRE. Proposed, to confirm by a CRE teacher.",
+       "status": "proposed"
+      },
+      {
+       "requires": "CRES.G6.THE_BI.INSPIRED_WORD_OF_GOD.INSPIRED",
+       "kind": "skill",
+       "strength": "essential",
+       "reason": "The Bible as God's word, which CRE studies. Proposed, to confirm by a CRE teacher.",
+       "status": "proposed"
+      }
+     ],
      "status": "proposed"
     }
    ],
@@ -118,9 +134,9 @@
       "wrong_answer": "Only to pass exams",
       "correct_answer": "To grow in good values and know God"
      },
-     "cause": "The child mixes up two rules that are taught close together.",
+     "cause": "Exams are what school rewards, so every subject is seen as a mark.",
      "reveals": "Offer \"Only to pass exams\" next to the right answer and ask the question again in a new situation.",
-     "help": "CRE helps us know God and live with good values.",
+     "help": "Ask learners to write how one CRE lesson changed what they did that week.",
      "feedback": "CRE helps us know God and live with good values.",
      "source": "To confirm by a CRE teacher: a common classroom error, not traced to a study by the author.",
      "status": "draft"
@@ -134,9 +150,9 @@
       "wrong_answer": "Only in church",
       "correct_answer": "At home, school and church"
      },
-     "cause": "The child mixes up two rules that are taught close together.",
+     "cause": "CRE talks about God, and God is linked with church.",
      "reveals": "Offer \"Only in church\" next to the right answer and ask the question again in a new situation.",
-     "help": "We show values everywhere we live.",
+     "help": "List places values are needed: home, school, the matatu, online. Match a value to each.",
      "feedback": "We show values everywhere we live.",
      "source": "To confirm by a CRE teacher: a common classroom error, not traced to a study by the author.",
      "status": "draft"
@@ -144,16 +160,32 @@
     {
      "code": "CRES.G7.OVERVI.IMPORTANCE_OF_STUDYING_C.CRE_VALUE.M_CR7_CV_VALUE_MIX",
      "skill": "CRES.G7.OVERVI.IMPORTANCE_OF_STUDYING_C.CRE_VALUE",
-     "error": "Names a bad habit as a value.",
+     "error": "Picks boldness in getting one's own way as a value, mixing confidence with selfishness, instead of honesty.",
      "example": {
       "question": "Which is a value learnt in CRE?",
-      "wrong_answer": "Cheating",
+      "wrong_answer": "Getting your own way at any cost",
       "correct_answer": "Honesty"
      },
-     "cause": "The child mixes up two rules that are taught close together.",
-     "reveals": "Offer \"Cheating\" next to the right answer and ask the question again in a new situation.",
-     "help": "Honesty is a value; cheating is not.",
+     "cause": "Some values sound alike and the learner picks a word that \"sounds strong\".",
+     "reveals": "Offer \"Getting your own way at any cost\" beside \"Honesty\" and ask the child to choose.",
+     "help": "Sort cards into values and vices; give each value an action that shows it.",
      "feedback": "Honesty is a value; cheating is not.",
+     "source": "To confirm by a CRE teacher: a common classroom error, not traced to a study by the author.",
+     "status": "draft"
+    },
+    {
+     "code": "CRES.G7.OVERVI.IMPORTANCE_OF_STUDYING_C.CRE_VALUE.M_CR7_CV_RULES_ONLY",
+     "skill": "CRES.G7.OVERVI.IMPORTANCE_OF_STUDYING_C.CRE_VALUE",
+     "error": "Thinks CRE is only a list of rules, not also knowing God and growing in character.",
+     "example": {
+      "question": "What is Christian Religious Education mainly about?",
+      "wrong_answer": "Learning rules so as to avoid punishment",
+      "correct_answer": "Knowing God through the Bible and growing in values for responsible living"
+     },
+     "cause": "Many lessons end with \"do\" and \"do not\", so the learner hears only rules.",
+     "reveals": "Offer \"Learning rules so as to avoid punishment\" beside \"Knowing God through the Bible and growing in values for responsible living\" and ask the child to choose.",
+     "help": "Ask what each lesson taught about God, then what it taught about living. Both together are CRE.",
+     "feedback": "CRE helps us know God and grow in values. It is more than rules.",
      "source": "To confirm by a CRE teacher: a common classroom error, not traced to a study by the author.",
      "status": "draft"
     }
@@ -250,7 +282,29 @@
       "reasoning"
      ],
      "horeb_skill_ids": [],
-     "prerequisites": [],
+     "prerequisites": [
+      {
+       "requires": "CRES.G5.CREATI.THE_FALL_OF_MAN.FALL_OF_MAN",
+       "kind": "skill",
+       "strength": "essential",
+       "reason": "Genesis 3 follows the second creation account. Proposed, to confirm by a CRE teacher.",
+       "status": "proposed"
+      },
+      {
+       "requires": "CRES.G6.CREATI.LEISURE.LEISURE_REST",
+       "kind": "skill",
+       "strength": "essential",
+       "reason": "God's rest on the seventh day closes the first account. Proposed, to confirm by a CRE teacher.",
+       "status": "proposed"
+      },
+      {
+       "requires": "CRES.G4.CREATI.ATTRIBUTES_OF_GOD.ATTRIBUTES",
+       "kind": "skill",
+       "strength": "essential",
+       "reason": "Attributes of God, which the creation accounts show. Proposed, to confirm by a CRE teacher.",
+       "status": "proposed"
+      }
+     ],
      "status": "proposed"
     }
    ],
@@ -258,15 +312,15 @@
     {
      "code": "CRES.G7.CREATI.ACCOUNTS_OF_CREATION.CREATION_TWO.M_CR7_CT_SEVEN",
      "skill": "CRES.G7.CREATI.ACCOUNTS_OF_CREATION.CREATION_TWO",
-     "error": "Gives the wrong number of days in Genesis 1.",
+     "error": "Says God worked for seven days in Genesis 1, counting the day of rest as a working day.",
      "example": {
       "question": "In how many days did God create in Genesis 1, before resting?",
       "wrong_answer": "Seven days of work",
       "correct_answer": "Six days"
      },
-     "cause": "The child mixes up two rules that are taught close together.",
+     "cause": "The week has seven days, so the learner counts the rest day as a working day.",
      "reveals": "Offer \"Seven days of work\" next to the right answer and ask the question again in a new situation.",
-     "help": "God created in six days and rested on the seventh.",
+     "help": "Number Genesis 1 day by day on the board; stop at day six; write \"rest\" on day seven.",
      "feedback": "God created in six days and rested on the seventh.",
      "source": "To confirm by a CRE teacher: a common classroom error, not traced to a study by the author.",
      "status": "draft"
@@ -274,15 +328,15 @@
     {
      "code": "CRES.G7.CREATI.ACCOUNTS_OF_CREATION.CREATION_TWO.M_CR7_CT_DUST",
      "skill": "CRES.G7.CREATI.ACCOUNTS_OF_CREATION.CREATION_TWO",
-     "error": "Says the first account has man from dust.",
+     "error": "Puts man formed from the dust in the first account (Genesis 1), mixing it with the second (Genesis 2:7).",
      "example": {
       "question": "In which account is man formed from the dust?",
       "wrong_answer": "The first account in Genesis 1",
       "correct_answer": "The second account in Genesis 2"
      },
-     "cause": "The child mixes up two rules that are taught close together.",
+     "cause": "The two accounts are read as one story.",
      "reveals": "Offer \"The first account in Genesis 1\" next to the right answer and ask the question again in a new situation.",
-     "help": "The man formed from the dust is in Genesis 2.",
+     "help": "Make two columns, Genesis 1 and Genesis 2, and write where each detail comes from.",
      "feedback": "The man formed from the dust is in Genesis 2.",
      "source": "To confirm by a CRE teacher: a common classroom error, not traced to a study by the author.",
      "status": "draft"
@@ -290,16 +344,32 @@
     {
      "code": "CRES.G7.CREATI.ACCOUNTS_OF_CREATION.CREATION_TWO.M_CR7_CT_ATTRIBUTE",
      "skill": "CRES.G7.CREATI.ACCOUNTS_OF_CREATION.CREATION_TWO",
-     "error": "Names a wrong attribute of God.",
+     "error": "Names God as all-forgiving as an attribute shown in the creation accounts, instead of one the accounts show, such as creator and orderly.",
      "example": {
-      "question": "Which attribute of God do the creation accounts show?",
-      "wrong_answer": "God is weak",
-      "correct_answer": "God is powerful and creator"
+      "question": "Which attribute of God is shown in Genesis 1 by \"God said... and it was so\"?",
+      "wrong_answer": "God forgives sins",
+      "correct_answer": "God is all-powerful: he creates by his word"
      },
-     "cause": "The child mixes up two rules that are taught close together.",
-     "reveals": "Offer \"God is weak\" next to the right answer and ask the question again in a new situation.",
-     "help": "God is powerful and the creator of all things.",
+     "cause": "The learner names any attribute of God, not one the accounts show.",
+     "reveals": "Offer \"God forgives sins\" beside \"God is all-powerful: he creates by his word\" and ask the child to choose.",
+     "help": "For each attribute, ask for the verse in Genesis 1-2 that shows it.",
      "feedback": "God is powerful and the creator of all things.",
+     "source": "To confirm by a CRE teacher: a common classroom error, not traced to a study by the author.",
+     "status": "draft"
+    },
+    {
+     "code": "CRES.G7.CREATI.ACCOUNTS_OF_CREATION.CREATION_TWO.M_CR7_CT_ORDER_MAN",
+     "skill": "CRES.G7.CREATI.ACCOUNTS_OF_CREATION.CREATION_TWO",
+     "error": "Thinks man was made first in Genesis 1, before plants and animals.",
+     "example": {
+      "question": "In Genesis 1, on which day were human beings made?",
+      "wrong_answer": "On the first day",
+      "correct_answer": "On the sixth day, after the plants and animals"
+     },
+     "cause": "In Genesis 2 the man is made before the plants appear, and the orders mix.",
+     "reveals": "Offer \"On the first day\" beside \"On the sixth day, after the plants and animals\" and ask the child to choose.",
+     "help": "Write Genesis 1 in six boxes and Genesis 2 as a separate story; note the difference as one of the points to discuss.",
+     "feedback": "In Genesis 1, people were made on the sixth day, after plants and animals.",
      "source": "To confirm by a CRE teacher: a common classroom error, not traced to a study by the author.",
      "status": "draft"
     }
@@ -400,6 +470,20 @@
        "strength": "essential",
        "reason": "Proposed: this skill builds on it. To confirm by a CRE teacher.",
        "status": "proposed"
+      },
+      {
+       "requires": "CRES.G5.CREATI.WORK.STEWARDSHIP",
+       "kind": "skill",
+       "strength": "essential",
+       "reason": "Grade 5: the work God gave people over creation. Proposed, to confirm by a CRE teacher.",
+       "status": "proposed"
+      },
+      {
+       "requires": "CRES.G6.CREATI.LEISURE.LEISURE_USE",
+       "kind": "skill",
+       "strength": "essential",
+       "reason": "Choosing activities that build up rather than harm. Proposed, to confirm by a CRE teacher.",
+       "status": "proposed"
       }
      ],
      "status": "proposed"
@@ -409,15 +493,15 @@
     {
      "code": "CRES.G7.CREATI.STEWARDSHIP_OVER_CREATIO.STEWARD_ANIMALS.M_CR7_SA_RULE_HARM",
      "skill": "CRES.G7.CREATI.STEWARDSHIP_OVER_CREATIO.STEWARD_ANIMALS",
-     "error": "Thinks ruling means harming.",
+     "error": "Reads \"rule over\" (Genesis 1:28) as permission to use animals in any way, even cruelly.",
      "example": {
-      "question": "What does \"rule over the animals\" mean?",
-      "wrong_answer": "To harm them as one likes",
-      "correct_answer": "To care for them and look after them"
+      "question": "What does \"rule over the fish, the birds and every living creature\" mean?",
+      "wrong_answer": "People may treat animals any way they like",
+      "correct_answer": "Care for them as God's caretakers"
      },
-     "cause": "The child mixes up two rules that are taught close together.",
-     "reveals": "Offer \"To harm them as one likes\" next to the right answer and ask the question again in a new situation.",
-     "help": "Ruling over means caring for them as God's creation.",
+     "cause": "The word \"rule\" is heard as power to do anything.",
+     "reveals": "Offer \"People may treat animals any way they like\" beside \"Care for them as God's caretakers\" and ask the child to choose.",
+     "help": "Read Genesis 1:28 with 2:15: rule as God's caretaker who will answer to him.",
      "feedback": "Ruling over means caring for them as God's creation.",
      "source": "To confirm by a CRE teacher: a common classroom error, not traced to a study by the author.",
      "status": "draft"
@@ -425,15 +509,15 @@
     {
      "code": "CRES.G7.CREATI.STEWARDSHIP_OVER_CREATIO.STEWARD_ANIMALS.M_CR7_SA_PROTECT",
      "skill": "CRES.G7.CREATI.STEWARDSHIP_OVER_CREATIO.STEWARD_ANIMALS",
-     "error": "Names a harmful act as protection.",
+     "error": "Thinks killing birds with a catapult for fun is harmless because birds are many.",
      "example": {
-      "question": "Which protects animals, fish and birds?",
-      "wrong_answer": "Polluting the river",
-      "correct_answer": "Keeping rivers and nests safe"
+      "question": "Boys kill birds with a catapult for fun. Is this good stewardship?",
+      "wrong_answer": "Yes, there are many birds",
+      "correct_answer": "No: it harms God's creatures for no need"
      },
-     "cause": "The child mixes up two rules that are taught close together.",
-     "reveals": "Offer \"Polluting the river\" next to the right answer and ask the question again in a new situation.",
-     "help": "Keeping rivers clean and nests safe protects them.",
+     "cause": "The learner sees some harm as normal, such as killing birds for fun.",
+     "reveals": "Offer \"Yes, there are many birds\" beside \"No: it harms God's creatures for no need\" and ask the child to choose.",
+     "help": "List daily acts that harm animals and the caring choice for each.",
      "feedback": "Keeping rivers clean and nests safe protects them.",
      "source": "To confirm by a CRE teacher: a common classroom error, not traced to a study by the author.",
      "status": "draft"
@@ -447,10 +531,26 @@
       "wrong_answer": "To people to use as they wish",
       "correct_answer": "To God, who gave us the care of it"
      },
-     "cause": "The child mixes up two rules that are taught close together.",
+     "cause": "Owning a cow or a dog feels like full ownership.",
      "reveals": "Offer \"To people to use as they wish\" next to the right answer and ask the question again in a new situation.",
-     "help": "Creation belongs to God and we care for it.",
+     "help": "Read Psalm 24:1: the earth is the Lord's. We care for what is his.",
      "feedback": "Creation belongs to God and we care for it.",
+     "source": "To confirm by a CRE teacher: a common classroom error, not traced to a study by the author.",
+     "status": "draft"
+    },
+    {
+     "code": "CRES.G7.CREATI.STEWARDSHIP_OVER_CREATIO.STEWARD_ANIMALS.M_CR7_SA_POACH_OK",
+     "skill": "CRES.G7.CREATI.STEWARDSHIP_OVER_CREATIO.STEWARD_ANIMALS",
+     "error": "Thinks poaching wild animals is fine if a family is poor.",
+     "example": {
+      "question": "A man kills elephants for their tusks to feed his family. What does stewardship teach?",
+      "wrong_answer": "It is fine because he is poor",
+      "correct_answer": "It is wrong: wildlife is God's creation and protected by law"
+     },
+     "cause": "Poverty makes any income seem justified.",
+     "reveals": "Offer \"It is fine because he is poor\" beside \"It is wrong: wildlife is God's creation and protected by law\" and ask the child to choose.",
+     "help": "Discuss honest work and the Kenya Wildlife Service; God's care for creatures (Genesis 1:21-22).",
+     "feedback": "Poaching harms God's creation and breaks the law. There are honest ways to earn.",
      "source": "To confirm by a CRE teacher: a common classroom error, not traced to a study by the author.",
      "status": "draft"
     }
@@ -558,6 +658,20 @@
        "strength": "essential",
        "reason": "Proposed: this skill builds on it. To confirm by a CRE teacher.",
        "status": "proposed"
+      },
+      {
+       "requires": "CRES.G5.CREATI.WORK.STEWARDSHIP",
+       "kind": "skill",
+       "strength": "essential",
+       "reason": "Caring for God's creation, met in Grade 5. Proposed, to confirm by a CRE teacher.",
+       "status": "proposed"
+      },
+      {
+       "requires": "CRES.G4.THE_LI.PARABLE_OF_THE_MUSTARD_S.MUSTARD",
+       "kind": "skill",
+       "strength": "essential",
+       "reason": "A seed that grows into a tree: the care of plants pictured in a parable. Proposed, to confirm by a CRE teacher.",
+       "status": "proposed"
       }
      ],
      "status": "proposed"
@@ -567,15 +681,15 @@
     {
      "code": "CRES.G7.CREATI.RESPONSIBILITY_OVER_PLAN.STEWARD_PLANTS.M_CR7_SP_WASTE",
      "skill": "CRES.G7.CREATI.RESPONSIBILITY_OVER_PLAN.STEWARD_PLANTS",
-     "error": "Thinks cutting trees without replanting is fine.",
+     "error": "Thinks cutting trees for charcoal without replanting does no harm, because there are many trees.",
      "example": {
-      "question": "What should we do when we cut a tree?",
-      "wrong_answer": "Cut and plant nothing",
-      "correct_answer": "Plant another tree"
+      "question": "A family cuts trees for charcoal every month. What does stewardship ask?",
+      "wrong_answer": "Nothing: there are many trees",
+      "correct_answer": "Plant more trees than are cut"
      },
-     "cause": "The child mixes up two rules that are taught close together.",
-     "reveals": "Offer \"Cut and plant nothing\" next to the right answer and ask the question again in a new situation.",
-     "help": "Plant a new tree when we cut one.",
+     "cause": "Trees are everywhere and the learner does not see them running out.",
+     "reveals": "Offer \"Nothing: there are many trees\" beside \"Plant more trees than are cut\" and ask the child to choose.",
+     "help": "Show the cost: a tree takes years to grow. Plan a \"cut one, plant two\" rule for the school.",
      "feedback": "Plant a new tree when we cut one.",
      "source": "To confirm by a CRE teacher: a common classroom error, not traced to a study by the author.",
      "status": "draft"
@@ -583,15 +697,15 @@
     {
      "code": "CRES.G7.CREATI.RESPONSIBILITY_OVER_PLAN.STEWARD_PLANTS.M_CR7_SP_FOOD",
      "skill": "CRES.G7.CREATI.RESPONSIBILITY_OVER_PLAN.STEWARD_PLANTS",
-     "error": "Does not know plants are given for food.",
+     "error": "Thinks God gave plants only for beauty, missing Genesis 1:29: plants for food.",
      "example": {
-      "question": "Why did God give plants?",
-      "wrong_answer": "Only to look at",
-      "correct_answer": "For food and to be cared for"
+      "question": "Why did God give plants, according to Genesis 1:29?",
+      "wrong_answer": "Only to make the earth beautiful",
+      "correct_answer": "For food, as well as beauty"
      },
-     "cause": "The child mixes up two rules that are taught close together.",
-     "reveals": "Offer \"Only to look at\" next to the right answer and ask the question again in a new situation.",
-     "help": "God gave plants for food and asked us to care for the garden.",
+     "cause": "The learner remembers only the beauty of Eden.",
+     "reveals": "Offer \"Only to make the earth beautiful\" beside \"For food, as well as beauty\" and ask the child to choose.",
+     "help": "Read Genesis 1:29 and 2:9: plants for food and beauty.",
      "feedback": "God gave plants for food and asked us to care for the garden.",
      "source": "To confirm by a CRE teacher: a common classroom error, not traced to a study by the author.",
      "status": "draft"
@@ -599,16 +713,32 @@
     {
      "code": "CRES.G7.CREATI.RESPONSIBILITY_OVER_PLAN.STEWARD_PLANTS.M_CR7_SP_INCOME",
      "skill": "CRES.G7.CREATI.RESPONSIBILITY_OVER_PLAN.STEWARD_PLANTS",
-     "error": "Does not link plants and income.",
+     "error": "Thinks caring for plants is only about food and cannot earn an income.",
      "example": {
-      "question": "How can caring for crops help a family?",
-      "wrong_answer": "It cannot help at all",
-      "correct_answer": "It can give food and income"
+      "question": "How can responsible use of plants help the economy?",
+      "wrong_answer": "It cannot; plants are only food",
+      "correct_answer": "Cash crops, timber and fruit bring income and jobs"
      },
-     "cause": "The child mixes up two rules that are taught close together.",
-     "reveals": "Offer \"It cannot help at all\" next to the right answer and ask the question again in a new situation.",
-     "help": "Good crop care gives food and income.",
+     "cause": "The learner thinks farming is for food only and does not see markets.",
+     "reveals": "Offer \"It cannot; plants are only food\" beside \"Cash crops, timber and fruit bring income and jobs\" and ask the child to choose.",
+     "help": "Name crops grown for sale in the area and what the money pays for.",
      "feedback": "Good crop care gives food and income.",
+     "source": "To confirm by a CRE teacher: a common classroom error, not traced to a study by the author.",
+     "status": "draft"
+    },
+    {
+     "code": "CRES.G7.CREATI.RESPONSIBILITY_OVER_PLAN.STEWARD_PLANTS.M_CR7_SP_BURN_BUSH",
+     "skill": "CRES.G7.CREATI.RESPONSIBILITY_OVER_PLAN.STEWARD_PLANTS",
+     "error": "Thinks burning bushes to clear land is good stewardship because it is quick.",
+     "example": {
+      "question": "A farmer burns the bush to clear land every year. Is this responsible use of plants?",
+      "wrong_answer": "Yes, it is the quickest way",
+      "correct_answer": "No: it kills soil life and causes erosion; there are better ways"
+     },
+     "cause": "Burning is common and seen as normal.",
+     "reveals": "Offer \"Yes, it is the quickest way\" beside \"No: it kills soil life and causes erosion; there are better ways\" and ask the child to choose.",
+     "help": "List effects of burning on soil and wildlife; compare with clearing and composting.",
+     "feedback": "Burning harms the soil and creatures. Responsible stewards clear land carefully and keep soil covered.",
      "source": "To confirm by a CRE teacher: a common classroom error, not traced to a study by the author.",
      "status": "draft"
     }
@@ -709,7 +839,14 @@
        "requires": "CRES.G7.CREATI.RESPONSIBILITY_OVER_PLAN.STEWARD_PLANTS",
        "kind": "skill",
        "strength": "essential",
-       "reason": "Proposed: this skill builds on it. To confirm by a CRE teacher.",
+       "reason": "Responsible use of plants is one case of using natural resources. Proposed, to confirm by a CRE teacher.",
+       "status": "proposed"
+      },
+      {
+       "requires": "CRES.G5.CREATI.WORK.STEWARDSHIP",
+       "kind": "skill",
+       "strength": "essential",
+       "reason": "God's work for people: caring for creation. Proposed, to confirm by a CRE teacher.",
        "status": "proposed"
       }
      ],
@@ -720,15 +857,15 @@
     {
      "code": "CRES.G7.CREATI.USE_OF_NATURAL_RESOURCES.RESOURCES_USE.M_CR7_RU_MISUSE",
      "skill": "CRES.G7.CREATI.USE_OF_NATURAL_RESOURCES.RESOURCES_USE",
-     "error": "Calls a misuse a good use.",
+     "error": "Thinks pouring waste into a river is fine because the water carries it away.",
      "example": {
-      "question": "Which is a misuse of water?",
-      "wrong_answer": "Washing hands clean",
-      "correct_answer": "Pouring waste into the river"
+      "question": "A factory pours waste into a river. What is this?",
+      "wrong_answer": "Good use: the river carries it away",
+      "correct_answer": "Misuse: it poisons water for fish and people"
      },
-     "cause": "The child mixes up two rules that are taught close together.",
-     "reveals": "Offer \"Washing hands clean\" next to the right answer and ask the question again in a new situation.",
-     "help": "Polluting the river is misuse of water.",
+     "cause": "Waste poured out of sight seems to disappear.",
+     "reveals": "Offer \"Good use: the river carries it away\" beside \"Misuse: it poisons water for fish and people\" and ask the child to choose.",
+     "help": "Follow the waste: river, fish, people downstream who drink it.",
      "feedback": "Polluting the river is misuse of water.",
      "source": "To confirm by a CRE teacher: a common classroom error, not traced to a study by the author.",
      "status": "draft"
@@ -736,15 +873,15 @@
     {
      "code": "CRES.G7.CREATI.USE_OF_NATURAL_RESOURCES.RESOURCES_USE.M_CR7_RU_EFFECT",
      "skill": "CRES.G7.CREATI.USE_OF_NATURAL_RESOURCES.RESOURCES_USE",
-     "error": "Gives a wrong effect of misuse.",
+     "error": "Thinks cutting trees has no effect on the land, missing soil erosion and drought.",
      "example": {
       "question": "Which is an effect of cutting trees without replanting?",
       "wrong_answer": "More rain forever",
       "correct_answer": "Soil erosion and drought"
      },
-     "cause": "The child mixes up two rules that are taught close together.",
+     "cause": "The learner has not linked trees and rain.",
      "reveals": "Offer \"More rain forever\" next to the right answer and ask the question again in a new situation.",
-     "help": "Cutting trees without replanting causes erosion and drought.",
+     "help": "Show a picture of a bare hillside after rain: gullies, mud in the river.",
      "feedback": "Cutting trees without replanting causes erosion and drought.",
      "source": "To confirm by a CRE teacher: a common classroom error, not traced to a study by the author.",
      "status": "draft"
@@ -752,16 +889,32 @@
     {
      "code": "CRES.G7.CREATI.USE_OF_NATURAL_RESOURCES.RESOURCES_USE.M_CR7_RU_GOOD",
      "skill": "CRES.G7.CREATI.USE_OF_NATURAL_RESOURCES.RESOURCES_USE",
-     "error": "Names a harmful act as good use.",
+     "error": "Thinks a bare, swept field is good use of soil, though it washes away in rain.",
      "example": {
-      "question": "Which is a good use of soil?",
-      "wrong_answer": "Leaving it bare to wash away",
-      "correct_answer": "Planting crops and covering it"
+      "question": "Which is good use of soil?",
+      "wrong_answer": "Sweeping it bare so it looks tidy",
+      "correct_answer": "Keeping it covered with crops or mulch"
      },
-     "cause": "The child mixes up two rules that are taught close together.",
-     "reveals": "Offer \"Leaving it bare to wash away\" next to the right answer and ask the question again in a new situation.",
-     "help": "Planting crops and covering soil uses it well.",
+     "cause": "Bare soil looks tidy and \"clean\".",
+     "reveals": "Offer \"Sweeping it bare so it looks tidy\" beside \"Keeping it covered with crops or mulch\" and ask the child to choose.",
+     "help": "Show soil cover (mulch, crops) and explain it holds the soil in rain.",
      "feedback": "Planting crops and covering soil uses it well.",
+     "source": "To confirm by a CRE teacher: a common classroom error, not traced to a study by the author.",
+     "status": "draft"
+    },
+    {
+     "code": "CRES.G7.CREATI.USE_OF_NATURAL_RESOURCES.RESOURCES_USE.M_CR7_RU_ENDLESS",
+     "skill": "CRES.G7.CREATI.USE_OF_NATURAL_RESOURCES.RESOURCES_USE",
+     "error": "Thinks natural resources such as water and forests can never run out.",
+     "example": {
+      "question": "Can natural resources such as water and forests run out?",
+      "wrong_answer": "No, God made them endless",
+      "correct_answer": "Yes, if they are misused; we must use them well"
+     },
+     "cause": "The learner reasons that what God made cannot fail.",
+     "reveals": "Offer \"No, God made them endless\" beside \"Yes, if they are misused; we must use them well\" and ask the child to choose.",
+     "help": "Show a dried river or a cleared forest in Kenya; read Genesis 2:15 as a call to care.",
+     "feedback": "Resources can run out when misused. Caring for them is our God-given work.",
      "source": "To confirm by a CRE teacher: a common classroom error, not traced to a study by the author.",
      "status": "draft"
     }
@@ -857,7 +1010,22 @@
       "reasoning"
      ],
      "horeb_skill_ids": [],
-     "prerequisites": [],
+     "prerequisites": [
+      {
+       "requires": "CRES.G5.THE_BI.THE_BIBLE_AS_A_GUIDE.BIBLE_GUIDE",
+       "kind": "skill",
+       "strength": "essential",
+       "reason": "Uses of the Bible in society, met in Grade 5. Proposed, to confirm by a CRE teacher.",
+       "status": "proposed"
+      },
+      {
+       "requires": "CRES.G6.THE_BI.INSPIRED_WORD_OF_GOD.INSPIRED",
+       "kind": "skill",
+       "strength": "essential",
+       "reason": "The Bible is God-breathed and useful for teaching (2 Timothy 3:16). Proposed, to confirm by a CRE teacher.",
+       "status": "proposed"
+      }
+     ],
      "status": "proposed"
     }
    ],
@@ -865,15 +1033,15 @@
     {
      "code": "CRES.G7.THE_BI.FUNCTIONS_OF_THE_BIBLE.BIBLE_FUNCTIONS.M_CR7_BF_STORY_ONLY",
      "skill": "CRES.G7.THE_BI.FUNCTIONS_OF_THE_BIBLE.BIBLE_FUNCTIONS",
-     "error": "Thinks the Bible is only stories.",
+     "error": "Thinks the Bible is only a book of old stories, missing that it also teaches, guides and comforts.",
      "example": {
       "question": "What does the Bible do for people?",
       "wrong_answer": "Only tells old stories",
       "correct_answer": "Teaches, guides and gives hope"
      },
-     "cause": "The child mixes up two rules that are taught close together.",
+     "cause": "Bible lessons in lower grades were mostly stories.",
      "reveals": "Offer \"Only tells old stories\" next to the right answer and ask the question again in a new situation.",
-     "help": "The Bible teaches, guides and gives hope.",
+     "help": "Show other parts: law, songs, wisdom, letters, prophecy. Ask what each does today.",
      "feedback": "The Bible teaches, guides and gives hope.",
      "source": "To confirm by a CRE teacher: a common classroom error, not traced to a study by the author.",
      "status": "draft"
@@ -881,15 +1049,15 @@
     {
      "code": "CRES.G7.THE_BI.FUNCTIONS_OF_THE_BIBLE.BIBLE_FUNCTIONS.M_CR7_BF_CHURCH_ONLY",
      "skill": "CRES.G7.THE_BI.FUNCTIONS_OF_THE_BIBLE.BIBLE_FUNCTIONS",
-     "error": "Thinks the Bible is used only by priests.",
+     "error": "Thinks only church leaders may read and explain the Bible.",
      "example": {
       "question": "Who may read the Bible?",
       "wrong_answer": "Only church leaders",
       "correct_answer": "Everyone who wishes to"
      },
-     "cause": "The child mixes up two rules that are taught close together.",
+     "cause": "The learner sees leaders reading in church and few others.",
      "reveals": "Offer \"Only church leaders\" next to the right answer and ask the question again in a new situation.",
-     "help": "Everyone may read and learn from the Bible.",
+     "help": "Show family devotions and school assemblies: everyone may read.",
      "feedback": "Everyone may read and learn from the Bible.",
      "source": "To confirm by a CRE teacher: a common classroom error, not traced to a study by the author.",
      "status": "draft"
@@ -897,16 +1065,32 @@
     {
      "code": "CRES.G7.THE_BI.FUNCTIONS_OF_THE_BIBLE.BIBLE_FUNCTIONS.M_CR7_BF_SERVICE",
      "skill": "CRES.G7.THE_BI.FUNCTIONS_OF_THE_BIBLE.BIBLE_FUNCTIONS",
-     "error": "Does not link the Bible to Christian service.",
+     "error": "Does not link Christian services such as hospitals and children's homes with the Bible's teaching.",
      "example": {
-      "question": "How do Christians use the Bible?",
-      "wrong_answer": "They never use it",
-      "correct_answer": "In worship, teaching, prayer and service"
+      "question": "Why do many churches run hospitals and children's homes?",
+      "wrong_answer": "Only to make money",
+      "correct_answer": "Because the Bible teaches care for the sick and needy (Matthew 25:35-36)"
      },
-     "cause": "The child mixes up two rules that are taught close together.",
-     "reveals": "Offer \"They never use it\" next to the right answer and ask the question again in a new situation.",
-     "help": "Christians use the Bible in worship, teaching and service.",
+     "cause": "The learner does not see the link between reading and serving.",
+     "reveals": "Offer \"Only to make money\" beside \"Because the Bible teaches care for the sick and needy (Matthew 25:35-36)\" and ask the child to choose.",
+     "help": "Name services inspired by the Bible: hospitals, schools, children's homes, prison visits (Matthew 25:35-36).",
      "feedback": "Christians use the Bible in worship, teaching and service.",
+     "source": "To confirm by a CRE teacher: a common classroom error, not traced to a study by the author.",
+     "status": "draft"
+    },
+    {
+     "code": "CRES.G7.THE_BI.FUNCTIONS_OF_THE_BIBLE.BIBLE_FUNCTIONS.M_CR7_BF_SPIRIT_ONLY",
+     "skill": "CRES.G7.THE_BI.FUNCTIONS_OF_THE_BIBLE.BIBLE_FUNCTIONS",
+     "error": "Thinks the Bible helps only the spirit, not the whole person (mind, body, relationships).",
+     "example": {
+      "question": "How does the Bible promote holistic growth?",
+      "wrong_answer": "It helps only the soul",
+      "correct_answer": "It guides the mind, body, relationships and spirit"
+     },
+     "cause": "The word \"holistic\" is new and the learner pictures only prayer.",
+     "reveals": "Offer \"It helps only the soul\" beside \"It guides the mind, body, relationships and spirit\" and ask the child to choose.",
+     "help": "Draw a person with four parts (spiritual, mental, physical, social) and find a verse for each.",
+     "feedback": "The Bible guides the whole person: spirit, mind, body and relationships.",
      "source": "To confirm by a CRE teacher: a common classroom error, not traced to a study by the author.",
      "status": "draft"
     }
@@ -996,7 +1180,14 @@
        "requires": "CRES.G7.THE_BI.FUNCTIONS_OF_THE_BIBLE.BIBLE_FUNCTIONS",
        "kind": "skill",
        "strength": "essential",
-       "reason": "Proposed: this skill builds on it. To confirm by a CRE teacher.",
+       "reason": "What the Bible is for comes before how it is arranged. Proposed, to confirm by a CRE teacher.",
+       "status": "proposed"
+      },
+      {
+       "requires": "CRES.G4.THE_HO.THE_INSPIRED_WORD_OF_GOD.BIBLE_BOOKS",
+       "kind": "skill",
+       "strength": "essential",
+       "reason": "Sorting books into the Old and New Testament began in Grade 4. Proposed, to confirm by a CRE teacher.",
        "status": "proposed"
       }
      ],
@@ -1007,15 +1198,15 @@
     {
      "code": "CRES.G7.THE_BI.DIVISIONS_OF_THE_BIBLE.BIBLE_DIVISIONS.M_CR7_BD_NUMBER",
      "skill": "CRES.G7.THE_BI.DIVISIONS_OF_THE_BIBLE.BIBLE_DIVISIONS",
-     "error": "Gives the wrong number of divisions.",
+     "error": "Says the Bible has three divisions, counting the books some Bibles add, instead of the two Testaments.",
      "example": {
       "question": "How many divisions has the Bible?",
       "wrong_answer": "Three",
       "correct_answer": "Two: Old and New Testament"
      },
-     "cause": "The child mixes up two rules that are taught close together.",
+     "cause": "Some Bibles include extra books between the Testaments, and the learner counts them as a third division.",
      "reveals": "Offer \"Three\" next to the right answer and ask the question again in a new situation.",
-     "help": "The Bible has the Old and the New Testament.",
+     "help": "Name the two divisions; note that some Bibles add the deuterocanonical books, which the learner's church will explain.",
      "feedback": "The Bible has the Old and the New Testament.",
      "source": "To confirm by a CRE teacher: a common classroom error, not traced to a study by the author.",
      "status": "draft"
@@ -1023,15 +1214,15 @@
     {
      "code": "CRES.G7.THE_BI.DIVISIONS_OF_THE_BIBLE.BIBLE_DIVISIONS.M_CR7_BD_SORT_OT",
      "skill": "CRES.G7.THE_BI.DIVISIONS_OF_THE_BIBLE.BIBLE_DIVISIONS",
-     "error": "Puts Genesis in the New Testament.",
+     "error": "Puts Genesis in the New Testament, linking \"new\" with \"beginning\".",
      "example": {
       "question": "In which Testament is Genesis?",
       "wrong_answer": "The New Testament",
       "correct_answer": "The Old Testament"
      },
-     "cause": "The child mixes up two rules that are taught close together.",
+     "cause": "Genesis tells of beginnings, and the learner links \"new\" with \"beginning\".",
      "reveals": "Offer \"The New Testament\" next to the right answer and ask the question again in a new situation.",
-     "help": "Genesis is the first book of the Old Testament.",
+     "help": "Remember: Old Testament before Jesus, New Testament from Jesus. Genesis is the start of the Old.",
      "feedback": "Genesis is the first book of the Old Testament.",
      "source": "To confirm by a CRE teacher: a common classroom error, not traced to a study by the author.",
      "status": "draft"
@@ -1039,17 +1230,33 @@
     {
      "code": "CRES.G7.THE_BI.DIVISIONS_OF_THE_BIBLE.BIBLE_DIVISIONS.M_CR7_BD_SORT_NT",
      "skill": "CRES.G7.THE_BI.DIVISIONS_OF_THE_BIBLE.BIBLE_DIVISIONS",
-     "error": "Puts Matthew in the Old Testament.",
+     "error": "Puts Matthew in the Old Testament because it quotes the prophets often.",
      "example": {
       "question": "In which Testament is Matthew?",
       "wrong_answer": "The Old Testament",
       "correct_answer": "The New Testament"
      },
-     "cause": "The child mixes up two rules that are taught close together.",
+     "cause": "Matthew quotes the Old Testament often, and the learner places it there.",
      "reveals": "Offer \"The Old Testament\" next to the right answer and ask the question again in a new situation.",
-     "help": "Matthew is the first book of the New Testament.",
+     "help": "Matthew opens the New Testament with Jesus' family line. Open the Bible to show it.",
      "feedback": "Matthew is the first book of the New Testament.",
      "source": "To confirm by a CRE teacher: a common classroom error, not traced to a study by the author.",
+     "status": "draft"
+    },
+    {
+     "code": "CRES.G7.THE_BI.DIVISIONS_OF_THE_BIBLE.BIBLE_DIVISIONS.M_CR7_BD_GROUPS",
+     "skill": "CRES.G7.THE_BI.DIVISIONS_OF_THE_BIBLE.BIBLE_DIVISIONS",
+     "error": "Mixes the groups of books, putting the Gospels among the letters or Psalms among the prophets.",
+     "example": {
+      "question": "In which group of books is Psalms?",
+      "wrong_answer": "The Prophets",
+      "correct_answer": "Poetry and Wisdom"
+     },
+     "cause": "David spoke of the future in the Psalms and the learner links that with prophecy.",
+     "reveals": "Offer \"The Prophets\" beside \"Poetry and Wisdom\" and ask the child to choose.",
+     "help": "Draw a library: Law, History, Poetry and Wisdom, Prophets; Gospels, Acts, Letters, Revelation. Place books on shelves.",
+     "feedback": "Psalms is in the Poetry and Wisdom books of the Old Testament.",
+     "source": "To confirm by a CRE teacher of the school's own tradition (FAITH: the wording touches belief or practice): a common classroom error, not traced to a study by the author.",
      "status": "draft"
     }
    ],
@@ -1151,7 +1358,14 @@
        "requires": "CRES.G7.THE_BI.DIVISIONS_OF_THE_BIBLE.BIBLE_DIVISIONS",
        "kind": "skill",
        "strength": "essential",
-       "reason": "Proposed: this skill builds on it. To confirm by a CRE teacher.",
+       "reason": "Knowing the two Testaments, written in different original languages. Proposed, to confirm by a CRE teacher.",
+       "status": "proposed"
+      },
+      {
+       "requires": "CRES.G6.THE_BI.INSPIRED_WORD_OF_GOD.TRANSLATION",
+       "kind": "skill",
+       "strength": "essential",
+       "reason": "Why the Bible was translated into local languages, met in Grade 6. Proposed, to confirm by a CRE teacher.",
        "status": "proposed"
       }
      ],
@@ -1162,15 +1376,15 @@
     {
      "code": "CRES.G7.THE_BI.BIBLE_TRANSLATION.BIBLE_TRANSLATION.M_CR7_BT_LANGUAGE",
      "skill": "CRES.G7.THE_BI.BIBLE_TRANSLATION.BIBLE_TRANSLATION",
-     "error": "Gives the wrong original languages.",
+     "error": "Says most of the New Testament was first written in Latin instead of Greek.",
      "example": {
       "question": "In which language was most of the New Testament first written?",
       "wrong_answer": "Latin",
       "correct_answer": "Greek"
      },
-     "cause": "The child mixes up two rules that are taught close together.",
+     "cause": "Latin is linked with old church writings.",
      "reveals": "Offer \"Latin\" next to the right answer and ask the question again in a new situation.",
-     "help": "The New Testament was first written in Greek.",
+     "help": "Write the three original languages: Hebrew (most of the Old Testament), Aramaic (parts), Greek (New Testament).",
      "feedback": "The New Testament was first written in Greek.",
      "source": "To confirm by a CRE teacher: a common classroom error, not traced to a study by the author.",
      "status": "draft"
@@ -1178,15 +1392,15 @@
     {
      "code": "CRES.G7.THE_BI.BIBLE_TRANSLATION.BIBLE_TRANSLATION.M_CR7_BT_WHY",
      "skill": "CRES.G7.THE_BI.BIBLE_TRANSLATION.BIBLE_TRANSLATION",
-     "error": "Does not know why we translate.",
+     "error": "Does not see that the Bible is translated so people can read it in their own language.",
      "example": {
-      "question": "Why is the Bible translated?",
-      "wrong_answer": "To make it harder to read",
-      "correct_answer": "So people can read it in their own language"
+      "question": "Why is the Bible translated into Kenyan languages?",
+      "wrong_answer": "To make the church leaders important",
+      "correct_answer": "So people can read and understand it in their own language"
      },
-     "cause": "The child mixes up two rules that are taught close together.",
-     "reveals": "Offer \"To make it harder to read\" next to the right answer and ask the question again in a new situation.",
-     "help": "Translation lets people read the Bible in their own language.",
+     "cause": "The learner has heard that translation is difficult and confuses difficulty with purpose.",
+     "reveals": "Offer \"To make the church leaders important\" beside \"So people can read and understand it in their own language\" and ask the child to choose.",
+     "help": "Ask: who can read Greek? Translation is so everyone can read in their own language.",
      "feedback": "Translation lets people read the Bible in their own language.",
      "source": "To confirm by a CRE teacher: a common classroom error, not traced to a study by the author.",
      "status": "draft"
@@ -1194,16 +1408,32 @@
     {
      "code": "CRES.G7.THE_BI.BIBLE_TRANSLATION.BIBLE_TRANSLATION.M_CR7_BT_EFFECT",
      "skill": "CRES.G7.THE_BI.BIBLE_TRANSLATION.BIBLE_TRANSLATION",
-     "error": "Gives a harmful effect of translation.",
+     "error": "Thinks translation has no effect beyond the church, missing literacy and written local languages.",
      "example": {
-      "question": "Which is an effect of translating the Bible into local languages?",
-      "wrong_answer": "Fewer people read",
-      "correct_answer": "More people learn to read and study"
+      "question": "Which is a social effect of translating the Bible into local languages?",
+      "wrong_answer": "None outside church",
+      "correct_answer": "More people learned to read and local languages were written down"
      },
-     "cause": "The child mixes up two rules that are taught close together.",
-     "reveals": "Offer \"Fewer people read\" next to the right answer and ask the question again in a new situation.",
-     "help": "Translation helps reading and education.",
+     "cause": "The learner thinks only of church effects, not social ones.",
+     "reveals": "Offer \"None outside church\" beside \"More people learned to read and local languages were written down\" and ask the child to choose.",
+     "help": "List effects: literacy, schools, written local languages, preserved culture, jobs in printing.",
      "feedback": "Translation helps reading and education.",
+     "source": "To confirm by a CRE teacher: a common classroom error, not traced to a study by the author.",
+     "status": "draft"
+    },
+    {
+     "code": "CRES.G7.THE_BI.BIBLE_TRANSLATION.BIBLE_TRANSLATION.M_CR7_BT_VERSION_DIFFERENT_BIBLE",
+     "skill": "CRES.G7.THE_BI.BIBLE_TRANSLATION.BIBLE_TRANSLATION",
+     "error": "Thinks different versions (such as the Good News Bible and the King James) are different Bibles with different messages.",
+     "example": {
+      "question": "What is a Bible version?",
+      "wrong_answer": "A different Bible with a different message",
+      "correct_answer": "A translation of the same Bible in particular words"
+     },
+     "cause": "Different covers and words look like different books.",
+     "reveals": "Offer \"A different Bible with a different message\" beside \"A translation of the same Bible in particular words\" and ask the child to choose.",
+     "help": "Read John 3:16 in two English versions: same meaning, different words.",
+     "feedback": "A version is one translation of the same Bible. The message is the same.",
      "source": "To confirm by a CRE teacher: a common classroom error, not traced to a study by the author.",
      "status": "draft"
     }
@@ -1308,7 +1538,22 @@
       "reasoning"
      ],
      "horeb_skill_ids": [],
-     "prerequisites": [],
+     "prerequisites": [
+      {
+       "requires": "CRES.G5.THE_BI.THE_BIRTH_OF_MOSES.MOSES_BIRTH",
+       "kind": "skill",
+       "strength": "essential",
+       "reason": "The birth of Moses and how God protected him. Proposed, to confirm by a CRE teacher.",
+       "status": "proposed"
+      },
+      {
+       "requires": "CRES.G5.THE_BI.THE_CALL_OF_MOSES.MOSES_CALL",
+       "kind": "skill",
+       "strength": "essential",
+       "reason": "The call of Moses at the burning bush. Proposed, to confirm by a CRE teacher.",
+       "status": "proposed"
+      }
+     ],
      "status": "proposed"
     },
     {
@@ -1333,7 +1578,14 @@
        "requires": "CRES.G7.THE_BI.LEADERSHIP_IN_ISRAEL.MOSES_PREPARED",
        "kind": "skill",
        "strength": "essential",
-       "reason": "Proposed: this skill builds on it. To confirm by a CRE teacher.",
+       "reason": "Moses' story shows the qualities to name. Proposed, to confirm by a CRE teacher.",
+       "status": "proposed"
+      },
+      {
+       "requires": "CRES.G5.THE_BI.A_HAND_WRITES_ON_THE_WAL.HUMILITY_DANIEL",
+       "kind": "skill",
+       "strength": "essential",
+       "reason": "Humility, a quality Moses is known for (Numbers 12:3). Proposed, to confirm by a CRE teacher.",
        "status": "proposed"
       }
      ],
@@ -1344,15 +1596,15 @@
     {
      "code": "CRES.G7.THE_BI.LEADERSHIP_IN_ISRAEL.MOSES_PREPARED.M_CR7_MP_PALACE",
      "skill": "CRES.G7.THE_BI.LEADERSHIP_IN_ISRAEL.MOSES_PREPARED",
-     "error": "Says Moses grew up in a village school.",
+     "error": "Says Moses grew up in an Israelite village instead of Pharaoh's palace.",
      "example": {
       "question": "Where did Moses grow up?",
       "wrong_answer": "In a village of Israel",
       "correct_answer": "In Pharaoh's palace"
      },
-     "cause": "The child mixes up two rules that are taught close together.",
+     "cause": "The learner knows Moses was a Hebrew and pictures him among his people.",
      "reveals": "Offer \"In a village of Israel\" next to the right answer and ask the question again in a new situation.",
-     "help": "Moses was brought up in Pharaoh's palace.",
+     "help": "Read Exodus 2:10: he became the son of Pharaoh's daughter. God prepared him in the palace.",
      "feedback": "Moses was brought up in Pharaoh's palace.",
      "source": "To confirm by a CRE teacher: a common classroom error, not traced to a study by the author.",
      "status": "draft"
@@ -1360,15 +1612,15 @@
     {
      "code": "CRES.G7.THE_BI.LEADERSHIP_IN_ISRAEL.MOSES_PREPARED.M_CR7_MP_BUSH",
      "skill": "CRES.G7.THE_BI.LEADERSHIP_IN_ISRAEL.MOSES_PREPARED",
-     "error": "Mixes the burning bush with the Red Sea.",
+     "error": "Places God's call of Moses at the Red Sea instead of the burning bush on Mount Horeb.",
      "example": {
       "question": "Where did God call Moses?",
       "wrong_answer": "At the Red Sea",
       "correct_answer": "At the burning bush"
      },
-     "cause": "The child mixes up two rules that are taught close together.",
+     "cause": "The Red Sea is the most famous Moses scene.",
      "reveals": "Offer \"At the Red Sea\" next to the right answer and ask the question again in a new situation.",
-     "help": "God called Moses at the burning bush.",
+     "help": "Order the events: palace, flight to Midian, the burning bush (call), back to Egypt, the Red Sea.",
      "feedback": "God called Moses at the burning bush.",
      "source": "To confirm by a CRE teacher: a common classroom error, not traced to a study by the author.",
      "status": "draft"
@@ -1376,15 +1628,15 @@
     {
      "code": "CRES.G7.THE_BI.LEADERSHIP_IN_ISRAEL.MOSES_PREPARED.M_CR7_MP_AARON",
      "skill": "CRES.G7.THE_BI.LEADERSHIP_IN_ISRAEL.MOSES_PREPARED",
-     "error": "Does not know who helped Moses speak.",
+     "error": "Names Joshua instead of Aaron as the one who spoke for Moses before Pharaoh.",
      "example": {
       "question": "Who helped Moses speak to Pharaoh?",
       "wrong_answer": "Joshua",
       "correct_answer": "Aaron"
      },
-     "cause": "The child mixes up two rules that are taught close together.",
+     "cause": "Joshua is Moses' best-known helper.",
      "reveals": "Offer \"Joshua\" next to the right answer and ask the question again in a new situation.",
-     "help": "Aaron, his brother, helped Moses speak.",
+     "help": "Read Exodus 4:14-16: Aaron to speak for Moses. Joshua led the fighting men later.",
      "feedback": "Aaron, his brother, helped Moses speak.",
      "source": "To confirm by a CRE teacher: a common classroom error, not traced to a study by the author.",
      "status": "draft"
@@ -1392,15 +1644,15 @@
     {
      "code": "CRES.G7.THE_BI.LEADERSHIP_IN_ISRAEL.MOSES_QUALITIES.M_CR7_MQ_PRIDE",
      "skill": "CRES.G7.THE_BI.LEADERSHIP_IN_ISRAEL.MOSES_QUALITIES",
-     "error": "Names pride as a quality of Moses.",
+     "error": "Names pride as one of Moses' qualities, though Numbers 12:3 calls him very humble.",
      "example": {
       "question": "Which quality did Moses show?",
       "wrong_answer": "Pride",
       "correct_answer": "Humility and obedience to God"
      },
-     "cause": "The child mixes up two rules that are taught close together.",
+     "cause": "Leaders the learner sees on TV often act proud.",
      "reveals": "Offer \"Pride\" next to the right answer and ask the question again in a new situation.",
-     "help": "Moses showed humility and obeyed God.",
+     "help": "Read Numbers 12:3: Moses was very humble. List his qualities from the story.",
      "feedback": "Moses showed humility and obeyed God.",
      "source": "To confirm by a CRE teacher: a common classroom error, not traced to a study by the author.",
      "status": "draft"
@@ -1408,15 +1660,15 @@
     {
      "code": "CRES.G7.THE_BI.LEADERSHIP_IN_ISRAEL.MOSES_QUALITIES.M_CR7_MQ_LEADER",
      "skill": "CRES.G7.THE_BI.LEADERSHIP_IN_ISRAEL.MOSES_QUALITIES",
-     "error": "Thinks a leader should be dishonest.",
+     "error": "Thinks a good leader must be cunning and bend the truth to get things done.",
      "example": {
-      "question": "What should a good leader be?",
-      "wrong_answer": "Dishonest to win",
-      "correct_answer": "Honest and fair"
+      "question": "Exodus 18:21 says leaders should be...",
+      "wrong_answer": "Clever enough to bend the truth",
+      "correct_answer": "Trustworthy, God-fearing and hating dishonest gain"
      },
-     "cause": "The child mixes up two rules that are taught close together.",
-     "reveals": "Offer \"Dishonest to win\" next to the right answer and ask the question again in a new situation.",
-     "help": "A leader of integrity is honest and fair.",
+     "cause": "The learner has heard that leaders must be tough or cunning to win.",
+     "reveals": "Offer \"Clever enough to bend the truth\" beside \"Trustworthy, God-fearing and hating dishonest gain\" and ask the child to choose.",
+     "help": "Compare Moses' honesty and fairness (Exodus 18:21: trustworthy men who hate dishonest gain) with leaders who cheat.",
      "feedback": "A leader of integrity is honest and fair.",
      "source": "To confirm by a CRE teacher: a common classroom error, not traced to a study by the author.",
      "status": "draft"
@@ -1424,16 +1676,48 @@
     {
      "code": "CRES.G7.THE_BI.LEADERSHIP_IN_ISRAEL.MOSES_QUALITIES.M_CR7_MQ_FEAR",
      "skill": "CRES.G7.THE_BI.LEADERSHIP_IN_ISRAEL.MOSES_QUALITIES",
-     "error": "Says Moses never needed help.",
+     "error": "Thinks Moses led alone, missing Aaron, Jethro's advice and the appointed judges.",
      "example": {
       "question": "Who helped Moses lead?",
       "wrong_answer": "Nobody helped him",
       "correct_answer": "God and people such as Aaron"
      },
-     "cause": "The child mixes up two rules that are taught close together.",
+     "cause": "Great leaders are pictured as doing everything alone.",
      "reveals": "Offer \"Nobody helped him\" next to the right answer and ask the question again in a new situation.",
-     "help": "Moses was helped by God and others.",
+     "help": "Read Exodus 18:17-24: Jethro advised Moses to share the work.",
      "feedback": "Moses was helped by God and others.",
+     "source": "To confirm by a CRE teacher: a common classroom error, not traced to a study by the author.",
+     "status": "draft"
+    },
+    {
+     "code": "CRES.G7.THE_BI.LEADERSHIP_IN_ISRAEL.MOSES_PREPARED.M_CR7_MP_MIDIAN",
+     "skill": "CRES.G7.THE_BI.LEADERSHIP_IN_ISRAEL.MOSES_PREPARED",
+     "error": "Forgets the forty years in Midian as a shepherd, part of God's preparation.",
+     "example": {
+      "question": "What did Moses do in Midian before God called him (Exodus 3:1)?",
+      "wrong_answer": "He ruled as a prince",
+      "correct_answer": "He looked after the flock of Jethro, his father-in-law"
+     },
+     "cause": "The learner jumps from the palace to the call.",
+     "reveals": "Offer \"He ruled as a prince\" beside \"He looked after the flock of Jethro, his father-in-law\" and ask the child to choose.",
+     "help": "Draw Moses' life in three parts: palace, shepherd in Midian, leader. Ask what a shepherd learns.",
+     "feedback": "Moses was a shepherd in Midian. Caring for sheep helped prepare him to lead God's people.",
+     "source": "To confirm by a CRE teacher: a common classroom error, not traced to a study by the author.",
+     "status": "draft"
+    },
+    {
+     "code": "CRES.G7.THE_BI.LEADERSHIP_IN_ISRAEL.MOSES_QUALITIES.M_CR7_MQ_NEVER_AFRAID",
+     "skill": "CRES.G7.THE_BI.LEADERSHIP_IN_ISRAEL.MOSES_QUALITIES",
+     "error": "Thinks Moses was never afraid or unsure.",
+     "example": {
+      "question": "How did Moses first answer God's call (Exodus 4:10-13)?",
+      "wrong_answer": "Gladly and without fear",
+      "correct_answer": "He said he was slow of speech and asked God to send someone else"
+     },
+     "cause": "The learner expects great leaders to be fearless.",
+     "reveals": "Offer \"Gladly and without fear\" beside \"He said he was slow of speech and asked God to send someone else\" and ask the child to choose.",
+     "help": "Read Exodus 4:10-13. God used Moses even with his fears: obedience grows.",
+     "feedback": "Moses was unsure and afraid at first, but he obeyed God and grew as a leader.",
      "source": "To confirm by a CRE teacher: a common classroom error, not traced to a study by the author.",
      "status": "draft"
     }
@@ -1527,7 +1811,14 @@
        "requires": "CRES.G7.THE_BI.DIVISIONS_OF_THE_BIBLE.BIBLE_DIVISIONS",
        "kind": "skill",
        "strength": "essential",
-       "reason": "Proposed: this skill builds on it. To confirm by a CRE teacher.",
+       "reason": "Prophecies are in the Old Testament; fulfilment in the New. Proposed, to confirm by a CRE teacher.",
+       "status": "proposed"
+      },
+      {
+       "requires": "CRES.G4.THE_LI.THE_ANNUNCIATION.ANNUNCIATION",
+       "kind": "skill",
+       "strength": "essential",
+       "reason": "The annunciation, which fulfils Isaiah 7:14. Proposed, to confirm by a CRE teacher.",
        "status": "proposed"
       }
      ],
@@ -1538,15 +1829,15 @@
     {
      "code": "CRES.G7.THE_EA.PROPHECIES_ABOUT_THE_MES.MESSIAH_PROPHECY.M_CR7_MS_BETHLEHEM",
      "skill": "CRES.G7.THE_EA.PROPHECIES_ABOUT_THE_MES.MESSIAH_PROPHECY",
-     "error": "Gives the wrong town.",
+     "error": "Says Micah 5:2 named Nazareth as the Messiah's birthplace instead of Bethlehem.",
      "example": {
       "question": "Which town did Micah 5:2 name as the Messiah's birthplace?",
       "wrong_answer": "Nazareth",
       "correct_answer": "Bethlehem"
      },
-     "cause": "The child mixes up two rules that are taught close together.",
+     "cause": "Jesus is called \"of Nazareth\", so the learner thinks the prophecy named it.",
      "reveals": "Offer \"Nazareth\" next to the right answer and ask the question again in a new situation.",
-     "help": "Micah 5:2 names Bethlehem.",
+     "help": "Read Micah 5:2 and Matthew 2:5-6 together.",
      "feedback": "Micah 5:2 names Bethlehem.",
      "source": "To confirm by a CRE teacher: a common classroom error, not traced to a study by the author.",
      "status": "draft"
@@ -1554,15 +1845,15 @@
     {
      "code": "CRES.G7.THE_EA.PROPHECIES_ABOUT_THE_MES.MESSIAH_PROPHECY.M_CR7_MS_VIRGIN",
      "skill": "CRES.G7.THE_EA.PROPHECIES_ABOUT_THE_MES.MESSIAH_PROPHECY",
-     "error": "Gives the wrong prophet.",
+     "error": "Names Moses as the prophet of the virgin birth instead of Isaiah (Isaiah 7:14).",
      "example": {
       "question": "Which prophet said a virgin would bear a son called Immanuel?",
       "wrong_answer": "Moses",
       "correct_answer": "Isaiah"
      },
-     "cause": "The child mixes up two rules that are taught close together.",
+     "cause": "Moses is the best-known Old Testament figure.",
      "reveals": "Offer \"Moses\" next to the right answer and ask the question again in a new situation.",
-     "help": "Isaiah 7:14 says a virgin will bear a son called Immanuel.",
+     "help": "Make a card for each prophecy with its prophet: Isaiah 7:14 (virgin, Immanuel), Micah 5:2 (Bethlehem), Isaiah 9:6 (child, Prince of Peace).",
      "feedback": "Isaiah 7:14 says a virgin will bear a son called Immanuel.",
      "source": "To confirm by a CRE teacher: a common classroom error, not traced to a study by the author.",
      "status": "draft"
@@ -1570,16 +1861,32 @@
     {
      "code": "CRES.G7.THE_EA.PROPHECIES_ABOUT_THE_MES.MESSIAH_PROPHECY.M_CR7_MS_FULFIL",
      "skill": "CRES.G7.THE_EA.PROPHECIES_ABOUT_THE_MES.MESSIAH_PROPHECY",
-     "error": "Does not know what fulfilment means.",
+     "error": "Thinks a fulfilled prophecy is one that was cancelled or forgotten.",
      "example": {
-      "question": "What does \"fulfilled\" mean?",
-      "wrong_answer": "Forgotten",
-      "correct_answer": "Came true"
+      "question": "What does it mean that a prophecy was fulfilled?",
+      "wrong_answer": "It was cancelled",
+      "correct_answer": "It came true"
      },
-     "cause": "The child mixes up two rules that are taught close together.",
-     "reveals": "Offer \"Forgotten\" next to the right answer and ask the question again in a new situation.",
-     "help": "A prophecy is fulfilled when it comes true.",
+     "cause": "The learner does not know the word \"fulfil\".",
+     "reveals": "Offer \"It was cancelled\" beside \"It came true\" and ask the child to choose.",
+     "help": "Show: a promise made, then kept. Prophecy said; Jesus fulfilled.",
      "feedback": "A prophecy is fulfilled when it comes true.",
+     "source": "To confirm by a CRE teacher: a common classroom error, not traced to a study by the author.",
+     "status": "draft"
+    },
+    {
+     "code": "CRES.G7.THE_EA.PROPHECIES_ABOUT_THE_MES.MESSIAH_PROPHECY.M_CR7_MS_IMMANUEL",
+     "skill": "CRES.G7.THE_EA.PROPHECIES_ABOUT_THE_MES.MESSIAH_PROPHECY",
+     "error": "Thinks Immanuel is another man, not a name for Jesus meaning \"God with us\".",
+     "example": {
+      "question": "What does the name Immanuel mean (Matthew 1:23)?",
+      "wrong_answer": "A second son of Mary",
+      "correct_answer": "God with us"
+     },
+     "cause": "An unfamiliar name sounds like a different person.",
+     "reveals": "Offer \"A second son of Mary\" beside \"God with us\" and ask the child to choose.",
+     "help": "Read Matthew 1:23, where the meaning is given.",
+     "feedback": "Immanuel means \"God with us\". It is a name for Jesus.",
      "source": "To confirm by a CRE teacher: a common classroom error, not traced to a study by the author.",
      "status": "draft"
     }
@@ -1677,7 +1984,8 @@
      "outcomes": [
       "CRE.G7.THE_EA.JOHN_THE_BAPTIST.a",
       "CRE.G7.THE_EA.JOHN_THE_BAPTIST.b",
-      "CRE.G7.THE_EA.JOHN_THE_BAPTIST.d"
+      "CRE.G7.THE_EA.JOHN_THE_BAPTIST.d",
+      "CRE.G7.THE_EA.JOHN_THE_BAPTIST.c"
      ],
      "mastery": "The child says the angel Gabriel told Zechariah that Elizabeth would bear a son called John, that John prepared the way for the Messiah, and that he told people to repent and to share, collect no more tax than was due and not to take by force or accuse falsely (Luke 3:7-14). Evidence rule: at least four of the last five fresh questions right across at least two question forms, and no repeated pick of the same misconception.",
      "question_forms": [
@@ -1697,6 +2005,20 @@
        "strength": "essential",
        "reason": "Proposed: this skill builds on it. To confirm by a CRE teacher.",
        "status": "proposed"
+      },
+      {
+       "requires": "CRES.G4.THE_LI.BIRTH_OF_JOHN_THE_BAPTIS.JOHN_BIRTH",
+       "kind": "skill",
+       "strength": "essential",
+       "reason": "The birth of John the Baptist, met in Grade 4. Proposed, to confirm by a CRE teacher.",
+       "status": "proposed"
+      },
+      {
+       "requires": "CRES.G5.THE_LI.JOHN_THE_BAPTIST.JOHN_BAPTIST",
+       "kind": "skill",
+       "strength": "essential",
+       "reason": "John's teaching in Luke 3:3-14, met in Grade 5. Proposed, to confirm by a CRE teacher.",
+       "status": "proposed"
       }
      ],
      "status": "proposed"
@@ -1706,15 +2028,15 @@
     {
      "code": "CRES.G7.THE_EA.JOHN_THE_BAPTIST.JOHN_BAPTIST.M_CR7_JB_PARENTS",
      "skill": "CRES.G7.THE_EA.JOHN_THE_BAPTIST.JOHN_BAPTIST",
-     "error": "Gives wrong parents.",
+     "error": "Gives Joseph and Mary as John the Baptist's parents instead of Zechariah and Elizabeth.",
      "example": {
       "question": "Who were the parents of John the Baptist?",
       "wrong_answer": "Joseph and Mary",
       "correct_answer": "Zechariah and Elizabeth"
      },
-     "cause": "The child mixes up two rules that are taught close together.",
+     "cause": "The two annunciation stories are side by side in Luke 1.",
      "reveals": "Offer \"Joseph and Mary\" next to the right answer and ask the question again in a new situation.",
-     "help": "John's parents were Zechariah and Elizabeth.",
+     "help": "Draw two families: Zechariah and Elizabeth (John); Joseph and Mary (Jesus).",
      "feedback": "John's parents were Zechariah and Elizabeth.",
      "source": "To confirm by a CRE teacher: a common classroom error, not traced to a study by the author.",
      "status": "draft"
@@ -1728,9 +2050,9 @@
       "wrong_answer": "He was the Messiah",
       "correct_answer": "He prepared the way for the Messiah"
      },
-     "cause": "The child mixes up two rules that are taught close together.",
+     "cause": "People in Luke 3:15 wondered the same, and John's fame confuses the learner.",
      "reveals": "Offer \"He was the Messiah\" next to the right answer and ask the question again in a new situation.",
-     "help": "John prepared the way for the Messiah.",
+     "help": "Read Luke 3:15-16: John said one more powerful was coming.",
      "feedback": "John prepared the way for the Messiah.",
      "source": "To confirm by a CRE teacher: a common classroom error, not traced to a study by the author.",
      "status": "draft"
@@ -1738,16 +2060,48 @@
     {
      "code": "CRES.G7.THE_EA.JOHN_THE_BAPTIST.JOHN_BAPTIST.M_CR7_JB_MESSAGE",
      "skill": "CRES.G7.THE_EA.JOHN_THE_BAPTIST.JOHN_BAPTIST",
-     "error": "Gives a wrong message.",
+     "error": "Thinks John told people that being children of Abraham was enough, missing his call to repent and bear fruit (Luke 3:8).",
      "example": {
-      "question": "What did John tell people to do?",
-      "wrong_answer": "Seek wealth",
-      "correct_answer": "Repent and share"
+      "question": "What did John say about being children of Abraham (Luke 3:8)?",
+      "wrong_answer": "That it was enough to be saved",
+      "correct_answer": "That they must produce fruit in keeping with repentance"
      },
-     "cause": "The child mixes up two rules that are taught close together.",
-     "reveals": "Offer \"Seek wealth\" next to the right answer and ask the question again in a new situation.",
-     "help": "John told people to repent and share.",
+     "cause": "The learner remembers the crowd but not what John asked.",
+     "reveals": "Offer \"That it was enough to be saved\" beside \"That they must produce fruit in keeping with repentance\" and ask the child to choose.",
+     "help": "Chart Luke 3:10-14: crowd, share; tax collectors, honesty; soldiers, no extortion, contentment.",
      "feedback": "John told people to repent and share.",
+     "source": "To confirm by a CRE teacher: a common classroom error, not traced to a study by the author.",
+     "status": "draft"
+    },
+    {
+     "code": "CRES.G7.THE_EA.JOHN_THE_BAPTIST.JOHN_BAPTIST.M_CR7_JB_LAMB_LITERAL",
+     "skill": "CRES.G7.THE_EA.JOHN_THE_BAPTIST.JOHN_BAPTIST",
+     "error": "Takes \"the Lamb of God\" (John 1:29) as a real lamb or a pet.",
+     "example": {
+      "question": "What did John mean when he called Jesus \"the Lamb of God, who takes away the sin of the world\"?",
+      "wrong_answer": "Jesus looked after lambs",
+      "correct_answer": "Jesus would be the sacrifice that takes away sin"
+     },
+     "cause": "The learner takes the picture word by word.",
+     "reveals": "Offer \"Jesus looked after lambs\" beside \"Jesus would be the sacrifice that takes away sin\" and ask the child to choose.",
+     "help": "Link with the lambs sacrificed in the temple and at Passover. Jesus would give his life for sin.",
+     "feedback": "The Lamb of God means Jesus would give his life to take away the sin of the world.",
+     "source": "To confirm by a CRE teacher of the school's own tradition (FAITH: the wording touches belief or practice): a common classroom error, not traced to a study by the author.",
+     "status": "draft"
+    },
+    {
+     "code": "CRES.G7.THE_EA.JOHN_THE_BAPTIST.JOHN_BAPTIST.M_CR7_JB_GREATER",
+     "skill": "CRES.G7.THE_EA.JOHN_THE_BAPTIST.JOHN_BAPTIST",
+     "error": "Thinks John said he was greater than the one coming after him.",
+     "example": {
+      "question": "In Luke 3:16, what did John say about the one coming after him?",
+      "wrong_answer": "That John was greater",
+      "correct_answer": "That he was more powerful, and John was not worthy to untie his sandals"
+     },
+     "cause": "The learner thinks the one who comes first is the greater.",
+     "reveals": "Offer \"That John was greater\" beside \"That he was more powerful, and John was not worthy to untie his sandals\" and ask the child to choose.",
+     "help": "Read Luke 3:16 and John 1:30: \"he was before me\". Act untying sandals, a servant's job.",
+     "feedback": "John said the one coming was more powerful; John was not worthy even to untie his sandals.",
      "source": "To confirm by a CRE teacher: a common classroom error, not traced to a study by the author.",
      "status": "draft"
     }
@@ -1866,6 +2220,20 @@
        "strength": "essential",
        "reason": "Proposed: this skill builds on it. To confirm by a CRE teacher.",
        "status": "proposed"
+      },
+      {
+       "requires": "CRES.G7.THE_EA.PROPHECIES_ABOUT_THE_MES.MESSIAH_PROPHECY",
+       "kind": "skill",
+       "strength": "essential",
+       "reason": "The prophecies Jesus' birth fulfils. Proposed, to confirm by a CRE teacher.",
+       "status": "proposed"
+      },
+      {
+       "requires": "CRES.G4.THE_LI.THE_ANNUNCIATION.ANNUNCIATION",
+       "kind": "skill",
+       "strength": "essential",
+       "reason": "The annunciation to Mary, met in Grade 4. Proposed, to confirm by a CRE teacher.",
+       "status": "proposed"
       }
      ],
      "status": "proposed"
@@ -1893,7 +2261,14 @@
        "requires": "CRES.G7.THE_EA.THE_BIRTH_AND_CHILDHOOD_.JESUS_BIRTH",
        "kind": "skill",
        "strength": "essential",
-       "reason": "Proposed: this skill builds on it. To confirm by a CRE teacher.",
+       "reason": "The birth and dedication come before the visit at twelve. Proposed, to confirm by a CRE teacher.",
+       "status": "proposed"
+      },
+      {
+       "requires": "CRES.G4.CHRIST.OBEDIENCE_OBEDIENCE.OBEDIENCE",
+       "kind": "skill",
+       "strength": "essential",
+       "reason": "Obeying parents, which Jesus did when he went home. Proposed, to confirm by a CRE teacher.",
        "status": "proposed"
       }
      ],
@@ -1904,15 +2279,15 @@
     {
      "code": "CRES.G7.THE_EA.THE_BIRTH_AND_CHILDHOOD_.JESUS_BIRTH.M_CR7_JBR_PLACE",
      "skill": "CRES.G7.THE_EA.THE_BIRTH_AND_CHILDHOOD_.JESUS_BIRTH",
-     "error": "Gives the wrong birthplace.",
+     "error": "Says Jesus was born in Nazareth, his hometown, instead of Bethlehem.",
      "example": {
       "question": "Where was Jesus born?",
       "wrong_answer": "Nazareth",
       "correct_answer": "Bethlehem"
      },
-     "cause": "The child mixes up two rules that are taught close together.",
+     "cause": "Jesus is called Jesus of Nazareth.",
      "reveals": "Offer \"Nazareth\" next to the right answer and ask the question again in a new situation.",
-     "help": "Jesus was born in Bethlehem.",
+     "help": "Read Luke 2:4-7: from Nazareth to Bethlehem for the census.",
      "feedback": "Jesus was born in Bethlehem.",
      "source": "To confirm by a CRE teacher: a common classroom error, not traced to a study by the author.",
      "status": "draft"
@@ -1920,15 +2295,15 @@
     {
      "code": "CRES.G7.THE_EA.THE_BIRTH_AND_CHILDHOOD_.JESUS_BIRTH.M_CR7_JBR_ANGEL",
      "skill": "CRES.G7.THE_EA.THE_BIRTH_AND_CHILDHOOD_.JESUS_BIRTH",
-     "error": "Gives the wrong angel.",
+     "error": "Names Michael instead of Gabriel as the angel who came to Mary.",
      "example": {
       "question": "Which angel told Mary she would bear Jesus?",
       "wrong_answer": "Michael",
       "correct_answer": "Gabriel"
      },
-     "cause": "The child mixes up two rules that are taught close together.",
+     "cause": "Michael is the angel named in songs and other books.",
      "reveals": "Offer \"Michael\" next to the right answer and ask the question again in a new situation.",
-     "help": "The angel Gabriel told Mary.",
+     "help": "Read Luke 1:26: Gabriel. He also went to Zechariah.",
      "feedback": "The angel Gabriel told Mary.",
      "source": "To confirm by a CRE teacher: a common classroom error, not traced to a study by the author.",
      "status": "draft"
@@ -1936,15 +2311,15 @@
     {
      "code": "CRES.G7.THE_EA.THE_BIRTH_AND_CHILDHOOD_.JESUS_BIRTH.M_CR7_JBR_DEDICATION",
      "skill": "CRES.G7.THE_EA.THE_BIRTH_AND_CHILDHOOD_.JESUS_BIRTH",
-     "error": "Mixes the dedication with baptism.",
+     "error": "Places Jesus' dedication in the River Jordan, mixing it with his baptism as an adult, instead of the temple in Jerusalem.",
      "example": {
       "question": "Where was baby Jesus dedicated?",
       "wrong_answer": "In the River Jordan",
       "correct_answer": "In the Temple at Jerusalem"
      },
-     "cause": "The child mixes up two rules that are taught close together.",
+     "cause": "Dedication and baptism are both church ceremonies for babies or new believers.",
      "reveals": "Offer \"In the River Jordan\" next to the right answer and ask the question again in a new situation.",
-     "help": "Jesus was dedicated at the Temple in Jerusalem.",
+     "help": "Read Luke 2:22-24: in the temple at Jerusalem, with an offering of two doves. Jesus' baptism came at about thirty.",
      "feedback": "Jesus was dedicated at the Temple in Jerusalem.",
      "source": "To confirm by a CRE teacher: a common classroom error, not traced to a study by the author.",
      "status": "draft"
@@ -1952,15 +2327,15 @@
     {
      "code": "CRES.G7.THE_EA.THE_BIRTH_AND_CHILDHOOD_.JESUS_TEMPLE.M_CR7_JT_AGE",
      "skill": "CRES.G7.THE_EA.THE_BIRTH_AND_CHILDHOOD_.JESUS_TEMPLE",
-     "error": "Gives the wrong age.",
+     "error": "Says Jesus was six when he stayed in the temple instead of twelve.",
      "example": {
       "question": "How old was Jesus when He stayed in the Temple?",
       "wrong_answer": "Six",
       "correct_answer": "Twelve"
      },
-     "cause": "The child mixes up two rules that are taught close together.",
+     "cause": "The learner pictures a small child getting lost.",
      "reveals": "Offer \"Six\" next to the right answer and ask the question again in a new situation.",
-     "help": "Jesus was twelve years old.",
+     "help": "Read Luke 2:42: twelve years old, going up for the Passover.",
      "feedback": "Jesus was twelve years old.",
      "source": "To confirm by a CRE teacher: a common classroom error, not traced to a study by the author.",
      "status": "draft"
@@ -1968,15 +2343,15 @@
     {
      "code": "CRES.G7.THE_EA.THE_BIRTH_AND_CHILDHOOD_.JESUS_TEMPLE.M_CR7_JT_DAYS",
      "skill": "CRES.G7.THE_EA.THE_BIRTH_AND_CHILDHOOD_.JESUS_TEMPLE",
-     "error": "Gives the wrong time.",
+     "error": "Says his parents found him after one day instead of three days.",
      "example": {
       "question": "After how many days did His parents find Him?",
       "wrong_answer": "One day",
       "correct_answer": "Three days"
      },
-     "cause": "The child mixes up two rules that are taught close together.",
+     "cause": "The learner thinks parents would notice at once.",
      "reveals": "Offer \"One day\" next to the right answer and ask the question again in a new situation.",
-     "help": "His parents found Him after three days.",
+     "help": "Read 2:44-46: a day's journey before they noticed, then three days searching.",
      "feedback": "His parents found Him after three days.",
      "source": "To confirm by a CRE teacher: a common classroom error, not traced to a study by the author.",
      "status": "draft"
@@ -1990,10 +2365,42 @@
       "wrong_answer": "Stayed in the Temple",
       "correct_answer": "Went home and obeyed them"
      },
-     "cause": "The child mixes up two rules that are taught close together.",
+     "cause": "Jesus said he must be in his Father's house, so the learner thinks he stayed.",
      "reveals": "Offer \"Stayed in the Temple\" next to the right answer and ask the question again in a new situation.",
-     "help": "Jesus went home with them and obeyed.",
+     "help": "Read 2:51: he went down with them to Nazareth and was obedient to them.",
      "feedback": "Jesus went home with them and obeyed.",
+     "source": "To confirm by a CRE teacher: a common classroom error, not traced to a study by the author.",
+     "status": "draft"
+    },
+    {
+     "code": "CRES.G7.THE_EA.THE_BIRTH_AND_CHILDHOOD_.JESUS_BIRTH.M_CR7_JBR_SIMEON",
+     "skill": "CRES.G7.THE_EA.THE_BIRTH_AND_CHILDHOOD_.JESUS_BIRTH",
+     "error": "Forgets Simeon and Anna, who recognised the baby at the dedication.",
+     "example": {
+      "question": "Who took baby Jesus in his arms in the temple and praised God (Luke 2:25-28)?",
+      "wrong_answer": "The high priest Caiaphas",
+      "correct_answer": "Simeon, a righteous and devout man"
+     },
+     "cause": "Caiaphas is the priest the learner knows from Easter.",
+     "reveals": "Offer \"The high priest Caiaphas\" beside \"Simeon, a righteous and devout man\" and ask the child to choose.",
+     "help": "Read Luke 2:25-38 and draw Simeon and Anna with the baby.",
+     "feedback": "Simeon took Jesus in his arms and praised God, and the prophet Anna gave thanks.",
+     "source": "To confirm by a CRE teacher: a common classroom error, not traced to a study by the author.",
+     "status": "draft"
+    },
+    {
+     "code": "CRES.G7.THE_EA.THE_BIRTH_AND_CHILDHOOD_.JESUS_TEMPLE.M_CR7_JT_TEACHING",
+     "skill": "CRES.G7.THE_EA.THE_BIRTH_AND_CHILDHOOD_.JESUS_TEMPLE",
+     "error": "Thinks the boy Jesus was lecturing the teachers like a preacher, missing that he listened and asked questions.",
+     "example": {
+      "question": "What was Jesus doing in the temple courts (Luke 2:46)?",
+      "wrong_answer": "Preaching a sermon to the crowd",
+      "correct_answer": "Sitting among the teachers, listening and asking questions"
+     },
+     "cause": "The learner expects the Son of God to teach at once.",
+     "reveals": "Offer \"Preaching a sermon to the crowd\" beside \"Sitting among the teachers, listening and asking questions\" and ask the child to choose.",
+     "help": "Read Luke 2:46-47 and underline \"listening\" and \"asking questions\".",
+     "feedback": "Jesus sat with the teachers, listening and asking questions, and they were amazed at his understanding.",
      "source": "To confirm by a CRE teacher: a common classroom error, not traced to a study by the author.",
      "status": "draft"
     }
@@ -2106,7 +2513,22 @@
       "reasoning"
      ],
      "horeb_skill_ids": [],
-     "prerequisites": [],
+     "prerequisites": [
+      {
+       "requires": "CRES.G4.THE_CH.THE_LORD_S_PRAYER.LORDS_PRAYER",
+       "kind": "skill",
+       "strength": "essential",
+       "reason": "The Lord's Prayer, the pattern Jesus gave. Proposed, to confirm by a CRE teacher.",
+       "status": "proposed"
+      },
+      {
+       "requires": "CRES.G5.THE_LI.A_FRIEND_AT_MIDNIGHT.FRIEND_MIDNIGHT",
+       "kind": "skill",
+       "strength": "essential",
+       "reason": "Persistence in prayer. Proposed, to confirm by a CRE teacher.",
+       "status": "proposed"
+      }
+     ],
      "status": "proposed"
     }
    ],
@@ -2114,15 +2536,15 @@
     {
      "code": "CRES.G7.THE_CH.SELECTED_FORMS_OF_WORSHI.WORSHIP_FORMS.M_CR7_WF_FASTING",
      "skill": "CRES.G7.THE_CH.SELECTED_FORMS_OF_WORSHI.WORSHIP_FORMS",
-     "error": "Thinks fasting is showing off.",
+     "error": "Thinks fasting should be shown to others to prove one's faith, against Matthew 6:16-18.",
      "example": {
       "question": "How should one fast, as Jesus taught?",
       "wrong_answer": "Showing everyone",
       "correct_answer": "Quietly, without showing off"
      },
-     "cause": "The child mixes up two rules that are taught close together.",
+     "cause": "Fasting in public seems to show strong faith.",
      "reveals": "Offer \"Showing everyone\" next to the right answer and ask the question again in a new situation.",
-     "help": "Jesus taught to fast without showing off.",
+     "help": "Read Matthew 6:16-18: wash your face; fast for your Father who sees in secret.",
      "feedback": "Jesus taught to fast without showing off.",
      "source": "To confirm by a CRE teacher: a common classroom error, not traced to a study by the author.",
      "status": "draft"
@@ -2130,15 +2552,15 @@
     {
      "code": "CRES.G7.THE_CH.SELECTED_FORMS_OF_WORSHI.WORSHIP_FORMS.M_CR7_WF_PRAYER",
      "skill": "CRES.G7.THE_CH.SELECTED_FORMS_OF_WORSHI.WORSHIP_FORMS",
-     "error": "Thinks prayer is only asking.",
+     "error": "Thinks prayer is only asking God for things, missing praise, confession and thanksgiving.",
      "example": {
       "question": "What is prayer?",
       "wrong_answer": "Only asking for things",
       "correct_answer": "Talking with God"
      },
-     "cause": "The child mixes up two rules that are taught close together.",
+     "cause": "Much prayer the learner hears is asking.",
      "reveals": "Offer \"Only asking for things\" next to the right answer and ask the question again in a new situation.",
-     "help": "Prayer is talking with God.",
+     "help": "List four parts of prayer: praise, confession, thanksgiving, asking.",
      "feedback": "Prayer is talking with God.",
      "source": "To confirm by a CRE teacher: a common classroom error, not traced to a study by the author.",
      "status": "draft"
@@ -2146,17 +2568,33 @@
     {
      "code": "CRES.G7.THE_CH.SELECTED_FORMS_OF_WORSHI.WORSHIP_FORMS.M_CR7_WF_THANKS",
      "skill": "CRES.G7.THE_CH.SELECTED_FORMS_OF_WORSHI.WORSHIP_FORMS",
-     "error": "Mixes thanksgiving with complaining.",
+     "error": "Thinks thanksgiving is only for good times, missing 1 Thessalonians 5:18: give thanks in all circumstances.",
      "example": {
-      "question": "What is thanksgiving?",
-      "wrong_answer": "Complaining to God",
-      "correct_answer": "Thanking God for what He has done"
+      "question": "When should Christians give thanks, according to 1 Thessalonians 5:18?",
+      "wrong_answer": "Only when things go well",
+      "correct_answer": "In all circumstances"
      },
-     "cause": "The child mixes up two rules that are taught close together.",
-     "reveals": "Offer \"Complaining to God\" next to the right answer and ask the question again in a new situation.",
-     "help": "Thanksgiving is thanking God.",
+     "cause": "The learner mixes thanksgiving with petitions made in hard times.",
+     "reveals": "Offer \"Only when things go well\" beside \"In all circumstances\" and ask the child to choose.",
+     "help": "Read Psalm 100:4 and 1 Thessalonians 5:18: thank God in all circumstances.",
      "feedback": "Thanksgiving is thanking God.",
      "source": "To confirm by a CRE teacher: a common classroom error, not traced to a study by the author.",
+     "status": "draft"
+    },
+    {
+     "code": "CRES.G7.THE_CH.SELECTED_FORMS_OF_WORSHI.WORSHIP_FORMS.M_CR7_WF_FAST_DIET",
+     "skill": "CRES.G7.THE_CH.SELECTED_FORMS_OF_WORSHI.WORSHIP_FORMS",
+     "error": "Thinks fasting is only going without food to lose weight, not a time of prayer.",
+     "example": {
+      "question": "What is Christian fasting?",
+      "wrong_answer": "Skipping meals to lose weight",
+      "correct_answer": "Going without food for a time to pray and seek God"
+     },
+     "cause": "The learner knows skipping meals as dieting.",
+     "reveals": "Offer \"Skipping meals to lose weight\" beside \"Going without food for a time to pray and seek God\" and ask the child to choose.",
+     "help": "Read Matthew 6:16-18 and Acts 13:2-3: fasting with prayer and worship.",
+     "feedback": "Christian fasting is going without food for a time to pray and seek God, not dieting.",
+     "source": "To confirm by a CRE teacher of the school's own tradition (FAITH: the wording touches belief or practice): a common classroom error, not traced to a study by the author.",
      "status": "draft"
     }
    ],
@@ -2248,7 +2686,22 @@
       "reasoning"
      ],
      "horeb_skill_ids": [],
-     "prerequisites": [],
+     "prerequisites": [
+      {
+       "requires": "CRES.G7.THE_BI.FUNCTIONS_OF_THE_BIBLE.BIBLE_FUNCTIONS",
+       "kind": "skill",
+       "strength": "essential",
+       "reason": "God's word inspires Christian service. Proposed, to confirm by a CRE teacher.",
+       "status": "proposed"
+      },
+      {
+       "requires": "CRES.G5.THE_LI.FEEDING_THE_FOUR_THOUSAN.FEEDING_4000",
+       "kind": "skill",
+       "strength": "essential",
+       "reason": "Jesus' compassion for the needy, the model for church service. Proposed, to confirm by a CRE teacher.",
+       "status": "proposed"
+      }
+     ],
      "status": "proposed"
     }
    ],
@@ -2256,15 +2709,15 @@
     {
      "code": "CRES.G7.THE_CH.ROLE_OF_THE_CHURCH_IN_ED.CHURCH_SERVICE.M_CR7_CS_SCHOOLS",
      "skill": "CRES.G7.THE_CH.ROLE_OF_THE_CHURCH_IN_ED.CHURCH_SERVICE",
-     "error": "Thinks churches did not start schools.",
+     "error": "Thinks the church did not start schools or hospitals in Kenya.",
      "example": {
       "question": "What did the Church start in Kenya?",
       "wrong_answer": "No schools or hospitals",
       "correct_answer": "Many schools and hospitals"
      },
-     "cause": "The child mixes up two rules that are taught close together.",
+     "cause": "The learner sees schools run by government and does not know their history.",
      "reveals": "Offer \"No schools or hospitals\" next to the right answer and ask the question again in a new situation.",
-     "help": "Churches started many schools and hospitals.",
+     "help": "List local schools and hospitals with church names (mission hospitals, church-sponsored schools).",
      "feedback": "Churches started many schools and hospitals.",
      "source": "To confirm by a CRE teacher: a common classroom error, not traced to a study by the author.",
      "status": "draft"
@@ -2272,15 +2725,15 @@
     {
      "code": "CRES.G7.THE_CH.ROLE_OF_THE_CHURCH_IN_ED.CHURCH_SERVICE.M_CR7_CS_BARRIER",
      "skill": "CRES.G7.THE_CH.ROLE_OF_THE_CHURCH_IN_ED.CHURCH_SERVICE",
-     "error": "Names help as a barrier.",
+     "error": "Names having enough workers as a barrier to mission work, mixing barriers with strengths.",
      "example": {
       "question": "Which is a barrier to mission work?",
       "wrong_answer": "Enough workers",
       "correct_answer": "Poverty and long distances"
      },
-     "cause": "The child mixes up two rules that are taught close together.",
+     "cause": "The learner does not know what a barrier means.",
      "reveals": "Offer \"Enough workers\" next to the right answer and ask the question again in a new situation.",
-     "help": "Poverty and long distances are barriers.",
+     "help": "Explain barrier as something that blocks; list poverty, distance, insecurity, few workers, language.",
      "feedback": "Poverty and long distances are barriers.",
      "source": "To confirm by a CRE teacher: a common classroom error, not traced to a study by the author.",
      "status": "draft"
@@ -2288,16 +2741,32 @@
     {
      "code": "CRES.G7.THE_CH.ROLE_OF_THE_CHURCH_IN_ED.CHURCH_SERVICE.M_CR7_CS_SOLUTION",
      "skill": "CRES.G7.THE_CH.ROLE_OF_THE_CHURCH_IN_ED.CHURCH_SERVICE",
-     "error": "Names a harmful solution.",
+     "error": "Thinks the answer to barriers in mission work is to stop the work.",
      "example": {
       "question": "Which is a way to answer the barriers?",
       "wrong_answer": "Giving up the work",
       "correct_answer": "Training workers and working together"
      },
-     "cause": "The child mixes up two rules that are taught close together.",
+     "cause": "Hard problems make giving up seem sensible.",
      "reveals": "Offer \"Giving up the work\" next to the right answer and ask the question again in a new situation.",
-     "help": "Training workers and working together help.",
+     "help": "Match each barrier with a solution: training, partnerships, funding, translation, security.",
      "feedback": "Training workers and working together help.",
+     "source": "To confirm by a CRE teacher: a common classroom error, not traced to a study by the author.",
+     "status": "draft"
+    },
+    {
+     "code": "CRES.G7.THE_CH.ROLE_OF_THE_CHURCH_IN_ED.CHURCH_SERVICE.M_CR7_CS_PAST_ONLY",
+     "skill": "CRES.G7.THE_CH.ROLE_OF_THE_CHURCH_IN_ED.CHURCH_SERVICE",
+     "error": "Thinks the church helped in education and health only in the past, not today.",
+     "example": {
+      "question": "Does the church still contribute to education and health in Kenya today?",
+      "wrong_answer": "No, that was only long ago",
+      "correct_answer": "Yes: it sponsors schools, runs hospitals and clinics, and supports the needy"
+     },
+     "cause": "History lessons place missionaries in the past.",
+     "reveals": "Offer \"No, that was only long ago\" beside \"Yes: it sponsors schools, runs hospitals and clinics, and supports the needy\" and ask the child to choose.",
+     "help": "Find a church-sponsored school or mission hospital near the school today.",
+     "feedback": "The church still sponsors schools and runs hospitals and clinics today.",
      "source": "To confirm by a CRE teacher: a common classroom error, not traced to a study by the author.",
      "status": "draft"
     }
@@ -2398,7 +2867,9 @@
      "outcomes": [
       "CRE.G7.CHRIST.HUMAN_SEXUALITY.a",
       "CRE.G7.CHRIST.HUMAN_SEXUALITY.b",
-      "CRE.G7.CHRIST.HUMAN_SEXUALITY.c"
+      "CRE.G7.CHRIST.HUMAN_SEXUALITY.c",
+      "CRE.G7.CHRIST.HUMAN_SEXUALITY.d",
+      "CRE.G7.CHRIST.HUMAN_SEXUALITY.e"
      ],
      "mastery": "The child says human sexuality is part of who we are as male and female, and is to be handled with respect; names healthy relationships (respect, honesty, trust, kindness) and unhealthy ones (pressure, secrecy, force, insults); and says a child who feels unsafe tells a trusted adult. Evidence rule: at least four of the last five fresh questions right across at least two question forms, and no repeated pick of the same misconception.",
      "question_forms": [
@@ -2411,7 +2882,22 @@
       "reasoning"
      ],
      "horeb_skill_ids": [],
-     "prerequisites": [],
+     "prerequisites": [
+      {
+       "requires": "CRES.G6.CHRIST.HUMAN_SEXUALITY_7_LESSON.SEXUALITY_BIBLE",
+       "kind": "skill",
+       "strength": "essential",
+       "reason": "Biblical teaching on responsible behaviour, met in Grade 6. Proposed, to confirm by a CRE teacher.",
+       "status": "proposed"
+      },
+      {
+       "requires": "CRES.G6.CHRIST.HUMAN_SEXUALITY_7_LESSON.SEXUALITY_SKILLS",
+       "kind": "skill",
+       "strength": "essential",
+       "reason": "Values and life skills to avoid irresponsible behaviour. Proposed, to confirm by a CRE teacher.",
+       "status": "proposed"
+      }
+     ],
      "status": "proposed"
     }
    ],
@@ -2425,9 +2911,9 @@
       "wrong_answer": "Keep it secret",
       "correct_answer": "Tell a trusted adult"
      },
-     "cause": "The child mixes up two rules that are taught close together.",
+     "cause": "Shame and fear of blame keep learners silent.",
      "reveals": "Offer \"Keep it secret\" next to the right answer and ask the question again in a new situation.",
-     "help": "Tell a trusted adult if you feel unsafe.",
+     "help": "Name trusted adults and say clearly: it is never the young person's fault; telling is right.",
      "feedback": "Tell a trusted adult if you feel unsafe.",
      "source": "To confirm by a CRE teacher: a common classroom error, not traced to a study by the author.",
      "status": "draft"
@@ -2435,15 +2921,15 @@
     {
      "code": "CRES.G7.CHRIST.HUMAN_SEXUALITY.SEXUALITY_BASICS.M_CR7_SB_HEALTHY",
      "skill": "CRES.G7.CHRIST.HUMAN_SEXUALITY.SEXUALITY_BASICS",
-     "error": "Names pressure as healthy.",
+     "error": "Thinks pressure to prove love is part of a healthy relationship.",
      "example": {
-      "question": "Which is part of a healthy relationship?",
-      "wrong_answer": "Pressure",
-      "correct_answer": "Respect and honesty"
+      "question": "A boyfriend says \"if you love me you will prove it\". Is this healthy?",
+      "wrong_answer": "Yes, that is what love is",
+      "correct_answer": "No: pressure is a sign of an unhealthy relationship"
      },
-     "cause": "The child mixes up two rules that are taught close together.",
-     "reveals": "Offer \"Pressure\" next to the right answer and ask the question again in a new situation.",
-     "help": "Healthy relationships have respect and honesty.",
+     "cause": "Pressure can look like love in films.",
+     "reveals": "Offer \"Yes, that is what love is\" beside \"No: pressure is a sign of an unhealthy relationship\" and ask the child to choose.",
+     "help": "Sort cards: respect, honesty, trust, parents know (healthy); pressure, secrets, gifts for favours (unhealthy).",
      "feedback": "Healthy relationships have respect and honesty.",
      "source": "To confirm by a CRE teacher: a common classroom error, not traced to a study by the author.",
      "status": "draft"
@@ -2457,11 +2943,43 @@
       "wrong_answer": "Only the body parts",
       "correct_answer": "Part of who we are as male and female"
      },
-     "cause": "The child mixes up two rules that are taught close together.",
+     "cause": "The word sexuality is heard only as body parts or sex.",
      "reveals": "Offer \"Only the body parts\" next to the right answer and ask the question again in a new situation.",
-     "help": "Sexuality is part of who we are, to be handled with respect.",
+     "help": "Explain sexuality as being made male and female in God's image (Genesis 1:27), with feelings, relationships and roles.",
      "feedback": "Sexuality is part of who we are, to be handled with respect.",
      "source": "To confirm by a CRE teacher: a common classroom error, not traced to a study by the author.",
+     "status": "draft"
+    },
+    {
+     "code": "CRES.G7.CHRIST.HUMAN_SEXUALITY.SEXUALITY_BASICS.M_CR7_SB_NO_CONSEQUENCE",
+     "skill": "CRES.G7.CHRIST.HUMAN_SEXUALITY.SEXUALITY_BASICS",
+     "error": "Thinks sex before marriage has no consequences if no one finds out.",
+     "example": {
+      "question": "Name one consequence of sex before marriage.",
+      "wrong_answer": "None, if no one finds out",
+      "correct_answer": "Early pregnancy, infections, dropping out of school, guilt and broken trust"
+     },
+     "cause": "The learner thinks consequences come only from being caught.",
+     "reveals": "Offer \"None, if no one finds out\" beside \"Early pregnancy, infections, dropping out of school, guilt and broken trust\" and ask the child to choose.",
+     "help": "List consequences in four groups: health, school, family, faith. Read 1 Corinthians 6:18.",
+     "feedback": "Sex before marriage can bring early pregnancy, infections, leaving school and broken trust, whether or not anyone finds out.",
+     "source": "To confirm by a CRE teacher: a common classroom error, not traced to a study by the author.",
+     "status": "draft"
+    },
+    {
+     "code": "CRES.G7.CHRIST.HUMAN_SEXUALITY.SEXUALITY_BASICS.M_CR7_SB_CHASTE_IMPOSSIBLE",
+     "skill": "CRES.G7.CHRIST.HUMAN_SEXUALITY.SEXUALITY_BASICS",
+     "error": "Thinks no young person can stay chaste until marriage, so the teaching is pointless.",
+     "example": {
+      "question": "Is it possible for a young person to remain chaste until marriage?",
+      "wrong_answer": "No, nobody can",
+      "correct_answer": "Yes: with God's help, good friends, self-control and avoiding tempting places"
+     },
+     "cause": "Media and peers say \"everyone is doing it\".",
+     "reveals": "Offer \"No, nobody can\" beside \"Yes: with God's help, good friends, self-control and avoiding tempting places\" and ask the child to choose.",
+     "help": "Read 1 Thessalonians 4:3-4 and Philippians 4:8. List the skills that help: self-control, assertiveness, good friends, prayer.",
+     "feedback": "Yes, many young people stay chaste. God's help, good friends and self-control make it possible.",
+     "source": "To confirm by a CRE teacher of the school's own tradition (FAITH: the wording touches belief or practice): a common classroom error, not traced to a study by the author.",
      "status": "draft"
     }
    ],
@@ -2562,6 +3080,20 @@
        "strength": "essential",
        "reason": "Proposed: this skill builds on it. To confirm by a CRE teacher.",
        "status": "proposed"
+      },
+      {
+       "requires": "CRES.G6.CREATI.MARRIAGE_AND_FAMILY.MARRIAGE_BIBLE",
+       "kind": "skill",
+       "strength": "essential",
+       "reason": "Genesis 2:21-24, met in Grade 6. Proposed, to confirm by a CRE teacher.",
+       "status": "proposed"
+      },
+      {
+       "requires": "CRES.G5.CREATI.FAMILY_UNITY.FAMILY_UNITY",
+       "kind": "skill",
+       "strength": "essential",
+       "reason": "What keeps a family united. Proposed, to confirm by a CRE teacher.",
+       "status": "proposed"
       }
      ],
      "status": "proposed"
@@ -2571,15 +3103,15 @@
     {
      "code": "CRES.G7.CHRIST.CHRISTIAN_MARRIAGE_AND_F.MARRIAGE_FAMILY.M_CR7_MF_GENESIS",
      "skill": "CRES.G7.CHRIST.CHRISTIAN_MARRIAGE_AND_F.MARRIAGE_FAMILY",
-     "error": "Gives a wrong verse idea.",
+     "error": "Thinks Genesis 2:24 says a man leaves his wife, mixing who is left (father and mother) with who he is joined to.",
      "example": {
       "question": "What does Genesis 2:24 say a man does?",
       "wrong_answer": "Leaves his wife",
       "correct_answer": "Is joined to his wife"
      },
-     "cause": "The child mixes up two rules that are taught close together.",
+     "cause": "\"Leave\" in the verse is remembered without what follows.",
      "reveals": "Offer \"Leaves his wife\" next to the right answer and ask the question again in a new situation.",
-     "help": "A man is joined to his wife and they become one.",
+     "help": "Read Genesis 2:24 in full: leave father and mother, be united to his wife.",
      "feedback": "A man is joined to his wife and they become one.",
      "source": "To confirm by a CRE teacher: a common classroom error, not traced to a study by the author.",
      "status": "draft"
@@ -2587,15 +3119,15 @@
     {
      "code": "CRES.G7.CHRIST.CHRISTIAN_MARRIAGE_AND_F.MARRIAGE_FAMILY.M_CR7_MF_VALUE",
      "skill": "CRES.G7.CHRIST.CHRISTIAN_MARRIAGE_AND_F.MARRIAGE_FAMILY",
-     "error": "Names a harmful value.",
+     "error": "Picks keeping secrets from each other as a value that keeps families stable, instead of love, honesty and forgiveness.",
      "example": {
       "question": "Which value keeps a family stable?",
-      "wrong_answer": "Selfishness",
-      "correct_answer": "Love and forgiveness"
+      "wrong_answer": "Keeping secrets from each other",
+      "correct_answer": "Love, honesty and forgiveness"
      },
-     "cause": "The child mixes up two rules that are taught close together.",
-     "reveals": "Offer \"Selfishness\" next to the right answer and ask the question again in a new situation.",
-     "help": "Love and forgiveness keep a family stable.",
+     "cause": "The learner picks a word without thinking how it works in a home.",
+     "reveals": "Offer \"Keeping secrets from each other\" beside \"Love, honesty and forgiveness\" and ask the child to choose.",
+     "help": "For each value, give a family scene that shows it.",
      "feedback": "Love and forgiveness keep a family stable.",
      "source": "To confirm by a CRE teacher: a common classroom error, not traced to a study by the author.",
      "status": "draft"
@@ -2603,16 +3135,32 @@
     {
      "code": "CRES.G7.CHRIST.CHRISTIAN_MARRIAGE_AND_F.MARRIAGE_FAMILY.M_CR7_MF_LASTING",
      "skill": "CRES.G7.CHRIST.CHRISTIAN_MARRIAGE_AND_F.MARRIAGE_FAMILY",
-     "error": "Thinks marriage is temporary.",
+     "error": "Thinks God planned marriage to last only a short time, missing Mark 10:9.",
      "example": {
       "question": "How did God plan marriage?",
       "wrong_answer": "To last a short time",
       "correct_answer": "To be a lasting union"
      },
-     "cause": "The child mixes up two rules that are taught close together.",
+     "cause": "The learner sees marriages break and thinks it is the plan.",
      "reveals": "Offer \"To last a short time\" next to the right answer and ask the question again in a new situation.",
-     "help": "God planned marriage to be lasting.",
+     "help": "Read Mark 10:9: what God has joined, let no one separate.",
      "feedback": "God planned marriage to be lasting.",
+     "source": "To confirm by a CRE teacher: a common classroom error, not traced to a study by the author.",
+     "status": "draft"
+    },
+    {
+     "code": "CRES.G7.CHRIST.CHRISTIAN_MARRIAGE_AND_F.MARRIAGE_FAMILY.M_CR7_MF_CHURCH_ROLE",
+     "skill": "CRES.G7.CHRIST.CHRISTIAN_MARRIAGE_AND_F.MARRIAGE_FAMILY",
+     "error": "Thinks the church has no part in preparing young people for marriage.",
+     "example": {
+      "question": "How does the church promote values among young people before marriage?",
+      "wrong_answer": "It does nothing until the wedding",
+      "correct_answer": "Through youth programmes, teaching, mentorship and pre-marriage counselling"
+     },
+     "cause": "The learner sees the church only at the wedding.",
+     "reveals": "Offer \"It does nothing until the wedding\" beside \"Through youth programmes, teaching, mentorship and pre-marriage counselling\" and ask the child to choose.",
+     "help": "List church youth activities and what values they teach.",
+     "feedback": "Churches teach and mentor young people and offer counselling before marriage.",
      "source": "To confirm by a CRE teacher: a common classroom error, not traced to a study by the author.",
      "status": "draft"
     }
@@ -2708,7 +3256,8 @@
      "outcomes": [
       "CRE.G7.CHRIST.ALCOHOL_DRUGS_AND_SUBSTA.a",
       "CRE.G7.CHRIST.ALCOHOL_DRUGS_AND_SUBSTA.b",
-      "CRE.G7.CHRIST.ALCOHOL_DRUGS_AND_SUBSTA.c"
+      "CRE.G7.CHRIST.ALCOHOL_DRUGS_AND_SUBSTA.c",
+      "CRE.G7.CHRIST.ALCOHOL_DRUGS_AND_SUBSTA.e"
      ],
      "mastery": "The child names commonly abused drugs in Kenya (alcohol, bhang, miraa, tobacco), reasons young people try them (peer pressure, curiosity, stress), effects (poor health, poor school work, family conflict), and says to refuse, give reasons and talk to a trusted adult. Evidence rule: at least four of the last five fresh questions right across at least two question forms, and no repeated pick of the same misconception.",
      "question_forms": [
@@ -2721,7 +3270,22 @@
       "reasoning"
      ],
      "horeb_skill_ids": [],
-     "prerequisites": [],
+     "prerequisites": [
+      {
+       "requires": "CRES.G6.CHRIST.ALCOHOL_DRUGS_AND_SUBSTA.DRUGS_BIBLE",
+       "kind": "skill",
+       "strength": "essential",
+       "reason": "The Christian teaching on drugs and alcohol, met in Grade 6. Proposed, to confirm by a CRE teacher.",
+       "status": "proposed"
+      },
+      {
+       "requires": "CRES.G6.CHRIST.ALCOHOL_DRUGS_AND_SUBSTA.DRUGS_PREVENT",
+       "kind": "skill",
+       "strength": "essential",
+       "reason": "Ways Christians and the government prevent drug abuse. Proposed, to confirm by a CRE teacher.",
+       "status": "proposed"
+      }
+     ],
      "status": "proposed"
     }
    ],
@@ -2729,15 +3293,15 @@
     {
      "code": "CRES.G7.CHRIST.ALCOHOL_DRUGS_AND_SUBSTA.DRUGS_ABUSE.M_CR7_DA_DRUG",
      "skill": "CRES.G7.CHRIST.ALCOHOL_DRUGS_AND_SUBSTA.DRUGS_ABUSE",
-     "error": "Names a safe item as a drug.",
+     "error": "Thinks alcohol and cigarettes are not drugs because they are sold in shops.",
      "example": {
-      "question": "Which is a drug abused by young people?",
-      "wrong_answer": "Water",
-      "correct_answer": "Bhang"
+      "question": "Which of these is a commonly abused drug?",
+      "wrong_answer": "None that are sold in shops",
+      "correct_answer": "Alcohol"
      },
-     "cause": "The child mixes up two rules that are taught close together.",
-     "reveals": "Offer \"Water\" next to the right answer and ask the question again in a new situation.",
-     "help": "Bhang is an abused drug.",
+     "cause": "Some abused substances are legal and sold openly, so the learner does not count them.",
+     "reveals": "Offer \"None that are sold in shops\" beside \"Alcohol\" and ask the child to choose.",
+     "help": "List commonly abused substances in Kenya: alcohol, tobacco, bhang, miraa, glue, prescription pills. Legal does not mean safe.",
      "feedback": "Bhang is an abused drug.",
      "source": "To confirm by a CRE teacher: a common classroom error, not traced to a study by the author.",
      "status": "draft"
@@ -2745,15 +3309,15 @@
     {
      "code": "CRES.G7.CHRIST.ALCOHOL_DRUGS_AND_SUBSTA.DRUGS_ABUSE.M_CR7_DA_EFFECT",
      "skill": "CRES.G7.CHRIST.ALCOHOL_DRUGS_AND_SUBSTA.DRUGS_ABUSE",
-     "error": "Gives a good effect of abuse.",
+     "error": "Thinks drugs make a person more relaxed and confident with no lasting harm.",
      "example": {
-      "question": "Which is an effect of drug abuse?",
-      "wrong_answer": "Better health",
-      "correct_answer": "Poor health and school work"
+      "question": "Which is an effect of drug abuse on the family?",
+      "wrong_answer": "Everyone is more relaxed",
+      "correct_answer": "Money problems, quarrels and violence"
      },
-     "cause": "The child mixes up two rules that are taught close together.",
-     "reveals": "Offer \"Better health\" next to the right answer and ask the question again in a new situation.",
-     "help": "Drug abuse harms health and school work.",
+     "cause": "Adverts and friends show drugs as fun and relaxing.",
+     "reveals": "Offer \"Everyone is more relaxed\" beside \"Money problems, quarrels and violence\" and ask the child to choose.",
+     "help": "Chart effects on the person (health, school, crime) and on the family (money, violence, shame).",
      "feedback": "Drug abuse harms health and school work.",
      "source": "To confirm by a CRE teacher: a common classroom error, not traced to a study by the author.",
      "status": "draft"
@@ -2767,10 +3331,26 @@
       "wrong_answer": "Take them to fit in",
       "correct_answer": "Refuse and tell a trusted adult"
      },
-     "cause": "The child mixes up two rules that are taught close together.",
+     "cause": "Fitting in feels more urgent than distant harm.",
      "reveals": "Offer \"Take them to fit in\" next to the right answer and ask the question again in a new situation.",
-     "help": "Refuse and tell a trusted adult.",
+     "help": "Practise three refusal lines and walk away; name the friend who will stand with you.",
      "feedback": "Refuse and tell a trusted adult.",
+     "source": "To confirm by a CRE teacher: a common classroom error, not traced to a study by the author.",
+     "status": "draft"
+    },
+    {
+     "code": "CRES.G7.CHRIST.ALCOHOL_DRUGS_AND_SUBSTA.DRUGS_ABUSE.M_CR7_DA_PROVERBS_WINE",
+     "skill": "CRES.G7.CHRIST.ALCOHOL_DRUGS_AND_SUBSTA.DRUGS_ABUSE",
+     "error": "Thinks Proverbs 20:1 praises wine, missing that it warns \"wine is a mocker\".",
+     "example": {
+      "question": "What does Proverbs 20:1 say about wine and beer?",
+      "wrong_answer": "They make a person wise",
+      "correct_answer": "Wine is a mocker and beer a brawler; whoever is led astray by them is not wise"
+     },
+     "cause": "The learner knows wine from the wedding at Cana and expects praise.",
+     "reveals": "Offer \"They make a person wise\" beside \"Wine is a mocker and beer a brawler; whoever is led astray by them is not wise\" and ask the child to choose.",
+     "help": "Read Proverbs 20:1 and 23:29-35 and list the harms they name.",
+     "feedback": "Proverbs 20:1 warns that wine mocks and beer brawls. Being led astray by them is not wise.",
      "source": "To confirm by a CRE teacher: a common classroom error, not traced to a study by the author.",
      "status": "draft"
     }
@@ -2879,7 +3459,65 @@
       "reasoning"
      ],
      "horeb_skill_ids": [],
-     "prerequisites": [],
+     "prerequisites": [
+      {
+       "requires": "CRES.G6.CREATI.LEISURE.LEISURE_USE",
+       "kind": "skill",
+       "strength": "essential",
+       "reason": "Misuse of leisure time, which gambling often is. Proposed, to confirm by a CRE teacher.",
+       "status": "proposed"
+      },
+      {
+       "requires": "CRES.G5.THE_LI.THE_RICH_YOUNG_MAN.RICH_YOUNG_MAN",
+       "kind": "skill",
+       "strength": "essential",
+       "reason": "Wealth that holds the heart. Proposed, to confirm by a CRE teacher.",
+       "status": "proposed"
+      }
+     ],
+     "status": "proposed"
+    },
+    {
+     "code": "CRES.G7.CHRIST.GAMBLING.MONEY_RICHES",
+     "name": "Outline the teachings on money, wealth and true riches in the scriptures provided (1 Timothy 6:10, 6:17-19; Proverbs 13:11, 28:20-22; Ephesians 4:28; Matthew 6:19-21; Hebrews 13:5)",
+     "outcomes": [
+      "CRE.G7.CHRIST.GAMBLING.c",
+      "CRE.G7.CHRIST.GAMBLING.e"
+     ],
+     "mastery": "Says that the love of money (not money itself) is a root of all kinds of evil (1 Timothy 6:10), that dishonest money dwindles while money gathered little by little grows (Proverbs 13:11), that one eager to get rich falls into trouble (Proverbs 28:20-22), that a person should work honestly and share (Ephesians 4:28), be content (Hebrews 13:5), and store up treasures in heaven by being rich in good deeds (Matthew 6:19-21; 1 Timothy 6:17-19). Evidence rule: at least four of the last five fresh questions right across at least two question forms, and no repeated pick of the same misconception.",
+     "question_forms": [
+      "what a verse teaches about money",
+      "true riches against earthly riches",
+      "apply a verse to a money choice"
+     ],
+     "thinking": [
+      "recall",
+      "reasoning"
+     ],
+     "horeb_skill_ids": [],
+     "prerequisites": [
+      {
+       "requires": "CRES.G7.CHRIST.GAMBLING.GAMBLING",
+       "kind": "skill",
+       "strength": "essential",
+       "reason": "The types, causes and effects of gambling set the question the scriptures answer. Proposed, to confirm by a CRE teacher.",
+       "status": "proposed"
+      },
+      {
+       "requires": "CRES.G6.THE_LI.THE_HIDDEN_TREASURE.HIDDEN_TREASURE",
+       "kind": "skill",
+       "strength": "essential",
+       "reason": "The kingdom as a treasure worth more than everything. Proposed, to confirm by a CRE teacher.",
+       "status": "proposed"
+      },
+      {
+       "requires": "CRES.G6.THE_LI.THE_RICH_MAN_AND_LAZARUS.RICH_MAN",
+       "kind": "skill",
+       "strength": "essential",
+       "reason": "The rich man who ignored Lazarus: what wealth can do to the heart. Proposed, to confirm by a CRE teacher.",
+       "status": "proposed"
+      }
+     ],
      "status": "proposed"
     }
    ],
@@ -2887,15 +3525,15 @@
     {
      "code": "CRES.G7.CHRIST.GAMBLING.GAMBLING.M_CR7_GM_TYPE",
      "skill": "CRES.G7.CHRIST.GAMBLING.GAMBLING",
-     "error": "Names a non-gambling activity.",
+     "error": "Thinks a game played for money among friends is not gambling because it is not in a betting shop.",
      "example": {
-      "question": "Which is gambling?",
-      "wrong_answer": "Farming",
-      "correct_answer": "Betting on a game"
+      "question": "Which of these is gambling?",
+      "wrong_answer": "Playing cards for money with friends is just a game",
+      "correct_answer": "Playing cards for money is gambling"
      },
-     "cause": "The child mixes up two rules that are taught close together.",
-     "reveals": "Offer \"Farming\" next to the right answer and ask the question again in a new situation.",
-     "help": "Betting money on a game is gambling.",
+     "cause": "Some games of chance do not look like betting.",
+     "reveals": "Offer \"Playing cards for money with friends is just a game\" beside \"Playing cards for money is gambling\" and ask the child to choose.",
+     "help": "List types in Kenya: sports betting on phones, lotteries, casinos, card games for money, pool for money.",
      "feedback": "Betting money on a game is gambling.",
      "source": "To confirm by a CRE teacher: a common classroom error, not traced to a study by the author.",
      "status": "draft"
@@ -2903,15 +3541,15 @@
     {
      "code": "CRES.G7.CHRIST.GAMBLING.GAMBLING.M_CR7_GM_EFFECT",
      "skill": "CRES.G7.CHRIST.GAMBLING.GAMBLING",
-     "error": "Gives a good effect of gambling.",
+     "error": "Thinks gambling usually makes savings grow, because adverts show winners.",
      "example": {
       "question": "Which is an effect of gambling?",
       "wrong_answer": "Savings grow",
       "correct_answer": "Debt and family quarrels"
      },
-     "cause": "The child mixes up two rules that are taught close together.",
+     "cause": "Adverts show winners, not losers.",
      "reveals": "Offer \"Savings grow\" next to the right answer and ask the question again in a new situation.",
-     "help": "Gambling causes debt and quarrels.",
+     "help": "Show the maths: most players lose. List effects on the gambler and family.",
      "feedback": "Gambling causes debt and quarrels.",
      "source": "To confirm by a CRE teacher: a common classroom error, not traced to a study by the author.",
      "status": "draft"
@@ -2925,10 +3563,90 @@
       "wrong_answer": "Working hard",
       "correct_answer": "The love of money"
      },
-     "cause": "The child mixes up two rules that are taught close together.",
+     "cause": "The verse is quoted short and the learner fills in a guess.",
      "reveals": "Offer \"Working hard\" next to the right answer and ask the question again in a new situation.",
-     "help": "1 Timothy 6:10 warns about the love of money.",
+     "help": "Read 1 Timothy 6:10 in full and underline \"the love of\".",
      "feedback": "1 Timothy 6:10 warns about the love of money.",
+     "source": "To confirm by a CRE teacher: a common classroom error, not traced to a study by the author.",
+     "status": "draft"
+    },
+    {
+     "code": "CRES.G7.CHRIST.GAMBLING.MONEY_RICHES.M_CR7_MR_MONEY_EVIL",
+     "skill": "CRES.G7.CHRIST.GAMBLING.MONEY_RICHES",
+     "error": "Thinks 1 Timothy 6:10 says money itself is evil, so a Christian should have none.",
+     "example": {
+      "question": "What does 1 Timothy 6:10 say is a root of all kinds of evil?",
+      "wrong_answer": "Money",
+      "correct_answer": "The love of money"
+     },
+     "cause": "The verse is often quoted short as \"money is the root of all evil\".",
+     "reveals": "Offer \"Money\" beside \"The love of money\" and ask the child to choose.",
+     "help": "Read the whole verse and underline \"the love of\". Money can be used well; loving it is the danger.",
+     "feedback": "The Bible says the love of money is a root of all kinds of evil, not money itself.",
+     "source": "To confirm by a CRE teacher: a common classroom error, not traced to a study by the author.",
+     "status": "draft"
+    },
+    {
+     "code": "CRES.G7.CHRIST.GAMBLING.MONEY_RICHES.M_CR7_MR_QUICK_RICH",
+     "skill": "CRES.G7.CHRIST.GAMBLING.MONEY_RICHES",
+     "error": "Thinks getting rich quickly by luck is a blessing, against Proverbs 13:11 and 28:20.",
+     "example": {
+      "question": "What does Proverbs 13:11 say about money gathered little by little?",
+      "wrong_answer": "It is too slow and wasted effort",
+      "correct_answer": "It grows, while dishonest or quick money dwindles"
+     },
+     "cause": "Stories of jackpot winners make quick money look like the best kind.",
+     "reveals": "Offer \"It is too slow and wasted effort\" beside \"It grows, while dishonest or quick money dwindles\" and ask the child to choose.",
+     "help": "Compare two savers on a chart: little by little each week against one big bet. Read Proverbs 28:20.",
+     "feedback": "Money gathered little by little grows. Chasing quick riches leads to trouble.",
+     "source": "To confirm by a CRE teacher: a common classroom error, not traced to a study by the author.",
+     "status": "draft"
+    },
+    {
+     "code": "CRES.G7.CHRIST.GAMBLING.MONEY_RICHES.M_CR7_MR_TREASURE_BANK",
+     "skill": "CRES.G7.CHRIST.GAMBLING.MONEY_RICHES",
+     "error": "Thinks \"treasures in heaven\" (Matthew 6:19-21) means money saved in a bank.",
+     "example": {
+      "question": "What are treasures in heaven, in Matthew 6:19-21?",
+      "wrong_answer": "Money kept safe in a bank",
+      "correct_answer": "Good deeds, generosity and a life given to God"
+     },
+     "cause": "The child hears \"store up\" and thinks of savings accounts.",
+     "reveals": "Offer \"Money kept safe in a bank\" beside \"Good deeds, generosity and a life given to God\" and ask the child to choose.",
+     "help": "Read 1 Timothy 6:18 beside Matthew 6:20: be rich in good deeds, generous and willing to share.",
+     "feedback": "Treasures in heaven are good deeds, generosity and faithfulness to God, which moth and rust cannot destroy.",
+     "source": "To confirm by a CRE teacher: a common classroom error, not traced to a study by the author.",
+     "status": "draft"
+    },
+    {
+     "code": "CRES.G7.CHRIST.GAMBLING.MONEY_RICHES.M_CR7_MR_THIEF_KEEP",
+     "skill": "CRES.G7.CHRIST.GAMBLING.MONEY_RICHES",
+     "error": "Thinks Ephesians 4:28 tells a former thief only to stop stealing, missing work and sharing.",
+     "example": {
+      "question": "According to Ephesians 4:28, what should a former thief do?",
+      "wrong_answer": "Only stop stealing",
+      "correct_answer": "Stop stealing, work honestly with his hands and share with those in need"
+     },
+     "cause": "The child stops at the first command of the verse.",
+     "reveals": "Offer \"Only stop stealing\" beside \"Stop stealing, work honestly with his hands and share with those in need\" and ask the child to choose.",
+     "help": "Read Ephesians 4:28 in three parts and write them as three steps.",
+     "feedback": "Ephesians 4:28 says: stop stealing, work honestly, and share with those in need.",
+     "source": "To confirm by a CRE teacher: a common classroom error, not traced to a study by the author.",
+     "status": "draft"
+    },
+    {
+     "code": "CRES.G7.CHRIST.GAMBLING.GAMBLING.M_CR7_GM_ONE_BET",
+     "skill": "CRES.G7.CHRIST.GAMBLING.GAMBLING",
+     "error": "Thinks one small bet with pocket money cannot become a habit.",
+     "example": {
+      "question": "Kip places one small bet with his pocket money and wins. What is the danger?",
+      "wrong_answer": "None: one bet cannot harm",
+      "correct_answer": "A win can pull him into betting again and into debt"
+     },
+     "cause": "The first win feels like a reward, not a trap.",
+     "reveals": "Offer \"None: one bet cannot harm\" beside \"A win can pull him into betting again and into debt\" and ask the child to choose.",
+     "help": "Discuss how habits begin; read 1 Corinthians 6:12: \"I will not be mastered by anything\".",
+     "feedback": "One bet, especially a win, can start a habit that leads to debt. Do not be mastered by anything.",
      "source": "To confirm by a CRE teacher: a common classroom error, not traced to a study by the author.",
      "status": "draft"
     }
@@ -3028,7 +3746,8 @@
       "CRE.G7.CHRIST.SOCIAL_MEDIA.a",
       "CRE.G7.CHRIST.SOCIAL_MEDIA.b",
       "CRE.G7.CHRIST.SOCIAL_MEDIA.c",
-      "CRE.G7.CHRIST.SOCIAL_MEDIA.d"
+      "CRE.G7.CHRIST.SOCIAL_MEDIA.d",
+      "CRE.G7.CHRIST.SOCIAL_MEDIA.e"
      ],
      "mastery": "The child names platforms (WhatsApp, Facebook, TikTok, YouTube), responsible habits (kind words, privacy, not sharing others' pictures, time limits), misuse (cyberbullying, false news, sharing private information), and says to save the message, not reply in anger and tell a trusted adult. Evidence rule: at least four of the last five fresh questions right across at least two question forms, and no repeated pick of the same misconception.",
      "question_forms": [
@@ -3041,7 +3760,22 @@
       "reasoning"
      ],
      "horeb_skill_ids": [],
-     "prerequisites": [],
+     "prerequisites": [
+      {
+       "requires": "CRES.G5.CHRIST.SOCIAL_MEDIA.SOCIAL_MEDIA",
+       "kind": "skill",
+       "strength": "essential",
+       "reason": "Grade 5: platforms, advantages, disadvantages and safety. Proposed, to confirm by a CRE teacher.",
+       "status": "proposed"
+      },
+      {
+       "requires": "CRES.G6.CHRIST.FRIENDSHIP_FORMATION.FRIENDSHIP",
+       "kind": "skill",
+       "strength": "essential",
+       "reason": "Bad company corrupts good character, online too. Proposed, to confirm by a CRE teacher.",
+       "status": "proposed"
+      }
+     ],
      "status": "proposed"
     }
    ],
@@ -3049,15 +3783,15 @@
     {
      "code": "CRES.G7.CHRIST.SOCIAL_MEDIA.SOCIAL_MEDIA.M_CR7_SM_PLATFORM",
      "skill": "CRES.G7.CHRIST.SOCIAL_MEDIA.SOCIAL_MEDIA",
-     "error": "Names a non-platform.",
+     "error": "Counts any phone app, such as a calculator, as a social media platform.",
      "example": {
       "question": "Which is a social media platform?",
       "wrong_answer": "A calculator",
       "correct_answer": "WhatsApp"
      },
-     "cause": "The child mixes up two rules that are taught close together.",
+     "cause": "Any app on a phone seems to be social media.",
      "reveals": "Offer \"A calculator\" next to the right answer and ask the question again in a new situation.",
-     "help": "WhatsApp is a social media platform.",
+     "help": "Say social media is for sharing and talking with others; sort apps: WhatsApp, TikTok, Facebook (social), calculator, torch (not).",
      "feedback": "WhatsApp is a social media platform.",
      "source": "To confirm by a CRE teacher: a common classroom error, not traced to a study by the author.",
      "status": "draft"
@@ -3065,15 +3799,15 @@
     {
      "code": "CRES.G7.CHRIST.SOCIAL_MEDIA.SOCIAL_MEDIA.M_CR7_SM_BULLY",
      "skill": "CRES.G7.CHRIST.SOCIAL_MEDIA.SOCIAL_MEDIA",
-     "error": "Thinks answering anger with anger is right.",
+     "error": "Thinks the right answer to cyberbullying is to reply with insults.",
      "example": {
       "question": "What should you do about cyberbullying?",
       "wrong_answer": "Reply with insults",
       "correct_answer": "Save it and tell a trusted adult"
      },
-     "cause": "The child mixes up two rules that are taught close together.",
+     "cause": "Hitting back online feels like standing up for oneself.",
      "reveals": "Offer \"Reply with insults\" next to the right answer and ask the question again in a new situation.",
-     "help": "Save the message and tell a trusted adult.",
+     "help": "Steps: do not reply, save the evidence, block, report, tell a trusted adult.",
      "feedback": "Save the message and tell a trusted adult.",
      "source": "To confirm by a CRE teacher: a common classroom error, not traced to a study by the author.",
      "status": "draft"
@@ -3081,16 +3815,32 @@
     {
      "code": "CRES.G7.CHRIST.SOCIAL_MEDIA.SOCIAL_MEDIA.M_CR7_SM_PRIVATE",
      "skill": "CRES.G7.CHRIST.SOCIAL_MEDIA.SOCIAL_MEDIA",
-     "error": "Shares private information.",
+     "error": "Thinks sharing other people's pictures without asking is harmless.",
      "example": {
-      "question": "What is responsible use of social media?",
-      "wrong_answer": "Sharing others' pictures freely",
-      "correct_answer": "Keeping private information safe"
+      "question": "You have a funny photo of a classmate. What is responsible?",
+      "wrong_answer": "Post it, it is only a joke",
+      "correct_answer": "Ask first and do not post what could hurt them"
      },
-     "cause": "The child mixes up two rules that are taught close together.",
-     "reveals": "Offer \"Sharing others' pictures freely\" next to the right answer and ask the question again in a new situation.",
-     "help": "Keep private information safe and be kind.",
+     "cause": "Sharing a friend's photo seems kind or funny.",
+     "reveals": "Offer \"Post it, it is only a joke\" beside \"Ask first and do not post what could hurt them\" and ask the child to choose.",
+     "help": "Ask: did they agree? Could it hurt them? Keep others' pictures and information private.",
      "feedback": "Keep private information safe and be kind.",
+     "source": "To confirm by a CRE teacher: a common classroom error, not traced to a study by the author.",
+     "status": "draft"
+    },
+    {
+     "code": "CRES.G7.CHRIST.SOCIAL_MEDIA.SOCIAL_MEDIA.M_CR7_SM_DELETED_GONE",
+     "skill": "CRES.G7.CHRIST.SOCIAL_MEDIA.SOCIAL_MEDIA",
+     "error": "Thinks a post that is deleted is gone for ever, so anything may be posted.",
+     "example": {
+      "question": "You post something unkind and delete it after an hour. Is it gone?",
+      "wrong_answer": "Yes, deleting removes it for ever",
+      "correct_answer": "No: others may have saved or shared it"
+     },
+     "cause": "The delete button seems to undo everything.",
+     "reveals": "Offer \"Yes, deleting removes it for ever\" beside \"No: others may have saved or shared it\" and ask the child to choose.",
+     "help": "Show how screenshots and forwarding work; think before posting (Philippians 4:8).",
+     "feedback": "Once posted, something can be saved and shared even after you delete it. Think before you post.",
      "source": "To confirm by a CRE teacher: a common classroom error, not traced to a study by the author.",
      "status": "draft"
     }

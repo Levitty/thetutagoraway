@@ -1,0 +1,99 @@
+{
+ "sub_strand": "CRE.G7.THE_EA.PROPHECIES_ABOUT_THE_MES",
+ "title": "Prophecies about the Messiah",
+ "status": "draft: written 18 Nov 2026 offline for Grade 7 Christian Religious Education; not yet checked by a CRE teacher; not loaded by the live tutor",
+ "sources": [],
+ "notes": "",
+ "skills": [
+  {
+   "skill": "CRES.G7.THE_EA.PROPHECIES_ABOUT_THE_MES.MESSIAH_PROPHECY",
+   "key_step": "The learner outlines Old Testament prophecies about the Messiah (Isaiah 7:14: virgin, Immanuel; Micah 5:2: Bethlehem; Isaiah 9:6-7: child, Prince of Peace; Isaiah 53: suffering servant) and their fulfilment in Jesus (Matthew 1:22-23; 2:5-6).",
+   "floor": {
+    "prerequisite": "Knows the annunciation.",
+    "question": "What name did Gabriel tell Mary to give her son?",
+    "answer": "Jesus"
+   },
+   "representations": [
+    "two columns: prophecy and fulfilment",
+    "verse cards",
+    "a time line of centuries"
+   ],
+   "steps": [
+    "Read Isaiah 7:14 and Matthew 1:23.",
+    "Read Micah 5:2 and Matthew 2:5-6.",
+    "Read Isaiah 9:6.",
+    "Match each prophecy with its fulfilment."
+   ],
+   "contexts": [
+    "Christmas readings in church",
+    "a promise kept by a parent",
+    "Advent"
+   ],
+   "board": [
+    {
+     "beat": "write",
+     "do": "Draw two columns: prophecy and fulfilment."
+    },
+    {
+     "beat": "point",
+     "do": "Point at Micah 5:2.",
+     "say": "Which town did it name, and where is it fulfilled?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for the learner to say Bethlehem, Matthew 2:5-6."
+    },
+    {
+     "beat": "reveal",
+     "do": "Match the other prophecies."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "CRES.G7.THE_EA.PROPHECIES_ABOUT_THE_MES.MESSIAH_PROPHECY.M_CR7_MS_BETHLEHEM",
+     "listen_for": [
+      "Nazareth"
+     ],
+     "ask": "Which town did Micah 5:2 name as the Messiah's birthplace?",
+     "repair": "Read Micah 5:2 and Matthew 2:5-6 together."
+    },
+    {
+     "code": "CRES.G7.THE_EA.PROPHECIES_ABOUT_THE_MES.MESSIAH_PROPHECY.M_CR7_MS_VIRGIN",
+     "listen_for": [
+      "Moses"
+     ],
+     "ask": "Which prophet said a virgin would bear a son called Immanuel?",
+     "repair": "Make a card for each prophecy with its prophet: Isaiah 7:14 (virgin, Immanuel), Micah 5:2 (Bethlehem), Isaiah 9:6 (child, Prince of Peace)."
+    },
+    {
+     "code": "CRES.G7.THE_EA.PROPHECIES_ABOUT_THE_MES.MESSIAH_PROPHECY.M_CR7_MS_FULFIL",
+     "listen_for": [
+      "It was cancelled"
+     ],
+     "ask": "What does it mean that a prophecy was fulfilled?",
+     "repair": "Show: a promise made, then kept. Prophecy said; Jesus fulfilled."
+    },
+    {
+     "code": "CRES.G7.THE_EA.PROPHECIES_ABOUT_THE_MES.MESSIAH_PROPHECY.M_CR7_MS_IMMANUEL",
+     "listen_for": [
+      "A second son of Mary"
+     ],
+     "ask": "What does the name Immanuel mean (Matthew 1:23)?",
+     "repair": "Read Matthew 1:23, where the meaning is given."
+    }
+   ],
+   "checks": [
+    {
+     "question": "Which town did Micah 5:2 name?",
+     "answer": "Bethlehem",
+     "shows": "prophecy"
+    },
+    {
+     "question": "What does \"fulfilled\" mean?",
+     "answer": "Came true",
+     "shows": "meaning"
+    }
+   ]
+  }
+ ]
+}

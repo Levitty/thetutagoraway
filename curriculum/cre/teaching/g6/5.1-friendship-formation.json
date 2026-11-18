@@ -1,0 +1,99 @@
+{
+ "sub_strand": "CRE.G6.CHRIST.FRIENDSHIP_FORMATION",
+ "title": "Friendship Formation",
+ "status": "draft: written 18 Nov 2026 offline for Grade 6 Christian Religious Education; not yet checked by a CRE teacher; not loaded by the live tutor",
+ "sources": [],
+ "notes": "",
+ "skills": [
+  {
+   "skill": "CRES.G6.CHRIST.FRIENDSHIP_FORMATION.FRIENDSHIP",
+   "key_step": "The child discusses why good friends matter and the teachings of 1 Corinthians 15:33 (bad company corrupts good character), Proverbs 13:20 (walk with the wise and become wise) and Proverbs 16:28-29 (a gossip separates friends; a violent person leads others astray).",
+   "floor": {
+    "prerequisite": "Knows the qualities of a good friend.",
+    "question": "Name one quality of a good friend.",
+    "answer": "Honest (kind, respectful)"
+   },
+   "representations": [
+    "two paths: wise friends and foolish friends",
+    "the three verses on cards",
+    "situation cards"
+   ],
+   "steps": [
+    "Read 1 Corinthians 15:33.",
+    "Read Proverbs 13:20.",
+    "Read Proverbs 16:28-29.",
+    "Choose friends who help you do right."
+   ],
+   "contexts": [
+    "a new friend at a new school",
+    "a group that gossips",
+    "a friend who helps you study"
+   ],
+   "board": [
+    {
+     "beat": "write",
+     "do": "Draw two paths from one child."
+    },
+    {
+     "beat": "point",
+     "do": "Point at the path with wise friends.",
+     "say": "What does Proverbs 13:20 say happens on this path?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for the child to say you become wise."
+    },
+    {
+     "beat": "reveal",
+     "do": "Write the other two verses beside the paths."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "CRES.G6.CHRIST.FRIENDSHIP_FORMATION.FRIENDSHIP.M_FRI6_POPULAR",
+     "listen_for": [
+      "Being popular and rich"
+     ],
+     "ask": "What makes a good friend?",
+     "repair": "List qualities from Proverbs 13:20: walk with the wise. Ask what a friend helps you become."
+    },
+    {
+     "code": "CRES.G6.CHRIST.FRIENDSHIP_FORMATION.FRIENDSHIP.M_FRI6_BAD",
+     "listen_for": [
+      "Bad company does not change a person"
+     ],
+     "ask": "What does 1 Corinthians 15:33 say?",
+     "repair": "Read 1 Corinthians 15:33 and give an example: a friend who swears, and soon you swear."
+    },
+    {
+     "code": "CRES.G6.CHRIST.FRIENDSHIP_FORMATION.FRIENDSHIP.M_FRI6_GOSSIP",
+     "listen_for": [
+      "Brings friends closer"
+     ],
+     "ask": "What does Proverbs 16:28 say a gossip does?",
+     "repair": "Read Proverbs 16:28: a gossip separates close friends. Act out a rumour spreading."
+    },
+    {
+     "code": "CRES.G6.CHRIST.FRIENDSHIP_FORMATION.FRIENDSHIP.M_C6_FRI_WISE_FOOL",
+     "listen_for": [
+      "They suffer harm"
+     ],
+     "ask": "What does Proverbs 13:20 say happens to one who walks with the wise?",
+     "repair": "Read the verse in two halves and draw two paths: wise friends, wise; foolish friends, harm."
+    }
+   ],
+   "checks": [
+    {
+     "question": "What does 1 Corinthians 15:33 say?",
+     "answer": "Bad company corrupts good character",
+     "shows": "verse"
+    },
+    {
+     "question": "What does a gossip do, according to Proverbs 16:28?",
+     "answer": "Separates close friends",
+     "shows": "gossip"
+    }
+   ]
+  }
+ ]
+}

@@ -1,0 +1,99 @@
+{
+ "sub_strand": "CRE.G8.THE_CH.ACTS_OF_COMPASSION",
+ "title": "Acts of Compassion",
+ "status": "draft: written 18 Nov 2026 offline for Grade 8 Christian Religious Education; not yet checked by a CRE teacher; not loaded by the live tutor",
+ "sources": [],
+ "notes": "",
+ "skills": [
+  {
+   "skill": "CRES.G8.THE_CH.ACTS_OF_COMPASSION.COMPASSION",
+   "key_step": "The learner describes the church's role in helping the needy, lists who should be helped (the elderly and foreigners, Leviticus 19:32-33; the weak, the fatherless, the poor and oppressed, Psalm 82:3), relates the acts of compassion in Matthew 25:31-40, establishes who inherits the kingdom (those who served the least) and distinguishes the unrighteous acts of Matthew 25:41-46 (failing to help).",
+   "floor": {
+    "prerequisite": "Knows ways of helping the needy.",
+    "question": "Why did Jesus feed the four thousand?",
+    "answer": "He had compassion"
+   },
+   "representations": [
+    "two groups drawn: sheep and goats",
+    "Matthew 25:35-36 written large",
+    "a list of the needy from Leviticus 19 and Psalm 82"
+   ],
+   "steps": [
+    "Read Leviticus 19:32-33 and Psalm 82:3.",
+    "Read Matthew 25:31-40.",
+    "Read Matthew 25:41-46.",
+    "Plan a community service act."
+   ],
+   "contexts": [
+    "a children's home visit",
+    "a church feeding programme",
+    "visiting the sick in hospital"
+   ],
+   "board": [
+    {
+     "beat": "write",
+     "do": "Draw two groups: sheep on the right, goats on the left."
+    },
+    {
+     "beat": "point",
+     "do": "Point at the sheep.",
+     "say": "What had these people done?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for the learner to say fed, welcomed, clothed, visited."
+    },
+    {
+     "beat": "reveal",
+     "do": "List the six acts and who should be helped."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "CRES.G8.THE_CH.ACTS_OF_COMPASSION.COMPASSION.M_CR8_CM_FED",
+     "listen_for": [
+      "Building a large church"
+     ],
+     "ask": "Which act does the king name in Matthew 25:35?",
+     "repair": "Read Matthew 25:35-36 and list the six acts: food, drink, welcome, clothes, care, visiting."
+    },
+    {
+     "code": "CRES.G8.THE_CH.ACTS_OF_COMPASSION.COMPASSION.M_CR8_CM_STRANGER",
+     "listen_for": [
+      "Turned away"
+     ],
+     "ask": "How should strangers be treated?",
+     "repair": "Separate child safety (stay with trusted adults) from welcoming strangers in need as a family or church (Matthew 25:35)."
+    },
+    {
+     "code": "CRES.G8.THE_CH.ACTS_OF_COMPASSION.COMPASSION.M_CR8_CM_LEAST",
+     "listen_for": [
+      "It is for nothing"
+     ],
+     "ask": "What does the king say about helping the least?",
+     "repair": "Read Matthew 25:40: \"you did for me\". Helping the least is serving Christ."
+    },
+    {
+     "code": "CRES.G8.THE_CH.ACTS_OF_COMPASSION.COMPASSION.M_CR8_CM_INHERIT_RICH",
+     "listen_for": [
+      "The rich and important"
+     ],
+     "ask": "Who will inherit the kingdom, according to Matthew 25:34-40?",
+     "repair": "Read Matthew 25:34-36: \"come, you who are blessed... for I was hungry and you gave me something to eat\"."
+    }
+   ],
+   "checks": [
+    {
+     "question": "Name an act of compassion in Matthew 25:35-36.",
+     "answer": "Feeding the hungry (welcoming strangers, visiting the sick)",
+     "shows": "acts"
+    },
+    {
+     "question": "Who will inherit the kingdom, according to Matthew 25:34-40?",
+     "answer": "Those who served the least",
+     "shows": "inheritance"
+    }
+   ]
+  }
+ ]
+}

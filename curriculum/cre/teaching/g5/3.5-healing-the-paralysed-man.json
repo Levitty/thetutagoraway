@@ -1,0 +1,99 @@
+{
+ "sub_strand": "CRE.G5.THE_LI.HEALING_THE_PARALYSED_MA",
+ "title": "Healing the Paralysed Man",
+ "status": "draft: written 18 Nov 2026 offline for Grade 5 Christian Religious Education; not yet checked by a CRE teacher; not loaded by the live tutor",
+ "sources": [],
+ "notes": "",
+ "skills": [
+  {
+   "skill": "CRES.G5.THE_LI.HEALING_THE_PARALYSED_MA.PARALYSED_MAN",
+   "key_step": "The child describes Mark 2:1-5: a crowded house in Capernaum, four friends make an opening in the roof and lower the paralysed man, Jesus sees their faith and first says \"your sins are forgiven\", then heals him; and outlines lessons (faith, friends who help, Jesus forgives and heals).",
+   "floor": {
+    "prerequisite": "Knows the healing of Bartimaeus.",
+    "question": "What did Jesus say healed Bartimaeus?",
+    "answer": "His faith"
+   },
+   "representations": [
+    "a house with a hole in the roof drawn",
+    "four friends with a mat",
+    "Mark 2:5 written large"
+   ],
+   "steps": [
+    "The house is full.",
+    "Four friends open the roof.",
+    "They lower the man.",
+    "Jesus sees their faith and forgives, then heals."
+   ],
+   "contexts": [
+    "friends who visit a sick classmate",
+    "praying for a sick neighbour",
+    "a church carrying someone to hospital"
+   ],
+   "board": [
+    {
+     "beat": "write",
+     "do": "Draw a house with a crowd at the door and a hole in the roof."
+    },
+    {
+     "beat": "point",
+     "do": "Point at the hole.",
+     "say": "Why did the friends make this hole?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for the child to say the door was blocked by the crowd."
+    },
+    {
+     "beat": "reveal",
+     "do": "Write Mark 2:5: \"Son, your sins are forgiven\"."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "CRES.G5.THE_LI.HEALING_THE_PARALYSED_MA.PARALYSED_MAN.M_PM_DOOR",
+     "listen_for": [
+      "Through the open door"
+     ],
+     "ask": "How did the friends get the man to Jesus?",
+     "repair": "Read Mark 2:4."
+    },
+    {
+     "code": "CRES.G5.THE_LI.HEALING_THE_PARALYSED_MA.PARALYSED_MAN.M_PM_HEALED_FIRST",
+     "listen_for": [
+      "\"Rise, take up your mat and walk\""
+     ],
+     "ask": "What did Jesus say first to the paralysed man?",
+     "repair": "Read Mark 2:5."
+    },
+    {
+     "code": "CRES.G5.THE_LI.HEALING_THE_PARALYSED_MA.PARALYSED_MAN.M_PM_ALONE",
+     "listen_for": [
+      "Only the man's faith"
+     ],
+     "ask": "Whose faith did Jesus see?",
+     "repair": "Read Mark 2:3-5: \"when Jesus saw their faith\"."
+    },
+    {
+     "code": "CRES.G5.THE_LI.HEALING_THE_PARALYSED_MA.PARALYSED_MAN.M_C5_PM_TEACHERS_GLAD",
+     "listen_for": [
+      "They were glad and praised him"
+     ],
+     "ask": "What did some teachers of the law think when Jesus said \"your sins are forgiven\" (Mark 2:6-7)?",
+     "repair": "Read Mark 2:6-7 and ask: what did they say only God can do? Jesus then healed the man to show his authority."
+    }
+   ],
+   "checks": [
+    {
+     "question": "How did the friends get the man to Jesus?",
+     "answer": "Through an opening in the roof",
+     "shows": "story detail"
+    },
+    {
+     "question": "What did Jesus say first to the man?",
+     "answer": "Son, your sins are forgiven",
+     "shows": "forgiveness"
+    }
+   ]
+  }
+ ]
+}

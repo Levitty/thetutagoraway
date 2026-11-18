@@ -1,0 +1,99 @@
+{
+ "sub_strand": "CRE.G5.CHRIST.ALCOHOL_DRUGS_AND_SUBSTA",
+ "title": "Alcohol, Drugs and Substance Abuse",
+ "status": "draft: written 18 Nov 2026 offline for Grade 5 Christian Religious Education; not yet checked by a CRE teacher; not loaded by the live tutor",
+ "sources": [],
+ "notes": "",
+ "skills": [
+  {
+   "skill": "CRES.G5.CHRIST.ALCOHOL_DRUGS_AND_SUBSTA.DRUGS",
+   "key_step": "The child lists drugs abused by young people (alcohol, tobacco, bhang, glue, miraa), says why young people start (pressure, curiosity, stress), outlines effects (health, school, family, crime), names values to stay free (self-control, obedience, responsibility, courage) and says no.",
+   "floor": {
+    "prerequisite": "Knows what self-control is.",
+    "question": "What is self-control?",
+    "answer": "Choosing what is right instead of what a feeling pushes"
+   },
+   "representations": [
+    "a chart: drug, why people start, effect",
+    "a \"no\" practice card",
+    "values list"
+   ],
+   "steps": [
+    "Name drugs young people abuse.",
+    "Say why some start.",
+    "List the effects.",
+    "Practise saying no."
+   ],
+   "contexts": [
+    "glue sniffing near a market",
+    "a friend offering a cigarette",
+    "alcohol at a family party"
+   ],
+   "board": [
+    {
+     "beat": "write",
+     "do": "Draw a chart with three columns: drug, why, effect."
+    },
+    {
+     "beat": "point",
+     "do": "Point at the \"effect\" column.",
+     "say": "What does drug abuse do to a learner?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for the child to name an effect."
+    },
+    {
+     "beat": "reveal",
+     "do": "Write the values that help say no."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "CRES.G5.CHRIST.ALCOHOL_DRUGS_AND_SUBSTA.DRUGS.M_DR_MEDICINE",
+     "listen_for": [
+      "Taking medicine as the doctor says"
+     ],
+     "ask": "Which is drug abuse?",
+     "repair": "Ask the difference between medicine given by a nurse and a pill taken for fun."
+    },
+    {
+     "code": "CRES.G5.CHRIST.ALCOHOL_DRUGS_AND_SUBSTA.DRUGS.M_DR_ONLY_ADULTS",
+     "listen_for": [
+      "Only adults"
+     ],
+     "ask": "Who can be tempted to use drugs?",
+     "repair": "Ask about older pupils who offer cigarettes."
+    },
+    {
+     "code": "CRES.G5.CHRIST.ALCOHOL_DRUGS_AND_SUBSTA.DRUGS.M_DR_SAFE_ONE",
+     "listen_for": [
+      "One try can never harm you"
+     ],
+     "ask": "What is true about trying a harmful drug just once?",
+     "repair": "Say that many people started with one try."
+    },
+    {
+     "code": "CRES.G5.CHRIST.ALCOHOL_DRUGS_AND_SUBSTA.DRUGS.M_DR_EFFECT",
+     "listen_for": [
+      "Better health and better marks"
+     ],
+     "ask": "What is an effect of alcohol and drug abuse?",
+     "repair": "Ask about families affected."
+    }
+   ],
+   "checks": [
+    {
+     "question": "Is taking medicine as the doctor says drug abuse?",
+     "answer": "No",
+     "shows": "definition"
+    },
+    {
+     "question": "Name one effect of drug abuse.",
+     "answer": "Poor health (failing at school, quarrels)",
+     "shows": "effect"
+    }
+   ]
+  }
+ ]
+}

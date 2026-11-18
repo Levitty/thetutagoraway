@@ -1,0 +1,189 @@
+{
+ "sub_strand": "CRE.G5.THE_BI.MOUNT_CARMEL_CONTEST",
+ "title": "Mount Carmel Contest",
+ "status": "draft: written 18 Nov 2026 offline for Grade 5 Christian Religious Education; not yet checked by a CRE teacher; not loaded by the live tutor",
+ "sources": [],
+ "notes": "",
+ "skills": [
+  {
+   "skill": "CRES.G5.THE_BI.MOUNT_CARMEL_CONTEST.CARMEL",
+   "key_step": "The child narrates 1 Kings 18:22-39: Elijah alone against 450 prophets of Baal, Baal does not answer, Elijah rebuilds the altar with twelve stones, has water poured on it, prays, the fire of the Lord falls, and the people cry \"The Lord, he is God\".",
+   "floor": {
+    "prerequisite": "Knows God showed his power through Samson.",
+    "question": "Where did Samson's strength come from?",
+    "answer": "The Spirit of the Lord"
+   },
+   "representations": [
+    "two altars drawn on a mountain",
+    "number cards: 450, 12, 3",
+    "1 Kings 18:39 written large"
+   ],
+   "steps": [
+    "Baal's prophets call all morning: no answer.",
+    "Elijah repairs the altar with twelve stones.",
+    "Water is poured three times.",
+    "Elijah prays; the fire of the Lord falls."
+   ],
+   "contexts": [
+    "a choice between following the crowd and God",
+    "standing alone for what is right",
+    "praying with faith"
+   ],
+   "board": [
+    {
+     "beat": "write",
+     "do": "Draw two altars on a mountain."
+    },
+    {
+     "beat": "point",
+     "do": "Point at Baal's altar.",
+     "say": "What happened when the prophets of Baal called?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for the child to say no answer."
+    },
+    {
+     "beat": "reveal",
+     "do": "Draw fire on Elijah's altar and write 1 Kings 18:39."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "CRES.G5.THE_BI.MOUNT_CARMEL_CONTEST.CARMEL.M_CAR_BAAL_ANSWERED",
+     "listen_for": [
+      "Baal sent fire"
+     ],
+     "ask": "What happened when the prophets of Baal called on Baal?",
+     "repair": "Read 1 Kings 18:26, \"there was no voice\"."
+    },
+    {
+     "code": "CRES.G5.THE_BI.MOUNT_CARMEL_CONTEST.CARMEL.M_CAR_ELIJAH_LIT",
+     "listen_for": [
+      "Elijah lit it himself"
+     ],
+     "ask": "Who sent the fire onto Elijah's altar?",
+     "repair": "Read verse 38: \"the fire of the Lord fell\"."
+    },
+    {
+     "code": "CRES.G5.THE_BI.MOUNT_CARMEL_CONTEST.CARMEL.M_CAR_NUMBERS",
+     "listen_for": [
+      "Twelve"
+     ],
+     "ask": "How many prophets of Baal were there on Mount Carmel?",
+     "repair": "Make a card for each number and what it counted."
+    },
+    {
+     "code": "CRES.G5.THE_BI.MOUNT_CARMEL_CONTEST.CARMEL.M_C5_CAR_NO_WATER",
+     "listen_for": [
+      "Nothing, he kept it dry"
+     ],
+     "ask": "What did Elijah have poured on the altar before he prayed (1 Kings 18:33-35)?",
+     "repair": "Read verses 33-35 and ask why Elijah made it harder: so all would see that only God could do it."
+    }
+   ],
+   "checks": [
+    {
+     "question": "Who sent the fire on Elijah's altar?",
+     "answer": "The Lord",
+     "shows": "power"
+    },
+    {
+     "question": "How many prophets of Baal were there?",
+     "answer": "450",
+     "shows": "number"
+    }
+   ]
+  },
+  {
+   "skill": "CRES.G5.THE_BI.MOUNT_CARMEL_CONTEST.TRUE_GOD",
+   "key_step": "The child tells the true God (the creator who hears and acts) from false gods (idols that cannot see, hear or speak), says worship belongs to God alone (Exodus 20:3-5), and refuses secret groups that ask for harmful acts.",
+   "floor": {
+    "prerequisite": "Knows the story of Mount Carmel.",
+    "question": "What happened when Baal's prophets called on Baal?",
+    "answer": "There was no answer"
+   },
+   "representations": [
+    "two columns: the true God, idols",
+    "Exodus 20:3-4 written large",
+    "pictures of an idol and of creation"
+   ],
+   "steps": [
+    "The true God made all and hears prayer.",
+    "Idols are made by people and cannot hear.",
+    "Worship God alone.",
+    "Say no to secret harmful groups."
+   ],
+   "contexts": [
+    "a charm sold at a market",
+    "a secret group at school",
+    "praying before an exam"
+   ],
+   "board": [
+    {
+     "beat": "write",
+     "do": "Draw two columns: the true God and idols."
+    },
+    {
+     "beat": "point",
+     "do": "Point at the idol column.",
+     "say": "Can an idol of wood hear a prayer?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for the child to say no."
+    },
+    {
+     "beat": "reveal",
+     "do": "Write Exodus 20:3 under the true God."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "CRES.G5.THE_BI.MOUNT_CARMEL_CONTEST.TRUE_GOD.M_TG_IDOL_POWER",
+     "listen_for": [
+      "Hear prayers and answer them"
+     ],
+     "ask": "What can an idol made of wood or stone do?",
+     "repair": "Compare Carmel: the idol did not answer, the Lord did."
+    },
+    {
+     "code": "CRES.G5.THE_BI.MOUNT_CARMEL_CONTEST.TRUE_GOD.M_TG_SECRET_GROUP",
+     "listen_for": [
+      "Join, because they are friendly"
+     ],
+     "ask": "A group tells Mwende to join secret meetings and not to tell her parents. What should she do?",
+     "repair": "Say that secrets from parents are a warning sign."
+    },
+    {
+     "code": "CRES.G5.THE_BI.MOUNT_CARMEL_CONTEST.TRUE_GOD.M_TG_MANY_GODS",
+     "listen_for": [
+      "Worship the Lord and also other gods"
+     ],
+     "ask": "What do the Ten Commandments say about other gods?",
+     "repair": "Read Exodus 20:3-5 and ask what Elijah said to the people in 1 Kings 18:21."
+    },
+    {
+     "code": "CRES.G5.THE_BI.MOUNT_CARMEL_CONTEST.TRUE_GOD.M_C5_TG_LUCK_CHARMS",
+     "listen_for": [
+      "The charm will protect her"
+     ],
+     "ask": "Achieng is given a charm \"for protection\" before an exam. What does the Bible teach?",
+     "repair": "Link with the idol misconception: an object cannot hear or act. Read Psalm 121:2."
+    }
+   ],
+   "checks": [
+    {
+     "question": "What can an idol of wood do?",
+     "answer": "Nothing: it cannot hear, see or speak",
+     "shows": "false gods"
+    },
+    {
+     "question": "What do the Ten Commandments say about other gods?",
+     "answer": "Have no other gods before the Lord",
+     "shows": "worship"
+    }
+   ]
+  }
+ ]
+}

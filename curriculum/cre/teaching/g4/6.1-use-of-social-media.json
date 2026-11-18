@@ -1,0 +1,99 @@
+{
+ "sub_strand": "CRE.G4.MORALI.USE_OF_SOCIAL_MEDIA",
+ "title": "Use of Social Media",
+ "status": "draft: written 18 Nov 2026 offline for Grade 4 Christian Religious Education; not yet checked by a CRE teacher; not loaded by the live tutor",
+ "sources": [],
+ "notes": "",
+ "skills": [
+  {
+   "skill": "CRES.G4.MORALI.USE_OF_SOCIAL_MEDIA.SOCIAL_MEDIA",
+   "key_step": "The child names digital devices at home and school, uses social media with integrity (no unkind or false posts, even without a name), keeps passwords and addresses private, and tells a parent about strangers online.",
+   "floor": {
+    "prerequisite": "Knows whom to trust.",
+    "question": "Name one adult you can tell if something online upsets you.",
+    "answer": "a parent (a teacher)"
+   },
+   "representations": [
+    "pictures of a phone, tablet, laptop, TV and a pencil",
+    "a \"private, do not share\" box",
+    "chat screen drawn on the board"
+   ],
+   "steps": [
+    "Name the devices.",
+    "Keep private things private.",
+    "Post only what is true and kind.",
+    "Tell a parent about strangers or bad messages."
+   ],
+   "contexts": [
+    "a family WhatsApp group",
+    "a class computer lesson",
+    "a game on a parent's phone"
+   ],
+   "board": [
+    {
+     "beat": "write",
+     "do": "Draw a phone with a chat on the screen."
+    },
+    {
+     "beat": "point",
+     "do": "Point at a message from a stranger.",
+     "say": "A stranger asks to meet. What do you do?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for the child to say do not reply and tell a parent."
+    },
+    {
+     "beat": "reveal",
+     "do": "Write the three rules: private, kind and true, tell."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "CRES.G4.MORALI.USE_OF_SOCIAL_MEDIA.SOCIAL_MEDIA.M_C4_SM_STRANGER",
+     "listen_for": [
+      "Chat and meet, he is friendly"
+     ],
+     "ask": "A stranger online asks to chat in private and meet. What should you do?",
+     "repair": "Say that people can lie about who they are."
+    },
+    {
+     "code": "CRES.G4.MORALI.USE_OF_SOCIAL_MEDIA.SOCIAL_MEDIA.M_C4_SM_PRIVATE",
+     "listen_for": [
+      "My favourite song"
+     ],
+     "ask": "Which should you keep private online?",
+     "repair": "List what a stranger could do with a password."
+    },
+    {
+     "code": "CRES.G4.MORALI.USE_OF_SOCIAL_MEDIA.SOCIAL_MEDIA.M_C4_SM_NOBODY",
+     "listen_for": [
+      "Send it, nobody will know"
+     ],
+     "ask": "You find a way to send an unkind joke about a classmate without your name. What shows integrity?",
+     "repair": "Ask whether God knows."
+    },
+    {
+     "code": "CRES.G4.MORALI.USE_OF_SOCIAL_MEDIA.SOCIAL_MEDIA.M_C4_SM_DEVICE",
+     "listen_for": [
+      "A pencil"
+     ],
+     "ask": "Which of these is a digital device?",
+     "repair": "Show a phone, a tablet and a pencil and ask which needs power and a screen."
+    }
+   ],
+   "checks": [
+    {
+     "question": "Which should you keep private online?",
+     "answer": "My password and home address",
+     "shows": "privacy"
+    },
+    {
+     "question": "Can you send an unkind joke if your name is hidden?",
+     "answer": "No: it still hurts and is wrong",
+     "shows": "integrity"
+    }
+   ]
+  }
+ ]
+}

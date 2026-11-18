@@ -1,0 +1,99 @@
+{
+ "sub_strand": "CRE.G4.CREATI.ATTRIBUTES_OF_GOD",
+ "title": "Attributes of God",
+ "status": "draft: written 18 Nov 2026 offline for Grade 4 Christian Religious Education; not yet checked by a CRE teacher; not loaded by the live tutor",
+ "sources": [],
+ "notes": "",
+ "skills": [
+  {
+   "skill": "CRES.G4.CREATI.ATTRIBUTES_OF_GOD.ATTRIBUTES",
+   "key_step": "The child names three attributes of God from the passages: God alone created everything (Genesis 1), God is love (1 John 4:8), God is holy (1 Samuel 2:2), and says God knows each person by name.",
+   "floor": {
+    "prerequisite": "Knows God made the sky, sun, moon and stars.",
+    "question": "Who made the sun and the moon?",
+    "answer": "God"
+   },
+   "representations": [
+    "three cards: creator, loving Father, holy",
+    "Genesis 1:1, 1 John 4:8 and 1 Samuel 2:2 on strips",
+    "a name tag for each child"
+   ],
+   "steps": [
+    "Read Genesis 1:1: God created.",
+    "Read 1 John 4:8: God is love.",
+    "Read 1 Samuel 2:2: no one is holy like the Lord.",
+    "Match each verse to its card."
+   ],
+   "contexts": [
+    "a sunrise over the hills",
+    "a parent calling a child by name",
+    "a quiet church on a weekday"
+   ],
+   "board": [
+    {
+     "beat": "write",
+     "do": "Write three headings: creator, love, holy."
+    },
+    {
+     "beat": "point",
+     "do": "Point at \"holy\".",
+     "say": "What does holy mean?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for the child to say perfect, set apart, without sin."
+    },
+    {
+     "beat": "reveal",
+     "do": "Write 1 Samuel 2:2 under holy."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "CRES.G4.CREATI.ATTRIBUTES_OF_GOD.ATTRIBUTES.M_C4_ATT_SHARED",
+     "listen_for": [
+      "God and other gods together"
+     ],
+     "ask": "Who made everything, according to Genesis 1?",
+     "repair": "Read Genesis 1:1 and count how many makers are named."
+    },
+    {
+     "code": "CRES.G4.CREATI.ATTRIBUTES_OF_GOD.ATTRIBUTES.M_C4_ATT_LOVE_EARNED",
+     "listen_for": [
+      "God loves only the children who are always good"
+     ],
+     "ask": "What does 1 John 4:7-8 say about God?",
+     "repair": "Read \"God is love\" and ask whether love is a reward."
+    },
+    {
+     "code": "CRES.G4.CREATI.ATTRIBUTES_OF_GOD.ATTRIBUTES.M_C4_ATT_HOLY_BIG",
+     "listen_for": [
+      "Very big and old"
+     ],
+     "ask": "What does holy mean when we say God is holy?",
+     "repair": "Link it to 1 Samuel 2:2: there is no one holy like the Lord."
+    },
+    {
+     "code": "CRES.G4.CREATI.ATTRIBUTES_OF_GOD.ATTRIBUTES.M_C4_ATT_ANGRY_JUDGE",
+     "listen_for": [
+      "No, a holy God is only angry"
+     ],
+     "ask": "Can God be both holy and a loving Father?",
+     "repair": "Put the two words side by side, holy and love, and read 1 Samuel 2:2 and 1 John 4:8. God is both at once."
+    }
+   ],
+   "checks": [
+    {
+     "question": "Who made everything, according to Genesis 1?",
+     "answer": "God alone",
+     "shows": "creator"
+    },
+    {
+     "question": "Which verse says \"God is love\"?",
+     "answer": "1 John 4:8",
+     "shows": "attribute verse"
+    }
+   ]
+  }
+ ]
+}

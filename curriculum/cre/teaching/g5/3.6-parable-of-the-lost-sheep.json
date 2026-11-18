@@ -1,0 +1,99 @@
+{
+ "sub_strand": "CRE.G5.THE_LI.PARABLE_OF_THE_LOST_SHEE",
+ "title": "Parable of the Lost Sheep",
+ "status": "draft: written 18 Nov 2026 offline for Grade 5 Christian Religious Education; not yet checked by a CRE teacher; not loaded by the live tutor",
+ "sources": [],
+ "notes": "",
+ "skills": [
+  {
+   "skill": "CRES.G5.THE_LI.PARABLE_OF_THE_LOST_SHEE.LOST_SHEEP",
+   "key_step": "The child narrates Luke 15:1-7: Pharisees grumble that Jesus eats with sinners, a shepherd leaves the ninety-nine to find the one lost sheep, carries it home on his shoulders and calls friends to rejoice; there is joy in heaven over one sinner who repents.",
+   "floor": {
+    "prerequisite": "Knows the parable of the lost coin.",
+    "question": "What did the woman do when she found the coin?",
+    "answer": "Called friends to rejoice"
+   },
+   "representations": [
+    "a hundred dots with one apart",
+    "a shepherd carrying a sheep",
+    "Luke 15:7 written large"
+   ],
+   "steps": [
+    "Pharisees grumble.",
+    "A shepherd loses one of a hundred.",
+    "He leaves the ninety-nine and searches.",
+    "He carries it home and rejoices: so does heaven."
+   ],
+   "contexts": [
+    "herders in Maasai land looking for a lost goat",
+    "a classmate who has stopped coming to church",
+    "welcoming a new pupil"
+   ],
+   "board": [
+    {
+     "beat": "write",
+     "do": "Draw ninety-nine dots together and one far away."
+    },
+    {
+     "beat": "point",
+     "do": "Point at the one far away.",
+     "say": "What did the shepherd do about this one?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for the child to say he left the ninety-nine to find it."
+    },
+    {
+     "beat": "reveal",
+     "do": "Write Luke 15:7."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "CRES.G5.THE_LI.PARABLE_OF_THE_LOST_SHEE.LOST_SHEEP.M_LS_NINETY_NINE",
+     "listen_for": [
+      "He said one sheep was not worth looking for"
+     ],
+     "ask": "What did the shepherd do when one sheep was lost?",
+     "repair": "Read Luke 15:4."
+    },
+    {
+     "code": "CRES.G5.THE_LI.PARABLE_OF_THE_LOST_SHEE.LOST_SHEEP.M_LS_PUNISH",
+     "listen_for": [
+      "He beat it for wandering"
+     ],
+     "ask": "How did the shepherd bring the sheep home?",
+     "repair": "Read Luke 15:5."
+    },
+    {
+     "code": "CRES.G5.THE_LI.PARABLE_OF_THE_LOST_SHEE.LOST_SHEEP.M_LS_JOY",
+     "listen_for": [
+      "There is no joy in heaven over a sinner"
+     ],
+     "ask": "What did Jesus say in Luke 15:7?",
+     "repair": "Read Luke 15:7."
+    },
+    {
+     "code": "CRES.G5.THE_LI.PARABLE_OF_THE_LOST_SHEE.LOST_SHEEP.M_C5_LS_WHO_TOLD",
+     "listen_for": [
+      "To teach farmers how to keep sheep"
+     ],
+     "ask": "Why did Jesus tell the parable of the lost sheep (Luke 15:1-2)?",
+     "repair": "Read Luke 15:1-2 first and ask: who is the lost sheep in real life?"
+    }
+   ],
+   "checks": [
+    {
+     "question": "What did the shepherd do when one sheep was lost?",
+     "answer": "Left the ninety-nine and searched for it",
+     "shows": "story detail"
+    },
+    {
+     "question": "What makes heaven rejoice, according to Luke 15:7?",
+     "answer": "One sinner who repents",
+     "shows": "lesson"
+    }
+   ]
+  }
+ ]
+}

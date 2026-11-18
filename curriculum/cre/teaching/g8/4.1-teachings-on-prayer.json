@@ -1,0 +1,99 @@
+{
+ "sub_strand": "CRE.G8.TEACHI.TEACHINGS_ON_PRAYER",
+ "title": "Teachings on Prayer",
+ "status": "draft: written 18 Nov 2026 offline for Grade 8 Christian Religious Education; not yet checked by a CRE teacher; not loaded by the live tutor",
+ "sources": [],
+ "notes": "",
+ "skills": [
+  {
+   "skill": "CRES.G8.TEACHI.TEACHINGS_ON_PRAYER.PRAYER",
+   "key_step": "The learner outlines the importance of prayer for a Christian (talking with God, guidance, strength, forgiveness) and discusses the importance of faith in prayer (Mark 11:24; James 1:6), Jesus' teaching on persistence (Luke 18:1-8) and praying for all people (Matthew 5:44; 1 Timothy 2:1).",
+   "floor": {
+    "prerequisite": "Knows the forms of worship.",
+    "question": "How did Jesus teach people to pray in Matthew 6:6?",
+    "answer": "In secret, to the Father who sees"
+   },
+   "representations": [
+    "Matthew 6:9-13 and Mark 11:24 written large",
+    "a prayer list with four circles: self, family, others, enemies",
+    "Luke 18:1 on a card"
+   ],
+   "steps": [
+    "Read Matthew 6:9-13.",
+    "Read Mark 11:24 on faith.",
+    "Read Luke 18:1 on persistence.",
+    "Make a prayer list for all people."
+   ],
+   "contexts": [
+    "a school prayer day",
+    "praying for national leaders",
+    "praying for someone who wronged you"
+   ],
+   "board": [
+    {
+     "beat": "write",
+     "do": "Draw four circles: self, family, others, enemies."
+    },
+    {
+     "beat": "point",
+     "do": "Point at \"enemies\".",
+     "say": "Should a Christian pray for these too?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for the learner to say yes, Matthew 5:44."
+    },
+    {
+     "beat": "reveal",
+     "do": "Write Mark 11:24 and Luke 18:1."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "CRES.G8.TEACHI.TEACHINGS_ON_PRAYER.PRAYER.M_CR8_PR_LORDS",
+     "listen_for": [
+      "Matthew 1"
+     ],
+     "ask": "Where is the Lord's Prayer in Matthew?",
+     "repair": "Open Matthew 6:9-13 and Luke 11:2-4 together."
+    },
+    {
+     "code": "CRES.G8.TEACHI.TEACHINGS_ON_PRAYER.PRAYER.M_CR8_PR_FAITH",
+     "listen_for": [
+      "Without faith"
+     ],
+     "ask": "How should we pray, according to Jesus?",
+     "repair": "Read Mark 11:24 and James 1:6: pray believing."
+    },
+    {
+     "code": "CRES.G8.TEACHI.TEACHINGS_ON_PRAYER.PRAYER.M_CR8_PR_PERSIST",
+     "listen_for": [
+      "Give up quickly"
+     ],
+     "ask": "What does the story of the friend at midnight teach?",
+     "repair": "Read Luke 18:1: \"always pray and not give up\", and the parable of the persistent widow."
+    },
+    {
+     "code": "CRES.G8.TEACHI.TEACHINGS_ON_PRAYER.PRAYER.M_CR8_PR_FRIENDS_ONLY",
+     "listen_for": [
+      "Only friends and family"
+     ],
+     "ask": "For whom should Christians pray, according to Matthew 5:44 and 1 Timothy 2:1?",
+     "repair": "Read Matthew 5:44 and 1 Timothy 2:1-2 and make a prayer list that includes leaders and someone hard to love."
+    }
+   ],
+   "checks": [
+    {
+     "question": "Where is the Lord's Prayer in Matthew?",
+     "answer": "Matthew 6:9-13",
+     "shows": "reference"
+    },
+    {
+     "question": "Why is faith important in prayer?",
+     "answer": "Jesus said to believe when we pray (Mark 11:24)",
+     "shows": "faith"
+    }
+   ]
+  }
+ ]
+}

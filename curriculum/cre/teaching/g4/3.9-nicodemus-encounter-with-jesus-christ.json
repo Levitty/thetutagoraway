@@ -1,0 +1,99 @@
+{
+ "sub_strand": "CRE.G4.THE_LI.NICODEMUS_ENCOUNTER_WITH",
+ "title": "Nicodemus’ encounter with Jesus Christ",
+ "status": "draft: written 18 Nov 2026 offline for Grade 4 Christian Religious Education; not yet checked by a CRE teacher; not loaded by the live tutor",
+ "sources": [],
+ "notes": "",
+ "skills": [
+  {
+   "skill": "CRES.G4.THE_LI.NICODEMUS_ENCOUNTER_WITH.NICODEMUS",
+   "key_step": "The child retells John 3:1-5: Nicodemus, a Pharisee, comes at night, Jesus says one must be born again, of water and the Spirit; says what John 3:16 promises; and says why baptism matters to Christians (a sign of turning to God and new life), without asking how it is done.",
+   "floor": {
+    "prerequisite": "Knows the Holy Spirit helps Christians.",
+    "question": "Name one thing the Holy Spirit does for a Christian.",
+    "answer": "Guides (helps, comforts) them"
+   },
+   "representations": [
+    "a night scene with a lamp",
+    "John 3:16 written large",
+    "a before-and-after chart for \"born again\""
+   ],
+   "steps": [
+    "Who was Nicodemus and when did he come?",
+    "What did Jesus say about being born again?",
+    "What does John 3:16 promise?",
+    "Why do Christians value baptism?"
+   ],
+   "contexts": [
+    "a baptism service at church",
+    "a child with honest questions about God",
+    "a family reading John 3:16 at home"
+   ],
+   "board": [
+    {
+     "beat": "write",
+     "do": "Draw a lamp in the dark and write \"born again\"."
+    },
+    {
+     "beat": "point",
+     "do": "Point at the words \"born again\".",
+     "say": "Did Jesus mean born again from a mother?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for the child to say no, a new life from God."
+    },
+    {
+     "beat": "reveal",
+     "do": "Write John 3:16."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "CRES.G4.THE_LI.NICODEMUS_ENCOUNTER_WITH.NICODEMUS.M_C4_NIC_DAY",
+     "listen_for": [
+      "At noon, in front of everyone"
+     ],
+     "ask": "When did Nicodemus come to Jesus?",
+     "repair": "Read John 3:2."
+    },
+    {
+     "code": "CRES.G4.THE_LI.NICODEMUS_ENCOUNTER_WITH.NICODEMUS.M_C4_NIC_LITERAL",
+     "listen_for": [
+      "To be born a second time from one's mother"
+     ],
+     "ask": "What did Jesus mean by \"born again\"?",
+     "repair": "Read John 3:4-5 together."
+    },
+    {
+     "code": "CRES.G4.THE_LI.NICODEMUS_ENCOUNTER_WITH.NICODEMUS.M_C4_NIC_FEW",
+     "listen_for": [
+      "Only the Jews"
+     ],
+     "ask": "Whom does God love, according to John 3:16?",
+     "repair": "Read John 3:16 and underline \"world\"."
+    },
+    {
+     "code": "CRES.G4.THE_LI.NICODEMUS_ENCOUNTER_WITH.NICODEMUS.M_C4_NIC_BAPTISM_MAGIC",
+     "listen_for": [
+      "It is only a nice ceremony with water"
+     ],
+     "ask": "Why is baptism important to Christians today?",
+     "repair": "Link John 3:5 with Acts 2:38: repent and be baptised. Baptism marks a new life; ask what changes after."
+    }
+   ],
+   "checks": [
+    {
+     "question": "When did Nicodemus come to Jesus?",
+     "answer": "At night",
+     "shows": "story detail"
+    },
+    {
+     "question": "Why is baptism important to Christians?",
+     "answer": "It shows turning to God and a new life",
+     "shows": "baptism"
+    }
+   ]
+  }
+ ]
+}

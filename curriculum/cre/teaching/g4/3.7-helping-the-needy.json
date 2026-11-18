@@ -1,0 +1,99 @@
+{
+ "sub_strand": "CRE.G4.THE_LI.HELPING_THE_NEEDY",
+ "title": "Helping the Needy",
+ "status": "draft: written 18 Nov 2026 offline for Grade 4 Christian Religious Education; not yet checked by a CRE teacher; not loaded by the live tutor",
+ "sources": [],
+ "notes": "",
+ "skills": [
+  {
+   "skill": "CRES.G4.THE_LI.HELPING_THE_NEEDY.HELPING",
+   "key_step": "The child states why Christians help the needy (love for God and neighbour; Matthew 5:42), names ways to help that are not money (sharing food, carrying a load, visiting), and knows anyone can help.",
+   "floor": {
+    "prerequisite": "Knows the Good Samaritan helped a stranger.",
+    "question": "Who stopped to help the hurt man?",
+    "answer": "The Samaritan"
+   },
+   "representations": [
+    "a ladder of help: notice, care, act",
+    "pictures of ways to help",
+    "Matthew 5:42 written large"
+   ],
+   "steps": [
+    "Notice who is in need.",
+    "Think how you can help.",
+    "Help now, with what you have.",
+    "Help out of love, not for praise."
+   ],
+   "contexts": [
+    "a classmate with no lunch",
+    "an old neighbour carrying water",
+    "a children's home visit"
+   ],
+   "board": [
+    {
+     "beat": "write",
+     "do": "Write Matthew 5:42: \"Give to the one who asks you\"."
+    },
+    {
+     "beat": "point",
+     "do": "Point at the picture of a child with no lunch.",
+     "say": "How can you help even without money?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for the child to name a way."
+    },
+    {
+     "beat": "reveal",
+     "do": "List the ways on the board."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "CRES.G4.THE_LI.HELPING_THE_NEEDY.HELPING.M_C4_HELP_RICH",
+     "listen_for": [
+      "Only rich people"
+     ],
+     "ask": "Who can help someone in need?",
+     "repair": "List what a child with no money can give: time, a pencil, a kind word."
+    },
+    {
+     "code": "CRES.G4.THE_LI.HELPING_THE_NEEDY.HELPING.M_C4_HELP_MONEY_ONLY",
+     "listen_for": [
+      "Only giving money"
+     ],
+     "ask": "Which of these is a way of helping a person in need?",
+     "repair": "Make a list of ways to help at home, school and church."
+    },
+    {
+     "code": "CRES.G4.THE_LI.HELPING_THE_NEEDY.HELPING.M_C4_HELP_PRAISE",
+     "listen_for": [
+      "So that people will praise me"
+     ],
+     "ask": "Why should a Christian help the needy?",
+     "repair": "Ask whether Jesus helped for praise."
+    },
+    {
+     "code": "CRES.G4.THE_LI.HELPING_THE_NEEDY.HELPING.M_C4_HELP_LATER",
+     "listen_for": [
+      "Help after the test if I remember"
+     ],
+     "ask": "A classmate has no pencil for the test and asks you. What does Matthew 5:42 teach?",
+     "repair": "Act it: the test starts now. Help that comes later is no help."
+    }
+   ],
+   "checks": [
+    {
+     "question": "Can a child without money help a needy person?",
+     "answer": "Yes: share food, carry a load, visit",
+     "shows": "ways"
+    },
+    {
+     "question": "Why does a Christian help the needy?",
+     "answer": "Out of love for God and others",
+     "shows": "reason"
+    }
+   ]
+  }
+ ]
+}

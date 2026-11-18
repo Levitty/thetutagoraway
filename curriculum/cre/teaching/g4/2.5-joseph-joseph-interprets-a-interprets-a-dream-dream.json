@@ -1,0 +1,189 @@
+{
+ "sub_strand": "CRE.G4.THE_HO.JOSEPH_JOSEPH_INTERPRETS",
+ "title": "Joseph Joseph interprets a interprets a Dream Dream",
+ "status": "draft: written 18 Nov 2026 offline for Grade 4 Christian Religious Education; not yet checked by a CRE teacher; not loaded by the live tutor",
+ "sources": [],
+ "notes": "",
+ "skills": [
+  {
+   "skill": "CRES.G4.THE_HO.JOSEPH_JOSEPH_INTERPRETS.JOSEPH_DREAM",
+   "key_step": "The child retells Genesis 41: Pharaoh dreams of seven fat cows eaten by seven thin cows and seven full heads of grain swallowed by seven thin ones; Joseph says God gives the meaning: seven years of plenty, then seven of famine.",
+   "floor": {
+    "prerequisite": "Can retell an Old Testament story in order.",
+    "question": "Who was healed when he washed in the River Jordan?",
+    "answer": "Naaman"
+   },
+   "representations": [
+    "two dreams drawn side by side",
+    "a time line: 7 years of plenty, 7 years of famine",
+    "Genesis 41:16 on a card"
+   ],
+   "steps": [
+    "Pharaoh dreams twice.",
+    "Joseph is brought from prison.",
+    "Joseph says the answer is from God.",
+    "Seven years of plenty, then seven of famine."
+   ],
+   "contexts": [
+    "a farmer storing maize after a good harvest",
+    "a drought year in Turkana",
+    "a family saving for school fees"
+   ],
+   "board": [
+    {
+     "beat": "write",
+     "do": "Draw seven fat cows and seven thin cows."
+    },
+    {
+     "beat": "point",
+     "do": "Point at the thin cows eating the fat ones.",
+     "say": "What did this mean?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for the child to say seven years of famine after seven of plenty."
+    },
+    {
+     "beat": "reveal",
+     "do": "Draw the time line under the cows."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "CRES.G4.THE_HO.JOSEPH_JOSEPH_INTERPRETS.JOSEPH_DREAM.M_C4_JD_OWN_POWER",
+     "listen_for": [
+      "Joseph, because he was clever"
+     ],
+     "ask": "Who gave the meaning of Pharaoh's dreams, according to Joseph?",
+     "repair": "Read Genesis 41:16: \"I cannot do it, but God will give Pharaoh the answer\"."
+    },
+    {
+     "code": "CRES.G4.THE_HO.JOSEPH_JOSEPH_INTERPRETS.JOSEPH_DREAM.M_C4_JD_NUMBERS",
+     "listen_for": [
+      "Three years"
+     ],
+     "ask": "How many years of plenty did the seven fat cows stand for?",
+     "repair": "Draw the seven fat cows and write a year under each."
+    },
+    {
+     "code": "CRES.G4.THE_HO.JOSEPH_JOSEPH_INTERPRETS.JOSEPH_DREAM.M_C4_JD_REVERSED",
+     "listen_for": [
+      "Seven years of plenty"
+     ],
+     "ask": "What did the seven thin cows eating the fat cows mean?",
+     "repair": "Draw it: fat cows are plenty, thin cows are famine."
+    },
+    {
+     "code": "CRES.G4.THE_HO.JOSEPH_JOSEPH_INTERPRETS.JOSEPH_DREAM.M_C4_JD_GRAIN_COWS",
+     "listen_for": [
+      "One dream about cows only"
+     ],
+     "ask": "What were Pharaoh's two dreams about (Genesis 41:17-24)?",
+     "repair": "Draw both dreams side by side and ask the child to say what they share: seven good, seven poor."
+    }
+   ],
+   "checks": [
+    {
+     "question": "Who gave Joseph the meaning of the dreams?",
+     "answer": "God",
+     "shows": "source of wisdom"
+    },
+    {
+     "question": "What did the seven fat cows stand for?",
+     "answer": "Seven years of plenty",
+     "shows": "meaning"
+    }
+   ]
+  },
+  {
+   "skill": "CRES.G4.THE_HO.JOSEPH_JOSEPH_INTERPRETS.JOSEPH_WISDOM",
+   "key_step": "The child says that true wisdom begins with the fear of the Lord, meaning honouring and obeying God (Proverbs 1:7; Proverbs 9:10), and that Joseph gave God the credit for the meaning of the dreams.",
+   "floor": {
+    "prerequisite": "Knows Joseph explained Pharaoh's dreams.",
+    "question": "Who did Joseph say gives the meaning of dreams?",
+    "answer": "God"
+   },
+   "representations": [
+    "Proverbs 1:7 written large",
+    "a ladder: honour God at the bottom step, wisdom at the top",
+    "Joseph before Pharaoh, pictured"
+   ],
+   "steps": [
+    "Read Proverbs 1:7.",
+    "Say what \"fear of the Lord\" means: honour and obey God.",
+    "Joseph gave God the credit.",
+    "Name a wise choice a child can make."
+   ],
+   "contexts": [
+    "a class captain who is fair",
+    "an elder in the village giving advice",
+    "a child who admits a mistake"
+   ],
+   "board": [
+    {
+     "beat": "write",
+     "do": "Write Proverbs 1:7 and draw a ladder."
+    },
+    {
+     "beat": "point",
+     "do": "Point at the bottom step.",
+     "say": "Where does wisdom begin?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for the child to say with honouring the Lord."
+    },
+    {
+     "beat": "reveal",
+     "do": "Write \"honour God\" on the bottom step."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "CRES.G4.THE_HO.JOSEPH_JOSEPH_INTERPRETS.JOSEPH_WISDOM.M_C4_JW_TERROR",
+     "listen_for": [
+      "To be scared of God and hide from him"
+     ],
+     "ask": "What does \"the fear of the Lord\" mean in Proverbs 1:7?",
+     "repair": "Compare with respecting a good teacher or a loving parent."
+    },
+    {
+     "code": "CRES.G4.THE_HO.JOSEPH_JOSEPH_INTERPRETS.JOSEPH_WISDOM.M_C4_JW_SCHOOL_ONLY",
+     "listen_for": [
+      "With being old and having many degrees"
+     ],
+     "ask": "Where does true wisdom begin, according to Proverbs 1:7?",
+     "repair": "Remind the child that Joseph was a young man in prison."
+    },
+    {
+     "code": "CRES.G4.THE_HO.JOSEPH_JOSEPH_INTERPRETS.JOSEPH_WISDOM.M_C4_JW_SELF_GLORY",
+     "listen_for": [
+      "That he alone was wise"
+     ],
+     "ask": "Joseph was praised by Pharaoh. What did Joseph first say?",
+     "repair": "Read Genesis 41:16 and ask who got the credit."
+    },
+    {
+     "code": "CRES.G4.THE_HO.JOSEPH_JOSEPH_INTERPRETS.JOSEPH_WISDOM.M_C4_JW_CLEVER_EQUALS",
+     "listen_for": [
+      "The one with the most marks"
+     ],
+     "ask": "Who is wise, according to Proverbs 1:7?",
+     "repair": "Compare two people: one with top marks who cheats, one who honours God and is fair. Which is wise?"
+    }
+   ],
+   "checks": [
+    {
+     "question": "What does \"the fear of the Lord\" mean in Proverbs 1:7?",
+     "answer": "To honour and obey God",
+     "shows": "meaning"
+    },
+    {
+     "question": "Joseph was praised. Who did he say gave the answer?",
+     "answer": "God",
+     "shows": "humility"
+    }
+   ]
+  }
+ ]
+}

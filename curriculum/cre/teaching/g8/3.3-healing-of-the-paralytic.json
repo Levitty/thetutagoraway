@@ -1,0 +1,99 @@
+{
+ "sub_strand": "CRE.G8.THE_LI.HEALING_OF_THE_PARALYTIC",
+ "title": "Healing of the Paralytic",
+ "status": "draft: written 18 Nov 2026 offline for Grade 8 Christian Religious Education; not yet checked by a CRE teacher; not loaded by the live tutor",
+ "sources": [],
+ "notes": "",
+ "skills": [
+  {
+   "skill": "CRES.G8.THE_LI.HEALING_OF_THE_PARALYTIC.PARALYTIC",
+   "key_step": "The learner describes Mark 2:1-12 (a crowded house in Capernaum, four friends lower the man through the roof, Jesus forgives his sins, teachers of the law object, Jesus heals him to show his authority), outlines lessons (faith of friends, Jesus forgives and heals) and examines the opposition (only God forgives sins).",
+   "floor": {
+    "prerequisite": "Knows the healing of the paralysed man from Grade 5.",
+    "question": "How did the friends get the man to Jesus?",
+    "answer": "Through the roof"
+   },
+   "representations": [
+    "a house with an opening in the roof",
+    "Mark 2:5, 7 and 10-11 on cards",
+    "a chart: what Jesus did, how people reacted"
+   ],
+   "steps": [
+    "The friends open the roof.",
+    "Jesus forgives the man.",
+    "The teachers object.",
+    "Jesus heals him to show his authority."
+   ],
+   "contexts": [
+    "friends who help a sick classmate",
+    "a church praying for the sick",
+    "forgiveness in a family"
+   ],
+   "board": [
+    {
+     "beat": "write",
+     "do": "Draw the house and four friends lowering a mat."
+    },
+    {
+     "beat": "point",
+     "do": "Point at the teachers of the law in the corner.",
+     "say": "Why did they object?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for the learner to say only God can forgive sins."
+    },
+    {
+     "beat": "reveal",
+     "do": "Write Mark 2:10 and list the lessons."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "CRES.G8.THE_LI.HEALING_OF_THE_PARALYTIC.PARALYTIC.M_CR8_PL_ROOF",
+     "listen_for": [
+      "Through the front door"
+     ],
+     "ask": "How did the friends bring the man to Jesus?",
+     "repair": "Read Mark 2:4: the crowd blocked the door, so they dug through the roof."
+    },
+    {
+     "code": "CRES.G8.THE_LI.HEALING_OF_THE_PARALYTIC.PARALYTIC.M_CR8_PL_SINS",
+     "listen_for": [
+      "\"Get up, take your mat and go home\""
+     ],
+     "ask": "What did Jesus first say to the paralytic?",
+     "repair": "Read Mark 2:5 then 2:11: first \"Son, your sins are forgiven\", then \"get up, take your mat\"."
+    },
+    {
+     "code": "CRES.G8.THE_LI.HEALING_OF_THE_PARALYTIC.PARALYTIC.M_CR8_PL_OPPOSITION",
+     "listen_for": [
+      "The disciples"
+     ],
+     "ask": "Who objected to Jesus forgiving sins?",
+     "repair": "Read Mark 2:6-7: some teachers of the law thought he was blaspheming."
+    },
+    {
+     "code": "CRES.G8.THE_LI.HEALING_OF_THE_PARALYTIC.PARALYTIC.M_CR8_PL_WHY_OPPOSE",
+     "listen_for": [
+      "Because the house was too crowded"
+     ],
+     "ask": "Why did the teachers of the law object when Jesus forgave the man's sins (Mark 2:7)?",
+     "repair": "Read Mark 2:7 and 2:10: Jesus showed he had authority to forgive by healing the man."
+    }
+   ],
+   "checks": [
+    {
+     "question": "What did Jesus first say to the paralytic?",
+     "answer": "Son, your sins are forgiven",
+     "shows": "order"
+    },
+    {
+     "question": "Who objected to Jesus forgiving sins?",
+     "answer": "Some teachers of the law",
+     "shows": "opposition"
+    }
+   ]
+  }
+ ]
+}

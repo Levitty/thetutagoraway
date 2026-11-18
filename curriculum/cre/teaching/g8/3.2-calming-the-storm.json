@@ -1,0 +1,99 @@
+{
+ "sub_strand": "CRE.G8.THE_LI.CALMING_THE_STORM",
+ "title": "Calming the Storm",
+ "status": "draft: written 18 Nov 2026 offline for Grade 8 Christian Religious Education; not yet checked by a CRE teacher; not loaded by the live tutor",
+ "sources": [],
+ "notes": "",
+ "skills": [
+  {
+   "skill": "CRES.G8.THE_LI.CALMING_THE_STORM.CALMING_STORM",
+   "key_step": "The learner describes Mark 4:35-41 (crossing at evening, the furious storm, Jesus asleep, the disciples' cry, \"Quiet! Be still!\", the question about faith, their awe) and outlines lessons (Jesus has power over nature, he is with us in trouble, trust him in fear).",
+   "floor": {
+    "prerequisite": "Knows the story of the storm from Grade 5.",
+    "question": "Who calmed the storm?",
+    "answer": "Jesus"
+   },
+   "representations": [
+    "a boat in waves drawn",
+    "Mark 4:39-41 written large",
+    "a youth challenges list"
+   ],
+   "steps": [
+    "They cross the lake.",
+    "A storm; Jesus sleeps.",
+    "They wake him; he calms the storm.",
+    "He asks about their faith."
+   ],
+   "contexts": [
+    "a youth facing exams",
+    "a family facing job loss",
+    "fishermen on Lake Victoria"
+   ],
+   "board": [
+    {
+     "beat": "write",
+     "do": "Draw a boat in a storm and a figure sleeping."
+    },
+    {
+     "beat": "point",
+     "do": "Point at the sleeping figure.",
+     "say": "What did Jesus ask after he calmed the storm?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for the learner to say \"Why are you so afraid? Do you still have no faith?\""
+    },
+    {
+     "beat": "reveal",
+     "do": "List lessons for youth today."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "CRES.G8.THE_LI.CALMING_THE_STORM.CALMING_STORM.M_CR8_CS_SLEEP",
+     "listen_for": [
+      "Steering the boat"
+     ],
+     "ask": "What was Jesus doing in the storm?",
+     "repair": "Read Mark 4:38: asleep on a cushion in the stern."
+    },
+    {
+     "code": "CRES.G8.THE_LI.CALMING_THE_STORM.CALMING_STORM.M_CR8_CS_WORDS",
+     "listen_for": [
+      "\"Go away from us\""
+     ],
+     "ask": "What did Jesus say to the wind and the waves?",
+     "repair": "Read Mark 4:39 aloud: \"Quiet! Be still!\""
+    },
+    {
+     "code": "CRES.G8.THE_LI.CALMING_THE_STORM.CALMING_STORM.M_CR8_CS_FAITH",
+     "listen_for": [
+      "Why they were so brave"
+     ],
+     "ask": "What did Jesus ask the disciples?",
+     "repair": "Read Mark 4:40: \"Why are you so afraid? Do you still have no faith?\""
+    },
+    {
+     "code": "CRES.G8.THE_LI.CALMING_THE_STORM.CALMING_STORM.M_CR8_CS_FAITH_NO_FEAR",
+     "listen_for": [
+      "Yes, faith removes all fear"
+     ],
+     "ask": "Does having faith mean you will never feel afraid?",
+     "repair": "Discuss Psalm 56:3: \"When I am afraid, I put my trust in you\". Fear is met with trust."
+    }
+   ],
+   "checks": [
+    {
+     "question": "What was Jesus doing in the storm?",
+     "answer": "Sleeping",
+     "shows": "detail"
+    },
+    {
+     "question": "Name a lesson from the calming of the storm.",
+     "answer": "Jesus has power over nature and is with us in trouble",
+     "shows": "lesson"
+    }
+   ]
+  }
+ ]
+}

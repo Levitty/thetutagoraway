@@ -1,0 +1,99 @@
+{
+ "sub_strand": "CRE.G5.THE_LI.CALMING_THE_STORM",
+ "title": "Calming the Storm",
+ "status": "draft: written 18 Nov 2026 offline for Grade 5 Christian Religious Education; not yet checked by a CRE teacher; not loaded by the live tutor",
+ "sources": [],
+ "notes": "",
+ "skills": [
+  {
+   "skill": "CRES.G5.THE_LI.CALMING_THE_STORM.CALMING_STORM",
+   "key_step": "The child narrates Mark 4:35-41: crossing the lake, a furious storm, Jesus asleep on a cushion, the frightened disciples wake him, he says \"Quiet! Be still!\", the sea is calm, he asks about their faith; and explains challenges Christians face today and that Jesus is with them.",
+   "floor": {
+    "prerequisite": "Knows Jesus walked on water.",
+    "question": "What did Jesus do on the lake at night?",
+    "answer": "He walked on the water"
+   },
+   "representations": [
+    "a boat in waves drawn on the board",
+    "Mark 4:39 written large",
+    "challenge cards"
+   ],
+   "steps": [
+    "They set out across the lake.",
+    "A storm comes; Jesus sleeps.",
+    "They wake him, afraid.",
+    "He calms it and asks about their faith."
+   ],
+   "contexts": [
+    "fishermen on Lake Victoria",
+    "a family facing illness",
+    "a child afraid of exams"
+   ],
+   "board": [
+    {
+     "beat": "write",
+     "do": "Draw a boat in big waves and a figure asleep."
+    },
+    {
+     "beat": "point",
+     "do": "Point at the sleeping figure.",
+     "say": "What did the disciples say when they woke Jesus?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for the child to say \"Don't you care if we drown?\""
+    },
+    {
+     "beat": "reveal",
+     "do": "Write \"Quiet! Be still!\" and draw calm water."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "CRES.G5.THE_LI.CALMING_THE_STORM.CALMING_STORM.M_CS_DISCIPLES_CALMED",
+     "listen_for": [
+      "The disciples rowing hard"
+     ],
+     "ask": "Who calmed the storm?",
+     "repair": "Read Mark 4:39."
+    },
+    {
+     "code": "CRES.G5.THE_LI.CALMING_THE_STORM.CALMING_STORM.M_CS_AWAKE",
+     "listen_for": [
+      "Steering the boat"
+     ],
+     "ask": "What was Jesus doing when the storm began?",
+     "repair": "Read Mark 4:38."
+    },
+    {
+     "code": "CRES.G5.THE_LI.CALMING_THE_STORM.CALMING_STORM.M_CS_NO_TROUBLE",
+     "listen_for": [
+      "Christians never face troubles"
+     ],
+     "ask": "What can a Christian learn from the calming of the storm?",
+     "repair": "Ask: were the disciples in the storm with Jesus in the boat?"
+    },
+    {
+     "code": "CRES.G5.THE_LI.CALMING_THE_STORM.CALMING_STORM.M_C5_CS_SCOLDED_STORM_ONLY",
+     "listen_for": [
+      "Nothing"
+     ],
+     "ask": "What did Jesus ask the disciples after the storm (Mark 4:40)?",
+     "repair": "Read Mark 4:39-40 and stop after each verse: first the wind, then the disciples."
+    }
+   ],
+   "checks": [
+    {
+     "question": "Who calmed the storm?",
+     "answer": "Jesus",
+     "shows": "power"
+    },
+    {
+     "question": "Name a challenge Christians face today.",
+     "answer": "Sickness (poverty, being teased for faith)",
+     "shows": "application"
+    }
+   ]
+  }
+ ]
+}

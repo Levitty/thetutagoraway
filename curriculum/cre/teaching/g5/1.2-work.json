@@ -1,0 +1,189 @@
+{
+ "sub_strand": "CRE.G5.CREATI.WORK",
+ "title": "Work",
+ "status": "draft: written 18 Nov 2026 offline for Grade 5 Christian Religious Education; not yet checked by a CRE teacher; not loaded by the live tutor",
+ "sources": [],
+ "notes": "Child labour is taught for protection: a child who is working too much is never shamed in class; follow the school safeguarding policy and name Childline Kenya 116.",
+ "skills": [
+  {
+   "skill": "CRES.G5.CREATI.WORK.STEWARDSHIP",
+   "key_step": "The child names the work God gave people in Genesis 1:26-28 and 2:15 (look after the garden, care for living things, be fruitful) and lists a child's roles at home, school and church.",
+   "floor": {
+    "prerequisite": "Knows how to care for school items.",
+    "question": "Name one way to care for a school desk.",
+    "answer": "Do not write on it (keep it clean)"
+   },
+   "representations": [
+    "Genesis 2:15 written large",
+    "three columns: home, school, church",
+    "pictures of a garden and a tree nursery"
+   ],
+   "steps": [
+    "Read Genesis 2:15: work it and take care of it.",
+    "Ruling means caring, not destroying.",
+    "List roles at home, school and church.",
+    "Pick one to do this week."
+   ],
+   "contexts": [
+    "a school tree-planting day",
+    "watering the kitchen garden",
+    "cleaning the church compound"
+   ],
+   "board": [
+    {
+     "beat": "write",
+     "do": "Write Genesis 2:15 and draw a garden."
+    },
+    {
+     "beat": "point",
+     "do": "Point at the word \"take care\".",
+     "say": "Does ruling over creation mean using it up?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for the child to say no, caring for it."
+    },
+    {
+     "beat": "reveal",
+     "do": "Fill in the home, school and church columns."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "CRES.G5.CREATI.WORK.STEWARDSHIP.M_STW_RULE_HARM",
+     "listen_for": [
+      "Use them as we like, even if they are finished"
+     ],
+     "ask": "What does it mean to rule over the animals and plants in Genesis 1:26 and 2:15?",
+     "repair": "Read Genesis 2:15 beside it: \"to work it and take care of it\"."
+    },
+    {
+     "code": "CRES.G5.CREATI.WORK.STEWARDSHIP.M_STW_WORK_PUNISHMENT",
+     "listen_for": [
+      "After they did wrong, as a punishment"
+     ],
+     "ask": "When did God first give human beings work in the Bible?",
+     "repair": "Compare Genesis 2:15 (work in the garden) with Genesis 3."
+    },
+    {
+     "code": "CRES.G5.CREATI.WORK.STEWARDSHIP.M_STW_HOME_ONLY",
+     "listen_for": [
+      "Cleaning the compound at home"
+     ],
+     "ask": "Which one is a role a child can do at church?",
+     "repair": "Make three lists on the board: home, school and church."
+    },
+    {
+     "code": "CRES.G5.CREATI.WORK.STEWARDSHIP.M_C5_STW_ADULT_ROLES",
+     "listen_for": [
+      "Paying the school fees"
+     ],
+     "ask": "Name one role a Grade 5 child has at home.",
+     "repair": "Make three columns, home, school, church, and fill them only with things a ten-year-old can do."
+    }
+   ],
+   "checks": [
+    {
+     "question": "When did God first give people work in the Bible?",
+     "answer": "In the garden, before they did wrong",
+     "shows": "work"
+    },
+    {
+     "question": "Name a role a child can do at church.",
+     "answer": "Help keep the compound clean (sing, usher)",
+     "shows": "roles"
+    }
+   ]
+  },
+  {
+   "skill": "CRES.G5.CREATI.WORK.CHILD_LABOUR",
+   "key_step": "The child tells child labour (work that harms health or keeps a child from school, such as carrying heavy loads for hours or working for pay instead of school) from age-appropriate chores, gives causes (poverty, loss of parents) and effects, and names whom to tell.",
+   "floor": {
+    "prerequisite": "Knows a child's roles at home.",
+    "question": "Name one chore a Grade 5 child can do at home.",
+    "answer": "Sweeping (washing dishes)"
+   },
+   "representations": [
+    "two columns: a chore that helps, work that harms",
+    "picture cards of children working",
+    "Childline Kenya 116 card"
+   ],
+   "steps": [
+    "Ask: is it light and safe, and does the child still go to school?",
+    "If yes, it is a chore.",
+    "If it harms or stops school, it is child labour.",
+    "Tell a trusted adult or call 116."
+   ],
+   "contexts": [
+    "a child selling in the market during school hours",
+    "a child fetching water before school",
+    "a child herding all day instead of school"
+   ],
+   "board": [
+    {
+     "beat": "write",
+     "do": "Draw two columns: chore and child labour."
+    },
+    {
+     "beat": "point",
+     "do": "Point at a card of a child carrying stones at a quarry.",
+     "say": "Which column? Why?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for the child to say child labour, it harms and stops school."
+    },
+    {
+     "beat": "reveal",
+     "do": "Write 116 and the names of trusted adults."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "CRES.G5.CREATI.WORK.CHILD_LABOUR.M_CL_CHORES_ARE_LABOUR",
+     "listen_for": [
+      "Sweeping the room after school"
+     ],
+     "ask": "Which of these is child labour?",
+     "repair": "Sort tasks by three questions: is it safe, does it suit my age, does it stop me from school or rest?"
+    },
+    {
+     "code": "CRES.G5.CREATI.WORK.CHILD_LABOUR.M_CL_LABOUR_IS_GOOD",
+     "listen_for": [
+      "The child learns more at school"
+     ],
+     "ask": "What is a common effect of child labour?",
+     "repair": "Name a child who herds all day and cannot read. Ask what the child lost."
+    },
+    {
+     "code": "CRES.G5.CREATI.WORK.CHILD_LABOUR.M_CL_REPORT_EMPLOYER",
+     "listen_for": [
+      "The person who forces him"
+     ],
+     "ask": "Whom should a child tell if he is forced to work?",
+     "repair": "Make a list of safe adults together, including the Childline Kenya line 116."
+    },
+    {
+     "code": "CRES.G5.CREATI.WORK.CHILD_LABOUR.M_CL_CAUSE_LAZY",
+     "listen_for": [
+      "Children who like to be lazy"
+     ],
+     "ask": "What is one cause of child labour in many places?",
+     "repair": "Ask what a family with no food might feel it must do."
+    }
+   ],
+   "checks": [
+    {
+     "question": "Is sweeping the room after school child labour?",
+     "answer": "No: it is a chore",
+     "shows": "telling apart"
+    },
+    {
+     "question": "Whom should a child tell if forced to work?",
+     "answer": "A trusted adult (teacher, chief, Childline 116)",
+     "shows": "reporting"
+    }
+   ]
+  }
+ ]
+}

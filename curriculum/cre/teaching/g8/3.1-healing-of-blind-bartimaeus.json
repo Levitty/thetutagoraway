@@ -1,0 +1,99 @@
+{
+ "sub_strand": "CRE.G8.THE_LI.HEALING_OF_BLIND_BARTIMA",
+ "title": "Healing of Blind Bartimaeus",
+ "status": "draft: written 18 Nov 2026 offline for Grade 8 Christian Religious Education; not yet checked by a CRE teacher; not loaded by the live tutor",
+ "sources": [],
+ "notes": "",
+ "skills": [
+  {
+   "skill": "CRES.G8.THE_LI.HEALING_OF_BLIND_BARTIMA.BARTIMAEUS",
+   "key_step": "The learner describes Mark 10:46-52 (leaving Jericho, Bartimaeus cries \"Son of David, have mercy\", shouts louder when rebuked, throws off his cloak, asks to see, is healed by faith, follows Jesus) and discusses lessons (persistence, faith, Jesus cares for the outcast, following Jesus after help).",
+   "floor": {
+    "prerequisite": "Knows the healing of the bleeding woman.",
+    "question": "What did Jesus tell the woman who touched his cloak?",
+    "answer": "Your faith has healed you"
+   },
+   "representations": [
+    "the road out of Jericho drawn",
+    "Mark 10:47 and 10:52 written large",
+    "a lessons list"
+   ],
+   "steps": [
+    "Bartimaeus cries out.",
+    "He shouts louder when rebuked.",
+    "He throws off his cloak.",
+    "He is healed and follows Jesus."
+   ],
+   "contexts": [
+    "a learner facing a long illness",
+    "praying for healing in hospital",
+    "helping a person with a disability"
+   ],
+   "board": [
+    {
+     "beat": "write",
+     "do": "Draw a road with a crowd and a man by the side."
+    },
+    {
+     "beat": "point",
+     "do": "Point at the man.",
+     "say": "What did he do when the crowd told him to be quiet?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for the learner to say he shouted louder."
+    },
+    {
+     "beat": "reveal",
+     "do": "List the lessons."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "CRES.G8.THE_LI.HEALING_OF_BLIND_BARTIMA.BARTIMAEUS.M_CR8_BT_PLACE",
+     "listen_for": [
+      "Jerusalem"
+     ],
+     "ask": "Where was Bartimaeus healed?",
+     "repair": "Read Mark 10:46: leaving Jericho. Mark it on a map on the road to Jerusalem."
+    },
+    {
+     "code": "CRES.G8.THE_LI.HEALING_OF_BLIND_BARTIMA.BARTIMAEUS.M_CR8_BT_CRY",
+     "listen_for": [
+      "Teacher, teach me"
+     ],
+     "ask": "What did Bartimaeus call out?",
+     "repair": "Read Mark 10:47: \"Jesus, Son of David, have mercy on me!\" Son of David is a title for the Messiah."
+    },
+    {
+     "code": "CRES.G8.THE_LI.HEALING_OF_BLIND_BARTIMA.BARTIMAEUS.M_CR8_BT_RESULT",
+     "listen_for": [
+      "Went home alone"
+     ],
+     "ask": "What did Bartimaeus do after he was healed?",
+     "repair": "Read Mark 10:52: he followed Jesus along the road."
+    },
+    {
+     "code": "CRES.G8.THE_LI.HEALING_OF_BLIND_BARTIMA.BARTIMAEUS.M_CR8_BT_CLOAK",
+     "listen_for": [
+      "Put on his cloak and walked slowly"
+     ],
+     "ask": "What did Bartimaeus do when Jesus called him (Mark 10:50)?",
+     "repair": "Explain a beggar's cloak was his bed and begging mat; throwing it aside showed eager faith."
+    }
+   ],
+   "checks": [
+    {
+     "question": "Where was Bartimaeus healed?",
+     "answer": "Near Jericho",
+     "shows": "place"
+    },
+    {
+     "question": "Name a lesson from the healing of Bartimaeus.",
+     "answer": "Persist in faith (follow Jesus after help)",
+     "shows": "lesson"
+    }
+   ]
+  }
+ ]
+}

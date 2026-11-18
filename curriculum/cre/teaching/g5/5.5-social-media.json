@@ -1,0 +1,99 @@
+{
+ "sub_strand": "CRE.G5.CHRIST.SOCIAL_MEDIA",
+ "title": "Social Media",
+ "status": "draft: written 18 Nov 2026 offline for Grade 5 Christian Religious Education; not yet checked by a CRE teacher; not loaded by the live tutor",
+ "sources": [],
+ "notes": "",
+ "skills": [
+  {
+   "skill": "CRES.G5.CHRIST.SOCIAL_MEDIA.SOCIAL_MEDIA",
+   "key_step": "The child lists social media platforms (WhatsApp, YouTube, Facebook, TikTok), gives advantages (keeping in touch, learning) and disadvantages (wasted time, false news, strangers, bullying), and safety rules (private information, no meeting strangers, tell an adult, do not forward unkind messages).",
+   "floor": {
+    "prerequisite": "Knows how to stay safe online.",
+    "question": "What should you keep private online?",
+    "answer": "My password and home address"
+   },
+   "representations": [
+    "two columns: advantages, disadvantages",
+    "a phone screen drawn with a message",
+    "safety rules list"
+   ],
+   "steps": [
+    "Name platforms.",
+    "List advantages.",
+    "List disadvantages.",
+    "Say the safety rules."
+   ],
+   "contexts": [
+    "a family WhatsApp group",
+    "a viral false message",
+    "a stranger in a game chat"
+   ],
+   "board": [
+    {
+     "beat": "write",
+     "do": "Draw two columns: advantages and disadvantages."
+    },
+    {
+     "beat": "point",
+     "do": "Point at the disadvantages column.",
+     "say": "Name one danger of social media."
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for the child to name one."
+    },
+    {
+     "beat": "reveal",
+     "do": "Write the safety rules below."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "CRES.G5.CHRIST.SOCIAL_MEDIA.SOCIAL_MEDIA.M_SM2_SHARE_ALL",
+     "listen_for": [
+      "Your favourite colour"
+     ],
+     "ask": "Which information must you keep private online?",
+     "repair": "List what a stranger could do with an address."
+    },
+    {
+     "code": "CRES.G5.CHRIST.SOCIAL_MEDIA.SOCIAL_MEDIA.M_SM2_ONLY_GOOD",
+     "listen_for": [
+      "It helps you talk to relatives far away"
+     ],
+     "ask": "What is a disadvantage of social media?",
+     "repair": "Make two lists, advantages and disadvantages."
+    },
+    {
+     "code": "CRES.G5.CHRIST.SOCIAL_MEDIA.SOCIAL_MEDIA.M_SM2_STRANGER",
+     "listen_for": [
+      "Meet him, because he is kind"
+     ],
+     "ask": "A stranger online says he is a child and asks to meet you. What should you do?",
+     "repair": "Say that people can lie about who they are."
+    },
+    {
+     "code": "CRES.G5.CHRIST.SOCIAL_MEDIA.SOCIAL_MEDIA.M_SM2_FORWARD",
+     "listen_for": [
+      "Forward it to the class"
+     ],
+     "ask": "You receive an unkind message about a classmate. What should you do?",
+     "repair": "Ask how the classmate would feel."
+    }
+   ],
+   "checks": [
+    {
+     "question": "Name a disadvantage of social media.",
+     "answer": "It can spread false or harmful messages (waste time)",
+     "shows": "disadvantage"
+    },
+    {
+     "question": "You receive an unkind message about a classmate. What do you do?",
+     "answer": "Delete it and not pass it on",
+     "shows": "integrity"
+    }
+   ]
+  }
+ ]
+}
