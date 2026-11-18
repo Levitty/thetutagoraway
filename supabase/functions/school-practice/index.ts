@@ -64,6 +64,16 @@ var practiceStatus = (practices, links, progress) => {
   return out;
 };
 
+// src/ai-tutor/content/exampleKind.js
+var KIND_GROUPS = [
+  ["cone", "cylinder", "sphere", "cuboid", "prism", "pyramid", "hemisphere"],
+  ["vertically opposite", "corresponding", "alternate", "co-interior", "allied"],
+  ["mean", "median", "mode", "range"],
+  ["arc", "sector"],
+  ["hire purchase", "vat", "paye", "commission", "discount", "standing charge"],
+  ["p\\.m\\.", "a\\.m\\."]
+].map((g) => g.map((w14) => [w14, new RegExp(`\\b${w14}\\b`)]));
+
 // src/ai-tutor/content/schema.js
 var randInt = (lo, hi) => lo + Math.floor(Math.random() * (hi - lo + 1));
 var pick = (arr) => arr[Math.floor(Math.random() * arr.length)];

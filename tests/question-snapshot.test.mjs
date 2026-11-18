@@ -15,6 +15,7 @@ import { snapshotSkill } from './helpers/questionSnapshot.mjs';
 import { SKILLS } from '../src/ai-tutor/knowledgeGraph.js';
 import { FAMILIES } from '../src/ai-tutor/content/families/index.js';
 import { setFamilyMode, allOnFrom, isOn } from '../src/ai-tutor/content/families/core.js';
+import { EXAMPLE_REDRAWS } from '../src/ai-tutor/content/exampleKind.js';
 
 const BASE = JSON.parse(readFileSync(new URL('./fixtures/question-snapshot-598b578.json', import.meta.url)));
 // The 18 mislabelled skills (engine evaluation, 5 Nov 2026), and their aliases.
@@ -22,9 +23,15 @@ export const CHANGED = new Set(['G8_SIMULTANEOUS_INTRO', 'G7_TEMPERATURE', 'G9_A
 
 test('with only reviewed families on, no other skill serves anything different', () => {
   setFamilyMode('reviewed');
+  // Redrawing a worked example (F11, 18 Nov 2026) consumes the seeded stream
+  // and shifts every later draw, so fingerprint with redraws off: this test
+  // guards the questions; tests/worked-example-kind.test.mjs guards the example.
+  const redraws = EXAMPLE_REDRAWS.max; EXAMPLE_REDRAWS.max = 0;
+  try {
   const reviewed = new Set(FAMILIES.filter(f => f.reviewed === true).map(f => f.skill));
   const moved = Object.keys(SKILLS).filter(id => !CHANGED.has(id) && !reviewed.has(id) && snapshotSkill(id) !== BASE[id]);
   assert.deepEqual(moved, [], `these skills changed without anyone saying so: ${moved.join(', ')}`);
+  } finally { EXAMPLE_REDRAWS.max = redraws; }
 });
 
 test('unreviewed families are off for children, and every switch that turns them on is local', () => {

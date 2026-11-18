@@ -8,6 +8,11 @@
 // co-interior. One rule, used wherever an example is chosen.
 // ============================================================================
 
+// How many times an example is redrawn before the last draw is kept. The
+// question snapshot test sets it to 0: it fingerprints the questions, and the
+// example choice is tested on its own (tests/worked-example-kind.test.mjs).
+export const EXAMPLE_REDRAWS = { max: 60 };
+
 // Instruction with numbers and single letters ignored.
 export const instructionKind = (t) =>
   String(t || '').trim().toLowerCase().replace(/\d+/g, '#').replace(/\b[a-z]\b/g, '_');
