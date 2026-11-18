@@ -4823,6 +4823,827 @@ export const TEACHING_PACK_G8 = {
   "sub_strand": "MATH.G8.NUMBER.RATES_RATIO_PROPORTIONS_",
   "sub_strand_name": "Rates, Ratio, Proportions and Percentages",
   "status": "draft: written 18 Nov 2026 offline for Grade 8; not yet checked by a Kenyan maths teacher; not loaded by the live tutor"
+ },
+ "MATH.G8.ALGEBR.ALGEBRAIC_EXPRESSIONS.FACTORISE_HCF": {
+  "skill": "MATH.G8.ALGEBR.ALGEBRAIC_EXPRESSIONS.FACTORISE_HCF",
+  "key_step": "The child names the highest common factor of all the numbers before writing the bracket, then checks by expanding.",
+  "floor": {
+   "prerequisite": "Finds the HCF of two numbers.",
+   "question": "HCF of 12 and 18",
+   "answer": "6"
+  },
+  "representations": [
+   "a rectangle split into two parts",
+   "the factor outside a bracket",
+   "expanding to check"
+  ],
+  "steps": [
+   "Find the HCF of the numbers.",
+   "Write it outside the bracket.",
+   "Divide every term by it.",
+   "Expand to check."
+  ],
+  "contexts": [
+   "the area of a classroom floor",
+   "two plots of land",
+   "prices of packets"
+  ],
+  "board": [
+   {
+    "beat": "draw",
+    "do": "Draw a rectangle split into two parts of area 12x and 18."
+   },
+   {
+    "beat": "point",
+    "do": "Point at the shared side.",
+    "say": "What length could both parts share?"
+   },
+   {
+    "beat": "pause",
+    "do": "Wait for the child to say."
+   },
+   {
+    "beat": "child_draws",
+    "do": "The child writes the widths 2x and 3 in the parts."
+   }
+  ],
+  "misconceptions": [
+   {
+    "code": "MATH.G8.ALGEBR.ALGEBRAIC_EXPRESSIONS.FACTORISE_HCF.M_COMMON_FACTOR_NOT_HIGHEST",
+    "listen_for": [
+     "3(4x + 6)"
+    ],
+    "ask": "Is there still a common factor inside?",
+    "repair": "Take the highest: 6.",
+    "error": "Takes out a common factor that is not the highest.",
+    "example": {
+     "question": "Factorise 12x + 18 fully",
+     "wrong_answer": "3(4x + 6)",
+     "correct_answer": "6(2x + 3)"
+    }
+   },
+   {
+    "code": "MATH.G8.ALGEBR.ALGEBRAIC_EXPRESSIONS.FACTORISE_HCF.M_INSIDE_COEFFICIENT_GIVEN",
+    "listen_for": [
+     "2"
+    ],
+    "ask": "Does 2 times the bracket give 12x?",
+    "repair": "The factor outside is 6.",
+    "error": "Gives the number left in front of x inside the bracket as the factor outside.",
+    "example": {
+     "question": "12x + 18 = ?(2x + 3). The number outside?",
+     "wrong_answer": "2",
+     "correct_answer": "6"
+    }
+   },
+   {
+    "code": "MATH.G8.ALGEBR.ALGEBRAIC_EXPRESSIONS.FACTORISE_HCF.M_INSIDE_NUMBER_GIVEN",
+    "listen_for": [
+     "3"
+    ],
+    "ask": "Does 3 times 2x give 12x?",
+    "repair": "Outside times inside.",
+    "error": "Gives the number left in the bracket as the factor outside.",
+    "example": {
+     "question": "12x + 18 = ?(2x + 3). The number outside?",
+     "wrong_answer": "3",
+     "correct_answer": "6"
+    }
+   },
+   {
+    "code": "MATH.G8.ALGEBR.ALGEBRAIC_EXPRESSIONS.FACTORISE_HCF.M_FACTOR_ONE_TERM_ONLY",
+    "listen_for": [
+     "3(2x + 9)"
+    ],
+    "ask": "Expand: do you get 6x + 9?",
+    "repair": "Divide every term.",
+    "error": "Divides only the first term by the factor.",
+    "example": {
+     "question": "Factorise 6x + 9",
+     "wrong_answer": "3(2x + 9)",
+     "correct_answer": "3(2x + 3)"
+    }
+   },
+   {
+    "code": "MATH.G8.ALGEBR.ALGEBRAIC_EXPRESSIONS.FACTORISE_HCF.M_ONE_LEFT_OUT",
+    "listen_for": [
+     "5(x)"
+    ],
+    "ask": "What is 5 ÷ 5?",
+    "repair": "Write the 1.",
+    "error": "Leaves nothing in place of a term that equals the factor.",
+    "example": {
+     "question": "Factorise 5x + 5",
+     "wrong_answer": "5(x)",
+     "correct_answer": "5(x + 1)"
+    }
+   }
+  ],
+  "checks": [
+   {
+    "question": "Factorise 15x + 25 fully.",
+    "answer": "5(3x + 5)",
+    "shows": "HCF"
+   },
+   {
+    "question": "Factorise 8y - 12 fully.",
+    "answer": "4(2y - 3)",
+    "shows": "subtraction"
+   }
+  ],
+  "name": "Factorise an expression by taking out the highest common factor of the numbers",
+  "sub_strand": "MATH.G8.ALGEBR.ALGEBRAIC_EXPRESSIONS",
+  "sub_strand_name": "Algebraic Expressions",
+  "status": "draft: written 18 Nov 2026 offline for Grade 8; not yet checked by a Kenyan maths teacher; not loaded by the live tutor"
+ },
+ "MATH.G8.ALGEBR.ALGEBRAIC_EXPRESSIONS.FACTORISE_LETTERS": {
+  "skill": "MATH.G8.ALGEBR.ALGEBRAIC_EXPRESSIONS.FACTORISE_LETTERS",
+  "key_step": "The child looks for a letter in every term as well as a number, and takes out both.",
+  "floor": {
+   "prerequisite": "Factorises with a number.",
+   "question": "6x + 9",
+   "answer": "3(2x + 3)"
+  },
+  "representations": [
+   "each term written as a product (3 × x × x)",
+   "the common part ringed",
+   "the bracket"
+  ],
+  "steps": [
+   "Collect like terms.",
+   "Write each term as a product.",
+   "Ring what every term shares.",
+   "Take it out; reduce the powers."
+  ],
+  "contexts": [
+   "areas with x on both sides",
+   "a garden plan",
+   "a design for a school badge"
+  ],
+  "board": [
+   {
+    "beat": "write",
+    "do": "Write 3x² + 6x as 3 × x × x + 2 × 3 × x."
+   },
+   {
+    "beat": "child_draws",
+    "do": "The child rings what both terms share."
+   },
+   {
+    "beat": "point",
+    "do": "Point at the rings.",
+    "say": "What is left in each term?"
+   },
+   {
+    "beat": "pause",
+    "do": "Wait for the child to say x and 2."
+   }
+  ],
+  "misconceptions": [
+   {
+    "code": "MATH.G8.ALGEBR.ALGEBRAIC_EXPRESSIONS.FACTORISE_LETTERS.M_LETTER_FACTOR_MISSED",
+    "listen_for": [
+     "3(x² + 2x)"
+    ],
+    "ask": "Do both terms have an x?",
+    "repair": "Take it out too.",
+    "error": "Takes out only the number when a letter is common too.",
+    "example": {
+     "question": "Factorise 3x² + 6x fully",
+     "wrong_answer": "3(x² + 2x)",
+     "correct_answer": "3x(x + 2)"
+    }
+   },
+   {
+    "code": "MATH.G8.ALGEBR.ALGEBRAIC_EXPRESSIONS.FACTORISE_LETTERS.M_POWER_NOT_REDUCED",
+    "listen_for": [
+     "3x(x² + 2)"
+    ],
+    "ask": "What is x² ÷ x?",
+    "repair": "x.",
+    "error": "Keeps the full power inside the bracket after taking out a letter.",
+    "example": {
+     "question": "Factorise 3x² + 6x",
+     "wrong_answer": "3x(x² + 2)",
+     "correct_answer": "3x(x + 2)"
+    }
+   },
+   {
+    "code": "MATH.G8.ALGEBR.ALGEBRAIC_EXPRESSIONS.FACTORISE_LETTERS.M_UNLIKE_TERMS_COMBINED",
+    "listen_for": [
+     "5xy"
+    ],
+    "ask": "Are x and y like terms?",
+    "repair": "They cannot be added.",
+    "error": "Adds unlike terms into one before factorising.",
+    "example": {
+     "question": "Simplify 2x + 3y",
+     "wrong_answer": "5xy",
+     "correct_answer": "it cannot be simplified"
+    }
+   },
+   {
+    "code": "MATH.G8.ALGEBR.ALGEBRAIC_EXPRESSIONS.FACTORISE_LETTERS.M_LETTER_ONE_LEFT_OUT",
+    "listen_for": [
+     "x(x)"
+    ],
+    "ask": "What is x ÷ x?",
+    "repair": "1.",
+    "error": "Leaves nothing for a term that is the factor itself.",
+    "example": {
+     "question": "Factorise x² + x",
+     "wrong_answer": "x(x)",
+     "correct_answer": "x(x + 1)"
+    }
+   }
+  ],
+  "checks": [
+   {
+    "question": "Factorise 4x² + 10x fully.",
+    "answer": "2x(2x + 5)",
+    "shows": "number and letter"
+   },
+   {
+    "question": "Factorise 6ab - 9a fully.",
+    "answer": "3a(2b - 3)",
+    "shows": "two letters"
+   }
+  ],
+  "name": "Factorise when the common factor includes a letter",
+  "sub_strand": "MATH.G8.ALGEBR.ALGEBRAIC_EXPRESSIONS",
+  "sub_strand_name": "Algebraic Expressions",
+  "status": "draft: written 18 Nov 2026 offline for Grade 8; not yet checked by a Kenyan maths teacher; not loaded by the live tutor"
+ },
+ "MATH.G8.ALGEBR.ALGEBRAIC_EXPRESSIONS.ALG_FRACTION_SIMPLIFY": {
+  "skill": "MATH.G8.ALGEBR.ALGEBRAIC_EXPRESSIONS.ALG_FRACTION_SIMPLIFY",
+  "key_step": "The child asks whether the bottom divides the whole top, factorising the top first if needed, and cancels only a factor.",
+  "floor": {
+   "prerequisite": "Simplifies a number fraction.",
+   "question": "12/18",
+   "answer": "2/3"
+  },
+  "representations": [
+   "the top split into its terms",
+   "the factorised top",
+   "the cancelled fraction"
+  ],
+  "steps": [
+   "Factorise the top (and bottom).",
+   "Find a common factor.",
+   "Cancel it, or divide every term.",
+   "Check with a number for x."
+  ],
+  "contexts": [
+   "sharing a bill among friends",
+   "cost per person",
+   "a recipe for a class"
+  ],
+  "board": [
+   {
+    "beat": "write",
+    "do": "Write (6x + 9)/3."
+   },
+   {
+    "beat": "point",
+    "do": "Point at the 9.",
+    "say": "Is the 9 divided by 3 as well?"
+   },
+   {
+    "beat": "pause",
+    "do": "Wait for the child to say."
+   },
+   {
+    "beat": "write",
+    "do": "Write 6x/3 + 9/3."
+   }
+  ],
+  "misconceptions": [
+   {
+    "code": "MATH.G8.ALGEBR.ALGEBRAIC_EXPRESSIONS.ALG_FRACTION_SIMPLIFY.M_ONLY_X_TERM_DIVIDED",
+    "listen_for": [
+     "2x + 9"
+    ],
+    "ask": "Did the 9 get divided?",
+    "repair": "Every part of the top.",
+    "error": "Divides only the letter term of the top by the bottom.",
+    "example": {
+     "question": "Simplify (6x + 9)/3",
+     "wrong_answer": "2x + 9",
+     "correct_answer": "2x + 3"
+    }
+   },
+   {
+    "code": "MATH.G8.ALGEBR.ALGEBRAIC_EXPRESSIONS.ALG_FRACTION_SIMPLIFY.M_CANCEL_ACROSS_PLUS",
+    "listen_for": [
+     "x"
+    ],
+    "ask": "Try x = 6: is (6 + 3)/3 equal to 6?",
+    "repair": "Only factors cancel.",
+    "error": "Cancels a number that is only part of a sum on the top.",
+    "example": {
+     "question": "Simplify (x + 3)/3",
+     "wrong_answer": "x",
+     "correct_answer": "it cannot be simplified to x (it is x/3 + 1)"
+    }
+   },
+   {
+    "code": "MATH.G8.ALGEBR.ALGEBRAIC_EXPRESSIONS.ALG_FRACTION_SIMPLIFY.M_CANCEL_LETTER_IN_SUM",
+    "listen_for": [
+     "2"
+    ],
+    "ask": "Try x = 1: is (1 + 2)/1 equal to 2?",
+    "repair": "x is not a factor of the top.",
+    "error": "Cancels a letter on the top with one on the bottom when the top is a sum.",
+    "example": {
+     "question": "Simplify (x + 2)/x",
+     "wrong_answer": "2",
+     "correct_answer": "1 + 2/x"
+    }
+   },
+   {
+    "code": "MATH.G8.ALGEBR.ALGEBRAIC_EXPRESSIONS.ALG_FRACTION_SIMPLIFY.M_NOT_FACTORISED_FIRST",
+    "listen_for": [
+     "left as it is"
+    ],
+    "ask": "Can 4x + 8 be factorised?",
+    "repair": "4(x + 2), then cancel.",
+    "error": "Leaves a fraction unsimplified because the common bracket is hidden.",
+    "example": {
+     "question": "Simplify (4x + 8)/(x + 2)",
+     "wrong_answer": "(4x + 8)/(x + 2)",
+     "correct_answer": "4"
+    }
+   }
+  ],
+  "checks": [
+   {
+    "question": "Simplify (10x + 15)/5.",
+    "answer": "2x + 3",
+    "shows": "divide every term"
+   },
+   {
+    "question": "Simplify (3x + 6)/(x + 2).",
+    "answer": "3",
+    "shows": "factorise and cancel"
+   }
+  ],
+  "name": "Simplify an algebraic fraction",
+  "sub_strand": "MATH.G8.ALGEBR.ALGEBRAIC_EXPRESSIONS",
+  "sub_strand_name": "Algebraic Expressions",
+  "status": "draft: written 18 Nov 2026 offline for Grade 8; not yet checked by a Kenyan maths teacher; not loaded by the live tutor"
+ },
+ "MATH.G8.ALGEBR.ALGEBRAIC_EXPRESSIONS.ALG_FRACTION_ADD_SUB": {
+  "skill": "MATH.G8.ALGEBR.ALGEBRAIC_EXPRESSIONS.ALG_FRACTION_ADD_SUB",
+  "key_step": "The child rewrites each fraction over the common denominator, changing the top as much as the bottom, before adding the tops.",
+  "floor": {
+   "prerequisite": "Adds number fractions.",
+   "question": "1/2 + 1/3",
+   "answer": "5/6"
+  },
+  "representations": [
+   "two fraction bars of a shamba",
+   "each fraction over the LCM",
+   "the single fraction"
+  ],
+  "steps": [
+   "Find the LCM of the bottoms.",
+   "Change each top to match.",
+   "Add or subtract the tops (bracket a top that is taken away).",
+   "To solve: multiply by the LCM, then divide."
+  ],
+  "contexts": [
+   "maize and beans on a shamba",
+   "time spent on two jobs",
+   "two taps filling a tank"
+  ],
+  "board": [
+   {
+    "beat": "write",
+    "do": "Write x/2 + x/3."
+   },
+   {
+    "beat": "point",
+    "do": "Point at the bottoms.",
+    "say": "What common denominator do they share?"
+   },
+   {
+    "beat": "pause",
+    "do": "Wait for 6."
+   },
+   {
+    "beat": "child_draws",
+    "do": "The child writes 3x/6 + 2x/6."
+   }
+  ],
+  "misconceptions": [
+   {
+    "code": "MATH.G8.ALGEBR.ALGEBRAIC_EXPRESSIONS.ALG_FRACTION_ADD_SUB.M_ALG_TOPS_BOTTOMS_ADDED",
+    "listen_for": [
+     "2x/5"
+    ],
+    "ask": "Try x = 6: is 3 + 2 equal to 12/5?",
+    "repair": "Common denominator first.",
+    "error": "Adds tops together and bottoms together.",
+    "example": {
+     "question": "x/2 + x/3",
+     "wrong_answer": "2x/5",
+     "correct_answer": "5x/6"
+    }
+   },
+   {
+    "code": "MATH.G8.ALGEBR.ALGEBRAIC_EXPRESSIONS.ALG_FRACTION_ADD_SUB.M_DENOMINATOR_ONLY_CHANGED",
+    "listen_for": [
+     "2x/6"
+    ],
+    "ask": "What must the top of x/2 become over 6?",
+    "repair": "3x.",
+    "error": "Changes the bottoms to the common denominator but not the tops.",
+    "example": {
+     "question": "x/2 + x/3",
+     "wrong_answer": "2x/6",
+     "correct_answer": "5x/6"
+    }
+   },
+   {
+    "code": "MATH.G8.ALGEBR.ALGEBRAIC_EXPRESSIONS.ALG_FRACTION_ADD_SUB.M_ALG_FRACTIONS_NOT_ADDABLE",
+    "listen_for": [
+     "cannot add"
+    ],
+    "ask": "Can 1/2 + 1/3 be added?",
+    "repair": "So can x/2 + x/3.",
+    "error": "Believes algebraic fractions cannot be added.",
+    "example": {
+     "question": "Can x/2 + x/3 be written as one fraction?",
+     "wrong_answer": "No",
+     "correct_answer": "Yes: 5x/6"
+    }
+   },
+   {
+    "code": "MATH.G8.ALGEBR.ALGEBRAIC_EXPRESSIONS.ALG_FRACTION_ADD_SUB.M_ALG_DENOMINATORS_ADDED",
+    "listen_for": [
+     "49"
+    ],
+    "ask": "Is x/3 + x/4 equal to x/7?",
+    "repair": "Use 12.",
+    "error": "Adds the bottom numbers when solving with fractions.",
+    "example": {
+     "question": "x/3 + x/4 = 7",
+     "wrong_answer": "x = 49",
+     "correct_answer": "x = 12"
+    }
+   },
+   {
+    "code": "MATH.G8.ALGEBR.ALGEBRAIC_EXPRESSIONS.ALG_FRACTION_ADD_SUB.M_ONE_FRACTION_SOLVED",
+    "listen_for": [
+     "21"
+    ],
+    "ask": "What about the beans?",
+    "repair": "Both fractions.",
+    "error": "Solves using only the first fraction.",
+    "example": {
+     "question": "x/3 + x/4 = 7",
+     "wrong_answer": "x = 21",
+     "correct_answer": "x = 12"
+    }
+   },
+   {
+    "code": "MATH.G8.ALGEBR.ALGEBRAIC_EXPRESSIONS.ALG_FRACTION_ADD_SUB.M_LCM_MULTIPLIED_NOT_DIVIDED",
+    "listen_for": [
+     "84"
+    ],
+    "ask": "After times 12, how many x are there?",
+    "repair": "7x: divide by 7.",
+    "error": "Multiplies both sides by the common denominator and stops.",
+    "example": {
+     "question": "x/3 + x/4 = 7",
+     "wrong_answer": "x = 84",
+     "correct_answer": "x = 12"
+    }
+   },
+   {
+    "code": "MATH.G8.ALGEBR.ALGEBRAIC_EXPRESSIONS.ALG_FRACTION_ADD_SUB.M_SUBTRACT_SIGN_NOT_SPREAD",
+    "listen_for": [
+     "(x - 2)/6"
+    ],
+    "ask": "What is minus 2 times minus 1?",
+    "repair": "Plus 2: use a bracket.",
+    "error": "Takes away only the first term of a top that is subtracted.",
+    "example": {
+     "question": "x/2 - (x - 1)/3",
+     "wrong_answer": "(x - 2)/6",
+     "correct_answer": "(x + 2)/6"
+    }
+   }
+  ],
+  "checks": [
+   {
+    "question": "Write x/4 + x/6 as one fraction.",
+    "answer": "5x/12",
+    "shows": "add"
+   },
+   {
+    "question": "Solve x/2 + x/5 = 14.",
+    "answer": "x = 20",
+    "shows": "solve"
+   }
+  ],
+  "name": "Add and subtract algebraic fractions and use them in an equation",
+  "sub_strand": "MATH.G8.ALGEBR.ALGEBRAIC_EXPRESSIONS",
+  "sub_strand_name": "Algebraic Expressions",
+  "status": "draft: written 18 Nov 2026 offline for Grade 8; not yet checked by a Kenyan maths teacher; not loaded by the live tutor"
+ },
+ "MATH.G8.ALGEBR.ALGEBRAIC_EXPRESSIONS.SUBSTITUTE_POSITIVE": {
+  "skill": "MATH.G8.ALGEBR.ALGEBRAIC_EXPRESSIONS.SUBSTITUTE_POSITIVE",
+  "key_step": "The child rewrites the expression with the value in brackets and a × sign wherever a letter was.",
+  "floor": {
+   "prerequisite": "Uses the order of operations.",
+   "question": "50 + 30 × 6",
+   "answer": "230"
+  },
+  "representations": [
+   "a fare chart",
+   "the expression with brackets put in",
+   "the working"
+  ],
+  "steps": [
+   "Write the expression.",
+   "Replace each letter by (value).",
+   "Multiply first.",
+   "Add or subtract."
+  ],
+  "contexts": [
+   "a boda boda fare",
+   "a phone bill with a fixed charge",
+   "hiring a hall"
+  ],
+  "board": [
+   {
+    "beat": "write",
+    "do": "Write F = 50 + 30d."
+   },
+   {
+    "beat": "point",
+    "do": "Point at 30d.",
+    "say": "What does 30d mean when d = 6?"
+   },
+   {
+    "beat": "pause",
+    "do": "Wait for 30 × 6."
+   },
+   {
+    "beat": "child_draws",
+    "do": "The child writes F = 50 + 30 × (6)."
+   }
+  ],
+  "misconceptions": [
+   {
+    "code": "MATH.G8.ALGEBR.ALGEBRAIC_EXPRESSIONS.SUBSTITUTE_POSITIVE.M_FIXED_TIMES_VARIABLE",
+    "listen_for": [
+     "480"
+    ],
+    "ask": "Does the fixed 50 change with distance?",
+    "repair": "Only 30d does.",
+    "error": "Multiplies the whole expression by the value.",
+    "example": {
+     "question": "F = 50 + 30d; d = 6",
+     "wrong_answer": "480",
+     "correct_answer": "230"
+    }
+   },
+   {
+    "code": "MATH.G8.ALGEBR.ALGEBRAIC_EXPRESSIONS.SUBSTITUTE_POSITIVE.M_FIXED_PART_DROPPED",
+    "listen_for": [
+     "180"
+    ],
+    "ask": "Where is the 50?",
+    "repair": "Add it.",
+    "error": "Leaves out the fixed charge.",
+    "example": {
+     "question": "F = 50 + 30d; d = 6",
+     "wrong_answer": "180",
+     "correct_answer": "230"
+    }
+   },
+   {
+    "code": "MATH.G8.ALGEBR.ALGEBRAIC_EXPRESSIONS.SUBSTITUTE_POSITIVE.M_WRONG_TERM_MULTIPLIED",
+    "listen_for": [
+     "330"
+    ],
+    "ask": "Which number is next to d?",
+    "repair": "The 30.",
+    "error": "Multiplies the fixed amount by the value instead of the rate.",
+    "example": {
+     "question": "F = 50 + 30d; d = 6",
+     "wrong_answer": "330",
+     "correct_answer": "230"
+    }
+   },
+   {
+    "code": "MATH.G8.ALGEBR.ALGEBRAIC_EXPRESSIONS.SUBSTITUTE_POSITIVE.M_COEFF_ADDED_NOT_MULTIPLIED",
+    "listen_for": [
+     "34",
+     "7"
+    ],
+    "ask": "What does 3d mean?",
+    "repair": "3 × d.",
+    "error": "Adds the coefficient and the value, or writes them side by side.",
+    "example": {
+     "question": "3d when d = 4",
+     "wrong_answer": "7 or 34",
+     "correct_answer": "12"
+    }
+   },
+   {
+    "code": "MATH.G8.ALGEBR.ALGEBRAIC_EXPRESSIONS.SUBSTITUTE_POSITIVE.M_BRACKET_ORDER_WRONG",
+    "listen_for": [
+     "20"
+    ],
+    "ask": "Which comes first, + or ×?",
+    "repair": "Multiply first.",
+    "error": "Adds before multiplying when evaluating.",
+    "example": {
+     "question": "2 + 3x when x = 4",
+     "wrong_answer": "20",
+     "correct_answer": "14"
+    }
+   }
+  ],
+  "checks": [
+   {
+    "question": "F = 40 + 25d. Find F when d = 8.",
+    "answer": "240",
+    "shows": "rate and fixed"
+   },
+   {
+    "question": "Find 5a + 2b when a = 3 and b = 7.",
+    "answer": "29",
+    "shows": "two letters"
+   }
+  ],
+  "name": "Evaluate an expression by substituting positive values",
+  "sub_strand": "MATH.G8.ALGEBR.ALGEBRAIC_EXPRESSIONS",
+  "sub_strand_name": "Algebraic Expressions",
+  "status": "draft: written 18 Nov 2026 offline for Grade 8; not yet checked by a Kenyan maths teacher; not loaded by the live tutor"
+ },
+ "MATH.G8.ALGEBR.ALGEBRAIC_EXPRESSIONS.SUBSTITUTE_NEGATIVE": {
+  "skill": "MATH.G8.ALGEBR.ALGEBRAIC_EXPRESSIONS.SUBSTITUTE_NEGATIVE",
+  "key_step": "The child puts every negative value in brackets and squares only the letter.",
+  "floor": {
+   "prerequisite": "Multiplies negative numbers.",
+   "question": "(-3) × (-3)",
+   "answer": "9"
+  },
+  "representations": [
+   "the expression with brackets put in",
+   "a number line for the final step",
+   "the working"
+  ],
+  "steps": [
+   "Write each value in brackets.",
+   "Square the value only.",
+   "Multiply by the coefficient.",
+   "Watch the sign in front of each term."
+  ],
+  "contexts": [
+   "temperatures below zero in a formula",
+   "a profit and loss formula",
+   "a game score"
+  ],
+  "board": [
+   {
+    "beat": "write",
+    "do": "Write 10 - 4x with x = -2."
+   },
+   {
+    "beat": "child_draws",
+    "do": "The child writes 10 - 4 × (-2)."
+   },
+   {
+    "beat": "point",
+    "do": "Point at 4 × (-2).",
+    "say": "What is this, and what do we take away?"
+   },
+   {
+    "beat": "pause",
+    "do": "Wait for the child to say."
+   }
+  ],
+  "misconceptions": [
+   {
+    "code": "MATH.G8.ALGEBR.ALGEBRAIC_EXPRESSIONS.SUBSTITUTE_NEGATIVE.M_NEGATIVE_SQUARED_NEGATIVE",
+    "listen_for": [
+     "-9"
+    ],
+    "ask": "Negative times negative is?",
+    "repair": "Positive.",
+    "error": "Gives a negative answer for a negative number squared.",
+    "example": {
+     "question": "m² when m = -3",
+     "wrong_answer": "-9",
+     "correct_answer": "9"
+    }
+   },
+   {
+    "code": "MATH.G8.ALGEBR.ALGEBRAIC_EXPRESSIONS.SUBSTITUTE_NEGATIVE.M_SQUARE_AS_TIMES_TWO",
+    "listen_for": [
+     "-6"
+    ],
+    "ask": "Does m² mean 2m?",
+    "repair": "m × m.",
+    "error": "Treats m² as 2 × m.",
+    "example": {
+     "question": "m² when m = -3",
+     "wrong_answer": "-6",
+     "correct_answer": "9"
+    }
+   },
+   {
+    "code": "MATH.G8.ALGEBR.ALGEBRAIC_EXPRESSIONS.SUBSTITUTE_NEGATIVE.M_COEFFICIENT_SQUARED",
+    "listen_for": [
+     "36"
+    ],
+    "ask": "Is the 2 squared too?",
+    "repair": "Only m.",
+    "error": "Squares the coefficient as well as the letter.",
+    "example": {
+     "question": "2m² when m = -3",
+     "wrong_answer": "36",
+     "correct_answer": "18"
+    }
+   },
+   {
+    "code": "MATH.G8.ALGEBR.ALGEBRAIC_EXPRESSIONS.SUBSTITUTE_NEGATIVE.M_MINUS_SIGN_DROPPED",
+    "listen_for": [
+     "30"
+    ],
+    "ask": "What sign is in front of 3n?",
+    "repair": "Minus.",
+    "error": "Adds a term that has a minus sign in front.",
+    "example": {
+     "question": "2m² - 3n when m = -3, n = 4",
+     "wrong_answer": "30",
+     "correct_answer": "6"
+    }
+   },
+   {
+    "code": "MATH.G8.ALGEBR.ALGEBRAIC_EXPRESSIONS.SUBSTITUTE_NEGATIVE.M_MINUS_MINUS_STAYS_MINUS",
+    "listen_for": [
+     "2"
+    ],
+    "ask": "What is 10 take away -8?",
+    "repair": "Taking away a negative adds: 18.",
+    "error": "Believes taking away a negative product keeps it negative.",
+    "example": {
+     "question": "10 - 4x when x = -2",
+     "wrong_answer": "2",
+     "correct_answer": "18"
+    }
+   },
+   {
+    "code": "MATH.G8.ALGEBR.ALGEBRAIC_EXPRESSIONS.SUBSTITUTE_NEGATIVE.M_VALUE_SIGN_DROPPED",
+    "listen_for": [
+     "10 take away 8"
+    ],
+    "ask": "Is x equal to 2 or to -2?",
+    "repair": "Keep the minus sign.",
+    "error": "Substitutes the size of a negative value and drops its minus sign.",
+    "example": {
+     "question": "10 - 4x when x = -2",
+     "wrong_answer": "2",
+     "correct_answer": "18"
+    }
+   },
+   {
+    "code": "MATH.G8.ALGEBR.ALGEBRAIC_EXPRESSIONS.SUBSTITUTE_NEGATIVE.M_VALUE_WRITTEN_BESIDE",
+    "listen_for": [
+     "4"
+    ],
+    "ask": "Does 4x mean 4 times x?",
+    "repair": "Use brackets.",
+    "error": "Writes the negative value in place of x without multiplying.",
+    "example": {
+     "question": "10 - 4x when x = -2",
+     "wrong_answer": "10 - 4 - 2 = 4",
+     "correct_answer": "18"
+    }
+   }
+  ],
+  "checks": [
+   {
+    "question": "Evaluate 3m² - 2n when m = -2 and n = 5.",
+    "answer": "2",
+    "shows": "square a negative"
+   },
+   {
+    "question": "Evaluate 7 - 3x when x = -4.",
+    "answer": "19",
+    "shows": "take away a negative"
+   }
+  ],
+  "name": "Evaluate an expression with negative values and squares",
+  "sub_strand": "MATH.G8.ALGEBR.ALGEBRAIC_EXPRESSIONS",
+  "sub_strand_name": "Algebraic Expressions",
+  "status": "draft: written 18 Nov 2026 offline for Grade 8; not yet checked by a Kenyan maths teacher; not loaded by the live tutor"
  }
 };
 export default TEACHING_PACK_G8;

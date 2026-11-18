@@ -455,6 +455,60 @@
     "more workers"
    ],
    "mastery": "The child uses the unitary method: for direct proportion finds one unit and multiplies; for inverse proportion finds the total (workers × days) and shares it: 6 workers take 10 days, so 4 workers take 60 ÷ 4 = 15 days."
+  },
+  "MATH.G8.ALGEBR.ALGEBRAIC_EXPRESSIONS.FACTORISE_HCF": {
+   "forms": [
+    "factorise fully",
+    "the number outside the bracket",
+    "which step has the mistake",
+    "length and width from the area"
+   ],
+   "mastery": "The child finds the HCF of the coefficients and the number, writes it outside a bracket and what is left of each term inside, and checks by expanding: 12x + 18 = 6(2x + 3), not 3(4x + 6)."
+  },
+  "MATH.G8.ALGEBR.ALGEBRAIC_EXPRESSIONS.FACTORISE_LETTERS": {
+   "forms": [
+    "common factor with a letter",
+    "collect like terms first",
+    "factorise fully",
+    "check by expanding"
+   ],
+   "mastery": "The child collects like terms first, then takes out the common letter with the common number, reducing the power inside the bracket: 3x² + 6x = 3x(x + 2), 4ab - 6a = 2a(2b - 3)."
+  },
+  "MATH.G8.ALGEBR.ALGEBRAIC_EXPRESSIONS.ALG_FRACTION_SIMPLIFY": {
+   "forms": [
+    "simplify",
+    "which step has the mistake",
+    "can this be cancelled",
+    "factorise and cancel"
+   ],
+   "mastery": "The child divides every term of the top by the bottom, or factorises the top and cancels a common factor, never cancelling a number or letter that is only part of a sum: (6x + 9)/3 = 2x + 3, (4x + 8)/(x + 2) = 4."
+  },
+  "MATH.G8.ALGEBR.ALGEBRAIC_EXPRESSIONS.ALG_FRACTION_ADD_SUB": {
+   "forms": [
+    "add the fractions",
+    "why is this wrong",
+    "find x",
+    "subtract"
+   ],
+   "mastery": "The child writes each fraction over a common denominator (the LCM of the bottoms), changes each top to match, then adds or subtracts the tops, putting a bracket round a top that is subtracted; to solve, multiplies both sides by the common denominator and divides by what is left: x/3 + x/4 = 7 gives 7x/12 = 7, so x = 12."
+  },
+  "MATH.G8.ALGEBR.ALGEBRAIC_EXPRESSIONS.SUBSTITUTE_POSITIVE": {
+   "forms": [
+    "find F when",
+    "the fare for a distance",
+    "evaluate",
+    "the width from the length"
+   ],
+   "mastery": "The child replaces each letter with its value as a multiplication (3d with d = 4 is 3 × 4), keeps the fixed part, and works in the order of operations: F = 50 + 30d with d = 6 gives 230."
+  },
+  "MATH.G8.ALGEBR.ALGEBRAIC_EXPRESSIONS.SUBSTITUTE_NEGATIVE": {
+   "forms": [
+    "evaluate with a negative value",
+    "which working is right",
+    "square a negative",
+    "take away a negative"
+   ],
+   "mastery": "The child puts a negative value in brackets, squares the value (not the coefficient), knows a negative squared is positive and that taking away a negative adds: 3m² - 2n with m = -2, n = 5 gives 12 - 10 = 2."
   }
  }
 }

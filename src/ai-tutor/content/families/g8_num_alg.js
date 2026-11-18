@@ -590,7 +590,7 @@ export const FAMILIES = [
     }) }),
 
   // ======================================================== ALGEBRAIC EXPRESSIONS
-  fam({ id: 'g8.fact.fully-outside', skill: 'G8_FACTORIZE_COMMON', outcome: 'G8.EXPR.a', rung: 1, form: 'direct',
+  fam({ id: 'g8.fact.fully-outside', skill: 'G8_FACTORIZE_COMMON', outcome: 'MATH.G8.ALGEBR.ALGEBRAIC_EXPRESSIONS.a', cskill: 'MATH.G8.ALGEBR.ALGEBRAIC_EXPRESSIONS.FACTORISE_HCF', rung: 1, form: 'direct',
     draw: () => {
       const g = pick([6, 8, 9, 10, 12, 15]), h = pick([2, 3, 5].filter(x => g % x === 0)), p = randInt(2, 4), q = randInt(1, 5), v = pick(['x', 'y', 'm', 'n', 'a']);
       return gcd(p, q) === 1 && p !== q && distinct(g, h, p, q) ? { g, h, p, q, v } : null;
@@ -598,26 +598,26 @@ export const FAMILIES = [
     make: ({ g, h, p, q, v }) => ({
       question: `${g * p}${v} + ${g * q} is factorised fully as a number times a bracket. What is the number outside the bracket?`, story: false,
       answer: g,
-      wrong: [[h, 'This number divides both terms, but the bracket still has a common factor inside. Look for the highest one.'], [p, `That is the number left in front of ${v} inside the bracket.`], [q, 'That is the number left after dividing the second term.']],
+      wrong: [[h, 'This number divides both terms, but the bracket still has a common factor inside. Look for the highest one.', 'M_COMMON_FACTOR_NOT_HIGHEST'], [p, `That is the number left in front of ${v} inside the bracket.`, 'M_INSIDE_COEFFICIENT_GIVEN'], [q, 'That is the number left after dividing the second term.', 'M_INSIDE_NUMBER_GIVEN']],
       hints: [`List the factors of ${g * p} and of ${g * q}.`, 'The number outside is the biggest factor they share.'],
       steps: [`The highest common factor of ${g * p} and ${g * q} is ${g}.`, `${g * p}${v} + ${g * q} = ${g}(${p}${v} + ${q}).`],
     }),
     check: ({ g, p, q }, a) => gcd(a * p, a * q) === a }),
 
-  fam({ id: 'g8.fact.rectangle-steps', skill: 'G8_FACTORIZE_COMMON', outcome: 'G8.EXPR.a', rung: 3, form: 'steps',
+  fam({ id: 'g8.fact.rectangle-steps', skill: 'G8_FACTORIZE_COMMON', outcome: 'MATH.G8.ALGEBR.ALGEBRAIC_EXPRESSIONS.a', cskill: 'MATH.G8.ALGEBR.ALGEBRAIC_EXPRESSIONS.FACTORISE_HCF', rung: 3, form: 'steps',
     draw: () => { const g = randInt(2, 6), p = randInt(2, 4), q = randInt(1, 7), X = randInt(2, 5); return gcd(p, q) === 1 ? { g, p, q, X } : null; },
     make: ({ g, p, q, X }) => ({
       question: `A rectangle has an area of ${g * p}x + ${g * q} square metres. Factorise the area. The length is the common factor, and the width is what is left inside the bracket.`,
       parts: [
-        { prompt: `What is the highest common factor of ${g * p} and ${g * q}? This is the length in metres.`, answer: g, unit: 'm', hint: `List the factors of ${g * p} and ${g * q}.`, wrong: [[1, 'There is a bigger factor that divides both numbers.']] },
-        { prompt: `The width is ${p === 1 ? '' : p}x + ${q} metres. What is the width when x = ${X}?`, answer: p * X + q, unit: 'm', hint: `Put x = ${X} into the width.`, wrong: [[p + X + q, `${p}x means ${p} times x.`]] },
-        { prompt: `Work out the original area ${g * p}x + ${g * q} when x = ${X}, in square metres.`, answer: g * p * X + g * q, unit: 'm²', hint: `Put x = ${X} into the area you were given.`, wrong: [[g * (p * X + q) + g, 'Multiply first, then add.']] },
+        { prompt: `What is the highest common factor of ${g * p} and ${g * q}? This is the length in metres.`, answer: g, unit: 'm', hint: `List the factors of ${g * p} and ${g * q}.`, wrong: [[1, 'There is a bigger factor that divides both numbers.', 'M_COMMON_FACTOR_NOT_HIGHEST']] },
+        { prompt: `The width is ${p === 1 ? '' : p}x + ${q} metres. What is the width when x = ${X}?`, answer: p * X + q, unit: 'm', hint: `Put x = ${X} into the width.`, wrong: [[p + X + q, `${p}x means ${p} times x.`, 'M_COEFF_ADDED_NOT_MULTIPLIED']] },
+        { prompt: `Work out the original area ${g * p}x + ${g * q} when x = ${X}, in square metres.`, answer: g * p * X + g * q, unit: 'm²', hint: `Put x = ${X} into the area you were given.`, wrong: [[g * (p * X + q) + g, 'Multiply first, then add.', 'M_BRACKET_ORDER_WRONG']] },
       ],
       steps: [`${g * p}x + ${g * q} = ${g}(${p}x + ${q}). The length is ${g} m.`, `Width at x = ${X}: ${p} × ${X} + ${q} = ${p * X + q} m.`, `Area at x = ${X}: ${g * p} × ${X} + ${g * q} = ${g * p * X + g * q} m². This equals length × width.`],
     }),
     check: ({ g, p, q, X }, v) => v[0] === g && v[1] === p * X + q && v[2] === v[0] * v[1] && v[2] === g * p * X + g * q }),
 
-  fam({ id: 'g8.fact.hcf-spot', skill: 'G8_FACTORIZE_COMMON', outcome: 'G8.EXPR.a', rung: 2, form: 'spot',
+  fam({ id: 'g8.fact.hcf-spot', skill: 'G8_FACTORIZE_COMMON', outcome: 'MATH.G8.ALGEBR.ALGEBRAIC_EXPRESSIONS.a', cskill: 'MATH.G8.ALGEBR.ALGEBRAIC_EXPRESSIONS.FACTORISE_HCF', rung: 2, form: 'spot',
     draw: () => {
       const g = pick([6, 8, 9, 10, 12, 15]), h = pick([2, 3, 5].filter(x => g % x === 0)), p = randInt(2, 4), q = randInt(1, 5);
       return gcd(p, q) === 1 && p !== q ? { g, h, p, q, p0: person() } : null;
@@ -631,11 +631,12 @@ export const FAMILIES = [
           { text: `${B} ÷ ${h} = ${B / h}.`, ok: true },
           { text: `So ${A}x + ${B} = ${h}(${A / h}x + ${B / h}).`, ok: true },
         ],
+        mis: 'M_COMMON_FACTOR_NOT_HIGHEST',
         fix: `The highest common factor of ${A} and ${B} is ${g}, not ${h}. With ${h}, the bracket still has a common factor, so it is not fully factorised.`,
         steps: [`Find the highest common factor of the numbers.`, 'Divide each term by it.'] };
     } }),
 
-  fam({ id: 'g8.algfrac.divide-top-spot', skill: 'G8_LINEAR_EQ_ADV', outcome: 'G8.EXPR.b', rung: 2, form: 'spot',
+  fam({ id: 'g8.algfrac.divide-top-spot', skill: 'G8_LINEAR_EQ_ADV', outcome: 'MATH.G8.ALGEBR.ALGEBRAIC_EXPRESSIONS.b', cskill: 'MATH.G8.ALGEBR.ALGEBRAIC_EXPRESSIONS.ALG_FRACTION_SIMPLIFY', rung: 2, form: 'spot',
     draw: () => { const c = pick([2, 3, 4, 5]), al = randInt(2, 5), be = randInt(2, 6); return be === c ? null : { c, al, be, p: person() }; },
     make: ({ c, al, be, p }) => ({
       question: `${p.name} simplifies the algebraic fraction (${c * al}x + ${c * be})/${c}. Which step has the mistake?`,
@@ -645,69 +646,70 @@ export const FAMILIES = [
         { text: `${c * be} ÷ ${c} = ${c * be}.`, ok: c * be === be },
         { text: `Answer: ${al}x + ${c * be}.`, ok: true },
       ],
-      fix: `Every part of the top is divided by ${c}, including the number. ${c * be} ÷ ${c} = ${be}.`,
+      mis: 'M_ONLY_X_TERM_DIVIDED',
+        fix: `Every part of the top is divided by ${c}, including the number. ${c * be} ÷ ${c} = ${be}.`,
       steps: ['Divide each part of the top by the bottom number.', 'Do not leave any part undivided.'],
     }) }),
 
-  fam({ id: 'g8.algfrac.add-why', skill: 'G8_LINEAR_EQ_ADV', outcome: 'G8.EXPR.b', rung: 2, form: 'why',
+  fam({ id: 'g8.algfrac.add-why', skill: 'G8_LINEAR_EQ_ADV', outcome: 'MATH.G8.ALGEBR.ALGEBRAIC_EXPRESSIONS.b', cskill: 'MATH.G8.ALGEBR.ALGEBRAIC_EXPRESSIONS.ALG_FRACTION_ADD_SUB', rung: 2, form: 'why',
     draw: () => { const [a, b] = pick([[2, 3], [3, 4], [2, 5], [3, 5], [4, 5], [3, 7]]); return { a, b, p: person() }; },
     make: ({ a, b, p }) => ({
       question: `${p.name} says x/${a} + x/${b} = 2x/${a + b}. Why is this wrong?`,
       options: [
         { text: 'The fractions need a common denominator first', right: true },
-        { text: 'The top should be x, not 2x, because both tops are x', right: false, why: 'Both fractions do have x on top, but tops and bottoms cannot be added separately.' },
-        { text: `The answer should be x/${a * b}, the product of the bottoms`, right: false, why: `The bottom number is ${a * b} only after the tops are changed too. Write each fraction over ${a * b} first.` },
-        { text: 'Algebraic fractions cannot be added at all, only multiplied', right: false, why: 'They can, once they have a common denominator.' },
+        { text: 'The top should be x, not 2x, because both tops are x', right: false, why: 'Both fractions do have x on top, but tops and bottoms cannot be added separately.', mis: 'M_ALG_TOPS_BOTTOMS_ADDED' },
+        { text: `The answer should be x/${a * b}, the product of the bottoms`, right: false, why: `The bottom number is ${a * b} only after the tops are changed too. Write each fraction over ${a * b} first.`, mis: 'M_DENOMINATOR_ONLY_CHANGED' },
+        { text: 'Algebraic fractions cannot be added at all, only multiplied', right: false, why: 'They can, once they have a common denominator.', mis: 'M_ALG_FRACTIONS_NOT_ADDABLE' },
       ],
       hints: ['Think about 1/2 + 1/3. Do you add the bottoms?', 'Change both fractions to the same denominator, then add the tops.'],
       steps: [`Common denominator of ${a} and ${b}: ${a * b}.`, `x/${a} + x/${b} = ${b}x/${a * b} + ${a}x/${a * b} = ${a + b}x/${a * b}.`],
     }) }),
 
-  fam({ id: 'g8.algfrac.shamba-solve', skill: 'G8_LINEAR_EQ_ADV', outcome: 'G8.EXPR.b', rung: 3, form: 'word',
+  fam({ id: 'g8.algfrac.shamba-solve', skill: 'G8_LINEAR_EQ_ADV', outcome: 'MATH.G8.ALGEBR.ALGEBRAIC_EXPRESSIONS.b', cskill: 'MATH.G8.ALGEBR.ALGEBRAIC_EXPRESSIONS.ALG_FRACTION_ADD_SUB', rung: 3, form: 'word',
     draw: () => { const [a, b] = pick([[3, 4], [2, 3], [2, 5], [3, 5], [4, 5]]), k = randInt(2, 8); return { a, b, k, T: (a + b) * k, x: a * b * k, p: person() }; },
     make: ({ a, b, k, T, x, p }) => ({
       question: `${p.name} plants maize on x/${a} acres and beans on x/${b} acres. Together they cover ${T} acres. Find x.`,
       answer: x,
-      wrong: [[T * (a + b), 'You cannot add the bottom numbers. Give both fractions the same denominator first.'], [T * a, `That solves only the first fraction, x/${a} = ${T}. The beans cover land too.`], [T * a * b, `Multiplying by ${a * b} clears the fractions, but the left side then has ${a + b} lots of x. Divide by that too.`]],
+      wrong: [[T * (a + b), 'You cannot add the bottom numbers. Give both fractions the same denominator first.', 'M_ALG_DENOMINATORS_ADDED'], [T * a, `That solves only the first fraction, x/${a} = ${T}. The beans cover land too.`, 'M_ONE_FRACTION_SOLVED'], [T * a * b, `Multiplying by ${a * b} clears the fractions, but the left side then has ${a + b} lots of x. Divide by that too.`, 'M_LCM_MULTIPLIED_NOT_DIVIDED']],
       hints: [`Multiply every term by ${a * b} to clear the fractions.`, 'Collect the x terms, then divide.'],
       steps: [`x/${a} + x/${b} = ${T}. Multiply by ${a * b}: ${b}x + ${a}x = ${T * a * b}.`, `${a + b}x = ${T * a * b}.`, `x = ${T * a * b} ÷ ${a + b} = ${x}.`],
     }),
     check: ({ a, b, T }, x) => x / a + x / b === T }),
 
-  fam({ id: 'g8.subst.boda-fare', skill: 'G8_EXPAND_BRACKETS', outcome: 'G8.EXPR.c', rung: 1, form: 'word',
+  fam({ id: 'g8.subst.boda-fare', skill: 'G8_EXPAND_BRACKETS', outcome: 'MATH.G8.ALGEBR.ALGEBRAIC_EXPRESSIONS.c', cskill: 'MATH.G8.ALGEBR.ALGEBRAIC_EXPRESSIONS.SUBSTITUTE_POSITIVE', rung: 1, form: 'word',
     draw: () => ({ f: pick([50, 100]), r: pick([20, 30, 40]), k: randInt(3, 9), p: person() }),
     make: ({ f, r, k }) => ({
       question: `A boda boda fare is F = ${f} + ${r}d shillings, where d is the distance in km. Find F when d = ${k}.`,
       answer: f + r * k,
-      wrong: [[(f + r) * k, `${r}d means ${r} times d. Only the ${r}d part uses the distance.`], [r * k, 'You left out the fixed charge.'], [f * k + r, `The distance multiplies the ${r}, not the ${f}.`]],
+      wrong: [[(f + r) * k, `${r}d means ${r} times d. Only the ${r}d part uses the distance.`, 'M_FIXED_TIMES_VARIABLE'], [r * k, 'You left out the fixed charge.', 'M_FIXED_PART_DROPPED'], [f * k + r, `The distance multiplies the ${r}, not the ${f}.`, 'M_WRONG_TERM_MULTIPLIED']],
       hints: [`Put d = ${k} into the formula.`, `${r}d means ${r} × d. Multiply before you add.`],
       steps: [`F = ${f} + ${r} × ${k}`, `F = ${f} + ${r * k} = ${f + r * k}.`],
     }),
     check: ({ f, r, k }, a) => (a - f) / r === k }),
 
-  fam({ id: 'g8.subst.negative-steps', skill: 'G8_EXPAND_BRACKETS', outcome: 'G8.EXPR.c', rung: 3, form: 'steps', allowNegative: true,
+  fam({ id: 'g8.subst.negative-steps', skill: 'G8_EXPAND_BRACKETS', outcome: 'MATH.G8.ALGEBR.ALGEBRAIC_EXPRESSIONS.c', cskill: 'MATH.G8.ALGEBR.ALGEBRAIC_EXPRESSIONS.SUBSTITUTE_NEGATIVE', rung: 3, form: 'steps', allowNegative: true,
     draw: () => { const a = randInt(2, 4), b = randInt(2, 6), s = randInt(2, 4), t = randInt(3, 9); return { a, b, s, t }; },
     make: ({ a, b, s, t }) => ({
       question: `Evaluate E = ${a}m² − ${b}n when m = −${s} and n = ${t}.`,
       parts: [
-        { prompt: `What is m² when m = −${s}?`, answer: s * s, hint: `m² means m × m. A negative times a negative is positive.`, wrong: [[-s * s, 'Negative times negative gives a positive answer.'], [-2 * s, 'm² means m × m, not 2 × m.']] },
-        { prompt: `What is ${a}m²?`, answer: a * s * s, hint: `Multiply the answer to the step before by ${a}.`, wrong: [[(a * s) * (a * s), `Only m is squared, not the ${a}.`]] },
-        { prompt: `What is ${b}n?`, answer: b * t, hint: `${b} × ${t}`, wrong: [[b + t, `${b}n means ${b} times n.`]] },
-        { prompt: 'What is E?', answer: a * s * s - b * t, hint: 'Take your answer for the third part from your answer for the second part.', wrong: [[a * s * s + b * t, 'The sign in front of the bn is a minus.']] },
+        { prompt: `What is m² when m = −${s}?`, answer: s * s, hint: `m² means m × m. A negative times a negative is positive.`, wrong: [[-s * s, 'Negative times negative gives a positive answer.', 'M_NEGATIVE_SQUARED_NEGATIVE'], [-2 * s, 'm² means m × m, not 2 × m.', 'M_SQUARE_AS_TIMES_TWO']] },
+        { prompt: `What is ${a}m²?`, answer: a * s * s, hint: `Multiply the answer to the step before by ${a}.`, wrong: [[(a * s) * (a * s), `Only m is squared, not the ${a}.`, 'M_COEFFICIENT_SQUARED']] },
+        { prompt: `What is ${b}n?`, answer: b * t, hint: `${b} × ${t}`, wrong: [[b + t, `${b}n means ${b} times n.`, 'M_COEFF_ADDED_NOT_MULTIPLIED']] },
+        { prompt: 'What is E?', answer: a * s * s - b * t, hint: 'Take your answer for the third part from your answer for the second part.', wrong: [[a * s * s + b * t, 'The sign in front of the bn is a minus.', 'M_MINUS_SIGN_DROPPED']] },
       ],
       steps: [`m² = (−${s}) × (−${s}) = ${s * s}.`, `${a}m² = ${a} × ${s * s} = ${a * s * s}.`, `${b}n = ${b} × ${t} = ${b * t}.`, `E = ${a * s * s} − ${b * t} = ${neg(a * s * s - b * t)}.`],
     }),
     check: ({ a, b, s, t }, v) => v[0] === (-s) * (-s) && v[1] === a * v[0] && v[2] === b * t && v[3] === a * (-s) ** 2 - b * t }),
 
-  fam({ id: 'g8.subst.sign-why', skill: 'G8_EXPAND_BRACKETS', outcome: 'G8.EXPR.c', rung: 2, form: 'why',
+  fam({ id: 'g8.subst.sign-why', skill: 'G8_EXPAND_BRACKETS', outcome: 'MATH.G8.ALGEBR.ALGEBRAIC_EXPRESSIONS.c', cskill: 'MATH.G8.ALGEBR.ALGEBRAIC_EXPRESSIONS.SUBSTITUTE_NEGATIVE', rung: 2, form: 'why',
     draw: () => { const c = randInt(5, 20), r = randInt(2, 6), s = randInt(2, 5); return { c, r, s, p: person() }; },
     make: ({ c, r, s, p }) => ({
       question: `${p.name} substitutes into ${c} − ${r}x. Here x = −${s}. Which working is right?`,
       options: [
         { text: `${c} − ${r} × (−${s}) = ${c} + ${r * s}. Taking away a negative adds`, right: true },
-        { text: `${c} − ${r} × ${s} = ${neg(c - r * s)}. The minus sign of x is not needed`, right: false, why: 'x is −' + s + ', not ' + s + '. The minus sign must stay.' },
-        { text: `${c} − ${r} × (−${s}) = ${neg(c - r * s)}. A minus times a minus stays minus`, right: false, why: 'A negative times a negative is a positive, so the term being taken away is positive.' },
-        { text: `${c} − ${r} − ${s} = ${neg(c - r - s)}. Replace x by −${s} and write it straight in`, right: false, why: `${r}x means ${r} times x. The −${s} replaces the whole x, so it multiplies by ${r}.` },
+        { text: `${c} − ${r} × ${s} = ${neg(c - r * s)}. The minus sign of x is not needed`, right: false, why: 'x is −' + s + ', not ' + s + '. The minus sign must stay.', mis: 'M_VALUE_SIGN_DROPPED' },
+        { text: `${c} − ${r} × (−${s}) = ${neg(c - r * s)}. A minus times a minus stays minus`, right: false, why: 'A negative times a negative is a positive, so the term being taken away is positive.', mis: 'M_MINUS_MINUS_STAYS_MINUS' },
+        { text: `${c} − ${r} − ${s} = ${neg(c - r - s)}. Replace x by −${s} and write it straight in`, right: false, why: `${r}x means ${r} times x. The −${s} replaces the whole x, so it multiplies by ${r}.`, mis: 'M_VALUE_WRITTEN_BESIDE' },
       ],
       hints: ['Put the number in a bracket where x was.', 'Work out the multiplication first. Then deal with the minus.'],
       steps: [`${c} − ${r}x with x = −${s}: ${c} − ${r} × (−${s}).`, `${r} × (−${s}) = ${neg(-r * s)}.`, `${c} − (${neg(-r * s)}) = ${c} + ${r * s} = ${c + r * s}.`],

@@ -2518,5 +2518,453 @@
   "help": "In inverse proportion, workers × days is the same in every row.",
   "source": "to be confirmed by a teacher (no source yet)",
   "status": "draft"
+ },
+ "MATH.G8.ALGEBR.ALGEBRAIC_EXPRESSIONS.FACTORISE_HCF.M_COMMON_FACTOR_NOT_HIGHEST": {
+  "skill": "MATH.G8.ALGEBR.ALGEBRAIC_EXPRESSIONS.FACTORISE_HCF",
+  "error": "Takes out a common factor that is not the highest.",
+  "example": {
+   "question": "Factorise 12x + 18 fully",
+   "wrong_answer": "3(4x + 6)",
+   "correct_answer": "6(2x + 3)"
+  },
+  "cause": "Stops at the first common factor found.",
+  "reveals": "The answer 3(4x + 6) as a wrong option, with a reason that names the idea.",
+  "help": "Check the bracket: 4x + 6 still has a factor 2.",
+  "source": "to be confirmed by a teacher (no source yet)",
+  "status": "draft"
+ },
+ "MATH.G8.ALGEBR.ALGEBRAIC_EXPRESSIONS.FACTORISE_HCF.M_INSIDE_COEFFICIENT_GIVEN": {
+  "skill": "MATH.G8.ALGEBR.ALGEBRAIC_EXPRESSIONS.FACTORISE_HCF",
+  "error": "Gives the number left in front of x inside the bracket as the factor outside.",
+  "example": {
+   "question": "12x + 18 = ?(2x + 3). The number outside?",
+   "wrong_answer": "2",
+   "correct_answer": "6"
+  },
+  "cause": "Mixes up the factor with what is left.",
+  "reveals": "The answer 2 as a wrong option, with a reason that names the idea.",
+  "help": "The factor outside multiplies to give 12 and 18.",
+  "source": "to be confirmed by a teacher (no source yet)",
+  "status": "draft"
+ },
+ "MATH.G8.ALGEBR.ALGEBRAIC_EXPRESSIONS.FACTORISE_HCF.M_INSIDE_NUMBER_GIVEN": {
+  "skill": "MATH.G8.ALGEBR.ALGEBRAIC_EXPRESSIONS.FACTORISE_HCF",
+  "error": "Gives the number left in the bracket as the factor outside.",
+  "example": {
+   "question": "12x + 18 = ?(2x + 3). The number outside?",
+   "wrong_answer": "3",
+   "correct_answer": "6"
+  },
+  "cause": "Reads the wrong number from the answer.",
+  "reveals": "The answer 3 as a wrong option, with a reason that names the idea.",
+  "help": "Outside × inside must give back each term.",
+  "source": "to be confirmed by a teacher (no source yet)",
+  "status": "draft"
+ },
+ "MATH.G8.ALGEBR.ALGEBRAIC_EXPRESSIONS.FACTORISE_HCF.M_FACTOR_ONE_TERM_ONLY": {
+  "skill": "MATH.G8.ALGEBR.ALGEBRAIC_EXPRESSIONS.FACTORISE_HCF",
+  "error": "Divides only the first term by the factor.",
+  "example": {
+   "question": "Factorise 6x + 9",
+   "wrong_answer": "3(2x + 9)",
+   "correct_answer": "3(2x + 3)"
+  },
+  "cause": "Forgets the bracket multiplies every term.",
+  "reveals": "The answer 3(2x + 9) as a wrong option, with a reason that names the idea.",
+  "help": "Divide every term by 3.",
+  "source": "to be confirmed by a teacher (no source yet)",
+  "status": "draft"
+ },
+ "MATH.G8.ALGEBR.ALGEBRAIC_EXPRESSIONS.FACTORISE_HCF.M_ONE_LEFT_OUT": {
+  "skill": "MATH.G8.ALGEBR.ALGEBRAIC_EXPRESSIONS.FACTORISE_HCF",
+  "error": "Leaves nothing in place of a term that equals the factor.",
+  "example": {
+   "question": "Factorise 5x + 5",
+   "wrong_answer": "5(x)",
+   "correct_answer": "5(x + 1)"
+  },
+  "cause": "Thinks a term divided by itself leaves nothing.",
+  "reveals": "The answer 5(x) as a wrong option, with a reason that names the idea.",
+  "help": "5 ÷ 5 = 1: write the 1.",
+  "source": "to be confirmed by a teacher (no source yet)",
+  "status": "draft"
+ },
+ "MATH.G8.ALGEBR.ALGEBRAIC_EXPRESSIONS.FACTORISE_LETTERS.M_LETTER_FACTOR_MISSED": {
+  "skill": "MATH.G8.ALGEBR.ALGEBRAIC_EXPRESSIONS.FACTORISE_LETTERS",
+  "error": "Takes out only the number when a letter is common too.",
+  "example": {
+   "question": "Factorise 3x² + 6x fully",
+   "wrong_answer": "3(x² + 2x)",
+   "correct_answer": "3x(x + 2)"
+  },
+  "cause": "Looks for common numbers only.",
+  "reveals": "The answer 3(x² + 2x) as a wrong option, with a reason that names the idea.",
+  "help": "Both terms have an x: take it out too.",
+  "source": "to be confirmed by a teacher (no source yet)",
+  "status": "draft"
+ },
+ "MATH.G8.ALGEBR.ALGEBRAIC_EXPRESSIONS.FACTORISE_LETTERS.M_POWER_NOT_REDUCED": {
+  "skill": "MATH.G8.ALGEBR.ALGEBRAIC_EXPRESSIONS.FACTORISE_LETTERS",
+  "error": "Keeps the full power inside the bracket after taking out a letter.",
+  "example": {
+   "question": "Factorise 3x² + 6x",
+   "wrong_answer": "3x(x² + 2)",
+   "correct_answer": "3x(x + 2)"
+  },
+  "cause": "Does not divide the power.",
+  "reveals": "The answer 3x(x² + 2) as a wrong option, with a reason that names the idea.",
+  "help": "x² ÷ x = x.",
+  "source": "to be confirmed by a teacher (no source yet)",
+  "status": "draft"
+ },
+ "MATH.G8.ALGEBR.ALGEBRAIC_EXPRESSIONS.FACTORISE_LETTERS.M_UNLIKE_TERMS_COMBINED": {
+  "skill": "MATH.G8.ALGEBR.ALGEBRAIC_EXPRESSIONS.FACTORISE_LETTERS",
+  "error": "Adds unlike terms into one before factorising.",
+  "example": {
+   "question": "Simplify 2x + 3y",
+   "wrong_answer": "5xy",
+   "correct_answer": "it cannot be simplified"
+  },
+  "cause": "Adds every number it sees.",
+  "reveals": "The answer 5xy as a wrong option, with a reason that names the idea.",
+  "help": "Only like terms can be added.",
+  "source": "to be confirmed by a teacher (no source yet)",
+  "status": "draft"
+ },
+ "MATH.G8.ALGEBR.ALGEBRAIC_EXPRESSIONS.FACTORISE_LETTERS.M_LETTER_ONE_LEFT_OUT": {
+  "skill": "MATH.G8.ALGEBR.ALGEBRAIC_EXPRESSIONS.FACTORISE_LETTERS",
+  "error": "Leaves nothing for a term that is the factor itself.",
+  "example": {
+   "question": "Factorise x² + x",
+   "wrong_answer": "x(x)",
+   "correct_answer": "x(x + 1)"
+  },
+  "cause": "Thinks x ÷ x leaves nothing.",
+  "reveals": "The answer x(x) as a wrong option, with a reason that names the idea.",
+  "help": "x ÷ x = 1: write the 1.",
+  "source": "to be confirmed by a teacher (no source yet)",
+  "status": "draft"
+ },
+ "MATH.G8.ALGEBR.ALGEBRAIC_EXPRESSIONS.ALG_FRACTION_SIMPLIFY.M_ONLY_X_TERM_DIVIDED": {
+  "skill": "MATH.G8.ALGEBR.ALGEBRAIC_EXPRESSIONS.ALG_FRACTION_SIMPLIFY",
+  "error": "Divides only the letter term of the top by the bottom.",
+  "example": {
+   "question": "Simplify (6x + 9)/3",
+   "wrong_answer": "2x + 9",
+   "correct_answer": "2x + 3"
+  },
+  "cause": "Forgets the bottom divides the whole top.",
+  "reveals": "The answer 2x + 9 as a wrong option, with a reason that names the idea.",
+  "help": "Every part of the top is divided by 3.",
+  "source": "to be confirmed by a teacher (no source yet)",
+  "status": "draft"
+ },
+ "MATH.G8.ALGEBR.ALGEBRAIC_EXPRESSIONS.ALG_FRACTION_SIMPLIFY.M_CANCEL_ACROSS_PLUS": {
+  "skill": "MATH.G8.ALGEBR.ALGEBRAIC_EXPRESSIONS.ALG_FRACTION_SIMPLIFY",
+  "error": "Cancels a number that is only part of a sum on the top.",
+  "example": {
+   "question": "Simplify (x + 3)/3",
+   "wrong_answer": "x",
+   "correct_answer": "it cannot be simplified to x (it is x/3 + 1)"
+  },
+  "cause": "Cancels as if the top were a product.",
+  "reveals": "The answer x as a wrong option, with a reason that names the idea.",
+  "help": "Only common factors cancel; 3 is not a factor of x + 3.",
+  "source": "to be confirmed by a teacher (no source yet)",
+  "status": "draft"
+ },
+ "MATH.G8.ALGEBR.ALGEBRAIC_EXPRESSIONS.ALG_FRACTION_SIMPLIFY.M_CANCEL_LETTER_IN_SUM": {
+  "skill": "MATH.G8.ALGEBR.ALGEBRAIC_EXPRESSIONS.ALG_FRACTION_SIMPLIFY",
+  "error": "Cancels a letter on the top with one on the bottom when the top is a sum.",
+  "example": {
+   "question": "Simplify (x + 2)/x",
+   "wrong_answer": "2",
+   "correct_answer": "1 + 2/x"
+  },
+  "cause": "Crosses out matching letters.",
+  "reveals": "The answer 2 as a wrong option, with a reason that names the idea.",
+  "help": "x is not a factor of the whole top.",
+  "source": "to be confirmed by a teacher (no source yet)",
+  "status": "draft"
+ },
+ "MATH.G8.ALGEBR.ALGEBRAIC_EXPRESSIONS.ALG_FRACTION_SIMPLIFY.M_NOT_FACTORISED_FIRST": {
+  "skill": "MATH.G8.ALGEBR.ALGEBRAIC_EXPRESSIONS.ALG_FRACTION_SIMPLIFY",
+  "error": "Leaves a fraction unsimplified because the common bracket is hidden.",
+  "example": {
+   "question": "Simplify (4x + 8)/(x + 2)",
+   "wrong_answer": "(4x + 8)/(x + 2)",
+   "correct_answer": "4"
+  },
+  "cause": "Does not factorise the top.",
+  "reveals": "The answer (4x + 8)/(x + 2) as a wrong option, with a reason that names the idea.",
+  "help": "4x + 8 = 4(x + 2): now cancel (x + 2).",
+  "source": "to be confirmed by a teacher (no source yet)",
+  "status": "draft"
+ },
+ "MATH.G8.ALGEBR.ALGEBRAIC_EXPRESSIONS.ALG_FRACTION_ADD_SUB.M_ALG_TOPS_BOTTOMS_ADDED": {
+  "skill": "MATH.G8.ALGEBR.ALGEBRAIC_EXPRESSIONS.ALG_FRACTION_ADD_SUB",
+  "error": "Adds tops together and bottoms together.",
+  "example": {
+   "question": "x/2 + x/3",
+   "wrong_answer": "2x/5",
+   "correct_answer": "5x/6"
+  },
+  "cause": "Copies the rule for multiplying fractions.",
+  "reveals": "The answer 2x/5 as a wrong option, with a reason that names the idea.",
+  "help": "Use a common denominator, 6.",
+  "source": "to be confirmed by a teacher (no source yet)",
+  "status": "draft"
+ },
+ "MATH.G8.ALGEBR.ALGEBRAIC_EXPRESSIONS.ALG_FRACTION_ADD_SUB.M_DENOMINATOR_ONLY_CHANGED": {
+  "skill": "MATH.G8.ALGEBR.ALGEBRAIC_EXPRESSIONS.ALG_FRACTION_ADD_SUB",
+  "error": "Changes the bottoms to the common denominator but not the tops.",
+  "example": {
+   "question": "x/2 + x/3",
+   "wrong_answer": "2x/6",
+   "correct_answer": "5x/6"
+  },
+  "cause": "Forgets each top must be multiplied too.",
+  "reveals": "The answer 2x/6 as a wrong option, with a reason that names the idea.",
+  "help": "x/2 = 3x/6 and x/3 = 2x/6.",
+  "source": "to be confirmed by a teacher (no source yet)",
+  "status": "draft"
+ },
+ "MATH.G8.ALGEBR.ALGEBRAIC_EXPRESSIONS.ALG_FRACTION_ADD_SUB.M_ALG_FRACTIONS_NOT_ADDABLE": {
+  "skill": "MATH.G8.ALGEBR.ALGEBRAIC_EXPRESSIONS.ALG_FRACTION_ADD_SUB",
+  "error": "Believes algebraic fractions cannot be added.",
+  "example": {
+   "question": "Can x/2 + x/3 be written as one fraction?",
+   "wrong_answer": "No",
+   "correct_answer": "Yes: 5x/6"
+  },
+  "cause": "Thinks letters stop fractions being added.",
+  "reveals": "The answer No as a wrong option, with a reason that names the idea.",
+  "help": "They add like number fractions once the bottoms match.",
+  "source": "to be confirmed by a teacher (no source yet)",
+  "status": "draft"
+ },
+ "MATH.G8.ALGEBR.ALGEBRAIC_EXPRESSIONS.ALG_FRACTION_ADD_SUB.M_ALG_DENOMINATORS_ADDED": {
+  "skill": "MATH.G8.ALGEBR.ALGEBRAIC_EXPRESSIONS.ALG_FRACTION_ADD_SUB",
+  "error": "Adds the bottom numbers when solving with fractions.",
+  "example": {
+   "question": "x/3 + x/4 = 7",
+   "wrong_answer": "x = 49",
+   "correct_answer": "x = 12"
+  },
+  "cause": "Treats x/3 + x/4 as x/7.",
+  "reveals": "The answer x = 49 as a wrong option, with a reason that names the idea.",
+  "help": "Common denominator 12: 7x/12 = 7.",
+  "source": "to be confirmed by a teacher (no source yet)",
+  "status": "draft"
+ },
+ "MATH.G8.ALGEBR.ALGEBRAIC_EXPRESSIONS.ALG_FRACTION_ADD_SUB.M_ONE_FRACTION_SOLVED": {
+  "skill": "MATH.G8.ALGEBR.ALGEBRAIC_EXPRESSIONS.ALG_FRACTION_ADD_SUB",
+  "error": "Solves using only the first fraction.",
+  "example": {
+   "question": "x/3 + x/4 = 7",
+   "wrong_answer": "x = 21",
+   "correct_answer": "x = 12"
+  },
+  "cause": "Ignores the second term.",
+  "reveals": "The answer x = 21 as a wrong option, with a reason that names the idea.",
+  "help": "Both parts of the shamba count.",
+  "source": "to be confirmed by a teacher (no source yet)",
+  "status": "draft"
+ },
+ "MATH.G8.ALGEBR.ALGEBRAIC_EXPRESSIONS.ALG_FRACTION_ADD_SUB.M_LCM_MULTIPLIED_NOT_DIVIDED": {
+  "skill": "MATH.G8.ALGEBR.ALGEBRAIC_EXPRESSIONS.ALG_FRACTION_ADD_SUB",
+  "error": "Multiplies both sides by the common denominator and stops.",
+  "example": {
+   "question": "x/3 + x/4 = 7",
+   "wrong_answer": "x = 84",
+   "correct_answer": "x = 12"
+  },
+  "cause": "Forgets that 7x is left, not x.",
+  "reveals": "The answer x = 84 as a wrong option, with a reason that names the idea.",
+  "help": "Times 12 gives 4x + 3x = 84, so 7x = 84.",
+  "source": "to be confirmed by a teacher (no source yet)",
+  "status": "draft"
+ },
+ "MATH.G8.ALGEBR.ALGEBRAIC_EXPRESSIONS.ALG_FRACTION_ADD_SUB.M_SUBTRACT_SIGN_NOT_SPREAD": {
+  "skill": "MATH.G8.ALGEBR.ALGEBRAIC_EXPRESSIONS.ALG_FRACTION_ADD_SUB",
+  "error": "Takes away only the first term of a top that is subtracted.",
+  "example": {
+   "question": "x/2 - (x - 1)/3",
+   "wrong_answer": "(x - 2)/6",
+   "correct_answer": "(x + 2)/6"
+  },
+  "cause": "Leaves out the bracket.",
+  "reveals": "The answer (x - 2)/6 as a wrong option, with a reason that names the idea.",
+  "help": "3x - 2(x - 1) = 3x - 2x + 2.",
+  "source": "to be confirmed by a teacher (no source yet)",
+  "status": "draft"
+ },
+ "MATH.G8.ALGEBR.ALGEBRAIC_EXPRESSIONS.SUBSTITUTE_POSITIVE.M_FIXED_TIMES_VARIABLE": {
+  "skill": "MATH.G8.ALGEBR.ALGEBRAIC_EXPRESSIONS.SUBSTITUTE_POSITIVE",
+  "error": "Multiplies the whole expression by the value.",
+  "example": {
+   "question": "F = 50 + 30d; d = 6",
+   "wrong_answer": "480",
+   "correct_answer": "230"
+  },
+  "cause": "Puts the fixed amount and the rate together.",
+  "reveals": "The answer 480 as a wrong option, with a reason that names the idea.",
+  "help": "Only the 30d part uses the distance.",
+  "source": "to be confirmed by a teacher (no source yet)",
+  "status": "draft"
+ },
+ "MATH.G8.ALGEBR.ALGEBRAIC_EXPRESSIONS.SUBSTITUTE_POSITIVE.M_FIXED_PART_DROPPED": {
+  "skill": "MATH.G8.ALGEBR.ALGEBRAIC_EXPRESSIONS.SUBSTITUTE_POSITIVE",
+  "error": "Leaves out the fixed charge.",
+  "example": {
+   "question": "F = 50 + 30d; d = 6",
+   "wrong_answer": "180",
+   "correct_answer": "230"
+  },
+  "cause": "Works only with the term that has the letter.",
+  "reveals": "The answer 180 as a wrong option, with a reason that names the idea.",
+  "help": "Add the fixed 50.",
+  "source": "to be confirmed by a teacher (no source yet)",
+  "status": "draft"
+ },
+ "MATH.G8.ALGEBR.ALGEBRAIC_EXPRESSIONS.SUBSTITUTE_POSITIVE.M_WRONG_TERM_MULTIPLIED": {
+  "skill": "MATH.G8.ALGEBR.ALGEBRAIC_EXPRESSIONS.SUBSTITUTE_POSITIVE",
+  "error": "Multiplies the fixed amount by the value instead of the rate.",
+  "example": {
+   "question": "F = 50 + 30d; d = 6",
+   "wrong_answer": "330",
+   "correct_answer": "230"
+  },
+  "cause": "Attaches d to the first number.",
+  "reveals": "The answer 330 as a wrong option, with a reason that names the idea.",
+  "help": "d belongs to the 30.",
+  "source": "to be confirmed by a teacher (no source yet)",
+  "status": "draft"
+ },
+ "MATH.G8.ALGEBR.ALGEBRAIC_EXPRESSIONS.SUBSTITUTE_POSITIVE.M_COEFF_ADDED_NOT_MULTIPLIED": {
+  "skill": "MATH.G8.ALGEBR.ALGEBRAIC_EXPRESSIONS.SUBSTITUTE_POSITIVE",
+  "error": "Adds the coefficient and the value, or writes them side by side.",
+  "example": {
+   "question": "3d when d = 4",
+   "wrong_answer": "7 or 34",
+   "correct_answer": "12"
+  },
+  "cause": "Does not read 3d as 3 × d.",
+  "reveals": "The answer 7 or 34 as a wrong option, with a reason that names the idea.",
+  "help": "A number next to a letter multiplies it.",
+  "source": "to be confirmed by a teacher (no source yet)",
+  "status": "draft"
+ },
+ "MATH.G8.ALGEBR.ALGEBRAIC_EXPRESSIONS.SUBSTITUTE_POSITIVE.M_BRACKET_ORDER_WRONG": {
+  "skill": "MATH.G8.ALGEBR.ALGEBRAIC_EXPRESSIONS.SUBSTITUTE_POSITIVE",
+  "error": "Adds before multiplying when evaluating.",
+  "example": {
+   "question": "2 + 3x when x = 4",
+   "wrong_answer": "20",
+   "correct_answer": "14"
+  },
+  "cause": "Works left to right.",
+  "reveals": "The answer 20 as a wrong option, with a reason that names the idea.",
+  "help": "Multiply first: 3 × 4, then add 2.",
+  "source": "to be confirmed by a teacher (no source yet)",
+  "status": "draft"
+ },
+ "MATH.G8.ALGEBR.ALGEBRAIC_EXPRESSIONS.SUBSTITUTE_NEGATIVE.M_NEGATIVE_SQUARED_NEGATIVE": {
+  "skill": "MATH.G8.ALGEBR.ALGEBRAIC_EXPRESSIONS.SUBSTITUTE_NEGATIVE",
+  "error": "Gives a negative answer for a negative number squared.",
+  "example": {
+   "question": "m² when m = -3",
+   "wrong_answer": "-9",
+   "correct_answer": "9"
+  },
+  "cause": "Keeps the minus sign.",
+  "reveals": "The answer -9 as a wrong option, with a reason that names the idea.",
+  "help": "(-3) × (-3) = 9.",
+  "source": "to be confirmed by a teacher (no source yet)",
+  "status": "draft"
+ },
+ "MATH.G8.ALGEBR.ALGEBRAIC_EXPRESSIONS.SUBSTITUTE_NEGATIVE.M_SQUARE_AS_TIMES_TWO": {
+  "skill": "MATH.G8.ALGEBR.ALGEBRAIC_EXPRESSIONS.SUBSTITUTE_NEGATIVE",
+  "error": "Treats m² as 2 × m.",
+  "example": {
+   "question": "m² when m = -3",
+   "wrong_answer": "-6",
+   "correct_answer": "9"
+  },
+  "cause": "Reads the small 2 as times 2.",
+  "reveals": "The answer -6 as a wrong option, with a reason that names the idea.",
+  "help": "m² means m × m.",
+  "source": "to be confirmed by a teacher (no source yet)",
+  "status": "draft"
+ },
+ "MATH.G8.ALGEBR.ALGEBRAIC_EXPRESSIONS.SUBSTITUTE_NEGATIVE.M_COEFFICIENT_SQUARED": {
+  "skill": "MATH.G8.ALGEBR.ALGEBRAIC_EXPRESSIONS.SUBSTITUTE_NEGATIVE",
+  "error": "Squares the coefficient as well as the letter.",
+  "example": {
+   "question": "2m² when m = -3",
+   "wrong_answer": "36",
+   "correct_answer": "18"
+  },
+  "cause": "Squares (2m).",
+  "reveals": "The answer 36 as a wrong option, with a reason that names the idea.",
+  "help": "Only m is squared: 2 × 9.",
+  "source": "to be confirmed by a teacher (no source yet)",
+  "status": "draft"
+ },
+ "MATH.G8.ALGEBR.ALGEBRAIC_EXPRESSIONS.SUBSTITUTE_NEGATIVE.M_MINUS_SIGN_DROPPED": {
+  "skill": "MATH.G8.ALGEBR.ALGEBRAIC_EXPRESSIONS.SUBSTITUTE_NEGATIVE",
+  "error": "Adds a term that has a minus sign in front.",
+  "example": {
+   "question": "2m² - 3n when m = -3, n = 4",
+   "wrong_answer": "30",
+   "correct_answer": "6"
+  },
+  "cause": "Ignores the operation sign.",
+  "reveals": "The answer 30 as a wrong option, with a reason that names the idea.",
+  "help": "The sign in front of 3n is a minus.",
+  "source": "to be confirmed by a teacher (no source yet)",
+  "status": "draft"
+ },
+ "MATH.G8.ALGEBR.ALGEBRAIC_EXPRESSIONS.SUBSTITUTE_NEGATIVE.M_MINUS_MINUS_STAYS_MINUS": {
+  "skill": "MATH.G8.ALGEBR.ALGEBRAIC_EXPRESSIONS.SUBSTITUTE_NEGATIVE",
+  "error": "Believes taking away a negative product keeps it negative.",
+  "example": {
+   "question": "10 - 4x when x = -2",
+   "wrong_answer": "2",
+   "correct_answer": "18"
+  },
+  "cause": "Thinks \"minus times minus stays minus\".",
+  "reveals": "The answer 2 as a wrong option, with a reason that names the idea.",
+  "help": "4 × (-2) = -8; 10 - (-8) = 18.",
+  "source": "to be confirmed by a teacher (no source yet)",
+  "status": "draft"
+ },
+ "MATH.G8.ALGEBR.ALGEBRAIC_EXPRESSIONS.SUBSTITUTE_NEGATIVE.M_VALUE_SIGN_DROPPED": {
+  "skill": "MATH.G8.ALGEBR.ALGEBRAIC_EXPRESSIONS.SUBSTITUTE_NEGATIVE",
+  "error": "Substitutes the size of a negative value and drops its minus sign.",
+  "example": {
+   "question": "10 - 4x when x = -2",
+   "wrong_answer": "2",
+   "correct_answer": "18"
+  },
+  "cause": "Thinks the sign is not part of the value.",
+  "reveals": "The answer 2 as a wrong option, with a reason that names the idea.",
+  "help": "x is -2, not 2: keep the sign in a bracket.",
+  "source": "to be confirmed by a teacher (no source yet)",
+  "status": "draft"
+ },
+ "MATH.G8.ALGEBR.ALGEBRAIC_EXPRESSIONS.SUBSTITUTE_NEGATIVE.M_VALUE_WRITTEN_BESIDE": {
+  "skill": "MATH.G8.ALGEBR.ALGEBRAIC_EXPRESSIONS.SUBSTITUTE_NEGATIVE",
+  "error": "Writes the negative value in place of x without multiplying.",
+  "example": {
+   "question": "10 - 4x when x = -2",
+   "wrong_answer": "10 - 4 - 2 = 4",
+   "correct_answer": "18"
+  },
+  "cause": "Replaces x by the digits and the sign.",
+  "reveals": "The answer 10 - 4 - 2 = 4 as a wrong option, with a reason that names the idea.",
+  "help": "Put the value in brackets: 4 × (-2).",
+  "source": "to be confirmed by a teacher (no source yet)",
+  "status": "draft"
  }
 }
