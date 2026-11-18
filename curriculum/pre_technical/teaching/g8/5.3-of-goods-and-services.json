@@ -1,0 +1,99 @@
+{
+ "sub_strand": "PRE_.G8.ENTREP.OF_GOODS_AND_SERVICES",
+ "title": "of Goods and Services",
+ "status": "draft: written 18 Nov 2026 offline for Grade 8 Pre-Technical Studies; not yet checked by a Pre-Technical Studies teacher; safety lines marked SAFETY in the library to confirm first; not loaded by the live tutor",
+ "sources": [],
+ "notes": "",
+ "skills": [
+  {
+   "skill": "PRET.G8.ENTREP.OF_GOODS_AND_SERVICES.MARKETING",
+   "key_step": "The learner explains why marketing matters (finds and keeps customers, informs them, increases sales), names sources of market information (customers, surveys, competitors, the media, trade fairs), the factors in choosing a market (demand, ability to pay, location and access, competition, cost), suitable markets for goods and services, and marketing tools (posters, signboards, social media, radio, samples, word of mouth).",
+   "floor": {
+    "prerequisite": "Knows how businesses keep records.",
+    "question": "What does a sales book show?",
+    "answer": "What was sold and for how much"
+   },
+   "representations": [
+    "a marketing web",
+    "a short survey sheet",
+    "a tools and cost chart"
+   ],
+   "steps": [
+    "Say why the business markets.",
+    "Find information about customers.",
+    "Choose the market.",
+    "Pick a tool and say why."
+   ],
+   "contexts": [
+    "a new bakery in the market",
+    "school uniform sellers",
+    "a youth group selling crafts online"
+   ],
+   "board": [
+    {
+     "beat": "write",
+     "do": "Write: \"a new bakery near a school\"."
+    },
+    {
+     "beat": "point",
+     "do": "Point at \"near a school\".",
+     "say": "Who are the customers, and how will the bakery reach them?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for the learner to name learners and parents; a poster or social media."
+    },
+    {
+     "beat": "reveal",
+     "do": "Fill in the marketing web."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "PRET.G8.ENTREP.OF_GOODS_AND_SERVICES.MARKETING.M_PT8_MK_SELLING_ONLY",
+     "listen_for": [
+      "Only takes the money at the till"
+     ],
+     "ask": "What does marketing do?",
+     "repair": "Trace how a customer hears of a new shop (poster, friend, radio) before buying: that is marketing."
+    },
+    {
+     "code": "PRET.G8.ENTREP.OF_GOODS_AND_SERVICES.MARKETING.M_PT8_MK_INFO",
+     "listen_for": [
+      "Make what the owner likes best"
+     ],
+     "ask": "What is the most reliable way for a new bakery to find out what customers want?",
+     "repair": "Run a short class survey on snacks; compare the result with one person's guess."
+    },
+    {
+     "code": "PRET.G8.ENTREP.OF_GOODS_AND_SERVICES.MARKETING.M_PT8_MK_FACTOR",
+     "listen_for": [
+      "The seller's favourite town"
+     ],
+     "ask": "Which factor matters most when choosing where to sell school uniforms?",
+     "repair": "List what a market needs: customers who want the goods and can pay, access, competition, cost of reaching it."
+    },
+    {
+     "code": "PRET.G8.ENTREP.OF_GOODS_AND_SERVICES.MARKETING.M_PT8_MK_TOOL",
+     "listen_for": [
+      "A cash register"
+     ],
+     "ask": "Which is a marketing tool a small shop can use?",
+     "repair": "Sort shop items into equipment (till, shelves) and marketing tools (posters, signboards, social media pages, radio adverts, samples)."
+    }
+   ],
+   "checks": [
+    {
+     "question": "Name a source of market information.",
+     "answer": "Asking customers (a survey)",
+     "shows": "information"
+    },
+    {
+     "question": "Name a marketing tool.",
+     "answer": "A poster (radio advert, social media)",
+     "shows": "tools"
+    }
+   ]
+  }
+ ]
+}

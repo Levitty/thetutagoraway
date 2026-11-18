@@ -1,0 +1,99 @@
+{
+ "sub_strand": "PRE_.G8.ENTREP.DISTRIBUTION_OF_GOODS_AN",
+ "title": "Distribution of Goods and Services",
+ "status": "draft: written 18 Nov 2026 offline for Grade 8 Pre-Technical Studies; not yet checked by a Pre-Technical Studies teacher; safety lines marked SAFETY in the library to confirm first; not loaded by the live tutor",
+ "sources": [],
+ "notes": "",
+ "skills": [
+  {
+   "skill": "PRET.G8.ENTREP.DISTRIBUTION_OF_GOODS_AN.DISTRIBUTION",
+   "key_step": "The learner explains the role of intermediaries (wholesalers buy in bulk and break bulk, retailers sell near customers, agents link buyers and sellers, they store, transport and give credit), illustrates channels (producer → consumer; producer → retailer → consumer; producer → wholesaler → retailer → consumer; with agents), and analyses ethics in distribution (honest weights, fair prices, no hoarding, no expired goods); the learner's channel diagram is marked with the rubric.",
+   "floor": {
+    "prerequisite": "Knows what marketing does.",
+    "question": "What does marketing do for a business?",
+    "answer": "Finds customers and tells them about goods"
+   },
+   "representations": [
+    "channel diagrams with arrows",
+    "a maize journey picture strip",
+    "ethical and unethical cards"
+   ],
+   "steps": [
+    "Name the intermediaries.",
+    "Draw the channel.",
+    "Say what each intermediary adds.",
+    "Judge a practice as ethical or not."
+   ],
+   "contexts": [
+    "maize from a farm to a kiosk",
+    "an M-Pesa agent",
+    "a trader with a faulty weighing scale"
+   ],
+   "board": [
+    {
+     "beat": "write",
+     "do": "Draw: producer → wholesaler → retailer → consumer."
+    },
+    {
+     "beat": "point",
+     "do": "Point at the wholesaler.",
+     "say": "What does the wholesaler do?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for the learner to say buys in bulk, sells to retailers."
+    },
+    {
+     "beat": "reveal",
+     "do": "Draw the shorter channels below."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "PRET.G8.ENTREP.DISTRIBUTION_OF_GOODS_AN.DISTRIBUTION.M_PT8_DS_MIDDLEMAN_BAD",
+     "listen_for": [
+      "Nothing useful"
+     ],
+     "ask": "What does a wholesaler do?",
+     "repair": "Follow a bag of maize from a farm to a shop: who stores, transports, breaks bulk and sells it near you?"
+    },
+    {
+     "code": "PRET.G8.ENTREP.DISTRIBUTION_OF_GOODS_AN.DISTRIBUTION.M_PT8_DS_CHANNEL",
+     "listen_for": [
+      "Producer to consumer"
+     ],
+     "ask": "Which is the longest channel?",
+     "repair": "Draw each channel with arrows and count the steps; the most intermediaries make the longest channel."
+    },
+    {
+     "code": "PRET.G8.ENTREP.DISTRIBUTION_OF_GOODS_AN.DISTRIBUTION.M_PT8_DS_ETHICS",
+     "listen_for": [
+      "Hiding goods to raise the price"
+     ],
+     "ask": "Which is ethical in distribution?",
+     "repair": "Discuss the customer's side of hoarding and false weights; customers leave and the law punishes it."
+    },
+    {
+     "code": "PRET.G8.ENTREP.DISTRIBUTION_OF_GOODS_AN.DISTRIBUTION.M_PT8_DS_SERVICE_AGENT",
+     "listen_for": [
+      "None; services always go straight to the customer"
+     ],
+     "ask": "Which is an intermediary for a service?",
+     "repair": "List services the learner's family uses and who delivers them: agents, booking offices, travel agents."
+    }
+   ],
+   "checks": [
+    {
+     "question": "What does a wholesaler do?",
+     "answer": "Buys in bulk and sells to retailers",
+     "shows": "intermediaries"
+    },
+    {
+     "question": "Is hiding goods to raise the price ethical?",
+     "answer": "No",
+     "shows": "ethics"
+    }
+   ]
+  }
+ ]
+}

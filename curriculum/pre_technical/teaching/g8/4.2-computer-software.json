@@ -1,0 +1,99 @@
+{
+ "sub_strand": "PRE_.G8.TOOLS_.COMPUTER_SOFTWARE",
+ "title": "Computer Software",
+ "status": "draft: written 18 Nov 2026 offline for Grade 8 Pre-Technical Studies; not yet checked by a Pre-Technical Studies teacher; safety lines marked SAFETY in the library to confirm first; not loaded by the live tutor",
+ "sources": [],
+ "notes": "",
+ "skills": [
+  {
+   "skill": "PRET.G8.TOOLS_.COMPUTER_SOFTWARE.SOFTWARE",
+   "key_step": "The learner identifies categories of software (system software: operating systems and utilities such as antivirus; application software: word processors, spreadsheets, presentations, databases, browsers) and explains the functions of application software in the workplace; using software for a task is marked with the rubric.",
+   "floor": {
+    "prerequisite": "Knows hardware devices.",
+    "question": "Is a keyboard input or output?",
+    "answer": "Input"
+   },
+   "representations": [
+    "a software tree: system and application",
+    "program icons to sort",
+    "a task and application chart"
+   ],
+   "steps": [
+    "Tell hardware from software.",
+    "Sort system and application.",
+    "Match an application to a task.",
+    "Use it for a short task."
+   ],
+   "contexts": [
+    "the school office: letters, fee records",
+    "a shop keeping sales in a spreadsheet",
+    "a presentation at a meeting"
+   ],
+   "board": [
+    {
+     "beat": "write",
+     "do": "Draw a tree: software → system, application."
+    },
+    {
+     "beat": "point",
+     "do": "Point at the card \"spreadsheet\".",
+     "say": "Where does it go, and what job does it do?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for the learner to say application, calculations in tables."
+    },
+    {
+     "beat": "reveal",
+     "do": "Sort the other cards."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "PRET.G8.TOOLS_.COMPUTER_SOFTWARE.SOFTWARE.M_PT8_SW_TOUCH",
+     "listen_for": [
+      "Software"
+     ],
+     "ask": "Which can you touch?",
+     "repair": "Point to the screen (hardware) and the program on it (software); you can touch the screen, not the program."
+    },
+    {
+     "code": "PRET.G8.TOOLS_.COMPUTER_SOFTWARE.SOFTWARE.M_PT8_SW_OS",
+     "listen_for": [
+      "A word processor"
+     ],
+     "ask": "Which is an operating system?",
+     "repair": "List programs: Windows, Android (run the computer); Word, Excel (do jobs for the user)."
+    },
+    {
+     "code": "PRET.G8.TOOLS_.COMPUTER_SOFTWARE.SOFTWARE.M_PT8_SW_APP",
+     "listen_for": [
+      "A word processor"
+     ],
+     "ask": "Which application is used for calculations in a table?",
+     "repair": "Try 12 + 8 in a spreadsheet cell with a formula; a word processor does not calculate."
+    },
+    {
+     "code": "PRET.G8.TOOLS_.COMPUTER_SOFTWARE.SOFTWARE.M_PT8_SW_UTILITY",
+     "listen_for": [
+      "Application software, like a game"
+     ],
+     "ask": "An antivirus program belongs to which category of software?",
+     "repair": "Sort programs by who they serve: the user's jobs (applications) or the computer's care (utilities, operating system)."
+    }
+   ],
+   "checks": [
+    {
+     "question": "Which can you touch: hardware or software?",
+     "answer": "Hardware",
+     "shows": "meaning"
+    },
+    {
+     "question": "Which application does calculations in a table?",
+     "answer": "A spreadsheet",
+     "shows": "application"
+    }
+   ]
+  }
+ ]
+}

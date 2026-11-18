@@ -2,7 +2,7 @@
 // Outcomes are official (word for word). Skills are proposed, awaiting teacher review.
 // A family carries `cskill` (a key of SKILLS), `outcome` (its official outcome) and `skill` (the same as cskill:
 // these skills are not in the practice engine's Maths graph). MIS_FEEDBACK maps a short misconception code to the line a child reads.
-export const MAP_SOURCE = {"source":"curriculum/pre_technical/g8.json","status":"outcomes from KICD's text, word for word; skills, prerequisites and misconceptions proposed (authored offline, 13 Nov 2026), awaiting teacher review"};
+export const MAP_SOURCE = {"source":"curriculum/pre_technical/g8.json","status":"outcomes from KICD's text, word for word; skills and prerequisites proposed, misconceptions draft, teaching pack draft; first pass 13 Nov 2026, deepened to the Grade 5 Maths standard on 18 Nov 2026 (two prerequisites and four misconceptions per skill; practical outcomes have a knowledge skill and are marked with the rubric); written offline by Claude, awaiting a Pre-Technical Studies teacher's review, safety lines first. Rubrics from KICD, untouched."};
 export const SUBSTRANDS = {
  "PRE_.G8.FOUNDA.FIRE_SAFETY": {
   "name": "Fire Safety",
@@ -403,7 +403,8 @@ export const SKILLS = {
   "mis": [
    "M_PT8_FC_NATURE_ONLY",
    "M_PT8_FC_WIRING",
-   "M_PT8_FC_FUEL"
+   "M_PT8_FC_FUEL",
+   "M_PT8_FC_BURN_WIND"
   ]
  },
  "PRET.G8.FOUNDA.FIRE_SAFETY.FIRE_PREVENT": {
@@ -419,7 +420,26 @@ export const SKILLS = {
   "mis": [
    "M_PT8_FP_MATCHES",
    "M_PT8_FP_EXITS",
-   "M_PT8_FP_UNATTENDED"
+   "M_PT8_FP_UNATTENDED",
+   "M_PT8_FP_OVERLOAD"
+  ]
+ },
+ "PRET.G8.FOUNDA.FIRE_SAFETY.FIRE_EXTINGUISH": {
+  "name": "Choose the right way to put out a fire: cooling, smothering or starving; the right extinguisher; when to raise the alarm and get out",
+  "sub": "PRE_.G8.FOUNDA.FIRE_SAFETY",
+  "outcome": "PRE_.G8.FOUNDA.FIRE_SAFETY.c",
+  "outcomes": [
+   "PRE_.G8.FOUNDA.FIRE_SAFETY.c"
+  ],
+  "pre": [
+   "PRET.G8.FOUNDA.FIRE_SAFETY.FIRE_CAUSES"
+  ],
+  "mis": [
+   "M_PT8_FE_WATER_OIL",
+   "M_PT8_FE_WATER_ELEC",
+   "M_PT8_FE_AIM_TOP",
+   "M_PT8_FE_RUN",
+   "M_PT8_FE_FIGHT_FIRST"
   ]
  },
  "PRET.G8.FOUNDA.DATA_SAFETY.DATA_THREATS": {
@@ -434,7 +454,8 @@ export const SKILLS = {
   "mis": [
    "M_PT8_DT_NOT_IMPORTANT",
    "M_PT8_DT_VIRUS_ONLY",
-   "M_PT8_DT_THEFT"
+   "M_PT8_DT_THEFT",
+   "M_PT8_DT_POWER"
   ]
  },
  "PRET.G8.FOUNDA.DATA_SAFETY.DATA_PROTECT": {
@@ -442,7 +463,8 @@ export const SKILLS = {
   "sub": "PRE_.G8.FOUNDA.DATA_SAFETY",
   "outcome": "PRE_.G8.FOUNDA.DATA_SAFETY.c",
   "outcomes": [
-   "PRE_.G8.FOUNDA.DATA_SAFETY.c"
+   "PRE_.G8.FOUNDA.DATA_SAFETY.c",
+   "PRE_.G8.FOUNDA.DATA_SAFETY.d"
   ],
   "pre": [
    "PRET.G8.FOUNDA.DATA_SAFETY.DATA_THREATS"
@@ -450,7 +472,8 @@ export const SKILLS = {
   "mis": [
    "M_PT8_DP_PASSWORD_SHARE",
    "M_PT8_DP_BACKUP",
-   "M_PT8_DP_UNKNOWN_LINK"
+   "M_PT8_DP_UNKNOWN_LINK",
+   "M_PT8_DP_WEAK_PW"
   ]
  },
  "PRET.G8.COMMUN.PLANE_GEOMETRY.DRAW_INSTRUMENTS": {
@@ -464,7 +487,8 @@ export const SKILLS = {
   "mis": [
    "M_PT8_DI_TOOL_MIX",
    "M_PT8_DI_TSQUARE",
-   "M_PT8_DI_PROTRACTOR"
+   "M_PT8_DI_PROTRACTOR",
+   "M_PT8_DI_SET_SQUARE"
   ]
  },
  "PRET.G8.COMMUN.PLANE_GEOMETRY.DRAW_LAYOUT": {
@@ -480,7 +504,25 @@ export const SKILLS = {
   "mis": [
    "M_PT8_DL_TITLE_TOP",
    "M_PT8_DL_NO_BORDER",
-   "M_PT8_DL_A4"
+   "M_PT8_DL_A4",
+   "M_PT8_DL_TSQUARE_EDGE"
+  ]
+ },
+ "PRET.G8.COMMUN.PLANE_GEOMETRY.GEOM_CONSTRUCT": {
+  "name": "Give the construction steps for combined shapes: bisecting a line, constructing 60 and 90 degree angles, a hexagon in a circle, and a slot with semicircular ends",
+  "sub": "PRE_.G8.COMMUN.PLANE_GEOMETRY",
+  "outcome": "PRE_.G8.COMMUN.PLANE_GEOMETRY.c",
+  "outcomes": [
+   "PRE_.G8.COMMUN.PLANE_GEOMETRY.c"
+  ],
+  "pre": [
+   "PRET.G8.COMMUN.PLANE_GEOMETRY.DRAW_INSTRUMENTS"
+  ],
+  "mis": [
+   "M_PT8_GC_HEX_SIDE",
+   "M_PT8_GC_BISECT_SHORT",
+   "M_PT8_GC_SLOT_RADIUS",
+   "M_PT8_GC_PROTRACTOR"
   ]
  },
  "PRET.G8.COMMUN.DIMENSIONING.DIM_TYPES": {
@@ -488,7 +530,8 @@ export const SKILLS = {
   "sub": "PRE_.G8.COMMUN.DIMENSIONING",
   "outcome": "PRE_.G8.COMMUN.DIMENSIONING.a",
   "outcomes": [
-   "PRE_.G8.COMMUN.DIMENSIONING.a"
+   "PRE_.G8.COMMUN.DIMENSIONING.a",
+   "PRE_.G8.COMMUN.DIMENSIONING.b"
   ],
   "pre": [
    "PRET.G8.COMMUN.PLANE_GEOMETRY.DRAW_INSTRUMENTS"
@@ -496,7 +539,9 @@ export const SKILLS = {
   "mis": [
    "M_PT8_DM_LINE_MIX",
    "M_PT8_DM_UNITS",
-   "M_PT8_DM_OBJECT_LINE"
+   "M_PT8_DM_OBJECT_LINE",
+   "M_PT8_DM_TOUCH",
+   "M_PT8_DM_CHAIN_PARALLEL"
   ]
  },
  "PRET.G8.COMMUN.DIMENSIONING.DIM_READ": {
@@ -512,7 +557,8 @@ export const SKILLS = {
   "mis": [
    "M_PT8_DR_ADD",
    "M_PT8_DR_DIAMETER",
-   "M_PT8_DR_UNIT"
+   "M_PT8_DR_UNIT",
+   "M_PT8_DR_MEASURE_PAPER"
   ]
  },
  "PRET.G8.COMMUN.PLAIN_SCALE_DRAWING.PLAIN_SCALE": {
@@ -529,7 +575,26 @@ export const SKILLS = {
   "mis": [
    "M_PT8_SC_INVERT",
    "M_PT8_SC_CALC",
-   "M_PT8_SC_ENLARGE"
+   "M_PT8_SC_ENLARGE",
+   "M_PT8_SC_DIVISIONS"
+  ]
+ },
+ "PRET.G8.COMMUN.PLAIN_SCALE_DRAWING.SCALE_CONVERT": {
+  "name": "Work out drawing sizes from real sizes for a given scale, and choose a scale that fits the sheet",
+  "sub": "PRE_.G8.COMMUN.PLAIN_SCALE_DRAWING",
+  "outcome": "PRE_.G8.COMMUN.PLAIN_SCALE_DRAWING.c",
+  "outcomes": [
+   "PRE_.G8.COMMUN.PLAIN_SCALE_DRAWING.c"
+  ],
+  "pre": [
+   "PRET.G8.COMMUN.PLAIN_SCALE_DRAWING.PLAIN_SCALE",
+   "PRET.G8.COMMUN.PLANE_GEOMETRY.DRAW_LAYOUT"
+  ],
+  "mis": [
+   "M_PT8_SV_UNITS",
+   "M_PT8_SV_MULTIPLY",
+   "M_PT8_SV_ENLARGE",
+   "M_PT8_SV_FIT"
   ]
  },
  "PRET.G8.COMMUN.VISUAL_PROGRAMMING.VISUAL_PROG": {
@@ -544,7 +609,25 @@ export const SKILLS = {
   "mis": [
    "M_PT8_VP_TEXT",
    "M_PT8_VP_TOOL",
-   "M_PT8_VP_LOOP"
+   "M_PT8_VP_LOOP",
+   "M_PT8_VP_SPRITE"
+  ]
+ },
+ "PRET.G8.COMMUN.VISUAL_PROGRAMMING.VP_SEQUENCE": {
+  "name": "Build and read block instructions that solve a problem: order, events, loops and if-blocks in a visual programming application",
+  "sub": "PRE_.G8.COMMUN.VISUAL_PROGRAMMING",
+  "outcome": "PRE_.G8.COMMUN.VISUAL_PROGRAMMING.c",
+  "outcomes": [
+   "PRE_.G8.COMMUN.VISUAL_PROGRAMMING.c"
+  ],
+  "pre": [
+   "PRET.G8.COMMUN.VISUAL_PROGRAMMING.VISUAL_PROG"
+  ],
+  "mis": [
+   "M_PT8_VS_ORDER",
+   "M_PT8_VS_LOOP",
+   "M_PT8_VS_NO_EVENT",
+   "M_PT8_VS_IF_ALWAYS"
   ]
  },
  "PRET.G8.MATERI.COMPOSITE_MATERIALS.COMPOSITE": {
@@ -560,7 +643,8 @@ export const SKILLS = {
   "mis": [
    "M_PT8_CM_SINGLE",
    "M_PT8_CM_PLYWOOD",
-   "M_PT8_CM_USE"
+   "M_PT8_CM_USE",
+   "M_PT8_CM_STEEL_WEIGHT"
   ]
  },
  "PRET.G8.MATERI.CERAMIC_MATERIALS.CERAMIC": {
@@ -576,7 +660,8 @@ export const SKILLS = {
   "mis": [
    "M_PT8_CR_BRITTLE",
    "M_PT8_CR_CONDUCT",
-   "M_PT8_CR_METAL"
+   "M_PT8_CR_METAL",
+   "M_PT8_CR_SUN_DRY"
   ]
  },
  "PRET.G8.TOOLS_.CUTTING_TOOLS.CUT_TOOLS": {
@@ -592,7 +677,26 @@ export const SKILLS = {
   "mis": [
    "M_PT8_CT_WOOD_METAL",
    "M_PT8_CT_PLANE",
-   "M_PT8_CT_BLUNT"
+   "M_PT8_CT_BLUNT",
+   "M_PT8_CT_RIP_CROSS"
+  ]
+ },
+ "PRET.G8.TOOLS_.CUTTING_TOOLS.CUT_USE": {
+  "name": "Give the safe way to use cutting tools: hold the work in a vice or clamp, cut away from the body, fit the blade the right way, start a cut gently, carry tools safely",
+  "sub": "PRE_.G8.TOOLS_.CUTTING_TOOLS",
+  "outcome": "PRE_.G8.TOOLS_.CUTTING_TOOLS.c",
+  "outcomes": [
+   "PRE_.G8.TOOLS_.CUTTING_TOOLS.c"
+  ],
+  "pre": [
+   "PRET.G8.TOOLS_.CUTTING_TOOLS.CUT_TOOLS"
+  ],
+  "mis": [
+   "M_PT8_CU_TOWARDS",
+   "M_PT8_CU_HAND_HOLD",
+   "M_PT8_CU_BLADE_BACK",
+   "M_PT8_CU_PRESS_HARD",
+   "M_PT8_CU_CARRY"
   ]
  },
  "PRET.G8.TOOLS_.COMPUTER_SOFTWARE.SOFTWARE": {
@@ -601,13 +705,15 @@ export const SKILLS = {
   "outcome": "PRE_.G8.TOOLS_.COMPUTER_SOFTWARE.a",
   "outcomes": [
    "PRE_.G8.TOOLS_.COMPUTER_SOFTWARE.a",
-   "PRE_.G8.TOOLS_.COMPUTER_SOFTWARE.b"
+   "PRE_.G8.TOOLS_.COMPUTER_SOFTWARE.b",
+   "PRE_.G8.TOOLS_.COMPUTER_SOFTWARE.c"
   ],
   "pre": [],
   "mis": [
    "M_PT8_SW_TOUCH",
    "M_PT8_SW_OS",
-   "M_PT8_SW_APP"
+   "M_PT8_SW_APP",
+   "M_PT8_SW_UTILITY"
   ]
  },
  "PRET.G8.ENTREP.BOOKKEEPING.BOOKKEEPING": {
@@ -622,7 +728,25 @@ export const SKILLS = {
   "mis": [
    "M_PT8_BK_BIG_ONLY",
    "M_PT8_BK_ASSET",
-   "M_PT8_BK_CASH"
+   "M_PT8_BK_CASH",
+   "M_PT8_BK_DRAWINGS"
+  ]
+ },
+ "PRET.G8.ENTREP.BOOKKEEPING.FIN_STATEMENTS": {
+  "name": "Prepare simple financial statements: the cash balance, gross and net profit, and assets = capital + liabilities",
+  "sub": "PRE_.G8.ENTREP.BOOKKEEPING",
+  "outcome": "PRE_.G8.ENTREP.BOOKKEEPING.c",
+  "outcomes": [
+   "PRE_.G8.ENTREP.BOOKKEEPING.c"
+  ],
+  "pre": [
+   "PRET.G8.ENTREP.BOOKKEEPING.BOOKKEEPING"
+  ],
+  "mis": [
+   "M_PT8_FS_SALES_PROFIT",
+   "M_PT8_FS_GROSS_NET",
+   "M_PT8_FS_CAPITAL_ADD",
+   "M_PT8_FS_CASH_ADD"
   ]
  },
  "PRET.G8.ENTREP.INCOME_AND_BUDGETING.BUDGET": {
@@ -640,7 +764,25 @@ export const SKILLS = {
   "mis": [
    "M_PT8_BU_INCOME",
    "M_PT8_BU_NO_NEED",
-   "M_PT8_BU_UNETHICAL"
+   "M_PT8_BU_UNETHICAL",
+   "M_PT8_BU_LOAN_INCOME"
+  ]
+ },
+ "PRET.G8.ENTREP.INCOME_AND_BUDGETING.BUDGET_PREPARE": {
+  "name": "Prepare a simple personal budget: income, needs before wants, planned saving, and the balance as surplus or deficit",
+  "sub": "PRE_.G8.ENTREP.INCOME_AND_BUDGETING",
+  "outcome": "PRE_.G8.ENTREP.INCOME_AND_BUDGETING.c",
+  "outcomes": [
+   "PRE_.G8.ENTREP.INCOME_AND_BUDGETING.c"
+  ],
+  "pre": [
+   "PRET.G8.ENTREP.INCOME_AND_BUDGETING.BUDGET"
+  ],
+  "mis": [
+   "M_PT8_BP_DEFICIT",
+   "M_PT8_BP_WANTS_FIRST",
+   "M_PT8_BP_SAVE_LAST",
+   "M_PT8_BP_SURPLUS_LOSS"
   ]
  },
  "PRET.G8.ENTREP.OF_GOODS_AND_SERVICES.MARKETING": {
@@ -651,7 +793,8 @@ export const SKILLS = {
    "PRE_.G8.ENTREP.OF_GOODS_AND_SERVICES.a",
    "PRE_.G8.ENTREP.OF_GOODS_AND_SERVICES.b",
    "PRE_.G8.ENTREP.OF_GOODS_AND_SERVICES.c",
-   "PRE_.G8.ENTREP.OF_GOODS_AND_SERVICES.d"
+   "PRE_.G8.ENTREP.OF_GOODS_AND_SERVICES.d",
+   "PRE_.G8.ENTREP.OF_GOODS_AND_SERVICES.e"
   ],
   "pre": [
    "PRET.G8.ENTREP.BOOKKEEPING.BOOKKEEPING"
@@ -678,7 +821,8 @@ export const SKILLS = {
   "mis": [
    "M_PT8_DS_MIDDLEMAN_BAD",
    "M_PT8_DS_CHANNEL",
-   "M_PT8_DS_ETHICS"
+   "M_PT8_DS_ETHICS",
+   "M_PT8_DS_SERVICE_AGENT"
   ]
  }
 };
@@ -689,53 +833,101 @@ export const MIS_FEEDBACK = {
  "M_PT8_FP_MATCHES": "Matches are kept out of the reach of children.",
  "M_PT8_FP_EXITS": "Exits must be clear and unlocked in a fire.",
  "M_PT8_FP_UNATTENDED": "Never leave a stove or candle burning unattended.",
+ "M_PT8_FE_WATER_OIL": "Never pour water on burning oil. Turn off the heat and cover the pan.",
+ "M_PT8_FE_WATER_ELEC": "Never use water on an electrical fire. Switch off the power first.",
+ "M_PT8_FE_AIM_TOP": "Aim at the base of the fire, where the fuel is.",
+ "M_PT8_FE_RUN": "If your clothes catch fire: stop, drop and roll.",
+ "M_PT8_FE_FIGHT_FIRST": "Raise the alarm and get out first. Call 999 or 112.",
+ "M_PT8_FC_BURN_WIND": "Wind carries sparks. Dry grass can start a bush fire.",
+ "M_PT8_FP_OVERLOAD": "Do not overload sockets. Switch off when you finish.",
  "M_PT8_DT_NOT_IMPORTANT": "Schoolwork, photos and messages are hard to replace and may be private.",
  "M_PT8_DT_VIRUS_ONLY": "Viruses spread by flash disks and files as well as the internet.",
  "M_PT8_DT_THEFT": "Theft or loss of a device is a threat to the data in it.",
  "M_PT8_DP_PASSWORD_SHARE": "A password is kept secret.",
  "M_PT8_DP_BACKUP": "A backup is a second copy kept on another device.",
  "M_PT8_DP_UNKNOWN_LINK": "Unknown links can carry viruses or tricks, so do not open them.",
+ "M_PT8_DT_POWER": "A power cut while saving can damage or lose a file.",
+ "M_PT8_DP_WEAK_PW": "Use a long password that others cannot guess. Never use your name or birth date.",
  "M_PT8_DI_TOOL_MIX": "The compass draws circles and arcs. The set square draws upright and slanted lines.",
  "M_PT8_DI_TSQUARE": "The T-square draws horizontal lines. The protractor measures angles.",
  "M_PT8_DI_PROTRACTOR": "A protractor measures angles. A ruler measures length.",
  "M_PT8_DL_TITLE_TOP": "The title block is at the bottom right of the sheet.",
  "M_PT8_DL_NO_BORDER": "The border is a frame drawn inside the edges of the sheet.",
  "M_PT8_DL_A4": "A4 is 297 by 210 millimetres.",
+ "M_PT8_GC_HEX_SIDE": "The side of a hexagon in a circle equals the radius.",
+ "M_PT8_GC_BISECT_SHORT": "Open the compass to more than half the line so the arcs cross.",
+ "M_PT8_GC_SLOT_RADIUS": "The radius of a semicircular end is half the width of the slot.",
+ "M_PT8_GC_PROTRACTOR": "Equal arcs make an equilateral triangle, so the angle is 60 degrees.",
+ "M_PT8_DI_SET_SQUARE": "The 30-60 degree set square draws 30 and 60 degree lines.",
+ "M_PT8_DL_TSQUARE_EDGE": "Keep the T-square stock against the one working edge of the board.",
  "M_PT8_DM_LINE_MIX": "The dimension line has arrowheads. Extension lines stretch out from the object.",
  "M_PT8_DM_UNITS": "Sizes on drawings are normally in millimetres.",
  "M_PT8_DM_OBJECT_LINE": "The object line is thick. The dimension line is thin.",
  "M_PT8_DR_ADD": "Add the sections: 30 plus 45 is 75 millimetres.",
  "M_PT8_DR_DIAMETER": "The diameter is twice the radius: 40 millimetres.",
  "M_PT8_DR_UNIT": "A dimension needs a unit, normally millimetres.",
+ "M_PT8_DM_TOUCH": "Leave a small gap between the outline and a projection line.",
+ "M_PT8_DM_CHAIN_PARALLEL": "Parallel dimensioning measures every size from one datum edge.",
+ "M_PT8_DR_MEASURE_PAPER": "A dimension gives the real size. Read it; do not measure the paper.",
  "M_PT8_SC_INVERT": "A scale of 1:50 is a reduction: the object is 50 times bigger than the drawing.",
  "M_PT8_SC_CALC": "Multiply the drawing length by 50: 4 times 50 is 200 centimetres.",
  "M_PT8_SC_ENLARGE": "A scale of 2:1 makes the drawing twice as big as the object.",
+ "M_PT8_SV_UNITS": "Change to millimetres first, then divide by the scale.",
+ "M_PT8_SV_MULTIPLY": "For 1:20 the drawing is 20 times smaller: divide by 20.",
+ "M_PT8_SV_ENLARGE": "At 2:1 the drawing is twice the real size.",
+ "M_PT8_SV_FIT": "Choose a scale that makes the drawing fit inside the border.",
+ "M_PT8_SC_DIVISIONS": "On a plain scale the small divisions are to the left of zero.",
  "M_PT8_VP_TEXT": "In visual programming, blocks snap together.",
  "M_PT8_VP_TOOL": "Scratch and App Inventor are visual programming tools.",
  "M_PT8_VP_LOOP": "A loop repeats instructions.",
+ "M_PT8_VS_ORDER": "Blocks run from top to bottom, so the order matters.",
+ "M_PT8_VS_LOOP": "A repeat block runs its blocks the number of times shown.",
+ "M_PT8_VS_NO_EVENT": "A stack runs only when an event block, such as the green flag, starts it.",
+ "M_PT8_VS_IF_ALWAYS": "An if-block runs its blocks only when the condition is true.",
+ "M_PT8_VP_SPRITE": "A sprite is a character the blocks control. The backdrop is the background.",
  "M_PT8_CM_SINGLE": "Concrete is a mixture of cement, sand, ballast and water.",
  "M_PT8_CM_PLYWOOD": "Plywood is made of thin layers glued with the grain crosswise.",
  "M_PT8_CM_USE": "Reinforced concrete is used in buildings, bridges and slabs.",
+ "M_PT8_CM_STEEL_WEIGHT": "Steel bars give concrete strength against pulling and bending.",
  "M_PT8_CR_BRITTLE": "Ceramics are hard but brittle, so they break when dropped.",
  "M_PT8_CR_CONDUCT": "Ceramics do not conduct electricity, so they are used as insulators.",
  "M_PT8_CR_METAL": "Bricks, tiles and clay pots are ceramics. Iron is a metal.",
+ "M_PT8_CR_SUN_DRY": "Clay becomes ceramic when it is fired at a high temperature.",
  "M_PT8_CT_WOOD_METAL": "A hacksaw cuts metal. A tenon saw cuts wood.",
  "M_PT8_CT_PLANE": "A plane smooths wood. A chisel shapes joints.",
  "M_PT8_CT_BLUNT": "A blunt tool needs more force and slips, so keep tools sharp.",
+ "M_PT8_CU_TOWARDS": "Always cut away from your body, hands behind the edge.",
+ "M_PT8_CU_HAND_HOLD": "Clamp the work. Never hold it in your hand while you cut.",
+ "M_PT8_CU_BLADE_BACK": "Hacksaw teeth point away from the handle.",
+ "M_PT8_CU_PRESS_HARD": "Start gently to make a groove, then use long steady strokes.",
+ "M_PT8_CU_CARRY": "Carry edged tools in your hand, pointing down. Walk.",
+ "M_PT8_CT_RIP_CROSS": "A cross-cut saw cuts across the grain; a rip saw cuts along it.",
  "M_PT8_SW_TOUCH": "Hardware can be touched. Software is the programs.",
  "M_PT8_SW_OS": "Windows, Android and Linux are operating systems. A word processor is an application.",
  "M_PT8_SW_APP": "A spreadsheet is used for tables and calculations.",
+ "M_PT8_SW_UTILITY": "An antivirus is a utility: it looks after the computer.",
  "M_PT8_BK_BIG_ONLY": "Every business keeps records to know its income, spending and profit.",
  "M_PT8_BK_ASSET": "What a business owes is a liability. What it owns is an asset.",
  "M_PT8_BK_CASH": "A credit sale is paid later. A cash sale is paid now.",
+ "M_PT8_FS_SALES_PROFIT": "Profit is what is left after costs and expenses, not the sales.",
+ "M_PT8_FS_GROSS_NET": "Net profit = gross profit - expenses.",
+ "M_PT8_FS_CAPITAL_ADD": "Capital = assets - liabilities.",
+ "M_PT8_FS_CASH_ADD": "Money paid out is taken away from the cash.",
+ "M_PT8_BK_DRAWINGS": "Money the owner takes for personal use is drawings, not a business expense.",
  "M_PT8_BU_INCOME": "A salary, business profit and sales are income. A bill is spending.",
  "M_PT8_BU_NO_NEED": "A budget plans spending so that needs come first and some is saved.",
  "M_PT8_BU_UNETHICAL": "Hiding spending or using money meant for something else is unethical.",
+ "M_PT8_BP_DEFICIT": "Spending more than income is a deficit.",
+ "M_PT8_BP_WANTS_FIRST": "Plan needs first, then wants.",
+ "M_PT8_BP_SAVE_LAST": "Put saving in the budget at the start, as an item.",
+ "M_PT8_BP_SURPLUS_LOSS": "Money left after planned spending is a surplus.",
+ "M_PT8_BU_LOAN_INCOME": "A loan must be paid back. Plan the repayment in the budget.",
  "M_PT8_MK_SELLING_ONLY": "Marketing helps a business find customers and sell.",
  "M_PT8_MK_INFO": "A survey, asking customers and watching competitors give market information.",
  "M_PT8_MK_FACTOR": "Demand, price, location, competition and transport matter in choosing a market.",
  "M_PT8_MK_TOOL": "Posters, radio, social media, samples and offers are marketing tools.",
  "M_PT8_DS_MIDDLEMAN_BAD": "Intermediaries bring goods from producers to buyers.",
  "M_PT8_DS_CHANNEL": "The longest channel has a wholesaler and a retailer between producer and consumer.",
- "M_PT8_DS_ETHICS": "Honest weights, fair prices and safe delivery are ethical. Hoarding and cheating are not."
+ "M_PT8_DS_ETHICS": "Honest weights, fair prices and safe delivery are ethical. Hoarding and cheating are not.",
+ "M_PT8_DS_SERVICE_AGENT": "Services also reach customers through agents."
 };

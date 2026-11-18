@@ -1,0 +1,99 @@
+{
+ "sub_strand": "PRE_.G8.MATERI.CERAMIC_MATERIALS",
+ "title": "Ceramic Materials",
+ "status": "draft: written 18 Nov 2026 offline for Grade 8 Pre-Technical Studies; not yet checked by a Pre-Technical Studies teacher; safety lines marked SAFETY in the library to confirm first; not loaded by the live tutor",
+ "sources": [],
+ "notes": "",
+ "skills": [
+  {
+   "skill": "PRET.G8.MATERI.CERAMIC_MATERIALS.CERAMIC",
+   "key_step": "The learner identifies ceramic materials (clay pots, bricks, tiles, porcelain, earthenware, glass), describes their properties (hard, brittle, resist heat, do not conduct electricity, waterproof when glazed) and relates them to uses (cooking pots and jiko linings, roofing and floor tiles, insulators on power poles, sinks and toilets).",
+   "floor": {
+    "prerequisite": "Knows properties of non-metals.",
+    "question": "Is glass brittle?",
+    "answer": "Yes"
+   },
+   "representations": [
+    "ceramic samples: tile, brick, pot shard",
+    "a property and use chart",
+    "a power-pole insulator picture"
+   ],
+   "steps": [
+    "Name the ceramic.",
+    "Describe its properties.",
+    "Say how firing changes clay.",
+    "Match it to a use."
+   ],
+   "contexts": [
+    "a potter at a kiln",
+    "a roof of clay tiles",
+    "a jiko with a clay lining"
+   ],
+   "board": [
+    {
+     "beat": "write",
+     "do": "Write: hard, brittle, resists heat, insulator."
+    },
+    {
+     "beat": "point",
+     "do": "Point at \"insulator\".",
+     "say": "Which use of ceramics needs this property?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for the learner to say insulators on power poles."
+    },
+    {
+     "beat": "reveal",
+     "do": "Match a use to each property."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "PRET.G8.MATERI.CERAMIC_MATERIALS.CERAMIC.M_PT8_CR_BRITTLE",
+     "listen_for": [
+      "It stays whole, because ceramic is hard"
+     ],
+     "ask": "What happens when a clay pot is dropped?",
+     "repair": "Explain hard and brittle: a ceramic resists scratching but cracks when hit. Show a broken cup."
+    },
+    {
+     "code": "PRET.G8.MATERI.CERAMIC_MATERIALS.CERAMIC.M_PT8_CR_CONDUCT",
+     "listen_for": [
+      "They conduct electricity well"
+     ],
+     "ask": "Why are ceramics used as electrical insulators?",
+     "repair": "Show a porcelain insulator on a power pole holding the live wire away from the pole."
+    },
+    {
+     "code": "PRET.G8.MATERI.CERAMIC_MATERIALS.CERAMIC.M_PT8_CR_METAL",
+     "listen_for": [
+      "Plastic"
+     ],
+     "ask": "A floor tile is smooth and shiny. What group of materials is it?",
+     "repair": "Tap a tile and a plastic sheet; heat-test is not done. Trace the tile back to fired clay."
+    },
+    {
+     "code": "PRET.G8.MATERI.CERAMIC_MATERIALS.CERAMIC.M_PT8_CR_SUN_DRY",
+     "listen_for": [
+      "Drying it in the sun"
+     ],
+     "ask": "What turns soft clay into a hard ceramic pot?",
+     "repair": "Soak a sun-dried clay piece and a fired piece; the dried one softens, the fired one stays hard."
+    }
+   ],
+   "checks": [
+    {
+     "question": "Why are ceramics used on power poles?",
+     "answer": "They do not conduct electricity",
+     "shows": "insulator"
+    },
+    {
+     "question": "What makes clay into a ceramic?",
+     "answer": "Firing in a kiln",
+     "shows": "firing"
+    }
+   ]
+  }
+ ]
+}

@@ -1,0 +1,189 @@
+{
+ "sub_strand": "PRE_.G8.COMMUN.PLAIN_SCALE_DRAWING",
+ "title": "Plain Scale Drawing",
+ "status": "draft: written 18 Nov 2026 offline for Grade 8 Pre-Technical Studies; not yet checked by a Pre-Technical Studies teacher; safety lines marked SAFETY in the library to confirm first; not loaded by the live tutor",
+ "sources": [],
+ "notes": "Drawing to scale (outcome c) is marked on the learner's drawing with the rubric; the questions test reading and working out scale sizes.",
+ "skills": [
+  {
+   "skill": "PRET.G8.COMMUN.PLAIN_SCALE_DRAWING.PLAIN_SCALE",
+   "key_step": "The learner describes the features of a plain scale (the R.F. or ratio, main divisions to the right of zero, secondary divisions to the left of zero, the units named, the title) and interprets it to work out real sizes from a drawing (drawing size × scale factor).",
+   "floor": {
+    "prerequisite": "Can convert metres and centimetres.",
+    "question": "1 m = ? cm",
+    "answer": "100 cm"
+   },
+   "representations": [
+    "a constructed plain scale on the board",
+    "a 1:50 plan of the classroom",
+    "scale ratios on cards: 1:10, 1:50, 2:1"
+   ],
+   "steps": [
+    "Read the scale ratio.",
+    "Find zero and the divisions.",
+    "Read a length off the scale.",
+    "Work out the real size."
+   ],
+   "contexts": [
+    "a house plan at 1:100",
+    "a map scale",
+    "a drawing of a watch part at 5:1"
+   ],
+   "board": [
+    {
+     "beat": "write",
+     "do": "Draw a plain scale with zero one division in from the left."
+    },
+    {
+     "beat": "point",
+     "do": "Point at the part left of zero.",
+     "say": "What are these small divisions for?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for the learner to say reading the smaller units."
+    },
+    {
+     "beat": "reveal",
+     "do": "Read off a length using both parts."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "PRET.G8.COMMUN.PLAIN_SCALE_DRAWING.PLAIN_SCALE.M_PT8_SC_INVERT",
+     "listen_for": [
+      "The drawing is 50 times bigger"
+     ],
+     "ask": "What does a scale of 1:50 mean?",
+     "repair": "Read 1:50 as \"1 on the drawing stands for 50 on the object\"; the drawing is smaller."
+    },
+    {
+     "code": "PRET.G8.COMMUN.PLAIN_SCALE_DRAWING.PLAIN_SCALE.M_PT8_SC_CALC",
+     "listen_for": [
+      "0.08 cm (4 divided by 50)"
+     ],
+     "ask": "A line is 4 cm on a 1:50 drawing. What is the real length?",
+     "repair": "Ask: the drawing is small, the real wall is big; to go from drawing to real, multiply."
+    },
+    {
+     "code": "PRET.G8.COMMUN.PLAIN_SCALE_DRAWING.PLAIN_SCALE.M_PT8_SC_ENLARGE",
+     "listen_for": [
+      "A reduction"
+     ],
+     "ask": "What does a scale of 2:1 mean?",
+     "repair": "Draw a small screw at 2:1; it comes out twice as big. The first number is the drawing."
+    },
+    {
+     "code": "PRET.G8.COMMUN.PLAIN_SCALE_DRAWING.PLAIN_SCALE.M_PT8_SC_DIVISIONS",
+     "listen_for": [
+      "At the right-hand end, after the last main division"
+     ],
+     "ask": "On a plain scale, where are the small (secondary) divisions?",
+     "repair": "Construct a plain scale on the board: mark zero one main division in from the left, and divide that first division into tenths."
+    }
+   ],
+   "checks": [
+    {
+     "question": "What does a scale of 1:50 mean?",
+     "answer": "1 unit on the drawing stands for 50 on the object",
+     "shows": "meaning"
+    },
+    {
+     "question": "A line is 4 cm on a 1:50 drawing. Real length?",
+     "answer": "200 cm (2 m)",
+     "shows": "calculate"
+    }
+   ]
+  },
+  {
+   "skill": "PRET.G8.COMMUN.PLAIN_SCALE_DRAWING.SCALE_CONVERT",
+   "key_step": "The learner works out drawing sizes from real sizes (convert to millimetres, divide for a reduction, multiply for an enlargement) and chooses a scale that fits the sheet; the scale drawing itself is marked with the rubric.",
+   "floor": {
+    "prerequisite": "Can read a plain scale.",
+    "question": "On a 1:50 drawing, a line is 2 cm. Real length?",
+    "answer": "100 cm (1 m)"
+   },
+   "representations": [
+    "a conversion strip: m to mm",
+    "a table of sizes at 1:10, 1:20, 1:50",
+    "an A4 sheet with its border"
+   ],
+   "steps": [
+    "Convert the real size to millimetres.",
+    "Decide: reduction or enlargement.",
+    "Divide or multiply by the scale.",
+    "Check the drawing fits the sheet."
+   ],
+   "contexts": [
+    "a plan of the classroom",
+    "a drawing of a small screw",
+    "a plan of a plot for a kitchen garden"
+   ],
+   "board": [
+    {
+     "beat": "write",
+     "do": "Write: room 8 m, sheet A4 (297 mm)."
+    },
+    {
+     "beat": "point",
+     "do": "Point at the sheet length.",
+     "say": "Which scale makes the room fit: 1:10 or 1:50?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for the learner to work out 800 mm and 160 mm."
+    },
+    {
+     "beat": "reveal",
+     "do": "Write 1:50 and the drawing length."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "PRET.G8.COMMUN.PLAIN_SCALE_DRAWING.SCALE_CONVERT.M_PT8_SV_UNITS",
+     "listen_for": [
+      "0.12 mm"
+     ],
+     "ask": "A wall 6 m long is drawn at 1:50. How long is it on the drawing?",
+     "repair": "Write 6 m = 6,000 mm first, then divide by 50. Check: 120 mm fits on a page; 0.12 mm cannot be drawn."
+    },
+    {
+     "code": "PRET.G8.COMMUN.PLAIN_SCALE_DRAWING.SCALE_CONVERT.M_PT8_SV_MULTIPLY",
+     "listen_for": [
+      "40,000 mm"
+     ],
+     "ask": "A bench 2,000 mm long is drawn at 1:20. How long is it on the drawing?",
+     "repair": "Ask: is the drawing smaller or bigger than the bench? Smaller, so divide."
+    },
+    {
+     "code": "PRET.G8.COMMUN.PLAIN_SCALE_DRAWING.SCALE_CONVERT.M_PT8_SV_ENLARGE",
+     "listen_for": [
+      "7.5 mm"
+     ],
+     "ask": "A screw 15 mm long is drawn at 2:1. How long is it on the drawing?",
+     "repair": "Read 2:1 as \"2 on the drawing for 1 on the object\": twice as big, so multiply by 2."
+    },
+    {
+     "code": "PRET.G8.COMMUN.PLAIN_SCALE_DRAWING.SCALE_CONVERT.M_PT8_SV_FIT",
+     "listen_for": [
+      "1:10, which makes it 800 mm"
+     ],
+     "ask": "A room 8 m long is drawn on A4 paper (297 mm long). Which scale fits?",
+     "repair": "Work out the drawing length for 1:10, 1:20 and 1:50 and compare each with 297 mm."
+    }
+   ],
+   "checks": [
+    {
+     "question": "A 6 m wall at 1:50. Drawing length?",
+     "answer": "120 mm",
+     "shows": "reduce"
+    },
+    {
+     "question": "A 15 mm screw at 2:1. Drawing length?",
+     "answer": "30 mm",
+     "shows": "enlarge"
+    }
+   ]
+  }
+ ]
+}

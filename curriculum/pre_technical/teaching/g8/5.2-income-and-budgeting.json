@@ -1,0 +1,189 @@
+{
+ "sub_strand": "PRE_.G8.ENTREP.INCOME_AND_BUDGETING",
+ "title": "Income and Budgeting",
+ "status": "draft: written 18 Nov 2026 offline for Grade 8 Pre-Technical Studies; not yet checked by a Pre-Technical Studies teacher; safety lines marked SAFETY in the library to confirm first; not loaded by the live tutor",
+ "sources": [],
+ "notes": "Use a learner's or a club's money in examples, never a family's real income.",
+ "skills": [
+  {
+   "skill": "PRET.G8.ENTREP.INCOME_AND_BUDGETING.BUDGET",
+   "key_step": "The learner identifies sources of income (salary and wages, sales and profit, rent, interest, gifts and pocket money, farming), explains why budgeting matters (plan, meet needs, save, avoid debt), and tells ethical (honest, agreed, used as planned) from unethical (hiding, misusing, borrowing without plan) budgeting.",
+   "floor": {
+    "prerequisite": "Knows how businesses keep records.",
+    "question": "Name one book a business keeps.",
+    "answer": "A sales book (cash book)"
+   },
+   "representations": [
+    "money in and money out arrows",
+    "ethical and unethical cards",
+    "a family needs list"
+   ],
+   "steps": [
+    "Name sources of income.",
+    "Say why budgeting matters.",
+    "Sort ethical and unethical practices.",
+    "Explain why honesty matters."
+   ],
+   "contexts": [
+    "a learner's pocket money",
+    "a club treasurer's budget",
+    "a family saving for school fees"
+   ],
+   "board": [
+    {
+     "beat": "write",
+     "do": "Draw two arrows: money in, money out."
+    },
+    {
+     "beat": "point",
+     "do": "Point at the card \"salary\".",
+     "say": "Which arrow does it go on?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for the learner to say money in."
+    },
+    {
+     "beat": "reveal",
+     "do": "Place the other cards."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "PRET.G8.ENTREP.INCOME_AND_BUDGETING.BUDGET.M_PT8_BU_INCOME",
+     "listen_for": [
+      "A bill"
+     ],
+     "ask": "Which is a source of income?",
+     "repair": "Draw two arrows: money in (salary, sales, rent received, pocket money) and money out (bills, rent paid, food)."
+    },
+    {
+     "code": "PRET.G8.ENTREP.INCOME_AND_BUDGETING.BUDGET.M_PT8_BU_NO_NEED",
+     "listen_for": [
+      "Budgets are only for people with a lot of money"
+     ],
+     "ask": "Why make a budget if you have only a little money?",
+     "repair": "Show a learner with 300 shillings for a term planning fare, pens and saving; without a plan it runs out in week 2."
+    },
+    {
+     "code": "PRET.G8.ENTREP.INCOME_AND_BUDGETING.BUDGET.M_PT8_BU_UNETHICAL",
+     "listen_for": [
+      "Fine, as long as the total stays the same"
+     ],
+     "ask": "A club treasurer writes \"snacks 500\" in the budget but spends it on airtime for herself. What is this?",
+     "repair": "Discuss trust in a club or family: money must be used as the budget says, and changes are agreed openly."
+    },
+    {
+     "code": "PRET.G8.ENTREP.INCOME_AND_BUDGETING.BUDGET.M_PT8_BU_LOAN_INCOME",
+     "listen_for": [
+      "Yes, it is extra money to spend"
+     ],
+     "ask": "Wanjiru borrows 1,000 shillings. Should she plan it as free income in her budget?",
+     "repair": "Show a budget with the loan as money in and the repayment (with any interest) as money out later."
+    }
+   ],
+   "checks": [
+    {
+     "question": "Name one source of income.",
+     "answer": "A salary (sales, rent)",
+     "shows": "income"
+    },
+    {
+     "question": "Give one unethical practice in budgeting.",
+     "answer": "Hiding or misusing money",
+     "shows": "ethics"
+    }
+   ]
+  },
+  {
+   "skill": "PRET.G8.ENTREP.INCOME_AND_BUDGETING.BUDGET_PREPARE",
+   "key_step": "The learner prepares a simple personal budget: lists income, plans needs before wants, puts saving in first, totals spending and finds the balance (surplus or deficit), fixing a deficit by cutting wants; the budget prepared in class is marked with the rubric.",
+   "floor": {
+    "prerequisite": "Knows why people budget.",
+    "question": "Why make a budget?",
+    "answer": "To plan income and spending"
+   },
+   "representations": [
+    "a budget table: item, need or want, amount",
+    "income and spending bars",
+    "needs and wants cards"
+   ],
+   "steps": [
+    "List the income.",
+    "Put saving and needs first.",
+    "Add wants if money is left.",
+    "Find the balance: surplus or deficit."
+   ],
+   "contexts": [
+    "a learner's termly pocket money",
+    "a school club's budget for a trip",
+    "a youth's first wages"
+   ],
+   "board": [
+    {
+     "beat": "write",
+     "do": "Write: income 3,000; items totalling 3,400."
+    },
+    {
+     "beat": "point",
+     "do": "Point at the two totals.",
+     "say": "Is this budget balanced? What would you change?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for the learner to say deficit of 400; cut a want."
+    },
+    {
+     "beat": "reveal",
+     "do": "Cross out a want and rebalance."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "PRET.G8.ENTREP.INCOME_AND_BUDGETING.BUDGET_PREPARE.M_PT8_BP_DEFICIT",
+     "listen_for": [
+      "Balanced"
+     ],
+     "ask": "Income 3,000 shillings, planned spending 3,400. What is this budget?",
+     "repair": "Always subtract: income - spending. A negative answer is a deficit; cut wants until it is zero or more."
+    },
+    {
+     "code": "PRET.G8.ENTREP.INCOME_AND_BUDGETING.BUDGET_PREPARE.M_PT8_BP_WANTS_FIRST",
+     "listen_for": [
+      "A new phone cover"
+     ],
+     "ask": "Which item goes into a learner's budget first?",
+     "repair": "Sort budget cards into needs and wants; fill the budget with needs first, then wants if money is left."
+    },
+    {
+     "code": "PRET.G8.ENTREP.INCOME_AND_BUDGETING.BUDGET_PREPARE.M_PT8_BP_SAVE_LAST",
+     "listen_for": [
+      "Only if money is left at the end"
+     ],
+     "ask": "When should saving be put into a budget?",
+     "repair": "Compare two months: saving last (nothing left) and saving first (100 put away); \"pay yourself first\"."
+    },
+    {
+     "code": "PRET.G8.ENTREP.INCOME_AND_BUDGETING.BUDGET_PREPARE.M_PT8_BP_SURPLUS_LOSS",
+     "listen_for": [
+      "A loss"
+     ],
+     "ask": "Income 5,000 shillings, spending 4,200. What is the 800 shillings?",
+     "repair": "Draw income and spending bars; the part of income not spent is a surplus, ready to save."
+    }
+   ],
+   "checks": [
+    {
+     "question": "Income 5,000, spending 4,200. What is the 800?",
+     "answer": "A surplus",
+     "shows": "balance"
+    },
+    {
+     "question": "Which comes first in a budget: needs or wants?",
+     "answer": "Needs",
+     "shows": "priority"
+    }
+   ]
+  }
+ ]
+}
