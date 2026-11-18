@@ -4463,6 +4463,989 @@ export const TEACHING_PACK_G9 = {
   "sub_strand": "MATH.G9.ALGEBR.MATRICES",
   "sub_strand_name": "Matrices",
   "status": "draft: written 18 Nov 2026 offline for Grade 9; not yet checked by a Kenyan maths teacher; not loaded by the live tutor"
+ },
+ "MATH.G9.ALGEBR.EQUATIONS_OF_A_STRAIGHT_.GRADIENT_REAL_LIFE": {
+  "skill": "MATH.G9.ALGEBR.EQUATIONS_OF_A_STRAIGHT_.GRADIENT_REAL_LIFE",
+  "key_step": "The child writes rise over run as a fraction before any comparison or calculation.",
+  "floor": {
+   "prerequisite": "Finds a rate per unit.",
+   "question": "30 m up over 100 m across: up per metre?",
+   "answer": "0.3"
+  },
+  "representations": [
+   "a right-angled triangle on a slope",
+   "rise / run",
+   "a road sign with a percentage"
+  ],
+  "steps": [
+   "Find the rise (up).",
+   "Find the run (across).",
+   "Gradient = rise / run.",
+   "For a percentage, it is the rise for each 100 across."
+  ],
+  "contexts": [
+   "the escarpment road near Limuru",
+   "a mabati roof",
+   "a wheelchair ramp at school"
+  ],
+  "board": [
+   {
+    "beat": "draw",
+    "do": "Draw a ramp with rise 3 m and run 4 m."
+   },
+   {
+    "beat": "point",
+    "do": "Point at the rise, then the run.",
+    "say": "Which goes on top?"
+   },
+   {
+    "beat": "pause",
+    "do": "Wait for the rise."
+   },
+   {
+    "beat": "reveal",
+    "do": "Write 3/4 = 0.75."
+   }
+  ],
+  "misconceptions": [
+   {
+    "code": "MATH.G9.ALGEBR.EQUATIONS_OF_A_STRAIGHT_.GRADIENT_REAL_LIFE.M_PERCENT_NOT_DIVIDED",
+    "listen_for": [
+     "2,700"
+    ],
+    "ask": "Is 6% the same as 6?",
+    "repair": "No: 6 out of 100.",
+    "error": "Multiplies the percentage by the distance and forgets to divide by 100.",
+    "example": {
+     "question": "A 6% road, 450 m across. Rise?",
+     "wrong_answer": "2,700 m",
+     "correct_answer": "27 m"
+    }
+   },
+   {
+    "code": "MATH.G9.ALGEBR.EQUATIONS_OF_A_STRAIGHT_.GRADIENT_REAL_LIFE.M_DIVIDE_BY_GRADIENT",
+    "listen_for": [
+     "75"
+    ],
+    "ask": "Rise = gradient times what?",
+    "repair": "The run.",
+    "error": "Divides the distance by the gradient instead of multiplying.",
+    "example": {
+     "question": "A 6% road, 450 m across. Rise?",
+     "wrong_answer": "75 m",
+     "correct_answer": "27 m"
+    }
+   },
+   {
+    "code": "MATH.G9.ALGEBR.EQUATIONS_OF_A_STRAIGHT_.GRADIENT_REAL_LIFE.M_GRADIENT_ADDED",
+    "listen_for": [
+     "456"
+    ],
+    "ask": "Is 6% a length?",
+    "repair": "No: a rate.",
+    "error": "Adds the gradient to the distance.",
+    "example": {
+     "question": "A 6% road, 450 m across. Rise?",
+     "wrong_answer": "456 m",
+     "correct_answer": "27 m"
+    }
+   },
+   {
+    "code": "MATH.G9.ALGEBR.EQUATIONS_OF_A_STRAIGHT_.GRADIENT_REAL_LIFE.M_RISE_ONLY_COMPARED",
+    "listen_for": [
+     "B"
+    ],
+    "ask": "Did you divide by the run?",
+    "repair": "A is 0.75, B is 0.5.",
+    "error": "Compares slopes by the rise alone, ignoring the run.",
+    "example": {
+     "question": "Roof A rises 3 m over 4 m; roof B rises 4 m over 8 m. Steeper?",
+     "wrong_answer": "B",
+     "correct_answer": "A"
+    }
+   },
+   {
+    "code": "MATH.G9.ALGEBR.EQUATIONS_OF_A_STRAIGHT_.GRADIENT_REAL_LIFE.M_RUN_OVER_RISE",
+    "listen_for": [
+     "1.33"
+    ],
+    "ask": "Which is on top, up or across?",
+    "repair": "Up.",
+    "error": "Divides the run by the rise.",
+    "example": {
+     "question": "Rise 3 m, run 4 m. Gradient?",
+     "wrong_answer": "1.33",
+     "correct_answer": "0.75"
+    }
+   }
+  ],
+  "checks": [
+   {
+    "question": "A road has gradient 5%. How much does it rise over 800 m across?",
+    "answer": "40 m",
+    "shows": "percentage gradient"
+   },
+   {
+    "question": "Ramp A: rise 1 m over 6 m. Ramp B: 1.5 m over 10 m. Steeper?",
+    "answer": "A (0.167 against 0.15)",
+    "shows": "compare rise over run"
+   }
+  ],
+  "name": "Identify and use gradient as rise over run in real life",
+  "sub_strand": "MATH.G9.ALGEBR.EQUATIONS_OF_A_STRAIGHT_",
+  "sub_strand_name": "Equations of a Straight Line",
+  "status": "draft: written 18 Nov 2026 offline for Grade 9; not yet checked by a Kenyan maths teacher; not loaded by the live tutor"
+ },
+ "MATH.G9.ALGEBR.EQUATIONS_OF_A_STRAIGHT_.GRADIENT_TWO_POINTS": {
+  "skill": "MATH.G9.ALGEBR.EQUATIONS_OF_A_STRAIGHT_.GRADIENT_TWO_POINTS",
+  "key_step": "The child writes both changes in the same order, second point minus first, and divides change in y by change in x.",
+  "floor": {
+   "prerequisite": "Subtracts integers.",
+   "question": "1 - 7",
+   "answer": "-6"
+  },
+  "representations": [
+   "a staircase drawn between the points",
+   "(y2 - y1)/(x2 - x1)",
+   "a sketch of the line"
+  ],
+  "steps": [
+   "Label the points 1 and 2.",
+   "Change in y = y2 - y1.",
+   "Change in x = x2 - x1.",
+   "Divide, and check the sign with a sketch."
+  ],
+  "contexts": [
+   "a tank emptying",
+   "a hill path on a map",
+   "savings growing each week"
+  ],
+  "board": [
+   {
+    "beat": "draw",
+    "do": "Plot (1, 7) and (4, 1) and draw a staircase from one to the other."
+   },
+   {
+    "beat": "point",
+    "do": "Point at the drop.",
+    "say": "How far down?"
+   },
+   {
+    "beat": "pause",
+    "do": "Wait for 6."
+   },
+   {
+    "beat": "point",
+    "do": "Point along the step.",
+    "say": "How far across?"
+   },
+   {
+    "beat": "reveal",
+    "do": "Write -6 / 3 = -2."
+   }
+  ],
+  "misconceptions": [
+   {
+    "code": "MATH.G9.ALGEBR.EQUATIONS_OF_A_STRAIGHT_.GRADIENT_TWO_POINTS.M_GRADIENT_SIGN_LOST",
+    "listen_for": [
+     "3 for a falling line"
+    ],
+    "ask": "Does the line go up or down to the right?",
+    "repair": "Down: negative.",
+    "error": "Gives a positive gradient for a line going down.",
+    "example": {
+     "question": "(0, 50) and (10, 20): gradient?",
+     "wrong_answer": "3",
+     "correct_answer": "-3"
+    }
+   },
+   {
+    "code": "MATH.G9.ALGEBR.EQUATIONS_OF_A_STRAIGHT_.GRADIENT_TWO_POINTS.M_GRADIENT_UPSIDE_DOWN",
+    "listen_for": [
+     "1/3"
+    ],
+    "ask": "Which goes on top, y or x?",
+    "repair": "y.",
+    "error": "Divides the change in x by the change in y.",
+    "example": {
+     "question": "(1, 2) and (3, 8): gradient?",
+     "wrong_answer": "1/3",
+     "correct_answer": "3"
+    }
+   },
+   {
+    "code": "MATH.G9.ALGEBR.EQUATIONS_OF_A_STRAIGHT_.GRADIENT_TWO_POINTS.M_CHANGE_IN_Y_ONLY",
+    "listen_for": [
+     "-30"
+    ],
+    "ask": "Did you divide by the change in x?",
+    "repair": "Divide by 10.",
+    "error": "Gives the change in y as the gradient.",
+    "example": {
+     "question": "(0, 50) and (10, 20): gradient?",
+     "wrong_answer": "-30",
+     "correct_answer": "-3"
+    }
+   },
+   {
+    "code": "MATH.G9.ALGEBR.EQUATIONS_OF_A_STRAIGHT_.GRADIENT_TWO_POINTS.M_SUBTRACTION_ORDER_MIXED",
+    "listen_for": [
+     "2"
+    ],
+    "ask": "Did you start with the same point both times?",
+    "repair": "Use the same order.",
+    "error": "Subtracts y one way and x the other way.",
+    "example": {
+     "question": "(1, 7) and (4, 1): gradient?",
+     "wrong_answer": "2",
+     "correct_answer": "-2"
+    }
+   },
+   {
+    "code": "MATH.G9.ALGEBR.EQUATIONS_OF_A_STRAIGHT_.GRADIENT_TWO_POINTS.M_CHANGES_MULTIPLIED",
+    "listen_for": [
+     "-18"
+    ],
+    "ask": "Is gradient a product?",
+    "repair": "No: a quotient.",
+    "error": "Multiplies the changes instead of dividing.",
+    "example": {
+     "question": "Change in y -6, change in x 3. Gradient?",
+     "wrong_answer": "-18",
+     "correct_answer": "-2"
+    }
+   },
+   {
+    "code": "MATH.G9.ALGEBR.EQUATIONS_OF_A_STRAIGHT_.GRADIENT_TWO_POINTS.M_NEGATIVE_COORDINATE_SUBTRACTED",
+    "listen_for": [
+     "1"
+    ],
+    "ask": "What is 3 - (-2)?",
+    "repair": "5.",
+    "error": "Subtracts a negative coordinate as if it were positive.",
+    "example": {
+     "question": "(-2, 1) and (3, 11): change in x?",
+     "wrong_answer": "1",
+     "correct_answer": "5"
+    }
+   }
+  ],
+  "checks": [
+   {
+    "question": "Gradient of the line through (-1, 4) and (3, -4)?",
+    "answer": "-2",
+    "shows": "negative gradient"
+   },
+   {
+    "question": "Gradient of the line through (2, 3) and (6, 11)?",
+    "answer": "2",
+    "shows": "positive gradient"
+   }
+  ],
+  "name": "Find the gradient of a line from two points",
+  "sub_strand": "MATH.G9.ALGEBR.EQUATIONS_OF_A_STRAIGHT_",
+  "sub_strand_name": "Equations of a Straight Line",
+  "status": "draft: written 18 Nov 2026 offline for Grade 9; not yet checked by a Kenyan maths teacher; not loaded by the live tutor"
+ },
+ "MATH.G9.ALGEBR.EQUATIONS_OF_A_STRAIGHT_.EQUATION_TWO_POINTS": {
+  "skill": "MATH.G9.ALGEBR.EQUATIONS_OF_A_STRAIGHT_.EQUATION_TWO_POINTS",
+  "key_step": "The child finds m, then substitutes one point into y = mx + c and solves for c, then checks with the other point.",
+  "floor": {
+   "prerequisite": "Finds a gradient from two points.",
+   "question": "(2, 7) and (5, 13)",
+   "answer": "2"
+  },
+  "representations": [
+   "y = mx + c with blanks",
+   "a sketch of the line",
+   "a check table"
+  ],
+  "steps": [
+   "Find m.",
+   "Put one point and m into y = mx + c.",
+   "Solve for c.",
+   "Write the equation and check the other point."
+  ],
+  "contexts": [
+   "a taxi fare that rises with distance",
+   "a plant growing each week",
+   "water in a tank"
+  ],
+  "board": [
+   {
+    "beat": "write",
+    "do": "Write m = 2 and the point (2, 7)."
+   },
+   {
+    "beat": "write",
+    "do": "Write 7 = 2 x 2 + c."
+   },
+   {
+    "beat": "point",
+    "do": "Point at c.",
+    "say": "What must c be?"
+   },
+   {
+    "beat": "pause",
+    "do": "Wait for 3."
+   },
+   {
+    "beat": "reveal",
+    "do": "Write y = 2x + 3 and check (5, 13)."
+   }
+  ],
+  "misconceptions": [
+   {
+    "code": "MATH.G9.ALGEBR.EQUATIONS_OF_A_STRAIGHT_.EQUATION_TWO_POINTS.M_C_AS_POINT_Y",
+    "listen_for": [
+     "7"
+    ],
+    "ask": "Is x 0 at the point (2, 7)?",
+    "repair": "No: solve for c.",
+    "error": "Takes the y-value of a point as c.",
+    "example": {
+     "question": "Line through (2, 7) and (5, 13). c?",
+     "wrong_answer": "7",
+     "correct_answer": "3"
+    }
+   },
+   {
+    "code": "MATH.G9.ALGEBR.EQUATIONS_OF_A_STRAIGHT_.EQUATION_TWO_POINTS.M_C_BY_ADDING",
+    "listen_for": [
+     "11"
+    ],
+    "ask": "Does 2 x 2 + 11 give 7?",
+    "repair": "No: c = 7 - 4.",
+    "error": "Adds m times x to y instead of taking it away to find c.",
+    "example": {
+     "question": "m = 2, point (2, 7). c?",
+     "wrong_answer": "11",
+     "correct_answer": "3"
+    }
+   },
+   {
+    "code": "MATH.G9.ALGEBR.EQUATIONS_OF_A_STRAIGHT_.EQUATION_TWO_POINTS.M_C_LEFT_OFF",
+    "listen_for": [
+     "8"
+    ],
+    "ask": "Where is c in your answer?",
+    "repair": "Add it.",
+    "error": "Leaves c out of the final equation.",
+    "example": {
+     "question": "m = 2, c = 3. Value of y at x = 4?",
+     "wrong_answer": "8",
+     "correct_answer": "11"
+    }
+   },
+   {
+    "code": "MATH.G9.ALGEBR.EQUATIONS_OF_A_STRAIGHT_.EQUATION_TWO_POINTS.M_MX_ADDED_NOT_MULTIPLIED",
+    "listen_for": [
+     "9"
+    ],
+    "ask": "What does 2x mean?",
+    "repair": "2 times x.",
+    "error": "Adds m and x instead of multiplying.",
+    "example": {
+     "question": "m = 2, c = 3. y at x = 4?",
+     "wrong_answer": "9",
+     "correct_answer": "11"
+    }
+   },
+   {
+    "code": "MATH.G9.ALGEBR.EQUATIONS_OF_A_STRAIGHT_.EQUATION_TWO_POINTS.M_GRADIENT_DIFFERENCE_OF_Y",
+    "listen_for": [
+     "6"
+    ],
+    "ask": "Did you divide by the change in x?",
+    "repair": "6 / 3 = 2.",
+    "error": "Takes the difference of the y-values as the gradient.",
+    "example": {
+     "question": "(2, 7) and (5, 13): gradient?",
+     "wrong_answer": "6",
+     "correct_answer": "2"
+    }
+   },
+   {
+    "code": "MATH.G9.ALGEBR.EQUATIONS_OF_A_STRAIGHT_.EQUATION_TWO_POINTS.M_M_C_SWAPPED",
+    "listen_for": [
+     "y = 3x + 2"
+    ],
+    "ask": "Which number goes with x?",
+    "repair": "m = 2.",
+    "error": "Writes the equation with m and c swapped.",
+    "example": {
+     "question": "m = 2, c = 3. Equation?",
+     "wrong_answer": "y = 3x + 2",
+     "correct_answer": "y = 2x + 3"
+    }
+   }
+  ],
+  "checks": [
+   {
+    "question": "Find the equation of the line through (1, 5) and (3, 9).",
+    "answer": "y = 2x + 3",
+    "shows": "two points"
+   },
+   {
+    "question": "Find the equation of the line through (0, -2) and (4, 6).",
+    "answer": "y = 2x - 2",
+    "shows": "two points"
+   }
+  ],
+  "name": "Find the equation of a straight line through two points",
+  "sub_strand": "MATH.G9.ALGEBR.EQUATIONS_OF_A_STRAIGHT_",
+  "sub_strand_name": "Equations of a Straight Line",
+  "status": "draft: written 18 Nov 2026 offline for Grade 9; not yet checked by a Kenyan maths teacher; not loaded by the live tutor"
+ },
+ "MATH.G9.ALGEBR.EQUATIONS_OF_A_STRAIGHT_.EQUATION_POINT_GRADIENT": {
+  "skill": "MATH.G9.ALGEBR.EQUATIONS_OF_A_STRAIGHT_.EQUATION_POINT_GRADIENT",
+  "key_step": "The child multiplies m by the x of the point first, with its sign, then solves for c.",
+  "floor": {
+   "prerequisite": "Multiplies integers.",
+   "question": "-3 x 2",
+   "answer": "-6"
+  },
+  "representations": [
+   "y = mx + c with blanks",
+   "a working in steps",
+   "a sketch"
+  ],
+  "steps": [
+   "Write y = mx + c with m.",
+   "Put in the point.",
+   "Work out m times x.",
+   "Solve for c and write the equation."
+  ],
+  "contexts": [
+   "a car slowing down",
+   "cost of printing with a set-up fee",
+   "a hill path"
+  ],
+  "board": [
+   {
+    "beat": "write",
+    "do": "Write y = -3x + c through (2, 1)."
+   },
+   {
+    "beat": "point",
+    "do": "Point at -3 and 2.",
+    "say": "What is -3 x 2?"
+   },
+   {
+    "beat": "pause",
+    "do": "Wait for -6."
+   },
+   {
+    "beat": "child_draws",
+    "do": "The child writes 1 = -6 + c and solves."
+   },
+   {
+    "beat": "reveal",
+    "do": "Write y = -3x + 7."
+   }
+  ],
+  "misconceptions": [
+   {
+    "code": "MATH.G9.ALGEBR.EQUATIONS_OF_A_STRAIGHT_.EQUATION_POINT_GRADIENT.M_MX_SIGN_WRONG",
+    "listen_for": [
+     "-5"
+    ],
+    "ask": "What is -3 x 2?",
+    "repair": "-6, so c = 7.",
+    "error": "Gets the sign of m times x wrong when m is negative.",
+    "example": {
+     "question": "m = -3, point (2, 1). c?",
+     "wrong_answer": "-5",
+     "correct_answer": "7"
+    }
+   },
+   {
+    "code": "MATH.G9.ALGEBR.EQUATIONS_OF_A_STRAIGHT_.EQUATION_POINT_GRADIENT.M_C_SIGN_CHANGED",
+    "listen_for": [
+     "y = 2x + 5"
+    ],
+    "ask": "What sign did c have?",
+    "repair": "Negative: -5.",
+    "error": "Finds c correctly but writes it with the wrong sign in the equation.",
+    "example": {
+     "question": "m = 2, c = -5. Equation?",
+     "wrong_answer": "y = 2x + 5",
+     "correct_answer": "y = 2x - 5"
+    }
+   },
+   {
+    "code": "MATH.G9.ALGEBR.EQUATIONS_OF_A_STRAIGHT_.EQUATION_POINT_GRADIENT.M_POINT_X_AS_C",
+    "listen_for": [
+     "2"
+    ],
+    "ask": "Is c the x of the point?",
+    "repair": "No: substitute and solve.",
+    "error": "Uses the x-value of the point as c.",
+    "example": {
+     "question": "m = 3, point (2, 7). c?",
+     "wrong_answer": "2",
+     "correct_answer": "1"
+    }
+   },
+   {
+    "code": "MATH.G9.ALGEBR.EQUATIONS_OF_A_STRAIGHT_.EQUATION_POINT_GRADIENT.M_MX_AS_SUM_D",
+    "listen_for": [
+     "13",
+     "added 4 and 3"
+    ],
+    "ask": "Does 4x mean 4 + x?",
+    "repair": "4 times x: c = 8.",
+    "error": "Adds m and the x-value instead of multiplying.",
+    "example": {
+     "question": "m = 4, point (3, 20). c?",
+     "wrong_answer": "13",
+     "correct_answer": "8"
+    }
+   }
+  ],
+  "checks": [
+   {
+    "question": "Equation of the line with gradient -2 through (3, 4)?",
+    "answer": "y = -2x + 10",
+    "shows": "point and gradient"
+   },
+   {
+    "question": "Equation of the line with gradient 4 through (-1, 2)?",
+    "answer": "y = 4x + 6",
+    "shows": "point and gradient"
+   }
+  ],
+  "name": "Find the equation of a line from a point and the gradient",
+  "sub_strand": "MATH.G9.ALGEBR.EQUATIONS_OF_A_STRAIGHT_",
+  "sub_strand_name": "Equations of a Straight Line",
+  "status": "draft: written 18 Nov 2026 offline for Grade 9; not yet checked by a Kenyan maths teacher; not loaded by the live tutor"
+ },
+ "MATH.G9.ALGEBR.EQUATIONS_OF_A_STRAIGHT_.REARRANGE_Y_MX_C": {
+  "skill": "MATH.G9.ALGEBR.EQUATIONS_OF_A_STRAIGHT_.REARRANGE_Y_MX_C",
+  "key_step": "The child takes the x term to the other side by doing the same to both sides, then divides every term by the number in front of y.",
+  "floor": {
+   "prerequisite": "Solves equations by doing the same to both sides.",
+   "question": "2y + 3 = 11",
+   "answer": "y = 4"
+  },
+  "representations": [
+   "a balance",
+   "the working in lines",
+   "y = mx + c with m and c ringed"
+  ],
+  "steps": [
+   "Take the x term from both sides.",
+   "Leave the number term as it is.",
+   "Divide every term by the number in front of y.",
+   "Read m and c."
+  ],
+  "contexts": [
+   "a budget line for buying pens and books",
+   "a mixture of two foods",
+   "a line from a graph"
+  ],
+  "board": [
+   {
+    "beat": "write",
+    "do": "Write 3x + 2y = 8."
+   },
+   {
+    "beat": "point",
+    "do": "Point at 3x.",
+    "say": "What do we do to both sides to leave 2y alone?"
+   },
+   {
+    "beat": "pause",
+    "do": "Wait for take away 3x."
+   },
+   {
+    "beat": "write",
+    "do": "Write 2y = -3x + 8."
+   },
+   {
+    "beat": "child_draws",
+    "do": "The child divides every term by 2."
+   },
+   {
+    "beat": "reveal",
+    "do": "Write y = -1.5x + 4."
+   }
+  ],
+  "misconceptions": [
+   {
+    "code": "MATH.G9.ALGEBR.EQUATIONS_OF_A_STRAIGHT_.REARRANGE_Y_MX_C.M_TERM_MOVED_SIGN_KEPT",
+    "listen_for": [
+     "3x + 8"
+    ],
+    "ask": "What happens to 3x when you take it from both sides?",
+    "repair": "It becomes -3x on the right.",
+    "error": "Moves the x term to the other side without changing its sign.",
+    "example": {
+     "question": "3x + 2y = 8: 2y = ?",
+     "wrong_answer": "3x + 8",
+     "correct_answer": "-3x + 8"
+    }
+   },
+   {
+    "code": "MATH.G9.ALGEBR.EQUATIONS_OF_A_STRAIGHT_.REARRANGE_Y_MX_C.M_NOT_ALL_DIVIDED",
+    "listen_for": [
+     "-6x + 4"
+    ],
+    "ask": "Did every term get divided by 2?",
+    "repair": "No: -3x + 4.",
+    "error": "Divides only one term by the number in front of y.",
+    "example": {
+     "question": "2y = -6x + 8: y = ?",
+     "wrong_answer": "-6x + 4",
+     "correct_answer": "-3x + 4"
+    }
+   },
+   {
+    "code": "MATH.G9.ALGEBR.EQUATIONS_OF_A_STRAIGHT_.REARRANGE_Y_MX_C.M_CONSTANT_SIGN_CHANGED",
+    "listen_for": [
+     "-3x - 8"
+    ],
+    "ask": "Did 8 move?",
+    "repair": "No: it keeps its sign.",
+    "error": "Changes the sign of the constant as well as the term that moved.",
+    "example": {
+     "question": "3x + 2y = 8: 2y = ?",
+     "wrong_answer": "-3x - 8",
+     "correct_answer": "-3x + 8"
+    }
+   },
+   {
+    "code": "MATH.G9.ALGEBR.EQUATIONS_OF_A_STRAIGHT_.REARRANGE_Y_MX_C.M_GRADIENT_SIGN_WRONG_E",
+    "listen_for": [
+     "m = 3/2"
+    ],
+    "ask": "What is in front of x once y is alone?",
+    "repair": "-3/2.",
+    "error": "Gives m with the wrong sign after rearranging.",
+    "example": {
+     "question": "3x + 2y = 8: m?",
+     "wrong_answer": "3/2",
+     "correct_answer": "-3/2"
+    }
+   },
+   {
+    "code": "MATH.G9.ALGEBR.EQUATIONS_OF_A_STRAIGHT_.REARRANGE_Y_MX_C.M_M_C_READ_SWAPPED",
+    "listen_for": [
+     "m = -3"
+    ],
+    "ask": "Which number is with x?",
+    "repair": "4: m = 4.",
+    "error": "Reads c as m and m as c from y = mx + c.",
+    "example": {
+     "question": "y = 4x - 3: m and c?",
+     "wrong_answer": "m = -3, c = 4",
+     "correct_answer": "m = 4, c = -3"
+    }
+   }
+  ],
+  "checks": [
+   {
+    "question": "Write 4x + 2y = 10 in the form y = mx + c.",
+    "answer": "y = -2x + 5",
+    "shows": "rearranging"
+   },
+   {
+    "question": "Write 3y - 6x = 9 in the form y = mx + c.",
+    "answer": "y = 2x + 3",
+    "shows": "rearranging"
+   }
+  ],
+  "name": "Write the equation of a line in the form y = mx + c",
+  "sub_strand": "MATH.G9.ALGEBR.EQUATIONS_OF_A_STRAIGHT_",
+  "sub_strand_name": "Equations of a Straight Line",
+  "status": "draft: written 18 Nov 2026 offline for Grade 9; not yet checked by a Kenyan maths teacher; not loaded by the live tutor"
+ },
+ "MATH.G9.ALGEBR.EQUATIONS_OF_A_STRAIGHT_.INTERPRET_M_AND_C": {
+  "skill": "MATH.G9.ALGEBR.EQUATIONS_OF_A_STRAIGHT_.INTERPRET_M_AND_C",
+  "key_step": "The child puts x = 0 to see what c means and adds 1 to x to see what m means, in the words of the story.",
+  "floor": {
+   "prerequisite": "Writes an expression with a rate and a fixed amount.",
+   "question": "40 shillings a km plus 100",
+   "answer": "40x + 100"
+  },
+  "representations": [
+   "a table x = 0, 1, 2",
+   "the graph with c marked",
+   "the story in words"
+  ],
+  "steps": [
+   "Put x = 0: y is c.",
+   "Add 1 to x: y grows by m.",
+   "Say what each means in the story.",
+   "For two fares, find m from the difference first."
+  ],
+  "contexts": [
+   "a boda boda fare",
+   "a phone bundle with a fixed fee",
+   "a water bill"
+  ],
+  "board": [
+   {
+    "beat": "write",
+    "do": "Write y = 40x + 100 for a fare of x km."
+   },
+   {
+    "beat": "point",
+    "do": "Point at x.",
+    "say": "What is the fare for 0 km?"
+   },
+   {
+    "beat": "pause",
+    "do": "Wait for 100."
+   },
+   {
+    "beat": "point",
+    "do": "Point at 40.",
+    "say": "How much more for each extra km?"
+   },
+   {
+    "beat": "reveal",
+    "do": "Write m = 40 a km, c = 100 fixed."
+   }
+  ],
+  "misconceptions": [
+   {
+    "code": "MATH.G9.ALGEBR.EQUATIONS_OF_A_STRAIGHT_.INTERPRET_M_AND_C.M_GRADIENT_AS_FIXED",
+    "listen_for": [
+     "40"
+    ],
+    "ask": "What is the fare for 0 km?",
+    "repair": "100: that is c.",
+    "error": "Calls the gradient the fixed charge.",
+    "example": {
+     "question": "Fare y = 40x + 100. Fixed charge?",
+     "wrong_answer": "40",
+     "correct_answer": "100"
+    }
+   },
+   {
+    "code": "MATH.G9.ALGEBR.EQUATIONS_OF_A_STRAIGHT_.INTERPRET_M_AND_C.M_WHOLE_FARE_AS_FIXED",
+    "listen_for": [
+     "220"
+    ],
+    "ask": "Does 220 include the 3 km?",
+    "repair": "Yes: take it off.",
+    "error": "Gives a whole fare as the fixed charge.",
+    "example": {
+     "question": "3 km costs 220, 8 km costs 420. Fixed charge?",
+     "wrong_answer": "220",
+     "correct_answer": "100"
+    }
+   },
+   {
+    "code": "MATH.G9.ALGEBR.EQUATIONS_OF_A_STRAIGHT_.INTERPRET_M_AND_C.M_ONE_KM_TAKEN_OFF",
+    "listen_for": [
+     "180"
+    ],
+    "ask": "How many km in that fare?",
+    "repair": "Three: 220 - 120.",
+    "error": "Takes away the cost of only 1 km from a fare.",
+    "example": {
+     "question": "3 km costs 220 at 40 a km. Fixed charge?",
+     "wrong_answer": "180",
+     "correct_answer": "100"
+    }
+   },
+   {
+    "code": "MATH.G9.ALGEBR.EQUATIONS_OF_A_STRAIGHT_.INTERPRET_M_AND_C.M_C_AS_STEEPNESS",
+    "listen_for": [
+     "the bigger c"
+    ],
+    "ask": "What makes a line steep?",
+    "repair": "The gradient m.",
+    "error": "Thinks the line with the bigger c is steeper.",
+    "example": {
+     "question": "y = 2x + 9 or y = 5x + 1: steeper?",
+     "wrong_answer": "y = 2x + 9",
+     "correct_answer": "y = 5x + 1"
+    }
+   }
+  ],
+  "checks": [
+   {
+    "question": "A plumber charges y = 500x + 1,000 shillings for x hours. Call-out fee?",
+    "answer": "1,000 shillings",
+    "shows": "reading c"
+   },
+   {
+    "question": "3 km costs 250 and 7 km costs 450 on y = mx + c. Cost of each extra km?",
+    "answer": "50 shillings",
+    "shows": "reading m"
+   }
+  ],
+  "name": "Interpret m and c in y = mx + c",
+  "sub_strand": "MATH.G9.ALGEBR.EQUATIONS_OF_A_STRAIGHT_",
+  "sub_strand_name": "Equations of a Straight Line",
+  "status": "draft: written 18 Nov 2026 offline for Grade 9; not yet checked by a Kenyan maths teacher; not loaded by the live tutor"
+ },
+ "MATH.G9.ALGEBR.EQUATIONS_OF_A_STRAIGHT_.INTERCEPTS": {
+  "skill": "MATH.G9.ALGEBR.EQUATIONS_OF_A_STRAIGHT_.INTERCEPTS",
+  "key_step": "The child sets the other coordinate to 0 for each axis: y = 0 for the x-axis, x = 0 for the y-axis.",
+  "floor": {
+   "prerequisite": "Solves a linear equation.",
+   "question": "0 = 60 - 4x",
+   "answer": "x = 15"
+  },
+  "representations": [
+   "a sketch with both axes",
+   "points (0, c) and (x, 0)",
+   "a table"
+  ],
+  "steps": [
+   "For the y-intercept put x = 0.",
+   "For the x-intercept put y = 0.",
+   "Solve each.",
+   "Write each as a point."
+  ],
+  "contexts": [
+   "a drum of water emptying",
+   "a phone battery running down",
+   "a budget running out"
+  ],
+  "board": [
+   {
+    "beat": "draw",
+    "do": "Sketch a falling line crossing both axes."
+   },
+   {
+    "beat": "point",
+    "do": "Point at where it meets the x-axis.",
+    "say": "What is the height y here?"
+   },
+   {
+    "beat": "pause",
+    "do": "Wait for 0."
+   },
+   {
+    "beat": "write",
+    "do": "Write 0 = 60 - 4x."
+   },
+   {
+    "beat": "reveal",
+    "do": "Write x = 15."
+   }
+  ],
+  "misconceptions": [
+   {
+    "code": "MATH.G9.ALGEBR.EQUATIONS_OF_A_STRAIGHT_.INTERCEPTS.M_INTERCEPTS_SWAPPED",
+    "listen_for": [
+     "the other intercept"
+    ],
+    "ask": "On the x-axis, which is 0, x or y?",
+    "repair": "y.",
+    "error": "Gives the y-intercept when the x-intercept is asked, or the other way round.",
+    "example": {
+     "question": "2x + 3y = 12. x-intercept?",
+     "wrong_answer": "4",
+     "correct_answer": "6"
+    }
+   },
+   {
+    "code": "MATH.G9.ALGEBR.EQUATIONS_OF_A_STRAIGHT_.INTERCEPTS.M_TRIANGLE_NOT_HALVED",
+    "listen_for": [
+     "24"
+    ],
+    "ask": "Is the shape a rectangle?",
+    "repair": "A triangle: halve.",
+    "error": "Multiplies the intercepts for the triangle area and forgets to halve.",
+    "example": {
+     "question": "Intercepts 6 and 4. Triangle area?",
+     "wrong_answer": "24",
+     "correct_answer": "12"
+    }
+   },
+   {
+    "code": "MATH.G9.ALGEBR.EQUATIONS_OF_A_STRAIGHT_.INTERCEPTS.M_START_AS_X_INTERCEPT",
+    "listen_for": [
+     "60"
+    ],
+    "ask": "Is 60 the time or the depth at the start?",
+    "repair": "The depth: set y = 0.",
+    "error": "Gives the starting value (y-intercept) as the time the line meets the x-axis.",
+    "example": {
+     "question": "Depth y = 60 - 4x. When is it empty?",
+     "wrong_answer": "60",
+     "correct_answer": "15"
+    }
+   },
+   {
+    "code": "MATH.G9.ALGEBR.EQUATIONS_OF_A_STRAIGHT_.INTERCEPTS.M_RATE_AS_X_INTERCEPT",
+    "listen_for": [
+     "4"
+    ],
+    "ask": "Is 4 a time?",
+    "repair": "It is cm per minute.",
+    "error": "Gives the rate as the answer.",
+    "example": {
+     "question": "Depth y = 60 - 4x. When is it empty?",
+     "wrong_answer": "4",
+     "correct_answer": "15"
+    }
+   },
+   {
+    "code": "MATH.G9.ALGEBR.EQUATIONS_OF_A_STRAIGHT_.INTERCEPTS.M_MULTIPLY_NOT_DIVIDE",
+    "listen_for": [
+     "240"
+    ],
+    "ask": "4x = 60, so x is?",
+    "repair": "15.",
+    "error": "Multiplies instead of dividing when solving for the intercept.",
+    "example": {
+     "question": "0 = 60 - 4x. x?",
+     "wrong_answer": "240",
+     "correct_answer": "15"
+    }
+   },
+   {
+    "code": "MATH.G9.ALGEBR.EQUATIONS_OF_A_STRAIGHT_.INTERCEPTS.M_X_ZERO_FOR_X_AXIS",
+    "listen_for": [
+     "(0, 6)"
+    ],
+    "ask": "Where is the point (0, 6)?",
+    "repair": "On the y-axis.",
+    "error": "Puts x = 0 to find where the line meets the x-axis.",
+    "example": {
+     "question": "y = 2x + 6 meets the x-axis at?",
+     "wrong_answer": "(0, 6)",
+     "correct_answer": "(-3, 0)"
+    }
+   },
+   {
+    "code": "MATH.G9.ALGEBR.EQUATIONS_OF_A_STRAIGHT_.INTERCEPTS.M_INTERCEPT_NOT_DIVIDED",
+    "listen_for": [
+     "-6"
+    ],
+    "ask": "2x = -6: x?",
+    "repair": "-3.",
+    "error": "Moves the constant across but does not divide by m.",
+    "example": {
+     "question": "0 = 2x + 6. x?",
+     "wrong_answer": "-6",
+     "correct_answer": "-3"
+    }
+   }
+  ],
+  "checks": [
+   {
+    "question": "Find the x- and y-intercepts of 3x + 4y = 24.",
+    "answer": "(8, 0) and (0, 6)",
+    "shows": "both intercepts"
+   },
+   {
+    "question": "A tank: y = 80 - 5x litres after x minutes. When is it empty?",
+    "answer": "16 minutes",
+    "shows": "x-intercept in context"
+   }
+  ],
+  "name": "Find the x- and y-intercepts of a straight line",
+  "sub_strand": "MATH.G9.ALGEBR.EQUATIONS_OF_A_STRAIGHT_",
+  "sub_strand_name": "Equations of a Straight Line",
+  "status": "draft: written 18 Nov 2026 offline for Grade 9; not yet checked by a Kenyan maths teacher; not loaded by the live tutor"
  }
 };
 export default TEACHING_PACK_G9;

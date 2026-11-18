@@ -2336,5 +2336,523 @@
   "help": "y is in row 2, column 2: use row 2, column 2 on each side.",
   "source": "to be confirmed by a teacher (no source yet)",
   "status": "draft"
+ },
+ "MATH.G9.ALGEBR.EQUATIONS_OF_A_STRAIGHT_.GRADIENT_REAL_LIFE.M_PERCENT_NOT_DIVIDED": {
+  "skill": "MATH.G9.ALGEBR.EQUATIONS_OF_A_STRAIGHT_.GRADIENT_REAL_LIFE",
+  "error": "Multiplies the percentage by the distance and forgets to divide by 100.",
+  "example": {
+   "question": "A 6% road, 450 m across. Rise?",
+   "wrong_answer": "2,700 m",
+   "correct_answer": "27 m"
+  },
+  "cause": "Treats 6% as 6.",
+  "reveals": "The answer 2,700 m as a wrong option, with a reason that names the idea.",
+  "help": "6% means 6 for every 100: 450 x 6 / 100.",
+  "source": "to be confirmed by a teacher (no source yet)",
+  "status": "draft"
+ },
+ "MATH.G9.ALGEBR.EQUATIONS_OF_A_STRAIGHT_.GRADIENT_REAL_LIFE.M_DIVIDE_BY_GRADIENT": {
+  "skill": "MATH.G9.ALGEBR.EQUATIONS_OF_A_STRAIGHT_.GRADIENT_REAL_LIFE",
+  "error": "Divides the distance by the gradient instead of multiplying.",
+  "example": {
+   "question": "A 6% road, 450 m across. Rise?",
+   "wrong_answer": "75 m",
+   "correct_answer": "27 m"
+  },
+  "cause": "Picks an operation without a reason.",
+  "reveals": "The answer 75 m as a wrong option, with a reason that names the idea.",
+  "help": "Rise = gradient x run.",
+  "source": "to be confirmed by a teacher (no source yet)",
+  "status": "draft"
+ },
+ "MATH.G9.ALGEBR.EQUATIONS_OF_A_STRAIGHT_.GRADIENT_REAL_LIFE.M_GRADIENT_ADDED": {
+  "skill": "MATH.G9.ALGEBR.EQUATIONS_OF_A_STRAIGHT_.GRADIENT_REAL_LIFE",
+  "error": "Adds the gradient to the distance.",
+  "example": {
+   "question": "A 6% road, 450 m across. Rise?",
+   "wrong_answer": "456 m",
+   "correct_answer": "27 m"
+  },
+  "cause": "Treats the gradient as a distance.",
+  "reveals": "The answer 456 m as a wrong option, with a reason that names the idea.",
+  "help": "The gradient is a rate, not a length.",
+  "source": "to be confirmed by a teacher (no source yet)",
+  "status": "draft"
+ },
+ "MATH.G9.ALGEBR.EQUATIONS_OF_A_STRAIGHT_.GRADIENT_REAL_LIFE.M_RISE_ONLY_COMPARED": {
+  "skill": "MATH.G9.ALGEBR.EQUATIONS_OF_A_STRAIGHT_.GRADIENT_REAL_LIFE",
+  "error": "Compares slopes by the rise alone, ignoring the run.",
+  "example": {
+   "question": "Roof A rises 3 m over 4 m; roof B rises 4 m over 8 m. Steeper?",
+   "wrong_answer": "B",
+   "correct_answer": "A"
+  },
+  "cause": "Thinks higher means steeper.",
+  "reveals": "The answer B as a wrong option, with a reason that names the idea.",
+  "help": "Steepness is rise / run: 0.75 against 0.5.",
+  "source": "to be confirmed by a teacher (no source yet)",
+  "status": "draft"
+ },
+ "MATH.G9.ALGEBR.EQUATIONS_OF_A_STRAIGHT_.GRADIENT_REAL_LIFE.M_RUN_OVER_RISE": {
+  "skill": "MATH.G9.ALGEBR.EQUATIONS_OF_A_STRAIGHT_.GRADIENT_REAL_LIFE",
+  "error": "Divides the run by the rise.",
+  "example": {
+   "question": "Rise 3 m, run 4 m. Gradient?",
+   "wrong_answer": "1.33",
+   "correct_answer": "0.75"
+  },
+  "cause": "Divides the bigger by the smaller.",
+  "reveals": "The answer 1.33 as a wrong option, with a reason that names the idea.",
+  "help": "Up over across: 3 / 4.",
+  "source": "to be confirmed by a teacher (no source yet)",
+  "status": "draft"
+ },
+ "MATH.G9.ALGEBR.EQUATIONS_OF_A_STRAIGHT_.GRADIENT_TWO_POINTS.M_GRADIENT_SIGN_LOST": {
+  "skill": "MATH.G9.ALGEBR.EQUATIONS_OF_A_STRAIGHT_.GRADIENT_TWO_POINTS",
+  "error": "Gives a positive gradient for a line going down.",
+  "example": {
+   "question": "(0, 50) and (10, 20): gradient?",
+   "wrong_answer": "3",
+   "correct_answer": "-3"
+  },
+  "cause": "Takes the size of the change only.",
+  "reveals": "The answer 3 as a wrong option, with a reason that names the idea.",
+  "help": "y goes down as x goes up: negative.",
+  "source": "to be confirmed by a teacher (no source yet)",
+  "status": "draft"
+ },
+ "MATH.G9.ALGEBR.EQUATIONS_OF_A_STRAIGHT_.GRADIENT_TWO_POINTS.M_GRADIENT_UPSIDE_DOWN": {
+  "skill": "MATH.G9.ALGEBR.EQUATIONS_OF_A_STRAIGHT_.GRADIENT_TWO_POINTS",
+  "error": "Divides the change in x by the change in y.",
+  "example": {
+   "question": "(1, 2) and (3, 8): gradient?",
+   "wrong_answer": "1/3",
+   "correct_answer": "3"
+  },
+  "cause": "Puts x on top because x comes first.",
+  "reveals": "The answer 1/3 as a wrong option, with a reason that names the idea.",
+  "help": "Change in y over change in x: 6 / 2.",
+  "source": "to be confirmed by a teacher (no source yet)",
+  "status": "draft"
+ },
+ "MATH.G9.ALGEBR.EQUATIONS_OF_A_STRAIGHT_.GRADIENT_TWO_POINTS.M_CHANGE_IN_Y_ONLY": {
+  "skill": "MATH.G9.ALGEBR.EQUATIONS_OF_A_STRAIGHT_.GRADIENT_TWO_POINTS",
+  "error": "Gives the change in y as the gradient.",
+  "example": {
+   "question": "(0, 50) and (10, 20): gradient?",
+   "wrong_answer": "-30",
+   "correct_answer": "-3"
+  },
+  "cause": "Stops before dividing.",
+  "reveals": "The answer -30 as a wrong option, with a reason that names the idea.",
+  "help": "Divide by the change in x as well.",
+  "source": "to be confirmed by a teacher (no source yet)",
+  "status": "draft"
+ },
+ "MATH.G9.ALGEBR.EQUATIONS_OF_A_STRAIGHT_.GRADIENT_TWO_POINTS.M_SUBTRACTION_ORDER_MIXED": {
+  "skill": "MATH.G9.ALGEBR.EQUATIONS_OF_A_STRAIGHT_.GRADIENT_TWO_POINTS",
+  "error": "Subtracts y one way and x the other way.",
+  "example": {
+   "question": "(1, 7) and (4, 1): gradient?",
+   "wrong_answer": "2",
+   "correct_answer": "-2"
+  },
+  "cause": "Takes the larger minus the smaller each time.",
+  "reveals": "The answer 2 as a wrong option, with a reason that names the idea.",
+  "help": "Use the same order: (1 - 7) / (4 - 1).",
+  "source": "to be confirmed by a teacher (no source yet)",
+  "status": "draft"
+ },
+ "MATH.G9.ALGEBR.EQUATIONS_OF_A_STRAIGHT_.GRADIENT_TWO_POINTS.M_CHANGES_MULTIPLIED": {
+  "skill": "MATH.G9.ALGEBR.EQUATIONS_OF_A_STRAIGHT_.GRADIENT_TWO_POINTS",
+  "error": "Multiplies the changes instead of dividing.",
+  "example": {
+   "question": "Change in y -6, change in x 3. Gradient?",
+   "wrong_answer": "-18",
+   "correct_answer": "-2"
+  },
+  "cause": "Picks the wrong operation.",
+  "reveals": "The answer -18 as a wrong option, with a reason that names the idea.",
+  "help": "Gradient = change in y divided by change in x.",
+  "source": "to be confirmed by a teacher (no source yet)",
+  "status": "draft"
+ },
+ "MATH.G9.ALGEBR.EQUATIONS_OF_A_STRAIGHT_.GRADIENT_TWO_POINTS.M_NEGATIVE_COORDINATE_SUBTRACTED": {
+  "skill": "MATH.G9.ALGEBR.EQUATIONS_OF_A_STRAIGHT_.GRADIENT_TWO_POINTS",
+  "error": "Subtracts a negative coordinate as if it were positive.",
+  "example": {
+   "question": "(-2, 1) and (3, 11): change in x?",
+   "wrong_answer": "1",
+   "correct_answer": "5"
+  },
+  "cause": "Drops the sign of -2.",
+  "reveals": "The answer 1 as a wrong option, with a reason that names the idea.",
+  "help": "3 - (-2) = 5.",
+  "source": "to be confirmed by a teacher (no source yet)",
+  "status": "draft"
+ },
+ "MATH.G9.ALGEBR.EQUATIONS_OF_A_STRAIGHT_.EQUATION_TWO_POINTS.M_C_AS_POINT_Y": {
+  "skill": "MATH.G9.ALGEBR.EQUATIONS_OF_A_STRAIGHT_.EQUATION_TWO_POINTS",
+  "error": "Takes the y-value of a point as c.",
+  "example": {
+   "question": "Line through (2, 7) and (5, 13). c?",
+   "wrong_answer": "7",
+   "correct_answer": "3"
+  },
+  "cause": "Thinks any y-value on the line is c.",
+  "reveals": "The answer 7 as a wrong option, with a reason that names the idea.",
+  "help": "c is y where x = 0: 7 = 2 x 2 + c gives c = 3.",
+  "source": "to be confirmed by a teacher (no source yet)",
+  "status": "draft"
+ },
+ "MATH.G9.ALGEBR.EQUATIONS_OF_A_STRAIGHT_.EQUATION_TWO_POINTS.M_C_BY_ADDING": {
+  "skill": "MATH.G9.ALGEBR.EQUATIONS_OF_A_STRAIGHT_.EQUATION_TWO_POINTS",
+  "error": "Adds m times x to y instead of taking it away to find c.",
+  "example": {
+   "question": "m = 2, point (2, 7). c?",
+   "wrong_answer": "11",
+   "correct_answer": "3"
+  },
+  "cause": "Moves the term without changing its sign.",
+  "reveals": "The answer 11 as a wrong option, with a reason that names the idea.",
+  "help": "c = y - mx = 7 - 4.",
+  "source": "to be confirmed by a teacher (no source yet)",
+  "status": "draft"
+ },
+ "MATH.G9.ALGEBR.EQUATIONS_OF_A_STRAIGHT_.EQUATION_TWO_POINTS.M_C_LEFT_OFF": {
+  "skill": "MATH.G9.ALGEBR.EQUATIONS_OF_A_STRAIGHT_.EQUATION_TWO_POINTS",
+  "error": "Leaves c out of the final equation.",
+  "example": {
+   "question": "m = 2, c = 3. Value of y at x = 4?",
+   "wrong_answer": "8",
+   "correct_answer": "11"
+  },
+  "cause": "Writes y = mx only.",
+  "reveals": "The answer 8 as a wrong option, with a reason that names the idea.",
+  "help": "Add c at the end: 2 x 4 + 3.",
+  "source": "to be confirmed by a teacher (no source yet)",
+  "status": "draft"
+ },
+ "MATH.G9.ALGEBR.EQUATIONS_OF_A_STRAIGHT_.EQUATION_TWO_POINTS.M_MX_ADDED_NOT_MULTIPLIED": {
+  "skill": "MATH.G9.ALGEBR.EQUATIONS_OF_A_STRAIGHT_.EQUATION_TWO_POINTS",
+  "error": "Adds m and x instead of multiplying.",
+  "example": {
+   "question": "m = 2, c = 3. y at x = 4?",
+   "wrong_answer": "9",
+   "correct_answer": "11"
+  },
+  "cause": "Reads mx as m + x.",
+  "reveals": "The answer 9 as a wrong option, with a reason that names the idea.",
+  "help": "mx means m times x.",
+  "source": "to be confirmed by a teacher (no source yet)",
+  "status": "draft"
+ },
+ "MATH.G9.ALGEBR.EQUATIONS_OF_A_STRAIGHT_.EQUATION_TWO_POINTS.M_GRADIENT_DIFFERENCE_OF_Y": {
+  "skill": "MATH.G9.ALGEBR.EQUATIONS_OF_A_STRAIGHT_.EQUATION_TWO_POINTS",
+  "error": "Takes the difference of the y-values as the gradient.",
+  "example": {
+   "question": "(2, 7) and (5, 13): gradient?",
+   "wrong_answer": "6",
+   "correct_answer": "2"
+  },
+  "cause": "Forgets the change in x.",
+  "reveals": "The answer 6 as a wrong option, with a reason that names the idea.",
+  "help": "Divide 6 by the change in x, 3.",
+  "source": "to be confirmed by a teacher (no source yet)",
+  "status": "draft"
+ },
+ "MATH.G9.ALGEBR.EQUATIONS_OF_A_STRAIGHT_.EQUATION_TWO_POINTS.M_M_C_SWAPPED": {
+  "skill": "MATH.G9.ALGEBR.EQUATIONS_OF_A_STRAIGHT_.EQUATION_TWO_POINTS",
+  "error": "Writes the equation with m and c swapped.",
+  "example": {
+   "question": "m = 2, c = 3. Equation?",
+   "wrong_answer": "y = 3x + 2",
+   "correct_answer": "y = 2x + 3"
+  },
+  "cause": "Does not know which number goes with x.",
+  "reveals": "The answer y = 3x + 2 as a wrong option, with a reason that names the idea.",
+  "help": "m multiplies x; c stands alone.",
+  "source": "to be confirmed by a teacher (no source yet)",
+  "status": "draft"
+ },
+ "MATH.G9.ALGEBR.EQUATIONS_OF_A_STRAIGHT_.EQUATION_POINT_GRADIENT.M_MX_SIGN_WRONG": {
+  "skill": "MATH.G9.ALGEBR.EQUATIONS_OF_A_STRAIGHT_.EQUATION_POINT_GRADIENT",
+  "error": "Gets the sign of m times x wrong when m is negative.",
+  "example": {
+   "question": "m = -3, point (2, 1). c?",
+   "wrong_answer": "-5",
+   "correct_answer": "7"
+  },
+  "cause": "Writes -3 x 2 as 6.",
+  "reveals": "The answer -5 as a wrong option, with a reason that names the idea.",
+  "help": "-3 x 2 = -6, so 1 = -6 + c and c = 7.",
+  "source": "to be confirmed by a teacher (no source yet)",
+  "status": "draft"
+ },
+ "MATH.G9.ALGEBR.EQUATIONS_OF_A_STRAIGHT_.EQUATION_POINT_GRADIENT.M_C_SIGN_CHANGED": {
+  "skill": "MATH.G9.ALGEBR.EQUATIONS_OF_A_STRAIGHT_.EQUATION_POINT_GRADIENT",
+  "error": "Finds c correctly but writes it with the wrong sign in the equation.",
+  "example": {
+   "question": "m = 2, c = -5. Equation?",
+   "wrong_answer": "y = 2x + 5",
+   "correct_answer": "y = 2x - 5"
+  },
+  "cause": "Copies the size and loses the sign.",
+  "reveals": "The answer y = 2x + 5 as a wrong option, with a reason that names the idea.",
+  "help": "Carry the sign of c into the equation.",
+  "source": "to be confirmed by a teacher (no source yet)",
+  "status": "draft"
+ },
+ "MATH.G9.ALGEBR.EQUATIONS_OF_A_STRAIGHT_.EQUATION_POINT_GRADIENT.M_POINT_X_AS_C": {
+  "skill": "MATH.G9.ALGEBR.EQUATIONS_OF_A_STRAIGHT_.EQUATION_POINT_GRADIENT",
+  "error": "Uses the x-value of the point as c.",
+  "example": {
+   "question": "m = 3, point (2, 7). c?",
+   "wrong_answer": "2",
+   "correct_answer": "1"
+  },
+  "cause": "Thinks c comes from the point directly.",
+  "reveals": "The answer 2 as a wrong option, with a reason that names the idea.",
+  "help": "Substitute: 7 = 3 x 2 + c, c = 1.",
+  "source": "to be confirmed by a teacher (no source yet)",
+  "status": "draft"
+ },
+ "MATH.G9.ALGEBR.EQUATIONS_OF_A_STRAIGHT_.EQUATION_POINT_GRADIENT.M_MX_AS_SUM_D": {
+  "skill": "MATH.G9.ALGEBR.EQUATIONS_OF_A_STRAIGHT_.EQUATION_POINT_GRADIENT",
+  "error": "Adds m and the x-value instead of multiplying.",
+  "example": {
+   "question": "m = 4, point (3, 20). c?",
+   "wrong_answer": "13",
+   "correct_answer": "8"
+  },
+  "cause": "Reads m times x as m + x.",
+  "reveals": "The answer 13 as a wrong option, with a reason that names the idea.",
+  "help": "m times x = 4 x 3 = 12, so c = 20 - 12 = 8.",
+  "source": "to be confirmed by a teacher (no source yet)",
+  "status": "draft"
+ },
+ "MATH.G9.ALGEBR.EQUATIONS_OF_A_STRAIGHT_.REARRANGE_Y_MX_C.M_TERM_MOVED_SIGN_KEPT": {
+  "skill": "MATH.G9.ALGEBR.EQUATIONS_OF_A_STRAIGHT_.REARRANGE_Y_MX_C",
+  "error": "Moves the x term to the other side without changing its sign.",
+  "example": {
+   "question": "3x + 2y = 8: 2y = ?",
+   "wrong_answer": "3x + 8",
+   "correct_answer": "-3x + 8"
+  },
+  "cause": "Moves terms like objects.",
+  "reveals": "The answer 3x + 8 as a wrong option, with a reason that names the idea.",
+  "help": "Take 3x from both sides: -3x.",
+  "source": "to be confirmed by a teacher (no source yet)",
+  "status": "draft"
+ },
+ "MATH.G9.ALGEBR.EQUATIONS_OF_A_STRAIGHT_.REARRANGE_Y_MX_C.M_NOT_ALL_DIVIDED": {
+  "skill": "MATH.G9.ALGEBR.EQUATIONS_OF_A_STRAIGHT_.REARRANGE_Y_MX_C",
+  "error": "Divides only one term by the number in front of y.",
+  "example": {
+   "question": "2y = -6x + 8: y = ?",
+   "wrong_answer": "-6x + 4",
+   "correct_answer": "-3x + 4"
+  },
+  "cause": "Divides the term next to the equals sign only.",
+  "reveals": "The answer -6x + 4 as a wrong option, with a reason that names the idea.",
+  "help": "Divide every term by 2.",
+  "source": "to be confirmed by a teacher (no source yet)",
+  "status": "draft"
+ },
+ "MATH.G9.ALGEBR.EQUATIONS_OF_A_STRAIGHT_.REARRANGE_Y_MX_C.M_CONSTANT_SIGN_CHANGED": {
+  "skill": "MATH.G9.ALGEBR.EQUATIONS_OF_A_STRAIGHT_.REARRANGE_Y_MX_C",
+  "error": "Changes the sign of the constant as well as the term that moved.",
+  "example": {
+   "question": "3x + 2y = 8: 2y = ?",
+   "wrong_answer": "-3x - 8",
+   "correct_answer": "-3x + 8"
+  },
+  "cause": "Changes every sign when anything moves.",
+  "reveals": "The answer -3x - 8 as a wrong option, with a reason that names the idea.",
+  "help": "Only the term that crosses the equals sign changes sign.",
+  "source": "to be confirmed by a teacher (no source yet)",
+  "status": "draft"
+ },
+ "MATH.G9.ALGEBR.EQUATIONS_OF_A_STRAIGHT_.REARRANGE_Y_MX_C.M_GRADIENT_SIGN_WRONG_E": {
+  "skill": "MATH.G9.ALGEBR.EQUATIONS_OF_A_STRAIGHT_.REARRANGE_Y_MX_C",
+  "error": "Gives m with the wrong sign after rearranging.",
+  "example": {
+   "question": "3x + 2y = 8: m?",
+   "wrong_answer": "3/2",
+   "correct_answer": "-3/2"
+  },
+  "cause": "Reads the 3 from the first equation.",
+  "reveals": "The answer 3/2 as a wrong option, with a reason that names the idea.",
+  "help": "Read m only after y is the subject: y = -3/2 x + 4.",
+  "source": "to be confirmed by a teacher (no source yet)",
+  "status": "draft"
+ },
+ "MATH.G9.ALGEBR.EQUATIONS_OF_A_STRAIGHT_.REARRANGE_Y_MX_C.M_M_C_READ_SWAPPED": {
+  "skill": "MATH.G9.ALGEBR.EQUATIONS_OF_A_STRAIGHT_.REARRANGE_Y_MX_C",
+  "error": "Reads c as m and m as c from y = mx + c.",
+  "example": {
+   "question": "y = 4x - 3: m and c?",
+   "wrong_answer": "m = -3, c = 4",
+   "correct_answer": "m = 4, c = -3"
+  },
+  "cause": "Reads the numbers in order of size or place.",
+  "reveals": "The answer m = -3, c = 4 as a wrong option, with a reason that names the idea.",
+  "help": "m is with x; c stands alone.",
+  "source": "to be confirmed by a teacher (no source yet)",
+  "status": "draft"
+ },
+ "MATH.G9.ALGEBR.EQUATIONS_OF_A_STRAIGHT_.INTERPRET_M_AND_C.M_GRADIENT_AS_FIXED": {
+  "skill": "MATH.G9.ALGEBR.EQUATIONS_OF_A_STRAIGHT_.INTERPRET_M_AND_C",
+  "error": "Calls the gradient the fixed charge.",
+  "example": {
+   "question": "Fare y = 40x + 100. Fixed charge?",
+   "wrong_answer": "40",
+   "correct_answer": "100"
+  },
+  "cause": "Takes the first number.",
+  "reveals": "The answer 40 as a wrong option, with a reason that names the idea.",
+  "help": "c is the cost before any distance: x = 0.",
+  "source": "to be confirmed by a teacher (no source yet)",
+  "status": "draft"
+ },
+ "MATH.G9.ALGEBR.EQUATIONS_OF_A_STRAIGHT_.INTERPRET_M_AND_C.M_WHOLE_FARE_AS_FIXED": {
+  "skill": "MATH.G9.ALGEBR.EQUATIONS_OF_A_STRAIGHT_.INTERPRET_M_AND_C",
+  "error": "Gives a whole fare as the fixed charge.",
+  "example": {
+   "question": "3 km costs 220, 8 km costs 420. Fixed charge?",
+   "wrong_answer": "220",
+   "correct_answer": "100"
+  },
+  "cause": "Forgets the fare includes the distance.",
+  "reveals": "The answer 220 as a wrong option, with a reason that names the idea.",
+  "help": "Take away the cost of the 3 km: 220 - 3 x 40.",
+  "source": "to be confirmed by a teacher (no source yet)",
+  "status": "draft"
+ },
+ "MATH.G9.ALGEBR.EQUATIONS_OF_A_STRAIGHT_.INTERPRET_M_AND_C.M_ONE_KM_TAKEN_OFF": {
+  "skill": "MATH.G9.ALGEBR.EQUATIONS_OF_A_STRAIGHT_.INTERPRET_M_AND_C",
+  "error": "Takes away the cost of only 1 km from a fare.",
+  "example": {
+   "question": "3 km costs 220 at 40 a km. Fixed charge?",
+   "wrong_answer": "180",
+   "correct_answer": "100"
+  },
+  "cause": "Takes off one rate.",
+  "reveals": "The answer 180 as a wrong option, with a reason that names the idea.",
+  "help": "Take off the cost of all 3 km.",
+  "source": "to be confirmed by a teacher (no source yet)",
+  "status": "draft"
+ },
+ "MATH.G9.ALGEBR.EQUATIONS_OF_A_STRAIGHT_.INTERPRET_M_AND_C.M_C_AS_STEEPNESS": {
+  "skill": "MATH.G9.ALGEBR.EQUATIONS_OF_A_STRAIGHT_.INTERPRET_M_AND_C",
+  "error": "Thinks the line with the bigger c is steeper.",
+  "example": {
+   "question": "y = 2x + 9 or y = 5x + 1: steeper?",
+   "wrong_answer": "y = 2x + 9",
+   "correct_answer": "y = 5x + 1"
+  },
+  "cause": "Looks at the largest number.",
+  "reveals": "The answer y = 2x + 9 as a wrong option, with a reason that names the idea.",
+  "help": "Steepness is m; c only moves the line up or down.",
+  "source": "to be confirmed by a teacher (no source yet)",
+  "status": "draft"
+ },
+ "MATH.G9.ALGEBR.EQUATIONS_OF_A_STRAIGHT_.INTERCEPTS.M_INTERCEPTS_SWAPPED": {
+  "skill": "MATH.G9.ALGEBR.EQUATIONS_OF_A_STRAIGHT_.INTERCEPTS",
+  "error": "Gives the y-intercept when the x-intercept is asked, or the other way round.",
+  "example": {
+   "question": "2x + 3y = 12. x-intercept?",
+   "wrong_answer": "4",
+   "correct_answer": "6"
+  },
+  "cause": "Puts the wrong letter equal to 0.",
+  "reveals": "The answer 4 as a wrong option, with a reason that names the idea.",
+  "help": "On the x-axis, y = 0: 2x = 12.",
+  "source": "to be confirmed by a teacher (no source yet)",
+  "status": "draft"
+ },
+ "MATH.G9.ALGEBR.EQUATIONS_OF_A_STRAIGHT_.INTERCEPTS.M_TRIANGLE_NOT_HALVED": {
+  "skill": "MATH.G9.ALGEBR.EQUATIONS_OF_A_STRAIGHT_.INTERCEPTS",
+  "error": "Multiplies the intercepts for the triangle area and forgets to halve.",
+  "example": {
+   "question": "Intercepts 6 and 4. Triangle area?",
+   "wrong_answer": "24",
+   "correct_answer": "12"
+  },
+  "cause": "Uses the rectangle.",
+  "reveals": "The answer 24 as a wrong option, with a reason that names the idea.",
+  "help": "A triangle is half the rectangle.",
+  "source": "to be confirmed by a teacher (no source yet)",
+  "status": "draft"
+ },
+ "MATH.G9.ALGEBR.EQUATIONS_OF_A_STRAIGHT_.INTERCEPTS.M_START_AS_X_INTERCEPT": {
+  "skill": "MATH.G9.ALGEBR.EQUATIONS_OF_A_STRAIGHT_.INTERCEPTS",
+  "error": "Gives the starting value (y-intercept) as the time the line meets the x-axis.",
+  "example": {
+   "question": "Depth y = 60 - 4x. When is it empty?",
+   "wrong_answer": "60",
+   "correct_answer": "15"
+  },
+  "cause": "Reads the first number.",
+  "reveals": "The answer 60 as a wrong option, with a reason that names the idea.",
+  "help": "Empty means y = 0: 60 - 4x = 0.",
+  "source": "to be confirmed by a teacher (no source yet)",
+  "status": "draft"
+ },
+ "MATH.G9.ALGEBR.EQUATIONS_OF_A_STRAIGHT_.INTERCEPTS.M_RATE_AS_X_INTERCEPT": {
+  "skill": "MATH.G9.ALGEBR.EQUATIONS_OF_A_STRAIGHT_.INTERCEPTS",
+  "error": "Gives the rate as the answer.",
+  "example": {
+   "question": "Depth y = 60 - 4x. When is it empty?",
+   "wrong_answer": "4",
+   "correct_answer": "15"
+  },
+  "cause": "Picks a number from the equation.",
+  "reveals": "The answer 4 as a wrong option, with a reason that names the idea.",
+  "help": "Set y = 0 and solve.",
+  "source": "to be confirmed by a teacher (no source yet)",
+  "status": "draft"
+ },
+ "MATH.G9.ALGEBR.EQUATIONS_OF_A_STRAIGHT_.INTERCEPTS.M_MULTIPLY_NOT_DIVIDE": {
+  "skill": "MATH.G9.ALGEBR.EQUATIONS_OF_A_STRAIGHT_.INTERCEPTS",
+  "error": "Multiplies instead of dividing when solving for the intercept.",
+  "example": {
+   "question": "0 = 60 - 4x. x?",
+   "wrong_answer": "240",
+   "correct_answer": "15"
+  },
+  "cause": "Undoes the wrong operation.",
+  "reveals": "The answer 240 as a wrong option, with a reason that names the idea.",
+  "help": "4x = 60, so x = 60 / 4.",
+  "source": "to be confirmed by a teacher (no source yet)",
+  "status": "draft"
+ },
+ "MATH.G9.ALGEBR.EQUATIONS_OF_A_STRAIGHT_.INTERCEPTS.M_X_ZERO_FOR_X_AXIS": {
+  "skill": "MATH.G9.ALGEBR.EQUATIONS_OF_A_STRAIGHT_.INTERCEPTS",
+  "error": "Puts x = 0 to find where the line meets the x-axis.",
+  "example": {
+   "question": "y = 2x + 6 meets the x-axis at?",
+   "wrong_answer": "(0, 6)",
+   "correct_answer": "(-3, 0)"
+  },
+  "cause": "Mixes which coordinate is zero on which axis.",
+  "reveals": "The answer (0, 6) as a wrong option, with a reason that names the idea.",
+  "help": "On the x-axis the height y is 0.",
+  "source": "to be confirmed by a teacher (no source yet)",
+  "status": "draft"
+ },
+ "MATH.G9.ALGEBR.EQUATIONS_OF_A_STRAIGHT_.INTERCEPTS.M_INTERCEPT_NOT_DIVIDED": {
+  "skill": "MATH.G9.ALGEBR.EQUATIONS_OF_A_STRAIGHT_.INTERCEPTS",
+  "error": "Moves the constant across but does not divide by m.",
+  "example": {
+   "question": "0 = 2x + 6. x?",
+   "wrong_answer": "-6",
+   "correct_answer": "-3"
+  },
+  "cause": "Stops halfway.",
+  "reveals": "The answer -6 as a wrong option, with a reason that names the idea.",
+  "help": "2x = -6, so x = -3.",
+  "source": "to be confirmed by a teacher (no source yet)",
+  "status": "draft"
  }
 }

@@ -4,4 +4,5 @@ import * as cubes from './cubes.mjs';
 import * as indices from './indices.mjs';
 import * as proportion from './proportion.mjs';
 import * as matrices from './matrices.mjs';
-export const SUBS = [integers, cubes, indices, proportion, matrices];
+import * as line from './line.mjs';
+export const SUBS = [integers, cubes, indices, proportion, matrices, line];

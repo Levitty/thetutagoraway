@@ -779,17 +779,17 @@ const MATRICES = [
 // ---------------------------------------------------------------- STRAIGHT LINES
 const eq = (m, c) => `y = ${m === 1 ? '' : m === -1 ? '−' : fm(m)}x${c === 0 ? '' : c < 0 ? ` − ${-c}` : ` + ${c}`}`;
 const LINES = [
-  fam({ id: 'g9.line.road-percent', skill: 'G8_GRADIENT', outcome: 'G9.LINE.a', rung: 1, form: 'word',
+  fam({ id: 'g9.line.road-percent', skill: 'G8_GRADIENT', outcome: 'MATH.G9.ALGEBR.EQUATIONS_OF_A_STRAIGHT_.a', cskill: 'MATH.G9.ALGEBR.EQUATIONS_OF_A_STRAIGHT_.GRADIENT_REAL_LIFE', rung: 1, form: 'word',
     draw: () => { const g = pick([4, 5, 8, 10, 12]), run = pick([250, 500, 750, 1000, 1500]); return (run * g) % 100 === 0 ? { g, run, rise: (run * g) / 100 } : null; },
     make: ({ g, run, rise }) => ({
       question: `A road sign near Limuru says the hill has a gradient of ${g}%. This means the road rises ${g} m for every 100 m along the horizontal. A stretch of the road covers a horizontal distance of ${commas(run)} m. How many metres does the road rise over this stretch?`,
       answer: rise,
-      wrong: [[g * run, 'A gradient of 8% means 8 out of every 100, so divide by 100 after multiplying.'], [round(run / g, 1), 'The rise is the gradient times the horizontal distance. Do not divide by the gradient.'], [run + g, 'The gradient is a rate, not a distance to add.']],
+      wrong: [[g * run, 'A gradient of 8% means 8 out of every 100, so divide by 100 after multiplying.', 'M_PERCENT_NOT_DIVIDED'], [round(run / g, 1), 'The rise is the gradient times the horizontal distance. Do not divide by the gradient.', 'M_DIVIDE_BY_GRADIENT'], [run + g, 'The gradient is a rate, not a distance to add.', 'M_GRADIENT_ADDED']],
       hints: [`A gradient of ${g}% is ${g} m of rise for every 100 m along.`, `How many lots of 100 m are in ${commas(run)} m?`],
       steps: [`${commas(run)} ÷ 100 = ${run / 100} lots of 100 m.`, `Rise = ${run / 100} × ${g} = ${rise} m.`],
     }),
     check: ({ g, run }, a) => (a / run) * 100 === g }),
-  fam({ id: 'g9.line.roof-table', skill: 'G8_GRADIENT', outcome: 'G9.LINE.a', rung: 2, form: 'table',
+  fam({ id: 'g9.line.roof-table', skill: 'G8_GRADIENT', outcome: 'MATH.G9.ALGEBR.EQUATIONS_OF_A_STRAIGHT_.a', cskill: 'MATH.G9.ALGEBR.EQUATIONS_OF_A_STRAIGHT_.GRADIENT_REAL_LIFE', misMapped: false, reveals: ['M_RISE_ONLY_COMPARED', 'M_RUN_OVER_RISE'], rung: 2, form: 'table',
     draw: () => {
       const rows = [['Classroom roof', randInt(2, 6), randInt(3, 9)], ['Kitchen roof', randInt(2, 6), randInt(3, 9)], ['Library roof', randInt(2, 6), randInt(3, 9)]];
       const g = rows.map(r => r[1] / r[2]), hi = Math.max(...g), tops = g.filter(x => Math.abs(x - hi) < 1e-9).length, riseMax = rows.map(r => r[1]).indexOf(Math.max(...rows.map(r => r[1])));
@@ -802,17 +802,17 @@ const LINES = [
       hints: ['Gradient = rise ÷ run.', 'Work out the gradient of each roof and compare. The biggest rise is not always the steepest.'],
       steps: rows.map(r => `${r[0]}: ${r[1]} ÷ ${r[2]} = ${round(r[1] / r[2], 2)}.`).concat([`The largest gradient is for the ${rows[best][0].toLowerCase()}.`]),
     }) }),
-  fam({ id: 'g9.line.drain-negative', skill: 'G8_GRADIENT', outcome: 'G9.LINE.b', rung: 2, form: 'word', allowNegative: true,
+  fam({ id: 'g9.line.drain-negative', skill: 'G8_GRADIENT', outcome: 'MATH.G9.ALGEBR.EQUATIONS_OF_A_STRAIGHT_.b', cskill: 'MATH.G9.ALGEBR.EQUATIONS_OF_A_STRAIGHT_.GRADIENT_TWO_POINTS', rung: 2, form: 'word', allowNegative: true,
     draw: () => { const t1 = randInt(1, 4), dt = randInt(2, 6), rate = pick([2, 3, 4, 5]), d1 = rate * (dt + randInt(2, 8)); const t2 = t1 + dt, d2 = d1 - rate * dt; return d2 > 0 ? { t1, t2, d1, d2, rate, dt } : null; },
     make: ({ t1, t2, d1, d2, rate, dt }) => ({
       question: `A pump empties a water tank. A straight-line graph of the depth of water in cm against the time in minutes passes through the points (${t1}, ${d1}) and (${t2}, ${d2}). Find the gradient of the line.`,
       answer: -rate,
-      wrong: [[rate, 'The depth goes down as time goes up, so the gradient is negative.'], [round(-1 / rate, 2), 'The gradient is the change in depth divided by the change in time, not the other way round.'], [-(d1 - d2) , 'That is the change in depth only. Divide by the change in time as well.']].filter(w => w[0] !== -rate),
+      wrong: [[rate, 'The depth goes down as time goes up, so the gradient is negative.', 'M_GRADIENT_SIGN_LOST'], [round(-1 / rate, 2), 'The gradient is the change in depth divided by the change in time, not the other way round.', 'M_GRADIENT_UPSIDE_DOWN'], [-(d1 - d2) , 'That is the change in depth only. Divide by the change in time as well.', 'M_CHANGE_IN_Y_ONLY']].filter(w => w[0] !== -rate),
       hints: ['Gradient = change in y ÷ change in x.', 'The depth at the second point is less than at the first, so the change in y is negative.'],
       steps: [`Change in depth: ${d2} − ${d1} = ${fm(d2 - d1)}. Change in time: ${t2} − ${t1} = ${dt}.`, `Gradient = ${fm(d2 - d1)} ÷ ${dt} = ${fm(-rate)}.`],
     }),
     check: ({ t1, t2, d1, d2 }, a) => d1 + a * (t2 - t1) === d2 }),
-  fam({ id: 'g9.line.spot-gradient', skill: 'G8_GRADIENT', outcome: 'G9.LINE.b', rung: 2, form: 'spot',
+  fam({ id: 'g9.line.spot-gradient', skill: 'G8_GRADIENT', outcome: 'MATH.G9.ALGEBR.EQUATIONS_OF_A_STRAIGHT_.b', cskill: 'MATH.G9.ALGEBR.EQUATIONS_OF_A_STRAIGHT_.GRADIENT_TWO_POINTS', rung: 2, form: 'spot',
     draw: () => {
       const m = pick([-4, -3, -2, 2, 3, 4]), x1 = randInt(-3, 2), dx = randInt(2, 4), x2 = x1 + dx, y1 = randInt(-4, 6), y2 = y1 + m * dx, type = pick(['dy-sign', 'dx-sign', 'multiply']);
       return { x1, y1, x2, y2, m, dx, type, who: person() };
@@ -825,10 +825,10 @@ const LINES = [
         { text: `Gradient = ${type === 'multiply' ? `${fm(s1)} × ${fm(s2)}` : `${fm(s1)} ÷ ${fm(s2)}`} = ${fm(g)}`, ok: g === s1 / s2 },
       ];
       const fix = { 'dy-sign': `The change in y is y₂ − y₁ = ${y2} − ${br(y1)}. Step 1 took them the wrong way round.`, 'dx-sign': `The change in x is x₂ − x₁ = ${x2} − ${br(x1)}. Step 2 took them the wrong way round.`, multiply: 'Gradient is the change in y divided by the change in x. Step 3 multiplied.' }[type];
-      return { question: `${who.name} found the gradient of the line through (${x1}, ${y1}) and (${x2}, ${y2}). One step is wrong. Which one?`, working, fix,
+      return { question: `${who.name} found the gradient of the line through (${x1}, ${y1}) and (${x2}, ${y2}). One step is wrong. Which one?`, working, mis: type === 'multiply' ? 'M_CHANGES_MULTIPLIED' : 'M_SUBTRACTION_ORDER_MIXED', fix,
         steps: [`Change in y: ${y2} − ${br(y1)} = ${fm(dy)}.`, `Change in x: ${x2} − ${br(x1)} = ${dx}. Gradient = ${fm(dy)} ÷ ${dx} = ${fm(m)}.`] };
     } }),
-  fam({ id: 'g9.line.steps-two-points', skill: 'G8_EQUATION_OF_LINE', outcome: 'G9.LINE.c', rung: 2, form: 'steps',
+  fam({ id: 'g9.line.steps-two-points', skill: 'G8_EQUATION_OF_LINE', outcome: 'MATH.G9.ALGEBR.EQUATIONS_OF_A_STRAIGHT_.c', cskill: 'MATH.G9.ALGEBR.EQUATIONS_OF_A_STRAIGHT_.EQUATION_TWO_POINTS', rung: 2, form: 'steps',
     draw: () => {
       const m = pick([-3, -2, -1, 2, 3, 4]), c = pick([-5, -3, -2, 2, 3, 5, 6]), x1 = randInt(1, 3), x2 = x1 + randInt(1, 3), X = x2 + randInt(1, 3);
       const y1 = m * x1 + c, y2 = m * x2 + c;
@@ -837,37 +837,37 @@ const LINES = [
     make: ({ m, c, x1, x2, y1, y2, X }) => ({
       question: `A straight line passes through the points (${x1}, ${y1}) and (${x2}, ${y2}). Find its equation, y = mx + c, in steps.`,
       parts: [
-        { prompt: 'What is the gradient m?', answer: m, hint: 'm = change in y ÷ change in x.', wrong: [[-m, 'Check the order of the subtraction in both the top and the bottom.'], [round(1 / m, 2), 'The gradient is change in y over change in x, not the other way up.']] },
-        { prompt: `Put m and the point (${x1}, ${y1}) into y = mx + c. What is c?`, answer: c, hint: `${y1} = ${fm(m)} × ${x1} + c.`, wrong: [[y1, 'c is the value of y when x = 0. This point is not at x = 0.'], [y1 + m * x1, 'To find c, take m × x away from y.']] },
-        { prompt: `Use the equation to find y when x = ${X}.`, answer: m * X + c, hint: 'Put x into y = mx + c.', wrong: [[m * X, 'Add c at the end.'], [m + c + X, 'm × x means multiply m by x.']] },
+        { prompt: 'What is the gradient m?', answer: m, hint: 'm = change in y ÷ change in x.', wrong: [[-m, 'Check the order of the subtraction in both the top and the bottom.', 'M_SUBTRACTION_ORDER_MIXED'], [round(1 / m, 2), 'The gradient is change in y over change in x, not the other way up.', 'M_GRADIENT_UPSIDE_DOWN']] },
+        { prompt: `Put m and the point (${x1}, ${y1}) into y = mx + c. What is c?`, answer: c, hint: `${y1} = ${fm(m)} × ${x1} + c.`, wrong: [[y1, 'c is the value of y when x = 0. This point is not at x = 0.', 'M_C_AS_POINT_Y'], [y1 + m * x1, 'To find c, take m × x away from y.', 'M_C_BY_ADDING']] },
+        { prompt: `Use the equation to find y when x = ${X}.`, answer: m * X + c, hint: 'Put x into y = mx + c.', wrong: [[m * X, 'Add c at the end.', 'M_C_LEFT_OFF'], [m + c + X, 'm × x means multiply m by x.', 'M_MX_ADDED_NOT_MULTIPLIED']] },
       ],
       steps: [`m = (${y2} − ${br(y1)}) ÷ (${x2} − ${x1}) = ${fm(m)}.`, `c = ${y1} − ${br(m * x1)} = ${fm(c)}, so ${eq(m, c)}.`, `When x = ${X}: y = ${fm(m)} × ${X} + ${br(c)} = ${fm(m * X + c)}.`],
     }),
     check: ({ x1, y1, x2, y2, X }, v) => v[0] * (x2 - x1) === y2 - y1 && v[0] * x1 + v[1] === y1 && v[0] * X + v[1] === v[2] }),
-  fam({ id: 'g9.line.why-eq', skill: 'G8_EQUATION_OF_LINE', outcome: 'G9.LINE.c', rung: 3, form: 'why',
+  fam({ id: 'g9.line.why-eq', skill: 'G8_EQUATION_OF_LINE', outcome: 'MATH.G9.ALGEBR.EQUATIONS_OF_A_STRAIGHT_.c', cskill: 'MATH.G9.ALGEBR.EQUATIONS_OF_A_STRAIGHT_.EQUATION_TWO_POINTS', rung: 3, form: 'why',
     draw: () => { const m = pick([2, 3, 4]), c = pick([-3, -2, 1, 2, 4]), x1 = randInt(2, 3), y1 = m * x1 + c, x2 = x1 + 2, y2 = m * x2 + c; return y1 !== c ? { m, c, x1, y1, x2, y2, who: person() } : null; },
     make: ({ m, c, x1, y1, x2, y2, who }) => ({
       question: `A line has gradient ${m} and goes through (${x1}, ${y1}) and (${x2}, ${y2}). ${who.name} gives y = ${m}x + ${y1} as its equation. What is ${who.her} mistake?`,
       options: [
         { text: `c is the value of y when x = 0, not when x = ${x1}. Put (${x1}, ${y1}) into y = ${m}x + c to find c = ${c}`, right: true },
-        { text: `The gradient should be ${y2 - y1}, because that is the difference between the two y-values`, right: false, why: 'The gradient is the change in y divided by the change in x. The given gradient is already correct.' },
-        { text: `The equation should be written as y = c x + ${m}`, right: false, why: 'In y = mx + c, m is always the gradient, which is the number multiplying x.' },
-        { text: `Nothing is wrong, because ${y1} is a y-value on the line, so it is c`, right: false, why: 'c is the y-value only where the line crosses the y-axis, at x = 0.' },
+        { text: `The gradient should be ${y2 - y1}, because that is the difference between the two y-values`, right: false, why: 'The gradient is the change in y divided by the change in x. The given gradient is already correct.', mis: 'M_GRADIENT_DIFFERENCE_OF_Y' },
+        { text: `The equation should be written as y = c x + ${m}`, right: false, why: 'In y = mx + c, m is always the gradient, which is the number multiplying x.', mis: 'M_M_C_SWAPPED' },
+        { text: `Nothing is wrong, because ${y1} is a y-value on the line, so it is c`, right: false, why: 'c is the y-value only where the line crosses the y-axis, at x = 0.', mis: 'M_C_AS_POINT_Y' },
       ],
       hints: ['What does c stand for in y = mx + c?', 'Put the coordinates of one point into the equation and solve for c.'],
       steps: [`Put x = ${x1} and y = ${y1} into y = ${m}x + c: ${y1} = ${m * x1} + c.`, `c = ${y1} − ${m * x1} = ${fm(c)}, so the equation is ${eq(m, c)}.`],
     }) }),
-  fam({ id: 'g9.line.fare-fixed-charge', skill: 'G8_EQUATION_OF_LINE', outcome: 'G9.LINE.c', rung: 2, form: 'word',
+  fam({ id: 'g9.line.fare-fixed-charge', skill: 'G8_EQUATION_OF_LINE', outcome: 'MATH.G9.ALGEBR.EQUATIONS_OF_A_STRAIGHT_.f', cskill: 'MATH.G9.ALGEBR.EQUATIONS_OF_A_STRAIGHT_.INTERPRET_M_AND_C', rung: 2, form: 'word',
     draw: () => { const m = pick([20, 30, 40, 50]), c = pick([50, 70, 100, 120]), [x1, x2] = pick([[2, 6], [3, 7], [2, 5], [4, 8]]); const y1 = m * x1 + c, y2 = m * x2 + c; return uniq(c, m, y1, y1 - m) ? { m, c, x1, x2, y1, y2 } : null; },
     make: ({ m, c, x1, x2, y1, y2 }) => ({
       question: `The fare y shillings for a boda boda ride of x km is given by a straight-line equation y = mx + c. A ${x1} km ride costs ${sh(y1)} and ${x2 === 8 ? 'an' : 'a'} ${x2} km ride costs ${sh(y2)}. What is c, the fixed charge, in shillings? (The fares are for this question only.)`,
       answer: c,
-      wrong: [[m, 'That is the gradient: the cost of each extra km. c is the cost before any distance.'], [y1, 'That is the whole fare for the shorter ride. It includes the cost of the distance as well.'], [y1 - m * 1, 'Take away the cost of the whole distance, not just 1 km.']],
+      wrong: [[m, 'That is the gradient: the cost of each extra km. c is the cost before any distance.', 'M_GRADIENT_AS_FIXED'], [y1, 'That is the whole fare for the shorter ride. It includes the cost of the distance as well.', 'M_WHOLE_FARE_AS_FIXED'], [y1 - m * 1, 'Take away the cost of the whole distance, not just 1 km.', 'M_ONE_KM_TAKEN_OFF']],
       hints: ['Find the gradient first: how much does each extra km cost?', 'Then put one ride into y = mx + c and solve for c.'],
       steps: [`m = (${y2} − ${y1}) ÷ (${x2} − ${x1}) = ${m}.`, `${y1} = ${m} × ${x1} + c, so c = ${y1} − ${m * x1} = ${c}.`],
     }),
     check: ({ m, x1, y1 }, a) => a + m * x1 === y1 }),
-  fam({ id: 'g9.line.spot-point-gradient', skill: 'G8_EQUATION_OF_LINE', outcome: 'G9.LINE.d', rung: 3, form: 'spot',
+  fam({ id: 'g9.line.spot-point-gradient', skill: 'G8_EQUATION_OF_LINE', outcome: 'MATH.G9.ALGEBR.EQUATIONS_OF_A_STRAIGHT_.d', cskill: 'MATH.G9.ALGEBR.EQUATIONS_OF_A_STRAIGHT_.EQUATION_POINT_GRADIENT', rung: 3, form: 'spot',
     draw: () => {
       const m = pick([-4, -3, -2, 2, 3, 4, 5]), x1 = randInt(1, 4), y1 = randInt(-4, 8), type = pick(['add', 'sign', 'product']);
       const c = y1 - m * x1;
@@ -884,22 +884,22 @@ const LINES = [
       ];
       const fix = { add: 'To find c, take m × x away from y. Step 2 added them.', sign: 'In Step 3, the value of c from Step 2 was written with the wrong sign in the equation.', product: 'm × x means multiply. Step 1 added instead.' }[type];
       const c = y1 - m * x1;
-      return { question: `${who.name} found the equation of the line through (${x1}, ${y1}) with gradient ${m}. One step is wrong. Which one?`, working, fix,
+      return { question: `${who.name} found the equation of the line through (${x1}, ${y1}) with gradient ${m}. One step is wrong. Which one?`, working, mis: { add: 'M_C_BY_ADDING', sign: 'M_C_SIGN_CHANGED', product: 'M_MX_AS_SUM_D' }[type], fix,
         steps: [`m × x = ${br(m)} × ${x1} = ${fm(m * x1)}.`, `c = ${y1} − (${fm(m * x1)}) = ${fm(c)}, so the equation is ${eq(m, c)}.`] };
     } }),
-  fam({ id: 'g9.line.steps-rearrange', skill: 'G8_EQUATION_OF_LINE', outcome: 'G9.LINE.e', rung: 2, form: 'steps',
+  fam({ id: 'g9.line.steps-rearrange', skill: 'G8_EQUATION_OF_LINE', outcome: 'MATH.G9.ALGEBR.EQUATIONS_OF_A_STRAIGHT_.e', cskill: 'MATH.G9.ALGEBR.EQUATIONS_OF_A_STRAIGHT_.REARRANGE_Y_MX_C', rung: 2, form: 'steps',
     draw: () => { const b = pick([2, 3, 4, 5]), u = randInt(1, 3), v = randInt(2, 8); return { a: b * u, b, k: b * v, u, v }; },
     make: ({ a, b, k, u, v }) => ({
       question: `Make y the subject of ${a}x + ${b}y = ${k}. This gives the form y = mx + c. Follow the steps.`,
       parts: [
-        { prompt: `Take ${a}x from both sides. What is the coefficient of x on the right side, in ${b}y = ?x + ${k}?`, answer: -a, hint: `Moving ${a}x to the other side changes its sign.`, wrong: [[a, 'When a term moves to the other side of the equals sign, its sign changes.']] },
-        { prompt: `Divide every term by ${b}. What is m, the number in front of x?`, answer: -u, hint: `Divide ${fm(-a)} by ${b}.`, wrong: [[-a, `Every term must be divided by ${b}, including the x term.`], [u, 'Check the sign of m.']] },
-        { prompt: `What is c?`, answer: v, hint: `Divide ${k} by ${b}.`, wrong: [[k, `The constant must be divided by ${b} too.`], [-v, 'The constant did not change sign. Only the term that moved did.']] },
+        { prompt: `Take ${a}x from both sides. What is the coefficient of x on the right side, in ${b}y = ?x + ${k}?`, answer: -a, hint: `Moving ${a}x to the other side changes its sign.`, wrong: [[a, 'When a term moves to the other side of the equals sign, its sign changes.', 'M_TERM_MOVED_SIGN_KEPT']] },
+        { prompt: `Divide every term by ${b}. What is m, the number in front of x?`, answer: -u, hint: `Divide ${fm(-a)} by ${b}.`, wrong: [[-a, `Every term must be divided by ${b}, including the x term.`, 'M_NOT_ALL_DIVIDED'], [u, 'Check the sign of m.', 'M_GRADIENT_SIGN_WRONG_E']] },
+        { prompt: `What is c?`, answer: v, hint: `Divide ${k} by ${b}.`, wrong: [[k, `The constant must be divided by ${b} too.`, 'M_NOT_ALL_DIVIDED'], [-v, 'The constant did not change sign. Only the term that moved did.', 'M_CONSTANT_SIGN_CHANGED']] },
       ],
       steps: [`${b}y = ${fm(-a)}x + ${k}.`, `Divide by ${b}: y = ${fm(-u)}x + ${v}.`, `So m = ${fm(-u)} and c = ${v}.`],
     }),
     check: ({ a, b, k }, p) => p[0] === -a && p[1] * b === p[0] && p[2] * b === k }),
-  fam({ id: 'g9.line.spot-rearrange', skill: 'G8_EQUATION_OF_LINE', outcome: 'G9.LINE.e', rung: 3, form: 'spot',
+  fam({ id: 'g9.line.spot-rearrange', skill: 'G8_EQUATION_OF_LINE', outcome: 'MATH.G9.ALGEBR.EQUATIONS_OF_A_STRAIGHT_.e', cskill: 'MATH.G9.ALGEBR.EQUATIONS_OF_A_STRAIGHT_.REARRANGE_Y_MX_C', rung: 3, form: 'spot',
     draw: () => {
       const b = pick([2, 3, 4]), u = randInt(1, 3), v = randInt(2, 6), type = pick(['sign', 'half', 'read']), a = b * u, k = b * v;
       const K1 = type === 'sign' ? -k : k, M2 = u, C2 = type === 'half' ? K1 : K1 / b, g = type === 'read' ? C2 : M2, ic = type === 'read' ? M2 : C2;
@@ -912,40 +912,40 @@ const LINES = [
         { text: `m = ${fm(g)} and c = ${fm(ic)}`, ok: g === M2 && ic === C2 },
       ];
       const fix = { sign: `Adding ${a}x to both sides leaves the ${k} unchanged. Step 1 changed its sign.`, half: `In Step 2 every term must be divided by ${b}, including the constant.`, read: 'In y = mx + c, m is the number multiplying x and c is the constant. Step 3 swapped them.' }[type];
-      return { question: `${who.name} wants to write ${b}y − ${a}x = ${k} in the form y = mx + c. One step is wrong. Which one?`, working, fix,
+      return { question: `${who.name} wants to write ${b}y − ${a}x = ${k} in the form y = mx + c. One step is wrong. Which one?`, working, mis: { sign: 'M_CONSTANT_SIGN_CHANGED', half: 'M_NOT_ALL_DIVIDED', read: 'M_M_C_READ_SWAPPED' }[type], fix,
         steps: [`${b}y = ${a}x + ${k}.`, `y = ${u}x + ${v}.`, `So m = ${u} and c = ${v}.`] };
     } }),
-  fam({ id: 'g9.line.steps-intercepts', skill: 'G8_EQUATION_OF_LINE', outcome: 'G9.LINE.g', rung: 3, form: 'steps',
+  fam({ id: 'g9.line.steps-intercepts', skill: 'G8_EQUATION_OF_LINE', outcome: 'MATH.G9.ALGEBR.EQUATIONS_OF_A_STRAIGHT_.g', cskill: 'MATH.G9.ALGEBR.EQUATIONS_OF_A_STRAIGHT_.INTERCEPTS', rung: 3, form: 'steps',
     draw: () => { const a = pick([2, 3, 4, 5, 6]), b = pick([2, 3, 4, 5, 6]), l = lcm(a, b), k = l * randInt(1, 3), xi = k / a, yi = k / b; return a !== b && (xi * yi) % 2 === 0 ? { a, b, k, xi, yi } : null; },
     make: ({ a, b, k, xi, yi }) => ({
       question: `The line ${a}x + ${b}y = ${k} crosses the x-axis and the y-axis. The line and the two axes make a triangle.`,
       parts: [
-        { prompt: 'Put y = 0. At what value of x does the line cross the x-axis?', answer: xi, hint: `${a}x = ${k}.`, wrong: [[yi, 'That is the other intercept. On the x-axis, y = 0.']] },
-        { prompt: 'Put x = 0. At what value of y does the line cross the y-axis?', answer: yi, hint: `${b}y = ${k}.`, wrong: [[xi, 'That is the other intercept. On the y-axis, x = 0.']] },
-        { prompt: 'The two intercepts are the base and height of the triangle. What is its area, in square units?', answer: (xi * yi) / 2, unit: 'square units', hint: 'Area of a triangle = ½ × base × height.', wrong: [[xi * yi, 'A triangle is half of the rectangle. Halve the product.']] },
+        { prompt: 'Put y = 0. At what value of x does the line cross the x-axis?', answer: xi, hint: `${a}x = ${k}.`, wrong: [[yi, 'That is the other intercept. On the x-axis, y = 0.', 'M_INTERCEPTS_SWAPPED']] },
+        { prompt: 'Put x = 0. At what value of y does the line cross the y-axis?', answer: yi, hint: `${b}y = ${k}.`, wrong: [[xi, 'That is the other intercept. On the y-axis, x = 0.', 'M_INTERCEPTS_SWAPPED']] },
+        { prompt: 'The two intercepts are the base and height of the triangle. What is its area, in square units?', answer: (xi * yi) / 2, unit: 'square units', hint: 'Area of a triangle = ½ × base × height.', wrong: [[xi * yi, 'A triangle is half of the rectangle. Halve the product.', 'M_TRIANGLE_NOT_HALVED']] },
       ],
       steps: [`y = 0: ${a}x = ${k}, so x = ${xi}.`, `x = 0: ${b}y = ${k}, so y = ${yi}.`, `Area = ½ × ${xi} × ${yi} = ${(xi * yi) / 2}.`],
     }),
     check: ({ a, b, k }, v) => a * v[0] === k && b * v[1] === k && v[2] * 2 === v[0] * v[1] }),
-  fam({ id: 'g9.line.tank-meets-axis', skill: 'G8_EQUATION_OF_LINE', outcome: 'G9.LINE.g', rung: 2, form: 'word',
+  fam({ id: 'g9.line.tank-meets-axis', skill: 'G8_EQUATION_OF_LINE', outcome: 'MATH.G9.ALGEBR.EQUATIONS_OF_A_STRAIGHT_.g', cskill: 'MATH.G9.ALGEBR.EQUATIONS_OF_A_STRAIGHT_.INTERCEPTS', rung: 2, form: 'word',
     draw: () => { const B = pick([3, 4, 5, 6]), x0 = randInt(4, 15), A = B * x0; return uniq(x0, A, B, A * B) ? { A, B, x0 } : null; },
     make: ({ A, B, x0 }) => ({
       question: `The depth y cm of water in a drum after x minutes is given by y = ${A} − ${B}x. The graph of this line meets the x-axis when the drum is empty. After how many minutes does the line meet the x-axis?`,
       answer: x0,
-      wrong: [[A, `That is where the line meets the y-axis, at the start. On the x-axis, y = 0.`], [B, 'That is the gradient size: the cm lost each minute.'], [round(A * B, 0), 'Set y = 0 and divide. Do not multiply.']],
+      wrong: [[A, `That is where the line meets the y-axis, at the start. On the x-axis, y = 0.`, 'M_START_AS_X_INTERCEPT'], [B, 'That is the gradient size: the cm lost each minute.', 'M_RATE_AS_X_INTERCEPT'], [round(A * B, 0), 'Set y = 0 and divide. Do not multiply.', 'M_MULTIPLY_NOT_DIVIDE']],
       hints: ['On the x-axis, the depth y is 0.', `Solve 0 = ${A} − ${B}x.`],
       steps: [`Put y = 0: 0 = ${A} − ${B}x.`, `${B}x = ${A}, so x = ${A} ÷ ${B} = ${x0} minutes.`],
     }),
     check: ({ A, B }, a) => A - B * a === 0 }),
-  fam({ id: 'g9.line.why-intercept', skill: 'G8_EQUATION_OF_LINE', outcome: 'G9.LINE.g', rung: 2, form: 'why',
+  fam({ id: 'g9.line.why-intercept', skill: 'G8_EQUATION_OF_LINE', outcome: 'MATH.G9.ALGEBR.EQUATIONS_OF_A_STRAIGHT_.g', cskill: 'MATH.G9.ALGEBR.EQUATIONS_OF_A_STRAIGHT_.INTERCEPTS', rung: 2, form: 'why',
     draw: () => { const m = pick([2, 3, 4, 5]), r = randInt(1, 4), c = m * r; return { m, c, r, who: person() }; },
     make: ({ m, c, r, who }) => ({
       question: `The line y = ${m}x + ${c} is drawn. ${who.name} reads (${c}, 0) as the point where it meets the x-axis. Why can this not be right?`,
       options: [
         { text: `On the x-axis y = 0, so 0 = ${m}x + ${c} gives x = −${r}. The line meets the x-axis at (−${r}, 0)`, right: true },
-        { text: `The line crosses the x-axis at (0, ${c}), because you put x = 0`, right: false, why: 'Putting x = 0 gives the point on the y-axis, not the x-axis.' },
-        { text: `The line crosses the x-axis at (−${c}, 0), by moving ${c} to the other side without dividing`, right: false, why: `After moving ${c}, you must also divide by ${m}.` },
-        { text: `Nothing is wrong, because ${c} is where every line meets the x-axis`, right: false, why: 'The number c in y = mx + c is where the line meets the y-axis.' },
+        { text: `The line crosses the x-axis at (0, ${c}), because you put x = 0`, right: false, why: 'Putting x = 0 gives the point on the y-axis, not the x-axis.', mis: 'M_X_ZERO_FOR_X_AXIS' },
+        { text: `The line crosses the x-axis at (−${c}, 0), by moving ${c} to the other side without dividing`, right: false, why: `After moving ${c}, you must also divide by ${m}.`, mis: 'M_INTERCEPT_NOT_DIVIDED' },
+        { text: `Nothing is wrong, because ${c} is where every line meets the x-axis`, right: false, why: 'The number c in y = mx + c is where the line meets the y-axis.', mis: 'M_START_AS_X_INTERCEPT' },
       ],
       hints: ['What is the value of y at every point on the x-axis?', 'Put that value into the equation and solve for x.'],
       steps: [`On the x-axis, y = 0: 0 = ${m}x + ${c}.`, `${m}x = −${c}, so x = −${c} ÷ ${m} = −${r}.`],

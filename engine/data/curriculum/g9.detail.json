@@ -417,6 +417,69 @@
     "solve"
    ],
    "mastery": "The child matches the elements in the same position on each side of a matrix sum, writes a small equation for each unknown and solves it: [x 3; 2 y] + [4 1; 5 2] = [9 4; 7 6] gives x + 4 = 9, so x = 5, and y + 2 = 6, so y = 4."
+  },
+  "MATH.G9.ALGEBR.EQUATIONS_OF_A_STRAIGHT_.GRADIENT_REAL_LIFE": {
+   "forms": [
+    "which is steepest",
+    "how far does it rise",
+    "gradient as a percentage",
+    "rise and run"
+   ],
+   "mastery": "The child finds the steepness of a road, roof or ramp as vertical rise divided by horizontal run, compares slopes by their gradients (not by the rise alone), and uses a gradient given as a percentage: a 6% road rises 6 m for every 100 m across, so 450 m across rises 27 m."
+  },
+  "MATH.G9.ALGEBR.EQUATIONS_OF_A_STRAIGHT_.GRADIENT_TWO_POINTS": {
+   "forms": [
+    "find the gradient",
+    "which step is wrong",
+    "positive or negative",
+    "from the graph"
+   ],
+   "mastery": "The child works out the change in y over the change in x, taking both changes in the same order ((y2 - y1)/(x2 - x1)), with negative coordinates handled correctly, and says that a line going down to the right has a negative gradient: (1, 7) and (4, 1) give -6/3 = -2."
+  },
+  "MATH.G9.ALGEBR.EQUATIONS_OF_A_STRAIGHT_.EQUATION_TWO_POINTS": {
+   "forms": [
+    "find the equation",
+    "complete the steps",
+    "what is the mistake",
+    "check the other point"
+   ],
+   "mastery": "The child finds m from the two points, then c by putting one point into y = mx + c and solving (c = y - mx, not the y of the point), and writes the equation: (2, 7) and (5, 13) give m = 2, 7 = 4 + c, so y = 2x + 3; and checks it with the second point."
+  },
+  "MATH.G9.ALGEBR.EQUATIONS_OF_A_STRAIGHT_.EQUATION_POINT_GRADIENT": {
+   "forms": [
+    "find the equation",
+    "which step is wrong",
+    "find c",
+    "write y = mx + c"
+   ],
+   "mastery": "The child puts the gradient and the point into y = mx + c, multiplies m by x, takes it from y to find c, and writes the equation with the sign of c correct: gradient -3 through (2, 1) gives 1 = -6 + c, c = 7, y = -3x + 7."
+  },
+  "MATH.G9.ALGEBR.EQUATIONS_OF_A_STRAIGHT_.REARRANGE_Y_MX_C": {
+   "forms": [
+    "make y the subject",
+    "write in the form y = mx + c",
+    "find m and c",
+    "find the mistake"
+   ],
+   "mastery": "The child makes y the subject of an equation such as 3x + 2y = 8 by moving the x term to the other side (changing its sign) and dividing every term by the number in front of y: y = -3/2 x + 4, then reads m and c."
+  },
+  "MATH.G9.ALGEBR.EQUATIONS_OF_A_STRAIGHT_.INTERPRET_M_AND_C": {
+   "forms": [
+    "what does m mean",
+    "what is the fixed charge",
+    "which line is steeper",
+    "cost of each extra km"
+   ],
+   "mastery": "The child reads m as the gradient (how much y changes for each 1 added to x) and c as the value of y where x = 0 (the y-intercept), and says what they mean in a story: in a boda boda fare y = 40x + 100, 40 shillings a km and a fixed charge of 100 shillings."
+  },
+  "MATH.G9.ALGEBR.EQUATIONS_OF_A_STRAIGHT_.INTERCEPTS": {
+   "forms": [
+    "where does it meet the x-axis",
+    "find the intercepts",
+    "when is it empty",
+    "why can this not be right"
+   ],
+   "mastery": "The child finds where a line meets the y-axis by putting x = 0 and the x-axis by putting y = 0, writes them as points ((0, c) and (x, 0)), and uses them in context: a drum emptying by y = 60 - 4x is empty when y = 0, after 15 minutes; the area of the triangle the line makes with the axes is half the product of the intercepts."
   }
  }
 }
