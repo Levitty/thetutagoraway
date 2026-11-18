@@ -1,0 +1,95 @@
+{
+ "sub_strand": "ENGL.G4.READIN.T12_1_INTENSIVE_READING",
+ "title": "1 Intensive Reading (Theme 12: Clean environment)",
+ "status": "draft: written 18 Nov 2026 offline for Grade 4 English; not yet checked by a Kenyan English teacher; not loaded by the live tutor",
+ "notes": "",
+ "skills": [
+  {
+   "skill": "ENGL.G4.READIN.T12_1_INTENSIVE_READING.PROVERBS",
+   "assessed_by": "questions",
+   "key_step": "The child asks what the proverb teaches people, not only what it says about animals or things.",
+   "floor": {
+    "prerequisite": "Answers questions on a text.",
+    "question": "What is the poem about?",
+    "answer": "a topic"
+   },
+   "steps": [
+    "Read the proverb.",
+    "Say the picture it gives.",
+    "Say the lesson for people."
+   ],
+   "contexts": [
+    "a song with proverbs",
+    "a grandmother's saying"
+   ],
+   "board": [
+    {
+     "beat": "write",
+     "do": "Write: Haste makes waste."
+    },
+    {
+     "beat": "point",
+     "do": "Point at haste.",
+     "say": "Is it only about water?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for the lesson."
+    },
+    {
+     "beat": "predict",
+     "do": "Ask: when would you say it?"
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "ENGL.G4.READIN.T12_1_INTENSIVE_READING.PROVERBS.M_PRV_LITERAL",
+     "listen_for": [
+      "people who hurry waste water"
+     ],
+     "ask": "Is it only about the things?",
+     "repair": "Think about people."
+    },
+    {
+     "code": "ENGL.G4.READIN.T12_1_INTENSIVE_READING.PROVERBS.M_PRV_OPPOSITE",
+     "listen_for": [
+      "be fast to win"
+     ],
+     "ask": "Does it say hurry or go carefully?",
+     "repair": "Read again."
+    },
+    {
+     "code": "ENGL.G4.READIN.T12_1_INTENSIVE_READING.PROVERBS.M_PRV_UNRELATED",
+     "listen_for": [
+      "sewing is hard"
+     ],
+     "ask": "Does the lesson fit the words?",
+     "repair": "Link them."
+    },
+    {
+     "code": "ENGL.G4.READIN.T12_1_INTENSIVE_READING.PROVERBS.M_PRV_WRONG_WORD",
+     "listen_for": [
+      "stay"
+     ],
+     "ask": "Do you know the full proverb?",
+     "repair": "Learn it whole."
+    }
+   ],
+   "checks": [
+    {
+     "question": "A stitch in time saves nine means ...",
+     "answer": "fix a small problem early",
+     "shows": "lesson"
+    },
+    {
+     "question": "Slow and steady wins the ...",
+     "answer": "race",
+     "shows": "complete"
+    }
+   ]
+  }
+ ],
+ "also_taught_by": [
+  "ENGL.G4.READIN.T8_READING_FLUENCY.READ_FLUENTLY"
+ ]
+}

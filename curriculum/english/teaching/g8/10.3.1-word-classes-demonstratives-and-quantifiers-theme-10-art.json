@@ -1,0 +1,92 @@
+{
+ "sub_strand": "ENGL.G8.GRAMMA.T10_WORD_CLASSES_DEMONST",
+ "title": "Word Classes: Demonstratives and Quantifiers (Theme 10: Art)",
+ "status": "draft: written 18 Nov 2026 offline for Grade 8 English; not yet checked by a Kenyan English teacher; not loaded by the live tutor",
+ "notes": "",
+ "skills": [
+  {
+   "skill": "ENGL.G8.GRAMMA.T10_WORD_CLASSES_DEMONST.DEMONSTRATIVES_QUANTIFIERS",
+   "assessed_by": "questions",
+   "key_step": "The child matches this, these, that, those and many, much, fewer, less to number and distance.",
+   "floor": {
+    "prerequisite": "Uses count and non-count.",
+    "question": "much or many people?",
+    "answer": "many"
+   },
+   "steps": [
+    "One or many?",
+    "Near or far?",
+    "Count: many, fewer.",
+    "Non-count: much, less."
+   ],
+   "contexts": [
+    "art"
+   ],
+   "board": [
+    {
+     "beat": "write",
+     "do": "Write: ___ people came. (Less/Fewer)"
+    },
+    {
+     "beat": "point",
+     "do": "Point at people.",
+     "say": "Count?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for the child to answer."
+    },
+    {
+     "beat": "child_draws",
+     "do": "The child fills these/those."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "ENGL.G8.GRAMMA.T10_WORD_CLASSES_DEMONST.DEMONSTRATIVES_QUANTIFIERS.M8_DQ_THIS_THESE",
+     "listen_for": [
+      "This"
+     ],
+     "ask": "Many?",
+     "repair": "These."
+    },
+    {
+     "code": "ENGL.G8.GRAMMA.T10_WORD_CLASSES_DEMONST.DEMONSTRATIVES_QUANTIFIERS.M8_DQ_NEAR_FAR",
+     "listen_for": [
+      "This"
+     ],
+     "ask": "Far?",
+     "repair": "That."
+    },
+    {
+     "code": "ENGL.G8.GRAMMA.T10_WORD_CLASSES_DEMONST.DEMONSTRATIVES_QUANTIFIERS.M8_DQ_MUCH_MANY",
+     "listen_for": [
+      "much"
+     ],
+     "ask": "Count?",
+     "repair": "Many."
+    },
+    {
+     "code": "ENGL.G8.GRAMMA.T10_WORD_CLASSES_DEMONST.DEMONSTRATIVES_QUANTIFIERS.M8_X_DQ_LESS_FEWER",
+     "listen_for": [
+      "Less"
+     ],
+     "ask": "Count?",
+     "repair": "Fewer."
+    }
+   ],
+   "checks": [
+    {
+     "question": "___ books here (many, near)",
+     "answer": "These",
+     "shows": "demonstrative"
+    },
+    {
+     "question": "___ water (less/fewer)",
+     "answer": "less",
+     "shows": "non-count"
+    }
+   ]
+  }
+ ]
+}

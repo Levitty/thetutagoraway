@@ -1,0 +1,93 @@
+{
+ "sub_strand": "ENGL.G8.READIN.T7_INTENSIVE_READING_SH",
+ "title": "Intensive Reading: Short story (Class Reader) (Theme 7: Natural resources: wildlife)",
+ "status": "draft: written 18 Nov 2026 offline for Grade 8 English; not yet checked by a Kenyan English teacher; not loaded by the live tutor",
+ "notes": "",
+ "skills": [
+  {
+   "skill": "ENGL.G8.READIN.T7_INTENSIVE_READING_SH.CHARACTER_RELATIONS",
+   "assessed_by": "questions",
+   "key_step": "The child names each character, gives a trait with evidence, and traces how relationships change.",
+   "floor": {
+    "prerequisite": "Describes traits.",
+    "question": "What is she like?",
+    "answer": "a trait with evidence"
+   },
+   "steps": [
+    "List characters.",
+    "Trait + evidence.",
+    "Relationship.",
+    "How it changes."
+   ],
+   "contexts": [
+    "class reader: wildlife",
+    "African heroes"
+   ],
+   "board": [
+    {
+     "beat": "write",
+     "do": "Draw two characters linked by an arrow."
+    },
+    {
+     "beat": "point",
+     "do": "Point at the arrow.",
+     "say": "How are they related?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for the child to answer."
+    },
+    {
+     "beat": "child_draws",
+     "do": "The child shows how it changes."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "ENGL.G8.READIN.T7_INTENSIVE_READING_SH.CHARACTER_RELATIONS.M8_X_CR_TRAIT_NO_EVIDENCE",
+     "listen_for": [
+      "She is kind."
+     ],
+     "ask": "Prove it?",
+     "repair": "Quote."
+    },
+    {
+     "code": "ENGL.G8.READIN.T7_INTENSIVE_READING_SH.CHARACTER_RELATIONS.M8_X_CR_RELATION_WRONG",
+     "listen_for": [
+      "rivals"
+     ],
+     "ask": "How do they treat each other?",
+     "repair": "Look again."
+    },
+    {
+     "code": "ENGL.G8.READIN.T7_INTENSIVE_READING_SH.CHARACTER_RELATIONS.M8_X_CR_STATIC",
+     "listen_for": [
+      "it does not"
+     ],
+     "ask": "Does it change?",
+     "repair": "Follow it."
+    },
+    {
+     "code": "ENGL.G8.READIN.T7_INTENSIVE_READING_SH.CHARACTER_RELATIONS.M8_X_CR_MINOR_MAIN",
+     "listen_for": [
+      "the shopkeeper who appears once"
+     ],
+     "ask": "Followed throughout?",
+     "repair": "Main."
+    }
+   ],
+   "checks": [
+    {
+     "question": "The ranger teaches the boy. Relationship?",
+     "answer": "mentor and learner",
+     "shows": "relation"
+    },
+    {
+     "question": "Prove she is kind.",
+     "answer": "an action that shows it",
+     "shows": "evidence"
+    }
+   ]
+  }
+ ]
+}

@@ -1,0 +1,340 @@
+{
+ "sub_strand": "ENGL.G9.READIN.T4_INTENSIVE_READING",
+ "title": "Intensive Reading (Theme 4: Consumer protection: consumer laws and policies)",
+ "status": "draft: written 18 Nov 2026 offline for Grade 9 English; not yet checked by a Kenyan English teacher; not loaded by the live tutor",
+ "notes": "",
+ "skills": [
+  {
+   "skill": "ENGL.G9.READIN.T4_INTENSIVE_READING.RS_PREDICT",
+   "assessed_by": "questions",
+   "key_step": "The child predicts from clues, not wishes, and checks.",
+   "floor": {
+    "prerequisite": "Predicts.",
+    "question": "Black clouds. Next?",
+    "answer": "rain"
+   },
+   "steps": [
+    "Clues.",
+    "Predict.",
+    "Check."
+   ],
+   "contexts": [
+    "consumer protection"
+   ],
+   "board": [
+    {
+     "beat": "write",
+     "do": "Write a stop point."
+    },
+    {
+     "beat": "point",
+     "do": "Point at the clue.",
+     "say": "What next?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for the child to answer."
+    },
+    {
+     "beat": "child_draws",
+     "do": "The child reads on."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "ENGL.G9.READIN.T4_INTENSIVE_READING.RS_PREDICT.M_EN9_RS_PREDICT_DETAIL",
+     "listen_for": [
+      "an answer that is a small detail"
+     ],
+     "ask": "Does that answer the question, or is it a nearby detail?",
+     "repair": "Find the exact answer in the text."
+    },
+    {
+     "code": "ENGL.G9.READIN.T4_INTENSIVE_READING.RS_PREDICT.M_EN9_RS_PREDICT_OPPOSITE",
+     "listen_for": [
+      "an answer that is the opposite"
+     ],
+     "ask": "Does the text say that, or the opposite?",
+     "repair": "Read the sentence again."
+    },
+    {
+     "code": "ENGL.G9.READIN.T4_INTENSIVE_READING.RS_PREDICT.M_EN9_RS_PREDICT_NOTSAID",
+     "listen_for": [
+      "an answer that is something not in the text"
+     ],
+     "ask": "Can you point to where the text says it?",
+     "repair": "Answer only from the text."
+    },
+    {
+     "code": "ENGL.G9.READIN.T4_INTENSIVE_READING.RS_PREDICT.M9_RS_PREDICT_WISH",
+     "listen_for": [
+      "he will become rich"
+     ],
+     "ask": "Clues?",
+     "repair": "Use them."
+    }
+   ],
+   "checks": [
+    {
+     "question": "Clues show he will be caught. Predict.",
+     "answer": "he will be caught",
+     "shows": "clue"
+    },
+    {
+     "question": "Is a wish a prediction?",
+     "answer": "No",
+     "shows": "evidence"
+    }
+   ]
+  },
+  {
+   "skill": "ENGL.G9.READIN.T4_INTENSIVE_READING.RS_KEYEVENTS",
+   "assessed_by": "questions",
+   "key_step": "The child picks the events that change the story and outlines them in order.",
+   "floor": {
+    "prerequisite": "Orders events.",
+    "question": "Order four events.",
+    "answer": "an order"
+   },
+   "steps": [
+    "List events.",
+    "Keep key ones.",
+    "Order."
+   ],
+   "contexts": [
+    "consumer stories"
+   ],
+   "board": [
+    {
+     "beat": "write",
+     "do": "Write six events."
+    },
+    {
+     "beat": "point",
+     "do": "Point at a minor one.",
+     "say": "Does it change the story?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for the child to answer."
+    },
+    {
+     "beat": "child_draws",
+     "do": "The child outlines key events."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "ENGL.G9.READIN.T4_INTENSIVE_READING.RS_KEYEVENTS.M_EN9_RS_KEYEVENTS_DETAIL",
+     "listen_for": [
+      "an answer that is a small detail"
+     ],
+     "ask": "Does that answer the question, or is it a nearby detail?",
+     "repair": "Find the exact answer in the text."
+    },
+    {
+     "code": "ENGL.G9.READIN.T4_INTENSIVE_READING.RS_KEYEVENTS.M_EN9_RS_KEYEVENTS_OPPOSITE",
+     "listen_for": [
+      "an answer that is the opposite"
+     ],
+     "ask": "Does the text say that, or the opposite?",
+     "repair": "Read the sentence again."
+    },
+    {
+     "code": "ENGL.G9.READIN.T4_INTENSIVE_READING.RS_KEYEVENTS.M_EN9_RS_KEYEVENTS_NOTSAID",
+     "listen_for": [
+      "an answer that is something not in the text"
+     ],
+     "ask": "Can you point to where the text says it?",
+     "repair": "Answer only from the text."
+    },
+    {
+     "code": "ENGL.G9.READIN.T4_INTENSIVE_READING.RS_KEYEVENTS.M9_RS_KEYEVENTS_MINOR",
+     "listen_for": [
+      "she bought a soda"
+     ],
+     "ask": "Changes the story?",
+     "repair": "Key events only."
+    }
+   ],
+   "checks": [
+    {
+     "question": "Key event?",
+     "answer": "one that changes the story",
+     "shows": "key"
+    },
+    {
+     "question": "Is buying a soda key?",
+     "answer": "No",
+     "shows": "minor"
+    }
+   ]
+  },
+  {
+   "skill": "ENGL.G9.READIN.T4_INTENSIVE_READING.RS_QUESTIONS",
+   "assessed_by": "questions",
+   "key_step": "The child answers direct and inferential questions in the form and length asked.",
+   "floor": {
+    "prerequisite": "Answers questions.",
+    "question": "In one word?",
+    "answer": "one word"
+   },
+   "steps": [
+    "Read the instruction.",
+    "Find evidence.",
+    "Answer in the form asked."
+   ],
+   "contexts": [
+    "consumer laws texts"
+   ],
+   "board": [
+    {
+     "beat": "write",
+     "do": "Write: In two words, what did he find?"
+    },
+    {
+     "beat": "point",
+     "do": "Point at two words.",
+     "say": "How many?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for the child to answer."
+    },
+    {
+     "beat": "child_draws",
+     "do": "The child answers."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "ENGL.G9.READIN.T4_INTENSIVE_READING.RS_QUESTIONS.M_EN9_RS_QUESTIONS_DETAIL",
+     "listen_for": [
+      "an answer that is a small detail"
+     ],
+     "ask": "Does that answer the question, or is it a nearby detail?",
+     "repair": "Find the exact answer in the text."
+    },
+    {
+     "code": "ENGL.G9.READIN.T4_INTENSIVE_READING.RS_QUESTIONS.M_EN9_RS_QUESTIONS_OPPOSITE",
+     "listen_for": [
+      "an answer that is the opposite"
+     ],
+     "ask": "Does the text say that, or the opposite?",
+     "repair": "Read the sentence again."
+    },
+    {
+     "code": "ENGL.G9.READIN.T4_INTENSIVE_READING.RS_QUESTIONS.M_EN9_RS_QUESTIONS_NOTSAID",
+     "listen_for": [
+      "an answer that is something not in the text"
+     ],
+     "ask": "Can you point to where the text says it?",
+     "repair": "Answer only from the text."
+    },
+    {
+     "code": "ENGL.G9.READIN.T4_INTENSIVE_READING.RS_QUESTIONS.M9_RS_QUESTIONS_COPY",
+     "listen_for": [
+      "The inspector found that the scales had been changed so that buyers paid more."
+     ],
+     "ask": "Word limit?",
+     "repair": "Follow it."
+    }
+   ],
+   "checks": [
+    {
+     "question": "In two words ...",
+     "answer": "two words",
+     "shows": "form"
+    },
+    {
+     "question": "Why did she report it? (inference)",
+     "answer": "a reason from clues",
+     "shows": "inference"
+    }
+   ]
+  },
+  {
+   "skill": "ENGL.G9.READIN.T4_INTENSIVE_READING.RS_RELATE",
+   "assessed_by": "questions",
+   "key_step": "The child relates characters, events and places to real people and places.",
+   "floor": {
+    "prerequisite": "Relates texts to life.",
+    "question": "Link to life.",
+    "answer": "a link"
+   },
+   "steps": [
+    "Character or event.",
+    "Real example.",
+    "Link."
+   ],
+   "contexts": [
+    "consumer protection"
+   ],
+   "board": [
+    {
+     "beat": "write",
+     "do": "Write: Text / Real life."
+    },
+    {
+     "beat": "point",
+     "do": "Point at Real life.",
+     "say": "Who is like the trader?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for the child to answer."
+    },
+    {
+     "beat": "child_draws",
+     "do": "The child explains."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "ENGL.G9.READIN.T4_INTENSIVE_READING.RS_RELATE.M_EN9_RS_RELATE_DETAIL",
+     "listen_for": [
+      "an answer that is a small detail"
+     ],
+     "ask": "Does that answer the question, or is it a nearby detail?",
+     "repair": "Find the exact answer in the text."
+    },
+    {
+     "code": "ENGL.G9.READIN.T4_INTENSIVE_READING.RS_RELATE.M_EN9_RS_RELATE_OPPOSITE",
+     "listen_for": [
+      "an answer that is the opposite"
+     ],
+     "ask": "Does the text say that, or the opposite?",
+     "repair": "Read the sentence again."
+    },
+    {
+     "code": "ENGL.G9.READIN.T4_INTENSIVE_READING.RS_RELATE.M_EN9_RS_RELATE_NOTSAID",
+     "listen_for": [
+      "an answer that is something not in the text"
+     ],
+     "ask": "Can you point to where the text says it?",
+     "repair": "Answer only from the text."
+    },
+    {
+     "code": "ENGL.G9.READIN.T4_INTENSIVE_READING.RS_RELATE.M9_RS_RELATE_RETELL",
+     "listen_for": [
+      "The trader cheated buyers."
+     ],
+     "ask": "Real life?",
+     "repair": "Name one."
+    }
+   ],
+   "checks": [
+    {
+     "question": "Relate the trader to life.",
+     "answer": "a real example",
+     "shows": "relate"
+    },
+    {
+     "question": "Is retelling relating?",
+     "answer": "No",
+     "shows": "retell"
+    }
+   ]
+  }
+ ]
+}

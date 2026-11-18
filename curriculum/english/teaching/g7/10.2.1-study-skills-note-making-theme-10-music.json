@@ -1,0 +1,93 @@
+{
+ "sub_strand": "ENGL.G7.READIN.T10_STUDY_SKILLS_NOTE_MA",
+ "title": "Study Skills: Note Making (Theme 10: Music)",
+ "status": "draft: written 18 Nov 2026 offline for Grade 7 English; not yet checked by a Kenyan English teacher; not loaded by the live tutor",
+ "notes": "",
+ "skills": [
+  {
+   "skill": "ENGL.G7.READIN.T10_STUDY_SKILLS_NOTE_MA.NOTE_MAKING",
+   "assessed_by": "questions",
+   "key_step": "The child picks out main points in key words and leaves out examples and own ideas.",
+   "floor": {
+    "prerequisite": "Finds main ideas.",
+    "question": "Main idea?",
+    "answer": "an idea"
+   },
+   "steps": [
+    "Read.",
+    "Find main points.",
+    "Key words only.",
+    "Leave out extras."
+   ],
+   "contexts": [
+    "a text on music",
+    "a recycling article"
+   ],
+   "board": [
+    {
+     "beat": "write",
+     "do": "Write a paragraph."
+    },
+    {
+     "beat": "point",
+     "do": "Point at the main point.",
+     "say": "Note it in key words."
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for the child to answer."
+    },
+    {
+     "beat": "child_draws",
+     "do": "The child notes the next."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "ENGL.G7.READIN.T10_STUDY_SKILLS_NOTE_MA.NOTE_MAKING.M7_NM_DETAIL_MAIN",
+     "listen_for": [
+      "a bottle takes 450 years to break down"
+     ],
+     "ask": "Main point?",
+     "repair": "Not the example."
+    },
+    {
+     "code": "ENGL.G7.READIN.T10_STUDY_SKILLS_NOTE_MA.NOTE_MAKING.M7_NM_COPY",
+     "listen_for": [
+      "a copy of every sentence"
+     ],
+     "ask": "Copying?",
+     "repair": "Key words."
+    },
+    {
+     "code": "ENGL.G7.READIN.T10_STUDY_SKILLS_NOTE_MA.NOTE_MAKING.M7_NM_MISS_MAIN",
+     "listen_for": [
+      "only the first point"
+     ],
+     "ask": "Only the first?",
+     "repair": "All main points."
+    },
+    {
+     "code": "ENGL.G7.READIN.T10_STUDY_SKILLS_NOTE_MA.NOTE_MAKING.M7_NM_ADDS",
+     "listen_for": [
+      "a note with an idea added by the reader"
+     ],
+     "ask": "In the text?",
+     "repair": "Only the text."
+    }
+   ],
+   "checks": [
+    {
+     "question": "Note on a recycling paragraph?",
+     "answer": "recycling saves resources",
+     "shows": "main point"
+    },
+    {
+     "question": "Copy every sentence?",
+     "answer": "No",
+     "shows": "key words"
+    }
+   ]
+  }
+ ]
+}

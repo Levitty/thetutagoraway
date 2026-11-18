@@ -1,0 +1,94 @@
+{
+ "sub_strand": "ENGL.G7.READIN.T11_INTENSIVE_READING_DI",
+ "title": "Intensive reading: Dilemma Narratives (Theme 11: Professions)",
+ "status": "draft: written 18 Nov 2026 offline for Grade 7 English; not yet checked by a Kenyan English teacher; not loaded by the live tutor",
+ "notes": "",
+ "skills": [
+  {
+   "skill": "ENGL.G7.READIN.T11_INTENSIVE_READING_DI.DILEMMA",
+   "assessed_by": "questions",
+   "key_step": "The child explains why both choices are hard and argues for one with reasons.",
+   "floor": {
+    "prerequisite": "Judges characters.",
+    "question": "Is she fair?",
+    "answer": "with evidence"
+   },
+   "steps": [
+    "State the two choices.",
+    "Why is each hard?",
+    "Choose and give reasons."
+   ],
+   "contexts": [
+    "dilemma stories on professions"
+   ],
+   "board": [
+    {
+     "beat": "write",
+     "do": "Write: Choice A / Choice B."
+    },
+    {
+     "beat": "point",
+     "do": "Point at Choice B.",
+     "say": "Why is it hard?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for the child to answer."
+    },
+    {
+     "beat": "child_draws",
+     "do": "The child argues for one."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "ENGL.G7.READIN.T11_INTENSIVE_READING_DI.DILEMMA.M7_DL_LESSON_ENDING",
+     "listen_for": [
+      "with the narrator telling the lesson"
+     ],
+     "ask": "Lesson or question?",
+     "repair": "Question."
+    },
+    {
+     "code": "ENGL.G7.READIN.T11_INTENSIVE_READING_DI.DILEMMA.M7_DL_CLOSING_FORMULA",
+     "listen_for": [
+      "What time is it?"
+     ],
+     "ask": "What does it ask?",
+     "repair": "Who should ..."
+    },
+    {
+     "code": "ENGL.G7.READIN.T11_INTENSIVE_READING_DI.DILEMMA.M7_DL_NO_DILEMMA",
+     "listen_for": [
+      "a story with an easy ending"
+     ],
+     "ask": "Hard choice?",
+     "repair": "Both deserve it."
+    },
+    {
+     "code": "ENGL.G7.READIN.T11_INTENSIVE_READING_DI.DILEMMA.M7_X_DL_EASY_ANSWER",
+     "listen_for": [
+      "the eldest, of course"
+     ],
+     "ask": "Is it easy?",
+     "repair": "Give reasons."
+    }
+   ],
+   "checks": [
+    {
+     "question": "How does a dilemma story end?",
+     "answer": "with a hard question",
+     "shows": "ending"
+    },
+    {
+     "question": "Is there one easy answer?",
+     "answer": "No",
+     "shows": "dilemma"
+    }
+   ]
+  }
+ ],
+ "also_taught_by": [
+  "ENGL.G7.READIN.T5_INTENSIVE_READING_OR.MORAL_LESSON"
+ ]
+}

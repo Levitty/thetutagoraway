@@ -1,0 +1,177 @@
+{
+ "sub_strand": "ENGL.G8.READIN.T6_INTENSIVE_READING_SH",
+ "title": "Intensive Reading: short story (Class Reader) (Theme 6: Rehabilitation)",
+ "status": "draft: written 18 Nov 2026 offline for Grade 8 English; not yet checked by a Kenyan English teacher; not loaded by the live tutor",
+ "notes": "",
+ "skills": [
+  {
+   "skill": "ENGL.G8.READIN.T6_INTENSIVE_READING_SH.RS_MAIN",
+   "assessed_by": "questions",
+   "key_step": "The child finds the sentence the rest supports, wherever it is.",
+   "floor": {
+    "prerequisite": "Finds main ideas.",
+    "question": "Main idea?",
+    "answer": "an idea"
+   },
+   "steps": [
+    "Read all.",
+    "Which sentence do the others support?",
+    "State it."
+   ],
+   "contexts": [
+    "rehabilitation stories"
+   ],
+   "board": [
+    {
+     "beat": "write",
+     "do": "Write a paragraph with its point at the end."
+    },
+    {
+     "beat": "point",
+     "do": "Point at the last sentence.",
+     "say": "Main idea?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for the child to answer."
+    },
+    {
+     "beat": "child_draws",
+     "do": "The child states it."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "ENGL.G8.READIN.T6_INTENSIVE_READING_SH.RS_MAIN.M8_RS_MAIN_DETAIL",
+     "listen_for": [
+      "an answer that is a small detail"
+     ],
+     "ask": "Does that answer the question, or is it a detail nearby?",
+     "repair": "Find the exact answer in the text."
+    },
+    {
+     "code": "ENGL.G8.READIN.T6_INTENSIVE_READING_SH.RS_MAIN.M8_RS_MAIN_OPPOSITE",
+     "listen_for": [
+      "an answer that is the opposite"
+     ],
+     "ask": "Does the text say that, or the opposite?",
+     "repair": "Read the sentence again."
+    },
+    {
+     "code": "ENGL.G8.READIN.T6_INTENSIVE_READING_SH.RS_MAIN.M8_RS_MAIN_NOTSAID",
+     "listen_for": [
+      "an answer that is something not in the text"
+     ],
+     "ask": "Can you point to where the text says it?",
+     "repair": "Answer only from the text."
+    },
+    {
+     "code": "ENGL.G8.READIN.T6_INTENSIVE_READING_SH.RS_MAIN.M8_X_RSM_FIRST_LINE",
+     "listen_for": [
+      "the opening story"
+     ],
+     "ask": "Do the others support it?",
+     "repair": "Find the one they do."
+    }
+   ],
+   "checks": [
+    {
+     "question": "Main idea of a story about recovery?",
+     "answer": "people can recover with support",
+     "shows": "main"
+    },
+    {
+     "question": "Is the first line always the main idea?",
+     "answer": "No",
+     "shows": "position"
+    }
+   ]
+  },
+  {
+   "skill": "ENGL.G8.READIN.T6_INTENSIVE_READING_SH.RELATE_TO_LIFE",
+   "assessed_by": "teacher",
+   "key_step": "The child names the idea or lesson, links it to a real situation and says what it teaches.",
+   "floor": {
+    "prerequisite": "Relates texts to life.",
+    "question": "Who is like the hero?",
+    "answer": "a real person"
+   },
+   "steps": [
+    "Idea or lesson.",
+    "Real example.",
+    "Link.",
+    "What it teaches."
+   ],
+   "contexts": [
+    "short stories",
+    "myths",
+    "career stories"
+   ],
+   "board": [
+    {
+     "beat": "write",
+     "do": "Write: Text / Real life / Lesson."
+    },
+    {
+     "beat": "point",
+     "do": "Point at Real life.",
+     "say": "Where have you seen this?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for the child to answer."
+    },
+    {
+     "beat": "child_draws",
+     "do": "The child states the lesson."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "ENGL.G8.READIN.T6_INTENSIVE_READING_SH.RELATE_TO_LIFE.M8_X_RL_RETELL",
+     "listen_for": [
+      "The boy went to a centre."
+     ],
+     "ask": "Real life?",
+     "repair": "Name one."
+    },
+    {
+     "code": "ENGL.G8.READIN.T6_INTENSIVE_READING_SH.RELATE_TO_LIFE.M8_X_RL_SURFACE",
+     "listen_for": [
+      "We also have a moon."
+     ],
+     "ask": "The lesson?",
+     "repair": "Link it."
+    },
+    {
+     "code": "ENGL.G8.READIN.T6_INTENSIVE_READING_SH.RELATE_TO_LIFE.M8_X_RL_NO_LESSON",
+     "listen_for": [
+      "nothing"
+     ],
+     "ask": "What does it teach?",
+     "repair": "Say it."
+    },
+    {
+     "code": "ENGL.G8.READIN.T6_INTENSIVE_READING_SH.RELATE_TO_LIFE.M8_X_RL_CHANGES_TEXT",
+     "listen_for": [
+      "what my cousin did"
+     ],
+     "ask": "Text says?",
+     "repair": "Keep it."
+    }
+   ],
+   "checks": [
+    {
+     "question": "Relate a story on peer pressure to life.",
+     "answer": "a real example and lesson",
+     "shows": "link"
+    },
+    {
+     "question": "Is \"we also have a moon\" a link?",
+     "answer": "No",
+     "shows": "surface"
+    }
+   ]
+  }
+ ]
+}

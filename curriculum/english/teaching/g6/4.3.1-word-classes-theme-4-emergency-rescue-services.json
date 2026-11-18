@@ -1,0 +1,184 @@
+{
+ "sub_strand": "ENGL.G6.LANGUA.T4_WORD_CLASSES",
+ "title": "Word Classes (Theme 4: Emergency rescue services)",
+ "status": "draft: written 18 Nov 2026 offline for Grade 6 English; not yet checked by a Kenyan English teacher; not loaded by the live tutor",
+ "notes": "",
+ "skills": [
+  {
+   "skill": "ENGL.G6.LANGUA.T4_WORD_CLASSES.RELATIVE_PRONOUNS",
+   "assessed_by": "questions",
+   "key_step": "The child uses who for people, which for things, whose for belonging and whom after a preposition or as an object.",
+   "floor": {
+    "prerequisite": "Uses reflexive pronouns.",
+    "question": "She hurt ___.",
+    "answer": "herself"
+   },
+   "steps": [
+    "Person: who.",
+    "Thing: which.",
+    "Belonging: whose.",
+    "Object: whom."
+   ],
+   "contexts": [
+    "rescue workers"
+   ],
+   "board": [
+    {
+     "beat": "write",
+     "do": "Write: The man ___ saved us is a fireman."
+    },
+    {
+     "beat": "point",
+     "do": "Point at man.",
+     "say": "Person or thing?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for the child to answer."
+    },
+    {
+     "beat": "child_draws",
+     "do": "The child writes a whose sentence."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "ENGL.G6.LANGUA.T4_WORD_CLASSES.RELATIVE_PRONOUNS.M_REL_WHICH_PERSON",
+     "listen_for": [
+      "which"
+     ],
+     "ask": "Person?",
+     "repair": "Who."
+    },
+    {
+     "code": "ENGL.G6.LANGUA.T4_WORD_CLASSES.RELATIVE_PRONOUNS.M_REL_WHO_THING",
+     "listen_for": [
+      "who"
+     ],
+     "ask": "Thing?",
+     "repair": "Which."
+    },
+    {
+     "code": "ENGL.G6.LANGUA.T4_WORD_CLASSES.RELATIVE_PRONOUNS.M_REL_WHOSE_WHO",
+     "listen_for": [
+      "who"
+     ],
+     "ask": "Belonging?",
+     "repair": "Whose."
+    },
+    {
+     "code": "ENGL.G6.LANGUA.T4_WORD_CLASSES.RELATIVE_PRONOUNS.M_REL_DOUBLE",
+     "listen_for": [
+      "who she"
+     ],
+     "ask": "Who she?",
+     "repair": "Who alone."
+    },
+    {
+     "code": "ENGL.G6.LANGUA.T4_WORD_CLASSES.RELATIVE_PRONOUNS.M_REL_WHOM_WHO",
+     "listen_for": [
+      "who"
+     ],
+     "ask": "Object?",
+     "repair": "Whom."
+    }
+   ],
+   "checks": [
+    {
+     "question": "The car ___ broke down was old.",
+     "answer": "which",
+     "shows": "thing"
+    },
+    {
+     "question": "The girl ___ bag was lost.",
+     "answer": "whose",
+     "shows": "belonging"
+    }
+   ]
+  },
+  {
+   "skill": "ENGL.G6.LANGUA.T4_WORD_CLASSES.INDEFINITE_PRONOUNS",
+   "assessed_by": "questions",
+   "key_step": "The child uses some- in positives, any- in questions and negatives, and a singular verb.",
+   "floor": {
+    "prerequisite": "Uses quantifiers.",
+    "question": "Each ___ (has/have).",
+    "answer": "has"
+   },
+   "steps": [
+    "Positive: somebody.",
+    "Negative or question: anybody.",
+    "Singular verb.",
+    "No one is two words."
+   ],
+   "contexts": [
+    "an emergency call"
+   ],
+   "board": [
+    {
+     "beat": "write",
+     "do": "Write: ___ is at the door. (somebody/anybody)"
+    },
+    {
+     "beat": "point",
+     "do": "Point at the gap.",
+     "say": "Positive or negative?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for the child to answer."
+    },
+    {
+     "beat": "child_draws",
+     "do": "The child writes a negative."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "ENGL.G6.LANGUA.T4_WORD_CLASSES.INDEFINITE_PRONOUNS.M_IND_ANY_STATEMENT",
+     "listen_for": [
+      "anybody"
+     ],
+     "ask": "Positive?",
+     "repair": "Somebody."
+    },
+    {
+     "code": "ENGL.G6.LANGUA.T4_WORD_CLASSES.INDEFINITE_PRONOUNS.M_IND_DOUBLE_NEG",
+     "listen_for": [
+      "nobody"
+     ],
+     "ask": "Two negatives?",
+     "repair": "Anybody."
+    },
+    {
+     "code": "ENGL.G6.LANGUA.T4_WORD_CLASSES.INDEFINITE_PRONOUNS.M_IND_PLURAL_VERB",
+     "listen_for": [
+      "are"
+     ],
+     "ask": "One or many?",
+     "repair": "Is."
+    },
+    {
+     "code": "ENGL.G6.LANGUA.T4_WORD_CLASSES.INDEFINITE_PRONOUNS.M_IND_NOONE",
+     "listen_for": [
+      "noone"
+     ],
+     "ask": "One word?",
+     "repair": "No one."
+    }
+   ],
+   "checks": [
+    {
+     "question": "Is ___ hurt?",
+     "answer": "anyone",
+     "shows": "question"
+    },
+    {
+     "question": "Everybody ___ (is/are) safe.",
+     "answer": "is",
+     "shows": "singular"
+    }
+   ]
+  }
+ ]
+}

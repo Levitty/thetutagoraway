@@ -1,0 +1,175 @@
+{
+ "sub_strand": "ENGL.G8.READIN.T3_INTENSIVE_READING_PO",
+ "title": "Intensive reading: Poetry (Theme 3: Pollution)",
+ "status": "draft: written 18 Nov 2026 offline for Grade 8 English; not yet checked by a Kenyan English teacher; not loaded by the live tutor",
+ "notes": "",
+ "skills": [
+  {
+   "skill": "ENGL.G8.READIN.T3_INTENSIVE_READING_PO.POEM_PARTS",
+   "assessed_by": "questions",
+   "key_step": "The child names line, stanza, rhyme, refrain and persona in a poem.",
+   "floor": {
+    "prerequisite": "Knows poem structure.",
+    "question": "A stanza is ...",
+    "answer": "a group of lines"
+   },
+   "steps": [
+    "Line.",
+    "Stanza.",
+    "Rhyme.",
+    "Refrain.",
+    "Persona."
+   ],
+   "contexts": [
+    "pollution poems"
+   ],
+   "board": [
+    {
+     "beat": "write",
+     "do": "Write a poem with a refrain."
+    },
+    {
+     "beat": "point",
+     "do": "Point at the repeated line.",
+     "say": "Name it."
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for the child to answer."
+    },
+    {
+     "beat": "child_draws",
+     "do": "The child names the persona."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "ENGL.G8.READIN.T3_INTENSIVE_READING_PO.POEM_PARTS.M8_PM_STANZA_LINE",
+     "listen_for": [
+      "One line of a poem"
+     ],
+     "ask": "One line or a group?",
+     "repair": "Stanza."
+    },
+    {
+     "code": "ENGL.G8.READIN.T3_INTENSIVE_READING_PO.POEM_PARTS.M8_PM_RHYME_REPEAT",
+     "listen_for": [
+      "Words with the same end sound"
+     ],
+     "ask": "Sound alike or repeated?",
+     "repair": "Check."
+    },
+    {
+     "code": "ENGL.G8.READIN.T3_INTENSIVE_READING_PO.POEM_PARTS.M8_PM_POET_PERSONA",
+     "listen_for": [
+      "The poet himself, always"
+     ],
+     "ask": "Who speaks?",
+     "repair": "Persona."
+    },
+    {
+     "code": "ENGL.G8.READIN.T3_INTENSIVE_READING_PO.POEM_PARTS.M8_X_PM_REFRAIN",
+     "listen_for": [
+      "rhyme"
+     ],
+     "ask": "A whole line repeated?",
+     "repair": "Refrain."
+    }
+   ],
+   "checks": [
+    {
+     "question": "Repeated line at the end of stanzas?",
+     "answer": "refrain",
+     "shows": "refrain"
+    },
+    {
+     "question": "The voice speaking is the ...",
+     "answer": "persona",
+     "shows": "persona"
+    }
+   ]
+  },
+  {
+   "skill": "ENGL.G8.READIN.T3_INTENSIVE_READING_PO.RP_MAIN",
+   "assessed_by": "questions",
+   "key_step": "The child says what the poem says about its subject, not only the subject.",
+   "floor": {
+    "prerequisite": "Finds main ideas.",
+    "question": "Main idea?",
+    "answer": "an idea"
+   },
+   "steps": [
+    "Subject.",
+    "What it says about the subject."
+   ],
+   "contexts": [
+    "pollution poems"
+   ],
+   "board": [
+    {
+     "beat": "write",
+     "do": "Write the title \"Smoke\"."
+    },
+    {
+     "beat": "point",
+     "do": "Point at the title.",
+     "say": "What does the poem say about smoke?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for the child to answer."
+    },
+    {
+     "beat": "child_draws",
+     "do": "The child states the main idea."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "ENGL.G8.READIN.T3_INTENSIVE_READING_PO.RP_MAIN.M8_RP_MAIN_DETAIL",
+     "listen_for": [
+      "an answer that is a small detail"
+     ],
+     "ask": "Does that answer the question, or is it a detail nearby?",
+     "repair": "Find the exact answer in the text."
+    },
+    {
+     "code": "ENGL.G8.READIN.T3_INTENSIVE_READING_PO.RP_MAIN.M8_RP_MAIN_OPPOSITE",
+     "listen_for": [
+      "an answer that is the opposite"
+     ],
+     "ask": "Does the text say that, or the opposite?",
+     "repair": "Read the sentence again."
+    },
+    {
+     "code": "ENGL.G8.READIN.T3_INTENSIVE_READING_PO.RP_MAIN.M8_RP_MAIN_NOTSAID",
+     "listen_for": [
+      "an answer that is something not in the text"
+     ],
+     "ask": "Can you point to where the text says it?",
+     "repair": "Answer only from the text."
+    },
+    {
+     "code": "ENGL.G8.READIN.T3_INTENSIVE_READING_PO.RP_MAIN.M8_X_RPM_TITLE_ONLY",
+     "listen_for": [
+      "smoke"
+     ],
+     "ask": "What does it say about it?",
+     "repair": "Say that."
+    }
+   ],
+   "checks": [
+    {
+     "question": "Main idea of \"Smoke\"?",
+     "answer": "factory smoke harms the village",
+     "shows": "main"
+    },
+    {
+     "question": "Is the title the main idea?",
+     "answer": "No",
+     "shows": "title"
+    }
+   ]
+  }
+ ]
+}

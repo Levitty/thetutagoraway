@@ -1,0 +1,177 @@
+{
+ "sub_strand": "ENGL.G4.LANGUA.T12_WORD_CLASSES_VERB_AS",
+ "title": "Word classes: verb aspect (Theme 12: Clean environment)",
+ "status": "draft: written 18 Nov 2026 offline for Grade 4 English; not yet checked by a Kenyan English teacher; not loaded by the live tutor",
+ "notes": "",
+ "skills": [
+  {
+   "skill": "ENGL.G4.LANGUA.T12_WORD_CLASSES_VERB_AS.PRESENT_PERFECT",
+   "assessed_by": "questions",
+   "key_step": "The child uses have or has with the past participle for a past action linked to now, with no exact past time.",
+   "floor": {
+    "prerequisite": "Uses the simple past.",
+    "question": "Yesterday I ___ (eat).",
+    "answer": "ate"
+   },
+   "steps": [
+    "Is it linked to now?",
+    "Have or has.",
+    "Past participle.",
+    "No yesterday."
+   ],
+   "contexts": [
+    "a clean-up day",
+    "news"
+   ],
+   "board": [
+    {
+     "beat": "write",
+     "do": "Write: I ___ ___ my homework. (finish)"
+    },
+    {
+     "beat": "point",
+     "do": "Point at the gap.",
+     "say": "Have or has with I?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for have finished."
+    },
+    {
+     "beat": "child_draws",
+     "do": "The child writes with has."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "ENGL.G4.LANGUA.T12_WORD_CLASSES_VERB_AS.PRESENT_PERFECT.M_PPF_PAST_FORM",
+     "listen_for": [
+      "ate"
+     ],
+     "ask": "After have?",
+     "repair": "Eaten."
+    },
+    {
+     "code": "ENGL.G4.LANGUA.T12_WORD_CLASSES_VERB_AS.PRESENT_PERFECT.M_PPF_HAS_HAVE",
+     "listen_for": [
+      "have"
+     ],
+     "ask": "He, she or it?",
+     "repair": "Has."
+    },
+    {
+     "code": "ENGL.G4.LANGUA.T12_WORD_CLASSES_VERB_AS.PRESENT_PERFECT.M_PPF_BASE_VERB",
+     "listen_for": [
+      "go"
+     ],
+     "ask": "Which form after have?",
+     "repair": "Gone."
+    },
+    {
+     "code": "ENGL.G4.LANGUA.T12_WORD_CLASSES_VERB_AS.PRESENT_PERFECT.M_PPF_WITH_PAST_TIME",
+     "listen_for": [
+      "have seen"
+     ],
+     "ask": "Is there yesterday?",
+     "repair": "Simple past."
+    }
+   ],
+   "checks": [
+    {
+     "question": "She ___ (go) home.",
+     "answer": "has gone",
+     "shows": "has"
+    },
+    {
+     "question": "I ___ (see) him yesterday.",
+     "answer": "saw",
+     "shows": "past time"
+    }
+   ]
+  },
+  {
+   "skill": "ENGL.G4.LANGUA.T12_WORD_CLASSES_VERB_AS.PAST_PERFECT",
+   "assessed_by": "questions",
+   "key_step": "The child puts had on the action that happened first in the past.",
+   "floor": {
+    "prerequisite": "Uses the present perfect.",
+    "question": "I ___ eaten.",
+    "answer": "have"
+   },
+   "steps": [
+    "Find the two past actions.",
+    "Which was first?",
+    "Had + past participle for that one."
+   ],
+   "contexts": [
+    "a story about a bus",
+    "arriving late"
+   ],
+   "board": [
+    {
+     "beat": "write",
+     "do": "Write: When I arrived, the bus ___ ___. (leave)"
+    },
+    {
+     "beat": "point",
+     "do": "Point at the two actions.",
+     "say": "Which happened first?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for had left."
+    },
+    {
+     "beat": "child_draws",
+     "do": "The child writes another."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "ENGL.G4.LANGUA.T12_WORD_CLASSES_VERB_AS.PAST_PERFECT.M_PAF_HAD_MISSING",
+     "listen_for": [
+      "was"
+     ],
+     "ask": "Which was first?",
+     "repair": "Had on it."
+    },
+    {
+     "code": "ENGL.G4.LANGUA.T12_WORD_CLASSES_VERB_AS.PAST_PERFECT.M_PAF_HAVE_FOR_HAD",
+     "listen_for": [
+      "has"
+     ],
+     "ask": "Is it all in the past?",
+     "repair": "Had."
+    },
+    {
+     "code": "ENGL.G4.LANGUA.T12_WORD_CLASSES_VERB_AS.PAST_PERFECT.M_PAF_BASE_VERB",
+     "listen_for": [
+      "finish"
+     ],
+     "ask": "After had?",
+     "repair": "Finished."
+    },
+    {
+     "code": "ENGL.G4.LANGUA.T12_WORD_CLASSES_VERB_AS.PAST_PERFECT.M_PAF_WRONG_ORDER",
+     "listen_for": [
+      "I arrived"
+     ],
+     "ask": "Which happened first?",
+     "repair": "Had there."
+    }
+   ],
+   "checks": [
+    {
+     "question": "She ___ (finish) before we came.",
+     "answer": "had finished",
+     "shows": "had"
+    },
+    {
+     "question": "Where does had go?",
+     "answer": "on the earlier action",
+     "shows": "order"
+    }
+   ]
+  }
+ ]
+}

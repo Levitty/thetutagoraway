@@ -26065,6 +26065,66 @@ var OUTCOMES16 = {
   }
 };
 var SKILLS16 = {
+  "ENGL.G4.LISTEN.T1_PRONUNCIATION_AND_VO.PRONOUNCE_SOUNDS": {
+    "name": "Say the target sounds of English clearly in words",
+    "sub": "ENGL.G4.LISTEN.T1_PRONUNCIATION_AND_VO",
+    "outcome": "ENGL.G4.LISTEN.T1_PRONUNCIATION_AND_VO.a",
+    "outcomes": [
+      "ENGL.G4.LISTEN.T1_PRONUNCIATION_AND_VO.a",
+      "ENGL.G4.LISTEN.T2_PRONUNCIATION_AND_VO.b",
+      "ENGL.G4.LISTEN.T3_PRONUNCIATION_AND_VO.c",
+      "ENGL.G4.LISTEN.T8_PRONUNCIATION_AND_VO.a",
+      "ENGL.G4.LISTEN.T9_PRONUNCIATION_AND_VO.b",
+      "ENGL.G4.LISTEN.T10_PRONUNCIATION_AND_VO.a"
+    ],
+    "pre": [],
+    "mis": [
+      "M4_PS_L_R",
+      "M4_PS_SH_S",
+      "M4_PS_CH_SH",
+      "M4_PS_V_F",
+      "M4_PS_EXTRA_VOWEL",
+      "M4_PS_SHIP_SHEEP"
+    ],
+    "nofamily": "voice"
+  },
+  "ENGL.G4.LISTEN.T1_PRONUNCIATION_AND_VO.FAMILY_VOCAB": {
+    "name": "Use words for members of the family in sentences",
+    "sub": "ENGL.G4.LISTEN.T1_PRONUNCIATION_AND_VO",
+    "outcome": "ENGL.G4.LISTEN.T1_PRONUNCIATION_AND_VO.b",
+    "outcomes": [
+      "ENGL.G4.LISTEN.T1_PRONUNCIATION_AND_VO.b"
+    ],
+    "pre": [
+      "ENGL.G4.LANGUA.T4_WORD_CLASSES_PRONOUN.PERSONAL_PRONOUNS"
+    ],
+    "mis": [
+      "M4_FV_COUSIN_BROTHER",
+      "M4_FV_SMALL_BROTHER",
+      "M4_FV_NIECE_NEPHEW",
+      "M4_FV_AUNT_UNCLE"
+    ],
+    "nofamily": "questions"
+  },
+  "ENGL.G4.LISTEN.T1_PRONUNCIATION_AND_VO.LISTEN_ATTENTIVE": {
+    "name": "Listen to a short oral text and recall what was said",
+    "sub": "ENGL.G4.LISTEN.T1_PRONUNCIATION_AND_VO",
+    "outcome": "ENGL.G4.LISTEN.T1_PRONUNCIATION_AND_VO.c",
+    "outcomes": [
+      "ENGL.G4.LISTEN.T1_PRONUNCIATION_AND_VO.c",
+      "ENGL.G4.LISTEN.T5_PRONUNCIATION_AND_VO.a",
+      "ENGL.G4.LISTEN.T11_PRONUNCIATION_AND_VO.a",
+      "ENGL.G4.LISTEN.T13_PRONUNCIATION_AND_VO.a"
+    ],
+    "pre": [],
+    "mis": [
+      "M4_LA_LAST_HEARD",
+      "M4_LA_OWN_DETAIL",
+      "M4_LA_WHO_SWAP",
+      "M4_LA_KEYWORD_GRAB"
+    ],
+    "nofamily": "voice"
+  },
   "ENGL.G4.READIN.T1_EXTENSIVE_READING.DICTIONARY_USE": {
     "name": "Use a dictionary: order, guide words and meaning",
     "sub": "ENGL.G4.READIN.T1_EXTENSIVE_READING",
@@ -26076,7 +26136,8 @@ var SKILLS16 = {
     "mis": [
       "M_DIC_ALPHA_FIRST_LETTER",
       "M_DIC_GUIDE_WORDS",
-      "M_DIC_WRONG_MEANING"
+      "M_DIC_WRONG_MEANING",
+      "M4_DIC_FIRST_MEANING"
     ]
   },
   "ENGL.G4.READIN.T1_EXTENSIVE_READING.REFERENCE_MATERIALS": {
@@ -26133,6 +26194,43 @@ var SKILLS16 = {
       "M_FRM_NAME_PART"
     ]
   },
+  "ENGL.G4.WRITIN.T1_FUNCTIONAL_WRITING.FILL_FORM": {
+    "name": "Fill in a simple form correctly",
+    "sub": "ENGL.G4.WRITIN.T1_FUNCTIONAL_WRITING",
+    "outcome": "ENGL.G4.WRITIN.T1_FUNCTIONAL_WRITING.b",
+    "outcomes": [
+      "ENGL.G4.WRITIN.T1_FUNCTIONAL_WRITING.b"
+    ],
+    "pre": [
+      "ENGL.G4.WRITIN.T1_FUNCTIONAL_WRITING.FORM_INFORMATION",
+      "ENGL.G4.WRITIN.T7_MECHANICS_OF_WRITING.CAPITALS_FULL_STOPS"
+    ],
+    "mis": [
+      "M4_FF_LOWER_CASE",
+      "M4_FF_EMPTY_BOX",
+      "M4_FF_SIGN_AS_NAME",
+      "M4_FF_OUTSIDE_BOX"
+    ],
+    "nofamily": "composition"
+  },
+  "ENGL.G4.LISTEN.T2_PRONUNCIATION_AND_VO.DISCRIMINATE_SOUNDS": {
+    "name": "Hear the difference between words that differ by one sound",
+    "sub": "ENGL.G4.LISTEN.T2_PRONUNCIATION_AND_VO",
+    "outcome": "ENGL.G4.LISTEN.T2_PRONUNCIATION_AND_VO.a",
+    "outcomes": [
+      "ENGL.G4.LISTEN.T2_PRONUNCIATION_AND_VO.a",
+      "ENGL.G4.LISTEN.T8_PRONUNCIATION_AND_VO.b",
+      "ENGL.G4.LISTEN.T11_PRONUNCIATION_AND_VO.c"
+    ],
+    "pre": [],
+    "mis": [
+      "M4_DS_SHIP_SHEEP",
+      "M4_DS_L_R",
+      "M4_DS_F_V",
+      "M4_DS_TH_T"
+    ],
+    "nofamily": "voice"
+  },
   "ENGL.G4.READIN.T2_INTENSIVE_READING.FACTUAL_QUESTIONS": {
     "name": "Answer direct questions from a text",
     "sub": "ENGL.G4.READIN.T2_INTENSIVE_READING",
@@ -26180,7 +26278,8 @@ var SKILLS16 = {
     "mis": [
       "M_INFER_REPEATS_TEXT",
       "M_INFER_CONTRADICTS",
-      "M_INFER_OVERREACH"
+      "M_INFER_OVERREACH",
+      "M4_INFER_FEELING_GUESS"
     ]
   },
   "ENGL.G4.READIN.T2_INTENSIVE_READING.CONTEXT_CLUES": {
@@ -26234,6 +26333,25 @@ var SKILLS16 = {
       "M_PLI_SAME_FORM_S"
     ]
   },
+  "ENGL.G4.WRITIN.T2_CREATIVE_WRITING.OPEN_COMPOSITION": {
+    "name": "Write an open-ended composition with relevant ideas",
+    "sub": "ENGL.G4.WRITIN.T2_CREATIVE_WRITING",
+    "outcome": "ENGL.G4.WRITIN.T2_CREATIVE_WRITING.a",
+    "outcomes": [
+      "ENGL.G4.WRITIN.T2_CREATIVE_WRITING.a",
+      "ENGL.G4.WRITIN.T2_CREATIVE_WRITING.b"
+    ],
+    "pre": [
+      "ENGL.G4.WRITIN.T5_CREATIVE_WRITING.PARAGRAPH_ORDER"
+    ],
+    "mis": [
+      "M4_OC_OFF_TOPIC",
+      "M4_OC_AND_THEN",
+      "M4_OC_LIST",
+      "M4_OC_NO_ENDING"
+    ],
+    "nofamily": "composition"
+  },
   "ENGL.G4.LISTEN.T3_PRONUNCIATION_AND_VO.POLITE_WORDS": {
     "name": "Choose polite words and phrases",
     "sub": "ENGL.G4.LISTEN.T3_PRONUNCIATION_AND_VO",
@@ -26259,13 +26377,31 @@ var SKILLS16 = {
       "ENGL.G4.LANGUA.T3_LANGUAGE_PATTERN.a",
       "ENGL.G4.LANGUA.T3_LANGUAGE_PATTERN.b"
     ],
-    "pre": [],
+    "pre": [
+      "ENGL.G4.LISTEN.T3_PRONUNCIATION_AND_VO.POLITE_WORDS"
+    ],
     "mis": [
       "M_PAT_VERB_FORM",
       "M_PAT_NO_PLEASE",
       "M_PAT_WOULD_LIKE_FORM",
       "M_PAT_ORDER"
     ]
+  },
+  "ENGL.G4.WRITIN.T3_MECHANICS_OF_WRITING.HANDWRITING": {
+    "name": "Write legibly and neatly in print script",
+    "sub": "ENGL.G4.WRITIN.T3_MECHANICS_OF_WRITING",
+    "outcome": "ENGL.G4.WRITIN.T3_MECHANICS_OF_WRITING.a",
+    "outcomes": [
+      "ENGL.G4.WRITIN.T3_MECHANICS_OF_WRITING.a"
+    ],
+    "pre": [],
+    "mis": [
+      "M4_HW_OFF_LINE",
+      "M4_HW_MIXED_CASE",
+      "M4_HW_B_D",
+      "M4_HW_NO_SPACES"
+    ],
+    "nofamily": "teacher"
   },
   "ENGL.G4.LISTEN.T4_PRONUNCIATION_AND_VO.FIRST_AID_WORDS": {
     "name": "Use first aid words",
@@ -26278,8 +26414,28 @@ var SKILLS16 = {
     "mis": [
       "M_FA_NEAR_MEANING",
       "M_FA_WOUND_BRUISE",
-      "M_FA_SPRAIN_BREAK"
+      "M_FA_SPRAIN_BREAK",
+      "M4_FA_BANDAGE_PLASTER"
     ]
+  },
+  "ENGL.G4.LISTEN.T4_PRONUNCIATION_AND_VO.WORD_STRESS": {
+    "name": "Say theme words with the stress on the right syllable",
+    "sub": "ENGL.G4.LISTEN.T4_PRONUNCIATION_AND_VO",
+    "outcome": "ENGL.G4.LISTEN.T4_PRONUNCIATION_AND_VO.b",
+    "outcomes": [
+      "ENGL.G4.LISTEN.T4_PRONUNCIATION_AND_VO.b"
+    ],
+    "pre": [
+      "ENGL.G4.LISTEN.T1_PRONUNCIATION_AND_VO.PRONOUNCE_SOUNDS",
+      "ENGL.G4.LISTEN.T4_PRONUNCIATION_AND_VO.FIRST_AID_WORDS"
+    ],
+    "mis": [
+      "M4_WS_EQUAL",
+      "M4_WS_SECOND",
+      "M4_WS_LAST",
+      "M4_WS_SPELLING_VOWEL"
+    ],
+    "nofamily": "voice"
   },
   "ENGL.G4.READIN.T4_INTENSIVE_READING_VI.VISUALS": {
     "name": "Read a notice, timetable or chart",
@@ -26289,11 +26445,14 @@ var SKILLS16 = {
       "ENGL.G4.READIN.T4_INTENSIVE_READING_VI.a",
       "ENGL.G4.READIN.T4_INTENSIVE_READING_VI.b"
     ],
-    "pre": [],
+    "pre": [
+      "ENGL.G4.READIN.T2_INTENSIVE_READING.FACTUAL_QUESTIONS"
+    ],
     "mis": [
       "M_VIS_WRONG_ROW",
       "M_VIS_NEARBY_DETAIL",
-      "M_VIS_PURPOSE"
+      "M_VIS_PURPOSE",
+      "M4_VIS_TITLE_IGNORED"
     ]
   },
   "ENGL.G4.LANGUA.T4_WORD_CLASSES_PRONOUN.PERSONAL_PRONOUNS": {
@@ -26338,13 +26497,53 @@ var SKILLS16 = {
     "outcomes": [
       "ENGL.G4.WRITIN.T4_FUNCTIONAL_WRITING.a"
     ],
-    "pre": [],
+    "pre": [
+      "ENGL.G4.WRITIN.T7_MECHANICS_OF_WRITING.CAPITALS_FULL_STOPS"
+    ],
     "mis": [
       "M_LTR_PART_MIX",
       "M_LTR_ORDER",
       "M_LTR_NO_COMMA",
       "M_LTR_RECEIVER_ADDRESS"
     ]
+  },
+  "ENGL.G4.WRITIN.T4_FUNCTIONAL_WRITING.FRIENDLY_LETTER": {
+    "name": "Write a friendly letter in the correct format",
+    "sub": "ENGL.G4.WRITIN.T4_FUNCTIONAL_WRITING",
+    "outcome": "ENGL.G4.WRITIN.T4_FUNCTIONAL_WRITING.b",
+    "outcomes": [
+      "ENGL.G4.WRITIN.T4_FUNCTIONAL_WRITING.b"
+    ],
+    "pre": [
+      "ENGL.G4.WRITIN.T4_FUNCTIONAL_WRITING.LETTER_PARTS",
+      "ENGL.G4.WRITIN.T9_PUNCTUATION.COMMAS"
+    ],
+    "mis": [
+      "M4_FL_NO_ADDRESS",
+      "M4_FL_OFFICIAL_CLOSE",
+      "M4_FL_ONE_BLOCK",
+      "M4_FL_NO_NAME"
+    ],
+    "nofamily": "composition"
+  },
+  "ENGL.G4.WRITIN.T4_FUNCTIONAL_WRITING.SMS_MESSAGE": {
+    "name": "Write a short text message (SMS) correctly",
+    "sub": "ENGL.G4.WRITIN.T4_FUNCTIONAL_WRITING",
+    "outcome": "ENGL.G4.WRITIN.T4_FUNCTIONAL_WRITING.c",
+    "outcomes": [
+      "ENGL.G4.WRITIN.T4_FUNCTIONAL_WRITING.c"
+    ],
+    "pre": [
+      "ENGL.G4.WRITIN.T4_FUNCTIONAL_WRITING.LETTER_PARTS",
+      "ENGL.G4.LANGUA.T8_WORD_CLASSES.CONTRACTIONS"
+    ],
+    "mis": [
+      "M4_SM_NO_NAME",
+      "M4_SM_TEXTSPEAK",
+      "M4_SM_LETTER_FORMAT",
+      "M4_SM_MISSING_DETAIL"
+    ],
+    "nofamily": "questions"
   },
   "ENGL.G4.LISTEN.T5_PRONUNCIATION_AND_VO.NUTRITION_WORDS": {
     "name": "Use words about food and a balanced diet",
@@ -26357,8 +26556,28 @@ var SKILLS16 = {
     "mis": [
       "M_NUT_NEAR_MEANING",
       "M_NUT_VITAMIN_FIBRE",
-      "M_NUT_BALANCED"
+      "M_NUT_BALANCED",
+      "M4_NUT_FRUIT_PROTEIN"
     ]
+  },
+  "ENGL.G4.LISTEN.T5_PRONUNCIATION_AND_VO.LIKE_BUT_PATTERN": {
+    "name": 'Say what one likes and does not like with "I like ... but I do not like ..."',
+    "sub": "ENGL.G4.LISTEN.T5_PRONUNCIATION_AND_VO",
+    "outcome": "ENGL.G4.LISTEN.T5_PRONUNCIATION_AND_VO.c",
+    "outcomes": [
+      "ENGL.G4.LISTEN.T5_PRONUNCIATION_AND_VO.c"
+    ],
+    "pre": [
+      "ENGL.G4.LANGUA.T10_WORD_CLASS_CONJUNCTI.CONJUNCTIONS",
+      "ENGL.G4.LANGUA.T8_WORD_CLASSES.NEGATIVE_STATEMENTS"
+    ],
+    "mis": [
+      "M4_LB_DO_NOT_S",
+      "M4_LB_AND_FOR_BUT",
+      "M4_LB_NOT_LIKE",
+      "M4_LB_LIKE_ING_TO"
+    ],
+    "nofamily": "questions"
   },
   "ENGL.G4.READIN.T5_EXTENSIVE_READING.SCAN_FOR_DETAIL": {
     "name": "Scan a text for a detail",
@@ -26375,8 +26594,47 @@ var SKILLS16 = {
     "mis": [
       "M_SCAN_NEAR_NUMBER",
       "M_SCAN_WRONG_KEYWORD",
-      "M_SCAN_TOO_LONG"
+      "M_SCAN_TOO_LONG",
+      "M4_SCAN_FIRST_MATCH"
     ]
+  },
+  "ENGL.G4.READIN.T5_EXTENSIVE_READING.SELECT_READING": {
+    "name": "Choose reading material that suits the purpose and the reader",
+    "sub": "ENGL.G4.READIN.T5_EXTENSIVE_READING",
+    "outcome": "ENGL.G4.READIN.T5_EXTENSIVE_READING.a",
+    "outcomes": [
+      "ENGL.G4.READIN.T5_EXTENSIVE_READING.a"
+    ],
+    "pre": [
+      "ENGL.G4.READIN.T1_EXTENSIVE_READING.REFERENCE_MATERIALS"
+    ],
+    "mis": [
+      "M4_SR_COVER",
+      "M4_SR_TOO_HARD",
+      "M4_SR_THICKNESS",
+      "M4_SR_WRONG_TYPE"
+    ],
+    "nofamily": "questions"
+  },
+  "ENGL.G4.READIN.T5_EXTENSIVE_READING.INDEPENDENT_READING": {
+    "name": "Read familiar books independently and keep going",
+    "sub": "ENGL.G4.READIN.T5_EXTENSIVE_READING",
+    "outcome": "ENGL.G4.READIN.T5_EXTENSIVE_READING.b",
+    "outcomes": [
+      "ENGL.G4.READIN.T5_EXTENSIVE_READING.b",
+      "ENGL.G4.READIN.T7_EXTENSIVE_READING_IN.a",
+      "ENGL.G4.READIN.T7_EXTENSIVE_READING_IN.b"
+    ],
+    "pre": [
+      "ENGL.G4.READIN.T5_EXTENSIVE_READING.SELECT_READING"
+    ],
+    "mis": [
+      "M4_IR_STOPS_AT_WORD",
+      "M4_IR_PICTURES_ONLY",
+      "M4_IR_CANNOT_RETELL",
+      "M4_IR_SKIPS_TO_END"
+    ],
+    "nofamily": "teacher"
   },
   "ENGL.G4.LANGUA.T5_WORD_CLASSES_ADJECTI.ADJECTIVES": {
     "name": "Find adjectives in a sentence",
@@ -26407,7 +26665,8 @@ var SKILLS16 = {
     "mis": [
       "M_ADO_SHAPE_BEFORE_SIZE",
       "M_ADO_AFTER_NOUN",
-      "M_ADO_NO_AND"
+      "M_ADO_NO_AND",
+      "M4_ADO_COLOUR_FIRST"
     ]
   },
   "ENGL.G4.WRITIN.T5_CREATIVE_WRITING.NARRATIVE_PARTS": {
@@ -26439,8 +26698,30 @@ var SKILLS16 = {
     "mis": [
       "M_PAR_ORDER_REVERSED",
       "M_PAR_ORDER_SWAPPED",
-      "M_PAR_TOPIC_DETAIL"
+      "M_PAR_TOPIC_DETAIL",
+      "M4_PAR_ENDING_FIRST"
     ]
+  },
+  "ENGL.G4.WRITIN.T5_CREATIVE_WRITING.NARRATIVE_COMPOSITION": {
+    "name": "Write a narrative composition of about 60 to 80 words",
+    "sub": "ENGL.G4.WRITIN.T5_CREATIVE_WRITING",
+    "outcome": "ENGL.G4.WRITIN.T5_CREATIVE_WRITING.c",
+    "outcomes": [
+      "ENGL.G4.WRITIN.T5_CREATIVE_WRITING.c",
+      "ENGL.G4.WRITIN.T8_CREATIVE_WRITING.c"
+    ],
+    "pre": [
+      "ENGL.G4.WRITIN.T5_CREATIVE_WRITING.NARRATIVE_PARTS",
+      "ENGL.G4.LISTEN.T7_PRONUNCIATION_AND_VO.SIMPLE_PAST",
+      "ENGL.G4.WRITIN.T5_CREATIVE_WRITING.PARAGRAPH_ORDER"
+    ],
+    "mis": [
+      "M4_NC_TENSE_SWITCH",
+      "M4_NC_NO_PROBLEM",
+      "M4_NC_TOO_SHORT",
+      "M4_NC_I_WOKE_UP"
+    ],
+    "nofamily": "composition"
   },
   "ENGL.G4.LISTEN.T6_PRONUNCIATION_AND_VO.INTERNET_WORDS": {
     "name": "Use words about the internet, email and safety online",
@@ -26454,8 +26735,28 @@ var SKILLS16 = {
     "mis": [
       "M_NET_NEAR_MEANING",
       "M_NET_PASSWORD_SHARED",
-      "M_NET_STRANGER"
+      "M_NET_STRANGER",
+      "M4_NET_DOWNLOAD_UPLOAD"
     ]
+  },
+  "ENGL.G4.LISTEN.T6_PRONUNCIATION_AND_VO.INTONATION": {
+    "name": "Use falling and rising intonation for questions and statements",
+    "sub": "ENGL.G4.LISTEN.T6_PRONUNCIATION_AND_VO",
+    "outcome": "ENGL.G4.LISTEN.T6_PRONUNCIATION_AND_VO.a",
+    "outcomes": [
+      "ENGL.G4.LISTEN.T6_PRONUNCIATION_AND_VO.a",
+      "ENGL.G4.LISTEN.T6_PRONUNCIATION_AND_VO.b"
+    ],
+    "pre": [
+      "ENGL.G4.LANGUA.T11_LANGUAGE_PATTERNS.INTERROGATIVES"
+    ],
+    "mis": [
+      "M4_IN_WH_RISE",
+      "M4_IN_FLAT",
+      "M4_IN_STATEMENT_RISE",
+      "M4_IN_WRONG_WORD"
+    ],
+    "nofamily": "voice"
   },
   "ENGL.G4.LANGUA.T6_WORD_CLASS_DETERMINE.COUNT_UNCOUNT": {
     "name": "Use many, much, few and little",
@@ -26465,7 +26766,9 @@ var SKILLS16 = {
       "ENGL.G4.LANGUA.T6_WORD_CLASS_DETERMINE.a",
       "ENGL.G4.LANGUA.T6_WORD_CLASS_DETERMINE.b"
     ],
-    "pre": [],
+    "pre": [
+      "ENGL.G4.LANGUA.T2_WORD_CLASSES_NOUNS.PLURALS_REGULAR"
+    ],
     "mis": [
       "M_QUA_MUCH_COUNT",
       "M_QUA_MANY_UNCOUNT",
@@ -26507,6 +26810,25 @@ var SKILLS16 = {
       "M_PIC_MISMATCH"
     ]
   },
+  "ENGL.G4.WRITIN.T6_CREATIVE_WRITING.PICTORIAL_COMPOSITION": {
+    "name": "Write a composition of about 60 to 80 words from a series of pictures",
+    "sub": "ENGL.G4.WRITIN.T6_CREATIVE_WRITING",
+    "outcome": "ENGL.G4.WRITIN.T6_CREATIVE_WRITING.b",
+    "outcomes": [
+      "ENGL.G4.WRITIN.T6_CREATIVE_WRITING.b"
+    ],
+    "pre": [
+      "ENGL.G4.WRITIN.T6_CREATIVE_WRITING.PICTURE_SEQUENCE",
+      "ENGL.G4.LISTEN.T7_PRONUNCIATION_AND_VO.SIMPLE_PAST"
+    ],
+    "mis": [
+      "M4_PC_DESCRIBES_ONLY",
+      "M4_PC_SKIPS_PICTURE",
+      "M4_PC_PRESENT",
+      "M4_PC_NO_TITLE"
+    ],
+    "nofamily": "composition"
+  },
   "ENGL.G4.LISTEN.T7_PRONUNCIATION_AND_VO.SIMPLE_PAST": {
     "name": "Use the past tense in a dialogue",
     "sub": "ENGL.G4.LISTEN.T7_PRONUNCIATION_AND_VO",
@@ -26521,6 +26843,26 @@ var SKILLS16 = {
       "M_SPA_DID_PLUS_PAST",
       "M_SPA_PAST_FOR_HABIT"
     ]
+  },
+  "ENGL.G4.LISTEN.T7_PRONUNCIATION_AND_VO.TURN_TAKING": {
+    "name": "Take turns in a two-way conversation",
+    "sub": "ENGL.G4.LISTEN.T7_PRONUNCIATION_AND_VO",
+    "outcome": "ENGL.G4.LISTEN.T7_PRONUNCIATION_AND_VO.a",
+    "outcomes": [
+      "ENGL.G4.LISTEN.T7_PRONUNCIATION_AND_VO.a",
+      "ENGL.G4.LISTEN.T10_PRONUNCIATION_AND_VO.b"
+    ],
+    "pre": [
+      "ENGL.G4.LISTEN.T1_PRONUNCIATION_AND_VO.LISTEN_ATTENTIVE",
+      "ENGL.G4.LISTEN.T3_PRONUNCIATION_AND_VO.POLITE_WORDS"
+    ],
+    "mis": [
+      "M4_TT_TALK_OVER",
+      "M4_TT_ONE_WORD",
+      "M4_TT_LONG_TURN",
+      "M4_TT_OFF_TOPIC"
+    ],
+    "nofamily": "voice"
   },
   "ENGL.G4.LANGUA.T7_WORD_CLASSES_VERB_AS.PRESENT_PROGRESSIVE": {
     "name": "Use am, is and are with -ing",
@@ -26547,7 +26889,8 @@ var SKILLS16 = {
       "ENGL.G4.LANGUA.T7_WORD_CLASSES_VERB_AS.b"
     ],
     "pre": [
-      "ENGL.G4.LANGUA.T7_WORD_CLASSES_VERB_AS.PRESENT_PROGRESSIVE"
+      "ENGL.G4.LANGUA.T7_WORD_CLASSES_VERB_AS.PRESENT_PROGRESSIVE",
+      "ENGL.G4.LISTEN.T7_PRONUNCIATION_AND_VO.SIMPLE_PAST"
     ],
     "mis": [
       "M_PAP_PRESENT_FOR_PAST",
@@ -26585,8 +26928,29 @@ var SKILLS16 = {
     "mis": [
       "M_FRM_NEAR_MEANING",
       "M_FRM_LIVESTOCK_CROPS",
-      "M_FRM_FERTILISER"
+      "M_FRM_FERTILISER",
+      "M4_FRM_PLANT_HARVEST"
     ]
+  },
+  "ENGL.G4.READIN.T8_READING_FLUENCY.READ_FLUENTLY": {
+    "name": "Read a text of about 300 words accurately, at the right speed and with expression",
+    "sub": "ENGL.G4.READIN.T8_READING_FLUENCY",
+    "outcome": "ENGL.G4.READIN.T8_READING_FLUENCY.a",
+    "outcomes": [
+      "ENGL.G4.READIN.T8_READING_FLUENCY.a",
+      "ENGL.G4.READIN.T8_READING_FLUENCY.b",
+      "ENGL.G4.READIN.T12_1_INTENSIVE_READING.b"
+    ],
+    "pre": [
+      "ENGL.G4.WRITIN.T7_MECHANICS_OF_WRITING.CAPITALS_FULL_STOPS"
+    ],
+    "mis": [
+      "M4_RF_WORD_BY_WORD",
+      "M4_RF_IGNORES_STOPS",
+      "M4_RF_FLAT",
+      "M4_RF_TOO_FAST"
+    ],
+    "nofamily": "voice"
   },
   "ENGL.G4.LANGUA.T8_WORD_CLASSES.CONTRACTIONS": {
     "name": "Write short forms of verbs",
@@ -26620,6 +26984,25 @@ var SKILLS16 = {
       "M_NEG_VERB_S",
       "M_NEG_DO_WITH_BE"
     ]
+  },
+  "ENGL.G4.LISTEN.T9_PRONUNCIATION_AND_VO.SPEAK_FLUENTLY": {
+    "name": "Speak on a topic fluently, at a good speed and without long pauses",
+    "sub": "ENGL.G4.LISTEN.T9_PRONUNCIATION_AND_VO",
+    "outcome": "ENGL.G4.LISTEN.T9_PRONUNCIATION_AND_VO.a",
+    "outcomes": [
+      "ENGL.G4.LISTEN.T9_PRONUNCIATION_AND_VO.a",
+      "ENGL.G4.LISTEN.T12_PRONUNCIATION_AND_VO.a"
+    ],
+    "pre": [
+      "ENGL.G4.LISTEN.T1_PRONUNCIATION_AND_VO.PRONOUNCE_SOUNDS"
+    ],
+    "mis": [
+      "M4_SF_FILLERS",
+      "M4_SF_TOO_FAST",
+      "M4_SF_WORD_SEARCH",
+      "M4_SF_REPEATS"
+    ],
+    "nofamily": "voice"
   },
   "ENGL.G4.LANGUA.T9_WORD_CLASSES_ADVERBS.ADVERBS": {
     "name": "Use adverbs of manner, time and place",
@@ -26685,8 +27068,28 @@ var SKILLS16 = {
     "mis": [
       "M_HYG_NEAR_MEANING",
       "M_HYG_DISINFECT",
-      "M_HYG_LATRINE"
+      "M_HYG_LATRINE",
+      "M4_HYG_GERMS_DIRT"
     ]
+  },
+  "ENGL.G4.LISTEN.T10_PRONUNCIATION_AND_VO.INTERRUPT_POLITELY": {
+    "name": "Interrupt a speaker politely",
+    "sub": "ENGL.G4.LISTEN.T10_PRONUNCIATION_AND_VO",
+    "outcome": "ENGL.G4.LISTEN.T10_PRONUNCIATION_AND_VO.c",
+    "outcomes": [
+      "ENGL.G4.LISTEN.T10_PRONUNCIATION_AND_VO.c"
+    ],
+    "pre": [
+      "ENGL.G4.LISTEN.T3_PRONUNCIATION_AND_VO.POLITE_WORDS",
+      "ENGL.G4.LANGUA.T3_LANGUAGE_PATTERN.POLITE_PATTERN"
+    ],
+    "mis": [
+      "M4_IP_HEY",
+      "M4_IP_NO_PAUSE",
+      "M4_IP_SORRY_ONLY",
+      "M4_IP_COMMAND"
+    ],
+    "nofamily": "questions"
   },
   "ENGL.G4.LANGUA.T10_WORD_CLASS_CONJUNCTI.CONJUNCTIONS": {
     "name": "Join ideas with and, but, because, so and or",
@@ -26694,7 +27097,8 @@ var SKILLS16 = {
     "outcome": "ENGL.G4.LANGUA.T10_WORD_CLASS_CONJUNCTI.a",
     "outcomes": [
       "ENGL.G4.LANGUA.T10_WORD_CLASS_CONJUNCTI.a",
-      "ENGL.G4.LANGUA.T10_WORD_CLASS_CONJUNCTI.c"
+      "ENGL.G4.LANGUA.T10_WORD_CLASS_CONJUNCTI.c",
+      "ENGL.G4.LANGUA.T10_WORD_CLASS_CONJUNCTI.b"
     ],
     "pre": [],
     "mis": [
@@ -26714,13 +27118,35 @@ var SKILLS16 = {
       "ENGL.G4.WRITIN.T10_CREATIVE_WRITING.a"
     ],
     "pre": [
-      "ENGL.G4.LANGUA.T5_WORD_CLASSES_ADJECTI.ADJECTIVES"
+      "ENGL.G4.LANGUA.T5_WORD_CLASSES_ADJECTI.ADJECTIVES",
+      "ENGL.G4.WRITIN.T5_CREATIVE_WRITING.NARRATIVE_PARTS"
     ],
     "mis": [
       "M_DES_TELLS_STORY",
       "M_DES_ONE_SENSE",
-      "M_DES_PART_MIX"
+      "M_DES_PART_MIX",
+      "M4_DES_NO_ORDER"
     ]
+  },
+  "ENGL.G4.WRITIN.T10_CREATIVE_WRITING.DESCRIPTIVE_COMPOSITION": {
+    "name": "Write a descriptive composition of about 80 to 100 words",
+    "sub": "ENGL.G4.WRITIN.T10_CREATIVE_WRITING",
+    "outcome": "ENGL.G4.WRITIN.T10_CREATIVE_WRITING.c",
+    "outcomes": [
+      "ENGL.G4.WRITIN.T10_CREATIVE_WRITING.c"
+    ],
+    "pre": [
+      "ENGL.G4.WRITIN.T10_CREATIVE_WRITING.DESCRIPTIVE_PARTS",
+      "ENGL.G4.LANGUA.T5_WORD_CLASSES_ADJECTI.ADJECTIVES",
+      "ENGL.G4.LANGUA.T5_WORD_CLASSES_ADJECTI.ADJECTIVE_ORDER"
+    ],
+    "mis": [
+      "M4_DC_STORY",
+      "M4_DC_SIGHT_ONLY",
+      "M4_DC_NICE",
+      "M4_DC_NO_CONCLUSION"
+    ],
+    "nofamily": "composition"
   },
   "ENGL.G4.LISTEN.T11_PRONUNCIATION_AND_VO.SPORTS_WORDS": {
     "name": "Use words about sports and games",
@@ -26733,8 +27159,28 @@ var SKILLS16 = {
     "mis": [
       "M_SPT_NEAR_MEANING",
       "M_SPT_TROPHY_TOURNAMENT",
-      "M_SPT_OPPONENT_TEAMMATE"
+      "M_SPT_OPPONENT_TEAMMATE",
+      "M4_SPT_DRAW_LOSE"
     ]
+  },
+  "ENGL.G4.LISTEN.T11_PRONUNCIATION_AND_VO.NONVERBAL_CUES": {
+    "name": "Read and use gestures, faces and tone of voice",
+    "sub": "ENGL.G4.LISTEN.T11_PRONUNCIATION_AND_VO",
+    "outcome": "ENGL.G4.LISTEN.T11_PRONUNCIATION_AND_VO.d",
+    "outcomes": [
+      "ENGL.G4.LISTEN.T11_PRONUNCIATION_AND_VO.d",
+      "ENGL.G4.LISTEN.T12_PRONUNCIATION_AND_VO.b"
+    ],
+    "pre": [
+      "ENGL.G4.LISTEN.T1_PRONUNCIATION_AND_VO.LISTEN_ATTENTIVE"
+    ],
+    "mis": [
+      "M4_NC_NOD",
+      "M4_NC_FROWN",
+      "M4_NC_TONE_WORDS",
+      "M4_NC_POINTING"
+    ],
+    "nofamily": "questions"
   },
   "ENGL.G4.LANGUA.T11_LANGUAGE_PATTERNS.INTERROGATIVES": {
     "name": "Ask questions with who, what, where, when, why, how and whose",
@@ -26782,7 +27228,8 @@ var SKILLS16 = {
     "mis": [
       "M_ENV_NEAR_MEANING",
       "M_ENV_POLLUTION",
-      "M_ENV_CONSERVE"
+      "M_ENV_CONSERVE",
+      "M4_ENV_RECYCLE_REUSE"
     ]
   },
   "ENGL.G4.READIN.T12_1_INTENSIVE_READING.PROVERBS": {
@@ -26793,7 +27240,9 @@ var SKILLS16 = {
       "ENGL.G4.READIN.T12_1_INTENSIVE_READING.a",
       "ENGL.G4.READIN.T12_1_INTENSIVE_READING.c"
     ],
-    "pre": [],
+    "pre": [
+      "ENGL.G4.READIN.T2_INTENSIVE_READING.CONTEXT_CLUES"
+    ],
     "mis": [
       "M_PRV_LITERAL",
       "M_PRV_OPPOSITE",
@@ -26829,7 +27278,8 @@ var SKILLS16 = {
       "ENGL.G4.LANGUA.T12_WORD_CLASSES_VERB_AS.b"
     ],
     "pre": [
-      "ENGL.G4.LANGUA.T12_WORD_CLASSES_VERB_AS.PRESENT_PERFECT"
+      "ENGL.G4.LANGUA.T12_WORD_CLASSES_VERB_AS.PRESENT_PERFECT",
+      "ENGL.G4.LISTEN.T7_PRONUNCIATION_AND_VO.SIMPLE_PAST"
     ],
     "mis": [
       "M_PAF_HAD_MISSING",
@@ -26845,13 +27295,34 @@ var SKILLS16 = {
     "outcomes": [
       "ENGL.G4.WRITIN.T12_GUIDED_COMPOSITION.a"
     ],
-    "pre": [],
+    "pre": [
+      "ENGL.G4.LISTEN.T7_PRONUNCIATION_AND_VO.SIMPLE_PAST"
+    ],
     "mis": [
       "M_DIA_NO_DATE",
       "M_DIA_LETTER_FORMAT",
       "M_DIA_THIRD_PERSON",
       "M_DIA_NO_FEELINGS"
     ]
+  },
+  "ENGL.G4.WRITIN.T12_GUIDED_COMPOSITION.DIARY_WRITING": {
+    "name": "Write a diary entry in the right format",
+    "sub": "ENGL.G4.WRITIN.T12_GUIDED_COMPOSITION",
+    "outcome": "ENGL.G4.WRITIN.T12_GUIDED_COMPOSITION.b",
+    "outcomes": [
+      "ENGL.G4.WRITIN.T12_GUIDED_COMPOSITION.b"
+    ],
+    "pre": [
+      "ENGL.G4.WRITIN.T12_GUIDED_COMPOSITION.DIARY_PARTS",
+      "ENGL.G4.LISTEN.T7_PRONUNCIATION_AND_VO.SIMPLE_PAST"
+    ],
+    "mis": [
+      "M4_DW_NO_DATE",
+      "M4_DW_FUTURE",
+      "M4_DW_THIRD_PERSON",
+      "M4_DW_EVENTS_ONLY"
+    ],
+    "nofamily": "composition"
   },
   "ENGL.G4.LISTEN.T13_PRONUNCIATION_AND_VO.MONEY_WORDS": {
     "name": "Use words about money",
@@ -26875,12 +27346,34 @@ var SKILLS16 = {
     "outcomes": [
       "ENGL.G4.LISTEN.T13_PRONUNCIATION_AND_VO.b"
     ],
-    "pre": [],
+    "pre": [
+      "ENGL.G4.WRITIN.T11_MECHANICS_OF_WRITING.MISSPELT_WORDS"
+    ],
     "mis": [
       "M_SIL_NEIGHBOUR",
       "M_SIL_NONE",
-      "M_SIL_END_E"
+      "M_SIL_END_E",
+      "M4_SIL_SPELL_SAY"
     ]
+  },
+  "ENGL.G4.LISTEN.T13_PRONUNCIATION_AND_VO.VERY_BUT": {
+    "name": 'Use the pattern "very ... but ..."',
+    "sub": "ENGL.G4.LISTEN.T13_PRONUNCIATION_AND_VO",
+    "outcome": "ENGL.G4.LISTEN.T13_PRONUNCIATION_AND_VO.c",
+    "outcomes": [
+      "ENGL.G4.LISTEN.T13_PRONUNCIATION_AND_VO.c"
+    ],
+    "pre": [
+      "ENGL.G4.LANGUA.T10_WORD_CLASS_CONJUNCTI.CONJUNCTIONS",
+      "ENGL.G4.LANGUA.T5_WORD_CLASSES_ADJECTI.ADJECTIVES"
+    ],
+    "mis": [
+      "M4_VB_VERY_COMPARATIVE",
+      "M4_VB_TOO_FOR_VERY",
+      "M4_VB_NO_CONTRAST",
+      "M4_VB_VERY_MUCH"
+    ],
+    "nofamily": "questions"
   },
   "ENGL.G4.LANGUA.T13_WORD_CLASS_PREPOSITI.PREP_POSITION": {
     "name": "Use in, on, under, behind, between and next to",
@@ -26932,11 +27425,26 @@ var SKILLS16 = {
     "mis": [
       "M_DBL_SINGLE",
       "M_DBL_PHONETIC",
-      "M_DBL_EXTRA"
+      "M_DBL_EXTRA",
+      "M4_DBL_ING_NO_DOUBLE"
     ]
   }
 };
 var MIS_FEEDBACK16 = {
+  "M4_PS_L_R": "Tongue tip up behind the teeth for /l/; tongue curled back, not touching, for /r/.",
+  "M4_PS_SH_S": "Round the lips and push them forward for sh: shhh.",
+  "M4_PS_CH_SH": "Ch starts with a stop: t then sh, as in t-shair, chair.",
+  "M4_PS_V_F": "Same teeth on lip as f, but switch the voice on: feel the buzz in the throat.",
+  "M4_PS_EXTRA_VOWEL": "Hold the two consonants together with no sound between: f-i-lm.",
+  "M4_PS_SHIP_SHEEP": "Short i is quick and relaxed; long ee is longer, lips spread in a smile.",
+  "M4_FV_COUSIN_BROTHER": "Your uncle's or aunt's child is your cousin.",
+  "M4_FV_SMALL_BROTHER": "Use younger and older for age; small and big are for size.",
+  "M4_FV_NIECE_NEPHEW": "Niece is a girl, nephew is a boy.",
+  "M4_FV_AUNT_UNCLE": "An uncle is a man, an aunt is a woman, on either side of the family.",
+  "M4_LA_LAST_HEARD": "Hold up a finger for each event as you listen.",
+  "M4_LA_OWN_DETAIL": "Say only what the speaker said.",
+  "M4_LA_WHO_SWAP": "Ask who did the action and who received it.",
+  "M4_LA_KEYWORD_GRAB": "Listen for the question word: when wants a time.",
   "M_DIC_ALPHA_FIRST_LETTER": "When the first letters match, look at the second letter, then the third.",
   "M_DIC_GUIDE_WORDS": "Guide words show the first and last words on a page. A word is on the page only if it comes between them in alphabetical order.",
   "M_DIC_WRONG_MEANING": "Read all the meanings, then try each in the sentence to see which one fits.",
@@ -26944,6 +27452,7 @@ var MIS_FEEDBACK16 = {
   "M_REF_ATLAS_FOR_WORDS": "An atlas is a book of maps. Use it to find places and countries.",
   "M_REF_STORY_FOR_FACTS": "A timetable lists times. A story book tells an invented story and is not for looking things up.",
   "M_REF_NEWSPAPER_OLD": "A newspaper gives news of today. A dictionary or encyclopaedia gives facts that stay the same.",
+  "M4_DIC_FIRST_MEANING": "Read all the meanings and choose the one that fits the sentence.",
   "M_ART_A_BEFORE_VOWEL": 'Before a vowel sound (a, e, i, o, u) use "an": an orange, an egg.',
   "M_ART_AN_BEFORE_CONSONANT": 'Before a consonant sound use "a": a book, a pen.',
   "M_ART_SOUND_NOT_LETTER": 'Listen to the sound, not the letter. "Hour" starts with the sound "ow", so it takes "an". "Uniform" starts with the sound "yoo", so it takes "a".',
@@ -26955,6 +27464,14 @@ var MIS_FEEDBACK16 = {
   "M_FRM_AGE_FOR_DOB": "Date of birth needs the day, month and year you were born. Age is a number.",
   "M_FRM_CONTACT_FOR_ADDRESS": "An address says where you live or get letters. A phone number goes in the contact box.",
   "M_FRM_NAME_PART": "Full names means all of your names, in the order the form asks for.",
+  "M4_FF_LOWER_CASE": "Read the instruction in brackets before writing.",
+  "M4_FF_EMPTY_BOX": "Fill every box; write N/A only if it does not apply.",
+  "M4_FF_SIGN_AS_NAME": "A signature is your own special way of writing your name.",
+  "M4_FF_OUTSIDE_BOX": "Keep your writing inside the box.",
+  "M4_DS_SHIP_SHEEP": "Listen for the long sound: sheep is longer.",
+  "M4_DS_L_R": "Watch the tongue: up for l, curled back for r.",
+  "M4_DS_F_V": "Put a hand on your throat: v buzzes, f does not.",
+  "M4_DS_TH_T": "Th has the tongue between the teeth: look at the speaker's mouth.",
   "M_FACT_NEARBY_DETAIL": "Find the sentence that answers the question and check that the words match what is asked.",
   "M_FACT_OUTSIDE_KNOWLEDGE": "Answer from the text, not from what you think is likely. Go back to the sentence.",
   "M_FACT_MISSES_STATED": "Look again. When the text says it clearly, the answer is true.",
@@ -26969,6 +27486,7 @@ var MIS_FEEDBACK16 = {
   "M_CTX_COMMON_MEANING": "Try the meaning in the sentence. If it does not fit, it is not the right one.",
   "M_CTX_OPPOSITE": "Read for clue words. They tell you if the word means the same as or the opposite of something.",
   "M_CTX_WRONG_CLUE": "A clue is a group of words that tells more about the hard word, not just words near it.",
+  "M4_INFER_FEELING_GUESS": "Find the clue: throwing and slamming show anger.",
   "M_PLR_NO_ES": "After s, x, ch and sh we add -es so that the word can be said: box, boxes; church, churches.",
   "M_PLR_Y_TO_S": "When a word ends in a consonant and y, change the y to i and add -es: baby, babies.",
   "M_PLR_VOWEL_Y_IES": "When a vowel comes before the y, just add -s: monkey, monkeys; day, days.",
@@ -26978,6 +27496,10 @@ var MIS_FEEDBACK16 = {
   "M_PLI_DOUBLE_PLURAL": "Children, men and women are already plural. Do not add -s.",
   "M_PLI_FOOT_TOOTH": "Some plurals change the vowels inside the word: tooth, teeth; mouse, mice; goose, geese.",
   "M_PLI_SAME_FORM_S": "Sheep stays sheep. We say one sheep and ten sheep. Fish is the same.",
+  "M4_OC_OFF_TOPIC": "Check every sentence against the topic.",
+  "M4_OC_AND_THEN": "Use first, after that, later and finally.",
+  "M4_OC_LIST": "Every sentence should follow from the one before.",
+  "M4_OC_NO_ENDING": "Plan the ending before you start.",
   "M_POL_DEMAND": "A polite request starts with May I or Could you, and says please.",
   "M_POL_NO_THANKS": "When someone helps you, say thank you.",
   "M_POL_RUDE_REFUSAL": "You can say no in a polite way: begin with I am sorry.",
@@ -26986,12 +27508,22 @@ var MIS_FEEDBACK16 = {
   "M_PAT_NO_PLEASE": "A polite request uses May I or Could you, and the word please.",
   "M_PAT_WOULD_LIKE_FORM": "To offer something politely we say: Would you like some tea? The verb after like is to + the plain verb, or a noun.",
   "M_PAT_ORDER": "In a request the helping word comes first: Could you help me? May I borrow your pen?",
+  "M4_HW_OFF_LINE": "Sit every letter on the line, like people on a bench.",
+  "M4_HW_MIXED_CASE": "Small letters inside a word; a capital only at the start of a name or sentence.",
+  "M4_HW_B_D": "B: bat then ball; d: drum then stick.",
+  "M4_HW_NO_SPACES": "Leave a finger space between words.",
   "M_FA_NEAR_MEANING": "Read the whole sentence and say what the gap must mean before choosing.",
   "M_FA_WOUND_BRUISE": "A wound is a cut or a break in the skin. A bruise is a dark mark under the skin.",
   "M_FA_SPRAIN_BREAK": "A sprain is a twisted joint. An ambulance is a vehicle that takes people to hospital.",
+  "M4_WS_EQUAL": "One syllable is strong; the others are short and weak.",
+  "M4_WS_SECOND": "Clap the strong part: AC-ci-dent.",
+  "M4_WS_LAST": "Most two-syllable nouns are strong at the start.",
+  "M4_WS_SPELLING_VOWEL": "Weak syllables are quick and soft.",
+  "M4_FA_BANDAGE_PLASTER": "A plaster sticks on a small cut; a bandage is wrapped round.",
   "M_VIS_WRONG_ROW": "Find the row for what you need, then read across to the right column.",
   "M_VIS_NEARBY_DETAIL": "Go back to the line that answers the question and check the words.",
   "M_VIS_PURPOSE": "Look at the title and the first line. They say what the notice is for.",
+  "M4_VIS_TITLE_IGNORED": "Read the title first: it tells you what the numbers mean.",
   "M_PRO_SUBJECT_AS_OBJECT": "After a verb or a small word like to, for or with, use me, him, her, us or them.",
   "M_PRO_OBJECT_AS_SUBJECT": "Before a verb, who does the action? Use I, he, she, we or they: Wanjiru and I went to the market.",
   "M_PRO_NOUN_AND_PRONOUN": "Do not say the name and the pronoun together. Wanjiru is tall, or She is tall.",
@@ -27004,12 +27536,34 @@ var MIS_FEEDBACK16 = {
   "M_LTR_ORDER": "A friendly letter goes: your address, the date, the greeting, the body, the closing, your name.",
   "M_LTR_NO_COMMA": "A comma follows the greeting (Dear Amina,) and the closing (Yours lovingly,).",
   "M_LTR_RECEIVER_ADDRESS": "In a friendly letter, write your own address at the top. Do not write the receiver's address there.",
+  "M4_FL_NO_ADDRESS": "Address and date first, top right.",
+  "M4_FL_OFFICIAL_CLOSE": "Friendly letters close with Your friend or Your loving cousin.",
+  "M4_FL_ONE_BLOCK": "Start a new paragraph for each new idea.",
+  "M4_FL_NO_NAME": "Always end with your name under the closing.",
+  "M4_SM_NO_NAME": "Say who you are in the message.",
+  "M4_SM_TEXTSPEAK": "Write words in full for an older reader.",
+  "M4_SM_LETTER_FORMAT": "An SMS is short: greeting, message, name.",
+  "M4_SM_MISSING_DETAIL": "Ask: what does the reader need to know?",
   "M_NUT_NEAR_MEANING": "Protein builds the body (beans, meat, eggs). Carbohydrates give energy (ugali, rice, bread).",
   "M_NUT_VITAMIN_FIBRE": "Vitamins keep the body healthy. Fibre helps food move through the body.",
   "M_NUT_BALANCED": "A balanced diet has food from all the food groups in the right amounts.",
+  "M4_LB_DO_NOT_S": "After do not, the verb is plain: do not like.",
+  "M4_LB_AND_FOR_BUT": "But joins two ideas that go different ways.",
+  "M4_LB_NOT_LIKE": "English needs do: I do not like.",
+  "M4_LB_LIKE_ING_TO": "Like eating or like to eat, never like to eating.",
+  "M4_NUT_FRUIT_PROTEIN": "Beans, eggs and fish build the body.",
   "M_SCAN_NEAR_NUMBER": "Scan for the key word in the question (ticket) and read only that line.",
   "M_SCAN_WRONG_KEYWORD": "Choose the key word that matches the question, then read the line.",
   "M_SCAN_TOO_LONG": "Look for a capital letter or a number. Skip the rest.",
+  "M4_SR_COVER": "Ask: will this book answer my question?",
+  "M4_SR_TOO_HARD": "For practice, choose a book where you know almost every word.",
+  "M4_SR_THICKNESS": "Choose by what the book is for, not by its size.",
+  "M4_SR_WRONG_TYPE": "Instructions are in a recipe; feelings are in a poem.",
+  "M4_IR_STOPS_AT_WORD": "Skip, read on, then come back and guess from the sentence.",
+  "M4_IR_PICTURES_ONLY": "Read every line; the pictures only help.",
+  "M4_IR_CANNOT_RETELL": "Stop after each page and tell yourself what happened.",
+  "M4_IR_SKIPS_TO_END": "Read in order; the middle explains the end.",
+  "M4_SCAN_FIRST_MATCH": "Check every place the key word appears.",
   "M_ADJ_NOUN_AS_ADJ": "An adjective describes a noun. Ask which word tells more about the bus: red.",
   "M_ADJ_VERB_AS_ADJ": "A verb tells what someone does. An adjective tells what someone or something is like.",
   "M_ADJ_ADVERB_AS_ADJ": "Slowly tells how the boy walked, so it is an adverb. Small tells what the boy is like, so it is the adjective.",
@@ -27017,6 +27571,7 @@ var MIS_FEEDBACK16 = {
   "M_ADO_SHAPE_BEFORE_SIZE": "Size comes first, then shape: a big round stool.",
   "M_ADO_AFTER_NOUN": "In English the describing word comes before the noun: a big ball.",
   "M_ADO_NO_AND": "Two describing words before a noun need no and and no comma: a big round table.",
+  "M4_ADO_COLOUR_FIRST": "Size comes before colour: a big red ball.",
   "M_NAR_PART_MIX": "The beginning introduces people and place, the middle tells what happens, and the end tells how it finishes.",
   "M_NAR_SETTING_CHARACTER": "Characters are the people or animals in the story. The setting is where and when it happens.",
   "M_NAR_PROBLEM_END": "The problem usually starts in the middle. The end tells how it was solved.",
@@ -27024,9 +27579,19 @@ var MIS_FEEDBACK16 = {
   "M_PAR_ORDER_REVERSED": "Start with the sentence that introduces the topic and read forward.",
   "M_PAR_ORDER_SWAPPED": "Look at words like first, then, next and finally to see the order.",
   "M_PAR_TOPIC_DETAIL": "The topic sentence names what the whole paragraph is about. The other sentences give details.",
+  "M4_NC_TENSE_SWITCH": "Tell the whole story in the past.",
+  "M4_NC_NO_PROBLEM": "Give your character a problem.",
+  "M4_NC_TOO_SHORT": "Add who, where, how they felt and what happened next.",
+  "M4_NC_I_WOKE_UP": "Begin close to the main event.",
+  "M4_PAR_ENDING_FIRST": "Words like so, finally and in the end close a paragraph.",
   "M_NET_NEAR_MEANING": "The inbox is where received emails are kept. An attachment is a file sent with an email.",
   "M_NET_PASSWORD_SHARED": "A password is secret. Share it with no one, except a trusted adult such as a parent.",
   "M_NET_STRANGER": "Never give personal information to a stranger online. Tell a trusted adult.",
+  "M4_IN_WH_RISE": "WH questions fall; yes or no questions rise.",
+  "M4_IN_FLAT": "Lift the voice on the last word of a yes or no question.",
+  "M4_IN_STATEMENT_RISE": "A statement ends low and firm.",
+  "M4_IN_WRONG_WORD": "Put the strong beat on the word that carries the meaning.",
+  "M4_NET_DOWNLOAD_UPLOAD": "Up goes to the internet; down comes to your device.",
   "M_QUA_MUCH_COUNT": "Use many with things you can count (chairs, books). Use much with things you cannot count (water, sugar).",
   "M_QUA_MANY_UNCOUNT": "You cannot count water one by one, so use much, not many.",
   "M_QUA_FEW_UNCOUNT": "Few goes with things you can count: few eggs. Little goes with things you cannot count: little sugar.",
@@ -27039,10 +27604,18 @@ var MIS_FEEDBACK16 = {
   "M_PIC_ORDER_SWAPPED": "Ask what has to happen first for the next picture to make sense.",
   "M_PIC_TENSE": "A story written after the event uses the past tense: Wafula picked a mango.",
   "M_PIC_MISMATCH": "Look at what the person is doing in the picture and pick the sentence that says exactly that.",
+  "M4_PC_DESCRIBES_ONLY": "Say what the people did, not only what is there.",
+  "M4_PC_SKIPS_PICTURE": "Tick each picture as you write about it.",
+  "M4_PC_PRESENT": "Tell the pictures as a story in the past.",
+  "M4_PC_NO_TITLE": "The title names what the whole story is about.",
   "M_SPA_BASE_FOR_PAST": "When the time is past, the verb must show it: Yesterday I went to the market.",
   "M_SPA_ED_ON_IRREGULAR": "Some verbs change inside: go, went; eat, ate; see, saw. They do not take -ed.",
   "M_SPA_DID_PLUS_PAST": "After did the verb stays plain: Did you see the film?",
   "M_SPA_PAST_FOR_HABIT": "For a fact or something that always happens, use the present: The sun rises in the east.",
+  "M4_TT_TALK_OVER": "Wait for the speaker to stop, then answer.",
+  "M4_TT_ONE_WORD": "Answer, add one thing, then ask a question back.",
+  "M4_TT_LONG_TURN": "Stop and give the other person a turn.",
+  "M4_TT_OFF_TOPIC": "Answer what the other person asked first.",
   "M_PRP_NO_BE": "An action happening now needs am, is or are before the -ing word: She is reading.",
   "M_PRP_WRONG_BE": "Use am with I, is with one person or thing, and are with you, we, they and plural nouns.",
   "M_PRP_NO_ING": "After am, is or are, the verb ends in -ing: He is playing.",
@@ -27059,6 +27632,11 @@ var MIS_FEEDBACK16 = {
   "M_FRM_NEAR_MEANING": "Planting comes first. Harvesting is gathering the crop when it is ripe.",
   "M_FRM_LIVESTOCK_CROPS": "Livestock are farm animals. Crops are plants grown for food.",
   "M_FRM_FERTILISER": "Fertiliser feeds the soil. Pesticide kills pests.",
+  "M4_FRM_PLANT_HARVEST": "Plant puts seeds in; harvest takes the crop out.",
+  "M4_RF_WORD_BY_WORD": "Read in groups of words that go together.",
+  "M4_RF_IGNORES_STOPS": "Stop and breathe at every full stop.",
+  "M4_RF_FLAT": "Let the voice show the question and the feeling.",
+  "M4_RF_TOO_FAST": "Read at talking speed; every word counts.",
   "M_CON_NO_APOSTROPHE": "The apostrophe takes the place of the missing letter: do not becomes don't.",
   "M_CON_WRONG_PLACE": "The apostrophe goes where the letter was left out: is not becomes isn't, with the mark in place of the o.",
   "M_CON_ITS": "It's means it is. Its (no apostrophe) means belonging to it: The cat licked its paw.",
@@ -27067,6 +27645,10 @@ var MIS_FEEDBACK16 = {
   "M_NEG_NO_DO": "In English use do not or does not before the verb: She does not like milk.",
   "M_NEG_VERB_S": "After does not and did not, the verb stays plain: He does not eat meat.",
   "M_NEG_DO_WITH_BE": "With am, is and are, put not after the helping word: I am not tired.",
+  "M4_SF_FILLERS": "Close your mouth and think for a moment instead of saying eeh.",
+  "M4_SF_TOO_FAST": "Pause after each sentence; breathe.",
+  "M4_SF_WORD_SEARCH": "If a word will not come, say it another way and keep going.",
+  "M4_SF_REPEATS": "Start once and go to the end of the sentence.",
   "M_ADV_ADJ_FOR_ADV": "A word that tells how someone does something is an adverb. Many adverbs end in -ly: sings beautifully.",
   "M_ADV_KIND_MIX": "Manner answers how, time answers when, place answers where. Yesterday tells when.",
   "M_ADV_GOOD_WELL": "Good describes a noun (a good player). Well tells how something is done (plays well).",
@@ -27082,6 +27664,11 @@ var MIS_FEEDBACK16 = {
   "M_HYG_NEAR_MEANING": "Germs are tiny living things that can cause disease. Rubbish is waste.",
   "M_HYG_DISINFECT": "To disinfect is to kill germs on a surface.",
   "M_HYG_LATRINE": "A latrine is for human waste. Drainage carries away dirty water.",
+  "M4_IP_HEY": "Start with Excuse me.",
+  "M4_IP_NO_PAUSE": "Wait for a pause, then speak.",
+  "M4_IP_SORRY_ONLY": "Sorry to interrupt, but may I ...?",
+  "M4_IP_COMMAND": "Ask with may I or could you.",
+  "M4_HYG_GERMS_DIRT": "Germs are too small to see: wash with soap anyway.",
   "M_CNJ_BUT_FOR_AND": "Use and to add one idea to another. Use but when the two ideas go against each other.",
   "M_CNJ_BECAUSE_SO": "Because gives the reason. So gives the result. The rain is the reason; staying inside is the result.",
   "M_CNJ_AND_FOR_BUT": "When the second idea goes against the first, use but, not and.",
@@ -27091,9 +27678,19 @@ var MIS_FEEDBACK16 = {
   "M_DES_TELLS_STORY": "A description tells what something looks, sounds, smells, feels or tastes like. A story tells what happened.",
   "M_DES_ONE_SENSE": "Use all the senses: sight, hearing, smell, touch and taste.",
   "M_DES_PART_MIX": "The introduction says what you are going to describe. The conclusion ends with a feeling or a last thought.",
+  "M4_DC_STORY": "Describe how it looks, sounds and feels.",
+  "M4_DC_SIGHT_ONLY": "Use sound, smell and touch as well as sight.",
+  "M4_DC_NICE": "Choose an exact adjective: bright, tall, noisy, smooth.",
+  "M4_DC_NO_CONCLUSION": "End by saying what the place means to you.",
+  "M4_DES_NO_ORDER": "Choose an order: outside to inside, or top to bottom.",
   "M_SPT_NEAR_MEANING": "The referee controls the game. The goalkeeper guards the goal.",
   "M_SPT_TROPHY_TOURNAMENT": "A tournament is a series of games. A trophy is the prize.",
   "M_SPT_OPPONENT_TEAMMATE": "An opponent plays against you. A teammate plays with you.",
+  "M4_NC_NOD": "A nod means yes or I agree.",
+  "M4_NC_FROWN": "Look at the face: a frown shows a problem.",
+  "M4_NC_TONE_WORDS": "The tone tells you the feeling, even when the words say something else.",
+  "M4_NC_POINTING": "Use an open hand to show, not one finger.",
+  "M4_SPT_DRAW_LOSE": "A draw means both teams scored the same.",
   "M_INT_WHO_FOR_WHAT": "Who asks about a person. What asks about a thing.",
   "M_INT_WHERE_FOR_WHEN": "When asks about time. Where asks about a place. Why asks for a reason.",
   "M_INT_NO_INVERSION": "In a question the helping word goes before the subject: Where are you going?",
@@ -27106,6 +27703,7 @@ var MIS_FEEDBACK16 = {
   "M_ENV_NEAR_MEANING": "To recycle is to make waste into something new. Litter is rubbish dropped in a public place.",
   "M_ENV_POLLUTION": "Pollution is dirt or poison that harms the air, water or soil.",
   "M_ENV_CONSERVE": "To conserve is to look after and use carefully.",
+  "M4_ENV_RECYCLE_REUSE": "Reuse means use again; recycle means make it into something new.",
   "M_PRV_LITERAL": "A proverb is a short saying with a lesson. Ask what it teaches people.",
   "M_PRV_OPPOSITE": "Check the lesson against the proverb. The lesson of this one is patience.",
   "M_PRV_UNRELATED": "The lesson must fit the idea of the whole proverb.",
@@ -27122,6 +27720,10 @@ var MIS_FEEDBACK16 = {
   "M_DIA_LETTER_FORMAT": "A diary is written to yourself. Begin with the date and Dear Diary, not Dear Mum.",
   "M_DIA_THIRD_PERSON": "A diary is about you, so write in the first person: I woke up early.",
   "M_DIA_NO_FEELINGS": "A diary also tells how you felt: I was happy when we won.",
+  "M4_DW_NO_DATE": "Every entry starts with the date.",
+  "M4_DW_FUTURE": "A diary records what happened today.",
+  "M4_DW_THIRD_PERSON": "A diary uses I.",
+  "M4_DW_EVENTS_ONLY": "Say how you felt about what happened.",
   "M_MON_EARN_SAVE": "To earn is to get money for work. To save is to keep money for later.",
   "M_MON_BORROW_LEND": "You borrow when you take for a short time. You lend when you give for a short time.",
   "M_MON_NEAR_MEANING": "Read the whole sentence and say what the gap must mean before you choose.",
@@ -27129,6 +27731,11 @@ var MIS_FEEDBACK16 = {
   "M_SIL_NEIGHBOUR": "Say the word aloud. In knife you hear n, but not k.",
   "M_SIL_NONE": "Some letters are written but not said. In write, the w is silent.",
   "M_SIL_END_E": "A silent letter can be anywhere. In lamb the b is silent.",
+  "M4_VB_VERY_COMPARATIVE": "Very goes with the plain adjective: very nice.",
+  "M4_VB_TOO_FOR_VERY": "Very means a lot; too means more than is good.",
+  "M4_VB_NO_CONTRAST": "But needs two ideas that pull different ways.",
+  "M4_VB_VERY_MUCH": "Very goes alone before an adjective.",
+  "M4_SIL_SPELL_SAY": "The k in kn is silent: knife, knee, know.",
   "M_PRE_IN_ON": "On means touching the top of something. In means inside it.",
   "M_PRE_BETWEEN_AMONG": "Use between for two things and among for more than two.",
   "M_PRE_UNDER_OVER": "Under means below something. Behind means at the back of it.",
@@ -27139,7 +27746,8 @@ var MIS_FEEDBACK16 = {
   "M_PRD_THROUGH_ACROSS": "Across means from one side of a flat place to the other. Through means passing in at one side and out at the other.",
   "M_DBL_SINGLE": "Some words have two of the same letter together: coffee, summer, letter.",
   "M_DBL_PHONETIC": "Say the word slowly and then check it. Rabbit has bb in the middle.",
-  "M_DBL_EXTRA": "Only some letters are doubled. Check each word: letter has tt but not three t."
+  "M_DBL_EXTRA": "Only some letters are doubled. Check each word: letter has tt but not three t.",
+  "M4_DBL_ING_NO_DOUBLE": "Short vowel and one consonant: double it before -ing."
 };
 
 // src/ai-tutor/content/families/english_g4_signed.js
@@ -29605,8 +30213,54 @@ var SKILLS_E5 = {
     "pre": [],
     "mis": [
       "M_VOC_RIGHT_RESPONSIBILITY",
-      "M_VOC_NEAR_MEANING"
+      "M_VOC_NEAR_MEANING",
+      "M5_VOC_RIGHT_AS_WANT",
+      "M5_VOC_ABUSE_ANY_RULE"
     ]
+  },
+  "ENGL.G5.LISTEN.T1_LISTENING_COMPREHENS.SOUND_IDENTIFY": {
+    "name": "Pick out words that contain a target sound",
+    "sub": "ENGL.G5.LISTEN.T1_LISTENING_COMPREHENS",
+    "outcomes": [
+      "ENGL.G5.LISTEN.T1_LISTENING_COMPREHENS.a",
+      "ENGL.G5.LISTEN.T2_PRONUNCIATION_AND_VO.a",
+      "ENGL.G5.LISTEN.T3_PRONUNCIATION_AND_VO.c",
+      "ENGL.G5.LISTEN.T5_LISTENING_COMPREHENS.a",
+      "ENGL.G5.LISTEN.T7_PRONUNCIATION_AND_VO.a",
+      "ENGL.G5.LISTEN.T9_SPEAKING_FLUENCY_PRO.a",
+      "ENGL.G5.LISTEN.T11_PRONUNCIATION_AND_VO.a",
+      "ENGL.G5.LISTEN.T11_PRONUNCIATION_AND_VO.c",
+      "ENGL.G5.LISTEN.T13_PRONUNCIATION_AND_VO.a"
+    ],
+    "pre": [],
+    "mis": [
+      "M5_SI_LETTER_NOT_SOUND",
+      "M5_SI_UH_AH",
+      "M5_SI_SILENT_H",
+      "M5_SI_P_B",
+      "M5_SI_NG_N"
+    ],
+    "nofamily": "questions"
+  },
+  "ENGL.G5.LISTEN.T1_LISTENING_COMPREHENS.LISTEN_MAIN_IDEA": {
+    "name": "Listen for the main idea and the details of an oral text and respond",
+    "sub": "ENGL.G5.LISTEN.T1_LISTENING_COMPREHENS",
+    "outcomes": [
+      "ENGL.G5.LISTEN.T1_LISTENING_COMPREHENS.c",
+      "ENGL.G5.LISTEN.T1_LISTENING_COMPREHENS.d",
+      "ENGL.G5.LISTEN.T2_PRONUNCIATION_AND_VO.c",
+      "ENGL.G5.LISTEN.T5_LISTENING_COMPREHENS.b"
+    ],
+    "pre": [
+      "ENGL.G5.READIN.T9_INTENSIVE_READING_DE.MAIN_IDEA"
+    ],
+    "mis": [
+      "M5_LM_DETAIL_AS_MAIN",
+      "M5_LM_FIRST_SENTENCE",
+      "M5_LM_NO_RESPONSE",
+      "M5_LM_OWN_OPINION"
+    ],
+    "nofamily": "voice"
   },
   "ENGL.G5.READIN.T1_EXTENSIVE_READING.REFERENCE_MATERIALS": {
     "name": "Choose and use reference materials",
@@ -29619,7 +30273,8 @@ var SKILLS_E5 = {
     "mis": [
       "M_REF_WRONG_SOURCE",
       "M_REF_ALPHA_FIRST_LETTER",
-      "M_REF_GUIDE_WORDS"
+      "M_REF_GUIDE_WORDS",
+      "M5_REF_SUBJECT_ENCYCLOPAEDIA"
     ]
   },
   "ENGL.G5.GRAMMA.T1_WORD_CLASS_DEMONSTRA.DEMONSTRATIVES": {
@@ -29636,6 +30291,86 @@ var SKILLS_E5 = {
       "M_DEM_NEAR_FAR",
       "M_DEM_THEM"
     ]
+  },
+  "ENGL.G5.WRITIN.T1_FUNCTIONAL_WRITING_F.FILL_FORM": {
+    "name": "Record the right details in a variety of forms",
+    "sub": "ENGL.G5.WRITIN.T1_FUNCTIONAL_WRITING_F",
+    "outcomes": [
+      "ENGL.G5.WRITIN.T1_FUNCTIONAL_WRITING_F.a"
+    ],
+    "pre": [],
+    "mis": [
+      "M5_FF_COUNTY_TOWN",
+      "M5_FF_DATE_ORDER",
+      "M5_FF_GUARDIAN",
+      "M5_FF_ALL_CAPS_IGNORED"
+    ],
+    "nofamily": "composition"
+  },
+  "ENGL.G5.WRITIN.T1_FUNCTIONAL_WRITING_F.DESIGN_FORM": {
+    "name": "Design a simple form to collect information",
+    "sub": "ENGL.G5.WRITIN.T1_FUNCTIONAL_WRITING_F",
+    "outcomes": [
+      "ENGL.G5.WRITIN.T1_FUNCTIONAL_WRITING_F.b"
+    ],
+    "pre": [
+      "ENGL.G5.WRITIN.T1_FUNCTIONAL_WRITING_F.FILL_FORM",
+      "ENGL.G5.GRAMMA.T11_USE_OF_INTERROGATIVE.INTERROGATIVES"
+    ],
+    "mis": [
+      "M5_DF_NO_SPACE",
+      "M5_DF_VAGUE_LABEL",
+      "M5_DF_MISSING_DETAIL",
+      "M5_DF_QUESTIONS_AS_LABELS"
+    ],
+    "nofamily": "composition"
+  },
+  "ENGL.G5.LISTEN.T2_PRONUNCIATION_AND_VO.ORAL_SENTENCES": {
+    "name": "Make sentences aloud with the theme words",
+    "sub": "ENGL.G5.LISTEN.T2_PRONUNCIATION_AND_VO",
+    "outcomes": [
+      "ENGL.G5.LISTEN.T2_PRONUNCIATION_AND_VO.b",
+      "ENGL.G5.LISTEN.T3_PRONUNCIATION_AND_VO.b",
+      "ENGL.G5.LISTEN.T4_PRONUNCIATION_AND_VO.b",
+      "ENGL.G5.LISTEN.T5_LISTENING_COMPREHENS.c",
+      "ENGL.G5.LISTEN.T6_PRONUNCIATION_AND_VO.c",
+      "ENGL.G5.LISTEN.T7_PRONUNCIATION_AND_VO.b",
+      "ENGL.G5.LISTEN.T8_PRONUNCIATION_AND_VO.b",
+      "ENGL.G5.LISTEN.T9_SPEAKING_FLUENCY_PRO.b",
+      "ENGL.G5.LISTEN.T9_SPEAKING_FLUENCY_PRO.d",
+      "ENGL.G5.LISTEN.T11_PRONUNCIATION_AND_VO.b",
+      "ENGL.G5.LISTEN.T12_PRONUNCIATION_AND_VO.b",
+      "ENGL.G5.LISTEN.T13_PRONUNCIATION_AND_VO.b"
+    ],
+    "pre": [
+      "ENGL.G5.LISTEN.T1_LISTENING_COMPREHENS.THEME_WORDS"
+    ],
+    "mis": [
+      "M5_OS_ME_I",
+      "M5_OS_ONE_WORD",
+      "M5_OS_WRONG_MEANING",
+      "M5_OS_WRONG_CLASS"
+    ],
+    "nofamily": "voice"
+  },
+  "ENGL.G5.LISTEN.T2_PRONUNCIATION_AND_VO.SPEAKER_FEELINGS": {
+    "name": "Tell how a speaker feels from words, tone and gestures",
+    "sub": "ENGL.G5.LISTEN.T2_PRONUNCIATION_AND_VO",
+    "outcomes": [
+      "ENGL.G5.LISTEN.T2_PRONUNCIATION_AND_VO.d",
+      "ENGL.G5.LISTEN.T11_PRONUNCIATION_AND_VO.d",
+      "ENGL.G5.LISTEN.T13_PRONUNCIATION_AND_VO.d"
+    ],
+    "pre": [
+      "ENGL.G5.LISTEN.T10_PRONUNCIATION_AND_VO.MOOD_FEELINGS"
+    ],
+    "mis": [
+      "M5_SF_WORDS_ONLY",
+      "M5_SF_LOUD_ANGRY",
+      "M5_SF_ONE_CLUE",
+      "M5_SF_OWN_FEELING"
+    ],
+    "nofamily": "questions"
   },
   "ENGL.G5.READIN.T2_INTENSIVE_READING.STORY_ELEMENTS": {
     "name": "Identify characters, places and events",
@@ -29665,7 +30400,8 @@ var SKILLS_E5 = {
     "mis": [
       "M_PRED_NO_CLUE",
       "M_PRED_CONTRADICTS",
-      "M_PRED_ALREADY_HAPPENED"
+      "M_PRED_ALREADY_HAPPENED",
+      "M5_PRED_WISH"
     ]
   },
   "ENGL.G5.READIN.T2_INTENSIVE_READING.FACTUAL_QUESTIONS": {
@@ -29712,7 +30448,8 @@ var SKILLS_E5 = {
     "mis": [
       "M_INFER_REPEATS_TEXT",
       "M_INFER_CONTRADICTS",
-      "M_INFER_OVERREACH"
+      "M_INFER_OVERREACH",
+      "M5_INFER_NOT_STATED"
     ]
   },
   "ENGL.G5.READIN.T2_INTENSIVE_READING.CONTEXT_CLUES": {
@@ -29721,7 +30458,9 @@ var SKILLS_E5 = {
     "outcomes": [
       "ENGL.G5.READIN.T2_INTENSIVE_READING.d",
       "ENGL.G5.READIN.T6_INTENSIVE_READING_CO.b",
-      "ENGL.G5.READIN.T12_INTENSIVE_READING.b"
+      "ENGL.G5.READIN.T12_INTENSIVE_READING.b",
+      "ENGL.G5.READIN.T6_INTENSIVE_READING_CO.a",
+      "ENGL.G5.READIN.T8_FLUENCY_IN_READING.a"
     ],
     "pre": [
       "ENGL.G5.READIN.T2_INTENSIVE_READING.FACTUAL_QUESTIONS"
@@ -29765,6 +30504,39 @@ var SKILLS_E5 = {
       "M_REFL_WRONG_PERSON"
     ]
   },
+  "ENGL.G5.WRITIN.T2_CREATIVE_WRITING_OPE.PLAN_COMPOSITION": {
+    "name": "Select relevant points when planning a composition",
+    "sub": "ENGL.G5.WRITIN.T2_CREATIVE_WRITING_OPE",
+    "outcomes": [
+      "ENGL.G5.WRITIN.T2_CREATIVE_WRITING_OPE.a"
+    ],
+    "pre": [],
+    "mis": [
+      "M5_PC_IRRELEVANT",
+      "M5_PC_NO_ORDER",
+      "M5_PC_TOO_FEW",
+      "M5_PC_SENTENCES_IN_PLAN"
+    ],
+    "nofamily": "questions"
+  },
+  "ENGL.G5.WRITIN.T2_CREATIVE_WRITING_OPE.OPEN_COMPOSITION": {
+    "name": "Write an open-ended composition that flows",
+    "sub": "ENGL.G5.WRITIN.T2_CREATIVE_WRITING_OPE",
+    "outcomes": [
+      "ENGL.G5.WRITIN.T2_CREATIVE_WRITING_OPE.b"
+    ],
+    "pre": [
+      "ENGL.G5.WRITIN.T2_CREATIVE_WRITING_OPE.PLAN_COMPOSITION",
+      "ENGL.G5.GRAMMA.T10_WORD_CLASS_CONJUNCTI.CONJUNCTIONS"
+    ],
+    "mis": [
+      "M5_OC_DRIFT",
+      "M5_OC_NO_PARAGRAPHS",
+      "M5_OC_AND_THEN",
+      "M5_OC_MEMORISED"
+    ],
+    "nofamily": "composition"
+  },
   "ENGL.G5.LISTEN.T3_PRONUNCIATION_AND_VO.POLITE_EXPRESSIONS": {
     "name": "Choose polite words and expressions",
     "sub": "ENGL.G5.LISTEN.T3_PRONUNCIATION_AND_VO",
@@ -29777,8 +30549,53 @@ var SKILLS_E5 = {
     "mis": [
       "M_POL_DEMAND",
       "M_POL_WRONG_REPLY",
-      "M_POL_EXCUSE_SORRY"
+      "M_POL_EXCUSE_SORRY",
+      "M5_POL_COMPLIMENT_RUDE"
     ]
+  },
+  "ENGL.G5.READIN.T3_INTENSIVE_READING_NA.RELATE_TO_LIFE": {
+    "name": "Relate events and ideas in a text to one's own life",
+    "sub": "ENGL.G5.READIN.T3_INTENSIVE_READING_NA",
+    "outcomes": [
+      "ENGL.G5.READIN.T3_INTENSIVE_READING_NA.a",
+      "ENGL.G5.READIN.T3_INTENSIVE_READING_NA.e",
+      "ENGL.G5.READIN.T6_INTENSIVE_READING_CO.d",
+      "ENGL.G5.READIN.T10_INTENSIVE_READING.a",
+      "ENGL.G5.READIN.T11_INTENSIVE_READING.a",
+      "ENGL.G5.READIN.T12_INTENSIVE_READING.d"
+    ],
+    "pre": [
+      "ENGL.G5.READIN.T2_INTENSIVE_READING.STORY_ELEMENTS",
+      "ENGL.G5.READIN.T2_INTENSIVE_READING.INFERENCE_QUESTIONS"
+    ],
+    "mis": [
+      "M5_RL_RETELL",
+      "M5_RL_SURFACE",
+      "M5_RL_UNRELATED",
+      "M5_RL_CHANGES_TEXT"
+    ],
+    "nofamily": "teacher"
+  },
+  "ENGL.G5.READIN.T3_INTENSIVE_READING_NA.VISUALISE": {
+    "name": "Create mental pictures of events, characters and places in a text",
+    "sub": "ENGL.G5.READIN.T3_INTENSIVE_READING_NA",
+    "outcomes": [
+      "ENGL.G5.READIN.T3_INTENSIVE_READING_NA.c",
+      "ENGL.G5.READIN.T4_INTENSIVE_READING_CO.c",
+      "ENGL.G5.READIN.T9_INTENSIVE_READING_DE.b",
+      "ENGL.G5.READIN.T11_INTENSIVE_READING.b",
+      "ENGL.G5.READIN.T12_INTENSIVE_READING.a"
+    ],
+    "pre": [
+      "ENGL.G5.READIN.T2_INTENSIVE_READING.STORY_ELEMENTS"
+    ],
+    "mis": [
+      "M5_VI_ONE_WORD",
+      "M5_VI_ADDS",
+      "M5_VI_TIME_IGNORED",
+      "M5_VI_CHARACTER_MIX"
+    ],
+    "nofamily": "questions"
   },
   "ENGL.G5.GRAMMA.T3_LANGUAGE_PATTERN.TOO_TO": {
     "name": "Use too ... to and too ... for",
@@ -29812,6 +30629,22 @@ var SKILLS_E5 = {
       "M_MODAL_STRENGTH"
     ]
   },
+  "ENGL.G5.WRITIN.T3_MECHANICS_OF_WRITING.CURSIVE": {
+    "name": "Read and write legibly in joined letters (cursive)",
+    "sub": "ENGL.G5.WRITIN.T3_MECHANICS_OF_WRITING",
+    "outcomes": [
+      "ENGL.G5.WRITIN.T3_MECHANICS_OF_WRITING.a",
+      "ENGL.G5.WRITIN.T3_MECHANICS_OF_WRITING.b"
+    ],
+    "pre": [],
+    "mis": [
+      "M5_CU_PRINT_MIX",
+      "M5_CU_SLANT",
+      "M5_CU_JOIN_WORDS",
+      "M5_CU_CANNOT_READ"
+    ],
+    "nofamily": "teacher"
+  },
   "ENGL.G5.LISTEN.T4_PRONUNCIATION_AND_VO.ROAD_SAFETY_WORDS": {
     "name": "Use words about road safety",
     "sub": "ENGL.G5.LISTEN.T4_PRONUNCIATION_AND_VO",
@@ -29821,8 +30654,47 @@ var SKILLS_E5 = {
     "pre": [],
     "mis": [
       "M_VOC_ROAD_NEAR",
-      "M_VOC_ROAD_SOUND"
+      "M_VOC_ROAD_SOUND",
+      "M5_VOC_ZEBRA",
+      "M5_VOC_SPEED_BUMP"
     ]
+  },
+  "ENGL.G5.LISTEN.T4_PRONUNCIATION_AND_VO.WORD_STRESS": {
+    "name": "Stress words correctly, including words whose stress changes the meaning",
+    "sub": "ENGL.G5.LISTEN.T4_PRONUNCIATION_AND_VO",
+    "outcomes": [
+      "ENGL.G5.LISTEN.T4_PRONUNCIATION_AND_VO.a",
+      "ENGL.G5.LISTEN.T4_PRONUNCIATION_AND_VO.c"
+    ],
+    "pre": [
+      "ENGL.G5.LISTEN.T4_PRONUNCIATION_AND_VO.ROAD_SAFETY_WORDS"
+    ],
+    "mis": [
+      "M5_WS_NOUN_VERB_SAME",
+      "M5_WS_EQUAL",
+      "M5_WS_PENULT",
+      "M5_WS_PRESENT"
+    ],
+    "nofamily": "voice"
+  },
+  "ENGL.G5.READIN.T4_INTENSIVE_READING_CO.READ_VISUALS": {
+    "name": "Name visuals, predict from them and judge whether they suit their purpose",
+    "sub": "ENGL.G5.READIN.T4_INTENSIVE_READING_CO",
+    "outcomes": [
+      "ENGL.G5.READIN.T4_INTENSIVE_READING_CO.a",
+      "ENGL.G5.READIN.T4_INTENSIVE_READING_CO.b",
+      "ENGL.G5.READIN.T4_INTENSIVE_READING_CO.e"
+    ],
+    "pre": [
+      "ENGL.G5.READIN.T2_INTENSIVE_READING.PREDICT"
+    ],
+    "mis": [
+      "M5_RV_TYPE_MIX",
+      "M5_RV_ONE_DETAIL",
+      "M5_RV_COLOUR_JUDGE",
+      "M5_RV_MNEMONIC"
+    ],
+    "nofamily": "questions"
   },
   "ENGL.G5.GRAMMA.T4_WORD_CLASS_POSSESSIV.POSSESSIVES": {
     "name": "Use possessive pronouns and their determiners",
@@ -29839,6 +30711,60 @@ var SKILLS_E5 = {
       "M_POSS_WRONG_PERSON"
     ]
   },
+  "ENGL.G5.WRITIN.T4_FUNCTIONAL_WRITING_F.LETTER_PARTS": {
+    "name": "Identify the parts of a friendly letter and judge its words",
+    "sub": "ENGL.G5.WRITIN.T4_FUNCTIONAL_WRITING_F",
+    "outcomes": [
+      "ENGL.G5.WRITIN.T4_FUNCTIONAL_WRITING_F.a",
+      "ENGL.G5.WRITIN.T4_FUNCTIONAL_WRITING_F.c"
+    ],
+    "pre": [],
+    "mis": [
+      "M5_LP_OFFICIAL_WORDS",
+      "M5_LP_TWO_ADDRESSES",
+      "M5_LP_CLOSING_GREETING",
+      "M5_LP_DATE_PLACE"
+    ],
+    "nofamily": "questions"
+  },
+  "ENGL.G5.WRITIN.T4_FUNCTIONAL_WRITING_F.FRIENDLY_LETTER": {
+    "name": "Write a friendly letter in the correct format",
+    "sub": "ENGL.G5.WRITIN.T4_FUNCTIONAL_WRITING_F",
+    "outcomes": [
+      "ENGL.G5.WRITIN.T4_FUNCTIONAL_WRITING_F.b"
+    ],
+    "pre": [
+      "ENGL.G5.WRITIN.T4_FUNCTIONAL_WRITING_F.LETTER_PARTS",
+      "ENGL.G5.WRITIN.T7_MECHANICS_OF_WRITING.COMMAS"
+    ],
+    "mis": [
+      "M5_FL_NO_PARAGRAPHS",
+      "M5_FL_COLD_TONE",
+      "M5_FL_NO_QUESTION",
+      "M5_FL_ABRUPT_END"
+    ],
+    "nofamily": "composition"
+  },
+  "ENGL.G5.LISTEN.T5_LISTENING_COMPREHENS.EXPRESS_FEELINGS": {
+    "name": "Show feelings with the voice, face and gestures when speaking and listening",
+    "sub": "ENGL.G5.LISTEN.T5_LISTENING_COMPREHENS",
+    "outcomes": [
+      "ENGL.G5.LISTEN.T5_LISTENING_COMPREHENS.d",
+      "ENGL.G5.LISTEN.T7_PRONUNCIATION_AND_VO.d",
+      "ENGL.G5.LISTEN.T8_PRONUNCIATION_AND_VO.e",
+      "ENGL.G5.LISTEN.T9_SPEAKING_FLUENCY_PRO.e"
+    ],
+    "pre": [
+      "ENGL.G5.LISTEN.T2_PRONUNCIATION_AND_VO.SPEAKER_FEELINGS"
+    ],
+    "mis": [
+      "M5_EF_FLAT",
+      "M5_EF_WRONG_FEELING",
+      "M5_EF_LISTENER_AWAY",
+      "M5_EF_OVERACT"
+    ],
+    "nofamily": "voice"
+  },
   "ENGL.G5.READIN.T5_EXTENSIVE_READING_FI.SCAN_SKIM": {
     "name": "Scan for details and skim for the gist",
     "sub": "ENGL.G5.READIN.T5_EXTENSIVE_READING_FI",
@@ -29851,8 +30777,51 @@ var SKILLS_E5 = {
     "mis": [
       "M_SCAN_READS_ALL",
       "M_SCAN_WRONG_LINE",
-      "M_SKIM_DETAIL_FOR_GIST"
+      "M_SKIM_DETAIL_FOR_GIST",
+      "M5_SKIM_EVERY_WORD"
     ]
+  },
+  "ENGL.G5.READIN.T5_EXTENSIVE_READING_FI.SELECT_READING": {
+    "name": "Choose reading materials that suit the purpose, interest and level",
+    "sub": "ENGL.G5.READIN.T5_EXTENSIVE_READING_FI",
+    "outcomes": [
+      "ENGL.G5.READIN.T5_EXTENSIVE_READING_FI.a",
+      "ENGL.G5.READIN.T5_EXTENSIVE_READING_FI.e",
+      "ENGL.G5.READIN.T7_EXTENSIVE_READING_FI.a",
+      "ENGL.G5.READIN.T7_EXTENSIVE_READING_FI.c",
+      "ENGL.G5.READIN.T11_INTENSIVE_READING.d",
+      "ENGL.G5.READIN.T13_EXTENSIVE_READING.a",
+      "ENGL.G5.READIN.T13_EXTENSIVE_READING.d"
+    ],
+    "pre": [
+      "ENGL.G5.READIN.T5_EXTENSIVE_READING_FI.SCAN_SKIM"
+    ],
+    "mis": [
+      "M5_SR_COVER",
+      "M5_SR_TOO_HARD",
+      "M5_SR_PURPOSE",
+      "M5_SR_DIGITAL_TRUST"
+    ],
+    "nofamily": "questions"
+  },
+  "ENGL.G5.READIN.T5_EXTENSIVE_READING_FI.INDEPENDENT_READING": {
+    "name": "Read a variety of fiction and non-fiction independently",
+    "sub": "ENGL.G5.READIN.T5_EXTENSIVE_READING_FI",
+    "outcomes": [
+      "ENGL.G5.READIN.T5_EXTENSIVE_READING_FI.d",
+      "ENGL.G5.READIN.T7_EXTENSIVE_READING_FI.b",
+      "ENGL.G5.READIN.T13_EXTENSIVE_READING.b"
+    ],
+    "pre": [
+      "ENGL.G5.READIN.T5_EXTENSIVE_READING_FI.SELECT_READING"
+    ],
+    "mis": [
+      "M5_IR_SAME_BOOK",
+      "M5_IR_NO_RETELL",
+      "M5_IR_GIVES_UP",
+      "M5_IR_FICTION_ONLY"
+    ],
+    "nofamily": "teacher"
   },
   "ENGL.G5.GRAMMA.T5_WORD_CLASS_ADJECTIVE.COMPARATIVE_SUPERLATIVE": {
     "name": "Use comparative and superlative adjectives",
@@ -29881,8 +30850,86 @@ var SKILLS_E5 = {
     "mis": [
       "M_ADJ_AFTER_NOUN",
       "M_ADJ_ORDER_SHAPE_FIRST",
-      "M_ADJ_ORDER_AGE"
+      "M_ADJ_ORDER_AGE",
+      "M5_ADJ_ORDER_AND"
     ]
+  },
+  "ENGL.G5.WRITIN.T5_CREATIVE_WRITING_NAR.NARRATIVE_PARTS": {
+    "name": "Identify the parts of a narrative composition",
+    "sub": "ENGL.G5.WRITIN.T5_CREATIVE_WRITING_NAR",
+    "outcomes": [
+      "ENGL.G5.WRITIN.T5_CREATIVE_WRITING_NAR.a"
+    ],
+    "pre": [
+      "ENGL.G5.READIN.T2_INTENSIVE_READING.STORY_ELEMENTS"
+    ],
+    "mis": [
+      "M5_NP_INTRO_PROBLEM",
+      "M5_NP_CONCLUSION_SUMMARY",
+      "M5_NP_SETTING_CHARACTER",
+      "M5_NP_TITLE_SENTENCE"
+    ],
+    "nofamily": "questions"
+  },
+  "ENGL.G5.WRITIN.T5_CREATIVE_WRITING_NAR.NARRATIVE_COMPOSITION": {
+    "name": "Create a coherent narrative composition",
+    "sub": "ENGL.G5.WRITIN.T5_CREATIVE_WRITING_NAR",
+    "outcomes": [
+      "ENGL.G5.WRITIN.T5_CREATIVE_WRITING_NAR.b",
+      "ENGL.G5.WRITIN.T5_CREATIVE_WRITING_NAR.c",
+      "ENGL.G5.WRITIN.T8_CREATIVE_WRITING.c"
+    ],
+    "pre": [
+      "ENGL.G5.WRITIN.T5_CREATIVE_WRITING_NAR.NARRATIVE_PARTS",
+      "ENGL.G5.WRITIN.T8_CREATIVE_WRITING.SIMILES"
+    ],
+    "mis": [
+      "M5_NC_TENSE_SWITCH",
+      "M5_NC_FORCED_PROVERB",
+      "M5_NC_NO_CLIMAX",
+      "M5_NC_DIALOGUE_UNPUNCTUATED"
+    ],
+    "nofamily": "composition"
+  },
+  "ENGL.G5.LISTEN.T6_PRONUNCIATION_AND_VO.INTONATION": {
+    "name": "Sort and say statements and questions by rising and falling intonation",
+    "sub": "ENGL.G5.LISTEN.T6_PRONUNCIATION_AND_VO",
+    "outcomes": [
+      "ENGL.G5.LISTEN.T6_PRONUNCIATION_AND_VO.a",
+      "ENGL.G5.LISTEN.T6_PRONUNCIATION_AND_VO.d"
+    ],
+    "pre": [
+      "ENGL.G5.GRAMMA.T11_USE_OF_INTERROGATIVE.INTERROGATIVES"
+    ],
+    "mis": [
+      "M5_IN_WH_RISE",
+      "M5_IN_YESNO_FLAT",
+      "M5_IN_SORT_BY_MARK",
+      "M5_IN_STRESS_SMALL"
+    ],
+    "nofamily": "voice"
+  },
+  "ENGL.G5.LISTEN.T6_PRONUNCIATION_AND_VO.PRONOUNCE_SOUNDS": {
+    "name": "Pronounce the target sounds correctly",
+    "sub": "ENGL.G5.LISTEN.T6_PRONUNCIATION_AND_VO",
+    "outcomes": [
+      "ENGL.G5.LISTEN.T6_PRONUNCIATION_AND_VO.b",
+      "ENGL.G5.LISTEN.T7_PRONUNCIATION_AND_VO.c",
+      "ENGL.G5.LISTEN.T8_PRONUNCIATION_AND_VO.c",
+      "ENGL.G5.LISTEN.T10_PRONUNCIATION_AND_VO.b",
+      "ENGL.G5.LISTEN.T12_PRONUNCIATION_AND_VO.a"
+    ],
+    "pre": [
+      "ENGL.G5.LISTEN.T1_LISTENING_COMPREHENS.SOUND_IDENTIFY"
+    ],
+    "mis": [
+      "M5_PS_V_F",
+      "M5_PS_G_K",
+      "M5_PS_Z_S",
+      "M5_PS_SCHWA_FULL",
+      "M5_PS_EXTRA_VOWEL"
+    ],
+    "nofamily": "voice"
   },
   "ENGL.G5.GRAMMA.T6_WORD_CLASS_DETERMINE.FEW_LITTLE": {
     "name": "Use few, a few, little and a little",
@@ -29918,6 +30965,25 @@ var SKILLS_E5 = {
       "M_QUANT_OF_THE_MISSING",
       "M_QUANT_LEAST_LESS"
     ]
+  },
+  "ENGL.G5.WRITIN.T6_CREATIVE_WRITING_PIC.PICTORIAL_COMPOSITION": {
+    "name": "Choose a topic and write a composition from pictures",
+    "sub": "ENGL.G5.WRITIN.T6_CREATIVE_WRITING_PIC",
+    "outcomes": [
+      "ENGL.G5.WRITIN.T6_CREATIVE_WRITING_PIC.a",
+      "ENGL.G5.WRITIN.T6_CREATIVE_WRITING_PIC.b",
+      "ENGL.G5.WRITIN.T6_CREATIVE_WRITING_PIC.c"
+    ],
+    "pre": [
+      "ENGL.G5.WRITIN.T2_CREATIVE_WRITING_OPE.PLAN_COMPOSITION"
+    ],
+    "mis": [
+      "M5_PIC_LABELS",
+      "M5_PIC_TOPIC_MISMATCH",
+      "M5_PIC_NO_LINKS",
+      "M5_PIC_SKIP"
+    ],
+    "nofamily": "composition"
   },
   "ENGL.G5.GRAMMA.T7_TENSE_FUTURE_TIME_US.FUTURE_WILL_SHALL": {
     "name": "Use will and shall for the future",
@@ -29981,8 +31047,26 @@ var SKILLS_E5 = {
     "mis": [
       "M_PROV_LITERAL",
       "M_PROV_NEAR_MEANING",
-      "M_PROV_WORDS_MIXED"
+      "M_PROV_WORDS_MIXED",
+      "M5_PROV_SITUATION"
     ]
+  },
+  "ENGL.G5.READIN.T8_FLUENCY_IN_READING.READ_FLUENTLY": {
+    "name": "Read a text accurately, with expression and at the right speed",
+    "sub": "ENGL.G5.READIN.T8_FLUENCY_IN_READING",
+    "outcomes": [
+      "ENGL.G5.READIN.T8_FLUENCY_IN_READING.b"
+    ],
+    "pre": [
+      "ENGL.G5.WRITIN.T7_MECHANICS_OF_WRITING.COMMAS"
+    ],
+    "mis": [
+      "M5_RF_WORD_BY_WORD",
+      "M5_RF_NO_PAUSE",
+      "M5_RF_GUESS_FIRST_LETTER",
+      "M5_RF_NO_EXPRESSION"
+    ],
+    "nofamily": "voice"
   },
   "ENGL.G5.GRAMMA.T8_SENTENCES.QUESTION_TAGS": {
     "name": "Use question tags",
@@ -30007,12 +31091,33 @@ var SKILLS_E5 = {
       "ENGL.G5.WRITIN.T8_CREATIVE_WRITING.a",
       "ENGL.G5.WRITIN.T8_CREATIVE_WRITING.b"
     ],
-    "pre": [],
+    "pre": [
+      "ENGL.G5.GRAMMA.T5_WORD_CLASS_ADJECTIVE.COMPARATIVE_SUPERLATIVE"
+    ],
     "mis": [
       "M_SIM_STATEMENT",
       "M_SIM_METAPHOR",
-      "M_SIM_WRONG_COMPARISON"
+      "M_SIM_WRONG_COMPARISON",
+      "M5_SIM_LIKE_AS_MIX"
     ]
+  },
+  "ENGL.G5.LISTEN.T9_SPEAKING_FLUENCY_PRO.SPEAK_FLUENTLY": {
+    "name": "Speak accurately, at the right speed and with expression on a topic",
+    "sub": "ENGL.G5.LISTEN.T9_SPEAKING_FLUENCY_PRO",
+    "outcomes": [
+      "ENGL.G5.LISTEN.T9_SPEAKING_FLUENCY_PRO.c",
+      "ENGL.G5.LISTEN.T12_PRONUNCIATION_AND_VO.c"
+    ],
+    "pre": [
+      "ENGL.G5.LISTEN.T2_PRONUNCIATION_AND_VO.ORAL_SENTENCES"
+    ],
+    "mis": [
+      "M5_SF_READ_NOTES",
+      "M5_SF_FILLERS",
+      "M5_SF_MONOTONE_FAST",
+      "M5_SF_STOPS"
+    ],
+    "nofamily": "voice"
   },
   "ENGL.G5.READIN.T9_INTENSIVE_READING_DE.MAIN_IDEA": {
     "name": "Find the main idea of a paragraph",
@@ -30026,7 +31131,8 @@ var SKILLS_E5 = {
     "mis": [
       "M_MAIN_DETAIL",
       "M_MAIN_TOO_BROAD",
-      "M_MAIN_NOT_IN_TEXT"
+      "M_MAIN_NOT_IN_TEXT",
+      "M5_MAIN_FIRST_SENTENCE"
     ]
   },
   "ENGL.G5.READIN.T9_INTENSIVE_READING_DE.SUMMARISE": {
@@ -30123,8 +31229,27 @@ var SKILLS_E5 = {
     "pre": [],
     "mis": [
       "M_MOOD_OPPOSITE",
-      "M_MOOD_NAMED_NOT_SHOWN"
+      "M_MOOD_NAMED_NOT_SHOWN",
+      "M5_MOOD_ACTION_ONLY",
+      "M5_MOOD_ONE_LINE"
     ]
+  },
+  "ENGL.G5.LISTEN.T10_PRONUNCIATION_AND_VO.INTERRUPT_POLITELY": {
+    "name": "Interrupt politely during a conversation",
+    "sub": "ENGL.G5.LISTEN.T10_PRONUNCIATION_AND_VO",
+    "outcomes": [
+      "ENGL.G5.LISTEN.T10_PRONUNCIATION_AND_VO.c"
+    ],
+    "pre": [
+      "ENGL.G5.LISTEN.T3_PRONUNCIATION_AND_VO.POLITE_EXPRESSIONS"
+    ],
+    "mis": [
+      "M5_IP_SHOUT",
+      "M5_IP_NO_PAUSE",
+      "M5_IP_TAKE_OVER",
+      "M5_IP_IMPOLITE_PHRASE"
+    ],
+    "nofamily": "questions"
   },
   "ENGL.G5.GRAMMA.T10_WORD_CLASS_CONJUNCTI.CONJUNCTIONS": {
     "name": "Join sentences with but, or, yet, because, since and also",
@@ -30143,6 +31268,42 @@ var SKILLS_E5 = {
       "M_CONJ_ALSO_JOINING",
       "M_CONJ_WRONG_MEANING"
     ]
+  },
+  "ENGL.G5.WRITIN.T10_CREATIVE_WRITING_DES.DESCRIBE_FROM_TEXT": {
+    "name": "Describe people and things mentioned in a text",
+    "sub": "ENGL.G5.WRITIN.T10_CREATIVE_WRITING_DES",
+    "outcomes": [
+      "ENGL.G5.WRITIN.T10_CREATIVE_WRITING_DES.a"
+    ],
+    "pre": [
+      "ENGL.G5.READIN.T2_INTENSIVE_READING.FACTUAL_QUESTIONS"
+    ],
+    "mis": [
+      "M5_DT_ACTION",
+      "M5_DT_OTHER_PERSON",
+      "M5_DT_OWN_IDEA",
+      "M5_DT_ONE_WORD"
+    ],
+    "nofamily": "questions"
+  },
+  "ENGL.G5.WRITIN.T10_CREATIVE_WRITING_DES.DESCRIPTIVE_COMPOSITION": {
+    "name": "Write and critique a descriptive composition of 120 to 160 words",
+    "sub": "ENGL.G5.WRITIN.T10_CREATIVE_WRITING_DES",
+    "outcomes": [
+      "ENGL.G5.WRITIN.T10_CREATIVE_WRITING_DES.b",
+      "ENGL.G5.WRITIN.T10_CREATIVE_WRITING_DES.c"
+    ],
+    "pre": [
+      "ENGL.G5.WRITIN.T10_CREATIVE_WRITING_DES.DESCRIBE_FROM_TEXT",
+      "ENGL.G5.GRAMMA.T5_WORD_CLASS_ADJECTIVE.COMPARATIVE_SUPERLATIVE"
+    ],
+    "mis": [
+      "M5_DC_STORY",
+      "M5_DC_VAGUE",
+      "M5_DC_NO_ORDER",
+      "M5_DC_CRITIQUE_PRAISE"
+    ],
+    "nofamily": "composition"
   },
   "ENGL.G5.GRAMMA.T11_USE_OF_INTERROGATIVE.INTERROGATIVES": {
     "name": "Ask questions with how, what, when, why, who",
@@ -30184,10 +31345,14 @@ var SKILLS_E5 = {
     "outcomes": [
       "ENGL.G5.WRITIN.T11_SPELLING.b"
     ],
-    "pre": [],
+    "pre": [
+      "ENGL.G5.READIN.T2_INTENSIVE_READING.CONTEXT_CLUES"
+    ],
     "mis": [
       "M_HOMON_FIRST_MEANING",
-      "M_HOMON_CONTEXT_IGNORED"
+      "M_HOMON_CONTEXT_IGNORED",
+      "M5_HOMON_SPELL_DIFF",
+      "M5_HOMON_ONE_MEANING_ONLY"
     ]
   },
   "ENGL.G5.GRAMMA.T12_WORD_CLASS_NOUNS.SAME_SINGULAR_PLURAL": {
@@ -30204,6 +31369,56 @@ var SKILLS_E5 = {
       "M_NOUN_VERB_AGREEMENT",
       "M_NOUN_A_BEFORE_PLURAL"
     ]
+  },
+  "ENGL.G5.WRITIN.T12_FUNCTIONAL_WRITING_D.DIARY_PARTS": {
+    "name": "Identify the parts of a diary or journal",
+    "sub": "ENGL.G5.WRITIN.T12_FUNCTIONAL_WRITING_D",
+    "outcomes": [
+      "ENGL.G5.WRITIN.T12_FUNCTIONAL_WRITING_D.a"
+    ],
+    "pre": [],
+    "mis": [
+      "M5_DP_LETTER",
+      "M5_DP_NO_DATE",
+      "M5_DP_THIRD_PERSON",
+      "M5_DP_TIMETABLE"
+    ],
+    "nofamily": "questions"
+  },
+  "ENGL.G5.WRITIN.T12_FUNCTIONAL_WRITING_D.DIARY_WRITING": {
+    "name": "Write a diary or journal entry in the right format",
+    "sub": "ENGL.G5.WRITIN.T12_FUNCTIONAL_WRITING_D",
+    "outcomes": [
+      "ENGL.G5.WRITIN.T12_FUNCTIONAL_WRITING_D.b"
+    ],
+    "pre": [
+      "ENGL.G5.WRITIN.T12_FUNCTIONAL_WRITING_D.DIARY_PARTS"
+    ],
+    "mis": [
+      "M5_DW_FUTURE",
+      "M5_DW_NO_FEELINGS",
+      "M5_DW_THIRD_PERSON",
+      "M5_DW_ONE_ENTRY"
+    ],
+    "nofamily": "composition"
+  },
+  "ENGL.G5.LISTEN.T13_PRONUNCIATION_AND_VO.JUDGE_ORAL": {
+    "name": "Judge how well words, similes and gestures were used in a presentation",
+    "sub": "ENGL.G5.LISTEN.T13_PRONUNCIATION_AND_VO",
+    "outcomes": [
+      "ENGL.G5.LISTEN.T13_PRONUNCIATION_AND_VO.c"
+    ],
+    "pre": [
+      "ENGL.G5.WRITIN.T8_CREATIVE_WRITING.SIMILES",
+      "ENGL.G5.LISTEN.T2_PRONUNCIATION_AND_VO.SPEAKER_FEELINGS"
+    ],
+    "mis": [
+      "M5_JO_PERSON",
+      "M5_JO_LOUD_ONLY",
+      "M5_JO_ONLY_FAULTS",
+      "M5_JO_WRONG_SIMILE_OK"
+    ],
+    "nofamily": "teacher"
   },
   "ENGL.G5.GRAMMA.T13_WORD_CLASS_PREPOSITI.PREPOSITIONS_TIME_PLACE": {
     "name": "Use in, on and at for time and place",
@@ -30227,7 +31442,9 @@ var SKILLS_E5 = {
       "ENGL.G5.GRAMMA.T13_WORD_CLASS_PREPOSITI.a",
       "ENGL.G5.GRAMMA.T13_WORD_CLASS_PREPOSITI.b"
     ],
-    "pre": [],
+    "pre": [
+      "ENGL.G5.GRAMMA.T13_WORD_CLASS_PREPOSITI.PREPOSITIONS_TIME_PLACE"
+    ],
     "mis": [
       "M_PREP_TO_HOME",
       "M_PREP_ENTER_INTO",
@@ -30257,18 +31474,58 @@ var SKILLS_E5 = {
 var MIS_FEEDBACK_E52 = {
   "ENGL.G5.LISTEN.T1_LISTENING_COMPREHENS.THEME_WORDS": {
     "M_VOC_RIGHT_RESPONSIBILITY": "A right is something you are entitled to. A responsibility is a duty, something you must do.",
-    "M_VOC_NEAR_MEANING": "The word is related but does not fit the meaning. Try each word in the gap and check."
+    "M_VOC_NEAR_MEANING": "The word is related but does not fit the meaning. Try each word in the gap and check.",
+    "M5_VOC_RIGHT_AS_WANT": "A right is something every child needs to grow and be safe.",
+    "M5_VOC_ABUSE_ANY_RULE": "Abuse is harm; a fair rule is guidance."
+  },
+  "ENGL.G5.LISTEN.T1_LISTENING_COMPREHENS.SOUND_IDENTIFY": {
+    "M5_SI_LETTER_NOT_SOUND": "Say the words aloud: bus sounds like cup; put does not.",
+    "M5_SI_UH_AH": "Car and cart are long and open; cut is short.",
+    "M5_SI_SILENT_H": "Hour starts with a vowel sound; the h is silent.",
+    "M5_SI_P_B": "P is a puff of air with no voice; b buzzes.",
+    "M5_SI_NG_N": "Ng is one sound made at the back of the mouth."
+  },
+  "ENGL.G5.LISTEN.T1_LISTENING_COMPREHENS.LISTEN_MAIN_IDEA": {
+    "M5_LM_DETAIL_AS_MAIN": "Ask: what was the whole talk about?",
+    "M5_LM_FIRST_SENTENCE": "The main idea is what most of the talk explains.",
+    "M5_LM_NO_RESPONSE": "Listen for what the speaker wants you to do.",
+    "M5_LM_OWN_OPINION": "Tell what the speaker said, not what you think."
   },
   "ENGL.G5.READIN.T1_EXTENSIVE_READING.REFERENCE_MATERIALS": {
     "M_REF_WRONG_SOURCE": "Each reference book has its own job. A dictionary gives meanings and spellings. An atlas gives maps. An encyclopaedia gives facts on a subject.",
     "M_REF_ALPHA_FIRST_LETTER": "When the first letters are the same, look at the second letter, then the third, to decide the order.",
-    "M_REF_GUIDE_WORDS": "Guide words show the first and last word on the page. Put your word in alphabetical order to see if it comes between them."
+    "M_REF_GUIDE_WORDS": "Guide words show the first and last word on the page. Put your word in alphabetical order to see if it comes between them.",
+    "M5_REF_SUBJECT_ENCYCLOPAEDIA": "Subject facts are in a subject encyclopaedia."
   },
   "ENGL.G5.GRAMMA.T1_WORD_CLASS_DEMONSTRA.DEMONSTRATIVES": {
     "M_DEM_THIS_PLURAL": "This and that go with ONE thing. For more than one thing, change the word.",
     "M_DEM_THESE_SINGULAR": "These and those go with MORE THAN ONE thing. Here there is only one.",
     "M_DEM_NEAR_FAR": "Think about where the thing is. This and these are near the speaker. That and those are far from the speaker.",
     "M_DEM_THEM": "Them cannot come before a noun. Use a pointing word: this, these, that or those."
+  },
+  "ENGL.G5.WRITIN.T1_FUNCTIONAL_WRITING_F.FILL_FORM": {
+    "M5_FF_COUNTY_TOWN": "The county is the bigger area: Trans Nzoia, not Kitale.",
+    "M5_FF_DATE_ORDER": "Follow the order the form shows: day, month, year.",
+    "M5_FF_GUARDIAN": "This box is about the adult who cares for you.",
+    "M5_FF_ALL_CAPS_IGNORED": "Block letters means capitals."
+  },
+  "ENGL.G5.WRITIN.T1_FUNCTIONAL_WRITING_F.DESIGN_FORM": {
+    "M5_DF_NO_SPACE": "Leave enough room for the longest answer.",
+    "M5_DF_VAGUE_LABEL": "Make every label exact.",
+    "M5_DF_MISSING_DETAIL": "Ask: what will the form be used for?",
+    "M5_DF_QUESTIONS_AS_LABELS": "Use short labels."
+  },
+  "ENGL.G5.LISTEN.T2_PRONUNCIATION_AND_VO.ORAL_SENTENCES": {
+    "M5_OS_ME_I": "Use I alone at the start.",
+    "M5_OS_ONE_WORD": "A sentence has who and what happened.",
+    "M5_OS_WRONG_MEANING": "Check the meaning before you use the word.",
+    "M5_OS_WRONG_CLASS": "Celebration is a thing; celebrate is the action."
+  },
+  "ENGL.G5.LISTEN.T2_PRONUNCIATION_AND_VO.SPEAKER_FEELINGS": {
+    "M5_SF_WORDS_ONLY": "The tone and face can show a feeling the words hide.",
+    "M5_SF_LOUD_ANGRY": "Loud can be excited or proud; look at the face too.",
+    "M5_SF_ONE_CLUE": "Put all the clues together.",
+    "M5_SF_OWN_FEELING": "The question asks about the speaker."
   },
   "ENGL.G5.READIN.T2_INTENSIVE_READING.STORY_ELEMENTS": {
     "M_ELEM_MIXES_CHARACTER_PLACE": "A character is a person or animal in the story. A place is where it happens. Check which one the question asks for.",
@@ -30280,7 +31537,8 @@ var MIS_FEEDBACK_E52 = {
   "ENGL.G5.READIN.T2_INTENSIVE_READING.PREDICT": {
     "M_PRED_NO_CLUE": "A good prediction is based on a clue in the text. Look for the clue that points to it.",
     "M_PRED_CONTRADICTS": "This prediction goes against something the text already told us. Reread the clues.",
-    "M_PRED_ALREADY_HAPPENED": "That has already happened in the story. A prediction is about what has not happened yet."
+    "M_PRED_ALREADY_HAPPENED": "That has already happened in the story. A prediction is about what has not happened yet.",
+    "M5_PRED_WISH": "Use the clues, not your wishes."
   },
   "ENGL.G5.READIN.T2_INTENSIVE_READING.FACTUAL_QUESTIONS": {
     "M_FACT_NEARBY_DETAIL": "This is in the passage, but it does not answer this question. Reread the question and find the exact sentence.",
@@ -30293,7 +31551,8 @@ var MIS_FEEDBACK_E52 = {
   "ENGL.G5.READIN.T2_INTENSIVE_READING.INFERENCE_QUESTIONS": {
     "M_INFER_REPEATS_TEXT": "This repeats the passage but does not explain why. An inference question asks you to work it out from the clues.",
     "M_INFER_CONTRADICTS": "The clues in the passage show something different. Look at what the character says and does.",
-    "M_INFER_OVERREACH": "The passage does not give enough clues for this. A good inference is backed by what is written."
+    "M_INFER_OVERREACH": "The passage does not give enough clues for this. A good inference is backed by what is written.",
+    "M5_INFER_NOT_STATED": "Inference questions want a reason from clues."
   },
   "ENGL.G5.READIN.T2_INTENSIVE_READING.CONTEXT_CLUES": {
     "M_CTX_COMMON_MEANING": "This is a meaning of the word, but it does not fit here. Try it in place of the word and see.",
@@ -30313,10 +31572,35 @@ var MIS_FEEDBACK_E52 = {
     "M_REFL_SINGULAR_PLURAL": "When the doer is more than one person, the word ends in -selves, not -self.",
     "M_REFL_WRONG_PERSON": "The word must match the doer. Ask who did the action, then choose the -self word for that person."
   },
+  "ENGL.G5.WRITIN.T2_CREATIVE_WRITING_OPE.PLAN_COMPOSITION": {
+    "M5_PC_IRRELEVANT": "Cross out points that leave the topic.",
+    "M5_PC_NO_ORDER": "Number the points in the order they happen.",
+    "M5_PC_TOO_FEW": "Plan a beginning, two or three middle points and an end.",
+    "M5_PC_SENTENCES_IN_PLAN": "A plan is short notes."
+  },
+  "ENGL.G5.WRITIN.T2_CREATIVE_WRITING_OPE.OPEN_COMPOSITION": {
+    "M5_OC_DRIFT": "Reread each paragraph against the topic.",
+    "M5_OC_NO_PARAGRAPHS": "A new paragraph for each new part.",
+    "M5_OC_AND_THEN": "Vary your linking words.",
+    "M5_OC_MEMORISED": "Write for the topic you are given."
+  },
   "ENGL.G5.LISTEN.T3_PRONUNCIATION_AND_VO.POLITE_EXPRESSIONS": {
     "M_POL_DEMAND": 'That sounds like a command. A polite request starts with "may I" or "could you", and says please.',
     "M_POL_WRONG_REPLY": 'Reply to thanks with "You are welcome" and to a sorry with "That is all right".',
-    "M_POL_EXCUSE_SORRY": 'Say "Excuse me" when you ask for room or want to speak. Say "Sorry" when you have made a mistake.'
+    "M_POL_EXCUSE_SORRY": 'Say "Excuse me" when you ask for room or want to speak. Say "Sorry" when you have made a mistake.',
+    "M5_POL_COMPLIMENT_RUDE": "A compliment only praises."
+  },
+  "ENGL.G5.READIN.T3_INTENSIVE_READING_NA.RELATE_TO_LIFE": {
+    "M5_RL_RETELL": "Say something from your own life.",
+    "M5_RL_SURFACE": "Link the main event, not a small object.",
+    "M5_RL_UNRELATED": "Keep to the idea in the text.",
+    "M5_RL_CHANGES_TEXT": "Keep what the text says, then compare."
+  },
+  "ENGL.G5.READIN.T3_INTENSIVE_READING_NA.VISUALISE": {
+    "M5_VI_ONE_WORD": "Check every describing word.",
+    "M5_VI_ADDS": "Picture only what the words tell you.",
+    "M5_VI_TIME_IGNORED": "Night and morning change the picture.",
+    "M5_VI_CHARACTER_MIX": "Match each describing word to its person."
   },
   "ENGL.G5.GRAMMA.T3_LANGUAGE_PATTERN.TOO_TO": {
     "M_TOO_MISSING_TO": 'After too + an adjective, the verb needs the word "to": too heavy to carry.',
@@ -30330,9 +31614,29 @@ var MIS_FEEDBACK_E52 = {
     "M_MODAL_ADJECTIVE": "The word tells HOW you speak, so it must be an adverb. Adverbs of manner often end in -ly.",
     "M_MODAL_STRENGTH": "Must is stronger. Use it for a rule or a law. Should is for advice."
   },
+  "ENGL.G5.WRITIN.T3_MECHANICS_OF_WRITING.CURSIVE": {
+    "M5_CU_PRINT_MIX": "Join every letter in the word.",
+    "M5_CU_SLANT": "Keep the paper still and lean all letters the same way.",
+    "M5_CU_JOIN_WORDS": "Join letters inside a word only.",
+    "M5_CU_CANNOT_READ": "Practise reading joined writing every day."
+  },
   "ENGL.G5.LISTEN.T4_PRONUNCIATION_AND_VO.ROAD_SAFETY_WORDS": {
     "M_VOC_ROAD_NEAR": "The word is about roads, but it does not fit this meaning. A pedestrian walks; a passenger travels in a vehicle.",
-    "M_VOC_ROAD_SOUND": 'In Kenya we say "zebra crossing". Learn the whole phrase.'
+    "M_VOC_ROAD_SOUND": 'In Kenya we say "zebra crossing". Learn the whole phrase.',
+    "M5_VOC_ZEBRA": "It is named for its stripes.",
+    "M5_VOC_SPEED_BUMP": "A bump is raised; a roundabout is a circle."
+  },
+  "ENGL.G5.LISTEN.T4_PRONUNCIATION_AND_VO.WORD_STRESS": {
+    "M5_WS_NOUN_VERB_SAME": "Nouns are often strong at the start, verbs at the end.",
+    "M5_WS_EQUAL": "One strong syllable; the rest are short.",
+    "M5_WS_PENULT": "Clap it: AC-ci-dent.",
+    "M5_WS_PRESENT": "A PREsent is a gift; to preSENT is to give or show."
+  },
+  "ENGL.G5.READIN.T4_INTENSIVE_READING_CO.READ_VISUALS": {
+    "M5_RV_TYPE_MIX": "A map shows places and has a key.",
+    "M5_RV_ONE_DETAIL": "Read the title and words as well as the picture.",
+    "M5_RV_COLOUR_JUDGE": "Ask: does it tell people what to do?",
+    "M5_RV_MNEMONIC": "A mnemonic helps you remember a list."
   },
   "ENGL.G5.GRAMMA.T4_WORD_CLASS_POSSESSIV.POSSESSIVES": {
     "M_POSS_DET_FOR_PRONOUN": "My, your, her, our and their need a noun after them. When nothing follows, use mine, yours, hers, ours or theirs.",
@@ -30340,10 +31644,41 @@ var MIS_FEEDBACK_E52 = {
     "M_POSS_APOSTROPHE": "Possessive pronouns do not have an apostrophe. Write hers, ours, theirs and yours.",
     "M_POSS_WRONG_PERSON": "The word must match the owner. Ask whose it is, then choose the word for that person."
   },
+  "ENGL.G5.WRITIN.T4_FUNCTIONAL_WRITING_F.LETTER_PARTS": {
+    "M5_LP_OFFICIAL_WORDS": "A friendly letter sounds like friendly talk.",
+    "M5_LP_TWO_ADDRESSES": "Only your address, top right.",
+    "M5_LP_CLOSING_GREETING": "Dear starts; Your ... ends.",
+    "M5_LP_DATE_PLACE": "Date under the address, top right."
+  },
+  "ENGL.G5.WRITIN.T4_FUNCTIONAL_WRITING_F.FRIENDLY_LETTER": {
+    "M5_FL_NO_PARAGRAPHS": "New piece of news, new paragraph.",
+    "M5_FL_COLD_TONE": "Write as you would talk to the friend.",
+    "M5_FL_NO_QUESTION": "Ask your friend a question or two.",
+    "M5_FL_ABRUPT_END": "End with a line like Write soon."
+  },
+  "ENGL.G5.LISTEN.T5_LISTENING_COMPREHENS.EXPRESS_FEELINGS": {
+    "M5_EF_FLAT": "Let your voice and face show how you felt.",
+    "M5_EF_WRONG_FEELING": "Match your face to the words.",
+    "M5_EF_LISTENER_AWAY": "Face the speaker, nod and keep still.",
+    "M5_EF_OVERACT": "A few gestures that fit are enough."
+  },
   "ENGL.G5.READIN.T5_EXTENSIVE_READING_FI.SCAN_SKIM": {
     "M_SCAN_READS_ALL": "You need to find the key word first (such as bus), then read that line carefully.",
     "M_SCAN_WRONG_LINE": "That detail belongs to a different line. Find the line about this event, then read across.",
-    "M_SKIM_DETAIL_FOR_GIST": "This is one detail. Skimming means reading the title and first lines to find what the whole text is about."
+    "M_SKIM_DETAIL_FOR_GIST": "This is one detail. Skimming means reading the title and first lines to find what the whole text is about.",
+    "M5_SKIM_EVERY_WORD": "Read the title, first lines and headings only."
+  },
+  "ENGL.G5.READIN.T5_EXTENSIVE_READING_FI.SELECT_READING": {
+    "M5_SR_COVER": "Read the blurb and one page first.",
+    "M5_SR_TOO_HARD": "If more than five words on a page are new, it is too hard.",
+    "M5_SR_PURPOSE": "Facts are in non-fiction.",
+    "M5_SR_DIGITAL_TRUST": "Check who wrote it and why."
+  },
+  "ENGL.G5.READIN.T5_EXTENSIVE_READING_FI.INDEPENDENT_READING": {
+    "M5_IR_SAME_BOOK": "Try a new kind of text each week.",
+    "M5_IR_NO_RETELL": "Stop after each page and think about it.",
+    "M5_IR_GIVES_UP": "Give a book a few pages.",
+    "M5_IR_FICTION_ONLY": "Read poems, articles and fact books too."
   },
   "ENGL.G5.GRAMMA.T5_WORD_CLASS_ADJECTIVE.COMPARATIVE_SUPERLATIVE": {
     "M_ADJ_DOUBLE_COMPARATIVE": "Use only one: -er or more. Never both.",
@@ -30356,7 +31691,33 @@ var MIS_FEEDBACK_E52 = {
   "ENGL.G5.GRAMMA.T5_WORD_CLASS_ADJECTIVE.ADJECTIVE_ORDER": {
     "M_ADJ_AFTER_NOUN": "In English the adjective comes BEFORE the noun, not after it.",
     "M_ADJ_ORDER_SHAPE_FIRST": "Size comes before shape and colour: a small red hat, not a red small hat.",
-    "M_ADJ_ORDER_AGE": "Size comes first, then age, then shape: a big old round stool."
+    "M_ADJ_ORDER_AGE": "Size comes first, then age, then shape: a big old round stool.",
+    "M5_ADJ_ORDER_AND": "No and between adjectives before a noun."
+  },
+  "ENGL.G5.WRITIN.T5_CREATIVE_WRITING_NAR.NARRATIVE_PARTS": {
+    "M5_NP_INTRO_PROBLEM": "Introduction sets the scene; the problem comes in the body.",
+    "M5_NP_CONCLUSION_SUMMARY": "The conclusion ends the story.",
+    "M5_NP_SETTING_CHARACTER": "Setting is where and when.",
+    "M5_NP_TITLE_SENTENCE": "A title is short."
+  },
+  "ENGL.G5.WRITIN.T5_CREATIVE_WRITING_NAR.NARRATIVE_COMPOSITION": {
+    "M5_NC_TENSE_SWITCH": "Keep the story in the past.",
+    "M5_NC_FORCED_PROVERB": "Choose a proverb whose lesson matches the story.",
+    "M5_NC_NO_CLIMAX": "Build to a problem, then solve it.",
+    "M5_NC_DIALOGUE_UNPUNCTUATED": "Put the spoken words in quotation marks."
+  },
+  "ENGL.G5.LISTEN.T6_PRONUNCIATION_AND_VO.INTONATION": {
+    "M5_IN_WH_RISE": "WH questions fall at the end.",
+    "M5_IN_YESNO_FLAT": "Lift the voice at the end of a yes or no question.",
+    "M5_IN_SORT_BY_MARK": "It is a statement: it falls.",
+    "M5_IN_STRESS_SMALL": "Stress the word that carries the news."
+  },
+  "ENGL.G5.LISTEN.T6_PRONUNCIATION_AND_VO.PRONOUNCE_SOUNDS": {
+    "M5_PS_V_F": "Teeth on lip, voice on: vvv.",
+    "M5_PS_G_K": "Keep the voice on to the end: bag.",
+    "M5_PS_Z_S": "Z buzzes like a bee; s hisses like a snake.",
+    "M5_PS_SCHWA_FULL": "Weak syllables use the short uh sound.",
+    "M5_PS_EXTRA_VOWEL": "Stop cleanly on the last consonant."
   },
   "ENGL.G5.GRAMMA.T6_WORD_CLASS_DETERMINE.FEW_LITTLE": {
     "M_QUANT_FEW_UNCOUNTABLE": "You cannot count water, sugar or milk one by one, so use little, not few.",
@@ -30370,6 +31731,12 @@ var MIS_FEEDBACK_E52 = {
     "M_QUANT_ENOUGH_POSITION": 'Put "enough" before the noun: enough food, enough chairs.',
     "M_QUANT_OF_THE_MISSING": 'After "most of" and "all of", you need "the" (or them, us): most of the learners.',
     "M_QUANT_LEAST_LESS": 'Less compares two things; least compares three or more. And write "lots of", never "a lots of".'
+  },
+  "ENGL.G5.WRITIN.T6_CREATIVE_WRITING_PIC.PICTORIAL_COMPOSITION": {
+    "M5_PIC_LABELS": "Tell what happened, with names and actions.",
+    "M5_PIC_TOPIC_MISMATCH": "Look at all the pictures, then choose.",
+    "M5_PIC_NO_LINKS": "Use time words to join the pictures.",
+    "M5_PIC_SKIP": "Tick every picture as you write."
   },
   "ENGL.G5.GRAMMA.T7_TENSE_FUTURE_TIME_US.FUTURE_WILL_SHALL": {
     "M_FUT_WILL_PAST": "After will and shall, use the plain verb: will go. Will already shows the future.",
@@ -30395,7 +31762,14 @@ var MIS_FEEDBACK_E52 = {
   "ENGL.G5.LISTEN.T8_PRONUNCIATION_AND_VO.PROVERBS": {
     "M_PROV_LITERAL": "A proverb has a hidden lesson. Ask what it teaches people, not what the words say.",
     "M_PROV_NEAR_MEANING": "This is on a similar topic, but the lesson is different. Match the exact lesson.",
-    "M_PROV_WORDS_MIXED": "The proverb has fixed words. Say the whole proverb aloud to remember its ending."
+    "M_PROV_WORDS_MIXED": "The proverb has fixed words. Say the whole proverb aloud to remember its ending.",
+    "M5_PROV_SITUATION": "Match the lesson to the situation."
+  },
+  "ENGL.G5.READIN.T8_FLUENCY_IN_READING.READ_FLUENTLY": {
+    "M5_RF_WORD_BY_WORD": "Read in groups of words.",
+    "M5_RF_NO_PAUSE": "Short pause at a comma, longer at a full stop.",
+    "M5_RF_GUESS_FIRST_LETTER": "Look at the whole word; check it makes sense.",
+    "M5_RF_NO_EXPRESSION": "Let your voice ask the question."
   },
   "ENGL.G5.GRAMMA.T8_SENTENCES.QUESTION_TAGS": {
     "M_TAG_INVARIABLE": `The tag copies the helper verb and the person of the statement. It is not always "isn't it".`,
@@ -30407,12 +31781,20 @@ var MIS_FEEDBACK_E52 = {
   "ENGL.G5.WRITIN.T8_CREATIVE_WRITING.SIMILES": {
     "M_SIM_STATEMENT": 'A simile compares two things using "like" or "as". This sentence does not.',
     "M_SIM_METAPHOR": 'This is a metaphor. A simile always has the word "like" or "as".',
-    "M_SIM_WRONG_COMPARISON": "This animal or thing is not known for this quality. Think about who is famous for it."
+    "M_SIM_WRONG_COMPARISON": "This animal or thing is not known for this quality. Think about who is famous for it.",
+    "M5_SIM_LIKE_AS_MIX": "As ... as, or like: not both."
+  },
+  "ENGL.G5.LISTEN.T9_SPEAKING_FLUENCY_PRO.SPEAK_FLUENTLY": {
+    "M5_SF_READ_NOTES": "Write key words only; look up and talk.",
+    "M5_SF_FILLERS": "Pause silently instead.",
+    "M5_SF_MONOTONE_FAST": "Slow down and pause after each point.",
+    "M5_SF_STOPS": "If you slip, correct it once and go on."
   },
   "ENGL.G5.READIN.T9_INTENSIVE_READING_DE.MAIN_IDEA": {
     "M_MAIN_DETAIL": "This is a true detail, but it is only one part. The main idea covers the whole paragraph.",
     "M_MAIN_TOO_BROAD": "This is too wide. The paragraph talks about one part of it.",
-    "M_MAIN_NOT_IN_TEXT": "This idea is not in the paragraph. Check what the paragraph is actually about."
+    "M_MAIN_NOT_IN_TEXT": "This idea is not in the paragraph. Check what the paragraph is actually about.",
+    "M5_MAIN_FIRST_SENTENCE": "Ask what the whole paragraph is about."
   },
   "ENGL.G5.READIN.T9_INTENSIVE_READING_DE.SUMMARISE": {
     "M_SUM_TOO_MUCH_DETAIL": "A summary should be short. This one keeps too many small details.",
@@ -30448,7 +31830,15 @@ var MIS_FEEDBACK_E52 = {
   },
   "ENGL.G5.LISTEN.T10_PRONUNCIATION_AND_VO.MOOD_FEELINGS": {
     "M_MOOD_OPPOSITE": "One word does not tell the whole feeling. Check what the person does and says.",
-    "M_MOOD_NAMED_NOT_SHOWN": "Nothing in the lines shows this feeling. Look for words and actions that show how the person feels."
+    "M_MOOD_NAMED_NOT_SHOWN": "Nothing in the lines shows this feeling. Look for words and actions that show how the person feels.",
+    "M5_MOOD_ACTION_ONLY": "Mood is a feeling.",
+    "M5_MOOD_ONE_LINE": "Moods can change; read to the end."
+  },
+  "ENGL.G5.LISTEN.T10_PRONUNCIATION_AND_VO.INTERRUPT_POLITELY": {
+    "M5_IP_SHOUT": "Wait for a pause and ask.",
+    "M5_IP_NO_PAUSE": "Watch for the speaker to stop.",
+    "M5_IP_TAKE_OVER": "Make your point, then hand back.",
+    "M5_IP_IMPOLITE_PHRASE": "Ask permission before you speak."
   },
   "ENGL.G5.GRAMMA.T10_WORD_CLASS_CONJUNCTI.CONJUNCTIONS": {
     "M_CONJ_BECAUSE_FOR_BUT": "Read both parts. If the second part is a surprise after the first, use but or yet, not because.",
@@ -30457,6 +31847,18 @@ var MIS_FEEDBACK_E52 = {
     "M_CONJ_SINCE_TIME": 'Since can mean "because" (a reason) or "from a time". Read the meaning.',
     "M_CONJ_ALSO_JOINING": '"Also" does not join two nouns. Use "and", or begin a new sentence with Also.',
     "M_CONJ_WRONG_MEANING": "Read both parts of the sentence. This joining word does not fit what the two parts mean together."
+  },
+  "ENGL.G5.WRITIN.T10_CREATIVE_WRITING_DES.DESCRIBE_FROM_TEXT": {
+    "M5_DT_ACTION": "Describing words tell what the person is like.",
+    "M5_DT_OTHER_PERSON": "Match the words to the right person.",
+    "M5_DT_OWN_IDEA": "Use the words from the text.",
+    "M5_DT_ONE_WORD": "Collect every describing word."
+  },
+  "ENGL.G5.WRITIN.T10_CREATIVE_WRITING_DES.DESCRIPTIVE_COMPOSITION": {
+    "M5_DC_STORY": "Describe how it is, not what happened.",
+    "M5_DC_VAGUE": "Use exact words for each sense.",
+    "M5_DC_NO_ORDER": "Move in one direction through the place.",
+    "M5_DC_CRITIQUE_PRAISE": "Say one strength and one thing to improve, with a reason."
   },
   "ENGL.G5.GRAMMA.T11_USE_OF_INTERROGATIVE.INTERROGATIVES": {
     "M_INT_WHO_WHAT": "Who asks about people. What asks about things.",
@@ -30474,13 +31876,33 @@ var MIS_FEEDBACK_E52 = {
   },
   "ENGL.G5.WRITIN.T11_SPELLING.HOMONYMS": {
     "M_HOMON_FIRST_MEANING": "This word has more than one meaning. Read the question and the rest of the sentence to see which meaning is used.",
-    "M_HOMON_CONTEXT_IGNORED": "Check the other words in the sentence. They show which meaning is used."
+    "M_HOMON_CONTEXT_IGNORED": "Check the other words in the sentence. They show which meaning is used.",
+    "M5_HOMON_SPELL_DIFF": "Homonyms are spelt and sound the same.",
+    "M5_HOMON_ONE_MEANING_ONLY": "Many words have more than one meaning: use the sentence."
   },
   "ENGL.G5.GRAMMA.T12_WORD_CLASS_NOUNS.SAME_SINGULAR_PLURAL": {
     "M_NOUN_SHEEPS": "Sheep, deer, fish, series, species and aircraft stay the same in the plural.",
     "M_NOUN_OVERREGULAR": "Some plurals change the whole word: child becomes children, man becomes men, foot becomes feet.",
     "M_NOUN_VERB_AGREEMENT": "The number tells you if it is one or many. With fifty sheep, the verb is plural: are.",
     "M_NOUN_A_BEFORE_PLURAL": 'The word "a" is for one thing only, so the noun is singular: a fish.'
+  },
+  "ENGL.G5.WRITIN.T12_FUNCTIONAL_WRITING_D.DIARY_PARTS": {
+    "M5_DP_LETTER": "A diary is written to yourself or Dear Diary.",
+    "M5_DP_NO_DATE": "Every entry has a date.",
+    "M5_DP_THIRD_PERSON": "Diaries use I.",
+    "M5_DP_TIMETABLE": "A diary records what happened and how you felt."
+  },
+  "ENGL.G5.WRITIN.T12_FUNCTIONAL_WRITING_D.DIARY_WRITING": {
+    "M5_DW_FUTURE": "Write what happened today.",
+    "M5_DW_NO_FEELINGS": "Say how you felt.",
+    "M5_DW_THIRD_PERSON": "Use I.",
+    "M5_DW_ONE_ENTRY": "One entry per day, each dated."
+  },
+  "ENGL.G5.LISTEN.T13_PRONUNCIATION_AND_VO.JUDGE_ORAL": {
+    "M5_JO_PERSON": "Talk about the words, gestures and voice.",
+    "M5_JO_LOUD_ONLY": "Look at word choice, similes and gestures.",
+    "M5_JO_ONLY_FAULTS": "Start with one strength.",
+    "M5_JO_WRONG_SIMILE_OK": "Check that the comparison makes sense."
   },
   "ENGL.G5.GRAMMA.T13_WORD_CLASS_PREPOSITI.PREPOSITIONS_TIME_PLACE": {
     "M_PREP_DAY_IN": 'Use "on" with days and dates: on Monday, on 12 June.',
@@ -32722,7 +34144,8 @@ var SKILLS17 = {
     "mis": [
       "M_CL_PERSON_ACTION",
       "M_CL_EXPLOIT_HELP",
-      "M_CL_WAGES_FEES"
+      "M_CL_WAGES_FEES",
+      "M6_CL_CHORE_LABOUR"
     ]
   },
   "ENGL.G6.LISTEN.T1_PRONUNCIATION_AND_LI.MAIN_IDEA": {
@@ -32768,7 +34191,8 @@ var SKILLS17 = {
       "ENGL.G6.READIN.T5_EXTENSIVE_READING.a",
       "ENGL.G6.READIN.T5_EXTENSIVE_READING.c",
       "ENGL.G6.READIN.T7_EXTENSIVE_READING.a",
-      "ENGL.G6.READIN.T13_EXTENSIVE_READING.a"
+      "ENGL.G6.READIN.T13_EXTENSIVE_READING.a",
+      "ENGL.G6.READIN.T8_FLUENCY.a"
     ],
     "pre": [
       "ENGL.G6.READIN.T1_EXTENSIVE_READING.REFERENCE_MATERIALS"
@@ -32779,6 +34203,27 @@ var SKILLS17 = {
       "M_TXT_TOO_HARD",
       "M_TXT_OFF_TOPIC"
     ]
+  },
+  "ENGL.G6.READIN.T1_EXTENSIVE_READING.INDEPENDENT_READING": {
+    "name": "Read a variety of texts independently",
+    "sub": "ENGL.G6.READIN.T1_EXTENSIVE_READING",
+    "outcome": "ENGL.G6.READIN.T1_EXTENSIVE_READING.b",
+    "outcomes": [
+      "ENGL.G6.READIN.T1_EXTENSIVE_READING.b",
+      "ENGL.G6.READIN.T5_EXTENSIVE_READING.b",
+      "ENGL.G6.READIN.T7_EXTENSIVE_READING.b",
+      "ENGL.G6.READIN.T13_EXTENSIVE_READING.b"
+    ],
+    "pre": [
+      "ENGL.G6.READIN.T1_EXTENSIVE_READING.SUITABLE_TEXT"
+    ],
+    "mis": [
+      "M6_IR_ONE_GENRE",
+      "M6_IR_NO_RECORD",
+      "M6_IR_ABANDONS",
+      "M6_IR_CANNOT_RECOMMEND"
+    ],
+    "nofamily": "teacher"
   },
   "ENGL.G6.LANGUA.T1_WORD_CLASSES.DETERMINERS": {
     "name": "Use some, enough, each and a lot of",
@@ -32883,7 +34328,8 @@ var SKILLS17 = {
     "mis": [
       "M6_PRED_NO_CLUE",
       "M6_PRED_CONTRADICTS",
-      "M6_PRED_ALREADY_HAPPENED"
+      "M6_PRED_ALREADY_HAPPENED",
+      "M6_PRED_TITLE_IGNORED"
     ]
   },
   "ENGL.G6.READIN.T2_INTENSIVE_READING.FACTUAL_QUESTIONS": {
@@ -32932,7 +34378,8 @@ var SKILLS17 = {
     "mis": [
       "M6_INFER_CONTRADICTS",
       "M6_INFER_OVERREACH",
-      "M6_INFER_REPEATS_TEXT"
+      "M6_INFER_REPEATS_TEXT",
+      "M6_INFER_OWN_FEELING"
     ]
   },
   "ENGL.G6.READIN.T2_INTENSIVE_READING.IMAGERY": {
@@ -32951,7 +34398,8 @@ var SKILLS17 = {
     "mis": [
       "M_IMG_FACT_LINE",
       "M_IMG_WRONG_PICTURE",
-      "M_IMG_ONE_WORD"
+      "M_IMG_ONE_WORD",
+      "M6_IMG_ADDS"
     ]
   },
   "ENGL.G6.READIN.T2_INTENSIVE_READING.CHARACTER_JUDGE": {
@@ -32967,7 +34415,8 @@ var SKILLS17 = {
     "mis": [
       "M_CHAR_NAME_ONLY",
       "M_CHAR_OPPOSITE",
-      "M_CHAR_WRONG_EVIDENCE"
+      "M_CHAR_WRONG_EVIDENCE",
+      "M6_CHAR_ONE_ACT"
     ]
   },
   "ENGL.G6.LANGUA.T2_WORD_CLASSES.CONCRETE_ABSTRACT": {
@@ -33003,6 +34452,46 @@ var SKILLS17 = {
       "M_PARA_CONCLUSION"
     ]
   },
+  "ENGL.G6.WRITIN.T2_CREATIVE_WRITING.PLAN_COMPOSITION": {
+    "name": "Plan a composition: choose a topic, gather and order ideas",
+    "sub": "ENGL.G6.WRITIN.T2_CREATIVE_WRITING",
+    "outcome": "ENGL.G6.WRITIN.T2_CREATIVE_WRITING.a",
+    "outcomes": [
+      "ENGL.G6.WRITIN.T2_CREATIVE_WRITING.a",
+      "ENGL.G6.WRITIN.T5_CREATIVE_WRITING.a",
+      "ENGL.G6.WRITIN.T6_CREATIVE_WRITING.a",
+      "ENGL.G6.WRITIN.T8_CREATIVE_WRITING.a"
+    ],
+    "pre": [
+      "ENGL.G6.WRITIN.T2_CREATIVE_WRITING.PARAGRAPH_ORDER"
+    ],
+    "mis": [
+      "M6_PC_OFF_TOPIC",
+      "M6_PC_NO_ORDER",
+      "M6_PC_TOPIC_TOO_WIDE",
+      "M6_PC_PLAN_TOO_LONG"
+    ],
+    "nofamily": "questions"
+  },
+  "ENGL.G6.WRITIN.T2_CREATIVE_WRITING.OPEN_COMPOSITION": {
+    "name": "Write an open-ended composition on a variety of themes",
+    "sub": "ENGL.G6.WRITIN.T2_CREATIVE_WRITING",
+    "outcome": "ENGL.G6.WRITIN.T2_CREATIVE_WRITING.c",
+    "outcomes": [
+      "ENGL.G6.WRITIN.T2_CREATIVE_WRITING.c"
+    ],
+    "pre": [
+      "ENGL.G6.WRITIN.T2_CREATIVE_WRITING.PLAN_COMPOSITION",
+      "ENGL.G6.LISTEN.T2_PRONUNCIATION_AND_LI.SIMILE_METAPHOR"
+    ],
+    "mis": [
+      "M6_OC_DRIFT",
+      "M6_OC_ONE_BLOCK",
+      "M6_OC_REPEATED_LINKS",
+      "M6_OC_FORCED_IDIOMS"
+    ],
+    "nofamily": "composition"
+  },
   "ENGL.G6.LISTEN.T3_PRONUNCIATION_AND_VO.POLITE_TALK": {
     "name": "Use polite expressions: the telephone, interrupting and asking for clarification",
     "sub": "ENGL.G6.LISTEN.T3_PRONUNCIATION_AND_VO",
@@ -33011,7 +34500,9 @@ var SKILLS17 = {
       "ENGL.G6.LISTEN.T3_PRONUNCIATION_AND_VO.b",
       "ENGL.G6.LISTEN.T3_PRONUNCIATION_AND_VO.d",
       "ENGL.G6.LISTEN.T7_PRONUNCIATION_AND_IN.c",
-      "ENGL.G6.LISTEN.T10_PRONUNCIATION_AND_VO.b"
+      "ENGL.G6.LISTEN.T10_PRONUNCIATION_AND_VO.b",
+      "ENGL.G6.LISTEN.T7_PRONUNCIATION_AND_IN.b",
+      "ENGL.G6.LISTEN.T10_PRONUNCIATION_AND_VO.e"
     ],
     "pre": [],
     "mis": [
@@ -33021,6 +34512,26 @@ var SKILLS17 = {
       "M_POL_MESSAGE"
     ]
   },
+  "ENGL.G6.LISTEN.T3_PRONUNCIATION_AND_VO.PRONOUNCE_SOUNDS": {
+    "name": "Pronounce the target sounds correctly in words and phrases",
+    "sub": "ENGL.G6.LISTEN.T3_PRONUNCIATION_AND_VO",
+    "outcome": "ENGL.G6.LISTEN.T3_PRONUNCIATION_AND_VO.a",
+    "outcomes": [
+      "ENGL.G6.LISTEN.T3_PRONUNCIATION_AND_VO.a",
+      "ENGL.G6.LISTEN.T7_PRONUNCIATION_AND_IN.a",
+      "ENGL.G6.LISTEN.T8_PRONUNCIATION_AND_VO.b"
+    ],
+    "pre": [
+      "ENGL.G6.LISTEN.T6_PRONUNCIATION_AND_VO.SOUNDS"
+    ],
+    "mis": [
+      "M6_PS_TOUR_TORE",
+      "M6_PS_PHONE_FON",
+      "M6_PS_H_DROP_ADD",
+      "M6_PS_V_F"
+    ],
+    "nofamily": "voice"
+  },
   "ENGL.G6.READIN.T3_INTENSIVE_READING.CONTEXT_CLUES": {
     "name": "Use context clues to find the meaning of words, proverbs and similes",
     "sub": "ENGL.G6.READIN.T3_INTENSIVE_READING",
@@ -33028,7 +34539,9 @@ var SKILLS17 = {
     "outcomes": [
       "ENGL.G6.READIN.T3_INTENSIVE_READING.c",
       "ENGL.G6.READIN.T6_INTENSIVE_READING.b",
-      "ENGL.G6.READIN.T10_INTENSIVE_READING.c"
+      "ENGL.G6.READIN.T10_INTENSIVE_READING.c",
+      "ENGL.G6.READIN.T3_INTENSIVE_READING.a",
+      "ENGL.G6.READIN.T11_INTENSIVE_READING_DI.a"
     ],
     "pre": [
       "ENGL.G6.LISTEN.T1_PRONUNCIATION_AND_LI.IDIOMS_FIXED"
@@ -33117,8 +34630,47 @@ var SKILLS17 = {
     "mis": [
       "M_RES_VEHICLE_PERSON",
       "M_RES_EVACUATE",
-      "M_RES_SIREN_ALARM"
+      "M_RES_SIREN_ALARM",
+      "M6_RES_FIRST_AID_CPR"
     ]
+  },
+  "ENGL.G6.LISTEN.T4_PRONUNCIATION_AND_VO.WORD_STRESS": {
+    "name": "Use stress to tell nouns, verbs and adjectives apart and stress the content words",
+    "sub": "ENGL.G6.LISTEN.T4_PRONUNCIATION_AND_VO",
+    "outcome": "ENGL.G6.LISTEN.T4_PRONUNCIATION_AND_VO.c",
+    "outcomes": [
+      "ENGL.G6.LISTEN.T4_PRONUNCIATION_AND_VO.c",
+      "ENGL.G6.LISTEN.T4_PRONUNCIATION_AND_VO.d"
+    ],
+    "pre": [
+      "ENGL.G6.LANGUA.T5_ADJECTIVES.ADJECTIVE_DEGREES"
+    ],
+    "mis": [
+      "M6_WS_NOUN_VERB_SAME",
+      "M6_WS_SMALL_WORDS",
+      "M6_WS_PENULT",
+      "M6_WS_EQUAL"
+    ],
+    "nofamily": "voice"
+  },
+  "ENGL.G6.READIN.T4_INTENSIVE_READING.READ_VISUALS": {
+    "name": "Predict events from visuals and judge their relevance",
+    "sub": "ENGL.G6.READIN.T4_INTENSIVE_READING",
+    "outcome": "ENGL.G6.READIN.T4_INTENSIVE_READING.a",
+    "outcomes": [
+      "ENGL.G6.READIN.T4_INTENSIVE_READING.a",
+      "ENGL.G6.READIN.T4_INTENSIVE_READING.d"
+    ],
+    "pre": [
+      "ENGL.G6.READIN.T2_INTENSIVE_READING.PREDICT"
+    ],
+    "mis": [
+      "M6_RV_PREDICT_ONE_DETAIL",
+      "M6_RV_DECORATION",
+      "M6_RV_CAPTION_IGNORED",
+      "M6_RV_DIAGRAM_ORDER"
+    ],
+    "nofamily": "questions"
   },
   "ENGL.G6.LANGUA.T4_WORD_CLASSES.RELATIVE_PRONOUNS": {
     "name": "Use who, whom, whose and which",
@@ -33172,6 +34724,43 @@ var SKILLS17 = {
       "M_LET_SIGNATURE"
     ]
   },
+  "ENGL.G6.WRITIN.T4_FUNCTIONAL_WRITING.FORMAL_INVITATION": {
+    "name": "Write a formal invitation letter in the correct format",
+    "sub": "ENGL.G6.WRITIN.T4_FUNCTIONAL_WRITING",
+    "outcome": "ENGL.G6.WRITIN.T4_FUNCTIONAL_WRITING.b",
+    "outcomes": [
+      "ENGL.G6.WRITIN.T4_FUNCTIONAL_WRITING.b"
+    ],
+    "pre": [
+      "ENGL.G6.WRITIN.T4_FUNCTIONAL_WRITING.FORMAL_LETTER"
+    ],
+    "mis": [
+      "M6_FI_NO_DETAILS",
+      "M6_FI_INFORMAL_TONE",
+      "M6_FI_ONE_ADDRESS",
+      "M6_FI_NO_RSVP"
+    ],
+    "nofamily": "composition"
+  },
+  "ENGL.G6.LISTEN.T5_PRONUNCIATION_AND_VO.ORAL_RESPONSE": {
+    "name": "Respond to oral questions and listen for specific details",
+    "sub": "ENGL.G6.LISTEN.T5_PRONUNCIATION_AND_VO",
+    "outcome": "ENGL.G6.LISTEN.T5_PRONUNCIATION_AND_VO.b",
+    "outcomes": [
+      "ENGL.G6.LISTEN.T5_PRONUNCIATION_AND_VO.b",
+      "ENGL.G6.LISTEN.T12_PRONUNCIATION_AND_VO.a"
+    ],
+    "pre": [
+      "ENGL.G6.LISTEN.T1_PRONUNCIATION_AND_LI.MAIN_IDEA"
+    ],
+    "mis": [
+      "M6_OR_ONE_WORD",
+      "M6_OR_OFF_QUESTION",
+      "M6_OR_DETAIL_WRONG",
+      "M6_OR_NO_FOLLOW_UP"
+    ],
+    "nofamily": "voice"
+  },
   "ENGL.G6.LANGUA.T5_ADJECTIVES.ADJECTIVE_DEGREES": {
     "name": "Use the simple, comparative and superlative forms of adjectives",
     "sub": "ENGL.G6.LANGUA.T5_ADJECTIVES",
@@ -33190,6 +34779,29 @@ var SKILLS17 = {
       "M_DEGR_ONE_OF_SINGULAR"
     ]
   },
+  "ENGL.G6.WRITIN.T5_CREATIVE_WRITING.NARRATIVE_COMPOSITION": {
+    "name": "Write and judge a narrative composition",
+    "sub": "ENGL.G6.WRITIN.T5_CREATIVE_WRITING",
+    "outcome": "ENGL.G6.WRITIN.T5_CREATIVE_WRITING.c",
+    "outcomes": [
+      "ENGL.G6.WRITIN.T5_CREATIVE_WRITING.c",
+      "ENGL.G6.WRITIN.T5_CREATIVE_WRITING.d",
+      "ENGL.G6.WRITIN.T8_CREATIVE_WRITING.c",
+      "ENGL.G6.WRITIN.T8_CREATIVE_WRITING.d",
+      "ENGL.G6.WRITIN.T3_MECHANICS_OF_WRITING.b"
+    ],
+    "pre": [
+      "ENGL.G6.WRITIN.T2_CREATIVE_WRITING.PLAN_COMPOSITION",
+      "ENGL.G6.WRITIN.T7_MECHANICS_OF_WRITING.QUOTATION_MARKS"
+    ],
+    "mis": [
+      "M6_NC_TENSE",
+      "M6_NC_FLAT_ENDING",
+      "M6_NC_JUDGE_SPELLING_ONLY",
+      "M6_NC_ABBREV_MISUSE"
+    ],
+    "nofamily": "composition"
+  },
   "ENGL.G6.LISTEN.T6_PRONUNCIATION_AND_VO.SOUNDS": {
     "name": "Choose words by their sound: /\u026A\u0259/, /\u028A\u0259/, /\u0259\u028A/, /f/, /v/ and /h/",
     "sub": "ENGL.G6.LISTEN.T6_PRONUNCIATION_AND_VO",
@@ -33200,7 +34812,8 @@ var SKILLS17 = {
       "ENGL.G6.LISTEN.T1_PRONUNCIATION_AND_LI.a",
       "ENGL.G6.LISTEN.T10_PRONUNCIATION_AND_VO.a",
       "ENGL.G6.LISTEN.T9_PRONUNCIATION_AND_SP.a",
-      "ENGL.G6.LISTEN.T13_PRONUNCIATION_AND_IN.a"
+      "ENGL.G6.LISTEN.T13_PRONUNCIATION_AND_IN.a",
+      "ENGL.G6.LISTEN.T11_PRONUNCIATION_AND_VO.a"
     ],
     "pre": [],
     "mis": [
@@ -33209,6 +34822,62 @@ var SKILLS17 = {
       "M_SND_SILENT_H",
       "M_SND_TOUR_MORE"
     ]
+  },
+  "ENGL.G6.LISTEN.T6_PRONUNCIATION_AND_VO.WORK_ETHICS_WORDS": {
+    "name": "Use words about work and work ethics in sentences",
+    "sub": "ENGL.G6.LISTEN.T6_PRONUNCIATION_AND_VO",
+    "outcome": "ENGL.G6.LISTEN.T6_PRONUNCIATION_AND_VO.b",
+    "outcomes": [
+      "ENGL.G6.LISTEN.T6_PRONUNCIATION_AND_VO.b"
+    ],
+    "pre": [
+      "ENGL.G6.READIN.T3_INTENSIVE_READING.CONTEXT_CLUES"
+    ],
+    "mis": [
+      "M6_WE_PUNCTUAL_REGULAR",
+      "M6_WE_SALARY_WAGE",
+      "M6_WE_INTEGRITY_INTELLIGENT",
+      "M6_WE_DILIGENT_DELIGHT"
+    ],
+    "nofamily": "questions"
+  },
+  "ENGL.G6.LISTEN.T6_PRONUNCIATION_AND_VO.INTONATION": {
+    "name": "Use stress and intonation in questions, statements and exclamations",
+    "sub": "ENGL.G6.LISTEN.T6_PRONUNCIATION_AND_VO",
+    "outcome": "ENGL.G6.LISTEN.T6_PRONUNCIATION_AND_VO.c",
+    "outcomes": [
+      "ENGL.G6.LISTEN.T6_PRONUNCIATION_AND_VO.c"
+    ],
+    "pre": [
+      "ENGL.G6.LANGUA.T11_INTERROGATIVES.INTERROGATIVES_USE"
+    ],
+    "mis": [
+      "M6_IN_EXCLAM_FLAT",
+      "M6_IN_WH_RISE",
+      "M6_IN_YESNO_FLAT",
+      "M6_IN_STATEMENT_UP"
+    ],
+    "nofamily": "voice"
+  },
+  "ENGL.G6.READIN.T6_INTENSIVE_READING.RELATE_TO_LIFE": {
+    "name": "Make connections between events in a text and one's own experiences",
+    "sub": "ENGL.G6.READIN.T6_INTENSIVE_READING",
+    "outcome": "ENGL.G6.READIN.T6_INTENSIVE_READING.a",
+    "outcomes": [
+      "ENGL.G6.READIN.T6_INTENSIVE_READING.a",
+      "ENGL.G6.READIN.T9_INTENSIVE_READING_FI.a",
+      "ENGL.G6.READIN.T10_INTENSIVE_READING.a"
+    ],
+    "pre": [
+      "ENGL.G6.READIN.T2_INTENSIVE_READING.STORY_ELEMENTS"
+    ],
+    "mis": [
+      "M6_RL_RETELL",
+      "M6_RL_SURFACE",
+      "M6_RL_JUDGES_ONLY",
+      "M6_RL_CHANGES_TEXT"
+    ],
+    "nofamily": "teacher"
   },
   "ENGL.G6.LANGUA.T6_PHRASAL_QUANTIFIERS.PHRASAL_QUANTIFIERS": {
     "name": "Use a number of, a great deal of, plenty of and a piece of with the right noun",
@@ -33227,6 +34896,25 @@ var SKILLS17 = {
       "M_PQ_OF_MISSING",
       "M_PQ_WRONG_UNIT"
     ]
+  },
+  "ENGL.G6.WRITIN.T6_CREATIVE_WRITING.PICTORIAL_COMPOSITION": {
+    "name": "Write and judge a composition from visuals",
+    "sub": "ENGL.G6.WRITIN.T6_CREATIVE_WRITING",
+    "outcome": "ENGL.G6.WRITIN.T6_CREATIVE_WRITING.c",
+    "outcomes": [
+      "ENGL.G6.WRITIN.T6_CREATIVE_WRITING.c",
+      "ENGL.G6.WRITIN.T6_CREATIVE_WRITING.d"
+    ],
+    "pre": [
+      "ENGL.G6.WRITIN.T2_CREATIVE_WRITING.PLAN_COMPOSITION"
+    ],
+    "mis": [
+      "M6_PIC_LABELS",
+      "M6_PIC_NO_LINKS",
+      "M6_PIC_SKIP",
+      "M6_PIC_TITLE"
+    ],
+    "nofamily": "composition"
   },
   "ENGL.G6.LANGUA.T7_TENSE.FUTURE_CONTINUOUS": {
     "name": "Use the future continuous: will be + verb-ing",
@@ -33318,6 +35006,25 @@ var SKILLS17 = {
       "M_PV_SAME_MEANING"
     ]
   },
+  "ENGL.G6.READIN.T8_FLUENCY.READ_FLUENTLY": {
+    "name": "Read a text accurately, at a reasonable speed and with expression",
+    "sub": "ENGL.G6.READIN.T8_FLUENCY",
+    "outcome": "ENGL.G6.READIN.T8_FLUENCY.b",
+    "outcomes": [
+      "ENGL.G6.READIN.T8_FLUENCY.b",
+      "ENGL.G6.READIN.T8_FLUENCY.c"
+    ],
+    "pre": [
+      "ENGL.G6.WRITIN.T7_MECHANICS_OF_WRITING.QUOTATION_MARKS"
+    ],
+    "mis": [
+      "M6_RF_NO_PHRASING",
+      "M6_RF_TOO_FAST",
+      "M6_RF_FLAT_SPEECH",
+      "M6_RF_SELF_CORRECT_LOOP"
+    ],
+    "nofamily": "voice"
+  },
   "ENGL.G6.LANGUA.T8_SENTENCE_PATTERNS.ACTIVE_PASSIVE": {
     "name": "Tell active and passive sentences apart and write the passive",
     "sub": "ENGL.G6.LANGUA.T8_SENTENCE_PATTERNS",
@@ -33353,6 +35060,25 @@ var SKILLS17 = {
       "M_CW_SEE_LOOK"
     ]
   },
+  "ENGL.G6.LISTEN.T9_PRONUNCIATION_AND_SP.SPEAK_FLUENTLY": {
+    "name": "Make an oral presentation fluently, accurately and with expression",
+    "sub": "ENGL.G6.LISTEN.T9_PRONUNCIATION_AND_SP",
+    "outcome": "ENGL.G6.LISTEN.T9_PRONUNCIATION_AND_SP.c",
+    "outcomes": [
+      "ENGL.G6.LISTEN.T9_PRONUNCIATION_AND_SP.c",
+      "ENGL.G6.LISTEN.T12_PRONUNCIATION_AND_VO.b"
+    ],
+    "pre": [
+      "ENGL.G6.LISTEN.T3_PRONUNCIATION_AND_VO.PRONOUNCE_SOUNDS"
+    ],
+    "mis": [
+      "M6_SF_READS_SPEECH",
+      "M6_SF_FILLERS",
+      "M6_SF_RUSH",
+      "M6_SF_NO_STRUCTURE"
+    ],
+    "nofamily": "voice"
+  },
   "ENGL.G6.READIN.T9_INTENSIVE_READING_FI.FACT_OPINION": {
     "name": "Tell a fact from an opinion, and a story from information",
     "sub": "ENGL.G6.READIN.T9_INTENSIVE_READING_FI",
@@ -33366,7 +35092,8 @@ var SKILLS17 = {
     "mis": [
       "M_FO_OPINION_AS_FACT",
       "M_FO_FACT_AS_OPINION",
-      "M_FO_STORY_INFO"
+      "M_FO_STORY_INFO",
+      "M6_FO_NUMBER_FACT"
     ]
   },
   "ENGL.G6.LANGUA.T9_ADVERBS.ADVERBS_USE": {
@@ -33406,6 +35133,24 @@ var SKILLS17 = {
       "M_HYP_RELATIVE"
     ]
   },
+  "ENGL.G6.LISTEN.T10_PRONUNCIATION_AND_VO.EXPRESS_MOODS": {
+    "name": "Express fitting moods in a conversation",
+    "sub": "ENGL.G6.LISTEN.T10_PRONUNCIATION_AND_VO",
+    "outcome": "ENGL.G6.LISTEN.T10_PRONUNCIATION_AND_VO.c",
+    "outcomes": [
+      "ENGL.G6.LISTEN.T10_PRONUNCIATION_AND_VO.c"
+    ],
+    "pre": [
+      "ENGL.G6.LISTEN.T3_PRONUNCIATION_AND_VO.POLITE_TALK"
+    ],
+    "mis": [
+      "M6_EM_FLAT",
+      "M6_EM_WRONG_MOOD",
+      "M6_EM_WORDS_ONLY",
+      "M6_EM_SURPRISE"
+    ],
+    "nofamily": "voice"
+  },
   "ENGL.G6.LANGUA.T10_CONJUNCTIONS.CONJUNCTIONS_USE": {
     "name": "Join ideas with although, unless, while, so that, until and whereas",
     "sub": "ENGL.G6.LANGUA.T10_CONJUNCTIONS",
@@ -33423,6 +35168,45 @@ var SKILLS17 = {
       "M_CJ_SO_THAT_MEANING",
       "M_CJ_WHEREAS"
     ]
+  },
+  "ENGL.G6.WRITIN.T10_CREATIVE_WRITING.DESCRIBING_WORDS": {
+    "name": "Use fitting adjectives to describe a person, object or place",
+    "sub": "ENGL.G6.WRITIN.T10_CREATIVE_WRITING",
+    "outcome": "ENGL.G6.WRITIN.T10_CREATIVE_WRITING.a",
+    "outcomes": [
+      "ENGL.G6.WRITIN.T10_CREATIVE_WRITING.a"
+    ],
+    "pre": [
+      "ENGL.G6.LANGUA.T5_ADJECTIVES.ADJECTIVE_DEGREES"
+    ],
+    "mis": [
+      "M6_DW_VAGUE",
+      "M6_DW_ORDER",
+      "M6_DW_ADVERB",
+      "M6_DW_WRONG_SENSE"
+    ],
+    "nofamily": "questions"
+  },
+  "ENGL.G6.WRITIN.T10_CREATIVE_WRITING.DESCRIPTIVE_COMPOSITION": {
+    "name": "Plan, write and judge a descriptive composition",
+    "sub": "ENGL.G6.WRITIN.T10_CREATIVE_WRITING",
+    "outcome": "ENGL.G6.WRITIN.T10_CREATIVE_WRITING.b",
+    "outcomes": [
+      "ENGL.G6.WRITIN.T10_CREATIVE_WRITING.b",
+      "ENGL.G6.WRITIN.T10_CREATIVE_WRITING.c",
+      "ENGL.G6.WRITIN.T10_CREATIVE_WRITING.d"
+    ],
+    "pre": [
+      "ENGL.G6.WRITIN.T10_CREATIVE_WRITING.DESCRIBING_WORDS",
+      "ENGL.G6.WRITIN.T2_CREATIVE_WRITING.PLAN_COMPOSITION"
+    ],
+    "mis": [
+      "M6_DC_STORY",
+      "M6_DC_LIST",
+      "M6_DC_NO_ORDER",
+      "M6_DC_JUDGE_LENGTH"
+    ],
+    "nofamily": "composition"
   },
   "ENGL.G6.LANGUA.T11_INTERROGATIVES.INTERROGATIVES_USE": {
     "name": "Ask questions with whose, which, whom, how often, how long and how far",
@@ -33458,6 +35242,23 @@ var SKILLS17 = {
       "M_SA_REPEAT"
     ]
   },
+  "ENGL.G6.LISTEN.T12_PRONUNCIATION_AND_VO.NONVERBAL_CUES": {
+    "name": "Use non-verbal cues to support speech and judge them in others",
+    "sub": "ENGL.G6.LISTEN.T12_PRONUNCIATION_AND_VO",
+    "outcome": "ENGL.G6.LISTEN.T12_PRONUNCIATION_AND_VO.c",
+    "outcomes": [
+      "ENGL.G6.LISTEN.T12_PRONUNCIATION_AND_VO.c",
+      "ENGL.G6.LISTEN.T12_PRONUNCIATION_AND_VO.d"
+    ],
+    "pre": [],
+    "mis": [
+      "M6_NC_NO_EYE_CONTACT",
+      "M6_NC_GESTURE_MISMATCH",
+      "M6_NC_FIDGET",
+      "M6_NC_FACE_WORDS"
+    ],
+    "nofamily": "questions"
+  },
   "ENGL.G6.READIN.T12_INTENSIVE_READING.POEM_FEATURES": {
     "name": "Find rhyme, repeated lines and rhythm in a poem or song",
     "sub": "ENGL.G6.READIN.T12_INTENSIVE_READING",
@@ -33472,7 +35273,8 @@ var SKILLS17 = {
     "mis": [
       "M_POEM_SPELL_RHYME",
       "M_POEM_REPEAT_RHYME",
-      "M_POEM_FIRST_WORD"
+      "M_POEM_FIRST_WORD",
+      "M6_POEM_STANZA_LINE"
     ]
   },
   "ENGL.G6.LANGUA.T12_QUESTION_TAGS.QUESTION_TAGS_USE": {
@@ -33522,8 +35324,28 @@ var SKILLS17 = {
     "mis": [
       "M_MON_PROFIT_LOSS",
       "M_MON_IMPORT_EXPORT",
-      "M_MON_RETAIL_WHOLESALE"
+      "M_MON_RETAIL_WHOLESALE",
+      "M6_MON_BARTER_BUY"
     ]
+  },
+  "ENGL.G6.LISTEN.T13_PRONUNCIATION_AND_IN.DICTATION": {
+    "name": "Listen to a short text and write it down accurately",
+    "sub": "ENGL.G6.LISTEN.T13_PRONUNCIATION_AND_IN",
+    "outcome": "ENGL.G6.LISTEN.T13_PRONUNCIATION_AND_IN.b",
+    "outcomes": [
+      "ENGL.G6.LISTEN.T13_PRONUNCIATION_AND_IN.b"
+    ],
+    "pre": [
+      "ENGL.G6.WRITIN.T13_MECHANICS_OF_WRITING.SPELLING_RULES",
+      "ENGL.G6.WRITIN.T7_MECHANICS_OF_WRITING.COMMA_USE"
+    ],
+    "mis": [
+      "M6_DI_SOUND_SPELLING",
+      "M6_DI_MISSED_WORDS",
+      "M6_DI_NO_PUNCTUATION",
+      "M6_DI_ADDS_WORDS"
+    ],
+    "nofamily": "teacher"
   },
   "ENGL.G6.LANGUA.T13_WORD_CLASSES.PREPOSITIONS_USE": {
     "name": "Use between, among, since, for, during, by and the prepositions that follow words",
@@ -33589,6 +35411,7 @@ var MIS_FEEDBACK17 = {
   "M6_MAIN_TOO_BROAD": "The main idea must fit this passage. A very general statement is too wide.",
   "M6_MAIN_NOT_IN_TEXT": "The main idea must be in the passage. Check each answer against it.",
   "M_MAIN_DETAIL_FOR_ASKED": "A specific detail question wants the exact fact, such as a time, name or place.",
+  "M6_CL_CHORE_LABOUR": "Child labour is harmful work that stops a child learning or hurts her.",
   "M_REF_WRONG_BOOK": "A dictionary gives word meanings, an atlas has maps, an encyclopaedia gives facts on many topics.",
   "M_REF_ALPHA_FIRST": "When the first letters are the same, look at the second, third and so on.",
   "M6_REF_GUIDE_WORDS": "A word is on the page only if it falls between the two guide words in alphabetical order.",
@@ -33597,6 +35420,10 @@ var MIS_FEEDBACK17 = {
   "M_TXT_COVER_ONLY": "The cover can mislead. Read the blurb and a page to see the topic and the level.",
   "M_TXT_TOO_HARD": "A text is right if you understand most of it and meet only a few new words.",
   "M_TXT_OFF_TOPIC": "A relevant text is about the same topic as your need.",
+  "M6_IR_ONE_GENRE": "Choose a new kind of text each week.",
+  "M6_IR_NO_RECORD": "One line after each book.",
+  "M6_IR_ABANDONS": "Give a book a chapter.",
+  "M6_IR_CANNOT_RECOMMEND": "Give one reason from the book.",
   "M_DET_EACH_PLURAL": "Each points to one person or thing at a time, so the verb is singular: each girl has.",
   "M_DET_LOTS_FORM": "The phrase is a lot of (one lot) or lots of. A lots of is not used.",
   "M_DET_ENOUGH_AFTER": "Enough comes AFTER an adjective (big enough) and BEFORE a noun (enough chairs).",
@@ -33638,6 +35465,10 @@ var MIS_FEEDBACK17 = {
   "M_CHAR_NAME_ONLY": "What a character says and does shows what they are like.",
   "M_CHAR_OPPOSITE": "The actions in the story show the trait. This trait is the opposite.",
   "M_CHAR_WRONG_EVIDENCE": "Evidence for a trait is something the character does or says that shows it.",
+  "M6_PRED_TITLE_IGNORED": "The title is the first clue.",
+  "M6_INFER_OWN_FEELING": "Ask: what does the clue show about the character?",
+  "M6_IMG_ADDS": "Picture only what the words say.",
+  "M6_CHAR_ONE_ACT": "Look at all the character does and says.",
   "M_NOUN_FEELING_CONCRETE": "A concrete noun is something you can see or touch. Kindness, fear and freedom are ideas, so they are abstract.",
   "M_NOUN_PLACE_ABSTRACT": "Places, people, animals and things are concrete nouns because we can see or touch them.",
   "M_NOUN_ADJECTIVE_FORM": "After her or his, a noun is needed. The noun for the quality honest is honesty.",
@@ -33646,10 +35477,22 @@ var MIS_FEEDBACK17 = {
   "M_PARA_OFF_TOPIC": "Every sentence must help the main idea. A sentence about something else does not belong.",
   "M_PARA_ORDER": "Look for time words (first, then, finally) and for an ending sentence. The order should follow what happened.",
   "M_PARA_CONCLUSION": "The closing sentence wraps up the paragraph. A new topic belongs in a new paragraph.",
+  "M6_PC_OFF_TOPIC": "Cross out ideas that leave the topic.",
+  "M6_PC_NO_ORDER": "Number them in the order they happen.",
+  "M6_PC_TOPIC_TOO_WIDE": "Choose a topic you can cover in a page.",
+  "M6_PC_PLAN_TOO_LONG": "A plan is short notes.",
+  "M6_OC_DRIFT": "Check each paragraph against the title.",
+  "M6_OC_ONE_BLOCK": "New idea, new paragraph.",
+  "M6_OC_REPEATED_LINKS": "Vary linking words.",
+  "M6_OC_FORCED_IDIOMS": "Use an idiom only where its meaning fits.",
   "M_POL_BLUNT": "A polite interruption begins with Excuse me and asks permission.",
   "M_POL_PHONE_START": "On the telephone say hello, say who is speaking and ask how you can help.",
   "M_POL_CLARIFY": "To ask someone to repeat, say Pardon or Could you say that again, please.",
   "M_POL_MESSAGE": "If the person is out, say so and ask, May I take a message?",
+  "M6_PS_TOUR_TORE": "Start with oo and slide to uh: too-uh.",
+  "M6_PS_PHONE_FON": "Glide from uh to oo: phone.",
+  "M6_PS_H_DROP_ADD": "Breathe out a small h at the start of hen and house; none in hour.",
+  "M6_PS_V_F": "Teeth on lip and voice on: v.",
   "M6_CTX_COMMON_MEANING": "Many words have more than one meaning. Try each one in the sentence.",
   "M6_CTX_LOOKS_LIKE": "A word can look like another word and mean something different. Use the clues around it.",
   "M6_CTX_OPPOSITE": "Look at words like but and because. They show whether the word is like or unlike its neighbours.",
@@ -33674,6 +35517,15 @@ var MIS_FEEDBACK17 = {
   "M_RES_VEHICLE_PERSON": "An ambulance is the vehicle. A paramedic is the trained person who treats the patient.",
   "M_RES_EVACUATE": "Evacuate means to leave a dangerous place. Rescue means to save someone from danger.",
   "M_RES_SIREN_ALARM": "A siren is the loud sound of an emergency vehicle. An alarm warns people in a building.",
+  "M6_WS_NOUN_VERB_SAME": "Noun: strong first part. Verb: strong second part.",
+  "M6_WS_SMALL_WORDS": "Stress the words that carry meaning; keep the, a and is weak.",
+  "M6_WS_PENULT": "Clap it: e-MER-gen-cy.",
+  "M6_WS_EQUAL": "One strong beat; the others short.",
+  "M6_RES_FIRST_AID_CPR": "First aid is any help given before the doctor comes.",
+  "M6_RV_PREDICT_ONE_DETAIL": "Look at the whole picture and the caption.",
+  "M6_RV_DECORATION": "Ask: does it help me understand the text?",
+  "M6_RV_CAPTION_IGNORED": "Read the caption: it explains the picture.",
+  "M6_RV_DIAGRAM_ORDER": "Follow the arrows from the start.",
   "M_REL_WHICH_PERSON": "Use who for people. Which is for things and animals.",
   "M_REL_WHO_THING": "Use which for things. Who is only for people.",
   "M_REL_WHOSE_WHO": "When the word shows who something belongs to, use whose.",
@@ -33688,20 +35540,48 @@ var MIS_FEEDBACK17 = {
   "M_LET_ADDRESS": "The writer's address goes at the top right. The receiver's address goes under it on the left.",
   "M_LET_NO_SUBJECT": "The subject line sits below the greeting and tells the reader the topic in a few words.",
   "M_LET_SIGNATURE": "The signature goes under the closing, with the full name printed under it.",
+  "M6_FI_NO_DETAILS": "Check: what, when, what time, where.",
+  "M6_FI_INFORMAL_TONE": "Formal letters use polite, formal words.",
+  "M6_FI_ONE_ADDRESS": "Add the receiver's address on the left.",
+  "M6_FI_NO_RSVP": "Ask politely for a reply by a date.",
+  "M6_OR_ONE_WORD": "Answer in a full sentence.",
+  "M6_OR_OFF_QUESTION": "Listen for the question word: when wants a time.",
+  "M6_OR_DETAIL_WRONG": "Use the number the speaker gave.",
+  "M6_OR_NO_FOLLOW_UP": "Ask about something the speaker mentioned.",
   "M_DEGR_AS_COMPARATIVE": "In as ... as, use the plain form: as tall as, not as taller as.",
   "M_DEGR_SUPER_THAN": "Than goes with the comparative. After the tallest use in or of: the tallest in the class.",
   "M_DEGR_THE_MISSING": "A superlative needs the before it: the fastest, the most careful.",
   "M_DEGR_THAN_MISSING": "After a comparative adjective use than, not from or that.",
   "M_DEGR_ONE_OF_SINGULAR": "After one of the + superlative, use a plural noun: one of the tallest girls.",
+  "M6_NC_TENSE": "Keep the story in the past.",
+  "M6_NC_FLAT_ENDING": "End by solving the problem.",
+  "M6_NC_JUDGE_SPELLING_ONLY": "Judge language, relevance and organisation too.",
+  "M6_NC_ABBREV_MISUSE": "Use proper acronyms (KWS), not text-speak (2).",
   "M_SND_SPELL_NOT_SOUND": "Spelling can mislead. Say the words aloud: near and beer share the vowel sound, bear does not.",
   "M_SND_F_V": "For /v/ the voice hums with your teeth on your lip. For /f/ there is only air.",
   "M_SND_SILENT_H": "In hour, honest and heir the h is silent, so they start with a vowel sound. In house and hand it is said.",
   "M_SND_TOUR_MORE": "Tour, poor and pure share the sound /\u028A\u0259/. More, door and floor share a different sound.",
+  "M6_WE_PUNCTUAL_REGULAR": "Punctual means on time.",
+  "M6_WE_SALARY_WAGE": "A salary is paid monthly; wages are often daily or weekly.",
+  "M6_WE_INTEGRITY_INTELLIGENT": "Integrity is being honest when no one is watching.",
+  "M6_WE_DILIGENT_DELIGHT": "Diligent means hard-working and careful.",
+  "M6_IN_EXCLAM_FLAT": "Start high and strong to show feeling.",
+  "M6_IN_WH_RISE": "WH questions fall.",
+  "M6_IN_YESNO_FLAT": "Rise at the end.",
+  "M6_IN_STATEMENT_UP": "End a statement low and firm.",
+  "M6_RL_RETELL": "Say something from your own life.",
+  "M6_RL_SURFACE": "Link the main idea.",
+  "M6_RL_JUDGES_ONLY": "Tell when something like it happened to you.",
+  "M6_RL_CHANGES_TEXT": "Keep what the text says.",
   "M_PQ_NUMBER_UNCOUNT": "A number of goes with countable nouns, such as learners or books, not with water or sugar.",
   "M_PQ_AMOUNT_COUNT": "A great deal of and an amount of go with uncountable nouns such as flour, water and advice.",
   "M_PQ_PIECE_PLURAL": "Advice, news, information and furniture have no plural. Say a piece of advice.",
   "M_PQ_OF_MISSING": "These phrases need of: a loaf of bread, a bar of soap, a bottle of milk.",
   "M_PQ_WRONG_UNIT": "Each thing has its own unit word. A bar belongs to soap or chocolate, not to milk.",
+  "M6_PIC_LABELS": "Tell what the people did and felt.",
+  "M6_PIC_NO_LINKS": "Use time and cause links.",
+  "M6_PIC_SKIP": "Tick each picture.",
+  "M6_PIC_TITLE": "Name what the whole story is about.",
   "M_FC_NO_BE": "The future continuous needs be: will be travelling. Will travelling is not complete.",
   "M_FC_WILL_BEEN": "After will use the plain form be, not been or being: will be cooking.",
   "M_FC_PRESENT": "When the time is in the future, use will be + verb-ing, not is or are.",
@@ -33724,6 +35604,10 @@ var MIS_FEEDBACK17 = {
   "M_PV_PARTICLE": "Each particle makes a new meaning. Give up means stop trying; give in means agree after refusing.",
   "M_PV_PREP": "Say agree WITH a person and cope WITH a problem.",
   "M_PV_SAME_MEANING": "Break down means stop working. Break up means to come apart or to end.",
+  "M6_RF_NO_PHRASING": "Read in phrases.",
+  "M6_RF_TOO_FAST": "Read at talking speed; every word counts.",
+  "M6_RF_FLAT_SPEECH": "Let the voice show the shout.",
+  "M6_RF_SELF_CORRECT_LOOP": "Fix the word and keep going.",
   "M_PASS_NO_BE": "A passive sentence needs a form of be before the past participle: was broken, is written.",
   "M_PASS_PAST_FORM": "After was or were use the past participle: was written, was eaten, was taken.",
   "M_PASS_AGREEMENT": "The be-word must match the subject: the book was returned, the books were returned.",
@@ -33735,9 +35619,14 @@ var MIS_FEEDBACK17 = {
   "M_CW_LEARN_TEACH": "The teacher TEACHES and the pupil LEARNS.",
   "M_CW_HEAR_LISTEN": "You hear without trying, but you LISTEN on purpose. Listen is followed by to.",
   "M_CW_SEE_LOOK": "Look is on purpose and takes at (look at). See is what your eyes find. Watch is to look at something that moves.",
+  "M6_SF_READS_SPEECH": "Write key points; look at the audience.",
+  "M6_SF_FILLERS": "Pause silently.",
+  "M6_SF_RUSH": "Slow down and pause between points.",
+  "M6_SF_NO_STRUCTURE": "Greet, say the topic, give points, close.",
   "M_FO_OPINION_AS_FACT": "An opinion says what someone thinks. Words like best and nicest show an opinion. A fact can be checked.",
   "M_FO_FACT_AS_OPINION": "A fact can be checked. Nairobi is the capital is a fact; the most exciting is a feeling.",
   "M_FO_STORY_INFO": "A story is made up, with characters and events. Information gives facts.",
+  "M6_FO_NUMBER_FACT": "A fact can be checked; a feeling about many people is still an opinion.",
   "M6_ADV_ADJ_FOR_ADV": "A word that tells HOW something is done is an adverb, usually ending in -ly: quickly, slowly.",
   "M6_ADV_GOOD_WELL": "Good is an adjective. Well is the adverb of good: a good singer, sings well.",
   "M6_ADV_HARD_HARDLY": "Hard means with much effort. Hardly means almost not: He hardly slept means he slept very little.",
@@ -33747,11 +35636,23 @@ var MIS_FEEDBACK17 = {
   "M_HYP_NUMBER": "Numbers from twenty-one to ninety-nine are hyphenated when written in words.",
   "M_HYP_PLURAL_COMPOUND": "Before a noun, the unit is singular: a ten-year-old boy. Without the hyphen: he is ten years old.",
   "M_HYP_RELATIVE": "Words such as mother-in-law and sister-in-law are written with hyphens.",
+  "M6_EM_FLAT": "Let your voice show the feeling.",
+  "M6_EM_WRONG_MOOD": "Match your tone to their news.",
+  "M6_EM_WORDS_ONLY": "The tone must match the words.",
+  "M6_EM_SURPRISE": "Really? or Oh, no! show surprise politely.",
   "M_CJ_ALTHOUGH_BUT": "Do not use although and but together. Although it rained, we played. Or: It rained but we played.",
   "M_CJ_UNLESS_NOT": "Unless means if not, so do not add not: You will fail unless you study.",
   "M_CJ_WHILE_UNTIL": "Until means up to the time that something happens. While means at the same time as.",
   "M_CJ_SO_THAT_MEANING": "So that gives the purpose: the aim you want. Because gives the reason for something that has happened.",
   "M_CJ_WHEREAS": "Whereas and while show two things that are different. Because shows a reason.",
+  "M6_DW_VAGUE": "Choose a word for a sense: sandy, sunny, quiet.",
+  "M6_DW_ORDER": "Size, age, then material.",
+  "M6_DW_ADVERB": "After is, describe the noun: quiet.",
+  "M6_DW_WRONG_SENSE": "Sound words for sounds.",
+  "M6_DC_STORY": "Describe what it is like.",
+  "M6_DC_LIST": "Add what each thing looks, sounds or feels like.",
+  "M6_DC_NO_ORDER": "Move in one direction.",
+  "M6_DC_JUDGE_LENGTH": "Judge words, relevance, creativity and order.",
   "M_Q_WHO_WHOSE": "Ask whose when you want to know who owns something.",
   "M_Q_WHAT_WHICH": "Use which when the choice is from a small set; use what when anything is possible.",
   "M_Q_HOWMUCH_MANY": "How many is for things you can count (eggs). How much is for things you cannot (milk, money).",
@@ -33761,9 +35662,14 @@ var MIS_FEEDBACK17 = {
   "M_SA_ANT_FOR_SYN": "A synonym has the SAME meaning. Delighted means very pleased, so happy is the synonym.",
   "M_SA_RELATED_NOT_PAIR": "Choose the word that is the exact opposite. Long is about something else; the opposite of wide is narrow.",
   "M_SA_REPEAT": "An antonym is a different word with the opposite meaning, not the same word again.",
+  "M6_NC_NO_EYE_CONTACT": "In a speech, look at different people in the audience.",
+  "M6_NC_GESTURE_MISMATCH": "The gesture should match the meaning.",
+  "M6_NC_FIDGET": "Keep still hands unless you are gesturing.",
+  "M6_NC_FACE_WORDS": "Your face should match the message.",
   "M_POEM_SPELL_RHYME": "Rhyming words sound alike at the end. Cough and rough end with the same letters but do not rhyme.",
   "M_POEM_REPEAT_RHYME": "A repeated line is the same line again. Rhyme is a similar sound at the ends.",
   "M_POEM_FIRST_WORD": "Rhyming words are usually the last words of the lines.",
+  "M6_POEM_STANZA_LINE": "A stanza is a group of lines, like a paragraph in a poem.",
   "M_TAGS_SAME_SIGN": "The tag has the opposite sign: a positive statement takes a negative tag.",
   "M_TAGS_ALWAYS_ISNTIT": "Isn't it is not for every sentence. Use the helper verb in the statement: can, can't you.",
   "M_TAGS_DO_FORM": "When the sentence has only a plain verb, the tag uses do, does or did.",
@@ -33777,6 +35683,11 @@ var MIS_FEEDBACK17 = {
   "M_MON_PROFIT_LOSS": "Profit is the extra money you gain. Loss is money you lose when you sell for less than you paid.",
   "M_MON_IMPORT_EXPORT": "Exports leave the country. Imports come into the country.",
   "M_MON_RETAIL_WHOLESALE": "A retailer sells small amounts to shoppers. A wholesaler sells large amounts to shops.",
+  "M6_DI_SOUND_SPELLING": "Learn the tricky words; check after writing.",
+  "M6_DI_MISSED_WORDS": "Listen for the little words: to, the, on.",
+  "M6_DI_NO_PUNCTUATION": "The pause in the voice is a full stop.",
+  "M6_DI_ADDS_WORDS": "Write only what you hear.",
+  "M6_MON_BARTER_BUY": "Barter is swapping goods without money.",
   "M_PREP_BETWEEN_AMONG": "Use between for two and among for more than two.",
   "M_PREP_SINCE_FOR": "Use since with the time it began (since 2019) and for with how long (for five years).",
   "M_PREP_DEPENDENT": "Learn the pair: interested IN, afraid OF, different FROM, good AT.",
@@ -36789,7 +38700,8 @@ var SKILLS18 = {
     "sub": "ENGL.G7.LISTEN.T1_CONVERSATIONAL_SKILL",
     "outcome": "ENGL.G7.LISTEN.T1_CONVERSATIONAL_SKILL.a",
     "outcomes": [
-      "ENGL.G7.LISTEN.T1_CONVERSATIONAL_SKILL.a"
+      "ENGL.G7.LISTEN.T1_CONVERSATIONAL_SKILL.a",
+      "ENGL.G7.LISTEN.T1_CONVERSATIONAL_SKILL.b"
     ],
     "pre": [],
     "mis": [
@@ -36815,6 +38727,26 @@ var SKILLS18 = {
       "M7_SX_LEVEL",
       "M7_SX_PURPOSE"
     ]
+  },
+  "ENGL.G7.READIN.T1_EXTENSIVE_READING_IN.INDEPENDENT_READING": {
+    "name": "Read selected fiction and non-fiction independently",
+    "sub": "ENGL.G7.READIN.T1_EXTENSIVE_READING_IN",
+    "outcome": "ENGL.G7.READIN.T1_EXTENSIVE_READING_IN.b",
+    "outcomes": [
+      "ENGL.G7.READIN.T1_EXTENSIVE_READING_IN.b",
+      "ENGL.G7.READIN.T9_GRADE_APPROPRIATE_FI.b",
+      "ENGL.G7.READIN.T11_EXTENSIVE_READING_NO.b"
+    ],
+    "pre": [
+      "ENGL.G7.READIN.T1_EXTENSIVE_READING_IN.SUITABLE_TEXT"
+    ],
+    "mis": [
+      "M7_X_IR_ONE_KIND",
+      "M7_X_IR_NO_LOG",
+      "M7_X_IR_BLURB_ONLY",
+      "M7_X_IR_NO_REASON"
+    ],
+    "nofamily": "teacher"
   },
   "ENGL.G7.GRAMMA.T1_WORD_CLASSES_NOUNS.NOUN_TYPES": {
     "name": "Tell common, proper, collective and abstract nouns apart",
@@ -36865,6 +38797,24 @@ var SKILLS18 = {
       "M7_HW_DECORATE"
     ]
   },
+  "ENGL.G7.WRITIN.T1_HANDWRITING_LEGIBILI.LEGIBLE_WRITING": {
+    "name": "Write texts legibly and neatly",
+    "sub": "ENGL.G7.WRITIN.T1_HANDWRITING_LEGIBILI",
+    "outcome": "ENGL.G7.WRITIN.T1_HANDWRITING_LEGIBILI.b",
+    "outcomes": [
+      "ENGL.G7.WRITIN.T1_HANDWRITING_LEGIBILI.b"
+    ],
+    "pre": [
+      "ENGL.G7.WRITIN.T1_HANDWRITING_LEGIBILI.HANDWRITING"
+    ],
+    "mis": [
+      "M7_X_LW_SLANT",
+      "M7_X_LW_SQUEEZE_END",
+      "M7_X_LW_CROSSINGS",
+      "M7_X_LW_NO_MARGIN"
+    ],
+    "nofamily": "teacher"
+  },
   "ENGL.G7.LISTEN.T2_ORAL_PRESENTATIONS_O.ORAL_TECHNIQUES": {
     "name": "Know the techniques of telling an oral narrative",
     "sub": "ENGL.G7.LISTEN.T2_ORAL_PRESENTATIONS_O",
@@ -36880,6 +38830,29 @@ var SKILLS18 = {
       "M7_OT_NO_PARTICIPATION",
       "M7_OT_GESTURE"
     ]
+  },
+  "ENGL.G7.LISTEN.T2_ORAL_PRESENTATIONS_O.PERFORM_ORAL": {
+    "name": "Perform oral narratives, poems, lullabies and praise songs with the right techniques",
+    "sub": "ENGL.G7.LISTEN.T2_ORAL_PRESENTATIONS_O",
+    "outcome": "ENGL.G7.LISTEN.T2_ORAL_PRESENTATIONS_O.b",
+    "outcomes": [
+      "ENGL.G7.LISTEN.T2_ORAL_PRESENTATIONS_O.b",
+      "ENGL.G7.READIN.T2_INTENSIVE_READING_SI.b",
+      "ENGL.G7.READIN.T3_INTENSIVE_READING_PO.c",
+      "ENGL.G7.READIN.T6_ORAL_LITERATURE_SONG.b",
+      "ENGL.G7.READIN.T13_ORAL_LITERATURE_PRAI.c"
+    ],
+    "pre": [
+      "ENGL.G7.LISTEN.T2_ORAL_PRESENTATIONS_O.ORAL_TECHNIQUES",
+      "ENGL.G7.READIN.T3_INTENSIVE_READING_PO.POEM_STRUCTURE"
+    ],
+    "mis": [
+      "M7_X_PO_READS",
+      "M7_X_PO_ONE_VOICE",
+      "M7_X_PO_NO_AUDIENCE",
+      "M7_X_PO_WRONG_MOOD"
+    ],
+    "nofamily": "voice"
   },
   "ENGL.G7.GRAMMA.T2_WORD_CLASSES_NOUNS.COUNT_NONCOUNT": {
     "name": "Use count and non-count nouns: many, much, a few, a little",
@@ -36931,6 +38904,24 @@ var SKILLS18 = {
       "M7_BP_GLOSSARY"
     ]
   },
+  "ENGL.G7.READIN.T2_INTENSIVE_READING_CL.AUTHOR_SETTING": {
+    "name": "Describe the author and the setting of a class reader",
+    "sub": "ENGL.G7.READIN.T2_INTENSIVE_READING_CL",
+    "outcome": "ENGL.G7.READIN.T2_INTENSIVE_READING_CL.b",
+    "outcomes": [
+      "ENGL.G7.READIN.T2_INTENSIVE_READING_CL.b"
+    ],
+    "pre": [
+      "ENGL.G7.READIN.T2_INTENSIVE_READING_CL.BOOK_PARTS"
+    ],
+    "mis": [
+      "M7_X_AS_PUBLISHER",
+      "M7_X_AS_PLACE_ONLY",
+      "M7_X_AS_NO_CLUES",
+      "M7_X_AS_CHARACTER_AUTHOR"
+    ],
+    "nofamily": "questions"
+  },
   "ENGL.G7.WRITIN.T2_MECHANICS_OF_WRITING.END_MARKS": {
     "name": "Use the full stop, question mark and exclamation mark",
     "sub": "ENGL.G7.WRITIN.T2_MECHANICS_OF_WRITING",
@@ -36959,7 +38950,8 @@ var SKILLS18 = {
     "mis": [
       "M7_IO_MIXED",
       "M7_IO_STORY_INFO",
-      "M7_IO_SKIM"
+      "M7_IO_SKIM",
+      "M7_X_IO_SPEED"
     ]
   },
   "ENGL.G7.GRAMMA.T3_VERBS_AND_TENSE.IRREGULAR_VERBS": {
@@ -37030,6 +39022,26 @@ var SKILLS18 = {
       "M7_NP_NO_CLOSING"
     ]
   },
+  "ENGL.G7.WRITIN.T3_WRITING_NARRATIVE_PA.PARAGRAPH_WRITING": {
+    "name": "Compose a well-developed narrative paragraph using examples and incidents",
+    "sub": "ENGL.G7.WRITIN.T3_WRITING_NARRATIVE_PA",
+    "outcome": "ENGL.G7.WRITIN.T3_WRITING_NARRATIVE_PA.b",
+    "outcomes": [
+      "ENGL.G7.WRITIN.T3_WRITING_NARRATIVE_PA.b",
+      "ENGL.G7.WRITIN.T4_PARAGRAPHING_USING_E.b"
+    ],
+    "pre": [
+      "ENGL.G7.WRITIN.T3_WRITING_NARRATIVE_PA.NARRATIVE_PARAGRAPH",
+      "ENGL.G7.WRITIN.T4_PARAGRAPHING_USING_E.PARAGRAPH_EXAMPLES"
+    ],
+    "mis": [
+      "M7_X_PW_NO_TOPIC",
+      "M7_X_PW_EXAMPLE_OFF",
+      "M7_X_PW_NO_CLOSE",
+      "M7_X_PW_MANY_IDEAS"
+    ],
+    "nofamily": "composition"
+  },
   "ENGL.G7.LISTEN.T4_LISTENING_COMPREHENS.SPECIFIC_GENERAL": {
     "name": "Tell specific from general information and pick out the details",
     "sub": "ENGL.G7.LISTEN.T4_LISTENING_COMPREHENS",
@@ -37048,6 +39060,26 @@ var SKILLS18 = {
       "M7_SG_NUMBER_SLIP"
     ]
   },
+  "ENGL.G7.LISTEN.T4_LISTENING_COMPREHENS.LISTEN_RESPOND": {
+    "name": "Listen attentively to a text or song and respond to its key issues",
+    "sub": "ENGL.G7.LISTEN.T4_LISTENING_COMPREHENS",
+    "outcome": "ENGL.G7.LISTEN.T4_LISTENING_COMPREHENS.c",
+    "outcomes": [
+      "ENGL.G7.LISTEN.T4_LISTENING_COMPREHENS.c",
+      "ENGL.G7.LISTEN.T13_LISTENING_COMPREHENS.a",
+      "ENGL.G7.LISTEN.T13_LISTENING_COMPREHENS.b"
+    ],
+    "pre": [
+      "ENGL.G7.LISTEN.T4_LISTENING_COMPREHENS.SPECIFIC_GENERAL"
+    ],
+    "mis": [
+      "M7_X_LR_DETAIL_AS_ISSUE",
+      "M7_X_LR_OFF_RESPONSE",
+      "M7_X_LR_MISHEARD",
+      "M7_X_LR_REPEATS"
+    ],
+    "nofamily": "voice"
+  },
   "ENGL.G7.READIN.T4_INTENSIVE_READING.READING_STRATEGIES": {
     "name": "Choose a reading strategy for a purpose: skimming, scanning, predicting, rereading",
     "sub": "ENGL.G7.READIN.T4_INTENSIVE_READING",
@@ -37058,7 +39090,9 @@ var SKILLS18 = {
     "pre": [],
     "mis": [
       "M7_RS_SKIM_SCAN",
-      "M7_RS_WRONG"
+      "M7_RS_WRONG",
+      "M7_X_RS_REREAD_NEVER",
+      "M7_X_RS_PREVIEW_SKIP"
     ]
   },
   "ENGL.G7.GRAMMA.T4_VERBS_AND_TENSE.SIMPLE_PRESENT": {
@@ -37126,13 +39160,15 @@ var SKILLS18 = {
       "ENGL.G7.READIN.T10_CHARACTERS_AND_THEIR.b",
       "ENGL.G7.READIN.T8_INTENSIVE_READING_PO.b",
       "ENGL.G7.READIN.T12_INTENSIVE_READING_CO.c",
-      "ENGL.G7.LISTEN.T8_LISTENING_COMPREHENS.a"
+      "ENGL.G7.LISTEN.T8_LISTENING_COMPREHENS.a",
+      "ENGL.G7.READIN.T8_INTENSIVE_READING_PO.a"
     ],
     "pre": [],
     "mis": [
       "M7_CT_OPPOSITE",
       "M7_CT_NAME_ONLY",
-      "M7_CT_WRONG_EVIDENCE"
+      "M7_CT_WRONG_EVIDENCE",
+      "M7_X_CT_ACTION_AS_TRAIT"
     ]
   },
   "ENGL.G7.READIN.T4_INTENSIVE_READING_CL.PREDICT": {
@@ -37169,6 +39205,45 @@ var SKILLS18 = {
       "M7_PE_INCIDENT_GENERAL",
       "M7_PE_KEEPS_OFF_TOPIC"
     ]
+  },
+  "ENGL.G7.LISTEN.T5_PRONUNCIATION_SOUNDS.PRONOUNCE_SOUNDS": {
+    "name": "Articulate the consonant and vowel sounds clearly in words and sentences",
+    "sub": "ENGL.G7.LISTEN.T5_PRONUNCIATION_SOUNDS",
+    "outcome": "ENGL.G7.LISTEN.T5_PRONUNCIATION_SOUNDS.b",
+    "outcomes": [
+      "ENGL.G7.LISTEN.T5_PRONUNCIATION_SOUNDS.b",
+      "ENGL.G7.LISTEN.T14_CONSONANT_SOUNDS_AND.b"
+    ],
+    "pre": [
+      "ENGL.G7.LISTEN.T14_CONSONANT_SOUNDS_AND.SOUNDS_CONSONANTS"
+    ],
+    "mis": [
+      "M7_X_PS_T_D",
+      "M7_X_PS_L_R",
+      "M7_X_PS_PULL_POOL",
+      "M7_X_PS_NG_NG_G"
+    ],
+    "nofamily": "voice"
+  },
+  "ENGL.G7.LISTEN.T5_PRONUNCIATION_SOUNDS.WORD_STRESS": {
+    "name": "Use stress to pronounce words correctly and tell their meanings apart",
+    "sub": "ENGL.G7.LISTEN.T5_PRONUNCIATION_SOUNDS",
+    "outcome": "ENGL.G7.LISTEN.T5_PRONUNCIATION_SOUNDS.c",
+    "outcomes": [
+      "ENGL.G7.LISTEN.T5_PRONUNCIATION_SOUNDS.c",
+      "ENGL.G7.LISTEN.T9_PRONUNCIATION_CONSON.c",
+      "ENGL.G7.LISTEN.T9_PRONUNCIATION_CONSON.d"
+    ],
+    "pre": [
+      "ENGL.G7.LISTEN.T9_PRONUNCIATION_CONSON.SOUNDS_VOWELS"
+    ],
+    "mis": [
+      "M7_X_WS_NOUN_VERB",
+      "M7_X_WS_LAST",
+      "M7_X_WS_EQUAL",
+      "M7_X_WS_MEANING"
+    ],
+    "nofamily": "voice"
   },
   "ENGL.G7.GRAMMA.T5_COMPARATIVE_AND_SUPE.ADJECTIVE_DEGREES": {
     "name": "Use comparative and superlative adjectives",
@@ -37207,6 +39282,28 @@ var SKILLS18 = {
       "M7_ML_HERO_TRAIT"
     ]
   },
+  "ENGL.G7.READIN.T5_INTENSIVE_READING_OR.RELATE_TO_LIFE": {
+    "name": "Relate characters, lessons and events in texts to real life",
+    "sub": "ENGL.G7.READIN.T5_INTENSIVE_READING_OR",
+    "outcome": "ENGL.G7.READIN.T5_INTENSIVE_READING_OR.c",
+    "outcomes": [
+      "ENGL.G7.READIN.T5_INTENSIVE_READING_OR.c",
+      "ENGL.G7.READIN.T5_INTENSIVE_READING_OR.d",
+      "ENGL.G7.READIN.T8_INTENSIVE_READING.c",
+      "ENGL.G7.READIN.T10_CHARACTERS_AND_THEIR.c",
+      "ENGL.G7.READIN.T12_CLASS_READER_MAIN_ID.c"
+    ],
+    "pre": [
+      "ENGL.G7.READIN.T5_INTENSIVE_READING_OR.MORAL_LESSON"
+    ],
+    "mis": [
+      "M7_X_RL_RETELL",
+      "M7_X_RL_SURFACE",
+      "M7_X_RL_NO_WHY",
+      "M7_X_RL_CHANGES_TEXT"
+    ],
+    "nofamily": "teacher"
+  },
   "ENGL.G7.WRITIN.T5_FUNCTIONAL_WRITING_F.FRIENDLY_LETTER": {
     "name": "Know the parts of a friendly letter",
     "sub": "ENGL.G7.WRITIN.T5_FUNCTIONAL_WRITING_F",
@@ -37223,12 +39320,31 @@ var SKILLS18 = {
       "M7_FL_ORDER"
     ]
   },
+  "ENGL.G7.WRITIN.T5_FUNCTIONAL_WRITING_F.FRIENDLY_LETTER_WRITE": {
+    "name": "Compose a friendly letter in the correct format",
+    "sub": "ENGL.G7.WRITIN.T5_FUNCTIONAL_WRITING_F",
+    "outcome": "ENGL.G7.WRITIN.T5_FUNCTIONAL_WRITING_F.b",
+    "outcomes": [
+      "ENGL.G7.WRITIN.T5_FUNCTIONAL_WRITING_F.b"
+    ],
+    "pre": [
+      "ENGL.G7.WRITIN.T5_FUNCTIONAL_WRITING_F.FRIENDLY_LETTER"
+    ],
+    "mis": [
+      "M7_X_FL_FORMAL",
+      "M7_X_FL_NO_PARAGRAPHS",
+      "M7_X_FL_TWO_ADDRESSES",
+      "M7_X_FL_NO_CLOSING"
+    ],
+    "nofamily": "composition"
+  },
   "ENGL.G7.LISTEN.T6_CONVERSATION_SKILLS.POLITE_INTERRUPT": {
     "name": "Interrupt politely and take turns",
     "sub": "ENGL.G7.LISTEN.T6_CONVERSATION_SKILLS",
     "outcome": "ENGL.G7.LISTEN.T6_CONVERSATION_SKILLS.a",
     "outcomes": [
-      "ENGL.G7.LISTEN.T6_CONVERSATION_SKILLS.a"
+      "ENGL.G7.LISTEN.T6_CONVERSATION_SKILLS.a",
+      "ENGL.G7.LISTEN.T6_CONVERSATION_SKILLS.c"
     ],
     "pre": [],
     "mis": [
@@ -37237,6 +39353,43 @@ var SKILLS18 = {
       "M7_PI_NON_VERBAL",
       "M7_PI_TURN_TAKING"
     ]
+  },
+  "ENGL.G7.LISTEN.T6_CONVERSATION_SKILLS.TURN_TAKING": {
+    "name": "Apply turn-taking skills in different speaking contexts",
+    "sub": "ENGL.G7.LISTEN.T6_CONVERSATION_SKILLS",
+    "outcome": "ENGL.G7.LISTEN.T6_CONVERSATION_SKILLS.b",
+    "outcomes": [
+      "ENGL.G7.LISTEN.T6_CONVERSATION_SKILLS.b"
+    ],
+    "pre": [
+      "ENGL.G7.LISTEN.T6_CONVERSATION_SKILLS.POLITE_INTERRUPT"
+    ],
+    "mis": [
+      "M7_X_TT_DOMINATES",
+      "M7_X_TT_NO_LINK",
+      "M7_X_TT_SILENT",
+      "M7_X_TT_INTERRUPTS"
+    ],
+    "nofamily": "voice"
+  },
+  "ENGL.G7.READIN.T6_READING_FLUENCY.READ_FLUENTLY": {
+    "name": "Read a text at the right speed, accurately and with expression",
+    "sub": "ENGL.G7.READIN.T6_READING_FLUENCY",
+    "outcome": "ENGL.G7.READIN.T6_READING_FLUENCY.b",
+    "outcomes": [
+      "ENGL.G7.READIN.T6_READING_FLUENCY.b",
+      "ENGL.G7.READIN.T15_READING_FLUENCY.b"
+    ],
+    "pre": [
+      "ENGL.G7.READIN.T15_READING_FLUENCY.FLUENCY_STRATEGIES"
+    ],
+    "mis": [
+      "M7_X_RF_NO_PHRASING",
+      "M7_X_RF_IGNORES_PUNCTUATION",
+      "M7_X_RF_FLAT",
+      "M7_X_RF_TOO_FAST"
+    ],
+    "nofamily": "voice"
   },
   "ENGL.G7.GRAMMA.T6_WORD_CLASSES_ADVERBS.ADVERB_KINDS": {
     "name": "Tell adverbs of time, place and manner apart",
@@ -37287,6 +39440,25 @@ var SKILLS18 = {
       "M7_MS_SOUND_SPELL",
       "M7_MS_HOMOPHONE_FORM"
     ]
+  },
+  "ENGL.G7.LISTEN.T7_LISTENING_COMPREHENS.LISTENING_NOTES": {
+    "name": "Take detailed notes while listening",
+    "sub": "ENGL.G7.LISTEN.T7_LISTENING_COMPREHENS",
+    "outcome": "ENGL.G7.LISTEN.T7_LISTENING_COMPREHENS.b",
+    "outcomes": [
+      "ENGL.G7.LISTEN.T7_LISTENING_COMPREHENS.b"
+    ],
+    "pre": [
+      "ENGL.G7.READIN.T10_STUDY_SKILLS_NOTE_MA.NOTE_MAKING",
+      "ENGL.G7.LISTEN.T4_LISTENING_COMPREHENS.SPECIFIC_GENERAL"
+    ],
+    "mis": [
+      "M7_X_LN_WHOLE_SENTENCES",
+      "M7_X_LN_MISSES_SIGNALS",
+      "M7_X_LN_NUMBERS_WRONG",
+      "M7_X_LN_NO_HEADINGS"
+    ],
+    "nofamily": "teacher"
   },
   "ENGL.G7.READIN.T7_INDEPENDENT_READING_.VISUALS": {
     "name": "Read a table, a chart or a map for information",
@@ -37357,6 +39529,29 @@ var SKILLS18 = {
       "M7_WP_PUBLISH_FIRST"
     ]
   },
+  "ENGL.G7.WRITIN.T7_COMPOSITION_THE_WRIT.NARRATIVE_COMPOSITION": {
+    "name": "Write and self-assess narrative compositions through the writing process",
+    "sub": "ENGL.G7.WRITIN.T7_COMPOSITION_THE_WRIT",
+    "outcome": "ENGL.G7.WRITIN.T7_COMPOSITION_THE_WRIT.b",
+    "outcomes": [
+      "ENGL.G7.WRITIN.T7_COMPOSITION_THE_WRIT.b",
+      "ENGL.G7.WRITIN.T8_COMPOSITION_WRITING_.b",
+      "ENGL.G7.WRITIN.T9_CREATIVE_WRITING_NAR.b",
+      "ENGL.G7.WRITIN.T13_CREATIVE_WRITING_NAR.b"
+    ],
+    "pre": [
+      "ENGL.G7.WRITIN.T7_COMPOSITION_THE_WRIT.WRITING_PROCESS",
+      "ENGL.G7.WRITIN.T9_CREATIVE_WRITING_NAR.NARRATIVE_FEATURES",
+      "ENGL.G7.WRITIN.T13_CREATIVE_WRITING_NAR.IDIOMS"
+    ],
+    "mis": [
+      "M7_X_NC_NO_PLAN",
+      "M7_X_NC_IDIOM_MISUSE",
+      "M7_X_NC_WEAK_INTRO",
+      "M7_X_NC_SELF_ASSESS_SPELLING"
+    ],
+    "nofamily": "composition"
+  },
   "ENGL.G7.GRAMMA.T8_SIMPLE_PREPOSITIONS.PREPOSITIONS": {
     "name": "Use simple prepositions of time, place and direction",
     "sub": "ENGL.G7.GRAMMA.T8_SIMPLE_PREPOSITIONS",
@@ -37387,7 +39582,8 @@ var SKILLS18 = {
     "mis": [
       "M7_AN_PART_MIX",
       "M7_AN_SPELLING_ONLY",
-      "M7_AN_SKIP_READ"
+      "M7_AN_SKIP_READ",
+      "M7_X_AN_TITLE_FIT"
     ]
   },
   "ENGL.G7.LISTEN.T9_PRONUNCIATION_CONSON.SOUNDS_VOWELS": {
@@ -37402,7 +39598,8 @@ var SKILLS18 = {
     "mis": [
       "M7_SV_SPELLING_SAME",
       "M7_SV_SHORT_LONG",
-      "M7_SV_ODD_ONE"
+      "M7_SV_ODD_ONE",
+      "M7_X_SV_DIPHTHONG"
     ]
   },
   "ENGL.G7.GRAMMA.T9_CONJUNCTIONS.CONJUNCTIONS_BASIC": {
@@ -37427,13 +39624,15 @@ var SKILLS18 = {
     "outcome": "ENGL.G7.READIN.T9_INTENSIVE_READING_CL.a",
     "outcomes": [
       "ENGL.G7.READIN.T9_INTENSIVE_READING_CL.a",
-      "ENGL.G7.LISTEN.T8_LISTENING_COMPREHENS.b"
+      "ENGL.G7.LISTEN.T8_LISTENING_COMPREHENS.b",
+      "ENGL.G7.READIN.T9_INTENSIVE_READING_CL.b"
     ],
     "pre": [],
     "mis": [
       "M7_SO_REVERSED",
       "M7_SO_SWAPPED",
-      "M7_SO_ROTATED"
+      "M7_SO_ROTATED",
+      "M7_X_SO_FLASHBACK"
     ]
   },
   "ENGL.G7.WRITIN.T9_CREATIVE_WRITING_NAR.NARRATIVE_FEATURES": {
@@ -37477,7 +39676,8 @@ var SKILLS18 = {
     "outcome": "ENGL.G7.READIN.T10_STUDY_SKILLS_NOTE_MA.a",
     "outcomes": [
       "ENGL.G7.READIN.T10_STUDY_SKILLS_NOTE_MA.a",
-      "ENGL.G7.READIN.T10_STUDY_SKILLS_NOTE_MA.b"
+      "ENGL.G7.READIN.T10_STUDY_SKILLS_NOTE_MA.b",
+      "ENGL.G7.READIN.T10_STUDY_SKILLS_NOTE_MA.c"
     ],
     "pre": [],
     "mis": [
@@ -37520,6 +39720,26 @@ var SKILLS18 = {
       "M7_LG_QUANTITY"
     ]
   },
+  "ENGL.G7.WRITIN.T10_FUNCTIONAL_WRITING_P.LISTS_WRITE": {
+    "name": "Write a packing list and a shopping list for a given purpose",
+    "sub": "ENGL.G7.WRITIN.T10_FUNCTIONAL_WRITING_P",
+    "outcome": "ENGL.G7.WRITIN.T10_FUNCTIONAL_WRITING_P.b",
+    "outcomes": [
+      "ENGL.G7.WRITIN.T10_FUNCTIONAL_WRITING_P.b",
+      "ENGL.G7.WRITIN.T10_FUNCTIONAL_WRITING_P.c"
+    ],
+    "pre": [
+      "ENGL.G7.WRITIN.T10_FUNCTIONAL_WRITING_P.LIST_GROUPING",
+      "ENGL.G7.GRAMMA.T2_WORD_CLASSES_NOUNS.COUNT_NONCOUNT"
+    ],
+    "mis": [
+      "M7_X_LS_NO_QUANTITY",
+      "M7_X_LS_NOT_NEEDED",
+      "M7_X_LS_NO_GROUPS",
+      "M7_X_LS_SENTENCES"
+    ],
+    "nofamily": "composition"
+  },
   "ENGL.G7.LISTEN.T11_INTERVIEWS.INTERVIEW_KNOW": {
     "name": "Know the reasons and the manners of an interview",
     "sub": "ENGL.G7.LISTEN.T11_INTERVIEWS",
@@ -37534,6 +39754,26 @@ var SKILLS18 = {
       "M7_IN_CLARIFY",
       "M7_IN_CONFIDENT"
     ]
+  },
+  "ENGL.G7.LISTEN.T11_INTERVIEWS.INTERVIEW_SPEAK": {
+    "name": "Speak clearly and confidently in an interview and seek clarification",
+    "sub": "ENGL.G7.LISTEN.T11_INTERVIEWS",
+    "outcome": "ENGL.G7.LISTEN.T11_INTERVIEWS.b",
+    "outcomes": [
+      "ENGL.G7.LISTEN.T11_INTERVIEWS.b",
+      "ENGL.G7.LISTEN.T11_INTERVIEWS.c",
+      "ENGL.G7.LISTEN.T11_INTERVIEWS.d"
+    ],
+    "pre": [
+      "ENGL.G7.LISTEN.T11_INTERVIEWS.INTERVIEW_KNOW"
+    ],
+    "mis": [
+      "M7_X_IS_BOASTFUL",
+      "M7_X_IS_ONE_WORD",
+      "M7_X_IS_MUMBLES",
+      "M7_X_IS_NO_CLARIFY"
+    ],
+    "nofamily": "voice"
   },
   "ENGL.G7.GRAMMA.T11_FORMATION_OF_ADJECTI.ADJECTIVE_FORMATION": {
     "name": "Form adjectives from nouns and verbs",
@@ -37563,7 +39803,8 @@ var SKILLS18 = {
     "mis": [
       "M7_DL_LESSON_ENDING",
       "M7_DL_CLOSING_FORMULA",
-      "M7_DL_NO_DILEMMA"
+      "M7_DL_NO_DILEMMA",
+      "M7_X_DL_EASY_ANSWER"
     ]
   },
   "ENGL.G7.WRITIN.T11_SPELLING_ANTONYMS_SY.SYNONYMS_ANTONYMS": {
@@ -37651,6 +39892,25 @@ var SKILLS18 = {
       "M7_DF_NO_NAME"
     ]
   },
+  "ENGL.G7.WRITIN.T12_THE_WRITING_PROCESS_.DIALOGUE_WRITING": {
+    "name": "Write a dialogue through the writing process",
+    "sub": "ENGL.G7.WRITIN.T12_THE_WRITING_PROCESS_",
+    "outcome": "ENGL.G7.WRITIN.T12_THE_WRITING_PROCESS_.b",
+    "outcomes": [
+      "ENGL.G7.WRITIN.T12_THE_WRITING_PROCESS_.b"
+    ],
+    "pre": [
+      "ENGL.G7.WRITIN.T12_THE_WRITING_PROCESS_.DIALOGUE_FORMAT",
+      "ENGL.G7.WRITIN.T7_COMPOSITION_THE_WRIT.WRITING_PROCESS"
+    ],
+    "mis": [
+      "M7_X_DW_QUOTES",
+      "M7_X_DW_SAME_LINE",
+      "M7_X_DW_ACTIONS",
+      "M7_X_DW_NO_PURPOSE"
+    ],
+    "nofamily": "composition"
+  },
   "ENGL.G7.LISTEN.T13_LISTENING_COMPREHENS.TRAVEL_WORDS": {
     "name": "Use words about land travel",
     "sub": "ENGL.G7.LISTEN.T13_LISTENING_COMPREHENS",
@@ -37718,7 +39978,8 @@ var SKILLS18 = {
     "mis": [
       "M7_IM_FACT_LINE",
       "M7_IM_WRONG_PICTURE",
-      "M7_IM_LITERAL"
+      "M7_IM_LITERAL",
+      "M7_X_IM_SENSE_MIX"
     ]
   },
   "ENGL.G7.READIN.T13_INTENSIVE_READING_CO.CONTEXT_CLUES": {
@@ -37773,7 +40034,8 @@ var SKILLS18 = {
     "mis": [
       "M7_IQ_OVERREACH",
       "M7_IQ_CONTRADICTS",
-      "M7_IQ_REPEATS_TEXT"
+      "M7_IQ_REPEATS_TEXT",
+      "M7_X_IQ_NOT_STATED"
     ]
   },
   "ENGL.G7.GRAMMA.T13_SENTENCES_SIMPLE_SEN.SIMPLE_SENTENCE": {
@@ -37821,7 +40083,8 @@ var SKILLS18 = {
     "mis": [
       "M7_ID_LITERAL",
       "M7_ID_WRONG_MEANING",
-      "M7_ID_CHANGED_WORD"
+      "M7_ID_CHANGED_WORD",
+      "M7_X_ID_WRONG_SITUATION"
     ]
   },
   "ENGL.G7.LISTEN.T14_CONSONANT_SOUNDS_AND.SOUNDS_CONSONANTS": {
@@ -37841,6 +40104,24 @@ var SKILLS18 = {
       "M7_SC_T_D",
       "M7_SC_SPELLING"
     ]
+  },
+  "ENGL.G7.LISTEN.T14_CONSONANT_SOUNDS_AND.INTONATION": {
+    "name": "Use correct intonation for yes or no and WH questions",
+    "sub": "ENGL.G7.LISTEN.T14_CONSONANT_SOUNDS_AND",
+    "outcome": "ENGL.G7.LISTEN.T14_CONSONANT_SOUNDS_AND.c",
+    "outcomes": [
+      "ENGL.G7.LISTEN.T14_CONSONANT_SOUNDS_AND.c"
+    ],
+    "pre": [
+      "ENGL.G7.GRAMMA.T15_AFFIRMATIVE_AND_NEGA.NEGATIVES"
+    ],
+    "mis": [
+      "M7_X_IN_WH_RISE",
+      "M7_X_IN_YESNO_FLAT",
+      "M7_X_IN_STATEMENT_QUESTION",
+      "M7_X_IN_TAG"
+    ],
+    "nofamily": "voice"
   },
   "ENGL.G7.GRAMMA.T14_SUBJECT_VERB_AGREEME.SV_AGREEMENT": {
     "name": "Find the subject and the verb and make them agree",
@@ -37896,12 +40177,32 @@ var SKILLS18 = {
       "M7_DW_VAGUE_WORDS"
     ]
   },
+  "ENGL.G7.WRITIN.T14_DESCRIPTIVE_WRITING_.DESCRIPTIVE_COMPOSITION": {
+    "name": "Write a descriptive composition of 200 to 240 words",
+    "sub": "ENGL.G7.WRITIN.T14_DESCRIPTIVE_WRITING_",
+    "outcome": "ENGL.G7.WRITIN.T14_DESCRIPTIVE_WRITING_.b",
+    "outcomes": [
+      "ENGL.G7.WRITIN.T14_DESCRIPTIVE_WRITING_.b"
+    ],
+    "pre": [
+      "ENGL.G7.WRITIN.T14_DESCRIPTIVE_WRITING_.DESCRIPTIVE_FEATURES",
+      "ENGL.G7.READIN.T14_FEATURES_OF_STYLE.STYLE"
+    ],
+    "mis": [
+      "M7_X_DC_NARRATES",
+      "M7_X_DC_VAGUE",
+      "M7_X_DC_SHORT",
+      "M7_X_DC_NO_ORDER"
+    ],
+    "nofamily": "composition"
+  },
   "ENGL.G7.LISTEN.T15_ORAL_REPORTS.ORAL_REPORT": {
     "name": "Know how an oral report of an event is organised",
     "sub": "ENGL.G7.LISTEN.T15_ORAL_REPORTS",
     "outcome": "ENGL.G7.LISTEN.T15_ORAL_REPORTS.a",
     "outcomes": [
-      "ENGL.G7.LISTEN.T15_ORAL_REPORTS.a"
+      "ENGL.G7.LISTEN.T15_ORAL_REPORTS.a",
+      "ENGL.G7.LISTEN.T15_ORAL_REPORTS.b"
     ],
     "pre": [],
     "mis": [
@@ -37923,7 +40224,8 @@ var SKILLS18 = {
     "mis": [
       "M7_FL_FLAT",
       "M7_FL_FAST",
-      "M7_FL_WORD"
+      "M7_FL_WORD",
+      "M7_X_FL_NO_PREVIEW"
     ]
   },
   "ENGL.G7.GRAMMA.T15_AFFIRMATIVE_AND_NEGA.NEGATIVES": {
@@ -37981,6 +40283,24 @@ var SKILLS18 = {
       "M7_NO_NOTICE_POSTER",
       "M7_NO_SIGNED"
     ]
+  },
+  "ENGL.G7.WRITIN.T15_FUNCTIONAL_WRITING_N.NOTICE_DESIGN": {
+    "name": "Design notices and posters on current issues",
+    "sub": "ENGL.G7.WRITIN.T15_FUNCTIONAL_WRITING_N",
+    "outcome": "ENGL.G7.WRITIN.T15_FUNCTIONAL_WRITING_N.b",
+    "outcomes": [
+      "ENGL.G7.WRITIN.T15_FUNCTIONAL_WRITING_N.b"
+    ],
+    "pre": [
+      "ENGL.G7.WRITIN.T15_FUNCTIONAL_WRITING_N.NOTICE_POSTER"
+    ],
+    "mis": [
+      "M7_X_ND_NO_DETAILS",
+      "M7_X_ND_POSTER_TEXT_HEAVY",
+      "M7_X_ND_UNSIGNED",
+      "M7_X_ND_NO_ACTION"
+    ],
+    "nofamily": "composition"
   }
 };
 var MIS_FEEDBACK18 = {
@@ -37992,6 +40312,10 @@ var MIS_FEEDBACK18 = {
   "M7_SX_FICTION_NON": "Fiction is made up (stories). Non-fiction gives facts about real things (an encyclopedia, a news report).",
   "M7_SX_LEVEL": "A suitable text matches the reader's age, level and interest.",
   "M7_SX_PURPOSE": "To find information choose a non-fiction text on the topic. Stories and poems are mainly for enjoyment.",
+  "M7_X_IR_ONE_KIND": "Add a new kind of text.",
+  "M7_X_IR_NO_LOG": "One line after each text.",
+  "M7_X_IR_BLURB_ONLY": "Read the whole text before logging it.",
+  "M7_X_IR_NO_REASON": "Give one reason from the book.",
   "M7_NT_PROPER_SMALL": "A proper noun names one particular person, place or month, so it starts with a capital letter: Kisumu, Wanjiru, December.",
   "M7_NT_COLLECTIVE_WRONG": "Each kind of group has its own collective noun: a swarm of bees, a flock of birds, a herd of cattle, a pride of lions.",
   "M7_NT_COLLECTIVE_PLURAL": "A collective noun is one word for a whole group, so we write a flock of birds, not a flocks of birds.",
@@ -38006,11 +40330,19 @@ var MIS_FEEDBACK18 = {
   "M7_HW_CROWDED": "There is a clear space between words so that the reader can see where each word starts and ends.",
   "M7_HW_FAST": "Writing fast or pressing hard does not make handwriting neat. Even letters and clear spaces do.",
   "M7_HW_DECORATE": "Legible handwriting is plain and clear. Decorations and unusual shapes make it harder to read.",
+  "M7_X_LW_SLANT": "Keep the paper still; lean letters one way.",
+  "M7_X_LW_SQUEEZE_END": "Move the word to the next line.",
+  "M7_X_LW_CROSSINGS": "Correct in the draft; the fair copy is clean.",
+  "M7_X_LW_NO_MARGIN": "Keep inside the margin.",
   "M7_OT_MONOTONE": "A storyteller changes the voice to suit each character and event: loud for a roar, soft for a secret.",
   "M7_OT_NO_PAUSE": "A short pause before a surprise makes the listeners wait and wonder.",
   "M7_OT_NO_EYE": "A storyteller looks at the listeners to keep their attention and to show that the story is for them.",
   "M7_OT_NO_PARTICIPATION": "In an oral narrative the audience may join in a song or a repeated line. This is called audience participation.",
   "M7_OT_GESTURE": "Gestures and facial expressions show feelings and actions: a scared face, a step back, hands up.",
+  "M7_X_PO_READS": "Learn the story; look at your audience and tell it.",
+  "M7_X_PO_ONE_VOICE": "Change your voice for each character.",
+  "M7_X_PO_NO_AUDIENCE": "Invite the audience into songs and responses.",
+  "M7_X_PO_WRONG_MOOD": "Match the style to the form: a lullaby soothes, a praise song celebrates.",
   "M7_CN_MUCH_MANY": "Use many with nouns we can count (many people) and much with nouns we cannot count (much water).",
   "M7_CN_PLURAL_NONCOUNT": "Advice, information, furniture, luggage and equipment are not counted, so they have no plural form. Say some advice or a piece of advice.",
   "M7_CN_FEW_LITTLE": "A few goes with nouns we count (a few mangoes). A little goes with nouns we cannot count (a little sugar).",
@@ -38026,6 +40358,10 @@ var MIS_FEEDBACK18 = {
   "M7_BP_CONTENTS_INDEX": "The contents page, at the front, lists the chapters in order. The index, at the back, lists topics and names in alphabetical order.",
   "M7_BP_TITLE_PAGE": "The title page gives the title, the author and often the publisher.",
   "M7_BP_GLOSSARY": "A glossary at the back of a book explains the hard or special words used in it.",
+  "M7_X_AS_PUBLISHER": 'The author is named with "by" on the title page.',
+  "M7_X_AS_PLACE_ONLY": "Setting is place and time.",
+  "M7_X_AS_NO_CLUES": "Find clues: transport, clothes, tools.",
+  "M7_X_AS_CHARACTER_AUTHOR": "The narrator may be a character the author made up.",
   "M7_EM_QMARK_STATEMENT": "A sentence that reports a question tells what was asked, so it ends with a full stop.",
   "M7_EM_FULLSTOP_QUESTION": "A direct question ends with a question mark, not a full stop.",
   "M7_EM_NO_EXCLAMATION": "An exclamation mark shows a strong feeling or a sudden command or warning: Watch out! What a surprise!",
@@ -38034,6 +40370,7 @@ var MIS_FEEDBACK18 = {
   "M7_IO_MIXED": "Reading for information is to find facts. Reading for meaning is to understand and enjoy what the writer means.",
   "M7_IO_STORY_INFO": "Stories and poems are read mainly for meaning and enjoyment. Notices, timetables and maps are read for information.",
   "M7_IO_SKIM": "When you read for information, scan quickly for the fact you need. Reading for meaning is slower and fuller.",
+  "M7_X_IO_SPEED": "Read for meaning slowly; scan only for a fact.",
   "M7_IV_ED_ON_IRREGULAR": "Irregular verbs do not take -ed. The past of go is went, of eat is ate, of buy is bought and of think is thought.",
   "M7_IV_PARTICIPLE_PAST": "After has, have and had use the past participle: has gone, have seen, had eaten. The past form (went, saw, ate) is used alone.",
   "M7_IV_PAST_PARTICIPLE": "Used alone, the verb takes its past form: I saw, she did, we went. The participle (seen, done, gone) needs has, have or had in front of it.",
@@ -38052,12 +40389,22 @@ var MIS_FEEDBACK18 = {
   "M7_NP_ORDER": "Events are told in the order they happened. Words such as first, then, after that and finally show the order.",
   "M7_NP_OFF_TOPIC": "Every sentence in a narrative paragraph is part of the same story. A sentence about something else does not belong.",
   "M7_NP_NO_CLOSING": "A narrative paragraph ends with a closing sentence that tells how it all ended or what the person felt.",
+  "M7_X_PW_NO_TOPIC": "Begin with the main idea.",
+  "M7_X_PW_EXAMPLE_OFF": "Check the example proves the point.",
+  "M7_X_PW_NO_CLOSE": "End with a sentence that sums up.",
+  "M7_X_PW_MANY_IDEAS": "One main idea per paragraph.",
   "M7_SG_GENERAL_SPECIFIC": "A general question asks what the whole text is about. A specific question asks for one detail such as a name, number, place or time.",
   "M7_SG_SPECIFIC_GENERAL": "A specific question asks for a name, a number, a place or a time that is in the text.",
   "M7_SG_NEAR_DETAIL": "Read the question word carefully. The match started at two, but the question asks when it ended: four o'clock.",
   "M7_SG_NUMBER_SLIP": "Several numbers may be in the text. Choose the number that goes with the noun in the question.",
+  "M7_X_LR_DETAIL_AS_ISSUE": "Ask: what is the song worried or happy about?",
+  "M7_X_LR_OFF_RESPONSE": "Link your response to what was said.",
+  "M7_X_LR_MISHEARD": "Check the point before you respond.",
+  "M7_X_LR_REPEATS": "Add your own view or action.",
   "M7_RS_SKIM_SCAN": "Skimming is reading quickly to get the general idea. Scanning is running the eye over a text to find one name, number or fact.",
   "M7_RS_WRONG": "Rereading the sentence and the words around it, predicting, skimming and scanning are strategies. Skipping and guessing are not.",
+  "M7_X_RS_REREAD_NEVER": "Reread a hard sentence before going on.",
+  "M7_X_RS_PREVIEW_SKIP": "Preview first: it tells you what to expect.",
   "M7_SP_NO_S": "In the simple present, a verb after he, she, it or one name ends in -s or -es: she walks, he washes.",
   "M7_SP_S_PLURAL": "With I, you, we, they and plural nouns the verb stays plain: the boys play.",
   "M7_SP_DOES_S": "After do not and does not the verb is plain, because does already carries the -s: He does not drink.",
@@ -38079,11 +40426,20 @@ var MIS_FEEDBACK18 = {
   "M7_PD_CONTRADICTS": "A prediction must fit what the passage has already told us.",
   "M7_PD_ALREADY_HAPPENED": "A prediction is about what comes next, not about what has already happened.",
   "M7_PD_WRONG_CLUE": "A clue is a sentence that points to what will happen next.",
+  "M7_X_CT_ACTION_AS_TRAIT": "A trait is a describing word for what the character is like.",
   "M7_PE_EXAMPLE_OFF": "An example must show that the topic sentence is true. A fact about something else does not support it.",
   "M7_PE_REPEAT": "An example names a real case or incident. Saying the same thing again in other words is not an example.",
   "M7_PE_CONNECTOR": "For example, for instance and such as bring in an example. However shows a contrast.",
   "M7_PE_INCIDENT_GENERAL": "An incident is one event that happened at a time and place. A general statement is not an incident.",
   "M7_PE_KEEPS_OFF_TOPIC": "Every sentence of a paragraph must be about the same topic. The sentence about something else does not belong.",
+  "M7_X_PS_T_D": "Keep the voice on: bed.",
+  "M7_X_PS_L_R": "Tongue up for l; curled for r.",
+  "M7_X_PS_PULL_POOL": "Pull is short and relaxed; pool is long with round lips.",
+  "M7_X_PS_NG_NG_G": "Ng is one sound at the back of the mouth.",
+  "M7_X_WS_NOUN_VERB": "Verbs often move the stress to the end.",
+  "M7_X_WS_LAST": "Before -tion, the syllable is strong: e-LEC-tion.",
+  "M7_X_WS_EQUAL": "One strong beat.",
+  "M7_X_WS_MEANING": "Listen: the stress tells you noun or verb.",
   "M7_AD_MORE_ER": "A short adjective takes -er or -est on its own: taller, tallest. Do not add more or most as well.",
   "M7_AD_LONG_ER": "Long adjectives (beautiful, expensive, interesting) take more and most, not -er and -est.",
   "M7_AD_IRREGULAR": "Good, bad and far are irregular: good, better, best; bad, worse, worst; far, farther, farthest.",
@@ -38094,15 +40450,31 @@ var MIS_FEEDBACK18 = {
   "M7_ML_NOT_TAUGHT": "A lesson must be shown by what happens in the story, especially the ending.",
   "M7_ML_OPPOSITE": "Look at what happens to the characters at the end. That shows the lesson.",
   "M7_ML_HERO_TRAIT": "A hero in a legend is brave, wise or generous and acts to help the people, not because of wealth or size.",
+  "M7_X_RL_RETELL": "Name a real person or situation.",
+  "M7_X_RL_SURFACE": "Link the lesson, not the object.",
+  "M7_X_RL_NO_WHY": "Ask what the story teaches people.",
+  "M7_X_RL_CHANGES_TEXT": "Keep what the text says.",
   "M7_FL_WRONG_CLOSING": "A friendly letter ends in a warm way (Your friend, Your loving cousin). Yours faithfully is for formal letters.",
   "M7_FL_RECEIVER_ADDRESS": "In a friendly letter the writer's address and the date go at the top right. The receiver's address goes only on the envelope.",
   "M7_FL_SUBJECT_LINE": "A friendly letter has the address, date, greeting, body, closing and name. A subject line is for formal letters.",
   "M7_FL_GREETING": "A friendly letter begins with the name of the friend: Dear Achieng. Dear Sir is for a formal letter.",
   "M7_FL_ORDER": "The order is: address and date, greeting, body, closing, then the writer's name.",
+  "M7_X_FL_FORMAL": "Write as you would speak to the person.",
+  "M7_X_FL_NO_PARAGRAPHS": "New news, new paragraph.",
+  "M7_X_FL_TWO_ADDRESSES": "Only your own address.",
+  "M7_X_FL_NO_CLOSING": "Close warmly and sign your name.",
   "M7_PI_RUDE": "Interrupt politely with Excuse me or Sorry to interrupt and ask permission to speak.",
   "M7_PI_NO_WAIT": "Wait for a pause, then show you wish to speak with a small gesture or an Excuse me.",
   "M7_PI_NON_VERBAL": "A non-verbal cue is made without words: a raised hand, a nod or leaning forward. Verbal cues are spoken.",
   "M7_PI_TURN_TAKING": "Turn taking means each person speaks in turn. After your point, you give the next person a chance.",
+  "M7_X_TT_DOMINATES": "Share the turns; invite quieter members.",
+  "M7_X_TT_NO_LINK": "Link to the last speaker first.",
+  "M7_X_TT_SILENT": "Use a starter phrase to join.",
+  "M7_X_TT_INTERRUPTS": "Wait for the pause.",
+  "M7_X_RF_NO_PHRASING": "Read in phrases.",
+  "M7_X_RF_IGNORES_PUNCTUATION": "Pause at punctuation.",
+  "M7_X_RF_FLAT": "Let the voice show the feeling.",
+  "M7_X_RF_TOO_FAST": "Read at speaking pace.",
   "M7_AK_TIME_MANNER": "An adverb of time tells when (yesterday, soon, later). An adverb of manner tells how (slowly, carefully).",
   "M7_AK_PLACE_TIME": "An adverb of place tells where something happens (here, there, outside, nearby).",
   "M7_AK_ADJECTIVE_ADVERB": "An adverb tells more about a verb. In this sentence slowly tells how the man walked. Old describes the man, so it is an adjective.",
@@ -38117,6 +40489,10 @@ var MIS_FEEDBACK18 = {
   "M7_MS_SILENT_LETTER": "Some letters are not clearly said but must be written: February, government (the n), library (two r).",
   "M7_MS_SOUND_SPELL": "Do not spell by sound alone. Because is be + cause. Beautiful is beau + ti + ful. Definitely has finite in the middle.",
   "M7_MS_HOMOPHONE_FORM": "Wednesday has a d that is not said. A lot is two words. Which has a h in the middle.",
+  "M7_X_LN_WHOLE_SENTENCES": "Write only key words.",
+  "M7_X_LN_MISSES_SIGNALS": "Listen for signals: first, main, for example.",
+  "M7_X_LN_NUMBERS_WRONG": "Write numbers exactly; check them if repeated.",
+  "M7_X_LN_NO_HEADINGS": "Group notes under headings.",
   "M7_VI_WRONG_VISUAL": "A bar graph compares amounts, a pie chart shows parts of a whole, a map shows places, a timeline shows order in time and a table lists facts in rows and columns.",
   "M7_VI_ROW_COLUMN": "To read a table find the row for the item and the column for the heading, then read where they meet.",
   "M7_VI_TOTAL_PART": "Read the question: one part needs one cell, the total needs all the cells added.",
@@ -38135,6 +40511,10 @@ var MIS_FEEDBACK18 = {
   "M7_WP_REVISE_EDIT": "Revising is to improve the ideas, the order and the choice of words. Editing is to correct spelling, punctuation and grammar.",
   "M7_WP_DRAFT_FINAL": "A first draft is a rough first version written to get ideas down. It is improved later.",
   "M7_WP_PUBLISH_FIRST": "Publishing comes last: the finished piece is copied neatly and shared.",
+  "M7_X_NC_NO_PLAN": "Plan, draft, revise, edit, then write the fair copy.",
+  "M7_X_NC_IDIOM_MISUSE": "Use an idiom only for its real meaning.",
+  "M7_X_NC_WEAK_INTRO": "Begin near the action.",
+  "M7_X_NC_SELF_ASSESS_SPELLING": "Assess introduction, body and conclusion.",
   "M7_PR_AT_ON_IN_TIME": "Use on with days and dates (on Monday), at with clock times and points (at five o'clock) and in with months, years and parts of the day (in March, in the morning).",
   "M7_PR_TO_IN_PLACE": "To shows a movement towards a place (go to the market). In shows where something already is (in the market).",
   "M7_PR_KIND": "A preposition of place shows where something is (under, beside, behind, between). A preposition of direction shows movement (to, into, across).",
@@ -38142,9 +40522,11 @@ var MIS_FEEDBACK18 = {
   "M7_AN_PART_MIX": "The introduction sets the scene (who, where, when). The body tells the events in order. The conclusion ends the story.",
   "M7_AN_SPELLING_ONLY": "To assess a composition, read it again slowly and check each part. Spelling is one thing to check, but not the only one.",
   "M7_AN_SKIP_READ": "Read your work again before handing it in. Reading again helps you to find what needs to be improved.",
+  "M7_X_AN_TITLE_FIT": "Check that the title fits the whole story.",
   "M7_SV_SPELLING_SAME": "Spelling does not show the sound. Put and look have the short /\u028A/. Food and pool have the long /u\u02D0/.",
   "M7_SV_SHORT_LONG": "The long /u\u02D0/ is in pool, room, food, fruit and moon. The short /\u028A/ is in pull, put, look, book and good.",
   "M7_SV_ODD_ONE": "Book, good and foot have the short /\u028A/. Moon has the long /u\u02D0/, so it is the odd one out.",
+  "M7_X_SV_DIPHTHONG": "Boat and note slide; bought does not.",
   "M7_CB_AND_BUT": "But joins ideas that contrast. And simply adds. Small is expected to go with weak, so but fits.",
   "M7_CB_OR_AND": "Or joins choices (tea or coffee). And joins things that go together (tea and bread).",
   "M7_CB_BUT_AND_DOUBLE": "Use only one joining word between two parts of a sentence. But and and, or but and or together are wrong.",
@@ -38152,6 +40534,7 @@ var MIS_FEEDBACK18 = {
   "M7_SO_REVERSED": "Events are told in the order they happened. Look for first, then, after, later and finally.",
   "M7_SO_SWAPPED": "Check each pair of events against the passage to see which came first.",
   "M7_SO_ROTATED": "The first event is the one that begins the story. The ending comes last.",
+  "M7_X_SO_FLASHBACK": "Use time clues: years earlier, before that.",
   "M7_NF_NARRATIVE_DESCRIPTION": "A narrative tells a story: characters, a setting and events that happen one after another.",
   "M7_NF_MISSING_PART": "A narrative needs a problem or a conflict, events and an ending.",
   "M7_NF_SETTING_CHARACTER": "The setting is where and when the story happens. The characters are the people or animals in it.",
@@ -38174,10 +40557,18 @@ var MIS_FEEDBACK18 = {
   "M7_LG_ODD_ITEM": "Pen, ruler and pencil are stationery. Soap is for washing, so it belongs to a different group.",
   "M7_LG_EVENT_FIT": "A packing list must fit the event: for a day at the beach, a swimming costume, a towel and sunscreen.",
   "M7_LG_QUANTITY": "A shopping list says what and how much: 2 kg of sugar, 3 loaves of bread.",
+  "M7_X_LS_NO_QUANTITY": "Add quantities.",
+  "M7_X_LS_NOT_NEEDED": "Ask: will I use it at this event?",
+  "M7_X_LS_NO_GROUPS": "Group items by kind.",
+  "M7_X_LS_SENTENCES": "A list is one item per line.",
   "M7_IN_REASON": "People sit interviews to be chosen for a school place, a scholarship or a job.",
   "M7_IN_SHORT_ANSWER": "In an interview answer clearly in full sentences and give a reason.",
   "M7_IN_CLARIFY": "Ask for clarification politely: Could you please repeat the question? or I beg your pardon?",
   "M7_IN_CONFIDENT": "A confident answer is clear and honest. It is not boastful or rude.",
+  "M7_X_IS_BOASTFUL": "Show confidence with facts, not boasts.",
+  "M7_X_IS_ONE_WORD": "Answer and give a reason.",
+  "M7_X_IS_MUMBLES": "Sit up, look at the panel, speak clearly.",
+  "M7_X_IS_NO_CLARIFY": "Ask politely for the question again.",
   "M7_AF2_NOUN_FOR_ADJ": "An adjective describes a noun. The adjective of danger is dangerous. We do not say a danger road.",
   "M7_AF2_WRONG_SUFFIX": "Add -ful for full of (careful, helpful) and -less for without (careless, hopeless). The ending must fit the word.",
   "M7_AF2_SPELL_CHANGE": "The spelling changes: beauty becomes beautiful (y to i), fame becomes famous (the e drops), mud becomes muddy (the d doubles).",
@@ -38185,6 +40576,7 @@ var MIS_FEEDBACK18 = {
   "M7_DL_LESSON_ENDING": "A dilemma narrative ends with a question that leaves the listeners to decide: Who was right?",
   "M7_DL_CLOSING_FORMULA": "The closing formula puts the dilemma to the audience, for example Who was right? What would you have done?",
   "M7_DL_NO_DILEMMA": "A dilemma narrative puts a character or the listener before a hard choice where each side has a good reason.",
+  "M7_X_DL_EASY_ANSWER": "A dilemma has no easy answer; argue with reasons.",
   "M7_SY_RELATED_NOT_SAME": "A synonym has almost the same meaning and can replace the word in the sentence.",
   "M7_SY_ANT_SYN": "A synonym means the same. An antonym means the opposite: ancient and modern are antonyms; ancient and old are synonyms.",
   "M7_SY_PREFIX_ANT": "Many antonyms are different words (generous, selfish). Do not make an opposite by adding un- to every word.",
@@ -38208,6 +40600,10 @@ var MIS_FEEDBACK18 = {
   "M7_DF_SAME_LINE": "Each speaker's turn begins on a new line, so the reader sees who is speaking.",
   "M7_DF_ACTIONS": "Actions and feelings are written in brackets after the speaker's name, for example Atieno (smiling): Good morning.",
   "M7_DF_NO_NAME": "Each line begins with the name of the speaker and a colon, then what the person says.",
+  "M7_X_DW_QUOTES": "A dialogue uses names and colons, no quotation marks.",
+  "M7_X_DW_SAME_LINE": "New speaker, new line.",
+  "M7_X_DW_ACTIONS": "Put actions in brackets.",
+  "M7_X_DW_NO_PURPOSE": "Plan what the speakers want and how it ends.",
   "M7_TW_PERSON_PLACE": "A conductor is the person who collects fares. A terminus is the place where a route ends.",
   "M7_TW_FARE_FEE": "A fare is the money paid for a journey. A fee is paid for a service such as school.",
   "M7_TW_JOURNEY_TRIP": "The journey is the travelling. The route is the way taken. The destination is the place you are going to.",
@@ -38237,6 +40633,8 @@ var MIS_FEEDBACK18 = {
   "M7_IQ_OVERREACH": "An inference must be supported by clues in the passage.",
   "M7_IQ_CONTRADICTS": "An inference must agree with what the passage says.",
   "M7_IQ_REPEATS_TEXT": "A sentence copied from the passage is stated, not worked out. An inference is worked out from clues.",
+  "M7_X_IM_SENSE_MIX": "Images can be sounds, smells and feelings too.",
+  "M7_X_IQ_NOT_STATED": "Use the clues to infer.",
   "M7_SS_FRAGMENT": "A simple sentence needs a subject and a verb and tells a complete thought. A group of words with no verb is a fragment.",
   "M7_SS_COMPOUND": "A simple sentence has one main clause. A sentence joined with and, but or so has two and is a compound sentence.",
   "M7_SS_RUN_ON": "Two complete thoughts need a full stop or a joining word between them.",
@@ -38248,11 +40646,16 @@ var MIS_FEEDBACK18 = {
   "M7_ID_LITERAL": "An idiom has a meaning that is not the same as its words: raining cats and dogs means raining very hard.",
   "M7_ID_WRONG_MEANING": "Spill the beans means to tell a secret by mistake.",
   "M7_ID_CHANGED_WORD": "An idiom cannot be changed: a piece of cake, not a piece of pie.",
+  "M7_X_ID_WRONG_SITUATION": "Match the idiom's meaning to the situation.",
   "M7_SC_F_V": "/f/ is a quiet sound (fan, five). /v/ is voiced, you feel it in your throat (van, vine).",
   "M7_SC_N_NG": "/\u014B/ is the ending of sing, long and ring. /n/ is the ending of sin, fun and ran. There is no separate g sound in sing.",
   "M7_SC_L_R": "/l/ and /r/ are different sounds. Light starts with /l/, right starts with /r/.",
   "M7_SC_T_D": "/t/ is not voiced (tin, ten). /d/ is voiced (din, den).",
   "M7_SC_SPELLING": "The sound is not always the same as the letter: laugh ends in /f/ but of ends in /v/.",
+  "M7_X_IN_WH_RISE": "WH questions fall.",
+  "M7_X_IN_YESNO_FLAT": "Rise at the end.",
+  "M7_X_IN_STATEMENT_QUESTION": "Rise to make it a question.",
+  "M7_X_IN_TAG": "Fall when you expect agreement.",
   "M7_SVA_NEAR_NOUN": "The verb agrees with the subject (the basket), not the noun near it (mangoes). So: The basket of mangoes is heavy.",
   "M7_SVA_PLURAL": "A plural subject takes a plural verb: The boys play. The girls were.",
   "M7_SVA_SINGULAR": "A singular subject takes the singular verb: My sister likes. The teacher has.",
@@ -38268,6 +40671,10 @@ var MIS_FEEDBACK18 = {
   "M7_DW_FACTS_ONLY": "A good description uses the senses and exact words, not only facts.",
   "M7_DW_ORDER": "A description follows a clear order, such as top to bottom, near to far or front to back.",
   "M7_DW_VAGUE_WORDS": "Use exact words (hot, soft, smoky) instead of vague words such as nice, good or very.",
+  "M7_X_DC_NARRATES": "Describe what it is like.",
+  "M7_X_DC_VAGUE": "Exact words and a simile.",
+  "M7_X_DC_SHORT": "Add a sense or a simile to each feature.",
+  "M7_X_DC_NO_ORDER": "Move through it in one direction.",
   "M7_OR_ORDER": "An oral report begins with a greeting and what it is about, then tells what happened, who, when and where, and ends with a closing.",
   "M7_OR_OPINION": "A report gives the facts: what happened, who, when, where. Personal opinions are left out.",
   "M7_OR_CLOSING": "An oral report closes with a short ending and thanks: That is my report. Thank you for listening.",
@@ -38275,6 +40682,7 @@ var MIS_FEEDBACK18 = {
   "M7_FL_FLAT": "A fluent reader changes the voice to show feelings, and pauses at commas and full stops.",
   "M7_FL_FAST": "The right speed is steady, so that the listener can follow. Reading too fast loses the meaning.",
   "M7_FL_WORD": "A fluent reader reads words in groups and reads a text again to make it smooth. Stopping at every word breaks the flow.",
+  "M7_X_FL_NO_PREVIEW": "Read silently first to plan the expression.",
   "M7_NG_DOUBLE": "Use only one negative word. Say I do not have a pen, or I have no pen.",
   "M7_NG_DONT_THIRD": "After he, she, it or one name use does not or doesn't: She doesn't like beans.",
   "M7_NG_DID_PAST": "After did not use the plain verb: She did not go. Did already shows the past.",
@@ -38288,7 +40696,11 @@ var MIS_FEEDBACK18 = {
   "M7_NO_MISSING_WHEN": "A notice tells what, when and where, and who to see, with the writer's name and the date.",
   "M7_NO_POSTER_LONG": "A poster has a big heading, a few words, a picture and only the key details.",
   "M7_NO_NOTICE_POSTER": "A poster usually has a picture and big letters to attract people. A notice gives the details briefly in words.",
-  "M7_NO_SIGNED": "A notice ends with the name and title of the writer and the date."
+  "M7_NO_SIGNED": "A notice ends with the name and title of the writer and the date.",
+  "M7_X_ND_NO_DETAILS": "Check what, when, where, who.",
+  "M7_X_ND_POSTER_TEXT_HEAVY": "Few words, big heading.",
+  "M7_X_ND_UNSIGNED": "Sign and date it.",
+  "M7_X_ND_NO_ACTION": "Tell readers what to do."
 };
 
 // src/ai-tutor/content/families/english_g7_signed.js
@@ -41777,6 +44189,42 @@ var OUTCOMES19 = {
   }
 };
 var SKILLS19 = {
+  "ENGL.G8.LISTEN.T1_POLITE_LANGUAGE_TELE.TELEPHONE_ETIQUETTE": {
+    "name": "Use polite words and expressions in a telephone conversation",
+    "sub": "ENGL.G8.LISTEN.T1_POLITE_LANGUAGE_TELE",
+    "outcome": "ENGL.G8.LISTEN.T1_POLITE_LANGUAGE_TELE.a",
+    "outcomes": [
+      "ENGL.G8.LISTEN.T1_POLITE_LANGUAGE_TELE.a",
+      "ENGL.G8.LISTEN.T1_POLITE_LANGUAGE_TELE.b"
+    ],
+    "pre": [],
+    "mis": [
+      "M8_X_TE_WHO_ARE_YOU",
+      "M8_X_TE_DEMAND_PERSON",
+      "M8_X_TE_NO_MESSAGE",
+      "M8_X_TE_HANG_UP"
+    ],
+    "nofamily": "questions"
+  },
+  "ENGL.G8.READIN.T1_EXTENSIVE_READING_IN.INDEPENDENT_READING": {
+    "name": "Identify interesting texts and read a range of fiction and non-fiction",
+    "sub": "ENGL.G8.READIN.T1_EXTENSIVE_READING_IN",
+    "outcome": "ENGL.G8.READIN.T1_EXTENSIVE_READING_IN.a",
+    "outcomes": [
+      "ENGL.G8.READIN.T1_EXTENSIVE_READING_IN.a",
+      "ENGL.G8.READIN.T1_EXTENSIVE_READING_IN.b",
+      "ENGL.G8.READIN.T11_EXTENSIVE_READING_NO.a",
+      "ENGL.G8.READIN.T11_EXTENSIVE_READING_NO.b"
+    ],
+    "pre": [],
+    "mis": [
+      "M8_X_IR_NONPRINT_IGNORED",
+      "M8_X_IR_ONE_KIND",
+      "M8_X_IR_NO_LOG",
+      "M8_X_IR_NO_REASON"
+    ],
+    "nofamily": "teacher"
+  },
   "ENGL.G8.GRAMMA.T1_WORD_CLASSES_COMPOUN.COMPOUND_NOUNS": {
     "name": "Tell compound nouns and write their singular and plural forms",
     "sub": "ENGL.G8.GRAMMA.T1_WORD_CLASSES_COMPOUN",
@@ -41789,7 +44237,8 @@ var SKILLS19 = {
     "mis": [
       "M8_CPN_PLURAL_LAST",
       "M8_CPN_SPLIT",
-      "M8_CPN_SINGULAR"
+      "M8_CPN_SINGULAR",
+      "M8_X_CPN_HYPHEN"
     ]
   },
   "ENGL.G8.READIN.T1_INTENSIVE_READING_SH.RS_SEQUENCE": {
@@ -41797,13 +44246,16 @@ var SKILLS19 = {
     "sub": "ENGL.G8.READIN.T1_INTENSIVE_READING_SH",
     "outcome": "ENGL.G8.READIN.T1_INTENSIVE_READING_SH.a",
     "outcomes": [
-      "ENGL.G8.READIN.T1_INTENSIVE_READING_SH.a"
+      "ENGL.G8.READIN.T1_INTENSIVE_READING_SH.a",
+      "ENGL.G8.READIN.T2_INTENSIVE_READING_SH.b",
+      "ENGL.G8.READIN.T10_INTENSIVE_READING_SH.a"
     ],
     "pre": [],
     "mis": [
       "M8_RS_SEQUENCE_DETAIL",
       "M8_RS_SEQUENCE_OPPOSITE",
-      "M8_RS_SEQUENCE_NOTSAID"
+      "M8_RS_SEQUENCE_NOTSAID",
+      "M8_X_RSS_TOLD_ORDER"
     ]
   },
   "ENGL.G8.READIN.T1_INTENSIVE_READING_SH.RS_CONTEXT": {
@@ -41811,13 +44263,16 @@ var SKILLS19 = {
     "sub": "ENGL.G8.READIN.T1_INTENSIVE_READING_SH",
     "outcome": "ENGL.G8.READIN.T1_INTENSIVE_READING_SH.b",
     "outcomes": [
-      "ENGL.G8.READIN.T1_INTENSIVE_READING_SH.b"
+      "ENGL.G8.READIN.T1_INTENSIVE_READING_SH.b",
+      "ENGL.G8.READIN.T3_INTENSIVE_READING.b",
+      "ENGL.G8.READIN.T8_INTENSIVE_READING_PO.d"
     ],
     "pre": [],
     "mis": [
       "M8_RS_CONTEXT_DETAIL",
       "M8_RS_CONTEXT_OPPOSITE",
-      "M8_RS_CONTEXT_NOTSAID"
+      "M8_RS_CONTEXT_NOTSAID",
+      "M8_X_RSC_WHOLE_SENTENCE"
     ]
   },
   "ENGL.G8.READIN.T1_INTENSIVE_READING_SH.RS_QUESTIONS": {
@@ -41825,14 +44280,74 @@ var SKILLS19 = {
     "sub": "ENGL.G8.READIN.T1_INTENSIVE_READING_SH",
     "outcome": "ENGL.G8.READIN.T1_INTENSIVE_READING_SH.c",
     "outcomes": [
-      "ENGL.G8.READIN.T1_INTENSIVE_READING_SH.c"
+      "ENGL.G8.READIN.T1_INTENSIVE_READING_SH.c",
+      "ENGL.G8.READIN.T3_INTENSIVE_READING.a",
+      "ENGL.G8.READIN.T8_INTENSIVE_READING_PO.a",
+      "ENGL.G8.READIN.T8_INTENSIVE_READING_PO.c"
     ],
     "pre": [],
     "mis": [
       "M8_RS_QUESTIONS_DETAIL",
       "M8_RS_QUESTIONS_OPPOSITE",
-      "M8_RS_QUESTIONS_NOTSAID"
+      "M8_RS_QUESTIONS_NOTSAID",
+      "M8_X_RSQ_WRONG_FORM"
     ]
+  },
+  "ENGL.G8.WRITIN.T1_WRITING_LEGIBLY_AND_.LEGIBLE_WRITING": {
+    "name": "Classify letters by height and write legibly and neatly",
+    "sub": "ENGL.G8.WRITIN.T1_WRITING_LEGIBLY_AND_",
+    "outcome": "ENGL.G8.WRITIN.T1_WRITING_LEGIBLY_AND_.a",
+    "outcomes": [
+      "ENGL.G8.WRITIN.T1_WRITING_LEGIBLY_AND_.a",
+      "ENGL.G8.WRITIN.T1_WRITING_LEGIBLY_AND_.b"
+    ],
+    "pre": [],
+    "mis": [
+      "M8_X_LW_HEIGHT",
+      "M8_X_LW_PROPORTION",
+      "M8_X_LW_SPACING",
+      "M8_X_LW_MARGIN"
+    ],
+    "nofamily": "teacher"
+  },
+  "ENGL.G8.LISTEN.T2_ORAL_PRESENTATIONS_S.PERFORM_ORAL": {
+    "name": "Perform songs, poems and story parts with the right techniques and non-verbal cues",
+    "sub": "ENGL.G8.LISTEN.T2_ORAL_PRESENTATIONS_S",
+    "outcome": "ENGL.G8.LISTEN.T2_ORAL_PRESENTATIONS_S.a",
+    "outcomes": [
+      "ENGL.G8.LISTEN.T2_ORAL_PRESENTATIONS_S.a",
+      "ENGL.G8.LISTEN.T2_ORAL_PRESENTATIONS_S.b",
+      "ENGL.G8.LISTEN.T6_CONVERSATIONAL_SKILL.c",
+      "ENGL.G8.LISTEN.T13_EXTENSIVE_LISTENING_.b",
+      "ENGL.G8.READIN.T8_INTENSIVE_READING_PO.b",
+      "ENGL.G8.READIN.T13_SHORT_STORY_STYLE_CL.b"
+    ],
+    "pre": [],
+    "mis": [
+      "M8_X_PO_NO_CHORUS",
+      "M8_X_PO_FACE_MISMATCH",
+      "M8_X_PO_MONOTONE",
+      "M8_X_PO_MEMORY_BREAK"
+    ],
+    "nofamily": "voice"
+  },
+  "ENGL.G8.LISTEN.T2_ORAL_PRESENTATIONS_S.SONG_WRITING": {
+    "name": "Write a song on a scientific innovation",
+    "sub": "ENGL.G8.LISTEN.T2_ORAL_PRESENTATIONS_S",
+    "outcome": "ENGL.G8.LISTEN.T2_ORAL_PRESENTATIONS_S.c",
+    "outcomes": [
+      "ENGL.G8.LISTEN.T2_ORAL_PRESENTATIONS_S.c"
+    ],
+    "pre": [
+      "ENGL.G8.LISTEN.T2_ORAL_PRESENTATIONS_S.PERFORM_ORAL"
+    ],
+    "mis": [
+      "M8_X_SW_NO_CHORUS",
+      "M8_X_SW_NO_RHYTHM",
+      "M8_X_SW_OFF_TOPIC",
+      "M8_X_SW_NO_MESSAGE"
+    ],
+    "nofamily": "composition"
   },
   "ENGL.G8.READIN.T2_INTENSIVE_READING_SI.RP_PERSONA": {
     "name": "Name the persona and repeated words in a poem and say what it is about",
@@ -41847,7 +44362,8 @@ var SKILLS19 = {
     "mis": [
       "M8_RP_PERSONA_DETAIL",
       "M8_RP_PERSONA_OPPOSITE",
-      "M8_RP_PERSONA_NOTSAID"
+      "M8_RP_PERSONA_NOTSAID",
+      "M8_X_RPP_POET_ALWAYS"
     ]
   },
   "ENGL.G8.GRAMMA.T2_WORD_CLASSES_COLLECT.COLLECTIVE_NOUNS": {
@@ -41862,7 +44378,8 @@ var SKILLS19 = {
     "mis": [
       "M8_CLN_WRONG_GROUP",
       "M8_CLN_PLURAL",
-      "M8_CLN_NO_OF"
+      "M8_CLN_NO_OF",
+      "M8_X_CLN_VERB"
     ]
   },
   "ENGL.G8.READIN.T2_INTENSIVE_READING_SH.RS_SETTING": {
@@ -41870,13 +44387,15 @@ var SKILLS19 = {
     "sub": "ENGL.G8.READIN.T2_INTENSIVE_READING_SH",
     "outcome": "ENGL.G8.READIN.T2_INTENSIVE_READING_SH.a",
     "outcomes": [
-      "ENGL.G8.READIN.T2_INTENSIVE_READING_SH.a"
+      "ENGL.G8.READIN.T2_INTENSIVE_READING_SH.a",
+      "ENGL.G8.READIN.T10_INTENSIVE_READING_SH.c"
     ],
     "pre": [],
     "mis": [
       "M8_RS_SETTING_DETAIL",
       "M8_RS_SETTING_OPPOSITE",
-      "M8_RS_SETTING_NOTSAID"
+      "M8_RS_SETTING_NOTSAID",
+      "M8_X_RSE_TIME_MISSING"
     ]
   },
   "ENGL.G8.WRITIN.T2_MECHANICS_OF_WRITING.PUNCTUATION": {
@@ -41892,7 +44411,8 @@ var SKILLS19 = {
       "M8_PN_APOS_PLURAL",
       "M8_PN_APOS_POSS",
       "M8_PN_COMMA_LIST",
-      "M8_PN_ITS"
+      "M8_PN_ITS",
+      "M8_X_PN_COMMA_SPLICE"
     ]
   },
   "ENGL.G8.LISTEN.T3_LISTENING_COMPREHENS.LS_CAUSE": {
@@ -41908,7 +44428,8 @@ var SKILLS19 = {
     "mis": [
       "M8_LS_CAUSE_DETAIL",
       "M8_LS_CAUSE_OPPOSITE",
-      "M8_LS_CAUSE_NOTSAID"
+      "M8_LS_CAUSE_NOTSAID",
+      "M8_X_LSC_EFFECT_AS_CAUSE"
     ]
   },
   "ENGL.G8.GRAMMA.T3_WORD_CLASSES_PRIMARY.AUXILIARY_VERBS": {
@@ -41923,7 +44444,8 @@ var SKILLS19 = {
     "mis": [
       "M8_AUX_AGREE",
       "M8_AUX_BE_FORM",
-      "M8_AUX_DID_PAST"
+      "M8_AUX_DID_PAST",
+      "M8_X_AUX_DOUBLE"
     ]
   },
   "ENGL.G8.READIN.T3_INTENSIVE_READING_PO.POEM_PARTS": {
@@ -41937,7 +44459,8 @@ var SKILLS19 = {
     "mis": [
       "M8_PM_STANZA_LINE",
       "M8_PM_RHYME_REPEAT",
-      "M8_PM_POET_PERSONA"
+      "M8_PM_POET_PERSONA",
+      "M8_X_PM_REFRAIN"
     ]
   },
   "ENGL.G8.READIN.T3_INTENSIVE_READING_PO.RP_MAIN": {
@@ -41951,8 +44474,48 @@ var SKILLS19 = {
     "mis": [
       "M8_RP_MAIN_DETAIL",
       "M8_RP_MAIN_OPPOSITE",
-      "M8_RP_MAIN_NOTSAID"
+      "M8_RP_MAIN_NOTSAID",
+      "M8_X_RPM_TITLE_ONLY"
     ]
+  },
+  "ENGL.G8.WRITIN.T3_PARAGRAPHING_SEQUENC.PARAGRAPH_CONNECTORS": {
+    "name": "Identify conjunctions and connectors of sequence in a paragraph",
+    "sub": "ENGL.G8.WRITIN.T3_PARAGRAPHING_SEQUENC",
+    "outcome": "ENGL.G8.WRITIN.T3_PARAGRAPHING_SEQUENC.a",
+    "outcomes": [
+      "ENGL.G8.WRITIN.T3_PARAGRAPHING_SEQUENC.a",
+      "ENGL.G8.WRITIN.T4_PARAGRAPHING_CONNECT.a",
+      "ENGL.G8.WRITIN.T4_PARAGRAPHING_CONNECT.b"
+    ],
+    "pre": [
+      "ENGL.G8.GRAMMA.T9_WORD_CLASSES_CONJUNC.CONJUNCTIONS_LISTED"
+    ],
+    "mis": [
+      "M8_X_PC_WRONG_CONNECTOR",
+      "M8_X_PC_FINALLY_FIRST",
+      "M8_X_PC_MISS_CONNECTOR",
+      "M8_X_PC_ORDER_IGNORED"
+    ],
+    "nofamily": "questions"
+  },
+  "ENGL.G8.WRITIN.T3_PARAGRAPHING_SEQUENC.PARAGRAPH_WRITING": {
+    "name": "Write well-sequenced paragraphs, including one on characters",
+    "sub": "ENGL.G8.WRITIN.T3_PARAGRAPHING_SEQUENC",
+    "outcome": "ENGL.G8.WRITIN.T3_PARAGRAPHING_SEQUENC.b",
+    "outcomes": [
+      "ENGL.G8.WRITIN.T3_PARAGRAPHING_SEQUENC.b",
+      "ENGL.G8.READIN.T12_SHORT_STORY_CHARACTE.b"
+    ],
+    "pre": [
+      "ENGL.G8.WRITIN.T3_PARAGRAPHING_SEQUENC.PARAGRAPH_CONNECTORS"
+    ],
+    "mis": [
+      "M8_X_PW_NO_TOPIC",
+      "M8_X_PW_OVERUSE_AND",
+      "M8_X_PW_CHARACTER_NO_EVIDENCE",
+      "M8_X_PW_NO_CLOSE"
+    ],
+    "nofamily": "composition"
   },
   "ENGL.G8.LISTEN.T4_LISTENING_COMPREHENS.LS_SPECIFIC": {
     "name": "Pick specific information from a listening text",
@@ -41966,8 +44529,46 @@ var SKILLS19 = {
     "mis": [
       "M8_LS_SPECIFIC_DETAIL",
       "M8_LS_SPECIFIC_OPPOSITE",
-      "M8_LS_SPECIFIC_NOTSAID"
+      "M8_LS_SPECIFIC_NOTSAID",
+      "M8_X_LSS_UNIT"
     ]
+  },
+  "ENGL.G8.LISTEN.T4_LISTENING_COMPREHENS.LISTEN_RESPOND": {
+    "name": "Listen to texts, songs and poems and respond to their message",
+    "sub": "ENGL.G8.LISTEN.T4_LISTENING_COMPREHENS",
+    "outcome": "ENGL.G8.LISTEN.T4_LISTENING_COMPREHENS.c",
+    "outcomes": [
+      "ENGL.G8.LISTEN.T4_LISTENING_COMPREHENS.c",
+      "ENGL.G8.LISTEN.T12_LISTENING_TO_RESPOND.a",
+      "ENGL.G8.LISTEN.T12_LISTENING_TO_RESPOND.b",
+      "ENGL.G8.LISTEN.T13_EXTENSIVE_LISTENING_.a"
+    ],
+    "pre": [
+      "ENGL.G8.LISTEN.T7_LISTENING_FOR_DETAIL.LS_MAIN"
+    ],
+    "mis": [
+      "M8_X_LR_TOPIC_AS_MESSAGE",
+      "M8_X_LR_NO_ATTITUDE_WORDS",
+      "M8_X_LR_RETELL",
+      "M8_X_LR_DETAIL_ONLY"
+    ],
+    "nofamily": "voice"
+  },
+  "ENGL.G8.READIN.T4_INTENSIVE_READING.READING_STRATEGIES": {
+    "name": "Choose the reading strategy that suits the text and purpose",
+    "sub": "ENGL.G8.READIN.T4_INTENSIVE_READING",
+    "outcome": "ENGL.G8.READIN.T4_INTENSIVE_READING.a",
+    "outcomes": [
+      "ENGL.G8.READIN.T4_INTENSIVE_READING.a"
+    ],
+    "pre": [],
+    "mis": [
+      "M8_X_RSTR_ONE_FOR_ALL",
+      "M8_X_RSTR_SKIM_SCAN",
+      "M8_X_RSTR_NO_PREVIEW",
+      "M8_X_RSTR_NO_REREAD"
+    ],
+    "nofamily": "questions"
   },
   "ENGL.G8.GRAMMA.T4_VERBS_AND_TENSE.PRESENT_PAST_TENSE": {
     "name": "Write sentences in the simple present and the simple past",
@@ -41982,7 +44583,8 @@ var SKILLS19 = {
     "mis": [
       "M8_TN_S_MISSING",
       "M8_TN_DID_PAST",
-      "M8_TN_WRONG_PAST"
+      "M8_TN_WRONG_PAST",
+      "M8_X_TN_HISTORIC_SWITCH"
     ]
   },
   "ENGL.G8.READIN.T4_INTENSIVE_READING_SH.RS_CHARACTERS": {
@@ -41997,8 +44599,63 @@ var SKILLS19 = {
     "mis": [
       "M8_RS_CHARACTERS_DETAIL",
       "M8_RS_CHARACTERS_OPPOSITE",
-      "M8_RS_CHARACTERS_NOTSAID"
+      "M8_RS_CHARACTERS_NOTSAID",
+      "M8_X_RSCH_NAME_ONLY"
     ]
+  },
+  "ENGL.G8.LISTEN.T5_PRONUNCIATION.PRONOUNCE_SOUNDS": {
+    "name": "Identify and pronounce the target vowel and consonant sounds",
+    "sub": "ENGL.G8.LISTEN.T5_PRONUNCIATION",
+    "outcome": "ENGL.G8.LISTEN.T5_PRONUNCIATION.a",
+    "outcomes": [
+      "ENGL.G8.LISTEN.T5_PRONUNCIATION.a",
+      "ENGL.G8.LISTEN.T5_PRONUNCIATION.b",
+      "ENGL.G8.LISTEN.T9_PRONUNCIATION_1_SOUN.a",
+      "ENGL.G8.LISTEN.T9_PRONUNCIATION_1_SOUN.b",
+      "ENGL.G8.LISTEN.T14_PRONUNCIATION_AND_IN.b"
+    ],
+    "pre": [],
+    "mis": [
+      "M8_X_PS_TH_T_S",
+      "M8_X_PS_COT_CAUGHT",
+      "M8_X_PS_CH_J",
+      "M8_X_PS_ER_A"
+    ],
+    "nofamily": "voice"
+  },
+  "ENGL.G8.LISTEN.T5_PRONUNCIATION.EMPHATIC_STRESS": {
+    "name": "Use emphatic stress and stress content words",
+    "sub": "ENGL.G8.LISTEN.T5_PRONUNCIATION",
+    "outcome": "ENGL.G8.LISTEN.T5_PRONUNCIATION.c",
+    "outcomes": [
+      "ENGL.G8.LISTEN.T5_PRONUNCIATION.c",
+      "ENGL.G8.LISTEN.T9_PRONUNCIATION_1_SOUN.c"
+    ],
+    "pre": [],
+    "mis": [
+      "M8_X_ES_EVERY_WORD",
+      "M8_X_ES_WRONG_WORD",
+      "M8_X_ES_FUNCTION_STRONG",
+      "M8_X_ES_NO_MEANING_CHANGE"
+    ],
+    "nofamily": "voice"
+  },
+  "ENGL.G8.READIN.T5_STUDY_SKILLS_REFEREN.REFERENCE_USE": {
+    "name": "Select and use reference materials to find information",
+    "sub": "ENGL.G8.READIN.T5_STUDY_SKILLS_REFEREN",
+    "outcome": "ENGL.G8.READIN.T5_STUDY_SKILLS_REFEREN.a",
+    "outcomes": [
+      "ENGL.G8.READIN.T5_STUDY_SKILLS_REFEREN.a",
+      "ENGL.G8.READIN.T5_STUDY_SKILLS_REFEREN.b"
+    ],
+    "pre": [],
+    "mis": [
+      "M8_X_RU_THESAURUS_DICTIONARY",
+      "M8_X_RU_INDEX_CONTENTS",
+      "M8_X_RU_UNRELIABLE_SITE",
+      "M8_X_RU_WRONG_BOOK"
+    ],
+    "nofamily": "questions"
   },
   "ENGL.G8.GRAMMA.T5_WORD_CLASSES_ADJECTI.GRADABLE_ADJECTIVES": {
     "name": "Tell gradable adjectives from non-gradable ones and use them correctly",
@@ -42012,8 +44669,83 @@ var SKILLS19 = {
     "mis": [
       "M8_GR_VERY_ABSOLUTE",
       "M8_GR_ABSOLUTELY_GRADABLE",
-      "M8_GR_MORE_UNIQUE"
+      "M8_GR_MORE_UNIQUE",
+      "M8_X_GR_VERY_GIANT"
     ]
+  },
+  "ENGL.G8.READIN.T5_INTENSIVE_READING_SH.DIALOGUE_REPETITION": {
+    "name": "Identify dialogue and repetition in a short story and explain why they are used",
+    "sub": "ENGL.G8.READIN.T5_INTENSIVE_READING_SH",
+    "outcome": "ENGL.G8.READIN.T5_INTENSIVE_READING_SH.a",
+    "outcomes": [
+      "ENGL.G8.READIN.T5_INTENSIVE_READING_SH.a",
+      "ENGL.G8.READIN.T5_INTENSIVE_READING_SH.b"
+    ],
+    "pre": [
+      "ENGL.G8.READIN.T3_INTENSIVE_READING_PO.POEM_PARTS"
+    ],
+    "mis": [
+      "M8_X_DR_NARRATION_AS_DIALOGUE",
+      "M8_X_DR_REPETITION_ERROR",
+      "M8_X_DR_NO_PURPOSE",
+      "M8_X_DR_ONE_REPEAT"
+    ],
+    "nofamily": "questions"
+  },
+  "ENGL.G8.WRITIN.T5_FUNCTIONAL_WRITING_A.APOLOGY_LETTER": {
+    "name": "List the parts of an apology letter and write one",
+    "sub": "ENGL.G8.WRITIN.T5_FUNCTIONAL_WRITING_A",
+    "outcome": "ENGL.G8.WRITIN.T5_FUNCTIONAL_WRITING_A.a",
+    "outcomes": [
+      "ENGL.G8.WRITIN.T5_FUNCTIONAL_WRITING_A.a",
+      "ENGL.G8.WRITIN.T5_FUNCTIONAL_WRITING_A.b"
+    ],
+    "pre": [],
+    "mis": [
+      "M8_X_AL_EXCUSES",
+      "M8_X_AL_NO_REPAIR",
+      "M8_X_AL_VAGUE",
+      "M8_X_AL_FORMAT"
+    ],
+    "nofamily": "composition"
+  },
+  "ENGL.G8.LISTEN.T6_CONVERSATIONAL_SKILL.DISAGREE_POLITELY": {
+    "name": "Disagree politely in a conversation",
+    "sub": "ENGL.G8.LISTEN.T6_CONVERSATIONAL_SKILL",
+    "outcome": "ENGL.G8.LISTEN.T6_CONVERSATIONAL_SKILL.a",
+    "outcomes": [
+      "ENGL.G8.LISTEN.T6_CONVERSATIONAL_SKILL.a",
+      "ENGL.G8.LISTEN.T6_CONVERSATIONAL_SKILL.b"
+    ],
+    "pre": [],
+    "mis": [
+      "M8_X_DP_ATTACK_PERSON",
+      "M8_X_DP_NO_REASON",
+      "M8_X_DP_SHOUT",
+      "M8_X_DP_AGREE_ANYWAY"
+    ],
+    "nofamily": "questions"
+  },
+  "ENGL.G8.READIN.T6_READING_FLUENCY_POEM.READ_FLUENTLY": {
+    "name": "Read texts fast, accurately and with expression using fluency strategies",
+    "sub": "ENGL.G8.READIN.T6_READING_FLUENCY_POEM",
+    "outcome": "ENGL.G8.READIN.T6_READING_FLUENCY_POEM.a",
+    "outcomes": [
+      "ENGL.G8.READIN.T6_READING_FLUENCY_POEM.a",
+      "ENGL.G8.READIN.T6_READING_FLUENCY_POEM.b",
+      "ENGL.G8.READIN.T6_READING_FLUENCY_POEM.c",
+      "ENGL.G8.READIN.T15_READING_FLUENCY.a",
+      "ENGL.G8.READIN.T15_READING_FLUENCY.b",
+      "ENGL.G8.READIN.T15_READING_FLUENCY.c"
+    ],
+    "pre": [],
+    "mis": [
+      "M8_X_RF_RUSH",
+      "M8_X_RF_FLAT",
+      "M8_X_RF_NO_STRATEGIES",
+      "M8_X_RF_POEM_LINE_STOP"
+    ],
+    "nofamily": "voice"
   },
   "ENGL.G8.GRAMMA.T6_WORD_CLASSES_ADVERBS.FREQUENCY_DEGREE": {
     "name": "Use adverbs of frequency and degree and put them in the right place",
@@ -42027,7 +44759,8 @@ var SKILLS19 = {
     "mis": [
       "M8_FD_PLACE",
       "M8_FD_TOO_VERY",
-      "M8_FD_NEVER_NOT"
+      "M8_FD_NEVER_NOT",
+      "M8_X_FD_ENOUGH"
     ]
   },
   "ENGL.G8.READIN.T6_INTENSIVE_READING_SH.RS_MAIN": {
@@ -42036,14 +44769,39 @@ var SKILLS19 = {
     "outcome": "ENGL.G8.READIN.T6_INTENSIVE_READING_SH.a",
     "outcomes": [
       "ENGL.G8.READIN.T6_INTENSIVE_READING_SH.a",
-      "ENGL.G8.READIN.T6_INTENSIVE_READING_SH.b"
+      "ENGL.G8.READIN.T6_INTENSIVE_READING_SH.b",
+      "ENGL.G8.READIN.T4_INTENSIVE_READING.b",
+      "ENGL.G8.READIN.T14_EXTENSIVE_READING_SH.a"
     ],
     "pre": [],
     "mis": [
       "M8_RS_MAIN_DETAIL",
       "M8_RS_MAIN_OPPOSITE",
-      "M8_RS_MAIN_NOTSAID"
+      "M8_RS_MAIN_NOTSAID",
+      "M8_X_RSM_FIRST_LINE"
     ]
+  },
+  "ENGL.G8.READIN.T6_INTENSIVE_READING_SH.RELATE_TO_LIFE": {
+    "name": "Relate ideas, events, characters and lessons in texts to real life",
+    "sub": "ENGL.G8.READIN.T6_INTENSIVE_READING_SH",
+    "outcome": "ENGL.G8.READIN.T6_INTENSIVE_READING_SH.c",
+    "outcomes": [
+      "ENGL.G8.READIN.T6_INTENSIVE_READING_SH.c",
+      "ENGL.G8.LISTEN.T8_LISTENING_AND_RESPON.d",
+      "ENGL.G8.READIN.T10_INTENSIVE_READING_SH.b",
+      "ENGL.G8.READIN.T11_INTENSIVE_READING_LE.b",
+      "ENGL.G8.READIN.T14_EXTENSIVE_READING_SH.b"
+    ],
+    "pre": [
+      "ENGL.G8.READIN.T11_INTENSIVE_READING_LE.RS_LESSON"
+    ],
+    "mis": [
+      "M8_X_RL_RETELL",
+      "M8_X_RL_SURFACE",
+      "M8_X_RL_NO_LESSON",
+      "M8_X_RL_CHANGES_TEXT"
+    ],
+    "nofamily": "teacher"
   },
   "ENGL.G8.WRITIN.T6_MECHANICS_OF_WRITING.SPELLING": {
     "name": "Spell commonly misspelt words and the -ie and -ei words",
@@ -42057,7 +44815,8 @@ var SKILLS19 = {
     "mis": [
       "M8_SP_MISSPELT",
       "M8_SP_IE_EI",
-      "M8_SP_DOUBLE"
+      "M8_SP_DOUBLE",
+      "M8_X_SP_SILENT_VOWEL"
     ]
   },
   "ENGL.G8.LISTEN.T7_LISTENING_FOR_DETAIL.LS_MAIN": {
@@ -42072,8 +44831,27 @@ var SKILLS19 = {
     "mis": [
       "M8_LS_MAIN_DETAIL",
       "M8_LS_MAIN_OPPOSITE",
-      "M8_LS_MAIN_NOTSAID"
+      "M8_LS_MAIN_NOTSAID",
+      "M8_X_LSM_EXAMPLE"
     ]
+  },
+  "ENGL.G8.READIN.T7_INTENSIVE_READING_VI.READ_VISUALS": {
+    "name": "Identify, interpret and link visuals to the written text",
+    "sub": "ENGL.G8.READIN.T7_INTENSIVE_READING_VI",
+    "outcome": "ENGL.G8.READIN.T7_INTENSIVE_READING_VI.a",
+    "outcomes": [
+      "ENGL.G8.READIN.T7_INTENSIVE_READING_VI.a",
+      "ENGL.G8.READIN.T7_INTENSIVE_READING_VI.b",
+      "ENGL.G8.READIN.T7_INTENSIVE_READING_VI.c"
+    ],
+    "pre": [],
+    "mis": [
+      "M8_X_RV_TYPE",
+      "M8_X_RV_KEY_IGNORED",
+      "M8_X_RV_NO_LINK",
+      "M8_X_RV_TREND"
+    ],
+    "nofamily": "questions"
   },
   "ENGL.G8.GRAMMA.T7_WORD_CLASSES_PRONOUN.INDEFINITE_REFLEXIVE": {
     "name": "Use indefinite and reflexive pronouns",
@@ -42087,8 +44865,85 @@ var SKILLS19 = {
     "mis": [
       "M8_IR_HISSELF",
       "M8_IR_OURSELF",
-      "M8_IR_EVERYONE_PLURAL"
+      "M8_IR_EVERYONE_PLURAL",
+      "M8_X_IR_MYSELF_SUBJECT"
     ]
+  },
+  "ENGL.G8.READIN.T7_INTENSIVE_READING_SH.CHARACTER_RELATIONS": {
+    "name": "Identify characters, their traits and the relationships between them",
+    "sub": "ENGL.G8.READIN.T7_INTENSIVE_READING_SH",
+    "outcome": "ENGL.G8.READIN.T7_INTENSIVE_READING_SH.a",
+    "outcomes": [
+      "ENGL.G8.READIN.T7_INTENSIVE_READING_SH.a",
+      "ENGL.G8.READIN.T7_INTENSIVE_READING_SH.b",
+      "ENGL.G8.READIN.T9_EXTENSIVE_READING_GR.a",
+      "ENGL.G8.READIN.T9_EXTENSIVE_READING_GR.b",
+      "ENGL.G8.READIN.T12_SHORT_STORY_CHARACTE.a"
+    ],
+    "pre": [
+      "ENGL.G8.READIN.T4_INTENSIVE_READING_SH.RS_CHARACTERS"
+    ],
+    "mis": [
+      "M8_X_CR_TRAIT_NO_EVIDENCE",
+      "M8_X_CR_RELATION_WRONG",
+      "M8_X_CR_STATIC",
+      "M8_X_CR_MINOR_MAIN"
+    ],
+    "nofamily": "questions"
+  },
+  "ENGL.G8.WRITIN.T7_COMPOSITION_WRITING.WRITING_PROCESS": {
+    "name": "Identify the steps of the writing process and the process for a dialogue",
+    "sub": "ENGL.G8.WRITIN.T7_COMPOSITION_WRITING",
+    "outcome": "ENGL.G8.WRITIN.T7_COMPOSITION_WRITING.a",
+    "outcomes": [
+      "ENGL.G8.WRITIN.T7_COMPOSITION_WRITING.a",
+      "ENGL.G8.WRITIN.T12_THE_WRITING_PROCESS.a"
+    ],
+    "pre": [],
+    "mis": [
+      "M8_X_WP_ORDER",
+      "M8_X_WP_REVISE_EDIT",
+      "M8_X_WP_SKIP_PREWRITE",
+      "M8_X_WP_PUBLISH"
+    ],
+    "nofamily": "questions"
+  },
+  "ENGL.G8.WRITIN.T7_COMPOSITION_WRITING.DIALOGUE_WRITING": {
+    "name": "Write a dialogue on a given topic correctly",
+    "sub": "ENGL.G8.WRITIN.T7_COMPOSITION_WRITING",
+    "outcome": "ENGL.G8.WRITIN.T7_COMPOSITION_WRITING.b",
+    "outcomes": [
+      "ENGL.G8.WRITIN.T7_COMPOSITION_WRITING.b",
+      "ENGL.G8.WRITIN.T12_THE_WRITING_PROCESS.b"
+    ],
+    "pre": [
+      "ENGL.G8.WRITIN.T7_COMPOSITION_WRITING.WRITING_PROCESS"
+    ],
+    "mis": [
+      "M8_X_DW_QUOTES",
+      "M8_X_DW_DIRECTIONS",
+      "M8_X_DW_SAME_LINE",
+      "M8_X_DW_NO_SETTING"
+    ],
+    "nofamily": "composition"
+  },
+  "ENGL.G8.LISTEN.T8_LISTENING_AND_RESPON.MYTHS": {
+    "name": "Identify the characters, events and moral lesson of a myth",
+    "sub": "ENGL.G8.LISTEN.T8_LISTENING_AND_RESPON",
+    "outcome": "ENGL.G8.LISTEN.T8_LISTENING_AND_RESPON.a",
+    "outcomes": [
+      "ENGL.G8.LISTEN.T8_LISTENING_AND_RESPON.a",
+      "ENGL.G8.LISTEN.T8_LISTENING_AND_RESPON.b",
+      "ENGL.G8.LISTEN.T8_LISTENING_AND_RESPON.c"
+    ],
+    "pre": [],
+    "mis": [
+      "M8_X_MY_LEGEND_MYTH",
+      "M8_X_MY_ORDER",
+      "M8_X_MY_LITERAL_LESSON",
+      "M8_X_MY_CHARACTER_TYPE"
+    ],
+    "nofamily": "questions"
   },
   "ENGL.G8.GRAMMA.T8_WORD_CLASSES_SIMPLE_.PREPOSITIONS_PLACE_TIME": {
     "name": "Use prepositions of position, time and place",
@@ -42102,8 +44957,48 @@ var SKILLS19 = {
     "mis": [
       "M8_PP_AT_ON_IN",
       "M8_PP_BETWEEN_AMONG",
-      "M8_PP_IN_PLACE"
+      "M8_PP_IN_PLACE",
+      "M8_X_PP_SINCE_FOR"
     ]
+  },
+  "ENGL.G8.READIN.T8_INTENSIVE_READING_PO_2.INANIMATE_CHARACTERS": {
+    "name": "Identify and describe inanimate characters in a poem",
+    "sub": "ENGL.G8.READIN.T8_INTENSIVE_READING_PO_2",
+    "outcome": "ENGL.G8.READIN.T8_INTENSIVE_READING_PO_2.a",
+    "outcomes": [
+      "ENGL.G8.READIN.T8_INTENSIVE_READING_PO_2.a",
+      "ENGL.G8.READIN.T8_INTENSIVE_READING_PO_2.b"
+    ],
+    "pre": [
+      "ENGL.G8.READIN.T13_SHORT_STORY_STYLE_CL.LITERARY_DEVICES"
+    ],
+    "mis": [
+      "M8_X_IC_ANIMALS",
+      "M8_X_IC_LITERAL",
+      "M8_X_IC_TRAIT_WRONG",
+      "M8_X_IC_MISSES"
+    ],
+    "nofamily": "questions"
+  },
+  "ENGL.G8.WRITIN.T8_ASSESSMENT_OF_WRITIN.ASSESS_WRITING": {
+    "name": "Identify errors in an essay and assess it with suggested corrections",
+    "sub": "ENGL.G8.WRITIN.T8_ASSESSMENT_OF_WRITIN",
+    "outcome": "ENGL.G8.WRITIN.T8_ASSESSMENT_OF_WRITIN.a",
+    "outcomes": [
+      "ENGL.G8.WRITIN.T8_ASSESSMENT_OF_WRITIN.a",
+      "ENGL.G8.WRITIN.T8_ASSESSMENT_OF_WRITIN.b"
+    ],
+    "pre": [
+      "ENGL.G8.WRITIN.T6_MECHANICS_OF_WRITING.SPELLING",
+      "ENGL.G8.WRITIN.T2_MECHANICS_OF_WRITING.PUNCTUATION"
+    ],
+    "mis": [
+      "M8_X_AW_SPELLING_ONLY",
+      "M8_X_AW_NO_CORRECTION",
+      "M8_X_AW_HARSH",
+      "M8_X_AW_MISSES_GRAMMAR"
+    ],
+    "nofamily": "teacher"
   },
   "ENGL.G8.GRAMMA.T9_WORD_CLASSES_CONJUNC.CONJUNCTIONS_LISTED": {
     "name": "Use the conjunctions because, although, unless, until, while and so",
@@ -42118,7 +45013,8 @@ var SKILLS19 = {
       "M8_CJ_ALTHOUGH_BUT",
       "M8_CJ_BECAUSE_SO",
       "M8_CJ_UNLESS_NEG",
-      "M8_CJ_WRONG"
+      "M8_CJ_WRONG",
+      "M8_X_CJ_DESPITE_OF"
     ]
   },
   "ENGL.G8.READIN.T9_INTENSIVE_READING_SI.SIMILE_METAPHOR": {
@@ -42127,14 +45023,76 @@ var SKILLS19 = {
     "outcome": "ENGL.G8.READIN.T9_INTENSIVE_READING_SI.a",
     "outcomes": [
       "ENGL.G8.READIN.T9_INTENSIVE_READING_SI.a",
-      "ENGL.G8.READIN.T9_INTENSIVE_READING_SI.c"
+      "ENGL.G8.READIN.T9_INTENSIVE_READING_SI.c",
+      "ENGL.G8.READIN.T9_INTENSIVE_READING_SI.b"
     ],
     "pre": [],
     "mis": [
       "M8_SM_SIMILE_AS_METAPHOR",
       "M8_SM_METAPHOR_AS_SIMILE",
-      "M8_SM_LITERAL"
+      "M8_SM_LITERAL",
+      "M8_X_SM_MIXED"
     ]
+  },
+  "ENGL.G8.WRITIN.T9_CREATIVE_WRITING_NAR.NARRATIVE_COMPOSITION": {
+    "name": "Plan and write a narrative of 240 to 280 words with revealing details and idioms",
+    "sub": "ENGL.G8.WRITIN.T9_CREATIVE_WRITING_NAR",
+    "outcome": "ENGL.G8.WRITIN.T9_CREATIVE_WRITING_NAR.a",
+    "outcomes": [
+      "ENGL.G8.WRITIN.T9_CREATIVE_WRITING_NAR.a",
+      "ENGL.G8.WRITIN.T9_CREATIVE_WRITING_NAR.b",
+      "ENGL.G8.WRITIN.T9_CREATIVE_WRITING_NAR.c",
+      "ENGL.G8.WRITIN.T13_CREATIVE_NARRATIVE_C.b"
+    ],
+    "pre": [
+      "ENGL.G8.WRITIN.T13_CREATIVE_NARRATIVE_C.IDIOMS_CONTEXT",
+      "ENGL.G8.READIN.T13_SHORT_STORY_STYLE_CL.LITERARY_DEVICES"
+    ],
+    "mis": [
+      "M8_X_NC_TELL_NOT_SHOW",
+      "M8_X_NC_NO_PLAN",
+      "M8_X_NC_LENGTH",
+      "M8_X_NC_IDIOM_FORCED"
+    ],
+    "nofamily": "composition"
+  },
+  "ENGL.G8.LISTEN.T10_ORAL_PRESENTATIONS.SPEECH": {
+    "name": "Prepare and present a speech using its format and good speaking skills",
+    "sub": "ENGL.G8.LISTEN.T10_ORAL_PRESENTATIONS",
+    "outcome": "ENGL.G8.LISTEN.T10_ORAL_PRESENTATIONS.a",
+    "outcomes": [
+      "ENGL.G8.LISTEN.T10_ORAL_PRESENTATIONS.a",
+      "ENGL.G8.LISTEN.T10_ORAL_PRESENTATIONS.b",
+      "ENGL.G8.LISTEN.T10_ORAL_PRESENTATIONS.c"
+    ],
+    "pre": [],
+    "mis": [
+      "M8_X_SP_NO_SALUTATION",
+      "M8_X_SP_RANK_ORDER",
+      "M8_X_SP_READS",
+      "M8_X_SP_NO_THANKS"
+    ],
+    "nofamily": "voice"
+  },
+  "ENGL.G8.READIN.T10_STUDY_SKILLS_NOTE_MA.NOTE_MAKING": {
+    "name": "Identify key points, make notes and summarise",
+    "sub": "ENGL.G8.READIN.T10_STUDY_SKILLS_NOTE_MA",
+    "outcome": "ENGL.G8.READIN.T10_STUDY_SKILLS_NOTE_MA.a",
+    "outcomes": [
+      "ENGL.G8.READIN.T10_STUDY_SKILLS_NOTE_MA.a",
+      "ENGL.G8.READIN.T10_STUDY_SKILLS_NOTE_MA.b",
+      "ENGL.G8.READIN.T14_STUDY_SKILLS.a",
+      "ENGL.G8.READIN.T14_STUDY_SKILLS.b",
+      "ENGL.G8.READIN.T14_STUDY_SKILLS.c"
+    ],
+    "pre": [],
+    "mis": [
+      "M8_X_NM_COPIES",
+      "M8_X_NM_DETAILS",
+      "M8_X_NM_SUMMARY_LENGTH",
+      "M8_X_NM_OWN_WORDS"
+    ],
+    "nofamily": "teacher"
   },
   "ENGL.G8.GRAMMA.T10_WORD_CLASSES_DEMONST.DEMONSTRATIVES_QUANTIFIERS": {
     "name": "Use this, that, these, those and quantifiers",
@@ -42148,8 +45106,47 @@ var SKILLS19 = {
     "mis": [
       "M8_DQ_THIS_THESE",
       "M8_DQ_NEAR_FAR",
-      "M8_DQ_MUCH_MANY"
+      "M8_DQ_MUCH_MANY",
+      "M8_X_DQ_LESS_FEWER"
     ]
+  },
+  "ENGL.G8.WRITIN.T10_FUNCTIONAL_WRITING_T.THANK_YOU_NOTES": {
+    "name": "Write and critique thank you and congratulatory notes",
+    "sub": "ENGL.G8.WRITIN.T10_FUNCTIONAL_WRITING_T",
+    "outcome": "ENGL.G8.WRITIN.T10_FUNCTIONAL_WRITING_T.a",
+    "outcomes": [
+      "ENGL.G8.WRITIN.T10_FUNCTIONAL_WRITING_T.a",
+      "ENGL.G8.WRITIN.T10_FUNCTIONAL_WRITING_T.b",
+      "ENGL.G8.WRITIN.T10_FUNCTIONAL_WRITING_T.c",
+      "ENGL.G8.WRITIN.T10_FUNCTIONAL_WRITING_T.d"
+    ],
+    "pre": [
+      "ENGL.G8.WRITIN.T5_FUNCTIONAL_WRITING_A.APOLOGY_LETTER"
+    ],
+    "mis": [
+      "M8_X_TN_NO_REASON",
+      "M8_X_TN_TOO_LONG",
+      "M8_X_TN_CONGRATS_WRONG",
+      "M8_X_TN_CRITIQUE"
+    ],
+    "nofamily": "composition"
+  },
+  "ENGL.G8.LISTEN.T11_CONVERSATIONAL_SKILL.INTERVIEW_POLITE": {
+    "name": "Use polite words and expressions when conducting an interview",
+    "sub": "ENGL.G8.LISTEN.T11_CONVERSATIONAL_SKILL",
+    "outcome": "ENGL.G8.LISTEN.T11_CONVERSATIONAL_SKILL.a",
+    "outcomes": [
+      "ENGL.G8.LISTEN.T11_CONVERSATIONAL_SKILL.a",
+      "ENGL.G8.LISTEN.T11_CONVERSATIONAL_SKILL.b"
+    ],
+    "pre": [],
+    "mis": [
+      "M8_X_IP_CLOSED_QUESTIONS",
+      "M8_X_IP_NO_THANKS",
+      "M8_X_IP_BLUNT",
+      "M8_X_IP_NO_FOLLOW_UP"
+    ],
+    "nofamily": "questions"
   },
   "ENGL.G8.GRAMMA.T11_WORD_CLASSES_ADVERBS.ADVERB_FORMATION": {
     "name": "Form adverbs from adjectives",
@@ -42164,7 +45161,8 @@ var SKILLS19 = {
     "mis": [
       "M8_AF_GOOD_WELL",
       "M8_AF_SPELL",
-      "M8_AF_HARDLY"
+      "M8_AF_HARDLY",
+      "M8_X_AF_FRIENDLY"
     ]
   },
   "ENGL.G8.READIN.T11_INTENSIVE_READING_LE.RS_LESSON": {
@@ -42178,7 +45176,8 @@ var SKILLS19 = {
     "mis": [
       "M8_RS_LESSON_DETAIL",
       "M8_RS_LESSON_OPPOSITE",
-      "M8_RS_LESSON_NOTSAID"
+      "M8_RS_LESSON_NOTSAID",
+      "M8_X_RSL_EVENT"
     ]
   },
   "ENGL.G8.WRITIN.T11_MECHANICS_OF_WRITING.PREFIXES_SUFFIXES": {
@@ -42188,13 +45187,16 @@ var SKILLS19 = {
     "outcomes": [
       "ENGL.G8.WRITIN.T11_MECHANICS_OF_WRITING.a",
       "ENGL.G8.WRITIN.T11_MECHANICS_OF_WRITING.b",
-      "ENGL.G8.WRITIN.T11_MECHANICS_OF_WRITING.c"
+      "ENGL.G8.WRITIN.T11_MECHANICS_OF_WRITING.c",
+      "ENGL.G8.WRITIN.T6_MECHANICS_OF_WRITING.b",
+      "ENGL.G8.WRITIN.T6_MECHANICS_OF_WRITING.d"
     ],
     "pre": [],
     "mis": [
       "M8_PS_WRONG_PREFIX",
       "M8_PS_MEANING",
-      "M8_PS_SPELL"
+      "M8_PS_SPELL",
+      "M8_X_PS_MEANING_LINK"
     ]
   },
   "ENGL.G8.READIN.T12_INTENSIVE_READING_CO.RS_IMAGES": {
@@ -42203,13 +45205,15 @@ var SKILLS19 = {
     "outcome": "ENGL.G8.READIN.T12_INTENSIVE_READING_CO.a",
     "outcomes": [
       "ENGL.G8.READIN.T12_INTENSIVE_READING_CO.a",
-      "ENGL.G8.READIN.T12_INTENSIVE_READING_CO.b"
+      "ENGL.G8.READIN.T12_INTENSIVE_READING_CO.b",
+      "ENGL.G8.READIN.T13_INTENSIVE_READING_CO.b"
     ],
     "pre": [],
     "mis": [
       "M8_RS_IMAGES_DETAIL",
       "M8_RS_IMAGES_OPPOSITE",
-      "M8_RS_IMAGES_NOTSAID"
+      "M8_RS_IMAGES_NOTSAID",
+      "M8_X_RSI_SENSE"
     ]
   },
   "ENGL.G8.GRAMMA.T12_PHRASAL_VERBS.PHRASAL_VERBS": {
@@ -42224,7 +45228,8 @@ var SKILLS19 = {
     "mis": [
       "M8_PV_MEANING",
       "M8_PV_PARTICLE",
-      "M8_PV_LITERAL"
+      "M8_PV_LITERAL",
+      "M8_X_PV_SPLIT"
     ]
   },
   "ENGL.G8.READIN.T13_INTENSIVE_READING_CO.RS_KEYPOINTS": {
@@ -42239,7 +45244,8 @@ var SKILLS19 = {
     "mis": [
       "M8_RS_KEYPOINTS_DETAIL",
       "M8_RS_KEYPOINTS_OPPOSITE",
-      "M8_RS_KEYPOINTS_NOTSAID"
+      "M8_RS_KEYPOINTS_NOTSAID",
+      "M8_X_RSK_EXAMPLE_POINT"
     ]
   },
   "ENGL.G8.GRAMMA.T13_WORD_CLASSES_COMPOUN.COMPOUND_SENTENCES": {
@@ -42254,7 +45260,8 @@ var SKILLS19 = {
     "mis": [
       "M8_CS_COMMA_SPLICE",
       "M8_CS_NO_COMMA",
-      "M8_CS_WRONG_CONJ"
+      "M8_CS_WRONG_CONJ",
+      "M8_X_CS_FANBOYS"
     ]
   },
   "ENGL.G8.READIN.T13_SHORT_STORY_STYLE_CL.LITERARY_DEVICES": {
@@ -42268,8 +45275,27 @@ var SKILLS19 = {
     "mis": [
       "M8_LD_PERSON_PLAIN",
       "M8_LD_FLASHBACK_FUTURE",
-      "M8_LD_SIMILE"
+      "M8_LD_SIMILE",
+      "M8_X_LD_FLASHBACK_DREAM"
     ]
+  },
+  "ENGL.G8.WRITIN.T13_CREATIVE_NARRATIVE_C.IDIOMS_CONTEXT": {
+    "name": "Explain the meaning of idioms in context",
+    "sub": "ENGL.G8.WRITIN.T13_CREATIVE_NARRATIVE_C",
+    "outcome": "ENGL.G8.WRITIN.T13_CREATIVE_NARRATIVE_C.a",
+    "outcomes": [
+      "ENGL.G8.WRITIN.T13_CREATIVE_NARRATIVE_C.a"
+    ],
+    "pre": [
+      "ENGL.G8.READIN.T1_INTENSIVE_READING_SH.RS_CONTEXT"
+    ],
+    "mis": [
+      "M8_X_IC2_LITERAL",
+      "M8_X_IC2_OPPOSITE",
+      "M8_X_IC2_WRONG_FIT",
+      "M8_X_IC2_CHANGED"
+    ],
+    "nofamily": "questions"
   },
   "ENGL.G8.LISTEN.T14_PRONUNCIATION_AND_IN.SILENT_LETTERS": {
     "name": "Tell the silent consonant letters in words",
@@ -42282,8 +45308,25 @@ var SKILLS19 = {
     "mis": [
       "M8_SL_SOUNDED",
       "M8_SL_WRONG_LETTER",
-      "M8_SL_SPELL"
+      "M8_SL_SPELL",
+      "M8_X_SL_ADDS_SOUND"
     ]
+  },
+  "ENGL.G8.LISTEN.T14_PRONUNCIATION_AND_IN.INTONATION": {
+    "name": "Use the correct intonation in statements and exclamations",
+    "sub": "ENGL.G8.LISTEN.T14_PRONUNCIATION_AND_IN",
+    "outcome": "ENGL.G8.LISTEN.T14_PRONUNCIATION_AND_IN.c",
+    "outcomes": [
+      "ENGL.G8.LISTEN.T14_PRONUNCIATION_AND_IN.c"
+    ],
+    "pre": [],
+    "mis": [
+      "M8_X_IN_STATEMENT_RISE",
+      "M8_X_IN_EXCLAM_FLAT",
+      "M8_X_IN_ALL_RISE",
+      "M8_X_IN_NO_CONTRAST"
+    ],
+    "nofamily": "voice"
   },
   "ENGL.G8.GRAMMA.T14_SENTENCES_ACTIVE_AND.ACTIVE_PASSIVE": {
     "name": "Tell the active and the passive voice and change one into the other",
@@ -42298,8 +45341,48 @@ var SKILLS19 = {
     "mis": [
       "M8_AP_WRONG_PARTICIPLE",
       "M8_AP_VOICE_MIX",
-      "M8_AP_NO_BE"
+      "M8_AP_NO_BE",
+      "M8_X_AP_TENSE_CHANGE"
     ]
+  },
+  "ENGL.G8.WRITIN.T14_CREATIVE_WRITING_DES.DESCRIPTIVE_COMPOSITION": {
+    "name": "Use describing words and write a descriptive composition",
+    "sub": "ENGL.G8.WRITIN.T14_CREATIVE_WRITING_DES",
+    "outcome": "ENGL.G8.WRITIN.T14_CREATIVE_WRITING_DES.a",
+    "outcomes": [
+      "ENGL.G8.WRITIN.T14_CREATIVE_WRITING_DES.a",
+      "ENGL.G8.WRITIN.T14_CREATIVE_WRITING_DES.b"
+    ],
+    "pre": [
+      "ENGL.G8.READIN.T9_INTENSIVE_READING_SI.SIMILE_METAPHOR",
+      "ENGL.G8.GRAMMA.T5_WORD_CLASSES_ADJECTI.GRADABLE_ADJECTIVES"
+    ],
+    "mis": [
+      "M8_X_DC_NARRATES",
+      "M8_X_DC_VAGUE",
+      "M8_X_DC_ONE_SENSE",
+      "M8_X_DC_NO_ORDER"
+    ],
+    "nofamily": "composition"
+  },
+  "ENGL.G8.LISTEN.T15_ORAL_REPORTS_EVENTS.ORAL_REPORT_EVENTS": {
+    "name": "Recount and report on events outside the classroom",
+    "sub": "ENGL.G8.LISTEN.T15_ORAL_REPORTS_EVENTS",
+    "outcome": "ENGL.G8.LISTEN.T15_ORAL_REPORTS_EVENTS.a",
+    "outcomes": [
+      "ENGL.G8.LISTEN.T15_ORAL_REPORTS_EVENTS.a",
+      "ENGL.G8.LISTEN.T15_ORAL_REPORTS_EVENTS.b"
+    ],
+    "pre": [
+      "ENGL.G8.GRAMMA.T4_VERBS_AND_TENSE.PRESENT_PAST_TENSE"
+    ],
+    "mis": [
+      "M8_X_OR_OPINIONS",
+      "M8_X_OR_PRESENT_TENSE",
+      "M8_X_OR_NO_ORDER",
+      "M8_X_OR_NO_CUES"
+    ],
+    "nofamily": "voice"
   },
   "ENGL.G8.GRAMMA.T15_TYPES_OF_SENTENCES_I.QUESTION_TAGS": {
     "name": "Frame interrogative sentences and question tags",
@@ -42313,7 +45396,8 @@ var SKILLS19 = {
     "mis": [
       "M8_QT_SAME_SIGN",
       "M8_QT_ISNT_IT",
-      "M8_QT_WRONG_AUX"
+      "M8_QT_WRONG_AUX",
+      "M8_X_QT_IMPERATIVE"
     ]
   },
   "ENGL.G8.READIN.T15_POEMS.RP_MESSAGE": {
@@ -42328,14 +45412,44 @@ var SKILLS19 = {
     "mis": [
       "M8_RP_MESSAGE_DETAIL",
       "M8_RP_MESSAGE_OPPOSITE",
-      "M8_RP_MESSAGE_NOTSAID"
+      "M8_RP_MESSAGE_NOTSAID",
+      "M8_X_RPM_MORAL_ONLY"
     ]
+  },
+  "ENGL.G8.WRITIN.T15_FUNCTIONAL_WRITING_P.JOURNAL_WRITING": {
+    "name": "Outline, create and evaluate a personal journal",
+    "sub": "ENGL.G8.WRITIN.T15_FUNCTIONAL_WRITING_P",
+    "outcome": "ENGL.G8.WRITIN.T15_FUNCTIONAL_WRITING_P.a",
+    "outcomes": [
+      "ENGL.G8.WRITIN.T15_FUNCTIONAL_WRITING_P.a",
+      "ENGL.G8.WRITIN.T15_FUNCTIONAL_WRITING_P.b",
+      "ENGL.G8.WRITIN.T15_FUNCTIONAL_WRITING_P.c"
+    ],
+    "pre": [
+      "ENGL.G8.GRAMMA.T4_VERBS_AND_TENSE.PRESENT_PAST_TENSE"
+    ],
+    "mis": [
+      "M8_X_JW_NO_REFLECTION",
+      "M8_X_JW_NO_DATE",
+      "M8_X_JW_THIRD_PERSON",
+      "M8_X_JW_EVALUATE_LENGTH"
+    ],
+    "nofamily": "composition"
   }
 };
 var MIS_FEEDBACK19 = {
+  "M8_X_TE_WHO_ARE_YOU": "Greet and say who you are first.",
+  "M8_X_TE_DEMAND_PERSON": "Ask: May I speak to ...?",
+  "M8_X_TE_NO_MESSAGE": "Offer to take a message.",
+  "M8_X_TE_HANG_UP": "Thank the caller and say goodbye.",
+  "M8_X_IR_NONPRINT_IGNORED": "Print and non-print texts both count.",
+  "M8_X_IR_ONE_KIND": "Read non-fiction too.",
+  "M8_X_IR_NO_LOG": "Log each text.",
+  "M8_X_IR_NO_REASON": "Give a reason.",
   "M8_CPN_PLURAL_LAST": "In a hyphenated compound the main noun takes the plural: mothers-in-law, passers-by, not mother-in-laws.",
   "M8_CPN_SPLIT": "Some compound nouns are one word (toothbrush, classroom), some are two (post office), and some have a hyphen (mother-in-law). Look in a dictionary.",
   "M8_CPN_SINGULAR": "Many post offices sell stamps. Put the plural on the main noun.",
+  "M8_X_CPN_HYPHEN": "Check the dictionary: some compounds are one word, some two, some hyphenated.",
   "M8_RS_SEQUENCE_DETAIL": "Check the answer against the text: it must cover what the question asks, not just one small detail.",
   "M8_RS_SEQUENCE_OPPOSITE": "Check the answer against the text: it must agree with the text, not say the opposite.",
   "M8_RS_SEQUENCE_NOTSAID": "Check the answer against the text: it must be found in the text, not added from outside.",
@@ -42345,107 +45459,271 @@ var MIS_FEEDBACK19 = {
   "M8_RS_QUESTIONS_DETAIL": "Check the answer against the text: it must cover what the question asks, not just one small detail.",
   "M8_RS_QUESTIONS_OPPOSITE": "Check the answer against the text: it must agree with the text, not say the opposite.",
   "M8_RS_QUESTIONS_NOTSAID": "Check the answer against the text: it must be found in the text, not added from outside.",
+  "M8_X_RSS_TOLD_ORDER": "Use time clues (earlier, that morning) to find what happened first.",
+  "M8_X_RSC_WHOLE_SENTENCE": "The meaning should fit in the word's place in the sentence.",
+  "M8_X_RSQ_WRONG_FORM": "Read the instruction: one word, a sentence or a list.",
+  "M8_X_LW_HEIGHT": "Ascenders go up (b, d); descenders go down (g, y).",
+  "M8_X_LW_PROPORTION": "Ascenders reach above the x-height.",
+  "M8_X_LW_SPACING": "Even spaces.",
+  "M8_X_LW_MARGIN": "Stay inside the margin.",
+  "M8_X_PO_NO_CHORUS": "Find the solo and chorus parts.",
+  "M8_X_PO_FACE_MISMATCH": "Match your face and gestures to the mood.",
+  "M8_X_PO_MONOTONE": "Let the voice follow the meaning.",
+  "M8_X_PO_MEMORY_BREAK": "Keep going; the audience follows the flow.",
+  "M8_X_SW_NO_CHORUS": "Add a short chorus that repeats.",
+  "M8_X_SW_NO_RHYTHM": "Keep lines short with a steady beat.",
+  "M8_X_SW_OFF_TOPIC": "Keep every verse on the topic.",
+  "M8_X_SW_NO_MESSAGE": "Give the song a clear message.",
   "M8_RP_PERSONA_DETAIL": "Check the answer against the text: it must cover what the question asks, not just one small detail.",
   "M8_RP_PERSONA_OPPOSITE": "Check the answer against the text: it must agree with the text, not say the opposite.",
   "M8_RP_PERSONA_NOTSAID": "Check the answer against the text: it must be found in the text, not added from outside.",
+  "M8_X_RPP_POET_ALWAYS": "The persona is whoever speaks in the poem.",
   "M8_CLN_WRONG_GROUP": "Each kind of group has its own collective noun: a pride of lions, a school of fish, a fleet of ships, a troop of monkeys, a crew of sailors.",
   "M8_CLN_PLURAL": "A collective noun names one group, so write a crew of sailors, not a crews of sailors.",
   "M8_CLN_NO_OF": "Say a swarm of bees. The collective noun is followed by of.",
+  "M8_X_CLN_VERB": "One group acting together takes is.",
   "M8_RS_SETTING_DETAIL": "Check the answer against the text: it must cover what the question asks, not just one small detail.",
   "M8_RS_SETTING_OPPOSITE": "Check the answer against the text: it must agree with the text, not say the opposite.",
   "M8_RS_SETTING_NOTSAID": "Check the answer against the text: it must be found in the text, not added from outside.",
+  "M8_X_RSE_TIME_MISSING": "Setting is place and time.",
   "M8_PN_APOS_PLURAL": "An apostrophe shows belonging or a short form, not a plural: three mangoes, not three mango's.",
   "M8_PN_APOS_POSS": "For one owner write the boy's bag. For many owners write the boys' bags, with the apostrophe after the s.",
   "M8_PN_COMMA_LIST": "Put a comma between the items of a list and use and before the last: rice, beans and maize.",
   "M8_PN_ITS": "Its (no apostrophe) shows belonging: its calf. It's is short for it is or it has.",
+  "M8_X_PN_COMMA_SPLICE": "Use a full stop, or a comma and a joining word.",
   "M8_LS_CAUSE_DETAIL": "Check the answer against what was said: it must cover what the question asks, not just one small detail.",
   "M8_LS_CAUSE_OPPOSITE": "Check the answer against what was said: it must agree with what was said, not say the opposite.",
   "M8_LS_CAUSE_NOTSAID": "Check the answer against what was said: it must be something that was said, not added from outside.",
+  "M8_X_LSC_EFFECT_AS_CAUSE": "The cause comes first and makes the effect happen.",
   "M8_AUX_AGREE": "Use has with he, she, it and one name (Wanjiru has). Use have with I, you, we and they.",
   "M8_AUX_BE_FORM": "Use was with I, he, she and it, and were with you, we, they and plural nouns: The boys were playing.",
   "M8_AUX_DID_PAST": "After do, does or did the main verb has no ending: Otieno did not go, he does not go.",
+  "M8_X_AUX_DOUBLE": "One modal or one be: She can swim.",
   "M8_PM_STANZA_LINE": "A line is one row of words in a poem. A stanza is a group of lines.",
   "M8_PM_RHYME_REPEAT": "Rhyme is words with the same end sound. Repetition is a word or a line said again.",
   "M8_PM_POET_PERSONA": "The persona is the voice that speaks in the poem. It may be the poet or an imagined person.",
   "M8_RP_MAIN_DETAIL": "Check the answer against the text: it must cover what the question asks, not just one small detail.",
   "M8_RP_MAIN_OPPOSITE": "Check the answer against the text: it must agree with the text, not say the opposite.",
   "M8_RP_MAIN_NOTSAID": "Check the answer against the text: it must be found in the text, not added from outside.",
+  "M8_X_PM_REFRAIN": "A refrain is a repeated line or group of lines.",
+  "M8_X_RPM_TITLE_ONLY": "Say what the poem says about the title.",
+  "M8_X_PC_WRONG_CONNECTOR": "Sequence: first, next, then, finally.",
+  "M8_X_PC_FINALLY_FIRST": "Finally marks the last step.",
+  "M8_X_PC_MISS_CONNECTOR": "Look at the start of each sentence.",
+  "M8_X_PC_ORDER_IGNORED": "Use the connectors to order.",
+  "M8_X_PW_NO_TOPIC": "Begin with the main idea.",
+  "M8_X_PW_OVERUSE_AND": "Vary connectors.",
+  "M8_X_PW_CHARACTER_NO_EVIDENCE": "Support each trait with an action.",
+  "M8_X_PW_NO_CLOSE": "Sum up.",
   "M8_LS_SPECIFIC_DETAIL": "Check the answer against what was said: it must cover what the question asks, not just one small detail.",
   "M8_LS_SPECIFIC_OPPOSITE": "Check the answer against what was said: it must agree with what was said, not say the opposite.",
   "M8_LS_SPECIFIC_NOTSAID": "Check the answer against what was said: it must be something that was said, not added from outside.",
+  "M8_X_LR_TOPIC_AS_MESSAGE": "Message: what the song wants you to think.",
+  "M8_X_LR_NO_ATTITUDE_WORDS": "Use an exact word and give a reason.",
+  "M8_X_LR_RETELL": "Add your view or action.",
+  "M8_X_LR_DETAIL_ONLY": "Respond to the main point.",
+  "M8_X_LSS_UNIT": "Listen for the unit as well as the number.",
+  "M8_X_RSTR_ONE_FOR_ALL": "Match the strategy to the task.",
+  "M8_X_RSTR_SKIM_SCAN": "Skim for the gist; scan for a detail.",
+  "M8_X_RSTR_NO_PREVIEW": "Preview first.",
+  "M8_X_RSTR_NO_REREAD": "Reread hard parts.",
   "M8_TN_S_MISSING": "In the simple present add -s or -es after he, she, it or one name: Achieng walks.",
   "M8_TN_DID_PAST": "Did already shows the past, so the verb stays plain: did not know, did she see.",
   "M8_TN_WRONG_PAST": "Irregular verbs do not add -ed. Learn the forms: go, went; see, saw; eat, ate; run, ran.",
+  "M8_X_TN_HISTORIC_SWITCH": "Keep past events in the past tense.",
   "M8_RS_CHARACTERS_DETAIL": "Check the answer against the text: it must cover what the question asks, not just one small detail.",
   "M8_RS_CHARACTERS_OPPOSITE": "Check the answer against the text: it must agree with the text, not say the opposite.",
   "M8_RS_CHARACTERS_NOTSAID": "Check the answer against the text: it must be found in the text, not added from outside.",
+  "M8_X_RSCH_NAME_ONLY": "Say who the person is and what he does.",
+  "M8_X_PS_TH_T_S": "Put the tongue between the teeth for th.",
+  "M8_X_PS_COT_CAUGHT": "Caught is longer with rounder lips.",
+  "M8_X_PS_CH_J": "Ch is voiceless; j buzzes.",
+  "M8_X_PS_ER_A": "Keep the tongue in the middle: er.",
+  "M8_X_ES_EVERY_WORD": "Make one word strong: the one that corrects.",
+  "M8_X_ES_WRONG_WORD": "Stress the word that answers the question.",
+  "M8_X_ES_FUNCTION_STRONG": "Keep the, of and is weak.",
+  "M8_X_ES_NO_MEANING_CHANGE": "Moving the stress changes what you mean.",
+  "M8_X_RU_THESAURUS_DICTIONARY": "A thesaurus gives words of similar meaning.",
+  "M8_X_RU_INDEX_CONTENTS": "The index lists topics with page numbers.",
+  "M8_X_RU_UNRELIABLE_SITE": "Check who wrote it.",
+  "M8_X_RU_WRONG_BOOK": "Meanings are in a dictionary.",
   "M8_GR_VERY_ABSOLUTE": "A non-gradable adjective such as perfect, empty, dead or unique cannot be graded, so use absolutely or completely, not very.",
   "M8_GR_ABSOLUTELY_GRADABLE": "A gradable adjective such as tall, cold or big can be more or less, so use very, quite or extremely with it.",
   "M8_GR_MORE_UNIQUE": "Unique, perfect, empty and dead have no comparative or superlative form. Say unique, not more unique.",
+  "M8_X_GR_VERY_GIANT": "Extreme adjectives (enormous, freezing) take absolutely or really, not very.",
+  "M8_X_DR_NARRATION_AS_DIALOGUE": "Dialogue is the characters' spoken words.",
+  "M8_X_DR_REPETITION_ERROR": "Writers repeat on purpose for effect.",
+  "M8_X_DR_NO_PURPOSE": "Ask what the words show about the characters.",
+  "M8_X_DR_ONE_REPEAT": "Events can repeat too.",
+  "M8_X_AL_EXCUSES": "Take responsibility.",
+  "M8_X_AL_NO_REPAIR": "Say how you will put it right.",
+  "M8_X_AL_VAGUE": "Name what you did.",
+  "M8_X_AL_FORMAT": "Use the full letter format.",
+  "M8_X_DP_ATTACK_PERSON": "Disagree with the idea, not the person.",
+  "M8_X_DP_NO_REASON": "Give a reason.",
+  "M8_X_DP_SHOUT": "Keep your voice calm.",
+  "M8_X_DP_AGREE_ANYWAY": "You can be polite and still disagree.",
+  "M8_X_RF_RUSH": "Fluent means smooth, not racing.",
+  "M8_X_RF_FLAT": "Let the voice show the feeling.",
+  "M8_X_RF_NO_STRATEGIES": "Strategies: preview, phrase, pause, vary, pace.",
+  "M8_X_RF_POEM_LINE_STOP": "Pause at punctuation, not line ends.",
   "M8_FD_PLACE": "A frequency adverb goes before the main verb (she always comes) and after be (he is never late).",
   "M8_FD_TOO_VERY": "Too means more than enough and is usually a problem (too hot to drink). Use very for a strong degree: very tasty.",
   "M8_FD_NEVER_NOT": "Never already makes the sentence negative, so do not add not: she never comes late.",
+  "M8_X_FD_ENOUGH": "Enough comes after an adjective: warm enough.",
   "M8_RS_MAIN_DETAIL": "Check the answer against the text: it must cover what the question asks, not just one small detail.",
   "M8_RS_MAIN_OPPOSITE": "Check the answer against the text: it must agree with the text, not say the opposite.",
   "M8_RS_MAIN_NOTSAID": "Check the answer against the text: it must be found in the text, not added from outside.",
+  "M8_X_RL_RETELL": "Name a real example.",
+  "M8_X_RL_SURFACE": "Link the lesson.",
+  "M8_X_RL_NO_LESSON": "Say what you learn.",
+  "M8_X_RL_CHANGES_TEXT": "Keep the text.",
+  "M8_X_RSM_FIRST_LINE": "Find the sentence the rest supports.",
   "M8_SP_MISSPELT": "Learn the tricky spellings: separate, definitely, necessary, occasion, accommodate, tomorrow. Look at the word, cover it, write it, check it.",
   "M8_SP_IE_EI": "Write i before e except after c: believe, but receive and ceiling. A few words break the rule, such as seize and weird.",
   "M8_SP_DOUBLE": "Accommodate has a double c and a double m. Occasion has a double c and one s.",
+  "M8_X_SP_SILENT_VOWEL": "Some vowels are written but not heard: fr-ie-nd.",
   "M8_LS_MAIN_DETAIL": "Check the answer against what was said: it must cover what the question asks, not just one small detail.",
   "M8_LS_MAIN_OPPOSITE": "Check the answer against what was said: it must agree with what was said, not say the opposite.",
   "M8_LS_MAIN_NOTSAID": "Check the answer against what was said: it must be something that was said, not added from outside.",
+  "M8_X_LSM_EXAMPLE": "Ask what the whole talk is about.",
+  "M8_X_RV_TYPE": "Pie charts show parts of a whole.",
+  "M8_X_RV_KEY_IGNORED": "Read the key first.",
+  "M8_X_RV_NO_LINK": "Find the sentence that talks about the same data.",
+  "M8_X_RV_TREND": "Look at the whole line.",
   "M8_IR_HISSELF": "The reflexive forms are myself, yourself, himself, herself, itself, ourselves, yourselves and themselves. There is no theirselves or hisself.",
   "M8_IR_OURSELF": "Plural reflexive pronouns end in -selves: ourselves, yourselves, themselves.",
   "M8_IR_EVERYONE_PLURAL": "Everyone, someone, anybody and nobody take a singular verb: everyone is ready.",
+  "M8_X_IR_MYSELF_SUBJECT": "Use myself only when I did it to me.",
+  "M8_X_CR_TRAIT_NO_EVIDENCE": "Quote what she does or says.",
+  "M8_X_CR_RELATION_WRONG": "Look at how they treat each other.",
+  "M8_X_CR_STATIC": "Follow it through the story.",
+  "M8_X_CR_MINOR_MAIN": "The main character is followed throughout.",
+  "M8_X_WP_ORDER": "Plan, draft, revise, edit, publish.",
+  "M8_X_WP_REVISE_EDIT": "Revise ideas; edit spelling and punctuation.",
+  "M8_X_WP_SKIP_PREWRITE": "Plan every text.",
+  "M8_X_WP_PUBLISH": "Publishing is sharing the final version.",
+  "M8_X_DW_QUOTES": "No quotation marks.",
+  "M8_X_DW_DIRECTIONS": "Brackets for actions.",
+  "M8_X_DW_SAME_LINE": "New speaker, new line.",
+  "M8_X_DW_NO_SETTING": "Start with a brief setting.",
+  "M8_X_MY_LEGEND_MYTH": "A myth explains how something in nature or life began; a legend is about a hero.",
+  "M8_X_MY_ORDER": "Tell the events in the order they happened.",
+  "M8_X_MY_LITERAL_LESSON": "Ask what it teaches people.",
+  "M8_X_MY_CHARACTER_TYPE": "Myths often have gods and spirits as characters.",
   "M8_PP_AT_ON_IN": "Use on with days (on Friday), in with months, years and parts of the day (in June, in the morning) and at with clock times (at 6 o'clock).",
   "M8_PP_BETWEEN_AMONG": "Between is for two (or a few named) things and beside means next to: the ball is between the two posts.",
   "M8_PP_IN_PLACE": "Use at for a point (at the gate), on for a surface (on the table) and in for inside a space (in the room).",
+  "M8_X_PP_SINCE_FOR": "For a length of time; since a point in time.",
+  "M8_X_IC_ANIMALS": "Inanimate means not alive: rocks, rivers, mountains.",
+  "M8_X_IC_LITERAL": "It is given a human action to create a picture.",
+  "M8_X_IC_TRAIT_WRONG": "Use the verb: watched over means protective.",
+  "M8_X_IC_MISSES": "Look for things doing human actions.",
+  "M8_X_AW_SPELLING_ONLY": "Check content, organisation and language too.",
+  "M8_X_AW_NO_CORRECTION": "Suggest the correction.",
+  "M8_X_AW_HARSH": "One strength, one improvement.",
+  "M8_X_AW_MISSES_GRAMMAR": "Read slowly; check verbs.",
   "M8_CJ_ALTHOUGH_BUT": "Although and but both show a contrast, so use only one of them: Although it was raining, we played.",
   "M8_CJ_BECAUSE_SO": "Because and so both join a reason and a result. Use one: Because Juma was late, he ran. Or: Juma was late, so he ran.",
   "M8_CJ_UNLESS_NEG": "Unless means if not, so do not add not: You will fail unless you study.",
   "M8_CJ_WRONG": "Choose the conjunction for the meaning: because for a reason, although for a contrast, unless for a condition, until for a limit in time, while for two things at once, so for a result.",
+  "M8_X_CJ_DESPITE_OF": "Despite or in spite of, never despite of.",
   "M8_SM_SIMILE_AS_METAPHOR": "A simile compares two things using like or as: he ran like the wind.",
   "M8_SM_METAPHOR_AS_SIMILE": "A metaphor says one thing is another without like or as: the boy is a lion.",
   "M8_SM_LITERAL": "A metaphor uses a picture to show a quality: a lion is brave, so he is brave and strong.",
+  "M8_X_SM_MIXED": "Use one clear comparison.",
+  "M8_X_NC_TELL_NOT_SHOW": "Show the feeling with what you saw, heard and felt.",
+  "M8_X_NC_NO_PLAN": "Plan first.",
+  "M8_X_NC_LENGTH": "Count and add details.",
+  "M8_X_NC_IDIOM_FORCED": "Use an idiom only where it fits.",
+  "M8_X_SP_NO_SALUTATION": "Greet the audience in order of rank.",
+  "M8_X_SP_RANK_ORDER": "Start with the most senior guest.",
+  "M8_X_SP_READS": "Use cue cards and look up.",
+  "M8_X_SP_NO_THANKS": "End with thanks.",
+  "M8_X_NM_COPIES": "Key words only.",
+  "M8_X_NM_DETAILS": "Note the point, not the example.",
+  "M8_X_NM_SUMMARY_LENGTH": "Count words; cut details.",
+  "M8_X_NM_OWN_WORDS": "Rewrite the notes in your own words.",
   "M8_DQ_THIS_THESE": "Use this and that with one thing, and these and those with many things: these books.",
   "M8_DQ_NEAR_FAR": "This and these point to things near the speaker. That and those point to things far away.",
   "M8_DQ_MUCH_MANY": "Use many and few with nouns we count (many cars) and much and little with nouns we cannot count (much traffic).",
+  "M8_X_DQ_LESS_FEWER": "Fewer for things you can count; less for things you cannot.",
+  "M8_X_TN_NO_REASON": "Say what you thank them for.",
+  "M8_X_TN_TOO_LONG": "Keep a note short.",
+  "M8_X_TN_CONGRATS_WRONG": "Name the achievement.",
+  "M8_X_TN_CRITIQUE": "Check parts, correctness and relevance.",
+  "M8_X_IP_CLOSED_QUESTIONS": "Ask open questions with what, how or could you tell us.",
+  "M8_X_IP_NO_THANKS": "Thank the guest.",
+  "M8_X_IP_BLUNT": "Soften personal questions.",
+  "M8_X_IP_NO_FOLLOW_UP": "Follow up on what the guest says.",
   "M8_AF_GOOD_WELL": "The adverb of good is well: she sings well. Good is an adjective: a good song.",
   "M8_AF_SPELL": "Change y to i before -ly (happily), change -le to -ly (gently) and write truly, not truely.",
   "M8_AF_HARDLY": "Hard, fast and late are also adverbs without -ly. Hardly means almost not at all and lately means recently.",
+  "M8_X_AF_FRIENDLY": "Friendly is an adjective; say in a friendly way.",
   "M8_RS_LESSON_DETAIL": "Check the answer against the text: it must cover what the question asks, not just one small detail.",
   "M8_RS_LESSON_OPPOSITE": "Check the answer against the text: it must agree with the text, not say the opposite.",
   "M8_RS_LESSON_NOTSAID": "Check the answer against the text: it must be found in the text, not added from outside.",
+  "M8_X_RSL_EVENT": "A lesson says how people should live.",
   "M8_PS_WRONG_PREFIX": "Words take their own prefix: disagree, unhappy, replay, misunderstand. Check in a dictionary.",
   "M8_PS_MEANING": "The suffix -ful means full of and -less means without: careful is full of care, careless is without care.",
   "M8_PS_SPELL": "When a word ends in consonant + y, change y to i before the suffix: happiness. The suffix -ful has one l: beautiful.",
+  "M8_X_PS_MEANING_LINK": "Suffixes change meaning: -less means without.",
   "M8_RS_IMAGES_DETAIL": "Check the answer against the text: it must cover what the question asks, not just one small detail.",
   "M8_RS_IMAGES_OPPOSITE": "Check the answer against the text: it must agree with the text, not say the opposite.",
   "M8_RS_IMAGES_NOTSAID": "Check the answer against the text: it must be found in the text, not added from outside.",
+  "M8_X_RSI_SENSE": "Images appeal to all the senses.",
   "M8_PV_MEANING": "A phrasal verb has its own meaning: give up means stop, look after means take care of, run out of means have no more.",
   "M8_PV_PARTICLE": "The particle changes the meaning: turn on starts a light, turn off stops it.",
   "M8_PV_LITERAL": "A phrasal verb often has a meaning that is not the sum of its parts: break down means stop working.",
+  "M8_X_PV_SPLIT": "Some phrasal verbs cannot be split: look after the children.",
   "M8_RS_KEYPOINTS_DETAIL": "Check the answer against the text: it must cover what the question asks, not just one small detail.",
   "M8_RS_KEYPOINTS_OPPOSITE": "Check the answer against the text: it must agree with the text, not say the opposite.",
   "M8_RS_KEYPOINTS_NOTSAID": "Check the answer against the text: it must be found in the text, not added from outside.",
+  "M8_X_RSK_EXAMPLE_POINT": "The key point is what the example shows.",
   "M8_CS_COMMA_SPLICE": "Two complete sentences need a conjunction as well as the comma: I was tired, so I went to bed.",
   "M8_CS_NO_COMMA": "A comma goes before for, and, nor, but, or, yet or so when it joins two sentences: She ran fast, but she lost.",
   "M8_CS_WRONG_CONJ": "Pick the conjunction for the meaning: so for a result, but and yet for a contrast, and for an addition, or for a choice.",
+  "M8_X_CS_FANBOYS": "Compound sentences join two main clauses with and, but, or, so.",
   "M8_LD_PERSON_PLAIN": "Personification gives a thing or an animal a human action or feeling: the wind whispered.",
   "M8_LD_FLASHBACK_FUTURE": "A flashback takes the reader back to something that happened earlier.",
   "M8_LD_SIMILE": "Personification gives a human action to a thing (the cloud smiled). A simile uses like or as (the cloud was like a pillow).",
+  "M8_X_LD_FLASHBACK_DREAM": "A flashback goes back to an earlier event.",
+  "M8_X_IC2_LITERAL": "Use the context.",
+  "M8_X_IC2_OPPOSITE": "Check the context.",
+  "M8_X_IC2_WRONG_FIT": "Match the meaning to the situation.",
+  "M8_X_IC2_CHANGED": "Idioms are fixed.",
   "M8_SL_SOUNDED": "In knife the k is silent: we say /na\u026Af/.",
   "M8_SL_WRONG_LETTER": "In castle the t is silent. In honest the h is silent. In listen the t is silent.",
   "M8_SL_SPELL": "A silent letter is not said but it is written: knife, write, island, castle, honest, lamb.",
+  "M8_X_IN_STATEMENT_RISE": "End a statement with a fall.",
+  "M8_X_IN_EXCLAM_FLAT": "Start high and fall strongly.",
+  "M8_X_IN_ALL_RISE": "Statements fall.",
+  "M8_X_IN_NO_CONTRAST": "Change the tune to show feeling.",
+  "M8_X_SL_ADDS_SOUND": "The t in castle and listen is silent.",
   "M8_AP_WRONG_PARTICIPLE": "The passive is formed with be and the past participle: was bitten, was written, was taken.",
   "M8_AP_VOICE_MIX": "In the active voice the subject does the action (Juma kicked the ball). In the passive the subject receives it (The ball was kicked by Juma).",
   "M8_AP_NO_BE": "A passive sentence needs a form of be before the past participle: The window was broken by the wind.",
+  "M8_X_AP_TENSE_CHANGE": "Keep the tense: feeds becomes is fed.",
+  "M8_X_DC_NARRATES": "Describe what it is like.",
+  "M8_X_DC_VAGUE": "Exact words.",
+  "M8_X_DC_ONE_SENSE": "Use sound, smell and touch.",
+  "M8_X_DC_NO_ORDER": "One direction.",
+  "M8_X_OR_OPINIONS": "Give facts: who, what, where, when.",
+  "M8_X_OR_PRESENT_TENSE": "Report in the past tense.",
+  "M8_X_OR_NO_ORDER": "Use time order.",
+  "M8_X_OR_NO_CUES": "Use voice and gestures.",
   "M8_QT_SAME_SIGN": "A positive sentence takes a negative tag (You are coming, aren't you) and a negative sentence takes a positive tag (You are not coming, are you).",
   "M8_QT_ISNT_IT": "The tag repeats the helping verb and the subject as a pronoun: They are late, aren't they. Isn't it is not for every tag.",
   "M8_QT_WRONG_AUX": "The tag uses the helping verb that fits the sentence: She likes tea, doesn't she. For present simple, use do or does.",
+  "M8_X_QT_IMPERATIVE": "After a command, use will you.",
   "M8_RP_MESSAGE_DETAIL": "Check the answer against the text: it must cover what the question asks, not just one small detail.",
   "M8_RP_MESSAGE_OPPOSITE": "Check the answer against the text: it must agree with the text, not say the opposite.",
-  "M8_RP_MESSAGE_NOTSAID": "Check the answer against the text: it must be found in the text, not added from outside."
+  "M8_RP_MESSAGE_NOTSAID": "Check the answer against the text: it must be found in the text, not added from outside.",
+  "M8_X_RPM_MORAL_ONLY": "Some poems share a feeling or picture, not a moral.",
+  "M8_X_JW_NO_REFLECTION": "Say what you learnt or felt.",
+  "M8_X_JW_NO_DATE": "Date each entry.",
+  "M8_X_JW_THIRD_PERSON": "Use I.",
+  "M8_X_JW_EVALUATE_LENGTH": "Check correctness and relevance."
 };
 
 // src/ai-tutor/content/families/english_g8_signed.js
@@ -45028,6 +48306,67 @@ var OUTCOMES20 = {
   }
 };
 var SKILLS20 = {
+  "ENGL.G9.LISTEN.T1_POLITE_LANGUAGE.EUPHEMISM": {
+    "name": "Use euphemisms to show politeness",
+    "sub": "ENGL.G9.LISTEN.T1_POLITE_LANGUAGE",
+    "outcome": "ENGL.G9.LISTEN.T1_POLITE_LANGUAGE.a",
+    "outcomes": [
+      "ENGL.G9.LISTEN.T1_POLITE_LANGUAGE.a",
+      "ENGL.G9.LISTEN.T1_POLITE_LANGUAGE.b"
+    ],
+    "pre": [
+      "ENGL.G9.GRAMMA.T1_GENDER_NEUTRAL_LANGU.GENDER_NEUTRAL"
+    ],
+    "mis": [
+      "M9_EU_BLUNT",
+      "M9_EU_LITERAL",
+      "M9_EU_OVERUSE",
+      "M9_EU_INSULT"
+    ],
+    "nofamily": "questions"
+  },
+  "ENGL.G9.LISTEN.T1_POLITE_LANGUAGE.DEBATE": {
+    "name": "Conduct a debate while keeping the conventions of polite language",
+    "sub": "ENGL.G9.LISTEN.T1_POLITE_LANGUAGE",
+    "outcome": "ENGL.G9.LISTEN.T1_POLITE_LANGUAGE.c",
+    "outcomes": [
+      "ENGL.G9.LISTEN.T1_POLITE_LANGUAGE.c"
+    ],
+    "pre": [
+      "ENGL.G9.LISTEN.T1_POLITE_LANGUAGE.EUPHEMISM"
+    ],
+    "mis": [
+      "M9_DB_ATTACK_SPEAKER",
+      "M9_DB_NO_CHAIR",
+      "M9_DB_NO_EVIDENCE",
+      "M9_DB_OVERTIME"
+    ],
+    "nofamily": "voice"
+  },
+  "ENGL.G9.READIN.T1_INDEPENDENT_READING_.INDEPENDENT_READING": {
+    "name": "Select and read grade-appropriate texts and keep a reading log or portfolio",
+    "sub": "ENGL.G9.READIN.T1_INDEPENDENT_READING_",
+    "outcome": "ENGL.G9.READIN.T1_INDEPENDENT_READING_.a",
+    "outcomes": [
+      "ENGL.G9.READIN.T1_INDEPENDENT_READING_.a",
+      "ENGL.G9.READIN.T1_INDEPENDENT_READING_.b",
+      "ENGL.G9.READIN.T1_INDEPENDENT_READING_.c",
+      "ENGL.G9.READIN.T9_EXTENSIVE_READING_GR.a",
+      "ENGL.G9.READIN.T9_EXTENSIVE_READING_GR.b",
+      "ENGL.G9.READIN.T11_EXTENSIVE_READING_FI.b",
+      "ENGL.G9.READIN.T11_EXTENSIVE_READING_FI.c"
+    ],
+    "pre": [
+      "ENGL.G9.READIN.T11_EXTENSIVE_READING_FI.FICTION_NONFICTION"
+    ],
+    "mis": [
+      "M9_IR_NO_LOG",
+      "M9_IR_ONE_SOURCE",
+      "M9_IR_LOG_TITLES",
+      "M9_IR_TOO_EASY"
+    ],
+    "nofamily": "teacher"
+  },
   "ENGL.G9.GRAMMA.T1_GENDER_NEUTRAL_LANGU.GENDER_NEUTRAL": {
     "name": "Replace gender-biased words with gender-neutral ones",
     "sub": "ENGL.G9.GRAMMA.T1_GENDER_NEUTRAL_LANGU",
@@ -45040,7 +48379,8 @@ var SKILLS20 = {
     "mis": [
       "M_EN9_GN_CHAIRMAN",
       "M_EN9_GN_POLICE",
-      "M_EN9_GN_MANKIND"
+      "M_EN9_GN_MANKIND",
+      "M9_GN_HE_GENERIC"
     ]
   },
   "ENGL.G9.READIN.T1_PLAY_STRUCTURE_AND_S.PL_STRUCTURE": {
@@ -45055,8 +48395,68 @@ var SKILLS20 = {
     "mis": [
       "M_EN9_PL_STRUCTURE_DETAIL",
       "M_EN9_PL_STRUCTURE_OPPOSITE",
-      "M_EN9_PL_STRUCTURE_NOTSAID"
+      "M_EN9_PL_STRUCTURE_NOTSAID",
+      "M9_PL_ACT_SCENE"
     ]
+  },
+  "ENGL.G9.WRITIN.T1_LEGIBILITY_AND_NEATN.LEGIBILITY": {
+    "name": "Indent paragraphs, break words correctly and write a neat, legible text",
+    "sub": "ENGL.G9.WRITIN.T1_LEGIBILITY_AND_NEATN",
+    "outcome": "ENGL.G9.WRITIN.T1_LEGIBILITY_AND_NEATN.a",
+    "outcomes": [
+      "ENGL.G9.WRITIN.T1_LEGIBILITY_AND_NEATN.a",
+      "ENGL.G9.WRITIN.T1_LEGIBILITY_AND_NEATN.b",
+      "ENGL.G9.WRITIN.T1_LEGIBILITY_AND_NEATN.c"
+    ],
+    "pre": [
+      "ENGL.G9.WRITIN.T3_STRUCTURE_OF_A_PARAG.PARAGRAPH"
+    ],
+    "mis": [
+      "M9_LG_NO_INDENT",
+      "M9_LG_BAD_BREAK",
+      "M9_LG_NO_HYPHEN",
+      "M9_LG_UNEVEN"
+    ],
+    "nofamily": "teacher"
+  },
+  "ENGL.G9.LISTEN.T2_ORAL_LITERATURE_SHOR.SHORT_FORMS": {
+    "name": "Identify and explain riddles, tongue twisters and proverbs",
+    "sub": "ENGL.G9.LISTEN.T2_ORAL_LITERATURE_SHOR",
+    "outcome": "ENGL.G9.LISTEN.T2_ORAL_LITERATURE_SHOR.a",
+    "outcomes": [
+      "ENGL.G9.LISTEN.T2_ORAL_LITERATURE_SHOR.a",
+      "ENGL.G9.LISTEN.T2_ORAL_LITERATURE_SHOR.b"
+    ],
+    "pre": [],
+    "mis": [
+      "M9_SF_RIDDLE_PROVERB",
+      "M9_SF_TWISTER_PURPOSE",
+      "M9_SF_RIDDLE_LITERAL",
+      "M9_SF_OPENING"
+    ],
+    "nofamily": "questions"
+  },
+  "ENGL.G9.LISTEN.T2_ORAL_LITERATURE_SHOR.PERFORM_ORAL": {
+    "name": "Perform short oral forms, oral poems and parts of a play",
+    "sub": "ENGL.G9.LISTEN.T2_ORAL_LITERATURE_SHOR",
+    "outcome": "ENGL.G9.LISTEN.T2_ORAL_LITERATURE_SHOR.c",
+    "outcomes": [
+      "ENGL.G9.LISTEN.T2_ORAL_LITERATURE_SHOR.c",
+      "ENGL.G9.LISTEN.T8_ORAL_POETRY.b",
+      "ENGL.G9.READIN.T10_PLAY_PROJECT.b",
+      "ENGL.G9.READIN.T13_GRADE_APPROPRIATE_PL.b",
+      "ENGL.G9.READIN.T14_INTENSIVE_READING_PL.d"
+    ],
+    "pre": [
+      "ENGL.G9.LISTEN.T2_ORAL_LITERATURE_SHOR.SHORT_FORMS"
+    ],
+    "mis": [
+      "M9_PO_MUMBLE",
+      "M9_PO_NO_PROPS",
+      "M9_PO_BACK_TO_AUDIENCE",
+      "M9_PO_FLAT_POEM"
+    ],
+    "nofamily": "voice"
   },
   "ENGL.G9.READIN.T2_INTENSIVE_READING_SI.RP_STYLE": {
     "name": "Name repetition and its function in a poem",
@@ -45070,7 +48470,8 @@ var SKILLS20 = {
     "mis": [
       "M_EN9_RP_STYLE_DETAIL",
       "M_EN9_RP_STYLE_OPPOSITE",
-      "M_EN9_RP_STYLE_NOTSAID"
+      "M_EN9_RP_STYLE_NOTSAID",
+      "M9_RP_REPEAT_NO_FUNCTION"
     ]
   },
   "ENGL.G9.GRAMMA.T2_NOUNS_AND_QUANTIFIER.QUANTIFIERS": {
@@ -45085,7 +48486,8 @@ var SKILLS20 = {
     "mis": [
       "M_EN9_QT_MUCH",
       "M_EN9_QT_MANY",
-      "M_EN9_QT_FEW"
+      "M_EN9_QT_FEW",
+      "M9_QT_A_LOT_OF"
     ]
   },
   "ENGL.G9.READIN.T2_INTENSIVE_READING_PL.PL_SEQUENCE": {
@@ -45096,11 +48498,14 @@ var SKILLS20 = {
       "ENGL.G9.READIN.T2_INTENSIVE_READING_PL.a",
       "ENGL.G9.READIN.T2_INTENSIVE_READING_PL.b"
     ],
-    "pre": [],
+    "pre": [
+      "ENGL.G9.READIN.T1_PLAY_STRUCTURE_AND_S.PL_STRUCTURE"
+    ],
     "mis": [
       "M_EN9_PL_SEQUENCE_DETAIL",
       "M_EN9_PL_SEQUENCE_OPPOSITE",
-      "M_EN9_PL_SEQUENCE_NOTSAID"
+      "M_EN9_PL_SEQUENCE_NOTSAID",
+      "M9_PL_STAGE_ORDER"
     ]
   },
   "ENGL.G9.WRITIN.T2_MECHANICS_OF_WRITING.QUOTES_BRACKETS": {
@@ -45115,7 +48520,8 @@ var SKILLS20 = {
     "mis": [
       "M_EN9_QB_BRACKET",
       "M_EN9_QB_EXTRA",
-      "M_EN9_QB_END"
+      "M_EN9_QB_END",
+      "M9_QB_BRACKETS_SPEECH"
     ]
   },
   "ENGL.G9.LISTEN.T3_LISTENING_COMPREHENS.LS_MAIN": {
@@ -45123,13 +48529,16 @@ var SKILLS20 = {
     "sub": "ENGL.G9.LISTEN.T3_LISTENING_COMPREHENS",
     "outcome": "ENGL.G9.LISTEN.T3_LISTENING_COMPREHENS.a",
     "outcomes": [
-      "ENGL.G9.LISTEN.T3_LISTENING_COMPREHENS.a"
+      "ENGL.G9.LISTEN.T3_LISTENING_COMPREHENS.a",
+      "ENGL.G9.LISTEN.T3_LISTENING_COMPREHENS.b",
+      "ENGL.G9.LISTEN.T7_LISTENING_COMPREHENS.a"
     ],
     "pre": [],
     "mis": [
       "M_EN9_LS_MAIN_DETAIL",
       "M_EN9_LS_MAIN_OPPOSITE",
-      "M_EN9_LS_MAIN_NOTSAID"
+      "M_EN9_LS_MAIN_NOTSAID",
+      "M9_LS_SIDE"
     ]
   },
   "ENGL.G9.READIN.T3_READING_FOR_INFORMAT.RS_CONTEXT": {
@@ -45143,7 +48552,8 @@ var SKILLS20 = {
     "mis": [
       "M_EN9_RS_CONTEXT_DETAIL",
       "M_EN9_RS_CONTEXT_OPPOSITE",
-      "M_EN9_RS_CONTEXT_NOTSAID"
+      "M_EN9_RS_CONTEXT_NOTSAID",
+      "M9_RS_CONTEXT_FIGURATIVE"
     ]
   },
   "ENGL.G9.READIN.T3_READING_FOR_INFORMAT.RS_CONNECT": {
@@ -45157,7 +48567,8 @@ var SKILLS20 = {
     "mis": [
       "M_EN9_RS_CONNECT_DETAIL",
       "M_EN9_RS_CONNECT_OPPOSITE",
-      "M_EN9_RS_CONNECT_NOTSAID"
+      "M_EN9_RS_CONNECT_NOTSAID",
+      "M9_RS_CONNECT_DETAIL"
     ]
   },
   "ENGL.G9.GRAMMA.T3_MODAL_AUXILIARIES.MODALS": {
@@ -45172,7 +48583,8 @@ var SKILLS20 = {
     "mis": [
       "M_EN9_MD_ABILITY",
       "M_EN9_MD_DUTY",
-      "M_EN9_MD_BASE"
+      "M_EN9_MD_BASE",
+      "M9_MD_PERMISSION"
     ]
   },
   "ENGL.G9.READIN.T3_POEMS_STRUCTURE.POEM_FEATURES": {
@@ -45187,8 +48599,27 @@ var SKILLS20 = {
     "mis": [
       "M_EN9_PF_STANZA",
       "M_EN9_PF_RHYME",
-      "M_EN9_PF_PERSON"
+      "M_EN9_PF_PERSON",
+      "M9_PF_PERSONIFICATION_ANIMAL"
     ]
+  },
+  "ENGL.G9.READIN.T3_POEMS_STRUCTURE.POEM_WRITING": {
+    "name": "Create a poem on a topic of interest",
+    "sub": "ENGL.G9.READIN.T3_POEMS_STRUCTURE",
+    "outcome": "ENGL.G9.READIN.T3_POEMS_STRUCTURE.c",
+    "outcomes": [
+      "ENGL.G9.READIN.T3_POEMS_STRUCTURE.c"
+    ],
+    "pre": [
+      "ENGL.G9.READIN.T3_POEMS_STRUCTURE.POEM_FEATURES"
+    ],
+    "mis": [
+      "M9_PW_PROSE",
+      "M9_PW_FORCED_RHYME",
+      "M9_PW_NO_IMAGERY",
+      "M9_PW_NO_MESSAGE"
+    ],
+    "nofamily": "composition"
   },
   "ENGL.G9.WRITIN.T3_STRUCTURE_OF_A_PARAG.PARAGRAPH": {
     "name": "Name the characteristics of a well-formed paragraph",
@@ -45201,8 +48632,53 @@ var SKILLS20 = {
     "mis": [
       "M_EN9_PA_TOPIC",
       "M_EN9_PA_UNITY",
-      "M_EN9_PA_COHERENCE"
+      "M_EN9_PA_COHERENCE",
+      "M9_PA_DEVELOPMENT"
     ]
+  },
+  "ENGL.G9.WRITIN.T3_STRUCTURE_OF_A_PARAG.PARAGRAPH_WRITING": {
+    "name": "Write well-developed, coherent, unified narrative and descriptive paragraphs",
+    "sub": "ENGL.G9.WRITIN.T3_STRUCTURE_OF_A_PARAG",
+    "outcome": "ENGL.G9.WRITIN.T3_STRUCTURE_OF_A_PARAG.b",
+    "outcomes": [
+      "ENGL.G9.WRITIN.T3_STRUCTURE_OF_A_PARAG.b",
+      "ENGL.G9.WRITIN.T4_NARRATIVE_AND_DESCRI.a",
+      "ENGL.G9.WRITIN.T4_NARRATIVE_AND_DESCRI.b",
+      "ENGL.G9.WRITIN.T4_NARRATIVE_AND_DESCRI.c"
+    ],
+    "pre": [
+      "ENGL.G9.WRITIN.T3_STRUCTURE_OF_A_PARAG.PARAGRAPH"
+    ],
+    "mis": [
+      "M9_PW2_NO_UNITY",
+      "M9_PW2_NO_COHERENCE",
+      "M9_PW2_PERSON_SWITCH",
+      "M9_PW2_UNDEVELOPED"
+    ],
+    "nofamily": "composition"
+  },
+  "ENGL.G9.LISTEN.T4_SELECTIVE_LISTENING.LISTEN_RESPOND": {
+    "name": "Select information from listening texts and judge and respond to their message",
+    "sub": "ENGL.G9.LISTEN.T4_SELECTIVE_LISTENING",
+    "outcome": "ENGL.G9.LISTEN.T4_SELECTIVE_LISTENING.a",
+    "outcomes": [
+      "ENGL.G9.LISTEN.T4_SELECTIVE_LISTENING.a",
+      "ENGL.G9.LISTEN.T4_SELECTIVE_LISTENING.b",
+      "ENGL.G9.LISTEN.T7_LISTENING_COMPREHENS.b",
+      "ENGL.G9.LISTEN.T13_EXTENSIVE_LISTENING_.a",
+      "ENGL.G9.LISTEN.T13_EXTENSIVE_LISTENING_.b",
+      "ENGL.G9.LISTEN.T12_LISTENING_TO_RESPOND.a",
+      "ENGL.G9.LISTEN.T12_LISTENING_TO_RESPOND.b",
+      "ENGL.G9.LISTEN.T8_ORAL_POETRY.a"
+    ],
+    "pre": [],
+    "mis": [
+      "M9_LR_NO_JUDGEMENT",
+      "M9_LR_WRONG_INFO",
+      "M9_LR_SPEAKERS_MIXED",
+      "M9_LR_FEELING_NO_WORDS"
+    ],
+    "nofamily": "voice"
   },
   "ENGL.G9.READIN.T4_INTENSIVE_READING.RS_PREDICT": {
     "name": "Predict events in a reading text",
@@ -45215,7 +48691,8 @@ var SKILLS20 = {
     "mis": [
       "M_EN9_RS_PREDICT_DETAIL",
       "M_EN9_RS_PREDICT_OPPOSITE",
-      "M_EN9_RS_PREDICT_NOTSAID"
+      "M_EN9_RS_PREDICT_NOTSAID",
+      "M9_RS_PREDICT_WISH"
     ]
   },
   "ENGL.G9.READIN.T4_INTENSIVE_READING.RS_KEYEVENTS": {
@@ -45229,7 +48706,8 @@ var SKILLS20 = {
     "mis": [
       "M_EN9_RS_KEYEVENTS_DETAIL",
       "M_EN9_RS_KEYEVENTS_OPPOSITE",
-      "M_EN9_RS_KEYEVENTS_NOTSAID"
+      "M_EN9_RS_KEYEVENTS_NOTSAID",
+      "M9_RS_KEYEVENTS_MINOR"
     ]
   },
   "ENGL.G9.READIN.T4_INTENSIVE_READING.RS_QUESTIONS": {
@@ -45244,7 +48722,8 @@ var SKILLS20 = {
     "mis": [
       "M_EN9_RS_QUESTIONS_DETAIL",
       "M_EN9_RS_QUESTIONS_OPPOSITE",
-      "M_EN9_RS_QUESTIONS_NOTSAID"
+      "M_EN9_RS_QUESTIONS_NOTSAID",
+      "M9_RS_QUESTIONS_COPY"
     ]
   },
   "ENGL.G9.READIN.T4_INTENSIVE_READING.RS_RELATE": {
@@ -45252,13 +48731,17 @@ var SKILLS20 = {
     "sub": "ENGL.G9.READIN.T4_INTENSIVE_READING",
     "outcome": "ENGL.G9.READIN.T4_INTENSIVE_READING.e",
     "outcomes": [
-      "ENGL.G9.READIN.T4_INTENSIVE_READING.e"
+      "ENGL.G9.READIN.T4_INTENSIVE_READING.e",
+      "ENGL.G9.READIN.T14_INTENSIVE_READING_PL.c",
+      "ENGL.G9.READIN.T15_INTENSIVE_READING_PO.a",
+      "ENGL.G9.READIN.T15_INTENSIVE_READING_PO.b"
     ],
     "pre": [],
     "mis": [
       "M_EN9_RS_RELATE_DETAIL",
       "M_EN9_RS_RELATE_OPPOSITE",
-      "M_EN9_RS_RELATE_NOTSAID"
+      "M_EN9_RS_RELATE_NOTSAID",
+      "M9_RS_RELATE_RETELL"
     ]
   },
   "ENGL.G9.GRAMMA.T4_PRESENT_AND_PAST_PER.PERFECT": {
@@ -45273,7 +48756,8 @@ var SKILLS20 = {
     "mis": [
       "M_EN9_PE_PRESENT",
       "M_EN9_PE_PAST",
-      "M_EN9_PE_PARTICIPLE"
+      "M_EN9_PE_PARTICIPLE",
+      "M9_PE_WITH_TIME"
     ]
   },
   "ENGL.G9.READIN.T4_PLAY_IDENTIFICATION_.PL_CHARACTERS": {
@@ -45282,14 +48766,71 @@ var SKILLS20 = {
     "outcome": "ENGL.G9.READIN.T4_PLAY_IDENTIFICATION_.a",
     "outcomes": [
       "ENGL.G9.READIN.T4_PLAY_IDENTIFICATION_.a",
-      "ENGL.G9.READIN.T4_PLAY_IDENTIFICATION_.c"
+      "ENGL.G9.READIN.T4_PLAY_IDENTIFICATION_.c",
+      "ENGL.G9.READIN.T4_PLAY_IDENTIFICATION_.b",
+      "ENGL.G9.READIN.T14_INTENSIVE_READING_PL.a"
     ],
     "pre": [],
     "mis": [
       "M_EN9_PL_CHARACTERS_DETAIL",
       "M_EN9_PL_CHARACTERS_OPPOSITE",
-      "M_EN9_PL_CHARACTERS_NOTSAID"
+      "M_EN9_PL_CHARACTERS_NOTSAID",
+      "M9_PL_CHARACTERS_ADVERB"
     ]
+  },
+  "ENGL.G9.LISTEN.T5_PRONUNCIATION.PRONOUNCE_SOUNDS": {
+    "name": "Pronounce semi-vowels and diphthongs with clarity",
+    "sub": "ENGL.G9.LISTEN.T5_PRONUNCIATION",
+    "outcome": "ENGL.G9.LISTEN.T5_PRONUNCIATION.a",
+    "outcomes": [
+      "ENGL.G9.LISTEN.T5_PRONUNCIATION.a",
+      "ENGL.G9.LISTEN.T9_DIPHTHONGS_AND_SENTE.a"
+    ],
+    "pre": [],
+    "mis": [
+      "M9_PS_Y_J",
+      "M9_PS_W_V",
+      "M9_PS_DAY_DIE",
+      "M9_PS_NOW_NO"
+    ],
+    "nofamily": "voice"
+  },
+  "ENGL.G9.LISTEN.T5_PRONUNCIATION.SENTENCE_STRESS": {
+    "name": "Stress content words and use emphatic stress to convey meaning",
+    "sub": "ENGL.G9.LISTEN.T5_PRONUNCIATION",
+    "outcome": "ENGL.G9.LISTEN.T5_PRONUNCIATION.b",
+    "outcomes": [
+      "ENGL.G9.LISTEN.T5_PRONUNCIATION.b",
+      "ENGL.G9.LISTEN.T9_DIPHTHONGS_AND_SENTE.b"
+    ],
+    "pre": [
+      "ENGL.G9.LISTEN.T5_PRONUNCIATION.PRONOUNCE_SOUNDS"
+    ],
+    "mis": [
+      "M9_SS_ALL_STRONG",
+      "M9_SS_WRONG_EMPHASIS",
+      "M9_SS_FUNCTION_STRONG",
+      "M9_SS_MEANING_SAME"
+    ],
+    "nofamily": "voice"
+  },
+  "ENGL.G9.READIN.T5_REFERENCE_MATERIALS_.REFERENCE_RESEARCH": {
+    "name": "Use the dictionary, thesaurus and encyclopaedia to research a topic",
+    "sub": "ENGL.G9.READIN.T5_REFERENCE_MATERIALS_",
+    "outcome": "ENGL.G9.READIN.T5_REFERENCE_MATERIALS_.a",
+    "outcomes": [
+      "ENGL.G9.READIN.T5_REFERENCE_MATERIALS_.a",
+      "ENGL.G9.READIN.T5_REFERENCE_MATERIALS_.b",
+      "ENGL.G9.READIN.T5_REFERENCE_MATERIALS_.c"
+    ],
+    "pre": [],
+    "mis": [
+      "M9_RR_DICTIONARY_ONLY_MEANING",
+      "M9_RR_THESAURUS_SWAP",
+      "M9_RR_COPY",
+      "M9_RR_WRONG_SOURCE"
+    ],
+    "nofamily": "questions"
   },
   "ENGL.G9.GRAMMA.T5_ORDER_OF_ADJECTIVES.ADJ_ORDER": {
     "name": "Put adjectives in the correct order",
@@ -45303,8 +48844,31 @@ var SKILLS20 = {
     "mis": [
       "M_EN9_AO_COLOUR",
       "M_EN9_AO_OPINION",
-      "M_EN9_AO_AGE"
+      "M_EN9_AO_AGE",
+      "M9_AO_MATERIAL"
     ]
+  },
+  "ENGL.G9.READIN.T5_PLAY_STYLE_CLASS_REA.PLAY_STYLE": {
+    "name": "Identify features of style in a play and relate them to its message",
+    "sub": "ENGL.G9.READIN.T5_PLAY_STYLE_CLASS_REA",
+    "outcome": "ENGL.G9.READIN.T5_PLAY_STYLE_CLASS_REA.a",
+    "outcomes": [
+      "ENGL.G9.READIN.T5_PLAY_STYLE_CLASS_REA.a",
+      "ENGL.G9.READIN.T5_PLAY_STYLE_CLASS_REA.b",
+      "ENGL.G9.READIN.T9_PLAY_STYLE_CLASS_REA.a",
+      "ENGL.G9.READIN.T9_PLAY_STYLE_CLASS_REA.b",
+      "ENGL.G9.READIN.T13_GRADE_APPROPRIATE_PL.a"
+    ],
+    "pre": [
+      "ENGL.G9.READIN.T1_PLAY_STRUCTURE_AND_S.PL_STRUCTURE"
+    ],
+    "mis": [
+      "M9_PS2_NO_EXAMPLE",
+      "M9_PS2_NO_LINK",
+      "M9_PS2_MONOLOGUE_DIALOGUE",
+      "M9_PS2_IRONY"
+    ],
+    "nofamily": "questions"
   },
   "ENGL.G9.WRITIN.T5_LETTER_OF_APPLICATIO.LETTER_APPLICATION": {
     "name": "Name the parts of a letter of application",
@@ -45317,8 +48881,65 @@ var SKILLS20 = {
     "mis": [
       "M_EN9_LA_CLOSE",
       "M_EN9_LA_SUBJECT",
-      "M_EN9_LA_ADDRESS"
+      "M_EN9_LA_ADDRESS",
+      "M9_LA_FRIENDLY_OPENING"
     ]
+  },
+  "ENGL.G9.WRITIN.T5_LETTER_OF_APPLICATIO.APPLICATION_LETTER": {
+    "name": "Write a letter of application for placement at Senior School",
+    "sub": "ENGL.G9.WRITIN.T5_LETTER_OF_APPLICATIO",
+    "outcome": "ENGL.G9.WRITIN.T5_LETTER_OF_APPLICATIO.b",
+    "outcomes": [
+      "ENGL.G9.WRITIN.T5_LETTER_OF_APPLICATIO.b"
+    ],
+    "pre": [
+      "ENGL.G9.WRITIN.T5_LETTER_OF_APPLICATIO.LETTER_APPLICATION"
+    ],
+    "mis": [
+      "M9_AL_FRIENDLY_TONE",
+      "M9_AL_NO_QUALIFICATIONS",
+      "M9_AL_SINCERELY",
+      "M9_AL_BEGGING"
+    ],
+    "nofamily": "composition"
+  },
+  "ENGL.G9.LISTEN.T6_CONVERSATIONAL_SKILL.NEGOTIATION": {
+    "name": "Use words, phrases and cues for negotiation",
+    "sub": "ENGL.G9.LISTEN.T6_CONVERSATIONAL_SKILL",
+    "outcome": "ENGL.G9.LISTEN.T6_CONVERSATIONAL_SKILL.a",
+    "outcomes": [
+      "ENGL.G9.LISTEN.T6_CONVERSATIONAL_SKILL.a",
+      "ENGL.G9.LISTEN.T6_CONVERSATIONAL_SKILL.b"
+    ],
+    "pre": [
+      "ENGL.G9.GRAMMA.T3_MODAL_AUXILIARIES.MODALS"
+    ],
+    "mis": [
+      "M9_NG_DEMAND",
+      "M9_NG_NO_LISTEN",
+      "M9_NG_WALK_AWAY",
+      "M9_NG_HOSTILE_CUES"
+    ],
+    "nofamily": "questions"
+  },
+  "ENGL.G9.READIN.T6_READING_FLUENCY.READ_FLUENTLY": {
+    "name": "Read at the right speed, accurately and with expression",
+    "sub": "ENGL.G9.READIN.T6_READING_FLUENCY",
+    "outcome": "ENGL.G9.READIN.T6_READING_FLUENCY.a",
+    "outcomes": [
+      "ENGL.G9.READIN.T6_READING_FLUENCY.a",
+      "ENGL.G9.READIN.T6_READING_FLUENCY.b"
+    ],
+    "pre": [
+      "ENGL.G9.READIN.T15_READING_FLUENCY.SKIM_SCAN"
+    ],
+    "mis": [
+      "M9_RF_STOPS_UNKNOWN",
+      "M9_RF_RUSH",
+      "M9_RF_FLAT",
+      "M9_RF_NO_WAYS"
+    ],
+    "nofamily": "voice"
   },
   "ENGL.G9.GRAMMA.T6_COMPARISON_OF_ADVERB.ADVERB_DEGREES": {
     "name": "Use the degrees of comparison of adverbs",
@@ -45332,7 +48953,8 @@ var SKILLS20 = {
     "mis": [
       "M_EN9_AD_MORE",
       "M_EN9_AD_SUPER",
-      "M_EN9_AD_THAN"
+      "M_EN9_AD_THAN",
+      "M9_AD_IRREGULAR"
     ]
   },
   "ENGL.G9.READIN.T6_INTENSIVE_READING_PL.PL_THEMES": {
@@ -45342,13 +48964,15 @@ var SKILLS20 = {
     "outcomes": [
       "ENGL.G9.READIN.T6_INTENSIVE_READING_PL.a",
       "ENGL.G9.READIN.T6_INTENSIVE_READING_PL.b",
-      "ENGL.G9.READIN.T6_INTENSIVE_READING_PL.c"
+      "ENGL.G9.READIN.T6_INTENSIVE_READING_PL.c",
+      "ENGL.G9.READIN.T14_INTENSIVE_READING_PL.b"
     ],
     "pre": [],
     "mis": [
       "M_EN9_PL_THEMES_DETAIL",
       "M_EN9_PL_THEMES_OPPOSITE",
-      "M_EN9_PL_THEMES_NOTSAID"
+      "M_EN9_PL_THEMES_NOTSAID",
+      "M9_PL_THEME_TOPIC"
     ]
   },
   "ENGL.G9.WRITIN.T6_MECHANICS_OF_WRITING.SPELLING": {
@@ -45357,14 +48981,35 @@ var SKILLS20 = {
     "outcome": "ENGL.G9.WRITIN.T6_MECHANICS_OF_WRITING.a",
     "outcomes": [
       "ENGL.G9.WRITIN.T6_MECHANICS_OF_WRITING.a",
-      "ENGL.G9.WRITIN.T6_MECHANICS_OF_WRITING.b"
+      "ENGL.G9.WRITIN.T6_MECHANICS_OF_WRITING.b",
+      "ENGL.G9.WRITIN.T11_MECHANICS_OF_WRITING.a"
     ],
     "pre": [],
     "mis": [
       "M_EN9_SG_HOMOPHONE",
       "M_EN9_SG_SEPARATE",
-      "M_EN9_SG_COMMITTEE"
+      "M_EN9_SG_COMMITTEE",
+      "M9_SG_HOMONYM"
     ]
+  },
+  "ENGL.G9.READIN.T7_INTENSIVE_READING_IN.INTERPRET_EVALUATE": {
+    "name": "Distinguish reading for interpretation from reading for evaluation, and interpret a text",
+    "sub": "ENGL.G9.READIN.T7_INTENSIVE_READING_IN",
+    "outcome": "ENGL.G9.READIN.T7_INTENSIVE_READING_IN.a",
+    "outcomes": [
+      "ENGL.G9.READIN.T7_INTENSIVE_READING_IN.a",
+      "ENGL.G9.READIN.T7_INTENSIVE_READING_IN.b"
+    ],
+    "pre": [
+      "ENGL.G9.READIN.T3_READING_FOR_INFORMAT.RS_CONTEXT"
+    ],
+    "mis": [
+      "M9_IE_SAME",
+      "M9_IE_ACCEPT_ALL",
+      "M9_IE_LITERAL",
+      "M9_IE_OPINION_NO_REASON"
+    ],
+    "nofamily": "questions"
   },
   "ENGL.G9.GRAMMA.T7_RELATIVE_PRONOUNS_IN.RELATIVE_PRONOUNS": {
     "name": "Use relative and interrogative pronouns",
@@ -45378,7 +49023,8 @@ var SKILLS20 = {
     "mis": [
       "M_EN9_RP_WHICH",
       "M_EN9_RP_WHOSE",
-      "M_EN9_RP_WHO"
+      "M_EN9_RP_WHO",
+      "M9_RP_WHOM"
     ]
   },
   "ENGL.G9.READIN.T7_INTENSIVE_READING_PL.PL_RELATIONSHIP": {
@@ -45389,12 +49035,54 @@ var SKILLS20 = {
       "ENGL.G9.READIN.T7_INTENSIVE_READING_PL.a",
       "ENGL.G9.READIN.T7_INTENSIVE_READING_PL.b"
     ],
-    "pre": [],
+    "pre": [
+      "ENGL.G9.READIN.T4_PLAY_IDENTIFICATION_.PL_CHARACTERS"
+    ],
     "mis": [
       "M_EN9_PL_RELATIONSHIP_DETAIL",
       "M_EN9_PL_RELATIONSHIP_OPPOSITE",
-      "M_EN9_PL_RELATIONSHIP_NOTSAID"
+      "M_EN9_PL_RELATIONSHIP_NOTSAID",
+      "M9_PL_REL_ONE_WAY"
     ]
+  },
+  "ENGL.G9.WRITIN.T7_THE_WRITING_PROCESS.WRITING_PROCESS": {
+    "name": "Outline the stages of the writing process",
+    "sub": "ENGL.G9.WRITIN.T7_THE_WRITING_PROCESS",
+    "outcome": "ENGL.G9.WRITIN.T7_THE_WRITING_PROCESS.a",
+    "outcomes": [
+      "ENGL.G9.WRITIN.T7_THE_WRITING_PROCESS.a",
+      "ENGL.G9.WRITIN.T12_THE_WRITING_PROCESS_.a"
+    ],
+    "pre": [],
+    "mis": [
+      "M9_WP_ORDER",
+      "M9_WP_REVISE_EDIT",
+      "M9_WP_ONE_DRAFT",
+      "M9_WP_SKIP_PLAN"
+    ],
+    "nofamily": "questions"
+  },
+  "ENGL.G9.WRITIN.T7_THE_WRITING_PROCESS.NARRATIVE_COMPOSITION": {
+    "name": "Write compositions, stories and poems through the writing process, using narrative elements and idioms",
+    "sub": "ENGL.G9.WRITIN.T7_THE_WRITING_PROCESS",
+    "outcome": "ENGL.G9.WRITIN.T7_THE_WRITING_PROCESS.b",
+    "outcomes": [
+      "ENGL.G9.WRITIN.T7_THE_WRITING_PROCESS.b",
+      "ENGL.G9.WRITIN.T8_ASSESSING_WRITING.b",
+      "ENGL.G9.WRITIN.T9_NARRATIVE_COMPOSITIO.b",
+      "ENGL.G9.WRITIN.T13_CREATIVE_WRITING_IDI.b"
+    ],
+    "pre": [
+      "ENGL.G9.WRITIN.T9_NARRATIVE_COMPOSITIO.NARRATIVE_ELEMENTS",
+      "ENGL.G9.WRITIN.T13_CREATIVE_WRITING_IDI.IDIOMS"
+    ],
+    "mis": [
+      "M9_NC_NO_CLIMAX",
+      "M9_NC_UNBELIEVABLE",
+      "M9_NC_IDIOM_MISUSE",
+      "M9_NC_TENSE"
+    ],
+    "nofamily": "composition"
   },
   "ENGL.G9.READIN.T8_READING_FOR_INTERPRE.RP_POV": {
     "name": "Identify the point of view of a poem",
@@ -45408,7 +49096,8 @@ var SKILLS20 = {
     "mis": [
       "M_EN9_RP_POV_DETAIL",
       "M_EN9_RP_POV_OPPOSITE",
-      "M_EN9_RP_POV_NOTSAID"
+      "M_EN9_RP_POV_NOTSAID",
+      "M9_RP_POV_PERSON"
     ]
   },
   "ENGL.G9.GRAMMA.T8_COMPLEX_PREPOSITIONS.COMPLEX_PREPS": {
@@ -45423,7 +49112,8 @@ var SKILLS20 = {
     "mis": [
       "M_EN9_CP_BECAUSE",
       "M_EN9_CP_INSTEAD",
-      "M_EN9_CP_ACCORDING"
+      "M_EN9_CP_ACCORDING",
+      "M9_CP_IN_SPITE"
     ]
   },
   "ENGL.G9.READIN.T8_POETRY_CHARACTERS.RP_PERSONA": {
@@ -45438,8 +49128,28 @@ var SKILLS20 = {
     "mis": [
       "M_EN9_RP_PERSONA_DETAIL",
       "M_EN9_RP_PERSONA_OPPOSITE",
-      "M_EN9_RP_PERSONA_NOTSAID"
+      "M_EN9_RP_PERSONA_NOTSAID",
+      "M9_RP_PERSONA_LISTENER"
     ]
+  },
+  "ENGL.G9.WRITIN.T8_ASSESSING_WRITING.ASSESS_WRITING": {
+    "name": "Identify the qualities of a good composition and assess one against criteria",
+    "sub": "ENGL.G9.WRITIN.T8_ASSESSING_WRITING",
+    "outcome": "ENGL.G9.WRITIN.T8_ASSESSING_WRITING.a",
+    "outcomes": [
+      "ENGL.G9.WRITIN.T8_ASSESSING_WRITING.a",
+      "ENGL.G9.WRITIN.T8_ASSESSING_WRITING.c"
+    ],
+    "pre": [
+      "ENGL.G9.WRITIN.T6_MECHANICS_OF_WRITING.SPELLING"
+    ],
+    "mis": [
+      "M9_AW_LENGTH",
+      "M9_AW_NO_CRITERIA",
+      "M9_AW_SPELLING_ONLY",
+      "M9_AW_NO_CORRECTIONS"
+    ],
+    "nofamily": "teacher"
   },
   "ENGL.G9.GRAMMA.T9_CONJUNCTIONS_CORRELA.CORRELATIVE": {
     "name": "Use correlative conjunctions in pairs",
@@ -45453,7 +49163,8 @@ var SKILLS20 = {
     "mis": [
       "M_EN9_CO_EITHER",
       "M_EN9_CO_NEITHER",
-      "M_EN9_CO_NOTONLY"
+      "M_EN9_CO_NOTONLY",
+      "M9_CO_WHETHER"
     ]
   },
   "ENGL.G9.WRITIN.T9_NARRATIVE_COMPOSITIO.NARRATIVE_ELEMENTS": {
@@ -45467,8 +49178,45 @@ var SKILLS20 = {
     "mis": [
       "M_EN9_NE_SETTING",
       "M_EN9_NE_PLOT",
-      "M_EN9_NE_CLIMAX"
+      "M_EN9_NE_CLIMAX",
+      "M9_NE_RESOLUTION"
     ]
+  },
+  "ENGL.G9.LISTEN.T10_IMPROMPTU_SPEECHES.IMPROMPTU_SPEECH": {
+    "name": "Prepare quickly for and make an impromptu speech",
+    "sub": "ENGL.G9.LISTEN.T10_IMPROMPTU_SPEECHES",
+    "outcome": "ENGL.G9.LISTEN.T10_IMPROMPTU_SPEECHES.a",
+    "outcomes": [
+      "ENGL.G9.LISTEN.T10_IMPROMPTU_SPEECHES.a",
+      "ENGL.G9.LISTEN.T10_IMPROMPTU_SPEECHES.b"
+    ],
+    "pre": [],
+    "mis": [
+      "M9_IS_NO_PLAN",
+      "M9_IS_FREEZE",
+      "M9_IS_NO_CLOSE",
+      "M9_IS_OFF_TOPIC"
+    ],
+    "nofamily": "voice"
+  },
+  "ENGL.G9.READIN.T10_NOTE_MAKING.NOTE_MAKING": {
+    "name": "Identify the main points of an argumentative passage and make notes",
+    "sub": "ENGL.G9.READIN.T10_NOTE_MAKING",
+    "outcome": "ENGL.G9.READIN.T10_NOTE_MAKING.a",
+    "outcomes": [
+      "ENGL.G9.READIN.T10_NOTE_MAKING.a",
+      "ENGL.G9.READIN.T10_NOTE_MAKING.b"
+    ],
+    "pre": [
+      "ENGL.G9.LISTEN.T3_LISTENING_COMPREHENS.LS_MAIN"
+    ],
+    "mis": [
+      "M9_NM_ONE_SIDE",
+      "M9_NM_COPIES",
+      "M9_NM_EVIDENCE_AS_POINT",
+      "M9_NM_NO_POSITION"
+    ],
+    "nofamily": "teacher"
   },
   "ENGL.G9.GRAMMA.T10_DETERMINERS_NUMERALS.DETERMINERS_NUM": {
     "name": "Use numerals and ordinals as determiners",
@@ -45482,8 +49230,77 @@ var SKILLS20 = {
     "mis": [
       "M_EN9_DN_ORDINAL",
       "M_EN9_DN_CARDINAL",
-      "M_EN9_DN_ORDER"
+      "M_EN9_DN_ORDER",
+      "M9_DN_FIRST_TWO"
     ]
+  },
+  "ENGL.G9.READIN.T10_PLAY_PROJECT.PROPS_COSTUMES": {
+    "name": "Identify simple props and costumes that create mood and atmosphere",
+    "sub": "ENGL.G9.READIN.T10_PLAY_PROJECT",
+    "outcome": "ENGL.G9.READIN.T10_PLAY_PROJECT.a",
+    "outcomes": [
+      "ENGL.G9.READIN.T10_PLAY_PROJECT.a"
+    ],
+    "pre": [
+      "ENGL.G9.READIN.T1_PLAY_STRUCTURE_AND_S.PL_STRUCTURE"
+    ],
+    "mis": [
+      "M9_PC_EXPENSIVE",
+      "M9_PC_MOOD_MISMATCH",
+      "M9_PC_TOO_MANY",
+      "M9_PC_COSTUME_ERA"
+    ],
+    "nofamily": "questions"
+  },
+  "ENGL.G9.WRITIN.T10_FILLING_FORMS_APPLIC.BURSARY_FORMS": {
+    "name": "Recognise and fill bursary and scholarship application forms",
+    "sub": "ENGL.G9.WRITIN.T10_FILLING_FORMS_APPLIC",
+    "outcome": "ENGL.G9.WRITIN.T10_FILLING_FORMS_APPLIC.a",
+    "outcomes": [
+      "ENGL.G9.WRITIN.T10_FILLING_FORMS_APPLIC.a",
+      "ENGL.G9.WRITIN.T10_FILLING_FORMS_APPLIC.b"
+    ],
+    "pre": [],
+    "mis": [
+      "M9_BF_WRONG_FORM",
+      "M9_BF_INCOMPLETE",
+      "M9_BF_NO_DOCUMENTS",
+      "M9_BF_UNSIGNED"
+    ],
+    "nofamily": "composition"
+  },
+  "ENGL.G9.LISTEN.T11_CONVERSATION_SKILLS_.JOB_INTERVIEW": {
+    "name": "Prepare for and take part in a mock job interview",
+    "sub": "ENGL.G9.LISTEN.T11_CONVERSATION_SKILLS_",
+    "outcome": "ENGL.G9.LISTEN.T11_CONVERSATION_SKILLS_.a",
+    "outcomes": [
+      "ENGL.G9.LISTEN.T11_CONVERSATION_SKILLS_.a",
+      "ENGL.G9.LISTEN.T11_CONVERSATION_SKILLS_.b"
+    ],
+    "pre": [],
+    "mis": [
+      "M9_JI_NO_PREPARATION",
+      "M9_JI_VAGUE",
+      "M9_JI_BAD_QUESTIONS",
+      "M9_JI_NO_CLOSE"
+    ],
+    "nofamily": "voice"
+  },
+  "ENGL.G9.READIN.T11_EXTENSIVE_READING_FI.FICTION_NONFICTION": {
+    "name": "Distinguish between fiction and non-fiction",
+    "sub": "ENGL.G9.READIN.T11_EXTENSIVE_READING_FI",
+    "outcome": "ENGL.G9.READIN.T11_EXTENSIVE_READING_FI.a",
+    "outcomes": [
+      "ENGL.G9.READIN.T11_EXTENSIVE_READING_FI.a"
+    ],
+    "pre": [],
+    "mis": [
+      "M9_FN_REAL_PLACE",
+      "M9_FN_BIOGRAPHY",
+      "M9_FN_COVER",
+      "M9_FN_SCIENCE_FICTION"
+    ],
+    "nofamily": "questions"
   },
   "ENGL.G9.GRAMMA.T11_WORD_CLASSES_NOUNS.NOUNS_FORMED": {
     "name": "Form nouns from verbs and from other nouns",
@@ -45497,7 +49314,8 @@ var SKILLS20 = {
     "mis": [
       "M_EN9_NF_DECIDE",
       "M_EN9_NF_FRIEND",
-      "M_EN9_NF_CHILD"
+      "M_EN9_NF_CHILD",
+      "M9_NF_ADJ_FOR_NOUN"
     ]
   },
   "ENGL.G9.READIN.T11_GRADE_APPROPRIATE_PL.PL_LESSONS": {
@@ -45512,7 +49330,8 @@ var SKILLS20 = {
     "mis": [
       "M_EN9_PL_LESSONS_DETAIL",
       "M_EN9_PL_LESSONS_OPPOSITE",
-      "M_EN9_PL_LESSONS_NOTSAID"
+      "M_EN9_PL_LESSONS_NOTSAID",
+      "M9_PL_LESSON_PLOT"
     ]
   },
   "ENGL.G9.WRITIN.T11_MECHANICS_OF_WRITING.ABBREVIATIONS": {
@@ -45526,7 +49345,8 @@ var SKILLS20 = {
     "mis": [
       "M_EN9_AB_EG",
       "M_EN9_AB_ETC",
-      "M_EN9_AB_UN"
+      "M_EN9_AB_UN",
+      "M9_AB_FULL_STOPS"
     ]
   },
   "ENGL.G9.READIN.T12_INTENSIVE_READING_CO.RS_CLUES": {
@@ -45535,13 +49355,15 @@ var SKILLS20 = {
     "outcome": "ENGL.G9.READIN.T12_INTENSIVE_READING_CO.a",
     "outcomes": [
       "ENGL.G9.READIN.T12_INTENSIVE_READING_CO.a",
-      "ENGL.G9.READIN.T12_INTENSIVE_READING_CO.b"
+      "ENGL.G9.READIN.T12_INTENSIVE_READING_CO.b",
+      "ENGL.G9.READIN.T12_INTENSIVE_READING_CO.d"
     ],
     "pre": [],
     "mis": [
       "M_EN9_RS_CLUES_DETAIL",
       "M_EN9_RS_CLUES_OPPOSITE",
-      "M_EN9_RS_CLUES_NOTSAID"
+      "M_EN9_RS_CLUES_NOTSAID",
+      "M9_RS_CLUES_OVERREACH"
     ]
   },
   "ENGL.G9.GRAMMA.T12_PHRASAL_VERBS.PHRASAL_VERBS": {
@@ -45556,7 +49378,8 @@ var SKILLS20 = {
     "mis": [
       "M_EN9_PV_BREAKDOWN",
       "M_EN9_PV_RUNOUT",
-      "M_EN9_PV_TURNUP"
+      "M_EN9_PV_TURNUP",
+      "M9_PV_HANG_UP_ON"
     ]
   },
   "ENGL.G9.READIN.T12_PLAY_CHARACTERISATIO.PL_TRAITS": {
@@ -45564,14 +49387,34 @@ var SKILLS20 = {
     "sub": "ENGL.G9.READIN.T12_PLAY_CHARACTERISATIO",
     "outcome": "ENGL.G9.READIN.T12_PLAY_CHARACTERISATIO.a",
     "outcomes": [
-      "ENGL.G9.READIN.T12_PLAY_CHARACTERISATIO.a"
+      "ENGL.G9.READIN.T12_PLAY_CHARACTERISATIO.a",
+      "ENGL.G9.READIN.T12_PLAY_CHARACTERISATIO.b"
     ],
     "pre": [],
     "mis": [
       "M_EN9_PL_TRAITS_DETAIL",
       "M_EN9_PL_TRAITS_OPPOSITE",
-      "M_EN9_PL_TRAITS_NOTSAID"
+      "M_EN9_PL_TRAITS_NOTSAID",
+      "M9_PL_TRAITS_ONE_CLUE"
     ]
+  },
+  "ENGL.G9.WRITIN.T12_THE_WRITING_PROCESS_.DIALOGUE_WRITING": {
+    "name": "Apply the writing process in creating a dialogue",
+    "sub": "ENGL.G9.WRITIN.T12_THE_WRITING_PROCESS_",
+    "outcome": "ENGL.G9.WRITIN.T12_THE_WRITING_PROCESS_.b",
+    "outcomes": [
+      "ENGL.G9.WRITIN.T12_THE_WRITING_PROCESS_.b"
+    ],
+    "pre": [
+      "ENGL.G9.WRITIN.T7_THE_WRITING_PROCESS.WRITING_PROCESS"
+    ],
+    "mis": [
+      "M9_DW_QUOTES",
+      "M9_DW_NO_REVISION",
+      "M9_DW_DIRECTIONS",
+      "M9_DW_NO_PURPOSE"
+    ],
+    "nofamily": "composition"
   },
   "ENGL.G9.READIN.T13_INTENSIVE_READING_VI.RS_IMAGES": {
     "name": "Pick the mental images a passage creates",
@@ -45584,7 +49427,8 @@ var SKILLS20 = {
     "mis": [
       "M_EN9_RS_IMAGES_DETAIL",
       "M_EN9_RS_IMAGES_OPPOSITE",
-      "M_EN9_RS_IMAGES_NOTSAID"
+      "M_EN9_RS_IMAGES_NOTSAID",
+      "M9_RS_IMAGES_ADD"
     ]
   },
   "ENGL.G9.GRAMMA.T13_SENTENCES_COMPLEX_SE.SUBORDINATING": {
@@ -45600,8 +49444,45 @@ var SKILLS20 = {
     "mis": [
       "M_EN9_SC_ALTHOUGH",
       "M_EN9_SC_BECAUSE",
-      "M_EN9_SC_UNLESS"
+      "M_EN9_SC_UNLESS",
+      "M9_SC_FRAGMENT"
     ]
+  },
+  "ENGL.G9.WRITIN.T13_CREATIVE_WRITING_IDI.IDIOMS": {
+    "name": "Explain the meaning of idioms in different contexts",
+    "sub": "ENGL.G9.WRITIN.T13_CREATIVE_WRITING_IDI",
+    "outcome": "ENGL.G9.WRITIN.T13_CREATIVE_WRITING_IDI.a",
+    "outcomes": [
+      "ENGL.G9.WRITIN.T13_CREATIVE_WRITING_IDI.a"
+    ],
+    "pre": [
+      "ENGL.G9.READIN.T3_READING_FOR_INFORMAT.RS_CONTEXT"
+    ],
+    "mis": [
+      "M9_ID_LITERAL",
+      "M9_ID_OPPOSITE",
+      "M9_ID_WRONG_FIT",
+      "M9_ID_CHANGED"
+    ],
+    "nofamily": "questions"
+  },
+  "ENGL.G9.LISTEN.T14_INTONATION_IN_SENTEN.QUESTION_TAGS": {
+    "name": "Write and use question tags with the correct intonation",
+    "sub": "ENGL.G9.LISTEN.T14_INTONATION_IN_SENTEN",
+    "outcome": "ENGL.G9.LISTEN.T14_INTONATION_IN_SENTEN.a",
+    "outcomes": [
+      "ENGL.G9.LISTEN.T14_INTONATION_IN_SENTEN.a",
+      "ENGL.G9.LISTEN.T14_INTONATION_IN_SENTEN.b",
+      "ENGL.G9.LISTEN.T14_INTONATION_IN_SENTEN.c"
+    ],
+    "pre": [],
+    "mis": [
+      "M9_QT_SAME_SIGN",
+      "M9_QT_ISNT_IT",
+      "M9_QT_LETS",
+      "M9_QT_TUNE"
+    ],
+    "nofamily": "questions"
   },
   "ENGL.G9.READIN.T14_SUMMARISING_ARGUMENT.RS_SUMMARY": {
     "name": "Pick out the main points and organise them into a summary",
@@ -45609,13 +49490,18 @@ var SKILLS20 = {
     "outcome": "ENGL.G9.READIN.T14_SUMMARISING_ARGUMENT.a",
     "outcomes": [
       "ENGL.G9.READIN.T14_SUMMARISING_ARGUMENT.a",
-      "ENGL.G9.READIN.T14_SUMMARISING_ARGUMENT.b"
+      "ENGL.G9.READIN.T14_SUMMARISING_ARGUMENT.b",
+      "ENGL.G9.READIN.T7_INTENSIVE_READING_IN.c",
+      "ENGL.G9.READIN.T12_INTENSIVE_READING_CO.c",
+      "ENGL.G9.READIN.T13_INTENSIVE_READING_VI.b",
+      "ENGL.G9.READIN.T14_SUMMARISING_ARGUMENT.c"
     ],
     "pre": [],
     "mis": [
       "M_EN9_RS_SUMMARY_DETAIL",
       "M_EN9_RS_SUMMARY_OPPOSITE",
-      "M_EN9_RS_SUMMARY_NOTSAID"
+      "M_EN9_RS_SUMMARY_NOTSAID",
+      "M9_RS_SUMMARY_OWN_WORDS"
     ]
   },
   "ENGL.G9.GRAMMA.T14_SENTENCES_DIRECT_AND.DIRECT_INDIRECT": {
@@ -45625,7 +49511,8 @@ var SKILLS20 = {
     "outcomes": [
       "ENGL.G9.GRAMMA.T14_SENTENCES_DIRECT_AND.a",
       "ENGL.G9.GRAMMA.T14_SENTENCES_DIRECT_AND.b",
-      "ENGL.G9.GRAMMA.T14_SENTENCES_DIRECT_AND.c"
+      "ENGL.G9.GRAMMA.T14_SENTENCES_DIRECT_AND.c",
+      "ENGL.G9.GRAMMA.T14_SENTENCES_DIRECT_AND.d"
     ],
     "pre": [
       "ENGL.G9.WRITIN.T2_MECHANICS_OF_WRITING.QUOTES_BRACKETS"
@@ -45633,8 +49520,49 @@ var SKILLS20 = {
     "mis": [
       "M_EN9_DI_QUOTE",
       "M_EN9_DI_TENSE",
-      "M_EN9_DI_PRONOUN"
+      "M_EN9_DI_PRONOUN",
+      "M9_DI_TIME_WORDS"
     ]
+  },
+  "ENGL.G9.WRITIN.T14_DESCRIPTIVE_WRITING_.DESCRIPTIVE_COMPOSITION": {
+    "name": "Write a descriptive composition of 280 to 320 words using the five senses",
+    "sub": "ENGL.G9.WRITIN.T14_DESCRIPTIVE_WRITING_",
+    "outcome": "ENGL.G9.WRITIN.T14_DESCRIPTIVE_WRITING_.a",
+    "outcomes": [
+      "ENGL.G9.WRITIN.T14_DESCRIPTIVE_WRITING_.a",
+      "ENGL.G9.WRITIN.T14_DESCRIPTIVE_WRITING_.b",
+      "ENGL.G9.WRITIN.T14_DESCRIPTIVE_WRITING_.c",
+      "ENGL.G9.WRITIN.T14_DESCRIPTIVE_WRITING_.d"
+    ],
+    "pre": [
+      "ENGL.G9.GRAMMA.T5_ORDER_OF_ADJECTIVES.ADJ_ORDER",
+      "ENGL.G9.WRITIN.T7_THE_WRITING_PROCESS.WRITING_PROCESS"
+    ],
+    "mis": [
+      "M9_DC_FEW_SENSES",
+      "M9_DC_NARRATES",
+      "M9_DC_LENGTH",
+      "M9_DC_SPELLING"
+    ],
+    "nofamily": "composition"
+  },
+  "ENGL.G9.LISTEN.T15_ORAL_REPORTS_NEWS_RO.NEWS_REPORT": {
+    "name": "Read and analyse a news report and present one",
+    "sub": "ENGL.G9.LISTEN.T15_ORAL_REPORTS_NEWS_RO",
+    "outcome": "ENGL.G9.LISTEN.T15_ORAL_REPORTS_NEWS_RO.a",
+    "outcomes": [
+      "ENGL.G9.LISTEN.T15_ORAL_REPORTS_NEWS_RO.a",
+      "ENGL.G9.LISTEN.T15_ORAL_REPORTS_NEWS_RO.b",
+      "ENGL.G9.LISTEN.T15_ORAL_REPORTS_NEWS_RO.c"
+    ],
+    "pre": [],
+    "mis": [
+      "M9_NR_OPINION",
+      "M9_NR_TIME",
+      "M9_NR_NO_HEADLINE",
+      "M9_NR_MISSING_WS"
+    ],
+    "nofamily": "voice"
   },
   "ENGL.G9.READIN.T15_READING_FLUENCY.RS_FLUENCY": {
     "name": "Make predictions about characters, events and the message of a text",
@@ -45647,8 +49575,27 @@ var SKILLS20 = {
     "mis": [
       "M_EN9_RS_FLUENCY_DETAIL",
       "M_EN9_RS_FLUENCY_OPPOSITE",
-      "M_EN9_RS_FLUENCY_NOTSAID"
+      "M_EN9_RS_FLUENCY_NOTSAID",
+      "M9_RS_FLUENCY_TITLE"
     ]
+  },
+  "ENGL.G9.READIN.T15_READING_FLUENCY.SKIM_SCAN": {
+    "name": "Preview, skim and scan a text",
+    "sub": "ENGL.G9.READIN.T15_READING_FLUENCY",
+    "outcome": "ENGL.G9.READIN.T15_READING_FLUENCY.a",
+    "outcomes": [
+      "ENGL.G9.READIN.T15_READING_FLUENCY.a",
+      "ENGL.G9.READIN.T15_READING_FLUENCY.c",
+      "ENGL.G9.READIN.T15_READING_FLUENCY.d"
+    ],
+    "pre": [],
+    "mis": [
+      "M9_SK_READ_ALL",
+      "M9_SK_GIST_DETAIL",
+      "M9_SK_STOP_UNKNOWN",
+      "M9_SK_WRONG_KEYWORD"
+    ],
+    "nofamily": "questions"
   },
   "ENGL.G9.GRAMMA.T15_SENTENCES_1_IMPERATI.EXCLAM_IMPERATIVE": {
     "name": "Punctuate imperative and exclamatory sentences",
@@ -45662,47 +49609,113 @@ var SKILLS20 = {
     "mis": [
       "M_EN9_EI_MARK",
       "M_EN9_EI_COMMAND",
-      "M_EN9_EI_STOP"
+      "M_EN9_EI_STOP",
+      "M9_EI_POLITE_IMPERATIVE"
     ]
+  },
+  "ENGL.G9.WRITIN.T15_EMAILS.EMAIL": {
+    "name": "Identify the elements of an email and write one",
+    "sub": "ENGL.G9.WRITIN.T15_EMAILS",
+    "outcome": "ENGL.G9.WRITIN.T15_EMAILS.a",
+    "outcomes": [
+      "ENGL.G9.WRITIN.T15_EMAILS.a",
+      "ENGL.G9.WRITIN.T15_EMAILS.b"
+    ],
+    "pre": [],
+    "mis": [
+      "M9_EM_NO_SUBJECT",
+      "M9_EM_TEXTSPEAK",
+      "M9_EM_LETTER_ADDRESSES",
+      "M9_EM_FORGOT_ATTACHMENT"
+    ],
+    "nofamily": "composition"
   }
 };
 var MIS_FEEDBACK20 = {
+  "M9_EU_BLUNT": "Choose a gentle expression: passed away.",
+  "M9_EU_LITERAL": "A euphemism softens a hard fact.",
+  "M9_EU_OVERUSE": "Be gentle, but give facts plainly when people need them.",
+  "M9_EU_INSULT": "Choose words the person would be happy to hear.",
+  "M9_DB_ATTACK_SPEAKER": "Rebut the point, not the person.",
+  "M9_DB_NO_CHAIR": "Address the chair and the house first.",
+  "M9_DB_NO_EVIDENCE": "Give a reason and an example.",
+  "M9_DB_OVERTIME": "Plan to fit the time.",
+  "M9_IR_NO_LOG": "Log each text.",
+  "M9_IR_ONE_SOURCE": "Mix print and digital.",
+  "M9_IR_LOG_TITLES": "Add a line on content and opinion.",
+  "M9_IR_TOO_EASY": "Choose grade-appropriate texts.",
   "M_EN9_GN_CHAIRMAN": "Chairperson does not assume the sex of the chair.",
   "M_EN9_GN_POLICE": "Police officer fits a man or a woman.",
   "M_EN9_GN_MANKIND": "Humankind includes everyone.",
+  "M9_GN_HE_GENERIC": "Use their, or his or her, when the person could be anyone.",
   "M_EN9_PL_STRUCTURE_DETAIL": "Check the answer against the text: it must cover what the question asks, not one small detail.",
   "M_EN9_PL_STRUCTURE_OPPOSITE": "Check the answer against the text: it must agree with the text, not say the opposite.",
   "M_EN9_PL_STRUCTURE_NOTSAID": "Check the answer against the text: it must be found in the text, not added from outside.",
+  "M9_PL_ACT_SCENE": "Acts are the big parts; scenes are inside acts.",
+  "M9_LG_NO_INDENT": "Indent each new paragraph.",
+  "M9_LG_BAD_BREAK": "Break between syllables, with a hyphen.",
+  "M9_LG_NO_HYPHEN": "Add a hyphen.",
+  "M9_LG_UNEVEN": "Keep letters even.",
+  "M9_SF_RIDDLE_PROVERB": "A riddle asks for an answer; a proverb teaches.",
+  "M9_SF_TWISTER_PURPOSE": "Tongue twisters train the tongue.",
+  "M9_SF_RIDDLE_LITERAL": "Think of things that fit every clue.",
+  "M9_SF_OPENING": "Riddles have a call and response before the puzzle.",
+  "M9_PO_MUMBLE": "Clear sounds first, then speed.",
+  "M9_PO_NO_PROPS": "One simple prop can set the scene.",
+  "M9_PO_BACK_TO_AUDIENCE": "Keep your face open to the audience.",
+  "M9_PO_FLAT_POEM": "Let the voice and gestures carry the meaning.",
   "M_EN9_RP_STYLE_DETAIL": "Check the answer against the text: it must cover what the question asks, not one small detail.",
   "M_EN9_RP_STYLE_OPPOSITE": "Check the answer against the text: it must agree with the text, not say the opposite.",
   "M_EN9_RP_STYLE_NOTSAID": "Check the answer against the text: it must be found in the text, not added from outside.",
+  "M9_RP_REPEAT_NO_FUNCTION": "Say what the repetition adds: stress, rhythm or feeling.",
   "M_EN9_QT_MUCH": "Use many with count nouns such as chairs.",
   "M_EN9_QT_MANY": "Use much with non-count nouns such as water.",
   "M_EN9_QT_FEW": "Use little with non-count nouns such as milk.",
+  "M9_QT_A_LOT_OF": "A lot of is three words.",
   "M_EN9_PL_SEQUENCE_DETAIL": "Check the answer against the text: it must cover what the question asks, not one small detail.",
   "M_EN9_PL_SEQUENCE_OPPOSITE": "Check the answer against the text: it must agree with the text, not say the opposite.",
   "M_EN9_PL_SEQUENCE_NOTSAID": "Check the answer against the text: it must be found in the text, not added from outside.",
+  "M9_PL_STAGE_ORDER": "Follow what happens on stage in order.",
   "M_EN9_QB_BRACKET": "Quotation marks hold the exact words spoken.",
   "M_EN9_QB_EXTRA": "Brackets hold extra information.",
   "M_EN9_QB_END": "The full stop goes inside the closing quotation marks.",
+  "M9_QB_BRACKETS_SPEECH": "Quotation marks for spoken words; brackets for extra information.",
   "M_EN9_LS_MAIN_DETAIL": "Check the answer against the text: it must cover what the question asks, not one small detail.",
   "M_EN9_LS_MAIN_OPPOSITE": "Check the answer against the text: it must agree with the text, not say the opposite.",
   "M_EN9_LS_MAIN_NOTSAID": "Check the answer against the text: it must be found in the text, not added from outside.",
+  "M9_LS_SIDE": "Listen for the conclusion: it shows the speaker's side.",
   "M_EN9_RS_CONTEXT_DETAIL": "Check the answer against the text: it must cover what the question asks, not one small detail.",
   "M_EN9_RS_CONTEXT_OPPOSITE": "Check the answer against the text: it must agree with the text, not say the opposite.",
   "M_EN9_RS_CONTEXT_NOTSAID": "Check the answer against the text: it must be found in the text, not added from outside.",
   "M_EN9_RS_CONNECT_DETAIL": "Check the answer against the text: it must cover what the question asks, not one small detail.",
   "M_EN9_RS_CONNECT_OPPOSITE": "Check the answer against the text: it must agree with the text, not say the opposite.",
   "M_EN9_RS_CONNECT_NOTSAID": "Check the answer against the text: it must be found in the text, not added from outside.",
+  "M9_RS_CONTEXT_FIGURATIVE": "Ask what picture the writer is making.",
+  "M9_RS_CONNECT_DETAIL": "Link the main event or issue.",
   "M_EN9_MD_ABILITY": "Can shows ability.",
   "M_EN9_MD_DUTY": "Must shows duty.",
   "M_EN9_MD_BASE": "A modal is followed by the base verb with no to.",
+  "M9_MD_PERMISSION": "May is the formal word for permission.",
   "M_EN9_PF_STANZA": "A stanza is a group of lines.",
   "M_EN9_PF_RHYME": "Rhyme is repeated end sounds.",
   "M_EN9_PF_PERSON": "Personification gives human actions to a thing.",
+  "M9_PW_PROSE": "Break it into lines and stanzas.",
+  "M9_PW_FORCED_RHYME": "Meaning first; rhyme is optional.",
+  "M9_PW_NO_IMAGERY": "Use an image or personification.",
+  "M9_PW_NO_MESSAGE": "Choose a feeling or message first.",
+  "M9_PF_PERSONIFICATION_ANIMAL": "A thing given human actions is personification.",
   "M_EN9_PA_TOPIC": "The topic sentence states the main idea.",
   "M_EN9_PA_UNITY": "Unity means one main idea.",
   "M_EN9_PA_COHERENCE": "Coherence means ideas flow in order.",
+  "M9_PW2_NO_UNITY": "One idea per paragraph.",
+  "M9_PW2_NO_COHERENCE": "Order and link ideas.",
+  "M9_PW2_PERSON_SWITCH": "Keep the same person.",
+  "M9_PW2_UNDEVELOPED": "Support the topic sentence.",
+  "M9_PA_DEVELOPMENT": "Topic sentence, unity, coherence and development.",
+  "M9_LR_NO_JUDGEMENT": "Say whether it is fair and why.",
+  "M9_LR_WRONG_INFO": "Note numbers exactly.",
+  "M9_LR_SPEAKERS_MIXED": "Note each speaker's name with the point.",
+  "M9_LR_FEELING_NO_WORDS": "Use an exact feeling word and a reason.",
   "M_EN9_RS_PREDICT_DETAIL": "Check the answer against the text: it must cover what the question asks, not one small detail.",
   "M_EN9_RS_PREDICT_OPPOSITE": "Check the answer against the text: it must agree with the text, not say the opposite.",
   "M_EN9_RS_PREDICT_NOTSAID": "Check the answer against the text: it must be found in the text, not added from outside.",
@@ -45715,87 +49728,214 @@ var MIS_FEEDBACK20 = {
   "M_EN9_RS_RELATE_DETAIL": "Check the answer against the text: it must cover what the question asks, not one small detail.",
   "M_EN9_RS_RELATE_OPPOSITE": "Check the answer against the text: it must agree with the text, not say the opposite.",
   "M_EN9_RS_RELATE_NOTSAID": "Check the answer against the text: it must be found in the text, not added from outside.",
+  "M9_RS_PREDICT_WISH": "Use the clues.",
+  "M9_RS_KEYEVENTS_MINOR": "Key events change the story.",
+  "M9_RS_QUESTIONS_COPY": "Follow the word limit.",
+  "M9_RS_RELATE_RETELL": "Name a real person or situation.",
   "M_EN9_PE_PRESENT": "Present perfect uses have or has.",
   "M_EN9_PE_PAST": "Past perfect uses had.",
   "M_EN9_PE_PARTICIPLE": "Use the past participle after has.",
+  "M9_PE_WITH_TIME": "With yesterday, use the simple past.",
   "M_EN9_PL_CHARACTERS_DETAIL": "Check the answer against the text: it must cover what the question asks, not one small detail.",
   "M_EN9_PL_CHARACTERS_OPPOSITE": "Check the answer against the text: it must agree with the text, not say the opposite.",
   "M_EN9_PL_CHARACTERS_NOTSAID": "Check the answer against the text: it must be found in the text, not added from outside.",
+  "M9_PL_CHARACTERS_ADVERB": "Actions are described with adverbs: angrily.",
+  "M9_PS_Y_J": "Y is a glide: tongue near the roof, no stop.",
+  "M9_PS_W_V": "Round the lips for w; no teeth.",
+  "M9_PS_DAY_DIE": "Day slides from e to i; die slides from a to i.",
+  "M9_PS_NOW_NO": "Now opens wide then rounds: ah-oo.",
+  "M9_SS_ALL_STRONG": "Content words strong, function words weak.",
+  "M9_SS_WRONG_EMPHASIS": "Stress the word that corrects or contrasts.",
+  "M9_SS_FUNCTION_STRONG": "Keep the, is and in weak.",
+  "M9_SS_MEANING_SAME": "Stress shows what you mean.",
+  "M9_RR_DICTIONARY_ONLY_MEANING": "A dictionary shows part of speech and usage too.",
+  "M9_RR_THESAURUS_SWAP": "Check the synonym fits the context.",
+  "M9_RR_COPY": "Note key points and the source.",
+  "M9_RR_WRONG_SOURCE": "Match the reference to the need.",
   "M_EN9_AO_COLOUR": "Size comes before colour.",
   "M_EN9_AO_OPINION": "Opinion comes before material.",
   "M_EN9_AO_AGE": "Age comes before colour.",
+  "M9_AO_MATERIAL": "Opinion, size, age, shape, colour, origin, material, purpose.",
+  "M9_PS2_NO_EXAMPLE": "Quote or describe an example.",
+  "M9_PS2_NO_LINK": "Say what it shows or adds.",
+  "M9_PS2_MONOLOGUE_DIALOGUE": "Mono means one speaker.",
+  "M9_PS2_IRONY": "Irony is when the opposite of what is expected happens or is said.",
   "M_EN9_LA_CLOSE": "Yours faithfully goes with Dear Sir or Madam.",
   "M_EN9_LA_SUBJECT": "The subject line states what the letter is about.",
   "M_EN9_LA_ADDRESS": "The writer's address goes at the top.",
+  "M9_AL_FRIENDLY_TONE": "Formal and direct.",
+  "M9_AL_NO_QUALIFICATIONS": "Give reasons you are suitable.",
+  "M9_AL_SINCERELY": "Dear Sir: Yours faithfully.",
+  "M9_AL_BEGGING": "Be polite and confident.",
+  "M9_LA_FRIENDLY_OPENING": "Go straight to the purpose.",
+  "M9_NG_DEMAND": "Offer something in return.",
+  "M9_NG_NO_LISTEN": "Listen and find a middle point.",
+  "M9_NG_WALK_AWAY": "Make a counter-offer.",
+  "M9_NG_HOSTILE_CUES": "Keep calm, open cues.",
+  "M9_RF_STOPS_UNKNOWN": "Keep the flow; check later.",
+  "M9_RF_RUSH": "Steady pace.",
+  "M9_RF_FLAT": "Show the feeling.",
+  "M9_RF_NO_WAYS": "Preview, phrase, pause, vary, pace.",
   "M_EN9_AD_MORE": "Long adverbs take more and most.",
   "M_EN9_AD_SUPER": "Use the superlative when comparing three or more.",
   "M_EN9_AD_THAN": "Use the comparative with than.",
+  "M9_AD_IRREGULAR": "Well, better, best; badly, worse, worst.",
   "M_EN9_PL_THEMES_DETAIL": "Check the answer against the text: it must cover what the question asks, not one small detail.",
   "M_EN9_PL_THEMES_OPPOSITE": "Check the answer against the text: it must agree with the text, not say the opposite.",
   "M_EN9_PL_THEMES_NOTSAID": "Check the answer against the text: it must be found in the text, not added from outside.",
+  "M9_PL_THEME_TOPIC": "A theme is an idea about life, said as a phrase.",
   "M_EN9_SG_HOMOPHONE": "Their shows belonging.",
   "M_EN9_SG_SEPARATE": 'Separate has "par" in the middle.',
   "M_EN9_SG_COMMITTEE": "Committee has double m, double t and double e.",
+  "M9_SG_HOMONYM": "Use the sentence to pick the meaning.",
+  "M9_IE_SAME": "Interpret: what it means. Evaluate: how good or true it is.",
+  "M9_IE_ACCEPT_ALL": "Ask who says it and why.",
+  "M9_IE_LITERAL": "Find the picture the writer means.",
+  "M9_IE_OPINION_NO_REASON": "Give a reason from the text.",
   "M_EN9_RP_WHICH": "Use which for things.",
   "M_EN9_RP_WHOSE": "Whose shows belonging.",
   "M_EN9_RP_WHO": "Use who for people.",
+  "M9_RP_WHOM": "After to, for, with: whom.",
   "M_EN9_PL_RELATIONSHIP_DETAIL": "Check the answer against the text: it must cover what the question asks, not one small detail.",
   "M_EN9_PL_RELATIONSHIP_OPPOSITE": "Check the answer against the text: it must agree with the text, not say the opposite.",
   "M_EN9_PL_RELATIONSHIP_NOTSAID": "Check the answer against the text: it must be found in the text, not added from outside.",
+  "M9_PL_REL_ONE_WAY": "Describe how each treats the other, and how it changes.",
+  "M9_WP_ORDER": "Plan, draft, revise, edit, publish.",
+  "M9_WP_REVISE_EDIT": "Revise ideas; edit mechanics.",
+  "M9_WP_ONE_DRAFT": "Always revise.",
+  "M9_WP_SKIP_PLAN": "Plan every text.",
+  "M9_NC_NO_CLIMAX": "Build to a climax.",
+  "M9_NC_UNBELIEVABLE": "Prepare the reader with background details.",
+  "M9_NC_IDIOM_MISUSE": "Use idioms for their real meaning.",
+  "M9_NC_TENSE": "Past tense throughout.",
   "M_EN9_RP_POV_DETAIL": "Check the answer against the text: it must cover what the question asks, not one small detail.",
   "M_EN9_RP_POV_OPPOSITE": "Check the answer against the text: it must agree with the text, not say the opposite.",
   "M_EN9_RP_POV_NOTSAID": "Check the answer against the text: it must be found in the text, not added from outside.",
+  "M9_RP_POV_PERSON": "Point of view is who speaks and to whom.",
   "M_EN9_CP_BECAUSE": "Because of is followed by a noun.",
   "M_EN9_CP_INSTEAD": "Instead of is followed by a noun.",
   "M_EN9_CP_ACCORDING": "Use according to.",
+  "M9_CP_IN_SPITE": "In spite of, because of, instead of.",
   "M_EN9_RP_PERSONA_DETAIL": "Check the answer against the text: it must cover what the question asks, not one small detail.",
   "M_EN9_RP_PERSONA_OPPOSITE": "Check the answer against the text: it must agree with the text, not say the opposite.",
   "M_EN9_RP_PERSONA_NOTSAID": "Check the answer against the text: it must be found in the text, not added from outside.",
+  "M9_RP_PERSONA_LISTENER": "The persona is the speaker.",
+  "M9_AW_LENGTH": "Use the criteria.",
+  "M9_AW_NO_CRITERIA": "Comment on each criterion.",
+  "M9_AW_SPELLING_ONLY": "Check every quality.",
+  "M9_AW_NO_CORRECTIONS": "Suggest the correction.",
   "M_EN9_CO_EITHER": "Either goes with or.",
   "M_EN9_CO_NEITHER": "Neither goes with nor.",
   "M_EN9_CO_NOTONLY": "Not only goes with but also.",
+  "M9_CO_WHETHER": "Whether goes with or.",
   "M_EN9_NE_SETTING": "Setting is time and place.",
   "M_EN9_NE_PLOT": "The plot is the order of events.",
   "M_EN9_NE_CLIMAX": "The climax is the most exciting point.",
+  "M9_NE_RESOLUTION": "Climax: the most exciting point. Resolution: how it ends.",
+  "M9_IS_NO_PLAN": "Plan quickly: position, two points, close.",
+  "M9_IS_FREEZE": "Use a frame to start.",
+  "M9_IS_NO_CLOSE": "Sum up and thank the audience.",
+  "M9_IS_OFF_TOPIC": "Link every point to the topic.",
+  "M9_NM_ONE_SIDE": "Note both sides.",
+  "M9_NM_COPIES": "Key words.",
+  "M9_NM_EVIDENCE_AS_POINT": "Note the point the evidence supports.",
+  "M9_NM_NO_POSITION": "Note the writer's position first.",
   "M_EN9_DN_ORDINAL": "Ordinals show position.",
   "M_EN9_DN_CARDINAL": "Cardinals show how many.",
   "M_EN9_DN_ORDER": "A determiner comes before the noun.",
+  "M9_DN_FIRST_TWO": "Ordinal before cardinal: the first two.",
+  "M9_PC_EXPENSIVE": "Simple props work.",
+  "M9_PC_MOOD_MISMATCH": "Match props to the mood.",
+  "M9_PC_TOO_MANY": "A few props that matter.",
+  "M9_PC_COSTUME_ERA": "Match costume to setting.",
+  "M9_BF_WRONG_FORM": "Read the heading.",
+  "M9_BF_INCOMPLETE": "Answer every section.",
+  "M9_BF_NO_DOCUMENTS": "Check the list of attachments.",
+  "M9_BF_UNSIGNED": "Sign the declaration; get the guardian's too.",
+  "M9_JI_NO_PREPARATION": "Research the job; prepare examples.",
+  "M9_JI_VAGUE": "Give an example that proves it.",
+  "M9_JI_BAD_QUESTIONS": "Ask about skills and experience only.",
+  "M9_JI_NO_CLOSE": "Thank them.",
+  "M9_FN_REAL_PLACE": "Fiction can use real places; the events are made up.",
+  "M9_FN_BIOGRAPHY": "True life stories are non-fiction.",
+  "M9_FN_COVER": "Check the blurb and contents.",
+  "M9_FN_SCIENCE_FICTION": "Made-up events, even with science, are fiction.",
   "M_EN9_NF_DECIDE": "The noun from decide is decision.",
   "M_EN9_NF_FRIEND": "Friendship is the noun formed from friend.",
   "M_EN9_NF_CHILD": "Childhood is the noun formed from child.",
+  "M9_NF_ADJ_FOR_NOUN": "Add -ness, -ity, -tion to make a noun.",
   "M_EN9_PL_LESSONS_DETAIL": "Check the answer against the text: it must cover what the question asks, not one small detail.",
   "M_EN9_PL_LESSONS_OPPOSITE": "Check the answer against the text: it must agree with the text, not say the opposite.",
   "M_EN9_PL_LESSONS_NOTSAID": "Check the answer against the text: it must be found in the text, not added from outside.",
+  "M9_PL_LESSON_PLOT": "A lesson is advice for life.",
   "M_EN9_AB_EG": "e.g. means for example.",
   "M_EN9_AB_ETC": "etc. means and so on.",
   "M_EN9_AB_UN": "UN stands for United Nations.",
+  "M9_AB_FULL_STOPS": "Modern acronyms usually have no full stops.",
   "M_EN9_RS_CLUES_DETAIL": "Check the answer against the text: it must cover what the question asks, not one small detail.",
   "M_EN9_RS_CLUES_OPPOSITE": "Check the answer against the text: it must agree with the text, not say the opposite.",
   "M_EN9_RS_CLUES_NOTSAID": "Check the answer against the text: it must be found in the text, not added from outside.",
+  "M9_RS_CLUES_OVERREACH": "Keep conclusions to what the clues show.",
   "M_EN9_PV_BREAKDOWN": "Break down means stop working.",
   "M_EN9_PV_RUNOUT": "Run out of means have no more.",
   "M_EN9_PV_TURNUP": "Turn up means arrive.",
+  "M9_PV_HANG_UP_ON": "Hang on means wait; hang up ends a call.",
   "M_EN9_PL_TRAITS_DETAIL": "Check the answer against the text: it must cover what the question asks, not one small detail.",
   "M_EN9_PL_TRAITS_OPPOSITE": "Check the answer against the text: it must agree with the text, not say the opposite.",
   "M_EN9_PL_TRAITS_NOTSAID": "Check the answer against the text: it must be found in the text, not added from outside.",
+  "M9_PL_TRAITS_ONE_CLUE": "Use all the clues: words, actions, others' views.",
+  "M9_DW_QUOTES": "No quotation marks.",
+  "M9_DW_NO_REVISION": "Revise and edit.",
+  "M9_DW_DIRECTIONS": "Brackets.",
+  "M9_DW_NO_PURPOSE": "Plan what changes by the end.",
   "M_EN9_RS_IMAGES_DETAIL": "Check the answer against the text: it must cover what the question asks, not one small detail.",
   "M_EN9_RS_IMAGES_OPPOSITE": "Check the answer against the text: it must agree with the text, not say the opposite.",
   "M_EN9_RS_IMAGES_NOTSAID": "Check the answer against the text: it must be found in the text, not added from outside.",
+  "M9_RS_IMAGES_ADD": "Use only the words.",
   "M_EN9_SC_ALTHOUGH": "Although shows contrast.",
   "M_EN9_SC_BECAUSE": "Because shows a reason.",
   "M_EN9_SC_UNLESS": "Unless means if not.",
+  "M9_SC_FRAGMENT": "Join it to a main clause: We waited because the ship was late.",
+  "M9_ID_LITERAL": "Use the context.",
+  "M9_ID_OPPOSITE": "Check the context.",
+  "M9_ID_WRONG_FIT": "Match the meaning.",
+  "M9_ID_CHANGED": "Idioms are fixed.",
+  "M9_QT_SAME_SIGN": "Positive sentence, negative tag.",
+  "M9_QT_ISNT_IT": "Copy the helper and use a pronoun.",
+  "M9_QT_LETS": "Let's takes shall we.",
+  "M9_QT_TUNE": "Fall when you expect agreement.",
   "M_EN9_RS_SUMMARY_DETAIL": "Check the answer against the text: it must cover what the question asks, not one small detail.",
   "M_EN9_RS_SUMMARY_OPPOSITE": "Check the answer against the text: it must agree with the text, not say the opposite.",
   "M_EN9_RS_SUMMARY_NOTSAID": "Check the answer against the text: it must be found in the text, not added from outside.",
+  "M9_RS_SUMMARY_OWN_WORDS": "Rewrite the points in your own words.",
   "M_EN9_DI_QUOTE": "Indirect speech has no quotation marks.",
   "M_EN9_DI_TENSE": "Am becomes was.",
   "M_EN9_DI_PRONOUN": "I becomes he.",
+  "M9_DI_TIME_WORDS": "Change time words too: tomorrow becomes the next day.",
+  "M9_DC_FEW_SENSES": "Plan a line for each sense.",
+  "M9_DC_NARRATES": "Describe what it is like.",
+  "M9_DC_LENGTH": "Add senses and details.",
+  "M9_DC_SPELLING": "Edit before the final copy.",
+  "M9_NR_OPINION": "Report facts in a neutral tone.",
+  "M9_NR_TIME": "Practise with a timer.",
+  "M9_NR_NO_HEADLINE": "Lead with the main news.",
+  "M9_NR_MISSING_WS": "Check who, what, where, when.",
   "M_EN9_RS_FLUENCY_DETAIL": "Check the answer against the text: it must cover what the question asks, not one small detail.",
   "M_EN9_RS_FLUENCY_OPPOSITE": "Check the answer against the text: it must agree with the text, not say the opposite.",
   "M_EN9_RS_FLUENCY_NOTSAID": "Check the answer against the text: it must be found in the text, not added from outside.",
+  "M9_SK_READ_ALL": "Scan for the key word.",
+  "M9_SK_GIST_DETAIL": "Gist is the whole topic.",
+  "M9_SK_STOP_UNKNOWN": "Previewing skips unknown words.",
+  "M9_SK_WRONG_KEYWORD": "Choose the word the answer will be near.",
+  "M9_RS_FLUENCY_TITLE": "Start with the title.",
   "M_EN9_EI_MARK": "An exclamation ends with an exclamation mark.",
   "M_EN9_EI_COMMAND": "An imperative gives a command.",
-  "M_EN9_EI_STOP": "A command ends with a full stop or exclamation mark."
+  "M_EN9_EI_STOP": "A command ends with a full stop or exclamation mark.",
+  "M9_EI_POLITE_IMPERATIVE": "A calm request ends with a full stop.",
+  "M9_EM_NO_SUBJECT": "Always write a clear subject.",
+  "M9_EM_TEXTSPEAK": "Write in full for formal emails.",
+  "M9_EM_LETTER_ADDRESSES": "The email address does that job.",
+  "M9_EM_FORGOT_ATTACHMENT": "Attach, then send."
 };
 
 // src/ai-tutor/content/families/english_g9_signed.js

@@ -1,0 +1,99 @@
+{
+ "sub_strand": "ENGL.G5.GRAMMA.T8_SENTENCES",
+ "title": "Sentences (Theme 8: The farm-cash crops)",
+ "status": "draft: written 18 Nov 2026 offline for Grade 5 English; not yet checked by a Kenyan English teacher; not loaded by the live tutor",
+ "notes": "",
+ "skills": [
+  {
+   "skill": "ENGL.G5.GRAMMA.T8_SENTENCES.QUESTION_TAGS",
+   "assessed_by": "questions",
+   "key_step": "The child copies the helping verb and the pronoun into the tag, with the opposite sign.",
+   "floor": {
+    "prerequisite": "Makes negatives.",
+    "question": "She is here. (negative)",
+    "answer": "She is not here."
+   },
+   "steps": [
+    "Find the helping verb.",
+    "Opposite sign.",
+    "Pronoun for the subject."
+   ],
+   "contexts": [
+    "a talk with a farmer"
+   ],
+   "board": [
+    {
+     "beat": "write",
+     "do": "Write: You are coming, ___?"
+    },
+    {
+     "beat": "point",
+     "do": "Point at are.",
+     "say": "Opposite?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for the child to answer."
+    },
+    {
+     "beat": "child_draws",
+     "do": "The child writes the tag for a does sentence."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "ENGL.G5.GRAMMA.T8_SENTENCES.QUESTION_TAGS.M_TAG_INVARIABLE",
+     "listen_for": [
+      "isn't it"
+     ],
+     "ask": "Does isn't it fit every sentence?",
+     "repair": "Match the verb."
+    },
+    {
+     "code": "ENGL.G5.GRAMMA.T8_SENTENCES.QUESTION_TAGS.M_TAG_SAME_SIGN",
+     "listen_for": [
+      "does he"
+     ],
+     "ask": "Same or opposite?",
+     "repair": "Opposite."
+    },
+    {
+     "code": "ENGL.G5.GRAMMA.T8_SENTENCES.QUESTION_TAGS.M_TAG_WRONG_HELPER",
+     "listen_for": [
+      "isn't she"
+     ],
+     "ask": "Which helping verb?",
+     "repair": "Does."
+    },
+    {
+     "code": "ENGL.G5.GRAMMA.T8_SENTENCES.QUESTION_TAGS.M_TAG_NOUN_FOR_PRONOUN",
+     "listen_for": [
+      "isn't Baraka"
+     ],
+     "ask": "Name or pronoun?",
+     "repair": "Pronoun."
+    },
+    {
+     "code": "ENGL.G5.GRAMMA.T8_SENTENCES.QUESTION_TAGS.M_TAG_FULL_FORM",
+     "listen_for": [
+      "is not it"
+     ],
+     "ask": "Is not it?",
+     "repair": "Isn't it."
+    }
+   ],
+   "checks": [
+    {
+     "question": "She likes tea, ___?",
+     "answer": "doesn't she",
+     "shows": "do-support"
+    },
+    {
+     "question": "Baraka is tall, ___?",
+     "answer": "isn't he",
+     "shows": "pronoun"
+    }
+   ]
+  }
+ ]
+}

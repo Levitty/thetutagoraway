@@ -1,0 +1,192 @@
+{
+ "sub_strand": "ENGL.G5.WRITIN.T7_MECHANICS_OF_WRITING",
+ "title": "Mechanics of Writing: Punctuation (Theme 7: Learning through technology)",
+ "status": "draft: written 18 Nov 2026 offline for Grade 5 English; not yet checked by a Kenyan English teacher; not loaded by the live tutor",
+ "notes": "",
+ "skills": [
+  {
+   "skill": "ENGL.G5.WRITIN.T7_MECHANICS_OF_WRITING.COMMAS",
+   "assessed_by": "questions",
+   "key_step": "The child puts commas between list items, after yes or no at the start, and before a joining word between two sentences.",
+   "floor": {
+    "prerequisite": "Uses commas in lists.",
+    "question": "Punctuate: rice beans maize",
+    "answer": "rice, beans and maize"
+   },
+   "steps": [
+    "Lists.",
+    "After yes or no.",
+    "Before and or but joining two sentences."
+   ],
+   "contexts": [
+    "a shopping list",
+    "a technology dialogue"
+   ],
+   "board": [
+    {
+     "beat": "write",
+     "do": "Write: Yes I have a tablet a phone and a radio"
+    },
+    {
+     "beat": "point",
+     "do": "Point after Yes.",
+     "say": "What goes here?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for the child to answer."
+    },
+    {
+     "beat": "child_draws",
+     "do": "The child adds the list commas."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "ENGL.G5.WRITIN.T7_MECHANICS_OF_WRITING.COMMAS.M_COMMA_LIST_MISSING",
+     "listen_for": [
+      "maize flour sugar and tea"
+     ],
+     "ask": "Where do items meet?",
+     "repair": "Comma."
+    },
+    {
+     "code": "ENGL.G5.WRITIN.T7_MECHANICS_OF_WRITING.COMMAS.M_COMMA_EVERYWHERE",
+     "listen_for": [
+      "The children, played"
+     ],
+     "ask": "Is it needed there?",
+     "repair": "Remove it."
+    },
+    {
+     "code": "ENGL.G5.WRITIN.T7_MECHANICS_OF_WRITING.COMMAS.M_COMMA_AFTER_OPENING",
+     "listen_for": [
+      "Yes I will come."
+     ],
+     "ask": "After yes?",
+     "repair": "Comma."
+    },
+    {
+     "code": "ENGL.G5.WRITIN.T7_MECHANICS_OF_WRITING.COMMAS.M_COMMA_SPLICE",
+     "listen_for": [
+      "The bell rang, we ran"
+     ],
+     "ask": "Two sentences?",
+     "repair": "Add and."
+    }
+   ],
+   "checks": [
+    {
+     "question": "Punctuate: No thank you.",
+     "answer": "No, thank you.",
+     "shows": "opening"
+    },
+    {
+     "question": "Is \"The children, played\" right?",
+     "answer": "No",
+     "shows": "extra comma"
+    }
+   ]
+  },
+  {
+   "skill": "ENGL.G5.WRITIN.T7_MECHANICS_OF_WRITING.DIRECT_SPEECH",
+   "assessed_by": "questions",
+   "key_step": "The child puts the spoken words inside double quotation marks, with the comma or question mark inside.",
+   "floor": {
+    "prerequisite": "Uses commas and question marks.",
+    "question": "End: Where is it",
+    "answer": "Where is it?"
+   },
+   "steps": [
+    "Find the spoken words.",
+    "Open and close the marks.",
+    "Comma or ? inside.",
+    "Capital to start the speech."
+   ],
+   "contexts": [
+    "a dialogue about technology"
+   ],
+   "board": [
+    {
+     "beat": "write",
+     "do": "Write: Mama said come and eat"
+    },
+    {
+     "beat": "point",
+     "do": "Point at come.",
+     "say": "Which words did Mama say?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for the child to answer."
+    },
+    {
+     "beat": "child_draws",
+     "do": "The child punctuates it."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "ENGL.G5.WRITIN.T7_MECHANICS_OF_WRITING.DIRECT_SPEECH.M_QUOTE_MISSING",
+     "listen_for": [
+      "Mother said Come and eat."
+     ],
+     "ask": "Which words were spoken?",
+     "repair": "Put marks round them."
+    },
+    {
+     "code": "ENGL.G5.WRITIN.T7_MECHANICS_OF_WRITING.DIRECT_SPEECH.M_QUOTE_TOO_MUCH",
+     "listen_for": [
+      "\"Come and eat, said Mother.\""
+     ],
+     "ask": "Did Mother say \"said Mother\"?",
+     "repair": "Only the spoken words."
+    },
+    {
+     "code": "ENGL.G5.WRITIN.T7_MECHANICS_OF_WRITING.DIRECT_SPEECH.M_QUOTE_PUNCTUATION_OUTSIDE",
+     "listen_for": [
+      "\"Where are you going\", asked Baba."
+     ],
+     "ask": "Inside or outside?",
+     "repair": "Inside."
+    },
+    {
+     "code": "ENGL.G5.WRITIN.T7_MECHANICS_OF_WRITING.DIRECT_SPEECH.M_QUOTE_NO_CAPITAL",
+     "listen_for": [
+      "Juma said, \"we are late.\""
+     ],
+     "ask": "How does speech start?",
+     "repair": "Capital."
+    },
+    {
+     "code": "ENGL.G5.WRITIN.T7_MECHANICS_OF_WRITING.DIRECT_SPEECH.M_QUOTE_SINGLE",
+     "listen_for": [
+      "single marks"
+     ],
+     "ask": "Single or double?",
+     "repair": "Double."
+    },
+    {
+     "code": "ENGL.G5.WRITIN.T7_MECHANICS_OF_WRITING.DIRECT_SPEECH.M_QUOTE_FULL_STOP_BEFORE_SAID",
+     "listen_for": [
+      "\"I am ready.\" said Otieno."
+     ],
+     "ask": "Is the sentence over?",
+     "repair": "Comma."
+    }
+   ],
+   "checks": [
+    {
+     "question": "Punctuate: Where are you asked Baba",
+     "answer": "\"Where are you?\" asked Baba.",
+     "shows": "question"
+    },
+    {
+     "question": "Punctuate: I am ready said Otieno",
+     "answer": "\"I am ready,\" said Otieno.",
+     "shows": "comma"
+    }
+   ]
+  }
+ ]
+}

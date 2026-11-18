@@ -1,0 +1,92 @@
+{
+ "sub_strand": "ENGL.G6.LANGUA.T2_WORD_CLASSES",
+ "title": "Word Classes (Theme 2: Cultural and religious celebrations)",
+ "status": "draft: written 18 Nov 2026 offline for Grade 6 English; not yet checked by a Kenyan English teacher; not loaded by the live tutor",
+ "notes": "",
+ "skills": [
+  {
+   "skill": "ENGL.G6.LANGUA.T2_WORD_CLASSES.CONCRETE_ABSTRACT",
+   "assessed_by": "questions",
+   "key_step": "The child asks \"can I see or touch it?\": yes is concrete, no is abstract.",
+   "floor": {
+    "prerequisite": "Knows nouns.",
+    "question": "Is \"river\" a noun?",
+    "answer": "yes"
+   },
+   "steps": [
+    "Can you see or touch it?",
+    "Yes: concrete.",
+    "No: abstract.",
+    "Make abstract nouns: honest, honesty."
+   ],
+   "contexts": [
+    "celebration words: joy, drum"
+   ],
+   "board": [
+    {
+     "beat": "write",
+     "do": "Write: drum, joy, market, freedom."
+    },
+    {
+     "beat": "point",
+     "do": "Point at joy.",
+     "say": "Can you touch it?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for the child to answer."
+    },
+    {
+     "beat": "child_draws",
+     "do": "The child sorts the rest."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "ENGL.G6.LANGUA.T2_WORD_CLASSES.CONCRETE_ABSTRACT.M_NOUN_FEELING_CONCRETE",
+     "listen_for": [
+      "river"
+     ],
+     "ask": "Can you touch it?",
+     "repair": "Abstract."
+    },
+    {
+     "code": "ENGL.G6.LANGUA.T2_WORD_CLASSES.CONCRETE_ABSTRACT.M_NOUN_PLACE_ABSTRACT",
+     "listen_for": [
+      "freedom"
+     ],
+     "ask": "Can you visit it?",
+     "repair": "Concrete."
+    },
+    {
+     "code": "ENGL.G6.LANGUA.T2_WORD_CLASSES.CONCRETE_ABSTRACT.M_NOUN_ADJECTIVE_FORM",
+     "listen_for": [
+      "honest"
+     ],
+     "ask": "Noun or adjective?",
+     "repair": "Honesty."
+    },
+    {
+     "code": "ENGL.G6.LANGUA.T2_WORD_CLASSES.CONCRETE_ABSTRACT.M_NOUN_SENSE_ABSTRACT",
+     "listen_for": [
+      "bell"
+     ],
+     "ask": "Can you hear it?",
+     "repair": "Bell is concrete."
+    }
+   ],
+   "checks": [
+    {
+     "question": "kindness",
+     "answer": "abstract",
+     "shows": "abstract"
+    },
+    {
+     "question": "honest (noun form)",
+     "answer": "honesty",
+     "shows": "form"
+    }
+   ]
+  }
+ ]
+}

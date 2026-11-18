@@ -1,0 +1,97 @@
+{
+ "sub_strand": "ENGL.G5.READIN.T8_FLUENCY_IN_READING",
+ "title": "Fluency in Reading (Theme 8: The farm-cash crops)",
+ "status": "draft: written 18 Nov 2026 offline for Grade 5 English; not yet checked by a Kenyan English teacher; not loaded by the live tutor",
+ "notes": "",
+ "skills": [
+  {
+   "skill": "ENGL.G5.READIN.T8_FLUENCY_IN_READING.READ_FLUENTLY",
+   "assessed_by": "voice",
+   "key_step": "The child reads in phrases, pausing at punctuation and checking each word makes sense.",
+   "floor": {
+    "prerequisite": "Reads Grade 4 texts accurately.",
+    "question": "Read this sentence.",
+    "answer": "reads it"
+   },
+   "steps": [
+    "Teacher models.",
+    "Read together.",
+    "Child reads alone.",
+    "Reread for speed and expression."
+   ],
+   "contexts": [
+    "a text on cash crops",
+    "a dialogue",
+    "a poem"
+   ],
+   "board": [
+    {
+     "beat": "write",
+     "do": "Write: Farmers grow tea, / coffee / and sugarcane."
+    },
+    {
+     "beat": "point",
+     "do": "Point at the comma.",
+     "say": "What does the voice do here?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for the child to answer."
+    },
+    {
+     "beat": "child_draws",
+     "do": "The child reads the next sentence."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "ENGL.G5.READIN.T8_FLUENCY_IN_READING.READ_FLUENTLY.M5_RF_WORD_BY_WORD",
+     "listen_for": [
+      "Coffee. and. tea. are."
+     ],
+     "ask": "Which words go together?",
+     "repair": "Read the group."
+    },
+    {
+     "code": "ENGL.G5.READIN.T8_FLUENCY_IN_READING.READ_FLUENTLY.M5_RF_NO_PAUSE",
+     "listen_for": [
+      "no pauses at all"
+     ],
+     "ask": "What does the comma say?",
+     "repair": "Short pause."
+    },
+    {
+     "code": "ENGL.G5.READIN.T8_FLUENCY_IN_READING.READ_FLUENTLY.M5_RF_GUESS_FIRST_LETTER",
+     "listen_for": [
+      "The farmer harmed the crop."
+     ],
+     "ask": "Does it make sense?",
+     "repair": "Look at the whole word."
+    },
+    {
+     "code": "ENGL.G5.READIN.T8_FLUENCY_IN_READING.READ_FLUENTLY.M5_RF_NO_EXPRESSION",
+     "listen_for": [
+      "flat"
+     ],
+     "ask": "Is it a question?",
+     "repair": "Let the voice ask."
+    }
+   ],
+   "checks": [
+    {
+     "question": "Read: \"Is the coffee ripe?\" asked the farmer.",
+     "answer": "questioning voice",
+     "shows": "expression"
+    },
+    {
+     "question": "Read a Grade 5 passage aloud.",
+     "answer": "phrases, few slips, pauses",
+     "shows": "fluency"
+    }
+   ]
+  }
+ ],
+ "also_taught_by": [
+  "ENGL.G5.READIN.T2_INTENSIVE_READING.CONTEXT_CLUES"
+ ]
+}

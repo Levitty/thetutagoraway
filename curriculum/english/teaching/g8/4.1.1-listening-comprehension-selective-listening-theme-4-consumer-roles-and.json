@@ -1,0 +1,176 @@
+{
+ "sub_strand": "ENGL.G8.LISTEN.T4_LISTENING_COMPREHENS",
+ "title": "Listening Comprehension: Selective Listening (Theme 4: Consumer roles and responsibilites)",
+ "status": "draft: written 18 Nov 2026 offline for Grade 8 English; not yet checked by a Kenyan English teacher; not loaded by the live tutor",
+ "notes": "",
+ "skills": [
+  {
+   "skill": "ENGL.G8.LISTEN.T4_LISTENING_COMPREHENS.LS_SPECIFIC",
+   "assessed_by": "questions",
+   "key_step": "The child notes the exact detail, with numbers and units, while listening.",
+   "floor": {
+    "prerequisite": "Takes listening notes.",
+    "question": "Note the time.",
+    "answer": "the time"
+   },
+   "steps": [
+    "Listen for the question.",
+    "Note the detail.",
+    "Include units."
+   ],
+   "contexts": [
+    "consumer adverts"
+   ],
+   "board": [
+    {
+     "beat": "write",
+     "do": "Write: Distance ___ km."
+    },
+    {
+     "beat": "point",
+     "do": "Point at km.",
+     "say": "What unit did you hear?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for the child to answer."
+    },
+    {
+     "beat": "child_draws",
+     "do": "The child notes a price."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "ENGL.G8.LISTEN.T4_LISTENING_COMPREHENS.LS_SPECIFIC.M8_LS_SPECIFIC_DETAIL",
+     "listen_for": [
+      "an answer that is a small detail"
+     ],
+     "ask": "Does that answer the question, or is it a detail nearby?",
+     "repair": "Find the exact answer in the text."
+    },
+    {
+     "code": "ENGL.G8.LISTEN.T4_LISTENING_COMPREHENS.LS_SPECIFIC.M8_LS_SPECIFIC_OPPOSITE",
+     "listen_for": [
+      "an answer that is the opposite"
+     ],
+     "ask": "Does the text say that, or the opposite?",
+     "repair": "Read the sentence again."
+    },
+    {
+     "code": "ENGL.G8.LISTEN.T4_LISTENING_COMPREHENS.LS_SPECIFIC.M8_LS_SPECIFIC_NOTSAID",
+     "listen_for": [
+      "an answer that is something not said"
+     ],
+     "ask": "Can you point to where the text says it?",
+     "repair": "Answer only from the text."
+    },
+    {
+     "code": "ENGL.G8.LISTEN.T4_LISTENING_COMPREHENS.LS_SPECIFIC.M8_X_LSS_UNIT",
+     "listen_for": [
+      "2 metres"
+     ],
+     "ask": "Which unit?",
+     "repair": "Kilometres."
+    }
+   ],
+   "checks": [
+    {
+     "question": "The shop is 2 km away. Distance?",
+     "answer": "2 km",
+     "shows": "unit"
+    },
+    {
+     "question": "The price was 350 shillings.",
+     "answer": "350 shillings",
+     "shows": "detail"
+    }
+   ]
+  },
+  {
+   "skill": "ENGL.G8.LISTEN.T4_LISTENING_COMPREHENS.LISTEN_RESPOND",
+   "assessed_by": "voice",
+   "key_step": "The child states the message, gives an attitude with an exact word and a reason, then responds.",
+   "floor": {
+    "prerequisite": "Listens and responds to issues.",
+    "question": "What issue did the song raise?",
+    "answer": "an issue"
+   },
+   "steps": [
+    "Listen.",
+    "State the message.",
+    "Attitude word + reason.",
+    "Respond."
+   ],
+   "contexts": [
+    "songs on fashion",
+    "poems on consumer protection"
+   ],
+   "board": [
+    {
+     "beat": "write",
+     "do": "Write: Message / Attitude because / Response."
+    },
+    {
+     "beat": "point",
+     "do": "Point at Attitude.",
+     "say": "How do you feel about the song?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for the child to answer."
+    },
+    {
+     "beat": "child_draws",
+     "do": "The child gives a response."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "ENGL.G8.LISTEN.T4_LISTENING_COMPREHENS.LISTEN_RESPOND.M8_X_LR_TOPIC_AS_MESSAGE",
+     "listen_for": [
+      "fashion"
+     ],
+     "ask": "What does it want you to think?",
+     "repair": "Message."
+    },
+    {
+     "code": "ENGL.G8.LISTEN.T4_LISTENING_COMPREHENS.LISTEN_RESPOND.M8_X_LR_NO_ATTITUDE_WORDS",
+     "listen_for": [
+      "Nice."
+     ],
+     "ask": "An exact word?",
+     "repair": "Give a reason."
+    },
+    {
+     "code": "ENGL.G8.LISTEN.T4_LISTENING_COMPREHENS.LISTEN_RESPOND.M8_X_LR_RETELL",
+     "listen_for": [
+      "repeats the lines"
+     ],
+     "ask": "Your view?",
+     "repair": "Respond."
+    },
+    {
+     "code": "ENGL.G8.LISTEN.T4_LISTENING_COMPREHENS.LISTEN_RESPOND.M8_X_LR_DETAIL_ONLY",
+     "listen_for": [
+      "I like the speaker's shirt."
+     ],
+     "ask": "Main point?",
+     "repair": "Respond to it."
+    }
+   ],
+   "checks": [
+    {
+     "question": "Topic or message: \"fashion\"?",
+     "answer": "topic",
+     "shows": "message"
+    },
+    {
+     "question": "Give an attitude with a reason.",
+     "answer": "I find it ... because ...",
+     "shows": "attitude"
+    }
+   ]
+  }
+ ]
+}

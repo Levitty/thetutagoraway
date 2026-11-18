@@ -1,0 +1,176 @@
+{
+ "sub_strand": "ENGL.G7.READIN.T2_INTENSIVE_READING_CL",
+ "title": "Intensive Reading: Class Reader (Theme 2: Science and health education)",
+ "status": "draft: written 18 Nov 2026 offline for Grade 7 English; not yet checked by a Kenyan English teacher; not loaded by the live tutor",
+ "notes": "",
+ "skills": [
+  {
+   "skill": "ENGL.G7.READIN.T2_INTENSIVE_READING_CL.BOOK_PARTS",
+   "assessed_by": "questions",
+   "key_step": "The child names the parts that preview a book (cover, blurb, title page, contents, glossary, index) and uses them.",
+   "floor": {
+    "prerequisite": "Uses reference parts.",
+    "question": "Where is the index?",
+    "answer": "at the back"
+   },
+   "steps": [
+    "Cover and title.",
+    "Blurb.",
+    "Contents.",
+    "Glossary and index."
+   ],
+   "contexts": [
+    "the class reader"
+   ],
+   "board": [
+    {
+     "beat": "write",
+     "do": "Write: blurb, contents, glossary."
+    },
+    {
+     "beat": "point",
+     "do": "Point at glossary.",
+     "say": "What does it give?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for the child to answer."
+    },
+    {
+     "beat": "child_draws",
+     "do": "The child finds the blurb."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "ENGL.G7.READIN.T2_INTENSIVE_READING_CL.BOOK_PARTS.M7_BP_BLURB",
+     "listen_for": [
+      "the contents page"
+     ],
+     "ask": "Back of the book?",
+     "repair": "Blurb."
+    },
+    {
+     "code": "ENGL.G7.READIN.T2_INTENSIVE_READING_CL.BOOK_PARTS.M7_BP_CONTENTS_INDEX",
+     "listen_for": [
+      "the index"
+     ],
+     "ask": "Chapters?",
+     "repair": "Contents."
+    },
+    {
+     "code": "ENGL.G7.READIN.T2_INTENSIVE_READING_CL.BOOK_PARTS.M7_BP_TITLE_PAGE",
+     "listen_for": [
+      "the glossary"
+     ],
+     "ask": "Title and author?",
+     "repair": "Title page."
+    },
+    {
+     "code": "ENGL.G7.READIN.T2_INTENSIVE_READING_CL.BOOK_PARTS.M7_BP_GLOSSARY",
+     "listen_for": [
+      "the contents page"
+     ],
+     "ask": "Word meanings?",
+     "repair": "Glossary."
+    }
+   ],
+   "checks": [
+    {
+     "question": "What tells you what the book is about on the back?",
+     "answer": "the blurb",
+     "shows": "blurb"
+    },
+    {
+     "question": "Where are hard words explained?",
+     "answer": "the glossary",
+     "shows": "glossary"
+    }
+   ]
+  },
+  {
+   "skill": "ENGL.G7.READIN.T2_INTENSIVE_READING_CL.AUTHOR_SETTING",
+   "assessed_by": "questions",
+   "key_step": "The child finds the author on the title page and the setting from clues in place and time.",
+   "floor": {
+    "prerequisite": "Knows the parts of a book.",
+    "question": "Where is the blurb?",
+    "answer": "the back cover"
+   },
+   "steps": [
+    "Find the author.",
+    "Find place clues.",
+    "Find time clues.",
+    "Describe the setting."
+   ],
+   "contexts": [
+    "the class reader"
+   ],
+   "board": [
+    {
+     "beat": "write",
+     "do": "Write: Author / Place / Time / Clues."
+    },
+    {
+     "beat": "point",
+     "do": "Point at Time.",
+     "say": "What clues show when it is set?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for the child to answer."
+    },
+    {
+     "beat": "child_draws",
+     "do": "The child describes the setting."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "ENGL.G7.READIN.T2_INTENSIVE_READING_CL.AUTHOR_SETTING.M7_X_AS_PUBLISHER",
+     "listen_for": [
+      "the publisher's name on the spine"
+     ],
+     "ask": "Who wrote it?",
+     "repair": "The author, not the publisher."
+    },
+    {
+     "code": "ENGL.G7.READIN.T2_INTENSIVE_READING_CL.AUTHOR_SETTING.M7_X_AS_PLACE_ONLY",
+     "listen_for": [
+      "a village"
+     ],
+     "ask": "When?",
+     "repair": "Add the time."
+    },
+    {
+     "code": "ENGL.G7.READIN.T2_INTENSIVE_READING_CL.AUTHOR_SETTING.M7_X_AS_NO_CLUES",
+     "listen_for": [
+      "It just is."
+     ],
+     "ask": "What clue shows it?",
+     "repair": "Find one."
+    },
+    {
+     "code": "ENGL.G7.READIN.T2_INTENSIVE_READING_CL.AUTHOR_SETTING.M7_X_AS_CHARACTER_AUTHOR",
+     "listen_for": [
+      "Yes"
+     ],
+     "ask": "Is the narrator the author?",
+     "repair": "Not always."
+    }
+   ],
+   "checks": [
+    {
+     "question": "Who is the author?",
+     "answer": "the name after \"by\" on the title page",
+     "shows": "author"
+    },
+    {
+     "question": "Setting has two parts. Name them.",
+     "answer": "place and time",
+     "shows": "setting"
+    }
+   ]
+  }
+ ]
+}

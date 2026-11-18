@@ -1,0 +1,92 @@
+{
+ "sub_strand": "ENGL.G7.LISTEN.T1_CONVERSATIONAL_SKILL",
+ "title": "Conversational Skills: Polite Language (Theme 1: Personal responsibility)",
+ "status": "draft: written 18 Nov 2026 offline for Grade 7 English; not yet checked by a Kenyan English teacher; not loaded by the live tutor",
+ "notes": "",
+ "skills": [
+  {
+   "skill": "ENGL.G7.LISTEN.T1_CONVERSATIONAL_SKILL.INTRO_POLITE",
+   "assessed_by": "questions",
+   "key_step": "The child introduces the younger to the older, uses a title and may I introduce, and replies politely.",
+   "floor": {
+    "prerequisite": "Uses polite telephone talk.",
+    "question": "Answer the phone politely.",
+    "answer": "Hello, this is ..."
+   },
+   "steps": [
+    "Older person first: Madam, ...",
+    "May I introduce ...",
+    "Reply: Pleased to meet you."
+   ],
+   "contexts": [
+    "introducing a friend to the headteacher",
+    "meeting a visitor"
+   ],
+   "board": [
+    {
+     "beat": "write",
+     "do": "Write: Madam, may I introduce ..."
+    },
+    {
+     "beat": "point",
+     "do": "Point at Madam.",
+     "say": "Who do we speak to first?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for the child to answer."
+    },
+    {
+     "beat": "child_draws",
+     "do": "The child introduces a friend."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "ENGL.G7.LISTEN.T1_CONVERSATIONAL_SKILL.INTRO_POLITE.M7_IP_BLUNT",
+     "listen_for": [
+      "This is my friend. He is Juma."
+     ],
+     "ask": "Is it polite?",
+     "repair": "May I introduce."
+    },
+    {
+     "code": "ENGL.G7.LISTEN.T1_CONVERSATIONAL_SKILL.INTRO_POLITE.M7_IP_ORDER",
+     "listen_for": [
+      "your friend"
+     ],
+     "ask": "Who is older?",
+     "repair": "Speak to them first."
+    },
+    {
+     "code": "ENGL.G7.LISTEN.T1_CONVERSATIONAL_SKILL.INTRO_POLITE.M7_IP_REPLY",
+     "listen_for": [
+      "Okay."
+     ],
+     "ask": "What do you say back?",
+     "repair": "Pleased to meet you."
+    },
+    {
+     "code": "ENGL.G7.LISTEN.T1_CONVERSATIONAL_SKILL.INTRO_POLITE.M7_IP_SELF",
+     "listen_for": [
+      "Me, I am Otieno."
+     ],
+     "ask": "Me, I?",
+     "repair": "Good morning. My name is ..."
+    }
+   ],
+   "checks": [
+    {
+     "question": "Introduce Juma to your teacher.",
+     "answer": "Madam, may I introduce my friend, Juma?",
+     "shows": "introduction"
+    },
+    {
+     "question": "Reply to an introduction.",
+     "answer": "Pleased to meet you.",
+     "shows": "reply"
+    }
+   ]
+  }
+ ]
+}

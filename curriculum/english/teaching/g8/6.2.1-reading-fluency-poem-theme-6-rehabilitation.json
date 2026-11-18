@@ -1,0 +1,93 @@
+{
+ "sub_strand": "ENGL.G8.READIN.T6_READING_FLUENCY_POEM",
+ "title": "Reading Fluency: Poem (Theme 6: Rehabilitation)",
+ "status": "draft: written 18 Nov 2026 offline for Grade 8 English; not yet checked by a Kenyan English teacher; not loaded by the live tutor",
+ "notes": "",
+ "skills": [
+  {
+   "skill": "ENGL.G8.READIN.T6_READING_FLUENCY_POEM.READ_FLUENTLY",
+   "assessed_by": "voice",
+   "key_step": "The child previews, phrases, pauses at punctuation, varies the voice and keeps a steady pace.",
+   "floor": {
+    "prerequisite": "Uses fluency strategies.",
+    "question": "Name one.",
+    "answer": "read in phrases"
+   },
+   "steps": [
+    "Read silently.",
+    "Phrase.",
+    "Pause at punctuation.",
+    "Vary voice; steady pace."
+   ],
+   "contexts": [
+    "poems on rehabilitation",
+    "texts on African tourist sites"
+   ],
+   "board": [
+    {
+     "beat": "write",
+     "do": "Write a poem line that runs on."
+    },
+    {
+     "beat": "point",
+     "do": "Point at the line end.",
+     "say": "Stop here?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for the child to answer."
+    },
+    {
+     "beat": "child_draws",
+     "do": "The child reads to the punctuation."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "ENGL.G8.READIN.T6_READING_FLUENCY_POEM.READ_FLUENTLY.M8_X_RF_RUSH",
+     "listen_for": [
+      "very fast, skipping words"
+     ],
+     "ask": "Accurate?",
+     "repair": "Steady pace."
+    },
+    {
+     "code": "ENGL.G8.READIN.T6_READING_FLUENCY_POEM.READ_FLUENTLY.M8_X_RF_FLAT",
+     "listen_for": [
+      "flat"
+     ],
+     "ask": "Feeling?",
+     "repair": "Show it."
+    },
+    {
+     "code": "ENGL.G8.READIN.T6_READING_FLUENCY_POEM.READ_FLUENTLY.M8_X_RF_NO_STRATEGIES",
+     "listen_for": [
+      "read loud"
+     ],
+     "ask": "Strategies?",
+     "repair": "Name them."
+    },
+    {
+     "code": "ENGL.G8.READIN.T6_READING_FLUENCY_POEM.READ_FLUENTLY.M8_X_RF_POEM_LINE_STOP",
+     "listen_for": [
+      "stops at the line end"
+     ],
+     "ask": "Punctuation?",
+     "repair": "Read on."
+    }
+   ],
+   "checks": [
+    {
+     "question": "Read a poem aloud.",
+     "answer": "accurate, expressive, steady",
+     "shows": "fluency"
+    },
+    {
+     "question": "Name two strategies.",
+     "answer": "phrasing, pausing",
+     "shows": "strategies"
+    }
+   ]
+  }
+ ]
+}

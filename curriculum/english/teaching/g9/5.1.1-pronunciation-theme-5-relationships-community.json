@@ -1,0 +1,176 @@
+{
+ "sub_strand": "ENGL.G9.LISTEN.T5_PRONUNCIATION",
+ "title": "Pronunciation (Theme 5: Relationships: community)",
+ "status": "draft: written 18 Nov 2026 offline for Grade 9 English; not yet checked by a Kenyan English teacher; not loaded by the live tutor",
+ "notes": "",
+ "skills": [
+  {
+   "skill": "ENGL.G9.LISTEN.T5_PRONUNCIATION.PRONOUNCE_SOUNDS",
+   "assessed_by": "voice",
+   "key_step": "The child glides for semi-vowels and slides for diphthongs, checking each pair.",
+   "floor": {
+    "prerequisite": "Says Grade 8 sounds.",
+    "question": "Say: think, this",
+    "answer": "clear th"
+   },
+   "steps": [
+    "Show the mouth.",
+    "Glide or slide.",
+    "Pairs.",
+    "Sentence."
+   ],
+   "contexts": [
+    "community talk",
+    "world heroes"
+   ],
+   "board": [
+    {
+     "beat": "write",
+     "do": "Write: yes / jess, day / die, now / no."
+    },
+    {
+     "beat": "point",
+     "do": "Point at now.",
+     "say": "Open then round. Say it."
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for the child to answer."
+    },
+    {
+     "beat": "child_draws",
+     "do": "The child says the pairs."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "ENGL.G9.LISTEN.T5_PRONUNCIATION.PRONOUNCE_SOUNDS.M9_PS_Y_J",
+     "listen_for": [
+      "jes, jellow"
+     ],
+     "ask": "Glide?",
+     "repair": "No stop."
+    },
+    {
+     "code": "ENGL.G9.LISTEN.T5_PRONUNCIATION.PRONOUNCE_SOUNDS.M9_PS_W_V",
+     "listen_for": [
+      "vet, vest"
+     ],
+     "ask": "Lips or teeth?",
+     "repair": "Lips."
+    },
+    {
+     "code": "ENGL.G9.LISTEN.T5_PRONUNCIATION.PRONOUNCE_SOUNDS.M9_PS_DAY_DIE",
+     "listen_for": [
+      "both the same"
+     ],
+     "ask": "Which slide?",
+     "repair": "Ay or eye."
+    },
+    {
+     "code": "ENGL.G9.LISTEN.T5_PRONUNCIATION.PRONOUNCE_SOUNDS.M9_PS_NOW_NO",
+     "listen_for": [
+      "no"
+     ],
+     "ask": "Wide first?",
+     "repair": "Ah-oo."
+    }
+   ],
+   "checks": [
+    {
+     "question": "Say: Yesterday was wet.",
+     "answer": "clear y and w",
+     "shows": "semi-vowels"
+    },
+    {
+     "question": "Say: I may go now.",
+     "answer": "clear diphthongs",
+     "shows": "diphthongs"
+    }
+   ]
+  },
+  {
+   "skill": "ENGL.G9.LISTEN.T5_PRONUNCIATION.SENTENCE_STRESS",
+   "assessed_by": "voice",
+   "key_step": "The child stresses content words and moves the strong beat to the word that carries the contrast.",
+   "floor": {
+    "prerequisite": "Uses emphatic stress.",
+    "question": "Stress the correction: I said MONDAY.",
+    "answer": "MONDAY"
+   },
+   "steps": [
+    "Content words strong.",
+    "Function words weak.",
+    "Contrast: move the stress."
+   ],
+   "contexts": [
+    "community conversations"
+   ],
+   "board": [
+    {
+     "beat": "write",
+     "do": "Write: She won the medal."
+    },
+    {
+     "beat": "point",
+     "do": "Point at She.",
+     "say": "Not her brother: which word?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for the child to answer."
+    },
+    {
+     "beat": "child_draws",
+     "do": "The child says it."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "ENGL.G9.LISTEN.T5_PRONUNCIATION.SENTENCE_STRESS.M9_SS_ALL_STRONG",
+     "listen_for": [
+      "SHE WON THE MEDAL"
+     ],
+     "ask": "All strong?",
+     "repair": "Content only."
+    },
+    {
+     "code": "ENGL.G9.LISTEN.T5_PRONUNCIATION.SENTENCE_STRESS.M9_SS_WRONG_EMPHASIS",
+     "listen_for": [
+      "She won the MEDAL"
+     ],
+     "ask": "Which word contrasts?",
+     "repair": "Stress it."
+    },
+    {
+     "code": "ENGL.G9.LISTEN.T5_PRONUNCIATION.SENTENCE_STRESS.M9_SS_FUNCTION_STRONG",
+     "listen_for": [
+      "THE team IS IN THE final"
+     ],
+     "ask": "The, is?",
+     "repair": "Weak."
+    },
+    {
+     "code": "ENGL.G9.LISTEN.T5_PRONUNCIATION.SENTENCE_STRESS.M9_SS_MEANING_SAME",
+     "listen_for": [
+      "Yes"
+     ],
+     "ask": "Same?",
+     "repair": "Stress changes it."
+    }
+   ],
+   "checks": [
+    {
+     "question": "Content words in \"The team is in the final\"?",
+     "answer": "team, final",
+     "shows": "content"
+    },
+    {
+     "question": "Stress to correct \"not her brother\"?",
+     "answer": "SHE",
+     "shows": "emphatic"
+    }
+   ]
+  }
+ ]
+}

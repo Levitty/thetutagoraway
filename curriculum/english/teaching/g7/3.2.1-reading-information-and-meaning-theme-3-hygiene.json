@@ -1,0 +1,94 @@
+{
+ "sub_strand": "ENGL.G7.READIN.T3_READING_INFORMATION_",
+ "title": "Reading: Information and Meaning (Theme 3: Hygiene)",
+ "status": "draft: written 18 Nov 2026 offline for Grade 7 English; not yet checked by a Kenyan English teacher; not loaded by the live tutor",
+ "notes": "",
+ "skills": [
+  {
+   "skill": "ENGL.G7.READIN.T3_READING_INFORMATION_.INFO_OR_MEANING",
+   "assessed_by": "questions",
+   "key_step": "The child sets the purpose first: scan for a fact, read slowly for meaning.",
+   "floor": {
+    "prerequisite": "Scans and skims.",
+    "question": "Scan for the date.",
+    "answer": "finds it"
+   },
+   "steps": [
+    "Purpose?",
+    "Information: scan.",
+    "Meaning: read closely."
+   ],
+   "contexts": [
+    "hygiene texts"
+   ],
+   "board": [
+    {
+     "beat": "write",
+     "do": "Write: notice, short story."
+    },
+    {
+     "beat": "point",
+     "do": "Point at short story.",
+     "say": "How do you read it?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for the child to answer."
+    },
+    {
+     "beat": "child_draws",
+     "do": "The child says how to read the notice."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "ENGL.G7.READIN.T3_READING_INFORMATION_.INFO_OR_MEANING.M7_IO_MIXED",
+     "listen_for": [
+      "reading for meaning"
+     ],
+     "ask": "What is the purpose?",
+     "repair": "Match it."
+    },
+    {
+     "code": "ENGL.G7.READIN.T3_READING_INFORMATION_.INFO_OR_MEANING.M7_IO_STORY_INFO",
+     "listen_for": [
+      "a notice board"
+     ],
+     "ask": "Fact or meaning?",
+     "repair": "Story is meaning."
+    },
+    {
+     "code": "ENGL.G7.READIN.T3_READING_INFORMATION_.INFO_OR_MEANING.M7_IO_SKIM",
+     "listen_for": [
+      "read every word slowly"
+     ],
+     "ask": "Every word slowly?",
+     "repair": "Look quickly."
+    },
+    {
+     "code": "ENGL.G7.READIN.T3_READING_INFORMATION_.INFO_OR_MEANING.M7_X_IO_SPEED",
+     "listen_for": [
+      "run the eyes down for key words"
+     ],
+     "ask": "Is it for meaning?",
+     "repair": "Read closely."
+    }
+   ],
+   "checks": [
+    {
+     "question": "Find the clinic time on a notice.",
+     "answer": "scan",
+     "shows": "information"
+    },
+    {
+     "question": "Find the message of a poem.",
+     "answer": "read closely",
+     "shows": "meaning"
+    }
+   ]
+  }
+ ],
+ "also_taught_by": [
+  "ENGL.G7.READIN.T13_INTENSIVE_READING_CO.CONTEXT_CLUES"
+ ]
+}

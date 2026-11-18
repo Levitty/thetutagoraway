@@ -1,0 +1,175 @@
+{
+ "sub_strand": "ENGL.G5.GRAMMA.T13_WORD_CLASS_PREPOSITI",
+ "title": "Word Class: Prepositions (Theme 13: Money- savings and banking)",
+ "status": "draft: written 18 Nov 2026 offline for Grade 5 English; not yet checked by a Kenyan English teacher; not loaded by the live tutor",
+ "notes": "",
+ "skills": [
+  {
+   "skill": "ENGL.G5.GRAMMA.T13_WORD_CLASS_PREPOSITI.PREPOSITIONS_TIME_PLACE",
+   "assessed_by": "questions",
+   "key_step": "The child uses at for clock times and points, on for days and surfaces, in for months, years and inside.",
+   "floor": {
+    "prerequisite": "Uses in and on.",
+    "question": "The pen is ___ the box.",
+    "answer": "in"
+   },
+   "steps": [
+    "Clock or point: at.",
+    "Day or surface: on.",
+    "Month, year, inside: in."
+   ],
+   "contexts": [
+    "a bank appointment"
+   ],
+   "board": [
+    {
+     "beat": "write",
+     "do": "Write: ___ Monday ___ 9 am ___ June."
+    },
+    {
+     "beat": "point",
+     "do": "Point at Monday.",
+     "say": "Which word?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for the child to answer."
+    },
+    {
+     "beat": "child_draws",
+     "do": "The child fills the rest."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "ENGL.G5.GRAMMA.T13_WORD_CLASS_PREPOSITI.PREPOSITIONS_TIME_PLACE.M_PREP_DAY_IN",
+     "listen_for": [
+      "in"
+     ],
+     "ask": "Day?",
+     "repair": "On."
+    },
+    {
+     "code": "ENGL.G5.GRAMMA.T13_WORD_CLASS_PREPOSITI.PREPOSITIONS_TIME_PLACE.M_PREP_CLOCK_IN",
+     "listen_for": [
+      "in"
+     ],
+     "ask": "Clock time?",
+     "repair": "At."
+    },
+    {
+     "code": "ENGL.G5.GRAMMA.T13_WORD_CLASS_PREPOSITI.PREPOSITIONS_TIME_PLACE.M_PREP_PART_OF_DAY",
+     "listen_for": [
+      "at"
+     ],
+     "ask": "Part of the day?",
+     "repair": "In."
+    },
+    {
+     "code": "ENGL.G5.GRAMMA.T13_WORD_CLASS_PREPOSITI.PREPOSITIONS_TIME_PLACE.M_PREP_PLACE",
+     "listen_for": [
+      "in"
+     ],
+     "ask": "Surface?",
+     "repair": "On."
+    }
+   ],
+   "checks": [
+    {
+     "question": "___ the morning",
+     "answer": "in",
+     "shows": "part of day"
+    },
+    {
+     "question": "___ 3 pm",
+     "answer": "at",
+     "shows": "clock"
+    }
+   ]
+  },
+  {
+   "skill": "ENGL.G5.GRAMMA.T13_WORD_CLASS_PREPOSITI.PREPOSITIONS_DIRECTION",
+   "assessed_by": "questions",
+   "key_step": "The child pictures the movement and chooses into, towards, to or through.",
+   "floor": {
+    "prerequisite": "Uses at, in, on.",
+    "question": "She is ___ school.",
+    "answer": "at"
+   },
+   "steps": [
+    "Going inside: into.",
+    "In the direction of: towards.",
+    "Reaching: to.",
+    "From one side to the other inside: through."
+   ],
+   "contexts": [
+    "walking to the bank"
+   ],
+   "board": [
+    {
+     "beat": "write",
+     "do": "Draw a path into a bank."
+    },
+    {
+     "beat": "point",
+     "do": "Point at the door.",
+     "say": "She walked ___ the bank."
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for the child to answer."
+    },
+    {
+     "beat": "child_draws",
+     "do": "The child draws through a tunnel."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "ENGL.G5.GRAMMA.T13_WORD_CLASS_PREPOSITI.PREPOSITIONS_DIRECTION.M_PREP_TO_HOME",
+     "listen_for": [
+      "to home"
+     ],
+     "ask": "Go to home?",
+     "repair": "Go home."
+    },
+    {
+     "code": "ENGL.G5.GRAMMA.T13_WORD_CLASS_PREPOSITI.PREPOSITIONS_DIRECTION.M_PREP_ENTER_INTO",
+     "listen_for": [
+      "into"
+     ],
+     "ask": "Enter into?",
+     "repair": "Enter."
+    },
+    {
+     "code": "ENGL.G5.GRAMMA.T13_WORD_CLASS_PREPOSITI.PREPOSITIONS_DIRECTION.M_PREP_TOWARDS_TO",
+     "listen_for": [
+      "towards to"
+     ],
+     "ask": "Towards to?",
+     "repair": "Towards."
+    },
+    {
+     "code": "ENGL.G5.GRAMMA.T13_WORD_CLASS_PREPOSITI.PREPOSITIONS_DIRECTION.M_PREP_THROUGH_INTO",
+     "listen_for": [
+      "into"
+     ],
+     "ask": "Inside and out?",
+     "repair": "Through."
+    }
+   ],
+   "checks": [
+    {
+     "question": "He went ___ home.",
+     "answer": "home (no to)",
+     "shows": "home"
+    },
+    {
+     "question": "She walked ___ the forest (in one side, out the other).",
+     "answer": "through",
+     "shows": "through"
+    }
+   ]
+  }
+ ]
+}

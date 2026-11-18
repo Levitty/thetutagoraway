@@ -1,0 +1,179 @@
+{
+ "sub_strand": "ENGL.G6.LISTEN.T4_PRONUNCIATION_AND_VO",
+ "title": "Pronunciation and Vocabulary (Theme 4: Emergency rescue services)",
+ "status": "draft: written 18 Nov 2026 offline for Grade 6 English; not yet checked by a Kenyan English teacher; not loaded by the live tutor",
+ "notes": "",
+ "skills": [
+  {
+   "skill": "ENGL.G6.LISTEN.T4_PRONUNCIATION_AND_VO.RESCUE_WORDS",
+   "assessed_by": "questions",
+   "key_step": "The child explains each rescue word by who does what in an emergency.",
+   "floor": {
+    "prerequisite": "Knows road safety words.",
+    "question": "What is a pedestrian?",
+    "answer": "a person on foot"
+   },
+   "steps": [
+    "Name it.",
+    "Person, vehicle or action?",
+    "Use it."
+   ],
+   "contexts": [
+    "fire, flood and road rescue"
+   ],
+   "board": [
+    {
+     "beat": "write",
+     "do": "Write: paramedic, siren, evacuate."
+    },
+    {
+     "beat": "point",
+     "do": "Point at evacuate.",
+     "say": "What does it mean?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for the child to answer."
+    },
+    {
+     "beat": "child_draws",
+     "do": "The child uses siren in a sentence."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "ENGL.G6.LISTEN.T4_PRONUNCIATION_AND_VO.RESCUE_WORDS.M_RES_VEHICLE_PERSON",
+     "listen_for": [
+      "ambulance"
+     ],
+     "ask": "Person or vehicle?",
+     "repair": "Paramedic is a person."
+    },
+    {
+     "code": "ENGL.G6.LISTEN.T4_PRONUNCIATION_AND_VO.RESCUE_WORDS.M_RES_EVACUATE",
+     "listen_for": [
+      "rescue"
+     ],
+     "ask": "Move out or save?",
+     "repair": "Evacuate is move out."
+    },
+    {
+     "code": "ENGL.G6.LISTEN.T4_PRONUNCIATION_AND_VO.RESCUE_WORDS.M_RES_SIREN_ALARM",
+     "listen_for": [
+      "alarm"
+     ],
+     "ask": "On a vehicle?",
+     "repair": "Siren."
+    },
+    {
+     "code": "ENGL.G6.LISTEN.T4_PRONUNCIATION_AND_VO.RESCUE_WORDS.M6_RES_FIRST_AID_CPR",
+     "listen_for": [
+      "surgery"
+     ],
+     "ask": "Only bandages?",
+     "repair": "Any help before the doctor."
+    }
+   ],
+   "checks": [
+    {
+     "question": "A person trained to give emergency care is a ...",
+     "answer": "paramedic",
+     "shows": "word"
+    },
+    {
+     "question": "To move people out of danger is to ...",
+     "answer": "evacuate",
+     "shows": "word"
+    }
+   ]
+  },
+  {
+   "skill": "ENGL.G6.LISTEN.T4_PRONUNCIATION_AND_VO.WORD_STRESS",
+   "assessed_by": "voice",
+   "key_step": "The child decides whether the word is a noun or verb and moves the strong beat, and stresses content words in sentences.",
+   "floor": {
+    "prerequisite": "Stresses Grade 5 pairs.",
+    "question": "REcord or reCORD for a noun?",
+    "answer": "REcord"
+   },
+   "steps": [
+    "Noun: first syllable strong.",
+    "Verb: second syllable strong.",
+    "In a sentence, stress content words."
+   ],
+   "contexts": [
+    "emergency services",
+    "rescue words"
+   ],
+   "board": [
+    {
+     "beat": "write",
+     "do": "Write: PERmit (noun), perMIT (verb)."
+    },
+    {
+     "beat": "point",
+     "do": "Point at perMIT.",
+     "say": "Say: They will perMIT us."
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for the child to answer."
+    },
+    {
+     "beat": "child_draws",
+     "do": "The child marks content words in a sentence."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "ENGL.G6.LISTEN.T4_PRONUNCIATION_AND_VO.WORD_STRESS.M6_WS_NOUN_VERB_SAME",
+     "listen_for": [
+      "PERmit"
+     ],
+     "ask": "Thing or action?",
+     "repair": "Move the stress."
+    },
+    {
+     "code": "ENGL.G6.LISTEN.T4_PRONUNCIATION_AND_VO.WORD_STRESS.M6_WS_SMALL_WORDS",
+     "listen_for": [
+      "THE ambulance CAME quickly with every word strong"
+     ],
+     "ask": "Which words carry meaning?",
+     "repair": "Stress them."
+    },
+    {
+     "code": "ENGL.G6.LISTEN.T4_PRONUNCIATION_AND_VO.WORD_STRESS.M6_WS_PENULT",
+     "listen_for": [
+      "emer-GEN-cy"
+     ],
+     "ask": "Where is the strong clap?",
+     "repair": "e-MER-gen-cy."
+    },
+    {
+     "code": "ENGL.G6.LISTEN.T4_PRONUNCIATION_AND_VO.WORD_STRESS.M6_WS_EQUAL",
+     "listen_for": [
+      "HE-LI-COP-TER"
+     ],
+     "ask": "Was every beat the same?",
+     "repair": "One strong."
+    }
+   ],
+   "checks": [
+    {
+     "question": "The ___ (object) is on the desk. Strong part?",
+     "answer": "OBject",
+     "shows": "noun"
+    },
+    {
+     "question": "Say: The fire brigade arrived quickly.",
+     "answer": "stress on fire, brigade, arrived, quickly",
+     "shows": "content words"
+    }
+   ]
+  }
+ ],
+ "also_taught_by": [
+  "ENGL.G6.LISTEN.T6_PRONUNCIATION_AND_VO.SOUNDS",
+  "ENGL.G6.LISTEN.T1_PRONUNCIATION_AND_LI.IDIOMS_FIXED"
+ ]
+}

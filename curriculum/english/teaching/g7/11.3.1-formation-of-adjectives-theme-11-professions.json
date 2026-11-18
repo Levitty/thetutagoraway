@@ -1,0 +1,91 @@
+{
+ "sub_strand": "ENGL.G7.GRAMMA.T11_FORMATION_OF_ADJECTI",
+ "title": "Formation of Adjectives (Theme 11: Professions)",
+ "status": "draft: written 18 Nov 2026 offline for Grade 7 English; not yet checked by a Kenyan English teacher; not loaded by the live tutor",
+ "notes": "",
+ "skills": [
+  {
+   "skill": "ENGL.G7.GRAMMA.T11_FORMATION_OF_ADJECTI.ADJECTIVE_FORMATION",
+   "assessed_by": "questions",
+   "key_step": "The child adds -ful, -less, -ous or -al to a noun, with the spelling change.",
+   "floor": {
+    "prerequisite": "Uses affixes.",
+    "question": "care + ful",
+    "answer": "careful"
+   },
+   "steps": [
+    "Noun.",
+    "Suffix.",
+    "Spelling change."
+   ],
+   "contexts": [
+    "professions"
+   ],
+   "board": [
+    {
+     "beat": "write",
+     "do": "Write: danger + ous."
+    },
+    {
+     "beat": "point",
+     "do": "Point at ous.",
+     "say": "What word?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for the child to answer."
+    },
+    {
+     "beat": "child_draws",
+     "do": "The child writes beautiful."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "ENGL.G7.GRAMMA.T11_FORMATION_OF_ADJECTI.ADJECTIVE_FORMATION.M7_AF2_NOUN_FOR_ADJ",
+     "listen_for": [
+      "danger"
+     ],
+     "ask": "Describing?",
+     "repair": "Dangerous."
+    },
+    {
+     "code": "ENGL.G7.GRAMMA.T11_FORMATION_OF_ADJECTI.ADJECTIVE_FORMATION.M7_AF2_WRONG_SUFFIX",
+     "listen_for": [
+      "carely"
+     ],
+     "ask": "Carely?",
+     "repair": "Careful."
+    },
+    {
+     "code": "ENGL.G7.GRAMMA.T11_FORMATION_OF_ADJECTI.ADJECTIVE_FORMATION.M7_AF2_SPELL_CHANGE",
+     "listen_for": [
+      "beautyful"
+     ],
+     "ask": "Y to i?",
+     "repair": "Beautiful."
+    },
+    {
+     "code": "ENGL.G7.GRAMMA.T11_FORMATION_OF_ADJECTI.ADJECTIVE_FORMATION.M7_AF2_FUL_LESS",
+     "listen_for": [
+      "useful"
+     ],
+     "ask": "Full or without?",
+     "repair": "Less."
+    }
+   ],
+   "checks": [
+    {
+     "question": "beauty + ful",
+     "answer": "beautiful",
+     "shows": "spelling"
+    },
+    {
+     "question": "Opposite of useful?",
+     "answer": "useless",
+     "shows": "ful/less"
+    }
+   ]
+  }
+ ]
+}

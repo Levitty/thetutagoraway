@@ -1,0 +1,179 @@
+{
+ "sub_strand": "ENGL.G7.WRITIN.T7_COMPOSITION_THE_WRIT",
+ "title": "Composition: The Writing Process (Theme 7: Natural resources – forests)",
+ "status": "draft: written 18 Nov 2026 offline for Grade 7 English; not yet checked by a Kenyan English teacher; not loaded by the live tutor",
+ "notes": "",
+ "skills": [
+  {
+   "skill": "ENGL.G7.WRITIN.T7_COMPOSITION_THE_WRIT.WRITING_PROCESS",
+   "assessed_by": "questions",
+   "key_step": "The child names the steps (plan, draft, revise, edit, publish) and says what happens at each.",
+   "floor": {
+    "prerequisite": "Plans compositions.",
+    "question": "What comes first?",
+    "answer": "planning"
+   },
+   "steps": [
+    "Plan.",
+    "Draft.",
+    "Revise: ideas.",
+    "Edit: spelling and punctuation.",
+    "Publish."
+   ],
+   "contexts": [
+    "forest composition"
+   ],
+   "board": [
+    {
+     "beat": "write",
+     "do": "Write the five steps."
+    },
+    {
+     "beat": "point",
+     "do": "Point at Revise.",
+     "say": "What changes here?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for the child to answer."
+    },
+    {
+     "beat": "child_draws",
+     "do": "The child explains edit."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "ENGL.G7.WRITIN.T7_COMPOSITION_THE_WRIT.WRITING_PROCESS.M7_WP_EDIT_FIRST",
+     "listen_for": [
+      "edit it"
+     ],
+     "ask": "First step?",
+     "repair": "Plan."
+    },
+    {
+     "code": "ENGL.G7.WRITIN.T7_COMPOSITION_THE_WRIT.WRITING_PROCESS.M7_WP_REVISE_EDIT",
+     "listen_for": [
+      "revising"
+     ],
+     "ask": "Spelling?",
+     "repair": "Editing."
+    },
+    {
+     "code": "ENGL.G7.WRITIN.T7_COMPOSITION_THE_WRIT.WRITING_PROCESS.M7_WP_DRAFT_FINAL",
+     "listen_for": [
+      "the final clean copy"
+     ],
+     "ask": "First try?",
+     "repair": "Draft."
+    },
+    {
+     "code": "ENGL.G7.WRITIN.T7_COMPOSITION_THE_WRIT.WRITING_PROCESS.M7_WP_PUBLISH_FIRST",
+     "listen_for": [
+      "planning"
+     ],
+     "ask": "Last step?",
+     "repair": "Publish."
+    }
+   ],
+   "checks": [
+    {
+     "question": "Fixing spelling is ...",
+     "answer": "editing",
+     "shows": "edit"
+    },
+    {
+     "question": "Last step?",
+     "answer": "publishing",
+     "shows": "order"
+    }
+   ]
+  },
+  {
+   "skill": "ENGL.G7.WRITIN.T7_COMPOSITION_THE_WRIT.NARRATIVE_COMPOSITION",
+   "assessed_by": "composition",
+   "key_step": "The child plans, drafts, revises and edits a story, then checks introduction, body and conclusion against a checklist.",
+   "floor": {
+    "prerequisite": "Knows the writing process.",
+    "question": "What comes after drafting?",
+    "answer": "revising"
+   },
+   "steps": [
+    "Plan.",
+    "Draft.",
+    "Revise and edit.",
+    "Fair copy and self-assess."
+   ],
+   "contexts": [
+    "forests",
+    "travel",
+    "heroes"
+   ],
+   "board": [
+    {
+     "beat": "write",
+     "do": "Write: Plan, Draft, Revise, Edit, Publish."
+    },
+    {
+     "beat": "point",
+     "do": "Point at Revise.",
+     "say": "What do you change here?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for the child to answer."
+    },
+    {
+     "beat": "child_draws",
+     "do": "The child assesses a sample introduction."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "ENGL.G7.WRITIN.T7_COMPOSITION_THE_WRIT.NARRATIVE_COMPOSITION.M7_X_NC_NO_PLAN",
+     "listen_for": [
+      "write the fair copy"
+     ],
+     "ask": "Did you plan?",
+     "repair": "Plan first."
+    },
+    {
+     "code": "ENGL.G7.WRITIN.T7_COMPOSITION_THE_WRIT.NARRATIVE_COMPOSITION.M7_X_NC_IDIOM_MISUSE",
+     "listen_for": [
+      "Yes"
+     ],
+     "ask": "What does it mean?",
+     "repair": "Use the real meaning."
+    },
+    {
+     "code": "ENGL.G7.WRITIN.T7_COMPOSITION_THE_WRIT.NARRATIVE_COMPOSITION.M7_X_NC_WEAK_INTRO",
+     "listen_for": [
+      "I woke up and brushed my teeth."
+     ],
+     "ask": "Where is the action?",
+     "repair": "Begin there."
+    },
+    {
+     "code": "ENGL.G7.WRITIN.T7_COMPOSITION_THE_WRIT.NARRATIVE_COMPOSITION.M7_X_NC_SELF_ASSESS_SPELLING",
+     "listen_for": [
+      "Two spellings wrong."
+     ],
+     "ask": "What about the body?",
+     "repair": "Assess every part."
+    }
+   ],
+   "checks": [
+    {
+     "question": "First step?",
+     "answer": "plan",
+     "shows": "process"
+    },
+    {
+     "question": "Is \"let the cat out of the bag\" right for freeing a cat?",
+     "answer": "No",
+     "shows": "idioms"
+    }
+   ]
+  }
+ ]
+}

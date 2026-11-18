@@ -1,0 +1,96 @@
+{
+ "sub_strand": "ENGL.G5.LISTEN.T3_PRONUNCIATION_AND_VO",
+ "title": "Pronunciation and Vocabulary (Theme 3: Etiquette-table manners)",
+ "status": "draft: written 18 Nov 2026 offline for Grade 5 English; not yet checked by a Kenyan English teacher; not loaded by the live tutor",
+ "notes": "",
+ "skills": [
+  {
+   "skill": "ENGL.G5.LISTEN.T3_PRONUNCIATION_AND_VO.POLITE_EXPRESSIONS",
+   "assessed_by": "questions",
+   "key_step": "The child chooses the expression that fits the situation: please, thank you, excuse me, sorry or a compliment.",
+   "floor": {
+    "prerequisite": "Uses polite words.",
+    "question": "Someone helps you. You say ...",
+    "answer": "Thank you"
+   },
+   "steps": [
+    "Name the situation.",
+    "Choose the expression.",
+    "Say it warmly."
+   ],
+   "contexts": [
+    "a meal with guests",
+    "a school dining hall"
+   ],
+   "board": [
+    {
+     "beat": "write",
+     "do": "Write: Give me the salt."
+    },
+    {
+     "beat": "point",
+     "do": "Point at Give me.",
+     "say": "How can we say it politely?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for the child to answer."
+    },
+    {
+     "beat": "child_draws",
+     "do": "The child writes a compliment to the cook."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "ENGL.G5.LISTEN.T3_PRONUNCIATION_AND_VO.POLITE_EXPRESSIONS.M_POL_DEMAND",
+     "listen_for": [
+      "Give me the salt"
+     ],
+     "ask": "Is it an order?",
+     "repair": "Please may I ..."
+    },
+    {
+     "code": "ENGL.G5.LISTEN.T3_PRONUNCIATION_AND_VO.POLITE_EXPRESSIONS.M_POL_WRONG_REPLY",
+     "listen_for": [
+      "Sorry"
+     ],
+     "ask": "What do we say to thanks?",
+     "repair": "You are welcome."
+    },
+    {
+     "code": "ENGL.G5.LISTEN.T3_PRONUNCIATION_AND_VO.POLITE_EXPRESSIONS.M_POL_EXCUSE_SORRY",
+     "listen_for": [
+      "Sorry"
+     ],
+     "ask": "Did you do wrong, or are you asking?",
+     "repair": "Excuse me to ask."
+    },
+    {
+     "code": "ENGL.G5.LISTEN.T3_PRONUNCIATION_AND_VO.POLITE_EXPRESSIONS.M5_POL_COMPLIMENT_RUDE",
+     "listen_for": [
+      "The food is good for once."
+     ],
+     "ask": "Is it only praise?",
+     "repair": "Praise only."
+    }
+   ],
+   "checks": [
+    {
+     "question": "Someone thanks you. You say ...",
+     "answer": "You are welcome.",
+     "shows": "reply"
+    },
+    {
+     "question": "To pass someone at the table you say ...",
+     "answer": "Excuse me.",
+     "shows": "excuse me"
+    }
+   ]
+  }
+ ],
+ "also_taught_by": [
+  "ENGL.G5.LISTEN.T2_PRONUNCIATION_AND_VO.ORAL_SENTENCES",
+  "ENGL.G5.LISTEN.T1_LISTENING_COMPREHENS.SOUND_IDENTIFY"
+ ]
+}

@@ -1,0 +1,96 @@
+{
+ "sub_strand": "ENGL.G5.LISTEN.T8_PRONUNCIATION_AND_VO",
+ "title": "Pronunciation and Vocabulary (Theme 8: The farm-cash crops)",
+ "status": "draft: written 18 Nov 2026 offline for Grade 5 English; not yet checked by a Kenyan English teacher; not loaded by the live tutor",
+ "notes": "",
+ "skills": [
+  {
+   "skill": "ENGL.G5.LISTEN.T8_PRONUNCIATION_AND_VO.PROVERBS",
+   "assessed_by": "questions",
+   "key_step": "The child says the lesson a proverb teaches and when people use it.",
+   "floor": {
+    "prerequisite": "Knows Grade 4 proverbs.",
+    "question": "Haste makes ___",
+    "answer": "waste"
+   },
+   "steps": [
+    "Say the proverb.",
+    "Say the lesson.",
+    "Give a situation."
+   ],
+   "contexts": [
+    "a narrative about cash crops"
+   ],
+   "board": [
+    {
+     "beat": "write",
+     "do": "Write: A bird in the hand is worth two in the bush."
+    },
+    {
+     "beat": "point",
+     "do": "Point at bird in the hand.",
+     "say": "Is it only about birds?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for the child to answer."
+    },
+    {
+     "beat": "child_draws",
+     "do": "The child gives a situation."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "ENGL.G5.LISTEN.T8_PRONUNCIATION_AND_VO.PROVERBS.M_PROV_LITERAL",
+     "listen_for": [
+      "Birds are easy to catch."
+     ],
+     "ask": "Is it only about birds?",
+     "repair": "Think of people."
+    },
+    {
+     "code": "ENGL.G5.LISTEN.T8_PRONUNCIATION_AND_VO.PROVERBS.M_PROV_NEAR_MEANING",
+     "listen_for": [
+      "a related lesson"
+     ],
+     "ask": "Is that exactly the lesson?",
+     "repair": "Read it again."
+    },
+    {
+     "code": "ENGL.G5.LISTEN.T8_PRONUNCIATION_AND_VO.PROVERBS.M_PROV_WORDS_MIXED",
+     "listen_for": [
+      "ten"
+     ],
+     "ask": "Is that the right word?",
+     "repair": "Learn it whole."
+    },
+    {
+     "code": "ENGL.G5.LISTEN.T8_PRONUNCIATION_AND_VO.PROVERBS.M5_PROV_SITUATION",
+     "listen_for": [
+      "Too many cooks spoil the broth."
+     ],
+     "ask": "Does the lesson fit?",
+     "repair": "Match it."
+    }
+   ],
+   "checks": [
+    {
+     "question": "Little by little fills the ___",
+     "answer": "measure",
+     "shows": "complete"
+    },
+    {
+     "question": "When would you say \"Unity is strength\"?",
+     "answer": "when people work together",
+     "shows": "situation"
+    }
+   ]
+  }
+ ],
+ "also_taught_by": [
+  "ENGL.G5.LISTEN.T2_PRONUNCIATION_AND_VO.ORAL_SENTENCES",
+  "ENGL.G5.LISTEN.T6_PRONUNCIATION_AND_VO.PRONOUNCE_SOUNDS",
+  "ENGL.G5.LISTEN.T5_LISTENING_COMPREHENS.EXPRESS_FEELINGS"
+ ]
+}

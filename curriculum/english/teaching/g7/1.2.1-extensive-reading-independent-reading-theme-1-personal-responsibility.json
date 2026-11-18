@@ -1,0 +1,177 @@
+{
+ "sub_strand": "ENGL.G7.READIN.T1_EXTENSIVE_READING_IN",
+ "title": "Extensive Reading: Independent Reading (Theme 1: Personal responsibility)",
+ "status": "draft: written 18 Nov 2026 offline for Grade 7 English; not yet checked by a Kenyan English teacher; not loaded by the live tutor",
+ "notes": "",
+ "skills": [
+  {
+   "skill": "ENGL.G7.READIN.T1_EXTENSIVE_READING_IN.SUITABLE_TEXT",
+   "assessed_by": "questions",
+   "key_step": "The child chooses a text by purpose, kind and level after previewing it.",
+   "floor": {
+    "prerequisite": "Judges texts.",
+    "question": "Is this text right for you?",
+    "answer": "a reasoned answer"
+   },
+   "steps": [
+    "Purpose.",
+    "Fiction or non-fiction.",
+    "Level.",
+    "Choose."
+   ],
+   "contexts": [
+    "the class library"
+   ],
+   "board": [
+    {
+     "beat": "write",
+     "do": "Write: purpose, kind, level."
+    },
+    {
+     "beat": "point",
+     "do": "Point at kind.",
+     "say": "For facts on rain, story or information book?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for the child to answer."
+    },
+    {
+     "beat": "child_draws",
+     "do": "The child chooses."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "ENGL.G7.READIN.T1_EXTENSIVE_READING_IN.SUITABLE_TEXT.M7_SX_BY_COVER",
+     "listen_for": [
+      "the book with the nicest cover"
+     ],
+     "ask": "Did you read inside?",
+     "repair": "Preview it."
+    },
+    {
+     "code": "ENGL.G7.READIN.T1_EXTENSIVE_READING_IN.SUITABLE_TEXT.M7_SX_FICTION_NON",
+     "listen_for": [
+      "a story about a talking hare"
+     ],
+     "ask": "Story or facts?",
+     "repair": "Match it."
+    },
+    {
+     "code": "ENGL.G7.READIN.T1_EXTENSIVE_READING_IN.SUITABLE_TEXT.M7_SX_LEVEL",
+     "listen_for": [
+      "a picture book for a Grade 1 child"
+     ],
+     "ask": "Too easy?",
+     "repair": "Choose your level."
+    },
+    {
+     "code": "ENGL.G7.READIN.T1_EXTENSIVE_READING_IN.SUITABLE_TEXT.M7_SX_PURPOSE",
+     "listen_for": [
+      "a poem about water"
+     ],
+     "ask": "What do you need?",
+     "repair": "Match the purpose."
+    }
+   ],
+   "checks": [
+    {
+     "question": "A picture book for a Grade 7 reader?",
+     "answer": "too easy",
+     "shows": "level"
+    },
+    {
+     "question": "Facts on rainfall?",
+     "answer": "an information book",
+     "shows": "kind"
+    }
+   ]
+  },
+  {
+   "skill": "ENGL.G7.READIN.T1_EXTENSIVE_READING_IN.INDEPENDENT_READING",
+   "assessed_by": "teacher",
+   "key_step": "The child reads widely over the term and logs each text with a reason to recommend it.",
+   "floor": {
+    "prerequisite": "Selects suitable texts.",
+    "question": "Which book fits your level?",
+    "answer": "a suitable choice"
+   },
+   "steps": [
+    "Select a text.",
+    "Read it to the end.",
+    "Log it.",
+    "Recommend it with a reason."
+   ],
+   "contexts": [
+    "fiction about heroes",
+    "non-fiction on professions"
+   ],
+   "board": [
+    {
+     "beat": "write",
+     "do": "Draw a log: title, type, about, why read it."
+    },
+    {
+     "beat": "point",
+     "do": "Point at why read it.",
+     "say": "Why read your last book?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for the child to answer."
+    },
+    {
+     "beat": "child_draws",
+     "do": "The child completes a line."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "ENGL.G7.READIN.T1_EXTENSIVE_READING_IN.INDEPENDENT_READING.M7_X_IR_ONE_KIND",
+     "listen_for": [
+      "the next book in the series"
+     ],
+     "ask": "How many kinds?",
+     "repair": "Add a new kind."
+    },
+    {
+     "code": "ENGL.G7.READIN.T1_EXTENSIVE_READING_IN.INDEPENDENT_READING.M7_X_IR_NO_LOG",
+     "listen_for": [
+      "I will remember"
+     ],
+     "ask": "Where is it recorded?",
+     "repair": "Log it."
+    },
+    {
+     "code": "ENGL.G7.READIN.T1_EXTENSIVE_READING_IN.INDEPENDENT_READING.M7_X_IR_BLURB_ONLY",
+     "listen_for": [
+      "I only read the back."
+     ],
+     "ask": "How does it end?",
+     "repair": "Read it all."
+    },
+    {
+     "code": "ENGL.G7.READIN.T1_EXTENSIVE_READING_IN.INDEPENDENT_READING.M7_X_IR_NO_REASON",
+     "listen_for": [
+      "It is nice."
+     ],
+     "ask": "Why is it good?",
+     "repair": "Give a reason."
+    }
+   ],
+   "checks": [
+    {
+     "question": "Your log has one series only. Add?",
+     "answer": "a non-fiction text",
+     "shows": "variety"
+    },
+    {
+     "question": "Why recommend it?",
+     "answer": "a reason from the book",
+     "shows": "reason"
+    }
+   ]
+  }
+ ]
+}

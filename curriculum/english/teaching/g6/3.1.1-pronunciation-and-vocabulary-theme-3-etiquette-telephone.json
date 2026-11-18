@@ -1,0 +1,183 @@
+{
+ "sub_strand": "ENGL.G6.LISTEN.T3_PRONUNCIATION_AND_VO",
+ "title": "Pronunciation and Vocabulary (Theme 3: Etiquette - telephone)",
+ "status": "draft: written 18 Nov 2026 offline for Grade 6 English; not yet checked by a Kenyan English teacher; not loaded by the live tutor",
+ "notes": "",
+ "skills": [
+  {
+   "skill": "ENGL.G6.LISTEN.T3_PRONUNCIATION_AND_VO.POLITE_TALK",
+   "assessed_by": "questions",
+   "key_step": "The child uses the polite phrase that fits: greeting on the phone, asking to repeat, interrupting, taking a message.",
+   "floor": {
+    "prerequisite": "Interrupts politely.",
+    "question": "How do you interrupt?",
+    "answer": "Excuse me, may I ..."
+   },
+   "steps": [
+    "Phone: greet and say who you are.",
+    "Not heard: I beg your pardon.",
+    "Interrupt: Excuse me, may I ...",
+    "Message: She is out; may I take a message?"
+   ],
+   "contexts": [
+    "telephone etiquette",
+    "leisure conversations"
+   ],
+   "board": [
+    {
+     "beat": "write",
+     "do": "Write: Who is this?"
+    },
+    {
+     "beat": "point",
+     "do": "Point at the phrase.",
+     "say": "How should you answer the phone?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for the child to answer."
+    },
+    {
+     "beat": "child_draws",
+     "do": "The child takes a message politely."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "ENGL.G6.LISTEN.T3_PRONUNCIATION_AND_VO.POLITE_TALK.M_POL_BLUNT",
+     "listen_for": [
+      "Stop! Now it is my turn."
+     ],
+     "ask": "Is it polite?",
+     "repair": "Excuse me, may I ..."
+    },
+    {
+     "code": "ENGL.G6.LISTEN.T3_PRONUNCIATION_AND_VO.POLITE_TALK.M_POL_PHONE_START",
+     "listen_for": [
+      "Who is this?"
+     ],
+     "ask": "How do you start?",
+     "repair": "Hello, this is ..."
+    },
+    {
+     "code": "ENGL.G6.LISTEN.T3_PRONUNCIATION_AND_VO.POLITE_TALK.M_POL_CLARIFY",
+     "listen_for": [
+      "What? Say it again."
+     ],
+     "ask": "What? is rude.",
+     "repair": "I beg your pardon."
+    },
+    {
+     "code": "ENGL.G6.LISTEN.T3_PRONUNCIATION_AND_VO.POLITE_TALK.M_POL_MESSAGE",
+     "listen_for": [
+      "She is not here. Bye."
+     ],
+     "ask": "Can you help the caller?",
+     "repair": "Take a message."
+    }
+   ],
+   "checks": [
+    {
+     "question": "You did not hear. Say ...",
+     "answer": "I beg your pardon. Could you repeat that?",
+     "shows": "clarify"
+    },
+    {
+     "question": "Answer the phone.",
+     "answer": "Hello, this is Amina speaking.",
+     "shows": "phone"
+    }
+   ]
+  },
+  {
+   "skill": "ENGL.G6.LISTEN.T3_PRONUNCIATION_AND_VO.PRONOUNCE_SOUNDS",
+   "assessed_by": "voice",
+   "key_step": "The child watches the mouth, says the sound alone, then in minimal pairs and in a sentence.",
+   "floor": {
+    "prerequisite": "Hears the target sounds.",
+    "question": "Tour or tore: which did I say?",
+    "answer": "points correctly"
+   },
+   "steps": [
+    "Show the mouth for the sound.",
+    "Say it alone.",
+    "Say pairs.",
+    "Say a sentence."
+   ],
+   "contexts": [
+    "telephone etiquette",
+    "tour guides at the coast",
+    "farm animal care"
+   ],
+   "board": [
+    {
+     "beat": "write",
+     "do": "Write: tour / tore, phone / fon."
+    },
+    {
+     "beat": "point",
+     "do": "Point at tour.",
+     "say": "Slide from oo to uh. Your turn."
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for the child to answer."
+    },
+    {
+     "beat": "child_draws",
+     "do": "The child says the pairs."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "ENGL.G6.LISTEN.T3_PRONUNCIATION_AND_VO.PRONOUNCE_SOUNDS.M6_PS_TOUR_TORE",
+     "listen_for": [
+      "tore"
+     ],
+     "ask": "Did your voice slide?",
+     "repair": "Too-uh."
+    },
+    {
+     "code": "ENGL.G6.LISTEN.T3_PRONUNCIATION_AND_VO.PRONOUNCE_SOUNDS.M6_PS_PHONE_FON",
+     "listen_for": [
+      "fon"
+     ],
+     "ask": "Did it glide?",
+     "repair": "Foh-oon."
+    },
+    {
+     "code": "ENGL.G6.LISTEN.T3_PRONUNCIATION_AND_VO.PRONOUNCE_SOUNDS.M6_PS_H_DROP_ADD",
+     "listen_for": [
+      "The en is in the ouse."
+     ],
+     "ask": "Do we breathe out h here?",
+     "repair": "Hen yes; hour no."
+    },
+    {
+     "code": "ENGL.G6.LISTEN.T3_PRONUNCIATION_AND_VO.PRONOUNCE_SOUNDS.M6_PS_V_F",
+     "listen_for": [
+      "faccine"
+     ],
+     "ask": "Does it buzz?",
+     "repair": "Voice on: v."
+    }
+   ],
+   "checks": [
+    {
+     "question": "Say: The tourist used his phone.",
+     "answer": "clear diphthongs",
+     "shows": "sounds"
+    },
+    {
+     "question": "Say: The vet visited the village.",
+     "answer": "clear v",
+     "shows": "v"
+    }
+   ]
+  }
+ ],
+ "also_taught_by": [
+  "ENGL.G6.LISTEN.T1_PRONUNCIATION_AND_LI.IDIOMS_FIXED",
+  "ENGL.G6.LISTEN.T2_PRONUNCIATION_AND_LI.PROVERBS_USE"
+ ]
+}

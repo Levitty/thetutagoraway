@@ -1,0 +1,91 @@
+{
+ "sub_strand": "ENGL.G8.GRAMMA.T1_WORD_CLASSES_COMPOUN",
+ "title": "Word classes: Compound Nouns (Theme 1: Human rights)",
+ "status": "draft: written 18 Nov 2026 offline for Grade 8 English; not yet checked by a Kenyan English teacher; not loaded by the live tutor",
+ "notes": "",
+ "skills": [
+  {
+   "skill": "ENGL.G8.GRAMMA.T1_WORD_CLASSES_COMPOUN.COMPOUND_NOUNS",
+   "assessed_by": "questions",
+   "key_step": "The child makes the main noun of a compound plural and checks whether it is one word, two words or hyphenated.",
+   "floor": {
+    "prerequisite": "Makes plurals.",
+    "question": "child",
+    "answer": "children"
+   },
+   "steps": [
+    "Find the main noun.",
+    "Make it plural.",
+    "Check one, two or hyphen."
+   ],
+   "contexts": [
+    "human rights words: mother-in-law, post office"
+   ],
+   "board": [
+    {
+     "beat": "write",
+     "do": "Write: mother-in-law."
+    },
+    {
+     "beat": "point",
+     "do": "Point at mother.",
+     "say": "Which part becomes plural?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for the child to answer."
+    },
+    {
+     "beat": "child_draws",
+     "do": "The child writes post offices."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "ENGL.G8.GRAMMA.T1_WORD_CLASSES_COMPOUN.COMPOUND_NOUNS.M8_CPN_PLURAL_LAST",
+     "listen_for": [
+      "mother-in-laws"
+     ],
+     "ask": "Main noun?",
+     "repair": "Mothers-in-law."
+    },
+    {
+     "code": "ENGL.G8.GRAMMA.T1_WORD_CLASSES_COMPOUN.COMPOUND_NOUNS.M8_CPN_SPLIT",
+     "listen_for": [
+      "tooth brush"
+     ],
+     "ask": "One word?",
+     "repair": "Toothbrush."
+    },
+    {
+     "code": "ENGL.G8.GRAMMA.T1_WORD_CLASSES_COMPOUN.COMPOUND_NOUNS.M8_CPN_SINGULAR",
+     "listen_for": [
+      "post office"
+     ],
+     "ask": "Many?",
+     "repair": "Offices."
+    },
+    {
+     "code": "ENGL.G8.GRAMMA.T1_WORD_CLASSES_COMPOUN.COMPOUND_NOUNS.M8_X_CPN_HYPHEN",
+     "listen_for": [
+      "class-room"
+     ],
+     "ask": "One word or hyphen?",
+     "repair": "Check."
+    }
+   ],
+   "checks": [
+    {
+     "question": "Plural of passer-by?",
+     "answer": "passers-by",
+     "shows": "main noun"
+    },
+    {
+     "question": "class + room",
+     "answer": "classroom",
+     "shows": "one word"
+    }
+   ]
+  }
+ ]
+}

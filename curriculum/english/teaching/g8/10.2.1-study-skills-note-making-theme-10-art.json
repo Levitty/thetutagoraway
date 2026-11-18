@@ -1,0 +1,93 @@
+{
+ "sub_strand": "ENGL.G8.READIN.T10_STUDY_SKILLS_NOTE_MA",
+ "title": "Study Skills: Note Making (Theme 10: Art)",
+ "status": "draft: written 18 Nov 2026 offline for Grade 8 English; not yet checked by a Kenyan English teacher; not loaded by the live tutor",
+ "notes": "",
+ "skills": [
+  {
+   "skill": "ENGL.G8.READIN.T10_STUDY_SKILLS_NOTE_MA.NOTE_MAKING",
+   "assessed_by": "teacher",
+   "key_step": "The child picks key points, notes them in key words under headings, then summarises to the word limit in own words.",
+   "floor": {
+    "prerequisite": "Makes notes.",
+    "question": "Main point of this paragraph?",
+    "answer": "a point"
+   },
+   "steps": [
+    "Key points.",
+    "Notes under headings.",
+    "Summary from notes.",
+    "Count words."
+   ],
+   "contexts": [
+    "art texts",
+    "Olympic descriptions"
+   ],
+   "board": [
+    {
+     "beat": "write",
+     "do": "Write headings for a text on training."
+    },
+    {
+     "beat": "point",
+     "do": "Point at a heading.",
+     "say": "Key point here?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for the child to answer."
+    },
+    {
+     "beat": "child_draws",
+     "do": "The child writes the summary."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "ENGL.G8.READIN.T10_STUDY_SKILLS_NOTE_MA.NOTE_MAKING.M8_X_NM_COPIES",
+     "listen_for": [
+      "copy sentences"
+     ],
+     "ask": "Copying?",
+     "repair": "Key words."
+    },
+    {
+     "code": "ENGL.G8.READIN.T10_STUDY_SKILLS_NOTE_MA.NOTE_MAKING.M8_X_NM_DETAILS",
+     "listen_for": [
+      "Kipchoge runs at 5 am"
+     ],
+     "ask": "Point or example?",
+     "repair": "Point."
+    },
+    {
+     "code": "ENGL.G8.READIN.T10_STUDY_SKILLS_NOTE_MA.NOTE_MAKING.M8_X_NM_SUMMARY_LENGTH",
+     "listen_for": [
+      "Yes"
+     ],
+     "ask": "Word count?",
+     "repair": "Cut it."
+    },
+    {
+     "code": "ENGL.G8.READIN.T10_STUDY_SKILLS_NOTE_MA.NOTE_MAKING.M8_X_NM_OWN_WORDS",
+     "listen_for": [
+      "Yes"
+     ],
+     "ask": "Your words?",
+     "repair": "Rewrite."
+    }
+   ],
+   "checks": [
+    {
+     "question": "Summary limit 60 words. Write 150?",
+     "answer": "No",
+     "shows": "length"
+    },
+    {
+     "question": "Copy sentences?",
+     "answer": "No",
+     "shows": "own words"
+    }
+   ]
+  }
+ ]
+}

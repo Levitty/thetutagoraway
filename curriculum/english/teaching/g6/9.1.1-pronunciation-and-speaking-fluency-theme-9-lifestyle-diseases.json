@@ -1,0 +1,97 @@
+{
+ "sub_strand": "ENGL.G6.LISTEN.T9_PRONUNCIATION_AND_SP",
+ "title": "Pronunciation and Speaking: Fluency (Theme 9: Lifestyle diseases)",
+ "status": "draft: written 18 Nov 2026 offline for Grade 6 English; not yet checked by a Kenyan English teacher; not loaded by the live tutor",
+ "notes": "",
+ "skills": [
+  {
+   "skill": "ENGL.G6.LISTEN.T9_PRONUNCIATION_AND_SP.SPEAK_FLUENTLY",
+   "assessed_by": "voice",
+   "key_step": "The child speaks from key points, greets, states the topic, gives points in order and closes.",
+   "floor": {
+    "prerequisite": "Speaks for two minutes.",
+    "question": "Talk about your home.",
+    "answer": "steady talk"
+   },
+   "steps": [
+    "Plan: greeting, topic, three points, close.",
+    "Write key words.",
+    "Practise aloud.",
+    "Look up and speak."
+   ],
+   "contexts": [
+    "lifestyle diseases",
+    "conserving the environment"
+   ],
+   "board": [
+    {
+     "beat": "write",
+     "do": "Write: Greet. Topic. Points. Close."
+    },
+    {
+     "beat": "point",
+     "do": "Point at Close.",
+     "say": "How will you end?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for the child to answer."
+    },
+    {
+     "beat": "child_draws",
+     "do": "The child gives the speech."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "ENGL.G6.LISTEN.T9_PRONUNCIATION_AND_SP.SPEAK_FLUENTLY.M6_SF_READS_SPEECH",
+     "listen_for": [
+      "reads every word with head down"
+     ],
+     "ask": "Where are your eyes?",
+     "repair": "Key points; look up."
+    },
+    {
+     "code": "ENGL.G6.LISTEN.T9_PRONUNCIATION_AND_SP.SPEAK_FLUENTLY.M6_SF_FILLERS",
+     "listen_for": [
+      "Eeh, you know, we should, aah ..."
+     ],
+     "ask": "Instead of eeh?",
+     "repair": "Pause."
+    },
+    {
+     "code": "ENGL.G6.LISTEN.T9_PRONUNCIATION_AND_SP.SPEAK_FLUENTLY.M6_SF_RUSH",
+     "listen_for": [
+      "thirty seconds"
+     ],
+     "ask": "How long?",
+     "repair": "Slow down."
+    },
+    {
+     "code": "ENGL.G6.LISTEN.T9_PRONUNCIATION_AND_SP.SPEAK_FLUENTLY.M6_SF_NO_STRUCTURE",
+     "listen_for": [
+      "with the first fact that comes to mind"
+     ],
+     "ask": "How did you start?",
+     "repair": "Greet and give the topic."
+    }
+   ],
+   "checks": [
+    {
+     "question": "Give a two-minute speech on healthy food.",
+     "answer": "structured, steady, few fillers",
+     "shows": "fluency"
+    },
+    {
+     "question": "How should a speech start?",
+     "answer": "greeting and topic",
+     "shows": "structure"
+    }
+   ]
+  }
+ ],
+ "also_taught_by": [
+  "ENGL.G6.LISTEN.T6_PRONUNCIATION_AND_VO.SOUNDS",
+  "ENGL.G6.LISTEN.T2_PRONUNCIATION_AND_LI.PROVERBS_USE"
+ ]
+}

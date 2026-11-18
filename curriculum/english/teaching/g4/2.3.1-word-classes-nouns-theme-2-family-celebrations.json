@@ -1,0 +1,185 @@
+{
+ "sub_strand": "ENGL.G4.LANGUA.T2_WORD_CLASSES_NOUNS",
+ "title": "Word Classes: Nouns (Theme 2: Family celebrations)",
+ "status": "draft: written 18 Nov 2026 offline for Grade 4 English; not yet checked by a Kenyan English teacher; not loaded by the live tutor",
+ "notes": "",
+ "skills": [
+  {
+   "skill": "ENGL.G4.LANGUA.T2_WORD_CLASSES_NOUNS.PLURALS_REGULAR",
+   "assessed_by": "questions",
+   "key_step": "The child looks at the last letters of the word and chooses -s, -es or -ies.",
+   "floor": {
+    "prerequisite": "Knows singular and plural.",
+    "question": "One book, two ...",
+    "answer": "books"
+   },
+   "steps": [
+    "Look at the ending.",
+    "s, x, ch, sh: add -es.",
+    "Consonant + y: -ies.",
+    "Otherwise -s."
+   ],
+   "contexts": [
+    "a market with boxes and baskets",
+    "a class with babies' photos"
+   ],
+   "board": [
+    {
+     "beat": "write",
+     "do": "Write: box, baby, bag."
+    },
+    {
+     "beat": "point",
+     "do": "Point at box.",
+     "say": "What is the last letter?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for boxes."
+    },
+    {
+     "beat": "child_draws",
+     "do": "The child writes babies and bags."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "ENGL.G4.LANGUA.T2_WORD_CLASSES_NOUNS.PLURALS_REGULAR.M_PLR_NO_ES",
+     "listen_for": [
+      "boxs"
+     ],
+     "ask": "Can you say boxs?",
+     "repair": "Add -es."
+    },
+    {
+     "code": "ENGL.G4.LANGUA.T2_WORD_CLASSES_NOUNS.PLURALS_REGULAR.M_PLR_Y_TO_S",
+     "listen_for": [
+      "babys"
+     ],
+     "ask": "Is there a consonant before y?",
+     "repair": "Change to -ies."
+    },
+    {
+     "code": "ENGL.G4.LANGUA.T2_WORD_CLASSES_NOUNS.PLURALS_REGULAR.M_PLR_VOWEL_Y_IES",
+     "listen_for": [
+      "monkies"
+     ],
+     "ask": "Is there a vowel before y?",
+     "repair": "Just -s."
+    },
+    {
+     "code": "ENGL.G4.LANGUA.T2_WORD_CLASSES_NOUNS.PLURALS_REGULAR.M_PLR_F_NO_VES",
+     "listen_for": [
+      "leafs"
+     ],
+     "ask": "Does it end in f or fe?",
+     "repair": "Leaves."
+    },
+    {
+     "code": "ENGL.G4.LANGUA.T2_WORD_CLASSES_NOUNS.PLURALS_REGULAR.M_PLR_SINGULAR_AFTER_NUMBER",
+     "listen_for": [
+      "book"
+     ],
+     "ask": "How many?",
+     "repair": "More than one: books."
+    }
+   ],
+   "checks": [
+    {
+     "question": "church",
+     "answer": "churches",
+     "shows": "-es"
+    },
+    {
+     "question": "monkey",
+     "answer": "monkeys",
+     "shows": "vowel + y"
+    }
+   ]
+  },
+  {
+   "skill": "ENGL.G4.LANGUA.T2_WORD_CLASSES_NOUNS.PLURALS_IRREGULAR",
+   "assessed_by": "questions",
+   "key_step": "The child knows which nouns change inside or stay the same, and never adds -s to them.",
+   "floor": {
+    "prerequisite": "Makes regular plurals.",
+    "question": "cup",
+    "answer": "cups"
+   },
+   "steps": [
+    "Learn the irregular list.",
+    "Say them in pairs.",
+    "Use them in sentences."
+   ],
+   "contexts": [
+    "children at a party",
+    "sheep on a farm"
+   ],
+   "board": [
+    {
+     "beat": "write",
+     "do": "Write: child, tooth, sheep."
+    },
+    {
+     "beat": "point",
+     "do": "Point at child.",
+     "say": "More than one?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for children."
+    },
+    {
+     "beat": "child_draws",
+     "do": "The child writes teeth and sheep."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "ENGL.G4.LANGUA.T2_WORD_CLASSES_NOUNS.PLURALS_IRREGULAR.M_PLI_ADD_S",
+     "listen_for": [
+      "childs"
+     ],
+     "ask": "Is it a regular noun?",
+     "repair": "Children."
+    },
+    {
+     "code": "ENGL.G4.LANGUA.T2_WORD_CLASSES_NOUNS.PLURALS_IRREGULAR.M_PLI_DOUBLE_PLURAL",
+     "listen_for": [
+      "childrens"
+     ],
+     "ask": "Is children already plural?",
+     "repair": "No -s."
+    },
+    {
+     "code": "ENGL.G4.LANGUA.T2_WORD_CLASSES_NOUNS.PLURALS_IRREGULAR.M_PLI_FOOT_TOOTH",
+     "listen_for": [
+      "tooths"
+     ],
+     "ask": "Does the inside change?",
+     "repair": "Teeth."
+    },
+    {
+     "code": "ENGL.G4.LANGUA.T2_WORD_CLASSES_NOUNS.PLURALS_IRREGULAR.M_PLI_SAME_FORM_S",
+     "listen_for": [
+      "sheeps"
+     ],
+     "ask": "Does sheep change?",
+     "repair": "Sheep."
+    }
+   ],
+   "checks": [
+    {
+     "question": "mouse",
+     "answer": "mice",
+     "shows": "irregular"
+    },
+    {
+     "question": "fish (many)",
+     "answer": "fish",
+     "shows": "same form"
+    }
+   ]
+  }
+ ]
+}

@@ -1,0 +1,533 @@
+{
+ "sub_strand": "ENGL.G6.READIN.T2_INTENSIVE_READING",
+ "title": "Intensive Reading (Theme 2: Cultural and religious celebrations)",
+ "status": "draft: written 18 Nov 2026 offline for Grade 6 English; not yet checked by a Kenyan English teacher; not loaded by the live tutor",
+ "notes": "",
+ "skills": [
+  {
+   "skill": "ENGL.G6.READIN.T2_INTENSIVE_READING.STORY_ELEMENTS",
+   "assessed_by": "questions",
+   "key_step": "The child sorts the story into characters, places and events, finds the main character and orders the events.",
+   "floor": {
+    "prerequisite": "Finds characters and places.",
+    "question": "Who is in the story?",
+    "answer": "names"
+   },
+   "steps": [
+    "List characters; star the main one.",
+    "List places.",
+    "Order the events."
+   ],
+   "contexts": [
+    "a celebration story"
+   ],
+   "board": [
+    {
+     "beat": "write",
+     "do": "Draw columns: who, where, events."
+    },
+    {
+     "beat": "point",
+     "do": "Point at who.",
+     "say": "Who is the story mostly about?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for the child to answer."
+    },
+    {
+     "beat": "child_draws",
+     "do": "The child orders the events."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "ENGL.G6.READIN.T2_INTENSIVE_READING.STORY_ELEMENTS.M6_ELEM_MINOR_FOR_MAIN",
+     "listen_for": [
+      "the shopkeeper"
+     ],
+     "ask": "Who is it mostly about?",
+     "repair": "The main character."
+    },
+    {
+     "code": "ENGL.G6.READIN.T2_INTENSIVE_READING.STORY_ELEMENTS.M6_ELEM_WRONG_PLACE",
+     "listen_for": [
+      "at the bus stop"
+     ],
+     "ask": "Where was this scene?",
+     "repair": "Find it."
+    },
+    {
+     "code": "ENGL.G6.READIN.T2_INTENSIVE_READING.STORY_ELEMENTS.M6_ELEM_ORDER_REVERSED",
+     "listen_for": [
+      "D, C, B, A"
+     ],
+     "ask": "What came first?",
+     "repair": "Start there."
+    },
+    {
+     "code": "ENGL.G6.READIN.T2_INTENSIVE_READING.STORY_ELEMENTS.M6_ELEM_ORDER_SWAPPED",
+     "listen_for": [
+      "A, C, B, D"
+     ],
+     "ask": "Which came before?",
+     "repair": "Swap."
+    },
+    {
+     "code": "ENGL.G6.READIN.T2_INTENSIVE_READING.STORY_ELEMENTS.M6_ELEM_MIXES_CHARACTER_PLACE",
+     "listen_for": [
+      "the village"
+     ],
+     "ask": "Person or place?",
+     "repair": "Sort it."
+    }
+   ],
+   "checks": [
+    {
+     "question": "Is \"the village\" a character?",
+     "answer": "No",
+     "shows": "place"
+    },
+    {
+     "question": "Order four events.",
+     "answer": "A, B, C, D",
+     "shows": "order"
+    }
+   ]
+  },
+  {
+   "skill": "ENGL.G6.READIN.T2_INTENSIVE_READING.PREDICT",
+   "assessed_by": "questions",
+   "key_step": "The child uses the title and the clues so far to predict, then reads on to check.",
+   "floor": {
+    "prerequisite": "Predicts from clues.",
+    "question": "Black clouds. Next?",
+    "answer": "rain"
+   },
+   "steps": [
+    "Read the title.",
+    "Find clues.",
+    "Predict.",
+    "Check."
+   ],
+   "contexts": [
+    "a celebration story"
+   ],
+   "board": [
+    {
+     "beat": "write",
+     "do": "Write a title and a stop point."
+    },
+    {
+     "beat": "point",
+     "do": "Point at the title.",
+     "say": "What will it be about?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for the child to answer."
+    },
+    {
+     "beat": "child_draws",
+     "do": "The child reads on and checks."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "ENGL.G6.READIN.T2_INTENSIVE_READING.PREDICT.M6_PRED_NO_CLUE",
+     "listen_for": [
+      "a lion will arrive"
+     ],
+     "ask": "Which clue?",
+     "repair": "Find it."
+    },
+    {
+     "code": "ENGL.G6.READIN.T2_INTENSIVE_READING.PREDICT.M6_PRED_CONTRADICTS",
+     "listen_for": [
+      "she will give up"
+     ],
+     "ask": "Does it fit?",
+     "repair": "Check."
+    },
+    {
+     "code": "ENGL.G6.READIN.T2_INTENSIVE_READING.PREDICT.M6_PRED_ALREADY_HAPPENED",
+     "listen_for": [
+      "she carried the bag"
+     ],
+     "ask": "Has it happened?",
+     "repair": "What is next?"
+    },
+    {
+     "code": "ENGL.G6.READIN.T2_INTENSIVE_READING.PREDICT.M6_PRED_TITLE_IGNORED",
+     "listen_for": [
+      "a football match"
+     ],
+     "ask": "What does the title say?",
+     "repair": "Use it."
+    }
+   ],
+   "checks": [
+    {
+     "question": "\"The baby's eyes kept closing.\" Next?",
+     "answer": "she will sleep",
+     "shows": "clue"
+    },
+    {
+     "question": "Title \"The Lost Key\". Predict.",
+     "answer": "someone will look for a key",
+     "shows": "title"
+    }
+   ]
+  },
+  {
+   "skill": "ENGL.G6.READIN.T2_INTENSIVE_READING.FACTUAL_QUESTIONS",
+   "assessed_by": "questions",
+   "key_step": "The child finds the sentence that answers and decides True, False or Not stated from it.",
+   "floor": {
+    "prerequisite": "Answers Grade 5 questions.",
+    "question": "Who came first?",
+    "answer": "a stated name"
+   },
+   "steps": [
+    "Find the key word.",
+    "Read the sentence.",
+    "Same, different or missing?"
+   ],
+   "contexts": [
+    "texts across the themes"
+   ],
+   "board": [
+    {
+     "beat": "write",
+     "do": "Write a text and a True, False or Not stated item."
+    },
+    {
+     "beat": "point",
+     "do": "Point at the key word.",
+     "say": "Is it in the text?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for the child to answer."
+    },
+    {
+     "beat": "child_draws",
+     "do": "The child decides."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "ENGL.G6.READIN.T2_INTENSIVE_READING.FACTUAL_QUESTIONS.M6_FACT_NEARBY_DETAIL",
+     "listen_for": [
+      "a basket"
+     ],
+     "ask": "Does it answer?",
+     "repair": "Read the whole sentence."
+    },
+    {
+     "code": "ENGL.G6.READIN.T2_INTENSIVE_READING.FACTUAL_QUESTIONS.M6_FACT_OUTSIDE_KNOWLEDGE",
+     "listen_for": [
+      "grass"
+     ],
+     "ask": "Did the text say it?",
+     "repair": "Use the text."
+    },
+    {
+     "code": "ENGL.G6.READIN.T2_INTENSIVE_READING.FACTUAL_QUESTIONS.M6_FACT_MISSES_STATED",
+     "listen_for": [
+      "Not stated"
+     ],
+     "ask": "Look again.",
+     "repair": "It is there."
+    },
+    {
+     "code": "ENGL.G6.READIN.T2_INTENSIVE_READING.FACTUAL_QUESTIONS.M6_FACT_FALSE_AS_TRUE",
+     "listen_for": [
+      "True"
+     ],
+     "ask": "Exactly the same?",
+     "repair": "Different: False."
+    },
+    {
+     "code": "ENGL.G6.READIN.T2_INTENSIVE_READING.FACTUAL_QUESTIONS.M6_FACT_FALSE_AS_NOT_STATED",
+     "listen_for": [
+      "Not stated"
+     ],
+     "ask": "Does it talk about it?",
+     "repair": "Yes, differently: False."
+    },
+    {
+     "code": "ENGL.G6.READIN.T2_INTENSIVE_READING.FACTUAL_QUESTIONS.M6_FACT_NOT_STATED_AS_TRUE",
+     "listen_for": [
+      "True"
+     ],
+     "ask": "Can you find it?",
+     "repair": "No: Not stated."
+    }
+   ],
+   "checks": [
+    {
+     "question": "Text does not say the price. True, False or Not stated?",
+     "answer": "Not stated",
+     "shows": "not stated"
+    },
+    {
+     "question": "What did they carry water in? (bucket)",
+     "answer": "a bucket",
+     "shows": "stated"
+    }
+   ]
+  },
+  {
+   "skill": "ENGL.G6.READIN.T2_INTENSIVE_READING.INFERENCE_QUESTIONS",
+   "assessed_by": "questions",
+   "key_step": "The child points to the clue and says what it shows about the character, not about the reader.",
+   "floor": {
+    "prerequisite": "Answers factual questions.",
+    "question": "What did he do?",
+    "answer": "a stated action"
+   },
+   "steps": [
+    "Find the clue.",
+    "Say what it shows.",
+    "Check it fits the text."
+   ],
+   "contexts": [
+    "telephone etiquette dialogues"
+   ],
+   "board": [
+    {
+     "beat": "write",
+     "do": "Write: Kamau clenched his fists."
+    },
+    {
+     "beat": "point",
+     "do": "Point at clenched.",
+     "say": "How does Kamau feel?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for the child to answer."
+    },
+    {
+     "beat": "child_draws",
+     "do": "The child names the clue."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "ENGL.G6.READIN.T2_INTENSIVE_READING.INFERENCE_QUESTIONS.M6_INFER_CONTRADICTS",
+     "listen_for": [
+      "She was angry."
+     ],
+     "ask": "Does it agree with the clues?",
+     "repair": "Check."
+    },
+    {
+     "code": "ENGL.G6.READIN.T2_INTENSIVE_READING.INFERENCE_QUESTIONS.M6_INFER_OVERREACH",
+     "listen_for": [
+      "She is the richest woman in town."
+     ],
+     "ask": "Does the text show that much?",
+     "repair": "Only the clue."
+    },
+    {
+     "code": "ENGL.G6.READIN.T2_INTENSIVE_READING.INFERENCE_QUESTIONS.M6_INFER_REPEATS_TEXT",
+     "listen_for": [
+      "The ball burst."
+     ],
+     "ask": "Copied?",
+     "repair": "Say what it shows."
+    },
+    {
+     "code": "ENGL.G6.READIN.T2_INTENSIVE_READING.INFERENCE_QUESTIONS.M6_INFER_OWN_FEELING",
+     "listen_for": [
+      "I would be scared"
+     ],
+     "ask": "Whose feeling?",
+     "repair": "The character's."
+    }
+   ],
+   "checks": [
+    {
+     "question": "\"She smiled at the gift.\" She felt ...",
+     "answer": "pleased",
+     "shows": "feeling"
+    },
+    {
+     "question": "\"The road was wet.\" Earlier?",
+     "answer": "it rained",
+     "shows": "cause"
+    }
+   ]
+  },
+  {
+   "skill": "ENGL.G6.READIN.T2_INTENSIVE_READING.IMAGERY",
+   "assessed_by": "questions",
+   "key_step": "The child underlines the picture words and builds an image from all of them, adding nothing.",
+   "floor": {
+    "prerequisite": "Visualises a text.",
+    "question": "Which picture fits?",
+    "answer": "the matching picture"
+   },
+   "steps": [
+    "Underline picture words.",
+    "Picture the scene.",
+    "Check against the words."
+   ],
+   "contexts": [
+    "a poem about a market",
+    "a digital story"
+   ],
+   "board": [
+    {
+     "beat": "write",
+     "do": "Write: Heaps of red tomatoes glowed in the sun."
+    },
+    {
+     "beat": "point",
+     "do": "Point at glowed.",
+     "say": "What do you see?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for the child to answer."
+    },
+    {
+     "beat": "child_draws",
+     "do": "The child sketches it."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "ENGL.G6.READIN.T2_INTENSIVE_READING.IMAGERY.M_IMG_FACT_LINE",
+     "listen_for": [
+      "The market opens at six."
+     ],
+     "ask": "Does it paint a picture?",
+     "repair": "Find the picture words."
+    },
+    {
+     "code": "ENGL.G6.READIN.T2_INTENSIVE_READING.IMAGERY.M_IMG_WRONG_PICTURE",
+     "listen_for": [
+      "a quiet night"
+     ],
+     "ask": "Does it match the words?",
+     "repair": "Check."
+    },
+    {
+     "code": "ENGL.G6.READIN.T2_INTENSIVE_READING.IMAGERY.M_IMG_ONE_WORD",
+     "listen_for": [
+      "a river"
+     ],
+     "ask": "Did you use every word?",
+     "repair": "Use them all."
+    },
+    {
+     "code": "ENGL.G6.READIN.T2_INTENSIVE_READING.IMAGERY.M6_IMG_ADDS",
+     "listen_for": [
+      "children played outside"
+     ],
+     "ask": "Is it in the text?",
+     "repair": "Only the words."
+    }
+   ],
+   "checks": [
+    {
+     "question": "Which line paints a picture: \"The market opens at six\" or \"Red tomatoes glowed\"?",
+     "answer": "Red tomatoes glowed",
+     "shows": "imagery"
+    },
+    {
+     "question": "\"Smoke curled from the hut.\" Picture?",
+     "answer": "smoke rising from a hut",
+     "shows": "image"
+    }
+   ]
+  },
+  {
+   "skill": "ENGL.G6.READIN.T2_INTENSIVE_READING.CHARACTER_JUDGE",
+   "assessed_by": "questions",
+   "key_step": "The child judges a character from all they say and do, and gives the evidence.",
+   "floor": {
+    "prerequisite": "Infers feelings.",
+    "question": "He slammed the door. He felt ...",
+    "answer": "angry"
+   },
+   "steps": [
+    "List what the character does.",
+    "List what they say.",
+    "Choose a describing word.",
+    "Give evidence."
+   ],
+   "contexts": [
+    "a celebration story"
+   ],
+   "board": [
+    {
+     "beat": "write",
+     "do": "Write: She gave her lunch to a hungry boy."
+    },
+    {
+     "beat": "point",
+     "do": "Point at gave.",
+     "say": "What is she like?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for the child to answer."
+    },
+    {
+     "beat": "child_draws",
+     "do": "The child gives the evidence."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "ENGL.G6.READIN.T2_INTENSIVE_READING.CHARACTER_JUDGE.M_CHAR_NAME_ONLY",
+     "listen_for": [
+      "selfish"
+     ],
+     "ask": "What does she do?",
+     "repair": "Judge from actions."
+    },
+    {
+     "code": "ENGL.G6.READIN.T2_INTENSIVE_READING.CHARACTER_JUDGE.M_CHAR_OPPOSITE",
+     "listen_for": [
+      "lazy"
+     ],
+     "ask": "Does it match the actions?",
+     "repair": "Check."
+    },
+    {
+     "code": "ENGL.G6.READIN.T2_INTENSIVE_READING.CHARACTER_JUDGE.M_CHAR_WRONG_EVIDENCE",
+     "listen_for": [
+      "She lived in a village."
+     ],
+     "ask": "Does that show it?",
+     "repair": "Choose an action."
+    },
+    {
+     "code": "ENGL.G6.READIN.T2_INTENSIVE_READING.CHARACTER_JUDGE.M6_CHAR_ONE_ACT",
+     "listen_for": [
+      "rude"
+     ],
+     "ask": "What else did he do?",
+     "repair": "Look at all of it."
+    }
+   ],
+   "checks": [
+    {
+     "question": "He helped everyone carry chairs. He is ...",
+     "answer": "helpful",
+     "shows": "judge"
+    },
+    {
+     "question": "Evidence that she is generous?",
+     "answer": "she gave her lunch away",
+     "shows": "evidence"
+    }
+   ]
+  }
+ ]
+}

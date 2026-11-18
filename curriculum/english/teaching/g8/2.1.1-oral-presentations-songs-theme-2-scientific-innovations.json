@@ -1,0 +1,180 @@
+{
+ "sub_strand": "ENGL.G8.LISTEN.T2_ORAL_PRESENTATIONS_S",
+ "title": "Oral Presentations: Songs (Theme 2: Scientific innovations)",
+ "status": "draft: written 18 Nov 2026 offline for Grade 8 English; not yet checked by a Kenyan English teacher; not loaded by the live tutor",
+ "notes": "",
+ "skills": [
+  {
+   "skill": "ENGL.G8.LISTEN.T2_ORAL_PRESENTATIONS_S.PERFORM_ORAL",
+   "assessed_by": "voice",
+   "key_step": "The child finds the structure and mood of the song, poem or scene, then performs with matching voice, face and gestures.",
+   "floor": {
+    "prerequisite": "Uses performance techniques.",
+    "question": "Name two techniques.",
+    "answer": "voice change, gesture"
+   },
+   "steps": [
+    "Find solo and chorus or the mood.",
+    "Plan voice and gestures.",
+    "Perform from memory.",
+    "Involve the audience."
+   ],
+   "contexts": [
+    "songs on innovation",
+    "poems on consumer protection",
+    "dramatised story scenes"
+   ],
+   "board": [
+    {
+     "beat": "write",
+     "do": "Write: solo / chorus / mood."
+    },
+    {
+     "beat": "point",
+     "do": "Point at chorus.",
+     "say": "Who sings this?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for the child to answer."
+    },
+    {
+     "beat": "child_draws",
+     "do": "The child performs a verse."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "ENGL.G8.LISTEN.T2_ORAL_PRESENTATIONS_S.PERFORM_ORAL.M8_X_PO_NO_CHORUS",
+     "listen_for": [
+      "sing every line alone"
+     ],
+     "ask": "Who answers?",
+     "repair": "The group."
+    },
+    {
+     "code": "ENGL.G8.LISTEN.T2_ORAL_PRESENTATIONS_S.PERFORM_ORAL.M8_X_PO_FACE_MISMATCH",
+     "listen_for": [
+      "smile and wave"
+     ],
+     "ask": "Mood?",
+     "repair": "Match it."
+    },
+    {
+     "code": "ENGL.G8.LISTEN.T2_ORAL_PRESENTATIONS_S.PERFORM_ORAL.M8_X_PO_MONOTONE",
+     "listen_for": [
+      "one flat tone throughout"
+     ],
+     "ask": "Does the voice move?",
+     "repair": "Follow the meaning."
+    },
+    {
+     "code": "ENGL.G8.LISTEN.T2_ORAL_PRESENTATIONS_S.PERFORM_ORAL.M8_X_PO_MEMORY_BREAK",
+     "listen_for": [
+      "start the whole song again"
+     ],
+     "ask": "Start again?",
+     "repair": "Keep going."
+    }
+   ],
+   "checks": [
+    {
+     "question": "A sad poem: face?",
+     "answer": "sorrowful",
+     "shows": "mood"
+    },
+    {
+     "question": "A song with call and response: perform how?",
+     "answer": "solo calls, group answers",
+     "shows": "structure"
+    }
+   ]
+  },
+  {
+   "skill": "ENGL.G8.LISTEN.T2_ORAL_PRESENTATIONS_S.SONG_WRITING",
+   "assessed_by": "composition",
+   "key_step": "The child plans a message, writes short singable verses and a repeated chorus.",
+   "floor": {
+    "prerequisite": "Knows song features.",
+    "question": "What is a chorus?",
+    "answer": "a repeated part"
+   },
+   "steps": [
+    "Choose the innovation and message.",
+    "Write a chorus.",
+    "Write verses.",
+    "Sing it to check rhythm."
+   ],
+   "contexts": [
+    "M-Pesa",
+    "solar lamps",
+    "mobile phones"
+   ],
+   "board": [
+    {
+     "beat": "write",
+     "do": "Write the chorus line: Solar power, light the hour."
+    },
+    {
+     "beat": "point",
+     "do": "Point at the rhyme.",
+     "say": "Can you sing it?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for the child to answer."
+    },
+    {
+     "beat": "child_draws",
+     "do": "The child writes a verse."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "ENGL.G8.LISTEN.T2_ORAL_PRESENTATIONS_S.SONG_WRITING.M8_X_SW_NO_CHORUS",
+     "listen_for": [
+      "nothing"
+     ],
+     "ask": "What repeats?",
+     "repair": "Add a chorus."
+    },
+    {
+     "code": "ENGL.G8.LISTEN.T2_ORAL_PRESENTATIONS_S.SONG_WRITING.M8_X_SW_NO_RHYTHM",
+     "listen_for": [
+      "Yes"
+     ],
+     "ask": "Can you sing it?",
+     "repair": "Shorten it."
+    },
+    {
+     "code": "ENGL.G8.LISTEN.T2_ORAL_PRESENTATIONS_S.SONG_WRITING.M8_X_SW_OFF_TOPIC",
+     "listen_for": [
+      "Yes"
+     ],
+     "ask": "On the topic?",
+     "repair": "Remove it."
+    },
+    {
+     "code": "ENGL.G8.LISTEN.T2_ORAL_PRESENTATIONS_S.SONG_WRITING.M8_X_SW_NO_MESSAGE",
+     "listen_for": [
+      "nothing"
+     ],
+     "ask": "What should listeners do?",
+     "repair": "Add the message."
+    }
+   ],
+   "checks": [
+    {
+     "question": "What repeats in a song?",
+     "answer": "the chorus",
+     "shows": "structure"
+    },
+    {
+     "question": "Is a long prose line singable?",
+     "answer": "No",
+     "shows": "rhythm"
+    }
+   ]
+  }
+ ]
+}

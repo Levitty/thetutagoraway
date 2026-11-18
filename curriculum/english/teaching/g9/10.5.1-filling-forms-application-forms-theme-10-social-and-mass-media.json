@@ -1,0 +1,93 @@
+{
+ "sub_strand": "ENGL.G9.WRITIN.T10_FILLING_FORMS_APPLIC",
+ "title": "Filling Forms: Application Forms (Theme 10: Social and mass media)",
+ "status": "draft: written 18 Nov 2026 offline for Grade 9 English; not yet checked by a Kenyan English teacher; not loaded by the live tutor",
+ "notes": "",
+ "skills": [
+  {
+   "skill": "ENGL.G9.WRITIN.T10_FILLING_FORMS_APPLIC.BURSARY_FORMS",
+   "assessed_by": "composition",
+   "key_step": "The child identifies the form from its heading, fills every section accurately, attaches documents and signs.",
+   "floor": {
+    "prerequisite": "Fills forms.",
+    "question": "What goes in Surname?",
+    "answer": "family name"
+   },
+   "steps": [
+    "Read the heading.",
+    "Fill every section.",
+    "Attach documents.",
+    "Sign the declaration."
+   ],
+   "contexts": [
+    "CDF bursary",
+    "a scholarship form"
+   ],
+   "board": [
+    {
+     "beat": "write",
+     "do": "Draw a form with Declaration at the bottom."
+    },
+    {
+     "beat": "point",
+     "do": "Point at Declaration.",
+     "say": "What do you do here?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for the child to answer."
+    },
+    {
+     "beat": "child_draws",
+     "do": "The child lists attachments."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "ENGL.G9.WRITIN.T10_FILLING_FORMS_APPLIC.BURSARY_FORMS.M9_BF_WRONG_FORM",
+     "listen_for": [
+      "a library card form"
+     ],
+     "ask": "Heading?",
+     "repair": "Read it."
+    },
+    {
+     "code": "ENGL.G9.WRITIN.T10_FILLING_FORMS_APPLIC.BURSARY_FORMS.M9_BF_INCOMPLETE",
+     "listen_for": [
+      "leave it blank"
+     ],
+     "ask": "Blank?",
+     "repair": "Fill it."
+    },
+    {
+     "code": "ENGL.G9.WRITIN.T10_FILLING_FORMS_APPLIC.BURSARY_FORMS.M9_BF_NO_DOCUMENTS",
+     "listen_for": [
+      "nothing"
+     ],
+     "ask": "Attachments?",
+     "repair": "Check the list."
+    },
+    {
+     "code": "ENGL.G9.WRITIN.T10_FILLING_FORMS_APPLIC.BURSARY_FORMS.M9_BF_UNSIGNED",
+     "listen_for": [
+      "Yes"
+     ],
+     "ask": "Signed?",
+     "repair": "Sign."
+    }
+   ],
+   "checks": [
+    {
+     "question": "Blank income section?",
+     "answer": "No, fill it",
+     "shows": "complete"
+    },
+    {
+     "question": "Unsigned form complete?",
+     "answer": "No",
+     "shows": "signature"
+    }
+   ]
+  }
+ ]
+}

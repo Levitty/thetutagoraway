@@ -1,0 +1,176 @@
+{
+ "sub_strand": "ENGL.G4.LANGUA.T7_WORD_CLASSES_VERB_AS",
+ "title": "Word classes: verb aspect (Theme 7: Technology- cyber safety)",
+ "status": "draft: written 18 Nov 2026 offline for Grade 4 English; not yet checked by a Kenyan English teacher; not loaded by the live tutor",
+ "notes": "",
+ "skills": [
+  {
+   "skill": "ENGL.G4.LANGUA.T7_WORD_CLASSES_VERB_AS.PRESENT_PROGRESSIVE",
+   "assessed_by": "questions",
+   "key_step": "The child puts am, is or are before the -ing form for what is happening now.",
+   "floor": {
+    "prerequisite": "Uses am, is, are.",
+    "question": "I ___ a pupil.",
+    "answer": "am"
+   },
+   "steps": [
+    "Who is doing it?",
+    "Choose am, is, are.",
+    "Add -ing."
+   ],
+   "contexts": [
+    "what the class is doing now",
+    "a phone call"
+   ],
+   "board": [
+    {
+     "beat": "write",
+     "do": "Write: Wanjiru ___ ___ now. (read)"
+    },
+    {
+     "beat": "point",
+     "do": "Point at now.",
+     "say": "What two words do we need?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for is reading."
+    },
+    {
+     "beat": "child_draws",
+     "do": "The child writes about the class."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "ENGL.G4.LANGUA.T7_WORD_CLASSES_VERB_AS.PRESENT_PROGRESSIVE.M_PRP_NO_BE",
+     "listen_for": [
+      "reading"
+     ],
+     "ask": "What is missing before reading?",
+     "repair": "Is."
+    },
+    {
+     "code": "ENGL.G4.LANGUA.T7_WORD_CLASSES_VERB_AS.PRESENT_PROGRESSIVE.M_PRP_WRONG_BE",
+     "listen_for": [
+      "is"
+     ],
+     "ask": "One or many?",
+     "repair": "Match be."
+    },
+    {
+     "code": "ENGL.G4.LANGUA.T7_WORD_CLASSES_VERB_AS.PRESENT_PROGRESSIVE.M_PRP_NO_ING",
+     "listen_for": [
+      "play"
+     ],
+     "ask": "What ending?",
+     "repair": "-ing."
+    },
+    {
+     "code": "ENGL.G4.LANGUA.T7_WORD_CLASSES_VERB_AS.PRESENT_PROGRESSIVE.M_PRP_ING_SPELLING",
+     "listen_for": [
+      "makeing"
+     ],
+     "ask": "Does make keep its e?",
+     "repair": "Making."
+    }
+   ],
+   "checks": [
+    {
+     "question": "They ___ (play) now.",
+     "answer": "are playing",
+     "shows": "are"
+    },
+    {
+     "question": "make + ing",
+     "answer": "making",
+     "shows": "spelling"
+    }
+   ]
+  },
+  {
+   "skill": "ENGL.G4.LANGUA.T7_WORD_CLASSES_VERB_AS.PAST_PROGRESSIVE",
+   "assessed_by": "questions",
+   "key_step": "The child uses was or were with -ing for an action going on at a past time.",
+   "floor": {
+    "prerequisite": "Uses present progressive.",
+    "question": "She ___ (sing) now.",
+    "answer": "is singing"
+   },
+   "steps": [
+    "Past time?",
+    "Was or were.",
+    "Add -ing."
+   ],
+   "contexts": [
+    "what you were doing when it rained",
+    "a story"
+   ],
+   "board": [
+    {
+     "beat": "write",
+     "do": "Write: At 8 pm I ___ ___. (sleep)"
+    },
+    {
+     "beat": "point",
+     "do": "Point at 8 pm.",
+     "say": "Now or past?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for was sleeping."
+    },
+    {
+     "beat": "child_draws",
+     "do": "The child writes with were."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "ENGL.G4.LANGUA.T7_WORD_CLASSES_VERB_AS.PAST_PROGRESSIVE.M_PAP_PRESENT_FOR_PAST",
+     "listen_for": [
+      "is"
+     ],
+     "ask": "When was it?",
+     "repair": "Past: was."
+    },
+    {
+     "code": "ENGL.G4.LANGUA.T7_WORD_CLASSES_VERB_AS.PAST_PROGRESSIVE.M_PAP_WAS_WERE",
+     "listen_for": [
+      "was"
+     ],
+     "ask": "One or many?",
+     "repair": "Were for many."
+    },
+    {
+     "code": "ENGL.G4.LANGUA.T7_WORD_CLASSES_VERB_AS.PAST_PROGRESSIVE.M_PAP_PAST_FORM",
+     "listen_for": [
+      "ate"
+     ],
+     "ask": "After was?",
+     "repair": "-ing."
+    },
+    {
+     "code": "ENGL.G4.LANGUA.T7_WORD_CLASSES_VERB_AS.PAST_PROGRESSIVE.M_PAP_NO_ING",
+     "listen_for": [
+      "play"
+     ],
+     "ask": "What ending?",
+     "repair": "-ing."
+    }
+   ],
+   "checks": [
+    {
+     "question": "They ___ (watch) TV when it rained.",
+     "answer": "were watching",
+     "shows": "were"
+    },
+    {
+     "question": "She ___ (cook) at six.",
+     "answer": "was cooking",
+     "shows": "was"
+    }
+   ]
+  }
+ ]
+}

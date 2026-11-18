@@ -1,0 +1,281 @@
+{
+ "sub_strand": "ENGL.G4.LISTEN.T1_PRONUNCIATION_AND_VO",
+ "title": "Pronunciation and Vocabulary (Theme 1: The family)",
+ "status": "draft: written 18 Nov 2026 offline for Grade 4 English; not yet checked by a Kenyan English teacher; not loaded by the live tutor",
+ "notes": "",
+ "skills": [
+  {
+   "skill": "ENGL.G4.LISTEN.T1_PRONUNCIATION_AND_VO.PRONOUNCE_SOUNDS",
+   "assessed_by": "voice",
+   "key_step": "The child watches the mouth shape, then says the sound alone, in a word and in a sentence.",
+   "floor": {
+    "prerequisite": "Says the letter-sounds of Grade 3.",
+    "question": "Say the first sound of \"sun\".",
+    "answer": "/s/"
+   },
+   "steps": [
+    "Show the mouth shape for the sound.",
+    "Say the sound alone.",
+    "Say it in three words.",
+    "Say it in a sentence."
+   ],
+   "contexts": [
+    "a lorry on the road",
+    "buying at the shop",
+    "a chair in class"
+   ],
+   "board": [
+    {
+     "beat": "write",
+     "do": "Write two words: shop, sop."
+    },
+    {
+     "beat": "point",
+     "do": "Point at shop.",
+     "say": "Watch my lips: shhh-op. Your turn."
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for the child to say it."
+    },
+    {
+     "beat": "child_draws",
+     "do": "The child circles the word he or she said."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "ENGL.G4.LISTEN.T1_PRONUNCIATION_AND_VO.PRONOUNCE_SOUNDS.M4_PS_L_R",
+     "listen_for": [
+      "The rorry is led."
+     ],
+     "ask": "Is your tongue up or curled back?",
+     "repair": "Up for l, curled for r: lorry, red."
+    },
+    {
+     "code": "ENGL.G4.LISTEN.T1_PRONUNCIATION_AND_VO.PRONOUNCE_SOUNDS.M4_PS_SH_S",
+     "listen_for": [
+      "sop"
+     ],
+     "ask": "Are your lips round?",
+     "repair": "Round lips: shhh, shop."
+    },
+    {
+     "code": "ENGL.G4.LISTEN.T1_PRONUNCIATION_AND_VO.PRONOUNCE_SOUNDS.M4_PS_CH_SH",
+     "listen_for": [
+      "shair"
+     ],
+     "ask": "Did it start with a stop?",
+     "repair": "t-sh: chair."
+    },
+    {
+     "code": "ENGL.G4.LISTEN.T1_PRONUNCIATION_AND_VO.PRONOUNCE_SOUNDS.M4_PS_V_F",
+     "listen_for": [
+      "fery"
+     ],
+     "ask": "Is your throat buzzing?",
+     "repair": "Buzz for v: very."
+    },
+    {
+     "code": "ENGL.G4.LISTEN.T1_PRONUNCIATION_AND_VO.PRONOUNCE_SOUNDS.M4_PS_EXTRA_VOWEL",
+     "listen_for": [
+      "filim"
+     ],
+     "ask": "How many beats did you say?",
+     "repair": "One beat: film."
+    },
+    {
+     "code": "ENGL.G4.LISTEN.T1_PRONUNCIATION_AND_VO.PRONOUNCE_SOUNDS.M4_PS_SHIP_SHEEP",
+     "listen_for": [
+      "ship and ship sound the same"
+     ],
+     "ask": "Short or long?",
+     "repair": "Ship is short; sheep is long."
+    }
+   ],
+   "checks": [
+    {
+     "question": "Say: She sells fish at the shop.",
+     "answer": "clear sh in she, fish, shop",
+     "shows": "sh"
+    },
+    {
+     "question": "Say: The lorry is very red.",
+     "answer": "clear l, r and v",
+     "shows": "l, r, v"
+    }
+   ]
+  },
+  {
+   "skill": "ENGL.G4.LISTEN.T1_PRONUNCIATION_AND_VO.FAMILY_VOCAB",
+   "assessed_by": "questions",
+   "key_step": "The child says whose child or brother or sister the person is, then names the relation.",
+   "floor": {
+    "prerequisite": "Uses he, she, his and her.",
+    "question": "Mama is my mother. Her brother is ...",
+    "answer": "my uncle"
+   },
+   "steps": [
+    "Draw a family tree.",
+    "Name each person from the child's place in it.",
+    "Say the word in a sentence."
+   ],
+   "contexts": [
+    "a family wedding",
+    "visiting grandparents in the village",
+    "a birthday at home"
+   ],
+   "board": [
+    {
+     "beat": "draw",
+     "do": "Draw a small family tree with the child in it."
+    },
+    {
+     "beat": "point",
+     "do": "Point at the aunt's daughter.",
+     "say": "Who is she to you?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for cousin."
+    },
+    {
+     "beat": "child_draws",
+     "do": "The child adds a nephew and labels him."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "ENGL.G4.LISTEN.T1_PRONUNCIATION_AND_VO.FAMILY_VOCAB.M4_FV_COUSIN_BROTHER",
+     "listen_for": [
+      "brother"
+     ],
+     "ask": "Do you share the same parents?",
+     "repair": "No: cousin."
+    },
+    {
+     "code": "ENGL.G4.LISTEN.T1_PRONUNCIATION_AND_VO.FAMILY_VOCAB.M4_FV_SMALL_BROTHER",
+     "listen_for": [
+      "small brother"
+     ],
+     "ask": "Are we talking about size or age?",
+     "repair": "Age: younger."
+    },
+    {
+     "code": "ENGL.G4.LISTEN.T1_PRONUNCIATION_AND_VO.FAMILY_VOCAB.M4_FV_NIECE_NEPHEW",
+     "listen_for": [
+      "nephew"
+     ],
+     "ask": "Boy or girl?",
+     "repair": "Girl: niece."
+    },
+    {
+     "code": "ENGL.G4.LISTEN.T1_PRONUNCIATION_AND_VO.FAMILY_VOCAB.M4_FV_AUNT_UNCLE",
+     "listen_for": [
+      "aunt"
+     ],
+     "ask": "Man or woman?",
+     "repair": "Man: uncle."
+    }
+   ],
+   "checks": [
+    {
+     "question": "My father's sister is my ...",
+     "answer": "aunt",
+     "shows": "aunt"
+    },
+    {
+     "question": "Wanjiru is two years younger than me. She is my ...",
+     "answer": "younger sister",
+     "shows": "younger"
+    }
+   ]
+  },
+  {
+   "skill": "ENGL.G4.LISTEN.T1_PRONUNCIATION_AND_VO.LISTEN_ATTENTIVE",
+   "assessed_by": "voice",
+   "key_step": "The child listens for the answer to who, what, where and when, holding the events in order.",
+   "floor": {
+    "prerequisite": "Follows a three-step instruction.",
+    "question": "Stand up, clap twice, sit down.",
+    "answer": "does all three in order"
+   },
+   "steps": [
+    "Say what to listen for.",
+    "Read the text once.",
+    "Ask the questions.",
+    "Read again to check."
+   ],
+   "contexts": [
+    "a school assembly notice",
+    "a story told by a grandmother",
+    "a radio announcement"
+   ],
+   "board": [
+    {
+     "beat": "write",
+     "do": "Write: who, what, where, when."
+    },
+    {
+     "beat": "point",
+     "do": "Point at who.",
+     "say": "Listen: who is the story about?"
+    },
+    {
+     "beat": "pause",
+     "do": "Read the text; wait for the answer."
+    },
+    {
+     "beat": "predict",
+     "do": "Ask: what will happen next?"
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "ENGL.G4.LISTEN.T1_PRONUNCIATION_AND_VO.LISTEN_ATTENTIVE.M4_LA_LAST_HEARD",
+     "listen_for": [
+      "went to the river"
+     ],
+     "ask": "What happened first?",
+     "repair": "Count the events on your fingers."
+    },
+    {
+     "code": "ENGL.G4.LISTEN.T1_PRONUNCIATION_AND_VO.LISTEN_ATTENTIVE.M4_LA_OWN_DETAIL",
+     "listen_for": [
+      "by matatu with his mother"
+     ],
+     "ask": "Did the speaker say that?",
+     "repair": "Only what was said."
+    },
+    {
+     "code": "ENGL.G4.LISTEN.T1_PRONUNCIATION_AND_VO.LISTEN_ATTENTIVE.M4_LA_WHO_SWAP",
+     "listen_for": [
+      "Wanjiru"
+     ],
+     "ask": "Who did the action?",
+     "repair": "The doer comes before the verb."
+    },
+    {
+     "code": "ENGL.G4.LISTEN.T1_PRONUNCIATION_AND_VO.LISTEN_ATTENTIVE.M4_LA_KEYWORD_GRAB",
+     "listen_for": [
+      "Tuesday market"
+     ],
+     "ask": "What does the question word want?",
+     "repair": "When wants a time."
+    }
+   ],
+   "checks": [
+    {
+     "question": "Teacher reads: \"Mr Kamau sold milk at the gate at six.\" Who sold the milk?",
+     "answer": "Mr Kamau",
+     "shows": "who"
+    },
+    {
+     "question": "Where did he sell it?",
+     "answer": "at the gate",
+     "shows": "where"
+    }
+   ]
+  }
+ ]
+}

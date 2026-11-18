@@ -1,0 +1,91 @@
+{
+ "sub_strand": "ENGL.G9.GRAMMA.T13_SENTENCES_COMPLEX_SE",
+ "title": "Sentences: Complex Sentences (Theme 13: Sea travel)",
+ "status": "draft: written 18 Nov 2026 offline for Grade 9 English; not yet checked by a Kenyan English teacher; not loaded by the live tutor",
+ "notes": "",
+ "skills": [
+  {
+   "skill": "ENGL.G9.GRAMMA.T13_SENTENCES_COMPLEX_SE.SUBORDINATING",
+   "assessed_by": "questions",
+   "key_step": "The child joins a subordinate clause to a main clause with the conjunction that fits the link.",
+   "floor": {
+    "prerequisite": "Uses compound sentences.",
+    "question": "Join with so.",
+    "answer": "a compound sentence"
+   },
+   "steps": [
+    "Main clause.",
+    "Subordinate clause.",
+    "Conjunction for the link."
+   ],
+   "contexts": [
+    "sea travel"
+   ],
+   "board": [
+    {
+     "beat": "write",
+     "do": "Write: Because the ship was late."
+    },
+    {
+     "beat": "point",
+     "do": "Point at the full stop.",
+     "say": "Complete?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for the child to answer."
+    },
+    {
+     "beat": "child_draws",
+     "do": "The child joins it."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "ENGL.G9.GRAMMA.T13_SENTENCES_COMPLEX_SE.SUBORDINATING.M_EN9_SC_ALTHOUGH",
+     "listen_for": [
+      "because"
+     ],
+     "ask": "Contrast?",
+     "repair": "Although."
+    },
+    {
+     "code": "ENGL.G9.GRAMMA.T13_SENTENCES_COMPLEX_SE.SUBORDINATING.M_EN9_SC_BECAUSE",
+     "listen_for": [
+      "although"
+     ],
+     "ask": "Reason?",
+     "repair": "Because."
+    },
+    {
+     "code": "ENGL.G9.GRAMMA.T13_SENTENCES_COMPLEX_SE.SUBORDINATING.M_EN9_SC_UNLESS",
+     "listen_for": [
+      "If"
+     ],
+     "ask": "If not?",
+     "repair": "Unless."
+    },
+    {
+     "code": "ENGL.G9.GRAMMA.T13_SENTENCES_COMPLEX_SE.SUBORDINATING.M9_SC_FRAGMENT",
+     "listen_for": [
+      "Yes"
+     ],
+     "ask": "Main clause?",
+     "repair": "Join it."
+    }
+   ],
+   "checks": [
+    {
+     "question": "___ it rained, we sailed. (contrast)",
+     "answer": "Although",
+     "shows": "contrast"
+    },
+    {
+     "question": "Is \"Because the ship was late.\" a sentence?",
+     "answer": "No",
+     "shows": "fragment"
+    }
+   ]
+  }
+ ]
+}

@@ -1,0 +1,92 @@
+{
+ "sub_strand": "ENGL.G7.GRAMMA.T9_CONJUNCTIONS",
+ "title": "Conjunctions (Theme 9: Heroes and heroines - kenya)",
+ "status": "draft: written 18 Nov 2026 offline for Grade 7 English; not yet checked by a Kenyan English teacher; not loaded by the live tutor",
+ "notes": "",
+ "skills": [
+  {
+   "skill": "ENGL.G7.GRAMMA.T9_CONJUNCTIONS.CONJUNCTIONS_BASIC",
+   "assessed_by": "questions",
+   "key_step": "The child links two ideas with one conjunction that fits (and, but, or, so).",
+   "floor": {
+    "prerequisite": "Uses correlatives.",
+    "question": "Neither ... ?",
+    "answer": "nor"
+   },
+   "steps": [
+    "Agree: and.",
+    "Against: but.",
+    "Choice: or.",
+    "Result: so."
+   ],
+   "contexts": [
+    "heroes"
+   ],
+   "board": [
+    {
+     "beat": "write",
+     "do": "Write: It was late, we went home."
+    },
+    {
+     "beat": "point",
+     "do": "Point at the comma.",
+     "say": "What joins them?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for the child to answer."
+    },
+    {
+     "beat": "child_draws",
+     "do": "The child adds so."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "ENGL.G7.GRAMMA.T9_CONJUNCTIONS.CONJUNCTIONS_BASIC.M7_CB_AND_BUT",
+     "listen_for": [
+      "and"
+     ],
+     "ask": "Against?",
+     "repair": "But."
+    },
+    {
+     "code": "ENGL.G7.GRAMMA.T9_CONJUNCTIONS.CONJUNCTIONS_BASIC.M7_CB_OR_AND",
+     "listen_for": [
+      "and"
+     ],
+     "ask": "Choice?",
+     "repair": "Or."
+    },
+    {
+     "code": "ENGL.G7.GRAMMA.T9_CONJUNCTIONS.CONJUNCTIONS_BASIC.M7_CB_BUT_AND_DOUBLE",
+     "listen_for": [
+      "but and"
+     ],
+     "ask": "Two joiners?",
+     "repair": "One."
+    },
+    {
+     "code": "ENGL.G7.GRAMMA.T9_CONJUNCTIONS.CONJUNCTIONS_BASIC.M7_CB_COMMA_JOIN",
+     "listen_for": [
+      "It was late, we went home."
+     ],
+     "ask": "Comma alone?",
+     "repair": "Add so."
+    }
+   ],
+   "checks": [
+    {
+     "question": "She was tired ___ she kept walking.",
+     "answer": "but",
+     "shows": "contrast"
+    },
+    {
+     "question": "Tea ___ milk?",
+     "answer": "or",
+     "shows": "choice"
+    }
+   ]
+  }
+ ]
+}

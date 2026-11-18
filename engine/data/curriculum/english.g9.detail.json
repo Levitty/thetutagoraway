@@ -253,6 +253,30 @@
   "ENGL.G9.WRITIN.T15_EMAILS.c": "appreciate the importance of writing emails"
  },
  "skills": {
+  "ENGL.G9.LISTEN.T1_POLITE_LANGUAGE.EUPHEMISM": {
+   "forms": [
+    "choose the polite expression",
+    "replace the blunt word",
+    "what does this euphemism mean"
+   ],
+   "mastery": "The child replaces blunt words with polite ones where tact is needed (passed away for died, senior citizen for old person, washroom for toilet, between jobs for jobless) and knows what each means. Evidence rule: at least four of the last five fresh questions right across at least two question forms, and no repeated pick of the same misconception."
+  },
+  "ENGL.G9.LISTEN.T1_POLITE_LANGUAGE.DEBATE": {
+   "forms": [
+    "take part in a class debate",
+    "propose or oppose the motion",
+    "rebut a point politely"
+   ],
+   "mastery": "The child addresses the chair and the house, states the side, argues with reasons and examples, rebuts the other side's points politely (My opponent claims ..., but ...), and keeps to time. Evidence rule: the teacher hears it done right on two different days, scored with the observation rubric (PLAN_OBSERVATION_RUBRICS.md); a tapped answer cannot show it."
+  },
+  "ENGL.G9.READIN.T1_INDEPENDENT_READING_.INDEPENDENT_READING": {
+   "forms": [
+    "reading log",
+    "portfolio of subject matter",
+    "recommend a book"
+   ],
+   "mastery": "The child selects fiction and non-fiction from digital and print sources, reads widely across the term, and keeps a reading log or portfolio noting what each text was about and what he or she thought of it. Evidence rule: the teacher sees it in two pieces of the learner's own work, scored with the KICD rubric indicator."
+  },
   "ENGL.G9.GRAMMA.T1_GENDER_NEUTRAL_LANGU.GENDER_NEUTRAL": {
    "forms": [
     "pick the right answer",
@@ -267,6 +291,30 @@
     "pick the right answer on a second text"
    ],
    "mastery": "The child reads the scene and picks the answer that fits the words and stage directions, and does not pick a small detail, the opposite or something not in the text. Evidence rule: at least four of the last five fresh questions right across at least two question forms, and no repeated pick of the same misconception."
+  },
+  "ENGL.G9.WRITIN.T1_LEGIBILITY_AND_NEATN.LEGIBILITY": {
+   "forms": [
+    "write a fair copy",
+    "break the word at the line end",
+    "indent each paragraph"
+   ],
+   "mastery": "The child indents every paragraph, breaks a word at a line end only between syllables with a hyphen (envir-onment, not en-vironment), and writes a neat, legible page. Evidence rule: the teacher sees it in two pieces of the learner's own work, scored with the KICD rubric indicator."
+  },
+  "ENGL.G9.LISTEN.T2_ORAL_LITERATURE_SHOR.SHORT_FORMS": {
+   "forms": [
+    "riddle, tongue twister or proverb",
+    "what is it for",
+    "what is the answer"
+   ],
+   "mastery": "The child tells a riddle (a puzzle with a hidden answer, often with a fixed opening), a tongue twister (repeated similar sounds to practise speech) and a proverb (a short saying with a lesson) apart, and says what each is used for. Evidence rule: at least four of the last five fresh questions right across at least two question forms, and no repeated pick of the same misconception."
+  },
+  "ENGL.G9.LISTEN.T2_ORAL_LITERATURE_SHOR.PERFORM_ORAL": {
+   "forms": [
+    "perform the riddles",
+    "recite the oral poem",
+    "act the scene"
+   ],
+   "mastery": "The child performs riddles, tongue twisters, oral poems and play scenes with clear diction, fitting voice, gestures, facial expression, props where needed and audience involvement. Evidence rule: the teacher hears it done right on two different days, scored with the observation rubric (PLAN_OBSERVATION_RUBRICS.md); a tapped answer cannot show it."
   },
   "ENGL.G9.READIN.T2_INTENSIVE_READING_SI.RP_STYLE": {
    "forms": [
@@ -335,6 +383,14 @@
    ],
    "mastery": "The child says a poem is made of lines grouped in stanzas, that rhyme is repeated end sounds, and that personification gives human actions or feelings to a thing, as in \"the wind whispered\". Evidence rule: at least four of the last five fresh questions right across at least two question forms, and no repeated pick of the same misconception."
   },
+  "ENGL.G9.READIN.T3_POEMS_STRUCTURE.POEM_WRITING": {
+   "forms": [
+    "write a poem about",
+    "add a stanza",
+    "use personification"
+   ],
+   "mastery": "The child writes a short poem in stanzas on a topic (environmental conservation), with imagery, a device such as personification or repetition, and a clear feeling or message. Evidence rule: two pieces of the learner's own writing marked Meeting Expectations or above on the KICD rubric indicator."
+  },
   "ENGL.G9.WRITIN.T3_STRUCTURE_OF_A_PARAG.PARAGRAPH": {
    "forms": [
     "pick the right answer",
@@ -342,6 +398,22 @@
     "find the false step in a learner's reason"
    ],
    "mastery": "The child says a good paragraph has a topic sentence, supporting sentences, unity (one idea), coherence (ideas in order, joined by linking words) and a closing sentence. Evidence rule: at least four of the last five fresh questions right across at least two question forms, and no repeated pick of the same misconception."
+  },
+  "ENGL.G9.WRITIN.T3_STRUCTURE_OF_A_PARAG.PARAGRAPH_WRITING": {
+   "forms": [
+    "write a paragraph about",
+    "write a narrative paragraph in the first person",
+    "write a descriptive paragraph"
+   ],
+   "mastery": "The child writes paragraphs with a topic sentence, unity (one idea), coherence (linked in order), development (examples or details) and a close, using the first or second person as asked. Evidence rule: two pieces of the learner's own writing marked Meeting Expectations or above on the KICD rubric indicator."
+  },
+  "ENGL.G9.LISTEN.T4_SELECTIVE_LISTENING.LISTEN_RESPOND": {
+   "forms": [
+    "what information did you hear",
+    "is the message fair",
+    "take notes on the speeches"
+   ],
+   "mastery": "The child selects the information asked for from a listening text, takes notes on points made by different speakers, judges the message with a reason, and responds, including expressing feelings about a poem with fitting words. Evidence rule: the teacher hears it done right on two different days, scored with the observation rubric (PLAN_OBSERVATION_RUBRICS.md); a tapped answer cannot show it."
   },
   "ENGL.G9.READIN.T4_INTENSIVE_READING.RS_PREDICT": {
    "forms": [
@@ -386,6 +458,30 @@
    ],
    "mastery": "The child reads the scene and picks the answer that fits the words and stage directions, and does not pick a small detail, the opposite or something not in the text. Evidence rule: at least four of the last five fresh questions right across at least two question forms, and no repeated pick of the same misconception."
   },
+  "ENGL.G9.LISTEN.T5_PRONUNCIATION.PRONOUNCE_SOUNDS": {
+   "forms": [
+    "say the word after the teacher",
+    "which word has the sound",
+    "read the sentence aloud"
+   ],
+   "mastery": "The child identifies and says /j/ (yes), /w/ (wet) and the diphthongs /aɪ/ (my), /eɪ/ (day), /aʊ/ (now) and /ʊə/ (tour) clearly, so that yet and wet, day and die are heard correctly. Evidence rule: the teacher hears it done right on two different days, scored with the observation rubric (PLAN_OBSERVATION_RUBRICS.md); a tapped answer cannot show it."
+  },
+  "ENGL.G9.LISTEN.T5_PRONUNCIATION.SENTENCE_STRESS": {
+   "forms": [
+    "stress the content words",
+    "stress the word that changes the meaning",
+    "say it to mean something else"
+   ],
+   "mastery": "The child stresses content words and keeps function words weak, and moves the stress to the word that carries the contrast (SHE won the medal, not her brother). Evidence rule: the teacher hears it done right on two different days, scored with the observation rubric (PLAN_OBSERVATION_RUBRICS.md); a tapped answer cannot show it."
+  },
+  "ENGL.G9.READIN.T5_REFERENCE_MATERIALS_.REFERENCE_RESEARCH": {
+   "forms": [
+    "which reference would you use",
+    "check the usage",
+    "research the topic"
+   ],
+   "mastery": "The child names the main reference materials and what each is for, checks a word's meaning, part of speech and usage in a dictionary, finds synonyms in a thesaurus, and uses an encyclopaedia for a short research task. Evidence rule: at least four of the last five fresh questions right across at least two question forms, and no repeated pick of the same misconception."
+  },
   "ENGL.G9.GRAMMA.T5_ORDER_OF_ADJECTIVES.ADJ_ORDER": {
    "forms": [
     "pick the right answer",
@@ -394,6 +490,14 @@
    ],
    "mastery": "The child says adjectives go in the order opinion, size, age, colour, origin, material, so we say \"a lovely small old brown wooden box\". Evidence rule: at least four of the last five fresh questions right across at least two question forms, and no repeated pick of the same misconception."
   },
+  "ENGL.G9.READIN.T5_PLAY_STYLE_CLASS_REA.PLAY_STYLE": {
+   "forms": [
+    "find an example of",
+    "what does this device show",
+    "how does it support the message"
+   ],
+   "mastery": "The child finds features of style in a play (dialogue, irony, humour, monologue, songs, stage directions, flashback) with examples and explains how each supports the play's message. Evidence rule: at least four of the last five fresh questions right across at least two question forms, and no repeated pick of the same misconception."
+  },
   "ENGL.G9.WRITIN.T5_LETTER_OF_APPLICATIO.LETTER_APPLICATION": {
    "forms": [
     "pick the right answer",
@@ -401,6 +505,30 @@
     "find the false step in a learner's reason"
    ],
    "mastery": "The child names the writer's address, date, receiver's address, salutation (Dear Sir or Madam), subject line, body, subscription (Yours faithfully) and signature, and says Yours faithfully goes with Dear Sir or Madam. Evidence rule: at least four of the last five fresh questions right across at least two question forms, and no repeated pick of the same misconception."
+  },
+  "ENGL.G9.WRITIN.T5_LETTER_OF_APPLICATIO.APPLICATION_LETTER": {
+   "forms": [
+    "write a letter of application",
+    "correct this letter",
+    "what is missing"
+   ],
+   "mastery": "The child writes a formal letter with both addresses, the date, Dear Sir or Madam, a subject line, the purpose, his or her qualifications and interests, a polite request, Yours faithfully, signature and full name. Evidence rule: two pieces of the learner's own writing marked Meeting Expectations or above on the KICD rubric indicator."
+  },
+  "ENGL.G9.LISTEN.T6_CONVERSATIONAL_SKILL.NEGOTIATION": {
+   "forms": [
+    "choose the negotiating phrase",
+    "make a counter-offer",
+    "which response keeps the deal going"
+   ],
+   "mastery": "The child uses negotiating phrases (Would you consider ...? How about we meet halfway? I can offer ... if you ...), listens to the other side, offers a compromise and uses calm cues (eye contact, open hands). Evidence rule: at least four of the last five fresh questions right across at least two question forms, and no repeated pick of the same misconception."
+  },
+  "ENGL.G9.READIN.T6_READING_FLUENCY.READ_FLUENTLY": {
+   "forms": [
+    "read aloud to the teacher",
+    "ways to read more fluently",
+    "read the scene with expression"
+   ],
+   "mastery": "The child names ways of reading more fluently (preview, read in phrases, ignore an unknown word and read on, vary the voice) and reads a Grade 9 text accurately and expressively at the right speed. Evidence rule: the teacher hears it done right on two different days, scored with the observation rubric (PLAN_OBSERVATION_RUBRICS.md); a tapped answer cannot show it."
   },
   "ENGL.G9.GRAMMA.T6_COMPARISON_OF_ADVERB.ADVERB_DEGREES": {
    "forms": [
@@ -425,6 +553,14 @@
    ],
    "mastery": "The child says homophones sound alike but differ in spelling and meaning (their and there), homonyms share spelling and sound (bank), and spells words such as separate, necessary, beginning and committee. Evidence rule: at least four of the last five fresh questions right across at least two question forms, and no repeated pick of the same misconception."
   },
+  "ENGL.G9.READIN.T7_INTENSIVE_READING_IN.INTERPRET_EVALUATE": {
+   "forms": [
+    "what does the writer mean",
+    "is the claim reliable",
+    "interpretation or evaluation"
+   ],
+   "mastery": "The child explains what a text means (interpretation) and separately judges how true, fair or useful it is (evaluation), giving reasons from the text. Evidence rule: at least four of the last five fresh questions right across at least two question forms, and no repeated pick of the same misconception."
+  },
   "ENGL.G9.GRAMMA.T7_RELATIVE_PRONOUNS_IN.RELATIVE_PRONOUNS": {
    "forms": [
     "pick the right answer",
@@ -439,6 +575,22 @@
     "pick the right answer on a second text"
    ],
    "mastery": "The child reads the scene and picks the answer that fits the words and stage directions, and does not pick a small detail, the opposite or something not in the text. Evidence rule: at least four of the last five fresh questions right across at least two question forms, and no repeated pick of the same misconception."
+  },
+  "ENGL.G9.WRITIN.T7_THE_WRITING_PROCESS.WRITING_PROCESS": {
+   "forms": [
+    "order the stages",
+    "what happens at this stage",
+    "which stage is this"
+   ],
+   "mastery": "The child names and orders the stages (prewriting, drafting, revising, editing, publishing) and says what happens at each, including for a dialogue. Evidence rule: at least four of the last five fresh questions right across at least two question forms, and no repeated pick of the same misconception."
+  },
+  "ENGL.G9.WRITIN.T7_THE_WRITING_PROCESS.NARRATIVE_COMPOSITION": {
+   "forms": [
+    "write a story about",
+    "use the elements of a narrative",
+    "use idioms in your story"
+   ],
+   "mastery": "The child writes a story with setting, characters, a plot that builds to a climax and a resolution, background details that make it believable and idioms that fit, following the writing process. Evidence rule: two pieces of the learner's own writing marked Meeting Expectations or above on the KICD rubric indicator."
   },
   "ENGL.G9.READIN.T8_READING_FOR_INTERPRE.RP_POV": {
    "forms": [
@@ -462,6 +614,14 @@
    ],
    "mastery": "The child reads the poem for its speaker, repetition and message and picks the one that fits all its lines, and does not pick a small detail, the opposite or something not in the text. Evidence rule: at least four of the last five fresh questions right across at least two question forms, and no repeated pick of the same misconception."
   },
+  "ENGL.G9.WRITIN.T8_ASSESSING_WRITING.ASSESS_WRITING": {
+   "forms": [
+    "assess with the rubric",
+    "what makes it good",
+    "give feedback"
+   ],
+   "mastery": "The child names the qualities of a good composition (relevance, organisation, language, creativity, mechanics) and scores a composition against given criteria with comments and suggested corrections. Evidence rule: the teacher sees it in two pieces of the learner's own work, scored with the KICD rubric indicator."
+  },
   "ENGL.G9.GRAMMA.T9_CONJUNCTIONS_CORRELA.CORRELATIVE": {
    "forms": [
     "pick the right answer",
@@ -478,6 +638,22 @@
    ],
    "mastery": "The child names characters, setting, plot (beginning, complication, climax, resolution) and theme, and says background information makes a story believable. Evidence rule: at least four of the last five fresh questions right across at least two question forms, and no repeated pick of the same misconception."
   },
+  "ENGL.G9.LISTEN.T10_IMPROMPTU_SPEECHES.IMPROMPTU_SPEECH": {
+   "forms": [
+    "speak for two minutes on a topic just given",
+    "plan in one minute",
+    "what are the steps"
+   ],
+   "mastery": "Given a topic, the child takes a minute to choose a position and two or three points, then speaks with an opening, the points with examples and a short close, clearly and with confidence. Evidence rule: the teacher hears it done right on two different days, scored with the observation rubric (PLAN_OBSERVATION_RUBRICS.md); a tapped answer cannot show it."
+  },
+  "ENGL.G9.READIN.T10_NOTE_MAKING.NOTE_MAKING": {
+   "forms": [
+    "make notes from the passage",
+    "list the arguments for and against",
+    "what are the main points"
+   ],
+   "mastery": "The child picks out the position, the main arguments and the evidence of an argumentative passage, and notes them in key words under headings for and against. Evidence rule: the teacher sees it in two pieces of the learner's own work, scored with the KICD rubric indicator."
+  },
   "ENGL.G9.GRAMMA.T10_DETERMINERS_NUMERALS.DETERMINERS_NUM": {
    "forms": [
     "pick the right answer",
@@ -485,6 +661,38 @@
     "find the false step in a learner's reason"
    ],
    "mastery": "The child says cardinal numbers (two, ten) count and ordinal numbers (second, tenth) give position, and both come before the noun. Evidence rule: at least four of the last five fresh questions right across at least two question forms, and no repeated pick of the same misconception."
+  },
+  "ENGL.G9.READIN.T10_PLAY_PROJECT.PROPS_COSTUMES": {
+   "forms": [
+    "which prop fits the scene",
+    "what mood does the costume create",
+    "choose a costume for"
+   ],
+   "mastery": "The child chooses simple props and costumes for a scene (a lantern for night, a torn kanga for poverty) and says what mood or atmosphere they create. Evidence rule: at least four of the last five fresh questions right across at least two question forms, and no repeated pick of the same misconception."
+  },
+  "ENGL.G9.WRITIN.T10_FILLING_FORMS_APPLIC.BURSARY_FORMS": {
+   "forms": [
+    "which form is a bursary form",
+    "fill in the form",
+    "correct the form"
+   ],
+   "mastery": "The child picks out bursary and scholarship forms from others, and fills one accurately and completely, in capitals where asked, with the right documents attached and the declaration signed. Evidence rule: two pieces of the learner's own writing marked Meeting Expectations or above on the KICD rubric indicator."
+  },
+  "ENGL.G9.LISTEN.T11_CONVERSATION_SKILLS_.JOB_INTERVIEW": {
+   "forms": [
+    "prepare for the interview",
+    "ask the interviewee",
+    "answer the panel"
+   ],
+   "mastery": "The child prepares (researching the job, dressing well, bringing documents), asks or answers fitting interview questions with examples, and greets, listens and closes politely. Evidence rule: the teacher hears it done right on two different days, scored with the observation rubric (PLAN_OBSERVATION_RUBRICS.md); a tapped answer cannot show it."
+  },
+  "ENGL.G9.READIN.T11_EXTENSIVE_READING_FI.FICTION_NONFICTION": {
+   "forms": [
+    "fiction or non-fiction",
+    "which clues show it",
+    "sort the books"
+   ],
+   "mastery": "The child sorts texts into fiction (made-up characters and events) and non-fiction (facts about real people, places and events), giving clues from the text. Evidence rule: at least four of the last five fresh questions right across at least two question forms, and no repeated pick of the same misconception."
   },
   "ENGL.G9.GRAMMA.T11_WORD_CLASSES_NOUNS.NOUNS_FORMED": {
    "forms": [
@@ -531,6 +739,14 @@
    ],
    "mastery": "The child reads the scene and picks the answer that fits the words and stage directions, and does not pick a small detail, the opposite or something not in the text. Evidence rule: at least four of the last five fresh questions right across at least two question forms, and no repeated pick of the same misconception."
   },
+  "ENGL.G9.WRITIN.T12_THE_WRITING_PROCESS_.DIALOGUE_WRITING": {
+   "forms": [
+    "write a dialogue on",
+    "revise the dialogue",
+    "set out the dialogue"
+   ],
+   "mastery": "The child plans, drafts, revises and edits a dialogue on a theme, with a setting, names and colons, a new line per speaker, stage directions in brackets and a clear purpose. Evidence rule: two pieces of the learner's own writing marked Meeting Expectations or above on the KICD rubric indicator."
+  },
   "ENGL.G9.READIN.T13_INTENSIVE_READING_VI.RS_IMAGES": {
    "forms": [
     "pick the right answer",
@@ -545,6 +761,22 @@
     "find the false step in a learner's reason"
    ],
    "mastery": "The child picks because (reason), although (contrast), if and unless (condition), when and while (time) and since, and says a complex sentence has a main clause and a subordinate clause. Evidence rule: at least four of the last five fresh questions right across at least two question forms, and no repeated pick of the same misconception."
+  },
+  "ENGL.G9.WRITIN.T13_CREATIVE_WRITING_IDI.IDIOMS": {
+   "forms": [
+    "what does the idiom mean here",
+    "choose the idiom",
+    "use it in a sentence"
+   ],
+   "mastery": "The child explains given idioms from their context (all at sea, to rock the boat, plain sailing) and chooses the idiom that fits a situation. Evidence rule: at least four of the last five fresh questions right across at least two question forms, and no repeated pick of the same misconception."
+  },
+  "ENGL.G9.LISTEN.T14_INTONATION_IN_SENTEN.QUESTION_TAGS": {
+   "forms": [
+    "add the question tag",
+    "rise or fall",
+    "write a sentence with a tag"
+   ],
+   "mastery": "The child writes the tag with the helping verb, the opposite sign and a pronoun (You play football, don't you?), uses will you after commands and let's with shall we, and uses a falling tune when sure and a rising tune when asking. Evidence rule: at least four of the last five fresh questions right across at least two question forms, and no repeated pick of the same misconception."
   },
   "ENGL.G9.READIN.T14_SUMMARISING_ARGUMENT.RS_SUMMARY": {
    "forms": [
@@ -561,12 +793,36 @@
    ],
    "mastery": "The child says direct speech gives the exact words in quotation marks and indirect speech reports them without quotation marks, with tense and pronouns changed (am becomes was, now becomes then). Evidence rule: at least four of the last five fresh questions right across at least two question forms, and no repeated pick of the same misconception."
   },
+  "ENGL.G9.WRITIN.T14_DESCRIPTIVE_WRITING_.DESCRIPTIVE_COMPOSITION": {
+   "forms": [
+    "describe the stadium",
+    "use all five senses",
+    "revise and spell-check"
+   ],
+   "mastery": "The child follows the writing process to write a 280 to 320 word description that uses all five senses, exact and imaginative language, correct spelling and a clear order. Evidence rule: two pieces of the learner's own writing marked Meeting Expectations or above on the KICD rubric indicator."
+  },
+  "ENGL.G9.LISTEN.T15_ORAL_REPORTS_NEWS_RO.NEWS_REPORT": {
+   "forms": [
+    "read the news in two minutes",
+    "what makes this report good",
+    "present the news"
+   ],
+   "mastery": "The child reads a short news report in the time given, with clear pace and pauses, names the features of a good oral news report (headline first, who, what, where, when, a neutral tone), and presents one. Evidence rule: the teacher hears it done right on two different days, scored with the observation rubric (PLAN_OBSERVATION_RUBRICS.md); a tapped answer cannot show it."
+  },
   "ENGL.G9.READIN.T15_READING_FLUENCY.RS_FLUENCY": {
    "forms": [
     "pick the right answer",
     "pick the right answer on a second text"
    ],
    "mastery": "The child finds the answer in the passage and picks the one that covers what the question asks, and does not pick a small detail, the opposite or something not in the text. Evidence rule: at least four of the last five fresh questions right across at least two question forms, and no repeated pick of the same misconception."
+  },
+  "ENGL.G9.READIN.T15_READING_FLUENCY.SKIM_SCAN": {
+   "forms": [
+    "what is the text about",
+    "find the date",
+    "what do you do with an unknown word"
+   ],
+   "mastery": "The child previews a text and reads on past unknown words, skims for the gist (title, first lines, headings) and scans for a specific detail. Evidence rule: at least four of the last five fresh questions right across at least two question forms, and no repeated pick of the same misconception."
   },
   "ENGL.G9.GRAMMA.T15_SENTENCES_1_IMPERATI.EXCLAM_IMPERATIVE": {
    "forms": [
@@ -575,6 +831,14 @@
     "find the false step in a learner's reason"
    ],
    "mastery": "The child says an imperative gives a command or request and ends with a full stop or exclamation mark, and an exclamatory sentence shows strong feeling and ends with an exclamation mark. Evidence rule: at least four of the last five fresh questions right across at least two question forms, and no repeated pick of the same misconception."
+  },
+  "ENGL.G9.WRITIN.T15_EMAILS.EMAIL": {
+   "forms": [
+    "write an email to",
+    "what is missing",
+    "write a subject line"
+   ],
+   "mastery": "The child writes an email with the receiver's address, a clear subject line, a greeting that suits the reader, short paragraphs, a closing and the name, and mentions any attachment. Evidence rule: two pieces of the learner's own writing marked Meeting Expectations or above on the KICD rubric indicator."
   }
  }
 }

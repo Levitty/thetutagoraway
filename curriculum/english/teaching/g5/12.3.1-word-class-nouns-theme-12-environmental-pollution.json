@@ -1,0 +1,91 @@
+{
+ "sub_strand": "ENGL.G5.GRAMMA.T12_WORD_CLASS_NOUNS",
+ "title": "Word Class: Nouns (Theme 12: Environmental pollution)",
+ "status": "draft: written 18 Nov 2026 offline for Grade 5 English; not yet checked by a Kenyan English teacher; not loaded by the live tutor",
+ "notes": "",
+ "skills": [
+  {
+   "skill": "ENGL.G5.GRAMMA.T12_WORD_CLASS_NOUNS.SAME_SINGULAR_PLURAL",
+   "assessed_by": "questions",
+   "key_step": "The child keeps sheep, fish and deer the same and lets the verb show one or many.",
+   "floor": {
+    "prerequisite": "Makes irregular plurals.",
+    "question": "child",
+    "answer": "children"
+   },
+   "steps": [
+    "Learn the list.",
+    "Same form.",
+    "Use the verb to show number."
+   ],
+   "contexts": [
+    "pollution harming fish"
+   ],
+   "board": [
+    {
+     "beat": "write",
+     "do": "Write: The ___ are dying. (fish)"
+    },
+    {
+     "beat": "point",
+     "do": "Point at are.",
+     "say": "One or many?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for the child to answer."
+    },
+    {
+     "beat": "child_draws",
+     "do": "The child writes about one sheep."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "ENGL.G5.GRAMMA.T12_WORD_CLASS_NOUNS.SAME_SINGULAR_PLURAL.M_NOUN_SHEEPS",
+     "listen_for": [
+      "sheeps"
+     ],
+     "ask": "Does sheep change?",
+     "repair": "No."
+    },
+    {
+     "code": "ENGL.G5.GRAMMA.T12_WORD_CLASS_NOUNS.SAME_SINGULAR_PLURAL.M_NOUN_OVERREGULAR",
+     "listen_for": [
+      "childs"
+     ],
+     "ask": "Regular?",
+     "repair": "Children."
+    },
+    {
+     "code": "ENGL.G5.GRAMMA.T12_WORD_CLASS_NOUNS.SAME_SINGULAR_PLURAL.M_NOUN_VERB_AGREEMENT",
+     "listen_for": [
+      "is"
+     ],
+     "ask": "One or many?",
+     "repair": "Are."
+    },
+    {
+     "code": "ENGL.G5.GRAMMA.T12_WORD_CLASS_NOUNS.SAME_SINGULAR_PLURAL.M_NOUN_A_BEFORE_PLURAL",
+     "listen_for": [
+      "a fishes"
+     ],
+     "ask": "One?",
+     "repair": "A fish."
+    }
+   ],
+   "checks": [
+    {
+     "question": "Many ___ (sheep)",
+     "answer": "sheep",
+     "shows": "same"
+    },
+    {
+     "question": "The deer ___ (is/are) running (many).",
+     "answer": "are",
+     "shows": "verb"
+    }
+   ]
+  }
+ ]
+}

@@ -1,0 +1,92 @@
+{
+ "sub_strand": "ENGL.G9.LISTEN.T3_LISTENING_COMPREHENS",
+ "title": "Listening Comprehension (Grade Appropriate Texts) (Theme 3: Environmental conservation)",
+ "status": "draft: written 18 Nov 2026 offline for Grade 9 English; not yet checked by a Kenyan English teacher; not loaded by the live tutor",
+ "notes": "",
+ "skills": [
+  {
+   "skill": "ENGL.G9.LISTEN.T3_LISTENING_COMPREHENS.LS_MAIN",
+   "assessed_by": "questions",
+   "key_step": "The child listens for the speaker's conclusion to find the side argued, then the details.",
+   "floor": {
+    "prerequisite": "Finds the main idea of a talk.",
+    "question": "Main idea?",
+    "answer": "an idea"
+   },
+   "steps": [
+    "Listen to all.",
+    "Find the conclusion.",
+    "Main idea.",
+    "Details."
+   ],
+   "contexts": [
+    "argumentative talks on conservation"
+   ],
+   "board": [
+    {
+     "beat": "write",
+     "do": "Write: Side / Reasons."
+    },
+    {
+     "beat": "point",
+     "do": "Point at Side.",
+     "say": "Which side?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for the child to answer."
+    },
+    {
+     "beat": "child_draws",
+     "do": "The child notes a reason."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "ENGL.G9.LISTEN.T3_LISTENING_COMPREHENS.LS_MAIN.M_EN9_LS_MAIN_DETAIL",
+     "listen_for": [
+      "an answer that is a small detail"
+     ],
+     "ask": "Does that answer the question, or is it a nearby detail?",
+     "repair": "Find the exact answer in the text."
+    },
+    {
+     "code": "ENGL.G9.LISTEN.T3_LISTENING_COMPREHENS.LS_MAIN.M_EN9_LS_MAIN_OPPOSITE",
+     "listen_for": [
+      "an answer that is the opposite"
+     ],
+     "ask": "Does the text say that, or the opposite?",
+     "repair": "Read the sentence again."
+    },
+    {
+     "code": "ENGL.G9.LISTEN.T3_LISTENING_COMPREHENS.LS_MAIN.M_EN9_LS_MAIN_NOTSAID",
+     "listen_for": [
+      "an answer that is something not in the text"
+     ],
+     "ask": "Can you point to where the text says it?",
+     "repair": "Answer only from the text."
+    },
+    {
+     "code": "ENGL.G9.LISTEN.T3_LISTENING_COMPREHENS.LS_MAIN.M9_LS_SIDE",
+     "listen_for": [
+      "plastic bags are useful"
+     ],
+     "ask": "Conclusion?",
+     "repair": "Shows the side."
+    }
+   ],
+   "checks": [
+    {
+     "question": "Main idea of a talk concluding \"ban plastic\"?",
+     "answer": "plastic should be banned",
+     "shows": "side"
+    },
+    {
+     "question": "Detail asked?",
+     "answer": "the exact detail",
+     "shows": "detail"
+    }
+   ]
+  }
+ ]
+}

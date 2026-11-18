@@ -1,0 +1,178 @@
+{
+ "sub_strand": "ENGL.G7.READIN.T5_INTENSIVE_READING_OR",
+ "title": "Intensive Reading: Oral Narratives (Theme 5: Family)",
+ "status": "draft: written 18 Nov 2026 offline for Grade 7 English; not yet checked by a Kenyan English teacher; not loaded by the live tutor",
+ "notes": "",
+ "skills": [
+  {
+   "skill": "ENGL.G7.READIN.T5_INTENSIVE_READING_OR.MORAL_LESSON",
+   "assessed_by": "questions",
+   "key_step": "The child reads the ending and says the lesson in a sentence about how people should live.",
+   "floor": {
+    "prerequisite": "Finds main ideas.",
+    "question": "Main idea?",
+    "answer": "an idea"
+   },
+   "steps": [
+    "Read the ending.",
+    "What happened to whom?",
+    "Say the lesson."
+   ],
+   "contexts": [
+    "legends",
+    "class reader"
+   ],
+   "board": [
+    {
+     "beat": "write",
+     "do": "Write: The proud warrior lost the race."
+    },
+    {
+     "beat": "point",
+     "do": "Point at proud.",
+     "say": "Lesson?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for the child to answer."
+    },
+    {
+     "beat": "child_draws",
+     "do": "The child states it."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "ENGL.G7.READIN.T5_INTENSIVE_READING_OR.MORAL_LESSON.M7_ML_DETAIL",
+     "listen_for": [
+      "a detail from the story"
+     ],
+     "ask": "Detail or lesson?",
+     "repair": "Lesson."
+    },
+    {
+     "code": "ENGL.G7.READIN.T5_INTENSIVE_READING_OR.MORAL_LESSON.M7_ML_NOT_TAUGHT",
+     "listen_for": [
+      "a lesson the story does not teach"
+     ],
+     "ask": "Does the story teach that?",
+     "repair": "Check the end."
+    },
+    {
+     "code": "ENGL.G7.READIN.T5_INTENSIVE_READING_OR.MORAL_LESSON.M7_ML_OPPOSITE",
+     "listen_for": [
+      "the opposite of the lesson"
+     ],
+     "ask": "What happened in the end?",
+     "repair": "Read it."
+    },
+    {
+     "code": "ENGL.G7.READIN.T5_INTENSIVE_READING_OR.MORAL_LESSON.M7_ML_HERO_TRAIT",
+     "listen_for": [
+      "being rich"
+     ],
+     "ask": "Rich or brave?",
+     "repair": "Brave."
+    }
+   ],
+   "checks": [
+    {
+     "question": "Lesson of the greedy hyena?",
+     "answer": "greed brings trouble",
+     "shows": "lesson"
+    },
+    {
+     "question": "Is \"the hyena was grey\" a lesson?",
+     "answer": "No",
+     "shows": "detail"
+    }
+   ]
+  },
+  {
+   "skill": "ENGL.G7.READIN.T5_INTENSIVE_READING_OR.RELATE_TO_LIFE",
+   "assessed_by": "teacher",
+   "key_step": "The child names the character, lesson or event, links it to a real person or choice, and says why it matters.",
+   "floor": {
+    "prerequisite": "Knows the moral lesson.",
+    "question": "What does the legend teach?",
+    "answer": "a lesson"
+   },
+   "steps": [
+    "Name the lesson or character.",
+    "Find a real example.",
+    "Say how they are alike.",
+    "Say why it matters."
+   ],
+   "contexts": [
+    "legends",
+    "monster narratives",
+    "poems on travel"
+   ],
+   "board": [
+    {
+     "beat": "write",
+     "do": "Write: In the text ... In real life ... It matters because ..."
+    },
+    {
+     "beat": "point",
+     "do": "Point at In real life.",
+     "say": "Who is like the hero?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for the child to answer."
+    },
+    {
+     "beat": "child_draws",
+     "do": "The child says why it matters."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "ENGL.G7.READIN.T5_INTENSIVE_READING_OR.RELATE_TO_LIFE.M7_X_RL_RETELL",
+     "listen_for": [
+      "He fought the monster and won."
+     ],
+     "ask": "Is that real life?",
+     "repair": "Name a real example."
+    },
+    {
+     "code": "ENGL.G7.READIN.T5_INTENSIVE_READING_OR.RELATE_TO_LIFE.M7_X_RL_SURFACE",
+     "listen_for": [
+      "We also have big animals."
+     ],
+     "ask": "Is it the lesson?",
+     "repair": "Link the lesson."
+    },
+    {
+     "code": "ENGL.G7.READIN.T5_INTENSIVE_READING_OR.RELATE_TO_LIFE.M7_X_RL_NO_WHY",
+     "listen_for": [
+      "For fun."
+     ],
+     "ask": "Why tell it?",
+     "repair": "What it teaches."
+    },
+    {
+     "code": "ENGL.G7.READIN.T5_INTENSIVE_READING_OR.RELATE_TO_LIFE.M7_X_RL_CHANGES_TEXT",
+     "listen_for": [
+      "He ran away, like my cousin did."
+     ],
+     "ask": "What did the text say?",
+     "repair": "Keep it."
+    }
+   ],
+   "checks": [
+    {
+     "question": "Relate the greedy monster to life.",
+     "answer": "a real example of greed",
+     "shows": "link"
+    },
+    {
+     "question": "Why are legends told?",
+     "answer": "they teach values and history",
+     "shows": "purpose"
+    }
+   ]
+  }
+ ]
+}

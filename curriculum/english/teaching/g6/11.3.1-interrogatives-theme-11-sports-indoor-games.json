@@ -1,0 +1,101 @@
+{
+ "sub_strand": "ENGL.G6.LANGUA.T11_INTERROGATIVES",
+ "title": "Interrogatives (Theme 11: Sports – indoor games)",
+ "status": "draft: written 18 Nov 2026 offline for Grade 6 English; not yet checked by a Kenyan English teacher; not loaded by the live tutor",
+ "notes": "",
+ "skills": [
+  {
+   "skill": "ENGL.G6.LANGUA.T11_INTERROGATIVES.INTERROGATIVES_USE",
+   "assessed_by": "questions",
+   "key_step": "The child chooses the question word by the answer wanted: owner, choice, number, time length, distance, frequency.",
+   "floor": {
+    "prerequisite": "Asks WH questions.",
+    "question": "Ask about a reason.",
+    "answer": "Why ...?"
+   },
+   "steps": [
+    "Owner: whose.",
+    "Choice: which.",
+    "Length of time: how long.",
+    "Distance: how far.",
+    "Frequency: how often."
+   ],
+   "contexts": [
+    "indoor games"
+   ],
+   "board": [
+    {
+     "beat": "write",
+     "do": "Write: ___ is it to Kisumu? (distance)"
+    },
+    {
+     "beat": "point",
+     "do": "Point at the gap.",
+     "say": "Time or distance?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for the child to answer."
+    },
+    {
+     "beat": "child_draws",
+     "do": "The child writes a how often question."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "ENGL.G6.LANGUA.T11_INTERROGATIVES.INTERROGATIVES_USE.M_Q_WHO_WHOSE",
+     "listen_for": [
+      "Who"
+     ],
+     "ask": "Owner?",
+     "repair": "Whose."
+    },
+    {
+     "code": "ENGL.G6.LANGUA.T11_INTERROGATIVES.INTERROGATIVES_USE.M_Q_WHAT_WHICH",
+     "listen_for": [
+      "What"
+     ],
+     "ask": "A choice?",
+     "repair": "Which."
+    },
+    {
+     "code": "ENGL.G6.LANGUA.T11_INTERROGATIVES.INTERROGATIVES_USE.M_Q_HOWMUCH_MANY",
+     "listen_for": [
+      "much"
+     ],
+     "ask": "Count?",
+     "repair": "Many."
+    },
+    {
+     "code": "ENGL.G6.LANGUA.T11_INTERROGATIVES.INTERROGATIVES_USE.M_Q_HOWLONG_HOWFAR",
+     "listen_for": [
+      "How long"
+     ],
+     "ask": "Distance?",
+     "repair": "How far."
+    },
+    {
+     "code": "ENGL.G6.LANGUA.T11_INTERROGATIVES.INTERROGATIVES_USE.M_Q_WHEN_HOWOFTEN",
+     "listen_for": [
+      "When"
+     ],
+     "ask": "Frequency?",
+     "repair": "How often."
+    }
+   ],
+   "checks": [
+    {
+     "question": "___ do you play chess? (frequency)",
+     "answer": "How often",
+     "shows": "frequency"
+    },
+    {
+     "question": "___ pen is this?",
+     "answer": "Whose",
+     "shows": "owner"
+    }
+   ]
+  }
+ ]
+}

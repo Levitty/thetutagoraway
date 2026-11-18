@@ -1,0 +1,94 @@
+{
+ "sub_strand": "ENGL.G9.READIN.T11_EXTENSIVE_READING_FI",
+ "title": "Extensive Reading: Fiction (Theme 11: Income generating activities)",
+ "status": "draft: written 18 Nov 2026 offline for Grade 9 English; not yet checked by a Kenyan English teacher; not loaded by the live tutor",
+ "notes": "",
+ "skills": [
+  {
+   "skill": "ENGL.G9.READIN.T11_EXTENSIVE_READING_FI.FICTION_NONFICTION",
+   "assessed_by": "questions",
+   "key_step": "The child asks whether the events are made up or real, using the blurb and contents.",
+   "floor": {
+    "prerequisite": "Selects suitable texts.",
+    "question": "Is this book at your level?",
+    "answer": "a judgement"
+   },
+   "steps": [
+    "Read the blurb.",
+    "Check the contents.",
+    "Made up or real?"
+   ],
+   "contexts": [
+    "the school library"
+   ],
+   "board": [
+    {
+     "beat": "write",
+     "do": "Write: biography, novel, encyclopaedia, science fiction."
+    },
+    {
+     "beat": "point",
+     "do": "Point at biography.",
+     "say": "Fiction or non-fiction?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for the child to answer."
+    },
+    {
+     "beat": "child_draws",
+     "do": "The child sorts the rest."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "ENGL.G9.READIN.T11_EXTENSIVE_READING_FI.FICTION_NONFICTION.M9_FN_REAL_PLACE",
+     "listen_for": [
+      "non-fiction"
+     ],
+     "ask": "Events real?",
+     "repair": "Fiction."
+    },
+    {
+     "code": "ENGL.G9.READIN.T11_EXTENSIVE_READING_FI.FICTION_NONFICTION.M9_FN_BIOGRAPHY",
+     "listen_for": [
+      "fiction"
+     ],
+     "ask": "True life?",
+     "repair": "Non-fiction."
+    },
+    {
+     "code": "ENGL.G9.READIN.T11_EXTENSIVE_READING_FI.FICTION_NONFICTION.M9_FN_COVER",
+     "listen_for": [
+      "the cover"
+     ],
+     "ask": "Blurb?",
+     "repair": "Check it."
+    },
+    {
+     "code": "ENGL.G9.READIN.T11_EXTENSIVE_READING_FI.FICTION_NONFICTION.M9_FN_SCIENCE_FICTION",
+     "listen_for": [
+      "non-fiction"
+     ],
+     "ask": "Made up?",
+     "repair": "Fiction."
+    }
+   ],
+   "checks": [
+    {
+     "question": "A biography is ...",
+     "answer": "non-fiction",
+     "shows": "biography"
+    },
+    {
+     "question": "A robot story is ...",
+     "answer": "fiction",
+     "shows": "science fiction"
+    }
+   ]
+  }
+ ],
+ "also_taught_by": [
+  "ENGL.G9.READIN.T1_INDEPENDENT_READING_.INDEPENDENT_READING"
+ ]
+}

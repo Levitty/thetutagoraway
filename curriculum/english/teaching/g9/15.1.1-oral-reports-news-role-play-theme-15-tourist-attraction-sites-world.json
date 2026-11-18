@@ -1,0 +1,92 @@
+{
+ "sub_strand": "ENGL.G9.LISTEN.T15_ORAL_REPORTS_NEWS_RO",
+ "title": "Oral Reports: News (role play) (Theme 15: Tourist attraction sites: world)",
+ "status": "draft: written 18 Nov 2026 offline for Grade 9 English; not yet checked by a Kenyan English teacher; not loaded by the live tutor",
+ "notes": "",
+ "skills": [
+  {
+   "skill": "ENGL.G9.LISTEN.T15_ORAL_REPORTS_NEWS_RO.NEWS_REPORT",
+   "assessed_by": "voice",
+   "key_step": "The child leads with the main news, gives who, what, where, when in a neutral tone and keeps to time.",
+   "floor": {
+    "prerequisite": "Reports events.",
+    "question": "Report a sports day.",
+    "answer": "a report"
+   },
+   "steps": [
+    "Headline first.",
+    "Who, what, where, when.",
+    "Neutral tone.",
+    "Time it."
+   ],
+   "contexts": [
+    "tourist sites news"
+   ],
+   "board": [
+    {
+     "beat": "write",
+     "do": "Write: Headline: ..."
+    },
+    {
+     "beat": "point",
+     "do": "Point at Headline.",
+     "say": "What goes first?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for the child to answer."
+    },
+    {
+     "beat": "child_draws",
+     "do": "The child reads a two-minute report."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "ENGL.G9.LISTEN.T15_ORAL_REPORTS_NEWS_RO.NEWS_REPORT.M9_NR_OPINION",
+     "listen_for": [
+      "The terrible, useless council failed again."
+     ],
+     "ask": "Fact?",
+     "repair": "Neutral."
+    },
+    {
+     "code": "ENGL.G9.LISTEN.T15_ORAL_REPORTS_NEWS_RO.NEWS_REPORT.M9_NR_TIME",
+     "listen_for": [
+      "finishes in thirty seconds"
+     ],
+     "ask": "Time?",
+     "repair": "Practise."
+    },
+    {
+     "code": "ENGL.G9.LISTEN.T15_ORAL_REPORTS_NEWS_RO.NEWS_REPORT.M9_NR_NO_HEADLINE",
+     "listen_for": [
+      "background"
+     ],
+     "ask": "First?",
+     "repair": "Main news."
+    },
+    {
+     "code": "ENGL.G9.LISTEN.T15_ORAL_REPORTS_NEWS_RO.NEWS_REPORT.M9_NR_MISSING_WS",
+     "listen_for": [
+      "nothing"
+     ],
+     "ask": "Where and when?",
+     "repair": "Add them."
+    }
+   ],
+   "checks": [
+    {
+     "question": "First in a news report?",
+     "answer": "the main news",
+     "shows": "order"
+    },
+    {
+     "question": "Neutral or opinion: \"the useless council\"?",
+     "answer": "opinion",
+     "shows": "tone"
+    }
+   ]
+  }
+ ]
+}

@@ -1,0 +1,93 @@
+{
+ "sub_strand": "ENGL.G9.LISTEN.T10_IMPROMPTU_SPEECHES",
+ "title": "Impromptu Speeches (Theme 10: Social and mass media)",
+ "status": "draft: written 18 Nov 2026 offline for Grade 9 English; not yet checked by a Kenyan English teacher; not loaded by the live tutor",
+ "notes": "",
+ "skills": [
+  {
+   "skill": "ENGL.G9.LISTEN.T10_IMPROMPTU_SPEECHES.IMPROMPTU_SPEECH",
+   "assessed_by": "voice",
+   "key_step": "The child takes a minute to pick a position and two points, then speaks with an opening, examples and a close.",
+   "floor": {
+    "prerequisite": "Prepares speeches.",
+    "question": "Parts of a speech?",
+    "answer": "salutation, introduction, points, thanks"
+   },
+   "steps": [
+    "One minute to plan.",
+    "Position.",
+    "Two points with examples.",
+    "Close."
+   ],
+   "contexts": [
+    "social media",
+    "mass media"
+   ],
+   "board": [
+    {
+     "beat": "write",
+     "do": "Write: I think ... because ... for example ... so ..."
+    },
+    {
+     "beat": "point",
+     "do": "Point at because.",
+     "say": "Your first reason?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for the child to answer."
+    },
+    {
+     "beat": "child_draws",
+     "do": "The child speaks for two minutes."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "ENGL.G9.LISTEN.T10_IMPROMPTU_SPEECHES.IMPROMPTU_SPEECH.M9_IS_NO_PLAN",
+     "listen_for": [
+      "start talking at once"
+     ],
+     "ask": "Plan?",
+     "repair": "One minute."
+    },
+    {
+     "code": "ENGL.G9.LISTEN.T10_IMPROMPTU_SPEECHES.IMPROMPTU_SPEECH.M9_IS_FREEZE",
+     "listen_for": [
+      "stay silent"
+     ],
+     "ask": "Frame?",
+     "repair": "I think ... because ..."
+    },
+    {
+     "code": "ENGL.G9.LISTEN.T10_IMPROMPTU_SPEECHES.IMPROMPTU_SPEECH.M9_IS_NO_CLOSE",
+     "listen_for": [
+      "That is all."
+     ],
+     "ask": "End?",
+     "repair": "Sum up."
+    },
+    {
+     "code": "ENGL.G9.LISTEN.T10_IMPROMPTU_SPEECHES.IMPROMPTU_SPEECH.M9_IS_OFF_TOPIC",
+     "listen_for": [
+      "That is fine."
+     ],
+     "ask": "On topic?",
+     "repair": "Link back."
+    }
+   ],
+   "checks": [
+    {
+     "question": "First step on getting the topic?",
+     "answer": "plan quickly",
+     "shows": "plan"
+    },
+    {
+     "question": "How to end?",
+     "answer": "sum up and thank",
+     "shows": "close"
+    }
+   ]
+  }
+ ]
+}

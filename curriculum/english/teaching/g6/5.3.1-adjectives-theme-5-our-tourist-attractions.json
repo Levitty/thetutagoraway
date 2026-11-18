@@ -1,0 +1,100 @@
+{
+ "sub_strand": "ENGL.G6.LANGUA.T5_ADJECTIVES",
+ "title": "Adjectives (Theme 5: Our tourist attractions)",
+ "status": "draft: written 18 Nov 2026 offline for Grade 6 English; not yet checked by a Kenyan English teacher; not loaded by the live tutor",
+ "notes": "",
+ "skills": [
+  {
+   "skill": "ENGL.G6.LANGUA.T5_ADJECTIVES.ADJECTIVE_DEGREES",
+   "assessed_by": "questions",
+   "key_step": "The child counts the things compared and uses the simple, comparative or superlative form with than or the.",
+   "floor": {
+    "prerequisite": "Uses comparatives.",
+    "question": "tall, ___, tallest",
+    "answer": "taller"
+   },
+   "steps": [
+    "One: simple.",
+    "Two: -er or more, than.",
+    "Three or more: the -est or most.",
+    "One of the + plural."
+   ],
+   "contexts": [
+    "tourist attractions compared"
+   ],
+   "board": [
+    {
+     "beat": "write",
+     "do": "Write: Kilimanjaro is ___ than Mount Kenya. (high)"
+    },
+    {
+     "beat": "point",
+     "do": "Point at than.",
+     "say": "How many compared?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for the child to answer."
+    },
+    {
+     "beat": "child_draws",
+     "do": "The child writes a superlative."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "ENGL.G6.LANGUA.T5_ADJECTIVES.ADJECTIVE_DEGREES.M_DEGR_AS_COMPARATIVE",
+     "listen_for": [
+      "taller"
+     ],
+     "ask": "As ... as?",
+     "repair": "Simple form."
+    },
+    {
+     "code": "ENGL.G6.LANGUA.T5_ADJECTIVES.ADJECTIVE_DEGREES.M_DEGR_SUPER_THAN",
+     "listen_for": [
+      "than"
+     ],
+     "ask": "Than with -est?",
+     "repair": "In."
+    },
+    {
+     "code": "ENGL.G6.LANGUA.T5_ADJECTIVES.ADJECTIVE_DEGREES.M_DEGR_THE_MISSING",
+     "listen_for": [
+      "(nothing)"
+     ],
+     "ask": "Superlative needs?",
+     "repair": "The."
+    },
+    {
+     "code": "ENGL.G6.LANGUA.T5_ADJECTIVES.ADJECTIVE_DEGREES.M_DEGR_THAN_MISSING",
+     "listen_for": [
+      "from"
+     ],
+     "ask": "From?",
+     "repair": "Than."
+    },
+    {
+     "code": "ENGL.G6.LANGUA.T5_ADJECTIVES.ADJECTIVE_DEGREES.M_DEGR_ONE_OF_SINGULAR",
+     "listen_for": [
+      "girl"
+     ],
+     "ask": "One of many what?",
+     "repair": "Plural."
+    }
+   ],
+   "checks": [
+    {
+     "question": "the ___ (tall) in the class",
+     "answer": "tallest",
+     "shows": "superlative"
+    },
+    {
+     "question": "one of the best ___ (girl)",
+     "answer": "girls",
+     "shows": "one of"
+    }
+   ]
+  }
+ ]
+}

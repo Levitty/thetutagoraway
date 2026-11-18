@@ -1,0 +1,100 @@
+{
+ "sub_strand": "ENGL.G6.LANGUA.T13_WORD_CLASSES",
+ "title": "Word Classes (Theme 13: Money – trade)",
+ "status": "draft: written 18 Nov 2026 offline for Grade 6 English; not yet checked by a Kenyan English teacher; not loaded by the live tutor",
+ "notes": "",
+ "skills": [
+  {
+   "skill": "ENGL.G6.LANGUA.T13_WORD_CLASSES.PREPOSITIONS_USE",
+   "assessed_by": "questions",
+   "key_step": "The child picks the preposition by its job: two or many, a point or a length of time, by or with.",
+   "floor": {
+    "prerequisite": "Uses prepositions of time and direction.",
+    "question": "___ Monday",
+    "answer": "on"
+   },
+   "steps": [
+    "Two: between; many: among.",
+    "Point: since; length: for.",
+    "Within a time: during.",
+    "Tool: with; doer: by."
+   ],
+   "contexts": [
+    "trade"
+   ],
+   "board": [
+    {
+     "beat": "write",
+     "do": "Write: I have lived here ___ 2020."
+    },
+    {
+     "beat": "point",
+     "do": "Point at 2020.",
+     "say": "Point or length?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for the child to answer."
+    },
+    {
+     "beat": "child_draws",
+     "do": "The child writes a for sentence."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "ENGL.G6.LANGUA.T13_WORD_CLASSES.PREPOSITIONS_USE.M_PREP_BETWEEN_AMONG",
+     "listen_for": [
+      "between"
+     ],
+     "ask": "Two or many?",
+     "repair": "Among."
+    },
+    {
+     "code": "ENGL.G6.LANGUA.T13_WORD_CLASSES.PREPOSITIONS_USE.M_PREP_SINCE_FOR",
+     "listen_for": [
+      "for"
+     ],
+     "ask": "Point in time?",
+     "repair": "Since."
+    },
+    {
+     "code": "ENGL.G6.LANGUA.T13_WORD_CLASSES.PREPOSITIONS_USE.M_PREP_DEPENDENT",
+     "listen_for": [
+      "on"
+     ],
+     "ask": "Interested on?",
+     "repair": "In."
+    },
+    {
+     "code": "ENGL.G6.LANGUA.T13_WORD_CLASSES.PREPOSITIONS_USE.M_PREP_BY_WITH",
+     "listen_for": [
+      "by"
+     ],
+     "ask": "A tool?",
+     "repair": "With."
+    },
+    {
+     "code": "ENGL.G6.LANGUA.T13_WORD_CLASSES.PREPOSITIONS_USE.M_PREP_DURING_FOR",
+     "listen_for": [
+      "for"
+     ],
+     "ask": "Within a time?",
+     "repair": "During."
+    }
+   ],
+   "checks": [
+    {
+     "question": "Share it ___ the three boys.",
+     "answer": "among",
+     "shows": "among"
+    },
+    {
+     "question": "She cut it ___ a knife.",
+     "answer": "with",
+     "shows": "with"
+    }
+   ]
+  }
+ ]
+}

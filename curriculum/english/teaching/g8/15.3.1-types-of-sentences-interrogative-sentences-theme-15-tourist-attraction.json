@@ -1,0 +1,92 @@
+{
+ "sub_strand": "ENGL.G8.GRAMMA.T15_TYPES_OF_SENTENCES_I",
+ "title": "Types of Sentences: Interrogative sentences (Theme 15: Tourist attraction sites: africa)",
+ "status": "draft: written 18 Nov 2026 offline for Grade 8 English; not yet checked by a Kenyan English teacher; not loaded by the live tutor",
+ "notes": "",
+ "skills": [
+  {
+   "skill": "ENGL.G8.GRAMMA.T15_TYPES_OF_SENTENCES_I.QUESTION_TAGS",
+   "assessed_by": "questions",
+   "key_step": "The child copies the helper, flips the sign, uses a pronoun, and uses will you after a command.",
+   "floor": {
+    "prerequisite": "Forms negatives.",
+    "question": "She is not here.",
+    "answer": "negative"
+   },
+   "steps": [
+    "Helper.",
+    "Flip.",
+    "Pronoun.",
+    "Command: will you."
+   ],
+   "contexts": [
+    "tourist sites"
+   ],
+   "board": [
+    {
+     "beat": "write",
+     "do": "Write: Close the door, ___?"
+    },
+    {
+     "beat": "point",
+     "do": "Point at Close.",
+     "say": "Command?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for the child to answer."
+    },
+    {
+     "beat": "child_draws",
+     "do": "The child writes the tag."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "ENGL.G8.GRAMMA.T15_TYPES_OF_SENTENCES_I.QUESTION_TAGS.M8_QT_SAME_SIGN",
+     "listen_for": [
+      "are you"
+     ],
+     "ask": "Same or opposite?",
+     "repair": "Opposite."
+    },
+    {
+     "code": "ENGL.G8.GRAMMA.T15_TYPES_OF_SENTENCES_I.QUESTION_TAGS.M8_QT_ISNT_IT",
+     "listen_for": [
+      "isn't it"
+     ],
+     "ask": "Isn't it?",
+     "repair": "Match."
+    },
+    {
+     "code": "ENGL.G8.GRAMMA.T15_TYPES_OF_SENTENCES_I.QUESTION_TAGS.M8_QT_WRONG_AUX",
+     "listen_for": [
+      "isn't she"
+     ],
+     "ask": "Helper?",
+     "repair": "Doesn't."
+    },
+    {
+     "code": "ENGL.G8.GRAMMA.T15_TYPES_OF_SENTENCES_I.QUESTION_TAGS.M8_X_QT_IMPERATIVE",
+     "listen_for": [
+      "isn't it"
+     ],
+     "ask": "Command?",
+     "repair": "Will you."
+    }
+   ],
+   "checks": [
+    {
+     "question": "They are here, ___?",
+     "answer": "aren't they",
+     "shows": "tag"
+    },
+    {
+     "question": "Pass the salt, ___?",
+     "answer": "will you",
+     "shows": "imperative"
+    }
+   ]
+  }
+ ]
+}

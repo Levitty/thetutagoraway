@@ -1,0 +1,187 @@
+{
+ "sub_strand": "ENGL.G7.LISTEN.T2_ORAL_PRESENTATIONS_O",
+ "title": "Oral Presentations: Oral Narratives (Theme 2: Science and health education)",
+ "status": "draft: written 18 Nov 2026 offline for Grade 7 English; not yet checked by a Kenyan English teacher; not loaded by the live tutor",
+ "notes": "",
+ "skills": [
+  {
+   "skill": "ENGL.G7.LISTEN.T2_ORAL_PRESENTATIONS_O.ORAL_TECHNIQUES",
+   "assessed_by": "questions",
+   "key_step": "The child names the performance techniques (voice, pause, eye contact, participation, gesture) and what each does.",
+   "floor": {
+    "prerequisite": "Speaks fluently.",
+    "question": "Give a short talk.",
+    "answer": "a talk"
+   },
+   "steps": [
+    "Voice change.",
+    "Pause.",
+    "Eye contact.",
+    "Audience participation.",
+    "Gesture."
+   ],
+   "contexts": [
+    "oral narratives in health education"
+   ],
+   "board": [
+    {
+     "beat": "write",
+     "do": "Write the five techniques."
+    },
+    {
+     "beat": "point",
+     "do": "Point at pause.",
+     "say": "Why pause?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for the child to answer."
+    },
+    {
+     "beat": "child_draws",
+     "do": "The child names a use for gesture."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "ENGL.G7.LISTEN.T2_ORAL_PRESENTATIONS_O.ORAL_TECHNIQUES.M7_OT_MONOTONE",
+     "listen_for": [
+      "a flat, even voice"
+     ],
+     "ask": "Does the voice change?",
+     "repair": "Vary it."
+    },
+    {
+     "code": "ENGL.G7.LISTEN.T2_ORAL_PRESENTATIONS_O.ORAL_TECHNIQUES.M7_OT_NO_PAUSE",
+     "listen_for": [
+      "speak faster"
+     ],
+     "ask": "Faster or pause?",
+     "repair": "Pause."
+    },
+    {
+     "code": "ENGL.G7.LISTEN.T2_ORAL_PRESENTATIONS_O.ORAL_TECHNIQUES.M7_OT_NO_EYE",
+     "listen_for": [
+      "at the floor"
+     ],
+     "ask": "Where to look?",
+     "repair": "Listeners."
+    },
+    {
+     "code": "ENGL.G7.LISTEN.T2_ORAL_PRESENTATIONS_O.ORAL_TECHNIQUES.M7_OT_NO_PARTICIPATION",
+     "listen_for": [
+      "reading from a paper"
+     ],
+     "ask": "Can they join?",
+     "repair": "Ask them."
+    },
+    {
+     "code": "ENGL.G7.LISTEN.T2_ORAL_PRESENTATIONS_O.ORAL_TECHNIQUES.M7_OT_GESTURE",
+     "listen_for": [
+      "stand still with no expression"
+     ],
+     "ask": "Still or acting?",
+     "repair": "Act it out."
+    }
+   ],
+   "checks": [
+    {
+     "question": "Where should the narrator look?",
+     "answer": "at the listeners",
+     "shows": "eye contact"
+    },
+    {
+     "question": "How can listeners take part?",
+     "answer": "repeat a chorus",
+     "shows": "participation"
+    }
+   ]
+  },
+  {
+   "skill": "ENGL.G7.LISTEN.T2_ORAL_PRESENTATIONS_O.PERFORM_ORAL",
+   "assessed_by": "voice",
+   "key_step": "The child chooses voice, pace, gesture and audience involvement to fit the form, then performs from memory.",
+   "floor": {
+    "prerequisite": "Knows performance techniques.",
+    "question": "Name two oral narrative techniques.",
+    "answer": "voice change, gestures"
+   },
+   "steps": [
+    "Learn the text.",
+    "Mark where voice and pace change.",
+    "Plan gestures and audience parts.",
+    "Perform and say the message."
+   ],
+   "contexts": [
+    "a trickster narrative",
+    "a lullaby",
+    "a praise song for a hero"
+   ],
+   "board": [
+    {
+     "beat": "write",
+     "do": "Write: voice, pace, gesture, audience."
+    },
+    {
+     "beat": "point",
+     "do": "Point at audience.",
+     "say": "Where can the audience join?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for the child to answer."
+    },
+    {
+     "beat": "child_draws",
+     "do": "The child performs one stanza."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "ENGL.G7.LISTEN.T2_ORAL_PRESENTATIONS_O.PERFORM_ORAL.M7_X_PO_READS",
+     "listen_for": [
+      "reads from the book with head down"
+     ],
+     "ask": "Where are your eyes?",
+     "repair": "On the audience."
+    },
+    {
+     "code": "ENGL.G7.LISTEN.T2_ORAL_PRESENTATIONS_O.PERFORM_ORAL.M7_X_PO_ONE_VOICE",
+     "listen_for": [
+      "same voice for both"
+     ],
+     "ask": "Who is speaking?",
+     "repair": "Change voice."
+    },
+    {
+     "code": "ENGL.G7.LISTEN.T2_ORAL_PRESENTATIONS_O.PERFORM_ORAL.M7_X_PO_NO_AUDIENCE",
+     "listen_for": [
+      "sing it alone and go on"
+     ],
+     "ask": "Can they join?",
+     "repair": "Teach the chorus."
+    },
+    {
+     "code": "ENGL.G7.LISTEN.T2_ORAL_PRESENTATIONS_O.PERFORM_ORAL.M7_X_PO_WRONG_MOOD",
+     "listen_for": [
+      "loud and fast"
+     ],
+     "ask": "What is the form for?",
+     "repair": "Match the style."
+    }
+   ],
+   "checks": [
+    {
+     "question": "How should a lullaby be performed?",
+     "answer": "softly and slowly",
+     "shows": "style"
+    },
+    {
+     "question": "Perform a narrative with two characters.",
+     "answer": "two distinct voices",
+     "shows": "voice"
+    }
+   ]
+  }
+ ]
+}

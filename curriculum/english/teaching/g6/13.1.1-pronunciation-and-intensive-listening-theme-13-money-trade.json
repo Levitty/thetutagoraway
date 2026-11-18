@@ -1,0 +1,181 @@
+{
+ "sub_strand": "ENGL.G6.LISTEN.T13_PRONUNCIATION_AND_IN",
+ "title": "Pronunciation and Intensive Listening (Theme 13: Money – trade)",
+ "status": "draft: written 18 Nov 2026 offline for Grade 6 English; not yet checked by a Kenyan English teacher; not loaded by the live tutor",
+ "notes": "",
+ "skills": [
+  {
+   "skill": "ENGL.G6.LISTEN.T13_PRONUNCIATION_AND_IN.MONEY_TRADE_WORDS",
+   "assessed_by": "questions",
+   "key_step": "The child explains each trade word by who buys, sells or gains.",
+   "floor": {
+    "prerequisite": "Uses money words.",
+    "question": "What is a price?",
+    "answer": "what something costs"
+   },
+   "steps": [
+    "Name it.",
+    "Who does what?",
+    "Use it."
+   ],
+   "contexts": [
+    "a market",
+    "exports at Mombasa"
+   ],
+   "board": [
+    {
+     "beat": "write",
+     "do": "Write: import, export, barter."
+    },
+    {
+     "beat": "point",
+     "do": "Point at export.",
+     "say": "Into or out of Kenya?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for the child to answer."
+    },
+    {
+     "beat": "child_draws",
+     "do": "The child uses profit in a sentence."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "ENGL.G6.LISTEN.T13_PRONUNCIATION_AND_IN.MONEY_TRADE_WORDS.M_MON_PROFIT_LOSS",
+     "listen_for": [
+      "profit"
+     ],
+     "ask": "Gain or lose?",
+     "repair": "Profit is gain."
+    },
+    {
+     "code": "ENGL.G6.LISTEN.T13_PRONUNCIATION_AND_IN.MONEY_TRADE_WORDS.M_MON_IMPORT_EXPORT",
+     "listen_for": [
+      "import"
+     ],
+     "ask": "In or out?",
+     "repair": "Export is out."
+    },
+    {
+     "code": "ENGL.G6.LISTEN.T13_PRONUNCIATION_AND_IN.MONEY_TRADE_WORDS.M_MON_RETAIL_WHOLESALE",
+     "listen_for": [
+      "wholesaler"
+     ],
+     "ask": "Large amounts or to customers?",
+     "repair": "Retailer sells to customers."
+    },
+    {
+     "code": "ENGL.G6.LISTEN.T13_PRONUNCIATION_AND_IN.MONEY_TRADE_WORDS.M6_MON_BARTER_BUY",
+     "listen_for": [
+      "buying"
+     ],
+     "ask": "Money or swap?",
+     "repair": "Barter is swap."
+    }
+   ],
+   "checks": [
+    {
+     "question": "Money gained after costs is ...",
+     "answer": "profit",
+     "shows": "word"
+    },
+    {
+     "question": "Selling tea to other countries is ...",
+     "answer": "exporting",
+     "shows": "word"
+    }
+   ]
+  },
+  {
+   "skill": "ENGL.G6.LISTEN.T13_PRONUNCIATION_AND_IN.DICTATION",
+   "assessed_by": "teacher",
+   "key_step": "The child listens to the whole sentence, writes it, then checks spelling, small words and punctuation on the second reading.",
+   "floor": {
+    "prerequisite": "Spells Grade 6 words.",
+    "question": "Spell: necessary",
+    "answer": "necessary"
+   },
+   "steps": [
+    "Listen to the whole sentence.",
+    "Write it.",
+    "Listen again and check.",
+    "Check capitals and full stops."
+   ],
+   "contexts": [
+    "a trade notice read aloud",
+    "a short news item"
+   ],
+   "board": [
+    {
+     "beat": "write",
+     "do": "Read: The trader sold maize at the market on Monday."
+    },
+    {
+     "beat": "point",
+     "do": "Point at the child's copy.",
+     "say": "Did you write every small word?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for the child to answer."
+    },
+    {
+     "beat": "child_draws",
+     "do": "The child checks against the second reading."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "ENGL.G6.LISTEN.T13_PRONUNCIATION_AND_IN.DICTATION.M6_DI_SOUND_SPELLING",
+     "listen_for": [
+      "The bisnes was sucsesful."
+     ],
+     "ask": "Is that how it is spelt?",
+     "repair": "Check the tricky words."
+    },
+    {
+     "code": "ENGL.G6.LISTEN.T13_PRONUNCIATION_AND_IN.DICTATION.M6_DI_MISSED_WORDS",
+     "listen_for": [
+      "She went market Monday."
+     ],
+     "ask": "Did you hear to and the?",
+     "repair": "Listen for small words."
+    },
+    {
+     "code": "ENGL.G6.LISTEN.T13_PRONUNCIATION_AND_IN.DICTATION.M6_DI_NO_PUNCTUATION",
+     "listen_for": [
+      "one run of words"
+     ],
+     "ask": "Where did the voice stop?",
+     "repair": "Full stop there."
+    },
+    {
+     "code": "ENGL.G6.LISTEN.T13_PRONUNCIATION_AND_IN.DICTATION.M6_DI_ADDS_WORDS",
+     "listen_for": [
+      "The prices of food went up very much."
+     ],
+     "ask": "Did the teacher say that?",
+     "repair": "Only what you hear."
+    }
+   ],
+   "checks": [
+    {
+     "question": "Write: \"Profits rose in March.\"",
+     "answer": "Profits rose in March.",
+     "shows": "accuracy"
+    },
+    {
+     "question": "Write two dictated sentences.",
+     "answer": "two sentences, capitals and full stops",
+     "shows": "punctuation"
+    }
+   ]
+  }
+ ],
+ "also_taught_by": [
+  "ENGL.G6.LISTEN.T6_PRONUNCIATION_AND_VO.SOUNDS",
+  "ENGL.G6.LISTEN.T2_PRONUNCIATION_AND_LI.PROVERBS_USE"
+ ]
+}

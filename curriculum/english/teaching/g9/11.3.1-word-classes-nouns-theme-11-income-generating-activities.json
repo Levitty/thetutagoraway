@@ -1,0 +1,91 @@
+{
+ "sub_strand": "ENGL.G9.GRAMMA.T11_WORD_CLASSES_NOUNS",
+ "title": "Word Classes: Nouns (Theme 11: Income generating activities)",
+ "status": "draft: written 18 Nov 2026 offline for Grade 9 English; not yet checked by a Kenyan English teacher; not loaded by the live tutor",
+ "notes": "",
+ "skills": [
+  {
+   "skill": "ENGL.G9.GRAMMA.T11_WORD_CLASSES_NOUNS.NOUNS_FORMED",
+   "assessed_by": "questions",
+   "key_step": "The child forms nouns from verbs, adjectives and other nouns with the right suffix.",
+   "floor": {
+    "prerequisite": "Uses affixes.",
+    "question": "happy + ness",
+    "answer": "happiness"
+   },
+   "steps": [
+    "Root.",
+    "Suffix: -tion, -ness, -ship, -hood.",
+    "Spelling."
+   ],
+   "contexts": [
+    "income generation"
+   ],
+   "board": [
+    {
+     "beat": "write",
+     "do": "Write: decide, friend, child, kind."
+    },
+    {
+     "beat": "point",
+     "do": "Point at decide.",
+     "say": "Noun?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for the child to answer."
+    },
+    {
+     "beat": "child_draws",
+     "do": "The child forms the others."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "ENGL.G9.GRAMMA.T11_WORD_CLASSES_NOUNS.NOUNS_FORMED.M_EN9_NF_DECIDE",
+     "listen_for": [
+      "decider"
+     ],
+     "ask": "Noun?",
+     "repair": "Decision."
+    },
+    {
+     "code": "ENGL.G9.GRAMMA.T11_WORD_CLASSES_NOUNS.NOUNS_FORMED.M_EN9_NF_FRIEND",
+     "listen_for": [
+      "friendly"
+     ],
+     "ask": "Noun?",
+     "repair": "Friendship."
+    },
+    {
+     "code": "ENGL.G9.GRAMMA.T11_WORD_CLASSES_NOUNS.NOUNS_FORMED.M_EN9_NF_CHILD",
+     "listen_for": [
+      "childish"
+     ],
+     "ask": "Noun?",
+     "repair": "Childhood."
+    },
+    {
+     "code": "ENGL.G9.GRAMMA.T11_WORD_CLASSES_NOUNS.NOUNS_FORMED.M9_NF_ADJ_FOR_NOUN",
+     "listen_for": [
+      "kind"
+     ],
+     "ask": "Noun needed?",
+     "repair": "Kindness."
+    }
+   ],
+   "checks": [
+    {
+     "question": "decide -> ?",
+     "answer": "decision",
+     "shows": "verb to noun"
+    },
+    {
+     "question": "kind -> ?",
+     "answer": "kindness",
+     "shows": "adjective to noun"
+    }
+   ]
+  }
+ ]
+}

@@ -1,0 +1,92 @@
+{
+ "sub_strand": "ENGL.G8.WRITIN.T1_WRITING_LEGIBLY_AND_",
+ "title": "Writing legibly and neatly (Theme 1: Human rights)",
+ "status": "draft: written 18 Nov 2026 offline for Grade 8 English; not yet checked by a Kenyan English teacher; not loaded by the live tutor",
+ "notes": "",
+ "skills": [
+  {
+   "skill": "ENGL.G8.WRITIN.T1_WRITING_LEGIBLY_AND_.LEGIBLE_WRITING",
+   "assessed_by": "teacher",
+   "key_step": "The child sorts letters by height and writes with even proportion, spacing and margins.",
+   "floor": {
+    "prerequisite": "Writes legibly.",
+    "question": "Copy neatly.",
+    "answer": "neat copy"
+   },
+   "steps": [
+    "X-height letters.",
+    "Ascenders.",
+    "Descenders.",
+    "Fair copy."
+   ],
+   "contexts": [
+    "human rights posters"
+   ],
+   "board": [
+    {
+     "beat": "write",
+     "do": "Write: a, b, g on lines."
+    },
+    {
+     "beat": "point",
+     "do": "Point at g.",
+     "say": "Up or down?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for the child to answer."
+    },
+    {
+     "beat": "child_draws",
+     "do": "The child sorts more letters."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "ENGL.G8.WRITIN.T1_WRITING_LEGIBLY_AND_.LEGIBLE_WRITING.M8_X_LW_HEIGHT",
+     "listen_for": [
+      "Yes"
+     ],
+     "ask": "Up or down?",
+     "repair": "Descender."
+    },
+    {
+     "code": "ENGL.G8.WRITIN.T1_WRITING_LEGIBLY_AND_.LEGIBLE_WRITING.M8_X_LW_PROPORTION",
+     "listen_for": [
+      "the same as e"
+     ],
+     "ask": "How tall?",
+     "repair": "Above x-height."
+    },
+    {
+     "code": "ENGL.G8.WRITIN.T1_WRITING_LEGIBLY_AND_.LEGIBLE_WRITING.M8_X_LW_SPACING",
+     "listen_for": [
+      "any size"
+     ],
+     "ask": "Even?",
+     "repair": "One letter."
+    },
+    {
+     "code": "ENGL.G8.WRITIN.T1_WRITING_LEGIBLY_AND_.LEGIBLE_WRITING.M8_X_LW_MARGIN",
+     "listen_for": [
+      "at the edge"
+     ],
+     "ask": "Margin?",
+     "repair": "Inside."
+    }
+   ],
+   "checks": [
+    {
+     "question": "Is \"d\" an ascender?",
+     "answer": "Yes",
+     "shows": "height"
+    },
+    {
+     "question": "Copy a paragraph neatly.",
+     "answer": "even, spaced, in margins",
+     "shows": "legibility"
+    }
+   ]
+  }
+ ]
+}

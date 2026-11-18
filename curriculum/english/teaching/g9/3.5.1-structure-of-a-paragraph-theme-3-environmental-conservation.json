@@ -1,0 +1,176 @@
+{
+ "sub_strand": "ENGL.G9.WRITIN.T3_STRUCTURE_OF_A_PARAG",
+ "title": "Structure of a paragraph (Theme 3: Environmental conservation)",
+ "status": "draft: written 18 Nov 2026 offline for Grade 9 English; not yet checked by a Kenyan English teacher; not loaded by the live tutor",
+ "notes": "",
+ "skills": [
+  {
+   "skill": "ENGL.G9.WRITIN.T3_STRUCTURE_OF_A_PARAG.PARAGRAPH",
+   "assessed_by": "questions",
+   "key_step": "The child names the four characteristics: topic sentence, unity, coherence, development.",
+   "floor": {
+    "prerequisite": "Writes paragraphs.",
+    "question": "What opens a paragraph?",
+    "answer": "the topic sentence"
+   },
+   "steps": [
+    "Topic sentence.",
+    "Unity.",
+    "Coherence.",
+    "Development."
+   ],
+   "contexts": [
+    "conservation"
+   ],
+   "board": [
+    {
+     "beat": "write",
+     "do": "Write the four characteristics."
+    },
+    {
+     "beat": "point",
+     "do": "Point at development.",
+     "say": "What does it mean?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for the child to answer."
+    },
+    {
+     "beat": "child_draws",
+     "do": "The child spots a missing one."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "ENGL.G9.WRITIN.T3_STRUCTURE_OF_A_PARAG.PARAGRAPH.M_EN9_PA_TOPIC",
+     "listen_for": [
+      "The supporting sentence"
+     ],
+     "ask": "Main idea?",
+     "repair": "Topic sentence."
+    },
+    {
+     "code": "ENGL.G9.WRITIN.T3_STRUCTURE_OF_A_PARAG.PARAGRAPH.M_EN9_PA_UNITY",
+     "listen_for": [
+      "Many different ideas"
+     ],
+     "ask": "How many ideas?",
+     "repair": "One."
+    },
+    {
+     "code": "ENGL.G9.WRITIN.T3_STRUCTURE_OF_A_PARAG.PARAGRAPH.M_EN9_PA_COHERENCE",
+     "listen_for": [
+      "A very long paragraph"
+     ],
+     "ask": "Ordered?",
+     "repair": "Linked."
+    },
+    {
+     "code": "ENGL.G9.WRITIN.T3_STRUCTURE_OF_A_PARAG.PARAGRAPH.M9_PA_DEVELOPMENT",
+     "listen_for": [
+      "nothing"
+     ],
+     "ask": "Examples?",
+     "repair": "Development."
+    }
+   ],
+   "checks": [
+    {
+     "question": "One idea only is ...",
+     "answer": "unity",
+     "shows": "unity"
+    },
+    {
+     "question": "Examples and details are ...",
+     "answer": "development",
+     "shows": "development"
+    }
+   ]
+  },
+  {
+   "skill": "ENGL.G9.WRITIN.T3_STRUCTURE_OF_A_PARAG.PARAGRAPH_WRITING",
+   "assessed_by": "composition",
+   "key_step": "The child checks unity, coherence and development, and keeps the person (first or second) steady.",
+   "floor": {
+    "prerequisite": "Knows paragraph features.",
+    "question": "Four characteristics?",
+    "answer": "topic sentence, unity, coherence, development"
+   },
+   "steps": [
+    "Topic sentence.",
+    "One idea.",
+    "Order and links.",
+    "Details; steady person."
+   ],
+   "contexts": [
+    "consumer protection"
+   ],
+   "board": [
+    {
+     "beat": "write",
+     "do": "Write a paragraph with an off-topic line."
+    },
+    {
+     "beat": "point",
+     "do": "Point at it.",
+     "say": "Unity?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for the child to answer."
+    },
+    {
+     "beat": "child_draws",
+     "do": "The child fixes person switches."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "ENGL.G9.WRITIN.T3_STRUCTURE_OF_A_PARAG.PARAGRAPH_WRITING.M9_PW2_NO_UNITY",
+     "listen_for": [
+      "Yes"
+     ],
+     "ask": "One idea?",
+     "repair": "Remove."
+    },
+    {
+     "code": "ENGL.G9.WRITIN.T3_STRUCTURE_OF_A_PARAG.PARAGRAPH_WRITING.M9_PW2_NO_COHERENCE",
+     "listen_for": [
+      "random order"
+     ],
+     "ask": "Order?",
+     "repair": "Link."
+    },
+    {
+     "code": "ENGL.G9.WRITIN.T3_STRUCTURE_OF_A_PARAG.PARAGRAPH_WRITING.M9_PW2_PERSON_SWITCH",
+     "listen_for": [
+      "I ... you see"
+     ],
+     "ask": "Same person?",
+     "repair": "Keep it."
+    },
+    {
+     "code": "ENGL.G9.WRITIN.T3_STRUCTURE_OF_A_PARAG.PARAGRAPH_WRITING.M9_PW2_UNDEVELOPED",
+     "listen_for": [
+      "Yes"
+     ],
+     "ask": "Support?",
+     "repair": "Add details."
+    }
+   ],
+   "checks": [
+    {
+     "question": "One sentence a paragraph?",
+     "answer": "No",
+     "shows": "development"
+    },
+    {
+     "question": "Fix: I went and you see ...",
+     "answer": "I went and saw ...",
+     "shows": "person"
+    }
+   ]
+  }
+ ]
+}

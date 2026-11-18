@@ -1,0 +1,95 @@
+{
+ "sub_strand": "ENGL.G8.READIN.T4_INTENSIVE_READING",
+ "title": "Intensive Reading (Theme 4: Consumer roles and responsibilites)",
+ "status": "draft: written 18 Nov 2026 offline for Grade 8 English; not yet checked by a Kenyan English teacher; not loaded by the live tutor",
+ "notes": "",
+ "skills": [
+  {
+   "skill": "ENGL.G8.READIN.T4_INTENSIVE_READING.READING_STRATEGIES",
+   "assessed_by": "questions",
+   "key_step": "The child names the task first, then chooses preview, skim, scan, close reading or rereading.",
+   "floor": {
+    "prerequisite": "Knows reading strategies.",
+    "question": "Skim or scan for a date?",
+    "answer": "scan"
+   },
+   "steps": [
+    "Task?",
+    "Strategy.",
+    "Why."
+   ],
+   "contexts": [
+    "consumer adverts",
+    "news articles"
+   ],
+   "board": [
+    {
+     "beat": "write",
+     "do": "Write four tasks."
+    },
+    {
+     "beat": "point",
+     "do": "Point at \"find a price\".",
+     "say": "Which strategy?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for the child to answer."
+    },
+    {
+     "beat": "child_draws",
+     "do": "The child matches the rest."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "ENGL.G8.READIN.T4_INTENSIVE_READING.READING_STRATEGIES.M8_X_RSTR_ONE_FOR_ALL",
+     "listen_for": [
+      "read every word slowly"
+     ],
+     "ask": "Same for every task?",
+     "repair": "Match it."
+    },
+    {
+     "code": "ENGL.G8.READIN.T4_INTENSIVE_READING.READING_STRATEGIES.M8_X_RSTR_SKIM_SCAN",
+     "listen_for": [
+      "scanning"
+     ],
+     "ask": "Gist or detail?",
+     "repair": "Skim for gist."
+    },
+    {
+     "code": "ENGL.G8.READIN.T4_INTENSIVE_READING.READING_STRATEGIES.M8_X_RSTR_NO_PREVIEW",
+     "listen_for": [
+      "read the first word"
+     ],
+     "ask": "First?",
+     "repair": "Preview."
+    },
+    {
+     "code": "ENGL.G8.READIN.T4_INTENSIVE_READING.READING_STRATEGIES.M8_X_RSTR_NO_REREAD",
+     "listen_for": [
+      "skip it"
+     ],
+     "ask": "Confusing?",
+     "repair": "Reread."
+    }
+   ],
+   "checks": [
+    {
+     "question": "General idea quickly?",
+     "answer": "skim",
+     "shows": "skim"
+    },
+    {
+     "question": "A confusing paragraph?",
+     "answer": "reread",
+     "shows": "reread"
+    }
+   ]
+  }
+ ],
+ "also_taught_by": [
+  "ENGL.G8.READIN.T6_INTENSIVE_READING_SH.RS_MAIN"
+ ]
+}

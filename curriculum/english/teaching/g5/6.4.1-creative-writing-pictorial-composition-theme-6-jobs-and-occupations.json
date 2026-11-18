@@ -1,0 +1,94 @@
+{
+ "sub_strand": "ENGL.G5.WRITIN.T6_CREATIVE_WRITING_PIC",
+ "title": "Creative Writing: Pictorial Composition (Theme 6: Jobs and occupations)",
+ "status": "draft: written 18 Nov 2026 offline for Grade 5 English; not yet checked by a Kenyan English teacher; not loaded by the live tutor",
+ "notes": "",
+ "skills": [
+  {
+   "skill": "ENGL.G5.WRITIN.T6_CREATIVE_WRITING_PIC.PICTORIAL_COMPOSITION",
+   "assessed_by": "composition",
+   "key_step": "The child looks at all the pictures, chooses a topic, then writes a linked story covering each one.",
+   "floor": {
+    "prerequisite": "Writes from pictures.",
+    "question": "Say what happens in this picture.",
+    "answer": "a past-tense sentence"
+   },
+   "steps": [
+    "Look at all the pictures.",
+    "Choose a topic.",
+    "Write for each picture.",
+    "Link with time words."
+   ],
+   "contexts": [
+    "jobs and occupations",
+    "a day at the clinic",
+    "a market"
+   ],
+   "board": [
+    {
+     "beat": "write",
+     "do": "Draw four picture boxes about a vet."
+    },
+    {
+     "beat": "point",
+     "do": "Point at box 2.",
+     "say": "How does it link to box 1?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for the child to answer."
+    },
+    {
+     "beat": "child_draws",
+     "do": "The child writes for box 3."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "ENGL.G5.WRITIN.T6_CREATIVE_WRITING_PIC.PICTORIAL_COMPOSITION.M5_PIC_LABELS",
+     "listen_for": [
+      "A nurse. A child."
+     ],
+     "ask": "What happened?",
+     "repair": "Tell the action."
+    },
+    {
+     "code": "ENGL.G5.WRITIN.T6_CREATIVE_WRITING_PIC.PICTORIAL_COMPOSITION.M5_PIC_TOPIC_MISMATCH",
+     "listen_for": [
+      "My School"
+     ],
+     "ask": "Does it fit the pictures?",
+     "repair": "Look again."
+    },
+    {
+     "code": "ENGL.G5.WRITIN.T6_CREATIVE_WRITING_PIC.PICTORIAL_COMPOSITION.M5_PIC_NO_LINKS",
+     "listen_for": [
+      "no link"
+     ],
+     "ask": "How do they connect?",
+     "repair": "Time words."
+    },
+    {
+     "code": "ENGL.G5.WRITIN.T6_CREATIVE_WRITING_PIC.PICTORIAL_COMPOSITION.M5_PIC_SKIP",
+     "listen_for": [
+      "four"
+     ],
+     "ask": "Every picture?",
+     "repair": "Tick them."
+    }
+   ],
+   "checks": [
+    {
+     "question": "Pictures of a dairy farm. Title?",
+     "answer": "A Day at the Dairy",
+     "shows": "topic"
+    },
+    {
+     "question": "Five pictures: how many covered?",
+     "answer": "five",
+     "shows": "coverage"
+    }
+   ]
+  }
+ ]
+}

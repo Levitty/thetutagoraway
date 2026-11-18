@@ -1,0 +1,115 @@
+{
+ "sub_strand": "ENGL.G7.GRAMMA.T14_SUBJECT_VERB_AGREEME",
+ "title": "Subject-Verb Agreement (Theme 14: Sports - outdoor games)",
+ "status": "draft: written 18 Nov 2026 offline for Grade 7 English; not yet checked by a Kenyan English teacher; not loaded by the live tutor",
+ "notes": "",
+ "skills": [
+  {
+   "skill": "ENGL.G7.GRAMMA.T14_SUBJECT_VERB_AGREEME.SV_AGREEMENT",
+   "assessed_by": "questions",
+   "key_step": "The child finds the real subject and matches the verb to it, singular or plural.",
+   "floor": {
+    "prerequisite": "Uses indefinite pronouns.",
+    "question": "Everybody ___ (is/are).",
+    "answer": "is"
+   },
+   "steps": [
+    "Find the subject.",
+    "One or many?",
+    "Match the verb."
+   ],
+   "contexts": [
+    "outdoor games"
+   ],
+   "board": [
+    {
+     "beat": "write",
+     "do": "Write: The box of balls ___ heavy."
+    },
+    {
+     "beat": "point",
+     "do": "Point at box.",
+     "say": "Subject?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for the child to answer."
+    },
+    {
+     "beat": "child_draws",
+     "do": "The child fills is."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "ENGL.G7.GRAMMA.T14_SUBJECT_VERB_AGREEME.SV_AGREEMENT.M7_SVA_NEAR_NOUN",
+     "listen_for": [
+      "are"
+     ],
+     "ask": "Real subject?",
+     "repair": "Box: is."
+    },
+    {
+     "code": "ENGL.G7.GRAMMA.T14_SUBJECT_VERB_AGREEME.SV_AGREEMENT.M7_SVA_PLURAL",
+     "listen_for": [
+      "plays"
+     ],
+     "ask": "Many?",
+     "repair": "Play."
+    },
+    {
+     "code": "ENGL.G7.GRAMMA.T14_SUBJECT_VERB_AGREEME.SV_AGREEMENT.M7_SVA_SINGULAR",
+     "listen_for": [
+      "like"
+     ],
+     "ask": "One?",
+     "repair": "Likes."
+    },
+    {
+     "code": "ENGL.G7.GRAMMA.T14_SUBJECT_VERB_AGREEME.SV_AGREEMENT.M7_SVA_AND_SUBJECT",
+     "listen_for": [
+      "is"
+     ],
+     "ask": "Two joined?",
+     "repair": "Are."
+    },
+    {
+     "code": "ENGL.G7.GRAMMA.T14_SUBJECT_VERB_AGREEME.SV_AGREEMENT.M7_SVA_FIND_SUBJECT",
+     "listen_for": [
+      "sells"
+     ],
+     "ask": "Who does it?",
+     "repair": "The farmer."
+    },
+    {
+     "code": "ENGL.G7.GRAMMA.T14_SUBJECT_VERB_AGREEME.SV_AGREEMENT.M7_SVA_EVERYONE",
+     "listen_for": [
+      "are"
+     ],
+     "ask": "Everyone one?",
+     "repair": "Is."
+    },
+    {
+     "code": "ENGL.G7.GRAMMA.T14_SUBJECT_VERB_AGREEME.SV_AGREEMENT.M7_SVA_THERE_IS",
+     "listen_for": [
+      "is"
+     ],
+     "ask": "Many after there?",
+     "repair": "Are."
+    }
+   ],
+   "checks": [
+    {
+     "question": "Juma and Ali ___ (play).",
+     "answer": "play",
+     "shows": "and"
+    },
+    {
+     "question": "There ___ many fans.",
+     "answer": "are",
+     "shows": "there"
+    }
+   ]
+  }
+ ]
+}

@@ -1,0 +1,93 @@
+{
+ "sub_strand": "ENGL.G9.WRITIN.T11_MECHANICS_OF_WRITING",
+ "title": "Mechanics of Writing: Abbreviations and Acronyms (Theme 11: Income generating activities)",
+ "status": "draft: written 18 Nov 2026 offline for Grade 9 English; not yet checked by a Kenyan English teacher; not loaded by the live tutor",
+ "notes": "",
+ "skills": [
+  {
+   "skill": "ENGL.G9.WRITIN.T11_MECHANICS_OF_WRITING.ABBREVIATIONS",
+   "assessed_by": "questions",
+   "key_step": "The child writes common abbreviations and acronyms in full and in their modern form.",
+   "floor": {
+    "prerequisite": "Knows Grade 6 abbreviations.",
+    "question": "e.g. means?",
+    "answer": "for example"
+   },
+   "steps": [
+    "Write in full.",
+    "Acronyms without full stops."
+   ],
+   "contexts": [
+    "income generation"
+   ],
+   "board": [
+    {
+     "beat": "write",
+     "do": "Write: NHIF, e.g., etc."
+    },
+    {
+     "beat": "point",
+     "do": "Point at NHIF.",
+     "say": "In full?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for the child to answer."
+    },
+    {
+     "beat": "child_draws",
+     "do": "The child writes the others."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "ENGL.G9.WRITIN.T11_MECHANICS_OF_WRITING.ABBREVIATIONS.M_EN9_AB_EG",
+     "listen_for": [
+      "that is"
+     ],
+     "ask": "Example?",
+     "repair": "For example."
+    },
+    {
+     "code": "ENGL.G9.WRITIN.T11_MECHANICS_OF_WRITING.ABBREVIATIONS.M_EN9_AB_ETC",
+     "listen_for": [
+      "for example"
+     ],
+     "ask": "And so on?",
+     "repair": "Etc."
+    },
+    {
+     "code": "ENGL.G9.WRITIN.T11_MECHANICS_OF_WRITING.ABBREVIATIONS.M_EN9_AB_UN",
+     "listen_for": [
+      "Universal Nations"
+     ],
+     "ask": "United?",
+     "repair": "United Nations."
+    },
+    {
+     "code": "ENGL.G9.WRITIN.T11_MECHANICS_OF_WRITING.ABBREVIATIONS.M9_AB_FULL_STOPS",
+     "listen_for": [
+      "N.H.I.F."
+     ],
+     "ask": "Full stops?",
+     "repair": "NHIF."
+    }
+   ],
+   "checks": [
+    {
+     "question": "UN in full?",
+     "answer": "United Nations",
+     "shows": "full"
+    },
+    {
+     "question": "N.H.I.F. or NHIF?",
+     "answer": "NHIF",
+     "shows": "form"
+    }
+   ]
+  }
+ ],
+ "also_taught_by": [
+  "ENGL.G9.WRITIN.T6_MECHANICS_OF_WRITING.SPELLING"
+ ]
+}

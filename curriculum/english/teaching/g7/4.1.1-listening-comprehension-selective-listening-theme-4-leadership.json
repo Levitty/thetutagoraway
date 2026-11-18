@@ -1,0 +1,176 @@
+{
+ "sub_strand": "ENGL.G7.LISTEN.T4_LISTENING_COMPREHENS",
+ "title": "Listening Comprehension: Selective Listening (Theme 4: Leadership)",
+ "status": "draft: written 18 Nov 2026 offline for Grade 7 English; not yet checked by a Kenyan English teacher; not loaded by the live tutor",
+ "notes": "",
+ "skills": [
+  {
+   "skill": "ENGL.G7.LISTEN.T4_LISTENING_COMPREHENS.SPECIFIC_GENERAL",
+   "assessed_by": "questions",
+   "key_step": "The child decides whether the question asks for the whole idea or one detail, then finds it.",
+   "floor": {
+    "prerequisite": "Finds main ideas.",
+    "question": "Main idea?",
+    "answer": "the whole idea"
+   },
+   "steps": [
+    "General: what is it all about?",
+    "Specific: one fact.",
+    "Find it."
+   ],
+   "contexts": [
+    "a talk on leadership"
+   ],
+   "board": [
+    {
+     "beat": "write",
+     "do": "Write two questions: what is it about; on what date."
+    },
+    {
+     "beat": "point",
+     "do": "Point at the date question.",
+     "say": "General or specific?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for the child to answer."
+    },
+    {
+     "beat": "child_draws",
+     "do": "The child answers both."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "ENGL.G7.LISTEN.T4_LISTENING_COMPREHENS.SPECIFIC_GENERAL.M7_SG_GENERAL_SPECIFIC",
+     "listen_for": [
+      "How deep is the lake at its deepest point?"
+     ],
+     "ask": "One fact?",
+     "repair": "Specific."
+    },
+    {
+     "code": "ENGL.G7.LISTEN.T4_LISTENING_COMPREHENS.SPECIFIC_GENERAL.M7_SG_SPECIFIC_GENERAL",
+     "listen_for": [
+      "What is the text about?"
+     ],
+     "ask": "Whole idea?",
+     "repair": "General."
+    },
+    {
+     "code": "ENGL.G7.LISTEN.T4_LISTENING_COMPREHENS.SPECIFIC_GENERAL.M7_SG_NEAR_DETAIL",
+     "listen_for": [
+      "two o'clock"
+     ],
+     "ask": "Which time?",
+     "repair": "Check."
+    },
+    {
+     "code": "ENGL.G7.LISTEN.T4_LISTENING_COMPREHENS.SPECIFIC_GENERAL.M7_SG_NUMBER_SLIP",
+     "listen_for": [
+      "40"
+     ],
+     "ask": "Which number?",
+     "repair": "Check."
+    }
+   ],
+   "checks": [
+    {
+     "question": "\"What is the talk mainly about?\" is ...",
+     "answer": "general",
+     "shows": "general"
+    },
+    {
+     "question": "\"How old was the leader?\" is ...",
+     "answer": "specific",
+     "shows": "specific"
+    }
+   ]
+  },
+  {
+   "skill": "ENGL.G7.LISTEN.T4_LISTENING_COMPREHENS.LISTEN_RESPOND",
+   "assessed_by": "voice",
+   "key_step": "The child names the issue the speaker or song raises, then responds to that issue.",
+   "floor": {
+    "prerequisite": "Responds to oral questions.",
+    "question": "Answer the question you hear.",
+    "answer": "a fitting answer"
+   },
+   "steps": [
+    "Listen once.",
+    "Name the key issue.",
+    "Note one detail.",
+    "Respond with a view or action."
+   ],
+   "contexts": [
+    "a talk on leadership",
+    "a song on road safety"
+   ],
+   "board": [
+    {
+     "beat": "write",
+     "do": "Write: Issue / Detail / My response."
+    },
+    {
+     "beat": "point",
+     "do": "Point at Issue.",
+     "say": "What is the song worried about?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for the child to answer."
+    },
+    {
+     "beat": "child_draws",
+     "do": "The child gives a response."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "ENGL.G7.LISTEN.T4_LISTENING_COMPREHENS.LISTEN_RESPOND.M7_X_LR_DETAIL_AS_ISSUE",
+     "listen_for": [
+      "a red matatu"
+     ],
+     "ask": "What is it worried about?",
+     "repair": "The issue."
+    },
+    {
+     "code": "ENGL.G7.LISTEN.T4_LISTENING_COMPREHENS.LISTEN_RESPOND.M7_X_LR_OFF_RESPONSE",
+     "listen_for": [
+      "I like football."
+     ],
+     "ask": "Is it linked to the talk?",
+     "repair": "Link it."
+    },
+    {
+     "code": "ENGL.G7.LISTEN.T4_LISTENING_COMPREHENS.LISTEN_RESPOND.M7_X_LR_MISHEARD",
+     "listen_for": [
+      "Leaders swerve on the road."
+     ],
+     "ask": "What did the speaker say?",
+     "repair": "Check the point."
+    },
+    {
+     "code": "ENGL.G7.LISTEN.T4_LISTENING_COMPREHENS.LISTEN_RESPOND.M7_X_LR_REPEATS",
+     "listen_for": [
+      "Overloading is dangerous. (repeated)"
+     ],
+     "ask": "What do you think?",
+     "repair": "Add your view."
+    }
+   ],
+   "checks": [
+    {
+     "question": "A song warns about speeding matatus. Issue?",
+     "answer": "speeding is dangerous",
+     "shows": "issue"
+    },
+    {
+     "question": "Respond to the talk on honest leaders.",
+     "answer": "a linked view",
+     "shows": "response"
+    }
+   ]
+  }
+ ]
+}

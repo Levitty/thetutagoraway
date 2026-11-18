@@ -1,0 +1,183 @@
+{
+ "sub_strand": "ENGL.G5.WRITIN.T9_MECHANICS_OF_WRITING",
+ "title": "Mechanics of Writing: Punctuation Marks (Theme 9: Communicable diseases)",
+ "status": "draft: written 18 Nov 2026 offline for Grade 5 English; not yet checked by a Kenyan English teacher; not loaded by the live tutor",
+ "notes": "",
+ "skills": [
+  {
+   "skill": "ENGL.G5.WRITIN.T9_MECHANICS_OF_WRITING.APOSTROPHE",
+   "assessed_by": "questions",
+   "key_step": "The child uses an apostrophe only for a missing letter or for an owner.",
+   "floor": {
+    "prerequisite": "Uses contractions.",
+    "question": "do not",
+    "answer": "don't"
+   },
+   "steps": [
+    "Missing letters?",
+    "Owner? 's.",
+    "Plural owners: s'.",
+    "Plain plural: no apostrophe."
+   ],
+   "contexts": [
+    "a notice at a clinic"
+   ],
+   "board": [
+    {
+     "beat": "write",
+     "do": "Write: Jumas bag, the girls bags."
+    },
+    {
+     "beat": "point",
+     "do": "Point at Jumas.",
+     "say": "Whose bag?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for the child to answer."
+    },
+    {
+     "beat": "child_draws",
+     "do": "The child adds both apostrophes."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "ENGL.G5.WRITIN.T9_MECHANICS_OF_WRITING.APOSTROPHE.M_APOS_PLURAL",
+     "listen_for": [
+      "banana's"
+     ],
+     "ask": "More than one or owning?",
+     "repair": "No apostrophe."
+    },
+    {
+     "code": "ENGL.G5.WRITIN.T9_MECHANICS_OF_WRITING.APOSTROPHE.M_APOS_ITS",
+     "listen_for": [
+      "it's"
+     ],
+     "ask": "It is or belonging?",
+     "repair": "Its."
+    },
+    {
+     "code": "ENGL.G5.WRITIN.T9_MECHANICS_OF_WRITING.APOSTROPHE.M_APOS_MISSING_OWNER",
+     "listen_for": [
+      "Jumas"
+     ],
+     "ask": "Whose?",
+     "repair": "Juma's."
+    },
+    {
+     "code": "ENGL.G5.WRITIN.T9_MECHANICS_OF_WRITING.APOSTROPHE.M_APOS_CONTRACTION",
+     "listen_for": [
+      "dont"
+     ],
+     "ask": "Which letter is missing?",
+     "repair": "Don't."
+    },
+    {
+     "code": "ENGL.G5.WRITIN.T9_MECHANICS_OF_WRITING.APOSTROPHE.M_APOS_PLURAL_OWNER",
+     "listen_for": [
+      "girl's"
+     ],
+     "ask": "Many girls?",
+     "repair": "Girls'."
+    }
+   ],
+   "checks": [
+    {
+     "question": "bananas for sale or banana's?",
+     "answer": "bananas",
+     "shows": "plural"
+    },
+    {
+     "question": "The dog wagged ___ tail.",
+     "answer": "its",
+     "shows": "its"
+    }
+   ]
+  },
+  {
+   "skill": "ENGL.G5.WRITIN.T9_MECHANICS_OF_WRITING.EXCLAMATION_MARK",
+   "assessed_by": "questions",
+   "key_step": "The child uses one exclamation mark for strong feeling or a warning, and a full stop or question mark otherwise.",
+   "floor": {
+    "prerequisite": "Uses end marks.",
+    "question": "End: Are you sick",
+    "answer": "?"
+   },
+   "steps": [
+    "Strong feeling or warning?",
+    "One !",
+    "Otherwise . or ?"
+   ],
+   "contexts": [
+    "a warning about a disease"
+   ],
+   "board": [
+    {
+     "beat": "write",
+     "do": "Write: Look out for the car"
+    },
+    {
+     "beat": "point",
+     "do": "Point at the end.",
+     "say": "Which mark?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for the child to answer."
+    },
+    {
+     "beat": "child_draws",
+     "do": "The child marks two more sentences."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "ENGL.G5.WRITIN.T9_MECHANICS_OF_WRITING.EXCLAMATION_MARK.M_EXCL_FULL_STOP",
+     "listen_for": [
+      "Look out for the car."
+     ],
+     "ask": "Is it a warning?",
+     "repair": "!"
+    },
+    {
+     "code": "ENGL.G5.WRITIN.T9_MECHANICS_OF_WRITING.EXCLAMATION_MARK.M_EXCL_OVERUSE",
+     "listen_for": [
+      "We went to the market!"
+     ],
+     "ask": "Strong feeling?",
+     "repair": "Full stop."
+    },
+    {
+     "code": "ENGL.G5.WRITIN.T9_MECHANICS_OF_WRITING.EXCLAMATION_MARK.M_EXCL_MANY",
+     "listen_for": [
+      "What a goal!!!"
+     ],
+     "ask": "How many?",
+     "repair": "One."
+    },
+    {
+     "code": "ENGL.G5.WRITIN.T9_MECHANICS_OF_WRITING.EXCLAMATION_MARK.M_EXCL_QUESTION",
+     "listen_for": [
+      "Where is my pen!"
+     ],
+     "ask": "Is it asking?",
+     "repair": "?"
+    }
+   ],
+   "checks": [
+    {
+     "question": "What a goal",
+     "answer": "What a goal!",
+     "shows": "feeling"
+    },
+    {
+     "question": "We went home",
+     "answer": "We went home.",
+     "shows": "statement"
+    }
+   ]
+  }
+ ]
+}

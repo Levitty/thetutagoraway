@@ -1,0 +1,108 @@
+{
+ "sub_strand": "ENGL.G5.GRAMMA.T11_USE_OF_INTERROGATIVE",
+ "title": "Use of Interrogatives (Theme 11: Sports - appreciating talents)",
+ "status": "draft: written 18 Nov 2026 offline for Grade 5 English; not yet checked by a Kenyan English teacher; not loaded by the live tutor",
+ "notes": "",
+ "skills": [
+  {
+   "skill": "ENGL.G5.GRAMMA.T11_USE_OF_INTERROGATIVE.INTERROGATIVES",
+   "assessed_by": "questions",
+   "key_step": "The child chooses the WH word by the answer wanted and puts the helping verb before the subject.",
+   "floor": {
+    "prerequisite": "Asks WH questions.",
+    "question": "Ask what time it is.",
+    "answer": "What time is it?"
+   },
+   "steps": [
+    "What answer?",
+    "Choose the WH word.",
+    "Helping verb first.",
+    "Add else or much more where needed."
+   ],
+   "contexts": [
+    "an interview with a sports star"
+   ],
+   "board": [
+    {
+     "beat": "write",
+     "do": "Write: ___ did you train? (a reason)"
+    },
+    {
+     "beat": "point",
+     "do": "Point at the gap.",
+     "say": "Which word for a reason?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for the child to answer."
+    },
+    {
+     "beat": "child_draws",
+     "do": "The child writes a how much more question."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "ENGL.G5.GRAMMA.T11_USE_OF_INTERROGATIVE.INTERROGATIVES.M_INT_WHO_WHAT",
+     "listen_for": [
+      "What"
+     ],
+     "ask": "Person or thing?",
+     "repair": "Who."
+    },
+    {
+     "code": "ENGL.G5.GRAMMA.T11_USE_OF_INTERROGATIVE.INTERROGATIVES.M_INT_WHEN_WHERE_WHY",
+     "listen_for": [
+      "When"
+     ],
+     "ask": "Time, place or reason?",
+     "repair": "Why for reason."
+    },
+    {
+     "code": "ENGL.G5.GRAMMA.T11_USE_OF_INTERROGATIVE.INTERROGATIVES.M_INT_WORD_ORDER",
+     "listen_for": [
+      "you are doing"
+     ],
+     "ask": "Helping verb first?",
+     "repair": "Are you doing."
+    },
+    {
+     "code": "ENGL.G5.GRAMMA.T11_USE_OF_INTERROGATIVE.INTERROGATIVES.M_INT_DO_MISSING",
+     "listen_for": [
+      "you came"
+     ],
+     "ask": "Past question?",
+     "repair": "Did you come."
+    },
+    {
+     "code": "ENGL.G5.GRAMMA.T11_USE_OF_INTERROGATIVE.INTERROGATIVES.M_INT_ELSE_POSITION",
+     "listen_for": [
+      "else other"
+     ],
+     "ask": "Else other?",
+     "repair": "Else."
+    },
+    {
+     "code": "ENGL.G5.GRAMMA.T11_USE_OF_INTERROGATIVE.INTERROGATIVES.M_INT_HOW_MUCH_MANY",
+     "listen_for": [
+      "much"
+     ],
+     "ask": "Count?",
+     "repair": "Many."
+    }
+   ],
+   "checks": [
+    {
+     "question": "___ else came?",
+     "answer": "Who",
+     "shows": "else"
+    },
+    {
+     "question": "How ___ more water? (uncount)",
+     "answer": "much",
+     "shows": "much"
+    }
+   ]
+  }
+ ]
+}

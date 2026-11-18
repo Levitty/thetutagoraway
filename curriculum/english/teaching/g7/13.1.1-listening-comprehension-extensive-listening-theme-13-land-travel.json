@@ -1,0 +1,102 @@
+{
+ "sub_strand": "ENGL.G7.LISTEN.T13_LISTENING_COMPREHENS",
+ "title": "Listening Comprehension: Extensive Listening (Theme 13: Land travel)",
+ "status": "draft: written 18 Nov 2026 offline for Grade 7 English; not yet checked by a Kenyan English teacher; not loaded by the live tutor",
+ "notes": "",
+ "skills": [
+  {
+   "skill": "ENGL.G7.LISTEN.T13_LISTENING_COMPREHENS.TRAVEL_WORDS",
+   "assessed_by": "questions",
+   "key_step": "The child explains each travel word by who, what or where in a journey.",
+   "floor": {
+    "prerequisite": "Uses context clues.",
+    "question": "Meaning of trudged?",
+    "answer": "walked heavily"
+   },
+   "steps": [
+    "Name.",
+    "Person, place or thing?",
+    "Use it."
+   ],
+   "contexts": [
+    "land travel"
+   ],
+   "board": [
+    {
+     "beat": "write",
+     "do": "Write: fare, conductor, terminus."
+    },
+    {
+     "beat": "point",
+     "do": "Point at terminus.",
+     "say": "Person or place?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for the child to answer."
+    },
+    {
+     "beat": "child_draws",
+     "do": "The child uses fare."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "ENGL.G7.LISTEN.T13_LISTENING_COMPREHENS.TRAVEL_WORDS.M7_TW_PERSON_PLACE",
+     "listen_for": [
+      "terminus"
+     ],
+     "ask": "Person or place?",
+     "repair": "Conductor is a person."
+    },
+    {
+     "code": "ENGL.G7.LISTEN.T13_LISTENING_COMPREHENS.TRAVEL_WORDS.M7_TW_FARE_FEE",
+     "listen_for": [
+      "fee"
+     ],
+     "ask": "For travel?",
+     "repair": "Fare."
+    },
+    {
+     "code": "ENGL.G7.LISTEN.T13_LISTENING_COMPREHENS.TRAVEL_WORDS.M7_TW_JOURNEY_TRIP",
+     "listen_for": [
+      "route"
+     ],
+     "ask": "Where you go?",
+     "repair": "Destination."
+    },
+    {
+     "code": "ENGL.G7.LISTEN.T13_LISTENING_COMPREHENS.TRAVEL_WORDS.M7_TW_LUGGAGE",
+     "listen_for": [
+      "luggages"
+     ],
+     "ask": "Luggages?",
+     "repair": "Luggage."
+    },
+    {
+     "code": "ENGL.G7.LISTEN.T13_LISTENING_COMPREHENS.TRAVEL_WORDS.M7_TW_TIMETABLE",
+     "listen_for": [
+      "ticket"
+     ],
+     "ask": "Times?",
+     "repair": "Timetable."
+    }
+   ],
+   "checks": [
+    {
+     "question": "Money paid for a journey?",
+     "answer": "fare",
+     "shows": "word"
+    },
+    {
+     "question": "The last stop of a route?",
+     "answer": "terminus",
+     "shows": "word"
+    }
+   ]
+  }
+ ],
+ "also_taught_by": [
+  "ENGL.G7.LISTEN.T4_LISTENING_COMPREHENS.LISTEN_RESPOND"
+ ]
+}

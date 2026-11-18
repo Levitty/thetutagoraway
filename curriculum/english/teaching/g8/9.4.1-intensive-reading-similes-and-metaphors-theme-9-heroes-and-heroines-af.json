@@ -1,0 +1,92 @@
+{
+ "sub_strand": "ENGL.G8.READIN.T9_INTENSIVE_READING_SI",
+ "title": "Intensive Reading: Similes and metaphors (Theme 9: Heroes and heroines: africa)",
+ "status": "draft: written 18 Nov 2026 offline for Grade 8 English; not yet checked by a Kenyan English teacher; not loaded by the live tutor",
+ "notes": "",
+ "skills": [
+  {
+   "skill": "ENGL.G8.READIN.T9_INTENSIVE_READING_SI.SIMILE_METAPHOR",
+   "assessed_by": "questions",
+   "key_step": "The child tells a simile (like, as) from a metaphor and uses one clear comparison of each.",
+   "floor": {
+    "prerequisite": "Knows imagery.",
+    "question": "\"as brave as a lion\" is ...",
+    "answer": "a simile"
+   },
+   "steps": [
+    "Like or as: simile.",
+    "Without: metaphor.",
+    "One clear comparison.",
+    "Use your own."
+   ],
+   "contexts": [
+    "African heroes"
+   ],
+   "board": [
+    {
+     "beat": "write",
+     "do": "Write: She was a lioness in battle."
+    },
+    {
+     "beat": "point",
+     "do": "Point at lioness.",
+     "say": "Simile or metaphor?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for the child to answer."
+    },
+    {
+     "beat": "child_draws",
+     "do": "The child writes a simile."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "ENGL.G8.READIN.T9_INTENSIVE_READING_SI.SIMILE_METAPHOR.M8_SM_SIMILE_AS_METAPHOR",
+     "listen_for": [
+      "metaphor"
+     ],
+     "ask": "Like or as?",
+     "repair": "Simile."
+    },
+    {
+     "code": "ENGL.G8.READIN.T9_INTENSIVE_READING_SI.SIMILE_METAPHOR.M8_SM_METAPHOR_AS_SIMILE",
+     "listen_for": [
+      "simile"
+     ],
+     "ask": "No like?",
+     "repair": "Metaphor."
+    },
+    {
+     "code": "ENGL.G8.READIN.T9_INTENSIVE_READING_SI.SIMILE_METAPHOR.M8_SM_LITERAL",
+     "listen_for": [
+      "He is a real animal"
+     ],
+     "ask": "Real animal?",
+     "repair": "Brave."
+    },
+    {
+     "code": "ENGL.G8.READIN.T9_INTENSIVE_READING_SI.SIMILE_METAPHOR.M8_X_SM_MIXED",
+     "listen_for": [
+      "Yes"
+     ],
+     "ask": "One picture?",
+     "repair": "Keep one."
+    }
+   ],
+   "checks": [
+    {
+     "question": "\"Time is money\" is ...",
+     "answer": "a metaphor",
+     "shows": "metaphor"
+    },
+    {
+     "question": "Write a simile for a fast runner.",
+     "answer": "as fast as a cheetah",
+     "shows": "own"
+    }
+   ]
+  }
+ ]
+}

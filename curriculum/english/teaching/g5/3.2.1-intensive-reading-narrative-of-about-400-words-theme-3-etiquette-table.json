@@ -1,0 +1,185 @@
+{
+ "sub_strand": "ENGL.G5.READIN.T3_INTENSIVE_READING_NA",
+ "title": "Intensive Reading: (Narrative of about 400 words) (Theme 3: Etiquette-table manners)",
+ "status": "draft: written 18 Nov 2026 offline for Grade 5 English; not yet checked by a Kenyan English teacher; not loaded by the live tutor",
+ "notes": "",
+ "skills": [
+  {
+   "skill": "ENGL.G5.READIN.T3_INTENSIVE_READING_NA.RELATE_TO_LIFE",
+   "assessed_by": "teacher",
+   "key_step": "The child names the main event in the text and finds a real event in his or her life like it.",
+   "floor": {
+    "prerequisite": "Knows the events in a story.",
+    "question": "What happened in the story?",
+    "answer": "the main event"
+   },
+   "steps": [
+    "Say the main event.",
+    "Think of a time like it.",
+    "Say how they are alike.",
+    "Say one difference."
+   ],
+   "contexts": [
+    "a story about table manners",
+    "a leisure-time story",
+    "a story about pollution"
+   ],
+   "board": [
+    {
+     "beat": "write",
+     "do": "Write: In the story ... In my life ..."
+    },
+    {
+     "beat": "point",
+     "do": "Point at In my life.",
+     "say": "When did something like this happen to you?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for the child to answer."
+    },
+    {
+     "beat": "child_draws",
+     "do": "The child says one difference."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "ENGL.G5.READIN.T3_INTENSIVE_READING_NA.RELATE_TO_LIFE.M5_RL_RETELL",
+     "listen_for": [
+      "Achieng ate with her hands and her aunt scolded her."
+     ],
+     "ask": "Is that from your life?",
+     "repair": "Tell your own."
+    },
+    {
+     "code": "ENGL.G5.READIN.T3_INTENSIVE_READING_NA.RELATE_TO_LIFE.M5_RL_SURFACE",
+     "listen_for": [
+      "I also have a school bag."
+     ],
+     "ask": "Is that the main event?",
+     "repair": "Link the big idea."
+    },
+    {
+     "code": "ENGL.G5.READIN.T3_INTENSIVE_READING_NA.RELATE_TO_LIFE.M5_RL_UNRELATED",
+     "listen_for": [
+      "I went to Mombasa."
+     ],
+     "ask": "How is it like the text?",
+     "repair": "Keep to the idea."
+    },
+    {
+     "code": "ENGL.G5.READIN.T3_INTENSIVE_READING_NA.RELATE_TO_LIFE.M5_RL_CHANGES_TEXT",
+     "listen_for": [
+      "He ran away, like my brother does."
+     ],
+     "ask": "What did the text say?",
+     "repair": "Keep the text."
+    }
+   ],
+   "checks": [
+    {
+     "question": "The girl helped a new pupil. Link it to your life.",
+     "answer": "a real time the child helped someone",
+     "shows": "link"
+    },
+    {
+     "question": "Is \"I also have a pencil\" a good link?",
+     "answer": "No",
+     "shows": "main event"
+    }
+   ]
+  },
+  {
+   "skill": "ENGL.G5.READIN.T3_INTENSIVE_READING_NA.VISUALISE",
+   "assessed_by": "questions",
+   "key_step": "The child underlines every describing word and checks the picture shows all of them.",
+   "floor": {
+    "prerequisite": "Finds characters, places and events.",
+    "question": "Where does the story happen?",
+    "answer": "the place named"
+   },
+   "steps": [
+    "Underline describing words.",
+    "Picture the place and time.",
+    "Add the people.",
+    "Check the picture against the words."
+   ],
+   "contexts": [
+    "a market scene",
+    "a sports field",
+    "a polluted river"
+   ],
+   "board": [
+    {
+     "beat": "write",
+     "do": "Write: A tall woman in a yellow kanga stood by the well at sunset."
+    },
+    {
+     "beat": "point",
+     "do": "Point at yellow kanga.",
+     "say": "What else must the picture show?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for the child to answer."
+    },
+    {
+     "beat": "child_draws",
+     "do": "The child sketches the scene."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "ENGL.G5.READIN.T3_INTENSIVE_READING_NA.VISUALISE.M5_VI_ONE_WORD",
+     "listen_for": [
+      "a boy under a tree (any shirt)"
+     ],
+     "ask": "Did you check every word?",
+     "repair": "Underline them all."
+    },
+    {
+     "code": "ENGL.G5.READIN.T3_INTENSIVE_READING_NA.VISUALISE.M5_VI_ADDS",
+     "listen_for": [
+      "it was raining"
+     ],
+     "ask": "Did the text say that?",
+     "repair": "Only what is written."
+    },
+    {
+     "code": "ENGL.G5.READIN.T3_INTENSIVE_READING_NA.VISUALISE.M5_VI_TIME_IGNORED",
+     "listen_for": [
+      "a sunny room"
+     ],
+     "ask": "When is it?",
+     "repair": "Night changes the picture."
+    },
+    {
+     "code": "ENGL.G5.READIN.T3_INTENSIVE_READING_NA.VISUALISE.M5_VI_CHARACTER_MIX",
+     "listen_for": [
+      "Juma"
+     ],
+     "ask": "Who is it about?",
+     "repair": "Match the words."
+    }
+   ],
+   "checks": [
+    {
+     "question": "\"A thin dog slept under the old bus.\" Which picture?",
+     "answer": "a thin dog under an old bus",
+     "shows": "details"
+    },
+    {
+     "question": "\"Early in the morning, mist covered the lake.\" What time is it?",
+     "answer": "morning",
+     "shows": "time words"
+    }
+   ]
+  }
+ ],
+ "also_taught_by": [
+  "ENGL.G5.READIN.T2_INTENSIVE_READING.PREDICT",
+  "ENGL.G5.READIN.T2_INTENSIVE_READING.FACTUAL_QUESTIONS",
+  "ENGL.G5.READIN.T2_INTENSIVE_READING.INFERENCE_QUESTIONS"
+ ]
+}

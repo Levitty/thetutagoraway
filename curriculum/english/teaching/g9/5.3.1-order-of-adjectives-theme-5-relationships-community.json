@@ -1,0 +1,93 @@
+{
+ "sub_strand": "ENGL.G9.GRAMMA.T5_ORDER_OF_ADJECTIVES",
+ "title": "Order of Adjectives (Theme 5: Relationships: community)",
+ "status": "draft: written 18 Nov 2026 offline for Grade 9 English; not yet checked by a Kenyan English teacher; not loaded by the live tutor",
+ "notes": "",
+ "skills": [
+  {
+   "skill": "ENGL.G9.GRAMMA.T5_ORDER_OF_ADJECTIVES.ADJ_ORDER",
+   "assessed_by": "questions",
+   "key_step": "The child orders adjectives: opinion, size, age, shape, colour, origin, material, purpose.",
+   "floor": {
+    "prerequisite": "Uses gradable adjectives.",
+    "question": "very or absolutely enormous?",
+    "answer": "absolutely"
+   },
+   "steps": [
+    "Opinion.",
+    "Size.",
+    "Age.",
+    "Colour.",
+    "Material."
+   ],
+   "contexts": [
+    "community"
+   ],
+   "board": [
+    {
+     "beat": "write",
+     "do": "Write: a ___ ___ ___ table (wooden, small, brown)."
+    },
+    {
+     "beat": "point",
+     "do": "Point at wooden.",
+     "say": "Where does material go?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for the child to answer."
+    },
+    {
+     "beat": "child_draws",
+     "do": "The child orders it."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "ENGL.G9.GRAMMA.T5_ORDER_OF_ADJECTIVES.ADJ_ORDER.M_EN9_AO_COLOUR",
+     "listen_for": [
+      "a red big ball"
+     ],
+     "ask": "Size first?",
+     "repair": "Big red."
+    },
+    {
+     "code": "ENGL.G9.GRAMMA.T5_ORDER_OF_ADJECTIVES.ADJ_ORDER.M_EN9_AO_OPINION",
+     "listen_for": [
+      "a wooden lovely box"
+     ],
+     "ask": "Opinion first?",
+     "repair": "Lovely."
+    },
+    {
+     "code": "ENGL.G9.GRAMMA.T5_ORDER_OF_ADJECTIVES.ADJ_ORDER.M_EN9_AO_AGE",
+     "listen_for": [
+      "a brown old dog"
+     ],
+     "ask": "Age before colour?",
+     "repair": "Old brown."
+    },
+    {
+     "code": "ENGL.G9.GRAMMA.T5_ORDER_OF_ADJECTIVES.ADJ_ORDER.M9_AO_MATERIAL",
+     "listen_for": [
+      "wooden small brown"
+     ],
+     "ask": "Material last?",
+     "repair": "Small brown wooden."
+    }
+   ],
+   "checks": [
+    {
+     "question": "a ___ ___ dog (brown, old)",
+     "answer": "old brown",
+     "shows": "age before colour"
+    },
+    {
+     "question": "a ___ ___ box (lovely, wooden)",
+     "answer": "lovely wooden",
+     "shows": "opinion first"
+    }
+   ]
+  }
+ ]
+}

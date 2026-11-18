@@ -1,0 +1,265 @@
+{
+ "sub_strand": "ENGL.G4.READIN.T5_EXTENSIVE_READING",
+ "title": "Extensive Reading (Theme 5: Nutrition – balanced diet)",
+ "status": "draft: written 18 Nov 2026 offline for Grade 4 English; not yet checked by a Kenyan English teacher; not loaded by the live tutor",
+ "notes": "",
+ "skills": [
+  {
+   "skill": "ENGL.G4.READIN.T5_EXTENSIVE_READING.SCAN_FOR_DETAIL",
+   "assessed_by": "questions",
+   "key_step": "The child runs the eye down the text for the key word and reads only around it.",
+   "floor": {
+    "prerequisite": "Finds a stated detail.",
+    "question": "What time is the meeting?",
+    "answer": "a time from the text"
+   },
+   "steps": [
+    "Pick the key word.",
+    "Run your eye down.",
+    "Stop at each match.",
+    "Read around it."
+   ],
+   "contexts": [
+    "a price list",
+    "a bus timetable"
+   ],
+   "board": [
+    {
+     "beat": "write",
+     "do": "Write a short price list."
+    },
+    {
+     "beat": "point",
+     "do": "Point at the question: price of milk.",
+     "say": "What word do you look for?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for milk."
+    },
+    {
+     "beat": "child_draws",
+     "do": "The child finds the price."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "ENGL.G4.READIN.T5_EXTENSIVE_READING.SCAN_FOR_DETAIL.M_SCAN_NEAR_NUMBER",
+     "listen_for": [
+      "60 shillings"
+     ],
+     "ask": "Is that the number next to the key word?",
+     "repair": "Check the line."
+    },
+    {
+     "code": "ENGL.G4.READIN.T5_EXTENSIVE_READING.SCAN_FOR_DETAIL.M_SCAN_WRONG_KEYWORD",
+     "listen_for": [
+      "at 6 pm"
+     ],
+     "ask": "What did the question ask for?",
+     "repair": "Use that word."
+    },
+    {
+     "code": "ENGL.G4.READIN.T5_EXTENSIVE_READING.SCAN_FOR_DETAIL.M_SCAN_TOO_LONG",
+     "listen_for": [
+      "a long answer from the whole text"
+     ],
+     "ask": "Do you need to read it all?",
+     "repair": "Scan for the key word."
+    },
+    {
+     "code": "ENGL.G4.READIN.T5_EXTENSIVE_READING.SCAN_FOR_DETAIL.M4_SCAN_FIRST_MATCH",
+     "listen_for": [
+      "Monday"
+     ],
+     "ask": "Is there another match?",
+     "repair": "Check all."
+    }
+   ],
+   "checks": [
+    {
+     "question": "Price of bread in the list?",
+     "answer": "the listed price",
+     "shows": "scan"
+    },
+    {
+     "question": "Find the time of the match.",
+     "answer": "the time given",
+     "shows": "scan"
+    }
+   ]
+  },
+  {
+   "skill": "ENGL.G4.READIN.T5_EXTENSIVE_READING.SELECT_READING",
+   "assessed_by": "questions",
+   "key_step": "The child asks what the book is for and whether it suits him or her before choosing.",
+   "floor": {
+    "prerequisite": "Knows the reference books.",
+    "question": "Where do you find a word's meaning?",
+    "answer": "dictionary"
+   },
+   "steps": [
+    "Say your purpose.",
+    "Look at the title and contents.",
+    "Read a page: are almost all words known?",
+    "Choose."
+   ],
+   "contexts": [
+    "the class library corner",
+    "a market bookshop",
+    "a school project"
+   ],
+   "board": [
+    {
+     "beat": "write",
+     "do": "Write three purposes: practice, facts, cooking."
+    },
+    {
+     "beat": "point",
+     "do": "Point at facts.",
+     "say": "Which book: story, encyclopaedia or recipe?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for the choice."
+    },
+    {
+     "beat": "child_draws",
+     "do": "The child matches the other two."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "ENGL.G4.READIN.T5_EXTENSIVE_READING.SELECT_READING.M4_SR_COVER",
+     "listen_for": [
+      "the storybook with a camel on the cover"
+     ],
+     "ask": "Will it answer your question?",
+     "repair": "Check the contents."
+    },
+    {
+     "code": "ENGL.G4.READIN.T5_EXTENSIVE_READING.SELECT_READING.M4_SR_TOO_HARD",
+     "listen_for": [
+      "the thick book for Grade 8"
+     ],
+     "ask": "How many words do you know on a page?",
+     "repair": "Almost all."
+    },
+    {
+     "code": "ENGL.G4.READIN.T5_EXTENSIVE_READING.SELECT_READING.M4_SR_THICKNESS",
+     "listen_for": [
+      "the thickest novel"
+     ],
+     "ask": "What is it for?",
+     "repair": "Purpose, not size."
+    },
+    {
+     "code": "ENGL.G4.READIN.T5_EXTENSIVE_READING.SELECT_READING.M4_SR_WRONG_TYPE",
+     "listen_for": [
+      "a poem about food"
+     ],
+     "ask": "What do you want to do?",
+     "repair": "Match the type."
+    }
+   ],
+   "checks": [
+    {
+     "question": "You want to read alone for fun. Which?",
+     "answer": "a graded reader at your level",
+     "shows": "level"
+    },
+    {
+     "question": "You need facts about the Nile.",
+     "answer": "an encyclopaedia",
+     "shows": "purpose"
+    }
+   ]
+  },
+  {
+   "skill": "ENGL.G4.READIN.T5_EXTENSIVE_READING.INDEPENDENT_READING",
+   "assessed_by": "teacher",
+   "key_step": "The child keeps reading past a hard word and stops each page to tell what happened.",
+   "floor": {
+    "prerequisite": "Reads a short text accurately.",
+    "question": "Read this sentence.",
+    "answer": "reads it"
+   },
+   "steps": [
+    "Choose a book at the right level.",
+    "Read for ten minutes.",
+    "Stop each page to retell.",
+    "Write a line in the reading log."
+   ],
+   "contexts": [
+    "the class library",
+    "a graded reader at home",
+    "reading time after lunch"
+   ],
+   "board": [
+    {
+     "beat": "write",
+     "do": "Write: Read, Stop, Tell."
+    },
+    {
+     "beat": "point",
+     "do": "Point at Tell.",
+     "say": "What happened on that page?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for the retelling."
+    },
+    {
+     "beat": "child_draws",
+     "do": "The child writes one line in the log."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "ENGL.G4.READIN.T5_EXTENSIVE_READING.INDEPENDENT_READING.M4_IR_STOPS_AT_WORD",
+     "listen_for": [
+      "stop and close the book"
+     ],
+     "ask": "Can the sentence help?",
+     "repair": "Read on."
+    },
+    {
+     "code": "ENGL.G4.READIN.T5_EXTENSIVE_READING.INDEPENDENT_READING.M4_IR_PICTURES_ONLY",
+     "listen_for": [
+      "a lion (from the cover only)"
+     ],
+     "ask": "Did you read the words?",
+     "repair": "Every line."
+    },
+    {
+     "code": "ENGL.G4.READIN.T5_EXTENSIVE_READING.INDEPENDENT_READING.M4_IR_CANNOT_RETELL",
+     "listen_for": [
+      "I read it all."
+     ],
+     "ask": "What happened?",
+     "repair": "Stop and tell after each page."
+    },
+    {
+     "code": "ENGL.G4.READIN.T5_EXTENSIVE_READING.INDEPENDENT_READING.M4_IR_SKIPS_TO_END",
+     "listen_for": [
+      "I do not know, I read the last page."
+     ],
+     "ask": "How did they get there?",
+     "repair": "Read in order."
+    }
+   ],
+   "checks": [
+    {
+     "question": "A hard word stops you. What do you do?",
+     "answer": "read on and guess from the sentence",
+     "shows": "strategy"
+    },
+    {
+     "question": "Tell me the story in two sentences.",
+     "answer": "a correct retelling",
+     "shows": "understanding"
+    }
+   ]
+  }
+ ]
+}

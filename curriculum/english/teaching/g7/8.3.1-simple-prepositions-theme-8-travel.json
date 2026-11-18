@@ -1,0 +1,91 @@
+{
+ "sub_strand": "ENGL.G7.GRAMMA.T8_SIMPLE_PREPOSITIONS",
+ "title": "Simple Prepositions (Theme 8: Travel)",
+ "status": "draft: written 18 Nov 2026 offline for Grade 7 English; not yet checked by a Kenyan English teacher; not loaded by the live tutor",
+ "notes": "",
+ "skills": [
+  {
+   "skill": "ENGL.G7.GRAMMA.T8_SIMPLE_PREPOSITIONS.PREPOSITIONS",
+   "assessed_by": "questions",
+   "key_step": "The child names the job of the preposition (time, place, direction) and picks at, on or in to match.",
+   "floor": {
+    "prerequisite": "Uses Grade 6 prepositions.",
+    "question": "between or among for three?",
+    "answer": "among"
+   },
+   "steps": [
+    "Time: at 3, on Monday, in June.",
+    "Place: at the gate, in the room.",
+    "Direction: to, towards."
+   ],
+   "contexts": [
+    "travel"
+   ],
+   "board": [
+    {
+     "beat": "write",
+     "do": "Write: We arrived ___ Monday ___ 6 pm."
+    },
+    {
+     "beat": "point",
+     "do": "Point at Monday.",
+     "say": "Which word?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for the child to answer."
+    },
+    {
+     "beat": "child_draws",
+     "do": "The child fills 6 pm."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "ENGL.G7.GRAMMA.T8_SIMPLE_PREPOSITIONS.PREPOSITIONS.M7_PR_AT_ON_IN_TIME",
+     "listen_for": [
+      "at"
+     ],
+     "ask": "Day?",
+     "repair": "On."
+    },
+    {
+     "code": "ENGL.G7.GRAMMA.T8_SIMPLE_PREPOSITIONS.PREPOSITIONS.M7_PR_TO_IN_PLACE",
+     "listen_for": [
+      "in"
+     ],
+     "ask": "Movement?",
+     "repair": "To."
+    },
+    {
+     "code": "ENGL.G7.GRAMMA.T8_SIMPLE_PREPOSITIONS.PREPOSITIONS.M7_PR_KIND",
+     "listen_for": [
+      "time"
+     ],
+     "ask": "Time or place?",
+     "repair": "Name it."
+    },
+    {
+     "code": "ENGL.G7.GRAMMA.T8_SIMPLE_PREPOSITIONS.PREPOSITIONS.M7_PR_ON_AT_PLACE",
+     "listen_for": [
+      "on"
+     ],
+     "ask": "A point?",
+     "repair": "At."
+    }
+   ],
+   "checks": [
+    {
+     "question": "___ the bus stop",
+     "answer": "at",
+     "shows": "place"
+    },
+    {
+     "question": "___ June",
+     "answer": "in",
+     "shows": "time"
+    }
+   ]
+  }
+ ]
+}

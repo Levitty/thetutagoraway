@@ -1,0 +1,95 @@
+{
+ "sub_strand": "ENGL.G7.READIN.T15_READING_FLUENCY",
+ "title": "Reading Fluency (Theme 15: Tourist attraction sites - kenya)",
+ "status": "draft: written 18 Nov 2026 offline for Grade 7 English; not yet checked by a Kenyan English teacher; not loaded by the live tutor",
+ "notes": "",
+ "skills": [
+  {
+   "skill": "ENGL.G7.READIN.T15_READING_FLUENCY.FLUENCY_STRATEGIES",
+   "assessed_by": "questions",
+   "key_step": "The child names the strategies: read silently first, phrase, pause at punctuation, vary the voice, steady pace.",
+   "floor": {
+    "prerequisite": "Reads fluently.",
+    "question": "Read a sentence aloud.",
+    "answer": "reads it"
+   },
+   "steps": [
+    "Read silently first.",
+    "Phrase.",
+    "Pause at punctuation.",
+    "Vary voice; steady pace."
+   ],
+   "contexts": [
+    "tourist site texts"
+   ],
+   "board": [
+    {
+     "beat": "write",
+     "do": "Write the strategies."
+    },
+    {
+     "beat": "point",
+     "do": "Point at phrase.",
+     "say": "What does it mean?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for the child to answer."
+    },
+    {
+     "beat": "child_draws",
+     "do": "The child names another."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "ENGL.G7.READIN.T15_READING_FLUENCY.FLUENCY_STRATEGIES.M7_FL_FLAT",
+     "listen_for": [
+      "reading every word in the same flat voice"
+     ],
+     "ask": "Voice?",
+     "repair": "Vary it."
+    },
+    {
+     "code": "ENGL.G7.READIN.T15_READING_FLUENCY.FLUENCY_STRATEGIES.M7_FL_FAST",
+     "listen_for": [
+      "as fast as possible"
+     ],
+     "ask": "Speed?",
+     "repair": "Steady."
+    },
+    {
+     "code": "ENGL.G7.READIN.T15_READING_FLUENCY.FLUENCY_STRATEGIES.M7_FL_WORD",
+     "listen_for": [
+      "stopping at every difficult word"
+     ],
+     "ask": "Stop at each word?",
+     "repair": "Phrase."
+    },
+    {
+     "code": "ENGL.G7.READIN.T15_READING_FLUENCY.FLUENCY_STRATEGIES.M7_X_FL_NO_PREVIEW",
+     "listen_for": [
+      "start at once"
+     ],
+     "ask": "Did you read it first?",
+     "repair": "Silently first."
+    }
+   ],
+   "checks": [
+    {
+     "question": "Fluent reading is ...",
+     "answer": "not too fast and not too slow",
+     "shows": "pace"
+    },
+    {
+     "question": "Before reading aloud, you should ...",
+     "answer": "read silently first",
+     "shows": "preview"
+    }
+   ]
+  }
+ ],
+ "also_taught_by": [
+  "ENGL.G7.READIN.T6_READING_FLUENCY.READ_FLUENTLY"
+ ]
+}

@@ -1,0 +1,178 @@
+{
+ "sub_strand": "ENGL.G5.WRITIN.T10_CREATIVE_WRITING_DES",
+ "title": "Creative Writing: Descriptive Composition (120 -160 words) (Theme 10: Leisure time activities)",
+ "status": "draft: written 18 Nov 2026 offline for Grade 5 English; not yet checked by a Kenyan English teacher; not loaded by the live tutor",
+ "notes": "",
+ "skills": [
+  {
+   "skill": "ENGL.G5.WRITIN.T10_CREATIVE_WRITING_DES.DESCRIBE_FROM_TEXT",
+   "assessed_by": "questions",
+   "key_step": "The child collects every describing word about the person or thing from the text.",
+   "floor": {
+    "prerequisite": "Finds adjectives.",
+    "question": "Find the adjective: a tall tree.",
+    "answer": "tall"
+   },
+   "steps": [
+    "Find the person or thing.",
+    "Underline describing words about it.",
+    "Say what it is like."
+   ],
+   "contexts": [
+    "a story about a leisure park",
+    "a description of a grandmother"
+   ],
+   "board": [
+    {
+     "beat": "write",
+     "do": "Write: The old, kind teacher smiled."
+    },
+    {
+     "beat": "point",
+     "do": "Point at teacher.",
+     "say": "Which words tell us about her?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for the child to answer."
+    },
+    {
+     "beat": "child_draws",
+     "do": "The child finds old and kind."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "ENGL.G5.WRITIN.T10_CREATIVE_WRITING_DES.DESCRIBE_FROM_TEXT.M5_DT_ACTION",
+     "listen_for": [
+      "told stories"
+     ],
+     "ask": "Is that what she is like?",
+     "repair": "Describing words."
+    },
+    {
+     "code": "ENGL.G5.WRITIN.T10_CREATIVE_WRITING_DES.DESCRIBE_FROM_TEXT.M5_DT_OTHER_PERSON",
+     "listen_for": [
+      "quiet"
+     ],
+     "ask": "Who is described?",
+     "repair": "Match it."
+    },
+    {
+     "code": "ENGL.G5.WRITIN.T10_CREATIVE_WRITING_DES.DESCRIBE_FROM_TEXT.M5_DT_OWN_IDEA",
+     "listen_for": [
+      "big and full of lions"
+     ],
+     "ask": "Did the text say that?",
+     "repair": "Use the text."
+    },
+    {
+     "code": "ENGL.G5.WRITIN.T10_CREATIVE_WRITING_DES.DESCRIBE_FROM_TEXT.M5_DT_ONE_WORD",
+     "listen_for": [
+      "blue"
+     ],
+     "ask": "Are there more?",
+     "repair": "Collect them all."
+    }
+   ],
+   "checks": [
+    {
+     "question": "\"The noisy, busy market\" is ...",
+     "answer": "noisy and busy",
+     "shows": "description"
+    },
+    {
+     "question": "\"Juma was shy; Ali was loud.\" Ali is ...",
+     "answer": "loud",
+     "shows": "right person"
+    }
+   ]
+  },
+  {
+   "skill": "ENGL.G5.WRITIN.T10_CREATIVE_WRITING_DES.DESCRIPTIVE_COMPOSITION",
+   "assessed_by": "composition",
+   "key_step": "The child describes one place through the senses in a set order, then gives a classmate a reasoned comment.",
+   "floor": {
+    "prerequisite": "Describes from a text.",
+    "question": "Describe the lake from the text.",
+    "answer": "wide, calm and blue"
+   },
+   "steps": [
+    "Choose a place.",
+    "List the senses.",
+    "Write in one direction.",
+    "Critique a classmate: one strength, one improvement."
+   ],
+   "contexts": [
+    "a park on a holiday",
+    "a swimming pool",
+    "a games room"
+   ],
+   "board": [
+    {
+     "beat": "write",
+     "do": "Write: see, hear, smell, feel."
+    },
+    {
+     "beat": "point",
+     "do": "Point at hear.",
+     "say": "What do you hear at the park?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for the child to answer."
+    },
+    {
+     "beat": "child_draws",
+     "do": "The child writes the smell sentence."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "ENGL.G5.WRITIN.T10_CREATIVE_WRITING_DES.DESCRIPTIVE_COMPOSITION.M5_DC_STORY",
+     "listen_for": [
+      "One day we went there and lost our ball."
+     ],
+     "ask": "Story or description?",
+     "repair": "Describe."
+    },
+    {
+     "code": "ENGL.G5.WRITIN.T10_CREATIVE_WRITING_DES.DESCRIPTIVE_COMPOSITION.M5_DC_VAGUE",
+     "listen_for": [
+      "The swimming pool is nice."
+     ],
+     "ask": "More exact?",
+     "repair": "Clear, cool."
+    },
+    {
+     "code": "ENGL.G5.WRITIN.T10_CREATIVE_WRITING_DES.DESCRIPTIVE_COMPOSITION.M5_DC_NO_ORDER",
+     "listen_for": [
+      "gate, pool, gate, trees"
+     ],
+     "ask": "Which way are you moving?",
+     "repair": "One direction."
+    },
+    {
+     "code": "ENGL.G5.WRITIN.T10_CREATIVE_WRITING_DES.DESCRIPTIVE_COMPOSITION.M5_DC_CRITIQUE_PRAISE",
+     "listen_for": [
+      "It is nice."
+     ],
+     "ask": "Why is it good?",
+     "repair": "Give a reason."
+    }
+   ],
+   "checks": [
+    {
+     "question": "Improve: The pool is nice.",
+     "answer": "The pool is clear and cool.",
+     "shows": "word choice"
+    },
+    {
+     "question": "Critique: \"It is nice.\" Enough?",
+     "answer": "No: a reason and an improvement",
+     "shows": "critique"
+    }
+   ]
+  }
+ ]
+}

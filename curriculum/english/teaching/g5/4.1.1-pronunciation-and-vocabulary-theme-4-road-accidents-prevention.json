@@ -1,0 +1,181 @@
+{
+ "sub_strand": "ENGL.G5.LISTEN.T4_PRONUNCIATION_AND_VO",
+ "title": "Pronunciation and Vocabulary (Theme 4: Road accidents – prevention)",
+ "status": "draft: written 18 Nov 2026 offline for Grade 5 English; not yet checked by a Kenyan English teacher; not loaded by the live tutor",
+ "notes": "",
+ "skills": [
+  {
+   "skill": "ENGL.G5.LISTEN.T4_PRONUNCIATION_AND_VO.ROAD_SAFETY_WORDS",
+   "assessed_by": "questions",
+   "key_step": "The child explains each road word by what people do there to stay safe.",
+   "floor": {
+    "prerequisite": "Knows first aid words.",
+    "question": "What is an ambulance?",
+    "answer": "a vehicle that carries the sick"
+   },
+   "steps": [
+    "Name it.",
+    "Say who uses it.",
+    "Use it in a sentence."
+   ],
+   "contexts": [
+    "walking to school",
+    "a matatu ride"
+   ],
+   "board": [
+    {
+     "beat": "write",
+     "do": "Draw a road with stripes."
+    },
+    {
+     "beat": "point",
+     "do": "Point at the stripes.",
+     "say": "What is this called?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for the child to answer."
+    },
+    {
+     "beat": "child_draws",
+     "do": "The child labels a speed bump."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "ENGL.G5.LISTEN.T4_PRONUNCIATION_AND_VO.ROAD_SAFETY_WORDS.M_VOC_ROAD_NEAR",
+     "listen_for": [
+      "passenger"
+     ],
+     "ask": "Walking or riding?",
+     "repair": "Pedestrian walks."
+    },
+    {
+     "code": "ENGL.G5.LISTEN.T4_PRONUNCIATION_AND_VO.ROAD_SAFETY_WORDS.M_VOC_ROAD_SOUND",
+     "listen_for": [
+      "crosswalk"
+     ],
+     "ask": "Is that the Kenyan word?",
+     "repair": "Zebra crossing."
+    },
+    {
+     "code": "ENGL.G5.LISTEN.T4_PRONUNCIATION_AND_VO.ROAD_SAFETY_WORDS.M5_VOC_ZEBRA",
+     "listen_for": [
+      "where zebras cross"
+     ],
+     "ask": "Why is it called zebra?",
+     "repair": "Its stripes."
+    },
+    {
+     "code": "ENGL.G5.LISTEN.T4_PRONUNCIATION_AND_VO.ROAD_SAFETY_WORDS.M5_VOC_SPEED_BUMP",
+     "listen_for": [
+      "roundabout"
+     ],
+     "ask": "Raised or round?",
+     "repair": "Bump is raised."
+    }
+   ],
+   "checks": [
+    {
+     "question": "Someone walking on the road is a ...",
+     "answer": "pedestrian",
+     "shows": "word"
+    },
+    {
+     "question": "Someone riding in a vehicle is a ...",
+     "answer": "passenger",
+     "shows": "word"
+    }
+   ]
+  },
+  {
+   "skill": "ENGL.G5.LISTEN.T4_PRONUNCIATION_AND_VO.WORD_STRESS",
+   "assessed_by": "voice",
+   "key_step": "The child says the word as a noun and as a verb and hears the strong syllable move.",
+   "floor": {
+    "prerequisite": "Claps syllables and finds the strong one.",
+    "question": "Clap: hospital.",
+    "answer": "HOS-pi-tal"
+   },
+   "steps": [
+    "Clap the syllables.",
+    "Find the strong one.",
+    "For pairs, noun first, verb last.",
+    "Say both in sentences."
+   ],
+   "contexts": [
+    "road safety words",
+    "recording a song",
+    "a present at a celebration"
+   ],
+   "board": [
+    {
+     "beat": "write",
+     "do": "Write: REcord (noun), reCORD (verb)."
+    },
+    {
+     "beat": "point",
+     "do": "Point at the capitals.",
+     "say": "Say both."
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for the child to answer."
+    },
+    {
+     "beat": "child_draws",
+     "do": "The child marks the stress in PREsent and preSENT."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "ENGL.G5.LISTEN.T4_PRONUNCIATION_AND_VO.WORD_STRESS.M5_WS_NOUN_VERB_SAME",
+     "listen_for": [
+      "REcord"
+     ],
+     "ask": "Is it a thing or an action?",
+     "repair": "Verb: stress moves to the end."
+    },
+    {
+     "code": "ENGL.G5.LISTEN.T4_PRONUNCIATION_AND_VO.WORD_STRESS.M5_WS_EQUAL",
+     "listen_for": [
+      "PE-DES-TRI-AN"
+     ],
+     "ask": "Was every beat the same?",
+     "repair": "One strong."
+    },
+    {
+     "code": "ENGL.G5.LISTEN.T4_PRONUNCIATION_AND_VO.WORD_STRESS.M5_WS_PENULT",
+     "listen_for": [
+      "ac-CI-dent"
+     ],
+     "ask": "Where is the strong clap?",
+     "repair": "AC-ci-dent."
+    },
+    {
+     "code": "ENGL.G5.LISTEN.T4_PRONUNCIATION_AND_VO.WORD_STRESS.M5_WS_PRESENT",
+     "listen_for": [
+      "preSENT"
+     ],
+     "ask": "A gift or to give?",
+     "repair": "Gift: PREsent."
+    }
+   ],
+   "checks": [
+    {
+     "question": "Please ___ (record) the match. Strong part?",
+     "answer": "reCORD",
+     "shows": "verb"
+    },
+    {
+     "question": "Say: pedestrian.",
+     "answer": "pe-DES-tri-an",
+     "shows": "stress"
+    }
+   ]
+  }
+ ],
+ "also_taught_by": [
+  "ENGL.G5.LISTEN.T2_PRONUNCIATION_AND_VO.ORAL_SENTENCES"
+ ]
+}

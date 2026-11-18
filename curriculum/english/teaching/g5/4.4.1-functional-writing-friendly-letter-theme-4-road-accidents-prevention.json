@@ -1,0 +1,178 @@
+{
+ "sub_strand": "ENGL.G5.WRITIN.T4_FUNCTIONAL_WRITING_F",
+ "title": "Functional Writing: Friendly Letter (Theme 4: Road accidents – prevention)",
+ "status": "draft: written 18 Nov 2026 offline for Grade 5 English; not yet checked by a Kenyan English teacher; not loaded by the live tutor",
+ "notes": "",
+ "skills": [
+  {
+   "skill": "ENGL.G5.WRITIN.T4_FUNCTIONAL_WRITING_F.LETTER_PARTS",
+   "assessed_by": "questions",
+   "key_step": "The child labels each part of a sample letter and checks every phrase sounds friendly.",
+   "floor": {
+    "prerequisite": "Knows the parts of a friendly letter.",
+    "question": "What comes after the greeting?",
+    "answer": "the body"
+   },
+   "steps": [
+    "Label the parts.",
+    "Find any missing part.",
+    "Underline unfriendly phrases."
+   ],
+   "contexts": [
+    "a letter about road safety",
+    "a letter from a cousin"
+   ],
+   "board": [
+    {
+     "beat": "write",
+     "do": "Write a sample letter with \"I am writing to inform you\"."
+    },
+    {
+     "beat": "point",
+     "do": "Point at the phrase.",
+     "say": "Does it suit a friend?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for the child to answer."
+    },
+    {
+     "beat": "child_draws",
+     "do": "The child rewrites it warmly."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "ENGL.G5.WRITIN.T4_FUNCTIONAL_WRITING_F.LETTER_PARTS.M5_LP_OFFICIAL_WORDS",
+     "listen_for": [
+      "Yes"
+     ],
+     "ask": "Would you say that to a friend?",
+     "repair": "Friendly words."
+    },
+    {
+     "code": "ENGL.G5.WRITIN.T4_FUNCTIONAL_WRITING_F.LETTER_PARTS.M5_LP_TWO_ADDRESSES",
+     "listen_for": [
+      "two"
+     ],
+     "ask": "Is this an official letter?",
+     "repair": "One address."
+    },
+    {
+     "code": "ENGL.G5.WRITIN.T4_FUNCTIONAL_WRITING_F.LETTER_PARTS.M5_LP_CLOSING_GREETING",
+     "listen_for": [
+      "Dear Wanjiku,"
+     ],
+     "ask": "Does it start or end the letter?",
+     "repair": "Dear starts."
+    },
+    {
+     "code": "ENGL.G5.WRITIN.T4_FUNCTIONAL_WRITING_F.LETTER_PARTS.M5_LP_DATE_PLACE",
+     "listen_for": [
+      "in the last paragraph"
+     ],
+     "ask": "Where is the date?",
+     "repair": "Under the address."
+    }
+   ],
+   "checks": [
+    {
+     "question": "How many addresses in a friendly letter?",
+     "answer": "one",
+     "shows": "layout"
+    },
+    {
+     "question": "Closing for a friend?",
+     "answer": "Your loving friend,",
+     "shows": "closing"
+    }
+   ]
+  },
+  {
+   "skill": "ENGL.G5.WRITIN.T4_FUNCTIONAL_WRITING_F.FRIENDLY_LETTER",
+   "assessed_by": "composition",
+   "key_step": "The child writes a warm letter with every part in place and a paragraph for each piece of news.",
+   "floor": {
+    "prerequisite": "Labels the parts of a letter.",
+    "question": "Where does the date go?",
+    "answer": "under the address"
+   },
+   "steps": [
+    "Plan the news.",
+    "Set out the layout.",
+    "Write paragraphs.",
+    "Close warmly."
+   ],
+   "contexts": [
+    "telling a friend about road safety",
+    "news from home",
+    "a thank-you letter"
+   ],
+   "board": [
+    {
+     "beat": "write",
+     "do": "Draw a letter layout."
+    },
+    {
+     "beat": "point",
+     "do": "Point at the body.",
+     "say": "What news will you tell?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for the child to answer."
+    },
+    {
+     "beat": "child_draws",
+     "do": "The child writes the first paragraph."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "ENGL.G5.WRITIN.T4_FUNCTIONAL_WRITING_F.FRIENDLY_LETTER.M5_FL_NO_PARAGRAPHS",
+     "listen_for": [
+      "one block"
+     ],
+     "ask": "New news?",
+     "repair": "New paragraph."
+    },
+    {
+     "code": "ENGL.G5.WRITIN.T4_FUNCTIONAL_WRITING_F.FRIENDLY_LETTER.M5_FL_COLD_TONE",
+     "listen_for": [
+      "I hereby write to tell you"
+     ],
+     "ask": "Would you talk like that?",
+     "repair": "Be warm."
+    },
+    {
+     "code": "ENGL.G5.WRITIN.T4_FUNCTIONAL_WRITING_F.FRIENDLY_LETTER.M5_FL_NO_QUESTION",
+     "listen_for": [
+      "tell more about me"
+     ],
+     "ask": "Did you ask about them?",
+     "repair": "Ask a question."
+    },
+    {
+     "code": "ENGL.G5.WRITIN.T4_FUNCTIONAL_WRITING_F.FRIENDLY_LETTER.M5_FL_ABRUPT_END",
+     "listen_for": [
+      "nothing"
+     ],
+     "ask": "How do you end?",
+     "repair": "Write soon."
+    }
+   ],
+   "checks": [
+    {
+     "question": "Opening line for a friend?",
+     "answer": "I hope you are well.",
+     "shows": "tone"
+    },
+    {
+     "question": "What comes before the closing?",
+     "answer": "a closing line, such as Write soon.",
+     "shows": "ending"
+    }
+   ]
+  }
+ ]
+}

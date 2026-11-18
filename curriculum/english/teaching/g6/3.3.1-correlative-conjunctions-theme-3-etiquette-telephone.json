@@ -1,0 +1,183 @@
+{
+ "sub_strand": "ENGL.G6.LANGUA.T3_CORRELATIVE_CONJUNCT",
+ "title": "Correlative Conjunctions (Theme 3: Etiquette - telephone)",
+ "status": "draft: written 18 Nov 2026 offline for Grade 6 English; not yet checked by a Kenyan English teacher; not loaded by the live tutor",
+ "notes": "",
+ "skills": [
+  {
+   "skill": "ENGL.G6.LANGUA.T3_CORRELATIVE_CONJUNCT.CORRELATIVE",
+   "assessed_by": "questions",
+   "key_step": "The child keeps the pairs together: both and, either or, neither nor, not only but also.",
+   "floor": {
+    "prerequisite": "Uses conjunctions.",
+    "question": "Tea ___ coffee? (choice)",
+    "answer": "or"
+   },
+   "steps": [
+    "Learn the pairs.",
+    "Match the pair.",
+    "Neither: positive verb."
+   ],
+   "contexts": [
+    "telephone etiquette"
+   ],
+   "board": [
+    {
+     "beat": "write",
+     "do": "Write: Neither Juma ___ Ali came."
+    },
+    {
+     "beat": "point",
+     "do": "Point at Neither.",
+     "say": "Which partner?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for the child to answer."
+    },
+    {
+     "beat": "child_draws",
+     "do": "The child writes a not only sentence."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "ENGL.G6.LANGUA.T3_CORRELATIVE_CONJUNCT.CORRELATIVE.M_CORR_NEITHER_OR",
+     "listen_for": [
+      "or"
+     ],
+     "ask": "Neither with?",
+     "repair": "Nor."
+    },
+    {
+     "code": "ENGL.G6.LANGUA.T3_CORRELATIVE_CONJUNCT.CORRELATIVE.M_CORR_BOTH_OR",
+     "listen_for": [
+      "or"
+     ],
+     "ask": "Both with?",
+     "repair": "And."
+    },
+    {
+     "code": "ENGL.G6.LANGUA.T3_CORRELATIVE_CONJUNCT.CORRELATIVE.M_CORR_EITHER_NOR",
+     "listen_for": [
+      "nor"
+     ],
+     "ask": "Either with?",
+     "repair": "Or."
+    },
+    {
+     "code": "ENGL.G6.LANGUA.T3_CORRELATIVE_CONJUNCT.CORRELATIVE.M_CORR_NOT_ONLY_AND",
+     "listen_for": [
+      "and"
+     ],
+     "ask": "Not only with?",
+     "repair": "But also."
+    },
+    {
+     "code": "ENGL.G6.LANGUA.T3_CORRELATIVE_CONJUNCT.CORRELATIVE.M_CORR_NEITHER_NOT",
+     "listen_for": [
+      "was not"
+     ],
+     "ask": "Neither is already negative.",
+     "repair": "Positive verb."
+    }
+   ],
+   "checks": [
+    {
+     "question": "Both Amina ___ Wanjiru sang.",
+     "answer": "and",
+     "shows": "both and"
+    },
+    {
+     "question": "Either call ___ text.",
+     "answer": "or",
+     "shows": "either or"
+    }
+   ]
+  },
+  {
+   "skill": "ENGL.G6.LANGUA.T3_CORRELATIVE_CONJUNCT.SHOW_PATTERN",
+   "assessed_by": "questions",
+   "key_step": "The child keeps statement word order after show me or tell me how, where or who.",
+   "floor": {
+    "prerequisite": "Asks questions.",
+    "question": "Where is the library?",
+    "answer": "question"
+   },
+   "steps": [
+    "Show or tell me +",
+    "how, where or who +",
+    "subject + verb.",
+    "Full stop, not a question mark."
+   ],
+   "contexts": [
+    "asking for help on the phone"
+   ],
+   "board": [
+    {
+     "beat": "write",
+     "do": "Write: Tell me where ___ (the library is / is the library)."
+    },
+    {
+     "beat": "point",
+     "do": "Point at the gap.",
+     "say": "Which order after where?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for the child to answer."
+    },
+    {
+     "beat": "child_draws",
+     "do": "The child writes a show me how sentence."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "ENGL.G6.LANGUA.T3_CORRELATIVE_CONJUNCT.SHOW_PATTERN.M_SHOW_INVERSION",
+     "listen_for": [
+      "is the library"
+     ],
+     "ask": "Is it a question?",
+     "repair": "Statement order."
+    },
+    {
+     "code": "ENGL.G6.LANGUA.T3_CORRELATIVE_CONJUNCT.SHOW_PATTERN.M_SHOW_DO_SUPPORT",
+     "listen_for": [
+      "does it work"
+     ],
+     "ask": "Do we need does?",
+     "repair": "It works."
+    },
+    {
+     "code": "ENGL.G6.LANGUA.T3_CORRELATIVE_CONJUNCT.SHOW_PATTERN.M_SHOW_WORD_MISSING",
+     "listen_for": [
+      "that"
+     ],
+     "ask": "Which word asks a place?",
+     "repair": "Where."
+    },
+    {
+     "code": "ENGL.G6.LANGUA.T3_CORRELATIVE_CONJUNCT.SHOW_PATTERN.M_SHOW_QMARK",
+     "listen_for": [
+      "Tell me who won the race?"
+     ],
+     "ask": "Is it a question?",
+     "repair": "Full stop."
+    }
+   ],
+   "checks": [
+    {
+     "question": "Show me how ___ (it works / does it work).",
+     "answer": "it works",
+     "shows": "order"
+    },
+    {
+     "question": "End mark for \"Tell me who won\"?",
+     "answer": "full stop",
+     "shows": "mark"
+    }
+   ]
+  }
+ ]
+}

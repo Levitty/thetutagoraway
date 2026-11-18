@@ -6,20 +6,26 @@
 // Same shape as 20261118_map_review_misconceptions.sql: one INSERT per row, idempotent, drafts only overwritten while still drafts.
 //   node scripts/build-maths-sql-grade.mjs 7    (or 6)      NOT RUN: the owner runs it in the Supabase SQL Editor.
 // One script for both grades (18 Nov 2026): scripts/build-maths-g7-sql.mjs is kept as the old command.
+// English (18 Nov 2026): node scripts/build-maths-sql-grade.mjs english <4-9> writes 20261130_english_g<grade>_skills_misconceptions.sql
+// from curriculum/english/g<grade>.json, the same shape (the depth pass of HOREB_MAPPING_PLAN.md).
 import { readFileSync, writeFileSync } from 'node:fs';
 // Science and Technology (Grades 4-6) and Integrated Science (Grades 7-9) use the same shape (depth pass, 18 Nov 2026):
 //   node scripts/build-maths-sql-grade.mjs science 4      node scripts/build-maths-sql-grade.mjs integrated_science 7
+// English Grades 4-9 too:  node scripts/build-maths-sql-grade.mjs english 4
 const SUBJECT_DIR = /^[a-z_]+$/.test(process.argv[2] || '') ? process.argv[2] : 'mathematics';
+const SUBJECT = SUBJECT_DIR;
 const GRADE = Number(SUBJECT_DIR === 'mathematics' ? (process.argv[2] || 7) : process.argv[3]);
 const SCIENCE = { science: 'Science and Technology', integrated_science: 'Integrated Science' }[SUBJECT_DIR];
-const LABEL = SCIENCE || 'Maths';
-const RUN = SCIENCE ? { file: `20261122_${SUBJECT_DIR}_g${GRADE}_skills_misconceptions.sql`, when: 'owner, 18 Nov 2026', after: '20261110_curriculum.sql (the five curriculum tables); prerequisites may name skills of the grade below, with no foreign key on them', why: `${SCIENCE} Grade ${GRADE} skills and misconceptions were in the repository (curriculum/${SUBJECT_DIR}/g${GRADE}.json) but no HOREB migration loaded them; the depth pass of 18 Nov 2026 brought every skill to two or more prerequisites and four misconceptions, with a teaching pack.` } : {
+const LABEL = SCIENCE || { mathematics: 'Maths', english: 'English' }[SUBJECT_DIR];
+const TITLE = LABEL;
+const ENGLISH = (g) => ({ file: `20261130_english_g${g}_skills_misconceptions.sql`, when: 'owner, 18 Nov 2026', after: `20261110_curriculum.sql${g > 4 ? ` and 20261130_english_g${g - 1}_skills_misconceptions.sql (Grade ${g} prerequisites name Grade ${g - 1} skills; there is no foreign key on them, so the order is for the reviewer only)` : ''}`, why: `Grade ${g} English had a first-pass map (about one prerequisite per skill, several sub-strands without skills, no teaching pack) that no HOREB migration loaded; the depth pass of 18 Nov 2026 brought it to the Grade 5 Maths standard (a skill for every sub-strand and every testable outcome, two prerequisites and four misconceptions per skill, a teaching pack).` });
+const RUN = SUBJECT_DIR === 'english' ? (GRADE >= 4 && GRADE <= 9 ? ENGLISH(GRADE) : null) : SCIENCE ? { file: `20261122_${SUBJECT_DIR}_g${GRADE}_skills_misconceptions.sql`, when: 'owner, 18 Nov 2026', after: '20261110_curriculum.sql (the five curriculum tables); prerequisites may name skills of the grade below, with no foreign key on them', why: `${SCIENCE} Grade ${GRADE} skills and misconceptions were in the repository (curriculum/${SUBJECT_DIR}/g${GRADE}.json) but no HOREB migration loaded them; the depth pass of 18 Nov 2026 brought every skill to two or more prerequisites and four misconceptions, with a teaching pack.` } : {
   7: { file: '20261119_maths_g7_skills_misconceptions.sql', when: 'owner, 17 Nov 2026', after: '20261118_map_review_misconceptions.sql', why: `Grade 7 Maths had outcomes only.` },
   6: { file: '20261120_maths_g6_skills_misconceptions.sql', when: 'owner, 18 Nov 2026', after: '20261118_map_review_misconceptions.sql', why: `Grade 6 Maths skills and misconceptions were in the repository (curriculum/mathematics/g6.json) but no HOREB migration loaded them; the depth pass of 18 Nov 2026 added prerequisites, misconceptions and a teaching pack.` },
   8: { file: '20261121_maths_g8_skills_misconceptions.sql', when: 'owner, 18 Nov 2026', after: '20261119_maths_g7_skills_misconceptions.sql and 20261120_maths_g6_skills_misconceptions.sql (Grade 8 prerequisites name Grade 6 and 7 skills; there is no foreign key on them, so the order is for the reviewer only)', why: `Grade 8 Maths had outcomes only; mapped on 18 Nov 2026 to the depth standard of Grades 6 and 7 (two prerequisites and four misconceptions per skill, a teaching pack).` },
   9: { file: '20261122_maths_g9_skills_misconceptions.sql', when: 'owner, 18 Nov 2026', after: '20261121_maths_g8_skills_misconceptions.sql (Grade 9 prerequisites name Grade 5 to 8 skills; there is no foreign key on them, so the order is for the reviewer only)', why: `Grade 9 Maths had outcomes only; mapped on 18 Nov 2026 to the depth standard of Grades 6, 7 and 8 (two prerequisites and four misconceptions per skill, a teaching pack).` },
 }[GRADE];
-if (!RUN || !GRADE) { console.error('usage: node scripts/build-maths-sql-grade.mjs 6|7|8|9, or science 4|5|6, or integrated_science 7|8|9'); process.exit(1); }
+if (!RUN || !GRADE) { console.error('usage: node scripts/build-maths-sql-grade.mjs 6|7|8|9, or science 4|5|6, or integrated_science 7|8|9, or english 4..9'); process.exit(1); }
 const cur = JSON.parse(readFileSync(new URL(`../curriculum/${SUBJECT_DIR}/g${GRADE}.json`, import.meta.url), 'utf8'));
 const q = (v) => (v === null || v === undefined ? 'NULL' : `'${String(v).replace(/'/g, "''")}'`);
 const arr = (a) => `ARRAY[${a.map(q).join(', ')}]::text[]`;
@@ -33,7 +39,7 @@ out.push(`-- ===================================================================
 -- NOT RUN. Run in Supabase Dashboard -> SQL Editor, after ${RUN.after}. Idempotent: safe to run twice.
 -- WHY: ${RUN.why} This loads ${nSk} skills (proposed), ${nPre} prerequisites (proposed) and ${nMis} misconceptions (draft)
 -- for ${done.length} of ${cur.sub_strands.length} sub-strands, for the teacher reviewer. Outcomes are KICD's own words and are not changed.
--- GENERATED by scripts/build-maths-${GRADE === 7 && !SCIENCE ? 'g7-sql' : 'sql-grade'}.mjs from curriculum/${SUBJECT_DIR}/g${GRADE}.json. Do not edit by hand.
+-- GENERATED by scripts/build-maths-${GRADE === 7 && SUBJECT_DIR === 'mathematics' ? 'g7-sql' : 'sql-grade'}.mjs${SUBJECT_DIR === 'mathematics' ? '' : ` ${SUBJECT_DIR}`} from curriculum/${SUBJECT_DIR}/g${GRADE}.json. Do not edit by hand.
 -- The sub-strands and outcomes are inserted first (do nothing if present) so the foreign keys hold.
 -- Sub-strands loaded: ${done.map(s => s.sub_strand).join(', ')}.
 -- =====================================================================

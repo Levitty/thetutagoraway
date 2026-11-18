@@ -1,0 +1,93 @@
+{
+ "sub_strand": "ENGL.G8.WRITIN.T9_CREATIVE_WRITING_NAR",
+ "title": "Creative Writing: Narrative Compositions (240-280 words) (Theme 9: Heroes and heroines: africa)",
+ "status": "draft: written 18 Nov 2026 offline for Grade 8 English; not yet checked by a Kenyan English teacher; not loaded by the live tutor",
+ "notes": "",
+ "skills": [
+  {
+   "skill": "ENGL.G8.WRITIN.T9_CREATIVE_WRITING_NAR.NARRATIVE_COMPOSITION",
+   "assessed_by": "composition",
+   "key_step": "The child recalls a real event, plans with a mind map, and writes 240 to 280 words that show feelings through details.",
+   "floor": {
+    "prerequisite": "Writes Grade 7 narratives.",
+    "question": "Steps of the process?",
+    "answer": "plan, draft, revise, edit, publish"
+   },
+   "steps": [
+    "Recall an event.",
+    "Mind map.",
+    "Draft with revealing details.",
+    "Count and revise."
+   ],
+   "contexts": [
+    "an African hero",
+    "consumer protection with idioms"
+   ],
+   "board": [
+    {
+     "beat": "write",
+     "do": "Write: I was scared."
+    },
+    {
+     "beat": "point",
+     "do": "Point at scared.",
+     "say": "Show it with details."
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for the child to answer."
+    },
+    {
+     "beat": "child_draws",
+     "do": "The child rewrites it."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "ENGL.G8.WRITIN.T9_CREATIVE_WRITING_NAR.NARRATIVE_COMPOSITION.M8_X_NC_TELL_NOT_SHOW",
+     "listen_for": [
+      "I was very scared."
+     ],
+     "ask": "Show it?",
+     "repair": "Details."
+    },
+    {
+     "code": "ENGL.G8.WRITIN.T9_CREATIVE_WRITING_NAR.NARRATIVE_COMPOSITION.M8_X_NC_NO_PLAN",
+     "listen_for": [
+      "write the essay"
+     ],
+     "ask": "Plan?",
+     "repair": "Mind map."
+    },
+    {
+     "code": "ENGL.G8.WRITIN.T9_CREATIVE_WRITING_NAR.NARRATIVE_COMPOSITION.M8_X_NC_LENGTH",
+     "listen_for": [
+      "Yes"
+     ],
+     "ask": "Words?",
+     "repair": "240 to 280."
+    },
+    {
+     "code": "ENGL.G8.WRITIN.T9_CREATIVE_WRITING_NAR.NARRATIVE_COMPOSITION.M8_X_NC_IDIOM_FORCED",
+     "listen_for": [
+      "Yes"
+     ],
+     "ask": "Fits?",
+     "repair": "Leave it out."
+    }
+   ],
+   "checks": [
+    {
+     "question": "Show, do not tell: I was happy.",
+     "answer": "I could not stop smiling.",
+     "shows": "details"
+    },
+    {
+     "question": "Is 120 words enough?",
+     "answer": "No",
+     "shows": "length"
+    }
+   ]
+  }
+ ]
+}

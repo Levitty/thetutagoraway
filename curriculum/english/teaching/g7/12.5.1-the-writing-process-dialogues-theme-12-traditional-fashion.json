@@ -1,0 +1,177 @@
+{
+ "sub_strand": "ENGL.G7.WRITIN.T12_THE_WRITING_PROCESS_",
+ "title": "The Writing Process: Dialogues (Theme 12: Traditional fashion)",
+ "status": "draft: written 18 Nov 2026 offline for Grade 7 English; not yet checked by a Kenyan English teacher; not loaded by the live tutor",
+ "notes": "",
+ "skills": [
+  {
+   "skill": "ENGL.G7.WRITIN.T12_THE_WRITING_PROCESS_.DIALOGUE_FORMAT",
+   "assessed_by": "questions",
+   "key_step": "The child sets out a dialogue with names and colons, new lines and actions in brackets.",
+   "floor": {
+    "prerequisite": "Uses quotation marks.",
+    "question": "Punctuate direct speech.",
+    "answer": "with marks"
+   },
+   "steps": [
+    "Name: words.",
+    "New line.",
+    "(actions)",
+    "No quotation marks."
+   ],
+   "contexts": [
+    "fashion talk"
+   ],
+   "board": [
+    {
+     "beat": "write",
+     "do": "Write: \"Atieno: Good morning.\""
+    },
+    {
+     "beat": "point",
+     "do": "Point at the marks.",
+     "say": "Needed?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for the child to answer."
+    },
+    {
+     "beat": "child_draws",
+     "do": "The child rewrites."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "ENGL.G7.WRITIN.T12_THE_WRITING_PROCESS_.DIALOGUE_FORMAT.M7_DF_QUOTES_EVERY_LINE",
+     "listen_for": [
+      "\"Atieno: Good morning.\" \"Juma: Good morning.\""
+     ],
+     "ask": "Marks?",
+     "repair": "None."
+    },
+    {
+     "code": "ENGL.G7.WRITIN.T12_THE_WRITING_PROCESS_.DIALOGUE_FORMAT.M7_DF_SAME_LINE",
+     "listen_for": [
+      "on the same line"
+     ],
+     "ask": "New speaker?",
+     "repair": "New line."
+    },
+    {
+     "code": "ENGL.G7.WRITIN.T12_THE_WRITING_PROCESS_.DIALOGUE_FORMAT.M7_DF_ACTIONS",
+     "listen_for": [
+      "in quotation marks"
+     ],
+     "ask": "Spoken?",
+     "repair": "Brackets."
+    },
+    {
+     "code": "ENGL.G7.WRITIN.T12_THE_WRITING_PROCESS_.DIALOGUE_FORMAT.M7_DF_NO_NAME",
+     "listen_for": [
+      "the words spoken"
+     ],
+     "ask": "Who speaks?",
+     "repair": "Name first."
+    }
+   ],
+   "checks": [
+    {
+     "question": "Speech marks in a dialogue?",
+     "answer": "No",
+     "shows": "format"
+    },
+    {
+     "question": "Where do actions go?",
+     "answer": "in brackets",
+     "shows": "actions"
+    }
+   ]
+  },
+  {
+   "skill": "ENGL.G7.WRITIN.T12_THE_WRITING_PROCESS_.DIALOGUE_WRITING",
+   "assessed_by": "composition",
+   "key_step": "The child sets out names, colons and lines, actions in brackets, and plans where the conversation goes.",
+   "floor": {
+    "prerequisite": "Knows dialogue format.",
+    "question": "How is a speaker shown?",
+    "answer": "name and colon"
+   },
+   "steps": [
+    "Plan the purpose.",
+    "Name: words.",
+    "New line per speaker.",
+    "Actions in brackets; revise."
+   ],
+   "contexts": [
+    "traditional fashion",
+    "a market talk"
+   ],
+   "board": [
+    {
+     "beat": "write",
+     "do": "Write: Atieno: Good morning."
+    },
+    {
+     "beat": "point",
+     "do": "Point at the colon.",
+     "say": "What comes next for Baraka?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for the child to answer."
+    },
+    {
+     "beat": "child_draws",
+     "do": "The child adds an action in brackets."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "ENGL.G7.WRITIN.T12_THE_WRITING_PROCESS_.DIALOGUE_WRITING.M7_X_DW_QUOTES",
+     "listen_for": [
+      "\"Atieno: Good morning.\""
+     ],
+     "ask": "Do dialogues use quotation marks?",
+     "repair": "No."
+    },
+    {
+     "code": "ENGL.G7.WRITIN.T12_THE_WRITING_PROCESS_.DIALOGUE_WRITING.M7_X_DW_SAME_LINE",
+     "listen_for": [
+      "on the same line"
+     ],
+     "ask": "New speaker?",
+     "repair": "New line."
+    },
+    {
+     "code": "ENGL.G7.WRITIN.T12_THE_WRITING_PROCESS_.DIALOGUE_WRITING.M7_X_DW_ACTIONS",
+     "listen_for": [
+      "Atieno: smiles"
+     ],
+     "ask": "Is it spoken?",
+     "repair": "Brackets."
+    },
+    {
+     "code": "ENGL.G7.WRITIN.T12_THE_WRITING_PROCESS_.DIALOGUE_WRITING.M7_X_DW_NO_PURPOSE",
+     "listen_for": [
+      "greetings only"
+     ],
+     "ask": "Where does it go?",
+     "repair": "Plan it."
+    }
+   ],
+   "checks": [
+    {
+     "question": "Quotation marks in a dialogue?",
+     "answer": "No",
+     "shows": "format"
+    },
+    {
+     "question": "Where does the next speaker go?",
+     "answer": "a new line",
+     "shows": "layout"
+    }
+   ]
+  }
+ ]
+}

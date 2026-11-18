@@ -1,0 +1,186 @@
+{
+ "sub_strand": "ENGL.G7.LISTEN.T14_CONSONANT_SOUNDS_AND",
+ "title": "Consonant Sounds and Intonation (Theme 14: Sports - outdoor games)",
+ "status": "draft: written 18 Nov 2026 offline for Grade 7 English; not yet checked by a Kenyan English teacher; not loaded by the live tutor",
+ "notes": "",
+ "skills": [
+  {
+   "skill": "ENGL.G7.LISTEN.T14_CONSONANT_SOUNDS_AND.SOUNDS_CONSONANTS",
+   "assessed_by": "questions",
+   "key_step": "The child says each word and sorts by the consonant sound heard, not the spelling.",
+   "floor": {
+    "prerequisite": "Identifies sounds.",
+    "question": "Which has /v/: van or fan?",
+    "answer": "van"
+   },
+   "steps": [
+    "Say the sound.",
+    "Say the words.",
+    "Sort by sound."
+   ],
+   "contexts": [
+    "sports words"
+   ],
+   "board": [
+    {
+     "beat": "write",
+     "do": "Write: van, fan, sin, sing."
+    },
+    {
+     "beat": "point",
+     "do": "Point at sing.",
+     "say": "Which sound?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for the child to answer."
+    },
+    {
+     "beat": "child_draws",
+     "do": "The child sorts."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "ENGL.G7.LISTEN.T14_CONSONANT_SOUNDS_AND.SOUNDS_CONSONANTS.M7_SC_F_V",
+     "listen_for": [
+      "fan"
+     ],
+     "ask": "Buzz?",
+     "repair": "Van."
+    },
+    {
+     "code": "ENGL.G7.LISTEN.T14_CONSONANT_SOUNDS_AND.SOUNDS_CONSONANTS.M7_SC_N_NG",
+     "listen_for": [
+      "sin"
+     ],
+     "ask": "Back of the mouth?",
+     "repair": "Sing."
+    },
+    {
+     "code": "ENGL.G7.LISTEN.T14_CONSONANT_SOUNDS_AND.SOUNDS_CONSONANTS.M7_SC_L_R",
+     "listen_for": [
+      "light"
+     ],
+     "ask": "Tongue?",
+     "repair": "Right."
+    },
+    {
+     "code": "ENGL.G7.LISTEN.T14_CONSONANT_SOUNDS_AND.SOUNDS_CONSONANTS.M7_SC_T_D",
+     "listen_for": [
+      "tin"
+     ],
+     "ask": "Voice?",
+     "repair": "Din."
+    },
+    {
+     "code": "ENGL.G7.LISTEN.T14_CONSONANT_SOUNDS_AND.SOUNDS_CONSONANTS.M7_SC_SPELLING",
+     "listen_for": [
+      "of"
+     ],
+     "ask": "Say it.",
+     "repair": "Laugh has f."
+    }
+   ],
+   "checks": [
+    {
+     "question": "Which has /ŋ/: sin or sing?",
+     "answer": "sing",
+     "shows": "ng"
+    },
+    {
+     "question": "Which has /f/: of or laugh?",
+     "answer": "laugh",
+     "shows": "spelling"
+    }
+   ]
+  },
+  {
+   "skill": "ENGL.G7.LISTEN.T14_CONSONANT_SOUNDS_AND.INTONATION",
+   "assessed_by": "voice",
+   "key_step": "The child names the question type, then rises for yes or no and falls for WH, and falls on sure tags.",
+   "floor": {
+    "prerequisite": "Uses Grade 6 intonation.",
+    "question": "Up or down: Are you ready?",
+    "answer": "up"
+   },
+   "steps": [
+    "Yes or no: rise.",
+    "WH: fall.",
+    "Sure tag: fall."
+   ],
+   "contexts": [
+    "sports commentary",
+    "an interview"
+   ],
+   "board": [
+    {
+     "beat": "write",
+     "do": "Draw arrows up and down."
+    },
+    {
+     "beat": "point",
+     "do": "Point at up.",
+     "say": "Say: Did the team win?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for the child to answer."
+    },
+    {
+     "beat": "child_draws",
+     "do": "The child says a WH question."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "ENGL.G7.LISTEN.T14_CONSONANT_SOUNDS_AND.INTONATION.M7_X_IN_WH_RISE",
+     "listen_for": [
+      "rising at goal"
+     ],
+     "ask": "WH question?",
+     "repair": "Fall."
+    },
+    {
+     "code": "ENGL.G7.LISTEN.T14_CONSONANT_SOUNDS_AND.INTONATION.M7_X_IN_YESNO_FLAT",
+     "listen_for": [
+      "flat"
+     ],
+     "ask": "Yes or no?",
+     "repair": "Rise."
+    },
+    {
+     "code": "ENGL.G7.LISTEN.T14_CONSONANT_SOUNDS_AND.INTONATION.M7_X_IN_STATEMENT_QUESTION",
+     "listen_for": [
+      "falling tune"
+     ],
+     "ask": "Is it a question?",
+     "repair": "Rise."
+    },
+    {
+     "code": "ENGL.G7.LISTEN.T14_CONSONANT_SOUNDS_AND.INTONATION.M7_X_IN_TAG",
+     "listen_for": [
+      "rising on wasn't it"
+     ],
+     "ask": "Are you sure?",
+     "repair": "Fall."
+    }
+   ],
+   "checks": [
+    {
+     "question": "Who won? Up or down?",
+     "answer": "down",
+     "shows": "WH"
+    },
+    {
+     "question": "Did you train? Up or down?",
+     "answer": "up",
+     "shows": "yes or no"
+    }
+   ]
+  }
+ ],
+ "also_taught_by": [
+  "ENGL.G7.LISTEN.T5_PRONUNCIATION_SOUNDS.PRONOUNCE_SOUNDS"
+ ]
+}

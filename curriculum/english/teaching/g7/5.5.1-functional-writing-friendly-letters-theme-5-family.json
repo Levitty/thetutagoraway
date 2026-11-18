@@ -1,0 +1,184 @@
+{
+ "sub_strand": "ENGL.G7.WRITIN.T5_FUNCTIONAL_WRITING_F",
+ "title": "Functional Writing: Friendly Letters (Theme 5: Family)",
+ "status": "draft: written 18 Nov 2026 offline for Grade 7 English; not yet checked by a Kenyan English teacher; not loaded by the live tutor",
+ "notes": "",
+ "skills": [
+  {
+   "skill": "ENGL.G7.WRITIN.T5_FUNCTIONAL_WRITING_F.FRIENDLY_LETTER",
+   "assessed_by": "questions",
+   "key_step": "The child labels a friendly letter's parts and spots formal features that do not belong.",
+   "floor": {
+    "prerequisite": "Knows Grade 6 letters.",
+    "question": "How many addresses in a formal letter?",
+    "answer": "two"
+   },
+   "steps": [
+    "Address and date.",
+    "Greeting.",
+    "Body.",
+    "Closing and name."
+   ],
+   "contexts": [
+    "family news"
+   ],
+   "board": [
+    {
+     "beat": "write",
+     "do": "Draw a letter with a subject line."
+    },
+    {
+     "beat": "point",
+     "do": "Point at the subject line.",
+     "say": "Does it belong?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for the child to answer."
+    },
+    {
+     "beat": "child_draws",
+     "do": "The child fixes the closing."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "ENGL.G7.WRITIN.T5_FUNCTIONAL_WRITING_F.FRIENDLY_LETTER.M7_FL_WRONG_CLOSING",
+     "listen_for": [
+      "Yours faithfully"
+     ],
+     "ask": "Friend or official?",
+     "repair": "Your loving cousin."
+    },
+    {
+     "code": "ENGL.G7.WRITIN.T5_FUNCTIONAL_WRITING_F.FRIENDLY_LETTER.M7_FL_RECEIVER_ADDRESS",
+     "listen_for": [
+      "the address of the person you are writing to"
+     ],
+     "ask": "Whose address?",
+     "repair": "Yours."
+    },
+    {
+     "code": "ENGL.G7.WRITIN.T5_FUNCTIONAL_WRITING_F.FRIENDLY_LETTER.M7_FL_SUBJECT_LINE",
+     "listen_for": [
+      "a greeting"
+     ],
+     "ask": "Formal?",
+     "repair": "No subject line."
+    },
+    {
+     "code": "ENGL.G7.WRITIN.T5_FUNCTIONAL_WRITING_F.FRIENDLY_LETTER.M7_FL_GREETING",
+     "listen_for": [
+      "Dear Sir"
+     ],
+     "ask": "Dear Sir to a friend?",
+     "repair": "Dear Achieng."
+    },
+    {
+     "code": "ENGL.G7.WRITIN.T5_FUNCTIONAL_WRITING_F.FRIENDLY_LETTER.M7_FL_ORDER",
+     "listen_for": [
+      "the closing"
+     ],
+     "ask": "What comes last?",
+     "repair": "Your name."
+    }
+   ],
+   "checks": [
+    {
+     "question": "Closing to a cousin?",
+     "answer": "Your loving cousin,",
+     "shows": "closing"
+    },
+    {
+     "question": "Greeting to a friend?",
+     "answer": "Dear Achieng,",
+     "shows": "greeting"
+    }
+   ]
+  },
+  {
+   "skill": "ENGL.G7.WRITIN.T5_FUNCTIONAL_WRITING_F.FRIENDLY_LETTER_WRITE",
+   "assessed_by": "composition",
+   "key_step": "The child writes a warm letter in the correct layout, one paragraph per piece of news.",
+   "floor": {
+    "prerequisite": "Knows the parts of a friendly letter.",
+    "question": "Closing for a cousin?",
+    "answer": "Your loving cousin,"
+   },
+   "steps": [
+    "Address and date.",
+    "Warm greeting.",
+    "Paragraphs of news.",
+    "Closing and name."
+   ],
+   "contexts": [
+    "writing to a cousin about family news"
+   ],
+   "board": [
+    {
+     "beat": "write",
+     "do": "Draw the layout."
+    },
+    {
+     "beat": "point",
+     "do": "Point at the body.",
+     "say": "What news first?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for the child to answer."
+    },
+    {
+     "beat": "child_draws",
+     "do": "The child writes the first paragraph."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "ENGL.G7.WRITIN.T5_FUNCTIONAL_WRITING_F.FRIENDLY_LETTER_WRITE.M7_X_FL_FORMAL",
+     "listen_for": [
+      "I write to inform you of my progress."
+     ],
+     "ask": "Would you speak like that?",
+     "repair": "Be warm."
+    },
+    {
+     "code": "ENGL.G7.WRITIN.T5_FUNCTIONAL_WRITING_F.FRIENDLY_LETTER_WRITE.M7_X_FL_NO_PARAGRAPHS",
+     "listen_for": [
+      "one"
+     ],
+     "ask": "New news?",
+     "repair": "New paragraph."
+    },
+    {
+     "code": "ENGL.G7.WRITIN.T5_FUNCTIONAL_WRITING_F.FRIENDLY_LETTER_WRITE.M7_X_FL_TWO_ADDRESSES",
+     "listen_for": [
+      "two"
+     ],
+     "ask": "Formal letter?",
+     "repair": "One address."
+    },
+    {
+     "code": "ENGL.G7.WRITIN.T5_FUNCTIONAL_WRITING_F.FRIENDLY_LETTER_WRITE.M7_X_FL_NO_CLOSING",
+     "listen_for": [
+      "nothing"
+     ],
+     "ask": "How does it end?",
+     "repair": "Close and sign."
+    }
+   ],
+   "checks": [
+    {
+     "question": "Opening for a friend?",
+     "answer": "How are you?",
+     "shows": "tone"
+    },
+    {
+     "question": "How many addresses?",
+     "answer": "one",
+     "shows": "layout"
+    }
+   ]
+  }
+ ]
+}

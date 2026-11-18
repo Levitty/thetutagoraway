@@ -1,0 +1,258 @@
+{
+ "sub_strand": "ENGL.G7.READIN.T4_INTENSIVE_READING_CL",
+ "title": "Intensive Reading: Class Readers (Theme 4: Leadership)",
+ "status": "draft: written 18 Nov 2026 offline for Grade 7 English; not yet checked by a Kenyan English teacher; not loaded by the live tutor",
+ "notes": "",
+ "skills": [
+  {
+   "skill": "ENGL.G7.READIN.T4_INTENSIVE_READING_CL.CHARACTER_ROLES",
+   "assessed_by": "questions",
+   "key_step": "The child names the main and minor characters and what each does in the story.",
+   "floor": {
+    "prerequisite": "Finds characters.",
+    "question": "Who is in it?",
+    "answer": "names"
+   },
+   "steps": [
+    "Who is it mostly about?",
+    "Who helps or blocks?",
+    "What does each do?"
+   ],
+   "contexts": [
+    "leadership stories"
+   ],
+   "board": [
+    {
+     "beat": "write",
+     "do": "Write the characters."
+    },
+    {
+     "beat": "point",
+     "do": "Point at the main one.",
+     "say": "Why main?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for the child to answer."
+    },
+    {
+     "beat": "child_draws",
+     "do": "The child gives a minor role."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "ENGL.G7.READIN.T4_INTENSIVE_READING_CL.CHARACTER_ROLES.M7_CR_MINOR_FOR_MAIN",
+     "listen_for": [
+      "a character who only appears once"
+     ],
+     "ask": "Mostly about?",
+     "repair": "Main."
+    },
+    {
+     "code": "ENGL.G7.READIN.T4_INTENSIVE_READING_CL.CHARACTER_ROLES.M7_CR_MAIN_FOR_MINOR",
+     "listen_for": [
+      "the girl the story is about"
+     ],
+     "ask": "Is she main?",
+     "repair": "Check."
+    },
+    {
+     "code": "ENGL.G7.READIN.T4_INTENSIVE_READING_CL.CHARACTER_ROLES.M7_CR_PLACE_CHARACTER",
+     "listen_for": [
+      "the village"
+     ],
+     "ask": "Person or place?",
+     "repair": "Character."
+    },
+    {
+     "code": "ENGL.G7.READIN.T4_INTENSIVE_READING_CL.CHARACTER_ROLES.M7_CR_ROLE",
+     "listen_for": [
+      "something done by another character"
+     ],
+     "ask": "What does it do?",
+     "repair": "Its role."
+    }
+   ],
+   "checks": [
+    {
+     "question": "Who is the story mostly about?",
+     "answer": "the main character",
+     "shows": "main"
+    },
+    {
+     "question": "What does the shopkeeper do?",
+     "answer": "sells to the girl (minor role)",
+     "shows": "role"
+    }
+   ]
+  },
+  {
+   "skill": "ENGL.G7.READIN.T4_INTENSIVE_READING_CL.CHARACTER_TRAITS",
+   "assessed_by": "questions",
+   "key_step": "The child chooses a trait word supported by what the character does and says, and quotes it.",
+   "floor": {
+    "prerequisite": "Judges characters.",
+    "question": "What is she like?",
+    "answer": "a trait"
+   },
+   "steps": [
+    "List actions.",
+    "Choose a trait.",
+    "Quote evidence."
+   ],
+   "contexts": [
+    "monster narratives",
+    "poems with people"
+   ],
+   "board": [
+    {
+     "beat": "write",
+     "do": "Write: The monster ate every cow in the village."
+    },
+    {
+     "beat": "point",
+     "do": "Point at ate every cow.",
+     "say": "Trait?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for the child to answer."
+    },
+    {
+     "beat": "child_draws",
+     "do": "The child quotes evidence."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "ENGL.G7.READIN.T4_INTENSIVE_READING_CL.CHARACTER_TRAITS.M7_CT_OPPOSITE",
+     "listen_for": [
+      "the opposite of the right word"
+     ],
+     "ask": "Does it match?",
+     "repair": "Check."
+    },
+    {
+     "code": "ENGL.G7.READIN.T4_INTENSIVE_READING_CL.CHARACTER_TRAITS.M7_CT_NAME_ONLY",
+     "listen_for": [
+      "a trait chosen from the name"
+     ],
+     "ask": "Evidence?",
+     "repair": "Quote."
+    },
+    {
+     "code": "ENGL.G7.READIN.T4_INTENSIVE_READING_CL.CHARACTER_TRAITS.M7_CT_WRONG_EVIDENCE",
+     "listen_for": [
+      "a line about the setting"
+     ],
+     "ask": "Does it show the trait?",
+     "repair": "Choose another."
+    },
+    {
+     "code": "ENGL.G7.READIN.T4_INTENSIVE_READING_CL.CHARACTER_TRAITS.M7_X_CT_ACTION_AS_TRAIT",
+     "listen_for": [
+      "eating cattle"
+     ],
+     "ask": "Action or trait?",
+     "repair": "Describing word."
+    }
+   ],
+   "checks": [
+    {
+     "question": "Trait from \"she shared her food\"?",
+     "answer": "generous",
+     "shows": "trait"
+    },
+    {
+     "question": "Is \"eating cattle\" a trait?",
+     "answer": "No",
+     "shows": "action"
+    }
+   ]
+  },
+  {
+   "skill": "ENGL.G7.READIN.T4_INTENSIVE_READING_CL.PREDICT",
+   "assessed_by": "questions",
+   "key_step": "The child points to the clue, predicts, and reads on to check.",
+   "floor": {
+    "prerequisite": "Predicts from titles.",
+    "question": "Title \"The Flood\". Predict.",
+    "answer": "a flood"
+   },
+   "steps": [
+    "Find the clue.",
+    "Predict.",
+    "Read on."
+   ],
+   "contexts": [
+    "leadership stories"
+   ],
+   "board": [
+    {
+     "beat": "write",
+     "do": "Write a stop point."
+    },
+    {
+     "beat": "point",
+     "do": "Point at the clue.",
+     "say": "What next?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for the child to answer."
+    },
+    {
+     "beat": "child_draws",
+     "do": "The child reads on."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "ENGL.G7.READIN.T4_INTENSIVE_READING_CL.PREDICT.M7_PD_NO_CLUE",
+     "listen_for": [
+      "an event with no clue"
+     ],
+     "ask": "Which clue?",
+     "repair": "Find it."
+    },
+    {
+     "code": "ENGL.G7.READIN.T4_INTENSIVE_READING_CL.PREDICT.M7_PD_CONTRADICTS",
+     "listen_for": [
+      "an event against the story"
+     ],
+     "ask": "Fits?",
+     "repair": "Check."
+    },
+    {
+     "code": "ENGL.G7.READIN.T4_INTENSIVE_READING_CL.PREDICT.M7_PD_ALREADY_HAPPENED",
+     "listen_for": [
+      "an event already told"
+     ],
+     "ask": "Happened?",
+     "repair": "Next."
+    },
+    {
+     "code": "ENGL.G7.READIN.T4_INTENSIVE_READING_CL.PREDICT.M7_PD_WRONG_CLUE",
+     "listen_for": [
+      "a sentence about something else"
+     ],
+     "ask": "Does it point there?",
+     "repair": "Use the right clue."
+    }
+   ],
+   "checks": [
+    {
+     "question": "\"She packed a torch and a map.\" Next?",
+     "answer": "a journey",
+     "shows": "clue"
+    },
+    {
+     "question": "Is something already told a prediction?",
+     "answer": "No",
+     "shows": "future"
+    }
+   ]
+  }
+ ]
+}

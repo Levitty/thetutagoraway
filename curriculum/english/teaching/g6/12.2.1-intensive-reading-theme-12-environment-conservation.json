@@ -1,0 +1,96 @@
+{
+ "sub_strand": "ENGL.G6.READIN.T12_INTENSIVE_READING",
+ "title": "Intensive Reading (Theme 12: Environment conservation)",
+ "status": "draft: written 18 Nov 2026 offline for Grade 6 English; not yet checked by a Kenyan English teacher; not loaded by the live tutor",
+ "notes": "",
+ "skills": [
+  {
+   "skill": "ENGL.G6.READIN.T12_INTENSIVE_READING.POEM_FEATURES",
+   "assessed_by": "questions",
+   "key_step": "The child listens to the ends of lines for rhyme and spots repeated lines and stanzas.",
+   "floor": {
+    "prerequisite": "Hears sounds.",
+    "question": "Do cat and hat sound alike at the end?",
+    "answer": "yes"
+   },
+   "steps": [
+    "Read the line endings aloud.",
+    "Mark rhymes.",
+    "Mark repeated lines.",
+    "Count stanzas."
+   ],
+   "contexts": [
+    "a poem about the environment"
+   ],
+   "board": [
+    {
+     "beat": "write",
+     "do": "Write a two-stanza poem."
+    },
+    {
+     "beat": "point",
+     "do": "Point at the line endings.",
+     "say": "Which rhyme?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for the child to answer."
+    },
+    {
+     "beat": "child_draws",
+     "do": "The child marks the repeated line."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "ENGL.G6.READIN.T12_INTENSIVE_READING.POEM_FEATURES.M_POEM_SPELL_RHYME",
+     "listen_for": [
+      "cough and rough"
+     ],
+     "ask": "Say them: do they sound alike?",
+     "repair": "Sound, not spelling."
+    },
+    {
+     "code": "ENGL.G6.READIN.T12_INTENSIVE_READING.POEM_FEATURES.M_POEM_REPEAT_RHYME",
+     "listen_for": [
+      "the first line"
+     ],
+     "ask": "Which line comes again?",
+     "repair": "That is the repeat."
+    },
+    {
+     "code": "ENGL.G6.READIN.T12_INTENSIVE_READING.POEM_FEATURES.M_POEM_FIRST_WORD",
+     "listen_for": [
+      "the first words of lines"
+     ],
+     "ask": "Where is rhyme?",
+     "repair": "Line ends."
+    },
+    {
+     "code": "ENGL.G6.READIN.T12_INTENSIVE_READING.POEM_FEATURES.M6_POEM_STANZA_LINE",
+     "listen_for": [
+      "line"
+     ],
+     "ask": "One line or a group?",
+     "repair": "Stanza is a group."
+    }
+   ],
+   "checks": [
+    {
+     "question": "Do rough and tough rhyme?",
+     "answer": "yes",
+     "shows": "rhyme"
+    },
+    {
+     "question": "A group of lines is a ...",
+     "answer": "stanza",
+     "shows": "stanza"
+    }
+   ]
+  }
+ ],
+ "also_taught_by": [
+  "ENGL.G6.READIN.T2_INTENSIVE_READING.FACTUAL_QUESTIONS",
+  "ENGL.G6.READIN.T2_INTENSIVE_READING.INFERENCE_QUESTIONS"
+ ]
+}

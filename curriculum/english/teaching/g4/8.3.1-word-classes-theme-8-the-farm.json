@@ -1,0 +1,177 @@
+{
+ "sub_strand": "ENGL.G4.LANGUA.T8_WORD_CLASSES",
+ "title": "Word Classes (Theme 8: The farm)",
+ "status": "draft: written 18 Nov 2026 offline for Grade 4 English; not yet checked by a Kenyan English teacher; not loaded by the live tutor",
+ "notes": "",
+ "skills": [
+  {
+   "skill": "ENGL.G4.LANGUA.T8_WORD_CLASSES.CONTRACTIONS",
+   "assessed_by": "questions",
+   "key_step": "The child puts the apostrophe where the letters were left out.",
+   "floor": {
+    "prerequisite": "Knows the full forms.",
+    "question": "do not",
+    "answer": "do not"
+   },
+   "steps": [
+    "Write the full form.",
+    "Cross out the missing letter.",
+    "Put the apostrophe there."
+   ],
+   "contexts": [
+    "a farm notice",
+    "a text message"
+   ],
+   "board": [
+    {
+     "beat": "write",
+     "do": "Write: is not."
+    },
+    {
+     "beat": "point",
+     "do": "Point at the o in not.",
+     "say": "This letter goes."
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for isn't."
+    },
+    {
+     "beat": "child_draws",
+     "do": "The child writes don't."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "ENGL.G4.LANGUA.T8_WORD_CLASSES.CONTRACTIONS.M_CON_NO_APOSTROPHE",
+     "listen_for": [
+      "dont"
+     ],
+     "ask": "What shows the missing letter?",
+     "repair": "An apostrophe."
+    },
+    {
+     "code": "ENGL.G4.LANGUA.T8_WORD_CLASSES.CONTRACTIONS.M_CON_WRONG_PLACE",
+     "listen_for": [
+      "is'nt"
+     ],
+     "ask": "Which letter is missing?",
+     "repair": "Put it there."
+    },
+    {
+     "code": "ENGL.G4.LANGUA.T8_WORD_CLASSES.CONTRACTIONS.M_CON_ITS",
+     "listen_for": [
+      "Its"
+     ],
+     "ask": "It is or belonging?",
+     "repair": "It's means it is."
+    },
+    {
+     "code": "ENGL.G4.LANGUA.T8_WORD_CLASSES.CONTRACTIONS.M_CON_WRONG_FORM",
+     "listen_for": [
+      "willn't"
+     ],
+     "ask": "Does that word exist?",
+     "repair": "Won't."
+    }
+   ],
+   "checks": [
+    {
+     "question": "it is",
+     "answer": "it's",
+     "shows": "it's"
+    },
+    {
+     "question": "will not",
+     "answer": "won't",
+     "shows": "special"
+    }
+   ]
+  },
+  {
+   "skill": "ENGL.G4.LANGUA.T8_WORD_CLASSES.NEGATIVE_STATEMENTS",
+   "assessed_by": "questions",
+   "key_step": "The child adds not after the helping verb, or do, does or did not before the plain verb.",
+   "floor": {
+    "prerequisite": "Uses contractions.",
+    "question": "is not",
+    "answer": "isn't"
+   },
+   "steps": [
+    "Is there a helping verb?",
+    "Add not after it.",
+    "If not, add do/does/did not.",
+    "Plain verb after it."
+   ],
+   "contexts": [
+    "farm facts",
+    "daily routines"
+   ],
+   "board": [
+    {
+     "beat": "write",
+     "do": "Write: The cow eats grass."
+    },
+    {
+     "beat": "point",
+     "do": "Point at eats.",
+     "say": "Make it negative."
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for does not eat."
+    },
+    {
+     "beat": "child_draws",
+     "do": "The child makes another negative."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "ENGL.G4.LANGUA.T8_WORD_CLASSES.NEGATIVE_STATEMENTS.M_NEG_DOUBLE",
+     "listen_for": [
+      "no"
+     ],
+     "ask": "How many no words?",
+     "repair": "Only one."
+    },
+    {
+     "code": "ENGL.G4.LANGUA.T8_WORD_CLASSES.NEGATIVE_STATEMENTS.M_NEG_NO_DO",
+     "listen_for": [
+      "not"
+     ],
+     "ask": "Which helping word?",
+     "repair": "Does not."
+    },
+    {
+     "code": "ENGL.G4.LANGUA.T8_WORD_CLASSES.NEGATIVE_STATEMENTS.M_NEG_VERB_S",
+     "listen_for": [
+      "eats"
+     ],
+     "ask": "After does not?",
+     "repair": "Plain verb."
+    },
+    {
+     "code": "ENGL.G4.LANGUA.T8_WORD_CLASSES.NEGATIVE_STATEMENTS.M_NEG_DO_WITH_BE",
+     "listen_for": [
+      "do not"
+     ],
+     "ask": "Is there am, is or are?",
+     "repair": "Am not."
+    }
+   ],
+   "checks": [
+    {
+     "question": "She plays. (negative)",
+     "answer": "She does not play.",
+     "shows": "does not"
+    },
+    {
+     "question": "I am late. (negative)",
+     "answer": "I am not late.",
+     "shows": "be"
+    }
+   ]
+  }
+ ]
+}

@@ -1,0 +1,94 @@
+{
+ "sub_strand": "ENGL.G7.READIN.T9_INTENSIVE_READING_CL",
+ "title": "Intensive reading: Class Reader (Theme 9: Heroes and heroines - kenya)",
+ "status": "draft: written 18 Nov 2026 offline for Grade 7 English; not yet checked by a Kenyan English teacher; not loaded by the live tutor",
+ "notes": "",
+ "skills": [
+  {
+   "skill": "ENGL.G7.READIN.T9_INTENSIVE_READING_CL.STORY_ORDER",
+   "assessed_by": "questions",
+   "key_step": "The child orders events by when they happened, using time clues, and notes them briefly.",
+   "floor": {
+    "prerequisite": "Orders events.",
+    "question": "What came first?",
+    "answer": "the first event"
+   },
+   "steps": [
+    "Find time clues.",
+    "Order events.",
+    "Note them in short points."
+   ],
+   "contexts": [
+    "class reader on heroes"
+   ],
+   "board": [
+    {
+     "beat": "write",
+     "do": "Write four events out of order."
+    },
+    {
+     "beat": "point",
+     "do": "Point at \"years earlier\".",
+     "say": "Where does it go?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for the child to answer."
+    },
+    {
+     "beat": "child_draws",
+     "do": "The child notes the order."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "ENGL.G7.READIN.T9_INTENSIVE_READING_CL.STORY_ORDER.M7_SO_REVERSED",
+     "listen_for": [
+      "the events backwards"
+     ],
+     "ask": "First?",
+     "repair": "Start there."
+    },
+    {
+     "code": "ENGL.G7.READIN.T9_INTENSIVE_READING_CL.STORY_ORDER.M7_SO_SWAPPED",
+     "listen_for": [
+      "two events swapped"
+     ],
+     "ask": "Which came before?",
+     "repair": "Swap."
+    },
+    {
+     "code": "ENGL.G7.READIN.T9_INTENSIVE_READING_CL.STORY_ORDER.M7_SO_ROTATED",
+     "listen_for": [
+      "the last event first"
+     ],
+     "ask": "Is the last one first?",
+     "repair": "Move it."
+    },
+    {
+     "code": "ENGL.G7.READIN.T9_INTENSIVE_READING_CL.STORY_ORDER.M7_X_SO_FLASHBACK",
+     "listen_for": [
+      "what was told first"
+     ],
+     "ask": "When did it happen?",
+     "repair": "Use time clues."
+    }
+   ],
+   "checks": [
+    {
+     "question": "Order four events.",
+     "answer": "the correct order",
+     "shows": "order"
+    },
+    {
+     "question": "A flashback is told first. Did it happen first?",
+     "answer": "often yes",
+     "shows": "flashback"
+    }
+   ]
+  }
+ ],
+ "also_taught_by": [
+  "ENGL.G7.READIN.T4_INTENSIVE_READING_CL.CHARACTER_ROLES"
+ ]
+}

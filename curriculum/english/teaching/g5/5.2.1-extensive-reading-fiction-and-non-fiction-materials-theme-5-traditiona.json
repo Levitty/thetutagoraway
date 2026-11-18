@@ -1,0 +1,265 @@
+{
+ "sub_strand": "ENGL.G5.READIN.T5_EXTENSIVE_READING_FI",
+ "title": "Extensive Reading: Fiction and Non Fiction Materials (Theme 5: Traditional foods)",
+ "status": "draft: written 18 Nov 2026 offline for Grade 5 English; not yet checked by a Kenyan English teacher; not loaded by the live tutor",
+ "notes": "",
+ "skills": [
+  {
+   "skill": "ENGL.G5.READIN.T5_EXTENSIVE_READING_FI.SCAN_SKIM",
+   "assessed_by": "questions",
+   "key_step": "The child scans for one detail by its key word, or skims titles and first lines for the gist.",
+   "floor": {
+    "prerequisite": "Finds a stated detail.",
+    "question": "Find the date in the notice.",
+    "answer": "the date"
+   },
+   "steps": [
+    "Scan: pick a key word.",
+    "Run the eye down.",
+    "Skim: read title and first lines.",
+    "Say the gist."
+   ],
+   "contexts": [
+    "a market timetable",
+    "a magazine article"
+   ],
+   "board": [
+    {
+     "beat": "write",
+     "do": "Write a short notice."
+    },
+    {
+     "beat": "point",
+     "do": "Point at the question.",
+     "say": "Scan or skim?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for the child to answer."
+    },
+    {
+     "beat": "child_draws",
+     "do": "The child scans for the time."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "ENGL.G5.READIN.T5_EXTENSIVE_READING_FI.SCAN_SKIM.M_SCAN_READS_ALL",
+     "listen_for": [
+      "a wrong time"
+     ],
+     "ask": "Do you need every word?",
+     "repair": "Scan."
+    },
+    {
+     "code": "ENGL.G5.READIN.T5_EXTENSIVE_READING_FI.SCAN_SKIM.M_SCAN_WRONG_LINE",
+     "listen_for": [
+      "a nearby day"
+     ],
+     "ask": "Is that the right line?",
+     "repair": "Check the key word."
+    },
+    {
+     "code": "ENGL.G5.READIN.T5_EXTENSIVE_READING_FI.SCAN_SKIM.M_SKIM_DETAIL_FOR_GIST",
+     "listen_for": [
+      "a detail"
+     ],
+     "ask": "Is that the whole purpose?",
+     "repair": "The gist."
+    },
+    {
+     "code": "ENGL.G5.READIN.T5_EXTENSIVE_READING_FI.SCAN_SKIM.M5_SKIM_EVERY_WORD",
+     "listen_for": [
+      "only reached paragraph 1"
+     ],
+     "ask": "How long do you have?",
+     "repair": "Title and first lines only."
+    }
+   ],
+   "checks": [
+    {
+     "question": "Find the price of maize quickly.",
+     "answer": "scan for \"maize\"",
+     "shows": "scan"
+    },
+    {
+     "question": "What is the article mainly about?",
+     "answer": "skim title and first lines",
+     "shows": "skim"
+    }
+   ]
+  },
+  {
+   "skill": "ENGL.G5.READIN.T5_EXTENSIVE_READING_FI.SELECT_READING",
+   "assessed_by": "questions",
+   "key_step": "The child checks purpose, interest and level with the title, blurb and one page.",
+   "floor": {
+    "prerequisite": "Skims a text.",
+    "question": "Skim: what is this page about?",
+    "answer": "the gist"
+   },
+   "steps": [
+    "Say your purpose.",
+    "Read title and blurb.",
+    "Read one page: count new words.",
+    "Decide."
+   ],
+   "contexts": [
+    "the class library",
+    "online stories",
+    "a newspaper corner"
+   ],
+   "board": [
+    {
+     "beat": "write",
+     "do": "Write: purpose, interest, level."
+    },
+    {
+     "beat": "point",
+     "do": "Point at level.",
+     "say": "How do you check it?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for the child to answer."
+    },
+    {
+     "beat": "child_draws",
+     "do": "The child chooses between two books."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "ENGL.G5.READIN.T5_EXTENSIVE_READING_FI.SELECT_READING.M5_SR_COVER",
+     "listen_for": [
+      "the cover picture only"
+     ],
+     "ask": "What does the blurb say?",
+     "repair": "Read it."
+    },
+    {
+     "code": "ENGL.G5.READIN.T5_EXTENSIVE_READING_FI.SELECT_READING.M5_SR_TOO_HARD",
+     "listen_for": [
+      "a novel with many words I do not know"
+     ],
+     "ask": "How many new words?",
+     "repair": "Five or fewer."
+    },
+    {
+     "code": "ENGL.G5.READIN.T5_EXTENSIVE_READING_FI.SELECT_READING.M5_SR_PURPOSE",
+     "listen_for": [
+      "a story about a rich man"
+     ],
+     "ask": "Facts or a story?",
+     "repair": "Non-fiction for facts."
+    },
+    {
+     "code": "ENGL.G5.READIN.T5_EXTENSIVE_READING_FI.SELECT_READING.M5_SR_DIGITAL_TRUST",
+     "listen_for": [
+      "a stranger's post with many likes"
+     ],
+     "ask": "Who wrote it?",
+     "repair": "Check the source."
+    }
+   ],
+   "checks": [
+    {
+     "question": "You need facts on banking. Story or magazine article?",
+     "answer": "magazine article",
+     "shows": "purpose"
+    },
+    {
+     "question": "A page has ten new words. Right level?",
+     "answer": "No",
+     "shows": "level"
+    }
+   ]
+  },
+  {
+   "skill": "ENGL.G5.READIN.T5_EXTENSIVE_READING_FI.INDEPENDENT_READING",
+   "assessed_by": "teacher",
+   "key_step": "The child reads a range of texts alone and keeps a short log of what each was about.",
+   "floor": {
+    "prerequisite": "Chooses a suitable book.",
+    "question": "Which book is at your level?",
+    "answer": "a suitable book"
+   },
+   "steps": [
+    "Choose a text.",
+    "Read for twenty minutes.",
+    "Write one line in the log.",
+    "Tell a partner about it."
+   ],
+   "contexts": [
+    "class readers",
+    "magazines",
+    "poems"
+   ],
+   "board": [
+    {
+     "beat": "write",
+     "do": "Draw a reading log: title, type, about."
+    },
+    {
+     "beat": "point",
+     "do": "Point at type.",
+     "say": "What type was your last book?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for the child to answer."
+    },
+    {
+     "beat": "child_draws",
+     "do": "The child adds an entry."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "ENGL.G5.READIN.T5_EXTENSIVE_READING_FI.INDEPENDENT_READING.M5_IR_SAME_BOOK",
+     "listen_for": [
+      "Yes"
+     ],
+     "ask": "How many different texts?",
+     "repair": "Try a new one."
+    },
+    {
+     "code": "ENGL.G5.READIN.T5_EXTENSIVE_READING_FI.INDEPENDENT_READING.M5_IR_NO_RETELL",
+     "listen_for": [
+      "I finished it."
+     ],
+     "ask": "What was it about?",
+     "repair": "Stop and think."
+    },
+    {
+     "code": "ENGL.G5.READIN.T5_EXTENSIVE_READING_FI.INDEPENDENT_READING.M5_IR_GIVES_UP",
+     "listen_for": [
+      "stop and choose nothing"
+     ],
+     "ask": "How many pages did you read?",
+     "repair": "Give it a few."
+    },
+    {
+     "code": "ENGL.G5.READIN.T5_EXTENSIVE_READING_FI.INDEPENDENT_READING.M5_IR_FICTION_ONLY",
+     "listen_for": [
+      "more stories"
+     ],
+     "ask": "Any poems or articles?",
+     "repair": "Add them."
+    }
+   ],
+   "checks": [
+    {
+     "question": "Your log has only stories. Add?",
+     "answer": "a poem or an article",
+     "shows": "variety"
+    },
+    {
+     "question": "Tell me about your book in two sentences.",
+     "answer": "a correct summary",
+     "shows": "understanding"
+    }
+   ]
+  }
+ ]
+}

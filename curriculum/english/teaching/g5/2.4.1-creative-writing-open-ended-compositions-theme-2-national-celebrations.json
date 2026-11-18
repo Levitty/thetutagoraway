@@ -1,0 +1,180 @@
+{
+ "sub_strand": "ENGL.G5.WRITIN.T2_CREATIVE_WRITING_OPE",
+ "title": "Creative Writing: Open ended Compositions (Theme 2: National celebrations)",
+ "status": "draft: written 18 Nov 2026 offline for Grade 5 English; not yet checked by a Kenyan English teacher; not loaded by the live tutor",
+ "notes": "",
+ "skills": [
+  {
+   "skill": "ENGL.G5.WRITIN.T2_CREATIVE_WRITING_OPE.PLAN_COMPOSITION",
+   "assessed_by": "questions",
+   "key_step": "The child lists points, crosses out those that leave the topic and numbers the rest.",
+   "floor": {
+    "prerequisite": "Orders sentences.",
+    "question": "Order: we ate, we cooked.",
+    "answer": "we cooked, we ate"
+   },
+   "steps": [
+    "Write the topic.",
+    "List ideas.",
+    "Cross out ideas that do not fit.",
+    "Number the rest."
+   ],
+   "contexts": [
+    "a national celebration",
+    "my best day",
+    "a visit"
+   ],
+   "board": [
+    {
+     "beat": "write",
+     "do": "Write the topic and five ideas, one off topic."
+    },
+    {
+     "beat": "point",
+     "do": "Point at the off-topic idea.",
+     "say": "Does it belong?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for the child to answer."
+    },
+    {
+     "beat": "child_draws",
+     "do": "The child numbers the rest."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "ENGL.G5.WRITIN.T2_CREATIVE_WRITING_OPE.PLAN_COMPOSITION.M5_PC_IRRELEVANT",
+     "listen_for": [
+      "We watched the parade."
+     ],
+     "ask": "Is it about the topic?",
+     "repair": "Cross it out."
+    },
+    {
+     "code": "ENGL.G5.WRITIN.T2_CREATIVE_WRITING_OPE.PLAN_COMPOSITION.M5_PC_NO_ORDER",
+     "listen_for": [
+      "speech, go home, arrive"
+     ],
+     "ask": "What happens first?",
+     "repair": "Number them."
+    },
+    {
+     "code": "ENGL.G5.WRITIN.T2_CREATIVE_WRITING_OPE.PLAN_COMPOSITION.M5_PC_TOO_FEW",
+     "listen_for": [
+      "Yes"
+     ],
+     "ask": "Is one point enough?",
+     "repair": "Three or four."
+    },
+    {
+     "code": "ENGL.G5.WRITIN.T2_CREATIVE_WRITING_OPE.PLAN_COMPOSITION.M5_PC_SENTENCES_IN_PLAN",
+     "listen_for": [
+      "full paragraphs"
+     ],
+     "ask": "Is this a plan?",
+     "repair": "Short notes."
+    }
+   ],
+   "checks": [
+    {
+     "question": "Topic: Madaraka Day. Keep \"My cousin's bicycle\"?",
+     "answer": "No",
+     "shows": "relevance"
+    },
+    {
+     "question": "Is a plan full paragraphs?",
+     "answer": "No, short notes",
+     "shows": "plan"
+    }
+   ]
+  },
+  {
+   "skill": "ENGL.G5.WRITIN.T2_CREATIVE_WRITING_OPE.OPEN_COMPOSITION",
+   "assessed_by": "composition",
+   "key_step": "The child writes from the plan, a paragraph per point, and rereads each paragraph against the topic.",
+   "floor": {
+    "prerequisite": "Plans a composition.",
+    "question": "Plan three points on \"A happy day\".",
+    "answer": "three points"
+   },
+   "steps": [
+    "Write from the plan.",
+    "One paragraph per point.",
+    "Link paragraphs.",
+    "Reread against the topic."
+   ],
+   "contexts": [
+    "a national celebration",
+    "a family event",
+    "a school trip"
+   ],
+   "board": [
+    {
+     "beat": "write",
+     "do": "Write the plan."
+    },
+    {
+     "beat": "point",
+     "do": "Point at point 2.",
+     "say": "How will you start that paragraph?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for the child to answer."
+    },
+    {
+     "beat": "child_draws",
+     "do": "The child writes the paragraph."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "ENGL.G5.WRITIN.T2_CREATIVE_WRITING_OPE.OPEN_COMPOSITION.M5_OC_DRIFT",
+     "listen_for": [
+      "Yes"
+     ],
+     "ask": "Is it still on the topic?",
+     "repair": "Reread."
+    },
+    {
+     "code": "ENGL.G5.WRITIN.T2_CREATIVE_WRITING_OPE.OPEN_COMPOSITION.M5_OC_NO_PARAGRAPHS",
+     "listen_for": [
+      "one"
+     ],
+     "ask": "Where is the new part?",
+     "repair": "New paragraph."
+    },
+    {
+     "code": "ENGL.G5.WRITIN.T2_CREATIVE_WRITING_OPE.OPEN_COMPOSITION.M5_OC_AND_THEN",
+     "listen_for": [
+      "and then ... and then"
+     ],
+     "ask": "Another link word?",
+     "repair": "Vary them."
+    },
+    {
+     "code": "ENGL.G5.WRITIN.T2_CREATIVE_WRITING_OPE.OPEN_COMPOSITION.M5_OC_MEMORISED",
+     "listen_for": [
+      "the zoo composition"
+     ],
+     "ask": "What is the topic?",
+     "repair": "Write for it."
+    }
+   ],
+   "checks": [
+    {
+     "question": "Is a paragraph about another day on topic?",
+     "answer": "No",
+     "shows": "focus"
+    },
+    {
+     "question": "Improve: and then, and then",
+     "answer": "later, after that",
+     "shows": "linking"
+    }
+   ]
+  }
+ ]
+}

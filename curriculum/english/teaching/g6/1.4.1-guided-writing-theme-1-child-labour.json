@@ -1,0 +1,109 @@
+{
+ "sub_strand": "ENGL.G6.WRITIN.T1_GUIDED_WRITING",
+ "title": "Guided Writing (Theme 1: Child labour)",
+ "status": "draft: written 18 Nov 2026 offline for Grade 6 English; not yet checked by a Kenyan English teacher; not loaded by the live tutor",
+ "notes": "",
+ "skills": [
+  {
+   "skill": "ENGL.G6.WRITIN.T1_GUIDED_WRITING.FORM_FIELDS",
+   "assessed_by": "questions",
+   "key_step": "The child reads each field label and its instruction, then writes the detail in the right format.",
+   "floor": {
+    "prerequisite": "Fills simple forms.",
+    "question": "What goes in \"County\"?",
+    "answer": "the county"
+   },
+   "steps": [
+    "Read the field.",
+    "Read the instruction.",
+    "Write the detail.",
+    "Check every field."
+   ],
+   "contexts": [
+    "a child protection form",
+    "a club registration"
+   ],
+   "board": [
+    {
+     "beat": "write",
+     "do": "Draw: Surname, Other names, Date of birth, Signature."
+    },
+    {
+     "beat": "point",
+     "do": "Point at Surname.",
+     "say": "Which name goes here?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for the child to answer."
+    },
+    {
+     "beat": "child_draws",
+     "do": "The child fills the rest."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "ENGL.G6.WRITIN.T1_GUIDED_WRITING.FORM_FIELDS.M_FORM_SURNAME",
+     "listen_for": [
+      "Wanjiru"
+     ],
+     "ask": "Family name?",
+     "repair": "Surname."
+    },
+    {
+     "code": "ENGL.G6.WRITIN.T1_GUIDED_WRITING.FORM_FIELDS.M_FORM_DATE_TODAY",
+     "listen_for": [
+      "the date today"
+     ],
+     "ask": "Which date?",
+     "repair": "Birth."
+    },
+    {
+     "code": "ENGL.G6.WRITIN.T1_GUIDED_WRITING.FORM_FIELDS.M_FORM_SKIP",
+     "listen_for": [
+      "leave it empty"
+     ],
+     "ask": "Empty?",
+     "repair": "N/A."
+    },
+    {
+     "code": "ENGL.G6.WRITIN.T1_GUIDED_WRITING.FORM_FIELDS.M_FORM_BLOCK",
+     "listen_for": [
+      "amina odhiambo"
+     ],
+     "ask": "Block letters?",
+     "repair": "Capitals."
+    },
+    {
+     "code": "ENGL.G6.WRITIN.T1_GUIDED_WRITING.FORM_FIELDS.M_FORM_WRONG_FIELD",
+     "listen_for": [
+      "Favourite colour"
+     ],
+     "ask": "What does the label ask?",
+     "repair": "Match it."
+    },
+    {
+     "code": "ENGL.G6.WRITIN.T1_GUIDED_WRITING.FORM_FIELDS.M_FORM_SIGN_PRINT",
+     "listen_for": [
+      "your name in print"
+     ],
+     "ask": "Printed or signed?",
+     "repair": "Sign."
+    }
+   ],
+   "checks": [
+    {
+     "question": "Surname for Wanjiru Mwangi?",
+     "answer": "Mwangi",
+     "shows": "surname"
+    },
+    {
+     "question": "A field that does not apply?",
+     "answer": "N/A",
+     "shows": "skip"
+    }
+   ]
+  }
+ ]
+}

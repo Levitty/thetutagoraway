@@ -1,0 +1,91 @@
+{
+ "sub_strand": "ENGL.G8.READIN.T5_INTENSIVE_READING_SH",
+ "title": "Intensive Reading: Short story (Class Reader) (Theme 5: Relationships: peers)",
+ "status": "draft: written 18 Nov 2026 offline for Grade 8 English; not yet checked by a Kenyan English teacher; not loaded by the live tutor",
+ "notes": "",
+ "skills": [
+  {
+   "skill": "ENGL.G8.READIN.T5_INTENSIVE_READING_SH.DIALOGUE_REPETITION",
+   "assessed_by": "questions",
+   "key_step": "The child finds dialogue and repetition and says what each does in the story.",
+   "floor": {
+    "prerequisite": "Knows dialogue format.",
+    "question": "How is speech shown in a story?",
+    "answer": "quotation marks"
+   },
+   "steps": [
+    "Find spoken words.",
+    "Find repeated words or events.",
+    "Say the effect."
+   ],
+   "contexts": [
+    "class reader: peers"
+   ],
+   "board": [
+    {
+     "beat": "write",
+     "do": "Write: \"Wait!\" she called. Knock, knock, knock."
+    },
+    {
+     "beat": "point",
+     "do": "Point at knock.",
+     "say": "Why repeat it?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for the child to answer."
+    },
+    {
+     "beat": "child_draws",
+     "do": "The child explains the dialogue."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "ENGL.G8.READIN.T5_INTENSIVE_READING_SH.DIALOGUE_REPETITION.M8_X_DR_NARRATION_AS_DIALOGUE",
+     "listen_for": [
+      "She walked home slowly."
+     ],
+     "ask": "Spoken?",
+     "repair": "Dialogue is speech."
+    },
+    {
+     "code": "ENGL.G8.READIN.T5_INTENSIVE_READING_SH.DIALOGUE_REPETITION.M8_X_DR_REPETITION_ERROR",
+     "listen_for": [
+      "it is a mistake"
+     ],
+     "ask": "Mistake?",
+     "repair": "On purpose."
+    },
+    {
+     "code": "ENGL.G8.READIN.T5_INTENSIVE_READING_SH.DIALOGUE_REPETITION.M8_X_DR_NO_PURPOSE",
+     "listen_for": [
+      "they talked"
+     ],
+     "ask": "What does it show?",
+     "repair": "About the characters."
+    },
+    {
+     "code": "ENGL.G8.READIN.T5_INTENSIVE_READING_SH.DIALOGUE_REPETITION.M8_X_DR_ONE_REPEAT",
+     "listen_for": [
+      "nothing"
+     ],
+     "ask": "Events repeat?",
+     "repair": "Yes."
+    }
+   ],
+   "checks": [
+    {
+     "question": "Why repeat a warning three times?",
+     "answer": "to build suspense or stress it",
+     "shows": "repetition"
+    },
+    {
+     "question": "What does dialogue show?",
+     "answer": "characters and their relationships",
+     "shows": "dialogue"
+    }
+   ]
+  }
+ ]
+}

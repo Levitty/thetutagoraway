@@ -1,0 +1,177 @@
+{
+ "sub_strand": "ENGL.G7.WRITIN.T1_HANDWRITING_LEGIBILI",
+ "title": "Handwriting: Legibility and Neatness (Theme 1: Personal responsibility)",
+ "status": "draft: written 18 Nov 2026 offline for Grade 7 English; not yet checked by a Kenyan English teacher; not loaded by the live tutor",
+ "notes": "",
+ "skills": [
+  {
+   "skill": "ENGL.G7.WRITIN.T1_HANDWRITING_LEGIBILI.HANDWRITING",
+   "assessed_by": "questions",
+   "key_step": "The child names the features of legible, neat handwriting and checks a sample for them.",
+   "floor": {
+    "prerequisite": "Writes cursive.",
+    "question": "Join these letters.",
+    "answer": "joined"
+   },
+   "steps": [
+    "Even size.",
+    "Clear spaces.",
+    "Same slant.",
+    "Plain letters."
+   ],
+   "contexts": [
+    "a fair copy of homework"
+   ],
+   "board": [
+    {
+     "beat": "write",
+     "do": "Write a messy sample."
+    },
+    {
+     "beat": "point",
+     "do": "Point at the crowded words.",
+     "say": "What is wrong?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for the child to answer."
+    },
+    {
+     "beat": "child_draws",
+     "do": "The child names another fix."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "ENGL.G7.WRITIN.T1_HANDWRITING_LEGIBILI.HANDWRITING.M7_HW_UNEVEN",
+     "listen_for": [
+      "letters of different sizes"
+     ],
+     "ask": "Same size?",
+     "repair": "Even letters."
+    },
+    {
+     "code": "ENGL.G7.WRITIN.T1_HANDWRITING_LEGIBILI.HANDWRITING.M7_HW_CROWDED",
+     "listen_for": [
+      "no space"
+     ],
+     "ask": "Space?",
+     "repair": "Clear spaces."
+    },
+    {
+     "code": "ENGL.G7.WRITIN.T1_HANDWRITING_LEGIBILI.HANDWRITING.M7_HW_FAST",
+     "listen_for": [
+      "write faster"
+     ],
+     "ask": "Does speed help?",
+     "repair": "Keep even."
+    },
+    {
+     "code": "ENGL.G7.WRITIN.T1_HANDWRITING_LEGIBILI.HANDWRITING.M7_HW_DECORATE",
+     "listen_for": [
+      "letters with loops and decorations"
+     ],
+     "ask": "Loops help?",
+     "repair": "Plain letters."
+    }
+   ],
+   "checks": [
+    {
+     "question": "Feature of neat writing?",
+     "answer": "even letter size",
+     "shows": "feature"
+    },
+    {
+     "question": "Faster writing is neater?",
+     "answer": "No",
+     "shows": "speed"
+    }
+   ]
+  },
+  {
+   "skill": "ENGL.G7.WRITIN.T1_HANDWRITING_LEGIBILI.LEGIBLE_WRITING",
+   "assessed_by": "teacher",
+   "key_step": "The child writes a clean fair copy with even letters, spaces and margins.",
+   "floor": {
+    "prerequisite": "Knows the features of neat handwriting.",
+    "question": "Name one feature of neat handwriting.",
+    "answer": "even letters"
+   },
+   "steps": [
+    "Draft and correct.",
+    "Write the fair copy.",
+    "Keep letters even and spaced.",
+    "Check margins and line ends."
+   ],
+   "contexts": [
+    "a personal responsibility essay",
+    "a class notice"
+   ],
+   "board": [
+    {
+     "beat": "write",
+     "do": "Write a sentence with squeezed words at the end."
+    },
+    {
+     "beat": "point",
+     "do": "Point at the squeeze.",
+     "say": "What should you do?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for the child to answer."
+    },
+    {
+     "beat": "child_draws",
+     "do": "The child rewrites it neatly."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "ENGL.G7.WRITIN.T1_HANDWRITING_LEGIBILI.LEGIBLE_WRITING.M7_X_LW_SLANT",
+     "listen_for": [
+      "letters lean every way"
+     ],
+     "ask": "Same slant?",
+     "repair": "Lean one way."
+    },
+    {
+     "code": "ENGL.G7.WRITIN.T1_HANDWRITING_LEGIBILI.LEGIBLE_WRITING.M7_X_LW_SQUEEZE_END",
+     "listen_for": [
+      "squeeze it in small"
+     ],
+     "ask": "Will it fit?",
+     "repair": "Next line."
+    },
+    {
+     "code": "ENGL.G7.WRITIN.T1_HANDWRITING_LEGIBILI.LEGIBLE_WRITING.M7_X_LW_CROSSINGS",
+     "listen_for": [
+      "Yes"
+     ],
+     "ask": "Is it the fair copy?",
+     "repair": "Keep it clean."
+    },
+    {
+     "code": "ENGL.G7.WRITIN.T1_HANDWRITING_LEGIBILI.LEGIBLE_WRITING.M7_X_LW_NO_MARGIN",
+     "listen_for": [
+      "at the edge of the page"
+     ],
+     "ask": "Where is the margin?",
+     "repair": "Stay inside."
+    }
+   ],
+   "checks": [
+    {
+     "question": "Copy a paragraph neatly.",
+     "answer": "even, spaced, in margins",
+     "shows": "legibility"
+    },
+    {
+     "question": "Crossings-out in a fair copy?",
+     "answer": "No",
+     "shows": "fair copy"
+    }
+   ]
+  }
+ ]
+}

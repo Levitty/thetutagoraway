@@ -1,0 +1,92 @@
+{
+ "sub_strand": "ENGL.G4.LANGUA.T9_WORD_CLASSES_ADVERBS",
+ "title": "Word Classes: Adverbs (Theme 9: Hiv and aids)",
+ "status": "draft: written 18 Nov 2026 offline for Grade 4 English; not yet checked by a Kenyan English teacher; not loaded by the live tutor",
+ "notes": "",
+ "skills": [
+  {
+   "skill": "ENGL.G4.LANGUA.T9_WORD_CLASSES_ADVERBS.ADVERBS",
+   "assessed_by": "questions",
+   "key_step": "The child asks how, when or where the action happened and uses the adverb.",
+   "floor": {
+    "prerequisite": "Knows verbs.",
+    "question": "Find the action: She ran.",
+    "answer": "ran"
+   },
+   "steps": [
+    "Find the verb.",
+    "Ask how, when or where.",
+    "Choose the adverb."
+   ],
+   "contexts": [
+    "a health talk",
+    "a race"
+   ],
+   "board": [
+    {
+     "beat": "write",
+     "do": "Write: She sang ___. (beautiful)"
+    },
+    {
+     "beat": "point",
+     "do": "Point at sang.",
+     "say": "How did she sing?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for beautifully."
+    },
+    {
+     "beat": "child_draws",
+     "do": "The child writes a time adverb."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "ENGL.G4.LANGUA.T9_WORD_CLASSES_ADVERBS.ADVERBS.M_ADV_ADJ_FOR_ADV",
+     "listen_for": [
+      "beautiful"
+     ],
+     "ask": "Does it describe the action?",
+     "repair": "Add -ly."
+    },
+    {
+     "code": "ENGL.G4.LANGUA.T9_WORD_CLASSES_ADVERBS.ADVERBS.M_ADV_KIND_MIX",
+     "listen_for": [
+      "manner"
+     ],
+     "ask": "How, when or where?",
+     "repair": "Name the kind."
+    },
+    {
+     "code": "ENGL.G4.LANGUA.T9_WORD_CLASSES_ADVERBS.ADVERBS.M_ADV_GOOD_WELL",
+     "listen_for": [
+      "good"
+     ],
+     "ask": "Describing the action?",
+     "repair": "Well."
+    },
+    {
+     "code": "ENGL.G4.LANGUA.T9_WORD_CLASSES_ADVERBS.ADVERBS.M_ADV_FASTLY",
+     "listen_for": [
+      "fastly"
+     ],
+     "ask": "Is fastly a word?",
+     "repair": "Fast."
+    }
+   ],
+   "checks": [
+    {
+     "question": "He ran ___ (quick).",
+     "answer": "quickly",
+     "shows": "manner"
+    },
+    {
+     "question": "She did ___ (good).",
+     "answer": "well",
+     "shows": "good/well"
+    }
+   ]
+  }
+ ]
+}

@@ -1,0 +1,97 @@
+{
+ "sub_strand": "ENGL.G4.LISTEN.T2_PRONUNCIATION_AND_VO",
+ "title": "Pronunciation and Vocabulary (Theme 2: Family celebrations)",
+ "status": "draft: written 18 Nov 2026 offline for Grade 4 English; not yet checked by a Kenyan English teacher; not loaded by the live tutor",
+ "notes": "",
+ "skills": [
+  {
+   "skill": "ENGL.G4.LISTEN.T2_PRONUNCIATION_AND_VO.DISCRIMINATE_SOUNDS",
+   "assessed_by": "voice",
+   "key_step": "The child listens to two words that differ by one sound and says which one was said.",
+   "floor": {
+    "prerequisite": "Hears the first sound of a word.",
+    "question": "Does \"fan\" start like \"fish\"?",
+    "answer": "yes"
+   },
+   "steps": [
+    "Say both words slowly.",
+    "Show the mouth difference.",
+    "Say one; the child points.",
+    "Swap roles."
+   ],
+   "contexts": [
+    "a ship at Mombasa",
+    "sheep on a farm",
+    "a van at the market"
+   ],
+   "board": [
+    {
+     "beat": "draw",
+     "do": "Draw a ship and a sheep."
+    },
+    {
+     "beat": "point",
+     "do": "Say sheep.",
+     "say": "Which did I say?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for the child to point."
+    },
+    {
+     "beat": "child_draws",
+     "do": "The child says one word; the teacher points."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "ENGL.G4.LISTEN.T2_PRONUNCIATION_AND_VO.DISCRIMINATE_SOUNDS.M4_DS_SHIP_SHEEP",
+     "listen_for": [
+      "ship"
+     ],
+     "ask": "Was it short or long?",
+     "repair": "Long: sheep."
+    },
+    {
+     "code": "ENGL.G4.LISTEN.T2_PRONUNCIATION_AND_VO.DISCRIMINATE_SOUNDS.M4_DS_L_R",
+     "listen_for": [
+      "light"
+     ],
+     "ask": "Did the tongue go up?",
+     "repair": "Curled: right."
+    },
+    {
+     "code": "ENGL.G4.LISTEN.T2_PRONUNCIATION_AND_VO.DISCRIMINATE_SOUNDS.M4_DS_F_V",
+     "listen_for": [
+      "fan"
+     ],
+     "ask": "Did it buzz?",
+     "repair": "Buzz: van."
+    },
+    {
+     "code": "ENGL.G4.LISTEN.T2_PRONUNCIATION_AND_VO.DISCRIMINATE_SOUNDS.M4_DS_TH_T",
+     "listen_for": [
+      "tin"
+     ],
+     "ask": "Was the tongue between the teeth?",
+     "repair": "Yes: thin."
+    }
+   ],
+   "checks": [
+    {
+     "question": "Teacher says \"light\". Light or right?",
+     "answer": "light",
+     "shows": "l and r"
+    },
+    {
+     "question": "Teacher says \"thin\". Thin or tin?",
+     "answer": "thin",
+     "shows": "th"
+    }
+   ]
+  }
+ ],
+ "also_taught_by": [
+  "ENGL.G4.LISTEN.T1_PRONUNCIATION_AND_VO.PRONOUNCE_SOUNDS"
+ ]
+}

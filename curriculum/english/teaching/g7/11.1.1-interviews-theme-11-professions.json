@@ -1,0 +1,177 @@
+{
+ "sub_strand": "ENGL.G7.LISTEN.T11_INTERVIEWS",
+ "title": "Interviews (Theme 11: Professions)",
+ "status": "draft: written 18 Nov 2026 offline for Grade 7 English; not yet checked by a Kenyan English teacher; not loaded by the live tutor",
+ "notes": "",
+ "skills": [
+  {
+   "skill": "ENGL.G7.LISTEN.T11_INTERVIEWS.INTERVIEW_KNOW",
+   "assessed_by": "questions",
+   "key_step": "The child names reasons for interviews and the features of good answers.",
+   "floor": {
+    "prerequisite": "Speaks politely.",
+    "question": "How do you greet a panel?",
+    "answer": "Good morning"
+   },
+   "steps": [
+    "Reasons.",
+    "Full answers.",
+    "Ask for clarification.",
+    "Confident, humble."
+   ],
+   "contexts": [
+    "school placement"
+   ],
+   "board": [
+    {
+     "beat": "write",
+     "do": "Write: reasons, answers, clarify."
+    },
+    {
+     "beat": "point",
+     "do": "Point at clarify.",
+     "say": "What do you say?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for the child to answer."
+    },
+    {
+     "beat": "child_draws",
+     "do": "The child gives a reason for interviews."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "ENGL.G7.LISTEN.T11_INTERVIEWS.INTERVIEW_KNOW.M7_IN_REASON",
+     "listen_for": [
+      "to watch a film"
+     ],
+     "ask": "Why interview?",
+     "repair": "School or job."
+    },
+    {
+     "code": "ENGL.G7.LISTEN.T11_INTERVIEWS.INTERVIEW_KNOW.M7_IN_SHORT_ANSWER",
+     "listen_for": [
+      "Because."
+     ],
+     "ask": "Because?",
+     "repair": "Give the reason."
+    },
+    {
+     "code": "ENGL.G7.LISTEN.T11_INTERVIEWS.INTERVIEW_KNOW.M7_IN_CLARIFY",
+     "listen_for": [
+      "What?"
+     ],
+     "ask": "What?",
+     "repair": "Could you repeat?"
+    },
+    {
+     "code": "ENGL.G7.LISTEN.T11_INTERVIEWS.INTERVIEW_KNOW.M7_IN_CONFIDENT",
+     "listen_for": [
+      "I am the best, nobody is better than me."
+     ],
+     "ask": "Boasting?",
+     "repair": "Facts."
+    }
+   ],
+   "checks": [
+    {
+     "question": "Reason for an interview?",
+     "answer": "to get a school place",
+     "shows": "reason"
+    },
+    {
+     "question": "Polite way to ask again?",
+     "answer": "Could you please repeat that?",
+     "shows": "clarify"
+    }
+   ]
+  },
+  {
+   "skill": "ENGL.G7.LISTEN.T11_INTERVIEWS.INTERVIEW_SPEAK",
+   "assessed_by": "voice",
+   "key_step": "The child greets the panel, answers with a reason or example, and asks for a repeat when unsure.",
+   "floor": {
+    "prerequisite": "Knows why interviews are held.",
+    "question": "Why do people sit interviews?",
+    "answer": "for a place or a job"
+   },
+   "steps": [
+    "Greet the panel.",
+    "Listen to the question.",
+    "Answer with a reason or example.",
+    "Ask to repeat if unsure."
+   ],
+   "contexts": [
+    "a school placement interview",
+    "a scholarship interview"
+   ],
+   "board": [
+    {
+     "beat": "write",
+     "do": "Write: Answer + Because + Example."
+    },
+    {
+     "beat": "point",
+     "do": "Point at Because.",
+     "say": "Why do you want this school?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for the child to answer."
+    },
+    {
+     "beat": "child_draws",
+     "do": "The child gives an example."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "ENGL.G7.LISTEN.T11_INTERVIEWS.INTERVIEW_SPEAK.M7_X_IS_BOASTFUL",
+     "listen_for": [
+      "I am the best; nobody can beat me."
+     ],
+     "ask": "Facts or boasts?",
+     "repair": "Facts."
+    },
+    {
+     "code": "ENGL.G7.LISTEN.T11_INTERVIEWS.INTERVIEW_SPEAK.M7_X_IS_ONE_WORD",
+     "listen_for": [
+      "Yes."
+     ],
+     "ask": "Why?",
+     "repair": "Give a reason."
+    },
+    {
+     "code": "ENGL.G7.LISTEN.T11_INTERVIEWS.INTERVIEW_SPEAK.M7_X_IS_MUMBLES",
+     "listen_for": [
+      "quietly, looking down"
+     ],
+     "ask": "Can they hear you?",
+     "repair": "Speak up."
+    },
+    {
+     "code": "ENGL.G7.LISTEN.T11_INTERVIEWS.INTERVIEW_SPEAK.M7_X_IS_NO_CLARIFY",
+     "listen_for": [
+      "answer anything"
+     ],
+     "ask": "Do you understand?",
+     "repair": "Ask."
+    }
+   ],
+   "checks": [
+    {
+     "question": "Why should we pick you?",
+     "answer": "a humble answer with facts",
+     "shows": "confidence"
+    },
+    {
+     "question": "You did not hear the question.",
+     "answer": "Could you please repeat the question?",
+     "shows": "clarify"
+    }
+   ]
+  }
+ ]
+}

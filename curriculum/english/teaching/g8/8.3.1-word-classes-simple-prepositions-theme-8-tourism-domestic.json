@@ -1,0 +1,91 @@
+{
+ "sub_strand": "ENGL.G8.GRAMMA.T8_WORD_CLASSES_SIMPLE_",
+ "title": "Word Classes: Simple prepositions (Theme 8: Tourism: domestic)",
+ "status": "draft: written 18 Nov 2026 offline for Grade 8 English; not yet checked by a Kenyan English teacher; not loaded by the live tutor",
+ "notes": "",
+ "skills": [
+  {
+   "skill": "ENGL.G8.GRAMMA.T8_WORD_CLASSES_SIMPLE_.PREPOSITIONS_PLACE_TIME",
+   "assessed_by": "questions",
+   "key_step": "The child chooses at, on, in, since, for, between and among by their job.",
+   "floor": {
+    "prerequisite": "Uses prepositions.",
+    "question": "___ Monday",
+    "answer": "on"
+   },
+   "steps": [
+    "Time: at, on, in.",
+    "Since a point, for a length.",
+    "Between two, among many."
+   ],
+   "contexts": [
+    "domestic tourism"
+   ],
+   "board": [
+    {
+     "beat": "write",
+     "do": "Write: She has lived here ___ five years."
+    },
+    {
+     "beat": "point",
+     "do": "Point at five years.",
+     "say": "Point or length?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for the child to answer."
+    },
+    {
+     "beat": "child_draws",
+     "do": "The child fills since 2019."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "ENGL.G8.GRAMMA.T8_WORD_CLASSES_SIMPLE_.PREPOSITIONS_PLACE_TIME.M8_PP_AT_ON_IN",
+     "listen_for": [
+      "in"
+     ],
+     "ask": "Day?",
+     "repair": "On."
+    },
+    {
+     "code": "ENGL.G8.GRAMMA.T8_WORD_CLASSES_SIMPLE_.PREPOSITIONS_PLACE_TIME.M8_PP_BETWEEN_AMONG",
+     "listen_for": [
+      "beside"
+     ],
+     "ask": "Two?",
+     "repair": "Between."
+    },
+    {
+     "code": "ENGL.G8.GRAMMA.T8_WORD_CLASSES_SIMPLE_.PREPOSITIONS_PLACE_TIME.M8_PP_IN_PLACE",
+     "listen_for": [
+      "in"
+     ],
+     "ask": "A point?",
+     "repair": "At."
+    },
+    {
+     "code": "ENGL.G8.GRAMMA.T8_WORD_CLASSES_SIMPLE_.PREPOSITIONS_PLACE_TIME.M8_X_PP_SINCE_FOR",
+     "listen_for": [
+      "since"
+     ],
+     "ask": "Length?",
+     "repair": "For."
+    }
+   ],
+   "checks": [
+    {
+     "question": "___ 2019",
+     "answer": "since",
+     "shows": "since"
+    },
+    {
+     "question": "___ three weeks",
+     "answer": "for",
+     "shows": "for"
+    }
+   ]
+  }
+ ]
+}

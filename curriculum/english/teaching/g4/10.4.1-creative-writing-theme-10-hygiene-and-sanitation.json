@@ -1,0 +1,181 @@
+{
+ "sub_strand": "ENGL.G4.WRITIN.T10_CREATIVE_WRITING",
+ "title": "Creative Writing (Theme 10: Hygiene and sanitation)",
+ "status": "draft: written 18 Nov 2026 offline for Grade 4 English; not yet checked by a Kenyan English teacher; not loaded by the live tutor",
+ "notes": "",
+ "skills": [
+  {
+   "skill": "ENGL.G4.WRITIN.T10_CREATIVE_WRITING.DESCRIPTIVE_PARTS",
+   "assessed_by": "questions",
+   "key_step": "The child names the introduction, the body of details and the conclusion of a description.",
+   "floor": {
+    "prerequisite": "Knows adjectives.",
+    "question": "Describe a mango in one word.",
+    "answer": "sweet"
+   },
+   "steps": [
+    "Introduction: what is described.",
+    "Body: details by sense.",
+    "Conclusion: a feeling."
+   ],
+   "contexts": [
+    "describing a clean school",
+    "describing a market"
+   ],
+   "board": [
+    {
+     "beat": "draw",
+     "do": "Draw three boxes."
+    },
+    {
+     "beat": "point",
+     "do": "Point at the middle box.",
+     "say": "What goes here?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for details."
+    },
+    {
+     "beat": "child_draws",
+     "do": "The child fills the conclusion."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "ENGL.G4.WRITIN.T10_CREATIVE_WRITING.DESCRIPTIVE_PARTS.M_DES_TELLS_STORY",
+     "listen_for": [
+      "Yesterday I went to the market and bought a hat."
+     ],
+     "ask": "What it is like or what happened?",
+     "repair": "What it is like."
+    },
+    {
+     "code": "ENGL.G4.WRITIN.T10_CREATIVE_WRITING.DESCRIPTIVE_PARTS.M_DES_ONE_SENSE",
+     "listen_for": [
+      "The market is big."
+     ],
+     "ask": "What can you hear?",
+     "repair": "Add a sense."
+    },
+    {
+     "code": "ENGL.G4.WRITIN.T10_CREATIVE_WRITING.DESCRIPTIVE_PARTS.M_DES_PART_MIX",
+     "listen_for": [
+      "the conclusion"
+     ],
+     "ask": "Which part comes first?",
+     "repair": "Introduction."
+    },
+    {
+     "code": "ENGL.G4.WRITIN.T10_CREATIVE_WRITING.DESCRIPTIVE_PARTS.M4_DES_NO_ORDER",
+     "listen_for": [
+      "roof, door, roof again, garden"
+     ],
+     "ask": "What order did you use?",
+     "repair": "Outside to inside."
+    }
+   ],
+   "checks": [
+    {
+     "question": "Does a description tell what happened?",
+     "answer": "No",
+     "shows": "description"
+    },
+    {
+     "question": "Where does the writer's feeling go?",
+     "answer": "the conclusion",
+     "shows": "parts"
+    }
+   ]
+  },
+  {
+   "skill": "ENGL.G4.WRITIN.T10_CREATIVE_WRITING.DESCRIPTIVE_COMPOSITION",
+   "assessed_by": "composition",
+   "key_step": "The child chooses one thing and describes it through the senses, with an exact adjective each time.",
+   "floor": {
+    "prerequisite": "Knows the parts of a description.",
+    "question": "What does an introduction do?",
+    "answer": "says what is described"
+   },
+   "steps": [
+    "Choose the subject.",
+    "List senses: see, hear, smell, feel.",
+    "Write a sentence for each.",
+    "Add an introduction and a conclusion."
+   ],
+   "contexts": [
+    "our market",
+    "a clean school compound",
+    "my grandmother's kitchen"
+   ],
+   "board": [
+    {
+     "beat": "write",
+     "do": "Write: see, hear, smell, feel."
+    },
+    {
+     "beat": "point",
+     "do": "Point at smell.",
+     "say": "What does the market smell of?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for an answer."
+    },
+    {
+     "beat": "child_draws",
+     "do": "The child writes the sound sentence."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "ENGL.G4.WRITIN.T10_CREATIVE_WRITING.DESCRIPTIVE_COMPOSITION.M4_DC_STORY",
+     "listen_for": [
+      "Yesterday we had a test in our classroom."
+     ],
+     "ask": "Is it what happened or what it is like?",
+     "repair": "Describe."
+    },
+    {
+     "code": "ENGL.G4.WRITIN.T10_CREATIVE_WRITING.DESCRIPTIVE_COMPOSITION.M4_DC_SIGHT_ONLY",
+     "listen_for": [
+      "The market is very big."
+     ],
+     "ask": "What can you hear or smell?",
+     "repair": "Add a sense."
+    },
+    {
+     "code": "ENGL.G4.WRITIN.T10_CREATIVE_WRITING.DESCRIPTIVE_COMPOSITION.M4_DC_NICE",
+     "listen_for": [
+      "The garden is nice and the flowers are nice."
+     ],
+     "ask": "A more exact word?",
+     "repair": "Bright, noisy."
+    },
+    {
+     "code": "ENGL.G4.WRITIN.T10_CREATIVE_WRITING.DESCRIPTIVE_COMPOSITION.M4_DC_NO_CONCLUSION",
+     "listen_for": [
+      "add one more detail"
+     ],
+     "ask": "How do you feel about it?",
+     "repair": "End there."
+    }
+   ],
+   "checks": [
+    {
+     "question": "Is \"Yesterday we went to the market\" descriptive?",
+     "answer": "No",
+     "shows": "description"
+    },
+    {
+     "question": "Improve: The flowers are nice.",
+     "answer": "The flowers are bright red.",
+     "shows": "exact adjective"
+    }
+   ]
+  }
+ ],
+ "also_taught_by": [
+  "ENGL.G4.WRITIN.T5_CREATIVE_WRITING.PARAGRAPH_ORDER"
+ ]
+}

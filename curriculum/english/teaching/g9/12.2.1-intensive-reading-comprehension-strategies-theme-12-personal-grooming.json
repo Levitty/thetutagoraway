@@ -1,0 +1,94 @@
+{
+ "sub_strand": "ENGL.G9.READIN.T12_INTENSIVE_READING_CO",
+ "title": "Intensive Reading: Comprehension Strategies (Theme 12: Personal grooming)",
+ "status": "draft: written 18 Nov 2026 offline for Grade 9 English; not yet checked by a Kenyan English teacher; not loaded by the live tutor",
+ "notes": "",
+ "skills": [
+  {
+   "skill": "ENGL.G9.READIN.T12_INTENSIVE_READING_CO.RS_CLUES",
+   "assessed_by": "questions",
+   "key_step": "The child finds clues and draws conclusions that go only as far as they show.",
+   "floor": {
+    "prerequisite": "Answers inference questions.",
+    "question": "What does the clue show?",
+    "answer": "an inference"
+   },
+   "steps": [
+    "Find clues.",
+    "Draw a conclusion.",
+    "Check it is not too far."
+   ],
+   "contexts": [
+    "personal grooming"
+   ],
+   "board": [
+    {
+     "beat": "write",
+     "do": "Write: She wore old shoes."
+    },
+    {
+     "beat": "point",
+     "do": "Point at old.",
+     "say": "Conclusion?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for the child to answer."
+    },
+    {
+     "beat": "child_draws",
+     "do": "The child checks it."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "ENGL.G9.READIN.T12_INTENSIVE_READING_CO.RS_CLUES.M_EN9_RS_CLUES_DETAIL",
+     "listen_for": [
+      "an answer that is a small detail"
+     ],
+     "ask": "Does that answer the question, or is it a nearby detail?",
+     "repair": "Find the exact answer in the text."
+    },
+    {
+     "code": "ENGL.G9.READIN.T12_INTENSIVE_READING_CO.RS_CLUES.M_EN9_RS_CLUES_OPPOSITE",
+     "listen_for": [
+      "an answer that is the opposite"
+     ],
+     "ask": "Does the text say that, or the opposite?",
+     "repair": "Read the sentence again."
+    },
+    {
+     "code": "ENGL.G9.READIN.T12_INTENSIVE_READING_CO.RS_CLUES.M_EN9_RS_CLUES_NOTSAID",
+     "listen_for": [
+      "an answer that is something not in the text"
+     ],
+     "ask": "Can you point to where the text says it?",
+     "repair": "Answer only from the text."
+    },
+    {
+     "code": "ENGL.G9.READIN.T12_INTENSIVE_READING_CO.RS_CLUES.M9_RS_CLUES_OVERREACH",
+     "listen_for": [
+      "she is the poorest girl in Kenya"
+     ],
+     "ask": "Too far?",
+     "repair": "Keep to the clues."
+    }
+   ],
+   "checks": [
+    {
+     "question": "Old shoes: conclusion?",
+     "answer": "may not afford new ones",
+     "shows": "conclusion"
+    },
+    {
+     "question": "\"poorest in Kenya\": supported?",
+     "answer": "No",
+     "shows": "overreach"
+    }
+   ]
+  }
+ ],
+ "also_taught_by": [
+  "ENGL.G9.READIN.T14_SUMMARISING_ARGUMENT.RS_SUMMARY"
+ ]
+}

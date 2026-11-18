@@ -1,0 +1,191 @@
+{
+ "sub_strand": "ENGL.G7.GRAMMA.T4_VERBS_AND_TENSE",
+ "title": "Verbs and Tense (Theme 4: Leadership)",
+ "status": "draft: written 18 Nov 2026 offline for Grade 7 English; not yet checked by a Kenyan English teacher; not loaded by the live tutor",
+ "notes": "",
+ "skills": [
+  {
+   "skill": "ENGL.G7.GRAMMA.T4_VERBS_AND_TENSE.SIMPLE_PRESENT",
+   "assessed_by": "questions",
+   "key_step": "The child adds -s or -es for he, she and it, and uses does with the plain verb.",
+   "floor": {
+    "prerequisite": "Uses question tags.",
+    "question": "She likes tea, ___?",
+    "answer": "doesn't she"
+   },
+   "steps": [
+    "He, she, it: -s.",
+    "-es after sh, ch, s.",
+    "Does + plain verb."
+   ],
+   "contexts": [
+    "a leader's daily routine"
+   ],
+   "board": [
+    {
+     "beat": "write",
+     "do": "Write: The chief ___ (walk) to work."
+    },
+    {
+     "beat": "point",
+     "do": "Point at chief.",
+     "say": "He or they?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for the child to answer."
+    },
+    {
+     "beat": "child_draws",
+     "do": "The child writes a does question."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "ENGL.G7.GRAMMA.T4_VERBS_AND_TENSE.SIMPLE_PRESENT.M7_SP_NO_S",
+     "listen_for": [
+      "walk"
+     ],
+     "ask": "He?",
+     "repair": "Walks."
+    },
+    {
+     "code": "ENGL.G7.GRAMMA.T4_VERBS_AND_TENSE.SIMPLE_PRESENT.M7_SP_S_PLURAL",
+     "listen_for": [
+      "plays"
+     ],
+     "ask": "They?",
+     "repair": "Play."
+    },
+    {
+     "code": "ENGL.G7.GRAMMA.T4_VERBS_AND_TENSE.SIMPLE_PRESENT.M7_SP_DOES_S",
+     "listen_for": [
+      "drinks"
+     ],
+     "ask": "After does?",
+     "repair": "Plain verb."
+    },
+    {
+     "code": "ENGL.G7.GRAMMA.T4_VERBS_AND_TENSE.SIMPLE_PRESENT.M7_SP_DO_THIRD",
+     "listen_for": [
+      "do"
+     ],
+     "ask": "He?",
+     "repair": "Does."
+    },
+    {
+     "code": "ENGL.G7.GRAMMA.T4_VERBS_AND_TENSE.SIMPLE_PRESENT.M7_SP_ES",
+     "listen_for": [
+      "washs"
+     ],
+     "ask": "Ends in sh?",
+     "repair": "Washes."
+    },
+    {
+     "code": "ENGL.G7.GRAMMA.T4_VERBS_AND_TENSE.SIMPLE_PRESENT.M7_SP_WRONG_FORM",
+     "listen_for": [
+      "listening"
+     ],
+     "ask": "Habit?",
+     "repair": "Listens."
+    }
+   ],
+   "checks": [
+    {
+     "question": "She ___ (wash) dishes.",
+     "answer": "washes",
+     "shows": "es"
+    },
+    {
+     "question": "Does he ___ (drink) tea?",
+     "answer": "drink",
+     "shows": "does"
+    }
+   ]
+  },
+  {
+   "skill": "ENGL.G7.GRAMMA.T4_VERBS_AND_TENSE.SIMPLE_PAST",
+   "assessed_by": "questions",
+   "key_step": "The child uses -ed or the irregular past, with did + plain verb in questions and negatives.",
+   "floor": {
+    "prerequisite": "Uses irregular verbs.",
+    "question": "Past of tell?",
+    "answer": "told"
+   },
+   "steps": [
+    "-ed.",
+    "Double before -ed: stopped.",
+    "Did + plain verb.",
+    "Was or were."
+   ],
+   "contexts": [
+    "a leader's story"
+   ],
+   "board": [
+    {
+     "beat": "write",
+     "do": "Write: Did you ___ (watch) it?"
+    },
+    {
+     "beat": "point",
+     "do": "Point at Did.",
+     "say": "Which form?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for the child to answer."
+    },
+    {
+     "beat": "child_draws",
+     "do": "The child writes was/were."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "ENGL.G7.GRAMMA.T4_VERBS_AND_TENSE.SIMPLE_PAST.M7_SPA_DID_PAST",
+     "listen_for": [
+      "watched"
+     ],
+     "ask": "After did?",
+     "repair": "Watch."
+    },
+    {
+     "code": "ENGL.G7.GRAMMA.T4_VERBS_AND_TENSE.SIMPLE_PAST.M7_SPA_NO_ED",
+     "listen_for": [
+      "harvest"
+     ],
+     "ask": "Finished?",
+     "repair": "Harvested."
+    },
+    {
+     "code": "ENGL.G7.GRAMMA.T4_VERBS_AND_TENSE.SIMPLE_PAST.M7_SPA_SPELL_ED",
+     "listen_for": [
+      "stoped"
+     ],
+     "ask": "Short vowel?",
+     "repair": "Double."
+    },
+    {
+     "code": "ENGL.G7.GRAMMA.T4_VERBS_AND_TENSE.SIMPLE_PAST.M7_SPA_WAS_WERE",
+     "listen_for": [
+      "was"
+     ],
+     "ask": "Many?",
+     "repair": "Were."
+    }
+   ],
+   "checks": [
+    {
+     "question": "They ___ (be) late.",
+     "answer": "were",
+     "shows": "were"
+    },
+    {
+     "question": "stop + ed",
+     "answer": "stopped",
+     "shows": "spelling"
+    }
+   ]
+  }
+ ]
+}

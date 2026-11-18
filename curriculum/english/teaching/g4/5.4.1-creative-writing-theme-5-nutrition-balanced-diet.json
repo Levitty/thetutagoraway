@@ -1,0 +1,262 @@
+{
+ "sub_strand": "ENGL.G4.WRITIN.T5_CREATIVE_WRITING",
+ "title": "Creative Writing (Theme 5: Nutrition – balanced diet)",
+ "status": "draft: written 18 Nov 2026 offline for Grade 4 English; not yet checked by a Kenyan English teacher; not loaded by the live tutor",
+ "notes": "",
+ "skills": [
+  {
+   "skill": "ENGL.G4.WRITIN.T5_CREATIVE_WRITING.NARRATIVE_PARTS",
+   "assessed_by": "questions",
+   "key_step": "The child names the beginning, middle and end and what each one holds.",
+   "floor": {
+    "prerequisite": "Tells a short story.",
+    "question": "Tell a story in three sentences.",
+    "answer": "a story"
+   },
+   "steps": [
+    "Beginning: who and where.",
+    "Middle: the problem.",
+    "End: the solution."
+   ],
+   "contexts": [
+    "a story about a farm",
+    "a story about a lost item"
+   ],
+   "board": [
+    {
+     "beat": "draw",
+     "do": "Draw three boxes: beginning, middle, end."
+    },
+    {
+     "beat": "point",
+     "do": "Point at middle.",
+     "say": "What goes here?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for the problem."
+    },
+    {
+     "beat": "child_draws",
+     "do": "The child fills the end box."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "ENGL.G4.WRITIN.T5_CREATIVE_WRITING.NARRATIVE_PARTS.M_NAR_PART_MIX",
+     "listen_for": [
+      "the beginning"
+     ],
+     "ask": "Does the story end there?",
+     "repair": "Put it at the end."
+    },
+    {
+     "code": "ENGL.G4.WRITIN.T5_CREATIVE_WRITING.NARRATIVE_PARTS.M_NAR_SETTING_CHARACTER",
+     "listen_for": [
+      "the characters"
+     ],
+     "ask": "Is it a person or a place?",
+     "repair": "Place: setting."
+    },
+    {
+     "code": "ENGL.G4.WRITIN.T5_CREATIVE_WRITING.NARRATIVE_PARTS.M_NAR_PROBLEM_END",
+     "listen_for": [
+      "at the end"
+     ],
+     "ask": "When does the problem happen?",
+     "repair": "The middle."
+    },
+    {
+     "code": "ENGL.G4.WRITIN.T5_CREATIVE_WRITING.NARRATIVE_PARTS.M_NAR_TITLE",
+     "listen_for": [
+      "tells the whole story"
+     ],
+     "ask": "Does the title tell everything?",
+     "repair": "A short name."
+    }
+   ],
+   "checks": [
+    {
+     "question": "Where are the characters introduced?",
+     "answer": "the beginning",
+     "shows": "parts"
+    },
+    {
+     "question": "Where is the problem solved?",
+     "answer": "the end",
+     "shows": "parts"
+    }
+   ]
+  },
+  {
+   "skill": "ENGL.G4.WRITIN.T5_CREATIVE_WRITING.PARAGRAPH_ORDER",
+   "assessed_by": "questions",
+   "key_step": "The child finds the topic sentence, then follows time words to order the rest.",
+   "floor": {
+    "prerequisite": "Orders events.",
+    "question": "What happens first: eat or cook?",
+    "answer": "cook"
+   },
+   "steps": [
+    "Find the topic sentence.",
+    "Look for first, then, finally.",
+    "Check it reads well."
+   ],
+   "contexts": [
+    "making tea",
+    "a day at the farm"
+   ],
+   "board": [
+    {
+     "beat": "write",
+     "do": "Write four jumbled sentences."
+    },
+    {
+     "beat": "point",
+     "do": "Point at the one with First.",
+     "say": "Where does it go?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for the answer."
+    },
+    {
+     "beat": "child_draws",
+     "do": "The child numbers the rest."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "ENGL.G4.WRITIN.T5_CREATIVE_WRITING.PARAGRAPH_ORDER.M_PAR_ORDER_REVERSED",
+     "listen_for": [
+      "D C B A"
+     ],
+     "ask": "Which happened first?",
+     "repair": "Start there."
+    },
+    {
+     "code": "ENGL.G4.WRITIN.T5_CREATIVE_WRITING.PARAGRAPH_ORDER.M_PAR_ORDER_SWAPPED",
+     "listen_for": [
+      "A C B D"
+     ],
+     "ask": "Do these two make sense in that order?",
+     "repair": "Swap them."
+    },
+    {
+     "code": "ENGL.G4.WRITIN.T5_CREATIVE_WRITING.PARAGRAPH_ORDER.M_PAR_TOPIC_DETAIL",
+     "listen_for": [
+      "a detail"
+     ],
+     "ask": "Is that the main idea?",
+     "repair": "Find the topic sentence."
+    },
+    {
+     "code": "ENGL.G4.WRITIN.T5_CREATIVE_WRITING.PARAGRAPH_ORDER.M4_PAR_ENDING_FIRST",
+     "listen_for": [
+      "first"
+     ],
+     "ask": "Does finally go first?",
+     "repair": "At the end."
+    }
+   ],
+   "checks": [
+    {
+     "question": "Which comes last: \"Finally we slept.\"?",
+     "answer": "last",
+     "shows": "ending"
+    },
+    {
+     "question": "Which tells what the paragraph is about?",
+     "answer": "the topic sentence",
+     "shows": "topic"
+    }
+   ]
+  },
+  {
+   "skill": "ENGL.G4.WRITIN.T5_CREATIVE_WRITING.NARRATIVE_COMPOSITION",
+   "assessed_by": "composition",
+   "key_step": "The child plans characters, setting, problem and solution, then writes in the past tense.",
+   "floor": {
+    "prerequisite": "Names the parts of a story.",
+    "question": "Where does the problem go?",
+    "answer": "in the middle"
+   },
+   "steps": [
+    "Plan: who, where, problem, solution.",
+    "Write the beginning.",
+    "Write the problem.",
+    "Write the ending; check the tense."
+   ],
+   "contexts": [
+    "a lost goat",
+    "a day on the farm",
+    "helping at home"
+   ],
+   "board": [
+    {
+     "beat": "write",
+     "do": "Write: Who? Where? Problem? Solution?"
+    },
+    {
+     "beat": "point",
+     "do": "Point at Problem.",
+     "say": "What goes wrong in your story?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for an idea."
+    },
+    {
+     "beat": "child_draws",
+     "do": "The child writes the solution."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "ENGL.G4.WRITIN.T5_CREATIVE_WRITING.NARRATIVE_COMPOSITION.M4_NC_TENSE_SWITCH",
+     "listen_for": [
+      "goes ... bought"
+     ],
+     "ask": "When did it happen?",
+     "repair": "Past: went."
+    },
+    {
+     "code": "ENGL.G4.WRITIN.T5_CREATIVE_WRITING.NARRATIVE_COMPOSITION.M4_NC_NO_PROBLEM",
+     "listen_for": [
+      "many events"
+     ],
+     "ask": "What goes wrong?",
+     "repair": "Add a problem."
+    },
+    {
+     "code": "ENGL.G4.WRITIN.T5_CREATIVE_WRITING.NARRATIVE_COMPOSITION.M4_NC_TOO_SHORT",
+     "listen_for": [
+      "Yes"
+     ],
+     "ask": "How many words?",
+     "repair": "Add details."
+    },
+    {
+     "code": "ENGL.G4.WRITIN.T5_CREATIVE_WRITING.NARRATIVE_COMPOSITION.M4_NC_I_WOKE_UP",
+     "listen_for": [
+      "I woke up, brushed my teeth and ate breakfast."
+     ],
+     "ask": "Where does the action start?",
+     "repair": "Begin there."
+    }
+   ],
+   "checks": [
+    {
+     "question": "Correct: Yesterday Juma goes to school.",
+     "answer": "went",
+     "shows": "past tense"
+    },
+    {
+     "question": "Is a story with no problem complete?",
+     "answer": "No",
+     "shows": "structure"
+    }
+   ]
+  }
+ ]
+}

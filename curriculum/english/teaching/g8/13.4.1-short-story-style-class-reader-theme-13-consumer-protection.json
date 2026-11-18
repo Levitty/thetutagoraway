@@ -1,0 +1,94 @@
+{
+ "sub_strand": "ENGL.G8.READIN.T13_SHORT_STORY_STYLE_CL",
+ "title": "Short Story: Style (Class Reader) (Theme 13: Consumer protection)",
+ "status": "draft: written 18 Nov 2026 offline for Grade 8 English; not yet checked by a Kenyan English teacher; not loaded by the live tutor",
+ "notes": "",
+ "skills": [
+  {
+   "skill": "ENGL.G8.READIN.T13_SHORT_STORY_STYLE_CL.LITERARY_DEVICES",
+   "assessed_by": "questions",
+   "key_step": "The child names personification and flashback and says what each adds.",
+   "floor": {
+    "prerequisite": "Knows style.",
+    "question": "\"Time is a thief\" is ...",
+    "answer": "a metaphor"
+   },
+   "steps": [
+    "Personification: a thing acts human.",
+    "Flashback: back to earlier.",
+    "Effect."
+   ],
+   "contexts": [
+    "class reader"
+   ],
+   "board": [
+    {
+     "beat": "write",
+     "do": "Write: The wind whispered."
+    },
+    {
+     "beat": "point",
+     "do": "Point at whispered.",
+     "say": "Device?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for the child to answer."
+    },
+    {
+     "beat": "child_draws",
+     "do": "The child finds a flashback."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "ENGL.G8.READIN.T13_SHORT_STORY_STYLE_CL.LITERARY_DEVICES.M8_LD_PERSON_PLAIN",
+     "listen_for": [
+      "The wind was strong."
+     ],
+     "ask": "Human action?",
+     "repair": "Personification."
+    },
+    {
+     "code": "ENGL.G8.READIN.T13_SHORT_STORY_STYLE_CL.LITERARY_DEVICES.M8_LD_FLASHBACK_FUTURE",
+     "listen_for": [
+      "A jump to the future of the story"
+     ],
+     "ask": "Earlier or later?",
+     "repair": "Earlier."
+    },
+    {
+     "code": "ENGL.G8.READIN.T13_SHORT_STORY_STYLE_CL.LITERARY_DEVICES.M8_LD_SIMILE",
+     "listen_for": [
+      "The cloud was like a pillow."
+     ],
+     "ask": "Like?",
+     "repair": "Simile, not personification."
+    },
+    {
+     "code": "ENGL.G8.READIN.T13_SHORT_STORY_STYLE_CL.LITERARY_DEVICES.M8_X_LD_FLASHBACK_DREAM",
+     "listen_for": [
+      "Yes"
+     ],
+     "ask": "Earlier event?",
+     "repair": "Not a dream."
+    }
+   ],
+   "checks": [
+    {
+     "question": "\"The cloud smiled.\" Device?",
+     "answer": "personification",
+     "shows": "personification"
+    },
+    {
+     "question": "A return to an earlier event is ...",
+     "answer": "a flashback",
+     "shows": "flashback"
+    }
+   ]
+  }
+ ],
+ "also_taught_by": [
+  "ENGL.G8.LISTEN.T2_ORAL_PRESENTATIONS_S.PERFORM_ORAL"
+ ]
+}

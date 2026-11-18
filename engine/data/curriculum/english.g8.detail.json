@@ -256,6 +256,22 @@
   "ENGL.G8.WRITIN.T15_FUNCTIONAL_WRITING_P.c": "evaluate a journal for correctness and relevance"
  },
  "skills": {
+  "ENGL.G8.LISTEN.T1_POLITE_LANGUAGE_TELE.TELEPHONE_ETIQUETTE": {
+   "forms": [
+    "choose the polite expression",
+    "complete the phone call",
+    "role play a call"
+   ],
+   "mastery": "The child greets and names himself or herself (Good morning, this is Wanjiru speaking), asks for the person politely (May I speak to ...?), takes or leaves a message, asks for a repeat with I beg your pardon, and closes politely. Conducting the call itself is scored in role play. Evidence rule: at least four of the last five fresh questions right across at least two question forms, and no repeated pick of the same misconception."
+  },
+  "ENGL.G8.READIN.T1_EXTENSIVE_READING_IN.INDEPENDENT_READING": {
+   "forms": [
+    "reading log",
+    "book talk",
+    "recommend a text"
+   ],
+   "mastery": "The child finds print and non-print texts that interest him or her (novels, magazines, websites), reads widely through the term, logs each text and recommends it with a reason. Evidence rule: the teacher sees it in two pieces of the learner's own work, scored with the KICD rubric indicator."
+  },
   "ENGL.G8.GRAMMA.T1_WORD_CLASSES_COMPOUN.COMPOUND_NOUNS": {
    "forms": [
     "choose the correct word",
@@ -284,6 +300,30 @@
     "pick the right answer on a second passage"
    ],
    "mastery": "finds a stated fact in the text and works out an idea that is not stated, and does not answer from outside the text, in 8 of 10 new items."
+  },
+  "ENGL.G8.WRITIN.T1_WRITING_LEGIBLY_AND_.LEGIBLE_WRITING": {
+   "forms": [
+    "sort the letters by height",
+    "write a fair copy",
+    "copy the paragraph neatly"
+   ],
+   "mastery": "The child sorts letters into x-height (a, c, e), ascenders (b, d, h) and descenders (g, p, y), and writes a page with letters in proportion, even spaces and straight margins. Evidence rule: the teacher sees it in two pieces of the learner's own work, scored with the KICD rubric indicator."
+  },
+  "ENGL.G8.LISTEN.T2_ORAL_PRESENTATIONS_S.PERFORM_ORAL": {
+   "forms": [
+    "sing the song",
+    "perform the poem",
+    "dramatise the scene"
+   ],
+   "mastery": "The child names the features of a local song (solo and chorus, repetition, rhythm), then sings, recites or dramatises with voice, pace, gestures, facial expression and audience involvement that bring out the message and mood. Evidence rule: the teacher hears it done right on two different days, scored with the observation rubric (PLAN_OBSERVATION_RUBRICS.md); a tapped answer cannot show it."
+  },
+  "ENGL.G8.LISTEN.T2_ORAL_PRESENTATIONS_S.SONG_WRITING": {
+   "forms": [
+    "write a song about",
+    "add a chorus",
+    "improve the song"
+   ],
+   "mastery": "The child writes a short song on an innovation (a mobile phone, solar power, M-Pesa) with verses, a repeated chorus, rhythm that can be sung and a clear message. Evidence rule: two pieces of the learner's own writing marked Meeting Expectations or above on the KICD rubric indicator."
   },
   "ENGL.G8.READIN.T2_INTENSIVE_READING_SI.RP_PERSONA": {
    "forms": [
@@ -345,12 +385,44 @@
    ],
    "mastery": "picks what the whole poem is about, the picture its words make, and does not pick one image only, in 8 of 10 new items."
   },
+  "ENGL.G8.WRITIN.T3_PARAGRAPHING_SEQUENC.PARAGRAPH_CONNECTORS": {
+   "forms": [
+    "find the connectors",
+    "choose the connector",
+    "put the paragraph in order"
+   ],
+   "mastery": "The child finds the conjunctions and connectors of sequence (first, next, then, after that, finally, however, as a result) in a paragraph and uses them to put jumbled sentences in order. Evidence rule: at least four of the last five fresh questions right across at least two question forms, and no repeated pick of the same misconception."
+  },
+  "ENGL.G8.WRITIN.T3_PARAGRAPHING_SEQUENC.PARAGRAPH_WRITING": {
+   "forms": [
+    "write a paragraph about",
+    "write a paragraph on the characters",
+    "link the ideas"
+   ],
+   "mastery": "The child writes a paragraph with a topic sentence, ideas sequenced and joined with fitting conjunctions and connectors, and a closing sentence; a paragraph on characters gives traits with evidence. Evidence rule: two pieces of the learner's own writing marked Meeting Expectations or above on the KICD rubric indicator."
+  },
   "ENGL.G8.LISTEN.T4_LISTENING_COMPREHENS.LS_SPECIFIC": {
    "forms": [
     "pick the right answer after listening",
     "pick the right answer after a second listening"
    ],
    "mastery": "picks the exact fact that was said, such as a time or a name, and does not pick a general idea, in 8 of 10 new items."
+  },
+  "ENGL.G8.LISTEN.T4_LISTENING_COMPREHENS.LISTEN_RESPOND": {
+   "forms": [
+    "what is the message",
+    "what is your attitude to the song",
+    "respond to the speaker"
+   ],
+   "mastery": "After listening, the child states the message of a text, song or poem, gives his or her attitude to it with fitting words (I find the song moving because ...), and responds with a comment, question or action. Evidence rule: the teacher hears it done right on two different days, scored with the observation rubric (PLAN_OBSERVATION_RUBRICS.md); a tapped answer cannot show it."
+  },
+  "ENGL.G8.READIN.T4_INTENSIVE_READING.READING_STRATEGIES": {
+   "forms": [
+    "which strategy would you use",
+    "skim or scan",
+    "what do you do first"
+   ],
+   "mastery": "The child chooses preview, skim, scan, close reading or rereading to suit the text and the task, and says why. Evidence rule: at least four of the last five fresh questions right across at least two question forms, and no repeated pick of the same misconception."
   },
   "ENGL.G8.GRAMMA.T4_VERBS_AND_TENSE.PRESENT_PAST_TENSE": {
    "forms": [
@@ -367,6 +439,30 @@
    ],
    "mastery": "names who is in the story and picks a trait that the characters actions show, and does not pick a trait the actions contradict, in 8 of 10 new items."
   },
+  "ENGL.G8.LISTEN.T5_PRONUNCIATION.PRONOUNCE_SOUNDS": {
+   "forms": [
+    "which word has the sound",
+    "say the pairs",
+    "read the sentence aloud"
+   ],
+   "mastery": "The child picks out and says /ɒ/ (cot) and /ɔː/ (caught), /θ/ (thin) and /ð/ (this), /ɑː/ (cart) and /ɜː/ (curt), /tʃ/ (chin) and /dʒ/ (gin), and silent consonants (knee, wrist), so each word is heard correctly. Evidence rule: the teacher hears it done right on two different days, scored with the observation rubric (PLAN_OBSERVATION_RUBRICS.md); a tapped answer cannot show it."
+  },
+  "ENGL.G8.LISTEN.T5_PRONUNCIATION.EMPHATIC_STRESS": {
+   "forms": [
+    "stress the word that answers the question",
+    "which word is stressed",
+    "say it to mean something else"
+   ],
+   "mastery": "The child stresses the word that carries the new or contrasting meaning (I said SATURDAY, not Sunday), stresses content words and keeps function words weak. Evidence rule: the teacher hears it done right on two different days, scored with the observation rubric (PLAN_OBSERVATION_RUBRICS.md); a tapped answer cannot show it."
+  },
+  "ENGL.G8.READIN.T5_STUDY_SKILLS_REFEREN.REFERENCE_USE": {
+   "forms": [
+    "which reference would you use",
+    "find it in the index",
+    "use the thesaurus"
+   ],
+   "mastery": "The child chooses the dictionary, thesaurus, encyclopaedia, atlas, almanac or a reliable website for the task, and uses its contents, index, guide words or search box to find the information. Evidence rule: at least four of the last five fresh questions right across at least two question forms, and no repeated pick of the same misconception."
+  },
   "ENGL.G8.GRAMMA.T5_WORD_CLASSES_ADJECTI.GRADABLE_ADJECTIVES": {
    "forms": [
     "choose the correct word",
@@ -374,6 +470,38 @@
     "spot the mistake"
    ],
    "mastery": "Uses very, quite and extremely with gradable adjectives (very tall, quite cold), uses absolutely and completely with non-gradable adjectives (absolutely perfect, completely empty), and does not write very perfect, more unique or very dead, in 8 of 10 new items."
+  },
+  "ENGL.G8.READIN.T5_INTENSIVE_READING_SH.DIALOGUE_REPETITION": {
+   "forms": [
+    "find the dialogue",
+    "what is repeated",
+    "why does the writer repeat it"
+   ],
+   "mastery": "The child finds dialogue and repeated words or events in a short story and explains what they do: dialogue shows characters and moves the story; repetition stresses an idea or builds suspense. Evidence rule: at least four of the last five fresh questions right across at least two question forms, and no repeated pick of the same misconception."
+  },
+  "ENGL.G8.WRITIN.T5_FUNCTIONAL_WRITING_A.APOLOGY_LETTER": {
+   "forms": [
+    "write a letter of apology to",
+    "what is missing",
+    "correct the letter"
+   ],
+   "mastery": "The child writes an apology letter that says sorry clearly, names what went wrong, takes responsibility without excuses, says how it will be put right and promises to do better, in the right letter format. Evidence rule: two pieces of the learner's own writing marked Meeting Expectations or above on the KICD rubric indicator."
+  },
+  "ENGL.G8.LISTEN.T6_CONVERSATIONAL_SKILL.DISAGREE_POLITELY": {
+   "forms": [
+    "choose the polite way to disagree",
+    "respond to this view",
+    "which is rude"
+   ],
+   "mastery": "The child disagrees with the idea, not the person: I see your point, but ...; I am afraid I do not agree, because ...; and gives a reason, keeping the tone calm. Evidence rule: at least four of the last five fresh questions right across at least two question forms, and no repeated pick of the same misconception."
+  },
+  "ENGL.G8.READIN.T6_READING_FLUENCY_POEM.READ_FLUENTLY": {
+   "forms": [
+    "read aloud to the teacher",
+    "read the poem with expression",
+    "say which strategies you used"
+   ],
+   "mastery": "The child names and uses fluency strategies (read silently first, read in phrases, pause at punctuation, vary the voice, keep a steady pace) and reads a poem or passage accurately and expressively at the right speed. Evidence rule: the teacher hears it done right on two different days, scored with the observation rubric (PLAN_OBSERVATION_RUBRICS.md); a tapped answer cannot show it."
   },
   "ENGL.G8.GRAMMA.T6_WORD_CLASSES_ADVERBS.FREQUENCY_DEGREE": {
    "forms": [
@@ -390,6 +518,14 @@
    ],
    "mastery": "picks what the whole story is about and a summary that keeps the key events in order, and does not pick one detail, in 8 of 10 new items."
   },
+  "ENGL.G8.READIN.T6_INTENSIVE_READING_SH.RELATE_TO_LIFE": {
+   "forms": [
+    "how does this happen in real life",
+    "who is like this character",
+    "how does this lesson help you"
+   ],
+   "mastery": "The child links an idea, event, character or lesson from a short story or myth to a real situation or person and explains the link and what it teaches. Evidence rule: the teacher sees it in two pieces of the learner's own work, scored with the KICD rubric indicator."
+  },
   "ENGL.G8.WRITIN.T6_MECHANICS_OF_WRITING.SPELLING": {
    "forms": [
     "choose the correct word",
@@ -405,6 +541,14 @@
    ],
    "mastery": "picks what the whole listening text is about and answers questions about it from what was heard, and does not pick one detail, in 8 of 10 new items."
   },
+  "ENGL.G8.READIN.T7_INTENSIVE_READING_VI.READ_VISUALS": {
+   "forms": [
+    "what kind of visual is this",
+    "what does the graph show",
+    "which sentence does the picture support"
+   ],
+   "mastery": "The child names a visual (graph, chart, map, table, photograph, diagram), reads its title, labels and key, says what it shows, and links it to the sentence in the text it supports. Evidence rule: at least four of the last five fresh questions right across at least two question forms, and no repeated pick of the same misconception."
+  },
   "ENGL.G8.GRAMMA.T7_WORD_CLASSES_PRONOUN.INDEFINITE_REFLEXIVE": {
    "forms": [
     "choose the correct word",
@@ -413,6 +557,38 @@
    ],
    "mastery": "Uses someone, anybody, everything and nothing for people and things not named, writes the reflexive pronouns myself, yourself, himself, herself, itself, ourselves, yourselves and themselves, and does not write hisself or theirselves, in 8 of 10 new items."
   },
+  "ENGL.G8.READIN.T7_INTENSIVE_READING_SH.CHARACTER_RELATIONS": {
+   "forms": [
+    "who are the characters",
+    "how are they related",
+    "what is she like"
+   ],
+   "mastery": "The child names the characters of a short story, describes the traits of each with evidence, and explains the relationships (friends, rivals, family, mentor and learner) and how they change. Evidence rule: at least four of the last five fresh questions right across at least two question forms, and no repeated pick of the same misconception."
+  },
+  "ENGL.G8.WRITIN.T7_COMPOSITION_WRITING.WRITING_PROCESS": {
+   "forms": [
+    "order the steps",
+    "what happens at this step",
+    "which step is this"
+   ],
+   "mastery": "The child orders and explains the steps (prewriting, drafting, revising, editing, publishing) and how they apply to writing a dialogue. Evidence rule: at least four of the last five fresh questions right across at least two question forms, and no repeated pick of the same misconception."
+  },
+  "ENGL.G8.WRITIN.T7_COMPOSITION_WRITING.DIALOGUE_WRITING": {
+   "forms": [
+    "write a dialogue between",
+    "set out this dialogue",
+    "revise the dialogue"
+   ],
+   "mastery": "The child writes a dialogue with names in the margin, colons, a new line for each speaker, stage directions in brackets, no quotation marks, and a clear purpose and ending. Evidence rule: two pieces of the learner's own writing marked Meeting Expectations or above on the KICD rubric indicator."
+  },
+  "ENGL.G8.LISTEN.T8_LISTENING_AND_RESPON.MYTHS": {
+   "forms": [
+    "who are the characters",
+    "narrate the key events",
+    "what does the myth teach"
+   ],
+   "mastery": "The child names the characters (often gods, spirits or first people) in a myth, narrates the key events in order, and states the lesson or what the myth explains (why the moon follows the sun). Evidence rule: at least four of the last five fresh questions right across at least two question forms, and no repeated pick of the same misconception."
+  },
   "ENGL.G8.GRAMMA.T8_WORD_CLASSES_SIMPLE_.PREPOSITIONS_PLACE_TIME": {
    "forms": [
     "choose the correct word",
@@ -420,6 +596,22 @@
     "spot the mistake"
    ],
    "mastery": "Chooses at, on or in for a time or a place (at 6 o'clock, on Monday, in June, at the gate, in the room) and under, above, beside, between, opposite, behind and in front of for position, and does not write at Monday or in the morning of Friday, in 8 of 10 new items."
+  },
+  "ENGL.G8.READIN.T8_INTENSIVE_READING_PO_2.INANIMATE_CHARACTERS": {
+   "forms": [
+    "which thing acts like a person",
+    "what is it like",
+    "which words make it human"
+   ],
+   "mastery": "The child finds the things in a poem that are given human actions or feelings (the river sang, the mountain watched) and describes their traits from those words. Evidence rule: at least four of the last five fresh questions right across at least two question forms, and no repeated pick of the same misconception."
+  },
+  "ENGL.G8.WRITIN.T8_ASSESSMENT_OF_WRITIN.ASSESS_WRITING": {
+   "forms": [
+    "mark the errors",
+    "give feedback",
+    "suggest a correction"
+   ],
+   "mastery": "The child reads an essay by self or a peer, marks errors in spelling, grammar, punctuation and paragraphing, judges content and organisation, and suggests a correction for each error with one kind comment. Evidence rule: the teacher sees it in two pieces of the learner's own work, scored with the KICD rubric indicator."
   },
   "ENGL.G8.GRAMMA.T9_WORD_CLASSES_CONJUNC.CONJUNCTIONS_LISTED": {
    "forms": [
@@ -438,6 +630,30 @@
    ],
    "mastery": "Says a simile compares two things with like or as (as brave as a lion) and a metaphor says one thing is another (he is a lion), explains what the comparison means, and does not call every comparison a simile, in 8 of 10 new items."
   },
+  "ENGL.G8.WRITIN.T9_CREATIVE_WRITING_NAR.NARRATIVE_COMPOSITION": {
+   "forms": [
+    "write about an event that affected you",
+    "plan with a mind map",
+    "use the idioms in a story"
+   ],
+   "mastery": "The child recalls a real event, plans with a prewriting technique (mind map, list, freewriting), and writes 240 to 280 words with revealing details (what was seen, heard, felt), fitting idioms, a clear climax and an ending. Evidence rule: two pieces of the learner's own writing marked Meeting Expectations or above on the KICD rubric indicator."
+  },
+  "ENGL.G8.LISTEN.T10_ORAL_PRESENTATIONS.SPEECH": {
+   "forms": [
+    "name the parts of a speech",
+    "prepare a speech on",
+    "present your speech"
+   ],
+   "mastery": "The child prepares a short speech with a salutation to the guests in order of rank, an introduction, points, and a conclusion with thanks, and presents it with eye contact, clear voice, pauses and gestures. Evidence rule: the teacher hears it done right on two different days, scored with the observation rubric (PLAN_OBSERVATION_RUBRICS.md); a tapped answer cannot show it."
+  },
+  "ENGL.G8.READIN.T10_STUDY_SKILLS_NOTE_MA.NOTE_MAKING": {
+   "forms": [
+    "make notes from the text",
+    "summarise in 60 words",
+    "what are the key points"
+   ],
+   "mastery": "The child picks out the key points of a descriptive or informational text, writes them as short notes under headings, and turns the notes into a summary paragraph of the stated length in his or her own words. Evidence rule: the teacher sees it in two pieces of the learner's own work, scored with the KICD rubric indicator."
+  },
   "ENGL.G8.GRAMMA.T10_WORD_CLASSES_DEMONST.DEMONSTRATIVES_QUANTIFIERS": {
    "forms": [
     "choose the correct word",
@@ -445,6 +661,22 @@
     "spot the mistake"
    ],
    "mastery": "Uses this and these for near things and that and those for far ones, matches this and that with one thing and these and those with many, and uses some, any, many, much, few and little with the right kind of noun, in 8 of 10 new items."
+  },
+  "ENGL.G8.WRITIN.T10_FUNCTIONAL_WRITING_T.THANK_YOU_NOTES": {
+   "forms": [
+    "write a thank you note",
+    "write a congratulatory note",
+    "critique this note"
+   ],
+   "mastery": "The child writes a short note with the date, greeting, the reason (thanks for what, or congratulations on what), a personal line, a warm closing and the name, and critiques a note for correctness and relevance. Evidence rule: two pieces of the learner's own writing marked Meeting Expectations or above on the KICD rubric indicator."
+  },
+  "ENGL.G8.LISTEN.T11_CONVERSATIONAL_SKILL.INTERVIEW_POLITE": {
+   "forms": [
+    "choose the polite question",
+    "open the interview",
+    "thank the guest"
+   ],
+   "mastery": "The child opens with a greeting and thanks, asks open questions politely (Could you tell us ...?), follows up, and closes with thanks. Evidence rule: at least four of the last five fresh questions right across at least two question forms, and no repeated pick of the same misconception."
   },
   "ENGL.G8.GRAMMA.T11_WORD_CLASSES_ADVERBS.ADVERB_FORMATION": {
    "forms": [
@@ -508,6 +740,14 @@
    ],
    "mastery": "Says that personification gives a human action or feeling to a thing or an animal (the wind whispered, the sun smiled) and that a flashback takes the story back to an earlier time, and does not call a plain description personification, in 8 of 10 new items."
   },
+  "ENGL.G8.WRITIN.T13_CREATIVE_NARRATIVE_C.IDIOMS_CONTEXT": {
+   "forms": [
+    "what does the idiom mean here",
+    "choose the idiom that fits",
+    "use it in a sentence"
+   ],
+   "mastery": "The child explains a specified idiom from its context (a blessing in disguise, to cost an arm and a leg) and chooses the one that fits a situation. Evidence rule: at least four of the last five fresh questions right across at least two question forms, and no repeated pick of the same misconception."
+  },
   "ENGL.G8.LISTEN.T14_PRONUNCIATION_AND_IN.SILENT_LETTERS": {
    "forms": [
     "choose the correct word",
@@ -515,6 +755,14 @@
     "spot the mistake"
    ],
    "mastery": "Names the silent letter in words such as knife (k), write (w), island (s), castle (t), honest (h), listen (t) and lamb (b), and does not pick a sounded letter, in 8 of 10 new items."
+  },
+  "ENGL.G8.LISTEN.T14_PRONUNCIATION_AND_IN.INTONATION": {
+   "forms": [
+    "say it as a statement",
+    "say it as an exclamation",
+    "up or down"
+   ],
+   "mastery": "The child ends declarative sentences with a fall and starts exclamations high with a strong fall (What a race!). Evidence rule: the teacher hears it done right on two different days, scored with the observation rubric (PLAN_OBSERVATION_RUBRICS.md); a tapped answer cannot show it."
   },
   "ENGL.G8.GRAMMA.T14_SENTENCES_ACTIVE_AND.ACTIVE_PASSIVE": {
    "forms": [
@@ -524,6 +772,22 @@
     "choose the correct sentence"
    ],
    "mastery": "Tells a sentence in which the subject does the action (the dog bit the boy) from one in which the subject receives it (the boy was bitten by the dog), forms the passive with be and the past participle, and does not write was bite or the boy bitten by, in 8 of 10 new items."
+  },
+  "ENGL.G8.WRITIN.T14_CREATIVE_WRITING_DES.DESCRIPTIVE_COMPOSITION": {
+   "forms": [
+    "list words to describe",
+    "describe the event",
+    "describe a person"
+   ],
+   "mastery": "The child gathers exact words and expressions for people, places and events and writes a description through the senses, in a clear order, with similes and metaphors that fit. Evidence rule: two pieces of the learner's own writing marked Meeting Expectations or above on the KICD rubric indicator."
+  },
+  "ENGL.G8.LISTEN.T15_ORAL_REPORTS_EVENTS.ORAL_REPORT_EVENTS": {
+   "forms": [
+    "report on the sports day",
+    "recount the trip",
+    "answer questions on your report"
+   ],
+   "mastery": "The child reports an event outside the classroom in order (who, what, where, when, how), in the past tense, with facts not opinions, and uses voice and gestures to hold the audience. Evidence rule: the teacher hears it done right on two different days, scored with the observation rubric (PLAN_OBSERVATION_RUBRICS.md); a tapped answer cannot show it."
   },
   "ENGL.G8.GRAMMA.T15_TYPES_OF_SENTENCES_I.QUESTION_TAGS": {
    "forms": [
@@ -539,6 +803,14 @@
     "pick the right answer on a second passage"
    ],
    "mastery": "picks the message the poet wants to give and does not pick a single line as the message, in 8 of 10 new items."
+  },
+  "ENGL.G8.WRITIN.T15_FUNCTIONAL_WRITING_P.JOURNAL_WRITING": {
+   "forms": [
+    "write journal entries",
+    "what are the parts",
+    "evaluate this journal"
+   ],
+   "mastery": "The child writes dated entries in the first person about varied experiences with reflections and feelings, and evaluates a journal for correctness and relevance. Evidence rule: two pieces of the learner's own writing marked Meeting Expectations or above on the KICD rubric indicator."
   }
  }
 }

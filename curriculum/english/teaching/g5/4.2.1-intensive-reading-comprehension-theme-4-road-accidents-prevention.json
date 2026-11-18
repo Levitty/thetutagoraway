@@ -1,0 +1,99 @@
+{
+ "sub_strand": "ENGL.G5.READIN.T4_INTENSIVE_READING_CO",
+ "title": "Intensive Reading: Comprehension (Theme 4: Road accidents – prevention)",
+ "status": "draft: written 18 Nov 2026 offline for Grade 5 English; not yet checked by a Kenyan English teacher; not loaded by the live tutor",
+ "notes": "",
+ "skills": [
+  {
+   "skill": "ENGL.G5.READIN.T4_INTENSIVE_READING_CO.READ_VISUALS",
+   "assessed_by": "questions",
+   "key_step": "The child names the visual, reads its title and words, then predicts and judges it.",
+   "floor": {
+    "prerequisite": "Reads a notice or chart.",
+    "question": "What does this notice tell you?",
+    "answer": "the main message"
+   },
+   "steps": [
+    "Name the type.",
+    "Read title and words.",
+    "Predict the topic.",
+    "Judge: is the message clear?"
+   ],
+   "contexts": [
+    "road safety posters",
+    "a classroom map",
+    "a mnemonic chart"
+   ],
+   "board": [
+    {
+     "beat": "write",
+     "do": "Draw a poster: STOP. LOOK. CROSS."
+    },
+    {
+     "beat": "point",
+     "do": "Point at the title.",
+     "say": "What will a text with this poster be about?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for the child to answer."
+    },
+    {
+     "beat": "child_draws",
+     "do": "The child judges whether the poster is clear."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "ENGL.G5.READIN.T4_INTENSIVE_READING_CO.READ_VISUALS.M5_RV_TYPE_MIX",
+     "listen_for": [
+      "poster"
+     ],
+     "ask": "Does it have a key?",
+     "repair": "Then it is a map."
+    },
+    {
+     "code": "ENGL.G5.READIN.T4_INTENSIVE_READING_CO.READ_VISUALS.M5_RV_ONE_DETAIL",
+     "listen_for": [
+      "cars for sale"
+     ],
+     "ask": "What does the title say?",
+     "repair": "Use it."
+    },
+    {
+     "code": "ENGL.G5.READIN.T4_INTENSIVE_READING_CO.READ_VISUALS.M5_RV_COLOUR_JUDGE",
+     "listen_for": [
+      "the brightest one"
+     ],
+     "ask": "Is the message clear?",
+     "repair": "Judge the message."
+    },
+    {
+     "code": "ENGL.G5.READIN.T4_INTENSIVE_READING_CO.READ_VISUALS.M5_RV_MNEMONIC",
+     "listen_for": [
+      "poem"
+     ],
+     "ask": "What does it help you do?",
+     "repair": "Remember."
+    }
+   ],
+   "checks": [
+    {
+     "question": "A drawing of Kenya with a key is a ...",
+     "answer": "map",
+     "shows": "type"
+    },
+    {
+     "question": "Which poster is better: bright with no words, or clear message?",
+     "answer": "clear message",
+     "shows": "judge"
+    }
+   ]
+  }
+ ],
+ "also_taught_by": [
+  "ENGL.G5.READIN.T3_INTENSIVE_READING_NA.VISUALISE",
+  "ENGL.G5.READIN.T2_INTENSIVE_READING.FACTUAL_QUESTIONS",
+  "ENGL.G5.READIN.T2_INTENSIVE_READING.INFERENCE_QUESTIONS"
+ ]
+}

@@ -1,0 +1,91 @@
+{
+ "sub_strand": "ENGL.G8.GRAMMA.T2_WORD_CLASSES_COLLECT",
+ "title": "Word classes: Collective Nouns. (Theme 2: Scientific innovations)",
+ "status": "draft: written 18 Nov 2026 offline for Grade 8 English; not yet checked by a Kenyan English teacher; not loaded by the live tutor",
+ "notes": "",
+ "skills": [
+  {
+   "skill": "ENGL.G8.GRAMMA.T2_WORD_CLASSES_COLLECT.COLLECTIVE_NOUNS",
+   "assessed_by": "questions",
+   "key_step": "The child uses the right group word with of, and a singular verb for the group acting as one.",
+   "floor": {
+    "prerequisite": "Knows noun types.",
+    "question": "a ___ of bees",
+    "answer": "swarm"
+   },
+   "steps": [
+    "Group word.",
+    "Of.",
+    "Singular verb for one group."
+   ],
+   "contexts": [
+    "scientific innovations: a team of engineers"
+   ],
+   "board": [
+    {
+     "beat": "write",
+     "do": "Write: The crew ___ ready."
+    },
+    {
+     "beat": "point",
+     "do": "Point at crew.",
+     "say": "One group?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for the child to answer."
+    },
+    {
+     "beat": "child_draws",
+     "do": "The child writes a pride of lions."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "ENGL.G8.GRAMMA.T2_WORD_CLASSES_COLLECT.COLLECTIVE_NOUNS.M8_CLN_WRONG_GROUP",
+     "listen_for": [
+      "swarm"
+     ],
+     "ask": "Which animals?",
+     "repair": "Pride for lions."
+    },
+    {
+     "code": "ENGL.G8.GRAMMA.T2_WORD_CLASSES_COLLECT.COLLECTIVE_NOUNS.M8_CLN_PLURAL",
+     "listen_for": [
+      "crews"
+     ],
+     "ask": "One group?",
+     "repair": "Crew."
+    },
+    {
+     "code": "ENGL.G8.GRAMMA.T2_WORD_CLASSES_COLLECT.COLLECTIVE_NOUNS.M8_CLN_NO_OF",
+     "listen_for": [
+      "for"
+     ],
+     "ask": "Joins with?",
+     "repair": "Of."
+    },
+    {
+     "code": "ENGL.G8.GRAMMA.T2_WORD_CLASSES_COLLECT.COLLECTIVE_NOUNS.M8_X_CLN_VERB",
+     "listen_for": [
+      "are"
+     ],
+     "ask": "One group?",
+     "repair": "Is."
+    }
+   ],
+   "checks": [
+    {
+     "question": "a ___ of lions",
+     "answer": "pride",
+     "shows": "group"
+    },
+    {
+     "question": "The team ___ winning.",
+     "answer": "is",
+     "shows": "verb"
+    }
+   ]
+  }
+ ]
+}

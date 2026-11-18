@@ -1,0 +1,177 @@
+{
+ "sub_strand": "ENGL.G4.LANGUA.T13_WORD_CLASS_PREPOSITI",
+ "title": "Word Class: Prepositions (Theme 13: Money)",
+ "status": "draft: written 18 Nov 2026 offline for Grade 4 English; not yet checked by a Kenyan English teacher; not loaded by the live tutor",
+ "notes": "",
+ "skills": [
+  {
+   "skill": "ENGL.G4.LANGUA.T13_WORD_CLASS_PREPOSITI.PREP_POSITION",
+   "assessed_by": "questions",
+   "key_step": "The child looks where the object is and chooses the preposition that tells it.",
+   "floor": {
+    "prerequisite": "Uses in and on.",
+    "question": "The book is ___ the table.",
+    "answer": "on"
+   },
+   "steps": [
+    "Look at the picture.",
+    "Where is it?",
+    "Choose the word."
+   ],
+   "contexts": [
+    "a classroom",
+    "a shop counter"
+   ],
+   "board": [
+    {
+     "beat": "draw",
+     "do": "Draw a box and a ball in different places."
+    },
+    {
+     "beat": "point",
+     "do": "Point at the ball behind the box.",
+     "say": "Where is it?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for behind."
+    },
+    {
+     "beat": "child_draws",
+     "do": "The child draws a ball between two boxes."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "ENGL.G4.LANGUA.T13_WORD_CLASS_PREPOSITI.PREP_POSITION.M_PRE_IN_ON",
+     "listen_for": [
+      "in"
+     ],
+     "ask": "Inside or on top?",
+     "repair": "Match it."
+    },
+    {
+     "code": "ENGL.G4.LANGUA.T13_WORD_CLASS_PREPOSITI.PREP_POSITION.M_PRE_BETWEEN_AMONG",
+     "listen_for": [
+      "among"
+     ],
+     "ask": "Two or more?",
+     "repair": "Between two."
+    },
+    {
+     "code": "ENGL.G4.LANGUA.T13_WORD_CLASS_PREPOSITI.PREP_POSITION.M_PRE_UNDER_OVER",
+     "listen_for": [
+      "on"
+     ],
+     "ask": "Up or down?",
+     "repair": "Under is below."
+    },
+    {
+     "code": "ENGL.G4.LANGUA.T13_WORD_CLASS_PREPOSITI.PREP_POSITION.M_PRE_FRONT_BEHIND",
+     "listen_for": [
+      "in front of"
+     ],
+     "ask": "Facing or at the back?",
+     "repair": "Behind is at the back."
+    }
+   ],
+   "checks": [
+    {
+     "question": "The coin is ___ the box (inside).",
+     "answer": "in",
+     "shows": "in"
+    },
+    {
+     "question": "The cat sat ___ two dogs.",
+     "answer": "between",
+     "shows": "between"
+    }
+   ]
+  },
+  {
+   "skill": "ENGL.G4.LANGUA.T13_WORD_CLASS_PREPOSITI.PREP_DIRECTION",
+   "assessed_by": "questions",
+   "key_step": "The child pictures the movement and chooses to, into, out of, across, through or along.",
+   "floor": {
+    "prerequisite": "Uses prepositions of position.",
+    "question": "The pen is ___ the bag.",
+    "answer": "in"
+   },
+   "steps": [
+    "Picture the movement.",
+    "Inside? into.",
+    "Side to side? across.",
+    "Middle of? through."
+   ],
+   "contexts": [
+    "walking to the market",
+    "a matatu journey"
+   ],
+   "board": [
+    {
+     "beat": "draw",
+     "do": "Draw a road and a tunnel."
+    },
+    {
+     "beat": "point",
+     "do": "Point at the tunnel.",
+     "say": "The bus went ___ the tunnel."
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for through."
+    },
+    {
+     "beat": "child_draws",
+     "do": "The child draws a path across a field."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "ENGL.G4.LANGUA.T13_WORD_CLASS_PREPOSITI.PREP_DIRECTION.M_PRD_TO_INTO",
+     "listen_for": [
+      "to"
+     ],
+     "ask": "Did she go inside?",
+     "repair": "Into."
+    },
+    {
+     "code": "ENGL.G4.LANGUA.T13_WORD_CLASS_PREPOSITI.PREP_DIRECTION.M_PRD_AT_FOR_TO",
+     "listen_for": [
+      "at"
+     ],
+     "ask": "After go?",
+     "repair": "To."
+    },
+    {
+     "code": "ENGL.G4.LANGUA.T13_WORD_CLASS_PREPOSITI.PREP_DIRECTION.M_PRD_TO_HOME",
+     "listen_for": [
+      "to home"
+     ],
+     "ask": "Go to home?",
+     "repair": "Go home."
+    },
+    {
+     "code": "ENGL.G4.LANGUA.T13_WORD_CLASS_PREPOSITI.PREP_DIRECTION.M_PRD_THROUGH_ACROSS",
+     "listen_for": [
+      "through"
+     ],
+     "ask": "Inside it or over it?",
+     "repair": "Across is side to side."
+    }
+   ],
+   "checks": [
+    {
+     "question": "She walked ___ the room (inside).",
+     "answer": "into",
+     "shows": "into"
+    },
+    {
+     "question": "We went ___ home.",
+     "answer": "home (no to)",
+     "shows": "home"
+    }
+   ]
+  }
+ ]
+}

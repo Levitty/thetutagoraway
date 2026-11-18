@@ -1,0 +1,93 @@
+{
+ "sub_strand": "ENGL.G9.LISTEN.T6_CONVERSATIONAL_SKILL",
+ "title": "Conversational skills: Negotiation skills (Theme 6: Leisure time)",
+ "status": "draft: written 18 Nov 2026 offline for Grade 9 English; not yet checked by a Kenyan English teacher; not loaded by the live tutor",
+ "notes": "",
+ "skills": [
+  {
+   "skill": "ENGL.G9.LISTEN.T6_CONVERSATIONAL_SKILL.NEGOTIATION",
+   "assessed_by": "questions",
+   "key_step": "The child listens to the other side, makes an offer with a condition and seeks a middle point with calm cues.",
+   "floor": {
+    "prerequisite": "Disagrees politely.",
+    "question": "Disagree politely.",
+    "answer": "I see your point, but ..."
+   },
+   "steps": [
+    "Listen to needs.",
+    "Offer with a condition.",
+    "Counter-offer.",
+    "Calm cues."
+   ],
+   "contexts": [
+    "buying sports gear",
+    "planning a leisure trip"
+   ],
+   "board": [
+    {
+     "beat": "write",
+     "do": "Write: Would you consider ... if I ...?"
+    },
+    {
+     "beat": "point",
+     "do": "Point at if I.",
+     "say": "What can you offer?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for the child to answer."
+    },
+    {
+     "beat": "child_draws",
+     "do": "The child makes a counter-offer."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "ENGL.G9.LISTEN.T6_CONVERSATIONAL_SKILL.NEGOTIATION.M9_NG_DEMAND",
+     "listen_for": [
+      "Give it to me for 500."
+     ],
+     "ask": "Offer something?",
+     "repair": "If I ..."
+    },
+    {
+     "code": "ENGL.G9.LISTEN.T6_CONVERSATIONAL_SKILL.NEGOTIATION.M9_NG_NO_LISTEN",
+     "listen_for": [
+      "repeat your price"
+     ],
+     "ask": "Her needs?",
+     "repair": "Ask."
+    },
+    {
+     "code": "ENGL.G9.LISTEN.T6_CONVERSATIONAL_SKILL.NEGOTIATION.M9_NG_WALK_AWAY",
+     "listen_for": [
+      "walk away angry"
+     ],
+     "ask": "One no?",
+     "repair": "Counter-offer."
+    },
+    {
+     "code": "ENGL.G9.LISTEN.T6_CONVERSATIONAL_SKILL.NEGOTIATION.M9_NG_HOSTILE_CUES",
+     "listen_for": [
+      "folded arms and a frown"
+     ],
+     "ask": "Arms?",
+     "repair": "Open."
+    }
+   ],
+   "checks": [
+    {
+     "question": "Better: \"Give it for 500\" or \"Would you consider 500 if I buy two?\"",
+     "answer": "the second",
+     "shows": "offer"
+    },
+    {
+     "question": "The seller refuses. Next?",
+     "answer": "a counter-offer",
+     "shows": "counter"
+    }
+   ]
+  }
+ ]
+}

@@ -1,0 +1,180 @@
+{
+ "sub_strand": "ENGL.G5.READIN.T9_INTENSIVE_READING_DE",
+ "title": "Intensive Reading: Descriptive Fictional or Non-Fictional Texts (about 400 words) (Theme 9: Communicable diseases)",
+ "status": "draft: written 18 Nov 2026 offline for Grade 5 English; not yet checked by a Kenyan English teacher; not loaded by the live tutor",
+ "notes": "",
+ "skills": [
+  {
+   "skill": "ENGL.G5.READIN.T9_INTENSIVE_READING_DE.MAIN_IDEA",
+   "assessed_by": "questions",
+   "key_step": "The child asks what the whole paragraph is about and checks every sentence supports it.",
+   "floor": {
+    "prerequisite": "Finds stated details.",
+    "question": "What is the second sentence about?",
+    "answer": "a detail"
+   },
+   "steps": [
+    "Read the paragraph.",
+    "Ask what it is all about.",
+    "Check each sentence fits."
+   ],
+   "contexts": [
+    "a text on communicable diseases"
+   ],
+   "board": [
+    {
+     "beat": "write",
+     "do": "Write a paragraph whose point is at the end."
+    },
+    {
+     "beat": "point",
+     "do": "Point at the last sentence.",
+     "say": "Is this the main idea?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for the child to answer."
+    },
+    {
+     "beat": "child_draws",
+     "do": "The child writes a title."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "ENGL.G5.READIN.T9_INTENSIVE_READING_DE.MAIN_IDEA.M_MAIN_DETAIL",
+     "listen_for": [
+      "a single detail"
+     ],
+     "ask": "Is the whole paragraph about it?",
+     "repair": "Find the big idea."
+    },
+    {
+     "code": "ENGL.G5.READIN.T9_INTENSIVE_READING_DE.MAIN_IDEA.M_MAIN_TOO_BROAD",
+     "listen_for": [
+      "a broad statement"
+     ],
+     "ask": "Is it only about this?",
+     "repair": "Narrow it."
+    },
+    {
+     "code": "ENGL.G5.READIN.T9_INTENSIVE_READING_DE.MAIN_IDEA.M_MAIN_NOT_IN_TEXT",
+     "listen_for": [
+      "an unrelated idea"
+     ],
+     "ask": "Is it in the paragraph?",
+     "repair": "Use the text."
+    },
+    {
+     "code": "ENGL.G5.READIN.T9_INTENSIVE_READING_DE.MAIN_IDEA.M5_MAIN_FIRST_SENTENCE",
+     "listen_for": [
+      "the question"
+     ],
+     "ask": "Is the first sentence the point?",
+     "repair": "Check the whole."
+    }
+   ],
+   "checks": [
+    {
+     "question": "A paragraph lists ways to stop malaria. Main idea?",
+     "answer": "how to prevent malaria",
+     "shows": "main idea"
+    },
+    {
+     "question": "Is one example the main idea?",
+     "answer": "No",
+     "shows": "detail"
+    }
+   ]
+  },
+  {
+   "skill": "ENGL.G5.READIN.T9_INTENSIVE_READING_DE.SUMMARISE",
+   "assessed_by": "questions",
+   "key_step": "The child writes the main point of each paragraph in a few words, with no opinions.",
+   "floor": {
+    "prerequisite": "Finds main ideas.",
+    "question": "Main idea of paragraph 1?",
+    "answer": "a main idea"
+   },
+   "steps": [
+    "Find each main point.",
+    "Write it briefly.",
+    "Join them.",
+    "Leave out details and opinions."
+   ],
+   "contexts": [
+    "texts on diseases and leisure"
+   ],
+   "board": [
+    {
+     "beat": "write",
+     "do": "Write: P1 ..., P2 ..., P3 ..."
+    },
+    {
+     "beat": "point",
+     "do": "Point at P2.",
+     "say": "Main point here?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for the child to answer."
+    },
+    {
+     "beat": "child_draws",
+     "do": "The child joins them into a summary."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "ENGL.G5.READIN.T9_INTENSIVE_READING_DE.SUMMARISE.M_SUM_TOO_MUCH_DETAIL",
+     "listen_for": [
+      "a long retelling"
+     ],
+     "ask": "Is it short?",
+     "repair": "Main points only."
+    },
+    {
+     "code": "ENGL.G5.READIN.T9_INTENSIVE_READING_DE.SUMMARISE.M_SUM_MISSING_MAIN",
+     "listen_for": [
+      "a summary missing a main point"
+     ],
+     "ask": "Is every main point there?",
+     "repair": "Check each paragraph."
+    },
+    {
+     "code": "ENGL.G5.READIN.T9_INTENSIVE_READING_DE.SUMMARISE.M_SUM_OPINION",
+     "listen_for": [
+      "a summary with an opinion"
+     ],
+     "ask": "Is that the passage or you?",
+     "repair": "Leave it out."
+    },
+    {
+     "code": "ENGL.G5.READIN.T9_INTENSIVE_READING_DE.SUMMARISE.M_SUM_CUTS_MAIN",
+     "listen_for": [
+      "a main point"
+     ],
+     "ask": "Is that a main point?",
+     "repair": "Keep it."
+    }
+   ],
+   "checks": [
+    {
+     "question": "Summarise a three-paragraph text.",
+     "answer": "three main points, short",
+     "shows": "summary"
+    },
+    {
+     "question": "Should a summary say \"I liked it\"?",
+     "answer": "No",
+     "shows": "no opinion"
+    }
+   ]
+  }
+ ],
+ "also_taught_by": [
+  "ENGL.G5.READIN.T3_INTENSIVE_READING_NA.VISUALISE",
+  "ENGL.G5.READIN.T2_INTENSIVE_READING.FACTUAL_QUESTIONS",
+  "ENGL.G5.READIN.T2_INTENSIVE_READING.INFERENCE_QUESTIONS"
+ ]
+}

@@ -1,0 +1,92 @@
+{
+ "sub_strand": "ENGL.G8.GRAMMA.T14_SENTENCES_ACTIVE_AND",
+ "title": "Sentences: Active and Passive Voice (Theme 14: Sports: olympics)",
+ "status": "draft: written 18 Nov 2026 offline for Grade 8 English; not yet checked by a Kenyan English teacher; not loaded by the live tutor",
+ "notes": "",
+ "skills": [
+  {
+   "skill": "ENGL.G8.GRAMMA.T14_SENTENCES_ACTIVE_AND.ACTIVE_PASSIVE",
+   "assessed_by": "questions",
+   "key_step": "The child moves the receiver first, keeps the tense with the form of be and adds the past participle.",
+   "floor": {
+    "prerequisite": "Uses past forms.",
+    "question": "Past participle of bite?",
+    "answer": "bitten"
+   },
+   "steps": [
+    "Receiver first.",
+    "Be in the same tense.",
+    "Past participle.",
+    "By + doer."
+   ],
+   "contexts": [
+    "Olympics"
+   ],
+   "board": [
+    {
+     "beat": "write",
+     "do": "Write: The ranger feeds the calf."
+    },
+    {
+     "beat": "point",
+     "do": "Point at feeds.",
+     "say": "Tense?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for the child to answer."
+    },
+    {
+     "beat": "child_draws",
+     "do": "The child writes the passive."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "ENGL.G8.GRAMMA.T14_SENTENCES_ACTIVE_AND.ACTIVE_PASSIVE.M8_AP_WRONG_PARTICIPLE",
+     "listen_for": [
+      "bite"
+     ],
+     "ask": "Bite?",
+     "repair": "Bitten."
+    },
+    {
+     "code": "ENGL.G8.GRAMMA.T14_SENTENCES_ACTIVE_AND.ACTIVE_PASSIVE.M8_AP_VOICE_MIX",
+     "listen_for": [
+      "Juma kicked the ball."
+     ],
+     "ask": "Receiver first?",
+     "repair": "Passive."
+    },
+    {
+     "code": "ENGL.G8.GRAMMA.T14_SENTENCES_ACTIVE_AND.ACTIVE_PASSIVE.M8_AP_NO_BE",
+     "listen_for": [
+      "(nothing)"
+     ],
+     "ask": "Be?",
+     "repair": "Was."
+    },
+    {
+     "code": "ENGL.G8.GRAMMA.T14_SENTENCES_ACTIVE_AND.ACTIVE_PASSIVE.M8_X_AP_TENSE_CHANGE",
+     "listen_for": [
+      "The calf was fed by the ranger."
+     ],
+     "ask": "Same tense?",
+     "repair": "Is fed."
+    }
+   ],
+   "checks": [
+    {
+     "question": "Passive: The dog bit him.",
+     "answer": "He was bitten by the dog.",
+     "shows": "passive"
+    },
+    {
+     "question": "Passive of \"feeds\": ...",
+     "answer": "is fed",
+     "shows": "tense"
+    }
+   ]
+  }
+ ]
+}

@@ -1,0 +1,91 @@
+{
+ "sub_strand": "ENGL.G9.READIN.T8_POETRY_CHARACTERS",
+ "title": "Poetry: Characters (Theme 8: Tourism: international)",
+ "status": "draft: written 18 Nov 2026 offline for Grade 9 English; not yet checked by a Kenyan English teacher; not loaded by the live tutor",
+ "notes": "",
+ "skills": [
+  {
+   "skill": "ENGL.G9.READIN.T8_POETRY_CHARACTERS.RP_PERSONA",
+   "assessed_by": "questions",
+   "key_step": "The child names the speaker in the poem and the other participants addressed.",
+   "floor": {
+    "prerequisite": "Knows Grade 8 persona.",
+    "question": "Is the persona always the poet?",
+    "answer": "no"
+   },
+   "steps": [
+    "Who speaks?",
+    "Who is addressed?",
+    "Others mentioned."
+   ],
+   "contexts": [
+    "tourism poems"
+   ],
+   "board": [
+    {
+     "beat": "write",
+     "do": "Write: \"Child, listen to me,\" says the mother."
+    },
+    {
+     "beat": "point",
+     "do": "Point at the mother.",
+     "say": "Persona?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for the child to answer."
+    },
+    {
+     "beat": "child_draws",
+     "do": "The child names the listener."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "ENGL.G9.READIN.T8_POETRY_CHARACTERS.RP_PERSONA.M_EN9_RP_PERSONA_DETAIL",
+     "listen_for": [
+      "an answer that is a small detail"
+     ],
+     "ask": "Does that answer the question, or is it a nearby detail?",
+     "repair": "Find the exact answer in the text."
+    },
+    {
+     "code": "ENGL.G9.READIN.T8_POETRY_CHARACTERS.RP_PERSONA.M_EN9_RP_PERSONA_OPPOSITE",
+     "listen_for": [
+      "an answer that is the opposite"
+     ],
+     "ask": "Does the text say that, or the opposite?",
+     "repair": "Read the sentence again."
+    },
+    {
+     "code": "ENGL.G9.READIN.T8_POETRY_CHARACTERS.RP_PERSONA.M_EN9_RP_PERSONA_NOTSAID",
+     "listen_for": [
+      "an answer that is something not in the text"
+     ],
+     "ask": "Can you point to where the text says it?",
+     "repair": "Answer only from the text."
+    },
+    {
+     "code": "ENGL.G9.READIN.T8_POETRY_CHARACTERS.RP_PERSONA.M9_RP_PERSONA_LISTENER",
+     "listen_for": [
+      "the child"
+     ],
+     "ask": "Who speaks?",
+     "repair": "The mother."
+    }
+   ],
+   "checks": [
+    {
+     "question": "Persona in \"Child, listen to me\"?",
+     "answer": "the mother",
+     "shows": "persona"
+    },
+    {
+     "question": "Addressee?",
+     "answer": "the child",
+     "shows": "participant"
+    }
+   ]
+  }
+ ]
+}

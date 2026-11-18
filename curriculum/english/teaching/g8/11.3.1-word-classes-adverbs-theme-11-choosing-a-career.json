@@ -1,0 +1,92 @@
+{
+ "sub_strand": "ENGL.G8.GRAMMA.T11_WORD_CLASSES_ADVERBS",
+ "title": "Word Classes: Adverbs (Theme 11: Choosing a career)",
+ "status": "draft: written 18 Nov 2026 offline for Grade 8 English; not yet checked by a Kenyan English teacher; not loaded by the live tutor",
+ "notes": "",
+ "skills": [
+  {
+   "skill": "ENGL.G8.GRAMMA.T11_WORD_CLASSES_ADVERBS.ADVERB_FORMATION",
+   "assessed_by": "questions",
+   "key_step": "The child forms adverbs with -ly and its spelling rules, and knows adjectives that cannot take -ly.",
+   "floor": {
+    "prerequisite": "Forms adjectives.",
+    "question": "care + ful",
+    "answer": "careful"
+   },
+   "steps": [
+    "-ly.",
+    "y to i.",
+    "Hard, fast stay.",
+    "Friendly: in a friendly way."
+   ],
+   "contexts": [
+    "careers"
+   ],
+   "board": [
+    {
+     "beat": "write",
+     "do": "Write: happy + ly."
+    },
+    {
+     "beat": "point",
+     "do": "Point at y.",
+     "say": "What happens?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for the child to answer."
+    },
+    {
+     "beat": "child_draws",
+     "do": "The child handles friendly."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "ENGL.G8.GRAMMA.T11_WORD_CLASSES_ADVERBS.ADVERB_FORMATION.M8_AF_GOOD_WELL",
+     "listen_for": [
+      "good"
+     ],
+     "ask": "Action?",
+     "repair": "Well."
+    },
+    {
+     "code": "ENGL.G8.GRAMMA.T11_WORD_CLASSES_ADVERBS.ADVERB_FORMATION.M8_AF_SPELL",
+     "listen_for": [
+      "happyly"
+     ],
+     "ask": "Y?",
+     "repair": "Happily."
+    },
+    {
+     "code": "ENGL.G8.GRAMMA.T11_WORD_CLASSES_ADVERBS.ADVERB_FORMATION.M8_AF_HARDLY",
+     "listen_for": [
+      "hardly"
+     ],
+     "ask": "Almost not?",
+     "repair": "Hard."
+    },
+    {
+     "code": "ENGL.G8.GRAMMA.T11_WORD_CLASSES_ADVERBS.ADVERB_FORMATION.M8_X_AF_FRIENDLY",
+     "listen_for": [
+      "friendlily"
+     ],
+     "ask": "Already -ly?",
+     "repair": "In a friendly way."
+    }
+   ],
+   "checks": [
+    {
+     "question": "good -> ?",
+     "answer": "well",
+     "shows": "irregular"
+    },
+    {
+     "question": "friendly -> ?",
+     "answer": "in a friendly way",
+     "shows": "ly adjective"
+    }
+   ]
+  }
+ ]
+}

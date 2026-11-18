@@ -72,7 +72,8 @@ test('the practice engine reads its subjects from the registry', () => {
   assert.deepEqual(Object.keys(SUBJECT_DEFS).slice(0, 2), ['science', 'english']);
   assert.equal(SUBJECT_DEFS.science.description, 'Science and Technology for Grades 4, 5, 6 from the CBC design');   // Grade 4 joined Grade 5 on 12 Nov 2026, Grade 6 after it
   assert.equal(Object.keys(subjectDef('science').map).length, 93);   // 33 skills in Grade 5, 25 in Grade 4 and 35 in Grade 6
-  assert.equal(Object.keys(subjectDef('english').map).length, 294);   // 41 skills in Grade 5, 52 in Grade 4, 50 in Grade 6, 71 in Grade 7, 37 in Grade 8 and 43 in Grade 9
+  // Every English skill of Grades 4 to 9 (294 before the depth pass of 18 Nov 2026, which added the speaking, reading-aloud and composition skills).
+  assert.equal(Object.keys(subjectDef('english').map).length, [4, 5, 6, 7, 8, 9].reduce((n, g) => n + JSON.parse(readFileSync(new URL(`../curriculum/english/g${g}.json`, import.meta.url), 'utf8')).totals.skills, 0));
 });
 
 test('the phone-bundle list names every family file and its signed list', async () => {

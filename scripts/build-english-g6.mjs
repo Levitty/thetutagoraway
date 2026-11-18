@@ -6,6 +6,7 @@
 // All skills are 'proposed' and all misconceptions 'draft' until a Kenyan English teacher reviews them.
 // ============================================================================
 import { readFileSync, writeFileSync } from 'node:fs';
+import { applyDepth } from './lib/english-depth.mjs';
 import { SKILLS, MIS, ALSO, LEADS } from './data/english-g6-skills.mjs';
 
 const path = new URL('../curriculum/english/g6.json', import.meta.url);
@@ -62,5 +63,7 @@ for (const m of MIS) {
 }
 g6.totals = { ...g6.totals, skills: SKILLS.length, prerequisites: nPre, misconceptions: MIS.length };
 g6.status = "outcomes from KICD's text, word for word; skills, prerequisites and misconceptions (12 Nov 2026) are proposed or draft, written offline by Claude, awaiting a Kenyan English teacher's review";
+// Depth pass (18 Nov 2026): new skills, prerequisites, misconceptions and the teaching pack from scripts/data/english-depth/g6-*.mjs.
+await applyDepth(6, g6, { families: (await import('../src/ai-tutor/content/subjects/english_g6.js')).default.families });
 writeFileSync(path, JSON.stringify(g6, null, 1) + '\n');
 console.log(`english g6: ${SKILLS.length} skills, ${nPre} prerequisites, ${nLeads} leads-to links, ${MIS.length} misconceptions over ${g6.sub_strands.filter(s => s.skills.length).length} sub-strands`);

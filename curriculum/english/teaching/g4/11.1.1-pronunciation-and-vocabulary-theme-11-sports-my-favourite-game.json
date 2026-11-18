@@ -1,0 +1,182 @@
+{
+ "sub_strand": "ENGL.G4.LISTEN.T11_PRONUNCIATION_AND_VO",
+ "title": "Pronunciation and Vocabulary (Theme 11: Sports: my favourite game)",
+ "status": "draft: written 18 Nov 2026 offline for Grade 4 English; not yet checked by a Kenyan English teacher; not loaded by the live tutor",
+ "notes": "",
+ "skills": [
+  {
+   "skill": "ENGL.G4.LISTEN.T11_PRONUNCIATION_AND_VO.SPORTS_WORDS",
+   "assessed_by": "questions",
+   "key_step": "The child explains each sports word by what happens in a game.",
+   "floor": {
+    "prerequisite": "Names games.",
+    "question": "Name a ball game.",
+    "answer": "football"
+   },
+   "steps": [
+    "Name it.",
+    "Say what it means in a game.",
+    "Use it in a sentence."
+   ],
+   "contexts": [
+    "a football match",
+    "sports day"
+   ],
+   "board": [
+    {
+     "beat": "draw",
+     "do": "Draw a football pitch."
+    },
+    {
+     "beat": "point",
+     "do": "Point at the goal area.",
+     "say": "Who stands here?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for goalkeeper."
+    },
+    {
+     "beat": "child_draws",
+     "do": "The child labels the referee."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "ENGL.G4.LISTEN.T11_PRONUNCIATION_AND_VO.SPORTS_WORDS.M_SPT_NEAR_MEANING",
+     "listen_for": [
+      "goalkeeper"
+     ],
+     "ask": "What does that person do?",
+     "repair": "Match it."
+    },
+    {
+     "code": "ENGL.G4.LISTEN.T11_PRONUNCIATION_AND_VO.SPORTS_WORDS.M_SPT_TROPHY_TOURNAMENT",
+     "listen_for": [
+      "tournament"
+     ],
+     "ask": "A cup or a competition?",
+     "repair": "Trophy is a cup."
+    },
+    {
+     "code": "ENGL.G4.LISTEN.T11_PRONUNCIATION_AND_VO.SPORTS_WORDS.M_SPT_OPPONENT_TEAMMATE",
+     "listen_for": [
+      "teammate"
+     ],
+     "ask": "Same team or other team?",
+     "repair": "Opponent: other."
+    },
+    {
+     "code": "ENGL.G4.LISTEN.T11_PRONUNCIATION_AND_VO.SPORTS_WORDS.M4_SPT_DRAW_LOSE",
+     "listen_for": [
+      "loss"
+     ],
+     "ask": "Same score?",
+     "repair": "Draw."
+    }
+   ],
+   "checks": [
+    {
+     "question": "The person who makes sure players obey the rules is the ...",
+     "answer": "referee",
+     "shows": "word"
+    },
+    {
+     "question": "A cup given to the winner is a ...",
+     "answer": "trophy",
+     "shows": "word"
+    }
+   ]
+  },
+  {
+   "skill": "ENGL.G4.LISTEN.T11_PRONUNCIATION_AND_VO.NONVERBAL_CUES",
+   "assessed_by": "questions",
+   "key_step": "The child looks at the face, the hands and the voice, then says what they show.",
+   "floor": {
+    "prerequisite": "Says how a character feels.",
+    "question": "A boy is crying. How does he feel?",
+    "answer": "sad"
+   },
+   "steps": [
+    "Show a cue.",
+    "Ask what it shows.",
+    "Say it in words.",
+    "Use the cue while speaking."
+   ],
+   "contexts": [
+    "a referee's whistle and hand signal",
+    "a teacher's finger on the lips",
+    "a friend's frown"
+   ],
+   "board": [
+    {
+     "beat": "draw",
+     "do": "Draw a face with a frown."
+    },
+    {
+     "beat": "point",
+     "do": "Point at the eyebrows.",
+     "say": "How does she feel?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for an answer."
+    },
+    {
+     "beat": "child_draws",
+     "do": "The child shows a cue for \"come here\"."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "ENGL.G4.LISTEN.T11_PRONUNCIATION_AND_VO.NONVERBAL_CUES.M4_NC_NOD",
+     "listen_for": [
+      "You are wrong."
+     ],
+     "ask": "Up and down or side to side?",
+     "repair": "Up and down is yes."
+    },
+    {
+     "code": "ENGL.G4.LISTEN.T11_PRONUNCIATION_AND_VO.NONVERBAL_CUES.M4_NC_FROWN",
+     "listen_for": [
+      "happy"
+     ],
+     "ask": "What are the eyebrows doing?",
+     "repair": "Down: a problem."
+    },
+    {
+     "code": "ENGL.G4.LISTEN.T11_PRONUNCIATION_AND_VO.NONVERBAL_CUES.M4_NC_TONE_WORDS",
+     "listen_for": [
+      "happy"
+     ],
+     "ask": "How did it sound?",
+     "repair": "The tone shows the feeling."
+    },
+    {
+     "code": "ENGL.G4.LISTEN.T11_PRONUNCIATION_AND_VO.NONVERBAL_CUES.M4_NC_POINTING",
+     "listen_for": [
+      "Point at the headteacher with one finger"
+     ],
+     "ask": "Is one finger polite?",
+     "repair": "Open hand."
+    }
+   ],
+   "checks": [
+    {
+     "question": "A teacher puts a finger on her lips. She means ...",
+     "answer": "be quiet",
+     "shows": "gesture"
+    },
+    {
+     "question": "A friend smiles and nods. He ...",
+     "answer": "agrees",
+     "shows": "face"
+    }
+   ]
+  }
+ ],
+ "also_taught_by": [
+  "ENGL.G4.LISTEN.T1_PRONUNCIATION_AND_VO.LISTEN_ATTENTIVE",
+  "ENGL.G4.LISTEN.T2_PRONUNCIATION_AND_VO.DISCRIMINATE_SOUNDS"
+ ]
+}

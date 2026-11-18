@@ -1,0 +1,96 @@
+{
+ "sub_strand": "ENGL.G4.LISTEN.T12_PRONUNCIATION_AND_VO",
+ "title": "Pronunciation and Vocabulary (Theme 12: Clean environment)",
+ "status": "draft: written 18 Nov 2026 offline for Grade 4 English; not yet checked by a Kenyan English teacher; not loaded by the live tutor",
+ "notes": "",
+ "skills": [
+  {
+   "skill": "ENGL.G4.LISTEN.T12_PRONUNCIATION_AND_VO.ENVIRONMENT_WORDS",
+   "assessed_by": "questions",
+   "key_step": "The child explains each environment word by what it does to the place we live.",
+   "floor": {
+    "prerequisite": "Knows theme words.",
+    "question": "Name something that makes a place dirty.",
+    "answer": "litter"
+   },
+   "steps": [
+    "Name it.",
+    "Say what it does.",
+    "Use it in a sentence."
+   ],
+   "contexts": [
+    "a clean-up day",
+    "a river near school"
+   ],
+   "board": [
+    {
+     "beat": "draw",
+     "do": "Draw a bin and some litter."
+    },
+    {
+     "beat": "point",
+     "do": "Point at the litter.",
+     "say": "What should we do?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for an answer."
+    },
+    {
+     "beat": "child_draws",
+     "do": "The child labels recycle."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "ENGL.G4.LISTEN.T12_PRONUNCIATION_AND_VO.ENVIRONMENT_WORDS.M_ENV_NEAR_MEANING",
+     "listen_for": [
+      "litter"
+     ],
+     "ask": "What does it do?",
+     "repair": "Match it."
+    },
+    {
+     "code": "ENGL.G4.LISTEN.T12_PRONUNCIATION_AND_VO.ENVIRONMENT_WORDS.M_ENV_POLLUTION",
+     "listen_for": [
+      "Compost"
+     ],
+     "ask": "Is pollution a plant?",
+     "repair": "Dirt in air or water."
+    },
+    {
+     "code": "ENGL.G4.LISTEN.T12_PRONUNCIATION_AND_VO.ENVIRONMENT_WORDS.M_ENV_CONSERVE",
+     "listen_for": [
+      "pollute"
+     ],
+     "ask": "Use up or protect?",
+     "repair": "Protect."
+    },
+    {
+     "code": "ENGL.G4.LISTEN.T12_PRONUNCIATION_AND_VO.ENVIRONMENT_WORDS.M4_ENV_RECYCLE_REUSE",
+     "listen_for": [
+      "recycle"
+     ],
+     "ask": "Use again or make new?",
+     "repair": "Reuse: again."
+    }
+   ],
+   "checks": [
+    {
+     "question": "Dirt in the air or water is ...",
+     "answer": "pollution",
+     "shows": "word"
+    },
+    {
+     "question": "To protect and save trees is to ...",
+     "answer": "conserve",
+     "shows": "word"
+    }
+   ]
+  }
+ ],
+ "also_taught_by": [
+  "ENGL.G4.LISTEN.T9_PRONUNCIATION_AND_VO.SPEAK_FLUENTLY",
+  "ENGL.G4.LISTEN.T11_PRONUNCIATION_AND_VO.NONVERBAL_CUES"
+ ]
+}

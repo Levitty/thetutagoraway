@@ -1,0 +1,91 @@
+{
+ "sub_strand": "ENGL.G5.GRAMMA.T4_WORD_CLASS_POSSESSIV",
+ "title": "Word Class: Possessive Pronouns (Theme 4: Road accidents – prevention)",
+ "status": "draft: written 18 Nov 2026 offline for Grade 5 English; not yet checked by a Kenyan English teacher; not loaded by the live tutor",
+ "notes": "",
+ "skills": [
+  {
+   "skill": "ENGL.G5.GRAMMA.T4_WORD_CLASS_POSSESSIV.POSSESSIVES",
+   "assessed_by": "questions",
+   "key_step": "The child checks whether a noun follows: my bag, but the bag is mine.",
+   "floor": {
+    "prerequisite": "Uses pronouns.",
+    "question": "Me or I?",
+    "answer": "correct choice"
+   },
+   "steps": [
+    "Noun next: my, your, her.",
+    "No noun: mine, yours, hers.",
+    "No apostrophe."
+   ],
+   "contexts": [
+    "lost property after an accident"
+   ],
+   "board": [
+    {
+     "beat": "write",
+     "do": "Write: This is ___ helmet. The helmet is ___."
+    },
+    {
+     "beat": "point",
+     "do": "Point at the second gap.",
+     "say": "Is a noun after it?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for the child to answer."
+    },
+    {
+     "beat": "child_draws",
+     "do": "The child fills both."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "ENGL.G5.GRAMMA.T4_WORD_CLASS_POSSESSIV.POSSESSIVES.M_POSS_DET_FOR_PRONOUN",
+     "listen_for": [
+      "my"
+     ],
+     "ask": "Is a noun next?",
+     "repair": "No: mine."
+    },
+    {
+     "code": "ENGL.G5.GRAMMA.T4_WORD_CLASS_POSSESSIV.POSSESSIVES.M_POSS_PRONOUN_BEFORE_NOUN",
+     "listen_for": [
+      "yours"
+     ],
+     "ask": "Is a noun next?",
+     "repair": "Your."
+    },
+    {
+     "code": "ENGL.G5.GRAMMA.T4_WORD_CLASS_POSSESSIV.POSSESSIVES.M_POSS_APOSTROPHE",
+     "listen_for": [
+      "her's"
+     ],
+     "ask": "Apostrophe?",
+     "repair": "Never in hers."
+    },
+    {
+     "code": "ENGL.G5.GRAMMA.T4_WORD_CLASS_POSSESSIV.POSSESSIVES.M_POSS_WRONG_PERSON",
+     "listen_for": [
+      "his"
+     ],
+     "ask": "Whose?",
+     "repair": "Match the owner."
+    }
+   ],
+   "checks": [
+    {
+     "question": "The book is ___ (her).",
+     "answer": "hers",
+     "shows": "pronoun"
+    },
+    {
+     "question": "Is \"your's\" right?",
+     "answer": "No: yours",
+     "shows": "apostrophe"
+    }
+   ]
+  }
+ ]
+}

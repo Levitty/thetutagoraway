@@ -1,0 +1,177 @@
+{
+ "sub_strand": "ENGL.G4.LANGUA.T5_WORD_CLASSES_ADJECTI",
+ "title": "Word Classes: Adjectives (Theme 5: Nutrition – balanced diet)",
+ "status": "draft: written 18 Nov 2026 offline for Grade 4 English; not yet checked by a Kenyan English teacher; not loaded by the live tutor",
+ "notes": "",
+ "skills": [
+  {
+   "skill": "ENGL.G4.LANGUA.T5_WORD_CLASSES_ADJECTI.ADJECTIVES",
+   "assessed_by": "questions",
+   "key_step": "The child asks which word tells us more about the noun.",
+   "floor": {
+    "prerequisite": "Knows nouns.",
+    "question": "Find the thing: a red bus.",
+    "answer": "bus"
+   },
+   "steps": [
+    "Find the noun.",
+    "Find the word that describes it.",
+    "Check it answers what kind."
+   ],
+   "contexts": [
+    "food at the market",
+    "animals"
+   ],
+   "board": [
+    {
+     "beat": "write",
+     "do": "Write: The tall girl ate a sweet mango."
+    },
+    {
+     "beat": "point",
+     "do": "Point at girl.",
+     "say": "Which word tells us about her?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for tall."
+    },
+    {
+     "beat": "child_draws",
+     "do": "The child finds sweet."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "ENGL.G4.LANGUA.T5_WORD_CLASSES_ADJECTI.ADJECTIVES.M_ADJ_NOUN_AS_ADJ",
+     "listen_for": [
+      "bus"
+     ],
+     "ask": "Is it the thing?",
+     "repair": "Find the describing word."
+    },
+    {
+     "code": "ENGL.G4.LANGUA.T5_WORD_CLASSES_ADJECTI.ADJECTIVES.M_ADJ_VERB_AS_ADJ",
+     "listen_for": [
+      "ran"
+     ],
+     "ask": "Is it an action?",
+     "repair": "Not an adjective."
+    },
+    {
+     "code": "ENGL.G4.LANGUA.T5_WORD_CLASSES_ADJECTI.ADJECTIVES.M_ADJ_ADVERB_AS_ADJ",
+     "listen_for": [
+      "slowly"
+     ],
+     "ask": "Does it tell how?",
+     "repair": "That is an adverb."
+    },
+    {
+     "code": "ENGL.G4.LANGUA.T5_WORD_CLASSES_ADJECTI.ADJECTIVES.M_ADJ_ARTICLE_AS_ADJ",
+     "listen_for": [
+      "a"
+     ],
+     "ask": "Does a describe?",
+     "repair": "No: find the describing word."
+    }
+   ],
+   "checks": [
+    {
+     "question": "Adjective in: a hot cup of tea",
+     "answer": "hot",
+     "shows": "adjective"
+    },
+    {
+     "question": "Adjective in: The boy ran fast.",
+     "answer": "none",
+     "shows": "adverb not adjective"
+    }
+   ]
+  },
+  {
+   "skill": "ENGL.G4.LANGUA.T5_WORD_CLASSES_ADJECTI.ADJECTIVE_ORDER",
+   "assessed_by": "questions",
+   "key_step": "The child puts size first, then shape, then colour, then the noun.",
+   "floor": {
+    "prerequisite": "Finds adjectives.",
+    "question": "Find two adjectives: a big round ball.",
+    "answer": "big, round"
+   },
+   "steps": [
+    "Size.",
+    "Shape.",
+    "Colour.",
+    "Noun."
+   ],
+   "contexts": [
+    "fruit at the market",
+    "a ball in sports"
+   ],
+   "board": [
+    {
+     "beat": "write",
+     "do": "Write: a ___ ___ pumpkin (round, big)."
+    },
+    {
+     "beat": "point",
+     "do": "Point at big.",
+     "say": "Size or shape?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for size."
+    },
+    {
+     "beat": "child_draws",
+     "do": "The child writes: a big round pumpkin."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "ENGL.G4.LANGUA.T5_WORD_CLASSES_ADJECTI.ADJECTIVE_ORDER.M_ADO_SHAPE_BEFORE_SIZE",
+     "listen_for": [
+      "round big"
+     ],
+     "ask": "Which is size?",
+     "repair": "Size first."
+    },
+    {
+     "code": "ENGL.G4.LANGUA.T5_WORD_CLASSES_ADJECTI.ADJECTIVE_ORDER.M_ADO_AFTER_NOUN",
+     "listen_for": [
+      "ball big"
+     ],
+     "ask": "Where do adjectives go?",
+     "repair": "Before the noun."
+    },
+    {
+     "code": "ENGL.G4.LANGUA.T5_WORD_CLASSES_ADJECTI.ADJECTIVE_ORDER.M_ADO_NO_AND",
+     "listen_for": [
+      "big and round"
+     ],
+     "ask": "Do we need and?",
+     "repair": "No."
+    },
+    {
+     "code": "ENGL.G4.LANGUA.T5_WORD_CLASSES_ADJECTI.ADJECTIVE_ORDER.M4_ADO_COLOUR_FIRST",
+     "listen_for": [
+      "red big"
+     ],
+     "ask": "Size or colour first?",
+     "repair": "Size."
+    }
+   ],
+   "checks": [
+    {
+     "question": "a ___ ___ table (square, small)",
+     "answer": "small square",
+     "shows": "size first"
+    },
+    {
+     "question": "a ___ ___ cup (blue, small)",
+     "answer": "small blue",
+     "shows": "size before colour"
+    }
+   ]
+  }
+ ]
+}

@@ -1,0 +1,97 @@
+{
+ "sub_strand": "ENGL.G6.READIN.T8_FLUENCY",
+ "title": "Fluency (Theme 8: The farm – animal safety and care)",
+ "status": "draft: written 18 Nov 2026 offline for Grade 6 English; not yet checked by a Kenyan English teacher; not loaded by the live tutor",
+ "notes": "",
+ "skills": [
+  {
+   "skill": "ENGL.G6.READIN.T8_FLUENCY.READ_FLUENTLY",
+   "assessed_by": "voice",
+   "key_step": "The child reads in phrases at talking speed and lets the voice show speech and feeling.",
+   "floor": {
+    "prerequisite": "Reads Grade 5 texts fluently.",
+    "question": "Read this sentence.",
+    "answer": "reads it"
+   },
+   "steps": [
+    "Teacher models.",
+    "Read together.",
+    "Child reads alone.",
+    "Reread for expression."
+   ],
+   "contexts": [
+    "animal care texts",
+    "a dialogue",
+    "a poem"
+   ],
+   "board": [
+    {
+     "beat": "write",
+     "do": "Write: The vet checked the calf / and gave it an injection."
+    },
+    {
+     "beat": "point",
+     "do": "Point at the slash.",
+     "say": "Read to here, then on."
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for the child to answer."
+    },
+    {
+     "beat": "child_draws",
+     "do": "The child reads a speech line with feeling."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "ENGL.G6.READIN.T8_FLUENCY.READ_FLUENTLY.M6_RF_NO_PHRASING",
+     "listen_for": [
+      "The. vet. checked."
+     ],
+     "ask": "Which words go together?",
+     "repair": "Read the group."
+    },
+    {
+     "code": "ENGL.G6.READIN.T8_FLUENCY.READ_FLUENTLY.M6_RF_TOO_FAST",
+     "listen_for": [
+      "rushes and drops small words"
+     ],
+     "ask": "Did you read every word?",
+     "repair": "Talking speed."
+    },
+    {
+     "code": "ENGL.G6.READIN.T8_FLUENCY.READ_FLUENTLY.M6_RF_FLAT_SPEECH",
+     "listen_for": [
+      "flat"
+     ],
+     "ask": "Is it a shout?",
+     "repair": "Show it."
+    },
+    {
+     "code": "ENGL.G6.READIN.T8_FLUENCY.READ_FLUENTLY.M6_RF_SELF_CORRECT_LOOP",
+     "listen_for": [
+      "start the whole line again"
+     ],
+     "ask": "Do you need the whole line again?",
+     "repair": "Fix the word, go on."
+    }
+   ],
+   "checks": [
+    {
+     "question": "Read: \"Help!\" shouted Juma.",
+     "answer": "urgent voice",
+     "shows": "expression"
+    },
+    {
+     "question": "Read a Grade 6 passage aloud.",
+     "answer": "phrases, steady speed, few slips",
+     "shows": "fluency"
+    }
+   ]
+  }
+ ],
+ "also_taught_by": [
+  "ENGL.G6.READIN.T1_EXTENSIVE_READING.SUITABLE_TEXT"
+ ]
+}

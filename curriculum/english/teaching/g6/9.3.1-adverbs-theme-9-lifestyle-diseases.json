@@ -1,0 +1,99 @@
+{
+ "sub_strand": "ENGL.G6.LANGUA.T9_ADVERBS",
+ "title": "Adverbs (Theme 9: Lifestyle diseases)",
+ "status": "draft: written 18 Nov 2026 offline for Grade 6 English; not yet checked by a Kenyan English teacher; not loaded by the live tutor",
+ "notes": "",
+ "skills": [
+  {
+   "skill": "ENGL.G6.LANGUA.T9_ADVERBS.ADVERBS_USE",
+   "assessed_by": "questions",
+   "key_step": "The child asks how, when, where, how often or how much and puts the adverb in its place.",
+   "floor": {
+    "prerequisite": "Uses adverbs.",
+    "question": "She ran ___ (quick).",
+    "answer": "quickly"
+   },
+   "steps": [
+    "Find the verb.",
+    "Ask the question.",
+    "Frequency before the main verb."
+   ],
+   "contexts": [
+    "healthy habits"
+   ],
+   "board": [
+    {
+     "beat": "write",
+     "do": "Write: He walks always to school."
+    },
+    {
+     "beat": "point",
+     "do": "Point at always.",
+     "say": "Where does it go?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for the child to answer."
+    },
+    {
+     "beat": "child_draws",
+     "do": "The child writes a degree adverb sentence."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "ENGL.G6.LANGUA.T9_ADVERBS.ADVERBS_USE.M6_ADV_ADJ_FOR_ADV",
+     "listen_for": [
+      "quick"
+     ],
+     "ask": "Describing the action?",
+     "repair": "Quickly."
+    },
+    {
+     "code": "ENGL.G6.LANGUA.T9_ADVERBS.ADVERBS_USE.M6_ADV_GOOD_WELL",
+     "listen_for": [
+      "good"
+     ],
+     "ask": "Action?",
+     "repair": "Well."
+    },
+    {
+     "code": "ENGL.G6.LANGUA.T9_ADVERBS.ADVERBS_USE.M6_ADV_HARD_HARDLY",
+     "listen_for": [
+      "hardly"
+     ],
+     "ask": "Almost not?",
+     "repair": "Hard."
+    },
+    {
+     "code": "ENGL.G6.LANGUA.T9_ADVERBS.ADVERBS_USE.M6_ADV_POSITION",
+     "listen_for": [
+      "walks always"
+     ],
+     "ask": "Before the verb?",
+     "repair": "Always walks."
+    },
+    {
+     "code": "ENGL.G6.LANGUA.T9_ADVERBS.ADVERBS_USE.M_ADV_KIND_MIXED",
+     "listen_for": [
+      "place"
+     ],
+     "ask": "Time or place?",
+     "repair": "Name it."
+    }
+   ],
+   "checks": [
+    {
+     "question": "She sings ___ (good).",
+     "answer": "well",
+     "shows": "good/well"
+    },
+    {
+     "question": "He worked ___ (hard).",
+     "answer": "hard",
+     "shows": "hard/hardly"
+    }
+   ]
+  }
+ ]
+}

@@ -1,0 +1,95 @@
+{
+ "sub_strand": "ENGL.G9.WRITIN.T12_THE_WRITING_PROCESS_",
+ "title": "The Writing Process: Dialog (Theme 12: Personal grooming)",
+ "status": "draft: written 18 Nov 2026 offline for Grade 9 English; not yet checked by a Kenyan English teacher; not loaded by the live tutor",
+ "notes": "",
+ "skills": [
+  {
+   "skill": "ENGL.G9.WRITIN.T12_THE_WRITING_PROCESS_.DIALOGUE_WRITING",
+   "assessed_by": "composition",
+   "key_step": "The child plans the purpose, drafts with names and colons, revises and edits.",
+   "floor": {
+    "prerequisite": "Knows the writing process.",
+    "question": "After drafting?",
+    "answer": "revising"
+   },
+   "steps": [
+    "Plan purpose.",
+    "Draft: setting, names, lines.",
+    "Directions in brackets.",
+    "Revise and edit."
+   ],
+   "contexts": [
+    "personal grooming"
+   ],
+   "board": [
+    {
+     "beat": "write",
+     "do": "Write: Wairimu: ..."
+    },
+    {
+     "beat": "point",
+     "do": "Point at the colon.",
+     "say": "What next?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for the child to answer."
+    },
+    {
+     "beat": "child_draws",
+     "do": "The child revises a line."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "ENGL.G9.WRITIN.T12_THE_WRITING_PROCESS_.DIALOGUE_WRITING.M9_DW_QUOTES",
+     "listen_for": [
+      "\"Wairimu: Hello.\""
+     ],
+     "ask": "Marks?",
+     "repair": "None."
+    },
+    {
+     "code": "ENGL.G9.WRITIN.T12_THE_WRITING_PROCESS_.DIALOGUE_WRITING.M9_DW_NO_REVISION",
+     "listen_for": [
+      "publish"
+     ],
+     "ask": "Revised?",
+     "repair": "Revise."
+    },
+    {
+     "code": "ENGL.G9.WRITIN.T12_THE_WRITING_PROCESS_.DIALOGUE_WRITING.M9_DW_DIRECTIONS",
+     "listen_for": [
+      "Wairimu: smiles"
+     ],
+     "ask": "Spoken?",
+     "repair": "Brackets."
+    },
+    {
+     "code": "ENGL.G9.WRITIN.T12_THE_WRITING_PROCESS_.DIALOGUE_WRITING.M9_DW_NO_PURPOSE",
+     "listen_for": [
+      "greet only"
+     ],
+     "ask": "What changes?",
+     "repair": "Plan it."
+    }
+   ],
+   "checks": [
+    {
+     "question": "Quotation marks?",
+     "answer": "No",
+     "shows": "format"
+    },
+    {
+     "question": "What should change by the end?",
+     "answer": "a view or decision",
+     "shows": "purpose"
+    }
+   ]
+  }
+ ],
+ "also_taught_by": [
+  "ENGL.G9.WRITIN.T7_THE_WRITING_PROCESS.WRITING_PROCESS"
+ ]
+}

@@ -1,0 +1,95 @@
+{
+ "sub_strand": "ENGL.G5.READIN.T1_EXTENSIVE_READING",
+ "title": "Extensive Reading (Theme 1: Child rights and responsibilities)",
+ "status": "draft: written 18 Nov 2026 offline for Grade 5 English; not yet checked by a Kenyan English teacher; not loaded by the live tutor",
+ "notes": "",
+ "skills": [
+  {
+   "skill": "ENGL.G5.READIN.T1_EXTENSIVE_READING.REFERENCE_MATERIALS",
+   "assessed_by": "questions",
+   "key_step": "The child says what he or she needs and matches it to the right reference book.",
+   "floor": {
+    "prerequisite": "Uses a dictionary.",
+    "question": "Find \"right\" in the dictionary.",
+    "answer": "finds it"
+   },
+   "steps": [
+    "Say what you need.",
+    "Choose the book.",
+    "Use guide words and contents."
+   ],
+   "contexts": [
+    "a project on child rights",
+    "the school library"
+   ],
+   "board": [
+    {
+     "beat": "write",
+     "do": "Write: meaning, a country, how the heart works."
+    },
+    {
+     "beat": "point",
+     "do": "Point at how the heart works.",
+     "say": "Which book?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for the child to answer."
+    },
+    {
+     "beat": "child_draws",
+     "do": "The child matches the others."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "ENGL.G5.READIN.T1_EXTENSIVE_READING.REFERENCE_MATERIALS.M_REF_WRONG_SOURCE",
+     "listen_for": [
+      "an atlas"
+     ],
+     "ask": "What does that book contain?",
+     "repair": "Match it."
+    },
+    {
+     "code": "ENGL.G5.READIN.T1_EXTENSIVE_READING.REFERENCE_MATERIALS.M_REF_ALPHA_FIRST_LETTER",
+     "listen_for": [
+      "bag, bat, back, ball"
+     ],
+     "ask": "Same first letter?",
+     "repair": "Look at the next."
+    },
+    {
+     "code": "ENGL.G5.READIN.T1_EXTENSIVE_READING.REFERENCE_MATERIALS.M_REF_GUIDE_WORDS",
+     "listen_for": [
+      "No"
+     ],
+     "ask": "Between the guide words?",
+     "repair": "Check."
+    },
+    {
+     "code": "ENGL.G5.READIN.T1_EXTENSIVE_READING.REFERENCE_MATERIALS.M5_REF_SUBJECT_ENCYCLOPAEDIA",
+     "listen_for": [
+      "a dictionary"
+     ],
+     "ask": "Is it a meaning or a subject fact?",
+     "repair": "Subject encyclopaedia."
+    }
+   ],
+   "checks": [
+    {
+     "question": "A map of Africa?",
+     "answer": "an atlas",
+     "shows": "atlas"
+    },
+    {
+     "question": "How plants make food?",
+     "answer": "a science encyclopaedia",
+     "shows": "subject encyclopaedia"
+    }
+   ]
+  }
+ ],
+ "also_taught_by": [
+  "ENGL.G5.WRITIN.T13_SPELLING.DOUBLE_LETTERS"
+ ]
+}

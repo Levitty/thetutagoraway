@@ -1,0 +1,199 @@
+{
+ "sub_strand": "ENGL.G7.GRAMMA.T2_WORD_CLASSES_NOUNS",
+ "title": "Word Classes: Nouns (Theme 2: Science and health education)",
+ "status": "draft: written 18 Nov 2026 offline for Grade 7 English; not yet checked by a Kenyan English teacher; not loaded by the live tutor",
+ "notes": "",
+ "skills": [
+  {
+   "skill": "ENGL.G7.GRAMMA.T2_WORD_CLASSES_NOUNS.COUNT_NONCOUNT",
+   "assessed_by": "questions",
+   "key_step": "The child asks \"can I count it?\" and chooses many, much, few, little, a or some.",
+   "floor": {
+    "prerequisite": "Uses phrasal quantifiers.",
+    "question": "a number of ___",
+    "answer": "a countable noun"
+   },
+   "steps": [
+    "Count: many, few, a.",
+    "Not count: much, little, some.",
+    "No plural for non-count."
+   ],
+   "contexts": [
+    "health and science"
+   ],
+   "board": [
+    {
+     "beat": "write",
+     "do": "Write: How ___ advice? How ___ chairs?"
+    },
+    {
+     "beat": "point",
+     "do": "Point at advice.",
+     "say": "Count?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for the child to answer."
+    },
+    {
+     "beat": "child_draws",
+     "do": "The child fills both."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "ENGL.G7.GRAMMA.T2_WORD_CLASSES_NOUNS.COUNT_NONCOUNT.M7_CN_MUCH_MANY",
+     "listen_for": [
+      "much"
+     ],
+     "ask": "Count?",
+     "repair": "Many."
+    },
+    {
+     "code": "ENGL.G7.GRAMMA.T2_WORD_CLASSES_NOUNS.COUNT_NONCOUNT.M7_CN_PLURAL_NONCOUNT",
+     "listen_for": [
+      "advices"
+     ],
+     "ask": "Advices?",
+     "repair": "Advice."
+    },
+    {
+     "code": "ENGL.G7.GRAMMA.T2_WORD_CLASSES_NOUNS.COUNT_NONCOUNT.M7_CN_FEW_LITTLE",
+     "listen_for": [
+      "few"
+     ],
+     "ask": "Count?",
+     "repair": "Little for non-count."
+    },
+    {
+     "code": "ENGL.G7.GRAMMA.T2_WORD_CLASSES_NOUNS.COUNT_NONCOUNT.M7_CN_A_NONCOUNT",
+     "listen_for": [
+      "a rice"
+     ],
+     "ask": "A rice?",
+     "repair": "Some rice."
+    },
+    {
+     "code": "ENGL.G7.GRAMMA.T2_WORD_CLASSES_NOUNS.COUNT_NONCOUNT.M7_CN_COUNT_KIND",
+     "listen_for": [
+      "chair"
+     ],
+     "ask": "Can you count it?",
+     "repair": "Water no."
+    }
+   ],
+   "checks": [
+    {
+     "question": "___ advice (a/some)",
+     "answer": "some",
+     "shows": "non-count"
+    },
+    {
+     "question": "How ___ pupils?",
+     "answer": "many",
+     "shows": "count"
+    }
+   ]
+  },
+  {
+   "skill": "ENGL.G7.GRAMMA.T2_WORD_CLASSES_NOUNS.PLURALS",
+   "assessed_by": "questions",
+   "key_step": "The child applies the plural rule by the ending and knows the irregular and same-form nouns.",
+   "floor": {
+    "prerequisite": "Uses Grade 5 plurals.",
+    "question": "baby",
+    "answer": "babies"
+   },
+   "steps": [
+    "-s, -es.",
+    "-y to -ies.",
+    "-f to -ves.",
+    "Irregular and same."
+   ],
+   "contexts": [
+    "health facts"
+   ],
+   "board": [
+    {
+     "beat": "write",
+     "do": "Write: knife, dish, child."
+    },
+    {
+     "beat": "point",
+     "do": "Point at knife.",
+     "say": "Plural?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for the child to answer."
+    },
+    {
+     "beat": "child_draws",
+     "do": "The child writes the others."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "ENGL.G7.GRAMMA.T2_WORD_CLASSES_NOUNS.PLURALS.M7_PL_ADD_S_IRREGULAR",
+     "listen_for": [
+      "childs"
+     ],
+     "ask": "Regular?",
+     "repair": "Children."
+    },
+    {
+     "code": "ENGL.G7.GRAMMA.T2_WORD_CLASSES_NOUNS.PLURALS.M7_PL_Y_IES",
+     "listen_for": [
+      "babys"
+     ],
+     "ask": "Consonant + y?",
+     "repair": "Ies."
+    },
+    {
+     "code": "ENGL.G7.GRAMMA.T2_WORD_CLASSES_NOUNS.PLURALS.M7_PL_F_VES",
+     "listen_for": [
+      "knifes"
+     ],
+     "ask": "Ends in f?",
+     "repair": "Ves."
+    },
+    {
+     "code": "ENGL.G7.GRAMMA.T2_WORD_CLASSES_NOUNS.PLURALS.M7_PL_SAME_FORM",
+     "listen_for": [
+      "sheeps"
+     ],
+     "ask": "Does it change?",
+     "repair": "Sheep."
+    },
+    {
+     "code": "ENGL.G7.GRAMMA.T2_WORD_CLASSES_NOUNS.PLURALS.M7_PL_ES",
+     "listen_for": [
+      "dishs"
+     ],
+     "ask": "Ends in sh?",
+     "repair": "Es."
+    },
+    {
+     "code": "ENGL.G7.GRAMMA.T2_WORD_CLASSES_NOUNS.PLURALS.M7_PL_SINGULAR_KIND",
+     "listen_for": [
+      "child"
+     ],
+     "ask": "More than one?",
+     "repair": "Children."
+    }
+   ],
+   "checks": [
+    {
+     "question": "sheep (many)",
+     "answer": "sheep",
+     "shows": "same"
+    },
+    {
+     "question": "dish",
+     "answer": "dishes",
+     "shows": "es"
+    }
+   ]
+  }
+ ]
+}

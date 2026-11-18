@@ -1,0 +1,91 @@
+{
+ "sub_strand": "ENGL.G9.WRITIN.T2_MECHANICS_OF_WRITING",
+ "title": "Mechanics of Writing: Punctuation (Theme 2: Science fiction)",
+ "status": "draft: written 18 Nov 2026 offline for Grade 9 English; not yet checked by a Kenyan English teacher; not loaded by the live tutor",
+ "notes": "",
+ "skills": [
+  {
+   "skill": "ENGL.G9.WRITIN.T2_MECHANICS_OF_WRITING.QUOTES_BRACKETS",
+   "assessed_by": "questions",
+   "key_step": "The child uses quotation marks for exact words and brackets for extra information.",
+   "floor": {
+    "prerequisite": "Punctuates direct speech.",
+    "question": "Punctuate: Mum said come",
+    "answer": "Mum said, \"Come.\""
+   },
+   "steps": [
+    "Exact words: quotation marks.",
+    "Extra information: brackets.",
+    "End mark inside the quotation."
+   ],
+   "contexts": [
+    "science fiction stories"
+   ],
+   "board": [
+    {
+     "beat": "write",
+     "do": "Write: Juma said (I am ready)."
+    },
+    {
+     "beat": "point",
+     "do": "Point at the brackets.",
+     "say": "Spoken words?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for the child to answer."
+    },
+    {
+     "beat": "child_draws",
+     "do": "The child fixes it."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "ENGL.G9.WRITIN.T2_MECHANICS_OF_WRITING.QUOTES_BRACKETS.M_EN9_QB_BRACKET",
+     "listen_for": [
+      "Extra explanations"
+     ],
+     "ask": "Exact words?",
+     "repair": "Quotation marks."
+    },
+    {
+     "code": "ENGL.G9.WRITIN.T2_MECHANICS_OF_WRITING.QUOTES_BRACKETS.M_EN9_QB_EXTRA",
+     "listen_for": [
+      "The exact words spoken"
+     ],
+     "ask": "Extra?",
+     "repair": "Brackets."
+    },
+    {
+     "code": "ENGL.G9.WRITIN.T2_MECHANICS_OF_WRITING.QUOTES_BRACKETS.M_EN9_QB_END",
+     "listen_for": [
+      "She said, \"I am ready\"."
+     ],
+     "ask": "Inside or outside?",
+     "repair": "Inside."
+    },
+    {
+     "code": "ENGL.G9.WRITIN.T2_MECHANICS_OF_WRITING.QUOTES_BRACKETS.M9_QB_BRACKETS_SPEECH",
+     "listen_for": [
+      "Juma said (I am ready)."
+     ],
+     "ask": "Spoken?",
+     "repair": "Quotation marks."
+    }
+   ],
+   "checks": [
+    {
+     "question": "Extra information goes in ...",
+     "answer": "brackets",
+     "shows": "brackets"
+    },
+    {
+     "question": "Exact words go in ...",
+     "answer": "quotation marks",
+     "shows": "quotes"
+    }
+   ]
+  }
+ ]
+}

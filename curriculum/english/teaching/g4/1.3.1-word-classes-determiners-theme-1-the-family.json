@@ -1,0 +1,117 @@
+{
+ "sub_strand": "ENGL.G4.LANGUA.T1_WORD_CLASSES_DETERMI",
+ "title": "Word Classes: Determiners (Theme 1: The family)",
+ "status": "draft: written 18 Nov 2026 offline for Grade 4 English; not yet checked by a Kenyan English teacher; not loaded by the live tutor",
+ "notes": "",
+ "skills": [
+  {
+   "skill": "ENGL.G4.LANGUA.T1_WORD_CLASSES_DETERMI.ARTICLES",
+   "assessed_by": "questions",
+   "key_step": "The child says the next word aloud and listens for a vowel sound before choosing a or an.",
+   "floor": {
+    "prerequisite": "Hears the first sound of a word.",
+    "question": "First sound of \"egg\"?",
+    "answer": "e"
+   },
+   "steps": [
+    "Say the next word.",
+    "Vowel sound: an.",
+    "Consonant sound: a.",
+    "Known or only one: the."
+   ],
+   "contexts": [
+    "shopping at a kiosk",
+    "animals at the park"
+   ],
+   "board": [
+    {
+     "beat": "write",
+     "do": "Write: ___ egg, ___ banana, ___ hour."
+    },
+    {
+     "beat": "point",
+     "do": "Point at hour.",
+     "say": "Say it: does it start with a vowel sound?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for an."
+    },
+    {
+     "beat": "child_draws",
+     "do": "The child fills the other two."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "ENGL.G4.LANGUA.T1_WORD_CLASSES_DETERMI.ARTICLES.M_ART_A_BEFORE_VOWEL",
+     "listen_for": [
+      "a"
+     ],
+     "ask": "What sound starts it?",
+     "repair": "Vowel sound: an."
+    },
+    {
+     "code": "ENGL.G4.LANGUA.T1_WORD_CLASSES_DETERMI.ARTICLES.M_ART_AN_BEFORE_CONSONANT",
+     "listen_for": [
+      "an"
+     ],
+     "ask": "Is it a vowel sound?",
+     "repair": "No: a."
+    },
+    {
+     "code": "ENGL.G4.LANGUA.T1_WORD_CLASSES_DETERMI.ARTICLES.M_ART_SOUND_NOT_LETTER",
+     "listen_for": [
+      "a"
+     ],
+     "ask": "Say it aloud. What do you hear?",
+     "repair": "Hour starts with a vowel sound."
+    },
+    {
+     "code": "ENGL.G4.LANGUA.T1_WORD_CLASSES_DETERMI.ARTICLES.M_ART_THE_FIRST_MENTION",
+     "listen_for": [
+      "the"
+     ],
+     "ask": "Have we met it before?",
+     "repair": "First time: a or an."
+    },
+    {
+     "code": "ENGL.G4.LANGUA.T1_WORD_CLASSES_DETERMI.ARTICLES.M_ART_A_FOR_KNOWN",
+     "listen_for": [
+      "a"
+     ],
+     "ask": "Is there only one?",
+     "repair": "The sun."
+    },
+    {
+     "code": "ENGL.G4.LANGUA.T1_WORD_CLASSES_DETERMI.ARTICLES.M_ART_OMITTED",
+     "listen_for": [
+      "no article"
+     ],
+     "ask": "Is it one thing?",
+     "repair": "Add a."
+    },
+    {
+     "code": "ENGL.G4.LANGUA.T1_WORD_CLASSES_DETERMI.ARTICLES.M_ART_THE_GENERAL",
+     "listen_for": [
+      "The"
+     ],
+     "ask": "All lions, or these lions?",
+     "repair": "All: no article."
+    }
+   ],
+   "checks": [
+    {
+     "question": "___ umbrella",
+     "answer": "an",
+     "shows": "vowel sound"
+    },
+    {
+     "question": "I saw a dog. ___ dog was black.",
+     "answer": "The",
+     "shows": "second mention"
+    }
+   ]
+  }
+ ]
+}

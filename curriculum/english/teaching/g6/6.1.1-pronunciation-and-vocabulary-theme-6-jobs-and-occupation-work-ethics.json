@@ -1,0 +1,260 @@
+{
+ "sub_strand": "ENGL.G6.LISTEN.T6_PRONUNCIATION_AND_VO",
+ "title": "Pronunciation and Vocabulary (Theme 6: Jobs and occupation - work ethics)",
+ "status": "draft: written 18 Nov 2026 offline for Grade 6 English; not yet checked by a Kenyan English teacher; not loaded by the live tutor",
+ "notes": "",
+ "skills": [
+  {
+   "skill": "ENGL.G6.LISTEN.T6_PRONUNCIATION_AND_VO.SOUNDS",
+   "assessed_by": "questions",
+   "key_step": "The child says each word aloud and sorts by the sound heard, not the spelling.",
+   "floor": {
+    "prerequisite": "Identifies target sounds.",
+    "question": "Which has /h/: hour or house?",
+    "answer": "house"
+   },
+   "steps": [
+    "Say the sound.",
+    "Say each word.",
+    "Sort by sound."
+   ],
+   "contexts": [
+    "tourism, work, diseases"
+   ],
+   "board": [
+    {
+     "beat": "write",
+     "do": "Write: bear, beer, poor, more."
+    },
+    {
+     "beat": "point",
+     "do": "Point at poor.",
+     "say": "Say it. Like tour?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for the child to answer."
+    },
+    {
+     "beat": "child_draws",
+     "do": "The child sorts the words."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "ENGL.G6.LISTEN.T6_PRONUNCIATION_AND_VO.SOUNDS.M_SND_SPELL_NOT_SOUND",
+     "listen_for": [
+      "bear"
+     ],
+     "ask": "Did you say it?",
+     "repair": "Sound, not spelling."
+    },
+    {
+     "code": "ENGL.G6.LISTEN.T6_PRONUNCIATION_AND_VO.SOUNDS.M_SND_F_V",
+     "listen_for": [
+      "fan"
+     ],
+     "ask": "Buzz?",
+     "repair": "V buzzes."
+    },
+    {
+     "code": "ENGL.G6.LISTEN.T6_PRONUNCIATION_AND_VO.SOUNDS.M_SND_SILENT_H",
+     "listen_for": [
+      "house"
+     ],
+     "ask": "Do you hear h?",
+     "repair": "Hour is silent."
+    },
+    {
+     "code": "ENGL.G6.LISTEN.T6_PRONUNCIATION_AND_VO.SOUNDS.M_SND_TOUR_MORE",
+     "listen_for": [
+      "more"
+     ],
+     "ask": "Does it slide?",
+     "repair": "Tour slides."
+    }
+   ],
+   "checks": [
+    {
+     "question": "Which has /əʊ/: phone or pot?",
+     "answer": "phone",
+     "shows": "sound"
+    },
+    {
+     "question": "Which has /f/: phone or pin?",
+     "answer": "phone",
+     "shows": "ph"
+    }
+   ]
+  },
+  {
+   "skill": "ENGL.G6.LISTEN.T6_PRONUNCIATION_AND_VO.WORK_ETHICS_WORDS",
+   "assessed_by": "questions",
+   "key_step": "The child explains each work word by what a worker does, then uses it in a sentence.",
+   "floor": {
+    "prerequisite": "Uses theme words.",
+    "question": "What is an occupation?",
+    "answer": "a job"
+   },
+   "steps": [
+    "Say the word.",
+    "Give its meaning.",
+    "Use it about a worker."
+   ],
+   "contexts": [
+    "jobs in a village",
+    "a hard-working mechanic"
+   ],
+   "board": [
+    {
+     "beat": "write",
+     "do": "Write: punctual, diligent, integrity."
+    },
+    {
+     "beat": "point",
+     "do": "Point at integrity.",
+     "say": "Which worker shows it?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for the child to answer."
+    },
+    {
+     "beat": "child_draws",
+     "do": "The child writes a sentence with punctual."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "ENGL.G6.LISTEN.T6_PRONUNCIATION_AND_VO.WORK_ETHICS_WORDS.M6_WE_PUNCTUAL_REGULAR",
+     "listen_for": [
+      "regular"
+     ],
+     "ask": "On time or every day?",
+     "repair": "On time: punctual."
+    },
+    {
+     "code": "ENGL.G6.LISTEN.T6_PRONUNCIATION_AND_VO.WORK_ETHICS_WORDS.M6_WE_SALARY_WAGE",
+     "listen_for": [
+      "wage"
+     ],
+     "ask": "Monthly?",
+     "repair": "Salary."
+    },
+    {
+     "code": "ENGL.G6.LISTEN.T6_PRONUNCIATION_AND_VO.WORK_ETHICS_WORDS.M6_WE_INTEGRITY_INTELLIGENT",
+     "listen_for": [
+      "intelligence"
+     ],
+     "ask": "Clever or honest?",
+     "repair": "Honest."
+    },
+    {
+     "code": "ENGL.G6.LISTEN.T6_PRONUNCIATION_AND_VO.WORK_ETHICS_WORDS.M6_WE_DILIGENT_DELIGHT",
+     "listen_for": [
+      "is always happy"
+     ],
+     "ask": "Happy or hard-working?",
+     "repair": "Hard-working."
+    }
+   ],
+   "checks": [
+    {
+     "question": "A worker who is never late is ...",
+     "answer": "punctual",
+     "shows": "word"
+    },
+    {
+     "question": "Monthly pay is a ...",
+     "answer": "salary",
+     "shows": "word"
+    }
+   ]
+  },
+  {
+   "skill": "ENGL.G6.LISTEN.T6_PRONUNCIATION_AND_VO.INTONATION",
+   "assessed_by": "voice",
+   "key_step": "The child names the kind of sentence first, then chooses its tune.",
+   "floor": {
+    "prerequisite": "Uses Grade 5 tunes.",
+    "question": "Up or down: Where are you?",
+    "answer": "down"
+   },
+   "steps": [
+    "Statement: falls.",
+    "WH question: falls.",
+    "Yes or no: rises.",
+    "Exclamation: high, strong start."
+   ],
+   "contexts": [
+    "work ethics dialogues",
+    "a job interview"
+   ],
+   "board": [
+    {
+     "beat": "write",
+     "do": "Draw arrows for four kinds of sentence."
+    },
+    {
+     "beat": "point",
+     "do": "Point at the exclamation.",
+     "say": "Say: What a hard worker!"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for the child to answer."
+    },
+    {
+     "beat": "child_draws",
+     "do": "The child sorts three more sentences."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "ENGL.G6.LISTEN.T6_PRONUNCIATION_AND_VO.INTONATION.M6_IN_EXCLAM_FLAT",
+     "listen_for": [
+      "flat, like a statement"
+     ],
+     "ask": "Is there feeling?",
+     "repair": "Start high."
+    },
+    {
+     "code": "ENGL.G6.LISTEN.T6_PRONUNCIATION_AND_VO.INTONATION.M6_IN_WH_RISE",
+     "listen_for": [
+      "rising at work"
+     ],
+     "ask": "WH question?",
+     "repair": "Falls."
+    },
+    {
+     "code": "ENGL.G6.LISTEN.T6_PRONUNCIATION_AND_VO.INTONATION.M6_IN_YESNO_FLAT",
+     "listen_for": [
+      "flat"
+     ],
+     "ask": "Yes or no answer?",
+     "repair": "Rise."
+    },
+    {
+     "code": "ENGL.G6.LISTEN.T6_PRONUNCIATION_AND_VO.INTONATION.M6_IN_STATEMENT_UP",
+     "listen_for": [
+      "rising at pilot"
+     ],
+     "ask": "Are you asking?",
+     "repair": "Statement falls."
+    }
+   ],
+   "checks": [
+    {
+     "question": "Is she a doctor? Up or down?",
+     "answer": "up",
+     "shows": "yes or no"
+    },
+    {
+     "question": "What a hard worker! How?",
+     "answer": "high start, falling",
+     "shows": "exclamation"
+    }
+   ]
+  }
+ ]
+}

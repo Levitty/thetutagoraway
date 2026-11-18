@@ -1,0 +1,91 @@
+{
+ "sub_strand": "ENGL.G9.GRAMMA.T12_PHRASAL_VERBS",
+ "title": "Phrasal Verbs (Theme 12: Personal grooming)",
+ "status": "draft: written 18 Nov 2026 offline for Grade 9 English; not yet checked by a Kenyan English teacher; not loaded by the live tutor",
+ "notes": "",
+ "skills": [
+  {
+   "skill": "ENGL.G9.GRAMMA.T12_PHRASAL_VERBS.PHRASAL_VERBS",
+   "assessed_by": "questions",
+   "key_step": "The child learns break, hang, run and turn phrasal verbs with their meanings.",
+   "floor": {
+    "prerequisite": "Uses phrasal verbs.",
+    "question": "look after means?",
+    "answer": "take care of"
+   },
+   "steps": [
+    "Verb + particle.",
+    "Meaning.",
+    "Use."
+   ],
+   "contexts": [
+    "grooming"
+   ],
+   "board": [
+    {
+     "beat": "write",
+     "do": "Write: hang on / hang up."
+    },
+    {
+     "beat": "point",
+     "do": "Point at hang on.",
+     "say": "Meaning?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for the child to answer."
+    },
+    {
+     "beat": "child_draws",
+     "do": "The child uses turn up."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "ENGL.G9.GRAMMA.T12_PHRASAL_VERBS.PHRASAL_VERBS.M_EN9_PV_BREAKDOWN",
+     "listen_for": [
+      "was smashed"
+     ],
+     "ask": "Smashed or stopped?",
+     "repair": "Stopped."
+    },
+    {
+     "code": "ENGL.G9.GRAMMA.T12_PHRASAL_VERBS.PHRASAL_VERBS.M_EN9_PV_RUNOUT",
+     "listen_for": [
+      "ran away from sugar"
+     ],
+     "ask": "No more?",
+     "repair": "Ran out."
+    },
+    {
+     "code": "ENGL.G9.GRAMMA.T12_PHRASAL_VERBS.PHRASAL_VERBS.M_EN9_PV_TURNUP",
+     "listen_for": [
+      "turned around"
+     ],
+     "ask": "Arrived?",
+     "repair": "Turned up."
+    },
+    {
+     "code": "ENGL.G9.GRAMMA.T12_PHRASAL_VERBS.PHRASAL_VERBS.M9_PV_HANG_UP_ON",
+     "listen_for": [
+      "hang up"
+     ],
+     "ask": "Wait?",
+     "repair": "Hang on."
+    }
+   ],
+   "checks": [
+    {
+     "question": "The car ___ (stopped working).",
+     "answer": "broke down",
+     "shows": "meaning"
+    },
+    {
+     "question": "___ while I find her.",
+     "answer": "Hang on",
+     "shows": "particle"
+    }
+   ]
+  }
+ ]
+}

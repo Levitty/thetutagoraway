@@ -1,0 +1,262 @@
+{
+ "sub_strand": "ENGL.G6.LISTEN.T1_PRONUNCIATION_AND_LI",
+ "title": "Pronunciation and Listening (Theme 1: Child labour)",
+ "status": "draft: written 18 Nov 2026 offline for Grade 6 English; not yet checked by a Kenyan English teacher; not loaded by the live tutor",
+ "notes": "",
+ "skills": [
+  {
+   "skill": "ENGL.G6.LISTEN.T1_PRONUNCIATION_AND_LI.IDIOMS_FIXED",
+   "assessed_by": "questions",
+   "key_step": "The child treats an idiom as one fixed piece whose meaning is not the sum of its words.",
+   "floor": {
+    "prerequisite": "Knows proverbs.",
+    "question": "What does a proverb teach?",
+    "answer": "a lesson"
+   },
+   "steps": [
+    "Say the idiom.",
+    "Say what it really means.",
+    "Use it in the right situation."
+   ],
+   "contexts": [
+    "a dog-tired worker",
+    "telephone talk"
+   ],
+   "board": [
+    {
+     "beat": "write",
+     "do": "Write: dog tired."
+    },
+    {
+     "beat": "point",
+     "do": "Point at dog.",
+     "say": "Is it about a dog?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for the child to answer."
+    },
+    {
+     "beat": "child_draws",
+     "do": "The child uses it in a sentence."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "ENGL.G6.LISTEN.T1_PRONUNCIATION_AND_LI.IDIOMS_FIXED.M_IDM_LITERAL",
+     "listen_for": [
+      "tired like a dog"
+     ],
+     "ask": "Is it about the words?",
+     "repair": "The meaning is different."
+    },
+    {
+     "code": "ENGL.G6.LISTEN.T1_PRONUNCIATION_AND_LI.IDIOMS_FIXED.M_IDM_WORD_CHANGED",
+     "listen_for": [
+      "cat"
+     ],
+     "ask": "Can you change one word?",
+     "repair": "No: it is fixed."
+    },
+    {
+     "code": "ENGL.G6.LISTEN.T1_PRONUNCIATION_AND_LI.IDIOMS_FIXED.M_IDM_OPPOSITE",
+     "listen_for": [
+      "very difficult"
+     ],
+     "ask": "Easy or hard?",
+     "repair": "Check the meaning."
+    },
+    {
+     "code": "ENGL.G6.LISTEN.T1_PRONUNCIATION_AND_LI.IDIOMS_FIXED.M_IDM_WRONG_SITUATION",
+     "listen_for": [
+      "when you are very happy"
+     ],
+     "ask": "When do people say it?",
+     "repair": "Match the situation."
+    }
+   ],
+   "checks": [
+    {
+     "question": "\"It is raining cats and dogs\" means ...",
+     "answer": "it is raining heavily",
+     "shows": "meaning"
+    },
+    {
+     "question": "Can you say \"work like a cat\"?",
+     "answer": "No",
+     "shows": "fixed"
+    }
+   ]
+  },
+  {
+   "skill": "ENGL.G6.LISTEN.T1_PRONUNCIATION_AND_LI.CHILD_LABOUR_WORDS",
+   "assessed_by": "questions",
+   "key_step": "The child explains each word by who does what and whether it harms a child.",
+   "floor": {
+    "prerequisite": "Uses child rights words.",
+    "question": "What is a right?",
+    "answer": "what every child needs"
+   },
+   "steps": [
+    "Say the word.",
+    "Who does it?",
+    "Is it harmful?"
+   ],
+   "contexts": [
+    "a child selling in the market during school hours"
+   ],
+   "board": [
+    {
+     "beat": "write",
+     "do": "Write: employer, employ, exploit."
+    },
+    {
+     "beat": "point",
+     "do": "Point at exploit.",
+     "say": "Does it help or harm?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for the child to answer."
+    },
+    {
+     "beat": "child_draws",
+     "do": "The child writes a sentence with wages."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "ENGL.G6.LISTEN.T1_PRONUNCIATION_AND_LI.CHILD_LABOUR_WORDS.M_CL_PERSON_ACTION",
+     "listen_for": [
+      "employer"
+     ],
+     "ask": "A person or an action?",
+     "repair": "Employer is the person."
+    },
+    {
+     "code": "ENGL.G6.LISTEN.T1_PRONUNCIATION_AND_LI.CHILD_LABOUR_WORDS.M_CL_EXPLOIT_HELP",
+     "listen_for": [
+      "exploit"
+     ],
+     "ask": "Help or harm?",
+     "repair": "Exploit harms."
+    },
+    {
+     "code": "ENGL.G6.LISTEN.T1_PRONUNCIATION_AND_LI.CHILD_LABOUR_WORDS.M_CL_WAGES_FEES",
+     "listen_for": [
+      "fees"
+     ],
+     "ask": "Paid to you or by you?",
+     "repair": "Wages are paid to you."
+    },
+    {
+     "code": "ENGL.G6.LISTEN.T1_PRONUNCIATION_AND_LI.CHILD_LABOUR_WORDS.M6_CL_CHORE_LABOUR",
+     "listen_for": [
+      "child labour"
+     ],
+     "ask": "Does it harm or stop learning?",
+     "repair": "If not, it is a responsibility."
+    }
+   ],
+   "checks": [
+    {
+     "question": "A person who gives a job is an ...",
+     "answer": "employer",
+     "shows": "word"
+    },
+    {
+     "question": "Money paid for work is ...",
+     "answer": "wages",
+     "shows": "word"
+    }
+   ]
+  },
+  {
+   "skill": "ENGL.G6.LISTEN.T1_PRONUNCIATION_AND_LI.MAIN_IDEA",
+   "assessed_by": "questions",
+   "key_step": "The child asks what the whole text is about, then finds the detail the question asks for.",
+   "floor": {
+    "prerequisite": "Finds a paragraph's main idea.",
+    "question": "Main idea of this paragraph?",
+    "answer": "a fitting idea"
+   },
+   "steps": [
+    "Read or listen to all of it.",
+    "Say what it is all about.",
+    "Find the asked detail."
+   ],
+   "contexts": [
+    "a talk on child labour",
+    "a radio report"
+   ],
+   "board": [
+    {
+     "beat": "write",
+     "do": "Write: Main idea / Detail asked."
+    },
+    {
+     "beat": "point",
+     "do": "Point at Detail asked.",
+     "say": "What time did the bus leave?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for the child to answer."
+    },
+    {
+     "beat": "child_draws",
+     "do": "The child states the main idea."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "ENGL.G6.LISTEN.T1_PRONUNCIATION_AND_LI.MAIN_IDEA.M6_MAIN_DETAIL",
+     "listen_for": [
+      "a detail"
+     ],
+     "ask": "Is it all about that?",
+     "repair": "The big idea."
+    },
+    {
+     "code": "ENGL.G6.LISTEN.T1_PRONUNCIATION_AND_LI.MAIN_IDEA.M6_MAIN_TOO_BROAD",
+     "listen_for": [
+      "a very general statement"
+     ],
+     "ask": "Only this text?",
+     "repair": "Narrow it."
+    },
+    {
+     "code": "ENGL.G6.LISTEN.T1_PRONUNCIATION_AND_LI.MAIN_IDEA.M6_MAIN_NOT_IN_TEXT",
+     "listen_for": [
+      "something not in the text"
+     ],
+     "ask": "Is it in the text?",
+     "repair": "Use the text."
+    },
+    {
+     "code": "ENGL.G6.LISTEN.T1_PRONUNCIATION_AND_LI.MAIN_IDEA.M_MAIN_DETAIL_FOR_ASKED",
+     "listen_for": [
+      "it left late"
+     ],
+     "ask": "What was asked?",
+     "repair": "Give that detail."
+    }
+   ],
+   "checks": [
+    {
+     "question": "A text on why children need rest. Main idea?",
+     "answer": "children need rest",
+     "shows": "main idea"
+    },
+    {
+     "question": "What time did it leave? (half past six)",
+     "answer": "half past six",
+     "shows": "detail"
+    }
+   ]
+  }
+ ],
+ "also_taught_by": [
+  "ENGL.G6.LISTEN.T6_PRONUNCIATION_AND_VO.SOUNDS"
+ ]
+}

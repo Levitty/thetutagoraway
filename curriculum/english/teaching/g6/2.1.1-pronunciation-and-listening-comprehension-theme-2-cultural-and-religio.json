@@ -1,0 +1,179 @@
+{
+ "sub_strand": "ENGL.G6.LISTEN.T2_PRONUNCIATION_AND_LI",
+ "title": "Pronunciation and Listening Comprehension (Theme 2: Cultural and religious celebrations)",
+ "status": "draft: written 18 Nov 2026 offline for Grade 6 English; not yet checked by a Kenyan English teacher; not loaded by the live tutor",
+ "notes": "",
+ "skills": [
+  {
+   "skill": "ENGL.G6.LISTEN.T2_PRONUNCIATION_AND_LI.PROVERBS_USE",
+   "assessed_by": "questions",
+   "key_step": "The child says the lesson of a proverb and the situation it fits.",
+   "floor": {
+    "prerequisite": "Knows proverbs.",
+    "question": "Haste makes ___",
+    "answer": "waste"
+   },
+   "steps": [
+    "Say the proverb.",
+    "Say the lesson.",
+    "Give a situation."
+   ],
+   "contexts": [
+    "cultural celebrations",
+    "work ethics"
+   ],
+   "board": [
+    {
+     "beat": "write",
+     "do": "Write: A stitch in time saves nine."
+    },
+    {
+     "beat": "point",
+     "do": "Point at stitch.",
+     "say": "Is it only about sewing?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for the child to answer."
+    },
+    {
+     "beat": "child_draws",
+     "do": "The child gives a situation."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "ENGL.G6.LISTEN.T2_PRONUNCIATION_AND_LI.PROVERBS_USE.M6_PRV_LITERAL",
+     "listen_for": [
+      "Sewing is useful."
+     ],
+     "ask": "Only about sewing?",
+     "repair": "Think about people."
+    },
+    {
+     "code": "ENGL.G6.LISTEN.T2_PRONUNCIATION_AND_LI.PROVERBS_USE.M6_PRV_OPPOSITE",
+     "listen_for": [
+      "Hurry and you will get more done."
+     ],
+     "ask": "Hurry or go carefully?",
+     "repair": "Read again."
+    },
+    {
+     "code": "ENGL.G6.LISTEN.T2_PRONUNCIATION_AND_LI.PROVERBS_USE.M_PRV_MIXED",
+     "listen_for": [
+      "Too many cooks spoil the broth."
+     ],
+     "ask": "Two proverbs mixed?",
+     "repair": "Keep them apart."
+    },
+    {
+     "code": "ENGL.G6.LISTEN.T2_PRONUNCIATION_AND_LI.PROVERBS_USE.M_PRV_WORD",
+     "listen_for": [
+      "door"
+     ],
+     "ask": "The right word?",
+     "repair": "Learn it whole."
+    }
+   ],
+   "checks": [
+    {
+     "question": "Lesson of \"Haste makes waste\"?",
+     "answer": "hurrying leads to mistakes",
+     "shows": "lesson"
+    },
+    {
+     "question": "Finish: Where there is a will, there is a ___",
+     "answer": "way",
+     "shows": "complete"
+    }
+   ]
+  },
+  {
+   "skill": "ENGL.G6.LISTEN.T2_PRONUNCIATION_AND_LI.SIMILE_METAPHOR",
+   "assessed_by": "questions",
+   "key_step": "The child looks for like or as: with it, a simile; without it, a metaphor; and checks the comparison fits.",
+   "floor": {
+    "prerequisite": "Knows similes.",
+    "question": "as strong as an ___",
+    "answer": "ox"
+   },
+   "steps": [
+    "Find like or as.",
+    "Simile or metaphor?",
+    "Check the comparison."
+   ],
+   "contexts": [
+    "a thief in a story",
+    "a fast runner"
+   ],
+   "board": [
+    {
+     "beat": "write",
+     "do": "Write: He ran like the wind. The thief was a hyena."
+    },
+    {
+     "beat": "point",
+     "do": "Point at the second sentence.",
+     "say": "Is there like or as?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for the child to answer."
+    },
+    {
+     "beat": "child_draws",
+     "do": "The child writes a metaphor."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "ENGL.G6.LISTEN.T2_PRONUNCIATION_AND_LI.SIMILE_METAPHOR.M_SIM_METAPHOR_AS_SIMILE",
+     "listen_for": [
+      "He ran like the wind."
+     ],
+     "ask": "Is there like or as?",
+     "repair": "No: metaphor."
+    },
+    {
+     "code": "ENGL.G6.LISTEN.T2_PRONUNCIATION_AND_LI.SIMILE_METAPHOR.M_SIM_AS_LIKE",
+     "listen_for": [
+      "like"
+     ],
+     "ask": "As ... as?",
+     "repair": "As."
+    },
+    {
+     "code": "ENGL.G6.LISTEN.T2_PRONUNCIATION_AND_LI.SIMILE_METAPHOR.M_SIM_WRONG_ANIMAL",
+     "listen_for": [
+      "giraffe"
+     ],
+     "ask": "Is that animal sly?",
+     "repair": "Choose one that is."
+    },
+    {
+     "code": "ENGL.G6.LISTEN.T2_PRONUNCIATION_AND_LI.SIMILE_METAPHOR.M_SIM_PLAIN",
+     "listen_for": [
+      "My dog is big."
+     ],
+     "ask": "Is anything compared?",
+     "repair": "Add a comparison."
+    }
+   ],
+   "checks": [
+    {
+     "question": "\"Her voice was music.\" Simile or metaphor?",
+     "answer": "metaphor",
+     "shows": "metaphor"
+    },
+    {
+     "question": "as sly as a ___",
+     "answer": "fox (or hyena)",
+     "shows": "comparison"
+    }
+   ]
+  }
+ ],
+ "also_taught_by": [
+  "ENGL.G6.LISTEN.T1_PRONUNCIATION_AND_LI.MAIN_IDEA"
+ ]
+}

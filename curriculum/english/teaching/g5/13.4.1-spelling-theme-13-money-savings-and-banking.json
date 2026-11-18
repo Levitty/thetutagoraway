@@ -1,0 +1,95 @@
+{
+ "sub_strand": "ENGL.G5.WRITIN.T13_SPELLING",
+ "title": "Spelling (Theme 13: Money- savings and banking)",
+ "status": "draft: written 18 Nov 2026 offline for Grade 5 English; not yet checked by a Kenyan English teacher; not loaded by the live tutor",
+ "notes": "",
+ "skills": [
+  {
+   "skill": "ENGL.G5.WRITIN.T13_SPELLING.DOUBLE_LETTERS",
+   "assessed_by": "questions",
+   "key_step": "The child says the word, hears the short vowel and doubles the consonant, or doubles the vowel where the sound is long.",
+   "floor": {
+    "prerequisite": "Spells double consonants.",
+    "question": "Spell: coffee",
+    "answer": "coffee"
+   },
+   "steps": [
+    "Say it.",
+    "Short vowel before a consonant?",
+    "Long oo or ee?",
+    "Look, cover, write, check."
+   ],
+   "contexts": [
+    "money words: shilling, account"
+   ],
+   "board": [
+    {
+     "beat": "write",
+     "do": "Write: su_er."
+    },
+    {
+     "beat": "point",
+     "do": "Point at the gap.",
+     "say": "One m or two?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for the child to answer."
+    },
+    {
+     "beat": "child_draws",
+     "do": "The child spells address and food."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "ENGL.G5.WRITIN.T13_SPELLING.DOUBLE_LETTERS.M_SPELL_SINGLE_CONSONANT",
+     "listen_for": [
+      "sumer"
+     ],
+     "ask": "Short vowel?",
+     "repair": "Double it."
+    },
+    {
+     "code": "ENGL.G5.WRITIN.T13_SPELLING.DOUBLE_LETTERS.M_SPELL_EXTRA_DOUBLE",
+     "listen_for": [
+      "adress"
+     ],
+     "ask": "How many d's and s's?",
+     "repair": "Address."
+    },
+    {
+     "code": "ENGL.G5.WRITIN.T13_SPELLING.DOUBLE_LETTERS.M_SPELL_SINGLE_VOWEL",
+     "listen_for": [
+      "fod"
+     ],
+     "ask": "Long oo?",
+     "repair": "Food."
+    },
+    {
+     "code": "ENGL.G5.WRITIN.T13_SPELLING.DOUBLE_LETTERS.M_SPELL_PHONETIC",
+     "listen_for": [
+      "cofee"
+     ],
+     "ask": "Is it spelt as it sounds?",
+     "repair": "Coffee."
+    }
+   ],
+   "checks": [
+    {
+     "question": "Spell: account",
+     "answer": "account",
+     "shows": "double"
+    },
+    {
+     "question": "Spell: food",
+     "answer": "food",
+     "shows": "double vowel"
+    }
+   ]
+  }
+ ],
+ "also_taught_by": [
+  "ENGL.G5.WRITIN.T11_SPELLING.HOMOPHONES"
+ ]
+}

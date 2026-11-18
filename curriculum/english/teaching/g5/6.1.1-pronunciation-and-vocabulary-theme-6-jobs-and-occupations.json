@@ -1,0 +1,191 @@
+{
+ "sub_strand": "ENGL.G5.LISTEN.T6_PRONUNCIATION_AND_VO",
+ "title": "Pronunciation and Vocabulary (Theme 6: Jobs and occupations)",
+ "status": "draft: written 18 Nov 2026 offline for Grade 5 English; not yet checked by a Kenyan English teacher; not loaded by the live tutor",
+ "notes": "",
+ "skills": [
+  {
+   "skill": "ENGL.G5.LISTEN.T6_PRONUNCIATION_AND_VO.INTONATION",
+   "assessed_by": "voice",
+   "key_step": "The child decides whether it is a statement, a WH question or a yes or no question, then chooses the tune.",
+   "floor": {
+    "prerequisite": "Uses WH questions.",
+    "question": "Ask what job someone does.",
+    "answer": "What is your job?"
+   },
+   "steps": [
+    "Statement: falls.",
+    "WH question: falls.",
+    "Yes or no question: rises.",
+    "Stress the key word."
+   ],
+   "contexts": [
+    "asking about jobs",
+    "a market dialogue",
+    "an interview"
+   ],
+   "board": [
+    {
+     "beat": "write",
+     "do": "Draw arrows: down, down, up."
+    },
+    {
+     "beat": "point",
+     "do": "Point at the up arrow.",
+     "say": "Which kind of sentence goes up?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for the child to answer."
+    },
+    {
+     "beat": "child_draws",
+     "do": "The child sorts four sentences."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "ENGL.G5.LISTEN.T6_PRONUNCIATION_AND_VO.INTONATION.M5_IN_WH_RISE",
+     "listen_for": [
+      "voice goes up at job"
+     ],
+     "ask": "Is it a WH question?",
+     "repair": "It falls."
+    },
+    {
+     "code": "ENGL.G5.LISTEN.T6_PRONUNCIATION_AND_VO.INTONATION.M5_IN_YESNO_FLAT",
+     "listen_for": [
+      "flat, like a statement"
+     ],
+     "ask": "Can the answer be yes or no?",
+     "repair": "Rise."
+    },
+    {
+     "code": "ENGL.G5.LISTEN.T6_PRONUNCIATION_AND_VO.INTONATION.M5_IN_SORT_BY_MARK",
+     "listen_for": [
+      "rising"
+     ],
+     "ask": "Is anyone asked?",
+     "repair": "Statement: falls."
+    },
+    {
+     "code": "ENGL.G5.LISTEN.T6_PRONUNCIATION_AND_VO.INTONATION.M5_IN_STRESS_SMALL",
+     "listen_for": [
+      "MY father IS a farmer"
+     ],
+     "ask": "Which word is the news?",
+     "repair": "Stress it."
+    }
+   ],
+   "checks": [
+    {
+     "question": "Is your father a driver? Up or down?",
+     "answer": "up",
+     "shows": "yes or no"
+    },
+    {
+     "question": "Where does she work? Up or down?",
+     "answer": "down",
+     "shows": "WH"
+    }
+   ]
+  },
+  {
+   "skill": "ENGL.G5.LISTEN.T6_PRONUNCIATION_AND_VO.PRONOUNCE_SOUNDS",
+   "assessed_by": "voice",
+   "key_step": "The child feels the throat for voice and watches the lips and tongue for each pair.",
+   "floor": {
+    "prerequisite": "Hears the target sounds.",
+    "question": "Fan or van: which did I say?",
+    "answer": "points correctly"
+   },
+   "steps": [
+    "Show the mouth for the sound.",
+    "Say it alone.",
+    "Say minimal pairs.",
+    "Say a sentence."
+   ],
+   "contexts": [
+    "farming words: coffee, cabbage",
+    "jobs: vet, guard",
+    "pollution: gas, buzz"
+   ],
+   "board": [
+    {
+     "beat": "write",
+     "do": "Write: fan / van, back / bag."
+    },
+    {
+     "beat": "point",
+     "do": "Point at van.",
+     "say": "Hand on your throat. Say it. Does it buzz?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for the child to answer."
+    },
+    {
+     "beat": "child_draws",
+     "do": "The child says the pairs."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "ENGL.G5.LISTEN.T6_PRONUNCIATION_AND_VO.PRONOUNCE_SOUNDS.M5_PS_V_F",
+     "listen_for": [
+      "fan"
+     ],
+     "ask": "Does it buzz?",
+     "repair": "Voice on for v."
+    },
+    {
+     "code": "ENGL.G5.LISTEN.T6_PRONUNCIATION_AND_VO.PRONOUNCE_SOUNDS.M5_PS_G_K",
+     "listen_for": [
+      "back"
+     ],
+     "ask": "Is the voice on at the end?",
+     "repair": "Bag."
+    },
+    {
+     "code": "ENGL.G5.LISTEN.T6_PRONUNCIATION_AND_VO.PRONOUNCE_SOUNDS.M5_PS_Z_S",
+     "listen_for": [
+      "bus"
+     ],
+     "ask": "Bee or snake?",
+     "repair": "Bee: buzz."
+    },
+    {
+     "code": "ENGL.G5.LISTEN.T6_PRONUNCIATION_AND_VO.PRONOUNCE_SOUNDS.M5_PS_SCHWA_FULL",
+     "listen_for": [
+      "ba-NA-NA with three full a sounds"
+     ],
+     "ask": "Are the weak parts short?",
+     "repair": "Uh."
+    },
+    {
+     "code": "ENGL.G5.LISTEN.T6_PRONUNCIATION_AND_VO.PRONOUNCE_SOUNDS.M5_PS_EXTRA_VOWEL",
+     "listen_for": [
+      "booku"
+     ],
+     "ask": "Did you add a vowel?",
+     "repair": "Stop on the consonant."
+    }
+   ],
+   "checks": [
+    {
+     "question": "Say: The vet has a van.",
+     "answer": "clear v",
+     "shows": "v"
+    },
+    {
+     "question": "Say: The bag is big.",
+     "answer": "clear g at the ends",
+     "shows": "g"
+    }
+   ]
+  }
+ ],
+ "also_taught_by": [
+  "ENGL.G5.LISTEN.T2_PRONUNCIATION_AND_VO.ORAL_SENTENCES"
+ ]
+}

@@ -1,0 +1,100 @@
+{
+ "sub_strand": "ENGL.G7.WRITIN.T2_MECHANICS_OF_WRITING",
+ "title": "Mechanics of Writing: Punctuation Marks (Theme 2: Science and health education)",
+ "status": "draft: written 18 Nov 2026 offline for Grade 7 English; not yet checked by a Kenyan English teacher; not loaded by the live tutor",
+ "notes": "",
+ "skills": [
+  {
+   "skill": "ENGL.G7.WRITIN.T2_MECHANICS_OF_WRITING.END_MARKS",
+   "assessed_by": "questions",
+   "key_step": "The child asks: statement, question or strong feeling? and uses one mark, with a capital after it.",
+   "floor": {
+    "prerequisite": "Uses Grade 6 punctuation.",
+    "question": "End: Where is it",
+    "answer": "?"
+   },
+   "steps": [
+    "Statement: full stop.",
+    "Question: question mark.",
+    "Strong feeling: one !",
+    "Capital after."
+   ],
+   "contexts": [
+    "health notices"
+   ],
+   "board": [
+    {
+     "beat": "write",
+     "do": "Write: She asked me where I lived?"
+    },
+    {
+     "beat": "point",
+     "do": "Point at the end.",
+     "say": "Is it a question?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for the child to answer."
+    },
+    {
+     "beat": "child_draws",
+     "do": "The child fixes it."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "ENGL.G7.WRITIN.T2_MECHANICS_OF_WRITING.END_MARKS.M7_EM_QMARK_STATEMENT",
+     "listen_for": [
+      "She asked me where I was going?"
+     ],
+     "ask": "Reported question?",
+     "repair": "Full stop."
+    },
+    {
+     "code": "ENGL.G7.WRITIN.T2_MECHANICS_OF_WRITING.END_MARKS.M7_EM_FULLSTOP_QUESTION",
+     "listen_for": [
+      "Where is the market."
+     ],
+     "ask": "Asking?",
+     "repair": "Question mark."
+    },
+    {
+     "code": "ENGL.G7.WRITIN.T2_MECHANICS_OF_WRITING.END_MARKS.M7_EM_NO_EXCLAMATION",
+     "listen_for": [
+      "Watch out."
+     ],
+     "ask": "A warning?",
+     "repair": "Exclamation."
+    },
+    {
+     "code": "ENGL.G7.WRITIN.T2_MECHANICS_OF_WRITING.END_MARKS.M7_EM_MANY_MARKS",
+     "listen_for": [
+      "Stop thief!!!"
+     ],
+     "ask": "How many?",
+     "repair": "One."
+    },
+    {
+     "code": "ENGL.G7.WRITIN.T2_MECHANICS_OF_WRITING.END_MARKS.M7_EM_NO_CAPITAL",
+     "listen_for": [
+      "It was late. we went home."
+     ],
+     "ask": "After a full stop?",
+     "repair": "Capital."
+    }
+   ],
+   "checks": [
+    {
+     "question": "Watch out",
+     "answer": "Watch out!",
+     "shows": "exclamation"
+    },
+    {
+     "question": "Where is the clinic",
+     "answer": "Where is the clinic?",
+     "shows": "question"
+    }
+   ]
+  }
+ ]
+}

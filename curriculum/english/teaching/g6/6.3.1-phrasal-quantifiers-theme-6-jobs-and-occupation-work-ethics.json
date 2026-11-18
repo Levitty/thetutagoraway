@@ -1,0 +1,99 @@
+{
+ "sub_strand": "ENGL.G6.LANGUA.T6_PHRASAL_QUANTIFIERS",
+ "title": "Phrasal Quantifiers (Theme 6: Jobs and occupation - work ethics)",
+ "status": "draft: written 18 Nov 2026 offline for Grade 6 English; not yet checked by a Kenyan English teacher; not loaded by the live tutor",
+ "notes": "",
+ "skills": [
+  {
+   "skill": "ENGL.G6.LANGUA.T6_PHRASAL_QUANTIFIERS.PHRASAL_QUANTIFIERS",
+   "assessed_by": "questions",
+   "key_step": "The child pairs a number of with countable nouns, a great deal of with uncountable ones, and a piece of with the right unit.",
+   "floor": {
+    "prerequisite": "Uses few and little.",
+    "question": "a ___ water",
+    "answer": "little"
+   },
+   "steps": [
+    "Count: a number of.",
+    "Not count: a great deal of.",
+    "Units: a piece of advice, a bar of soap."
+   ],
+   "contexts": [
+    "work ethics"
+   ],
+   "board": [
+    {
+     "beat": "write",
+     "do": "Write: a great deal of ___ (learners / water)."
+    },
+    {
+     "beat": "point",
+     "do": "Point at great deal.",
+     "say": "Count or not?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for the child to answer."
+    },
+    {
+     "beat": "child_draws",
+     "do": "The child writes a piece of sentence."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "ENGL.G6.LANGUA.T6_PHRASAL_QUANTIFIERS.PHRASAL_QUANTIFIERS.M_PQ_NUMBER_UNCOUNT",
+     "listen_for": [
+      "water"
+     ],
+     "ask": "Count?",
+     "repair": "Learners."
+    },
+    {
+     "code": "ENGL.G6.LANGUA.T6_PHRASAL_QUANTIFIERS.PHRASAL_QUANTIFIERS.M_PQ_AMOUNT_COUNT",
+     "listen_for": [
+      "eggs"
+     ],
+     "ask": "Not count?",
+     "repair": "Flour."
+    },
+    {
+     "code": "ENGL.G6.LANGUA.T6_PHRASAL_QUANTIFIERS.PHRASAL_QUANTIFIERS.M_PQ_PIECE_PLURAL",
+     "listen_for": [
+      "advices"
+     ],
+     "ask": "Advices?",
+     "repair": "Advice."
+    },
+    {
+     "code": "ENGL.G6.LANGUA.T6_PHRASAL_QUANTIFIERS.PHRASAL_QUANTIFIERS.M_PQ_OF_MISSING",
+     "listen_for": [
+      "(nothing)"
+     ],
+     "ask": "A piece what?",
+     "repair": "Of."
+    },
+    {
+     "code": "ENGL.G6.LANGUA.T6_PHRASAL_QUANTIFIERS.PHRASAL_QUANTIFIERS.M_PQ_WRONG_UNIT",
+     "listen_for": [
+      "milk"
+     ],
+     "ask": "A bar of milk?",
+     "repair": "Soap."
+    }
+   ],
+   "checks": [
+    {
+     "question": "a number of ___ (eggs / flour)",
+     "answer": "eggs",
+     "shows": "count"
+    },
+    {
+     "question": "a bar of ___",
+     "answer": "soap",
+     "shows": "unit"
+    }
+   ]
+  }
+ ]
+}

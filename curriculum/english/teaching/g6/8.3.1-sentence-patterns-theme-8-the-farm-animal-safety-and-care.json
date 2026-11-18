@@ -1,0 +1,199 @@
+{
+ "sub_strand": "ENGL.G6.LANGUA.T8_SENTENCE_PATTERNS",
+ "title": "Sentence Patterns (Theme 8: The farm – animal safety and care)",
+ "status": "draft: written 18 Nov 2026 offline for Grade 6 English; not yet checked by a Kenyan English teacher; not loaded by the live tutor",
+ "notes": "",
+ "skills": [
+  {
+   "skill": "ENGL.G6.LANGUA.T8_SENTENCE_PATTERNS.ACTIVE_PASSIVE",
+   "assessed_by": "questions",
+   "key_step": "The child moves the receiver to the front, adds the form of be and the past participle, and by + doer.",
+   "floor": {
+    "prerequisite": "Uses past forms.",
+    "question": "Past of write?",
+    "answer": "wrote"
+   },
+   "steps": [
+    "Find the doer and receiver.",
+    "Receiver first.",
+    "Be + past participle.",
+    "By + doer."
+   ],
+   "contexts": [
+    "farm work"
+   ],
+   "board": [
+    {
+     "beat": "write",
+     "do": "Write: Wanjiku cooked the rice."
+    },
+    {
+     "beat": "point",
+     "do": "Point at the rice.",
+     "say": "Start with it."
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for the child to answer."
+    },
+    {
+     "beat": "child_draws",
+     "do": "The child writes the passive."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "ENGL.G6.LANGUA.T8_SENTENCE_PATTERNS.ACTIVE_PASSIVE.M_PASS_NO_BE",
+     "listen_for": [
+      "broken"
+     ],
+     "ask": "Broken alone?",
+     "repair": "Was broken."
+    },
+    {
+     "code": "ENGL.G6.LANGUA.T8_SENTENCE_PATTERNS.ACTIVE_PASSIVE.M_PASS_PAST_FORM",
+     "listen_for": [
+      "wrote"
+     ],
+     "ask": "Wrote?",
+     "repair": "Written."
+    },
+    {
+     "code": "ENGL.G6.LANGUA.T8_SENTENCE_PATTERNS.ACTIVE_PASSIVE.M_PASS_AGREEMENT",
+     "listen_for": [
+      "was"
+     ],
+     "ask": "One or many?",
+     "repair": "Were."
+    },
+    {
+     "code": "ENGL.G6.LANGUA.T8_SENTENCE_PATTERNS.ACTIVE_PASSIVE.M_PASS_ACTIVE_AS_PASSIVE",
+     "listen_for": [
+      "Wanjiku cooked the rice."
+     ],
+     "ask": "Is the receiver first?",
+     "repair": "Passive."
+    },
+    {
+     "code": "ENGL.G6.LANGUA.T8_SENTENCE_PATTERNS.ACTIVE_PASSIVE.M_PASS_DOER_SUBJECT",
+     "listen_for": [
+      "Baraka was kicked by the ball."
+     ],
+     "ask": "Who was kicked?",
+     "repair": "The ball."
+    }
+   ],
+   "checks": [
+    {
+     "question": "Passive: The dog bit the boy.",
+     "answer": "The boy was bitten by the dog.",
+     "shows": "passive"
+    },
+    {
+     "question": "The letters ___ (was/were) written.",
+     "answer": "were",
+     "shows": "agreement"
+    }
+   ]
+  },
+  {
+   "skill": "ENGL.G6.LANGUA.T8_SENTENCE_PATTERNS.CONFUSED_WORDS",
+   "assessed_by": "questions",
+   "key_step": "The child picks the pair word by direction or meaning: tell someone, lend to, bring here, teach others.",
+   "floor": {
+    "prerequisite": "Uses homophones.",
+    "question": "there or their?",
+    "answer": "correct choice"
+   },
+   "steps": [
+    "Say the pair.",
+    "Say the difference.",
+    "Choose by direction or meaning."
+   ],
+   "contexts": [
+    "farm dialogues"
+   ],
+   "board": [
+    {
+     "beat": "write",
+     "do": "Write: say / tell, borrow / lend."
+    },
+    {
+     "beat": "point",
+     "do": "Point at lend.",
+     "say": "Give or receive?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for the child to answer."
+    },
+    {
+     "beat": "child_draws",
+     "do": "The child fills four gaps."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "ENGL.G6.LANGUA.T8_SENTENCE_PATTERNS.CONFUSED_WORDS.M_CW_SAY_TELL",
+     "listen_for": [
+      "said"
+     ],
+     "ask": "To someone?",
+     "repair": "Told."
+    },
+    {
+     "code": "ENGL.G6.LANGUA.T8_SENTENCE_PATTERNS.CONFUSED_WORDS.M_CW_BORROW_LEND",
+     "listen_for": [
+      "borrow"
+     ],
+     "ask": "Give?",
+     "repair": "Lend."
+    },
+    {
+     "code": "ENGL.G6.LANGUA.T8_SENTENCE_PATTERNS.CONFUSED_WORDS.M_CW_BRING_TAKE",
+     "listen_for": [
+      "bring"
+     ],
+     "ask": "Here or there?",
+     "repair": "Take there."
+    },
+    {
+     "code": "ENGL.G6.LANGUA.T8_SENTENCE_PATTERNS.CONFUSED_WORDS.M_CW_LEARN_TEACH",
+     "listen_for": [
+      "learn"
+     ],
+     "ask": "Give knowledge?",
+     "repair": "Teach."
+    },
+    {
+     "code": "ENGL.G6.LANGUA.T8_SENTENCE_PATTERNS.CONFUSED_WORDS.M_CW_HEAR_LISTEN",
+     "listen_for": [
+      "hear"
+     ],
+     "ask": "On purpose?",
+     "repair": "Listen."
+    },
+    {
+     "code": "ENGL.G6.LANGUA.T8_SENTENCE_PATTERNS.CONFUSED_WORDS.M_CW_SEE_LOOK",
+     "listen_for": [
+      "See"
+     ],
+     "ask": "On purpose?",
+     "repair": "Look."
+    }
+   ],
+   "checks": [
+    {
+     "question": "Can you ___ me your pen? (lend/borrow)",
+     "answer": "lend",
+     "shows": "lend"
+    },
+    {
+     "question": "She ___ us a story. (said/told)",
+     "answer": "told",
+     "shows": "tell"
+    }
+   ]
+  }
+ ]
+}

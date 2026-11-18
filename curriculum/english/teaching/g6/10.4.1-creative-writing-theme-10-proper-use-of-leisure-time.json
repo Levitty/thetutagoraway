@@ -1,0 +1,180 @@
+{
+ "sub_strand": "ENGL.G6.WRITIN.T10_CREATIVE_WRITING",
+ "title": "Creative Writing (Theme 10: Proper use of leisure time)",
+ "status": "draft: written 18 Nov 2026 offline for Grade 6 English; not yet checked by a Kenyan English teacher; not loaded by the live tutor",
+ "notes": "",
+ "skills": [
+  {
+   "skill": "ENGL.G6.WRITIN.T10_CREATIVE_WRITING.DESCRIBING_WORDS",
+   "assessed_by": "questions",
+   "key_step": "The child chooses an exact adjective for a sense and orders several correctly.",
+   "floor": {
+    "prerequisite": "Uses adjective degrees.",
+    "question": "tall, taller, ___",
+    "answer": "tallest"
+   },
+   "steps": [
+    "Name the thing.",
+    "Choose a sense.",
+    "Choose an exact word.",
+    "Order several."
+   ],
+   "contexts": [
+    "a park",
+    "a market",
+    "a grandmother"
+   ],
+   "board": [
+    {
+     "beat": "write",
+     "do": "Write: a nice beach."
+    },
+    {
+     "beat": "point",
+     "do": "Point at nice.",
+     "say": "A more exact word?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for the child to answer."
+    },
+    {
+     "beat": "child_draws",
+     "do": "The child orders three adjectives."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "ENGL.G6.WRITIN.T10_CREATIVE_WRITING.DESCRIBING_WORDS.M6_DW_VAGUE",
+     "listen_for": [
+      "a nice beach"
+     ],
+     "ask": "More exact?",
+     "repair": "Choose a sense word."
+    },
+    {
+     "code": "ENGL.G6.WRITIN.T10_CREATIVE_WRITING.DESCRIBING_WORDS.M6_DW_ORDER",
+     "listen_for": [
+      "woven old small"
+     ],
+     "ask": "Size first?",
+     "repair": "Size, age, material."
+    },
+    {
+     "code": "ENGL.G6.WRITIN.T10_CREATIVE_WRITING.DESCRIBING_WORDS.M6_DW_ADVERB",
+     "listen_for": [
+      "quietly"
+     ],
+     "ask": "After is?",
+     "repair": "Adjective."
+    },
+    {
+     "code": "ENGL.G6.WRITIN.T10_CREATIVE_WRITING.DESCRIBING_WORDS.M6_DW_WRONG_SENSE",
+     "listen_for": [
+      "colourful"
+     ],
+     "ask": "Is it about sound?",
+     "repair": "Sound word."
+    }
+   ],
+   "checks": [
+    {
+     "question": "Improve: a big tree",
+     "answer": "a towering tree",
+     "shows": "exact"
+    },
+    {
+     "question": "a ___ ___ ___ pot (clay, small, old)",
+     "answer": "small old clay",
+     "shows": "order"
+    }
+   ]
+  },
+  {
+   "skill": "ENGL.G6.WRITIN.T10_CREATIVE_WRITING.DESCRIPTIVE_COMPOSITION",
+   "assessed_by": "composition",
+   "key_step": "The child plans by the senses, describes in one direction, and judges with the checklist.",
+   "floor": {
+    "prerequisite": "Uses exact adjectives.",
+    "question": "Describe a beach in three words.",
+    "answer": "sandy, sunny, quiet"
+   },
+   "steps": [
+    "Plan by the senses.",
+    "Write in one direction.",
+    "Introduction and conclusion.",
+    "Judge with the checklist."
+   ],
+   "contexts": [
+    "a leisure park",
+    "a games room",
+    "a beach"
+   ],
+   "board": [
+    {
+     "beat": "write",
+     "do": "Write: see, hear, smell, touch."
+    },
+    {
+     "beat": "point",
+     "do": "Point at hear.",
+     "say": "What do you hear at the park?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for the child to answer."
+    },
+    {
+     "beat": "child_draws",
+     "do": "The child writes that sentence."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "ENGL.G6.WRITIN.T10_CREATIVE_WRITING.DESCRIPTIVE_COMPOSITION.M6_DC_STORY",
+     "listen_for": [
+      "One Sunday we went and a monkey stole my bag."
+     ],
+     "ask": "Story or description?",
+     "repair": "Describe."
+    },
+    {
+     "code": "ENGL.G6.WRITIN.T10_CREATIVE_WRITING.DESCRIPTIVE_COMPOSITION.M6_DC_LIST",
+     "listen_for": [
+      "There are trees, benches, a pond."
+     ],
+     "ask": "What is each like?",
+     "repair": "Add a description."
+    },
+    {
+     "code": "ENGL.G6.WRITIN.T10_CREATIVE_WRITING.DESCRIPTIVE_COMPOSITION.M6_DC_NO_ORDER",
+     "listen_for": [
+      "gate, pond, gate, trees"
+     ],
+     "ask": "Which way are you moving?",
+     "repair": "One direction."
+    },
+    {
+     "code": "ENGL.G6.WRITIN.T10_CREATIVE_WRITING.DESCRIPTIVE_COMPOSITION.M6_DC_JUDGE_LENGTH",
+     "listen_for": [
+      "the longest one"
+     ],
+     "ask": "What makes it good?",
+     "repair": "Use the checklist."
+    }
+   ],
+   "checks": [
+    {
+     "question": "Is \"One day a monkey stole my bag\" descriptive?",
+     "answer": "No",
+     "shows": "description"
+    },
+    {
+     "question": "Is the longest description best?",
+     "answer": "No",
+     "shows": "judging"
+    }
+   ]
+  }
+ ]
+}

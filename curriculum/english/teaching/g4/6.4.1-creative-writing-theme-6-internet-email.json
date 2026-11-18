@@ -1,0 +1,179 @@
+{
+ "sub_strand": "ENGL.G4.WRITIN.T6_CREATIVE_WRITING",
+ "title": "Creative Writing (Theme 6: Internet-email)",
+ "status": "draft: written 18 Nov 2026 offline for Grade 4 English; not yet checked by a Kenyan English teacher; not loaded by the live tutor",
+ "notes": "",
+ "skills": [
+  {
+   "skill": "ENGL.G4.WRITIN.T6_CREATIVE_WRITING.PICTURE_SEQUENCE",
+   "assessed_by": "questions",
+   "key_step": "The child looks for what changes from picture to picture and orders them.",
+   "floor": {
+    "prerequisite": "Orders events.",
+    "question": "First, next, last?",
+    "answer": "an order"
+   },
+   "steps": [
+    "Look at each picture.",
+    "Find the change.",
+    "Order them.",
+    "Tell it in the past."
+   ],
+   "contexts": [
+    "a boy picking mangoes",
+    "a girl at the computer"
+   ],
+   "board": [
+    {
+     "beat": "draw",
+     "do": "Draw three boxes out of order."
+    },
+    {
+     "beat": "point",
+     "do": "Point at the box with the seed.",
+     "say": "First or last?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for first."
+    },
+    {
+     "beat": "child_draws",
+     "do": "The child numbers the rest."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "ENGL.G4.WRITIN.T6_CREATIVE_WRITING.PICTURE_SEQUENCE.M_PIC_ORDER_REVERSED",
+     "listen_for": [
+      "D, C, B, A"
+     ],
+     "ask": "What happened first?",
+     "repair": "Start there."
+    },
+    {
+     "code": "ENGL.G4.WRITIN.T6_CREATIVE_WRITING.PICTURE_SEQUENCE.M_PIC_ORDER_SWAPPED",
+     "listen_for": [
+      "A, C, B, D"
+     ],
+     "ask": "Does this one come before that?",
+     "repair": "Swap."
+    },
+    {
+     "code": "ENGL.G4.WRITIN.T6_CREATIVE_WRITING.PICTURE_SEQUENCE.M_PIC_TENSE",
+     "listen_for": [
+      "Wafula picks a mango."
+     ],
+     "ask": "Is it a story?",
+     "repair": "Past."
+    },
+    {
+     "code": "ENGL.G4.WRITIN.T6_CREATIVE_WRITING.PICTURE_SEQUENCE.M_PIC_MISMATCH",
+     "listen_for": [
+      "She sold the fruit."
+     ],
+     "ask": "Does it match the picture?",
+     "repair": "Look again."
+    }
+   ],
+   "checks": [
+    {
+     "question": "Seed, sprout, tree: which first?",
+     "answer": "seed",
+     "shows": "order"
+    },
+    {
+     "question": "Tell picture 1 in the past.",
+     "answer": "past sentence",
+     "shows": "tense"
+    }
+   ]
+  },
+  {
+   "skill": "ENGL.G4.WRITIN.T6_CREATIVE_WRITING.PICTORIAL_COMPOSITION",
+   "assessed_by": "composition",
+   "key_step": "The child tells what the people did in each picture, in order, in the past tense.",
+   "floor": {
+    "prerequisite": "Orders pictures.",
+    "question": "Put these three pictures in order.",
+    "answer": "A, B, C"
+   },
+   "steps": [
+    "Order the pictures.",
+    "Say what happened in each.",
+    "Join them.",
+    "Add a title."
+   ],
+   "contexts": [
+    "a boy losing his dog",
+    "a girl sending an email",
+    "a family planting trees"
+   ],
+   "board": [
+    {
+     "beat": "draw",
+     "do": "Draw four boxes with stick figures."
+    },
+    {
+     "beat": "point",
+     "do": "Point at box 1.",
+     "say": "What did the boy do?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for a past-tense sentence."
+    },
+    {
+     "beat": "child_draws",
+     "do": "The child writes for box 2."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "ENGL.G4.WRITIN.T6_CREATIVE_WRITING.PICTORIAL_COMPOSITION.M4_PC_DESCRIBES_ONLY",
+     "listen_for": [
+      "There is a boy. There is a tree."
+     ],
+     "ask": "What did they do?",
+     "repair": "Tell the action."
+    },
+    {
+     "code": "ENGL.G4.WRITIN.T6_CREATIVE_WRITING.PICTORIAL_COMPOSITION.M4_PC_SKIPS_PICTURE",
+     "listen_for": [
+      "three"
+     ],
+     "ask": "Did you write for each picture?",
+     "repair": "Tick them."
+    },
+    {
+     "code": "ENGL.G4.WRITIN.T6_CREATIVE_WRITING.PICTORIAL_COMPOSITION.M4_PC_PRESENT",
+     "listen_for": [
+      "The girl is running to the shop."
+     ],
+     "ask": "Is it a story?",
+     "repair": "Past tense."
+    },
+    {
+     "code": "ENGL.G4.WRITIN.T6_CREATIVE_WRITING.PICTORIAL_COMPOSITION.M4_PC_NO_TITLE",
+     "listen_for": [
+      "My School"
+     ],
+     "ask": "What is the whole story about?",
+     "repair": "Name it."
+    }
+   ],
+   "checks": [
+    {
+     "question": "Picture: a girl at a computer. Best sentence?",
+     "answer": "Amina sent an email to her aunt.",
+     "shows": "action"
+    },
+    {
+     "question": "Four pictures: how many parts?",
+     "answer": "four",
+     "shows": "all pictures"
+    }
+   ]
+  }
+ ]
+}

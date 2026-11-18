@@ -1,0 +1,93 @@
+{
+ "sub_strand": "ENGL.G7.LISTEN.T15_ORAL_REPORTS",
+ "title": "Oral Reports (Theme 15: Tourist attraction sites - kenya)",
+ "status": "draft: written 18 Nov 2026 offline for Grade 7 English; not yet checked by a Kenyan English teacher; not loaded by the live tutor",
+ "notes": "",
+ "skills": [
+  {
+   "skill": "ENGL.G7.LISTEN.T15_ORAL_REPORTS.ORAL_REPORT",
+   "assessed_by": "questions",
+   "key_step": "The child organises a report: greeting, what happened in order, facts not opinions, closing, past tense.",
+   "floor": {
+    "prerequisite": "Speaks fluently.",
+    "question": "Greet the class.",
+    "answer": "a greeting"
+   },
+   "steps": [
+    "Greeting.",
+    "Events in order.",
+    "Facts.",
+    "Closing; past tense."
+   ],
+   "contexts": [
+    "a fire drill",
+    "a class event"
+   ],
+   "board": [
+    {
+     "beat": "write",
+     "do": "Write: greeting, events, closing."
+    },
+    {
+     "beat": "point",
+     "do": "Point at events.",
+     "say": "In what order?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for the child to answer."
+    },
+    {
+     "beat": "child_draws",
+     "do": "The child gives the report."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "ENGL.G7.LISTEN.T15_ORAL_REPORTS.ORAL_REPORT.M7_OR_ORDER",
+     "listen_for": [
+      "the end of the event"
+     ],
+     "ask": "How do you start?",
+     "repair": "Greeting."
+    },
+    {
+     "code": "ENGL.G7.LISTEN.T15_ORAL_REPORTS.ORAL_REPORT.M7_OR_OPINION",
+     "listen_for": [
+      "The drill was so boring."
+     ],
+     "ask": "Fact?",
+     "repair": "Report facts."
+    },
+    {
+     "code": "ENGL.G7.LISTEN.T15_ORAL_REPORTS.ORAL_REPORT.M7_OR_CLOSING",
+     "listen_for": [
+      "And then the bell rang and"
+     ],
+     "ask": "How do you end?",
+     "repair": "That was ..."
+    },
+    {
+     "code": "ENGL.G7.LISTEN.T15_ORAL_REPORTS.ORAL_REPORT.M7_OR_TENSE",
+     "listen_for": [
+      "The team win the match."
+     ],
+     "ask": "Past?",
+     "repair": "Won."
+    }
+   ],
+   "checks": [
+    {
+     "question": "Fact or opinion: \"The drill began at ten.\"",
+     "answer": "fact",
+     "shows": "facts"
+    },
+    {
+     "question": "Tense of a report?",
+     "answer": "past",
+     "shows": "tense"
+    }
+   ]
+  }
+ ]
+}

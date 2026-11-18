@@ -1,0 +1,91 @@
+{
+ "sub_strand": "ENGL.G9.READIN.T11_GRADE_APPROPRIATE_PL",
+ "title": "Grade - appropriate Play: Lessons learnt (Class Reader) (Theme 11: Income generating activities)",
+ "status": "draft: written 18 Nov 2026 offline for Grade 9 English; not yet checked by a Kenyan English teacher; not loaded by the live tutor",
+ "notes": "",
+ "skills": [
+  {
+   "skill": "ENGL.G9.READIN.T11_GRADE_APPROPRIATE_PL.PL_LESSONS",
+   "assessed_by": "questions",
+   "key_step": "The child states the lesson as advice for life, supported by the play's events.",
+   "floor": {
+    "prerequisite": "Knows lessons.",
+    "question": "Lesson of a fable?",
+    "answer": "advice"
+   },
+   "steps": [
+    "Ending.",
+    "What happened.",
+    "Advice."
+   ],
+   "contexts": [
+    "income generating play"
+   ],
+   "board": [
+    {
+     "beat": "write",
+     "do": "Write: Lesson: ___"
+    },
+    {
+     "beat": "point",
+     "do": "Point at Lesson.",
+     "say": "Advice?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for the child to answer."
+    },
+    {
+     "beat": "child_draws",
+     "do": "The child supports it."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "ENGL.G9.READIN.T11_GRADE_APPROPRIATE_PL.PL_LESSONS.M_EN9_PL_LESSONS_DETAIL",
+     "listen_for": [
+      "an answer that is a small detail"
+     ],
+     "ask": "Does that answer the question, or is it a nearby detail?",
+     "repair": "Find the exact answer in the text."
+    },
+    {
+     "code": "ENGL.G9.READIN.T11_GRADE_APPROPRIATE_PL.PL_LESSONS.M_EN9_PL_LESSONS_OPPOSITE",
+     "listen_for": [
+      "an answer that is the opposite"
+     ],
+     "ask": "Does the text say that, or the opposite?",
+     "repair": "Read the sentence again."
+    },
+    {
+     "code": "ENGL.G9.READIN.T11_GRADE_APPROPRIATE_PL.PL_LESSONS.M_EN9_PL_LESSONS_NOTSAID",
+     "listen_for": [
+      "an answer that is something not in the text"
+     ],
+     "ask": "Can you point to where the text says it?",
+     "repair": "Answer only from the text."
+    },
+    {
+     "code": "ENGL.G9.READIN.T11_GRADE_APPROPRIATE_PL.PL_LESSONS.M9_PL_LESSON_PLOT",
+     "listen_for": [
+      "the son ran away"
+     ],
+     "ask": "Advice?",
+     "repair": "Say it."
+    }
+   ],
+   "checks": [
+    {
+     "question": "Lesson of a play where a hard-working girl succeeds?",
+     "answer": "hard work pays",
+     "shows": "lesson"
+    },
+    {
+     "question": "Is an event a lesson?",
+     "answer": "No",
+     "shows": "event"
+    }
+   ]
+  }
+ ]
+}

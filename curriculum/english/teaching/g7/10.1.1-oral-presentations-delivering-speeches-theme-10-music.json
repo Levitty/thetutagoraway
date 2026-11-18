@@ -1,0 +1,92 @@
+{
+ "sub_strand": "ENGL.G7.LISTEN.T10_ORAL_PRESENTATIONS_D",
+ "title": "Oral Presentations: Delivering Speeches (Theme 10: Music)",
+ "status": "draft: written 18 Nov 2026 offline for Grade 7 English; not yet checked by a Kenyan English teacher; not loaded by the live tutor",
+ "notes": "",
+ "skills": [
+  {
+   "skill": "ENGL.G7.LISTEN.T10_ORAL_PRESENTATIONS_D.SPEECH_FEATURES",
+   "assessed_by": "questions",
+   "key_step": "The child names a speech's parts (greeting, purpose, points, thanks) and its formal tone for the occasion.",
+   "floor": {
+    "prerequisite": "Speaks fluently.",
+    "question": "How does a speech start?",
+    "answer": "greeting"
+   },
+   "steps": [
+    "Greeting.",
+    "Purpose.",
+    "Points.",
+    "Thanks."
+   ],
+   "contexts": [
+    "a music festival speech"
+   ],
+   "board": [
+    {
+     "beat": "write",
+     "do": "Write the four parts."
+    },
+    {
+     "beat": "point",
+     "do": "Point at greeting.",
+     "say": "What comes first?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for the child to answer."
+    },
+    {
+     "beat": "child_draws",
+     "do": "The child names the tone."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "ENGL.G7.LISTEN.T10_ORAL_PRESENTATIONS_D.SPEECH_FEATURES.M7_SF_OCCASION",
+     "listen_for": [
+      "a private chat with a friend"
+     ],
+     "ask": "Private chat?",
+     "repair": "Formal occasion."
+    },
+    {
+     "code": "ENGL.G7.LISTEN.T10_ORAL_PRESENTATIONS_D.SPEECH_FEATURES.M7_SF_PART_ORDER",
+     "listen_for": [
+      "the thanks"
+     ],
+     "ask": "First?",
+     "repair": "Greeting."
+    },
+    {
+     "code": "ENGL.G7.LISTEN.T10_ORAL_PRESENTATIONS_D.SPEECH_FEATURES.M7_SF_READING",
+     "listen_for": [
+      "reading it with your eyes on the paper"
+     ],
+     "ask": "Head down?",
+     "repair": "Look at the audience."
+    },
+    {
+     "code": "ENGL.G7.LISTEN.T10_ORAL_PRESENTATIONS_D.SPEECH_FEATURES.M7_SF_TONE",
+     "listen_for": [
+      "joking and loud"
+     ],
+     "ask": "Joking?",
+     "repair": "Respectful."
+    }
+   ],
+   "checks": [
+    {
+     "question": "Occasion for a speech?",
+     "answer": "a school prize-giving",
+     "shows": "occasion"
+    },
+    {
+     "question": "Tone at prize-giving?",
+     "answer": "respectful and calm",
+     "shows": "tone"
+    }
+   ]
+  }
+ ]
+}

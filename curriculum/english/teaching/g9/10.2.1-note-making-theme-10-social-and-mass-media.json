@@ -1,0 +1,92 @@
+{
+ "sub_strand": "ENGL.G9.READIN.T10_NOTE_MAKING",
+ "title": "Note Making (Theme 10: Social and mass media)",
+ "status": "draft: written 18 Nov 2026 offline for Grade 9 English; not yet checked by a Kenyan English teacher; not loaded by the live tutor",
+ "notes": "",
+ "skills": [
+  {
+   "skill": "ENGL.G9.READIN.T10_NOTE_MAKING.NOTE_MAKING",
+   "assessed_by": "teacher",
+   "key_step": "The child notes the writer's position, then the arguments for and against in key words.",
+   "floor": {
+    "prerequisite": "Makes notes.",
+    "question": "Key point?",
+    "answer": "a point"
+   },
+   "steps": [
+    "Position.",
+    "For.",
+    "Against.",
+    "Key words only."
+   ],
+   "contexts": [
+    "argumentative texts on social media"
+   ],
+   "board": [
+    {
+     "beat": "write",
+     "do": "Write headings: Position / For / Against."
+    },
+    {
+     "beat": "point",
+     "do": "Point at Against.",
+     "say": "One point here?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for the child to answer."
+    },
+    {
+     "beat": "child_draws",
+     "do": "The child notes the position."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "ENGL.G9.READIN.T10_NOTE_MAKING.NOTE_MAKING.M9_NM_ONE_SIDE",
+     "listen_for": [
+      "only the benefits"
+     ],
+     "ask": "Both sides?",
+     "repair": "Note them."
+    },
+    {
+     "code": "ENGL.G9.READIN.T10_NOTE_MAKING.NOTE_MAKING.M9_NM_COPIES",
+     "listen_for": [
+      "copy"
+     ],
+     "ask": "Copying?",
+     "repair": "Key words."
+    },
+    {
+     "code": "ENGL.G9.READIN.T10_NOTE_MAKING.NOTE_MAKING.M9_NM_EVIDENCE_AS_POINT",
+     "listen_for": [
+      "60% of youth use TikTok"
+     ],
+     "ask": "Point?",
+     "repair": "What it shows."
+    },
+    {
+     "code": "ENGL.G9.READIN.T10_NOTE_MAKING.NOTE_MAKING.M9_NM_NO_POSITION",
+     "listen_for": [
+      "not noted"
+     ],
+     "ask": "Writer's view?",
+     "repair": "First."
+    }
+   ],
+   "checks": [
+    {
+     "question": "Notes on both sides?",
+     "answer": "yes, under two headings",
+     "shows": "balance"
+    },
+    {
+     "question": "Note \"60% use TikTok\" as the point?",
+     "answer": "No",
+     "shows": "evidence"
+    }
+   ]
+  }
+ ]
+}

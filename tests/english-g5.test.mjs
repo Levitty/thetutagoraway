@@ -2,6 +2,7 @@
 // All draft and off for children until a Kenyan English teacher signs them off.
 import { test } from 'node:test';
 import assert from 'node:assert/strict';
+import { depthFailures } from '../scripts/lib/english-depth.mjs';
 import { readFileSync } from 'node:fs';
 import { englishFailures, checkEnglishForms, checkTextForms, ENGLISH_FAMILIES } from '../engine/scripts/english_checks.mjs';
 import { SKILLS_E5, OUTCOMES_E5, MIS_FEEDBACK_E5 } from '../src/ai-tutor/content/curriculumMap.english.g5.js';
@@ -31,7 +32,7 @@ test('skills and the misconception library are proposed or draft, with the field
       assert.equal(k.status, 'proposed');
       assert.ok(k.mastery && k.question_forms.length >= 2 && k.thinking.length, `${k.code}: mastery, forms or thinking missing`);
       assert.ok(k.outcomes.length && k.outcomes.every(o => OUTCOMES_E5[o]), `${k.code}: unknown outcome`);
-      for (const p of k.prerequisites) assert.ok(p.kind === 'outcome' || SKILLS_E5[p.requires], `${k.code}: unknown prerequisite ${p.requires}`);
+      for (const p of k.prerequisites) assert.ok(p.kind === 'outcome' || p.requires.startsWith('ENGL.G4.') || SKILLS_E5[p.requires], `${k.code}: unknown prerequisite ${p.requires}`);
     }
     for (const m of s.misconceptions) {
       assert.equal(m.status, 'draft');
@@ -83,4 +84,20 @@ test('the route of every outcome is one of the five, and composition outcomes na
   const known = new Set(['family', 'composition', 'voice', 'teacher', 'attitude']);
   const covered = new Set(Object.values(SKILLS_E5).flatMap(k => k.outcomes));
   for (const s of subs) for (const o of s.outcomes) assert.ok(covered.has(o.code) || known.has(routeOf(o, s)), o.code);
+});
+
+// Depth pass (18 Nov 2026, Tuta Workspace/HOREB_MAPPING_PLAN.md): the Grade 5 Maths standard. Every testable outcome has a skill,
+// every skill two prerequisites, four misconceptions and a teaching pack entry (curriculum/english/teaching/g5/), and the SQL loads it all.
+test('Grade 5 English is at the depth standard: skills, prerequisites, misconceptions and teaching pack', () => {
+  assert.deepEqual(depthFailures(5), []);
+});
+
+test('the Grade 5 English SQL loads every skill, prerequisite and misconception (run node scripts/build-maths-sql-grade.mjs english 5)', () => {
+  const doc = JSON.parse(readFileSync(new URL('../curriculum/english/g5.json', import.meta.url), 'utf8'));
+  const sql = readFileSync(new URL('../supabase/migrations/20261130_english_g5_skills_misconceptions.sql', import.meta.url), 'utf8');
+  const count = (re) => (sql.match(re) || []).length;
+  assert.equal(count(/^INSERT INTO public\.curriculum_skills /gm), doc.totals.skills);
+  assert.equal(count(/^INSERT INTO public\.curriculum_prerequisites /gm), doc.totals.prerequisites);
+  assert.equal(count(/^INSERT INTO public\.curriculum_misconceptions /gm), doc.totals.misconceptions);
+  assert.ok(/^BEGIN;$/m.test(sql) && /^COMMIT;$/m.test(sql) && /ON CONFLICT \(code\) DO UPDATE/.test(sql), 'not one idempotent transaction');
 });

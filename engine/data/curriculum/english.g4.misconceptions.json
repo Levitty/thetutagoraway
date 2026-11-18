@@ -1,4 +1,214 @@
 {
+ "ENGL.G4.LISTEN.T1_PRONUNCIATION_AND_VO.PRONOUNCE_SOUNDS.M4_PS_L_R": {
+  "skill": "ENGL.G4.LISTEN.T1_PRONUNCIATION_AND_VO.PRONOUNCE_SOUNDS",
+  "error": "Swaps /l/ and /r/.",
+  "example": {
+   "question": "Say: The lorry is red.",
+   "wrong_answer": "The rorry is led.",
+   "correct_answer": "The lorry is red."
+  },
+  "cause": "Several Kenyan home languages do not keep /l/ and /r/ apart, so one is used for both.",
+  "reveals": "Offer \"The rorry is led.\" beside \"The lorry is red.\" in a fresh sentence or text and ask again; picking it again shows the error is still there.",
+  "help": "Tongue tip up behind the teeth for /l/; tongue curled back, not touching, for /r/.",
+  "feedback": "Tongue tip up behind the teeth for /l/; tongue curled back, not touching, for /r/.",
+  "source": "to confirm by a Kenyan English teacher: a common classroom error of Kenyan learners of English, written offline (18 Nov 2026), not traced to a study",
+  "status": "draft"
+ },
+ "ENGL.G4.LISTEN.T1_PRONUNCIATION_AND_VO.PRONOUNCE_SOUNDS.M4_PS_SH_S": {
+  "skill": "ENGL.G4.LISTEN.T1_PRONUNCIATION_AND_VO.PRONOUNCE_SOUNDS",
+  "error": "Says /s/ for /ʃ/ (sh).",
+  "example": {
+   "question": "Say: shop",
+   "wrong_answer": "sop",
+   "correct_answer": "shop"
+  },
+  "cause": "The home language may have no /ʃ/, so the nearest sound /s/ is used.",
+  "reveals": "Offer \"sop\" beside \"shop\" in a fresh sentence or text and ask again; picking it again shows the error is still there.",
+  "help": "Round the lips and push them forward for sh: shhh.",
+  "feedback": "Round the lips and push them forward for sh: shhh.",
+  "source": "to confirm by a Kenyan English teacher: a common classroom error of Kenyan learners of English, written offline (18 Nov 2026), not traced to a study",
+  "status": "draft"
+ },
+ "ENGL.G4.LISTEN.T1_PRONUNCIATION_AND_VO.PRONOUNCE_SOUNDS.M4_PS_CH_SH": {
+  "skill": "ENGL.G4.LISTEN.T1_PRONUNCIATION_AND_VO.PRONOUNCE_SOUNDS",
+  "error": "Says /ʃ/ (sh) for /tʃ/ (ch).",
+  "example": {
+   "question": "Say: chair",
+   "wrong_answer": "shair",
+   "correct_answer": "chair"
+  },
+  "cause": "A home language with sh but no ch, or the reverse, carries over.",
+  "reveals": "Offer \"shair\" beside \"chair\" in a fresh sentence or text and ask again; picking it again shows the error is still there.",
+  "help": "Ch starts with a stop: t then sh, as in t-shair, chair.",
+  "feedback": "Ch starts with a stop: t then sh, as in t-shair, chair.",
+  "source": "to confirm by a Kenyan English teacher: a common classroom error of Kenyan learners of English, written offline (18 Nov 2026), not traced to a study",
+  "status": "draft"
+ },
+ "ENGL.G4.LISTEN.T1_PRONUNCIATION_AND_VO.PRONOUNCE_SOUNDS.M4_PS_V_F": {
+  "skill": "ENGL.G4.LISTEN.T1_PRONUNCIATION_AND_VO.PRONOUNCE_SOUNDS",
+  "error": "Says /f/ for /v/.",
+  "example": {
+   "question": "Say: very",
+   "wrong_answer": "fery",
+   "correct_answer": "very"
+  },
+  "cause": "The voiced /v/ is missing in some home languages, so the voiceless /f/ is used.",
+  "reveals": "Offer \"fery\" beside \"very\" in a fresh sentence or text and ask again; picking it again shows the error is still there.",
+  "help": "Same teeth on lip as f, but switch the voice on: feel the buzz in the throat.",
+  "feedback": "Same teeth on lip as f, but switch the voice on: feel the buzz in the throat.",
+  "source": "to confirm by a Kenyan English teacher: a common classroom error of Kenyan learners of English, written offline (18 Nov 2026), not traced to a study",
+  "status": "draft"
+ },
+ "ENGL.G4.LISTEN.T1_PRONUNCIATION_AND_VO.PRONOUNCE_SOUNDS.M4_PS_EXTRA_VOWEL": {
+  "skill": "ENGL.G4.LISTEN.T1_PRONUNCIATION_AND_VO.PRONOUNCE_SOUNDS",
+  "error": "Adds a vowel between consonants or at the end of a word.",
+  "example": {
+   "question": "Say: film",
+   "wrong_answer": "filim",
+   "correct_answer": "film"
+  },
+  "cause": "Bantu languages build syllables that end in a vowel, so a vowel is slipped into English consonant clusters.",
+  "reveals": "Offer \"filim\" beside \"film\" in a fresh sentence or text and ask again; picking it again shows the error is still there.",
+  "help": "Hold the two consonants together with no sound between: f-i-lm.",
+  "feedback": "Hold the two consonants together with no sound between: f-i-lm.",
+  "source": "to confirm by a Kenyan English teacher: a common classroom error of Kenyan learners of English, written offline (18 Nov 2026), not traced to a study",
+  "status": "draft"
+ },
+ "ENGL.G4.LISTEN.T1_PRONUNCIATION_AND_VO.PRONOUNCE_SOUNDS.M4_PS_SHIP_SHEEP": {
+  "skill": "ENGL.G4.LISTEN.T1_PRONUNCIATION_AND_VO.PRONOUNCE_SOUNDS",
+  "error": "Says the short /ɪ/ and the long /iː/ the same.",
+  "example": {
+   "question": "Say: ship, sheep",
+   "wrong_answer": "ship and ship sound the same",
+   "correct_answer": "ship (short), sheep (long)"
+  },
+  "cause": "Home languages have one i sound, so the length difference is not heard.",
+  "reveals": "Offer \"ship and ship sound the same\" beside \"ship (short), sheep (long)\" in a fresh sentence or text and ask again; picking it again shows the error is still there.",
+  "help": "Short i is quick and relaxed; long ee is longer, lips spread in a smile.",
+  "feedback": "Short i is quick and relaxed; long ee is longer, lips spread in a smile.",
+  "source": "to confirm by a Kenyan English teacher: a common classroom error of Kenyan learners of English, written offline (18 Nov 2026), not traced to a study",
+  "status": "draft"
+ },
+ "ENGL.G4.LISTEN.T1_PRONUNCIATION_AND_VO.FAMILY_VOCAB.M4_FV_COUSIN_BROTHER": {
+  "skill": "ENGL.G4.LISTEN.T1_PRONUNCIATION_AND_VO.FAMILY_VOCAB",
+  "error": "Calls a cousin a brother or sister.",
+  "example": {
+   "question": "My uncle's son is my ...",
+   "wrong_answer": "brother",
+   "correct_answer": "cousin"
+  },
+  "cause": "In many Kenyan families a cousin is called brother or sister, and the home word is carried into English.",
+  "reveals": "Offer \"brother\" beside \"cousin\" in a fresh sentence or text and ask again; picking it again shows the error is still there.",
+  "help": "Your uncle's or aunt's child is your cousin.",
+  "feedback": "Your uncle's or aunt's child is your cousin.",
+  "source": "to confirm by a Kenyan English teacher: a common classroom error of Kenyan learners of English, written offline (18 Nov 2026), not traced to a study",
+  "status": "draft"
+ },
+ "ENGL.G4.LISTEN.T1_PRONUNCIATION_AND_VO.FAMILY_VOCAB.M4_FV_SMALL_BROTHER": {
+  "skill": "ENGL.G4.LISTEN.T1_PRONUNCIATION_AND_VO.FAMILY_VOCAB",
+  "error": "Says small brother or big sister for younger or older.",
+  "example": {
+   "question": "Juma was born after me. He is my ...",
+   "wrong_answer": "small brother",
+   "correct_answer": "younger brother"
+  },
+  "cause": "A direct translation from Kiswahili (kaka mdogo) and common Kenyan English.",
+  "reveals": "Offer \"small brother\" beside \"younger brother\" in a fresh sentence or text and ask again; picking it again shows the error is still there.",
+  "help": "Use younger and older for age; small and big are for size.",
+  "feedback": "Use younger and older for age; small and big are for size.",
+  "source": "to confirm by a Kenyan English teacher: a common classroom error of Kenyan learners of English, written offline (18 Nov 2026), not traced to a study",
+  "status": "draft"
+ },
+ "ENGL.G4.LISTEN.T1_PRONUNCIATION_AND_VO.FAMILY_VOCAB.M4_FV_NIECE_NEPHEW": {
+  "skill": "ENGL.G4.LISTEN.T1_PRONUNCIATION_AND_VO.FAMILY_VOCAB",
+  "error": "Swaps niece and nephew.",
+  "example": {
+   "question": "My sister's daughter is my ...",
+   "wrong_answer": "nephew",
+   "correct_answer": "niece"
+  },
+  "cause": "The two words are learnt together and sound alike.",
+  "reveals": "Offer \"nephew\" beside \"niece\" in a fresh sentence or text and ask again; picking it again shows the error is still there.",
+  "help": "Niece is a girl, nephew is a boy.",
+  "feedback": "Niece is a girl, nephew is a boy.",
+  "source": "to confirm by a Kenyan English teacher: a common classroom error of Kenyan learners of English, written offline (18 Nov 2026), not traced to a study",
+  "status": "draft"
+ },
+ "ENGL.G4.LISTEN.T1_PRONUNCIATION_AND_VO.FAMILY_VOCAB.M4_FV_AUNT_UNCLE": {
+  "skill": "ENGL.G4.LISTEN.T1_PRONUNCIATION_AND_VO.FAMILY_VOCAB",
+  "error": "Calls a father's sister an uncle or a mother's brother an aunt.",
+  "example": {
+   "question": "My mother's brother is my ...",
+   "wrong_answer": "aunt",
+   "correct_answer": "uncle"
+  },
+  "cause": "The child thinks of whose side the person is on, not whether the person is a man or a woman.",
+  "reveals": "Offer \"aunt\" beside \"uncle\" in a fresh sentence or text and ask again; picking it again shows the error is still there.",
+  "help": "An uncle is a man, an aunt is a woman, on either side of the family.",
+  "feedback": "An uncle is a man, an aunt is a woman, on either side of the family.",
+  "source": "to confirm by a Kenyan English teacher: a common classroom error of Kenyan learners of English, written offline (18 Nov 2026), not traced to a study",
+  "status": "draft"
+ },
+ "ENGL.G4.LISTEN.T1_PRONUNCIATION_AND_VO.LISTEN_ATTENTIVE.M4_LA_LAST_HEARD": {
+  "skill": "ENGL.G4.LISTEN.T1_PRONUNCIATION_AND_VO.LISTEN_ATTENTIVE",
+  "error": "Remembers only the last thing heard.",
+  "example": {
+   "question": "Teacher reads: \"Amina fed the goats, then went to the river.\" What did Amina do first?",
+   "wrong_answer": "went to the river",
+   "correct_answer": "fed the goats"
+  },
+  "cause": "The end of the text is freshest, and the order is not held in mind.",
+  "reveals": "Offer \"went to the river\" beside \"fed the goats\" in a fresh sentence or text and ask again; picking it again shows the error is still there.",
+  "help": "Hold up a finger for each event as you listen.",
+  "feedback": "Hold up a finger for each event as you listen.",
+  "source": "to confirm by a Kenyan English teacher: a common classroom error of Kenyan learners of English, written offline (18 Nov 2026), not traced to a study",
+  "status": "draft"
+ },
+ "ENGL.G4.LISTEN.T1_PRONUNCIATION_AND_VO.LISTEN_ATTENTIVE.M4_LA_OWN_DETAIL": {
+  "skill": "ENGL.G4.LISTEN.T1_PRONUNCIATION_AND_VO.LISTEN_ATTENTIVE",
+  "error": "Adds a detail the speaker did not say.",
+  "example": {
+   "question": "Teacher reads: \"Baraka took the bus to Kisumu.\" How did Baraka travel to Kisumu?",
+   "wrong_answer": "by matatu with his mother",
+   "correct_answer": "by bus"
+  },
+  "cause": "The child fills gaps from his or her own life.",
+  "reveals": "Offer \"by matatu with his mother\" beside \"by bus\" in a fresh sentence or text and ask again; picking it again shows the error is still there.",
+  "help": "Say only what the speaker said.",
+  "feedback": "Say only what the speaker said.",
+  "source": "to confirm by a Kenyan English teacher: a common classroom error of Kenyan learners of English, written offline (18 Nov 2026), not traced to a study",
+  "status": "draft"
+ },
+ "ENGL.G4.LISTEN.T1_PRONUNCIATION_AND_VO.LISTEN_ATTENTIVE.M4_LA_WHO_SWAP": {
+  "skill": "ENGL.G4.LISTEN.T1_PRONUNCIATION_AND_VO.LISTEN_ATTENTIVE",
+  "error": "Mixes up who did what.",
+  "example": {
+   "question": "Teacher reads: \"Wanjiru helped Otieno carry the water.\" Who carried the water with help?",
+   "wrong_answer": "Wanjiru",
+   "correct_answer": "Otieno"
+  },
+  "cause": "Two names close together; the child keeps the first name heard.",
+  "reveals": "Offer \"Wanjiru\" beside \"Otieno\" in a fresh sentence or text and ask again; picking it again shows the error is still there.",
+  "help": "Ask who did the action and who received it.",
+  "feedback": "Ask who did the action and who received it.",
+  "source": "to confirm by a Kenyan English teacher: a common classroom error of Kenyan learners of English, written offline (18 Nov 2026), not traced to a study",
+  "status": "draft"
+ },
+ "ENGL.G4.LISTEN.T1_PRONUNCIATION_AND_VO.LISTEN_ATTENTIVE.M4_LA_KEYWORD_GRAB": {
+  "skill": "ENGL.G4.LISTEN.T1_PRONUNCIATION_AND_VO.LISTEN_ATTENTIVE",
+  "error": "Answers with a word heard in the text that does not answer the question.",
+  "example": {
+   "question": "Teacher reads: \"The market opens at seven on Tuesday.\" When does the market open?",
+   "wrong_answer": "Tuesday market",
+   "correct_answer": "at seven on Tuesday"
+  },
+  "cause": "The child grabs a familiar word instead of listening for the question word.",
+  "reveals": "Offer \"Tuesday market\" beside \"at seven on Tuesday\" in a fresh sentence or text and ask again; picking it again shows the error is still there.",
+  "help": "Listen for the question word: when wants a time.",
+  "feedback": "Listen for the question word: when wants a time.",
+  "source": "to confirm by a Kenyan English teacher: a common classroom error of Kenyan learners of English, written offline (18 Nov 2026), not traced to a study",
+  "status": "draft"
+ },
  "ENGL.G4.READIN.T1_EXTENSIVE_READING.DICTIONARY_USE.M_DIC_ALPHA_FIRST_LETTER": {
   "skill": "ENGL.G4.READIN.T1_EXTENSIVE_READING.DICTIONARY_USE",
   "error": "Orders words by the first letter only.",
@@ -131,6 +341,21 @@
    "mark": "plausible, to confirm by a teacher",
    "note": "A usage or reading slip a Kenyan Grade 4 learner could plausibly make. No source and no homework count; a Kenyan English teacher should say whether it comes up in class."
   }
+ },
+ "ENGL.G4.READIN.T1_EXTENSIVE_READING.DICTIONARY_USE.M4_DIC_FIRST_MEANING": {
+  "skill": "ENGL.G4.READIN.T1_EXTENSIVE_READING.DICTIONARY_USE",
+  "error": "Always takes the first meaning listed, even when another fits the sentence.",
+  "example": {
+   "question": "\"The bank of the river was muddy.\" Bank means ...",
+   "wrong_answer": "a place that keeps money",
+   "correct_answer": "the land at the side of a river"
+  },
+  "cause": "The child stops at the first numbered meaning.",
+  "reveals": "Offer \"a place that keeps money\" beside \"the land at the side of a river\" in a fresh sentence or text and ask again; picking it again shows the error is still there.",
+  "help": "Read all the meanings and choose the one that fits the sentence.",
+  "feedback": "Read all the meanings and choose the one that fits the sentence.",
+  "source": "to confirm by a Kenyan English teacher: a common classroom error of Kenyan learners of English, written offline (18 Nov 2026), not traced to a study",
+  "status": "draft"
  },
  "ENGL.G4.LANGUA.T1_WORD_CLASSES_DETERMI.ARTICLES.M_ART_A_BEFORE_VOWEL": {
   "skill": "ENGL.G4.LANGUA.T1_WORD_CLASSES_DETERMI.ARTICLES",
@@ -340,6 +565,126 @@
    "mark": "plausible, to confirm by a teacher",
    "note": "A usage or reading slip a Kenyan Grade 4 learner could plausibly make. No source and no homework count; a Kenyan English teacher should say whether it comes up in class."
   }
+ },
+ "ENGL.G4.WRITIN.T1_FUNCTIONAL_WRITING.FILL_FORM.M4_FF_LOWER_CASE": {
+  "skill": "ENGL.G4.WRITIN.T1_FUNCTIONAL_WRITING.FILL_FORM",
+  "error": "Writes in small letters where the form asks for capitals.",
+  "example": {
+   "question": "NAME (IN CAPITALS): ...",
+   "wrong_answer": "amina wekesa",
+   "correct_answer": "AMINA WEKESA"
+  },
+  "cause": "The instruction in brackets is not read.",
+  "reveals": "Offer \"amina wekesa\" beside \"AMINA WEKESA\" in a fresh sentence or text and ask again; picking it again shows the error is still there.",
+  "help": "Read the instruction in brackets before writing.",
+  "feedback": "Read the instruction in brackets before writing.",
+  "source": "to confirm by a Kenyan English teacher: a common classroom error of Kenyan learners of English, written offline (18 Nov 2026), not traced to a study",
+  "status": "draft"
+ },
+ "ENGL.G4.WRITIN.T1_FUNCTIONAL_WRITING.FILL_FORM.M4_FF_EMPTY_BOX": {
+  "skill": "ENGL.G4.WRITIN.T1_FUNCTIONAL_WRITING.FILL_FORM",
+  "error": "Leaves a required box empty.",
+  "example": {
+   "question": "A form has Class: [ ]. What do you write?",
+   "wrong_answer": "nothing",
+   "correct_answer": "Grade 4 East"
+  },
+  "cause": "The child skips boxes he or she is unsure of.",
+  "reveals": "Offer \"nothing\" beside \"Grade 4 East\" in a fresh sentence or text and ask again; picking it again shows the error is still there.",
+  "help": "Fill every box; write N/A only if it does not apply.",
+  "feedback": "Fill every box; write N/A only if it does not apply.",
+  "source": "to confirm by a Kenyan English teacher: a common classroom error of Kenyan learners of English, written offline (18 Nov 2026), not traced to a study",
+  "status": "draft"
+ },
+ "ENGL.G4.WRITIN.T1_FUNCTIONAL_WRITING.FILL_FORM.M4_FF_SIGN_AS_NAME": {
+  "skill": "ENGL.G4.WRITIN.T1_FUNCTIONAL_WRITING.FILL_FORM",
+  "error": "Writes the full name in print in the signature box.",
+  "example": {
+   "question": "What goes in the Signature box?",
+   "wrong_answer": "AMINA WEKESA (printed)",
+   "correct_answer": "Amina's own signature"
+  },
+  "cause": "The child does not know what a signature is.",
+  "reveals": "Offer \"AMINA WEKESA (printed)\" beside \"Amina's own signature\" in a fresh sentence or text and ask again; picking it again shows the error is still there.",
+  "help": "A signature is your own special way of writing your name.",
+  "feedback": "A signature is your own special way of writing your name.",
+  "source": "to confirm by a Kenyan English teacher: a common classroom error of Kenyan learners of English, written offline (18 Nov 2026), not traced to a study",
+  "status": "draft"
+ },
+ "ENGL.G4.WRITIN.T1_FUNCTIONAL_WRITING.FILL_FORM.M4_FF_OUTSIDE_BOX": {
+  "skill": "ENGL.G4.WRITIN.T1_FUNCTIONAL_WRITING.FILL_FORM",
+  "error": "Writes outside the box or over the lines.",
+  "example": {
+   "question": "The box for School is small. How do you write?",
+   "wrong_answer": "big letters over the lines",
+   "correct_answer": "small, neat letters inside the box"
+  },
+  "cause": "The child writes as in an exercise book.",
+  "reveals": "Offer \"big letters over the lines\" beside \"small, neat letters inside the box\" in a fresh sentence or text and ask again; picking it again shows the error is still there.",
+  "help": "Keep your writing inside the box.",
+  "feedback": "Keep your writing inside the box.",
+  "source": "to confirm by a Kenyan English teacher: a common classroom error of Kenyan learners of English, written offline (18 Nov 2026), not traced to a study",
+  "status": "draft"
+ },
+ "ENGL.G4.LISTEN.T2_PRONUNCIATION_AND_VO.DISCRIMINATE_SOUNDS.M4_DS_SHIP_SHEEP": {
+  "skill": "ENGL.G4.LISTEN.T2_PRONUNCIATION_AND_VO.DISCRIMINATE_SOUNDS",
+  "error": "Cannot hear the short and long i apart.",
+  "example": {
+   "question": "Teacher says \"sheep\". Which picture: a ship or a sheep?",
+   "wrong_answer": "ship",
+   "correct_answer": "sheep"
+  },
+  "cause": "One i sound in the home language.",
+  "reveals": "Offer \"ship\" beside \"sheep\" in a fresh sentence or text and ask again; picking it again shows the error is still there.",
+  "help": "Listen for the long sound: sheep is longer.",
+  "feedback": "Listen for the long sound: sheep is longer.",
+  "source": "to confirm by a Kenyan English teacher: a common classroom error of Kenyan learners of English, written offline (18 Nov 2026), not traced to a study",
+  "status": "draft"
+ },
+ "ENGL.G4.LISTEN.T2_PRONUNCIATION_AND_VO.DISCRIMINATE_SOUNDS.M4_DS_L_R": {
+  "skill": "ENGL.G4.LISTEN.T2_PRONUNCIATION_AND_VO.DISCRIMINATE_SOUNDS",
+  "error": "Cannot hear /l/ and /r/ apart.",
+  "example": {
+   "question": "Teacher says \"right\". Light or right?",
+   "wrong_answer": "light",
+   "correct_answer": "right"
+  },
+  "cause": "L and r are one sound in some home languages.",
+  "reveals": "Offer \"light\" beside \"right\" in a fresh sentence or text and ask again; picking it again shows the error is still there.",
+  "help": "Watch the tongue: up for l, curled back for r.",
+  "feedback": "Watch the tongue: up for l, curled back for r.",
+  "source": "to confirm by a Kenyan English teacher: a common classroom error of Kenyan learners of English, written offline (18 Nov 2026), not traced to a study",
+  "status": "draft"
+ },
+ "ENGL.G4.LISTEN.T2_PRONUNCIATION_AND_VO.DISCRIMINATE_SOUNDS.M4_DS_F_V": {
+  "skill": "ENGL.G4.LISTEN.T2_PRONUNCIATION_AND_VO.DISCRIMINATE_SOUNDS",
+  "error": "Cannot hear /f/ and /v/ apart.",
+  "example": {
+   "question": "Teacher says \"van\". Fan or van?",
+   "wrong_answer": "fan",
+   "correct_answer": "van"
+  },
+  "cause": "No voiced /v/ in the home language.",
+  "reveals": "Offer \"fan\" beside \"van\" in a fresh sentence or text and ask again; picking it again shows the error is still there.",
+  "help": "Put a hand on your throat: v buzzes, f does not.",
+  "feedback": "Put a hand on your throat: v buzzes, f does not.",
+  "source": "to confirm by a Kenyan English teacher: a common classroom error of Kenyan learners of English, written offline (18 Nov 2026), not traced to a study",
+  "status": "draft"
+ },
+ "ENGL.G4.LISTEN.T2_PRONUNCIATION_AND_VO.DISCRIMINATE_SOUNDS.M4_DS_TH_T": {
+  "skill": "ENGL.G4.LISTEN.T2_PRONUNCIATION_AND_VO.DISCRIMINATE_SOUNDS",
+  "error": "Hears /θ/ (th) as /t/ or /s/.",
+  "example": {
+   "question": "Teacher says \"thin\". Thin, tin or sin?",
+   "wrong_answer": "tin",
+   "correct_answer": "thin"
+  },
+  "cause": "Th is rare in home languages and is heard as the nearest sound.",
+  "reveals": "Offer \"tin\" beside \"thin\" in a fresh sentence or text and ask again; picking it again shows the error is still there.",
+  "help": "Th has the tongue between the teeth: look at the speaker's mouth.",
+  "feedback": "Th has the tongue between the teeth: look at the speaker's mouth.",
+  "source": "to confirm by a Kenyan English teacher: a common classroom error of Kenyan learners of English, written offline (18 Nov 2026), not traced to a study",
+  "status": "draft"
  },
  "ENGL.G4.READIN.T2_INTENSIVE_READING.FACTUAL_QUESTIONS.M_FACT_NEARBY_DETAIL": {
   "skill": "ENGL.G4.READIN.T2_INTENSIVE_READING.FACTUAL_QUESTIONS",
@@ -607,6 +952,21 @@
    "note": "A usage or reading slip a Kenyan Grade 4 learner could plausibly make. No source and no homework count; a Kenyan English teacher should say whether it comes up in class."
   }
  },
+ "ENGL.G4.READIN.T2_INTENSIVE_READING.INFERENCE_QUESTIONS.M4_INFER_FEELING_GUESS": {
+  "skill": "ENGL.G4.READIN.T2_INTENSIVE_READING.INFERENCE_QUESTIONS",
+  "error": "Names a feeling with no clue in the text to support it.",
+  "example": {
+   "question": "\"Juma threw his bag down and slammed the door.\" How did Juma feel?",
+   "wrong_answer": "tired",
+   "correct_answer": "angry"
+  },
+  "cause": "The child picks a feeling from his or her own day.",
+  "reveals": "Offer \"tired\" beside \"angry\" in a fresh sentence or text and ask again; picking it again shows the error is still there.",
+  "help": "Find the clue: throwing and slamming show anger.",
+  "feedback": "Find the clue: throwing and slamming show anger.",
+  "source": "to confirm by a Kenyan English teacher: a common classroom error of Kenyan learners of English, written offline (18 Nov 2026), not traced to a study",
+  "status": "draft"
+ },
  "ENGL.G4.LANGUA.T2_WORD_CLASSES_NOUNS.PLURALS_REGULAR.M_PLR_NO_ES": {
   "skill": "ENGL.G4.LANGUA.T2_WORD_CLASSES_NOUNS.PLURALS_REGULAR",
   "error": "Adds only -s to a word that ends in s, x, ch or sh.",
@@ -778,6 +1138,66 @@
    "source": "Marcus et al. (1992): children regularise nouns that keep one form (sheeps)."
   }
  },
+ "ENGL.G4.WRITIN.T2_CREATIVE_WRITING.OPEN_COMPOSITION.M4_OC_OFF_TOPIC": {
+  "skill": "ENGL.G4.WRITIN.T2_CREATIVE_WRITING.OPEN_COMPOSITION",
+  "error": "Writes ideas that leave the topic.",
+  "example": {
+   "question": "Topic: My best day. Which sentence fits?",
+   "wrong_answer": "Cows give us milk.",
+   "correct_answer": "On my best day, my father took me to the show."
+  },
+  "cause": "The child writes whatever he or she knows how to spell.",
+  "reveals": "Offer \"Cows give us milk.\" beside \"On my best day, my father took me to the show.\" in a fresh sentence or text and ask again; picking it again shows the error is still there.",
+  "help": "Check every sentence against the topic.",
+  "feedback": "Check every sentence against the topic.",
+  "source": "to confirm by a Kenyan English teacher: a common classroom error of Kenyan learners of English, written offline (18 Nov 2026), not traced to a study",
+  "status": "draft"
+ },
+ "ENGL.G4.WRITIN.T2_CREATIVE_WRITING.OPEN_COMPOSITION.M4_OC_AND_THEN": {
+  "skill": "ENGL.G4.WRITIN.T2_CREATIVE_WRITING.OPEN_COMPOSITION",
+  "error": "Joins every sentence with and then.",
+  "example": {
+   "question": "Improve: We woke up and then we ate and then we went.",
+   "wrong_answer": "We woke up and then we ate and then we went.",
+   "correct_answer": "We woke up early. After breakfast, we left for church."
+  },
+  "cause": "And then is the only time word the child knows.",
+  "reveals": "Offer \"We woke up and then we ate and then we went.\" beside \"We woke up early. After breakfast, we left for church.\" in a fresh sentence or text and ask again; picking it again shows the error is still there.",
+  "help": "Use first, after that, later and finally.",
+  "feedback": "Use first, after that, later and finally.",
+  "source": "to confirm by a Kenyan English teacher: a common classroom error of Kenyan learners of English, written offline (18 Nov 2026), not traced to a study",
+  "status": "draft"
+ },
+ "ENGL.G4.WRITIN.T2_CREATIVE_WRITING.OPEN_COMPOSITION.M4_OC_LIST": {
+  "skill": "ENGL.G4.WRITIN.T2_CREATIVE_WRITING.OPEN_COMPOSITION",
+  "error": "Writes a list of unconnected sentences.",
+  "example": {
+   "question": "Which is a composition, not a list?",
+   "wrong_answer": "I like dogs. Rain is wet. My name is Otieno.",
+   "correct_answer": "I love our dog Simba. Every evening he waits for me at the gate."
+  },
+  "cause": "Each sentence is written alone.",
+  "reveals": "Offer \"I like dogs. Rain is wet. My name is Otieno.\" beside \"I love our dog Simba. Every evening he waits for me at the gate.\" in a fresh sentence or text and ask again; picking it again shows the error is still there.",
+  "help": "Every sentence should follow from the one before.",
+  "feedback": "Every sentence should follow from the one before.",
+  "source": "to confirm by a Kenyan English teacher: a common classroom error of Kenyan learners of English, written offline (18 Nov 2026), not traced to a study",
+  "status": "draft"
+ },
+ "ENGL.G4.WRITIN.T2_CREATIVE_WRITING.OPEN_COMPOSITION.M4_OC_NO_ENDING": {
+  "skill": "ENGL.G4.WRITIN.T2_CREATIVE_WRITING.OPEN_COMPOSITION",
+  "error": "Stops suddenly with no ending.",
+  "example": {
+   "question": "What is missing: \"We went to the river. We saw a crocodile.\"",
+   "wrong_answer": "nothing",
+   "correct_answer": "an ending that tells what happened in the end"
+  },
+  "cause": "The child stops when the page or the time runs out.",
+  "reveals": "Offer \"nothing\" beside \"an ending that tells what happened in the end\" in a fresh sentence or text and ask again; picking it again shows the error is still there.",
+  "help": "Plan the ending before you start.",
+  "feedback": "Plan the ending before you start.",
+  "source": "to confirm by a Kenyan English teacher: a common classroom error of Kenyan learners of English, written offline (18 Nov 2026), not traced to a study",
+  "status": "draft"
+ },
  "ENGL.G4.LISTEN.T3_PRONUNCIATION_AND_VO.POLITE_WORDS.M_POL_DEMAND": {
   "skill": "ENGL.G4.LISTEN.T3_PRONUNCIATION_AND_VO.POLITE_WORDS",
   "error": "Makes a request as a demand.",
@@ -930,6 +1350,66 @@
    "note": "A usage or reading slip a Kenyan Grade 4 learner could plausibly make. No source and no homework count; a Kenyan English teacher should say whether it comes up in class."
   }
  },
+ "ENGL.G4.WRITIN.T3_MECHANICS_OF_WRITING.HANDWRITING.M4_HW_OFF_LINE": {
+  "skill": "ENGL.G4.WRITIN.T3_MECHANICS_OF_WRITING.HANDWRITING",
+  "error": "Letters float above or sink below the line.",
+  "example": {
+   "question": "Copy: Our school is clean.",
+   "wrong_answer": "letters bounce above and below the line",
+   "correct_answer": "every letter sits on the line"
+  },
+  "cause": "The child does not use the ruled line as a base.",
+  "reveals": "Offer \"letters bounce above and below the line\" beside \"every letter sits on the line\" in a fresh sentence or text and ask again; picking it again shows the error is still there.",
+  "help": "Sit every letter on the line, like people on a bench.",
+  "feedback": "Sit every letter on the line, like people on a bench.",
+  "source": "to confirm by a Kenyan English teacher: a common classroom error of Kenyan learners of English, written offline (18 Nov 2026), not traced to a study",
+  "status": "draft"
+ },
+ "ENGL.G4.WRITIN.T3_MECHANICS_OF_WRITING.HANDWRITING.M4_HW_MIXED_CASE": {
+  "skill": "ENGL.G4.WRITIN.T3_MECHANICS_OF_WRITING.HANDWRITING",
+  "error": "Mixes capital and small letters inside words.",
+  "example": {
+   "question": "Copy: bread",
+   "wrong_answer": "brEaD",
+   "correct_answer": "bread"
+  },
+  "cause": "Capital forms of some letters are easier and slip in.",
+  "reveals": "Offer \"brEaD\" beside \"bread\" in a fresh sentence or text and ask again; picking it again shows the error is still there.",
+  "help": "Small letters inside a word; a capital only at the start of a name or sentence.",
+  "feedback": "Small letters inside a word; a capital only at the start of a name or sentence.",
+  "source": "to confirm by a Kenyan English teacher: a common classroom error of Kenyan learners of English, written offline (18 Nov 2026), not traced to a study",
+  "status": "draft"
+ },
+ "ENGL.G4.WRITIN.T3_MECHANICS_OF_WRITING.HANDWRITING.M4_HW_B_D": {
+  "skill": "ENGL.G4.WRITIN.T3_MECHANICS_OF_WRITING.HANDWRITING",
+  "error": "Reverses b and d.",
+  "example": {
+   "question": "Write: bed",
+   "wrong_answer": "deb",
+   "correct_answer": "bed"
+  },
+  "cause": "B and d are mirror images and are confused.",
+  "reveals": "Offer \"deb\" beside \"bed\" in a fresh sentence or text and ask again; picking it again shows the error is still there.",
+  "help": "B: bat then ball; d: drum then stick.",
+  "feedback": "B: bat then ball; d: drum then stick.",
+  "source": "to confirm by a Kenyan English teacher: a common classroom error of Kenyan learners of English, written offline (18 Nov 2026), not traced to a study",
+  "status": "draft"
+ },
+ "ENGL.G4.WRITIN.T3_MECHANICS_OF_WRITING.HANDWRITING.M4_HW_NO_SPACES": {
+  "skill": "ENGL.G4.WRITIN.T3_MECHANICS_OF_WRITING.HANDWRITING",
+  "error": "Leaves no space between words.",
+  "example": {
+   "question": "Copy: We like reading.",
+   "wrong_answer": "Welikereading.",
+   "correct_answer": "We like reading."
+  },
+  "cause": "The child copies letter by letter, not word by word.",
+  "reveals": "Offer \"Welikereading.\" beside \"We like reading.\" in a fresh sentence or text and ask again; picking it again shows the error is still there.",
+  "help": "Leave a finger space between words.",
+  "feedback": "Leave a finger space between words.",
+  "source": "to confirm by a Kenyan English teacher: a common classroom error of Kenyan learners of English, written offline (18 Nov 2026), not traced to a study",
+  "status": "draft"
+ },
  "ENGL.G4.LISTEN.T4_PRONUNCIATION_AND_VO.FIRST_AID_WORDS.M_FA_NEAR_MEANING": {
   "skill": "ENGL.G4.LISTEN.T4_PRONUNCIATION_AND_VO.FIRST_AID_WORDS",
   "error": "Picks a first aid word that is near in meaning but wrong.",
@@ -987,6 +1467,81 @@
    "note": "A usage or reading slip a Kenyan Grade 4 learner could plausibly make. No source and no homework count; a Kenyan English teacher should say whether it comes up in class."
   }
  },
+ "ENGL.G4.LISTEN.T4_PRONUNCIATION_AND_VO.WORD_STRESS.M4_WS_EQUAL": {
+  "skill": "ENGL.G4.LISTEN.T4_PRONUNCIATION_AND_VO.WORD_STRESS",
+  "error": "Gives every syllable the same strength.",
+  "example": {
+   "question": "Say: hospital",
+   "wrong_answer": "HOS-PI-TAL (all equal)",
+   "correct_answer": "HOS-pi-tal"
+  },
+  "cause": "Kenyan languages are syllable-timed, so each syllable gets equal weight.",
+  "reveals": "Offer \"HOS-PI-TAL (all equal)\" beside \"HOS-pi-tal\" in a fresh sentence or text and ask again; picking it again shows the error is still there.",
+  "help": "One syllable is strong; the others are short and weak.",
+  "feedback": "One syllable is strong; the others are short and weak.",
+  "source": "to confirm by a Kenyan English teacher: a common classroom error of Kenyan learners of English, written offline (18 Nov 2026), not traced to a study",
+  "status": "draft"
+ },
+ "ENGL.G4.LISTEN.T4_PRONUNCIATION_AND_VO.WORD_STRESS.M4_WS_SECOND": {
+  "skill": "ENGL.G4.LISTEN.T4_PRONUNCIATION_AND_VO.WORD_STRESS",
+  "error": "Stresses the second syllable.",
+  "example": {
+   "question": "Say: accident",
+   "wrong_answer": "ac-CI-dent",
+   "correct_answer": "AC-ci-dent"
+  },
+  "cause": "Stress is placed on the next-to-last syllable, as in Kiswahili.",
+  "reveals": "Offer \"ac-CI-dent\" beside \"AC-ci-dent\" in a fresh sentence or text and ask again; picking it again shows the error is still there.",
+  "help": "Clap the strong part: AC-ci-dent.",
+  "feedback": "Clap the strong part: AC-ci-dent.",
+  "source": "to confirm by a Kenyan English teacher: a common classroom error of Kenyan learners of English, written offline (18 Nov 2026), not traced to a study",
+  "status": "draft"
+ },
+ "ENGL.G4.LISTEN.T4_PRONUNCIATION_AND_VO.WORD_STRESS.M4_WS_LAST": {
+  "skill": "ENGL.G4.LISTEN.T4_PRONUNCIATION_AND_VO.WORD_STRESS",
+  "error": "Stresses the last syllable.",
+  "example": {
+   "question": "Say: bandage",
+   "wrong_answer": "ban-DAGE",
+   "correct_answer": "BAN-dage"
+  },
+  "cause": "The child stresses the syllable that looks longest in spelling.",
+  "reveals": "Offer \"ban-DAGE\" beside \"BAN-dage\" in a fresh sentence or text and ask again; picking it again shows the error is still there.",
+  "help": "Most two-syllable nouns are strong at the start.",
+  "feedback": "Most two-syllable nouns are strong at the start.",
+  "source": "to confirm by a Kenyan English teacher: a common classroom error of Kenyan learners of English, written offline (18 Nov 2026), not traced to a study",
+  "status": "draft"
+ },
+ "ENGL.G4.LISTEN.T4_PRONUNCIATION_AND_VO.WORD_STRESS.M4_WS_SPELLING_VOWEL": {
+  "skill": "ENGL.G4.LISTEN.T4_PRONUNCIATION_AND_VO.WORD_STRESS",
+  "error": "Says the weak vowel fully as it is spelt.",
+  "example": {
+   "question": "Say: ambulance",
+   "wrong_answer": "am-bu-LANCE with a full a",
+   "correct_answer": "AM-bju-lens"
+  },
+  "cause": "Reading by spelling: every vowel is given its letter sound.",
+  "reveals": "Offer \"am-bu-LANCE with a full a\" beside \"AM-bju-lens\" in a fresh sentence or text and ask again; picking it again shows the error is still there.",
+  "help": "Weak syllables are quick and soft.",
+  "feedback": "Weak syllables are quick and soft.",
+  "source": "to confirm by a Kenyan English teacher: a common classroom error of Kenyan learners of English, written offline (18 Nov 2026), not traced to a study",
+  "status": "draft"
+ },
+ "ENGL.G4.LISTEN.T4_PRONUNCIATION_AND_VO.FIRST_AID_WORDS.M4_FA_BANDAGE_PLASTER": {
+  "skill": "ENGL.G4.LISTEN.T4_PRONUNCIATION_AND_VO.FIRST_AID_WORDS",
+  "error": "Calls a small sticky plaster a bandage, or a long cloth bandage a plaster.",
+  "example": {
+   "question": "You cut your finger a little. You put on a ...",
+   "wrong_answer": "bandage",
+   "correct_answer": "plaster"
+  },
+  "cause": "Both cover a wound and the names are swapped.",
+  "reveals": "Offer \"bandage\" beside \"plaster\" in a fresh sentence or text and ask again; picking it again shows the error is still there.",
+  "help": "A plaster sticks on a small cut; a bandage is wrapped round.",
+  "feedback": "A plaster sticks on a small cut; a bandage is wrapped round.",
+  "source": "to confirm by a Kenyan English teacher: a common classroom error of Kenyan learners of English, written offline (18 Nov 2026), not traced to a study",
+  "status": "draft"
+ },
  "ENGL.G4.READIN.T4_INTENSIVE_READING_VI.VISUALS.M_VIS_WRONG_ROW": {
   "skill": "ENGL.G4.READIN.T4_INTENSIVE_READING_VI.VISUALS",
   "error": "Reads the wrong row or column of a table.",
@@ -1043,6 +1598,21 @@
    "mark": "plausible, to confirm by a teacher",
    "note": "A usage or reading slip a Kenyan Grade 4 learner could plausibly make. No source and no homework count; a Kenyan English teacher should say whether it comes up in class."
   }
+ },
+ "ENGL.G4.READIN.T4_INTENSIVE_READING_VI.VISUALS.M4_VIS_TITLE_IGNORED": {
+  "skill": "ENGL.G4.READIN.T4_INTENSIVE_READING_VI.VISUALS",
+  "error": "Answers without reading the title or the key.",
+  "example": {
+   "question": "A chart titled \"Clinic hours\" shows 8 to 5. What does 8 to 5 tell you?",
+   "wrong_answer": "the price",
+   "correct_answer": "when the clinic is open"
+  },
+  "cause": "The child goes straight to the numbers.",
+  "reveals": "Offer \"the price\" beside \"when the clinic is open\" in a fresh sentence or text and ask again; picking it again shows the error is still there.",
+  "help": "Read the title first: it tells you what the numbers mean.",
+  "feedback": "Read the title first: it tells you what the numbers mean.",
+  "source": "to confirm by a Kenyan English teacher: a common classroom error of Kenyan learners of English, written offline (18 Nov 2026), not traced to a study",
+  "status": "draft"
  },
  "ENGL.G4.LANGUA.T4_WORD_CLASSES_PRONOUN.PERSONAL_PRONOUNS.M_PRO_SUBJECT_AS_OBJECT": {
   "skill": "ENGL.G4.LANGUA.T4_WORD_CLASSES_PRONOUN.PERSONAL_PRONOUNS",
@@ -1272,6 +1842,126 @@
    "note": "A usage or reading slip a Kenyan Grade 4 learner could plausibly make. No source and no homework count; a Kenyan English teacher should say whether it comes up in class."
   }
  },
+ "ENGL.G4.WRITIN.T4_FUNCTIONAL_WRITING.FRIENDLY_LETTER.M4_FL_NO_ADDRESS": {
+  "skill": "ENGL.G4.WRITIN.T4_FUNCTIONAL_WRITING.FRIENDLY_LETTER",
+  "error": "Leaves out the address and date at the top.",
+  "example": {
+   "question": "What comes first in a friendly letter?",
+   "wrong_answer": "Dear Juma,",
+   "correct_answer": "my address and the date, top right"
+  },
+  "cause": "The child starts with the greeting as in speech.",
+  "reveals": "Offer \"Dear Juma,\" beside \"my address and the date, top right\" in a fresh sentence or text and ask again; picking it again shows the error is still there.",
+  "help": "Address and date first, top right.",
+  "feedback": "Address and date first, top right.",
+  "source": "to confirm by a Kenyan English teacher: a common classroom error of Kenyan learners of English, written offline (18 Nov 2026), not traced to a study",
+  "status": "draft"
+ },
+ "ENGL.G4.WRITIN.T4_FUNCTIONAL_WRITING.FRIENDLY_LETTER.M4_FL_OFFICIAL_CLOSE": {
+  "skill": "ENGL.G4.WRITIN.T4_FUNCTIONAL_WRITING.FRIENDLY_LETTER",
+  "error": "Closes a friendly letter like an official letter.",
+  "example": {
+   "question": "Best closing for a letter to your cousin?",
+   "wrong_answer": "Yours faithfully,",
+   "correct_answer": "Your loving cousin,"
+  },
+  "cause": "Official letter phrases from older siblings are copied.",
+  "reveals": "Offer \"Yours faithfully,\" beside \"Your loving cousin,\" in a fresh sentence or text and ask again; picking it again shows the error is still there.",
+  "help": "Friendly letters close with Your friend or Your loving cousin.",
+  "feedback": "Friendly letters close with Your friend or Your loving cousin.",
+  "source": "to confirm by a Kenyan English teacher: a common classroom error of Kenyan learners of English, written offline (18 Nov 2026), not traced to a study",
+  "status": "draft"
+ },
+ "ENGL.G4.WRITIN.T4_FUNCTIONAL_WRITING.FRIENDLY_LETTER.M4_FL_ONE_BLOCK": {
+  "skill": "ENGL.G4.WRITIN.T4_FUNCTIONAL_WRITING.FRIENDLY_LETTER",
+  "error": "Writes the body as one block with no paragraphs.",
+  "example": {
+   "question": "How should the body be set out?",
+   "wrong_answer": "one long block",
+   "correct_answer": "short paragraphs, one idea each"
+  },
+  "cause": "Paragraphs are not yet used in letters.",
+  "reveals": "Offer \"one long block\" beside \"short paragraphs, one idea each\" in a fresh sentence or text and ask again; picking it again shows the error is still there.",
+  "help": "Start a new paragraph for each new idea.",
+  "feedback": "Start a new paragraph for each new idea.",
+  "source": "to confirm by a Kenyan English teacher: a common classroom error of Kenyan learners of English, written offline (18 Nov 2026), not traced to a study",
+  "status": "draft"
+ },
+ "ENGL.G4.WRITIN.T4_FUNCTIONAL_WRITING.FRIENDLY_LETTER.M4_FL_NO_NAME": {
+  "skill": "ENGL.G4.WRITIN.T4_FUNCTIONAL_WRITING.FRIENDLY_LETTER",
+  "error": "Forgets to write his or her name at the end.",
+  "example": {
+   "question": "What comes after \"Your friend,\"?",
+   "wrong_answer": "nothing",
+   "correct_answer": "my name"
+  },
+  "cause": "The child thinks the reader knows who wrote it.",
+  "reveals": "Offer \"nothing\" beside \"my name\" in a fresh sentence or text and ask again; picking it again shows the error is still there.",
+  "help": "Always end with your name under the closing.",
+  "feedback": "Always end with your name under the closing.",
+  "source": "to confirm by a Kenyan English teacher: a common classroom error of Kenyan learners of English, written offline (18 Nov 2026), not traced to a study",
+  "status": "draft"
+ },
+ "ENGL.G4.WRITIN.T4_FUNCTIONAL_WRITING.SMS_MESSAGE.M4_SM_NO_NAME": {
+  "skill": "ENGL.G4.WRITIN.T4_FUNCTIONAL_WRITING.SMS_MESSAGE",
+  "error": "Sends an SMS without saying who it is from.",
+  "example": {
+   "question": "You use your mother's phone to tell your teacher you are sick. What must the SMS include?",
+   "wrong_answer": "I am sick.",
+   "correct_answer": "Good morning Teacher. This is Amina Grade 4. I am sick today."
+  },
+  "cause": "The child assumes the reader knows the phone owner.",
+  "reveals": "Offer \"I am sick.\" beside \"Good morning Teacher. This is Amina Grade 4. I am sick today.\" in a fresh sentence or text and ask again; picking it again shows the error is still there.",
+  "help": "Say who you are in the message.",
+  "feedback": "Say who you are in the message.",
+  "source": "to confirm by a Kenyan English teacher: a common classroom error of Kenyan learners of English, written offline (18 Nov 2026), not traced to a study",
+  "status": "draft"
+ },
+ "ENGL.G4.WRITIN.T4_FUNCTIONAL_WRITING.SMS_MESSAGE.M4_SM_TEXTSPEAK": {
+  "skill": "ENGL.G4.WRITIN.T4_FUNCTIONAL_WRITING.SMS_MESSAGE",
+  "error": "Uses short forms the reader may not understand.",
+  "example": {
+   "question": "Which SMS is clear for your grandfather?",
+   "wrong_answer": "Gud mrng, cum 2 skul 2mrw",
+   "correct_answer": "Good morning. Please come to school tomorrow."
+  },
+  "cause": "Text-speak seen on phones is copied.",
+  "reveals": "Offer \"Gud mrng, cum 2 skul 2mrw\" beside \"Good morning. Please come to school tomorrow.\" in a fresh sentence or text and ask again; picking it again shows the error is still there.",
+  "help": "Write words in full for an older reader.",
+  "feedback": "Write words in full for an older reader.",
+  "source": "to confirm by a Kenyan English teacher: a common classroom error of Kenyan learners of English, written offline (18 Nov 2026), not traced to a study",
+  "status": "draft"
+ },
+ "ENGL.G4.WRITIN.T4_FUNCTIONAL_WRITING.SMS_MESSAGE.M4_SM_LETTER_FORMAT": {
+  "skill": "ENGL.G4.WRITIN.T4_FUNCTIONAL_WRITING.SMS_MESSAGE",
+  "error": "Writes an SMS like a letter with addresses.",
+  "example": {
+   "question": "Which is an SMS?",
+   "wrong_answer": "P.O. Box 12, Kitale. Dear Mum, ...",
+   "correct_answer": "Mum, I have reached school safely. Amina"
+  },
+  "cause": "The child applies the letter format to every message.",
+  "reveals": "Offer \"P.O. Box 12, Kitale. Dear Mum, ...\" beside \"Mum, I have reached school safely. Amina\" in a fresh sentence or text and ask again; picking it again shows the error is still there.",
+  "help": "An SMS is short: greeting, message, name.",
+  "feedback": "An SMS is short: greeting, message, name.",
+  "source": "to confirm by a Kenyan English teacher: a common classroom error of Kenyan learners of English, written offline (18 Nov 2026), not traced to a study",
+  "status": "draft"
+ },
+ "ENGL.G4.WRITIN.T4_FUNCTIONAL_WRITING.SMS_MESSAGE.M4_SM_MISSING_DETAIL": {
+  "skill": "ENGL.G4.WRITIN.T4_FUNCTIONAL_WRITING.SMS_MESSAGE",
+  "error": "Leaves out what the reader needs to know or do.",
+  "example": {
+   "question": "SMS to say the meeting has moved. What is missing: \"The meeting has moved.\"?",
+   "wrong_answer": "nothing",
+   "correct_answer": "the new day and time"
+  },
+  "cause": "The child knows the details and forgets the reader does not.",
+  "reveals": "Offer \"nothing\" beside \"the new day and time\" in a fresh sentence or text and ask again; picking it again shows the error is still there.",
+  "help": "Ask: what does the reader need to know?",
+  "feedback": "Ask: what does the reader need to know?",
+  "source": "to confirm by a Kenyan English teacher: a common classroom error of Kenyan learners of English, written offline (18 Nov 2026), not traced to a study",
+  "status": "draft"
+ },
  "ENGL.G4.LISTEN.T5_PRONUNCIATION_AND_VO.NUTRITION_WORDS.M_NUT_NEAR_MEANING": {
   "skill": "ENGL.G4.LISTEN.T5_PRONUNCIATION_AND_VO.NUTRITION_WORDS",
   "error": "Picks a food word that is near in meaning but wrong.",
@@ -1329,6 +2019,81 @@
    "why": "Trap option written to contrast with the right answer; unlikely as a held idea."
   }
  },
+ "ENGL.G4.LISTEN.T5_PRONUNCIATION_AND_VO.LIKE_BUT_PATTERN.M4_LB_DO_NOT_S": {
+  "skill": "ENGL.G4.LISTEN.T5_PRONUNCIATION_AND_VO.LIKE_BUT_PATTERN",
+  "error": "Keeps -s or a past form after do not.",
+  "example": {
+   "question": "I like rice but I do not ... fish. (like)",
+   "wrong_answer": "likes",
+   "correct_answer": "like"
+  },
+  "cause": "The -s rule for he and she is carried into every sentence.",
+  "reveals": "Offer \"likes\" beside \"like\" in a fresh sentence or text and ask again; picking it again shows the error is still there.",
+  "help": "After do not, the verb is plain: do not like.",
+  "feedback": "After do not, the verb is plain: do not like.",
+  "source": "to confirm by a Kenyan English teacher: a common classroom error of Kenyan learners of English, written offline (18 Nov 2026), not traced to a study",
+  "status": "draft"
+ },
+ "ENGL.G4.LISTEN.T5_PRONUNCIATION_AND_VO.LIKE_BUT_PATTERN.M4_LB_AND_FOR_BUT": {
+  "skill": "ENGL.G4.LISTEN.T5_PRONUNCIATION_AND_VO.LIKE_BUT_PATTERN",
+  "error": "Joins a like and a dislike with and.",
+  "example": {
+   "question": "I like mangoes ... I do not like pawpaws.",
+   "wrong_answer": "and",
+   "correct_answer": "but"
+  },
+  "cause": "And is the joining word the child uses most.",
+  "reveals": "Offer \"and\" beside \"but\" in a fresh sentence or text and ask again; picking it again shows the error is still there.",
+  "help": "But joins two ideas that go different ways.",
+  "feedback": "But joins two ideas that go different ways.",
+  "source": "to confirm by a Kenyan English teacher: a common classroom error of Kenyan learners of English, written offline (18 Nov 2026), not traced to a study",
+  "status": "draft"
+ },
+ "ENGL.G4.LISTEN.T5_PRONUNCIATION_AND_VO.LIKE_BUT_PATTERN.M4_LB_NOT_LIKE": {
+  "skill": "ENGL.G4.LISTEN.T5_PRONUNCIATION_AND_VO.LIKE_BUT_PATTERN",
+  "error": "Leaves out do in the negative.",
+  "example": {
+   "question": "I like tea but I ... milk.",
+   "wrong_answer": "not like",
+   "correct_answer": "do not like"
+  },
+  "cause": "A word-for-word translation (sipendi = not like).",
+  "reveals": "Offer \"not like\" beside \"do not like\" in a fresh sentence or text and ask again; picking it again shows the error is still there.",
+  "help": "English needs do: I do not like.",
+  "feedback": "English needs do: I do not like.",
+  "source": "to confirm by a Kenyan English teacher: a common classroom error of Kenyan learners of English, written offline (18 Nov 2026), not traced to a study",
+  "status": "draft"
+ },
+ "ENGL.G4.LISTEN.T5_PRONUNCIATION_AND_VO.LIKE_BUT_PATTERN.M4_LB_LIKE_ING_TO": {
+  "skill": "ENGL.G4.LISTEN.T5_PRONUNCIATION_AND_VO.LIKE_BUT_PATTERN",
+  "error": "Writes like to eating or like to eats.",
+  "example": {
+   "question": "I like ... ugali.",
+   "wrong_answer": "to eating",
+   "correct_answer": "eating"
+  },
+  "cause": "Two patterns (like to eat, like eating) are mixed.",
+  "reveals": "Offer \"to eating\" beside \"eating\" in a fresh sentence or text and ask again; picking it again shows the error is still there.",
+  "help": "Like eating or like to eat, never like to eating.",
+  "feedback": "Like eating or like to eat, never like to eating.",
+  "source": "to confirm by a Kenyan English teacher: a common classroom error of Kenyan learners of English, written offline (18 Nov 2026), not traced to a study",
+  "status": "draft"
+ },
+ "ENGL.G4.LISTEN.T5_PRONUNCIATION_AND_VO.NUTRITION_WORDS.M4_NUT_FRUIT_PROTEIN": {
+  "skill": "ENGL.G4.LISTEN.T5_PRONUNCIATION_AND_VO.NUTRITION_WORDS",
+  "error": "Puts beans or eggs with fruit, or fruit with body-building food.",
+  "example": {
+   "question": "Beans are mainly for ...",
+   "wrong_answer": "giving vitamins like fruit",
+   "correct_answer": "building the body (protein)"
+  },
+  "cause": "Food groups are learnt as a list, not by what each does.",
+  "reveals": "Offer \"giving vitamins like fruit\" beside \"building the body (protein)\" in a fresh sentence or text and ask again; picking it again shows the error is still there.",
+  "help": "Beans, eggs and fish build the body.",
+  "feedback": "Beans, eggs and fish build the body.",
+  "source": "to confirm by a Kenyan English teacher: a common classroom error of Kenyan learners of English, written offline (18 Nov 2026), not traced to a study",
+  "status": "draft"
+ },
  "ENGL.G4.READIN.T5_EXTENSIVE_READING.SCAN_FOR_DETAIL.M_SCAN_NEAR_NUMBER": {
   "skill": "ENGL.G4.READIN.T5_EXTENSIVE_READING.SCAN_FOR_DETAIL",
   "error": "Picks another number from the text.",
@@ -1385,6 +2150,141 @@
    "mark": "plausible, to confirm by a teacher",
    "note": "A usage or reading slip a Kenyan Grade 4 learner could plausibly make. No source and no homework count; a Kenyan English teacher should say whether it comes up in class."
   }
+ },
+ "ENGL.G4.READIN.T5_EXTENSIVE_READING.SELECT_READING.M4_SR_COVER": {
+  "skill": "ENGL.G4.READIN.T5_EXTENSIVE_READING.SELECT_READING",
+  "error": "Chooses a book by its cover or pictures alone.",
+  "example": {
+   "question": "You want facts about camels for a project. Which do you take?",
+   "wrong_answer": "the storybook with a camel on the cover",
+   "correct_answer": "the encyclopaedia"
+  },
+  "cause": "The picture matches the topic, so the child stops there.",
+  "reveals": "Offer \"the storybook with a camel on the cover\" beside \"the encyclopaedia\" in a fresh sentence or text and ask again; picking it again shows the error is still there.",
+  "help": "Ask: will this book answer my question?",
+  "feedback": "Ask: will this book answer my question?",
+  "source": "to confirm by a Kenyan English teacher: a common classroom error of Kenyan learners of English, written offline (18 Nov 2026), not traced to a study",
+  "status": "draft"
+ },
+ "ENGL.G4.READIN.T5_EXTENSIVE_READING.SELECT_READING.M4_SR_TOO_HARD": {
+  "skill": "ENGL.G4.READIN.T5_EXTENSIVE_READING.SELECT_READING",
+  "error": "Chooses a book far above his or her level.",
+  "example": {
+   "question": "Which book should you read alone for practice?",
+   "wrong_answer": "the thick book for Grade 8",
+   "correct_answer": "a Grade 4 graded reader"
+  },
+  "cause": "The child thinks a harder book makes a better reader.",
+  "reveals": "Offer \"the thick book for Grade 8\" beside \"a Grade 4 graded reader\" in a fresh sentence or text and ask again; picking it again shows the error is still there.",
+  "help": "For practice, choose a book where you know almost every word.",
+  "feedback": "For practice, choose a book where you know almost every word.",
+  "source": "to confirm by a Kenyan English teacher: a common classroom error of Kenyan learners of English, written offline (18 Nov 2026), not traced to a study",
+  "status": "draft"
+ },
+ "ENGL.G4.READIN.T5_EXTENSIVE_READING.SELECT_READING.M4_SR_THICKNESS": {
+  "skill": "ENGL.G4.READIN.T5_EXTENSIVE_READING.SELECT_READING",
+  "error": "Thinks a thicker book has more information.",
+  "example": {
+   "question": "Which tells you the meaning of a word fastest?",
+   "wrong_answer": "the thickest novel",
+   "correct_answer": "a dictionary"
+  },
+  "cause": "Size is taken as a sign of usefulness.",
+  "reveals": "Offer \"the thickest novel\" beside \"a dictionary\" in a fresh sentence or text and ask again; picking it again shows the error is still there.",
+  "help": "Choose by what the book is for, not by its size.",
+  "feedback": "Choose by what the book is for, not by its size.",
+  "source": "to confirm by a Kenyan English teacher: a common classroom error of Kenyan learners of English, written offline (18 Nov 2026), not traced to a study",
+  "status": "draft"
+ },
+ "ENGL.G4.READIN.T5_EXTENSIVE_READING.SELECT_READING.M4_SR_WRONG_TYPE": {
+  "skill": "ENGL.G4.READIN.T5_EXTENSIVE_READING.SELECT_READING",
+  "error": "Chooses a text of the wrong type for the purpose.",
+  "example": {
+   "question": "You want to make mandazi. Which do you read?",
+   "wrong_answer": "a poem about food",
+   "correct_answer": "a recipe"
+  },
+  "cause": "All books about the topic seem equal.",
+  "reveals": "Offer \"a poem about food\" beside \"a recipe\" in a fresh sentence or text and ask again; picking it again shows the error is still there.",
+  "help": "Instructions are in a recipe; feelings are in a poem.",
+  "feedback": "Instructions are in a recipe; feelings are in a poem.",
+  "source": "to confirm by a Kenyan English teacher: a common classroom error of Kenyan learners of English, written offline (18 Nov 2026), not traced to a study",
+  "status": "draft"
+ },
+ "ENGL.G4.READIN.T5_EXTENSIVE_READING.INDEPENDENT_READING.M4_IR_STOPS_AT_WORD": {
+  "skill": "ENGL.G4.READIN.T5_EXTENSIVE_READING.INDEPENDENT_READING",
+  "error": "Stops reading at the first unknown word.",
+  "example": {
+   "question": "You meet the word \"harvest\" and do not know it. What do you do?",
+   "wrong_answer": "stop and close the book",
+   "correct_answer": "read on and use the sentence and picture to guess"
+  },
+  "cause": "The child believes every word must be known.",
+  "reveals": "Offer \"stop and close the book\" beside \"read on and use the sentence and picture to guess\" in a fresh sentence or text and ask again; picking it again shows the error is still there.",
+  "help": "Skip, read on, then come back and guess from the sentence.",
+  "feedback": "Skip, read on, then come back and guess from the sentence.",
+  "source": "to confirm by a Kenyan English teacher: a common classroom error of Kenyan learners of English, written offline (18 Nov 2026), not traced to a study",
+  "status": "draft"
+ },
+ "ENGL.G4.READIN.T5_EXTENSIVE_READING.INDEPENDENT_READING.M4_IR_PICTURES_ONLY": {
+  "skill": "ENGL.G4.READIN.T5_EXTENSIVE_READING.INDEPENDENT_READING",
+  "error": "Looks at the pictures and turns pages without reading the words.",
+  "example": {
+   "question": "After ten minutes, what was the story about?",
+   "wrong_answer": "a lion (from the cover only)",
+   "correct_answer": "the lion who lost his roar and how he found it"
+  },
+  "cause": "The pictures feel like reading.",
+  "reveals": "Offer \"a lion (from the cover only)\" beside \"the lion who lost his roar and how he found it\" in a fresh sentence or text and ask again; picking it again shows the error is still there.",
+  "help": "Read every line; the pictures only help.",
+  "feedback": "Read every line; the pictures only help.",
+  "source": "to confirm by a Kenyan English teacher: a common classroom error of Kenyan learners of English, written offline (18 Nov 2026), not traced to a study",
+  "status": "draft"
+ },
+ "ENGL.G4.READIN.T5_EXTENSIVE_READING.INDEPENDENT_READING.M4_IR_CANNOT_RETELL": {
+  "skill": "ENGL.G4.READIN.T5_EXTENSIVE_READING.INDEPENDENT_READING",
+  "error": "Reads the words but cannot say what happened.",
+  "example": {
+   "question": "Tell me what happened in the chapter.",
+   "wrong_answer": "I read it all.",
+   "correct_answer": "Juma lost his goat and found it by the river."
+  },
+  "cause": "Reading is treated as saying the words.",
+  "reveals": "Offer \"I read it all.\" beside \"Juma lost his goat and found it by the river.\" in a fresh sentence or text and ask again; picking it again shows the error is still there.",
+  "help": "Stop after each page and tell yourself what happened.",
+  "feedback": "Stop after each page and tell yourself what happened.",
+  "source": "to confirm by a Kenyan English teacher: a common classroom error of Kenyan learners of English, written offline (18 Nov 2026), not traced to a study",
+  "status": "draft"
+ },
+ "ENGL.G4.READIN.T5_EXTENSIVE_READING.INDEPENDENT_READING.M4_IR_SKIPS_TO_END": {
+  "skill": "ENGL.G4.READIN.T5_EXTENSIVE_READING.INDEPENDENT_READING",
+  "error": "Skips to the end to finish quickly.",
+  "example": {
+   "question": "How did the girl get home?",
+   "wrong_answer": "I do not know, I read the last page.",
+   "correct_answer": "Her uncle drove her on his motorbike."
+  },
+  "cause": "The aim becomes finishing, not understanding.",
+  "reveals": "Offer \"I do not know, I read the last page.\" beside \"Her uncle drove her on his motorbike.\" in a fresh sentence or text and ask again; picking it again shows the error is still there.",
+  "help": "Read in order; the middle explains the end.",
+  "feedback": "Read in order; the middle explains the end.",
+  "source": "to confirm by a Kenyan English teacher: a common classroom error of Kenyan learners of English, written offline (18 Nov 2026), not traced to a study",
+  "status": "draft"
+ },
+ "ENGL.G4.READIN.T5_EXTENSIVE_READING.SCAN_FOR_DETAIL.M4_SCAN_FIRST_MATCH": {
+  "skill": "ENGL.G4.READIN.T5_EXTENSIVE_READING.SCAN_FOR_DETAIL",
+  "error": "Stops at the first place the key word appears, even when the answer is later.",
+  "example": {
+   "question": "Notice: \"Football on Monday. Match moved: football on Friday at 4.\" When is football this week?",
+   "wrong_answer": "Monday",
+   "correct_answer": "Friday at 4"
+  },
+  "cause": "The first match of the key word is taken.",
+  "reveals": "Offer \"Monday\" beside \"Friday at 4\" in a fresh sentence or text and ask again; picking it again shows the error is still there.",
+  "help": "Check every place the key word appears.",
+  "feedback": "Check every place the key word appears.",
+  "source": "to confirm by a Kenyan English teacher: a common classroom error of Kenyan learners of English, written offline (18 Nov 2026), not traced to a study",
+  "status": "draft"
  },
  "ENGL.G4.LANGUA.T5_WORD_CLASSES_ADJECTI.ADJECTIVES.M_ADJ_NOUN_AS_ADJ": {
   "skill": "ENGL.G4.LANGUA.T5_WORD_CLASSES_ADJECTI.ADJECTIVES",
@@ -1519,6 +2419,21 @@
    "why": "Two adjectives joined by and or a comma are grammatical (a big and round stool, a big, round stool). Not an error; the items that used it were removed."
   }
  },
+ "ENGL.G4.LANGUA.T5_WORD_CLASSES_ADJECTI.ADJECTIVE_ORDER.M4_ADO_COLOUR_FIRST": {
+  "skill": "ENGL.G4.LANGUA.T5_WORD_CLASSES_ADJECTI.ADJECTIVE_ORDER",
+  "error": "Puts the colour before the size.",
+  "example": {
+   "question": "a ... ball (red, big)",
+   "wrong_answer": "red big",
+   "correct_answer": "big red"
+  },
+  "cause": "The order is not yet fixed: opinion, size, shape, colour.",
+  "reveals": "Offer \"red big\" beside \"big red\" in a fresh sentence or text and ask again; picking it again shows the error is still there.",
+  "help": "Size comes before colour: a big red ball.",
+  "feedback": "Size comes before colour: a big red ball.",
+  "source": "to confirm by a Kenyan English teacher: a common classroom error of Kenyan learners of English, written offline (18 Nov 2026), not traced to a study",
+  "status": "draft"
+ },
  "ENGL.G4.WRITIN.T5_CREATIVE_WRITING.NARRATIVE_PARTS.M_NAR_PART_MIX": {
   "skill": "ENGL.G4.WRITIN.T5_CREATIVE_WRITING.NARRATIVE_PARTS",
   "error": "Puts the end of the story at the beginning.",
@@ -1652,6 +2567,81 @@
    "note": "A usage or reading slip a Kenyan Grade 4 learner could plausibly make. No source and no homework count; a Kenyan English teacher should say whether it comes up in class."
   }
  },
+ "ENGL.G4.WRITIN.T5_CREATIVE_WRITING.NARRATIVE_COMPOSITION.M4_NC_TENSE_SWITCH": {
+  "skill": "ENGL.G4.WRITIN.T5_CREATIVE_WRITING.NARRATIVE_COMPOSITION",
+  "error": "Switches between past and present tense.",
+  "example": {
+   "question": "Correct: \"Yesterday Otieno goes to the market and bought eggs.\"",
+   "wrong_answer": "goes ... bought",
+   "correct_answer": "went ... bought"
+  },
+  "cause": "The present is used when the child is excited or unsure of the past form.",
+  "reveals": "Offer \"goes ... bought\" beside \"went ... bought\" in a fresh sentence or text and ask again; picking it again shows the error is still there.",
+  "help": "Tell the whole story in the past.",
+  "feedback": "Tell the whole story in the past.",
+  "source": "to confirm by a Kenyan English teacher: a common classroom error of Kenyan learners of English, written offline (18 Nov 2026), not traced to a study",
+  "status": "draft"
+ },
+ "ENGL.G4.WRITIN.T5_CREATIVE_WRITING.NARRATIVE_COMPOSITION.M4_NC_NO_PROBLEM": {
+  "skill": "ENGL.G4.WRITIN.T5_CREATIVE_WRITING.NARRATIVE_COMPOSITION",
+  "error": "Writes events with no problem to solve.",
+  "example": {
+   "question": "What makes a story interesting?",
+   "wrong_answer": "many events",
+   "correct_answer": "a problem in the middle that is solved at the end"
+  },
+  "cause": "A story is seen as a diary of events.",
+  "reveals": "Offer \"many events\" beside \"a problem in the middle that is solved at the end\" in a fresh sentence or text and ask again; picking it again shows the error is still there.",
+  "help": "Give your character a problem.",
+  "feedback": "Give your character a problem.",
+  "source": "to confirm by a Kenyan English teacher: a common classroom error of Kenyan learners of English, written offline (18 Nov 2026), not traced to a study",
+  "status": "draft"
+ },
+ "ENGL.G4.WRITIN.T5_CREATIVE_WRITING.NARRATIVE_COMPOSITION.M4_NC_TOO_SHORT": {
+  "skill": "ENGL.G4.WRITIN.T5_CREATIVE_WRITING.NARRATIVE_COMPOSITION",
+  "error": "Writes far fewer words than asked.",
+  "example": {
+   "question": "The task asks for 60 to 80 words. Is 25 words enough?",
+   "wrong_answer": "Yes",
+   "correct_answer": "No"
+  },
+  "cause": "The child stops when the main event is told.",
+  "reveals": "Offer \"Yes\" beside \"No\" in a fresh sentence or text and ask again; picking it again shows the error is still there.",
+  "help": "Add who, where, how they felt and what happened next.",
+  "feedback": "Add who, where, how they felt and what happened next.",
+  "source": "to confirm by a Kenyan English teacher: a common classroom error of Kenyan learners of English, written offline (18 Nov 2026), not traced to a study",
+  "status": "draft"
+ },
+ "ENGL.G4.WRITIN.T5_CREATIVE_WRITING.NARRATIVE_COMPOSITION.M4_NC_I_WOKE_UP": {
+  "skill": "ENGL.G4.WRITIN.T5_CREATIVE_WRITING.NARRATIVE_COMPOSITION",
+  "error": "Starts every story with waking up and ends with going to bed.",
+  "example": {
+   "question": "Which beginning is better for a story about a lost goat?",
+   "wrong_answer": "I woke up, brushed my teeth and ate breakfast.",
+   "correct_answer": "Our goat Kibet was missing from the shed."
+  },
+  "cause": "A taught opening is used for every story.",
+  "reveals": "Offer \"I woke up, brushed my teeth and ate breakfast.\" beside \"Our goat Kibet was missing from the shed.\" in a fresh sentence or text and ask again; picking it again shows the error is still there.",
+  "help": "Begin close to the main event.",
+  "feedback": "Begin close to the main event.",
+  "source": "to confirm by a Kenyan English teacher: a common classroom error of Kenyan learners of English, written offline (18 Nov 2026), not traced to a study",
+  "status": "draft"
+ },
+ "ENGL.G4.WRITIN.T5_CREATIVE_WRITING.PARAGRAPH_ORDER.M4_PAR_ENDING_FIRST": {
+  "skill": "ENGL.G4.WRITIN.T5_CREATIVE_WRITING.PARAGRAPH_ORDER",
+  "error": "Puts the concluding sentence first.",
+  "example": {
+   "question": "Which goes last: \"So the day ended happily.\"?",
+   "wrong_answer": "first",
+   "correct_answer": "last"
+  },
+  "cause": "The sentence sounds important, so it is placed first.",
+  "reveals": "Offer \"first\" beside \"last\" in a fresh sentence or text and ask again; picking it again shows the error is still there.",
+  "help": "Words like so, finally and in the end close a paragraph.",
+  "feedback": "Words like so, finally and in the end close a paragraph.",
+  "source": "to confirm by a Kenyan English teacher: a common classroom error of Kenyan learners of English, written offline (18 Nov 2026), not traced to a study",
+  "status": "draft"
+ },
  "ENGL.G4.LISTEN.T6_PRONUNCIATION_AND_VO.INTERNET_WORDS.M_NET_NEAR_MEANING": {
   "skill": "ENGL.G4.LISTEN.T6_PRONUNCIATION_AND_VO.INTERNET_WORDS",
   "error": "Picks an internet word that is near in meaning but wrong.",
@@ -1708,6 +2698,81 @@
    "mark": "plausible, to confirm by a teacher",
    "note": "A usage or reading slip a Kenyan Grade 4 learner could plausibly make. No source and no homework count; a Kenyan English teacher should say whether it comes up in class."
   }
+ },
+ "ENGL.G4.LISTEN.T6_PRONUNCIATION_AND_VO.INTONATION.M4_IN_WH_RISE": {
+  "skill": "ENGL.G4.LISTEN.T6_PRONUNCIATION_AND_VO.INTONATION",
+  "error": "Lets the voice rise at the end of a WH question.",
+  "example": {
+   "question": "Say: Where do you live?",
+   "wrong_answer": "voice goes up at live",
+   "correct_answer": "voice falls at live"
+  },
+  "cause": "The child has learnt that questions go up and applies it to all questions.",
+  "reveals": "Offer \"voice goes up at live\" beside \"voice falls at live\" in a fresh sentence or text and ask again; picking it again shows the error is still there.",
+  "help": "WH questions fall; yes or no questions rise.",
+  "feedback": "WH questions fall; yes or no questions rise.",
+  "source": "to confirm by a Kenyan English teacher: a common classroom error of Kenyan learners of English, written offline (18 Nov 2026), not traced to a study",
+  "status": "draft"
+ },
+ "ENGL.G4.LISTEN.T6_PRONUNCIATION_AND_VO.INTONATION.M4_IN_FLAT": {
+  "skill": "ENGL.G4.LISTEN.T6_PRONUNCIATION_AND_VO.INTONATION",
+  "error": "Says a question with a flat voice, like a statement.",
+  "example": {
+   "question": "Say: Do you like football?",
+   "wrong_answer": "flat voice, no rise",
+   "correct_answer": "voice rises at football"
+  },
+  "cause": "Questions in some home languages are marked by a word, not by the voice.",
+  "reveals": "Offer \"flat voice, no rise\" beside \"voice rises at football\" in a fresh sentence or text and ask again; picking it again shows the error is still there.",
+  "help": "Lift the voice on the last word of a yes or no question.",
+  "feedback": "Lift the voice on the last word of a yes or no question.",
+  "source": "to confirm by a Kenyan English teacher: a common classroom error of Kenyan learners of English, written offline (18 Nov 2026), not traced to a study",
+  "status": "draft"
+ },
+ "ENGL.G4.LISTEN.T6_PRONUNCIATION_AND_VO.INTONATION.M4_IN_STATEMENT_RISE": {
+  "skill": "ENGL.G4.LISTEN.T6_PRONUNCIATION_AND_VO.INTONATION",
+  "error": "Lets the voice rise at the end of a statement.",
+  "example": {
+   "question": "Say: I live in Eldoret.",
+   "wrong_answer": "voice goes up at Eldoret",
+   "correct_answer": "voice falls at Eldoret"
+  },
+  "cause": "Nervous speakers lift the voice as if unsure.",
+  "reveals": "Offer \"voice goes up at Eldoret\" beside \"voice falls at Eldoret\" in a fresh sentence or text and ask again; picking it again shows the error is still there.",
+  "help": "A statement ends low and firm.",
+  "feedback": "A statement ends low and firm.",
+  "source": "to confirm by a Kenyan English teacher: a common classroom error of Kenyan learners of English, written offline (18 Nov 2026), not traced to a study",
+  "status": "draft"
+ },
+ "ENGL.G4.LISTEN.T6_PRONUNCIATION_AND_VO.INTONATION.M4_IN_WRONG_WORD": {
+  "skill": "ENGL.G4.LISTEN.T6_PRONUNCIATION_AND_VO.INTONATION",
+  "error": "Stresses a small word instead of the key word.",
+  "example": {
+   "question": "Say: I sent the EMAIL yesterday (not a letter).",
+   "wrong_answer": "I sent THE email yesterday",
+   "correct_answer": "I sent the EMAIL yesterday"
+  },
+  "cause": "Every word is given the same weight, or the weight falls on a small word.",
+  "reveals": "Offer \"I sent THE email yesterday\" beside \"I sent the EMAIL yesterday\" in a fresh sentence or text and ask again; picking it again shows the error is still there.",
+  "help": "Put the strong beat on the word that carries the meaning.",
+  "feedback": "Put the strong beat on the word that carries the meaning.",
+  "source": "to confirm by a Kenyan English teacher: a common classroom error of Kenyan learners of English, written offline (18 Nov 2026), not traced to a study",
+  "status": "draft"
+ },
+ "ENGL.G4.LISTEN.T6_PRONUNCIATION_AND_VO.INTERNET_WORDS.M4_NET_DOWNLOAD_UPLOAD": {
+  "skill": "ENGL.G4.LISTEN.T6_PRONUNCIATION_AND_VO.INTERNET_WORDS",
+  "error": "Swaps download and upload.",
+  "example": {
+   "question": "You put your photo onto the school website. You ... it.",
+   "wrong_answer": "download",
+   "correct_answer": "upload"
+  },
+  "cause": "The two words differ by one part and are learnt together.",
+  "reveals": "Offer \"download\" beside \"upload\" in a fresh sentence or text and ask again; picking it again shows the error is still there.",
+  "help": "Up goes to the internet; down comes to your device.",
+  "feedback": "Up goes to the internet; down comes to your device.",
+  "source": "to confirm by a Kenyan English teacher: a common classroom error of Kenyan learners of English, written offline (18 Nov 2026), not traced to a study",
+  "status": "draft"
  },
  "ENGL.G4.LANGUA.T6_WORD_CLASS_DETERMINE.COUNT_UNCOUNT.M_QUA_MUCH_COUNT": {
   "skill": "ENGL.G4.LANGUA.T6_WORD_CLASS_DETERMINE.COUNT_UNCOUNT",
@@ -1937,6 +3002,66 @@
    "note": "A usage or reading slip a Kenyan Grade 4 learner could plausibly make. No source and no homework count; a Kenyan English teacher should say whether it comes up in class."
   }
  },
+ "ENGL.G4.WRITIN.T6_CREATIVE_WRITING.PICTORIAL_COMPOSITION.M4_PC_DESCRIBES_ONLY": {
+  "skill": "ENGL.G4.WRITIN.T6_CREATIVE_WRITING.PICTORIAL_COMPOSITION",
+  "error": "Describes each picture instead of telling a story.",
+  "example": {
+   "question": "Picture 1 shows a boy and a tree. Which is better?",
+   "wrong_answer": "There is a boy. There is a tree.",
+   "correct_answer": "Wafula climbed the mango tree to pick a ripe mango."
+  },
+  "cause": "Picture description from lower grades is carried over.",
+  "reveals": "Offer \"There is a boy. There is a tree.\" beside \"Wafula climbed the mango tree to pick a ripe mango.\" in a fresh sentence or text and ask again; picking it again shows the error is still there.",
+  "help": "Say what the people did, not only what is there.",
+  "feedback": "Say what the people did, not only what is there.",
+  "source": "to confirm by a Kenyan English teacher: a common classroom error of Kenyan learners of English, written offline (18 Nov 2026), not traced to a study",
+  "status": "draft"
+ },
+ "ENGL.G4.WRITIN.T6_CREATIVE_WRITING.PICTORIAL_COMPOSITION.M4_PC_SKIPS_PICTURE": {
+  "skill": "ENGL.G4.WRITIN.T6_CREATIVE_WRITING.PICTORIAL_COMPOSITION",
+  "error": "Leaves out one of the pictures.",
+  "example": {
+   "question": "There are four pictures. How many parts should the story have?",
+   "wrong_answer": "three",
+   "correct_answer": "four, one for each picture"
+  },
+  "cause": "A picture that is hard to describe is skipped.",
+  "reveals": "Offer \"three\" beside \"four, one for each picture\" in a fresh sentence or text and ask again; picking it again shows the error is still there.",
+  "help": "Tick each picture as you write about it.",
+  "feedback": "Tick each picture as you write about it.",
+  "source": "to confirm by a Kenyan English teacher: a common classroom error of Kenyan learners of English, written offline (18 Nov 2026), not traced to a study",
+  "status": "draft"
+ },
+ "ENGL.G4.WRITIN.T6_CREATIVE_WRITING.PICTORIAL_COMPOSITION.M4_PC_PRESENT": {
+  "skill": "ENGL.G4.WRITIN.T6_CREATIVE_WRITING.PICTORIAL_COMPOSITION",
+  "error": "Tells the pictures in the present tense.",
+  "example": {
+   "question": "Which fits a story from pictures?",
+   "wrong_answer": "The girl is running to the shop.",
+   "correct_answer": "The girl ran to the shop."
+  },
+  "cause": "The picture is seen as happening now.",
+  "reveals": "Offer \"The girl is running to the shop.\" beside \"The girl ran to the shop.\" in a fresh sentence or text and ask again; picking it again shows the error is still there.",
+  "help": "Tell the pictures as a story in the past.",
+  "feedback": "Tell the pictures as a story in the past.",
+  "source": "to confirm by a Kenyan English teacher: a common classroom error of Kenyan learners of English, written offline (18 Nov 2026), not traced to a study",
+  "status": "draft"
+ },
+ "ENGL.G4.WRITIN.T6_CREATIVE_WRITING.PICTORIAL_COMPOSITION.M4_PC_NO_TITLE": {
+  "skill": "ENGL.G4.WRITIN.T6_CREATIVE_WRITING.PICTORIAL_COMPOSITION",
+  "error": "Gives no title or a title that does not fit.",
+  "example": {
+   "question": "Pictures show a boy losing and finding his dog. Best title?",
+   "wrong_answer": "My School",
+   "correct_answer": "The Lost Dog"
+  },
+  "cause": "The title is written last or forgotten.",
+  "reveals": "Offer \"My School\" beside \"The Lost Dog\" in a fresh sentence or text and ask again; picking it again shows the error is still there.",
+  "help": "The title names what the whole story is about.",
+  "feedback": "The title names what the whole story is about.",
+  "source": "to confirm by a Kenyan English teacher: a common classroom error of Kenyan learners of English, written offline (18 Nov 2026), not traced to a study",
+  "status": "draft"
+ },
  "ENGL.G4.LISTEN.T7_PRONUNCIATION_AND_VO.SIMPLE_PAST.M_SPA_BASE_FOR_PAST": {
   "skill": "ENGL.G4.LISTEN.T7_PRONUNCIATION_AND_VO.SIMPLE_PAST",
   "error": "Uses the plain verb for something that happened already.",
@@ -2012,6 +3137,66 @@
    "mark": "plausible, to confirm by a teacher",
    "note": "A usage or reading slip a Kenyan Grade 4 learner could plausibly make. No source and no homework count; a Kenyan English teacher should say whether it comes up in class."
   }
+ },
+ "ENGL.G4.LISTEN.T7_PRONUNCIATION_AND_VO.TURN_TAKING.M4_TT_TALK_OVER": {
+  "skill": "ENGL.G4.LISTEN.T7_PRONUNCIATION_AND_VO.TURN_TAKING",
+  "error": "Starts talking before the other person has finished.",
+  "example": {
+   "question": "Your friend is telling you about her weekend. When do you speak?",
+   "wrong_answer": "as soon as I have something to say",
+   "correct_answer": "when she stops or pauses"
+  },
+  "cause": "Eagerness, and no habit of waiting for a pause.",
+  "reveals": "Offer \"as soon as I have something to say\" beside \"when she stops or pauses\" in a fresh sentence or text and ask again; picking it again shows the error is still there.",
+  "help": "Wait for the speaker to stop, then answer.",
+  "feedback": "Wait for the speaker to stop, then answer.",
+  "source": "to confirm by a Kenyan English teacher: a common classroom error of Kenyan learners of English, written offline (18 Nov 2026), not traced to a study",
+  "status": "draft"
+ },
+ "ENGL.G4.LISTEN.T7_PRONUNCIATION_AND_VO.TURN_TAKING.M4_TT_ONE_WORD": {
+  "skill": "ENGL.G4.LISTEN.T7_PRONUNCIATION_AND_VO.TURN_TAKING",
+  "error": "Answers with one word and stops the conversation.",
+  "example": {
+   "question": "Friend: \"Did you watch the match?\" Best reply?",
+   "wrong_answer": "Yes.",
+   "correct_answer": "Yes! Harambee Stars won. Did you watch it?"
+  },
+  "cause": "The child answers the question but does not hand the turn back.",
+  "reveals": "Offer \"Yes.\" beside \"Yes! Harambee Stars won. Did you watch it?\" in a fresh sentence or text and ask again; picking it again shows the error is still there.",
+  "help": "Answer, add one thing, then ask a question back.",
+  "feedback": "Answer, add one thing, then ask a question back.",
+  "source": "to confirm by a Kenyan English teacher: a common classroom error of Kenyan learners of English, written offline (18 Nov 2026), not traced to a study",
+  "status": "draft"
+ },
+ "ENGL.G4.LISTEN.T7_PRONUNCIATION_AND_VO.TURN_TAKING.M4_TT_LONG_TURN": {
+  "skill": "ENGL.G4.LISTEN.T7_PRONUNCIATION_AND_VO.TURN_TAKING",
+  "error": "Keeps talking and does not let the other person speak.",
+  "example": {
+   "question": "You have told your story for a long time. What next?",
+   "wrong_answer": "tell another story",
+   "correct_answer": "ask your friend what she thinks"
+  },
+  "cause": "The child does not notice the listener wants a turn.",
+  "reveals": "Offer \"tell another story\" beside \"ask your friend what she thinks\" in a fresh sentence or text and ask again; picking it again shows the error is still there.",
+  "help": "Stop and give the other person a turn.",
+  "feedback": "Stop and give the other person a turn.",
+  "source": "to confirm by a Kenyan English teacher: a common classroom error of Kenyan learners of English, written offline (18 Nov 2026), not traced to a study",
+  "status": "draft"
+ },
+ "ENGL.G4.LISTEN.T7_PRONUNCIATION_AND_VO.TURN_TAKING.M4_TT_OFF_TOPIC": {
+  "skill": "ENGL.G4.LISTEN.T7_PRONUNCIATION_AND_VO.TURN_TAKING",
+  "error": "Changes the topic instead of answering.",
+  "example": {
+   "question": "Friend: \"How is your new school?\" Reply?",
+   "wrong_answer": "I want a new phone.",
+   "correct_answer": "It is nice. My teacher is kind."
+  },
+  "cause": "The child follows his or her own thought.",
+  "reveals": "Offer \"I want a new phone.\" beside \"It is nice. My teacher is kind.\" in a fresh sentence or text and ask again; picking it again shows the error is still there.",
+  "help": "Answer what the other person asked first.",
+  "feedback": "Answer what the other person asked first.",
+  "source": "to confirm by a Kenyan English teacher: a common classroom error of Kenyan learners of English, written offline (18 Nov 2026), not traced to a study",
+  "status": "draft"
  },
  "ENGL.G4.LANGUA.T7_WORD_CLASSES_VERB_AS.PRESENT_PROGRESSIVE.M_PRP_NO_BE": {
   "skill": "ENGL.G4.LANGUA.T7_WORD_CLASSES_VERB_AS.PRESENT_PROGRESSIVE",
@@ -2317,6 +3502,81 @@
    "note": "A usage or reading slip a Kenyan Grade 4 learner could plausibly make. No source and no homework count; a Kenyan English teacher should say whether it comes up in class."
   }
  },
+ "ENGL.G4.LISTEN.T8_PRONUNCIATION_AND_VO.FARM_WORDS.M4_FRM_PLANT_HARVEST": {
+  "skill": "ENGL.G4.LISTEN.T8_PRONUNCIATION_AND_VO.FARM_WORDS",
+  "error": "Swaps planting and harvesting.",
+  "example": {
+   "question": "In August the farmer picks the ripe maize. He ...",
+   "wrong_answer": "plants",
+   "correct_answer": "harvests"
+  },
+  "cause": "Both are farm actions with the crop.",
+  "reveals": "Offer \"plants\" beside \"harvests\" in a fresh sentence or text and ask again; picking it again shows the error is still there.",
+  "help": "Plant puts seeds in; harvest takes the crop out.",
+  "feedback": "Plant puts seeds in; harvest takes the crop out.",
+  "source": "to confirm by a Kenyan English teacher: a common classroom error of Kenyan learners of English, written offline (18 Nov 2026), not traced to a study",
+  "status": "draft"
+ },
+ "ENGL.G4.READIN.T8_READING_FLUENCY.READ_FLUENTLY.M4_RF_WORD_BY_WORD": {
+  "skill": "ENGL.G4.READIN.T8_READING_FLUENCY.READ_FLUENTLY",
+  "error": "Reads word by word with a stop after each word.",
+  "example": {
+   "question": "Read: The cows went down to the river to drink.",
+   "wrong_answer": "The. cows. went. down. to. the. river.",
+   "correct_answer": "The cows went down / to the river / to drink."
+  },
+  "cause": "Decoding each word takes all the attention.",
+  "reveals": "Offer \"The. cows. went. down. to. the. river.\" beside \"The cows went down / to the river / to drink.\" in a fresh sentence or text and ask again; picking it again shows the error is still there.",
+  "help": "Read in groups of words that go together.",
+  "feedback": "Read in groups of words that go together.",
+  "source": "to confirm by a Kenyan English teacher: a common classroom error of Kenyan learners of English, written offline (18 Nov 2026), not traced to a study",
+  "status": "draft"
+ },
+ "ENGL.G4.READIN.T8_READING_FLUENCY.READ_FLUENTLY.M4_RF_IGNORES_STOPS": {
+  "skill": "ENGL.G4.READIN.T8_READING_FLUENCY.READ_FLUENTLY",
+  "error": "Reads through full stops without pausing.",
+  "example": {
+   "question": "Read: It rained. The farmers were happy.",
+   "wrong_answer": "It rained the farmers were happy",
+   "correct_answer": "It rained. (pause) The farmers were happy."
+  },
+  "cause": "The child reads lines, not sentences.",
+  "reveals": "Offer \"It rained the farmers were happy\" beside \"It rained. (pause) The farmers were happy.\" in a fresh sentence or text and ask again; picking it again shows the error is still there.",
+  "help": "Stop and breathe at every full stop.",
+  "feedback": "Stop and breathe at every full stop.",
+  "source": "to confirm by a Kenyan English teacher: a common classroom error of Kenyan learners of English, written offline (18 Nov 2026), not traced to a study",
+  "status": "draft"
+ },
+ "ENGL.G4.READIN.T8_READING_FLUENCY.READ_FLUENTLY.M4_RF_FLAT": {
+  "skill": "ENGL.G4.READIN.T8_READING_FLUENCY.READ_FLUENTLY",
+  "error": "Reads with a flat voice, with no change for questions or speech.",
+  "example": {
+   "question": "Read: \"Where is my hoe?\" shouted Baba.",
+   "wrong_answer": "flat voice for the whole line",
+   "correct_answer": "a questioning voice, then a loud shout"
+  },
+  "cause": "Expression is not part of what the child thinks reading is.",
+  "reveals": "Offer \"flat voice for the whole line\" beside \"a questioning voice, then a loud shout\" in a fresh sentence or text and ask again; picking it again shows the error is still there.",
+  "help": "Let the voice show the question and the feeling.",
+  "feedback": "Let the voice show the question and the feeling.",
+  "source": "to confirm by a Kenyan English teacher: a common classroom error of Kenyan learners of English, written offline (18 Nov 2026), not traced to a study",
+  "status": "draft"
+ },
+ "ENGL.G4.READIN.T8_READING_FLUENCY.READ_FLUENTLY.M4_RF_TOO_FAST": {
+  "skill": "ENGL.G4.READIN.T8_READING_FLUENCY.READ_FLUENTLY",
+  "error": "Reads very fast and skips or changes small words.",
+  "example": {
+   "question": "Read: The goat ate the green grass.",
+   "wrong_answer": "The goat ate green grass. (the skipped)",
+   "correct_answer": "The goat ate the green grass."
+  },
+  "cause": "The child believes fast reading is good reading.",
+  "reveals": "Offer \"The goat ate green grass. (the skipped)\" beside \"The goat ate the green grass.\" in a fresh sentence or text and ask again; picking it again shows the error is still there.",
+  "help": "Read at talking speed; every word counts.",
+  "feedback": "Read at talking speed; every word counts.",
+  "source": "to confirm by a Kenyan English teacher: a common classroom error of Kenyan learners of English, written offline (18 Nov 2026), not traced to a study",
+  "status": "draft"
+ },
  "ENGL.G4.LANGUA.T8_WORD_CLASSES.CONTRACTIONS.M_CON_NO_APOSTROPHE": {
   "skill": "ENGL.G4.LANGUA.T8_WORD_CLASSES.CONTRACTIONS",
   "error": "Leaves out the apostrophe.",
@@ -2468,6 +3728,66 @@
    "mark": "plausible, to confirm by a teacher",
    "note": "A usage or reading slip a Kenyan Grade 4 learner could plausibly make. No source and no homework count; a Kenyan English teacher should say whether it comes up in class."
   }
+ },
+ "ENGL.G4.LISTEN.T9_PRONUNCIATION_AND_VO.SPEAK_FLUENTLY.M4_SF_FILLERS": {
+  "skill": "ENGL.G4.LISTEN.T9_PRONUNCIATION_AND_VO.SPEAK_FLUENTLY",
+  "error": "Fills every gap with eeh or aah.",
+  "example": {
+   "question": "Talk about your favourite food.",
+   "wrong_answer": "Eeh, my favourite, eeh, food is, aah, chapati.",
+   "correct_answer": "My favourite food is chapati."
+  },
+  "cause": "Searching for the next word aloud; a habit from talk at home.",
+  "reveals": "Offer \"Eeh, my favourite, eeh, food is, aah, chapati.\" beside \"My favourite food is chapati.\" in a fresh sentence or text and ask again; picking it again shows the error is still there.",
+  "help": "Close your mouth and think for a moment instead of saying eeh.",
+  "feedback": "Close your mouth and think for a moment instead of saying eeh.",
+  "source": "to confirm by a Kenyan English teacher: a common classroom error of Kenyan learners of English, written offline (18 Nov 2026), not traced to a study",
+  "status": "draft"
+ },
+ "ENGL.G4.LISTEN.T9_PRONUNCIATION_AND_VO.SPEAK_FLUENTLY.M4_SF_TOO_FAST": {
+  "skill": "ENGL.G4.LISTEN.T9_PRONUNCIATION_AND_VO.SPEAK_FLUENTLY",
+  "error": "Speaks so fast that listeners cannot follow.",
+  "example": {
+   "question": "Tell the class about your home.",
+   "wrong_answer": "all the words run together",
+   "correct_answer": "steady speed with short pauses"
+  },
+  "cause": "Nerves in front of the class.",
+  "reveals": "Offer \"all the words run together\" beside \"steady speed with short pauses\" in a fresh sentence or text and ask again; picking it again shows the error is still there.",
+  "help": "Pause after each sentence; breathe.",
+  "feedback": "Pause after each sentence; breathe.",
+  "source": "to confirm by a Kenyan English teacher: a common classroom error of Kenyan learners of English, written offline (18 Nov 2026), not traced to a study",
+  "status": "draft"
+ },
+ "ENGL.G4.LISTEN.T9_PRONUNCIATION_AND_VO.SPEAK_FLUENTLY.M4_SF_WORD_SEARCH": {
+  "skill": "ENGL.G4.LISTEN.T9_PRONUNCIATION_AND_VO.SPEAK_FLUENTLY",
+  "error": "Stops for a long time to find a word.",
+  "example": {
+   "question": "Talk about keeping healthy.",
+   "wrong_answer": "long silence, then gives up",
+   "correct_answer": "uses a simpler word and goes on"
+  },
+  "cause": "The child wants the exact word and will not use a simpler one.",
+  "reveals": "Offer \"long silence, then gives up\" beside \"uses a simpler word and goes on\" in a fresh sentence or text and ask again; picking it again shows the error is still there.",
+  "help": "If a word will not come, say it another way and keep going.",
+  "feedback": "If a word will not come, say it another way and keep going.",
+  "source": "to confirm by a Kenyan English teacher: a common classroom error of Kenyan learners of English, written offline (18 Nov 2026), not traced to a study",
+  "status": "draft"
+ },
+ "ENGL.G4.LISTEN.T9_PRONUNCIATION_AND_VO.SPEAK_FLUENTLY.M4_SF_REPEATS": {
+  "skill": "ENGL.G4.LISTEN.T9_PRONUNCIATION_AND_VO.SPEAK_FLUENTLY",
+  "error": "Repeats the start of the sentence again and again.",
+  "example": {
+   "question": "Talk about your family.",
+   "wrong_answer": "I have, I have, I have two sisters.",
+   "correct_answer": "I have two sisters."
+  },
+  "cause": "Restarting to buy time.",
+  "reveals": "Offer \"I have, I have, I have two sisters.\" beside \"I have two sisters.\" in a fresh sentence or text and ask again; picking it again shows the error is still there.",
+  "help": "Start once and go to the end of the sentence.",
+  "feedback": "Start once and go to the end of the sentence.",
+  "source": "to confirm by a Kenyan English teacher: a common classroom error of Kenyan learners of English, written offline (18 Nov 2026), not traced to a study",
+  "status": "draft"
  },
  "ENGL.G4.LANGUA.T9_WORD_CLASSES_ADVERBS.ADVERBS.M_ADV_ADJ_FOR_ADV": {
   "skill": "ENGL.G4.LANGUA.T9_WORD_CLASSES_ADVERBS.ADVERBS",
@@ -2754,6 +4074,81 @@
    "note": "A usage or reading slip a Kenyan Grade 4 learner could plausibly make. No source and no homework count; a Kenyan English teacher should say whether it comes up in class."
   }
  },
+ "ENGL.G4.LISTEN.T10_PRONUNCIATION_AND_VO.INTERRUPT_POLITELY.M4_IP_HEY": {
+  "skill": "ENGL.G4.LISTEN.T10_PRONUNCIATION_AND_VO.INTERRUPT_POLITELY",
+  "error": "Interrupts with Hey or Wait.",
+  "example": {
+   "question": "The teacher is talking and you must leave for the clinic. What do you say?",
+   "wrong_answer": "Hey, wait!",
+   "correct_answer": "Excuse me, teacher, may I go to the clinic?"
+  },
+  "cause": "The child knows the need is real and forgets the polite words.",
+  "reveals": "Offer \"Hey, wait!\" beside \"Excuse me, teacher, may I go to the clinic?\" in a fresh sentence or text and ask again; picking it again shows the error is still there.",
+  "help": "Start with Excuse me.",
+  "feedback": "Start with Excuse me.",
+  "source": "to confirm by a Kenyan English teacher: a common classroom error of Kenyan learners of English, written offline (18 Nov 2026), not traced to a study",
+  "status": "draft"
+ },
+ "ENGL.G4.LISTEN.T10_PRONUNCIATION_AND_VO.INTERRUPT_POLITELY.M4_IP_NO_PAUSE": {
+  "skill": "ENGL.G4.LISTEN.T10_PRONUNCIATION_AND_VO.INTERRUPT_POLITELY",
+  "error": "Interrupts in the middle of a sentence.",
+  "example": {
+   "question": "When is the best time to interrupt?",
+   "wrong_answer": "any time I need to",
+   "correct_answer": "when the speaker pauses"
+  },
+  "cause": "The child does not wait for a natural break.",
+  "reveals": "Offer \"any time I need to\" beside \"when the speaker pauses\" in a fresh sentence or text and ask again; picking it again shows the error is still there.",
+  "help": "Wait for a pause, then speak.",
+  "feedback": "Wait for a pause, then speak.",
+  "source": "to confirm by a Kenyan English teacher: a common classroom error of Kenyan learners of English, written offline (18 Nov 2026), not traced to a study",
+  "status": "draft"
+ },
+ "ENGL.G4.LISTEN.T10_PRONUNCIATION_AND_VO.INTERRUPT_POLITELY.M4_IP_SORRY_ONLY": {
+  "skill": "ENGL.G4.LISTEN.T10_PRONUNCIATION_AND_VO.INTERRUPT_POLITELY",
+  "error": "Says only sorry and then speaks, as if apologising.",
+  "example": {
+   "question": "Which is a polite interruption?",
+   "wrong_answer": "Sorry. I want water.",
+   "correct_answer": "Sorry to interrupt, but may I get some water?"
+  },
+  "cause": "Sorry is used alone, without the request.",
+  "reveals": "Offer \"Sorry. I want water.\" beside \"Sorry to interrupt, but may I get some water?\" in a fresh sentence or text and ask again; picking it again shows the error is still there.",
+  "help": "Sorry to interrupt, but may I ...?",
+  "feedback": "Sorry to interrupt, but may I ...?",
+  "source": "to confirm by a Kenyan English teacher: a common classroom error of Kenyan learners of English, written offline (18 Nov 2026), not traced to a study",
+  "status": "draft"
+ },
+ "ENGL.G4.LISTEN.T10_PRONUNCIATION_AND_VO.INTERRUPT_POLITELY.M4_IP_COMMAND": {
+  "skill": "ENGL.G4.LISTEN.T10_PRONUNCIATION_AND_VO.INTERRUPT_POLITELY",
+  "error": "Gives an order after interrupting.",
+  "example": {
+   "question": "Interrupt your mother on the phone to ask for the key.",
+   "wrong_answer": "Excuse me. Give me the key.",
+   "correct_answer": "Excuse me, may I have the key, please?"
+  },
+  "cause": "Polite opening, but the request is a command.",
+  "reveals": "Offer \"Excuse me. Give me the key.\" beside \"Excuse me, may I have the key, please?\" in a fresh sentence or text and ask again; picking it again shows the error is still there.",
+  "help": "Ask with may I or could you.",
+  "feedback": "Ask with may I or could you.",
+  "source": "to confirm by a Kenyan English teacher: a common classroom error of Kenyan learners of English, written offline (18 Nov 2026), not traced to a study",
+  "status": "draft"
+ },
+ "ENGL.G4.LISTEN.T10_PRONUNCIATION_AND_VO.HYGIENE_WORDS.M4_HYG_GERMS_DIRT": {
+  "skill": "ENGL.G4.LISTEN.T10_PRONUNCIATION_AND_VO.HYGIENE_WORDS",
+  "error": "Thinks germs are dirt that can be seen.",
+  "example": {
+   "question": "Your hands look clean after football. Should you still wash them?",
+   "wrong_answer": "No, they are clean",
+   "correct_answer": "Yes, germs are too small to see"
+  },
+  "cause": "Germs are pictured as visible dirt.",
+  "reveals": "Offer \"No, they are clean\" beside \"Yes, germs are too small to see\" in a fresh sentence or text and ask again; picking it again shows the error is still there.",
+  "help": "Germs are too small to see: wash with soap anyway.",
+  "feedback": "Germs are too small to see: wash with soap anyway.",
+  "source": "to confirm by a Kenyan English teacher: a common classroom error of Kenyan learners of English, written offline (18 Nov 2026), not traced to a study",
+  "status": "draft"
+ },
  "ENGL.G4.LANGUA.T10_WORD_CLASS_CONJUNCTI.CONJUNCTIONS.M_CNJ_BUT_FOR_AND": {
   "skill": "ENGL.G4.LANGUA.T10_WORD_CLASS_CONJUNCTI.CONJUNCTIONS",
   "error": "Uses but where the two parts agree.",
@@ -2925,6 +4320,81 @@
    "note": "A usage or reading slip a Kenyan Grade 4 learner could plausibly make. No source and no homework count; a Kenyan English teacher should say whether it comes up in class."
   }
  },
+ "ENGL.G4.WRITIN.T10_CREATIVE_WRITING.DESCRIPTIVE_COMPOSITION.M4_DC_STORY": {
+  "skill": "ENGL.G4.WRITIN.T10_CREATIVE_WRITING.DESCRIPTIVE_COMPOSITION",
+  "error": "Tells what happened instead of describing.",
+  "example": {
+   "question": "Describe your classroom. Which sentence fits?",
+   "wrong_answer": "Yesterday we had a test in our classroom.",
+   "correct_answer": "Our classroom has bright charts on every wall."
+  },
+  "cause": "Narrative writing is the most practised.",
+  "reveals": "Offer \"Yesterday we had a test in our classroom.\" beside \"Our classroom has bright charts on every wall.\" in a fresh sentence or text and ask again; picking it again shows the error is still there.",
+  "help": "Describe how it looks, sounds and feels.",
+  "feedback": "Describe how it looks, sounds and feels.",
+  "source": "to confirm by a Kenyan English teacher: a common classroom error of Kenyan learners of English, written offline (18 Nov 2026), not traced to a study",
+  "status": "draft"
+ },
+ "ENGL.G4.WRITIN.T10_CREATIVE_WRITING.DESCRIPTIVE_COMPOSITION.M4_DC_SIGHT_ONLY": {
+  "skill": "ENGL.G4.WRITIN.T10_CREATIVE_WRITING.DESCRIPTIVE_COMPOSITION",
+  "error": "Describes only what is seen.",
+  "example": {
+   "question": "Add another sense to: \"The market is big and busy.\"",
+   "wrong_answer": "The market is very big.",
+   "correct_answer": "The market smells of ripe mangoes and fish."
+  },
+  "cause": "Seeing is the sense the child notices first.",
+  "reveals": "Offer \"The market is very big.\" beside \"The market smells of ripe mangoes and fish.\" in a fresh sentence or text and ask again; picking it again shows the error is still there.",
+  "help": "Use sound, smell and touch as well as sight.",
+  "feedback": "Use sound, smell and touch as well as sight.",
+  "source": "to confirm by a Kenyan English teacher: a common classroom error of Kenyan learners of English, written offline (18 Nov 2026), not traced to a study",
+  "status": "draft"
+ },
+ "ENGL.G4.WRITIN.T10_CREATIVE_WRITING.DESCRIPTIVE_COMPOSITION.M4_DC_NICE": {
+  "skill": "ENGL.G4.WRITIN.T10_CREATIVE_WRITING.DESCRIPTIVE_COMPOSITION",
+  "error": "Uses the same weak adjectives (nice, good, big) again and again.",
+  "example": {
+   "question": "Improve: \"The garden is nice and the flowers are nice.\"",
+   "wrong_answer": "The garden is nice and the flowers are nice.",
+   "correct_answer": "The garden is green and the flowers are bright red."
+  },
+  "cause": "A small stock of adjectives.",
+  "reveals": "Offer \"The garden is nice and the flowers are nice.\" beside \"The garden is green and the flowers are bright red.\" in a fresh sentence or text and ask again; picking it again shows the error is still there.",
+  "help": "Choose an exact adjective: bright, tall, noisy, smooth.",
+  "feedback": "Choose an exact adjective: bright, tall, noisy, smooth.",
+  "source": "to confirm by a Kenyan English teacher: a common classroom error of Kenyan learners of English, written offline (18 Nov 2026), not traced to a study",
+  "status": "draft"
+ },
+ "ENGL.G4.WRITIN.T10_CREATIVE_WRITING.DESCRIPTIVE_COMPOSITION.M4_DC_NO_CONCLUSION": {
+  "skill": "ENGL.G4.WRITIN.T10_CREATIVE_WRITING.DESCRIPTIVE_COMPOSITION",
+  "error": "Ends without a conclusion.",
+  "example": {
+   "question": "What should the last sentence do?",
+   "wrong_answer": "add one more detail",
+   "correct_answer": "say how the writer feels about the place"
+  },
+  "cause": "The child stops when the details run out.",
+  "reveals": "Offer \"add one more detail\" beside \"say how the writer feels about the place\" in a fresh sentence or text and ask again; picking it again shows the error is still there.",
+  "help": "End by saying what the place means to you.",
+  "feedback": "End by saying what the place means to you.",
+  "source": "to confirm by a Kenyan English teacher: a common classroom error of Kenyan learners of English, written offline (18 Nov 2026), not traced to a study",
+  "status": "draft"
+ },
+ "ENGL.G4.WRITIN.T10_CREATIVE_WRITING.DESCRIPTIVE_PARTS.M4_DES_NO_ORDER": {
+  "skill": "ENGL.G4.WRITIN.T10_CREATIVE_WRITING.DESCRIPTIVE_PARTS",
+  "error": "Describes details in a jumbled order.",
+  "example": {
+   "question": "Best order for describing a house?",
+   "wrong_answer": "roof, door, roof again, garden",
+   "correct_answer": "outside to inside, or top to bottom"
+  },
+  "cause": "Details are written as they come to mind.",
+  "reveals": "Offer \"roof, door, roof again, garden\" beside \"outside to inside, or top to bottom\" in a fresh sentence or text and ask again; picking it again shows the error is still there.",
+  "help": "Choose an order: outside to inside, or top to bottom.",
+  "feedback": "Choose an order: outside to inside, or top to bottom.",
+  "source": "to confirm by a Kenyan English teacher: a common classroom error of Kenyan learners of English, written offline (18 Nov 2026), not traced to a study",
+  "status": "draft"
+ },
  "ENGL.G4.LISTEN.T11_PRONUNCIATION_AND_VO.SPORTS_WORDS.M_SPT_NEAR_MEANING": {
   "skill": "ENGL.G4.LISTEN.T11_PRONUNCIATION_AND_VO.SPORTS_WORDS",
   "error": "Picks a sports word that is near in meaning but wrong.",
@@ -2981,6 +4451,81 @@
    "mark": "plausible, to confirm by a teacher",
    "note": "A usage or reading slip a Kenyan Grade 4 learner could plausibly make. No source and no homework count; a Kenyan English teacher should say whether it comes up in class."
   }
+ },
+ "ENGL.G4.LISTEN.T11_PRONUNCIATION_AND_VO.NONVERBAL_CUES.M4_NC_NOD": {
+  "skill": "ENGL.G4.LISTEN.T11_PRONUNCIATION_AND_VO.NONVERBAL_CUES",
+  "error": "Reads a nod as no, or a head shake as yes.",
+  "example": {
+   "question": "Your teacher nods when you answer. What does it mean?",
+   "wrong_answer": "You are wrong.",
+   "correct_answer": "You are right; go on."
+  },
+  "cause": "Gestures are not taught and are guessed.",
+  "reveals": "Offer \"You are wrong.\" beside \"You are right; go on.\" in a fresh sentence or text and ask again; picking it again shows the error is still there.",
+  "help": "A nod means yes or I agree.",
+  "feedback": "A nod means yes or I agree.",
+  "source": "to confirm by a Kenyan English teacher: a common classroom error of Kenyan learners of English, written offline (18 Nov 2026), not traced to a study",
+  "status": "draft"
+ },
+ "ENGL.G4.LISTEN.T11_PRONUNCIATION_AND_VO.NONVERBAL_CUES.M4_NC_FROWN": {
+  "skill": "ENGL.G4.LISTEN.T11_PRONUNCIATION_AND_VO.NONVERBAL_CUES",
+  "error": "Reads a frown as happiness or as nothing.",
+  "example": {
+   "question": "Your friend frowns while you explain the game. She is probably ...",
+   "wrong_answer": "happy",
+   "correct_answer": "confused or unhappy"
+  },
+  "cause": "The child watches the words, not the face.",
+  "reveals": "Offer \"happy\" beside \"confused or unhappy\" in a fresh sentence or text and ask again; picking it again shows the error is still there.",
+  "help": "Look at the face: a frown shows a problem.",
+  "feedback": "Look at the face: a frown shows a problem.",
+  "source": "to confirm by a Kenyan English teacher: a common classroom error of Kenyan learners of English, written offline (18 Nov 2026), not traced to a study",
+  "status": "draft"
+ },
+ "ENGL.G4.LISTEN.T11_PRONUNCIATION_AND_VO.NONVERBAL_CUES.M4_NC_TONE_WORDS": {
+  "skill": "ENGL.G4.LISTEN.T11_PRONUNCIATION_AND_VO.NONVERBAL_CUES",
+  "error": "Trusts the words and ignores the tone of voice.",
+  "example": {
+   "question": "Juma says \"Great, thanks a lot\" in an angry voice after his pen breaks. He feels ...",
+   "wrong_answer": "happy",
+   "correct_answer": "annoyed"
+  },
+  "cause": "The child reads only the dictionary meaning of the words.",
+  "reveals": "Offer \"happy\" beside \"annoyed\" in a fresh sentence or text and ask again; picking it again shows the error is still there.",
+  "help": "The tone tells you the feeling, even when the words say something else.",
+  "feedback": "The tone tells you the feeling, even when the words say something else.",
+  "source": "to confirm by a Kenyan English teacher: a common classroom error of Kenyan learners of English, written offline (18 Nov 2026), not traced to a study",
+  "status": "draft"
+ },
+ "ENGL.G4.LISTEN.T11_PRONUNCIATION_AND_VO.NONVERBAL_CUES.M4_NC_POINTING": {
+  "skill": "ENGL.G4.LISTEN.T11_PRONUNCIATION_AND_VO.NONVERBAL_CUES",
+  "error": "Points at an older person with a finger while talking about them.",
+  "example": {
+   "question": "Which is polite when telling the visitor where the headteacher is?",
+   "wrong_answer": "Point at the headteacher with one finger",
+   "correct_answer": "Show with an open hand"
+  },
+  "cause": "The child has not learnt which gestures are rude in Kenyan settings.",
+  "reveals": "Offer \"Point at the headteacher with one finger\" beside \"Show with an open hand\" in a fresh sentence or text and ask again; picking it again shows the error is still there.",
+  "help": "Use an open hand to show, not one finger.",
+  "feedback": "Use an open hand to show, not one finger.",
+  "source": "to confirm by a Kenyan English teacher: a common classroom error of Kenyan learners of English, written offline (18 Nov 2026), not traced to a study",
+  "status": "draft"
+ },
+ "ENGL.G4.LISTEN.T11_PRONUNCIATION_AND_VO.SPORTS_WORDS.M4_SPT_DRAW_LOSE": {
+  "skill": "ENGL.G4.LISTEN.T11_PRONUNCIATION_AND_VO.SPORTS_WORDS",
+  "error": "Thinks a draw means one team lost.",
+  "example": {
+   "question": "The score was 1-1. The match was a ...",
+   "wrong_answer": "loss",
+   "correct_answer": "draw"
+  },
+  "cause": "A result that is not a win is taken as a loss.",
+  "reveals": "Offer \"loss\" beside \"draw\" in a fresh sentence or text and ask again; picking it again shows the error is still there.",
+  "help": "A draw means both teams scored the same.",
+  "feedback": "A draw means both teams scored the same.",
+  "source": "to confirm by a Kenyan English teacher: a common classroom error of Kenyan learners of English, written offline (18 Nov 2026), not traced to a study",
+  "status": "draft"
  },
  "ENGL.G4.LANGUA.T11_LANGUAGE_PATTERNS.INTERROGATIVES.M_INT_WHO_FOR_WHAT": {
   "skill": "ENGL.G4.LANGUA.T11_LANGUAGE_PATTERNS.INTERROGATIVES",
@@ -3209,6 +4754,21 @@
    "mark": "plausible, to confirm by a teacher",
    "note": "A usage or reading slip a Kenyan Grade 4 learner could plausibly make. No source and no homework count; a Kenyan English teacher should say whether it comes up in class."
   }
+ },
+ "ENGL.G4.LISTEN.T12_PRONUNCIATION_AND_VO.ENVIRONMENT_WORDS.M4_ENV_RECYCLE_REUSE": {
+  "skill": "ENGL.G4.LISTEN.T12_PRONUNCIATION_AND_VO.ENVIRONMENT_WORDS",
+  "error": "Swaps recycle and reuse.",
+  "example": {
+   "question": "You use an old jar to keep pens. You ... it.",
+   "wrong_answer": "recycle",
+   "correct_answer": "reuse"
+  },
+  "cause": "Both are ways to waste less.",
+  "reveals": "Offer \"recycle\" beside \"reuse\" in a fresh sentence or text and ask again; picking it again shows the error is still there.",
+  "help": "Reuse means use again; recycle means make it into something new.",
+  "feedback": "Reuse means use again; recycle means make it into something new.",
+  "source": "to confirm by a Kenyan English teacher: a common classroom error of Kenyan learners of English, written offline (18 Nov 2026), not traced to a study",
+  "status": "draft"
  },
  "ENGL.G4.READIN.T12_1_INTENSIVE_READING.PROVERBS.M_PRV_LITERAL": {
   "skill": "ENGL.G4.READIN.T12_1_INTENSIVE_READING.PROVERBS",
@@ -3514,6 +5074,66 @@
    "note": "A usage or reading slip a Kenyan Grade 4 learner could plausibly make. No source and no homework count; a Kenyan English teacher should say whether it comes up in class."
   }
  },
+ "ENGL.G4.WRITIN.T12_GUIDED_COMPOSITION.DIARY_WRITING.M4_DW_NO_DATE": {
+  "skill": "ENGL.G4.WRITIN.T12_GUIDED_COMPOSITION.DIARY_WRITING",
+  "error": "Leaves out the date.",
+  "example": {
+   "question": "What must a diary entry begin with?",
+   "wrong_answer": "a title",
+   "correct_answer": "the day and date"
+  },
+  "cause": "The child does not see why the date matters.",
+  "reveals": "Offer \"a title\" beside \"the day and date\" in a fresh sentence or text and ask again; picking it again shows the error is still there.",
+  "help": "Every entry starts with the date.",
+  "feedback": "Every entry starts with the date.",
+  "source": "to confirm by a Kenyan English teacher: a common classroom error of Kenyan learners of English, written offline (18 Nov 2026), not traced to a study",
+  "status": "draft"
+ },
+ "ENGL.G4.WRITIN.T12_GUIDED_COMPOSITION.DIARY_WRITING.M4_DW_FUTURE": {
+  "skill": "ENGL.G4.WRITIN.T12_GUIDED_COMPOSITION.DIARY_WRITING",
+  "error": "Writes plans for tomorrow instead of what happened.",
+  "example": {
+   "question": "Which belongs in a diary entry for today?",
+   "wrong_answer": "Tomorrow I will play.",
+   "correct_answer": "Today I helped Mum plant beans."
+  },
+  "cause": "The child confuses a diary with a timetable.",
+  "reveals": "Offer \"Tomorrow I will play.\" beside \"Today I helped Mum plant beans.\" in a fresh sentence or text and ask again; picking it again shows the error is still there.",
+  "help": "A diary records what happened today.",
+  "feedback": "A diary records what happened today.",
+  "source": "to confirm by a Kenyan English teacher: a common classroom error of Kenyan learners of English, written offline (18 Nov 2026), not traced to a study",
+  "status": "draft"
+ },
+ "ENGL.G4.WRITIN.T12_GUIDED_COMPOSITION.DIARY_WRITING.M4_DW_THIRD_PERSON": {
+  "skill": "ENGL.G4.WRITIN.T12_GUIDED_COMPOSITION.DIARY_WRITING",
+  "error": "Writes about himself or herself as he or she.",
+  "example": {
+   "question": "Which is a diary sentence?",
+   "wrong_answer": "Baraka went to church.",
+   "correct_answer": "I went to church."
+  },
+  "cause": "Story writing is carried over.",
+  "reveals": "Offer \"Baraka went to church.\" beside \"I went to church.\" in a fresh sentence or text and ask again; picking it again shows the error is still there.",
+  "help": "A diary uses I.",
+  "feedback": "A diary uses I.",
+  "source": "to confirm by a Kenyan English teacher: a common classroom error of Kenyan learners of English, written offline (18 Nov 2026), not traced to a study",
+  "status": "draft"
+ },
+ "ENGL.G4.WRITIN.T12_GUIDED_COMPOSITION.DIARY_WRITING.M4_DW_EVENTS_ONLY": {
+  "skill": "ENGL.G4.WRITIN.T12_GUIDED_COMPOSITION.DIARY_WRITING",
+  "error": "Lists events with no feelings.",
+  "example": {
+   "question": "Add a feeling to: \"I went to the clinic.\"",
+   "wrong_answer": "I went to the clinic. I came back.",
+   "correct_answer": "I went to the clinic. I was scared of the injection."
+  },
+  "cause": "The child thinks only facts count.",
+  "reveals": "Offer \"I went to the clinic. I came back.\" beside \"I went to the clinic. I was scared of the injection.\" in a fresh sentence or text and ask again; picking it again shows the error is still there.",
+  "help": "Say how you felt about what happened.",
+  "feedback": "Say how you felt about what happened.",
+  "source": "to confirm by a Kenyan English teacher: a common classroom error of Kenyan learners of English, written offline (18 Nov 2026), not traced to a study",
+  "status": "draft"
+ },
  "ENGL.G4.LISTEN.T13_PRONUNCIATION_AND_VO.MONEY_WORDS.M_MON_EARN_SAVE": {
   "skill": "ENGL.G4.LISTEN.T13_PRONUNCIATION_AND_VO.MONEY_WORDS",
   "error": "Swaps earn and save.",
@@ -3646,6 +5266,81 @@
    "mark": "doubtful",
    "why": "The final e of knife and write is silent, so choosing it is correct. The misconception as written (always the last letter) is invented. Items using it were changed."
   }
+ },
+ "ENGL.G4.LISTEN.T13_PRONUNCIATION_AND_VO.VERY_BUT.M4_VB_VERY_COMPARATIVE": {
+  "skill": "ENGL.G4.LISTEN.T13_PRONUNCIATION_AND_VO.VERY_BUT",
+  "error": "Uses very with a comparative (very cheaper).",
+  "example": {
+   "question": "The shoes are very ... but they are expensive. (nice)",
+   "wrong_answer": "nicer",
+   "correct_answer": "nice"
+  },
+  "cause": "Two ways of making a stronger meaning are mixed.",
+  "reveals": "Offer \"nicer\" beside \"nice\" in a fresh sentence or text and ask again; picking it again shows the error is still there.",
+  "help": "Very goes with the plain adjective: very nice.",
+  "feedback": "Very goes with the plain adjective: very nice.",
+  "source": "to confirm by a Kenyan English teacher: a common classroom error of Kenyan learners of English, written offline (18 Nov 2026), not traced to a study",
+  "status": "draft"
+ },
+ "ENGL.G4.LISTEN.T13_PRONUNCIATION_AND_VO.VERY_BUT.M4_VB_TOO_FOR_VERY": {
+  "skill": "ENGL.G4.LISTEN.T13_PRONUNCIATION_AND_VO.VERY_BUT",
+  "error": "Uses too where very is meant.",
+  "example": {
+   "question": "The mangoes are ... sweet but they are small.",
+   "wrong_answer": "too",
+   "correct_answer": "very"
+  },
+  "cause": "In Kenyan English too often means very (too nice), but in standard English too means more than is wanted.",
+  "reveals": "Offer \"too\" beside \"very\" in a fresh sentence or text and ask again; picking it again shows the error is still there.",
+  "help": "Very means a lot; too means more than is good.",
+  "feedback": "Very means a lot; too means more than is good.",
+  "source": "to confirm by a Kenyan English teacher: a common classroom error of Kenyan learners of English, written offline (18 Nov 2026), not traced to a study",
+  "status": "draft"
+ },
+ "ENGL.G4.LISTEN.T13_PRONUNCIATION_AND_VO.VERY_BUT.M4_VB_NO_CONTRAST": {
+  "skill": "ENGL.G4.LISTEN.T13_PRONUNCIATION_AND_VO.VERY_BUT",
+  "error": "Uses but between two ideas that agree.",
+  "example": {
+   "question": "Which sentence is correct?",
+   "wrong_answer": "The bag is very strong but it is good.",
+   "correct_answer": "The bag is very strong but it is heavy."
+  },
+  "cause": "But is treated as a plain joining word.",
+  "reveals": "Offer \"The bag is very strong but it is good.\" beside \"The bag is very strong but it is heavy.\" in a fresh sentence or text and ask again; picking it again shows the error is still there.",
+  "help": "But needs two ideas that pull different ways.",
+  "feedback": "But needs two ideas that pull different ways.",
+  "source": "to confirm by a Kenyan English teacher: a common classroom error of Kenyan learners of English, written offline (18 Nov 2026), not traced to a study",
+  "status": "draft"
+ },
+ "ENGL.G4.LISTEN.T13_PRONUNCIATION_AND_VO.VERY_BUT.M4_VB_VERY_MUCH": {
+  "skill": "ENGL.G4.LISTEN.T13_PRONUNCIATION_AND_VO.VERY_BUT",
+  "error": "Says very much before an adjective.",
+  "example": {
+   "question": "The book is ... interesting but it is long.",
+   "wrong_answer": "very much",
+   "correct_answer": "very"
+  },
+  "cause": "Very much is learnt with thank you and spread to adjectives.",
+  "reveals": "Offer \"very much\" beside \"very\" in a fresh sentence or text and ask again; picking it again shows the error is still there.",
+  "help": "Very goes alone before an adjective.",
+  "feedback": "Very goes alone before an adjective.",
+  "source": "to confirm by a Kenyan English teacher: a common classroom error of Kenyan learners of English, written offline (18 Nov 2026), not traced to a study",
+  "status": "draft"
+ },
+ "ENGL.G4.LISTEN.T13_PRONUNCIATION_AND_VO.SILENT_LETTERS.M4_SIL_SPELL_SAY": {
+  "skill": "ENGL.G4.LISTEN.T13_PRONUNCIATION_AND_VO.SILENT_LETTERS",
+  "error": "Pronounces the silent letter because it is written.",
+  "example": {
+   "question": "Say: knife",
+   "wrong_answer": "k-nife",
+   "correct_answer": "nife"
+  },
+  "cause": "Reading by spelling: every letter is sounded.",
+  "reveals": "Offer \"k-nife\" beside \"nife\" in a fresh sentence or text and ask again; picking it again shows the error is still there.",
+  "help": "The k in kn is silent: knife, knee, know.",
+  "feedback": "The k in kn is silent: knife, knee, know.",
+  "source": "to confirm by a Kenyan English teacher: a common classroom error of Kenyan learners of English, written offline (18 Nov 2026), not traced to a study",
+  "status": "draft"
  },
  "ENGL.G4.LANGUA.T13_WORD_CLASS_PREPOSITI.PREP_POSITION.M_PRE_IN_ON": {
   "skill": "ENGL.G4.LANGUA.T13_WORD_CLASS_PREPOSITI.PREP_POSITION",
@@ -3855,5 +5550,20 @@
    "mark": "plausible, to confirm by a teacher",
    "note": "A usage or reading slip a Kenyan Grade 4 learner could plausibly make. No source and no homework count; a Kenyan English teacher should say whether it comes up in class."
   }
+ },
+ "ENGL.G4.WRITIN.T13_SPELLING.DOUBLE_CONSONANTS.M4_DBL_ING_NO_DOUBLE": {
+  "skill": "ENGL.G4.WRITIN.T13_SPELLING.DOUBLE_CONSONANTS",
+  "error": "Does not double the last consonant before -ing or -ed.",
+  "example": {
+   "question": "run + ing",
+   "wrong_answer": "runing",
+   "correct_answer": "running"
+  },
+  "cause": "The doubling rule for short vowels is not known.",
+  "reveals": "Offer \"runing\" beside \"running\" in a fresh sentence or text and ask again; picking it again shows the error is still there.",
+  "help": "Short vowel and one consonant: double it before -ing.",
+  "feedback": "Short vowel and one consonant: double it before -ing.",
+  "source": "to confirm by a Kenyan English teacher: a common classroom error of Kenyan learners of English, written offline (18 Nov 2026), not traced to a study",
+  "status": "draft"
  }
 }

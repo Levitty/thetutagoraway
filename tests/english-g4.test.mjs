@@ -2,6 +2,7 @@
 // All draft and off for children until a Kenyan English teacher signs them off.
 import { test } from 'node:test';
 import assert from 'node:assert/strict';
+import { depthFailures } from '../scripts/lib/english-depth.mjs';
 import { readFileSync } from 'node:fs';
 import { textFailures, checkTextForms } from '../engine/scripts/english_checks.mjs';
 import { SKILLS, OUTCOMES, MIS_FEEDBACK } from '../src/ai-tutor/content/curriculumMap.english.g4.js';
@@ -91,4 +92,20 @@ test('outcomes a question cannot test are routed to composition marking, a voice
   assert.equal(o('pronounce words with the target sounds accurately', 'Listening and Speaking', 'Pronunciation (Theme 2)'), 'voice');
   assert.equal(o('read a text of about 300 words accurately, at the right speed and with expression', 'Reading', 'Reading Fluency (Theme 8)'), 'voice');
   assert.equal(o('realise the importance of filling forms correctly', 'Writing', 'Functional writing (Theme 1)'), 'attitude');
+});
+
+// Depth pass (18 Nov 2026, Tuta Workspace/HOREB_MAPPING_PLAN.md): the Grade 5 Maths standard. Every testable outcome has a skill,
+// every skill two prerequisites, four misconceptions and a teaching pack entry (curriculum/english/teaching/g4/), and the SQL loads it all.
+test('Grade 4 English is at the depth standard: skills, prerequisites, misconceptions and teaching pack', () => {
+  assert.deepEqual(depthFailures(4), []);
+});
+
+test('the Grade 4 English SQL loads every skill, prerequisite and misconception (run node scripts/build-maths-sql-grade.mjs english 4)', () => {
+  const doc = JSON.parse(readFileSync(new URL('../curriculum/english/g4.json', import.meta.url), 'utf8'));
+  const sql = readFileSync(new URL('../supabase/migrations/20261130_english_g4_skills_misconceptions.sql', import.meta.url), 'utf8');
+  const count = (re) => (sql.match(re) || []).length;
+  assert.equal(count(/^INSERT INTO public\.curriculum_skills /gm), doc.totals.skills);
+  assert.equal(count(/^INSERT INTO public\.curriculum_prerequisites /gm), doc.totals.prerequisites);
+  assert.equal(count(/^INSERT INTO public\.curriculum_misconceptions /gm), doc.totals.misconceptions);
+  assert.ok(/^BEGIN;$/m.test(sql) && /^COMMIT;$/m.test(sql) && /ON CONFLICT \(code\) DO UPDATE/.test(sql), 'not one idempotent transaction');
 });

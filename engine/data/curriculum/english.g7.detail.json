@@ -272,6 +272,14 @@
    ],
    "mastery": "Chooses the book or text that fits what the reader needs (information, enjoyment, a topic, a level), tells fiction from non-fiction, and does not choose by the cover, the length or the title alone, in 8 of 10 new items."
   },
+  "ENGL.G7.READIN.T1_EXTENSIVE_READING_IN.INDEPENDENT_READING": {
+   "forms": [
+    "reading log",
+    "book talk",
+    "recommend a book"
+   ],
+   "mastery": "The child reads selected fiction and non-fiction alone over the term, keeps a reading log with one line on what each was about, and tells a classmate why it is worth reading. Evidence rule: the teacher sees it in two pieces of the learner's own work, scored with the KICD rubric indicator."
+  },
   "ENGL.G7.GRAMMA.T1_WORD_CLASSES_NOUNS.NOUN_TYPES": {
    "forms": [
     "choose the kind of noun",
@@ -295,12 +303,28 @@
    ],
    "mastery": "Names the features of neat handwriting (letters of an even size that sit on the line, tall and short letters kept distinct, clear spaces between words, a steady slant) and says why it matters, and does not take fast, decorated or crowded writing for neat, in 8 of 10 new items."
   },
+  "ENGL.G7.WRITIN.T1_HANDWRITING_LEGIBILI.LEGIBLE_WRITING": {
+   "forms": [
+    "write a fair copy",
+    "copy the paragraph neatly",
+    "rewrite this page neatly"
+   ],
+   "mastery": "The child writes a page with letters of even size and slant, clear spaces between words, straight margins, no crowding at the line end and no crossings-out in the fair copy. Evidence rule: the teacher sees it in two pieces of the learner's own work, scored with the KICD rubric indicator."
+  },
   "ENGL.G7.LISTEN.T2_ORAL_PRESENTATIONS_O.ORAL_TECHNIQUES": {
    "forms": [
     "choose the technique",
     "choose the best way to tell this part"
    ],
    "mastery": "Names how a good storyteller uses the voice (loud and soft, fast and slow), pauses, gestures, face, eye contact and audience participation, and picks the technique that fits a part of a story, in 8 of 10 new items."
+  },
+  "ENGL.G7.LISTEN.T2_ORAL_PRESENTATIONS_O.PERFORM_ORAL": {
+   "forms": [
+    "perform the narrative",
+    "recite the poem",
+    "sing the lullaby and say its message"
+   ],
+   "mastery": "The child performs an oral narrative, poem, lullaby or praise song with voice changes, pauses, gestures, eye contact and audience participation that fit it, and can say the key message it carries. Evidence rule: the teacher hears it done right on two different days, scored with the observation rubric (PLAN_OBSERVATION_RUBRICS.md); a tapped answer cannot show it."
   },
   "ENGL.G7.GRAMMA.T2_WORD_CLASSES_NOUNS.COUNT_NONCOUNT": {
    "forms": [
@@ -324,6 +348,14 @@
     "choose what the part tells you"
    ],
    "mastery": "Says what the cover, title page, blurb, contents page, author's note and glossary tell the reader and which part to read first to decide on a book, and does not mix them up, in 8 of 10 new items."
+  },
+  "ENGL.G7.READIN.T2_INTENSIVE_READING_CL.AUTHOR_SETTING": {
+   "forms": [
+    "who wrote it",
+    "where and when is it set",
+    "which clues show the setting"
+   ],
+   "mastery": "From the cover, the title page, the blurb and the first chapter, the child names the author and describes the setting in time and place, quoting the clues. Evidence rule: at least four of the last five fresh questions right across at least two question forms, and no repeated pick of the same misconception."
   },
   "ENGL.G7.WRITIN.T2_MECHANICS_OF_WRITING.END_MARKS": {
    "forms": [
@@ -373,6 +405,14 @@
    ],
    "mastery": "Names the parts of a narrative paragraph (the opening that sets the scene, the events in order, the closing) and tells which sentence plays which part, and which does not belong, in 8 of 10 new items."
   },
+  "ENGL.G7.WRITIN.T3_WRITING_NARRATIVE_PA.PARAGRAPH_WRITING": {
+   "forms": [
+    "write a paragraph about",
+    "add an example",
+    "add an incident"
+   ],
+   "mastery": "The child writes a paragraph with a topic sentence, events or supporting sentences in order with an example or an incident, and a closing sentence. Evidence rule: two pieces of the learner's own writing marked Meeting Expectations or above on the KICD rubric indicator."
+  },
   "ENGL.G7.LISTEN.T4_LISTENING_COMPREHENS.SPECIFIC_GENERAL": {
    "forms": [
     "general or specific",
@@ -380,6 +420,14 @@
     "type the specific detail"
    ],
    "mastery": "Says whether a question asks for the general idea or for a specific detail (a name, a number, a place, a time), and picks out the specific detail from a short text read to or by the learner, in 8 of 10 new items."
+  },
+  "ENGL.G7.LISTEN.T4_LISTENING_COMPREHENS.LISTEN_RESPOND": {
+   "forms": [
+    "what issue did the song raise",
+    "respond to the speaker",
+    "what would you advise"
+   ],
+   "mastery": "After listening to a talk or song (on leadership, land travel), the child names the key issues raised, gives specific details, and responds with a fitting comment, question or action. Evidence rule: the teacher hears it done right on two different days, scored with the observation rubric (PLAN_OBSERVATION_RUBRICS.md); a tapped answer cannot show it."
   },
   "ENGL.G7.READIN.T4_INTENSIVE_READING.READING_STRATEGIES": {
    "forms": [
@@ -433,6 +481,22 @@
    ],
    "mastery": "Chooses the example or incident that supports the topic sentence, tells it from a sentence that is off the topic, and says which words introduce an example (for example, for instance), in 8 of 10 new items."
   },
+  "ENGL.G7.LISTEN.T5_PRONUNCIATION_SOUNDS.PRONOUNCE_SOUNDS": {
+   "forms": [
+    "say the word after the teacher",
+    "read the pairs aloud",
+    "say the sentence clearly"
+   ],
+   "mastery": "The child articulates the Grade 7 target sounds (/t/ and /d/, /l/ and /r/, /ʊ/ and /uː/, /f/ and /v/, /n/ and /ŋ/) so that tin and din, light and right, pull and pool, sin and sing are heard as different words. Evidence rule: the teacher hears it done right on two different days, scored with the observation rubric (PLAN_OBSERVATION_RUBRICS.md); a tapped answer cannot show it."
+  },
+  "ENGL.G7.LISTEN.T5_PRONUNCIATION_SOUNDS.WORD_STRESS": {
+   "forms": [
+    "say it as a noun and as a verb",
+    "which syllable is strong",
+    "what does the stress change"
+   ],
+   "mastery": "The child says CONtract (noun) and conTRACT (verb), PROgress and proGRESS, and stresses longer words correctly (eLECtion, not elecTION). Evidence rule: the teacher hears it done right on two different days, scored with the observation rubric (PLAN_OBSERVATION_RUBRICS.md); a tapped answer cannot show it."
+  },
   "ENGL.G7.GRAMMA.T5_COMPARATIVE_AND_SUPE.ADJECTIVE_DEGREES": {
    "forms": [
     "pick the form",
@@ -449,6 +513,14 @@
    ],
    "mastery": "Says what makes a character a hero in a legend (brave, wise, generous), and chooses the moral lesson of a story, not a detail and not a lesson the story does not teach, in 8 of 10 new items."
   },
+  "ENGL.G7.READIN.T5_INTENSIVE_READING_OR.RELATE_TO_LIFE": {
+   "forms": [
+    "who is like this in your community",
+    "how does this lesson help you",
+    "why do people tell this story"
+   ],
+   "mastery": "The child links a character, a lesson or an event in a legend, poem or class reader to a real person, situation or choice in his or her life or community, and says why the story matters there. Evidence rule: the teacher sees it in two pieces of the learner's own work, scored with the KICD rubric indicator."
+  },
   "ENGL.G7.WRITIN.T5_FUNCTIONAL_WRITING_F.FRIENDLY_LETTER": {
    "forms": [
     "choose the part and its place",
@@ -457,6 +529,14 @@
    ],
    "mastery": "Puts the writer's address, date, greeting, body, closing (Your friend) and name in their places, and does not use the closing of a formal letter or write the receiver's address in a friendly letter, in 8 of 10 new items."
   },
+  "ENGL.G7.WRITIN.T5_FUNCTIONAL_WRITING_F.FRIENDLY_LETTER_WRITE": {
+   "forms": [
+    "write a letter to",
+    "reply to this letter",
+    "correct the letter"
+   ],
+   "mastery": "The child writes a friendly letter with the address and date, a warm greeting, paragraphs of news, a fitting closing and the name, in a friendly but correct tone. Evidence rule: two pieces of the learner's own writing marked Meeting Expectations or above on the KICD rubric indicator."
+  },
   "ENGL.G7.LISTEN.T6_CONVERSATION_SKILLS.POLITE_INTERRUPT": {
    "forms": [
     "choose the polite interruption",
@@ -464,6 +544,22 @@
     "fill the gap"
    ],
    "mastery": "Chooses the polite way to interrupt (Excuse me, may I say something?), to wait for a turn and to give one, tells it from a rude way, and says which gestures show politeness, in 8 of 10 new items."
+  },
+  "ENGL.G7.LISTEN.T6_CONVERSATION_SKILLS.TURN_TAKING": {
+   "forms": [
+    "hold a group discussion",
+    "keep the conversation going",
+    "hand the turn on"
+   ],
+   "mastery": "In a pair or group talk the child waits for a pause, keeps the turn short, links to what was said, and invites others in by name or with a question. Evidence rule: the teacher hears it done right on two different days, scored with the observation rubric (PLAN_OBSERVATION_RUBRICS.md); a tapped answer cannot show it."
+  },
+  "ENGL.G7.READIN.T6_READING_FLUENCY.READ_FLUENTLY": {
+   "forms": [
+    "read aloud to the teacher",
+    "read the dialogue in parts",
+    "reread for expression"
+   ],
+   "mastery": "The child reads a Grade 7 text aloud at a steady speaking pace, in phrases, with few slips, and uses the voice to show punctuation, speech and feeling. Evidence rule: the teacher hears it done right on two different days, scored with the observation rubric (PLAN_OBSERVATION_RUBRICS.md); a tapped answer cannot show it."
   },
   "ENGL.G7.GRAMMA.T6_WORD_CLASSES_ADVERBS.ADVERB_KINDS": {
    "forms": [
@@ -488,6 +584,14 @@
     "spot the mistake"
    ],
    "mastery": "Spells words that often go wrong (because, friend, believe, beautiful, address, definitely, parliament, necessary, calendar, February) and picks the correct spelling from three that look alike, in 8 of 10 new items."
+  },
+  "ENGL.G7.LISTEN.T7_LISTENING_COMPREHENS.LISTENING_NOTES": {
+   "forms": [
+    "make notes as you listen",
+    "complete the note frame",
+    "check your notes against the talk"
+   ],
+   "mastery": "While listening to a talk on forests, the child writes key words and numbers under headings, not whole sentences, and catches the details the speaker signals (first, the main reason, for example). Evidence rule: the teacher sees it in two pieces of the learner's own work, scored with the KICD rubric indicator."
   },
   "ENGL.G7.READIN.T7_INDEPENDENT_READING_.VISUALS": {
    "forms": [
@@ -519,6 +623,14 @@
     "what is done at this step"
    ],
    "mastery": "Names the steps (planning, drafting, revising, editing, publishing), says what is done at each and puts them in order, and does not edit before the draft is written, in 8 of 10 new items."
+  },
+  "ENGL.G7.WRITIN.T7_COMPOSITION_THE_WRIT.NARRATIVE_COMPOSITION": {
+   "forms": [
+    "plan, draft and revise a story",
+    "assess your introduction, body and conclusion",
+    "use the idioms in a story"
+   ],
+   "mastery": "The child plans, drafts, revises, edits and writes a fair copy of a narrative with a clear introduction, a body that builds and a conclusion, uses idioms that fit, and assesses each part against a checklist. Evidence rule: two pieces of the learner's own writing marked Meeting Expectations or above on the KICD rubric indicator."
   },
   "ENGL.G7.GRAMMA.T8_SIMPLE_PREPOSITIONS.PREPOSITIONS": {
    "forms": [
@@ -598,6 +710,14 @@
    ],
    "mastery": "Puts items under the heading they belong to (food, clothes, tools, stationery), finds the item that does not belong in a group, and chooses the list that fits the event, in 8 of 10 new items."
   },
+  "ENGL.G7.WRITIN.T10_FUNCTIONAL_WRITING_P.LISTS_WRITE": {
+   "forms": [
+    "write a packing list for",
+    "prepare a shopping list for",
+    "group the items"
+   ],
+   "mastery": "The child writes a list with a heading, items grouped (clothes, food, documents), quantities where needed, and only what the event or purpose calls for. Evidence rule: two pieces of the learner's own writing marked Meeting Expectations or above on the KICD rubric indicator."
+  },
   "ENGL.G7.LISTEN.T11_INTERVIEWS.INTERVIEW_KNOW": {
    "forms": [
     "choose the reason",
@@ -605,6 +725,14 @@
     "ask for clarification"
    ],
    "mastery": "Names why a person sits an interview (a school place, a scholarship, a job), chooses the confident and polite answer, asks for clarification politely (Could you repeat the question?), and spots a poor answer, in 8 of 10 new items."
+  },
+  "ENGL.G7.LISTEN.T11_INTERVIEWS.INTERVIEW_SPEAK": {
+   "forms": [
+    "role play an interview",
+    "answer the panel's questions",
+    "ask the panel to repeat a question"
+   ],
+   "mastery": "The child greets the panel, answers each question in full with a reason or example, speaks clearly and confidently but humbly, and asks politely for a question to be repeated or explained. Evidence rule: the teacher hears it done right on two different days, scored with the observation rubric (PLAN_OBSERVATION_RUBRICS.md); a tapped answer cannot show it."
   },
   "ENGL.G7.GRAMMA.T11_FORMATION_OF_ADJECTI.ADJECTIVE_FORMATION": {
    "forms": [
@@ -661,6 +789,14 @@
     "find the mistake in a dialogue"
    ],
    "mastery": "Puts the speaker's name, a colon and the words spoken on a new line for each turn, writes actions in brackets, and does not use quotation marks round every line of a play-style dialogue, in 8 of 10 new items."
+  },
+  "ENGL.G7.WRITIN.T12_THE_WRITING_PROCESS_.DIALOGUE_WRITING": {
+   "forms": [
+    "write a dialogue between",
+    "set out the dialogue",
+    "revise the dialogue"
+   ],
+   "mastery": "The child writes a dialogue with each speaker's name on the left, a colon, the words on the same line with no quotation marks, a new line for each speaker and actions in brackets. Evidence rule: two pieces of the learner's own writing marked Meeting Expectations or above on the KICD rubric indicator."
   },
   "ENGL.G7.LISTEN.T13_LISTENING_COMPREHENS.TRAVEL_WORDS": {
    "forms": [
@@ -745,6 +881,14 @@
    ],
    "mastery": "Picks the word that starts or ends with the sound named, tells /f/ from /v/ (five, fiver) and /n/ from /ŋ/ (sin, sing), and does not match by spelling, in 8 of 10 new items."
   },
+  "ENGL.G7.LISTEN.T14_CONSONANT_SOUNDS_AND.INTONATION": {
+   "forms": [
+    "up or down at the end",
+    "say the question",
+    "turn the statement into a question"
+   ],
+   "mastery": "The child lets the voice rise at the end of yes or no questions (Did you score?) and fall at the end of WH questions (Who scored?), in varied situations. Evidence rule: the teacher hears it done right on two different days, scored with the observation rubric (PLAN_OBSERVATION_RUBRICS.md); a tapped answer cannot show it."
+  },
   "ENGL.G7.GRAMMA.T14_SUBJECT_VERB_AGREEME.SV_AGREEMENT": {
    "forms": [
     "find the subject",
@@ -769,6 +913,14 @@
     "choose the order"
    ],
    "mastery": "Names what makes writing descriptive (the five senses, adjectives and adverbs, similes, an order such as top to bottom), tells a description from a narrative, and picks the sentence with the best detail, in 8 of 10 new items."
+  },
+  "ENGL.G7.WRITIN.T14_DESCRIPTIVE_WRITING_.DESCRIPTIVE_COMPOSITION": {
+   "forms": [
+    "describe a place",
+    "describe a person",
+    "describe a match"
+   ],
+   "mastery": "The child describes one person, thing or place in 200 to 240 words, through the senses and with similes and exact words, in a clear order, with an introduction and a conclusion. Evidence rule: two pieces of the learner's own writing marked Meeting Expectations or above on the KICD rubric indicator."
   },
   "ENGL.G7.LISTEN.T15_ORAL_REPORTS.ORAL_REPORT": {
    "forms": [
@@ -808,6 +960,14 @@
     "notice or poster"
    ],
    "mastery": "Names the parts of a notice (heading, what, when, where, who to see, the writer and the date) and of a poster (a big heading, a few words, a picture, the details), and finds the part that is missing, in 8 of 10 new items."
+  },
+  "ENGL.G7.WRITIN.T15_FUNCTIONAL_WRITING_N.NOTICE_DESIGN": {
+   "forms": [
+    "design a notice for",
+    "design a poster on",
+    "improve this poster"
+   ],
+   "mastery": "The child designs a notice (heading, what, when, where, who to contact, signed and dated) or a poster (big heading, few words, a picture, clear call to action) on a current issue. Evidence rule: two pieces of the learner's own writing marked Meeting Expectations or above on the KICD rubric indicator."
   }
  }
 }

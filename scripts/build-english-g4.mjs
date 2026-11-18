@@ -9,6 +9,7 @@
 // Then runs scripts/build-subject-map.mjs english 4 (curriculumMap.english.g4.js and the two engine data files).
 // ============================================================================
 import { readFileSync, writeFileSync } from 'node:fs';
+import { applyDepth } from './lib/english-depth.mjs';
 import { spawnSync } from 'node:child_process';
 import { SKILLS, MIS, ALSO } from './data/english-g4-skills.mjs';
 
@@ -79,6 +80,8 @@ for (const m of MIS) {
 const all = g4.sub_strands;
 g4.totals = { ...g4.totals, skills: all.reduce((n, s) => n + s.skills.length, 0), prerequisites: nPre, misconceptions: all.reduce((n, s) => n + s.misconceptions.length, 0) };
 g4.status = "outcomes from KICD's text, word for word; skills, prerequisites and misconceptions (12 Nov 2026) are proposed or draft, written offline by Claude, awaiting a Kenyan English teacher's review";
+// Depth pass (18 Nov 2026): new skills, prerequisites, misconceptions and the teaching pack from scripts/data/english-depth/g4-*.mjs.
+await applyDepth(4, g4, { families: (await import('../src/ai-tutor/content/subjects/english_g4.js')).default.families });
 writeFileSync(path, JSON.stringify(g4, null, 1) + '\n');
 console.log(`${SKILLS.length} skills, ${nPre} prerequisites, ${nLead} leads_to links, ${MIS.length} misconceptions over ${all.filter(s => s.skills.length).length} sub-strands`);
 const r = spawnSync('node', ['scripts/build-subject-map.mjs', 'english', '4', '--dir', 'english', '--title', 'English'], { stdio: 'inherit', cwd: new URL('..', import.meta.url).pathname });

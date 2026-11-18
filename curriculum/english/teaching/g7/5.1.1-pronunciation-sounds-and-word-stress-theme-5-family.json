@@ -1,0 +1,180 @@
+{
+ "sub_strand": "ENGL.G7.LISTEN.T5_PRONUNCIATION_SOUNDS",
+ "title": "Pronunciation: Sounds and Word Stress (Theme 5: Family)",
+ "status": "draft: written 18 Nov 2026 offline for Grade 7 English; not yet checked by a Kenyan English teacher; not loaded by the live tutor",
+ "notes": "",
+ "skills": [
+  {
+   "skill": "ENGL.G7.LISTEN.T5_PRONUNCIATION_SOUNDS.PRONOUNCE_SOUNDS",
+   "assessed_by": "voice",
+   "key_step": "The child checks voice, tongue and lips for each sound pair, then says them in a sentence.",
+   "floor": {
+    "prerequisite": "Says Grade 6 sounds.",
+    "question": "Say: tour",
+    "answer": "too-uh"
+   },
+   "steps": [
+    "Show the mouth.",
+    "Say the pair.",
+    "Say a sentence."
+   ],
+   "contexts": [
+    "family talk",
+    "sports commentary"
+   ],
+   "board": [
+    {
+     "beat": "write",
+     "do": "Write: tin / din, pull / pool, sin / sing."
+    },
+    {
+     "beat": "point",
+     "do": "Point at din.",
+     "say": "Is the voice on?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for the child to answer."
+    },
+    {
+     "beat": "child_draws",
+     "do": "The child says the pairs."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "ENGL.G7.LISTEN.T5_PRONUNCIATION_SOUNDS.PRONOUNCE_SOUNDS.M7_X_PS_T_D",
+     "listen_for": [
+      "bet"
+     ],
+     "ask": "Voice on at the end?",
+     "repair": "Bed."
+    },
+    {
+     "code": "ENGL.G7.LISTEN.T5_PRONUNCIATION_SOUNDS.PRONOUNCE_SOUNDS.M7_X_PS_L_R",
+     "listen_for": [
+      "The reader lead the lules."
+     ],
+     "ask": "Tongue up or curled?",
+     "repair": "Up for l."
+    },
+    {
+     "code": "ENGL.G7.LISTEN.T5_PRONUNCIATION_SOUNDS.PRONOUNCE_SOUNDS.M7_X_PS_PULL_POOL",
+     "listen_for": [
+      "both the same"
+     ],
+     "ask": "Short or long?",
+     "repair": "Pool is long."
+    },
+    {
+     "code": "ENGL.G7.LISTEN.T5_PRONUNCIATION_SOUNDS.PRONOUNCE_SOUNDS.M7_X_PS_NG_NG_G",
+     "listen_for": [
+      "sin-ging (hard g) or sinin"
+     ],
+     "ask": "One sound?",
+     "repair": "Ng at the back."
+    }
+   ],
+   "checks": [
+    {
+     "question": "Say: The leader read the rules.",
+     "answer": "clear l and r",
+     "shows": "l/r"
+    },
+    {
+     "question": "Say: The fans were singing.",
+     "answer": "clear f and ng",
+     "shows": "f/ng"
+    }
+   ]
+  },
+  {
+   "skill": "ENGL.G7.LISTEN.T5_PRONUNCIATION_SOUNDS.WORD_STRESS",
+   "assessed_by": "voice",
+   "key_step": "The child finds the word class, places the strong beat and hears the meaning change.",
+   "floor": {
+    "prerequisite": "Stresses Grade 6 pairs.",
+    "question": "PERmit or perMIT for a noun?",
+    "answer": "PERmit"
+   },
+   "steps": [
+    "Noun or verb?",
+    "Place the stress.",
+    "Say it in a sentence."
+   ],
+   "contexts": [
+    "family words",
+    "heroes and heroines"
+   ],
+   "board": [
+    {
+     "beat": "write",
+     "do": "Write: CONtract / conTRACT."
+    },
+    {
+     "beat": "point",
+     "do": "Point at conTRACT.",
+     "say": "Noun or verb?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for the child to answer."
+    },
+    {
+     "beat": "child_draws",
+     "do": "The child stresses election and independence."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "ENGL.G7.LISTEN.T5_PRONUNCIATION_SOUNDS.WORD_STRESS.M7_X_WS_NOUN_VERB",
+     "listen_for": [
+      "CONtract"
+     ],
+     "ask": "Noun or verb?",
+     "repair": "Move the stress."
+    },
+    {
+     "code": "ENGL.G7.LISTEN.T5_PRONUNCIATION_SOUNDS.WORD_STRESS.M7_X_WS_LAST",
+     "listen_for": [
+      "elec-TION"
+     ],
+     "ask": "Strong before -tion?",
+     "repair": "e-LEC-tion."
+    },
+    {
+     "code": "ENGL.G7.LISTEN.T5_PRONUNCIATION_SOUNDS.WORD_STRESS.M7_X_WS_EQUAL",
+     "listen_for": [
+      "IN-DE-PEN-DENCE"
+     ],
+     "ask": "Which beat is strong?",
+     "repair": "One only."
+    },
+    {
+     "code": "ENGL.G7.LISTEN.T5_PRONUNCIATION_SOUNDS.WORD_STRESS.M7_X_WS_MEANING",
+     "listen_for": [
+      "Yes"
+     ],
+     "ask": "Does stress change the meaning?",
+     "repair": "Noun or verb."
+    }
+   ],
+   "checks": [
+    {
+     "question": "Say: election",
+     "answer": "e-LEC-tion",
+     "shows": "stress"
+    },
+    {
+     "question": "They made good ___ (progress, noun).",
+     "answer": "PROgress",
+     "shows": "noun"
+    }
+   ]
+  }
+ ],
+ "also_taught_by": [
+  "ENGL.G7.LISTEN.T9_PRONUNCIATION_CONSON.SOUNDS_VOWELS",
+  "ENGL.G7.LISTEN.T14_CONSONANT_SOUNDS_AND.SOUNDS_CONSONANTS"
+ ]
+}

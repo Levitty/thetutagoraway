@@ -1,0 +1,178 @@
+{
+ "sub_strand": "ENGL.G7.WRITIN.T14_DESCRIPTIVE_WRITING_",
+ "title": "Descriptive Writing (200 – 240 words) (Theme 14: Sports - outdoor games)",
+ "status": "draft: written 18 Nov 2026 offline for Grade 7 English; not yet checked by a Kenyan English teacher; not loaded by the live tutor",
+ "notes": "",
+ "skills": [
+  {
+   "skill": "ENGL.G7.WRITIN.T14_DESCRIPTIVE_WRITING_.DESCRIPTIVE_FEATURES",
+   "assessed_by": "questions",
+   "key_step": "The child lists what can be described (looks, sounds, smells, feelings) in a clear order with exact words.",
+   "floor": {
+    "prerequisite": "Describes places.",
+    "question": "Describe a market in three words.",
+    "answer": "noisy, busy, colourful"
+   },
+   "steps": [
+    "Choose features.",
+    "Senses.",
+    "Order.",
+    "Exact words."
+   ],
+   "contexts": [
+    "sports grounds"
+   ],
+   "board": [
+    {
+     "beat": "write",
+     "do": "Write: The market opens at six."
+    },
+    {
+     "beat": "point",
+     "do": "Point at the sentence.",
+     "say": "Fact or description?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for the child to answer."
+    },
+    {
+     "beat": "child_draws",
+     "do": "The child rewrites it descriptively."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "ENGL.G7.WRITIN.T14_DESCRIPTIVE_WRITING_.DESCRIPTIVE_FEATURES.M7_DW_NARRATIVE_DESC",
+     "listen_for": [
+      "We walked to the lake and then swam."
+     ],
+     "ask": "What is it like?",
+     "repair": "Describe."
+    },
+    {
+     "code": "ENGL.G7.WRITIN.T14_DESCRIPTIVE_WRITING_.DESCRIPTIVE_FEATURES.M7_DW_FACTS_ONLY",
+     "listen_for": [
+      "The market opens at six o'clock."
+     ],
+     "ask": "Senses?",
+     "repair": "Add them."
+    },
+    {
+     "code": "ENGL.G7.WRITIN.T14_DESCRIPTIVE_WRITING_.DESCRIPTIVE_FEATURES.M7_DW_ORDER",
+     "listen_for": [
+      "in any order"
+     ],
+     "ask": "Order?",
+     "repair": "Clear order."
+    },
+    {
+     "code": "ENGL.G7.WRITIN.T14_DESCRIPTIVE_WRITING_.DESCRIPTIVE_FEATURES.M7_DW_VAGUE_WORDS",
+     "listen_for": [
+      "The food was nice."
+     ],
+     "ask": "Exact?",
+     "repair": "Hot and soft."
+    }
+   ],
+   "checks": [
+    {
+     "question": "Is \"We walked to the lake\" descriptive?",
+     "answer": "No",
+     "shows": "narrative"
+    },
+    {
+     "question": "Improve: The food was nice.",
+     "answer": "The ugali was hot and soft.",
+     "shows": "exact"
+    }
+   ]
+  },
+  {
+   "skill": "ENGL.G7.WRITIN.T14_DESCRIPTIVE_WRITING_.DESCRIPTIVE_COMPOSITION",
+   "assessed_by": "composition",
+   "key_step": "The child describes one subject in a set order through the senses, with exact words and a simile or two.",
+   "floor": {
+    "prerequisite": "Knows what can be described.",
+    "question": "Name three features of a stadium.",
+    "answer": "pitch, seats, crowd"
+   },
+   "steps": [
+    "Plan by order and senses.",
+    "Write 200 to 240 words.",
+    "Use similes and exact words.",
+    "Introduction and conclusion."
+   ],
+   "contexts": [
+    "an outdoor game",
+    "a market",
+    "a person"
+   ],
+   "board": [
+    {
+     "beat": "write",
+     "do": "Write: gate, seats, pitch."
+    },
+    {
+     "beat": "point",
+     "do": "Point at seats.",
+     "say": "What do you hear there?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for the child to answer."
+    },
+    {
+     "beat": "child_draws",
+     "do": "The child adds a simile."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "ENGL.G7.WRITIN.T14_DESCRIPTIVE_WRITING_.DESCRIPTIVE_COMPOSITION.M7_X_DC_NARRATES",
+     "listen_for": [
+      "We played a match and won."
+     ],
+     "ask": "What is it like?",
+     "repair": "Describe."
+    },
+    {
+     "code": "ENGL.G7.WRITIN.T14_DESCRIPTIVE_WRITING_.DESCRIPTIVE_COMPOSITION.M7_X_DC_VAGUE",
+     "listen_for": [
+      "The crowd was nice."
+     ],
+     "ask": "More exact?",
+     "repair": "Exact word, simile."
+    },
+    {
+     "code": "ENGL.G7.WRITIN.T14_DESCRIPTIVE_WRITING_.DESCRIPTIVE_COMPOSITION.M7_X_DC_SHORT",
+     "listen_for": [
+      "Yes"
+     ],
+     "ask": "How many words?",
+     "repair": "Add senses."
+    },
+    {
+     "code": "ENGL.G7.WRITIN.T14_DESCRIPTIVE_WRITING_.DESCRIPTIVE_COMPOSITION.M7_X_DC_NO_ORDER",
+     "listen_for": [
+      "seats, pitch, seats, gate"
+     ],
+     "ask": "Which way?",
+     "repair": "One direction."
+    }
+   ],
+   "checks": [
+    {
+     "question": "Improve: The crowd was nice.",
+     "answer": "The crowd roared like thunder.",
+     "shows": "language"
+    },
+    {
+     "question": "Is 90 words enough?",
+     "answer": "No",
+     "shows": "length"
+    }
+   ]
+  }
+ ]
+}

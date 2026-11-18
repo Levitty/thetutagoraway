@@ -1,0 +1,96 @@
+{
+ "sub_strand": "ENGL.G7.READIN.T4_INTENSIVE_READING",
+ "title": "Intensive Reading (Theme 4: Leadership)",
+ "status": "draft: written 18 Nov 2026 offline for Grade 7 English; not yet checked by a Kenyan English teacher; not loaded by the live tutor",
+ "notes": "",
+ "skills": [
+  {
+   "skill": "ENGL.G7.READIN.T4_INTENSIVE_READING.READING_STRATEGIES",
+   "assessed_by": "questions",
+   "key_step": "The child chooses the strategy for the job: preview, skim, scan or reread.",
+   "floor": {
+    "prerequisite": "Skims and scans.",
+    "question": "Skim or scan for a date?",
+    "answer": "scan"
+   },
+   "steps": [
+    "Preview.",
+    "Skim for gist.",
+    "Scan for a fact.",
+    "Reread hard parts."
+   ],
+   "contexts": [
+    "leadership texts"
+   ],
+   "board": [
+    {
+     "beat": "write",
+     "do": "Write: preview, skim, scan, reread."
+    },
+    {
+     "beat": "point",
+     "do": "Point at reread.",
+     "say": "When?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for the child to answer."
+    },
+    {
+     "beat": "child_draws",
+     "do": "The child matches the others."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "ENGL.G7.READIN.T4_INTENSIVE_READING.READING_STRATEGIES.M7_RS_SKIM_SCAN",
+     "listen_for": [
+      "skimming"
+     ],
+     "ask": "Gist or fact?",
+     "repair": "Scan for a fact."
+    },
+    {
+     "code": "ENGL.G7.READIN.T4_INTENSIVE_READING.READING_STRATEGIES.M7_RS_WRONG",
+     "listen_for": [
+      "skipping it"
+     ],
+     "ask": "Skip or reread?",
+     "repair": "Reread."
+    },
+    {
+     "code": "ENGL.G7.READIN.T4_INTENSIVE_READING.READING_STRATEGIES.M7_X_RS_REREAD_NEVER",
+     "listen_for": [
+      "go on to the next page"
+     ],
+     "ask": "Does it make sense?",
+     "repair": "Reread."
+    },
+    {
+     "code": "ENGL.G7.READIN.T4_INTENSIVE_READING.READING_STRATEGIES.M7_X_RS_PREVIEW_SKIP",
+     "listen_for": [
+      "start at the first word"
+     ],
+     "ask": "Did you preview?",
+     "repair": "Look first."
+    }
+   ],
+   "checks": [
+    {
+     "question": "Find one date quickly.",
+     "answer": "scan",
+     "shows": "scan"
+    },
+    {
+     "question": "A sentence is confusing.",
+     "answer": "reread it",
+     "shows": "reread"
+    }
+   ]
+  }
+ ],
+ "also_taught_by": [
+  "ENGL.G7.READIN.T13_INTENSIVE_READING_CO.MAIN_IDEA",
+  "ENGL.G7.READIN.T13_INTENSIVE_READING_CO.FACTUAL_QUESTIONS"
+ ]
+}

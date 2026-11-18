@@ -1,0 +1,93 @@
+{
+ "sub_strand": "ENGL.G8.LISTEN.T10_ORAL_PRESENTATIONS",
+ "title": "Oral Presentations (Theme 10: Art)",
+ "status": "draft: written 18 Nov 2026 offline for Grade 8 English; not yet checked by a Kenyan English teacher; not loaded by the live tutor",
+ "notes": "",
+ "skills": [
+  {
+   "skill": "ENGL.G8.LISTEN.T10_ORAL_PRESENTATIONS.SPEECH",
+   "assessed_by": "voice",
+   "key_step": "The child prepares a speech with salutation in order of rank, introduction, points and thanks, then presents it looking up.",
+   "floor": {
+    "prerequisite": "Knows speech features.",
+    "question": "Parts of a speech?",
+    "answer": "greeting, purpose, points, thanks"
+   },
+   "steps": [
+    "Salutation by rank.",
+    "Introduction.",
+    "Points.",
+    "Conclusion and thanks; present with eye contact."
+   ],
+   "contexts": [
+    "art exhibition",
+    "prize-giving"
+   ],
+   "board": [
+    {
+     "beat": "write",
+     "do": "Write: Chief guest, headteacher, teachers, parents ..."
+    },
+    {
+     "beat": "point",
+     "do": "Point at Chief guest.",
+     "say": "Why first?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for the child to answer."
+    },
+    {
+     "beat": "child_draws",
+     "do": "The child delivers the introduction."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "ENGL.G8.LISTEN.T10_ORAL_PRESENTATIONS.SPEECH.M8_X_SP_NO_SALUTATION",
+     "listen_for": [
+      "Today I will talk about art."
+     ],
+     "ask": "Who do you greet?",
+     "repair": "Salutation."
+    },
+    {
+     "code": "ENGL.G8.LISTEN.T10_ORAL_PRESENTATIONS.SPEECH.M8_X_SP_RANK_ORDER",
+     "listen_for": [
+      "learners, headteacher, chief guest"
+     ],
+     "ask": "Most senior?",
+     "repair": "First."
+    },
+    {
+     "code": "ENGL.G8.LISTEN.T10_ORAL_PRESENTATIONS.SPEECH.M8_X_SP_READS",
+     "listen_for": [
+      "reads with head down"
+     ],
+     "ask": "Eyes?",
+     "repair": "Look up."
+    },
+    {
+     "code": "ENGL.G8.LISTEN.T10_ORAL_PRESENTATIONS.SPEECH.M8_X_SP_NO_THANKS",
+     "listen_for": [
+      "That is all."
+     ],
+     "ask": "How end?",
+     "repair": "Thank you."
+    }
+   ],
+   "checks": [
+    {
+     "question": "First in the salutation?",
+     "answer": "the chief guest",
+     "shows": "rank"
+    },
+    {
+     "question": "Last words of a speech?",
+     "answer": "Thank you.",
+     "shows": "ending"
+    }
+   ]
+  }
+ ]
+}

@@ -1,0 +1,178 @@
+{
+ "sub_strand": "ENGL.G8.WRITIN.T7_COMPOSITION_WRITING",
+ "title": "Composition Writing (Theme 7: Natural resources: wildlife)",
+ "status": "draft: written 18 Nov 2026 offline for Grade 8 English; not yet checked by a Kenyan English teacher; not loaded by the live tutor",
+ "notes": "",
+ "skills": [
+  {
+   "skill": "ENGL.G8.WRITIN.T7_COMPOSITION_WRITING.WRITING_PROCESS",
+   "assessed_by": "questions",
+   "key_step": "The child orders the steps and says what happens at each, for a dialogue too.",
+   "floor": {
+    "prerequisite": "Knows the writing process.",
+    "question": "Step after drafting?",
+    "answer": "revising"
+   },
+   "steps": [
+    "Prewrite.",
+    "Draft.",
+    "Revise.",
+    "Edit.",
+    "Publish."
+   ],
+   "contexts": [
+    "wildlife dialogue"
+   ],
+   "board": [
+    {
+     "beat": "write",
+     "do": "Write the steps jumbled."
+    },
+    {
+     "beat": "point",
+     "do": "Point at edit.",
+     "say": "What happens?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for the child to answer."
+    },
+    {
+     "beat": "child_draws",
+     "do": "The child orders them."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "ENGL.G8.WRITIN.T7_COMPOSITION_WRITING.WRITING_PROCESS.M8_X_WP_ORDER",
+     "listen_for": [
+      "editing, drafting, prewriting"
+     ],
+     "ask": "First?",
+     "repair": "Prewrite."
+    },
+    {
+     "code": "ENGL.G8.WRITIN.T7_COMPOSITION_WRITING.WRITING_PROCESS.M8_X_WP_REVISE_EDIT",
+     "listen_for": [
+      "editing"
+     ],
+     "ask": "Ideas or spelling?",
+     "repair": "Revise ideas."
+    },
+    {
+     "code": "ENGL.G8.WRITIN.T7_COMPOSITION_WRITING.WRITING_PROCESS.M8_X_WP_SKIP_PREWRITE",
+     "listen_for": [
+      "No"
+     ],
+     "ask": "Plan?",
+     "repair": "Always."
+    },
+    {
+     "code": "ENGL.G8.WRITIN.T7_COMPOSITION_WRITING.WRITING_PROCESS.M8_X_WP_PUBLISH",
+     "listen_for": [
+      "printing a book"
+     ],
+     "ask": "Publish?",
+     "repair": "Share it."
+    }
+   ],
+   "checks": [
+    {
+     "question": "Changing the order of ideas is ...",
+     "answer": "revising",
+     "shows": "revise"
+    },
+    {
+     "question": "Sharing the final copy is ...",
+     "answer": "publishing",
+     "shows": "publish"
+    }
+   ]
+  },
+  {
+   "skill": "ENGL.G8.WRITIN.T7_COMPOSITION_WRITING.DIALOGUE_WRITING",
+   "assessed_by": "composition",
+   "key_step": "The child writes a setting line, names and colons, a line per speaker and directions in brackets.",
+   "floor": {
+    "prerequisite": "Knows the writing process.",
+    "question": "First step?",
+    "answer": "prewriting"
+   },
+   "steps": [
+    "Setting.",
+    "Name: words.",
+    "New line.",
+    "Directions in brackets; revise."
+   ],
+   "contexts": [
+    "a wildlife club",
+    "modern fashion"
+   ],
+   "board": [
+    {
+     "beat": "write",
+     "do": "Write: (At the wildlife club) Zawadi: ..."
+    },
+    {
+     "beat": "point",
+     "do": "Point at the brackets.",
+     "say": "What goes in them?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for the child to answer."
+    },
+    {
+     "beat": "child_draws",
+     "do": "The child writes two turns."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "ENGL.G8.WRITIN.T7_COMPOSITION_WRITING.DIALOGUE_WRITING.M8_X_DW_QUOTES",
+     "listen_for": [
+      "\"Zawadi: Hello.\""
+     ],
+     "ask": "Marks?",
+     "repair": "None."
+    },
+    {
+     "code": "ENGL.G8.WRITIN.T7_COMPOSITION_WRITING.DIALOGUE_WRITING.M8_X_DW_DIRECTIONS",
+     "listen_for": [
+      "Zawadi: laughs"
+     ],
+     "ask": "Spoken?",
+     "repair": "Brackets."
+    },
+    {
+     "code": "ENGL.G8.WRITIN.T7_COMPOSITION_WRITING.DIALOGUE_WRITING.M8_X_DW_SAME_LINE",
+     "listen_for": [
+      "same line"
+     ],
+     "ask": "New speaker?",
+     "repair": "New line."
+    },
+    {
+     "code": "ENGL.G8.WRITIN.T7_COMPOSITION_WRITING.DIALOGUE_WRITING.M8_X_DW_NO_SETTING",
+     "listen_for": [
+      "nothing"
+     ],
+     "ask": "Where?",
+     "repair": "Setting line."
+    }
+   ],
+   "checks": [
+    {
+     "question": "Quotation marks in a dialogue?",
+     "answer": "No",
+     "shows": "format"
+    },
+    {
+     "question": "Laughing: how shown?",
+     "answer": "(laughing)",
+     "shows": "directions"
+    }
+   ]
+  }
+ ]
+}

@@ -1,0 +1,91 @@
+{
+ "sub_strand": "ENGL.G6.LANGUA.T7_TENSE",
+ "title": "Tense: (Theme 7: Technology: scientific innovations)",
+ "status": "draft: written 18 Nov 2026 offline for Grade 6 English; not yet checked by a Kenyan English teacher; not loaded by the live tutor",
+ "notes": "",
+ "skills": [
+  {
+   "skill": "ENGL.G6.LANGUA.T7_TENSE.FUTURE_CONTINUOUS",
+   "assessed_by": "questions",
+   "key_step": "The child writes will be + -ing for an action in progress at a future time.",
+   "floor": {
+    "prerequisite": "Uses will.",
+    "question": "Tomorrow I ___ go.",
+    "answer": "will"
+   },
+   "steps": [
+    "Future time.",
+    "Will be.",
+    "-ing."
+   ],
+   "contexts": [
+    "technology plans"
+   ],
+   "board": [
+    {
+     "beat": "write",
+     "do": "Write: At 9 tomorrow, I ___ ___ ___. (write)"
+    },
+    {
+     "beat": "point",
+     "do": "Point at 9 tomorrow.",
+     "say": "In progress then?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for the child to answer."
+    },
+    {
+     "beat": "child_draws",
+     "do": "The child writes another."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "ENGL.G6.LANGUA.T7_TENSE.FUTURE_CONTINUOUS.M_FC_NO_BE",
+     "listen_for": [
+      "will"
+     ],
+     "ask": "Will writing?",
+     "repair": "Will be writing."
+    },
+    {
+     "code": "ENGL.G6.LANGUA.T7_TENSE.FUTURE_CONTINUOUS.M_FC_WILL_BEEN",
+     "listen_for": [
+      "will been"
+     ],
+     "ask": "Will been?",
+     "repair": "Will be."
+    },
+    {
+     "code": "ENGL.G6.LANGUA.T7_TENSE.FUTURE_CONTINUOUS.M_FC_PRESENT",
+     "listen_for": [
+      "is"
+     ],
+     "ask": "Future?",
+     "repair": "Will be."
+    },
+    {
+     "code": "ENGL.G6.LANGUA.T7_TENSE.FUTURE_CONTINUOUS.M_FC_NO_ING",
+     "listen_for": [
+      "will write"
+     ],
+     "ask": "Ending?",
+     "repair": "-ing."
+    }
+   ],
+   "checks": [
+    {
+     "question": "This time next week we ___ (travel).",
+     "answer": "will be travelling",
+     "shows": "form"
+    },
+    {
+     "question": "Will been?",
+     "answer": "No: will be",
+     "shows": "form"
+    }
+   ]
+  }
+ ]
+}

@@ -1,0 +1,93 @@
+{
+ "sub_strand": "ENGL.G8.WRITIN.T5_FUNCTIONAL_WRITING_A",
+ "title": "Functional Writing: Apology Letters (Theme 5: Relationships: peers)",
+ "status": "draft: written 18 Nov 2026 offline for Grade 8 English; not yet checked by a Kenyan English teacher; not loaded by the live tutor",
+ "notes": "",
+ "skills": [
+  {
+   "skill": "ENGL.G8.WRITIN.T5_FUNCTIONAL_WRITING_A.APOLOGY_LETTER",
+   "assessed_by": "composition",
+   "key_step": "The child says sorry clearly, names the wrong, takes responsibility, offers to put it right and promises better.",
+   "floor": {
+    "prerequisite": "Writes friendly letters.",
+    "question": "Parts of a friendly letter?",
+    "answer": "address, date, greeting, body, closing"
+   },
+   "steps": [
+    "Format.",
+    "Say sorry and name the wrong.",
+    "Take responsibility.",
+    "Repair and promise."
+   ],
+   "contexts": [
+    "apologising to a friend",
+    "apologising to a neighbour"
+   ],
+   "board": [
+    {
+     "beat": "write",
+     "do": "Write: I am truly sorry that I ..."
+    },
+    {
+     "beat": "point",
+     "do": "Point at that I.",
+     "say": "What did you do?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for the child to answer."
+    },
+    {
+     "beat": "child_draws",
+     "do": "The child offers a repair."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "ENGL.G8.WRITIN.T5_FUNCTIONAL_WRITING_A.APOLOGY_LETTER.M8_X_AL_EXCUSES",
+     "listen_for": [
+      "It was not really my fault; it slipped."
+     ],
+     "ask": "Excuse or responsibility?",
+     "repair": "Take it."
+    },
+    {
+     "code": "ENGL.G8.WRITIN.T5_FUNCTIONAL_WRITING_A.APOLOGY_LETTER.M8_X_AL_NO_REPAIR",
+     "listen_for": [
+      "nothing"
+     ],
+     "ask": "Put it right?",
+     "repair": "Say how."
+    },
+    {
+     "code": "ENGL.G8.WRITIN.T5_FUNCTIONAL_WRITING_A.APOLOGY_LETTER.M8_X_AL_VAGUE",
+     "listen_for": [
+      "Sorry for everything."
+     ],
+     "ask": "What exactly?",
+     "repair": "Name it."
+    },
+    {
+     "code": "ENGL.G8.WRITIN.T5_FUNCTIONAL_WRITING_A.APOLOGY_LETTER.M8_X_AL_FORMAT",
+     "listen_for": [
+      "just the message"
+     ],
+     "ask": "Format?",
+     "repair": "Full letter."
+    }
+   ],
+   "checks": [
+    {
+     "question": "Is \"It was not my fault\" an apology?",
+     "answer": "No",
+     "shows": "responsibility"
+    },
+    {
+     "question": "What comes after sorry?",
+     "answer": "how you will put it right",
+     "shows": "repair"
+    }
+   ]
+  }
+ ]
+}

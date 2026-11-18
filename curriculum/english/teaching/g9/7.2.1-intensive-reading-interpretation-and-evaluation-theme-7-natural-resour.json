@@ -1,0 +1,94 @@
+{
+ "sub_strand": "ENGL.G9.READIN.T7_INTENSIVE_READING_IN",
+ "title": "Intensive Reading: Interpretation and Evaluation (Theme 7: Natural resources: marine life)",
+ "status": "draft: written 18 Nov 2026 offline for Grade 9 English; not yet checked by a Kenyan English teacher; not loaded by the live tutor",
+ "notes": "",
+ "skills": [
+  {
+   "skill": "ENGL.G9.READIN.T7_INTENSIVE_READING_IN.INTERPRET_EVALUATE",
+   "assessed_by": "questions",
+   "key_step": "The child first says what the text means, then separately judges how true, fair or useful it is, with reasons.",
+   "floor": {
+    "prerequisite": "Answers inference questions.",
+    "question": "What does the clue show?",
+    "answer": "an inference"
+   },
+   "steps": [
+    "Interpret: what does it mean?",
+    "Evaluate: is it true or fair?",
+    "Give reasons from the text."
+   ],
+   "contexts": [
+    "marine life articles"
+   ],
+   "board": [
+    {
+     "beat": "write",
+     "do": "Write two questions: meaning and reliability."
+    },
+    {
+     "beat": "point",
+     "do": "Point at reliability.",
+     "say": "Interpret or evaluate?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for the child to answer."
+    },
+    {
+     "beat": "child_draws",
+     "do": "The child answers both."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "ENGL.G9.READIN.T7_INTENSIVE_READING_IN.INTERPRET_EVALUATE.M9_IE_SAME",
+     "listen_for": [
+      "interpret"
+     ],
+     "ask": "Meaning or judgement?",
+     "repair": "Tell them apart."
+    },
+    {
+     "code": "ENGL.G9.READIN.T7_INTENSIVE_READING_IN.INTERPRET_EVALUATE.M9_IE_ACCEPT_ALL",
+     "listen_for": [
+      "Yes"
+     ],
+     "ask": "Who says it?",
+     "repair": "Check."
+    },
+    {
+     "code": "ENGL.G9.READIN.T7_INTENSIVE_READING_IN.INTERPRET_EVALUATE.M9_IE_LITERAL",
+     "listen_for": [
+      "a sea made of plastic"
+     ],
+     "ask": "Picture?",
+     "repair": "Figurative."
+    },
+    {
+     "code": "ENGL.G9.READIN.T7_INTENSIVE_READING_IN.INTERPRET_EVALUATE.M9_IE_OPINION_NO_REASON",
+     "listen_for": [
+      "No."
+     ],
+     "ask": "Why?",
+     "repair": "A reason."
+    }
+   ],
+   "checks": [
+    {
+     "question": "\"Is the claim reliable?\" asks you to ...",
+     "answer": "evaluate",
+     "shows": "evaluate"
+    },
+    {
+     "question": "\"The sea of plastic\" means ...",
+     "answer": "a lot of plastic waste",
+     "shows": "interpret"
+    }
+   ]
+  }
+ ],
+ "also_taught_by": [
+  "ENGL.G9.READIN.T14_SUMMARISING_ARGUMENT.RS_SUMMARY"
+ ]
+}

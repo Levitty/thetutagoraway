@@ -1,0 +1,95 @@
+{
+ "sub_strand": "ENGL.G7.WRITIN.T9_CREATIVE_WRITING_NAR",
+ "title": "Creative writing: Narrative compositions (Theme 9: Heroes and heroines - kenya)",
+ "status": "draft: written 18 Nov 2026 offline for Grade 7 English; not yet checked by a Kenyan English teacher; not loaded by the live tutor",
+ "notes": "",
+ "skills": [
+  {
+   "skill": "ENGL.G7.WRITIN.T9_CREATIVE_WRITING_NAR.NARRATIVE_FEATURES",
+   "assessed_by": "questions",
+   "key_step": "The child names the features of a narrative: title, setting, characters, conflict, past tense, resolution.",
+   "floor": {
+    "prerequisite": "Knows narrative parts.",
+    "question": "Where is the problem?",
+    "answer": "the body"
+   },
+   "steps": [
+    "Setting.",
+    "Characters.",
+    "Conflict.",
+    "Resolution, in the past tense."
+   ],
+   "contexts": [
+    "hero stories"
+   ],
+   "board": [
+    {
+     "beat": "write",
+     "do": "Write a short narrative."
+    },
+    {
+     "beat": "point",
+     "do": "Point at the problem.",
+     "say": "What feature is this?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for the child to answer."
+    },
+    {
+     "beat": "child_draws",
+     "do": "The child names the setting."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "ENGL.G7.WRITIN.T9_CREATIVE_WRITING_NAR.NARRATIVE_FEATURES.M7_NF_NARRATIVE_DESCRIPTION",
+     "listen_for": [
+      "The market is wide, noisy and full of colour."
+     ],
+     "ask": "Does something happen?",
+     "repair": "Narrative."
+    },
+    {
+     "code": "ENGL.G7.WRITIN.T9_CREATIVE_WRITING_NAR.NARRATIVE_FEATURES.M7_NF_MISSING_PART",
+     "listen_for": [
+      "a title"
+     ],
+     "ask": "What goes wrong?",
+     "repair": "A conflict."
+    },
+    {
+     "code": "ENGL.G7.WRITIN.T9_CREATIVE_WRITING_NAR.NARRATIVE_FEATURES.M7_NF_SETTING_CHARACTER",
+     "listen_for": [
+      "the people in the story"
+     ],
+     "ask": "When and where?",
+     "repair": "Setting."
+    },
+    {
+     "code": "ENGL.G7.WRITIN.T9_CREATIVE_WRITING_NAR.NARRATIVE_FEATURES.M7_NF_PERSON",
+     "listen_for": [
+      "I am walking to the river."
+     ],
+     "ask": "Present?",
+     "repair": "Past."
+    }
+   ],
+   "checks": [
+    {
+     "question": "Is a description of a market a narrative?",
+     "answer": "No",
+     "shows": "narrative"
+    },
+    {
+     "question": "Narratives are usually in which tense?",
+     "answer": "past",
+     "shows": "tense"
+    }
+   ]
+  }
+ ],
+ "also_taught_by": [
+  "ENGL.G7.WRITIN.T7_COMPOSITION_THE_WRIT.NARRATIVE_COMPOSITION"
+ ]
+}

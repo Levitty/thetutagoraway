@@ -1,0 +1,91 @@
+{
+ "sub_strand": "ENGL.G8.GRAMMA.T5_WORD_CLASSES_ADJECTI",
+ "title": "Word Classes: adjectives (Theme 5: Relationships: peers)",
+ "status": "draft: written 18 Nov 2026 offline for Grade 8 English; not yet checked by a Kenyan English teacher; not loaded by the live tutor",
+ "notes": "",
+ "skills": [
+  {
+   "skill": "ENGL.G8.GRAMMA.T5_WORD_CLASSES_ADJECTI.GRADABLE_ADJECTIVES",
+   "assessed_by": "questions",
+   "key_step": "The child uses very with ordinary adjectives and absolutely with extreme ones, and never more with absolute ones.",
+   "floor": {
+    "prerequisite": "Uses adjective degrees.",
+    "question": "good, better, ___",
+    "answer": "best"
+   },
+   "steps": [
+    "Ordinary: very.",
+    "Extreme: absolutely.",
+    "Absolute (unique): no more."
+   ],
+   "contexts": [
+    "peer relationships"
+   ],
+   "board": [
+    {
+     "beat": "write",
+     "do": "Write: very cold / absolutely freezing."
+    },
+    {
+     "beat": "point",
+     "do": "Point at freezing.",
+     "say": "Why not very?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for the child to answer."
+    },
+    {
+     "beat": "child_draws",
+     "do": "The child fills enormous."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "ENGL.G8.GRAMMA.T5_WORD_CLASSES_ADJECTI.GRADABLE_ADJECTIVES.M8_GR_VERY_ABSOLUTE",
+     "listen_for": [
+      "very"
+     ],
+     "ask": "Extreme?",
+     "repair": "Absolutely."
+    },
+    {
+     "code": "ENGL.G8.GRAMMA.T5_WORD_CLASSES_ADJECTI.GRADABLE_ADJECTIVES.M8_GR_ABSOLUTELY_GRADABLE",
+     "listen_for": [
+      "absolutely"
+     ],
+     "ask": "Ordinary?",
+     "repair": "Very."
+    },
+    {
+     "code": "ENGL.G8.GRAMMA.T5_WORD_CLASSES_ADJECTI.GRADABLE_ADJECTIVES.M8_GR_MORE_UNIQUE",
+     "listen_for": [
+      "more unique"
+     ],
+     "ask": "Can it be more?",
+     "repair": "Unique."
+    },
+    {
+     "code": "ENGL.G8.GRAMMA.T5_WORD_CLASSES_ADJECTI.GRADABLE_ADJECTIVES.M8_X_GR_VERY_GIANT",
+     "listen_for": [
+      "very"
+     ],
+     "ask": "Enormous is extreme.",
+     "repair": "Absolutely."
+    }
+   ],
+   "checks": [
+    {
+     "question": "___ enormous",
+     "answer": "absolutely",
+     "shows": "extreme"
+    },
+    {
+     "question": "more unique?",
+     "answer": "No: unique",
+     "shows": "absolute"
+    }
+   ]
+  }
+ ]
+}

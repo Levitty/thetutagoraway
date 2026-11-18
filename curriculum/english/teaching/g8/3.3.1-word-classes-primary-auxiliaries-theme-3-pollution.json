@@ -1,0 +1,91 @@
+{
+ "sub_strand": "ENGL.G8.GRAMMA.T3_WORD_CLASSES_PRIMARY",
+ "title": "Word Classes: Primary Auxiliaries (Theme 3: Pollution)",
+ "status": "draft: written 18 Nov 2026 offline for Grade 8 English; not yet checked by a Kenyan English teacher; not loaded by the live tutor",
+ "notes": "",
+ "skills": [
+  {
+   "skill": "ENGL.G8.GRAMMA.T3_WORD_CLASSES_PRIMARY.AUXILIARY_VERBS",
+   "assessed_by": "questions",
+   "key_step": "The child uses one helping verb that agrees with the subject and a plain verb after do or a modal.",
+   "floor": {
+    "prerequisite": "Uses tenses.",
+    "question": "She ___ (has/have) a book.",
+    "answer": "has"
+   },
+   "steps": [
+    "Agreement.",
+    "One helper.",
+    "Plain verb after do and modals."
+   ],
+   "contexts": [
+    "pollution"
+   ],
+   "board": [
+    {
+     "beat": "write",
+     "do": "Write: She is can swim."
+    },
+    {
+     "beat": "point",
+     "do": "Point at is can.",
+     "say": "How many helpers?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for the child to answer."
+    },
+    {
+     "beat": "child_draws",
+     "do": "The child fixes it."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "ENGL.G8.GRAMMA.T3_WORD_CLASSES_PRIMARY.AUXILIARY_VERBS.M8_AUX_AGREE",
+     "listen_for": [
+      "have"
+     ],
+     "ask": "He or they?",
+     "repair": "Has."
+    },
+    {
+     "code": "ENGL.G8.GRAMMA.T3_WORD_CLASSES_PRIMARY.AUXILIARY_VERBS.M8_AUX_BE_FORM",
+     "listen_for": [
+      "was"
+     ],
+     "ask": "Many?",
+     "repair": "Were."
+    },
+    {
+     "code": "ENGL.G8.GRAMMA.T3_WORD_CLASSES_PRIMARY.AUXILIARY_VERBS.M8_AUX_DID_PAST",
+     "listen_for": [
+      "went"
+     ],
+     "ask": "After did?",
+     "repair": "Go."
+    },
+    {
+     "code": "ENGL.G8.GRAMMA.T3_WORD_CLASSES_PRIMARY.AUXILIARY_VERBS.M8_X_AUX_DOUBLE",
+     "listen_for": [
+      "She is can swim."
+     ],
+     "ask": "Two helpers?",
+     "repair": "One."
+    }
+   ],
+   "checks": [
+    {
+     "question": "They ___ (was/were) late.",
+     "answer": "were",
+     "shows": "agreement"
+    },
+    {
+     "question": "Did he ___ (went/go)?",
+     "answer": "go",
+     "shows": "did"
+    }
+   ]
+  }
+ ]
+}

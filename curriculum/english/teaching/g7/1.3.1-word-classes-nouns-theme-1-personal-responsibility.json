@@ -1,0 +1,108 @@
+{
+ "sub_strand": "ENGL.G7.GRAMMA.T1_WORD_CLASSES_NOUNS",
+ "title": "Word Classes: Nouns (Theme 1: Personal responsibility)",
+ "status": "draft: written 18 Nov 2026 offline for Grade 7 English; not yet checked by a Kenyan English teacher; not loaded by the live tutor",
+ "notes": "",
+ "skills": [
+  {
+   "skill": "ENGL.G7.GRAMMA.T1_WORD_CLASSES_NOUNS.NOUN_TYPES",
+   "assessed_by": "questions",
+   "key_step": "The child sorts nouns into common, proper, collective and abstract, with capitals for proper nouns.",
+   "floor": {
+    "prerequisite": "Tells concrete from abstract.",
+    "question": "Is \"courage\" concrete?",
+    "answer": "no"
+   },
+   "steps": [
+    "Name of one place or person: proper.",
+    "Group: collective.",
+    "Idea or feeling: abstract.",
+    "Otherwise common."
+   ],
+   "contexts": [
+    "personal responsibility texts"
+   ],
+   "board": [
+    {
+     "beat": "write",
+     "do": "Write: kisumu, swarm, courage, bridge."
+    },
+    {
+     "beat": "point",
+     "do": "Point at kisumu.",
+     "say": "What kind? How is it written?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for the child to answer."
+    },
+    {
+     "beat": "child_draws",
+     "do": "The child sorts the rest."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "ENGL.G7.GRAMMA.T1_WORD_CLASSES_NOUNS.NOUN_TYPES.M7_NT_PROPER_SMALL",
+     "listen_for": [
+      "kisumu"
+     ],
+     "ask": "Name of a place?",
+     "repair": "Capital."
+    },
+    {
+     "code": "ENGL.G7.GRAMMA.T1_WORD_CLASSES_NOUNS.NOUN_TYPES.M7_NT_COLLECTIVE_WRONG",
+     "listen_for": [
+      "herd"
+     ],
+     "ask": "Which group word for bees?",
+     "repair": "Swarm."
+    },
+    {
+     "code": "ENGL.G7.GRAMMA.T1_WORD_CLASSES_NOUNS.NOUN_TYPES.M7_NT_COLLECTIVE_PLURAL",
+     "listen_for": [
+      "flocks"
+     ],
+     "ask": "One group?",
+     "repair": "Flock."
+    },
+    {
+     "code": "ENGL.G7.GRAMMA.T1_WORD_CLASSES_NOUNS.NOUN_TYPES.M7_NT_ABSTRACT_COMMON",
+     "listen_for": [
+      "bridge"
+     ],
+     "ask": "Can you touch it?",
+     "repair": "Abstract."
+    },
+    {
+     "code": "ENGL.G7.GRAMMA.T1_WORD_CLASSES_NOUNS.NOUN_TYPES.M7_NT_COMMON_PROPER",
+     "listen_for": [
+      "city"
+     ],
+     "ask": "A particular city?",
+     "repair": "Proper."
+    },
+    {
+     "code": "ENGL.G7.GRAMMA.T1_WORD_CLASSES_NOUNS.NOUN_TYPES.M7_NT_COLLECTIVE_SINGLE",
+     "listen_for": [
+      "player"
+     ],
+     "ask": "Group or one?",
+     "repair": "Team."
+    }
+   ],
+   "checks": [
+    {
+     "question": "a ___ of bees",
+     "answer": "swarm",
+     "shows": "collective"
+    },
+    {
+     "question": "Nairobi is a ___ noun.",
+     "answer": "proper",
+     "shows": "proper"
+    }
+   ]
+  }
+ ]
+}

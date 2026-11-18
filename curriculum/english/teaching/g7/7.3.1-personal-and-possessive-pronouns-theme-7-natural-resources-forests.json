@@ -1,0 +1,190 @@
+{
+ "sub_strand": "ENGL.G7.GRAMMA.T7_PERSONAL_AND_POSSESS",
+ "title": "Personal and possessive pronouns (Theme 7: Natural resources – forests)",
+ "status": "draft: written 18 Nov 2026 offline for Grade 7 English; not yet checked by a Kenyan English teacher; not loaded by the live tutor",
+ "notes": "",
+ "skills": [
+  {
+   "skill": "ENGL.G7.GRAMMA.T7_PERSONAL_AND_POSSESS.PERSONAL_PRONOUNS",
+   "assessed_by": "questions",
+   "key_step": "The child uses subject pronouns before the verb and object pronouns after, with no doubled subject.",
+   "floor": {
+    "prerequisite": "Uses relative pronouns.",
+    "question": "The man ___ helped us.",
+    "answer": "who"
+   },
+   "steps": [
+    "Subject: I, he, we.",
+    "Object: me, him, us.",
+    "No doubled subject."
+   ],
+   "contexts": [
+    "forests"
+   ],
+   "board": [
+    {
+     "beat": "write",
+     "do": "Write: My mother she is a nurse."
+    },
+    {
+     "beat": "point",
+     "do": "Point at she.",
+     "say": "Do we need it?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for the child to answer."
+    },
+    {
+     "beat": "child_draws",
+     "do": "The child fixes it."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "ENGL.G7.GRAMMA.T7_PERSONAL_AND_POSSESS.PERSONAL_PRONOUNS.M7_PP_OBJECT_SUBJECT",
+     "listen_for": [
+      "Me"
+     ],
+     "ask": "Doer?",
+     "repair": "I."
+    },
+    {
+     "code": "ENGL.G7.GRAMMA.T7_PERSONAL_AND_POSSESS.PERSONAL_PRONOUNS.M7_PP_SUBJECT_OBJECT",
+     "listen_for": [
+      "I"
+     ],
+     "ask": "After the verb?",
+     "repair": "Me."
+    },
+    {
+     "code": "ENGL.G7.GRAMMA.T7_PERSONAL_AND_POSSESS.PERSONAL_PRONOUNS.M7_PP_US_WE",
+     "listen_for": [
+      "we"
+     ],
+     "ask": "Object?",
+     "repair": "Us."
+    },
+    {
+     "code": "ENGL.G7.GRAMMA.T7_PERSONAL_AND_POSSESS.PERSONAL_PRONOUNS.M7_PP_NUMBER",
+     "listen_for": [
+      "She"
+     ],
+     "ask": "Boy?",
+     "repair": "He."
+    },
+    {
+     "code": "ENGL.G7.GRAMMA.T7_PERSONAL_AND_POSSESS.PERSONAL_PRONOUNS.M7_PP_DOUBLE_SUBJECT",
+     "listen_for": [
+      "My mother she is a nurse."
+     ],
+     "ask": "Two subjects?",
+     "repair": "One."
+    }
+   ],
+   "checks": [
+    {
+     "question": "___ and Juma planted trees. (Me/I)",
+     "answer": "Juma and I",
+     "shows": "subject"
+    },
+    {
+     "question": "They helped ___. (we/us)",
+     "answer": "us",
+     "shows": "object"
+    }
+   ]
+  },
+  {
+   "skill": "ENGL.G7.GRAMMA.T7_PERSONAL_AND_POSSESS.POSSESSIVES",
+   "assessed_by": "questions",
+   "key_step": "The child uses possessive determiners before nouns and pronouns alone, without apostrophes.",
+   "floor": {
+    "prerequisite": "Uses pronouns.",
+    "question": "This is ___ (I) book.",
+    "answer": "my"
+   },
+   "steps": [
+    "Before a noun: my, their, its.",
+    "Alone: mine, hers.",
+    "No apostrophe."
+   ],
+   "contexts": [
+    "forest ownership"
+   ],
+   "board": [
+    {
+     "beat": "write",
+     "do": "Write: The tree lost it's leaves."
+    },
+    {
+     "beat": "point",
+     "do": "Point at it's.",
+     "say": "It is or belonging?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for the child to answer."
+    },
+    {
+     "beat": "child_draws",
+     "do": "The child fixes their/there."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "ENGL.G7.GRAMMA.T7_PERSONAL_AND_POSSESS.POSSESSIVES.M7_PO_ITS_ITS",
+     "listen_for": [
+      "it's"
+     ],
+     "ask": "It is?",
+     "repair": "Its."
+    },
+    {
+     "code": "ENGL.G7.GRAMMA.T7_PERSONAL_AND_POSSESS.POSSESSIVES.M7_PO_APOSTROPHE_PRONOUN",
+     "listen_for": [
+      "her's"
+     ],
+     "ask": "Her's?",
+     "repair": "Hers."
+    },
+    {
+     "code": "ENGL.G7.GRAMMA.T7_PERSONAL_AND_POSSESS.POSSESSIVES.M7_PO_MINE_MY",
+     "listen_for": [
+      "my"
+     ],
+     "ask": "Noun after?",
+     "repair": "Mine."
+    },
+    {
+     "code": "ENGL.G7.GRAMMA.T7_PERSONAL_AND_POSSESS.POSSESSIVES.M7_PO_SUBJECT_FOR_POSSESSIVE",
+     "listen_for": [
+      "they"
+     ],
+     "ask": "Belonging?",
+     "repair": "Their."
+    },
+    {
+     "code": "ENGL.G7.GRAMMA.T7_PERSONAL_AND_POSSESS.POSSESSIVES.M7_PO_THEIR_THERE",
+     "listen_for": [
+      "there"
+     ],
+     "ask": "Place or belonging?",
+     "repair": "Their."
+    }
+   ],
+   "checks": [
+    {
+     "question": "The dog wagged ___ tail.",
+     "answer": "its",
+     "shows": "its"
+    },
+    {
+     "question": "The book is ___ (her).",
+     "answer": "hers",
+     "shows": "pronoun"
+    }
+   ]
+  }
+ ]
+}

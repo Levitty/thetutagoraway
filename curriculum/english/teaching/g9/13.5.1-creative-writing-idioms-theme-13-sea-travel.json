@@ -1,0 +1,94 @@
+{
+ "sub_strand": "ENGL.G9.WRITIN.T13_CREATIVE_WRITING_IDI",
+ "title": "Creative Writing: Idioms (Theme 13: Sea travel)",
+ "status": "draft: written 18 Nov 2026 offline for Grade 9 English; not yet checked by a Kenyan English teacher; not loaded by the live tutor",
+ "notes": "",
+ "skills": [
+  {
+   "skill": "ENGL.G9.WRITIN.T13_CREATIVE_WRITING_IDI.IDIOMS",
+   "assessed_by": "questions",
+   "key_step": "The child uses the context to explain an idiom and chooses idioms that fit situations.",
+   "floor": {
+    "prerequisite": "Knows Grade 8 idioms.",
+    "question": "cost an arm and a leg?",
+    "answer": "very expensive"
+   },
+   "steps": [
+    "Read context.",
+    "Meaning.",
+    "Fit to situation."
+   ],
+   "contexts": [
+    "sea travel"
+   ],
+   "board": [
+    {
+     "beat": "write",
+     "do": "Write: He was all at sea."
+    },
+    {
+     "beat": "point",
+     "do": "Point at all at sea.",
+     "say": "Meaning here?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for the child to answer."
+    },
+    {
+     "beat": "child_draws",
+     "do": "The child uses rock the boat."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "ENGL.G9.WRITIN.T13_CREATIVE_WRITING_IDI.IDIOMS.M9_ID_LITERAL",
+     "listen_for": [
+      "he was on a ship"
+     ],
+     "ask": "Literal?",
+     "repair": "Context."
+    },
+    {
+     "code": "ENGL.G9.WRITIN.T13_CREATIVE_WRITING_IDI.IDIOMS.M9_ID_OPPOSITE",
+     "listen_for": [
+      "difficult"
+     ],
+     "ask": "Easy or hard?",
+     "repair": "Easy."
+    },
+    {
+     "code": "ENGL.G9.WRITIN.T13_CREATIVE_WRITING_IDI.IDIOMS.M9_ID_WRONG_FIT",
+     "listen_for": [
+      "plain sailing"
+     ],
+     "ask": "Fits?",
+     "repair": "Match."
+    },
+    {
+     "code": "ENGL.G9.WRITIN.T13_CREATIVE_WRITING_IDI.IDIOMS.M9_ID_CHANGED",
+     "listen_for": [
+      "ship"
+     ],
+     "ask": "Fixed?",
+     "repair": "Boat."
+    }
+   ],
+   "checks": [
+    {
+     "question": "\"Plain sailing\" means ...",
+     "answer": "easy",
+     "shows": "meaning"
+    },
+    {
+     "question": "Someone stirs trouble: idiom?",
+     "answer": "rock the boat",
+     "shows": "fit"
+    }
+   ]
+  }
+ ],
+ "also_taught_by": [
+  "ENGL.G9.WRITIN.T7_THE_WRITING_PROCESS.NARRATIVE_COMPOSITION"
+ ]
+}

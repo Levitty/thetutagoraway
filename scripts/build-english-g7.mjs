@@ -8,6 +8,7 @@
 // skills that cover that outcome, so the Grade 6 links into Grade 7 are honoured by the build itself.
 // ============================================================================
 import { readFileSync, writeFileSync } from 'node:fs';
+import { applyDepth } from './lib/english-depth.mjs';
 import { SKILLS, ALSO, LEADS8 } from './data/english-g7-skills.mjs';
 import { MIS_A } from './data/english-g7-mis.mjs';
 import { MIS_B } from './data/english-g7-mis-b.mjs';
@@ -78,6 +79,8 @@ for (const m of MIS) {
 }
 g7.totals = { ...g7.totals, skills: SKILLS.length, prerequisites: nPre, misconceptions: MIS.length };
 g7.status = "outcomes from KICD's text, word for word; skills, prerequisites and misconceptions (13 Nov 2026) are proposed or draft, written offline by Claude, awaiting a Kenyan English teacher's review";
+// Depth pass (18 Nov 2026): new skills, prerequisites, misconceptions and the teaching pack from scripts/data/english-depth/g7-*.mjs.
+await applyDepth(7, g7, { families: (await import('../src/ai-tutor/content/subjects/english_g7.js')).default.families });
 writeFileSync(path, JSON.stringify(g7, null, 1) + '\n');
 console.log(`english g7: ${SKILLS.length} skills, ${nPre} prerequisites (${nHonoured} from Grade 6 leads_to), ${nLeads} leads-to links into Grade 8, ${MIS.length} misconceptions over ${g7.sub_strands.filter(s => s.skills.length).length} sub-strands`);
 if (unhonoured.length) console.log(`Grade 6 leads_to into Grade 7 outcomes no Grade 7 skill covers: ${unhonoured.join(', ')}`);

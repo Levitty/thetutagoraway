@@ -179,6 +179,30 @@
   "ENGL.G4.WRITIN.T13_SPELLING.c": "realise the importance of writing words clearly and correctly in communication"
  },
  "skills": {
+  "ENGL.G4.LISTEN.T1_PRONUNCIATION_AND_VO.PRONOUNCE_SOUNDS": {
+   "forms": [
+    "say the word after the teacher",
+    "read a word list aloud",
+    "say a sentence with the target sounds"
+   ],
+   "mastery": "The child says the sounds the theme targets (for example /l/ and /r/, /s/ and /ʃ/, /f/ and /v/, short and long vowels) so that a listener hears the right word: lorry, shop, very, ship and sheep. Evidence rule: the teacher hears it done right on two different days, scored with the observation rubric (PLAN_OBSERVATION_RUBRICS.md); a tapped answer cannot show it."
+  },
+  "ENGL.G4.LISTEN.T1_PRONUNCIATION_AND_VO.FAMILY_VOCAB": {
+   "forms": [
+    "choose the right family word",
+    "fill the gap",
+    "match the word to its meaning"
+   ],
+   "mastery": "The child uses aunt, uncle, cousin, niece, nephew, grandparent and in-law for the right person and says younger or older brother, not small or big brother, in a sentence. Evidence rule: at least four of the last five fresh questions right across at least two question forms, and no repeated pick of the same misconception."
+  },
+  "ENGL.G4.LISTEN.T1_PRONUNCIATION_AND_VO.LISTEN_ATTENTIVE": {
+   "forms": [
+    "answer questions on a story read aloud",
+    "retell what was heard",
+    "follow spoken instructions"
+   ],
+   "mastery": "The child listens to a short story, speech or announcement read aloud once and answers who, what, where and when questions from what was said, in the order it was said. Evidence rule: the teacher hears it done right on two different days, scored with the observation rubric (PLAN_OBSERVATION_RUBRICS.md); a tapped answer cannot show it."
+  },
   "ENGL.G4.READIN.T1_EXTENSIVE_READING.DICTIONARY_USE": {
    "forms": [
     "alphabetical order",
@@ -209,6 +233,22 @@
     "spot the mistake"
    ],
    "mastery": "Says which piece of information belongs in a box of a school, clinic or library form (name, date of birth, class, address, parent contact), in 8 of 10 new items."
+  },
+  "ENGL.G4.WRITIN.T1_FUNCTIONAL_WRITING.FILL_FORM": {
+   "forms": [
+    "fill in the form",
+    "correct the form",
+    "what goes in this box"
+   ],
+   "mastery": "The child writes the right detail in each box of a simple form (full names, date of birth, school, class, signature), in capital letters where asked, and leaves no required box empty. Evidence rule: two pieces of the learner's own writing marked Meeting Expectations or above on the KICD rubric indicator."
+  },
+  "ENGL.G4.LISTEN.T2_PRONUNCIATION_AND_VO.DISCRIMINATE_SOUNDS": {
+   "forms": [
+    "which word did you hear",
+    "same or different",
+    "point to the picture of the word"
+   ],
+   "mastery": "The child hears and points to the right word in pairs that differ by one sound: ship and sheep, light and right, fan and van, thin and tin, cat and cut. Evidence rule: the teacher hears it done right on two different days, scored with the observation rubric (PLAN_OBSERVATION_RUBRICS.md); a tapped answer cannot show it."
   },
   "ENGL.G4.READIN.T2_INTENSIVE_READING.FACTUAL_QUESTIONS": {
    "forms": [
@@ -248,6 +288,14 @@
    ],
    "mastery": "Writes the plural of man, woman, child, foot, tooth, mouse, person, sheep and fish and does not add -s or a second plural ending, in 8 of 10 new items."
   },
+  "ENGL.G4.WRITIN.T2_CREATIVE_WRITING.OPEN_COMPOSITION": {
+   "forms": [
+    "write about",
+    "finish the story",
+    "plan your ideas"
+   ],
+   "mastery": "The child writes a short composition whose ideas all keep to the topic, with a beginning, a middle and an end, and joins sentences in more ways than and then. Evidence rule: two pieces of the learner's own writing marked Meeting Expectations or above on the KICD rubric indicator."
+  },
   "ENGL.G4.LISTEN.T3_PRONUNCIATION_AND_VO.POLITE_WORDS": {
    "forms": [
     "choose the polite words",
@@ -262,6 +310,14 @@
    ],
    "mastery": "Builds and recognises polite requests and offers (May I go out, please? Could you help me? Would you like some tea?) with the plain verb after May I and Could you, in whole sentences, in 8 of 10 new items."
   },
+  "ENGL.G4.WRITIN.T3_MECHANICS_OF_WRITING.HANDWRITING": {
+   "forms": [
+    "copy the sentence neatly",
+    "write on the lines",
+    "write the words in print"
+   ],
+   "mastery": "The child writes print letters of the right size and shape, sitting on the line, with tall letters tall and tails below the line, and a finger space between words. Evidence rule: the teacher sees it in two pieces of the learner's own work, scored with the KICD rubric indicator."
+  },
   "ENGL.G4.LISTEN.T4_PRONUNCIATION_AND_VO.FIRST_AID_WORDS": {
    "forms": [
     "choose the correct word",
@@ -269,6 +325,14 @@
     "spot the mistake"
    ],
    "mastery": "Uses the words of first aid (bandage, wound, bruise, sprain, ambulance, first aid kit) in the right sentence, in 8 of 10 new items."
+  },
+  "ENGL.G4.LISTEN.T4_PRONUNCIATION_AND_VO.WORD_STRESS": {
+   "forms": [
+    "say the word with the strong part",
+    "clap the strong syllable",
+    "which syllable is loudest"
+   ],
+   "mastery": "The child says theme words such as BANdage, ACcident, HOSpital and AMbulance with one strong syllable in the right place, not with every syllable equally strong. Evidence rule: the teacher hears it done right on two different days, scored with the observation rubric (PLAN_OBSERVATION_RUBRICS.md); a tapped answer cannot show it."
   },
   "ENGL.G4.READIN.T4_INTENSIVE_READING_VI.VISUALS": {
    "forms": [
@@ -300,6 +364,22 @@
    ],
    "mastery": "Names and orders the parts of a friendly letter (address, date, greeting, body, closing, name) and the punctuation of the greeting and closing, in 8 of 10 new items."
   },
+  "ENGL.G4.WRITIN.T4_FUNCTIONAL_WRITING.FRIENDLY_LETTER": {
+   "forms": [
+    "write a letter to",
+    "put the letter in order",
+    "correct the letter"
+   ],
+   "mastery": "The child writes a friendly letter with the address and date at the top right, Dear ..., a body in paragraphs, a closing such as Your friend, and the name. Evidence rule: two pieces of the learner's own writing marked Meeting Expectations or above on the KICD rubric indicator."
+  },
+  "ENGL.G4.WRITIN.T4_FUNCTIONAL_WRITING.SMS_MESSAGE": {
+   "forms": [
+    "which SMS is correct",
+    "write an SMS to",
+    "what is missing from this SMS"
+   ],
+   "mastery": "The child writes a short SMS that says who it is from, what it is about and anything the reader must do, in clear words with only common short forms. Evidence rule: at least four of the last five fresh questions right across at least two question forms, and no repeated pick of the same misconception."
+  },
   "ENGL.G4.LISTEN.T5_PRONUNCIATION_AND_VO.NUTRITION_WORDS": {
    "forms": [
     "choose the correct word",
@@ -308,12 +388,36 @@
    ],
    "mastery": "Uses the words of nutrition (protein, vitamins, carbohydrates, balanced diet, fibre, nutrients) in the right sentence, in 8 of 10 new items."
   },
+  "ENGL.G4.LISTEN.T5_PRONUNCIATION_AND_VO.LIKE_BUT_PATTERN": {
+   "forms": [
+    "complete the sentence",
+    "choose the correct sentence",
+    "join two sentences with but"
+   ],
+   "mastery": "The child joins a like and a dislike about food with but and keeps the verb plain after do not: I like beans but I do not like cabbage. The design does not name the Theme 5 pattern; this one is proposed (teacher to confirm). Evidence rule: at least four of the last five fresh questions right across at least two question forms, and no repeated pick of the same misconception."
+  },
   "ENGL.G4.READIN.T5_EXTENSIVE_READING.SCAN_FOR_DETAIL": {
    "forms": [
     "choose the answer",
     "type a short answer"
    ],
    "mastery": "Finds a number, time, price or name by looking for the key word in the question, not by reading every word, in 8 of 10 new items."
+  },
+  "ENGL.G4.READIN.T5_EXTENSIVE_READING.SELECT_READING": {
+   "forms": [
+    "which book would help",
+    "choose a book for",
+    "is this book right for"
+   ],
+   "mastery": "The child chooses a text by what it is for and how hard it is: a graded reader at the right level for practice, a recipe book to cook, an encyclopaedia for facts, not by the cover or the thickness alone. Evidence rule: at least four of the last five fresh questions right across at least two question forms, and no repeated pick of the same misconception."
+  },
+  "ENGL.G4.READIN.T5_EXTENSIVE_READING.INDEPENDENT_READING": {
+   "forms": [
+    "reading log",
+    "retell the book",
+    "read to the teacher"
+   ],
+   "mastery": "The child reads a graded reader alone for ten minutes or more, uses the pictures and the sentence to get past a hard word, and can retell what the book was about. Evidence rule: the teacher sees it in two pieces of the learner's own work, scored with the KICD rubric indicator."
   },
   "ENGL.G4.LANGUA.T5_WORD_CLASSES_ADJECTI.ADJECTIVES": {
    "forms": [
@@ -345,6 +449,14 @@
    ],
    "mastery": "Finds the topic sentence and puts four jumbled sentences in the order that makes a clear paragraph, in 8 of 10 new items."
   },
+  "ENGL.G4.WRITIN.T5_CREATIVE_WRITING.NARRATIVE_COMPOSITION": {
+   "forms": [
+    "write a story about",
+    "continue the story",
+    "write a story from the title"
+   ],
+   "mastery": "The child writes a 60 to 80 word story in the past tense with a beginning that names the characters and setting, a problem in the middle and an ending that solves it. Evidence rule: two pieces of the learner's own writing marked Meeting Expectations or above on the KICD rubric indicator."
+  },
   "ENGL.G4.LISTEN.T6_PRONUNCIATION_AND_VO.INTERNET_WORDS": {
    "forms": [
     "choose the correct word",
@@ -352,6 +464,14 @@
     "spot the mistake"
    ],
    "mastery": "Uses email, inbox, attachment, subject, password, website, search and download in the right sentence, and tells safe online habits from unsafe ones, in 8 of 10 new items."
+  },
+  "ENGL.G4.LISTEN.T6_PRONUNCIATION_AND_VO.INTONATION": {
+   "forms": [
+    "does the voice go up or down",
+    "say the question",
+    "say it as a statement and as a question"
+   ],
+   "mastery": "The child lets the voice fall at the end of a statement and a WH question (Where do you live?) and rise at the end of a yes or no question (Do you live in Nakuru?). Evidence rule: the teacher hears it done right on two different days, scored with the observation rubric (PLAN_OBSERVATION_RUBRICS.md); a tapped answer cannot show it."
   },
   "ENGL.G4.LANGUA.T6_WORD_CLASS_DETERMINE.COUNT_UNCOUNT": {
    "forms": [
@@ -376,6 +496,14 @@
    ],
    "mastery": "Orders four pictures, given in words, so that the story makes sense, and picks the sentence that tells one picture in the past tense, in 8 of 10 new items."
   },
+  "ENGL.G4.WRITIN.T6_CREATIVE_WRITING.PICTORIAL_COMPOSITION": {
+   "forms": [
+    "write the story the pictures tell",
+    "one sentence for each picture",
+    "add a title"
+   ],
+   "mastery": "The child writes one or two linked sentences for each picture in order, in the past tense, so the pictures become one story with a title. Evidence rule: two pieces of the learner's own writing marked Meeting Expectations or above on the KICD rubric indicator."
+  },
   "ENGL.G4.LISTEN.T7_PRONUNCIATION_AND_VO.SIMPLE_PAST": {
    "forms": [
     "choose the correct word",
@@ -383,6 +511,14 @@
     "spot the mistake"
    ],
    "mastery": "Uses the regular (-ed) and irregular (went, ate, saw) past forms when the time is past, and uses the present forms for habits and facts, in short dialogues, in 8 of 10 new items."
+  },
+  "ENGL.G4.LISTEN.T7_PRONUNCIATION_AND_VO.TURN_TAKING": {
+   "forms": [
+    "role play a conversation",
+    "keep the conversation going",
+    "what should you say next"
+   ],
+   "mastery": "The child listens until the speaker finishes, answers what was asked, adds a little and hands the turn back with a question, in a conversation of four or more turns. Evidence rule: the teacher hears it done right on two different days, scored with the observation rubric (PLAN_OBSERVATION_RUBRICS.md); a tapped answer cannot show it."
   },
   "ENGL.G4.LANGUA.T7_WORD_CLASSES_VERB_AS.PRESENT_PROGRESSIVE": {
    "forms": [
@@ -415,6 +551,14 @@
    ],
    "mastery": "Uses the words of the farm (harvest, seedlings, fertiliser, livestock, plough, weeding) in the right sentence, in 8 of 10 new items."
   },
+  "ENGL.G4.READIN.T8_READING_FLUENCY.READ_FLUENTLY": {
+   "forms": [
+    "read aloud to the teacher",
+    "read a paragraph with expression",
+    "read a dialogue in parts"
+   ],
+   "mastery": "The child reads a 300-word text aloud in phrases, pauses at full stops and commas, changes the voice for questions and speech, and reads most words right the first time. Evidence rule: the teacher hears it done right on two different days, scored with the observation rubric (PLAN_OBSERVATION_RUBRICS.md); a tapped answer cannot show it."
+  },
   "ENGL.G4.LANGUA.T8_WORD_CLASSES.CONTRACTIONS": {
    "forms": [
     "choose the correct word",
@@ -430,6 +574,14 @@
     "spot the mistake"
    ],
    "mastery": "Makes a negative with do not, does not, did not, is not or cannot, keeps the verb plain after does and did, and does not use two negatives together, in 8 of 10 new items."
+  },
+  "ENGL.G4.LISTEN.T9_PRONUNCIATION_AND_VO.SPEAK_FLUENTLY": {
+   "forms": [
+    "talk for one minute on a topic",
+    "tell the class about",
+    "answer and say more"
+   ],
+   "mastery": "The child talks for about a minute on a familiar topic in full sentences, at a speed listeners can follow, with few fillers (eeh, aah) and no long stops to search for words. Evidence rule: the teacher hears it done right on two different days, scored with the observation rubric (PLAN_OBSERVATION_RUBRICS.md); a tapped answer cannot show it."
   },
   "ENGL.G4.LANGUA.T9_WORD_CLASSES_ADVERBS.ADVERBS": {
    "forms": [
@@ -461,6 +613,14 @@
    ],
    "mastery": "Uses the words of hygiene (germs, sanitiser, latrine, rubbish, disinfect, drainage) in the right sentence, in 8 of 10 new items."
   },
+  "ENGL.G4.LISTEN.T10_PRONUNCIATION_AND_VO.INTERRUPT_POLITELY": {
+   "forms": [
+    "choose the polite way",
+    "what would you say",
+    "spot the rude interruption"
+   ],
+   "mastery": "The child waits for a pause, then uses Excuse me, may I ... or Sorry to interrupt, but ... and lets the speaker finish the point. Evidence rule: at least four of the last five fresh questions right across at least two question forms, and no repeated pick of the same misconception."
+  },
   "ENGL.G4.LANGUA.T10_WORD_CLASS_CONJUNCTI.CONJUNCTIONS": {
    "forms": [
     "choose the correct word",
@@ -476,6 +636,14 @@
    ],
    "mastery": "Says what the introduction, the description (using the senses) and the conclusion of a descriptive composition do, and tells a description from a story, in 8 of 10 new items."
   },
+  "ENGL.G4.WRITIN.T10_CREATIVE_WRITING.DESCRIPTIVE_COMPOSITION": {
+   "forms": [
+    "describe a place",
+    "describe a person",
+    "use your senses"
+   ],
+   "mastery": "The child describes one person, place or thing in 80 to 100 words: what it looks, sounds, smells and feels like, with an introduction and a conclusion, in the present tense. Evidence rule: two pieces of the learner's own writing marked Meeting Expectations or above on the KICD rubric indicator."
+  },
   "ENGL.G4.LISTEN.T11_PRONUNCIATION_AND_VO.SPORTS_WORDS": {
    "forms": [
     "choose the correct word",
@@ -483,6 +651,14 @@
     "spot the mistake"
    ],
    "mastery": "Uses the words of sport (referee, goalkeeper, tournament, trophy, opponent, whistle) in the right sentence, in 8 of 10 new items."
+  },
+  "ENGL.G4.LISTEN.T11_PRONUNCIATION_AND_VO.NONVERBAL_CUES": {
+   "forms": [
+    "what does this face or gesture show",
+    "how is the speaker feeling",
+    "which gesture fits"
+   ],
+   "mastery": "The child says what a gesture, facial expression or tone of voice shows (a nod agrees, a frown is unhappy or confused, a finger on the lips asks for quiet) and uses fitting gestures when speaking. Evidence rule: at least four of the last five fresh questions right across at least two question forms, and no repeated pick of the same misconception."
   },
   "ENGL.G4.LANGUA.T11_LANGUAGE_PATTERNS.INTERROGATIVES": {
    "forms": [
@@ -538,6 +714,14 @@
    ],
    "mastery": "Says what a diary entry has (date, a greeting to the diary, what happened and how the writer felt, in the first person and the past tense) and what it does not have, in 8 of 10 new items."
   },
+  "ENGL.G4.WRITIN.T12_GUIDED_COMPOSITION.DIARY_WRITING": {
+   "forms": [
+    "write a diary entry for today",
+    "correct the diary entry",
+    "add the missing parts"
+   ],
+   "mastery": "The child writes a dated diary entry (Dear Diary optional) in the first person and the past tense about the day, saying how he or she felt. Evidence rule: two pieces of the learner's own writing marked Meeting Expectations or above on the KICD rubric indicator."
+  },
   "ENGL.G4.LISTEN.T13_PRONUNCIATION_AND_VO.MONEY_WORDS": {
    "forms": [
     "choose the correct word",
@@ -553,6 +737,14 @@
     "spot the mistake"
    ],
    "mastery": "Names the silent letter in words like knife, write, lamb, listen, hour and walk, and does not pick the letter beside it, in 8 of 10 new items."
+  },
+  "ENGL.G4.LISTEN.T13_PRONUNCIATION_AND_VO.VERY_BUT": {
+   "forms": [
+    "complete the sentence",
+    "choose the correct sentence",
+    "join the two ideas"
+   ],
+   "mastery": "The child joins a strong quality with a contrasting one: The shoes are very nice but they are expensive. Very goes before a plain adjective, and but joins two ideas that pull different ways. Evidence rule: at least four of the last five fresh questions right across at least two question forms, and no repeated pick of the same misconception."
   },
   "ENGL.G4.LANGUA.T13_WORD_CLASS_PREPOSITI.PREP_POSITION": {
    "forms": [

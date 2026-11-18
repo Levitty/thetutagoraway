@@ -1,0 +1,92 @@
+{
+ "sub_strand": "ENGL.G6.LANGUA.T1_WORD_CLASSES",
+ "title": "Word Classes (Theme 1: Child labour)",
+ "status": "draft: written 18 Nov 2026 offline for Grade 6 English; not yet checked by a Kenyan English teacher; not loaded by the live tutor",
+ "notes": "",
+ "skills": [
+  {
+   "skill": "ENGL.G6.LANGUA.T1_WORD_CLASSES.DETERMINERS",
+   "assessed_by": "questions",
+   "key_step": "The child matches each determiner to a singular, plural or uncountable noun.",
+   "floor": {
+    "prerequisite": "Uses few and a little.",
+    "question": "___ water (uncount)",
+    "answer": "a little"
+   },
+   "steps": [
+    "Each + singular.",
+    "Some + plural or uncount.",
+    "Enough before a noun, after an adjective.",
+    "A lot of."
+   ],
+   "contexts": [
+    "child labour facts"
+   ],
+   "board": [
+    {
+     "beat": "write",
+     "do": "Write: Each child ___ a right to rest."
+    },
+    {
+     "beat": "point",
+     "do": "Point at Each.",
+     "say": "One or many?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for the child to answer."
+    },
+    {
+     "beat": "child_draws",
+     "do": "The child writes an enough sentence."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "ENGL.G6.LANGUA.T1_WORD_CLASSES.DETERMINERS.M_DET_EACH_PLURAL",
+     "listen_for": [
+      "have"
+     ],
+     "ask": "Each is one?",
+     "repair": "Has."
+    },
+    {
+     "code": "ENGL.G6.LANGUA.T1_WORD_CLASSES.DETERMINERS.M_DET_LOTS_FORM",
+     "listen_for": [
+      "a lots of"
+     ],
+     "ask": "A lots of?",
+     "repair": "A lot of."
+    },
+    {
+     "code": "ENGL.G6.LANGUA.T1_WORD_CLASSES.DETERMINERS.M_DET_ENOUGH_AFTER",
+     "listen_for": [
+      "enough big"
+     ],
+     "ask": "After an adjective?",
+     "repair": "Big enough."
+    },
+    {
+     "code": "ENGL.G6.LANGUA.T1_WORD_CLASSES.DETERMINERS.M_DET_SOME_ANY",
+     "listen_for": [
+      "some"
+     ],
+     "ask": "Question or negative?",
+     "repair": "Any."
+    }
+   ],
+   "checks": [
+    {
+     "question": "Is the box big ___?",
+     "answer": "enough",
+     "shows": "after adjective"
+    },
+    {
+     "question": "Is there ___ milk?",
+     "answer": "any",
+     "shows": "question"
+    }
+   ]
+  }
+ ]
+}

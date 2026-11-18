@@ -1,0 +1,184 @@
+{
+ "sub_strand": "ENGL.G5.LISTEN.T2_PRONUNCIATION_AND_VO",
+ "title": "Pronunciation and Vocabulary (Theme 2: National celebrations)",
+ "status": "draft: written 18 Nov 2026 offline for Grade 5 English; not yet checked by a Kenyan English teacher; not loaded by the live tutor",
+ "notes": "",
+ "skills": [
+  {
+   "skill": "ENGL.G5.LISTEN.T2_PRONUNCIATION_AND_VO.ORAL_SENTENCES",
+   "assessed_by": "voice",
+   "key_step": "The child checks the word's meaning and part of speech, then says a full sentence with it.",
+   "floor": {
+    "prerequisite": "Uses the theme words.",
+    "question": "What does \"celebrate\" mean?",
+    "answer": "to mark a happy day"
+   },
+   "steps": [
+    "Say the word and its meaning.",
+    "Say who and what.",
+    "Say the full sentence.",
+    "Check it sounds like English, not a translation."
+   ],
+   "contexts": [
+    "national celebrations",
+    "jobs and occupations",
+    "cash crops"
+   ],
+   "board": [
+    {
+     "beat": "write",
+     "do": "Write: parade."
+    },
+    {
+     "beat": "point",
+     "do": "Point at parade.",
+     "say": "Is it a thing or an action? Say a sentence."
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for the child to answer."
+    },
+    {
+     "beat": "child_draws",
+     "do": "The child says two more sentences with theme words."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "ENGL.G5.LISTEN.T2_PRONUNCIATION_AND_VO.ORAL_SENTENCES.M5_OS_ME_I",
+     "listen_for": [
+      "Me I celebrate Jamhuri Day."
+     ],
+     "ask": "Do we need me and I?",
+     "repair": "I alone."
+    },
+    {
+     "code": "ENGL.G5.LISTEN.T2_PRONUNCIATION_AND_VO.ORAL_SENTENCES.M5_OS_ONE_WORD",
+     "listen_for": [
+      "Parade."
+     ],
+     "ask": "Is that a sentence?",
+     "repair": "Who did what?"
+    },
+    {
+     "code": "ENGL.G5.LISTEN.T2_PRONUNCIATION_AND_VO.ORAL_SENTENCES.M5_OS_WRONG_MEANING",
+     "listen_for": [
+      "The pedestrian drove the bus."
+     ],
+     "ask": "What does the word mean?",
+     "repair": "Check, then use it."
+    },
+    {
+     "code": "ENGL.G5.LISTEN.T2_PRONUNCIATION_AND_VO.ORAL_SENTENCES.M5_OS_WRONG_CLASS",
+     "listen_for": [
+      "We celebration Christmas."
+     ],
+     "ask": "Thing or action?",
+     "repair": "Choose the right form."
+    }
+   ],
+   "checks": [
+    {
+     "question": "Say a sentence with \"occupation\".",
+     "answer": "My mother's occupation is teaching.",
+     "shows": "meaning"
+    },
+    {
+     "question": "Say a sentence starting with I about a celebration.",
+     "answer": "I watched the parade.",
+     "shows": "no Me I"
+    }
+   ]
+  },
+  {
+   "skill": "ENGL.G5.LISTEN.T2_PRONUNCIATION_AND_VO.SPEAKER_FEELINGS",
+   "assessed_by": "questions",
+   "key_step": "The child puts together the words, the tone, the face and the gestures before naming the feeling.",
+   "floor": {
+    "prerequisite": "Names moods.",
+    "question": "A crying child feels ...",
+    "answer": "sad"
+   },
+   "steps": [
+    "Listen to the words.",
+    "Listen to the tone.",
+    "Watch the face and hands.",
+    "Name the feeling and the clue."
+   ],
+   "contexts": [
+    "a speech at a national celebration",
+    "a sports interview",
+    "a talk on saving money"
+   ],
+   "board": [
+    {
+     "beat": "write",
+     "do": "Write: words, tone, face, hands."
+    },
+    {
+     "beat": "point",
+     "do": "Point at tone.",
+     "say": "She said \"fine\" in a shaking voice. Which clue matters?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for the child to answer."
+    },
+    {
+     "beat": "child_draws",
+     "do": "The child names the feeling."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "ENGL.G5.LISTEN.T2_PRONUNCIATION_AND_VO.SPEAKER_FEELINGS.M5_SF_WORDS_ONLY",
+     "listen_for": [
+      "fine"
+     ],
+     "ask": "What did the voice tell you?",
+     "repair": "Tone can hide words."
+    },
+    {
+     "code": "ENGL.G5.LISTEN.T2_PRONUNCIATION_AND_VO.SPEAKER_FEELINGS.M5_SF_LOUD_ANGRY",
+     "listen_for": [
+      "angry"
+     ],
+     "ask": "Was the face angry?",
+     "repair": "Loud can be excited."
+    },
+    {
+     "code": "ENGL.G5.LISTEN.T2_PRONUNCIATION_AND_VO.SPEAKER_FEELINGS.M5_SF_ONE_CLUE",
+     "listen_for": [
+      "happy"
+     ],
+     "ask": "What do the other clues say?",
+     "repair": "Put them together."
+    },
+    {
+     "code": "ENGL.G5.LISTEN.T2_PRONUNCIATION_AND_VO.SPEAKER_FEELINGS.M5_SF_OWN_FEELING",
+     "listen_for": [
+      "I feel bored"
+     ],
+     "ask": "Whose feeling is asked?",
+     "repair": "The speaker's."
+    }
+   ],
+   "checks": [
+    {
+     "question": "A boy says \"I won!\" jumping up. He feels ...",
+     "answer": "excited",
+     "shows": "cues"
+    },
+    {
+     "question": "A girl whispers with her head down, \"I lost my money.\" She feels ...",
+     "answer": "sad or ashamed",
+     "shows": "tone"
+    }
+   ]
+  }
+ ],
+ "also_taught_by": [
+  "ENGL.G5.LISTEN.T1_LISTENING_COMPREHENS.SOUND_IDENTIFY",
+  "ENGL.G5.LISTEN.T1_LISTENING_COMPREHENS.LISTEN_MAIN_IDEA"
+ ]
+}

@@ -1,0 +1,108 @@
+{
+ "sub_strand": "ENGL.G6.LANGUA.T12_QUESTION_TAGS",
+ "title": "Question Tags (Theme 12: Environment conservation)",
+ "status": "draft: written 18 Nov 2026 offline for Grade 6 English; not yet checked by a Kenyan English teacher; not loaded by the live tutor",
+ "notes": "",
+ "skills": [
+  {
+   "skill": "ENGL.G6.LANGUA.T12_QUESTION_TAGS.QUESTION_TAGS_USE",
+   "assessed_by": "questions",
+   "key_step": "The child copies the helping verb, flips the sign and uses a pronoun, with aren't I for am.",
+   "floor": {
+    "prerequisite": "Forms Grade 5 tags.",
+    "question": "She is tall, ___?",
+    "answer": "isn't she"
+   },
+   "steps": [
+    "Find the helping verb.",
+    "Flip the sign.",
+    "Pronoun.",
+    "Am: aren't I."
+   ],
+   "contexts": [
+    "conservation talk"
+   ],
+   "board": [
+    {
+     "beat": "write",
+     "do": "Write: You can swim, ___?"
+    },
+    {
+     "beat": "point",
+     "do": "Point at can.",
+     "say": "Opposite?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for the child to answer."
+    },
+    {
+     "beat": "child_draws",
+     "do": "The child writes the tag for I am."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "ENGL.G6.LANGUA.T12_QUESTION_TAGS.QUESTION_TAGS_USE.M_TAGS_SAME_SIGN",
+     "listen_for": [
+      "is he"
+     ],
+     "ask": "Same or opposite?",
+     "repair": "Opposite."
+    },
+    {
+     "code": "ENGL.G6.LANGUA.T12_QUESTION_TAGS.QUESTION_TAGS_USE.M_TAGS_ALWAYS_ISNTIT",
+     "listen_for": [
+      "isn't it"
+     ],
+     "ask": "Isn't it everywhere?",
+     "repair": "Match the verb."
+    },
+    {
+     "code": "ENGL.G6.LANGUA.T12_QUESTION_TAGS.QUESTION_TAGS_USE.M_TAGS_DO_FORM",
+     "listen_for": [
+      "isn't he"
+     ],
+     "ask": "Which helping verb?",
+     "repair": "Doesn't."
+    },
+    {
+     "code": "ENGL.G6.LANGUA.T12_QUESTION_TAGS.QUESTION_TAGS_USE.M_TAGS_AM",
+     "listen_for": [
+      "amn't I"
+     ],
+     "ask": "Amn't?",
+     "repair": "Aren't I."
+    },
+    {
+     "code": "ENGL.G6.LANGUA.T12_QUESTION_TAGS.QUESTION_TAGS_USE.M_TAGS_NO_PRONOUN",
+     "listen_for": [
+      "aren't the girls"
+     ],
+     "ask": "Name in the tag?",
+     "repair": "Pronoun."
+    },
+    {
+     "code": "ENGL.G6.LANGUA.T12_QUESTION_TAGS.QUESTION_TAGS_USE.M_TAGS_NEG_NEG",
+     "listen_for": [
+      "don't you"
+     ],
+     "ask": "Negative sentence?",
+     "repair": "Positive tag."
+    }
+   ],
+   "checks": [
+    {
+     "question": "I am right, ___?",
+     "answer": "aren't I",
+     "shows": "am"
+    },
+    {
+     "question": "The girls are here, ___?",
+     "answer": "aren't they",
+     "shows": "pronoun"
+    }
+   ]
+  }
+ ]
+}

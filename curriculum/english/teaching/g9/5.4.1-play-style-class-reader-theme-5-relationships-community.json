@@ -1,0 +1,91 @@
+{
+ "sub_strand": "ENGL.G9.READIN.T5_PLAY_STYLE_CLASS_REA",
+ "title": "Play: Style (Class Reader) (Theme 5: Relationships: community)",
+ "status": "draft: written 18 Nov 2026 offline for Grade 9 English; not yet checked by a Kenyan English teacher; not loaded by the live tutor",
+ "notes": "",
+ "skills": [
+  {
+   "skill": "ENGL.G9.READIN.T5_PLAY_STYLE_CLASS_REA.PLAY_STYLE",
+   "assessed_by": "questions",
+   "key_step": "The child names a style feature with an example and says how it supports the message.",
+   "floor": {
+    "prerequisite": "Knows literary devices.",
+    "question": "What is a flashback?",
+    "answer": "a return to the past"
+   },
+   "steps": [
+    "Find the feature.",
+    "Give an example.",
+    "Say what it adds."
+   ],
+   "contexts": [
+    "class reader play"
+   ],
+   "board": [
+    {
+     "beat": "write",
+     "do": "Write: monologue, irony, humour."
+    },
+    {
+     "beat": "point",
+     "do": "Point at irony.",
+     "say": "Example from the play?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for the child to answer."
+    },
+    {
+     "beat": "child_draws",
+     "do": "The child links it to the message."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "ENGL.G9.READIN.T5_PLAY_STYLE_CLASS_REA.PLAY_STYLE.M9_PS2_NO_EXAMPLE",
+     "listen_for": [
+      "humour"
+     ],
+     "ask": "Example?",
+     "repair": "Give one."
+    },
+    {
+     "code": "ENGL.G9.READIN.T5_PLAY_STYLE_CLASS_REA.PLAY_STYLE.M9_PS2_NO_LINK",
+     "listen_for": [
+      "it is a monologue"
+     ],
+     "ask": "What does it add?",
+     "repair": "Link it."
+    },
+    {
+     "code": "ENGL.G9.READIN.T5_PLAY_STYLE_CLASS_REA.PLAY_STYLE.M9_PS2_MONOLOGUE_DIALOGUE",
+     "listen_for": [
+      "a dialogue"
+     ],
+     "ask": "One speaker?",
+     "repair": "Monologue."
+    },
+    {
+     "code": "ENGL.G9.READIN.T5_PLAY_STYLE_CLASS_REA.PLAY_STYLE.M9_PS2_IRONY",
+     "listen_for": [
+      "dialogue"
+     ],
+     "ask": "Opposite?",
+     "repair": "Irony."
+    }
+   ],
+   "checks": [
+    {
+     "question": "One character speaking alone?",
+     "answer": "monologue",
+     "shows": "monologue"
+    },
+    {
+     "question": "A thief preaching honesty is ...",
+     "answer": "irony",
+     "shows": "irony"
+    }
+   ]
+  }
+ ]
+}

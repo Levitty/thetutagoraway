@@ -2,7 +2,7 @@
 // Outcomes are official (word for word). Skills are proposed, awaiting teacher review.
 // A family carries `cskill` (a key of SKILLS), `outcome` (its official outcome) and `skill` (the same as cskill:
 // these skills are not in the practice engine's Maths graph). MIS_FEEDBACK maps a short misconception code to the line a child reads.
-export const MAP_SOURCE = {"source":"curriculum/english/g4.json","status":"outcomes from KICD's text, word for word; skills, prerequisites and misconceptions (12 Nov 2026) are proposed or draft, written offline by Claude, awaiting a Kenyan English teacher's review"};
+export const MAP_SOURCE = {"source":"curriculum/english/g4.json","status":"outcomes from KICD's text, word for word; skills and prerequisites proposed, misconceptions draft, teaching pack draft (depth pass 18 Nov 2026, to the Grade 5 Maths standard), written offline by Claude, awaiting a Kenyan English teacher's review"};
 export const SUBSTRANDS = {
  "ENGL.G4.LISTEN.T1_PRONUNCIATION_AND_VO": {
   "name": "Pronunciation and Vocabulary (Theme 1: The family)",
@@ -1205,6 +1205,66 @@ export const OUTCOMES = {
  }
 };
 export const SKILLS = {
+ "ENGL.G4.LISTEN.T1_PRONUNCIATION_AND_VO.PRONOUNCE_SOUNDS": {
+  "name": "Say the target sounds of English clearly in words",
+  "sub": "ENGL.G4.LISTEN.T1_PRONUNCIATION_AND_VO",
+  "outcome": "ENGL.G4.LISTEN.T1_PRONUNCIATION_AND_VO.a",
+  "outcomes": [
+   "ENGL.G4.LISTEN.T1_PRONUNCIATION_AND_VO.a",
+   "ENGL.G4.LISTEN.T2_PRONUNCIATION_AND_VO.b",
+   "ENGL.G4.LISTEN.T3_PRONUNCIATION_AND_VO.c",
+   "ENGL.G4.LISTEN.T8_PRONUNCIATION_AND_VO.a",
+   "ENGL.G4.LISTEN.T9_PRONUNCIATION_AND_VO.b",
+   "ENGL.G4.LISTEN.T10_PRONUNCIATION_AND_VO.a"
+  ],
+  "pre": [],
+  "mis": [
+   "M4_PS_L_R",
+   "M4_PS_SH_S",
+   "M4_PS_CH_SH",
+   "M4_PS_V_F",
+   "M4_PS_EXTRA_VOWEL",
+   "M4_PS_SHIP_SHEEP"
+  ],
+  "nofamily": "voice"
+ },
+ "ENGL.G4.LISTEN.T1_PRONUNCIATION_AND_VO.FAMILY_VOCAB": {
+  "name": "Use words for members of the family in sentences",
+  "sub": "ENGL.G4.LISTEN.T1_PRONUNCIATION_AND_VO",
+  "outcome": "ENGL.G4.LISTEN.T1_PRONUNCIATION_AND_VO.b",
+  "outcomes": [
+   "ENGL.G4.LISTEN.T1_PRONUNCIATION_AND_VO.b"
+  ],
+  "pre": [
+   "ENGL.G4.LANGUA.T4_WORD_CLASSES_PRONOUN.PERSONAL_PRONOUNS"
+  ],
+  "mis": [
+   "M4_FV_COUSIN_BROTHER",
+   "M4_FV_SMALL_BROTHER",
+   "M4_FV_NIECE_NEPHEW",
+   "M4_FV_AUNT_UNCLE"
+  ],
+  "nofamily": "questions"
+ },
+ "ENGL.G4.LISTEN.T1_PRONUNCIATION_AND_VO.LISTEN_ATTENTIVE": {
+  "name": "Listen to a short oral text and recall what was said",
+  "sub": "ENGL.G4.LISTEN.T1_PRONUNCIATION_AND_VO",
+  "outcome": "ENGL.G4.LISTEN.T1_PRONUNCIATION_AND_VO.c",
+  "outcomes": [
+   "ENGL.G4.LISTEN.T1_PRONUNCIATION_AND_VO.c",
+   "ENGL.G4.LISTEN.T5_PRONUNCIATION_AND_VO.a",
+   "ENGL.G4.LISTEN.T11_PRONUNCIATION_AND_VO.a",
+   "ENGL.G4.LISTEN.T13_PRONUNCIATION_AND_VO.a"
+  ],
+  "pre": [],
+  "mis": [
+   "M4_LA_LAST_HEARD",
+   "M4_LA_OWN_DETAIL",
+   "M4_LA_WHO_SWAP",
+   "M4_LA_KEYWORD_GRAB"
+  ],
+  "nofamily": "voice"
+ },
  "ENGL.G4.READIN.T1_EXTENSIVE_READING.DICTIONARY_USE": {
   "name": "Use a dictionary: order, guide words and meaning",
   "sub": "ENGL.G4.READIN.T1_EXTENSIVE_READING",
@@ -1216,7 +1276,8 @@ export const SKILLS = {
   "mis": [
    "M_DIC_ALPHA_FIRST_LETTER",
    "M_DIC_GUIDE_WORDS",
-   "M_DIC_WRONG_MEANING"
+   "M_DIC_WRONG_MEANING",
+   "M4_DIC_FIRST_MEANING"
   ]
  },
  "ENGL.G4.READIN.T1_EXTENSIVE_READING.REFERENCE_MATERIALS": {
@@ -1273,6 +1334,43 @@ export const SKILLS = {
    "M_FRM_NAME_PART"
   ]
  },
+ "ENGL.G4.WRITIN.T1_FUNCTIONAL_WRITING.FILL_FORM": {
+  "name": "Fill in a simple form correctly",
+  "sub": "ENGL.G4.WRITIN.T1_FUNCTIONAL_WRITING",
+  "outcome": "ENGL.G4.WRITIN.T1_FUNCTIONAL_WRITING.b",
+  "outcomes": [
+   "ENGL.G4.WRITIN.T1_FUNCTIONAL_WRITING.b"
+  ],
+  "pre": [
+   "ENGL.G4.WRITIN.T1_FUNCTIONAL_WRITING.FORM_INFORMATION",
+   "ENGL.G4.WRITIN.T7_MECHANICS_OF_WRITING.CAPITALS_FULL_STOPS"
+  ],
+  "mis": [
+   "M4_FF_LOWER_CASE",
+   "M4_FF_EMPTY_BOX",
+   "M4_FF_SIGN_AS_NAME",
+   "M4_FF_OUTSIDE_BOX"
+  ],
+  "nofamily": "composition"
+ },
+ "ENGL.G4.LISTEN.T2_PRONUNCIATION_AND_VO.DISCRIMINATE_SOUNDS": {
+  "name": "Hear the difference between words that differ by one sound",
+  "sub": "ENGL.G4.LISTEN.T2_PRONUNCIATION_AND_VO",
+  "outcome": "ENGL.G4.LISTEN.T2_PRONUNCIATION_AND_VO.a",
+  "outcomes": [
+   "ENGL.G4.LISTEN.T2_PRONUNCIATION_AND_VO.a",
+   "ENGL.G4.LISTEN.T8_PRONUNCIATION_AND_VO.b",
+   "ENGL.G4.LISTEN.T11_PRONUNCIATION_AND_VO.c"
+  ],
+  "pre": [],
+  "mis": [
+   "M4_DS_SHIP_SHEEP",
+   "M4_DS_L_R",
+   "M4_DS_F_V",
+   "M4_DS_TH_T"
+  ],
+  "nofamily": "voice"
+ },
  "ENGL.G4.READIN.T2_INTENSIVE_READING.FACTUAL_QUESTIONS": {
   "name": "Answer direct questions from a text",
   "sub": "ENGL.G4.READIN.T2_INTENSIVE_READING",
@@ -1320,7 +1418,8 @@ export const SKILLS = {
   "mis": [
    "M_INFER_REPEATS_TEXT",
    "M_INFER_CONTRADICTS",
-   "M_INFER_OVERREACH"
+   "M_INFER_OVERREACH",
+   "M4_INFER_FEELING_GUESS"
   ]
  },
  "ENGL.G4.READIN.T2_INTENSIVE_READING.CONTEXT_CLUES": {
@@ -1374,6 +1473,25 @@ export const SKILLS = {
    "M_PLI_SAME_FORM_S"
   ]
  },
+ "ENGL.G4.WRITIN.T2_CREATIVE_WRITING.OPEN_COMPOSITION": {
+  "name": "Write an open-ended composition with relevant ideas",
+  "sub": "ENGL.G4.WRITIN.T2_CREATIVE_WRITING",
+  "outcome": "ENGL.G4.WRITIN.T2_CREATIVE_WRITING.a",
+  "outcomes": [
+   "ENGL.G4.WRITIN.T2_CREATIVE_WRITING.a",
+   "ENGL.G4.WRITIN.T2_CREATIVE_WRITING.b"
+  ],
+  "pre": [
+   "ENGL.G4.WRITIN.T5_CREATIVE_WRITING.PARAGRAPH_ORDER"
+  ],
+  "mis": [
+   "M4_OC_OFF_TOPIC",
+   "M4_OC_AND_THEN",
+   "M4_OC_LIST",
+   "M4_OC_NO_ENDING"
+  ],
+  "nofamily": "composition"
+ },
  "ENGL.G4.LISTEN.T3_PRONUNCIATION_AND_VO.POLITE_WORDS": {
   "name": "Choose polite words and phrases",
   "sub": "ENGL.G4.LISTEN.T3_PRONUNCIATION_AND_VO",
@@ -1399,13 +1517,31 @@ export const SKILLS = {
    "ENGL.G4.LANGUA.T3_LANGUAGE_PATTERN.a",
    "ENGL.G4.LANGUA.T3_LANGUAGE_PATTERN.b"
   ],
-  "pre": [],
+  "pre": [
+   "ENGL.G4.LISTEN.T3_PRONUNCIATION_AND_VO.POLITE_WORDS"
+  ],
   "mis": [
    "M_PAT_VERB_FORM",
    "M_PAT_NO_PLEASE",
    "M_PAT_WOULD_LIKE_FORM",
    "M_PAT_ORDER"
   ]
+ },
+ "ENGL.G4.WRITIN.T3_MECHANICS_OF_WRITING.HANDWRITING": {
+  "name": "Write legibly and neatly in print script",
+  "sub": "ENGL.G4.WRITIN.T3_MECHANICS_OF_WRITING",
+  "outcome": "ENGL.G4.WRITIN.T3_MECHANICS_OF_WRITING.a",
+  "outcomes": [
+   "ENGL.G4.WRITIN.T3_MECHANICS_OF_WRITING.a"
+  ],
+  "pre": [],
+  "mis": [
+   "M4_HW_OFF_LINE",
+   "M4_HW_MIXED_CASE",
+   "M4_HW_B_D",
+   "M4_HW_NO_SPACES"
+  ],
+  "nofamily": "teacher"
  },
  "ENGL.G4.LISTEN.T4_PRONUNCIATION_AND_VO.FIRST_AID_WORDS": {
   "name": "Use first aid words",
@@ -1418,8 +1554,28 @@ export const SKILLS = {
   "mis": [
    "M_FA_NEAR_MEANING",
    "M_FA_WOUND_BRUISE",
-   "M_FA_SPRAIN_BREAK"
+   "M_FA_SPRAIN_BREAK",
+   "M4_FA_BANDAGE_PLASTER"
   ]
+ },
+ "ENGL.G4.LISTEN.T4_PRONUNCIATION_AND_VO.WORD_STRESS": {
+  "name": "Say theme words with the stress on the right syllable",
+  "sub": "ENGL.G4.LISTEN.T4_PRONUNCIATION_AND_VO",
+  "outcome": "ENGL.G4.LISTEN.T4_PRONUNCIATION_AND_VO.b",
+  "outcomes": [
+   "ENGL.G4.LISTEN.T4_PRONUNCIATION_AND_VO.b"
+  ],
+  "pre": [
+   "ENGL.G4.LISTEN.T1_PRONUNCIATION_AND_VO.PRONOUNCE_SOUNDS",
+   "ENGL.G4.LISTEN.T4_PRONUNCIATION_AND_VO.FIRST_AID_WORDS"
+  ],
+  "mis": [
+   "M4_WS_EQUAL",
+   "M4_WS_SECOND",
+   "M4_WS_LAST",
+   "M4_WS_SPELLING_VOWEL"
+  ],
+  "nofamily": "voice"
  },
  "ENGL.G4.READIN.T4_INTENSIVE_READING_VI.VISUALS": {
   "name": "Read a notice, timetable or chart",
@@ -1429,11 +1585,14 @@ export const SKILLS = {
    "ENGL.G4.READIN.T4_INTENSIVE_READING_VI.a",
    "ENGL.G4.READIN.T4_INTENSIVE_READING_VI.b"
   ],
-  "pre": [],
+  "pre": [
+   "ENGL.G4.READIN.T2_INTENSIVE_READING.FACTUAL_QUESTIONS"
+  ],
   "mis": [
    "M_VIS_WRONG_ROW",
    "M_VIS_NEARBY_DETAIL",
-   "M_VIS_PURPOSE"
+   "M_VIS_PURPOSE",
+   "M4_VIS_TITLE_IGNORED"
   ]
  },
  "ENGL.G4.LANGUA.T4_WORD_CLASSES_PRONOUN.PERSONAL_PRONOUNS": {
@@ -1478,13 +1637,53 @@ export const SKILLS = {
   "outcomes": [
    "ENGL.G4.WRITIN.T4_FUNCTIONAL_WRITING.a"
   ],
-  "pre": [],
+  "pre": [
+   "ENGL.G4.WRITIN.T7_MECHANICS_OF_WRITING.CAPITALS_FULL_STOPS"
+  ],
   "mis": [
    "M_LTR_PART_MIX",
    "M_LTR_ORDER",
    "M_LTR_NO_COMMA",
    "M_LTR_RECEIVER_ADDRESS"
   ]
+ },
+ "ENGL.G4.WRITIN.T4_FUNCTIONAL_WRITING.FRIENDLY_LETTER": {
+  "name": "Write a friendly letter in the correct format",
+  "sub": "ENGL.G4.WRITIN.T4_FUNCTIONAL_WRITING",
+  "outcome": "ENGL.G4.WRITIN.T4_FUNCTIONAL_WRITING.b",
+  "outcomes": [
+   "ENGL.G4.WRITIN.T4_FUNCTIONAL_WRITING.b"
+  ],
+  "pre": [
+   "ENGL.G4.WRITIN.T4_FUNCTIONAL_WRITING.LETTER_PARTS",
+   "ENGL.G4.WRITIN.T9_PUNCTUATION.COMMAS"
+  ],
+  "mis": [
+   "M4_FL_NO_ADDRESS",
+   "M4_FL_OFFICIAL_CLOSE",
+   "M4_FL_ONE_BLOCK",
+   "M4_FL_NO_NAME"
+  ],
+  "nofamily": "composition"
+ },
+ "ENGL.G4.WRITIN.T4_FUNCTIONAL_WRITING.SMS_MESSAGE": {
+  "name": "Write a short text message (SMS) correctly",
+  "sub": "ENGL.G4.WRITIN.T4_FUNCTIONAL_WRITING",
+  "outcome": "ENGL.G4.WRITIN.T4_FUNCTIONAL_WRITING.c",
+  "outcomes": [
+   "ENGL.G4.WRITIN.T4_FUNCTIONAL_WRITING.c"
+  ],
+  "pre": [
+   "ENGL.G4.WRITIN.T4_FUNCTIONAL_WRITING.LETTER_PARTS",
+   "ENGL.G4.LANGUA.T8_WORD_CLASSES.CONTRACTIONS"
+  ],
+  "mis": [
+   "M4_SM_NO_NAME",
+   "M4_SM_TEXTSPEAK",
+   "M4_SM_LETTER_FORMAT",
+   "M4_SM_MISSING_DETAIL"
+  ],
+  "nofamily": "questions"
  },
  "ENGL.G4.LISTEN.T5_PRONUNCIATION_AND_VO.NUTRITION_WORDS": {
   "name": "Use words about food and a balanced diet",
@@ -1497,8 +1696,28 @@ export const SKILLS = {
   "mis": [
    "M_NUT_NEAR_MEANING",
    "M_NUT_VITAMIN_FIBRE",
-   "M_NUT_BALANCED"
+   "M_NUT_BALANCED",
+   "M4_NUT_FRUIT_PROTEIN"
   ]
+ },
+ "ENGL.G4.LISTEN.T5_PRONUNCIATION_AND_VO.LIKE_BUT_PATTERN": {
+  "name": "Say what one likes and does not like with \"I like ... but I do not like ...\"",
+  "sub": "ENGL.G4.LISTEN.T5_PRONUNCIATION_AND_VO",
+  "outcome": "ENGL.G4.LISTEN.T5_PRONUNCIATION_AND_VO.c",
+  "outcomes": [
+   "ENGL.G4.LISTEN.T5_PRONUNCIATION_AND_VO.c"
+  ],
+  "pre": [
+   "ENGL.G4.LANGUA.T10_WORD_CLASS_CONJUNCTI.CONJUNCTIONS",
+   "ENGL.G4.LANGUA.T8_WORD_CLASSES.NEGATIVE_STATEMENTS"
+  ],
+  "mis": [
+   "M4_LB_DO_NOT_S",
+   "M4_LB_AND_FOR_BUT",
+   "M4_LB_NOT_LIKE",
+   "M4_LB_LIKE_ING_TO"
+  ],
+  "nofamily": "questions"
  },
  "ENGL.G4.READIN.T5_EXTENSIVE_READING.SCAN_FOR_DETAIL": {
   "name": "Scan a text for a detail",
@@ -1515,8 +1734,47 @@ export const SKILLS = {
   "mis": [
    "M_SCAN_NEAR_NUMBER",
    "M_SCAN_WRONG_KEYWORD",
-   "M_SCAN_TOO_LONG"
+   "M_SCAN_TOO_LONG",
+   "M4_SCAN_FIRST_MATCH"
   ]
+ },
+ "ENGL.G4.READIN.T5_EXTENSIVE_READING.SELECT_READING": {
+  "name": "Choose reading material that suits the purpose and the reader",
+  "sub": "ENGL.G4.READIN.T5_EXTENSIVE_READING",
+  "outcome": "ENGL.G4.READIN.T5_EXTENSIVE_READING.a",
+  "outcomes": [
+   "ENGL.G4.READIN.T5_EXTENSIVE_READING.a"
+  ],
+  "pre": [
+   "ENGL.G4.READIN.T1_EXTENSIVE_READING.REFERENCE_MATERIALS"
+  ],
+  "mis": [
+   "M4_SR_COVER",
+   "M4_SR_TOO_HARD",
+   "M4_SR_THICKNESS",
+   "M4_SR_WRONG_TYPE"
+  ],
+  "nofamily": "questions"
+ },
+ "ENGL.G4.READIN.T5_EXTENSIVE_READING.INDEPENDENT_READING": {
+  "name": "Read familiar books independently and keep going",
+  "sub": "ENGL.G4.READIN.T5_EXTENSIVE_READING",
+  "outcome": "ENGL.G4.READIN.T5_EXTENSIVE_READING.b",
+  "outcomes": [
+   "ENGL.G4.READIN.T5_EXTENSIVE_READING.b",
+   "ENGL.G4.READIN.T7_EXTENSIVE_READING_IN.a",
+   "ENGL.G4.READIN.T7_EXTENSIVE_READING_IN.b"
+  ],
+  "pre": [
+   "ENGL.G4.READIN.T5_EXTENSIVE_READING.SELECT_READING"
+  ],
+  "mis": [
+   "M4_IR_STOPS_AT_WORD",
+   "M4_IR_PICTURES_ONLY",
+   "M4_IR_CANNOT_RETELL",
+   "M4_IR_SKIPS_TO_END"
+  ],
+  "nofamily": "teacher"
  },
  "ENGL.G4.LANGUA.T5_WORD_CLASSES_ADJECTI.ADJECTIVES": {
   "name": "Find adjectives in a sentence",
@@ -1547,7 +1805,8 @@ export const SKILLS = {
   "mis": [
    "M_ADO_SHAPE_BEFORE_SIZE",
    "M_ADO_AFTER_NOUN",
-   "M_ADO_NO_AND"
+   "M_ADO_NO_AND",
+   "M4_ADO_COLOUR_FIRST"
   ]
  },
  "ENGL.G4.WRITIN.T5_CREATIVE_WRITING.NARRATIVE_PARTS": {
@@ -1579,8 +1838,30 @@ export const SKILLS = {
   "mis": [
    "M_PAR_ORDER_REVERSED",
    "M_PAR_ORDER_SWAPPED",
-   "M_PAR_TOPIC_DETAIL"
+   "M_PAR_TOPIC_DETAIL",
+   "M4_PAR_ENDING_FIRST"
   ]
+ },
+ "ENGL.G4.WRITIN.T5_CREATIVE_WRITING.NARRATIVE_COMPOSITION": {
+  "name": "Write a narrative composition of about 60 to 80 words",
+  "sub": "ENGL.G4.WRITIN.T5_CREATIVE_WRITING",
+  "outcome": "ENGL.G4.WRITIN.T5_CREATIVE_WRITING.c",
+  "outcomes": [
+   "ENGL.G4.WRITIN.T5_CREATIVE_WRITING.c",
+   "ENGL.G4.WRITIN.T8_CREATIVE_WRITING.c"
+  ],
+  "pre": [
+   "ENGL.G4.WRITIN.T5_CREATIVE_WRITING.NARRATIVE_PARTS",
+   "ENGL.G4.LISTEN.T7_PRONUNCIATION_AND_VO.SIMPLE_PAST",
+   "ENGL.G4.WRITIN.T5_CREATIVE_WRITING.PARAGRAPH_ORDER"
+  ],
+  "mis": [
+   "M4_NC_TENSE_SWITCH",
+   "M4_NC_NO_PROBLEM",
+   "M4_NC_TOO_SHORT",
+   "M4_NC_I_WOKE_UP"
+  ],
+  "nofamily": "composition"
  },
  "ENGL.G4.LISTEN.T6_PRONUNCIATION_AND_VO.INTERNET_WORDS": {
   "name": "Use words about the internet, email and safety online",
@@ -1594,8 +1875,28 @@ export const SKILLS = {
   "mis": [
    "M_NET_NEAR_MEANING",
    "M_NET_PASSWORD_SHARED",
-   "M_NET_STRANGER"
+   "M_NET_STRANGER",
+   "M4_NET_DOWNLOAD_UPLOAD"
   ]
+ },
+ "ENGL.G4.LISTEN.T6_PRONUNCIATION_AND_VO.INTONATION": {
+  "name": "Use falling and rising intonation for questions and statements",
+  "sub": "ENGL.G4.LISTEN.T6_PRONUNCIATION_AND_VO",
+  "outcome": "ENGL.G4.LISTEN.T6_PRONUNCIATION_AND_VO.a",
+  "outcomes": [
+   "ENGL.G4.LISTEN.T6_PRONUNCIATION_AND_VO.a",
+   "ENGL.G4.LISTEN.T6_PRONUNCIATION_AND_VO.b"
+  ],
+  "pre": [
+   "ENGL.G4.LANGUA.T11_LANGUAGE_PATTERNS.INTERROGATIVES"
+  ],
+  "mis": [
+   "M4_IN_WH_RISE",
+   "M4_IN_FLAT",
+   "M4_IN_STATEMENT_RISE",
+   "M4_IN_WRONG_WORD"
+  ],
+  "nofamily": "voice"
  },
  "ENGL.G4.LANGUA.T6_WORD_CLASS_DETERMINE.COUNT_UNCOUNT": {
   "name": "Use many, much, few and little",
@@ -1605,7 +1906,9 @@ export const SKILLS = {
    "ENGL.G4.LANGUA.T6_WORD_CLASS_DETERMINE.a",
    "ENGL.G4.LANGUA.T6_WORD_CLASS_DETERMINE.b"
   ],
-  "pre": [],
+  "pre": [
+   "ENGL.G4.LANGUA.T2_WORD_CLASSES_NOUNS.PLURALS_REGULAR"
+  ],
   "mis": [
    "M_QUA_MUCH_COUNT",
    "M_QUA_MANY_UNCOUNT",
@@ -1647,6 +1950,25 @@ export const SKILLS = {
    "M_PIC_MISMATCH"
   ]
  },
+ "ENGL.G4.WRITIN.T6_CREATIVE_WRITING.PICTORIAL_COMPOSITION": {
+  "name": "Write a composition of about 60 to 80 words from a series of pictures",
+  "sub": "ENGL.G4.WRITIN.T6_CREATIVE_WRITING",
+  "outcome": "ENGL.G4.WRITIN.T6_CREATIVE_WRITING.b",
+  "outcomes": [
+   "ENGL.G4.WRITIN.T6_CREATIVE_WRITING.b"
+  ],
+  "pre": [
+   "ENGL.G4.WRITIN.T6_CREATIVE_WRITING.PICTURE_SEQUENCE",
+   "ENGL.G4.LISTEN.T7_PRONUNCIATION_AND_VO.SIMPLE_PAST"
+  ],
+  "mis": [
+   "M4_PC_DESCRIBES_ONLY",
+   "M4_PC_SKIPS_PICTURE",
+   "M4_PC_PRESENT",
+   "M4_PC_NO_TITLE"
+  ],
+  "nofamily": "composition"
+ },
  "ENGL.G4.LISTEN.T7_PRONUNCIATION_AND_VO.SIMPLE_PAST": {
   "name": "Use the past tense in a dialogue",
   "sub": "ENGL.G4.LISTEN.T7_PRONUNCIATION_AND_VO",
@@ -1661,6 +1983,26 @@ export const SKILLS = {
    "M_SPA_DID_PLUS_PAST",
    "M_SPA_PAST_FOR_HABIT"
   ]
+ },
+ "ENGL.G4.LISTEN.T7_PRONUNCIATION_AND_VO.TURN_TAKING": {
+  "name": "Take turns in a two-way conversation",
+  "sub": "ENGL.G4.LISTEN.T7_PRONUNCIATION_AND_VO",
+  "outcome": "ENGL.G4.LISTEN.T7_PRONUNCIATION_AND_VO.a",
+  "outcomes": [
+   "ENGL.G4.LISTEN.T7_PRONUNCIATION_AND_VO.a",
+   "ENGL.G4.LISTEN.T10_PRONUNCIATION_AND_VO.b"
+  ],
+  "pre": [
+   "ENGL.G4.LISTEN.T1_PRONUNCIATION_AND_VO.LISTEN_ATTENTIVE",
+   "ENGL.G4.LISTEN.T3_PRONUNCIATION_AND_VO.POLITE_WORDS"
+  ],
+  "mis": [
+   "M4_TT_TALK_OVER",
+   "M4_TT_ONE_WORD",
+   "M4_TT_LONG_TURN",
+   "M4_TT_OFF_TOPIC"
+  ],
+  "nofamily": "voice"
  },
  "ENGL.G4.LANGUA.T7_WORD_CLASSES_VERB_AS.PRESENT_PROGRESSIVE": {
   "name": "Use am, is and are with -ing",
@@ -1687,7 +2029,8 @@ export const SKILLS = {
    "ENGL.G4.LANGUA.T7_WORD_CLASSES_VERB_AS.b"
   ],
   "pre": [
-   "ENGL.G4.LANGUA.T7_WORD_CLASSES_VERB_AS.PRESENT_PROGRESSIVE"
+   "ENGL.G4.LANGUA.T7_WORD_CLASSES_VERB_AS.PRESENT_PROGRESSIVE",
+   "ENGL.G4.LISTEN.T7_PRONUNCIATION_AND_VO.SIMPLE_PAST"
   ],
   "mis": [
    "M_PAP_PRESENT_FOR_PAST",
@@ -1725,8 +2068,29 @@ export const SKILLS = {
   "mis": [
    "M_FRM_NEAR_MEANING",
    "M_FRM_LIVESTOCK_CROPS",
-   "M_FRM_FERTILISER"
+   "M_FRM_FERTILISER",
+   "M4_FRM_PLANT_HARVEST"
   ]
+ },
+ "ENGL.G4.READIN.T8_READING_FLUENCY.READ_FLUENTLY": {
+  "name": "Read a text of about 300 words accurately, at the right speed and with expression",
+  "sub": "ENGL.G4.READIN.T8_READING_FLUENCY",
+  "outcome": "ENGL.G4.READIN.T8_READING_FLUENCY.a",
+  "outcomes": [
+   "ENGL.G4.READIN.T8_READING_FLUENCY.a",
+   "ENGL.G4.READIN.T8_READING_FLUENCY.b",
+   "ENGL.G4.READIN.T12_1_INTENSIVE_READING.b"
+  ],
+  "pre": [
+   "ENGL.G4.WRITIN.T7_MECHANICS_OF_WRITING.CAPITALS_FULL_STOPS"
+  ],
+  "mis": [
+   "M4_RF_WORD_BY_WORD",
+   "M4_RF_IGNORES_STOPS",
+   "M4_RF_FLAT",
+   "M4_RF_TOO_FAST"
+  ],
+  "nofamily": "voice"
  },
  "ENGL.G4.LANGUA.T8_WORD_CLASSES.CONTRACTIONS": {
   "name": "Write short forms of verbs",
@@ -1760,6 +2124,25 @@ export const SKILLS = {
    "M_NEG_VERB_S",
    "M_NEG_DO_WITH_BE"
   ]
+ },
+ "ENGL.G4.LISTEN.T9_PRONUNCIATION_AND_VO.SPEAK_FLUENTLY": {
+  "name": "Speak on a topic fluently, at a good speed and without long pauses",
+  "sub": "ENGL.G4.LISTEN.T9_PRONUNCIATION_AND_VO",
+  "outcome": "ENGL.G4.LISTEN.T9_PRONUNCIATION_AND_VO.a",
+  "outcomes": [
+   "ENGL.G4.LISTEN.T9_PRONUNCIATION_AND_VO.a",
+   "ENGL.G4.LISTEN.T12_PRONUNCIATION_AND_VO.a"
+  ],
+  "pre": [
+   "ENGL.G4.LISTEN.T1_PRONUNCIATION_AND_VO.PRONOUNCE_SOUNDS"
+  ],
+  "mis": [
+   "M4_SF_FILLERS",
+   "M4_SF_TOO_FAST",
+   "M4_SF_WORD_SEARCH",
+   "M4_SF_REPEATS"
+  ],
+  "nofamily": "voice"
  },
  "ENGL.G4.LANGUA.T9_WORD_CLASSES_ADVERBS.ADVERBS": {
   "name": "Use adverbs of manner, time and place",
@@ -1825,8 +2208,28 @@ export const SKILLS = {
   "mis": [
    "M_HYG_NEAR_MEANING",
    "M_HYG_DISINFECT",
-   "M_HYG_LATRINE"
+   "M_HYG_LATRINE",
+   "M4_HYG_GERMS_DIRT"
   ]
+ },
+ "ENGL.G4.LISTEN.T10_PRONUNCIATION_AND_VO.INTERRUPT_POLITELY": {
+  "name": "Interrupt a speaker politely",
+  "sub": "ENGL.G4.LISTEN.T10_PRONUNCIATION_AND_VO",
+  "outcome": "ENGL.G4.LISTEN.T10_PRONUNCIATION_AND_VO.c",
+  "outcomes": [
+   "ENGL.G4.LISTEN.T10_PRONUNCIATION_AND_VO.c"
+  ],
+  "pre": [
+   "ENGL.G4.LISTEN.T3_PRONUNCIATION_AND_VO.POLITE_WORDS",
+   "ENGL.G4.LANGUA.T3_LANGUAGE_PATTERN.POLITE_PATTERN"
+  ],
+  "mis": [
+   "M4_IP_HEY",
+   "M4_IP_NO_PAUSE",
+   "M4_IP_SORRY_ONLY",
+   "M4_IP_COMMAND"
+  ],
+  "nofamily": "questions"
  },
  "ENGL.G4.LANGUA.T10_WORD_CLASS_CONJUNCTI.CONJUNCTIONS": {
   "name": "Join ideas with and, but, because, so and or",
@@ -1834,7 +2237,8 @@ export const SKILLS = {
   "outcome": "ENGL.G4.LANGUA.T10_WORD_CLASS_CONJUNCTI.a",
   "outcomes": [
    "ENGL.G4.LANGUA.T10_WORD_CLASS_CONJUNCTI.a",
-   "ENGL.G4.LANGUA.T10_WORD_CLASS_CONJUNCTI.c"
+   "ENGL.G4.LANGUA.T10_WORD_CLASS_CONJUNCTI.c",
+   "ENGL.G4.LANGUA.T10_WORD_CLASS_CONJUNCTI.b"
   ],
   "pre": [],
   "mis": [
@@ -1854,13 +2258,35 @@ export const SKILLS = {
    "ENGL.G4.WRITIN.T10_CREATIVE_WRITING.a"
   ],
   "pre": [
-   "ENGL.G4.LANGUA.T5_WORD_CLASSES_ADJECTI.ADJECTIVES"
+   "ENGL.G4.LANGUA.T5_WORD_CLASSES_ADJECTI.ADJECTIVES",
+   "ENGL.G4.WRITIN.T5_CREATIVE_WRITING.NARRATIVE_PARTS"
   ],
   "mis": [
    "M_DES_TELLS_STORY",
    "M_DES_ONE_SENSE",
-   "M_DES_PART_MIX"
+   "M_DES_PART_MIX",
+   "M4_DES_NO_ORDER"
   ]
+ },
+ "ENGL.G4.WRITIN.T10_CREATIVE_WRITING.DESCRIPTIVE_COMPOSITION": {
+  "name": "Write a descriptive composition of about 80 to 100 words",
+  "sub": "ENGL.G4.WRITIN.T10_CREATIVE_WRITING",
+  "outcome": "ENGL.G4.WRITIN.T10_CREATIVE_WRITING.c",
+  "outcomes": [
+   "ENGL.G4.WRITIN.T10_CREATIVE_WRITING.c"
+  ],
+  "pre": [
+   "ENGL.G4.WRITIN.T10_CREATIVE_WRITING.DESCRIPTIVE_PARTS",
+   "ENGL.G4.LANGUA.T5_WORD_CLASSES_ADJECTI.ADJECTIVES",
+   "ENGL.G4.LANGUA.T5_WORD_CLASSES_ADJECTI.ADJECTIVE_ORDER"
+  ],
+  "mis": [
+   "M4_DC_STORY",
+   "M4_DC_SIGHT_ONLY",
+   "M4_DC_NICE",
+   "M4_DC_NO_CONCLUSION"
+  ],
+  "nofamily": "composition"
  },
  "ENGL.G4.LISTEN.T11_PRONUNCIATION_AND_VO.SPORTS_WORDS": {
   "name": "Use words about sports and games",
@@ -1873,8 +2299,28 @@ export const SKILLS = {
   "mis": [
    "M_SPT_NEAR_MEANING",
    "M_SPT_TROPHY_TOURNAMENT",
-   "M_SPT_OPPONENT_TEAMMATE"
+   "M_SPT_OPPONENT_TEAMMATE",
+   "M4_SPT_DRAW_LOSE"
   ]
+ },
+ "ENGL.G4.LISTEN.T11_PRONUNCIATION_AND_VO.NONVERBAL_CUES": {
+  "name": "Read and use gestures, faces and tone of voice",
+  "sub": "ENGL.G4.LISTEN.T11_PRONUNCIATION_AND_VO",
+  "outcome": "ENGL.G4.LISTEN.T11_PRONUNCIATION_AND_VO.d",
+  "outcomes": [
+   "ENGL.G4.LISTEN.T11_PRONUNCIATION_AND_VO.d",
+   "ENGL.G4.LISTEN.T12_PRONUNCIATION_AND_VO.b"
+  ],
+  "pre": [
+   "ENGL.G4.LISTEN.T1_PRONUNCIATION_AND_VO.LISTEN_ATTENTIVE"
+  ],
+  "mis": [
+   "M4_NC_NOD",
+   "M4_NC_FROWN",
+   "M4_NC_TONE_WORDS",
+   "M4_NC_POINTING"
+  ],
+  "nofamily": "questions"
  },
  "ENGL.G4.LANGUA.T11_LANGUAGE_PATTERNS.INTERROGATIVES": {
   "name": "Ask questions with who, what, where, when, why, how and whose",
@@ -1922,7 +2368,8 @@ export const SKILLS = {
   "mis": [
    "M_ENV_NEAR_MEANING",
    "M_ENV_POLLUTION",
-   "M_ENV_CONSERVE"
+   "M_ENV_CONSERVE",
+   "M4_ENV_RECYCLE_REUSE"
   ]
  },
  "ENGL.G4.READIN.T12_1_INTENSIVE_READING.PROVERBS": {
@@ -1933,7 +2380,9 @@ export const SKILLS = {
    "ENGL.G4.READIN.T12_1_INTENSIVE_READING.a",
    "ENGL.G4.READIN.T12_1_INTENSIVE_READING.c"
   ],
-  "pre": [],
+  "pre": [
+   "ENGL.G4.READIN.T2_INTENSIVE_READING.CONTEXT_CLUES"
+  ],
   "mis": [
    "M_PRV_LITERAL",
    "M_PRV_OPPOSITE",
@@ -1969,7 +2418,8 @@ export const SKILLS = {
    "ENGL.G4.LANGUA.T12_WORD_CLASSES_VERB_AS.b"
   ],
   "pre": [
-   "ENGL.G4.LANGUA.T12_WORD_CLASSES_VERB_AS.PRESENT_PERFECT"
+   "ENGL.G4.LANGUA.T12_WORD_CLASSES_VERB_AS.PRESENT_PERFECT",
+   "ENGL.G4.LISTEN.T7_PRONUNCIATION_AND_VO.SIMPLE_PAST"
   ],
   "mis": [
    "M_PAF_HAD_MISSING",
@@ -1985,13 +2435,34 @@ export const SKILLS = {
   "outcomes": [
    "ENGL.G4.WRITIN.T12_GUIDED_COMPOSITION.a"
   ],
-  "pre": [],
+  "pre": [
+   "ENGL.G4.LISTEN.T7_PRONUNCIATION_AND_VO.SIMPLE_PAST"
+  ],
   "mis": [
    "M_DIA_NO_DATE",
    "M_DIA_LETTER_FORMAT",
    "M_DIA_THIRD_PERSON",
    "M_DIA_NO_FEELINGS"
   ]
+ },
+ "ENGL.G4.WRITIN.T12_GUIDED_COMPOSITION.DIARY_WRITING": {
+  "name": "Write a diary entry in the right format",
+  "sub": "ENGL.G4.WRITIN.T12_GUIDED_COMPOSITION",
+  "outcome": "ENGL.G4.WRITIN.T12_GUIDED_COMPOSITION.b",
+  "outcomes": [
+   "ENGL.G4.WRITIN.T12_GUIDED_COMPOSITION.b"
+  ],
+  "pre": [
+   "ENGL.G4.WRITIN.T12_GUIDED_COMPOSITION.DIARY_PARTS",
+   "ENGL.G4.LISTEN.T7_PRONUNCIATION_AND_VO.SIMPLE_PAST"
+  ],
+  "mis": [
+   "M4_DW_NO_DATE",
+   "M4_DW_FUTURE",
+   "M4_DW_THIRD_PERSON",
+   "M4_DW_EVENTS_ONLY"
+  ],
+  "nofamily": "composition"
  },
  "ENGL.G4.LISTEN.T13_PRONUNCIATION_AND_VO.MONEY_WORDS": {
   "name": "Use words about money",
@@ -2015,12 +2486,34 @@ export const SKILLS = {
   "outcomes": [
    "ENGL.G4.LISTEN.T13_PRONUNCIATION_AND_VO.b"
   ],
-  "pre": [],
+  "pre": [
+   "ENGL.G4.WRITIN.T11_MECHANICS_OF_WRITING.MISSPELT_WORDS"
+  ],
   "mis": [
    "M_SIL_NEIGHBOUR",
    "M_SIL_NONE",
-   "M_SIL_END_E"
+   "M_SIL_END_E",
+   "M4_SIL_SPELL_SAY"
   ]
+ },
+ "ENGL.G4.LISTEN.T13_PRONUNCIATION_AND_VO.VERY_BUT": {
+  "name": "Use the pattern \"very ... but ...\"",
+  "sub": "ENGL.G4.LISTEN.T13_PRONUNCIATION_AND_VO",
+  "outcome": "ENGL.G4.LISTEN.T13_PRONUNCIATION_AND_VO.c",
+  "outcomes": [
+   "ENGL.G4.LISTEN.T13_PRONUNCIATION_AND_VO.c"
+  ],
+  "pre": [
+   "ENGL.G4.LANGUA.T10_WORD_CLASS_CONJUNCTI.CONJUNCTIONS",
+   "ENGL.G4.LANGUA.T5_WORD_CLASSES_ADJECTI.ADJECTIVES"
+  ],
+  "mis": [
+   "M4_VB_VERY_COMPARATIVE",
+   "M4_VB_TOO_FOR_VERY",
+   "M4_VB_NO_CONTRAST",
+   "M4_VB_VERY_MUCH"
+  ],
+  "nofamily": "questions"
  },
  "ENGL.G4.LANGUA.T13_WORD_CLASS_PREPOSITI.PREP_POSITION": {
   "name": "Use in, on, under, behind, between and next to",
@@ -2072,11 +2565,26 @@ export const SKILLS = {
   "mis": [
    "M_DBL_SINGLE",
    "M_DBL_PHONETIC",
-   "M_DBL_EXTRA"
+   "M_DBL_EXTRA",
+   "M4_DBL_ING_NO_DOUBLE"
   ]
  }
 };
 export const MIS_FEEDBACK = {
+ "M4_PS_L_R": "Tongue tip up behind the teeth for /l/; tongue curled back, not touching, for /r/.",
+ "M4_PS_SH_S": "Round the lips and push them forward for sh: shhh.",
+ "M4_PS_CH_SH": "Ch starts with a stop: t then sh, as in t-shair, chair.",
+ "M4_PS_V_F": "Same teeth on lip as f, but switch the voice on: feel the buzz in the throat.",
+ "M4_PS_EXTRA_VOWEL": "Hold the two consonants together with no sound between: f-i-lm.",
+ "M4_PS_SHIP_SHEEP": "Short i is quick and relaxed; long ee is longer, lips spread in a smile.",
+ "M4_FV_COUSIN_BROTHER": "Your uncle's or aunt's child is your cousin.",
+ "M4_FV_SMALL_BROTHER": "Use younger and older for age; small and big are for size.",
+ "M4_FV_NIECE_NEPHEW": "Niece is a girl, nephew is a boy.",
+ "M4_FV_AUNT_UNCLE": "An uncle is a man, an aunt is a woman, on either side of the family.",
+ "M4_LA_LAST_HEARD": "Hold up a finger for each event as you listen.",
+ "M4_LA_OWN_DETAIL": "Say only what the speaker said.",
+ "M4_LA_WHO_SWAP": "Ask who did the action and who received it.",
+ "M4_LA_KEYWORD_GRAB": "Listen for the question word: when wants a time.",
  "M_DIC_ALPHA_FIRST_LETTER": "When the first letters match, look at the second letter, then the third.",
  "M_DIC_GUIDE_WORDS": "Guide words show the first and last words on a page. A word is on the page only if it comes between them in alphabetical order.",
  "M_DIC_WRONG_MEANING": "Read all the meanings, then try each in the sentence to see which one fits.",
@@ -2084,6 +2592,7 @@ export const MIS_FEEDBACK = {
  "M_REF_ATLAS_FOR_WORDS": "An atlas is a book of maps. Use it to find places and countries.",
  "M_REF_STORY_FOR_FACTS": "A timetable lists times. A story book tells an invented story and is not for looking things up.",
  "M_REF_NEWSPAPER_OLD": "A newspaper gives news of today. A dictionary or encyclopaedia gives facts that stay the same.",
+ "M4_DIC_FIRST_MEANING": "Read all the meanings and choose the one that fits the sentence.",
  "M_ART_A_BEFORE_VOWEL": "Before a vowel sound (a, e, i, o, u) use \"an\": an orange, an egg.",
  "M_ART_AN_BEFORE_CONSONANT": "Before a consonant sound use \"a\": a book, a pen.",
  "M_ART_SOUND_NOT_LETTER": "Listen to the sound, not the letter. \"Hour\" starts with the sound \"ow\", so it takes \"an\". \"Uniform\" starts with the sound \"yoo\", so it takes \"a\".",
@@ -2095,6 +2604,14 @@ export const MIS_FEEDBACK = {
  "M_FRM_AGE_FOR_DOB": "Date of birth needs the day, month and year you were born. Age is a number.",
  "M_FRM_CONTACT_FOR_ADDRESS": "An address says where you live or get letters. A phone number goes in the contact box.",
  "M_FRM_NAME_PART": "Full names means all of your names, in the order the form asks for.",
+ "M4_FF_LOWER_CASE": "Read the instruction in brackets before writing.",
+ "M4_FF_EMPTY_BOX": "Fill every box; write N/A only if it does not apply.",
+ "M4_FF_SIGN_AS_NAME": "A signature is your own special way of writing your name.",
+ "M4_FF_OUTSIDE_BOX": "Keep your writing inside the box.",
+ "M4_DS_SHIP_SHEEP": "Listen for the long sound: sheep is longer.",
+ "M4_DS_L_R": "Watch the tongue: up for l, curled back for r.",
+ "M4_DS_F_V": "Put a hand on your throat: v buzzes, f does not.",
+ "M4_DS_TH_T": "Th has the tongue between the teeth: look at the speaker's mouth.",
  "M_FACT_NEARBY_DETAIL": "Find the sentence that answers the question and check that the words match what is asked.",
  "M_FACT_OUTSIDE_KNOWLEDGE": "Answer from the text, not from what you think is likely. Go back to the sentence.",
  "M_FACT_MISSES_STATED": "Look again. When the text says it clearly, the answer is true.",
@@ -2109,6 +2626,7 @@ export const MIS_FEEDBACK = {
  "M_CTX_COMMON_MEANING": "Try the meaning in the sentence. If it does not fit, it is not the right one.",
  "M_CTX_OPPOSITE": "Read for clue words. They tell you if the word means the same as or the opposite of something.",
  "M_CTX_WRONG_CLUE": "A clue is a group of words that tells more about the hard word, not just words near it.",
+ "M4_INFER_FEELING_GUESS": "Find the clue: throwing and slamming show anger.",
  "M_PLR_NO_ES": "After s, x, ch and sh we add -es so that the word can be said: box, boxes; church, churches.",
  "M_PLR_Y_TO_S": "When a word ends in a consonant and y, change the y to i and add -es: baby, babies.",
  "M_PLR_VOWEL_Y_IES": "When a vowel comes before the y, just add -s: monkey, monkeys; day, days.",
@@ -2118,6 +2636,10 @@ export const MIS_FEEDBACK = {
  "M_PLI_DOUBLE_PLURAL": "Children, men and women are already plural. Do not add -s.",
  "M_PLI_FOOT_TOOTH": "Some plurals change the vowels inside the word: tooth, teeth; mouse, mice; goose, geese.",
  "M_PLI_SAME_FORM_S": "Sheep stays sheep. We say one sheep and ten sheep. Fish is the same.",
+ "M4_OC_OFF_TOPIC": "Check every sentence against the topic.",
+ "M4_OC_AND_THEN": "Use first, after that, later and finally.",
+ "M4_OC_LIST": "Every sentence should follow from the one before.",
+ "M4_OC_NO_ENDING": "Plan the ending before you start.",
  "M_POL_DEMAND": "A polite request starts with May I or Could you, and says please.",
  "M_POL_NO_THANKS": "When someone helps you, say thank you.",
  "M_POL_RUDE_REFUSAL": "You can say no in a polite way: begin with I am sorry.",
@@ -2126,12 +2648,22 @@ export const MIS_FEEDBACK = {
  "M_PAT_NO_PLEASE": "A polite request uses May I or Could you, and the word please.",
  "M_PAT_WOULD_LIKE_FORM": "To offer something politely we say: Would you like some tea? The verb after like is to + the plain verb, or a noun.",
  "M_PAT_ORDER": "In a request the helping word comes first: Could you help me? May I borrow your pen?",
+ "M4_HW_OFF_LINE": "Sit every letter on the line, like people on a bench.",
+ "M4_HW_MIXED_CASE": "Small letters inside a word; a capital only at the start of a name or sentence.",
+ "M4_HW_B_D": "B: bat then ball; d: drum then stick.",
+ "M4_HW_NO_SPACES": "Leave a finger space between words.",
  "M_FA_NEAR_MEANING": "Read the whole sentence and say what the gap must mean before choosing.",
  "M_FA_WOUND_BRUISE": "A wound is a cut or a break in the skin. A bruise is a dark mark under the skin.",
  "M_FA_SPRAIN_BREAK": "A sprain is a twisted joint. An ambulance is a vehicle that takes people to hospital.",
+ "M4_WS_EQUAL": "One syllable is strong; the others are short and weak.",
+ "M4_WS_SECOND": "Clap the strong part: AC-ci-dent.",
+ "M4_WS_LAST": "Most two-syllable nouns are strong at the start.",
+ "M4_WS_SPELLING_VOWEL": "Weak syllables are quick and soft.",
+ "M4_FA_BANDAGE_PLASTER": "A plaster sticks on a small cut; a bandage is wrapped round.",
  "M_VIS_WRONG_ROW": "Find the row for what you need, then read across to the right column.",
  "M_VIS_NEARBY_DETAIL": "Go back to the line that answers the question and check the words.",
  "M_VIS_PURPOSE": "Look at the title and the first line. They say what the notice is for.",
+ "M4_VIS_TITLE_IGNORED": "Read the title first: it tells you what the numbers mean.",
  "M_PRO_SUBJECT_AS_OBJECT": "After a verb or a small word like to, for or with, use me, him, her, us or them.",
  "M_PRO_OBJECT_AS_SUBJECT": "Before a verb, who does the action? Use I, he, she, we or they: Wanjiru and I went to the market.",
  "M_PRO_NOUN_AND_PRONOUN": "Do not say the name and the pronoun together. Wanjiru is tall, or She is tall.",
@@ -2144,12 +2676,34 @@ export const MIS_FEEDBACK = {
  "M_LTR_ORDER": "A friendly letter goes: your address, the date, the greeting, the body, the closing, your name.",
  "M_LTR_NO_COMMA": "A comma follows the greeting (Dear Amina,) and the closing (Yours lovingly,).",
  "M_LTR_RECEIVER_ADDRESS": "In a friendly letter, write your own address at the top. Do not write the receiver's address there.",
+ "M4_FL_NO_ADDRESS": "Address and date first, top right.",
+ "M4_FL_OFFICIAL_CLOSE": "Friendly letters close with Your friend or Your loving cousin.",
+ "M4_FL_ONE_BLOCK": "Start a new paragraph for each new idea.",
+ "M4_FL_NO_NAME": "Always end with your name under the closing.",
+ "M4_SM_NO_NAME": "Say who you are in the message.",
+ "M4_SM_TEXTSPEAK": "Write words in full for an older reader.",
+ "M4_SM_LETTER_FORMAT": "An SMS is short: greeting, message, name.",
+ "M4_SM_MISSING_DETAIL": "Ask: what does the reader need to know?",
  "M_NUT_NEAR_MEANING": "Protein builds the body (beans, meat, eggs). Carbohydrates give energy (ugali, rice, bread).",
  "M_NUT_VITAMIN_FIBRE": "Vitamins keep the body healthy. Fibre helps food move through the body.",
  "M_NUT_BALANCED": "A balanced diet has food from all the food groups in the right amounts.",
+ "M4_LB_DO_NOT_S": "After do not, the verb is plain: do not like.",
+ "M4_LB_AND_FOR_BUT": "But joins two ideas that go different ways.",
+ "M4_LB_NOT_LIKE": "English needs do: I do not like.",
+ "M4_LB_LIKE_ING_TO": "Like eating or like to eat, never like to eating.",
+ "M4_NUT_FRUIT_PROTEIN": "Beans, eggs and fish build the body.",
  "M_SCAN_NEAR_NUMBER": "Scan for the key word in the question (ticket) and read only that line.",
  "M_SCAN_WRONG_KEYWORD": "Choose the key word that matches the question, then read the line.",
  "M_SCAN_TOO_LONG": "Look for a capital letter or a number. Skip the rest.",
+ "M4_SR_COVER": "Ask: will this book answer my question?",
+ "M4_SR_TOO_HARD": "For practice, choose a book where you know almost every word.",
+ "M4_SR_THICKNESS": "Choose by what the book is for, not by its size.",
+ "M4_SR_WRONG_TYPE": "Instructions are in a recipe; feelings are in a poem.",
+ "M4_IR_STOPS_AT_WORD": "Skip, read on, then come back and guess from the sentence.",
+ "M4_IR_PICTURES_ONLY": "Read every line; the pictures only help.",
+ "M4_IR_CANNOT_RETELL": "Stop after each page and tell yourself what happened.",
+ "M4_IR_SKIPS_TO_END": "Read in order; the middle explains the end.",
+ "M4_SCAN_FIRST_MATCH": "Check every place the key word appears.",
  "M_ADJ_NOUN_AS_ADJ": "An adjective describes a noun. Ask which word tells more about the bus: red.",
  "M_ADJ_VERB_AS_ADJ": "A verb tells what someone does. An adjective tells what someone or something is like.",
  "M_ADJ_ADVERB_AS_ADJ": "Slowly tells how the boy walked, so it is an adverb. Small tells what the boy is like, so it is the adjective.",
@@ -2157,6 +2711,7 @@ export const MIS_FEEDBACK = {
  "M_ADO_SHAPE_BEFORE_SIZE": "Size comes first, then shape: a big round stool.",
  "M_ADO_AFTER_NOUN": "In English the describing word comes before the noun: a big ball.",
  "M_ADO_NO_AND": "Two describing words before a noun need no and and no comma: a big round table.",
+ "M4_ADO_COLOUR_FIRST": "Size comes before colour: a big red ball.",
  "M_NAR_PART_MIX": "The beginning introduces people and place, the middle tells what happens, and the end tells how it finishes.",
  "M_NAR_SETTING_CHARACTER": "Characters are the people or animals in the story. The setting is where and when it happens.",
  "M_NAR_PROBLEM_END": "The problem usually starts in the middle. The end tells how it was solved.",
@@ -2164,9 +2719,19 @@ export const MIS_FEEDBACK = {
  "M_PAR_ORDER_REVERSED": "Start with the sentence that introduces the topic and read forward.",
  "M_PAR_ORDER_SWAPPED": "Look at words like first, then, next and finally to see the order.",
  "M_PAR_TOPIC_DETAIL": "The topic sentence names what the whole paragraph is about. The other sentences give details.",
+ "M4_NC_TENSE_SWITCH": "Tell the whole story in the past.",
+ "M4_NC_NO_PROBLEM": "Give your character a problem.",
+ "M4_NC_TOO_SHORT": "Add who, where, how they felt and what happened next.",
+ "M4_NC_I_WOKE_UP": "Begin close to the main event.",
+ "M4_PAR_ENDING_FIRST": "Words like so, finally and in the end close a paragraph.",
  "M_NET_NEAR_MEANING": "The inbox is where received emails are kept. An attachment is a file sent with an email.",
  "M_NET_PASSWORD_SHARED": "A password is secret. Share it with no one, except a trusted adult such as a parent.",
  "M_NET_STRANGER": "Never give personal information to a stranger online. Tell a trusted adult.",
+ "M4_IN_WH_RISE": "WH questions fall; yes or no questions rise.",
+ "M4_IN_FLAT": "Lift the voice on the last word of a yes or no question.",
+ "M4_IN_STATEMENT_RISE": "A statement ends low and firm.",
+ "M4_IN_WRONG_WORD": "Put the strong beat on the word that carries the meaning.",
+ "M4_NET_DOWNLOAD_UPLOAD": "Up goes to the internet; down comes to your device.",
  "M_QUA_MUCH_COUNT": "Use many with things you can count (chairs, books). Use much with things you cannot count (water, sugar).",
  "M_QUA_MANY_UNCOUNT": "You cannot count water one by one, so use much, not many.",
  "M_QUA_FEW_UNCOUNT": "Few goes with things you can count: few eggs. Little goes with things you cannot count: little sugar.",
@@ -2179,10 +2744,18 @@ export const MIS_FEEDBACK = {
  "M_PIC_ORDER_SWAPPED": "Ask what has to happen first for the next picture to make sense.",
  "M_PIC_TENSE": "A story written after the event uses the past tense: Wafula picked a mango.",
  "M_PIC_MISMATCH": "Look at what the person is doing in the picture and pick the sentence that says exactly that.",
+ "M4_PC_DESCRIBES_ONLY": "Say what the people did, not only what is there.",
+ "M4_PC_SKIPS_PICTURE": "Tick each picture as you write about it.",
+ "M4_PC_PRESENT": "Tell the pictures as a story in the past.",
+ "M4_PC_NO_TITLE": "The title names what the whole story is about.",
  "M_SPA_BASE_FOR_PAST": "When the time is past, the verb must show it: Yesterday I went to the market.",
  "M_SPA_ED_ON_IRREGULAR": "Some verbs change inside: go, went; eat, ate; see, saw. They do not take -ed.",
  "M_SPA_DID_PLUS_PAST": "After did the verb stays plain: Did you see the film?",
  "M_SPA_PAST_FOR_HABIT": "For a fact or something that always happens, use the present: The sun rises in the east.",
+ "M4_TT_TALK_OVER": "Wait for the speaker to stop, then answer.",
+ "M4_TT_ONE_WORD": "Answer, add one thing, then ask a question back.",
+ "M4_TT_LONG_TURN": "Stop and give the other person a turn.",
+ "M4_TT_OFF_TOPIC": "Answer what the other person asked first.",
  "M_PRP_NO_BE": "An action happening now needs am, is or are before the -ing word: She is reading.",
  "M_PRP_WRONG_BE": "Use am with I, is with one person or thing, and are with you, we, they and plural nouns.",
  "M_PRP_NO_ING": "After am, is or are, the verb ends in -ing: He is playing.",
@@ -2199,6 +2772,11 @@ export const MIS_FEEDBACK = {
  "M_FRM_NEAR_MEANING": "Planting comes first. Harvesting is gathering the crop when it is ripe.",
  "M_FRM_LIVESTOCK_CROPS": "Livestock are farm animals. Crops are plants grown for food.",
  "M_FRM_FERTILISER": "Fertiliser feeds the soil. Pesticide kills pests.",
+ "M4_FRM_PLANT_HARVEST": "Plant puts seeds in; harvest takes the crop out.",
+ "M4_RF_WORD_BY_WORD": "Read in groups of words that go together.",
+ "M4_RF_IGNORES_STOPS": "Stop and breathe at every full stop.",
+ "M4_RF_FLAT": "Let the voice show the question and the feeling.",
+ "M4_RF_TOO_FAST": "Read at talking speed; every word counts.",
  "M_CON_NO_APOSTROPHE": "The apostrophe takes the place of the missing letter: do not becomes don't.",
  "M_CON_WRONG_PLACE": "The apostrophe goes where the letter was left out: is not becomes isn't, with the mark in place of the o.",
  "M_CON_ITS": "It's means it is. Its (no apostrophe) means belonging to it: The cat licked its paw.",
@@ -2207,6 +2785,10 @@ export const MIS_FEEDBACK = {
  "M_NEG_NO_DO": "In English use do not or does not before the verb: She does not like milk.",
  "M_NEG_VERB_S": "After does not and did not, the verb stays plain: He does not eat meat.",
  "M_NEG_DO_WITH_BE": "With am, is and are, put not after the helping word: I am not tired.",
+ "M4_SF_FILLERS": "Close your mouth and think for a moment instead of saying eeh.",
+ "M4_SF_TOO_FAST": "Pause after each sentence; breathe.",
+ "M4_SF_WORD_SEARCH": "If a word will not come, say it another way and keep going.",
+ "M4_SF_REPEATS": "Start once and go to the end of the sentence.",
  "M_ADV_ADJ_FOR_ADV": "A word that tells how someone does something is an adverb. Many adverbs end in -ly: sings beautifully.",
  "M_ADV_KIND_MIX": "Manner answers how, time answers when, place answers where. Yesterday tells when.",
  "M_ADV_GOOD_WELL": "Good describes a noun (a good player). Well tells how something is done (plays well).",
@@ -2222,6 +2804,11 @@ export const MIS_FEEDBACK = {
  "M_HYG_NEAR_MEANING": "Germs are tiny living things that can cause disease. Rubbish is waste.",
  "M_HYG_DISINFECT": "To disinfect is to kill germs on a surface.",
  "M_HYG_LATRINE": "A latrine is for human waste. Drainage carries away dirty water.",
+ "M4_IP_HEY": "Start with Excuse me.",
+ "M4_IP_NO_PAUSE": "Wait for a pause, then speak.",
+ "M4_IP_SORRY_ONLY": "Sorry to interrupt, but may I ...?",
+ "M4_IP_COMMAND": "Ask with may I or could you.",
+ "M4_HYG_GERMS_DIRT": "Germs are too small to see: wash with soap anyway.",
  "M_CNJ_BUT_FOR_AND": "Use and to add one idea to another. Use but when the two ideas go against each other.",
  "M_CNJ_BECAUSE_SO": "Because gives the reason. So gives the result. The rain is the reason; staying inside is the result.",
  "M_CNJ_AND_FOR_BUT": "When the second idea goes against the first, use but, not and.",
@@ -2231,9 +2818,19 @@ export const MIS_FEEDBACK = {
  "M_DES_TELLS_STORY": "A description tells what something looks, sounds, smells, feels or tastes like. A story tells what happened.",
  "M_DES_ONE_SENSE": "Use all the senses: sight, hearing, smell, touch and taste.",
  "M_DES_PART_MIX": "The introduction says what you are going to describe. The conclusion ends with a feeling or a last thought.",
+ "M4_DC_STORY": "Describe how it looks, sounds and feels.",
+ "M4_DC_SIGHT_ONLY": "Use sound, smell and touch as well as sight.",
+ "M4_DC_NICE": "Choose an exact adjective: bright, tall, noisy, smooth.",
+ "M4_DC_NO_CONCLUSION": "End by saying what the place means to you.",
+ "M4_DES_NO_ORDER": "Choose an order: outside to inside, or top to bottom.",
  "M_SPT_NEAR_MEANING": "The referee controls the game. The goalkeeper guards the goal.",
  "M_SPT_TROPHY_TOURNAMENT": "A tournament is a series of games. A trophy is the prize.",
  "M_SPT_OPPONENT_TEAMMATE": "An opponent plays against you. A teammate plays with you.",
+ "M4_NC_NOD": "A nod means yes or I agree.",
+ "M4_NC_FROWN": "Look at the face: a frown shows a problem.",
+ "M4_NC_TONE_WORDS": "The tone tells you the feeling, even when the words say something else.",
+ "M4_NC_POINTING": "Use an open hand to show, not one finger.",
+ "M4_SPT_DRAW_LOSE": "A draw means both teams scored the same.",
  "M_INT_WHO_FOR_WHAT": "Who asks about a person. What asks about a thing.",
  "M_INT_WHERE_FOR_WHEN": "When asks about time. Where asks about a place. Why asks for a reason.",
  "M_INT_NO_INVERSION": "In a question the helping word goes before the subject: Where are you going?",
@@ -2246,6 +2843,7 @@ export const MIS_FEEDBACK = {
  "M_ENV_NEAR_MEANING": "To recycle is to make waste into something new. Litter is rubbish dropped in a public place.",
  "M_ENV_POLLUTION": "Pollution is dirt or poison that harms the air, water or soil.",
  "M_ENV_CONSERVE": "To conserve is to look after and use carefully.",
+ "M4_ENV_RECYCLE_REUSE": "Reuse means use again; recycle means make it into something new.",
  "M_PRV_LITERAL": "A proverb is a short saying with a lesson. Ask what it teaches people.",
  "M_PRV_OPPOSITE": "Check the lesson against the proverb. The lesson of this one is patience.",
  "M_PRV_UNRELATED": "The lesson must fit the idea of the whole proverb.",
@@ -2262,6 +2860,10 @@ export const MIS_FEEDBACK = {
  "M_DIA_LETTER_FORMAT": "A diary is written to yourself. Begin with the date and Dear Diary, not Dear Mum.",
  "M_DIA_THIRD_PERSON": "A diary is about you, so write in the first person: I woke up early.",
  "M_DIA_NO_FEELINGS": "A diary also tells how you felt: I was happy when we won.",
+ "M4_DW_NO_DATE": "Every entry starts with the date.",
+ "M4_DW_FUTURE": "A diary records what happened today.",
+ "M4_DW_THIRD_PERSON": "A diary uses I.",
+ "M4_DW_EVENTS_ONLY": "Say how you felt about what happened.",
  "M_MON_EARN_SAVE": "To earn is to get money for work. To save is to keep money for later.",
  "M_MON_BORROW_LEND": "You borrow when you take for a short time. You lend when you give for a short time.",
  "M_MON_NEAR_MEANING": "Read the whole sentence and say what the gap must mean before you choose.",
@@ -2269,6 +2871,11 @@ export const MIS_FEEDBACK = {
  "M_SIL_NEIGHBOUR": "Say the word aloud. In knife you hear n, but not k.",
  "M_SIL_NONE": "Some letters are written but not said. In write, the w is silent.",
  "M_SIL_END_E": "A silent letter can be anywhere. In lamb the b is silent.",
+ "M4_VB_VERY_COMPARATIVE": "Very goes with the plain adjective: very nice.",
+ "M4_VB_TOO_FOR_VERY": "Very means a lot; too means more than is good.",
+ "M4_VB_NO_CONTRAST": "But needs two ideas that pull different ways.",
+ "M4_VB_VERY_MUCH": "Very goes alone before an adjective.",
+ "M4_SIL_SPELL_SAY": "The k in kn is silent: knife, knee, know.",
  "M_PRE_IN_ON": "On means touching the top of something. In means inside it.",
  "M_PRE_BETWEEN_AMONG": "Use between for two things and among for more than two.",
  "M_PRE_UNDER_OVER": "Under means below something. Behind means at the back of it.",
@@ -2279,5 +2886,6 @@ export const MIS_FEEDBACK = {
  "M_PRD_THROUGH_ACROSS": "Across means from one side of a flat place to the other. Through means passing in at one side and out at the other.",
  "M_DBL_SINGLE": "Some words have two of the same letter together: coffee, summer, letter.",
  "M_DBL_PHONETIC": "Say the word slowly and then check it. Rabbit has bb in the middle.",
- "M_DBL_EXTRA": "Only some letters are doubled. Check each word: letter has tt but not three t."
+ "M_DBL_EXTRA": "Only some letters are doubled. Check each word: letter has tt but not three t.",
+ "M4_DBL_ING_NO_DOUBLE": "Short vowel and one consonant: double it before -ing."
 };

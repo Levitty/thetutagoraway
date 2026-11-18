@@ -1,0 +1,92 @@
+{
+ "sub_strand": "ENGL.G8.WRITIN.T15_FUNCTIONAL_WRITING_P",
+ "title": "Functional Writing: Personal Journals (Theme 15: Tourist attraction sites: africa)",
+ "status": "draft: written 18 Nov 2026 offline for Grade 8 English; not yet checked by a Kenyan English teacher; not loaded by the live tutor",
+ "notes": "",
+ "skills": [
+  {
+   "skill": "ENGL.G8.WRITIN.T15_FUNCTIONAL_WRITING_P.JOURNAL_WRITING",
+   "assessed_by": "composition",
+   "key_step": "The child dates each entry, writes in the first person, reflects on what was learnt and felt, and evaluates a journal.",
+   "floor": {
+    "prerequisite": "Writes journals.",
+    "question": "What starts an entry?",
+    "answer": "the date"
+   },
+   "steps": [
+    "Date.",
+    "I and past tense.",
+    "Reflection.",
+    "Evaluate for correctness and relevance."
+   ],
+   "contexts": [
+    "trips to African tourist sites"
+   ],
+   "board": [
+    {
+     "beat": "write",
+     "do": "Write: Friday, 12th June."
+    },
+    {
+     "beat": "point",
+     "do": "Point at the date.",
+     "say": "What happened? What did you learn?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for the child to answer."
+    },
+    {
+     "beat": "child_draws",
+     "do": "The child adds a reflection."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "ENGL.G8.WRITIN.T15_FUNCTIONAL_WRITING_P.JOURNAL_WRITING.M8_X_JW_NO_REFLECTION",
+     "listen_for": [
+      "We visited. We came back."
+     ],
+     "ask": "What did you learn?",
+     "repair": "Reflect."
+    },
+    {
+     "code": "ENGL.G8.WRITIN.T15_FUNCTIONAL_WRITING_P.JOURNAL_WRITING.M8_X_JW_NO_DATE",
+     "listen_for": [
+      "a title"
+     ],
+     "ask": "When?",
+     "repair": "Date."
+    },
+    {
+     "code": "ENGL.G8.WRITIN.T15_FUNCTIONAL_WRITING_P.JOURNAL_WRITING.M8_X_JW_THIRD_PERSON",
+     "listen_for": [
+      "She saw the pyramids."
+     ],
+     "ask": "Who?",
+     "repair": "I."
+    },
+    {
+     "code": "ENGL.G8.WRITIN.T15_FUNCTIONAL_WRITING_P.JOURNAL_WRITING.M8_X_JW_EVALUATE_LENGTH",
+     "listen_for": [
+      "the longest"
+     ],
+     "ask": "Quality?",
+     "repair": "Check relevance."
+    }
+   ],
+   "checks": [
+    {
+     "question": "\"She saw the pyramids.\" Journal?",
+     "answer": "No: I saw ...",
+     "shows": "person"
+    },
+    {
+     "question": "Better journal: longest or most reflective?",
+     "answer": "most reflective",
+     "shows": "evaluate"
+    }
+   ]
+  }
+ ]
+}
