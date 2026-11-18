@@ -3717,6 +3717,752 @@ export const TEACHING_PACK_G9 = {
   "sub_strand": "MATH.G9.NUMBER.COMPOUND_PROPORTIONS_AND",
   "sub_strand_name": "COMPOUND PROPORTIONS AND RATES OF WORK",
   "status": "draft: written 18 Nov 2026 offline for Grade 9; not yet checked by a Kenyan maths teacher; not loaded by the live tutor"
+ },
+ "MATH.G9.ALGEBR.MATRICES.MATRIX_IDENTIFY": {
+  "skill": "MATH.G9.ALGEBR.MATRICES.MATRIX_IDENTIFY",
+  "key_step": "The child copies the numbers of the table into brackets in exactly the same rows and columns, with the labels left outside.",
+  "floor": {
+   "prerequisite": "Reads a table by rows and columns.",
+   "question": "In a marks table, what is Juma's English mark?",
+   "answer": "the number in Juma's row and the English column"
+  },
+  "representations": [
+   "a table with labels",
+   "the matrix in brackets",
+   "labels written outside the brackets"
+  ],
+  "steps": [
+   "Look at what the rows and columns stand for.",
+   "Copy the numbers in the same layout.",
+   "Put brackets around them.",
+   "Keep the labels outside."
+  ],
+  "contexts": [
+   "marks of learners in three subjects",
+   "loaves sold by two kiosks on three days",
+   "matatu trips on two routes"
+  ],
+  "board": [
+   {
+    "beat": "draw",
+    "do": "Draw a table: Amina 60 72; Otieno 55 80, with headings Maths and English."
+   },
+   {
+    "beat": "point",
+    "do": "Point at the numbers only.",
+    "say": "Which part goes inside the brackets?"
+   },
+   {
+    "beat": "pause",
+    "do": "Wait for the child to say the numbers."
+   },
+   {
+    "beat": "reveal",
+    "do": "Write [60 72; 55 80]."
+   }
+  ],
+  "misconceptions": [
+   {
+    "code": "MATH.G9.ALGEBR.MATRICES.MATRIX_IDENTIFY.M_ANY_TABLE_IS_MATRIX",
+    "listen_for": [
+     "yes, it is a matrix"
+    ],
+    "ask": "Does every row have the same number of elements?",
+    "repair": "No, so it is not a matrix.",
+    "error": "Calls any list of numbers a matrix, even with rows of different lengths.",
+    "example": {
+     "question": "Is [3 5; 2] a matrix?",
+     "wrong_answer": "Yes",
+     "correct_answer": "No, every row needs the same number of elements"
+    }
+   },
+   {
+    "code": "MATH.G9.ALGEBR.MATRICES.MATRIX_IDENTIFY.M_TABLE_ORDER_CHANGED",
+    "listen_for": [
+     "subjects as rows"
+    ],
+    "ask": "What are the rows in the table?",
+    "repair": "Learners: keep that.",
+    "error": "Writes the table as a matrix with the rows and columns in a different order from the table.",
+    "example": {
+     "question": "Write the table (learners as rows, subjects as columns) as a matrix.",
+     "wrong_answer": "subjects as rows",
+     "correct_answer": "learners as rows, in the table's order"
+    }
+   },
+   {
+    "code": "MATH.G9.ALGEBR.MATRICES.MATRIX_IDENTIFY.M_LABELS_IN_MATRIX",
+    "listen_for": [
+     "names inside"
+    ],
+    "ask": "Are names numbers?",
+    "repair": "Labels stay outside.",
+    "error": "Puts the headings (names, subjects) inside the matrix.",
+    "example": {
+     "question": "Write the marks table as a matrix.",
+     "wrong_answer": "[Amina 60 ...]",
+     "correct_answer": "numbers only"
+    }
+   },
+   {
+    "code": "MATH.G9.ALGEBR.MATRICES.MATRIX_IDENTIFY.M_ROW_AS_COLUMN",
+    "listen_for": [
+     "marks in subject 2"
+    ],
+    "ask": "Which way does a row go?",
+    "repair": "Across: one learner.",
+    "error": "Says a row stands for what a column stands for.",
+    "example": {
+     "question": "Rows are learners, columns are subjects. What does row 2 show?",
+     "wrong_answer": "All marks in subject 2",
+     "correct_answer": "All marks of learner 2"
+    }
+   }
+  ],
+  "checks": [
+   {
+    "question": "Two kiosks sold bread: Kiosk A 20 on Monday, 25 on Tuesday; Kiosk B 18 and 30. Write a matrix with kiosks as rows.",
+    "answer": "[20 25; 18 30]",
+    "shows": "layout"
+   },
+   {
+    "question": "In that matrix, what does column 2 show?",
+    "answer": "Tuesday's sales at both kiosks",
+    "shows": "meaning of a column"
+   }
+  ],
+  "name": "Identify a matrix and write information as a matrix",
+  "sub_strand": "MATH.G9.ALGEBR.MATRICES",
+  "sub_strand_name": "Matrices",
+  "status": "draft: written 18 Nov 2026 offline for Grade 9; not yet checked by a Kenyan maths teacher; not loaded by the live tutor"
+ },
+ "MATH.G9.ALGEBR.MATRICES.MATRIX_ORDER": {
+  "skill": "MATH.G9.ALGEBR.MATRICES.MATRIX_ORDER",
+  "key_step": "The child counts the rows (down) first and the columns (across) second, and writes rows x columns.",
+  "floor": {
+   "prerequisite": "Counts rows and columns in a table.",
+   "question": "A table with 3 rows and 2 columns: how many cells?",
+   "answer": "6"
+  },
+  "representations": [
+   "a matrix with rows coloured",
+   "rows x columns",
+   "shapes of matrices"
+  ],
+  "steps": [
+   "Count the rows going down.",
+   "Count the columns going across.",
+   "Write rows x columns.",
+   "Square if they are equal."
+  ],
+  "contexts": [
+   "seating in a classroom",
+   "crates of soda stacked in rows",
+   "a timetable"
+  ],
+  "board": [
+   {
+    "beat": "draw",
+    "do": "Draw a matrix with 2 rows and 3 columns."
+   },
+   {
+    "beat": "point",
+    "do": "Run a finger along each row.",
+    "say": "How many rows?"
+   },
+   {
+    "beat": "pause",
+    "do": "Wait for 2."
+   },
+   {
+    "beat": "point",
+    "do": "Run a finger down each column.",
+    "say": "How many columns?"
+   },
+   {
+    "beat": "reveal",
+    "do": "Write order 2 x 3."
+   }
+  ],
+  "misconceptions": [
+   {
+    "code": "MATH.G9.ALGEBR.MATRICES.MATRIX_ORDER.M_ORDER_COLUMNS_FIRST",
+    "listen_for": [
+     "3 x 2"
+    ],
+    "ask": "Which comes first in an order?",
+    "repair": "Rows: 2 x 3.",
+    "error": "Gives the order as columns by rows.",
+    "example": {
+     "question": "Order of a matrix with 2 rows and 3 columns?",
+     "wrong_answer": "3 x 2",
+     "correct_answer": "2 x 3"
+    }
+   },
+   {
+    "code": "MATH.G9.ALGEBR.MATRICES.MATRIX_ORDER.M_ORDER_AS_COUNT",
+    "listen_for": [
+     "6"
+    ],
+    "ask": "Does 6 tell us the shape?",
+    "repair": "No: rows x columns.",
+    "error": "Gives the number of elements as the order.",
+    "example": {
+     "question": "Order of a matrix with 2 rows and 3 columns?",
+     "wrong_answer": "6",
+     "correct_answer": "2 x 3"
+    }
+   },
+   {
+    "code": "MATH.G9.ALGEBR.MATRICES.MATRIX_ORDER.M_ORDERS_SAME_IF_SWAPPED",
+    "listen_for": [
+     "the same order"
+    ],
+    "ask": "Do two rows of three look like three rows of two?",
+    "repair": "No: different orders.",
+    "error": "Thinks 2 x 3 and 3 x 2 are the same order.",
+    "example": {
+     "question": "Do a 2 x 3 and a 3 x 2 matrix have the same order?",
+     "wrong_answer": "Yes",
+     "correct_answer": "No"
+    }
+   },
+   {
+    "code": "MATH.G9.ALGEBR.MATRICES.MATRIX_ORDER.M_SQUARE_MEANS_FOUR",
+    "listen_for": [
+     "only 2 x 2 is square"
+    ],
+    "ask": "Does a 3 x 3 have equal rows and columns?",
+    "repair": "Yes: square.",
+    "error": "Thinks a square matrix must be 2 x 2.",
+    "example": {
+     "question": "Is a 3 x 3 matrix a square matrix?",
+     "wrong_answer": "No",
+     "correct_answer": "Yes"
+    }
+   }
+  ],
+  "checks": [
+   {
+    "question": "Order of a matrix with 4 rows and 1 column?",
+    "answer": "4 x 1",
+    "shows": "rows first"
+   },
+   {
+    "question": "Is a 2 x 2 matrix square?",
+    "answer": "Yes",
+    "shows": "square"
+   }
+  ],
+  "name": "Determine the order of a matrix",
+  "sub_strand": "MATH.G9.ALGEBR.MATRICES",
+  "sub_strand_name": "Matrices",
+  "status": "draft: written 18 Nov 2026 offline for Grade 9; not yet checked by a Kenyan maths teacher; not loaded by the live tutor"
+ },
+ "MATH.G9.ALGEBR.MATRICES.MATRIX_ELEMENT_POSITION": {
+  "skill": "MATH.G9.ALGEBR.MATRICES.MATRIX_ELEMENT_POSITION",
+  "key_step": "The child goes down to the row first, then across to the column, with a finger on each.",
+  "floor": {
+   "prerequisite": "Gives the order of a matrix.",
+   "question": "Order of [1 2 3; 4 5 6]",
+   "answer": "2 x 3"
+  },
+  "representations": [
+   "a matrix with row and column numbers written outside",
+   "two fingers",
+   "a table"
+  ],
+  "steps": [
+   "Number the rows from the top.",
+   "Number the columns from the left.",
+   "Go down to the row.",
+   "Go across to the column."
+  ],
+  "contexts": [
+   "learners' marks",
+   "seat numbers in a hall",
+   "stock in a shop"
+  ],
+  "board": [
+   {
+    "beat": "draw",
+    "do": "Draw [2 5 7; 4 6 8] with 1, 2 beside the rows and 1, 2, 3 above the columns."
+   },
+   {
+    "beat": "point",
+    "do": "Point at row 2.",
+    "say": "Now go across to column 3. Which number?"
+   },
+   {
+    "beat": "pause",
+    "do": "Wait for 8."
+   },
+   {
+    "beat": "reveal",
+    "do": "Write row 2, column 3 is 8."
+   }
+  ],
+  "misconceptions": [
+   {
+    "code": "MATH.G9.ALGEBR.MATRICES.MATRIX_ELEMENT_POSITION.M_ROW_COLUMN_SWAPPED",
+    "listen_for": [
+     "went across first"
+    ],
+    "ask": "Which do we find first, the row or the column?",
+    "repair": "The row.",
+    "error": "Reads column i, row j instead of row i, column j.",
+    "example": {
+     "question": "Element in row 1, column 3 of [2 5 7; 4 6 8; 1 3 9]?",
+     "wrong_answer": "1",
+     "correct_answer": "7"
+    }
+   },
+   {
+    "code": "MATH.G9.ALGEBR.MATRICES.MATRIX_ELEMENT_POSITION.M_WRONG_COLUMN",
+    "listen_for": [
+     "the next column"
+    ],
+    "ask": "Count the columns from the left with a finger.",
+    "repair": "Column 2 is the second.",
+    "error": "Finds the right row but counts to the wrong column.",
+    "example": {
+     "question": "Element in row 2, column 2 of [2 5 7; 4 6 8]?",
+     "wrong_answer": "8",
+     "correct_answer": "6"
+    }
+   },
+   {
+    "code": "MATH.G9.ALGEBR.MATRICES.MATRIX_ELEMENT_POSITION.M_WRONG_ROW",
+    "listen_for": [
+     "row above"
+    ],
+    "ask": "Count the rows from the top.",
+    "repair": "Row 2 is the second.",
+    "error": "Finds the right column but the wrong row.",
+    "example": {
+     "question": "Element in row 2, column 3 of [2 5 7; 4 6 8]?",
+     "wrong_answer": "7",
+     "correct_answer": "8"
+    }
+   },
+   {
+    "code": "MATH.G9.ALGEBR.MATRICES.MATRIX_ELEMENT_POSITION.M_COUNT_FROM_ZERO",
+    "listen_for": [
+     "counted from 0"
+    ],
+    "ask": "What number is the first row?",
+    "repair": "Row 1.",
+    "error": "Counts the first row or column as 0.",
+    "example": {
+     "question": "Element in row 1, column 1 of [2 5; 4 6]?",
+     "wrong_answer": "6",
+     "correct_answer": "2"
+    }
+   }
+  ],
+  "checks": [
+   {
+    "question": "In [3 9; 1 4; 7 2], the element in row 3, column 1?",
+    "answer": "7",
+    "shows": "row first"
+   },
+   {
+    "question": "Where is 4 in [3 9; 1 4; 7 2]?",
+    "answer": "row 2, column 2",
+    "shows": "naming a position"
+   }
+  ],
+  "name": "Find the position of an element in a matrix",
+  "sub_strand": "MATH.G9.ALGEBR.MATRICES",
+  "sub_strand_name": "Matrices",
+  "status": "draft: written 18 Nov 2026 offline for Grade 9; not yet checked by a Kenyan maths teacher; not loaded by the live tutor"
+ },
+ "MATH.G9.ALGEBR.MATRICES.MATRIX_COMPATIBILITY": {
+  "skill": "MATH.G9.ALGEBR.MATRICES.MATRIX_COMPATIBILITY",
+  "key_step": "The child writes both orders side by side and checks that the rows match and the columns match.",
+  "floor": {
+   "prerequisite": "Gives orders of matrices.",
+   "question": "Order of [1 2 3]",
+   "answer": "1 x 3"
+  },
+  "representations": [
+   "orders side by side",
+   "shapes drawn as rectangles",
+   "a table of orders"
+  ],
+  "steps": [
+   "Write the order of each matrix.",
+   "Compare the rows.",
+   "Compare the columns.",
+   "Both match: they can be added or subtracted."
+  ],
+  "contexts": [
+   "adding two weeks of sales",
+   "two classes' marks",
+   "stock in two shops"
+  ],
+  "board": [
+   {
+    "beat": "draw",
+    "do": "Draw a 2 by 3 rectangle and a 3 by 2 rectangle."
+   },
+   {
+    "beat": "point",
+    "do": "Point at the top left of each.",
+    "say": "Does every element of the first have a partner in the second?"
+   },
+   {
+    "beat": "pause",
+    "do": "Wait for the child to say no."
+   },
+   {
+    "beat": "reveal",
+    "do": "Write different orders: cannot be added."
+   }
+  ],
+  "misconceptions": [
+   {
+    "code": "MATH.G9.ALGEBR.MATRICES.MATRIX_COMPATIBILITY.M_ELEMENT_COUNT_ENOUGH",
+    "listen_for": [
+     "both have 6 elements"
+    ],
+    "ask": "Do the shapes match?",
+    "repair": "No: same rows and same columns.",
+    "error": "Thinks two matrices can be added if they have the same number of elements.",
+    "example": {
+     "question": "Can a 2 x 3 and a 3 x 2 matrix be added?",
+     "wrong_answer": "Yes, both have 6 elements",
+     "correct_answer": "No"
+    }
+   },
+   {
+    "code": "MATH.G9.ALGEBR.MATRICES.MATRIX_COMPATIBILITY.M_MULTIPLY_RULE_FOR_ADD",
+    "listen_for": [
+     "columns of A equal rows of B"
+    ],
+    "ask": "Is that the rule for adding?",
+    "repair": "No, for multiplying.",
+    "error": "Uses the rule for multiplying (columns of A = rows of B) for adding.",
+    "example": {
+     "question": "A is 2 x 3, B is 3 x 2. Can they be added?",
+     "wrong_answer": "Yes, 3 columns and 3 rows",
+     "correct_answer": "No"
+    }
+   },
+   {
+    "code": "MATH.G9.ALGEBR.MATRICES.MATRIX_COMPATIBILITY.M_ONLY_SQUARE_ADD",
+    "listen_for": [
+     "must be square"
+    ],
+    "ask": "Can two 2 x 3 matrices be added?",
+    "repair": "Yes: same order.",
+    "error": "Thinks only square matrices can be added.",
+    "example": {
+     "question": "Can two 2 x 3 matrices be added?",
+     "wrong_answer": "No, they are not square",
+     "correct_answer": "Yes"
+    }
+   },
+   {
+    "code": "MATH.G9.ALGEBR.MATRICES.MATRIX_COMPATIBILITY.M_ROWS_ONLY_COMPARED",
+    "listen_for": [
+     "both have 2 rows"
+    ],
+    "ask": "Did you compare the columns?",
+    "repair": "They differ: cannot add.",
+    "error": "Checks only the number of rows (or only columns).",
+    "example": {
+     "question": "Can a 2 x 3 and a 2 x 2 matrix be added?",
+     "wrong_answer": "Yes, both have 2 rows",
+     "correct_answer": "No"
+    }
+   },
+   {
+    "code": "MATH.G9.ALGEBR.MATRICES.MATRIX_COMPATIBILITY.M_SIGNS_DECIDE",
+    "listen_for": [
+     "the negative stops it"
+    ],
+    "ask": "Does the sign change the shape?",
+    "repair": "No.",
+    "error": "Thinks negative elements stop matrices from being added.",
+    "example": {
+     "question": "Can [1 -2] and [3 4] be added?",
+     "wrong_answer": "No, one has a negative",
+     "correct_answer": "Yes"
+    }
+   }
+  ],
+  "checks": [
+   {
+    "question": "A is 3 x 2, B is 3 x 2, C is 2 x 3. Which two can be added?",
+    "answer": "A and B",
+    "shows": "same order"
+   },
+   {
+    "question": "Can a 1 x 4 and a 4 x 1 matrix be subtracted?",
+    "answer": "No",
+    "shows": "different orders"
+   }
+  ],
+  "name": "Decide whether two matrices can be added or subtracted",
+  "sub_strand": "MATH.G9.ALGEBR.MATRICES",
+  "sub_strand_name": "Matrices",
+  "status": "draft: written 18 Nov 2026 offline for Grade 9; not yet checked by a Kenyan maths teacher; not loaded by the live tutor"
+ },
+ "MATH.G9.ALGEBR.MATRICES.MATRIX_ADD_SUBTRACT": {
+  "skill": "MATH.G9.ALGEBR.MATRICES.MATRIX_ADD_SUBTRACT",
+  "key_step": "The child combines each element with the one in the same position, first matrix first, and keeps the signs.",
+  "floor": {
+   "prerequisite": "Adds and subtracts integers.",
+   "question": "2 - 6",
+   "answer": "-4"
+  },
+  "representations": [
+   "two matrices with matching positions coloured",
+   "a table of sales",
+   "element by element working"
+  ],
+  "steps": [
+   "Check the orders match.",
+   "Pair the elements in the same position.",
+   "Add, or subtract first minus second.",
+   "Write the answer as a matrix of the same order."
+  ],
+  "contexts": [
+   "milk sold by a dairy in two weeks",
+   "stock left after a sale",
+   "points of two teams in two games"
+  ],
+  "board": [
+   {
+    "beat": "write",
+    "do": "Write [5 2] - [3 6]."
+   },
+   {
+    "beat": "point",
+    "do": "Point at 5 and 3.",
+    "say": "First minus second: what is 5 - 3?"
+   },
+   {
+    "beat": "pause",
+    "do": "Wait for 2."
+   },
+   {
+    "beat": "point",
+    "do": "Point at 2 and 6.",
+    "say": "And 2 - 6?"
+   },
+   {
+    "beat": "reveal",
+    "do": "Write [2 -4]."
+   }
+  ],
+  "misconceptions": [
+   {
+    "code": "MATH.G9.ALGEBR.MATRICES.MATRIX_ADD_SUBTRACT.M_SUBTRACT_ORDER_SWAPPED",
+    "listen_for": [
+     "-2 and 4"
+    ],
+    "ask": "Which matrix comes first?",
+    "repair": "The first: 5 - 3, 2 - 6.",
+    "error": "Subtracts the first matrix's element from the second's.",
+    "example": {
+     "question": "[5 2] - [3 6]",
+     "wrong_answer": "[-2 4]",
+     "correct_answer": "[2 -4]"
+    }
+   },
+   {
+    "code": "MATH.G9.ALGEBR.MATRICES.MATRIX_ADD_SUBTRACT.M_MINUS_NEGATIVE_ELEMENT",
+    "listen_for": [
+     "1"
+    ],
+    "ask": "What is minus a negative?",
+    "repair": "Plus: 7.",
+    "error": "Subtracts a negative element as if it were positive.",
+    "example": {
+     "question": "[4] - [-3]",
+     "wrong_answer": "[1]",
+     "correct_answer": "[7]"
+    }
+   },
+   {
+    "code": "MATH.G9.ALGEBR.MATRICES.MATRIX_ADD_SUBTRACT.M_ELEMENTS_MULTIPLIED",
+    "listen_for": [
+     "8 and 3"
+    ],
+    "ask": "Is the sign + or x?",
+    "repair": "+: add.",
+    "error": "Multiplies matching elements instead of adding.",
+    "example": {
+     "question": "[2 3] + [4 1]",
+     "wrong_answer": "[8 3]",
+     "correct_answer": "[6 4]"
+    }
+   },
+   {
+    "code": "MATH.G9.ALGEBR.MATRICES.MATRIX_ADD_SUBTRACT.M_ALL_ELEMENTS_SUMMED",
+    "listen_for": [
+     "10"
+    ],
+    "ask": "Is the answer one number or a matrix?",
+    "repair": "A matrix.",
+    "error": "Adds all the elements into one number.",
+    "example": {
+     "question": "[2 3] + [4 1]",
+     "wrong_answer": "10",
+     "correct_answer": "[6 4]"
+    }
+   },
+   {
+    "code": "MATH.G9.ALGEBR.MATRICES.MATRIX_ADD_SUBTRACT.M_POSITIONS_MISMATCHED",
+    "listen_for": [
+     "9"
+    ],
+    "ask": "Which element is in the same place as 2?",
+    "repair": "6.",
+    "error": "Adds elements in different positions.",
+    "example": {
+     "question": "[1 2; 3 4] + [5 6; 7 8], row 1 column 2?",
+     "wrong_answer": "9 (2 + 7)",
+     "correct_answer": "8 (2 + 6)"
+    }
+   }
+  ],
+  "checks": [
+   {
+    "question": "[3 -1; 0 4] + [2 5; -3 1]",
+    "answer": "[5 4; -3 5]",
+    "shows": "adding"
+   },
+   {
+    "question": "[7 2] - [9 -3]",
+    "answer": "[-2 5]",
+    "shows": "subtracting"
+   }
+  ],
+  "name": "Add and subtract matrices, including in real-life situations",
+  "sub_strand": "MATH.G9.ALGEBR.MATRICES",
+  "sub_strand_name": "Matrices",
+  "status": "draft: written 18 Nov 2026 offline for Grade 9; not yet checked by a Kenyan maths teacher; not loaded by the live tutor"
+ },
+ "MATH.G9.ALGEBR.MATRICES.MATRIX_UNKNOWN_ELEMENTS": {
+  "skill": "MATH.G9.ALGEBR.MATRICES.MATRIX_UNKNOWN_ELEMENTS",
+  "key_step": "The child writes one small equation for each unknown from the elements in its position and solves it.",
+  "floor": {
+   "prerequisite": "Solves a one-step equation.",
+   "question": "x + 4 = 9",
+   "answer": "5"
+  },
+  "representations": [
+   "matching positions coloured",
+   "small equations",
+   "a check by adding"
+  ],
+  "steps": [
+   "Find the unknown's position.",
+   "Write the equation from that position on both sides.",
+   "Solve it.",
+   "Check by adding the matrices."
+  ],
+  "contexts": [
+   "a missing number in a sales table",
+   "a puzzle",
+   "a stock sheet"
+  ],
+  "board": [
+   {
+    "beat": "write",
+    "do": "Write [x 3; 2 y] + [4 1; 5 2] = [9 4; 7 6]."
+   },
+   {
+    "beat": "point",
+    "do": "Point at x, then at 4 and 9.",
+    "say": "What equation do these make?"
+   },
+   {
+    "beat": "pause",
+    "do": "Wait for x + 4 = 9."
+   },
+   {
+    "beat": "reveal",
+    "do": "Write x = 5."
+   }
+  ],
+  "misconceptions": [
+   {
+    "code": "MATH.G9.ALGEBR.MATRICES.MATRIX_UNKNOWN_ELEMENTS.M_UNKNOWN_ADDED_NOT_SUBTRACTED",
+    "listen_for": [
+     "13"
+    ],
+    "ask": "Does 13 + 4 give 9?",
+    "repair": "No: x = 5.",
+    "error": "Adds the known element to the answer instead of taking it away.",
+    "example": {
+     "question": "x + 4 = 9 from a matrix sum. x?",
+     "wrong_answer": "13",
+     "correct_answer": "5"
+    }
+   },
+   {
+    "code": "MATH.G9.ALGEBR.MATRICES.MATRIX_UNKNOWN_ELEMENTS.M_ANSWER_ELEMENTS_GIVEN",
+    "listen_for": [
+     "9"
+    ],
+    "ask": "Is x before or after the addition?",
+    "repair": "Before.",
+    "error": "Gives the elements of the answer matrix as the unknowns.",
+    "example": {
+     "question": "[x 3] + [4 1] = [9 4]. x?",
+     "wrong_answer": "9",
+     "correct_answer": "5"
+    }
+   },
+   {
+    "code": "MATH.G9.ALGEBR.MATRICES.MATRIX_UNKNOWN_ELEMENTS.M_SUM_AS_PRODUCT",
+    "listen_for": [
+     "20"
+    ],
+    "ask": "What does x + y mean?",
+    "repair": "Add: 9.",
+    "error": "Multiplies the unknowns when their sum is asked.",
+    "example": {
+     "question": "x = 5, y = 4. x + y?",
+     "wrong_answer": "20",
+     "correct_answer": "9"
+    }
+   },
+   {
+    "code": "MATH.G9.ALGEBR.MATRICES.MATRIX_UNKNOWN_ELEMENTS.M_WRONG_POSITION_MATCHED",
+    "listen_for": [
+     "5 for y"
+    ],
+    "ask": "Which position is y in?",
+    "repair": "Row 2, column 2: 6 - 2 = 4.",
+    "error": "Matches an unknown with an element in another position.",
+    "example": {
+     "question": "[x 3; 2 y] + [4 1; 5 2] = [9 4; 7 6]. y?",
+     "wrong_answer": "5 (7 - 2)",
+     "correct_answer": "4 (6 - 2)"
+    }
+   }
+  ],
+  "checks": [
+   {
+    "question": "[a 2] + [3 b] = [8 6]. Find a and b.",
+    "answer": "a = 5, b = 4",
+    "shows": "small equations"
+   },
+   {
+    "question": "[x 1] - [2 1] = [5 0]. Find x.",
+    "answer": "7",
+    "shows": "undo the subtraction"
+   }
+  ],
+  "name": "Find unknown elements in a matrix equation",
+  "sub_strand": "MATH.G9.ALGEBR.MATRICES",
+  "sub_strand_name": "Matrices",
+  "status": "draft: written 18 Nov 2026 offline for Grade 9; not yet checked by a Kenyan maths teacher; not loaded by the live tutor"
  }
 };
 export default TEACHING_PACK_G9;

@@ -363,6 +363,60 @@
     "will it ever fill"
    ],
    "mastery": "The child finds the part filled in one hour by the pipe and the part emptied by the leak, subtracts the leak's part, and turns what is left back into a time: a pipe fills in 3 hours and a leak empties in 6 hours, so 1/3 - 1/6 = 1/6 a tank an hour, 6 hours."
+  },
+  "MATH.G9.ALGEBR.MATRICES.MATRIX_IDENTIFY": {
+   "forms": [
+    "which is a matrix",
+    "write the table as a matrix",
+    "what does row 2 show",
+    "how many rows"
+   ],
+   "mastery": "The child recognises a matrix as numbers arranged in rows and columns inside brackets, writes the numbers of a table (marks of learners in subjects, items sold by two shops on three days) as a matrix in the same order, and says what a row and a column stand for."
+  },
+  "MATH.G9.ALGEBR.MATRICES.MATRIX_ORDER": {
+   "forms": [
+    "what is the order",
+    "rows by columns",
+    "a square matrix",
+    "which has order 3 x 1"
+   ],
+   "mastery": "The child gives the order of a matrix as the number of rows by the number of columns (a matrix with 2 rows and 3 columns has order 2 x 3), knows that 2 x 3 and 3 x 2 are different orders, and names row, column and square matrices."
+  },
+  "MATH.G9.ALGEBR.MATRICES.MATRIX_ELEMENT_POSITION": {
+   "forms": [
+    "element in row 2, column 3",
+    "which position",
+    "name the element",
+    "read from the table"
+   ],
+   "mastery": "The child finds the element in row i and column j by counting rows from the top and columns from the left (row first), and names the position of a given element: in a marks matrix, row 2 column 3 is the second learner's mark in the third subject."
+  },
+  "MATH.G9.ALGEBR.MATRICES.MATRIX_COMPATIBILITY": {
+   "forms": [
+    "can A and B be added",
+    "which two can be added",
+    "why not",
+    "find the mistake"
+   ],
+   "mastery": "The child compares the orders of two matrices and says they can be added or subtracted only when the orders are the same (same rows and same columns), not just the same number of elements, and picks the compatible pair from a list of orders."
+  },
+  "MATH.G9.ALGEBR.MATRICES.MATRIX_ADD_SUBTRACT": {
+   "forms": [
+    "add the matrices",
+    "subtract",
+    "total sales",
+    "find the mistake"
+   ],
+   "mastery": "The child adds or subtracts matching elements of two matrices of the same order, keeping the order of subtraction (first minus second) and the signs of negative elements, and uses it for real totals and differences: sales of two weeks added, stock left after sales subtracted."
+  },
+  "MATH.G9.ALGEBR.MATRICES.MATRIX_UNKNOWN_ELEMENTS": {
+   "forms": [
+    "find x and y",
+    "find x + y",
+    "which element",
+    "solve"
+   ],
+   "mastery": "The child matches the elements in the same position on each side of a matrix sum, writes a small equation for each unknown and solves it: [x 3; 2 y] + [4 1; 5 2] = [9 4; 7 6] gives x + 4 = 9, so x = 5, and y + 2 = 6, so y = 4."
   }
  }
 }

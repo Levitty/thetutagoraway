@@ -1972,5 +1972,369 @@
   "help": "If 1/6 fills each hour, 6 hours fill the tank.",
   "source": "to be confirmed by a teacher (no source yet)",
   "status": "draft"
+ },
+ "MATH.G9.ALGEBR.MATRICES.MATRIX_IDENTIFY.M_ANY_TABLE_IS_MATRIX": {
+  "skill": "MATH.G9.ALGEBR.MATRICES.MATRIX_IDENTIFY",
+  "error": "Calls any list of numbers a matrix, even with rows of different lengths.",
+  "example": {
+   "question": "Is [3 5; 2] a matrix?",
+   "wrong_answer": "Yes",
+   "correct_answer": "No, every row needs the same number of elements"
+  },
+  "cause": "Thinks brackets are enough.",
+  "reveals": "The answer Yes as a wrong option, with a reason that names the idea.",
+  "help": "A matrix is a full rectangle of numbers: every row the same length.",
+  "source": "to be confirmed by a teacher (no source yet)",
+  "status": "draft"
+ },
+ "MATH.G9.ALGEBR.MATRICES.MATRIX_IDENTIFY.M_TABLE_ORDER_CHANGED": {
+  "skill": "MATH.G9.ALGEBR.MATRICES.MATRIX_IDENTIFY",
+  "error": "Writes the table as a matrix with the rows and columns in a different order from the table.",
+  "example": {
+   "question": "Write the table (learners as rows, subjects as columns) as a matrix.",
+   "wrong_answer": "subjects as rows",
+   "correct_answer": "learners as rows, in the table's order"
+  },
+  "cause": "Copies the numbers in any order.",
+  "reveals": "The answer subjects as rows as a wrong option, with a reason that names the idea.",
+  "help": "Keep the table's layout: row 1 of the table is row 1 of the matrix.",
+  "source": "to be confirmed by a teacher (no source yet)",
+  "status": "draft"
+ },
+ "MATH.G9.ALGEBR.MATRICES.MATRIX_IDENTIFY.M_LABELS_IN_MATRIX": {
+  "skill": "MATH.G9.ALGEBR.MATRICES.MATRIX_IDENTIFY",
+  "error": "Puts the headings (names, subjects) inside the matrix.",
+  "example": {
+   "question": "Write the marks table as a matrix.",
+   "wrong_answer": "[Amina 60 ...]",
+   "correct_answer": "numbers only"
+  },
+  "cause": "Copies the whole table.",
+  "reveals": "The answer [Amina 60 ...] as a wrong option, with a reason that names the idea.",
+  "help": "The labels stay outside; the matrix holds the numbers.",
+  "source": "to be confirmed by a teacher (no source yet)",
+  "status": "draft"
+ },
+ "MATH.G9.ALGEBR.MATRICES.MATRIX_IDENTIFY.M_ROW_AS_COLUMN": {
+  "skill": "MATH.G9.ALGEBR.MATRICES.MATRIX_IDENTIFY",
+  "error": "Says a row stands for what a column stands for.",
+  "example": {
+   "question": "Rows are learners, columns are subjects. What does row 2 show?",
+   "wrong_answer": "All marks in subject 2",
+   "correct_answer": "All marks of learner 2"
+  },
+  "cause": "Mixes up across and down.",
+  "reveals": "The answer All marks in subject 2 as a wrong option, with a reason that names the idea.",
+  "help": "Rows go across; a row holds one learner's marks.",
+  "source": "to be confirmed by a teacher (no source yet)",
+  "status": "draft"
+ },
+ "MATH.G9.ALGEBR.MATRICES.MATRIX_ORDER.M_ORDER_COLUMNS_FIRST": {
+  "skill": "MATH.G9.ALGEBR.MATRICES.MATRIX_ORDER",
+  "error": "Gives the order as columns by rows.",
+  "example": {
+   "question": "Order of a matrix with 2 rows and 3 columns?",
+   "wrong_answer": "3 x 2",
+   "correct_answer": "2 x 3"
+  },
+  "cause": "Reads across first, like the columns.",
+  "reveals": "The answer 3 x 2 as a wrong option, with a reason that names the idea.",
+  "help": "Rows first, then columns: 2 x 3.",
+  "source": "to be confirmed by a teacher (no source yet)",
+  "status": "draft"
+ },
+ "MATH.G9.ALGEBR.MATRICES.MATRIX_ORDER.M_ORDER_AS_COUNT": {
+  "skill": "MATH.G9.ALGEBR.MATRICES.MATRIX_ORDER",
+  "error": "Gives the number of elements as the order.",
+  "example": {
+   "question": "Order of a matrix with 2 rows and 3 columns?",
+   "wrong_answer": "6",
+   "correct_answer": "2 x 3"
+  },
+  "cause": "Counts the elements.",
+  "reveals": "The answer 6 as a wrong option, with a reason that names the idea.",
+  "help": "The order names rows and columns, not the total.",
+  "source": "to be confirmed by a teacher (no source yet)",
+  "status": "draft"
+ },
+ "MATH.G9.ALGEBR.MATRICES.MATRIX_ORDER.M_ORDERS_SAME_IF_SWAPPED": {
+  "skill": "MATH.G9.ALGEBR.MATRICES.MATRIX_ORDER",
+  "error": "Thinks 2 x 3 and 3 x 2 are the same order.",
+  "example": {
+   "question": "Do a 2 x 3 and a 3 x 2 matrix have the same order?",
+   "wrong_answer": "Yes",
+   "correct_answer": "No"
+  },
+  "cause": "Thinks of multiplication, where order does not matter.",
+  "reveals": "The answer Yes as a wrong option, with a reason that names the idea.",
+  "help": "Two rows of three is a different shape from three rows of two.",
+  "source": "to be confirmed by a teacher (no source yet)",
+  "status": "draft"
+ },
+ "MATH.G9.ALGEBR.MATRICES.MATRIX_ORDER.M_SQUARE_MEANS_FOUR": {
+  "skill": "MATH.G9.ALGEBR.MATRICES.MATRIX_ORDER",
+  "error": "Thinks a square matrix must be 2 x 2.",
+  "example": {
+   "question": "Is a 3 x 3 matrix a square matrix?",
+   "wrong_answer": "No",
+   "correct_answer": "Yes"
+  },
+  "cause": "Has only seen 2 x 2 examples.",
+  "reveals": "The answer No as a wrong option, with a reason that names the idea.",
+  "help": "Square means as many rows as columns.",
+  "source": "to be confirmed by a teacher (no source yet)",
+  "status": "draft"
+ },
+ "MATH.G9.ALGEBR.MATRICES.MATRIX_ELEMENT_POSITION.M_ROW_COLUMN_SWAPPED": {
+  "skill": "MATH.G9.ALGEBR.MATRICES.MATRIX_ELEMENT_POSITION",
+  "error": "Reads column i, row j instead of row i, column j.",
+  "example": {
+   "question": "Element in row 1, column 3 of [2 5 7; 4 6 8; 1 3 9]?",
+   "wrong_answer": "1",
+   "correct_answer": "7"
+  },
+  "cause": "Counts across first.",
+  "reveals": "The answer 1 as a wrong option, with a reason that names the idea.",
+  "help": "Row first: go down to the row, then across to the column.",
+  "source": "to be confirmed by a teacher (no source yet)",
+  "status": "draft"
+ },
+ "MATH.G9.ALGEBR.MATRICES.MATRIX_ELEMENT_POSITION.M_WRONG_COLUMN": {
+  "skill": "MATH.G9.ALGEBR.MATRICES.MATRIX_ELEMENT_POSITION",
+  "error": "Finds the right row but counts to the wrong column.",
+  "example": {
+   "question": "Element in row 2, column 2 of [2 5 7; 4 6 8]?",
+   "wrong_answer": "8",
+   "correct_answer": "6"
+  },
+  "cause": "Miscounts across.",
+  "reveals": "The answer 8 as a wrong option, with a reason that names the idea.",
+  "help": "Put a finger on column 1 and count across.",
+  "source": "to be confirmed by a teacher (no source yet)",
+  "status": "draft"
+ },
+ "MATH.G9.ALGEBR.MATRICES.MATRIX_ELEMENT_POSITION.M_WRONG_ROW": {
+  "skill": "MATH.G9.ALGEBR.MATRICES.MATRIX_ELEMENT_POSITION",
+  "error": "Finds the right column but the wrong row.",
+  "example": {
+   "question": "Element in row 2, column 3 of [2 5 7; 4 6 8]?",
+   "wrong_answer": "7",
+   "correct_answer": "8"
+  },
+  "cause": "Miscounts down.",
+  "reveals": "The answer 7 as a wrong option, with a reason that names the idea.",
+  "help": "Count rows from the top: row 1, row 2.",
+  "source": "to be confirmed by a teacher (no source yet)",
+  "status": "draft"
+ },
+ "MATH.G9.ALGEBR.MATRICES.MATRIX_ELEMENT_POSITION.M_COUNT_FROM_ZERO": {
+  "skill": "MATH.G9.ALGEBR.MATRICES.MATRIX_ELEMENT_POSITION",
+  "error": "Counts the first row or column as 0.",
+  "example": {
+   "question": "Element in row 1, column 1 of [2 5; 4 6]?",
+   "wrong_answer": "6",
+   "correct_answer": "2"
+  },
+  "cause": "Counts from 0, as on a number line.",
+  "reveals": "The answer 6 as a wrong option, with a reason that names the idea.",
+  "help": "Row 1 is the first row.",
+  "source": "to be confirmed by a teacher (no source yet)",
+  "status": "draft"
+ },
+ "MATH.G9.ALGEBR.MATRICES.MATRIX_COMPATIBILITY.M_ELEMENT_COUNT_ENOUGH": {
+  "skill": "MATH.G9.ALGEBR.MATRICES.MATRIX_COMPATIBILITY",
+  "error": "Thinks two matrices can be added if they have the same number of elements.",
+  "example": {
+   "question": "Can a 2 x 3 and a 3 x 2 matrix be added?",
+   "wrong_answer": "Yes, both have 6 elements",
+   "correct_answer": "No"
+  },
+  "cause": "Counts elements instead of comparing shapes.",
+  "reveals": "The answer Yes, both have 6 elements as a wrong option, with a reason that names the idea.",
+  "help": "Every element needs a partner in the same position: same rows and same columns.",
+  "source": "to be confirmed by a teacher (no source yet)",
+  "status": "draft"
+ },
+ "MATH.G9.ALGEBR.MATRICES.MATRIX_COMPATIBILITY.M_MULTIPLY_RULE_FOR_ADD": {
+  "skill": "MATH.G9.ALGEBR.MATRICES.MATRIX_COMPATIBILITY",
+  "error": "Uses the rule for multiplying (columns of A = rows of B) for adding.",
+  "example": {
+   "question": "A is 2 x 3, B is 3 x 2. Can they be added?",
+   "wrong_answer": "Yes, 3 columns and 3 rows",
+   "correct_answer": "No"
+  },
+  "cause": "Has heard the multiplying rule.",
+  "reveals": "The answer Yes, 3 columns and 3 rows as a wrong option, with a reason that names the idea.",
+  "help": "For adding, the orders must be the same.",
+  "source": "to be confirmed by a teacher (no source yet)",
+  "status": "draft"
+ },
+ "MATH.G9.ALGEBR.MATRICES.MATRIX_COMPATIBILITY.M_ONLY_SQUARE_ADD": {
+  "skill": "MATH.G9.ALGEBR.MATRICES.MATRIX_COMPATIBILITY",
+  "error": "Thinks only square matrices can be added.",
+  "example": {
+   "question": "Can two 2 x 3 matrices be added?",
+   "wrong_answer": "No, they are not square",
+   "correct_answer": "Yes"
+  },
+  "cause": "Over-generalises from square examples.",
+  "reveals": "The answer No, they are not square as a wrong option, with a reason that names the idea.",
+  "help": "Any two matrices of the same order can be added.",
+  "source": "to be confirmed by a teacher (no source yet)",
+  "status": "draft"
+ },
+ "MATH.G9.ALGEBR.MATRICES.MATRIX_COMPATIBILITY.M_ROWS_ONLY_COMPARED": {
+  "skill": "MATH.G9.ALGEBR.MATRICES.MATRIX_COMPATIBILITY",
+  "error": "Checks only the number of rows (or only columns).",
+  "example": {
+   "question": "Can a 2 x 3 and a 2 x 2 matrix be added?",
+   "wrong_answer": "Yes, both have 2 rows",
+   "correct_answer": "No"
+  },
+  "cause": "Stops after one check.",
+  "reveals": "The answer Yes, both have 2 rows as a wrong option, with a reason that names the idea.",
+  "help": "Both the rows and the columns must match.",
+  "source": "to be confirmed by a teacher (no source yet)",
+  "status": "draft"
+ },
+ "MATH.G9.ALGEBR.MATRICES.MATRIX_COMPATIBILITY.M_SIGNS_DECIDE": {
+  "skill": "MATH.G9.ALGEBR.MATRICES.MATRIX_COMPATIBILITY",
+  "error": "Thinks negative elements stop matrices from being added.",
+  "example": {
+   "question": "Can [1 -2] and [3 4] be added?",
+   "wrong_answer": "No, one has a negative",
+   "correct_answer": "Yes"
+  },
+  "cause": "Thinks of the elements, not the shape.",
+  "reveals": "The answer No, one has a negative as a wrong option, with a reason that names the idea.",
+  "help": "The signs of the elements do not matter; the orders do.",
+  "source": "to be confirmed by a teacher (no source yet)",
+  "status": "draft"
+ },
+ "MATH.G9.ALGEBR.MATRICES.MATRIX_ADD_SUBTRACT.M_SUBTRACT_ORDER_SWAPPED": {
+  "skill": "MATH.G9.ALGEBR.MATRICES.MATRIX_ADD_SUBTRACT",
+  "error": "Subtracts the first matrix's element from the second's.",
+  "example": {
+   "question": "[5 2] - [3 6]",
+   "wrong_answer": "[-2 4]",
+   "correct_answer": "[2 -4]"
+  },
+  "cause": "Takes the smaller from the larger.",
+  "reveals": "The answer [-2 4] as a wrong option, with a reason that names the idea.",
+  "help": "First minus second, element by element: 5 - 3 and 2 - 6.",
+  "source": "to be confirmed by a teacher (no source yet)",
+  "status": "draft"
+ },
+ "MATH.G9.ALGEBR.MATRICES.MATRIX_ADD_SUBTRACT.M_MINUS_NEGATIVE_ELEMENT": {
+  "skill": "MATH.G9.ALGEBR.MATRICES.MATRIX_ADD_SUBTRACT",
+  "error": "Subtracts a negative element as if it were positive.",
+  "example": {
+   "question": "[4] - [-3]",
+   "wrong_answer": "[1]",
+   "correct_answer": "[7]"
+  },
+  "cause": "Drops the sign of the element.",
+  "reveals": "The answer [1] as a wrong option, with a reason that names the idea.",
+  "help": "Minus a negative is plus: 4 - (-3) = 7.",
+  "source": "to be confirmed by a teacher (no source yet)",
+  "status": "draft"
+ },
+ "MATH.G9.ALGEBR.MATRICES.MATRIX_ADD_SUBTRACT.M_ELEMENTS_MULTIPLIED": {
+  "skill": "MATH.G9.ALGEBR.MATRICES.MATRIX_ADD_SUBTRACT",
+  "error": "Multiplies matching elements instead of adding.",
+  "example": {
+   "question": "[2 3] + [4 1]",
+   "wrong_answer": "[8 3]",
+   "correct_answer": "[6 4]"
+  },
+  "cause": "Mixes the operations.",
+  "reveals": "The answer [8 3] as a wrong option, with a reason that names the idea.",
+  "help": "Adding matrices adds matching elements.",
+  "source": "to be confirmed by a teacher (no source yet)",
+  "status": "draft"
+ },
+ "MATH.G9.ALGEBR.MATRICES.MATRIX_ADD_SUBTRACT.M_ALL_ELEMENTS_SUMMED": {
+  "skill": "MATH.G9.ALGEBR.MATRICES.MATRIX_ADD_SUBTRACT",
+  "error": "Adds all the elements into one number.",
+  "example": {
+   "question": "[2 3] + [4 1]",
+   "wrong_answer": "10",
+   "correct_answer": "[6 4]"
+  },
+  "cause": "Thinks the answer is a single total.",
+  "reveals": "The answer 10 as a wrong option, with a reason that names the idea.",
+  "help": "The sum is a matrix of the same order.",
+  "source": "to be confirmed by a teacher (no source yet)",
+  "status": "draft"
+ },
+ "MATH.G9.ALGEBR.MATRICES.MATRIX_ADD_SUBTRACT.M_POSITIONS_MISMATCHED": {
+  "skill": "MATH.G9.ALGEBR.MATRICES.MATRIX_ADD_SUBTRACT",
+  "error": "Adds elements in different positions.",
+  "example": {
+   "question": "[1 2; 3 4] + [5 6; 7 8], row 1 column 2?",
+   "wrong_answer": "9 (2 + 7)",
+   "correct_answer": "8 (2 + 6)"
+  },
+  "cause": "Pairs elements by reading order across both matrices.",
+  "reveals": "The answer 9 (2 + 7) as a wrong option, with a reason that names the idea.",
+  "help": "Each element pairs with the one in the same row and column.",
+  "source": "to be confirmed by a teacher (no source yet)",
+  "status": "draft"
+ },
+ "MATH.G9.ALGEBR.MATRICES.MATRIX_UNKNOWN_ELEMENTS.M_UNKNOWN_ADDED_NOT_SUBTRACTED": {
+  "skill": "MATH.G9.ALGEBR.MATRICES.MATRIX_UNKNOWN_ELEMENTS",
+  "error": "Adds the known element to the answer instead of taking it away.",
+  "example": {
+   "question": "x + 4 = 9 from a matrix sum. x?",
+   "wrong_answer": "13",
+   "correct_answer": "5"
+  },
+  "cause": "Adds the numbers in the same position.",
+  "reveals": "The answer 13 as a wrong option, with a reason that names the idea.",
+  "help": "Undo the addition: x = 9 - 4.",
+  "source": "to be confirmed by a teacher (no source yet)",
+  "status": "draft"
+ },
+ "MATH.G9.ALGEBR.MATRICES.MATRIX_UNKNOWN_ELEMENTS.M_ANSWER_ELEMENTS_GIVEN": {
+  "skill": "MATH.G9.ALGEBR.MATRICES.MATRIX_UNKNOWN_ELEMENTS",
+  "error": "Gives the elements of the answer matrix as the unknowns.",
+  "example": {
+   "question": "[x 3] + [4 1] = [9 4]. x?",
+   "wrong_answer": "9",
+   "correct_answer": "5"
+  },
+  "cause": "Reads x from the result.",
+  "reveals": "The answer 9 as a wrong option, with a reason that names the idea.",
+  "help": "x is in the first matrix, before the addition.",
+  "source": "to be confirmed by a teacher (no source yet)",
+  "status": "draft"
+ },
+ "MATH.G9.ALGEBR.MATRICES.MATRIX_UNKNOWN_ELEMENTS.M_SUM_AS_PRODUCT": {
+  "skill": "MATH.G9.ALGEBR.MATRICES.MATRIX_UNKNOWN_ELEMENTS",
+  "error": "Multiplies the unknowns when their sum is asked.",
+  "example": {
+   "question": "x = 5, y = 4. x + y?",
+   "wrong_answer": "20",
+   "correct_answer": "9"
+  },
+  "cause": "Misreads the question.",
+  "reveals": "The answer 20 as a wrong option, with a reason that names the idea.",
+  "help": "x + y means add.",
+  "source": "to be confirmed by a teacher (no source yet)",
+  "status": "draft"
+ },
+ "MATH.G9.ALGEBR.MATRICES.MATRIX_UNKNOWN_ELEMENTS.M_WRONG_POSITION_MATCHED": {
+  "skill": "MATH.G9.ALGEBR.MATRICES.MATRIX_UNKNOWN_ELEMENTS",
+  "error": "Matches an unknown with an element in another position.",
+  "example": {
+   "question": "[x 3; 2 y] + [4 1; 5 2] = [9 4; 7 6]. y?",
+   "wrong_answer": "5 (7 - 2)",
+   "correct_answer": "4 (6 - 2)"
+  },
+  "cause": "Pairs by order of reading, not by position.",
+  "reveals": "The answer 5 (7 - 2) as a wrong option, with a reason that names the idea.",
+  "help": "y is in row 2, column 2: use row 2, column 2 on each side.",
+  "source": "to be confirmed by a teacher (no source yet)",
+  "status": "draft"
  }
 }

@@ -669,7 +669,7 @@ const PROPORTION = [
 const mat = (m) => `[${m.map(r => r.map(fm).join(' ')).join('; ')}]`;
 const ord = (r, c) => `${r} × ${c}`;
 const MATRICES = [
-  fam({ id: 'g9.mat.table-position', skill: 'G11_MATRICES_INTRO', outcome: 'G9.MATRICES.a', rung: 1, form: 'table',
+  fam({ id: 'g9.mat.table-position', skill: 'G11_MATRICES_INTRO', outcome: 'MATH.G9.ALGEBR.MATRICES.c', cskill: 'MATH.G9.ALGEBR.MATRICES.MATRIX_ELEMENT_POSITION', rung: 1, form: 'table',
     draw: () => {
       const names = [person(), person(), person()];
       if (new Set(names.map(n => n.name)).size < 3) return null;
@@ -681,12 +681,12 @@ const MATRICES = [
       question: `The table shows the marks of three learners in three subjects. The marks are written as a matrix with one row for each learner and one column for each subject, in the same order as the table. What is the element in row ${r + 1} and column ${c + 1} of the matrix?`,
       model: { type: 'table', data: { head: ['Learner', 'Maths', 'English', 'Science'], rows: names.map((n, i) => ({ cells: [n.name, ...M[i].map(String)] })) } },
       answer: M[r][c],
-      wrong: [[M[c][r], 'You swapped the row and the column. The row number comes first.'], [M[r][(c + 1) % 3], 'That is in the right row but the wrong column. Count the columns from the left.'], [M[(r + 1) % 3][c], 'That is in the right column but the wrong row. Count the rows from the top.']],
+      wrong: [[M[c][r], 'You swapped the row and the column. The row number comes first.', 'M_ROW_COLUMN_SWAPPED'], [M[r][(c + 1) % 3], 'That is in the right row but the wrong column. Count the columns from the left.', 'M_WRONG_COLUMN'], [M[(r + 1) % 3][c], 'That is in the right column but the wrong row. Count the rows from the top.', 'M_WRONG_ROW']],
       hints: ['Row 1 is the first learner. Column 1 is the first subject.', 'Go to the row, then across to the column.'],
       steps: [`Row ${r + 1} is ${names[r].name}. Column ${c + 1} is ${['Maths', 'English', 'Science'][c]}.`, `The mark is ${M[r][c]}.`],
     }),
     check: ({ M, r, c }, a) => M.flat().indexOf(a) === r * 3 + c }),
-  fam({ id: 'g9.mat.add-why', skill: 'G11_MATRICES_OPS', outcome: 'G9.MATRICES.d', rung: 2, form: 'why',
+  fam({ id: 'g9.mat.add-why', skill: 'G11_MATRICES_OPS', outcome: 'MATH.G9.ALGEBR.MATRICES.d', cskill: 'MATH.G9.ALGEBR.MATRICES.MATRIX_COMPATIBILITY', misMapped: false, reveals: ['M_ELEMENT_COUNT_ENOUGH', 'M_MULTIPLY_RULE_FOR_ADD', 'M_ONLY_SQUARE_ADD', 'M_SIGNS_DECIDE'], rung: 2, form: 'why',
     draw: () => {
       const r = randInt(1, 3), c = randInt(2, 4), same = Math.random() < 0.3, kind = pick(['swap', 'col']);
       const r2 = same ? r : kind === 'swap' ? c : r, c2 = same ? c : kind === 'swap' ? r : c + 1;
@@ -702,7 +702,7 @@ const MATRICES = [
         hints: ['What must be true about the rows and columns of two matrices before you add matching elements?', `Compare ${ord(r, c)} with ${ord(r2, c2)}.`],
         steps: [`Matrix A has ${r} rows and ${c} columns. Matrix B has ${r2} rows and ${c2} columns.`, same ? 'The orders are the same, so A and B can be added.' : 'The orders are different, so A and B cannot be added.'] };
     } }),
-  fam({ id: 'g9.mat.compat-table', skill: 'G11_MATRICES_OPS', outcome: 'G9.MATRICES.d', rung: 2, form: 'table',
+  fam({ id: 'g9.mat.compat-table', skill: 'G11_MATRICES_OPS', outcome: 'MATH.G9.ALGEBR.MATRICES.d', cskill: 'MATH.G9.ALGEBR.MATRICES.MATRIX_COMPATIBILITY', misMapped: false, reveals: ['M_ELEMENT_COUNT_ENOUGH', 'M_ROWS_ONLY_COMPARED'], rung: 2, form: 'table',
     draw: () => {
       const O = [[2, 3], [3, 2], [2, 2], [3, 3], [1, 3], [3, 1]].sort(() => Math.random() - 0.5);
       const shared = O[0], orders = [shared, shared, O[1], O[2]].sort(() => Math.random() - 0.5), names = ['A', 'B', 'C', 'D'];
@@ -718,7 +718,7 @@ const MATRICES = [
       hints: ['Two matrices can be added only if they have the same order.', 'Compare the rows and the columns of each matrix with the others.'],
       steps: [`Orders: ${orders.map((o, i) => `${names[i]} is ${ord(...o)}`).join(', ')}.`, `${names[opts[0][0]]} and ${names[opts[0][1]]} have the same order, so they can be added.`],
     }) }),
-  fam({ id: 'g9.mat.spot-compat', skill: 'G11_MATRICES_OPS', outcome: 'G9.MATRICES.d', rung: 2, form: 'spot',
+  fam({ id: 'g9.mat.spot-compat', skill: 'G11_MATRICES_OPS', outcome: 'MATH.G9.ALGEBR.MATRICES.d', cskill: 'MATH.G9.ALGEBR.MATRICES.MATRIX_COMPATIBILITY', rung: 2, form: 'spot',
     draw: () => {
       const [r, c] = pick([[2, 3], [3, 4], [2, 4], [1, 3], [2, 5]]), type = pick(['count', 'cols']);
       return { r, c, type, who: person() };
@@ -735,10 +735,10 @@ const MATRICES = [
         { text: `The columns of A equal the rows of B, so A + B can be found`, ok: r === r2 && c === c2 },
       ];
       const fix = type === 'count' ? 'Two matrices can be added only if they have the same order. The same number of elements is not enough.' : 'Equal columns and rows is the rule for multiplying matrices. To add matrices, the orders must be the same.';
-      return { question: `${who.name} says matrix A (order ${ord(r, c)}) and matrix B (order ${ord(r2, c2)}) can be added. Here is ${who.her} reasoning. One step is wrong. Which one?`, working, fix,
+      return { question: `${who.name} says matrix A (order ${ord(r, c)}) and matrix B (order ${ord(r2, c2)}) can be added. Here is ${who.her} reasoning. One step is wrong. Which one?`, working, mis: type === 'count' ? 'M_ELEMENT_COUNT_ENOUGH' : 'M_MULTIPLY_RULE_FOR_ADD', fix,
         steps: [`The orders ${ord(r, c)} and ${ord(r2, c2)} are different.`, 'So A and B cannot be added.'] };
     } }),
-  fam({ id: 'g9.mat.spot-subtract', skill: 'G11_MATRICES_OPS', outcome: 'G9.MATRICES.e', rung: 2, form: 'spot',
+  fam({ id: 'g9.mat.spot-subtract', skill: 'G11_MATRICES_OPS', outcome: 'MATH.G9.ALGEBR.MATRICES.e', cskill: 'MATH.G9.ALGEBR.MATRICES.MATRIX_ADD_SUBTRACT', rung: 2, form: 'spot',
     draw: () => {
       const A = [[randInt(2, 9), randInt(2, 9)], [randInt(2, 9), randInt(2, 9)]], B = [[randInt(1, 6), randInt(1, 6)], [randInt(1, 6), randInt(1, 6)]];
       const i = randInt(0, 3), type = pick(['neg', 'reverse']), [r, c] = [Math.floor(i / 2), i % 2];
@@ -756,10 +756,10 @@ const MATRICES = [
       }
       const fix = type === 'neg' ? 'Subtracting a negative number is the same as adding. The step with the negative number was worked out as a plain subtraction.' : 'In subtraction the order matters. The element of the second matrix is taken away from the element of the first.';
       const R = A.map((row, i) => row.map((x, j) => x - B[i][j]));
-      return { question: `${who.name} worked out ${mat(A)} − ${mat(B)} one element at a time. One step is wrong. Which one?`, working, fix,
+      return { question: `${who.name} worked out ${mat(A)} − ${mat(B)} one element at a time. One step is wrong. Which one?`, working, mis: type === 'neg' ? 'M_MINUS_NEGATIVE_ELEMENT' : 'M_SUBTRACT_ORDER_SWAPPED', fix,
         steps: [`The answer is ${mat(R)}.`, 'Subtract each element of the second matrix from the matching element of the first.'] };
     } }),
-  fam({ id: 'g9.mat.solve-unknown', skill: 'G11_MATRICES_OPS', outcome: 'G9.MATRICES.e', rung: 3, form: 'direct',
+  fam({ id: 'g9.mat.solve-unknown', skill: 'G11_MATRICES_OPS', outcome: 'MATH.G9.ALGEBR.MATRICES.e', cskill: 'MATH.G9.ALGEBR.MATRICES.MATRIX_UNKNOWN_ELEMENTS', rung: 3, form: 'direct',
     draw: () => {
       const X = randInt(2, 9), Y = randInt(2, 9), p = randInt(1, 6), q = randInt(1, 6), B = [[randInt(1, 7), randInt(1, 7)], [randInt(1, 7), randInt(1, 7)]];
       const C = [[X + B[0][0], p + B[0][1]], [q + B[1][0], Y + B[1][1]]];
@@ -769,7 +769,7 @@ const MATRICES = [
     make: ({ X, Y, p, q, B, C, ans, w1, w2, w3 }) => ({
       question: `Find the value of x + y.   [x ${p}; ${q} y] + ${mat(B)} = ${mat(C)}`, story: false,
       answer: ans,
-      wrong: [[w1, 'You added when you should have taken away. Subtract the element of the known matrix.'], [w2, 'Those are the elements of the answer matrix. x and y are in the first matrix, before the addition.'], [w3, 'The question asks for x + y, not x × y.']],
+      wrong: [[w1, 'You added when you should have taken away. Subtract the element of the known matrix.', 'M_UNKNOWN_ADDED_NOT_SUBTRACTED'], [w2, 'Those are the elements of the answer matrix. x and y are in the first matrix, before the addition.', 'M_ANSWER_ELEMENTS_GIVEN'], [w3, 'The question asks for x + y, not x × y.', 'M_SUM_AS_PRODUCT']],
       hints: ['Add the matching elements. Which ones contain x and y?', 'Write an equation for the top-left elements, and another for the bottom-right elements.'],
       steps: [`Top left: x + ${B[0][0]} = ${C[0][0]}, so x = ${X}.`, `Bottom right: y + ${B[1][1]} = ${C[1][1]}, so y = ${Y}. Then x + y = ${ans}.`],
     }),
