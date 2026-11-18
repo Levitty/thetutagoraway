@@ -1,0 +1,99 @@
+{
+ "sub_strand": "KISW.G8.KUANDI.T1_VIAKIFISHI",
+ "title": "Viakifishi (Theme 1: Usafi wa sehemu za umma)",
+ "status": "draft: written 18 Nov 2026 offline for Grade 8 Kiswahili; not yet checked by a native Kiswahili teacher; not loaded by the live tutor",
+ "sources": [],
+ "notes": "",
+ "skills": [
+  {
+   "skill": "KISW.G8.KUANDI.T1_VIAKIFISHI.HISI_RITIFAA",
+   "key_step": "The child uses one alama ya hisi for a feeling or a strong command and the ritifaa for the sound ng' (ng'ombe), and not for anything else.",
+   "floor": {
+    "prerequisite": "Uses the kiulizi.",
+    "question": "Andika vizuri: je umefika",
+    "answer": "Je, umefika?"
+   },
+   "representations": [
+    "feeling sentences",
+    "ng' word cards",
+    "a mark chart"
+   ],
+   "steps": [
+    "Read the sentence.",
+    "Feeling or strong command? One !",
+    "ng' sound? Ritifaa after ng.",
+    "Read it aloud."
+   ],
+   "contexts": [
+    "cleanliness of public places: \"Usitupe taka hapa!\"",
+    "a notice",
+    "a story"
+   ],
+   "board": [
+    {
+     "beat": "write",
+     "do": "ole wetu soko limejaa ngombe na taka"
+    },
+    {
+     "beat": "point",
+     "do": "Point at \"ole wetu\" and \"ngombe\".",
+     "say": "Zinahitaji alama gani?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for the child to answer before saying anything."
+    },
+    {
+     "beat": "child_draws",
+     "do": "The child writes \"Ole wetu! Soko limejaa ng'ombe na taka.\""
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "KISW.G8.KUANDI.T1_VIAKIFISHI.HISI_RITIFAA.M_KS8_HR_HISI",
+     "listen_for": [
+      "kikomo"
+     ],
+     "ask": "Soma tena: \"Sentensi ya mshangao huisha kwa nini?\" Kwa nini \"kikomo\" si jibu sahihi?",
+     "repair": "Sentensi ya mshangao huisha kwa alama ya hisi (!)."
+    },
+    {
+     "code": "KISW.G8.KUANDI.T1_VIAKIFISHI.HISI_RITIFAA.M_KS8_HR_RITIFAA",
+     "listen_for": [
+      "ngombe"
+     ],
+     "ask": "Soma tena: \"Ni neno lipi limeandikwa sawa?\" Kwa nini \"ngombe\" si jibu sahihi?",
+     "repair": "Ng'ombe huandikwa kwa ritifaa."
+    },
+    {
+     "code": "KISW.G8.KUANDI.T1_VIAKIFISHI.HISI_RITIFAA.M_KS8_HR_AMRI",
+     "listen_for": [
+      "kiulizi"
+     ],
+     "ask": "Soma tena: \"Amri kali huisha kwa nini?\" Kwa nini \"kiulizi\" si jibu sahihi?",
+     "repair": "Amri kali huisha kwa alama ya hisi."
+    },
+    {
+     "code": "KISW.G8.KUANDI.T1_VIAKIFISHI.HISI_RITIFAA.M8_HR_DOUBLE",
+     "listen_for": [
+      "Lo!!! Umeshinda!!!"
+     ],
+     "ask": "Unahitaji alama ngapi?",
+     "repair": "Tumia alama moja ya hisi: Lo!"
+    }
+   ],
+   "checks": [
+    {
+     "question": "Andika vizuri: tokeni hapa",
+     "answer": "Tokeni hapa!",
+     "shows": "command"
+    },
+    {
+     "question": "Andika vizuri: ngambo",
+     "answer": "ng'ambo",
+     "shows": "ritifaa"
+    }
+   ]
+  }
+ ]
+}

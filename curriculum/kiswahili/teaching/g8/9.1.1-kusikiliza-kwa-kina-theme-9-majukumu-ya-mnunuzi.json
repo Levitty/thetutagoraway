@@ -1,0 +1,107 @@
+{
+ "sub_strand": "KISW.G8.KUSIKI.T9_KUSIKILIZA_KWA_KINA",
+ "title": "Kusikiliza kwa Kina (Theme 9: Majukumu ya mnunuzi)",
+ "status": "draft: written 18 Nov 2026 offline for Grade 8 Kiswahili; not yet checked by a native Kiswahili teacher; not loaded by the live tutor",
+ "sources": [],
+ "notes": "",
+ "skills": [
+  {
+   "skill": "KISW.G8.KUSIKI.T9_KUSIKILIZA_KWA_KINA.MATAMSHI",
+   "key_step": "The child hears the one feature that separates /ch/ na /sh/ and checks the meaning of the word before writing it.",
+   "floor": {
+    "prerequisite": "Says the five vowels and reads open syllables (ba, be, bi, bo, bu).",
+    "question": "Soma: cha-ka",
+    "answer": "chaka"
+   },
+   "representations": [
+    "a pair card: chaka / shaka",
+    "a hand on the throat to feel the voice (or the lips for a nasal)",
+    "a picture for each meaning (a thicket, doubt)"
+   ],
+   "steps": [
+    "Listen to the whole word.",
+    "Ask: which sound, /ch/ or /sh/?",
+    "Think of the meaning in the sentence.",
+    "Write it and read it back."
+   ],
+   "contexts": [
+    "majukumu ya mnunuzi",
+    "a class reading aloud",
+    "a word game in the playground"
+   ],
+   "board": [
+    {
+     "beat": "write",
+     "do": "chaka - shaka"
+    },
+    {
+     "beat": "point",
+     "do": "Point at the first letter of each word.",
+     "say": "Neno lipi lina maana ya \"a thicket\"?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for the child to answer before saying anything."
+    },
+    {
+     "beat": "child_draws",
+     "do": "The child writes both words under their pictures and says each one."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "KISW.G8.KUSIKI.T9_KUSIKILIZA_KWA_KINA.MATAMSHI.M8_MAT_SWAP_T9",
+     "listen_for": [
+      "shaka"
+     ],
+     "ask": "Neno \"chaka\" lina maana gani, na \"shaka\" lina maana gani?",
+     "repair": "\"chaka\" ni a thicket; \"shaka\" ni doubt. Sauti moja hubadilisha maana."
+    },
+    {
+     "code": "KISW.G8.KUSIKI.T9_KUSIKILIZA_KWA_KINA.MATAMSHI.M8_MAT_SPELL_T9",
+     "listen_for": [
+      "shali"
+     ],
+     "ask": "Ukiandika \"shali\", msomaji ataelewa nini?",
+     "repair": "Neno lenye maana ya \"lying on one's back\" ni \"chali\". \"shali\" lina maana ya \"a shawl\"."
+    },
+    {
+     "code": "KISW.G8.KUSIKI.T9_KUSIKILIZA_KWA_KINA.MATAMSHI.M8_MAT_SAME_T9",
+     "listen_for": [
+      "ndiyo"
+     ],
+     "ask": "Ukibadilisha neno moja kwa jingine katika sentensi, maana inabaki ileile?",
+     "repair": "Hapana. \"chali\" ni lying on one's back, na \"shali\" ni a shawl."
+    },
+    {
+     "code": "KISW.G8.KUSIKI.T9_KUSIKILIZA_KWA_KINA.MATAMSHI.M8_MAT_TWISTER_T9",
+     "listen_for": [
+      "Mnunuzi aangalie tarehe ya mwisho wa matumizi."
+     ],
+     "ask": "Ni sauti gani zinarudiwa katika sentensi hii?",
+     "repair": "Kitanzandimi hurudia sauti zinazokaribiana, kama /ch/ na /sh/, ili kiwe kigumu kutamka."
+    },
+    {
+     "code": "KISW.G8.KUSIKI.T9_KUSIKILIZA_KWA_KINA.MATAMSHI.M8_MAT_SYLL_T9",
+     "listen_for": [
+      "c-haka"
+     ],
+     "ask": "Kila silabi inaishia kwa herufi gani?",
+     "repair": "Kila silabi ya Kiswahili huishia kwa irabu: cha-ka."
+    }
+   ],
+   "checks": [
+    {
+     "question": "Andika neno lenye maana ya \"a shawl\".",
+     "answer": "shali",
+     "shows": "spelling by meaning"
+    },
+    {
+     "question": "Ni kipi ni kitanzandimi?",
+     "answer": "Shaban alishangaa chai ya Shani ilichemka chini ya shamba la Chacha.",
+     "shows": "kitanzandimi"
+    }
+   ]
+  }
+ ]
+}

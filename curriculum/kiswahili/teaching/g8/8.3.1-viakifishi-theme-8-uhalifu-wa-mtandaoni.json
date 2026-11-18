@@ -1,0 +1,99 @@
+{
+ "sub_strand": "KISW.G8.KUANDI.T8_VIAKIFISHI",
+ "title": "Viakifishi (Theme 8: Uhalifu wa mtandaoni)",
+ "status": "draft: written 18 Nov 2026 offline for Grade 8 Kiswahili; not yet checked by a native Kiswahili teacher; not loaded by the live tutor",
+ "sources": [],
+ "notes": "",
+ "skills": [
+  {
+   "skill": "KISW.G8.KUANDI.T8_VIAKIFISHI.MTAJO_MSHAZARI",
+   "key_step": "The child uses alama za mtajo for speech, titles and quoted words, and the mshazari for choices (na/au) and dates (12/11/2026).",
+   "floor": {
+    "prerequisite": "Uses speech marks.",
+    "question": "Andika vizuri: Mama alisema njoo",
+    "answer": "Mama alisema, \"Njoo.\""
+   },
+   "representations": [
+    "sentences with titles and dates",
+    "a mark chart",
+    "a checklist"
+   ],
+   "steps": [
+    "Is it speech, a title or a quoted word?",
+    "Use the alama za mtajo.",
+    "A choice or a date? Use the mshazari.",
+    "Read it."
+   ],
+   "contexts": [
+    "cyber crime: \"Usibofye kiungo!\"",
+    "a book report",
+    "a form"
+   ],
+   "board": [
+    {
+     "beat": "write",
+     "do": "Andika tarehe: 5 Machi 2026"
+    },
+    {
+     "beat": "point",
+     "do": "Point at the date.",
+     "say": "Mshazari unatumikaje?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for the child to answer before saying anything."
+    },
+    {
+     "beat": "child_draws",
+     "do": "The child writes \"5/3/2026\" and one title in marks."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "KISW.G8.KUANDI.T8_VIAKIFISHI.MTAJO_MSHAZARI.M_KS8_MM_MTAJO",
+     "listen_for": [
+      "mshazari"
+     ],
+     "ask": "Soma tena: \"Ni alama ipi hunukuu maneno halisi ya mtu?\" Kwa nini \"mshazari\" si jibu sahihi?",
+     "repair": "Alama za mtajo hunukuu maneno halisi."
+    },
+    {
+     "code": "KISW.G8.KUANDI.T8_VIAKIFISHI.MTAJO_MSHAZARI.M_KS8_MM_MSHAZARI",
+     "listen_for": [
+      "koma"
+     ],
+     "ask": "Soma tena: \"Ni alama ipi hutenga machaguo kama ama/au?\" Kwa nini \"koma\" si jibu sahihi?",
+     "repair": "Mshazari hutenga machaguo."
+    },
+    {
+     "code": "KISW.G8.KUANDI.T8_VIAKIFISHI.MTAJO_MSHAZARI.M_KS8_MM_TAREHE",
+     "listen_for": [
+      "12.11.2026"
+     ],
+     "ask": "Soma tena: \"Ni tarehe ipi imeandikwa kwa mshazari?\" Kwa nini \"12.11.2026\" si jibu sahihi?",
+     "repair": "Mshazari hutumika katika tarehe."
+    },
+    {
+     "code": "KISW.G8.KUANDI.T8_VIAKIFISHI.MTAJO_MSHAZARI.M8_MM_TITLE",
+     "listen_for": [
+      "Nilisoma kitabu cha Kilio cha Msitu."
+     ],
+     "ask": "Jina la kitabu limetofautishwa vipi?",
+     "repair": "Weka jina la kitabu katika alama za mtajo."
+    }
+   ],
+   "checks": [
+    {
+     "question": "Andika vizuri: wanafunzi na au walimu",
+     "answer": "wanafunzi na/au walimu",
+     "shows": "mshazari"
+    },
+    {
+     "question": "Andika vizuri jina la kitabu: Kisima cha Matumaini",
+     "answer": "\"Kisima cha Matumaini\"",
+     "shows": "title"
+    }
+   ]
+  }
+ ]
+}

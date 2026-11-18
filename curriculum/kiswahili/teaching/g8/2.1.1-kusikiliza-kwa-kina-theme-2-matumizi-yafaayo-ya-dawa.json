@@ -1,0 +1,107 @@
+{
+ "sub_strand": "KISW.G8.KUSIKI.T2_KUSIKILIZA_KWA_KINA",
+ "title": "Kusikiliza kwa Kina (Theme 2: Matumizi yafaayo ya dawa)",
+ "status": "draft: written 18 Nov 2026 offline for Grade 8 Kiswahili; not yet checked by a native Kiswahili teacher; not loaded by the live tutor",
+ "sources": [],
+ "notes": "",
+ "skills": [
+  {
+   "skill": "KISW.G8.KUSIKI.T2_KUSIKILIZA_KWA_KINA.MATAMSHI",
+   "key_step": "The child hears the one feature that separates /gh/ na /g/ and checks the meaning of the word before writing it.",
+   "floor": {
+    "prerequisite": "Says the five vowels and reads open syllables (ba, be, bi, bo, bu).",
+    "question": "Soma: gha-li",
+    "answer": "ghali"
+   },
+   "representations": [
+    "a pair card: ghali / gali",
+    "a hand on the throat to feel the voice (or the lips for a nasal)",
+    "a picture for each meaning (expensive, not a Kiswahili word (a spelling error))"
+   ],
+   "steps": [
+    "Listen to the whole word.",
+    "Ask: which sound, /gh/ or /g/?",
+    "Think of the meaning in the sentence.",
+    "Write it and read it back."
+   ],
+   "contexts": [
+    "matumizi yafaayo ya dawa",
+    "a class reading aloud",
+    "a word game in the playground"
+   ],
+   "board": [
+    {
+     "beat": "write",
+     "do": "ghali - gali"
+    },
+    {
+     "beat": "point",
+     "do": "Point at the first letter of each word.",
+     "say": "Neno lipi lina maana ya \"expensive\"?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for the child to answer before saying anything."
+    },
+    {
+     "beat": "child_draws",
+     "do": "The child writes both words under their pictures and says each one."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "KISW.G8.KUSIKI.T2_KUSIKILIZA_KWA_KINA.MATAMSHI.M8_MAT_SWAP_T2",
+     "listen_for": [
+      "gali"
+     ],
+     "ask": "Neno \"ghali\" lina maana gani, na \"gali\" lina maana gani?",
+     "repair": "\"ghali\" ni expensive; \"gali\" ni not a Kiswahili word (a spelling error). Sauti moja hubadilisha maana."
+    },
+    {
+     "code": "KISW.G8.KUSIKI.T2_KUSIKILIZA_KWA_KINA.MATAMSHI.M8_MAT_SPELL_T2",
+     "listen_for": [
+      "luga"
+     ],
+     "ask": "Ukiandika \"luga\", msomaji ataelewa nini?",
+     "repair": "Neno lenye maana ya \"a language\" ni \"lugha\". \"luga\" lina maana ya \"not a Kiswahili word (a spelling error)\"."
+    },
+    {
+     "code": "KISW.G8.KUSIKI.T2_KUSIKILIZA_KWA_KINA.MATAMSHI.M8_MAT_SAME_T2",
+     "listen_for": [
+      "ndiyo"
+     ],
+     "ask": "Ukibadilisha neno moja kwa jingine katika sentensi, maana inabaki ileile?",
+     "repair": "Hapana. \"lugha\" ni a language, na \"luga\" ni not a Kiswahili word (a spelling error)."
+    },
+    {
+     "code": "KISW.G8.KUSIKI.T2_KUSIKILIZA_KWA_KINA.MATAMSHI.M8_MAT_TWISTER_T2",
+     "listen_for": [
+      "Meza dawa kwa kufuata maagizo ya daktari."
+     ],
+     "ask": "Ni sauti gani zinarudiwa katika sentensi hii?",
+     "repair": "Kitanzandimi hurudia sauti zinazokaribiana, kama /gh/ na /g/, ili kiwe kigumu kutamka."
+    },
+    {
+     "code": "KISW.G8.KUSIKI.T2_KUSIKILIZA_KWA_KINA.MATAMSHI.M8_MAT_SYLL_T2",
+     "listen_for": [
+      "g-hali"
+     ],
+     "ask": "Kila silabi inaishia kwa herufi gani?",
+     "repair": "Kila silabi ya Kiswahili huishia kwa irabu: gha-li."
+    }
+   ],
+   "checks": [
+    {
+     "question": "Andika neno lenye maana ya \"not a Kiswahili word (a spelling error)\".",
+     "answer": "luga",
+     "shows": "spelling by meaning"
+    },
+    {
+     "question": "Ni kipi ni kitanzandimi?",
+     "answer": "Ghafla Ghalib aligharimika gharama ghali ya dawa ya ghala.",
+     "shows": "kitanzandimi"
+    }
+   ]
+  }
+ ]
+}

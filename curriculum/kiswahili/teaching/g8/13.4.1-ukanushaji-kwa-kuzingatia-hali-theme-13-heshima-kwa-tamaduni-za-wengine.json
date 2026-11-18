@@ -1,0 +1,99 @@
+{
+ "sub_strand": "KISW.G8.SARUFI.T13_UKANUSHAJI_KWA_KUZIN",
+ "title": "Ukanushaji kwa Kuzingatia Hali (Theme 13: Heshima kwa tamaduni za wengine)",
+ "status": "draft: written 18 Nov 2026 offline for Grade 8 Kiswahili; not yet checked by a native Kiswahili teacher; not loaded by the live tutor",
+ "sources": [],
+ "notes": "",
+ "skills": [
+  {
+   "skill": "KISW.G8.SARUFI.T13_UKANUSHAJI_KWA_KUZIN.UKANUSHAJI_TIMILIFU",
+   "key_step": "The child explains negation and negates hu- (habit) with ha-...-i and -me- (perfect) with -ja-.",
+   "floor": {
+    "prerequisite": "Negates the tenses.",
+    "question": "Kanusha: Amesoma.",
+    "answer": "Hajasoma"
+   },
+   "representations": [
+    "a negation table with hu- and -me-",
+    "positive/negative pairs",
+    "colour for each part"
+   ],
+   "steps": [
+    "Find hu- or -me-.",
+    "hu-: ha- + stem + -i.",
+    "-me-: ha- + -ja-.",
+    "Read it."
+   ],
+   "contexts": [
+    "respect for other cultures",
+    "class rules",
+    "a farm diary"
+   ],
+   "board": [
+    {
+     "beat": "write",
+     "do": "Wao hula nyama -> ___"
+    },
+    {
+     "beat": "point",
+     "do": "Point at \"hu-\".",
+     "say": "Inakanushwaje?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for the child to answer before saying anything."
+    },
+    {
+     "beat": "child_draws",
+     "do": "The child writes \"Wao hawali nyama\" and the negative of \"Wamefika\"."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "KISW.G8.SARUFI.T13_UKANUSHAJI_KWA_KUZIN.UKANUSHAJI_TIMILIFU.M_KS8_UT_TIMILIFU",
+     "listen_for": [
+      "Hakufika"
+     ],
+     "ask": "Soma tena: \"Kanusha: Amefika.\" Kwa nini \"Hakufika\" si jibu sahihi?",
+     "repair": "Timilifu hukanushwa kwa ha-ja-."
+    },
+    {
+     "code": "KISW.G8.SARUFI.T13_UKANUSHAJI_KWA_KUZIN.UKANUSHAJI_TIMILIFU.M_KS8_UT_MAZOEA",
+     "listen_for": [
+      "Hahufika"
+     ],
+     "ask": "Soma tena: \"Kanusha: Hufika.\" Kwa nini \"Hahufika\" si jibu sahihi?",
+     "repair": "Hali ya mazoea hukanushwa kwa hafiki."
+    },
+    {
+     "code": "KISW.G8.SARUFI.T13_UKANUSHAJI_KWA_KUZIN.UKANUSHAJI_TIMILIFU.M_KS8_UT_WINGI",
+     "listen_for": [
+      "Hawakufika"
+     ],
+     "ask": "Soma tena: \"Kanusha: Wamefika.\" Kwa nini \"Hawakufika\" si jibu sahihi?",
+     "repair": "Wingi ni hawajafika."
+    },
+    {
+     "code": "KISW.G8.SARUFI.T13_UKANUSHAJI_KWA_KUZIN.UKANUSHAJI_TIMILIFU.M8_UT_HU_SI",
+     "listen_for": [
+      "Yeye si huenda sokoni kila Jumamosi."
+     ],
+     "ask": "Tunakanushaje \"huenda\"?",
+     "repair": "Hali ya mazoea hukanushwa kwa ha-...-i: haendi."
+    }
+   ],
+   "checks": [
+    {
+     "question": "Kanusha: Tumeelewa.",
+     "answer": "Hatujaelewa",
+     "shows": "perfect"
+    },
+    {
+     "question": "Kanusha: Mama hupika kila siku.",
+     "answer": "Mama hapiki kila siku",
+     "shows": "habit"
+    }
+   ]
+  }
+ ]
+}

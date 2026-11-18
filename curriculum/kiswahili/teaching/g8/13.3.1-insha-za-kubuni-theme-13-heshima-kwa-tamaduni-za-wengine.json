@@ -1,0 +1,99 @@
+{
+ "sub_strand": "KISW.G8.KUANDI.T13_INSHA_ZA_KUBUNI",
+ "title": "Insha za Kubuni (Theme 13: Heshima kwa tamaduni za wengine)",
+ "status": "draft: written 18 Nov 2026 offline for Grade 8 Kiswahili; not yet checked by a native Kiswahili teacher; not loaded by the live tutor",
+ "sources": [],
+ "notes": "",
+ "skills": [
+  {
+   "skill": "KISW.G8.KUANDI.T13_INSHA_ZA_KUBUNI.MAELEZO_MAHALI",
+   "key_step": "The child plans insha ya maelezo before writing: the parts in order, then one idea at a time, then checks it against the type.",
+   "floor": {
+    "prerequisite": "Writes a correct sentence with a capital letter and a kikomo.",
+    "question": "Andika sentensi moja kuhusu shule yako.",
+    "answer": "Shule yetu ina madarasa kumi."
+   },
+   "representations": [
+    "a model text with its parts labelled",
+    "a three-box plan (mwanzo, kiini, mwisho)",
+    "a checklist for the type"
+   ],
+   "steps": [
+    "Read the title and say the type.",
+    "Plan the parts.",
+    "Write one idea per paragraph.",
+    "Check against the checklist and correct."
+   ],
+   "contexts": [
+    "soko la kongowea asubuhi",
+    "the class magazine",
+    "a letter or story for a family member"
+   ],
+   "board": [
+    {
+     "beat": "write",
+     "do": "Soko la Kongowea Asubuhi"
+    },
+    {
+     "beat": "point",
+     "do": "Point at the title.",
+     "say": "Insha hii ni ya aina gani, na itakuwa na sehemu zipi?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for the child to answer before saying anything."
+    },
+    {
+     "beat": "child_draws",
+     "do": "The child fills the three-box plan for \"Soko la Kongowea Asubuhi\"."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "KISW.G8.KUANDI.T13_INSHA_ZA_KUBUNI.MAELEZO_MAHALI.M8_INS_DETAIL_T13",
+     "listen_for": [
+      "Soko lilikuwa kubwa."
+     ],
+     "ask": "Msomaji anaona nini akisoma sentensi hii?",
+     "repair": "Tumia vivumishi na maelezo ya rangi, umbo, ukubwa na sauti ili msomaji aone picha."
+    },
+    {
+     "code": "KISW.G8.KUANDI.T13_INSHA_ZA_KUBUNI.MAELEZO_MAHALI.M8_INS_LUGHA_T13",
+     "listen_for": [
+      "Soko lilikuwa kubwa."
+     ],
+     "ask": "Sentensi hii inajenga picha gani?",
+     "repair": "Tumia tashbihi, sitiari, methali au nahau kufanya insha iwe hai."
+    },
+    {
+     "code": "KISW.G8.KUANDI.T13_INSHA_ZA_KUBUNI.MAELEZO_MAHALI.M8_INS_PARAS_T13",
+     "listen_for": [
+      "aya moja ndefu"
+     ],
+     "ask": "Aya yako ya kwanza inafanya kazi gani?",
+     "repair": "Insha ina utangulizi, kiini chenye aya kadhaa, na hitimisho."
+    },
+    {
+     "code": "KISW.G8.KUANDI.T13_INSHA_ZA_KUBUNI.MAELEZO_MAHALI.M8_INS_MSAMIATI_T13",
+     "listen_for": [
+      "Soko lilikuwa kubwa."
+     ],
+     "ask": "Neno mahususi zaidi ni lipi?",
+     "repair": "Tumia neno mahususi badala ya maneno ya jumla."
+    }
+   ],
+   "checks": [
+    {
+     "question": "Ni sentensi ipi inafaa katika insha ya maelezo kuhusu \"Soko la Kongowea Asubuhi\"?",
+     "answer": "Harufu ya maembe mabivu na samaki wabichi iliyajaza mabanda yaliyosongamana.",
+     "shows": "type"
+    },
+    {
+     "question": "Insha ya maelezo ina sehemu zipi?",
+     "answer": "utangulizi, kiini, hitimisho",
+     "shows": "parts"
+    }
+   ]
+  }
+ ]
+}

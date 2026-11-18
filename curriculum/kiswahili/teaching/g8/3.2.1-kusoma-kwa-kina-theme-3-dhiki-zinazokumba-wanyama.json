@@ -1,0 +1,99 @@
+{
+ "sub_strand": "KISW.G8.KUSOMA.T3_KUSOMA_KWA_KINA",
+ "title": "Kusoma kwa Kina (Theme 3: Dhiki zinazokumba wanyama)",
+ "status": "draft: written 18 Nov 2026 offline for Grade 8 Kiswahili; not yet checked by a native Kiswahili teacher; not loaded by the live tutor",
+ "sources": [],
+ "notes": "",
+ "skills": [
+  {
+   "skill": "KISW.G8.KUSOMA.T3_KUSOMA_KWA_KINA.TAMTHILIA_UTANZU",
+   "key_step": "The child names the utanzu with the right term, proves each point with a line or event from \"Kilio cha Msitu\", and says what it does in the work.",
+   "floor": {
+    "prerequisite": "Answers comprehension questions from a passage.",
+    "question": "Jibu linatoka wapi?",
+    "answer": "katika matini"
+   },
+   "representations": [
+    "the class tamthilia \"Kilio cha Msitu\" with key pages marked",
+    "a point-evidence-importance frame (hoja, ushahidi, umuhimu)",
+    "a chart of terms"
+   ],
+   "steps": [
+    "Read the question and the term.",
+    "Find the part of the work.",
+    "Write the point with its evidence.",
+    "Say why it matters."
+   ],
+   "contexts": [
+    "dhiki zinazokumba wanyama",
+    "the class tamthilia",
+    "a school drama or poetry festival"
+   ],
+   "board": [
+    {
+     "beat": "write",
+     "do": "Kilio cha Msitu"
+    },
+    {
+     "beat": "point",
+     "do": "Point at the chosen page.",
+     "say": "Ni utanzu gani linajitokeza hapa?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for the child to answer before saying anything."
+    },
+    {
+     "beat": "child_draws",
+     "do": "The child writes one point with its evidence and its importance in the frame."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "KISW.G8.KUSOMA.T3_KUSOMA_KWA_KINA.TAMTHILIA_UTANZU.M8_FAS_GENRE_T3",
+     "listen_for": [
+      "husimuliwa na msimulizi bila mazungumzo"
+     ],
+     "ask": "Sifa hii inapatikana katika tamthilia au katika novela?",
+     "repair": "Tamthilia huandikwa kwa mazungumzo ili iigizwe."
+    },
+    {
+     "code": "KISW.G8.KUSOMA.T3_KUSOMA_KWA_KINA.TAMTHILIA_UTANZU.M8_FAS_ORAL_T3",
+     "listen_for": [
+      "fasihi simulizi"
+     ],
+     "ask": "Kazi hii ina mwandishi anayejulikana?",
+     "repair": "Tamthilia ni fasihi andishi: imeandikwa na mwandishi anayejulikana."
+    },
+    {
+     "code": "KISW.G8.KUSOMA.T3_KUSOMA_KWA_KINA.TAMTHILIA_UTANZU.M8_FAS_ONEFEATURE_T3",
+     "listen_for": [
+      "ni mchezo"
+     ],
+     "ask": "Maana yako inataja muundo na lengo pia?",
+     "repair": "Maana kamili ya tamthilia hutaja aina yake, muundo wake na lengo lake."
+    },
+    {
+     "code": "KISW.G8.KUSOMA.T3_KUSOMA_KWA_KINA.TAMTHILIA_UTANZU.M8_FAS_AUTHOR_T3",
+     "listen_for": [
+      "Bi. Zuhura"
+     ],
+     "ask": "Jina la mwandishi liko wapi kitabuni?",
+     "repair": "Mwandishi ni mtunzi; msimulizi na wahusika ni sehemu ya kazi."
+    }
+   ],
+   "checks": [
+    {
+     "question": "Ni sifa ipi ni ya tamthilia?",
+     "answer": "huandikwa kwa mazungumzo ya wahusika ili iigizwe jukwaani",
+     "shows": "utanzu"
+    },
+    {
+     "question": "Tamthilia ni utanzu wa fasihi ipi?",
+     "answer": "fasihi andishi",
+     "shows": "utanzu, second form"
+    }
+   ]
+  }
+ ]
+}

@@ -1,0 +1,99 @@
+{
+ "sub_strand": "KISW.G8.SARUFI.T14_UDOGO_WA_NOMINO",
+ "title": "Udogo wa Nomino (Theme 14: Kuweka akiba)",
+ "status": "draft: written 18 Nov 2026 offline for Grade 8 Kiswahili; not yet checked by a native Kiswahili teacher; not loaded by the live tutor",
+ "sources": [],
+ "notes": "",
+ "skills": [
+  {
+   "skill": "KISW.G8.SARUFI.T14_UDOGO_WA_NOMINO.UDOGO",
+   "key_step": "The child makes the small form (ki-/kiji-) of a noun and gives it KI-VI agreement in a sentence.",
+   "floor": {
+    "prerequisite": "Makes big forms.",
+    "question": "Ukubwa wa \"mbwa\" ni?",
+    "answer": "jibwa"
+   },
+   "representations": [
+    "three-size pictures",
+    "rule cards by noun type",
+    "KI-VI chain"
+   ],
+   "steps": [
+    "Look at the noun type.",
+    "Make the small form.",
+    "Use KI-VI agreement.",
+    "Make the plural with vi-."
+   ],
+   "contexts": [
+    "saving (kuweka akiba): kibubu kidogo",
+    "a village",
+    "a baby animal"
+   ],
+   "board": [
+    {
+     "beat": "write",
+     "do": "mto -> ___"
+    },
+    {
+     "beat": "point",
+     "do": "Point at \"mto\".",
+     "say": "Udogo wake ni upi?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for the child to answer before saying anything."
+    },
+    {
+     "beat": "child_draws",
+     "do": "The child writes \"kijito\" and \"Kijito kimekauka\"."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "KISW.G8.SARUFI.T14_UDOGO_WA_NOMINO.UDOGO.M_KS8_UD_KIJIJI",
+     "listen_for": [
+      "mji mkubwa"
+     ],
+     "ask": "Soma tena: \"Kijiji ni nini?\" Kwa nini \"mji mkubwa\" si jibu sahihi?",
+     "repair": "Kijiji ni mji mdogo."
+    },
+    {
+     "code": "KISW.G8.SARUFI.T14_UDOGO_WA_NOMINO.UDOGO.M_KS8_UD_KIJITI",
+     "listen_for": [
+      "mti mkubwa"
+     ],
+     "ask": "Soma tena: \"Kijiti ni nini?\" Kwa nini \"mti mkubwa\" si jibu sahihi?",
+     "repair": "Kijiti ni mti mdogo."
+    },
+    {
+     "code": "KISW.G8.SARUFI.T14_UDOGO_WA_NOMINO.UDOGO.M_KS8_UD_KIAMBISHI",
+     "listen_for": [
+      "ji-"
+     ],
+     "ask": "Soma tena: \"Ni kiambishi kipi cha udogo?\" Kwa nini \"ji-\" si jibu sahihi?",
+     "repair": "Udogo hutumia ki-."
+    },
+    {
+     "code": "KISW.G8.SARUFI.T14_UDOGO_WA_NOMINO.UDOGO.M8_UD_AGREE",
+     "listen_for": [
+      "analia"
+     ],
+     "ask": "Kitoto kiko katika ngeli ipi?",
+     "repair": "Udogo huchukua upatanisho wa KI-VI."
+    }
+   ],
+   "checks": [
+    {
+     "question": "Udogo wa \"mlima\" ni?",
+     "answer": "kilima",
+     "shows": "small form"
+    },
+    {
+     "question": "Jaza: Vijiji ___ (-dogo) ___ (endelea).",
+     "answer": "vidogo vinaendelea",
+     "shows": "agreement"
+    }
+   ]
+  }
+ ]
+}

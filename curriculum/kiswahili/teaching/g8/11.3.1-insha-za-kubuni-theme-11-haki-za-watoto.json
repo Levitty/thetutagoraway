@@ -1,0 +1,99 @@
+{
+ "sub_strand": "KISW.G8.KUANDI.T11_INSHA_ZA_KUBUNI",
+ "title": "Insha za Kubuni (Theme 11: Haki za watoto)",
+ "status": "draft: written 18 Nov 2026 offline for Grade 8 Kiswahili; not yet checked by a native Kiswahili teacher; not loaded by the live tutor",
+ "sources": [],
+ "notes": "",
+ "skills": [
+  {
+   "skill": "KISW.G8.KUANDI.T11_INSHA_ZA_KUBUNI.MAELEZO_VIPENGELE",
+   "key_step": "The child plans insha ya maelezo before writing: the parts in order, then one idea at a time, then checks it against the type.",
+   "floor": {
+    "prerequisite": "Writes a correct sentence with a capital letter and a kikomo.",
+    "question": "Andika sentensi moja kuhusu shule yako.",
+    "answer": "Shule yetu ina madarasa kumi."
+   },
+   "representations": [
+    "a model text with its parts labelled",
+    "a three-box plan (mwanzo, kiini, mwisho)",
+    "a checklist for the type"
+   ],
+   "steps": [
+    "Read the title and say the type.",
+    "Plan the parts.",
+    "Write one idea per paragraph.",
+    "Check against the checklist and correct."
+   ],
+   "contexts": [
+    "haki za mtoto shuleni",
+    "the class magazine",
+    "a letter or story for a family member"
+   ],
+   "board": [
+    {
+     "beat": "write",
+     "do": "Haki za Mtoto Shuleni"
+    },
+    {
+     "beat": "point",
+     "do": "Point at the title.",
+     "say": "Insha hii ni ya aina gani, na itakuwa na sehemu zipi?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for the child to answer before saying anything."
+    },
+    {
+     "beat": "child_draws",
+     "do": "The child fills the three-box plan for \"Haki za Mtoto Shuleni\"."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "KISW.G8.KUANDI.T11_INSHA_ZA_KUBUNI.MAELEZO_VIPENGELE.M8_INS_PARAS_T11",
+     "listen_for": [
+      "aya moja ndefu"
+     ],
+     "ask": "Aya yako ya kwanza inafanya kazi gani?",
+     "repair": "Insha ina utangulizi, kiini chenye aya kadhaa, na hitimisho."
+    },
+    {
+     "code": "KISW.G8.KUANDI.T11_INSHA_ZA_KUBUNI.MAELEZO_VIPENGELE.M8_INS_MSAMIATI_T11",
+     "listen_for": [
+      "Watoto wana haki nyingi."
+     ],
+     "ask": "Neno mahususi zaidi ni lipi?",
+     "repair": "Tumia neno mahususi badala ya maneno ya jumla."
+    },
+    {
+     "code": "KISW.G8.KUANDI.T11_INSHA_ZA_KUBUNI.MAELEZO_VIPENGELE.M8_INS_OFFTOPIC_T11",
+     "listen_for": [
+      "Rafiki yangu ana baiskeli mpya ya rangi ya bluu."
+     ],
+     "ask": "Sentensi hii inahusiana vipi na anwani?",
+     "repair": "Kila sentensi ya insha inapaswa kuhusu anwani."
+    },
+    {
+     "code": "KISW.G8.KUANDI.T11_INSHA_ZA_KUBUNI.MAELEZO_VIPENGELE.M8_INS_STORY_T11",
+     "listen_for": [
+      "Siku moja tulienda sokoni tukapotea."
+     ],
+     "ask": "Sentensi hii inaeleza au inasimulia?",
+     "repair": "Insha ya maelezo hueleza jambo lilivyo au jinsi linavyofanywa, si matukio ya siku moja."
+    }
+   ],
+   "checks": [
+    {
+     "question": "Ni sentensi ipi inafaa katika insha ya maelezo kuhusu \"Haki za Mtoto Shuleni\"?",
+     "answer": "Kila mtoto ana haki ya kusoma katika mazingira salama bila kuadhibiwa kikatili.",
+     "shows": "type"
+    },
+    {
+     "question": "Insha ya maelezo ina sehemu zipi?",
+     "answer": "utangulizi, kiini, hitimisho",
+     "shows": "parts"
+    }
+   ]
+  }
+ ]
+}

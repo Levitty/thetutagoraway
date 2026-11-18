@@ -1,0 +1,99 @@
+{
+ "sub_strand": "KISW.G8.SARUFI.T8_NGELI_NA_UPATANISHO_",
+ "title": "Ngeli na Upatanisho wa Kisarufi (Theme 8: Uhalifu wa mtandaoni)",
+ "status": "draft: written 18 Nov 2026 offline for Grade 8 Kiswahili; not yet checked by a native Kiswahili teacher; not loaded by the live tutor",
+ "sources": [],
+ "notes": "",
+ "skills": [
+  {
+   "skill": "KISW.G8.SARUFI.T8_NGELI_NA_UPATANISHO_.NGELI_IZI",
+   "key_step": "The child uses I-ZI agreement (i- one, zi- many) for N-nouns that are things, and A-WA for N-nouns that are animals.",
+   "floor": {
+    "prerequisite": "Uses I-ZI agreement.",
+    "question": "Nyumba ___ (jengwa).",
+    "answer": "imejengwa"
+   },
+   "representations": [
+    "things and animals with N-",
+    "a class table",
+    "agreement chains"
+   ],
+   "steps": [
+    "Find the noun.",
+    "Thing or animal?",
+    "Thing: i-/zi-; animal: a-/wa-.",
+    "Agree every word."
+   ],
+   "contexts": [
+    "cyber crime: simu, kompyuta, programu",
+    "a farm",
+    "an office"
+   ],
+   "board": [
+    {
+     "beat": "write",
+     "do": "Simu ___ (yangu) ___ (ibiwa)."
+    },
+    {
+     "beat": "point",
+     "do": "Point at \"Simu\".",
+     "say": "Ni kitu au kiumbe hai?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for the child to answer before saying anything."
+    },
+    {
+     "beat": "child_draws",
+     "do": "The child writes \"Simu yangu imeibiwa\" and \"Simu zetu zimeibiwa\"."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "KISW.G8.SARUFI.T8_NGELI_NA_UPATANISHO_.NGELI_IZI.M_KS8_GI_UMOJA",
+     "listen_for": [
+      "Nyumba zinapendeza."
+     ],
+     "ask": "Soma tena: \"Chagua sentensi sahihi.\" Kwa nini \"Nyumba zinapendeza.\" si jibu sahihi?",
+     "repair": "Umoja wa I-ZI hutumia i-."
+    },
+    {
+     "code": "KISW.G8.SARUFI.T8_NGELI_NA_UPATANISHO_.NGELI_IZI.M_KS8_GI_WINGI",
+     "listen_for": [
+      "Nyumba inapendeza sana."
+     ],
+     "ask": "Soma tena: \"Chagua sentensi sahihi kwa wingi.\" Kwa nini \"Nyumba inapendeza sana.\" si jibu sahihi?",
+     "repair": "Wingi wa I-ZI hutumia zi-."
+    },
+    {
+     "code": "KISW.G8.SARUFI.T8_NGELI_NA_UPATANISHO_.NGELI_IZI.M_KS8_GI_NOMINO",
+     "listen_for": [
+      "mtoto"
+     ],
+     "ask": "Soma tena: \"Ni nomino ipi ni ya ngeli ya I-ZI?\" Kwa nini \"mtoto\" si jibu sahihi?",
+     "repair": "Meza ni ya I-ZI."
+    },
+    {
+     "code": "KISW.G8.SARUFI.T8_NGELI_NA_UPATANISHO_.NGELI_IZI.M8_GI_ANIMAL",
+     "listen_for": [
+      "inaruka"
+     ],
+     "ask": "Ndege ni kiumbe hai?",
+     "repair": "Wanyama na ndege huchukua upatanisho wa A-WA."
+    }
+   ],
+   "checks": [
+    {
+     "question": "Jaza: Kompyuta ___ (-pya) ___ (fika).",
+     "answer": "mpya zimefika",
+     "shows": "plural chain"
+    },
+    {
+     "question": "Jaza: Ng'ombe ___ (lala).",
+     "answer": "amelala",
+     "shows": "animal"
+    }
+   ]
+  }
+ ]
+}

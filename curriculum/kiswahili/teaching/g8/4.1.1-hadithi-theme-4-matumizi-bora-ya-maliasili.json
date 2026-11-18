@@ -1,0 +1,99 @@
+{
+ "sub_strand": "KISW.G8.KUSIKI.T4_HADITHI",
+ "title": "Hadithi (Theme 4: Matumizi bora ya maliasili)",
+ "status": "draft: written 18 Nov 2026 offline for Grade 8 Kiswahili; not yet checked by a native Kiswahili teacher; not loaded by the live tutor",
+ "sources": [],
+ "notes": "",
+ "skills": [
+  {
+   "skill": "KISW.G8.KUSIKI.T4_HADITHI.VISASILI",
+   "key_step": "The child places the hadithi in its kind and occasion, explains its uwasilishaji with an example, and presents it with the audience taking part.",
+   "floor": {
+    "prerequisite": "Tells a riddle or a story with the formula.",
+    "question": "Kitendawili! - ?",
+    "answer": "Tega!"
+   },
+   "representations": [
+    "a recording or a performance of \"Kwa nini kinyonga hutembea polepole\"",
+    "a chart: aina, tukio, lengo",
+    "a point-and-example frame"
+   ],
+   "steps": [
+    "Listen to or read the text.",
+    "Name its kind and occasion.",
+    "Explain its uwasilishaji with an example.",
+    "Present it with the audience."
+   ],
+   "contexts": [
+    "matumizi bora ya maliasili",
+    "a cultural festival",
+    "an evening of stories at home"
+   ],
+   "board": [
+    {
+     "beat": "write",
+     "do": "Kwa nini kinyonga hutembea polepole"
+    },
+    {
+     "beat": "point",
+     "do": "Point at the line.",
+     "say": "Hii ni hadithi ya aina gani, na inatumika lini?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for the child to answer before saying anything."
+    },
+    {
+     "beat": "child_draws",
+     "do": "The child presents a short piece with the class responding."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "KISW.G8.KUSIKI.T4_HADITHI.VISASILI.M8_FSI_FORMULA_T4",
+     "listen_for": [
+      "anaanza moja kwa moja na kisa"
+     ],
+     "ask": "Hadhira inajuaje kwamba utungo unaanza?",
+     "repair": "Anza kwa fomula: \"Paukwa!\" - \"Pakawa!\""
+    },
+    {
+     "code": "KISW.G8.KUSIKI.T4_HADITHI.VISASILI.M8_FSI_FLAT_T4",
+     "listen_for": [
+      "moja tangu mwanzo hadi mwisho"
+     ],
+     "ask": "Mhusika huyu angesemaje?",
+     "repair": "Badilisha sauti kulingana na mhusika na hisia."
+    },
+    {
+     "code": "KISW.G8.KUSIKI.T4_HADITHI.VISASILI.M8_FSI_GESTURE_T4",
+     "listen_for": [
+      "kushika kichwa"
+     ],
+     "ask": "Ishara hii inaonyesha nini?",
+     "repair": "Ishara ziendane na maneno."
+    },
+    {
+     "code": "KISW.G8.KUSIKI.T4_HADITHI.VISASILI.M8_FSI_NOAUDIENCE_T4",
+     "listen_for": [
+      "chini au mwalimu peke yake"
+     ],
+     "ask": "Hadhira yako inahusika vipi?",
+     "repair": "Iangalie na uishirikishe hadhira yote."
+    }
+   ],
+   "checks": [
+    {
+     "question": "Msimulizi anaanzaje?",
+     "answer": "\"Paukwa!\" na hadhira hujibu \"Pakawa!\"",
+     "shows": "uwasilishaji"
+    },
+    {
+     "question": "Ni ishara ipi inafaa unapotaja \"mlima mrefu\"?",
+     "answer": "kuinua mkono juu juu",
+     "shows": "uwasilishaji, use"
+    }
+   ]
+  }
+ ]
+}

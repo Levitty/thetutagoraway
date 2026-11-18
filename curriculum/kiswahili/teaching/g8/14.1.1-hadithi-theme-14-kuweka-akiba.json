@@ -1,0 +1,99 @@
+{
+ "sub_strand": "KISW.G8.KUSIKI.T14_HADITHI",
+ "title": "Hadithi (Theme 14: Kuweka akiba)",
+ "status": "draft: written 18 Nov 2026 offline for Grade 8 Kiswahili; not yet checked by a native Kiswahili teacher; not loaded by the live tutor",
+ "sources": [],
+ "notes": "",
+ "skills": [
+  {
+   "skill": "KISW.G8.KUSIKI.T14_HADITHI.LUGHA_HADITHI",
+   "key_step": "The child places the hadithi in its kind and occasion, explains its lugha with an example, and presents it with the audience taking part.",
+   "floor": {
+    "prerequisite": "Tells a riddle or a story with the formula.",
+    "question": "Kitendawili! - ?",
+    "answer": "Tega!"
+   },
+   "representations": [
+    "a recording or a performance of \"Chungu na Panzi: Chungu aliweka akiba, Panzi aliimba tu\"",
+    "a chart: aina, tukio, lengo",
+    "a point-and-example frame"
+   ],
+   "steps": [
+    "Listen to or read the text.",
+    "Name its kind and occasion.",
+    "Explain its lugha with an example.",
+    "Present it with the audience."
+   ],
+   "contexts": [
+    "kuweka akiba",
+    "a cultural festival",
+    "an evening of stories at home"
+   ],
+   "board": [
+    {
+     "beat": "write",
+     "do": "Chungu na Panzi: Chungu aliweka akiba, Panzi aliimba tu"
+    },
+    {
+     "beat": "point",
+     "do": "Point at the line.",
+     "say": "Hii ni hadithi ya aina gani, na inatumika lini?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for the child to answer before saying anything."
+    },
+    {
+     "beat": "child_draws",
+     "do": "The child presents a short piece with the class responding."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "KISW.G8.KUSIKI.T14_HADITHI.LUGHA_HADITHI.M8_FSI_DEVICE_T14",
+     "listen_for": [
+      "kosa la lugha"
+     ],
+     "ask": "Kwa nini mtunzi ametumia hivi?",
+     "repair": "Ni tanakali za sauti: huleta uhai na burudani"
+    },
+    {
+     "code": "KISW.G8.KUSIKI.T14_HADITHI.LUGHA_HADITHI.M8_FSI_LITERAL_T14",
+     "listen_for": [
+      "maana ya maneno kama yalivyo"
+     ],
+     "ask": "Je, hili linaweza kuwa kweli?",
+     "repair": "Lugha ya picha ina maana iliyofichika."
+    },
+    {
+     "code": "KISW.G8.KUSIKI.T14_HADITHI.LUGHA_HADITHI.M8_FSI_USE_T14",
+     "listen_for": [
+      "kinapamba tu"
+     ],
+     "ask": "Kipengele hiki kinamsaidiaje msikilizaji?",
+     "repair": "Eleza kazi ya kipengele: kinasisitiza, kinajenga picha, kinaburudisha."
+    },
+    {
+     "code": "KISW.G8.KUSIKI.T14_HADITHI.LUGHA_HADITHI.M8_FSI_AUDIENCE_T14",
+     "listen_for": [
+      "kelele zisizo na maana"
+     ],
+     "ask": "Hadhira ina kazi gani hapa?",
+     "repair": "Fasihi simulizi huishirikisha hadhira."
+    }
+   ],
+   "checks": [
+    {
+     "question": "\"Panzi aliimba \"tia tia tia\"\" ni kipengele gani cha lugha?",
+     "answer": "tanakali za sauti",
+     "shows": "lugha"
+    },
+    {
+     "question": "Kipengele cha tanakali za sauti kina umuhimu gani?",
+     "answer": "huleta uhai na burudani",
+     "shows": "lugha, use"
+    }
+   ]
+  }
+ ]
+}

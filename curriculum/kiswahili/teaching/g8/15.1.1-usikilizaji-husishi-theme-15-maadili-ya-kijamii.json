@@ -1,0 +1,99 @@
+{
+ "sub_strand": "KISW.G8.KUSIKI.T15_USIKILIZAJI_HUSISHI",
+ "title": "Usikilizaji Husishi (Theme 15: Maadili ya kijamii)",
+ "status": "draft: written 18 Nov 2026 offline for Grade 8 Kiswahili; not yet checked by a native Kiswahili teacher; not loaded by the live tutor",
+ "sources": [],
+ "notes": "",
+ "skills": [
+  {
+   "skill": "KISW.G8.KUSIKI.T15_USIKILIZAJI_HUSISHI.USIKILIZAJI_HUSISHI_2",
+   "key_step": "The child plans what to say, listens to the end, and replies on the topic in standard Kiswahili with the features of a husishi.",
+   "floor": {
+    "prerequisite": "Greets and replies politely.",
+    "question": "Hujambo? - ?",
+    "answer": "Sijambo"
+   },
+   "representations": [
+    "a short recorded talk",
+    "a checklist of features",
+    "role cards"
+   ],
+   "steps": [
+    "Listen to the end.",
+    "Show you understood.",
+    "Reply on the topic with a reason.",
+    "Keep the language and the turn-taking right."
+   ],
+   "contexts": [
+    "maadili ya kijamii",
+    "a class meeting",
+    "a community event"
+   ],
+   "board": [
+    {
+     "beat": "write",
+     "do": "rafiki aliyekosewa na wenzake"
+    },
+    {
+     "beat": "point",
+     "do": "Point at the checklist.",
+     "say": "Kipengele kipi tutakizingatia kwanza?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for the child to answer before saying anything."
+    },
+    {
+     "beat": "child_draws",
+     "do": "The child takes part in a short husishi on the topic while a partner ticks the checklist."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "KISW.G8.KUSIKI.T15_USIKILIZAJI_HUSISHI.USIKILIZAJI_HUSISHI_2.M8_ORL_NOPARAPHRASE_T15",
+     "listen_for": [
+      "Hilo si kitu, mimi nilikuwa na tatizo kubwa zaidi..."
+     ],
+     "ask": "Umeonyesha kwamba umemwelewa?",
+     "repair": "Rudia kwa maneno yako ulichosikia, kisha uliza."
+    },
+    {
+     "code": "KISW.G8.KUSIKI.T15_USIKILIZAJI_HUSISHI.USIKILIZAJI_HUSISHI_2.M8_ORL_JUDGE_T15",
+     "listen_for": [
+      "Hupaswi kuhuzunika!"
+     ],
+     "ask": "Umemsikiliza hadi mwisho?",
+     "repair": "Sikiliza kwanza bila kuhukumu."
+    },
+    {
+     "code": "KISW.G8.KUSIKI.T15_USIKILIZAJI_HUSISHI.USIKILIZAJI_HUSISHI_2.M8_ORL_INTERRUPT_T15",
+     "listen_for": [
+      "mkatize ili usisahau"
+     ],
+     "ask": "Mwenzako amemaliza?",
+     "repair": "Msikilize mzungumzaji hadi amalize."
+    },
+    {
+     "code": "KISW.G8.KUSIKI.T15_USIKILIZAJI_HUSISHI.USIKILIZAJI_HUSISHI_2.M8_ORL_EYES_T15",
+     "listen_for": [
+      "kuangalia chini muda wote"
+     ],
+     "ask": "Mzungumzaji anajuaje unamsikiliza?",
+     "repair": "Mwangalie mzungumzaji ili aone unamsikiliza."
+    }
+   ],
+   "checks": [
+    {
+     "question": "Mwenzako anakueleza tatizo lake. Ni jibu lipi la usikilizaji husishi?",
+     "answer": "Kwa hiyo unasema unahisi upweke shuleni? Pole sana.",
+     "shows": "husishi"
+    },
+    {
+     "question": "Rafiki ana huzuni. Unaanza kwa?",
+     "answer": "Nieleze kilichotokea, nakusikiliza.",
+     "shows": "husishi, second feature"
+    }
+   ]
+  }
+ ]
+}

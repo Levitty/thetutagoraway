@@ -1,0 +1,99 @@
+{
+ "sub_strand": "KISW.G8.SARUFI.T11_MNYAMBULIKO_WA_VITEN",
+ "title": "Mnyambuliko wa Vitenzi (Theme 11: Haki za watoto)",
+ "status": "draft: written 18 Nov 2026 offline for Grade 8 Kiswahili; not yet checked by a native Kiswahili teacher; not loaded by the live tutor",
+ "sources": [],
+ "notes": "",
+ "skills": [
+  {
+   "skill": "KISW.G8.SARUFI.T11_MNYAMBULIKO_WA_VITEN.KAULI_TENDEKA",
+   "key_step": "The child forms kutendeka (-eka/-ika: can be done), kutendewa (-ewa/-iwa: done for) and kutendatenda (stem repeated: done again and again).",
+   "floor": {
+    "prerequisite": "Forms -eka and -ewa.",
+    "question": "Kutendeka kwa \"soma\" ni?",
+    "answer": "someka"
+   },
+   "representations": [
+    "three cards: pigika, pigiwa, pigapiga",
+    "a vowel chart",
+    "picture sentences"
+   ],
+   "steps": [
+    "Find the stem.",
+    "Can be done, done for, or again and again?",
+    "Add the ending or repeat the stem.",
+    "Read it."
+   ],
+   "contexts": [
+    "children's rights: kusikilizwa",
+    "a game",
+    "a market"
+   ],
+   "board": [
+    {
+     "beat": "write",
+     "do": "Mtoto ana___ (ruka) kwa furaha."
+    },
+    {
+     "beat": "point",
+     "do": "Point at \"kwa furaha\".",
+     "say": "Anaruka mara moja au mara nyingi?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for the child to answer before saying anything."
+    },
+    {
+     "beat": "child_draws",
+     "do": "The child writes \"anarukaruka\" and one -ika form."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "KISW.G8.SARUFI.T11_MNYAMBULIKO_WA_VITEN.KAULI_TENDEKA.M_KS8_KT_TENDEKA",
+     "listen_for": [
+      "pikiwa"
+     ],
+     "ask": "Soma tena: \"Ni kitenzi kipi kiko katika kauli ya kutendeka?\" Kwa nini \"pikiwa\" si jibu sahihi?",
+     "repair": "Pikika ni kutendeka."
+    },
+    {
+     "code": "KISW.G8.SARUFI.T11_MNYAMBULIKO_WA_VITEN.KAULI_TENDEKA.M_KS8_KT_TENDEWA",
+     "listen_for": [
+      "pikika"
+     ],
+     "ask": "Soma tena: \"Ni kitenzi kipi kiko katika kauli ya kutendewa?\" Kwa nini \"pikika\" si jibu sahihi?",
+     "repair": "Pikiwa ni kutendewa."
+    },
+    {
+     "code": "KISW.G8.SARUFI.T11_MNYAMBULIKO_WA_VITEN.KAULI_TENDEKA.M_KS8_KT_TENDATENDA",
+     "listen_for": [
+      "kupiga mara moja"
+     ],
+     "ask": "Soma tena: \"Pigapiga humaanisha nini?\" Kwa nini \"kupiga mara moja\" si jibu sahihi?",
+     "repair": "Pigapiga ni kupiga mara nyingi."
+    },
+    {
+     "code": "KISW.G8.SARUFI.T11_MNYAMBULIKO_WA_VITEN.KAULI_TENDEKA.M8_KT_TENDATENDA_FORM",
+     "listen_for": [
+      "anapiga anapiga"
+     ],
+     "ask": "Ni sehemu gani ya kitenzi inarudiwa?",
+     "repair": "Kutendatenda hurudia mzizi tu: anapigapiga."
+    }
+   ],
+   "checks": [
+    {
+     "question": "Kutendewa kwa \"pika\" ni?",
+     "answer": "pikiwa",
+     "shows": "prepositional passive"
+    },
+    {
+     "question": "Kutendeka kwa \"vunja\" ni?",
+     "answer": "vunjika",
+     "shows": "potential"
+    }
+   ]
+  }
+ ]
+}

@@ -1,0 +1,99 @@
+{
+ "sub_strand": "KISW.G8.SARUFI.T1_VIWAKILISHI",
+ "title": "Viwakilishi (Theme 1: Usafi wa sehemu za umma)",
+ "status": "draft: written 18 Nov 2026 offline for Grade 8 Kiswahili; not yet checked by a native Kiswahili teacher; not loaded by the live tutor",
+ "sources": [],
+ "notes": "",
+ "skills": [
+  {
+   "skill": "KISW.G8.SARUFI.T1_VIWAKILISHI.VIW_NAFSI",
+   "key_step": "The child tells a pronoun (standing for the noun) from an adjective (following it), and chooses person, demonstrative or number pronouns by class and number.",
+   "floor": {
+    "prerequisite": "Uses personal pronouns.",
+    "question": "Mimi na wewe ni ___",
+    "answer": "sisi"
+   },
+   "representations": [
+    "sentence pairs with and without the noun",
+    "a class table of demonstratives and numbers",
+    "colour for noun and pronoun"
+   ],
+   "steps": [
+    "Find the noun or its gap.",
+    "Is the word standing for a noun?",
+    "Choose person, demonstrative or number.",
+    "Agree with the class."
+   ],
+   "contexts": [
+    "cleanliness of public places",
+    "a class register",
+    "a news report"
+   ],
+   "board": [
+    {
+     "beat": "write",
+     "do": "Wale walifagia soko."
+    },
+    {
+     "beat": "point",
+     "do": "Point at \"Wale\".",
+     "say": "Neno hili linasimama badala ya nini?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for the child to answer before saying anything."
+    },
+    {
+     "beat": "child_draws",
+     "do": "The child labels three pronouns and rewrites one sentence with the noun."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "KISW.G8.SARUFI.T1_VIWAKILISHI.VIW_NAFSI.M_KS8_VN_NAFSI",
+     "listen_for": [
+      "wao"
+     ],
+     "ask": "Soma tena: \"Ni kiwakilishi kipi cha nafsi ya kwanza wingi?\" Kwa nini \"wao\" si jibu sahihi?",
+     "repair": "Sisi ni nafsi ya kwanza wingi."
+    },
+    {
+     "code": "KISW.G8.SARUFI.T1_VIWAKILISHI.VIW_NAFSI.M_KS8_VN_ONYESHI",
+     "listen_for": [
+      "yule"
+     ],
+     "ask": "Soma tena: \"Ni kiwakilishi kipi cha kuonyesha mtu aliye karibu?\" Kwa nini \"yule\" si jibu sahihi?",
+     "repair": "Huyu huonyesha aliye karibu."
+    },
+    {
+     "code": "KISW.G8.SARUFI.T1_VIWAKILISHI.VIW_NAFSI.M_KS8_VN_IDADI",
+     "listen_for": [
+      "huyu"
+     ],
+     "ask": "Soma tena: \"Ni kiwakilishi kipi cha idadi?\" Kwa nini \"huyu\" si jibu sahihi?",
+     "repair": "Wawili ni kiwakilishi cha idadi."
+    },
+    {
+     "code": "KISW.G8.SARUFI.T1_VIWAKILISHI.VIW_NAFSI.M8_VN_IDADI_ADJ",
+     "listen_for": [
+      "kivumishi cha idadi"
+     ],
+     "ask": "Kuna nomino kabla ya neno hili?",
+     "repair": "Neno la idadi likisimama badala ya nomino ni kiwakilishi."
+    }
+   ],
+   "checks": [
+    {
+     "question": "Ni kiwakilishi cha idadi kipi: \"Watatu walichelewa.\"",
+     "answer": "Watatu",
+     "shows": "number pronoun"
+    },
+    {
+     "question": "Jaza (vitabu, mbali): ___ ni vya mwalimu.",
+     "answer": "Vile",
+     "shows": "demonstrative"
+    }
+   ]
+  }
+ ]
+}

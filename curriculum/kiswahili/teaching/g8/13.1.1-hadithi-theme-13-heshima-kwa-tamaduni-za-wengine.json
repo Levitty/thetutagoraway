@@ -1,0 +1,99 @@
+{
+ "sub_strand": "KISW.G8.KUSIKI.T13_HADITHI",
+ "title": "Hadithi (Theme 13: Heshima kwa tamaduni za wengine)",
+ "status": "draft: written 18 Nov 2026 offline for Grade 8 Kiswahili; not yet checked by a native Kiswahili teacher; not loaded by the live tutor",
+ "sources": [],
+ "notes": "",
+ "skills": [
+  {
+   "skill": "KISW.G8.KUSIKI.T13_HADITHI.WAHUSIKA_HADITHI",
+   "key_step": "The child places the hadithi in its kind and occasion, explains its wahusika with an example, and presents it with the audience taking part.",
+   "floor": {
+    "prerequisite": "Tells a riddle or a story with the formula.",
+    "question": "Kitendawili! - ?",
+    "answer": "Tega!"
+   },
+   "representations": [
+    "a recording or a performance of \"Mzee Busara na wageni kutoka ng'ambo\"",
+    "a chart: aina, tukio, lengo",
+    "a point-and-example frame"
+   ],
+   "steps": [
+    "Listen to or read the text.",
+    "Name its kind and occasion.",
+    "Explain its wahusika with an example.",
+    "Present it with the audience."
+   ],
+   "contexts": [
+    "heshima kwa tamaduni za wengine",
+    "a cultural festival",
+    "an evening of stories at home"
+   ],
+   "board": [
+    {
+     "beat": "write",
+     "do": "Mzee Busara na wageni kutoka ng'ambo"
+    },
+    {
+     "beat": "point",
+     "do": "Point at the line.",
+     "say": "Mzee Busara ana sifa gani?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for the child to answer before saying anything."
+    },
+    {
+     "beat": "child_draws",
+     "do": "The child presents a short piece with the class responding."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "KISW.G8.KUSIKI.T13_HADITHI.WAHUSIKA_HADITHI.M8_FSI_MAIN_T13",
+     "listen_for": [
+      "mhusika aliyetajwa mara moja"
+     ],
+     "ask": "Utungo unamhusu nani tangu mwanzo hadi mwisho?",
+     "repair": "Mhusika mkuu ni yule ambaye utungo unamhusu."
+    },
+    {
+     "code": "KISW.G8.KUSIKI.T13_HADITHI.WAHUSIKA_HADITHI.M8_FSI_NOEVID_T13",
+     "listen_for": [
+      "kwa sababu ni mzuri"
+     ],
+     "ask": "Ni kitendo gani kinaonyesha sifa hii?",
+     "repair": "Thibitisha sifa kwa kitendo au maneno ya mhusika."
+    },
+    {
+     "code": "KISW.G8.KUSIKI.T13_HADITHI.WAHUSIKA_HADITHI.M8_FSI_ANIMAL_T13",
+     "listen_for": [
+      "mnyama wa porini tu"
+     ],
+     "ask": "Unamjua mtu mwenye tabia kama hii?",
+     "repair": "Wahusika wanyama huwakilisha tabia za watu."
+    },
+    {
+     "code": "KISW.G8.KUSIKI.T13_HADITHI.WAHUSIKA_HADITHI.M8_FSI_LESSON_T13",
+     "listen_for": [
+      "tuwe wajanja ili tushinde"
+     ],
+     "ask": "Mwishoni alipata nini?",
+     "repair": "Funzo hutokana na matokeo ya matendo ya mhusika."
+    }
+   ],
+   "checks": [
+    {
+     "question": "Mhusika mkuu katika hadithi hii ni nani?",
+     "answer": "Mzee Busara",
+     "shows": "wahusika"
+    },
+    {
+     "question": "Katika hadithi, Mzee Busara anawakilisha nini?",
+     "answer": "watu wenye tabia kama zake katika jamii",
+     "shows": "wahusika, use"
+    }
+   ]
+  }
+ ]
+}

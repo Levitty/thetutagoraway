@@ -1,0 +1,99 @@
+{
+ "sub_strand": "KISW.G8.KUSIKI.T10_HADITHI",
+ "title": "Hadithi (Theme 10: Kukabiliana na hisia)",
+ "status": "draft: written 18 Nov 2026 offline for Grade 8 Kiswahili; not yet checked by a native Kiswahili teacher; not loaded by the live tutor",
+ "sources": [],
+ "notes": "",
+ "skills": [
+  {
+   "skill": "KISW.G8.KUSIKI.T10_HADITHI.HURAFA_HEKAYA",
+   "key_step": "The child places the hadithi in its kind and occasion, explains its maana with an example, and presents it with the audience taking part.",
+   "floor": {
+    "prerequisite": "Tells a riddle or a story with the formula.",
+    "question": "Kitendawili! - ?",
+    "answer": "Tega!"
+   },
+   "representations": [
+    "a recording or a performance of \"Sungura na Fisi waliogawana mavuno\"",
+    "a chart: aina, tukio, lengo",
+    "a point-and-example frame"
+   ],
+   "steps": [
+    "Listen to or read the text.",
+    "Name its kind and occasion.",
+    "Explain its maana with an example.",
+    "Present it with the audience."
+   ],
+   "contexts": [
+    "kukabiliana na hisia",
+    "a cultural festival",
+    "an evening of stories at home"
+   ],
+   "board": [
+    {
+     "beat": "write",
+     "do": "Sungura na Fisi waliogawana mavuno"
+    },
+    {
+     "beat": "point",
+     "do": "Point at the line.",
+     "say": "Hii ni hadithi ya aina gani, na inatumika lini?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for the child to answer before saying anything."
+    },
+    {
+     "beat": "child_draws",
+     "do": "The child presents a short piece with the class responding."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "KISW.G8.KUSIKI.T10_HADITHI.HURAFA_HEKAYA.M8_FSI_KIND_T10",
+     "listen_for": [
+      "hekaya"
+     ],
+     "ask": "Hutumika lini, na kwa lengo gani?",
+     "repair": "\"Sungura na Fisi waliogawana mavuno\" ni hurafa: ujanja wa kudanganya huleta adhabu; tushirikiane kwa haki."
+    },
+    {
+     "code": "KISW.G8.KUSIKI.T10_HADITHI.HURAFA_HEKAYA.M8_FSI_WRITTEN_T10",
+     "listen_for": [
+      "fasihi andishi"
+     ],
+     "ask": "Ilipokezwa kwa maandishi au kwa mdomo?",
+     "repair": "Hadithi ni fasihi simulizi: hupokezwa kwa mdomo."
+    },
+    {
+     "code": "KISW.G8.KUSIKI.T10_HADITHI.HURAFA_HEKAYA.M8_FSI_OCCASION_T10",
+     "listen_for": [
+      "wakati wowote"
+     ],
+     "ask": "Ni mazingira gani yanafaa?",
+     "repair": "Hurafa hutumika jioni kuburudisha na kufunza watoto."
+    },
+    {
+     "code": "KISW.G8.KUSIKI.T10_HADITHI.HURAFA_HEKAYA.M8_FSI_MESSAGE_T10",
+     "listen_for": [
+      "Sungura na Fisi waliogawana mavuno"
+     ],
+     "ask": "Mtunzi alitaka tujifunze nini?",
+     "repair": "Ujumbe ni funzo kwa maneno yako mwenyewe."
+    }
+   ],
+   "checks": [
+    {
+     "question": "\"Sungura na Fisi waliogawana mavuno\" ni hadithi ya aina gani?",
+     "answer": "hurafa",
+     "shows": "maana"
+    },
+    {
+     "question": "Hurafa hutumika lini?",
+     "answer": "jioni kuburudisha na kufunza watoto",
+     "shows": "maana, use"
+    }
+   ]
+  }
+ ]
+}

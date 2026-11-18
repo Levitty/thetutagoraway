@@ -1,0 +1,99 @@
+{
+ "sub_strand": "KISW.G8.SARUFI.T12_AINA_ZA_SENTENSI",
+ "title": "Aina za Sentensi (Theme 12: Magonjwa yasiyoambukizwa)",
+ "status": "draft: written 18 Nov 2026 offline for Grade 8 Kiswahili; not yet checked by a native Kiswahili teacher; not loaded by the live tutor",
+ "sources": [],
+ "notes": "",
+ "skills": [
+  {
+   "skill": "KISW.G8.SARUFI.T12_AINA_ZA_SENTENSI.SENTENSI_CHANGAMANO",
+   "key_step": "The child finds the main clause and the dependent clause (amba-, -po-, -ki-, kwa sababu) and builds a complex sentence.",
+   "floor": {
+    "prerequisite": "Tells simple from compound sentences.",
+    "question": "Ni sentensi ipi ni ambatano?",
+    "answer": "Alikuja lakini hakukaa."
+   },
+   "representations": [
+    "clause strips",
+    "colours for main and dependent",
+    "joining words for dependence"
+   ],
+   "steps": [
+    "Find each verb and its clause.",
+    "Can it stand alone?",
+    "Mark main and dependent.",
+    "Name the sentence."
+   ],
+   "contexts": [
+    "non-communicable diseases: Wanaofanya mazoezi hupunguza hatari",
+    "a news report",
+    "a story"
+   ],
+   "board": [
+    {
+     "beat": "write",
+     "do": "Wanafunzi wanaofanya mazoezi huwa na afya."
+    },
+    {
+     "beat": "point",
+     "do": "Point at \"wanaofanya mazoezi\".",
+     "say": "Sehemu hii inaweza kusimama peke yake?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for the child to answer before saying anything."
+    },
+    {
+     "beat": "child_draws",
+     "do": "The child marks the clauses and writes one complex sentence with amba-."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "KISW.G8.SARUFI.T12_AINA_ZA_SENTENSI.SENTENSI_CHANGAMANO.M_KS8_SC_MAANA",
+     "listen_for": [
+      "kishazi kimoja tu"
+     ],
+     "ask": "Soma tena: \"Sentensi changamano ina nini?\" Kwa nini \"kishazi kimoja tu\" si jibu sahihi?",
+     "repair": "Changamano ina kishazi huru na tegemezi."
+    },
+    {
+     "code": "KISW.G8.SARUFI.T12_AINA_ZA_SENTENSI.SENTENSI_CHANGAMANO.M_KS8_SC_TEGEMEZI",
+     "listen_for": [
+      "kinajitegemea"
+     ],
+     "ask": "Soma tena: \"Kishazi tegemezi hufanya nini?\" Kwa nini \"kinajitegemea\" si jibu sahihi?",
+     "repair": "Kishazi tegemezi hakijitegemei."
+    },
+    {
+     "code": "KISW.G8.SARUFI.T12_AINA_ZA_SENTENSI.SENTENSI_CHANGAMANO.M_KS8_SC_SAHILI",
+     "listen_for": [
+      "Mtoto analia."
+     ],
+     "ask": "Soma tena: \"Ni sentensi ipi ni changamano?\" Kwa nini \"Mtoto analia.\" si jibu sahihi?",
+     "repair": "Changamano ina kishazi tegemezi."
+    },
+    {
+     "code": "KISW.G8.SARUFI.T12_AINA_ZA_SENTENSI.SENTENSI_CHANGAMANO.M8_SC_AMBATANO",
+     "listen_for": [
+      "ambatano"
+     ],
+     "ask": "Sehemu hii inaweza kusimama peke yake?",
+     "repair": "Kishazi tegemezi (ambaye alianguka) hufanya sentensi kuwa changamano."
+    }
+   ],
+   "checks": [
+    {
+     "question": "Unganisha kuwa changamano: \"Mgonjwa alitibiwa. Alikuwa na kisukari.\"",
+     "answer": "Mgonjwa ambaye alikuwa na kisukari alitibiwa.",
+     "shows": "build"
+    },
+    {
+     "question": "Kishazi tegemezi katika \"Alipofika, tulikula\" ni?",
+     "answer": "Alipofika",
+     "shows": "identify"
+    }
+   ]
+  }
+ ]
+}

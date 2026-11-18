@@ -1,0 +1,99 @@
+{
+ "sub_strand": "KISW.G8.SARUFI.T9_NGELI_NA_UPATANISHO_",
+ "title": "Ngeli na Upatanisho wa Kisarufi (Theme 9: Majukumu ya mnunuzi)",
+ "status": "draft: written 18 Nov 2026 offline for Grade 8 Kiswahili; not yet checked by a native Kiswahili teacher; not loaded by the live tutor",
+ "sources": [],
+ "notes": "",
+ "skills": [
+  {
+   "skill": "KISW.G8.SARUFI.T9_NGELI_NA_UPATANISHO_.NGELI_UU_UYA",
+   "key_step": "The child sorts u- nouns: no plural (U-U: uji, upendo), plural with ma- (U-YA: ugonjwa/magonjwa), and agrees every word.",
+   "floor": {
+    "prerequisite": "Uses U-U and U-YA agreement.",
+    "question": "Uji ___ (pikwa).",
+    "answer": "umepikwa"
+   },
+   "representations": [
+    "u- noun cards",
+    "a plural test",
+    "agreement chains"
+   ],
+   "steps": [
+    "Find the u- noun.",
+    "Does it have a plural? With ma-?",
+    "U-U or U-YA.",
+    "Agree every word."
+   ],
+   "contexts": [
+    "the buyer's duties: unga bora",
+    "a clinic",
+    "a kitchen"
+   ],
+   "board": [
+    {
+     "beat": "write",
+     "do": "Ugonjwa ___ (huu) ___ (enea)."
+    },
+    {
+     "beat": "point",
+     "do": "Point at \"Ugonjwa\".",
+     "say": "Wingi wake ni upi?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for the child to answer before saying anything."
+    },
+    {
+     "beat": "child_draws",
+     "do": "The child writes \"Ugonjwa huu umeenea\" and \"Magonjwa haya yameenea\"."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "KISW.G8.SARUFI.T9_NGELI_NA_UPATANISHO_.NGELI_UU_UYA.M_KS8_GU_UJI",
+     "listen_for": [
+      "Uji kimeiva."
+     ],
+     "ask": "Soma tena: \"Chagua sentensi sahihi.\" Kwa nini \"Uji kimeiva.\" si jibu sahihi?",
+     "repair": "Uji ni wa U-U na hutumia u-."
+    },
+    {
+     "code": "KISW.G8.SARUFI.T9_NGELI_NA_UPATANISHO_.NGELI_UU_UYA.M_KS8_GU_UGONJWA",
+     "listen_for": [
+      "Magonjwa unaumiza."
+     ],
+     "ask": "Soma tena: \"Chagua sentensi sahihi kwa wingi.\" Kwa nini \"Magonjwa unaumiza.\" si jibu sahihi?",
+     "repair": "Wingi wa U-YA hutumia ya-."
+    },
+    {
+     "code": "KISW.G8.SARUFI.T9_NGELI_NA_UPATANISHO_.NGELI_UU_UYA.M_KS8_GU_NOMINO",
+     "listen_for": [
+      "kitabu"
+     ],
+     "ask": "Soma tena: \"Ni nomino ipi ni ya ngeli ya U-U?\" Kwa nini \"kitabu\" si jibu sahihi?",
+     "repair": "Ugali ni wa U-U."
+    },
+    {
+     "code": "KISW.G8.SARUFI.T9_NGELI_NA_UPATANISHO_.NGELI_UU_UYA.M8_GU_UZI",
+     "listen_for": [
+      "ngonjwa hizi"
+     ],
+     "ask": "Wingi wake una ma-?",
+     "repair": "Wingi wa ugonjwa ni magonjwa: U-YA."
+    }
+   ],
+   "checks": [
+    {
+     "question": "Jaza: Unga ___ (-zuri) ___ (uzwa).",
+     "answer": "mzuri umeuzwa",
+     "shows": "U-U"
+    },
+    {
+     "question": "Wingi wa \"unyoya\" ni?",
+     "answer": "manyoya",
+     "shows": "U-YA plural"
+    }
+   ]
+  }
+ ]
+}

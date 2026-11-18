@@ -1,0 +1,99 @@
+{
+ "sub_strand": "KISW.G8.KUSIKI.T3_HADITHI",
+ "title": "Hadithi (Theme 3: Dhiki zinazokumba wanyama)",
+ "status": "draft: written 18 Nov 2026 offline for Grade 8 Kiswahili; not yet checked by a native Kiswahili teacher; not loaded by the live tutor",
+ "sources": [],
+ "notes": "",
+ "skills": [
+  {
+   "skill": "KISW.G8.KUSIKI.T3_HADITHI.MIGHANI",
+   "key_step": "The child places the hadithi in its kind and occasion, explains its maana with an example, and presents it with the audience taking part.",
+   "floor": {
+    "prerequisite": "Tells a riddle or a story with the formula.",
+    "question": "Kitendawili! - ?",
+    "answer": "Tega!"
+   },
+   "representations": [
+    "a recording or a performance of \"Fumo Liyongo, shujaa wa Pate aliyeshindwa tu kwa sindano ya shaba kitovuni\"",
+    "a chart: aina, tukio, lengo",
+    "a point-and-example frame"
+   ],
+   "steps": [
+    "Listen to or read the text.",
+    "Name its kind and occasion.",
+    "Explain its maana with an example.",
+    "Present it with the audience."
+   ],
+   "contexts": [
+    "dhiki zinazokumba wanyama",
+    "a cultural festival",
+    "an evening of stories at home"
+   ],
+   "board": [
+    {
+     "beat": "write",
+     "do": "Fumo Liyongo, shujaa wa Pate aliyeshindwa tu kwa sindano ya shaba kitovuni"
+    },
+    {
+     "beat": "point",
+     "do": "Point at the line.",
+     "say": "Hii ni hadithi ya aina gani, na inatumika lini?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for the child to answer before saying anything."
+    },
+    {
+     "beat": "child_draws",
+     "do": "The child presents a short piece with the class responding."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "KISW.G8.KUSIKI.T3_HADITHI.MIGHANI.M8_FSI_KIND_T3",
+     "listen_for": [
+      "visasili"
+     ],
+     "ask": "Hutumika lini, na kwa lengo gani?",
+     "repair": "\"Fumo Liyongo, shujaa wa Pate aliyeshindwa tu kwa sindano ya shaba kitovuni\" ni mighani: ushujaa na ulinzi wa jamii huheshimiwa."
+    },
+    {
+     "code": "KISW.G8.KUSIKI.T3_HADITHI.MIGHANI.M8_FSI_WRITTEN_T3",
+     "listen_for": [
+      "fasihi andishi"
+     ],
+     "ask": "Ilipokezwa kwa maandishi au kwa mdomo?",
+     "repair": "Hadithi ni fasihi simulizi: hupokezwa kwa mdomo."
+    },
+    {
+     "code": "KISW.G8.KUSIKI.T3_HADITHI.MIGHANI.M8_FSI_OCCASION_T3",
+     "listen_for": [
+      "wakati wowote"
+     ],
+     "ask": "Ni mazingira gani yanafaa?",
+     "repair": "Mighani hutumika kusimulia historia ya shujaa wa jamii na kumsifu."
+    },
+    {
+     "code": "KISW.G8.KUSIKI.T3_HADITHI.MIGHANI.M8_FSI_MESSAGE_T3",
+     "listen_for": [
+      "Fumo Liyongo, shujaa wa Pate aliyeshindwa tu kwa sindano ya shaba kitovuni"
+     ],
+     "ask": "Mtunzi alitaka tujifunze nini?",
+     "repair": "Ujumbe ni funzo kwa maneno yako mwenyewe."
+    }
+   ],
+   "checks": [
+    {
+     "question": "\"Fumo Liyongo, shujaa wa Pate aliyeshindwa tu kwa sindano ya shaba kitovuni\" ni hadithi ya aina gani?",
+     "answer": "mighani",
+     "shows": "maana"
+    },
+    {
+     "question": "Mighani hutumika lini?",
+     "answer": "kusimulia historia ya shujaa wa jamii na kumsifu",
+     "shows": "maana, use"
+    }
+   ]
+  }
+ ]
+}

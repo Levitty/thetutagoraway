@@ -1,0 +1,189 @@
+{
+ "sub_strand": "KISW.G8.KUANDI.T15_BARUAPEPE_YA_KIOFISI",
+ "title": "Baruapepe ya Kiofisi (Theme 15: Maadili ya kijamii)",
+ "status": "draft: written 18 Nov 2026 offline for Grade 8 Kiswahili; not yet checked by a native Kiswahili teacher; not loaded by the live tutor",
+ "sources": [],
+ "notes": "",
+ "skills": [
+  {
+   "skill": "KISW.G8.KUANDI.T15_BARUAPEPE_YA_KIOFISI.BARUAPEPE",
+   "key_step": "The child names the features of an office email: the address, a clear subject, a formal greeting, a short message, a formal closing with a full name and title, and cc where needed.",
+   "floor": {
+    "prerequisite": "Knows the parts of an email.",
+    "question": "Kichwa cha baruapepe ni cha nini?",
+    "answer": "kueleza ujumbe kwa ufupi"
+   },
+   "representations": [
+    "an office email on screen",
+    "part cards",
+    "Kwa / Nakala kwa examples"
+   ],
+   "steps": [
+    "Find the boxes.",
+    "Check the subject.",
+    "Check the greeting and closing.",
+    "Check who is copied."
+   ],
+   "contexts": [
+    "social values",
+    "an email to a county office",
+    "a school club"
+   ],
+   "board": [
+    {
+     "beat": "write",
+     "do": "Kwa: / Nakala kwa: / Kichwa:"
+    },
+    {
+     "beat": "point",
+     "do": "Point at \"Nakala kwa\".",
+     "say": "Kisanduku hiki ni cha nani?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for the child to answer before saying anything."
+    },
+    {
+     "beat": "child_draws",
+     "do": "The child labels the parts of an office email."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "KISW.G8.KUANDI.T15_BARUAPEPE_YA_KIOFISI.BARUAPEPE.M_KS8_BP_MADA",
+     "listen_for": [
+      "jina la mwandishi"
+     ],
+     "ask": "Soma tena: \"Ni sehemu ipi ya baruapepe inaonyesha kichwa cha habari?\" Kwa nini \"jina la mwandishi\" si jibu sahihi?",
+     "repair": "Mada ni kichwa cha baruapepe."
+    },
+    {
+     "code": "KISW.G8.KUANDI.T15_BARUAPEPE_YA_KIOFISI.BARUAPEPE.M_KS8_BP_LUGHA",
+     "listen_for": [
+      "ya mtaani"
+     ],
+     "ask": "Soma tena: \"Lugha ya baruapepe ya kiofisi ni ipi?\" Kwa nini \"ya mtaani\" si jibu sahihi?",
+     "repair": "Baruapepe ya kiofisi ni rasmi na fupi."
+    },
+    {
+     "code": "KISW.G8.KUANDI.T15_BARUAPEPE_YA_KIOFISI.BARUAPEPE.M_KS8_BP_ANWANI",
+     "listen_for": [
+      "mwishoni"
+     ],
+     "ask": "Soma tena: \"Anwani ya mpokeaji huandikwa wapi?\" Kwa nini \"mwishoni\" si jibu sahihi?",
+     "repair": "Mpokeaji huandikwa kwenye \"Kwa\"."
+    },
+    {
+     "code": "KISW.G8.KUANDI.T15_BARUAPEPE_YA_KIOFISI.BARUAPEPE.M8_BP_CC",
+     "listen_for": [
+      "katika kisanduku cha \"Kwa\" pamoja na mratibu"
+     ],
+     "ask": "Ni nani anapaswa kuchukua hatua?",
+     "repair": "\"Nakala kwa\" ni ya mtu anayepaswa kujua tu."
+    }
+   ],
+   "checks": [
+    {
+     "question": "Baruapepe ya kiofisi humalizika vipi?",
+     "answer": "Wako mwaminifu, jina kamili na cheo",
+     "shows": "closing"
+    },
+    {
+     "question": "\"Nakala kwa\" hutumika kwa nini?",
+     "answer": "kumtumia mtu nakala ili ajue",
+     "shows": "cc"
+    }
+   ]
+  },
+  {
+   "skill": "KISW.G8.KUANDI.T15_BARUAPEPE_YA_KIOFISI.KUANDIKA_BARUAPEPE_KIOFISI",
+   "key_step": "The child plans baruapepe before writing: the parts in order, then one idea at a time, then checks it against the type.",
+   "floor": {
+    "prerequisite": "Writes a correct sentence with a capital letter and a kikomo.",
+    "question": "Andika sentensi moja kuhusu shule yako.",
+    "answer": "Shule yetu ina madarasa kumi."
+   },
+   "representations": [
+    "a model text with its parts labelled",
+    "a three-box plan (mwanzo, kiini, mwisho)",
+    "a checklist for the type"
+   ],
+   "steps": [
+    "Read the title and say the type.",
+    "Plan the parts.",
+    "Write one idea per paragraph.",
+    "Check against the checklist and correct."
+   ],
+   "contexts": [
+    "ombi la kushiriki kongamano la maadili",
+    "the class magazine",
+    "a letter or story for a family member"
+   ],
+   "board": [
+    {
+     "beat": "write",
+     "do": "Ombi la Kushiriki Kongamano la Maadili"
+    },
+    {
+     "beat": "point",
+     "do": "Point at the title.",
+     "say": "Insha hii ni ya aina gani, na itakuwa na sehemu zipi?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for the child to answer before saying anything."
+    },
+    {
+     "beat": "child_draws",
+     "do": "The child fills the three-box plan for \"Ombi la Kushiriki Kongamano la Maadili\"."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "KISW.G8.KUANDI.T15_BARUAPEPE_YA_KIOFISI.KUANDIKA_BARUAPEPE_KIOFISI.M8_INS_NOSUBJ_T15",
+     "listen_for": [
+      "ujumbe wote"
+     ],
+     "ask": "Mpokeaji ataona nini kwanza kwenye sanduku lake?",
+     "repair": "Kichwa cha baruapepe ni maneno machache yanayoeleza ujumbe unahusu nini."
+    },
+    {
+     "code": "KISW.G8.KUANDI.T15_BARUAPEPE_YA_KIOFISI.KUANDIKA_BARUAPEPE_KIOFISI.M8_INS_ADDR_T15",
+     "listen_for": [
+      "S.L.P. 120, Nakuru, na tarehe juu kulia"
+     ],
+     "ask": "Kifaa kinaonyesha tarehe wapi?",
+     "repair": "Baruapepe haina anwani ya posta wala tarehe juu; kifaa huziweka chenyewe."
+    },
+    {
+     "code": "KISW.G8.KUANDI.T15_BARUAPEPE_YA_KIOFISI.KUANDIKA_BARUAPEPE_KIOFISI.M8_INS_TOFIELD_T15",
+     "listen_for": [
+      "Amina Otieno"
+     ],
+     "ask": "Anwani ya baruapepe ina alama gani?",
+     "repair": "Kisanduku cha \"Kwa\" huandikwa anwani ya baruapepe ya mpokeaji, yenye @."
+    },
+    {
+     "code": "KISW.G8.KUANDI.T15_BARUAPEPE_YA_KIOFISI.KUANDIKA_BARUAPEPE_KIOFISI.M8_INS_TEXTSPEAK_T15",
+     "listen_for": [
+      "Poa, tutaonana 2moro."
+     ],
+     "ask": "Maneno haya yangeeleweka na kila mtu?",
+     "repair": "Baruapepe huandikwa kwa lugha sahihi, na humalizika kwa hitimisho na jina."
+    }
+   ],
+   "checks": [
+    {
+     "question": "Ni sentensi ipi inafaa katika baruapepe kuhusu \"Ombi la Kushiriki Kongamano la Maadili\"?",
+     "answer": "Bi. Mratibu,",
+     "shows": "type"
+    },
+    {
+     "question": "Baruapepe ina sehemu zipi?",
+     "answer": "anwani ya mpokeaji, kichwa, salamu, ujumbe, hitimisho",
+     "shows": "parts"
+    }
+   ]
+  }
+ ]
+}

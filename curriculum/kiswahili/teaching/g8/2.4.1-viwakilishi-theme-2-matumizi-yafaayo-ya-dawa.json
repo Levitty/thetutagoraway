@@ -1,0 +1,99 @@
+{
+ "sub_strand": "KISW.G8.SARUFI.T2_VIWAKILISHI",
+ "title": "Viwakilishi (Theme 2: Matumizi yafaayo ya dawa)",
+ "status": "draft: written 18 Nov 2026 offline for Grade 8 Kiswahili; not yet checked by a native Kiswahili teacher; not loaded by the live tutor",
+ "sources": [],
+ "notes": "",
+ "skills": [
+  {
+   "skill": "KISW.G8.SARUFI.T2_VIWAKILISHI.VIW_ULIZI",
+   "key_step": "The child uses question pronouns (nani, nini, -pi, -ngapi) and pronouns of quality and self (-enyewe, -ote, -o -ote) with the class of the noun they stand for.",
+   "floor": {
+    "prerequisite": "Uses question adjectives.",
+    "question": "Ulichagua kitabu ___? (-pi)",
+    "answer": "kipi"
+   },
+   "representations": [
+    "question cards",
+    "a class table of -enyewe and -ote",
+    "sentence frames"
+   ],
+   "steps": [
+    "Find what the pronoun stands for.",
+    "Find its class.",
+    "Choose the pronoun.",
+    "Agree the verb."
+   ],
+   "contexts": [
+    "proper use of medicine: \"Ni ipi ya kunywa?\"",
+    "a quiz",
+    "a shop"
+   ],
+   "board": [
+    {
+     "beat": "write",
+     "do": "Dawa ___ imekwisha? (-pi)"
+    },
+    {
+     "beat": "point",
+     "do": "Point at \"Dawa\".",
+     "say": "Dawa iko katika ngeli ipi?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for the child to answer before saying anything."
+    },
+    {
+     "beat": "child_draws",
+     "do": "The child writes \"Ipi imekwisha?\" and \"Dawa yenyewe imekwisha\"."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "KISW.G8.SARUFI.T2_VIWAKILISHI.VIW_ULIZI.M_KS8_VU_ULIZA",
+     "listen_for": [
+      "yeye"
+     ],
+     "ask": "Soma tena: \"Ni kiwakilishi kipi kinauliza kuhusu mtu?\" Kwa nini \"yeye\" si jibu sahihi?",
+     "repair": "Nani huuliza kuhusu mtu."
+    },
+    {
+     "code": "KISW.G8.SARUFI.T2_VIWAKILISHI.VIW_ULIZI.M_KS8_VU_NINI",
+     "listen_for": [
+      "nani"
+     ],
+     "ask": "Soma tena: \"Ni kiwakilishi kipi kinauliza kuhusu kitu?\" Kwa nini \"nani\" si jibu sahihi?",
+     "repair": "Nini huuliza kuhusu kitu."
+    },
+    {
+     "code": "KISW.G8.SARUFI.T2_VIWAKILISHI.VIW_ULIZI.M_KS8_VU_SIFA",
+     "listen_for": [
+      "kivumishi"
+     ],
+     "ask": "Soma tena: \"Katika \"Mrefu amefika\", mrefu ni nini?\" Kwa nini \"kivumishi\" si jibu sahihi?",
+     "repair": "Mrefu hapa linasimama badala ya nomino."
+    },
+    {
+     "code": "KISW.G8.SARUFI.T2_VIWAKILISHI.VIW_ULIZI.M8_VU_PEKEE",
+     "listen_for": [
+      "mwenyewe"
+     ],
+     "ask": "Kitabu kiko katika ngeli ipi?",
+     "repair": "Kiwakilishi cha pekee hupatana na ngeli: kitabu chenyewe."
+    }
+   ],
+   "checks": [
+    {
+     "question": "Jaza: ___ amekuja? (mtu)",
+     "answer": "Nani",
+     "shows": "question pronoun"
+    },
+    {
+     "question": "Jaza (vitabu vyote): ___ vimeuzwa.",
+     "answer": "Vyote",
+     "shows": "quality pronoun"
+    }
+   ]
+  }
+ ]
+}
