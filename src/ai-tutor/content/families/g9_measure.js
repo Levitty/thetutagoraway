@@ -379,19 +379,19 @@ export const FAMILIES = [
     check: ({ R, r }, a) => a * r ** 3 === R ** 3 }),
 
   // ======================================================== MASS, WEIGHT AND DENSITY
-  fam({ id: 'g9.density.lorry-weighbridge', skill: 'G8_DENSITY', outcome: 'G9.DENSITY.a', rung: 2, form: 'word',
+  fam({ id: 'g9.density.lorry-weighbridge', skill: 'G8_DENSITY', outcome: 'MATH.G9.MEASUR.MASS_VOLUME_WEIGHT_AND_D.a', cskill: 'MATH.G9.MEASUR.MASS_VOLUME_WEIGHT_AND_D.MASS_UNITS', rung: 2, form: 'word',
     draw: () => { const gross = pick([14.5, 18.5, 22.4, 25.6, 28.3]), empty = pick([5200, 6200, 6800, 7500, 8400]); return gross * 1000 > empty + 2000 ? { gross, empty } : null; },
     make: ({ gross, empty }) => {
       const load = round((gross * 1000 - empty) / 1000, 3);
       return { question: `A lorry and its load are weighed at a weighbridge. The scale shows ${gross} tonnes. The empty lorry has a mass of ${T(empty)} kg. Find the mass of the load in tonnes.`,
         answer: load,
-        wrong: [[round(gross * 1000 - empty / 1000, 3), 'The two masses are in different units. Change them to the same unit first.'], [round(empty / 1000, 3), 'That is the mass of the empty lorry. The question asks for the load.'], [round(gross * 1000 - empty, 1), 'That is the load in kg. The question asks for tonnes.'], [round(gross + empty / 1000, 3), 'The scale already includes the lorry. Take the lorry away.']],
+        wrong: [[round(gross * 1000 - empty / 1000, 3), 'The two masses are in different units. Change them to the same unit first.', 'M_UNITS_NOT_MATCHED'], [round(empty / 1000, 3), 'That is the mass of the empty lorry. The question asks for the load.', 'M_PART_FOR_LOAD'], [round(gross * 1000 - empty, 1), 'That is the load in kg. The question asks for tonnes.', 'M_KG_NOT_TONNES'], [round(gross + empty / 1000, 3), 'The scale already includes the lorry. Take the lorry away.', 'M_GROSS_ADDED']],
         hints: ['Write both masses in the same unit.', '1 tonne = 1,000 kg.'],
         steps: [`Empty lorry: ${T(empty)} kg = ${T(empty / 1000)} tonnes.`, `Load: ${gross} − ${T(empty / 1000)} = ${T(load)} tonnes.`] };
     },
     check: ({ gross, empty }, a) => Math.abs(a * 1000 + empty - gross * 1000) < 0.01 }),
 
-  fam({ id: 'g9.density.load-table', skill: 'G8_DENSITY', outcome: 'G9.DENSITY.a', rung: 2, form: 'table',
+  fam({ id: 'g9.density.load-table', skill: 'G8_DENSITY', outcome: 'MATH.G9.MEASUR.MASS_VOLUME_WEIGHT_AND_D.a', cskill: 'MATH.G9.MEASUR.MASS_VOLUME_WEIGHT_AND_D.MASS_UNITS', rung: 2, form: 'table',
     draw: () => {
       const items = [['maize', 90], ['beans', 50], ['sugar', 50], ['cement', 50], ['rice', 25]].sort(() => Math.random() - 0.5).slice(0, 3);
       const rows = items.map(([n, m]) => ({ n, m, c: pick([10, 20, 30, 40, 50, 60]) }));
@@ -402,74 +402,74 @@ export const FAMILIES = [
       question: 'The table shows the bags on a lorry. Find the total mass of the load in tonnes.',
       model: { type: 'table', data: { head: ['Goods', 'Number of bags', 'Mass of one bag (kg)'], rows: rows.map(r => ({ cells: [`Bags of ${r.n}`, String(r.c), String(r.m)] })) } },
       answer: tot / 1000,
-      wrong: [[tot, 'That is the total in kg. Change it to tonnes.'], [round(rows.reduce((a, r) => a + r.m, 0) / 1000, 3), 'That adds the masses of one bag of each. Multiply by the number of bags first.'], [round(rows.reduce((a, r) => a + r.c, 0) / 1000, 3), 'That adds the number of bags. Each bag has a mass to be used.'], [round(rows.reduce((a, r) => a + r.c * r.m, 0) / 100, 2), 'There are 1,000 kg in a tonne.']],
+      wrong: [[tot, 'That is the total in kg. Change it to tonnes.', 'M_KG_NOT_TONNES'], [round(rows.reduce((a, r) => a + r.m, 0) / 1000, 3), 'That adds the masses of one bag of each. Multiply by the number of bags first.', 'M_ONE_OF_EACH_ADDED'], [round(rows.reduce((a, r) => a + r.c, 0) / 1000, 3), 'That adds the number of bags. Each bag has a mass to be used.', 'M_BAG_COUNT_ADDED'], [round(rows.reduce((a, r) => a + r.c * r.m, 0) / 100, 2), 'There are 1,000 kg in a tonne.', 'M_TONNE_FACTOR_WRONG']],
       hints: ['Find the mass of each kind of bag: number × mass of one.', 'Add them, then change kg to tonnes.'],
       steps: [...rows.map(r => `${r.n}: ${r.c} × ${r.m} = ${T(r.c * r.m)} kg.`), `Total: ${T(tot)} kg = ${T(tot / 1000)} tonnes.`] }),
     check: ({ rows }, a) => Math.abs(a * 1000 - rows.reduce((t, r) => t + r.m * r.c, 0)) < 0.01 }),
 
-  fam({ id: 'g9.density.weight-newtons', skill: 'G8_DENSITY', outcome: 'G9.DENSITY.b', rung: 1, form: 'word',
+  fam({ id: 'g9.density.weight-newtons', skill: 'G8_DENSITY', outcome: 'MATH.G9.MEASUR.MASS_VOLUME_WEIGHT_AND_D.b', cskill: 'MATH.G9.MEASUR.MASS_VOLUME_WEIGHT_AND_D.MASS_WEIGHT', rung: 1, form: 'word',
     draw: () => ({ m: pick([5, 12, 25, 40, 50, 65, 90]), what: pick(['bag of cement', 'sack of maize flour', 'jerrican of water', 'bag of fertiliser']) }),
     make: ({ m, what }) => ({
       question: `A ${what} has a mass of ${m} kg. Each kilogram is pulled down with a force of 10 N (gravity g = 10 N/kg). What is the weight of the ${what}, in newtons?`,
       answer: m * 10,
-      wrong: [[m / 10, 'Weight in newtons is bigger than the mass in kg here. Multiply by 10.'], [m, 'That is the mass in kg. Weight is a force in newtons.'], [m + 10, 'Each kilogram has a weight of 10 N, so multiply.']],
+      wrong: [[m / 10, 'Weight in newtons is bigger than the mass in kg here. Multiply by 10.', 'M_WEIGHT_DIVIDED_BY_G'], [m, 'That is the mass in kg. Weight is a force in newtons.', 'M_MASS_AS_WEIGHT'], [m + 10, 'Each kilogram has a weight of 10 N, so multiply.', 'M_G_ADDED']],
       hints: ['Weight = mass × gravity.', 'Each kilogram weighs 10 N.'],
       steps: [`Weight = mass × g.`, `${m} × 10 = ${m * 10} N.`] }),
     check: ({ m }, a) => a / 10 === m }),
 
-  fam({ id: 'g9.density.weight-moon', skill: 'G8_DENSITY', outcome: 'G9.DENSITY.b', rung: 3, form: 'why',
+  fam({ id: 'g9.density.weight-moon', skill: 'G8_DENSITY', outcome: 'MATH.G9.MEASUR.MASS_VOLUME_WEIGHT_AND_D.b', cskill: 'MATH.G9.MEASUR.MASS_VOLUME_WEIGHT_AND_D.MASS_WEIGHT', rung: 3, form: 'why',
     draw: () => ({ w: pick([60, 80, 100, 120, 150]) }),
     make: ({ w }) => {
       const m = w / 10, mw = round(1.6 * m, 2);
       return { question: `A rock weighs ${w} N on Earth, where g = 10 N/kg. The rock is taken to the Moon, where g = 1.6 N/kg. Which statement is true on the Moon?`,
         options: [
           { text: `Its mass is ${m} kg and its weight is ${T(mw)} N`, right: true },
-          { text: `Its mass is ${m} kg and its weight is still ${w} N`, right: false, why: 'Weight is a pull from gravity. The Moon pulls less, so the weight changes.' },
-          { text: `Its mass is ${T(mw)} kg and its weight is ${T(mw)} N`, right: false, why: 'Mass is the amount of matter. It does not change when the rock moves.' },
-          { text: `Its mass is ${T(round(w / 1.6, 2))} kg and its weight is ${w} N`, right: false, why: 'Mass stays the same everywhere. Find it on Earth: weight ÷ 10.' },
+          { text: `Its mass is ${m} kg and its weight is still ${w} N`, right: false, why: 'Weight is a pull from gravity. The Moon pulls less, so the weight changes.', mis: 'M_WEIGHT_SAME_EVERYWHERE' },
+          { text: `Its mass is ${T(mw)} kg and its weight is ${T(mw)} N`, right: false, why: 'Mass is the amount of matter. It does not change when the rock moves.', mis: 'M_MASS_CHANGES_PLACE' },
+          { text: `Its mass is ${T(round(w / 1.6, 2))} kg and its weight is ${w} N`, right: false, why: 'Mass stays the same everywhere. Find it on Earth: weight ÷ 10.', mis: 'M_MASS_FROM_MOON_G' },
         ],
         hints: ['Mass stays the same wherever the rock is. Weight depends on gravity.', 'Mass = weight ÷ g, using the gravity on Earth.'],
         steps: [`On Earth: mass = ${w} ÷ 10 = ${m} kg. Mass does not change.`, `On the Moon: weight = ${m} × 1.6 = ${T(mw)} N.`] };
     } }),
 
-  fam({ id: 'g9.density.find-volume', skill: 'G8_DENSITY', outcome: 'G9.DENSITY.c', rung: 2, form: 'word',
+  fam({ id: 'g9.density.find-volume', skill: 'G8_DENSITY', outcome: 'MATH.G9.MEASUR.MASS_VOLUME_WEIGHT_AND_D.c', cskill: 'MATH.G9.MEASUR.MASS_VOLUME_WEIGHT_AND_D.DENSITY_CALCULATE', rung: 2, form: 'word',
     draw: () => { const [name, rho] = pick([['aluminium', 2.7], ['iron', 7.8], ['copper', 8.9], ['lead', 11.3]]); const v = pick([20, 50, 80, 100, 150, 200]); const m = round(rho * v, 1); return dp(m, 1) ? { name, rho, v, m } : null; },
     make: ({ name, rho, v, m }) => ({
       question: `A blacksmith holds a lump of ${name}. It has a mass of ${T(m)} g. The density of ${name} is ${rho} g/cm³. How much space does the lump take up, in cm³?`,
       answer: v,
-      wrong: [[round(m * rho, 1), 'Volume = mass ÷ density. Multiplying gives a mass, not a volume.'], [round(rho / m, 4), 'That is density ÷ mass, upside down.'], [round(m - rho, 1), 'Mass and density are not found by subtraction. Divide.']],
+      wrong: [[round(m * rho, 1), 'Volume = mass ÷ density. Multiplying gives a mass, not a volume.', 'M_MASS_TIMES_DENSITY'], [round(rho / m, 4), 'That is density ÷ mass, upside down.', 'M_DENSITY_UPSIDE_DOWN'], [round(m - rho, 1), 'Mass and density are not found by subtraction. Divide.', 'M_SUBTRACT_FOR_DENSITY']],
       hints: ['Density = mass ÷ volume.', 'Rearrange it to find the volume.'],
       steps: [`Density = mass ÷ volume, so volume = mass ÷ density.`, `${T(m)} ÷ ${rho} = ${v} cm³.`] }),
     check: ({ rho, m }, a) => Math.abs(rho * a - m) < 0.01 }),
 
-  fam({ id: 'g9.density.convert-units', skill: 'G8_DENSITY', outcome: 'G9.DENSITY.c', rung: 2, form: 'direct',
+  fam({ id: 'g9.density.convert-units', skill: 'G8_DENSITY', outcome: 'MATH.G9.MEASUR.MASS_VOLUME_WEIGHT_AND_D.c', cskill: 'MATH.G9.MEASUR.MASS_VOLUME_WEIGHT_AND_D.DENSITY_UNITS', rung: 2, form: 'direct',
     draw: () => { const [rho, what] = pick([[0.8, 'Paraffin'], [0.92, 'A cooking oil'], [1.03, 'Fresh milk'], [2.7, 'Aluminium'], [7.8, 'Iron'], [0.6, 'A kind of wood']]); return { rho, what, toKg: pick([true, false]) }; },
     make: ({ rho, toKg, what }) => {
       const kg = round(rho * 1000, 1);
       return toKg
         ? { question: `${what} has a density of ${rho} g/cm³. Write its density in kg/m³.`, story: false, answer: kg,
-            wrong: [[round(rho / 1000, 6), 'A kg/m³ number is bigger than the g/cm³ number. Multiply, do not divide.'], [round(rho * 1000000, 1), 'A g/cm³ is 1,000 kg/m³. 1,000,000 is the number of cm³ in a m³, but grams change to kg as well.'], [round(rho * 100, 1), '1 m³ has 1,000,000 cm³ and 1 kg has 1,000 g. The change is 1,000 times.']],
+            wrong: [[round(rho / 1000, 6), 'A kg/m³ number is bigger than the g/cm³ number. Multiply, do not divide.', 'M_DENSITY_UNIT_DIVIDED'], [round(rho * 1000000, 1), 'A g/cm³ is 1,000 kg/m³. 1,000,000 is the number of cm³ in a m³, but grams change to kg as well.', 'M_UNIT_FACTOR_MILLION'], [round(rho * 100, 1), '1 m³ has 1,000,000 cm³ and 1 kg has 1,000 g. The change is 1,000 times.', 'M_UNIT_FACTOR_HUNDRED']],
             hints: ['1 m³ = 1,000,000 cm³ and 1 kg = 1,000 g.', 'So the number is multiplied by 1,000.'], steps: [`1 g/cm³ = 1,000 kg/m³.`, `${rho} × 1,000 = ${T(kg)} kg/m³.`] }
         : { question: `${what} has a density of ${T(kg)} kg/m³. Write its density in g/cm³.`, story: false, answer: rho,
-            wrong: [[round(kg * 1000, 1), 'A g/cm³ number is smaller than the kg/m³ number. Divide, do not multiply.'], [round(kg / 100, 2), '1 g/cm³ is 1,000 kg/m³, so divide by 1,000.'], [round(kg / 1000000, 6), 'The change is 1,000 times, not 1,000,000 times.']],
+            wrong: [[round(kg * 1000, 1), 'A g/cm³ number is smaller than the kg/m³ number. Divide, do not multiply.', 'M_DENSITY_UNIT_MULTIPLIED_BACK'], [round(kg / 100, 2), '1 g/cm³ is 1,000 kg/m³, so divide by 1,000.', 'M_UNIT_FACTOR_HUNDRED'], [round(kg / 1000000, 6), 'The change is 1,000 times, not 1,000,000 times.', 'M_UNIT_FACTOR_MILLION']],
             hints: ['1 g/cm³ = 1,000 kg/m³.', 'Divide by 1,000.'], steps: [`${T(kg)} ÷ 1,000 = ${rho} g/cm³.`, 'Check: 1 g/cm³ is the density of water, 1,000 kg/m³.'] };
     },
     check: ({ rho, toKg }, a) => (toKg ? Math.abs(a / 1000 - rho) < 1e-9 : Math.abs(a - rho) < 1e-9) }),
 
-  fam({ id: 'g9.density.iron-block', skill: 'G8_DENSITY', outcome: 'G9.DENSITY.c', rung: 2, form: 'steps',
+  fam({ id: 'g9.density.iron-block', skill: 'G8_DENSITY', outcome: 'MATH.G9.MEASUR.MASS_VOLUME_WEIGHT_AND_D.c', cskill: 'MATH.G9.MEASUR.MASS_VOLUME_WEIGHT_AND_D.DENSITY_CALCULATE', rung: 2, form: 'steps',
     draw: () => { const [name, rho] = pick([['iron', 7.8], ['aluminium', 2.7], ['copper', 8.9]]); const l = pick([10, 20, 25]), w = pick([4, 5, 10]), h = pick([2, 4, 5]); const m = round(rho * l * w * h, 1); return dp(m / 1000, 3) ? { name, rho, l, w, h, m } : null; },
     make: ({ name, rho, l, w, h, m }) => ({
       question: `${name[0].toUpperCase() + name.slice(1)} is cast into a cuboid ${l} cm long, ${w} cm wide and ${h} cm high. Its density is ${rho} g/cm³.`,
       parts: [
-        { prompt: 'Volume of the block, in cm³:', answer: l * w * h, unit: 'cm³', hint: 'Length × width × height.', wrong: [[l + w + h, 'Volume is found by multiplying the three sides.']] },
-        { prompt: 'Mass of the block, in grams:', answer: m, unit: 'g', hint: 'Mass = density × volume.', wrong: [[round((l * w * h) / rho, 1), 'Density is mass ÷ volume, so mass is density × volume.'], [l * w * h, 'That is the volume. Multiply it by the density.']] },
-        { prompt: 'Mass of the block, in kg:', answer: m / 1000, unit: 'kg', hint: '1 kg = 1,000 g.', wrong: [[m * 1000, 'A kg is bigger than a gram. Divide.'], [m / 100, 'There are 1,000 g in a kg.']] },
+        { prompt: 'Volume of the block, in cm³:', answer: l * w * h, unit: 'cm³', hint: 'Length × width × height.', wrong: [[l + w + h, 'Volume is found by multiplying the three sides.', 'M_SIDES_ADDED_VOLUME']] },
+        { prompt: 'Mass of the block, in grams:', answer: m, unit: 'g', hint: 'Mass = density × volume.', wrong: [[round((l * w * h) / rho, 1), 'Density is mass ÷ volume, so mass is density × volume.', 'M_VOLUME_DIVIDED_FOR_MASS'], [l * w * h, 'That is the volume. Multiply it by the density.', 'M_VOLUME_FOR_MASS']] },
+        { prompt: 'Mass of the block, in kg:', answer: m / 1000, unit: 'kg', hint: '1 kg = 1,000 g.', wrong: [[m * 1000, 'A kg is bigger than a gram. Divide.', 'M_BIGGER_UNIT_MULTIPLIED'], [m / 100, 'There are 1,000 g in a kg.', 'M_TONNE_FACTOR_WRONG']] },
       ],
       hints: ['Volume first, then mass = density × volume.'],
       steps: [`Volume: ${l} × ${w} × ${h} = ${l * w * h} cm³.`, `Mass: ${rho} × ${l * w * h} = ${T(m)} g.`, `In kg: ${T(m)} ÷ 1,000 = ${T(m / 1000)} kg.`] }),
     check: ({ rho, l, w, h }, v) => v[0] === l * w * h && Math.abs(v[1] / v[0] - rho) < 1e-6 && Math.abs(v[2] * 1000 - v[1]) < 1e-6 }),
 
-  fam({ id: 'g9.density.sample-table', skill: 'G8_DENSITY', outcome: 'G9.DENSITY.c', rung: 3, form: 'table',
+  fam({ id: 'g9.density.sample-table', skill: 'G8_DENSITY', outcome: 'MATH.G9.MEASUR.MASS_VOLUME_WEIGHT_AND_D.c', cskill: 'MATH.G9.MEASUR.MASS_VOLUME_WEIGHT_AND_D.DENSITY_CALCULATE', misMapped: false, reveals: ['M_HEAVIEST_IS_DENSEST'], rung: 3, form: 'table',
     draw: () => {
       const mats = [['wood', 0.6], ['glass', 2.5], ['aluminium', 2.7], ['iron', 7.8], ['copper', 8.9], ['lead', 11.3]].sort(() => Math.random() - 0.5).slice(0, 3);
       const rows = mats.map(([n, r]) => { const v = pick([20, 50, 100, 200]); return { n, r, v, m: round(r * v, 1) }; });
@@ -484,53 +484,53 @@ export const FAMILIES = [
       hints: ['Density = mass ÷ volume. Work it out for every row.', 'The biggest mass is not always the biggest density.'],
       steps: rows.map(x => `${x.n}: ${T(x.m)} ÷ ${x.v} = ${x.r} g/cm³.`).concat([`The greatest is ${top.n}.`]) }) }),
 
-  fam({ id: 'g9.density.float-sink-why', skill: 'G8_DENSITY', outcome: 'G9.DENSITY.d', rung: 2, form: 'why',
+  fam({ id: 'g9.density.float-sink-why', skill: 'G8_DENSITY', outcome: 'MATH.G9.MEASUR.MASS_VOLUME_WEIGHT_AND_D.d', cskill: 'MATH.G9.MEASUR.MASS_VOLUME_WEIGHT_AND_D.DENSITY_FLOAT_SINK', rung: 2, form: 'why',
     draw: () => { const rho = pick([0.6, 0.8, 0.9, 1.2, 2.5, 7.8]), v = pick([20, 50, 100]); return { rho, v, m: round(rho * v, 1), who: person() }; },
     make: ({ rho, v, m, who }) => {
       const floats = rho < 1, opp = floats ? 'sinks' : 'floats', same = floats ? 'floats' : 'sinks';
       return { question: `${who.name} lowers a block into a basin of water. The block has a mass of ${T(m)} g and a volume of ${v} cm³. Water has a density of 1 g/cm³. Choose the best explanation.`,
         options: [
           { text: `It ${same}, because it is ${floats ? 'less' : 'more'} dense than water`, right: true },
-          { text: `It ${opp}, because an object ${floats ? 'with a low density' : 'with a high density'} ${opp}`, right: false, why: 'An object floats when it is less dense than the liquid, and sinks when it is denser.' },
-          { text: `It ${same}, because its mass of ${T(m)} g is ${floats ? 'small' : 'large'}`, right: false, why: 'Mass alone does not decide it. A big ship floats and a small pin sinks. Compare densities.' },
-          { text: `It ${opp}, because its volume of ${v} cm³ is ${floats ? 'large' : 'small'}`, right: false, why: 'Volume alone does not decide it. Find the density, which uses both mass and volume.' },
+          { text: `It ${opp}, because an object ${floats ? 'with a low density' : 'with a high density'} ${opp}`, right: false, why: 'An object floats when it is less dense than the liquid, and sinks when it is denser.', mis: 'M_OPPOSITE_RULE' },
+          { text: `It ${same}, because its mass of ${T(m)} g is ${floats ? 'small' : 'large'}`, right: false, why: 'Mass alone does not decide it. A big ship floats and a small pin sinks. Compare densities.', mis: 'M_MASS_DECIDES' },
+          { text: `It ${opp}, because its volume of ${v} cm³ is ${floats ? 'large' : 'small'}`, right: false, why: 'Volume alone does not decide it. Find the density, which uses both mass and volume.', mis: 'M_VOLUME_DECIDES' },
         ],
         hints: ['Work out the density of the block: mass ÷ volume.', 'Compare it with the density of water.'],
         steps: [`Density = ${T(m)} ÷ ${v} = ${rho} g/cm³.`, `Water is 1 g/cm³. The block is ${floats ? 'less' : 'more'} dense, so it ${same}.`] };
     } }),
 
-  fam({ id: 'g9.density.ice-volume', skill: 'G8_DENSITY', outcome: 'G9.DENSITY.d', rung: 3, form: 'word',
+  fam({ id: 'g9.density.ice-volume', skill: 'G8_DENSITY', outcome: 'MATH.G9.MEASUR.MASS_VOLUME_WEIGHT_AND_D.d', cskill: 'MATH.G9.MEASUR.MASS_VOLUME_WEIGHT_AND_D.DENSITY_FLOAT_SINK', rung: 3, form: 'word',
     draw: () => ({ m: pick([90, 180, 270, 450, 540, 720]), who: person() }),
     make: ({ m, who }) => {
       const ice = m / 0.9;
       return { question: `A tray holds ${m} g of water. ${who.name} puts it in a freezer and it turns to ice. 1 cm³ of ice has a mass of 0.9 g. How many cm³ does the ice fill?`,
         answer: ice,
-        wrong: [[m, 'The water takes up this much space. Ice is less dense, so the same mass takes more space.'], [round(m * 0.9, 1), 'Volume = mass ÷ density. Multiplying by the density does not give a volume.'], [round(m / 1.1, 1), 'The density of ice is 0.9 g/cm³. Divide by 0.9.'], [round(m - 0.9, 1), 'Divide the mass by the density. Do not subtract.']],
+        wrong: [[m, 'The water takes up this much space. Ice is less dense, so the same mass takes more space.', 'M_ICE_SAME_VOLUME'], [round(m * 0.9, 1), 'Volume = mass ÷ density. Multiplying by the density does not give a volume.', 'M_ICE_MULTIPLIED'], [round(m / 1.1, 1), 'The density of ice is 0.9 g/cm³. Divide by 0.9.', 'M_ICE_WRONG_DENSITY'], [round(m - 0.9, 1), 'Divide the mass by the density. Do not subtract.', 'M_ICE_SUBTRACTED']],
         hints: ['The mass stays the same when water freezes.', 'Volume = mass ÷ density.'],
         steps: [`Mass of ice: ${m} g.`, `Volume = ${m} ÷ 0.9 = ${T(ice)} cm³.`] };
     },
     check: ({ m }, a) => Math.abs(a * 0.9 - m) < 0.01 }),
 
-  fam({ id: 'g9.density.liquid-mix', skill: 'G8_DENSITY', outcome: 'G9.DENSITY.d', rung: 3, form: 'word',
+  fam({ id: 'g9.density.liquid-mix', skill: 'G8_DENSITY', outcome: 'MATH.G9.MEASUR.MASS_VOLUME_WEIGHT_AND_D.d', cskill: 'MATH.G9.MEASUR.MASS_VOLUME_WEIGHT_AND_D.DENSITY_APPLY', rung: 3, form: 'word',
     draw: () => { const r1 = pick([0.8, 0.9]), r2 = pick([1, 1.1, 1.2]), v1 = pick([100, 200, 300]), v2 = pick([100, 200, 300]); const d = (r1 * v1 + r2 * v2) / (v1 + v2); return v1 !== v2 && dp(d, 2) ? { r1, r2, v1, v2 } : null; },
     make: ({ r1, r2, v1, v2 }) => {
       const m = round(r1 * v1 + r2 * v2, 2), d = round(m / (v1 + v2), 2);
       return { question: `A learner pours ${v1} cm³ of oil with a density of ${r1} g/cm³ into a jar. Then ${v2} cm³ of salt water with a density of ${r2} g/cm³ is added. Find the mean density of the two liquids together, in g/cm³.`,
         answer: d,
-        wrong: [[round((r1 + r2) / 2, 2), 'The amounts are different, so you cannot just average the two densities. Use total mass ÷ total volume.'], [m, 'That is the total mass. Divide it by the total volume.'], [round(m / v1, 2), 'Divide by the volume of both liquids together.'], [round(r1 * v1 / (v1 + v2) + r2, 2), 'Find the mass of each liquid first. Then add the masses and divide by the total volume.']],
+        wrong: [[round((r1 + r2) / 2, 2), 'The amounts are different, so you cannot just average the two densities. Use total mass ÷ total volume.', 'M_DENSITIES_AVERAGED'], [m, 'That is the total mass. Divide it by the total volume.', 'M_TOTAL_MASS_GIVEN'], [round(m / v1, 2), 'Divide by the volume of both liquids together.', 'M_ONE_VOLUME_USED'], [round(r1 * v1 / (v1 + v2) + r2, 2), 'Find the mass of each liquid first. Then add the masses and divide by the total volume.', 'M_MIXTURE_MASS_NOT_FOUND']],
         hints: ['Find the mass of each liquid: density × volume.', 'Mean density = total mass ÷ total volume.'],
         steps: [`Oil: ${r1} × ${v1} = ${T(round(r1 * v1, 2))} g. Salt water: ${r2} × ${v2} = ${T(round(r2 * v2, 2))} g.`, `Total mass: ${T(m)} g. Total volume: ${v1 + v2} cm³.`, `Density: ${T(m)} ÷ ${v1 + v2} = ${T(d)} g/cm³.`] };
     },
     check: ({ r1, r2, v1, v2 }, a) => Math.abs(a * (v1 + v2) - (r1 * v1 + r2 * v2)) < 0.011 }),
 
-  fam({ id: 'g9.density.stone-cylinder', skill: 'G8_DENSITY', outcome: 'G9.DENSITY.d', rung: 2, form: 'steps',
+  fam({ id: 'g9.density.stone-cylinder', skill: 'G8_DENSITY', outcome: 'MATH.G9.MEASUR.MASS_VOLUME_WEIGHT_AND_D.d', cskill: 'MATH.G9.MEASUR.MASS_VOLUME_WEIGHT_AND_D.DENSITY_APPLY', rung: 2, form: 'steps',
     draw: () => { const rho = pick([2.5, 2.7, 3]), rise = pick([20, 30, 40]), start = pick([50, 60, 80]), chip = pick([10, 20, 50]); return { rho, rise, start, chip, m: round(rho * rise, 1), who: person() }; },
     make: ({ rho, rise, start, chip, m, who }) => ({
       question: `${who.name} drops a stone with a mass of ${T(m)} g into a measuring cylinder holding ${start} cm³ of water. The stone sinks. The water level rises to ${start + rise} cm³.`,
       parts: [
-        { prompt: 'Volume of the stone, in cm³:', answer: rise, unit: 'cm³', hint: 'The stone pushes aside its own volume of water.', wrong: [[start + rise, 'That is the final reading, which includes the water.'], [start, 'That is the water at the start.']] },
-        { prompt: 'Density of the stone, in g/cm³:', answer: rho, unit: 'g/cm³', hint: 'Mass ÷ volume.', wrong: [[round(rise / m, 3), 'Density is mass ÷ volume, not the other way round.'], [round(m / (start + rise), 3), 'Use the volume of the stone only, not the final reading.']] },
-        { prompt: `Mass of a chip of the same stone with a volume of ${chip} cm³, in grams:`, answer: round(rho * chip, 2), unit: 'g', hint: 'Mass = density × volume.', wrong: [[round(chip / rho, 2), 'Mass = density × volume.'], [m, 'That is the mass of the first stone.']] },
+        { prompt: 'Volume of the stone, in cm³:', answer: rise, unit: 'cm³', hint: 'The stone pushes aside its own volume of water.', wrong: [[start + rise, 'That is the final reading, which includes the water.', 'M_FINAL_READING_AS_VOLUME'], [start, 'That is the water at the start.', 'M_START_AS_VOLUME']] },
+        { prompt: 'Density of the stone, in g/cm³:', answer: rho, unit: 'g/cm³', hint: 'Mass ÷ volume.', wrong: [[round(rise / m, 3), 'Density is mass ÷ volume, not the other way round.', 'M_VOLUME_OVER_MASS'], [round(m / (start + rise), 3), 'Use the volume of the stone only, not the final reading.', 'M_FINAL_READING_AS_VOLUME']] },
+        { prompt: `Mass of a chip of the same stone with a volume of ${chip} cm³, in grams:`, answer: round(rho * chip, 2), unit: 'g', hint: 'Mass = density × volume.', wrong: [[round(chip / rho, 2), 'Mass = density × volume.', 'M_CHIP_MASS_DIVIDED'], [m, 'That is the mass of the first stone.', 'SLIP']] },
       ],
       hints: ['The rise in the water level is the volume of the stone.'],
       steps: [`Volume: ${start + rise} − ${start} = ${rise} cm³.`, `Density: ${T(m)} ÷ ${rise} = ${rho} g/cm³.`, `Chip: ${rho} × ${chip} = ${T(round(rho * chip, 2))} g.`] }),
@@ -983,14 +983,14 @@ export const FAMILIES = [
     },
     check: ({ r }, a) => a * 40 === r * 40 }),
 
-  fam({ id: 'g9.density.mass-volume-graph', skill: 'G8_DENSITY', outcome: 'G9.DENSITY.c', rung: 2, form: 'graph',
+  fam({ id: 'g9.density.mass-volume-graph', skill: 'G8_DENSITY', outcome: 'MATH.G9.MEASUR.MASS_VOLUME_WEIGHT_AND_D.c', cskill: 'MATH.G9.MEASUR.MASS_VOLUME_WEIGHT_AND_D.DENSITY_CALCULATE', rung: 2, form: 'graph',
     draw: () => ({ rho: pick([2.5, 4, 5, 8]), what: pick(['metal', 'material', 'solid']) }),
     make: ({ rho, what }) => {
       const xs = [0, 10, 20, 30, 40], top = rho * 40, step = top / 4, yTicks = [0, step, 2 * step, 3 * step, 4 * step];
       return { question: `A learner weighs different volumes of the same ${what}. The graph shows the mass against the volume. Use the graph to find the density of the ${what}, in g/cm³.`,
         model: { type: 'line-graph', data: { points: xs.map(x => ({ x, y: rho * x })), xTicks: xs, yTicks, xLabel: 'Volume (cm³)', yLabel: 'Mass (g)' } },
         answer: rho,
-        wrong: [[top, 'That is the mass at 40 cm³. Density is the mass of 1 cm³: divide by the volume.'], [round(1 / rho, 3), 'That is volume ÷ mass, upside down.'], [top - 40, 'Divide the mass by the volume. Do not subtract.'], [round(top / 10, 2), 'The point at the end of the line is at 40 cm³, not 10 cm³. Divide by the volume at that point.']],
+        wrong: [[top, 'That is the mass at 40 cm³. Density is the mass of 1 cm³: divide by the volume.', 'M_GRAPH_MASS_READ'], [round(1 / rho, 3), 'That is volume ÷ mass, upside down.', 'M_DENSITY_UPSIDE_DOWN'], [top - 40, 'Divide the mass by the volume. Do not subtract.', 'M_SUBTRACT_FOR_DENSITY'], [round(top / 10, 2), 'The point at the end of the line is at 40 cm³, not 10 cm³. Divide by the volume at that point.', 'M_GRAPH_WRONG_VOLUME']],
         hints: ['Pick a point on the line and read the volume and the mass.', 'Density = mass ÷ volume.'],
         steps: [`At 40 cm³ the line shows a mass of ${T(top)} g.`, `Density: ${T(top)} ÷ 40 = ${rho} g/cm³.`] };
     },

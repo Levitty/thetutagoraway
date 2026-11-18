@@ -8325,6 +8325,970 @@ export const TEACHING_PACK_G9 = {
   "sub_strand": "MATH.G9.MEASUR.VOLUME_OF_SOLIDS",
   "sub_strand_name": "Volume of Solids",
   "status": "draft: written 18 Nov 2026 offline for Grade 9; not yet checked by a Kenyan maths teacher; not loaded by the live tutor"
+ },
+ "MATH.G9.MEASUR.MASS_VOLUME_WEIGHT_AND_D.MASS_UNITS": {
+  "skill": "MATH.G9.MEASUR.MASS_VOLUME_WEIGHT_AND_D.MASS_UNITS",
+  "key_step": "The child writes every mass in one unit before adding or subtracting, then converts the answer to the unit asked.",
+  "floor": {
+   "prerequisite": "Converts metric units.",
+   "question": "3.2 km in m",
+   "answer": "3,200 m"
+  },
+  "representations": [
+   "a units ladder mg, g, kg, t",
+   "a table of bags",
+   "a weighbridge ticket"
+  ],
+  "steps": [
+   "Choose one unit.",
+   "Convert every mass to it.",
+   "Add or subtract.",
+   "Convert to the unit asked."
+  ],
+  "contexts": [
+   "a lorry at a weighbridge on Mombasa Road",
+   "bags of maize and beans at a cereals board",
+   "a pharmacy measuring medicine"
+  ],
+  "board": [
+   {
+    "beat": "write",
+    "do": "Write 12.4 tonnes and 7,850 kg."
+   },
+   {
+    "beat": "point",
+    "do": "Point at both units.",
+    "say": "Can we subtract these as they are?"
+   },
+   {
+    "beat": "pause",
+    "do": "Wait for no."
+   },
+   {
+    "beat": "reveal",
+    "do": "Write 12,400 kg - 7,850 kg = 4,550 kg = 4.55 t."
+   }
+  ],
+  "misconceptions": [
+   {
+    "code": "MATH.G9.MEASUR.MASS_VOLUME_WEIGHT_AND_D.MASS_UNITS.M_UNITS_NOT_MATCHED",
+    "listen_for": [
+     "a negative answer"
+    ],
+    "ask": "Are the units the same?",
+    "repair": "No: convert first.",
+    "error": "Subtracts or adds masses in different units without converting.",
+    "example": {
+     "question": "12.4 tonnes minus 7,850 kg?",
+     "wrong_answer": "-7,837.6",
+     "correct_answer": "4.55 tonnes"
+    }
+   },
+   {
+    "code": "MATH.G9.MEASUR.MASS_VOLUME_WEIGHT_AND_D.MASS_UNITS.M_PART_FOR_LOAD",
+    "listen_for": [
+     "7.85 t"
+    ],
+    "ask": "Is that the lorry or the load?",
+    "repair": "The lorry.",
+    "error": "Gives the mass of the empty lorry as the load.",
+    "example": {
+     "question": "Gross 12.4 t, empty lorry 7,850 kg. Load?",
+     "wrong_answer": "7.85 t",
+     "correct_answer": "4.55 t"
+    }
+   },
+   {
+    "code": "MATH.G9.MEASUR.MASS_VOLUME_WEIGHT_AND_D.MASS_UNITS.M_KG_NOT_TONNES",
+    "listen_for": [
+     "4,550"
+    ],
+    "ask": "Kg or tonnes?",
+    "repair": "Divide by 1,000.",
+    "error": "Gives the answer in kg when tonnes are asked.",
+    "example": {
+     "question": "Load 4,550 kg. In tonnes?",
+     "wrong_answer": "4,550",
+     "correct_answer": "4.55"
+    }
+   },
+   {
+    "code": "MATH.G9.MEASUR.MASS_VOLUME_WEIGHT_AND_D.MASS_UNITS.M_GROSS_ADDED",
+    "listen_for": [
+     "20.25"
+    ],
+    "ask": "Does the scale weigh the lorry too?",
+    "repair": "Yes: subtract.",
+    "error": "Adds the empty lorry to the gross mass.",
+    "example": {
+     "question": "Gross 12.4 t includes the lorry 7.85 t. Load?",
+     "wrong_answer": "20.25",
+     "correct_answer": "4.55"
+    }
+   },
+   {
+    "code": "MATH.G9.MEASUR.MASS_VOLUME_WEIGHT_AND_D.MASS_UNITS.M_ONE_OF_EACH_ADDED",
+    "listen_for": [
+     "140 kg"
+    ],
+    "ask": "How many bags of each?",
+    "repair": "Multiply.",
+    "error": "Adds the mass of one bag of each kind, ignoring the number of bags.",
+    "example": {
+     "question": "20 bags of 90 kg and 10 bags of 50 kg. Total?",
+     "wrong_answer": "140 kg",
+     "correct_answer": "2,300 kg"
+    }
+   },
+   {
+    "code": "MATH.G9.MEASUR.MASS_VOLUME_WEIGHT_AND_D.MASS_UNITS.M_BAG_COUNT_ADDED",
+    "listen_for": [
+     "30"
+    ],
+    "ask": "Is 30 a mass?",
+    "repair": "No: bags.",
+    "error": "Adds the numbers of bags as the mass.",
+    "example": {
+     "question": "20 bags of 90 kg and 10 bags of 50 kg. Total?",
+     "wrong_answer": "30",
+     "correct_answer": "2,300 kg"
+    }
+   },
+   {
+    "code": "MATH.G9.MEASUR.MASS_VOLUME_WEIGHT_AND_D.MASS_UNITS.M_TONNE_FACTOR_WRONG",
+    "listen_for": [
+     "23"
+    ],
+    "ask": "How many kg in a tonne?",
+    "repair": "1,000.",
+    "error": "Uses 100 kg in a tonne.",
+    "example": {
+     "question": "2,300 kg in tonnes?",
+     "wrong_answer": "23",
+     "correct_answer": "2.3"
+    }
+   },
+   {
+    "code": "MATH.G9.MEASUR.MASS_VOLUME_WEIGHT_AND_D.MASS_UNITS.M_BIGGER_UNIT_MULTIPLIED",
+    "listen_for": [
+     "312,000 kg"
+    ],
+    "ask": "Is a kg bigger or smaller than a gram?",
+    "repair": "Bigger: fewer kg, so divide.",
+    "error": "Multiplies by 1,000 when changing to a bigger unit (g to kg, kg to tonnes).",
+    "example": {
+     "question": "312 g in kg?",
+     "wrong_answer": "312,000",
+     "correct_answer": "0.312"
+    }
+   }
+  ],
+  "checks": [
+   {
+    "question": "A lorry and load weigh 15.2 t. The lorry is 9,600 kg. Load in tonnes?",
+    "answer": "5.6 t",
+    "shows": "same unit first"
+   },
+   {
+    "question": "40 bags of 50 kg and 20 bags of 90 kg. Total in tonnes?",
+    "answer": "3.8 t",
+    "shows": "bags x mass"
+   }
+  ],
+  "name": "Convert units of mass (mg, g, kg, tonnes) in real situations",
+  "sub_strand": "MATH.G9.MEASUR.MASS_VOLUME_WEIGHT_AND_D",
+  "sub_strand_name": "Mass, Volume, Weight and Density",
+  "status": "draft: written 18 Nov 2026 offline for Grade 9; not yet checked by a Kenyan maths teacher; not loaded by the live tutor"
+ },
+ "MATH.G9.MEASUR.MASS_VOLUME_WEIGHT_AND_D.MASS_WEIGHT": {
+  "skill": "MATH.G9.MEASUR.MASS_VOLUME_WEIGHT_AND_D.MASS_WEIGHT",
+  "key_step": "The child says which stays the same (mass) and which changes (weight), then uses weight = mass x g.",
+  "floor": {
+   "prerequisite": "Uses a rate.",
+   "question": "10 N for each kg; 5 kg?",
+   "answer": "50 N"
+  },
+  "representations": [
+   "a spring balance",
+   "a table Earth and Moon",
+   "weight = mass x g"
+  ],
+  "steps": [
+   "Mass is in kg and stays the same.",
+   "Weight is in N and depends on g.",
+   "Weight = mass x g.",
+   "Mass = weight / g where it was weighed."
+  ],
+  "contexts": [
+   "a sack of potatoes from Nyandarua",
+   "an astronaut's backpack",
+   "a rock brought back from the Moon"
+  ],
+  "board": [
+   {
+    "beat": "write",
+    "do": "Write Earth g = 10, Moon g = 1.6."
+   },
+   {
+    "beat": "point",
+    "do": "Point at a 40 kg rock.",
+    "say": "On the Moon, is there less rock, or does it just feel lighter?"
+   },
+   {
+    "beat": "pause",
+    "do": "Wait for the child to say it feels lighter."
+   },
+   {
+    "beat": "reveal",
+    "do": "Write mass 40 kg both places; weight 400 N and 64 N."
+   }
+  ],
+  "misconceptions": [
+   {
+    "code": "MATH.G9.MEASUR.MASS_VOLUME_WEIGHT_AND_D.MASS_WEIGHT.M_WEIGHT_DIVIDED_BY_G",
+    "listen_for": [
+     "5 N"
+    ],
+    "ask": "Each kg is pulled with 10 N. 50 kg?",
+    "repair": "500 N.",
+    "error": "Divides the mass by g for the weight.",
+    "example": {
+     "question": "Mass 50 kg, g = 10 N/kg. Weight?",
+     "wrong_answer": "5 N",
+     "correct_answer": "500 N"
+    }
+   },
+   {
+    "code": "MATH.G9.MEASUR.MASS_VOLUME_WEIGHT_AND_D.MASS_WEIGHT.M_MASS_AS_WEIGHT",
+    "listen_for": [
+     "50"
+    ],
+    "ask": "Is weight in kg or N?",
+    "repair": "N: multiply by g.",
+    "error": "Gives the mass as the weight.",
+    "example": {
+     "question": "Mass 50 kg. Weight in newtons?",
+     "wrong_answer": "50",
+     "correct_answer": "500"
+    }
+   },
+   {
+    "code": "MATH.G9.MEASUR.MASS_VOLUME_WEIGHT_AND_D.MASS_WEIGHT.M_G_ADDED",
+    "listen_for": [
+     "60"
+    ],
+    "ask": "Add or multiply?",
+    "repair": "Multiply.",
+    "error": "Adds g to the mass.",
+    "example": {
+     "question": "Mass 50 kg, g = 10. Weight?",
+     "wrong_answer": "60",
+     "correct_answer": "500"
+    }
+   },
+   {
+    "code": "MATH.G9.MEASUR.MASS_VOLUME_WEIGHT_AND_D.MASS_WEIGHT.M_WEIGHT_SAME_EVERYWHERE",
+    "listen_for": [
+     "still 400 N"
+    ],
+    "ask": "Does the Moon pull as hard?",
+    "repair": "No: 64 N.",
+    "error": "Thinks weight does not change on the Moon.",
+    "example": {
+     "question": "A 400 N rock on Earth is taken to the Moon. Its weight?",
+     "wrong_answer": "400 N",
+     "correct_answer": "64 N"
+    }
+   },
+   {
+    "code": "MATH.G9.MEASUR.MASS_VOLUME_WEIGHT_AND_D.MASS_WEIGHT.M_MASS_CHANGES_PLACE",
+    "listen_for": [
+     "6.4 kg"
+    ],
+    "ask": "Is there less rock on the Moon?",
+    "repair": "No: 40 kg.",
+    "error": "Thinks mass changes on the Moon.",
+    "example": {
+     "question": "A 40 kg rock is taken to the Moon. Its mass?",
+     "wrong_answer": "6.4 kg",
+     "correct_answer": "40 kg"
+    }
+   },
+   {
+    "code": "MATH.G9.MEASUR.MASS_VOLUME_WEIGHT_AND_D.MASS_WEIGHT.M_MASS_FROM_MOON_G",
+    "listen_for": [
+     "250 kg"
+    ],
+    "ask": "Where was it weighed?",
+    "repair": "On Earth: divide by 10.",
+    "error": "Finds the mass from the Earth weight using the Moon's g.",
+    "example": {
+     "question": "400 N on Earth (g = 10). Mass?",
+     "wrong_answer": "250 kg",
+     "correct_answer": "40 kg"
+    }
+   }
+  ],
+  "checks": [
+   {
+    "question": "A 75 kg sack: weight on Earth (g = 10)?",
+    "answer": "750 N",
+    "shows": "weight = mass x g"
+   },
+   {
+    "question": "A box weighs 32 N on the Moon (g = 1.6). Mass?",
+    "answer": "20 kg",
+    "shows": "mass from weight"
+   }
+  ],
+  "name": "Relate mass and weight",
+  "sub_strand": "MATH.G9.MEASUR.MASS_VOLUME_WEIGHT_AND_D",
+  "sub_strand_name": "Mass, Volume, Weight and Density",
+  "status": "draft: written 18 Nov 2026 offline for Grade 9; not yet checked by a Kenyan maths teacher; not loaded by the live tutor"
+ },
+ "MATH.G9.MEASUR.MASS_VOLUME_WEIGHT_AND_D.DENSITY_CALCULATE": {
+  "skill": "MATH.G9.MEASUR.MASS_VOLUME_WEIGHT_AND_D.DENSITY_CALCULATE",
+  "key_step": "The child writes density = mass / volume and covers the quantity wanted to see whether to multiply or divide.",
+  "floor": {
+   "prerequisite": "Finds a rate per unit.",
+   "question": "780 g for 100 cubic cm; per cubic cm?",
+   "answer": "7.8"
+  },
+  "representations": [
+   "the density triangle",
+   "a table of samples",
+   "a mass-volume graph"
+  ],
+  "steps": [
+   "Write what is known with units.",
+   "Find the volume first if needed.",
+   "Density = mass / volume, mass = density x volume, volume = mass / density.",
+   "Check the units."
+  ],
+  "contexts": [
+   "a blacksmith's iron in Kariokor",
+   "samples of soil in a science lab",
+   "cooking oil and water"
+  ],
+  "board": [
+   {
+    "beat": "draw",
+    "do": "Draw a triangle with M on top and D and V below."
+   },
+   {
+    "beat": "point",
+    "do": "Cover V.",
+    "say": "What is left?"
+   },
+   {
+    "beat": "pause",
+    "do": "Wait for M over D."
+   },
+   {
+    "beat": "reveal",
+    "do": "Write volume = 780 / 7.8 = 100 cubic cm."
+   }
+  ],
+  "misconceptions": [
+   {
+    "code": "MATH.G9.MEASUR.MASS_VOLUME_WEIGHT_AND_D.DENSITY_CALCULATE.M_MASS_TIMES_DENSITY",
+    "listen_for": [
+     "6,084"
+    ],
+    "ask": "Is that a volume?",
+    "repair": "No: divide.",
+    "error": "Multiplies mass by density to find volume.",
+    "example": {
+     "question": "Mass 780 g, density 7.8 g per cubic cm. Volume?",
+     "wrong_answer": "6,084",
+     "correct_answer": "100"
+    }
+   },
+   {
+    "code": "MATH.G9.MEASUR.MASS_VOLUME_WEIGHT_AND_D.DENSITY_CALCULATE.M_DENSITY_UPSIDE_DOWN",
+    "listen_for": [
+     "0.01"
+    ],
+    "ask": "Which goes on top?",
+    "repair": "Mass.",
+    "error": "Divides volume by mass, or density by mass.",
+    "example": {
+     "question": "Mass 780 g, density 7.8. Volume?",
+     "wrong_answer": "0.01",
+     "correct_answer": "100"
+    }
+   },
+   {
+    "code": "MATH.G9.MEASUR.MASS_VOLUME_WEIGHT_AND_D.DENSITY_CALCULATE.M_SUBTRACT_FOR_DENSITY",
+    "listen_for": [
+     "772.2"
+    ],
+    "ask": "Is density found by subtracting?",
+    "repair": "No: dividing.",
+    "error": "Subtracts to relate mass and density.",
+    "example": {
+     "question": "Mass 780 g, density 7.8. Volume?",
+     "wrong_answer": "772.2",
+     "correct_answer": "100"
+    }
+   },
+   {
+    "code": "MATH.G9.MEASUR.MASS_VOLUME_WEIGHT_AND_D.DENSITY_CALCULATE.M_SIDES_ADDED_VOLUME",
+    "listen_for": [
+     "11"
+    ],
+    "ask": "Volume: add or multiply?",
+    "repair": "Multiply.",
+    "error": "Adds the sides of the block for its volume.",
+    "example": {
+     "question": "Block 5 cm by 4 cm by 2 cm. Volume?",
+     "wrong_answer": "11",
+     "correct_answer": "40"
+    }
+   },
+   {
+    "code": "MATH.G9.MEASUR.MASS_VOLUME_WEIGHT_AND_D.DENSITY_CALCULATE.M_VOLUME_DIVIDED_FOR_MASS",
+    "listen_for": [
+     "5.1"
+    ],
+    "ask": "Cover M in the triangle.",
+    "repair": "D x V.",
+    "error": "Divides the volume by the density for the mass.",
+    "example": {
+     "question": "Volume 40 cubic cm, density 7.8. Mass?",
+     "wrong_answer": "5.1",
+     "correct_answer": "312"
+    }
+   },
+   {
+    "code": "MATH.G9.MEASUR.MASS_VOLUME_WEIGHT_AND_D.DENSITY_CALCULATE.M_VOLUME_FOR_MASS",
+    "listen_for": [
+     "40"
+    ],
+    "ask": "Is 40 the volume or the mass?",
+    "repair": "Volume: times 7.8.",
+    "error": "Gives the volume as the mass.",
+    "example": {
+     "question": "Volume 40 cubic cm, density 7.8. Mass?",
+     "wrong_answer": "40",
+     "correct_answer": "312"
+    }
+   },
+   {
+    "code": "MATH.G9.MEASUR.MASS_VOLUME_WEIGHT_AND_D.DENSITY_CALCULATE.M_HEAVIEST_IS_DENSEST",
+    "listen_for": [
+     "A"
+    ],
+    "ask": "What is each mass divided by its volume?",
+    "repair": "2 and 4: B.",
+    "error": "Picks the heaviest sample as the densest.",
+    "example": {
+     "question": "A: 600 g, 300 cubic cm. B: 400 g, 100 cubic cm. Densest?",
+     "wrong_answer": "A",
+     "correct_answer": "B"
+    }
+   },
+   {
+    "code": "MATH.G9.MEASUR.MASS_VOLUME_WEIGHT_AND_D.DENSITY_CALCULATE.M_GRAPH_MASS_READ",
+    "listen_for": [
+     "100"
+    ],
+    "ask": "Is 100 a density?",
+    "repair": "A mass: divide by 40.",
+    "error": "Reads a mass from the graph as the density.",
+    "example": {
+     "question": "The line passes through (40 cubic cm, 100 g). Density?",
+     "wrong_answer": "100",
+     "correct_answer": "2.5"
+    }
+   },
+   {
+    "code": "MATH.G9.MEASUR.MASS_VOLUME_WEIGHT_AND_D.DENSITY_CALCULATE.M_GRAPH_WRONG_VOLUME",
+    "listen_for": [
+     "10"
+    ],
+    "ask": "Which volume goes with 100 g?",
+    "repair": "40.",
+    "error": "Divides by a volume that is not the point's own.",
+    "example": {
+     "question": "The line passes through (40, 100). Density?",
+     "wrong_answer": "10 (100 / 10)",
+     "correct_answer": "2.5"
+    }
+   }
+  ],
+  "checks": [
+   {
+    "question": "A block 10 cm by 5 cm by 2 cm has mass 270 g. Density?",
+    "answer": "2.7 g per cubic cm",
+    "shows": "volume then density"
+   },
+   {
+    "question": "Copper has density 8.9 g per cubic cm. Mass of 20 cubic cm?",
+    "answer": "178 g",
+    "shows": "mass = density x volume"
+   }
+  ],
+  "name": "Determine mass, volume and density from each other",
+  "sub_strand": "MATH.G9.MEASUR.MASS_VOLUME_WEIGHT_AND_D",
+  "sub_strand_name": "Mass, Volume, Weight and Density",
+  "status": "draft: written 18 Nov 2026 offline for Grade 9; not yet checked by a Kenyan maths teacher; not loaded by the live tutor"
+ },
+ "MATH.G9.MEASUR.MASS_VOLUME_WEIGHT_AND_D.DENSITY_UNITS": {
+  "skill": "MATH.G9.MEASUR.MASS_VOLUME_WEIGHT_AND_D.DENSITY_UNITS",
+  "key_step": "The child reasons that the number in kg/m cubed is 1,000 times the number in g/cm cubed, and checks with water (1 g/cm cubed = 1,000 kg/m cubed).",
+  "floor": {
+   "prerequisite": "Converts g to kg.",
+   "question": "7,800 g in kg",
+   "answer": "7.8 kg"
+  },
+  "representations": [
+   "water as an anchor: 1 and 1,000",
+   "a two-step conversion",
+   "a table of materials"
+  ],
+  "steps": [
+   "Remember water: 1 g/cm cubed = 1,000 kg/m cubed.",
+   "g/cm cubed to kg/m cubed: x 1,000.",
+   "kg/m cubed to g/cm cubed: / 1,000.",
+   "Check the size against water."
+  ],
+  "contexts": [
+   "iron for a gate",
+   "aluminium sufurias",
+   "concrete for a culvert"
+  ],
+  "board": [
+   {
+    "beat": "write",
+    "do": "Write water: 1 g per cubic cm."
+   },
+   {
+    "beat": "point",
+    "do": "Point at a cubic metre tank of water.",
+    "say": "How many kg of water in it?"
+   },
+   {
+    "beat": "pause",
+    "do": "Wait for 1,000."
+   },
+   {
+    "beat": "reveal",
+    "do": "Write 1 g per cubic cm = 1,000 kg per cubic m."
+   }
+  ],
+  "misconceptions": [
+   {
+    "code": "MATH.G9.MEASUR.MASS_VOLUME_WEIGHT_AND_D.DENSITY_UNITS.M_DENSITY_UNIT_DIVIDED",
+    "listen_for": [
+     "0.0078"
+    ],
+    "ask": "Is iron lighter than water in kg per cubic m?",
+    "repair": "No: 7,800.",
+    "error": "Divides by 1,000 to change g/cm cubed to kg/m cubed.",
+    "example": {
+     "question": "7.8 g per cubic cm in kg per cubic m?",
+     "wrong_answer": "0.0078",
+     "correct_answer": "7,800"
+    }
+   },
+   {
+    "code": "MATH.G9.MEASUR.MASS_VOLUME_WEIGHT_AND_D.DENSITY_UNITS.M_UNIT_FACTOR_MILLION",
+    "listen_for": [
+     "7,800,000"
+    ],
+    "ask": "Did grams change to kg?",
+    "repair": "Yes: divide by 1,000 too.",
+    "error": "Multiplies by 1,000,000, changing only the volume unit.",
+    "example": {
+     "question": "7.8 g per cubic cm in kg per cubic m?",
+     "wrong_answer": "7,800,000",
+     "correct_answer": "7,800"
+    }
+   },
+   {
+    "code": "MATH.G9.MEASUR.MASS_VOLUME_WEIGHT_AND_D.DENSITY_UNITS.M_UNIT_FACTOR_HUNDRED",
+    "listen_for": [
+     "780"
+    ],
+    "ask": "What is water in kg per cubic m?",
+    "repair": "1,000: the factor is 1,000.",
+    "error": "Uses 100 as the factor.",
+    "example": {
+     "question": "7.8 g per cubic cm in kg per cubic m?",
+     "wrong_answer": "780",
+     "correct_answer": "7,800"
+    }
+   },
+   {
+    "code": "MATH.G9.MEASUR.MASS_VOLUME_WEIGHT_AND_D.DENSITY_UNITS.M_DENSITY_UNIT_MULTIPLIED_BACK",
+    "listen_for": [
+     "2,700,000"
+    ],
+    "ask": "Going back to g per cubic cm, bigger or smaller?",
+    "repair": "Smaller: 2.7.",
+    "error": "Multiplies by 1,000 to change kg/m cubed to g/cm cubed.",
+    "example": {
+     "question": "2,700 kg per cubic m in g per cubic cm?",
+     "wrong_answer": "2,700,000",
+     "correct_answer": "2.7"
+    }
+   }
+  ],
+  "checks": [
+   {
+    "question": "Aluminium: 2.7 g per cubic cm. In kg per cubic m?",
+    "answer": "2,700",
+    "shows": "x 1,000"
+   },
+   {
+    "question": "Petrol: 750 kg per cubic m. In g per cubic cm?",
+    "answer": "0.75",
+    "shows": "/ 1,000"
+   }
+  ],
+  "name": "Convert density between g/cm cubed and kg/m cubed",
+  "sub_strand": "MATH.G9.MEASUR.MASS_VOLUME_WEIGHT_AND_D",
+  "sub_strand_name": "Mass, Volume, Weight and Density",
+  "status": "draft: written 18 Nov 2026 offline for Grade 9; not yet checked by a Kenyan maths teacher; not loaded by the live tutor"
+ },
+ "MATH.G9.MEASUR.MASS_VOLUME_WEIGHT_AND_D.DENSITY_FLOAT_SINK": {
+  "skill": "MATH.G9.MEASUR.MASS_VOLUME_WEIGHT_AND_D.DENSITY_FLOAT_SINK",
+  "key_step": "The child works out the object's density and compares it with the liquid's before saying float or sink.",
+  "floor": {
+   "prerequisite": "Finds a density.",
+   "question": "Mass 30 g, volume 50 cubic cm",
+   "answer": "0.6"
+  },
+  "representations": [
+   "a basin of water",
+   "a table: object, density, float or sink",
+   "ice cubes in a glass"
+  ],
+  "steps": [
+   "Find the object's density.",
+   "Compare with the liquid (water is 1).",
+   "Less dense floats; denser sinks.",
+   "For ice: volume = mass / 0.9."
+  ],
+  "contexts": [
+   "a log on Lake Victoria",
+   "a steel boat at Kisumu port",
+   "making ice in a freezer"
+  ],
+  "board": [
+   {
+    "beat": "write",
+    "do": "Write block: 30 g, 50 cubic cm."
+   },
+   {
+    "beat": "point",
+    "do": "Point at 30 and 50.",
+    "say": "What is its density?"
+   },
+   {
+    "beat": "pause",
+    "do": "Wait for 0.6."
+   },
+   {
+    "beat": "predict",
+    "do": "The child says float or sink."
+   },
+   {
+    "beat": "reveal",
+    "do": "Write 0.6 < 1: floats."
+   }
+  ],
+  "misconceptions": [
+   {
+    "code": "MATH.G9.MEASUR.MASS_VOLUME_WEIGHT_AND_D.DENSITY_FLOAT_SINK.M_OPPOSITE_RULE",
+    "listen_for": [
+     "sinks"
+    ],
+    "ask": "Is 0.6 less or more than water?",
+    "repair": "Less: floats.",
+    "error": "Says denser objects float and less dense ones sink.",
+    "example": {
+     "question": "A block of density 0.6 g per cubic cm in water?",
+     "wrong_answer": "sinks",
+     "correct_answer": "floats"
+    }
+   },
+   {
+    "code": "MATH.G9.MEASUR.MASS_VOLUME_WEIGHT_AND_D.DENSITY_FLOAT_SINK.M_MASS_DECIDES",
+    "listen_for": [
+     "heavy things sink"
+    ],
+    "ask": "Why does a heavy ship float?",
+    "repair": "Density, not mass.",
+    "error": "Says an object floats or sinks because of its mass.",
+    "example": {
+     "question": "Why does a big ship float?",
+     "wrong_answer": "Ships are heavy so they sink",
+     "correct_answer": "Its overall density is less than water"
+    }
+   },
+   {
+    "code": "MATH.G9.MEASUR.MASS_VOLUME_WEIGHT_AND_D.DENSITY_FLOAT_SINK.M_VOLUME_DECIDES",
+    "listen_for": [
+     "because it is big"
+    ],
+    "ask": "Do big stones float?",
+    "repair": "No: density.",
+    "error": "Says an object floats because it is big.",
+    "example": {
+     "question": "A large log floats. Why?",
+     "wrong_answer": "Because it is big",
+     "correct_answer": "Its density is less than water"
+    }
+   },
+   {
+    "code": "MATH.G9.MEASUR.MASS_VOLUME_WEIGHT_AND_D.DENSITY_FLOAT_SINK.M_ICE_SAME_VOLUME",
+    "listen_for": [
+     "450"
+    ],
+    "ask": "Does ice take more space?",
+    "repair": "Yes: 500.",
+    "error": "Thinks water keeps its volume when it freezes.",
+    "example": {
+     "question": "450 g of water freezes (ice 0.9 g per cubic cm). Volume?",
+     "wrong_answer": "450",
+     "correct_answer": "500"
+    }
+   },
+   {
+    "code": "MATH.G9.MEASUR.MASS_VOLUME_WEIGHT_AND_D.DENSITY_FLOAT_SINK.M_ICE_MULTIPLIED",
+    "listen_for": [
+     "405"
+    ],
+    "ask": "Volume: multiply or divide?",
+    "repair": "Divide.",
+    "error": "Multiplies the mass by the density of ice.",
+    "example": {
+     "question": "450 g of ice, 0.9 g per cubic cm. Volume?",
+     "wrong_answer": "405",
+     "correct_answer": "500"
+    }
+   },
+   {
+    "code": "MATH.G9.MEASUR.MASS_VOLUME_WEIGHT_AND_D.DENSITY_FLOAT_SINK.M_ICE_WRONG_DENSITY",
+    "listen_for": [
+     "409"
+    ],
+    "ask": "Is ice denser than water?",
+    "repair": "No: 0.9.",
+    "error": "Divides by a made-up density (such as 1.1) for ice.",
+    "example": {
+     "question": "450 g of ice, 0.9 g per cubic cm. Volume?",
+     "wrong_answer": "409",
+     "correct_answer": "500"
+    }
+   },
+   {
+    "code": "MATH.G9.MEASUR.MASS_VOLUME_WEIGHT_AND_D.DENSITY_FLOAT_SINK.M_ICE_SUBTRACTED",
+    "listen_for": [
+     "449.1"
+    ],
+    "ask": "Is density subtracted?",
+    "repair": "No: divide.",
+    "error": "Subtracts the density from the mass.",
+    "example": {
+     "question": "450 g of ice, 0.9. Volume?",
+     "wrong_answer": "449.1",
+     "correct_answer": "500"
+    }
+   }
+  ],
+  "checks": [
+   {
+    "question": "A 120 g object of volume 100 cubic cm in water: float or sink?",
+    "answer": "Sinks (1.2 > 1)",
+    "shows": "compare densities"
+   },
+   {
+    "question": "900 g of water freezes. Ice is 0.9 g per cubic cm. Volume of ice?",
+    "answer": "1,000 cubic cm",
+    "shows": "ice volume"
+   }
+  ],
+  "name": "Use density to explain floating and sinking, and the volume of ice",
+  "sub_strand": "MATH.G9.MEASUR.MASS_VOLUME_WEIGHT_AND_D",
+  "sub_strand_name": "Mass, Volume, Weight and Density",
+  "status": "draft: written 18 Nov 2026 offline for Grade 9; not yet checked by a Kenyan maths teacher; not loaded by the live tutor"
+ },
+ "MATH.G9.MEASUR.MASS_VOLUME_WEIGHT_AND_D.DENSITY_APPLY": {
+  "skill": "MATH.G9.MEASUR.MASS_VOLUME_WEIGHT_AND_D.DENSITY_APPLY",
+  "key_step": "The child finds the stone's volume as the rise in water, and a mixture's density as total mass over total volume.",
+  "floor": {
+   "prerequisite": "Finds a density.",
+   "question": "81 g, 30 cubic cm",
+   "answer": "2.7"
+  },
+  "representations": [
+   "a measuring cylinder before and after",
+   "a mixture table of mass and volume",
+   "total over total"
+  ],
+  "steps": [
+   "Stone volume = rise in level.",
+   "Density = mass / volume.",
+   "For a mixture: each mass = density x volume, then total mass / total volume.",
+   "For another piece: mass = density x volume."
+  ],
+  "contexts": [
+   "a stone from a quarry in Machakos",
+   "oil and salt water in a jar",
+   "a chip off a building block"
+  ],
+  "board": [
+   {
+    "beat": "draw",
+    "do": "Draw a cylinder at 50 and then at 80 with a stone inside."
+   },
+   {
+    "beat": "point",
+    "do": "Point at the two levels.",
+    "say": "How much space does the stone take?"
+   },
+   {
+    "beat": "pause",
+    "do": "Wait for 30."
+   },
+   {
+    "beat": "reveal",
+    "do": "Write 81 / 30 = 2.7 g per cubic cm."
+   }
+  ],
+  "misconceptions": [
+   {
+    "code": "MATH.G9.MEASUR.MASS_VOLUME_WEIGHT_AND_D.DENSITY_APPLY.M_FINAL_READING_AS_VOLUME",
+    "listen_for": [
+     "80"
+    ],
+    "ask": "Is the water part of the stone?",
+    "repair": "No: the rise.",
+    "error": "Uses the final water reading as the volume of the stone.",
+    "example": {
+     "question": "Water 50 cubic cm rises to 80 cubic cm. Stone volume?",
+     "wrong_answer": "80",
+     "correct_answer": "30"
+    }
+   },
+   {
+    "code": "MATH.G9.MEASUR.MASS_VOLUME_WEIGHT_AND_D.DENSITY_APPLY.M_START_AS_VOLUME",
+    "listen_for": [
+     "50"
+    ],
+    "ask": "Is 50 the stone?",
+    "repair": "The water: use the rise.",
+    "error": "Uses the starting water level as the stone's volume.",
+    "example": {
+     "question": "Water 50 rises to 80. Stone volume?",
+     "wrong_answer": "50",
+     "correct_answer": "30"
+    }
+   },
+   {
+    "code": "MATH.G9.MEASUR.MASS_VOLUME_WEIGHT_AND_D.DENSITY_APPLY.M_VOLUME_OVER_MASS",
+    "listen_for": [
+     "0.37"
+    ],
+    "ask": "Which goes on top?",
+    "repair": "Mass.",
+    "error": "Divides the volume by the mass for density.",
+    "example": {
+     "question": "Stone 81 g, volume 30 cubic cm. Density?",
+     "wrong_answer": "0.37",
+     "correct_answer": "2.7"
+    }
+   },
+   {
+    "code": "MATH.G9.MEASUR.MASS_VOLUME_WEIGHT_AND_D.DENSITY_APPLY.M_DENSITIES_AVERAGED",
+    "listen_for": [
+     "1.0"
+    ],
+    "ask": "Are the amounts equal?",
+    "repair": "No: total over total.",
+    "error": "Averages two densities for a mixture of different amounts.",
+    "example": {
+     "question": "100 cubic cm of oil (0.9) and 300 cubic cm of salt water (1.1). Mean density?",
+     "wrong_answer": "1.0",
+     "correct_answer": "1.05"
+    }
+   },
+   {
+    "code": "MATH.G9.MEASUR.MASS_VOLUME_WEIGHT_AND_D.DENSITY_APPLY.M_TOTAL_MASS_GIVEN",
+    "listen_for": [
+     "420"
+    ],
+    "ask": "Did you divide?",
+    "repair": "By 400.",
+    "error": "Gives the total mass as the density.",
+    "example": {
+     "question": "Total mass 420 g, total volume 400 cubic cm. Density?",
+     "wrong_answer": "420",
+     "correct_answer": "1.05"
+    }
+   },
+   {
+    "code": "MATH.G9.MEASUR.MASS_VOLUME_WEIGHT_AND_D.DENSITY_APPLY.M_ONE_VOLUME_USED",
+    "listen_for": [
+     "4.2"
+    ],
+    "ask": "Which volume holds 420 g?",
+    "repair": "Both: 400.",
+    "error": "Divides by the volume of one liquid only.",
+    "example": {
+     "question": "Total mass 420 g; volumes 100 and 300. Density?",
+     "wrong_answer": "4.2",
+     "correct_answer": "1.05"
+    }
+   },
+   {
+    "code": "MATH.G9.MEASUR.MASS_VOLUME_WEIGHT_AND_D.DENSITY_APPLY.M_CHIP_MASS_DIVIDED",
+    "listen_for": [
+     "1.48"
+    ],
+    "ask": "Mass: multiply or divide?",
+    "repair": "Multiply.",
+    "error": "Divides by the density to find the mass of another piece.",
+    "example": {
+     "question": "A chip of the same stone (2.7) has volume 4 cubic cm. Mass?",
+     "wrong_answer": "1.48",
+     "correct_answer": "10.8"
+    }
+   },
+   {
+    "code": "MATH.G9.MEASUR.MASS_VOLUME_WEIGHT_AND_D.DENSITY_APPLY.M_MIXTURE_MASS_NOT_FOUND",
+    "listen_for": [
+     "1.33"
+    ],
+    "ask": "What is the mass of each liquid?",
+    "repair": "90 and 330.",
+    "error": "Adds one liquid's density to the other's share without finding the masses.",
+    "example": {
+     "question": "Mean density of 100 cubic cm (0.9) and 300 cubic cm (1.1)?",
+     "wrong_answer": "1.33",
+     "correct_answer": "1.05"
+    }
+   }
+  ],
+  "checks": [
+   {
+    "question": "A stone of 65 g raises water from 40 to 65 cubic cm. Density?",
+    "answer": "2.6 g per cubic cm",
+    "shows": "displacement"
+   },
+   {
+    "question": "200 cubic cm of liquid A (0.8) and 200 cubic cm of liquid B (1.2). Mean density?",
+    "answer": "1.0 g per cubic cm",
+    "shows": "total over total"
+   }
+  ],
+  "name": "Apply density to displacement and mixtures",
+  "sub_strand": "MATH.G9.MEASUR.MASS_VOLUME_WEIGHT_AND_D",
+  "sub_strand_name": "Mass, Volume, Weight and Density",
+  "status": "draft: written 18 Nov 2026 offline for Grade 9; not yet checked by a Kenyan maths teacher; not loaded by the live tutor"
  }
 };
 export default TEACHING_PACK_G9;

@@ -651,6 +651,60 @@
     "capacity in litres"
    ],
    "mastery": "The child uses four thirds pi r cubed for a sphere and two thirds pi r cubed for a hemisphere, uses the radius three times, and compares volumes of spheres by the cube of the radius: melting a sphere of radius 6 cm gives 8 spheres of radius 3 cm."
+  },
+  "MATH.G9.MEASUR.MASS_VOLUME_WEIGHT_AND_D.MASS_UNITS": {
+   "forms": [
+    "mass of the load in tonnes",
+    "total mass from the table",
+    "change to kg",
+    "how many bags"
+   ],
+   "mastery": "The child changes between milligrams, grams, kilograms and tonnes (1 tonne = 1,000 kg, 1 kg = 1,000 g, 1 g = 1,000 mg), puts masses in the same unit before adding or subtracting, and finds a load as the gross mass minus the empty lorry: 12.4 tonnes - 7,850 kg = 4.55 tonnes."
+  },
+  "MATH.G9.MEASUR.MASS_VOLUME_WEIGHT_AND_D.MASS_WEIGHT": {
+   "forms": [
+    "weight in newtons",
+    "mass on the Moon",
+    "which statement is true",
+    "mass or weight"
+   ],
+   "mastery": "The child says mass (kg) is the amount of matter and stays the same everywhere, while weight (newtons) is the pull of gravity and changes from place to place, and works out weight = mass x g (a 50 kg sack weighs 500 N where g = 10 N/kg) and mass from weight."
+  },
+  "MATH.G9.MEASUR.MASS_VOLUME_WEIGHT_AND_D.DENSITY_CALCULATE": {
+   "forms": [
+    "find the density",
+    "find the mass",
+    "find the volume",
+    "which sample is densest"
+   ],
+   "mastery": "The child uses density = mass / volume and its rearrangements (mass = density x volume, volume = mass / density), finds the volume of a regular solid first when needed, compares densities rather than masses, and reads density as the gradient of a mass-volume graph."
+  },
+  "MATH.G9.MEASUR.MASS_VOLUME_WEIGHT_AND_D.DENSITY_UNITS": {
+   "forms": [
+    "write in kg per cubic m",
+    "write in g per cubic cm",
+    "which is larger",
+    "convert"
+   ],
+   "mastery": "The child knows 1 g/cm cubed = 1,000 kg/m cubed (1,000 g in a kg and 1,000,000 cubic cm in a cubic m), so multiplies by 1,000 to go to kg/m cubed and divides by 1,000 to come back: 7.8 g/cm cubed = 7,800 kg/m cubed."
+  },
+  "MATH.G9.MEASUR.MASS_VOLUME_WEIGHT_AND_D.DENSITY_FLOAT_SINK": {
+   "forms": [
+    "float or sink",
+    "choose the best explanation",
+    "volume of the ice",
+    "why does a ship float"
+   ],
+   "mastery": "The child compares an object's density with the liquid's (less dense floats, denser sinks), not its mass or size alone, and uses density to find how much space a mass takes: 450 g of water (1 g/cm cubed) freezes to 500 cubic cm of ice (0.9 g/cm cubed)."
+  },
+  "MATH.G9.MEASUR.MASS_VOLUME_WEIGHT_AND_D.DENSITY_APPLY": {
+   "forms": [
+    "density of the stone",
+    "mean density of the mixture",
+    "mass of a chip of the same stone",
+    "complete the steps"
+   ],
+   "mastery": "The child finds the volume of an irregular stone by the rise in water level in a measuring cylinder, then its density; finds the mean density of a mixture as total mass over total volume (not the average of the densities); and uses a known density to find the mass of another piece."
   }
  }
 }

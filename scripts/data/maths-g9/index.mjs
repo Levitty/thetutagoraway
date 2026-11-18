@@ -8,4 +8,5 @@ import * as line from './line.mjs';
 import * as inequalities from './inequalities.mjs';
 import * as area from './area.mjs';
 import * as volume from './volume.mjs';
-export const SUBS = [integers, cubes, indices, proportion, matrices, line, inequalities, area, volume];
+import * as density from './density.mjs';
+export const SUBS = [integers, cubes, indices, proportion, matrices, line, inequalities, area, volume, density];
