@@ -1818,6 +1818,1036 @@ export const TEACHING_PACK_G6 = {
   "sub_strand_name": "Division",
   "status": "draft: written 18 Nov 2026 offline for Grade 6; not yet checked by a Kenyan maths teacher; not loaded by the live tutor"
  },
+ "MATH.G6.NUMBER.FRACTIONS.ADD_FRACTIONS_LCM": {
+  "skill": "MATH.G6.NUMBER.FRACTIONS.ADD_FRACTIONS_LCM",
+  "key_step": "The child says the fractions cannot be added until the pieces are the same size, renames both with the LCM, then adds only the numerators.",
+  "floor": {
+   "prerequisite": "Adds fractions with the same denominator.",
+   "question": "What is 2/7 + 3/7?",
+   "answer": "5/7"
+  },
+  "representations": [
+   "a chapati cut into halves and another into thirds",
+   "fraction strips folded and shaded into sixths",
+   "the written renaming with the LCM"
+  ],
+  "steps": [
+   "Find the LCM of the denominators.",
+   "Rename each fraction: multiply its top and bottom by the same number.",
+   "Add the numerators and keep the denominator.",
+   "Simplify, and write a sum over 1 as a mixed number."
+  ],
+  "contexts": [
+   "flour for mandazi",
+   "a shamba planted in parts",
+   "water drunk from a bottle"
+  ],
+  "board": [
+   {
+    "beat": "draw",
+    "do": "Draw one strip cut into halves and one into thirds."
+   },
+   {
+    "beat": "point",
+    "do": "Point at a half and a third.",
+    "say": "Are these pieces the same size?"
+   },
+   {
+    "beat": "pause",
+    "do": "Wait for the child to say no."
+   },
+   {
+    "beat": "child_draws",
+    "do": "Ask the child to cut both strips into sixths."
+   },
+   {
+    "beat": "count",
+    "do": "Count the sixths with the child: three and two."
+   },
+   {
+    "beat": "reveal",
+    "do": "Write 3/6 + 2/6 = 5/6."
+   }
+  ],
+  "misconceptions": [
+   {
+    "code": "MATH.G6.NUMBER.FRACTIONS.ADD_FRACTIONS_LCM.M_ADD_ACROSS",
+    "listen_for": [
+     "2/5",
+     "add the tops and the bottoms"
+    ],
+    "ask": "Is 2/5 more or less than 1/2 on its own?",
+    "repair": "Adding 1/3 must make it bigger than 1/2; rename to sixths and add only the tops.",
+    "error": "Adds the numerators and the denominators.",
+    "example": {
+     "question": "1/2 + 1/3",
+     "wrong_answer": "2/5",
+     "correct_answer": "5/6"
+    }
+   },
+   {
+    "code": "MATH.G6.NUMBER.FRACTIONS.ADD_FRACTIONS_LCM.M_PRODUCT_NOT_LCM",
+    "listen_for": [
+     "over 24",
+     "10/24"
+    ],
+    "ask": "Is there a smaller number that 4 and 6 both go into?",
+    "repair": "The LCM keeps the numbers small; simplify if you used a bigger common denominator.",
+    "error": "Uses the product of the denominators instead of the LCM, so the answer is correct but not in simplest form, or the child stops early.",
+    "example": {
+     "question": "1/4 + 1/6",
+     "wrong_answer": "10/24 left unsimplified",
+     "correct_answer": "5/12"
+    }
+   },
+   {
+    "code": "MATH.G6.NUMBER.FRACTIONS.ADD_FRACTIONS_LCM.M_RENAME_BOTTOM_ONLY",
+    "listen_for": [
+     "1/12 + 1/12",
+     "only the bottom"
+    ],
+    "ask": "Is 1/3 the same as 1/12?",
+    "repair": "Multiply the top and the bottom by the same number: 1/3 = 4/12.",
+    "error": "Changes the denominator to the common one but leaves the numerator.",
+    "example": {
+     "question": "1/3 + 1/4",
+     "wrong_answer": "1/12 + 1/12 = 2/12",
+     "correct_answer": "7/12"
+    }
+   },
+   {
+    "code": "MATH.G6.NUMBER.FRACTIONS.ADD_FRACTIONS_LCM.M_IMPROPER_LEFT",
+    "listen_for": [
+     "17/12",
+     "seventeen twelfths"
+    ],
+    "ask": "How many twelfths make one whole?",
+    "repair": "17/12 is one whole and 5/12: write 1 5/12.",
+    "error": "Leaves a sum bigger than 1 as an improper fraction when a mixed number is asked for.",
+    "example": {
+     "question": "3/4 + 2/3 (as a mixed number)",
+     "wrong_answer": "17/12",
+     "correct_answer": "1 5/12"
+    }
+   }
+  ],
+  "checks": [
+   {
+    "question": "What is 1/2 + 1/3?",
+    "answer": "5/6",
+    "shows": "rename to the LCM"
+   },
+   {
+    "question": "What is 3/4 + 2/3? Give a mixed number.",
+    "answer": "1 5/12",
+    "shows": "sum over one"
+   }
+  ],
+  "name": "Add fractions with unlike denominators using the LCM",
+  "sub_strand": "MATH.G6.NUMBER.FRACTIONS",
+  "sub_strand_name": "Fractions",
+  "status": "draft: written 18 Nov 2026 offline for Grade 6; not yet checked by a Kenyan maths teacher; not loaded by the live tutor"
+ },
+ "MATH.G6.NUMBER.FRACTIONS.SUBTRACT_FRACTIONS_LCM": {
+  "skill": "MATH.G6.NUMBER.FRACTIONS.SUBTRACT_FRACTIONS_LCM",
+  "key_step": "The child renames both fractions to the LCM before taking away, and in a story says what the answer is a fraction of.",
+  "floor": {
+   "prerequisite": "Subtracts fractions with the same denominator.",
+   "question": "What is 5/8 - 2/8?",
+   "answer": "3/8"
+  },
+  "representations": [
+   "fraction strips folded and shaded into twelfths",
+   "a jerrycan with water marks",
+   "the written renaming with the LCM"
+  ],
+  "steps": [
+   "Find the LCM of the denominators.",
+   "Rename both fractions.",
+   "Subtract the numerators and keep the denominator.",
+   "Simplify, and in a story say what the fraction is of."
+  ],
+  "contexts": [
+   "water left in a jerrycan",
+   "a cake shared and what is left",
+   "a piece of cloth cut off"
+  ],
+  "board": [
+   {
+    "beat": "draw",
+    "do": "Draw a strip of 12 equal pieces."
+   },
+   {
+    "beat": "write",
+    "do": "Write 3/4 - 1/3."
+   },
+   {
+    "beat": "point",
+    "do": "Point at the strip.",
+    "say": "How many twelfths is 3/4? How many is 1/3?"
+   },
+   {
+    "beat": "pause",
+    "do": "Wait for 9 and 4."
+   },
+   {
+    "beat": "predict",
+    "do": "Ask the child to say the answer before you shade it."
+   },
+   {
+    "beat": "reveal",
+    "do": "Shade 9, cross out 4, write 5/12."
+   }
+  ],
+  "misconceptions": [
+   {
+    "code": "MATH.G6.NUMBER.FRACTIONS.SUBTRACT_FRACTIONS_LCM.M_SUBTRACT_ACROSS",
+    "listen_for": [
+     "2/1",
+     "take the bottoms too"
+    ],
+    "ask": "Can taking away make the answer bigger than what you started with?",
+    "repair": "Rename to twelfths and take away only the tops.",
+    "error": "Subtracts numerators and subtracts denominators.",
+    "example": {
+     "question": "3/4 - 1/3",
+     "wrong_answer": "2/1",
+     "correct_answer": "5/12"
+    }
+   },
+   {
+    "code": "MATH.G6.NUMBER.FRACTIONS.SUBTRACT_FRACTIONS_LCM.M_SMALLER_FROM_LARGER_TOP",
+    "listen_for": [
+     "3/6",
+     "5 take away 2"
+    ],
+    "ask": "Are 5/6 and 2/3 cut into the same pieces?",
+    "repair": "Rename 2/3 as 4/6 first.",
+    "error": "Subtracts the numerators without first renaming the second fraction with the common denominator.",
+    "example": {
+     "question": "5/6 - 2/3",
+     "wrong_answer": "3/6 (5 - 2 over 6, with 2/3 not renamed)",
+     "correct_answer": "1/6"
+    }
+   },
+   {
+    "code": "MATH.G6.NUMBER.FRACTIONS.SUBTRACT_FRACTIONS_LCM.M_BIGGER_DENOMINATOR_BIGGER",
+    "listen_for": [
+     "1/4 is bigger",
+     "four is more"
+    ],
+    "ask": "Which piece is bigger: a chapati cut in 3 or in 4?",
+    "repair": "More parts means smaller parts: 1/3 is bigger than 1/4.",
+    "error": "Believes the fraction with the bigger denominator is the bigger fraction, so takes the wrong one away.",
+    "example": {
+     "question": "Which is bigger, 1/3 or 1/4, and by how much?",
+     "wrong_answer": "1/4, by 1/12",
+     "correct_answer": "1/3, by 1/12"
+    }
+   },
+   {
+    "code": "MATH.G6.NUMBER.FRACTIONS.SUBTRACT_FRACTIONS_LCM.M_PARTS_NOT_FROM_WHOLE",
+    "listen_for": [
+     "1/12",
+     "take one from the other"
+    ],
+    "ask": "Did anyone eat from the 1/3 that Otieno ate?",
+    "repair": "Both parts come off the whole cake: 1 - 3/12 - 4/12 = 5/12.",
+    "error": "In a \"what is left\" story takes one part from the other instead of taking both parts from the whole.",
+    "example": {
+     "question": "Wanjiru ate 1/4 of a cake and Otieno ate 1/3. What fraction of the cake is left?",
+     "wrong_answer": "1/12 (1/3 - 1/4)",
+     "correct_answer": "5/12"
+    }
+   }
+  ],
+  "checks": [
+   {
+    "question": "What is 3/4 - 1/3?",
+    "answer": "5/12",
+    "shows": "rename then subtract"
+   },
+   {
+    "question": "Wanjiru ate 1/4 of a cake and Otieno ate 1/3. What fraction of the cake is left?",
+    "answer": "5/12",
+    "shows": "both parts from the whole"
+   }
+  ],
+  "name": "Subtract fractions with unlike denominators using the LCM",
+  "sub_strand": "MATH.G6.NUMBER.FRACTIONS",
+  "sub_strand_name": "Fractions",
+  "status": "draft: written 18 Nov 2026 offline for Grade 6; not yet checked by a Kenyan maths teacher; not loaded by the live tutor"
+ },
+ "MATH.G6.NUMBER.FRACTIONS.ADD_MIXED_NUMBERS": {
+  "skill": "MATH.G6.NUMBER.FRACTIONS.ADD_MIXED_NUMBERS",
+  "key_step": "The child adds the wholes, adds the fractions after renaming them, and turns any extra whole in the fraction part into a whole.",
+  "floor": {
+   "prerequisite": "Adds unlike fractions with the LCM.",
+   "question": "What is 3/4 + 1/2?",
+   "answer": "1 1/4"
+  },
+  "representations": [
+   "whole chapatis and pieces laid out",
+   "wholes and fractions added in two columns",
+   "the change to improper fractions as a second way"
+  ],
+  "steps": [
+   "Add the whole numbers.",
+   "Rename the fractions to the LCM and add them.",
+   "If the fraction part is 1 or more, take out a whole.",
+   "Write the answer in simplest form."
+  ],
+  "contexts": [
+   "kilogrammes of sugar bought on two days",
+   "hours spent on homework",
+   "metres of cloth joined"
+  ],
+  "board": [
+   {
+    "beat": "draw",
+    "do": "Draw 1 chapati and 3/4, then 2 chapatis and 1/2."
+   },
+   {
+    "beat": "point",
+    "do": "Point at the wholes.",
+    "say": "How many whole chapatis?"
+   },
+   {
+    "beat": "pause",
+    "do": "Wait for 3."
+   },
+   {
+    "beat": "point",
+    "do": "Point at 3/4 and 1/2.",
+    "say": "What do the pieces make together?"
+   },
+   {
+    "beat": "child_draws",
+    "do": "Ask the child to join the pieces into quarters."
+   },
+   {
+    "beat": "reveal",
+    "do": "Write 3 + 5/4 = 4 1/4."
+   }
+  ],
+  "misconceptions": [
+   {
+    "code": "MATH.G6.NUMBER.FRACTIONS.ADD_MIXED_NUMBERS.M_WHOLE_ONLY_FRACTION_DROPPED",
+    "listen_for": [
+     "3 5/4",
+     "five quarters"
+    ],
+    "ask": "Is 5/4 more than one whole?",
+    "repair": "Take a whole out of 5/4 and add it to the wholes.",
+    "error": "Adds the wholes and the fractions but leaves an improper fraction in the answer or drops the extra whole.",
+    "example": {
+     "question": "1 3/4 + 2 1/2",
+     "wrong_answer": "3 5/4",
+     "correct_answer": "4 1/4"
+    }
+   },
+   {
+    "code": "MATH.G6.NUMBER.FRACTIONS.ADD_MIXED_NUMBERS.M_CONVERT_ADD_WHOLE",
+    "listen_for": [
+     "3/3",
+     "add the 2"
+    ],
+    "ask": "How many thirds are in 2 wholes?",
+    "repair": "Multiply the whole by the denominator, then add the numerator: 2 1/3 = 7/3.",
+    "error": "Changes a mixed number to an improper fraction by adding the whole to the numerator.",
+    "example": {
+     "question": "2 1/3 as an improper fraction",
+     "wrong_answer": "3/3 (the whole added to the numerator)",
+     "correct_answer": "7/3"
+    }
+   },
+   {
+    "code": "MATH.G6.NUMBER.FRACTIONS.ADD_MIXED_NUMBERS.M_ADD_ACROSS_MIXED",
+    "listen_for": [
+     "3 2/5",
+     "add tops and bottoms"
+    ],
+    "ask": "Are halves and thirds the same size?",
+    "repair": "Rename the fractions to sixths before adding.",
+    "error": "Adds the wholes, then adds the numerators and the denominators of the fractions.",
+    "example": {
+     "question": "1 1/2 + 2 1/3",
+     "wrong_answer": "3 2/5",
+     "correct_answer": "3 5/6"
+    }
+   },
+   {
+    "code": "MATH.G6.NUMBER.FRACTIONS.ADD_MIXED_NUMBERS.M_WHOLE_ADDED_TO_NUMERATOR",
+    "listen_for": [
+     "1 5/8",
+     "add the 2 on top"
+    ],
+    "ask": "Is 2 a number of eighths or a number of wholes?",
+    "repair": "Wholes are added to wholes: 2 + 1 3/8 = 3 3/8.",
+    "error": "Adds a whole number to the numerator of a mixed number.",
+    "example": {
+     "question": "2 + 1 3/8",
+     "wrong_answer": "1 5/8",
+     "correct_answer": "3 3/8"
+    }
+   }
+  ],
+  "checks": [
+   {
+    "question": "What is 1 3/4 + 2 1/2?",
+    "answer": "4 1/4",
+    "shows": "renaming an extra whole"
+   },
+   {
+    "question": "What is 2 + 1 3/8?",
+    "answer": "3 3/8",
+    "shows": "a whole number and a mixed number"
+   }
+  ],
+  "name": "Add mixed numbers",
+  "sub_strand": "MATH.G6.NUMBER.FRACTIONS",
+  "sub_strand_name": "Fractions",
+  "status": "draft: written 18 Nov 2026 offline for Grade 6; not yet checked by a Kenyan maths teacher; not loaded by the live tutor"
+ },
+ "MATH.G6.NUMBER.FRACTIONS.SUBTRACT_MIXED_NUMBERS": {
+  "skill": "MATH.G6.NUMBER.FRACTIONS.SUBTRACT_MIXED_NUMBERS",
+  "key_step": "When the fraction to take away is bigger, the child renames one whole as that many parts of the denominator and takes one off the whole number.",
+  "floor": {
+   "prerequisite": "Subtracts unlike fractions.",
+   "question": "What is 3/4 - 1/2?",
+   "answer": "1/4"
+  },
+  "representations": [
+   "whole chapatis with one cut into pieces",
+   "the renamed mixed number written above the question",
+   "a number line from the smaller to the larger number"
+  ],
+  "steps": [
+   "Rename the fractions to the LCM.",
+   "If the first fraction is smaller, rename one whole as parts (a whole is 4/4 for quarters).",
+   "Take one off the whole number when you rename it.",
+   "Subtract the wholes and the fractions, then simplify."
+  ],
+  "contexts": [
+   "sugar left in a bag",
+   "time left in a lesson",
+   "cloth left after cutting"
+  ],
+  "board": [
+   {
+    "beat": "draw",
+    "do": "Draw 4 whole chapatis and 1 quarter."
+   },
+   {
+    "beat": "write",
+    "do": "Write 4 1/4 - 2 3/4."
+   },
+   {
+    "beat": "point",
+    "do": "Point at the 1/4.",
+    "say": "Can we take 3 quarters from 1 quarter?"
+   },
+   {
+    "beat": "pause",
+    "do": "Wait for the child to say no."
+   },
+   {
+    "beat": "child_draws",
+    "do": "Ask the child to cut one whole chapati into quarters."
+   },
+   {
+    "beat": "count",
+    "do": "Count the quarters together: five."
+   },
+   {
+    "beat": "reveal",
+    "do": "Write 3 5/4 - 2 3/4 = 1 2/4 = 1 1/2."
+   }
+  ],
+  "misconceptions": [
+   {
+    "code": "MATH.G6.NUMBER.FRACTIONS.SUBTRACT_MIXED_NUMBERS.M_SMALLER_FROM_LARGER_FRACTION",
+    "listen_for": [
+     "3/4 take away 1/4",
+     "2 1/2"
+    ],
+    "ask": "Which fraction is being taken away?",
+    "repair": "Take 3/4 from 1/4 by renaming a whole first.",
+    "error": "In 4 1/4 - 2 3/4 subtracts the smaller fraction from the larger (3/4 - 1/4) instead of renaming a whole.",
+    "example": {
+     "question": "4 1/4 - 2 3/4",
+     "wrong_answer": "2 1/2",
+     "correct_answer": "1 1/2"
+    }
+   },
+   {
+    "code": "MATH.G6.NUMBER.FRACTIONS.SUBTRACT_MIXED_NUMBERS.M_WHOLE_NOT_REDUCED",
+    "listen_for": [
+     "3 2/3",
+     "still 5 wholes"
+    ],
+    "ask": "You cut one whole into pieces. How many wholes are left?",
+    "repair": "When a whole is renamed, the whole number goes down by one.",
+    "error": "Renames a whole into the fraction but forgets to take one off the whole number.",
+    "example": {
+     "question": "5 1/3 - 2 2/3",
+     "wrong_answer": "3 2/3",
+     "correct_answer": "2 2/3"
+    }
+   },
+   {
+    "code": "MATH.G6.NUMBER.FRACTIONS.SUBTRACT_MIXED_NUMBERS.M_WHOLE_MINUS_MIXED",
+    "listen_for": [
+     "3 3/4",
+     "copy the 3/4"
+    ],
+    "ask": "What is 5 - 2? And what do we take the 3/4 from?",
+    "repair": "Rename one whole: 5 = 4 4/4, then subtract.",
+    "error": "Takes a mixed number from a whole number by taking the wholes and copying the fraction.",
+    "example": {
+     "question": "5 - 2 3/4",
+     "wrong_answer": "3 3/4",
+     "correct_answer": "2 1/4"
+    }
+   },
+   {
+    "code": "MATH.G6.NUMBER.FRACTIONS.SUBTRACT_MIXED_NUMBERS.M_BORROW_TEN",
+    "listen_for": [
+     "11/5",
+     "borrow ten"
+    ],
+    "ask": "How many fifths make one whole?",
+    "repair": "A whole is 5 fifths, not 10: 3 1/5 = 2 6/5.",
+    "error": "Renames a whole as ten parts, as in subtracting whole numbers, whatever the denominator.",
+    "example": {
+     "question": "3 1/5 - 1 3/5",
+     "wrong_answer": "1 8/5 (the whole renamed as 10 fifths: 11/5 - 3/5)",
+     "correct_answer": "1 3/5"
+    }
+   }
+  ],
+  "checks": [
+   {
+    "question": "What is 4 1/4 - 2 3/4?",
+    "answer": "1 1/2",
+    "shows": "rename a whole"
+   },
+   {
+    "question": "What is 5 - 2 3/4?",
+    "answer": "2 1/4",
+    "shows": "from a whole number"
+   }
+  ],
+  "name": "Subtract mixed numbers",
+  "sub_strand": "MATH.G6.NUMBER.FRACTIONS",
+  "sub_strand_name": "Fractions",
+  "status": "draft: written 18 Nov 2026 offline for Grade 6; not yet checked by a Kenyan maths teacher; not loaded by the live tutor"
+ },
+ "MATH.G6.NUMBER.FRACTIONS.RECIPROCAL": {
+  "skill": "MATH.G6.NUMBER.FRACTIONS.RECIPROCAL",
+  "key_step": "The child turns the fraction upside down and checks that the fraction times its reciprocal is 1.",
+  "floor": {
+   "prerequisite": "Multiplies two fractions.",
+   "question": "What is 2/3 x 3/2?",
+   "answer": "1"
+  },
+  "representations": [
+   "a fraction card turned over",
+   "the fraction times its reciprocal written as a multiplication equal to 1",
+   "the reciprocal written as a mixed number"
+  ],
+  "steps": [
+   "Swap the numerator and the denominator.",
+   "Multiply the fraction by the answer to check it gives 1.",
+   "Write the reciprocal as a mixed number if asked.",
+   "For a whole number, write it over 1 first."
+  ],
+  "contexts": [
+   "how many 3/5 m pieces fit in 1 m",
+   "filling a jug with a cup that holds a part of it",
+   "sharing in a game"
+  ],
+  "board": [
+   {
+    "beat": "write",
+    "do": "Write 3/5 on a card."
+   },
+   {
+    "beat": "point",
+    "do": "Turn the card over and point at it.",
+    "say": "What happens to the 3 and the 5?"
+   },
+   {
+    "beat": "pause",
+    "do": "Wait for the child to say 5/3."
+   },
+   {
+    "beat": "write",
+    "do": "Write 3/5 x 5/3 =."
+   },
+   {
+    "beat": "predict",
+    "do": "Ask the child what the product will be."
+   }
+  ],
+  "misconceptions": [
+   {
+    "code": "MATH.G6.NUMBER.FRACTIONS.RECIPROCAL.M_NEGATIVE_NOT_FLIP",
+    "listen_for": [
+     "minus 3/5",
+     "negative"
+    ],
+    "ask": "Does a reciprocal change the sign or the position?",
+    "repair": "The reciprocal turns the fraction upside down.",
+    "error": "Gives the opposite (negative) instead of the reciprocal.",
+    "example": {
+     "question": "Reciprocal of 3/5",
+     "wrong_answer": "-3/5",
+     "correct_answer": "5/3"
+    }
+   },
+   {
+    "code": "MATH.G6.NUMBER.FRACTIONS.RECIPROCAL.M_FLIP_ONE_PART",
+    "listen_for": [
+     "7/7",
+     "only one moves"
+    ],
+    "ask": "Where do the 7 and the 9 go?",
+    "repair": "Both move: the top goes down and the bottom goes up.",
+    "error": "Flips only the numerator or the denominator, or writes the same fraction.",
+    "example": {
+     "question": "Reciprocal of 7/9",
+     "wrong_answer": "7/7 (only one part turned over)",
+     "correct_answer": "9/7"
+    }
+   },
+   {
+    "code": "MATH.G6.NUMBER.FRACTIONS.RECIPROCAL.M_ONE_MINUS_FRACTION",
+    "listen_for": [
+     "2/5",
+     "makes one"
+    ],
+    "ask": "What is 3/5 x 2/5?",
+    "repair": "The reciprocal multiplies to 1; it does not add to 1.",
+    "error": "Gives the part that makes the fraction up to one whole instead of the reciprocal.",
+    "example": {
+     "question": "Reciprocal of 3/5",
+     "wrong_answer": "2/5",
+     "correct_answer": "5/3"
+    }
+   },
+   {
+    "code": "MATH.G6.NUMBER.FRACTIONS.RECIPROCAL.M_ONE_OVER_NUMERATOR",
+    "listen_for": [
+     "1/3",
+     "one over"
+    ],
+    "ask": "What is 3/5 x 1/3?",
+    "repair": "For a fraction, swap top and bottom: 5/3.",
+    "error": "Writes 1 over the numerator, copying the rule for whole numbers (the reciprocal of 5 is 1/5).",
+    "example": {
+     "question": "Reciprocal of 3/5",
+     "wrong_answer": "1/3",
+     "correct_answer": "5/3"
+    }
+   }
+  ],
+  "checks": [
+   {
+    "question": "What is the reciprocal of 3/5?",
+    "answer": "5/3 (1 2/3)",
+    "shows": "swap top and bottom"
+   },
+   {
+    "question": "What is the reciprocal of 7/12?",
+    "answer": "12/7",
+    "shows": "two-digit denominator"
+   }
+  ],
+  "name": "Reciprocal of a proper fraction",
+  "sub_strand": "MATH.G6.NUMBER.FRACTIONS",
+  "sub_strand_name": "Fractions",
+  "status": "draft: written 18 Nov 2026 offline for Grade 6; not yet checked by a Kenyan maths teacher; not loaded by the live tutor"
+ },
+ "MATH.G6.NUMBER.FRACTIONS.SQUARE_OF_FRACTION": {
+  "skill": "MATH.G6.NUMBER.FRACTIONS.SQUARE_OF_FRACTION",
+  "key_step": "The child writes the fraction times itself and squares the top and the bottom, then simplifies.",
+  "floor": {
+   "prerequisite": "Squares whole numbers.",
+   "question": "What is 5 squared?",
+   "answer": "25"
+  },
+  "representations": [
+   "a square shaded 2/5 across and 2/5 down",
+   "the fraction times itself written out",
+   "the answer compared with the fraction on a number line"
+  ],
+  "steps": [
+   "Write the fraction times itself.",
+   "Square the numerator.",
+   "Square the denominator.",
+   "Simplify and check the square is smaller than the fraction."
+  ],
+  "contexts": [
+   "a square garden that uses part of each side",
+   "tiles on a square board",
+   "a square piece of cloth"
+  ],
+  "board": [
+   {
+    "beat": "draw",
+    "do": "Draw a square and split each side into 5."
+   },
+   {
+    "beat": "child_draws",
+    "do": "Ask the child to shade 2 parts across and 2 parts down where they meet."
+   },
+   {
+    "beat": "count",
+    "do": "Count the small squares in the whole and in the overlap with the child."
+   },
+   {
+    "beat": "pause",
+    "do": "Wait for 4 out of 25."
+   },
+   {
+    "beat": "write",
+    "do": "Write (2/5) squared = 4/25."
+   }
+  ],
+  "misconceptions": [
+   {
+    "code": "MATH.G6.NUMBER.FRACTIONS.SQUARE_OF_FRACTION.M_SQUARE_TOP_ONLY",
+    "listen_for": [
+     "4/5",
+     "only the top"
+    ],
+    "ask": "How many small squares are in the whole square?",
+    "repair": "Square both parts: 5 x 5 = 25 at the bottom.",
+    "error": "Squares the numerator but not the denominator.",
+    "example": {
+     "question": "(2/5) squared",
+     "wrong_answer": "4/5",
+     "correct_answer": "4/25"
+    }
+   },
+   {
+    "code": "MATH.G6.NUMBER.FRACTIONS.SQUARE_OF_FRACTION.M_DOUBLE_THE_FRACTION",
+    "listen_for": [
+     "6/4",
+     "times 2"
+    ],
+    "ask": "Does squared mean times 2 or times itself?",
+    "repair": "3/4 x 3/4 = 9/16.",
+    "error": "Doubles the fraction instead of squaring it.",
+    "example": {
+     "question": "(3/4) squared",
+     "wrong_answer": "6/4 (the fraction doubled)",
+     "correct_answer": "9/16"
+    }
+   },
+   {
+    "code": "MATH.G6.NUMBER.FRACTIONS.SQUARE_OF_FRACTION.M_SQUARE_BOTTOM_ONLY",
+    "listen_for": [
+     "2/25",
+     "only the bottom"
+    ],
+    "ask": "What is 2 x 2?",
+    "repair": "Square both parts: (2 x 2)/(5 x 5).",
+    "error": "Squares the denominator but not the numerator.",
+    "example": {
+     "question": "(2/5) squared",
+     "wrong_answer": "2/25",
+     "correct_answer": "4/25"
+    }
+   },
+   {
+    "code": "MATH.G6.NUMBER.FRACTIONS.SQUARE_OF_FRACTION.M_SQUARE_MAKES_BIGGER",
+    "listen_for": [
+     "the square is bigger"
+    ],
+    "ask": "Is a part of a part bigger or smaller than the part?",
+    "repair": "Squaring a proper fraction makes it smaller.",
+    "error": "Believes the square of a fraction is bigger than the fraction, as for whole numbers.",
+    "example": {
+     "question": "Which is bigger: 2/3 or (2/3) squared?",
+     "wrong_answer": "(2/3) squared",
+     "correct_answer": "2/3 (4/9 is less than 6/9)"
+    }
+   }
+  ],
+  "checks": [
+   {
+    "question": "What is (2/5) squared?",
+    "answer": "4/25",
+    "shows": "square top and bottom"
+   },
+   {
+    "question": "What is (3/12) squared, in simplest form?",
+    "answer": "1/16",
+    "shows": "simplify"
+   }
+  ],
+  "name": "Square of a fraction",
+  "sub_strand": "MATH.G6.NUMBER.FRACTIONS",
+  "sub_strand_name": "Fractions",
+  "status": "draft: written 18 Nov 2026 offline for Grade 6; not yet checked by a Kenyan maths teacher; not loaded by the live tutor"
+ },
+ "MATH.G6.NUMBER.FRACTIONS.FRACTION_TO_PERCENT": {
+  "skill": "MATH.G6.NUMBER.FRACTIONS.FRACTION_TO_PERCENT",
+  "key_step": "The child makes the denominator 100 by multiplying the top and the bottom by the same number, or divides and multiplies by 100, and says the answer is \"out of 100\".",
+  "floor": {
+   "prerequisite": "Writes equivalent fractions.",
+   "question": "Write 3/5 with denominator 10.",
+   "answer": "6/10"
+  },
+  "representations": [
+   "a hundred square with the fraction shaded",
+   "the equivalent fraction over 100",
+   "a mark out of a total turned into a percentage"
+  ],
+  "steps": [
+   "Ask what times the denominator makes 100.",
+   "Multiply the numerator by the same number.",
+   "Write the numerator with a % sign.",
+   "If 100 is not a multiple, divide and multiply by 100."
+  ],
+  "contexts": [
+   "a test mark out of 25",
+   "the share of learners who walk to school",
+   "a shop discount"
+  ],
+  "board": [
+   {
+    "beat": "draw",
+    "do": "Draw a hundred square."
+   },
+   {
+    "beat": "write",
+    "do": "Write 3/5."
+   },
+   {
+    "beat": "point",
+    "do": "Point at the 5.",
+    "say": "What times 5 makes 100?"
+   },
+   {
+    "beat": "pause",
+    "do": "Wait for 20."
+   },
+   {
+    "beat": "child_draws",
+    "do": "Ask the child to shade 3 x 20 squares."
+   },
+   {
+    "beat": "reveal",
+    "do": "Write 3/5 = 60/100 = 60%."
+   }
+  ],
+  "misconceptions": [
+   {
+    "code": "MATH.G6.NUMBER.FRACTIONS.FRACTION_TO_PERCENT.M_DENOMINATOR_AS_PERCENT",
+    "listen_for": [
+     "3%",
+     "just put the sign"
+    ],
+    "ask": "Is 3 out of 5 the same as 3 out of 100?",
+    "repair": "Make the denominator 100 first.",
+    "error": "Writes the numerator with a percent sign, ignoring the denominator.",
+    "example": {
+     "question": "What percentage is 3/5?",
+     "wrong_answer": "3%",
+     "correct_answer": "60%"
+    }
+   },
+   {
+    "code": "MATH.G6.NUMBER.FRACTIONS.FRACTION_TO_PERCENT.M_COMPARE_NUMERATORS",
+    "listen_for": [
+     "40 is more",
+     "40 out of 50"
+    ],
+    "ask": "What is each mark as a percentage?",
+    "repair": "Compare out of the same total: 90% and 80%.",
+    "error": "Compares two scores out of different totals by their numerators alone.",
+    "example": {
+     "question": "Which is better: 18 out of 20 or 40 out of 50?",
+     "wrong_answer": "40 out of 50",
+     "correct_answer": "18 out of 20 (90% against 80%)"
+    }
+   },
+   {
+    "code": "MATH.G6.NUMBER.FRACTIONS.FRACTION_TO_PERCENT.M_ADD_TO_MAKE_100",
+    "listen_for": [
+     "87%",
+     "add 80"
+    ],
+    "ask": "Is 87/100 the same size as 7/20?",
+    "repair": "Multiply top and bottom by 5, do not add.",
+    "error": "Adds the same number to the top and the bottom to make the denominator 100.",
+    "example": {
+     "question": "7/20 as a percentage",
+     "wrong_answer": "87% (7 + 80 over 20 + 80)",
+     "correct_answer": "35%"
+    }
+   },
+   {
+    "code": "MATH.G6.NUMBER.FRACTIONS.FRACTION_TO_PERCENT.M_DECIMAL_WITH_PERCENT",
+    "listen_for": [
+     "0.6%"
+    ],
+    "ask": "Is 0.6% more or less than one out of a hundred?",
+    "repair": "Multiply 0.6 by 100: 60%.",
+    "error": "Divides the numerator by the denominator and writes the decimal with a percent sign.",
+    "example": {
+     "question": "3/5 as a percentage",
+     "wrong_answer": "0.6%",
+     "correct_answer": "60%"
+    }
+   }
+  ],
+  "checks": [
+   {
+    "question": "Write 3/5 as a percentage.",
+    "answer": "60%",
+    "shows": "denominator to 100"
+   },
+   {
+    "question": "A learner scores 18 out of 25. What percentage is that?",
+    "answer": "72%",
+    "shows": "a mark out of a total"
+   }
+  ],
+  "name": "Express a fraction as a percentage",
+  "sub_strand": "MATH.G6.NUMBER.FRACTIONS",
+  "sub_strand_name": "Fractions",
+  "status": "draft: written 18 Nov 2026 offline for Grade 6; not yet checked by a Kenyan maths teacher; not loaded by the live tutor"
+ },
+ "MATH.G6.NUMBER.FRACTIONS.PERCENT_TO_FRACTION": {
+  "skill": "MATH.G6.NUMBER.FRACTIONS.PERCENT_TO_FRACTION",
+  "key_step": "The child writes the percentage over 100 and divides the top and the bottom by the same number until it is in simplest form.",
+  "floor": {
+   "prerequisite": "Simplifies fractions.",
+   "question": "Simplify 30/100.",
+   "answer": "3/10"
+  },
+  "representations": [
+   "a hundred square with the percentage shaded",
+   "the fraction over 100",
+   "the simplified fraction checked against the picture"
+  ],
+  "steps": [
+   "Write the number over 100.",
+   "Find a number that divides the top and the bottom.",
+   "Divide both by it.",
+   "Repeat until nothing else divides both."
+  ],
+  "contexts": [
+   "a shop offering 25% off",
+   "the share of a harvest sold",
+   "a class where 40% are girls"
+  ],
+  "board": [
+   {
+    "beat": "draw",
+    "do": "Draw a hundred square with 25 squares shaded."
+   },
+   {
+    "beat": "write",
+    "do": "Write 25% = 25/100."
+   },
+   {
+    "beat": "point",
+    "do": "Point at 25 and 100.",
+    "say": "What number divides both?"
+   },
+   {
+    "beat": "pause",
+    "do": "Wait for the child to try a number."
+   },
+   {
+    "beat": "write",
+    "do": "Write 25/100 = 1/4 and show four blocks of 25."
+   }
+  ],
+  "misconceptions": [
+   {
+    "code": "MATH.G6.NUMBER.FRACTIONS.PERCENT_TO_FRACTION.M_PERCENT_ONE_OVER",
+    "listen_for": [
+     "1/25",
+     "one over"
+    ],
+    "ask": "Is 1/25 the same as 25 out of 100?",
+    "repair": "Write the percentage over 100: 25/100, then simplify.",
+    "error": "Writes a percentage as one over that number.",
+    "example": {
+     "question": "25% as a fraction",
+     "wrong_answer": "1/25",
+     "correct_answer": "1/4"
+    }
+   },
+   {
+    "code": "MATH.G6.NUMBER.FRACTIONS.PERCENT_TO_FRACTION.M_NOT_SIMPLIFIED",
+    "listen_for": [
+     "40/100",
+     "that is the answer"
+    ],
+    "ask": "Can 40 and 100 both be divided by 20?",
+    "repair": "Simplest form means nothing else divides both: 2/5.",
+    "error": "Stops at the fraction out of 100 when asked for the simplest form.",
+    "example": {
+     "question": "Write 40% in simplest form",
+     "wrong_answer": "40/100",
+     "correct_answer": "2/5"
+    }
+   },
+   {
+    "code": "MATH.G6.NUMBER.FRACTIONS.PERCENT_TO_FRACTION.M_OVER_TEN",
+    "listen_for": [
+     "45/10",
+     "over ten"
+    ],
+    "ask": "What does per cent mean?",
+    "repair": "Per cent is per hundred: 45/100 = 9/20.",
+    "error": "Writes a percentage over 10 instead of over 100.",
+    "example": {
+     "question": "45% as a fraction in simplest form",
+     "wrong_answer": "45/10 (4 1/2)",
+     "correct_answer": "9/20"
+    }
+   },
+   {
+    "code": "MATH.G6.NUMBER.FRACTIONS.PERCENT_TO_FRACTION.M_SIMPLIFY_UNEVEN",
+    "listen_for": [
+     "3/5",
+     "divide by 25 and 20"
+    ],
+    "ask": "Did you divide the top and the bottom by the same number?",
+    "repair": "Use the same number on both: 75/100 = 3/4.",
+    "error": "Divides the numerator and the denominator by different numbers when simplifying.",
+    "example": {
+     "question": "75% as a fraction in simplest form",
+     "wrong_answer": "3/5 (75 / 25 and 100 / 20)",
+     "correct_answer": "3/4"
+    }
+   }
+  ],
+  "checks": [
+   {
+    "question": "Write 40% as a fraction in simplest form.",
+    "answer": "2/5",
+    "shows": "simplify fully"
+   },
+   {
+    "question": "Write 75% as a fraction in simplest form.",
+    "answer": "3/4",
+    "shows": "same divisor"
+   }
+  ],
+  "name": "Convert a percentage to a fraction",
+  "sub_strand": "MATH.G6.NUMBER.FRACTIONS",
+  "sub_strand_name": "Fractions",
+  "status": "draft: written 18 Nov 2026 offline for Grade 6; not yet checked by a Kenyan maths teacher; not loaded by the live tutor"
+ },
  "MATH.G6.NUMBER.INEQUALITIES.FORM_INEQUALITY": {
   "skill": "MATH.G6.NUMBER.INEQUALITIES.FORM_INEQUALITY",
   "key_step": "The child decides whether the boundary number is allowed and which side is allowed, and then chooses the symbol.",

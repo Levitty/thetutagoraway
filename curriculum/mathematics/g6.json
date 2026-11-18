@@ -3,15 +3,15 @@
  "subject_key": "mathematics",
  "grade": 6,
  "source": "KICD KICD-Grade6-Mathematics-Curriculum-Design.pdf, revised 2024 (text layer)",
- "status": "outcomes from KICD's text, word for word; skills, prerequisites proposed; misconceptions draft; all awaiting teacher review (12 Nov 2026; deepened with a teaching pack 18 Nov 2026); not yet deepened: NUMBER.FRACTIONS, NUMBER.DECIMALS, MEASUR.LENGTH, MEASUR.AREA, MEASUR.CAPACITY, MEASUR.MASS, MEASUR.TIME, MEASUR.MONEY, GEOMET.LINES, GEOMET.ANGLES, GEOMET.3_D_OBJECTS, DATA_H.BAR_GRAPHS",
+ "status": "outcomes from KICD's text, word for word; skills, prerequisites proposed; misconceptions draft; all awaiting teacher review (12 Nov 2026; deepened with a teaching pack 18 Nov 2026); not yet deepened: NUMBER.DECIMALS, MEASUR.LENGTH, MEASUR.AREA, MEASUR.CAPACITY, MEASUR.MASS, MEASUR.TIME, MEASUR.MONEY, GEOMET.LINES, GEOMET.ANGLES, GEOMET.3_D_OBJECTS, DATA_H.BAR_GRAPHS",
  "totals": {
   "strands": 4,
   "sub_strands": 16,
   "outcomes": 97,
   "lessons": 150,
   "skills": 84,
-  "prerequisites": 148,
-  "misconceptions": 220
+  "prerequisites": 151,
+  "misconceptions": 235
  },
  "sub_strands": [
   {
@@ -1968,6 +1968,13 @@
        "strength": "helpful",
        "reason": "Understanding a fraction as numerator over denominator.",
        "status": "proposed"
+      },
+      {
+       "requires": "MATH.G6.NUMBER.FRACTIONS.ADD_MIXED_NUMBERS",
+       "kind": "skill",
+       "strength": "helpful",
+       "reason": "The reciprocal of a proper fraction is improper; writing it as a mixed number is the same change used with mixed numbers.",
+       "status": "proposed"
       }
      ],
      "status": "proposed"
@@ -1998,6 +2005,13 @@
        "strength": "essential",
        "reason": "Squares of the numerator and denominator.",
        "status": "proposed"
+      },
+      {
+       "requires": "MATH.G5.NUMBER.FRACTIONS.SIMPLIFY_FRACTIONS",
+       "kind": "skill",
+       "strength": "essential",
+       "reason": "The square is written in simplest form.",
+       "status": "proposed"
       }
      ],
      "status": "proposed"
@@ -2027,6 +2041,13 @@
        "kind": "skill",
        "strength": "essential",
        "reason": "Making the denominator 100 is an equivalent fraction.",
+       "status": "proposed"
+      },
+      {
+       "requires": "MATH.G5.NUMBER.DECIMALS.DEC_MULT_1000",
+       "kind": "skill",
+       "strength": "helpful",
+       "reason": "Multiplying by 100 to turn a fraction into a percentage moves the digits two places.",
        "status": "proposed"
       }
      ],
@@ -2323,6 +2344,231 @@
      "cause": "Does not see that simplest form is needed.",
      "reveals": "Correct value, not simplest.",
      "help": "Divide top and bottom by their highest common factor.",
+     "source": "to be confirmed by a teacher (no source yet)",
+     "status": "draft"
+    },
+    {
+     "code": "MATH.G6.NUMBER.FRACTIONS.ADD_FRACTIONS_LCM.M_IMPROPER_LEFT",
+     "skill": "MATH.G6.NUMBER.FRACTIONS.ADD_FRACTIONS_LCM",
+     "error": "Leaves a sum bigger than 1 as an improper fraction when a mixed number is asked for.",
+     "example": {
+      "question": "3/4 + 2/3 (as a mixed number)",
+      "wrong_answer": "17/12",
+      "correct_answer": "1 5/12"
+     },
+     "cause": "Stops once the fractions are added and does not see that 17/12 is more than one whole.",
+     "reveals": "The improper fraction as an option beside the mixed number.",
+     "help": "Compare the numerator with the denominator: 17 twelfths is 12 twelfths (one whole) and 5 twelfths more.",
+     "source": "to be confirmed by a teacher (no source yet)",
+     "status": "draft"
+    },
+    {
+     "code": "MATH.G6.NUMBER.FRACTIONS.SUBTRACT_FRACTIONS_LCM.M_BIGGER_DENOMINATOR_BIGGER",
+     "skill": "MATH.G6.NUMBER.FRACTIONS.SUBTRACT_FRACTIONS_LCM",
+     "error": "Believes the fraction with the bigger denominator is the bigger fraction, so takes the wrong one away.",
+     "example": {
+      "question": "Which is bigger, 1/3 or 1/4, and by how much?",
+      "wrong_answer": "1/4, by 1/12",
+      "correct_answer": "1/3, by 1/12"
+     },
+     "cause": "Reads the denominator like a whole number: 4 is more than 3.",
+     "reveals": "The answer with the two fractions the wrong way round.",
+     "help": "Fold one strip into 3 and one into 4: the more parts, the smaller each part.",
+     "source": "a familiar error type in maths education (no single source cited); how often Kenyan learners make it is to be confirmed by a teacher",
+     "status": "draft"
+    },
+    {
+     "code": "MATH.G6.NUMBER.FRACTIONS.SUBTRACT_FRACTIONS_LCM.M_PARTS_NOT_FROM_WHOLE",
+     "skill": "MATH.G6.NUMBER.FRACTIONS.SUBTRACT_FRACTIONS_LCM",
+     "error": "In a \"what is left\" story takes one part from the other instead of taking both parts from the whole.",
+     "example": {
+      "question": "Wanjiru ate 1/4 of a cake and Otieno ate 1/3. What fraction of the cake is left?",
+      "wrong_answer": "1/12 (1/3 - 1/4)",
+      "correct_answer": "5/12"
+     },
+     "cause": "Sees two fractions and a \"left\" question and subtracts one from the other.",
+     "reveals": "The difference of the two parts as an option.",
+     "help": "Draw the cake as 12 pieces: shade 3 for Wanjiru and 4 for Otieno. How many are not shaded?",
+     "source": "to be confirmed by a teacher (no source yet)",
+     "status": "draft"
+    },
+    {
+     "code": "MATH.G6.NUMBER.FRACTIONS.ADD_MIXED_NUMBERS.M_ADD_ACROSS_MIXED",
+     "skill": "MATH.G6.NUMBER.FRACTIONS.ADD_MIXED_NUMBERS",
+     "error": "Adds the wholes, then adds the numerators and the denominators of the fractions.",
+     "example": {
+      "question": "1 1/2 + 2 1/3",
+      "wrong_answer": "3 2/5",
+      "correct_answer": "3 5/6"
+     },
+     "cause": "Carries the adding-across error into mixed numbers.",
+     "reveals": "An answer whose fraction part is the numerators and denominators added.",
+     "help": "Rename the fraction parts to sixths first: 3/6 + 2/6.",
+     "source": "a familiar error type in maths education (no single source cited); how often Kenyan learners make it is to be confirmed by a teacher",
+     "status": "draft"
+    },
+    {
+     "code": "MATH.G6.NUMBER.FRACTIONS.ADD_MIXED_NUMBERS.M_WHOLE_ADDED_TO_NUMERATOR",
+     "skill": "MATH.G6.NUMBER.FRACTIONS.ADD_MIXED_NUMBERS",
+     "error": "Adds a whole number to the numerator of a mixed number.",
+     "example": {
+      "question": "2 + 1 3/8",
+      "wrong_answer": "1 5/8",
+      "correct_answer": "3 3/8"
+     },
+     "cause": "Sees one numerator to add to and adds the whole number there.",
+     "reveals": "The answer with the whole number added to the top.",
+     "help": "Wholes go with wholes: 2 wholes and 1 whole make 3 wholes, the 3/8 stays.",
+     "source": "to be confirmed by a teacher (no source yet)",
+     "status": "draft"
+    },
+    {
+     "code": "MATH.G6.NUMBER.FRACTIONS.SUBTRACT_MIXED_NUMBERS.M_WHOLE_MINUS_MIXED",
+     "skill": "MATH.G6.NUMBER.FRACTIONS.SUBTRACT_MIXED_NUMBERS",
+     "error": "Takes a mixed number from a whole number by taking the wholes and copying the fraction.",
+     "example": {
+      "question": "5 - 2 3/4",
+      "wrong_answer": "3 3/4",
+      "correct_answer": "2 1/4"
+     },
+     "cause": "Has nothing to take the 3/4 from, so writes it down.",
+     "reveals": "The answer with the fraction copied as an option.",
+     "help": "Rename one whole: 5 is 4 4/4. Then 4 4/4 - 2 3/4 = 2 1/4.",
+     "source": "a familiar error type in maths education (no single source cited); how often Kenyan learners make it is to be confirmed by a teacher",
+     "status": "draft"
+    },
+    {
+     "code": "MATH.G6.NUMBER.FRACTIONS.SUBTRACT_MIXED_NUMBERS.M_BORROW_TEN",
+     "skill": "MATH.G6.NUMBER.FRACTIONS.SUBTRACT_MIXED_NUMBERS",
+     "error": "Renames a whole as ten parts, as in subtracting whole numbers, whatever the denominator.",
+     "example": {
+      "question": "3 1/5 - 1 3/5",
+      "wrong_answer": "1 8/5 (the whole renamed as 10 fifths: 11/5 - 3/5)",
+      "correct_answer": "1 3/5"
+     },
+     "cause": "Uses \"borrow ten\" from column subtraction.",
+     "reveals": "An answer from renaming a whole as 10 parts.",
+     "help": "A whole is as many parts as the denominator: 1 whole is 5 fifths, so 3 1/5 = 2 6/5.",
+     "source": "a familiar error type in maths education (no single source cited); how often Kenyan learners make it is to be confirmed by a teacher",
+     "status": "draft"
+    },
+    {
+     "code": "MATH.G6.NUMBER.FRACTIONS.RECIPROCAL.M_ONE_MINUS_FRACTION",
+     "skill": "MATH.G6.NUMBER.FRACTIONS.RECIPROCAL",
+     "error": "Gives the part that makes the fraction up to one whole instead of the reciprocal.",
+     "example": {
+      "question": "Reciprocal of 3/5",
+      "wrong_answer": "2/5",
+      "correct_answer": "5/3"
+     },
+     "cause": "Mixes up \"the number that multiplies to 1\" with \"the number that adds to 1\".",
+     "reveals": "The fraction that adds up to 1 as an option.",
+     "help": "Multiply to check: 3/5 x 2/5 is 6/25, not 1. 3/5 x 5/3 is 15/15 = 1.",
+     "source": "to be confirmed by a teacher (no source yet)",
+     "status": "draft"
+    },
+    {
+     "code": "MATH.G6.NUMBER.FRACTIONS.RECIPROCAL.M_ONE_OVER_NUMERATOR",
+     "skill": "MATH.G6.NUMBER.FRACTIONS.RECIPROCAL",
+     "error": "Writes 1 over the numerator, copying the rule for whole numbers (the reciprocal of 5 is 1/5).",
+     "example": {
+      "question": "Reciprocal of 3/5",
+      "wrong_answer": "1/3",
+      "correct_answer": "5/3"
+     },
+     "cause": "Learnt the reciprocal of a whole number first and uses the same rule.",
+     "reveals": "One over the numerator as an option.",
+     "help": "A whole number is a fraction over 1: 5 = 5/1, so its reciprocal 1/5 is it turned upside down too.",
+     "source": "to be confirmed by a teacher (no source yet)",
+     "status": "draft"
+    },
+    {
+     "code": "MATH.G6.NUMBER.FRACTIONS.SQUARE_OF_FRACTION.M_SQUARE_BOTTOM_ONLY",
+     "skill": "MATH.G6.NUMBER.FRACTIONS.SQUARE_OF_FRACTION",
+     "error": "Squares the denominator but not the numerator.",
+     "example": {
+      "question": "(2/5) squared",
+      "wrong_answer": "2/25",
+      "correct_answer": "4/25"
+     },
+     "cause": "Squares the part that \"looks like the number\", the bottom.",
+     "reveals": "The answer with only the denominator squared.",
+     "help": "Write it out: 2/5 x 2/5 = (2 x 2)/(5 x 5).",
+     "source": "to be confirmed by a teacher (no source yet)",
+     "status": "draft"
+    },
+    {
+     "code": "MATH.G6.NUMBER.FRACTIONS.SQUARE_OF_FRACTION.M_SQUARE_MAKES_BIGGER",
+     "skill": "MATH.G6.NUMBER.FRACTIONS.SQUARE_OF_FRACTION",
+     "error": "Believes the square of a fraction is bigger than the fraction, as for whole numbers.",
+     "example": {
+      "question": "Which is bigger: 2/3 or (2/3) squared?",
+      "wrong_answer": "(2/3) squared",
+      "correct_answer": "2/3 (4/9 is less than 6/9)"
+     },
+     "cause": "Has only seen squares of whole numbers get bigger.",
+     "reveals": "A choice between the fraction and its square.",
+     "help": "Shade 2/3 of a square, then 2/3 of the shaded part: the second shading is smaller.",
+     "source": "a familiar error type in maths education (no single source cited); how often Kenyan learners make it is to be confirmed by a teacher",
+     "status": "draft"
+    },
+    {
+     "code": "MATH.G6.NUMBER.FRACTIONS.FRACTION_TO_PERCENT.M_ADD_TO_MAKE_100",
+     "skill": "MATH.G6.NUMBER.FRACTIONS.FRACTION_TO_PERCENT",
+     "error": "Adds the same number to the top and the bottom to make the denominator 100.",
+     "example": {
+      "question": "7/20 as a percentage",
+      "wrong_answer": "87% (7 + 80 over 20 + 80)",
+      "correct_answer": "35%"
+     },
+     "cause": "Makes the denominator 100 by adding, not by multiplying.",
+     "reveals": "The answer from adding to top and bottom.",
+     "help": "Equivalent fractions multiply top and bottom by the same number: 20 x 5 = 100, so 7 x 5 = 35.",
+     "source": "a familiar error type in maths education (no single source cited); how often Kenyan learners make it is to be confirmed by a teacher",
+     "status": "draft"
+    },
+    {
+     "code": "MATH.G6.NUMBER.FRACTIONS.FRACTION_TO_PERCENT.M_DECIMAL_WITH_PERCENT",
+     "skill": "MATH.G6.NUMBER.FRACTIONS.FRACTION_TO_PERCENT",
+     "error": "Divides the numerator by the denominator and writes the decimal with a percent sign.",
+     "example": {
+      "question": "3/5 as a percentage",
+      "wrong_answer": "0.6%",
+      "correct_answer": "60%"
+     },
+     "cause": "Forgets to multiply by 100 after dividing.",
+     "reveals": "The decimal with a percent sign as an option.",
+     "help": "Per cent means out of 100: 0.6 of the whole is 60 out of 100.",
+     "source": "to be confirmed by a teacher (no source yet)",
+     "status": "draft"
+    },
+    {
+     "code": "MATH.G6.NUMBER.FRACTIONS.PERCENT_TO_FRACTION.M_OVER_TEN",
+     "skill": "MATH.G6.NUMBER.FRACTIONS.PERCENT_TO_FRACTION",
+     "error": "Writes a percentage over 10 instead of over 100.",
+     "example": {
+      "question": "45% as a fraction in simplest form",
+      "wrong_answer": "45/10 (4 1/2)",
+      "correct_answer": "9/20"
+     },
+     "cause": "Remembers \"over a ten\" from decimals.",
+     "reveals": "A fraction bigger than 1 for a percentage under 100.",
+     "help": "Per cent means per hundred: 45% = 45/100, then simplify.",
+     "source": "to be confirmed by a teacher (no source yet)",
+     "status": "draft"
+    },
+    {
+     "code": "MATH.G6.NUMBER.FRACTIONS.PERCENT_TO_FRACTION.M_SIMPLIFY_UNEVEN",
+     "skill": "MATH.G6.NUMBER.FRACTIONS.PERCENT_TO_FRACTION",
+     "error": "Divides the numerator and the denominator by different numbers when simplifying.",
+     "example": {
+      "question": "75% as a fraction in simplest form",
+      "wrong_answer": "3/5 (75 / 25 and 100 / 20)",
+      "correct_answer": "3/4"
+     },
+     "cause": "Divides each part by whatever number goes into it.",
+     "reveals": "A fraction that is not equal to the percentage.",
+     "help": "Divide the top and the bottom by the same number: 75 / 25 = 3, 100 / 25 = 4.",
      "source": "to be confirmed by a teacher (no source yet)",
      "status": "draft"
     }
