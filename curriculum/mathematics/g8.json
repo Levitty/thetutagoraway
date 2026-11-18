@@ -3,15 +3,15 @@
  "subject_key": "mathematics",
  "grade": 8,
  "source": "KICD KICD-Grade8-Mathematics-Curriculum-Design.pdf, revised 2024 (text layer)",
- "status": "outcomes from KICD's text, word for word; skills and prerequisites proposed; misconceptions draft; all awaiting teacher review (18 Nov 2026); no skills yet for: NUMBER.SQUARES_AND_SQUARE_ROOTS, NUMBER.RATES_RATIO_PROPORTIONS_, ALGEBR.ALGEBRAIC_EXPRESSIONS, ALGEBR.LINEAR_EQUATIONS, MEASUR.CIRCLES, MEASUR.AREA, MEASUR.MONEY, GEOMET.GEOMETRICAL_CONSTRUCTION, GEOMET.COORDINATES_AND_GRAPHS, GEOMET.SCALE_DRAWING, GEOMET.COMMON_SOLIDS, DATA_H.DATA_PRESENTATION_AND_IN, DATA_H.PROBABILITY",
+ "status": "outcomes from KICD's text, word for word; skills and prerequisites proposed; misconceptions draft; all awaiting teacher review (18 Nov 2026); no skills yet for: NUMBER.RATES_RATIO_PROPORTIONS_, ALGEBR.ALGEBRAIC_EXPRESSIONS, ALGEBR.LINEAR_EQUATIONS, MEASUR.CIRCLES, MEASUR.AREA, MEASUR.MONEY, GEOMET.GEOMETRICAL_CONSTRUCTION, GEOMET.COORDINATES_AND_GRAPHS, GEOMET.SCALE_DRAWING, GEOMET.COMMON_SOLIDS, DATA_H.DATA_PRESENTATION_AND_IN, DATA_H.PROBABILITY",
  "totals": {
   "strands": 5,
   "sub_strands": 16,
   "outcomes": 121,
   "lessons": 150,
-  "skills": 20,
-  "prerequisites": 48,
-  "misconceptions": 102
+  "skills": 26,
+  "prerequisites": 62,
+  "misconceptions": 128
  },
  "sub_strands": [
   {
@@ -2616,7 +2616,7 @@
    "values": "",
    "pcis": "",
    "links": "",
-   "design_notes": "",
+   "design_notes": "Official outcomes a to c are tested; d (use IT) and e (enjoy) are not questions. Tables are the printed four-figure tables of squares and square roots (numbers from 1 to 10, and for roots from 10 to 100 as well); a number outside the table is written as a table number times a power of 10 (squares) or of 100 (roots). The calculator skills (c) are about reading and rounding what the calculator shows, and knowing a sensible size for the answer. Teacher to confirm: whether learners still use printed tables in class or only the calculator.",
    "source": {
     "grade_page": "https://kicd.ac.ke/cbc-materials/curriculum-designs/grade-eight-designs/",
     "design": "KICD-Grade8-Mathematics-Curriculum-Design.pdf",
@@ -2657,8 +2657,637 @@
      "status": "kicd_verified"
     }
    ],
-   "skills": [],
-   "misconceptions": []
+   "skills": [
+    {
+     "code": "MATH.G8.NUMBER.SQUARES_AND_SQUARE_ROOTS.SQUARE_FROM_TABLE",
+     "name": "Find the square of a number from a table of squares",
+     "outcomes": [
+      "MATH.G8.NUMBER.SQUARES_AND_SQUARE_ROOTS.a"
+     ],
+     "mastery": "The child reads the square of a number from 1 to 10 from the table (row for the first two figures, column for the third), and for a number outside the table writes it as a table number times 10, 100 or 0.1 and multiplies the table value by the square of that factor: 43.6² = 4.36² × 100 = 1,901.",
+     "question_forms": [
+      "read from the table",
+      "a number 10 times bigger",
+      "a number smaller than 1",
+      "which is the square"
+     ],
+     "thinking": [
+      "procedure"
+     ],
+     "horeb_skill_ids": [
+      "G8_SQUARES_TABLES"
+     ],
+     "prerequisites": [
+      {
+       "requires": "MATH.G7.NUMBER.SQUARES_AND_SQUARE_ROOTS.SQUARE_DECIMAL",
+       "kind": "skill",
+       "strength": "essential",
+       "reason": "Squares of decimals.",
+       "status": "proposed"
+      },
+      {
+       "requires": "MATH.G7.NUMBER.SQUARES_AND_SQUARE_ROOTS.SQUARE_WHOLE_NUMBER",
+       "kind": "skill",
+       "strength": "essential",
+       "reason": "What a square is.",
+       "status": "proposed"
+      },
+      {
+       "requires": "MATH.G8.NUMBER.DECIMALS.STANDARD_FORM",
+       "kind": "skill",
+       "strength": "helpful",
+       "reason": "Writing a number as a table number times a power of 10.",
+       "status": "proposed"
+      }
+     ],
+     "status": "proposed"
+    },
+    {
+     "code": "MATH.G8.NUMBER.SQUARES_AND_SQUARE_ROOTS.SQUARE_AREA_COST",
+     "name": "Use the square of a number for the area of a square and its cost",
+     "outcomes": [
+      "MATH.G8.NUMBER.SQUARES_AND_SQUARE_ROOTS.a"
+     ],
+     "mastery": "The child squares the side (not doubles it, not multiplies by 4) to get the area of a square floor, plot or tile, keeps the units in square metres, and multiplies by the price per square metre.",
+     "question_forms": [
+      "cost of tiling a square room",
+      "area of a square plot",
+      "how many square metres",
+      "cost per square metre"
+     ],
+     "thinking": [
+      "modelling"
+     ],
+     "horeb_skill_ids": [
+      "G8_SQUARES_TABLES"
+     ],
+     "prerequisites": [
+      {
+       "requires": "MATH.G8.NUMBER.SQUARES_AND_SQUARE_ROOTS.SQUARE_FROM_TABLE",
+       "kind": "skill",
+       "strength": "essential",
+       "reason": "Finding the square.",
+       "status": "proposed"
+      },
+      {
+       "requires": "MATH.G7.MEASUR.AREA.AREA_RECT_IN_CONTEXT",
+       "kind": "skill",
+       "strength": "essential",
+       "reason": "Area and the cost of covering it.",
+       "status": "proposed"
+      }
+     ],
+     "status": "proposed"
+    },
+    {
+     "code": "MATH.G8.NUMBER.SQUARES_AND_SQUARE_ROOTS.ROOT_FROM_TABLE",
+     "name": "Find the square root of a number from tables",
+     "outcomes": [
+      "MATH.G8.NUMBER.SQUARES_AND_SQUARE_ROOTS.b"
+     ],
+     "mastery": "The child pairs the digits from the decimal point to choose the right table (from 1 to 10 or from 10 to 100), reads the root, and moves the point one place for every pair: √4,500 = √45 × 10 = 67.08, √0.45 = √45 ÷ 10 = 0.6708.",
+     "question_forms": [
+      "read the root from the table",
+      "a number 100 times bigger",
+      "which table to use",
+      "to 2 decimal places"
+     ],
+     "thinking": [
+      "procedure"
+     ],
+     "horeb_skill_ids": [
+      "G8_SQUARES_TABLES"
+     ],
+     "prerequisites": [
+      {
+       "requires": "MATH.G7.NUMBER.SQUARES_AND_SQUARE_ROOTS.ROOT_FRACTION_DECIMAL",
+       "kind": "skill",
+       "strength": "essential",
+       "reason": "Roots of decimals.",
+       "status": "proposed"
+      },
+      {
+       "requires": "MATH.G7.NUMBER.SQUARES_AND_SQUARE_ROOTS.ROOT_WHOLE_NUMBER",
+       "kind": "skill",
+       "strength": "essential",
+       "reason": "What a square root is.",
+       "status": "proposed"
+      },
+      {
+       "requires": "MATH.G8.NUMBER.DECIMALS.ROUND_DECIMAL_PLACES",
+       "kind": "skill",
+       "strength": "helpful",
+       "reason": "Rounding the table value.",
+       "status": "proposed"
+      }
+     ],
+     "status": "proposed"
+    },
+    {
+     "code": "MATH.G8.NUMBER.SQUARES_AND_SQUARE_ROOTS.ROOT_BETWEEN_SQUARES",
+     "name": "Place a square root between two whole numbers and check a table value",
+     "outcomes": [
+      "MATH.G8.NUMBER.SQUARES_AND_SQUARE_ROOTS.b"
+     ],
+     "mastery": "The child finds the perfect squares on either side (49 < 55 < 64, so √55 is between 7 and 8), says which end it is nearer, and uses this to check that a value read from the table is sensible.",
+     "question_forms": [
+      "between which two whole numbers",
+      "why is that correct",
+      "is the table value sensible",
+      "nearer to which"
+     ],
+     "thinking": [
+      "reasoning"
+     ],
+     "horeb_skill_ids": [
+      "G8_SQUARES_TABLES"
+     ],
+     "prerequisites": [
+      {
+       "requires": "MATH.G7.NUMBER.SQUARES_AND_SQUARE_ROOTS.ROOT_BY_ANCHORS",
+       "kind": "skill",
+       "strength": "essential",
+       "reason": "Grade 7 placed roots between whole numbers.",
+       "status": "proposed"
+      },
+      {
+       "requires": "MATH.G7.NUMBER.SQUARES_AND_SQUARE_ROOTS.SQUARE_WHOLE_NUMBER",
+       "kind": "skill",
+       "strength": "essential",
+       "reason": "Knowing the perfect squares.",
+       "status": "proposed"
+      }
+     ],
+     "status": "proposed"
+    },
+    {
+     "code": "MATH.G8.NUMBER.SQUARES_AND_SQUARE_ROOTS.SQUARE_BY_CALCULATOR",
+     "name": "Work out squares of numbers with a calculator",
+     "outcomes": [
+      "MATH.G8.NUMBER.SQUARES_AND_SQUARE_ROOTS.c"
+     ],
+     "mastery": "The child keys the number and the x² key (or the number times itself), reads the full display, writes the answer with its units, and checks the size by estimating: 3.45² = 11.9025, about 3.5 × 3.5 = 12.",
+     "question_forms": [
+      "use a calculator",
+      "area of a square tile",
+      "estimate first",
+      "square of a negative number"
+     ],
+     "thinking": [
+      "procedure"
+     ],
+     "horeb_skill_ids": [
+      "G8_SQUARES_TABLES"
+     ],
+     "prerequisites": [
+      {
+       "requires": "MATH.G8.NUMBER.SQUARES_AND_SQUARE_ROOTS.SQUARE_FROM_TABLE",
+       "kind": "skill",
+       "strength": "helpful",
+       "reason": "The same value from tables.",
+       "status": "proposed"
+      },
+      {
+       "requires": "MATH.G7.NUMBER.SQUARES_AND_SQUARE_ROOTS.SQUARE_DECIMAL",
+       "kind": "skill",
+       "strength": "essential",
+       "reason": "Squares of decimals.",
+       "status": "proposed"
+      }
+     ],
+     "status": "proposed"
+    },
+    {
+     "code": "MATH.G8.NUMBER.SQUARES_AND_SQUARE_ROOTS.ROOT_BY_CALCULATOR",
+     "name": "Work out square roots with a calculator and round them",
+     "outcomes": [
+      "MATH.G8.NUMBER.SQUARES_AND_SQUARE_ROOTS.c"
+     ],
+     "mastery": "The child uses the square root key, rounds the display to the decimal places asked, and uses a root to find the side of a square from its area: a plot of 200 m² has a side of 14.1 m to 1 d.p.",
+     "question_forms": [
+      "side of a square plot",
+      "use the square root key",
+      "to 1 decimal place",
+      "check by squaring"
+     ],
+     "thinking": [
+      "procedure",
+      "modelling"
+     ],
+     "horeb_skill_ids": [
+      "G8_SQUARES_TABLES"
+     ],
+     "prerequisites": [
+      {
+       "requires": "MATH.G7.NUMBER.SQUARES_AND_SQUARE_ROOTS.ROOT_IN_CONTEXT",
+       "kind": "skill",
+       "strength": "essential",
+       "reason": "The side of a square from its area.",
+       "status": "proposed"
+      },
+      {
+       "requires": "MATH.G8.NUMBER.DECIMALS.ROUND_DECIMAL_PLACES",
+       "kind": "skill",
+       "strength": "essential",
+       "reason": "Rounding the display.",
+       "status": "proposed"
+      }
+     ],
+     "status": "proposed"
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "MATH.G8.NUMBER.SQUARES_AND_SQUARE_ROOTS.SQUARE_FROM_TABLE.M_TABLE_VALUE_NOT_SCALED",
+     "skill": "MATH.G8.NUMBER.SQUARES_AND_SQUARE_ROOTS.SQUARE_FROM_TABLE",
+     "error": "Gives the table value for 4.36 as the square of 43.6.",
+     "example": {
+      "question": "43.6² using 4.36² = 19.01",
+      "wrong_answer": "19.01",
+      "correct_answer": "1,901"
+     },
+     "cause": "Reads the table and forgets the number was ten times bigger.",
+     "reveals": "The answer 19.01 as a wrong option, with a reason that names the idea.",
+     "help": "Write 43.6 = 4.36 × 10, so the square is 19.01 × 100.",
+     "source": "to be confirmed by a teacher (no source yet)",
+     "status": "draft"
+    },
+    {
+     "code": "MATH.G8.NUMBER.SQUARES_AND_SQUARE_ROOTS.SQUARE_FROM_TABLE.M_SCALE_NOT_SQUARED",
+     "skill": "MATH.G8.NUMBER.SQUARES_AND_SQUARE_ROOTS.SQUARE_FROM_TABLE",
+     "error": "Multiplies the table value by 10 when the number was 10 times bigger.",
+     "example": {
+      "question": "43.6² using 4.36² = 19.01",
+      "wrong_answer": "190.1",
+      "correct_answer": "1,901"
+     },
+     "cause": "Thinks the square grows as much as the number.",
+     "reveals": "The answer 190.1 as a wrong option, with a reason that names the idea.",
+     "help": "10 times bigger each side makes 10 × 10 = 100 times the square.",
+     "source": "to be confirmed by a teacher (no source yet)",
+     "status": "draft"
+    },
+    {
+     "code": "MATH.G8.NUMBER.SQUARES_AND_SQUARE_ROOTS.SQUARE_FROM_TABLE.M_POINT_ONE_PLACE_OUT",
+     "skill": "MATH.G8.NUMBER.SQUARES_AND_SQUARE_ROOTS.SQUARE_FROM_TABLE",
+     "error": "Moves the decimal point one place too far.",
+     "example": {
+      "question": "43.6² using 4.36² = 19.01",
+      "wrong_answer": "19,010",
+      "correct_answer": "1,901"
+     },
+     "cause": "Counts the places wrongly.",
+     "reveals": "The answer 19,010 as a wrong option, with a reason that names the idea.",
+     "help": "Times 100 moves the point two places only.",
+     "source": "to be confirmed by a teacher (no source yet)",
+     "status": "draft"
+    },
+    {
+     "code": "MATH.G8.NUMBER.SQUARES_AND_SQUARE_ROOTS.SQUARE_FROM_TABLE.M_SQUARE_AS_DOUBLE",
+     "skill": "MATH.G8.NUMBER.SQUARES_AND_SQUARE_ROOTS.SQUARE_FROM_TABLE",
+     "error": "Doubles the number instead of squaring it.",
+     "example": {
+      "question": "43.6²",
+      "wrong_answer": "87.2",
+      "correct_answer": "1,901"
+     },
+     "cause": "Reads the small 2 as \"times 2\".",
+     "reveals": "The answer 87.2 as a wrong option, with a reason that names the idea.",
+     "help": "The small 2 means the number times itself.",
+     "source": "to be confirmed by a teacher (no source yet)",
+     "status": "draft"
+    },
+    {
+     "code": "MATH.G8.NUMBER.SQUARES_AND_SQUARE_ROOTS.SQUARE_FROM_TABLE.M_TABLE_CELL_MISREAD",
+     "skill": "MATH.G8.NUMBER.SQUARES_AND_SQUARE_ROOTS.SQUARE_FROM_TABLE",
+     "error": "Reads the next row or column of the table.",
+     "example": {
+      "question": "From the table, 4.36²",
+      "wrong_answer": "19.10 (the value for 4.37)",
+      "correct_answer": "19.01"
+     },
+     "cause": "Loses the place on a crowded table.",
+     "reveals": "The answer 19.10 (the value for 4.37) as a wrong option, with a reason that names the idea.",
+     "help": "Row 4.3, then across to the column headed 6.",
+     "source": "to be confirmed by a teacher (no source yet)",
+     "status": "draft"
+    },
+    {
+     "code": "MATH.G8.NUMBER.SQUARES_AND_SQUARE_ROOTS.SQUARE_AREA_COST.M_PERIMETER_FOR_AREA",
+     "skill": "MATH.G8.NUMBER.SQUARES_AND_SQUARE_ROOTS.SQUARE_AREA_COST",
+     "error": "Uses the distance round the square instead of its area.",
+     "example": {
+      "question": "A square room of side 4.5 m; tiles 800 shillings a m². Cost?",
+      "wrong_answer": "14,400",
+      "correct_answer": "16,200"
+     },
+     "cause": "Confuses the edge with the floor.",
+     "reveals": "The answer 14,400 as a wrong option, with a reason that names the idea.",
+     "help": "Tiles cover the floor: area = side × side.",
+     "source": "to be confirmed by a teacher (no source yet)",
+     "status": "draft"
+    },
+    {
+     "code": "MATH.G8.NUMBER.SQUARES_AND_SQUARE_ROOTS.SQUARE_AREA_COST.M_AREA_AS_TWO_SIDES",
+     "skill": "MATH.G8.NUMBER.SQUARES_AND_SQUARE_ROOTS.SQUARE_AREA_COST",
+     "error": "Takes the area of a square as the side times 2.",
+     "example": {
+      "question": "A square room of side 4.5 m; tiles 800 a m². Cost?",
+      "wrong_answer": "7,200",
+      "correct_answer": "16,200"
+     },
+     "cause": "Reads \"squared\" as \"doubled\".",
+     "reveals": "The answer 7,200 as a wrong option, with a reason that names the idea.",
+     "help": "Area = 4.5 × 4.5, not 4.5 × 2.",
+     "source": "to be confirmed by a teacher (no source yet)",
+     "status": "draft"
+    },
+    {
+     "code": "MATH.G8.NUMBER.SQUARES_AND_SQUARE_ROOTS.SQUARE_AREA_COST.M_ONE_SIDE_ONLY",
+     "skill": "MATH.G8.NUMBER.SQUARES_AND_SQUARE_ROOTS.SQUARE_AREA_COST",
+     "error": "Multiplies the price by one side only.",
+     "example": {
+      "question": "A square room of side 4.5 m; tiles 800 a m². Cost?",
+      "wrong_answer": "3,600",
+      "correct_answer": "16,200"
+     },
+     "cause": "Prices a strip 1 m wide.",
+     "reveals": "The answer 3,600 as a wrong option, with a reason that names the idea.",
+     "help": "The floor is the side times the side.",
+     "source": "to be confirmed by a teacher (no source yet)",
+     "status": "draft"
+    },
+    {
+     "code": "MATH.G8.NUMBER.SQUARES_AND_SQUARE_ROOTS.SQUARE_AREA_COST.M_AREA_UNIT_MIXED",
+     "skill": "MATH.G8.NUMBER.SQUARES_AND_SQUARE_ROOTS.SQUARE_AREA_COST",
+     "error": "Squares a side in centimetres and prices it per square metre.",
+     "example": {
+      "question": "A square tile of side 30 cm; cost 1,000 shillings a m². Cost of one tile?",
+      "wrong_answer": "900,000",
+      "correct_answer": "90"
+     },
+     "cause": "Does not change cm to m before squaring.",
+     "reveals": "The answer 900,000 as a wrong option, with a reason that names the idea.",
+     "help": "30 cm = 0.3 m; 0.3² = 0.09 m².",
+     "source": "to be confirmed by a teacher (no source yet)",
+     "status": "draft"
+    },
+    {
+     "code": "MATH.G8.NUMBER.SQUARES_AND_SQUARE_ROOTS.ROOT_FROM_TABLE.M_ROOT_TABLE_NOT_SCALED",
+     "skill": "MATH.G8.NUMBER.SQUARES_AND_SQUARE_ROOTS.ROOT_FROM_TABLE",
+     "error": "Gives the table root of the smaller number for the bigger one.",
+     "example": {
+      "question": "√4,500 using √45 = 6.708",
+      "wrong_answer": "6.708",
+      "correct_answer": "67.08"
+     },
+     "cause": "Forgets the number was 100 times bigger.",
+     "reveals": "The answer 6.708 as a wrong option, with a reason that names the idea.",
+     "help": "4,500 = 45 × 100, so √4,500 = 6.708 × 10.",
+     "source": "to be confirmed by a teacher (no source yet)",
+     "status": "draft"
+    },
+    {
+     "code": "MATH.G8.NUMBER.SQUARES_AND_SQUARE_ROOTS.ROOT_FROM_TABLE.M_ROOT_SCALED_LIKE_NUMBER",
+     "skill": "MATH.G8.NUMBER.SQUARES_AND_SQUARE_ROOTS.ROOT_FROM_TABLE",
+     "error": "Multiplies the root by 100 when the number was 100 times bigger.",
+     "example": {
+      "question": "√4,500 using √45 = 6.708",
+      "wrong_answer": "670.8",
+      "correct_answer": "67.08"
+     },
+     "cause": "Thinks the root grows as much as the number.",
+     "reveals": "The answer 670.8 as a wrong option, with a reason that names the idea.",
+     "help": "A number 100 times bigger has a root 10 times bigger.",
+     "source": "to be confirmed by a teacher (no source yet)",
+     "status": "draft"
+    },
+    {
+     "code": "MATH.G8.NUMBER.SQUARES_AND_SQUARE_ROOTS.ROOT_FROM_TABLE.M_ROOT_WRONG_TABLE",
+     "skill": "MATH.G8.NUMBER.SQUARES_AND_SQUARE_ROOTS.ROOT_FROM_TABLE",
+     "error": "Uses the root of 4.5 instead of 45 for 4,500.",
+     "example": {
+      "question": "√4,500",
+      "wrong_answer": "21.21",
+      "correct_answer": "67.08"
+     },
+     "cause": "Does not pair the digits from the point.",
+     "reveals": "The answer 21.21 as a wrong option, with a reason that names the idea.",
+     "help": "Pair from the point: 45|00, so use √45.",
+     "source": "to be confirmed by a teacher (no source yet)",
+     "status": "draft"
+    },
+    {
+     "code": "MATH.G8.NUMBER.SQUARES_AND_SQUARE_ROOTS.ROOT_FROM_TABLE.M_ROOT_AS_TIMES_TEN",
+     "skill": "MATH.G8.NUMBER.SQUARES_AND_SQUARE_ROOTS.ROOT_FROM_TABLE",
+     "error": "Multiplies the number by 10 instead of taking a root.",
+     "example": {
+      "question": "√450",
+      "wrong_answer": "4,500",
+      "correct_answer": "21.21"
+     },
+     "cause": "Mixes up the root with the shift of the point.",
+     "reveals": "The answer 4,500 as a wrong option, with a reason that names the idea.",
+     "help": "A root is smaller than the number when the number is more than 1.",
+     "source": "to be confirmed by a teacher (no source yet)",
+     "status": "draft"
+    },
+    {
+     "code": "MATH.G8.NUMBER.SQUARES_AND_SQUARE_ROOTS.ROOT_FROM_TABLE.M_ROOT_DP_NOT_ROUNDED",
+     "skill": "MATH.G8.NUMBER.SQUARES_AND_SQUARE_ROOTS.ROOT_FROM_TABLE",
+     "error": "Copies all the table figures when fewer decimal places are asked.",
+     "example": {
+      "question": "√4,500 to 1 d.p.",
+      "wrong_answer": "67.08",
+      "correct_answer": "67.1"
+     },
+     "cause": "Copies the table value.",
+     "reveals": "The answer 67.08 as a wrong option, with a reason that names the idea.",
+     "help": "Round to the places asked.",
+     "source": "to be confirmed by a teacher (no source yet)",
+     "status": "draft"
+    },
+    {
+     "code": "MATH.G8.NUMBER.SQUARES_AND_SQUARE_ROOTS.ROOT_BETWEEN_SQUARES.M_NUMBER_NOT_ROOT_COMPARED",
+     "skill": "MATH.G8.NUMBER.SQUARES_AND_SQUARE_ROOTS.ROOT_BETWEEN_SQUARES",
+     "error": "Places the root by the number itself, not by squares.",
+     "example": {
+      "question": "Why is √55 between 7 and 8?",
+      "wrong_answer": "55 is between 7 and 8",
+      "correct_answer": "49 < 55 < 64"
+     },
+     "cause": "Compares the number with the ends directly.",
+     "reveals": "The answer 55 is between 7 and 8 as a wrong option, with a reason that names the idea.",
+     "help": "Square the ends: 7² = 49 and 8² = 64.",
+     "source": "to be confirmed by a teacher (no source yet)",
+     "status": "draft"
+    },
+    {
+     "code": "MATH.G8.NUMBER.SQUARES_AND_SQUARE_ROOTS.ROOT_BETWEEN_SQUARES.M_NEIGHBOURS_MULTIPLIED",
+     "skill": "MATH.G8.NUMBER.SQUARES_AND_SQUARE_ROOTS.ROOT_BETWEEN_SQUARES",
+     "error": "Multiplies two neighbouring numbers to place the root.",
+     "example": {
+      "question": "Why is √55 between 7 and 8?",
+      "wrong_answer": "Because 7 × 8 = 56",
+      "correct_answer": "49 < 55 < 64"
+     },
+     "cause": "Mixes up a product of neighbours with squares.",
+     "reveals": "The answer Because 7 × 8 = 56 as a wrong option, with a reason that names the idea.",
+     "help": "Square each end separately.",
+     "source": "to be confirmed by a teacher (no source yet)",
+     "status": "draft"
+    },
+    {
+     "code": "MATH.G8.NUMBER.SQUARES_AND_SQUARE_ROOTS.ROOT_BETWEEN_SQUARES.M_ROOT_AS_HALF",
+     "skill": "MATH.G8.NUMBER.SQUARES_AND_SQUARE_ROOTS.ROOT_BETWEEN_SQUARES",
+     "error": "Takes the square root as half the number.",
+     "example": {
+      "question": "√64",
+      "wrong_answer": "32",
+      "correct_answer": "8"
+     },
+     "cause": "Reads \"root\" as \"divide by 2\".",
+     "reveals": "The answer 32 as a wrong option, with a reason that names the idea.",
+     "help": "A root multiplies by itself to give the number.",
+     "source": "to be confirmed by a teacher (no source yet)",
+     "status": "draft"
+    },
+    {
+     "code": "MATH.G8.NUMBER.SQUARES_AND_SQUARE_ROOTS.ROOT_BETWEEN_SQUARES.M_ROOT_NEARER_WRONG_END",
+     "skill": "MATH.G8.NUMBER.SQUARES_AND_SQUARE_ROOTS.ROOT_BETWEEN_SQUARES",
+     "error": "Says the root is nearer the wrong whole number.",
+     "example": {
+      "question": "Is √50 nearer 7 or 8?",
+      "wrong_answer": "8",
+      "correct_answer": "7"
+     },
+     "cause": "Thinks a number past the middle of the range is near the top.",
+     "reveals": "The answer 8 as a wrong option, with a reason that names the idea.",
+     "help": "50 is just past 49 = 7², so √50 is just over 7.",
+     "source": "to be confirmed by a teacher (no source yet)",
+     "status": "draft"
+    },
+    {
+     "code": "MATH.G8.NUMBER.SQUARES_AND_SQUARE_ROOTS.SQUARE_BY_CALCULATOR.M_CALC_TIMES_TWO",
+     "skill": "MATH.G8.NUMBER.SQUARES_AND_SQUARE_ROOTS.SQUARE_BY_CALCULATOR",
+     "error": "Keys \"× 2\" instead of squaring.",
+     "example": {
+      "question": "3.45²",
+      "wrong_answer": "6.9",
+      "correct_answer": "11.9025"
+     },
+     "cause": "Reads the small 2 as times 2.",
+     "reveals": "The answer 6.9 as a wrong option, with a reason that names the idea.",
+     "help": "Use the x² key or 3.45 × 3.45.",
+     "source": "to be confirmed by a teacher (no source yet)",
+     "status": "draft"
+    },
+    {
+     "code": "MATH.G8.NUMBER.SQUARES_AND_SQUARE_ROOTS.SQUARE_BY_CALCULATOR.M_CALC_POINT_PLACE",
+     "skill": "MATH.G8.NUMBER.SQUARES_AND_SQUARE_ROOTS.SQUARE_BY_CALCULATOR",
+     "error": "Writes the answer with the point in the wrong place.",
+     "example": {
+      "question": "3.45²",
+      "wrong_answer": "1.19025",
+      "correct_answer": "11.9025"
+     },
+     "cause": "Copies the digits and guesses the point.",
+     "reveals": "The answer 1.19025 as a wrong option, with a reason that names the idea.",
+     "help": "Estimate first: 3.5 × 3.5 is about 12.",
+     "source": "to be confirmed by a teacher (no source yet)",
+     "status": "draft"
+    },
+    {
+     "code": "MATH.G8.NUMBER.SQUARES_AND_SQUARE_ROOTS.SQUARE_BY_CALCULATOR.M_CALC_ROUNDED_ANSWER",
+     "skill": "MATH.G8.NUMBER.SQUARES_AND_SQUARE_ROOTS.SQUARE_BY_CALCULATOR",
+     "error": "Rounds the calculator answer to a whole number when the full answer is asked.",
+     "example": {
+      "question": "3.45² (full answer)",
+      "wrong_answer": "12",
+      "correct_answer": "11.9025"
+     },
+     "cause": "Rounds out of habit.",
+     "reveals": "The answer 12 as a wrong option, with a reason that names the idea.",
+     "help": "Give what the calculator shows unless asked to round.",
+     "source": "to be confirmed by a teacher (no source yet)",
+     "status": "draft"
+    },
+    {
+     "code": "MATH.G8.NUMBER.SQUARES_AND_SQUARE_ROOTS.SQUARE_BY_CALCULATOR.M_CALC_NEGATIVE_SQUARE",
+     "skill": "MATH.G8.NUMBER.SQUARES_AND_SQUARE_ROOTS.SQUARE_BY_CALCULATOR",
+     "error": "Gives a negative square for a negative number after keying -3² without brackets.",
+     "example": {
+      "question": "(-3)²",
+      "wrong_answer": "-9",
+      "correct_answer": "9"
+     },
+     "cause": "The calculator squares 3 first, then adds the minus.",
+     "reveals": "The answer -9 as a wrong option, with a reason that names the idea.",
+     "help": "Use brackets: (-3)² = 9. A square is never negative.",
+     "source": "to be confirmed by a teacher (no source yet)",
+     "status": "draft"
+    },
+    {
+     "code": "MATH.G8.NUMBER.SQUARES_AND_SQUARE_ROOTS.ROOT_BY_CALCULATOR.M_CALC_ROOT_HALVED",
+     "skill": "MATH.G8.NUMBER.SQUARES_AND_SQUARE_ROOTS.ROOT_BY_CALCULATOR",
+     "error": "Halves the area to find the side.",
+     "example": {
+      "question": "A square plot of 200 m²: side?",
+      "wrong_answer": "100 m",
+      "correct_answer": "14.1 m"
+     },
+     "cause": "Takes root to mean half.",
+     "reveals": "The answer 100 m as a wrong option, with a reason that names the idea.",
+     "help": "Use the square root key: 14.1 × 14.1 is about 200.",
+     "source": "to be confirmed by a teacher (no source yet)",
+     "status": "draft"
+    },
+    {
+     "code": "MATH.G8.NUMBER.SQUARES_AND_SQUARE_ROOTS.ROOT_BY_CALCULATOR.M_CALC_SQUARED_INSTEAD",
+     "skill": "MATH.G8.NUMBER.SQUARES_AND_SQUARE_ROOTS.ROOT_BY_CALCULATOR",
+     "error": "Squares the area instead of taking the root.",
+     "example": {
+      "question": "A square plot of 200 m²: side?",
+      "wrong_answer": "40,000 m",
+      "correct_answer": "14.1 m"
+     },
+     "cause": "Presses x² instead of the root key.",
+     "reveals": "The answer 40,000 m as a wrong option, with a reason that names the idea.",
+     "help": "The side must be smaller than the area number.",
+     "source": "to be confirmed by a teacher (no source yet)",
+     "status": "draft"
+    },
+    {
+     "code": "MATH.G8.NUMBER.SQUARES_AND_SQUARE_ROOTS.ROOT_BY_CALCULATOR.M_CALC_AREA_OVER_FOUR",
+     "skill": "MATH.G8.NUMBER.SQUARES_AND_SQUARE_ROOTS.ROOT_BY_CALCULATOR",
+     "error": "Divides the area by 4 as if finding a side from the perimeter.",
+     "example": {
+      "question": "A square plot of 400 m²: side?",
+      "wrong_answer": "100 m",
+      "correct_answer": "20 m"
+     },
+     "cause": "Mixes area with perimeter.",
+     "reveals": "The answer 100 m as a wrong option, with a reason that names the idea.",
+     "help": "Area = side × side: find the root.",
+     "source": "to be confirmed by a teacher (no source yet)",
+     "status": "draft"
+    },
+    {
+     "code": "MATH.G8.NUMBER.SQUARES_AND_SQUARE_ROOTS.ROOT_BY_CALCULATOR.M_CALC_ROOT_TRUNCATED",
+     "skill": "MATH.G8.NUMBER.SQUARES_AND_SQUARE_ROOTS.ROOT_BY_CALCULATOR",
+     "error": "Cuts the display off instead of rounding.",
+     "example": {
+      "question": "√90 to 1 d.p. (the display shows 9.486...)",
+      "wrong_answer": "9.4",
+      "correct_answer": "9.5"
+     },
+     "cause": "Drops digits instead of rounding.",
+     "reveals": "The answer 9.4 as a wrong option, with a reason that names the idea.",
+     "help": "Look at the next digit: 8 rounds up.",
+     "source": "to be confirmed by a teacher (no source yet)",
+     "status": "draft"
+    }
+   ]
   },
   {
    "code": "MATH.G8.NUMBER.RATES_RATIO_PROPORTIONS_",

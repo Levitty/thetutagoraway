@@ -88,7 +88,7 @@ export const FAMILIES = [
     } }),
 
   // ================================================================ SQUARES
-  cov({ id: 'g8c.sq.root-plot', skill: 'G8_SQUARES_TABLES', outcome: 'G8.SQUARES.c', form: 'word', rung: 2,
+  cov({ id: 'g8c.sq.root-plot', skill: 'G8_SQUARES_TABLES', outcome: 'MATH.G8.NUMBER.SQUARES_AND_SQUARE_ROOTS.c', cskill: 'MATH.G8.NUMBER.SQUARES_AND_SQUARE_ROOTS.ROOT_BY_CALCULATOR', misMapped: false, reveals: ['M_CALC_ROOT_HALVED', 'M_CALC_SQUARED_INSTEAD', 'M_CALC_AREA_OVER_FOUR', 'M_CALC_ROOT_TRUNCATED'], form: 'word', rung: 2,
     gen: () => {
       const perfect = Math.random() < 0.5, p = person();
       let A, side, wrong;
@@ -99,13 +99,13 @@ export const FAMILIES = [
         steps: [`The side is the square root of ${commas(A)}.`, `√${commas(A)} = ${side}${perfect ? '' : ' (to 1 decimal place)'}.`], chk: (a) => Math.abs(a * a - A) <= (perfect ? 0 : 0.2 * a + 0.01) };
     } }),
 
-  cov({ id: 'g8c.sq.square-decimal', skill: 'G8_SQUARES_TABLES', outcome: 'G8.SQUARES.c', form: 'direct', rung: 2,
+  cov({ id: 'g8c.sq.square-decimal', skill: 'G8_SQUARES_TABLES', outcome: 'MATH.G8.NUMBER.SQUARES_AND_SQUARE_ROOTS.c', cskill: 'MATH.G8.NUMBER.SQUARES_AND_SQUARE_ROOTS.SQUARE_BY_CALCULATOR', form: 'direct', rung: 2,
     gen: () => {
       const x = randInt(12, 98) / 10;
       if (x % 1 === 0) return null;
       const sq = round(x * x, 2), p = person();
       return { question: `${p.name} uses a calculator to find the area of a square tile with a side of ${x} cm. Work out ${x}² in square centimetres.`, answer: sq,
-        wrong: [[round(x * 2, 2), 'You multiplied by 2. Squaring means multiplying the number by itself.'], [round(sq / 10, 3), 'The decimal point is in the wrong place. Count the decimal places in both numbers.'], [round(sq * 10, 1), 'The decimal point is in the wrong place. Count the decimal places in both numbers.'], [Math.round(sq), 'The answer was rounded to a whole number. Give the full answer from the calculator.']],
+        wrong: [[round(x * 2, 2), 'You multiplied by 2. Squaring means multiplying the number by itself.', 'M_CALC_TIMES_TWO'], [round(sq / 10, 3), 'The decimal point is in the wrong place. Count the decimal places in both numbers.', 'M_CALC_POINT_PLACE'], [round(sq * 10, 1), 'The decimal point is in the wrong place. Count the decimal places in both numbers.', 'SLIP'], [Math.round(sq), 'The answer was rounded to a whole number. Give the full answer from the calculator.', 'M_CALC_ROUNDED_ANSWER']],
         hints: ['Squaring a number means multiplying it by itself.', 'Use the x² key on your calculator.'],
         steps: [`${x}² = ${x} × ${x}.`, `${x} × ${x} = ${sq}.`], chk: (a) => Math.abs(Math.sqrt(a) - x) < 1e-6 };
     } }),

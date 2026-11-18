@@ -274,7 +274,7 @@ export const FAMILIES = [
     check: ({ a, b, m, n }, v) => v[0] === a * b && v[1] === m + n && v[2] === m + n + 1 && v[3] === a * 10 ** m * (b * 10 ** n) }),
 
   // ======================================================== SQUARES AND ROOTS
-  fam({ id: 'g8.sq.table-shift', skill: 'G8_SQUARES_TABLES', outcome: 'G8.SQUARES.a', rung: 2, form: 'table',
+  fam({ id: 'g8.sq.table-shift', skill: 'G8_SQUARES_TABLES', outcome: 'MATH.G8.NUMBER.SQUARES_AND_SQUARE_ROOTS.a', cskill: 'MATH.G8.NUMBER.SQUARES_AND_SQUARE_ROOTS.SQUARE_FROM_TABLE', rung: 2, form: 'table',
     draw: () => { const s = randInt(21, 85); const ns = [0, 1, 2, 3, 4].map(i => s + i); return { ns, t: pick(ns), sh: pick([10, 100]) }; },
     make: ({ ns, t, sh }) => {
       const sq = (k) => round((k / 10) ** 2, 2), v = sq(t), K = t * (sh / 10);
@@ -282,13 +282,13 @@ export const FAMILIES = [
       return { question: `Here is part of a printed table of squares. Without a calculator, find ${commas(K)}².`,
         model: { type: 'table', data: { head: ['Number', 'Square'], rows: ns.map(k => ({ label: `${k / 10}`, value: `${sq(k)}` })) } },
         answer,
-        wrong: [[v, `The table has ${t / 10}, not ${commas(K)}. Your number is ${sh} times bigger, so its square is much bigger.`], [round(v * sh, 2), `A number ${sh} times bigger has a square ${sh} × ${sh} times bigger, not ${sh} times.`], [round(v * sh * sh * 10, 2), 'The point has moved one place too far. Check how many zeros the answer needs.'], [K * 2, 'Squaring is the number times itself, not times 2.']],
+        wrong: [[v, `The table has ${t / 10}, not ${commas(K)}. Your number is ${sh} times bigger, so its square is much bigger.`, 'M_TABLE_VALUE_NOT_SCALED'], [round(v * sh, 2), `A number ${sh} times bigger has a square ${sh} × ${sh} times bigger, not ${sh} times.`, 'M_SCALE_NOT_SQUARED'], [round(v * sh * sh * 10, 2), 'The point has moved one place too far. Check how many zeros the answer needs.', 'M_POINT_ONE_PLACE_OUT'], [K * 2, 'Squaring is the number times itself, not times 2.', 'M_SQUARE_AS_DOUBLE']],
         hints: [`Which number in the table has the same digits as ${commas(K)}?`, `Your number is ${sh} times bigger than the table number. How does that change its square?`],
         steps: [`The table gives ${t / 10}² = ${v}.`, `${commas(K)} is ${sh} times ${t / 10}, so its square is ${sh} × ${sh} = ${commas(sh * sh)} times ${v}.`, `Answer: ${commas(answer)}.`] };
     },
     check: ({ t, sh }, a) => a === (t * (sh / 10)) ** 2 }),
 
-  fam({ id: 'g8.sq.root-table-shift', skill: 'G8_SQUARES_TABLES', outcome: 'G8.SQUARES.b', rung: 2, form: 'table',
+  fam({ id: 'g8.sq.root-table-shift', skill: 'G8_SQUARES_TABLES', outcome: 'MATH.G8.NUMBER.SQUARES_AND_SQUARE_ROOTS.b', cskill: 'MATH.G8.NUMBER.SQUARES_AND_SQUARE_ROOTS.ROOT_FROM_TABLE', misMapped: false, reveals: ['M_ROOT_TABLE_NOT_SCALED', 'M_ROOT_SCALED_LIKE_NUMBER', 'M_ROOT_AS_TIMES_TEN'], rung: 2, form: 'table',
     draw: () => { const N = pick([2, 3, 5, 6, 7]); return { N, sc: pick([100, 10000]) }; },
     make: ({ N, sc }) => {
       const T = { 2: 1.414, 3: 1.732, 5: 2.236, 6: 2.449, 7: 2.646 }, t = T[N], f = Math.sqrt(sc), dp = sc === 100 ? 2 : 1;
@@ -303,26 +303,26 @@ export const FAMILIES = [
     },
     check: ({ N, sc }, a) => Math.abs(a * a / (N * sc) - 1) < 0.01 }),
 
-  fam({ id: 'g8.sq.between-why', skill: 'G8_SQUARES_TABLES', outcome: 'G8.SQUARES.b', rung: 2, form: 'why',
+  fam({ id: 'g8.sq.between-why', skill: 'G8_SQUARES_TABLES', outcome: 'MATH.G8.NUMBER.SQUARES_AND_SQUARE_ROOTS.b', cskill: 'MATH.G8.NUMBER.SQUARES_AND_SQUARE_ROOTS.ROOT_BETWEEN_SQUARES', rung: 2, form: 'why',
     draw: () => { const n = randInt(50, 150); const lo = Math.floor(Math.sqrt(n)); return lo * lo === n ? null : { n, lo, p: person() }; },
     make: ({ n, lo, p }) => ({
       question: `${p.name} says √${n} lies between ${lo} and ${lo + 1}. Why is that correct?`,
       options: [
         { text: `${n} is between ${lo}² = ${lo * lo} and ${lo + 1}² = ${(lo + 1) ** 2}`, right: lo * lo < n && n < (lo + 1) ** 2 },
-        { text: `${n} lies between ${lo} and ${lo + 1}, so its root does too`, right: false, why: `${n} is much bigger than ${lo + 1}. Roots are compared through squares.` },
-        { text: `${lo} × ${lo + 1} = ${lo * (lo + 1)}, which is close to ${n}, so that is the root`, right: false, why: 'Multiplying two neighbouring numbers is not how a root is placed. Square each end instead.' },
-        { text: `A square root is found by dividing ${n} by 2, to get half`, right: false, why: 'Dividing by 2 gives a half. A root is the number that multiplies by itself to give the number.' },
+        { text: `${n} lies between ${lo} and ${lo + 1}, so its root does too`, right: false, why: `${n} is much bigger than ${lo + 1}. Roots are compared through squares.`, mis: 'M_NUMBER_NOT_ROOT_COMPARED' },
+        { text: `${lo} × ${lo + 1} = ${lo * (lo + 1)}, which is close to ${n}, so that is the root`, right: false, why: 'Multiplying two neighbouring numbers is not how a root is placed. Square each end instead.', mis: 'M_NEIGHBOURS_MULTIPLIED' },
+        { text: `A square root is found by dividing ${n} by 2, to get half`, right: false, why: 'Dividing by 2 gives a half. A root is the number that multiplies by itself to give the number.', mis: 'M_ROOT_AS_HALF' },
       ],
       hints: ['Square the two whole numbers.', 'Compare the number under the root sign with those two squares.'],
       steps: [`${lo}² = ${lo * lo} and ${lo + 1}² = ${(lo + 1) ** 2}.`, `${lo * lo} < ${n} < ${(lo + 1) ** 2}, so ${lo} < √${n} < ${lo + 1}.`],
     }) }),
 
-  fam({ id: 'g8.sq.tiles-cost', skill: 'G8_SQUARES_TABLES', outcome: 'G8.SQUARES.a', rung: 2, form: 'word',
+  fam({ id: 'g8.sq.tiles-cost', skill: 'G8_SQUARES_TABLES', outcome: 'MATH.G8.NUMBER.SQUARES_AND_SQUARE_ROOTS.a', cskill: 'MATH.G8.NUMBER.SQUARES_AND_SQUARE_ROOTS.SQUARE_AREA_COST', rung: 2, form: 'word',
     draw: () => ({ s: pick([2.5, 3.5, 4.5, 5.5]), rate: pick([600, 800, 1000]), p: person() }),
     make: ({ s, rate, p }) => ({
       question: `${p.name} tiles a square room with sides of ${s} m. The tiles cost sh ${commas(rate)} for each square metre. Work out ${s}² to find the area. How much do the tiles cost, in shillings?`,
       answer: round(s * s * rate, 2),
-      wrong: [[round(4 * s * rate, 2), 'That uses the distance around the room. Tiles cover the floor, which is the area.'], [round(2 * s * rate, 2), 'A square is the side times itself, not times 2.'], [round(s * rate, 2), 'That is for a strip 1 m wide. The floor is the side times the side.']],
+      wrong: [[round(4 * s * rate, 2), 'That uses the distance around the room. Tiles cover the floor, which is the area.', 'M_PERIMETER_FOR_AREA'], [round(2 * s * rate, 2), 'A square is the side times itself, not times 2.', 'M_AREA_AS_TWO_SIDES'], [round(s * rate, 2), 'That is for a strip 1 m wide. The floor is the side times the side.', 'M_ONE_SIDE_ONLY']],
       hints: [`Area of a square = side × side. Work out ${s} × ${s}.`, 'Then multiply the area by the cost of each square metre.'],
       steps: [`Area: ${s}² = ${round(s * s, 2)} m².`, `Cost: ${round(s * s, 2)} × ${commas(rate)} = sh ${commas(round(s * s * rate, 2))}.`],
     }),

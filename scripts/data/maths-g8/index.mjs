@@ -2,4 +2,5 @@
 import * as integers from './integers.mjs';
 import * as fractions from './fractions.mjs';
 import * as decimals from './decimals.mjs';
-export const SUBS = [integers, fractions, decimals];
+import * as squares from './squares.mjs';
+export const SUBS = [integers, fractions, decimals, squares];

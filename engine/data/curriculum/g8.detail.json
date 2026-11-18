@@ -302,6 +302,60 @@
     "how much each"
    ],
    "mastery": "The child sets up a real problem with decimals (cloth at shillings a metre, items at shillings and cents, change from a note), works the cost of one, the cost of all, and the profit or change in the right order."
+  },
+  "MATH.G8.NUMBER.SQUARES_AND_SQUARE_ROOTS.SQUARE_FROM_TABLE": {
+   "forms": [
+    "read from the table",
+    "a number 10 times bigger",
+    "a number smaller than 1",
+    "which is the square"
+   ],
+   "mastery": "The child reads the square of a number from 1 to 10 from the table (row for the first two figures, column for the third), and for a number outside the table writes it as a table number times 10, 100 or 0.1 and multiplies the table value by the square of that factor: 43.6² = 4.36² × 100 = 1,901."
+  },
+  "MATH.G8.NUMBER.SQUARES_AND_SQUARE_ROOTS.SQUARE_AREA_COST": {
+   "forms": [
+    "cost of tiling a square room",
+    "area of a square plot",
+    "how many square metres",
+    "cost per square metre"
+   ],
+   "mastery": "The child squares the side (not doubles it, not multiplies by 4) to get the area of a square floor, plot or tile, keeps the units in square metres, and multiplies by the price per square metre."
+  },
+  "MATH.G8.NUMBER.SQUARES_AND_SQUARE_ROOTS.ROOT_FROM_TABLE": {
+   "forms": [
+    "read the root from the table",
+    "a number 100 times bigger",
+    "which table to use",
+    "to 2 decimal places"
+   ],
+   "mastery": "The child pairs the digits from the decimal point to choose the right table (from 1 to 10 or from 10 to 100), reads the root, and moves the point one place for every pair: √4,500 = √45 × 10 = 67.08, √0.45 = √45 ÷ 10 = 0.6708."
+  },
+  "MATH.G8.NUMBER.SQUARES_AND_SQUARE_ROOTS.ROOT_BETWEEN_SQUARES": {
+   "forms": [
+    "between which two whole numbers",
+    "why is that correct",
+    "is the table value sensible",
+    "nearer to which"
+   ],
+   "mastery": "The child finds the perfect squares on either side (49 < 55 < 64, so √55 is between 7 and 8), says which end it is nearer, and uses this to check that a value read from the table is sensible."
+  },
+  "MATH.G8.NUMBER.SQUARES_AND_SQUARE_ROOTS.SQUARE_BY_CALCULATOR": {
+   "forms": [
+    "use a calculator",
+    "area of a square tile",
+    "estimate first",
+    "square of a negative number"
+   ],
+   "mastery": "The child keys the number and the x² key (or the number times itself), reads the full display, writes the answer with its units, and checks the size by estimating: 3.45² = 11.9025, about 3.5 × 3.5 = 12."
+  },
+  "MATH.G8.NUMBER.SQUARES_AND_SQUARE_ROOTS.ROOT_BY_CALCULATOR": {
+   "forms": [
+    "side of a square plot",
+    "use the square root key",
+    "to 1 decimal place",
+    "check by squaring"
+   ],
+   "mastery": "The child uses the square root key, rounds the display to the decimal places asked, and uses a root to find the side of a square from its area: a plot of 200 m² has a side of 14.1 m to 1 d.p."
   }
  }
 }
