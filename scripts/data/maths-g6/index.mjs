@@ -6,4 +6,5 @@
 //   pack   { SKILL: pk(...) }  the teaching pack entry, covering every misconception of the skill
 import * as whole from './whole-numbers.mjs';
 import * as mult from './multiplication.mjs';
-export const DEPTH = [whole, mult];
+import * as div from './division.mjs';
+export const DEPTH = [whole, mult, div];

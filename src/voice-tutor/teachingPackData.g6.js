@@ -1416,6 +1416,407 @@ export const TEACHING_PACK_G6 = {
   "sub_strand": "MATH.G6.NUMBER.MULTIPLICATION",
   "sub_strand_name": "Multiplication",
   "status": "draft: written 18 Nov 2026 offline for Grade 6; not yet checked by a Kenyan maths teacher; not loaded by the live tutor"
+ },
+ "MATH.G6.NUMBER.DIVISION.DIV_4D_BY_UP_TO_3D": {
+  "skill": "MATH.G6.NUMBER.DIVISION.DIV_4D_BY_UP_TO_3D",
+  "key_step": "The child divides place by place from the left, writes 0 in the quotient when a place cannot be shared, and checks by multiplying back and adding the remainder.",
+  "floor": {
+   "prerequisite": "Divides a 3-digit number by a 2-digit number.",
+   "question": "What is 864 / 12?",
+   "answer": "72"
+  },
+  "representations": [
+   "bundles of thousands, hundreds, tens and ones shared into groups",
+   "the long division layout with one quotient digit above each place",
+   "the check: quotient x divisor + remainder"
+  ],
+  "steps": [
+   "Start with the fewest digits on the left that the divisor goes into.",
+   "Write the quotient digit above the last digit used, multiply and subtract.",
+   "Bring down the next digit; if the divisor does not go in, write 0 in the quotient.",
+   "Check: quotient x divisor + remainder = dividend, and the remainder is smaller than the divisor."
+  ],
+  "contexts": [
+   "sharing bags of maize among schools",
+   "learners into buses",
+   "packing 1,000 eggs into trays"
+  ],
+  "board": [
+   {
+    "beat": "write",
+    "do": "Write 3,248 / 8 in the long division layout."
+   },
+   {
+    "beat": "point",
+    "do": "Point at the 32.",
+    "say": "How many 8s in 32?"
+   },
+   {
+    "beat": "pause",
+    "do": "Wait for 4, then subtract."
+   },
+   {
+    "beat": "point",
+    "do": "Bring down the 4.",
+    "say": "How many 8s in 4?"
+   },
+   {
+    "beat": "pause",
+    "do": "Wait for the child to say none."
+   },
+   {
+    "beat": "child_draws",
+    "do": "Ask the child to write the 0 in the quotient and go on."
+   },
+   {
+    "beat": "reveal",
+    "do": "Check: 406 x 8 = 3,248."
+   }
+  ],
+  "misconceptions": [
+   {
+    "code": "MATH.G6.NUMBER.DIVISION.DIV_4D_BY_UP_TO_3D.M_ZERO_IN_QUOTIENT_LOST",
+    "listen_for": [
+     "46",
+     "skip the 4"
+    ],
+    "ask": "How many 8s are in 4, and what do we write for none?",
+    "repair": "Write 0 above the 4: none of that place, but the place is still there.",
+    "error": "Leaves a zero out of the quotient when a digit of the dividend is too small to divide.",
+    "example": {
+     "question": "3,248 / 8",
+     "wrong_answer": "46",
+     "correct_answer": "406"
+    }
+   },
+   {
+    "code": "MATH.G6.NUMBER.DIVISION.DIV_4D_BY_UP_TO_3D.M_REMAINDER_AS_PART",
+    "listen_for": [
+     "834",
+     "the 4 is the last digit"
+    ],
+    "ask": "Is the 4 a group of 12, or what is left over?",
+    "repair": "The remainder is left over; write it as \"remainder 4\", not as a digit of the answer.",
+    "error": "Writes the remainder as another digit of the quotient or drops it.",
+    "example": {
+     "question": "1,000 / 12",
+     "wrong_answer": "834 (the remainder 4 written as a digit of the answer)",
+     "correct_answer": "83 remainder 4"
+    }
+   },
+   {
+    "code": "MATH.G6.NUMBER.DIVISION.DIV_4D_BY_UP_TO_3D.M_DIVIDE_SMALL_BY_BIG",
+    "listen_for": [
+     "12 divided by 4",
+     "three"
+    ],
+    "ask": "Are we sharing 12 into groups of 4, or 45 into groups of 12?",
+    "repair": "The number being divided is always the one inside the bracket.",
+    "error": "Divides the smaller digit by the larger divisor part the wrong way round (for example 4 by 12 as 12 by 4).",
+    "example": {
+     "question": "First step of 4,536 / 12",
+     "wrong_answer": "12 / 4 = 3 (the divisor divided by the first digit)",
+     "correct_answer": "45 / 12 = 3 remainder 9"
+    }
+   },
+   {
+    "code": "MATH.G6.NUMBER.DIVISION.DIV_4D_BY_UP_TO_3D.M_REMAINDER_TOO_BIG",
+    "listen_for": [
+     "remainder 16"
+    ],
+    "ask": "Is 16 bigger than 12?",
+    "repair": "If what is left is as big as the divisor, one more group fits.",
+    "error": "Stops with a remainder as big as the divisor or bigger.",
+    "example": {
+     "question": "1,000 / 12",
+     "wrong_answer": "82 remainder 16",
+     "correct_answer": "83 remainder 4"
+    }
+   },
+   {
+    "code": "MATH.G6.NUMBER.DIVISION.DIV_4D_BY_UP_TO_3D.M_STORY_REMAINDER_IGNORED",
+    "listen_for": [
+     "20 buses",
+     "drop the remainder"
+    ],
+    "ask": "What happens to the 50 learners who are left?",
+    "repair": "In a story the remainder may need one more group.",
+    "error": "Drops the remainder in a story where it needs one more group.",
+    "example": {
+     "question": "1,250 learners travel in buses that carry 60 each. How many buses are needed?",
+     "wrong_answer": "20",
+     "correct_answer": "21 (20 buses carry 1,200, and 50 learners need one more bus)"
+    }
+   }
+  ],
+  "checks": [
+   {
+    "question": "What is 3,248 / 8?",
+    "answer": "406",
+    "shows": "zero in the quotient"
+   },
+   {
+    "question": "1,250 learners travel in buses that carry 60 each. How many buses are needed?",
+    "answer": "21",
+    "shows": "remainder in a story"
+   }
+  ],
+  "name": "Divide up to a 4-digit number by up to a 3-digit number",
+  "sub_strand": "MATH.G6.NUMBER.DIVISION",
+  "sub_strand_name": "Division",
+  "status": "draft: written 18 Nov 2026 offline for Grade 6; not yet checked by a Kenyan maths teacher; not loaded by the live tutor"
+ },
+ "MATH.G6.NUMBER.DIVISION.ESTIMATE_QUOTIENT": {
+  "skill": "MATH.G6.NUMBER.DIVISION.ESTIMATE_QUOTIENT",
+  "key_step": "The child rounds the dividend and the divisor to the nearest ten, divides the rounded numbers, and uses the estimate to say whether an exact answer is sensible.",
+  "floor": {
+   "prerequisite": "Rounds to the nearest ten.",
+   "question": "Round 4,183 to the nearest ten.",
+   "answer": "4,180"
+  },
+  "representations": [
+   "each number on a number line between two tens",
+   "the rounded numbers with matching zeros crossed out",
+   "the estimate beside an exact answer"
+  ],
+  "steps": [
+   "Round the dividend to the nearest ten.",
+   "Round the divisor to the nearest ten.",
+   "Cross out the same number of zeros from both, then divide.",
+   "Compare the estimate with any exact answer."
+  ],
+  "contexts": [
+   "how many trips a lorry makes",
+   "how many bags each school gets",
+   "how many weeks of saving"
+  ],
+  "board": [
+   {
+    "beat": "write",
+    "do": "Write 6,300 / 70."
+   },
+   {
+    "beat": "point",
+    "do": "Point at one zero in each number.",
+    "say": "If we cross out one zero from each, what is left?"
+   },
+   {
+    "beat": "pause",
+    "do": "Wait for 630 / 7."
+   },
+   {
+    "beat": "predict",
+    "do": "Ask the child for the answer before you write it."
+   },
+   {
+    "beat": "write",
+    "do": "Write 630 / 7 = 90."
+   }
+  ],
+  "misconceptions": [
+   {
+    "code": "MATH.G6.NUMBER.DIVISION.ESTIMATE_QUOTIENT.M_ROUND_ONLY_DIVIDEND",
+    "listen_for": [
+     "4,183 divided by 20",
+     "only one rounded"
+    ],
+    "ask": "Have both numbers been rounded?",
+    "repair": "Round the dividend and the divisor.",
+    "error": "Rounds the dividend but not the divisor, so the estimate is awkward and usually wrong.",
+    "example": {
+     "question": "Estimate 4,183 / 21.",
+     "wrong_answer": "4,183 / 20 (only the divisor was rounded)",
+     "correct_answer": "4,180 / 20 = 209"
+    }
+   },
+   {
+    "code": "MATH.G6.NUMBER.DIVISION.ESTIMATE_QUOTIENT.M_ZEROS_CANCELLED_WRONG",
+    "listen_for": [
+     "9",
+     "two zeros off"
+    ],
+    "ask": "How many zeros does 70 have to give?",
+    "repair": "Cross out the same number of zeros from both numbers, no more than the divisor has.",
+    "error": "Cancels zeros unevenly when dividing rounded numbers, giving an estimate ten times too large or small.",
+    "example": {
+     "question": "Estimate 6,300 / 70.",
+     "wrong_answer": "9 (one zero too many cancelled)",
+     "correct_answer": "90"
+    }
+   },
+   {
+    "code": "MATH.G6.NUMBER.DIVISION.ESTIMATE_QUOTIENT.M_EXACT_THEN_ROUNDED_Q",
+    "listen_for": [
+     "40.6",
+     "worked it out exactly"
+    ],
+    "ask": "Could you do this in your head?",
+    "repair": "Round first, then divide: that is the estimate.",
+    "error": "Divides exactly and rounds the answer, instead of rounding the numbers first.",
+    "example": {
+     "question": "Estimate 2,396 / 59 by rounding both numbers to the nearest ten.",
+     "wrong_answer": "41 (2,396 / 59 = 40.6, rounded)",
+     "correct_answer": "2,400 / 60 = 40"
+    }
+   },
+   {
+    "code": "MATH.G6.NUMBER.DIVISION.ESTIMATE_QUOTIENT.M_DIVIDEND_TO_HUNDRED",
+    "listen_for": [
+     "1,400",
+     "to the hundred"
+    ],
+    "ask": "Which place does nearest ten mean?",
+    "repair": "1,438 to the nearest ten is 1,440.",
+    "error": "Rounds the dividend to the nearest hundred instead of the nearest ten.",
+    "example": {
+     "question": "Estimate 1,438 / 18 by rounding both numbers to the nearest ten.",
+     "wrong_answer": "1,400 / 20 = 70",
+     "correct_answer": "1,440 / 20 = 72"
+    }
+   }
+  ],
+  "checks": [
+   {
+    "question": "Estimate 4,183 / 21 by rounding both numbers to the nearest ten.",
+    "answer": "209",
+    "shows": "4,180 / 20"
+   },
+   {
+    "question": "Estimate 1,438 / 18 by rounding both numbers to the nearest ten.",
+    "answer": "72",
+    "shows": "1,440 / 20"
+   }
+  ],
+  "name": "Estimate quotients by rounding to the nearest ten",
+  "sub_strand": "MATH.G6.NUMBER.DIVISION",
+  "sub_strand_name": "Division",
+  "status": "draft: written 18 Nov 2026 offline for Grade 6; not yet checked by a Kenyan maths teacher; not loaded by the live tutor"
+ },
+ "MATH.G6.NUMBER.DIVISION.COMBINED_OPERATIONS": {
+  "skill": "MATH.G6.NUMBER.DIVISION.COMBINED_OPERATIONS",
+  "key_step": "The child does brackets first, then multiplication and division from left to right, then addition and subtraction from left to right, and says which step comes next before doing it.",
+  "floor": {
+   "prerequisite": "Knows the order of operations with two operations.",
+   "question": "What is 6 + 2 x 3?",
+   "answer": "12"
+  },
+  "representations": [
+   "the expression with each step underlined in order",
+   "a story turned into an expression",
+   "two working lines side by side, one in the right order"
+  ],
+  "steps": [
+   "Work out anything in brackets.",
+   "Do multiplication and division as they come from left to right.",
+   "Do addition and subtraction as they come from left to right.",
+   "Write one step per line."
+  ],
+  "contexts": [
+   "shopping at a duka with change",
+   "sharing and adding marks",
+   "fare for a group plus luggage"
+  ],
+  "board": [
+   {
+    "beat": "write",
+    "do": "Write 8 + 4 x 5."
+   },
+   {
+    "beat": "point",
+    "do": "Point at the x.",
+    "say": "Which do we do first, the + or the x?"
+   },
+   {
+    "beat": "pause",
+    "do": "Wait for the child to say the x."
+   },
+   {
+    "beat": "child_draws",
+    "do": "Ask the child to underline 4 x 5 and write 20."
+   },
+   {
+    "beat": "reveal",
+    "do": "Write 8 + 20 = 28."
+   }
+  ],
+  "misconceptions": [
+   {
+    "code": "MATH.G6.NUMBER.DIVISION.COMBINED_OPERATIONS.M_LEFT_TO_RIGHT_ONLY",
+    "listen_for": [
+     "60",
+     "left to right"
+    ],
+    "ask": "Which operation comes first, wherever it is?",
+    "repair": "Multiply and divide before adding and subtracting.",
+    "error": "Works strictly from left to right whatever the operations are.",
+    "example": {
+     "question": "8 + 4 x 5",
+     "wrong_answer": "60",
+     "correct_answer": "28"
+    }
+   },
+   {
+    "code": "MATH.G6.NUMBER.DIVISION.COMBINED_OPERATIONS.M_DIVIDE_AFTER_MULTIPLY",
+    "listen_for": [
+     "4",
+     "multiply first"
+    ],
+    "ask": "Which of / and x comes first from the left?",
+    "repair": "Multiplication and division are on the same level: do them in the order they come.",
+    "error": "Always multiplies before dividing, even when the division comes first.",
+    "example": {
+     "question": "48 / 6 x 2",
+     "wrong_answer": "4 (6 x 2 = 12, 48 / 12)",
+     "correct_answer": "16"
+    }
+   },
+   {
+    "code": "MATH.G6.NUMBER.DIVISION.COMBINED_OPERATIONS.M_BRACKET_IGNORED",
+    "listen_for": [
+     "23",
+     "no brackets"
+    ],
+    "ask": "What do the brackets tell us?",
+    "repair": "Brackets come first: 5 + 3 = 8, then 4 x 8.",
+    "error": "Ignores the brackets and works the line in the order written.",
+    "example": {
+     "question": "4 x (5 + 3)",
+     "wrong_answer": "23 (4 x 5, then + 3)",
+     "correct_answer": "32"
+    }
+   },
+   {
+    "code": "MATH.G6.NUMBER.DIVISION.COMBINED_OPERATIONS.M_SUBTRACT_BEFORE_MULTIPLY",
+    "listen_for": [
+     "276",
+     "minus first"
+    ],
+    "ask": "Is there a multiplication in the line?",
+    "repair": "Do 4 x 6 first, then 50 - 24.",
+    "error": "Subtracts before multiplying when the subtraction comes first in the line.",
+    "example": {
+     "question": "50 - 4 x 6",
+     "wrong_answer": "276",
+     "correct_answer": "26"
+    }
+   }
+  ],
+  "checks": [
+   {
+    "question": "What is 50 - 4 x 6?",
+    "answer": "26",
+    "shows": "multiply before subtract"
+   },
+   {
+    "question": "What is (12 + 8) / 4 x 3?",
+    "answer": "15",
+    "shows": "brackets, then left to right"
+   }
+  ],
+  "name": "Combined operations with the four operations (up to 3-digit numbers)",
+  "sub_strand": "MATH.G6.NUMBER.DIVISION",
+  "sub_strand_name": "Division",
+  "status": "draft: written 18 Nov 2026 offline for Grade 6; not yet checked by a Kenyan maths teacher; not loaded by the live tutor"
  }
 };
 export default TEACHING_PACK_G6;

@@ -3,15 +3,15 @@
  "subject_key": "mathematics",
  "grade": 6,
  "source": "KICD KICD-Grade6-Mathematics-Curriculum-Design.pdf, revised 2024 (text layer)",
- "status": "outcomes from KICD's text, word for word; skills, prerequisites proposed; misconceptions draft; all awaiting teacher review (12 Nov 2026; deepened with a teaching pack 18 Nov 2026); not yet deepened: NUMBER.DIVISION, NUMBER.FRACTIONS, NUMBER.DECIMALS, NUMBER.INEQUALITIES, MEASUR.LENGTH, MEASUR.AREA, MEASUR.CAPACITY, MEASUR.MASS, MEASUR.TIME, MEASUR.MONEY, GEOMET.LINES, GEOMET.ANGLES, GEOMET.3_D_OBJECTS, DATA_H.BAR_GRAPHS",
+ "status": "outcomes from KICD's text, word for word; skills, prerequisites proposed; misconceptions draft; all awaiting teacher review (12 Nov 2026; deepened with a teaching pack 18 Nov 2026); not yet deepened: NUMBER.FRACTIONS, NUMBER.DECIMALS, NUMBER.INEQUALITIES, MEASUR.LENGTH, MEASUR.AREA, MEASUR.CAPACITY, MEASUR.MASS, MEASUR.TIME, MEASUR.MONEY, GEOMET.LINES, GEOMET.ANGLES, GEOMET.3_D_OBJECTS, DATA_H.BAR_GRAPHS",
  "totals": {
   "strands": 4,
   "sub_strands": 16,
   "outcomes": 97,
   "lessons": 150,
   "skills": 84,
-  "prerequisites": 146,
-  "misconceptions": 210
+  "prerequisites": 148,
+  "misconceptions": 214
  },
  "sub_strands": [
   {
@@ -1425,6 +1425,13 @@
        "strength": "essential",
        "reason": "The same idea at a smaller size.",
        "status": "proposed"
+      },
+      {
+       "requires": "MATH.G5.NUMBER.MULTIPLICATION.ESTIMATE_PRODUCT_ROUND10",
+       "kind": "skill",
+       "strength": "helpful",
+       "reason": "Rounding both numbers to the nearest ten before working is done the same way for products.",
+       "status": "proposed"
       }
      ],
      "status": "proposed"
@@ -1454,6 +1461,13 @@
        "kind": "skill",
        "strength": "essential",
        "reason": "Order of operations is introduced in Grade 5.",
+       "status": "proposed"
+      },
+      {
+       "requires": "MATH.G5.NUMBER.DIVISION.COMBINED_OPS_PROBLEMS",
+       "kind": "skill",
+       "strength": "helpful",
+       "reason": "Grade 5 stories with two operations.",
        "status": "proposed"
       }
      ],
@@ -1593,6 +1607,66 @@
      "cause": "Does the first operation written.",
      "reveals": "The left-to-right answer as a distractor.",
      "help": "Do the multiplication first; use brackets to show the other reading.",
+     "source": "to be confirmed by a teacher (no source yet)",
+     "status": "draft"
+    },
+    {
+     "code": "MATH.G6.NUMBER.DIVISION.DIV_4D_BY_UP_TO_3D.M_REMAINDER_TOO_BIG",
+     "skill": "MATH.G6.NUMBER.DIVISION.DIV_4D_BY_UP_TO_3D",
+     "error": "Stops with a remainder as big as the divisor or bigger.",
+     "example": {
+      "question": "1,000 / 12",
+      "wrong_answer": "82 remainder 16",
+      "correct_answer": "83 remainder 4"
+     },
+     "cause": "Takes a quotient digit that is one too small and does not compare the remainder with the divisor.",
+     "reveals": "A remainder bigger than the divisor as an option.",
+     "help": "After each step ask: is what is left smaller than 12? If not, another 12 fits.",
+     "source": "a familiar error type in maths education (no single source cited); how often Kenyan learners make it is to be confirmed by a teacher",
+     "status": "draft"
+    },
+    {
+     "code": "MATH.G6.NUMBER.DIVISION.DIV_4D_BY_UP_TO_3D.M_STORY_REMAINDER_IGNORED",
+     "skill": "MATH.G6.NUMBER.DIVISION.DIV_4D_BY_UP_TO_3D",
+     "error": "Drops the remainder in a story where it needs one more group.",
+     "example": {
+      "question": "1,250 learners travel in buses that carry 60 each. How many buses are needed?",
+      "wrong_answer": "20",
+      "correct_answer": "21 (20 buses carry 1,200, and 50 learners need one more bus)"
+     },
+     "cause": "Writes the quotient as the answer without asking what the remainder means in the story.",
+     "reveals": "The quotient without the extra group as an option.",
+     "help": "Read the remainder back into the story: 50 learners are still waiting, so they need a bus.",
+     "source": "to be confirmed by a teacher (no source yet)",
+     "status": "draft"
+    },
+    {
+     "code": "MATH.G6.NUMBER.DIVISION.ESTIMATE_QUOTIENT.M_EXACT_THEN_ROUNDED_Q",
+     "skill": "MATH.G6.NUMBER.DIVISION.ESTIMATE_QUOTIENT",
+     "error": "Divides exactly and rounds the answer, instead of rounding the numbers first.",
+     "example": {
+      "question": "Estimate 2,396 / 59 by rounding both numbers to the nearest ten.",
+      "wrong_answer": "41 (2,396 / 59 = 40.6, rounded)",
+      "correct_answer": "2,400 / 60 = 40"
+     },
+     "cause": "Thinks an estimate is a rounded answer.",
+     "reveals": "The rounded exact quotient as an option.",
+     "help": "Round both numbers first; the estimate should take a few seconds.",
+     "source": "to be confirmed by a teacher (no source yet)",
+     "status": "draft"
+    },
+    {
+     "code": "MATH.G6.NUMBER.DIVISION.ESTIMATE_QUOTIENT.M_DIVIDEND_TO_HUNDRED",
+     "skill": "MATH.G6.NUMBER.DIVISION.ESTIMATE_QUOTIENT",
+     "error": "Rounds the dividend to the nearest hundred instead of the nearest ten.",
+     "example": {
+      "question": "Estimate 1,438 / 18 by rounding both numbers to the nearest ten.",
+      "wrong_answer": "1,400 / 20 = 70",
+      "correct_answer": "1,440 / 20 = 72"
+     },
+     "cause": "Rounds a big number to its front digits out of habit.",
+     "reveals": "The estimate from rounding to the hundred as an option.",
+     "help": "Nearest ten: look at the ones digit only; 1,438 becomes 1,440.",
      "source": "to be confirmed by a teacher (no source yet)",
      "status": "draft"
     }
