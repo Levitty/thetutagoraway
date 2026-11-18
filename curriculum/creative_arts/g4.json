@@ -3,15 +3,15 @@
  "subject_key": "creative_arts",
  "grade": 4,
  "source": "KICD Creative Arts, First Published 2017; Revised 2024 (text layer)",
- "status": "outcomes from KICD's text, word for word; skills, prerequisites, leads_to and misconceptions proposed (authored offline, 13 Nov 2026), awaiting teacher review. Practical, performance and attitude outcomes are listed in docs/qa/creativearts-g4-non-question-outcomes-2026-11-13.md",
+ "status": "outcomes from KICD's text, word for word; skills, prerequisites, leads_to and misconceptions proposed (authored offline, 13 Nov 2026), awaiting teacher review. Practical, performance and attitude outcomes are listed in docs/qa/creativearts-g4-non-question-outcomes-2026-11-13.md; depth pass 18 Nov 2026 (two or more prerequisites and four misconceptions per skill, practical outcomes marked by the teacher with the KICD rubric, teaching pack in curriculum/creative_arts/teaching/g4)",
  "totals": {
   "strands": 3,
   "sub_strands": 12,
   "outcomes": 63,
   "lessons": 178,
   "skills": 40,
-  "prerequisites": 41,
-  "misconceptions": 135,
+  "prerequisites": 85,
+  "misconceptions": 160,
   "leads_to": 24
  },
  "sub_strands": [
@@ -119,7 +119,7 @@
      "outcomes": [
       "CREA.G4.CREATI.PERCUSSION_MUSICAL_INSTR.a"
      ],
-     "mastery": "The child names the ngoma (drum), the isukuti (Luhya drum) and the kayamba (shaker of the coast) as percussion instruments, knows percussion instruments are hit, shaken or scraped, and does not put the nyatiti, orutu or nzumari in the percussion group. Evidence rule: at least four of the last five fresh questions right across at least two question forms, and no repeated pick of the same misconception.",
+     "mastery": "The child names the ngoma (drum), the isukuti (Luhya drum) and the kayamba (shaker of the coast) as percussion instruments, knows percussion instruments are hit, shaken or scraped, and does not put the nyatiti, orutu or nzumari in the percussion group. Evidence rule: at least four of the last five fresh questions right across at least two question forms, and no repeated pick of the same misconception. Practical, marked by the teacher with the KICD rubric (CREA.G4.RUBRIC.1.1), never as a phone question: d) improvise rhythmic patterns using indigenous percussion musical instruments.",
      "question_forms": [
       "pick the percussion instrument from a list",
       "say how an instrument is played",
@@ -138,6 +138,13 @@
        "reason": "Grade 3 Creative Activities introduced it. Proposed, to confirm by a teacher.",
        "strength": "essential",
        "status": "proposed"
+      },
+      {
+       "requires": "CREA.G3.PERFOR.STRING_MUSICAL_INSTRUMEN.d",
+       "kind": "outcome",
+       "strength": "helpful",
+       "reason": "Valuing Kenyan string instruments (Grade 3) is where naming instruments by community began. Proposed, to confirm by a CBC Creative Arts teacher.",
+       "status": "proposed"
       }
      ],
      "leads_to": [
@@ -146,7 +153,16 @@
        "reason": "Grade 5 Creative Arts builds on this idea. Proposed, to confirm by a teacher."
       }
      ],
-     "status": "proposed"
+     "status": "proposed",
+     "teacher_rubric": {
+      "outcomes": [
+       "CREA.G4.CREATI.PERCUSSION_MUSICAL_INSTR.d"
+      ],
+      "indicators": [
+       "CREA.G4.RUBRIC.1.1"
+      ],
+      "by": "teacher"
+     }
     },
     {
      "code": "CREA.G4.CREATI.PERCUSSION_MUSICAL_INSTR.CLASSIFY",
@@ -172,6 +188,13 @@
        "kind": "skill",
        "reason": "This skill builds on it. Proposed, to confirm by a teacher.",
        "strength": "essential",
+       "status": "proposed"
+      },
+      {
+       "requires": "CREA.G3.CREATI.RHYTHM_AND_PATTERN_MAKIN.a",
+       "kind": "outcome",
+       "strength": "essential",
+       "reason": "Hearing long and short sounds (Grade 3) comes before hearing whether an instrument can change pitch. Proposed, to confirm by a CBC Creative Arts teacher.",
        "status": "proposed"
       }
      ],
@@ -203,6 +226,13 @@
        "reason": "This skill builds on it. Proposed, to confirm by a teacher.",
        "strength": "essential",
        "status": "proposed"
+      },
+      {
+       "requires": "CREA.G3.PERFOR.STRING_MUSICAL_INSTRUMEN.b",
+       "kind": "outcome",
+       "strength": "essential",
+       "reason": "Improvising a string instrument (Grade 3) showed that a tight, shaking part makes the sound, as the drum skin does. Proposed, to confirm by a CBC Creative Arts teacher.",
+       "status": "proposed"
       }
      ],
      "leads_to": [
@@ -220,7 +250,7 @@
       "CREA.G4.CREATI.PERCUSSION_MUSICAL_INSTR.e",
       "CREA.G4.CREATI.PERCUSSION_MUSICAL_INSTR.f"
      ],
-     "mastery": "The child puts the steps in order: cut straight twigs and trim them, wrap them tightly in foil or put them in a closed tin, burn them with little air by an adult, let them cool fully, then use them. The child says smudging with a finger or cloth spreads the charcoal to make soft light and dark areas (tonal value), pressing harder makes it darker, and the fire step is done by an adult. This is the knowledge half of outcomes e and f; drawing is practical. Evidence rule: at least four of the last five fresh questions right across at least two question forms, and no repeated pick of the same misconception.",
+     "mastery": "The child puts the steps in order: cut straight twigs and trim them, wrap them tightly in foil or put them in a closed tin, burn them with little air by an adult, let them cool fully, then use them. The child says smudging with a finger or cloth spreads the charcoal to make soft light and dark areas (tonal value), pressing harder makes it darker, and the fire step is done by an adult. This is the knowledge half of outcomes e and f; drawing is practical. Evidence rule: at least four of the last five fresh questions right across at least two question forms, and no repeated pick of the same misconception. Practical, marked by the teacher with the KICD rubric (CREA.G4.RUBRIC.1.1), never as a phone question: e) make charcoal sticks for drawing; f) create tonal value on a drawing of a percussion instrument using the smudging technique.",
      "question_forms": [
       "put the steps of making a charcoal stick in order",
       "say what smudging does to a drawing",
@@ -239,6 +269,13 @@
        "reason": "This skill builds on it. Proposed, to confirm by a teacher.",
        "strength": "essential",
        "status": "proposed"
+      },
+      {
+       "requires": "CREA.G3.CREATI.DRAWING_AND_PAINTING.c",
+       "kind": "outcome",
+       "strength": "essential",
+       "reason": "Drawing with shapes (Grade 3) comes before shading a drawing with charcoal. Proposed, to confirm by a CBC Creative Arts teacher.",
+       "status": "proposed"
       }
      ],
      "leads_to": [
@@ -247,7 +284,17 @@
        "reason": "Grade 5 Creative Arts builds on this idea. Proposed, to confirm by a teacher."
       }
      ],
-     "status": "proposed"
+     "status": "proposed",
+     "teacher_rubric": {
+      "outcomes": [
+       "CREA.G4.CREATI.PERCUSSION_MUSICAL_INSTR.e",
+       "CREA.G4.CREATI.PERCUSSION_MUSICAL_INSTR.f"
+      ],
+      "indicators": [
+       "CREA.G4.RUBRIC.1.1"
+      ],
+      "by": "teacher"
+     }
     }
    ],
    "misconceptions": [
@@ -490,6 +537,22 @@
      "feedback": "More pressure puts more charcoal on the paper, so the area is darker. Less pressure gives a lighter shade.",
      "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
      "status": "draft"
+    },
+    {
+     "code": "CREA.G4.CREATI.PERCUSSION_MUSICAL_INSTR.CLASSIFY.M_CA4_PC_SHAKER_MELODIC",
+     "skill": "CREA.G4.CREATI.PERCUSSION_MUSICAL_INSTR.CLASSIFY",
+     "error": "Calls the kayamba melodic because it is played in time with a song.",
+     "example": {
+      "question": "Is the kayamba melodic or non-melodic?",
+      "wrong_answer": "melodic, it plays with the song",
+      "correct_answer": "non-melodic"
+     },
+     "cause": "The child thinks anything that plays along with a tune is playing the tune.",
+     "reveals": "Offer \"melodic, it plays with the song\" next to the right answer and ask the question again in a new context.",
+     "help": "Shake the kayamba softly and loudly: ask if the note goes up or down. It never does.",
+     "feedback": "The kayamba keeps the rhythm, but it cannot go up or down in pitch. It is non-melodic.",
+     "source": "To confirm by a CBC Creative Arts teacher: a common classroom error, not traced to a study by the author.",
+     "status": "draft"
     }
    ],
    "rubric_indicators": [
@@ -573,7 +636,7 @@
      "outcomes": [
       "CREA.G4.CREATI.NETBALL.a"
      ],
-     "mastery": "The child says a chest pass is thrown from the chest with two hands, an overhead pass is thrown from above the head with two hands, a double-handed catch uses both hands with fingers spread and eyes on the ball, the catcher moves to the ball and brings it in toward the chest, and the thrower looks at the catcher. This is the knowledge half of outcome a; passing is practical. Evidence rule: at least four of the last five fresh questions right across at least two question forms, and no repeated pick of the same misconception.",
+     "mastery": "The child says a chest pass is thrown from the chest with two hands, an overhead pass is thrown from above the head with two hands, a double-handed catch uses both hands with fingers spread and eyes on the ball, the catcher moves to the ball and brings it in toward the chest, and the thrower looks at the catcher. This is the knowledge half of outcome a; passing is practical. Evidence rule: at least four of the last five fresh questions right across at least two question forms, and no repeated pick of the same misconception. Practical, marked by the teacher with the KICD rubric (CREA.G4.RUBRIC.1.1), never as a phone question: c) perform the skills of passing, and catching in Netball.",
      "question_forms": [
       "name the pass from how it is thrown",
       "say how a good catch is made",
@@ -585,9 +648,33 @@
       "reasoning"
      ],
      "horeb_skill_ids": [],
-     "prerequisites": [],
+     "prerequisites": [
+      {
+       "requires": "CREA.G3.PERFOR.GALLOPING.a",
+       "kind": "outcome",
+       "strength": "helpful",
+       "reason": "Moving in different directions (Grade 3) is what a player does to get free for a pass. Proposed, to confirm by a CBC Creative Arts teacher.",
+       "status": "proposed"
+      },
+      {
+       "requires": "CREA.G3.CREATI.PUSHING_AND_PULLING.a",
+       "kind": "outcome",
+       "strength": "essential",
+       "reason": "Pushing (Grade 3) is the action of a chest pass. Proposed, to confirm by a CBC Creative Arts teacher.",
+       "status": "proposed"
+      }
+     ],
      "leads_to": [],
-     "status": "proposed"
+     "status": "proposed",
+     "teacher_rubric": {
+      "outcomes": [
+       "CREA.G4.CREATI.NETBALL.c"
+      ],
+      "indicators": [
+       "CREA.G4.RUBRIC.1.1"
+      ],
+      "by": "teacher"
+     }
     },
     {
      "code": "CREA.G4.CREATI.NETBALL.MACRAME",
@@ -595,7 +682,7 @@
      "outcomes": [
       "CREA.G4.CREATI.NETBALL.b"
      ],
-     "mastery": "The child says macramé is made by tying knots (not sewing or gluing), the overhand knot is made by making a loop and passing the end through it before pulling tight, the ball is made by knotting strands round a soft core (old cloth or paper), and string, sisal, plastic bag strips and strips of old cloth are reusable materials. This is the knowledge half of outcome b; making the ball is practical. Evidence rule: at least four of the last five fresh questions right across at least two question forms, and no repeated pick of the same misconception.",
+     "mastery": "The child says macramé is made by tying knots (not sewing or gluing), the overhand knot is made by making a loop and passing the end through it before pulling tight, the ball is made by knotting strands round a soft core (old cloth or paper), and string, sisal, plastic bag strips and strips of old cloth are reusable materials. This is the knowledge half of outcome b; making the ball is practical. Evidence rule: at least four of the last five fresh questions right across at least two question forms, and no repeated pick of the same misconception. Practical, marked by the teacher with the KICD rubric (CREA.G4.RUBRIC.1.1), never as a phone question: b) make a ball using macramé technique.",
      "question_forms": [
       "put the steps in order",
       "say what the overhand knot is",
@@ -614,6 +701,13 @@
        "reason": "This skill builds on it. Proposed, to confirm by a teacher.",
        "strength": "essential",
        "status": "proposed"
+      },
+      {
+       "requires": "CREA.G3.CREATI.WEAVING.a",
+       "kind": "outcome",
+       "strength": "essential",
+       "reason": "Plain paper weaving (Grade 3) is the first craft of passing strands over and under; macramé ties them. Proposed, to confirm by a CBC Creative Arts teacher.",
+       "status": "proposed"
       }
      ],
      "leads_to": [
@@ -622,7 +716,16 @@
        "reason": "Grade 5 Creative Arts builds on this idea. Proposed, to confirm by a teacher."
       }
      ],
-     "status": "proposed"
+     "status": "proposed",
+     "teacher_rubric": {
+      "outcomes": [
+       "CREA.G4.CREATI.NETBALL.b"
+      ],
+      "indicators": [
+       "CREA.G4.RUBRIC.1.1"
+      ],
+      "by": "teacher"
+     }
     }
    ],
    "misconceptions": [
@@ -737,6 +840,22 @@
      "feedback": "Pack old cloth or paper inside. It is light and safe. A stone can hurt a person.",
      "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
      "status": "draft"
+    },
+    {
+     "code": "CREA.G4.CREATI.NETBALL.MACRAME.M_CA4_NB_MAC_FIRM_LOOSE",
+     "skill": "CREA.G4.CREATI.NETBALL.MACRAME",
+     "error": "Leaves knots loose so that they look neat and are quick to tie.",
+     "example": {
+      "question": "Why must macramé knots be pulled tight?",
+      "wrong_answer": "so they look nice only",
+      "correct_answer": "so the ball keeps its shape and does not come apart"
+     },
+     "cause": "The child sees knots as decoration and not as what holds the ball together.",
+     "reveals": "Offer \"so they look nice only\" next to the right answer and ask the question again in a new context.",
+     "help": "Shake a loosely knotted strip and a tight one; see which comes apart.",
+     "feedback": "Pull each knot tight. Tight knots hold the ball together when it is thrown.",
+     "source": "To confirm by a CBC Creative Arts teacher: a common classroom error, not traced to a study by the author.",
+     "status": "draft"
     }
    ],
    "rubric_indicators": [
@@ -840,6 +959,13 @@
        "reason": "Grade 3 Creative Activities introduced it. Proposed, to confirm by a teacher.",
        "strength": "essential",
        "status": "proposed"
+      },
+      {
+       "requires": "CREA.G3.CREATI.DRAWING_AND_PAINTING.b",
+       "kind": "outcome",
+       "strength": "essential",
+       "reason": "Mixing colours by spraying and blowing (Grade 3) shows which colours can be made. Proposed, to confirm by a CBC Creative Arts teacher.",
+       "status": "proposed"
       }
      ],
      "leads_to": [
@@ -875,6 +1001,13 @@
        "reason": "This skill builds on it. Proposed, to confirm by a teacher.",
        "strength": "essential",
        "status": "proposed"
+      },
+      {
+       "requires": "CREA.G3.CREATI.DRAWING_AND_PAINTING.a",
+       "kind": "outcome",
+       "strength": "essential",
+       "reason": "Identifying colour mixing (Grade 3) is the first step to naming the pair. Proposed, to confirm by a CBC Creative Arts teacher.",
+       "status": "proposed"
       }
      ],
      "leads_to": [
@@ -891,7 +1024,7 @@
      "outcomes": [
       "CREA.G4.CREATI.PAINTING_AND_MONTAGE.b"
      ],
-     "mastery": "The child says colour value is how light or dark a colour is, adding white makes a lighter tone, adding black makes a darker tone, a value scale strip goes from light to dark in small steps, and adding a little at a time keeps control. This is the knowledge half of outcome b; painting is practical. Evidence rule: at least four of the last five fresh questions right across at least two question forms, and no repeated pick of the same misconception.",
+     "mastery": "The child says colour value is how light or dark a colour is, adding white makes a lighter tone, adding black makes a darker tone, a value scale strip goes from light to dark in small steps, and adding a little at a time keeps control. This is the knowledge half of outcome b; painting is practical. Evidence rule: at least four of the last five fresh questions right across at least two question forms, and no repeated pick of the same misconception. Practical, marked by the teacher with the KICD rubric (CREA.G4.RUBRIC.1.1), never as a phone question: b) paint a picture for colour value application.",
      "question_forms": [
       "say what white or black does to a colour",
       "say what colour value means",
@@ -910,6 +1043,13 @@
        "reason": "This skill builds on it. Proposed, to confirm by a teacher.",
        "strength": "essential",
        "status": "proposed"
+      },
+      {
+       "requires": "CREA.G3.CREATI.DRAWING_AND_PAINTING.d",
+       "kind": "outcome",
+       "strength": "essential",
+       "reason": "Painting a picture (Grade 3) comes before controlling light and dark in it. Proposed, to confirm by a CBC Creative Arts teacher.",
+       "status": "proposed"
       }
      ],
      "leads_to": [
@@ -918,7 +1058,16 @@
        "reason": "Grade 5 Creative Arts builds on this idea. Proposed, to confirm by a teacher."
       }
      ],
-     "status": "proposed"
+     "status": "proposed",
+     "teacher_rubric": {
+      "outcomes": [
+       "CREA.G4.CREATI.PAINTING_AND_MONTAGE.b"
+      ],
+      "indicators": [
+       "CREA.G4.RUBRIC.1.1"
+      ],
+      "by": "teacher"
+     }
     },
     {
      "code": "CREA.G4.CREATI.PAINTING_AND_MONTAGE.MONTAGE",
@@ -926,7 +1075,7 @@
      "outcomes": [
       "CREA.G4.CREATI.PAINTING_AND_MONTAGE.c"
      ],
-     "mastery": "The child says a montage is a picture made from many pictures cut out and pasted together on a theme (such as ball games), the pieces overlap so that no gaps show, the steps are to find and cut pictures, plan the arrangement, paste and then clean up, and a neat montage has clean edges and little glue showing. This is the knowledge half of outcome c; making it is practical. Evidence rule: at least four of the last five fresh questions right across at least two question forms, and no repeated pick of the same misconception.",
+     "mastery": "The child says a montage is a picture made from many pictures cut out and pasted together on a theme (such as ball games), the pieces overlap so that no gaps show, the steps are to find and cut pictures, plan the arrangement, paste and then clean up, and a neat montage has clean edges and little glue showing. This is the knowledge half of outcome c; making it is practical. Evidence rule: at least four of the last five fresh questions right across at least two question forms, and no repeated pick of the same misconception. Practical, marked by the teacher with the KICD rubric (CREA.G4.RUBRIC.1.1), never as a phone question: c) create a montage composition for expression.",
      "question_forms": [
       "say what a montage is",
       "put the montage steps in order",
@@ -945,6 +1094,13 @@
        "reason": "Grade 3 Creative Activities introduced it. Proposed, to confirm by a teacher.",
        "strength": "essential",
        "status": "proposed"
+      },
+      {
+       "requires": "CREA.G3.CREATI.COLLAGE.c",
+       "kind": "outcome",
+       "strength": "essential",
+       "reason": "Making a collage (Grade 3) is the cut-and-paste skill a montage uses with pictures. Proposed, to confirm by a CBC Creative Arts teacher.",
+       "status": "proposed"
       }
      ],
      "leads_to": [
@@ -953,7 +1109,16 @@
        "reason": "Grade 5 Creative Arts builds on this idea. Proposed, to confirm by a teacher."
       }
      ],
-     "status": "proposed"
+     "status": "proposed",
+     "teacher_rubric": {
+      "outcomes": [
+       "CREA.G4.CREATI.PAINTING_AND_MONTAGE.c"
+      ],
+      "indicators": [
+       "CREA.G4.RUBRIC.1.1"
+      ],
+      "by": "teacher"
+     }
     }
    ],
    "misconceptions": [
@@ -1180,6 +1345,38 @@
      "feedback": "A neat montage has clean cut edges and little glue showing.",
      "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
      "status": "draft"
+    },
+    {
+     "code": "CREA.G4.CREATI.PAINTING_AND_MONTAGE.COLOURS.M_CA4_PM_BROWN_SECONDARY",
+     "skill": "CREA.G4.CREATI.PAINTING_AND_MONTAGE.COLOURS",
+     "error": "Calls brown a secondary colour because it is mixed.",
+     "example": {
+      "question": "Is brown a secondary colour?",
+      "wrong_answer": "yes",
+      "correct_answer": "no; the secondary colours are orange, green and purple"
+     },
+     "cause": "The child knows secondaries are mixed and thinks every mixed colour is one.",
+     "reveals": "Offer \"yes\" next to the right answer and ask the question again in a new context.",
+     "help": "Show that brown needs all three primaries; a secondary is exactly two primaries.",
+     "feedback": "A secondary colour is made from two primary colours. Brown needs more, so it is not one.",
+     "source": "To confirm by a CBC Creative Arts teacher: a common classroom error, not traced to a study by the author.",
+     "status": "draft"
+    },
+    {
+     "code": "CREA.G4.CREATI.PAINTING_AND_MONTAGE.MIX.M_CA4_PM_MIX_WHITE",
+     "skill": "CREA.G4.CREATI.PAINTING_AND_MONTAGE.MIX",
+     "error": "Thinks adding white to red makes a new secondary colour.",
+     "example": {
+      "question": "Red and white are mixed. What do you get?",
+      "wrong_answer": "orange",
+      "correct_answer": "a lighter red (pink)"
+     },
+     "cause": "White changes the paint, so the child thinks it makes a new colour.",
+     "reveals": "Offer \"orange\" next to the right answer and ask the question again in a new context.",
+     "help": "Mix red and white: it is still red, only lighter.",
+     "feedback": "White makes a colour lighter. Red and white make a light red, not a new colour.",
+     "source": "To confirm by a CBC Creative Arts teacher: a common classroom error, not traced to a study by the author.",
+     "status": "draft"
     }
    ],
    "rubric_indicators": [
@@ -1301,6 +1498,13 @@
        "reason": "Another subject taught it first. Proposed, to confirm by a teacher.",
        "strength": "essential",
        "status": "proposed"
+      },
+      {
+       "requires": "MATH.G4.NUMBER.FRACTIONS.FRACTION_OF_WHOLE",
+       "kind": "skill",
+       "strength": "helpful",
+       "reason": "A half as part of a whole (Grade 4 Maths) is what a quaver is of a beat. Proposed, to confirm by a CBC Creative Arts teacher.",
+       "status": "proposed"
       }
      ],
      "leads_to": [
@@ -1337,6 +1541,13 @@
        "reason": "This skill builds on it. Proposed, to confirm by a teacher.",
        "strength": "essential",
        "status": "proposed"
+      },
+      {
+       "requires": "CREA.G3.CREATI.RHYTHM_AND_PATTERN_MAKIN.b",
+       "kind": "outcome",
+       "strength": "essential",
+       "reason": "Making patterns of long and short sounds (Grade 3) is what the French names say aloud. Proposed, to confirm by a CBC Creative Arts teacher.",
+       "status": "proposed"
       }
      ],
      "leads_to": [
@@ -1353,7 +1564,7 @@
      "outcomes": [
       "CREA.G4.CREATI.RHYTHM.c"
      ],
-     "mastery": "The child says a good rhythmic pattern mixes different note values (variation), repeats part of its pattern so it can be remembered (repetition) and ends on a long note, and does not say it must be fast, long or all the same note. This is the knowledge half of outcomes c and d; composing is practical. Evidence rule: at least four of the last five fresh questions right across at least two question forms, and no repeated pick of the same misconception.",
+     "mastery": "The child says a good rhythmic pattern mixes different note values (variation), repeats part of its pattern so it can be remembered (repetition) and ends on a long note, and does not say it must be fast, long or all the same note. This is the knowledge half of outcomes c and d; composing is practical. Evidence rule: at least four of the last five fresh questions right across at least two question forms, and no repeated pick of the same misconception. Practical, marked by the teacher with the KICD rubric (CREA.G4.RUBRIC.1.1), never as a phone question: d) compose a rhythmic pattern involving a crochet, a pair of quavers and their rests.",
      "question_forms": [
       "pick the quality a pattern has",
       "pick the pattern that ends well",
@@ -1379,6 +1590,13 @@
        "reason": "This skill builds on it. Proposed, to confirm by a teacher.",
        "strength": "essential",
        "status": "proposed"
+      },
+      {
+       "requires": "CREA.G3.CREATI.RHYTHM_AND_PATTERN_MAKIN.c",
+       "kind": "outcome",
+       "strength": "helpful",
+       "reason": "Improvising a rhythm (Grade 3) comes before judging what makes one good. Proposed, to confirm by a CBC Creative Arts teacher.",
+       "status": "proposed"
       }
      ],
      "leads_to": [
@@ -1387,7 +1605,16 @@
        "reason": "Grade 5 Creative Arts builds on this idea. Proposed, to confirm by a teacher."
       }
      ],
-     "status": "proposed"
+     "status": "proposed",
+     "teacher_rubric": {
+      "outcomes": [
+       "CREA.G4.CREATI.RHYTHM.d"
+      ],
+      "indicators": [
+       "CREA.G4.RUBRIC.1.1"
+      ],
+      "by": "teacher"
+     }
     },
     {
      "code": "CREA.G4.CREATI.RHYTHM.LETTERING",
@@ -1395,7 +1622,7 @@
      "outcomes": [
       "CREA.G4.CREATI.RHYTHM.b"
      ],
-     "mastery": "The child says an ascender is the part of a letter that goes up above the main body (b, d, h, k, l), a descender is the part that goes down below the line (g, j, p, q, y), and letters such as a, c, e, o and s have neither. This is the knowledge half of outcome b; lettering is practical. Evidence rule: at least four of the last five fresh questions right across at least two question forms, and no repeated pick of the same misconception.",
+     "mastery": "The child says an ascender is the part of a letter that goes up above the main body (b, d, h, k, l), a descender is the part that goes down below the line (g, j, p, q, y), and letters such as a, c, e, o and s have neither. This is the knowledge half of outcome b; lettering is practical. Evidence rule: at least four of the last five fresh questions right across at least two question forms, and no repeated pick of the same misconception. Practical, marked by the teacher with the KICD rubric (CREA.G4.RUBRIC.1.1), never as a phone question: b) write the French rhythm taa and ta-te, names using free hand lettering.",
      "question_forms": [
       "say whether a letter goes up or down",
       "sort letters into ascenders and descenders",
@@ -1414,10 +1641,33 @@
        "reason": "This skill builds on it. Proposed, to confirm by a teacher.",
        "strength": "essential",
        "status": "proposed"
+      },
+      {
+       "requires": "ENGL.G4.WRITIN.T5_CREATIVE_WRITING.NARRATIVE_PARTS",
+       "kind": "skill",
+       "strength": "helpful",
+       "reason": "Writing letters clearly in English is the base of free hand lettering. Proposed, to confirm by a CBC Creative Arts teacher.",
+       "status": "proposed"
+      },
+      {
+       "requires": "CREA.G4.CREATI.RHYTHM.VALUES",
+       "kind": "skill",
+       "strength": "essential",
+       "reason": "The names written are the names of note values. Proposed, to confirm by a CBC Creative Arts teacher.",
+       "status": "proposed"
       }
      ],
      "leads_to": [],
-     "status": "proposed"
+     "status": "proposed",
+     "teacher_rubric": {
+      "outcomes": [
+       "CREA.G4.CREATI.RHYTHM.b"
+      ],
+      "indicators": [
+       "CREA.G4.RUBRIC.1.1"
+      ],
+      "by": "teacher"
+     }
     }
    ],
    "misconceptions": [
@@ -1628,6 +1878,54 @@
      "feedback": "The letters a, c, e, o, s and others stay in the main body, so they have neither.",
      "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
      "status": "draft"
+    },
+    {
+     "code": "CREA.G4.CREATI.RHYTHM.NAMES.M_CA4_RH_SA_REST",
+     "skill": "CREA.G4.CREATI.RHYTHM.NAMES",
+     "error": "Says \"taa\" for a crotchet rest, reading every symbol as a sound.",
+     "example": {
+      "question": "What do you say for a crotchet rest?",
+      "wrong_answer": "taa",
+      "correct_answer": "nothing: say \"sa\" in your head or show silence for one beat"
+     },
+     "cause": "The child reads every symbol on the line as a sound to say.",
+     "reveals": "Offer \"taa\" next to the right answer and ask the question again in a new context.",
+     "help": "Clap a pattern and hold hands apart for the rest.",
+     "feedback": "A rest is a silence. Do not say taa; keep quiet for one beat.",
+     "source": "To confirm by a CBC Creative Arts teacher: a common classroom error, not traced to a study by the author.",
+     "status": "draft"
+    },
+    {
+     "code": "CREA.G4.CREATI.RHYTHM.RHQUAL.M_CA4_RH_TOO_LONG",
+     "skill": "CREA.G4.CREATI.RHYTHM.RHQUAL",
+     "error": "Thinks a longer pattern is always a better pattern.",
+     "example": {
+      "question": "Which is better: a pattern that repeats a clear idea, or one that is very long and never repeats?",
+      "wrong_answer": "the very long one",
+      "correct_answer": "the one that repeats a clear idea"
+     },
+     "cause": "Length feels like effort, so the child counts it as quality.",
+     "reveals": "Offer \"the very long one\" next to the right answer and ask the question again in a new context.",
+     "help": "Clap both; ask which one the class can remember.",
+     "feedback": "A good rhythm has a clear idea that repeats. Longer is not better.",
+     "source": "To confirm by a CBC Creative Arts teacher: a common classroom error, not traced to a study by the author.",
+     "status": "draft"
+    },
+    {
+     "code": "CREA.G4.CREATI.RHYTHM.LETTERING.M_CA4_RH_SIZES_MIX",
+     "skill": "CREA.G4.CREATI.RHYTHM.LETTERING",
+     "error": "Writes small letters as tall as capital letters in free hand lettering.",
+     "example": {
+      "question": "In free hand lettering, is \"a\" as tall as \"T\"?",
+      "wrong_answer": "yes",
+      "correct_answer": "no; small letters stay between the middle lines"
+     },
+     "cause": "The child copies letters one at a time without guide lines.",
+     "reveals": "Offer \"yes\" next to the right answer and ask the question again in a new context.",
+     "help": "Rule four guide lines and write a, t, g on them.",
+     "feedback": "Small letters sit between the middle lines. Only ascenders and capitals go higher.",
+     "source": "To confirm by a CBC Creative Arts teacher: a common classroom error, not traced to a study by the author.",
+     "status": "draft"
     }
    ],
    "rubric_indicators": [
@@ -1745,6 +2043,13 @@
        "reason": "Grade 3 Creative Activities introduced it. Proposed, to confirm by a teacher.",
        "strength": "essential",
        "status": "proposed"
+      },
+      {
+       "requires": "CREA.G3.CREATI.MELODY.b",
+       "kind": "outcome",
+       "strength": "essential",
+       "reason": "Making melodic patterns (Grade 3) is hearing that sounds go up and down. Proposed, to confirm by a CBC Creative Arts teacher.",
+       "status": "proposed"
       }
      ],
      "leads_to": [
@@ -1780,6 +2085,13 @@
        "reason": "This skill builds on it. Proposed, to confirm by a teacher.",
        "strength": "essential",
        "status": "proposed"
+      },
+      {
+       "requires": "CREA.G3.CREATI.MELODY.a",
+       "kind": "outcome",
+       "strength": "helpful",
+       "reason": "Hearing variations in a melody (Grade 3) comes before showing pitch with the hands. Proposed, to confirm by a CBC Creative Arts teacher.",
+       "status": "proposed"
       }
      ],
      "leads_to": [
@@ -1796,7 +2108,7 @@
      "outcomes": [
       "CREA.G4.CREATI.MELODY.c"
      ],
-     "mastery": "The child says a good short melody moves by step to the next syllable (stepwise motion), changes the syllables and the lengths of the sounds (variation) and ends on d, and does not say it must use one syllable only, be very long or end on any syllable. This is the knowledge half of outcome c; composing is practical. Evidence rule: at least four of the last five fresh questions right across at least two question forms, and no repeated pick of the same misconception.",
+     "mastery": "The child says a good short melody moves by step to the next syllable (stepwise motion), changes the syllables and the lengths of the sounds (variation) and ends on d, and does not say it must use one syllable only, be very long or end on any syllable. This is the knowledge half of outcome c; composing is practical. Evidence rule: at least four of the last five fresh questions right across at least two question forms, and no repeated pick of the same misconception. Practical, marked by the teacher with the KICD rubric (CREA.G4.RUBRIC.1.1), never as a phone question: d) create short melodies using the sol-fa syllables d, r and m.",
      "question_forms": [
       "pick the quality a melody has",
       "pick the melody that ends well",
@@ -1822,6 +2134,13 @@
        "reason": "This skill builds on it. Proposed, to confirm by a teacher.",
        "strength": "essential",
        "status": "proposed"
+      },
+      {
+       "requires": "CREA.G3.CREATI.MELODY.d",
+       "kind": "outcome",
+       "strength": "helpful",
+       "reason": "Creating melodies with variation (Grade 3) is the first taste of what makes a tune good. Proposed, to confirm by a CBC Creative Arts teacher.",
+       "status": "proposed"
       }
      ],
      "leads_to": [
@@ -1830,7 +2149,16 @@
        "reason": "Grade 5 Creative Arts builds on this idea. Proposed, to confirm by a teacher."
       }
      ],
-     "status": "proposed"
+     "status": "proposed",
+     "teacher_rubric": {
+      "outcomes": [
+       "CREA.G4.CREATI.MELODY.d"
+      ],
+      "indicators": [
+       "CREA.G4.RUBRIC.1.1"
+      ],
+      "by": "teacher"
+     }
     },
     {
      "code": "CREA.G4.CREATI.MELODY.CLAY",
@@ -1838,7 +2166,7 @@
      "outcomes": [
       "CREA.G4.CREATI.MELODY.e"
      ],
-     "mastery": "The child puts the steps in order: collect clean clay from the local environment, remove stones, knead it, roll it flat into a slab and cut three rectangles of different sizes, roll thin snakes (coils) and shape the letters d, r and m, then attach them to the slabs with a little water. The child says a coil is a rolled clay snake, keeps unused clay damp under a cloth, and washes hands after. This is the knowledge half of outcome e; modelling is practical. Evidence rule: at least four of the last five fresh questions right across at least two question forms, and no repeated pick of the same misconception.",
+     "mastery": "The child puts the steps in order: collect clean clay from the local environment, remove stones, knead it, roll it flat into a slab and cut three rectangles of different sizes, roll thin snakes (coils) and shape the letters d, r and m, then attach them to the slabs with a little water. The child says a coil is a rolled clay snake, keeps unused clay damp under a cloth, and washes hands after. This is the knowledge half of outcome e; modelling is practical. Evidence rule: at least four of the last five fresh questions right across at least two question forms, and no repeated pick of the same misconception. Practical, marked by the teacher with the KICD rubric (CREA.G4.RUBRIC.1.1), never as a phone question: e) model clay slabs with sol-fa syllables using coil and slab techniques.",
      "question_forms": [
       "put the steps in order",
       "say what a slab or a coil is",
@@ -1857,10 +2185,26 @@
        "reason": "This skill builds on it. Proposed, to confirm by a teacher.",
        "strength": "essential",
        "status": "proposed"
+      },
+      {
+       "requires": "CREA.G3.PERFOR.MODELLING_AND_ORNAMENT_M.b",
+       "kind": "outcome",
+       "strength": "essential",
+       "reason": "Modelling beads with the pellet technique (Grade 3) is the first clay skill. Proposed, to confirm by a CBC Creative Arts teacher.",
+       "status": "proposed"
       }
      ],
      "leads_to": [],
-     "status": "proposed"
+     "status": "proposed",
+     "teacher_rubric": {
+      "outcomes": [
+       "CREA.G4.CREATI.MELODY.e"
+      ],
+      "indicators": [
+       "CREA.G4.RUBRIC.1.1"
+      ],
+      "by": "teacher"
+     }
     }
    ],
    "misconceptions": [
@@ -2087,6 +2431,38 @@
      "feedback": "Clay pieces are joined with a little water and pressed together.",
      "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
      "status": "draft"
+    },
+    {
+     "code": "CREA.G4.CREATI.MELODY.SIGNS.M_CA4_ML_SIGN_HEIGHT",
+     "skill": "CREA.G4.CREATI.MELODY.SIGNS",
+     "error": "Shows every hand sign at the same height, so the hands do not show pitch rising.",
+     "example": {
+      "question": "Where should the hand be for m compared with d?",
+      "wrong_answer": "at the same height",
+      "correct_answer": "higher than for d"
+     },
+     "cause": "The child learns the hand shapes but not that their height shows pitch.",
+     "reveals": "Offer \"at the same height\" next to the right answer and ask the question again in a new context.",
+     "help": "Sing d r m and raise the hand a little for each.",
+     "feedback": "The hand goes up as the note goes up. Show m higher than d.",
+     "source": "To confirm by a CBC Creative Arts teacher: a common classroom error, not traced to a study by the author.",
+     "status": "draft"
+    },
+    {
+     "code": "CREA.G4.CREATI.MELODY.MELQUAL.M_CA4_ML_ALL_LEAPS",
+     "skill": "CREA.G4.CREATI.MELODY.MELQUAL",
+     "error": "Thinks a good melody jumps about a lot to be exciting.",
+     "example": {
+      "question": "Which is easier to sing: d r m r d, or d m d m d m?",
+      "wrong_answer": "d m d m d m",
+      "correct_answer": "d r m r d"
+     },
+     "cause": "The child links excitement with big jumps.",
+     "reveals": "Offer \"d m d m d m\" next to the right answer and ask the question again in a new context.",
+     "help": "Sing both; ask which feels smooth.",
+     "feedback": "Good melodies move mostly by step, with a few leaps.",
+     "source": "To confirm by a CBC Creative Arts teacher: a common classroom error, not traced to a study by the author.",
+     "status": "draft"
     }
    ],
    "rubric_indicators": [
@@ -2185,7 +2561,22 @@
       "reasoning"
      ],
      "horeb_skill_ids": [],
-     "prerequisites": [],
+     "prerequisites": [
+      {
+       "requires": "CREA.G3.PERFOR.GALLOPING.a",
+       "kind": "outcome",
+       "strength": "essential",
+       "reason": "Moving in a direction with control (Grade 3) comes before a fast start. Proposed, to confirm by a CBC Creative Arts teacher.",
+       "status": "proposed"
+      },
+      {
+       "requires": "CREA.G3.CREATI.SKIPPING.a",
+       "kind": "outcome",
+       "strength": "helpful",
+       "reason": "Skipping (Grade 3) builds the push from the ball of the foot used in a sprint. Proposed, to confirm by a CBC Creative Arts teacher.",
+       "status": "proposed"
+      }
+     ],
      "leads_to": [],
      "status": "proposed"
     },
@@ -2195,7 +2586,7 @@
      "outcomes": [
       "CREA.G4.PERFOR.ATHLETICS.a"
      ],
-     "mastery": "The child says a sprinter leans forward at the start then runs upright, lifts the knees, bends the arms and swings them forward and back (not across the body), runs on the balls of the feet, looks ahead and runs through the finish line without slowing. This is the knowledge half of outcomes a and b; sprinting is practical. Evidence rule: at least four of the last five fresh questions right across at least two question forms, and no repeated pick of the same misconception.",
+     "mastery": "The child says a sprinter leans forward at the start then runs upright, lifts the knees, bends the arms and swings them forward and back (not across the body), runs on the balls of the feet, looks ahead and runs through the finish line without slowing. This is the knowledge half of outcomes a and b; sprinting is practical. Evidence rule: at least four of the last five fresh questions right across at least two question forms, and no repeated pick of the same misconception. Practical, marked by the teacher with the KICD rubric (CREA.G4.RUBRIC.2.1), never as a phone question: b) perform the sprint starts and sprinting techniques for skill development.",
      "question_forms": [
       "pick the arm or leg action of a good sprint",
       "say where the eyes look",
@@ -2214,6 +2605,13 @@
        "reason": "This skill builds on it. Proposed, to confirm by a teacher.",
        "strength": "essential",
        "status": "proposed"
+      },
+      {
+       "requires": "CREA.G3.CREATI.SKIPPING.b",
+       "kind": "outcome",
+       "strength": "helpful",
+       "reason": "Skipping on the balls of the feet (Grade 3) is how a sprinter runs. Proposed, to confirm by a CBC Creative Arts teacher.",
+       "status": "proposed"
       }
      ],
      "leads_to": [
@@ -2222,7 +2620,16 @@
        "reason": "Grade 5 Creative Arts builds on this idea. Proposed, to confirm by a teacher."
       }
      ],
-     "status": "proposed"
+     "status": "proposed",
+     "teacher_rubric": {
+      "outcomes": [
+       "CREA.G4.PERFOR.ATHLETICS.b"
+      ],
+      "indicators": [
+       "CREA.G4.RUBRIC.2.1"
+      ],
+      "by": "teacher"
+     }
     },
     {
      "code": "CREA.G4.PERFOR.ATHLETICS.FLAG",
@@ -2231,7 +2638,7 @@
       "CREA.G4.PERFOR.ATHLETICS.c",
       "CREA.G4.PERFOR.ATHLETICS.d"
      ],
-     "mastery": "The child puts the colours in order from the top (black, red, green, with thin white lines between), gives the meaning of each (black for the people, red for the blood shed for freedom, green for the land and its wealth, white for peace), says the shield and two crossed spears are in the middle, and that flying the flag shows love of country and unity. This is the knowledge half of outcomes c and d; painting is practical. Evidence rule: at least four of the last five fresh questions right across at least two question forms, and no repeated pick of the same misconception.",
+     "mastery": "The child puts the colours in order from the top (black, red, green, with thin white lines between), gives the meaning of each (black for the people, red for the blood shed for freedom, green for the land and its wealth, white for peace), says the shield and two crossed spears are in the middle, and that flying the flag shows love of country and unity. This is the knowledge half of outcomes c and d; painting is practical. Evidence rule: at least four of the last five fresh questions right across at least two question forms, and no repeated pick of the same misconception. Practical, marked by the teacher with the KICD rubric (CREA.G4.RUBRIC.2.1), never as a phone question: c) paint the Kenyan flag for an athletic event.",
      "question_forms": [
       "pick the colour for a meaning",
       "put the colours in order from the top",
@@ -2250,10 +2657,26 @@
        "reason": "Grade 3 Creative Activities introduced it. Proposed, to confirm by a teacher.",
        "strength": "essential",
        "status": "proposed"
+      },
+      {
+       "requires": "SOCI.G4.SOCIAL.ASPECTS_OF_TRADITIONAL_C.TC_ASPECTS",
+       "kind": "skill",
+       "strength": "helpful",
+       "reason": "National symbols sit beside the aspects of culture learnt in Grade 4 Social Studies. Proposed, to confirm by a CBC Creative Arts teacher.",
+       "status": "proposed"
       }
      ],
      "leads_to": [],
-     "status": "proposed"
+     "status": "proposed",
+     "teacher_rubric": {
+      "outcomes": [
+       "CREA.G4.PERFOR.ATHLETICS.c"
+      ],
+      "indicators": [
+       "CREA.G4.RUBRIC.2.1"
+      ],
+      "by": "teacher"
+     }
     }
    ],
    "misconceptions": [
@@ -2404,13 +2827,13 @@
     {
      "code": "CREA.G4.PERFOR.ATHLETICS.FLAG.M_CA4_AT_FLAG_MEANING",
      "skill": "CREA.G4.PERFOR.ATHLETICS.FLAG",
-     "error": "Gives the wrong meaning for a flag colour.",
+     "error": "Swaps the meanings of the flag colours, giving red the meaning of green (the land).",
      "example": {
       "question": "What does the red in the Kenyan flag stand for?",
       "wrong_answer": "The land",
       "correct_answer": "The blood shed for freedom"
      },
-     "cause": "The child guesses from the colour.",
+     "cause": "The child learns the colours and the meanings as two lists and pairs them by guessing.",
      "reveals": "Offer \"The land\" next to the right answer and ask the question again in a new context.",
      "help": "Match each colour to its meaning on a card.",
      "feedback": "Black stands for the people, red for the blood shed for freedom, green for the land and white for peace.",
@@ -2431,6 +2854,22 @@
      "help": "Ask where the flag flies and what it stands for.",
      "feedback": "The flag stands for the country and shows love of country and unity.",
      "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
+     "status": "draft"
+    },
+    {
+     "code": "CREA.G4.PERFOR.ATHLETICS.FLAG.M_CA4_AT_FLAG_SHIELD",
+     "skill": "CREA.G4.PERFOR.ATHLETICS.FLAG",
+     "error": "Thinks the shield and spears stand for war.",
+     "example": {
+      "question": "What does the shield and spears on the Kenyan flag stand for?",
+      "wrong_answer": "war",
+      "correct_answer": "defence of freedom"
+     },
+     "cause": "Spears are weapons, so the child links them with fighting.",
+     "reveals": "Offer \"war\" next to the right answer and ask the question again in a new context.",
+     "help": "Read the meaning together: they defend freedom.",
+     "feedback": "The shield and spears stand for defending our freedom.",
+     "source": "To confirm by a CBC Creative Arts teacher: a common classroom error, not traced to a study by the author.",
      "status": "draft"
     }
    ],
@@ -2513,7 +2952,7 @@
      "outcomes": [
       "CREA.G4.PERFOR.GYMNASTICS.a"
      ],
-     "mastery": "The child says the crab balance is held with hands and feet on the mat, tummy facing up and hips lifted, for a count of three, and that the side roll starts lying straight on the mat with arms stretched above the head and legs together, rolling sideways without bending, not over the head. This is the knowledge half of outcome a; performing is practical. Evidence rule: at least four of the last five fresh questions right across at least two question forms, and no repeated pick of the same misconception.",
+     "mastery": "The child says the crab balance is held with hands and feet on the mat, tummy facing up and hips lifted, for a count of three, and that the side roll starts lying straight on the mat with arms stretched above the head and legs together, rolling sideways without bending, not over the head. This is the knowledge half of outcome a; performing is practical. Evidence rule: at least four of the last five fresh questions right across at least two question forms, and no repeated pick of the same misconception. Practical, marked by the teacher with the KICD rubric (CREA.G4.RUBRIC.2.1), never as a phone question: b) perform the crab balance for skill acquisition; c) execute the side roll for skill acquisition.",
      "question_forms": [
       "describe the crab balance",
       "describe the side roll",
@@ -2532,10 +2971,27 @@
        "reason": "Grade 3 Creative Activities introduced it. Proposed, to confirm by a teacher.",
        "strength": "essential",
        "status": "proposed"
+      },
+      {
+       "requires": "CREA.G3.PERFOR.FORWARD_ROLL_AND_V_BALAN.d",
+       "kind": "outcome",
+       "strength": "essential",
+       "reason": "Holding a V-balance (Grade 3) is the first held balance. Proposed, to confirm by a CBC Creative Arts teacher.",
+       "status": "proposed"
       }
      ],
      "leads_to": [],
-     "status": "proposed"
+     "status": "proposed",
+     "teacher_rubric": {
+      "outcomes": [
+       "CREA.G4.PERFOR.GYMNASTICS.b",
+       "CREA.G4.PERFOR.GYMNASTICS.c"
+      ],
+      "indicators": [
+       "CREA.G4.RUBRIC.2.1"
+      ],
+      "by": "teacher"
+     }
     },
     {
      "code": "CREA.G4.PERFOR.GYMNASTICS.GYMSAFE",
@@ -2561,6 +3017,13 @@
        "kind": "skill",
        "reason": "This skill builds on it. Proposed, to confirm by a teacher.",
        "strength": "essential",
+       "status": "proposed"
+      },
+      {
+       "requires": "CREA.G3.PERFOR.FORWARD_ROLL_AND_V_BALAN.b",
+       "kind": "outcome",
+       "strength": "essential",
+       "reason": "Making markers for the mat area (Grade 3) is the first safety step. Proposed, to confirm by a CBC Creative Arts teacher.",
        "status": "proposed"
       }
      ],
@@ -2680,6 +3143,22 @@
      "feedback": "Stop and tell the teacher if a part hurts.",
      "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
      "status": "draft"
+    },
+    {
+     "code": "CREA.G4.PERFOR.GYMNASTICS.GYMSAFE.M_CA4_GY_SHOES",
+     "skill": "CREA.G4.PERFOR.GYMNASTICS.GYMSAFE",
+     "error": "Thinks gymnastics is safer in hard school shoes.",
+     "example": {
+      "question": "Should you do a side roll in school shoes?",
+      "wrong_answer": "yes, shoes protect the feet",
+      "correct_answer": "no; bare feet or soft shoes on a mat"
+     },
+     "cause": "Shoes protect feet outside, so the child expects the same on a mat.",
+     "reveals": "Offer \"yes, shoes protect the feet\" next to the right answer and ask the question again in a new context.",
+     "help": "Show how a hard shoe can hit a partner or slip on a mat.",
+     "feedback": "Take off hard shoes. Bare feet or soft shoes are safer on a mat.",
+     "source": "To confirm by a CBC Creative Arts teacher: a common classroom error, not traced to a study by the author.",
+     "status": "draft"
     }
    ],
    "rubric_indicators": [
@@ -2771,7 +3250,7 @@
      "outcomes": [
       "CREA.G4.PERFOR.SONGS.a"
      ],
-     "mastery": "The child says a sacred song is about worship or God, a patriotic song is about loving and serving the country (the national anthem is one), a topical song is about an issue people are talking about now (hygiene, road safety, looking after trees), and does not call every religious-sounding song patriotic. Evidence rule: at least four of the last five fresh questions right across at least two question forms, and no repeated pick of the same misconception.",
+     "mastery": "The child says a sacred song is about worship or God, a patriotic song is about loving and serving the country (the national anthem is one), a topical song is about an issue people are talking about now (hygiene, road safety, looking after trees), and does not call every religious-sounding song patriotic. Evidence rule: at least four of the last five fresh questions right across at least two question forms, and no repeated pick of the same misconception. Practical, marked by the teacher with the KICD rubric (CREA.G4.RUBRIC.2.1), never as a phone question: a) sing different types of songs applying performance techniques.",
      "question_forms": [
       "pick the type of a song from its words",
       "pick the occasion for a type",
@@ -2790,10 +3269,26 @@
        "reason": "Grade 3 Creative Activities introduced it. Proposed, to confirm by a teacher.",
        "strength": "essential",
        "status": "proposed"
+      },
+      {
+       "requires": "CREA.G3.PERFOR.ROUNDS.c",
+       "kind": "outcome",
+       "strength": "essential",
+       "reason": "Describing the message in a round (Grade 3) is how song types are told apart. Proposed, to confirm by a CBC Creative Arts teacher.",
+       "status": "proposed"
       }
      ],
      "leads_to": [],
-     "status": "proposed"
+     "status": "proposed",
+     "teacher_rubric": {
+      "outcomes": [
+       "CREA.G4.PERFOR.SONGS.a"
+      ],
+      "indicators": [
+       "CREA.G4.RUBRIC.2.1"
+      ],
+      "by": "teacher"
+     }
     },
     {
      "code": "CREA.G4.PERFOR.SONGS.PERFTERMS",
@@ -2820,6 +3315,13 @@
        "reason": "This skill builds on it. Proposed, to confirm by a teacher.",
        "strength": "essential",
        "status": "proposed"
+      },
+      {
+       "requires": "CREA.G3.CREATI.MELODY.c",
+       "kind": "outcome",
+       "strength": "essential",
+       "reason": "Applying performance directions (Grade 3) is where pitch and dynamics words began. Proposed, to confirm by a CBC Creative Arts teacher.",
+       "status": "proposed"
       }
      ],
      "leads_to": [],
@@ -2831,7 +3333,7 @@
      "outcomes": [
       "CREA.G4.PERFOR.SONGS.b"
      ],
-     "mastery": "The child says the East African Community anthem is sung in unison (everyone together on the same notes), standing straight and still with respect, that the words call on God to bless East Africa and ask for peace and unity, and that it is sung at East African Community events. This is the knowledge half of outcome b; singing is practical. Evidence rule: at least four of the last five fresh questions right across at least two question forms, and no repeated pick of the same misconception.",
+     "mastery": "The child says the East African Community anthem is sung in unison (everyone together on the same notes), standing straight and still with respect, that the words call on God to bless East Africa and ask for peace and unity, and that it is sung at East African Community events. This is the knowledge half of outcome b; singing is practical. Evidence rule: at least four of the last five fresh questions right across at least two question forms, and no repeated pick of the same misconception. Practical, marked by the teacher with the KICD rubric (CREA.G4.RUBRIC.2.1), never as a phone question: b) perform the East African Community Anthem in unison.",
      "question_forms": [
       "say what unison means for the anthem",
       "say how to stand and behave",
@@ -2850,6 +3352,13 @@
        "reason": "This skill builds on it. Proposed, to confirm by a teacher.",
        "strength": "essential",
        "status": "proposed"
+      },
+      {
+       "requires": "CREA.G3.APPREC.THE_KENYA_NATIONAL_ANTHE.d",
+       "kind": "outcome",
+       "strength": "essential",
+       "reason": "Anthem etiquette (Grade 3) is the same for the EAC anthem. Proposed, to confirm by a CBC Creative Arts teacher.",
+       "status": "proposed"
       }
      ],
      "leads_to": [
@@ -2858,7 +3367,16 @@
        "reason": "Grade 5 Creative Arts builds on this idea. Proposed, to confirm by a teacher."
       }
      ],
-     "status": "proposed"
+     "status": "proposed",
+     "teacher_rubric": {
+      "outcomes": [
+       "CREA.G4.PERFOR.SONGS.b"
+      ],
+      "indicators": [
+       "CREA.G4.RUBRIC.2.1"
+      ],
+      "by": "teacher"
+     }
     },
     {
      "code": "CREA.G4.PERFOR.SONGS.FOLKTYPES",
@@ -2866,7 +3384,7 @@
      "outcomes": [
       "CREA.G4.PERFOR.SONGS.c"
      ],
-     "mastery": "The child classifies a folk song by its occasion: a work song is sung while farming, grinding or harvesting, a funeral song is sung to mourn, a naming song welcomes a new baby, an initiation song marks a child growing up, a marriage song is sung at a wedding and a worship song praises God, and knows each community has its own songs. Evidence rule: at least four of the last five fresh questions right across at least two question forms, and no repeated pick of the same misconception.",
+     "mastery": "The child classifies a folk song by its occasion: a work song is sung while farming, grinding or harvesting, a funeral song is sung to mourn, a naming song welcomes a new baby, an initiation song marks a child growing up, a marriage song is sung at a wedding and a worship song praises God, and knows each community has its own songs. Evidence rule: at least four of the last five fresh questions right across at least two question forms, and no repeated pick of the same misconception. Practical, marked by the teacher with the KICD rubric (CREA.G4.RUBRIC.2.1), never as a phone question: d) perform an indigenous Kenyan folk song applying performance techniques.",
      "question_forms": [
       "pick the type of folk song for an occasion",
       "pick the occasion for a type",
@@ -2885,6 +3403,13 @@
        "reason": "This skill builds on it. Proposed, to confirm by a teacher.",
        "strength": "essential",
        "status": "proposed"
+      },
+      {
+       "requires": "SOCI.G4.SOCIAL.ASPECTS_OF_TRADITIONAL_C.TC_ASPECTS",
+       "kind": "skill",
+       "strength": "essential",
+       "reason": "Folk songs belong to the aspects of traditional culture (Grade 4 Social Studies). Proposed, to confirm by a CBC Creative Arts teacher.",
+       "status": "proposed"
       }
      ],
      "leads_to": [
@@ -2893,7 +3418,16 @@
        "reason": "Grade 5 Creative Arts builds on this idea. Proposed, to confirm by a teacher."
       }
      ],
-     "status": "proposed"
+     "status": "proposed",
+     "teacher_rubric": {
+      "outcomes": [
+       "CREA.G4.PERFOR.SONGS.d"
+      ],
+      "indicators": [
+       "CREA.G4.RUBRIC.2.1"
+      ],
+      "by": "teacher"
+     }
     }
    ],
    "misconceptions": [
@@ -3104,6 +3638,54 @@
      "feedback": "Each community has its own folk songs, in its own language.",
      "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
      "status": "draft"
+    },
+    {
+     "code": "CREA.G4.PERFOR.SONGS.TYPES.M_CA4_SG_SACRED_ANY_CHURCH",
+     "skill": "CREA.G4.PERFOR.SONGS.TYPES",
+     "error": "Thinks any song sung in church is sacred, whatever its words.",
+     "example": {
+      "question": "A song about road safety is sung at a church event. Is it sacred?",
+      "wrong_answer": "yes",
+      "correct_answer": "no; it is topical"
+     },
+     "cause": "The child sorts by place, not by message.",
+     "reveals": "Offer \"yes\" next to the right answer and ask the question again in a new context.",
+     "help": "Read the words: what are they about?",
+     "feedback": "Look at the words, not the place. A song about road safety is topical.",
+     "source": "To confirm by a CBC Creative Arts teacher: a common classroom error, not traced to a study by the author.",
+     "status": "draft"
+    },
+    {
+     "code": "CREA.G4.PERFOR.SONGS.EAC.M_CA4_SG_EAC_KENYA_ONLY",
+     "skill": "CREA.G4.PERFOR.SONGS.EAC",
+     "error": "Thinks the EAC anthem is only for Kenya.",
+     "example": {
+      "question": "Which countries sing the East African Community anthem?",
+      "wrong_answer": "only Kenya",
+      "correct_answer": "all the partner states of the East African Community"
+     },
+     "cause": "The child knows only one anthem belongs to a country.",
+     "reveals": "Offer \"only Kenya\" next to the right answer and ask the question again in a new context.",
+     "help": "Name some partner states on a map.",
+     "feedback": "The EAC anthem belongs to all the member countries, not only Kenya.",
+     "source": "To confirm by a CBC Creative Arts teacher: a common classroom error, not traced to a study by the author.",
+     "status": "draft"
+    },
+    {
+     "code": "CREA.G4.PERFOR.SONGS.FOLKTYPES.M_CA4_SG_FOLK_RADIO",
+     "skill": "CREA.G4.PERFOR.SONGS.FOLKTYPES",
+     "error": "Thinks a pop song heard on the radio is a folk song.",
+     "example": {
+      "question": "Is a new pop song on the radio a folk song?",
+      "wrong_answer": "yes",
+      "correct_answer": "no; a folk song comes from a community and is passed down"
+     },
+     "cause": "Both are songs people know, so the child mixes them.",
+     "reveals": "Offer \"yes\" next to the right answer and ask the question again in a new context.",
+     "help": "Ask who made it and how old it is.",
+     "feedback": "A folk song is passed down in a community. A new radio song is not a folk song.",
+     "source": "To confirm by a CBC Creative Arts teacher: a common classroom error, not traced to a study by the author.",
+     "status": "draft"
     }
    ],
    "rubric_indicators": [
@@ -3196,7 +3778,22 @@
       "reasoning"
      ],
      "horeb_skill_ids": [],
-     "prerequisites": [],
+     "prerequisites": [
+      {
+       "requires": "SCIE.G4.FORCE_.LIGHT.LIGHT_SOURCES",
+       "kind": "skill",
+       "strength": "helpful",
+       "reason": "A camera captures light; knowing sources of light (Grade 4 Science) comes first. Proposed, to confirm by a CBC Creative Arts teacher.",
+       "status": "proposed"
+      },
+      {
+       "requires": "MATH.G4.MEASUR.TIME.DIGITAL_CLOCK",
+       "kind": "skill",
+       "strength": "helpful",
+       "reason": "Reading a digital screen (Grade 4 Maths) is the same skill as reading a device screen. Proposed, to confirm by a CBC Creative Arts teacher.",
+       "status": "proposed"
+      }
+     ],
      "leads_to": [],
      "status": "proposed"
     },
@@ -3206,7 +3803,7 @@
      "outcomes": [
       "CREA.G4.PERFOR.PHOTOGRAPHY.b"
      ],
-     "mastery": "The child says the centre of interest is the main thing the photograph is about and it should be clear and not too small, good light falls on the subject from the side or front (the photographer keeps the sun behind them, not behind the subject), and a person in shadow with a bright sky behind looks dark. This is the knowledge half of outcome b; taking photographs is practical. Evidence rule: at least four of the last five fresh questions right across at least two question forms, and no repeated pick of the same misconception.",
+     "mastery": "The child says the centre of interest is the main thing the photograph is about and it should be clear and not too small, good light falls on the subject from the side or front (the photographer keeps the sun behind them, not behind the subject), and a person in shadow with a bright sky behind looks dark. This is the knowledge half of outcome b; taking photographs is practical. Evidence rule: at least four of the last five fresh questions right across at least two question forms, and no repeated pick of the same misconception. Practical, marked by the teacher with the KICD rubric (CREA.G4.RUBRIC.2.1), never as a phone question: c) take photographs using digital devices.",
      "question_forms": [
       "say what the centre of interest is",
       "say where the light should come from",
@@ -3225,10 +3822,26 @@
        "reason": "This skill builds on it. Proposed, to confirm by a teacher.",
        "strength": "essential",
        "status": "proposed"
+      },
+      {
+       "requires": "SCIE.G4.FORCE_.LIGHT.LIGHT_USES",
+       "kind": "skill",
+       "strength": "essential",
+       "reason": "Light helps us see (Grade 4 Science); good light makes a clear photo. Proposed, to confirm by a CBC Creative Arts teacher.",
+       "status": "proposed"
       }
      ],
      "leads_to": [],
-     "status": "proposed"
+     "status": "proposed",
+     "teacher_rubric": {
+      "outcomes": [
+       "CREA.G4.PERFOR.PHOTOGRAPHY.c"
+      ],
+      "indicators": [
+       "CREA.G4.RUBRIC.2.1"
+      ],
+      "by": "teacher"
+     }
     }
    ],
    "misconceptions": [
@@ -3326,6 +3939,38 @@
      "help": "Ask: what do you want people to look at?",
      "feedback": "The centre of interest is the main thing the photograph is about.",
      "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
+     "status": "draft"
+    },
+    {
+     "code": "CREA.G4.PERFOR.PHOTOGRAPHY.DEVICES.M_CA4_PH_RADIO_CAMERA",
+     "skill": "CREA.G4.PERFOR.PHOTOGRAPHY.DEVICES",
+     "error": "Thinks a radio can take photographs because it is an electronic device.",
+     "example": {
+      "question": "Can a radio take a photograph?",
+      "wrong_answer": "yes",
+      "correct_answer": "no; it has no camera"
+     },
+     "cause": "Electronic devices look alike to the child.",
+     "reveals": "Offer \"yes\" next to the right answer and ask the question again in a new context.",
+     "help": "Look for the lens.",
+     "feedback": "Only a device with a camera lens can take a photograph.",
+     "source": "To confirm by a CBC Creative Arts teacher: a common classroom error, not traced to a study by the author.",
+     "status": "draft"
+    },
+    {
+     "code": "CREA.G4.PERFOR.PHOTOGRAPHY.ELEMENTS.M_CA4_PH_TILT",
+     "skill": "CREA.G4.PERFOR.PHOTOGRAPHY.ELEMENTS",
+     "error": "Thinks tilting the device does not change the photo.",
+     "example": {
+      "question": "Your phone is tilted. What happens to the photo?",
+      "wrong_answer": "nothing",
+      "correct_answer": "the picture comes out slanted"
+     },
+     "cause": "The child does not link the device angle to the picture.",
+     "reveals": "Offer \"nothing\" next to the right answer and ask the question again in a new context.",
+     "help": "Take two photos, straight and tilted, and compare.",
+     "feedback": "Hold the device straight so the picture is not slanted.",
+     "source": "To confirm by a CBC Creative Arts teacher: a common classroom error, not traced to a study by the author.",
      "status": "draft"
     }
    ],
@@ -3434,6 +4079,13 @@
        "reason": "This skill builds on it. Proposed, to confirm by a teacher.",
        "strength": "essential",
        "status": "proposed"
+      },
+      {
+       "requires": "CREA.G3.PERFOR.STRING_MUSICAL_INSTRUMEN.a",
+       "kind": "outcome",
+       "strength": "helpful",
+       "reason": "Naming instruments and their parts (Grade 3) begins here with the recorder. Proposed, to confirm by a CBC Creative Arts teacher.",
+       "status": "proposed"
       }
      ],
      "leads_to": [],
@@ -3464,6 +4116,13 @@
        "reason": "This skill builds on it. Proposed, to confirm by a teacher.",
        "strength": "essential",
        "status": "proposed"
+      },
+      {
+       "requires": "SCIE.G4.LIVING.HUMAN_DIGESTIVE_SYSTEM.DIGESTIVE_HEALTH",
+       "kind": "skill",
+       "strength": "helpful",
+       "reason": "Hygiene habits (Grade 4 Science) explain why a recorder is not shared. Proposed, to confirm by a CBC Creative Arts teacher.",
+       "status": "proposed"
       }
      ],
      "leads_to": [],
@@ -3476,7 +4135,7 @@
       "CREA.G4.PERFOR.DESCANT_RECORDER.c",
       "CREA.G4.PERFOR.DESCANT_RECORDER.d"
      ],
-     "mastery": "The child puts the notes in order from the lowest, G, then A, then B, says B covers the thumb hole and one finger of the left hand, A the thumb and two fingers and G the thumb and three fingers, and that covering more holes gives a lower note. This is the knowledge half of outcomes c and d; playing is practical. Evidence rule: at least four of the last five fresh questions right across at least two question forms, and no repeated pick of the same misconception.",
+     "mastery": "The child puts the notes in order from the lowest, G, then A, then B, says B covers the thumb hole and one finger of the left hand, A the thumb and two fingers and G the thumb and three fingers, and that covering more holes gives a lower note. This is the knowledge half of outcomes c and d; playing is practical. Evidence rule: at least four of the last five fresh questions right across at least two question forms, and no repeated pick of the same misconception. Practical, marked by the teacher with the KICD rubric (CREA.G4.RUBRIC.2.1), never as a phone question: c) play notes B A and G on a descant recorder using appropriate playing techniques; d) play simple melodies based on notes B A and G on the descant recorder.",
      "question_forms": [
       "put the notes in order of pitch",
       "say how many fingers B, A or G needs",
@@ -3495,6 +4154,13 @@
        "reason": "Grade 3 Creative Activities introduced it. Proposed, to confirm by a teacher.",
        "strength": "essential",
        "status": "proposed"
+      },
+      {
+       "requires": "CREA.G3.CREATI.MELODY.b",
+       "kind": "outcome",
+       "strength": "essential",
+       "reason": "Hearing higher and lower sounds (Grade 3) is needed to order B, A and G. Proposed, to confirm by a CBC Creative Arts teacher.",
+       "status": "proposed"
       }
      ],
      "leads_to": [
@@ -3503,7 +4169,17 @@
        "reason": "Grade 5 Creative Arts builds on this idea. Proposed, to confirm by a teacher."
       }
      ],
-     "status": "proposed"
+     "status": "proposed",
+     "teacher_rubric": {
+      "outcomes": [
+       "CREA.G4.PERFOR.DESCANT_RECORDER.c",
+       "CREA.G4.PERFOR.DESCANT_RECORDER.d"
+      ],
+      "indicators": [
+       "CREA.G4.RUBRIC.2.1"
+      ],
+      "by": "teacher"
+     }
     },
     {
      "code": "CREA.G4.PERFOR.DESCANT_RECORDER.TECHNIQUE",
@@ -3529,6 +4205,13 @@
        "kind": "skill",
        "reason": "This skill builds on it. Proposed, to confirm by a teacher.",
        "strength": "essential",
+       "status": "proposed"
+      },
+      {
+       "requires": "CREA.G3.CREATI.MELODY.c",
+       "kind": "outcome",
+       "strength": "essential",
+       "reason": "Performance directions (Grade 3) include playing softly, which the recorder needs. Proposed, to confirm by a CBC Creative Arts teacher.",
        "status": "proposed"
       }
      ],
@@ -3733,6 +4416,70 @@
      "feedback": "Sit or stand tall so the breath flows.",
      "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
      "status": "draft"
+    },
+    {
+     "code": "CREA.G4.PERFOR.DESCANT_RECORDER.RECPARTS.M_CA4_DR_PARTS_THUMB",
+     "skill": "CREA.G4.PERFOR.DESCANT_RECORDER.RECPARTS",
+     "error": "Thinks the hole at the back is for blowing.",
+     "example": {
+      "question": "What is the hole at the back of the recorder for?",
+      "wrong_answer": "for blowing",
+      "correct_answer": "the left thumb covers it"
+     },
+     "cause": "The child sees a hole and thinks of air going in.",
+     "reveals": "Offer \"for blowing\" next to the right answer and ask the question again in a new context.",
+     "help": "Hold the recorder; find which finger covers the back hole.",
+     "feedback": "The back hole is covered by the left thumb. You blow into the mouthpiece.",
+     "source": "To confirm by a CBC Creative Arts teacher: a common classroom error, not traced to a study by the author.",
+     "status": "draft"
+    },
+    {
+     "code": "CREA.G4.PERFOR.DESCANT_RECORDER.CARE.M_CA4_DR_SUN",
+     "skill": "CREA.G4.PERFOR.DESCANT_RECORDER.CARE",
+     "error": "Leaves the recorder in hot sun to dry it.",
+     "example": {
+      "question": "Where should a wet recorder dry?",
+      "wrong_answer": "in hot sun",
+      "correct_answer": "in the shade, after shaking out water"
+     },
+     "cause": "Sun dries clothes, so the child expects the same.",
+     "reveals": "Offer \"in hot sun\" next to the right answer and ask the question again in a new context.",
+     "help": "Explain that heat can bend plastic.",
+     "feedback": "Dry it in the shade. Strong sun can bend the recorder.",
+     "source": "To confirm by a CBC Creative Arts teacher: a common classroom error, not traced to a study by the author.",
+     "status": "draft"
+    },
+    {
+     "code": "CREA.G4.PERFOR.DESCANT_RECORDER.NOTES.M_CA4_DR_RIGHT_HAND",
+     "skill": "CREA.G4.PERFOR.DESCANT_RECORDER.NOTES",
+     "error": "Plays B, A, G with the right hand.",
+     "example": {
+      "question": "Which hand plays B, A and G?",
+      "wrong_answer": "the right hand",
+      "correct_answer": "the left hand, on top"
+     },
+     "cause": "The child uses the hand they write with.",
+     "reveals": "Offer \"the right hand\" next to the right answer and ask the question again in a new context.",
+     "help": "Put the left hand on top, near the mouthpiece.",
+     "feedback": "The left hand goes on top and plays B, A and G.",
+     "source": "To confirm by a CBC Creative Arts teacher: a common classroom error, not traced to a study by the author.",
+     "status": "draft"
+    },
+    {
+     "code": "CREA.G4.PERFOR.DESCANT_RECORDER.TECHNIQUE.M_CA4_DR_NO_TONGUE",
+     "skill": "CREA.G4.PERFOR.DESCANT_RECORDER.TECHNIQUE",
+     "error": "Starts every note with a push of breath and no tongue.",
+     "example": {
+      "question": "How do you start a note on the recorder?",
+      "wrong_answer": "push air hard",
+      "correct_answer": "say \"doo\" with the tongue"
+     },
+     "cause": "The child does not know the tongue starts notes.",
+     "reveals": "Offer \"push air hard\" next to the right answer and ask the question again in a new context.",
+     "help": "Whisper \"doo\" into the recorder.",
+     "feedback": "Start each note with a soft \"doo\" using your tongue.",
+     "source": "To confirm by a CBC Creative Arts teacher: a common classroom error, not traced to a study by the author.",
+     "status": "draft"
     }
    ],
    "rubric_indicators": [
@@ -3862,7 +4609,7 @@
       "CREA.G4.PERFOR.SWIMMING.a_",
       "CREA.G4.PERFOR.SWIMMING.e"
      ],
-     "mastery": "The child says the safe way in is feet first from the edge or the steps, in water the teacher says is safe, never diving into shallow water, never going in alone or without a teacher or lifeguard, walking and not running on the pool side, and not pushing others. This is the knowledge half of outcomes a and e; entering the water is practical. Evidence rule: at least four of the last five fresh questions right across at least two question forms, and no repeated pick of the same misconception.",
+     "mastery": "The child says the safe way in is feet first from the edge or the steps, in water the teacher says is safe, never diving into shallow water, never going in alone or without a teacher or lifeguard, walking and not running on the pool side, and not pushing others. This is the knowledge half of outcomes a and e; entering the water is practical. Evidence rule: at least four of the last five fresh questions right across at least two question forms, and no repeated pick of the same misconception. Practical, marked by the teacher with the KICD rubric (CREA.G4.RUBRIC.2.1), never as a phone question: b) play water games in the swimming pool for fun.",
      "question_forms": [
       "pick the safe way to enter the water",
       "pick the safe action at the pool",
@@ -3881,6 +4628,13 @@
        "reason": "Grade 3 Creative Activities introduced it. Proposed, to confirm by a teacher.",
        "strength": "essential",
        "status": "proposed"
+      },
+      {
+       "requires": "CREA.G3.APPREC.WATER_SAFETY_AWARENESS.b",
+       "kind": "outcome",
+       "strength": "essential",
+       "reason": "Knowing water dangers (Grade 3) is why water entry rules matter. Proposed, to confirm by a CBC Creative Arts teacher.",
+       "status": "proposed"
       }
      ],
      "leads_to": [
@@ -3889,7 +4643,16 @@
        "reason": "Grade 5 Creative Arts builds on this idea. Proposed, to confirm by a teacher."
       }
      ],
-     "status": "proposed"
+     "status": "proposed",
+     "teacher_rubric": {
+      "outcomes": [
+       "CREA.G4.PERFOR.SWIMMING.b_"
+      ],
+      "indicators": [
+       "CREA.G4.RUBRIC.2.1"
+      ],
+      "by": "teacher"
+     }
     },
     {
      "code": "CREA.G4.PERFOR.SWIMMING.FLOAT",
@@ -3898,7 +4661,7 @@
       "CREA.G4.PERFOR.SWIMMING.c_",
       "CREA.G4.PERFOR.SWIMMING.d_"
      ],
-     "mastery": "The child says in a mushroom float the knees are hugged to the chest with the face in the water, in a back (supine) float the body lies face up with ears in the water, in a front (prone) float the body lies face down and stretched, and a glide is a push from the wall with arms stretched ahead, body straight and legs together. This is the knowledge half of outcomes c and d; swimming is practical. Evidence rule: at least four of the last five fresh questions right across at least two question forms, and no repeated pick of the same misconception.",
+     "mastery": "The child says in a mushroom float the knees are hugged to the chest with the face in the water, in a back (supine) float the body lies face up with ears in the water, in a front (prone) float the body lies face down and stretched, and a glide is a push from the wall with arms stretched ahead, body straight and legs together. This is the knowledge half of outcomes c and d; swimming is practical. Evidence rule: at least four of the last five fresh questions right across at least two question forms, and no repeated pick of the same misconception. Practical, marked by the teacher with the KICD rubric (CREA.G4.RUBRIC.2.1), never as a phone question: c) float in water for skill acquisition; d) glide in water for water confidence.",
      "question_forms": [
       "pick the float from how the body looks",
       "say how a glide is done",
@@ -3917,6 +4680,13 @@
        "reason": "This skill builds on it. Proposed, to confirm by a teacher.",
        "strength": "essential",
        "status": "proposed"
+      },
+      {
+       "requires": "CREA.G3.APPREC.WATER_SAFETY_AWARENESS.b",
+       "kind": "outcome",
+       "strength": "essential",
+       "reason": "Knowing the dangers of deep water (Grade 3) is why floating is the first water skill. Proposed, to confirm by a CBC Creative Arts teacher.",
+       "status": "proposed"
       }
      ],
      "leads_to": [
@@ -3925,7 +4695,17 @@
        "reason": "Grade 5 Creative Arts builds on this idea. Proposed, to confirm by a teacher."
       }
      ],
-     "status": "proposed"
+     "status": "proposed",
+     "teacher_rubric": {
+      "outcomes": [
+       "CREA.G4.PERFOR.SWIMMING.c_",
+       "CREA.G4.PERFOR.SWIMMING.d_"
+      ],
+      "indicators": [
+       "CREA.G4.RUBRIC.2.1"
+      ],
+      "by": "teacher"
+     }
     },
     {
      "code": "CREA.G4.PERFOR.SWIMMING.ANIMAL",
@@ -3933,7 +4713,7 @@
      "outcomes": [
       "CREA.G4.PERFOR.SWIMMING.a_2"
      ],
-     "mastery": "The child says animal games copy an animal: the frog jump (squat and leap) builds leg strength, the crab walk (on hands and feet, tummy up) builds arm and shoulder strength, hopping like a bird builds balance, and a hare chase builds speed, and that people played them long ago for fun and fitness. Names vary by community. This is the knowledge half of outcome a_2. Evidence rule: at least four of the last five fresh questions right across at least two question forms, and no repeated pick of the same misconception.",
+     "mastery": "The child says animal games copy an animal: the frog jump (squat and leap) builds leg strength, the crab walk (on hands and feet, tummy up) builds arm and shoulder strength, hopping like a bird builds balance, and a hare chase builds speed, and that people played them long ago for fun and fitness. Names vary by community. This is the knowledge half of outcome a_2. Evidence rule: at least four of the last five fresh questions right across at least two question forms, and no repeated pick of the same misconception. Practical, marked by the teacher with the KICD rubric (CREA.G4.RUBRIC.2.1), never as a phone question: b (second set)) perform different indigenous animal games for skill acquisition; c (second set)) perform indigenous animal games to a musical rhythm for enjoyment.",
      "question_forms": [
       "name the animal game from the action",
       "say what a game builds",
@@ -3952,6 +4732,13 @@
        "reason": "Grade 3 Creative Activities introduced it. Proposed, to confirm by a teacher.",
        "strength": "essential",
        "status": "proposed"
+      },
+      {
+       "requires": "CREA.G3.PERFOR.GALLOPING.b",
+       "kind": "outcome",
+       "strength": "essential",
+       "reason": "Galloping games (Grade 3) are the movements animal games copy. Proposed, to confirm by a CBC Creative Arts teacher.",
+       "status": "proposed"
       }
      ],
      "leads_to": [
@@ -3960,7 +4747,17 @@
        "reason": "Grade 5 Creative Arts builds on this idea. Proposed, to confirm by a teacher."
       }
      ],
-     "status": "proposed"
+     "status": "proposed",
+     "teacher_rubric": {
+      "outcomes": [
+       "CREA.G4.PERFOR.SWIMMING.b_2",
+       "CREA.G4.PERFOR.SWIMMING.c_2"
+      ],
+      "indicators": [
+       "CREA.G4.RUBRIC.2.1"
+      ],
+      "by": "teacher"
+     }
     }
    ],
    "misconceptions": [
@@ -4111,13 +4908,13 @@
     {
      "code": "CREA.G4.PERFOR.SWIMMING.ANIMAL.M_CA4_SW_GAME_BUILDS",
      "skill": "CREA.G4.PERFOR.SWIMMING.ANIMAL",
-     "error": "Gives the wrong thing that a game builds.",
+     "error": "Says the frog jump builds the arms, picking the body part that looks busy rather than the one that does the work.",
      "example": {
       "question": "The frog jump builds...",
       "wrong_answer": "Arm strength only",
       "correct_answer": "Leg strength"
      },
-     "cause": "The child does not know what moves.",
+     "cause": "The arms swing in the jump, so the child thinks they are doing the work.",
      "reveals": "Offer \"Arm strength only\" next to the right answer and ask the question again in a new context.",
      "help": "Feel which muscles work.",
      "feedback": "The frog jump builds leg strength.",
@@ -4138,6 +4935,22 @@
      "help": "Ask grandparents which games they played.",
      "feedback": "Animal games are indigenous and were played for fun and fitness.",
      "source": "To confirm by a teacher: communities and instrument names as used in the KICD teacher guide and local practice.",
+     "status": "draft"
+    },
+    {
+     "code": "CREA.G4.PERFOR.SWIMMING.ANIMAL.M_CA4_SW_GAME_NO_RULES",
+     "skill": "CREA.G4.PERFOR.SWIMMING.ANIMAL",
+     "error": "Thinks indigenous games have no rules because they are played for fun.",
+     "example": {
+      "question": "Do indigenous animal games have rules?",
+      "wrong_answer": "no",
+      "correct_answer": "yes; each game has rules everyone follows"
+     },
+     "cause": "Fun play feels free to the child.",
+     "reveals": "Offer \"no\" next to the right answer and ask the question again in a new context.",
+     "help": "Play one game and name its rules.",
+     "feedback": "Indigenous games have rules. Following them keeps the game fair and safe.",
+     "source": "To confirm by a CBC Creative Arts teacher: a common classroom error, not traced to a study by the author.",
      "status": "draft"
     }
    ],
@@ -4259,6 +5072,13 @@
        "reason": "Grade 3 Creative Activities introduced it. Proposed, to confirm by a teacher.",
        "strength": "essential",
        "status": "proposed"
+      },
+      {
+       "requires": "ENGL.G4.WRITIN.T5_CREATIVE_WRITING.NARRATIVE_PARTS",
+       "kind": "skill",
+       "strength": "helpful",
+       "reason": "Saying what a story is made of (Grade 4 English) is like saying what an artwork is made of. Proposed, to confirm by a CBC Creative Arts teacher.",
+       "status": "proposed"
       }
      ],
      "leads_to": [
@@ -4275,7 +5095,7 @@
      "outcomes": [
       "CREA.G4.APPREC.ANALYSIS_OF_CREATIVE_ART.b"
      ],
-     "mastery": "The child says a portfolio is a folder of a learner's best works kept to show how they have grown, made from locally available things (cardboard, folded paper, an old file), decorated with coloured paper or fabric, with each work labelled with name and date and kept flat and dry. This is the knowledge half of outcome b; making it is practical. Evidence rule: at least four of the last five fresh questions right across at least two question forms, and no repeated pick of the same misconception.",
+     "mastery": "The child says a portfolio is a folder of a learner's best works kept to show how they have grown, made from locally available things (cardboard, folded paper, an old file), decorated with coloured paper or fabric, with each work labelled with name and date and kept flat and dry. This is the knowledge half of outcome b; making it is practical. Evidence rule: at least four of the last five fresh questions right across at least two question forms, and no repeated pick of the same misconception. Practical, marked by the teacher with the KICD rubric (CREA.G4.RUBRIC.3.1), never as a phone question: b) make a portfolio for presenting creative art works.",
      "question_forms": [
       "say what a portfolio is for",
       "put the steps of making one in order",
@@ -4294,10 +5114,26 @@
        "reason": "This skill builds on it. Proposed, to confirm by a teacher.",
        "strength": "essential",
        "status": "proposed"
+      },
+      {
+       "requires": "CREA.G3.CREATI.COLLAGE.c",
+       "kind": "outcome",
+       "strength": "essential",
+       "reason": "Making artworks (Grade 3) gives the pieces a portfolio holds. Proposed, to confirm by a CBC Creative Arts teacher.",
+       "status": "proposed"
       }
      ],
      "leads_to": [],
-     "status": "proposed"
+     "status": "proposed",
+     "teacher_rubric": {
+      "outcomes": [
+       "CREA.G4.APPREC.ANALYSIS_OF_CREATIVE_ART.b"
+      ],
+      "indicators": [
+       "CREA.G4.RUBRIC.3.1"
+      ],
+      "by": "teacher"
+     }
     },
     {
      "code": "CREA.G4.APPREC.ANALYSIS_OF_CREATIVE_ART.ANTHEM",
@@ -4323,6 +5159,13 @@
        "kind": "outcome",
        "reason": "Grade 3 Creative Activities introduced it. Proposed, to confirm by a teacher.",
        "strength": "essential",
+       "status": "proposed"
+      },
+      {
+       "requires": "CREA.G3.APPREC.THE_KENYA_NATIONAL_ANTHE.a",
+       "kind": "outcome",
+       "strength": "essential",
+       "reason": "Knowing the first stanza (Grade 3) comes before analysing its message. Proposed, to confirm by a CBC Creative Arts teacher.",
        "status": "proposed"
       }
      ],
@@ -4360,6 +5203,13 @@
        "kind": "skill",
        "reason": "This skill builds on it. Proposed, to confirm by a teacher.",
        "strength": "essential",
+       "status": "proposed"
+      },
+      {
+       "requires": "CREA.G3.PERFOR.ROUNDS.a",
+       "kind": "outcome",
+       "strength": "helpful",
+       "reason": "Hearing parts in a round (Grade 3) is the first step to naming parts of a performance. Proposed, to confirm by a CBC Creative Arts teacher.",
        "status": "proposed"
       }
      ],
@@ -4472,13 +5322,13 @@
     {
      "code": "CREA.G4.APPREC.ANALYSIS_OF_CREATIVE_ART.ANTHEM.M_CA4_AP_KNA_VERSES",
      "skill": "CREA.G4.APPREC.ANALYSIS_OF_CREATIVE_ART.ANTHEM",
-     "error": "Gives the wrong number of verses of the Kenya National Anthem.",
+     "error": "Says the anthem has five verses, counting the lines or the times it is repeated, not the three stanzas.",
      "example": {
       "question": "How many verses does the Kenya National Anthem have?",
       "wrong_answer": "Five",
       "correct_answer": "Three"
      },
-     "cause": "The child guesses.",
+     "cause": "At assembly only one stanza is often sung, so the child guesses the count.",
      "reveals": "Offer \"Five\" next to the right answer and ask the question again in a new context.",
      "help": "Count the verses on a printed copy.",
      "feedback": "The Kenya National Anthem has three verses.",
@@ -4563,6 +5413,70 @@
      "help": "Ask: what are the words about?",
      "feedback": "The message is what the words say.",
      "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
+     "status": "draft"
+    },
+    {
+     "code": "CREA.G4.APPREC.ANALYSIS_OF_CREATIVE_ART.CONCEPT.M_CA4_AP_LIKE_ONLY",
+     "skill": "CREA.G4.APPREC.ANALYSIS_OF_CREATIVE_ART.CONCEPT",
+     "error": "Thinks appreciating art means only saying \"I like it\".",
+     "example": {
+      "question": "Your friend shows a drawing. Which is appreciation?",
+      "wrong_answer": "I like it",
+      "correct_answer": "I like how the dark shading makes the drum look round"
+     },
+     "cause": "The child has not learnt to say why.",
+     "reveals": "Offer \"I like it\" next to the right answer and ask the question again in a new context.",
+     "help": "Add \"because\" to every comment.",
+     "feedback": "Say what you like and why. That is appreciation.",
+     "source": "To confirm by a CBC Creative Arts teacher: a common classroom error, not traced to a study by the author.",
+     "status": "draft"
+    },
+    {
+     "code": "CREA.G4.APPREC.ANALYSIS_OF_CREATIVE_ART.PORTFOLIO.M_CA4_AP_PORT_BEST_ONLY",
+     "skill": "CREA.G4.APPREC.ANALYSIS_OF_CREATIVE_ART.PORTFOLIO",
+     "error": "Thinks a portfolio keeps only finished, best work.",
+     "example": {
+      "question": "Should your sketches go in your portfolio?",
+      "wrong_answer": "no, only the best work",
+      "correct_answer": "yes; it shows how your work grew"
+     },
+     "cause": "The child thinks a portfolio is a display.",
+     "reveals": "Offer \"no, only the best work\" next to the right answer and ask the question again in a new context.",
+     "help": "Show a sketch and the final piece side by side.",
+     "feedback": "Keep sketches too. A portfolio shows how your work grew.",
+     "source": "To confirm by a CBC Creative Arts teacher: a common classroom error, not traced to a study by the author.",
+     "status": "draft"
+    },
+    {
+     "code": "CREA.G4.APPREC.ANALYSIS_OF_CREATIVE_ART.ANTHEM.M_CA4_AP_KNA_LANGUAGE",
+     "skill": "CREA.G4.APPREC.ANALYSIS_OF_CREATIVE_ART.ANTHEM",
+     "error": "Thinks the anthem is only sung in Kiswahili.",
+     "example": {
+      "question": "In which languages is the Kenya National Anthem sung?",
+      "wrong_answer": "only Kiswahili",
+      "correct_answer": "Kiswahili and English"
+     },
+     "cause": "The child has heard it in one language at assembly.",
+     "reveals": "Offer \"only Kiswahili\" next to the right answer and ask the question again in a new context.",
+     "help": "Sing one verse in each language.",
+     "feedback": "The anthem has Kiswahili and English words.",
+     "source": "To confirm by a CBC Creative Arts teacher: a common classroom error, not traced to a study by the author.",
+     "status": "draft"
+    },
+    {
+     "code": "CREA.G4.APPREC.ANALYSIS_OF_CREATIVE_ART.FOLKPERF.M_CA4_AP_COSTUME_ANY",
+     "skill": "CREA.G4.APPREC.ANALYSIS_OF_CREATIVE_ART.FOLKPERF",
+     "error": "Thinks any clothes count as a costume in a folk performance.",
+     "example": {
+      "question": "What is a costume in a folk song performance?",
+      "wrong_answer": "any clothes",
+      "correct_answer": "special dress of the community used for the performance"
+     },
+     "cause": "The child calls everyday clothes costume.",
+     "reveals": "Offer \"any clothes\" next to the right answer and ask the question again in a new context.",
+     "help": "Show a picture of a performance costume.",
+     "feedback": "A costume is special dress that belongs to the song and community.",
+     "source": "To confirm by a CBC Creative Arts teacher: a common classroom error, not traced to a study by the author.",
      "status": "draft"
     }
    ],

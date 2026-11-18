@@ -8,6 +8,10 @@ import { SKILLS, OUTCOMES, MIS_FEEDBACK } from '../src/ai-tutor/content/curricul
 import { SKILLS as G5_SKILLS, MIS_FEEDBACK as G5_MIS } from '../src/ai-tutor/content/curriculumMap.creativearts.g5.js';
 import { isOn, setFamilyMode, drawFamily } from '../src/ai-tutor/content/families/core.js';
 import { SIGNED } from '../src/ai-tutor/content/families/creativearts_g4_signed.js';
+import { creativeArtsDepthTests } from './helpers/creativeArtsDepth.mjs';
+
+// The depth pass of 18 Nov 2026 (Grade 5 Maths standard): two prerequisites and four misconceptions per skill, teaching pack.
+creativeArtsDepthTests({ grade: 4, outcomes: 63 });
 
 const source = JSON.parse(readFileSync(new URL('../curriculum/creative_arts/g4.json', import.meta.url), 'utf8'));
 const subs = source.sub_strands;
@@ -17,9 +21,9 @@ test('the map is generated from the file HOREB owns, the official outcomes and K
   assert.equal(Object.keys(OUTCOMES).length, 63);
   assert.equal(source.totals.outcomes, 63);
   assert.equal(Object.keys(SKILLS).length, 40);
-  assert.equal(Object.keys(MIS_FEEDBACK).length, 135);
+  assert.equal(Object.keys(MIS_FEEDBACK).length, 160);
   assert.equal(source.totals.skills, 40);
-  assert.equal(source.totals.misconceptions, 135);
+  assert.equal(source.totals.misconceptions, 160);
   for (const s of subs) for (const o of s.outcomes) assert.ok(/^kicd_(verified|read)$/.test(o.status), `${o.code}: outcome status changed`);
   assert.equal(source.rubrics.length, 3);
   assert.ok(source.rubrics.every(r => r.indicators.length && r.indicators.every(i => i.status === 'kicd_verified' && i.levels && i.levels.EE && i.levels.ME && i.levels.AE && i.levels.BE)));
@@ -33,7 +37,7 @@ test('skills are proposed and the library is draft, with the fields a reviewer n
       assert.ok(k.mastery && k.question_forms.length >= 2 && k.thinking.length, `${k.code}: mastery, forms or thinking missing`);
       assert.ok(k.outcomes.length && k.outcomes.every(o => OUTCOMES[o]), `${k.code}: unknown outcome`);
       assert.ok(/at least four of the last five/.test(k.mastery), `${k.code}: evidence rule`);
-      for (const p of k.prerequisites) assert.ok(SKILLS[p.requires] || /^(CREA\.G3\.|MATH\.G4\.)/.test(p.requires), `${k.code}: unknown prerequisite ${p.requires}`);
+      for (const p of k.prerequisites) assert.ok(SKILLS[p.requires] || /^(CREA\.G3\.|MATH\.G4\.|SCIE\.G4\.|SOCI\.G4\.|ENGL\.G4\.)/.test(p.requires), `${k.code}: unknown prerequisite ${p.requires}`);
       for (const l of k.leads_to) assert.ok(G5_SKILLS[l.skill], `${k.code}: ${l.skill} is not a Grade 5 Creative Arts skill`);
     }
     for (const m of s.misconceptions) {

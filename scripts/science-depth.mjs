@@ -13,6 +13,7 @@
 //          curriculum/<dir>/teaching/g<N>/<number>-<name>.json with the Maths rules (scripts/maths-teaching-pack-file.mjs)
 // A sub-strand's entry: { key, packNotes, pre, mis, fix, pack }. Everything stays proposed or draft until a teacher reviews it.
 // Social Studies Grades 4-9 use the same pass (18 Nov 2026): dir 'social_studies', data in scripts/data/socialstudies-depth/.
+// Creative Arts Grades 4-9 too (18 Nov 2026): dir 'creative_arts', data in scripts/data/creativearts-depth/.
 // With { derive: true } a pack entry may leave out a misconception: its listen-for, ask and repair are then the library's own
 // wrong answer, example question and help, so every library misconception is in the pack without writing it twice.
 // ============================================================================
@@ -24,7 +25,10 @@ const J = (f) => JSON.parse(readFileSync(new URL(`curriculum/${f}.json`, ROOT), 
 const fail = (m) => { throw new Error(m); };
 const FILES = ['science/g4', 'science/g5', 'science/g6', 'integrated_science/g7', 'integrated_science/g8', 'integrated_science/g9',
   ...[1, 2, 3, 4, 5, 6, 7, 8, 9].map(n => `mathematics/g${n}`), 'environmental_activities/g1', 'environmental_activities/g2', 'environmental_activities/g3',
-  ...[4, 5, 6, 7, 8, 9].map(n => `social_studies/g${n}`)];
+  ...[4, 5, 6, 7, 8, 9].map(n => `social_studies/g${n}`),
+  // Creative Arts Grades 4-9 (18 Nov 2026): prerequisites may also name Creative Arts, Grade 1-3 Creative Activities and English codes.
+  ...[4, 5, 6, 7, 8, 9].map(n => `creative_arts/g${n}`), 'creative_activities/g1', 'creative_activities/g2', 'creative_activities/g3',
+  ...[4, 5, 6, 7, 8, 9].map(n => `english/g${n}`)];
 
 function knownCodes() {
   const skills = new Set(), outcomes = new Set();
@@ -38,11 +42,13 @@ function knownCodes() {
 // Review marks from the blind reviews of 13 Nov 2026 (Science G4 and G6, Integrated Science G7), kept by misconception code so a
 // rebuild never drops them; scripts/build-subject-map.mjs carries them into engine/data/curriculum/<subject>.g<N>.misconceptions.json.
 const REVIEWS = JSON.parse(readFileSync(new URL('scripts/data/science-depth/reviews.json', ROOT), 'utf8'));
-const SUBJECT = { science: 'Science and Technology', integrated_science: 'Integrated Science', social_studies: 'Social Studies' };
+const SUBJECT = { science: 'Science and Technology', integrated_science: 'Integrated Science', social_studies: 'Social Studies', creative_arts: 'Creative Arts' };
 
 // g: the grade's JSON after its own build; depth: the sub-strand entries; dir: 'science' | 'integrated_science'.
-export function applyDepth(g, depth, { dir, grade, prefix, derive = false }) {
-  const reviewer = `a CBC ${SUBJECT[dir]} teacher`;
+// title: the subject's name when it differs by grade (Creative Arts and Sports, Grades 7-9); otherwise SUBJECT[dir].
+export function applyDepth(g, depth, { dir, grade, prefix, derive = false, title }) {
+  const NAME = title || SUBJECT[dir];
+  const reviewer = `a CBC ${NAME} teacher`;
   const TC = `To confirm by ${reviewer}: a common classroom error, not traced to a study by the author.`;
   const { skills: KNOWN, outcomes: OUTS } = knownCodes();
   for (const s of g.sub_strands) for (const k of s.skills || []) KNOWN.add(k.code);
@@ -98,7 +104,7 @@ export function applyDepth(g, depth, { dir, grade, prefix, derive = false }) {
       const pack = Object.fromEntries(Object.entries(d.pack).map(([key, p]) => [key, { ...p, mis: derive ? { ...lib(key), ...(p.mis || {}) } : p.mis }]));
       for (const key of Object.keys(pack)) if (!mine.has(key)) fail(`${s.code}: teaching pack for unknown skill ${key}`);
       const file = `${number}-${s.sub_strand.toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/^-|-$/g, '')}.json`;
-      const status = `draft: written 18 Nov 2026 offline for Grade ${grade} ${SUBJECT[dir]}; not yet checked by ${reviewer}; not loaded by the live tutor`;
+      const status = `draft: written 18 Nov 2026 offline for Grade ${grade} ${NAME}; not yet checked by ${reviewer}; not loaded by the live tutor`;
       writeFileSync(new URL(file, packDir), packFileText(s, packEntries(s, suffixes, pack), status, d.packNotes));
       written.add(file); added.pack += suffixes.length;
     }

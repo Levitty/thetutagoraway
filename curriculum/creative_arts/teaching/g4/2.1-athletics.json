@@ -1,0 +1,274 @@
+{
+ "sub_strand": "CREA.G4.PERFOR.ATHLETICS",
+ "title": "Athletics",
+ "status": "draft: written 18 Nov 2026 offline for Grade 4 Creative Arts; not yet checked by a CBC Creative Arts teacher; not loaded by the live tutor",
+ "sources": [],
+ "notes": "Sprint starts are practised on the field with commands; questions ask only for order and form.",
+ "skills": [
+  {
+   "skill": "CREA.G4.PERFOR.ATHLETICS.STARTS",
+   "key_step": "The child orders the commands \"On your marks, set, go\", and describes the medium and elongated starts.",
+   "floor": {
+    "prerequisite": "Moves in a chosen direction with control.",
+    "question": "What do you do when told to stop in a game?",
+    "answer": "stop still"
+   },
+   "representations": [
+    "a starting line",
+    "pictures of the two starts",
+    "a whistle"
+   ],
+   "steps": [
+    "On your marks: hands behind the line, knee down.",
+    "Set: hips up, eyes down.",
+    "Go: push hard and drive forward."
+   ],
+   "contexts": [
+    "a sports day 60 m race",
+    "a class relay start"
+   ],
+   "board": [
+    {
+     "beat": "point",
+     "do": "Say \"On your marks\".",
+     "say": "What comes next?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for set."
+    },
+    {
+     "beat": "predict",
+     "do": "At set, where are the hips?"
+    },
+    {
+     "beat": "reveal",
+     "do": "Up, a little higher than the shoulders."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "CREA.G4.PERFOR.ATHLETICS.STARTS.M_CA4_AT_COMMANDS_ORDER",
+     "listen_for": [
+      "Go"
+     ],
+     "ask": "What is the first command at the start?",
+     "repair": "Practise the three commands in a line."
+    },
+    {
+     "code": "CREA.G4.PERFOR.ATHLETICS.STARTS.M_CA4_AT_SET_HIPS",
+     "listen_for": [
+      "They go down"
+     ],
+     "ask": "What happens to the hips at Set?",
+     "repair": "Show the position at Set and ask where the weight is."
+    },
+    {
+     "code": "CREA.G4.PERFOR.ATHLETICS.STARTS.M_CA4_AT_ELONG_CLOSE",
+     "listen_for": [
+      "The medium start"
+     ],
+     "ask": "In which start are the feet furthest apart?",
+     "repair": "Mark the foot places in the sand for each start."
+    },
+    {
+     "code": "CREA.G4.PERFOR.ATHLETICS.STARTS.M_CA4_AT_LOOK_BACK",
+     "listen_for": [
+      "At the other runners"
+     ],
+     "ask": "Where do the eyes look at the start?",
+     "repair": "Say: you race your own lane."
+    }
+   ],
+   "checks": [
+    {
+     "question": "Put in order: set, go, on your marks.",
+     "answer": "on your marks, set, go",
+     "shows": "commands"
+    },
+    {
+     "question": "At \"set\", where do the hips go?",
+     "answer": "up",
+     "shows": "set position"
+    }
+   ]
+  },
+  {
+   "skill": "CREA.G4.PERFOR.ATHLETICS.SPRINT",
+   "key_step": "The child describes good sprinting: on the balls of the feet, arms swinging forward and back, eyes ahead, running through the line.",
+   "floor": {
+    "prerequisite": "Knows the start commands.",
+    "question": "What is the last command?",
+    "answer": "go"
+   },
+   "representations": [
+    "a demonstration run",
+    "a checklist",
+    "a finish line"
+   ],
+   "steps": [
+    "Run on the balls of the feet.",
+    "Swing arms forward and back.",
+    "Look ahead.",
+    "Run through the finish line."
+   ],
+   "contexts": [
+    "a sports day race",
+    "chasing a ball in a game"
+   ],
+   "board": [
+    {
+     "beat": "point",
+     "do": "Swing arms across the body.",
+     "say": "Is this good?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for no."
+    },
+    {
+     "beat": "reveal",
+     "do": "Swing them forward and back."
+    },
+    {
+     "beat": "write",
+     "do": "Write the four points."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "CREA.G4.PERFOR.ATHLETICS.SPRINT.M_CA4_AT_ARMS_ACROSS",
+     "listen_for": [
+      "Across the body"
+     ],
+     "ask": "How do the arms swing in sprinting?",
+     "repair": "Run slowly with arms across and with arms forward and back."
+    },
+    {
+     "code": "CREA.G4.PERFOR.ATHLETICS.SPRINT.M_CA4_AT_HEELS",
+     "listen_for": [
+      "The heels"
+     ],
+     "ask": "Which part of the foot does a sprinter use?",
+     "repair": "Run on the heels for a few steps and feel the slowing."
+    },
+    {
+     "code": "CREA.G4.PERFOR.ATHLETICS.SPRINT.M_CA4_AT_STOP_LINE",
+     "listen_for": [
+      "Slows down and stops before it"
+     ],
+     "ask": "What does a sprinter do at the finish line?",
+     "repair": "Run to a line and run through it."
+    },
+    {
+     "code": "CREA.G4.PERFOR.ATHLETICS.SPRINT.M_CA4_AT_LOOK_DOWN",
+     "listen_for": [
+      "At the feet"
+     ],
+     "ask": "Where does a sprinter look when running?",
+     "repair": "Run looking ahead and notice the body stay straight."
+    }
+   ],
+   "checks": [
+    {
+     "question": "Do sprinters run on their heels or the balls of their feet?",
+     "answer": "the balls of their feet",
+     "shows": "foot"
+    },
+    {
+     "question": "Where should a sprinter stop?",
+     "answer": "after the finish line",
+     "shows": "finish"
+    }
+   ]
+  },
+  {
+   "skill": "CREA.G4.PERFOR.ATHLETICS.FLAG",
+   "key_step": "The child names the flag colours in order (black, white, red, white, green) and what each means.",
+   "floor": {
+    "prerequisite": "Knows occasions when the flag is raised (Grade 3).",
+    "question": "Name one day the flag is raised.",
+    "answer": "any national day or a school assembly"
+   },
+   "representations": [
+    "a Kenyan flag",
+    "colour cards",
+    "a meaning chart"
+   ],
+   "steps": [
+    "Name the colours top to bottom.",
+    "Black: the people; red: the struggle; green: the land; white: peace.",
+    "Shield and spears: defence of freedom."
+   ],
+   "contexts": [
+    "a sports day flag parade",
+    "painting a flag for an athletics event"
+   ],
+   "board": [
+    {
+     "beat": "point",
+     "do": "Point at the red band.",
+     "say": "What does it stand for?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for the struggle for freedom."
+    },
+    {
+     "beat": "write",
+     "do": "Write each colour and meaning."
+    },
+    {
+     "beat": "reveal",
+     "do": "Show the full chart."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "CREA.G4.PERFOR.ATHLETICS.FLAG.M_CA4_AT_FLAG_ORDER",
+     "listen_for": [
+      "Green"
+     ],
+     "ask": "Which colour is at the top of the Kenyan flag?",
+     "repair": "Colour the stripes in order and check with a real flag."
+    },
+    {
+     "code": "CREA.G4.PERFOR.ATHLETICS.FLAG.M_CA4_AT_FLAG_MEANING",
+     "listen_for": [
+      "The land"
+     ],
+     "ask": "What does the red in the Kenyan flag stand for?",
+     "repair": "Match each colour to its meaning on a card."
+    },
+    {
+     "code": "CREA.G4.PERFOR.ATHLETICS.FLAG.M_CA4_AT_FLAG_WHY",
+     "listen_for": [
+      "Only to decorate"
+     ],
+     "ask": "Why is the Kenyan flag flown at an event?",
+     "repair": "Ask where the flag flies and what it stands for."
+    },
+    {
+     "code": "CREA.G4.PERFOR.ATHLETICS.FLAG.M_CA4_AT_FLAG_SHIELD",
+     "listen_for": [
+      "war"
+     ],
+     "ask": "What does the shield and spears on the Kenyan flag stand for?",
+     "repair": "Read the meaning together: they defend freedom."
+    }
+   ],
+   "checks": [
+    {
+     "question": "What does green stand for on the flag?",
+     "answer": "the land",
+     "shows": "meaning"
+    },
+    {
+     "question": "Why is the flag flown at an athletics event?",
+     "answer": "to show national pride and unity",
+     "shows": "purpose"
+    }
+   ]
+  }
+ ]
+}

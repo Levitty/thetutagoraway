@@ -1,0 +1,360 @@
+{
+ "sub_strand": "CREA.G4.PERFOR.SONGS",
+ "title": "Songs",
+ "status": "draft: written 18 Nov 2026 offline for Grade 4 Creative Arts; not yet checked by a CBC Creative Arts teacher; not loaded by the live tutor",
+ "sources": [],
+ "notes": "Sing examples of each song type. Folk songs come from many communities; a teacher confirms the examples used.",
+ "skills": [
+  {
+   "skill": "CREA.G4.PERFOR.SONGS.TYPES",
+   "key_step": "The child sorts songs as sacred (about God), patriotic (about the nation) or topical (about an issue), by their words.",
+   "floor": {
+    "prerequisite": "Says what a round is about (Grade 3).",
+    "question": "What does a song's message mean?",
+    "answer": "what the words say"
+   },
+   "representations": [
+    "short song lyrics",
+    "three labelled boxes",
+    "singing"
+   ],
+   "steps": [
+    "Read or sing the words.",
+    "Ask: God, nation or an issue?",
+    "Name the type."
+   ],
+   "contexts": [
+    "a school assembly",
+    "a music festival"
+   ],
+   "board": [
+    {
+     "beat": "write",
+     "do": "Write a line about clean water."
+    },
+    {
+     "beat": "predict",
+     "do": "Sacred, patriotic or topical?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for topical."
+    },
+    {
+     "beat": "reveal",
+     "do": "Topical: it is about an issue."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "CREA.G4.PERFOR.SONGS.TYPES.M_CA4_SG_SACRED_PATRIOTIC",
+     "listen_for": [
+      "Patriotic"
+     ],
+     "ask": "A song asks God to bless worshippers at church. What type is it?",
+     "repair": "Ask: who is the song about, God or the country?"
+    },
+    {
+     "code": "CREA.G4.PERFOR.SONGS.TYPES.M_CA4_SG_TOPICAL_ANY",
+     "listen_for": [
+      "A hymn at church"
+     ],
+     "ask": "Which is a topical song?",
+     "repair": "List issues people talk about now, and match a song to one."
+    },
+    {
+     "code": "CREA.G4.PERFOR.SONGS.TYPES.M_CA4_SG_PATRIOTIC_LOVE",
+     "listen_for": [
+      "Love for a friend"
+     ],
+     "ask": "What is a patriotic song about?",
+     "repair": "Link patriot to the word country (patria)."
+    },
+    {
+     "code": "CREA.G4.PERFOR.SONGS.TYPES.M_CA4_SG_SACRED_ANY_CHURCH",
+     "listen_for": [
+      "yes"
+     ],
+     "ask": "A song about road safety is sung at a church event. Is it sacred?",
+     "repair": "Read the words: what are they about?"
+    }
+   ],
+   "checks": [
+    {
+     "question": "A song praises Kenya. What type is it?",
+     "answer": "patriotic",
+     "shows": "type"
+    },
+    {
+     "question": "A song is about stopping litter. What type?",
+     "answer": "topical",
+     "shows": "type"
+    }
+   ]
+  },
+  {
+   "skill": "CREA.G4.PERFOR.SONGS.PERFTERMS",
+   "key_step": "The child uses pitch (high or low), tempo (fast or slow), dynamics (loud or soft) and unison (all on one tune) correctly.",
+   "floor": {
+    "prerequisite": "Has followed performance directions (Grade 3).",
+    "question": "What does \"sing softly\" ask you to change?",
+    "answer": "how loud you sing"
+   },
+   "representations": [
+    "a song sung four ways",
+    "word cards",
+    "a drum"
+   ],
+   "steps": [
+    "Change only one thing at a time.",
+    "Name what changed.",
+    "Match the word."
+   ],
+   "contexts": [
+    "a choir practice",
+    "singing the anthem at assembly"
+   ],
+   "board": [
+    {
+     "beat": "predict",
+     "do": "Sing the same song faster.",
+     "say": "What changed?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for tempo."
+    },
+    {
+     "beat": "reveal",
+     "do": "Tempo is speed."
+    },
+    {
+     "beat": "write",
+     "do": "Write the four words and meanings."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "CREA.G4.PERFOR.SONGS.PERFTERMS.M_CA4_SG_TEMPO_LOUD",
+     "listen_for": [
+      "How loud it is"
+     ],
+     "ask": "What does tempo mean?",
+     "repair": "Sing a song fast and slow, then loud and soft."
+    },
+    {
+     "code": "CREA.G4.PERFOR.SONGS.PERFTERMS.M_CA4_SG_DYNAMICS_FAST",
+     "listen_for": [
+      "The speed"
+     ],
+     "ask": "What do dynamics mean?",
+     "repair": "Sing the same line loud then soft."
+    },
+    {
+     "code": "CREA.G4.PERFOR.SONGS.PERFTERMS.M_CA4_SG_UNISON_PARTS",
+     "listen_for": [
+      "Each group sings a different part"
+     ],
+     "ask": "What does singing in unison mean?",
+     "repair": "Sing a line all together, then in two groups, and name each."
+    },
+    {
+     "code": "CREA.G4.PERFOR.SONGS.PERFTERMS.M_CA4_SG_PITCH_SPEED",
+     "listen_for": [
+      "How fast the song goes"
+     ],
+     "ask": "What is pitch?",
+     "repair": "Sing a high and a low note."
+    }
+   ],
+   "checks": [
+    {
+     "question": "What does tempo mean?",
+     "answer": "how fast or slow the music goes",
+     "shows": "tempo"
+    },
+    {
+     "question": "What does singing in unison mean?",
+     "answer": "everyone sings the same tune together",
+     "shows": "unison"
+    }
+   ]
+  },
+  {
+   "skill": "CREA.G4.PERFOR.SONGS.EAC",
+   "key_step": "The child says the EAC anthem is sung standing still, in unison, and is about unity and peace among the member countries.",
+   "floor": {
+    "prerequisite": "Knows anthem etiquette (Grade 3).",
+    "question": "How do you stand for the national anthem?",
+    "answer": "still and upright"
+   },
+   "representations": [
+    "the anthem text",
+    "a map of the EAC",
+    "a recording or the teacher singing"
+   ],
+   "steps": [
+    "Stand still.",
+    "Sing together in unison.",
+    "Say the message: unity and peace."
+   ],
+   "contexts": [
+    "an assembly on EAC day",
+    "a regional sports event"
+   ],
+   "board": [
+    {
+     "beat": "point",
+     "do": "Point at the map.",
+     "say": "Who sings this anthem?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for all member states."
+    },
+    {
+     "beat": "write",
+     "do": "Write the message."
+    },
+    {
+     "beat": "reveal",
+     "do": "Unity and peace."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "CREA.G4.PERFOR.SONGS.EAC.M_CA4_SG_EAC_SIT",
+     "listen_for": [
+      "Sit and talk"
+     ],
+     "ask": "How do you behave when the anthem is sung?",
+     "repair": "Say: an anthem is a song of respect."
+    },
+    {
+     "code": "CREA.G4.PERFOR.SONGS.EAC.M_CA4_SG_EAC_PARTS",
+     "listen_for": [
+      "In a round"
+     ],
+     "ask": "The anthem is sung...",
+     "repair": "Sing it together and sing a round to compare."
+    },
+    {
+     "code": "CREA.G4.PERFOR.SONGS.EAC.M_CA4_SG_EAC_MESSAGE",
+     "listen_for": [
+      "Only Kenya"
+     ],
+     "ask": "What is the anthem about?",
+     "repair": "Name the countries of East Africa on a map and say they sing it together."
+    },
+    {
+     "code": "CREA.G4.PERFOR.SONGS.EAC.M_CA4_SG_EAC_KENYA_ONLY",
+     "listen_for": [
+      "only Kenya"
+     ],
+     "ask": "Which countries sing the East African Community anthem?",
+     "repair": "Name some partner states on a map."
+    }
+   ],
+   "checks": [
+    {
+     "question": "How should you stand for the EAC anthem?",
+     "answer": "still and respectful",
+     "shows": "etiquette"
+    },
+    {
+     "question": "What is the anthem about?",
+     "answer": "unity and peace of the East African countries",
+     "shows": "message"
+    }
+   ]
+  },
+  {
+   "skill": "CREA.G4.PERFOR.SONGS.FOLKTYPES",
+   "key_step": "The child sorts folk songs by occasion: work, lullaby, wedding, funeral, initiation or praise, and says folk songs are passed down.",
+   "floor": {
+    "prerequisite": "Names aspects of traditional culture.",
+    "question": "Name one aspect of traditional culture.",
+    "answer": "any of: songs, dances, food, dress"
+   },
+   "representations": [
+    "short descriptions of occasions",
+    "picture cards",
+    "singing"
+   ],
+   "steps": [
+    "Read the occasion.",
+    "Name the song type.",
+    "Say what the song does there."
+   ],
+   "contexts": [
+    "a harvest song",
+    "a lullaby at home"
+   ],
+   "board": [
+    {
+     "beat": "predict",
+     "do": "A mother sings to her baby.",
+     "say": "What type?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for lullaby."
+    },
+    {
+     "beat": "reveal",
+     "do": "Lullaby."
+    },
+    {
+     "beat": "write",
+     "do": "Write the occasions and types."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "CREA.G4.PERFOR.SONGS.FOLKTYPES.M_CA4_SG_FOLK_FUNERAL_WORK",
+     "listen_for": [
+      "A funeral song"
+     ],
+     "ask": "Women sing while grinding millet. What type of folk song is it?",
+     "repair": "Ask: when is it sung, and what is happening?"
+    },
+    {
+     "code": "CREA.G4.PERFOR.SONGS.FOLKTYPES.M_CA4_SG_FOLK_NAMING",
+     "listen_for": [
+      "A marriage song"
+     ],
+     "ask": "A song welcomes a new baby. What type is it?",
+     "repair": "Ask: who is being celebrated?"
+    },
+    {
+     "code": "CREA.G4.PERFOR.SONGS.FOLKTYPES.M_CA4_SG_FOLK_ALL_SAME",
+     "listen_for": [
+      "Yes, they are all the same"
+     ],
+     "ask": "Do all Kenyan communities sing the same folk songs?",
+     "repair": "Listen to songs from two communities."
+    },
+    {
+     "code": "CREA.G4.PERFOR.SONGS.FOLKTYPES.M_CA4_SG_FOLK_RADIO",
+     "listen_for": [
+      "yes"
+     ],
+     "ask": "Is a new pop song on the radio a folk song?",
+     "repair": "Ask who made it and how old it is."
+    }
+   ],
+   "checks": [
+    {
+     "question": "A song sung while harvesting is which type?",
+     "answer": "a work song",
+     "shows": "occasion"
+    },
+    {
+     "question": "How are folk songs kept?",
+     "answer": "passed down by people in the community",
+     "shows": "folk"
+    }
+   ]
+  }
+ ]
+}

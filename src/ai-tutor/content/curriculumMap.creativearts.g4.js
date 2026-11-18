@@ -2,7 +2,7 @@
 // Outcomes are official (word for word). Skills are proposed, awaiting teacher review.
 // A family carries `cskill` (a key of SKILLS), `outcome` (its official outcome) and `skill` (the same as cskill:
 // these skills are not in the practice engine's Maths graph). MIS_FEEDBACK maps a short misconception code to the line a child reads.
-export const MAP_SOURCE = {"source":"curriculum/creative_arts/g4.json","status":"outcomes from KICD's text, word for word; skills, prerequisites, leads_to and misconceptions proposed (authored offline, 13 Nov 2026), awaiting teacher review. Practical, performance and attitude outcomes are listed in docs/qa/creativearts-g4-non-question-outcomes-2026-11-13.md"};
+export const MAP_SOURCE = {"source":"curriculum/creative_arts/g4.json","status":"outcomes from KICD's text, word for word; skills, prerequisites, leads_to and misconceptions proposed (authored offline, 13 Nov 2026), awaiting teacher review. Practical, performance and attitude outcomes are listed in docs/qa/creativearts-g4-non-question-outcomes-2026-11-13.md; depth pass 18 Nov 2026 (two or more prerequisites and four misconceptions per skill, practical outcomes marked by the teacher with the KICD rubric, teaching pack in curriculum/creative_arts/teaching/g4)"};
 export const SUBSTRANDS = {
  "CREA.G4.CREATI.PERCUSSION_MUSICAL_INSTR": {
   "name": "Percussion Musical Instruments (Drawing)",
@@ -423,7 +423,8 @@ export const SKILLS = {
   "mis": [
    "M_CA4_PC_LOUD_MELODIC",
    "M_CA4_PC_ALL_MELODIC",
-   "M_CA4_PC_NONMEL_MEANS"
+   "M_CA4_PC_NONMEL_MEANS",
+   "M_CA4_PC_SHAKER_MELODIC"
   ]
  },
  "CREA.G4.CREATI.PERCUSSION_MUSICAL_INSTR.DRUMPARTS": {
@@ -489,7 +490,8 @@ export const SKILLS = {
   "mis": [
    "M_CA4_NB_MAC_SEW",
    "M_CA4_NB_MAC_LOOSE",
-   "M_CA4_NB_MAC_HARD_CORE"
+   "M_CA4_NB_MAC_HARD_CORE",
+   "M_CA4_NB_MAC_FIRM_LOOSE"
   ]
  },
  "CREA.G4.CREATI.PAINTING_AND_MONTAGE.COLOURS": {
@@ -503,7 +505,8 @@ export const SKILLS = {
   "mis": [
    "M_CA4_PM_GREEN_PRIMARY",
    "M_CA4_PM_BLACK_PRIMARY",
-   "M_CA4_PM_ORANGE_PRIMARY"
+   "M_CA4_PM_ORANGE_PRIMARY",
+   "M_CA4_PM_BROWN_SECONDARY"
   ]
  },
  "CREA.G4.CREATI.PAINTING_AND_MONTAGE.MIX": {
@@ -519,7 +522,8 @@ export const SKILLS = {
   "mis": [
    "M_CA4_PM_RED_BLUE_GREEN",
    "M_CA4_PM_RED_YELLOW_PURPLE",
-   "M_CA4_PM_YELLOW_BLUE_ORANGE"
+   "M_CA4_PM_YELLOW_BLUE_ORANGE",
+   "M_CA4_PM_MIX_WHITE"
   ]
  },
  "CREA.G4.CREATI.PAINTING_AND_MONTAGE.VALUE": {
@@ -583,7 +587,8 @@ export const SKILLS = {
   "mis": [
    "M_CA4_RH_TATE_TWO_BEATS",
    "M_CA4_RH_TAA_PAIR",
-   "M_CA4_RH_REST_TAA"
+   "M_CA4_RH_REST_TAA",
+   "M_CA4_RH_SA_REST"
   ]
  },
  "CREA.G4.CREATI.RHYTHM.RHQUAL": {
@@ -600,7 +605,8 @@ export const SKILLS = {
   "mis": [
    "M_CA4_RH_ALL_SAME",
    "M_CA4_RH_NO_REPEAT",
-   "M_CA4_RH_END_SHORT"
+   "M_CA4_RH_END_SHORT",
+   "M_CA4_RH_TOO_LONG"
   ]
  },
  "CREA.G4.CREATI.RHYTHM.LETTERING": {
@@ -611,12 +617,14 @@ export const SKILLS = {
    "CREA.G4.CREATI.RHYTHM.b"
   ],
   "pre": [
-   "CREA.G4.CREATI.RHYTHM.NAMES"
+   "CREA.G4.CREATI.RHYTHM.NAMES",
+   "CREA.G4.CREATI.RHYTHM.VALUES"
   ],
   "mis": [
    "M_CA4_RH_G_ASC",
    "M_CA4_RH_B_DESC",
-   "M_CA4_RH_ALL_ASC"
+   "M_CA4_RH_ALL_ASC",
+   "M_CA4_RH_SIZES_MIX"
   ]
  },
  "CREA.G4.CREATI.MELODY.SOLFA": {
@@ -647,7 +655,8 @@ export const SKILLS = {
   "mis": [
    "M_CA4_ML_SIGN_DOWN",
    "M_CA4_ML_SIGN_MIX",
-   "M_CA4_ML_M_FIST"
+   "M_CA4_ML_M_FIST",
+   "M_CA4_ML_SIGN_HEIGHT"
   ]
  },
  "CREA.G4.CREATI.MELODY.MELQUAL": {
@@ -664,7 +673,8 @@ export const SKILLS = {
   "mis": [
    "M_CA4_ML_ONE_SYLLABLE",
    "M_CA4_ML_END_NOT_D",
-   "M_CA4_ML_STEP_JUMPS"
+   "M_CA4_ML_STEP_JUMPS",
+   "M_CA4_ML_ALL_LEAPS"
   ]
  },
  "CREA.G4.CREATI.MELODY.CLAY": {
@@ -728,7 +738,8 @@ export const SKILLS = {
   "mis": [
    "M_CA4_AT_FLAG_ORDER",
    "M_CA4_AT_FLAG_MEANING",
-   "M_CA4_AT_FLAG_WHY"
+   "M_CA4_AT_FLAG_WHY",
+   "M_CA4_AT_FLAG_SHIELD"
   ]
  },
  "CREA.G4.PERFOR.GYMNASTICS.BALANCES": {
@@ -759,7 +770,8 @@ export const SKILLS = {
   "mis": [
    "M_CA4_GY_NO_WARMUP",
    "M_CA4_GY_HARD_GROUND",
-   "M_CA4_GY_PAIN_GO_ON"
+   "M_CA4_GY_PAIN_GO_ON",
+   "M_CA4_GY_SHOES"
   ]
  },
  "CREA.G4.PERFOR.SONGS.TYPES": {
@@ -773,7 +785,8 @@ export const SKILLS = {
   "mis": [
    "M_CA4_SG_SACRED_PATRIOTIC",
    "M_CA4_SG_TOPICAL_ANY",
-   "M_CA4_SG_PATRIOTIC_LOVE"
+   "M_CA4_SG_PATRIOTIC_LOVE",
+   "M_CA4_SG_SACRED_ANY_CHURCH"
   ]
  },
  "CREA.G4.PERFOR.SONGS.PERFTERMS": {
@@ -806,7 +819,8 @@ export const SKILLS = {
   "mis": [
    "M_CA4_SG_EAC_SIT",
    "M_CA4_SG_EAC_PARTS",
-   "M_CA4_SG_EAC_MESSAGE"
+   "M_CA4_SG_EAC_MESSAGE",
+   "M_CA4_SG_EAC_KENYA_ONLY"
   ]
  },
  "CREA.G4.PERFOR.SONGS.FOLKTYPES": {
@@ -822,7 +836,8 @@ export const SKILLS = {
   "mis": [
    "M_CA4_SG_FOLK_FUNERAL_WORK",
    "M_CA4_SG_FOLK_NAMING",
-   "M_CA4_SG_FOLK_ALL_SAME"
+   "M_CA4_SG_FOLK_ALL_SAME",
+   "M_CA4_SG_FOLK_RADIO"
   ]
  },
  "CREA.G4.PERFOR.PHOTOGRAPHY.DEVICES": {
@@ -836,7 +851,8 @@ export const SKILLS = {
   "mis": [
    "M_CA4_PH_TV_CAMERA",
    "M_CA4_PH_NO_ASK",
-   "M_CA4_PH_CARELESS"
+   "M_CA4_PH_CARELESS",
+   "M_CA4_PH_RADIO_CAMERA"
   ]
  },
  "CREA.G4.PERFOR.PHOTOGRAPHY.ELEMENTS": {
@@ -852,7 +868,8 @@ export const SKILLS = {
   "mis": [
    "M_CA4_PH_SUN_BEHIND_SUBJECT",
    "M_CA4_PH_CENTRE_SMALL",
-   "M_CA4_PH_CENTRE_MEANING"
+   "M_CA4_PH_CENTRE_MEANING",
+   "M_CA4_PH_TILT"
   ]
  },
  "CREA.G4.PERFOR.DESCANT_RECORDER.RECPARTS": {
@@ -868,7 +885,8 @@ export const SKILLS = {
   "mis": [
    "M_CA4_DR_PARTS_BLOW",
    "M_CA4_DR_PARTS_HOLES",
-   "M_CA4_DR_PARTS_NAMES"
+   "M_CA4_DR_PARTS_NAMES",
+   "M_CA4_DR_PARTS_THUMB"
   ]
  },
  "CREA.G4.PERFOR.DESCANT_RECORDER.CARE": {
@@ -884,7 +902,8 @@ export const SKILLS = {
   "mis": [
    "M_CA4_DR_HOT_WATER",
    "M_CA4_DR_SHARE",
-   "M_CA4_DR_STORE"
+   "M_CA4_DR_STORE",
+   "M_CA4_DR_SUN"
   ]
  },
  "CREA.G4.PERFOR.DESCANT_RECORDER.NOTES": {
@@ -899,7 +918,8 @@ export const SKILLS = {
   "mis": [
    "M_CA4_DR_MORE_HIGHER",
    "M_CA4_DR_FINGERS_MIX",
-   "M_CA4_DR_ORDER"
+   "M_CA4_DR_ORDER",
+   "M_CA4_DR_RIGHT_HAND"
   ]
  },
  "CREA.G4.PERFOR.DESCANT_RECORDER.TECHNIQUE": {
@@ -915,7 +935,8 @@ export const SKILLS = {
   "mis": [
    "M_CA4_DR_BLOW_HARD",
    "M_CA4_DR_TIP_FINGERS",
-   "M_CA4_DR_SLOUCH"
+   "M_CA4_DR_SLOUCH",
+   "M_CA4_DR_NO_TONGUE"
   ]
  },
  "CREA.G4.PERFOR.SWIMMING.SAFETY": {
@@ -963,7 +984,8 @@ export const SKILLS = {
   "mis": [
    "M_CA4_SW_FROG_CRAWL",
    "M_CA4_SW_GAME_BUILDS",
-   "M_CA4_SW_GAME_NEW"
+   "M_CA4_SW_GAME_NEW",
+   "M_CA4_SW_GAME_NO_RULES"
   ]
  },
  "CREA.G4.APPREC.ANALYSIS_OF_CREATIVE_ART.CONCEPT": {
@@ -977,7 +999,8 @@ export const SKILLS = {
   "mis": [
    "M_CA4_AP_COPY",
    "M_CA4_AP_ONLY_FAULT",
-   "M_CA4_AP_TOUCH"
+   "M_CA4_AP_TOUCH",
+   "M_CA4_AP_LIKE_ONLY"
   ]
  },
  "CREA.G4.APPREC.ANALYSIS_OF_CREATIVE_ART.PORTFOLIO": {
@@ -993,7 +1016,8 @@ export const SKILLS = {
   "mis": [
    "M_CA4_AP_PORT_ANY",
    "M_CA4_AP_PORT_BUY",
-   "M_CA4_AP_PORT_LABEL"
+   "M_CA4_AP_PORT_LABEL",
+   "M_CA4_AP_PORT_BEST_ONLY"
   ]
  },
  "CREA.G4.APPREC.ANALYSIS_OF_CREATIVE_ART.ANTHEM": {
@@ -1007,7 +1031,8 @@ export const SKILLS = {
   "mis": [
    "M_CA4_AP_KNA_VERSES",
    "M_CA4_AP_KNA_SING",
-   "M_CA4_AP_KNA_WHAT"
+   "M_CA4_AP_KNA_WHAT",
+   "M_CA4_AP_KNA_LANGUAGE"
   ]
  },
  "CREA.G4.APPREC.ANALYSIS_OF_CREATIVE_ART.FOLKPERF": {
@@ -1024,7 +1049,8 @@ export const SKILLS = {
   "mis": [
    "M_CA4_AP_SOLOIST_ALL",
    "M_CA4_AP_SINGERS_PLAY",
-   "M_CA4_AP_MESSAGE"
+   "M_CA4_AP_MESSAGE",
+   "M_CA4_AP_COSTUME_ANY"
   ]
  }
 };
@@ -1044,6 +1070,7 @@ export const MIS_FEEDBACK = {
  "M_CA4_PC_USE_HOT": "Charcoal stays hot for a long time. Let it cool fully before touching it. An adult handles the fire.",
  "M_CA4_PC_SMUDGE_ERASE": "Smudging spreads the charcoal to make soft shades. That is how tonal value (light and dark) is made.",
  "M_CA4_PC_LIGHT_HARD": "More pressure puts more charcoal on the paper, so the area is darker. Less pressure gives a lighter shade.",
+ "M_CA4_PC_SHAKER_MELODIC": "The kayamba keeps the rhythm, but it cannot go up or down in pitch. It is non-melodic.",
  "M_CA4_NB_CHEST_BOUNCE": "A chest pass starts with the ball at the chest and both hands pushing it out. An overhead pass starts above the head.",
  "M_CA4_NB_ONE_HAND": "In netball the skills in this unit use two hands: a double-handed catch and two-handed passes, so the ball is safer.",
  "M_CA4_NB_EYES_AWAY": "A catcher keeps eyes on the ball with fingers spread and hands ready, and brings it in to the chest.",
@@ -1051,6 +1078,7 @@ export const MIS_FEEDBACK = {
  "M_CA4_NB_MAC_SEW": "Macramé is made by tying knots in cords. It needs no needle and no glue.",
  "M_CA4_NB_MAC_LOOSE": "Pull each knot tight so it holds and the ball keeps its shape.",
  "M_CA4_NB_MAC_HARD_CORE": "Pack old cloth or paper inside. It is light and safe. A stone can hurt a person.",
+ "M_CA4_NB_MAC_FIRM_LOOSE": "Pull each knot tight. Tight knots hold the ball together when it is thrown.",
  "M_CA4_PM_GREEN_PRIMARY": "Primary colours are red, yellow and blue: they cannot be made by mixing. Green is made from blue and yellow.",
  "M_CA4_PM_BLACK_PRIMARY": "Black and white are not primary colours. They are used to make colours darker or lighter.",
  "M_CA4_PM_ORANGE_PRIMARY": "A secondary colour is made by mixing two primaries. Orange is made from red and yellow.",
@@ -1065,6 +1093,8 @@ export const MIS_FEEDBACK = {
  "M_CA4_PM_MONT_GAPS": "In a montage the pieces overlap so the picture is full and has no gaps.",
  "M_CA4_PM_MONT_RANDOM": "A montage has one theme and all the pictures show it.",
  "M_CA4_PM_MONT_MESSY": "A neat montage has clean cut edges and little glue showing.",
+ "M_CA4_PM_BROWN_SECONDARY": "A secondary colour is made from two primary colours. Brown needs more, so it is not one.",
+ "M_CA4_PM_MIX_WHITE": "White makes a colour lighter. Red and white make a light red, not a new colour.",
  "M_CA4_RH_QUAVER_LONGER": "A pair of quavers lasts one beat together. Each quaver is half a beat.",
  "M_CA4_RH_REST_SKIP": "A rest is silence that is still counted. A crotchet rest is one silent beat.",
  "M_CA4_RH_REST_SOUND": "A rest is a silence. It is counted but not played or sung.",
@@ -1078,6 +1108,9 @@ export const MIS_FEEDBACK = {
  "M_CA4_RH_G_ASC": "A descender goes below the line. The letters g, j, p, q and y have descenders.",
  "M_CA4_RH_B_DESC": "An ascender goes up above the main body. The letters b, d, h, k and l have ascenders.",
  "M_CA4_RH_ALL_ASC": "The letters a, c, e, o, s and others stay in the main body, so they have neither.",
+ "M_CA4_RH_SA_REST": "A rest is a silence. Do not say taa; keep quiet for one beat.",
+ "M_CA4_RH_TOO_LONG": "A good rhythm has a clear idea that repeats. Longer is not better.",
+ "M_CA4_RH_SIZES_MIX": "Small letters sit between the middle lines. Only ascenders and capitals go higher.",
  "M_CA4_ML_M_LOWEST": "The order from low to high is d r m. D is the lowest and m is the highest.",
  "M_CA4_ML_D_HIGHEST": "The first syllable sung is not always the highest. In d r m, m is highest.",
  "M_CA4_ML_ORDER_MIX": "From low to high the order is d, r, m.",
@@ -1092,6 +1125,8 @@ export const MIS_FEEDBACK = {
  "M_CA4_ML_CLAY_COIL": "A slab is a flat piece. A coil is clay rolled into a long snake.",
  "M_CA4_ML_CLAY_STONES": "Remove stones and knead the clay so it is smooth and does not crack.",
  "M_CA4_ML_CLAY_GLUE": "Clay pieces are joined with a little water and pressed together.",
+ "M_CA4_ML_SIGN_HEIGHT": "The hand goes up as the note goes up. Show m higher than d.",
+ "M_CA4_ML_ALL_LEAPS": "Good melodies move mostly by step, with a few leaps.",
  "M_CA4_AT_COMMANDS_ORDER": "The order is On your marks, Set, Go.",
  "M_CA4_AT_SET_HIPS": "At Set the hips are raised and the weight goes forward, ready to push.",
  "M_CA4_AT_ELONG_CLOSE": "In the elongated start the feet are placed furthest apart. Medium starts have them closer.",
@@ -1103,6 +1138,7 @@ export const MIS_FEEDBACK = {
  "M_CA4_AT_FLAG_ORDER": "The Kenyan flag has black at the top, then red, then green, with thin white lines between.",
  "M_CA4_AT_FLAG_MEANING": "Black stands for the people, red for the blood shed for freedom, green for the land and white for peace.",
  "M_CA4_AT_FLAG_WHY": "The flag stands for the country and shows love of country and unity.",
+ "M_CA4_AT_FLAG_SHIELD": "The shield and spears stand for defending our freedom.",
  "M_CA4_GY_CRAB_DOWN": "In a crab balance the tummy faces up with the hips lifted.",
  "M_CA4_GY_ROLL_HEAD": "A side roll goes sideways along the mat with the body straight, not over the head.",
  "M_CA4_GY_ROLL_BENT": "Keep the body long and straight with arms above the head and legs together.",
@@ -1110,6 +1146,7 @@ export const MIS_FEEDBACK = {
  "M_CA4_GY_NO_WARMUP": "A warm-up makes the body ready and prevents injury.",
  "M_CA4_GY_HARD_GROUND": "Use a mat or soft, cleared ground with no stones.",
  "M_CA4_GY_PAIN_GO_ON": "Stop and tell the teacher if a part hurts.",
+ "M_CA4_GY_SHOES": "Take off hard shoes. Bare feet or soft shoes are safer on a mat.",
  "M_CA4_SG_SACRED_PATRIOTIC": "A sacred song is about worship. A patriotic song is about loving the country.",
  "M_CA4_SG_TOPICAL_ANY": "A topical song is about an issue people are talking about now, like hygiene or road safety.",
  "M_CA4_SG_PATRIOTIC_LOVE": "A patriotic song is about loving and serving the country.",
@@ -1123,12 +1160,17 @@ export const MIS_FEEDBACK = {
  "M_CA4_SG_FOLK_FUNERAL_WORK": "Songs sung while farming, grinding or harvesting are work songs.",
  "M_CA4_SG_FOLK_NAMING": "A naming song welcomes a new baby.",
  "M_CA4_SG_FOLK_ALL_SAME": "Each community has its own folk songs, in its own language.",
+ "M_CA4_SG_SACRED_ANY_CHURCH": "Look at the words, not the place. A song about road safety is topical.",
+ "M_CA4_SG_EAC_KENYA_ONLY": "The EAC anthem belongs to all the member countries, not only Kenya.",
+ "M_CA4_SG_FOLK_RADIO": "A folk song is passed down in a community. A new radio song is not a folk song.",
  "M_CA4_PH_TV_CAMERA": "A device that takes photographs has a lens. A television shows pictures but does not take them.",
  "M_CA4_PH_NO_ASK": "Ask permission before photographing a person.",
  "M_CA4_PH_CARELESS": "Hold a device with both hands and keep the lens clean and dry.",
  "M_CA4_PH_SUN_BEHIND_SUBJECT": "Keep the sun behind the photographer so the light falls on the subject.",
  "M_CA4_PH_CENTRE_SMALL": "The centre of interest is the main thing and should be clear, not tiny.",
  "M_CA4_PH_CENTRE_MEANING": "The centre of interest is the main thing the photograph is about.",
+ "M_CA4_PH_RADIO_CAMERA": "Only a device with a camera lens can take a photograph.",
+ "M_CA4_PH_TILT": "Hold the device straight so the picture is not slanted.",
  "M_CA4_DR_PARTS_BLOW": "The player blows into the mouthpiece on the head joint.",
  "M_CA4_DR_PARTS_HOLES": "Most finger holes are on the middle joint.",
  "M_CA4_DR_PARTS_NAMES": "From top to bottom: head joint, middle joint, foot joint.",
@@ -1141,6 +1183,10 @@ export const MIS_FEEDBACK = {
  "M_CA4_DR_BLOW_HARD": "Blow gently and steadily. Hard blowing makes a squeak.",
  "M_CA4_DR_TIP_FINGERS": "Cover the hole fully with the soft pad of the finger.",
  "M_CA4_DR_SLOUCH": "Sit or stand tall so the breath flows.",
+ "M_CA4_DR_PARTS_THUMB": "The back hole is covered by the left thumb. You blow into the mouthpiece.",
+ "M_CA4_DR_SUN": "Dry it in the shade. Strong sun can bend the recorder.",
+ "M_CA4_DR_RIGHT_HAND": "The left hand goes on top and plays B, A and G.",
+ "M_CA4_DR_NO_TONGUE": "Start each note with a soft \"doo\" using your tongue.",
  "M_CA4_SW_DIVE_SHALLOW": "Enter feet first. Never dive into shallow water.",
  "M_CA4_SW_RUN_SIDE": "Walk on the pool side. It is wet and slippery.",
  "M_CA4_SW_ALONE": "Never swim alone. Always have a teacher or lifeguard watching.",
@@ -1152,6 +1198,7 @@ export const MIS_FEEDBACK = {
  "M_CA4_SW_FROG_CRAWL": "The crab walk is on hands and feet with the tummy up. The frog jump is a squat and leap.",
  "M_CA4_SW_GAME_BUILDS": "The frog jump builds leg strength.",
  "M_CA4_SW_GAME_NEW": "Animal games are indigenous and were played for fun and fitness.",
+ "M_CA4_SW_GAME_NO_RULES": "Indigenous games have rules. Following them keeps the game fair and safe.",
  "M_CA4_AP_COPY": "Appreciation is looking carefully and thinking about what is good in a work.",
  "M_CA4_AP_ONLY_FAULT": "Good feedback says what is good and gives one idea in a kind way.",
  "M_CA4_AP_TOUCH": "Do not touch the works. Look quietly and respect the maker.",
@@ -1163,5 +1210,9 @@ export const MIS_FEEDBACK = {
  "M_CA4_AP_KNA_WHAT": "It is a prayer asking God to bless Kenya and keep peace and unity.",
  "M_CA4_AP_SOLOIST_ALL": "The soloist is the one singer who leads. The others answer.",
  "M_CA4_AP_SINGERS_PLAY": "Instrumentalists play the instruments. Singers sing.",
- "M_CA4_AP_MESSAGE": "The message is what the words say."
+ "M_CA4_AP_MESSAGE": "The message is what the words say.",
+ "M_CA4_AP_LIKE_ONLY": "Say what you like and why. That is appreciation.",
+ "M_CA4_AP_PORT_BEST_ONLY": "Keep sketches too. A portfolio shows how your work grew.",
+ "M_CA4_AP_KNA_LANGUAGE": "The anthem has Kiswahili and English words.",
+ "M_CA4_AP_COSTUME_ANY": "A costume is special dress that belongs to the song and community."
 };

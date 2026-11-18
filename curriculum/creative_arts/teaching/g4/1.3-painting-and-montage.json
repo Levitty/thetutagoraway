@@ -1,0 +1,361 @@
+{
+ "sub_strand": "CREA.G4.CREATI.PAINTING_AND_MONTAGE",
+ "title": "Painting and Montage",
+ "status": "draft: written 18 Nov 2026 offline for Grade 4 Creative Arts; not yet checked by a CBC Creative Arts teacher; not loaded by the live tutor",
+ "sources": [],
+ "notes": "Mix paint on a palette in front of the class; let learners predict before mixing.",
+ "skills": [
+  {
+   "skill": "CREA.G4.CREATI.PAINTING_AND_MONTAGE.COLOURS",
+   "key_step": "The child names red, yellow and blue as primaries (cannot be mixed) and orange, green and purple as secondaries (two primaries mixed).",
+   "floor": {
+    "prerequisite": "Has seen colours mixed (Grade 3).",
+    "question": "What happens when two colours are sprayed together?",
+    "answer": "they mix to a new colour"
+   },
+   "representations": [
+    "a colour wheel",
+    "paint on a palette",
+    "colour cards"
+   ],
+   "steps": [
+    "Ask: can this colour be mixed from others?",
+    "No means primary.",
+    "Two primaries mixed means secondary."
+   ],
+   "contexts": [
+    "painting a Kenyan flag",
+    "choosing colours for a market scene"
+   ],
+   "board": [
+    {
+     "beat": "point",
+     "do": "Point at green on the wheel.",
+     "say": "Can we mix it?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for yes, blue and yellow."
+    },
+    {
+     "beat": "write",
+     "do": "Write green under secondary."
+    },
+    {
+     "beat": "reveal",
+     "do": "Point at red: it cannot be mixed, so primary."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "CREA.G4.CREATI.PAINTING_AND_MONTAGE.COLOURS.M_CA4_PM_GREEN_PRIMARY",
+     "listen_for": [
+      "Green"
+     ],
+     "ask": "Which of these is a primary colour?",
+     "repair": "Mix blue and yellow paint and get green: a colour that can be mixed is not primary."
+    },
+    {
+     "code": "CREA.G4.CREATI.PAINTING_AND_MONTAGE.COLOURS.M_CA4_PM_BLACK_PRIMARY",
+     "listen_for": [
+      "Black"
+     ],
+     "ask": "Which of these is a primary colour?",
+     "repair": "Say: black and white change tone but are not on the colour wheel."
+    },
+    {
+     "code": "CREA.G4.CREATI.PAINTING_AND_MONTAGE.COLOURS.M_CA4_PM_ORANGE_PRIMARY",
+     "listen_for": [
+      "Yellow"
+     ],
+     "ask": "Which of these is a secondary colour?",
+     "repair": "Mix red and yellow to make orange and say: made by mixing, so secondary."
+    },
+    {
+     "code": "CREA.G4.CREATI.PAINTING_AND_MONTAGE.COLOURS.M_CA4_PM_BROWN_SECONDARY",
+     "listen_for": [
+      "yes"
+     ],
+     "ask": "Is brown a secondary colour?",
+     "repair": "Show that brown needs all three primaries; a secondary is exactly two primaries."
+    }
+   ],
+   "checks": [
+    {
+     "question": "Which are the three primary colours?",
+     "answer": "red, yellow and blue",
+     "shows": "naming primaries"
+    },
+    {
+     "question": "Is purple primary or secondary?",
+     "answer": "secondary",
+     "shows": "classifying"
+    }
+   ]
+  },
+  {
+   "skill": "CREA.G4.CREATI.PAINTING_AND_MONTAGE.MIX",
+   "key_step": "The child says red and yellow make orange, blue and yellow make green, red and blue make purple.",
+   "floor": {
+    "prerequisite": "Names the primary colours.",
+    "question": "Is yellow a primary colour?",
+    "answer": "yes"
+   },
+   "representations": [
+    "paint and a palette",
+    "a colour wheel",
+    "colour sums on the board"
+   ],
+   "steps": [
+    "Name the secondary you need.",
+    "Find it between two primaries on the wheel.",
+    "Mix those two."
+   ],
+   "contexts": [
+    "painting grass",
+    "painting a sunset"
+   ],
+   "board": [
+    {
+     "beat": "predict",
+     "do": "Red plus yellow?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for the answer."
+    },
+    {
+     "beat": "reveal",
+     "do": "Mix it: orange."
+    },
+    {
+     "beat": "write",
+     "do": "Write the three colour sums."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "CREA.G4.CREATI.PAINTING_AND_MONTAGE.MIX.M_CA4_PM_RED_BLUE_GREEN",
+     "listen_for": [
+      "Yellow and blue"
+     ],
+     "ask": "Which two colours make purple?",
+     "repair": "Mix each pair on paper and write the result: red and blue gives purple."
+    },
+    {
+     "code": "CREA.G4.CREATI.PAINTING_AND_MONTAGE.MIX.M_CA4_PM_RED_YELLOW_PURPLE",
+     "listen_for": [
+      "Purple"
+     ],
+     "ask": "What do red and yellow make?",
+     "repair": "Mix red and yellow paint and watch orange appear."
+    },
+    {
+     "code": "CREA.G4.CREATI.PAINTING_AND_MONTAGE.MIX.M_CA4_PM_YELLOW_BLUE_ORANGE",
+     "listen_for": [
+      "Orange"
+     ],
+     "ask": "What do blue and yellow make?",
+     "repair": "Mix blue and yellow paint and watch the leaf colour appear."
+    },
+    {
+     "code": "CREA.G4.CREATI.PAINTING_AND_MONTAGE.MIX.M_CA4_PM_MIX_WHITE",
+     "listen_for": [
+      "orange"
+     ],
+     "ask": "Red and white are mixed. What do you get?",
+     "repair": "Mix red and white: it is still red, only lighter."
+    }
+   ],
+   "checks": [
+    {
+     "question": "Which two colours make green?",
+     "answer": "blue and yellow",
+     "shows": "mixing pairs"
+    },
+    {
+     "question": "Red and blue make which colour?",
+     "answer": "purple",
+     "shows": "mixing"
+    }
+   ]
+  },
+  {
+   "skill": "CREA.G4.CREATI.PAINTING_AND_MONTAGE.VALUE",
+   "key_step": "The child says value is how light or dark a colour is: white makes it lighter, black darker, in small steps.",
+   "floor": {
+    "prerequisite": "Has painted a picture (Grade 3).",
+    "question": "What do you add to make paint thinner?",
+    "answer": "water"
+   },
+   "representations": [
+    "a value strip",
+    "paint, white and black",
+    "a picture with light and dark parts"
+   ],
+   "steps": [
+    "Start with the colour.",
+    "Add a little white for lighter tones.",
+    "Add a little black for darker tones.",
+    "Order the strip light to dark."
+   ],
+   "contexts": [
+    "painting a sky that is lighter near the hills",
+    "shading a drum"
+   ],
+   "board": [
+    {
+     "beat": "draw",
+     "do": "Draw a five-box strip with blue in the middle."
+    },
+    {
+     "beat": "predict",
+     "do": "What goes in the box to the left, lighter?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for blue with white."
+    },
+    {
+     "beat": "reveal",
+     "do": "Fill it in."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "CREA.G4.CREATI.PAINTING_AND_MONTAGE.VALUE.M_CA4_PM_BLACK_LIGHTER",
+     "listen_for": [
+      "It gets lighter"
+     ],
+     "ask": "A painter adds black to green. What happens?",
+     "repair": "Add a little black and then a little white to green paint on paper and compare."
+    },
+    {
+     "code": "CREA.G4.CREATI.PAINTING_AND_MONTAGE.VALUE.M_CA4_PM_VALUE_NAME",
+     "listen_for": [
+      "The name of the colour"
+     ],
+     "ask": "What does colour value mean?",
+     "repair": "Show light blue and dark blue: same colour name, different value."
+    },
+    {
+     "code": "CREA.G4.CREATI.PAINTING_AND_MONTAGE.VALUE.M_CA4_PM_WHITE_DULL",
+     "listen_for": [
+      "A different colour with a new name"
+     ],
+     "ask": "What does adding white to orange make?",
+     "repair": "Make a strip from orange to light orange and ask: is it still orange?"
+    },
+    {
+     "code": "CREA.G4.CREATI.PAINTING_AND_MONTAGE.VALUE.M_CA4_PM_SCALE_ORDER",
+     "listen_for": [
+      "Dark, light, dark"
+     ],
+     "ask": "A value strip goes from light to dark. Which is in the right order?",
+     "repair": "Cut the strip into steps and arrange it from the lightest to the darkest."
+    }
+   ],
+   "checks": [
+    {
+     "question": "What does adding black do to a colour?",
+     "answer": "makes it darker",
+     "shows": "value"
+    },
+    {
+     "question": "What is colour value?",
+     "answer": "how light or dark a colour is",
+     "shows": "meaning"
+    }
+   ]
+  },
+  {
+   "skill": "CREA.G4.CREATI.PAINTING_AND_MONTAGE.MONTAGE",
+   "key_step": "The child says a montage is a picture made of many cut pictures on one theme, overlapped with no gaps and pasted neatly.",
+   "floor": {
+    "prerequisite": "Has made a collage (Grade 3).",
+    "question": "What is a collage made from?",
+    "answer": "pieces of materials pasted on"
+   },
+   "representations": [
+    "old magazines and newspapers",
+    "a sample montage",
+    "scissors and glue"
+   ],
+   "steps": [
+    "Choose a theme.",
+    "Cut out pictures that fit it.",
+    "Plan by overlapping them.",
+    "Paste and clean the edges."
+   ],
+   "contexts": [
+    "a montage of Kenyan athletes",
+    "a montage of foods at a market"
+   ],
+   "board": [
+    {
+     "beat": "point",
+     "do": "Show a montage with a gap.",
+     "say": "What is wrong?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for the gap."
+    },
+    {
+     "beat": "write",
+     "do": "Write: overlap, no gaps."
+    },
+    {
+     "beat": "reveal",
+     "do": "Show the fixed one."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "CREA.G4.CREATI.PAINTING_AND_MONTAGE.MONTAGE.M_CA4_PM_MONT_PAINT",
+     "listen_for": [
+      "By painting with a brush"
+     ],
+     "ask": "How is a montage made?",
+     "repair": "Bring old magazines and cut and paste a small picture."
+    },
+    {
+     "code": "CREA.G4.CREATI.PAINTING_AND_MONTAGE.MONTAGE.M_CA4_PM_MONT_GAPS",
+     "listen_for": [
+      "Stay far apart with gaps"
+     ],
+     "ask": "In a montage the pieces should...",
+     "repair": "Place the pieces apart and then overlapping and compare."
+    },
+    {
+     "code": "CREA.G4.CREATI.PAINTING_AND_MONTAGE.MONTAGE.M_CA4_PM_MONT_RANDOM",
+     "listen_for": [
+      "A picture of a bus"
+     ],
+     "ask": "A montage has the theme \"ball games\". Which picture belongs?",
+     "repair": "Ask: does the picture tell about the theme?"
+    },
+    {
+     "code": "CREA.G4.CREATI.PAINTING_AND_MONTAGE.MONTAGE.M_CA4_PM_MONT_MESSY",
+     "listen_for": [
+      "Glue showing and rough edges"
+     ],
+     "ask": "Which makes a montage neat?",
+     "repair": "Compare a neat and a messy montage side by side."
+    }
+   ],
+   "checks": [
+    {
+     "question": "What is a montage made from?",
+     "answer": "many pictures cut out and pasted on one theme",
+     "shows": "meaning"
+    },
+    {
+     "question": "Why do the pictures overlap?",
+     "answer": "so no gaps show",
+     "shows": "composition"
+    }
+   ]
+  }
+ ]
+}

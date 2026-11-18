@@ -1,0 +1,362 @@
+{
+ "sub_strand": "CREA.G4.APPREC.ANALYSIS_OF_CREATIVE_ART",
+ "title": "Analysis of Creative Arts works",
+ "status": "draft: written 18 Nov 2026 offline for Grade 4 Creative Arts; not yet checked by a CBC Creative Arts teacher; not loaded by the live tutor",
+ "sources": [],
+ "notes": "Model kind, specific feedback. Learners never mock a work or a community.",
+ "skills": [
+  {
+   "skill": "CREA.G4.APPREC.ANALYSIS_OF_CREATIVE_ART.CONCEPT",
+   "key_step": "The child says appreciation means looking closely and saying what is good and why, kindly and without touching.",
+   "floor": {
+    "prerequisite": "Names parts of a story.",
+    "question": "What is the setting of a story?",
+    "answer": "where and when it happens"
+   },
+   "representations": [
+    "a class artwork",
+    "sentence starters: I like... because...",
+    "a display"
+   ],
+   "steps": [
+    "Look closely.",
+    "Say one thing that works and why.",
+    "Give one kind idea to improve."
+   ],
+   "contexts": [
+    "a class gallery walk",
+    "listening to a friend's song"
+   ],
+   "board": [
+    {
+     "beat": "point",
+     "do": "Show a drawing.",
+     "say": "What do you like and why?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for an answer with because."
+    },
+    {
+     "beat": "write",
+     "do": "Write the sentence starters."
+    },
+    {
+     "beat": "reveal",
+     "do": "Model one kind idea."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "CREA.G4.APPREC.ANALYSIS_OF_CREATIVE_ART.CONCEPT.M_CA4_AP_COPY",
+     "listen_for": [
+      "Copying the work"
+     ],
+     "ask": "What does appreciation mean?",
+     "repair": "Look at a picture and say two good things."
+    },
+    {
+     "code": "CREA.G4.APPREC.ANALYSIS_OF_CREATIVE_ART.CONCEPT.M_CA4_AP_ONLY_FAULT",
+     "listen_for": [
+      "It is ugly and wrong"
+     ],
+     "ask": "Which is kind and helpful feedback?",
+     "repair": "Practise two good things and one idea."
+    },
+    {
+     "code": "CREA.G4.APPREC.ANALYSIS_OF_CREATIVE_ART.CONCEPT.M_CA4_AP_TOUCH",
+     "listen_for": [
+      "Touch the works to see them better"
+     ],
+     "ask": "At an exhibition you...",
+     "repair": "Ask: what if everyone touches?"
+    },
+    {
+     "code": "CREA.G4.APPREC.ANALYSIS_OF_CREATIVE_ART.CONCEPT.M_CA4_AP_LIKE_ONLY",
+     "listen_for": [
+      "I like it"
+     ],
+     "ask": "Your friend shows a drawing. Which is appreciation?",
+     "repair": "Add \"because\" to every comment."
+    }
+   ],
+   "checks": [
+    {
+     "question": "Which is appreciation: \"nice\" or \"the bright colours show it is sunny\"?",
+     "answer": "the bright colours show it is sunny",
+     "shows": "specific"
+    },
+    {
+     "question": "Should you touch artworks at a display?",
+     "answer": "no, only look",
+     "shows": "etiquette"
+    }
+   ]
+  },
+  {
+   "skill": "CREA.G4.APPREC.ANALYSIS_OF_CREATIVE_ART.PORTFOLIO",
+   "key_step": "The child says a portfolio is a labelled folder of one's own work, kept neat, with sketches and final pieces.",
+   "floor": {
+    "prerequisite": "Has made artworks.",
+    "question": "Name an artwork you made.",
+    "answer": "any artwork"
+   },
+   "representations": [
+    "a manila folder",
+    "labels",
+    "sample work"
+   ],
+   "steps": [
+    "Make or fold the folder.",
+    "Label each piece with name, title and date.",
+    "Keep it flat and dry."
+   ],
+   "contexts": [
+    "an end of term showcase",
+    "parents' day"
+   ],
+   "board": [
+    {
+     "beat": "predict",
+     "do": "A drawing has no label.",
+     "say": "What is missing?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for name and date."
+    },
+    {
+     "beat": "write",
+     "do": "Write a label."
+    },
+    {
+     "beat": "reveal",
+     "do": "Show a labelled piece."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "CREA.G4.APPREC.ANALYSIS_OF_CREATIVE_ART.PORTFOLIO.M_CA4_AP_PORT_ANY",
+     "listen_for": [
+      "Any papers"
+     ],
+     "ask": "A portfolio holds...",
+     "repair": "Choose best works together."
+    },
+    {
+     "code": "CREA.G4.APPREC.ANALYSIS_OF_CREATIVE_ART.PORTFOLIO.M_CA4_AP_PORT_BUY",
+     "listen_for": [
+      "Only a bought leather case"
+     ],
+     "ask": "A portfolio can be made from...",
+     "repair": "Make one from cardboard."
+    },
+    {
+     "code": "CREA.G4.APPREC.ANALYSIS_OF_CREATIVE_ART.PORTFOLIO.M_CA4_AP_PORT_LABEL",
+     "listen_for": [
+      "Nothing"
+     ],
+     "ask": "What goes on each work?",
+     "repair": "Mix two works with no labels."
+    },
+    {
+     "code": "CREA.G4.APPREC.ANALYSIS_OF_CREATIVE_ART.PORTFOLIO.M_CA4_AP_PORT_BEST_ONLY",
+     "listen_for": [
+      "no, only the best work"
+     ],
+     "ask": "Should your sketches go in your portfolio?",
+     "repair": "Show a sketch and the final piece side by side."
+    }
+   ],
+   "checks": [
+    {
+     "question": "What goes on a portfolio label?",
+     "answer": "name, title and date",
+     "shows": "labels"
+    },
+    {
+     "question": "Does a portfolio keep only your best work?",
+     "answer": "No, it keeps your sketches too",
+     "shows": "purpose"
+    }
+   ]
+  },
+  {
+   "skill": "CREA.G4.APPREC.ANALYSIS_OF_CREATIVE_ART.ANTHEM",
+   "key_step": "The child says the anthem is a prayer to God for the nation, a call to unity and service, and is sung standing still.",
+   "floor": {
+    "prerequisite": "Knows the first stanza (Grade 3).",
+    "question": "How does the first stanza begin?",
+    "answer": "O God of all creation"
+   },
+   "representations": [
+    "the anthem text",
+    "a meaning chart",
+    "singing"
+   ],
+   "steps": [
+    "Read a stanza.",
+    "Say its message.",
+    "Stand still and sing with respect."
+   ],
+   "contexts": [
+    "an assembly",
+    "a national holiday event"
+   ],
+   "board": [
+    {
+     "beat": "point",
+     "do": "Read the first stanza.",
+     "say": "Who is it a prayer to?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for God."
+    },
+    {
+     "beat": "reveal",
+     "do": "A prayer for blessing on the nation."
+    },
+    {
+     "beat": "write",
+     "do": "Write the three stanza messages."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "CREA.G4.APPREC.ANALYSIS_OF_CREATIVE_ART.ANTHEM.M_CA4_AP_KNA_VERSES",
+     "listen_for": [
+      "Five"
+     ],
+     "ask": "How many verses does the Kenya National Anthem have?",
+     "repair": "Count the verses on a printed copy."
+    },
+    {
+     "code": "CREA.G4.APPREC.ANALYSIS_OF_CREATIVE_ART.ANTHEM.M_CA4_AP_KNA_SING",
+     "listen_for": [
+      "Talk and move about"
+     ],
+     "ask": "When the anthem is sung you...",
+     "repair": "Say: respect for the country."
+    },
+    {
+     "code": "CREA.G4.APPREC.ANALYSIS_OF_CREATIVE_ART.ANTHEM.M_CA4_AP_KNA_WHAT",
+     "listen_for": [
+      "Song about sport"
+     ],
+     "ask": "The Kenya National Anthem is a...",
+     "repair": "Read the words together."
+    },
+    {
+     "code": "CREA.G4.APPREC.ANALYSIS_OF_CREATIVE_ART.ANTHEM.M_CA4_AP_KNA_LANGUAGE",
+     "listen_for": [
+      "only Kiswahili"
+     ],
+     "ask": "In which languages is the Kenya National Anthem sung?",
+     "repair": "Sing one verse in each language."
+    }
+   ],
+   "checks": [
+    {
+     "question": "How many stanzas does the Kenya National Anthem have?",
+     "answer": "three",
+     "shows": "structure"
+    },
+    {
+     "question": "How do you stand during the anthem?",
+     "answer": "still and upright",
+     "shows": "etiquette"
+    }
+   ]
+  },
+  {
+   "skill": "CREA.G4.APPREC.ANALYSIS_OF_CREATIVE_ART.FOLKPERF",
+   "key_step": "The child names the parts of a folk song performance: soloist, chorus, instruments, costume, props and message.",
+   "floor": {
+    "prerequisite": "Has heard parts in a round.",
+    "question": "In a round, do all groups start together?",
+    "answer": "no, one after another"
+   },
+   "representations": [
+    "a video description",
+    "part cards",
+    "a class performance"
+   ],
+   "steps": [
+    "Find the soloist and chorus.",
+    "Name the instruments.",
+    "Name the costume and props.",
+    "Say the message."
+   ],
+   "contexts": [
+    "a music festival",
+    "a cultural day"
+   ],
+   "board": [
+    {
+     "beat": "point",
+     "do": "One singer leads, others answer.",
+     "say": "Who is the soloist?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for the leader."
+    },
+    {
+     "beat": "write",
+     "do": "Label soloist and chorus."
+    },
+    {
+     "beat": "reveal",
+     "do": "The others are the chorus."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "CREA.G4.APPREC.ANALYSIS_OF_CREATIVE_ART.FOLKPERF.M_CA4_AP_SOLOIST_ALL",
+     "listen_for": [
+      "The whole group"
+     ],
+     "ask": "The soloist is...",
+     "repair": "Sing a call and response and name the roles."
+    },
+    {
+     "code": "CREA.G4.APPREC.ANALYSIS_OF_CREATIVE_ART.FOLKPERF.M_CA4_AP_SINGERS_PLAY",
+     "listen_for": [
+      "The singers who answer"
+     ],
+     "ask": "Who plays the instruments?",
+     "repair": "Name the roles on a card."
+    },
+    {
+     "code": "CREA.G4.APPREC.ANALYSIS_OF_CREATIVE_ART.FOLKPERF.M_CA4_AP_MESSAGE",
+     "listen_for": [
+      "Its tune"
+     ],
+     "ask": "The message of a song is...",
+     "repair": "Ask: what are the words about?"
+    },
+    {
+     "code": "CREA.G4.APPREC.ANALYSIS_OF_CREATIVE_ART.FOLKPERF.M_CA4_AP_COSTUME_ANY",
+     "listen_for": [
+      "any clothes"
+     ],
+     "ask": "What is a costume in a folk song performance?",
+     "repair": "Show a picture of a performance costume."
+    }
+   ],
+   "checks": [
+    {
+     "question": "Who answers the soloist in a folk song?",
+     "answer": "the chorus",
+     "shows": "parts"
+    },
+    {
+     "question": "What is a prop?",
+     "answer": "an object held or used in the performance",
+     "shows": "terms"
+    }
+   ]
+  }
+ ]
+}

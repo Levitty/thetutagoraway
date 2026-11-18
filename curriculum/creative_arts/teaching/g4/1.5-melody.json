@@ -1,0 +1,363 @@
+{
+ "sub_strand": "CREA.G4.CREATI.MELODY",
+ "title": "Melody",
+ "status": "draft: written 18 Nov 2026 offline for Grade 4 Creative Arts; not yet checked by a CBC Creative Arts teacher; not loaded by the live tutor",
+ "sources": [],
+ "notes": "Sing d r m with hand signs before naming them; the phone describes hand signs in words.",
+ "skills": [
+  {
+   "skill": "CREA.G4.CREATI.MELODY.SOLFA",
+   "key_step": "The child orders d, r, m from low to high and hears that a simple tune often ends on d.",
+   "floor": {
+    "prerequisite": "Has made melodic patterns (Grade 3).",
+    "question": "Does a melody go up and down or stay the same?",
+    "answer": "up and down"
+   },
+   "representations": [
+    "a sol-fa ladder drawn on the board",
+    "hand signs",
+    "singing"
+   ],
+   "steps": [
+    "Sing d, then r, then m.",
+    "Say which is lowest.",
+    "Point on the ladder: d bottom, m top."
+   ],
+   "contexts": [
+    "singing a class warm-up",
+    "a short school song"
+   ],
+   "board": [
+    {
+     "beat": "draw",
+     "do": "Draw a ladder with three rungs."
+    },
+    {
+     "beat": "predict",
+     "do": "Which syllable goes on the bottom rung?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for d."
+    },
+    {
+     "beat": "reveal",
+     "do": "Write d, r, m upward."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "CREA.G4.CREATI.MELODY.SOLFA.M_CA4_ML_M_LOWEST",
+     "listen_for": [
+      "m"
+     ],
+     "ask": "Which syllable is the lowest?",
+     "repair": "Sing d r m going up and show with the hand."
+    },
+    {
+     "code": "CREA.G4.CREATI.MELODY.SOLFA.M_CA4_ML_D_HIGHEST",
+     "listen_for": [
+      "d"
+     ],
+     "ask": "Which syllable is the highest?",
+     "repair": "Sing d first and then climb to m."
+    },
+    {
+     "code": "CREA.G4.CREATI.MELODY.SOLFA.M_CA4_ML_ORDER_MIX",
+     "listen_for": [
+      "r d m"
+     ],
+     "ask": "Which is the right order from low to high?",
+     "repair": "Sing d r m slowly and point to steps on a stair."
+    },
+    {
+     "code": "CREA.G4.CREATI.MELODY.SOLFA.M_CA4_ML_END_ANY",
+     "listen_for": [
+      "Any syllable"
+     ],
+     "ask": "A short melody sounds finished when it ends on...",
+     "repair": "Sing d r m r then stop on r and then on d: which sounds finished?"
+    }
+   ],
+   "checks": [
+    {
+     "question": "Which is highest: d, r or m?",
+     "answer": "m",
+     "shows": "order"
+    },
+    {
+     "question": "Put them low to high: m, d, r.",
+     "answer": "d, r, m",
+     "shows": "ordering"
+    }
+   ]
+  },
+  {
+   "skill": "CREA.G4.CREATI.MELODY.SIGNS",
+   "key_step": "The child reads the Kodaly signs for d (fist), r (hand slanting up) and m (flat hand), each a little higher.",
+   "floor": {
+    "prerequisite": "Orders d, r, m.",
+    "question": "Which comes after d?",
+    "answer": "r"
+   },
+   "representations": [
+    "the teacher's hands",
+    "a chart of the three signs described in words",
+    "singing"
+   ],
+   "steps": [
+    "Fist at waist level for d.",
+    "Slanting flat hand a little higher for r.",
+    "Flat hand facing down, higher still, for m."
+   ],
+   "contexts": [
+    "a choir warm-up",
+    "a music lesson game: copy my hand"
+   ],
+   "board": [
+    {
+     "beat": "point",
+     "do": "Show a fist.",
+     "say": "Which syllable?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for d."
+    },
+    {
+     "beat": "predict",
+     "do": "Raise to a flat hand.",
+     "say": "Which one now?"
+    },
+    {
+     "beat": "reveal",
+     "do": "m, and sing it."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "CREA.G4.CREATI.MELODY.SIGNS.M_CA4_ML_SIGN_DOWN",
+     "listen_for": [
+      "Moves lower"
+     ],
+     "ask": "The pitch goes higher from d to m. What does the hand do?",
+     "repair": "Sing d r m and raise your hand for each step."
+    },
+    {
+     "code": "CREA.G4.CREATI.MELODY.SIGNS.M_CA4_ML_SIGN_MIX",
+     "listen_for": [
+      "m"
+     ],
+     "ask": "Which sign is a closed fist held low?",
+     "repair": "Show each sign three times saying the syllable."
+    },
+    {
+     "code": "CREA.G4.CREATI.MELODY.SIGNS.M_CA4_ML_M_FIST",
+     "listen_for": [
+      "With a closed fist"
+     ],
+     "ask": "How is m shown?",
+     "repair": "Show a fist for d and a flat hand for m, saying the sounds."
+    },
+    {
+     "code": "CREA.G4.CREATI.MELODY.SIGNS.M_CA4_ML_SIGN_HEIGHT",
+     "listen_for": [
+      "at the same height"
+     ],
+     "ask": "Where should the hand be for m compared with d?",
+     "repair": "Sing d r m and raise the hand a little for each."
+    }
+   ],
+   "checks": [
+    {
+     "question": "Which hand sign is a closed fist?",
+     "answer": "d",
+     "shows": "sign for d"
+    },
+    {
+     "question": "Is the hand for m higher or lower than for d?",
+     "answer": "higher",
+     "shows": "height shows pitch"
+    }
+   ]
+  },
+  {
+   "skill": "CREA.G4.CREATI.MELODY.MELQUAL",
+   "key_step": "The child names qualities of a good melody: mostly steps, a clear shape, some repetition and ending on d.",
+   "floor": {
+    "prerequisite": "Reads d, r, m signs.",
+    "question": "Show the sign for r.",
+    "answer": "a hand slanting up"
+   },
+   "representations": [
+    "two short melodies sung",
+    "a checklist",
+    "the sol-fa ladder"
+   ],
+   "steps": [
+    "Move mostly by step.",
+    "Repeat an idea.",
+    "Give it a shape: up then down.",
+    "End on d."
+   ],
+   "contexts": [
+    "making a short tune for a class poem",
+    "a melody for a welcome song"
+   ],
+   "board": [
+    {
+     "beat": "predict",
+     "do": "Sing d r m r and stop.",
+     "say": "Does it feel finished?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for no."
+    },
+    {
+     "beat": "reveal",
+     "do": "Add d: now it ends at home."
+    },
+    {
+     "beat": "write",
+     "do": "Write the qualities."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "CREA.G4.CREATI.MELODY.MELQUAL.M_CA4_ML_ONE_SYLLABLE",
+     "listen_for": [
+      "m m m m"
+     ],
+     "ask": "Which melody has variation?",
+     "repair": "Sing both and ask which is more interesting."
+    },
+    {
+     "code": "CREA.G4.CREATI.MELODY.MELQUAL.M_CA4_ML_END_NOT_D",
+     "listen_for": [
+      "m"
+     ],
+     "ask": "A good short melody ends on...",
+     "repair": "Sing the melody ending on m and on d and compare."
+    },
+    {
+     "code": "CREA.G4.CREATI.MELODY.MELQUAL.M_CA4_ML_STEP_JUMPS",
+     "listen_for": [
+      "Jumping over syllables"
+     ],
+     "ask": "What does stepwise motion mean?",
+     "repair": "Walk stairs one by one and sing d r m."
+    },
+    {
+     "code": "CREA.G4.CREATI.MELODY.MELQUAL.M_CA4_ML_ALL_LEAPS",
+     "listen_for": [
+      "d m d m d m"
+     ],
+     "ask": "Which is easier to sing: d r m r d, or d m d m d m?",
+     "repair": "Sing both; ask which feels smooth."
+    }
+   ],
+   "checks": [
+    {
+     "question": "Which note does a simple d r m melody usually end on?",
+     "answer": "d",
+     "shows": "ending"
+    },
+    {
+     "question": "Should a good melody move mostly by step or by leap?",
+     "answer": "mostly by step",
+     "shows": "steps"
+    }
+   ]
+  },
+  {
+   "skill": "CREA.G4.CREATI.MELODY.CLAY",
+   "key_step": "The child orders the steps of slab and coil work: wedge the clay, roll slabs or coils, join with slip, then dry slowly.",
+   "floor": {
+    "prerequisite": "Has modelled beads (Grade 3).",
+    "question": "What is a pellet?",
+    "answer": "a small ball of clay"
+   },
+   "representations": [
+    "clay",
+    "a rolling stick and two guide sticks",
+    "a sample slab with sol-fa letters"
+   ],
+   "steps": [
+    "Wedge the clay to remove air.",
+    "Roll an even slab or coils.",
+    "Score and join with slip.",
+    "Dry slowly in the shade."
+   ],
+   "contexts": [
+    "making a sol-fa wall plaque",
+    "a coil pot for the class corner"
+   ],
+   "board": [
+    {
+     "beat": "write",
+     "do": "Write wedge, roll, join, dry in mixed order."
+    },
+    {
+     "beat": "point",
+     "do": "Point at \"join\".",
+     "say": "What do we use to join?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for slip."
+    },
+    {
+     "beat": "write",
+     "do": "Number the steps."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "CREA.G4.CREATI.MELODY.CLAY.M_CA4_ML_CLAY_DRY",
+     "listen_for": [
+      "Dry and hard"
+     ],
+     "ask": "What state should the clay be in for modelling?",
+     "repair": "Try to bend a dry clay lump and a damp one."
+    },
+    {
+     "code": "CREA.G4.CREATI.MELODY.CLAY.M_CA4_ML_CLAY_COIL",
+     "listen_for": [
+      "A flat sheet"
+     ],
+     "ask": "What is a coil?",
+     "repair": "Roll one and flatten the other."
+    },
+    {
+     "code": "CREA.G4.CREATI.MELODY.CLAY.M_CA4_ML_CLAY_STONES",
+     "listen_for": [
+      "Nothing, use it as it is"
+     ],
+     "ask": "What is done to clay before modelling?",
+     "repair": "Squeeze clay with a small stone in it and see it crack."
+    },
+    {
+     "code": "CREA.G4.CREATI.MELODY.CLAY.M_CA4_ML_CLAY_GLUE",
+     "listen_for": [
+      "Strong glue"
+     ],
+     "ask": "What joins the coil letters to the slab?",
+     "repair": "Join two pieces with a little water and press."
+    }
+   ],
+   "checks": [
+    {
+     "question": "Why is clay wedged first?",
+     "answer": "to push out air so it does not crack",
+     "shows": "wedging"
+    },
+    {
+     "question": "What joins two pieces of clay?",
+     "answer": "slip, after scoring",
+     "shows": "joining"
+    }
+   ]
+  }
+ ]
+}

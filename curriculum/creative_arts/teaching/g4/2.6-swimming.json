@@ -1,0 +1,273 @@
+{
+ "sub_strand": "CREA.G4.PERFOR.SWIMMING",
+ "title": "Swimming",
+ "status": "draft: written 18 Nov 2026 offline for Grade 4 Creative Arts; not yet checked by a CBC Creative Arts teacher; not loaded by the live tutor",
+ "sources": [],
+ "notes": "Pool work only with a trained adult. On the phone: names, order and safety rules only.",
+ "skills": [
+  {
+   "skill": "CREA.G4.PERFOR.SWIMMING.SAFETY",
+   "key_step": "The child says to enter feet first from the side or steps, walk not run, never swim alone, and never push anyone.",
+   "floor": {
+    "prerequisite": "Knows water dangers (Grade 3).",
+    "question": "Name one danger near water.",
+    "answer": "any of: drowning, slipping"
+   },
+   "representations": [
+    "a picture of a pool",
+    "a rules chart",
+    "a whistle"
+   ],
+   "steps": [
+    "Walk to the pool.",
+    "Enter feet first by the steps or a sitting entry.",
+    "Stay with the adult and a buddy."
+   ],
+   "contexts": [
+    "a school swimming lesson",
+    "a family trip to a pool"
+   ],
+   "board": [
+    {
+     "beat": "predict",
+     "do": "A learner wants to dive in shallow water.",
+     "say": "Safe?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for no."
+    },
+    {
+     "beat": "reveal",
+     "do": "Feet first only."
+    },
+    {
+     "beat": "write",
+     "do": "Write four rules."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "CREA.G4.PERFOR.SWIMMING.SAFETY.M_CA4_SW_DIVE_SHALLOW",
+     "listen_for": [
+      "Dive in head first"
+     ],
+     "ask": "How do you enter the water at the shallow end?",
+     "repair": "Say: the bottom is close."
+    },
+    {
+     "code": "CREA.G4.PERFOR.SWIMMING.SAFETY.M_CA4_SW_RUN_SIDE",
+     "listen_for": [
+      "Run"
+     ],
+     "ask": "How do you move on the pool side?",
+     "repair": "Say: the floor is wet and slippery."
+    },
+    {
+     "code": "CREA.G4.PERFOR.SWIMMING.SAFETY.M_CA4_SW_ALONE",
+     "listen_for": [
+      "Yes, if you can swim"
+     ],
+     "ask": "May you swim alone?",
+     "repair": "Say: accidents are sudden."
+    },
+    {
+     "code": "CREA.G4.PERFOR.SWIMMING.SAFETY.M_CA4_SW_PUSH",
+     "listen_for": [
+      "Push them in for fun"
+     ],
+     "ask": "A friend stands at the edge. What do you do?",
+     "repair": "Say: they may hit the edge or not swim."
+    }
+   ],
+   "checks": [
+    {
+     "question": "How should you enter shallow water?",
+     "answer": "feet first",
+     "shows": "entry"
+    },
+    {
+     "question": "Why must you not run by the pool?",
+     "answer": "the floor is slippery and you could fall",
+     "shows": "safety"
+    }
+   ]
+  },
+  {
+   "skill": "CREA.G4.PERFOR.SWIMMING.FLOAT",
+   "key_step": "The child describes floating (body relaxed, still, face up or mushroom) and gliding (push off, arms stretched, body long).",
+   "floor": {
+    "prerequisite": "Knows some things float.",
+    "question": "Does a plastic bottle float?",
+    "answer": "yes"
+   },
+   "representations": [
+    "pictures of floats and a glide",
+    "a demonstration on land",
+    "a float board"
+   ],
+   "steps": [
+    "Relax the body and breathe in.",
+    "Float still.",
+    "For a glide, push off the wall with arms stretched."
+   ],
+   "contexts": [
+    "a swimming lesson",
+    "a water confidence game"
+   ],
+   "board": [
+    {
+     "beat": "point",
+     "do": "Show a tense body.",
+     "say": "Will it float well?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for no."
+    },
+    {
+     "beat": "reveal",
+     "do": "Relax to float."
+    },
+    {
+     "beat": "write",
+     "do": "Write the glide steps."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "CREA.G4.PERFOR.SWIMMING.FLOAT.M_CA4_SW_MUSHROOM_STRETCH",
+     "listen_for": [
+      "Stretched out flat"
+     ],
+     "ask": "In a mushroom float the body is...",
+     "repair": "Curl up like a mushroom."
+    },
+    {
+     "code": "CREA.G4.PERFOR.SWIMMING.FLOAT.M_CA4_SW_SUPINE_FACE",
+     "listen_for": [
+      "In the water"
+     ],
+     "ask": "In a back (supine) float the face is...",
+     "repair": "Lie on the back and look up."
+    },
+    {
+     "code": "CREA.G4.PERFOR.SWIMMING.FLOAT.M_CA4_SW_GLIDE_ARMS",
+     "listen_for": [
+      "By the sides"
+     ],
+     "ask": "In a glide the arms are...",
+     "repair": "Glide with arms ahead and by the sides."
+    },
+    {
+     "code": "CREA.G4.PERFOR.SWIMMING.FLOAT.M_CA4_SW_TENSE",
+     "listen_for": [
+      "Tense and stiff"
+     ],
+     "ask": "To float, the body should be...",
+     "repair": "Relax and float."
+    }
+   ],
+   "checks": [
+    {
+     "question": "In a glide, where are the arms?",
+     "answer": "stretched forward",
+     "shows": "glide"
+    },
+    {
+     "question": "Is it easier to float tense or relaxed?",
+     "answer": "relaxed",
+     "shows": "floating"
+    }
+   ]
+  },
+  {
+   "skill": "CREA.G4.PERFOR.SWIMMING.ANIMAL",
+   "key_step": "The child names indigenous animal games, says they copy animal movements, follow rules and build fitness.",
+   "floor": {
+    "prerequisite": "Gallops in different directions (Grade 3).",
+    "question": "Which animal gallops?",
+    "answer": "a horse"
+   },
+   "representations": [
+    "game descriptions",
+    "an open field",
+    "a drum for rhythm"
+   ],
+   "steps": [
+    "Name the animal copied.",
+    "Name the movement.",
+    "Say what it builds: strength, speed or balance."
+   ],
+   "contexts": [
+    "a PE lesson",
+    "a cultural day"
+   ],
+   "board": [
+    {
+     "beat": "predict",
+     "do": "A game copies a hopping frog.",
+     "say": "What does it build?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for leg strength."
+    },
+    {
+     "beat": "reveal",
+     "do": "Leg strength and balance."
+    },
+    {
+     "beat": "write",
+     "do": "Write the game and its benefit."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "CREA.G4.PERFOR.SWIMMING.ANIMAL.M_CA4_SW_FROG_CRAWL",
+     "listen_for": [
+      "Frog jump"
+     ],
+     "ask": "Which game is done with tummy up on hands and feet?",
+     "repair": "Do both and say the animal."
+    },
+    {
+     "code": "CREA.G4.PERFOR.SWIMMING.ANIMAL.M_CA4_SW_GAME_BUILDS",
+     "listen_for": [
+      "Arm strength only"
+     ],
+     "ask": "The frog jump builds...",
+     "repair": "Feel which muscles work."
+    },
+    {
+     "code": "CREA.G4.PERFOR.SWIMMING.ANIMAL.M_CA4_SW_GAME_NEW",
+     "listen_for": [
+      "Only new games from television"
+     ],
+     "ask": "Animal games are...",
+     "repair": "Ask grandparents which games they played."
+    },
+    {
+     "code": "CREA.G4.PERFOR.SWIMMING.ANIMAL.M_CA4_SW_GAME_NO_RULES",
+     "listen_for": [
+      "no"
+     ],
+     "ask": "Do indigenous animal games have rules?",
+     "repair": "Play one game and name its rules."
+    }
+   ],
+   "checks": [
+    {
+     "question": "What do animal games copy?",
+     "answer": "the movements of animals",
+     "shows": "meaning"
+    },
+    {
+     "question": "Name one thing animal games build.",
+     "answer": "any of: strength, speed, balance, fitness",
+     "shows": "benefit"
+    }
+   ]
+  }
+ ]
+}
