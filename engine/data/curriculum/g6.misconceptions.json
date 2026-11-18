@@ -4409,6 +4409,90 @@
   "source": "to be confirmed by a teacher (no source yet)",
   "status": "draft"
  },
+ "MATH.G6.GEOMET.3_D_OBJECTS.CUBOID_CUBE_PARTS.M_HIDDEN_VERTEX_MISSED": {
+  "skill": "MATH.G6.GEOMET.3_D_OBJECTS.CUBOID_CUBE_PARTS",
+  "error": "Counts only the vertices that can be seen in a drawing.",
+  "example": {
+   "question": "How many vertices has the cube in this drawing?",
+   "wrong_answer": "7",
+   "correct_answer": "8"
+  },
+  "cause": "Counts what the picture shows and forgets the corner at the back.",
+  "reveals": "The count of visible vertices as an option.",
+  "help": "Count on a real box, marking each corner with chalk: 4 on top, 4 at the bottom.",
+  "source": "to be confirmed by a teacher (no source yet)",
+  "status": "draft"
+ },
+ "MATH.G6.GEOMET.3_D_OBJECTS.CUBOID_CUBE_PARTS.M_WIRE_ONE_OF_EACH": {
+  "skill": "MATH.G6.GEOMET.3_D_OBJECTS.CUBOID_CUBE_PARTS",
+  "error": "Adds one length, one width and one height for the wire of all the edges of a cuboid.",
+  "example": {
+   "question": "A cuboid frame is 5 cm by 3 cm by 2 cm. What length of wire makes all its edges?",
+   "wrong_answer": "10 cm",
+   "correct_answer": "40 cm (4 x 5 + 4 x 3 + 4 x 2)"
+  },
+  "cause": "Counts one edge of each length, not four.",
+  "reveals": "The sum of the three lengths as an option.",
+  "help": "Run a finger along every edge of a box: there are 4 edges of each length.",
+  "source": "to be confirmed by a teacher (no source yet)",
+  "status": "draft"
+ },
+ "MATH.G6.GEOMET.3_D_OBJECTS.CYLINDER_PARTS.M_CURVED_SURFACE_NOT_COUNTED": {
+  "skill": "MATH.G6.GEOMET.3_D_OBJECTS.CYLINDER_PARTS",
+  "error": "Counts only the flat faces when asked for all the surfaces of a cylinder.",
+  "example": {
+   "question": "How many surfaces does a cylinder have in all?",
+   "wrong_answer": "2",
+   "correct_answer": "3 (2 flat faces and 1 curved surface)"
+  },
+  "cause": "Thinks only flat parts count as surfaces.",
+  "reveals": "Only the flat faces as an option.",
+  "help": "Wrap paper round a tin: the curved part is a surface too.",
+  "source": "to be confirmed by a teacher (no source yet)",
+  "status": "draft"
+ },
+ "MATH.G6.GEOMET.3_D_OBJECTS.CYLINDER_PARTS.M_SIDE_LINES_AS_EDGES": {
+  "skill": "MATH.G6.GEOMET.3_D_OBJECTS.CYLINDER_PARTS",
+  "error": "Counts the two straight side lines of a drawing as edges of the cylinder.",
+  "example": {
+   "question": "How many edges does a cylinder have, and what kind?",
+   "wrong_answer": "2 straight edges down the sides (from the drawing)",
+   "correct_answer": "2 curved edges, one round each end"
+  },
+  "cause": "Reads the outline of the drawing as edges.",
+  "reveals": "Straight edges as an option.",
+  "help": "Run a finger down the side of a tin: there is no edge, it is smooth. The edges are where the flat ends meet the curve.",
+  "source": "to be confirmed by a teacher (no source yet)",
+  "status": "draft"
+ },
+ "MATH.G6.GEOMET.3_D_OBJECTS.PLANE_FIGURES_IN_SOLIDS.M_CUBOID_ALL_SQUARES": {
+  "skill": "MATH.G6.GEOMET.3_D_OBJECTS.PLANE_FIGURES_IN_SOLIDS",
+  "error": "Says all the faces of a cuboid are squares.",
+  "example": {
+   "question": "What shape are the faces of a chalk box (a cuboid)?",
+   "wrong_answer": "squares",
+   "correct_answer": "rectangles (two of them may be squares)"
+  },
+  "cause": "Mixes up the cube and the cuboid.",
+  "reveals": "Squares for a cuboid as an option.",
+  "help": "Measure the sides of a face: a square has all four sides equal.",
+  "source": "to be confirmed by a teacher (no source yet)",
+  "status": "draft"
+ },
+ "MATH.G6.GEOMET.3_D_OBJECTS.PLANE_FIGURES_IN_SOLIDS.M_PYRAMID_ALL_TRIANGLES": {
+  "skill": "MATH.G6.GEOMET.3_D_OBJECTS.PLANE_FIGURES_IN_SOLIDS",
+  "error": "Says all the faces of a square-based pyramid are triangles.",
+  "example": {
+   "question": "What are the faces of a square-based pyramid?",
+   "wrong_answer": "5 triangles",
+   "correct_answer": "4 triangles and 1 square"
+  },
+  "cause": "Remembers a pyramid as \"triangles\" and forgets the base.",
+  "reveals": "All triangles as an option.",
+  "help": "Stand the pyramid on the table and look at the face it stands on.",
+  "source": "to be confirmed by a teacher (no source yet)",
+  "status": "draft"
+ },
  "MATH.G6.DATA_H.BAR_GRAPHS.FREQUENCY_TABLE.M_ADD_VALUES_NOT_FREQUENCIES": {
   "skill": "MATH.G6.DATA_H.BAR_GRAPHS.FREQUENCY_TABLE",
   "error": "Adds the values (0, 1, 2, ...) instead of the frequencies to find the number of learners.",

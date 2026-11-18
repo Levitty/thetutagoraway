@@ -9659,6 +9659,371 @@ export const TEACHING_PACK_G6 = {
   "sub_strand": "MATH.G6.GEOMET.ANGLES",
   "sub_strand_name": "Angles",
   "status": "draft: written 18 Nov 2026 offline for Grade 6; not yet checked by a Kenyan maths teacher; not loaded by the live tutor"
+ },
+ "MATH.G6.GEOMET.3_D_OBJECTS.CUBOID_CUBE_PARTS": {
+  "skill": "MATH.G6.GEOMET.3_D_OBJECTS.CUBOID_CUBE_PARTS",
+  "key_step": "The child counts faces, edges and vertices on a real box by marking each one, and says a cube and a cuboid both have 6 faces, 12 edges and 8 vertices.",
+  "floor": {
+   "prerequisite": "Names a cube and a cuboid.",
+   "question": "What is a dice: a cube or a cylinder?",
+   "answer": "a cube"
+  },
+  "representations": [
+   "a chalk box marked with chalk",
+   "a drawing of a cuboid with hidden edges dashed",
+   "a net of a cube"
+  ],
+  "steps": [
+   "Faces: the flat sides. Count them, marking each.",
+   "Edges: where two faces meet. There are 4 of each length.",
+   "Vertices: the corners. 4 on top, 4 at the bottom.",
+   "In a drawing, count the dashed hidden parts too."
+  ],
+  "contexts": [
+   "a chalk box",
+   "a box of exercise books",
+   "a wire frame for a model house"
+  ],
+  "board": [
+   {
+    "beat": "draw",
+    "do": "Draw a cuboid with the hidden edges dashed."
+   },
+   {
+    "beat": "point",
+    "do": "Point at the top face.",
+    "say": "How many edges are round the top?"
+   },
+   {
+    "beat": "count",
+    "do": "Count the edges with the child: top, bottom, sides."
+   },
+   {
+    "beat": "pause",
+    "do": "Wait for 12."
+   },
+   {
+    "beat": "predict",
+    "do": "Ask how many vertices there are."
+   }
+  ],
+  "misconceptions": [
+   {
+    "code": "MATH.G6.GEOMET.3_D_OBJECTS.CUBOID_CUBE_PARTS.M_EDGES_AS_FACES",
+    "listen_for": [
+     "12 faces"
+    ],
+    "ask": "Is a face a flat side or a line?",
+    "repair": "Faces are the flat sides: 6.",
+    "error": "Counts edges where faces are asked (or the reverse).",
+    "example": {
+     "question": "Faces of a cube?",
+     "wrong_answer": "12",
+     "correct_answer": "6"
+    }
+   },
+   {
+    "code": "MATH.G6.GEOMET.3_D_OBJECTS.CUBOID_CUBE_PARTS.M_HIDDEN_EDGES_MISSED",
+    "listen_for": [
+     "9 edges"
+    ],
+    "ask": "What about the dashed lines at the back?",
+    "repair": "Count the hidden edges too: 12.",
+    "error": "Counts only the edges that can be seen in a drawing, giving 9 instead of 12.",
+    "example": {
+     "question": "Edges of a cuboid drawn on paper",
+     "wrong_answer": "9",
+     "correct_answer": "12"
+    }
+   },
+   {
+    "code": "MATH.G6.GEOMET.3_D_OBJECTS.CUBOID_CUBE_PARTS.M_HIDDEN_VERTEX_MISSED",
+    "listen_for": [
+     "7 corners"
+    ],
+    "ask": "Is there a corner at the back you cannot see?",
+    "repair": "4 on top and 4 at the bottom: 8.",
+    "error": "Counts only the vertices that can be seen in a drawing.",
+    "example": {
+     "question": "How many vertices has the cube in this drawing?",
+     "wrong_answer": "7",
+     "correct_answer": "8"
+    }
+   },
+   {
+    "code": "MATH.G6.GEOMET.3_D_OBJECTS.CUBOID_CUBE_PARTS.M_WIRE_ONE_OF_EACH",
+    "listen_for": [
+     "10 cm",
+     "add the three"
+    ],
+    "ask": "How many edges are 5 cm long?",
+    "repair": "4 of each length: 4 x (5 + 3 + 2) = 40 cm.",
+    "error": "Adds one length, one width and one height for the wire of all the edges of a cuboid.",
+    "example": {
+     "question": "A cuboid frame is 5 cm by 3 cm by 2 cm. What length of wire makes all its edges?",
+     "wrong_answer": "10 cm",
+     "correct_answer": "40 cm (4 x 5 + 4 x 3 + 4 x 2)"
+    }
+   }
+  ],
+  "checks": [
+   {
+    "question": "How many faces has a cube?",
+    "answer": "6",
+    "shows": "faces"
+   },
+   {
+    "question": "A cuboid frame is 5 cm by 3 cm by 2 cm. What length of wire makes all its edges?",
+    "answer": "40 cm",
+    "shows": "4 edges of each length"
+   }
+  ],
+  "name": "Vertices, faces and edges of cuboids and cubes",
+  "sub_strand": "MATH.G6.GEOMET.3_D_OBJECTS",
+  "sub_strand_name": "3-D Objects",
+  "status": "draft: written 18 Nov 2026 offline for Grade 6; not yet checked by a Kenyan maths teacher; not loaded by the live tutor"
+ },
+ "MATH.G6.GEOMET.3_D_OBJECTS.CYLINDER_PARTS": {
+  "skill": "MATH.G6.GEOMET.3_D_OBJECTS.CYLINDER_PARTS",
+  "key_step": "The child says a cylinder has 2 flat circular faces, 1 curved surface and 2 curved edges, and no vertices, by feeling a tin.",
+  "floor": {
+   "prerequisite": "Knows the parts of a cuboid.",
+   "question": "How many vertices has a cuboid?",
+   "answer": "8"
+  },
+  "representations": [
+   "a tin or a piece of pipe",
+   "paper wrapped round a tin and unrolled",
+   "a drawing with the ends as ovals"
+  ],
+  "steps": [
+   "Feel the flat ends: 2 circular faces.",
+   "Feel the side: 1 curved surface.",
+   "Feel where the ends meet the side: 2 curved edges.",
+   "Look for corners: there are none."
+  ],
+  "contexts": [
+   "a tin of cooking fat",
+   "a water pipe",
+   "a drum"
+  ],
+  "board": [
+   {
+    "beat": "draw",
+    "do": "Draw a cylinder."
+   },
+   {
+    "beat": "point",
+    "do": "Point at the side lines of the drawing.",
+    "say": "If you run a finger down a real tin, is there an edge here?"
+   },
+   {
+    "beat": "pause",
+    "do": "Wait for the child to say no."
+   },
+   {
+    "beat": "point",
+    "do": "Point at the top circle.",
+    "say": "Where are the edges?"
+   },
+   {
+    "beat": "predict",
+    "do": "Ask how many vertices a cylinder has."
+   }
+  ],
+  "misconceptions": [
+   {
+    "code": "MATH.G6.GEOMET.3_D_OBJECTS.CYLINDER_PARTS.M_CYLINDER_THREE_FACES_ALL_FLAT",
+    "listen_for": [
+     "3 flat faces"
+    ],
+    "ask": "Is the side of a tin flat?",
+    "repair": "2 flat faces and 1 curved surface.",
+    "error": "Counts the curved surface as a flat face or says it has no faces at all.",
+    "example": {
+     "question": "How many flat faces has a cylinder?",
+     "wrong_answer": "3",
+     "correct_answer": "2"
+    }
+   },
+   {
+    "code": "MATH.G6.GEOMET.3_D_OBJECTS.CYLINDER_PARTS.M_CYLINDER_HAS_VERTICES",
+    "listen_for": [
+     "2 vertices"
+    ],
+    "ask": "Is there a sharp corner anywhere on a tin?",
+    "repair": "A cylinder has no vertices.",
+    "error": "Says a cylinder has vertices where the flat and curved parts meet.",
+    "example": {
+     "question": "Vertices of a cylinder?",
+     "wrong_answer": "2",
+     "correct_answer": "0"
+    }
+   },
+   {
+    "code": "MATH.G6.GEOMET.3_D_OBJECTS.CYLINDER_PARTS.M_CURVED_SURFACE_NOT_COUNTED",
+    "listen_for": [
+     "2 surfaces"
+    ],
+    "ask": "Is the paper round the tin on a surface?",
+    "repair": "The curved side is a surface: 3 in all.",
+    "error": "Counts only the flat faces when asked for all the surfaces of a cylinder.",
+    "example": {
+     "question": "How many surfaces does a cylinder have in all?",
+     "wrong_answer": "2",
+     "correct_answer": "3 (2 flat faces and 1 curved surface)"
+    }
+   },
+   {
+    "code": "MATH.G6.GEOMET.3_D_OBJECTS.CYLINDER_PARTS.M_SIDE_LINES_AS_EDGES",
+    "listen_for": [
+     "straight edges"
+    ],
+    "ask": "Can you feel an edge down the side of the tin?",
+    "repair": "The edges are the two circles at the ends.",
+    "error": "Counts the two straight side lines of a drawing as edges of the cylinder.",
+    "example": {
+     "question": "How many edges does a cylinder have, and what kind?",
+     "wrong_answer": "2 straight edges down the sides (from the drawing)",
+     "correct_answer": "2 curved edges, one round each end"
+    }
+   }
+  ],
+  "checks": [
+   {
+    "question": "How many flat faces has a cylinder?",
+    "answer": "2",
+    "shows": "flat faces"
+   },
+   {
+    "question": "How many vertices has a cylinder?",
+    "answer": "0",
+    "shows": "no corners"
+   }
+  ],
+  "name": "Faces and edges of cylinders",
+  "sub_strand": "MATH.G6.GEOMET.3_D_OBJECTS",
+  "sub_strand_name": "3-D Objects",
+  "status": "draft: written 18 Nov 2026 offline for Grade 6; not yet checked by a Kenyan maths teacher; not loaded by the live tutor"
+ },
+ "MATH.G6.GEOMET.3_D_OBJECTS.PLANE_FIGURES_IN_SOLIDS": {
+  "skill": "MATH.G6.GEOMET.3_D_OBJECTS.PLANE_FIGURES_IN_SOLIDS",
+  "key_step": "The child traces round each face of a solid on paper and names the flat shape it makes.",
+  "floor": {
+   "prerequisite": "Names squares, rectangles, triangles and circles.",
+   "question": "What shape has four equal sides and four right angles?",
+   "answer": "a square"
+  },
+  "representations": [
+   "faces of real solids traced on paper",
+   "a table: solid and the shapes of its faces",
+   "nets of solids"
+  ],
+  "steps": [
+   "Put the solid on paper and trace round one face.",
+   "Name the flat shape.",
+   "Do the same for every face.",
+   "A solid is not a face: name the flat shape."
+  ],
+  "contexts": [
+   "a dice",
+   "a chalk box",
+   "a tin",
+   "a pyramid-shaped tea packet"
+  ],
+  "board": [
+   {
+    "beat": "draw",
+    "do": "Draw the outline of a chalk box face traced on paper."
+   },
+   {
+    "beat": "point",
+    "do": "Point at the outline.",
+    "say": "What flat shape is this?"
+   },
+   {
+    "beat": "pause",
+    "do": "Wait for the child to name it."
+   },
+   {
+    "beat": "child_draws",
+    "do": "Ask the child to trace round the other faces of a box at home."
+   }
+  ],
+  "misconceptions": [
+   {
+    "code": "MATH.G6.GEOMET.3_D_OBJECTS.PLANE_FIGURES_IN_SOLIDS.M_FACE_AS_SOLID",
+    "listen_for": [
+     "cube"
+    ],
+    "ask": "Is the trace on the paper flat or solid?",
+    "repair": "A face is a flat shape: a square.",
+    "error": "Names a 3-D solid where a plane figure is asked (cube for square).",
+    "example": {
+     "question": "Shape of one face of a cube?",
+     "wrong_answer": "cube",
+     "correct_answer": "square"
+    }
+   },
+   {
+    "code": "MATH.G6.GEOMET.3_D_OBJECTS.PLANE_FIGURES_IN_SOLIDS.M_CYLINDER_FACE_OVAL",
+    "listen_for": [
+     "oval"
+    ],
+    "ask": "Trace round the end of the tin: what shape is it?",
+    "repair": "The flat end of a cylinder is a circle.",
+    "error": "Names the flat end of a cylinder as an oval or a sphere.",
+    "example": {
+     "question": "Shape of the flat end of a tin?",
+     "wrong_answer": "oval",
+     "correct_answer": "circle"
+    }
+   },
+   {
+    "code": "MATH.G6.GEOMET.3_D_OBJECTS.PLANE_FIGURES_IN_SOLIDS.M_CUBOID_ALL_SQUARES",
+    "listen_for": [
+     "squares"
+    ],
+    "ask": "Are all four sides of the face equal?",
+    "repair": "A cuboid has rectangular faces.",
+    "error": "Says all the faces of a cuboid are squares.",
+    "example": {
+     "question": "What shape are the faces of a chalk box (a cuboid)?",
+     "wrong_answer": "squares",
+     "correct_answer": "rectangles (two of them may be squares)"
+    }
+   },
+   {
+    "code": "MATH.G6.GEOMET.3_D_OBJECTS.PLANE_FIGURES_IN_SOLIDS.M_PYRAMID_ALL_TRIANGLES",
+    "listen_for": [
+     "5 triangles"
+    ],
+    "ask": "What shape is the face it stands on?",
+    "repair": "4 triangles and a square base.",
+    "error": "Says all the faces of a square-based pyramid are triangles.",
+    "example": {
+     "question": "What are the faces of a square-based pyramid?",
+     "wrong_answer": "5 triangles",
+     "correct_answer": "4 triangles and 1 square"
+    }
+   }
+  ],
+  "checks": [
+   {
+    "question": "What shape is a face of a cube?",
+    "answer": "a square",
+    "shows": "name the plane figure"
+   },
+   {
+    "question": "What are the faces of a square-based pyramid?",
+    "answer": "4 triangles and 1 square",
+    "shows": "the base too"
+   }
+  ],
+  "name": "Describe plane figures in 3-D objects",
+  "sub_strand": "MATH.G6.GEOMET.3_D_OBJECTS",
+  "sub_strand_name": "3-D Objects",
+  "status": "draft: written 18 Nov 2026 offline for Grade 6; not yet checked by a Kenyan maths teacher; not loaded by the live tutor"
  }
 };
 export default TEACHING_PACK_G6;
