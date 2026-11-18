@@ -1,0 +1,177 @@
+{
+ "sub_strand": "ENGL.G4.READIN.T1_EXTENSIVE_READING",
+ "title": "Extensive Reading (Theme 1: The family)",
+ "status": "draft: written 18 Nov 2026 offline for Grade 4 English; not yet checked by a Kenyan English teacher; not loaded by the live tutor",
+ "notes": "",
+ "skills": [
+  {
+   "skill": "ENGL.G4.READIN.T1_EXTENSIVE_READING.DICTIONARY_USE",
+   "assessed_by": "questions",
+   "key_step": "The child looks at the second and third letters to order words, then checks the guide words.",
+   "floor": {
+    "prerequisite": "Knows alphabetical order.",
+    "question": "Which comes first: cat or dog?",
+    "answer": "cat"
+   },
+   "steps": [
+    "Order by first letter.",
+    "If the same, use the second letter.",
+    "Use the guide words.",
+    "Choose the meaning that fits."
+   ],
+   "contexts": [
+    "a school dictionary",
+    "a word wall in class"
+   ],
+   "board": [
+    {
+     "beat": "write",
+     "do": "Write: bat, bag, ball."
+    },
+    {
+     "beat": "point",
+     "do": "Point at the second letters.",
+     "say": "They are the same. Look at the third letter."
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for the order."
+    },
+    {
+     "beat": "child_draws",
+     "do": "The child writes bag, ball, bat."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "ENGL.G4.READIN.T1_EXTENSIVE_READING.DICTIONARY_USE.M_DIC_ALPHA_FIRST_LETTER",
+     "listen_for": [
+      "bat, bag, ball"
+     ],
+     "ask": "Are the first letters the same?",
+     "repair": "Look at the next letter."
+    },
+    {
+     "code": "ENGL.G4.READIN.T1_EXTENSIVE_READING.DICTIONARY_USE.M_DIC_GUIDE_WORDS",
+     "listen_for": [
+      "Yes"
+     ],
+     "ask": "Does it fall between the guide words?",
+     "repair": "Check both."
+    },
+    {
+     "code": "ENGL.G4.READIN.T1_EXTENSIVE_READING.DICTIONARY_USE.M_DIC_WRONG_MEANING",
+     "listen_for": [
+      "a long walk"
+     ],
+     "ask": "Does it fit the sentence?",
+     "repair": "Try each meaning."
+    },
+    {
+     "code": "ENGL.G4.READIN.T1_EXTENSIVE_READING.DICTIONARY_USE.M4_DIC_FIRST_MEANING",
+     "listen_for": [
+      "a place that keeps money"
+     ],
+     "ask": "Did you read every meaning?",
+     "repair": "Pick the one that fits."
+    }
+   ],
+   "checks": [
+    {
+     "question": "Order: pen, pea, pet",
+     "answer": "pea, pen, pet",
+     "shows": "order"
+    },
+    {
+     "question": "Guide words: apple to arm. Is \"ant\" on this page?",
+     "answer": "yes",
+     "shows": "guide words"
+    }
+   ]
+  },
+  {
+   "skill": "ENGL.G4.READIN.T1_EXTENSIVE_READING.REFERENCE_MATERIALS",
+   "assessed_by": "questions",
+   "key_step": "The child says what he or she wants to find, then picks the book made for that.",
+   "floor": {
+    "prerequisite": "Uses a dictionary.",
+    "question": "Where do you find what a word means?",
+    "answer": "dictionary"
+   },
+   "steps": [
+    "Say what you want.",
+    "Match it to the book type.",
+    "Check the contents."
+   ],
+   "contexts": [
+    "the school library",
+    "a project on animals"
+   ],
+   "board": [
+    {
+     "beat": "write",
+     "do": "Write: meaning, facts, places."
+    },
+    {
+     "beat": "point",
+     "do": "Point at facts.",
+     "say": "Which book has facts?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for encyclopaedia."
+    },
+    {
+     "beat": "child_draws",
+     "do": "The child matches places to atlas."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "ENGL.G4.READIN.T1_EXTENSIVE_READING.REFERENCE_MATERIALS.M_REF_DICTIONARY_FOR_FACTS",
+     "listen_for": [
+      "a dictionary"
+     ],
+     "ask": "Does a dictionary give facts?",
+     "repair": "Meanings only."
+    },
+    {
+     "code": "ENGL.G4.READIN.T1_EXTENSIVE_READING.REFERENCE_MATERIALS.M_REF_ATLAS_FOR_WORDS",
+     "listen_for": [
+      "a dictionary"
+     ],
+     "ask": "Does an atlas give meanings?",
+     "repair": "Maps only."
+    },
+    {
+     "code": "ENGL.G4.READIN.T1_EXTENSIVE_READING.REFERENCE_MATERIALS.M_REF_STORY_FOR_FACTS",
+     "listen_for": [
+      "a story book"
+     ],
+     "ask": "Is a story true?",
+     "repair": "Use a fact book."
+    },
+    {
+     "code": "ENGL.G4.READIN.T1_EXTENSIVE_READING.REFERENCE_MATERIALS.M_REF_NEWSPAPER_OLD",
+     "listen_for": [
+      "a dictionary"
+     ],
+     "ask": "Does it change every day?",
+     "repair": "No: a reference book."
+    }
+   ],
+   "checks": [
+    {
+     "question": "Where is Lake Turkana on a map?",
+     "answer": "an atlas",
+     "shows": "atlas"
+    },
+    {
+     "question": "Facts about the elephant?",
+     "answer": "an encyclopaedia",
+     "shows": "encyclopaedia"
+    }
+   ]
+  }
+ ]
+}

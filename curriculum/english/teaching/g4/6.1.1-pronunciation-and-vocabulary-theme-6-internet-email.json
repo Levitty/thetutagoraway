@@ -1,0 +1,177 @@
+{
+ "sub_strand": "ENGL.G4.LISTEN.T6_PRONUNCIATION_AND_VO",
+ "title": "Pronunciation and Vocabulary (Theme 6: Internet-email)",
+ "status": "draft: written 18 Nov 2026 offline for Grade 4 English; not yet checked by a Kenyan English teacher; not loaded by the live tutor",
+ "notes": "",
+ "skills": [
+  {
+   "skill": "ENGL.G4.LISTEN.T6_PRONUNCIATION_AND_VO.INTERNET_WORDS",
+   "assessed_by": "questions",
+   "key_step": "The child explains each internet word by what you do with it, and the safe choice.",
+   "floor": {
+    "prerequisite": "Knows phone words.",
+    "question": "What do you send from a phone?",
+    "answer": "a message"
+   },
+   "steps": [
+    "Name the word.",
+    "Say what you do with it.",
+    "Say the safe rule."
+   ],
+   "contexts": [
+    "sending an email",
+    "a stranger online"
+   ],
+   "board": [
+    {
+     "beat": "write",
+     "do": "Write: inbox, attachment, password."
+    },
+    {
+     "beat": "point",
+     "do": "Point at password.",
+     "say": "Who can you share it with?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for the answer."
+    },
+    {
+     "beat": "child_draws",
+     "do": "The child matches inbox to its meaning."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "ENGL.G4.LISTEN.T6_PRONUNCIATION_AND_VO.INTERNET_WORDS.M_NET_NEAR_MEANING",
+     "listen_for": [
+      "attachment"
+     ],
+     "ask": "What do you do with it?",
+     "repair": "Match the action."
+    },
+    {
+     "code": "ENGL.G4.LISTEN.T6_PRONUNCIATION_AND_VO.INTERNET_WORDS.M_NET_PASSWORD_SHARED",
+     "listen_for": [
+      "friends"
+     ],
+     "ask": "Who should know it?",
+     "repair": "No one but a trusted adult."
+    },
+    {
+     "code": "ENGL.G4.LISTEN.T6_PRONUNCIATION_AND_VO.INTERNET_WORDS.M_NET_STRANGER",
+     "listen_for": [
+      "tell him"
+     ],
+     "ask": "Do you know the person?",
+     "repair": "Tell an adult."
+    },
+    {
+     "code": "ENGL.G4.LISTEN.T6_PRONUNCIATION_AND_VO.INTERNET_WORDS.M4_NET_DOWNLOAD_UPLOAD",
+     "listen_for": [
+      "download"
+     ],
+     "ask": "Up or down?",
+     "repair": "Up goes out."
+    }
+   ],
+   "checks": [
+    {
+     "question": "A file sent with an email is an ...",
+     "answer": "attachment",
+     "shows": "word"
+    },
+    {
+     "question": "A stranger asks for your address online. You ...",
+     "answer": "do not answer and tell an adult",
+     "shows": "safety"
+    }
+   ]
+  },
+  {
+   "skill": "ENGL.G4.LISTEN.T6_PRONUNCIATION_AND_VO.INTONATION",
+   "assessed_by": "voice",
+   "key_step": "The child hears whether the voice goes up or down at the end and copies it.",
+   "floor": {
+    "prerequisite": "Asks WH questions.",
+    "question": "Make a question with where.",
+    "answer": "Where is ...?"
+   },
+   "steps": [
+    "Say a statement; the voice falls.",
+    "Say a yes or no question; it rises.",
+    "Say a WH question; it falls."
+   ],
+   "contexts": [
+    "asking a friend about email",
+    "a visitor at the gate",
+    "a phone call"
+   ],
+   "board": [
+    {
+     "beat": "draw",
+     "do": "Draw arrows: down for statements, up for yes or no."
+    },
+    {
+     "beat": "point",
+     "do": "Point at the up arrow.",
+     "say": "Say: Do you have a phone?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for the child to say it rising."
+    },
+    {
+     "beat": "child_draws",
+     "do": "The child draws the arrow for Where is the inbox?"
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "ENGL.G4.LISTEN.T6_PRONUNCIATION_AND_VO.INTONATION.M4_IN_WH_RISE",
+     "listen_for": [
+      "voice goes up at live"
+     ],
+     "ask": "Is it a WH question?",
+     "repair": "WH falls."
+    },
+    {
+     "code": "ENGL.G4.LISTEN.T6_PRONUNCIATION_AND_VO.INTONATION.M4_IN_FLAT",
+     "listen_for": [
+      "flat voice, no rise"
+     ],
+     "ask": "Did the voice move?",
+     "repair": "Lift it on the last word."
+    },
+    {
+     "code": "ENGL.G4.LISTEN.T6_PRONUNCIATION_AND_VO.INTONATION.M4_IN_STATEMENT_RISE",
+     "listen_for": [
+      "voice goes up at Eldoret"
+     ],
+     "ask": "Are you asking or telling?",
+     "repair": "Telling: down."
+    },
+    {
+     "code": "ENGL.G4.LISTEN.T6_PRONUNCIATION_AND_VO.INTONATION.M4_IN_WRONG_WORD",
+     "listen_for": [
+      "I sent THE email yesterday"
+     ],
+     "ask": "Which word matters most?",
+     "repair": "Make that word strong."
+    }
+   ],
+   "checks": [
+    {
+     "question": "Where do you live? Up or down at the end?",
+     "answer": "down",
+     "shows": "WH"
+    },
+    {
+     "question": "Can you send an email? Up or down?",
+     "answer": "up",
+     "shows": "yes or no"
+    }
+   ]
+  }
+ ]
+}

@@ -1,0 +1,178 @@
+{
+ "sub_strand": "ENGL.G4.LISTEN.T4_PRONUNCIATION_AND_VO",
+ "title": "Pronunciation and Vocabulary (Theme 4: Accidents- first aid)",
+ "status": "draft: written 18 Nov 2026 offline for Grade 4 English; not yet checked by a Kenyan English teacher; not loaded by the live tutor",
+ "notes": "",
+ "skills": [
+  {
+   "skill": "ENGL.G4.LISTEN.T4_PRONUNCIATION_AND_VO.FIRST_AID_WORDS",
+   "assessed_by": "questions",
+   "key_step": "The child matches each first aid word to what it is for in a real accident.",
+   "floor": {
+    "prerequisite": "Knows body words.",
+    "question": "Where is your knee?",
+    "answer": "points"
+   },
+   "steps": [
+    "Show the object or picture.",
+    "Say what it is for.",
+    "Use it in a sentence."
+   ],
+   "contexts": [
+    "the first aid box",
+    "a fall in the playground"
+   ],
+   "board": [
+    {
+     "beat": "draw",
+     "do": "Draw a plaster and a bandage."
+    },
+    {
+     "beat": "point",
+     "do": "Point at the bandage.",
+     "say": "When do we use it?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for an answer."
+    },
+    {
+     "beat": "child_draws",
+     "do": "The child labels a sling."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "ENGL.G4.LISTEN.T4_PRONUNCIATION_AND_VO.FIRST_AID_WORDS.M_FA_NEAR_MEANING",
+     "listen_for": [
+      "bruise"
+     ],
+     "ask": "What is it for?",
+     "repair": "Match it."
+    },
+    {
+     "code": "ENGL.G4.LISTEN.T4_PRONUNCIATION_AND_VO.FIRST_AID_WORDS.M_FA_WOUND_BRUISE",
+     "listen_for": [
+      "wound"
+     ],
+     "ask": "Is the skin broken?",
+     "repair": "Wound if broken."
+    },
+    {
+     "code": "ENGL.G4.LISTEN.T4_PRONUNCIATION_AND_VO.FIRST_AID_WORDS.M_FA_SPRAIN_BREAK",
+     "listen_for": [
+      "ambulance"
+     ],
+     "ask": "Is the bone broken?",
+     "repair": "Sprain if not."
+    },
+    {
+     "code": "ENGL.G4.LISTEN.T4_PRONUNCIATION_AND_VO.FIRST_AID_WORDS.M4_FA_BANDAGE_PLASTER",
+     "listen_for": [
+      "bandage"
+     ],
+     "ask": "Does it stick or wrap?",
+     "repair": "Plaster sticks."
+    }
+   ],
+   "checks": [
+    {
+     "question": "A blue mark after a knock is a ...",
+     "answer": "bruise",
+     "shows": "bruise"
+    },
+    {
+     "question": "An ankle twisted but not broken is a ...",
+     "answer": "sprain",
+     "shows": "sprain"
+    }
+   ]
+  },
+  {
+   "skill": "ENGL.G4.LISTEN.T4_PRONUNCIATION_AND_VO.WORD_STRESS",
+   "assessed_by": "voice",
+   "key_step": "The child claps the syllables and makes one clap strong.",
+   "floor": {
+    "prerequisite": "Splits a word into syllables.",
+    "question": "How many beats in \"hospital\"?",
+    "answer": "3"
+   },
+   "steps": [
+    "Clap the syllables.",
+    "Find the strong one.",
+    "Say it with one strong beat.",
+    "Say it in a sentence."
+   ],
+   "contexts": [
+    "an ambulance on the road",
+    "a bandage in the first aid box",
+    "the hospital in town"
+   ],
+   "board": [
+    {
+     "beat": "write",
+     "do": "Write: hos-pi-tal."
+    },
+    {
+     "beat": "point",
+     "do": "Point at hos.",
+     "say": "Clap with me: HOS-pi-tal."
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for the child to clap and say."
+    },
+    {
+     "beat": "child_draws",
+     "do": "The child underlines the strong part of accident."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "ENGL.G4.LISTEN.T4_PRONUNCIATION_AND_VO.WORD_STRESS.M4_WS_EQUAL",
+     "listen_for": [
+      "HOS-PI-TAL (all equal)"
+     ],
+     "ask": "Was every clap the same?",
+     "repair": "One loud, two soft."
+    },
+    {
+     "code": "ENGL.G4.LISTEN.T4_PRONUNCIATION_AND_VO.WORD_STRESS.M4_WS_SECOND",
+     "listen_for": [
+      "ac-CI-dent"
+     ],
+     "ask": "Where is the loud clap?",
+     "repair": "At the start: AC."
+    },
+    {
+     "code": "ENGL.G4.LISTEN.T4_PRONUNCIATION_AND_VO.WORD_STRESS.M4_WS_LAST",
+     "listen_for": [
+      "ban-DAGE"
+     ],
+     "ask": "Is the end strong?",
+     "repair": "BAN-dage."
+    },
+    {
+     "code": "ENGL.G4.LISTEN.T4_PRONUNCIATION_AND_VO.WORD_STRESS.M4_WS_SPELLING_VOWEL",
+     "listen_for": [
+      "am-bu-LANCE with a full a"
+     ],
+     "ask": "Is the last part quick?",
+     "repair": "Soft and short."
+    }
+   ],
+   "checks": [
+    {
+     "question": "Say: bandage. Which part is strong?",
+     "answer": "BAN",
+     "shows": "stress"
+    },
+    {
+     "question": "Say: ambulance.",
+     "answer": "AM-bu-lance",
+     "shows": "stress"
+    }
+   ]
+  }
+ ]
+}

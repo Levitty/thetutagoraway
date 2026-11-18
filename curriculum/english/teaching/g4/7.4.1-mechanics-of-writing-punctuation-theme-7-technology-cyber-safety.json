@@ -1,0 +1,100 @@
+{
+ "sub_strand": "ENGL.G4.WRITIN.T7_MECHANICS_OF_WRITING",
+ "title": "Mechanics of writing: Punctuation (Theme 7: Technology- cyber safety)",
+ "status": "draft: written 18 Nov 2026 offline for Grade 4 English; not yet checked by a Kenyan English teacher; not loaded by the live tutor",
+ "notes": "",
+ "skills": [
+  {
+   "skill": "ENGL.G4.WRITIN.T7_MECHANICS_OF_WRITING.CAPITALS_FULL_STOPS",
+   "assessed_by": "questions",
+   "key_step": "The child checks each sentence: capital at the start, full stop at the end, capitals for names and I.",
+   "floor": {
+    "prerequisite": "Writes sentences.",
+    "question": "Write a sentence.",
+    "answer": "a sentence"
+   },
+   "steps": [
+    "Capital to start.",
+    "Full stop to end.",
+    "Capitals for names and I."
+   ],
+   "contexts": [
+    "a class news board",
+    "an SMS"
+   ],
+   "board": [
+    {
+     "beat": "write",
+     "do": "Write: we went to nakuru"
+    },
+    {
+     "beat": "point",
+     "do": "Point at we.",
+     "say": "What does a sentence start with?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for a capital."
+    },
+    {
+     "beat": "child_draws",
+     "do": "The child corrects nakuru and adds the full stop."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "ENGL.G4.WRITIN.T7_MECHANICS_OF_WRITING.CAPITALS_FULL_STOPS.M_PUN_NO_CAPITAL_START",
+     "listen_for": [
+      "we went to the lake."
+     ],
+     "ask": "How does a sentence start?",
+     "repair": "A capital."
+    },
+    {
+     "code": "ENGL.G4.WRITIN.T7_MECHANICS_OF_WRITING.CAPITALS_FULL_STOPS.M_PUN_NO_FULL_STOP",
+     "listen_for": [
+      "Mum is at work"
+     ],
+     "ask": "How does it end?",
+     "repair": "A full stop."
+    },
+    {
+     "code": "ENGL.G4.WRITIN.T7_MECHANICS_OF_WRITING.CAPITALS_FULL_STOPS.M_PUN_CAPITAL_MID",
+     "listen_for": [
+      "My Mother went to the Market."
+     ],
+     "ask": "Is it a name?",
+     "repair": "Small letter."
+    },
+    {
+     "code": "ENGL.G4.WRITIN.T7_MECHANICS_OF_WRITING.CAPITALS_FULL_STOPS.M_PUN_NAME_LOWER",
+     "listen_for": [
+      "We live in nairobi."
+     ],
+     "ask": "Is it a name?",
+     "repair": "Capital."
+    },
+    {
+     "code": "ENGL.G4.WRITIN.T7_MECHANICS_OF_WRITING.CAPITALS_FULL_STOPS.M_PUN_I_LOWER",
+     "listen_for": [
+      "Today i played football."
+     ],
+     "ask": "How do we write I?",
+     "repair": "Always capital."
+    }
+   ],
+   "checks": [
+    {
+     "question": "Correct: my brother lives in kisumu",
+     "answer": "My brother lives in Kisumu.",
+     "shows": "capitals"
+    },
+    {
+     "question": "Correct: Today i ate",
+     "answer": "Today I ate.",
+     "shows": "I"
+    }
+   ]
+  }
+ ]
+}

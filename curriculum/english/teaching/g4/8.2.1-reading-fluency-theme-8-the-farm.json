@@ -1,0 +1,94 @@
+{
+ "sub_strand": "ENGL.G4.READIN.T8_READING_FLUENCY",
+ "title": "Reading Fluency (Theme 8: The farm)",
+ "status": "draft: written 18 Nov 2026 offline for Grade 4 English; not yet checked by a Kenyan English teacher; not loaded by the live tutor",
+ "notes": "",
+ "skills": [
+  {
+   "skill": "ENGL.G4.READIN.T8_READING_FLUENCY.READ_FLUENTLY",
+   "assessed_by": "voice",
+   "key_step": "The child reads in phrases, pauses at punctuation and lets the voice show meaning.",
+   "floor": {
+    "prerequisite": "Reads Grade 3 words.",
+    "question": "Read: The cow is big.",
+    "answer": "reads it"
+   },
+   "steps": [
+    "Model the text.",
+    "Read together.",
+    "Child reads alone.",
+    "Reread for speed and expression."
+   ],
+   "contexts": [
+    "a story about a farm",
+    "a poem with proverbs",
+    "a dialogue"
+   ],
+   "board": [
+    {
+     "beat": "write",
+     "do": "Write: The cows went down / to the river."
+    },
+    {
+     "beat": "point",
+     "do": "Point at the slash.",
+     "say": "Read up to here, then on."
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for the child to read."
+    },
+    {
+     "beat": "child_draws",
+     "do": "The child marks the pauses in the next sentence."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "ENGL.G4.READIN.T8_READING_FLUENCY.READ_FLUENTLY.M4_RF_WORD_BY_WORD",
+     "listen_for": [
+      "The. cows. went. down. to. the. river."
+     ],
+     "ask": "Which words go together?",
+     "repair": "Read the group."
+    },
+    {
+     "code": "ENGL.G4.READIN.T8_READING_FLUENCY.READ_FLUENTLY.M4_RF_IGNORES_STOPS",
+     "listen_for": [
+      "It rained the farmers were happy"
+     ],
+     "ask": "What does the dot say?",
+     "repair": "Stop."
+    },
+    {
+     "code": "ENGL.G4.READIN.T8_READING_FLUENCY.READ_FLUENTLY.M4_RF_FLAT",
+     "listen_for": [
+      "flat voice for the whole line"
+     ],
+     "ask": "Is it a question?",
+     "repair": "Let the voice ask."
+    },
+    {
+     "code": "ENGL.G4.READIN.T8_READING_FLUENCY.READ_FLUENTLY.M4_RF_TOO_FAST",
+     "listen_for": [
+      "The goat ate green grass. (the skipped)"
+     ],
+     "ask": "Did you read every word?",
+     "repair": "Talking speed."
+    }
+   ],
+   "checks": [
+    {
+     "question": "Read: \"Run!\" shouted the farmer.",
+     "answer": "loud, excited voice",
+     "shows": "expression"
+    },
+    {
+     "question": "Read a 300-word text",
+     "answer": "most words right, pauses at stops",
+     "shows": "fluency"
+    }
+   ]
+  }
+ ]
+}

@@ -1,0 +1,180 @@
+{
+ "sub_strand": "ENGL.G4.LISTEN.T5_PRONUNCIATION_AND_VO",
+ "title": "Pronunciation and Vocabulary: (Theme 5: Nutrition – balanced diet)",
+ "status": "draft: written 18 Nov 2026 offline for Grade 4 English; not yet checked by a Kenyan English teacher; not loaded by the live tutor",
+ "notes": "",
+ "skills": [
+  {
+   "skill": "ENGL.G4.LISTEN.T5_PRONUNCIATION_AND_VO.NUTRITION_WORDS",
+   "assessed_by": "questions",
+   "key_step": "The child says what each food does for the body, then names the group.",
+   "floor": {
+    "prerequisite": "Names foods.",
+    "question": "Name a fruit.",
+    "answer": "mango"
+   },
+   "steps": [
+    "Name the food.",
+    "Say what it does.",
+    "Name the group."
+   ],
+   "contexts": [
+    "school lunch",
+    "a family meal"
+   ],
+   "board": [
+    {
+     "beat": "draw",
+     "do": "Draw a plate in three parts."
+    },
+    {
+     "beat": "point",
+     "do": "Point at the body-building part.",
+     "say": "Which food goes here?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for beans or eggs."
+    },
+    {
+     "beat": "child_draws",
+     "do": "The child fills the other parts."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "ENGL.G4.LISTEN.T5_PRONUNCIATION_AND_VO.NUTRITION_WORDS.M_NUT_NEAR_MEANING",
+     "listen_for": [
+      "carbohydrates"
+     ],
+     "ask": "What does it do in the body?",
+     "repair": "Match the group."
+    },
+    {
+     "code": "ENGL.G4.LISTEN.T5_PRONUNCIATION_AND_VO.NUTRITION_WORDS.M_NUT_VITAMIN_FIBRE",
+     "listen_for": [
+      "Fibre"
+     ],
+     "ask": "Does it protect or help digestion?",
+     "repair": "Vitamins protect."
+    },
+    {
+     "code": "ENGL.G4.LISTEN.T5_PRONUNCIATION_AND_VO.NUTRITION_WORDS.M_NUT_BALANCED",
+     "listen_for": [
+      "only ugali"
+     ],
+     "ask": "One food or many?",
+     "repair": "All groups."
+    },
+    {
+     "code": "ENGL.G4.LISTEN.T5_PRONUNCIATION_AND_VO.NUTRITION_WORDS.M4_NUT_FRUIT_PROTEIN",
+     "listen_for": [
+      "giving vitamins like fruit"
+     ],
+     "ask": "Do beans build the body?",
+     "repair": "Yes: protein."
+    }
+   ],
+   "checks": [
+    {
+     "question": "Ugali gives us ...",
+     "answer": "energy",
+     "shows": "carbohydrates"
+    },
+    {
+     "question": "A balanced diet has ...",
+     "answer": "all food groups",
+     "shows": "balanced"
+    }
+   ]
+  },
+  {
+   "skill": "ENGL.G4.LISTEN.T5_PRONUNCIATION_AND_VO.LIKE_BUT_PATTERN",
+   "assessed_by": "questions",
+   "key_step": "The child says the like, then but, then I do not and a plain verb.",
+   "floor": {
+    "prerequisite": "Uses do not.",
+    "question": "I ... like rain. (negative)",
+    "answer": "do not"
+   },
+   "steps": [
+    "Say what you like.",
+    "Say what you do not like.",
+    "Join them with but."
+   ],
+   "contexts": [
+    "lunch at school",
+    "food at a party",
+    "fruit at the market"
+   ],
+   "board": [
+    {
+     "beat": "write",
+     "do": "Write: I like beans ___ I do not like cabbage."
+    },
+    {
+     "beat": "point",
+     "do": "Point at the gap.",
+     "say": "Do the two ideas agree?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for but."
+    },
+    {
+     "beat": "child_draws",
+     "do": "The child writes his or her own sentence."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "ENGL.G4.LISTEN.T5_PRONUNCIATION_AND_VO.LIKE_BUT_PATTERN.M4_LB_DO_NOT_S",
+     "listen_for": [
+      "likes"
+     ],
+     "ask": "What comes after do not?",
+     "repair": "The plain verb."
+    },
+    {
+     "code": "ENGL.G4.LISTEN.T5_PRONUNCIATION_AND_VO.LIKE_BUT_PATTERN.M4_LB_AND_FOR_BUT",
+     "listen_for": [
+      "and"
+     ],
+     "ask": "Do the ideas agree?",
+     "repair": "No: but."
+    },
+    {
+     "code": "ENGL.G4.LISTEN.T5_PRONUNCIATION_AND_VO.LIKE_BUT_PATTERN.M4_LB_NOT_LIKE",
+     "listen_for": [
+      "not like"
+     ],
+     "ask": "What is missing before not?",
+     "repair": "do."
+    },
+    {
+     "code": "ENGL.G4.LISTEN.T5_PRONUNCIATION_AND_VO.LIKE_BUT_PATTERN.M4_LB_LIKE_ING_TO",
+     "listen_for": [
+      "to eating"
+     ],
+     "ask": "Like to eat or like eating?",
+     "repair": "One, not both."
+    }
+   ],
+   "checks": [
+    {
+     "question": "I like milk but I do not ... tea. (like)",
+     "answer": "like",
+     "shows": "plain verb"
+    },
+    {
+     "question": "Join: I like rice. I do not like fish.",
+     "answer": "I like rice but I do not like fish.",
+     "shows": "but"
+    }
+   ]
+  }
+ ],
+ "also_taught_by": [
+  "ENGL.G4.LISTEN.T1_PRONUNCIATION_AND_VO.LISTEN_ATTENTIVE"
+ ]
+}

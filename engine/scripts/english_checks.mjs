@@ -139,7 +139,8 @@ export function checkTextForms(families = ENGLISH_FAMILIES, skills = null) {
     for (const k of new Set(kinds.filter((x, i) => kinds.indexOf(x) !== i))) out.push(`${skill}: two families share the structure "${k}"`);
     if (new Set(kinds).size < 2) out.push(`${skill}: needs at least two families of different structure`);
   }
-  for (const c of Object.keys(skills || {})) if (!by.has(c)) out.push(`${c}: a skill with no family`);
+  // A skill marked nofamily (18 Nov 2026: assessed by voice, composition or the teacher, or a question skill whose families are still to write) is listed by its subject's depth report, not failed here.
+  for (const c of Object.keys(skills || {})) if (!by.has(c) && !skills[c].nofamily) out.push(`${c}: a skill with no family`);
   return out;
 }
 export const checkEnglishForms = (families = ENGLISH_FAMILIES) => checkTextForms(families, TEXT_ENTRIES.find(e => e.subject === 'english')?.map.skills);

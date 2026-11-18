@@ -1,0 +1,96 @@
+{
+ "sub_strand": "ENGL.G4.LISTEN.T8_PRONUNCIATION_AND_VO",
+ "title": "Pronunciation and Vocabulary: (Theme 8: The farm)",
+ "status": "draft: written 18 Nov 2026 offline for Grade 4 English; not yet checked by a Kenyan English teacher; not loaded by the live tutor",
+ "notes": "",
+ "skills": [
+  {
+   "skill": "ENGL.G4.LISTEN.T8_PRONUNCIATION_AND_VO.FARM_WORDS",
+   "assessed_by": "questions",
+   "key_step": "The child explains each farm word by what the farmer does or keeps.",
+   "floor": {
+    "prerequisite": "Names animals.",
+    "question": "Name a farm animal.",
+    "answer": "cow"
+   },
+   "steps": [
+    "Name it.",
+    "Say what it is for.",
+    "Use it in a sentence."
+   ],
+   "contexts": [
+    "a shamba visit",
+    "a dairy farm"
+   ],
+   "board": [
+    {
+     "beat": "draw",
+     "do": "Draw a cow and maize."
+    },
+    {
+     "beat": "point",
+     "do": "Point at the cow.",
+     "say": "Livestock or crop?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for livestock."
+    },
+    {
+     "beat": "child_draws",
+     "do": "The child labels the maize."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "ENGL.G4.LISTEN.T8_PRONUNCIATION_AND_VO.FARM_WORDS.M_FRM_NEAR_MEANING",
+     "listen_for": [
+      "plant"
+     ],
+     "ask": "What does the farmer do with it?",
+     "repair": "Match it."
+    },
+    {
+     "code": "ENGL.G4.LISTEN.T8_PRONUNCIATION_AND_VO.FARM_WORDS.M_FRM_LIVESTOCK_CROPS",
+     "listen_for": [
+      "crops"
+     ],
+     "ask": "Animal or plant?",
+     "repair": "Animals: livestock."
+    },
+    {
+     "code": "ENGL.G4.LISTEN.T8_PRONUNCIATION_AND_VO.FARM_WORDS.M_FRM_FERTILISER",
+     "listen_for": [
+      "Pesticide"
+     ],
+     "ask": "Does it kill pests?",
+     "repair": "It feeds the soil."
+    },
+    {
+     "code": "ENGL.G4.LISTEN.T8_PRONUNCIATION_AND_VO.FARM_WORDS.M4_FRM_PLANT_HARVEST",
+     "listen_for": [
+      "plants"
+     ],
+     "ask": "Seeds in or crop out?",
+     "repair": "Harvest: out."
+    }
+   ],
+   "checks": [
+    {
+     "question": "Maize and beans are ...",
+     "answer": "crops",
+     "shows": "crops"
+    },
+    {
+     "question": "What makes the soil rich?",
+     "answer": "fertiliser or manure",
+     "shows": "fertiliser"
+    }
+   ]
+  }
+ ],
+ "also_taught_by": [
+  "ENGL.G4.LISTEN.T1_PRONUNCIATION_AND_VO.PRONOUNCE_SOUNDS",
+  "ENGL.G4.LISTEN.T2_PRONUNCIATION_AND_VO.DISCRIMINATE_SOUNDS"
+ ]
+}

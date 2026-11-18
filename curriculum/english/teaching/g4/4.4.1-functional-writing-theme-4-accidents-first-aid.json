@@ -1,0 +1,265 @@
+{
+ "sub_strand": "ENGL.G4.WRITIN.T4_FUNCTIONAL_WRITING",
+ "title": "Functional Writing (Theme 4: Accidents- first aid)",
+ "status": "draft: written 18 Nov 2026 offline for Grade 4 English; not yet checked by a Kenyan English teacher; not loaded by the live tutor",
+ "notes": "",
+ "skills": [
+  {
+   "skill": "ENGL.G4.WRITIN.T4_FUNCTIONAL_WRITING.LETTER_PARTS",
+   "assessed_by": "questions",
+   "key_step": "The child names each part of a letter and puts them in order.",
+   "floor": {
+    "prerequisite": "Writes sentences.",
+    "question": "Write a greeting.",
+    "answer": "Dear ..."
+   },
+   "steps": [
+    "Address and date.",
+    "Greeting.",
+    "Body.",
+    "Closing and name."
+   ],
+   "contexts": [
+    "a letter to a friend",
+    "a letter from a pen pal"
+   ],
+   "board": [
+    {
+     "beat": "draw",
+     "do": "Draw the letter outline."
+    },
+    {
+     "beat": "point",
+     "do": "Point at the bottom.",
+     "say": "What goes here?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for closing."
+    },
+    {
+     "beat": "child_draws",
+     "do": "The child labels the others."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "ENGL.G4.WRITIN.T4_FUNCTIONAL_WRITING.LETTER_PARTS.M_LTR_PART_MIX",
+     "listen_for": [
+      "closing"
+     ],
+     "ask": "What does this part do?",
+     "repair": "Name it."
+    },
+    {
+     "code": "ENGL.G4.WRITIN.T4_FUNCTIONAL_WRITING.LETTER_PARTS.M_LTR_ORDER",
+     "listen_for": [
+      "the closing"
+     ],
+     "ask": "What comes first?",
+     "repair": "Address and date."
+    },
+    {
+     "code": "ENGL.G4.WRITIN.T4_FUNCTIONAL_WRITING.LETTER_PARTS.M_LTR_NO_COMMA",
+     "listen_for": [
+      "Dear Amina"
+     ],
+     "ask": "What follows Dear Amina?",
+     "repair": "A comma."
+    },
+    {
+     "code": "ENGL.G4.WRITIN.T4_FUNCTIONAL_WRITING.LETTER_PARTS.M_LTR_RECEIVER_ADDRESS",
+     "listen_for": [
+      "the person getting the letter"
+     ],
+     "ask": "Whose address?",
+     "repair": "The writer's."
+    }
+   ],
+   "checks": [
+    {
+     "question": "What comes after Dear Juma,?",
+     "answer": "the body",
+     "shows": "order"
+    },
+    {
+     "question": "Whose address goes at the top?",
+     "answer": "the writer's",
+     "shows": "address"
+    }
+   ]
+  },
+  {
+   "skill": "ENGL.G4.WRITIN.T4_FUNCTIONAL_WRITING.FRIENDLY_LETTER",
+   "assessed_by": "composition",
+   "key_step": "The child sets out address and date, greeting, paragraphs, closing and name in order.",
+   "floor": {
+    "prerequisite": "Knows the parts of a letter.",
+    "question": "What comes after the greeting?",
+    "answer": "the body"
+   },
+   "steps": [
+    "Write the address and date.",
+    "Greet.",
+    "Write two short paragraphs.",
+    "Close and sign."
+   ],
+   "contexts": [
+    "a letter to a cousin in Mombasa",
+    "a thank-you letter to a grandmother",
+    "news from school"
+   ],
+   "board": [
+    {
+     "beat": "draw",
+     "do": "Draw a letter outline."
+    },
+    {
+     "beat": "point",
+     "do": "Point at the top right.",
+     "say": "What goes here?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for address and date."
+    },
+    {
+     "beat": "child_draws",
+     "do": "The child fills the other parts."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "ENGL.G4.WRITIN.T4_FUNCTIONAL_WRITING.FRIENDLY_LETTER.M4_FL_NO_ADDRESS",
+     "listen_for": [
+      "Dear Juma,"
+     ],
+     "ask": "What goes at the top right?",
+     "repair": "Address and date."
+    },
+    {
+     "code": "ENGL.G4.WRITIN.T4_FUNCTIONAL_WRITING.FRIENDLY_LETTER.M4_FL_OFFICIAL_CLOSE",
+     "listen_for": [
+      "Yours faithfully,"
+     ],
+     "ask": "Is this an official letter?",
+     "repair": "Your friend."
+    },
+    {
+     "code": "ENGL.G4.WRITIN.T4_FUNCTIONAL_WRITING.FRIENDLY_LETTER.M4_FL_ONE_BLOCK",
+     "listen_for": [
+      "one long block"
+     ],
+     "ask": "How many ideas?",
+     "repair": "A paragraph each."
+    },
+    {
+     "code": "ENGL.G4.WRITIN.T4_FUNCTIONAL_WRITING.FRIENDLY_LETTER.M4_FL_NO_NAME",
+     "listen_for": [
+      "nothing"
+     ],
+     "ask": "Who wrote it?",
+     "repair": "Write your name."
+    }
+   ],
+   "checks": [
+    {
+     "question": "Best closing to a friend?",
+     "answer": "Your friend,",
+     "shows": "closing"
+    },
+    {
+     "question": "What comes last?",
+     "answer": "my name",
+     "shows": "name"
+    }
+   ]
+  },
+  {
+   "skill": "ENGL.G4.WRITIN.T4_FUNCTIONAL_WRITING.SMS_MESSAGE",
+   "assessed_by": "questions",
+   "key_step": "The child writes greeting, message, what the reader must do, and the name, in clear words.",
+   "floor": {
+    "prerequisite": "Knows who a letter is to and from.",
+    "question": "Who is the letter from?",
+    "answer": "the writer"
+   },
+   "steps": [
+    "Greet.",
+    "Say who you are.",
+    "Give the message.",
+    "End with your name."
+   ],
+   "contexts": [
+    "telling a parent you have arrived",
+    "telling a teacher you are sick",
+    "a club meeting change"
+   ],
+   "board": [
+    {
+     "beat": "write",
+     "do": "Write: I am sick."
+    },
+    {
+     "beat": "point",
+     "do": "Point at the message.",
+     "say": "Who sent it?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for \"we do not know\"."
+    },
+    {
+     "beat": "child_draws",
+     "do": "The child rewrites it with greeting and name."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "ENGL.G4.WRITIN.T4_FUNCTIONAL_WRITING.SMS_MESSAGE.M4_SM_NO_NAME",
+     "listen_for": [
+      "I am sick."
+     ],
+     "ask": "Who is it from?",
+     "repair": "Add your name."
+    },
+    {
+     "code": "ENGL.G4.WRITIN.T4_FUNCTIONAL_WRITING.SMS_MESSAGE.M4_SM_TEXTSPEAK",
+     "listen_for": [
+      "Gud mrng, cum 2 skul 2mrw"
+     ],
+     "ask": "Will Grandpa understand?",
+     "repair": "Full words."
+    },
+    {
+     "code": "ENGL.G4.WRITIN.T4_FUNCTIONAL_WRITING.SMS_MESSAGE.M4_SM_LETTER_FORMAT",
+     "listen_for": [
+      "P.O. Box 12, Kitale. Dear Mum, ..."
+     ],
+     "ask": "Is it a letter?",
+     "repair": "Short message."
+    },
+    {
+     "code": "ENGL.G4.WRITIN.T4_FUNCTIONAL_WRITING.SMS_MESSAGE.M4_SM_MISSING_DETAIL",
+     "listen_for": [
+      "nothing"
+     ],
+     "ask": "What must they know?",
+     "repair": "Add it."
+    }
+   ],
+   "checks": [
+    {
+     "question": "Which is clear: \"c u 2moro\" or \"See you tomorrow\"?",
+     "answer": "See you tomorrow",
+     "shows": "clarity"
+    },
+    {
+     "question": "What is missing: \"The meeting has moved. Juma\"?",
+     "answer": "the new time",
+     "shows": "detail"
+    }
+   ]
+  }
+ ]
+}

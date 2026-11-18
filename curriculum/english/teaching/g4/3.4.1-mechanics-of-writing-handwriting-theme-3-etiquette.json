@@ -1,0 +1,97 @@
+{
+ "sub_strand": "ENGL.G4.WRITIN.T3_MECHANICS_OF_WRITING",
+ "title": "Mechanics of Writing: Handwriting (Theme 3: Etiquette)",
+ "status": "draft: written 18 Nov 2026 offline for Grade 4 English; not yet checked by a Kenyan English teacher; not loaded by the live tutor",
+ "notes": "",
+ "skills": [
+  {
+   "skill": "ENGL.G4.WRITIN.T3_MECHANICS_OF_WRITING.HANDWRITING",
+   "assessed_by": "teacher",
+   "key_step": "The child sits each letter on the line, keeps letters the same size and leaves a finger space.",
+   "floor": {
+    "prerequisite": "Writes letters with ascenders.",
+    "question": "Write: b, d, h.",
+    "answer": "tall letters"
+   },
+   "steps": [
+    "Show the letter shapes.",
+    "Trace, then copy.",
+    "Copy a sentence.",
+    "Check line, size and spaces."
+   ],
+   "contexts": [
+    "a class notice",
+    "a thank-you card",
+    "copying the timetable"
+   ],
+   "board": [
+    {
+     "beat": "write",
+     "do": "Write: We like reading. on ruled lines."
+    },
+    {
+     "beat": "point",
+     "do": "Point at the line.",
+     "say": "Where does each letter sit?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for \"on the line\"."
+    },
+    {
+     "beat": "child_draws",
+     "do": "The child copies the sentence."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "ENGL.G4.WRITIN.T3_MECHANICS_OF_WRITING.HANDWRITING.M4_HW_OFF_LINE",
+     "listen_for": [
+      "letters bounce above and below the line"
+     ],
+     "ask": "Where is the line?",
+     "repair": "Sit on it."
+    },
+    {
+     "code": "ENGL.G4.WRITIN.T3_MECHANICS_OF_WRITING.HANDWRITING.M4_HW_MIXED_CASE",
+     "listen_for": [
+      "brEaD"
+     ],
+     "ask": "Is it a name?",
+     "repair": "Small letters."
+    },
+    {
+     "code": "ENGL.G4.WRITIN.T3_MECHANICS_OF_WRITING.HANDWRITING.M4_HW_B_D",
+     "listen_for": [
+      "deb"
+     ],
+     "ask": "Bat or drum first?",
+     "repair": "B: bat then ball."
+    },
+    {
+     "code": "ENGL.G4.WRITIN.T3_MECHANICS_OF_WRITING.HANDWRITING.M4_HW_NO_SPACES",
+     "listen_for": [
+      "Welikereading."
+     ],
+     "ask": "Where are the spaces?",
+     "repair": "A finger space."
+    }
+   ],
+   "checks": [
+    {
+     "question": "Copy: The bus is blue.",
+     "answer": "letters on the line, spaces",
+     "shows": "neatness"
+    },
+    {
+     "question": "Write: bed, dog",
+     "answer": "b and d correct",
+     "shows": "b and d"
+    }
+   ]
+  }
+ ],
+ "also_taught_by": [
+  "ENGL.G4.WRITIN.T13_SPELLING.DOUBLE_CONSONANTS"
+ ]
+}

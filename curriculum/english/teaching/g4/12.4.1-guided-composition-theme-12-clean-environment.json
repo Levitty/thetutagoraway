@@ -1,0 +1,178 @@
+{
+ "sub_strand": "ENGL.G4.WRITIN.T12_GUIDED_COMPOSITION",
+ "title": "Guided Composition (Theme 12: Clean environment)",
+ "status": "draft: written 18 Nov 2026 offline for Grade 4 English; not yet checked by a Kenyan English teacher; not loaded by the live tutor",
+ "notes": "",
+ "skills": [
+  {
+   "skill": "ENGL.G4.WRITIN.T12_GUIDED_COMPOSITION.DIARY_PARTS",
+   "assessed_by": "questions",
+   "key_step": "The child names the parts of a diary entry: date, greeting if used, events and feelings.",
+   "floor": {
+    "prerequisite": "Writes sentences.",
+    "question": "Write a sentence about today.",
+    "answer": "a sentence"
+   },
+   "steps": [
+    "Date.",
+    "Dear Diary (optional).",
+    "What happened.",
+    "How you felt."
+   ],
+   "contexts": [
+    "a clean-up day",
+    "a school trip"
+   ],
+   "board": [
+    {
+     "beat": "draw",
+     "do": "Draw an entry outline."
+    },
+    {
+     "beat": "point",
+     "do": "Point at the top.",
+     "say": "What goes here?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for the date."
+    },
+    {
+     "beat": "child_draws",
+     "do": "The child labels the feelings part."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "ENGL.G4.WRITIN.T12_GUIDED_COMPOSITION.DIARY_PARTS.M_DIA_NO_DATE",
+     "listen_for": [
+      "a title"
+     ],
+     "ask": "When was it?",
+     "repair": "Date first."
+    },
+    {
+     "code": "ENGL.G4.WRITIN.T12_GUIDED_COMPOSITION.DIARY_PARTS.M_DIA_LETTER_FORMAT",
+     "listen_for": [
+      "Dear Mum, how are you?"
+     ],
+     "ask": "Is it a letter to someone?",
+     "repair": "To your diary."
+    },
+    {
+     "code": "ENGL.G4.WRITIN.T12_GUIDED_COMPOSITION.DIARY_PARTS.M_DIA_THIRD_PERSON",
+     "listen_for": [
+      "Wanjiru woke up early."
+     ],
+     "ask": "Who is writing?",
+     "repair": "I."
+    },
+    {
+     "code": "ENGL.G4.WRITIN.T12_GUIDED_COMPOSITION.DIARY_PARTS.M_DIA_NO_FEELINGS",
+     "listen_for": [
+      "a list of names"
+     ],
+     "ask": "How did you feel?",
+     "repair": "Add it."
+    }
+   ],
+   "checks": [
+    {
+     "question": "A diary is written in which person?",
+     "answer": "first (I)",
+     "shows": "person"
+    },
+    {
+     "question": "What starts an entry?",
+     "answer": "the date",
+     "shows": "date"
+    }
+   ]
+  },
+  {
+   "skill": "ENGL.G4.WRITIN.T12_GUIDED_COMPOSITION.DIARY_WRITING",
+   "assessed_by": "composition",
+   "key_step": "The child dates the entry and writes in the first person and the past tense, with a feeling.",
+   "floor": {
+    "prerequisite": "Knows the parts of a diary.",
+    "question": "What starts a diary entry?",
+    "answer": "the date"
+   },
+   "steps": [
+    "Write the date.",
+    "Write what happened.",
+    "Say how you felt."
+   ],
+   "contexts": [
+    "a clean-up day",
+    "a visit to a clinic",
+    "a school trip"
+   ],
+   "board": [
+    {
+     "beat": "write",
+     "do": "Write: Monday, 4th March."
+    },
+    {
+     "beat": "point",
+     "do": "Point at the date.",
+     "say": "What happened today?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for an I sentence."
+    },
+    {
+     "beat": "child_draws",
+     "do": "The child adds a feeling."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "ENGL.G4.WRITIN.T12_GUIDED_COMPOSITION.DIARY_WRITING.M4_DW_NO_DATE",
+     "listen_for": [
+      "a title"
+     ],
+     "ask": "When was this?",
+     "repair": "Date first."
+    },
+    {
+     "code": "ENGL.G4.WRITIN.T12_GUIDED_COMPOSITION.DIARY_WRITING.M4_DW_FUTURE",
+     "listen_for": [
+      "Tomorrow I will play."
+     ],
+     "ask": "Has it happened?",
+     "repair": "Write today."
+    },
+    {
+     "code": "ENGL.G4.WRITIN.T12_GUIDED_COMPOSITION.DIARY_WRITING.M4_DW_THIRD_PERSON",
+     "listen_for": [
+      "Baraka went to church."
+     ],
+     "ask": "Who is writing?",
+     "repair": "Use I."
+    },
+    {
+     "code": "ENGL.G4.WRITIN.T12_GUIDED_COMPOSITION.DIARY_WRITING.M4_DW_EVENTS_ONLY",
+     "listen_for": [
+      "I went to the clinic. I came back."
+     ],
+     "ask": "How did you feel?",
+     "repair": "Add it."
+    }
+   ],
+   "checks": [
+    {
+     "question": "Which is a diary sentence: \"She cleaned\" or \"I cleaned\"?",
+     "answer": "I cleaned",
+     "shows": "first person"
+    },
+    {
+     "question": "What is missing: \"I went to church.\"?",
+     "answer": "a feeling",
+     "shows": "feelings"
+    }
+   ]
+  }
+ ]
+}

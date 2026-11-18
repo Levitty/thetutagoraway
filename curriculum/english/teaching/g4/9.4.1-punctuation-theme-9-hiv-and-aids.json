@@ -1,0 +1,176 @@
+{
+ "sub_strand": "ENGL.G4.WRITIN.T9_PUNCTUATION",
+ "title": "Punctuation (Theme 9: Hiv and aids)",
+ "status": "draft: written 18 Nov 2026 offline for Grade 4 English; not yet checked by a Kenyan English teacher; not loaded by the live tutor",
+ "notes": "",
+ "skills": [
+  {
+   "skill": "ENGL.G4.WRITIN.T9_PUNCTUATION.COMMAS",
+   "assessed_by": "questions",
+   "key_step": "The child puts a comma between items in a list and and before the last.",
+   "floor": {
+    "prerequisite": "Uses full stops.",
+    "question": "End this: We ate",
+    "answer": "We ate."
+   },
+   "steps": [
+    "Find the list.",
+    "Comma after each item.",
+    "And before the last, no comma."
+   ],
+   "contexts": [
+    "a shopping list",
+    "a farm story"
+   ],
+   "board": [
+    {
+     "beat": "write",
+     "do": "Write: We bought rice beans maize"
+    },
+    {
+     "beat": "point",
+     "do": "Point between rice and beans.",
+     "say": "What goes here?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for a comma."
+    },
+    {
+     "beat": "child_draws",
+     "do": "The child finishes the list."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "ENGL.G4.WRITIN.T9_PUNCTUATION.COMMAS.M_COM_NO_COMMA_LIST",
+     "listen_for": [
+      "Mama bought rice beans and maize."
+     ],
+     "ask": "Where do items meet?",
+     "repair": "A comma."
+    },
+    {
+     "code": "ENGL.G4.WRITIN.T9_PUNCTUATION.COMMAS.M_COM_AFTER_LAST",
+     "listen_for": [
+      "I like mangoes, oranges, bananas,"
+     ],
+     "ask": "Is that the last item?",
+     "repair": "Full stop."
+    },
+    {
+     "code": "ENGL.G4.WRITIN.T9_PUNCTUATION.COMMAS.M_COM_SPLIT_SENTENCE",
+     "listen_for": [
+      "Wafula, kicked the ball."
+     ],
+     "ask": "Is it a list?",
+     "repair": "No comma."
+    },
+    {
+     "code": "ENGL.G4.WRITIN.T9_PUNCTUATION.COMMAS.M_COM_FULL_STOP_LIST",
+     "listen_for": [
+      "We saw lions. zebras. and giraffes."
+     ],
+     "ask": "Is the sentence over?",
+     "repair": "Commas."
+    }
+   ],
+   "checks": [
+    {
+     "question": "Punctuate: I like tea milk and juice",
+     "answer": "I like tea, milk and juice.",
+     "shows": "list"
+    },
+    {
+     "question": "Is there a comma after the last item?",
+     "answer": "No",
+     "shows": "last item"
+    }
+   ]
+  },
+  {
+   "skill": "ENGL.G4.WRITIN.T9_PUNCTUATION.QUESTION_MARKS",
+   "assessed_by": "questions",
+   "key_step": "The child asks \"is someone being asked something?\" before choosing the end mark.",
+   "floor": {
+    "prerequisite": "Uses full stops.",
+    "question": "End a statement.",
+    "answer": "full stop"
+   },
+   "steps": [
+    "Is it asking?",
+    "Yes: question mark.",
+    "No: full stop."
+   ],
+   "contexts": [
+    "a class interview",
+    "a health quiz"
+   ],
+   "board": [
+    {
+     "beat": "write",
+     "do": "Write: Where is the clinic"
+    },
+    {
+     "beat": "point",
+     "do": "Point at the end.",
+     "say": "Is it asking?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for a question mark."
+    },
+    {
+     "beat": "child_draws",
+     "do": "The child writes a statement with where in it."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "ENGL.G4.WRITIN.T9_PUNCTUATION.QUESTION_MARKS.M_QMK_FULL_STOP",
+     "listen_for": [
+      "Where is the book."
+     ],
+     "ask": "Is it a question?",
+     "repair": "Question mark."
+    },
+    {
+     "code": "ENGL.G4.WRITIN.T9_PUNCTUATION.QUESTION_MARKS.M_QMK_STATEMENT",
+     "listen_for": [
+      "I do not know where he lives?"
+     ],
+     "ask": "Is anyone asked?",
+     "repair": "Full stop."
+    },
+    {
+     "code": "ENGL.G4.WRITIN.T9_PUNCTUATION.QUESTION_MARKS.M_QMK_COMMA",
+     "listen_for": [
+      "Are you hungry,"
+     ],
+     "ask": "Is it finished?",
+     "repair": "Question mark."
+    },
+    {
+     "code": "ENGL.G4.WRITIN.T9_PUNCTUATION.QUESTION_MARKS.M_QMK_NO_MARK",
+     "listen_for": [
+      "What is your name"
+     ],
+     "ask": "How does it end?",
+     "repair": "Add the mark."
+    }
+   ],
+   "checks": [
+    {
+     "question": "Punctuate: Are you ready",
+     "answer": "Are you ready?",
+     "shows": "question"
+    },
+    {
+     "question": "Punctuate: I know where he is",
+     "answer": "I know where he is.",
+     "shows": "statement"
+    }
+   ]
+  }
+ ]
+}

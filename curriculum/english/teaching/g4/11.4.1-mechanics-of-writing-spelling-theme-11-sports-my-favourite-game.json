@@ -1,0 +1,95 @@
+{
+ "sub_strand": "ENGL.G4.WRITIN.T11_MECHANICS_OF_WRITING",
+ "title": "Mechanics of writing: Spelling (Theme 11: Sports: my favourite game)",
+ "status": "draft: written 18 Nov 2026 offline for Grade 4 English; not yet checked by a Kenyan English teacher; not loaded by the live tutor",
+ "notes": "",
+ "skills": [
+  {
+   "skill": "ENGL.G4.WRITIN.T11_MECHANICS_OF_WRITING.MISSPELT_WORDS",
+   "assessed_by": "questions",
+   "key_step": "The child says the word slowly, writes it, then checks the tricky part against the correct spelling.",
+   "floor": {
+    "prerequisite": "Spells simple words.",
+    "question": "Spell: cat",
+    "answer": "cat"
+   },
+   "steps": [
+    "Say it slowly.",
+    "Find the tricky part.",
+    "Look, cover, write, check."
+   ],
+   "contexts": [
+    "sports report",
+    "a letter"
+   ],
+   "board": [
+    {
+     "beat": "write",
+     "do": "Write: friend."
+    },
+    {
+     "beat": "point",
+     "do": "Point at ie.",
+     "say": "I before e: fri-end."
+    },
+    {
+     "beat": "pause",
+     "do": "Cover the word; wait."
+    },
+    {
+     "beat": "child_draws",
+     "do": "The child writes it from memory."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "ENGL.G4.WRITIN.T11_MECHANICS_OF_WRITING.MISSPELT_WORDS.M_SPL_VOWEL_ORDER",
+     "listen_for": [
+      "freind"
+     ],
+     "ask": "Which vowel comes first?",
+     "repair": "I before e."
+    },
+    {
+     "code": "ENGL.G4.WRITIN.T11_MECHANICS_OF_WRITING.MISSPELT_WORDS.M_SPL_PHONETIC",
+     "listen_for": [
+      "becos"
+     ],
+     "ask": "Is it spelt as it sounds?",
+     "repair": "Learn the shape."
+    },
+    {
+     "code": "ENGL.G4.WRITIN.T11_MECHANICS_OF_WRITING.MISSPELT_WORDS.M_SPL_DROPPED_LETTER",
+     "listen_for": [
+      "libary"
+     ],
+     "ask": "Say every part: li-bra-ry.",
+     "repair": "Add it."
+    },
+    {
+     "code": "ENGL.G4.WRITIN.T11_MECHANICS_OF_WRITING.MISSPELT_WORDS.M_SPL_EXTRA_LETTER",
+     "listen_for": [
+      "beutiful"
+     ],
+     "ask": "Check the vowel group.",
+     "repair": "Beau."
+    }
+   ],
+   "checks": [
+    {
+     "question": "Spell: because",
+     "answer": "because",
+     "shows": "tricky word"
+    },
+    {
+     "question": "Spell: library",
+     "answer": "library",
+     "shows": "unsounded letter"
+    }
+   ]
+  }
+ ],
+ "also_taught_by": [
+  "ENGL.G4.WRITIN.T13_SPELLING.DOUBLE_CONSONANTS"
+ ]
+}

@@ -1,0 +1,176 @@
+{
+ "sub_strand": "ENGL.G4.LANGUA.T4_WORD_CLASSES_PRONOUN",
+ "title": "Word classes: Pronouns (Theme 4: Accidents- first aid)",
+ "status": "draft: written 18 Nov 2026 offline for Grade 4 English; not yet checked by a Kenyan English teacher; not loaded by the live tutor",
+ "notes": "",
+ "skills": [
+  {
+   "skill": "ENGL.G4.LANGUA.T4_WORD_CLASSES_PRONOUN.PERSONAL_PRONOUNS",
+   "assessed_by": "questions",
+   "key_step": "The child asks whether the pronoun does the action or receives it, then chooses I or me.",
+   "floor": {
+    "prerequisite": "Uses names in sentences.",
+    "question": "Amina is tall. ___ is tall.",
+    "answer": "She"
+   },
+   "steps": [
+    "Doer before the verb: I, he, she, we, they.",
+    "After the verb or a small word: me, him, her, us, them.",
+    "Try the sentence with one person."
+   ],
+   "contexts": [
+    "a story about a fall",
+    "helping a friend"
+   ],
+   "board": [
+    {
+     "beat": "write",
+     "do": "Write: ___ and Wanjiru went to the clinic."
+    },
+    {
+     "beat": "point",
+     "do": "Point at the gap.",
+     "say": "Who went? Take Wanjiru away."
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for I."
+    },
+    {
+     "beat": "child_draws",
+     "do": "The child writes: Wanjiru and I."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "ENGL.G4.LANGUA.T4_WORD_CLASSES_PRONOUN.PERSONAL_PRONOUNS.M_PRO_SUBJECT_AS_OBJECT",
+     "listen_for": [
+      "I"
+     ],
+     "ask": "Does it come after the verb?",
+     "repair": "Me."
+    },
+    {
+     "code": "ENGL.G4.LANGUA.T4_WORD_CLASSES_PRONOUN.PERSONAL_PRONOUNS.M_PRO_OBJECT_AS_SUBJECT",
+     "listen_for": [
+      "Me and Wanjiru"
+     ],
+     "ask": "Who did it?",
+     "repair": "I, and the other person first."
+    },
+    {
+     "code": "ENGL.G4.LANGUA.T4_WORD_CLASSES_PRONOUN.PERSONAL_PRONOUNS.M_PRO_NOUN_AND_PRONOUN",
+     "listen_for": [
+      "she"
+     ],
+     "ask": "Do we need both?",
+     "repair": "One is enough."
+    },
+    {
+     "code": "ENGL.G4.LANGUA.T4_WORD_CLASSES_PRONOUN.PERSONAL_PRONOUNS.M_PRO_GENDER",
+     "listen_for": [
+      "He"
+     ],
+     "ask": "Boy or girl?",
+     "repair": "She for a girl."
+    }
+   ],
+   "checks": [
+    {
+     "question": "The nurse helped ___. (I/me)",
+     "answer": "me",
+     "shows": "object"
+    },
+    {
+     "question": "___ ran home. (Him/He)",
+     "answer": "He",
+     "shows": "subject"
+    }
+   ]
+  },
+  {
+   "skill": "ENGL.G4.LANGUA.T4_WORD_CLASSES_PRONOUN.POSSESSIVE_PRONOUNS",
+   "assessed_by": "questions",
+   "key_step": "The child checks whether a noun follows: my book, but the book is mine.",
+   "floor": {
+    "prerequisite": "Uses personal pronouns.",
+    "question": "Me or I?",
+    "answer": "correct choice"
+   },
+   "steps": [
+    "Noun follows: my, your, her.",
+    "No noun: mine, yours, hers.",
+    "No apostrophe."
+   ],
+   "contexts": [
+    "sorting lost property",
+    "sharing books"
+   ],
+   "board": [
+    {
+     "beat": "write",
+     "do": "Write: This is ___ pen. The pen is ___."
+    },
+    {
+     "beat": "point",
+     "do": "Point at the second gap.",
+     "say": "Is there a noun after it?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for mine."
+    },
+    {
+     "beat": "child_draws",
+     "do": "The child fills the first gap."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "ENGL.G4.LANGUA.T4_WORD_CLASSES_PRONOUN.POSSESSIVE_PRONOUNS.M_POS_DETERMINER_FOR_PRONOUN",
+     "listen_for": [
+      "my"
+     ],
+     "ask": "Is there a noun after it?",
+     "repair": "No: mine."
+    },
+    {
+     "code": "ENGL.G4.LANGUA.T4_WORD_CLASSES_PRONOUN.POSSESSIVE_PRONOUNS.M_POS_PRONOUN_BEFORE_NOUN",
+     "listen_for": [
+      "mine"
+     ],
+     "ask": "Is a noun next?",
+     "repair": "My."
+    },
+    {
+     "code": "ENGL.G4.LANGUA.T4_WORD_CLASSES_PRONOUN.POSSESSIVE_PRONOUNS.M_POS_APOSTROPHE",
+     "listen_for": [
+      "your's"
+     ],
+     "ask": "Does yours need an apostrophe?",
+     "repair": "Never."
+    },
+    {
+     "code": "ENGL.G4.LANGUA.T4_WORD_CLASSES_PRONOUN.POSSESSIVE_PRONOUNS.M_POS_WRONG_PERSON",
+     "listen_for": [
+      "his"
+     ],
+     "ask": "Whose is it?",
+     "repair": "Match the owner."
+    }
+   ],
+   "checks": [
+    {
+     "question": "The bag is ___ (your/yours).",
+     "answer": "yours",
+     "shows": "no noun"
+    },
+    {
+     "question": "Is it \"her's\"?",
+     "answer": "No: hers",
+     "shows": "no apostrophe"
+    }
+   ]
+  }
+ ]
+}

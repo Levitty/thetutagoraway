@@ -1,0 +1,95 @@
+{
+ "sub_strand": "ENGL.G4.LISTEN.T3_PRONUNCIATION_AND_VO",
+ "title": "Pronunciation and Vocabulary (Theme 3: Etiquette)",
+ "status": "draft: written 18 Nov 2026 offline for Grade 4 English; not yet checked by a Kenyan English teacher; not loaded by the live tutor",
+ "notes": "",
+ "skills": [
+  {
+   "skill": "ENGL.G4.LISTEN.T3_PRONUNCIATION_AND_VO.POLITE_WORDS",
+   "assessed_by": "questions",
+   "key_step": "The child turns a demand into a request and adds please, thank you or sorry where they fit.",
+   "floor": {
+    "prerequisite": "Greets politely.",
+    "question": "Greet the head teacher.",
+    "answer": "Good morning, Madam."
+   },
+   "steps": [
+    "Hear a demand.",
+    "Change it to a request.",
+    "Add the polite word."
+   ],
+   "contexts": [
+    "borrowing a pen",
+    "bumping into someone"
+   ],
+   "board": [
+    {
+     "beat": "write",
+     "do": "Write: Give me your pen."
+    },
+    {
+     "beat": "point",
+     "do": "Point at Give me.",
+     "say": "How can we ask politely?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for May I please borrow ..."
+    },
+    {
+     "beat": "child_draws",
+     "do": "The child writes a polite refusal."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "ENGL.G4.LISTEN.T3_PRONUNCIATION_AND_VO.POLITE_WORDS.M_POL_DEMAND",
+     "listen_for": [
+      "Give me your pen."
+     ],
+     "ask": "Is it an order?",
+     "repair": "Ask: may I."
+    },
+    {
+     "code": "ENGL.G4.LISTEN.T3_PRONUNCIATION_AND_VO.POLITE_WORDS.M_POL_NO_THANKS",
+     "listen_for": [
+      "Okay."
+     ],
+     "ask": "What do you say after help?",
+     "repair": "Thank you."
+    },
+    {
+     "code": "ENGL.G4.LISTEN.T3_PRONUNCIATION_AND_VO.POLITE_WORDS.M_POL_RUDE_REFUSAL",
+     "listen_for": [
+      "No. Go away."
+     ],
+     "ask": "Can you say no kindly?",
+     "repair": "I am sorry, I cannot."
+    },
+    {
+     "code": "ENGL.G4.LISTEN.T3_PRONUNCIATION_AND_VO.POLITE_WORDS.M_POL_NO_SORRY",
+     "listen_for": [
+      "Move."
+     ],
+     "ask": "What do you say after a mistake?",
+     "repair": "Sorry."
+    }
+   ],
+   "checks": [
+    {
+     "question": "Someone helps you. You say ...",
+     "answer": "Thank you",
+     "shows": "thanks"
+    },
+    {
+     "question": "You step on a foot. You say ...",
+     "answer": "Sorry",
+     "shows": "sorry"
+    }
+   ]
+  }
+ ],
+ "also_taught_by": [
+  "ENGL.G4.LISTEN.T1_PRONUNCIATION_AND_VO.PRONOUNCE_SOUNDS"
+ ]
+}

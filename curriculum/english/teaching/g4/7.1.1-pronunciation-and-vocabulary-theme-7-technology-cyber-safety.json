@@ -1,0 +1,182 @@
+{
+ "sub_strand": "ENGL.G4.LISTEN.T7_PRONUNCIATION_AND_VO",
+ "title": "Pronunciation and Vocabulary (Theme 7: Technology- cyber safety)",
+ "status": "draft: written 18 Nov 2026 offline for Grade 4 English; not yet checked by a Kenyan English teacher; not loaded by the live tutor",
+ "notes": "",
+ "skills": [
+  {
+   "skill": "ENGL.G4.LISTEN.T7_PRONUNCIATION_AND_VO.SIMPLE_PAST",
+   "assessed_by": "questions",
+   "key_step": "The child hears the time word (yesterday, last week) and uses the past form.",
+   "floor": {
+    "prerequisite": "Uses do and did.",
+    "question": "Did you eat?",
+    "answer": "Yes, I did."
+   },
+   "steps": [
+    "Find the time word.",
+    "Regular: -ed.",
+    "Irregular: learn it.",
+    "After did: plain verb."
+   ],
+   "contexts": [
+    "a chat about yesterday",
+    "a phone call"
+   ],
+   "board": [
+    {
+     "beat": "write",
+     "do": "Write: Yesterday I ___ to school. (go)"
+    },
+    {
+     "beat": "point",
+     "do": "Point at Yesterday.",
+     "say": "Now or past?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for went."
+    },
+    {
+     "beat": "child_draws",
+     "do": "The child writes a question with did."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "ENGL.G4.LISTEN.T7_PRONUNCIATION_AND_VO.SIMPLE_PAST.M_SPA_BASE_FOR_PAST",
+     "listen_for": [
+      "go"
+     ],
+     "ask": "When did it happen?",
+     "repair": "Past form."
+    },
+    {
+     "code": "ENGL.G4.LISTEN.T7_PRONUNCIATION_AND_VO.SIMPLE_PAST.M_SPA_ED_ON_IRREGULAR",
+     "listen_for": [
+      "eated"
+     ],
+     "ask": "Is eat regular?",
+     "repair": "Ate."
+    },
+    {
+     "code": "ENGL.G4.LISTEN.T7_PRONUNCIATION_AND_VO.SIMPLE_PAST.M_SPA_DID_PLUS_PAST",
+     "listen_for": [
+      "saw"
+     ],
+     "ask": "After did?",
+     "repair": "Plain verb."
+    },
+    {
+     "code": "ENGL.G4.LISTEN.T7_PRONUNCIATION_AND_VO.SIMPLE_PAST.M_SPA_PAST_FOR_HABIT",
+     "listen_for": [
+      "rose"
+     ],
+     "ask": "Is it always true?",
+     "repair": "Present."
+    }
+   ],
+   "checks": [
+    {
+     "question": "Last week she ___ (eat) chips.",
+     "answer": "ate",
+     "shows": "irregular"
+    },
+    {
+     "question": "Did you ___ (see) it?",
+     "answer": "see",
+     "shows": "did + plain"
+    }
+   ]
+  },
+  {
+   "skill": "ENGL.G4.LISTEN.T7_PRONUNCIATION_AND_VO.TURN_TAKING",
+   "assessed_by": "voice",
+   "key_step": "The child answers, adds one thing and hands the turn back with a question.",
+   "floor": {
+    "prerequisite": "Uses polite words.",
+    "question": "Your friend greets you. You say ...",
+    "answer": "Hello, how are you?"
+   },
+   "steps": [
+    "Model a short conversation.",
+    "Point out each turn.",
+    "Practise in pairs.",
+    "Add one more turn each time."
+   ],
+   "contexts": [
+    "talking about a favourite game",
+    "meeting a new classmate",
+    "phone safety talk"
+   ],
+   "board": [
+    {
+     "beat": "write",
+     "do": "Write: Answer, Add, Ask."
+    },
+    {
+     "beat": "point",
+     "do": "Point at Ask.",
+     "say": "Did you watch the match? What do you say?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for an answer with a question back."
+    },
+    {
+     "beat": "child_draws",
+     "do": "The child plays four turns with a partner."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "ENGL.G4.LISTEN.T7_PRONUNCIATION_AND_VO.TURN_TAKING.M4_TT_TALK_OVER",
+     "listen_for": [
+      "as soon as I have something to say"
+     ],
+     "ask": "Had your friend finished?",
+     "repair": "Wait for the stop."
+    },
+    {
+     "code": "ENGL.G4.LISTEN.T7_PRONUNCIATION_AND_VO.TURN_TAKING.M4_TT_ONE_WORD",
+     "listen_for": [
+      "Yes."
+     ],
+     "ask": "Did you give the turn back?",
+     "repair": "Add and ask."
+    },
+    {
+     "code": "ENGL.G4.LISTEN.T7_PRONUNCIATION_AND_VO.TURN_TAKING.M4_TT_LONG_TURN",
+     "listen_for": [
+      "tell another story"
+     ],
+     "ask": "Who has not spoken?",
+     "repair": "Give a turn."
+    },
+    {
+     "code": "ENGL.G4.LISTEN.T7_PRONUNCIATION_AND_VO.TURN_TAKING.M4_TT_OFF_TOPIC",
+     "listen_for": [
+      "I want a new phone."
+     ],
+     "ask": "What was the question?",
+     "repair": "Answer it first."
+    }
+   ],
+   "checks": [
+    {
+     "question": "Friend: \"Do you have a pet?\" Best reply?",
+     "answer": "Yes, a cat called Tiger. Do you have one?",
+     "shows": "hand back"
+    },
+    {
+     "question": "When do you start speaking?",
+     "answer": "when the other person stops",
+     "shows": "wait"
+    }
+   ]
+  }
+ ],
+ "also_taught_by": [
+  "ENGL.G4.LISTEN.T6_PRONUNCIATION_AND_VO.INTERNET_WORDS"
+ ]
+}

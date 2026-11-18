@@ -1,0 +1,100 @@
+{
+ "sub_strand": "ENGL.G4.LANGUA.T11_LANGUAGE_PATTERNS",
+ "title": "Language Patterns (Theme 11: Sports: my favourite game)",
+ "status": "draft: written 18 Nov 2026 offline for Grade 4 English; not yet checked by a Kenyan English teacher; not loaded by the live tutor",
+ "notes": "",
+ "skills": [
+  {
+   "skill": "ENGL.G4.LANGUA.T11_LANGUAGE_PATTERNS.INTERROGATIVES",
+   "assessed_by": "questions",
+   "key_step": "The child chooses the question word by what the answer will be, then puts the helping verb before the subject.",
+   "floor": {
+    "prerequisite": "Uses WH questions.",
+    "question": "Ask where someone lives.",
+    "answer": "Where do you live?"
+   },
+   "steps": [
+    "What answer do you want?",
+    "Choose the WH word.",
+    "Helping verb before the subject."
+   ],
+   "contexts": [
+    "interviewing a player",
+    "a sports quiz"
+   ],
+   "board": [
+    {
+     "beat": "write",
+     "do": "Write: ___ is the match? (a time)"
+    },
+    {
+     "beat": "point",
+     "do": "Point at the gap.",
+     "say": "A time: which word?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for When."
+    },
+    {
+     "beat": "child_draws",
+     "do": "The child writes a whose question."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "ENGL.G4.LANGUA.T11_LANGUAGE_PATTERNS.INTERROGATIVES.M_INT_WHO_FOR_WHAT",
+     "listen_for": [
+      "What"
+     ],
+     "ask": "Person or thing?",
+     "repair": "Who for a person."
+    },
+    {
+     "code": "ENGL.G4.LANGUA.T11_LANGUAGE_PATTERNS.INTERROGATIVES.M_INT_WHERE_FOR_WHEN",
+     "listen_for": [
+      "Where"
+     ],
+     "ask": "Place or time?",
+     "repair": "When for time."
+    },
+    {
+     "code": "ENGL.G4.LANGUA.T11_LANGUAGE_PATTERNS.INTERROGATIVES.M_INT_NO_INVERSION",
+     "listen_for": [
+      "you are"
+     ],
+     "ask": "Which comes first in a question?",
+     "repair": "The helping verb."
+    },
+    {
+     "code": "ENGL.G4.LANGUA.T11_LANGUAGE_PATTERNS.INTERROGATIVES.M_INT_DO_EXTRA",
+     "listen_for": [
+      "do are"
+     ],
+     "ask": "Is there already a helping verb?",
+     "repair": "No do."
+    },
+    {
+     "code": "ENGL.G4.LANGUA.T11_LANGUAGE_PATTERNS.INTERROGATIVES.M_INT_WHOSE_WHOS",
+     "listen_for": [
+      "Who's"
+     ],
+     "ask": "Belonging or who is?",
+     "repair": "Whose."
+    }
+   ],
+   "checks": [
+    {
+     "question": "___ ball is this?",
+     "answer": "Whose",
+     "shows": "whose"
+    },
+    {
+     "question": "Order: you are where going?",
+     "answer": "Where are you going?",
+     "shows": "inversion"
+    }
+   ]
+  }
+ ]
+}

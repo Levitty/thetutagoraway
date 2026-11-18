@@ -1,0 +1,94 @@
+{
+ "sub_strand": "ENGL.G4.WRITIN.T2_CREATIVE_WRITING",
+ "title": "Creative Writing (Theme 2: Family celebrations)",
+ "status": "draft: written 18 Nov 2026 offline for Grade 4 English; not yet checked by a Kenyan English teacher; not loaded by the live tutor",
+ "notes": "",
+ "skills": [
+  {
+   "skill": "ENGL.G4.WRITIN.T2_CREATIVE_WRITING.OPEN_COMPOSITION",
+   "assessed_by": "composition",
+   "key_step": "The child plans a beginning, middle and end on the topic before writing.",
+   "floor": {
+    "prerequisite": "Orders sentences in a paragraph.",
+    "question": "Order: We ate. We cooked.",
+    "answer": "We cooked. We ate."
+   },
+   "steps": [
+    "Read the topic.",
+    "List three ideas on it.",
+    "Order them.",
+    "Write and check each sentence fits."
+   ],
+   "contexts": [
+    "a family celebration",
+    "my best day",
+    "a visit to the market"
+   ],
+   "board": [
+    {
+     "beat": "write",
+     "do": "Write the topic: A family celebration."
+    },
+    {
+     "beat": "point",
+     "do": "Point at the topic.",
+     "say": "Give me one idea that fits."
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for an idea."
+    },
+    {
+     "beat": "child_draws",
+     "do": "The child writes two more ideas and numbers them."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "ENGL.G4.WRITIN.T2_CREATIVE_WRITING.OPEN_COMPOSITION.M4_OC_OFF_TOPIC",
+     "listen_for": [
+      "Cows give us milk."
+     ],
+     "ask": "Is it about the topic?",
+     "repair": "Cross it out."
+    },
+    {
+     "code": "ENGL.G4.WRITIN.T2_CREATIVE_WRITING.OPEN_COMPOSITION.M4_OC_AND_THEN",
+     "listen_for": [
+      "We woke up and then we ate and then we went."
+     ],
+     "ask": "Another way to join?",
+     "repair": "After that, later."
+    },
+    {
+     "code": "ENGL.G4.WRITIN.T2_CREATIVE_WRITING.OPEN_COMPOSITION.M4_OC_LIST",
+     "listen_for": [
+      "I like dogs. Rain is wet. My name is Otieno."
+     ],
+     "ask": "Does it follow from the last one?",
+     "repair": "Link them."
+    },
+    {
+     "code": "ENGL.G4.WRITIN.T2_CREATIVE_WRITING.OPEN_COMPOSITION.M4_OC_NO_ENDING",
+     "listen_for": [
+      "nothing"
+     ],
+     "ask": "How did it end?",
+     "repair": "Add an ending."
+    }
+   ],
+   "checks": [
+    {
+     "question": "Topic: A wedding. Does \"Goats eat grass\" fit?",
+     "answer": "No",
+     "shows": "relevance"
+    },
+    {
+     "question": "Improve: and then, and then.",
+     "answer": "First, after that, finally",
+     "shows": "linking"
+    }
+   ]
+  }
+ ]
+}

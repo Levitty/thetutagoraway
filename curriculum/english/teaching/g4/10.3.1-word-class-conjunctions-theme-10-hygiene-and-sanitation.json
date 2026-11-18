@@ -1,0 +1,110 @@
+{
+ "sub_strand": "ENGL.G4.LANGUA.T10_WORD_CLASS_CONJUNCTI",
+ "title": "Word Class: Conjunctions (Theme 10: Hygiene and sanitation)",
+ "status": "draft: written 18 Nov 2026 offline for Grade 4 English; not yet checked by a Kenyan English teacher; not loaded by the live tutor",
+ "notes": "",
+ "skills": [
+  {
+   "skill": "ENGL.G4.LANGUA.T10_WORD_CLASS_CONJUNCTI.CONJUNCTIONS",
+   "assessed_by": "questions",
+   "key_step": "The child asks how the two ideas are linked before choosing and, but, because, so or or.",
+   "floor": {
+    "prerequisite": "Joins with and and but.",
+    "question": "Join: I ran. I fell.",
+    "answer": "I ran and I fell."
+   },
+   "steps": [
+    "Same direction: and.",
+    "Against: but.",
+    "Reason: because.",
+    "Result: so.",
+    "Choice: or."
+   ],
+   "contexts": [
+    "a hygiene talk",
+    "a dialogue at break"
+   ],
+   "board": [
+    {
+     "beat": "write",
+     "do": "Write: I washed my hands ___ they were dirty."
+    },
+    {
+     "beat": "point",
+     "do": "Point at the gap.",
+     "say": "Is it a reason or a result?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for because."
+    },
+    {
+     "beat": "child_draws",
+     "do": "The child writes a sentence with so."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "ENGL.G4.LANGUA.T10_WORD_CLASS_CONJUNCTI.CONJUNCTIONS.M_CNJ_BUT_FOR_AND",
+     "listen_for": [
+      "but"
+     ],
+     "ask": "Do they agree?",
+     "repair": "And."
+    },
+    {
+     "code": "ENGL.G4.LANGUA.T10_WORD_CLASS_CONJUNCTI.CONJUNCTIONS.M_CNJ_BECAUSE_SO",
+     "listen_for": [
+      "because"
+     ],
+     "ask": "Reason or result?",
+     "repair": "Swap."
+    },
+    {
+     "code": "ENGL.G4.LANGUA.T10_WORD_CLASS_CONJUNCTI.CONJUNCTIONS.M_CNJ_AND_FOR_BUT",
+     "listen_for": [
+      "and"
+     ],
+     "ask": "Do they go against each other?",
+     "repair": "But."
+    },
+    {
+     "code": "ENGL.G4.LANGUA.T10_WORD_CLASS_CONJUNCTI.CONJUNCTIONS.M_CNJ_AND_FOR_OR",
+     "listen_for": [
+      "and"
+     ],
+     "ask": "Is it a choice?",
+     "repair": "Or."
+    },
+    {
+     "code": "ENGL.G4.LANGUA.T10_WORD_CLASS_CONJUNCTI.CONJUNCTIONS.M_CNJ_OR_FOR_AND",
+     "listen_for": [
+      "or"
+     ],
+     "ask": "Did both happen?",
+     "repair": "And."
+    },
+    {
+     "code": "ENGL.G4.LANGUA.T10_WORD_CLASS_CONJUNCTI.CONJUNCTIONS.M_CNJ_DOUBLE",
+     "listen_for": [
+      "but"
+     ],
+     "ask": "How many joining words?",
+     "repair": "One."
+    }
+   ],
+   "checks": [
+    {
+     "question": "Tea ___ coffee?",
+     "answer": "or",
+     "shows": "choice"
+    },
+    {
+     "question": "It rained, ___ we stayed in.",
+     "answer": "so",
+     "shows": "result"
+    }
+   ]
+  }
+ ]
+}

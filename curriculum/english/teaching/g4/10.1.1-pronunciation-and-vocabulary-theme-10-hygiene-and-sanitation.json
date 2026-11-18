@@ -1,0 +1,182 @@
+{
+ "sub_strand": "ENGL.G4.LISTEN.T10_PRONUNCIATION_AND_VO",
+ "title": "Pronunciation and Vocabulary (Theme 10: Hygiene and sanitation)",
+ "status": "draft: written 18 Nov 2026 offline for Grade 4 English; not yet checked by a Kenyan English teacher; not loaded by the live tutor",
+ "notes": "",
+ "skills": [
+  {
+   "skill": "ENGL.G4.LISTEN.T10_PRONUNCIATION_AND_VO.HYGIENE_WORDS",
+   "assessed_by": "questions",
+   "key_step": "The child explains each hygiene word by what it does to keep us healthy.",
+   "floor": {
+    "prerequisite": "Knows body and home words.",
+    "question": "Where do we wash hands?",
+    "answer": "at the tap"
+   },
+   "steps": [
+    "Name it.",
+    "Say what it does.",
+    "Use it in a sentence."
+   ],
+   "contexts": [
+    "the school latrine",
+    "hand washing"
+   ],
+   "board": [
+    {
+     "beat": "draw",
+     "do": "Draw a hand-washing tap."
+    },
+    {
+     "beat": "point",
+     "do": "Point at the soap.",
+     "say": "Why do we use it?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for \"to kill germs\"."
+    },
+    {
+     "beat": "child_draws",
+     "do": "The child labels a dustbin."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "ENGL.G4.LISTEN.T10_PRONUNCIATION_AND_VO.HYGIENE_WORDS.M_HYG_NEAR_MEANING",
+     "listen_for": [
+      "rubbish"
+     ],
+     "ask": "What does it do?",
+     "repair": "Match it."
+    },
+    {
+     "code": "ENGL.G4.LISTEN.T10_PRONUNCIATION_AND_VO.HYGIENE_WORDS.M_HYG_DISINFECT",
+     "listen_for": [
+      "perfume"
+     ],
+     "ask": "Does it kill germs or smell nice?",
+     "repair": "Kills germs."
+    },
+    {
+     "code": "ENGL.G4.LISTEN.T10_PRONUNCIATION_AND_VO.HYGIENE_WORDS.M_HYG_LATRINE",
+     "listen_for": [
+      "drainage"
+     ],
+     "ask": "For people or for water?",
+     "repair": "Latrine for people."
+    },
+    {
+     "code": "ENGL.G4.LISTEN.T10_PRONUNCIATION_AND_VO.HYGIENE_WORDS.M4_HYG_GERMS_DIRT",
+     "listen_for": [
+      "No, they are clean"
+     ],
+     "ask": "Can you see germs?",
+     "repair": "No: wash anyway."
+    }
+   ],
+   "checks": [
+    {
+     "question": "To kill germs on a table you ...",
+     "answer": "disinfect it",
+     "shows": "disinfect"
+    },
+    {
+     "question": "Tiny living things that cause disease are ...",
+     "answer": "germs",
+     "shows": "germs"
+    }
+   ]
+  },
+  {
+   "skill": "ENGL.G4.LISTEN.T10_PRONUNCIATION_AND_VO.INTERRUPT_POLITELY",
+   "assessed_by": "questions",
+   "key_step": "The child waits for a pause, then says Excuse me, may I ... .",
+   "floor": {
+    "prerequisite": "Uses May I.",
+    "question": "Ask to borrow a pen.",
+    "answer": "May I borrow a pen?"
+   },
+   "steps": [
+    "Wait for a pause.",
+    "Say Excuse me.",
+    "Ask politely.",
+    "Thank the speaker."
+   ],
+   "contexts": [
+    "a teacher in class",
+    "a parent on the phone",
+    "an assembly"
+   ],
+   "board": [
+    {
+     "beat": "write",
+     "do": "Write: Excuse me, may I ...?"
+    },
+    {
+     "beat": "point",
+     "do": "Point at Excuse me.",
+     "say": "The teacher is speaking. You need to go out. What do you say?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for the polite interruption."
+    },
+    {
+     "beat": "child_draws",
+     "do": "The child writes another for a different place."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "ENGL.G4.LISTEN.T10_PRONUNCIATION_AND_VO.INTERRUPT_POLITELY.M4_IP_HEY",
+     "listen_for": [
+      "Hey, wait!"
+     ],
+     "ask": "Is Hey polite to a teacher?",
+     "repair": "Excuse me."
+    },
+    {
+     "code": "ENGL.G4.LISTEN.T10_PRONUNCIATION_AND_VO.INTERRUPT_POLITELY.M4_IP_NO_PAUSE",
+     "listen_for": [
+      "any time I need to"
+     ],
+     "ask": "Did you wait for a pause?",
+     "repair": "Wait."
+    },
+    {
+     "code": "ENGL.G4.LISTEN.T10_PRONUNCIATION_AND_VO.INTERRUPT_POLITELY.M4_IP_SORRY_ONLY",
+     "listen_for": [
+      "Sorry. I want water."
+     ],
+     "ask": "What did you ask for?",
+     "repair": "Sorry to interrupt, but may I ..."
+    },
+    {
+     "code": "ENGL.G4.LISTEN.T10_PRONUNCIATION_AND_VO.INTERRUPT_POLITELY.M4_IP_COMMAND",
+     "listen_for": [
+      "Excuse me. Give me the key."
+     ],
+     "ask": "Is give me a request?",
+     "repair": "May I have ...?"
+    }
+   ],
+   "checks": [
+    {
+     "question": "Best way to interrupt your teacher?",
+     "answer": "Excuse me, may I ask a question?",
+     "shows": "polite"
+    },
+    {
+     "question": "When should you interrupt?",
+     "answer": "at a pause",
+     "shows": "timing"
+    }
+   ]
+  }
+ ],
+ "also_taught_by": [
+  "ENGL.G4.LISTEN.T1_PRONUNCIATION_AND_VO.PRONOUNCE_SOUNDS",
+  "ENGL.G4.LISTEN.T7_PRONUNCIATION_AND_VO.TURN_TAKING"
+ ]
+}

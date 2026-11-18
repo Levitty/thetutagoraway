@@ -1,0 +1,92 @@
+{
+ "sub_strand": "ENGL.G4.LANGUA.T3_LANGUAGE_PATTERN",
+ "title": "Language pattern (Theme 3: Etiquette)",
+ "status": "draft: written 18 Nov 2026 offline for Grade 4 English; not yet checked by a Kenyan English teacher; not loaded by the live tutor",
+ "notes": "",
+ "skills": [
+  {
+   "skill": "ENGL.G4.LANGUA.T3_LANGUAGE_PATTERN.POLITE_PATTERN",
+   "assessed_by": "questions",
+   "key_step": "The child puts the plain verb after May I or Could you and keeps the question order.",
+   "floor": {
+    "prerequisite": "Uses polite words.",
+    "question": "Ask for water politely.",
+    "answer": "May I have water, please?"
+   },
+   "steps": [
+    "May I + plain verb.",
+    "Could you + plain verb.",
+    "Would you like + noun or to + verb."
+   ],
+   "contexts": [
+    "asking a teacher",
+    "offering a visitor tea"
+   ],
+   "board": [
+    {
+     "beat": "write",
+     "do": "Write: Could you ___ me, please? (help)"
+    },
+    {
+     "beat": "point",
+     "do": "Point at the gap.",
+     "say": "What form of help?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for help."
+    },
+    {
+     "beat": "child_draws",
+     "do": "The child writes a Would you like question."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "ENGL.G4.LANGUA.T3_LANGUAGE_PATTERN.POLITE_PATTERN.M_PAT_VERB_FORM",
+     "listen_for": [
+      "to come"
+     ],
+     "ask": "What comes after may I?",
+     "repair": "The plain verb."
+    },
+    {
+     "code": "ENGL.G4.LANGUA.T3_LANGUAGE_PATTERN.POLITE_PATTERN.M_PAT_NO_PLEASE",
+     "listen_for": [
+      "Give me water."
+     ],
+     "ask": "Is it a command?",
+     "repair": "Could you ..., please?"
+    },
+    {
+     "code": "ENGL.G4.LANGUA.T3_LANGUAGE_PATTERN.POLITE_PATTERN.M_PAT_WOULD_LIKE_FORM",
+     "listen_for": [
+      "Do"
+     ],
+     "ask": "Is it an offer?",
+     "repair": "Would you like."
+    },
+    {
+     "code": "ENGL.G4.LANGUA.T3_LANGUAGE_PATTERN.POLITE_PATTERN.M_PAT_ORDER",
+     "listen_for": [
+      "help you"
+     ],
+     "ask": "Is it a question?",
+     "repair": "Could you help."
+    }
+   ],
+   "checks": [
+    {
+     "question": "May I ___ in? (come)",
+     "answer": "come",
+     "shows": "plain verb"
+    },
+    {
+     "question": "Would you like ___ tea?",
+     "answer": "some",
+     "shows": "offer"
+    }
+   ]
+  }
+ ]
+}

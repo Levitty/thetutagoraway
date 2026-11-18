@@ -1,0 +1,93 @@
+{
+ "sub_strand": "ENGL.G4.READIN.T4_INTENSIVE_READING_VI",
+ "title": "Intensive Reading: Visuals (Theme 4: Accidents- first aid)",
+ "status": "draft: written 18 Nov 2026 offline for Grade 4 English; not yet checked by a Kenyan English teacher; not loaded by the live tutor",
+ "notes": "",
+ "skills": [
+  {
+   "skill": "ENGL.G4.READIN.T4_INTENSIVE_READING_VI.VISUALS",
+   "assessed_by": "questions",
+   "key_step": "The child reads the title and labels first, then finds the row and column that answer.",
+   "floor": {
+    "prerequisite": "Answers questions on a text.",
+    "question": "What is the title?",
+    "answer": "the title"
+   },
+   "steps": [
+    "Read the title.",
+    "Read the labels.",
+    "Find the row and column.",
+    "Answer."
+   ],
+   "contexts": [
+    "a clinic notice",
+    "a school timetable"
+   ],
+   "board": [
+    {
+     "beat": "draw",
+     "do": "Draw a small timetable."
+    },
+    {
+     "beat": "point",
+     "do": "Point at Tuesday and 10:00.",
+     "say": "What lesson is it?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for the answer."
+    },
+    {
+     "beat": "child_draws",
+     "do": "The child finds another."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "ENGL.G4.READIN.T4_INTENSIVE_READING_VI.VISUALS.M_VIS_WRONG_ROW",
+     "listen_for": [
+      "10:30 am"
+     ],
+     "ask": "Which row is it?",
+     "repair": "Run your finger along."
+    },
+    {
+     "code": "ENGL.G4.READIN.T4_INTENSIVE_READING_VI.VISUALS.M_VIS_NEARBY_DETAIL",
+     "listen_for": [
+      "Saturday"
+     ],
+     "ask": "Is that the one asked?",
+     "repair": "Check the label."
+    },
+    {
+     "code": "ENGL.G4.READIN.T4_INTENSIVE_READING_VI.VISUALS.M_VIS_PURPOSE",
+     "listen_for": [
+      "to sell shoes"
+     ],
+     "ask": "What does the title say?",
+     "repair": "Read it first."
+    },
+    {
+     "code": "ENGL.G4.READIN.T4_INTENSIVE_READING_VI.VISUALS.M4_VIS_TITLE_IGNORED",
+     "listen_for": [
+      "the price"
+     ],
+     "ask": "What is the chart about?",
+     "repair": "Title first."
+    }
+   ],
+   "checks": [
+    {
+     "question": "A notice says \"Meeting: Friday 2 pm\". When?",
+     "answer": "Friday 2 pm",
+     "shows": "notice"
+    },
+    {
+     "question": "What is this chart for?",
+     "answer": "from the title",
+     "shows": "purpose"
+    }
+   ]
+  }
+ ]
+}

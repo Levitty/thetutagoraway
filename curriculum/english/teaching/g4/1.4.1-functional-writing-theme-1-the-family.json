@@ -1,0 +1,178 @@
+{
+ "sub_strand": "ENGL.G4.WRITIN.T1_FUNCTIONAL_WRITING",
+ "title": "Functional writing (Theme 1: The family)",
+ "status": "draft: written 18 Nov 2026 offline for Grade 4 English; not yet checked by a Kenyan English teacher; not loaded by the live tutor",
+ "notes": "",
+ "skills": [
+  {
+   "skill": "ENGL.G4.WRITIN.T1_FUNCTIONAL_WRITING.FORM_INFORMATION",
+   "assessed_by": "questions",
+   "key_step": "The child reads each label and says what kind of detail it asks for before filling it.",
+   "floor": {
+    "prerequisite": "Writes names.",
+    "question": "Write your full names.",
+    "answer": "all names"
+   },
+   "steps": [
+    "Read the label.",
+    "Say what it asks for.",
+    "Match the detail."
+   ],
+   "contexts": [
+    "a library card",
+    "a school admission form"
+   ],
+   "board": [
+    {
+     "beat": "draw",
+     "do": "Draw boxes: Full names, Date of birth, Address."
+    },
+    {
+     "beat": "point",
+     "do": "Point at Date of birth.",
+     "say": "What goes here?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for a date."
+    },
+    {
+     "beat": "child_draws",
+     "do": "The child fills Address."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "ENGL.G4.WRITIN.T1_FUNCTIONAL_WRITING.FORM_INFORMATION.M_FRM_DETAIL_MIX",
+     "listen_for": [
+      "Nairobi"
+     ],
+     "ask": "What does the label ask?",
+     "repair": "Match the detail."
+    },
+    {
+     "code": "ENGL.G4.WRITIN.T1_FUNCTIONAL_WRITING.FORM_INFORMATION.M_FRM_AGE_FOR_DOB",
+     "listen_for": [
+      "9 years"
+     ],
+     "ask": "Is age a date?",
+     "repair": "Write the date."
+    },
+    {
+     "code": "ENGL.G4.WRITIN.T1_FUNCTIONAL_WRITING.FORM_INFORMATION.M_FRM_CONTACT_FOR_ADDRESS",
+     "listen_for": [
+      "0712 345 678"
+     ],
+     "ask": "Is a phone an address?",
+     "repair": "P.O. Box."
+    },
+    {
+     "code": "ENGL.G4.WRITIN.T1_FUNCTIONAL_WRITING.FORM_INFORMATION.M_FRM_NAME_PART",
+     "listen_for": [
+      "Wanjiru"
+     ],
+     "ask": "Is that all your names?",
+     "repair": "Write them all."
+    }
+   ],
+   "checks": [
+    {
+     "question": "Date of birth box: 9 years?",
+     "answer": "No, the date",
+     "shows": "date"
+    },
+    {
+     "question": "Full names: only \"Juma\"?",
+     "answer": "No, all names",
+     "shows": "names"
+    }
+   ]
+  },
+  {
+   "skill": "ENGL.G4.WRITIN.T1_FUNCTIONAL_WRITING.FILL_FORM",
+   "assessed_by": "composition",
+   "key_step": "The child reads each box label and its instruction before writing.",
+   "floor": {
+    "prerequisite": "Knows what goes in each box.",
+    "question": "What goes in Date of birth?",
+    "answer": "the date you were born"
+   },
+   "steps": [
+    "Read the whole form.",
+    "Read each label.",
+    "Write the detail neatly.",
+    "Check every box."
+   ],
+   "contexts": [
+    "a library card",
+    "a clinic register",
+    "a school club form"
+   ],
+   "board": [
+    {
+     "beat": "draw",
+     "do": "Draw a form: NAME (IN CAPITALS), Class, Signature."
+    },
+    {
+     "beat": "point",
+     "do": "Point at (IN CAPITALS).",
+     "say": "How do you write your name here?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for the child to write."
+    },
+    {
+     "beat": "child_draws",
+     "do": "The child fills the other boxes."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "ENGL.G4.WRITIN.T1_FUNCTIONAL_WRITING.FILL_FORM.M4_FF_LOWER_CASE",
+     "listen_for": [
+      "amina wekesa"
+     ],
+     "ask": "What do the brackets say?",
+     "repair": "CAPITALS."
+    },
+    {
+     "code": "ENGL.G4.WRITIN.T1_FUNCTIONAL_WRITING.FILL_FORM.M4_FF_EMPTY_BOX",
+     "listen_for": [
+      "nothing"
+     ],
+     "ask": "Is any box empty?",
+     "repair": "Fill it."
+    },
+    {
+     "code": "ENGL.G4.WRITIN.T1_FUNCTIONAL_WRITING.FILL_FORM.M4_FF_SIGN_AS_NAME",
+     "listen_for": [
+      "AMINA WEKESA (printed)"
+     ],
+     "ask": "Is that your signature?",
+     "repair": "Your own mark."
+    },
+    {
+     "code": "ENGL.G4.WRITIN.T1_FUNCTIONAL_WRITING.FILL_FORM.M4_FF_OUTSIDE_BOX",
+     "listen_for": [
+      "big letters over the lines"
+     ],
+     "ask": "Is it inside the box?",
+     "repair": "Small and neat."
+    }
+   ],
+   "checks": [
+    {
+     "question": "NAME (IN CAPITALS): amina. Correct?",
+     "answer": "No: AMINA",
+     "shows": "capitals"
+    },
+    {
+     "question": "What goes in Signature?",
+     "answer": "my own signature",
+     "shows": "signature"
+    }
+   ]
+  }
+ ]
+}

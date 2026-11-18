@@ -1,0 +1,286 @@
+{
+ "sub_strand": "ENGL.G4.READIN.T2_INTENSIVE_READING",
+ "title": "Intensive Reading (Theme 2: Family celebrations)",
+ "status": "draft: written 18 Nov 2026 offline for Grade 4 English; not yet checked by a Kenyan English teacher; not loaded by the live tutor",
+ "notes": "",
+ "skills": [
+  {
+   "skill": "ENGL.G4.READIN.T2_INTENSIVE_READING.FACTUAL_QUESTIONS",
+   "assessed_by": "questions",
+   "key_step": "The child finds the words in the text that answer the question and checks them.",
+   "floor": {
+    "prerequisite": "Answers direct questions.",
+    "question": "Who is in the story?",
+    "answer": "a name from the text"
+   },
+   "steps": [
+    "Read the question.",
+    "Find the key word in the text.",
+    "Read the sentence around it.",
+    "Answer from the text only."
+   ],
+   "contexts": [
+    "a story about a family celebration",
+    "a notice about etiquette"
+   ],
+   "board": [
+    {
+     "beat": "write",
+     "do": "Write a short text and a question."
+    },
+    {
+     "beat": "point",
+     "do": "Point at the key word.",
+     "say": "Where is it in the text?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for the child to find it."
+    },
+    {
+     "beat": "reveal",
+     "do": "Underline the sentence that answers."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "ENGL.G4.READIN.T2_INTENSIVE_READING.FACTUAL_QUESTIONS.M_FACT_NEARBY_DETAIL",
+     "listen_for": [
+      "sand"
+     ],
+     "ask": "Does it answer the question?",
+     "repair": "Read the whole sentence."
+    },
+    {
+     "code": "ENGL.G4.READIN.T2_INTENSIVE_READING.FACTUAL_QUESTIONS.M_FACT_OUTSIDE_KNOWLEDGE",
+     "listen_for": [
+      "by bus"
+     ],
+     "ask": "Did the text say it?",
+     "repair": "Only from the text."
+    },
+    {
+     "code": "ENGL.G4.READIN.T2_INTENSIVE_READING.FACTUAL_QUESTIONS.M_FACT_MISSES_STATED",
+     "listen_for": [
+      "Not stated"
+     ],
+     "ask": "Look again: is it there?",
+     "repair": "Find the sentence."
+    },
+    {
+     "code": "ENGL.G4.READIN.T2_INTENSIVE_READING.FACTUAL_QUESTIONS.M_FACT_FALSE_AS_TRUE",
+     "listen_for": [
+      "True"
+     ],
+     "ask": "Is it the same as the text?",
+     "repair": "It says something different: False."
+    },
+    {
+     "code": "ENGL.G4.READIN.T2_INTENSIVE_READING.FACTUAL_QUESTIONS.M_FACT_FALSE_AS_NOT_STATED",
+     "listen_for": [
+      "Not stated"
+     ],
+     "ask": "Does the text talk about it?",
+     "repair": "Yes, differently: False."
+    },
+    {
+     "code": "ENGL.G4.READIN.T2_INTENSIVE_READING.FACTUAL_QUESTIONS.M_FACT_NOT_STATED_AS_TRUE",
+     "listen_for": [
+      "True"
+     ],
+     "ask": "Can you find it?",
+     "repair": "No: Not stated."
+    },
+    {
+     "code": "ENGL.G4.READIN.T2_INTENSIVE_READING.FACTUAL_QUESTIONS.M_FACT_WRONG_WHO",
+     "listen_for": [
+      "his teacher"
+     ],
+     "ask": "Who did the action?",
+     "repair": "The doer."
+    }
+   ],
+   "checks": [
+    {
+     "question": "True, False or Not stated: the text does not mention rain.",
+     "answer": "Not stated",
+     "shows": "not stated"
+    },
+    {
+     "question": "Who gave the gift?",
+     "answer": "the person named in the text",
+     "shows": "who"
+    }
+   ]
+  },
+  {
+   "skill": "ENGL.G4.READIN.T2_INTENSIVE_READING.INFERENCE_QUESTIONS",
+   "assessed_by": "questions",
+   "key_step": "The child finds the clue in the text and says what it tells us that the text does not say.",
+   "floor": {
+    "prerequisite": "Answers direct questions.",
+    "question": "What did Amina buy?",
+    "answer": "a stated answer"
+   },
+   "steps": [
+    "Find the clue.",
+    "Ask what it shows.",
+    "Check the answer fits the text."
+   ],
+   "contexts": [
+    "a story about a birthday",
+    "a poem about a celebration"
+   ],
+   "board": [
+    {
+     "beat": "write",
+     "do": "Write: Juma slammed the door."
+    },
+    {
+     "beat": "point",
+     "do": "Point at slammed.",
+     "say": "How does Juma feel?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for angry."
+    },
+    {
+     "beat": "reveal",
+     "do": "Show that slammed is the clue."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "ENGL.G4.READIN.T2_INTENSIVE_READING.INFERENCE_QUESTIONS.M_INFER_REPEATS_TEXT",
+     "listen_for": [
+      "The woman wore a green dress."
+     ],
+     "ask": "Did you copy a line?",
+     "repair": "Say what the clue shows."
+    },
+    {
+     "code": "ENGL.G4.READIN.T2_INTENSIVE_READING.INFERENCE_QUESTIONS.M_INFER_CONTRADICTS",
+     "listen_for": [
+      "The school was closed."
+     ],
+     "ask": "Does it agree with the text?",
+     "repair": "Check it."
+    },
+    {
+     "code": "ENGL.G4.READIN.T2_INTENSIVE_READING.INFERENCE_QUESTIONS.M_INFER_OVERREACH",
+     "listen_for": [
+      "She is the richest woman in town."
+     ],
+     "ask": "Does the text show that much?",
+     "repair": "Only what the clue shows."
+    },
+    {
+     "code": "ENGL.G4.READIN.T2_INTENSIVE_READING.INFERENCE_QUESTIONS.M4_INFER_FEELING_GUESS",
+     "listen_for": [
+      "tired"
+     ],
+     "ask": "What is the clue?",
+     "repair": "Find it first."
+    }
+   ],
+   "checks": [
+    {
+     "question": "\"Otieno smiled and hugged his gift.\" He felt ...",
+     "answer": "happy",
+     "shows": "feeling"
+    },
+    {
+     "question": "\"The road was wet in the morning.\" What happened at night?",
+     "answer": "it rained",
+     "shows": "cause"
+    }
+   ]
+  },
+  {
+   "skill": "ENGL.G4.READIN.T2_INTENSIVE_READING.CONTEXT_CLUES",
+   "assessed_by": "questions",
+   "key_step": "The child reads the sentences around the word and tries a meaning that fits there.",
+   "floor": {
+    "prerequisite": "Uses picture clues.",
+    "question": "What does the picture show?",
+    "answer": "a description"
+   },
+   "steps": [
+    "Find the word.",
+    "Read before and after.",
+    "Try a meaning.",
+    "Check it fits."
+   ],
+   "contexts": [
+    "a story with a new word",
+    "a newspaper sentence"
+   ],
+   "board": [
+    {
+     "beat": "write",
+     "do": "Write: The old hut was dilapidated; its roof had fallen in."
+    },
+    {
+     "beat": "point",
+     "do": "Point at the part after the semicolon.",
+     "say": "What clue does it give?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for an answer."
+    },
+    {
+     "beat": "predict",
+     "do": "Ask: so what does dilapidated mean?"
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "ENGL.G4.READIN.T2_INTENSIVE_READING.CONTEXT_CLUES.M_CTX_LOOKS_LIKE",
+     "listen_for": [
+      "rolled away"
+     ],
+     "ask": "Does it fit the sentence?",
+     "repair": "Use the clue, not the look."
+    },
+    {
+     "code": "ENGL.G4.READIN.T2_INTENSIVE_READING.CONTEXT_CLUES.M_CTX_COMMON_MEANING",
+     "listen_for": [
+      "big baskets"
+     ],
+     "ask": "Does the usual meaning fit here?",
+     "repair": "Check the sentence."
+    },
+    {
+     "code": "ENGL.G4.READIN.T2_INTENSIVE_READING.CONTEXT_CLUES.M_CTX_OPPOSITE",
+     "listen_for": [
+      "very new"
+     ],
+     "ask": "Does it agree with the clue?",
+     "repair": "Not the opposite."
+    },
+    {
+     "code": "ENGL.G4.READIN.T2_INTENSIVE_READING.CONTEXT_CLUES.M_CTX_WRONG_CLUE",
+     "listen_for": [
+      "in Nyeri"
+     ],
+     "ask": "Does that part explain the word?",
+     "repair": "Find the one that does."
+    }
+   ],
+   "checks": [
+    {
+     "question": "\"The ravenous boy ate three plates.\" Ravenous means ...",
+     "answer": "very hungry",
+     "shows": "clue"
+    },
+    {
+     "question": "Which words explain the new word?",
+     "answer": "the clue words",
+     "shows": "clue"
+    }
+   ]
+  }
+ ]
+}

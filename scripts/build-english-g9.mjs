@@ -2,6 +2,7 @@
 //   node scripts/build-english-g9.mjs   then   npm run subject:map -- english 9 --dir english --title "English"
 // Idempotent. Official outcomes and sub-strand text are never touched. Skills 'proposed', misconceptions 'draft'.
 import { readFileSync, writeFileSync } from 'node:fs';
+import { applyDepth } from './lib/english-depth.mjs';
 import { SKILLS, MIS } from './data/english-g9-skills.mjs';
 const path = new URL('../curriculum/english/g9.json', import.meta.url);
 const g = JSON.parse(readFileSync(path, 'utf8'));
@@ -28,5 +29,7 @@ for (const [skill, short, error, q, wrong, right, feedback] of MIS) {
 }
 g.totals = { ...g.totals, skills: SKILLS.length, prerequisites: nPre, misconceptions: MIS.length };
 g.status = "outcomes from KICD's text, word for word; skills, prerequisites and misconceptions proposed (authored offline, 13 Nov 2026), awaiting a Kenyan English teacher's review";
+// Depth pass (18 Nov 2026): new skills, prerequisites, misconceptions and the teaching pack from scripts/data/english-depth/g9-*.mjs.
+await applyDepth(9, g, { families: (await import('../src/ai-tutor/content/subjects/english_g9.js')).default.families });
 writeFileSync(path, JSON.stringify(g, null, 1) + '\n');
 console.log(`english g9: ${SKILLS.length} skills, ${nPre} prerequisites, ${MIS.length} misconceptions`);

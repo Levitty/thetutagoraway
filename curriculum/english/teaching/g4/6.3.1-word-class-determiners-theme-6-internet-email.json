@@ -1,0 +1,177 @@
+{
+ "sub_strand": "ENGL.G4.LANGUA.T6_WORD_CLASS_DETERMINE",
+ "title": "Word Class: Determiners (Theme 6: Internet-email)",
+ "status": "draft: written 18 Nov 2026 offline for Grade 4 English; not yet checked by a Kenyan English teacher; not loaded by the live tutor",
+ "notes": "",
+ "skills": [
+  {
+   "skill": "ENGL.G4.LANGUA.T6_WORD_CLASS_DETERMINE.COUNT_UNCOUNT",
+   "assessed_by": "questions",
+   "key_step": "The child asks \"can I count it?\" before choosing many or much, few or little.",
+   "floor": {
+    "prerequisite": "Knows plurals.",
+    "question": "One mango, two ...",
+    "answer": "mangoes"
+   },
+   "steps": [
+    "Can you count it?",
+    "Yes: many, few.",
+    "No: much, little."
+   ],
+   "contexts": [
+    "at the market",
+    "water at home"
+   ],
+   "board": [
+    {
+     "beat": "write",
+     "do": "Write: How ___ water? How ___ eggs?"
+    },
+    {
+     "beat": "point",
+     "do": "Point at water.",
+     "say": "Can you count water?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for much."
+    },
+    {
+     "beat": "child_draws",
+     "do": "The child fills eggs: many."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "ENGL.G4.LANGUA.T6_WORD_CLASS_DETERMINE.COUNT_UNCOUNT.M_QUA_MUCH_COUNT",
+     "listen_for": [
+      "much"
+     ],
+     "ask": "Can you count them?",
+     "repair": "Many."
+    },
+    {
+     "code": "ENGL.G4.LANGUA.T6_WORD_CLASS_DETERMINE.COUNT_UNCOUNT.M_QUA_MANY_UNCOUNT",
+     "listen_for": [
+      "many"
+     ],
+     "ask": "Can you count it?",
+     "repair": "Much."
+    },
+    {
+     "code": "ENGL.G4.LANGUA.T6_WORD_CLASS_DETERMINE.COUNT_UNCOUNT.M_QUA_FEW_UNCOUNT",
+     "listen_for": [
+      "few"
+     ],
+     "ask": "Count or not?",
+     "repair": "Little for uncount."
+    },
+    {
+     "code": "ENGL.G4.LANGUA.T6_WORD_CLASS_DETERMINE.COUNT_UNCOUNT.M_QUA_MUCH_IN_STATEMENT",
+     "listen_for": [
+      "much"
+     ],
+     "ask": "Is it a question or negative?",
+     "repair": "A lot of."
+    }
+   ],
+   "checks": [
+    {
+     "question": "There is ___ sugar. (few/little)",
+     "answer": "little",
+     "shows": "uncount"
+    },
+    {
+     "question": "How ___ pupils? (much/many)",
+     "answer": "many",
+     "shows": "count"
+    }
+   ]
+  },
+  {
+   "skill": "ENGL.G4.LANGUA.T6_WORD_CLASS_DETERMINE.SOME_ANY",
+   "assessed_by": "questions",
+   "key_step": "The child uses some in a positive sentence and any after not or in a question.",
+   "floor": {
+    "prerequisite": "Uses many and much.",
+    "question": "How ___ water?",
+    "answer": "much"
+   },
+   "steps": [
+    "Positive: some.",
+    "Not or question: any.",
+    "Enough before the noun.",
+    "A lot of."
+   ],
+   "contexts": [
+    "shopping",
+    "a meal at home"
+   ],
+   "board": [
+    {
+     "beat": "write",
+     "do": "Write: We have ___ bread. We do not have ___ milk."
+    },
+    {
+     "beat": "point",
+     "do": "Point at not.",
+     "say": "Some or any after not?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for any."
+    },
+    {
+     "beat": "child_draws",
+     "do": "The child fills the first gap."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "ENGL.G4.LANGUA.T6_WORD_CLASS_DETERMINE.SOME_ANY.M_QSA_ANY_STATEMENT",
+     "listen_for": [
+      "any"
+     ],
+     "ask": "Is it positive?",
+     "repair": "Some."
+    },
+    {
+     "code": "ENGL.G4.LANGUA.T6_WORD_CLASS_DETERMINE.SOME_ANY.M_QSA_SOME_NEGATIVE",
+     "listen_for": [
+      "some"
+     ],
+     "ask": "Is there not?",
+     "repair": "Any."
+    },
+    {
+     "code": "ENGL.G4.LANGUA.T6_WORD_CLASS_DETERMINE.SOME_ANY.M_QSA_ENOUGH_AFTER",
+     "listen_for": [
+      "food enough"
+     ],
+     "ask": "Where does enough go?",
+     "repair": "Before the noun."
+    },
+    {
+     "code": "ENGL.G4.LANGUA.T6_WORD_CLASS_DETERMINE.SOME_ANY.M_QSA_A_LOT_NOUN",
+     "listen_for": [
+      "a lot mangoes"
+     ],
+     "ask": "A lot what?",
+     "repair": "A lot of."
+    }
+   ],
+   "checks": [
+    {
+     "question": "Is there ___ tea?",
+     "answer": "any",
+     "shows": "question"
+    },
+    {
+     "question": "I have ___ friends.",
+     "answer": "some",
+     "shows": "positive"
+    }
+   ]
+  }
+ ]
+}

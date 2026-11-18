@@ -1,0 +1,264 @@
+{
+ "sub_strand": "ENGL.G4.LISTEN.T13_PRONUNCIATION_AND_VO",
+ "title": "Pronunciation and Vocabulary (Theme 13: Money)",
+ "status": "draft: written 18 Nov 2026 offline for Grade 4 English; not yet checked by a Kenyan English teacher; not loaded by the live tutor",
+ "notes": "",
+ "skills": [
+  {
+   "skill": "ENGL.G4.LISTEN.T13_PRONUNCIATION_AND_VO.MONEY_WORDS",
+   "assessed_by": "questions",
+   "key_step": "The child explains each money word by who gives, keeps or receives the money.",
+   "floor": {
+    "prerequisite": "Knows theme words.",
+    "question": "What do you use to buy?",
+    "answer": "money"
+   },
+   "steps": [
+    "Name it.",
+    "Say who does what.",
+    "Use it in a sentence."
+   ],
+   "contexts": [
+    "buying at a kiosk",
+    "M-Pesa at home"
+   ],
+   "board": [
+    {
+     "beat": "write",
+     "do": "Write: borrow, lend."
+    },
+    {
+     "beat": "point",
+     "do": "Point at lend.",
+     "say": "Who gives the money?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for the answer."
+    },
+    {
+     "beat": "child_draws",
+     "do": "The child writes a sentence with borrow."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "ENGL.G4.LISTEN.T13_PRONUNCIATION_AND_VO.MONEY_WORDS.M_MON_EARN_SAVE",
+     "listen_for": [
+      "earns"
+     ],
+     "ask": "Get or keep?",
+     "repair": "Earn is get."
+    },
+    {
+     "code": "ENGL.G4.LISTEN.T13_PRONUNCIATION_AND_VO.MONEY_WORDS.M_MON_BORROW_LEND",
+     "listen_for": [
+      "lend"
+     ],
+     "ask": "Who gives?",
+     "repair": "Lend gives."
+    },
+    {
+     "code": "ENGL.G4.LISTEN.T13_PRONUNCIATION_AND_VO.MONEY_WORDS.M_MON_NEAR_MEANING",
+     "listen_for": [
+      "price"
+     ],
+     "ask": "What does it mean?",
+     "repair": "Match it."
+    },
+    {
+     "code": "ENGL.G4.LISTEN.T13_PRONUNCIATION_AND_VO.MONEY_WORDS.M_MON_PRICE_CHANGE",
+     "listen_for": [
+      "change"
+     ],
+     "ask": "Cost or money back?",
+     "repair": "Change is back."
+    }
+   ],
+   "checks": [
+    {
+     "question": "Money you get back after paying too much is ...",
+     "answer": "change",
+     "shows": "change"
+    },
+    {
+     "question": "To keep money for later is to ...",
+     "answer": "save",
+     "shows": "save"
+    }
+   ]
+  },
+  {
+   "skill": "ENGL.G4.LISTEN.T13_PRONUNCIATION_AND_VO.SILENT_LETTERS",
+   "assessed_by": "questions",
+   "key_step": "The child says the word, then finds the letter that is written but not heard.",
+   "floor": {
+    "prerequisite": "Hears sounds in words.",
+    "question": "Say: knife. Do you hear k?",
+    "answer": "no"
+   },
+   "steps": [
+    "Say the word.",
+    "Point at each letter.",
+    "Find the one not heard."
+   ],
+   "contexts": [
+    "a money talk",
+    "spelling bee"
+   ],
+   "board": [
+    {
+     "beat": "write",
+     "do": "Write: knife, write, lamb."
+    },
+    {
+     "beat": "point",
+     "do": "Point at knife.",
+     "say": "Which letter is not heard?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for k."
+    },
+    {
+     "beat": "child_draws",
+     "do": "The child circles the others."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "ENGL.G4.LISTEN.T13_PRONUNCIATION_AND_VO.SILENT_LETTERS.M_SIL_NEIGHBOUR",
+     "listen_for": [
+      "n"
+     ],
+     "ask": "Which one is not heard?",
+     "repair": "Say it again."
+    },
+    {
+     "code": "ENGL.G4.LISTEN.T13_PRONUNCIATION_AND_VO.SILENT_LETTERS.M_SIL_NONE",
+     "listen_for": [
+      "none"
+     ],
+     "ask": "Do you hear every letter?",
+     "repair": "One is silent."
+    },
+    {
+     "code": "ENGL.G4.LISTEN.T13_PRONUNCIATION_AND_VO.SILENT_LETTERS.M_SIL_END_E",
+     "listen_for": [
+      "m"
+     ],
+     "ask": "Is it always the last?",
+     "repair": "Look at each."
+    },
+    {
+     "code": "ENGL.G4.LISTEN.T13_PRONUNCIATION_AND_VO.SILENT_LETTERS.M4_SIL_SPELL_SAY",
+     "listen_for": [
+      "k-nife"
+     ],
+     "ask": "Do we say k?",
+     "repair": "Silent k."
+    }
+   ],
+   "checks": [
+    {
+     "question": "Silent letter in \"write\"?",
+     "answer": "w",
+     "shows": "silent"
+    },
+    {
+     "question": "Silent letter in \"lamb\"?",
+     "answer": "b",
+     "shows": "silent"
+    }
+   ]
+  },
+  {
+   "skill": "ENGL.G4.LISTEN.T13_PRONUNCIATION_AND_VO.VERY_BUT",
+   "assessed_by": "questions",
+   "key_step": "The child puts very before the plain adjective, then but before the opposite idea.",
+   "floor": {
+    "prerequisite": "Knows adjectives.",
+    "question": "Which word describes: a tall tree?",
+    "answer": "tall"
+   },
+   "steps": [
+    "Say a quality with very.",
+    "Think of an opposite point.",
+    "Join with but."
+   ],
+   "contexts": [
+    "buying shoes at the market",
+    "a new phone",
+    "a long journey"
+   ],
+   "board": [
+    {
+     "beat": "write",
+     "do": "Write: The shoes are very ___ but they are ___."
+    },
+    {
+     "beat": "point",
+     "do": "Point at the first gap.",
+     "say": "A good word for the shoes?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for nice."
+    },
+    {
+     "beat": "child_draws",
+     "do": "The child fills the second gap with an opposite idea."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "ENGL.G4.LISTEN.T13_PRONUNCIATION_AND_VO.VERY_BUT.M4_VB_VERY_COMPARATIVE",
+     "listen_for": [
+      "nicer"
+     ],
+     "ask": "Very nice or very nicer?",
+     "repair": "Very nice."
+    },
+    {
+     "code": "ENGL.G4.LISTEN.T13_PRONUNCIATION_AND_VO.VERY_BUT.M4_VB_TOO_FOR_VERY",
+     "listen_for": [
+      "too"
+     ],
+     "ask": "Is it more than you want?",
+     "repair": "If not, very."
+    },
+    {
+     "code": "ENGL.G4.LISTEN.T13_PRONUNCIATION_AND_VO.VERY_BUT.M4_VB_NO_CONTRAST",
+     "listen_for": [
+      "The bag is very strong but it is good."
+     ],
+     "ask": "Do the two ideas pull apart?",
+     "repair": "Choose an opposite."
+    },
+    {
+     "code": "ENGL.G4.LISTEN.T13_PRONUNCIATION_AND_VO.VERY_BUT.M4_VB_VERY_MUCH",
+     "listen_for": [
+      "very much"
+     ],
+     "ask": "Very much nice?",
+     "repair": "Very nice."
+    }
+   ],
+   "checks": [
+    {
+     "question": "The bus is very fast but it is ... (good / noisy)",
+     "answer": "noisy",
+     "shows": "contrast"
+    },
+    {
+     "question": "Correct: The mangoes are very cheaper but small.",
+     "answer": "very cheap",
+     "shows": "plain adjective"
+    }
+   ]
+  }
+ ],
+ "also_taught_by": [
+  "ENGL.G4.LISTEN.T1_PRONUNCIATION_AND_VO.LISTEN_ATTENTIVE"
+ ]
+}
