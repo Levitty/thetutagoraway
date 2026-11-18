@@ -2,7 +2,7 @@
 // Outcomes are official (word for word). Skills are proposed, awaiting teacher review.
 // A family carries `cskill` (a key of SKILLS), `outcome` (its official outcome) and `skill` (the same as cskill:
 // these skills are not in the practice engine's Maths graph). MIS_FEEDBACK maps a short misconception code to the line a child reads.
-export const MAP_SOURCE = {"source":"curriculum/cre/g8.json","status":"outcomes from KICD's text, word for word; skills, prerequisites and misconceptions proposed (authored offline, 13 Nov 2026), awaiting a CRE teacher's review"};
+export const MAP_SOURCE = {"source":"curriculum/cre/g8.json","status":"outcomes from KICD's text, word for word; skills and prerequisites proposed, misconceptions draft, teaching pack draft; first pass 12 and 13 Nov 2026, deepened to the Grade 5 Maths standard on 18 Nov 2026 (two prerequisites and four misconceptions per skill); written offline by Claude, awaiting a CRE teacher's review. Rubrics from KICD, untouched."};
 export const SUBSTRANDS = {
  "CRE.G8.CREATI.ORIGIN_AND_CONSEQUENCES_": {
   "name": "Origin and Consequences of Sin",
@@ -633,7 +633,26 @@ export const SKILLS = {
   "mis": [
    "M_CR8_SO_FRUIT",
    "M_CR8_SO_TEMPT",
-   "M_CR8_SO_RESULT"
+   "M_CR8_SO_RESULT",
+   "M_CR8_SO_SHAME_HIDE"
+  ]
+ },
+ "CRES.G8.CREATI.ORIGIN_AND_CONSEQUENCES_.SIN_TODAY": {
+  "name": "Analyse the causes of sin today and the moral values and life skills that help overcome temptation (James 1:13-15; 1 John 2:16; 1 Corinthians 10:13; Matthew 26:41)",
+  "sub": "CRE.G8.CREATI.ORIGIN_AND_CONSEQUENCES_",
+  "outcome": "CRE.G8.CREATI.ORIGIN_AND_CONSEQUENCES_.c",
+  "outcomes": [
+   "CRE.G8.CREATI.ORIGIN_AND_CONSEQUENCES_.c",
+   "CRE.G8.CREATI.ORIGIN_AND_CONSEQUENCES_.d"
+  ],
+  "pre": [
+   "CRES.G8.CREATI.ORIGIN_AND_CONSEQUENCES_.SIN_ORIGIN"
+  ],
+  "mis": [
+   "M_CR8_ST_GOD_TEMPTS",
+   "M_CR8_ST_DEVIL_ONLY",
+   "M_CR8_ST_NO_WAY_OUT",
+   "M_CR8_ST_TEMPTED_SINNED"
   ]
  },
  "CRES.G8.CREATI.GOD_S_PLAN_FOR_REDEMPTIO.REDEMPTION": {
@@ -651,7 +670,8 @@ export const SKILLS = {
   "mis": [
    "M_CR8_RD_CLOTHES",
    "M_CR8_RD_JOHN",
-   "M_CR8_RD_WHY"
+   "M_CR8_RD_WHY",
+   "M_CR8_RD_EARN"
   ]
  },
  "CRES.G8.THE_BI.FAITH_AND_GOD_S_PROMISES.ABRAHAM_FAITH": {
@@ -666,7 +686,8 @@ export const SKILLS = {
   "mis": [
    "M_CR8_AF_CALL",
    "M_CR8_AF_ISAAC",
-   "M_CR8_AF_FAITH"
+   "M_CR8_AF_FAITH",
+   "M_CR8_AF_SARAH_LAUGH"
   ]
  },
  "CRES.G8.THE_BI.FAITH_AND_GOD_S_PROMISES.ABRAHAM_PROMISES": {
@@ -683,7 +704,8 @@ export const SKILLS = {
   "mis": [
    "M_CR8_AP_LAND",
    "M_CR8_AP_BLESS",
-   "M_CR8_AP_TRUST"
+   "M_CR8_AP_TRUST",
+   "M_CR8_AP_STARS"
   ]
  },
  "CRES.G8.THE_BI.ABRAHAMIC_COVENANT.COVENANT_ABRAHAM": {
@@ -701,7 +723,27 @@ export const SKILLS = {
   "mis": [
    "M_CR8_CA_MEANING",
    "M_CR8_CA_SIGN",
-   "M_CR8_CA_NAME"
+   "M_CR8_CA_NAME",
+   "M_CR8_CA_ONE_SIDED"
+  ]
+ },
+ "CRES.G8.THE_BI.ABRAHAMIC_COVENANT.COVENANTS_TODAY": {
+  "name": "Identify covenants in modern life, evaluate the marks of ungodly covenants and discern them by the word of God",
+  "sub": "CRE.G8.THE_BI.ABRAHAMIC_COVENANT",
+  "outcome": "CRE.G8.THE_BI.ABRAHAMIC_COVENANT.a",
+  "outcomes": [
+   "CRE.G8.THE_BI.ABRAHAMIC_COVENANT.a",
+   "CRE.G8.THE_BI.ABRAHAMIC_COVENANT.e",
+   "CRE.G8.THE_BI.ABRAHAMIC_COVENANT.f"
+  ],
+  "pre": [
+   "CRES.G8.THE_BI.ABRAHAMIC_COVENANT.COVENANT_ABRAHAM"
+  ],
+  "mis": [
+   "M_CR8_CT_ALL_GOOD",
+   "M_CR8_CT_NOT_COVENANT",
+   "M_CR8_CT_SECRET_SAFE",
+   "M_CR8_CT_DISCERN_FEELING"
   ]
  },
  "CRES.G8.THE_BI.LEADERSHIP_IN_ISRAEL_SAU.KINGSHIP_ISRAEL": {
@@ -716,7 +758,8 @@ export const SKILLS = {
   "mis": [
    "M_CR8_KI_REASON",
    "M_CR8_KI_WARNING",
-   "M_CR8_KI_NATIONS"
+   "M_CR8_KI_NATIONS",
+   "M_CR8_KI_REJECT_GOD"
   ]
  },
  "CRES.G8.THE_BI.LEADERSHIP_IN_ISRAEL_SAU.SAUL_FAILURES": {
@@ -733,7 +776,8 @@ export const SKILLS = {
   "mis": [
    "M_CR8_SF_SACRIFICE",
    "M_CR8_SF_AMALEK",
-   "M_CR8_SF_RESULT"
+   "M_CR8_SF_RESULT",
+   "M_CR8_SF_OBEY_SACRIFICE"
   ]
  },
  "CRES.G8.THE_LI.HEALING_OF_BLIND_BARTIMA.BARTIMAEUS": {
@@ -748,7 +792,8 @@ export const SKILLS = {
   "mis": [
    "M_CR8_BT_PLACE",
    "M_CR8_BT_CRY",
-   "M_CR8_BT_RESULT"
+   "M_CR8_BT_RESULT",
+   "M_CR8_BT_CLOAK"
   ]
  },
  "CRES.G8.THE_LI.CALMING_THE_STORM.CALMING_STORM": {
@@ -763,7 +808,8 @@ export const SKILLS = {
   "mis": [
    "M_CR8_CS_SLEEP",
    "M_CR8_CS_WORDS",
-   "M_CR8_CS_FAITH"
+   "M_CR8_CS_FAITH",
+   "M_CR8_CS_FAITH_NO_FEAR"
   ]
  },
  "CRES.G8.THE_LI.HEALING_OF_THE_PARALYTIC.PARALYTIC": {
@@ -779,7 +825,8 @@ export const SKILLS = {
   "mis": [
    "M_CR8_PL_ROOF",
    "M_CR8_PL_SINS",
-   "M_CR8_PL_OPPOSITION"
+   "M_CR8_PL_OPPOSITION",
+   "M_CR8_PL_WHY_OPPOSE"
   ]
  },
  "CRES.G8.TEACHI.TEACHINGS_ON_PRAYER.PRAYER": {
@@ -794,7 +841,8 @@ export const SKILLS = {
   "mis": [
    "M_CR8_PR_LORDS",
    "M_CR8_PR_FAITH",
-   "M_CR8_PR_PERSIST"
+   "M_CR8_PR_PERSIST",
+   "M_CR8_PR_FRIENDS_ONLY"
   ]
  },
  "CRES.G8.TEACHI.THE_LOST_SHEEP.LOST_SHEEP": {
@@ -808,7 +856,8 @@ export const SKILLS = {
   "mis": [
    "M_CR8_LS_NUMBER",
    "M_CR8_LS_ACTION",
-   "M_CR8_LS_JOY"
+   "M_CR8_LS_JOY",
+   "M_CR8_LS_WHO_LOST"
   ]
  },
  "CRES.G8.THE_CH.THE_HOLY_SPIRIT.HOLY_SPIRIT": {
@@ -817,13 +866,15 @@ export const SKILLS = {
   "outcome": "CRE.G8.THE_CH.THE_HOLY_SPIRIT.a",
   "outcomes": [
    "CRE.G8.THE_CH.THE_HOLY_SPIRIT.a",
-   "CRE.G8.THE_CH.THE_HOLY_SPIRIT.b"
+   "CRE.G8.THE_CH.THE_HOLY_SPIRIT.b",
+   "CRE.G8.THE_CH.THE_HOLY_SPIRIT.d"
   ],
   "pre": [],
   "mis": [
    "M_CR8_HS_DAY",
    "M_CR8_HS_SIGN",
-   "M_CR8_HS_FRUIT"
+   "M_CR8_HS_FRUIT",
+   "M_CR8_HS_CHURCH_ACTIVITY"
   ]
  },
  "CRES.G8.THE_CH.ACTS_OF_COMPASSION.COMPASSION": {
@@ -833,13 +884,16 @@ export const SKILLS = {
   "outcomes": [
    "CRE.G8.THE_CH.ACTS_OF_COMPASSION.a",
    "CRE.G8.THE_CH.ACTS_OF_COMPASSION.c",
-   "CRE.G8.THE_CH.ACTS_OF_COMPASSION.e"
+   "CRE.G8.THE_CH.ACTS_OF_COMPASSION.e",
+   "CRE.G8.THE_CH.ACTS_OF_COMPASSION.b",
+   "CRE.G8.THE_CH.ACTS_OF_COMPASSION.d"
   ],
   "pre": [],
   "mis": [
    "M_CR8_CM_FED",
    "M_CR8_CM_STRANGER",
-   "M_CR8_CM_LEAST"
+   "M_CR8_CM_LEAST",
+   "M_CR8_CM_INHERIT_RICH"
   ]
  },
  "CRES.G8.CHRIST.FAMILY_RELATIONSHIPS.FAMILY_ROLES": {
@@ -850,13 +904,16 @@ export const SKILLS = {
    "CRE.G8.CHRIST.FAMILY_RELATIONSHIPS.a",
    "CRE.G8.CHRIST.FAMILY_RELATIONSHIPS.b",
    "CRE.G8.CHRIST.FAMILY_RELATIONSHIPS.c",
-   "CRE.G8.CHRIST.FAMILY_RELATIONSHIPS.e"
+   "CRE.G8.CHRIST.FAMILY_RELATIONSHIPS.e",
+   "CRE.G8.CHRIST.FAMILY_RELATIONSHIPS.d",
+   "CRE.G8.CHRIST.FAMILY_RELATIONSHIPS.f"
   ],
   "pre": [],
   "mis": [
    "M_CR8_FRL_PARENT",
    "M_CR8_FRL_HEALTHY",
-   "M_CR8_FRL_CHILD"
+   "M_CR8_FRL_CHILD",
+   "M_CR8_FRL_CONFLICT_SILENCE"
   ]
  },
  "CRES.G8.CHRIST.HUMAN_SEXUALITY_RESPONSI.ABUSE_SAFETY": {
@@ -871,7 +928,26 @@ export const SKILLS = {
   "mis": [
    "M_CR8_AS_TELL",
    "M_CR8_AS_MEANING",
-   "M_CR8_AS_VALUE"
+   "M_CR8_AS_VALUE",
+   "M_CR8_AS_KNOWN_SAFE"
+  ]
+ },
+ "CRES.G8.CHRIST.HUMAN_SEXUALITY_RESPONSI.TEEN_PREGNANCY": {
+  "name": "Evaluate causes of teenage pregnancy and examine the consequences of irresponsible sexual behaviour",
+  "sub": "CRE.G8.CHRIST.HUMAN_SEXUALITY_RESPONSI",
+  "outcome": "CRE.G8.CHRIST.HUMAN_SEXUALITY_RESPONSI.b",
+  "outcomes": [
+   "CRE.G8.CHRIST.HUMAN_SEXUALITY_RESPONSI.b",
+   "CRE.G8.CHRIST.HUMAN_SEXUALITY_RESPONSI.c"
+  ],
+  "pre": [
+   "CRES.G8.CHRIST.HUMAN_SEXUALITY_RESPONSI.ABUSE_SAFETY"
+  ],
+  "mis": [
+   "M_CR8_TP_GIRL_FAULT",
+   "M_CR8_TP_GIFTS_HARMLESS",
+   "M_CR8_TP_ONCE_SAFE",
+   "M_CR8_TP_NO_FUTURE"
   ]
  },
  "CRES.G8.CHRIST.SACREDNESS_OF_LIFE.LIFE_SACRED": {
@@ -887,7 +963,29 @@ export const SKILLS = {
   "mis": [
    "M_CR8_LF_GIFT",
    "M_CR8_LF_COMMAND",
-   "M_CR8_LF_HELP"
+   "M_CR8_LF_HELP",
+   "M_CR8_LF_IMAGE"
+  ]
+ },
+ "CRES.G8.CHRIST.SACREDNESS_OF_LIFE.LIFE_THREATS": {
+  "name": "Evaluate causes of suicide and of abortion among teenage girls, the consequences of violating the right to life, and the values and life skills that uphold it",
+  "sub": "CRE.G8.CHRIST.SACREDNESS_OF_LIFE",
+  "outcome": "CRE.G8.CHRIST.SACREDNESS_OF_LIFE.d",
+  "outcomes": [
+   "CRE.G8.CHRIST.SACREDNESS_OF_LIFE.d",
+   "CRE.G8.CHRIST.SACREDNESS_OF_LIFE.e",
+   "CRE.G8.CHRIST.SACREDNESS_OF_LIFE.f",
+   "CRE.G8.CHRIST.SACREDNESS_OF_LIFE.g"
+  ],
+  "pre": [
+   "CRES.G8.CHRIST.SACREDNESS_OF_LIFE.LIFE_SACRED",
+   "CRES.G8.CHRIST.HUMAN_SEXUALITY_RESPONSI.TEEN_PREGNANCY"
+  ],
+  "mis": [
+   "M_CR8_LT_TALK_HARM",
+   "M_CR8_LT_WEAK_PEOPLE",
+   "M_CR8_LT_ABORTION_NO_EFFECT",
+   "M_CR8_LT_ONLY_MURDER"
   ]
  },
  "CRES.G8.CHRIST.BULLYING.BULLYING": {
@@ -903,7 +1001,8 @@ export const SKILLS = {
   "mis": [
    "M_CR8_BL_CAUSE",
    "M_CR8_BL_EFFECT",
-   "M_CR8_BL_VALUE"
+   "M_CR8_BL_VALUE",
+   "M_CR8_BL_BYSTANDER"
   ]
  },
  "CRES.G8.CHRIST.WORK_TALENTS_GIFTS_AND_A.TALENTS_PARABLE": {
@@ -918,7 +1017,8 @@ export const SKILLS = {
   "mis": [
    "M_CR8_TP_NUMBER",
    "M_CR8_TP_BURY",
-   "M_CR8_TP_LESSON"
+   "M_CR8_TP_LESSON",
+   "M_CR8_TP_FEAR_REASON"
   ]
  },
  "CRES.G8.CHRIST.LEISURE.LEISURE": {
@@ -929,13 +1029,15 @@ export const SKILLS = {
    "CRE.G8.CHRIST.LEISURE.a",
    "CRE.G8.CHRIST.LEISURE.b",
    "CRE.G8.CHRIST.LEISURE.c",
-   "CRE.G8.CHRIST.LEISURE.d"
+   "CRE.G8.CHRIST.LEISURE.d",
+   "CRE.G8.CHRIST.LEISURE.f"
   ],
   "pre": [],
   "mis": [
    "M_CR8_LE_MEANING",
    "M_CR8_LE_MISUSE",
-   "M_CR8_LE_GOOD"
+   "M_CR8_LE_GOOD",
+   "M_CR8_LE_NO_VALUES"
   ]
  }
 };
@@ -943,61 +1045,97 @@ export const MIS_FEEDBACK = {
  "M_CR8_SO_FRUIT": "They ate the forbidden fruit.",
  "M_CR8_SO_TEMPT": "The serpent tempted Eve.",
  "M_CR8_SO_RESULT": "They were sent out of Eden.",
+ "M_CR8_ST_GOD_TEMPTS": "God does not tempt anyone to sin. Temptation comes from our own desires, and God gives a way out.",
+ "M_CR8_ST_DEVIL_ONLY": "We cannot blame the devil for our choices. Each person is responsible and can ask God for help.",
+ "M_CR8_ST_NO_WAY_OUT": "God gives a way out of every temptation. You can stand with his help.",
+ "M_CR8_ST_TEMPTED_SINNED": "Being tempted is not sin. Jesus was tempted too. Sin is giving in, and God helps us resist.",
+ "M_CR8_SO_SHAME_HIDE": "They hid from God among the trees. Sin brought shame and broke their friendship with God.",
  "M_CR8_RD_CLOTHES": "God made clothes for them.",
  "M_CR8_RD_JOHN": "God gave His only Son.",
  "M_CR8_RD_WHY": "Redemption restores people to God.",
+ "M_CR8_RD_EARN": "We are saved by God's grace through faith. Good works are our thankful answer.",
  "M_CR8_AF_CALL": "God told him to leave his country.",
  "M_CR8_AF_ISAAC": "God provided a ram.",
  "M_CR8_AF_FAITH": "Abraham obeyed.",
  "M_CR8_AP_LAND": "God promised many descendants.",
  "M_CR8_AP_BLESS": "All families would be blessed.",
  "M_CR8_AP_TRUST": "Christians trust God's promises.",
+ "M_CR8_AF_SARAH_LAUGH": "Abraham was a hundred when Isaac was born. He waited twenty-five years in faith.",
+ "M_CR8_AP_STARS": "God told Abram to count the stars: so many would his descendants be.",
  "M_CR8_CA_MEANING": "A covenant is a binding agreement.",
  "M_CR8_CA_SIGN": "Circumcision was the sign.",
  "M_CR8_CA_NAME": "Abram became Abraham.",
+ "M_CR8_CT_ALL_GOOD": "An agreement is not good only because people agree. Secret oaths that go against God's law are ungodly.",
+ "M_CR8_CT_NOT_COVENANT": "Covenants exist today: marriage vows, contracts and agreements between nations.",
+ "M_CR8_CT_SECRET_SAFE": "Godly agreements can be known and checked. Secrecy from parents and church is a warning sign.",
+ "M_CR8_CT_DISCERN_FEELING": "Test every agreement against God's word and ask trusted, godly people for advice.",
+ "M_CR8_CA_ONE_SIDED": "God asked Abraham to walk before him faithfully, and to keep the sign of circumcision.",
  "M_CR8_KI_REASON": "1 Samuel 8 gives this reason.",
  "M_CR8_KI_WARNING": "Samuel warned the king would take their sons and land.",
  "M_CR8_KI_NATIONS": "They wanted a king like other nations.",
  "M_CR8_SF_SACRIFICE": "Saul offered the sacrifice himself.",
  "M_CR8_SF_AMALEK": "Saul spared the best flocks.",
  "M_CR8_SF_RESULT": "God rejected Saul as king.",
+ "M_CR8_KI_REJECT_GOD": "God told Samuel they had rejected God as their king, not Samuel.",
+ "M_CR8_SF_OBEY_SACRIFICE": "Samuel said, \"To obey is better than sacrifice.\" God wants obedience more than offerings.",
  "M_CR8_BT_PLACE": "Bartimaeus was at Jericho.",
  "M_CR8_BT_CRY": "He cried \"Son of David\".",
  "M_CR8_BT_RESULT": "He followed Jesus.",
+ "M_CR8_BT_CLOAK": "He threw his cloak aside and jumped up. He left what he had to come to Jesus.",
  "M_CR8_CS_SLEEP": "Jesus was asleep.",
  "M_CR8_CS_WORDS": "He said \"Be still\".",
  "M_CR8_CS_FAITH": "He asked about their faith.",
+ "M_CR8_CS_FAITH_NO_FEAR": "Faith does not mean never feeling afraid. When we are afraid, we trust Jesus who is with us.",
  "M_CR8_PL_ROOF": "They lowered him through the roof.",
- "M_CR8_PL_SINS": "Jesus first forgave his sins.",
+ "M_CR8_PL_SINS": "Jesus first said, \"Son, your sins are forgiven.\" Then he healed him.",
  "M_CR8_PL_OPPOSITION": "The teachers of the law objected.",
+ "M_CR8_PL_WHY_OPPOSE": "They said only God can forgive sins. Jesus healed the man to show he had that authority.",
  "M_CR8_PR_LORDS": "It is in Matthew 6.",
  "M_CR8_PR_FAITH": "Jesus taught to pray with faith.",
  "M_CR8_PR_PERSIST": "It teaches persistence.",
+ "M_CR8_PR_FRIENDS_ONLY": "Jesus taught us to pray for all people, even our enemies, and for leaders.",
  "M_CR8_LS_NUMBER": "He left ninety-nine.",
  "M_CR8_LS_ACTION": "He looked for it.",
  "M_CR8_LS_JOY": "There is joy in heaven.",
+ "M_CR8_LS_WHO_LOST": "The lost sheep stands for a person who has wandered from God. God searches for them.",
  "M_CR8_HS_DAY": "It was the day of Pentecost.",
  "M_CR8_HS_SIGN": "There was a sound like wind and tongues like fire.",
  "M_CR8_HS_FRUIT": "Love is a fruit of the Spirit.",
- "M_CR8_CM_FED": "Feeding the hungry was done for Him.",
+ "M_CR8_HS_CHURCH_ACTIVITY": "Taking part in church activities builds your faith, gifts and responsibility, and good friendships.",
+ "M_CR8_CM_FED": "The king named simple acts: feeding the hungry, giving drink, welcoming strangers, clothing, caring for the sick and visiting prisoners.",
  "M_CR8_CM_STRANGER": "The king said \"I was a stranger and you welcomed me\".",
  "M_CR8_CM_LEAST": "What was done for the least was done for Him.",
+ "M_CR8_CM_INHERIT_RICH": "Those who cared for the least, the hungry, the stranger, the sick and the prisoner, will inherit the kingdom.",
  "M_CR8_FRL_PARENT": "Parents provide, guide and care.",
  "M_CR8_FRL_HEALTHY": "Talking and forgiving are healthy.",
  "M_CR8_FRL_CHILD": "Children obey their parents.",
+ "M_CR8_FRL_CONFLICT_SILENCE": "Talk calmly, listen and forgive. If it is hard, ask an elder or pastor to help.",
  "M_CR8_AS_TELL": "Tell a trusted adult.",
  "M_CR8_AS_MEANING": "Abuse is hurting or taking advantage of someone.",
  "M_CR8_AS_VALUE": "Respect and self-control keep people safe.",
+ "M_CR8_TP_GIRL_FAULT": "A pregnancy involves two people. An adult who takes advantage of a girl commits a crime. Never blame a victim.",
+ "M_CR8_TP_GIFTS_HARMLESS": "Gifts that expect something in return are a trap. Refuse them and tell a trusted adult.",
+ "M_CR8_TP_ONCE_SAFE": "Pregnancy and infections can happen the first time. Waiting until marriage is the sure way.",
+ "M_CR8_TP_NO_FUTURE": "A girl who becomes pregnant can return to school. Christians show her care and support.",
+ "M_CR8_AS_KNOWN_SAFE": "Abuse can come from anyone, even someone you know. Say no, get away and tell a trusted adult.",
  "M_CR8_LF_GIFT": "Life is a gift from God.",
  "M_CR8_LF_COMMAND": "You shall not murder.",
  "M_CR8_LF_HELP": "Tell a trusted adult or counsellor.",
+ "M_CR8_LT_TALK_HARM": "Take it seriously, listen, and tell a trusted adult at once. Getting help can save a life.",
+ "M_CR8_LT_WEAK_PEOPLE": "Even strong believers like Elijah felt hopeless. God cared for him, and asking for help is right.",
+ "M_CR8_LT_ABORTION_NO_EFFECT": "Unsafe abortion can harm a girl's health and life and leave deep pain. Help and care are available.",
+ "M_CR8_LT_ONLY_MURDER": "Many acts violate the right to life: murder, mob justice, suicide, unsafe abortion and reckless driving.",
+ "M_CR8_LF_IMAGE": "Every person is made in God's image, so every life is sacred.",
  "M_CR8_BL_CAUSE": "Wanting power causes bullying.",
  "M_CR8_BL_EFFECT": "Bullying causes fear and loneliness.",
  "M_CR8_BL_VALUE": "Kindness stops bullying.",
+ "M_CR8_BL_BYSTANDER": "Watching in silence helps the bully. Stand with the victim and tell a teacher.",
  "M_CR8_TP_NUMBER": "The first servant got five.",
  "M_CR8_TP_BURY": "He buried it.",
  "M_CR8_TP_LESSON": "Use what you have faithfully.",
+ "M_CR8_TP_FEAR_REASON": "He was afraid and hid it. Fear can stop us using the gifts God gave us.",
  "M_CR8_LE_MEANING": "Leisure is free time.",
  "M_CR8_LE_MISUSE": "Gambling and drugs are misuse.",
- "M_CR8_LE_GOOD": "Sport and helping are constructive."
+ "M_CR8_LE_GOOD": "Sport and helping are constructive.",
+ "M_CR8_LE_NO_VALUES": "Even free time needs self-control and good choices. Make the most of every opportunity (Ephesians 5:15-16)."
 };

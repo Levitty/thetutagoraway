@@ -1,0 +1,189 @@
+{
+ "sub_strand": "CRE.G8.CHRIST.SACREDNESS_OF_LIFE",
+ "title": "Sacredness of life",
+ "status": "draft: written 18 Nov 2026 offline for Grade 8 Christian Religious Education; not yet checked by a CRE teacher; not loaded by the live tutor",
+ "sources": [],
+ "notes": "Suicide and abortion are taught for protection and hope, in the school's agreed words, with the counsellor present if possible. Name where to get help (a parent, teacher, counsellor, pastor, Childline Kenya 116). If a learner shows distress, stop and follow the safeguarding policy. These skills have no question families and should be checked in class discussion first.",
+ "skills": [
+  {
+   "skill": "CRES.G8.CHRIST.SACREDNESS_OF_LIFE.LIFE_SACRED",
+   "key_step": "The learner explains the sacredness of life (life is God's gift; people are made in his image), elaborates it from the scriptures (Genesis 1:27, 2:7, 9:6; Exodus 20:13; Psalm 139:13-16; Jeremiah 1:5) and discusses how the right to life is violated today (murder, mob justice, abortion, suicide, reckless driving, drugs).",
+   "floor": {
+    "prerequisite": "Knows practices that violate the right to life.",
+    "question": "A crowd wants to beat a thief. What is right?",
+    "answer": "Hand him to the police"
+   },
+   "representations": [
+    "scripture cards",
+    "Genesis 9:6 written large",
+    "a list of violations"
+   ],
+   "steps": [
+    "Read Genesis 1:27 and 9:6.",
+    "Read Psalm 139:13-16 and Jeremiah 1:5.",
+    "Explain why life is sacred.",
+    "Discuss violations today."
+   ],
+   "contexts": [
+    "news of mob justice",
+    "road safety week",
+    "a family welcoming a new baby"
+   ],
+   "board": [
+    {
+     "beat": "write",
+     "do": "Write Genesis 9:6."
+    },
+    {
+     "beat": "point",
+     "do": "Point at \"in the image of God\".",
+     "say": "Why does this make every life sacred?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for the learner to say every person bears God's image."
+    },
+    {
+     "beat": "reveal",
+     "do": "List violations of the right to life."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "CRES.G8.CHRIST.SACREDNESS_OF_LIFE.LIFE_SACRED.M_CR8_LF_GIFT",
+     "listen_for": [
+      "From chance only"
+     ],
+     "ask": "Where does life come from?",
+     "repair": "Read Genesis 2:7 and Psalm 139:13: God gives life and forms each person."
+    },
+    {
+     "code": "CRES.G8.CHRIST.SACREDNESS_OF_LIFE.LIFE_SACRED.M_CR8_LF_COMMAND",
+     "listen_for": [
+      "You shall not steal"
+     ],
+     "ask": "What does Exodus 20:13 say?",
+     "repair": "Read Exodus 20:13 and link \"do not murder\" to the sacredness of life."
+    },
+    {
+     "code": "CRES.G8.CHRIST.SACREDNESS_OF_LIFE.LIFE_SACRED.M_CR8_LF_HELP",
+     "listen_for": [
+      "Hide it"
+     ],
+     "ask": "What should a child do who feels hopeless?",
+     "repair": "Name trusted adults and Childline 116; say that asking for help is brave."
+    },
+    {
+     "code": "CRES.G8.CHRIST.SACREDNESS_OF_LIFE.LIFE_SACRED.M_CR8_LF_IMAGE",
+     "listen_for": [
+      "Only good people's lives are sacred"
+     ],
+     "ask": "Why is every human life sacred, according to Genesis 1:27 and 9:6?",
+     "repair": "Read Genesis 9:6: because God made people in his image, every life is protected."
+    }
+   ],
+   "checks": [
+    {
+     "question": "Where does life come from?",
+     "answer": "From God as a gift",
+     "shows": "source"
+    },
+    {
+     "question": "What does Exodus 20:13 say?",
+     "answer": "You shall not murder",
+     "shows": "command"
+    }
+   ]
+  },
+  {
+   "skill": "CRES.G8.CHRIST.SACREDNESS_OF_LIFE.LIFE_THREATS",
+   "key_step": "The learner names causes of suicide and of abortion among teenage girls, analyses the consequences of violating the right to life, compiles values and life skills that uphold it (hope, seeking help early, empathy, self-esteem, chastity, communication), and names where to get help, in the school's agreed words and with care.",
+   "floor": {
+    "prerequisite": "Knows why life is sacred.",
+    "question": "What does Exodus 20:13 say?",
+    "answer": "You shall not murder"
+   },
+   "representations": [
+    "a \"help circle\": parent, teacher, counsellor, pastor, Childline 116",
+    "1 Kings 19:4-8 read aloud",
+    "values and life skills list"
+   ],
+   "steps": [
+    "Life is God's gift.",
+    "Name what can make people feel hopeless.",
+    "Name consequences of violating life.",
+    "Compile values and say where to get help."
+   ],
+   "contexts": [
+    "a friend who seems withdrawn",
+    "exam results day",
+    "a community health talk"
+   ],
+   "board": [
+    {
+     "beat": "write",
+     "do": "Draw a help circle with five names."
+    },
+    {
+     "beat": "point",
+     "do": "Point at the empty centre.",
+     "say": "A friend feels hopeless. What do you do?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for the learner to say listen and tell a trusted adult."
+    },
+    {
+     "beat": "reveal",
+     "do": "Write the values and life skills around the circle."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "CRES.G8.CHRIST.SACREDNESS_OF_LIFE.LIFE_THREATS.M_CR8_LT_TALK_HARM",
+     "listen_for": [
+      "Say nothing and change the subject"
+     ],
+     "ask": "A friend says she feels life is not worth living. What should you do?",
+     "repair": "Teach: listen, take it seriously, do not keep it secret, tell a trusted adult now. Name Childline 116."
+    },
+    {
+     "code": "CRES.G8.CHRIST.SACREDNESS_OF_LIFE.LIFE_THREATS.M_CR8_LT_WEAK_PEOPLE",
+     "listen_for": [
+      "No, only weak people feel that way"
+     ],
+     "ask": "Can a strong Christian feel hopeless?",
+     "repair": "Read 1 Kings 19:4-8: Elijah asked to die, and God gave him rest, food and care. Seeking help is wise."
+    },
+    {
+     "code": "CRES.G8.CHRIST.SACREDNESS_OF_LIFE.LIFE_THREATS.M_CR8_LT_ABORTION_NO_EFFECT",
+     "listen_for": [
+      "There are no consequences"
+     ],
+     "ask": "Name one consequence of unsafe abortion for a teenage girl.",
+     "repair": "List health, emotional, spiritual and legal consequences; teach compassion and where to get help."
+    },
+    {
+     "code": "CRES.G8.CHRIST.SACREDNESS_OF_LIFE.LIFE_THREATS.M_CR8_LT_ONLY_MURDER",
+     "listen_for": [
+      "Only murder"
+     ],
+     "ask": "Which of these violates the right to life?",
+     "repair": "Make a list with the class and link each to the sacredness of life (Genesis 1:27; Exodus 20:13)."
+    }
+   ],
+   "checks": [
+    {
+     "question": "A friend says life is not worth living. What do you do?",
+     "answer": "Listen, take it seriously and tell a trusted adult at once",
+     "shows": "help"
+    },
+    {
+     "question": "Name a value or life skill that upholds life.",
+     "answer": "Hope (seeking help, empathy, communication)",
+     "shows": "values"
+    }
+   ]
+  }
+ ]
+}

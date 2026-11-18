@@ -1,0 +1,189 @@
+{
+ "sub_strand": "CRE.G8.CREATI.ORIGIN_AND_CONSEQUENCES_",
+ "title": "Origin and Consequences of Sin",
+ "status": "draft: written 18 Nov 2026 offline for Grade 8 Christian Religious Education; not yet checked by a CRE teacher; not loaded by the live tutor",
+ "sources": [],
+ "notes": "Temptation is taught with hope: being tempted is not sin (Hebrews 4:15; 1 Corinthians 10:13).",
+ "skills": [
+  {
+   "skill": "CRES.G8.CREATI.ORIGIN_AND_CONSEQUENCES_.SIN_ORIGIN",
+   "key_step": "The learner explains the origin of sin (Genesis 3: the serpent's doubt, desire, disobedience) and examines its consequences (shame and hiding, blame, broken relationships, pain and toil, death, being sent from the garden).",
+   "floor": {
+    "prerequisite": "Knows the story of the fall.",
+    "question": "Who tempted Eve?",
+    "answer": "The serpent"
+   },
+   "representations": [
+    "Genesis 3 in a sequence strip",
+    "a chart: relationship broken",
+    "Romans 5:12 written large"
+   ],
+   "steps": [
+    "The serpent questions God.",
+    "Eve and Adam eat.",
+    "They hide and blame.",
+    "The consequences fall on all."
+   ],
+   "contexts": [
+    "blaming others for a mistake",
+    "hiding a wrong from parents",
+    "broken trust between friends"
+   ],
+   "board": [
+    {
+     "beat": "write",
+     "do": "Draw four broken links: with God, each other, self, creation."
+    },
+    {
+     "beat": "point",
+     "do": "Point at the link \"with God\".",
+     "say": "How did sin break this relationship in Genesis 3?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for the learner to say they hid from God."
+    },
+    {
+     "beat": "reveal",
+     "do": "Write Romans 5:12 below."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "CRES.G8.CREATI.ORIGIN_AND_CONSEQUENCES_.SIN_ORIGIN.M_CR8_SO_FRUIT",
+     "listen_for": [
+      "The fruit of the tree of life"
+     ],
+     "ask": "What had God forbidden Adam and Eve to eat?",
+     "repair": "Read Genesis 2:16-17 and 3:6: the fruit of the tree of the knowledge of good and evil."
+    },
+    {
+     "code": "CRES.G8.CREATI.ORIGIN_AND_CONSEQUENCES_.SIN_ORIGIN.M_CR8_SO_TEMPT",
+     "listen_for": [
+      "God"
+     ],
+     "ask": "Who tempted Eve in the garden?",
+     "repair": "Read Genesis 3:1 and James 1:13: the serpent tempted; God tempts no one."
+    },
+    {
+     "code": "CRES.G8.CREATI.ORIGIN_AND_CONSEQUENCES_.SIN_ORIGIN.M_CR8_SO_RESULT",
+     "listen_for": [
+      "Nothing changed"
+     ],
+     "ask": "Name a consequence of the fall in Genesis 3.",
+     "repair": "List consequences in Genesis 3:14-24: shame, fear, pain, toil, broken relationships, death, sent from the garden."
+    },
+    {
+     "code": "CRES.G8.CREATI.ORIGIN_AND_CONSEQUENCES_.SIN_ORIGIN.M_CR8_SO_SHAME_HIDE",
+     "listen_for": [
+      "Ran to greet him"
+     ],
+     "ask": "What did Adam and Eve do when they heard God walking in the garden (Genesis 3:8)?",
+     "repair": "Read Genesis 3:8-10 and ask why they hid: shame and fear replaced friendship with God."
+    }
+   ],
+   "checks": [
+    {
+     "question": "Who tempted Eve?",
+     "answer": "The serpent",
+     "shows": "origin"
+    },
+    {
+     "question": "Name a consequence of the fall.",
+     "answer": "Sent out of the garden (shame, toil, pain, death)",
+     "shows": "consequence"
+    }
+   ]
+  },
+  {
+   "skill": "CRES.G8.CREATI.ORIGIN_AND_CONSEQUENCES_.SIN_TODAY",
+   "key_step": "The learner analyses causes of sin today (own desires, peer pressure, media, greed, pride, idleness, drugs) and names values and life skills to overcome temptation (self-control, assertiveness, decision-making, watchfulness and prayer, good company), with James 1:13-15 and 1 Corinthians 10:13.",
+   "floor": {
+    "prerequisite": "Knows how Jesus answered temptation.",
+    "question": "How did Jesus answer the devil in Luke 4?",
+    "answer": "With Scripture, \"It is written\""
+   },
+   "representations": [
+    "James 1:14-15 drawn as a chain",
+    "1 Corinthians 10:13 written large",
+    "a chart: temptation, way out, skill"
+   ],
+   "steps": [
+    "List causes of sin today.",
+    "Read James 1:13-15.",
+    "Read 1 Corinthians 10:13.",
+    "Plan a way out for a temptation."
+   ],
+   "contexts": [
+    "an exam with a chance to cheat",
+    "a party with alcohol",
+    "a phone at night with harmful sites"
+   ],
+   "board": [
+    {
+     "beat": "write",
+     "do": "Draw a chain: desire, temptation, sin, death (James 1:14-15)."
+    },
+    {
+     "beat": "point",
+     "do": "Point at the link between temptation and sin.",
+     "say": "Where can this chain be broken?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for the learner to say at temptation, with God's way out."
+    },
+    {
+     "beat": "reveal",
+     "do": "Fill in the chart of temptations and ways out."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "CRES.G8.CREATI.ORIGIN_AND_CONSEQUENCES_.SIN_TODAY.M_CR8_ST_GOD_TEMPTS",
+     "listen_for": [
+      "Yes, God tempts us to see if we fall"
+     ],
+     "ask": "According to James 1:13, does God tempt anyone to do evil?",
+     "repair": "Read James 1:13-14. Tell testing from tempting: God allows trials, but never pushes to sin."
+    },
+    {
+     "code": "CRES.G8.CREATI.ORIGIN_AND_CONSEQUENCES_.SIN_TODAY.M_CR8_ST_DEVIL_ONLY",
+     "listen_for": [
+      "The devil is fully to blame"
+     ],
+     "ask": "Juma steals and says \"the devil made me do it\". What does James 1:14 teach?",
+     "repair": "Link with Genesis 3:12-13 (blaming) and James 1:14 (own desire). Own the choice and repent."
+    },
+    {
+     "code": "CRES.G8.CREATI.ORIGIN_AND_CONSEQUENCES_.SIN_TODAY.M_CR8_ST_NO_WAY_OUT",
+     "listen_for": [
+      "Some temptations cannot be resisted"
+     ],
+     "ask": "What does 1 Corinthians 10:13 promise about temptation?",
+     "repair": "Read 1 Corinthians 10:13 and plan a \"way out\" for three common temptations."
+    },
+    {
+     "code": "CRES.G8.CREATI.ORIGIN_AND_CONSEQUENCES_.SIN_TODAY.M_CR8_ST_TEMPTED_SINNED",
+     "listen_for": [
+      "Yes, being tempted is already sin"
+     ],
+     "ask": "Is it a sin to be tempted?",
+     "repair": "Read Hebrews 4:15: Jesus was tempted in every way, yet without sin."
+    }
+   ],
+   "checks": [
+    {
+     "question": "According to James 1:13, does God tempt anyone?",
+     "answer": "No",
+     "shows": "source"
+    },
+    {
+     "question": "Name a life skill that helps overcome temptation.",
+     "answer": "Assertiveness (self-control, decision-making)",
+     "shows": "skill"
+    }
+   ]
+  }
+ ]
+}

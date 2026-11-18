@@ -1,0 +1,99 @@
+{
+ "sub_strand": "CRE.G8.CHRIST.LEISURE",
+ "title": "Leisure",
+ "status": "draft: written 18 Nov 2026 offline for Grade 8 Christian Religious Education; not yet checked by a CRE teacher; not loaded by the live tutor",
+ "sources": [],
+ "notes": "",
+ "skills": [
+  {
+   "skill": "CRES.G8.CHRIST.LEISURE.LEISURE",
+   "key_step": "The learner explains how youths spend leisure, identifies reasons for misuse (idleness, peer pressure, lack of facilities, media), analyses consequences (drugs, crime, immorality, poor health), examines constructive uses (sport, reading, hobbies, serving, rest) and compiles values and life skills for proper use (self-control, time management, responsibility; Ephesians 5:15-16).",
+   "floor": {
+    "prerequisite": "Knows good and poor uses of leisure.",
+    "question": "Which is a good use of free time: gambling or reading?",
+    "answer": "Reading"
+   },
+   "representations": [
+    "a weekly time chart",
+    "Ephesians 5:15-16 written large",
+    "two columns: builds up, pulls down"
+   ],
+   "steps": [
+    "Say how youths spend leisure.",
+    "List reasons for misuse and consequences.",
+    "List constructive uses.",
+    "Compile values and life skills."
+   ],
+   "contexts": [
+    "a school holiday",
+    "a youth sports club",
+    "a betting shop near the estate"
+   ],
+   "board": [
+    {
+     "beat": "write",
+     "do": "Draw two columns: builds up and pulls down."
+    },
+    {
+     "beat": "point",
+     "do": "Point at \"idling all day\".",
+     "say": "Which column, and what follows from it?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for the learner to say pulls down, it leads to trouble."
+    },
+    {
+     "beat": "reveal",
+     "do": "Compile values and life skills below."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "CRES.G8.CHRIST.LEISURE.LEISURE.M_CR8_LE_MEANING",
+     "listen_for": [
+      "Hard work"
+     ],
+     "ask": "What is leisure?",
+     "repair": "Define leisure: free time after work and duties, for rest and good activities."
+    },
+    {
+     "code": "CRES.G8.CHRIST.LEISURE.LEISURE.M_CR8_LE_MISUSE",
+     "listen_for": [
+      "Reading a book"
+     ],
+     "ask": "Which is a misuse of leisure?",
+     "repair": "Sort activities: builds up (reading, sport, hobbies, serving) and pulls down (drugs, gambling, idleness)."
+    },
+    {
+     "code": "CRES.G8.CHRIST.LEISURE.LEISURE.M_CR8_LE_GOOD",
+     "listen_for": [
+      "Idling all day"
+     ],
+     "ask": "Which is a constructive use of leisure?",
+     "repair": "Read 2 Thessalonians 3:11 and Proverbs 6:9-11: idleness leads to trouble and want."
+    },
+    {
+     "code": "CRES.G8.CHRIST.LEISURE.LEISURE.M_CR8_LE_NO_VALUES",
+     "listen_for": [
+      "None: free time needs no rules"
+     ],
+     "ask": "Which value helps a youth use leisure well?",
+     "repair": "Compile values and life skills for leisure: self-control, time management, responsibility, decision-making. Read Ephesians 5:15-16."
+    }
+   ],
+   "checks": [
+    {
+     "question": "Name a constructive use of leisure.",
+     "answer": "Sport (reading, helping at home)",
+     "shows": "use"
+    },
+    {
+     "question": "Compile a value needed for proper use of leisure.",
+     "answer": "Self-control (time management)",
+     "shows": "values"
+    }
+   ]
+  }
+ ]
+}

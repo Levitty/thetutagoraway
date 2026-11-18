@@ -1,0 +1,99 @@
+{
+ "sub_strand": "CRE.G8.CHRIST.BULLYING",
+ "title": "Bullying",
+ "status": "draft: written 18 Nov 2026 offline for Grade 8 Christian Religious Education; not yet checked by a CRE teacher; not loaded by the live tutor",
+ "sources": [],
+ "notes": "",
+ "skills": [
+  {
+   "skill": "CRES.G8.CHRIST.BULLYING.BULLYING",
+   "key_step": "The learner identifies causes of bullying (wish for power, jealousy, peer pressure, having been bullied, prejudice), analyses its effects on the individual and family (fear, loneliness, falling marks, depression, family worry), and outlines values for peaceful living from the scriptures (Romans 12:10, 18; Ephesians 4:32; Proverbs 31:8).",
+   "floor": {
+    "prerequisite": "Knows what good friends are like.",
+    "question": "What does 1 Corinthians 15:33 say?",
+    "answer": "Bad company corrupts good character"
+   },
+   "representations": [
+    "a chart: cause, effect, value",
+    "Ephesians 4:32 written large",
+    "role cards: bully, victim, bystander"
+   ],
+   "steps": [
+    "List causes.",
+    "List effects.",
+    "Name values from the scriptures.",
+    "Say what a bystander should do."
+   ],
+   "contexts": [
+    "name-calling in a dormitory",
+    "online bullying in a class group",
+    "a new learner left out"
+   ],
+   "board": [
+    {
+     "beat": "write",
+     "do": "Draw three figures: bully, victim, bystander."
+    },
+    {
+     "beat": "point",
+     "do": "Point at the bystander.",
+     "say": "What should the bystander do?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for the learner to say stand with the victim and report."
+    },
+    {
+     "beat": "reveal",
+     "do": "Write Ephesians 4:32 and the values below."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "CRES.G8.CHRIST.BULLYING.BULLYING.M_CR8_BL_CAUSE",
+     "listen_for": [
+      "Kindness"
+     ],
+     "ask": "Which can cause bullying?",
+     "repair": "List causes: wanting power, being bullied at home, peer pressure, jealousy, prejudice. Discuss each."
+    },
+    {
+     "code": "CRES.G8.CHRIST.BULLYING.BULLYING.M_CR8_BL_EFFECT",
+     "listen_for": [
+      "Happiness"
+     ],
+     "ask": "Which is an effect of bullying?",
+     "repair": "List effects on the person (fear, loneliness, falling marks, depression) and on the family (worry, moving schools)."
+    },
+    {
+     "code": "CRES.G8.CHRIST.BULLYING.BULLYING.M_CR8_BL_VALUE",
+     "listen_for": [
+      "Being tough so no one dares touch you"
+     ],
+     "ask": "Which value from Ephesians 4:32 helps stop bullying?",
+     "repair": "Read Romans 12:10 and Ephesians 4:32: love, honour, kindness, forgiveness. Link each to standing up for others."
+    },
+    {
+     "code": "CRES.G8.CHRIST.BULLYING.BULLYING.M_CR8_BL_BYSTANDER",
+     "listen_for": [
+      "Stay out of it; it is not my business"
+     ],
+     "ask": "You see a classmate being bullied. What does love require?",
+     "repair": "Discuss the bystander: silence helps the bully. Read Proverbs 31:8: speak up for those who cannot."
+    }
+   ],
+   "checks": [
+    {
+     "question": "Name a cause of bullying.",
+     "answer": "Wanting power over others (jealousy, peer pressure)",
+     "shows": "cause"
+    },
+    {
+     "question": "Name a value that stops bullying.",
+     "answer": "Kindness (love, respect)",
+     "shows": "value"
+    }
+   ]
+  }
+ ]
+}

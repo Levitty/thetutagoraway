@@ -1,0 +1,189 @@
+{
+ "sub_strand": "CRE.G8.CHRIST.HUMAN_SEXUALITY_RESPONSI",
+ "title": "Human Sexuality: Responsible Sexual Behaviour",
+ "status": "draft: written 18 Nov 2026 offline for Grade 8 Christian Religious Education; not yet checked by a CRE teacher; not loaded by the live tutor",
+ "sources": [],
+ "notes": "A trusted adult is always named; never ask a learner about her own experience. The school counsellor reads this file first. Childline Kenya 116.",
+ "skills": [
+  {
+   "skill": "CRES.G8.CHRIST.HUMAN_SEXUALITY_RESPONSI.ABUSE_SAFETY",
+   "key_step": "The learner identifies forms of sexual abuse and other abuse (physical, emotional, neglect, online), how to avoid or overcome it (say no, avoid risky places, tell, get help), and discusses values and life skills to avoid irresponsible sexual behaviour (self-control, assertiveness, self-respect, chastity, decision-making).",
+   "floor": {
+    "prerequisite": "Knows the steps NO, GO, TELL.",
+    "question": "What should you do if someone touches you wrongly?",
+    "answer": "Say no, go away and tell a trusted adult"
+   },
+   "representations": [
+    "forms of abuse on cards",
+    "a help circle with Childline 116",
+    "1 Corinthians 6:19 written large"
+   ],
+   "steps": [
+    "Name forms of abuse.",
+    "Say how to avoid risky situations.",
+    "Say how to get help.",
+    "Name values and life skills."
+   ],
+   "contexts": [
+    "an online stranger asking for photos",
+    "an adult offering lifts",
+    "a party with no adults"
+   ],
+   "board": [
+    {
+     "beat": "write",
+     "do": "Draw a help circle and write 116 inside."
+    },
+    {
+     "beat": "point",
+     "do": "Point at the circle.",
+     "say": "Whom can a young person tell about abuse?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for the learner to name trusted adults."
+    },
+    {
+     "beat": "reveal",
+     "do": "List forms of abuse and the life skills that help."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "CRES.G8.CHRIST.HUMAN_SEXUALITY_RESPONSI.ABUSE_SAFETY.M_CR8_AS_TELL",
+     "listen_for": [
+      "Keep it secret"
+     ],
+     "ask": "What should a child do if someone hurts or frightens her?",
+     "repair": "Repeat: it is never your fault; tell a trusted adult or Childline 116, and keep telling until someone helps."
+    },
+    {
+     "code": "CRES.G8.CHRIST.HUMAN_SEXUALITY_RESPONSI.ABUSE_SAFETY.M_CR8_AS_MEANING",
+     "listen_for": [
+      "Only beating"
+     ],
+     "ask": "Which of these is a form of abuse?",
+     "repair": "Name forms: physical, sexual, emotional (insults, threats), neglect, online. Any of them is abuse."
+    },
+    {
+     "code": "CRES.G8.CHRIST.HUMAN_SEXUALITY_RESPONSI.ABUSE_SAFETY.M_CR8_AS_VALUE",
+     "listen_for": [
+      "Going along with others to avoid trouble"
+     ],
+     "ask": "Which value or life skill helps a youth stay safe from abuse?",
+     "repair": "Link each value to an action: self-control (keep away from risky places), assertiveness (say no), respect (for self and others)."
+    },
+    {
+     "code": "CRES.G8.CHRIST.HUMAN_SEXUALITY_RESPONSI.ABUSE_SAFETY.M_CR8_AS_KNOWN_SAFE",
+     "listen_for": [
+      "Only strangers"
+     ],
+     "ask": "Who can abuse a young person?",
+     "repair": "Explain that abusers are often known people; the rule is the same: say no, get away, tell."
+    }
+   ],
+   "checks": [
+    {
+     "question": "What should a young person do if someone abuses them?",
+     "answer": "Tell a trusted adult",
+     "shows": "help"
+    },
+    {
+     "question": "Name a form of abuse.",
+     "answer": "Sexual (physical, emotional, neglect, online)",
+     "shows": "forms"
+    }
+   ]
+  },
+  {
+   "skill": "CRES.G8.CHRIST.HUMAN_SEXUALITY_RESPONSI.TEEN_PREGNANCY",
+   "key_step": "The learner evaluates causes of teenage pregnancy (peer pressure, idleness, poverty and gifts for favours, lack of guidance, drugs, media, abuse) and examines consequences of irresponsible sexual behaviour (pregnancy, infections including HIV, leaving school, health risks, stigma, guilt, broken trust), never blaming a victim, and names where to get help.",
+   "floor": {
+    "prerequisite": "Knows healthy and unhealthy relationships.",
+    "question": "Name one sign of an unhealthy relationship.",
+    "answer": "Pressure (secrecy, gifts for favours)"
+   },
+   "representations": [
+    "a causes and consequences tree",
+    "a trusted-adult list",
+    "1 Corinthians 6:18 written large"
+   ],
+   "steps": [
+    "List causes.",
+    "Weigh which causes are strongest in the area.",
+    "List consequences.",
+    "Name where to get help."
+   ],
+   "contexts": [
+    "a girl offered lifts and gifts by an older man",
+    "a party with alcohol",
+    "a youth group talk by a nurse"
+   ],
+   "board": [
+    {
+     "beat": "write",
+     "do": "Draw a tree: causes as roots, consequences as branches."
+    },
+    {
+     "beat": "point",
+     "do": "Point at the roots.",
+     "say": "What can cause teenage pregnancy?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for the learner to name causes."
+    },
+    {
+     "beat": "reveal",
+     "do": "Fill in the branches and write where to get help."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "CRES.G8.CHRIST.HUMAN_SEXUALITY_RESPONSI.TEEN_PREGNANCY.M_CR8_TP_GIRL_FAULT",
+     "listen_for": [
+      "Only the girl"
+     ],
+     "ask": "Who is responsible when a schoolgirl becomes pregnant?",
+     "repair": "Discuss responsibility of both and the law on adults who abuse children. Never blame a victim."
+    },
+    {
+     "code": "CRES.G8.CHRIST.HUMAN_SEXUALITY_RESPONSI.TEEN_PREGNANCY.M_CR8_TP_GIFTS_HARMLESS",
+     "listen_for": [
+      "They cannot; gifts are only kindness"
+     ],
+     "ask": "Why can gifts from an older person lead to teenage pregnancy?",
+     "repair": "Name gifts for favours as a warning sign; practise refusing and telling a trusted adult."
+    },
+    {
+     "code": "CRES.G8.CHRIST.HUMAN_SEXUALITY_RESPONSI.TEEN_PREGNANCY.M_CR8_TP_ONCE_SAFE",
+     "listen_for": [
+      "No, never the first time"
+     ],
+     "ask": "Can a girl become pregnant the first time she has sex?",
+     "repair": "Correct the myth plainly and send learners to a health worker or counsellor for questions."
+    },
+    {
+     "code": "CRES.G8.CHRIST.HUMAN_SEXUALITY_RESPONSI.TEEN_PREGNANCY.M_CR8_TP_NO_FUTURE",
+     "listen_for": [
+      "No, her life is over"
+     ],
+     "ask": "Can a girl who becomes pregnant continue her education in Kenya?",
+     "repair": "Explain that girls may return to school; show compassion (John 8:10-11) while teaching responsibility."
+    }
+   ],
+   "checks": [
+    {
+     "question": "Name a cause of teenage pregnancy.",
+     "answer": "Peer pressure (gifts for favours, lack of guidance)",
+     "shows": "cause"
+    },
+    {
+     "question": "Name a consequence of irresponsible sexual behaviour.",
+     "answer": "Leaving school (infections, early pregnancy)",
+     "shows": "consequence"
+    }
+   ]
+  }
+ ]
+}

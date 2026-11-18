@@ -1,0 +1,189 @@
+{
+ "sub_strand": "CRE.G8.THE_BI.ABRAHAMIC_COVENANT",
+ "title": "Abrahamic Covenant",
+ "status": "draft: written 18 Nov 2026 offline for Grade 8 Christian Religious Education; not yet checked by a CRE teacher; not loaded by the live tutor",
+ "sources": [],
+ "notes": "Ungodly covenants (secret oaths, cults, blood pacts, exploitative agreements) are named without detail or fear; a learner who mentions one at home is listened to privately and the safeguarding policy followed (FAITH: teacher of the school's tradition to confirm wording).",
+ "skills": [
+  {
+   "skill": "CRES.G8.THE_BI.ABRAHAMIC_COVENANT.COVENANT_ABRAHAM",
+   "key_step": "The learner elaborates God's covenant with Abraham (Genesis 15 and 17: promises of descendants and land; Abraham to walk faithfully; names changed), explains its importance (God's faithfulness, a people set apart, blessing to all nations) and outlines the importance of circumcision (sign of the covenant, belonging to God's people).",
+   "floor": {
+    "prerequisite": "Knows God's promises to Abraham.",
+    "question": "What did God tell Abram to count?",
+    "answer": "The stars"
+   },
+   "representations": [
+    "a covenant chart: God promises, Abraham's part, sign",
+    "Genesis 17:1-11 on cards",
+    "two cards: Noah, rainbow; Abraham, circumcision"
+   ],
+   "steps": [
+    "Read Genesis 17:1-8.",
+    "Name God's promises.",
+    "Name Abraham's part.",
+    "Name the sign and its importance."
+   ],
+   "contexts": [
+    "a wedding ring as a sign",
+    "a signed agreement",
+    "church membership vows"
+   ],
+   "board": [
+    {
+     "beat": "write",
+     "do": "Draw a covenant chart with three columns."
+    },
+    {
+     "beat": "point",
+     "do": "Point at the column \"sign\".",
+     "say": "What was the sign of the covenant with Abraham?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for the learner to say circumcision."
+    },
+    {
+     "beat": "reveal",
+     "do": "Fill in God's promises and Abraham's part."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "CRES.G8.THE_BI.ABRAHAMIC_COVENANT.COVENANT_ABRAHAM.M_CR8_CA_MEANING",
+     "listen_for": [
+      "A free gift"
+     ],
+     "ask": "What is a covenant?",
+     "repair": "Explain covenant: a binding agreement with promises and duties. God promised; Abraham was to walk faithfully (Genesis 17:1)."
+    },
+    {
+     "code": "CRES.G8.THE_BI.ABRAHAMIC_COVENANT.COVENANT_ABRAHAM.M_CR8_CA_SIGN",
+     "listen_for": [
+      "A rainbow"
+     ],
+     "ask": "What was the sign of God's covenant with Abraham?",
+     "repair": "Make two cards: Noah, rainbow (Genesis 9); Abraham, circumcision (Genesis 17:11)."
+    },
+    {
+     "code": "CRES.G8.THE_BI.ABRAHAMIC_COVENANT.COVENANT_ABRAHAM.M_CR8_CA_NAME",
+     "listen_for": [
+      "Isaac"
+     ],
+     "ask": "What was Abram renamed?",
+     "repair": "Read Genesis 17:5: Abram becomes Abraham; Sarai becomes Sarah (17:15)."
+    },
+    {
+     "code": "CRES.G8.THE_BI.ABRAHAMIC_COVENANT.COVENANT_ABRAHAM.M_CR8_CA_ONE_SIDED",
+     "listen_for": [
+      "Nothing at all"
+     ],
+     "ask": "What did God ask of Abraham in the covenant (Genesis 17:1)?",
+     "repair": "Read Genesis 17:1-2 and 17:9-10: God promised, and Abraham was to walk faithfully and keep the sign."
+    }
+   ],
+   "checks": [
+    {
+     "question": "What is a covenant?",
+     "answer": "A binding agreement",
+     "shows": "meaning"
+    },
+    {
+     "question": "What was the sign of God's covenant with Abraham?",
+     "answer": "Circumcision",
+     "shows": "sign"
+    }
+   ]
+  },
+  {
+   "skill": "CRES.G8.THE_BI.ABRAHAMIC_COVENANT.COVENANTS_TODAY",
+   "key_step": "The learner identifies covenants in modern life (marriage, contracts, treaties, church vows) and their importance, evaluates marks of ungodly covenants (secret oaths, against God's law, harm, control, other powers, exploitation) and establishes how to discern them by God's word (2 Corinthians 6:14-17; Matthew 5:37; 1 John 4:1) and by seeking godly counsel.",
+   "floor": {
+    "prerequisite": "Knows God's covenant with Abraham.",
+    "question": "What was the sign of God's covenant with Abraham?",
+    "answer": "Circumcision"
+   },
+   "representations": [
+    "a chart: godly and ungodly covenant marks",
+    "verse cards",
+    "scenario cards"
+   ],
+   "steps": [
+    "Name covenants today.",
+    "Say why they matter.",
+    "List marks of ungodly covenants.",
+    "Test a scenario against God's word."
+   ],
+   "contexts": [
+    "a wedding",
+    "a job contract",
+    "a secret group recruiting at school"
+   ],
+   "board": [
+    {
+     "beat": "write",
+     "do": "Draw two columns: godly covenant and ungodly covenant."
+    },
+    {
+     "beat": "point",
+     "do": "Point at the card \"must be kept secret from parents\".",
+     "say": "Which column, and why?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for the learner to say ungodly, secrecy is a warning sign."
+    },
+    {
+     "beat": "reveal",
+     "do": "Write 1 John 4:1 at the bottom."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "CRES.G8.THE_BI.ABRAHAMIC_COVENANT.COVENANTS_TODAY.M_CR8_CT_ALL_GOOD",
+     "listen_for": [
+      "Yes, he agreed, so it is good"
+     ],
+     "ask": "A group asks a youth to swear a secret oath to obey its leader in everything. Is it a good covenant because he agrees?",
+     "repair": "List marks of an ungodly covenant: secrecy, against God's law, harm, control, other powers. Test this oath against them."
+    },
+    {
+     "code": "CRES.G8.THE_BI.ABRAHAMIC_COVENANT.COVENANTS_TODAY.M_CR8_CT_NOT_COVENANT",
+     "listen_for": [
+      "There are none today"
+     ],
+     "ask": "Which of these is a covenant in modern life?",
+     "repair": "Show a marriage certificate and an employment letter: binding promises with duties on both sides."
+    },
+    {
+     "code": "CRES.G8.THE_BI.ABRAHAMIC_COVENANT.COVENANTS_TODAY.M_CR8_CT_SECRET_SAFE",
+     "listen_for": [
+      "It is open and others know about it"
+     ],
+     "ask": "What is a warning sign of an ungodly covenant?",
+     "repair": "Read Ephesians 5:11-13: what is done in darkness is exposed by the light. Godly agreements can be known."
+    },
+    {
+     "code": "CRES.G8.THE_BI.ABRAHAMIC_COVENANT.COVENANTS_TODAY.M_CR8_CT_DISCERN_FEELING",
+     "listen_for": [
+      "By how much money or excitement it brings"
+     ],
+     "ask": "How should a Christian discern whether an agreement is godly?",
+     "repair": "Read 1 John 4:1 (test the spirits) and Proverbs 15:22 (plans succeed with many advisers)."
+    }
+   ],
+   "checks": [
+    {
+     "question": "Name a covenant in modern life.",
+     "answer": "Marriage (a work contract)",
+     "shows": "covenants today"
+    },
+    {
+     "question": "Name a mark of an ungodly covenant.",
+     "answer": "Secrecy (against God's law, harm, control)",
+     "shows": "discernment"
+    }
+   ]
+  }
+ ]
+}
