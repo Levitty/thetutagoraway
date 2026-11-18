@@ -453,7 +453,10 @@ export const SKILLS_G2 = {
    "G2_COUNTING"
   ],
   "primary": "G2_COUNTING",
-  "pre": [],
+  "pre": [
+   "MATH.G1.NUMBER.WHOLE_NUMBERS.READ_WRITE_50",
+   "MATH.G1.NUMBER.WHOLE_NUMBERS.COUNT_FORWARD_50"
+  ],
   "mis": [
    "M_ID_REVERSED_DIGITS",
    "M_ID_TEEN_TY",
@@ -473,6 +476,7 @@ export const SKILLS_G2 = {
   ],
   "primary": "G2_COUNTING",
   "pre": [
+   "MATH.G1.NUMBER.WHOLE_NUMBERS.REPRESENT_30",
    "MATH.G2.NUMBER.NUMBER_CONCEPT.IDENTIFY_1_100"
   ],
   "mis": [
@@ -494,6 +498,7 @@ export const SKILLS_G2 = {
   ],
   "primary": "G2_COUNTING",
   "pre": [
+   "MATH.G1.NUMBER.WHOLE_NUMBERS.COUNT_FORWARD_50",
    "MATH.G2.NUMBER.NUMBER_CONCEPT.IDENTIFY_1_100"
   ],
   "mis": [
@@ -515,6 +520,7 @@ export const SKILLS_G2 = {
   ],
   "primary": "G2_COUNTING",
   "pre": [
+   "MATH.G1.NUMBER.WHOLE_NUMBERS.COUNT_BACK_30",
    "MATH.G2.NUMBER.WHOLE_NUMBERS.COUNT_FORWARD_100"
   ],
   "mis": [
@@ -536,6 +542,7 @@ export const SKILLS_G2 = {
   ],
   "primary": "G2_COUNTING",
   "pre": [
+   "MATH.G1.NUMBER.WHOLE_NUMBERS.READ_WRITE_50",
    "MATH.G2.NUMBER.NUMBER_CONCEPT.IDENTIFY_1_100"
   ],
   "mis": [
@@ -579,6 +586,7 @@ export const SKILLS_G2 = {
   ],
   "primary": "G2_COUNTING",
   "pre": [
+   "MATH.G1.NUMBER.WHOLE_NUMBERS.WORDS_10",
    "MATH.G2.NUMBER.WHOLE_NUMBERS.READ_WRITE_SYMBOLS_100"
   ],
   "mis": [
@@ -600,6 +608,7 @@ export const SKILLS_G2 = {
   ],
   "primary": "G2_COUNTING",
   "pre": [
+   "MATH.G1.NUMBER.WHOLE_NUMBERS.NUMBER_PATTERNS_20",
    "MATH.G2.NUMBER.WHOLE_NUMBERS.COUNT_FORWARD_100"
   ],
   "mis": [
@@ -621,6 +630,7 @@ export const SKILLS_G2 = {
   ],
   "primary": "G2_ADD",
   "pre": [
+   "MATH.G1.NUMBER.ADDITION.ADD_2D_1D_50",
    "MATH.G2.NUMBER.WHOLE_NUMBERS.PLACE_VALUE_TENS"
   ],
   "mis": [
@@ -664,7 +674,8 @@ export const SKILLS_G2 = {
   ],
   "primary": "G2_ADD",
   "pre": [
-   "MATH.G2.NUMBER.WHOLE_NUMBERS.PLACE_VALUE_TENS"
+   "MATH.G2.NUMBER.WHOLE_NUMBERS.PLACE_VALUE_TENS",
+   "MATH.G1.NUMBER.ADDITION.ADD_TWO_SINGLE"
   ],
   "mis": [
    "M_AT_ADDS_ZEROS",
@@ -685,7 +696,8 @@ export const SKILLS_G2 = {
   ],
   "primary": "G2_ADD",
   "pre": [
-   "MATH.G2.NUMBER.ADDITION.ADD_2D_2D"
+   "MATH.G2.NUMBER.ADDITION.ADD_2D_2D",
+   "MATH.G1.NUMBER.ADDITION.ADD_MISSING_50"
   ],
   "mis": [
    "M_AMISS_COUNT_UP_TENS_SLIP",
@@ -706,6 +718,7 @@ export const SKILLS_G2 = {
   ],
   "primary": "G2_SUB",
   "pre": [
+   "MATH.G1.NUMBER.SUBTRACTION.SUB_2D_1D_NO_REGROUP",
    "MATH.G2.NUMBER.WHOLE_NUMBERS.PLACE_VALUE_TENS"
   ],
   "mis": [
@@ -749,7 +762,8 @@ export const SKILLS_G2 = {
   ],
   "primary": "G2_SUB",
   "pre": [
-   "MATH.G2.NUMBER.ADDITION.ADD_TENS"
+   "MATH.G2.NUMBER.ADDITION.ADD_TENS",
+   "MATH.G1.NUMBER.SUBTRACTION.SUB_SINGLE"
   ],
   "mis": [
    "M_ST_KEEPS_ZEROS",
@@ -770,7 +784,8 @@ export const SKILLS_G2 = {
   ],
   "primary": "G2_SUB",
   "pre": [
-   "MATH.G2.NUMBER.SUBTRACTION.SUB_2D_2D"
+   "MATH.G2.NUMBER.SUBTRACTION.SUB_2D_2D",
+   "MATH.G1.NUMBER.SUBTRACTION.SUB_MISSING_50"
   ],
   "mis": [
    "M_SP2_GOES_UP",
@@ -790,7 +805,10 @@ export const SKILLS_G2 = {
    "G2_MULTIPLY_INTRO"
   ],
   "primary": "G2_MULTIPLY_INTRO",
-  "pre": [],
+  "pre": [
+   "MATH.G1.NUMBER.ADDITION.ADD_THREE_SINGLE",
+   "MATH.G1.NUMBER.PRE_NUMBER_ACTIVITIES.SORT_OBJECTS"
+  ],
   "mis": [
    "M_MRA_ADDS_GROUPS_AND_SIZE",
    "M_MRA_COUNTS_GROUPS",
@@ -810,7 +828,8 @@ export const SKILLS_G2 = {
   ],
   "primary": "G2_MULTIPLY_INTRO",
   "pre": [
-   "MATH.G2.NUMBER.MULTIPLICATION.MULT_REPEATED_ADD"
+   "MATH.G2.NUMBER.MULTIPLICATION.MULT_REPEATED_ADD",
+   "MATH.G1.NUMBER.ADDITION.ADD_SIGNS"
   ],
   "mis": [
    "M_MS_WRITES_PLUS",
@@ -874,7 +893,10 @@ export const SKILLS_G2 = {
    "G2_DIVISION_INTRO"
   ],
   "primary": "G2_DIVISION_INTRO",
-  "pre": [],
+  "pre": [
+   "MATH.G1.NUMBER.SUBTRACTION.MODEL_SUBTRACTION",
+   "MATH.G1.NUMBER.PRE_NUMBER_ACTIVITIES.SORT_OBJECTS"
+  ],
   "mis": [
    "M_DS_UNEQUAL",
    "M_DS_GIVES_TOTAL",
@@ -959,7 +981,10 @@ export const SKILLS_G2 = {
    "G2_FRACTIONS"
   ],
   "primary": "G2_FRACTIONS",
-  "pre": [],
+  "pre": [
+   "MATH.G1.GEOMET.SHAPES.IDENTIFY_SHAPES",
+   "MATH.G1.NUMBER.PRE_NUMBER_ACTIVITIES.MATCH_OBJECTS"
+  ],
   "mis": [
    "M_HALF_UNEQUAL",
    "M_HALF_BIGGER_HALF",
@@ -979,7 +1004,8 @@ export const SKILLS_G2 = {
   ],
   "primary": "G2_FRACTIONS",
   "pre": [
-   "MATH.G2.NUMBER.FRACTIONS.HALF_OF_WHOLE"
+   "MATH.G2.NUMBER.FRACTIONS.HALF_OF_WHOLE",
+   "MATH.G1.GEOMET.SHAPES.IDENTIFY_SHAPES"
   ],
   "mis": [
    "M_QTR_FOUR_UNEQUAL",
@@ -1021,7 +1047,10 @@ export const SKILLS_G2 = {
    "G2_LENGTH"
   ],
   "primary": "G2_LENGTH",
-  "pre": [],
+  "pre": [
+   "MATH.G1.MEASUR.LENGTH.MEASURE_ARBITRARY_LENGTH",
+   "MATH.G1.MEASUR.LENGTH.COMPARE_LENGTH"
+  ],
   "mis": [
    "M_FU_GAPS",
    "M_FU_MIXED_UNITS",
@@ -1041,7 +1070,8 @@ export const SKILLS_G2 = {
   ],
   "primary": "G2_LENGTH",
   "pre": [
-   "MATH.G2.MEASUR.LENGTH.MEASURE_FIXED_UNITS"
+   "MATH.G2.MEASUR.LENGTH.MEASURE_FIXED_UNITS",
+   "MATH.G1.MEASUR.LENGTH.COMPARE_LENGTH"
   ],
   "mis": [
    "M_KM_PENCIL_METRE",
@@ -1083,7 +1113,10 @@ export const SKILLS_G2 = {
    "G2_MASS"
   ],
   "primary": "G2_MASS",
-  "pre": [],
+  "pre": [
+   "MATH.G1.MEASUR.MASS.MEASURE_ARBITRARY_MASS",
+   "MATH.G1.MEASUR.MASS.COMPARE_MASS"
+  ],
   "mis": [
    "M_FM_UP_IS_HEAVY",
    "M_FM_MIXED_UNITS",
@@ -1103,7 +1136,8 @@ export const SKILLS_G2 = {
   ],
   "primary": "G2_MASS",
   "pre": [
-   "MATH.G2.MEASUR.MASS.MEASURE_FIXED_MASS"
+   "MATH.G2.MEASUR.MASS.MEASURE_FIXED_MASS",
+   "MATH.G1.MEASUR.MASS.COMPARE_MASS"
   ],
   "mis": [
    "M_KK_BIG_IS_KG",
@@ -1145,7 +1179,10 @@ export const SKILLS_G2 = {
    "G2_CAPACITY"
   ],
   "primary": "G2_CAPACITY",
-  "pre": [],
+  "pre": [
+   "MATH.G1.MEASUR.CAPACITY.MEASURE_ARBITRARY_CAPACITY",
+   "MATH.G1.MEASUR.CAPACITY.COMPARE_CAPACITY"
+  ],
   "mis": [
    "M_FC_TALL_MORE",
    "M_FC_PART_CUP",
@@ -1165,7 +1202,8 @@ export const SKILLS_G2 = {
   ],
   "primary": "G2_CAPACITY",
   "pre": [
-   "MATH.G2.MEASUR.CAPACITY.MEASURE_FIXED_CAPACITY"
+   "MATH.G2.MEASUR.CAPACITY.MEASURE_FIXED_CAPACITY",
+   "MATH.G1.MEASUR.CAPACITY.COMPARE_CAPACITY"
   ],
   "mis": [
    "M_KL_CUP_LITRE",
@@ -1207,7 +1245,10 @@ export const SKILLS_G2 = {
    "G2_TIME"
   ],
   "primary": "G2_TIME",
-  "pre": [],
+  "pre": [
+   "MATH.G1.MEASUR.TIME.MONTHS_OF_YEAR",
+   "MATH.G1.MEASUR.TIME.DAYS_ACTIVITIES"
+  ],
   "mis": [
    "M_MO_ORDER",
    "M_MO_OCCASION_WRONG_MONTH",
@@ -1227,7 +1268,8 @@ export const SKILLS_G2 = {
   ],
   "primary": "G2_TIME",
   "pre": [
-   "MATH.G2.MEASUR.TIME.MONTHS_OCCASIONS"
+   "MATH.G2.MEASUR.TIME.MONTHS_OCCASIONS",
+   "MATH.G1.NUMBER.WHOLE_NUMBERS.COUNT_FORWARD_50"
   ],
   "mis": [
    "M_DM_ALL_30",
@@ -1248,6 +1290,7 @@ export const SKILLS_G2 = {
   ],
   "primary": "G2_TIME",
   "pre": [
+   "MATH.G1.MEASUR.TIME.DAYS_OF_WEEK",
    "MATH.G2.MEASUR.TIME.DAYS_IN_MONTHS"
   ],
   "mis": [
@@ -1268,7 +1311,10 @@ export const SKILLS_G2 = {
    "G2_TIME"
   ],
   "primary": "G2_TIME",
-  "pre": [],
+  "pre": [
+   "MATH.G1.MEASUR.TIME.DAYS_ACTIVITIES",
+   "MATH.G1.MEASUR.LENGTH.COMPARE_LENGTH"
+  ],
   "mis": [
    "M_AT_MORE_CLAPS_SHORTER",
    "M_AT_SHADOW_NOON_LONG",
@@ -1288,7 +1334,8 @@ export const SKILLS_G2 = {
   ],
   "primary": "G2_TIME",
   "pre": [
-   "MATH.G2.MEASUR.TIME.ARBITRARY_TIME"
+   "MATH.G2.MEASUR.TIME.ARBITRARY_TIME",
+   "MATH.G1.MEASUR.LENGTH.COMPARE_LENGTH"
   ],
   "mis": [
    "M_CH_SWAP",
@@ -1309,7 +1356,8 @@ export const SKILLS_G2 = {
   ],
   "primary": "G2_TIME",
   "pre": [
-   "MATH.G2.MEASUR.TIME.CLOCK_HANDS"
+   "MATH.G2.MEASUR.TIME.CLOCK_HANDS",
+   "MATH.G1.NUMBER.WHOLE_NUMBERS.READ_WRITE_50"
   ],
   "mis": [
    "M_RH_READS_MINUTE_HAND",
@@ -1351,7 +1399,10 @@ export const SKILLS_G2 = {
    "G2_MONEY"
   ],
   "primary": "G2_MONEY",
-  "pre": [],
+  "pre": [
+   "MATH.G1.MEASUR.MONEY.IDENTIFY_COINS",
+   "MATH.G1.MEASUR.MONEY.IDENTIFY_50_NOTE"
+  ],
   "mis": [
    "M_IM_SIZE_VALUE",
    "M_IM_COUNT_PIECES",
@@ -1437,7 +1488,8 @@ export const SKILLS_G2 = {
   ],
   "primary": "G2_MONEY",
   "pre": [
-   "MATH.G2.MEASUR.MONEY.ADD_MONEY_100"
+   "MATH.G2.MEASUR.MONEY.ADD_MONEY_100",
+   "MATH.G1.MEASUR.MONEY.BUY_TWO_ITEMS"
   ],
   "mis": [
    "M_BNB_ONE_ITEM",
@@ -1458,7 +1510,10 @@ export const SKILLS_G2 = {
    "G2_LINES"
   ],
   "primary": "G2_LINES",
-  "pre": [],
+  "pre": [
+   "MATH.G1.GEOMET.LINES.IDENTIFY_LINES",
+   "MATH.G1.GEOMET.LINES.DRAW_LINES"
+  ],
   "mis": [
    "M_SL_SLANT_NOT_STRAIGHT",
    "M_SL_WOBBLY_OK",
@@ -1478,7 +1533,10 @@ export const SKILLS_G2 = {
    "G2_LINES"
   ],
   "primary": "G2_LINES",
-  "pre": [],
+  "pre": [
+   "MATH.G1.GEOMET.LINES.IDENTIFY_LINES",
+   "MATH.G1.GEOMET.LINES.DRAW_LINES"
+  ],
   "mis": [
    "M_CL_CORNER_IS_CURVE",
    "M_CL_CIRCLE_NOT_LINE",
@@ -1498,6 +1556,7 @@ export const SKILLS_G2 = {
   ],
   "primary": "G2_SHAPES",
   "pre": [
+   "MATH.G1.GEOMET.SHAPES.IDENTIFY_SHAPES",
    "MATH.G2.GEOMET.LINES.CURVED_LINES"
   ],
   "mis": [
@@ -1542,7 +1601,8 @@ export const SKILLS_G2 = {
   ],
   "primary": "G2_SHAPES",
   "pre": [
-   "MATH.G2.GEOMET.SHAPES.NAME_SHAPES_ENV"
+   "MATH.G2.GEOMET.SHAPES.NAME_SHAPES_ENV",
+   "MATH.G1.GEOMET.SHAPES.SHAPE_PATTERNS_1"
   ],
   "mis": [
    "M_SPAT_REPEAT_UNIT",

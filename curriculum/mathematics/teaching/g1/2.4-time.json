@@ -1,0 +1,283 @@
+{
+ "sub_strand": "MATH.G1.MEASUR.TIME",
+ "title": "Time",
+ "status": "draft: written 18 Nov 2026 offline for Grade 1; not yet checked by a Kenyan maths teacher; not loaded by the live tutor",
+ "sources": [],
+ "notes": "Outcomes a to c are KICD's words; d is attitudinal. Days of the week in order, activities on different days, months of the year (songs and rhymes, birth months).",
+ "skills": [
+  {
+   "skill": "MATH.G1.MEASUR.TIME.DAYS_OF_WEEK",
+   "key_step": "The child says the days in order like a circle and counts on from tomorrow, not today.",
+   "floor": {
+    "prerequisite": "Uses today and tomorrow (PP2).",
+    "question": "What do we call the day after today?",
+    "answer": "tomorrow"
+   },
+   "representations": [
+    "a days song",
+    "a week chart",
+    "day cards in a circle"
+   ],
+   "steps": [
+    "Sing the days.",
+    "Find today.",
+    "Count on from tomorrow.",
+    "After Sunday comes Monday."
+   ],
+   "contexts": [
+    "school days",
+    "market day",
+    "the weekend"
+   ],
+   "board": [
+    {
+     "beat": "draw",
+     "do": "Draw a circle of the seven days."
+    },
+    {
+     "beat": "point",
+     "do": "Point at Monday.",
+     "say": "Two days later?"
+    },
+    {
+     "beat": "count",
+     "do": "Count on with the child: Tuesday 1, Wednesday 2."
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for Wednesday."
+    },
+    {
+     "beat": "reveal",
+     "do": "Write Wednesday."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "MATH.G1.MEASUR.TIME.DAYS_OF_WEEK.M_DAYS_COUNTS_TODAY",
+     "listen_for": [
+      "Tuesday"
+     ],
+     "ask": "Is today one of the days to count?",
+     "repair": "No: Wednesday."
+    },
+    {
+     "code": "MATH.G1.MEASUR.TIME.DAYS_OF_WEEK.M_DAYS_ORDER",
+     "listen_for": [
+      "Thursday"
+     ],
+     "ask": "What comes after Tuesday in the song?",
+     "repair": "Wednesday."
+    },
+    {
+     "code": "MATH.G1.MEASUR.TIME.DAYS_OF_WEEK.M_DAYS_WRAP",
+     "listen_for": [
+      "none"
+     ],
+     "ask": "After Sunday, what day starts again?",
+     "repair": "Monday."
+    },
+    {
+     "code": "MATH.G1.MEASUR.TIME.DAYS_OF_WEEK.M_DAYS_YESTERDAY_TOMORROW",
+     "listen_for": [
+      "Saturday"
+     ],
+     "ask": "Is yesterday before or after today?",
+     "repair": "Before: Thursday."
+    }
+   ],
+   "checks": [
+    {
+     "question": "What day comes before Friday?",
+     "answer": "Thursday",
+     "shows": "before"
+    },
+    {
+     "question": "Today is Saturday. In 2 days?",
+     "answer": "Monday",
+     "shows": "wrap round"
+    }
+   ]
+  },
+  {
+   "skill": "MATH.G1.MEASUR.TIME.DAYS_ACTIVITIES",
+   "key_step": "The child links each activity to its day using the class week chart.",
+   "floor": {
+    "prerequisite": "Knows the days.",
+    "question": "What day comes after Monday?",
+    "answer": "Tuesday"
+   },
+   "representations": [
+    "a class week chart",
+    "pictures of activities",
+    "day cards"
+   ],
+   "steps": [
+    "Name the activity.",
+    "Find its day on the chart.",
+    "School days: Monday to Friday.",
+    "Weekend: Saturday and Sunday."
+   ],
+   "contexts": [
+    "raising the flag",
+    "games day",
+    "church or mosque day"
+   ],
+   "board": [
+    {
+     "beat": "draw",
+     "do": "Draw a week chart with a flag on Monday."
+    },
+    {
+     "beat": "point",
+     "do": "Point at the flag.",
+     "say": "Which day?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for Monday."
+    },
+    {
+     "beat": "reveal",
+     "do": "Write: flag on Monday and Friday."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "MATH.G1.MEASUR.TIME.DAYS_ACTIVITIES.M_DACT_WEEKEND",
+     "listen_for": [
+      "yes"
+     ],
+     "ask": "Which days are school days?",
+     "repair": "Monday to Friday."
+    },
+    {
+     "code": "MATH.G1.MEASUR.TIME.DAYS_ACTIVITIES.M_DACT_WRONG_DAY",
+     "listen_for": [
+      "Wednesday"
+     ],
+     "ask": "What happens on Monday morning?",
+     "repair": "The flag is raised."
+    },
+    {
+     "code": "MATH.G1.MEASUR.TIME.DAYS_ACTIVITIES.M_DACT_DAY_MONTH",
+     "listen_for": [
+      "June"
+     ],
+     "ask": "Is June a day or a month?",
+     "repair": "A month."
+    },
+    {
+     "code": "MATH.G1.MEASUR.TIME.DAYS_ACTIVITIES.M_DACT_ORDER_EVENTS",
+     "listen_for": [
+      "weekend, Friday flag, Monday flag"
+     ],
+     "ask": "Which day comes first in the school week?",
+     "repair": "Monday."
+    }
+   ],
+   "checks": [
+    {
+     "question": "Which days have no school?",
+     "answer": "Saturday and Sunday",
+     "shows": "weekend"
+    },
+    {
+     "question": "On which day is our flag raised first in the week?",
+     "answer": "Monday",
+     "shows": "activity"
+    }
+   ]
+  },
+  {
+   "skill": "MATH.G1.MEASUR.TIME.MONTHS_OF_YEAR",
+   "key_step": "The child says the twelve months in order with a song and finds a month's neighbours.",
+   "floor": {
+    "prerequisite": "Knows the days of the week.",
+    "question": "How many days in a week?",
+    "answer": "7"
+   },
+   "representations": [
+    "a months song",
+    "month cards",
+    "a class birthday chart"
+   ],
+   "steps": [
+    "Sing the months.",
+    "Find the month.",
+    "Say the month before and after.",
+    "After December comes January."
+   ],
+   "contexts": [
+    "birthdays",
+    "Christmas in December",
+    "school opening in January"
+   ],
+   "board": [
+    {
+     "beat": "write",
+     "do": "Write January, February, __, April."
+    },
+    {
+     "beat": "point",
+     "do": "Point at the gap.",
+     "say": "Which month?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for March."
+    },
+    {
+     "beat": "reveal",
+     "do": "Write March."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "MATH.G1.MEASUR.TIME.MONTHS_OF_YEAR.M_MON_ORDER",
+     "listen_for": [
+      "May"
+     ],
+     "ask": "What comes after March?",
+     "repair": "April."
+    },
+    {
+     "code": "MATH.G1.MEASUR.TIME.MONTHS_OF_YEAR.M_MON_DAY_FOR_MONTH",
+     "listen_for": [
+      "Saturday"
+     ],
+     "ask": "Is Saturday a month?",
+     "repair": "No: a day."
+    },
+    {
+     "code": "MATH.G1.MEASUR.TIME.MONTHS_OF_YEAR.M_MON_WRAP",
+     "listen_for": [
+      "none"
+     ],
+     "ask": "After December, what starts again?",
+     "repair": "January."
+    },
+    {
+     "code": "MATH.G1.MEASUR.TIME.MONTHS_OF_YEAR.M_MON_COUNT",
+     "listen_for": [
+      "7"
+     ],
+     "ask": "How many names did we sing?",
+     "repair": "12."
+    }
+   ],
+   "checks": [
+    {
+     "question": "What month comes after June?",
+     "answer": "July",
+     "shows": "order"
+    },
+    {
+     "question": "How many months in a year?",
+     "answer": "12",
+     "shows": "count"
+    }
+   ]
+  }
+ ]
+}

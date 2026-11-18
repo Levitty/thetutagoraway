@@ -1,0 +1,469 @@
+{
+ "sub_strand": "MATH.G1.NUMBER.SUBTRACTION",
+ "title": "Subtraction",
+ "status": "draft: written 18 Nov 2026 offline for Grade 1; not yet checked by a Kenyan maths teacher; not loaded by the live tutor",
+ "sources": [],
+ "notes": "Outcomes a to e are KICD's words; f (games) is covered with subtracting single digits. Subtraction is modelled as taking away with objects; a 1-digit number is taken from a 2-digit number with no regrouping.",
+ "skills": [
+  {
+   "skill": "MATH.G1.NUMBER.SUBTRACTION.MODEL_SUBTRACTION",
+   "key_step": "The child takes the objects away (or crosses them out) and counts what is left.",
+   "floor": {
+    "prerequisite": "Took some away from small groups (PP2).",
+    "question": "5 stones, take 1 away: how many?",
+    "answer": "4"
+   },
+   "representations": [
+    "real objects",
+    "drawings to cross out",
+    "a number line"
+   ],
+   "steps": [
+    "Show all.",
+    "Take some away.",
+    "Count what is left.",
+    "Say how many are left."
+   ],
+   "contexts": [
+    "sweets given away",
+    "birds flying off",
+    "mandazi eaten"
+   ],
+   "board": [
+    {
+     "beat": "draw",
+     "do": "Draw 9 sweets."
+    },
+    {
+     "beat": "child_draws",
+     "do": "The child crosses out 3."
+    },
+    {
+     "beat": "count",
+     "do": "Count those left with the child."
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for 6."
+    },
+    {
+     "beat": "reveal",
+     "do": "Write 6 left."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "MATH.G1.NUMBER.SUBTRACTION.MODEL_SUBTRACTION.M_SUB1_COUNTS_START",
+     "listen_for": [
+      "7"
+     ],
+     "ask": "Is 9 the first step back?",
+     "repair": "No: 6."
+    },
+    {
+     "code": "MATH.G1.NUMBER.SUBTRACTION.MODEL_SUBTRACTION.M_SUB1_ADDS",
+     "listen_for": [
+      "12"
+     ],
+     "ask": "More or fewer left?",
+     "repair": "Fewer: 6."
+    },
+    {
+     "code": "MATH.G1.NUMBER.SUBTRACTION.MODEL_SUBTRACTION.M_SUB1_GIVES_TAKEN",
+     "listen_for": [
+      "3"
+     ],
+     "ask": "Is 3 what she gave or what is left?",
+     "repair": "Gave: 5 are left."
+    },
+    {
+     "code": "MATH.G1.NUMBER.SUBTRACTION.MODEL_SUBTRACTION.M_SUB1_TAKES_WRONG_NUMBER",
+     "listen_for": [
+      "5"
+     ],
+     "ask": "How many did you take?",
+     "repair": "4: 6 are left."
+    }
+   ],
+   "checks": [
+    {
+     "question": "10 mangoes, 4 eaten. How many left?",
+     "answer": "6",
+     "shows": "taking away"
+    },
+    {
+     "question": "7 children, 2 go home. How many stay?",
+     "answer": "5",
+     "shows": "story"
+    }
+   ]
+  },
+  {
+   "skill": "MATH.G1.NUMBER.SUBTRACTION.SUB_SIGNS",
+   "key_step": "The child writes how many there were, -, how many went, =, how many are left.",
+   "floor": {
+    "prerequisite": "Takes away with objects.",
+    "question": "8 sweets, 3 given away: how many left?",
+    "answer": "5"
+   },
+   "representations": [
+    "number and sign cards",
+    "pictures",
+    "a number sentence"
+   ],
+   "steps": [
+    "Start number first.",
+    "Write -.",
+    "Write how many went.",
+    "Write = and what is left."
+   ],
+   "contexts": [
+    "birds flying away",
+    "eggs broken",
+    "pencils given out"
+   ],
+   "board": [
+    {
+     "beat": "draw",
+     "do": "Draw 6 mangoes, 2 crossed out."
+    },
+    {
+     "beat": "point",
+     "do": "Point at all the mangoes.",
+     "say": "How many at the start?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for 6."
+    },
+    {
+     "beat": "child_draws",
+     "do": "The child writes 6 - 2 ="
+    },
+    {
+     "beat": "reveal",
+     "do": "Write 4."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "MATH.G1.NUMBER.SUBTRACTION.SUB_SIGNS.M_SSIGN_SMALL_FIRST",
+     "listen_for": [
+      "3 - 8 = 5"
+     ],
+     "ask": "How many were there at the start?",
+     "repair": "8: 8 - 3 = 5."
+    },
+    {
+     "code": "MATH.G1.NUMBER.SUBTRACTION.SUB_SIGNS.M_SSIGN_PLUS",
+     "listen_for": [
+      "7 + 2 = 5"
+     ],
+     "ask": "Which sign means take away?",
+     "repair": "-."
+    },
+    {
+     "code": "MATH.G1.NUMBER.SUBTRACTION.SUB_SIGNS.M_SSIGN_EQUALS_PLACE",
+     "listen_for": [
+      "8 = 3 - 5"
+     ],
+     "ask": "Where does the answer go?",
+     "repair": "After =."
+    },
+    {
+     "code": "MATH.G1.NUMBER.SUBTRACTION.SUB_SIGNS.M_SSIGN_PICTURE_MISMATCH",
+     "listen_for": [
+      "6 - 4 = 2"
+     ],
+     "ask": "How many are crossed out?",
+     "repair": "2: 6 - 2 = 4."
+    }
+   ],
+   "checks": [
+    {
+     "question": "Write: 9 take away 4 is 5.",
+     "answer": "9 - 4 = 5",
+     "shows": "writing"
+    },
+    {
+     "question": "Which sign is missing: 7 __ 3 = 4?",
+     "answer": "-",
+     "shows": "the sign"
+    }
+   ]
+  },
+  {
+   "skill": "MATH.G1.NUMBER.SUBTRACTION.SUB_SINGLE",
+   "key_step": "The child counts back from the bigger number, or uses the addition fact it belongs to.",
+   "floor": {
+    "prerequisite": "Reads subtraction sentences.",
+    "question": "5 - 2",
+    "answer": "3"
+   },
+   "representations": [
+    "fingers",
+    "a number line to 20",
+    "bottle tops"
+   ],
+   "steps": [
+    "Start at the bigger number.",
+    "Count back the smaller.",
+    "Or think: what adds to make it?",
+    "Say what is left."
+   ],
+   "contexts": [
+    "sharing out sweets",
+    "eggs sold",
+    "children leaving a game"
+   ],
+   "board": [
+    {
+     "beat": "write",
+     "do": "Write 13 - 5."
+    },
+    {
+     "beat": "point",
+     "do": "Point at 13 on a number line.",
+     "say": "Count back 5."
+    },
+    {
+     "beat": "count",
+     "do": "Count back with the child: 12, 11, 10, 9, 8."
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for 8."
+    },
+    {
+     "beat": "reveal",
+     "do": "Write 8."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "MATH.G1.NUMBER.SUBTRACTION.SUB_SINGLE.M_SS_COUNTS_START",
+     "listen_for": [
+      "9"
+     ],
+     "ask": "Is 13 a step?",
+     "repair": "No: 8."
+    },
+    {
+     "code": "MATH.G1.NUMBER.SUBTRACTION.SUB_SINGLE.M_SS_SMALL_FROM_BIG",
+     "listen_for": [
+      "12"
+     ],
+     "ask": "Can you take 5 ones from 3 ones?",
+     "repair": "Not without the ten: count back to 8."
+    },
+    {
+     "code": "MATH.G1.NUMBER.SUBTRACTION.SUB_SINGLE.M_SS_ADDS",
+     "listen_for": [
+      "13"
+     ],
+     "ask": "What does - mean?",
+     "repair": "Take away: 5."
+    },
+    {
+     "code": "MATH.G1.NUMBER.SUBTRACTION.SUB_SINGLE.M_SS_FACT_WRONG_PART",
+     "listen_for": [
+      "13"
+     ],
+     "ask": "If 5 is taken from 5 + 8, what remains?",
+     "repair": "8."
+    }
+   ],
+   "checks": [
+    {
+     "question": "11 - 4",
+     "answer": "7",
+     "shows": "count back"
+    },
+    {
+     "question": "5 + 9 = 14, so 14 - 5 = ?",
+     "answer": "9",
+     "shows": "related fact"
+    }
+   ]
+  },
+  {
+   "skill": "MATH.G1.NUMBER.SUBTRACTION.SUB_2D_1D_NO_REGROUP",
+   "key_step": "The child takes the ones from the ones and keeps the tens.",
+   "floor": {
+    "prerequisite": "Subtracts single digits.",
+    "question": "7 - 4",
+    "answer": "3"
+   },
+   "representations": [
+    "number cards",
+    "an abacus",
+    "a column"
+   ],
+   "steps": [
+    "Ones under ones.",
+    "Take the ones.",
+    "Keep the tens.",
+    "Read the answer."
+   ],
+   "contexts": [
+    "learners going home",
+    "bananas sold",
+    "shillings spent"
+   ],
+   "board": [
+    {
+     "beat": "write",
+     "do": "Write 37 - 4."
+    },
+    {
+     "beat": "point",
+     "do": "Point at 7 - 4.",
+     "say": "Take the ones."
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for 3."
+    },
+    {
+     "beat": "reveal",
+     "do": "Write 33."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "MATH.G1.NUMBER.SUBTRACTION.SUB_2D_1D_NO_REGROUP.M_S21_1_TAKES_FROM_BOTH",
+     "listen_for": [
+      "4"
+     ],
+     "ask": "Do the tens lose anything?",
+     "repair": "No: 34."
+    },
+    {
+     "code": "MATH.G1.NUMBER.SUBTRACTION.SUB_2D_1D_NO_REGROUP.M_S21_1_ADDS",
+     "listen_for": [
+      "41"
+     ],
+     "ask": "Take away or add?",
+     "repair": "Take away: 33."
+    },
+    {
+     "code": "MATH.G1.NUMBER.SUBTRACTION.SUB_2D_1D_NO_REGROUP.M_S21_1_ONES_ONLY",
+     "listen_for": [
+      "3"
+     ],
+     "ask": "What about the 2 tens?",
+     "repair": "23."
+    },
+    {
+     "code": "MATH.G1.NUMBER.SUBTRACTION.SUB_2D_1D_NO_REGROUP.M_S21_1_COUNTS_START",
+     "listen_for": [
+      "44"
+     ],
+     "ask": "Is 46 a step?",
+     "repair": "No: 43."
+    }
+   ],
+   "checks": [
+    {
+     "question": "48 - 6",
+     "answer": "42",
+     "shows": "column"
+    },
+    {
+     "question": "29 - 7",
+     "answer": "22",
+     "shows": "count back"
+    }
+   ]
+  },
+  {
+   "skill": "MATH.G1.NUMBER.SUBTRACTION.SUB_MISSING_50",
+   "key_step": "The child counts up from what is left to what there was, and counts the steps.",
+   "floor": {
+    "prerequisite": "Subtracts single digits.",
+    "question": "12 - 7",
+    "answer": "5"
+   },
+   "representations": [
+    "fingers",
+    "a number line",
+    "objects"
+   ],
+   "steps": [
+    "What was there? What is left?",
+    "Count up from left to start.",
+    "Count the steps.",
+    "Check by taking away."
+   ],
+   "contexts": [
+    "mandazi eaten",
+    "eggs broken",
+    "a countdown"
+   ],
+   "board": [
+    {
+     "beat": "write",
+     "do": "Write 12 - __ = 5."
+    },
+    {
+     "beat": "count",
+     "do": "Count up from 5 to 12 with the child."
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for 7 steps."
+    },
+    {
+     "beat": "reveal",
+     "do": "Write 7."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "MATH.G1.NUMBER.SUBTRACTION.SUB_MISSING_50.M_SMISS1_COUNTS_START",
+     "listen_for": [
+      "8"
+     ],
+     "ask": "How many steps from 5 to 12?",
+     "repair": "7."
+    },
+    {
+     "code": "MATH.G1.NUMBER.SUBTRACTION.SUB_MISSING_50.M_SMISS1_GIVES_LEFT",
+     "listen_for": [
+      "5"
+     ],
+     "ask": "Is 5 eaten or left?",
+     "repair": "Left: 7 eaten."
+    },
+    {
+     "code": "MATH.G1.NUMBER.SUBTRACTION.SUB_MISSING_50.M_SMISS1_ADDS",
+     "listen_for": [
+      "17"
+     ],
+     "ask": "Is the missing number bigger than 12?",
+     "repair": "No: 7."
+    },
+    {
+     "code": "MATH.G1.NUMBER.SUBTRACTION.SUB_MISSING_50.M_SMISS1_PATTERN_UP",
+     "listen_for": [
+      "18"
+     ],
+     "ask": "Are the numbers going down?",
+     "repair": "Yes: 14."
+    }
+   ],
+   "checks": [
+    {
+     "question": "10 - __ = 6",
+     "answer": "4",
+     "shows": "missing number"
+    },
+    {
+     "question": "30, 28, 26, __",
+     "answer": "24",
+     "shows": "pattern"
+    }
+   ]
+  }
+ ]
+}

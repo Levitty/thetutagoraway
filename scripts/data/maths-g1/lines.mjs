@@ -1,0 +1,26 @@
+import { sk, m, pk, assemble, E, H, LIT, TC } from './lib.mjs';
+export const key = "GEOMET.LINES";
+export const notes = "Outcomes a to e are KICD's words. Identifying straight and curved lines (a, c, e) is one skill; drawing them on the ground and in books (b, d) is done in class.";
+export const skills = [
+  sk("IDENTIFY_LINES", "Identify straight and curved lines in different situations and objects", ["a", "c", "e"], "The child says whether a line or an edge is straight or curved (a queue of children, the edge of a door, a semicircle, the rim of a plate) and finds straight and curved lines in real objects.", ["straight or curved","which edge is curved","find a straight line in the picture","sort lines"], ["recall"], ["G1_LINES"], [["PP2:PENCIL_LINES", E, "Drew lines and curves in pre-primary."], ["PP2:BASIC_SHAPES", H, "Knows circles and squares."]]),
+  sk("DRAW_LINES", "Draw straight and curved lines on different surfaces", ["b", "d"], "The child draws straight lines by joining two points with a stick or ruler, and curved lines freehand, on the ground and in books.", [], ["representation"], ["G1_LINES"], [["G1:IDENTIFY_LINES", E, "Tells straight from curved."], ["PP2:PENCIL_LINES", E, "Holds a pencil to draw."]], "Drawing lines on the ground and in books is done in class, with the teacher checking."),
+];
+const ms = [
+  m("IDENTIFY_LINES", "M_LINE1_SLANT", "Thinks a slanting line is not straight.", ["A stick leans against a wall. Is its edge straight?", "no, it is leaning", "yes"], "Thinks straight means upright.", "Lay a ruler on it: it does not bend.", "Does the edge bend?", "No: straight."),
+  m("IDENTIFY_LINES", "M_LINE1_CORNER_CURVE", "Calls a corner a curve.", ["The corner of a table: curved or straight?", "curved", "straight edges meeting"], "Any turn is a curve to the child.", "A curve bends smoothly; a corner turns sharply.", "Does it bend smoothly?", "No."),
+  m("IDENTIFY_LINES", "M_LINE1_CIRCLE_NO_LINE", "Thinks the rim of a plate is not a line.", ["Is the edge of a plate a curved line?", "no", "yes"], "Thinks lines are only straight.", "Trace the rim with a finger.", "Is it a line that bends?", "Yes."),
+  m("IDENTIFY_LINES", "M_LINE1_WAVY_STRAIGHT", "Calls a gently wavy path straight.", ["A path bends a little round a tree. Straight or curved?", "straight", "curved"], "Looks at the overall direction.", "Does it leave a stretched string?", "Does it bend away from the string?", "Yes: curved."),
+  m("DRAW_LINES", "M_DRAW1_WOBBLY", "Draws a wobbly line and calls it straight.", ["Is your line drawn without a ruler straight?", "yes", "not quite"], "Does not use a guide.", "Join two points with a ruler or stick.", "Does it follow the ruler?", "Use the ruler."),
+  m("DRAW_LINES", "M_DRAW1_MISSES_POINT", "Does not reach the second point when joining two points.", ["Join the two dots with a straight line. Does it touch both?", "stops short", "touches both"], "Stops early.", "Put the ruler on both dots before drawing.", "Is the ruler touching both dots?", "Yes: then draw."),
+  m("DRAW_LINES", "M_DRAW1_CURVE_CORNERS", "Draws a curve with corners.", ["Draw a curved line like a rainbow.", "a line with corners", "a smooth curve"], "Draws in short straight strokes.", "Move the whole arm in one smooth stroke.", "Are there any corners?", "Draw it smooth."),
+  m("DRAW_LINES", "M_DRAW1_RULER_SLIPS", "Lets the ruler slip so the line bends.", ["Your line bends at the end. Why?", "nothing", "the ruler moved"], "Holds the ruler loosely.", "Press the ruler down with the other hand.", "Did the ruler move?", "Hold it firmly."),
+];
+const pack = {
+  IDENTIFY_LINES: pk("The child checks if a line bends: no bending is straight, smooth bending is curved.", ["Drew lines and curves (PP2).", "Draw a line.", "a line"], ["children standing in a queue", "objects", "pictures"], ["Look along the line.", "Does it bend?", "No: straight.", "Smoothly: curved."], ["a queue at assembly", "the rim of a plate", "a rainbow"], [["draw", "Draw a straight line and a curve."], ["point", "Point at each.", "Which bends?"], ["pause", "Wait for the curve."], ["reveal", "Label: straight, curved."]], [["Is the edge of a door straight or curved?", "straight", "objects"], ["Is the rim of a cup straight or curved?", "curved", "objects"]]),
+  DRAW_LINES: pk("The child joins two points with a firm ruler for a straight line and draws a curve in one smooth stroke.", ["Tells straight from curved.", "Is a ruler's edge straight?", "yes"], ["a stick in the sand", "a ruler", "crayons"], ["Mark two points.", "Lay the ruler on both.", "Draw along it.", "For a curve, one smooth stroke."], ["drawing in the sand", "a rainbow picture", "a road"], [["draw", "Mark two dots."], ["point", "Point at both dots.", "Where does the ruler go?"], ["child_draws", "The child joins the dots with a ruler."], ["reveal", "Check: straight."]], [["Does your line touch both dots?", "yes", "joining points"], ["Does your curve have corners?", "no", "smooth curve"]]),
+};
+export const { mis, pack: packOut } = assemble(ms, pack);
+export { packOut as pack };
+export const links = {
+  'g1.lines.curved-edge': ["IDENTIFY_LINES", "c", null, null, null, ["M_LINE1_CORNER_CURVE", "M_LINE1_CIRCLE_NO_LINE"]],
+};

@@ -95,15 +95,15 @@
      ],
      "prerequisites": [
       {
-       "requires": "MATH.G1.NUMBER.WHOLE_NUMBERS.d",
-       "kind": "outcome",
+       "requires": "MATH.G1.NUMBER.WHOLE_NUMBERS.READ_WRITE_50",
+       "kind": "skill",
        "strength": "essential",
        "reason": "Reads numbers 1 to 50 in symbols.",
        "status": "proposed"
       },
       {
-       "requires": "MATH.G1.NUMBER.WHOLE_NUMBERS.a",
-       "kind": "outcome",
+       "requires": "MATH.G1.NUMBER.WHOLE_NUMBERS.COUNT_FORWARD_50",
+       "kind": "skill",
        "strength": "essential",
        "reason": "Counts forward to 50.",
        "status": "proposed"
@@ -133,8 +133,8 @@
      ],
      "prerequisites": [
       {
-       "requires": "MATH.G1.NUMBER.WHOLE_NUMBERS.c",
-       "kind": "outcome",
+       "requires": "MATH.G1.NUMBER.WHOLE_NUMBERS.REPRESENT_30",
+       "kind": "skill",
        "strength": "essential",
        "reason": "Represents numbers 1 to 30 with objects.",
        "status": "proposed"
@@ -379,8 +379,8 @@
      ],
      "prerequisites": [
       {
-       "requires": "MATH.G1.NUMBER.WHOLE_NUMBERS.a",
-       "kind": "outcome",
+       "requires": "MATH.G1.NUMBER.WHOLE_NUMBERS.COUNT_FORWARD_50",
+       "kind": "skill",
        "strength": "essential",
        "reason": "Counts forward to 50.",
        "status": "proposed"
@@ -416,8 +416,8 @@
      ],
      "prerequisites": [
       {
-       "requires": "MATH.G1.NUMBER.WHOLE_NUMBERS.b",
-       "kind": "outcome",
+       "requires": "MATH.G1.NUMBER.WHOLE_NUMBERS.COUNT_BACK_30",
+       "kind": "skill",
        "strength": "essential",
        "reason": "Counts back from 30.",
        "status": "proposed"
@@ -453,8 +453,8 @@
      ],
      "prerequisites": [
       {
-       "requires": "MATH.G1.NUMBER.WHOLE_NUMBERS.d",
-       "kind": "outcome",
+       "requires": "MATH.G1.NUMBER.WHOLE_NUMBERS.READ_WRITE_50",
+       "kind": "skill",
        "strength": "essential",
        "reason": "Reads and writes numbers to 50.",
        "status": "proposed"
@@ -528,8 +528,8 @@
      ],
      "prerequisites": [
       {
-       "requires": "MATH.G1.NUMBER.WHOLE_NUMBERS.e",
-       "kind": "outcome",
+       "requires": "MATH.G1.NUMBER.WHOLE_NUMBERS.WORDS_10",
+       "kind": "skill",
        "strength": "essential",
        "reason": "Reads and writes number words 1 to 10.",
        "status": "proposed"
@@ -565,8 +565,8 @@
      ],
      "prerequisites": [
       {
-       "requires": "MATH.G1.NUMBER.WHOLE_NUMBERS.f",
-       "kind": "outcome",
+       "requires": "MATH.G1.NUMBER.WHOLE_NUMBERS.NUMBER_PATTERNS_20",
+       "kind": "skill",
        "strength": "essential",
        "reason": "Missing numbers in patterns to 20.",
        "status": "proposed"
@@ -1034,8 +1034,8 @@
      ],
      "prerequisites": [
       {
-       "requires": "MATH.G1.NUMBER.ADDITION.e",
-       "kind": "outcome",
+       "requires": "MATH.G1.NUMBER.ADDITION.ADD_2D_1D_50",
+       "kind": "skill",
        "strength": "essential",
        "reason": "Adds a 2-digit and a 1-digit number without regrouping (sum to 50).",
        "status": "proposed"
@@ -1116,8 +1116,8 @@
        "status": "proposed"
       },
       {
-       "requires": "MATH.G1.NUMBER.ADDITION.c",
-       "kind": "outcome",
+       "requires": "MATH.G1.NUMBER.ADDITION.ADD_TWO_SINGLE",
+       "kind": "skill",
        "strength": "essential",
        "reason": "Adds two single-digit numbers.",
        "status": "proposed"
@@ -1154,8 +1154,8 @@
        "status": "proposed"
       },
       {
-       "requires": "MATH.G1.NUMBER.ADDITION.f",
-       "kind": "outcome",
+       "requires": "MATH.G1.NUMBER.ADDITION.ADD_MISSING_50",
+       "kind": "skill",
        "strength": "essential",
        "reason": "Missing numbers in addition patterns to 50.",
        "status": "proposed"
@@ -1494,8 +1494,8 @@
      ],
      "prerequisites": [
       {
-       "requires": "MATH.G1.NUMBER.SUBTRACTION.d",
-       "kind": "outcome",
+       "requires": "MATH.G1.NUMBER.SUBTRACTION.SUB_2D_1D_NO_REGROUP",
+       "kind": "skill",
        "strength": "essential",
        "reason": "Subtracts a 1-digit from a 2-digit number (Grade 1).",
        "status": "proposed"
@@ -1576,8 +1576,8 @@
        "status": "proposed"
       },
       {
-       "requires": "MATH.G1.NUMBER.SUBTRACTION.c",
-       "kind": "outcome",
+       "requires": "MATH.G1.NUMBER.SUBTRACTION.SUB_SINGLE",
+       "kind": "skill",
        "strength": "essential",
        "reason": "Subtracts single digits.",
        "status": "proposed"
@@ -1613,8 +1613,8 @@
        "status": "proposed"
       },
       {
-       "requires": "MATH.G1.NUMBER.SUBTRACTION.e",
-       "kind": "outcome",
+       "requires": "MATH.G1.NUMBER.SUBTRACTION.SUB_MISSING_50",
+       "kind": "skill",
        "strength": "essential",
        "reason": "Missing numbers in subtraction patterns to 50.",
        "status": "proposed"
@@ -1956,15 +1956,15 @@
      ],
      "prerequisites": [
       {
-       "requires": "MATH.G1.NUMBER.ADDITION.d",
-       "kind": "outcome",
+       "requires": "MATH.G1.NUMBER.ADDITION.ADD_THREE_SINGLE",
+       "kind": "skill",
        "strength": "essential",
        "reason": "Adds three single-digit numbers.",
        "status": "proposed"
       },
       {
-       "requires": "MATH.G1.NUMBER.PRE_NUMBER_ACTIVITIES.a",
-       "kind": "outcome",
+       "requires": "MATH.G1.NUMBER.PRE_NUMBER_ACTIVITIES.SORT_OBJECTS",
+       "kind": "skill",
        "strength": "helpful",
        "reason": "Sorts objects into groups.",
        "status": "proposed"
@@ -2000,8 +2000,8 @@
        "status": "proposed"
       },
       {
-       "requires": "MATH.G1.NUMBER.ADDITION.b",
-       "kind": "outcome",
+       "requires": "MATH.G1.NUMBER.ADDITION.ADD_SIGNS",
+       "kind": "skill",
        "strength": "helpful",
        "reason": "Uses + and = signs.",
        "status": "proposed"
@@ -2416,15 +2416,15 @@
      ],
      "prerequisites": [
       {
-       "requires": "MATH.G1.NUMBER.SUBTRACTION.a",
-       "kind": "outcome",
+       "requires": "MATH.G1.NUMBER.SUBTRACTION.MODEL_SUBTRACTION",
+       "kind": "skill",
        "strength": "essential",
        "reason": "Takes away with objects.",
        "status": "proposed"
       },
       {
-       "requires": "MATH.G1.NUMBER.PRE_NUMBER_ACTIVITIES.a",
-       "kind": "outcome",
+       "requires": "MATH.G1.NUMBER.PRE_NUMBER_ACTIVITIES.SORT_OBJECTS",
+       "kind": "skill",
        "strength": "helpful",
        "reason": "Sorts objects into groups.",
        "status": "proposed"
@@ -2871,15 +2871,15 @@
      ],
      "prerequisites": [
       {
-       "requires": "MATH.G1.GEOMET.SHAPES.a",
-       "kind": "outcome",
+       "requires": "MATH.G1.GEOMET.SHAPES.IDENTIFY_SHAPES",
+       "kind": "skill",
        "strength": "essential",
        "reason": "Identifies rectangles and circles.",
        "status": "proposed"
       },
       {
-       "requires": "MATH.G1.NUMBER.PRE_NUMBER_ACTIVITIES.b",
-       "kind": "outcome",
+       "requires": "MATH.G1.NUMBER.PRE_NUMBER_ACTIVITIES.MATCH_OBJECTS",
+       "kind": "skill",
        "strength": "helpful",
        "reason": "Matches objects of the same size.",
        "status": "proposed"
@@ -2917,8 +2917,8 @@
        "status": "proposed"
       },
       {
-       "requires": "MATH.G1.GEOMET.SHAPES.a",
-       "kind": "outcome",
+       "requires": "MATH.G1.GEOMET.SHAPES.IDENTIFY_SHAPES",
+       "kind": "skill",
        "strength": "helpful",
        "reason": "Identifies shapes.",
        "status": "proposed"
@@ -3229,15 +3229,15 @@
      ],
      "prerequisites": [
       {
-       "requires": "MATH.G1.MEASUR.LENGTH.c",
-       "kind": "outcome",
+       "requires": "MATH.G1.MEASUR.LENGTH.MEASURE_ARBITRARY_LENGTH",
+       "kind": "skill",
        "strength": "essential",
        "reason": "Measured length with arbitrary units.",
        "status": "proposed"
       },
       {
-       "requires": "MATH.G1.MEASUR.LENGTH.b",
-       "kind": "outcome",
+       "requires": "MATH.G1.MEASUR.LENGTH.COMPARE_LENGTH",
+       "kind": "skill",
        "strength": "essential",
        "reason": "Compares lengths.",
        "status": "proposed"
@@ -3274,8 +3274,8 @@
        "status": "proposed"
       },
       {
-       "requires": "MATH.G1.MEASUR.LENGTH.b",
-       "kind": "outcome",
+       "requires": "MATH.G1.MEASUR.LENGTH.COMPARE_LENGTH",
+       "kind": "skill",
        "strength": "helpful",
        "reason": "Compares longer and shorter.",
        "status": "proposed"
@@ -3588,15 +3588,15 @@
      ],
      "prerequisites": [
       {
-       "requires": "MATH.G1.MEASUR.MASS.c",
-       "kind": "outcome",
+       "requires": "MATH.G1.MEASUR.MASS.MEASURE_ARBITRARY_MASS",
+       "kind": "skill",
        "strength": "essential",
        "reason": "Measured mass with arbitrary units.",
        "status": "proposed"
       },
       {
-       "requires": "MATH.G1.MEASUR.MASS.b",
-       "kind": "outcome",
+       "requires": "MATH.G1.MEASUR.MASS.COMPARE_MASS",
+       "kind": "skill",
        "strength": "essential",
        "reason": "Compares heavier and lighter.",
        "status": "proposed"
@@ -3633,8 +3633,8 @@
        "status": "proposed"
       },
       {
-       "requires": "MATH.G1.MEASUR.MASS.b",
-       "kind": "outcome",
+       "requires": "MATH.G1.MEASUR.MASS.COMPARE_MASS",
+       "kind": "skill",
        "strength": "helpful",
        "reason": "Compares masses.",
        "status": "proposed"
@@ -3947,15 +3947,15 @@
      ],
      "prerequisites": [
       {
-       "requires": "MATH.G1.MEASUR.CAPACITY.c",
-       "kind": "outcome",
+       "requires": "MATH.G1.MEASUR.CAPACITY.MEASURE_ARBITRARY_CAPACITY",
+       "kind": "skill",
        "strength": "essential",
        "reason": "Measured capacity with arbitrary units.",
        "status": "proposed"
       },
       {
-       "requires": "MATH.G1.MEASUR.CAPACITY.b",
-       "kind": "outcome",
+       "requires": "MATH.G1.MEASUR.CAPACITY.COMPARE_CAPACITY",
+       "kind": "skill",
        "strength": "essential",
        "reason": "Compares more and less.",
        "status": "proposed"
@@ -3992,8 +3992,8 @@
        "status": "proposed"
       },
       {
-       "requires": "MATH.G1.MEASUR.CAPACITY.b",
-       "kind": "outcome",
+       "requires": "MATH.G1.MEASUR.CAPACITY.COMPARE_CAPACITY",
+       "kind": "skill",
        "strength": "helpful",
        "reason": "Compares capacities.",
        "status": "proposed"
@@ -4330,15 +4330,15 @@
      ],
      "prerequisites": [
       {
-       "requires": "MATH.G1.MEASUR.TIME.c",
-       "kind": "outcome",
+       "requires": "MATH.G1.MEASUR.TIME.MONTHS_OF_YEAR",
+       "kind": "skill",
        "strength": "essential",
        "reason": "Identifies the months of the year.",
        "status": "proposed"
       },
       {
-       "requires": "MATH.G1.MEASUR.TIME.b",
-       "kind": "outcome",
+       "requires": "MATH.G1.MEASUR.TIME.DAYS_ACTIVITIES",
+       "kind": "skill",
        "strength": "helpful",
        "reason": "Relates days to activities.",
        "status": "proposed"
@@ -4374,8 +4374,8 @@
        "status": "proposed"
       },
       {
-       "requires": "MATH.G1.NUMBER.WHOLE_NUMBERS.a",
-       "kind": "outcome",
+       "requires": "MATH.G1.NUMBER.WHOLE_NUMBERS.COUNT_FORWARD_50",
+       "kind": "skill",
        "strength": "helpful",
        "reason": "Counts to 31 and beyond.",
        "status": "proposed"
@@ -4404,8 +4404,8 @@
      ],
      "prerequisites": [
       {
-       "requires": "MATH.G1.MEASUR.TIME.a",
-       "kind": "outcome",
+       "requires": "MATH.G1.MEASUR.TIME.DAYS_OF_WEEK",
+       "kind": "skill",
        "strength": "essential",
        "reason": "Identifies the days of the week.",
        "status": "proposed"
@@ -4441,15 +4441,15 @@
      ],
      "prerequisites": [
       {
-       "requires": "MATH.G1.MEASUR.TIME.b",
-       "kind": "outcome",
+       "requires": "MATH.G1.MEASUR.TIME.DAYS_ACTIVITIES",
+       "kind": "skill",
        "strength": "essential",
        "reason": "Relates days to activities.",
        "status": "proposed"
       },
       {
-       "requires": "MATH.G1.MEASUR.LENGTH.b",
-       "kind": "outcome",
+       "requires": "MATH.G1.MEASUR.LENGTH.COMPARE_LENGTH",
+       "kind": "skill",
        "strength": "helpful",
        "reason": "Compares longer and shorter (shadows).",
        "status": "proposed"
@@ -4486,8 +4486,8 @@
        "status": "proposed"
       },
       {
-       "requires": "MATH.G1.MEASUR.LENGTH.b",
-       "kind": "outcome",
+       "requires": "MATH.G1.MEASUR.LENGTH.COMPARE_LENGTH",
+       "kind": "skill",
        "strength": "essential",
        "reason": "Tells longer from shorter.",
        "status": "proposed"
@@ -4523,8 +4523,8 @@
        "status": "proposed"
       },
       {
-       "requires": "MATH.G1.NUMBER.WHOLE_NUMBERS.d",
-       "kind": "outcome",
+       "requires": "MATH.G1.NUMBER.WHOLE_NUMBERS.READ_WRITE_50",
+       "kind": "skill",
        "strength": "helpful",
        "reason": "Reads numbers 1 to 12.",
        "status": "proposed"
@@ -5086,15 +5086,15 @@
      ],
      "prerequisites": [
       {
-       "requires": "MATH.G1.MEASUR.MONEY.a",
-       "kind": "outcome",
+       "requires": "MATH.G1.MEASUR.MONEY.IDENTIFY_COINS",
+       "kind": "skill",
        "strength": "essential",
        "reason": "Identifies Kenyan coins.",
        "status": "proposed"
       },
       {
-       "requires": "MATH.G1.MEASUR.MONEY.b",
-       "kind": "outcome",
+       "requires": "MATH.G1.MEASUR.MONEY.IDENTIFY_50_NOTE",
+       "kind": "skill",
        "strength": "essential",
        "reason": "Identifies the sh. 50 note.",
        "status": "proposed"
@@ -5242,8 +5242,8 @@
        "status": "proposed"
       },
       {
-       "requires": "MATH.G1.MEASUR.MONEY.d",
-       "kind": "outcome",
+       "requires": "MATH.G1.MEASUR.MONEY.BUY_TWO_ITEMS",
+       "kind": "skill",
        "strength": "essential",
        "reason": "Bought up to 2 items without balance.",
        "status": "proposed"
@@ -5644,15 +5644,15 @@
      ],
      "prerequisites": [
       {
-       "requires": "MATH.G1.GEOMET.LINES.a",
-       "kind": "outcome",
+       "requires": "MATH.G1.GEOMET.LINES.IDENTIFY_LINES",
+       "kind": "skill",
        "strength": "essential",
        "reason": "Identifies straight lines.",
        "status": "proposed"
       },
       {
-       "requires": "MATH.G1.GEOMET.LINES.b",
-       "kind": "outcome",
+       "requires": "MATH.G1.GEOMET.LINES.DRAW_LINES",
+       "kind": "skill",
        "strength": "essential",
        "reason": "Draws straight lines.",
        "status": "proposed"
@@ -5684,15 +5684,15 @@
      ],
      "prerequisites": [
       {
-       "requires": "MATH.G1.GEOMET.LINES.c",
-       "kind": "outcome",
+       "requires": "MATH.G1.GEOMET.LINES.IDENTIFY_LINES",
+       "kind": "skill",
        "strength": "essential",
        "reason": "Identifies curved lines.",
        "status": "proposed"
       },
       {
-       "requires": "MATH.G1.GEOMET.LINES.d",
-       "kind": "outcome",
+       "requires": "MATH.G1.GEOMET.LINES.DRAW_LINES",
+       "kind": "skill",
        "strength": "essential",
        "reason": "Draws curved lines.",
        "status": "proposed"
@@ -5907,8 +5907,8 @@
      ],
      "prerequisites": [
       {
-       "requires": "MATH.G1.GEOMET.SHAPES.a",
-       "kind": "outcome",
+       "requires": "MATH.G1.GEOMET.SHAPES.IDENTIFY_SHAPES",
+       "kind": "skill",
        "strength": "essential",
        "reason": "Identifies rectangles, triangles and circles.",
        "status": "proposed"
@@ -5984,8 +5984,8 @@
        "status": "proposed"
       },
       {
-       "requires": "MATH.G1.GEOMET.SHAPES.b",
-       "kind": "outcome",
+       "requires": "MATH.G1.GEOMET.SHAPES.SHAPE_PATTERNS_1",
+       "kind": "skill",
        "strength": "essential",
        "reason": "Made patterns with shapes.",
        "status": "proposed"

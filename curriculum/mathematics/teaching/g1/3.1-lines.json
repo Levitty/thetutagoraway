@@ -1,0 +1,189 @@
+{
+ "sub_strand": "MATH.G1.GEOMET.LINES",
+ "title": "Lines",
+ "status": "draft: written 18 Nov 2026 offline for Grade 1; not yet checked by a Kenyan maths teacher; not loaded by the live tutor",
+ "sources": [],
+ "notes": "Outcomes a to e are KICD's words. Identifying straight and curved lines (a, c, e) is one skill; drawing them on the ground and in books (b, d) is done in class.",
+ "skills": [
+  {
+   "skill": "MATH.G1.GEOMET.LINES.IDENTIFY_LINES",
+   "key_step": "The child checks if a line bends: no bending is straight, smooth bending is curved.",
+   "floor": {
+    "prerequisite": "Drew lines and curves (PP2).",
+    "question": "Draw a line.",
+    "answer": "a line"
+   },
+   "representations": [
+    "children standing in a queue",
+    "objects",
+    "pictures"
+   ],
+   "steps": [
+    "Look along the line.",
+    "Does it bend?",
+    "No: straight.",
+    "Smoothly: curved."
+   ],
+   "contexts": [
+    "a queue at assembly",
+    "the rim of a plate",
+    "a rainbow"
+   ],
+   "board": [
+    {
+     "beat": "draw",
+     "do": "Draw a straight line and a curve."
+    },
+    {
+     "beat": "point",
+     "do": "Point at each.",
+     "say": "Which bends?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for the curve."
+    },
+    {
+     "beat": "reveal",
+     "do": "Label: straight, curved."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "MATH.G1.GEOMET.LINES.IDENTIFY_LINES.M_LINE1_SLANT",
+     "listen_for": [
+      "no, it is leaning"
+     ],
+     "ask": "Does the edge bend?",
+     "repair": "No: straight."
+    },
+    {
+     "code": "MATH.G1.GEOMET.LINES.IDENTIFY_LINES.M_LINE1_CORNER_CURVE",
+     "listen_for": [
+      "curved"
+     ],
+     "ask": "Does it bend smoothly?",
+     "repair": "No."
+    },
+    {
+     "code": "MATH.G1.GEOMET.LINES.IDENTIFY_LINES.M_LINE1_CIRCLE_NO_LINE",
+     "listen_for": [
+      "no"
+     ],
+     "ask": "Is it a line that bends?",
+     "repair": "Yes."
+    },
+    {
+     "code": "MATH.G1.GEOMET.LINES.IDENTIFY_LINES.M_LINE1_WAVY_STRAIGHT",
+     "listen_for": [
+      "straight"
+     ],
+     "ask": "Does it bend away from the string?",
+     "repair": "Yes: curved."
+    }
+   ],
+   "checks": [
+    {
+     "question": "Is the edge of a door straight or curved?",
+     "answer": "straight",
+     "shows": "objects"
+    },
+    {
+     "question": "Is the rim of a cup straight or curved?",
+     "answer": "curved",
+     "shows": "objects"
+    }
+   ]
+  },
+  {
+   "skill": "MATH.G1.GEOMET.LINES.DRAW_LINES",
+   "key_step": "The child joins two points with a firm ruler for a straight line and draws a curve in one smooth stroke.",
+   "floor": {
+    "prerequisite": "Tells straight from curved.",
+    "question": "Is a ruler's edge straight?",
+    "answer": "yes"
+   },
+   "representations": [
+    "a stick in the sand",
+    "a ruler",
+    "crayons"
+   ],
+   "steps": [
+    "Mark two points.",
+    "Lay the ruler on both.",
+    "Draw along it.",
+    "For a curve, one smooth stroke."
+   ],
+   "contexts": [
+    "drawing in the sand",
+    "a rainbow picture",
+    "a road"
+   ],
+   "board": [
+    {
+     "beat": "draw",
+     "do": "Mark two dots."
+    },
+    {
+     "beat": "point",
+     "do": "Point at both dots.",
+     "say": "Where does the ruler go?"
+    },
+    {
+     "beat": "child_draws",
+     "do": "The child joins the dots with a ruler."
+    },
+    {
+     "beat": "reveal",
+     "do": "Check: straight."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "MATH.G1.GEOMET.LINES.DRAW_LINES.M_DRAW1_WOBBLY",
+     "listen_for": [
+      "yes"
+     ],
+     "ask": "Does it follow the ruler?",
+     "repair": "Use the ruler."
+    },
+    {
+     "code": "MATH.G1.GEOMET.LINES.DRAW_LINES.M_DRAW1_MISSES_POINT",
+     "listen_for": [
+      "stops short"
+     ],
+     "ask": "Is the ruler touching both dots?",
+     "repair": "Yes: then draw."
+    },
+    {
+     "code": "MATH.G1.GEOMET.LINES.DRAW_LINES.M_DRAW1_CURVE_CORNERS",
+     "listen_for": [
+      "a line with corners"
+     ],
+     "ask": "Are there any corners?",
+     "repair": "Draw it smooth."
+    },
+    {
+     "code": "MATH.G1.GEOMET.LINES.DRAW_LINES.M_DRAW1_RULER_SLIPS",
+     "listen_for": [
+      "nothing"
+     ],
+     "ask": "Did the ruler move?",
+     "repair": "Hold it firmly."
+    }
+   ],
+   "checks": [
+    {
+     "question": "Does your line touch both dots?",
+     "answer": "yes",
+     "shows": "joining points"
+    },
+    {
+     "question": "Does your curve have corners?",
+     "answer": "no",
+     "shows": "smooth curve"
+    }
+   ]
+  }
+ ]
+}

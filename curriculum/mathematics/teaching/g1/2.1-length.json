@@ -1,0 +1,197 @@
+{
+ "sub_strand": "MATH.G1.MEASUR.LENGTH",
+ "title": "Length",
+ "status": "draft: written 18 Nov 2026 offline for Grade 1; not yet checked by a Kenyan maths teacher; not loaded by the live tutor",
+ "sources": [],
+ "notes": "Outcomes a to c are KICD's words; d is attitudinal. Collecting objects (a) goes with comparing (b). Lengths are compared directly and measured with arbitrary units (hand spans, steps, sticks).",
+ "skills": [
+  {
+   "skill": "MATH.G1.MEASUR.LENGTH.COMPARE_LENGTH",
+   "key_step": "The child lines up one end of both objects and looks at the other end.",
+   "floor": {
+    "prerequisite": "Uses long and short (PP2).",
+    "question": "Which is longer: a snake or a worm?",
+    "answer": "a snake"
+   },
+   "representations": [
+    "real objects",
+    "strings",
+    "pictures side by side"
+   ],
+   "steps": [
+    "Line up one end.",
+    "Look at the other end.",
+    "Say longer, shorter or same.",
+    "For three, compare two at a time."
+   ],
+   "contexts": [
+    "sticks from the compound",
+    "pencils on a desk",
+    "ropes for skipping"
+   ],
+   "board": [
+    {
+     "beat": "draw",
+     "do": "Draw two sticks, not lined up."
+    },
+    {
+     "beat": "point",
+     "do": "Point at the left ends.",
+     "say": "Do they start together?"
+    },
+    {
+     "beat": "child_draws",
+     "do": "The child redraws them lined up."
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for which is longer."
+    },
+    {
+     "beat": "reveal",
+     "do": "Write: longer."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "MATH.G1.MEASUR.LENGTH.COMPARE_LENGTH.M_CL1_NOT_ALIGNED",
+     "listen_for": [
+      "the one that ends further right"
+     ],
+     "ask": "Do they start at the same place?",
+     "repair": "No: line them up."
+    },
+    {
+     "code": "MATH.G1.MEASUR.LENGTH.COMPARE_LENGTH.M_CL1_THICK_LONG",
+     "listen_for": [
+      "the log"
+     ],
+     "ask": "Which reaches further?",
+     "repair": "The stick."
+    },
+    {
+     "code": "MATH.G1.MEASUR.LENGTH.COMPARE_LENGTH.M_CL1_LONGER_SHORTER_SWAP",
+     "listen_for": [
+      "the pencil"
+     ],
+     "ask": "Which one sticks out further?",
+     "repair": "The ruler."
+    },
+    {
+     "code": "MATH.G1.MEASUR.LENGTH.COMPARE_LENGTH.M_CL1_BENT_STRING",
+     "listen_for": [
+      "yes"
+     ],
+     "ask": "When straightened, which is longer?",
+     "repair": "Neither: the same."
+    }
+   ],
+   "checks": [
+    {
+     "question": "A ruler and a pencil, ends together: the ruler sticks out. Which is longer?",
+     "answer": "the ruler",
+     "shows": "comparing"
+    },
+    {
+     "question": "Two equal strings, one curled. Same length?",
+     "answer": "yes",
+     "shows": "curled"
+    }
+   ]
+  },
+  {
+   "skill": "MATH.G1.MEASUR.LENGTH.MEASURE_ARBITRARY_LENGTH",
+   "key_step": "The child lays the unit end to end with no gaps and counts the units.",
+   "floor": {
+    "prerequisite": "Compares lengths.",
+    "question": "Which is longer: a desk or a pencil?",
+    "answer": "a desk"
+   },
+   "representations": [
+    "hand spans",
+    "steps",
+    "sticks of one size"
+   ],
+   "steps": [
+    "Choose one unit.",
+    "Start at one end.",
+    "End to end, no gaps.",
+    "Count."
+   ],
+   "contexts": [
+    "a desk",
+    "the classroom",
+    "a door"
+   ],
+   "board": [
+    {
+     "beat": "draw",
+     "do": "Draw a desk and hand spans with gaps."
+    },
+    {
+     "beat": "point",
+     "do": "Point at a gap.",
+     "say": "Is that right?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for no."
+    },
+    {
+     "beat": "child_draws",
+     "do": "The child draws spans touching."
+    },
+    {
+     "beat": "reveal",
+     "do": "Write the count."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "MATH.G1.MEASUR.LENGTH.MEASURE_ARBITRARY_LENGTH.M_MAL_GAPS",
+     "listen_for": [
+      "yes"
+     ],
+     "ask": "Were there gaps?",
+     "repair": "Yes: more than 6."
+    },
+    {
+     "code": "MATH.G1.MEASUR.LENGTH.MEASURE_ARBITRARY_LENGTH.M_MAL_UNIT_SIZE",
+     "listen_for": [
+      "the teacher"
+     ],
+     "ask": "Whose span fits more times?",
+     "repair": "The child's: smaller spans, more of them."
+    },
+    {
+     "code": "MATH.G1.MEASUR.LENGTH.MEASURE_ARBITRARY_LENGTH.M_MAL_MIXED_UNITS",
+     "listen_for": [
+      "yes"
+     ],
+     "ask": "Is a step the same as a span?",
+     "repair": "No."
+    },
+    {
+     "code": "MATH.G1.MEASUR.LENGTH.MEASURE_ARBITRARY_LENGTH.M_MAL_COUNTS_START",
+     "listen_for": [
+      "5"
+     ],
+     "ask": "Did you say one before stepping?",
+     "repair": "Yes: 4 steps."
+    }
+   ],
+   "checks": [
+    {
+     "question": "A child's span and a teacher's span measure a table. Who counts more?",
+     "answer": "the child",
+     "shows": "unit size"
+    },
+    {
+     "question": "Is 2 steps and 3 spans 5 units?",
+     "answer": "no",
+     "shows": "one unit"
+    }
+   ]
+  }
+ ]
+}

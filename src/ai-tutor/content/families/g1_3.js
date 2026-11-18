@@ -19,66 +19,66 @@ const opts = (items, rightText, why) => items.map(t => ({ text: t, right: t === 
 
 export const FAMILIES = [
   // ================================================================ GRADE 1
-  fam({ id: 'g1.add.got-more', skill: 'G1_ADD', outcome: 'G1.ADD.0', rung: 1, form: 'word',
+  fam({ id: 'g1.add.got-more', skill: 'G1_ADD', outcome: 'MATH.G1.NUMBER.ADDITION.a', cskill: 'MATH.G1.NUMBER.ADDITION.MODEL_ADDITION', rung: 1, form: 'word',
     draw: () => { const a = randInt(3, 12), b = randInt(2, 20 - a); return distinct(a, b, Math.abs(a - b), a + b - 1) && a + b <= 20 ? { a, b, p: person(), item: pick(['mangoes', 'books', 'stickers', 'marbles', 'oranges']) } : null; },
     make: ({ a, b, p, item }) => ({
       question: `There are ${a} birds on a tree. ${b} more birds fly in. How many birds are on the tree now?`,
       answer: a + b,
-      wrong: [[a + b - 1, `Count on from ${a}. Do not count ${a} itself again.`], [Math.abs(a - b), 'Getting more means the number grows. Add, do not take away.'], [a, `More birds came, so there are more than at the start.`]],
+      wrong: [[a + b - 1, `Count on from ${a}. Do not count ${a} itself again.`, 'M_ADD1_COUNTS_START_AGAIN'], [Math.abs(a - b), 'Getting more means the number grows. Add, do not take away.', 'M_ADD1_TAKES_AWAY'], [a, `More birds came, so there are more than at the start.`, 'M_ADD1_GIVES_START']],
       hints: ['Start with how many there were. Then count on.', 'Getting more means we put the two numbers together.'],
       steps: [`There are ${a} birds. ${b} more come.`, `${a} + ${b} = ${a + b}.`] }),
     check: ({ a, b }, ans) => ans - b === a }),
 
-  fam({ id: 'g1.add.how-many-more', skill: 'G1_ADD', outcome: 'G1.ADD.0', rung: 1, form: 'word',
+  fam({ id: 'g1.add.how-many-more', skill: 'G1_ADD', outcome: 'MATH.G1.NUMBER.ADDITION.f', cskill: 'MATH.G1.NUMBER.ADDITION.ADD_MISSING_50', rung: 1, form: 'word',
     draw: () => { const t = randInt(8, 20), a = randInt(3, t - 3); return distinct(t - a, t - a + 1, a, t + a) ? { t, a, p: person() } : null; },
     make: ({ t, a, p }) => ({
       question: `${p.name} has ${a} stickers. ${p.She} wants ${t}. How many more stickers does ${p.she} need?`,
       answer: t - a,
-      wrong: [[t - a + 1, `Count up from ${a} to ${t}. Do not count ${a} itself.`], [a, `That is how many ${p.she} has now. Ask how many are still missing.`], [t + a, 'Do not put the two numbers together. Find the gap between them.']],
+      wrong: [[t - a + 1, `Count up from ${a} to ${t}. Do not count ${a} itself.`, 'M_AMISS1_COUNTS_START'], [a, `That is how many ${p.she} has now. Ask how many are still missing.`, 'M_AMISS1_GIVES_KNOWN'], [t + a, 'Do not put the two numbers together. Find the gap between them.', 'M_AMISS1_ADDS_BOTH']],
       hints: ['Count up from the number you have to the number you want.', 'How many steps is that?'],
       steps: [`Count on from ${a} to ${t}.`, `${a} + ${t - a} = ${t}, so ${t - a} more.`] }),
     check: ({ t, a }, ans) => a + ans === t }),
 
-  fam({ id: 'g1.sub.gave-away', skill: 'G1_SUB', outcome: 'G1.SUB.0', rung: 1, form: 'word',
+  fam({ id: 'g1.sub.gave-away', skill: 'G1_SUB', outcome: 'MATH.G1.NUMBER.SUBTRACTION.a', cskill: 'MATH.G1.NUMBER.SUBTRACTION.MODEL_SUBTRACTION', rung: 1, form: 'word',
     draw: () => { const a = randInt(6, 20), b = randInt(2, a - 2); return distinct(a, b, a - b, a - b + 1, a + b) ? { a, b, p: person(), item: pick(['sweets', 'mandazi', 'pencils', 'bananas', 'balls']) } : null; },
     make: ({ a, b, p, item }) => ({
       question: `${p.name} has ${a} ${item}. ${p.She} gives ${b} to a friend. How many ${item} are left?`,
       answer: a - b,
-      wrong: [[a - b + 1, `Count back ${b} from ${a}. Do not count ${a} itself.`], [a + b, 'Giving away means fewer are left. Take away, do not add.'], [b, `That is how many ${p.she} gave. Ask how many ${p.she} still has.`]],
+      wrong: [[a - b + 1, `Count back ${b} from ${a}. Do not count ${a} itself.`, 'M_SUB1_COUNTS_START'], [a + b, 'Giving away means fewer are left. Take away, do not add.', 'M_SUB1_ADDS'], [b, `That is how many ${p.she} gave. Ask how many ${p.she} still has.`, 'M_SUB1_GIVES_TAKEN']],
       hints: ['Start with how many there were. Then count back.', 'Giving away means taking away.'],
       steps: [`${p.name} starts with ${a} and gives away ${b}.`, `${a} − ${b} = ${a - b}.`] }),
     check: ({ a, b }, ans) => ans + b === a }),
 
-  fam({ id: 'g1.sub.how-many-ate', skill: 'G1_SUB', outcome: 'G1.SUB.0', rung: 2, form: 'word',
+  fam({ id: 'g1.sub.how-many-ate', skill: 'G1_SUB', outcome: 'MATH.G1.NUMBER.SUBTRACTION.e', cskill: 'MATH.G1.NUMBER.SUBTRACTION.SUB_MISSING_50', rung: 2, form: 'word',
     draw: () => { const a = randInt(8, 20), left = randInt(2, a - 3); return distinct(a, left, a - left, a + left, a - left + 1) ? { a, left, p: person() } : null; },
     make: ({ a, left, p }) => ({
       question: `${p.name} buys ${a} mandazi and eats some. ${left} mandazi are left. How many did ${p.she} eat?`,
       answer: a - left,
-      wrong: [[a - left + 1, `Count up from ${left} to ${a}. Do not count ${left} itself.`], [left, `That is how many are left. Ask how many were eaten.`], [a + left, 'Do not put the numbers together. Find how many went.']],
+      wrong: [[a - left + 1, `Count up from ${left} to ${a}. Do not count ${left} itself.`, 'M_SMISS1_COUNTS_START'], [left, `That is how many are left. Ask how many were eaten.`, 'M_SMISS1_GIVES_LEFT'], [a + left, 'Do not put the numbers together. Find how many went.', 'M_SMISS1_ADDS']],
       hints: ['Some were eaten, so fewer are left than at the start.', `How many must you take from ${a} to get ${left}?`],
       steps: [`${p.name} started with ${a} and has ${left} left.`, `${a} − ${left} = ${a - left} eaten.`] }),
     check: ({ a, left }, ans) => left + ans === a }),
 
-  fam({ id: 'g1.counting.ten-more', skill: 'G1_COUNTING', outcome: 'G1.WHOLE.0', rung: 1, form: 'direct',
+  fam({ id: 'g1.counting.ten-more', skill: 'G1_COUNTING', outcome: 'MATH.G1.NUMBER.WHOLE_NUMBERS.a', cskill: 'MATH.G1.NUMBER.WHOLE_NUMBERS.COUNT_FORWARD_50', rung: 1, form: 'direct',
     draw: () => ({ n: randInt(11, 40) }),
     make: ({ n }) => ({ story: false, question: `${person().name} counts in tens, starting at ${n}. What number comes next?`,
       answer: n + 10,
-      wrong: [[n + 1, 'That is only one more. Ten more is one whole ten.'], [n - 10, 'More means the number grows. Count up, not down.'], [n + 20, 'That is two tens. Only one ten more is needed.']],
+      wrong: [[n + 1, 'That is only one more. Ten more is one whole ten.', 'M_CF1_ONE_MORE'], [n - 10, 'More means the number grows. Count up, not down.', 'M_CF1_COUNTS_DOWN'], [n + 20, 'That is two tens. Only one ten more is needed.', 'M_CF1_TWO_TENS']],
       hints: ['Ten more means one more ten.', 'Keep the ones digit the same. Change the tens digit.'],
       steps: [`${n} has ${Math.floor(n / 10)} tens and ${n % 10} ones.`, `One more ten gives ${Math.floor(n / 10) + 1} tens and ${n % 10} ones: ${n + 10}.`] }),
     check: ({ n }, ans) => ans - n === 10 }),
 
-  fam({ id: 'g1.prenumber.skip-gap', skill: 'G1_PRENUMBER', outcome: 'G1.PRENUMBER.0', rung: 1, form: 'direct',
+  fam({ id: 'g1.prenumber.skip-gap', skill: 'G1_PRENUMBER', outcome: 'MATH.G1.NUMBER.WHOLE_NUMBERS.f', cskill: 'MATH.G1.NUMBER.WHOLE_NUMBERS.NUMBER_PATTERNS_20', rung: 1, form: 'direct',
     draw: () => { const s = pick([2, 5, 10]); const a = s === 2 ? pick([2, 4, 6, 8]) : s === 5 ? pick([5, 10, 15]) : pick([10, 20]); return { s, a }; },
     make: ({ s, a }) => ({ story: false,
       question: `Count in ${s}s: ${a}, ${a + s}, __, ${a + 3 * s}, ${a + 4 * s}. Which number fills the gap?`,
       answer: a + 2 * s,
-      wrong: [[a + 2 * s - 1, `Each step jumps by ${s}. Count on from the number before the gap.`], [a + 2 * s + 1, `Each step jumps by ${s}. Check with the number after the gap.`], [a + s, 'That number is already in the pattern, before the gap.']],
+      wrong: [[a + 2 * s - 1, `Each step jumps by ${s}. Count on from the number before the gap.`, 'M_NPAT1_STEP_ONE'], [a + 2 * s + 1, `Each step jumps by ${s}. Check with the number after the gap.`, 'M_NPAT1_STEP_ONE'], [a + s, 'That number is already in the pattern, before the gap.', 'M_NPAT1_COPIES']],
       hints: ['How far is it from one number to the next?', 'Add that jump to the number before the gap.'],
       steps: [`The numbers go up by ${s} each time.`, `${a + s} + ${s} = ${a + 2 * s}.`] }),
     check: ({ s, a }, ans) => ans - (a + s) === s && a + 3 * s - ans === s }),
 
-  fam({ id: 'g1.prenumber.bead-pattern', skill: 'G1_PRENUMBER', outcome: 'G1.PRENUMBER.0', rung: 1, form: 'word',
+  fam({ id: 'g1.prenumber.bead-pattern', skill: 'G1_PRENUMBER', outcome: 'MATH.G1.NUMBER.PRE_NUMBER_ACTIVITIES.d', cskill: 'MATH.G1.NUMBER.PRE_NUMBER_ACTIVITIES.OBJECT_PATTERNS', misMapped: false, reveals: ['M_OPAT_REPEATS_LAST', 'M_OPAT_ALWAYS_AB'], rung: 1, form: 'word',
     draw: () => {
       const cols = shuffle(['red', 'blue', 'green', 'yellow']);
       const unit = pick([[0, 1], [0, 0, 1], [0, 1, 1], [0, 1, 2]]).map(i => cols[i]);
@@ -108,7 +108,7 @@ export const FAMILIES = [
         steps: [`The lengths are ${vals.join(', ')} cm.`, `The ${longest ? 'biggest' : 'smallest'} is ${target} cm: the ${rightName}.`] };
     } }),
 
-  fam({ id: 'g1.mass.lightest-chain', skill: 'G1_MASS', outcome: 'G1.MASS.0', rung: 2, form: 'word',
+  fam({ id: 'g1.mass.lightest-chain', skill: 'G1_MASS', outcome: 'MATH.G1.MEASUR.MASS.b', cskill: 'MATH.G1.MEASUR.MASS.COMPARE_MASS', misMapped: false, reveals: ['M_CM1_CHAIN', 'M_CM1_WORDS_SWAP'], rung: 2, form: 'word',
     draw: () => { const t = pick([['cow', 'goat', 'hen'], ['goat', 'hen', 'egg'], ['lorry', 'bicycle', 'shoe'], ['donkey', 'dog', 'rabbit']]); return { t, heavy: Math.random() < 0.5, order: Math.random() < 0.5 }; },
     make: ({ t, heavy, order }) => {
       const art = (n) => (/^[aeiou]/.test(n) ? 'an' : 'a') + ' ' + n;
@@ -121,7 +121,7 @@ export const FAMILIES = [
         steps: [`In order: ${t[0]}, ${t[1]}, ${t[2]} (heavy to light).`, `The ${heavy ? 'heaviest' : 'lightest'} is the ${right}.`] };
     } }),
 
-  fam({ id: 'g1.cap.holds-more', skill: 'G1_CAPACITY', outcome: 'G1.CAP.0', rung: 1, form: 'word',
+  fam({ id: 'g1.cap.holds-more', skill: 'G1_CAPACITY', outcome: 'MATH.G1.MEASUR.CAPACITY.c', cskill: 'MATH.G1.MEASUR.CAPACITY.MEASURE_ARBITRARY_CAPACITY', misMapped: false, reveals: ['M_MAC_COMPARE_COUNTS_SWAP'], rung: 1, form: 'word',
     draw: () => { const pr = pick([['jug', 'bottle'], ['pot', 'mug'], ['basin', 'bowl'], ['kettle', 'teapot']]); const a = randInt(2, 12), b = Math.random() < 0.2 ? a : randInt(2, 12); return { pr, a, b, more: Math.random() < 0.5 }; },
     make: ({ pr, a, b, more }) => {
       const right = a === b ? 'same' : (more ? (a > b ? pr[0] : pr[1]) : (a < b ? pr[0] : pr[1]));
@@ -131,7 +131,7 @@ export const FAMILIES = [
         steps: [`The ${pr[0]} holds ${a} cups and the ${pr[1]} holds ${b} cups.`, a === b ? 'The numbers are the same.' : `${a > b ? a : b} is bigger than ${a > b ? b : a}, so the answer is the ${right}.`] };
     } }),
 
-  fam({ id: 'g1.time.days-ahead', skill: 'G1_TIME', outcome: 'G1.TIME.0', rung: 1, form: 'word',
+  fam({ id: 'g1.time.days-ahead', skill: 'G1_TIME', outcome: 'MATH.G1.MEASUR.TIME.a', cskill: 'MATH.G1.MEASUR.TIME.DAYS_OF_WEEK', misMapped: false, reveals: ['M_DAYS_COUNTS_TODAY'], rung: 1, form: 'word',
     draw: () => ({ i: randInt(0, 6), k: randInt(2, 4) }),
     make: ({ i, k }) => {
       const right = DAYS[(i + k) % 7];
@@ -151,17 +151,17 @@ export const FAMILIES = [
       steps: [`Count on from ${now} o'clock to ${now + k} o'clock.`, `That is ${k} hours.`] }),
     check: ({ now, k }, ans) => now + ans === now + k && ans > 0 }),
 
-  fam({ id: 'g1.money.mixed-coins', skill: 'G1_MONEY', outcome: 'G1.MONEY.0', rung: 2, form: 'word',
+  fam({ id: 'g1.money.mixed-coins', skill: 'G1_MONEY', outcome: 'MATH.G1.MEASUR.MONEY.c', cskill: 'MATH.G1.MEASUR.MONEY.COUNT_COINS', rung: 2, form: 'word',
     draw: () => ({ a: randInt(1, 3), b: randInt(1, 4), p: person() }),
     make: ({ a, b, p }) => ({
       question: `${p.name} pays with ${a} ten-shilling coin${a > 1 ? 's' : ''} and ${b} five-shilling coin${b > 1 ? 's' : ''}. How many shillings is that?`,
       answer: 10 * a + 5 * b,
-      wrong: [[a + b, 'That counts the coins. Count the shillings they are worth.'], [10 * (a + b), 'The 5 shilling coins are worth less than 10. Count them by 5.'], [5 * (a + b), 'The 10 shilling coins are worth more than 5. Count them by 10.']],
+      wrong: [[a + b, 'That counts the coins. Count the shillings they are worth.', 'M_COIN1_COUNTS_PIECES'], [10 * (a + b), 'The 5 shilling coins are worth less than 10. Count them by 5.', 'M_COIN1_ALL_AS_TEN'], [5 * (a + b), 'The 10 shilling coins are worth more than 5. Count them by 10.', 'M_COIN1_ALL_AS_FIVE']],
       hints: ['Count the 10 shilling coins first: 10, 20, ...', 'Then count on by 5 for the other coins.'],
       steps: [`${a} coin${a > 1 ? 's' : ''} of 10 shillings make ${10 * a} shillings.`, `Then count on ${b} fives: ${10 * a + 5 * b} shillings.`] }),
     check: ({ a, b }, ans) => (ans - 5 * b) / 10 === a }),
 
-  fam({ id: 'g1.lines.curved-edge', skill: 'G1_LINES', outcome: 'G1.LINES.0', rung: 1, form: 'direct',
+  fam({ id: 'g1.lines.curved-edge', skill: 'G1_LINES', outcome: 'MATH.G1.GEOMET.LINES.c', cskill: 'MATH.G1.GEOMET.LINES.IDENTIFY_LINES', misMapped: false, reveals: ['M_LINE1_CORNER_CURVE', 'M_LINE1_CIRCLE_NO_LINE'], rung: 1, form: 'direct',
     draw: () => {
       const ask = Math.random() < 0.5; // true: which is curved
       const curved = shuffle(['plate', 'wheel', 'coin', 'bangle']), straight = shuffle(['ruler', 'book', 'window', 'table top']);
@@ -173,7 +173,7 @@ export const FAMILIES = [
       hints: ['Think of the edge. Does it bend, or go straight?', 'A wheel and a coin are round.'],
       steps: [`A curved edge bends round, like a wheel. A straight edge does not bend, like a ruler.`, `The ${right} has the ${ask ? 'curved' : 'straight'} edge.`] }) }),
 
-  fam({ id: 'g1.shapes.which-shape', skill: 'G1_SHAPES', outcome: 'G1.SHAPES.0', rung: 1, form: 'direct',
+  fam({ id: 'g1.shapes.which-shape', skill: 'G1_SHAPES', outcome: 'MATH.G1.GEOMET.SHAPES.a', cskill: 'MATH.G1.GEOMET.SHAPES.IDENTIFY_SHAPES', misMapped: false, reveals: ['M_SHP1_SIDE_COUNT', 'M_SHP1_TURNED_TRIANGLE'], rung: 1, form: 'direct',
     draw: () => {
       const q = pick([{ t: 'has no corners', r: 'circle' }, { t: 'has 3 sides', r: 'triangle' }, { t: 'has 4 sides that are all equal', r: 'square' }, { t: 'has 4 sides, 2 long and 2 short', r: 'rectangle' }, { t: 'has 3 corners', r: 'triangle' }]);
       const others = shuffle(['circle', 'triangle', 'square', 'rectangle'].filter(s => s !== q.r)).slice(0, 2);

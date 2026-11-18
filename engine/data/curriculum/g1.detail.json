@@ -1,0 +1,409 @@
+{
+ "outcomes": {
+  "MATH.G1.NUMBER.PRE_NUMBER_ACTIVITIES.a": "sort objects according to similar attributes in different situations",
+  "MATH.G1.NUMBER.PRE_NUMBER_ACTIVITIES.b": "match objects with similar attributes in the environment",
+  "MATH.G1.NUMBER.PRE_NUMBER_ACTIVITIES.c": "order objects according to given criteria in different situations",
+  "MATH.G1.NUMBER.PRE_NUMBER_ACTIVITIES.d": "create patterns of different sizes and shapes using real objects",
+  "MATH.G1.NUMBER.PRE_NUMBER_ACTIVITIES.e": "appreciate the use of sorting and grouping items in day-to-day activities",
+  "MATH.G1.NUMBER.WHOLE_NUMBERS.a": "count numbers forward up to 50",
+  "MATH.G1.NUMBER.WHOLE_NUMBERS.b": "count numbers backward from 30",
+  "MATH.G1.NUMBER.WHOLE_NUMBERS.c": "represent numbers 1 to 30 using concrete objects",
+  "MATH.G1.NUMBER.WHOLE_NUMBERS.d": "read and write numbers 1 to 50 in symbols",
+  "MATH.G1.NUMBER.WHOLE_NUMBERS.e": "read and write numbers 1 to 10 in words",
+  "MATH.G1.NUMBER.WHOLE_NUMBERS.f": "identify missing numbers in number patterns up to 20",
+  "MATH.G1.NUMBER.WHOLE_NUMBERS.g": "appreciate number patterns by creating and extending patterns during play activities",
+  "MATH.G1.NUMBER.ADDITION.a": "model addition as putting objects together",
+  "MATH.G1.NUMBER.ADDITION.b": "use ' +' and ' =' signs in writing addition statements",
+  "MATH.G1.NUMBER.ADDITION.c": "add 2 single-digit numbers in different situations",
+  "MATH.G1.NUMBER.ADDITION.d": "add 3 single-digit numbers in different contexts",
+  "MATH.G1.NUMBER.ADDITION.e": "add a 2-digit number to a 1-digit number without regrouping with sum not exceeding 50",
+  "MATH.G1.NUMBER.ADDITION.f": "work out missing numbers in patterns involving the addition of whole numbers up to 50",
+  "MATH.G1.NUMBER.ADDITION.g": "play games involving addition using digital devices or other resources",
+  "MATH.G1.NUMBER.SUBTRACTION.a": "model subtraction as 'taking away' using concrete objects",
+  "MATH.G1.NUMBER.SUBTRACTION.b": "use the ' - ' and '='signs in writing subtraction sentences",
+  "MATH.G1.NUMBER.SUBTRACTION.c": "subtract single digit numbers",
+  "MATH.G1.NUMBER.SUBTRACTION.d": "subtract a 1-digit number from a 2-digit number without regrouping",
+  "MATH.G1.NUMBER.SUBTRACTION.e": "work out missing numbers in patterns involving subtraction of whole numbers up to 50",
+  "MATH.G1.NUMBER.SUBTRACTION.f": "play games involving subtraction using digital devices and other resources",
+  "MATH.G1.MEASUR.LENGTH.a": "collect objects of different lengths from the immediate environment",
+  "MATH.G1.MEASUR.LENGTH.b": "compare the length of objects using longer than, shorter than, and same as",
+  "MATH.G1.MEASUR.LENGTH.c": "measure length using arbitrary units",
+  "MATH.G1.MEASUR.LENGTH.d": "appreciate measuring length using arbitrary units",
+  "MATH.G1.MEASUR.MASS.a": "collect objects with different masses from the immediate environment",
+  "MATH.G1.MEASUR.MASS.b": "compare the mass of two objects using heavier than, lighter than, or same as",
+  "MATH.G1.MEASUR.MASS.c": "measure mass using arbitrary units",
+  "MATH.G1.MEASUR.MASS.d": "appreciate measuring mass using arbitrary units in the environment",
+  "MATH.G1.MEASUR.CAPACITY.a": "collect containers of different capacities from the immediate environment",
+  "MATH.G1.MEASUR.CAPACITY.b": "compare the capacity of two containers using more than, less than, and same as",
+  "MATH.G1.MEASUR.CAPACITY.c": "measure capacity using arbitrary units",
+  "MATH.G1.MEASUR.CAPACITY.d": "re-use empty containers of different capacities to keep items",
+  "MATH.G1.MEASUR.TIME.a": "identify days of the week",
+  "MATH.G1.MEASUR.TIME.b": "relate days of the week to various activities",
+  "MATH.G1.MEASUR.TIME.c": "identify months of the year",
+  "MATH.G1.MEASUR.TIME.d": "appreciate activities that are done on different days of the week",
+  "MATH.G1.MEASUR.MONEY.a": "identify Kenyan currency coins",
+  "MATH.G1.MEASUR.MONEY.b": "identify the sh.50 Kenyan currency note",
+  "MATH.G1.MEASUR.MONEY.c": "count Kenyan currency coins one at a time",
+  "MATH.G1.MEASUR.MONEY.d": "use money to buy up to 2 items without balance",
+  "MATH.G1.MEASUR.MONEY.e": "appreciate the use of money in buying items from shops",
+  "MATH.G1.GEOMET.LINES.a": "identify straight lines in different situations",
+  "MATH.G1.GEOMET.LINES.b": "draw straight lines on different surfaces",
+  "MATH.G1.GEOMET.LINES.c": "identify curved lines in different situations",
+  "MATH.G1.GEOMET.LINES.d": "draw curved lines on different surfaces",
+  "MATH.G1.GEOMET.LINES.e": "recognise straight and curved lines from real objects in the environment",
+  "MATH.G1.GEOMET.SHAPES.a": "identify rectangles, triangles, and circles in objects from the environment",
+  "MATH.G1.GEOMET.SHAPES.b": "make patterns involving rectangles, triangles, circles, and ovals",
+  "MATH.G1.GEOMET.SHAPES.c": "appreciate the beauty of patterns in different fabrics"
+ },
+ "skills": {
+  "MATH.G1.NUMBER.PRE_NUMBER_ACTIVITIES.SORT_OBJECTS": {
+   "forms": [
+    "which one does not belong",
+    "sort into groups",
+    "what is the sorting rule",
+    "which group does this go in"
+   ],
+   "mastery": "The child sorts a mixed collection into groups by one attribute (colour, size, shape, use or texture), says the rule used, and finds the object that does not belong in a group.",
+   "hands_on": "Collecting and sorting real objects is done in class."
+  },
+  "MATH.G1.NUMBER.PRE_NUMBER_ACTIVITIES.MATCH_OBJECTS": {
+   "forms": [
+    "match the pairs",
+    "which one goes with this",
+    "why do these match",
+    "find the same"
+   ],
+   "mastery": "The child pairs objects that share an attribute (a shoe with a shoe, a big stone with a big stone, things used together such as a cup and a saucer), and says why they match."
+  },
+  "MATH.G1.NUMBER.PRE_NUMBER_ACTIVITIES.ORDER_OBJECTS": {
+   "forms": [
+    "order from smallest to biggest",
+    "which comes first",
+    "which is out of order",
+    "order from biggest"
+   ],
+   "mastery": "The child arranges three to five objects from smallest to biggest (or shortest to longest, lightest to heaviest) and the reverse, and names the first and last."
+  },
+  "MATH.G1.NUMBER.PRE_NUMBER_ACTIVITIES.OBJECT_PATTERNS": {
+   "forms": [
+    "what comes next",
+    "what is missing in the pattern",
+    "which part repeats",
+    "make a pattern"
+   ],
+   "mastery": "The child copies, continues and makes a repeating pattern with real objects (bottle tops, leaves, beads) by colour, size or shape, and says what comes next.",
+   "hands_on": "Making patterns with real objects is done in class."
+  },
+  "MATH.G1.NUMBER.WHOLE_NUMBERS.COUNT_FORWARD_50": {
+   "forms": [
+    "count on from a number",
+    "what comes next",
+    "missing number in a forward count",
+    "count on in twos"
+   ],
+   "mastery": "Starting from any number, the child counts on in ones to 50 (and in twos to 20), saying each number once, crossing each ten correctly (19, 20, 21), and says the number after any number."
+  },
+  "MATH.G1.NUMBER.WHOLE_NUMBERS.COUNT_BACK_30": {
+   "forms": [
+    "count back from a number",
+    "what comes before",
+    "missing number in a backward count",
+    "count down to zero"
+   ],
+   "mastery": "The child counts back in ones from 30 or from any number up to 30, crossing each ten correctly (21, 20, 19), and says the number before."
+  },
+  "MATH.G1.NUMBER.WHOLE_NUMBERS.REPRESENT_30": {
+   "forms": [
+    "count out this many",
+    "how many objects",
+    "match the group to the number",
+    "show the number with bottle tops"
+   ],
+   "mastery": "The child counts out a given number of objects up to 30, touching each once, and matches a group of objects to its number, keeping track by moving each object as it is counted.",
+   "hands_on": "Counting real objects is done in class."
+  },
+  "MATH.G1.NUMBER.WHOLE_NUMBERS.READ_WRITE_50": {
+   "forms": [
+    "write the number said",
+    "read the number",
+    "write the number of objects",
+    "which is written correctly"
+   ],
+   "mastery": "The child reads any number up to 50 and writes numbers to 50 in symbols with digits facing the right way and in the right order (14, not 41)."
+  },
+  "MATH.G1.NUMBER.WHOLE_NUMBERS.WORDS_10": {
+   "forms": [
+    "write the number in words",
+    "match the word to the number",
+    "choose the right spelling",
+    "read the word"
+   ],
+   "mastery": "The child reads and writes the number words one to ten with correct spelling and matches each word to its numeral and to a group of objects."
+  },
+  "MATH.G1.NUMBER.WHOLE_NUMBERS.NUMBER_PATTERNS_20": {
+   "forms": [
+    "missing number",
+    "next number",
+    "count in twos",
+    "what is the jump"
+   ],
+   "mastery": "The child finds the missing number in a counting pattern going up or down in ones or twos up to 20 (2, 4, __, 8), and says the jump. Counting in fives and tens is met in the older practice families."
+  },
+  "MATH.G1.NUMBER.ADDITION.MODEL_ADDITION": {
+   "forms": [
+    "how many now",
+    "put together and count",
+    "a story with more coming",
+    "draw both groups"
+   ],
+   "mastery": "The child puts two groups of objects together and counts all of them to find how many there are now, and tells a 'had some, got some more' story for it (3 birds and 2 more birds is 5 birds)."
+  },
+  "MATH.G1.NUMBER.ADDITION.ADD_SIGNS": {
+   "forms": [
+    "write the addition sentence",
+    "read the sentence",
+    "put in the missing sign",
+    "match the picture to the sentence"
+   ],
+   "mastery": "The child writes an addition statement for a picture or story with + and = in the right places (3 + 2 = 5) and reads it as 'three add two equals five'."
+  },
+  "MATH.G1.NUMBER.ADDITION.ADD_TWO_SINGLE": {
+   "forms": [
+    "add two numbers",
+    "count on from the bigger",
+    "a story with two amounts",
+    "roll two dice"
+   ],
+   "mastery": "The child adds two single-digit numbers (7 + 5 = 12) by counting on from the larger, using fingers, objects or a number line, in stories and number sentences. Games with dice and devices are played in class."
+  },
+  "MATH.G1.NUMBER.ADDITION.ADD_THREE_SINGLE": {
+   "forms": [
+    "add three numbers",
+    "a story with three amounts",
+    "make ten first",
+    "missing number of three"
+   ],
+   "mastery": "The child adds three single-digit numbers (4 + 3 + 5 = 12) by adding two first and then the third, or by finding a pair that makes ten."
+  },
+  "MATH.G1.NUMBER.ADDITION.ADD_2D_1D_50": {
+   "forms": [
+    "column addition",
+    "horizontal addition",
+    "count on",
+    "a story with a total"
+   ],
+   "mastery": "The child adds a 1-digit number to a 2-digit number when the ones do not make ten (23 + 4 = 27), across or in a column, using an abacus or number cards, with the sum up to 50."
+  },
+  "MATH.G1.NUMBER.ADDITION.ADD_MISSING_50": {
+   "forms": [
+    "missing number in a pattern",
+    "how many more are needed",
+    "6 + __ = 10",
+    "next number"
+   ],
+   "mastery": "The child finds the missing number in an adding pattern (5, 7, 9, __) or in an addition (6 + __ = 10, how many more are needed) by counting up from the number known."
+  },
+  "MATH.G1.NUMBER.SUBTRACTION.MODEL_SUBTRACTION": {
+   "forms": [
+    "how many are left",
+    "take away and count",
+    "a story of giving away",
+    "cross out and count"
+   ],
+   "mastery": "The child takes some objects away from a group and counts what is left (8 sweets, 3 given away, 5 left), and tells a 'had some, gave some away' story for it."
+  },
+  "MATH.G1.NUMBER.SUBTRACTION.SUB_SIGNS": {
+   "forms": [
+    "write the subtraction sentence",
+    "read the sentence",
+    "put in the missing sign",
+    "match the picture to the sentence"
+   ],
+   "mastery": "The child writes a subtraction sentence for a picture or story with - and = in the right places, with the starting number first (8 - 3 = 5), and reads it."
+  },
+  "MATH.G1.NUMBER.SUBTRACTION.SUB_SINGLE": {
+   "forms": [
+    "take away",
+    "count back",
+    "a giving-away story",
+    "use the addition fact"
+   ],
+   "mastery": "The child takes a single-digit number from a number up to 18 (13 - 5 = 8) by counting back, using objects or a number line, or from a known addition fact (5 + 8 = 13). Games are played in class."
+  },
+  "MATH.G1.NUMBER.SUBTRACTION.SUB_2D_1D_NO_REGROUP": {
+   "forms": [
+    "column subtraction",
+    "count back",
+    "how many are left",
+    "horizontal subtraction"
+   ],
+   "mastery": "The child takes a 1-digit number from a 2-digit number when the ones digit is big enough (37 - 4 = 33), across or in a column, with number cards or a chart."
+  },
+  "MATH.G1.NUMBER.SUBTRACTION.SUB_MISSING_50": {
+   "forms": [
+    "next number going down",
+    "missing term",
+    "how many were taken",
+    "12 - __ = 5"
+   ],
+   "mastery": "The child continues or fills in a pattern that goes down by the same number (20, 18, 16, __) and finds a missing number in a subtraction (some were eaten, 5 are left from 12: how many were eaten?)."
+  },
+  "MATH.G1.MEASUR.LENGTH.COMPARE_LENGTH": {
+   "forms": [
+    "which is longer",
+    "which is shorter",
+    "are they the same length",
+    "the longest of three"
+   ],
+   "mastery": "The child collects objects of different lengths, lines up one end of two objects, and says which is longer than, shorter than or the same as the other; finds the longest and shortest of three.",
+   "hands_on": "Collecting objects from the environment is done in class."
+  },
+  "MATH.G1.MEASUR.LENGTH.MEASURE_ARBITRARY_LENGTH": {
+   "forms": [
+    "how many hand spans long",
+    "how many steps across",
+    "why are the counts different",
+    "which unit gives more"
+   ],
+   "mastery": "The child measures a length with hand spans, steps, sticks or pencils laid end to end without gaps, counts the units, and says why two children's hand-span counts for the same desk can differ.",
+   "hands_on": "Measuring with hand spans and steps is done in class."
+  },
+  "MATH.G1.MEASUR.MASS.COMPARE_MASS": {
+   "forms": [
+    "which is heavier",
+    "which is lighter",
+    "are they the same",
+    "the heaviest of three"
+   ],
+   "mastery": "The child holds two objects and says which is heavier, lighter or about the same, and puts three objects in order from two comparisons (if the cow is heavier than the goat and the goat heavier than the hen, the cow is heaviest).",
+   "hands_on": "Collecting and holding objects is done in class."
+  },
+  "MATH.G1.MEASUR.MASS.MEASURE_ARBITRARY_MASS": {
+   "forms": [
+    "how many tins balance it",
+    "how many cups of beans",
+    "which needs more units",
+    "read the balance picture"
+   ],
+   "mastery": "The child measures how many cups or tins of beans or maize balance an object, or how many tins of a known mass make a bag, and counts the units.",
+   "hands_on": "Measuring with containers of beans or maize is done in class."
+  },
+  "MATH.G1.MEASUR.CAPACITY.COMPARE_CAPACITY": {
+   "forms": [
+    "which holds more",
+    "which holds less",
+    "do they hold the same",
+    "fill and pour to check"
+   ],
+   "mastery": "The child pours water from one container into another to say which holds more, less or the same, does not judge by height alone, and re-uses containers to keep items.",
+   "hands_on": "Collecting, filling and re-using containers is done in class and at home."
+  },
+  "MATH.G1.MEASUR.CAPACITY.MEASURE_ARBITRARY_CAPACITY": {
+   "forms": [
+    "how many cups fill it",
+    "which holds more cups",
+    "bigger cup, fewer cups",
+    "read the picture of cups"
+   ],
+   "mastery": "The child fills a basin or jug with a small container (a cup, a tin), counts the full cups, and compares two containers by their cup counts.",
+   "hands_on": "Filling basins with small containers is done in class."
+  },
+  "MATH.G1.MEASUR.TIME.DAYS_OF_WEEK": {
+   "forms": [
+    "the day after",
+    "the day before",
+    "in 2 days it will be",
+    "put the days in order"
+   ],
+   "mastery": "The child says and writes the seven days of the week in order starting from any day, says which day comes before and after a given day, and counts on days (in 3 days from Monday it is Thursday), using today, yesterday and tomorrow."
+  },
+  "MATH.G1.MEASUR.TIME.DAYS_ACTIVITIES": {
+   "forms": [
+    "which day is this activity",
+    "what do we do on Monday",
+    "school days and weekend days",
+    "order the week's activities"
+   ],
+   "mastery": "The child names what happens on particular days (raising the flag on Monday and Friday, no school on Saturday and Sunday, church or mosque day, market day) and says the day for an activity."
+  },
+  "MATH.G1.MEASUR.TIME.MONTHS_OF_YEAR": {
+   "forms": [
+    "the month after",
+    "the month before",
+    "your birth month",
+    "put the months in order"
+   ],
+   "mastery": "The child says the twelve months in order (with a song), names the month of their birthday, and says which month comes before and after a given month."
+  },
+  "MATH.G1.MEASUR.MONEY.IDENTIFY_COINS": {
+   "forms": [
+    "name the coin",
+    "sort coins by value",
+    "which coin is worth more",
+    "find the sh. 10 coin"
+   ],
+   "mastery": "The child names the Kenyan coins (sh. 1, sh. 5, sh. 10, sh. 20) by the number on them, sorts coins by value, and says which of two coins is worth more."
+  },
+  "MATH.G1.MEASUR.MONEY.IDENTIFY_50_NOTE": {
+   "forms": [
+    "which is the sh. 50 note",
+    "what is this note worth",
+    "note or coin",
+    "is the note worth more than a sh. 20 coin"
+   ],
+   "mastery": "The child recognises the sh. 50 note, says its value, and tells it from the coins."
+  },
+  "MATH.G1.MEASUR.MONEY.COUNT_COINS": {
+   "forms": [
+    "how much money",
+    "how many coins",
+    "count ten-shilling coins",
+    "count a mix of coins"
+   ],
+   "mastery": "The child counts coins of one kind and then a mix (two sh. 10 coins and one sh. 5 coin is sh. 25) by counting on the value of each coin, and says how many coins there are and how much they are worth as two different things."
+  },
+  "MATH.G1.MEASUR.MONEY.BUY_TWO_ITEMS": {
+   "forms": [
+    "total cost of two items",
+    "which coins pay exactly",
+    "is the money enough",
+    "role play at the shop"
+   ],
+   "mastery": "The child finds the cost of up to 2 items in a model shop (total up to sh. 50) and picks coins or the note that pay exactly, with no change.",
+   "hands_on": "Role play in the classroom model shop is done in class."
+  },
+  "MATH.G1.GEOMET.LINES.IDENTIFY_LINES": {
+   "forms": [
+    "straight or curved",
+    "which edge is curved",
+    "find a straight line in the picture",
+    "sort lines"
+   ],
+   "mastery": "The child says whether a line or an edge is straight or curved (a queue of children, the edge of a door, a semicircle, the rim of a plate) and finds straight and curved lines in real objects."
+  },
+  "MATH.G1.GEOMET.LINES.DRAW_LINES": {
+   "forms": [],
+   "mastery": "The child draws straight lines by joining two points with a stick or ruler, and curved lines freehand, on the ground and in books.",
+   "hands_on": "Drawing lines on the ground and in books is done in class, with the teacher checking."
+  },
+  "MATH.G1.GEOMET.SHAPES.IDENTIFY_SHAPES": {
+   "forms": [
+    "name the shape",
+    "which object is a circle",
+    "how many sides",
+    "pick the shape with 3 corners"
+   ],
+   "mastery": "The child names rectangles, triangles and circles in objects and pictures (a door, a roof, a clock), in any position, by their sides and corners (a triangle has 3 sides and 3 corners; a circle has none)."
+  },
+  "MATH.G1.GEOMET.SHAPES.SHAPE_PATTERNS_1": {
+   "forms": [
+    "what comes next",
+    "what is missing",
+    "which part repeats",
+    "make a shape pattern"
+   ],
+   "mastery": "The child copies, continues and makes a repeating pattern of shapes (circle, triangle, circle, triangle) and says which shape comes next.",
+   "hands_on": "Making and colouring shape patterns is done in class."
+  }
+ }
+}
