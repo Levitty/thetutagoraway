@@ -1128,6 +1128,60 @@
     "from two sides"
    ],
    "mastery": "The child writes the ratio of the two known sides for the angle (a ramp rising 1.2 m over 5 m: tan x = 0.24), then finds the angle from the table or the inverse key (13.5 degrees), and checks the angle is sensible."
+  },
+  "MATH.G9.DATA_H.DATA_INTERPRETATION_GROU.CLASS_WIDTH": {
+   "forms": [
+    "choose a class width",
+    "how many classes",
+    "range of the data",
+    "write the classes"
+   ],
+   "mastery": "The child finds the range (largest minus smallest), chooses a class width that gives about 5 to 10 classes (a range of 47 with width 10 gives 5 classes), and writes the class limits so that every value fits in exactly one class."
+  },
+  "MATH.G9.DATA_H.DATA_INTERPRETATION_GROU.GROUPED_FREQUENCY_TABLE": {
+   "forms": [
+    "complete the table",
+    "tally the marks",
+    "which class does 40 go in",
+    "total frequency"
+   ],
+   "mastery": "The child tallies each value into its class (a value on a boundary into the higher class, as agreed), totals the frequencies, and checks that the total equals the number of values."
+  },
+  "MATH.G9.DATA_H.DATA_INTERPRETATION_GROU.MODAL_CLASS": {
+   "forms": [
+    "which is the modal class",
+    "how many more in the modal class",
+    "from the bar graph",
+    "from the table"
+   ],
+   "mastery": "The child picks the class with the highest frequency (the tallest bar), not the class with the highest values, and compares it with the next highest class by subtraction when asked how many more."
+  },
+  "MATH.G9.DATA_H.DATA_INTERPRETATION_GROU.GROUPED_MEAN": {
+   "forms": [
+    "mean mass",
+    "complete the table of fx",
+    "which step is wrong",
+    "why is this wrong"
+   ],
+   "mastery": "The child finds each class midpoint (halfway between its limits), multiplies by the frequency, adds the products, and divides by the total frequency (not by the number of classes): sum of fx 1,240 over 40 sacks is 31 kg."
+  },
+  "MATH.G9.DATA_H.DATA_INTERPRETATION_GROU.GROUPED_MEDIAN": {
+   "forms": [
+    "estimate the median",
+    "which is the median class",
+    "how many below it",
+    "complete the steps"
+   ],
+   "mastery": "The child finds the total frequency and the position n/2, adds frequencies until the class that holds it (the median class), counts those below it, and moves into the class in proportion: median = lower limit + ((n/2 - frequency below) / class frequency) x class width."
+  },
+  "MATH.G9.DATA_H.DATA_INTERPRETATION_GROU.CUMULATIVE_FREQUENCY": {
+   "forms": [
+    "how many scored between",
+    "how many under",
+    "read the graph",
+    "cumulative frequency"
+   ],
+   "mastery": "The child reads \"how many under a value\" straight from a cumulative frequency graph and finds how many lie between two values by subtracting the two readings: under 40 minus under 20."
   }
  }
 }

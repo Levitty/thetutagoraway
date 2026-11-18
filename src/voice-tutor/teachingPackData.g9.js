@@ -16056,6 +16056,779 @@ export const TEACHING_PACK_G9 = {
   "sub_strand": "MATH.G9.GEOMET.TRIGONOMETRY",
   "sub_strand_name": "Trigonometry",
   "status": "draft: written 18 Nov 2026 offline for Grade 9; not yet checked by a Kenyan maths teacher; not loaded by the live tutor"
+ },
+ "MATH.G9.DATA_H.DATA_INTERPRETATION_GROU.CLASS_WIDTH": {
+  "skill": "MATH.G9.DATA_H.DATA_INTERPRETATION_GROU.CLASS_WIDTH",
+  "key_step": "The child finds the range first and divides it by about the number of classes wanted, then rounds to a friendly width.",
+  "floor": {
+   "prerequisite": "Builds a frequency table.",
+   "question": "Tally 3, 4, 3, 5",
+   "answer": "3: 2, 4: 1, 5: 1"
+  },
+  "representations": [
+   "a number line from smallest to largest",
+   "a list of classes",
+   "a table"
+  ],
+  "steps": [
+   "Find the range.",
+   "Divide by about 5 to 10.",
+   "Round to a friendly width (5, 10, 20).",
+   "Write classes with no gaps or overlaps."
+  ],
+  "contexts": [
+   "marks in a mathematics test",
+   "masses of sacks at a store",
+   "heights of learners"
+  ],
+  "board": [
+   {
+    "beat": "write",
+    "do": "Write marks from 32 to 79."
+   },
+   {
+    "beat": "point",
+    "do": "Point at 32 and 79.",
+    "say": "What is the range?"
+   },
+   {
+    "beat": "pause",
+    "do": "Wait for 47."
+   },
+   {
+    "beat": "reveal",
+    "do": "Write width 10: 30 to under 40, ..., 70 to under 80."
+   }
+  ],
+  "misconceptions": [
+   {
+    "code": "MATH.G9.DATA_H.DATA_INTERPRETATION_GROU.CLASS_WIDTH.M_WIDTH_FROM_LARGEST",
+    "listen_for": [
+     "16"
+    ],
+    "ask": "Did you use the smallest value?",
+    "repair": "Range = 47.",
+    "error": "Uses the largest value instead of the range to choose a width.",
+    "example": {
+     "question": "Marks from 32 to 79, about 5 classes. Width?",
+     "wrong_answer": "16 (79 / 5)",
+     "correct_answer": "10"
+    }
+   },
+   {
+    "code": "MATH.G9.DATA_H.DATA_INTERPRETATION_GROU.CLASS_WIDTH.M_TOO_MANY_CLASSES",
+    "listen_for": [
+     "width 2"
+    ],
+    "ask": "How many classes would that make?",
+    "repair": "Too many.",
+    "error": "Chooses a width that makes far too many classes.",
+    "example": {
+     "question": "Range 47. Width 2?",
+     "wrong_answer": "fine",
+     "correct_answer": "too many classes (24)"
+    }
+   },
+   {
+    "code": "MATH.G9.DATA_H.DATA_INTERPRETATION_GROU.CLASS_WIDTH.M_OVERLAPPING_CLASSES",
+    "listen_for": [
+     "40 in both"
+    ],
+    "ask": "Can a value be in two classes?",
+    "repair": "No.",
+    "error": "Writes classes that overlap, so a value fits in two.",
+    "example": {
+     "question": "Classes 30-40, 40-50. Where does 40 go?",
+     "wrong_answer": "both",
+     "correct_answer": "one class only, by the agreed rule"
+    }
+   },
+   {
+    "code": "MATH.G9.DATA_H.DATA_INTERPRETATION_GROU.CLASS_WIDTH.M_GAPPED_CLASSES",
+    "listen_for": [
+     "40 fits nowhere"
+    ],
+    "ask": "Where does 40 go?",
+    "repair": "Close the gap.",
+    "error": "Leaves gaps between classes so some values fit nowhere.",
+    "example": {
+     "question": "Classes 30-39, 41-50. Where does 40 go?",
+     "wrong_answer": "nowhere",
+     "correct_answer": "a class must hold it"
+    }
+   }
+  ],
+  "checks": [
+   {
+    "question": "Data from 12 to 58. A width that gives about 5 classes?",
+    "answer": "10",
+    "shows": "range then width"
+   },
+   {
+    "question": "Write the first two classes starting at 10 with width 10.",
+    "answer": "10 to under 20, 20 to under 30",
+    "shows": "classes"
+   }
+  ],
+  "name": "Determine a suitable class width for grouping data",
+  "sub_strand": "MATH.G9.DATA_H.DATA_INTERPRETATION_GROU",
+  "sub_strand_name": "Data Interpretation (Grouped Data)",
+  "status": "draft: written 18 Nov 2026 offline for Grade 9; not yet checked by a Kenyan maths teacher; not loaded by the live tutor"
+ },
+ "MATH.G9.DATA_H.DATA_INTERPRETATION_GROU.GROUPED_FREQUENCY_TABLE": {
+  "skill": "MATH.G9.DATA_H.DATA_INTERPRETATION_GROU.GROUPED_FREQUENCY_TABLE",
+  "key_step": "The child tallies each value once, using the boundary rule, and checks the total against the number of values.",
+  "floor": {
+   "prerequisite": "Tallies data.",
+   "question": "Tally 5 values",
+   "answer": "five strokes"
+  },
+  "representations": [
+   "a tally table",
+   "class boundaries",
+   "a total row"
+  ],
+  "steps": [
+   "Write the classes.",
+   "Tally each value into one class.",
+   "Count the tallies.",
+   "Check the total."
+  ],
+  "contexts": [
+   "test marks",
+   "masses of potatoes",
+   "times to walk to school"
+  ],
+  "board": [
+   {
+    "beat": "draw",
+    "do": "Draw classes 30 to under 40 and 40 to under 50."
+   },
+   {
+    "beat": "point",
+    "do": "Point at a mark of 40.",
+    "say": "Which class does 40 go in?"
+   },
+   {
+    "beat": "pause",
+    "do": "Wait for the higher class."
+   },
+   {
+    "beat": "reveal",
+    "do": "Write 40 goes in 40 to under 50."
+   }
+  ],
+  "misconceptions": [
+   {
+    "code": "MATH.G9.DATA_H.DATA_INTERPRETATION_GROU.GROUPED_FREQUENCY_TABLE.M_BOUNDARY_IN_LOWER",
+    "listen_for": [
+     "30 to under 40"
+    ],
+    "ask": "Is 40 under 40?",
+    "repair": "No: the higher class.",
+    "error": "Puts a boundary value in the lower class against the rule given.",
+    "example": {
+     "question": "A mark of 40; classes 30 to under 40 and 40 to under 50. Which class?",
+     "wrong_answer": "30 to under 40",
+     "correct_answer": "40 to under 50"
+    }
+   },
+   {
+    "code": "MATH.G9.DATA_H.DATA_INTERPRETATION_GROU.GROUPED_FREQUENCY_TABLE.M_TALLY_MISCOUNTED",
+    "listen_for": [
+     "total 38"
+    ],
+    "ask": "How many values were there?",
+    "repair": "40: recount.",
+    "error": "Miscounts tallies, so the total does not match.",
+    "example": {
+     "question": "40 values tallied; frequencies add to 38.",
+     "wrong_answer": "fine",
+     "correct_answer": "recount"
+    }
+   },
+   {
+    "code": "MATH.G9.DATA_H.DATA_INTERPRETATION_GROU.GROUPED_FREQUENCY_TABLE.M_VALUES_LISTED_NOT_COUNTED",
+    "listen_for": [
+     "42, 45, 47"
+    ],
+    "ask": "How many is that?",
+    "repair": "3.",
+    "error": "Lists the values in the class instead of counting them.",
+    "example": {
+     "question": "Frequency of 40 to under 50?",
+     "wrong_answer": "42, 45, 47",
+     "correct_answer": "3"
+    }
+   },
+   {
+    "code": "MATH.G9.DATA_H.DATA_INTERPRETATION_GROU.GROUPED_FREQUENCY_TABLE.M_CLASS_SUM_AS_FREQUENCY",
+    "listen_for": [
+     "134"
+    ],
+    "ask": "Count or add?",
+    "repair": "Count: 3.",
+    "error": "Adds the values in a class as its frequency.",
+    "example": {
+     "question": "Values 42, 45, 47 in a class. Frequency?",
+     "wrong_answer": "134",
+     "correct_answer": "3"
+    }
+   }
+  ],
+  "checks": [
+   {
+    "question": "Values 41, 50, 39, 47, 40. How many in 40 to under 50?",
+    "answer": "3",
+    "shows": "boundary rule"
+   },
+   {
+    "question": "Frequencies 5, 8, 12, 9, 6. Total?",
+    "answer": "40",
+    "shows": "total"
+   }
+  ],
+  "name": "Draw a frequency distribution table of grouped data",
+  "sub_strand": "MATH.G9.DATA_H.DATA_INTERPRETATION_GROU",
+  "sub_strand_name": "Data Interpretation (Grouped Data)",
+  "status": "draft: written 18 Nov 2026 offline for Grade 9; not yet checked by a Kenyan maths teacher; not loaded by the live tutor"
+ },
+ "MATH.G9.DATA_H.DATA_INTERPRETATION_GROU.MODAL_CLASS": {
+  "skill": "MATH.G9.DATA_H.DATA_INTERPRETATION_GROU.MODAL_CLASS",
+  "key_step": "The child looks down the frequency column (or the bar heights) and picks the largest frequency.",
+  "floor": {
+   "prerequisite": "Finds the mode.",
+   "question": "3, 5, 5, 7",
+   "answer": "5"
+  },
+  "representations": [
+   "a bar graph of classes",
+   "a frequency table",
+   "the tallest bar"
+  ],
+  "steps": [
+   "Look at every frequency.",
+   "Pick the largest.",
+   "Its class is the modal class.",
+   "For how many more: subtract the next largest."
+  ],
+  "contexts": [
+   "walking times to school",
+   "masses of maize sacks",
+   "scores in a test"
+  ],
+  "board": [
+   {
+    "beat": "draw",
+    "do": "Draw bars of 4, 9, 12, 7."
+   },
+   {
+    "beat": "point",
+    "do": "Point along the bars.",
+    "say": "Which bar is tallest?"
+   },
+   {
+    "beat": "pause",
+    "do": "Wait for 12."
+   },
+   {
+    "beat": "reveal",
+    "do": "Write that class is the modal class."
+   }
+  ],
+  "misconceptions": [
+   {
+    "code": "MATH.G9.DATA_H.DATA_INTERPRETATION_GROU.MODAL_CLASS.M_HIGHEST_VALUES_CLASS",
+    "listen_for": [
+     "the last class"
+    ],
+    "ask": "Is that the most common?",
+    "repair": "No: the tallest bar.",
+    "error": "Picks the class with the biggest values as the modal class.",
+    "example": {
+     "question": "Which is the modal class?",
+     "wrong_answer": "the last class",
+     "correct_answer": "the class with the highest frequency"
+    }
+   },
+   {
+    "code": "MATH.G9.DATA_H.DATA_INTERPRETATION_GROU.MODAL_CLASS.M_FREQUENCY_NOT_COMPARED",
+    "listen_for": [
+     "9"
+    ],
+    "ask": "Is there a bigger frequency?",
+    "repair": "12.",
+    "error": "Picks a class without comparing all frequencies.",
+    "example": {
+     "question": "Frequencies 4, 9, 12, 7. Modal class?",
+     "wrong_answer": "the 9 class",
+     "correct_answer": "the 12 class"
+    }
+   },
+   {
+    "code": "MATH.G9.DATA_H.DATA_INTERPRETATION_GROU.MODAL_CLASS.M_MODAL_FREQ_FOR_DIFFERENCE",
+    "listen_for": [
+     "12"
+    ],
+    "ask": "How many more?",
+    "repair": "Subtract: 3.",
+    "error": "Gives the modal frequency when the difference is asked.",
+    "example": {
+     "question": "Tallest bar 12, next 9. How many more?",
+     "wrong_answer": "12",
+     "correct_answer": "3"
+    }
+   },
+   {
+    "code": "MATH.G9.DATA_H.DATA_INTERPRETATION_GROU.MODAL_CLASS.M_FREQS_ADDED",
+    "listen_for": [
+     "21"
+    ],
+    "ask": "Add or subtract?",
+    "repair": "Subtract.",
+    "error": "Adds the two frequencies for \"how many more\".",
+    "example": {
+     "question": "Tallest bar 12, next 9. How many more?",
+     "wrong_answer": "21",
+     "correct_answer": "3"
+    }
+   },
+   {
+    "code": "MATH.G9.DATA_H.DATA_INTERPRETATION_GROU.MODAL_CLASS.M_NEXT_CLASS_GIVEN",
+    "listen_for": [
+     "9"
+    ],
+    "ask": "Is 9 the difference?",
+    "repair": "No: 3.",
+    "error": "Gives the next highest frequency.",
+    "example": {
+     "question": "Tallest 12, next 9. How many more?",
+     "wrong_answer": "9",
+     "correct_answer": "3"
+    }
+   }
+  ],
+  "checks": [
+   {
+    "question": "Frequencies 6, 11, 15, 8. Modal class is the one with frequency?",
+    "answer": "15",
+    "shows": "highest frequency"
+   },
+   {
+    "question": "How many more than the next highest?",
+    "answer": "4",
+    "shows": "difference"
+   }
+  ],
+  "name": "Identify the modal class of grouped data",
+  "sub_strand": "MATH.G9.DATA_H.DATA_INTERPRETATION_GROU",
+  "sub_strand_name": "Data Interpretation (Grouped Data)",
+  "status": "draft: written 18 Nov 2026 offline for Grade 9; not yet checked by a Kenyan maths teacher; not loaded by the live tutor"
+ },
+ "MATH.G9.DATA_H.DATA_INTERPRETATION_GROU.GROUPED_MEAN": {
+  "skill": "MATH.G9.DATA_H.DATA_INTERPRETATION_GROU.GROUPED_MEAN",
+  "key_step": "The child adds a midpoint column and an fx column, totals both f and fx, and divides the fx total by the f total.",
+  "floor": {
+   "prerequisite": "Finds a mean.",
+   "question": "3, 5, 7",
+   "answer": "5"
+  },
+  "representations": [
+   "a table with x, f, fx columns",
+   "sum fx / sum f",
+   "a balance picture"
+  ],
+  "steps": [
+   "Midpoint of each class.",
+   "Multiply by the frequency.",
+   "Add the fx column and the f column.",
+   "Divide."
+  ],
+  "contexts": [
+   "masses of potato sacks at a market",
+   "marks in a test",
+   "ages at a clinic"
+  ],
+  "board": [
+   {
+    "beat": "draw",
+    "do": "Draw a table: class, midpoint x, f, fx."
+   },
+   {
+    "beat": "point",
+    "do": "Point at the class 20 to under 30.",
+    "say": "What is its midpoint?"
+   },
+   {
+    "beat": "pause",
+    "do": "Wait for 25."
+   },
+   {
+    "beat": "child_draws",
+    "do": "The child fills the fx column."
+   },
+   {
+    "beat": "reveal",
+    "do": "Write mean = sum fx / sum f."
+   }
+  ],
+  "misconceptions": [
+   {
+    "code": "MATH.G9.DATA_H.DATA_INTERPRETATION_GROU.GROUPED_MEAN.M_DIVIDE_BY_CLASSES",
+    "listen_for": [
+     "310"
+    ],
+    "ask": "How many sacks are there?",
+    "repair": "40: divide by 40.",
+    "error": "Divides the total of fx by the number of classes.",
+    "example": {
+     "question": "Sum fx 1,240, 4 classes, 40 sacks. Mean?",
+     "wrong_answer": "310",
+     "correct_answer": "31"
+    }
+   },
+   {
+    "code": "MATH.G9.DATA_H.DATA_INTERPRETATION_GROU.GROUPED_MEAN.M_MIDPOINTS_AVERAGED",
+    "listen_for": [
+     "30"
+    ],
+    "ask": "Do both classes have the same number?",
+    "repair": "No: weight them.",
+    "error": "Averages the midpoints without the frequencies.",
+    "example": {
+     "question": "Midpoints 25, 35 with 10 and 30 learners. Mean?",
+     "wrong_answer": "30",
+     "correct_answer": "32.5"
+    }
+   },
+   {
+    "code": "MATH.G9.DATA_H.DATA_INTERPRETATION_GROU.GROUPED_MEAN.M_TOTAL_FX_GIVEN",
+    "listen_for": [
+     "1,240"
+    ],
+    "ask": "Is that a mean?",
+    "repair": "Divide by 40.",
+    "error": "Gives the total of fx as the mean.",
+    "example": {
+     "question": "Sum fx 1,240, 40 sacks. Mean?",
+     "wrong_answer": "1,240",
+     "correct_answer": "31"
+    }
+   },
+   {
+    "code": "MATH.G9.DATA_H.DATA_INTERPRETATION_GROU.GROUPED_MEAN.M_LOWER_LIMIT_FOR_MIDPOINT",
+    "listen_for": [
+     "20"
+    ],
+    "ask": "Is 20 the middle of the class?",
+    "repair": "25.",
+    "error": "Uses the lower class limit instead of the midpoint.",
+    "example": {
+     "question": "Class 20 to under 30. Value to use?",
+     "wrong_answer": "20",
+     "correct_answer": "25"
+    }
+   },
+   {
+    "code": "MATH.G9.DATA_H.DATA_INTERPRETATION_GROU.GROUPED_MEAN.M_MEAN_AS_MIDDLE_CLASS",
+    "listen_for": [
+     "the middle class"
+    ],
+    "ask": "Does the mean use every value?",
+    "repair": "Yes: total over count.",
+    "error": "Gives the midpoint of the middle class as the mean.",
+    "example": {
+     "question": "Five classes. Mean?",
+     "wrong_answer": "the middle class midpoint",
+     "correct_answer": "sum fx / sum f"
+    }
+   },
+   {
+    "code": "MATH.G9.DATA_H.DATA_INTERPRETATION_GROU.GROUPED_MEAN.M_MIDPOINTS_ADDED_ONLY",
+    "listen_for": [
+     "60"
+    ],
+    "ask": "Did you divide?",
+    "repair": "Total over count.",
+    "error": "Adds the midpoints and does not divide.",
+    "example": {
+     "question": "Midpoints 25 and 35. Mean?",
+     "wrong_answer": "60",
+     "correct_answer": "sum fx / sum f"
+    }
+   }
+  ],
+  "checks": [
+   {
+    "question": "Midpoints 15, 25, 35 with frequencies 2, 5, 3. Mean?",
+    "answer": "26",
+    "shows": "sum fx / sum f"
+   },
+   {
+    "question": "Class 40 to under 50: midpoint?",
+    "answer": "45",
+    "shows": "midpoint"
+   }
+  ],
+  "name": "Calculate the mean of grouped data using midpoints",
+  "sub_strand": "MATH.G9.DATA_H.DATA_INTERPRETATION_GROU",
+  "sub_strand_name": "Data Interpretation (Grouped Data)",
+  "status": "draft: written 18 Nov 2026 offline for Grade 9; not yet checked by a Kenyan maths teacher; not loaded by the live tutor"
+ },
+ "MATH.G9.DATA_H.DATA_INTERPRETATION_GROU.GROUPED_MEDIAN": {
+  "skill": "MATH.G9.DATA_H.DATA_INTERPRETATION_GROU.GROUPED_MEDIAN",
+  "key_step": "The child finds n/2, counts up to the median class, and moves into it by the fraction still to count times the class width.",
+  "floor": {
+   "prerequisite": "Finds the median.",
+   "question": "3, 5, 8, 9, 11",
+   "answer": "8"
+  },
+  "representations": [
+   "a running total column",
+   "the median class drawn as a bar of width 10",
+   "the interpolation formula"
+  ],
+  "steps": [
+   "Total frequency n; position n/2.",
+   "Running totals to find the median class.",
+   "Frequency below the median class.",
+   "Median = lower limit + ((n/2 - below) / f) x width."
+  ],
+  "contexts": [
+   "marks in a test",
+   "heights of maize plants",
+   "times in a race"
+  ],
+  "board": [
+   {
+    "beat": "draw",
+    "do": "Draw a table with a running total column."
+   },
+   {
+    "beat": "point",
+    "do": "Point at n/2 = 20.",
+    "say": "In which class is the 20th learner?"
+   },
+   {
+    "beat": "pause",
+    "do": "Wait for the child to find it."
+   },
+   {
+    "beat": "reveal",
+    "do": "Write median = 40 + (7/12) x 10 = 45.8."
+   }
+  ],
+  "misconceptions": [
+   {
+    "code": "MATH.G9.DATA_H.DATA_INTERPRETATION_GROU.GROUPED_MEDIAN.M_CLASSES_COUNTED",
+    "listen_for": [
+     "5"
+    ],
+    "ask": "Is that learners or classes?",
+    "repair": "Classes: add frequencies.",
+    "error": "Counts the classes instead of adding the frequencies.",
+    "example": {
+     "question": "How many learners in all?",
+     "wrong_answer": "5 (classes)",
+     "correct_answer": "the sum of the frequencies"
+    }
+   },
+   {
+    "code": "MATH.G9.DATA_H.DATA_INTERPRETATION_GROU.GROUPED_MEDIAN.M_MEDIAN_POSITION_N",
+    "listen_for": [
+     "40"
+    ],
+    "ask": "Is the middle the last one?",
+    "repair": "Half way: 20.",
+    "error": "Uses the total as the median position.",
+    "example": {
+     "question": "40 learners. Median position?",
+     "wrong_answer": "40",
+     "correct_answer": "20"
+    }
+   },
+   {
+    "code": "MATH.G9.DATA_H.DATA_INTERPRETATION_GROU.GROUPED_MEDIAN.M_MEDIAN_CLASS_INCLUDED",
+    "listen_for": [
+     "25"
+    ],
+    "ask": "Did you stop before the median class?",
+    "repair": "No: 13.",
+    "error": "Includes the median class in the frequency below it.",
+    "example": {
+     "question": "Frequencies 4, 9, 12 (median class 3rd). Below it?",
+     "wrong_answer": "25",
+     "correct_answer": "13"
+    }
+   },
+   {
+    "code": "MATH.G9.DATA_H.DATA_INTERPRETATION_GROU.GROUPED_MEDIAN.M_MEDIAN_LOWER_LIMIT",
+    "listen_for": [
+     "40"
+    ],
+    "ask": "Is the median at the very start of the class?",
+    "repair": "Move along.",
+    "error": "Gives the lower limit of the median class as the median.",
+    "example": {
+     "question": "Median class 40 to under 50. Median?",
+     "wrong_answer": "40",
+     "correct_answer": "40 + part of 10"
+    }
+   },
+   {
+    "code": "MATH.G9.DATA_H.DATA_INTERPRETATION_GROU.GROUPED_MEDIAN.M_MEDIAN_CLASS_MIDPOINT",
+    "listen_for": [
+     "45"
+    ],
+    "ask": "Is it exactly halfway in?",
+    "repair": "In proportion: 7 of 12.",
+    "error": "Gives the midpoint of the median class as the median.",
+    "example": {
+     "question": "Median class 40 to under 50. Median?",
+     "wrong_answer": "45",
+     "correct_answer": "40 + (7/12) x 10 = 45.8"
+    }
+   }
+  ],
+  "checks": [
+   {
+    "question": "n = 30; below the median class 10; median class 20 to under 30 with frequency 10. Median?",
+    "answer": "25",
+    "shows": "interpolation"
+   },
+   {
+    "question": "n = 50. Median position?",
+    "answer": "25",
+    "shows": "n/2"
+   }
+  ],
+  "name": "Determine the median of grouped data by interpolation",
+  "sub_strand": "MATH.G9.DATA_H.DATA_INTERPRETATION_GROU",
+  "sub_strand_name": "Data Interpretation (Grouped Data)",
+  "status": "draft: written 18 Nov 2026 offline for Grade 9; not yet checked by a Kenyan maths teacher; not loaded by the live tutor"
+ },
+ "MATH.G9.DATA_H.DATA_INTERPRETATION_GROU.CUMULATIVE_FREQUENCY": {
+  "skill": "MATH.G9.DATA_H.DATA_INTERPRETATION_GROU.CUMULATIVE_FREQUENCY",
+  "key_step": "The child reads up from each value to the curve and across, and subtracts the lower reading from the upper.",
+  "floor": {
+   "prerequisite": "Reads a line graph.",
+   "question": "Value at 40",
+   "answer": "30"
+  },
+  "representations": [
+   "a cumulative frequency curve",
+   "a running total table",
+   "two readings and a subtraction"
+  ],
+  "steps": [
+   "Read the cf at the upper value.",
+   "Read the cf at the lower value.",
+   "Subtract.",
+   "That is how many lie between."
+  ],
+  "contexts": [
+   "marks in a test",
+   "masses at a weighbridge",
+   "ages at a clinic"
+  ],
+  "board": [
+   {
+    "beat": "draw",
+    "do": "Draw a cumulative frequency curve with marks 20 and 40 on the bottom."
+   },
+   {
+    "beat": "point",
+    "do": "Point up from 40.",
+    "say": "How many scored under 40?"
+   },
+   {
+    "beat": "pause",
+    "do": "Wait for 30."
+   },
+   {
+    "beat": "point",
+    "do": "Point up from 20.",
+    "say": "And under 20?"
+   },
+   {
+    "beat": "reveal",
+    "do": "Write 30 - 8 = 22."
+   }
+  ],
+  "misconceptions": [
+   {
+    "code": "MATH.G9.DATA_H.DATA_INTERPRETATION_GROU.CUMULATIVE_FREQUENCY.M_CF_UPPER_ONLY",
+    "listen_for": [
+     "30"
+    ],
+    "ask": "Does that include those under 20?",
+    "repair": "Yes: subtract 8.",
+    "error": "Reads only the cumulative frequency at the upper value.",
+    "example": {
+     "question": "Between 20 and 40: cf at 40 is 30, at 20 is 8.",
+     "wrong_answer": "30",
+     "correct_answer": "22"
+    }
+   },
+   {
+    "code": "MATH.G9.DATA_H.DATA_INTERPRETATION_GROU.CUMULATIVE_FREQUENCY.M_CF_LOWER_ONLY",
+    "listen_for": [
+     "8"
+    ],
+    "ask": "Is 8 under 20 or between?",
+    "repair": "Under 20.",
+    "error": "Reads only the cumulative frequency at the lower value.",
+    "example": {
+     "question": "Between 20 and 40: cf at 40 is 30, at 20 is 8.",
+     "wrong_answer": "8",
+     "correct_answer": "22"
+    }
+   },
+   {
+    "code": "MATH.G9.DATA_H.DATA_INTERPRETATION_GROU.CUMULATIVE_FREQUENCY.M_ONE_CLASS_ONLY",
+    "listen_for": [
+     "only 20 to 30"
+    ],
+    "ask": "Does the range reach 40?",
+    "repair": "Yes: both classes.",
+    "error": "Counts only one class of the range.",
+    "example": {
+     "question": "Between 20 and 40, classes 20-30 and 30-40.",
+     "wrong_answer": "only 20-30",
+     "correct_answer": "both classes"
+    }
+   },
+   {
+    "code": "MATH.G9.DATA_H.DATA_INTERPRETATION_GROU.CUMULATIVE_FREQUENCY.M_CF_AS_FREQUENCY",
+    "listen_for": [
+     "30 in one class"
+    ],
+    "ask": "Is the graph a running total?",
+    "repair": "Yes: subtract.",
+    "error": "Reads a cumulative frequency as the frequency of one class.",
+    "example": {
+     "question": "cf at 40 is 30. How many in 30 to under 40?",
+     "wrong_answer": "30",
+     "correct_answer": "30 minus the cf at 30"
+    }
+   }
+  ],
+  "checks": [
+   {
+    "question": "cf under 50 is 34, under 30 is 12. How many from 30 to under 50?",
+    "answer": "22",
+    "shows": "difference of readings"
+   },
+   {
+    "question": "cf under 60 is 40 and that is everyone. How many scored 60 or more?",
+    "answer": "0",
+    "shows": "reading"
+   }
+  ],
+  "name": "Read a cumulative frequency graph of grouped data",
+  "sub_strand": "MATH.G9.DATA_H.DATA_INTERPRETATION_GROU",
+  "sub_strand_name": "Data Interpretation (Grouped Data)",
+  "status": "draft: written 18 Nov 2026 offline for Grade 9; not yet checked by a Kenyan maths teacher; not loaded by the live tutor"
  }
 };
 export default TEACHING_PACK_G9;

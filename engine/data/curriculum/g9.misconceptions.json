@@ -8958,5 +8958,397 @@
   "help": "The ratio gives the angle at the bottom of the ramp.",
   "source": "to be confirmed by a teacher (no source yet)",
   "status": "draft"
+ },
+ "MATH.G9.DATA_H.DATA_INTERPRETATION_GROU.CLASS_WIDTH.M_WIDTH_FROM_LARGEST": {
+  "skill": "MATH.G9.DATA_H.DATA_INTERPRETATION_GROU.CLASS_WIDTH",
+  "error": "Uses the largest value instead of the range to choose a width.",
+  "example": {
+   "question": "Marks from 32 to 79, about 5 classes. Width?",
+   "wrong_answer": "16 (79 / 5)",
+   "correct_answer": "10"
+  },
+  "cause": "Forgets the smallest value.",
+  "reveals": "The answer 16 (79 / 5) as a wrong option, with a reason that names the idea.",
+  "help": "Range = 79 - 32 = 47; 47 / 5 is about 10.",
+  "source": "to be confirmed by a teacher (no source yet)",
+  "status": "draft"
+ },
+ "MATH.G9.DATA_H.DATA_INTERPRETATION_GROU.CLASS_WIDTH.M_TOO_MANY_CLASSES": {
+  "skill": "MATH.G9.DATA_H.DATA_INTERPRETATION_GROU.CLASS_WIDTH",
+  "error": "Chooses a width that makes far too many classes.",
+  "example": {
+   "question": "Range 47. Width 2?",
+   "wrong_answer": "fine",
+   "correct_answer": "too many classes (24)"
+  },
+  "cause": "Thinks smaller is more accurate.",
+  "reveals": "The answer fine as a wrong option, with a reason that names the idea.",
+  "help": "Aim for about 5 to 10 classes.",
+  "source": "to be confirmed by a teacher (no source yet)",
+  "status": "draft"
+ },
+ "MATH.G9.DATA_H.DATA_INTERPRETATION_GROU.CLASS_WIDTH.M_OVERLAPPING_CLASSES": {
+  "skill": "MATH.G9.DATA_H.DATA_INTERPRETATION_GROU.CLASS_WIDTH",
+  "error": "Writes classes that overlap, so a value fits in two.",
+  "example": {
+   "question": "Classes 30-40, 40-50. Where does 40 go?",
+   "wrong_answer": "both",
+   "correct_answer": "one class only, by the agreed rule"
+  },
+  "cause": "Repeats the boundary in both classes.",
+  "reveals": "The answer both as a wrong option, with a reason that names the idea.",
+  "help": "Use 30 to under 40, 40 to under 50.",
+  "source": "to be confirmed by a teacher (no source yet)",
+  "status": "draft"
+ },
+ "MATH.G9.DATA_H.DATA_INTERPRETATION_GROU.CLASS_WIDTH.M_GAPPED_CLASSES": {
+  "skill": "MATH.G9.DATA_H.DATA_INTERPRETATION_GROU.CLASS_WIDTH",
+  "error": "Leaves gaps between classes so some values fit nowhere.",
+  "example": {
+   "question": "Classes 30-39, 41-50. Where does 40 go?",
+   "wrong_answer": "nowhere",
+   "correct_answer": "a class must hold it"
+  },
+  "cause": "Skips a value.",
+  "reveals": "The answer nowhere as a wrong option, with a reason that names the idea.",
+  "help": "Classes must cover every value with no gap.",
+  "source": "to be confirmed by a teacher (no source yet)",
+  "status": "draft"
+ },
+ "MATH.G9.DATA_H.DATA_INTERPRETATION_GROU.GROUPED_FREQUENCY_TABLE.M_BOUNDARY_IN_LOWER": {
+  "skill": "MATH.G9.DATA_H.DATA_INTERPRETATION_GROU.GROUPED_FREQUENCY_TABLE",
+  "error": "Puts a boundary value in the lower class against the rule given.",
+  "example": {
+   "question": "A mark of 40; classes 30 to under 40 and 40 to under 50. Which class?",
+   "wrong_answer": "30 to under 40",
+   "correct_answer": "40 to under 50"
+  },
+  "cause": "Reads \"40\" in the first class label.",
+  "reveals": "The answer 30 to under 40 as a wrong option, with a reason that names the idea.",
+  "help": "Under 40 leaves 40 out: it goes in the higher class.",
+  "source": "to be confirmed by a teacher (no source yet)",
+  "status": "draft"
+ },
+ "MATH.G9.DATA_H.DATA_INTERPRETATION_GROU.GROUPED_FREQUENCY_TABLE.M_TALLY_MISCOUNTED": {
+  "skill": "MATH.G9.DATA_H.DATA_INTERPRETATION_GROU.GROUPED_FREQUENCY_TABLE",
+  "error": "Miscounts tallies, so the total does not match.",
+  "example": {
+   "question": "40 values tallied; frequencies add to 38.",
+   "wrong_answer": "fine",
+   "correct_answer": "recount"
+  },
+  "cause": "Does not check the total.",
+  "reveals": "The answer fine as a wrong option, with a reason that names the idea.",
+  "help": "The frequencies must add to the number of values.",
+  "source": "to be confirmed by a teacher (no source yet)",
+  "status": "draft"
+ },
+ "MATH.G9.DATA_H.DATA_INTERPRETATION_GROU.GROUPED_FREQUENCY_TABLE.M_VALUES_LISTED_NOT_COUNTED": {
+  "skill": "MATH.G9.DATA_H.DATA_INTERPRETATION_GROU.GROUPED_FREQUENCY_TABLE",
+  "error": "Lists the values in the class instead of counting them.",
+  "example": {
+   "question": "Frequency of 40 to under 50?",
+   "wrong_answer": "42, 45, 47",
+   "correct_answer": "3"
+  },
+  "cause": "Mixes up the data and the frequency.",
+  "reveals": "The answer 42, 45, 47 as a wrong option, with a reason that names the idea.",
+  "help": "Frequency is how many.",
+  "source": "to be confirmed by a teacher (no source yet)",
+  "status": "draft"
+ },
+ "MATH.G9.DATA_H.DATA_INTERPRETATION_GROU.GROUPED_FREQUENCY_TABLE.M_CLASS_SUM_AS_FREQUENCY": {
+  "skill": "MATH.G9.DATA_H.DATA_INTERPRETATION_GROU.GROUPED_FREQUENCY_TABLE",
+  "error": "Adds the values in a class as its frequency.",
+  "example": {
+   "question": "Values 42, 45, 47 in a class. Frequency?",
+   "wrong_answer": "134",
+   "correct_answer": "3"
+  },
+  "cause": "Adds instead of counting.",
+  "reveals": "The answer 134 as a wrong option, with a reason that names the idea.",
+  "help": "Count the values.",
+  "source": "to be confirmed by a teacher (no source yet)",
+  "status": "draft"
+ },
+ "MATH.G9.DATA_H.DATA_INTERPRETATION_GROU.MODAL_CLASS.M_HIGHEST_VALUES_CLASS": {
+  "skill": "MATH.G9.DATA_H.DATA_INTERPRETATION_GROU.MODAL_CLASS",
+  "error": "Picks the class with the biggest values as the modal class.",
+  "example": {
+   "question": "Which is the modal class?",
+   "wrong_answer": "the last class",
+   "correct_answer": "the class with the highest frequency"
+  },
+  "cause": "Thinks mode means largest.",
+  "reveals": "The answer the last class as a wrong option, with a reason that names the idea.",
+  "help": "Mode is the most common: the highest frequency.",
+  "source": "to be confirmed by a teacher (no source yet)",
+  "status": "draft"
+ },
+ "MATH.G9.DATA_H.DATA_INTERPRETATION_GROU.MODAL_CLASS.M_FREQUENCY_NOT_COMPARED": {
+  "skill": "MATH.G9.DATA_H.DATA_INTERPRETATION_GROU.MODAL_CLASS",
+  "error": "Picks a class without comparing all frequencies.",
+  "example": {
+   "question": "Frequencies 4, 9, 12, 7. Modal class?",
+   "wrong_answer": "the 9 class",
+   "correct_answer": "the 12 class"
+  },
+  "cause": "Stops at the first big one.",
+  "reveals": "The answer the 9 class as a wrong option, with a reason that names the idea.",
+  "help": "Compare every frequency.",
+  "source": "to be confirmed by a teacher (no source yet)",
+  "status": "draft"
+ },
+ "MATH.G9.DATA_H.DATA_INTERPRETATION_GROU.MODAL_CLASS.M_MODAL_FREQ_FOR_DIFFERENCE": {
+  "skill": "MATH.G9.DATA_H.DATA_INTERPRETATION_GROU.MODAL_CLASS",
+  "error": "Gives the modal frequency when the difference is asked.",
+  "example": {
+   "question": "Tallest bar 12, next 9. How many more?",
+   "wrong_answer": "12",
+   "correct_answer": "3"
+  },
+  "cause": "Answers the first number.",
+  "reveals": "The answer 12 as a wrong option, with a reason that names the idea.",
+  "help": "How many more: subtract.",
+  "source": "to be confirmed by a teacher (no source yet)",
+  "status": "draft"
+ },
+ "MATH.G9.DATA_H.DATA_INTERPRETATION_GROU.MODAL_CLASS.M_FREQS_ADDED": {
+  "skill": "MATH.G9.DATA_H.DATA_INTERPRETATION_GROU.MODAL_CLASS",
+  "error": "Adds the two frequencies for \"how many more\".",
+  "example": {
+   "question": "Tallest bar 12, next 9. How many more?",
+   "wrong_answer": "21",
+   "correct_answer": "3"
+  },
+  "cause": "Combines by adding.",
+  "reveals": "The answer 21 as a wrong option, with a reason that names the idea.",
+  "help": "How many more means the difference.",
+  "source": "to be confirmed by a teacher (no source yet)",
+  "status": "draft"
+ },
+ "MATH.G9.DATA_H.DATA_INTERPRETATION_GROU.MODAL_CLASS.M_NEXT_CLASS_GIVEN": {
+  "skill": "MATH.G9.DATA_H.DATA_INTERPRETATION_GROU.MODAL_CLASS",
+  "error": "Gives the next highest frequency.",
+  "example": {
+   "question": "Tallest 12, next 9. How many more?",
+   "wrong_answer": "9",
+   "correct_answer": "3"
+  },
+  "cause": "Reads the wrong bar.",
+  "reveals": "The answer 9 as a wrong option, with a reason that names the idea.",
+  "help": "Find the gap between the two bars.",
+  "source": "to be confirmed by a teacher (no source yet)",
+  "status": "draft"
+ },
+ "MATH.G9.DATA_H.DATA_INTERPRETATION_GROU.GROUPED_MEAN.M_DIVIDE_BY_CLASSES": {
+  "skill": "MATH.G9.DATA_H.DATA_INTERPRETATION_GROU.GROUPED_MEAN",
+  "error": "Divides the total of fx by the number of classes.",
+  "example": {
+   "question": "Sum fx 1,240, 4 classes, 40 sacks. Mean?",
+   "wrong_answer": "310",
+   "correct_answer": "31"
+  },
+  "cause": "Divides by the rows.",
+  "reveals": "The answer 310 as a wrong option, with a reason that names the idea.",
+  "help": "Divide by the total frequency: 40.",
+  "source": "to be confirmed by a teacher (no source yet)",
+  "status": "draft"
+ },
+ "MATH.G9.DATA_H.DATA_INTERPRETATION_GROU.GROUPED_MEAN.M_MIDPOINTS_AVERAGED": {
+  "skill": "MATH.G9.DATA_H.DATA_INTERPRETATION_GROU.GROUPED_MEAN",
+  "error": "Averages the midpoints without the frequencies.",
+  "example": {
+   "question": "Midpoints 25, 35 with 10 and 30 learners. Mean?",
+   "wrong_answer": "30",
+   "correct_answer": "32.5"
+  },
+  "cause": "Treats each class as one value.",
+  "reveals": "The answer 30 as a wrong option, with a reason that names the idea.",
+  "help": "Each midpoint counts once for every value in its class.",
+  "source": "to be confirmed by a teacher (no source yet)",
+  "status": "draft"
+ },
+ "MATH.G9.DATA_H.DATA_INTERPRETATION_GROU.GROUPED_MEAN.M_TOTAL_FX_GIVEN": {
+  "skill": "MATH.G9.DATA_H.DATA_INTERPRETATION_GROU.GROUPED_MEAN",
+  "error": "Gives the total of fx as the mean.",
+  "example": {
+   "question": "Sum fx 1,240, 40 sacks. Mean?",
+   "wrong_answer": "1,240",
+   "correct_answer": "31"
+  },
+  "cause": "Stops before dividing.",
+  "reveals": "The answer 1,240 as a wrong option, with a reason that names the idea.",
+  "help": "Divide by 40.",
+  "source": "to be confirmed by a teacher (no source yet)",
+  "status": "draft"
+ },
+ "MATH.G9.DATA_H.DATA_INTERPRETATION_GROU.GROUPED_MEAN.M_LOWER_LIMIT_FOR_MIDPOINT": {
+  "skill": "MATH.G9.DATA_H.DATA_INTERPRETATION_GROU.GROUPED_MEAN",
+  "error": "Uses the lower class limit instead of the midpoint.",
+  "example": {
+   "question": "Class 20 to under 30. Value to use?",
+   "wrong_answer": "20",
+   "correct_answer": "25"
+  },
+  "cause": "Takes the first number of the class.",
+  "reveals": "The answer 20 as a wrong option, with a reason that names the idea.",
+  "help": "The midpoint is halfway: (20 + 30) / 2.",
+  "source": "to be confirmed by a teacher (no source yet)",
+  "status": "draft"
+ },
+ "MATH.G9.DATA_H.DATA_INTERPRETATION_GROU.GROUPED_MEAN.M_MEAN_AS_MIDDLE_CLASS": {
+  "skill": "MATH.G9.DATA_H.DATA_INTERPRETATION_GROU.GROUPED_MEAN",
+  "error": "Gives the midpoint of the middle class as the mean.",
+  "example": {
+   "question": "Five classes. Mean?",
+   "wrong_answer": "the middle class midpoint",
+   "correct_answer": "sum fx / sum f"
+  },
+  "cause": "Mixes the mean with the median.",
+  "reveals": "The answer the middle class midpoint as a wrong option, with a reason that names the idea.",
+  "help": "The mean uses every value: total over count.",
+  "source": "to be confirmed by a teacher (no source yet)",
+  "status": "draft"
+ },
+ "MATH.G9.DATA_H.DATA_INTERPRETATION_GROU.GROUPED_MEAN.M_MIDPOINTS_ADDED_ONLY": {
+  "skill": "MATH.G9.DATA_H.DATA_INTERPRETATION_GROU.GROUPED_MEAN",
+  "error": "Adds the midpoints and does not divide.",
+  "example": {
+   "question": "Midpoints 25 and 35. Mean?",
+   "wrong_answer": "60",
+   "correct_answer": "sum fx / sum f"
+  },
+  "cause": "Forgets the division.",
+  "reveals": "The answer 60 as a wrong option, with a reason that names the idea.",
+  "help": "A mean is a total divided by a count.",
+  "source": "to be confirmed by a teacher (no source yet)",
+  "status": "draft"
+ },
+ "MATH.G9.DATA_H.DATA_INTERPRETATION_GROU.GROUPED_MEDIAN.M_CLASSES_COUNTED": {
+  "skill": "MATH.G9.DATA_H.DATA_INTERPRETATION_GROU.GROUPED_MEDIAN",
+  "error": "Counts the classes instead of adding the frequencies.",
+  "example": {
+   "question": "How many learners in all?",
+   "wrong_answer": "5 (classes)",
+   "correct_answer": "the sum of the frequencies"
+  },
+  "cause": "Counts rows.",
+  "reveals": "The answer 5 (classes) as a wrong option, with a reason that names the idea.",
+  "help": "Add the frequency of every class.",
+  "source": "to be confirmed by a teacher (no source yet)",
+  "status": "draft"
+ },
+ "MATH.G9.DATA_H.DATA_INTERPRETATION_GROU.GROUPED_MEDIAN.M_MEDIAN_POSITION_N": {
+  "skill": "MATH.G9.DATA_H.DATA_INTERPRETATION_GROU.GROUPED_MEDIAN",
+  "error": "Uses the total as the median position.",
+  "example": {
+   "question": "40 learners. Median position?",
+   "wrong_answer": "40",
+   "correct_answer": "20"
+  },
+  "cause": "Forgets to halve.",
+  "reveals": "The answer 40 as a wrong option, with a reason that names the idea.",
+  "help": "The middle is half way: n / 2.",
+  "source": "to be confirmed by a teacher (no source yet)",
+  "status": "draft"
+ },
+ "MATH.G9.DATA_H.DATA_INTERPRETATION_GROU.GROUPED_MEDIAN.M_MEDIAN_CLASS_INCLUDED": {
+  "skill": "MATH.G9.DATA_H.DATA_INTERPRETATION_GROU.GROUPED_MEDIAN",
+  "error": "Includes the median class in the frequency below it.",
+  "example": {
+   "question": "Frequencies 4, 9, 12 (median class 3rd). Below it?",
+   "wrong_answer": "25",
+   "correct_answer": "13"
+  },
+  "cause": "Adds one class too many.",
+  "reveals": "The answer 25 as a wrong option, with a reason that names the idea.",
+  "help": "Stop before the median class.",
+  "source": "to be confirmed by a teacher (no source yet)",
+  "status": "draft"
+ },
+ "MATH.G9.DATA_H.DATA_INTERPRETATION_GROU.GROUPED_MEDIAN.M_MEDIAN_LOWER_LIMIT": {
+  "skill": "MATH.G9.DATA_H.DATA_INTERPRETATION_GROU.GROUPED_MEDIAN",
+  "error": "Gives the lower limit of the median class as the median.",
+  "example": {
+   "question": "Median class 40 to under 50. Median?",
+   "wrong_answer": "40",
+   "correct_answer": "40 + part of 10"
+  },
+  "cause": "Stops at the start of the class.",
+  "reveals": "The answer 40 as a wrong option, with a reason that names the idea.",
+  "help": "Move along the class in proportion.",
+  "source": "to be confirmed by a teacher (no source yet)",
+  "status": "draft"
+ },
+ "MATH.G9.DATA_H.DATA_INTERPRETATION_GROU.GROUPED_MEDIAN.M_MEDIAN_CLASS_MIDPOINT": {
+  "skill": "MATH.G9.DATA_H.DATA_INTERPRETATION_GROU.GROUPED_MEDIAN",
+  "error": "Gives the midpoint of the median class as the median.",
+  "example": {
+   "question": "Median class 40 to under 50. Median?",
+   "wrong_answer": "45",
+   "correct_answer": "40 + (7/12) x 10 = 45.8"
+  },
+  "cause": "Assumes the middle is in the middle of the class.",
+  "reveals": "The answer 45 as a wrong option, with a reason that names the idea.",
+  "help": "How far in depends on how many are still to count.",
+  "source": "to be confirmed by a teacher (no source yet)",
+  "status": "draft"
+ },
+ "MATH.G9.DATA_H.DATA_INTERPRETATION_GROU.CUMULATIVE_FREQUENCY.M_CF_UPPER_ONLY": {
+  "skill": "MATH.G9.DATA_H.DATA_INTERPRETATION_GROU.CUMULATIVE_FREQUENCY",
+  "error": "Reads only the cumulative frequency at the upper value.",
+  "example": {
+   "question": "Between 20 and 40: cf at 40 is 30, at 20 is 8.",
+   "wrong_answer": "30",
+   "correct_answer": "22"
+  },
+  "cause": "Forgets those below 20.",
+  "reveals": "The answer 30 as a wrong option, with a reason that names the idea.",
+  "help": "Take away the number under 20.",
+  "source": "to be confirmed by a teacher (no source yet)",
+  "status": "draft"
+ },
+ "MATH.G9.DATA_H.DATA_INTERPRETATION_GROU.CUMULATIVE_FREQUENCY.M_CF_LOWER_ONLY": {
+  "skill": "MATH.G9.DATA_H.DATA_INTERPRETATION_GROU.CUMULATIVE_FREQUENCY",
+  "error": "Reads only the cumulative frequency at the lower value.",
+  "example": {
+   "question": "Between 20 and 40: cf at 40 is 30, at 20 is 8.",
+   "wrong_answer": "8",
+   "correct_answer": "22"
+  },
+  "cause": "Reads the first value.",
+  "reveals": "The answer 8 as a wrong option, with a reason that names the idea.",
+  "help": "That is under 20; subtract it from under 40.",
+  "source": "to be confirmed by a teacher (no source yet)",
+  "status": "draft"
+ },
+ "MATH.G9.DATA_H.DATA_INTERPRETATION_GROU.CUMULATIVE_FREQUENCY.M_ONE_CLASS_ONLY": {
+  "skill": "MATH.G9.DATA_H.DATA_INTERPRETATION_GROU.CUMULATIVE_FREQUENCY",
+  "error": "Counts only one class of the range.",
+  "example": {
+   "question": "Between 20 and 40, classes 20-30 and 30-40.",
+   "wrong_answer": "only 20-30",
+   "correct_answer": "both classes"
+  },
+  "cause": "Stops at the first class.",
+  "reveals": "The answer only 20-30 as a wrong option, with a reason that names the idea.",
+  "help": "Use the cf at 40 minus the cf at 20.",
+  "source": "to be confirmed by a teacher (no source yet)",
+  "status": "draft"
+ },
+ "MATH.G9.DATA_H.DATA_INTERPRETATION_GROU.CUMULATIVE_FREQUENCY.M_CF_AS_FREQUENCY": {
+  "skill": "MATH.G9.DATA_H.DATA_INTERPRETATION_GROU.CUMULATIVE_FREQUENCY",
+  "error": "Reads a cumulative frequency as the frequency of one class.",
+  "example": {
+   "question": "cf at 40 is 30. How many in 30 to under 40?",
+   "wrong_answer": "30",
+   "correct_answer": "30 minus the cf at 30"
+  },
+  "cause": "Forgets the graph is a running total.",
+  "reveals": "The answer 30 as a wrong option, with a reason that names the idea.",
+  "help": "Cumulative means everything up to that value.",
+  "source": "to be confirmed by a teacher (no source yet)",
+  "status": "draft"
  }
 }

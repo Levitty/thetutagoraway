@@ -627,7 +627,7 @@ export const FAMILIES = [
     } }),
 
   // =========================== GROUPED DATA ===========================
-  fam({ id: 'g9.data.modal-class-table', skill: 'G9_GROUPED_DATA', outcome: 'G9.DATA.c', rung: 1, form: 'table',
+  fam({ id: 'g9.data.modal-class-table', skill: 'G9_GROUPED_DATA', outcome: 'MATH.G9.DATA_H.DATA_INTERPRETATION_GROU.c', cskill: 'MATH.G9.DATA_H.DATA_INTERPRETATION_GROU.MODAL_CLASS', misMapped: false, reveals: ['M_HIGHEST_VALUES_CLASS', 'M_FREQUENCY_NOT_COMPARED'], rung: 1, form: 'table',
     draw: () => {
       const f = Array.from({ length: 5 }, () => randInt(3, 16)), top = Math.max(...f);
       if (f.filter(v => v === top).length > 1) return null;
@@ -646,7 +646,7 @@ export const FAMILIES = [
         steps: [`The highest frequency is ${top}.`, `It belongs to the class ${labels[ti]}, so that is the modal class.`] };
     } }),
 
-  fam({ id: 'g9.data.modal-gap-graph', skill: 'G9_GROUPED_DATA', outcome: 'G9.DATA.c', rung: 2, form: 'graph',
+  fam({ id: 'g9.data.modal-gap-graph', skill: 'G9_GROUPED_DATA', outcome: 'MATH.G9.DATA_H.DATA_INTERPRETATION_GROU.c', cskill: 'MATH.G9.DATA_H.DATA_INTERPRETATION_GROU.MODAL_CLASS', rung: 2, form: 'graph',
     draw: () => {
       const f = Array.from({ length: 5 }, () => randInt(1, 5) * 5), s = [...f].sort((a, b) => b - a);
       if (s[0] === s[1] || s[1] === s[2]) return null;
@@ -658,13 +658,13 @@ export const FAMILIES = [
       question: 'The bar graph shows how long learners take to walk to school, in classes of minutes. How many more learners are in the modal class than in the class with the next highest frequency?',
       model: { type: 'bar-chart', data: { bars: f.map((v, i) => ({ label: `${10 * i}–${10 * i + 9}`, value: v })) } },
       answer: s[0] - s[1],
-      wrong: [[s[0], 'That is the number in the modal class alone. Subtract the next highest class.'], [s[0] + s[1], '"How many more" asks for a difference, so subtract.'], [s[1], 'That is the next highest class. Find how much taller the tallest bar is.']],
+      wrong: [[s[0], 'That is the number in the modal class alone. Subtract the next highest class.', 'M_MODAL_FREQ_FOR_DIFFERENCE'], [s[0] + s[1], '"How many more" asks for a difference, so subtract.', 'M_FREQS_ADDED'], [s[1], 'That is the next highest class. Find how much taller the tallest bar is.', 'M_NEXT_CLASS_GIVEN']],
       hints: ['The modal class has the tallest bar.', 'Find the second tallest bar, then subtract.'],
       steps: [`Tallest bar: ${s[0]} learners. Next tallest: ${s[1]} learners.`, `Difference = ${s[0]} − ${s[1]} = ${s[0] - s[1]}.`],
     }),
     check: ({ s }, a) => s[1] + a === s[0] }),
 
-  fam({ id: 'g9.data.mean-from-table', skill: 'G9_GROUPED_MEASURES', outcome: 'G9.DATA.d', rung: 2, form: 'table',
+  fam({ id: 'g9.data.mean-from-table', skill: 'G9_GROUPED_MEASURES', outcome: 'MATH.G9.DATA_H.DATA_INTERPRETATION_GROU.d', cskill: 'MATH.G9.DATA_H.DATA_INTERPRETATION_GROU.GROUPED_MEAN', rung: 2, form: 'table',
     draw: () => {
       const start = pick([40, 50, 60]), f = Array.from({ length: 4 }, () => randInt(2, 9));
       const mids = f.map((_, i) => start + 10 * i + 5), sf = f.reduce((a, b) => a + b, 0), sfx = f.reduce((a, v, i) => a + v * mids[i], 0);
@@ -678,13 +678,13 @@ export const FAMILIES = [
       question: 'A trader weighs sacks of potatoes. The table groups their masses and gives the midpoint of each class. Find the mean mass of a sack, in kg, to 1 decimal place.',
       model: { type: 'table', data: { head: ['Mass (kg)', 'Midpoint', 'Sacks'], rows: f.map((v, i) => ({ cells: [`${start + 10 * i} to under ${start + 10 * i + 10}`, String(mids[i]), String(v)] })) } },
       answer: mean,
-      wrong: [[round(sfx / 4, 2), 'You divided by the number of classes. Divide by the total number of sacks.'], [avgMid, 'That is the plain average of the midpoints. Each midpoint counts once for every sack in its class.'], [sfx, 'That is the total of frequency × midpoint. Divide it by the number of sacks.']],
+      wrong: [[round(sfx / 4, 2), 'You divided by the number of classes. Divide by the total number of sacks.', 'M_DIVIDE_BY_CLASSES'], [avgMid, 'That is the plain average of the midpoints. Each midpoint counts once for every sack in its class.', 'M_MIDPOINTS_AVERAGED'], [sfx, 'That is the total of frequency × midpoint. Divide it by the number of sacks.', 'M_TOTAL_FX_GIVEN']],
       hints: ['Multiply each midpoint by its frequency.', 'Add the products, then divide by the total frequency.'],
       steps: [`Products: ${f.map((v, i) => `${v} × ${mids[i]}`).join(', ')}. Total = ${sfx}.`, `Total sacks = ${sf}.`, `Mean = ${sfx} ÷ ${sf} = ${mean} kg.`],
     }),
     check: ({ sf, f, mids }, a) => Math.abs(a * sf - f.reduce((t, v, i) => t + v * mids[i], 0)) < 0.051 * sf }),
 
-  fam({ id: 'g9.data.mean-spot', skill: 'G9_GROUPED_MEASURES', outcome: 'G9.DATA.d', rung: 3, form: 'spot',
+  fam({ id: 'g9.data.mean-spot', skill: 'G9_GROUPED_MEASURES', outcome: 'MATH.G9.DATA_H.DATA_INTERPRETATION_GROU.d', cskill: 'MATH.G9.DATA_H.DATA_INTERPRETATION_GROU.GROUPED_MEAN', rung: 3, form: 'spot',
     draw: () => {
       const start = pick([0, 10, 20]), f = Array.from({ length: 4 }, () => randInt(2, 9));
       return { start, f, kind: pick(['low', 'divide', 'slip']), slipAt: randInt(0, 3), p: person() };
@@ -703,18 +703,19 @@ export const FAMILIES = [
       ];
       const fixes = { low: 'The value that stands for a class is its midpoint, the middle of the class, not its lower limit.', divide: 'The total of frequency × midpoint is divided by the total frequency, which is the number of learners, not the number of classes.', slip: `One product was worked out wrongly: ${f[slipAt]} × ${mids[slipAt]} is not ${prods[slipAt]}.` };
       return { question: `${p.name} finds the mean mark from grouped data. ${f.map((v, i) => `${start + 10 * i} to under ${start + 10 * i + 10}: ${v} learners`).join('; ')}. Which step has the mistake?`,
-        working, fix: fixes[kind], steps: [`Midpoints: ${mids.join(', ')}.`, `Total of frequency × midpoint = ${trueSfx}, total learners = ${sf}, so the mean is ${round(trueSfx / sf, 2)}.`] };
+        working, mis: { low: 'M_LOWER_LIMIT_FOR_MIDPOINT', divide: 'M_DIVIDE_BY_CLASSES', slip: 'SLIP' }[kind],
+        fix: fixes[kind], steps: [`Midpoints: ${mids.join(', ')}.`, `Total of frequency × midpoint = ${trueSfx}, total learners = ${sf}, so the mean is ${round(trueSfx / sf, 2)}.`] };
     } }),
 
-  fam({ id: 'g9.data.mean-why-weighted', skill: 'G9_GROUPED_DATA', outcome: 'G9.DATA.d', rung: 2, form: 'why',
+  fam({ id: 'g9.data.mean-why-weighted', skill: 'G9_GROUPED_DATA', outcome: 'MATH.G9.DATA_H.DATA_INTERPRETATION_GROU.d', cskill: 'MATH.G9.DATA_H.DATA_INTERPRETATION_GROU.GROUPED_MEAN', rung: 2, form: 'why',
     draw: () => { const lo = pick([0, 10, 20]), b = randInt(1, 4); return { lo, b, a: 10 - b, k: randInt(0, 3), p: person() }; },
     make: ({ lo, a, b, k, p }) => {
       const m1 = lo + 5, m2 = lo + 15;
       const opts = [
         { text: 'Each midpoint counts once for every learner in its class', right: true },
-        { text: 'The midpoint of a class is its lower limit, not its middle', right: false, why: 'The midpoint is the middle of the class, halfway between its limits.' },
-        { text: 'The mean of grouped data is the midpoint of the middle class', right: false, why: 'That is closer to a median. The mean uses every learner.' },
-        { text: 'The two midpoints should be added, not averaged', right: false, why: 'The mean is a total divided by a count, so adding alone cannot give a mean.' },
+        { text: 'The midpoint of a class is its lower limit, not its middle', right: false, why: 'The midpoint is the middle of the class, halfway between its limits.', mis: 'M_LOWER_LIMIT_FOR_MIDPOINT' },
+        { text: 'The mean of grouped data is the midpoint of the middle class', right: false, why: 'That is closer to a median. The mean uses every learner.', mis: 'M_MEAN_AS_MIDDLE_CLASS' },
+        { text: 'The two midpoints should be added, not averaged', right: false, why: 'The mean is a total divided by a count, so adding alone cannot give a mean.', mis: 'M_MIDPOINTS_ADDED_ONLY' },
       ];
       return { question: `A test has two classes. ${lo} to under ${lo + 10} has ${a} learners, and ${lo + 10} to under ${lo + 20} has ${b} learners. ${p.name} finds the mean by working out (${m1} + ${m2}) ÷ 2 = ${m1 + 5}. Why is this wrong?`,
         options: turn(opts, k), fixedOrder: true,
@@ -722,7 +723,7 @@ export const FAMILIES = [
         steps: [`The first class has ${a} learners and the second has ${b}, so they must not count equally.`, `Mean = (${a} × ${m1} + ${b} × ${m2}) ÷ 10 = ${m1 + b}.`] };
     } }),
 
-  fam({ id: 'g9.data.median-interpolate', skill: 'G9_GROUPED_MEASURES', outcome: 'G9.DATA.e', rung: 3, form: 'steps',
+  fam({ id: 'g9.data.median-interpolate', skill: 'G9_GROUPED_MEASURES', outcome: 'MATH.G9.DATA_H.DATA_INTERPRETATION_GROU.e', cskill: 'MATH.G9.DATA_H.DATA_INTERPRETATION_GROU.GROUPED_MEDIAN', rung: 3, form: 'steps',
     draw: () => {
       const f = Array.from({ length: 5 }, () => randInt(2, 12)), n = f.reduce((a, b) => a + b, 0);
       if (n % 2) return null;
@@ -736,16 +737,16 @@ export const FAMILIES = [
       question: 'The table shows the marks of learners in a test. A mark on a class boundary goes in the higher class. Estimate the median mark.',
       model: { type: 'table', data: { head: ['Marks', 'Learners'], rows: f.map((v, i) => ({ label: `${10 * i} to under ${10 * i + 10}`, value: String(v) })) } },
       parts: [
-        { prompt: 'How many learners are there in all?', answer: n, hint: 'Add the frequencies.', wrong: [[5, 'That is the number of classes. Add the number of learners in each class.']] },
-        { prompt: 'The median is the mark of the middle learner. Which place is that, counting from the lowest mark?', answer: n / 2, hint: 'Half of the number of learners.', wrong: [[n, 'That is all of the learners. The middle is half way.']] },
-        { prompt: 'How many learners are in the classes below the median class?', answer: F, hint: 'Add the frequencies from the lowest class until you pass the middle place.', wrong: [[F + fj, 'That includes the median class itself. Stop before it.']] },
-        { prompt: 'Estimate the median mark, to 1 decimal place.', answer: med, hint: 'Start from the lower limit of the median class, then move along it in proportion: (middle place − learners below) ÷ learners in the class × 10.', wrong: [[lo, 'That is the lower limit of the median class. The median lies partway along the class.'], [lo + 5, 'The median is not always the midpoint of its class. Move along in proportion.']] },
+        { prompt: 'How many learners are there in all?', answer: n, hint: 'Add the frequencies.', wrong: [[5, 'That is the number of classes. Add the number of learners in each class.', 'M_CLASSES_COUNTED']] },
+        { prompt: 'The median is the mark of the middle learner. Which place is that, counting from the lowest mark?', answer: n / 2, hint: 'Half of the number of learners.', wrong: [[n, 'That is all of the learners. The middle is half way.', 'M_MEDIAN_POSITION_N']] },
+        { prompt: 'How many learners are in the classes below the median class?', answer: F, hint: 'Add the frequencies from the lowest class until you pass the middle place.', wrong: [[F + fj, 'That includes the median class itself. Stop before it.', 'M_MEDIAN_CLASS_INCLUDED']] },
+        { prompt: 'Estimate the median mark, to 1 decimal place.', answer: med, hint: 'Start from the lower limit of the median class, then move along it in proportion: (middle place − learners below) ÷ learners in the class × 10.', wrong: [[lo, 'That is the lower limit of the median class. The median lies partway along the class.', 'M_MEDIAN_LOWER_LIMIT'], [lo + 5, 'The median is not always the midpoint of its class. Move along in proportion.', 'M_MEDIAN_CLASS_MIDPOINT']] },
       ],
       steps: [`n = ${n}, so the middle place is ${n} ÷ 2 = ${n / 2}.`, `${F} learners are below ${lo}, and the median class has ${fj}.`, `Median = ${lo} + (${n / 2} − ${F}) ÷ ${fj} × 10 = ${med}.`],
     }),
     check: ({ lo, fj }, v) => v[0] === 2 * v[1] && Math.abs(v[3] - (lo + ((v[1] - v[2]) * 10) / fj)) < 1e-6 }),
 
-  fam({ id: 'g9.data.cumulative-graph-between', skill: 'G8_CUMULATIVE_FREQ', outcome: 'G9.DATA.e', rung: 2, form: 'graph',
+  fam({ id: 'g9.data.cumulative-graph-between', skill: 'G8_CUMULATIVE_FREQ', outcome: 'MATH.G9.DATA_H.DATA_INTERPRETATION_GROU.e', cskill: 'MATH.G9.DATA_H.DATA_INTERPRETATION_GROU.CUMULATIVE_FREQUENCY', rung: 2, form: 'graph',
     draw: () => {
       const inc = Array.from({ length: 5 }, () => pick([5, 10, 15])), tot = inc.reduce((a, b) => a + b, 0);
       if (tot !== 40 && tot !== 50) return null;
@@ -759,7 +760,7 @@ export const FAMILIES = [
       return { question: 'The graph shows the cumulative frequency of the marks of learners in a test. How many learners scored 20 marks or more but under 40?',
         model: { type: 'line-graph', data: { points: xs.map((x, i) => ({ x, y: cf[i] })), xTicks: xs, yTicks, xLabel: 'Marks (less than)', yLabel: 'Cumulative frequency' } },
         answer: cf[4] - cf[2],
-        wrong: [[cf[4], 'That is everyone who scored under 40, including those who scored under 20.'], [cf[2], 'That is the number who scored under 20. Take it away from the number under 40.'], [cf[3] - cf[2], 'That is only the class from 20 to under 30. The question goes up to 40.']],
+        wrong: [[cf[4], 'That is everyone who scored under 40, including those who scored under 20.', 'M_CF_UPPER_ONLY'], [cf[2], 'That is the number who scored under 20. Take it away from the number under 40.', 'M_CF_LOWER_ONLY'], [cf[3] - cf[2], 'That is only the class from 20 to under 30. The question goes up to 40.', 'M_ONE_CLASS_ONLY']],
         hints: ['Read the cumulative frequency at 40 and at 20.', 'The learners between them are the difference.'],
         steps: [`Under 40: ${cf[4]} learners. Under 20: ${cf[2]} learners.`, `${cf[4]} − ${cf[2]} = ${cf[4] - cf[2]} learners.`] };
     },
