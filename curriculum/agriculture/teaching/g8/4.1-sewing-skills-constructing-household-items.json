@@ -1,0 +1,187 @@
+{
+ "sub_strand": "AGRI.G8.PRODUC.SEWING_SKILLS_CONSTRUCTI",
+ "title": "Sewing Skills: Constructing Household Items",
+ "status": "draft: written 18 Nov 2026 offline for Grade 8 Agriculture; not yet checked by a CBC Agriculture teacher; not loaded by the live tutor",
+ "sources": [],
+ "notes": "Make samples of an open seam and a plain seam by hand on cotton, then a pillow case or cushion cover. Count needles and pins in and out.",
+ "skills": [
+  {
+   "skill": "AGRI.G8.PRODUC.SEWING_SKILLS_CONSTRUCTI.SEAMS",
+   "key_step": "The child names seams used in household items (plain seam, open seam, and others such as French seam) and says what each looks like and where it is used (pillow cases, cushion covers, bags, curtains).",
+   "floor": {
+    "prerequisite": "Knows running and back stitch.",
+    "question": "Which stitch has no gaps?",
+    "answer": "back stitch"
+   },
+   "representations": [
+    "seam samples",
+    "a pillow case turned inside out",
+    "a chart"
+   ],
+   "steps": [
+    "A seam joins two pieces of cloth.",
+    "Plain: turnings pressed together. Open: pressed apart.",
+    "Find seams in household items."
+   ],
+   "contexts": [
+    "a pillow case",
+    "a cushion cover",
+    "a lap bag"
+   ],
+   "board": [
+    {
+     "beat": "draw",
+     "do": "Draw a seam with the turnings pressed flat on each side."
+    },
+    {
+     "beat": "point",
+     "do": "Point at the turnings.",
+     "say": "Which seam?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for \"open seam\"."
+    },
+    {
+     "beat": "reveal",
+     "do": "Label it."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "AGRI.G8.PRODUC.SEWING_SKILLS_CONSTRUCTI.SEAMS.M_AG8_SM_PLAIN",
+     "listen_for": [
+      "Two edges glued"
+     ],
+     "ask": "What is a plain seam?",
+     "repair": "Sew two pieces right sides together in a line of stitches: that is a plain seam."
+    },
+    {
+     "code": "AGRI.G8.PRODUC.SEWING_SKILLS_CONSTRUCTI.SEAMS.M_AG8_SM_FRENCH",
+     "listen_for": [
+      "Leaves raw edges showing"
+     ],
+     "ask": "What does a French seam do?",
+     "repair": "Show a French seam: the raw edges are hidden inside a second line of stitching."
+    },
+    {
+     "code": "AGRI.G8.PRODUC.SEWING_SKILLS_CONSTRUCTI.SEAMS.M_AG8_SM_USE",
+     "listen_for": [
+      "Only in walls"
+     ],
+     "ask": "Where are seams used?",
+     "repair": "Turn a pillow case inside out and find its seams."
+    },
+    {
+     "code": "AGRI.G8.PRODUC.SEWING_SKILLS_CONSTRUCTI.SEAMS.M_AG8_SM_OPEN",
+     "listen_for": [
+      "A seam that is not sewn"
+     ],
+     "ask": "What is an open seam?",
+     "repair": "Show an open seam pressed flat from the wrong side."
+    }
+   ],
+   "checks": [
+    {
+     "question": "Name two seams.",
+     "answer": "plain and open (or French)",
+     "shows": "name"
+    },
+    {
+     "question": "Where is a seam used at home?",
+     "answer": "pillow cases, cushion covers, curtains, bags",
+     "shows": "use"
+    }
+   ]
+  },
+  {
+   "skill": "AGRI.G8.PRODUC.SEWING_SKILLS_CONSTRUCTI.SEAM_MAKING",
+   "key_step": "The child says how to make a seam: right sides together, pin and tack on the fitting line, stitch about 1.5 cm in, remove tacking, press open or to one side, neaten raw edges, then make a household item with seams.",
+   "floor": {
+    "prerequisite": "Knows the seams.",
+    "question": "What is an open seam?",
+    "answer": "turnings pressed apart"
+   },
+   "representations": [
+    "cloth, pins, needle and thread",
+    "step cards",
+    "a half-made pillow case"
+   ],
+   "steps": [
+    "Right sides together; pin and tack.",
+    "Stitch on the fitting line.",
+    "Remove tacking; press.",
+    "Neaten raw edges."
+   ],
+   "contexts": [
+    "a pillow case",
+    "a work bag",
+    "a cushion cover"
+   ],
+   "board": [
+    {
+     "beat": "draw",
+     "do": "Draw two pieces of cloth with patterned sides facing out."
+    },
+    {
+     "beat": "predict",
+     "do": "Ask where the raw edges will be after sewing."
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for \"outside\"."
+    },
+    {
+     "beat": "reveal",
+     "do": "Write \"right sides together\"."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "AGRI.G8.PRODUC.SEWING_SKILLS_CONSTRUCTI.SEAM_MAKING.M_AG8_SEW_RIGHT",
+     "listen_for": [
+      "The wrong sides"
+     ],
+     "ask": "Which sides of the cloth face each other when sewing a plain seam?",
+     "repair": "Sew a sample wrong sides together and turn it: the raw edges show outside."
+    },
+    {
+     "code": "AGRI.G8.PRODUC.SEWING_SKILLS_CONSTRUCTI.SEAM_MAKING.M_AG8_SEW_EDGE",
+     "listen_for": [
+      "Right at the edge"
+     ],
+     "ask": "How far from the edge is a seam stitched?",
+     "repair": "Pull a seam stitched at the edge: the threads fray out."
+    },
+    {
+     "code": "AGRI.G8.PRODUC.SEWING_SKILLS_CONSTRUCTI.SEAM_MAKING.M_AG8_SEW_NEATEN",
+     "listen_for": [
+      "It is not needed"
+     ],
+     "ask": "Why are the raw edges of a seam neatened?",
+     "repair": "Wash an un-neatened sample several times."
+    },
+    {
+     "code": "AGRI.G8.PRODUC.SEWING_SKILLS_CONSTRUCTI.SEAM_MAKING.M_AG8_SEW_PRESS",
+     "listen_for": [
+      "Only to look nice"
+     ],
+     "ask": "Why is a seam pressed after sewing?",
+     "repair": "Compare a pressed and an unpressed seam on a cushion."
+    }
+   ],
+   "checks": [
+    {
+     "question": "Which sides face each other when sewing a seam?",
+     "answer": "the right sides",
+     "shows": "placing"
+    },
+    {
+     "question": "Why neaten raw edges?",
+     "answer": "so they do not fray",
+     "shows": "neatening"
+    }
+   ]
+  }
+ ]
+}

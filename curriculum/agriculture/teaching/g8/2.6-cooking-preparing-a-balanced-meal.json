@@ -1,0 +1,186 @@
+{
+ "sub_strand": "AGRI.G8.FOOD_P.COOKING_PREPARING_A_BALA",
+ "title": "Cooking: Preparing a Balanced Meal",
+ "status": "draft: written 18 Nov 2026 offline for Grade 8 Agriculture; not yet checked by a CBC Agriculture teacher; not loaded by the live tutor",
+ "sources": [],
+ "notes": "Plan and cook a simple balanced meal for a named person (a baby, a sick grandmother, a footballer) and serve it in family style or blue plate style.",
+ "skills": [
+  {
+   "skill": "AGRI.G8.FOOD_P.COOKING_PREPARING_A_BALA.BALANCED_MEAL",
+   "key_step": "The child names the food groups and the factors in planning a balanced meal (age, health, activity, gender, occasion, season, budget, food available), and how a meal is presented attractively.",
+   "floor": {
+    "prerequisite": "Knows foods by their main nutrient.",
+    "question": "What is the main nutrient in beans?",
+    "answer": "protein"
+   },
+   "representations": [
+    "a factors chart",
+    "menu cards for different people",
+    "a plate model"
+   ],
+   "steps": [
+    "Include every food group.",
+    "Think about the person: age, health, activity.",
+    "Think about the occasion, season and budget."
+   ],
+   "contexts": [
+    "a family supper",
+    "a meal for a grandmother",
+    "a school sports day lunch"
+   ],
+   "board": [
+    {
+     "beat": "write",
+     "do": "Write \"meal for a two-year-old\"."
+    },
+    {
+     "beat": "predict",
+     "do": "Ask what to think about."
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for \"soft food, small amounts, all groups\"."
+    },
+    {
+     "beat": "reveal",
+     "do": "Write the factors."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "AGRI.G8.FOOD_P.COOKING_PREPARING_A_BALA.BALANCED_MEAL.M_AG8_BM_ENERGY",
+     "listen_for": [
+      "Beans"
+     ],
+     "ask": "Which is an energy food?",
+     "repair": "Recall Grade 5: beans are rich in protein, a body-building nutrient."
+    },
+    {
+     "code": "AGRI.G8.FOOD_P.COOKING_PREPARING_A_BALA.BALANCED_MEAL.M_AG8_BM_PROTEIN",
+     "listen_for": [
+      "Ugali"
+     ],
+     "ask": "Which is a body-building food?",
+     "repair": "Ugali is mainly carbohydrate: it gives energy."
+    },
+    {
+     "code": "AGRI.G8.FOOD_P.COOKING_PREPARING_A_BALA.BALANCED_MEAL.M_AG8_BM_PROTECT",
+     "listen_for": [
+      "Sugar"
+     ],
+     "ask": "Which is a protective food?",
+     "repair": "Sugar gives energy only; fruits and vegetables protect the body."
+    },
+    {
+     "code": "AGRI.G8.FOOD_P.COOKING_PREPARING_A_BALA.BALANCED_MEAL.M_AG8_BM_SAME",
+     "listen_for": [
+      "Yes, everyone eats the same"
+     ],
+     "ask": "Does a toddler need the same plate as a farm worker?",
+     "repair": "Compare the needs of a baby, a pregnant mother and a farm worker."
+    }
+   ],
+   "checks": [
+    {
+     "question": "Name two factors in planning a balanced meal.",
+     "answer": "any two of age, health, activity, occasion, budget, season",
+     "shows": "factors"
+    },
+    {
+     "question": "Is sugar a protective food?",
+     "answer": "no, it gives energy only",
+     "shows": "groups"
+    }
+   ]
+  },
+  {
+   "skill": "AGRI.G8.FOOD_P.COOKING_PREPARING_A_BALA.MEAL_PREP",
+   "key_step": "The child says how to prepare a balanced meal: plan a menu for the person, list ingredients within budget, prepare and cook in order from longest to shortest so all is ready together, keep nutrients in, and serve family style or blue plate style.",
+   "floor": {
+    "prerequisite": "Knows the factors in planning a meal.",
+    "question": "Name a factor in planning a meal.",
+    "answer": "age"
+   },
+   "representations": [
+    "a menu and time plan",
+    "step cards",
+    "plates for both service styles"
+   ],
+   "steps": [
+    "Plan the menu and list ingredients.",
+    "Cook the longest food first.",
+    "Cook vegetables last.",
+    "Serve attractively."
+   ],
+   "contexts": [
+    "the school kitchen",
+    "Sunday lunch at home",
+    "a 4-K cooking contest"
+   ],
+   "board": [
+    {
+     "beat": "write",
+     "do": "Write \"beans 60 min, rice 20 min, cabbage 5 min\"."
+    },
+    {
+     "beat": "predict",
+     "do": "Ask which to start first."
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for \"beans\"."
+    },
+    {
+     "beat": "reveal",
+     "do": "Write the order: beans, rice, cabbage."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "AGRI.G8.FOOD_P.COOKING_PREPARING_A_BALA.MEAL_PREP.M_AG8_MPR_ORDER",
+     "listen_for": [
+      "Cabbage first, then rice, then beans"
+     ],
+     "ask": "In what order should a meal of beans, rice and cabbage be cooked?",
+     "repair": "Write each food's cooking time and plan backwards from serving time."
+    },
+    {
+     "code": "AGRI.G8.FOOD_P.COOKING_PREPARING_A_BALA.MEAL_PREP.M_AG8_MPR_STYLE",
+     "listen_for": [
+      "Dishes put on the table for everyone to help themselves"
+     ],
+     "ask": "What is blue plate service?",
+     "repair": "Act out both services in class."
+    },
+    {
+     "code": "AGRI.G8.FOOD_P.COOKING_PREPARING_A_BALA.MEAL_PREP.M_AG8_MPR_BUDGET",
+     "listen_for": [
+      "No, meat is needed"
+     ],
+     "ask": "Can a balanced meal be made without meat?",
+     "repair": "Price a githeri and greens meal against a meat meal."
+    },
+    {
+     "code": "AGRI.G8.FOOD_P.COOKING_PREPARING_A_BALA.MEAL_PREP.M_AG8_MPR_SICK",
+     "listen_for": [
+      "Heavy and fried"
+     ],
+     "ask": "What should a meal for someone recovering from illness be like?",
+     "repair": "Ask what a sick person feels like eating and why."
+    }
+   ],
+   "checks": [
+    {
+     "question": "Which food in a meal is cooked first?",
+     "answer": "the one that takes longest",
+     "shows": "order"
+    },
+    {
+     "question": "What is family style service?",
+     "answer": "dishes on the table for everyone to help themselves",
+     "shows": "service"
+    }
+   ]
+  }
+ ]
+}

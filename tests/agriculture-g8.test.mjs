@@ -31,3 +31,9 @@ test('every family is a draft, nothing is signed, and the skill codes begin AGRI
   for (const f of entry.families) assert.ok(f.id.startsWith('agriculture8.') && f.reviewed !== true, f.id);
   for (const k of Object.keys(SKILLS)) assert.ok(k.startsWith('AGRI.G8.'), k);
 });
+
+// The Grade 5 Maths standard (18 Nov 2026, Tuta Workspace/HOREB_MAPPING_PLAN.md): a skill for every testable outcome, two or more
+// prerequisites and four real misconceptions per skill, practical outcomes marked by the teacher with the KICD rubric, a teaching
+// pack for every sub-strand, the skills with no family listed, SQL current.
+import { agricultureDepthTests } from './helpers/agricultureDepth.mjs';
+await agricultureDepthTests({ grade: 8, outcomes: 41, minDown: 0.6 });

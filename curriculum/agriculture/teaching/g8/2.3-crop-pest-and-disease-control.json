@@ -1,0 +1,187 @@
+{
+ "sub_strand": "AGRI.G8.FOOD_P.CROP_PEST_AND_DISEASE_CO",
+ "title": "Crop Pest and Disease Control",
+ "status": "draft: written 18 Nov 2026 offline for Grade 8 Agriculture; not yet checked by a CBC Agriculture teacher; not loaded by the live tutor",
+ "sources": [],
+ "notes": "Walk the school or a nearby vegetable garden to find signs: holes in leaves, cut seedlings, curled leaves, wilting, spots, rot. Control by handpicking (gloves on), removing affected parts, uprooting and ash; no chemical sprays by learners.",
+ "skills": [
+  {
+   "skill": "AGRI.G8.FOOD_P.CROP_PEST_AND_DISEASE_CO.PEST_DISEASE",
+   "key_step": "The child identifies vegetables attacked by pests (punctured leaves, cut seedlings, curled leaves: aphids, cutworms, caterpillars) and diseases (wilting, black and brown spots, rotting: blight, wilt, rots), tells a pest from a disease, and names controls.",
+   "floor": {
+    "prerequisite": "Knows harmful invertebrates and fungi.",
+    "question": "Is an aphid an invertebrate?",
+    "answer": "yes"
+   },
+   "representations": [
+    "pictures or real damaged leaves",
+    "a hand lens",
+    "a sign chart"
+   ],
+   "steps": [
+    "Look at the damage.",
+    "An animal seen: pest. Spots, rot, wilting: disease.",
+    "Name it and a control."
+   ],
+   "contexts": [
+    "kale in the school garden",
+    "tomatoes at home",
+    "cabbages in Limuru"
+   ],
+   "board": [
+    {
+     "beat": "draw",
+     "do": "Draw a leaf with holes and one with brown spots."
+    },
+    {
+     "beat": "point",
+     "do": "Point at the holes.",
+     "say": "Pest or disease?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for \"pest\"."
+    },
+    {
+     "beat": "reveal",
+     "do": "Label holes: pest; spots: disease."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "AGRI.G8.FOOD_P.CROP_PEST_AND_DISEASE_CO.PEST_DISEASE.M_AG8_PD_PEST",
+     "listen_for": [
+      "Blight"
+     ],
+     "ask": "Which is a pest of vegetables?",
+     "repair": "A pest is an animal you can see eating the crop; a disease shows as spots, rot or wilting caused by germs."
+    },
+    {
+     "code": "AGRI.G8.FOOD_P.CROP_PEST_AND_DISEASE_CO.PEST_DISEASE.M_AG8_PD_DISEASE",
+     "listen_for": [
+      "Aphids"
+     ],
+     "ask": "Which is a disease of vegetables?",
+     "repair": "Look at aphids through a hand lens: they are tiny insects, so they are pests."
+    },
+    {
+     "code": "AGRI.G8.FOOD_P.CROP_PEST_AND_DISEASE_CO.PEST_DISEASE.M_AG8_PD_CONTROL",
+     "listen_for": [
+      "Leaving weeds to grow"
+     ],
+     "ask": "Which helps to control pests?",
+     "repair": "Weeds hide pests and carry diseases; clear them and rotate crops."
+    },
+    {
+     "code": "AGRI.G8.FOOD_P.CROP_PEST_AND_DISEASE_CO.PEST_DISEASE.M_AG8_PD_CUTWORM",
+     "listen_for": [
+      "Strong wind"
+     ],
+     "ask": "Kale seedlings are found cut off at soil level in the morning. What caused it?",
+     "repair": "Dig gently round a cut seedling to find the curled grey cutworm."
+    }
+   ],
+   "checks": [
+    {
+     "question": "Name a pest of kale.",
+     "answer": "aphids, caterpillars or cutworms",
+     "shows": "pest"
+    },
+    {
+     "question": "Give a sign of a crop disease.",
+     "answer": "wilting, spots or rotting",
+     "shows": "disease"
+    }
+   ]
+  },
+  {
+   "skill": "AGRI.G8.FOOD_P.CROP_PEST_AND_DISEASE_CO.PEST_CONTROL_METHODS",
+   "key_step": "The child says how pests and diseases are controlled: handpick pests, remove and destroy affected parts away from the garden, uproot badly affected plants, use ash or natural sprays, rotate crops, keep tools clean, act early; chemicals only by trained adults.",
+   "floor": {
+    "prerequisite": "Can tell a pest from a disease.",
+    "question": "Is blight a pest or a disease?",
+    "answer": "a disease"
+   },
+   "representations": [
+    "gloves and a tin for handpicking",
+    "ash",
+    "a method chart"
+   ],
+   "steps": [
+    "Find the pest or disease early.",
+    "Handpick or dust with ash.",
+    "Remove and destroy affected parts.",
+    "Rotate crops next season."
+   ],
+   "contexts": [
+    "the school garden",
+    "tomatoes at home",
+    "a farm in Nyeri"
+   ],
+   "board": [
+    {
+     "beat": "write",
+     "do": "Write \"blighted tomato plants: compost them?\"."
+    },
+    {
+     "beat": "predict",
+     "do": "Ask the class."
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for \"no, burn or bury them\"."
+    },
+    {
+     "beat": "reveal",
+     "do": "Write \"destroy away from the garden\"."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "AGRI.G8.FOOD_P.CROP_PEST_AND_DISEASE_CO.PEST_CONTROL_METHODS.M_AG8_PCM_COMPOST",
+     "listen_for": [
+      "Put them on the compost heap"
+     ],
+     "ask": "What is done with tomato plants killed by blight?",
+     "repair": "Recall Grade 4: diseased plants spread disease through compost."
+    },
+    {
+     "code": "AGRI.G8.FOOD_P.CROP_PEST_AND_DISEASE_CO.PEST_CONTROL_METHODS.M_AG8_PCM_SAME",
+     "listen_for": [
+      "It does not"
+     ],
+     "ask": "How does crop rotation help control disease?",
+     "repair": "Show a bed where tomatoes failed three years running."
+    },
+    {
+     "code": "AGRI.G8.FOOD_P.CROP_PEST_AND_DISEASE_CO.PEST_CONTROL_METHODS.M_AG8_PCM_LATE",
+     "listen_for": [
+      "When most plants are damaged"
+     ],
+     "ask": "When is the best time to control pests?",
+     "repair": "Show how a few aphids become thousands in two weeks."
+    },
+    {
+     "code": "AGRI.G8.FOOD_P.CROP_PEST_AND_DISEASE_CO.PEST_CONTROL_METHODS.M_AG8_PCM_SPRAY",
+     "listen_for": [
+      "Any learner"
+     ],
+     "ask": "Who should spray chemical pesticides?",
+     "repair": "Read the warning symbols on a pesticide label."
+    }
+   ],
+   "checks": [
+    {
+     "question": "How can aphids be controlled without chemicals?",
+     "answer": "handpicking, ash or a natural spray",
+     "shows": "method"
+    },
+    {
+     "question": "Why rotate crops?",
+     "answer": "so soil pests and diseases do not build up",
+     "shows": "rotation"
+    }
+   ]
+  }
+ ]
+}

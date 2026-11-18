@@ -25,7 +25,7 @@ const J = (f) => JSON.parse(readFileSync(new URL(`curriculum/${f}.json`, ROOT), 
 const fail = (m) => { throw new Error(m); };
 const FILES = ['science/g4', 'science/g5', 'science/g6', 'integrated_science/g7', 'integrated_science/g8', 'integrated_science/g9',
   ...[1, 2, 3, 4, 5, 6, 7, 8, 9].map(n => `mathematics/g${n}`), 'environmental_activities/g1', 'environmental_activities/g2', 'environmental_activities/g3',
-  ...[4, 5, 6, 7, 8, 9].map(n => `social_studies/g${n}`), ...[4, 5, 6, 7, 8, 9].map(n => `agriculture/g${n}`)];
+  ...[4, 5, 6, 7, 8, 9].map(n => `social_studies/g${n}`), ...[4, 5, 6, 7, 8, 9].map(n => `agriculture/g${n}`), 'pre_technical/g7', 'pre_technical/g8', 'pre_technical/g9'];
 
 function knownCodes() {
   const skills = new Set(), outcomes = new Set();

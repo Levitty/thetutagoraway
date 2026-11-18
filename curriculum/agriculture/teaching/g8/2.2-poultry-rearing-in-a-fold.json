@@ -1,0 +1,276 @@
+{
+ "sub_strand": "AGRI.G8.FOOD_P.POULTRY_REARING_IN_A_FOL",
+ "title": "Poultry Rearing in a Fold",
+ "status": "draft: written 18 Nov 2026 offline for Grade 8 Agriculture; not yet checked by a CBC Agriculture teacher; not loaded by the live tutor",
+ "sources": [],
+ "notes": "Build a fold (a light, movable, roofed pen with a mesh run) from reused wood and wire; rear a few birds in it for a term, moving it to fresh grass every few days.",
+ "skills": [
+  {
+   "skill": "AGRI.G8.FOOD_P.POULTRY_REARING_IN_A_FOL.POULTRY_FOLD",
+   "key_step": "The child describes a fold: a light, movable pen with a roofed shelter and a wire run, for a small flock, moved to fresh ground so birds get grass and insects, the ground is manured and disease is less.",
+   "floor": {
+    "prerequisite": "Knows routine practices in rearing small animals.",
+    "question": "Name a routine practice.",
+    "answer": "feeding"
+   },
+   "representations": [
+    "a model fold",
+    "pictures of folds and fixed houses",
+    "a comparison chart"
+   ],
+   "steps": [
+    "Light and movable.",
+    "Roofed shelter and wire run.",
+    "Moved to fresh ground.",
+    "Grass, manure, less disease."
+   ],
+   "contexts": [
+    "a school poultry project",
+    "a home flock in Kakamega",
+    "a 4-K club"
+   ],
+   "board": [
+    {
+     "beat": "draw",
+     "do": "Draw a fold with handles."
+    },
+    {
+     "beat": "predict",
+     "do": "Ask why it has handles."
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for \"to move it\"."
+    },
+    {
+     "beat": "reveal",
+     "do": "Write \"moved to fresh ground\"."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "AGRI.G8.FOOD_P.POULTRY_REARING_IN_A_FOL.POULTRY_FOLD.M_AG8_PF_MOVE",
+     "listen_for": [
+      "It is never moved"
+     ],
+     "ask": "What is special about a fold?",
+     "repair": "Show a fold with handles moved onto fresh grass; the old patch is manured."
+    },
+    {
+     "code": "AGRI.G8.FOOD_P.POULTRY_REARING_IN_A_FOL.POULTRY_FOLD.M_AG8_PF_PROTECT",
+     "listen_for": [
+      "Nothing"
+     ],
+     "ask": "What does a fold protect birds from?",
+     "repair": "Ask what the roof and mesh keep out: hawks, dogs, mongooses, rain."
+    },
+    {
+     "code": "AGRI.G8.FOOD_P.POULTRY_REARING_IN_A_FOL.POULTRY_FOLD.M_AG8_PF_MANURE",
+     "listen_for": [
+      "It is wasted"
+     ],
+     "ask": "What happens to the manure from a fold?",
+     "repair": "Show the green patch where a fold stood last month."
+    },
+    {
+     "code": "AGRI.G8.FOOD_P.POULTRY_REARING_IN_A_FOL.POULTRY_FOLD.M_AG8_PF_BIG",
+     "listen_for": [
+      "Hundreds of layers"
+     ],
+     "ask": "Which flock suits a fold?",
+     "repair": "Ask two learners to lift a model fold built for many birds."
+    }
+   ],
+   "checks": [
+    {
+     "question": "What makes a fold different from a poultry house?",
+     "answer": "it is moved to fresh ground",
+     "shows": "fold"
+    },
+    {
+     "question": "Give one advantage of a fold.",
+     "answer": "fresh grass, manured ground, less disease, protection",
+     "shows": "advantage"
+    }
+   ]
+  },
+  {
+   "skill": "AGRI.G8.FOOD_P.POULTRY_REARING_IN_A_FOL.FOLD_BUILD",
+   "key_step": "The child says how a fold is built: size for the flock, light frame, roofed shelter, small-hole mesh run with no gaps, handles or wheels, a door, from reused wood, wire and plastic.",
+   "floor": {
+    "prerequisite": "Knows what a fold is.",
+    "question": "Why is a fold moved?",
+    "answer": "to give fresh ground"
+   },
+   "representations": [
+    "a sketch with measurements",
+    "reused materials",
+    "step cards"
+   ],
+   "steps": [
+    "Sketch and size it.",
+    "Build a light frame.",
+    "Roof one part; mesh the run.",
+    "Add handles and a door."
+   ],
+   "contexts": [
+    "the school workshop",
+    "a home project",
+    "a youth group"
+   ],
+   "board": [
+    {
+     "beat": "draw",
+     "do": "Draw a fold with a gap at a mesh joint."
+    },
+    {
+     "beat": "predict",
+     "do": "Ask what could get in."
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for \"a mongoose or snake\"."
+    },
+    {
+     "beat": "reveal",
+     "do": "Close the gap on the drawing."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "AGRI.G8.FOOD_P.POULTRY_REARING_IN_A_FOL.FOLD_BUILD.M_AG8_FB_HEAVY",
+     "listen_for": [
+      "Light materials are cheaper only"
+     ],
+     "ask": "Why is a fold built from light materials?",
+     "repair": "Try lifting a heavy model and a light one."
+    },
+    {
+     "code": "AGRI.G8.FOOD_P.POULTRY_REARING_IN_A_FOL.FOLD_BUILD.M_AG8_FB_NOROOF",
+     "listen_for": [
+      "It does not"
+     ],
+     "ask": "Why does a fold need a roofed part?",
+     "repair": "Ask where the birds go in a storm."
+    },
+    {
+     "code": "AGRI.G8.FOOD_P.POULTRY_REARING_IN_A_FOL.FOLD_BUILD.M_AG8_FB_MESH",
+     "listen_for": [
+      "Big holes let in more air"
+     ],
+     "ask": "Why must the fold mesh have small holes and no gaps?",
+     "repair": "Show how a mongoose fits through a small gap."
+    },
+    {
+     "code": "AGRI.G8.FOOD_P.POULTRY_REARING_IN_A_FOL.FOLD_BUILD.M_AG8_FB_SIZE",
+     "listen_for": [
+      "As small as possible"
+     ],
+     "ask": "How big should a fold be?",
+     "repair": "Draw ten birds in a tiny run; ask what happens at feeding time."
+    }
+   ],
+   "checks": [
+    {
+     "question": "Why is a fold built light?",
+     "answer": "so it can be moved",
+     "shows": "material"
+    },
+    {
+     "question": "Why does the fold need a roof?",
+     "answer": "shelter from rain and sun, a place to lay",
+     "shows": "roof"
+    }
+   ]
+  },
+  {
+   "skill": "AGRI.G8.FOOD_P.POULTRY_REARING_IN_A_FOL.FOLD_REARING",
+   "key_step": "The child says how poultry are reared in a fold: move it every few days, feed and give clean water daily, clean feeders and waterers, protect from predators, rain and heat, check and separate sick birds, record eggs and growth.",
+   "floor": {
+    "prerequisite": "Knows how a fold is built.",
+    "question": "What keeps predators out of a fold?",
+    "answer": "small-hole mesh with no gaps"
+   },
+   "representations": [
+    "a project record sheet",
+    "feeders and waterers",
+    "a rota"
+   ],
+   "steps": [
+    "Move the fold to fresh ground.",
+    "Feed and water; clean feeders.",
+    "Shade and shelter.",
+    "Check for sick birds; record."
+   ],
+   "contexts": [
+    "the school fold project",
+    "chickens at home",
+    "ducks in a fold"
+   ],
+   "board": [
+    {
+     "beat": "draw",
+     "do": "Draw a patch of ground bare and muddy under a fold."
+    },
+    {
+     "beat": "predict",
+     "do": "Ask what was forgotten."
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for \"moving the fold\"."
+    },
+    {
+     "beat": "reveal",
+     "do": "Write \"move every few days\"."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "AGRI.G8.FOOD_P.POULTRY_REARING_IN_A_FOL.FOLD_REARING.M_AG8_FR_LITTER",
+     "listen_for": [
+      "They are swept away as rubbish"
+     ],
+     "ask": "What happens to the droppings left where the fold stood?",
+     "repair": "Show the greener grass where the fold stood last week."
+    },
+    {
+     "code": "AGRI.G8.FOOD_P.POULTRY_REARING_IN_A_FOL.FOLD_REARING.M_AG8_FR_STAY",
+     "listen_for": [
+      "Once a term"
+     ],
+     "ask": "How often is a fold moved?",
+     "repair": "Look at a patch under a fold left for weeks: bare, muddy and smelly."
+    },
+    {
+     "code": "AGRI.G8.FOOD_P.POULTRY_REARING_IN_A_FOL.FOLD_REARING.M_AG8_FR_WATER",
+     "listen_for": [
+      "Once in the morning"
+     ],
+     "ask": "How often do poultry in a fold need water?",
+     "repair": "Check the waterer at midday on a hot day."
+    },
+    {
+     "code": "AGRI.G8.FOOD_P.POULTRY_REARING_IN_A_FOL.FOLD_REARING.M_AG8_FR_SUN",
+     "listen_for": [
+      "In full sun"
+     ],
+     "ask": "Where should a fold stand on a hot afternoon?",
+     "repair": "Show panting birds in strong sun."
+    }
+   ],
+   "checks": [
+    {
+     "question": "How often is a fold moved?",
+     "answer": "every few days",
+     "shows": "moving"
+    },
+    {
+     "question": "Why separate a sick bird?",
+     "answer": "to stop disease spreading",
+     "shows": "health"
+    }
+   ]
+  }
+ ]
+}
