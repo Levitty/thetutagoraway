@@ -80,6 +80,14 @@
    ],
    "mastery": "The child picks ways to prevent fire (keep matches and lighters away from children, store paraffin, petrol and gas safely away from heat, never leave a stove or candle unattended, repair damaged wires, do not overload sockets, keep exits clear and have a fire drill) and does not block exits or store fuel near a stove. Evidence rule: at least four of the last five fresh questions right across at least two question forms, and no repeated pick of the same misconception."
   },
+  "PRET.G8.FOUNDA.FIRE_SAFETY.FIRE_EXTINGUISH": {
+   "forms": [
+    "choose the method for a described fire",
+    "say why water is wrong for a fire",
+    "put the steps of a fire response in order"
+   ],
+   "mastery": "Says that a fire needs heat, fuel and air, and puts it out by cooling (water on wood, paper or cloth), smothering (a lid, fire blanket or sand) or starving (turning off the gas, removing fuel); never water on burning oil or on an electrical fire (switch off the power, use a carbon dioxide or dry powder extinguisher); aims an extinguisher at the base; stop, drop and roll when clothes burn; raises the alarm and gets out first, calling 999 or 112. Evidence rule: at least four of the last five fresh questions right across at least two question forms, and no repeated pick of the same misconception. The practical part (the drawing, the item made, the tool or computer used) is marked by the teacher with the KICD rubric, never by a tap."
+  },
   "PRET.G8.FOUNDA.DATA_SAFETY.DATA_THREATS": {
    "forms": [
     "say why data is valuable",
@@ -116,6 +124,14 @@
    ],
    "mastery": "The child says a drawing sheet has a border (a frame drawn a little inside the edges), a title block (name, title, scale, date and sheet number) at the bottom right, a clear working area, and that A4 is 297 by 210 millimetres, and does not put the title block at the top or leave out the border. Evidence rule: at least four of the last five fresh questions right across at least two question forms, and no repeated pick of the same misconception."
   },
+  "PRET.G8.COMMUN.PLANE_GEOMETRY.GEOM_CONSTRUCT": {
+   "forms": [
+    "put construction steps in order",
+    "find the radius or length a step needs",
+    "find the error in a described construction"
+   ],
+   "mastery": "Gives the steps to bisect a line (compass set to more than half the line, arcs from both ends), construct 60 degrees (equal arcs from a point) and 90 degrees, a regular hexagon in a circle (sides equal to the radius), and a slot (centres on the centre line, radius half the width), and finds the wrong step in a described construction. Evidence rule: at least four of the last five fresh questions right across at least two question forms, and no repeated pick of the same misconception. The practical part (the drawing, the item made, the tool or computer used) is marked by the teacher with the KICD rubric, never by a tap."
+  },
   "PRET.G8.COMMUN.DIMENSIONING.DIM_TYPES": {
    "forms": [
     "pick the line from its job",
@@ -143,6 +159,14 @@
    ],
    "mastery": "The child says a scale such as 1:50 means one unit on the drawing stands for 50 of the same unit on the real object, multiplies a drawing length by the scale to get the real length and divides a real length by the scale to get the drawing length, knows 1:1 is full size and 2:1 is an enlargement, and keeps the units. Evidence rule: at least four of the last five fresh questions right across at least two question forms, and no repeated pick of the same misconception."
   },
+  "PRET.G8.COMMUN.PLAIN_SCALE_DRAWING.SCALE_CONVERT": {
+   "forms": [
+    "work out the drawing size",
+    "choose the scale that fits a sheet",
+    "find the error in a scale calculation"
+   ],
+   "mastery": "Converts the real size to millimetres, then divides by the scale for a reduction (1:20, 1:50) or multiplies for an enlargement (2:1), and chooses a scale that fits the drawing on the sheet (an 8 m room on A4 at 1:50, not 1:10). Evidence rule: at least four of the last five fresh questions right across at least two question forms, and no repeated pick of the same misconception. The practical part (the drawing, the item made, the tool or computer used) is marked by the teacher with the KICD rubric, never by a tap."
+  },
   "PRET.G8.COMMUN.VISUAL_PROGRAMMING.VISUAL_PROG": {
    "forms": [
     "pick a visual programming tool",
@@ -151,6 +175,14 @@
     "find the false step in a learner's reason"
    ],
    "mastery": "The child says visual programming builds programs by snapping together blocks instead of typing code, names tools such as Scratch and App Inventor, names features (a block palette, a script area, a stage with sprites, events, loops and decisions), and says a loop repeats instructions. Evidence rule: at least four of the last five fresh questions right across at least two question forms, and no repeated pick of the same misconception."
+  },
+  "PRET.G8.COMMUN.VISUAL_PROGRAMMING.VP_SEQUENCE": {
+   "forms": [
+    "say what a stack of blocks does",
+    "put blocks in order to solve a task",
+    "find the bug in a block program"
+   ],
+   "mastery": "Says what a short block program does: blocks run from top to bottom under an event block (when green flag clicked), a repeat block repeats the blocks inside it the stated number of times (repeat 4: move, turn 90 draws a square), an if-block runs its blocks only when the condition is true; finds and fixes a wrong order or a missing event. Evidence rule: at least four of the last five fresh questions right across at least two question forms, and no repeated pick of the same misconception. The practical part (the drawing, the item made, the tool or computer used) is marked by the teacher with the KICD rubric, never by a tap."
   },
   "PRET.G8.MATERI.COMPOSITE_MATERIALS.COMPOSITE": {
    "forms": [
@@ -179,6 +211,14 @@
    ],
    "mastery": "The child picks the hacksaw for metal, the tenon saw for wood, the coping saw for curves, the chisel for shaping wood, the plane for smoothing wood, the tin snips for sheet metal and scissors for card and cloth, and picks care (keep blades sharp and clean, oil steel blades, store with guards, carry points down) and does not use a wood saw on metal. Evidence rule: at least four of the last five fresh questions right across at least two question forms, and no repeated pick of the same misconception."
   },
+  "PRET.G8.TOOLS_.CUTTING_TOOLS.CUT_USE": {
+   "forms": [
+    "pick the safe way to use a tool",
+    "find the unsafe step in a described job",
+    "say why a safety rule matters"
+   ],
+   "mastery": "Says to hold the work in a vice or with a clamp, cut away from the body with both hands behind the edge, fit a hacksaw blade with its teeth pointing away from the handle, start a saw cut with light strokes then use long steady strokes, and carry edged tools pointing down; finds the unsafe step in a described job. Evidence rule: at least four of the last five fresh questions right across at least two question forms, and no repeated pick of the same misconception. The practical part (the drawing, the item made, the tool or computer used) is marked by the teacher with the KICD rubric, never by a tap."
+  },
   "PRET.G8.TOOLS_.COMPUTER_SOFTWARE.SOFTWARE": {
    "forms": [
     "sort the software",
@@ -197,6 +237,14 @@
    ],
    "mastery": "The child says a business keeps records to know its income, spending, profit or loss, to plan, to pay tax and to get loans, and sorts transactions into cash (paid now) and credit (paid later), income and expenditure, and assets (what a business owns), liabilities (what it owes) and capital (what the owner put in). Evidence rule: at least four of the last five fresh questions right across at least two question forms, and no repeated pick of the same misconception."
   },
+  "PRET.G8.ENTREP.BOOKKEEPING.FIN_STATEMENTS": {
+   "forms": [
+    "work out a cash balance",
+    "work out gross and net profit",
+    "find capital from assets and liabilities"
+   ],
+   "mastery": "Works out the closing cash (opening cash + money received - money paid out), gross profit (sales - cost of goods sold), net profit (gross profit - expenses), and capital (assets - liabilities) for a small business, and finds the error in a statement that takes sales as profit or adds liabilities to assets. Evidence rule: at least four of the last five fresh questions right across at least two question forms, and no repeated pick of the same misconception. The practical part (the drawing, the item made, the tool or computer used) is marked by the teacher with the KICD rubric, never by a tap."
+  },
   "PRET.G8.ENTREP.INCOME_AND_BUDGETING.BUDGET": {
    "forms": [
     "pick a source of income",
@@ -205,6 +253,14 @@
     "find the false step in a learner's reason"
    ],
    "mastery": "The child names sources of income (wages or a salary, profit from a business, sales of farm produce, gifts and pocket money, interest), says a budget plans the income and spending so that needs come first and some is saved, and tells an honest budget from an unethical practice (hiding spending, using money meant for something else, borrowing without a plan to repay, cheating others). Evidence rule: at least four of the last five fresh questions right across at least two question forms, and no repeated pick of the same misconception."
+  },
+  "PRET.G8.ENTREP.INCOME_AND_BUDGETING.BUDGET_PREPARE": {
+   "forms": [
+    "find the balance of a budget",
+    "say whether a budget is in surplus or deficit",
+    "put budget items in order of need"
+   ],
+   "mastery": "Lists income, plans needs before wants, puts saving in as an item at the start, totals the spending, and finds the balance: income - spending, a surplus when positive and a deficit when negative, and says how to fix a deficit (cut wants or raise income). Evidence rule: at least four of the last five fresh questions right across at least two question forms, and no repeated pick of the same misconception. The practical part (the drawing, the item made, the tool or computer used) is marked by the teacher with the KICD rubric, never by a tap."
   },
   "PRET.G8.ENTREP.OF_GOODS_AND_SERVICES.MARKETING": {
    "forms": [

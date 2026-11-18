@@ -1,0 +1,99 @@
+{
+ "sub_strand": "PRE_.G9.FOUNDA.SELF_EXPLORATION_AND_CAR",
+ "title": "Self-Exploration and Career Development",
+ "status": "draft: written 18 Nov 2026 offline for Grade 9 Pre-Technical Studies; not yet checked by a Pre-Technical Studies teacher; safety lines marked SAFETY in the library to confirm first; not loaded by the live tutor",
+ "sources": [],
+ "notes": "A learner's own career choice (outcome d) is a portfolio entry discussed with the teacher, never marked right or wrong. The questions test the knowledge for making the choice.",
+ "skills": [
+  {
+   "skill": "PRET.G9.FOUNDA.SELF_EXPLORATION_AND_CAR.TALENTS",
+   "key_step": "The learner explains ways of nurturing talents (practice, coaching, clubs, competitions, mentors), relates talents and abilities to career pathways (STEM, Social Sciences, Arts and Sports Science), analyses ethical and unethical uses of talents, and uses this knowledge to think about a career (the learner's own choice is a portfolio entry, not marked right or wrong).",
+   "floor": {
+    "prerequisite": "Knows the qualities of an entrepreneur.",
+    "question": "Name one quality of an entrepreneur.",
+    "answer": "Determination (creativity, honesty)"
+   },
+   "representations": [
+    "a talent and career web",
+    "the senior school pathways chart",
+    "ethical and unethical cards"
+   ],
+   "steps": [
+    "Name a talent.",
+    "Say how to nurture it.",
+    "Link it to careers and a pathway.",
+    "Say what ethical use looks like."
+   ],
+   "contexts": [
+    "a learner who draws well",
+    "a school football star",
+    "a learner who loves fixing radios"
+   ],
+   "board": [
+    {
+     "beat": "write",
+     "do": "Write \"talent for drawing\" in the middle of a web."
+    },
+    {
+     "beat": "point",
+     "do": "Point at an empty arm.",
+     "say": "Name a career that uses this talent."
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for the learner to say design, architecture or art."
+    },
+    {
+     "beat": "reveal",
+     "do": "Fill in the web and the pathway."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "PRET.G9.FOUNDA.SELF_EXPLORATION_AND_CAR.TALENTS.M_PT9_TA_GROW",
+     "listen_for": [
+      "Without any effort"
+     ],
+     "ask": "How do talents grow?",
+     "repair": "Tell the story of a local footballer or musician: years of practice and coaching. Plan one way to practise a talent weekly."
+    },
+    {
+     "code": "PRET.G9.FOUNDA.SELF_EXPLORATION_AND_CAR.TALENTS.M_PT9_TA_ETHIC",
+     "listen_for": [
+      "Yes, he earns money from his talent"
+     ],
+     "ask": "A learner who draws well is paid to do classmates' art homework. Is this an ethical use of the talent?",
+     "repair": "Sort uses of talents into ethical (fair, honest, helps others) and unethical (cheating, harming, deceiving)."
+    },
+    {
+     "code": "PRET.G9.FOUNDA.SELF_EXPLORATION_AND_CAR.TALENTS.M_PT9_TA_CAREER",
+     "listen_for": [
+      "Driving"
+     ],
+     "ask": "Which career links best to a talent for drawing?",
+     "repair": "Make a talent and career web: drawing leads to design, architecture, engineering drawing, art."
+    },
+    {
+     "code": "PRET.G9.FOUNDA.SELF_EXPLORATION_AND_CAR.TALENTS.M_PT9_TA_ONE_ONLY",
+     "listen_for": [
+      "Only singing, because a person has one talent"
+     ],
+     "ask": "Achieng sings well and is good at mathematics. What should guide her career choice?",
+     "repair": "List several talents and abilities for one person; show careers that use more than one (sound engineering uses music and mathematics)."
+    }
+   ],
+   "checks": [
+    {
+     "question": "How do talents grow?",
+     "answer": "By practice and guidance",
+     "shows": "nurture"
+    },
+    {
+     "question": "Give one unethical use of a talent.",
+     "answer": "Cheating (doing others' assessed work)",
+     "shows": "ethics"
+    }
+   ]
+  }
+ ]
+}

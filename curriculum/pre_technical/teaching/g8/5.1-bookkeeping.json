@@ -1,0 +1,189 @@
+{
+ "sub_strand": "PRE_.G8.ENTREP.BOOKKEEPING",
+ "title": "Bookkeeping",
+ "status": "draft: written 18 Nov 2026 offline for Grade 8 Pre-Technical Studies; not yet checked by a Pre-Technical Studies teacher; safety lines marked SAFETY in the library to confirm first; not loaded by the live tutor",
+ "sources": [],
+ "notes": "",
+ "skills": [
+  {
+   "skill": "PRET.G8.ENTREP.BOOKKEEPING.BOOKKEEPING",
+   "key_step": "The learner explains why businesses keep records (know profit or loss, control cash, plan, get loans, pay tax, avoid theft) and classifies transactions (cash and credit sales, cash and credit purchases, expenses, receipts, drawings; assets and liabilities).",
+   "floor": {
+    "prerequisite": "Knows what profit is.",
+    "question": "Buy for 60, sell for 75. Profit?",
+    "answer": "15 shillings"
+   },
+   "representations": [
+    "a simple sales book",
+    "transaction cards to classify",
+    "owned and owed columns"
+   ],
+   "steps": [
+    "Read the transaction.",
+    "Ask: money now or later? In or out?",
+    "Classify it.",
+    "Record it in the right book."
+   ],
+   "contexts": [
+    "a school tuck shop",
+    "a kiosk selling on credit",
+    "a tailor buying cloth on credit"
+   ],
+   "board": [
+    {
+     "beat": "write",
+     "do": "Write: \"A customer takes sugar and will pay on Friday.\""
+    },
+    {
+     "beat": "point",
+     "do": "Point at \"will pay on Friday\".",
+     "say": "Is this a cash sale or a credit sale?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for the learner to say a credit sale."
+    },
+    {
+     "beat": "reveal",
+     "do": "Classify three more transactions."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "PRET.G8.ENTREP.BOOKKEEPING.BOOKKEEPING.M_PT8_BK_BIG_ONLY",
+     "listen_for": [
+      "Only big businesses"
+     ],
+     "ask": "Which businesses should keep records?",
+     "repair": "Ask a small trader how she knows her profit; show a simple daily sales book."
+    },
+    {
+     "code": "PRET.G8.ENTREP.BOOKKEEPING.BOOKKEEPING.M_PT8_BK_ASSET",
+     "listen_for": [
+      "An asset"
+     ],
+     "ask": "A loan owed to a supplier is...",
+     "repair": "Two columns: owned by the business (assets: stock, cash, equipment) and owed by the business (liabilities: loans, suppliers)."
+    },
+    {
+     "code": "PRET.G8.ENTREP.BOOKKEEPING.BOOKKEEPING.M_PT8_BK_CASH",
+     "listen_for": [
+      "A cash sale"
+     ],
+     "ask": "A customer takes goods and will pay next week. What is this?",
+     "repair": "Ask \"was the money paid now?\" Yes: cash sale. Later: credit sale, and the customer is a debtor."
+    },
+    {
+     "code": "PRET.G8.ENTREP.BOOKKEEPING.BOOKKEEPING.M_PT8_BK_DRAWINGS",
+     "listen_for": [
+      "As a business expense"
+     ],
+     "ask": "The owner takes 500 shillings from the till to buy food for her family. How is it recorded?",
+     "repair": "Separate business costs (rent, stock, transport) from the owner's own use (drawings); drawings reduce capital, not profit."
+    }
+   ],
+   "checks": [
+    {
+     "question": "Why should a small business keep records?",
+     "answer": "To know its profit or loss (control cash)",
+     "shows": "importance"
+    },
+    {
+     "question": "A loan owed by the business is an asset or a liability?",
+     "answer": "A liability",
+     "shows": "classify"
+    }
+   ]
+  },
+  {
+   "skill": "PRET.G8.ENTREP.BOOKKEEPING.FIN_STATEMENTS",
+   "key_step": "The learner prepares simple financial statements for a small business: a cash book balance (opening + receipts - payments), an income statement (sales - cost of goods sold = gross profit; gross profit - expenses = net profit) and a statement of financial position (assets = capital + liabilities); the prepared statement is marked with the rubric.",
+   "floor": {
+    "prerequisite": "Can work out profit on sales.",
+    "question": "Buy for 400, sell for 500. Profit?",
+    "answer": "100 shillings"
+   },
+   "representations": [
+    "a two-sided cash book",
+    "an income statement layout",
+    "the equation assets = capital + liabilities"
+   ],
+   "steps": [
+    "Record money in and out.",
+    "Find the closing cash.",
+    "Work out gross then net profit.",
+    "Check assets = capital + liabilities."
+   ],
+   "contexts": [
+    "a school tuck shop",
+    "a mandazi business",
+    "a tailoring shop"
+   ],
+   "board": [
+    {
+     "beat": "write",
+     "do": "Write: sales 20,000, cost of goods 12,000, expenses 3,000."
+    },
+    {
+     "beat": "point",
+     "do": "Point at \"sales 20,000\".",
+     "say": "Is this the profit? What do we take away first?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for the learner to say cost of goods, then expenses."
+    },
+    {
+     "beat": "reveal",
+     "do": "Work out gross profit 8,000 and net profit 5,000."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "PRET.G8.ENTREP.BOOKKEEPING.FIN_STATEMENTS.M_PT8_FS_SALES_PROFIT",
+     "listen_for": [
+      "20,000 shillings"
+     ],
+     "ask": "Sales 20,000 shillings, cost of goods sold 12,000, expenses 3,000. What is the net profit?",
+     "repair": "Lay it out: sales - cost of goods = gross profit (8,000); gross profit - expenses = net profit (5,000)."
+    },
+    {
+     "code": "PRET.G8.ENTREP.BOOKKEEPING.FIN_STATEMENTS.M_PT8_FS_GROSS_NET",
+     "listen_for": [
+      "8,000 shillings"
+     ],
+     "ask": "Gross profit 8,000 shillings, expenses (rent, transport) 3,000. What is the net profit?",
+     "repair": "List the expenses of a kiosk (rent, transport, power); take them away from gross profit."
+    },
+    {
+     "code": "PRET.G8.ENTREP.BOOKKEEPING.FIN_STATEMENTS.M_PT8_FS_CAPITAL_ADD",
+     "listen_for": [
+      "60,000 shillings"
+     ],
+     "ask": "A business has assets of 50,000 shillings and liabilities of 10,000. What is the capital?",
+     "repair": "Write assets = capital + liabilities; what the business owns, less what it owes, belongs to the owner."
+    },
+    {
+     "code": "PRET.G8.ENTREP.BOOKKEEPING.FIN_STATEMENTS.M_PT8_FS_CASH_ADD",
+     "listen_for": [
+      "10,500 shillings"
+     ],
+     "ask": "Cash at the start 2,000, received 5,000, paid out 3,500. What is the cash at the end?",
+     "repair": "Use a cash book with two sides: money in, money out. Closing cash = opening + in - out."
+    }
+   ],
+   "checks": [
+    {
+     "question": "Gross profit 8,000, expenses 3,000. Net profit?",
+     "answer": "5,000 shillings",
+     "shows": "net profit"
+    },
+    {
+     "question": "Assets 50,000, liabilities 10,000. Capital?",
+     "answer": "40,000 shillings",
+     "shows": "capital"
+    }
+   ]
+  }
+ ]
+}

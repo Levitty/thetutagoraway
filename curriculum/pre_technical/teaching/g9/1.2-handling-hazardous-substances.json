@@ -1,0 +1,197 @@
+{
+ "sub_strand": "PRE_.G9.FOUNDA.HANDLING_HAZARDOUS_SUBST",
+ "title": "Handling Hazardous Substances",
+ "status": "draft: written 18 Nov 2026 offline for Grade 9 Pre-Technical Studies; not yet checked by a Pre-Technical Studies teacher; safety lines marked SAFETY in the library to confirm first; not loaded by the live tutor",
+ "sources": [],
+ "notes": "SAFETY: substances are shown in their labelled containers and never opened by learners. Never mix substances to demonstrate. First aid lines follow the school's first aid policy.",
+ "skills": [
+  {
+   "skill": "PRET.G9.FOUNDA.HANDLING_HAZARDOUS_SUBST.HAZARD_CLASSIFY",
+   "key_step": "The learner identifies hazardous substances in the locality (petrol, paraffin, gas, pesticides, bleach and cleaners, acids, paints and thinners, battery acid, medicines) and classifies them by hazard (flammable, corrosive, toxic, harmful or irritant, explosive, dangerous to the environment) using labels and symbols.",
+   "floor": {
+    "prerequisite": "Knows the hazard symbols from the laboratory.",
+    "question": "What does a flame symbol on a container mean?",
+    "answer": "Flammable"
+   },
+   "representations": [
+    "hazard symbol cards",
+    "empty labelled containers (rinsed, closed)",
+    "a substance and hazard sorting chart"
+   ],
+   "steps": [
+    "Read the label.",
+    "Find the symbol.",
+    "Name the hazard.",
+    "Sort the substance into its class."
+   ],
+   "contexts": [
+    "a farm store with pesticides",
+    "a kitchen cupboard with bleach",
+    "a petrol station"
+   ],
+   "board": [
+    {
+     "beat": "write",
+     "do": "Draw four symbols: flame, skull, corrosion, exclamation mark."
+    },
+    {
+     "beat": "point",
+     "do": "Point at the skull.",
+     "say": "What does this symbol mean, and name a substance with it?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for the learner to say toxic, a pesticide."
+    },
+    {
+     "beat": "reveal",
+     "do": "Match all four symbols."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "PRET.G9.FOUNDA.HANDLING_HAZARDOUS_SUBST.HAZARD_CLASSIFY.M_PT9_HC_FLAMMABLE",
+     "listen_for": [
+      "Corrosive"
+     ],
+     "ask": "Which word means catches fire easily?",
+     "repair": "Match each word to its symbol: a flame for flammable, a hand and metal being eaten for corrosive."
+    },
+    {
+     "code": "PRET.G9.FOUNDA.HANDLING_HAZARDOUS_SUBST.HAZARD_CLASSIFY.M_PT9_HC_CORROSIVE",
+     "listen_for": [
+      "Toxic"
+     ],
+     "ask": "Which word means eats away skin and metal?",
+     "repair": "Corrosive burns and eats away (acid, bleach); toxic poisons when swallowed, breathed or absorbed (pesticides)."
+    },
+    {
+     "code": "PRET.G9.FOUNDA.HANDLING_HAZARDOUS_SUBST.HAZARD_CLASSIFY.M_PT9_HC_PETROL",
+     "listen_for": [
+      "Safe, because cars use it every day"
+     ],
+     "ask": "How is petrol classified?",
+     "repair": "Show the flame symbol on a fuel container; petrol vapour catches fire from a spark or cigarette."
+    },
+    {
+     "code": "PRET.G9.FOUNDA.HANDLING_HAZARDOUS_SUBST.HAZARD_CLASSIFY.M_PT9_HC_HOME_SAFE",
+     "listen_for": [
+      "No, home products are safe"
+     ],
+     "ask": "Bleach is used at home for cleaning. Is it hazardous?",
+     "repair": "Read the label on a bleach bottle with the class: the hazard symbol and warnings are printed there."
+    },
+    {
+     "code": "PRET.G9.FOUNDA.HANDLING_HAZARDOUS_SUBST.HAZARD_CLASSIFY.M_PT9_HC_SKULL",
+     "listen_for": [
+      "It catches fire easily"
+     ],
+     "ask": "What does the skull-and-crossbones symbol on a container mean?",
+     "repair": "Match each hazard symbol (flame, skull, corrosion, exclamation mark, environment) to its meaning and an example."
+    }
+   ],
+   "checks": [
+    {
+     "question": "What does flammable mean?",
+     "answer": "Catches fire easily",
+     "shows": "classes"
+    },
+    {
+     "question": "Is bleach hazardous?",
+     "answer": "Yes, corrosive and harmful",
+     "shows": "home products"
+    }
+   ]
+  },
+  {
+   "skill": "PRET.G9.FOUNDA.HANDLING_HAZARDOUS_SUBST.HAZARD_HANDLING",
+   "key_step": "The learner describes safe handling of hazardous substances: read the label, wear protective clothing (gloves, mask, goggles, boots), never mix substances, keep them in original labelled containers, store locked and away from children, food and heat, work in fresh air, clean spills safely, dispose of containers as the label says, give first aid and seek help; safe handling in class is watched and marked with the rubric.",
+   "floor": {
+    "prerequisite": "Knows the classes of hazardous substances.",
+    "question": "Is paraffin flammable or corrosive?",
+    "answer": "Flammable"
+   },
+   "representations": [
+    "a label read in parts",
+    "protective clothing laid out",
+    "safe and unsafe storage pictures"
+   ],
+   "steps": [
+    "Read the label.",
+    "Put on protective clothing.",
+    "Use as directed; never mix.",
+    "Store safely and dispose of containers properly."
+   ],
+   "contexts": [
+    "spraying crops",
+    "cleaning the school toilets",
+    "storing paraffin at home"
+   ],
+   "board": [
+    {
+     "beat": "write",
+     "do": "Draw a soda bottle filled with paraffin on a kitchen table."
+    },
+    {
+     "beat": "point",
+     "do": "Point at the bottle.",
+     "say": "What is unsafe, and how should it be stored?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for the learner to say in a labelled container, out of reach."
+    },
+    {
+     "beat": "reveal",
+     "do": "Write the storage rules."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "PRET.G9.FOUNDA.HANDLING_HAZARDOUS_SUBST.HAZARD_HANDLING.M_PT9_HH_LABEL",
+     "listen_for": [
+      "Open it at once"
+     ],
+     "ask": "What should you do before using a substance?",
+     "repair": "Read a label aloud: hazard, how to use, protective wear, first aid, storage. Make \"read the label\" the first step."
+    },
+    {
+     "code": "PRET.G9.FOUNDA.HANDLING_HAZARDOUS_SUBST.HAZARD_HANDLING.M_PT9_HH_MIX",
+     "listen_for": [
+      "Mix them to be stronger"
+     ],
+     "ask": "What should you do with two cleaners?",
+     "repair": "Explain that some mixtures (such as bleach with an acid toilet cleaner) give off a poisonous gas; never mix. Not demonstrated."
+    },
+    {
+     "code": "PRET.G9.FOUNDA.HANDLING_HAZARDOUS_SUBST.HAZARD_HANDLING.M_PT9_HH_STORE",
+     "listen_for": [
+      "In a drink bottle on the table"
+     ],
+     "ask": "How should paraffin be stored?",
+     "repair": "Show why a child may drink paraffin from a soda bottle; store in the original labelled container, locked and out of reach."
+    },
+    {
+     "code": "PRET.G9.FOUNDA.HANDLING_HAZARDOUS_SUBST.HAZARD_HANDLING.M_PT9_HH_PPE",
+     "listen_for": [
+      "Nothing special, if he washes afterwards"
+     ],
+     "ask": "A farmer mixes pesticide for spraying. What should he wear?",
+     "repair": "Read the protective wear section of a pesticide label; explain that some poisons pass through the skin and lungs."
+    }
+   ],
+   "checks": [
+    {
+     "question": "What should you do before using a substance?",
+     "answer": "Read the label",
+     "shows": "label"
+    },
+    {
+     "question": "Should two cleaners be mixed?",
+     "answer": "No, never",
+     "shows": "mixing"
+    }
+   ]
+  }
+ ]
+}

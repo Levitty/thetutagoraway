@@ -1,0 +1,197 @@
+{
+ "sub_strand": "PRE_.G8.COMMUN.DIMENSIONING",
+ "title": "Dimensioning",
+ "status": "draft: written 18 Nov 2026 offline for Grade 8 Pre-Technical Studies; not yet checked by a Pre-Technical Studies teacher; safety lines marked SAFETY in the library to confirm first; not loaded by the live tutor",
+ "sources": [],
+ "notes": "",
+ "skills": [
+  {
+   "skill": "PRET.G8.COMMUN.DIMENSIONING.DIM_TYPES",
+   "key_step": "The learner names the parts of dimensioning (projection lines with a small gap, dimension lines with arrowheads, leader lines, the dimension number in millimetres) and the types (chain, parallel or datum, combined; aligned and unidirectional), and draws dimension lines; the drawn lines are marked with the rubric.",
+   "floor": {
+    "prerequisite": "Knows the thin and thick line types.",
+    "question": "Which line is used for dimensions?",
+    "answer": "A thin continuous line"
+   },
+   "representations": [
+    "a labelled dimensioned block",
+    "chain and parallel dimensioning side by side",
+    "arrowhead examples"
+   ],
+   "steps": [
+    "Draw projection lines with a gap.",
+    "Draw the dimension line with arrowheads.",
+    "Write the number above the line.",
+    "Choose chain or parallel."
+   ],
+   "contexts": [
+    "a drawing of a bracket",
+    "a shelf plan",
+    "a metal plate with holes"
+   ],
+   "board": [
+    {
+     "beat": "write",
+     "do": "Draw a block with chain dimensions across the top."
+    },
+    {
+     "beat": "point",
+     "do": "Point at the row of dimensions.",
+     "say": "Is this chain or parallel dimensioning?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for the learner to say chain."
+    },
+    {
+     "beat": "reveal",
+     "do": "Redraw the same sizes as parallel dimensioning."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "PRET.G8.COMMUN.DIMENSIONING.DIM_TYPES.M_PT8_DM_LINE_MIX",
+     "listen_for": [
+      "The extension line"
+     ],
+     "ask": "Which line has arrowheads and shows the size?",
+     "repair": "Label a dimensioned drawing: projection (extension) lines come out from the object; the dimension line between them has arrowheads and the number."
+    },
+    {
+     "code": "PRET.G8.COMMUN.DIMENSIONING.DIM_TYPES.M_PT8_DM_UNITS",
+     "listen_for": [
+      "Metres"
+     ],
+     "ask": "In which unit are sizes normally given on a drawing?",
+     "repair": "Look at a drawing of a small part: 45 means 45 mm. Most technical drawings use millimetres, stated in a note."
+    },
+    {
+     "code": "PRET.G8.COMMUN.DIMENSIONING.DIM_TYPES.M_PT8_DM_OBJECT_LINE",
+     "listen_for": [
+      "The dimension line"
+     ],
+     "ask": "Which line is thick and shows the shape?",
+     "repair": "Thick lines are only for the object outline; every added line (dimension, projection) is thin."
+    },
+    {
+     "code": "PRET.G8.COMMUN.DIMENSIONING.DIM_TYPES.M_PT8_DM_TOUCH",
+     "listen_for": [
+      "Touching the outline of the object"
+     ],
+     "ask": "Where does a projection (extension) line start?",
+     "repair": "Show a drawing where touching lines make the outline look bigger; leave a small gap (about 1 to 2 mm)."
+    },
+    {
+     "code": "PRET.G8.COMMUN.DIMENSIONING.DIM_TYPES.M_PT8_DM_CHAIN_PARALLEL",
+     "listen_for": [
+      "Chain dimensioning"
+     ],
+     "ask": "Which type of dimensioning measures every size from one datum edge?",
+     "repair": "Draw both on the board: chain links one size to the next; parallel starts every size from the same edge."
+    }
+   ],
+   "checks": [
+    {
+     "question": "Which line has arrowheads and shows the size?",
+     "answer": "The dimension line",
+     "shows": "parts"
+    },
+    {
+     "question": "What unit is normally used on drawings?",
+     "answer": "Millimetres",
+     "shows": "units"
+    }
+   ]
+  },
+  {
+   "skill": "PRET.G8.COMMUN.DIMENSIONING.DIM_READ",
+   "key_step": "The learner reads and works out dimensions of given shapes: overall lengths from sections (add), diameter from radius (double), missing sizes from an overall dimension (subtract), the unit from the note in the title block, and real sizes from the dimension even on a scaled drawing; dimensioning shapes is marked with the rubric.",
+   "floor": {
+    "prerequisite": "Can add lengths in millimetres.",
+    "question": "30 mm + 45 mm =",
+    "answer": "75 mm"
+   },
+   "representations": [
+    "a dimensioned bracket with one size missing",
+    "a circle with R and Ø marked",
+    "a title block with the units note"
+   ],
+   "steps": [
+    "Read each dimension.",
+    "Find the unit in the note.",
+    "Add or subtract to find the missing size.",
+    "Check it against the overall size."
+   ],
+   "contexts": [
+    "a shelf with two sections",
+    "a washer with inside and outside diameter",
+    "a scaled plan of a desk"
+   ],
+   "board": [
+    {
+     "beat": "write",
+     "do": "Draw a bar with sections 30 and 45 and an overall dimension left blank."
+    },
+    {
+     "beat": "point",
+     "do": "Point at the blank.",
+     "say": "What is the overall length?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for the learner to add: 75 mm."
+    },
+    {
+     "beat": "reveal",
+     "do": "Write 75 in the dimension."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "PRET.G8.COMMUN.DIMENSIONING.DIM_READ.M_PT8_DR_ADD",
+     "listen_for": [
+      "15 mm"
+     ],
+     "ask": "A part is 30 mm and 45 mm long in two sections. What is the overall length?",
+     "repair": "Draw the two sections end to end and measure the whole; overall length = sum of the sections."
+    },
+    {
+     "code": "PRET.G8.COMMUN.DIMENSIONING.DIM_READ.M_PT8_DR_DIAMETER",
+     "listen_for": [
+      "10 mm"
+     ],
+     "ask": "The radius of a circle is 20 mm. What is the diameter?",
+     "repair": "Draw a circle with a line through the centre: the diameter is two radii."
+    },
+    {
+     "code": "PRET.G8.COMMUN.DIMENSIONING.DIM_READ.M_PT8_DR_UNIT",
+     "listen_for": [
+      "They guess from the size of the drawing"
+     ],
+     "ask": "A drawing shows \"45\" with no unit beside it. How does the reader know the unit?",
+     "repair": "Find the note \"ALL DIMENSIONS IN MILLIMETRES\" in the title block; the unit is given once for the whole drawing."
+    },
+    {
+     "code": "PRET.G8.COMMUN.DIMENSIONING.DIM_READ.M_PT8_DR_MEASURE_PAPER",
+     "listen_for": [
+      "25 mm, as measured on the paper"
+     ],
+     "ask": "A drawing at 1:2 shows a line 25 mm long on the paper, dimensioned 50. What is the real length?",
+     "repair": "Explain that dimensions always give the real size, whatever the scale; measure, then read the number, and compare."
+    }
+   ],
+   "checks": [
+    {
+     "question": "The radius is 20 mm. What is the diameter?",
+     "answer": "40 mm",
+     "shows": "diameter"
+    },
+    {
+     "question": "Sections 30 mm and 45 mm. Overall length?",
+     "answer": "75 mm",
+     "shows": "overall"
+    }
+   ]
+  }
+ ]
+}

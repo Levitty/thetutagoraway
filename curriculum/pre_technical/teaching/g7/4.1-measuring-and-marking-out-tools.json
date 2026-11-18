@@ -1,0 +1,459 @@
+{
+ "sub_strand": "PRE_.G7.TOOLS_.MEASURING_AND_MARKING_OU",
+ "title": "Measuring and Marking Out Tools",
+ "status": "draft: written 18 Nov 2026 offline for Grade 7 Pre-Technical Studies; not yet checked by a Pre-Technical Studies teacher; safety lines marked SAFETY in the library to confirm first; not loaded by the live tutor",
+ "sources": [],
+ "notes": "Using the tools (outcome c) is watched and marked with the rubric. Scribers, dividers and punches are sharp: they are used only with the teacher present (SAFETY).",
+ "skills": [
+  {
+   "skill": "PRET.G7.TOOLS_.MEASURING_AND_MARKING_OU.MEAS_TOOLS",
+   "key_step": "The learner identifies measuring tools and what each measures: steel rule and tape measure (length), callipers (outside and inside diameters), weighing balance (mass), stopwatch (time), thermometer (temperature), measuring cylinder (volume), voltmeter (voltage), ammeter (current).",
+   "floor": {
+    "prerequisite": "Can measure length in centimetres.",
+    "question": "How many millimetres in 1 cm?",
+    "answer": "10"
+   },
+   "representations": [
+    "a tool, measures, unit table",
+    "real tools on a tray",
+    "picture cards to match"
+   ],
+   "steps": [
+    "Name the tool.",
+    "Say what it measures.",
+    "Give the unit.",
+    "Choose it for a job."
+   ],
+   "contexts": [
+    "a fundi measuring a door frame",
+    "a shopkeeper weighing sugar",
+    "an electrician testing a socket"
+   ],
+   "board": [
+    {
+     "beat": "write",
+     "do": "Draw a table: tool, measures, unit."
+    },
+    {
+     "beat": "point",
+     "do": "Point at the row for the stopwatch.",
+     "say": "What does it measure, and in what unit?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for the learner to say time, seconds."
+    },
+    {
+     "beat": "reveal",
+     "do": "Fill in the other rows."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "PRET.G7.TOOLS_.MEASURING_AND_MARKING_OU.MEAS_TOOLS.M_MV_VOLT_AMP",
+     "listen_for": [
+      "Ammeter"
+     ],
+     "ask": "Which tool measures voltage?",
+     "repair": "Write volt = voltmeter, ampere = ammeter; match each unit to its meter."
+    },
+    {
+     "code": "PRET.G7.TOOLS_.MEASURING_AND_MARKING_OU.MEAS_TOOLS.M_MV_BALANCE_LEN",
+     "listen_for": [
+      "Length"
+     ],
+     "ask": "What does a weighing balance measure?",
+     "repair": "Make a table: tool, what it measures, unit (balance, mass, kg or g)."
+    },
+    {
+     "code": "PRET.G7.TOOLS_.MEASURING_AND_MARKING_OU.MEAS_TOOLS.M_MV_STOPWATCH",
+     "listen_for": [
+      "Speed"
+     ],
+     "ask": "What does a stopwatch measure?",
+     "repair": "Time a learner walking 10 m: the stopwatch gives seconds; speed needs distance as well."
+    },
+    {
+     "code": "PRET.G7.TOOLS_.MEASURING_AND_MARKING_OU.MEAS_TOOLS.M_MV_RULER_ALL",
+     "listen_for": [
+      "Steel rule"
+     ],
+     "ask": "Which tool measures the length of a long wall?",
+     "repair": "Try to measure the classroom wall with a 30 cm rule, then with a tape; compare time and accuracy."
+    }
+   ],
+   "checks": [
+    {
+     "question": "What does a weighing balance measure?",
+     "answer": "Mass",
+     "shows": "tools"
+    },
+    {
+     "question": "Which tool measures the length of a long wall?",
+     "answer": "A tape measure",
+     "shows": "choice"
+    }
+   ]
+  },
+  {
+   "skill": "PRET.G7.TOOLS_.MEASURING_AND_MARKING_OU.MARK_TOOLS",
+   "key_step": "The learner identifies marking out tools and what each does: scriber (fine line on metal), pencil and marking knife (on wood), try-square (right angles), dividers (circles and arcs on metal), odd-leg callipers (lines parallel to an edge on metal), marking gauge (lines parallel to an edge on wood), dot and centre punches (small dents to mark centres).",
+   "floor": {
+    "prerequisite": "Knows perpendicular lines.",
+    "question": "What angle do perpendicular lines make?",
+    "answer": "A right angle (90 degrees)"
+   },
+   "representations": [
+    "marking tools on a tray with labels",
+    "a wood and metal column chart",
+    "a plate with scribed lines and a punch mark"
+   ],
+   "steps": [
+    "Name the tool.",
+    "Say what it marks.",
+    "Say if it is for wood or metal.",
+    "Say how to handle it safely."
+   ],
+   "contexts": [
+    "marking a hinge position on a door",
+    "marking a hole on a steel plate",
+    "marking a shelf joint"
+   ],
+   "board": [
+    {
+     "beat": "write",
+     "do": "Draw two columns: wood, metal."
+    },
+    {
+     "beat": "point",
+     "do": "Point at the card \"scriber\".",
+     "say": "Which column, and what does it do?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for the learner to say metal, fine line."
+    },
+    {
+     "beat": "reveal",
+     "do": "Sort the other tools."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "PRET.G7.TOOLS_.MEASURING_AND_MARKING_OU.MARK_TOOLS.M_MK_PUNCH_HOLE",
+     "listen_for": [
+      "Makes the hole"
+     ],
+     "ask": "What does a dot punch do?",
+     "repair": "The dent guides the drill bit."
+    },
+    {
+     "code": "PRET.G7.TOOLS_.MEASURING_AND_MARKING_OU.MARK_TOOLS.M_MK_DIVIDER_CUT",
+     "listen_for": [
+      "Cutting metal"
+     ],
+     "ask": "What is a divider used for?",
+     "repair": "Scribe an arc on a scrap plate with dividers; show they mark, never cut."
+    },
+    {
+     "code": "PRET.G7.TOOLS_.MEASURING_AND_MARKING_OU.MARK_TOOLS.M_MK_SQUARE_LENGTH",
+     "listen_for": [
+      "The length of a board"
+     ],
+     "ask": "What does a try-square check?",
+     "repair": "Check the corner of a book and a board with the try-square; it tests a right angle, not a length."
+    },
+    {
+     "code": "PRET.G7.TOOLS_.MEASURING_AND_MARKING_OU.MARK_TOOLS.M_MK_PENCIL_METAL",
+     "listen_for": [
+      "Pencil"
+     ],
+     "ask": "Which tool marks a fine line on steel?",
+     "repair": "Mark steel with a pencil and with a scriber, then wipe both; only the scribed line stays."
+    }
+   ],
+   "checks": [
+    {
+     "question": "What does a dot punch do?",
+     "answer": "Makes a small dent to mark a centre",
+     "shows": "punch"
+    },
+    {
+     "question": "Which tool marks a fine line on steel?",
+     "answer": "A scriber",
+     "shows": "scriber"
+    }
+   ]
+  },
+  {
+   "skill": "PRET.G7.TOOLS_.MEASURING_AND_MARKING_OU.TOOL_CHOOSE",
+   "key_step": "The learner selects the right measuring and marking out tool for a task by the material (wood or metal), the size and the accuracy needed: tape for long lengths, steel rule for short, callipers for diameters, try-square for right angles, scriber on metal, pencil or marking gauge on wood.",
+   "floor": {
+    "prerequisite": "Knows the marking tools.",
+    "question": "Which tool checks a right angle?",
+    "answer": "A try-square"
+   },
+   "representations": [
+    "task cards with a picture",
+    "a tool tray",
+    "a decision chart: material, size, accuracy"
+   ],
+   "steps": [
+    "Read the task.",
+    "Name the material and size.",
+    "Decide the accuracy needed.",
+    "Pick the tool and say why."
+   ],
+   "contexts": [
+    "fitting a window frame",
+    "marking a steel bracket",
+    "measuring a bolt for a nut"
+   ],
+   "board": [
+    {
+     "beat": "write",
+     "do": "Write the task: mark a line 20 mm from the edge of a wooden plank."
+    },
+    {
+     "beat": "point",
+     "do": "Point at \"wooden plank\".",
+     "say": "Which tool, and why?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for the learner to say a marking gauge."
+    },
+    {
+     "beat": "reveal",
+     "do": "Do three more task cards."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "PRET.G7.TOOLS_.MEASURING_AND_MARKING_OU.TOOL_CHOOSE.M_TC_TAPE_ALL",
+     "listen_for": [
+      "Tape measure"
+     ],
+     "ask": "Which tool measures the diameter of a bolt most exactly?",
+     "repair": "Measure a bolt with a tape and with callipers; compare how exact each reading is."
+    },
+    {
+     "code": "PRET.G7.TOOLS_.MEASURING_AND_MARKING_OU.TOOL_CHOOSE.M_TC_NEAREST",
+     "listen_for": [
+      "Whatever is nearest"
+     ],
+     "ask": "You need a right angle on a board. What do you pick?",
+     "repair": "Role-play a fundi job: pick the tool for each step and say why; the nearest tool gives a wrong mark."
+    },
+    {
+     "code": "PRET.G7.TOOLS_.MEASURING_AND_MARKING_OU.TOOL_CHOOSE.M_TC_PRECISION",
+     "listen_for": [
+      "No reason, both are the same"
+     ],
+     "ask": "Why use a scriber rather than a pencil on steel?",
+     "repair": "Compare a pencil line and a scribed line on steel under a magnifier; the scribed line is finer and stays."
+    },
+    {
+     "code": "PRET.G7.TOOLS_.MEASURING_AND_MARKING_OU.TOOL_CHOOSE.M_PT7_TC_GAUGE_DIVIDER",
+     "listen_for": [
+      "Dividers"
+     ],
+     "ask": "Which tool marks a line parallel to the edge of a wooden plank?",
+     "repair": "Show the marking gauge stock running along the edge while the spur marks; compare dividers, which swing arcs."
+    }
+   ],
+   "checks": [
+    {
+     "question": "Which tool measures the diameter of a bolt exactly?",
+     "answer": "Callipers",
+     "shows": "accuracy"
+    },
+    {
+     "question": "Which tool marks a line parallel to the edge of wood?",
+     "answer": "A marking gauge",
+     "shows": "wood"
+    }
+   ]
+  },
+  {
+   "skill": "PRET.G7.TOOLS_.MEASURING_AND_MARKING_OU.TOOL_CARE",
+   "key_step": "The learner explains how to care for measuring and marking out tools: wipe clean and dry, oil steel tools lightly, store each in its place (rack or shadow board), cover sharp points, never use rules or squares as levers or hammers, report damaged tools; how the learner cares for the tools in class is watched and marked with the rubric.",
+   "floor": {
+    "prerequisite": "Knows steel rusts.",
+    "question": "What happens to a steel tool left wet?",
+    "answer": "It rusts"
+   },
+   "representations": [
+    "a shadow board picture",
+    "a rusty and an oiled offcut",
+    "a care checklist"
+   ],
+   "steps": [
+    "Clean the tool.",
+    "Dry and oil steel.",
+    "Cover the points.",
+    "Store it in its place."
+   ],
+   "contexts": [
+    "end of a workshop lesson",
+    "a fundi's tool box",
+    "a damaged try-square"
+   ],
+   "board": [
+    {
+     "beat": "write",
+     "do": "Draw a shadow board with one outline empty."
+    },
+    {
+     "beat": "point",
+     "do": "Point at the empty outline.",
+     "say": "What does this tell the teacher, and where should the tool be?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for the learner to say a tool is missing; it goes back in its place."
+    },
+    {
+     "beat": "reveal",
+     "do": "List the care steps."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "PRET.G7.TOOLS_.MEASURING_AND_MARKING_OU.TOOL_CARE.M_CT_NO_OIL",
+     "listen_for": [
+      "Put it away wet"
+     ],
+     "ask": "What do you do to a steel tool after use?",
+     "repair": "Leave one wet and one oiled steel offcut for a week and compare."
+    },
+    {
+     "code": "PRET.G7.TOOLS_.MEASURING_AND_MARKING_OU.TOOL_CARE.M_CT_HAMMER",
+     "listen_for": [
+      "Nothing, it is strong"
+     ],
+     "ask": "What should you not do with a steel rule?",
+     "repair": "Show a bent steel rule whose scale is now wrong; a tool used as a lever or hammer loses its accuracy."
+    },
+    {
+     "code": "PRET.G7.TOOLS_.MEASURING_AND_MARKING_OU.TOOL_CARE.M_CT_HEAP",
+     "listen_for": [
+      "In a heap in the box"
+     ],
+     "ask": "Where do tools go at the end of the lesson?",
+     "repair": "Use a shadow board: each tool has its outline; a missing or misplaced tool is seen at once."
+    },
+    {
+     "code": "PRET.G7.TOOLS_.MEASURING_AND_MARKING_OU.TOOL_CARE.M_CT_POINTS_OPEN",
+     "listen_for": [
+      "With the sharp point uncovered"
+     ],
+     "ask": "How do you store a scriber or divider?",
+     "repair": "A point can hurt a hand and be blunted."
+    }
+   ],
+   "checks": [
+    {
+     "question": "What do you do to a steel rule after use?",
+     "answer": "Wipe it, dry it and oil it lightly",
+     "shows": "care"
+    },
+    {
+     "question": "How is a scriber stored?",
+     "answer": "With its point covered",
+     "shows": "safety"
+    }
+   ]
+  },
+  {
+   "skill": "PRET.G7.TOOLS_.MEASURING_AND_MARKING_OU.TOOL_USE",
+   "key_step": "The learner explains the right way to use measuring and marking out tools: read from the zero mark with the eye straight above it, hold the try-square stock against a straight face edge, scribe away from the body, punch where two scribed lines cross; the task is watched and marked with the rubric.",
+   "floor": {
+    "prerequisite": "Knows the measuring and marking out tools.",
+    "question": "Which tool checks a right angle?",
+    "answer": "A try-square"
+   },
+   "representations": [
+    "a ruler with a margin before 0",
+    "a drawing of an eye above and beside a scale",
+    "a steel plate with two crossing scribed lines"
+   ],
+   "steps": [
+    "Find the zero mark.",
+    "Read with the eye straight above.",
+    "Hold the try-square against the face edge and mark.",
+    "Scribe crossing lines, then punch the centre."
+   ],
+   "contexts": [
+    "marking a board for a shelf",
+    "marking a hole on a hinge plate",
+    "measuring a door frame at home"
+   ],
+   "board": [
+    {
+     "beat": "write",
+     "do": "Draw a ruler with a gap before 0 and a line measured from the end."
+    },
+    {
+     "beat": "point",
+     "do": "Point at the reading.",
+     "say": "Is this reading right? Why not?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for the learner to say it must start at 0."
+    },
+    {
+     "beat": "reveal",
+     "do": "Measure again from the 0 mark."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "PRET.G7.TOOLS_.MEASURING_AND_MARKING_OU.TOOL_USE.M_PT7_TU_RULE_END",
+     "listen_for": [
+      "At the end of the ruler"
+     ],
+     "ask": "A ruler has a small gap before the 0 mark. Where do you start measuring?",
+     "repair": "Measure the same line from the end and from the 0 mark; compare the two readings and see the difference."
+    },
+    {
+     "code": "PRET.G7.TOOLS_.MEASURING_AND_MARKING_OU.TOOL_USE.M_PT7_TU_PARALLAX",
+     "listen_for": [
+      "From the side, at an angle"
+     ],
+     "ask": "How should your eye be placed when you read a measurement on a rule?",
+     "repair": "Let two learners read the same mark from the left and right; they get different readings. Then both read from straight above."
+    },
+    {
+     "code": "PRET.G7.TOOLS_.MEASURING_AND_MARKING_OU.TOOL_USE.M_PT7_TU_TRY_STOCK",
+     "listen_for": [
+      "Anywhere on the board"
+     ],
+     "ask": "When marking a line square across a board, where is the stock of the try-square held?",
+     "repair": "Mark two lines, one with the stock loose and one held against the face edge; check both with the square. Only the second is square."
+    },
+    {
+     "code": "PRET.G7.TOOLS_.MEASURING_AND_MARKING_OU.TOOL_USE.M_PT7_TU_PUNCH_FIRST",
+     "listen_for": [
+      "First, at a point that looks about right"
+     ],
+     "ask": "When do you dot-punch the centre of a hole on a steel plate?",
+     "repair": "Scribe two crossing lines, then place the punch point where they meet. Show a plate punched first and how far off it is."
+    }
+   ],
+   "checks": [
+    {
+     "question": "Where do you place your eye to read a rule?",
+     "answer": "Straight above the mark",
+     "shows": "reading"
+    },
+    {
+     "question": "When is the dot punch used?",
+     "answer": "After scribing crossing lines, at the centre",
+     "shows": "order"
+    }
+   ]
+  }
+ ]
+}

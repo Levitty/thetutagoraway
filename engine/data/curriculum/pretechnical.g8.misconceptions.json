@@ -7,41 +7,41 @@
    "wrong_answer": "Only lightning",
    "correct_answer": "A candle or stove left unattended"
   },
-  "cause": "The child mixes up two ideas that sound alike or are taught close together.",
+  "cause": "News of bush fires and lightning makes fire seem to come from nature, not from homes.",
   "reveals": "Offer \"Only lightning\" next to the right answer and ask the question again in a new context.",
-  "help": "List the causes of fires near your home.",
+  "help": "List the fires the learner has heard of near home and school; most started with a stove, candle, wire or match.",
   "feedback": "Most fires at home start from careless human acts such as an unattended candle or stove.",
-  "source": "To confirm by a teacher: a safety statement written for Grade 8.",
+  "source": "To confirm by a Pre-Technical Studies teacher (SAFETY: the rule must match the school's workshop rules and the Kenyan guidance before a child sees it): a common classroom error, not traced to a study by the author.",
   "status": "draft"
  },
  "PRET.G8.FOUNDA.FIRE_SAFETY.FIRE_CAUSES.M_PT8_FC_WIRING": {
   "skill": "PRET.G8.FOUNDA.FIRE_SAFETY.FIRE_CAUSES",
-  "error": "Does not know faulty wiring can cause fire.",
+  "error": "Thinks electricity cannot start a fire; only an open flame can.",
   "example": {
-   "question": "Which can cause an electrical fire?",
-   "wrong_answer": "A switched-off lamp",
+   "question": "Which of these can start a fire in a house?",
+   "wrong_answer": "Only an open flame; wires cannot",
    "correct_answer": "Overloaded sockets or damaged wires"
   },
-  "cause": "The child mixes up two ideas that sound alike or are taught close together.",
-  "reveals": "Offer \"A switched-off lamp\" next to the right answer and ask the question again in a new context.",
-  "help": "Look for scorch marks on a socket.",
+  "cause": "The learner pictures fire as flames and does not link it with electricity.",
+  "reveals": "Offer \"Only an open flame; wires cannot\" beside \"Overloaded sockets or damaged wires\" and ask the child to choose.",
+  "help": "Show a scorched socket and an overloaded adaptor; explain that too much current heats the wires.",
   "feedback": "Overloaded sockets and damaged wires get hot and can start a fire.",
-  "source": "To confirm by a teacher: a safety statement written for Grade 8.",
+  "source": "To confirm by a Pre-Technical Studies teacher (SAFETY: the rule must match the school's workshop rules and the Kenyan guidance before a child sees it): a common classroom error, not traced to a study by the author.",
   "status": "draft"
  },
  "PRET.G8.FOUNDA.FIRE_SAFETY.FIRE_CAUSES.M_PT8_FC_FUEL": {
   "skill": "PRET.G8.FOUNDA.FIRE_SAFETY.FIRE_CAUSES",
-  "error": "Thinks stored paraffin or gas is harmless near heat.",
+  "error": "Thinks paraffin or gas is safe beside a lit stove because it is not burning yet.",
   "example": {
-   "question": "Why is paraffin kept away from the stove?",
-   "wrong_answer": "It is only heavy",
-   "correct_answer": "Its vapour can catch fire"
+   "question": "Why is paraffin stored away from a lit stove?",
+   "wrong_answer": "There is no need; it only burns inside the lamp",
+   "correct_answer": "Its vapour can catch fire from the heat or flame"
   },
-  "cause": "The child mixes up two ideas that sound alike or are taught close together.",
-  "reveals": "Offer \"It is only heavy\" next to the right answer and ask the question again in a new context.",
-  "help": "Ask what paraffin is for.",
+  "cause": "Paraffin and gas are not burning in their containers, so they seem safe.",
+  "reveals": "Offer \"There is no need; it only burns inside the lamp\" beside \"Its vapour can catch fire from the heat or flame\" and ask the child to choose.",
+  "help": "Explain that the vapour from paraffin, petrol and gas catches fire from a flame or spark nearby; store fuel away from heat.",
   "feedback": "Fuels burn easily, so they are stored away from heat.",
-  "source": "To confirm by a teacher: a safety statement written for Grade 8.",
+  "source": "To confirm by a Pre-Technical Studies teacher (SAFETY: the rule must match the school's workshop rules and the Kenyan guidance before a child sees it): a common classroom error, not traced to a study by the author.",
   "status": "draft"
  },
  "PRET.G8.FOUNDA.FIRE_SAFETY.FIRE_PREVENT.M_PT8_FP_MATCHES": {
@@ -52,26 +52,26 @@
    "wrong_answer": "On the kitchen table",
    "correct_answer": "Out of the reach of children"
   },
-  "cause": "The child mixes up two ideas that sound alike or are taught close together.",
+  "cause": "Matches are kept where adults use them, and the learner does not picture a small child reaching them.",
   "reveals": "Offer \"On the kitchen table\" next to the right answer and ask the question again in a new context.",
-  "help": "Walk the house and find where matches are kept.",
+  "help": "Walk through a home picture and find a high, closed place for matches and lighters.",
   "feedback": "Matches are kept out of the reach of children.",
-  "source": "To confirm by a teacher: a safety statement written for Grade 8.",
+  "source": "To confirm by a Pre-Technical Studies teacher (SAFETY: the rule must match the school's workshop rules and the Kenyan guidance before a child sees it): a common classroom error, not traced to a study by the author.",
   "status": "draft"
  },
  "PRET.G8.FOUNDA.FIRE_SAFETY.FIRE_PREVENT.M_PT8_FP_EXITS": {
   "skill": "PRET.G8.FOUNDA.FIRE_SAFETY.FIRE_PREVENT",
-  "error": "Blocks or locks exits.",
+  "error": "Thinks locking or blocking exits keeps people safe during a fire.",
   "example": {
    "question": "Which action helps people escape from a fire?",
    "wrong_answer": "Locking the exit door",
    "correct_answer": "Keeping the exits clear"
   },
-  "cause": "The child mixes up two ideas that sound alike or are taught close together.",
+  "cause": "At home a locked door means safety from thieves, so locking seems safe.",
   "reveals": "Offer \"Locking the exit door\" next to the right answer and ask the question again in a new context.",
-  "help": "Practise a drill.",
+  "help": "Run a drill with one exit \"blocked\"; time how long it takes to get out. Keep exits clear and unlocked from inside.",
   "feedback": "Exits must be clear and unlocked in a fire.",
-  "source": "To confirm by a teacher: a safety statement written for Grade 8.",
+  "source": "To confirm by a Pre-Technical Studies teacher (SAFETY: the rule must match the school's workshop rules and the Kenyan guidance before a child sees it): a common classroom error, not traced to a study by the author.",
   "status": "draft"
  },
  "PRET.G8.FOUNDA.FIRE_SAFETY.FIRE_PREVENT.M_PT8_FP_UNATTENDED": {
@@ -82,26 +82,131 @@
    "wrong_answer": "Leave it to burn",
    "correct_answer": "Put it out"
   },
-  "cause": "The child mixes up two ideas that sound alike or are taught close together.",
+  "cause": "A candle or jiko looks steady and safe for a short time.",
   "reveals": "Offer \"Leave it to burn\" next to the right answer and ask the question again in a new context.",
-  "help": "Count the times you left a candle.",
+  "help": "Agree a rule: put out a candle or switch off a stove every time you leave the room, even for a minute.",
   "feedback": "Never leave a stove or candle burning unattended.",
-  "source": "To confirm by a teacher: a safety statement written for Grade 8.",
+  "source": "To confirm by a Pre-Technical Studies teacher (SAFETY: the rule must match the school's workshop rules and the Kenyan guidance before a child sees it): a common classroom error, not traced to a study by the author.",
+  "status": "draft"
+ },
+ "PRET.G8.FOUNDA.FIRE_SAFETY.FIRE_EXTINGUISH.M_PT8_FE_WATER_OIL": {
+  "skill": "PRET.G8.FOUNDA.FIRE_SAFETY.FIRE_EXTINGUISH",
+  "error": "Pours water on a burning cooking pan.",
+  "example": {
+   "question": "Oil in a sufuria catches fire on the stove. What should be done?",
+   "wrong_answer": "Pour water on it at once",
+   "correct_answer": "Turn off the heat and cover the pan with a lid or fire blanket"
+  },
+  "cause": "Water puts out most fires the learner has seen, so it seems right for every fire.",
+  "reveals": "Offer \"Pour water on it at once\" beside \"Turn off the heat and cover the pan with a lid or fire blanket\" and ask the child to choose.",
+  "help": "Show a fire service video of water on burning oil (a fireball). Practise: heat off, cover, leave it covered.",
+  "feedback": "Never pour water on burning oil. Turn off the heat and cover the pan.",
+  "source": "To confirm by a Pre-Technical Studies teacher (SAFETY: the rule must match the school's workshop rules and the Kenyan guidance before a child sees it): a common classroom error, not traced to a study by the author.",
+  "status": "draft"
+ },
+ "PRET.G8.FOUNDA.FIRE_SAFETY.FIRE_EXTINGUISH.M_PT8_FE_WATER_ELEC": {
+  "skill": "PRET.G8.FOUNDA.FIRE_SAFETY.FIRE_EXTINGUISH",
+  "error": "Throws water on an electrical fire while the power is still on.",
+  "example": {
+   "question": "A socket and its cable are on fire. What is the first thing to do?",
+   "wrong_answer": "Throw a bucket of water on it",
+   "correct_answer": "Switch off the power at the main switch if it is safe, then use a carbon dioxide or dry powder extinguisher"
+  },
+  "cause": "Water is the fire-fighting tool the learner knows.",
+  "reveals": "Offer \"Throw a bucket of water on it\" beside \"Switch off the power at the main switch if it is safe, then use a carbon dioxide or dry powder extinguisher\" and ask the child to choose.",
+  "help": "Explain that water carries electricity and can shock the person; show where the main switch is in the school.",
+  "feedback": "Never use water on an electrical fire. Switch off the power first.",
+  "source": "To confirm by a Pre-Technical Studies teacher (SAFETY: the rule must match the school's workshop rules and the Kenyan guidance before a child sees it): a common classroom error, not traced to a study by the author.",
+  "status": "draft"
+ },
+ "PRET.G8.FOUNDA.FIRE_SAFETY.FIRE_EXTINGUISH.M_PT8_FE_AIM_TOP": {
+  "skill": "PRET.G8.FOUNDA.FIRE_SAFETY.FIRE_EXTINGUISH",
+  "error": "Aims a fire extinguisher at the tops of the flames.",
+  "example": {
+   "question": "Where do you aim a fire extinguisher?",
+   "wrong_answer": "At the tops of the flames",
+   "correct_answer": "At the base of the fire, sweeping from side to side"
+  },
+  "cause": "The flames are the part that looks dangerous, so they seem the target.",
+  "reveals": "Offer \"At the tops of the flames\" beside \"At the base of the fire, sweeping from side to side\" and ask the child to choose.",
+  "help": "Teach PASS: pull the pin, aim at the base, squeeze, sweep. The fuel at the base is what burns.",
+  "feedback": "Aim at the base of the fire, where the fuel is.",
+  "source": "To confirm by a Pre-Technical Studies teacher (SAFETY: the rule must match the school's workshop rules and the Kenyan guidance before a child sees it): a common classroom error, not traced to a study by the author.",
+  "status": "draft"
+ },
+ "PRET.G8.FOUNDA.FIRE_SAFETY.FIRE_EXTINGUISH.M_PT8_FE_RUN": {
+  "skill": "PRET.G8.FOUNDA.FIRE_SAFETY.FIRE_EXTINGUISH",
+  "error": "Runs when their clothes catch fire.",
+  "example": {
+   "question": "A learner's sleeve catches fire. What should she do?",
+   "wrong_answer": "Run to find water",
+   "correct_answer": "Stop, drop to the ground and roll, covering her face"
+  },
+  "cause": "Running away from danger feels natural.",
+  "reveals": "Offer \"Run to find water\" beside \"Stop, drop to the ground and roll, covering her face\" and ask the child to choose.",
+  "help": "Practise stop, drop and roll on a mat; explain that running fans the flames with air.",
+  "feedback": "If your clothes catch fire: stop, drop and roll.",
+  "source": "To confirm by a Pre-Technical Studies teacher (SAFETY: the rule must match the school's workshop rules and the Kenyan guidance before a child sees it): a common classroom error, not traced to a study by the author.",
+  "status": "draft"
+ },
+ "PRET.G8.FOUNDA.FIRE_SAFETY.FIRE_EXTINGUISH.M_PT8_FE_FIGHT_FIRST": {
+  "skill": "PRET.G8.FOUNDA.FIRE_SAFETY.FIRE_EXTINGUISH",
+  "error": "Tries to fight a growing fire before raising the alarm or getting people out.",
+  "example": {
+   "question": "A fire is spreading in a store room. What comes first?",
+   "wrong_answer": "Fight it alone with a bucket",
+   "correct_answer": "Raise the alarm, get everyone out and call 999 or 112"
+  },
+  "cause": "The learner wants to be brave and stop the fire quickly.",
+  "reveals": "Offer \"Fight it alone with a bucket\" beside \"Raise the alarm, get everyone out and call 999 or 112\" and ask the child to choose.",
+  "help": "Walk the school fire drill: alarm, out by the nearest exit, to the assembly point, never go back in. Only trained adults fight small fires.",
+  "feedback": "Raise the alarm and get out first. Call 999 or 112.",
+  "source": "To confirm by a Pre-Technical Studies teacher (SAFETY: the rule must match the school's workshop rules and the Kenyan guidance before a child sees it): a common classroom error, not traced to a study by the author.",
+  "status": "draft"
+ },
+ "PRET.G8.FOUNDA.FIRE_SAFETY.FIRE_CAUSES.M_PT8_FC_BURN_WIND": {
+  "skill": "PRET.G8.FOUNDA.FIRE_SAFETY.FIRE_CAUSES",
+  "error": "Thinks burning rubbish in the open is safe on a dry, windy day if someone stands nearby.",
+  "example": {
+   "question": "On a dry, windy day a farmer burns rubbish beside dry grass. What is the danger?",
+   "wrong_answer": "None, because he is standing nearby",
+   "correct_answer": "The wind can carry sparks to the grass and start a bush fire"
+  },
+  "cause": "The learner thinks a person watching can control any fire.",
+  "reveals": "Offer \"None, because he is standing nearby\" beside \"The wind can carry sparks to the grass and start a bush fire\" and ask the child to choose.",
+  "help": "Show how far sparks travel in wind; agree: never burn near dry grass or on a windy day.",
+  "feedback": "Wind carries sparks. Dry grass can start a bush fire.",
+  "source": "To confirm by a Pre-Technical Studies teacher (SAFETY: the rule must match the school's workshop rules and the Kenyan guidance before a child sees it): a common classroom error, not traced to a study by the author.",
+  "status": "draft"
+ },
+ "PRET.G8.FOUNDA.FIRE_SAFETY.FIRE_PREVENT.M_PT8_FP_OVERLOAD": {
+  "skill": "PRET.G8.FOUNDA.FIRE_SAFETY.FIRE_PREVENT",
+  "error": "Thinks plugging many appliances into one adaptor is safe if it fits.",
+  "example": {
+   "question": "Which habit helps prevent electrical fires?",
+   "wrong_answer": "Plugging many appliances into one adaptor",
+   "correct_answer": "Not overloading sockets, and switching off when not in use"
+  },
+  "cause": "If the plugs fit, the learner thinks the socket can take them.",
+  "reveals": "Offer \"Plugging many appliances into one adaptor\" beside \"Not overloading sockets, and switching off when not in use\" and ask the child to choose.",
+  "help": "Show an adaptor with an iron, a kettle and a heater; explain that too much current heats the wires.",
+  "feedback": "Do not overload sockets. Switch off when you finish.",
+  "source": "To confirm by a Pre-Technical Studies teacher (SAFETY: the rule must match the school's workshop rules and the Kenyan guidance before a child sees it): a common classroom error, not traced to a study by the author.",
   "status": "draft"
  },
  "PRET.G8.FOUNDA.DATA_SAFETY.DATA_THREATS.M_PT8_DT_NOT_IMPORTANT": {
   "skill": "PRET.G8.FOUNDA.DATA_SAFETY.DATA_THREATS",
-  "error": "Thinks data on a device is not worth protecting.",
+  "error": "Thinks only companies' data matters, not a learner's photos, school work or contacts.",
   "example": {
-   "question": "Why is data worth protecting?",
-   "wrong_answer": "It is not important",
+   "question": "Why is the data on your phone worth protecting?",
+   "wrong_answer": "Only big companies need to protect data",
    "correct_answer": "It is hard to replace and may be private"
   },
-  "cause": "The child mixes up two ideas that sound alike or are taught close together.",
-  "reveals": "Offer \"It is not important\" next to the right answer and ask the question again in a new context.",
-  "help": "Ask what would be lost if your phone fell in water.",
+  "cause": "The learner hears about data breaches at banks and thinks their own photos and work do not count.",
+  "reveals": "Offer \"Only big companies need to protect data\" beside \"It is hard to replace and may be private\" and ask the child to choose.",
+  "help": "List what is on a learner's phone or school account (photos, contacts, school work) and what losing it would mean.",
   "feedback": "Schoolwork, photos and messages are hard to replace and may be private.",
-  "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
+  "source": "To confirm by a Pre-Technical Studies teacher (SAFETY: the rule must match the school's workshop rules and the Kenyan guidance before a child sees it): a common classroom error, not traced to a study by the author.",
   "status": "draft"
  },
  "PRET.G8.FOUNDA.DATA_SAFETY.DATA_THREATS.M_PT8_DT_VIRUS_ONLY": {
@@ -112,84 +217,114 @@
    "wrong_answer": "Only through the internet",
    "correct_answer": "Through the internet, flash disks and unknown files"
   },
-  "cause": "The child mixes up two ideas that sound alike or are taught close together.",
+  "cause": "Warnings about viruses are always about the internet.",
   "reveals": "Offer \"Only through the internet\" next to the right answer and ask the question again in a new context.",
-  "help": "Ask how a flash disk can carry a virus.",
+  "help": "Show how a flash disk from a cyber café can carry a virus to the school computer; scan it first.",
   "feedback": "Viruses spread by flash disks and files as well as the internet.",
-  "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
+  "source": "To confirm by a Pre-Technical Studies teacher (SAFETY: the rule must match the school's workshop rules and the Kenyan guidance before a child sees it): a common classroom error, not traced to a study by the author.",
   "status": "draft"
  },
  "PRET.G8.FOUNDA.DATA_SAFETY.DATA_THREATS.M_PT8_DT_THEFT": {
   "skill": "PRET.G8.FOUNDA.DATA_SAFETY.DATA_THREATS",
-  "error": "Forgets that a lost or stolen device is a threat.",
+  "error": "Thinks viruses are the only threat to data, forgetting theft, loss and damage.",
   "example": {
-   "question": "Which is a threat to data?",
-   "wrong_answer": "A clean screen",
-   "correct_answer": "A stolen phone"
+   "question": "Which is a threat to the data on a phone?",
+   "wrong_answer": "Only viruses",
+   "correct_answer": "Losing the phone or having it stolen, as well as viruses"
   },
-  "cause": "The child mixes up two ideas that sound alike or are taught close together.",
-  "reveals": "Offer \"A clean screen\" next to the right answer and ask the question again in a new context.",
-  "help": "Ask what happens to the photos on a stolen phone.",
+  "cause": "Viruses are the threat talked about most, so theft, loss and damage are forgotten.",
+  "reveals": "Offer \"Only viruses\" beside \"Losing the phone or having it stolen, as well as viruses\" and ask the child to choose.",
+  "help": "List every way data can be lost: theft, loss, water, fire, power surges, deleting by mistake, viruses.",
   "feedback": "Theft or loss of a device is a threat to the data in it.",
-  "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
+  "source": "To confirm by a Pre-Technical Studies teacher (SAFETY: the rule must match the school's workshop rules and the Kenyan guidance before a child sees it): a common classroom error, not traced to a study by the author.",
   "status": "draft"
  },
  "PRET.G8.FOUNDA.DATA_SAFETY.DATA_PROTECT.M_PT8_DP_PASSWORD_SHARE": {
   "skill": "PRET.G8.FOUNDA.DATA_SAFETY.DATA_PROTECT",
-  "error": "Shares a password with a friend.",
+  "error": "Shares a password with a best friend because friends can be trusted.",
   "example": {
    "question": "What should you do with your password?",
    "wrong_answer": "Share it with a friend",
    "correct_answer": "Keep it secret"
   },
-  "cause": "The child mixes up two ideas that sound alike or are taught close together.",
+  "cause": "Friends are trusted, so sharing a password feels like friendship.",
   "reveals": "Offer \"Share it with a friend\" next to the right answer and ask the question again in a new context.",
-  "help": "Ask who could use your account.",
+  "help": "Ask what a friend could do with the account, even by mistake; friendships change but the account stays.",
   "feedback": "A password is kept secret.",
-  "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
+  "source": "To confirm by a Pre-Technical Studies teacher (SAFETY: the rule must match the school's workshop rules and the Kenyan guidance before a child sees it): a common classroom error, not traced to a study by the author.",
   "status": "draft"
  },
  "PRET.G8.FOUNDA.DATA_SAFETY.DATA_PROTECT.M_PT8_DP_BACKUP": {
   "skill": "PRET.G8.FOUNDA.DATA_SAFETY.DATA_PROTECT",
-  "error": "Keeps only one copy of important files.",
+  "error": "Thinks a device keeps files safe for ever, so a backup copy is not needed.",
   "example": {
-   "question": "Why make a backup?",
-   "wrong_answer": "It is not needed",
-   "correct_answer": "To keep a copy if the device is lost or fails"
+   "question": "Why make a backup of an important file?",
+   "wrong_answer": "There is no need; the computer keeps every file safe",
+   "correct_answer": "So a copy is safe if the device is lost or fails"
   },
-  "cause": "The child mixes up two ideas that sound alike or are taught close together.",
-  "reveals": "Offer \"It is not needed\" next to the right answer and ask the question again in a new context.",
-  "help": "Ask what happens to the only copy of an essay.",
+  "cause": "The learner has never lost a file and thinks devices keep files for ever.",
+  "reveals": "Offer \"There is no need; the computer keeps every file safe\" beside \"So a copy is safe if the device is lost or fails\" and ask the child to choose.",
+  "help": "Tell a story of an essay lost with a stolen phone; make a second copy on a flash disk or cloud account.",
   "feedback": "A backup is a second copy kept on another device.",
-  "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
+  "source": "To confirm by a Pre-Technical Studies teacher (SAFETY: the rule must match the school's workshop rules and the Kenyan guidance before a child sees it): a common classroom error, not traced to a study by the author.",
   "status": "draft"
  },
  "PRET.G8.FOUNDA.DATA_SAFETY.DATA_PROTECT.M_PT8_DP_UNKNOWN_LINK": {
   "skill": "PRET.G8.FOUNDA.DATA_SAFETY.DATA_PROTECT",
-  "error": "Opens unknown links and attachments.",
+  "error": "Opens a link from a stranger that promises a prize.",
   "example": {
-   "question": "What should you do with a link from a stranger?",
-   "wrong_answer": "Open it quickly",
-   "correct_answer": "Not open it and tell an adult"
+   "question": "A stranger sends a link: \"You have won a phone, click here\". What do you do?",
+   "wrong_answer": "Click it to claim the prize",
+   "correct_answer": "Do not open it; delete it and tell an adult"
   },
-  "cause": "The child mixes up two ideas that sound alike or are taught close together.",
-  "reveals": "Offer \"Open it quickly\" next to the right answer and ask the question again in a new context.",
-  "help": "Ask what a strange link could do.",
+  "cause": "A prize or a surprise feels exciting enough to click at once.",
+  "reveals": "Offer \"Click it to claim the prize\" beside \"Do not open it; delete it and tell an adult\" and ask the child to choose.",
+  "help": "Show a fake \"you have won\" message and list its clues; delete it and tell an adult.",
   "feedback": "Unknown links can carry viruses or tricks, so do not open them.",
-  "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
+  "source": "To confirm by a Pre-Technical Studies teacher (SAFETY: the rule must match the school's workshop rules and the Kenyan guidance before a child sees it): a common classroom error, not traced to a study by the author.",
+  "status": "draft"
+ },
+ "PRET.G8.FOUNDA.DATA_SAFETY.DATA_THREATS.M_PT8_DT_POWER": {
+  "skill": "PRET.G8.FOUNDA.DATA_SAFETY.DATA_THREATS",
+  "error": "Thinks a sudden power cut cannot harm data.",
+  "example": {
+   "question": "The power goes off while you are saving a file on a desktop computer. What can happen?",
+   "wrong_answer": "Nothing; data is always safe",
+   "correct_answer": "The file can be damaged or lost"
+  },
+  "cause": "The computer comes back on looking the same, so the learner thinks nothing happened.",
+  "reveals": "Offer \"Nothing; data is always safe\" beside \"The file can be damaged or lost\" and ask the child to choose.",
+  "help": "Explain that saving writes data step by step; a cut in the middle leaves it half written. Show a UPS (backup power).",
+  "feedback": "A power cut while saving can damage or lose a file.",
+  "source": "To confirm by a Pre-Technical Studies teacher (SAFETY: the rule must match the school's workshop rules and the Kenyan guidance before a child sees it): a common classroom error, not traced to a study by the author.",
+  "status": "draft"
+ },
+ "PRET.G8.FOUNDA.DATA_SAFETY.DATA_PROTECT.M_PT8_DP_WEAK_PW": {
+  "skill": "PRET.G8.FOUNDA.DATA_SAFETY.DATA_PROTECT",
+  "error": "Uses an easy password such as a name, a birth date or 12345678.",
+  "example": {
+   "question": "Which makes the strongest password?",
+   "wrong_answer": "Your name and year of birth, so you never forget it",
+   "correct_answer": "A long mix of letters, numbers and symbols that has nothing to do with you"
+  },
+  "cause": "An easy password is easy to remember, and the learner does not picture someone guessing it.",
+  "reveals": "Offer \"Your name and year of birth, so you never forget it\" beside \"A long mix of letters, numbers and symbols that has nothing to do with you\" and ask the child to choose.",
+  "help": "Show how quickly a name or date can be guessed by someone who knows you; build a long passphrase from unrelated words and numbers.",
+  "feedback": "Use a long password that others cannot guess. Never use your name or birth date.",
+  "source": "To confirm by a Pre-Technical Studies teacher (SAFETY: the rule must match the school's workshop rules and the Kenyan guidance before a child sees it): a common classroom error, not traced to a study by the author.",
   "status": "draft"
  },
  "PRET.G8.COMMUN.PLANE_GEOMETRY.DRAW_INSTRUMENTS.M_PT8_DI_TOOL_MIX": {
   "skill": "PRET.G8.COMMUN.PLANE_GEOMETRY.DRAW_INSTRUMENTS",
-  "error": "Mixes up what the instruments do.",
+  "error": "Thinks a set square draws circles, mixing it with the compass.",
   "example": {
    "question": "Which instrument draws circles?",
    "wrong_answer": "A set square",
    "correct_answer": "A compass"
   },
-  "cause": "The child mixes up two ideas that sound alike or are taught close together.",
+  "cause": "Set squares and compasses both sit in the geometry set and are learnt together.",
   "reveals": "Offer \"A set square\" next to the right answer and ask the question again in a new context.",
-  "help": "Match each instrument to a job.",
+  "help": "Match each instrument to one job on the board; draw a circle with a compass and an angle with a set square.",
   "feedback": "The compass draws circles and arcs. The set square draws upright and slanted lines.",
   "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
   "status": "draft"
@@ -202,9 +337,9 @@
    "wrong_answer": "Angles",
    "correct_answer": "Horizontal lines"
   },
-  "cause": "The child mixes up two ideas that sound alike or are taught close together.",
+  "cause": "The T-square looks like a large ruler with a corner, so it seems to make angles.",
   "reveals": "Offer \"Angles\" next to the right answer and ask the question again in a new context.",
-  "help": "Slide it along the board.",
+  "help": "Slide the T-square stock along the board edge and draw parallel horizontal lines; set squares rest on it for angles.",
   "feedback": "The T-square draws horizontal lines. The protractor measures angles.",
   "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
   "status": "draft"
@@ -217,9 +352,9 @@
    "wrong_answer": "Length",
    "correct_answer": "Angles"
   },
-  "cause": "The child mixes up two ideas that sound alike or are taught close together.",
+  "cause": "The protractor has a numbered scale like a ruler.",
   "reveals": "Offer \"Length\" next to the right answer and ask the question again in a new context.",
-  "help": "Measure a corner with it.",
+  "help": "Measure a corner with the protractor and a side with a rule; one gives degrees, the other millimetres.",
   "feedback": "A protractor measures angles. A ruler measures length.",
   "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
   "status": "draft"
@@ -232,41 +367,131 @@
    "wrong_answer": "At the top left",
    "correct_answer": "At the bottom right"
   },
-  "cause": "The child mixes up two ideas that sound alike or are taught close together.",
+  "cause": "Titles in books and essays are at the top, so the learner puts the title block there.",
   "reveals": "Offer \"At the top left\" next to the right answer and ask the question again in a new context.",
-  "help": "Look at a real drawing sheet.",
+  "help": "Look at a real drawing sheet: the title block is at the bottom right, where it can be read when sheets are folded or filed.",
   "feedback": "The title block is at the bottom right of the sheet.",
   "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
   "status": "draft"
  },
  "PRET.G8.COMMUN.PLANE_GEOMETRY.DRAW_LAYOUT.M_PT8_DL_NO_BORDER": {
   "skill": "PRET.G8.COMMUN.PLANE_GEOMETRY.DRAW_LAYOUT",
-  "error": "Leaves out the border.",
+  "error": "Leaves out the border, thinking the edge of the paper is enough.",
   "example": {
-   "question": "What is the border of a drawing sheet?",
-   "wrong_answer": "A frame drawn a little inside the edges",
-   "correct_answer": "A line drawn across the middle"
+   "question": "Why is a border drawn on a drawing sheet?",
+   "wrong_answer": "It is not needed; the paper edge is enough",
+   "correct_answer": "It frames the drawing and leaves a margin for handling and filing"
   },
-  "cause": "The child mixes up two ideas that sound alike or are taught close together.",
-  "reveals": "Offer \"A frame drawn a little inside the edges\" next to the right answer and ask the question again in a new context.",
-  "help": "Draw a border on a sheet.",
+  "cause": "The edge of the paper seems to be a frame already.",
+  "reveals": "Offer \"It is not needed; the paper edge is enough\" beside \"It frames the drawing and leaves a margin for handling and filing\" and ask the child to choose.",
+  "help": "Draw a border 10 mm inside the edges; explain it frames the drawing and leaves a margin for handling and filing.",
   "feedback": "The border is a frame drawn inside the edges of the sheet.",
   "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
   "status": "draft"
  },
  "PRET.G8.COMMUN.PLANE_GEOMETRY.DRAW_LAYOUT.M_PT8_DL_A4": {
   "skill": "PRET.G8.COMMUN.PLANE_GEOMETRY.DRAW_LAYOUT",
-  "error": "Gives the wrong size of A4.",
+  "error": "Gives A3's size, 420 by 297 mm, for A4.",
   "example": {
    "question": "What is the size of A4?",
    "wrong_answer": "420 by 297 millimetres",
    "correct_answer": "297 by 210 millimetres"
   },
-  "cause": "The child mixes up two ideas that sound alike or are taught close together.",
+  "cause": "A3 and A4 are learnt together, and the learner gives the larger size.",
   "reveals": "Offer \"420 by 297 millimetres\" next to the right answer and ask the question again in a new context.",
-  "help": "Measure a sheet of A4 paper.",
+  "help": "Fold an A3 sheet in half: it makes two A4 sheets. Measure: A4 is 297 by 210 mm.",
   "feedback": "A4 is 297 by 210 millimetres.",
   "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
+  "status": "draft"
+ },
+ "PRET.G8.COMMUN.PLANE_GEOMETRY.GEOM_CONSTRUCT.M_PT8_GC_HEX_SIDE": {
+  "skill": "PRET.G8.COMMUN.PLANE_GEOMETRY.GEOM_CONSTRUCT",
+  "error": "Steps off a hexagon in a circle with the diameter instead of the radius.",
+  "example": {
+   "question": "A regular hexagon is drawn in a circle of radius 30 mm. How long is each side?",
+   "wrong_answer": "60 mm, the diameter",
+   "correct_answer": "30 mm, the same as the radius"
+  },
+  "cause": "The diameter is the length the learner measures most often for a circle.",
+  "reveals": "Offer \"60 mm, the diameter\" beside \"30 mm, the same as the radius\" and ask the child to choose.",
+  "help": "Step the compass round the circle at the radius: it fits exactly six times. Join the points.",
+  "feedback": "The side of a hexagon in a circle equals the radius.",
+  "source": "To confirm by a Pre-Technical Studies teacher: a common classroom error, not traced to a study by the author.",
+  "status": "draft"
+ },
+ "PRET.G8.COMMUN.PLANE_GEOMETRY.GEOM_CONSTRUCT.M_PT8_GC_BISECT_SHORT": {
+  "skill": "PRET.G8.COMMUN.PLANE_GEOMETRY.GEOM_CONSTRUCT",
+  "error": "Sets the compass to less than half the line when bisecting, so the arcs never meet.",
+  "example": {
+   "question": "To bisect a line AB with a compass, the radius must be...",
+   "wrong_answer": "Less than half of AB",
+   "correct_answer": "More than half of AB"
+  },
+  "cause": "A small radius feels neater and safer.",
+  "reveals": "Offer \"Less than half of AB\" beside \"More than half of AB\" and ask the child to choose.",
+  "help": "Try both on the board: arcs with a short radius do not cross. Use a radius clearly more than half.",
+  "feedback": "Open the compass to more than half the line so the arcs cross.",
+  "source": "To confirm by a Pre-Technical Studies teacher: a common classroom error, not traced to a study by the author.",
+  "status": "draft"
+ },
+ "PRET.G8.COMMUN.PLANE_GEOMETRY.GEOM_CONSTRUCT.M_PT8_GC_SLOT_RADIUS": {
+  "skill": "PRET.G8.COMMUN.PLANE_GEOMETRY.GEOM_CONSTRUCT",
+  "error": "Uses the full width of a slot as the radius of its semicircular ends.",
+  "example": {
+   "question": "A slot is 20 mm wide with semicircular ends. What radius draws each end?",
+   "wrong_answer": "20 mm, the full width",
+   "correct_answer": "10 mm, half the width"
+  },
+  "cause": "The width is the number given, so the learner uses it straight away.",
+  "reveals": "Offer \"20 mm, the full width\" beside \"10 mm, half the width\" and ask the child to choose.",
+  "help": "Draw the centre line, mark the two centres on it, and set the compass to half the width.",
+  "feedback": "The radius of a semicircular end is half the width of the slot.",
+  "source": "To confirm by a Pre-Technical Studies teacher: a common classroom error, not traced to a study by the author.",
+  "status": "draft"
+ },
+ "PRET.G8.COMMUN.PLANE_GEOMETRY.GEOM_CONSTRUCT.M_PT8_GC_PROTRACTOR": {
+  "skill": "PRET.G8.COMMUN.PLANE_GEOMETRY.GEOM_CONSTRUCT",
+  "error": "Thinks a 60 degree angle can only be drawn with a protractor.",
+  "example": {
+   "question": "How is a 60 degree angle constructed with a compass and a ruler?",
+   "wrong_answer": "It cannot be; a protractor is needed",
+   "correct_answer": "Arc from the end of the line, then the same radius from where it cuts the line; join to the crossing"
+  },
+  "cause": "Angles have always been measured with a protractor in the learner's lessons.",
+  "reveals": "Offer \"It cannot be; a protractor is needed\" beside \"Arc from the end of the line, then the same radius from where it cuts the line; join to the crossing\" and ask the child to choose.",
+  "help": "Construct 60 degrees with equal arcs and check it with a protractor; the two agree.",
+  "feedback": "Equal arcs make an equilateral triangle, so the angle is 60 degrees.",
+  "source": "To confirm by a Pre-Technical Studies teacher: a common classroom error, not traced to a study by the author.",
+  "status": "draft"
+ },
+ "PRET.G8.COMMUN.PLANE_GEOMETRY.DRAW_INSTRUMENTS.M_PT8_DI_SET_SQUARE": {
+  "skill": "PRET.G8.COMMUN.PLANE_GEOMETRY.DRAW_INSTRUMENTS",
+  "error": "Uses the 45 degree set square to draw a 60 degree line.",
+  "example": {
+   "question": "Which set square draws a 60 degree line?",
+   "wrong_answer": "The 45 degree set square",
+   "correct_answer": "The 30-60 degree set square"
+  },
+  "cause": "Both are called set squares and look alike from a distance.",
+  "reveals": "Offer \"The 45 degree set square\" beside \"The 30-60 degree set square\" and ask the child to choose.",
+  "help": "Hold up both set squares, read the angles at their corners, and draw 30, 45 and 60 degree lines on the T-square.",
+  "feedback": "The 30-60 degree set square draws 30 and 60 degree lines.",
+  "source": "To confirm by a Pre-Technical Studies teacher: a common classroom error, not traced to a study by the author.",
+  "status": "draft"
+ },
+ "PRET.G8.COMMUN.PLANE_GEOMETRY.DRAW_LAYOUT.M_PT8_DL_TSQUARE_EDGE": {
+  "skill": "PRET.G8.COMMUN.PLANE_GEOMETRY.DRAW_LAYOUT",
+  "error": "Slides the T-square stock along any edge of the drawing board, top or bottom.",
+  "example": {
+   "question": "Along which edge of the drawing board does the stock of the T-square slide?",
+   "wrong_answer": "Any edge, top or bottom",
+   "correct_answer": "One straight working edge (the left edge for a right-handed person)"
+  },
+  "cause": "All four edges look the same to the learner.",
+  "reveals": "Offer \"Any edge, top or bottom\" beside \"One straight working edge (the left edge for a right-handed person)\" and ask the child to choose.",
+  "help": "Show that only one edge is kept true; using others gives lines that are not parallel.",
+  "feedback": "Keep the T-square stock against the one working edge of the board.",
+  "source": "To confirm by a Pre-Technical Studies teacher: a common classroom error, not traced to a study by the author.",
   "status": "draft"
  },
  "PRET.G8.COMMUN.DIMENSIONING.DIM_TYPES.M_PT8_DM_LINE_MIX": {
@@ -277,9 +502,9 @@
    "wrong_answer": "The extension line",
    "correct_answer": "The dimension line"
   },
-  "cause": "The child mixes up two ideas that sound alike or are taught close together.",
+  "cause": "Both lines are thin and drawn at the same time.",
   "reveals": "Offer \"The extension line\" next to the right answer and ask the question again in a new context.",
-  "help": "Look at a dimensioned drawing.",
+  "help": "Label a dimensioned drawing: projection (extension) lines come out from the object; the dimension line between them has arrowheads and the number.",
   "feedback": "The dimension line has arrowheads. Extension lines stretch out from the object.",
   "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
   "status": "draft"
@@ -292,71 +517,116 @@
    "wrong_answer": "Metres",
    "correct_answer": "Millimetres"
   },
-  "cause": "The child mixes up two ideas that sound alike or are taught close together.",
+  "cause": "Building sizes are said in metres, so the learner expects them on drawings.",
   "reveals": "Offer \"Metres\" next to the right answer and ask the question again in a new context.",
-  "help": "Look at a drawing of a small part.",
+  "help": "Look at a drawing of a small part: 45 means 45 mm. Most technical drawings use millimetres, stated in a note.",
   "feedback": "Sizes on drawings are normally in millimetres.",
   "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
   "status": "draft"
  },
  "PRET.G8.COMMUN.DIMENSIONING.DIM_TYPES.M_PT8_DM_OBJECT_LINE": {
   "skill": "PRET.G8.COMMUN.DIMENSIONING.DIM_TYPES",
-  "error": "Uses the object line as a dimension line.",
+  "error": "Thinks the dimension line is the thick line that shows the shape.",
   "example": {
    "question": "Which line is thick and shows the shape?",
    "wrong_answer": "The dimension line",
    "correct_answer": "The object line"
   },
-  "cause": "The child mixes up two ideas that sound alike or are taught close together.",
+  "cause": "The dimension feels important, so the learner thinks its line must be the thick one.",
   "reveals": "Offer \"The dimension line\" next to the right answer and ask the question again in a new context.",
-  "help": "Compare thick and thin lines.",
+  "help": "Thick lines are only for the object outline; every added line (dimension, projection) is thin.",
   "feedback": "The object line is thick. The dimension line is thin.",
   "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
   "status": "draft"
  },
  "PRET.G8.COMMUN.DIMENSIONING.DIM_READ.M_PT8_DR_ADD": {
   "skill": "PRET.G8.COMMUN.DIMENSIONING.DIM_READ",
-  "error": "Adds the wrong dimensions to find the overall length.",
+  "error": "Subtracts the sections instead of adding them to find the overall length.",
   "example": {
    "question": "A part is 30 mm and 45 mm long in two sections. What is the overall length?",
    "wrong_answer": "15 mm",
    "correct_answer": "75 mm"
   },
-  "cause": "The child mixes up two ideas that sound alike or are taught close together.",
+  "cause": "The learner subtracts the two numbers because \"difference\" sums are fresh in mind.",
   "reveals": "Offer \"15 mm\" next to the right answer and ask the question again in a new context.",
-  "help": "Draw the sections end to end.",
+  "help": "Draw the two sections end to end and measure the whole; overall length = sum of the sections.",
   "feedback": "Add the sections: 30 plus 45 is 75 millimetres.",
   "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
   "status": "draft"
  },
  "PRET.G8.COMMUN.DIMENSIONING.DIM_READ.M_PT8_DR_DIAMETER": {
   "skill": "PRET.G8.COMMUN.DIMENSIONING.DIM_READ",
-  "error": "Says the diameter is half the radius.",
+  "error": "Halves the radius to get the diameter instead of doubling it.",
   "example": {
    "question": "The radius of a circle is 20 mm. What is the diameter?",
    "wrong_answer": "10 mm",
    "correct_answer": "40 mm"
   },
-  "cause": "The child mixes up two ideas that sound alike or are taught close together.",
+  "cause": "The learner halves when moving from one circle measure to the other.",
   "reveals": "Offer \"10 mm\" next to the right answer and ask the question again in a new context.",
-  "help": "Draw a circle and a line across it.",
+  "help": "Draw a circle with a line through the centre: the diameter is two radii.",
   "feedback": "The diameter is twice the radius: 40 millimetres.",
   "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
   "status": "draft"
  },
  "PRET.G8.COMMUN.DIMENSIONING.DIM_READ.M_PT8_DR_UNIT": {
   "skill": "PRET.G8.COMMUN.DIMENSIONING.DIM_READ",
-  "error": "Leaves out the unit.",
+  "error": "Does not look for the units note, so cannot tell whether 45 means millimetres or centimetres.",
   "example": {
-   "question": "What must be written with a dimension?",
-   "wrong_answer": "Nothing, just the number",
-   "correct_answer": "The number and the unit"
+   "question": "A drawing shows \"45\" with no unit beside it. How does the reader know the unit?",
+   "wrong_answer": "They guess from the size of the drawing",
+   "correct_answer": "From the note, such as ALL DIMENSIONS IN MILLIMETRES, in the title block"
   },
-  "cause": "The child mixes up two ideas that sound alike or are taught close together.",
-  "reveals": "Offer \"Nothing, just the number\" next to the right answer and ask the question again in a new context.",
-  "help": "Read a dimension and say the unit.",
+  "cause": "The learner sees bare numbers on a drawing and does not look for the note that gives the unit.",
+  "reveals": "Offer \"They guess from the size of the drawing\" beside \"From the note, such as ALL DIMENSIONS IN MILLIMETRES, in the title block\" and ask the child to choose.",
+  "help": "Find the note \"ALL DIMENSIONS IN MILLIMETRES\" in the title block; the unit is given once for the whole drawing.",
   "feedback": "A dimension needs a unit, normally millimetres.",
   "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
+  "status": "draft"
+ },
+ "PRET.G8.COMMUN.DIMENSIONING.DIM_TYPES.M_PT8_DM_TOUCH": {
+  "skill": "PRET.G8.COMMUN.DIMENSIONING.DIM_TYPES",
+  "error": "Draws projection (extension) lines touching the outline of the object.",
+  "example": {
+   "question": "Where does a projection (extension) line start?",
+   "wrong_answer": "Touching the outline of the object",
+   "correct_answer": "A small gap away from the outline"
+  },
+  "cause": "The learner wants the line to look joined to the object.",
+  "reveals": "Offer \"Touching the outline of the object\" beside \"A small gap away from the outline\" and ask the child to choose.",
+  "help": "Show a drawing where touching lines make the outline look bigger; leave a small gap (about 1 to 2 mm).",
+  "feedback": "Leave a small gap between the outline and a projection line.",
+  "source": "To confirm by a Pre-Technical Studies teacher: a common classroom error, not traced to a study by the author.",
+  "status": "draft"
+ },
+ "PRET.G8.COMMUN.DIMENSIONING.DIM_TYPES.M_PT8_DM_CHAIN_PARALLEL": {
+  "skill": "PRET.G8.COMMUN.DIMENSIONING.DIM_TYPES",
+  "error": "Mixes up chain and parallel dimensioning.",
+  "example": {
+   "question": "Which type of dimensioning measures every size from one datum edge?",
+   "wrong_answer": "Chain dimensioning",
+   "correct_answer": "Parallel (datum) dimensioning"
+  },
+  "cause": "Both types have rows of dimensions, and the names do not say how they are measured.",
+  "reveals": "Offer \"Chain dimensioning\" beside \"Parallel (datum) dimensioning\" and ask the child to choose.",
+  "help": "Draw both on the board: chain links one size to the next; parallel starts every size from the same edge.",
+  "feedback": "Parallel dimensioning measures every size from one datum edge.",
+  "source": "To confirm by a Pre-Technical Studies teacher: a common classroom error, not traced to a study by the author.",
+  "status": "draft"
+ },
+ "PRET.G8.COMMUN.DIMENSIONING.DIM_READ.M_PT8_DR_MEASURE_PAPER": {
+  "skill": "PRET.G8.COMMUN.DIMENSIONING.DIM_READ",
+  "error": "Measures a scaled drawing with a ruler instead of reading the dimension written on it.",
+  "example": {
+   "question": "A drawing at 1:2 shows a line 25 mm long on the paper, dimensioned 50. What is the real length?",
+   "wrong_answer": "25 mm, as measured on the paper",
+   "correct_answer": "50 mm, the dimension written"
+  },
+  "cause": "Measuring with a ruler feels more exact than trusting a number.",
+  "reveals": "Offer \"25 mm, as measured on the paper\" beside \"50 mm, the dimension written\" and ask the child to choose.",
+  "help": "Explain that dimensions always give the real size, whatever the scale; measure, then read the number, and compare.",
+  "feedback": "A dimension gives the real size. Read it; do not measure the paper.",
+  "source": "To confirm by a Pre-Technical Studies teacher: a common classroom error, not traced to a study by the author.",
   "status": "draft"
  },
  "PRET.G8.COMMUN.PLAIN_SCALE_DRAWING.PLAIN_SCALE.M_PT8_SC_INVERT": {
@@ -367,9 +637,9 @@
    "wrong_answer": "The drawing is 50 times bigger",
    "correct_answer": "One unit on the drawing stands for 50 on the object"
   },
-  "cause": "The child mixes up two ideas that sound alike or are taught close together.",
+  "cause": "The bigger number in 1:50 seems to belong to the drawing.",
   "reveals": "Offer \"The drawing is 50 times bigger\" next to the right answer and ask the question again in a new context.",
-  "help": "Draw a room on a page.",
+  "help": "Read 1:50 as \"1 on the drawing stands for 50 on the object\"; the drawing is smaller.",
   "feedback": "A scale of 1:50 is a reduction: the object is 50 times bigger than the drawing.",
   "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
   "status": "draft"
@@ -379,12 +649,12 @@
   "error": "Divides where he should multiply.",
   "example": {
    "question": "A line is 4 cm on a 1:50 drawing. What is the real length?",
-   "wrong_answer": "4 divided by 50",
+   "wrong_answer": "0.08 cm (4 divided by 50)",
    "correct_answer": "4 times 50, which is 200 cm"
   },
-  "cause": "The child mixes up two ideas that sound alike or are taught close together.",
-  "reveals": "Offer \"4 divided by 50\" next to the right answer and ask the question again in a new context.",
-  "help": "Make a scale ruler.",
+  "cause": "Dividing feels right whenever a scale is used.",
+  "reveals": "Offer \"0.08 cm (4 divided by 50)\" beside \"4 times 50, which is 200 cm\" and ask the child to choose.",
+  "help": "Ask: the drawing is small, the real wall is big; to go from drawing to real, multiply.",
   "feedback": "Multiply the drawing length by 50: 4 times 50 is 200 centimetres.",
   "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
   "status": "draft"
@@ -397,11 +667,86 @@
    "wrong_answer": "A reduction",
    "correct_answer": "An enlargement"
   },
-  "cause": "The child mixes up two ideas that sound alike or are taught close together.",
+  "cause": "The learner has only met reducing scales.",
   "reveals": "Offer \"A reduction\" next to the right answer and ask the question again in a new context.",
-  "help": "Draw a small part twice as big.",
+  "help": "Draw a small screw at 2:1; it comes out twice as big. The first number is the drawing.",
   "feedback": "A scale of 2:1 makes the drawing twice as big as the object.",
   "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
+  "status": "draft"
+ },
+ "PRET.G8.COMMUN.PLAIN_SCALE_DRAWING.SCALE_CONVERT.M_PT8_SV_UNITS": {
+  "skill": "PRET.G8.COMMUN.PLAIN_SCALE_DRAWING.SCALE_CONVERT",
+  "error": "Divides metres by the scale without converting to millimetres first.",
+  "example": {
+   "question": "A wall 6 m long is drawn at 1:50. How long is it on the drawing?",
+   "wrong_answer": "0.12 mm",
+   "correct_answer": "120 mm"
+  },
+  "cause": "The learner divides the number given and forgets the unit.",
+  "reveals": "Offer \"0.12 mm\" beside \"120 mm\" and ask the child to choose.",
+  "help": "Write 6 m = 6,000 mm first, then divide by 50. Check: 120 mm fits on a page; 0.12 mm cannot be drawn.",
+  "feedback": "Change to millimetres first, then divide by the scale.",
+  "source": "To confirm by a Pre-Technical Studies teacher: a common classroom error, not traced to a study by the author.",
+  "status": "draft"
+ },
+ "PRET.G8.COMMUN.PLAIN_SCALE_DRAWING.SCALE_CONVERT.M_PT8_SV_MULTIPLY": {
+  "skill": "PRET.G8.COMMUN.PLAIN_SCALE_DRAWING.SCALE_CONVERT",
+  "error": "Multiplies by the scale for a reduction.",
+  "example": {
+   "question": "A bench 2,000 mm long is drawn at 1:20. How long is it on the drawing?",
+   "wrong_answer": "40,000 mm",
+   "correct_answer": "100 mm"
+  },
+  "cause": "In other sums the bigger number is multiplied, and the learner does not check the size makes sense.",
+  "reveals": "Offer \"40,000 mm\" beside \"100 mm\" and ask the child to choose.",
+  "help": "Ask: is the drawing smaller or bigger than the bench? Smaller, so divide.",
+  "feedback": "For 1:20 the drawing is 20 times smaller: divide by 20.",
+  "source": "To confirm by a Pre-Technical Studies teacher: a common classroom error, not traced to a study by the author.",
+  "status": "draft"
+ },
+ "PRET.G8.COMMUN.PLAIN_SCALE_DRAWING.SCALE_CONVERT.M_PT8_SV_ENLARGE": {
+  "skill": "PRET.G8.COMMUN.PLAIN_SCALE_DRAWING.SCALE_CONVERT",
+  "error": "Divides for an enlargement scale such as 2:1.",
+  "example": {
+   "question": "A screw 15 mm long is drawn at 2:1. How long is it on the drawing?",
+   "wrong_answer": "7.5 mm",
+   "correct_answer": "30 mm"
+  },
+  "cause": "The learner has only met reducing scales and divides every time.",
+  "reveals": "Offer \"7.5 mm\" beside \"30 mm\" and ask the child to choose.",
+  "help": "Read 2:1 as \"2 on the drawing for 1 on the object\": twice as big, so multiply by 2.",
+  "feedback": "At 2:1 the drawing is twice the real size.",
+  "source": "To confirm by a Pre-Technical Studies teacher: a common classroom error, not traced to a study by the author.",
+  "status": "draft"
+ },
+ "PRET.G8.COMMUN.PLAIN_SCALE_DRAWING.SCALE_CONVERT.M_PT8_SV_FIT": {
+  "skill": "PRET.G8.COMMUN.PLAIN_SCALE_DRAWING.SCALE_CONVERT",
+  "error": "Chooses a scale that makes the drawing bigger than the sheet.",
+  "example": {
+   "question": "A room 8 m long is drawn on A4 paper (297 mm long). Which scale fits?",
+   "wrong_answer": "1:10, which makes it 800 mm",
+   "correct_answer": "1:50, which makes it 160 mm"
+  },
+  "cause": "A larger drawing seems clearer, and the learner does not check the sheet size.",
+  "reveals": "Offer \"1:10, which makes it 800 mm\" beside \"1:50, which makes it 160 mm\" and ask the child to choose.",
+  "help": "Work out the drawing length for 1:10, 1:20 and 1:50 and compare each with 297 mm.",
+  "feedback": "Choose a scale that makes the drawing fit inside the border.",
+  "source": "To confirm by a Pre-Technical Studies teacher: a common classroom error, not traced to a study by the author.",
+  "status": "draft"
+ },
+ "PRET.G8.COMMUN.PLAIN_SCALE_DRAWING.PLAIN_SCALE.M_PT8_SC_DIVISIONS": {
+  "skill": "PRET.G8.COMMUN.PLAIN_SCALE_DRAWING.PLAIN_SCALE",
+  "error": "Thinks the small (secondary) divisions of a plain scale are at the right-hand end.",
+  "example": {
+   "question": "On a plain scale, where are the small (secondary) divisions?",
+   "wrong_answer": "At the right-hand end, after the last main division",
+   "correct_answer": "To the left of zero, in the first main division"
+  },
+  "cause": "On a ruler the numbers run left to right, so the learner expects the fine part at the end.",
+  "reveals": "Offer \"At the right-hand end, after the last main division\" beside \"To the left of zero, in the first main division\" and ask the child to choose.",
+  "help": "Construct a plain scale on the board: mark zero one main division in from the left, and divide that first division into tenths.",
+  "feedback": "On a plain scale the small divisions are to the left of zero.",
+  "source": "To confirm by a Pre-Technical Studies teacher: a common classroom error, not traced to a study by the author.",
   "status": "draft"
  },
  "PRET.G8.COMMUN.VISUAL_PROGRAMMING.VISUAL_PROG.M_PT8_VP_TEXT": {
@@ -412,24 +757,24 @@
    "wrong_answer": "By typing lines of code",
    "correct_answer": "By joining blocks"
   },
-  "cause": "The child mixes up two ideas that sound alike or are taught close together.",
+  "cause": "The learner has heard that programmers type code and expects all programming to look like that.",
   "reveals": "Offer \"By typing lines of code\" next to the right answer and ask the question again in a new context.",
-  "help": "Try Scratch for ten minutes.",
+  "help": "Open Scratch and drag three blocks together; nothing is typed.",
   "feedback": "In visual programming, blocks snap together.",
   "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
   "status": "draft"
  },
  "PRET.G8.COMMUN.VISUAL_PROGRAMMING.VISUAL_PROG.M_PT8_VP_TOOL": {
   "skill": "PRET.G8.COMMUN.VISUAL_PROGRAMMING.VISUAL_PROG",
-  "error": "Names a tool that is not a visual programming tool.",
+  "error": "Thinks any computer program, such as a word processor, is a visual programming tool.",
   "example": {
-   "question": "Which is a visual programming tool?",
-   "wrong_answer": "A calculator",
+   "question": "Which of these is a visual (block) programming tool?",
+   "wrong_answer": "Microsoft Word",
    "correct_answer": "Scratch"
   },
-  "cause": "The child mixes up two ideas that sound alike or are taught close together.",
-  "reveals": "Offer \"A calculator\" next to the right answer and ask the question again in a new context.",
-  "help": "Look at tools used in schools.",
+  "cause": "Every program on a computer seems like a programming tool.",
+  "reveals": "Offer \"Microsoft Word\" beside \"Scratch\" and ask the child to choose.",
+  "help": "Sort programs into ones that make programs (Scratch, Blockly) and ones that do jobs (Word, a calculator).",
   "feedback": "Scratch and App Inventor are visual programming tools.",
   "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
   "status": "draft"
@@ -442,11 +787,86 @@
    "wrong_answer": "Stops the program",
    "correct_answer": "Repeats instructions"
   },
-  "cause": "The child mixes up two ideas that sound alike or are taught close together.",
+  "cause": "\"Loop\" sounds like a knot or an ending.",
   "reveals": "Offer \"Stops the program\" next to the right answer and ask the question again in a new context.",
-  "help": "Make a sprite repeat a step.",
+  "help": "Make a sprite repeat a dance step 5 times with a repeat block; count the repeats.",
   "feedback": "A loop repeats instructions.",
   "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
+  "status": "draft"
+ },
+ "PRET.G8.COMMUN.VISUAL_PROGRAMMING.VP_SEQUENCE.M_PT8_VS_ORDER": {
+  "skill": "PRET.G8.COMMUN.VISUAL_PROGRAMMING.VP_SEQUENCE",
+  "error": "Thinks the order of blocks in a stack does not matter.",
+  "example": {
+   "question": "A sprite must walk to a door and then open it. The blocks are: \"open door\", then \"move 10 steps\". What happens?",
+   "wrong_answer": "The same as the other order",
+   "correct_answer": "It opens the door before it walks there; the order is wrong"
+  },
+  "cause": "The learner sees the right blocks are there and thinks that is enough.",
+  "reveals": "Offer \"The same as the other order\" beside \"It opens the door before it walks there; the order is wrong\" and ask the child to choose.",
+  "help": "Act it out: one learner follows the blocks exactly as stacked. Then swap them and act again.",
+  "feedback": "Blocks run from top to bottom, so the order matters.",
+  "source": "To confirm by a Pre-Technical Studies teacher: a common classroom error, not traced to a study by the author.",
+  "status": "draft"
+ },
+ "PRET.G8.COMMUN.VISUAL_PROGRAMMING.VP_SEQUENCE.M_PT8_VS_LOOP": {
+  "skill": "PRET.G8.COMMUN.VISUAL_PROGRAMMING.VP_SEQUENCE",
+  "error": "Thinks a repeat block runs its blocks only once.",
+  "example": {
+   "question": "repeat 4 [move 50 steps, turn 90 degrees]. What does the sprite draw?",
+   "wrong_answer": "One straight line",
+   "correct_answer": "A square"
+  },
+  "cause": "The learner reads the blocks inside once and ignores the number on the repeat.",
+  "reveals": "Offer \"One straight line\" beside \"A square\" and ask the child to choose.",
+  "help": "Walk it on the floor: four times, move and turn. Draw each step as you go.",
+  "feedback": "A repeat block runs its blocks the number of times shown.",
+  "source": "To confirm by a Pre-Technical Studies teacher: a common classroom error, not traced to a study by the author.",
+  "status": "draft"
+ },
+ "PRET.G8.COMMUN.VISUAL_PROGRAMMING.VP_SEQUENCE.M_PT8_VS_NO_EVENT": {
+  "skill": "PRET.G8.COMMUN.VISUAL_PROGRAMMING.VP_SEQUENCE",
+  "error": "Expects blocks to run when the flag is clicked though they are not under an event block.",
+  "example": {
+   "question": "Blocks sit in the scripts area but not under \"when green flag clicked\". What happens when the flag is clicked?",
+   "wrong_answer": "They run",
+   "correct_answer": "They do not run; they need the event block on top"
+  },
+  "cause": "The blocks are on the screen, so the learner thinks the program will use them.",
+  "reveals": "Offer \"They run\" beside \"They do not run; they need the event block on top\" and ask the child to choose.",
+  "help": "Click the flag with and without the event block on top; see which stack runs.",
+  "feedback": "A stack runs only when an event block, such as the green flag, starts it.",
+  "source": "To confirm by a Pre-Technical Studies teacher: a common classroom error, not traced to a study by the author.",
+  "status": "draft"
+ },
+ "PRET.G8.COMMUN.VISUAL_PROGRAMMING.VP_SEQUENCE.M_PT8_VS_IF_ALWAYS": {
+  "skill": "PRET.G8.COMMUN.VISUAL_PROGRAMMING.VP_SEQUENCE",
+  "error": "Thinks the blocks inside an if-block always run.",
+  "example": {
+   "question": "if touching wall then say \"Ouch\". The sprite is not touching the wall. What happens?",
+   "wrong_answer": "It says \"Ouch\" anyway",
+   "correct_answer": "Nothing; the blocks inside run only when the condition is true"
+  },
+  "cause": "The learner reads the inside blocks as plain instructions.",
+  "reveals": "Offer \"It says \"Ouch\" anyway\" beside \"Nothing; the blocks inside run only when the condition is true\" and ask the child to choose.",
+  "help": "Run it twice, once away from the wall and once touching it. Say \"if\" means \"only when\".",
+  "feedback": "An if-block runs its blocks only when the condition is true.",
+  "source": "To confirm by a Pre-Technical Studies teacher: a common classroom error, not traced to a study by the author.",
+  "status": "draft"
+ },
+ "PRET.G8.COMMUN.VISUAL_PROGRAMMING.VISUAL_PROG.M_PT8_VP_SPRITE": {
+  "skill": "PRET.G8.COMMUN.VISUAL_PROGRAMMING.VISUAL_PROG",
+  "error": "Thinks a sprite is the background of the stage.",
+  "example": {
+   "question": "In Scratch, what is a sprite?",
+   "wrong_answer": "The background of the stage",
+   "correct_answer": "A character or object that the blocks control"
+  },
+  "cause": "The stage and sprite appear together on the screen and the learner mixes the names.",
+  "reveals": "Offer \"The background of the stage\" beside \"A character or object that the blocks control\" and ask the child to choose.",
+  "help": "Point to the stage (backdrop) and to the cat (sprite); give each its own blocks.",
+  "feedback": "A sprite is a character the blocks control. The backdrop is the background.",
+  "source": "To confirm by a Pre-Technical Studies teacher: a common classroom error, not traced to a study by the author.",
   "status": "draft"
  },
  "PRET.G8.MATERI.COMPOSITE_MATERIALS.COMPOSITE.M_PT8_CM_SINGLE": {
@@ -457,9 +877,9 @@
    "wrong_answer": "One material only",
    "correct_answer": "Cement, sand, ballast and water"
   },
-  "cause": "The child mixes up two ideas that sound alike or are taught close together.",
+  "cause": "Concrete looks like one grey solid when it is set.",
   "reveals": "Offer \"One material only\" next to the right answer and ask the question again in a new context.",
-  "help": "Look at what goes into the mixer.",
+  "help": "Mix a small batch: cement, sand, ballast and water; break an old piece to see the stones inside.",
   "feedback": "Concrete is a mixture of cement, sand, ballast and water.",
   "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
   "status": "draft"
@@ -472,26 +892,41 @@
    "wrong_answer": "From one solid piece of wood",
    "correct_answer": "From thin layers of wood glued crosswise"
   },
-  "cause": "The child mixes up two ideas that sound alike or are taught close together.",
+  "cause": "Plywood looks like one board from the face.",
   "reveals": "Offer \"From one solid piece of wood\" next to the right answer and ask the question again in a new context.",
-  "help": "Look at the edge of a plywood board.",
+  "help": "Look at the edge: thin layers (veneers) glued with the grain crossing, which makes it strong and stops splitting.",
   "feedback": "Plywood is made of thin layers glued with the grain crosswise.",
   "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
   "status": "draft"
  },
  "PRET.G8.MATERI.COMPOSITE_MATERIALS.COMPOSITE.M_PT8_CM_USE": {
   "skill": "PRET.G8.MATERI.COMPOSITE_MATERIALS.COMPOSITE",
-  "error": "Gives the wrong use for a composite.",
+  "error": "Thinks reinforced concrete is used for small, light items, not for heavy structures.",
   "example": {
-   "question": "What is reinforced concrete used for?",
-   "wrong_answer": "Making cups",
-   "correct_answer": "Making buildings and slabs"
+   "question": "What is reinforced concrete mainly used for?",
+   "wrong_answer": "Light window frames",
+   "correct_answer": "Beams, columns and floor slabs of buildings"
   },
-  "cause": "The child mixes up two ideas that sound alike or are taught close together.",
-  "reveals": "Offer \"Making cups\" next to the right answer and ask the question again in a new context.",
-  "help": "Look at a building site.",
+  "cause": "The learner does not link the strength of reinforced concrete with heavy structures.",
+  "reveals": "Offer \"Light window frames\" beside \"Beams, columns and floor slabs of buildings\" and ask the child to choose.",
+  "help": "Visit or show a building site: beams, columns and slabs are reinforced concrete.",
   "feedback": "Reinforced concrete is used in buildings, bridges and slabs.",
   "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
+  "status": "draft"
+ },
+ "PRET.G8.MATERI.COMPOSITE_MATERIALS.COMPOSITE.M_PT8_CM_STEEL_WEIGHT": {
+  "skill": "PRET.G8.MATERI.COMPOSITE_MATERIALS.COMPOSITE",
+  "error": "Thinks steel bars are put in concrete to make it heavier.",
+  "example": {
+   "question": "Why are steel bars put inside concrete?",
+   "wrong_answer": "To make it heavier",
+   "correct_answer": "Concrete is weak when pulled or bent; the steel takes the pull"
+  },
+  "cause": "Heavy things seem strong, so the learner thinks weight is the point.",
+  "reveals": "Offer \"To make it heavier\" beside \"Concrete is weak when pulled or bent; the steel takes the pull\" and ask the child to choose.",
+  "help": "Bend a thin slab of plain mortar until it cracks underneath; explain the steel goes where the pulling is.",
+  "feedback": "Steel bars give concrete strength against pulling and bending.",
+  "source": "To confirm by a Pre-Technical Studies teacher: a common classroom error, not traced to a study by the author.",
   "status": "draft"
  },
  "PRET.G8.MATERI.CERAMIC_MATERIALS.CERAMIC.M_PT8_CR_BRITTLE": {
@@ -499,12 +934,12 @@
   "error": "Says ceramics do not break.",
   "example": {
    "question": "What happens when a clay pot is dropped?",
-   "wrong_answer": "It bends",
-   "correct_answer": "It breaks"
+   "wrong_answer": "It stays whole, because ceramic is hard",
+   "correct_answer": "It breaks, because ceramic is brittle"
   },
-  "cause": "The child mixes up two ideas that sound alike or are taught close together.",
-  "reveals": "Offer \"It bends\" next to the right answer and ask the question again in a new context.",
-  "help": "Tap a cup gently and a dish harder.",
+  "cause": "Hard materials feel strong, so the learner expects them to survive a fall.",
+  "reveals": "Offer \"It stays whole, because ceramic is hard\" beside \"It breaks, because ceramic is brittle\" and ask the child to choose.",
+  "help": "Explain hard and brittle: a ceramic resists scratching but cracks when hit. Show a broken cup.",
   "feedback": "Ceramics are hard but brittle, so they break when dropped.",
   "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
   "status": "draft"
@@ -517,26 +952,41 @@
    "wrong_answer": "They conduct electricity well",
    "correct_answer": "They do not conduct electricity"
   },
-  "cause": "The child mixes up two ideas that sound alike or are taught close together.",
+  "cause": "Ceramics are hard and smooth like some metals.",
   "reveals": "Offer \"They conduct electricity well\" next to the right answer and ask the question again in a new context.",
-  "help": "Look at an insulator on a pole.",
+  "help": "Show a porcelain insulator on a power pole holding the live wire away from the pole.",
   "feedback": "Ceramics do not conduct electricity, so they are used as insulators.",
   "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
   "status": "draft"
  },
  "PRET.G8.MATERI.CERAMIC_MATERIALS.CERAMIC.M_PT8_CR_METAL": {
   "skill": "PRET.G8.MATERI.CERAMIC_MATERIALS.CERAMIC",
-  "error": "Calls a ceramic material a metal.",
+  "error": "Thinks a ceramic tile is plastic because it is smooth and shiny.",
   "example": {
-   "question": "Which is a ceramic material?",
-   "wrong_answer": "Iron",
-   "correct_answer": "A clay brick"
+   "question": "A floor tile is smooth and shiny. What group of materials is it?",
+   "wrong_answer": "Plastic",
+   "correct_answer": "Ceramic (fired clay)"
   },
-  "cause": "The child mixes up two ideas that sound alike or are taught close together.",
-  "reveals": "Offer \"Iron\" next to the right answer and ask the question again in a new context.",
-  "help": "Sort objects at home.",
+  "cause": "A tile is smooth and shiny like plastic, so it is sorted by look.",
+  "reveals": "Offer \"Plastic\" beside \"Ceramic (fired clay)\" and ask the child to choose.",
+  "help": "Tap a tile and a plastic sheet; heat-test is not done. Trace the tile back to fired clay.",
   "feedback": "Bricks, tiles and clay pots are ceramics. Iron is a metal.",
   "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
+  "status": "draft"
+ },
+ "PRET.G8.MATERI.CERAMIC_MATERIALS.CERAMIC.M_PT8_CR_SUN_DRY": {
+  "skill": "PRET.G8.MATERI.CERAMIC_MATERIALS.CERAMIC",
+  "error": "Thinks soft clay becomes a hard ceramic just by drying in the sun.",
+  "example": {
+   "question": "What turns soft clay into a hard ceramic pot?",
+   "wrong_answer": "Drying it in the sun",
+   "correct_answer": "Firing it at a high temperature in a kiln"
+  },
+  "cause": "Sun-dried mud blocks harden, so the learner thinks all clay hardens that way.",
+  "reveals": "Offer \"Drying it in the sun\" beside \"Firing it at a high temperature in a kiln\" and ask the child to choose.",
+  "help": "Soak a sun-dried clay piece and a fired piece; the dried one softens, the fired one stays hard.",
+  "feedback": "Clay becomes ceramic when it is fired at a high temperature.",
+  "source": "To confirm by a Pre-Technical Studies teacher: a common classroom error, not traced to a study by the author.",
   "status": "draft"
  },
  "PRET.G8.TOOLS_.CUTTING_TOOLS.CUT_TOOLS.M_PT8_CT_WOOD_METAL": {
@@ -547,9 +997,9 @@
    "wrong_answer": "A tenon saw",
    "correct_answer": "A hacksaw"
   },
-  "cause": "The child mixes up two ideas that sound alike or are taught close together.",
+  "cause": "Both are saws, and the learner does not look at the teeth.",
   "reveals": "Offer \"A tenon saw\" next to the right answer and ask the question again in a new context.",
-  "help": "Look at the teeth of each saw.",
+  "help": "Compare the teeth: a tenon saw has bigger teeth for wood; a hacksaw has fine hard teeth for metal.",
   "feedback": "A hacksaw cuts metal. A tenon saw cuts wood.",
   "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
   "status": "draft"
@@ -562,9 +1012,9 @@
    "wrong_answer": "A chisel",
    "correct_answer": "A plane"
   },
-  "cause": "The child mixes up two ideas that sound alike or are taught close together.",
+  "cause": "A chisel and a plane both have a sharp flat blade.",
   "reveals": "Offer \"A chisel\" next to the right answer and ask the question again in a new context.",
-  "help": "Try both on a scrap.",
+  "help": "Plane a board to show long smooth shavings; chisel a joint to show cutting out small parts.",
   "feedback": "A plane smooths wood. A chisel shapes joints.",
   "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
   "status": "draft"
@@ -577,11 +1027,101 @@
    "wrong_answer": "A blunt tool is safer",
    "correct_answer": "A sharp tool cuts easily and slips less"
   },
-  "cause": "The child mixes up two ideas that sound alike or are taught close together.",
+  "cause": "A blunt edge seems less able to cut a person.",
   "reveals": "Offer \"A blunt tool is safer\" next to the right answer and ask the question again in a new context.",
-  "help": "Compare cutting with sharp and blunt scissors.",
+  "help": "Explain that a blunt tool needs more force and slips; compare cutting card with sharp and blunt scissors.",
   "feedback": "A blunt tool needs more force and slips, so keep tools sharp.",
-  "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
+  "source": "To confirm by a Pre-Technical Studies teacher (SAFETY: the rule must match the school's workshop rules and the Kenyan guidance before a child sees it): a common classroom error, not traced to a study by the author.",
+  "status": "draft"
+ },
+ "PRET.G8.TOOLS_.CUTTING_TOOLS.CUT_USE.M_PT8_CU_TOWARDS": {
+  "skill": "PRET.G8.TOOLS_.CUTTING_TOOLS.CUT_USE",
+  "error": "Cuts with a chisel or knife towards the body or the holding hand.",
+  "example": {
+   "question": "In which direction should a chisel or knife cut?",
+   "wrong_answer": "Towards the body, for more control",
+   "correct_answer": "Away from the body, with both hands behind the cutting edge"
+  },
+  "cause": "Pulling a blade towards oneself feels more controlled.",
+  "reveals": "Offer \"Towards the body, for more control\" beside \"Away from the body, with both hands behind the cutting edge\" and ask the child to choose.",
+  "help": "Show the path the blade takes if it slips in each direction; agree the rule and practise on a clamped scrap.",
+  "feedback": "Always cut away from your body, hands behind the edge.",
+  "source": "To confirm by a Pre-Technical Studies teacher (SAFETY: the rule must match the school's workshop rules and the Kenyan guidance before a child sees it): a common classroom error, not traced to a study by the author.",
+  "status": "draft"
+ },
+ "PRET.G8.TOOLS_.CUTTING_TOOLS.CUT_USE.M_PT8_CU_HAND_HOLD": {
+  "skill": "PRET.G8.TOOLS_.CUTTING_TOOLS.CUT_USE",
+  "error": "Holds a small piece in one hand while sawing or chiselling it with the other.",
+  "example": {
+   "question": "How is a small piece of wood held while it is sawn?",
+   "wrong_answer": "In one hand while the other hand saws",
+   "correct_answer": "Clamped in a vice or with a G-clamp"
+  },
+  "cause": "It is quicker than setting up a vice.",
+  "reveals": "Offer \"In one hand while the other hand saws\" beside \"Clamped in a vice or with a G-clamp\" and ask the child to choose.",
+  "help": "Show how a saw jumps at the start of a cut; clamp the work and saw with the free hand guiding safely.",
+  "feedback": "Clamp the work. Never hold it in your hand while you cut.",
+  "source": "To confirm by a Pre-Technical Studies teacher (SAFETY: the rule must match the school's workshop rules and the Kenyan guidance before a child sees it): a common classroom error, not traced to a study by the author.",
+  "status": "draft"
+ },
+ "PRET.G8.TOOLS_.CUTTING_TOOLS.CUT_USE.M_PT8_CU_BLADE_BACK": {
+  "skill": "PRET.G8.TOOLS_.CUTTING_TOOLS.CUT_USE",
+  "error": "Fits a hacksaw blade with its teeth pointing towards the handle.",
+  "example": {
+   "question": "Which way do the teeth of a hacksaw blade point?",
+   "wrong_answer": "Towards the handle",
+   "correct_answer": "Away from the handle, so it cuts on the forward stroke"
+  },
+  "cause": "The learner does not look at the teeth and fits the blade either way.",
+  "reveals": "Offer \"Towards the handle\" beside \"Away from the handle, so it cuts on the forward stroke\" and ask the child to choose.",
+  "help": "Look at the teeth with a magnifier; fit the blade so they point forward and feel the cut on the push.",
+  "feedback": "Hacksaw teeth point away from the handle.",
+  "source": "To confirm by a Pre-Technical Studies teacher: a common classroom error, not traced to a study by the author.",
+  "status": "draft"
+ },
+ "PRET.G8.TOOLS_.CUTTING_TOOLS.CUT_USE.M_PT8_CU_PRESS_HARD": {
+  "skill": "PRET.G8.TOOLS_.CUTTING_TOOLS.CUT_USE",
+  "error": "Starts a saw cut by pressing hard with fast short strokes.",
+  "example": {
+   "question": "How should you start a saw cut?",
+   "wrong_answer": "Press hard with fast short strokes",
+   "correct_answer": "Light strokes to start a groove, then long steady strokes"
+  },
+  "cause": "Pressing hard feels like it will cut faster.",
+  "reveals": "Offer \"Press hard with fast short strokes\" beside \"Light strokes to start a groove, then long steady strokes\" and ask the child to choose.",
+  "help": "Start a cut with a thumb guiding the blade (above the teeth) and light strokes; then use the full length of the blade.",
+  "feedback": "Start gently to make a groove, then use long steady strokes.",
+  "source": "To confirm by a Pre-Technical Studies teacher (SAFETY: the rule must match the school's workshop rules and the Kenyan guidance before a child sees it): a common classroom error, not traced to a study by the author.",
+  "status": "draft"
+ },
+ "PRET.G8.TOOLS_.CUTTING_TOOLS.CUT_USE.M_PT8_CU_CARRY": {
+  "skill": "PRET.G8.TOOLS_.CUTTING_TOOLS.CUT_USE",
+  "error": "Carries a chisel or saw with the edge up or in a pocket.",
+  "example": {
+   "question": "How is a chisel carried in the workshop?",
+   "wrong_answer": "In a pocket, blade up",
+   "correct_answer": "In the hand by the side, edge pointing down, walking"
+  },
+  "cause": "A pocket keeps the hands free.",
+  "reveals": "Offer \"In a pocket, blade up\" beside \"In the hand by the side, edge pointing down, walking\" and ask the child to choose.",
+  "help": "Show the injury a blade in a pocket can cause in a fall; practise carrying tools pointing down.",
+  "feedback": "Carry edged tools in your hand, pointing down. Walk.",
+  "source": "To confirm by a Pre-Technical Studies teacher (SAFETY: the rule must match the school's workshop rules and the Kenyan guidance before a child sees it): a common classroom error, not traced to a study by the author.",
+  "status": "draft"
+ },
+ "PRET.G8.TOOLS_.CUTTING_TOOLS.CUT_TOOLS.M_PT8_CT_RIP_CROSS": {
+  "skill": "PRET.G8.TOOLS_.CUTTING_TOOLS.CUT_TOOLS",
+  "error": "Uses a rip saw to cut across the grain of wood.",
+  "example": {
+   "question": "Which saw cuts wood across the grain?",
+   "wrong_answer": "A rip saw",
+   "correct_answer": "A cross-cut saw"
+  },
+  "cause": "Both are hand saws and look alike.",
+  "reveals": "Offer \"A rip saw\" beside \"A cross-cut saw\" and ask the child to choose.",
+  "help": "Show the grain on a plank; cross-cut goes across it, rip goes along it. Look at the tooth shapes.",
+  "feedback": "A cross-cut saw cuts across the grain; a rip saw cuts along it.",
+  "source": "To confirm by a Pre-Technical Studies teacher: a common classroom error, not traced to a study by the author.",
   "status": "draft"
  },
  "PRET.G8.TOOLS_.COMPUTER_SOFTWARE.SOFTWARE.M_PT8_SW_TOUCH": {
@@ -592,9 +1132,9 @@
    "wrong_answer": "Software",
    "correct_answer": "Hardware"
   },
-  "cause": "The child mixes up two ideas that sound alike or are taught close together.",
+  "cause": "Software comes in a box or is \"installed\", so it seems like a thing.",
   "reveals": "Offer \"Software\" next to the right answer and ask the question again in a new context.",
-  "help": "Point to the screen and the program.",
+  "help": "Point to the screen (hardware) and the program on it (software); you can touch the screen, not the program.",
   "feedback": "Hardware can be touched. Software is the programs.",
   "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
   "status": "draft"
@@ -607,9 +1147,9 @@
    "wrong_answer": "A word processor",
    "correct_answer": "Windows"
   },
-  "cause": "The child mixes up two ideas that sound alike or are taught close together.",
+  "cause": "The word processor is the program the learner uses most.",
   "reveals": "Offer \"A word processor\" next to the right answer and ask the question again in a new context.",
-  "help": "List programs on a computer.",
+  "help": "List programs: Windows, Android (run the computer); Word, Excel (do jobs for the user).",
   "feedback": "Windows, Android and Linux are operating systems. A word processor is an application.",
   "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
   "status": "draft"
@@ -622,11 +1162,26 @@
    "wrong_answer": "A word processor",
    "correct_answer": "A spreadsheet"
   },
-  "cause": "The child mixes up two ideas that sound alike or are taught close together.",
+  "cause": "The learner uses a word processor for everything, including tables.",
   "reveals": "Offer \"A word processor\" next to the right answer and ask the question again in a new context.",
-  "help": "Try the sum 12 plus 8 in a spreadsheet.",
+  "help": "Try 12 + 8 in a spreadsheet cell with a formula; a word processor does not calculate.",
   "feedback": "A spreadsheet is used for tables and calculations.",
   "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
+  "status": "draft"
+ },
+ "PRET.G8.TOOLS_.COMPUTER_SOFTWARE.SOFTWARE.M_PT8_SW_UTILITY": {
+  "skill": "PRET.G8.TOOLS_.COMPUTER_SOFTWARE.SOFTWARE",
+  "error": "Thinks an antivirus is application software like a game.",
+  "example": {
+   "question": "An antivirus program belongs to which category of software?",
+   "wrong_answer": "Application software, like a game",
+   "correct_answer": "Utility (system) software that protects and maintains the computer"
+  },
+  "cause": "It is installed and opened like any app.",
+  "reveals": "Offer \"Application software, like a game\" beside \"Utility (system) software that protects and maintains the computer\" and ask the child to choose.",
+  "help": "Sort programs by who they serve: the user's jobs (applications) or the computer's care (utilities, operating system).",
+  "feedback": "An antivirus is a utility: it looks after the computer.",
+  "source": "To confirm by a Pre-Technical Studies teacher: a common classroom error, not traced to a study by the author.",
   "status": "draft"
  },
  "PRET.G8.ENTREP.BOOKKEEPING.BOOKKEEPING.M_PT8_BK_BIG_ONLY": {
@@ -637,9 +1192,9 @@
    "wrong_answer": "Only big businesses",
    "correct_answer": "Every business, big or small"
   },
-  "cause": "The child mixes up two ideas that sound alike or are taught close together.",
+  "cause": "Small traders around the learner keep money in their heads, so records seem to be for big firms.",
   "reveals": "Offer \"Only big businesses\" next to the right answer and ask the question again in a new context.",
-  "help": "Ask a shopkeeper how she knows her profit.",
+  "help": "Ask a small trader how she knows her profit; show a simple daily sales book.",
   "feedback": "Every business keeps records to know its income, spending and profit.",
   "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
   "status": "draft"
@@ -652,9 +1207,9 @@
    "wrong_answer": "An asset",
    "correct_answer": "A liability"
   },
-  "cause": "The child mixes up two ideas that sound alike or are taught close together.",
+  "cause": "Both words are new and the learner sorts by guess.",
   "reveals": "Offer \"An asset\" next to the right answer and ask the question again in a new context.",
-  "help": "An asset is owned; a liability is owed.",
+  "help": "Two columns: owned by the business (assets: stock, cash, equipment) and owed by the business (liabilities: loans, suppliers).",
   "feedback": "What a business owes is a liability. What it owns is an asset.",
   "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
   "status": "draft"
@@ -667,56 +1222,206 @@
    "wrong_answer": "A cash sale",
    "correct_answer": "A credit sale"
   },
-  "cause": "The child mixes up two ideas that sound alike or are taught close together.",
+  "cause": "The goods left the shop, so the sale feels finished as cash.",
   "reveals": "Offer \"A cash sale\" next to the right answer and ask the question again in a new context.",
-  "help": "Ask: was the money paid now?",
+  "help": "Ask \"was the money paid now?\" Yes: cash sale. Later: credit sale, and the customer is a debtor.",
   "feedback": "A credit sale is paid later. A cash sale is paid now.",
   "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
   "status": "draft"
  },
+ "PRET.G8.ENTREP.BOOKKEEPING.FIN_STATEMENTS.M_PT8_FS_SALES_PROFIT": {
+  "skill": "PRET.G8.ENTREP.BOOKKEEPING.FIN_STATEMENTS",
+  "error": "Takes total sales as the profit.",
+  "example": {
+   "question": "Sales 20,000 shillings, cost of goods sold 12,000, expenses 3,000. What is the net profit?",
+   "wrong_answer": "20,000 shillings",
+   "correct_answer": "5,000 shillings"
+  },
+  "cause": "All the money coming in feels like what the business earned.",
+  "reveals": "Offer \"20,000 shillings\" beside \"5,000 shillings\" and ask the child to choose.",
+  "help": "Lay it out: sales - cost of goods = gross profit (8,000); gross profit - expenses = net profit (5,000).",
+  "feedback": "Profit is what is left after costs and expenses, not the sales.",
+  "source": "To confirm by a Pre-Technical Studies teacher: a common classroom error, not traced to a study by the author.",
+  "status": "draft"
+ },
+ "PRET.G8.ENTREP.BOOKKEEPING.FIN_STATEMENTS.M_PT8_FS_GROSS_NET": {
+  "skill": "PRET.G8.ENTREP.BOOKKEEPING.FIN_STATEMENTS",
+  "error": "Gives the gross profit as the net profit, forgetting the expenses.",
+  "example": {
+   "question": "Gross profit 8,000 shillings, expenses (rent, transport) 3,000. What is the net profit?",
+   "wrong_answer": "8,000 shillings",
+   "correct_answer": "5,000 shillings"
+  },
+  "cause": "The learner stops at the first profit line.",
+  "reveals": "Offer \"8,000 shillings\" beside \"5,000 shillings\" and ask the child to choose.",
+  "help": "List the expenses of a kiosk (rent, transport, power); take them away from gross profit.",
+  "feedback": "Net profit = gross profit - expenses.",
+  "source": "To confirm by a Pre-Technical Studies teacher: a common classroom error, not traced to a study by the author.",
+  "status": "draft"
+ },
+ "PRET.G8.ENTREP.BOOKKEEPING.FIN_STATEMENTS.M_PT8_FS_CAPITAL_ADD": {
+  "skill": "PRET.G8.ENTREP.BOOKKEEPING.FIN_STATEMENTS",
+  "error": "Adds liabilities to assets to find capital.",
+  "example": {
+   "question": "A business has assets of 50,000 shillings and liabilities of 10,000. What is the capital?",
+   "wrong_answer": "60,000 shillings",
+   "correct_answer": "40,000 shillings"
+  },
+  "cause": "Adding is the first operation the learner tries with two amounts.",
+  "reveals": "Offer \"60,000 shillings\" beside \"40,000 shillings\" and ask the child to choose.",
+  "help": "Write assets = capital + liabilities; what the business owns, less what it owes, belongs to the owner.",
+  "feedback": "Capital = assets - liabilities.",
+  "source": "To confirm by a Pre-Technical Studies teacher: a common classroom error, not traced to a study by the author.",
+  "status": "draft"
+ },
+ "PRET.G8.ENTREP.BOOKKEEPING.FIN_STATEMENTS.M_PT8_FS_CASH_ADD": {
+  "skill": "PRET.G8.ENTREP.BOOKKEEPING.FIN_STATEMENTS",
+  "error": "Adds money paid out to the cash balance.",
+  "example": {
+   "question": "Cash at the start 2,000, received 5,000, paid out 3,500. What is the cash at the end?",
+   "wrong_answer": "10,500 shillings",
+   "correct_answer": "3,500 shillings"
+  },
+  "cause": "The learner adds every amount listed.",
+  "reveals": "Offer \"10,500 shillings\" beside \"3,500 shillings\" and ask the child to choose.",
+  "help": "Use a cash book with two sides: money in, money out. Closing cash = opening + in - out.",
+  "feedback": "Money paid out is taken away from the cash.",
+  "source": "To confirm by a Pre-Technical Studies teacher: a common classroom error, not traced to a study by the author.",
+  "status": "draft"
+ },
+ "PRET.G8.ENTREP.BOOKKEEPING.BOOKKEEPING.M_PT8_BK_DRAWINGS": {
+  "skill": "PRET.G8.ENTREP.BOOKKEEPING.BOOKKEEPING",
+  "error": "Records money the owner takes for the family as a business expense.",
+  "example": {
+   "question": "The owner takes 500 shillings from the till to buy food for her family. How is it recorded?",
+   "wrong_answer": "As a business expense",
+   "correct_answer": "As drawings (money taken out by the owner)"
+  },
+  "cause": "The money left the business, and every payment out seems to be an expense.",
+  "reveals": "Offer \"As a business expense\" beside \"As drawings (money taken out by the owner)\" and ask the child to choose.",
+  "help": "Separate business costs (rent, stock, transport) from the owner's own use (drawings); drawings reduce capital, not profit.",
+  "feedback": "Money the owner takes for personal use is drawings, not a business expense.",
+  "source": "To confirm by a Pre-Technical Studies teacher: a common classroom error, not traced to a study by the author.",
+  "status": "draft"
+ },
  "PRET.G8.ENTREP.INCOME_AND_BUDGETING.BUDGET.M_PT8_BU_INCOME": {
   "skill": "PRET.G8.ENTREP.INCOME_AND_BUDGETING.BUDGET",
-  "error": "Names something that is not an income.",
+  "error": "Lists a bill, which is money going out, as a source of income.",
   "example": {
    "question": "Which is a source of income?",
    "wrong_answer": "A bill",
    "correct_answer": "A salary"
   },
-  "cause": "The child mixes up two ideas that sound alike or are taught close together.",
+  "cause": "Bills and income both involve money changing hands, and the learner does not ask which way it flows.",
   "reveals": "Offer \"A bill\" next to the right answer and ask the question again in a new context.",
-  "help": "List what brings money in.",
+  "help": "Draw two arrows: money in (salary, sales, rent received, pocket money) and money out (bills, rent paid, food).",
   "feedback": "A salary, business profit and sales are income. A bill is spending.",
-  "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
+  "source": "To confirm by a Pre-Technical Studies teacher (MONEY: figures, rates and institution names change; check against current Kenyan practice): a common classroom error, not traced to a study by the author.",
   "status": "draft"
  },
  "PRET.G8.ENTREP.INCOME_AND_BUDGETING.BUDGET.M_PT8_BU_NO_NEED": {
   "skill": "PRET.G8.ENTREP.INCOME_AND_BUDGETING.BUDGET",
-  "error": "Says a budget is not needed.",
+  "error": "Thinks a budget is not needed when there is only a little money.",
   "example": {
-   "question": "Why make a budget?",
-   "wrong_answer": "It is not needed",
-   "correct_answer": "To plan income and spending and save some"
+   "question": "Why make a budget if you have only a little money?",
+   "wrong_answer": "Budgets are only for people with a lot of money",
+   "correct_answer": "To plan the little money so needs are met and some is saved"
   },
-  "cause": "The child mixes up two ideas that sound alike or are taught close together.",
-  "reveals": "Offer \"It is not needed\" next to the right answer and ask the question again in a new context.",
-  "help": "Ask what happens when money runs out early.",
+  "cause": "Budgets sound like something for people with a lot of money.",
+  "reveals": "Offer \"Budgets are only for people with a lot of money\" beside \"To plan the little money so needs are met and some is saved\" and ask the child to choose.",
+  "help": "Show a learner with 300 shillings for a term planning fare, pens and saving; without a plan it runs out in week 2.",
   "feedback": "A budget plans spending so that needs come first and some is saved.",
   "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
   "status": "draft"
  },
  "PRET.G8.ENTREP.INCOME_AND_BUDGETING.BUDGET.M_PT8_BU_UNETHICAL": {
   "skill": "PRET.G8.ENTREP.INCOME_AND_BUDGETING.BUDGET",
-  "error": "Thinks hiding spending in a budget is acceptable.",
+  "error": "Thinks moving budget money to personal use is fine if the total stays the same.",
   "example": {
-   "question": "Which is unethical in budgeting?",
-   "wrong_answer": "Planning to save",
-   "correct_answer": "Hiding spending from the family"
+   "question": "A club treasurer writes \"snacks 500\" in the budget but spends it on airtime for herself. What is this?",
+   "wrong_answer": "Fine, as long as the total stays the same",
+   "correct_answer": "Unethical: misusing the money and hiding it"
   },
-  "cause": "The child mixes up two ideas that sound alike or are taught close together.",
-  "reveals": "Offer \"Planning to save\" next to the right answer and ask the question again in a new context.",
-  "help": "Ask what honesty in money looks like.",
+  "cause": "The learner thinks honesty is kept if the totals still add up.",
+  "reveals": "Offer \"Fine, as long as the total stays the same\" beside \"Unethical: misusing the money and hiding it\" and ask the child to choose.",
+  "help": "Discuss trust in a club or family: money must be used as the budget says, and changes are agreed openly.",
   "feedback": "Hiding spending or using money meant for something else is unethical.",
   "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
+  "status": "draft"
+ },
+ "PRET.G8.ENTREP.INCOME_AND_BUDGETING.BUDGET_PREPARE.M_PT8_BP_DEFICIT": {
+  "skill": "PRET.G8.ENTREP.INCOME_AND_BUDGETING.BUDGET_PREPARE",
+  "error": "Calls a budget that spends more than its income balanced.",
+  "example": {
+   "question": "Income 3,000 shillings, planned spending 3,400. What is this budget?",
+   "wrong_answer": "Balanced",
+   "correct_answer": "In deficit by 400 shillings"
+  },
+  "cause": "The learner checks only that every item has a number.",
+  "reveals": "Offer \"Balanced\" beside \"In deficit by 400 shillings\" and ask the child to choose.",
+  "help": "Always subtract: income - spending. A negative answer is a deficit; cut wants until it is zero or more.",
+  "feedback": "Spending more than income is a deficit.",
+  "source": "To confirm by a Pre-Technical Studies teacher: a common classroom error, not traced to a study by the author.",
+  "status": "draft"
+ },
+ "PRET.G8.ENTREP.INCOME_AND_BUDGETING.BUDGET_PREPARE.M_PT8_BP_WANTS_FIRST": {
+  "skill": "PRET.G8.ENTREP.INCOME_AND_BUDGETING.BUDGET_PREPARE",
+  "error": "Puts wants into a budget before needs.",
+  "example": {
+   "question": "Which item goes into a learner's budget first?",
+   "wrong_answer": "A new phone cover",
+   "correct_answer": "Bus fare to school"
+  },
+  "cause": "Wants are more exciting to plan for.",
+  "reveals": "Offer \"A new phone cover\" beside \"Bus fare to school\" and ask the child to choose.",
+  "help": "Sort budget cards into needs and wants; fill the budget with needs first, then wants if money is left.",
+  "feedback": "Plan needs first, then wants.",
+  "source": "To confirm by a Pre-Technical Studies teacher: a common classroom error, not traced to a study by the author.",
+  "status": "draft"
+ },
+ "PRET.G8.ENTREP.INCOME_AND_BUDGETING.BUDGET_PREPARE.M_PT8_BP_SAVE_LAST": {
+  "skill": "PRET.G8.ENTREP.INCOME_AND_BUDGETING.BUDGET_PREPARE",
+  "error": "Saves only whatever is left at the end of the month.",
+  "example": {
+   "question": "When should saving be put into a budget?",
+   "wrong_answer": "Only if money is left at the end",
+   "correct_answer": "At the start, as a planned item"
+  },
+  "cause": "Saving feels like leftovers, not a need.",
+  "reveals": "Offer \"Only if money is left at the end\" beside \"At the start, as a planned item\" and ask the child to choose.",
+  "help": "Compare two months: saving last (nothing left) and saving first (100 put away); \"pay yourself first\".",
+  "feedback": "Put saving in the budget at the start, as an item.",
+  "source": "To confirm by a Pre-Technical Studies teacher: a common classroom error, not traced to a study by the author.",
+  "status": "draft"
+ },
+ "PRET.G8.ENTREP.INCOME_AND_BUDGETING.BUDGET_PREPARE.M_PT8_BP_SURPLUS_LOSS": {
+  "skill": "PRET.G8.ENTREP.INCOME_AND_BUDGETING.BUDGET_PREPARE",
+  "error": "Calls money left over in a budget a loss.",
+  "example": {
+   "question": "Income 5,000 shillings, spending 4,200. What is the 800 shillings?",
+   "wrong_answer": "A loss",
+   "correct_answer": "A surplus, which can be saved"
+  },
+  "cause": "Money \"left over\" sounds like money not used, so it feels wasted.",
+  "reveals": "Offer \"A loss\" beside \"A surplus, which can be saved\" and ask the child to choose.",
+  "help": "Draw income and spending bars; the part of income not spent is a surplus, ready to save.",
+  "feedback": "Money left after planned spending is a surplus.",
+  "source": "To confirm by a Pre-Technical Studies teacher: a common classroom error, not traced to a study by the author.",
+  "status": "draft"
+ },
+ "PRET.G8.ENTREP.INCOME_AND_BUDGETING.BUDGET.M_PT8_BU_LOAN_INCOME": {
+  "skill": "PRET.G8.ENTREP.INCOME_AND_BUDGETING.BUDGET",
+  "error": "Treats a loan as income that can be spent freely.",
+  "example": {
+   "question": "Wanjiru borrows 1,000 shillings. Should she plan it as free income in her budget?",
+   "wrong_answer": "Yes, it is extra money to spend",
+   "correct_answer": "No, it must be paid back; plan the repayment"
+  },
+  "cause": "Borrowed money is in the hand, so it feels like the learner's own.",
+  "reveals": "Offer \"Yes, it is extra money to spend\" beside \"No, it must be paid back; plan the repayment\" and ask the child to choose.",
+  "help": "Show a budget with the loan as money in and the repayment (with any interest) as money out later.",
+  "feedback": "A loan must be paid back. Plan the repayment in the budget.",
+  "source": "To confirm by a Pre-Technical Studies teacher (MONEY: figures, rates and institution names change; check against current Kenyan practice): a common classroom error, not traced to a study by the author.",
   "status": "draft"
  },
  "PRET.G8.ENTREP.OF_GOODS_AND_SERVICES.MARKETING.M_PT8_MK_SELLING_ONLY": {
@@ -727,54 +1432,54 @@
    "wrong_answer": "Only takes the money at the till",
    "correct_answer": "Finds customers and tells them about goods"
   },
-  "cause": "The child mixes up two ideas that sound alike or are taught close together.",
+  "cause": "Selling at the till is the part of marketing the learner sees.",
   "reveals": "Offer \"Only takes the money at the till\" next to the right answer and ask the question again in a new context.",
-  "help": "Ask how customers hear about a new shop.",
+  "help": "Trace how a customer hears of a new shop (poster, friend, radio) before buying: that is marketing.",
   "feedback": "Marketing helps a business find customers and sell.",
   "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
   "status": "draft"
  },
  "PRET.G8.ENTREP.OF_GOODS_AND_SERVICES.MARKETING.M_PT8_MK_INFO": {
   "skill": "PRET.G8.ENTREP.OF_GOODS_AND_SERVICES.MARKETING",
-  "error": "Names a poor source of market information.",
+  "error": "Relies on the owner's own taste instead of asking customers.",
   "example": {
-   "question": "Which is a source of market information?",
-   "wrong_answer": "Guessing",
-   "correct_answer": "Asking customers or a survey"
+   "question": "What is the most reliable way for a new bakery to find out what customers want?",
+   "wrong_answer": "Make what the owner likes best",
+   "correct_answer": "Ask customers through a short survey or interviews"
   },
-  "cause": "The child mixes up two ideas that sound alike or are taught close together.",
-  "reveals": "Offer \"Guessing\" next to the right answer and ask the question again in a new context.",
-  "help": "Ask what a shopkeeper asks customers.",
+  "cause": "The owner's own taste feels like a good guide to what others want.",
+  "reveals": "Offer \"Make what the owner likes best\" beside \"Ask customers through a short survey or interviews\" and ask the child to choose.",
+  "help": "Run a short class survey on snacks; compare the result with one person's guess.",
   "feedback": "A survey, asking customers and watching competitors give market information.",
   "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
   "status": "draft"
  },
  "PRET.G8.ENTREP.OF_GOODS_AND_SERVICES.MARKETING.M_PT8_MK_FACTOR": {
   "skill": "PRET.G8.ENTREP.OF_GOODS_AND_SERVICES.MARKETING",
-  "error": "Names a factor that does not matter in choosing a market.",
+  "error": "Ignores how many customers want the goods and can pay when choosing a market.",
   "example": {
-   "question": "Which is a factor in choosing a market?",
-   "wrong_answer": "The colour of the shop",
-   "correct_answer": "Customer demand and location"
+   "question": "Which factor matters most when choosing where to sell school uniforms?",
+   "wrong_answer": "The seller's favourite town",
+   "correct_answer": "Many schools nearby, with customers who can pay"
   },
-  "cause": "The child mixes up two ideas that sound alike or are taught close together.",
-  "reveals": "Offer \"The colour of the shop\" next to the right answer and ask the question again in a new context.",
-  "help": "Ask where people buy shoes.",
+  "cause": "The learner thinks of the seller's wishes, not the buyers.",
+  "reveals": "Offer \"The seller's favourite town\" beside \"Many schools nearby, with customers who can pay\" and ask the child to choose.",
+  "help": "List what a market needs: customers who want the goods and can pay, access, competition, cost of reaching it.",
   "feedback": "Demand, price, location, competition and transport matter in choosing a market.",
   "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
   "status": "draft"
  },
  "PRET.G8.ENTREP.OF_GOODS_AND_SERVICES.MARKETING.M_PT8_MK_TOOL": {
   "skill": "PRET.G8.ENTREP.OF_GOODS_AND_SERVICES.MARKETING",
-  "error": "Names something that is not a marketing tool.",
+  "error": "Thinks the till or other shop equipment is a marketing tool.",
   "example": {
-   "question": "Which is a marketing tool?",
-   "wrong_answer": "A broken door",
-   "correct_answer": "A poster or a radio advert"
+   "question": "Which is a marketing tool a small shop can use?",
+   "wrong_answer": "A cash register",
+   "correct_answer": "A poster, a social media page or a radio advert"
   },
-  "cause": "The child mixes up two ideas that sound alike or are taught close together.",
-  "reveals": "Offer \"A broken door\" next to the right answer and ask the question again in a new context.",
-  "help": "List ways you heard about a product.",
+  "cause": "Anything in a shop seems to help it sell.",
+  "reveals": "Offer \"A cash register\" beside \"A poster, a social media page or a radio advert\" and ask the child to choose.",
+  "help": "Sort shop items into equipment (till, shelves) and marketing tools (posters, signboards, social media pages, radio adverts, samples).",
   "feedback": "Posters, radio, social media, samples and offers are marketing tools.",
   "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
   "status": "draft"
@@ -787,41 +1492,56 @@
    "wrong_answer": "Nothing useful",
    "correct_answer": "Buys in bulk and sells to retailers"
   },
-  "cause": "The child mixes up two ideas that sound alike or are taught close together.",
+  "cause": "The learner hears that middlemen raise prices and does not see the work they do.",
   "reveals": "Offer \"Nothing useful\" next to the right answer and ask the question again in a new context.",
-  "help": "Follow a bag of maize from farm to shop.",
+  "help": "Follow a bag of maize from a farm to a shop: who stores, transports, breaks bulk and sells it near you?",
   "feedback": "Intermediaries bring goods from producers to buyers.",
   "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
   "status": "draft"
  },
  "PRET.G8.ENTREP.DISTRIBUTION_OF_GOODS_AN.DISTRIBUTION.M_PT8_DS_CHANNEL": {
   "skill": "PRET.G8.ENTREP.DISTRIBUTION_OF_GOODS_AN.DISTRIBUTION",
-  "error": "Puts the channel in the wrong order.",
+  "error": "Thinks the direct channel, producer to consumer, is the longest.",
   "example": {
    "question": "Which is the longest channel?",
    "wrong_answer": "Producer to consumer",
    "correct_answer": "Producer to wholesaler to retailer to consumer"
   },
-  "cause": "The child mixes up two ideas that sound alike or are taught close together.",
+  "cause": "The direct channel has the fewest steps but the learner reads \"producer to consumer\" as covering the most ground.",
   "reveals": "Offer \"Producer to consumer\" next to the right answer and ask the question again in a new context.",
-  "help": "Draw the chain with arrows.",
+  "help": "Draw each channel with arrows and count the steps; the most intermediaries make the longest channel.",
   "feedback": "The longest channel has a wholesaler and a retailer between producer and consumer.",
   "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
   "status": "draft"
  },
  "PRET.G8.ENTREP.DISTRIBUTION_OF_GOODS_AN.DISTRIBUTION.M_PT8_DS_ETHICS": {
   "skill": "PRET.G8.ENTREP.DISTRIBUTION_OF_GOODS_AN.DISTRIBUTION",
-  "error": "Thinks hoarding or cheating on weights is fine.",
+  "error": "Thinks hoarding goods to raise prices is clever business.",
   "example": {
    "question": "Which is ethical in distribution?",
    "wrong_answer": "Hiding goods to raise the price",
    "correct_answer": "Giving honest weights and fair prices"
   },
-  "cause": "The child mixes up two ideas that sound alike or are taught close together.",
+  "cause": "Higher prices feel like smart business, whatever the method.",
   "reveals": "Offer \"Hiding goods to raise the price\" next to the right answer and ask the question again in a new context.",
-  "help": "Ask what a customer wants from a trader.",
+  "help": "Discuss the customer's side of hoarding and false weights; customers leave and the law punishes it.",
   "feedback": "Honest weights, fair prices and safe delivery are ethical. Hoarding and cheating are not.",
   "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
+  "status": "draft"
+ },
+ "PRET.G8.ENTREP.DISTRIBUTION_OF_GOODS_AN.DISTRIBUTION.M_PT8_DS_SERVICE_AGENT": {
+  "skill": "PRET.G8.ENTREP.DISTRIBUTION_OF_GOODS_AN.DISTRIBUTION",
+  "error": "Thinks services cannot have intermediaries, only goods can.",
+  "example": {
+   "question": "Which is an intermediary for a service?",
+   "wrong_answer": "None; services always go straight to the customer",
+   "correct_answer": "An M-Pesa agent or an insurance agent"
+  },
+  "cause": "Intermediaries are pictured as people moving goods in lorries.",
+  "reveals": "Offer \"None; services always go straight to the customer\" beside \"An M-Pesa agent or an insurance agent\" and ask the child to choose.",
+  "help": "List services the learner's family uses and who delivers them: agents, booking offices, travel agents.",
+  "feedback": "Services also reach customers through agents.",
+  "source": "To confirm by a Pre-Technical Studies teacher: a common classroom error, not traced to a study by the author.",
   "status": "draft"
  }
 }

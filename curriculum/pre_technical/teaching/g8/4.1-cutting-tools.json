@@ -1,0 +1,197 @@
+{
+ "sub_strand": "PRE_.G8.TOOLS_.CUTTING_TOOLS",
+ "title": "Cutting Tools",
+ "status": "draft: written 18 Nov 2026 offline for Grade 8 Pre-Technical Studies; not yet checked by a Pre-Technical Studies teacher; safety lines marked SAFETY in the library to confirm first; not loaded by the live tutor",
+ "sources": [],
+ "notes": "SAFETY: cutting tools are used only with the teacher present, work held in a vice or clamp. Using the tools (outcome c) is watched and marked with the rubric.",
+ "skills": [
+  {
+   "skill": "PRET.G8.TOOLS_.CUTTING_TOOLS.CUT_TOOLS",
+   "key_step": "The learner identifies cutting tools (saws: tenon, cross-cut, rip, hacksaw, coping; chisels; planes; snips; knives; files), selects the tool for a task by the material and the cut, and cares for them (keep sharp, clean, oil steel, guard edges, store in racks); caring for the tools in class is watched and marked with the rubric.",
+   "floor": {
+    "prerequisite": "Knows how to care for measuring tools.",
+    "question": "What do you do to a steel tool after use?",
+    "answer": "Clean, dry and oil it"
+   },
+   "representations": [
+    "saws laid out with teeth visible",
+    "a task and tool chart",
+    "a tool rack picture"
+   ],
+   "steps": [
+    "Name the material.",
+    "Name the cut needed.",
+    "Choose the tool.",
+    "Say how to care for it."
+   ],
+   "contexts": [
+    "cutting a metal rod",
+    "smoothing a table top",
+    "cutting a plank to length"
+   ],
+   "board": [
+    {
+     "beat": "write",
+     "do": "Write three tasks: cut a steel rod, smooth a board, cut a plank across the grain."
+    },
+    {
+     "beat": "point",
+     "do": "Point at \"cut a steel rod\".",
+     "say": "Which tool, and why?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for the learner to say a hacksaw, fine hard teeth."
+    },
+    {
+     "beat": "reveal",
+     "do": "Choose tools for the other tasks."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "PRET.G8.TOOLS_.CUTTING_TOOLS.CUT_TOOLS.M_PT8_CT_WOOD_METAL",
+     "listen_for": [
+      "A tenon saw"
+     ],
+     "ask": "Which saw cuts metal?",
+     "repair": "Compare the teeth: a tenon saw has bigger teeth for wood; a hacksaw has fine hard teeth for metal."
+    },
+    {
+     "code": "PRET.G8.TOOLS_.CUTTING_TOOLS.CUT_TOOLS.M_PT8_CT_PLANE",
+     "listen_for": [
+      "A chisel"
+     ],
+     "ask": "Which tool smooths a wooden board?",
+     "repair": "Plane a board to show long smooth shavings; chisel a joint to show cutting out small parts."
+    },
+    {
+     "code": "PRET.G8.TOOLS_.CUTTING_TOOLS.CUT_TOOLS.M_PT8_CT_BLUNT",
+     "listen_for": [
+      "A blunt tool is safer"
+     ],
+     "ask": "Why should a cutting tool be kept sharp?",
+     "repair": "Explain that a blunt tool needs more force and slips; compare cutting card with sharp and blunt scissors."
+    },
+    {
+     "code": "PRET.G8.TOOLS_.CUTTING_TOOLS.CUT_TOOLS.M_PT8_CT_RIP_CROSS",
+     "listen_for": [
+      "A rip saw"
+     ],
+     "ask": "Which saw cuts wood across the grain?",
+     "repair": "Show the grain on a plank; cross-cut goes across it, rip goes along it. Look at the tooth shapes."
+    }
+   ],
+   "checks": [
+    {
+     "question": "Which saw cuts metal?",
+     "answer": "A hacksaw",
+     "shows": "select"
+    },
+    {
+     "question": "Why is a cutting tool kept sharp?",
+     "answer": "It cuts easily and slips less",
+     "shows": "care"
+    }
+   ]
+  },
+  {
+   "skill": "PRET.G8.TOOLS_.CUTTING_TOOLS.CUT_USE",
+   "key_step": "The learner explains the safe use of cutting tools: work held in a vice or clamp, cutting away from the body, hacksaw teeth pointing forward, cuts started gently then long steady strokes, tools carried pointing down, blunt or loose tools reported; the use is watched and marked with the rubric. SAFETY: teacher confirms.",
+   "floor": {
+    "prerequisite": "Knows the cutting tools.",
+    "question": "Which saw cuts metal?",
+    "answer": "A hacksaw"
+   },
+   "representations": [
+    "pictures: safe and unsafe holds",
+    "a hacksaw blade under a magnifier",
+    "a cutting safety checklist"
+   ],
+   "steps": [
+    "Clamp the work.",
+    "Check the tool is sharp and the blade fitted the right way.",
+    "Cut away from the body, start gently.",
+    "Clean the tool and put it back."
+   ],
+   "contexts": [
+    "cutting a metal rod for a shelf bracket",
+    "chiselling a joint",
+    "cutting a plank for a stool"
+   ],
+   "board": [
+    {
+     "beat": "write",
+     "do": "Draw a learner holding a piece of wood in one hand and sawing with the other."
+    },
+    {
+     "beat": "point",
+     "do": "Point at the holding hand.",
+     "say": "What is unsafe, and what should be done?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for the learner to say clamp it in a vice."
+    },
+    {
+     "beat": "reveal",
+     "do": "Redraw with the work in a vice."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "PRET.G8.TOOLS_.CUTTING_TOOLS.CUT_USE.M_PT8_CU_TOWARDS",
+     "listen_for": [
+      "Towards the body, for more control"
+     ],
+     "ask": "In which direction should a chisel or knife cut?",
+     "repair": "Show the path the blade takes if it slips in each direction; agree the rule and practise on a clamped scrap."
+    },
+    {
+     "code": "PRET.G8.TOOLS_.CUTTING_TOOLS.CUT_USE.M_PT8_CU_HAND_HOLD",
+     "listen_for": [
+      "In one hand while the other hand saws"
+     ],
+     "ask": "How is a small piece of wood held while it is sawn?",
+     "repair": "Show how a saw jumps at the start of a cut; clamp the work and saw with the free hand guiding safely."
+    },
+    {
+     "code": "PRET.G8.TOOLS_.CUTTING_TOOLS.CUT_USE.M_PT8_CU_BLADE_BACK",
+     "listen_for": [
+      "Towards the handle"
+     ],
+     "ask": "Which way do the teeth of a hacksaw blade point?",
+     "repair": "Look at the teeth with a magnifier; fit the blade so they point forward and feel the cut on the push."
+    },
+    {
+     "code": "PRET.G8.TOOLS_.CUTTING_TOOLS.CUT_USE.M_PT8_CU_PRESS_HARD",
+     "listen_for": [
+      "Press hard with fast short strokes"
+     ],
+     "ask": "How should you start a saw cut?",
+     "repair": "Start a cut with a thumb guiding the blade (above the teeth) and light strokes; then use the full length of the blade."
+    },
+    {
+     "code": "PRET.G8.TOOLS_.CUTTING_TOOLS.CUT_USE.M_PT8_CU_CARRY",
+     "listen_for": [
+      "In a pocket, blade up"
+     ],
+     "ask": "How is a chisel carried in the workshop?",
+     "repair": "Show the injury a blade in a pocket can cause in a fall; practise carrying tools pointing down."
+    }
+   ],
+   "checks": [
+    {
+     "question": "Which way do hacksaw teeth point?",
+     "answer": "Away from the handle",
+     "shows": "blade"
+    },
+    {
+     "question": "How is small work held while cutting?",
+     "answer": "In a vice or with a clamp",
+     "shows": "holding"
+    }
+   ]
+  }
+ ]
+}

@@ -1,0 +1,99 @@
+{
+ "sub_strand": "PRE_.G8.MATERI.COMPOSITE_MATERIALS",
+ "title": "Composite Materials",
+ "status": "draft: written 18 Nov 2026 offline for Grade 8 Pre-Technical Studies; not yet checked by a Pre-Technical Studies teacher; safety lines marked SAFETY in the library to confirm first; not loaded by the live tutor",
+ "sources": [],
+ "notes": "",
+ "skills": [
+  {
+   "skill": "PRET.G8.MATERI.COMPOSITE_MATERIALS.COMPOSITE",
+   "key_step": "The learner identifies composite materials in the locality (concrete and reinforced concrete, plywood, chipboard, hardboard, fibreglass, wattle and daub, mud blocks with straw), describes what each is made of (two or more materials combined), and relates them to uses (buildings, furniture, water tanks, boats).",
+   "floor": {
+    "prerequisite": "Knows metallic and non-metallic materials.",
+    "question": "Is sand metallic or non-metallic?",
+    "answer": "Non-metallic"
+   },
+   "representations": [
+    "samples: plywood edge, chipboard, a concrete piece",
+    "a \"made of\" chart",
+    "a reinforced concrete diagram"
+   ],
+   "steps": [
+    "Name the composite.",
+    "Say what it is made of.",
+    "Say what each part adds.",
+    "Match it to a use."
+   ],
+   "contexts": [
+    "a building site",
+    "a plywood cupboard",
+    "a mud and wattle house"
+   ],
+   "board": [
+    {
+     "beat": "write",
+     "do": "Draw a cut concrete beam with steel bars near the bottom."
+    },
+    {
+     "beat": "point",
+     "do": "Point at the steel bars.",
+     "say": "Why are these here?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for the learner to say to resist pulling or bending."
+    },
+    {
+     "beat": "reveal",
+     "do": "Write what each part of the composite adds."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "PRET.G8.MATERI.COMPOSITE_MATERIALS.COMPOSITE.M_PT8_CM_SINGLE",
+     "listen_for": [
+      "One material only"
+     ],
+     "ask": "What is concrete made of?",
+     "repair": "Mix a small batch: cement, sand, ballast and water; break an old piece to see the stones inside."
+    },
+    {
+     "code": "PRET.G8.MATERI.COMPOSITE_MATERIALS.COMPOSITE.M_PT8_CM_PLYWOOD",
+     "listen_for": [
+      "From one solid piece of wood"
+     ],
+     "ask": "How is plywood made?",
+     "repair": "Look at the edge: thin layers (veneers) glued with the grain crossing, which makes it strong and stops splitting."
+    },
+    {
+     "code": "PRET.G8.MATERI.COMPOSITE_MATERIALS.COMPOSITE.M_PT8_CM_USE",
+     "listen_for": [
+      "Light window frames"
+     ],
+     "ask": "What is reinforced concrete mainly used for?",
+     "repair": "Visit or show a building site: beams, columns and slabs are reinforced concrete."
+    },
+    {
+     "code": "PRET.G8.MATERI.COMPOSITE_MATERIALS.COMPOSITE.M_PT8_CM_STEEL_WEIGHT",
+     "listen_for": [
+      "To make it heavier"
+     ],
+     "ask": "Why are steel bars put inside concrete?",
+     "repair": "Bend a thin slab of plain mortar until it cracks underneath; explain the steel goes where the pulling is."
+    }
+   ],
+   "checks": [
+    {
+     "question": "What is concrete made of?",
+     "answer": "Cement, sand, ballast and water",
+     "shows": "composition"
+    },
+    {
+     "question": "How is plywood made?",
+     "answer": "Thin layers of wood glued with the grain crossing",
+     "shows": "plywood"
+    }
+   ]
+  }
+ ]
+}

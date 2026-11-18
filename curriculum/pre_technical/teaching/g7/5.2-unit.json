@@ -1,0 +1,189 @@
+{
+ "sub_strand": "PRE_.G7.ENTREP.UNIT",
+ "title": "Unit",
+ "status": "draft: written 18 Nov 2026 offline for Grade 7 Pre-Technical Studies; not yet checked by a Pre-Technical Studies teacher; safety lines marked SAFETY in the library to confirm first; not loaded by the live tutor",
+ "sources": [],
+ "notes": "",
+ "skills": [
+  {
+   "skill": "PRET.G7.ENTREP.UNIT.UNIT_LOCATION",
+   "key_step": "The learner explains the factors when locating a production unit: nearness to raw materials and to the market, transport and communication, power and water, labour, security, land and rent, government rules and licences, competition.",
+   "floor": {
+    "prerequisite": "Knows where industries are found.",
+    "question": "Why are tea factories near tea farms?",
+    "answer": "The tea leaves come from there"
+   },
+   "representations": [
+    "a local map with sites",
+    "a factor checklist",
+    "two site cards to compare"
+   ],
+   "steps": [
+    "List the unit's needs.",
+    "Check each site against them.",
+    "Weigh raw materials and market.",
+    "Choose and give reasons."
+   ],
+   "contexts": [
+    "a posho mill in a maize area",
+    "a salon in a market centre",
+    "a sawmill near a forest"
+   ],
+   "board": [
+    {
+     "beat": "write",
+     "do": "Draw a map: forest, town, river, road."
+    },
+    {
+     "beat": "point",
+     "do": "Point at the forest.",
+     "say": "Why might a sawmill be built here?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for the learner to say near the logs, bulky raw material."
+    },
+    {
+     "beat": "reveal",
+     "do": "Mark the best sites for a salon and a bakery."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "PRET.G7.ENTREP.UNIT.UNIT_LOCATION.M_UL_TOWN_ALWAYS",
+     "listen_for": [
+      "In the town centre"
+     ],
+     "ask": "Where is a posho mill best placed?",
+     "repair": "For a posho mill, ask where the maize is and where the customers live; map it."
+    },
+    {
+     "code": "PRET.G7.ENTREP.UNIT.UNIT_LOCATION.M_UL_CHEAP_ONLY",
+     "listen_for": [
+      "The business does well"
+     ],
+     "ask": "A site has cheap rent but no customers pass. What happens?",
+     "repair": "Compare two sites: cheap with no customers and dearer on a busy road; count likely sales."
+    },
+    {
+     "code": "PRET.G7.ENTREP.UNIT.UNIT_LOCATION.M_UL_ANYWHERE",
+     "listen_for": [
+      "No, anywhere will do"
+     ],
+     "ask": "Does the place matter to a salon?",
+     "repair": "List what a salon needs nearby: customers, water, power, security, transport."
+    },
+    {
+     "code": "PRET.G7.ENTREP.UNIT.UNIT_LOCATION.M_PT7_UL_RAW_FAR",
+     "listen_for": [
+      "In the city centre, far from the forest"
+     ],
+     "ask": "A sawmill uses heavy logs. Where is it best placed?",
+     "repair": "Work out the transport cost of moving logs 100 km against moving planks; the bulky load should travel least."
+    }
+   ],
+   "checks": [
+    {
+     "question": "Name two factors in locating a unit.",
+     "answer": "Raw materials and market (power, transport)",
+     "shows": "factors"
+    },
+    {
+     "question": "Where is a sawmill best placed?",
+     "answer": "Near the forest",
+     "shows": "raw materials"
+    }
+   ]
+  },
+  {
+   "skill": "PRET.G7.ENTREP.UNIT.UNIT_SIZE",
+   "key_step": "The learner analyses the factors that decide the size of a production unit (capital, size of the market, raw materials, skills and labour, technology, land and space, government rules, the owner's ability to manage) and how size is measured (workers, capital, output, machines).",
+   "floor": {
+    "prerequisite": "Can find a budget balance.",
+    "question": "Income 1,000, spending 700. What is left?",
+    "answer": "300 shillings"
+   },
+   "representations": [
+    "a factor web around a unit",
+    "two bakery stories",
+    "a size measures chart"
+   ],
+   "steps": [
+    "List the factors.",
+    "Count the market.",
+    "Check the capital.",
+    "Choose a size that fits."
+   ],
+   "contexts": [
+    "a village bakery",
+    "a jua kali workshop",
+    "a dairy cooperative"
+   ],
+   "board": [
+    {
+     "beat": "write",
+     "do": "Write: \"a village of 20 families wants bread\"."
+    },
+    {
+     "beat": "point",
+     "do": "Point at \"20 families\".",
+     "say": "How big should the bakery be, and why?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for the learner to say small, to fit the market."
+    },
+    {
+     "beat": "reveal",
+     "do": "List the other factors."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "PRET.G7.ENTREP.UNIT.UNIT_SIZE.M_US_BIGGER_BETTER",
+     "listen_for": [
+      "Yes, always"
+     ],
+     "ask": "Is a big workshop always better than a small one?",
+     "repair": "Compare a small bakery selling all its bread with a big one throwing half away; size must fit the market."
+    },
+    {
+     "code": "PRET.G7.ENTREP.UNIT.UNIT_SIZE.M_US_WISH_ONLY",
+     "listen_for": [
+      "Only what the owner wants"
+     ],
+     "ask": "What limits the size of a business?",
+     "repair": "List what limits size: capital, market, raw materials, skills and labour, land, the law."
+    },
+    {
+     "code": "PRET.G7.ENTREP.UNIT.UNIT_SIZE.M_US_NO_MARKET",
+     "listen_for": [
+      "A very big one"
+     ],
+     "ask": "A village has 20 families. How big a bakery fits?",
+     "repair": "Work out loaves a day for 20 families; compare with what a big bakery makes."
+    },
+    {
+     "code": "PRET.G7.ENTREP.UNIT.UNIT_SIZE.M_PT7_US_BUILDING",
+     "listen_for": [
+      "Only how big its building is"
+     ],
+     "ask": "Which of these shows the size of a production unit?",
+     "repair": "Compare a small room with ten machines and many workers to a big empty store; list the measures of size."
+    }
+   ],
+   "checks": [
+    {
+     "question": "Name two factors that decide the size of a unit.",
+     "answer": "Capital and market (raw materials, skills)",
+     "shows": "factors"
+    },
+    {
+     "question": "Is a bigger business always better?",
+     "answer": "No, it must fit the market and capital",
+     "shows": "size"
+    }
+   ]
+  }
+ ]
+}

@@ -1,0 +1,279 @@
+{
+ "sub_strand": "PRE_.G7.MATERI.NON_METALLIC_MATERIALS",
+ "title": "Non-Metallic Materials",
+ "status": "draft: written 18 Nov 2026 offline for Grade 7 Pre-Technical Studies; not yet checked by a Pre-Technical Studies teacher; safety lines marked SAFETY in the library to confirm first; not loaded by the live tutor",
+ "sources": [],
+ "notes": "",
+ "skills": [
+  {
+   "skill": "PRET.G7.MATERI.NON_METALLIC_MATERIALS.NONMETAL_CLASS",
+   "key_step": "The learner identifies non-metallic materials in the locality (wood, clay, stone, glass, plastics, rubber, fabrics, leather) and categorises them as natural (from plants, animals or the ground: wood, cotton, wool, leather, clay, stone) or synthetic (made by people from chemicals: nylon, polythene, PVC, synthetic rubber).",
+   "floor": {
+    "prerequisite": "Knows how waste is sorted.",
+    "question": "Sort these: a bottle, a peel, a bag.",
+    "answer": "Glass, organic, plastic"
+   },
+   "representations": [
+    "a natural and synthetic sorting chart",
+    "clothing labels",
+    "a \"trace it back\" arrow chart"
+   ],
+   "steps": [
+    "Name the material.",
+    "Trace where it comes from.",
+    "Sort natural or synthetic.",
+    "Give a reason."
+   ],
+   "contexts": [
+    "a kiondo (sisal basket)",
+    "a nylon rope",
+    "a leather shoe"
+   ],
+   "board": [
+    {
+     "beat": "write",
+     "do": "Write: cotton, nylon, leather, polythene."
+    },
+    {
+     "beat": "point",
+     "do": "Point at \"leather\".",
+     "say": "Natural or synthetic? Where does it come from?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for the learner to say natural, from animal skin."
+    },
+    {
+     "beat": "reveal",
+     "do": "Sort the rest."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "PRET.G7.MATERI.NON_METALLIC_MATERIALS.NONMETAL_CLASS.M_NC_SYNTH_FAKE",
+     "listen_for": [
+      "Fake"
+     ],
+     "ask": "What does synthetic mean?",
+     "repair": "Say synthetic means made by people from chemicals (often from oil): nylon, polythene, PVC. It can be very strong."
+    },
+    {
+     "code": "PRET.G7.MATERI.NON_METALLIC_MATERIALS.NONMETAL_CLASS.M_NC_NATURAL_UNMADE",
+     "listen_for": [
+      "No, people changed it"
+     ],
+     "ask": "Is wood still natural when made into a table?",
+     "repair": "Trace a table back to a tree; the material is still wood, a natural material, even when shaped."
+    },
+    {
+     "code": "PRET.G7.MATERI.NON_METALLIC_MATERIALS.NONMETAL_CLASS.M_NC_PLASTIC_NATURAL",
+     "listen_for": [
+      "Cotton"
+     ],
+     "ask": "Which is synthetic?",
+     "repair": "Trace a polythene bag back to oil and a factory; trace cotton back to a plant."
+    },
+    {
+     "code": "PRET.G7.MATERI.NON_METALLIC_MATERIALS.NONMETAL_CLASS.M_NC_WOOL_SYNTH",
+     "listen_for": [
+      "Wool"
+     ],
+     "ask": "Which cloth fibre is synthetic?",
+     "repair": "Burn-test is not done; instead read clothing labels and trace each fibre to a plant, an animal or a factory."
+    }
+   ],
+   "checks": [
+    {
+     "question": "What does synthetic mean?",
+     "answer": "Made by people from chemicals",
+     "shows": "meaning"
+    },
+    {
+     "question": "Is a polythene bag natural or synthetic?",
+     "answer": "Synthetic",
+     "shows": "sorting"
+    }
+   ]
+  },
+  {
+   "skill": "PRET.G7.MATERI.NON_METALLIC_MATERIALS.NONMETAL_PROPERTIES",
+   "key_step": "The learner describes the physical properties of non-metallic materials: colour, texture (rough, smooth), hardness, brittleness (glass, clay), flexibility (rubber), poor conduction of heat and electricity (insulators), fire resistance (clay, stone) or burning (wood, paper), transparency (glass).",
+   "floor": {
+    "prerequisite": "Knows transparent and opaque materials.",
+    "question": "Is glass transparent or opaque?",
+    "answer": "Transparent"
+   },
+   "representations": [
+    "a property table for wood, glass, rubber, plastic, clay",
+    "a cable cut to show the insulation",
+    "a hard-and-tough comparison card"
+   ],
+   "steps": [
+    "Name the property.",
+    "Observe it.",
+    "Say which materials have it.",
+    "Link it to safety and use."
+   ],
+   "contexts": [
+    "an electrician's rubber gloves",
+    "a clay jiko lining",
+    "a glass window"
+   ],
+   "board": [
+    {
+     "beat": "write",
+     "do": "Draw a table: material, hard?, breaks?, burns?, conducts?."
+    },
+    {
+     "beat": "point",
+     "do": "Point at the row for glass.",
+     "say": "Fill in the row for glass."
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for the learner to say hard, breaks, does not burn, does not conduct."
+    },
+    {
+     "beat": "reveal",
+     "do": "Fill in the other rows."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "PRET.G7.MATERI.NON_METALLIC_MATERIALS.NONMETAL_PROPERTIES.M_NP_ALL_BURN",
+     "listen_for": [
+      "Wood"
+     ],
+     "ask": "Which non-metal does not burn?",
+     "repair": "Show (do not test) that clay bricks and stone are fired or formed by great heat; they do not burn."
+    },
+    {
+     "code": "PRET.G7.MATERI.NON_METALLIC_MATERIALS.NONMETAL_PROPERTIES.M_NP_PLASTIC_HEAT",
+     "listen_for": [
+      "Nothing, plastic is heat-proof"
+     ],
+     "ask": "What happens to a plastic basin on a hot jiko?",
+     "repair": "Show a picture of a plastic basin melted by a jiko; say plastics soften with heat."
+    },
+    {
+     "code": "PRET.G7.MATERI.NON_METALLIC_MATERIALS.NONMETAL_PROPERTIES.M_NP_HARD_UNBREAKABLE",
+     "listen_for": [
+      "No, hard materials never break"
+     ],
+     "ask": "Glass is hard. Can it break?",
+     "repair": "Compare a glass marble (hard, breaks) with a rubber ball (soft, does not break): hard is not the same as tough."
+    },
+    {
+     "code": "PRET.G7.MATERI.NON_METALLIC_MATERIALS.NONMETAL_PROPERTIES.M_NP_RUBBER_CONDUCT",
+     "listen_for": [
+      "Rubber carries electricity"
+     ],
+     "ask": "Why do electricians wear rubber gloves?",
+     "repair": "Show a cable: copper inside carries electricity, rubber or plastic outside stops it. Name insulator."
+    }
+   ],
+   "checks": [
+    {
+     "question": "Why do electricians wear rubber gloves?",
+     "answer": "Rubber does not carry electricity",
+     "shows": "insulators"
+    },
+    {
+     "question": "Glass is hard. Can it break?",
+     "answer": "Yes, it is brittle",
+     "shows": "brittle"
+    }
+   ]
+  },
+  {
+   "skill": "PRET.G7.MATERI.NON_METALLIC_MATERIALS.NONMETAL_USES",
+   "key_step": "The learner relates non-metallic materials to their uses by their properties: glass for windows (transparent), plastic for tanks and basins (light, waterproof, does not rust), rubber for gloves and tyres (insulator, flexible), ceramics for tiles (hard, fire-resistant, easy to clean), wood for furniture (easy to work, strong), cement as a binder.",
+   "floor": {
+    "prerequisite": "Knows the properties of non-metals.",
+    "question": "Which non-metal is transparent?",
+    "answer": "Glass"
+   },
+   "representations": [
+    "a use and property matching chart",
+    "objects: tile, basin, glove, glass",
+    "a \"what must it do?\" card"
+   ],
+   "steps": [
+    "Name the use.",
+    "Ask what the material must do.",
+    "Pick the property.",
+    "Name the material."
+   ],
+   "contexts": [
+    "a plastic water tank",
+    "kitchen floor tiles",
+    "a timber door"
+   ],
+   "board": [
+    {
+     "beat": "write",
+     "do": "Write three uses: window, water tank, electrician's glove."
+    },
+    {
+     "beat": "point",
+     "do": "Point at \"water tank\".",
+     "say": "Which material, and which property makes it right?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for the learner to say plastic, waterproof and light."
+    },
+    {
+     "beat": "reveal",
+     "do": "Match the other two."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "PRET.G7.MATERI.NON_METALLIC_MATERIALS.NONMETAL_USES.M_NU_GLASS_HANDLE",
+     "listen_for": [
+      "Glass"
+     ],
+     "ask": "Which material suits a water tank?",
+     "repair": "Ask \"what must a water tank do?\" (hold water, not break, be light) and test each material against it."
+    },
+    {
+     "code": "PRET.G7.MATERI.NON_METALLIC_MATERIALS.NONMETAL_USES.M_NU_WOOD_ANY",
+     "listen_for": [
+      "Wood, because it is natural"
+     ],
+     "ask": "Which material suits a floor tile in a kitchen?",
+     "repair": "For a kitchen floor, list what it must do (not burn, easy to clean, hard); compare wood and ceramic tiles."
+    },
+    {
+     "code": "PRET.G7.MATERI.NON_METALLIC_MATERIALS.NONMETAL_USES.M_NU_CEMENT",
+     "listen_for": [
+      "It is the wall"
+     ],
+     "ask": "What does cement do in a wall?",
+     "repair": "Show cement powder, then a block joined with mortar; cement is the binder that sets and holds."
+    },
+    {
+     "code": "PRET.G7.MATERI.NON_METALLIC_MATERIALS.NONMETAL_USES.M_PT7_NU_GLASS_STRONG",
+     "listen_for": [
+      "Because it is the strongest material"
+     ],
+     "ask": "Why is glass used for windows?",
+     "repair": "Ask what a window must do (let light in, keep weather out); glass is transparent, but it breaks easily."
+    }
+   ],
+   "checks": [
+    {
+     "question": "Why is glass used for windows?",
+     "answer": "It is transparent",
+     "shows": "uses"
+    },
+    {
+     "question": "What does cement do in a wall?",
+     "answer": "It binds the blocks together as it sets",
+     "shows": "binder"
+    }
+   ]
+  }
+ ]
+}

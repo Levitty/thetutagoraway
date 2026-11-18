@@ -1,0 +1,189 @@
+{
+ "sub_strand": "PRE_.G9.COMMUN.VISUAL_PROGRAMMING",
+ "title": "Visual Programming",
+ "status": "draft: written 18 Nov 2026 offline for Grade 9 Pre-Technical Studies; not yet checked by a Pre-Technical Studies teacher; safety lines marked SAFETY in the library to confirm first; not loaded by the live tutor",
+ "sources": [],
+ "notes": "",
+ "skills": [
+  {
+   "skill": "PRET.G9.COMMUN.VISUAL_PROGRAMMING.VISUAL_APPS",
+   "key_step": "The learner explains the application areas of visual programming in solving problems: games and animations, education (quizzes, simulations), robotics and control, simple mobile apps (App Inventor), business (calculators, counters), health and farming (reminders, records), and that programs are tested and debugged.",
+   "floor": {
+    "prerequisite": "Knows the features of a visual programming application.",
+    "question": "What is a sprite?",
+    "answer": "A character the blocks control"
+   },
+   "representations": [
+    "an application areas web",
+    "screenshots of a quiz, a robot program, a calculator",
+    "a problem and app matching card"
+   ],
+   "steps": [
+    "Name an area.",
+    "Name a problem in it.",
+    "Say what app could help.",
+    "Say how it would be tested."
+   ],
+   "contexts": [
+    "a revision quiz",
+    "a robot following a line",
+    "a kiosk price calculator"
+   ],
+   "board": [
+    {
+     "beat": "write",
+     "do": "Write a problem: \"the school gate needs to count visitors\"."
+    },
+    {
+     "beat": "point",
+     "do": "Point at the problem.",
+     "say": "What simple app could solve this?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for the learner to describe a counter with a button and a variable."
+    },
+    {
+     "beat": "reveal",
+     "do": "Add the area to the web."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "PRET.G9.COMMUN.VISUAL_PROGRAMMING.VISUAL_APPS.M_PT9_VA_USE",
+     "listen_for": [
+      "None; it only makes games"
+     ],
+     "ask": "Which problem could a learner solve with a visual programming application?",
+     "repair": "List real problems at school a small app could help with: a revision quiz, a price calculator, a gate counter."
+    },
+    {
+     "code": "PRET.G9.COMMUN.VISUAL_PROGRAMMING.VISUAL_APPS.M_PT9_VA_BLOCK",
+     "listen_for": [
+      "By typing every line"
+     ],
+     "ask": "How is a program built in visual programming?",
+     "repair": "Build a short program by dragging blocks only; nothing is typed but numbers and words in the blocks."
+    },
+    {
+     "code": "PRET.G9.COMMUN.VISUAL_PROGRAMMING.VISUAL_APPS.M_PT9_VA_SOLVE",
+     "listen_for": [
+      "Start a new app from the beginning"
+     ],
+     "ask": "A learner's quiz app gives the wrong score. What should she do?",
+     "repair": "Show a quiz that adds the score wrongly; step through it to find and fix the bug."
+    },
+    {
+     "code": "PRET.G9.COMMUN.VISUAL_PROGRAMMING.VISUAL_APPS.M_PT9_VA_AREAS",
+     "listen_for": [
+      "Only in school lessons"
+     ],
+     "ask": "In which area is visual programming used?",
+     "repair": "Show block programming used for robots (such as an educational robot kit) and for app builders; list the areas."
+    }
+   ],
+   "checks": [
+    {
+     "question": "Name an area where visual programming is used.",
+     "answer": "Robotics (games, education)",
+     "shows": "areas"
+    },
+    {
+     "question": "How are programs built in visual programming?",
+     "answer": "By joining blocks",
+     "shows": "blocks"
+    }
+   ]
+  },
+  {
+   "skill": "PRET.G9.COMMUN.VISUAL_PROGRAMMING.VP_APP_BUILD",
+   "key_step": "The learner plans, builds and tests a simple app that solves a day-to-day problem (a revision quiz, a shop price calculator, a gate counter): state the problem, plan the algorithm, choose sprites and blocks, use variables and reset them, test with right, wrong and unusual inputs, fix bugs; the app is marked with the rubric.",
+   "floor": {
+    "prerequisite": "Can read block programs with loops and if-blocks.",
+    "question": "What does an if-block do?",
+    "answer": "Runs its blocks only when the condition is true"
+   },
+   "representations": [
+    "an algorithm written as numbered steps",
+    "a variable shown on the stage",
+    "a test table: input, expected, result"
+   ],
+   "steps": [
+    "State the problem.",
+    "Plan the steps.",
+    "Build with sprites, blocks and variables.",
+    "Test and fix the bugs."
+   ],
+   "contexts": [
+    "a revision quiz for Grade 7 learners",
+    "a mandazi price calculator for a kiosk",
+    "a counter for visitors at the school gate"
+   ],
+   "board": [
+    {
+     "beat": "write",
+     "do": "Write the problem: \"a quiz that keeps the score\"."
+    },
+    {
+     "beat": "point",
+     "do": "Point at \"keeps the score\".",
+     "say": "What do we need in the program for this?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for the learner to say a variable called score."
+    },
+    {
+     "beat": "reveal",
+     "do": "Write the plan with \"set score to 0\" at the start."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "PRET.G9.COMMUN.VISUAL_PROGRAMMING.VP_APP_BUILD.M_PT9_VB_PLAN",
+     "listen_for": [
+      "Drag blocks until something works"
+     ],
+     "ask": "What is the first step in creating an app with a visual programming application?",
+     "repair": "Write the problem in one sentence and the steps as a list (an algorithm) before opening the application."
+    },
+    {
+     "code": "PRET.G9.COMMUN.VISUAL_PROGRAMMING.VP_APP_BUILD.M_PT9_VB_VARIABLE",
+     "listen_for": [
+      "Nothing; the app remembers by itself"
+     ],
+     "ask": "A quiz app must keep the score. What is needed?",
+     "repair": "Make a variable \"score\"; show it on the stage; add \"change score by 1\" after a right answer."
+    },
+    {
+     "code": "PRET.G9.COMMUN.VISUAL_PROGRAMMING.VP_APP_BUILD.M_PT9_VB_RESET",
+     "listen_for": [
+      "Nothing; the scores should add up"
+     ],
+     "ask": "Each new game starts with the last game's score. What is missing?",
+     "repair": "Play two games in a row and watch the score; add \"set score to 0\" under the green flag."
+    },
+    {
+     "code": "PRET.G9.COMMUN.VISUAL_PROGRAMMING.VP_APP_BUILD.M_PT9_VB_TEST_ONCE",
+     "listen_for": [
+      "Try one right answer and stop"
+     ],
+     "ask": "How should a quiz app be tested?",
+     "repair": "Swap apps with a partner and try to break each other's quiz; list the bugs found and fix them."
+    }
+   ],
+   "checks": [
+    {
+     "question": "What keeps a changing value such as a score?",
+     "answer": "A variable",
+     "shows": "variables"
+    },
+    {
+     "question": "Name one way to test a quiz app.",
+     "answer": "Try wrong answers (unusual inputs)",
+     "shows": "testing"
+    }
+   ]
+  }
+ ]
+}

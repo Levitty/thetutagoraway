@@ -65,6 +65,14 @@
    ],
    "mastery": "The child names ladders, step ladders, scaffolds and platforms, and the risks (falling, things falling on people below, a platform giving way), and says work at height is done only with a teacher or a trained adult and a helper. Evidence rule: at least four of the last five fresh questions right across at least two question forms, and no repeated pick of the same misconception."
   },
+  "PRET.G9.FOUNDA.SAFETY_ON_RAISED_PLATFOR.PLATFORM_RULES": {
+   "forms": [
+    "pick the safe way to use a ladder or scaffold",
+    "find the unsafe act in a described job",
+    "work out where to place a ladder's foot"
+   ],
+   "mastery": "Says a ladder stands on firm, level ground, footed by a helper, about 1 out for every 4 up; the climber keeps three points of contact and carries tools in a belt or bag, never leans out beyond the ladder, does not stand on the top steps of a step ladder, and that scaffolds have guard rails and toe boards; finds the unsafe act in a described job. Evidence rule: at least four of the last five fresh questions right across at least two question forms, and no repeated pick of the same misconception. The practical part (the drawing, the item made, the tool or computer used) is marked by the teacher with the KICD rubric, never by a tap."
+  },
   "PRET.G9.FOUNDA.HANDLING_HAZARDOUS_SUBST.HAZARD_CLASSIFY": {
    "forms": [
     "pick the right answer",
@@ -97,6 +105,14 @@
    ],
    "mastery": "The child says in oblique drawing the front face is drawn true shape and the depth is shown by sloping lines, usually at 45 degrees, and that in cabinet projection the depth is drawn half size while in cavalier it is full size. Evidence rule: at least four of the last five fresh questions right across at least two question forms, and no repeated pick of the same misconception."
   },
+  "PRET.G9.COMMUN.OBLIQUE_PROJECTION.OBLIQUE_DRAW": {
+   "forms": [
+    "put the drawing steps in order",
+    "work out a receding length",
+    "choose which face goes to the front"
+   ],
+   "mastery": "Draws the front face true shape first, with the face that has circles or the most detail at the front; draws all receding lines parallel at 45 degrees; uses full depth for cavalier and half depth for cabinet; and finds the error in a described oblique drawing. Evidence rule: at least four of the last five fresh questions right across at least two question forms, and no repeated pick of the same misconception. The practical part (the drawing, the item made, the tool or computer used) is marked by the teacher with the KICD rubric, never by a tap."
+  },
   "PRET.G9.COMMUN.VISUAL_PROGRAMMING.VISUAL_APPS": {
    "forms": [
     "pick the right answer",
@@ -104,6 +120,14 @@
     "find the false step in a learner's reason"
    ],
    "mastery": "The child names games, animations, simple phone apps, quizzes and controlling a device as uses of visual programming, and says blocks are joined so that the problem is solved step by step. Evidence rule: at least four of the last five fresh questions right across at least two question forms, and no repeated pick of the same misconception."
+  },
+  "PRET.G9.COMMUN.VISUAL_PROGRAMMING.VP_APP_BUILD": {
+   "forms": [
+    "put the app-building steps in order",
+    "say what is missing from a described program",
+    "choose how to test a program"
+   ],
+   "mastery": "States the problem and plans the steps before dragging blocks; uses a variable to keep a value such as a score, sets it to its start value when the green flag is clicked, and tests with right answers, wrong answers and unusual inputs, fixing the bugs found. Evidence rule: at least four of the last five fresh questions right across at least two question forms, and no repeated pick of the same misconception. The practical part (the drawing, the item made, the tool or computer used) is marked by the teacher with the KICD rubric, never by a tap."
   },
   "PRET.G9.MATERI.WOOD.WOOD_TYPES": {
    "forms": [
@@ -137,6 +161,14 @@
    ],
    "mastery": "The child names the bench vice, G-clamp, hand vice, pliers and tongs, and says holding tools keep the work still so it can be cut or drilled safely, and that they are cleaned and oiled after use. Evidence rule: at least four of the last five fresh questions right across at least two question forms, and no repeated pick of the same misconception."
   },
+  "PRET.G9.TOOLS_.HOLDING_TOOLS.HOLD_USE": {
+   "forms": [
+    "pick the right way to hold the work",
+    "find the mistake in a described set-up",
+    "say why a holding rule matters"
+   ],
+   "mastery": "Says to hold work low in the vice so it does not vibrate or bend, to put soft packing between steel jaws and finished work, to clamp work for drilling rather than holding it by hand, and to support the free end of long work; finds the wrong set-up in a described job. Evidence rule: at least four of the last five fresh questions right across at least two question forms, and no repeated pick of the same misconception. The practical part (the drawing, the item made, the tool or computer used) is marked by the teacher with the KICD rubric, never by a tap."
+  },
   "PRET.G9.TOOLS_.DRIVING_TOOLS.DRIVING_TOOLS": {
    "forms": [
     "pick the right answer",
@@ -145,6 +177,14 @@
    ],
    "mastery": "The child says a hammer drives nails, a mallet drives chisels, a screwdriver drives screws (flat or cross head to match the screw), and a spanner turns nuts and bolts, and that tools are kept clean and stored safely. Evidence rule: at least four of the last five fresh questions right across at least two question forms, and no repeated pick of the same misconception."
   },
+  "PRET.G9.TOOLS_.DRIVING_TOOLS.DRIVE_USE": {
+   "forms": [
+    "pick the right way to use a driving tool",
+    "find the mistake in a described job",
+    "say why a rule matters"
+   ],
+   "mastery": "Says to hold a hammer near the end of the handle and start a nail with light taps before moving the fingers away, to use a screwdriver whose blade fills the slot, to use a spanner that fits the nut exactly and pull it towards you; finds the mistake in a described job. Evidence rule: at least four of the last five fresh questions right across at least two question forms, and no repeated pick of the same misconception. The practical part (the drawing, the item made, the tool or computer used) is marked by the teacher with the KICD rubric, never by a tap."
+  },
   "PRET.G9.TOOLS_.PROJECT.PROJECT_STEPS": {
    "forms": [
     "pick the right answer",
@@ -152,6 +192,14 @@
     "find the false step in a learner's reason"
    ],
    "mastery": "The child says a project starts by identifying a problem, then selecting an item to make, planning, making it from local materials, testing it and reporting what was learnt. Evidence rule: at least four of the last five fresh questions right across at least two question forms, and no repeated pick of the same misconception."
+  },
+  "PRET.G9.TOOLS_.PROJECT.PROJECT_PLAN": {
+   "forms": [
+    "put the making steps in order",
+    "say what a plan is missing",
+    "judge an item against the problem"
+   ],
+   "mastery": "Says that making begins with a sketch and a working drawing with sizes, a materials and cost list, and an order of operations (mark, cut, join, sand, finish last); and that the item is tested and evaluated against the problem it was made to solve, with improvements named. Evidence rule: at least four of the last five fresh questions right across at least two question forms, and no repeated pick of the same misconception. The practical part (the drawing, the item made, the tool or computer used) is marked by the teacher with the KICD rubric, never by a tap."
   },
   "PRET.G9.ENTREP.FINANCIAL_SERVICES.FIN_TYPES": {
    "forms": [
@@ -192,6 +240,14 @@
     "find the false step in a learner's reason"
    ],
    "mastery": "The child says a business plan guides the owner, helps to get a loan and measures progress, and names the business idea, the market, the marketing plan, the people and the money plan (costs and expected income) as components. Evidence rule: at least four of the last five fresh questions right across at least two question forms, and no repeated pick of the same misconception."
+  },
+  "PRET.G9.ENTREP.BUSINESS_PLAN.BP_TEMPLATE": {
+   "forms": [
+    "say what goes in a part of the template",
+    "work out a projected profit",
+    "find what is missing from a filled-in plan"
+   ],
+   "mastery": "Fills each part of a simple template: the business description, the market and the competitors named, start-up capital (equipment, licence and first stock), projected sales, costs and profit (sales - costs), and the executive summary, written last though placed first. Evidence rule: at least four of the last five fresh questions right across at least two question forms, and no repeated pick of the same misconception. The practical part (the drawing, the item made, the tool or computer used) is marked by the teacher with the KICD rubric, never by a tap."
   }
  }
 }

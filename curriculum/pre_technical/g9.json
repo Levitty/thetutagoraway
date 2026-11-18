@@ -3,15 +3,15 @@
  "subject_key": "pre_technical",
  "grade": 9,
  "source": "KICD Pre-Technical Studies, First published 2024 (text layer)",
- "status": "outcomes from KICD's text, word for word; skills, prerequisites and misconceptions proposed (authored offline, 13 Nov 2026), awaiting a Pre-Technical teacher's review",
+ "status": "outcomes from KICD's text, word for word; skills and prerequisites proposed, misconceptions draft, teaching pack draft; first pass 13 Nov 2026, deepened to the Grade 5 Maths standard on 18 Nov 2026 (two prerequisites and four misconceptions per skill; practical outcomes have a knowledge skill and are marked with the rubric); written offline by Claude, awaiting a Pre-Technical Studies teacher's review, safety lines first. Rubrics from KICD, untouched.",
  "totals": {
   "strands": 5,
   "sub_strands": 13,
   "outcomes": 55,
   "lessons": 120,
-  "skills": 17,
-  "prerequisites": 4,
-  "misconceptions": 51
+  "skills": 24,
+  "prerequisites": 64,
+  "misconceptions": 100
  },
  "sub_strands": [
   {
@@ -97,7 +97,64 @@
       "reasoning"
      ],
      "horeb_skill_ids": [],
-     "prerequisites": [],
+     "prerequisites": [
+      {
+       "requires": "PRET.G7.FOUNDA.SAFETY_IN_THE_IMMEDIATE_.SAFETY_THREATS",
+       "kind": "skill",
+       "strength": "essential",
+       "reason": "Falls as a safety threat, from Grade 7. Proposed, to confirm by a Pre-Technical Studies teacher.",
+       "status": "proposed"
+      },
+      {
+       "requires": "PRET.G7.FOUNDA.SAFETY_IN_THE_IMMEDIATE_.SAFETY_RULES",
+       "kind": "skill",
+       "strength": "essential",
+       "reason": "Safety rules from Grade 7. Proposed, to confirm by a Pre-Technical Studies teacher.",
+       "status": "proposed"
+      }
+     ],
+     "status": "proposed"
+    },
+    {
+     "code": "PRET.G9.FOUNDA.SAFETY_ON_RAISED_PLATFOR.PLATFORM_RULES",
+     "name": "Give the safety rules for working on raised platforms: ladder angle and footing, three points of contact, no overreaching, top step, guard rails",
+     "outcomes": [
+      "PRE_.G9.FOUNDA.SAFETY_ON_RAISED_PLATFOR.c"
+     ],
+     "mastery": "Says a ladder stands on firm, level ground, footed by a helper, about 1 out for every 4 up; the climber keeps three points of contact and carries tools in a belt or bag, never leans out beyond the ladder, does not stand on the top steps of a step ladder, and that scaffolds have guard rails and toe boards; finds the unsafe act in a described job. Evidence rule: at least four of the last five fresh questions right across at least two question forms, and no repeated pick of the same misconception. The practical part (the drawing, the item made, the tool or computer used) is marked by the teacher with the KICD rubric, never by a tap.",
+     "question_forms": [
+      "pick the safe way to use a ladder or scaffold",
+      "find the unsafe act in a described job",
+      "work out where to place a ladder's foot"
+     ],
+     "thinking": [
+      "recall",
+      "reasoning"
+     ],
+     "horeb_skill_ids": [],
+     "prerequisites": [
+      {
+       "requires": "PRET.G9.FOUNDA.SAFETY_ON_RAISED_PLATFOR.RAISED_PLATFORMS",
+       "kind": "skill",
+       "strength": "essential",
+       "reason": "The platforms and their risks come before the rules. Proposed, to confirm by a Pre-Technical Studies teacher.",
+       "status": "proposed"
+      },
+      {
+       "requires": "PRET.G7.FOUNDA.SAFETY_IN_THE_IMMEDIATE_.SAFETY_RULES",
+       "kind": "skill",
+       "strength": "essential",
+       "reason": "Workshop safety rules from Grade 7. Proposed, to confirm by a Pre-Technical Studies teacher.",
+       "status": "proposed"
+      },
+      {
+       "requires": "MATH.G7.MEASUR.PYTHAGOREAN_RELATIONSHIP.RIGHT_TRIANGLE_SIDES",
+       "kind": "skill",
+       "strength": "essential",
+       "reason": "A ladder against a wall makes a right-angled triangle. Proposed, to confirm by a Pre-Technical Studies teacher.",
+       "status": "proposed"
+      }
+     ],
      "status": "proposed"
     }
    ],
@@ -105,49 +162,145 @@
     {
      "code": "PRET.G9.FOUNDA.SAFETY_ON_RAISED_PLATFOR.RAISED_PLATFORMS.M_PT9_RP_SAFE",
      "skill": "PRET.G9.FOUNDA.SAFETY_ON_RAISED_PLATFOR.RAISED_PLATFORMS",
-     "error": "Thinks climbing alone is safe.",
+     "error": "Thinks a learner can climb and work on a raised platform alone.",
      "example": {
       "question": "Who should work on a raised platform?",
       "wrong_answer": "A learner alone",
       "correct_answer": "A trained adult with a helper"
      },
-     "cause": "The child mixes up two rules that are taught close together.",
+     "cause": "Climbing trees and walls at home feels normal and safe to the learner.",
      "reveals": "Offer \"A learner alone\" next to the right answer and ask the question again in a new situation.",
-     "help": "Work at height needs a trained adult and a helper.",
+     "help": "Explain that work at height is done by trained adults with a helper; learners do not climb to work.",
      "feedback": "Work at height needs a trained adult and a helper.",
-     "source": "To confirm by a Pre-Technical teacher: a common classroom error, not traced to a study by the author.",
+     "source": "To confirm by a Pre-Technical Studies teacher (SAFETY: the rule must match the school's workshop rules and the Kenyan guidance before a child sees it): a common classroom error, not traced to a study by the author.",
      "status": "draft"
     },
     {
      "code": "PRET.G9.FOUNDA.SAFETY_ON_RAISED_PLATFOR.RAISED_PLATFORMS.M_PT9_RP_RISK",
      "skill": "PRET.G9.FOUNDA.SAFETY_ON_RAISED_PLATFOR.RAISED_PLATFORMS",
-     "error": "Names the wrong risk.",
+     "error": "Names a small discomfort instead of falling as the main risk of working at height.",
      "example": {
-      "question": "Which is a risk of working at height?",
-      "wrong_answer": "Getting a cold",
-      "correct_answer": "Falling"
+      "question": "What is the main risk when working on a ladder?",
+      "wrong_answer": "Getting paint on your clothes",
+      "correct_answer": "Falling, or dropping tools on people below"
      },
-     "cause": "The child mixes up two rules that are taught close together.",
-     "reveals": "Offer \"Getting a cold\" next to the right answer and ask the question again in a new situation.",
-     "help": "Falling is the main risk at height.",
+     "cause": "The learner thinks of small discomforts and does not picture a fall.",
+     "reveals": "Offer \"Getting paint on your clothes\" beside \"Falling, or dropping tools on people below\" and ask the child to choose.",
+     "help": "Show how a fall of even 2 m can cause serious injury; list falls, falling objects and collapse as the main risks.",
      "feedback": "Falling is the main risk at height.",
-     "source": "To confirm by a Pre-Technical teacher: a common classroom error, not traced to a study by the author.",
+     "source": "To confirm by a Pre-Technical Studies teacher (SAFETY: the rule must match the school's workshop rules and the Kenyan guidance before a child sees it): a common classroom error, not traced to a study by the author.",
      "status": "draft"
     },
     {
      "code": "PRET.G9.FOUNDA.SAFETY_ON_RAISED_PLATFOR.RAISED_PLATFORMS.M_PT9_RP_TYPE",
      "skill": "PRET.G9.FOUNDA.SAFETY_ON_RAISED_PLATFOR.RAISED_PLATFORMS",
-     "error": "Names a non-platform.",
+     "error": "Thinks only scaffolds are raised platforms, not ladders, trestles or a chair used to reach high.",
      "example": {
-      "question": "Which is a raised platform?",
-      "wrong_answer": "A flat floor",
-      "correct_answer": "A scaffold"
+      "question": "Kamau stands on a chair to fix a curtain. Is he on a raised platform?",
+      "wrong_answer": "No, only scaffolds are raised platforms",
+      "correct_answer": "Yes, and a chair is an unsafe one"
      },
-     "cause": "The child mixes up two rules that are taught close together.",
-     "reveals": "Offer \"A flat floor\" next to the right answer and ask the question again in a new situation.",
-     "help": "A scaffold is a raised platform.",
+     "cause": "Only scaffolds at building sites look like \"platforms\" to the learner.",
+     "reveals": "Offer \"No, only scaffolds are raised platforms\" beside \"Yes, and a chair is an unsafe one\" and ask the child to choose.",
+     "help": "List what people stand on to reach high: ladders, step ladders, trestles, scaffolds, roofs, and unsafe ones such as chairs and boxes.",
      "feedback": "A scaffold is a raised platform.",
-     "source": "To confirm by a Pre-Technical teacher: a common classroom error, not traced to a study by the author.",
+     "source": "To confirm by a Pre-Technical Studies teacher (SAFETY: the rule must match the school's workshop rules and the Kenyan guidance before a child sees it): a common classroom error, not traced to a study by the author.",
+     "status": "draft"
+    },
+    {
+     "code": "PRET.G9.FOUNDA.SAFETY_ON_RAISED_PLATFOR.PLATFORM_RULES.M_PT9_PR_ANGLE",
+     "skill": "PRET.G9.FOUNDA.SAFETY_ON_RAISED_PLATFOR.PLATFORM_RULES",
+     "error": "Stands a ladder nearly upright against the wall, or very flat, instead of about 1 out for every 4 up.",
+     "example": {
+      "question": "A ladder reaches 4 m up a wall. About how far from the wall should its foot be?",
+      "wrong_answer": "As close to the wall as possible",
+      "correct_answer": "About 1 m out (1 out for every 4 up)"
+     },
+     "cause": "An upright ladder feels closer to the work and so safer.",
+     "reveals": "Offer \"As close to the wall as possible\" beside \"About 1 m out (1 out for every 4 up)\" and ask the child to choose.",
+     "help": "Lay a ladder on the ground and mark 4 along and 1 across; stand it against a low wall with the teacher and see the angle. Too upright tips back; too flat slides out.",
+     "feedback": "Place the foot about 1 out for every 4 up.",
+     "source": "To confirm by a Pre-Technical Studies teacher (SAFETY: the rule must match the school's workshop rules and the Kenyan guidance before a child sees it): a common classroom error, not traced to a study by the author.",
+     "status": "draft"
+    },
+    {
+     "code": "PRET.G9.FOUNDA.SAFETY_ON_RAISED_PLATFOR.PLATFORM_RULES.M_PT9_PR_OVERREACH",
+     "skill": "PRET.G9.FOUNDA.SAFETY_ON_RAISED_PLATFOR.PLATFORM_RULES",
+     "error": "Leans out sideways from a ladder to reach a spot instead of moving the ladder.",
+     "example": {
+      "question": "The spot to paint is beyond arm's reach from the ladder. What do you do?",
+      "wrong_answer": "Lean out to reach it",
+      "correct_answer": "Climb down and move the ladder"
+     },
+     "cause": "Climbing down and moving feels slow when the spot is nearly in reach.",
+     "reveals": "Offer \"Lean out to reach it\" beside \"Climb down and move the ladder\" and ask the child to choose.",
+     "help": "Show how the weight moves outside the ladder and tips it; agree: belt buckle stays between the stiles.",
+     "feedback": "Never lean out. Climb down and move the ladder.",
+     "source": "To confirm by a Pre-Technical Studies teacher (SAFETY: the rule must match the school's workshop rules and the Kenyan guidance before a child sees it): a common classroom error, not traced to a study by the author.",
+     "status": "draft"
+    },
+    {
+     "code": "PRET.G9.FOUNDA.SAFETY_ON_RAISED_PLATFOR.PLATFORM_RULES.M_PT9_PR_TOP_STEP",
+     "skill": "PRET.G9.FOUNDA.SAFETY_ON_RAISED_PLATFOR.PLATFORM_RULES",
+     "error": "Stands on the top step of a step ladder to reach higher.",
+     "example": {
+      "question": "A step ladder is a little too short. What should you do?",
+      "wrong_answer": "Stand on the top step",
+      "correct_answer": "Get a taller ladder; do not stand on the top steps"
+     },
+     "cause": "The top step looks flat and solid like the others.",
+     "reveals": "Offer \"Stand on the top step\" beside \"Get a taller ladder; do not stand on the top steps\" and ask the child to choose.",
+     "help": "Show the ladder label: there is nothing to hold above the top step, so balance is lost. Use the right height of ladder.",
+     "feedback": "Do not stand on the top steps. Use a taller ladder.",
+     "source": "To confirm by a Pre-Technical Studies teacher (SAFETY: the rule must match the school's workshop rules and the Kenyan guidance before a child sees it): a common classroom error, not traced to a study by the author.",
+     "status": "draft"
+    },
+    {
+     "code": "PRET.G9.FOUNDA.SAFETY_ON_RAISED_PLATFOR.PLATFORM_RULES.M_PT9_PR_CONTACT",
+     "skill": "PRET.G9.FOUNDA.SAFETY_ON_RAISED_PLATFOR.PLATFORM_RULES",
+     "error": "Climbs a ladder holding tools in both hands.",
+     "example": {
+      "question": "How should you climb a ladder when you need tools at the top?",
+      "wrong_answer": "Holding the tools in both hands",
+      "correct_answer": "Tools in a belt or bag, keeping three points of contact"
+     },
+     "cause": "Carrying the tools by hand is the quickest way up.",
+     "reveals": "Offer \"Holding the tools in both hands\" beside \"Tools in a belt or bag, keeping three points of contact\" and ask the child to choose.",
+     "help": "Practise on the bottom rung: two hands and a foot, or two feet and a hand, always touching the ladder; tools go in a belt or are passed up.",
+     "feedback": "Keep three points of contact. Carry tools in a belt or bag.",
+     "source": "To confirm by a Pre-Technical Studies teacher (SAFETY: the rule must match the school's workshop rules and the Kenyan guidance before a child sees it): a common classroom error, not traced to a study by the author.",
+     "status": "draft"
+    },
+    {
+     "code": "PRET.G9.FOUNDA.SAFETY_ON_RAISED_PLATFOR.PLATFORM_RULES.M_PT9_PR_FOOTING",
+     "skill": "PRET.G9.FOUNDA.SAFETY_ON_RAISED_PLATFOR.PLATFORM_RULES",
+     "error": "Stands a ladder on a box or bricks to make it taller, or on soft ground.",
+     "example": {
+      "question": "Where should a ladder stand?",
+      "wrong_answer": "On a box or bricks to make it taller",
+      "correct_answer": "On firm, level ground, held at the foot by a helper"
+     },
+     "cause": "Raising the ladder seems a clever way to gain height.",
+     "reveals": "Offer \"On a box or bricks to make it taller\" beside \"On firm, level ground, held at the foot by a helper\" and ask the child to choose.",
+     "help": "Show how a box or soft soil shifts under weight; use firm level ground and a helper footing the ladder.",
+     "feedback": "A ladder stands on firm, level ground, held by a helper.",
+     "source": "To confirm by a Pre-Technical Studies teacher (SAFETY: the rule must match the school's workshop rules and the Kenyan guidance before a child sees it): a common classroom error, not traced to a study by the author.",
+     "status": "draft"
+    },
+    {
+     "code": "PRET.G9.FOUNDA.SAFETY_ON_RAISED_PLATFOR.RAISED_PLATFORMS.M_PT9_RP_BELOW",
+     "skill": "PRET.G9.FOUNDA.SAFETY_ON_RAISED_PLATFOR.RAISED_PLATFORMS",
+     "error": "Thinks only the worker at height is at risk, not people below.",
+     "example": {
+      "question": "A worker on a scaffold drops a hammer. Who is at risk?",
+      "wrong_answer": "Only the worker",
+      "correct_answer": "People below, who can be hit by falling objects"
+     },
+     "cause": "The learner pictures the danger only where the worker is.",
+     "reveals": "Offer \"Only the worker\" beside \"People below, who can be hit by falling objects\" and ask the child to choose.",
+     "help": "Mark a no-go area under a ladder or scaffold; explain toe boards and helmets.",
+     "feedback": "People below can be hit by falling tools. Keep the area below clear.",
+     "source": "To confirm by a Pre-Technical Studies teacher (SAFETY: the rule must match the school's workshop rules and the Kenyan guidance before a child sees it): a common classroom error, not traced to a study by the author.",
      "status": "draft"
     }
    ],
@@ -248,14 +401,30 @@
       "reasoning"
      ],
      "horeb_skill_ids": [],
-     "prerequisites": [],
+     "prerequisites": [
+      {
+       "requires": "INTE.G7.SCIENT.LABORATORY_SAFETY.HAZARD_SYMBOLS",
+       "kind": "skill",
+       "strength": "essential",
+       "reason": "Hazard symbols from Grade 7 Integrated Science. Proposed, to confirm by a Pre-Technical Studies teacher.",
+       "status": "proposed"
+      },
+      {
+       "requires": "PRET.G8.FOUNDA.FIRE_SAFETY.FIRE_CAUSES",
+       "kind": "skill",
+       "strength": "essential",
+       "reason": "Fuels as fire causes, from Grade 8. Proposed, to confirm by a Pre-Technical Studies teacher.",
+       "status": "proposed"
+      }
+     ],
      "status": "proposed"
     },
     {
      "code": "PRET.G9.FOUNDA.HANDLING_HAZARDOUS_SUBST.HAZARD_HANDLING",
      "name": "Describe safe ways of handling hazardous substances",
      "outcomes": [
-      "PRE_.G9.FOUNDA.HANDLING_HAZARDOUS_SUBST.c"
+      "PRE_.G9.FOUNDA.HANDLING_HAZARDOUS_SUBST.c",
+      "PRE_.G9.FOUNDA.HANDLING_HAZARDOUS_SUBST.d"
      ],
      "mastery": "The child says to read the label, keep them in their own labelled containers out of reach of young children, never mix them, never eat or drink near them, wear gloves, use them in fresh air, and ask a teacher or adult for anything dangerous. Evidence rule: at least four of the last five fresh questions right across at least two question forms, and no repeated pick of the same misconception.",
      "question_forms": [
@@ -273,7 +442,21 @@
        "requires": "PRET.G9.FOUNDA.HANDLING_HAZARDOUS_SUBST.HAZARD_CLASSIFY",
        "kind": "skill",
        "strength": "essential",
-       "reason": "Proposed: this skill builds on it. To confirm by a Pre-Technical teacher.",
+       "reason": "The hazard decides how a substance is handled. Proposed, to confirm by a Pre-Technical Studies teacher.",
+       "status": "proposed"
+      },
+      {
+       "requires": "INTE.G7.SCIENT.LABORATORY_SAFETY.FIRST_AID",
+       "kind": "skill",
+       "strength": "essential",
+       "reason": "First aid, from Grade 7 Integrated Science. Proposed, to confirm by a Pre-Technical Studies teacher.",
+       "status": "proposed"
+      },
+      {
+       "requires": "PRET.G7.FOUNDA.SAFETY_IN_THE_IMMEDIATE_.SAFETY_RULES",
+       "kind": "skill",
+       "strength": "essential",
+       "reason": "Safety rules from Grade 7. Proposed, to confirm by a Pre-Technical Studies teacher.",
        "status": "proposed"
       }
      ],
@@ -284,97 +467,145 @@
     {
      "code": "PRET.G9.FOUNDA.HANDLING_HAZARDOUS_SUBST.HAZARD_CLASSIFY.M_PT9_HC_FLAMMABLE",
      "skill": "PRET.G9.FOUNDA.HANDLING_HAZARDOUS_SUBST.HAZARD_CLASSIFY",
-     "error": "Mixes flammable and corrosive.",
+     "error": "Mixes up flammable (catches fire easily) and corrosive (eats away skin and metal).",
      "example": {
       "question": "Which word means catches fire easily?",
       "wrong_answer": "Corrosive",
       "correct_answer": "Flammable"
      },
-     "cause": "The child mixes up two rules that are taught close together.",
+     "cause": "Flammable and corrosive are long new words learnt in the same lesson.",
      "reveals": "Offer \"Corrosive\" next to the right answer and ask the question again in a new situation.",
-     "help": "Flammable means catches fire easily.",
+     "help": "Match each word to its symbol: a flame for flammable, a hand and metal being eaten for corrosive.",
      "feedback": "Flammable means catches fire easily.",
-     "source": "To confirm by a Pre-Technical teacher: a common classroom error, not traced to a study by the author.",
+     "source": "To confirm by a Pre-Technical Studies teacher (SAFETY: the rule must match the school's workshop rules and the Kenyan guidance before a child sees it): a common classroom error, not traced to a study by the author.",
      "status": "draft"
     },
     {
      "code": "PRET.G9.FOUNDA.HANDLING_HAZARDOUS_SUBST.HAZARD_CLASSIFY.M_PT9_HC_CORROSIVE",
      "skill": "PRET.G9.FOUNDA.HANDLING_HAZARDOUS_SUBST.HAZARD_CLASSIFY",
-     "error": "Mixes corrosive and toxic.",
+     "error": "Mixes up corrosive and toxic.",
      "example": {
       "question": "Which word means eats away skin and metal?",
       "wrong_answer": "Toxic",
       "correct_answer": "Corrosive"
      },
-     "cause": "The child mixes up two rules that are taught close together.",
+     "cause": "Both words describe harm to the body, so they blur together.",
      "reveals": "Offer \"Toxic\" next to the right answer and ask the question again in a new situation.",
-     "help": "Corrosive substances eat away skin and metal.",
+     "help": "Corrosive burns and eats away (acid, bleach); toxic poisons when swallowed, breathed or absorbed (pesticides).",
      "feedback": "Corrosive substances eat away skin and metal.",
-     "source": "To confirm by a Pre-Technical teacher: a common classroom error, not traced to a study by the author.",
+     "source": "To confirm by a Pre-Technical Studies teacher (SAFETY: the rule must match the school's workshop rules and the Kenyan guidance before a child sees it): a common classroom error, not traced to a study by the author.",
      "status": "draft"
     },
     {
      "code": "PRET.G9.FOUNDA.HANDLING_HAZARDOUS_SUBST.HAZARD_CLASSIFY.M_PT9_HC_PETROL",
      "skill": "PRET.G9.FOUNDA.HANDLING_HAZARDOUS_SUBST.HAZARD_CLASSIFY",
-     "error": "Calls petrol safe.",
+     "error": "Thinks petrol is safe because it is used every day.",
      "example": {
       "question": "How is petrol classified?",
-      "wrong_answer": "Safe",
+      "wrong_answer": "Safe, because cars use it every day",
       "correct_answer": "Flammable"
      },
-     "cause": "The child mixes up two rules that are taught close together.",
-     "reveals": "Offer \"Safe\" next to the right answer and ask the question again in a new situation.",
-     "help": "Petrol is flammable.",
+     "cause": "Petrol is used every day in cars and boda bodas, so it seems safe.",
+     "reveals": "Offer \"Safe, because cars use it every day\" beside \"Flammable\" and ask the child to choose.",
+     "help": "Show the flame symbol on a fuel container; petrol vapour catches fire from a spark or cigarette.",
      "feedback": "Petrol is flammable.",
-     "source": "To confirm by a Pre-Technical teacher: a common classroom error, not traced to a study by the author.",
+     "source": "To confirm by a Pre-Technical Studies teacher (SAFETY: the rule must match the school's workshop rules and the Kenyan guidance before a child sees it): a common classroom error, not traced to a study by the author.",
      "status": "draft"
     },
     {
      "code": "PRET.G9.FOUNDA.HANDLING_HAZARDOUS_SUBST.HAZARD_HANDLING.M_PT9_HH_LABEL",
      "skill": "PRET.G9.FOUNDA.HANDLING_HAZARDOUS_SUBST.HAZARD_HANDLING",
-     "error": "Ignores labels.",
+     "error": "Opens and uses a substance without reading the label.",
      "example": {
       "question": "What should you do before using a substance?",
       "wrong_answer": "Open it at once",
       "correct_answer": "Read the label"
      },
-     "cause": "The child mixes up two rules that are taught close together.",
+     "cause": "The learner thinks they already know what is in a familiar container.",
      "reveals": "Offer \"Open it at once\" next to the right answer and ask the question again in a new situation.",
-     "help": "Read the label first.",
+     "help": "Read a label aloud: hazard, how to use, protective wear, first aid, storage. Make \"read the label\" the first step.",
      "feedback": "Read the label first.",
-     "source": "To confirm by a Pre-Technical teacher: a common classroom error, not traced to a study by the author.",
+     "source": "To confirm by a Pre-Technical Studies teacher (SAFETY: the rule must match the school's workshop rules and the Kenyan guidance before a child sees it): a common classroom error, not traced to a study by the author.",
      "status": "draft"
     },
     {
      "code": "PRET.G9.FOUNDA.HANDLING_HAZARDOUS_SUBST.HAZARD_HANDLING.M_PT9_HH_MIX",
      "skill": "PRET.G9.FOUNDA.HANDLING_HAZARDOUS_SUBST.HAZARD_HANDLING",
-     "error": "Mixes cleaners to be stronger.",
+     "error": "Mixes two cleaners, such as bleach and an acid toilet cleaner, to make them stronger.",
      "example": {
       "question": "What should you do with two cleaners?",
       "wrong_answer": "Mix them to be stronger",
       "correct_answer": "Never mix them"
      },
-     "cause": "The child mixes up two rules that are taught close together.",
+     "cause": "Two cleaners together sound twice as strong.",
      "reveals": "Offer \"Mix them to be stronger\" next to the right answer and ask the question again in a new situation.",
-     "help": "Never mix cleaners.",
+     "help": "Explain that some mixtures (such as bleach with an acid toilet cleaner) give off a poisonous gas; never mix. Not demonstrated.",
      "feedback": "Never mix cleaners.",
-     "source": "To confirm by a Pre-Technical teacher: a common classroom error, not traced to a study by the author.",
+     "source": "To confirm by a Pre-Technical Studies teacher (SAFETY: the rule must match the school's workshop rules and the Kenyan guidance before a child sees it): a common classroom error, not traced to a study by the author.",
      "status": "draft"
     },
     {
      "code": "PRET.G9.FOUNDA.HANDLING_HAZARDOUS_SUBST.HAZARD_HANDLING.M_PT9_HH_STORE",
      "skill": "PRET.G9.FOUNDA.HANDLING_HAZARDOUS_SUBST.HAZARD_HANDLING",
-     "error": "Stores in a drink bottle.",
+     "error": "Stores paraffin or chemicals in drink bottles.",
      "example": {
       "question": "How should paraffin be stored?",
       "wrong_answer": "In a drink bottle on the table",
       "correct_answer": "In a labelled container out of reach"
      },
-     "cause": "The child mixes up two rules that are taught close together.",
+     "cause": "Drink bottles are the containers to hand at home.",
      "reveals": "Offer \"In a drink bottle on the table\" next to the right answer and ask the question again in a new situation.",
-     "help": "Store in a labelled container out of reach.",
+     "help": "Show why a child may drink paraffin from a soda bottle; store in the original labelled container, locked and out of reach.",
      "feedback": "Store in a labelled container out of reach.",
-     "source": "To confirm by a Pre-Technical teacher: a common classroom error, not traced to a study by the author.",
+     "source": "To confirm by a Pre-Technical Studies teacher (SAFETY: the rule must match the school's workshop rules and the Kenyan guidance before a child sees it): a common classroom error, not traced to a study by the author.",
+     "status": "draft"
+    },
+    {
+     "code": "PRET.G9.FOUNDA.HANDLING_HAZARDOUS_SUBST.HAZARD_CLASSIFY.M_PT9_HC_HOME_SAFE",
+     "skill": "PRET.G9.FOUNDA.HANDLING_HAZARDOUS_SUBST.HAZARD_CLASSIFY",
+     "error": "Thinks products sold for home use, such as bleach, are not hazardous.",
+     "example": {
+      "question": "Bleach is used at home for cleaning. Is it hazardous?",
+      "wrong_answer": "No, home products are safe",
+      "correct_answer": "Yes, it is corrosive and harmful if swallowed or splashed in the eyes"
+     },
+     "cause": "Things sold in shops for the home seem tested and safe.",
+     "reveals": "Offer \"No, home products are safe\" beside \"Yes, it is corrosive and harmful if swallowed or splashed in the eyes\" and ask the child to choose.",
+     "help": "Read the label on a bleach bottle with the class: the hazard symbol and warnings are printed there.",
+     "feedback": "Many home products are hazardous. Read the label.",
+     "source": "To confirm by a Pre-Technical Studies teacher (SAFETY: the rule must match the school's workshop rules and the Kenyan guidance before a child sees it): a common classroom error, not traced to a study by the author.",
+     "status": "draft"
+    },
+    {
+     "code": "PRET.G9.FOUNDA.HANDLING_HAZARDOUS_SUBST.HAZARD_CLASSIFY.M_PT9_HC_SKULL",
+     "skill": "PRET.G9.FOUNDA.HANDLING_HAZARDOUS_SUBST.HAZARD_CLASSIFY",
+     "error": "Reads the skull-and-crossbones symbol as meaning \"catches fire\".",
+     "example": {
+      "question": "What does the skull-and-crossbones symbol on a container mean?",
+      "wrong_answer": "It catches fire easily",
+      "correct_answer": "Toxic: it can poison if swallowed, breathed in or on the skin"
+     },
+     "cause": "The learner knows the symbol means danger but not which kind.",
+     "reveals": "Offer \"It catches fire easily\" beside \"Toxic: it can poison if swallowed, breathed in or on the skin\" and ask the child to choose.",
+     "help": "Match each hazard symbol (flame, skull, corrosion, exclamation mark, environment) to its meaning and an example.",
+     "feedback": "The skull and crossbones means toxic: it can poison.",
+     "source": "To confirm by a Pre-Technical Studies teacher (SAFETY: the rule must match the school's workshop rules and the Kenyan guidance before a child sees it): a common classroom error, not traced to a study by the author.",
+     "status": "draft"
+    },
+    {
+     "code": "PRET.G9.FOUNDA.HANDLING_HAZARDOUS_SUBST.HAZARD_HANDLING.M_PT9_HH_PPE",
+     "skill": "PRET.G9.FOUNDA.HANDLING_HAZARDOUS_SUBST.HAZARD_HANDLING",
+     "error": "Handles pesticide without protective clothing, thinking washing afterwards is enough.",
+     "example": {
+      "question": "A farmer mixes pesticide for spraying. What should he wear?",
+      "wrong_answer": "Nothing special, if he washes afterwards",
+      "correct_answer": "Gloves, a mask, boots and long sleeves, then wash afterwards"
+     },
+     "cause": "The harm is not seen at once, so protection seems unnecessary.",
+     "reveals": "Offer \"Nothing special, if he washes afterwards\" beside \"Gloves, a mask, boots and long sleeves, then wash afterwards\" and ask the child to choose.",
+     "help": "Read the protective wear section of a pesticide label; explain that some poisons pass through the skin and lungs.",
+     "feedback": "Wear gloves, a mask, boots and long sleeves when handling pesticides.",
+     "source": "To confirm by a Pre-Technical Studies teacher (SAFETY: the rule must match the school's workshop rules and the Kenyan guidance before a child sees it): a common classroom error, not traced to a study by the author.",
      "status": "draft"
     }
    ],
@@ -454,7 +685,8 @@
      "outcomes": [
       "PRE_.G9.FOUNDA.SELF_EXPLORATION_AND_CAR.a",
       "PRE_.G9.FOUNDA.SELF_EXPLORATION_AND_CAR.b",
-      "PRE_.G9.FOUNDA.SELF_EXPLORATION_AND_CAR.c"
+      "PRE_.G9.FOUNDA.SELF_EXPLORATION_AND_CAR.c",
+      "PRE_.G9.FOUNDA.SELF_EXPLORATION_AND_CAR.d"
      ],
      "mastery": "The child says talents grow by practice and guidance, links a talent to careers (drawing to design, running to athletics, kindness to nursing), and tells ethical use (honesty, fair play) from unethical (cheating, using a talent to harm). Evidence rule: at least four of the last five fresh questions right across at least two question forms, and no repeated pick of the same misconception.",
      "question_forms": [
@@ -467,7 +699,22 @@
       "reasoning"
      ],
      "horeb_skill_ids": [],
-     "prerequisites": [],
+     "prerequisites": [
+      {
+       "requires": "PRET.G7.FOUNDA.INTRODUCTION_TO_PRE_TECH.PT_INTRO",
+       "kind": "skill",
+       "strength": "essential",
+       "reason": "Pre-Technical Studies in career development, from Grade 7. Proposed, to confirm by a Pre-Technical Studies teacher.",
+       "status": "proposed"
+      },
+      {
+       "requires": "PRET.G7.ENTREP.INTRODUCTION_TO_ENTREPRE.ENT_QUALITIES",
+       "kind": "skill",
+       "strength": "essential",
+       "reason": "Qualities such as determination and honesty, from Grade 7. Proposed, to confirm by a Pre-Technical Studies teacher.",
+       "status": "proposed"
+      }
+     ],
      "status": "proposed"
     }
    ],
@@ -481,9 +728,9 @@
       "wrong_answer": "Without any effort",
       "correct_answer": "By practice and guidance"
      },
-     "cause": "The child mixes up two rules that are taught close together.",
+     "cause": "Talented people seem born ready, so practice looks unnecessary.",
      "reveals": "Offer \"Without any effort\" next to the right answer and ask the question again in a new situation.",
-     "help": "Talents grow by practice and guidance.",
+     "help": "Tell the story of a local footballer or musician: years of practice and coaching. Plan one way to practise a talent weekly.",
      "feedback": "Talents grow by practice and guidance.",
      "source": "To confirm by a Pre-Technical teacher: a common classroom error, not traced to a study by the author.",
      "status": "draft"
@@ -491,15 +738,15 @@
     {
      "code": "PRET.G9.FOUNDA.SELF_EXPLORATION_AND_CAR.TALENTS.M_PT9_TA_ETHIC",
      "skill": "PRET.G9.FOUNDA.SELF_EXPLORATION_AND_CAR.TALENTS",
-     "error": "Calls cheating ethical.",
+     "error": "Thinks using a talent to do other learners' assessed work for money is an ethical use.",
      "example": {
-      "question": "Which is an ethical use of a talent?",
-      "wrong_answer": "Cheating to win",
-      "correct_answer": "Playing fairly"
+      "question": "A learner who draws well is paid to do classmates' art homework. Is this an ethical use of the talent?",
+      "wrong_answer": "Yes, he earns money from his talent",
+      "correct_answer": "No, it is cheating; he could tutor them or sell his own art"
      },
-     "cause": "The child mixes up two rules that are taught close together.",
-     "reveals": "Offer \"Cheating to win\" next to the right answer and ask the question again in a new situation.",
-     "help": "Fair play is ethical.",
+     "cause": "Earning from a talent feels good whatever the use.",
+     "reveals": "Offer \"Yes, he earns money from his talent\" beside \"No, it is cheating; he could tutor them or sell his own art\" and ask the child to choose.",
+     "help": "Sort uses of talents into ethical (fair, honest, helps others) and unethical (cheating, harming, deceiving).",
      "feedback": "Fair play is ethical.",
      "source": "To confirm by a Pre-Technical teacher: a common classroom error, not traced to a study by the author.",
      "status": "draft"
@@ -507,17 +754,33 @@
     {
      "code": "PRET.G9.FOUNDA.SELF_EXPLORATION_AND_CAR.TALENTS.M_PT9_TA_CAREER",
      "skill": "PRET.G9.FOUNDA.SELF_EXPLORATION_AND_CAR.TALENTS",
-     "error": "Links a wrong career.",
+     "error": "Links a talent for drawing to a career that does not use it.",
      "example": {
-      "question": "Which career links to a talent for drawing?",
-      "wrong_answer": "Driver",
-      "correct_answer": "Designer"
+      "question": "Which career links best to a talent for drawing?",
+      "wrong_answer": "Driving",
+      "correct_answer": "Design, architecture or art"
      },
-     "cause": "The child mixes up two rules that are taught close together.",
-     "reveals": "Offer \"Driver\" next to the right answer and ask the question again in a new situation.",
-     "help": "Drawing links to design careers.",
+     "cause": "The learner links careers to the jobs they see most, not to talents.",
+     "reveals": "Offer \"Driving\" beside \"Design, architecture or art\" and ask the child to choose.",
+     "help": "Make a talent and career web: drawing leads to design, architecture, engineering drawing, art.",
      "feedback": "Drawing links to design careers.",
      "source": "To confirm by a Pre-Technical teacher: a common classroom error, not traced to a study by the author.",
+     "status": "draft"
+    },
+    {
+     "code": "PRET.G9.FOUNDA.SELF_EXPLORATION_AND_CAR.TALENTS.M_PT9_TA_ONE_ONLY",
+     "skill": "PRET.G9.FOUNDA.SELF_EXPLORATION_AND_CAR.TALENTS",
+     "error": "Thinks a person has only one talent and must choose a career from it alone.",
+     "example": {
+      "question": "Achieng sings well and is good at mathematics. What should guide her career choice?",
+      "wrong_answer": "Only singing, because a person has one talent",
+      "correct_answer": "All her talents, abilities and interests, with advice from teachers and family"
+     },
+     "cause": "The learner hears people described by one talent (\"the singer\").",
+     "reveals": "Offer \"Only singing, because a person has one talent\" beside \"All her talents, abilities and interests, with advice from teachers and family\" and ask the child to choose.",
+     "help": "List several talents and abilities for one person; show careers that use more than one (sound engineering uses music and mathematics).",
+     "feedback": "Use all your talents, abilities and interests to choose a career.",
+     "source": "To confirm by a Pre-Technical Studies teacher: a common classroom error, not traced to a study by the author.",
      "status": "draft"
     }
    ],
@@ -607,7 +870,72 @@
       "reasoning"
      ],
      "horeb_skill_ids": [],
-     "prerequisites": [],
+     "prerequisites": [
+      {
+       "requires": "PRET.G8.COMMUN.PLANE_GEOMETRY.DRAW_INSTRUMENTS",
+       "kind": "skill",
+       "strength": "essential",
+       "reason": "The 45 degree set square, from Grade 8. Proposed, to confirm by a Pre-Technical Studies teacher.",
+       "status": "proposed"
+      },
+      {
+       "requires": "PRET.G7.COMMUN.FREE_HAND_SKETCHING.SKETCH_TECHNIQUES",
+       "kind": "skill",
+       "strength": "essential",
+       "reason": "Sketching, from Grade 7. Proposed, to confirm by a Pre-Technical Studies teacher.",
+       "status": "proposed"
+      },
+      {
+       "requires": "MATH.G7.GEOMET.GEOMETRICAL_CONSTRUCTION.CONSTRUCT_STANDARD_ANGLES",
+       "kind": "skill",
+       "strength": "essential",
+       "reason": "Constructing 45 degrees, from Grade 7 Mathematics. Proposed, to confirm by a Pre-Technical Studies teacher.",
+       "status": "proposed"
+      }
+     ],
+     "status": "proposed"
+    },
+    {
+     "code": "PRET.G9.COMMUN.OBLIQUE_PROJECTION.OBLIQUE_DRAW",
+     "name": "Give the steps to sketch and draw blocks in oblique: the front face true shape first, receding lines parallel at 45 degrees, half depth in cabinet, circles on the front face",
+     "outcomes": [
+      "PRE_.G9.COMMUN.OBLIQUE_PROJECTION.b",
+      "PRE_.G9.COMMUN.OBLIQUE_PROJECTION.c"
+     ],
+     "mastery": "Draws the front face true shape first, with the face that has circles or the most detail at the front; draws all receding lines parallel at 45 degrees; uses full depth for cavalier and half depth for cabinet; and finds the error in a described oblique drawing. Evidence rule: at least four of the last five fresh questions right across at least two question forms, and no repeated pick of the same misconception. The practical part (the drawing, the item made, the tool or computer used) is marked by the teacher with the KICD rubric, never by a tap.",
+     "question_forms": [
+      "put the drawing steps in order",
+      "work out a receding length",
+      "choose which face goes to the front"
+     ],
+     "thinking": [
+      "recall",
+      "reasoning"
+     ],
+     "horeb_skill_ids": [],
+     "prerequisites": [
+      {
+       "requires": "PRET.G9.COMMUN.OBLIQUE_PROJECTION.OBLIQUE",
+       "kind": "skill",
+       "strength": "essential",
+       "reason": "The characteristics of oblique come first. Proposed, to confirm by a Pre-Technical Studies teacher.",
+       "status": "proposed"
+      },
+      {
+       "requires": "PRET.G8.COMMUN.PLANE_GEOMETRY.GEOM_CONSTRUCT",
+       "kind": "skill",
+       "strength": "essential",
+       "reason": "Constructing angles and circles, from Grade 8. Proposed, to confirm by a Pre-Technical Studies teacher.",
+       "status": "proposed"
+      },
+      {
+       "requires": "PRET.G7.COMMUN.FREE_HAND_SKETCHING.SKETCH_TECHNIQUES",
+       "kind": "skill",
+       "strength": "essential",
+       "reason": "Freehand sketching, from Grade 7. Proposed, to confirm by a Pre-Technical Studies teacher.",
+       "status": "proposed"
+      }
+     ],
      "status": "proposed"
     }
    ],
@@ -615,15 +943,15 @@
     {
      "code": "PRET.G9.COMMUN.OBLIQUE_PROJECTION.OBLIQUE.M_PT9_OB_FRONT",
      "skill": "PRET.G9.COMMUN.OBLIQUE_PROJECTION.OBLIQUE",
-     "error": "Draws the front face distorted.",
+     "error": "Draws the front face of an oblique drawing slanted and distorted.",
      "example": {
       "question": "In oblique drawing the front face is drawn...",
       "wrong_answer": "At an angle and distorted",
       "correct_answer": "True shape"
      },
-     "cause": "The child mixes up two rules that are taught close together.",
+     "cause": "The learner thinks every face of a 3D drawing must be slanted.",
      "reveals": "Offer \"At an angle and distorted\" next to the right answer and ask the question again in a new situation.",
-     "help": "The front face is true shape.",
+     "help": "Draw a block in oblique: the front face is a true rectangle with true sizes; only depth slants.",
      "feedback": "The front face is true shape.",
      "source": "To confirm by a Pre-Technical teacher: a common classroom error, not traced to a study by the author.",
      "status": "draft"
@@ -631,15 +959,15 @@
     {
      "code": "PRET.G9.COMMUN.OBLIQUE_PROJECTION.OBLIQUE.M_PT9_OB_ANGLE",
      "skill": "PRET.G9.COMMUN.OBLIQUE_PROJECTION.OBLIQUE",
-     "error": "Gives the wrong angle.",
+     "error": "Draws the receding (depth) lines at 90 degrees.",
      "example": {
       "question": "At what angle are depth lines usually drawn?",
       "wrong_answer": "90 degrees",
       "correct_answer": "45 degrees"
      },
-     "cause": "The child mixes up two rules that are taught close together.",
+     "cause": "Right angles are everywhere in drawing, so 90 degrees seems the default.",
      "reveals": "Offer \"90 degrees\" next to the right answer and ask the question again in a new situation.",
-     "help": "Depth lines are usually at 45 degrees.",
+     "help": "Use the 45 degree set square on the T-square; draw depth lines at 45 degrees.",
      "feedback": "Depth lines are usually at 45 degrees.",
      "source": "To confirm by a Pre-Technical teacher: a common classroom error, not traced to a study by the author.",
      "status": "draft"
@@ -647,17 +975,97 @@
     {
      "code": "PRET.G9.COMMUN.OBLIQUE_PROJECTION.OBLIQUE.M_PT9_OB_CABINET",
      "skill": "PRET.G9.COMMUN.OBLIQUE_PROJECTION.OBLIQUE",
-     "error": "Mixes cabinet and cavalier.",
+     "error": "Mixes up cabinet (half depth) and cavalier (full depth).",
      "example": {
       "question": "In cabinet projection the depth is...",
       "wrong_answer": "Full size",
       "correct_answer": "Half size"
      },
-     "cause": "The child mixes up two rules that are taught close together.",
+     "cause": "Cabinet and cavalier sound alike and are learnt together.",
      "reveals": "Offer \"Full size\" next to the right answer and ask the question again in a new situation.",
-     "help": "In cabinet the depth is half size.",
+     "help": "Draw both: cavalier full depth looks too long; cabinet half depth looks right. \"Cabinet: cut in half.\"",
      "feedback": "In cabinet the depth is half size.",
      "source": "To confirm by a Pre-Technical teacher: a common classroom error, not traced to a study by the author.",
+     "status": "draft"
+    },
+    {
+     "code": "PRET.G9.COMMUN.OBLIQUE_PROJECTION.OBLIQUE_DRAW.M_PT9_OD_CIRCLE_FACE",
+     "skill": "PRET.G9.COMMUN.OBLIQUE_PROJECTION.OBLIQUE_DRAW",
+     "error": "Puts the face with a circle on a receding side, so the circle becomes a hard ellipse.",
+     "example": {
+      "question": "A block has a round hole on one face. Which face should go to the front in an oblique drawing?",
+      "wrong_answer": "Any face; it does not matter",
+      "correct_answer": "The face with the hole, so the circle is drawn true shape with a compass"
+     },
+     "cause": "The learner draws the block the way it happens to sit on the desk.",
+     "reveals": "Offer \"Any face; it does not matter\" beside \"The face with the hole, so the circle is drawn true shape with a compass\" and ask the child to choose.",
+     "help": "Draw the block twice: hole at the front (a compass circle) and hole on the side (a distorted shape). Choose the easier, truer one.",
+     "feedback": "Put circles and the most detail on the front face.",
+     "source": "To confirm by a Pre-Technical Studies teacher: a common classroom error, not traced to a study by the author.",
+     "status": "draft"
+    },
+    {
+     "code": "PRET.G9.COMMUN.OBLIQUE_PROJECTION.OBLIQUE_DRAW.M_PT9_OD_DEPTH_FULL",
+     "skill": "PRET.G9.COMMUN.OBLIQUE_PROJECTION.OBLIQUE_DRAW",
+     "error": "Draws the full depth in cabinet oblique instead of half.",
+     "example": {
+      "question": "A block 60 mm deep is drawn in cabinet oblique. How long are the receding lines?",
+      "wrong_answer": "60 mm",
+      "correct_answer": "30 mm"
+     },
+     "cause": "The learner uses the real size everywhere, as in other drawings.",
+     "reveals": "Offer \"60 mm\" beside \"30 mm\" and ask the child to choose.",
+     "help": "Draw the same block in cavalier (full depth) and cabinet (half depth); cabinet looks more like the real block.",
+     "feedback": "In cabinet oblique the receding lines are half the real depth.",
+     "source": "To confirm by a Pre-Technical Studies teacher: a common classroom error, not traced to a study by the author.",
+     "status": "draft"
+    },
+    {
+     "code": "PRET.G9.COMMUN.OBLIQUE_PROJECTION.OBLIQUE_DRAW.M_PT9_OD_START",
+     "skill": "PRET.G9.COMMUN.OBLIQUE_PROJECTION.OBLIQUE_DRAW",
+     "error": "Starts an oblique drawing with the receding lines before the front face.",
+     "example": {
+      "question": "What is drawn first in an oblique drawing?",
+      "wrong_answer": "The receding (depth) lines",
+      "correct_answer": "The front face, true shape"
+     },
+     "cause": "The slanting lines look like the hard part, so the learner starts there.",
+     "reveals": "Offer \"The receding (depth) lines\" beside \"The front face, true shape\" and ask the child to choose.",
+     "help": "Draw the front face first with true sizes, then project receding lines from each corner at 45 degrees.",
+     "feedback": "Draw the front face first, then the receding lines.",
+     "source": "To confirm by a Pre-Technical Studies teacher: a common classroom error, not traced to a study by the author.",
+     "status": "draft"
+    },
+    {
+     "code": "PRET.G9.COMMUN.OBLIQUE_PROJECTION.OBLIQUE_DRAW.M_PT9_OD_CONVERGE",
+     "skill": "PRET.G9.COMMUN.OBLIQUE_PROJECTION.OBLIQUE_DRAW",
+     "error": "Draws receding lines that meet at a point, as in a picture with perspective.",
+     "example": {
+      "question": "How are all the receding lines in an oblique drawing drawn?",
+      "wrong_answer": "Meeting at a point in the distance",
+      "correct_answer": "Parallel, all at the same angle"
+     },
+     "cause": "Pictures and photographs show lines meeting in the distance.",
+     "reveals": "Offer \"Meeting at a point in the distance\" beside \"Parallel, all at the same angle\" and ask the child to choose.",
+     "help": "Use the 45 degree set square on the T-square for every receding line; they stay parallel.",
+     "feedback": "In oblique, all receding lines are parallel.",
+     "source": "To confirm by a Pre-Technical Studies teacher: a common classroom error, not traced to a study by the author.",
+     "status": "draft"
+    },
+    {
+     "code": "PRET.G9.COMMUN.OBLIQUE_PROJECTION.OBLIQUE.M_PT9_OB_ISOMETRIC",
+     "skill": "PRET.G9.COMMUN.OBLIQUE_PROJECTION.OBLIQUE",
+     "error": "Mixes up oblique and isometric projection.",
+     "example": {
+      "question": "Which projection draws the front face true shape with receding lines at 45 degrees?",
+      "wrong_answer": "Isometric",
+      "correct_answer": "Oblique"
+     },
+     "cause": "Both are pictorial drawings that show three faces.",
+     "reveals": "Offer \"Isometric\" beside \"Oblique\" and ask the child to choose.",
+     "help": "Draw the same block in isometric (30 degree lines both ways, no true face) and in oblique (true front, 45 degree depth); compare.",
+     "feedback": "Oblique keeps the front face true shape. Isometric uses 30 degree lines.",
+     "source": "To confirm by a Pre-Technical Studies teacher: a common classroom error, not traced to a study by the author.",
      "status": "draft"
     }
    ],
@@ -740,7 +1148,64 @@
       "reasoning"
      ],
      "horeb_skill_ids": [],
-     "prerequisites": [],
+     "prerequisites": [
+      {
+       "requires": "PRET.G8.COMMUN.VISUAL_PROGRAMMING.VISUAL_PROG",
+       "kind": "skill",
+       "strength": "essential",
+       "reason": "Visual programming and its features, from Grade 8. Proposed, to confirm by a Pre-Technical Studies teacher.",
+       "status": "proposed"
+      },
+      {
+       "requires": "PRET.G8.COMMUN.VISUAL_PROGRAMMING.VP_SEQUENCE",
+       "kind": "skill",
+       "strength": "essential",
+       "reason": "Order, loops and if-blocks, from Grade 8. Proposed, to confirm by a Pre-Technical Studies teacher.",
+       "status": "proposed"
+      }
+     ],
+     "status": "proposed"
+    },
+    {
+     "code": "PRET.G9.COMMUN.VISUAL_PROGRAMMING.VP_APP_BUILD",
+     "name": "Plan, build and test a simple visual program that solves a day-to-day problem: state the problem, plan the steps, use variables, reset at the start, test with right and wrong inputs",
+     "outcomes": [
+      "PRE_.G9.COMMUN.VISUAL_PROGRAMMING.b"
+     ],
+     "mastery": "States the problem and plans the steps before dragging blocks; uses a variable to keep a value such as a score, sets it to its start value when the green flag is clicked, and tests with right answers, wrong answers and unusual inputs, fixing the bugs found. Evidence rule: at least four of the last five fresh questions right across at least two question forms, and no repeated pick of the same misconception. The practical part (the drawing, the item made, the tool or computer used) is marked by the teacher with the KICD rubric, never by a tap.",
+     "question_forms": [
+      "put the app-building steps in order",
+      "say what is missing from a described program",
+      "choose how to test a program"
+     ],
+     "thinking": [
+      "recall",
+      "reasoning"
+     ],
+     "horeb_skill_ids": [],
+     "prerequisites": [
+      {
+       "requires": "PRET.G9.COMMUN.VISUAL_PROGRAMMING.VISUAL_APPS",
+       "kind": "skill",
+       "strength": "essential",
+       "reason": "Where visual programs are used comes first. Proposed, to confirm by a Pre-Technical Studies teacher.",
+       "status": "proposed"
+      },
+      {
+       "requires": "PRET.G8.COMMUN.VISUAL_PROGRAMMING.VP_SEQUENCE",
+       "kind": "skill",
+       "strength": "essential",
+       "reason": "Order, loops and if-blocks, from Grade 8. Proposed, to confirm by a Pre-Technical Studies teacher.",
+       "status": "proposed"
+      },
+      {
+       "requires": "PRET.G8.COMMUN.VISUAL_PROGRAMMING.VISUAL_PROG",
+       "kind": "skill",
+       "strength": "essential",
+       "reason": "The features of the application, from Grade 8. Proposed, to confirm by a Pre-Technical Studies teacher.",
+       "status": "proposed"
+      }
+     ],
      "status": "proposed"
     }
    ],
@@ -748,15 +1213,15 @@
     {
      "code": "PRET.G9.COMMUN.VISUAL_PROGRAMMING.VISUAL_APPS.M_PT9_VA_USE",
      "skill": "PRET.G9.COMMUN.VISUAL_PROGRAMMING.VISUAL_APPS",
-     "error": "Names a non-use.",
+     "error": "Thinks visual programming only makes games, not tools that solve real problems.",
      "example": {
-      "question": "Which can be made with visual programming?",
-      "wrong_answer": "A brick wall",
-      "correct_answer": "A simple game"
+      "question": "Which problem could a learner solve with a visual programming application?",
+      "wrong_answer": "None; it only makes games",
+      "correct_answer": "A revision quiz, a price calculator for a kiosk, or a counter for the school gate"
      },
-     "cause": "The child mixes up two rules that are taught close together.",
-     "reveals": "Offer \"A brick wall\" next to the right answer and ask the question again in a new situation.",
-     "help": "Games and apps can be made.",
+     "cause": "The learner has used Scratch only for games and animations.",
+     "reveals": "Offer \"None; it only makes games\" beside \"A revision quiz, a price calculator for a kiosk, or a counter for the school gate\" and ask the child to choose.",
+     "help": "List real problems at school a small app could help with: a revision quiz, a price calculator, a gate counter.",
      "feedback": "Games and apps can be made.",
      "source": "To confirm by a Pre-Technical teacher: a common classroom error, not traced to a study by the author.",
      "status": "draft"
@@ -764,15 +1229,15 @@
     {
      "code": "PRET.G9.COMMUN.VISUAL_PROGRAMMING.VISUAL_APPS.M_PT9_VA_BLOCK",
      "skill": "PRET.G9.COMMUN.VISUAL_PROGRAMMING.VISUAL_APPS",
-     "error": "Thinks it needs only typing.",
+     "error": "Thinks every line of a visual program must be typed.",
      "example": {
       "question": "How is a program built in visual programming?",
       "wrong_answer": "By typing every line",
       "correct_answer": "By joining blocks"
      },
-     "cause": "The child mixes up two rules that are taught close together.",
+     "cause": "Films show programmers typing fast, so all programming seems to be typing.",
      "reveals": "Offer \"By typing every line\" next to the right answer and ask the question again in a new situation.",
-     "help": "Blocks are joined.",
+     "help": "Build a short program by dragging blocks only; nothing is typed but numbers and words in the blocks.",
      "feedback": "Blocks are joined.",
      "source": "To confirm by a Pre-Technical teacher: a common classroom error, not traced to a study by the author.",
      "status": "draft"
@@ -780,17 +1245,97 @@
     {
      "code": "PRET.G9.COMMUN.VISUAL_PROGRAMMING.VISUAL_APPS.M_PT9_VA_SOLVE",
      "skill": "PRET.G9.COMMUN.VISUAL_PROGRAMMING.VISUAL_APPS",
-     "error": "Thinks it solves nothing.",
+     "error": "Thinks a program works the first time, so testing and debugging are not needed.",
      "example": {
-      "question": "What can a visual program do?",
-      "wrong_answer": "Nothing useful",
-      "correct_answer": "Solve a problem step by step"
+      "question": "A learner's quiz app gives the wrong score. What should she do?",
+      "wrong_answer": "Start a new app from the beginning",
+      "correct_answer": "Test it step by step to find and fix the bug"
      },
-     "cause": "The child mixes up two rules that are taught close together.",
-     "reveals": "Offer \"Nothing useful\" next to the right answer and ask the question again in a new situation.",
-     "help": "It solves problems step by step.",
+     "cause": "The program ran once, so the learner thinks it is finished.",
+     "reveals": "Offer \"Start a new app from the beginning\" beside \"Test it step by step to find and fix the bug\" and ask the child to choose.",
+     "help": "Show a quiz that adds the score wrongly; step through it to find and fix the bug.",
      "feedback": "It solves problems step by step.",
      "source": "To confirm by a Pre-Technical teacher: a common classroom error, not traced to a study by the author.",
+     "status": "draft"
+    },
+    {
+     "code": "PRET.G9.COMMUN.VISUAL_PROGRAMMING.VP_APP_BUILD.M_PT9_VB_PLAN",
+     "skill": "PRET.G9.COMMUN.VISUAL_PROGRAMMING.VP_APP_BUILD",
+     "error": "Starts dragging blocks before stating the problem or planning the steps.",
+     "example": {
+      "question": "What is the first step in creating an app with a visual programming application?",
+      "wrong_answer": "Drag blocks until something works",
+      "correct_answer": "State the problem and plan the steps"
+     },
+     "cause": "Dragging blocks is the fun part and feels like progress.",
+     "reveals": "Offer \"Drag blocks until something works\" beside \"State the problem and plan the steps\" and ask the child to choose.",
+     "help": "Write the problem in one sentence and the steps as a list (an algorithm) before opening the application.",
+     "feedback": "State the problem and plan the steps first.",
+     "source": "To confirm by a Pre-Technical Studies teacher: a common classroom error, not traced to a study by the author.",
+     "status": "draft"
+    },
+    {
+     "code": "PRET.G9.COMMUN.VISUAL_PROGRAMMING.VP_APP_BUILD.M_PT9_VB_VARIABLE",
+     "skill": "PRET.G9.COMMUN.VISUAL_PROGRAMMING.VP_APP_BUILD",
+     "error": "Expects a program to remember a changing value, such as a score, without a variable.",
+     "example": {
+      "question": "A quiz app must keep the score. What is needed?",
+      "wrong_answer": "Nothing; the app remembers by itself",
+      "correct_answer": "A variable called score that changes by 1 for each right answer"
+     },
+     "cause": "People remember scores in their heads, so the app seems to as well.",
+     "reveals": "Offer \"Nothing; the app remembers by itself\" beside \"A variable called score that changes by 1 for each right answer\" and ask the child to choose.",
+     "help": "Make a variable \"score\"; show it on the stage; add \"change score by 1\" after a right answer.",
+     "feedback": "Use a variable to keep a value that changes.",
+     "source": "To confirm by a Pre-Technical Studies teacher: a common classroom error, not traced to a study by the author.",
+     "status": "draft"
+    },
+    {
+     "code": "PRET.G9.COMMUN.VISUAL_PROGRAMMING.VP_APP_BUILD.M_PT9_VB_RESET",
+     "skill": "PRET.G9.COMMUN.VISUAL_PROGRAMMING.VP_APP_BUILD",
+     "error": "Forgets to set the score back to zero at the start of each game.",
+     "example": {
+      "question": "Each new game starts with the last game's score. What is missing?",
+      "wrong_answer": "Nothing; the scores should add up",
+      "correct_answer": "Set score to 0 when the green flag is clicked"
+     },
+     "cause": "The learner tests only one game and never sees the old score carry over.",
+     "reveals": "Offer \"Nothing; the scores should add up\" beside \"Set score to 0 when the green flag is clicked\" and ask the child to choose.",
+     "help": "Play two games in a row and watch the score; add \"set score to 0\" under the green flag.",
+     "feedback": "Reset variables at the start of the program.",
+     "source": "To confirm by a Pre-Technical Studies teacher: a common classroom error, not traced to a study by the author.",
+     "status": "draft"
+    },
+    {
+     "code": "PRET.G9.COMMUN.VISUAL_PROGRAMMING.VP_APP_BUILD.M_PT9_VB_TEST_ONCE",
+     "skill": "PRET.G9.COMMUN.VISUAL_PROGRAMMING.VP_APP_BUILD",
+     "error": "Tests a program with one right answer and stops.",
+     "example": {
+      "question": "How should a quiz app be tested?",
+      "wrong_answer": "Try one right answer and stop",
+      "correct_answer": "Try right answers, wrong answers and unusual inputs"
+     },
+     "cause": "The program worked once, so the learner thinks it always will.",
+     "reveals": "Offer \"Try one right answer and stop\" beside \"Try right answers, wrong answers and unusual inputs\" and ask the child to choose.",
+     "help": "Swap apps with a partner and try to break each other's quiz; list the bugs found and fix them.",
+     "feedback": "Test with right, wrong and unusual inputs.",
+     "source": "To confirm by a Pre-Technical Studies teacher: a common classroom error, not traced to a study by the author.",
+     "status": "draft"
+    },
+    {
+     "code": "PRET.G9.COMMUN.VISUAL_PROGRAMMING.VISUAL_APPS.M_PT9_VA_AREAS",
+     "skill": "PRET.G9.COMMUN.VISUAL_PROGRAMMING.VISUAL_APPS",
+     "error": "Thinks visual programming is used only in school lessons.",
+     "example": {
+      "question": "In which area is visual programming used?",
+      "wrong_answer": "Only in school lessons",
+      "correct_answer": "Robotics, games, education and simple apps for farming, health or business"
+     },
+     "cause": "The learner has met it only at school.",
+     "reveals": "Offer \"Only in school lessons\" beside \"Robotics, games, education and simple apps for farming, health or business\" and ask the child to choose.",
+     "help": "Show block programming used for robots (such as an educational robot kit) and for app builders; list the areas.",
+     "feedback": "Visual programming is used in robotics, games, education and real apps.",
+     "source": "To confirm by a Pre-Technical Studies teacher: a common classroom error, not traced to a study by the author.",
      "status": "draft"
     }
    ],
@@ -879,7 +1424,29 @@
       "reasoning"
      ],
      "horeb_skill_ids": [],
-     "prerequisites": [],
+     "prerequisites": [
+      {
+       "requires": "PRET.G7.MATERI.NON_METALLIC_MATERIALS.NONMETAL_CLASS",
+       "kind": "skill",
+       "strength": "essential",
+       "reason": "Natural materials such as wood, from Grade 7. Proposed, to confirm by a Pre-Technical Studies teacher.",
+       "status": "proposed"
+      },
+      {
+       "requires": "SCIE.G5.LIVING.CLASSIFICATION_OF_PLANTS.FLOWERING_OR_NOT",
+       "kind": "skill",
+       "strength": "essential",
+       "reason": "Flowering and non-flowering plants: hardwoods come from flowering, broad-leaved trees. Proposed, to confirm by a Pre-Technical Studies teacher.",
+       "status": "proposed"
+      },
+      {
+       "requires": "PRET.G8.MATERI.COMPOSITE_MATERIALS.COMPOSITE",
+       "kind": "skill",
+       "strength": "essential",
+       "reason": "Manufactured boards are composites, from Grade 8. Proposed, to confirm by a Pre-Technical Studies teacher.",
+       "status": "proposed"
+      }
+     ],
      "status": "proposed"
     },
     {
@@ -904,7 +1471,21 @@
        "requires": "PRET.G9.MATERI.WOOD.WOOD_TYPES",
        "kind": "skill",
        "strength": "essential",
-       "reason": "Proposed: this skill builds on it. To confirm by a Pre-Technical teacher.",
+       "reason": "The types of wood come first. Proposed, to confirm by a Pre-Technical Studies teacher.",
+       "status": "proposed"
+      },
+      {
+       "requires": "SCIE.G6.MATTER.CHANGE_OF_STATE.STATE_CHANGE_HEAT",
+       "kind": "skill",
+       "strength": "essential",
+       "reason": "Evaporation, which dries timber, from Grade 6. Proposed, to confirm by a Pre-Technical Studies teacher.",
+       "status": "proposed"
+      },
+      {
+       "requires": "PRET.G8.TOOLS_.CUTTING_TOOLS.CUT_TOOLS",
+       "kind": "skill",
+       "strength": "essential",
+       "reason": "Saws and planes used in preparing wood, from Grade 8. Proposed, to confirm by a Pre-Technical Studies teacher.",
        "status": "proposed"
       }
      ],
@@ -921,9 +1502,9 @@
       "wrong_answer": "Pine",
       "correct_answer": "Mahogany"
      },
-     "cause": "The child mixes up two rules that are taught close together.",
+     "cause": "Pine is the timber seen most in furniture shops, so it is taken for a hardwood.",
      "reveals": "Offer \"Pine\" next to the right answer and ask the question again in a new situation.",
-     "help": "Mahogany is a hardwood.",
+     "help": "Show a pine cone and needle leaves: pine is a conifer, so it is a softwood.",
      "feedback": "Mahogany is a hardwood.",
      "source": "To confirm by a Pre-Technical teacher: a common classroom error, not traced to a study by the author.",
      "status": "draft"
@@ -937,9 +1518,9 @@
       "wrong_answer": "Mvule",
       "correct_answer": "Pine"
      },
-     "cause": "The child mixes up two rules that are taught close together.",
+     "cause": "Mvule is less familiar and the learner guesses.",
      "reveals": "Offer \"Mvule\" next to the right answer and ask the question again in a new situation.",
-     "help": "Pine is a softwood.",
+     "help": "Mvule is a broad-leaved indigenous tree: a hardwood, dense and durable, used for doors and furniture.",
      "feedback": "Pine is a softwood.",
      "source": "To confirm by a Pre-Technical teacher: a common classroom error, not traced to a study by the author.",
      "status": "draft"
@@ -947,15 +1528,15 @@
     {
      "code": "PRET.G9.MATERI.WOOD.WOOD_TYPES.M_PT9_WT_BOARD",
      "skill": "PRET.G9.MATERI.WOOD.WOOD_TYPES",
-     "error": "Calls plywood solid wood.",
+     "error": "Thinks manufactured boards such as plywood are solid planks.",
      "example": {
       "question": "What is plywood?",
       "wrong_answer": "One solid plank",
       "correct_answer": "A board of glued wood layers"
      },
-     "cause": "The child mixes up two rules that are taught close together.",
+     "cause": "A board from a hardware shop looks like a plank.",
      "reveals": "Offer \"One solid plank\" next to the right answer and ask the question again in a new situation.",
-     "help": "Plywood is made of glued layers.",
+     "help": "Look at the edge of plywood (layers) and chipboard (chips in glue): manufactured boards, not solid timber.",
      "feedback": "Plywood is made of glued layers.",
      "source": "To confirm by a Pre-Technical teacher: a common classroom error, not traced to a study by the author.",
      "status": "draft"
@@ -963,15 +1544,15 @@
     {
      "code": "PRET.G9.MATERI.WOOD.WOOD_PREP.M_PT9_WP_SEASON",
      "skill": "PRET.G9.MATERI.WOOD.WOOD_PREP",
-     "error": "Skips seasoning.",
+     "error": "Uses freshly cut (green) timber at once, not knowing it shrinks, warps and cracks as it dries.",
      "example": {
-      "question": "Why is timber seasoned?",
-      "wrong_answer": "To make it wet",
-      "correct_answer": "To dry it so it does not warp"
+      "question": "A fundi makes a door from freshly cut timber. What may happen?",
+      "wrong_answer": "Nothing; fresh timber is best",
+      "correct_answer": "It may shrink, warp or crack as it dries"
      },
-     "cause": "The child mixes up two rules that are taught close together.",
-     "reveals": "Offer \"To make it wet\" next to the right answer and ask the question again in a new situation.",
-     "help": "Seasoning dries timber.",
+     "cause": "Fresh timber looks clean and strong, so drying seems unnecessary.",
+     "reveals": "Offer \"Nothing; fresh timber is best\" beside \"It may shrink, warp or crack as it dries\" and ask the child to choose.",
+     "help": "Weigh a fresh offcut and the same one after two weeks; explain shrinking, warping and cracking as water leaves.",
      "feedback": "Seasoning dries timber.",
      "source": "To confirm by a Pre-Technical teacher: a common classroom error, not traced to a study by the author.",
      "status": "draft"
@@ -979,15 +1560,15 @@
     {
      "code": "PRET.G9.MATERI.WOOD.WOOD_PREP.M_PT9_WP_ORDER",
      "skill": "PRET.G9.MATERI.WOOD.WOOD_PREP",
-     "error": "Plans before sawing.",
+     "error": "Puts finishing (varnishing) before converting and seasoning the timber.",
      "example": {
-      "question": "Which comes first in preparing wood?",
-      "wrong_answer": "Varnishing",
-      "correct_answer": "Sawing the log into planks"
+      "question": "After a tree is felled, which step comes next?",
+      "wrong_answer": "Varnishing it",
+      "correct_answer": "Cross-cutting into logs and sawing them into planks (conversion)"
      },
-     "cause": "The child mixes up two rules that are taught close together.",
-     "reveals": "Offer \"Varnishing\" next to the right answer and ask the question again in a new situation.",
-     "help": "Logs are sawn first.",
+     "cause": "The learner pictures the finished item and starts from the end.",
+     "reveals": "Offer \"Varnishing it\" beside \"Cross-cutting into logs and sawing them into planks (conversion)\" and ask the child to choose.",
+     "help": "Order the steps on cards: felling, cross-cutting, conversion (sawing), seasoning, treating, planing, finishing.",
      "feedback": "Logs are sawn first.",
      "source": "To confirm by a Pre-Technical teacher: a common classroom error, not traced to a study by the author.",
      "status": "draft"
@@ -995,17 +1576,49 @@
     {
      "code": "PRET.G9.MATERI.WOOD.WOOD_PREP.M_PT9_WP_TREAT",
      "skill": "PRET.G9.MATERI.WOOD.WOOD_PREP",
-     "error": "Thinks treating spoils wood.",
+     "error": "Thinks a preservative is only for colour.",
      "example": {
-      "question": "Why is wood treated with a preservative?",
-      "wrong_answer": "To make it rot",
-      "correct_answer": "To protect it from rot and insects"
+      "question": "Why are fence posts treated with a preservative?",
+      "wrong_answer": "To give them a nice colour",
+      "correct_answer": "To protect them from rot, termites and other insects"
      },
-     "cause": "The child mixes up two rules that are taught close together.",
-     "reveals": "Offer \"To make it rot\" next to the right answer and ask the question again in a new situation.",
-     "help": "Preservatives protect wood.",
+     "cause": "Treated timber is often coloured, so treatment seems to be for looks.",
+     "reveals": "Offer \"To give them a nice colour\" beside \"To protect them from rot, termites and other insects\" and ask the child to choose.",
+     "help": "Show a treated and an untreated fence post after some years (or photos): rot and termite damage on the untreated one.",
      "feedback": "Preservatives protect wood.",
      "source": "To confirm by a Pre-Technical teacher: a common classroom error, not traced to a study by the author.",
+     "status": "draft"
+    },
+    {
+     "code": "PRET.G9.MATERI.WOOD.WOOD_TYPES.M_PT9_WT_FEEL",
+     "skill": "PRET.G9.MATERI.WOOD.WOOD_TYPES",
+     "error": "Thinks hardwood and softwood describe how hard the wood feels.",
+     "example": {
+      "question": "What decides whether timber is a hardwood or a softwood?",
+      "wrong_answer": "How hard it feels",
+      "correct_answer": "The kind of tree: broad-leaved trees give hardwoods, cone-bearing trees give softwoods"
+     },
+     "cause": "The names make the learner judge by hardness.",
+     "reveals": "Offer \"How hard it feels\" beside \"The kind of tree: broad-leaved trees give hardwoods, cone-bearing trees give softwoods\" and ask the child to choose.",
+     "help": "Show leaves and seeds: mahogany and mvule (broad leaves) against pine and cypress (needles, cones). Note that some hardwoods are soft.",
+     "feedback": "Hardwood and softwood are named from the tree, not from how hard the wood is.",
+     "source": "To confirm by a Pre-Technical Studies teacher: a common classroom error, not traced to a study by the author.",
+     "status": "draft"
+    },
+    {
+     "code": "PRET.G9.MATERI.WOOD.WOOD_PREP.M_PT9_WP_STACK",
+     "skill": "PRET.G9.MATERI.WOOD.WOOD_PREP",
+     "error": "Stacks timber for air seasoning in a tight pile on the ground.",
+     "example": {
+      "question": "How is timber stacked for air seasoning?",
+      "wrong_answer": "In a tight pile on the ground",
+      "correct_answer": "Off the ground on bearers, with sticks between the boards, under a roof"
+     },
+     "cause": "A tight pile looks tidy and saves space.",
+     "reveals": "Offer \"In a tight pile on the ground\" beside \"Off the ground on bearers, with sticks between the boards, under a roof\" and ask the child to choose.",
+     "help": "Draw a seasoning stack: bearers off the ground, stickers between boards so air flows, a roof against rain and sun.",
+     "feedback": "Stack timber off the ground with sticks between boards so air flows.",
+     "source": "To confirm by a Pre-Technical Studies teacher: a common classroom error, not traced to a study by the author.",
      "status": "draft"
     }
    ],
@@ -1094,7 +1707,29 @@
       "reasoning"
      ],
      "horeb_skill_ids": [],
-     "prerequisites": [],
+     "prerequisites": [
+      {
+       "requires": "SCIE.G4.MATTER.MANAGEMENT_OF_SOLID_WAST.WASTE_MANAGE",
+       "kind": "skill",
+       "strength": "essential",
+       "reason": "Managing solid waste, from Grade 4. Proposed, to confirm by a Pre-Technical Studies teacher.",
+       "status": "proposed"
+      },
+      {
+       "requires": "PRET.G7.MATERI.INTRODUCTION_TO_MATERIAL.MAT_SUSTAINABLE",
+       "kind": "skill",
+       "strength": "essential",
+       "reason": "Reusing and recycling materials, from Grade 7. Proposed, to confirm by a Pre-Technical Studies teacher.",
+       "status": "proposed"
+      },
+      {
+       "requires": "SCIE.G6.MATTER.COMPOSITION_OF_AIR.AIR_POLLUTANTS",
+       "kind": "skill",
+       "strength": "essential",
+       "reason": "Air pollutants such as smoke from burning plastic, from Grade 6. Proposed, to confirm by a Pre-Technical Studies teacher.",
+       "status": "proposed"
+      }
+     ],
      "status": "proposed"
     }
    ],
@@ -1102,15 +1737,15 @@
     {
      "code": "PRET.G9.MATERI.HANDLING_WASTE_MATERIALS.WASTE.M_PT9_WS_BURN",
      "skill": "PRET.G9.MATERI.HANDLING_WASTE_MATERIALS.WASTE",
-     "error": "Thinks burning plastic is fine.",
+     "error": "Thinks burning plastic is a safe way to get rid of it.",
      "example": {
       "question": "What should be done with plastic waste?",
       "wrong_answer": "Burn it",
       "correct_answer": "Sort and recycle it"
      },
-     "cause": "The child mixes up two rules that are taught close together.",
+     "cause": "Burning makes waste disappear quickly, and the smoke is not seen as harm.",
      "reveals": "Offer \"Burn it\" next to the right answer and ask the question again in a new situation.",
-     "help": "Do not burn plastic.",
+     "help": "Explain the harmful smoke from burning plastic; show sorting, reuse and recycling points.",
      "feedback": "Do not burn plastic.",
      "source": "To confirm by a Pre-Technical teacher: a common classroom error, not traced to a study by the author.",
      "status": "draft"
@@ -1118,15 +1753,15 @@
     {
      "code": "PRET.G9.MATERI.HANDLING_WASTE_MATERIALS.WASTE.M_PT9_WS_ORGANIC",
      "skill": "PRET.G9.MATERI.HANDLING_WASTE_MATERIALS.WASTE",
-     "error": "Throws organic waste away.",
+     "error": "Throws or burns kitchen peelings instead of composting them.",
      "example": {
       "question": "What can be done with kitchen peelings?",
       "wrong_answer": "Burn them",
       "correct_answer": "Make compost"
      },
-     "cause": "The child mixes up two rules that are taught close together.",
+     "cause": "Peelings look like rubbish, not like something useful.",
      "reveals": "Offer \"Burn them\" next to the right answer and ask the question again in a new situation.",
-     "help": "Peelings make compost.",
+     "help": "Start a compost pit or heap with kitchen and garden waste; use it in the school garden.",
      "feedback": "Peelings make compost.",
      "source": "To confirm by a Pre-Technical teacher: a common classroom error, not traced to a study by the author.",
      "status": "draft"
@@ -1134,17 +1769,49 @@
     {
      "code": "PRET.G9.MATERI.HANDLING_WASTE_MATERIALS.WASTE.M_PT9_WS_SHARP",
      "skill": "PRET.G9.MATERI.HANDLING_WASTE_MATERIALS.WASTE",
-     "error": "Leaves sharp waste out.",
+     "error": "Puts broken glass loose into the waste bin.",
      "example": {
-      "question": "How should broken glass be handled?",
-      "wrong_answer": "Left on the path",
-      "correct_answer": "Wrapped and disposed of safely"
+      "question": "How should broken glass be thrown away?",
+      "wrong_answer": "Straight into the bin as it is",
+      "correct_answer": "Wrapped in thick paper or cloth, labelled, then put in the bin"
      },
-     "cause": "The child mixes up two rules that are taught close together.",
-     "reveals": "Offer \"Left on the path\" next to the right answer and ask the question again in a new situation.",
-     "help": "Wrap broken glass and dispose of it safely.",
+     "cause": "Broken glass seems to be gone once it is in the bin.",
+     "reveals": "Offer \"Straight into the bin as it is\" beside \"Wrapped in thick paper or cloth, labelled, then put in the bin\" and ask the child to choose.",
+     "help": "Show how a collector can be cut by loose glass in a bag; wrap it in thick paper or cloth, label it, then put it in the bin.",
      "feedback": "Wrap broken glass and dispose of it safely.",
-     "source": "To confirm by a Pre-Technical teacher: a common classroom error, not traced to a study by the author.",
+     "source": "To confirm by a Pre-Technical Studies teacher (SAFETY: the rule must match the school's workshop rules and the Kenyan guidance before a child sees it): a common classroom error, not traced to a study by the author.",
+     "status": "draft"
+    },
+    {
+     "code": "PRET.G9.MATERI.HANDLING_WASTE_MATERIALS.WASTE.M_PT9_WS_ONE_BIN",
+     "skill": "PRET.G9.MATERI.HANDLING_WASTE_MATERIALS.WASTE",
+     "error": "Puts all waste in one bin without sorting.",
+     "example": {
+      "question": "Why is waste sorted into separate bins?",
+      "wrong_answer": "There is no need; it all goes to the same place",
+      "correct_answer": "So it can be reused, recycled, composted or disposed of safely"
+     },
+     "cause": "The learner has seen all waste end up at one dump.",
+     "reveals": "Offer \"There is no need; it all goes to the same place\" beside \"So it can be reused, recycled, composted or disposed of safely\" and ask the child to choose.",
+     "help": "Run a waste-sorting activity: organic, paper, plastic, glass, metal, hazardous.",
+     "feedback": "Sort waste so it can be reused, recycled or composted.",
+     "source": "To confirm by a Pre-Technical Studies teacher: a common classroom error, not traced to a study by the author.",
+     "status": "draft"
+    },
+    {
+     "code": "PRET.G9.MATERI.HANDLING_WASTE_MATERIALS.WASTE.M_PT9_WS_BATTERY",
+     "skill": "PRET.G9.MATERI.HANDLING_WASTE_MATERIALS.WASTE",
+     "error": "Throws used dry cells into the rubbish fire.",
+     "example": {
+      "question": "How should used dry cells (batteries) be disposed of?",
+      "wrong_answer": "Burnt with the rubbish",
+      "correct_answer": "Kept apart and taken to a collection point"
+     },
+     "cause": "Batteries are small, so they seem harmless.",
+     "reveals": "Offer \"Burnt with the rubbish\" beside \"Kept apart and taken to a collection point\" and ask the child to choose.",
+     "help": "Explain that batteries hold harmful chemicals and can burst in a fire; set up a class battery box for a collection point.",
+     "feedback": "Keep used batteries apart for a collection point. Never burn them.",
+     "source": "To confirm by a Pre-Technical Studies teacher (SAFETY: the rule must match the school's workshop rules and the Kenyan guidance before a child sees it): a common classroom error, not traced to a study by the author.",
      "status": "draft"
     }
    ],
@@ -1242,7 +1909,64 @@
       "reasoning"
      ],
      "horeb_skill_ids": [],
-     "prerequisites": [],
+     "prerequisites": [
+      {
+       "requires": "PRET.G7.TOOLS_.MEASURING_AND_MARKING_OU.TOOL_CARE",
+       "kind": "skill",
+       "strength": "essential",
+       "reason": "Caring for tools, from Grade 7. Proposed, to confirm by a Pre-Technical Studies teacher.",
+       "status": "proposed"
+      },
+      {
+       "requires": "PRET.G8.TOOLS_.CUTTING_TOOLS.CUT_TOOLS",
+       "kind": "skill",
+       "strength": "essential",
+       "reason": "Cutting tools, which need the work held, from Grade 8. Proposed, to confirm by a Pre-Technical Studies teacher.",
+       "status": "proposed"
+      }
+     ],
+     "status": "proposed"
+    },
+    {
+     "code": "PRET.G9.TOOLS_.HOLDING_TOOLS.HOLD_USE",
+     "name": "Give the correct way to use holding tools: work low in the vice, soft packing for finished work, clamp work for drilling, support long work",
+     "outcomes": [
+      "PRE_.G9.TOOLS_.HOLDING_TOOLS.c"
+     ],
+     "mastery": "Says to hold work low in the vice so it does not vibrate or bend, to put soft packing between steel jaws and finished work, to clamp work for drilling rather than holding it by hand, and to support the free end of long work; finds the wrong set-up in a described job. Evidence rule: at least four of the last five fresh questions right across at least two question forms, and no repeated pick of the same misconception. The practical part (the drawing, the item made, the tool or computer used) is marked by the teacher with the KICD rubric, never by a tap.",
+     "question_forms": [
+      "pick the right way to hold the work",
+      "find the mistake in a described set-up",
+      "say why a holding rule matters"
+     ],
+     "thinking": [
+      "recall",
+      "reasoning"
+     ],
+     "horeb_skill_ids": [],
+     "prerequisites": [
+      {
+       "requires": "PRET.G9.TOOLS_.HOLDING_TOOLS.HOLDING_TOOLS",
+       "kind": "skill",
+       "strength": "essential",
+       "reason": "The holding tools are named first. Proposed, to confirm by a Pre-Technical Studies teacher.",
+       "status": "proposed"
+      },
+      {
+       "requires": "PRET.G8.TOOLS_.CUTTING_TOOLS.CUT_USE",
+       "kind": "skill",
+       "strength": "essential",
+       "reason": "Cutting safely needs the work held, from Grade 8. Proposed, to confirm by a Pre-Technical Studies teacher.",
+       "status": "proposed"
+      },
+      {
+       "requires": "PRET.G7.FOUNDA.SAFETY_IN_THE_IMMEDIATE_.SAFETY_RULES",
+       "kind": "skill",
+       "strength": "essential",
+       "reason": "Workshop safety rules from Grade 7. Proposed, to confirm by a Pre-Technical Studies teacher.",
+       "status": "proposed"
+      }
+     ],
      "status": "proposed"
     }
    ],
@@ -1250,15 +1974,15 @@
     {
      "code": "PRET.G9.TOOLS_.HOLDING_TOOLS.HOLDING_TOOLS.M_PT9_HT_VICE",
      "skill": "PRET.G9.TOOLS_.HOLDING_TOOLS.HOLDING_TOOLS",
-     "error": "Gives the vice the wrong job.",
+     "error": "Thinks a bench vice shapes the work rather than holding it.",
      "example": {
       "question": "What does a bench vice do?",
-      "wrong_answer": "Drives nails",
-      "correct_answer": "Holds the work still"
+      "wrong_answer": "Bends and shapes the metal by itself",
+      "correct_answer": "Holds the work firmly while you cut, file or drill"
      },
-     "cause": "The child mixes up two rules that are taught close together.",
-     "reveals": "Offer \"Drives nails\" next to the right answer and ask the question again in a new situation.",
-     "help": "A vice holds the work.",
+     "cause": "The vice sits on the bench where the work is shaped, so it seems to shape it.",
+     "reveals": "Offer \"Bends and shapes the metal by itself\" beside \"Holds the work firmly while you cut, file or drill\" and ask the child to choose.",
+     "help": "Hold a strip in the vice and file it: the vice holds, the file shapes.",
      "feedback": "A vice holds the work.",
      "source": "To confirm by a Pre-Technical teacher: a common classroom error, not traced to a study by the author.",
      "status": "draft"
@@ -1266,15 +1990,15 @@
     {
      "code": "PRET.G9.TOOLS_.HOLDING_TOOLS.HOLDING_TOOLS.M_PT9_HT_CLAMP",
      "skill": "PRET.G9.TOOLS_.HOLDING_TOOLS.HOLDING_TOOLS",
-     "error": "Names a non-holding tool.",
+     "error": "Uses pliers to hold glued work instead of a clamp.",
      "example": {
-      "question": "Which is a holding tool?",
-      "wrong_answer": "Hammer",
-      "correct_answer": "G-clamp"
+      "question": "Which tool holds two glued pieces of wood together while the glue sets?",
+      "wrong_answer": "A pair of pliers",
+      "correct_answer": "A G-clamp"
      },
-     "cause": "The child mixes up two rules that are taught close together.",
-     "reveals": "Offer \"Hammer\" next to the right answer and ask the question again in a new situation.",
-     "help": "A G-clamp is a holding tool.",
+     "cause": "Pliers are the gripping tool the learner knows from home.",
+     "reveals": "Offer \"A pair of pliers\" beside \"A G-clamp\" and ask the child to choose.",
+     "help": "Glue two pieces and clamp them with a G-clamp; show pliers cannot hold them evenly for hours.",
      "feedback": "A G-clamp is a holding tool.",
      "source": "To confirm by a Pre-Technical teacher: a common classroom error, not traced to a study by the author.",
      "status": "draft"
@@ -1282,17 +2006,97 @@
     {
      "code": "PRET.G9.TOOLS_.HOLDING_TOOLS.HOLDING_TOOLS.M_PT9_HT_CARE",
      "skill": "PRET.G9.TOOLS_.HOLDING_TOOLS.HOLDING_TOOLS",
-     "error": "Leaves tools dirty.",
+     "error": "Hammers a vice handle to tighten it, which bends the handle and strains the screw.",
      "example": {
-      "question": "How should holding tools be cared for?",
-      "wrong_answer": "Left dirty in the rain",
-      "correct_answer": "Cleaned and oiled"
+      "question": "How should a bench vice be cared for?",
+      "wrong_answer": "Hammer the handle to tighten it fully",
+      "correct_answer": "Clean it, oil the screw and tighten by hand only"
      },
-     "cause": "The child mixes up two rules that are taught close together.",
-     "reveals": "Offer \"Left dirty in the rain\" next to the right answer and ask the question again in a new situation.",
-     "help": "Clean and oil tools.",
+     "cause": "A tighter grip seems better, and a hammer gives more force.",
+     "reveals": "Offer \"Hammer the handle to tighten it fully\" beside \"Clean it, oil the screw and tighten by hand only\" and ask the child to choose.",
+     "help": "Show a bent vice handle; tighten by hand only, clean out chips and oil the screw.",
      "feedback": "Clean and oil tools.",
      "source": "To confirm by a Pre-Technical teacher: a common classroom error, not traced to a study by the author.",
+     "status": "draft"
+    },
+    {
+     "code": "PRET.G9.TOOLS_.HOLDING_TOOLS.HOLD_USE.M_PT9_HU_HIGH",
+     "skill": "PRET.G9.TOOLS_.HOLDING_TOOLS.HOLD_USE",
+     "error": "Clamps work high above the vice jaws, so it vibrates and bends when filed or sawn.",
+     "example": {
+      "question": "When filing a piece of metal held in a vice, how much should stick out above the jaws?",
+      "wrong_answer": "As much as possible, so it is easy to reach",
+      "correct_answer": "Only a little, so it does not vibrate or bend"
+     },
+     "cause": "More of the work showing seems easier to work on.",
+     "reveals": "Offer \"As much as possible, so it is easy to reach\" beside \"Only a little, so it does not vibrate or bend\" and ask the child to choose.",
+     "help": "File a strip held high and then held low; hear the chatter and feel the bend in the first.",
+     "feedback": "Hold the work low in the vice.",
+     "source": "To confirm by a Pre-Technical Studies teacher: a common classroom error, not traced to a study by the author.",
+     "status": "draft"
+    },
+    {
+     "code": "PRET.G9.TOOLS_.HOLDING_TOOLS.HOLD_USE.M_PT9_HU_PACKING",
+     "skill": "PRET.G9.TOOLS_.HOLDING_TOOLS.HOLD_USE",
+     "error": "Clamps a finished wooden piece straight in steel jaws, which dents it.",
+     "example": {
+      "question": "How do you hold a finished wooden piece in a metal vice without marking it?",
+      "wrong_answer": "Tighten it straight in the steel jaws",
+      "correct_answer": "Put soft packing (wood scraps or soft jaws) between the jaws and the work"
+     },
+     "cause": "The learner thinks only of holding tight, not of the surface.",
+     "reveals": "Offer \"Tighten it straight in the steel jaws\" beside \"Put soft packing (wood scraps or soft jaws) between the jaws and the work\" and ask the child to choose.",
+     "help": "Clamp a scrap with and without packing; compare the marks.",
+     "feedback": "Use soft packing to protect finished work.",
+     "source": "To confirm by a Pre-Technical Studies teacher: a common classroom error, not traced to a study by the author.",
+     "status": "draft"
+    },
+    {
+     "code": "PRET.G9.TOOLS_.HOLDING_TOOLS.HOLD_USE.M_PT9_HU_DRILL_HAND",
+     "skill": "PRET.G9.TOOLS_.HOLDING_TOOLS.HOLD_USE",
+     "error": "Holds a small plate by hand while it is drilled.",
+     "example": {
+      "question": "A small metal plate is to be drilled. How is it held?",
+      "wrong_answer": "By hand, pressed down firmly",
+      "correct_answer": "In a machine vice or clamped to the table"
+     },
+     "cause": "Holding by hand feels quick and firm enough.",
+     "reveals": "Offer \"By hand, pressed down firmly\" beside \"In a machine vice or clamped to the table\" and ask the child to choose.",
+     "help": "Explain that a drill can catch and spin the plate into the hand; always clamp. Shown by the teacher only.",
+     "feedback": "Never hold work by hand for drilling. Clamp it.",
+     "source": "To confirm by a Pre-Technical Studies teacher (SAFETY: the rule must match the school's workshop rules and the Kenyan guidance before a child sees it): a common classroom error, not traced to a study by the author.",
+     "status": "draft"
+    },
+    {
+     "code": "PRET.G9.TOOLS_.HOLDING_TOOLS.HOLD_USE.M_PT9_HU_SUPPORT",
+     "skill": "PRET.G9.TOOLS_.HOLDING_TOOLS.HOLD_USE",
+     "error": "Holds a long plank by one end in the vice with nothing under the other end.",
+     "example": {
+      "question": "A long plank is held in the vice at one end for planing. What else is needed?",
+      "wrong_answer": "Nothing; the vice holds it",
+      "correct_answer": "Support at the other end: a bench stop, a second clamp or a helper"
+     },
+     "cause": "The vice looks strong enough to hold anything.",
+     "reveals": "Offer \"Nothing; the vice holds it\" beside \"Support at the other end: a bench stop, a second clamp or a helper\" and ask the child to choose.",
+     "help": "Show how a long plank sags and swings; add a support and plane again.",
+     "feedback": "Support the free end of long work.",
+     "source": "To confirm by a Pre-Technical Studies teacher: a common classroom error, not traced to a study by the author.",
+     "status": "draft"
+    },
+    {
+     "code": "PRET.G9.TOOLS_.HOLDING_TOOLS.HOLDING_TOOLS.M_PT9_HT_TONGS",
+     "skill": "PRET.G9.TOOLS_.HOLDING_TOOLS.HOLDING_TOOLS",
+     "error": "Holds hot metal with ordinary pliers or by hand instead of tongs.",
+     "example": {
+      "question": "Which tool holds a piece of red-hot metal?",
+      "wrong_answer": "Ordinary pliers",
+      "correct_answer": "Tongs"
+     },
+     "cause": "Pliers grip well, so they seem right for anything.",
+     "reveals": "Offer \"Ordinary pliers\" beside \"Tongs\" and ask the child to choose.",
+     "help": "Show blacksmith's tongs and their long handles; explain heat travels up short pliers to the hand.",
+     "feedback": "Use tongs to hold hot metal.",
+     "source": "To confirm by a Pre-Technical Studies teacher (SAFETY: the rule must match the school's workshop rules and the Kenyan guidance before a child sees it): a common classroom error, not traced to a study by the author.",
      "status": "draft"
     }
    ],
@@ -1389,7 +2193,64 @@
       "reasoning"
      ],
      "horeb_skill_ids": [],
-     "prerequisites": [],
+     "prerequisites": [
+      {
+       "requires": "PRET.G7.TOOLS_.MEASURING_AND_MARKING_OU.TOOL_CARE",
+       "kind": "skill",
+       "strength": "essential",
+       "reason": "Caring for tools, from Grade 7. Proposed, to confirm by a Pre-Technical Studies teacher.",
+       "status": "proposed"
+      },
+      {
+       "requires": "SCIE.G6.FORCE_.LEVERS_AS_SIMPLE_MACHINE.LEVER_IDENTIFY",
+       "kind": "skill",
+       "strength": "essential",
+       "reason": "Levers such as a claw hammer and a spanner, from Grade 6. Proposed, to confirm by a Pre-Technical Studies teacher.",
+       "status": "proposed"
+      }
+     ],
+     "status": "proposed"
+    },
+    {
+     "code": "PRET.G9.TOOLS_.DRIVING_TOOLS.DRIVE_USE",
+     "name": "Give the correct way to use driving tools: hammer grip and starting a nail, screwdriver that fills the slot, spanner of the right size pulled towards you",
+     "outcomes": [
+      "PRE_.G9.TOOLS_.DRIVING_TOOLS.c"
+     ],
+     "mastery": "Says to hold a hammer near the end of the handle and start a nail with light taps before moving the fingers away, to use a screwdriver whose blade fills the slot, to use a spanner that fits the nut exactly and pull it towards you; finds the mistake in a described job. Evidence rule: at least four of the last five fresh questions right across at least two question forms, and no repeated pick of the same misconception. The practical part (the drawing, the item made, the tool or computer used) is marked by the teacher with the KICD rubric, never by a tap.",
+     "question_forms": [
+      "pick the right way to use a driving tool",
+      "find the mistake in a described job",
+      "say why a rule matters"
+     ],
+     "thinking": [
+      "recall",
+      "reasoning"
+     ],
+     "horeb_skill_ids": [],
+     "prerequisites": [
+      {
+       "requires": "PRET.G9.TOOLS_.DRIVING_TOOLS.DRIVING_TOOLS",
+       "kind": "skill",
+       "strength": "essential",
+       "reason": "The driving tools are named first. Proposed, to confirm by a Pre-Technical Studies teacher.",
+       "status": "proposed"
+      },
+      {
+       "requires": "SCIE.G6.FORCE_.LEVERS_AS_SIMPLE_MACHINE.LEVER_EASIER",
+       "kind": "skill",
+       "strength": "essential",
+       "reason": "A longer handle turns more easily: levers, from Grade 6. Proposed, to confirm by a Pre-Technical Studies teacher.",
+       "status": "proposed"
+      },
+      {
+       "requires": "PRET.G7.FOUNDA.SAFETY_IN_THE_IMMEDIATE_.SAFETY_RULES",
+       "kind": "skill",
+       "strength": "essential",
+       "reason": "Workshop safety rules from Grade 7. Proposed, to confirm by a Pre-Technical Studies teacher.",
+       "status": "proposed"
+      }
+     ],
      "status": "proposed"
     }
    ],
@@ -1397,15 +2258,15 @@
     {
      "code": "PRET.G9.TOOLS_.DRIVING_TOOLS.DRIVING_TOOLS.M_PT9_DT_HAMMER",
      "skill": "PRET.G9.TOOLS_.DRIVING_TOOLS.DRIVING_TOOLS",
-     "error": "Says a hammer drives screws.",
+     "error": "Thinks a hammer is used to drive screws.",
      "example": {
       "question": "What does a hammer drive?",
       "wrong_answer": "Screws",
       "correct_answer": "Nails"
      },
-     "cause": "The child mixes up two rules that are taught close together.",
+     "cause": "Screws and nails both fix wood, so one tool seems to drive both.",
      "reveals": "Offer \"Screws\" next to the right answer and ask the question again in a new situation.",
-     "help": "A hammer drives nails.",
+     "help": "Hammer a screw into scrap and see the wood split and the screw hold badly; screws are turned.",
      "feedback": "A hammer drives nails.",
      "source": "To confirm by a Pre-Technical teacher: a common classroom error, not traced to a study by the author.",
      "status": "draft"
@@ -1413,15 +2274,15 @@
     {
      "code": "PRET.G9.TOOLS_.DRIVING_TOOLS.DRIVING_TOOLS.M_PT9_DT_SCREWDRIVER",
      "skill": "PRET.G9.TOOLS_.DRIVING_TOOLS.DRIVING_TOOLS",
-     "error": "Uses the wrong screwdriver head.",
+     "error": "Uses a flat screwdriver on a cross-head screw.",
      "example": {
       "question": "A cross-head screw needs...",
       "wrong_answer": "A flat screwdriver",
       "correct_answer": "A cross-head screwdriver"
      },
-     "cause": "The child mixes up two rules that are taught close together.",
+     "cause": "A flat screwdriver is the one most homes have.",
      "reveals": "Offer \"A flat screwdriver\" next to the right answer and ask the question again in a new situation.",
-     "help": "Match the screwdriver to the screw head.",
+     "help": "Match screw heads (slotted, cross-head) to screwdrivers; a wrong tip slips and damages the head.",
      "feedback": "Match the screwdriver to the screw head.",
      "source": "To confirm by a Pre-Technical teacher: a common classroom error, not traced to a study by the author.",
      "status": "draft"
@@ -1429,17 +2290,113 @@
     {
      "code": "PRET.G9.TOOLS_.DRIVING_TOOLS.DRIVING_TOOLS.M_PT9_DT_SPANNER",
      "skill": "PRET.G9.TOOLS_.DRIVING_TOOLS.DRIVING_TOOLS",
-     "error": "Says a spanner drives nails.",
+     "error": "Uses pliers instead of a spanner to tighten nuts.",
      "example": {
-      "question": "What does a spanner turn?",
-      "wrong_answer": "Nails",
-      "correct_answer": "Nuts and bolts"
+      "question": "Which tool tightens a nut on a bolt?",
+      "wrong_answer": "Pliers",
+      "correct_answer": "A spanner of the right size"
      },
-     "cause": "The child mixes up two rules that are taught close together.",
-     "reveals": "Offer \"Nails\" next to the right answer and ask the question again in a new situation.",
-     "help": "A spanner turns nuts and bolts.",
+     "cause": "Pliers grip anything, so they seem fine for nuts.",
+     "reveals": "Offer \"Pliers\" beside \"A spanner of the right size\" and ask the child to choose.",
+     "help": "Turn a nut with pliers and with a spanner; the pliers slip and round off the corners.",
      "feedback": "A spanner turns nuts and bolts.",
      "source": "To confirm by a Pre-Technical teacher: a common classroom error, not traced to a study by the author.",
+     "status": "draft"
+    },
+    {
+     "code": "PRET.G9.TOOLS_.DRIVING_TOOLS.DRIVE_USE.M_PT9_DU_GRIP",
+     "skill": "PRET.G9.TOOLS_.DRIVING_TOOLS.DRIVE_USE",
+     "error": "Holds a hammer close to its head when driving a nail.",
+     "example": {
+      "question": "Where should a hammer be held for driving a nail?",
+      "wrong_answer": "Close to the head, for control",
+      "correct_answer": "Near the end of the handle, for a stronger, straighter blow"
+     },
+     "cause": "Holding near the head feels more controlled.",
+     "reveals": "Offer \"Close to the head, for control\" beside \"Near the end of the handle, for a stronger, straighter blow\" and ask the child to choose.",
+     "help": "Drive two nails, one with each grip; compare how many blows and how straight. The handle works as a lever.",
+     "feedback": "Hold a hammer near the end of its handle.",
+     "source": "To confirm by a Pre-Technical Studies teacher: a common classroom error, not traced to a study by the author.",
+     "status": "draft"
+    },
+    {
+     "code": "PRET.G9.TOOLS_.DRIVING_TOOLS.DRIVE_USE.M_PT9_DU_START_NAIL",
+     "skill": "PRET.G9.TOOLS_.DRIVING_TOOLS.DRIVE_USE",
+     "error": "Holds a nail with the fingers and hits it hard from the first blow.",
+     "example": {
+      "question": "How do you start a nail safely?",
+      "wrong_answer": "Hold it with your fingers and hit it hard",
+      "correct_answer": "Tap it lightly to start it, then move your fingers away"
+     },
+     "cause": "Hitting hard seems to get the job done fastest.",
+     "reveals": "Offer \"Hold it with your fingers and hit it hard\" beside \"Tap it lightly to start it, then move your fingers away\" and ask the child to choose.",
+     "help": "Start nails with light taps; for small nails hold them with pliers or through a piece of card.",
+     "feedback": "Start a nail with light taps, then move your fingers away.",
+     "source": "To confirm by a Pre-Technical Studies teacher (SAFETY: the rule must match the school's workshop rules and the Kenyan guidance before a child sees it): a common classroom error, not traced to a study by the author.",
+     "status": "draft"
+    },
+    {
+     "code": "PRET.G9.TOOLS_.DRIVING_TOOLS.DRIVE_USE.M_PT9_DU_SPANNER_FIT",
+     "skill": "PRET.G9.TOOLS_.DRIVING_TOOLS.DRIVE_USE",
+     "error": "Uses a spanner a little too big for the nut.",
+     "example": {
+      "question": "A spanner is slightly too big for a nut. What happens if you use it?",
+      "wrong_answer": "Nothing; it still turns the nut",
+      "correct_answer": "It slips, rounds off the nut and can hurt your hand"
+     },
+     "cause": "A spanner that goes on seems to fit.",
+     "reveals": "Offer \"Nothing; it still turns the nut\" beside \"It slips, rounds off the nut and can hurt your hand\" and ask the child to choose.",
+     "help": "Try a loose spanner on an old nut and see the corners round off; always pick the size that fits.",
+     "feedback": "Use the spanner that fits the nut exactly.",
+     "source": "To confirm by a Pre-Technical Studies teacher (SAFETY: the rule must match the school's workshop rules and the Kenyan guidance before a child sees it): a common classroom error, not traced to a study by the author.",
+     "status": "draft"
+    },
+    {
+     "code": "PRET.G9.TOOLS_.DRIVING_TOOLS.DRIVE_USE.M_PT9_DU_SCREWDRIVER_SIZE",
+     "skill": "PRET.G9.TOOLS_.DRIVING_TOOLS.DRIVE_USE",
+     "error": "Uses any screwdriver whose tip goes into the slot, even a small one.",
+     "example": {
+      "question": "What size of screwdriver blade should you use for a screw?",
+      "wrong_answer": "Any size that goes into the slot",
+      "correct_answer": "One that fills the slot fully"
+     },
+     "cause": "A small tip slides in easily, so it seems right.",
+     "reveals": "Offer \"Any size that goes into the slot\" beside \"One that fills the slot fully\" and ask the child to choose.",
+     "help": "Turn a tight screw with a small and a correct tip; the small one slips and damages the slot.",
+     "feedback": "Choose a screwdriver that fills the slot.",
+     "source": "To confirm by a Pre-Technical Studies teacher: a common classroom error, not traced to a study by the author.",
+     "status": "draft"
+    },
+    {
+     "code": "PRET.G9.TOOLS_.DRIVING_TOOLS.DRIVE_USE.M_PT9_DU_PUSH",
+     "skill": "PRET.G9.TOOLS_.DRIVING_TOOLS.DRIVE_USE",
+     "error": "Pushes a spanner away from the body to loosen a tight nut.",
+     "example": {
+      "question": "Should you push or pull a spanner on a tight nut?",
+      "wrong_answer": "Push it away from you hard",
+      "correct_answer": "Pull it towards you, standing steady"
+     },
+     "cause": "Pushing feels stronger.",
+     "reveals": "Offer \"Push it away from you hard\" beside \"Pull it towards you, standing steady\" and ask the child to choose.",
+     "help": "Show what happens when a pushed spanner slips: the hand hits the metal. Pull, with feet firm.",
+     "feedback": "Pull a spanner towards you.",
+     "source": "To confirm by a Pre-Technical Studies teacher (SAFETY: the rule must match the school's workshop rules and the Kenyan guidance before a child sees it): a common classroom error, not traced to a study by the author.",
+     "status": "draft"
+    },
+    {
+     "code": "PRET.G9.TOOLS_.DRIVING_TOOLS.DRIVING_TOOLS.M_PT9_DT_MALLET",
+     "skill": "PRET.G9.TOOLS_.DRIVING_TOOLS.DRIVING_TOOLS",
+     "error": "Strikes a wooden-handled chisel with a steel hammer instead of a mallet.",
+     "example": {
+      "question": "What is used to strike a chisel with a wooden handle?",
+      "wrong_answer": "A steel claw hammer",
+      "correct_answer": "A wooden mallet"
+     },
+     "cause": "A hammer is the striking tool the learner knows.",
+     "reveals": "Offer \"A steel claw hammer\" beside \"A wooden mallet\" and ask the child to choose.",
+     "help": "Show a chisel handle split by a hammer; a mallet's wide wooden face strikes without damage.",
+     "feedback": "Strike a wooden chisel handle with a mallet.",
+     "source": "To confirm by a Pre-Technical Studies teacher: a common classroom error, not traced to a study by the author.",
      "status": "draft"
     }
    ],
@@ -1533,7 +2490,65 @@
       "reasoning"
      ],
      "horeb_skill_ids": [],
-     "prerequisites": [],
+     "prerequisites": [
+      {
+       "requires": "PRET.G7.ENTREP.INTRODUCTION_TO_ENTREPRE.ENT_IDEAS",
+       "kind": "skill",
+       "strength": "essential",
+       "reason": "Spotting needs in the community, from Grade 7. Proposed, to confirm by a Pre-Technical Studies teacher.",
+       "status": "proposed"
+      },
+      {
+       "requires": "PRET.G7.MATERI.INTRODUCTION_TO_MATERIAL.MAT_SUSTAINABLE",
+       "kind": "skill",
+       "strength": "essential",
+       "reason": "Using local and waste materials, from Grade 7. Proposed, to confirm by a Pre-Technical Studies teacher.",
+       "status": "proposed"
+      }
+     ],
+     "status": "proposed"
+    },
+    {
+     "code": "PRET.G9.TOOLS_.PROJECT.PROJECT_PLAN",
+     "name": "Plan and evaluate the making of a project item: sketch and working drawing, materials list and cost, order of making, testing and evaluation against the problem",
+     "outcomes": [
+      "PRE_.G9.TOOLS_.PROJECT.c",
+      "PRE_.G9.TOOLS_.PROJECT.d"
+     ],
+     "mastery": "Says that making begins with a sketch and a working drawing with sizes, a materials and cost list, and an order of operations (mark, cut, join, sand, finish last); and that the item is tested and evaluated against the problem it was made to solve, with improvements named. Evidence rule: at least four of the last five fresh questions right across at least two question forms, and no repeated pick of the same misconception. The practical part (the drawing, the item made, the tool or computer used) is marked by the teacher with the KICD rubric, never by a tap.",
+     "question_forms": [
+      "put the making steps in order",
+      "say what a plan is missing",
+      "judge an item against the problem"
+     ],
+     "thinking": [
+      "recall",
+      "reasoning"
+     ],
+     "horeb_skill_ids": [],
+     "prerequisites": [
+      {
+       "requires": "PRET.G9.TOOLS_.PROJECT.PROJECT_STEPS",
+       "kind": "skill",
+       "strength": "essential",
+       "reason": "The steps of a project come first. Proposed, to confirm by a Pre-Technical Studies teacher.",
+       "status": "proposed"
+      },
+      {
+       "requires": "PRET.G8.COMMUN.PLAIN_SCALE_DRAWING.SCALE_CONVERT",
+       "kind": "skill",
+       "strength": "essential",
+       "reason": "Working drawings to scale, from Grade 8. Proposed, to confirm by a Pre-Technical Studies teacher.",
+       "status": "proposed"
+      },
+      {
+       "requires": "PRET.G8.ENTREP.INCOME_AND_BUDGETING.BUDGET_PREPARE",
+       "kind": "skill",
+       "strength": "essential",
+       "reason": "Costing and budgeting, from Grade 8. Proposed, to confirm by a Pre-Technical Studies teacher.",
+       "status": "proposed"
+      }
+     ],
      "status": "proposed"
     }
    ],
@@ -1541,15 +2556,15 @@
     {
      "code": "PRET.G9.TOOLS_.PROJECT.PROJECT_STEPS.M_PT9_PJ_FIRST",
      "skill": "PRET.G9.TOOLS_.PROJECT.PROJECT_STEPS",
-     "error": "Starts by making.",
+     "error": "Starts a project by making an item before identifying a problem.",
      "example": {
       "question": "What is the first step of a project?",
       "wrong_answer": "Make the item",
       "correct_answer": "Identify a problem"
      },
-     "cause": "The child mixes up two rules that are taught close together.",
+     "cause": "Making is the exciting part, so it feels like the first step.",
      "reveals": "Offer \"Make the item\" next to the right answer and ask the question again in a new situation.",
-     "help": "Start by identifying a problem.",
+     "help": "Order the project steps on cards: identify a problem, choose an item, plan, make, test, evaluate.",
      "feedback": "Start by identifying a problem.",
      "source": "To confirm by a Pre-Technical teacher: a common classroom error, not traced to a study by the author.",
      "status": "draft"
@@ -1557,15 +2572,15 @@
     {
      "code": "PRET.G9.TOOLS_.PROJECT.PROJECT_STEPS.M_PT9_PJ_TEST",
      "skill": "PRET.G9.TOOLS_.PROJECT.PROJECT_STEPS",
-     "error": "Skips testing.",
+     "error": "Hands in an item without testing it.",
      "example": {
-      "question": "What comes after making the item?",
-      "wrong_answer": "Throwing it away",
-      "correct_answer": "Testing it"
+      "question": "After making the item, what comes next?",
+      "wrong_answer": "Hand it in straight away",
+      "correct_answer": "Test it and improve it if needed"
      },
-     "cause": "The child mixes up two rules that are taught close together.",
-     "reveals": "Offer \"Throwing it away\" next to the right answer and ask the question again in a new situation.",
-     "help": "Test the item.",
+     "cause": "A finished item feels like the end of the project.",
+     "reveals": "Offer \"Hand it in straight away\" beside \"Test it and improve it if needed\" and ask the child to choose.",
+     "help": "Test a made item against its purpose (does the rack hold the shoes?) and improve it before handing in.",
      "feedback": "Test the item.",
      "source": "To confirm by a Pre-Technical teacher: a common classroom error, not traced to a study by the author.",
      "status": "draft"
@@ -1573,17 +2588,97 @@
     {
      "code": "PRET.G9.TOOLS_.PROJECT.PROJECT_STEPS.M_PT9_PJ_MATERIAL",
      "skill": "PRET.G9.TOOLS_.PROJECT.PROJECT_STEPS",
-     "error": "Says only bought materials.",
+     "error": "Thinks a project needs costly imported materials.",
      "example": {
       "question": "Which materials are best for a school project?",
       "wrong_answer": "Only costly imported ones",
       "correct_answer": "Locally available ones"
      },
-     "cause": "The child mixes up two rules that are taught close together.",
+     "cause": "Costly materials look more professional.",
      "reveals": "Offer \"Only costly imported ones\" next to the right answer and ask the question again in a new situation.",
-     "help": "Use local materials.",
+     "help": "List local and waste materials (offcuts, bottles, sisal, scrap metal) and items made from them.",
      "feedback": "Use local materials.",
      "source": "To confirm by a Pre-Technical teacher: a common classroom error, not traced to a study by the author.",
+     "status": "draft"
+    },
+    {
+     "code": "PRET.G9.TOOLS_.PROJECT.PROJECT_PLAN.M_PT9_PP_NO_DRAWING",
+     "skill": "PRET.G9.TOOLS_.PROJECT.PROJECT_PLAN",
+     "error": "Starts cutting materials without a sketch or working drawing.",
+     "example": {
+      "question": "What should you prepare before you start making a project item?",
+      "wrong_answer": "Nothing; start cutting the materials",
+      "correct_answer": "A sketch and a working drawing with sizes"
+     },
+     "cause": "Making feels like the real work and drawing like a delay.",
+     "reveals": "Offer \"Nothing; start cutting the materials\" beside \"A sketch and a working drawing with sizes\" and ask the child to choose.",
+     "help": "Show two shelves: one made from a drawing, one without; compare the fit and the waste.",
+     "feedback": "Draw first: a sketch and a working drawing with sizes.",
+     "source": "To confirm by a Pre-Technical Studies teacher: a common classroom error, not traced to a study by the author.",
+     "status": "draft"
+    },
+    {
+     "code": "PRET.G9.TOOLS_.PROJECT.PROJECT_PLAN.M_PT9_PP_NO_COST",
+     "skill": "PRET.G9.TOOLS_.PROJECT.PROJECT_PLAN",
+     "error": "Skips the materials and cost list.",
+     "example": {
+      "question": "Why list the materials and their cost before starting?",
+      "wrong_answer": "It is a waste of time",
+      "correct_answer": "To know what to get, what it will cost and to avoid running out"
+     },
+     "cause": "The learner thinks materials can be found as needed.",
+     "reveals": "Offer \"It is a waste of time\" beside \"To know what to get, what it will cost and to avoid running out\" and ask the child to choose.",
+     "help": "Cost a small item together (timber, nails, glue, varnish); compare with the money available.",
+     "feedback": "List materials and costs before you start.",
+     "source": "To confirm by a Pre-Technical Studies teacher: a common classroom error, not traced to a study by the author.",
+     "status": "draft"
+    },
+    {
+     "code": "PRET.G9.TOOLS_.PROJECT.PROJECT_PLAN.M_PT9_PP_FINISH_FIRST",
+     "skill": "PRET.G9.TOOLS_.PROJECT.PROJECT_PLAN",
+     "error": "Varnishes or paints parts before cutting and joining them.",
+     "example": {
+      "question": "When is a wooden item painted or varnished?",
+      "wrong_answer": "Before cutting and joining the parts",
+      "correct_answer": "After making and sanding, as the last step"
+     },
+     "cause": "Finished-looking parts feel like progress.",
+     "reveals": "Offer \"Before cutting and joining the parts\" beside \"After making and sanding, as the last step\" and ask the child to choose.",
+     "help": "Show how glue does not stick to varnish and cutting damages the finish; write the order of operations.",
+     "feedback": "Finishing comes last.",
+     "source": "To confirm by a Pre-Technical Studies teacher: a common classroom error, not traced to a study by the author.",
+     "status": "draft"
+    },
+    {
+     "code": "PRET.G9.TOOLS_.PROJECT.PROJECT_PLAN.M_PT9_PP_LOOKS_ONLY",
+     "skill": "PRET.G9.TOOLS_.PROJECT.PROJECT_PLAN",
+     "error": "Evaluates the finished item only by how it looks.",
+     "example": {
+      "question": "How is a finished project item evaluated?",
+      "wrong_answer": "By whether it looks nice",
+      "correct_answer": "By whether it solves the problem it was made for, and how it could be improved"
+     },
+     "cause": "Looks are what people praise first.",
+     "reveals": "Offer \"By whether it looks nice\" beside \"By whether it solves the problem it was made for, and how it could be improved\" and ask the child to choose.",
+     "help": "Return to the problem statement; test the item against it (does the shoe rack hold 20 pairs?) and list improvements.",
+     "feedback": "Judge the item by the problem it solves.",
+     "source": "To confirm by a Pre-Technical Studies teacher: a common classroom error, not traced to a study by the author.",
+     "status": "draft"
+    },
+    {
+     "code": "PRET.G9.TOOLS_.PROJECT.PROJECT_STEPS.M_PT9_PJ_TOO_BIG",
+     "skill": "PRET.G9.TOOLS_.PROJECT.PROJECT_STEPS",
+     "error": "Chooses a problem far too big for the skills, time and materials available.",
+     "example": {
+      "question": "Which problem suits a Grade 9 Pre-Technical project?",
+      "wrong_answer": "Build a new road for the village",
+      "correct_answer": "Make a shoe rack that keeps classroom shoes off the floor"
+     },
+     "cause": "Big problems feel more important and impressive.",
+     "reveals": "Offer \"Build a new road for the village\" beside \"Make a shoe rack that keeps classroom shoes off the floor\" and ask the child to choose.",
+     "help": "Check each idea against skills, tools, time and money; shrink a big idea into a small item that helps.",
+     "feedback": "Choose a problem you can solve with your skills, tools and local materials.",
+     "source": "To confirm by a Pre-Technical Studies teacher: a common classroom error, not traced to a study by the author.",
      "status": "draft"
     }
    ],
@@ -1673,14 +2768,37 @@
       "reasoning"
      ],
      "horeb_skill_ids": [],
-     "prerequisites": [],
+     "prerequisites": [
+      {
+       "requires": "MATH.G5.MEASUR.MONEY.BANK_SERVICES",
+       "kind": "skill",
+       "strength": "essential",
+       "reason": "Bank services, from Grade 5 Mathematics. Proposed, to confirm by a Pre-Technical Studies teacher.",
+       "status": "proposed"
+      },
+      {
+       "requires": "MATH.G7.MEASUR.MONEY.MOBILE_MONEY_SERVICES",
+       "kind": "skill",
+       "strength": "essential",
+       "reason": "Mobile money services, from Grade 7 Mathematics. Proposed, to confirm by a Pre-Technical Studies teacher.",
+       "status": "proposed"
+      },
+      {
+       "requires": "PRET.G8.ENTREP.INCOME_AND_BUDGETING.BUDGET",
+       "kind": "skill",
+       "strength": "essential",
+       "reason": "Income and budgeting, from Grade 8. Proposed, to confirm by a Pre-Technical Studies teacher.",
+       "status": "proposed"
+      }
+     ],
      "status": "proposed"
     },
     {
      "code": "PRET.G9.ENTREP.FINANCIAL_SERVICES.FIN_SERVICES",
      "name": "Name the services financial institutions offer",
      "outcomes": [
-      "PRE_.G9.ENTREP.FINANCIAL_SERVICES.c"
+      "PRE_.G9.ENTREP.FINANCIAL_SERVICES.c",
+      "PRE_.G9.ENTREP.FINANCIAL_SERVICES.d"
      ],
      "mastery": "The child names savings, loans, insurance, money transfer and payments as services, and says a loan must be repaid with interest and savings should be kept for planned needs. Evidence rule: at least four of the last five fresh questions right across at least two question forms, and no repeated pick of the same misconception.",
      "question_forms": [
@@ -1698,7 +2816,21 @@
        "requires": "PRET.G9.ENTREP.FINANCIAL_SERVICES.FIN_TYPES",
        "kind": "skill",
        "strength": "essential",
-       "reason": "Proposed: this skill builds on it. To confirm by a Pre-Technical teacher.",
+       "reason": "The institutions come before their services. Proposed, to confirm by a Pre-Technical Studies teacher.",
+       "status": "proposed"
+      },
+      {
+       "requires": "MATH.G8.MEASUR.MONEY.SIMPLE_INTEREST",
+       "kind": "skill",
+       "strength": "essential",
+       "reason": "Simple interest, from Grade 8 Mathematics. Proposed, to confirm by a Pre-Technical Studies teacher.",
+       "status": "proposed"
+      },
+      {
+       "requires": "PRET.G8.ENTREP.INCOME_AND_BUDGETING.BUDGET_PREPARE",
+       "kind": "skill",
+       "strength": "essential",
+       "reason": "Planning a budget, from Grade 8. Proposed, to confirm by a Pre-Technical Studies teacher.",
        "status": "proposed"
       }
      ],
@@ -1709,97 +2841,129 @@
     {
      "code": "PRET.G9.ENTREP.FINANCIAL_SERVICES.FIN_TYPES.M_PT9_FT_NAME",
      "skill": "PRET.G9.ENTREP.FINANCIAL_SERVICES.FIN_TYPES",
-     "error": "Names a non-institution.",
+     "error": "Thinks any business that handles a lot of cash is a financial institution.",
      "example": {
-      "question": "Which is a financial institution?",
-      "wrong_answer": "A butcher",
+      "question": "Which of these is a financial institution?",
+      "wrong_answer": "A wholesale shop",
       "correct_answer": "A SACCO"
      },
-     "cause": "The child mixes up two rules that are taught close together.",
-     "reveals": "Offer \"A butcher\" next to the right answer and ask the question again in a new situation.",
-     "help": "A SACCO is a financial institution.",
+     "cause": "Any big business that handles a lot of cash seems like a financial institution.",
+     "reveals": "Offer \"A wholesale shop\" beside \"A SACCO\" and ask the child to choose.",
+     "help": "Sort places by what they do: deal in money (banks, SACCOs, insurers, microfinance) or sell goods (shops, wholesalers).",
      "feedback": "A SACCO is a financial institution.",
-     "source": "To confirm by a Pre-Technical teacher: a common classroom error, not traced to a study by the author.",
+     "source": "To confirm by a Pre-Technical Studies teacher (MONEY: figures, rates and institution names change; check against current Kenyan practice): a common classroom error, not traced to a study by the author.",
      "status": "draft"
     },
     {
      "code": "PRET.G9.ENTREP.FINANCIAL_SERVICES.FIN_TYPES.M_PT9_FT_CENTRAL",
      "skill": "PRET.G9.ENTREP.FINANCIAL_SERVICES.FIN_TYPES",
-     "error": "Gives the wrong job of the Central Bank.",
+     "error": "Thinks the Central Bank of Kenya serves ordinary customers like a commercial bank.",
      "example": {
       "question": "What does the Central Bank of Kenya do?",
-      "wrong_answer": "Sells goods",
-      "correct_answer": "Supervises banks"
+      "wrong_answer": "Keeps savings accounts for ordinary people",
+      "correct_answer": "Issues currency and supervises banks"
      },
-     "cause": "The child mixes up two rules that are taught close together.",
-     "reveals": "Offer \"Sells goods\" next to the right answer and ask the question again in a new situation.",
-     "help": "It supervises banks.",
+     "cause": "\"Bank\" in the name makes the learner think of savings accounts.",
+     "reveals": "Offer \"Keeps savings accounts for ordinary people\" beside \"Issues currency and supervises banks\" and ask the child to choose.",
+     "help": "Explain the Central Bank is the bankers' bank: issues currency, supervises banks, keeps the government's account.",
      "feedback": "It supervises banks.",
-     "source": "To confirm by a Pre-Technical teacher: a common classroom error, not traced to a study by the author.",
+     "source": "To confirm by a Pre-Technical Studies teacher (MONEY: figures, rates and institution names change; check against current Kenyan practice): a common classroom error, not traced to a study by the author.",
      "status": "draft"
     },
     {
      "code": "PRET.G9.ENTREP.FINANCIAL_SERVICES.FIN_TYPES.M_PT9_FT_INSURE",
      "skill": "PRET.G9.ENTREP.FINANCIAL_SERVICES.FIN_TYPES",
-     "error": "Calls insurance a bank.",
+     "error": "Thinks a commercial bank gives cover against loss.",
      "example": {
       "question": "Which gives cover against loss?",
       "wrong_answer": "A commercial bank",
       "correct_answer": "An insurance company"
      },
-     "cause": "The child mixes up two rules that are taught close together.",
+     "cause": "Banks and insurers both deal with money and are in the same buildings in town.",
      "reveals": "Offer \"A commercial bank\" next to the right answer and ask the question again in a new situation.",
-     "help": "Insurance companies give cover.",
+     "help": "Compare a bank (keeps savings, lends) and an insurer (pays out after a loss, in return for premiums).",
      "feedback": "Insurance companies give cover.",
-     "source": "To confirm by a Pre-Technical teacher: a common classroom error, not traced to a study by the author.",
+     "source": "To confirm by a Pre-Technical Studies teacher (MONEY: figures, rates and institution names change; check against current Kenyan practice): a common classroom error, not traced to a study by the author.",
      "status": "draft"
     },
     {
      "code": "PRET.G9.ENTREP.FINANCIAL_SERVICES.FIN_SERVICES.M_PT9_FV_LOAN",
      "skill": "PRET.G9.ENTREP.FINANCIAL_SERVICES.FIN_SERVICES",
-     "error": "Thinks a loan is free.",
+     "error": "Thinks a loan is repaid without interest.",
      "example": {
-      "question": "What must be done with a loan?",
-      "wrong_answer": "Never repay it",
-      "correct_answer": "Repay it with interest"
+      "question": "What must be repaid on a loan?",
+      "wrong_answer": "Only the amount borrowed",
+      "correct_answer": "The amount borrowed plus interest"
      },
-     "cause": "The child mixes up two rules that are taught close together.",
-     "reveals": "Offer \"Never repay it\" next to the right answer and ask the question again in a new situation.",
-     "help": "A loan is repaid with interest.",
+     "cause": "The learner thinks paying back what was borrowed is fair and complete.",
+     "reveals": "Offer \"Only the amount borrowed\" beside \"The amount borrowed plus interest\" and ask the child to choose.",
+     "help": "Work a small example: borrow 1,000 at 10 percent for a year; repay 1,100. Interest is the cost of borrowing.",
      "feedback": "A loan is repaid with interest.",
-     "source": "To confirm by a Pre-Technical teacher: a common classroom error, not traced to a study by the author.",
+     "source": "To confirm by a Pre-Technical Studies teacher (MONEY: figures, rates and institution names change; check against current Kenyan practice): a common classroom error, not traced to a study by the author.",
      "status": "draft"
     },
     {
      "code": "PRET.G9.ENTREP.FINANCIAL_SERVICES.FIN_SERVICES.M_PT9_FV_SAVE",
      "skill": "PRET.G9.ENTREP.FINANCIAL_SERVICES.FIN_SERVICES",
-     "error": "Thinks savings should be spent at once.",
+     "error": "Thinks savings are just as safe kept at home.",
      "example": {
-      "question": "What are savings for?",
-      "wrong_answer": "To spend at once",
-      "correct_answer": "To keep for planned needs"
+      "question": "Why keep savings in a bank or SACCO rather than at home?",
+      "wrong_answer": "There is no difference",
+      "correct_answer": "It is safer and may earn interest"
      },
-     "cause": "The child mixes up two rules that are taught close together.",
-     "reveals": "Offer \"To spend at once\" next to the right answer and ask the question again in a new situation.",
-     "help": "Savings are for planned needs.",
+     "cause": "Money at home feels close and in control.",
+     "reveals": "Offer \"There is no difference\" beside \"It is safer and may earn interest\" and ask the child to choose.",
+     "help": "List what can happen to cash at home (theft, fire, spending it); savings in a bank or SACCO are safer and may earn interest.",
      "feedback": "Savings are for planned needs.",
-     "source": "To confirm by a Pre-Technical teacher: a common classroom error, not traced to a study by the author.",
+     "source": "To confirm by a Pre-Technical Studies teacher (MONEY: figures, rates and institution names change; check against current Kenyan practice): a common classroom error, not traced to a study by the author.",
      "status": "draft"
     },
     {
      "code": "PRET.G9.ENTREP.FINANCIAL_SERVICES.FIN_SERVICES.M_PT9_FV_SERVICE",
      "skill": "PRET.G9.ENTREP.FINANCIAL_SERVICES.FIN_SERVICES",
-     "error": "Names a non-service.",
+     "error": "Thinks a commercial bank sells goods such as farm inputs.",
      "example": {
-      "question": "Which is a service of a bank?",
-      "wrong_answer": "Selling cattle",
-      "correct_answer": "Keeping savings"
+      "question": "Which is a service offered by a commercial bank?",
+      "wrong_answer": "Selling farm inputs",
+      "correct_answer": "Keeping savings, giving loans and transferring money"
      },
-     "cause": "The child mixes up two rules that are taught close together.",
-     "reveals": "Offer \"Selling cattle\" next to the right answer and ask the question again in a new situation.",
-     "help": "Banks keep savings.",
+     "cause": "The learner thinks a bank sells things like a shop.",
+     "reveals": "Offer \"Selling farm inputs\" beside \"Keeping savings, giving loans and transferring money\" and ask the child to choose.",
+     "help": "List bank services: savings and current accounts, loans, money transfer, safe keeping, advice, foreign exchange.",
      "feedback": "Banks keep savings.",
-     "source": "To confirm by a Pre-Technical teacher: a common classroom error, not traced to a study by the author.",
+     "source": "To confirm by a Pre-Technical Studies teacher (MONEY: figures, rates and institution names change; check against current Kenyan practice): a common classroom error, not traced to a study by the author.",
+     "status": "draft"
+    },
+    {
+     "code": "PRET.G9.ENTREP.FINANCIAL_SERVICES.FIN_TYPES.M_PT9_FT_SACCO",
+     "skill": "PRET.G9.ENTREP.FINANCIAL_SERVICES.FIN_TYPES",
+     "error": "Thinks a SACCO is the same as a commercial bank owned by shareholders for profit.",
+     "example": {
+      "question": "How is a SACCO different from a commercial bank?",
+      "wrong_answer": "It is the same; both are owned by shareholders for profit",
+      "correct_answer": "Its members save together and lend to one another, and the members own it"
+     },
+     "cause": "Both take savings and give loans, so they look the same.",
+     "reveals": "Offer \"It is the same; both are owned by shareholders for profit\" beside \"Its members save together and lend to one another, and the members own it\" and ask the child to choose.",
+     "help": "Draw who owns each: a bank (shareholders) and a SACCO (its members); list what members gain.",
+     "feedback": "A SACCO is owned by its members, who save and borrow together.",
+     "source": "To confirm by a Pre-Technical Studies teacher (MONEY: figures, rates and institution names change; check against current Kenyan practice): a common classroom error, not traced to a study by the author.",
+     "status": "draft"
+    },
+    {
+     "code": "PRET.G9.ENTREP.FINANCIAL_SERVICES.FIN_SERVICES.M_PT9_FV_PREMIUM",
+     "skill": "PRET.G9.ENTREP.FINANCIAL_SERVICES.FIN_SERVICES",
+     "error": "Thinks an insurance premium is a saving returned at the end of the year if nothing goes wrong.",
+     "example": {
+      "question": "A trader pays a premium to insure her shop, and no loss happens that year. What happens to the premium?",
+      "wrong_answer": "She gets it all back at the end of the year",
+      "correct_answer": "It is not returned; it paid for the cover against loss"
+     },
+     "cause": "Paying in regularly feels like saving.",
+     "reveals": "Offer \"She gets it all back at the end of the year\" beside \"It is not returned; it paid for the cover against loss\" and ask the child to choose.",
+     "help": "Compare a savings account (money kept and returned) with insurance (many pay in, those who suffer a loss are paid).",
+     "feedback": "An insurance premium pays for cover. It is not returned like savings.",
+     "source": "To confirm by a Pre-Technical Studies teacher (MONEY: figures, rates and institution names change; check against current Kenyan practice): a common classroom error, not traced to a study by the author.",
      "status": "draft"
     }
    ],
@@ -1896,7 +3060,22 @@
       "reasoning"
      ],
      "horeb_skill_ids": [],
-     "prerequisites": [],
+     "prerequisites": [
+      {
+       "requires": "SOCI.G6.GOVERN.GOVERNMENT_REVENUE_AND_E.GR_SOURCES",
+       "kind": "skill",
+       "strength": "essential",
+       "reason": "Government revenue, from Grade 6 Social Studies. Proposed, to confirm by a Pre-Technical Studies teacher.",
+       "status": "proposed"
+      },
+      {
+       "requires": "PRET.G8.ENTREP.BOOKKEEPING.BOOKKEEPING",
+       "kind": "skill",
+       "strength": "essential",
+       "reason": "Business records, which government rules require, from Grade 8. Proposed, to confirm by a Pre-Technical Studies teacher.",
+       "status": "proposed"
+      }
+     ],
      "status": "proposed"
     },
     {
@@ -1922,7 +3101,21 @@
        "requires": "PRET.G9.ENTREP.GOVERNMENT_AND_BUSINESS.GOV_BUSINESS",
        "kind": "skill",
        "strength": "essential",
-       "reason": "Proposed: this skill builds on it. To confirm by a Pre-Technical teacher.",
+       "reason": "Taxes are one way government is involved. Proposed, to confirm by a Pre-Technical Studies teacher.",
+       "status": "proposed"
+      },
+      {
+       "requires": "MATH.G6.MEASUR.MONEY.TYPES_OF_TAXES",
+       "kind": "skill",
+       "strength": "essential",
+       "reason": "Types of taxes, from Grade 6 Mathematics. Proposed, to confirm by a Pre-Technical Studies teacher.",
+       "status": "proposed"
+      },
+      {
+       "requires": "MATH.G5.MEASUR.MONEY.TAX_ON_RECEIPT",
+       "kind": "skill",
+       "strength": "essential",
+       "reason": "Tax on a receipt, from Grade 5 Mathematics. Proposed, to confirm by a Pre-Technical Studies teacher.",
        "status": "proposed"
       }
      ],
@@ -1933,15 +3126,15 @@
     {
      "code": "PRET.G9.ENTREP.GOVERNMENT_AND_BUSINESS.GOV_BUSINESS.M_PT9_GV_PROTECT",
      "skill": "PRET.G9.ENTREP.GOVERNMENT_AND_BUSINESS.GOV_BUSINESS",
-     "error": "Thinks government harms business only.",
+     "error": "Thinks government rules exist only to slow business down.",
      "example": {
-      "question": "Why does government regulate business?",
-      "wrong_answer": "To harm business",
-      "correct_answer": "To protect customers"
+      "question": "Why does the government inspect weighing scales in shops?",
+      "wrong_answer": "To slow businesses down",
+      "correct_answer": "To protect customers from being cheated"
      },
-     "cause": "The child mixes up two rules that are taught close together.",
-     "reveals": "Offer \"To harm business\" next to the right answer and ask the question again in a new situation.",
-     "help": "Regulation protects customers.",
+     "cause": "Rules feel like obstacles to the learner, never like protection.",
+     "reveals": "Offer \"To slow businesses down\" beside \"To protect customers from being cheated\" and ask the child to choose.",
+     "help": "Discuss weights and measures checks, food inspection and standards marks: they protect customers and honest traders.",
      "feedback": "Regulation protects customers.",
      "source": "To confirm by a Pre-Technical teacher: a common classroom error, not traced to a study by the author.",
      "status": "draft"
@@ -1949,15 +3142,15 @@
     {
      "code": "PRET.G9.ENTREP.GOVERNMENT_AND_BUSINESS.GOV_BUSINESS.M_PT9_GV_LICENCE",
      "skill": "PRET.G9.ENTREP.GOVERNMENT_AND_BUSINESS.GOV_BUSINESS",
-     "error": "Thinks licences are unnecessary.",
+     "error": "Thinks a small business can operate without a licence or permit.",
      "example": {
       "question": "What do businesses need to operate legally?",
       "wrong_answer": "No licence at all",
       "correct_answer": "A licence"
      },
-     "cause": "The child mixes up two rules that are taught close together.",
+     "cause": "Small traders around the learner sometimes work without permits.",
      "reveals": "Offer \"No licence at all\" next to the right answer and ask the question again in a new situation.",
-     "help": "Businesses need a licence.",
+     "help": "Show a single business permit from the county and list what it allows; trading without it risks fines and closure.",
      "feedback": "Businesses need a licence.",
      "source": "To confirm by a Pre-Technical teacher: a common classroom error, not traced to a study by the author.",
      "status": "draft"
@@ -1965,15 +3158,15 @@
     {
      "code": "PRET.G9.ENTREP.GOVERNMENT_AND_BUSINESS.GOV_BUSINESS.M_PT9_GV_HELP",
      "skill": "PRET.G9.ENTREP.GOVERNMENT_AND_BUSINESS.GOV_BUSINESS",
-     "error": "Names a non-help.",
+     "error": "Thinks government help means telling businesses what to sell.",
      "example": {
-      "question": "How does government help business?",
-      "wrong_answer": "By closing roads",
-      "correct_answer": "By providing roads and power"
+      "question": "How does the government help businesses?",
+      "wrong_answer": "By telling them what to sell",
+      "correct_answer": "By building roads, providing power, and giving loans and training"
      },
-     "cause": "The child mixes up two rules that are taught close together.",
-     "reveals": "Offer \"By closing roads\" next to the right answer and ask the question again in a new situation.",
-     "help": "Government provides roads and power.",
+     "cause": "The learner pictures government help as control.",
+     "reveals": "Offer \"By telling them what to sell\" beside \"By building roads, providing power, and giving loans and training\" and ask the child to choose.",
+     "help": "List what government provides for business: roads, power, water, security, loans and training (youth and women funds), trade fairs.",
      "feedback": "Government provides roads and power.",
      "source": "To confirm by a Pre-Technical teacher: a common classroom error, not traced to a study by the author.",
      "status": "draft"
@@ -1981,49 +3174,81 @@
     {
      "code": "PRET.G9.ENTREP.GOVERNMENT_AND_BUSINESS.TAXES.M_PT9_TX_VAT",
      "skill": "PRET.G9.ENTREP.GOVERNMENT_AND_BUSINESS.TAXES",
-     "error": "Gives the wrong tax name.",
+     "error": "Thinks VAT is a tax on a worker's salary.",
      "example": {
-      "question": "What does VAT stand for?",
-      "wrong_answer": "Very Added Tax",
-      "correct_answer": "Value Added Tax"
+      "question": "What is VAT charged on?",
+      "wrong_answer": "A worker's salary",
+      "correct_answer": "Goods and services when they are bought"
      },
-     "cause": "The child mixes up two rules that are taught close together.",
-     "reveals": "Offer \"Very Added Tax\" next to the right answer and ask the question again in a new situation.",
-     "help": "VAT is Value Added Tax.",
+     "cause": "All taxes sound alike, and income is the tax adults talk about.",
+     "reveals": "Offer \"A worker's salary\" beside \"Goods and services when they are bought\" and ask the child to choose.",
+     "help": "Find VAT on a supermarket receipt: it is charged on goods and services when they are bought.",
      "feedback": "VAT is Value Added Tax.",
-     "source": "To confirm by a Pre-Technical teacher: a common classroom error, not traced to a study by the author.",
+     "source": "To confirm by a Pre-Technical Studies teacher (MONEY: figures, rates and institution names change; check against current Kenyan practice): a common classroom error, not traced to a study by the author.",
      "status": "draft"
     },
     {
      "code": "PRET.G9.ENTREP.GOVERNMENT_AND_BUSINESS.TAXES.M_PT9_TX_USE",
      "skill": "PRET.G9.ENTREP.GOVERNMENT_AND_BUSINESS.TAXES",
-     "error": "Says taxes are kept by officials.",
+     "error": "Thinks taxes pay only the people who collect them.",
      "example": {
       "question": "What are taxes used for?",
-      "wrong_answer": "Private spending",
-      "correct_answer": "Public services"
+      "wrong_answer": "Paying the tax collectors only",
+      "correct_answer": "Public services such as roads, schools, hospitals and security"
      },
-     "cause": "The child mixes up two rules that are taught close together.",
-     "reveals": "Offer \"Private spending\" next to the right answer and ask the question again in a new situation.",
-     "help": "Taxes pay for public services.",
+     "cause": "The learner does not see where tax money goes.",
+     "reveals": "Offer \"Paying the tax collectors only\" beside \"Public services such as roads, schools, hospitals and security\" and ask the child to choose.",
+     "help": "List public services near school (roads, the school, the health centre, security) and say taxes pay for them.",
      "feedback": "Taxes pay for public services.",
-     "source": "To confirm by a Pre-Technical teacher: a common classroom error, not traced to a study by the author.",
+     "source": "To confirm by a Pre-Technical Studies teacher (MONEY: figures, rates and institution names change; check against current Kenyan practice): a common classroom error, not traced to a study by the author.",
      "status": "draft"
     },
     {
      "code": "PRET.G9.ENTREP.GOVERNMENT_AND_BUSINESS.TAXES.M_PT9_TX_EGOV",
      "skill": "PRET.G9.ENTREP.GOVERNMENT_AND_BUSINESS.TAXES",
-     "error": "Names a non-e-Government service.",
+     "error": "Thinks any website, such as social media, is an e-Government service.",
      "example": {
-      "question": "Which is an e-Government service?",
-      "wrong_answer": "A shop",
-      "correct_answer": "eCitizen"
+      "question": "Which online service lets a business owner apply for permits or file tax returns?",
+      "wrong_answer": "A social media page",
+      "correct_answer": "eCitizen or KRA iTax"
      },
-     "cause": "The child mixes up two rules that are taught close together.",
-     "reveals": "Offer \"A shop\" next to the right answer and ask the question again in a new situation.",
-     "help": "eCitizen is an e-Government service.",
+     "cause": "Any website seems like a government service.",
+     "reveals": "Offer \"A social media page\" beside \"eCitizen or KRA iTax\" and ask the child to choose.",
+     "help": "Show eCitizen (permits, licences) and KRA iTax (tax returns) pages; compare with social media.",
      "feedback": "eCitizen is an e-Government service.",
-     "source": "To confirm by a Pre-Technical teacher: a common classroom error, not traced to a study by the author.",
+     "source": "To confirm by a Pre-Technical Studies teacher (MONEY: figures, rates and institution names change; check against current Kenyan practice): a common classroom error, not traced to a study by the author.",
+     "status": "draft"
+    },
+    {
+     "code": "PRET.G9.ENTREP.GOVERNMENT_AND_BUSINESS.GOV_BUSINESS.M_PT9_GV_STATE_CORP",
+     "skill": "PRET.G9.ENTREP.GOVERNMENT_AND_BUSINESS.GOV_BUSINESS",
+     "error": "Thinks the government never runs any business itself.",
+     "example": {
+      "question": "Which is a way the government takes part in business?",
+      "wrong_answer": "It never runs any business",
+      "correct_answer": "It runs state corporations such as the Kenya Ports Authority"
+     },
+     "cause": "The learner thinks of government only as rule-maker.",
+     "reveals": "Offer \"It never runs any business\" beside \"It runs state corporations such as the Kenya Ports Authority\" and ask the child to choose.",
+     "help": "List state corporations that provide services for a fee (ports, railways, water companies) and why government runs them.",
+     "feedback": "The government also runs businesses through state corporations.",
+     "source": "To confirm by a Pre-Technical Studies teacher (MONEY: figures, rates and institution names change; check against current Kenyan practice): a common classroom error, not traced to a study by the author.",
+     "status": "draft"
+    },
+    {
+     "code": "PRET.G9.ENTREP.GOVERNMENT_AND_BUSINESS.TAXES.M_PT9_TX_PAYE",
+     "skill": "PRET.G9.ENTREP.GOVERNMENT_AND_BUSINESS.TAXES",
+     "error": "Thinks PAYE is an indirect tax.",
+     "example": {
+      "question": "Is PAYE (Pay As You Earn) a direct or an indirect tax?",
+      "wrong_answer": "Indirect",
+      "correct_answer": "Direct, taken from a worker's income"
+     },
+     "cause": "The tax is taken by the employer, so it seems indirect.",
+     "reveals": "Offer \"Indirect\" beside \"Direct, taken from a worker's income\" and ask the child to choose.",
+     "help": "Sort taxes: direct (on income or profit: PAYE, corporation tax) and indirect (on spending: VAT, excise duty, customs duty).",
+     "feedback": "PAYE is a direct tax on income.",
+     "source": "To confirm by a Pre-Technical Studies teacher (MONEY: figures, rates and institution names change; check against current Kenyan practice): a common classroom error, not traced to a study by the author.",
      "status": "draft"
     }
    ],
@@ -2115,7 +3340,71 @@
       "reasoning"
      ],
      "horeb_skill_ids": [],
-     "prerequisites": [],
+     "prerequisites": [
+      {
+       "requires": "PRET.G7.ENTREP.INTRODUCTION_TO_ENTREPRE.ENT_IDEAS",
+       "kind": "skill",
+       "strength": "essential",
+       "reason": "Business ideas, from Grade 7. Proposed, to confirm by a Pre-Technical Studies teacher.",
+       "status": "proposed"
+      },
+      {
+       "requires": "PRET.G8.ENTREP.OF_GOODS_AND_SERVICES.MARKETING",
+       "kind": "skill",
+       "strength": "essential",
+       "reason": "Markets, from Grade 8. Proposed, to confirm by a Pre-Technical Studies teacher.",
+       "status": "proposed"
+      },
+      {
+       "requires": "PRET.G8.ENTREP.BOOKKEEPING.FIN_STATEMENTS",
+       "kind": "skill",
+       "strength": "essential",
+       "reason": "Profit and capital, from Grade 8. Proposed, to confirm by a Pre-Technical Studies teacher.",
+       "status": "proposed"
+      }
+     ],
+     "status": "proposed"
+    },
+    {
+     "code": "PRET.G9.ENTREP.BUSINESS_PLAN.BP_TEMPLATE",
+     "name": "Fill in a business plan template for a small project: description, market and competitors, start-up capital, projected sales, costs and profit, executive summary written last",
+     "outcomes": [
+      "PRE_.G9.ENTREP.BUSINESS_PLAN.c"
+     ],
+     "mastery": "Fills each part of a simple template: the business description, the market and the competitors named, start-up capital (equipment, licence and first stock), projected sales, costs and profit (sales - costs), and the executive summary, written last though placed first. Evidence rule: at least four of the last five fresh questions right across at least two question forms, and no repeated pick of the same misconception. The practical part (the drawing, the item made, the tool or computer used) is marked by the teacher with the KICD rubric, never by a tap.",
+     "question_forms": [
+      "say what goes in a part of the template",
+      "work out a projected profit",
+      "find what is missing from a filled-in plan"
+     ],
+     "thinking": [
+      "recall",
+      "reasoning"
+     ],
+     "horeb_skill_ids": [],
+     "prerequisites": [
+      {
+       "requires": "PRET.G9.ENTREP.BUSINESS_PLAN.BUSINESS_PLAN",
+       "kind": "skill",
+       "strength": "essential",
+       "reason": "The parts of a business plan come first. Proposed, to confirm by a Pre-Technical Studies teacher.",
+       "status": "proposed"
+      },
+      {
+       "requires": "PRET.G8.ENTREP.BOOKKEEPING.FIN_STATEMENTS",
+       "kind": "skill",
+       "strength": "essential",
+       "reason": "Profit and capital, from Grade 8. Proposed, to confirm by a Pre-Technical Studies teacher.",
+       "status": "proposed"
+      },
+      {
+       "requires": "PRET.G8.ENTREP.OF_GOODS_AND_SERVICES.MARKETING",
+       "kind": "skill",
+       "strength": "essential",
+       "reason": "Markets and competitors, from Grade 8. Proposed, to confirm by a Pre-Technical Studies teacher.",
+       "status": "proposed"
+      }
+     ],
      "status": "proposed"
     }
    ],
@@ -2123,15 +3412,15 @@
     {
      "code": "PRET.G9.ENTREP.BUSINESS_PLAN.BUSINESS_PLAN.M_PT9_BPL_IMPORT",
      "skill": "PRET.G9.ENTREP.BUSINESS_PLAN.BUSINESS_PLAN",
-     "error": "Says a plan is a waste of time.",
+     "error": "Thinks a business plan is a waste of time.",
      "example": {
       "question": "Why write a business plan?",
       "wrong_answer": "It is a waste of time",
       "correct_answer": "It guides the owner and helps get a loan"
      },
-     "cause": "The child mixes up two rules that are taught close together.",
+     "cause": "Planning feels slower than starting to sell.",
      "reveals": "Offer \"It is a waste of time\" next to the right answer and ask the question again in a new situation.",
-     "help": "A plan guides the owner.",
+     "help": "Compare two traders: one who planned costs and market and one who did not; list what went wrong for the second.",
      "feedback": "A plan guides the owner.",
      "source": "To confirm by a Pre-Technical teacher: a common classroom error, not traced to a study by the author.",
      "status": "draft"
@@ -2139,15 +3428,15 @@
     {
      "code": "PRET.G9.ENTREP.BUSINESS_PLAN.BUSINESS_PLAN.M_PT9_BPL_PART",
      "skill": "PRET.G9.ENTREP.BUSINESS_PLAN.BUSINESS_PLAN",
-     "error": "Names a non-component.",
+     "error": "Leaves out the market analysis, thinking the product alone is enough.",
      "example": {
-      "question": "Which is a component of a business plan?",
-      "wrong_answer": "A football score",
-      "correct_answer": "The market"
+      "question": "A business plan describes the product. What else must it show?",
+      "wrong_answer": "Nothing; a good product sells itself",
+      "correct_answer": "The market: the customers and the competitors"
      },
-     "cause": "The child mixes up two rules that are taught close together.",
-     "reveals": "Offer \"A football score\" next to the right answer and ask the question again in a new situation.",
-     "help": "The market is a component.",
+     "cause": "A good product feels like enough to make a business work.",
+     "reveals": "Offer \"Nothing; a good product sells itself\" beside \"The market: the customers and the competitors\" and ask the child to choose.",
+     "help": "Read a short plan with no market section; ask who will buy and who else sells the same thing.",
      "feedback": "The market is a component.",
      "source": "To confirm by a Pre-Technical teacher: a common classroom error, not traced to a study by the author.",
      "status": "draft"
@@ -2155,17 +3444,97 @@
     {
      "code": "PRET.G9.ENTREP.BUSINESS_PLAN.BUSINESS_PLAN.M_PT9_BPL_MONEY",
      "skill": "PRET.G9.ENTREP.BUSINESS_PLAN.BUSINESS_PLAN",
-     "error": "Leaves money out.",
+     "error": "Thinks the title page shows the costs and income.",
      "example": {
       "question": "Which part shows costs and income?",
       "wrong_answer": "The title page",
       "correct_answer": "The money plan"
      },
-     "cause": "The child mixes up two rules that are taught close together.",
+     "cause": "The title page comes first and looks the most important.",
      "reveals": "Offer \"The title page\" next to the right answer and ask the question again in a new situation.",
-     "help": "The money plan shows costs and income.",
+     "help": "Point to the financial plan in a template: start-up costs, expected sales, costs and profit.",
      "feedback": "The money plan shows costs and income.",
      "source": "To confirm by a Pre-Technical teacher: a common classroom error, not traced to a study by the author.",
+     "status": "draft"
+    },
+    {
+     "code": "PRET.G9.ENTREP.BUSINESS_PLAN.BP_TEMPLATE.M_PT9_BT_STARTUP",
+     "skill": "PRET.G9.ENTREP.BUSINESS_PLAN.BP_TEMPLATE",
+     "error": "Counts only the first stock as start-up capital, forgetting equipment and the licence.",
+     "example": {
+      "question": "A learner plans a juice stall. Which costs go into the start-up capital?",
+      "wrong_answer": "Only the fruit",
+      "correct_answer": "The blender, cups, licence and the first stock of fruit"
+     },
+     "cause": "The stock is what will be sold, so it feels like the whole cost.",
+     "reveals": "Offer \"Only the fruit\" beside \"The blender, cups, licence and the first stock of fruit\" and ask the child to choose.",
+     "help": "List everything needed before the first sale; sort it into equipment, permits and stock.",
+     "feedback": "Start-up capital covers equipment, permits and the first stock.",
+     "source": "To confirm by a Pre-Technical Studies teacher: a common classroom error, not traced to a study by the author.",
+     "status": "draft"
+    },
+    {
+     "code": "PRET.G9.ENTREP.BUSINESS_PLAN.BP_TEMPLATE.M_PT9_BT_PROFIT",
+     "skill": "PRET.G9.ENTREP.BUSINESS_PLAN.BP_TEMPLATE",
+     "error": "Writes projected sales as the projected profit.",
+     "example": {
+      "question": "Projected sales 30,000 shillings a month, projected costs 22,000. What is the projected profit?",
+      "wrong_answer": "30,000 shillings",
+      "correct_answer": "8,000 shillings"
+     },
+     "cause": "Sales are the biggest, most hopeful number in the plan.",
+     "reveals": "Offer \"30,000 shillings\" beside \"8,000 shillings\" and ask the child to choose.",
+     "help": "Write profit = sales - costs in the template row itself; fill it in for three businesses.",
+     "feedback": "Projected profit = projected sales - projected costs.",
+     "source": "To confirm by a Pre-Technical Studies teacher: a common classroom error, not traced to a study by the author.",
+     "status": "draft"
+    },
+    {
+     "code": "PRET.G9.ENTREP.BUSINESS_PLAN.BP_TEMPLATE.M_PT9_BT_SUMMARY",
+     "skill": "PRET.G9.ENTREP.BUSINESS_PLAN.BP_TEMPLATE",
+     "error": "Writes the executive summary first, before the rest of the plan exists.",
+     "example": {
+      "question": "When is the executive summary of a business plan written?",
+      "wrong_answer": "First, before any other part",
+      "correct_answer": "Last, after the other parts, though it is placed first"
+     },
+     "cause": "It comes first in the plan, so it seems to be written first.",
+     "reveals": "Offer \"First, before any other part\" beside \"Last, after the other parts, though it is placed first\" and ask the child to choose.",
+     "help": "Try to summarise an empty plan; then fill the parts and summarise. Only the second works.",
+     "feedback": "Write the executive summary last; place it first.",
+     "source": "To confirm by a Pre-Technical Studies teacher: a common classroom error, not traced to a study by the author.",
+     "status": "draft"
+    },
+    {
+     "code": "PRET.G9.ENTREP.BUSINESS_PLAN.BP_TEMPLATE.M_PT9_BT_COMPETITORS",
+     "skill": "PRET.G9.ENTREP.BUSINESS_PLAN.BP_TEMPLATE",
+     "error": "Writes \"no competitors\" when similar businesses are close by.",
+     "example": {
+      "question": "A learner writes \"no competitors\" for a mandazi stall beside two kiosks that sell mandazi. What is wrong?",
+      "wrong_answer": "Nothing; competitors need not be in a plan",
+      "correct_answer": "The kiosks are competitors and must be named, with how the stall will be different"
+     },
+     "cause": "Admitting competitors seems to make the plan weaker.",
+     "reveals": "Offer \"Nothing; competitors need not be in a plan\" beside \"The kiosks are competitors and must be named, with how the stall will be different\" and ask the child to choose.",
+     "help": "Walk the market (or a map) and list every seller of the same goods; write one way the new stall will be different.",
+     "feedback": "Name your competitors and say how you will be different.",
+     "source": "To confirm by a Pre-Technical Studies teacher: a common classroom error, not traced to a study by the author.",
+     "status": "draft"
+    },
+    {
+     "code": "PRET.G9.ENTREP.BUSINESS_PLAN.BUSINESS_PLAN.M_PT9_BPL_ONCE",
+     "skill": "PRET.G9.ENTREP.BUSINESS_PLAN.BUSINESS_PLAN",
+     "error": "Thinks a business plan is written once and never changed.",
+     "example": {
+      "question": "A business plan was written a year ago and prices have changed. What should the owner do?",
+      "wrong_answer": "Keep it as it is; plans are written once",
+      "correct_answer": "Review and update the plan"
+     },
+     "cause": "A written plan feels finished, like a handed-in assignment.",
+     "reveals": "Offer \"Keep it as it is; plans are written once\" beside \"Review and update the plan\" and ask the child to choose.",
+     "help": "Change one price in a plan and see how the profit changes; plan a review each term.",
+     "feedback": "Review and update a business plan when things change.",
+     "source": "To confirm by a Pre-Technical Studies teacher: a common classroom error, not traced to a study by the author.",
      "status": "draft"
     }
    ],

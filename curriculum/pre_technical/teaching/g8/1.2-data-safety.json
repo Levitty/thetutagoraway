@@ -1,0 +1,189 @@
+{
+ "sub_strand": "PRE_.G8.FOUNDA.DATA_SAFETY",
+ "title": "Data Safety",
+ "status": "draft: written 18 Nov 2026 offline for Grade 8 Pre-Technical Studies; not yet checked by a Pre-Technical Studies teacher; safety lines marked SAFETY in the library to confirm first; not loaded by the live tutor",
+ "sources": [],
+ "notes": "Securing data (outcome d) is practical: the teacher watches the learner set a screen lock and make a backup copy, and marks it with the rubric. No learner is asked for a real password.",
+ "skills": [
+  {
+   "skill": "PRET.G8.FOUNDA.DATA_SAFETY.DATA_THREATS",
+   "key_step": "The learner outlines why data on a device matters (school work, photos, contacts, money records; hard to replace; may be private) and identifies threats to it: viruses and malware, hacking, theft or loss of the device, accidental deletion, power cuts and surges, fire and water damage, hardware failure.",
+   "floor": {
+    "prerequisite": "Knows what data is.",
+    "question": "Is a list of raw marks data or information?",
+    "answer": "Data"
+   },
+   "representations": [
+    "a phone outline with its data listed",
+    "threat cards",
+    "a threat and result chart"
+   ],
+   "steps": [
+    "List the data on a device.",
+    "Say why it matters.",
+    "Name each threat.",
+    "Say what each threat does."
+   ],
+   "contexts": [
+    "a phone dropped in water",
+    "a flash disk from a cyber café",
+    "a power cut in the computer lab"
+   ],
+   "board": [
+    {
+     "beat": "write",
+     "do": "Draw a phone and list: photos, contacts, school notes."
+    },
+    {
+     "beat": "point",
+     "do": "Point at \"school notes\".",
+     "say": "Name two ways these could be lost."
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for the learner to name theft, water, a virus or deleting."
+    },
+    {
+     "beat": "reveal",
+     "do": "List all the threats around the phone."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "PRET.G8.FOUNDA.DATA_SAFETY.DATA_THREATS.M_PT8_DT_NOT_IMPORTANT",
+     "listen_for": [
+      "Only big companies need to protect data"
+     ],
+     "ask": "Why is the data on your phone worth protecting?",
+     "repair": "List what is on a learner's phone or school account (photos, contacts, school work) and what losing it would mean."
+    },
+    {
+     "code": "PRET.G8.FOUNDA.DATA_SAFETY.DATA_THREATS.M_PT8_DT_VIRUS_ONLY",
+     "listen_for": [
+      "Only through the internet"
+     ],
+     "ask": "How can a virus reach a computer?",
+     "repair": "Show how a flash disk from a cyber café can carry a virus to the school computer; scan it first."
+    },
+    {
+     "code": "PRET.G8.FOUNDA.DATA_SAFETY.DATA_THREATS.M_PT8_DT_THEFT",
+     "listen_for": [
+      "Only viruses"
+     ],
+     "ask": "Which is a threat to the data on a phone?",
+     "repair": "List every way data can be lost: theft, loss, water, fire, power surges, deleting by mistake, viruses."
+    },
+    {
+     "code": "PRET.G8.FOUNDA.DATA_SAFETY.DATA_THREATS.M_PT8_DT_POWER",
+     "listen_for": [
+      "Nothing; data is always safe"
+     ],
+     "ask": "The power goes off while you are saving a file on a desktop computer. What can happen?",
+     "repair": "Explain that saving writes data step by step; a cut in the middle leaves it half written. Show a UPS (backup power)."
+    }
+   ],
+   "checks": [
+    {
+     "question": "Name a threat to data other than a virus.",
+     "answer": "Theft (loss, water, power cut)",
+     "shows": "threats"
+    },
+    {
+     "question": "How can a virus reach a computer without the internet?",
+     "answer": "Through a flash disk",
+     "shows": "virus"
+    }
+   ]
+  },
+  {
+   "skill": "PRET.G8.FOUNDA.DATA_SAFETY.DATA_PROTECT",
+   "key_step": "The learner describes ways of protecting data: strong passwords and screen locks kept secret, backups on another device or the cloud, antivirus that is kept updated, scanning flash disks, not opening unknown links or attachments, logging out on shared computers, protecting devices from theft, water and power surges. Securing data on a device is watched and marked with the rubric.",
+   "floor": {
+    "prerequisite": "Knows the threats to data.",
+    "question": "Name one threat to data.",
+    "answer": "A virus (theft, loss)"
+   },
+   "representations": [
+    "a threat and protection chart",
+    "a password strength ladder",
+    "a backup diagram: device to flash disk or cloud"
+   ],
+   "steps": [
+    "Name the threat.",
+    "Choose the protection.",
+    "Make a backup copy.",
+    "Set a strong password and keep it secret."
+   ],
+   "contexts": [
+    "a shared computer in a cyber café",
+    "a class project file",
+    "a phone with family photos"
+   ],
+   "board": [
+    {
+     "beat": "write",
+     "do": "Write three passwords: a name, 12345678, a long mix."
+    },
+    {
+     "beat": "point",
+     "do": "Point at the long mix.",
+     "say": "Why is this the strongest?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for the learner to say it is long and hard to guess."
+    },
+    {
+     "beat": "reveal",
+     "do": "Write the rules for a strong password."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "PRET.G8.FOUNDA.DATA_SAFETY.DATA_PROTECT.M_PT8_DP_PASSWORD_SHARE",
+     "listen_for": [
+      "Share it with a friend"
+     ],
+     "ask": "What should you do with your password?",
+     "repair": "Ask what a friend could do with the account, even by mistake; friendships change but the account stays."
+    },
+    {
+     "code": "PRET.G8.FOUNDA.DATA_SAFETY.DATA_PROTECT.M_PT8_DP_BACKUP",
+     "listen_for": [
+      "There is no need; the computer keeps every file safe"
+     ],
+     "ask": "Why make a backup of an important file?",
+     "repair": "Tell a story of an essay lost with a stolen phone; make a second copy on a flash disk or cloud account."
+    },
+    {
+     "code": "PRET.G8.FOUNDA.DATA_SAFETY.DATA_PROTECT.M_PT8_DP_UNKNOWN_LINK",
+     "listen_for": [
+      "Click it to claim the prize"
+     ],
+     "ask": "A stranger sends a link: \"You have won a phone, click here\". What do you do?",
+     "repair": "Show a fake \"you have won\" message and list its clues; delete it and tell an adult."
+    },
+    {
+     "code": "PRET.G8.FOUNDA.DATA_SAFETY.DATA_PROTECT.M_PT8_DP_WEAK_PW",
+     "listen_for": [
+      "Your name and year of birth, so you never forget it"
+     ],
+     "ask": "Which makes the strongest password?",
+     "repair": "Show how quickly a name or date can be guessed by someone who knows you; build a long passphrase from unrelated words and numbers."
+    }
+   ],
+   "checks": [
+    {
+     "question": "Why make a backup?",
+     "answer": "So a copy is safe if the device is lost or fails",
+     "shows": "backup"
+    },
+    {
+     "question": "What should you do with your password?",
+     "answer": "Keep it secret",
+     "shows": "password"
+    }
+   ]
+  }
+ ]
+}

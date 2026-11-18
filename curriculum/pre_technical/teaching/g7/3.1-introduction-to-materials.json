@@ -1,0 +1,189 @@
+{
+ "sub_strand": "PRE_.G7.MATERI.INTRODUCTION_TO_MATERIAL",
+ "title": "Introduction to Materials",
+ "status": "draft: written 18 Nov 2026 offline for Grade 7 Pre-Technical Studies; not yet checked by a Pre-Technical Studies teacher; safety lines marked SAFETY in the library to confirm first; not loaded by the live tutor",
+ "sources": [],
+ "notes": "",
+ "skills": [
+  {
+   "skill": "PRET.G7.MATERI.INTRODUCTION_TO_MATERIAL.MAT_METAL_NONMETAL",
+   "key_step": "The learner identifies materials used in production (wood, metals, plastics, glass, clay, stone, fabric) and tells metallic from non-metallic materials by their properties (metals: shine when cut, conduct heat and electricity, can be bent and hammered, ring when struck).",
+   "floor": {
+    "prerequisite": "Knows conductors and insulators of heat.",
+    "question": "Which gets hot faster in tea: a metal or a plastic spoon?",
+    "answer": "The metal spoon"
+   },
+   "representations": [
+    "a materials table with samples",
+    "a sorting tray: metallic, non-metallic",
+    "a property checklist"
+   ],
+   "steps": [
+    "Name the material an object is made of.",
+    "Test a property.",
+    "Sort metallic and non-metallic.",
+    "Give a reason for each choice."
+   ],
+   "contexts": [
+    "a hardware shop",
+    "a jua kali workshop",
+    "the school kitchen"
+   ],
+   "board": [
+    {
+     "beat": "write",
+     "do": "Put a nail, a glass bottle, a plastic pipe and a stone on the table."
+    },
+    {
+     "beat": "point",
+     "do": "Point at the glass bottle.",
+     "say": "Metallic or non-metallic? How do you know?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for the learner to say non-metallic; it does not conduct, it breaks."
+    },
+    {
+     "beat": "reveal",
+     "do": "Sort all four."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "PRET.G7.MATERI.INTRODUCTION_TO_MATERIAL.MAT_METAL_NONMETAL.M_MM_SHINY",
+     "listen_for": [
+      "Glass, even though it shines"
+     ],
+     "ask": "Which of these is non-metallic?",
+     "repair": "Put glass, a polished tile and a steel spoon side by side; test each with heat or a magnet and sort them."
+    },
+    {
+     "code": "PRET.G7.MATERI.INTRODUCTION_TO_MATERIAL.MAT_METAL_NONMETAL.M_MM_HARD_METAL",
+     "listen_for": [
+      "Stone, because it is hard"
+     ],
+     "ask": "Which of these is non-metallic?",
+     "repair": "Compare a stone and a copper wire: the stone is hard but breaks, does not conduct; the copper bends and conducts."
+    },
+    {
+     "code": "PRET.G7.MATERI.INTRODUCTION_TO_MATERIAL.MAT_METAL_NONMETAL.M_MM_PRODUCT",
+     "listen_for": [
+      "A chair"
+     ],
+     "ask": "Which of these is a material?",
+     "repair": "Ask \"what is it made of?\" for ten objects; write the material, not the object."
+    },
+    {
+     "code": "PRET.G7.MATERI.INTRODUCTION_TO_MATERIAL.MAT_METAL_NONMETAL.M_PT7_MM_FACTORY_METAL",
+     "listen_for": [
+      "A plastic water pipe, because it is made in a factory"
+     ],
+     "ask": "Which of these is a metallic material?",
+     "repair": "Sort hardware-shop items by testing: does it conduct heat? Does it bend without breaking? Does it ring when tapped?"
+    }
+   ],
+   "checks": [
+    {
+     "question": "A chair is a product. What material might it be made of?",
+     "answer": "Wood (metal, plastic)",
+     "shows": "material"
+    },
+    {
+     "question": "Is glass metallic or non-metallic?",
+     "answer": "Non-metallic",
+     "shows": "sorting"
+    }
+   ]
+  },
+  {
+   "skill": "PRET.G7.MATERI.INTRODUCTION_TO_MATERIAL.MAT_SUSTAINABLE",
+   "key_step": "The learner describes sustainable ways of using materials in production: plan to reduce waste, reuse offcuts and old items, recycle scrap, repair rather than replace, choose materials that last, and use local materials.",
+   "floor": {
+    "prerequisite": "Knows reduce, reuse and recycle.",
+    "question": "Give an example of reusing.",
+    "answer": "Using a jar to store beans"
+   },
+   "representations": [
+    "the 3Rs chart",
+    "a cutting plan on squared paper",
+    "pictures of items made from waste"
+   ],
+   "steps": [
+    "Plan cuts to reduce waste.",
+    "Reuse offcuts.",
+    "Recycle scrap.",
+    "Choose materials that last."
+   ],
+   "contexts": [
+    "a carpenter's offcuts",
+    "a jua kali artisan making sufurias from scrap",
+    "old tyres made into sandals"
+   ],
+   "board": [
+    {
+     "beat": "write",
+     "do": "Draw a plank with two cutting plans: one wasteful, one careful."
+    },
+    {
+     "beat": "point",
+     "do": "Point at the careful plan.",
+     "say": "Why is this plan more sustainable?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for the learner to say less waste."
+    },
+    {
+     "beat": "reveal",
+     "do": "Write the 3Rs beside it."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "PRET.G7.MATERI.INTRODUCTION_TO_MATERIAL.MAT_SUSTAINABLE.M_MS_WASTE_OK",
+     "listen_for": [
+      "Waste it, there is plenty"
+     ],
+     "ask": "A carpenter has plenty of timber. What is a good habit?",
+     "repair": "Show how much timber one tree gives and how long it takes to grow; plan cuts on paper to use offcuts."
+    },
+    {
+     "code": "PRET.G7.MATERI.INTRODUCTION_TO_MATERIAL.MAT_SUSTAINABLE.M_MS_BURN_OFFCUTS",
+     "listen_for": [
+      "Burn it"
+     ],
+     "ask": "What is a better use of scrap metal?",
+     "repair": "List scrap that can be sold, recycled or reused (scrap metal dealers, offcuts for small items); say what burning releases."
+    },
+    {
+     "code": "PRET.G7.MATERI.INTRODUCTION_TO_MATERIAL.MAT_SUSTAINABLE.M_MS_NEW_ONLY",
+     "listen_for": [
+      "Throw it away and buy new"
+     ],
+     "ask": "A worn chair leg can be repaired. What is sustainable?",
+     "repair": "Repair a chair leg in class; compare the cost and material used with buying a new chair."
+    },
+    {
+     "code": "PRET.G7.MATERI.INTRODUCTION_TO_MATERIAL.MAT_SUSTAINABLE.M_PT7_MS_CHEAP_LASTS",
+     "listen_for": [
+      "The cheap timber, because it costs less now"
+     ],
+     "ask": "A carpenter can buy cheap timber that rots in a year, or treated timber that lasts ten years. Which is more sustainable?",
+     "repair": "Count how many cheap posts are needed in ten years against one treated post; add up the cost and the trees used."
+    }
+   ],
+   "checks": [
+    {
+     "question": "Name one way to use offcuts.",
+     "answer": "Make small items (pegs, wedges)",
+     "shows": "reuse"
+    },
+    {
+     "question": "Why is repairing a chair sustainable?",
+     "answer": "It saves materials",
+     "shows": "repair"
+    }
+   ]
+  }
+ ]
+}

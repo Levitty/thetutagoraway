@@ -1,0 +1,279 @@
+{
+ "sub_strand": "PRE_.G8.COMMUN.PLANE_GEOMETRY",
+ "title": "Plane Geometry",
+ "status": "draft: written 18 Nov 2026 offline for Grade 8 Pre-Technical Studies; not yet checked by a Pre-Technical Studies teacher; safety lines marked SAFETY in the library to confirm first; not loaded by the live tutor",
+ "sources": [],
+ "notes": "Constructing combined shapes (outcome c) is marked on the learner's drawing with the rubric; the questions test the construction steps.",
+ "skills": [
+  {
+   "skill": "PRET.G8.COMMUN.PLANE_GEOMETRY.DRAW_INSTRUMENTS",
+   "key_step": "The learner names the instruments used in technical drawing and their jobs: drawing board, T-square (horizontal lines), set squares 45 and 30-60 degrees (vertical and angled lines), compass and dividers (circles and arcs, stepping off), protractor (angles), scale rule, pencils (grades H, HB), eraser, French curves.",
+   "floor": {
+    "prerequisite": "Knows the line types.",
+    "question": "Which line shows the outline of an object?",
+    "answer": "A thick continuous line"
+   },
+   "representations": [
+    "instruments laid out with labels",
+    "an instrument and job matching chart",
+    "a board with a T-square and set squares"
+   ],
+   "steps": [
+    "Name the instrument.",
+    "Say its job.",
+    "Use it to draw one line.",
+    "Check the line."
+   ],
+   "contexts": [
+    "a draughtsman's desk",
+    "a geometry set",
+    "the drawing room at school"
+   ],
+   "board": [
+    {
+     "beat": "write",
+     "do": "Draw a T-square on a board and two set squares."
+    },
+    {
+     "beat": "point",
+     "do": "Point at the 30-60 set square.",
+     "say": "Which angles can you draw with it on the T-square?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for the learner to say 30, 60 and 90 degrees."
+    },
+    {
+     "beat": "reveal",
+     "do": "Label each instrument's job."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "PRET.G8.COMMUN.PLANE_GEOMETRY.DRAW_INSTRUMENTS.M_PT8_DI_TOOL_MIX",
+     "listen_for": [
+      "A set square"
+     ],
+     "ask": "Which instrument draws circles?",
+     "repair": "Match each instrument to one job on the board; draw a circle with a compass and an angle with a set square."
+    },
+    {
+     "code": "PRET.G8.COMMUN.PLANE_GEOMETRY.DRAW_INSTRUMENTS.M_PT8_DI_TSQUARE",
+     "listen_for": [
+      "Angles"
+     ],
+     "ask": "What does the T-square draw?",
+     "repair": "Slide the T-square stock along the board edge and draw parallel horizontal lines; set squares rest on it for angles."
+    },
+    {
+     "code": "PRET.G8.COMMUN.PLANE_GEOMETRY.DRAW_INSTRUMENTS.M_PT8_DI_PROTRACTOR",
+     "listen_for": [
+      "Length"
+     ],
+     "ask": "What does a protractor measure?",
+     "repair": "Measure a corner with the protractor and a side with a rule; one gives degrees, the other millimetres."
+    },
+    {
+     "code": "PRET.G8.COMMUN.PLANE_GEOMETRY.DRAW_INSTRUMENTS.M_PT8_DI_SET_SQUARE",
+     "listen_for": [
+      "The 45 degree set square"
+     ],
+     "ask": "Which set square draws a 60 degree line?",
+     "repair": "Hold up both set squares, read the angles at their corners, and draw 30, 45 and 60 degree lines on the T-square."
+    }
+   ],
+   "checks": [
+    {
+     "question": "Which instrument draws horizontal lines?",
+     "answer": "The T-square",
+     "shows": "T-square"
+    },
+    {
+     "question": "What does a protractor measure?",
+     "answer": "Angles",
+     "shows": "protractor"
+    }
+   ]
+  },
+  {
+   "skill": "PRET.G8.COMMUN.PLANE_GEOMETRY.DRAW_LAYOUT",
+   "key_step": "The learner explains the layout of a drawing environment: board and T-square on the working edge, paper fixed square with tape, sheet sizes (A4 297 x 210 mm, A3 420 x 297 mm), a border inside the edges, the title block at the bottom right (title, name, scale, date, units), good light and a tidy space.",
+   "floor": {
+    "prerequisite": "Can print in capitals between guide lines.",
+    "question": "How are notes printed on a drawing?",
+    "answer": "In capitals between guide lines"
+   },
+   "representations": [
+    "a laid-out A4 sheet with border and title block",
+    "A-sizes folded from A3",
+    "a photo of a drawing desk"
+   ],
+   "steps": [
+    "Fix the paper square to the board.",
+    "Draw the border.",
+    "Draw the title block at the bottom right.",
+    "Fill in the title block."
+   ],
+   "contexts": [
+    "an architect's plan",
+    "a learner's first drawing sheet",
+    "a workshop drawing pinned to a wall"
+   ],
+   "board": [
+    {
+     "beat": "write",
+     "do": "Draw an A4 sheet outline."
+    },
+    {
+     "beat": "point",
+     "do": "Point at the bottom right corner.",
+     "say": "What goes here, and what is written in it?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for the learner to say the title block: title, name, scale, date."
+    },
+    {
+     "beat": "reveal",
+     "do": "Draw the border and title block."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "PRET.G8.COMMUN.PLANE_GEOMETRY.DRAW_LAYOUT.M_PT8_DL_TITLE_TOP",
+     "listen_for": [
+      "At the top left"
+     ],
+     "ask": "Where is the title block of a drawing sheet?",
+     "repair": "Look at a real drawing sheet: the title block is at the bottom right, where it can be read when sheets are folded or filed."
+    },
+    {
+     "code": "PRET.G8.COMMUN.PLANE_GEOMETRY.DRAW_LAYOUT.M_PT8_DL_NO_BORDER",
+     "listen_for": [
+      "It is not needed; the paper edge is enough"
+     ],
+     "ask": "Why is a border drawn on a drawing sheet?",
+     "repair": "Draw a border 10 mm inside the edges; explain it frames the drawing and leaves a margin for handling and filing."
+    },
+    {
+     "code": "PRET.G8.COMMUN.PLANE_GEOMETRY.DRAW_LAYOUT.M_PT8_DL_A4",
+     "listen_for": [
+      "420 by 297 millimetres"
+     ],
+     "ask": "What is the size of A4?",
+     "repair": "Fold an A3 sheet in half: it makes two A4 sheets. Measure: A4 is 297 by 210 mm."
+    },
+    {
+     "code": "PRET.G8.COMMUN.PLANE_GEOMETRY.DRAW_LAYOUT.M_PT8_DL_TSQUARE_EDGE",
+     "listen_for": [
+      "Any edge, top or bottom"
+     ],
+     "ask": "Along which edge of the drawing board does the stock of the T-square slide?",
+     "repair": "Show that only one edge is kept true; using others gives lines that are not parallel."
+    }
+   ],
+   "checks": [
+    {
+     "question": "Where is the title block on a drawing sheet?",
+     "answer": "At the bottom right",
+     "shows": "title block"
+    },
+    {
+     "question": "What is the size of A4?",
+     "answer": "297 by 210 mm",
+     "shows": "sheet size"
+    }
+   ]
+  },
+  {
+   "skill": "PRET.G8.COMMUN.PLANE_GEOMETRY.GEOM_CONSTRUCT",
+   "key_step": "The learner gives and follows the steps for constructions used in combined shapes: bisect a line, construct 60, 90, 30 and 45 degree angles, a hexagon in a circle (side equals radius), and a slot or rounded rectangle (centres on the centre line, radius half the width); the drawing is marked with the rubric.",
+   "floor": {
+    "prerequisite": "Knows the drawing instruments.",
+    "question": "Which instrument draws circles and arcs?",
+    "answer": "A compass"
+   },
+   "representations": [
+    "a step-by-step bisection on the board",
+    "a hexagon stepped round a circle",
+    "a slot with its centre line and centres marked"
+   ],
+   "steps": [
+    "Draw the base line or centre line.",
+    "Set the compass to the right radius.",
+    "Draw the arcs in order.",
+    "Join the points and firm the outline."
+   ],
+   "contexts": [
+    "drawing a nut (hexagon)",
+    "drawing a slotted bracket",
+    "setting out a right angle for a garden bed"
+   ],
+   "board": [
+    {
+     "beat": "write",
+     "do": "Draw a circle of radius 30 mm."
+    },
+    {
+     "beat": "point",
+     "do": "Point at the compass set to 30 mm.",
+     "say": "How many times will this step round the circle, and what shape do we get?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for the learner to say six times, a hexagon."
+    },
+    {
+     "beat": "reveal",
+     "do": "Step it round and join the points."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "PRET.G8.COMMUN.PLANE_GEOMETRY.GEOM_CONSTRUCT.M_PT8_GC_HEX_SIDE",
+     "listen_for": [
+      "60 mm, the diameter"
+     ],
+     "ask": "A regular hexagon is drawn in a circle of radius 30 mm. How long is each side?",
+     "repair": "Step the compass round the circle at the radius: it fits exactly six times. Join the points."
+    },
+    {
+     "code": "PRET.G8.COMMUN.PLANE_GEOMETRY.GEOM_CONSTRUCT.M_PT8_GC_BISECT_SHORT",
+     "listen_for": [
+      "Less than half of AB"
+     ],
+     "ask": "To bisect a line AB with a compass, the radius must be...",
+     "repair": "Try both on the board: arcs with a short radius do not cross. Use a radius clearly more than half."
+    },
+    {
+     "code": "PRET.G8.COMMUN.PLANE_GEOMETRY.GEOM_CONSTRUCT.M_PT8_GC_SLOT_RADIUS",
+     "listen_for": [
+      "20 mm, the full width"
+     ],
+     "ask": "A slot is 20 mm wide with semicircular ends. What radius draws each end?",
+     "repair": "Draw the centre line, mark the two centres on it, and set the compass to half the width."
+    },
+    {
+     "code": "PRET.G8.COMMUN.PLANE_GEOMETRY.GEOM_CONSTRUCT.M_PT8_GC_PROTRACTOR",
+     "listen_for": [
+      "It cannot be; a protractor is needed"
+     ],
+     "ask": "How is a 60 degree angle constructed with a compass and a ruler?",
+     "repair": "Construct 60 degrees with equal arcs and check it with a protractor; the two agree."
+    }
+   ],
+   "checks": [
+    {
+     "question": "When bisecting a line, how wide is the compass set?",
+     "answer": "More than half the line",
+     "shows": "bisect"
+    },
+    {
+     "question": "What radius draws the ends of a 20 mm wide slot?",
+     "answer": "10 mm",
+     "shows": "slot"
+    }
+   ]
+  }
+ ]
+}

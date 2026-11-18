@@ -1,0 +1,189 @@
+{
+ "sub_strand": "PRE_.G8.COMMUN.VISUAL_PROGRAMMING",
+ "title": "Visual Programming",
+ "status": "draft: written 18 Nov 2026 offline for Grade 8 Pre-Technical Studies; not yet checked by a Pre-Technical Studies teacher; safety lines marked SAFETY in the library to confirm first; not loaded by the live tutor",
+ "sources": [],
+ "notes": "",
+ "skills": [
+  {
+   "skill": "PRET.G8.COMMUN.VISUAL_PROGRAMMING.VISUAL_PROG",
+   "key_step": "The learner explains visual programming (programs built by joining blocks), names applications (Scratch, Blockly, Code.org, MIT App Inventor) and their features: stage and backdrop, sprites, block palette (motion, looks, sound, events, control), scripts area, and uses in games, stories, animations and simple apps.",
+   "floor": {
+    "prerequisite": "Knows ICT tools.",
+    "question": "Name one ICT tool.",
+    "answer": "A computer (phone)"
+   },
+   "representations": [
+    "a labelled Scratch screen",
+    "block category colour cards",
+    "a feature and job chart"
+   ],
+   "steps": [
+    "Name the application.",
+    "Point out its features.",
+    "Say what each block group does.",
+    "Name a use."
+   ],
+   "contexts": [
+    "a class animation",
+    "a simple quiz game",
+    "a story with talking sprites"
+   ],
+   "board": [
+    {
+     "beat": "write",
+     "do": "Draw a Scratch screen: stage, sprite, blocks, scripts area."
+    },
+    {
+     "beat": "point",
+     "do": "Point at the cat on the stage.",
+     "say": "What is this called, and what controls it?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for the learner to say a sprite, controlled by blocks."
+    },
+    {
+     "beat": "reveal",
+     "do": "Label all the features."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "PRET.G8.COMMUN.VISUAL_PROGRAMMING.VISUAL_PROG.M_PT8_VP_TEXT",
+     "listen_for": [
+      "By typing lines of code"
+     ],
+     "ask": "How are programs built in visual programming?",
+     "repair": "Open Scratch and drag three blocks together; nothing is typed."
+    },
+    {
+     "code": "PRET.G8.COMMUN.VISUAL_PROGRAMMING.VISUAL_PROG.M_PT8_VP_TOOL",
+     "listen_for": [
+      "Microsoft Word"
+     ],
+     "ask": "Which of these is a visual (block) programming tool?",
+     "repair": "Sort programs into ones that make programs (Scratch, Blockly) and ones that do jobs (Word, a calculator)."
+    },
+    {
+     "code": "PRET.G8.COMMUN.VISUAL_PROGRAMMING.VISUAL_PROG.M_PT8_VP_LOOP",
+     "listen_for": [
+      "Stops the program"
+     ],
+     "ask": "What does a loop do in a program?",
+     "repair": "Make a sprite repeat a dance step 5 times with a repeat block; count the repeats."
+    },
+    {
+     "code": "PRET.G8.COMMUN.VISUAL_PROGRAMMING.VISUAL_PROG.M_PT8_VP_SPRITE",
+     "listen_for": [
+      "The background of the stage"
+     ],
+     "ask": "In Scratch, what is a sprite?",
+     "repair": "Point to the stage (backdrop) and to the cat (sprite); give each its own blocks."
+    }
+   ],
+   "checks": [
+    {
+     "question": "How are programs built in visual programming?",
+     "answer": "By joining blocks",
+     "shows": "blocks"
+    },
+    {
+     "question": "Name a visual programming application.",
+     "answer": "Scratch (Blockly)",
+     "shows": "tools"
+    }
+   ]
+  },
+  {
+   "skill": "PRET.G8.COMMUN.VISUAL_PROGRAMMING.VP_SEQUENCE",
+   "key_step": "The learner builds and reads block programs that solve a problem: blocks run top to bottom under an event block, repeat blocks loop a set number of times, if-blocks run only when a condition is true; bugs are found by acting out or stepping through. The program made in class is marked with the rubric.",
+   "floor": {
+    "prerequisite": "Knows what visual programming is.",
+    "question": "How are programs built in visual programming?",
+    "answer": "By joining blocks"
+   },
+   "representations": [
+    "printed block cards to arrange",
+    "a floor grid to act out a program",
+    "a before and after of a bug fix"
+   ],
+   "steps": [
+    "State the problem.",
+    "Choose the event block.",
+    "Stack the blocks in order, with loops or if-blocks.",
+    "Run, find the bug, fix it."
+   ],
+   "contexts": [
+    "a sprite drawing a square",
+    "a simple game: catch the ball",
+    "a traffic light program"
+   ],
+   "board": [
+    {
+     "beat": "write",
+     "do": "Stick block cards on the board: when flag clicked, repeat 4 [move 50, turn 90]."
+    },
+    {
+     "beat": "point",
+     "do": "Point at the repeat block.",
+     "say": "What will the sprite draw?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for the learner to say a square."
+    },
+    {
+     "beat": "reveal",
+     "do": "Act it out on the floor grid."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "PRET.G8.COMMUN.VISUAL_PROGRAMMING.VP_SEQUENCE.M_PT8_VS_ORDER",
+     "listen_for": [
+      "The same as the other order"
+     ],
+     "ask": "A sprite must walk to a door and then open it. The blocks are: \"open door\", then \"move 10 steps\". What happens?",
+     "repair": "Act it out: one learner follows the blocks exactly as stacked. Then swap them and act again."
+    },
+    {
+     "code": "PRET.G8.COMMUN.VISUAL_PROGRAMMING.VP_SEQUENCE.M_PT8_VS_LOOP",
+     "listen_for": [
+      "One straight line"
+     ],
+     "ask": "repeat 4 [move 50 steps, turn 90 degrees]. What does the sprite draw?",
+     "repair": "Walk it on the floor: four times, move and turn. Draw each step as you go."
+    },
+    {
+     "code": "PRET.G8.COMMUN.VISUAL_PROGRAMMING.VP_SEQUENCE.M_PT8_VS_NO_EVENT",
+     "listen_for": [
+      "They run"
+     ],
+     "ask": "Blocks sit in the scripts area but not under \"when green flag clicked\". What happens when the flag is clicked?",
+     "repair": "Click the flag with and without the event block on top; see which stack runs."
+    },
+    {
+     "code": "PRET.G8.COMMUN.VISUAL_PROGRAMMING.VP_SEQUENCE.M_PT8_VS_IF_ALWAYS",
+     "listen_for": [
+      "It says \"Ouch\" anyway"
+     ],
+     "ask": "if touching wall then say \"Ouch\". The sprite is not touching the wall. What happens?",
+     "repair": "Run it twice, once away from the wall and once touching it. Say \"if\" means \"only when\"."
+    }
+   ],
+   "checks": [
+    {
+     "question": "What does repeat 4 [move 50, turn 90] draw?",
+     "answer": "A square",
+     "shows": "loops"
+    },
+    {
+     "question": "Why does a stack not run when the flag is clicked?",
+     "answer": "It has no event block on top",
+     "shows": "events"
+    }
+   ]
+  }
+ ]
+}

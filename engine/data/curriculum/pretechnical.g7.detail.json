@@ -114,6 +114,14 @@
    ],
    "mastery": "The child says analogue computers work with continuous measurements, digital computers work with digits (0 and 1) and hybrid computers have both; general-purpose computers do many jobs and special-purpose computers one; and super, mainframe, mini and micro computers differ in size and power, with desktops, laptops, tablets and smartphones as micro computers. The child does not say a smartphone is not a computer. Evidence rule: at least four of the last five fresh questions right across at least two question forms, and no repeated pick of the same misconception."
   },
+  "PRET.G7.FOUNDA.COMPUTER_CONCEPTS.COMP_USE": {
+   "forms": [
+    "put the steps of a task in order",
+    "say what goes wrong when a step is skipped",
+    "pick the right mouse or keyboard action"
+   ],
+   "mastery": "Orders the steps of a computer task (switch on, log in, open the program by double-clicking its icon or from the Start menu, work, save with a clear file name in a chosen folder, close the program, shut down from the operating system before switching off at the socket), and says what happens when work is not saved or the power is cut without shutting down (lost work, damaged files). Evidence rule: at least four of the last five fresh questions right across at least two question forms, and no repeated pick of the same misconception. The practical part (the drawing, the item made, the tool or computer used) is marked by the teacher with the KICD rubric, never by a tap."
+  },
   "PRET.G7.COMMUN.INTRODUCTION_TO_DRAWING.DRAW_PURPOSE": {
    "forms": [
     "say what a drawing communicates better than words",
@@ -140,6 +148,14 @@
     "find the false step in a learner's reason"
    ],
    "mastery": "The child says ⌀ means diameter, R radius, ⊥ perpendicular (at a right angle), ▢ square, ℄ centre line, and DRG drawing, A/F across flats, A/C across corners, I/D inside diameter and O/D outside diameter. The child does not mix up diameter and radius or inside and outside diameter. Evidence rule: at least four of the last five fresh questions right across at least two question forms, and no repeated pick of the same misconception."
+  },
+  "PRET.G7.COMMUN.INTRODUCTION_TO_DRAWING.DRAW_LETTERING": {
+   "forms": [
+    "pick the correctly printed note",
+    "say which rule a printed note breaks",
+    "say what guide lines are for"
+   ],
+   "mastery": "Says that notes on a technical drawing are printed in plain capital (upper case) letters and numbers, made with single strokes, all upright (or all at the same slope), the same height between two faint guide lines, with even gaps between letters and a wider gap between words, and picks the note that follows these rules. Evidence rule: at least four of the last five fresh questions right across at least two question forms, and no repeated pick of the same misconception. The practical part (the drawing, the item made, the tool or computer used) is marked by the teacher with the KICD rubric, never by a tap."
   },
   "PRET.G7.COMMUN.FREE_HAND_SKETCHING.SKETCH_PRINCIPLES": {
    "forms": [
@@ -274,6 +290,14 @@
     "find the false step in a learner's reason"
    ],
    "mastery": "The child says tools are wiped clean and dry after use, steel tools get a light film of oil against rust, they are kept in a dry box or rack, the points of dividers and scribers are covered, callipers and steel rules are not dropped, bent, or used as hammers or levers, and tools are returned after the lesson. The child does not say tools may be left wet or thrown in a heap. Evidence rule: at least four of the last five fresh questions right across at least two question forms, and no repeated pick of the same misconception."
+  },
+  "PRET.G7.TOOLS_.MEASURING_AND_MARKING_OU.TOOL_USE": {
+   "forms": [
+    "say which way of using a tool gives a true reading",
+    "put the marking-out steps in order",
+    "find the mistake in a described use"
+   ],
+   "mastery": "Says to measure from the zero mark (not the worn end of a ruler), read the scale with the eye straight above the mark, hold the stock of a try-square firmly against a straight face edge, scribe away from the body, and dot-punch only where two scribed lines cross; picks the use that gives a true mark. Evidence rule: at least four of the last five fresh questions right across at least two question forms, and no repeated pick of the same misconception. The practical part (the drawing, the item made, the tool or computer used) is marked by the teacher with the KICD rubric, never by a tap."
   },
   "PRET.G7.TOOLS_.COMPUTER_HARDWARE.HW_CLASSIFY": {
    "forms": [

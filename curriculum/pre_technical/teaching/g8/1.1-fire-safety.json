@@ -1,0 +1,287 @@
+{
+ "sub_strand": "PRE_.G8.FOUNDA.FIRE_SAFETY",
+ "title": "Fire Safety",
+ "status": "draft: written 18 Nov 2026 offline for Grade 8 Pre-Technical Studies; not yet checked by a Pre-Technical Studies teacher; safety lines marked SAFETY in the library to confirm first; not loaded by the live tutor",
+ "sources": [],
+ "notes": "SAFETY: every rule here is for the teacher to confirm against the school's fire plan and the Kenyan fire service guidance before use. Learners never light or fight a fire; extinguishers are shown, and drills practise raising the alarm and getting out. Emergency numbers in Kenya: 999 or 112.",
+ "skills": [
+  {
+   "skill": "PRET.G8.FOUNDA.FIRE_SAFETY.FIRE_CAUSES",
+   "key_step": "The learner identifies causes of fire outbreaks: unattended stoves, candles and jikos, hot cooking oil, faulty or overloaded wiring, fuels (paraffin, petrol, gas) near heat, matches within children's reach, burning rubbish and bush fires, smoking, lightning.",
+   "floor": {
+    "prerequisite": "Knows the threats in the immediate environment.",
+    "question": "Name one threat at home.",
+    "answer": "Fire (slips, falls)"
+   },
+   "representations": [
+    "the fire triangle",
+    "a house picture with fire hazards to find",
+    "a cause and place chart"
+   ],
+   "steps": [
+    "Name the cause.",
+    "Say where it happens.",
+    "Say which part of the fire triangle it gives.",
+    "Link it to a way of preventing it."
+   ],
+   "contexts": [
+    "a kitchen with a paraffin stove",
+    "an overloaded adaptor in a dormitory",
+    "burning rubbish near a farm"
+   ],
+   "board": [
+    {
+     "beat": "write",
+     "do": "Draw a kitchen: a stove, a paraffin tin beside it, a candle by a curtain."
+    },
+    {
+     "beat": "point",
+     "do": "Point at the paraffin tin.",
+     "say": "What makes this a fire danger?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for the learner to say its vapour can catch fire."
+    },
+    {
+     "beat": "reveal",
+     "do": "Circle every hazard."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "PRET.G8.FOUNDA.FIRE_SAFETY.FIRE_CAUSES.M_PT8_FC_NATURE_ONLY",
+     "listen_for": [
+      "Only lightning"
+     ],
+     "ask": "Which is a common cause of fires in homes?",
+     "repair": "List the fires the learner has heard of near home and school; most started with a stove, candle, wire or match."
+    },
+    {
+     "code": "PRET.G8.FOUNDA.FIRE_SAFETY.FIRE_CAUSES.M_PT8_FC_WIRING",
+     "listen_for": [
+      "Only an open flame; wires cannot"
+     ],
+     "ask": "Which of these can start a fire in a house?",
+     "repair": "Show a scorched socket and an overloaded adaptor; explain that too much current heats the wires."
+    },
+    {
+     "code": "PRET.G8.FOUNDA.FIRE_SAFETY.FIRE_CAUSES.M_PT8_FC_FUEL",
+     "listen_for": [
+      "There is no need; it only burns inside the lamp"
+     ],
+     "ask": "Why is paraffin stored away from a lit stove?",
+     "repair": "Explain that the vapour from paraffin, petrol and gas catches fire from a flame or spark nearby; store fuel away from heat."
+    },
+    {
+     "code": "PRET.G8.FOUNDA.FIRE_SAFETY.FIRE_CAUSES.M_PT8_FC_BURN_WIND",
+     "listen_for": [
+      "None, because he is standing nearby"
+     ],
+     "ask": "On a dry, windy day a farmer burns rubbish beside dry grass. What is the danger?",
+     "repair": "Show how far sparks travel in wind; agree: never burn near dry grass or on a windy day."
+    }
+   ],
+   "checks": [
+    {
+     "question": "Name two causes of fire at home.",
+     "answer": "Unattended stove and overloaded sockets (candles, fuel)",
+     "shows": "causes"
+    },
+    {
+     "question": "Why is paraffin kept away from the stove?",
+     "answer": "Its vapour can catch fire",
+     "shows": "fuel"
+    }
+   ]
+  },
+  {
+   "skill": "PRET.G8.FOUNDA.FIRE_SAFETY.FIRE_PREVENT",
+   "key_step": "The learner explains ways of preventing fire outbreaks: never leave stoves, candles or jikos unattended, keep matches and fuels away from children and heat, do not overload sockets, repair faulty wires, keep exits clear, have extinguishers, fire blankets and sand, and practise fire drills.",
+   "floor": {
+    "prerequisite": "Knows the causes of fire.",
+    "question": "Name a cause of electrical fire.",
+    "answer": "Overloaded sockets"
+   },
+   "representations": [
+    "a cause to prevention chart",
+    "a fire drill route map of the school",
+    "pictures of extinguisher and fire blanket"
+   ],
+   "steps": [
+    "Name the cause.",
+    "Give the way to prevent it.",
+    "Say who does it.",
+    "Practise the drill."
+   ],
+   "contexts": [
+    "a dormitory with many chargers",
+    "the school kitchen",
+    "a market stall with a jiko"
+   ],
+   "board": [
+    {
+     "beat": "write",
+     "do": "Write causes on the left: candle, adaptor, paraffin, locked door."
+    },
+    {
+     "beat": "point",
+     "do": "Point at \"adaptor\".",
+     "say": "What is the way to prevent this fire?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for the learner to say do not overload it."
+    },
+    {
+     "beat": "reveal",
+     "do": "Write a prevention beside each cause."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "PRET.G8.FOUNDA.FIRE_SAFETY.FIRE_PREVENT.M_PT8_FP_MATCHES",
+     "listen_for": [
+      "On the kitchen table"
+     ],
+     "ask": "Where should matches be kept?",
+     "repair": "Walk through a home picture and find a high, closed place for matches and lighters."
+    },
+    {
+     "code": "PRET.G8.FOUNDA.FIRE_SAFETY.FIRE_PREVENT.M_PT8_FP_EXITS",
+     "listen_for": [
+      "Locking the exit door"
+     ],
+     "ask": "Which action helps people escape from a fire?",
+     "repair": "Run a drill with one exit \"blocked\"; time how long it takes to get out. Keep exits clear and unlocked from inside."
+    },
+    {
+     "code": "PRET.G8.FOUNDA.FIRE_SAFETY.FIRE_PREVENT.M_PT8_FP_UNATTENDED",
+     "listen_for": [
+      "Leave it to burn"
+     ],
+     "ask": "What should you do before leaving a room with a candle?",
+     "repair": "Agree a rule: put out a candle or switch off a stove every time you leave the room, even for a minute."
+    },
+    {
+     "code": "PRET.G8.FOUNDA.FIRE_SAFETY.FIRE_PREVENT.M_PT8_FP_OVERLOAD",
+     "listen_for": [
+      "Plugging many appliances into one adaptor"
+     ],
+     "ask": "Which habit helps prevent electrical fires?",
+     "repair": "Show an adaptor with an iron, a kettle and a heater; explain that too much current heats the wires."
+    }
+   ],
+   "checks": [
+    {
+     "question": "Where should matches be kept?",
+     "answer": "Out of reach of children",
+     "shows": "prevention"
+    },
+    {
+     "question": "Why are exits kept clear?",
+     "answer": "So people can escape quickly",
+     "shows": "exits"
+    }
+   ]
+  },
+  {
+   "skill": "PRET.G8.FOUNDA.FIRE_SAFETY.FIRE_EXTINGUISH",
+   "key_step": "The learner explains how fires are put out (cooling, smothering, starving the fire of heat, air or fuel), chooses the method and extinguisher for a fire (water for wood and paper only; lid or fire blanket for cooking oil; power off and carbon dioxide or dry powder for electrical fires), aims at the base, and puts safety first (alarm, out, call 999 or 112; stop, drop and roll). Drills are marked with the rubric. SAFETY: teacher confirms against the school fire plan.",
+   "floor": {
+    "prerequisite": "Knows the causes of fire.",
+    "question": "Name one cause of fire in a kitchen.",
+    "answer": "Hot cooking oil (an unattended stove)"
+   },
+   "representations": [
+    "the fire triangle: heat, fuel, air",
+    "a fire and method matching chart",
+    "the PASS steps for an extinguisher"
+   ],
+   "steps": [
+    "Name what the fire is burning.",
+    "Choose cooling, smothering or starving.",
+    "Choose the extinguisher.",
+    "Raise the alarm and get out if it grows."
+   ],
+   "contexts": [
+    "a pan fire in the school kitchen",
+    "a burning socket in the lab",
+    "a fire drill at school"
+   ],
+   "board": [
+    {
+     "beat": "write",
+     "do": "Draw the fire triangle with heat, fuel and air on its sides."
+    },
+    {
+     "beat": "point",
+     "do": "Point at \"air\".",
+     "say": "Which method takes away the air, and what could you use?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for the learner to say smothering with a lid or fire blanket."
+    },
+    {
+     "beat": "reveal",
+     "do": "Write the method for each side."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "PRET.G8.FOUNDA.FIRE_SAFETY.FIRE_EXTINGUISH.M_PT8_FE_WATER_OIL",
+     "listen_for": [
+      "Pour water on it at once"
+     ],
+     "ask": "Oil in a sufuria catches fire on the stove. What should be done?",
+     "repair": "Show a fire service video of water on burning oil (a fireball). Practise: heat off, cover, leave it covered."
+    },
+    {
+     "code": "PRET.G8.FOUNDA.FIRE_SAFETY.FIRE_EXTINGUISH.M_PT8_FE_WATER_ELEC",
+     "listen_for": [
+      "Throw a bucket of water on it"
+     ],
+     "ask": "A socket and its cable are on fire. What is the first thing to do?",
+     "repair": "Explain that water carries electricity and can shock the person; show where the main switch is in the school."
+    },
+    {
+     "code": "PRET.G8.FOUNDA.FIRE_SAFETY.FIRE_EXTINGUISH.M_PT8_FE_AIM_TOP",
+     "listen_for": [
+      "At the tops of the flames"
+     ],
+     "ask": "Where do you aim a fire extinguisher?",
+     "repair": "Teach PASS: pull the pin, aim at the base, squeeze, sweep. The fuel at the base is what burns."
+    },
+    {
+     "code": "PRET.G8.FOUNDA.FIRE_SAFETY.FIRE_EXTINGUISH.M_PT8_FE_RUN",
+     "listen_for": [
+      "Run to find water"
+     ],
+     "ask": "A learner's sleeve catches fire. What should she do?",
+     "repair": "Practise stop, drop and roll on a mat; explain that running fans the flames with air."
+    },
+    {
+     "code": "PRET.G8.FOUNDA.FIRE_SAFETY.FIRE_EXTINGUISH.M_PT8_FE_FIGHT_FIRST",
+     "listen_for": [
+      "Fight it alone with a bucket"
+     ],
+     "ask": "A fire is spreading in a store room. What comes first?",
+     "repair": "Walk the school fire drill: alarm, out by the nearest exit, to the assembly point, never go back in. Only trained adults fight small fires."
+    }
+   ],
+   "checks": [
+    {
+     "question": "Why is water wrong for burning oil?",
+     "answer": "It makes the burning oil spread and flare up",
+     "shows": "oil"
+    },
+    {
+     "question": "What does PASS stand for?",
+     "answer": "Pull, aim, squeeze, sweep",
+     "shows": "extinguisher"
+    }
+   ]
+  }
+ ]
+}

@@ -1,0 +1,279 @@
+{
+ "sub_strand": "PRE_.G7.MATERI.METALLIC_MATERIALS",
+ "title": "Metallic Materials",
+ "status": "draft: written 18 Nov 2026 offline for Grade 7 Pre-Technical Studies; not yet checked by a Pre-Technical Studies teacher; safety lines marked SAFETY in the library to confirm first; not loaded by the live tutor",
+ "sources": [],
+ "notes": "",
+ "skills": [
+  {
+   "skill": "PRET.G7.MATERI.METALLIC_MATERIALS.METAL_TYPES",
+   "key_step": "The learner identifies types of metallic materials in the environment: ferrous (contain iron: cast iron, mild steel) and non-ferrous (copper, aluminium, zinc, lead, tin), and alloys (brass, bronze), using colour, weight, rust and a magnet.",
+   "floor": {
+    "prerequisite": "Knows metals conduct heat.",
+    "question": "Why does a metal spoon get hot in tea?",
+    "answer": "Metals conduct heat"
+   },
+   "representations": [
+    "a metals display: nail, wire, can, key",
+    "a ferrous and non-ferrous chart",
+    "a magnet test tray"
+   ],
+   "steps": [
+    "Look at the colour.",
+    "Feel the weight.",
+    "Test with a magnet.",
+    "Sort ferrous and non-ferrous."
+   ],
+   "contexts": [
+    "iron sheets on a roof",
+    "copper cable",
+    "an aluminium sufuria"
+   ],
+   "board": [
+    {
+     "beat": "write",
+     "do": "Put a nail, copper wire and an aluminium can on the table."
+    },
+    {
+     "beat": "point",
+     "do": "Point at the can.",
+     "say": "Will a magnet pick it up? Is it ferrous?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for the learner to say no, non-ferrous."
+    },
+    {
+     "beat": "reveal",
+     "do": "Test all three with the magnet."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "PRET.G7.MATERI.METALLIC_MATERIALS.METAL_TYPES.M_MT_ALU_STEEL",
+     "listen_for": [
+      "Steel"
+     ],
+     "ask": "A silvery, light metal does not stick to a magnet. What is it likely to be?",
+     "repair": "Test a steel nail and an aluminium can with a magnet and by weight in the hand."
+    },
+    {
+     "code": "PRET.G7.MATERI.METALLIC_MATERIALS.METAL_TYPES.M_MT_COPPER_COLOUR",
+     "listen_for": [
+      "Aluminium"
+     ],
+     "ask": "Which metal is reddish-brown?",
+     "repair": "Strip a piece of electric cable and show the reddish-brown copper inside."
+    },
+    {
+     "code": "PRET.G7.MATERI.METALLIC_MATERIALS.METAL_TYPES.M_MT_MAGNET_ALL",
+     "listen_for": [
+      "It cannot be metal"
+     ],
+     "ask": "A magnet does not pick up a metal spoon. What can you say?",
+     "repair": "Test a nail, a copper wire, an aluminium can and a brass key with a magnet; only the nail sticks."
+    },
+    {
+     "code": "PRET.G7.MATERI.METALLIC_MATERIALS.METAL_TYPES.M_PT7_MT_FERROUS",
+     "listen_for": [
+      "Aluminium, because it is a strong metal"
+     ],
+     "ask": "Which metal is ferrous (contains iron)?",
+     "repair": "Teach ferrous = contains iron (iron, steel); non-ferrous = no iron (copper, aluminium, zinc, lead, tin). Test with a magnet and rust."
+    }
+   ],
+   "checks": [
+    {
+     "question": "Which metal is reddish-brown?",
+     "answer": "Copper",
+     "shows": "appearance"
+    },
+    {
+     "question": "Is aluminium ferrous or non-ferrous?",
+     "answer": "Non-ferrous",
+     "shows": "types"
+    }
+   ]
+  },
+  {
+   "skill": "PRET.G7.MATERI.METALLIC_MATERIALS.METAL_PROPERTIES",
+   "key_step": "The learner describes the physical properties of metals: lustre (shine when cut or polished), conduct heat and electricity, malleable (hammered into sheets), ductile (drawn into wire), strong and hard, some magnetic (iron, steel), iron and steel rust.",
+   "floor": {
+    "prerequisite": "Knows the types of metals.",
+    "question": "Name a ferrous metal.",
+    "answer": "Mild steel (cast iron)"
+   },
+   "representations": [
+    "a property table with test results",
+    "a flattened copper wire",
+    "a rusty and a clean nail"
+   ],
+   "steps": [
+    "Name a property.",
+    "Test or observe it.",
+    "Say which metals have it.",
+    "Link the property to a use."
+   ],
+   "contexts": [
+    "a jiko made of sheet metal",
+    "electric wires",
+    "a rusty gate"
+   ],
+   "board": [
+    {
+     "beat": "write",
+     "do": "Write the properties: shine, conduct, malleable, ductile, magnetic, rust."
+    },
+    {
+     "beat": "point",
+     "do": "Point at \"ductile\".",
+     "say": "Which object in the room shows this property?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for the learner to name a wire."
+    },
+    {
+     "beat": "reveal",
+     "do": "Match an object to every property."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "PRET.G7.MATERI.METALLIC_MATERIALS.METAL_PROPERTIES.M_MP_ALL_MAGNETIC",
+     "listen_for": [
+      "Copper"
+     ],
+     "ask": "Which metal does a magnet pick up?",
+     "repair": "Test five metals with a magnet and record which stick."
+    },
+    {
+     "code": "PRET.G7.MATERI.METALLIC_MATERIALS.METAL_PROPERTIES.M_MP_ALL_RUST",
+     "listen_for": [
+      "Copper and aluminium as well"
+     ],
+     "ask": "Which metal rusts?",
+     "repair": "Show a rusty nail, green old copper and a dull aluminium pot; only iron and steel rust (red-brown)."
+    },
+    {
+     "code": "PRET.G7.MATERI.METALLIC_MATERIALS.METAL_PROPERTIES.M_MP_NO_HEAT",
+     "listen_for": [
+      "Metals do not carry heat"
+     ],
+     "ask": "Why does a metal spoon get hot in hot tea?",
+     "repair": "Put a metal and a plastic spoon in hot water and feel the handles after a minute (with care)."
+    },
+    {
+     "code": "PRET.G7.MATERI.METALLIC_MATERIALS.METAL_PROPERTIES.M_MP_BRITTLE",
+     "listen_for": [
+      "It shatters"
+     ],
+     "ask": "What happens when copper is hammered?",
+     "repair": "Hammer a short copper wire flat and bend it; compare with a piece of tile (shown, not done by learners)."
+    }
+   ],
+   "checks": [
+    {
+     "question": "Which metals rust?",
+     "answer": "Iron and steel",
+     "shows": "rust"
+    },
+    {
+     "question": "What does malleable mean?",
+     "answer": "Can be hammered into a sheet",
+     "shows": "malleable"
+    }
+   ]
+  },
+  {
+   "skill": "PRET.G7.MATERI.METALLIC_MATERIALS.METAL_USES",
+   "key_step": "The learner relates metals to their uses by their properties: copper for electric wires (conducts, ductile), aluminium for sufurias and windows (light, conducts heat, does not rust), steel for tools, nails and frames (hard, strong), galvanised iron for roofing (zinc stops rust).",
+   "floor": {
+    "prerequisite": "Knows the properties of metals.",
+    "question": "Which property lets copper be drawn into wire?",
+    "answer": "Ductility"
+   },
+   "representations": [
+    "a use and property matching chart",
+    "samples: cable, sufuria, nail, roofing offcut",
+    "a \"what must it do?\" question card"
+   ],
+   "steps": [
+    "Name the use.",
+    "Ask what the metal must do.",
+    "Pick the property.",
+    "Name the metal."
+   ],
+   "contexts": [
+    "an electrician's cable",
+    "a mabati roof",
+    "a jembe blade"
+   ],
+   "board": [
+    {
+     "beat": "write",
+     "do": "Write three uses: electric wire, sufuria, jembe blade."
+    },
+    {
+     "beat": "point",
+     "do": "Point at \"sufuria\".",
+     "say": "Which metal, and which property makes it right?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for the learner to say aluminium, light and conducts heat."
+    },
+    {
+     "beat": "reveal",
+     "do": "Match the other two."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "PRET.G7.MATERI.METALLIC_MATERIALS.METAL_USES.M_MU_WIRE_STEEL",
+     "listen_for": [
+      "Steel"
+     ],
+     "ask": "Which metal makes electric wire?",
+     "repair": "Strip a cable and show copper; say copper conducts electricity very well and bends easily."
+    },
+    {
+     "code": "PRET.G7.MATERI.METALLIC_MATERIALS.METAL_USES.M_MU_ALU_HEAVY",
+     "listen_for": [
+      "It is very heavy"
+     ],
+     "ask": "Why is a sufuria often made of aluminium?",
+     "repair": "Weigh an aluminium sufuria and a steel one of the same size; aluminium is light and conducts heat."
+    },
+    {
+     "code": "PRET.G7.MATERI.METALLIC_MATERIALS.METAL_USES.M_MU_PROPERTY_SWAP",
+     "listen_for": [
+      "Because it does not conduct heat"
+     ],
+     "ask": "Why is steel used for a jembe blade?",
+     "repair": "For each use, ask \"what must the metal do here?\" then pick the property."
+    },
+    {
+     "code": "PRET.G7.MATERI.METALLIC_MATERIALS.METAL_USES.M_PT7_MU_GALVANISE",
+     "listen_for": [
+      "To make them shine"
+     ],
+     "ask": "Why are iron roofing sheets galvanised (coated with zinc)?",
+     "repair": "Show a new and an old roofing sheet; rust starts where the zinc coat is scratched. Name galvanising."
+    }
+   ],
+   "checks": [
+    {
+     "question": "Which metal is used for electric wire?",
+     "answer": "Copper",
+     "shows": "uses"
+    },
+    {
+     "question": "Why is a jembe blade made of steel?",
+     "answer": "It is hard and strong",
+     "shows": "property"
+    }
+   ]
+  }
+ ]
+}

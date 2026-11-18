@@ -1,0 +1,197 @@
+{
+ "sub_strand": "PRE_.G9.FOUNDA.SAFETY_ON_RAISED_PLATFOR",
+ "title": "Safety on Raised Platforms",
+ "status": "draft: written 18 Nov 2026 offline for Grade 9 Pre-Technical Studies; not yet checked by a Pre-Technical Studies teacher; safety lines marked SAFETY in the library to confirm first; not loaded by the live tutor",
+ "sources": [],
+ "notes": "SAFETY: every rule here is for the teacher to confirm against the school's rules and the Occupational Safety and Health guidance before use. Learners do not work at height; ladders are shown at ground level and the 1-in-4 rule is set out with a ladder lying flat or against a low wall with the teacher.",
+ "skills": [
+  {
+   "skill": "PRET.G9.FOUNDA.SAFETY_ON_RAISED_PLATFOR.RAISED_PLATFORMS",
+   "key_step": "The learner identifies raised platforms (ladders, step ladders, trestles, scaffolds, roofs, mobile platforms) and describes the risks of working on them (falls, falling tools and materials, collapse, slipping, electric lines overhead).",
+   "floor": {
+    "prerequisite": "Knows safety threats in the environment.",
+    "question": "Name a threat that causes injury from height.",
+    "answer": "A fall"
+   },
+   "representations": [
+    "pictures of raised platforms",
+    "a risk chart: to the worker, to people below",
+    "a building site photo"
+   ],
+   "steps": [
+    "Name the platform.",
+    "Say who uses it and for what.",
+    "Name the risks to the worker.",
+    "Name the risks to people below."
+   ],
+   "contexts": [
+    "a painter on a ladder",
+    "a scaffold at a building site",
+    "a learner standing on a chair"
+   ],
+   "board": [
+    {
+     "beat": "write",
+     "do": "Draw a scaffold with a worker and people walking below."
+    },
+    {
+     "beat": "point",
+     "do": "Point at the people below.",
+     "say": "What risk do they face?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for the learner to say falling tools."
+    },
+    {
+     "beat": "reveal",
+     "do": "List the risks to the worker and to people below."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "PRET.G9.FOUNDA.SAFETY_ON_RAISED_PLATFOR.RAISED_PLATFORMS.M_PT9_RP_SAFE",
+     "listen_for": [
+      "A learner alone"
+     ],
+     "ask": "Who should work on a raised platform?",
+     "repair": "Explain that work at height is done by trained adults with a helper; learners do not climb to work."
+    },
+    {
+     "code": "PRET.G9.FOUNDA.SAFETY_ON_RAISED_PLATFOR.RAISED_PLATFORMS.M_PT9_RP_RISK",
+     "listen_for": [
+      "Getting paint on your clothes"
+     ],
+     "ask": "What is the main risk when working on a ladder?",
+     "repair": "Show how a fall of even 2 m can cause serious injury; list falls, falling objects and collapse as the main risks."
+    },
+    {
+     "code": "PRET.G9.FOUNDA.SAFETY_ON_RAISED_PLATFOR.RAISED_PLATFORMS.M_PT9_RP_TYPE",
+     "listen_for": [
+      "No, only scaffolds are raised platforms"
+     ],
+     "ask": "Kamau stands on a chair to fix a curtain. Is he on a raised platform?",
+     "repair": "List what people stand on to reach high: ladders, step ladders, trestles, scaffolds, roofs, and unsafe ones such as chairs and boxes."
+    },
+    {
+     "code": "PRET.G9.FOUNDA.SAFETY_ON_RAISED_PLATFOR.RAISED_PLATFORMS.M_PT9_RP_BELOW",
+     "listen_for": [
+      "Only the worker"
+     ],
+     "ask": "A worker on a scaffold drops a hammer. Who is at risk?",
+     "repair": "Mark a no-go area under a ladder or scaffold; explain toe boards and helmets."
+    }
+   ],
+   "checks": [
+    {
+     "question": "Name two raised platforms.",
+     "answer": "A ladder and a scaffold (trestle)",
+     "shows": "types"
+    },
+    {
+     "question": "What is the main risk of working at height?",
+     "answer": "Falling",
+     "shows": "risks"
+    }
+   ]
+  },
+  {
+   "skill": "PRET.G9.FOUNDA.SAFETY_ON_RAISED_PLATFOR.PLATFORM_RULES",
+   "key_step": "The learner gives the safety rules for raised platforms: inspect before use, firm level ground, ladder at 1 out for every 4 up and footed by a helper, three points of contact, tools in a belt or bag, never overreach, not on the top steps, scaffolds with guard rails and toe boards, keep the area below clear; how the learner sets out and checks a ladder at ground level is marked with the rubric. SAFETY: teacher confirms.",
+   "floor": {
+    "prerequisite": "Knows the risks of working at height.",
+    "question": "What is the main risk of working at height?",
+    "answer": "Falling"
+   },
+   "representations": [
+    "a ladder diagram: 4 up, 1 out",
+    "safe and unsafe ladder pictures",
+    "a scaffold with guard rails and toe boards labelled"
+   ],
+   "steps": [
+    "Inspect the ladder or scaffold.",
+    "Set it on firm, level ground at the right angle.",
+    "Climb with three points of contact.",
+    "Work without leaning out; keep the area below clear."
+   ],
+   "contexts": [
+    "a painter on a ladder",
+    "a fundi on a scaffold at a building site",
+    "a learner reaching a high shelf"
+   ],
+   "board": [
+    {
+     "beat": "write",
+     "do": "Draw a ladder against a wall reaching 4 m."
+    },
+    {
+     "beat": "point",
+     "do": "Point at the foot of the ladder.",
+     "say": "How far from the wall should the foot be?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for the learner to say about 1 m."
+    },
+    {
+     "beat": "reveal",
+     "do": "Write the 1-in-4 rule and the other rules."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "PRET.G9.FOUNDA.SAFETY_ON_RAISED_PLATFOR.PLATFORM_RULES.M_PT9_PR_ANGLE",
+     "listen_for": [
+      "As close to the wall as possible"
+     ],
+     "ask": "A ladder reaches 4 m up a wall. About how far from the wall should its foot be?",
+     "repair": "Lay a ladder on the ground and mark 4 along and 1 across; stand it against a low wall with the teacher and see the angle. Too upright tips back; too flat slides out."
+    },
+    {
+     "code": "PRET.G9.FOUNDA.SAFETY_ON_RAISED_PLATFOR.PLATFORM_RULES.M_PT9_PR_OVERREACH",
+     "listen_for": [
+      "Lean out to reach it"
+     ],
+     "ask": "The spot to paint is beyond arm's reach from the ladder. What do you do?",
+     "repair": "Show how the weight moves outside the ladder and tips it; agree: belt buckle stays between the stiles."
+    },
+    {
+     "code": "PRET.G9.FOUNDA.SAFETY_ON_RAISED_PLATFOR.PLATFORM_RULES.M_PT9_PR_TOP_STEP",
+     "listen_for": [
+      "Stand on the top step"
+     ],
+     "ask": "A step ladder is a little too short. What should you do?",
+     "repair": "Show the ladder label: there is nothing to hold above the top step, so balance is lost. Use the right height of ladder."
+    },
+    {
+     "code": "PRET.G9.FOUNDA.SAFETY_ON_RAISED_PLATFOR.PLATFORM_RULES.M_PT9_PR_CONTACT",
+     "listen_for": [
+      "Holding the tools in both hands"
+     ],
+     "ask": "How should you climb a ladder when you need tools at the top?",
+     "repair": "Practise on the bottom rung: two hands and a foot, or two feet and a hand, always touching the ladder; tools go in a belt or are passed up."
+    },
+    {
+     "code": "PRET.G9.FOUNDA.SAFETY_ON_RAISED_PLATFOR.PLATFORM_RULES.M_PT9_PR_FOOTING",
+     "listen_for": [
+      "On a box or bricks to make it taller"
+     ],
+     "ask": "Where should a ladder stand?",
+     "repair": "Show how a box or soft soil shifts under weight; use firm level ground and a helper footing the ladder."
+    }
+   ],
+   "checks": [
+    {
+     "question": "How far out is the foot of a ladder 4 m up the wall?",
+     "answer": "About 1 m",
+     "shows": "angle"
+    },
+    {
+     "question": "How many points of contact when climbing?",
+     "answer": "Three",
+     "shows": "contact"
+    }
+   ]
+  }
+ ]
+}
