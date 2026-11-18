@@ -3,15 +3,15 @@
  "subject_key": "mathematics",
  "grade": 8,
  "source": "KICD KICD-Grade8-Mathematics-Curriculum-Design.pdf, revised 2024 (text layer)",
- "status": "outcomes from KICD's text, word for word; skills and prerequisites proposed; misconceptions draft; all awaiting teacher review (18 Nov 2026); no skills yet for: MEASUR.CIRCLES, MEASUR.AREA, MEASUR.MONEY, GEOMET.GEOMETRICAL_CONSTRUCTION, GEOMET.COORDINATES_AND_GRAPHS, GEOMET.SCALE_DRAWING, GEOMET.COMMON_SOLIDS, DATA_H.DATA_PRESENTATION_AND_IN, DATA_H.PROBABILITY",
+ "status": "outcomes from KICD's text, word for word; skills and prerequisites proposed; misconceptions draft; all awaiting teacher review (18 Nov 2026); no skills yet for: MEASUR.AREA, MEASUR.MONEY, GEOMET.GEOMETRICAL_CONSTRUCTION, GEOMET.COORDINATES_AND_GRAPHS, GEOMET.SCALE_DRAWING, GEOMET.COMMON_SOLIDS, DATA_H.DATA_PRESENTATION_AND_IN, DATA_H.PROBABILITY",
  "totals": {
   "strands": 5,
   "sub_strands": 16,
   "outcomes": 121,
   "lessons": 150,
-  "skills": 48,
-  "prerequisites": 112,
-  "misconceptions": 238
+  "skills": 54,
+  "prerequisites": 125,
+  "misconceptions": 266
  },
  "sub_strands": [
   {
@@ -6100,7 +6100,7 @@
    "values": "",
    "pcis": "",
    "links": "",
-   "design_notes": "",
+   "design_notes": "Official outcomes a to c are tested; d (use IT) and e (promote use) are not questions. π is taken as 22/7 (or 3.14 when the question says so), as in the families. Grade 7 already found the circumference; Grade 8 adds the arc as a fraction θ/360 of it and the perimeter of a sector (the arc and two radii). The families tag these with the HOREB skill G9_ARC_LENGTH, which is kept so the practice engine still finds them. Working back from a perimeter to the radius (one family) goes a little beyond the outcome: teacher to confirm.",
    "source": {
     "grade_page": "https://kicd.ac.ke/cbc-materials/curriculum-designs/grade-eight-designs/",
     "design": "KICD-Grade8-Mathematics-Curriculum-Design.pdf",
@@ -6142,8 +6142,662 @@
      "status": "kicd_verified"
     }
    ],
-   "skills": [],
-   "misconceptions": []
+   "skills": [
+    {
+     "code": "MATH.G8.MEASUR.CIRCLES.CIRCUMFERENCE_RADIUS_DIAMETER",
+     "name": "Work out the circumference of a circle from its radius or diameter",
+     "outcomes": [
+      "MATH.G8.MEASUR.CIRCLES.a"
+     ],
+     "mastery": "The child uses C = πd or C = 2πr, doubling a radius first, multiplying (never adding or dividing) by π, and gives the answer in the units of the length: a radius of 14 cm gives 2 × 22/7 × 14 = 88 cm.",
+     "question_forms": [
+      "circumference from the radius",
+      "why is this wrong",
+      "round a running track",
+      "with π = 22/7"
+     ],
+     "thinking": [
+      "procedure"
+     ],
+     "horeb_skill_ids": [
+      "G9_ARC_LENGTH",
+      "G7_CIRCUMFERENCE"
+     ],
+     "prerequisites": [
+      {
+       "requires": "MATH.G7.MEASUR.LENGTH.CIRCUMFERENCE_DISTANCE",
+       "kind": "skill",
+       "strength": "essential",
+       "reason": "Grade 7 circumference.",
+       "status": "proposed"
+      },
+      {
+       "requires": "MATH.G7.MEASUR.LENGTH.CIRCUMFERENCE_REASON",
+       "kind": "skill",
+       "strength": "helpful",
+       "reason": "How the circumference depends on the diameter.",
+       "status": "proposed"
+      }
+     ],
+     "status": "proposed"
+    },
+    {
+     "code": "MATH.G8.MEASUR.CIRCLES.CIRCUMFERENCE_DISTANCE",
+     "name": "Use the circumference for distances travelled and laps",
+     "outcomes": [
+      "MATH.G8.MEASUR.CIRCLES.a"
+     ],
+     "mastery": "The child finds the distance for one turn or lap (the circumference), multiplies by the number of turns, divides a total distance by one lap to count laps, and changes cm to m when asked.",
+     "question_forms": [
+      "how far does the wheel travel",
+      "how many laps",
+      "distance in metres",
+      "how many turns"
+     ],
+     "thinking": [
+      "modelling"
+     ],
+     "horeb_skill_ids": [
+      "G9_ARC_LENGTH",
+      "G7_CIRCUMFERENCE"
+     ],
+     "prerequisites": [
+      {
+       "requires": "MATH.G8.MEASUR.CIRCLES.CIRCUMFERENCE_RADIUS_DIAMETER",
+       "kind": "skill",
+       "strength": "essential",
+       "reason": "The circumference is one turn.",
+       "status": "proposed"
+      },
+      {
+       "requires": "MATH.G7.MEASUR.LENGTH.CONVERT_LENGTH_UNITS",
+       "kind": "skill",
+       "strength": "essential",
+       "reason": "Changing cm to m.",
+       "status": "proposed"
+      }
+     ],
+     "status": "proposed"
+    },
+    {
+     "code": "MATH.G8.MEASUR.CIRCLES.ARC_LENGTH",
+     "name": "Work out the length of an arc of a circle",
+     "outcomes": [
+      "MATH.G8.MEASUR.CIRCLES.b"
+     ],
+     "mastery": "The child writes the angle at the centre as a fraction of 360, finds the full circumference, and takes that fraction of it: an arc of 60° on a circle of radius 21 cm is 60/360 × 132 = 22 cm.",
+     "question_forms": [
+      "length of the arc",
+      "complete the table",
+      "which step has the mistake",
+      "the curved edge"
+     ],
+     "thinking": [
+      "procedure"
+     ],
+     "horeb_skill_ids": [
+      "G9_ARC_LENGTH"
+     ],
+     "prerequisites": [
+      {
+       "requires": "MATH.G8.MEASUR.CIRCLES.CIRCUMFERENCE_RADIUS_DIAMETER",
+       "kind": "skill",
+       "strength": "essential",
+       "reason": "The arc is part of the circumference.",
+       "status": "proposed"
+      },
+      {
+       "requires": "MATH.G7.GEOMET.ANGLES.ANGLES_AT_POINT",
+       "kind": "skill",
+       "strength": "essential",
+       "reason": "A full turn is 360 degrees.",
+       "status": "proposed"
+      },
+      {
+       "requires": "MATH.G7.NUMBER.FRACTIONS.MULT_FRACTION_BY_WHOLE",
+       "kind": "skill",
+       "strength": "helpful",
+       "reason": "A fraction of a quantity.",
+       "status": "proposed"
+      }
+     ],
+     "status": "proposed"
+    },
+    {
+     "code": "MATH.G8.MEASUR.CIRCLES.ARC_IN_CONTEXT",
+     "name": "Find the angle from a situation and then the arc",
+     "outcomes": [
+      "MATH.G8.MEASUR.CIRCLES.b"
+     ],
+     "mastery": "The child works out the angle turned from the story (a minute hand turns 6° a minute, so 20 minutes is 120°), then finds that fraction of the circumference.",
+     "question_forms": [
+      "how far does the tip of the hand move",
+      "a swing seat",
+      "a curved road",
+      "a windscreen wiper"
+     ],
+     "thinking": [
+      "modelling"
+     ],
+     "horeb_skill_ids": [
+      "G9_ARC_LENGTH"
+     ],
+     "prerequisites": [
+      {
+       "requires": "MATH.G8.MEASUR.CIRCLES.ARC_LENGTH",
+       "kind": "skill",
+       "strength": "essential",
+       "reason": "The arc from an angle.",
+       "status": "proposed"
+      },
+      {
+       "requires": "MATH.G6.MEASUR.TIME.AM_PM_IDENTIFY",
+       "kind": "skill",
+       "strength": "helpful",
+       "reason": "Reading clock time.",
+       "status": "proposed"
+      }
+     ],
+     "status": "proposed"
+    },
+    {
+     "code": "MATH.G8.MEASUR.CIRCLES.SECTOR_PERIMETER",
+     "name": "Calculate the perimeter of a sector",
+     "outcomes": [
+      "MATH.G8.MEASUR.CIRCLES.c"
+     ],
+     "mastery": "The child adds the arc and the two straight edges, each a radius: a sector of radius 7 m and angle 90° has a perimeter of 11 + 7 + 7 = 25 m; for a half circle the straight edge is the diameter.",
+     "question_forms": [
+      "perimeter of the sector",
+      "fence round a garden bed",
+      "perimeter of a half circle",
+      "a slice of cake"
+     ],
+     "thinking": [
+      "procedure"
+     ],
+     "horeb_skill_ids": [
+      "G9_ARC_LENGTH"
+     ],
+     "prerequisites": [
+      {
+       "requires": "MATH.G8.MEASUR.CIRCLES.ARC_LENGTH",
+       "kind": "skill",
+       "strength": "essential",
+       "reason": "The curved edge.",
+       "status": "proposed"
+      },
+      {
+       "requires": "MATH.G7.MEASUR.LENGTH.PERIMETER_PLANE_FIGURES",
+       "kind": "skill",
+       "strength": "essential",
+       "reason": "Perimeter is the distance round.",
+       "status": "proposed"
+      }
+     ],
+     "status": "proposed"
+    },
+    {
+     "code": "MATH.G8.MEASUR.CIRCLES.SECTOR_WORK_BACK",
+     "name": "Find the radius from the perimeter of a half circle or sector",
+     "outcomes": [
+      "MATH.G8.MEASUR.CIRCLES.c"
+     ],
+     "mastery": "The child writes the perimeter in terms of r (a half circle has πr + 2r), collects the r terms and divides: a perimeter of 72 m gives (22/7 + 2)r = 72, so r = 14 m.",
+     "question_forms": [
+      "find the radius",
+      "perimeter is given",
+      "how wide is the plot",
+      "work back"
+     ],
+     "thinking": [
+      "procedure",
+      "reasoning"
+     ],
+     "horeb_skill_ids": [
+      "G9_ARC_LENGTH"
+     ],
+     "prerequisites": [
+      {
+       "requires": "MATH.G8.MEASUR.CIRCLES.SECTOR_PERIMETER",
+       "kind": "skill",
+       "strength": "essential",
+       "reason": "The perimeter of a sector.",
+       "status": "proposed"
+      },
+      {
+       "requires": "MATH.G7.ALGEBR.LINEAR_EQUATIONS.SOLVE_TWO_STEP",
+       "kind": "skill",
+       "strength": "essential",
+       "reason": "Solving for r.",
+       "status": "proposed"
+      }
+     ],
+     "status": "proposed"
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "MATH.G8.MEASUR.CIRCLES.CIRCUMFERENCE_RADIUS_DIAMETER.M_RADIUS_FOR_DIAMETER",
+     "skill": "MATH.G8.MEASUR.CIRCLES.CIRCUMFERENCE_RADIUS_DIAMETER",
+     "error": "Uses the radius in C = πd.",
+     "example": {
+      "question": "Circumference of a circle of radius 14 cm",
+      "wrong_answer": "44 cm",
+      "correct_answer": "88 cm"
+     },
+     "cause": "Forgets that d is twice r.",
+     "reveals": "The answer 44 cm as a wrong option, with a reason that names the idea.",
+     "help": "Double the radius, or use 2πr.",
+     "source": "to be confirmed by a teacher (no source yet)",
+     "status": "draft"
+    },
+    {
+     "code": "MATH.G8.MEASUR.CIRCLES.CIRCUMFERENCE_RADIUS_DIAMETER.M_AREA_FOR_CIRCUMFERENCE",
+     "skill": "MATH.G8.MEASUR.CIRCLES.CIRCUMFERENCE_RADIUS_DIAMETER",
+     "error": "Squares the radius, finding the area instead.",
+     "example": {
+      "question": "Circumference of a circle of radius 7 cm",
+      "wrong_answer": "154 cm",
+      "correct_answer": "44 cm"
+     },
+     "cause": "Mixes up the two circle formulas.",
+     "reveals": "The answer 154 cm as a wrong option, with a reason that names the idea.",
+     "help": "Distance round: 2πr. Space inside: πr².",
+     "source": "to be confirmed by a teacher (no source yet)",
+     "status": "draft"
+    },
+    {
+     "code": "MATH.G8.MEASUR.CIRCLES.CIRCUMFERENCE_RADIUS_DIAMETER.M_PI_ADDED",
+     "skill": "MATH.G8.MEASUR.CIRCLES.CIRCUMFERENCE_RADIUS_DIAMETER",
+     "error": "Adds π to the radius or diameter.",
+     "example": {
+      "question": "Circumference with a diameter of 14 cm",
+      "wrong_answer": "17.14 cm",
+      "correct_answer": "44 cm"
+     },
+     "cause": "Does not know π is a multiplier.",
+     "reveals": "The answer 17.14 cm as a wrong option, with a reason that names the idea.",
+     "help": "C = π × d.",
+     "source": "to be confirmed by a teacher (no source yet)",
+     "status": "draft"
+    },
+    {
+     "code": "MATH.G8.MEASUR.CIRCLES.CIRCUMFERENCE_RADIUS_DIAMETER.M_DIVIDED_BY_PI",
+     "skill": "MATH.G8.MEASUR.CIRCLES.CIRCUMFERENCE_RADIUS_DIAMETER",
+     "error": "Divides the diameter by π.",
+     "example": {
+      "question": "Circumference with a diameter of 14 cm",
+      "wrong_answer": "4.45 cm",
+      "correct_answer": "44 cm"
+     },
+     "cause": "Goes the wrong way between across and round.",
+     "reveals": "The answer 4.45 cm as a wrong option, with a reason that names the idea.",
+     "help": "The distance round is longer than across: multiply.",
+     "source": "to be confirmed by a teacher (no source yet)",
+     "status": "draft"
+    },
+    {
+     "code": "MATH.G8.MEASUR.CIRCLES.CIRCUMFERENCE_RADIUS_DIAMETER.M_TWO_LEFT_OUT",
+     "skill": "MATH.G8.MEASUR.CIRCLES.CIRCUMFERENCE_RADIUS_DIAMETER",
+     "error": "Uses π × r without the 2.",
+     "example": {
+      "question": "Circumference of a track of radius 35 m",
+      "wrong_answer": "110 m",
+      "correct_answer": "220 m"
+     },
+     "cause": "Half remembers C = 2πr.",
+     "reveals": "The answer 110 m as a wrong option, with a reason that names the idea.",
+     "help": "C = 2 × π × r.",
+     "source": "to be confirmed by a teacher (no source yet)",
+     "status": "draft"
+    },
+    {
+     "code": "MATH.G8.MEASUR.CIRCLES.CIRCUMFERENCE_DISTANCE.M_UNITS_NOT_CONVERTED_CM_M",
+     "skill": "MATH.G8.MEASUR.CIRCLES.CIRCUMFERENCE_DISTANCE",
+     "error": "Leaves the distance in cm when metres are asked.",
+     "example": {
+      "question": "A wheel of diameter 70 cm turns 100 times. Distance in metres?",
+      "wrong_answer": "22,000",
+      "correct_answer": "220"
+     },
+     "cause": "Forgets to change the unit.",
+     "reveals": "The answer 22,000 as a wrong option, with a reason that names the idea.",
+     "help": "100 cm = 1 m: divide by 100.",
+     "source": "to be confirmed by a teacher (no source yet)",
+     "status": "draft"
+    },
+    {
+     "code": "MATH.G8.MEASUR.CIRCLES.CIRCUMFERENCE_DISTANCE.M_ONE_TURN_ONLY",
+     "skill": "MATH.G8.MEASUR.CIRCLES.CIRCUMFERENCE_DISTANCE",
+     "error": "Gives the distance for one turn only.",
+     "example": {
+      "question": "A wheel of diameter 70 cm turns 100 times. Distance in metres?",
+      "wrong_answer": "2.2",
+      "correct_answer": "220"
+     },
+     "cause": "Stops at the circumference.",
+     "reveals": "The answer 2.2 as a wrong option, with a reason that names the idea.",
+     "help": "Multiply by the number of turns.",
+     "source": "to be confirmed by a teacher (no source yet)",
+     "status": "draft"
+    },
+    {
+     "code": "MATH.G8.MEASUR.CIRCLES.CIRCUMFERENCE_DISTANCE.M_LAPS_ADDED",
+     "skill": "MATH.G8.MEASUR.CIRCLES.CIRCUMFERENCE_DISTANCE",
+     "error": "Adds the number of laps to one lap instead of multiplying.",
+     "example": {
+      "question": "A lap is 220 m. Distance for 5 laps?",
+      "wrong_answer": "225 m",
+      "correct_answer": "1,100 m"
+     },
+     "cause": "Combines the numbers by adding.",
+     "reveals": "The answer 225 m as a wrong option, with a reason that names the idea.",
+     "help": "Laps repeat: multiply.",
+     "source": "to be confirmed by a teacher (no source yet)",
+     "status": "draft"
+    },
+    {
+     "code": "MATH.G8.MEASUR.CIRCLES.CIRCUMFERENCE_DISTANCE.M_LAPS_MULTIPLIED_NOT_DIVIDED",
+     "skill": "MATH.G8.MEASUR.CIRCLES.CIRCUMFERENCE_DISTANCE",
+     "error": "Multiplies the total distance by one lap to count laps.",
+     "example": {
+      "question": "A lap is 220 m. How many laps make 1,100 m?",
+      "wrong_answer": "242,000",
+      "correct_answer": "5"
+     },
+     "cause": "Uses the operation from the step before.",
+     "reveals": "The answer 242,000 as a wrong option, with a reason that names the idea.",
+     "help": "How many laps fit: divide.",
+     "source": "to be confirmed by a teacher (no source yet)",
+     "status": "draft"
+    },
+    {
+     "code": "MATH.G8.MEASUR.CIRCLES.CIRCUMFERENCE_DISTANCE.M_RADIUS_AS_DIAMETER_WHEEL",
+     "skill": "MATH.G8.MEASUR.CIRCLES.CIRCUMFERENCE_DISTANCE",
+     "error": "Uses the diameter of a wheel as its radius.",
+     "example": {
+      "question": "A wheel of diameter 70 cm: distance in one turn?",
+      "wrong_answer": "440 cm",
+      "correct_answer": "220 cm"
+     },
+     "cause": "Doubles a diameter as if it were a radius.",
+     "reveals": "The answer 440 cm as a wrong option, with a reason that names the idea.",
+     "help": "The diameter is already across the whole wheel.",
+     "source": "to be confirmed by a teacher (no source yet)",
+     "status": "draft"
+    },
+    {
+     "code": "MATH.G8.MEASUR.CIRCLES.ARC_LENGTH.M_WHOLE_CIRCLE_FOR_ARC",
+     "skill": "MATH.G8.MEASUR.CIRCLES.ARC_LENGTH",
+     "error": "Gives the whole circumference as the arc.",
+     "example": {
+      "question": "An arc of 60° on a circle of radius 21 cm",
+      "wrong_answer": "132 cm",
+      "correct_answer": "22 cm"
+     },
+     "cause": "Stops after the circumference.",
+     "reveals": "The answer 132 cm as a wrong option, with a reason that names the idea.",
+     "help": "The arc is 60/360 of it.",
+     "source": "to be confirmed by a teacher (no source yet)",
+     "status": "draft"
+    },
+    {
+     "code": "MATH.G8.MEASUR.CIRCLES.ARC_LENGTH.M_ARC_PI_R_ONLY",
+     "skill": "MATH.G8.MEASUR.CIRCLES.ARC_LENGTH",
+     "error": "Uses π × r for the full circle when finding an arc.",
+     "example": {
+      "question": "An arc of 60° on a circle of radius 21 cm",
+      "wrong_answer": "11 cm",
+      "correct_answer": "22 cm"
+     },
+     "cause": "Leaves out the 2 in 2πr.",
+     "reveals": "The answer 11 cm as a wrong option, with a reason that names the idea.",
+     "help": "The full circle is 2πr = 132 cm.",
+     "source": "to be confirmed by a teacher (no source yet)",
+     "status": "draft"
+    },
+    {
+     "code": "MATH.G8.MEASUR.CIRCLES.ARC_LENGTH.M_SECTOR_AREA_FOR_ARC",
+     "skill": "MATH.G8.MEASUR.CIRCLES.ARC_LENGTH",
+     "error": "Multiplies by the radius twice, finding the area of the slice.",
+     "example": {
+      "question": "An arc of 90° on a circle of radius 14 cm",
+      "wrong_answer": "154",
+      "correct_answer": "22 cm"
+     },
+     "cause": "Mixes the arc with the area of the sector.",
+     "reveals": "The answer 154 as a wrong option, with a reason that names the idea.",
+     "help": "An arc is a length: θ/360 × 2πr.",
+     "source": "to be confirmed by a teacher (no source yet)",
+     "status": "draft"
+    },
+    {
+     "code": "MATH.G8.MEASUR.CIRCLES.ARC_LENGTH.M_ARC_FRACTION_INVERTED",
+     "skill": "MATH.G8.MEASUR.CIRCLES.ARC_LENGTH",
+     "error": "Uses 360/θ instead of θ/360.",
+     "example": {
+      "question": "An arc of 60° on a circle of radius 21 cm",
+      "wrong_answer": "792 cm",
+      "correct_answer": "22 cm"
+     },
+     "cause": "Turns the fraction over.",
+     "reveals": "The answer 792 cm as a wrong option, with a reason that names the idea.",
+     "help": "The arc is less than the whole circle: the fraction is less than 1.",
+     "source": "to be confirmed by a teacher (no source yet)",
+     "status": "draft"
+    },
+    {
+     "code": "MATH.G8.MEASUR.CIRCLES.ARC_LENGTH.M_ANGLE_FOR_LENGTH",
+     "skill": "MATH.G8.MEASUR.CIRCLES.ARC_LENGTH",
+     "error": "Gives the angle as the length of the arc.",
+     "example": {
+      "question": "The arc for 60° on a circle of radius 21 cm",
+      "wrong_answer": "60",
+      "correct_answer": "22 cm"
+     },
+     "cause": "Reads the number in the table.",
+     "reveals": "The answer 60 as a wrong option, with a reason that names the idea.",
+     "help": "Degrees are not centimetres: work out the arc.",
+     "source": "to be confirmed by a teacher (no source yet)",
+     "status": "draft"
+    },
+    {
+     "code": "MATH.G8.MEASUR.CIRCLES.ARC_LENGTH.M_TABLE_VALUE_COPIED",
+     "skill": "MATH.G8.MEASUR.CIRCLES.ARC_LENGTH",
+     "error": "Copies a value from another row of the table.",
+     "example": {
+      "question": "Rims of radius 21 cm: 90° gives 33 cm; what does 60° give?",
+      "wrong_answer": "33 cm",
+      "correct_answer": "22 cm"
+     },
+     "cause": "Does not compare the angles.",
+     "reveals": "The answer 33 cm as a wrong option, with a reason that names the idea.",
+     "help": "A smaller angle gives a shorter arc.",
+     "source": "to be confirmed by a teacher (no source yet)",
+     "status": "draft"
+    },
+    {
+     "code": "MATH.G8.MEASUR.CIRCLES.ARC_IN_CONTEXT.M_WHOLE_TURN_FOR_TIME",
+     "skill": "MATH.G8.MEASUR.CIRCLES.ARC_IN_CONTEXT",
+     "error": "Gives the distance for a full hour when part of an hour is asked.",
+     "example": {
+      "question": "A minute hand of 21 cm. Distance its tip moves in 20 minutes?",
+      "wrong_answer": "132 cm",
+      "correct_answer": "44 cm"
+     },
+     "cause": "Uses a full turn.",
+     "reveals": "The answer 132 cm as a wrong option, with a reason that names the idea.",
+     "help": "20 minutes is 20/60 of a turn.",
+     "source": "to be confirmed by a teacher (no source yet)",
+     "status": "draft"
+    },
+    {
+     "code": "MATH.G8.MEASUR.CIRCLES.ARC_IN_CONTEXT.M_MINUTES_AS_DEGREES",
+     "skill": "MATH.G8.MEASUR.CIRCLES.ARC_IN_CONTEXT",
+     "error": "Uses the number of minutes as the angle in degrees.",
+     "example": {
+      "question": "A minute hand of 21 cm. Distance in 20 minutes?",
+      "wrong_answer": "7.33 cm",
+      "correct_answer": "44 cm"
+     },
+     "cause": "Thinks 20 minutes is 20 degrees.",
+     "reveals": "The answer 7.33 cm as a wrong option, with a reason that names the idea.",
+     "help": "The hand turns 6 degrees a minute: 120 degrees.",
+     "source": "to be confirmed by a teacher (no source yet)",
+     "status": "draft"
+    },
+    {
+     "code": "MATH.G8.MEASUR.CIRCLES.ARC_IN_CONTEXT.M_TWELVE_MINUTE_TURN",
+     "skill": "MATH.G8.MEASUR.CIRCLES.ARC_IN_CONTEXT",
+     "error": "Believes the minute hand makes a full turn in 12 minutes.",
+     "example": {
+      "question": "A minute hand of 21 cm. Distance in 20 minutes?",
+      "wrong_answer": "220 cm",
+      "correct_answer": "44 cm"
+     },
+     "cause": "Uses the 12 numbers on the clock face.",
+     "reveals": "The answer 220 cm as a wrong option, with a reason that names the idea.",
+     "help": "The minute hand goes round once in 60 minutes.",
+     "source": "to be confirmed by a teacher (no source yet)",
+     "status": "draft"
+    },
+    {
+     "code": "MATH.G8.MEASUR.CIRCLES.ARC_IN_CONTEXT.M_HOUR_HAND_RATE",
+     "skill": "MATH.G8.MEASUR.CIRCLES.ARC_IN_CONTEXT",
+     "error": "Uses the hour hand's rate (30 degrees an hour) for the minute hand.",
+     "example": {
+      "question": "A minute hand turns how many degrees in 1 minute?",
+      "wrong_answer": "30",
+      "correct_answer": "6"
+     },
+     "cause": "Mixes the two hands.",
+     "reveals": "The answer 30 as a wrong option, with a reason that names the idea.",
+     "help": "360 degrees in 60 minutes: 6 degrees a minute.",
+     "source": "to be confirmed by a teacher (no source yet)",
+     "status": "draft"
+    },
+    {
+     "code": "MATH.G8.MEASUR.CIRCLES.SECTOR_PERIMETER.M_STRAIGHT_EDGES_LEFT_OUT",
+     "skill": "MATH.G8.MEASUR.CIRCLES.SECTOR_PERIMETER",
+     "error": "Gives the arc only as the perimeter.",
+     "example": {
+      "question": "A sector of radius 7 m and angle 90°: perimeter?",
+      "wrong_answer": "11 m",
+      "correct_answer": "25 m"
+     },
+     "cause": "Forgets the two straight edges.",
+     "reveals": "The answer 11 m as a wrong option, with a reason that names the idea.",
+     "help": "Perimeter goes all the way round: arc + r + r.",
+     "source": "to be confirmed by a teacher (no source yet)",
+     "status": "draft"
+    },
+    {
+     "code": "MATH.G8.MEASUR.CIRCLES.SECTOR_PERIMETER.M_ONE_RADIUS_ONLY",
+     "skill": "MATH.G8.MEASUR.CIRCLES.SECTOR_PERIMETER",
+     "error": "Adds only one radius to the arc.",
+     "example": {
+      "question": "A sector of radius 7 m and angle 90°: perimeter?",
+      "wrong_answer": "18 m",
+      "correct_answer": "25 m"
+     },
+     "cause": "Sees one straight edge.",
+     "reveals": "The answer 18 m as a wrong option, with a reason that names the idea.",
+     "help": "A sector has two straight edges, each a radius.",
+     "source": "to be confirmed by a teacher (no source yet)",
+     "status": "draft"
+    },
+    {
+     "code": "MATH.G8.MEASUR.CIRCLES.SECTOR_PERIMETER.M_WHOLE_CIRCLE_IN_PERIMETER",
+     "skill": "MATH.G8.MEASUR.CIRCLES.SECTOR_PERIMETER",
+     "error": "Uses the whole circumference for the curved edge.",
+     "example": {
+      "question": "A sector of radius 7 m and angle 90°: perimeter?",
+      "wrong_answer": "58 m",
+      "correct_answer": "25 m"
+     },
+     "cause": "Forgets the arc is a fraction.",
+     "reveals": "The answer 58 m as a wrong option, with a reason that names the idea.",
+     "help": "Curved edge = 90/360 of 44 m.",
+     "source": "to be confirmed by a teacher (no source yet)",
+     "status": "draft"
+    },
+    {
+     "code": "MATH.G8.MEASUR.CIRCLES.SECTOR_PERIMETER.M_SEMICIRCLE_NO_DIAMETER",
+     "skill": "MATH.G8.MEASUR.CIRCLES.SECTOR_PERIMETER",
+     "error": "Leaves out the straight edge of a half circle.",
+     "example": {
+      "question": "A half circle of radius 14 m: perimeter?",
+      "wrong_answer": "44 m",
+      "correct_answer": "72 m"
+     },
+     "cause": "Counts only the curved edge.",
+     "reveals": "The answer 44 m as a wrong option, with a reason that names the idea.",
+     "help": "Add the diameter, 28 m.",
+     "source": "to be confirmed by a teacher (no source yet)",
+     "status": "draft"
+    },
+    {
+     "code": "MATH.G8.MEASUR.CIRCLES.SECTOR_WORK_BACK.M_DIAMETER_LEFT_OUT",
+     "skill": "MATH.G8.MEASUR.CIRCLES.SECTOR_WORK_BACK",
+     "error": "Uses only the curved edge when working back from the perimeter.",
+     "example": {
+      "question": "A half circle has perimeter 72 m. Radius?",
+      "wrong_answer": "22.9 m",
+      "correct_answer": "14 m"
+     },
+     "cause": "Treats the perimeter as πr.",
+     "reveals": "The answer 22.9 m as a wrong option, with a reason that names the idea.",
+     "help": "Perimeter = πr + 2r.",
+     "source": "to be confirmed by a teacher (no source yet)",
+     "status": "draft"
+    },
+    {
+     "code": "MATH.G8.MEASUR.CIRCLES.SECTOR_WORK_BACK.M_DIAMETER_AS_RADIUS",
+     "skill": "MATH.G8.MEASUR.CIRCLES.SECTOR_WORK_BACK",
+     "error": "Counts the straight edge as one radius.",
+     "example": {
+      "question": "A half circle has perimeter 72 m. Radius?",
+      "wrong_answer": "17.4 m",
+      "correct_answer": "14 m"
+     },
+     "cause": "Forgets the straight edge is a diameter.",
+     "reveals": "The answer 17.4 m as a wrong option, with a reason that names the idea.",
+     "help": "The straight edge is 2r.",
+     "source": "to be confirmed by a teacher (no source yet)",
+     "status": "draft"
+    },
+    {
+     "code": "MATH.G8.MEASUR.CIRCLES.SECTOR_WORK_BACK.M_FULL_CIRCLE_FOR_HALF",
+     "skill": "MATH.G8.MEASUR.CIRCLES.SECTOR_WORK_BACK",
+     "error": "Uses 2πr for the curved edge of a half circle.",
+     "example": {
+      "question": "A half circle has perimeter 72 m. Radius?",
+      "wrong_answer": "8.7 m",
+      "correct_answer": "14 m"
+     },
+     "cause": "Forgets to halve the circumference.",
+     "reveals": "The answer 8.7 m as a wrong option, with a reason that names the idea.",
+     "help": "Half of 2πr is πr.",
+     "source": "to be confirmed by a teacher (no source yet)",
+     "status": "draft"
+    },
+    {
+     "code": "MATH.G8.MEASUR.CIRCLES.SECTOR_WORK_BACK.M_R_TERMS_NOT_COLLECTED",
+     "skill": "MATH.G8.MEASUR.CIRCLES.SECTOR_WORK_BACK",
+     "error": "Divides by π only and forgets the 2r.",
+     "example": {
+      "question": "(22/7)r + 2r = 72",
+      "wrong_answer": "r = 22.9 then take away 2",
+      "correct_answer": "r = 14"
+     },
+     "cause": "Solves as if there were one r term.",
+     "reveals": "The answer r = 22.9 then take away 2 as a wrong option, with a reason that names the idea.",
+     "help": "Add the r terms: (22/7 + 2)r = (36/7)r.",
+     "source": "to be confirmed by a teacher (no source yet)",
+     "status": "draft"
+    }
+   ]
   },
   {
    "code": "MATH.G8.MEASUR.AREA",

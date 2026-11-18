@@ -16,7 +16,7 @@ const nice = (v) => Number.isInteger(v * 2);   // whole or .5
 
 export const FAMILIES = [
   // ================================================================ CIRCLES
-  fam({ id: 'g8.circ.wheel-distance', skill: 'G9_ARC_LENGTH', outcome: 'G8.CIRCLES.a', rung: 2, form: 'word',
+  fam({ id: 'g8.circ.wheel-distance', skill: 'G9_ARC_LENGTH', outcome: 'MATH.G8.MEASUR.CIRCLES.a', cskill: 'MATH.G8.MEASUR.CIRCLES.CIRCUMFERENCE_DISTANCE', rung: 2, form: 'word',
     draw: () => {
       const d = pick([56, 63, 70, 84, 98]), n = randInt(5, 40), c = (22 * d) / 7, tot = c * n;
       if (tot % 50 !== 0) return null;
@@ -26,40 +26,40 @@ export const FAMILIES = [
     make: ({ d, n, c, tot, a }) => ({
       question: `The wheel of a boda boda has a diameter of ${d} cm. It makes ${n} full turns along a road. How far does it travel, in metres? (Use π = 22/7)`,
       answer: a,
-      wrong: [[tot, 'The distance is in cm here. Change it to metres: there are 100 cm in 1 m.'], [tot / 200, 'You used half the diameter. Circumference is π times the whole diameter.'], [c / 100, 'That is the distance for one turn only. The wheel turns many times.']],
+      wrong: [[tot, 'The distance is in cm here. Change it to metres: there are 100 cm in 1 m.', 'M_UNITS_NOT_CONVERTED_CM_M'], [tot / 200, 'You used half the diameter. Circumference is π times the whole diameter.', 'M_RADIUS_FOR_DIAMETER'], [c / 100, 'That is the distance for one turn only. The wheel turns many times.', 'M_ONE_TURN_ONLY']],
       hints: ['One full turn takes the wheel once round its rim. That distance is the circumference.', 'Circumference = π × diameter. Then count all the turns, and change cm to m.'],
       steps: [`One turn: 22/7 × ${d} = ${c} cm.`, `${n} turns: ${n} × ${c} = ${tot} cm.`, `${tot} ÷ 100 = ${a} m.`],
     }),
     check: ({ d, n }, a) => near((a * 100) / n / d, 22 / 7) }),
 
-  fam({ id: 'g8.circ.radius-slip', skill: 'G9_ARC_LENGTH', outcome: 'G8.CIRCLES.a', rung: 2, form: 'why',
+  fam({ id: 'g8.circ.radius-slip', skill: 'G9_ARC_LENGTH', outcome: 'MATH.G8.MEASUR.CIRCLES.a', cskill: 'MATH.G8.MEASUR.CIRCLES.CIRCUMFERENCE_RADIUS_DIAMETER', rung: 2, form: 'why',
     draw: () => ({ r: pick([7, 14, 21, 28]), p: person() }),
     make: ({ r, p }) => ({
       question: `${p.name} wants the circumference of a circle with a radius of ${r} cm. ${p.She} writes C = π × ${r}. Why is this wrong?`,
       options: [
         { text: `Circumference uses the diameter, ${2 * r} cm, not ${r} cm`, right: true },
-        { text: `${p.She} should have squared the radius: π × ${r} × ${r}`, right: false, why: 'Squaring the radius gives the area inside the circle. Circumference is the distance round it.' },
-        { text: `${p.She} should have added the radius: π + ${r}`, right: false, why: 'Circumference is found by multiplying, not adding. The number π is a multiplier.' },
-        { text: `${p.She} should have divided by π, to get ${r} ÷ π`, right: false, why: 'Dividing by π goes the wrong way. From a length across the circle to a length round it, you multiply by π.' },
+        { text: `${p.She} should have squared the radius: π × ${r} × ${r}`, right: false, why: 'Squaring the radius gives the area inside the circle. Circumference is the distance round it.', mis: 'M_AREA_FOR_CIRCUMFERENCE' },
+        { text: `${p.She} should have added the radius: π + ${r}`, right: false, why: 'Circumference is found by multiplying, not adding. The number π is a multiplier.', mis: 'M_PI_ADDED' },
+        { text: `${p.She} should have divided by π, to get ${r} ÷ π`, right: false, why: 'Dividing by π goes the wrong way. From a length across the circle to a length round it, you multiply by π.', mis: 'M_DIVIDED_BY_PI' },
       ],
       hints: ['Circumference = π × diameter.', 'How is the diameter related to the radius?'],
       steps: [`The radius is ${r} cm, so the diameter is 2 × ${r} = ${2 * r} cm.`, 'Circumference = π × diameter, so it is π × diameter, not π × radius.'],
     }) }),
 
-  fam({ id: 'g8.circ.track-laps', skill: 'G9_ARC_LENGTH', outcome: 'G8.CIRCLES.a', rung: 3, form: 'steps',
+  fam({ id: 'g8.circ.track-laps', skill: 'G9_ARC_LENGTH', outcome: 'MATH.G8.MEASUR.CIRCLES.a', cskill: 'MATH.G8.MEASUR.CIRCLES.CIRCUMFERENCE_DISTANCE', rung: 3, form: 'steps',
     draw: () => { const r = pick([35, 49, 63, 70]), n = randInt(3, 5), m = randInt(5, 10), c = (44 * r) / 7; return { r, n, m, c, p: person() }; },
     make: ({ r, n, m, c, p }) => ({
       question: `A school has a round running track with a radius of ${r} m. Use π = 22/7.`,
       parts: [
-        { prompt: 'How long is one lap of the track, in metres?', answer: c, unit: 'm', hint: 'One lap is once round: the circumference.', wrong: [[(22 * r) / 7, 'You left out the 2. Circumference = 2 × π × radius.'], [round((22 * r * r) / 7, 0), 'That is the area inside the track, not the distance round it.']] },
-        { prompt: `${p.name} runs ${n} laps. How far is that, in metres?`, answer: c * n, unit: 'm', hint: 'Multiply the length of one lap by the number of laps.', wrong: [[c + n, 'Laps are repeated, so multiply.']] },
-        { prompt: `${p.name} wants to run ${commas(c * m)} m. How many laps is that?`, answer: m, unit: 'laps', hint: 'How many laps of the length in the first part fit into the distance?', wrong: [[c * m * c, 'Divide the distance by the length of one lap.']] },
+        { prompt: 'How long is one lap of the track, in metres?', answer: c, unit: 'm', hint: 'One lap is once round: the circumference.', wrong: [[(22 * r) / 7, 'You left out the 2. Circumference = 2 × π × radius.', 'M_TWO_LEFT_OUT'], [round((22 * r * r) / 7, 0), 'That is the area inside the track, not the distance round it.', 'M_AREA_FOR_CIRCUMFERENCE']] },
+        { prompt: `${p.name} runs ${n} laps. How far is that, in metres?`, answer: c * n, unit: 'm', hint: 'Multiply the length of one lap by the number of laps.', wrong: [[c + n, 'Laps are repeated, so multiply.', 'M_LAPS_ADDED']] },
+        { prompt: `${p.name} wants to run ${commas(c * m)} m. How many laps is that?`, answer: m, unit: 'laps', hint: 'How many laps of the length in the first part fit into the distance?', wrong: [[c * m * c, 'Divide the distance by the length of one lap.', 'M_LAPS_MULTIPLIED_NOT_DIVIDED']] },
       ],
       steps: [`One lap: 2 × 22/7 × ${r} = ${c} m.`, `${n} laps: ${n} × ${c} = ${c * n} m.`, `${commas(c * m)} ÷ ${c} = ${m} laps.`],
     }),
     check: ({ r, n, m, c }, v) => v[0] * 7 === 44 * r && v[1] === v[0] * n && v[2] * v[0] === c * m }),
 
-  fam({ id: 'g8.arc.flowerbed', skill: 'G9_ARC_LENGTH', outcome: 'G8.CIRCLES.b', rung: 2, form: 'word',
+  fam({ id: 'g8.arc.flowerbed', skill: 'G9_ARC_LENGTH', outcome: 'MATH.G8.MEASUR.CIRCLES.b', cskill: 'MATH.G8.MEASUR.CIRCLES.ARC_LENGTH', rung: 2, form: 'word',
     draw: () => {
       const r = pick([7, 14, 21, 28, 35, 42]), th = pick([30, 45, 60, 72, 90, 120, 135, 180, 270]);
       const arc = (th / 360) * circ(r);
@@ -70,13 +70,13 @@ export const FAMILIES = [
     make: ({ r, th, arc, full, halfArc, areaFrac }) => ({
       question: `A farmer plants a hedge along the curved side of a pie-shaped shamba. The hedge is an arc: it covers ${th}° of the way round a circle of radius ${r} m. How many metres long is the hedge? (Use π = 22/7)`,
       answer: arc,
-      wrong: [[full, `That is all the way round the circle. The arc is only ${th}/360 of it.`], [halfArc, 'You used π × radius for the whole circle. The circumference has a 2: 2 × π × radius.'], [areaFrac, 'That multiplies by the radius twice. It is the area of the slice, not the length of its curved edge.']],
+      wrong: [[full, `That is all the way round the circle. The arc is only ${th}/360 of it.`, 'M_WHOLE_CIRCLE_FOR_ARC'], [halfArc, 'You used π × radius for the whole circle. The circumference has a 2: 2 × π × radius.', 'M_ARC_PI_R_ONLY'], [areaFrac, 'That multiplies by the radius twice. It is the area of the slice, not the length of its curved edge.', 'M_SECTOR_AREA_FOR_ARC']],
       hints: ['First find the circumference of the whole circle.', `The arc is the fraction ${th}/360 of the circumference.`],
       steps: [`Whole circle: 2 × 22/7 × ${r} = ${full} m.`, `Fraction of the circle: ${th}/360.`, `Arc = ${th}/360 × ${full} = ${arc} m.`],
     }),
     check: ({ r, th }, a) => near((a * 360) / th, (44 * r) / 7) }),
 
-  fam({ id: 'g8.arc.minute-hand', skill: 'G9_ARC_LENGTH', outcome: 'G8.CIRCLES.b', rung: 3, form: 'word',
+  fam({ id: 'g8.arc.minute-hand', skill: 'G9_ARC_LENGTH', outcome: 'MATH.G8.MEASUR.CIRCLES.b', cskill: 'MATH.G8.MEASUR.CIRCLES.ARC_IN_CONTEXT', rung: 3, form: 'word',
     draw: () => {
       const r = pick([14, 21, 35]), m = pick([3, 5, 6, 9, 10, 15, 20, 25, 30, 45]);
       const arc = (m / 60) * circ(r);
@@ -87,13 +87,13 @@ export const FAMILIES = [
     make: ({ r, m, arc, full, asDeg, asHour, p }) => ({
       question: `The minute hand of a wall clock is ${r} cm long. Its tip moves along an arc of a circle. How far does the tip move in ${m} minutes? Give the answer in cm. (Use π = 22/7)`,
       answer: arc,
-      wrong: [[full, 'That is the distance in a whole hour, one full turn of the hand.'], [asDeg, 'The minute hand turns 6 degrees each minute, so the angle is not the number of minutes.'], [asHour, 'The hand makes a full turn in 60 minutes, not 12.']],
+      wrong: [[full, 'That is the distance in a whole hour, one full turn of the hand.', 'M_WHOLE_TURN_FOR_TIME'], [asDeg, 'The minute hand turns 6 degrees each minute, so the angle is not the number of minutes.', 'M_MINUTES_AS_DEGREES'], [asHour, 'The hand makes a full turn in 60 minutes, not 12.', 'M_TWELVE_MINUTE_TURN']],
       hints: ['A minute hand goes once round in 60 minutes. What fraction of a turn is that?', 'The tip travels that fraction of the circumference of its circle.'],
       steps: [`In ${m} minutes the hand turns ${m}/60 of a full turn.`, `The tip's full circle is 2 × 22/7 × ${r} = ${full} cm.`, `Distance = ${m}/60 × ${full} = ${arc} cm.`],
     }),
     check: ({ r, m }, a) => near((a * 60) / m, (44 * r) / 7) }),
 
-  fam({ id: 'g8.arc.table-angles', skill: 'G9_ARC_LENGTH', outcome: 'G8.CIRCLES.b', rung: 2, form: 'table',
+  fam({ id: 'g8.arc.table-angles', skill: 'G9_ARC_LENGTH', outcome: 'MATH.G8.MEASUR.CIRCLES.b', cskill: 'MATH.G8.MEASUR.CIRCLES.ARC_LENGTH', rung: 2, form: 'table',
     draw: () => {
       const set = pick([{ r: 21, a: [30, 60, 90, 120, 180, 270] }, { r: 14, a: [45, 90, 135, 180, 225, 270] }]);
       const angs = [...set.a].sort(() => Math.random() - 0.5).slice(0, 4);
@@ -106,13 +106,13 @@ export const FAMILIES = [
       question: `A metal worker bends rims of radius ${r} cm. The table shows how much rim is needed for each angle. What is the missing length of the arc, in cm? (Use π = 22/7)`,
       model: { type: 'table', data: { head: ['Angle of the rim piece', 'Arc length (cm)'], rows: [...known.map(t => ({ label: `${t}°`, value: String(arcOf(t)) })), { label: `${miss}°`, value: '?' }] } },
       answer: arc,
-      wrong: [[miss, 'That is the angle. The question asks for a length in cm.'], [full, 'That is the whole circle, 360°. The arc is smaller.'], [Math.max(...known.map(arcOf)), 'That is the longest arc in the table. Compare the angle with the angles shown.']],
+      wrong: [[miss, 'That is the angle. The question asks for a length in cm.', 'M_ANGLE_FOR_LENGTH'], [full, 'That is the whole circle, 360°. The arc is smaller.', 'M_WHOLE_CIRCLE_FOR_ARC'], [Math.max(...known.map(arcOf)), 'That is the longest arc in the table. Compare the angle with the angles shown.', 'M_TABLE_VALUE_COPIED']],
       hints: ['Arc length grows in step with the angle. Look at how the rows are related.', 'Or find the whole circumference, then the fraction of it.'],
       steps: [`Whole circle: 2 × 22/7 × ${r} = ${full} cm.`, `Arc for ${miss}°: ${miss}/360 × ${full} = ${arc} cm.`],
     }),
     check: ({ r, miss }, a) => near((a * 360) / miss, (44 * r) / 7) }),
 
-  fam({ id: 'g8.arc.spot-fraction', skill: 'G9_ARC_LENGTH', outcome: 'G8.CIRCLES.b', rung: 2, form: 'spot',
+  fam({ id: 'g8.arc.spot-fraction', skill: 'G9_ARC_LENGTH', outcome: 'MATH.G8.MEASUR.CIRCLES.b', cskill: 'MATH.G8.MEASUR.CIRCLES.ARC_LENGTH', rung: 2, form: 'spot',
     draw: () => {
       const r = pick([14, 21, 28, 35]), th = pick([30, 45, 60, 72, 90, 120, 180]), arc = (th / 360) * circ(r);
       return Number.isInteger(arc) && arc > 4 ? { r, th, k: 360 / th, c: circ(r), arc, m: pick([0, 1]), p: person() } : null;
@@ -127,12 +127,13 @@ export const FAMILIES = [
           { text: m === 1 ? `Fraction of the circle: 360 ÷ ${th} = ${k}` : `Fraction of the circle: ${th} ÷ 360 = 1/${k}`, ok: f === 1 / k },
           { text: m === 1 ? `Arc = ${c1} × ${k} = ${a3} cm` : `Arc = ${c1} ÷ ${k} = ${a3} cm`, ok: near(a3, m === 1 ? c1 * f : c1 * f) },
         ],
+        mis: m === 0 ? 'M_ARC_PI_R_ONLY' : 'M_ARC_FRACTION_INVERTED',
         fix: m === 0 ? 'The circumference is 2 × π × radius. Step 1 left out the 2, so everything after it is half the right size.' : `The arc is ${th}/360 of the circle, a fraction smaller than 1. Step 2 turned it upside down, so the arc came out longer than the whole circle.`,
         steps: [`Circumference = 2 × 22/7 × ${r} = ${c} cm.`, `Fraction = ${th}/360 = 1/${k}.`, `Arc = ${c} ÷ ${k} = ${arc} cm.`],
       };
     } }),
 
-  fam({ id: 'g8.sector.fence', skill: 'G9_ARC_LENGTH', outcome: 'G8.CIRCLES.c', rung: 2, form: 'word',
+  fam({ id: 'g8.sector.fence', skill: 'G9_ARC_LENGTH', outcome: 'MATH.G8.MEASUR.CIRCLES.c', cskill: 'MATH.G8.MEASUR.CIRCLES.SECTOR_PERIMETER', rung: 2, form: 'word',
     draw: () => {
       const r = pick([7, 14, 21, 28, 35]), th = pick([45, 60, 90, 120, 180, 270]);
       const arc = (th / 360) * circ(r);
@@ -143,13 +144,13 @@ export const FAMILIES = [
     make: ({ r, th, arc, per, p }) => ({
       question: `${p.name}'s garden bed is a sector of a circle. The radius is ${r} m and the angle at the centre is ${th}°. A fence goes all the way round the edge of the bed. Find the perimeter of the bed, in metres. (Use π = 22/7)`,
       answer: per,
-      wrong: [[arc, 'That is the curved edge only. The perimeter also has two straight edges.'], [arc + r, 'A sector has two straight edges, and each is a radius. Add both.'], [circ(r) + 2 * r, 'You used the whole circle for the curved edge. It is only a part of it.']],
+      wrong: [[arc, 'That is the curved edge only. The perimeter also has two straight edges.', 'M_STRAIGHT_EDGES_LEFT_OUT'], [arc + r, 'A sector has two straight edges, and each is a radius. Add both.', 'M_ONE_RADIUS_ONLY'], [circ(r) + 2 * r, 'You used the whole circle for the curved edge. It is only a part of it.', 'M_WHOLE_CIRCLE_IN_PERIMETER']],
       hints: ['Draw the sector. How many edges does it have, and which are straight?', 'The curved edge is an arc: a fraction of the circumference.'],
       steps: [`Arc: ${th}/360 × 2 × 22/7 × ${r} = ${arc} m.`, `Two straight edges: 2 × ${r} = ${2 * r} m.`, `Perimeter: ${arc} + ${2 * r} = ${per} m.`],
     }),
     check: ({ r, th }, a) => near(a - 2 * r, (th * 44 * r) / (7 * 360)) }),
 
-  fam({ id: 'g8.sector.semicircle-radius', skill: 'G9_ARC_LENGTH', outcome: 'G8.CIRCLES.c', rung: 3, form: 'word',
+  fam({ id: 'g8.sector.semicircle-radius', skill: 'G9_ARC_LENGTH', outcome: 'MATH.G8.MEASUR.CIRCLES.c', cskill: 'MATH.G8.MEASUR.CIRCLES.SECTOR_WORK_BACK', rung: 3, form: 'word',
     draw: () => {
       const k = randInt(1, 6), r = 7 * k, P = 36 * k;
       const w = [round((7 * P) / 22, 1), round((7 * P) / 29, 1), round((7 * P) / 58, 1)];
@@ -158,7 +159,7 @@ export const FAMILIES = [
     make: ({ r, P, w, p }) => ({
       question: `${p.name}'s plot is a half circle. Its perimeter is ${P} m. This is the curved edge plus the straight edge across the diameter. Find the radius of the plot, in metres. (Use π = 22/7)`,
       answer: r,
-      wrong: [[w[0], 'You used the curved edge only. The straight edge is part of the perimeter too.'], [w[1], 'The straight edge is a diameter, which is 2 radii, not 1.'], [w[2], 'The curved edge of a half circle is half of 2πr, which is πr.']],
+      wrong: [[w[0], 'You used the curved edge only. The straight edge is part of the perimeter too.', 'M_DIAMETER_LEFT_OUT'], [w[1], 'The straight edge is a diameter, which is 2 radii, not 1.', 'M_DIAMETER_AS_RADIUS'], [w[2], 'The curved edge of a half circle is half of 2πr, which is πr.', 'M_FULL_CIRCLE_FOR_HALF']],
       hints: ['Write the perimeter in terms of r: the curved edge plus the diameter.', 'Curved edge = π × r. Diameter = 2 × r. Together they make (π + 2) × r.'],
       steps: [`Perimeter = 22/7 × r + 2r = 36/7 × r.`, `So ${P} = 36/7 × r.`, `r = ${P} × 7 ÷ 36 = ${r} m.`],
     }),
