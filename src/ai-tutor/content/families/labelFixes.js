@@ -117,34 +117,34 @@ export const CORE_FAMILIES = [
     } }),
 
   // ---- G8_SCALE_DRAWING: scale, not "4 books cost 200"
-  fx({ id: 'g8.scale.real-length', skill: 'G8_SCALE_DRAWING', outcome: 'G8.SCALE.b', rung: 1, form: 'word',
+  fx({ id: 'g8.scale.real-length', skill: 'G8_SCALE_DRAWING', outcome: 'MATH.G8.GEOMET.SCALE_DRAWING.c', cskill: 'MATH.G8.GEOMET.SCALE_DRAWING.SCALE_TO_ACTUAL', rung: 1, form: 'word',
     draw: () => { const s = pick([5, 10, 20, 25, 50]), cm = randInt(3, 12); return { s, cm, what: pick(['A plot', 'A school field', 'A shamba', 'A church compound']) }; },
     make: ({ s, cm, what }) => ({
       question: `On a plan, 1 cm stands for ${s} m. ${what} measures ${cm} cm on that plan. How long is it in real life, in metres?`,
       answer: cm * s,
-      wrong: [[cm + s, 'Each centimetre on the drawing stands for the full distance. Multiply, do not add.'], [round(s / cm, 2), 'The drawing is smaller than the real thing, so the real length must be bigger.'], [cm * s * 100, 'The scale already gives metres, so the answer is in metres with no change of unit.']],
+      wrong: [[cm + s, 'Each centimetre on the drawing stands for the full distance. Multiply, do not add.', 'M_SCALE_ADDED'], [round(s / cm, 2), 'The drawing is smaller than the real thing, so the real length must be bigger.', 'M_SCALE_DIVIDED'], [cm * s * 100, 'The scale already gives metres, so the answer is in metres with no change of unit.', 'M_UNIT_CHANGED_NEEDLESSLY']],
       hints: ['What does 1 cm on the drawing stand for?', `There are ${cm} of those centimetres.`],
       steps: [`1 cm stands for ${s} m.`, `${cm} cm stands for ${cm} × ${s} = ${cm * s} m.`],
     }),
     check: ({ s, cm }, a) => a / s === cm }),
-  fx({ id: 'g8.scale.on-paper', skill: 'G8_SCALE_DRAWING', outcome: 'G8.SCALE.j', rung: 2, form: 'word',
+  fx({ id: 'g8.scale.on-paper', skill: 'G8_SCALE_DRAWING', outcome: 'MATH.G8.GEOMET.SCALE_DRAWING.b', cskill: 'MATH.G8.GEOMET.SCALE_DRAWING.ACTUAL_TO_SCALE', rung: 2, form: 'word',
     draw: () => { const s = pick([10, 20, 25, 50]), cm = randInt(2, 14) ; return { s, cm, thing: pick(['road', 'wall', 'fence', 'water pipe']) }; },
     make: ({ s, cm, thing }) => ({
       question: `A map of a village uses a scale of 1 cm to ${s} m. A ${thing} is ${cm * s} m long. How long should it be on the map, in cm?`,
       answer: cm,
-      wrong: [[cm * s * s, 'You multiplied again. To go from the real length to the map, divide by the scale.'], [cm * s - s, 'Taking away does not use a scale. How many lots of the scale fit in the length?'], [cm * s, 'That is the real length. The map must show something much shorter.']],
+      wrong: [[cm * s * s, 'You multiplied again. To go from the real length to the map, divide by the scale.', 'M_MAP_MULTIPLIED_AGAIN'], [cm * s - s, 'Taking away does not use a scale. How many lots of the scale fit in the length?', 'M_SUBTRACTED_FOR_MAP'], [cm * s, 'That is the real length. The map must show something much shorter.', 'M_REAL_GIVEN_FOR_MAP']],
       hints: ['Going from real life to the map makes things smaller.', `How many lots of ${s} m are in ${cm * s} m?`],
       steps: [`Each ${s} m is 1 cm on the map.`, `${cm * s} ÷ ${s} = ${cm} cm.`],
     }),
     check: ({ s, cm }, a) => a * s === cm * s }),
-  fx({ id: 'g8.scale.ratio-map', skill: 'G8_SCALE_DRAWING', outcome: 'G8.SCALE.j', rung: 3, form: 'steps',
+  fx({ id: 'g8.scale.ratio-map', skill: 'G8_SCALE_DRAWING', outcome: 'MATH.G8.GEOMET.SCALE_DRAWING.j', cskill: 'MATH.G8.GEOMET.SCALE_DRAWING.SCALE_IN_CONTEXT', rung: 3, form: 'steps',
     draw: () => { const [a, b, km] = route(); const scale = pick([1000000, 2000000, 500000]); const cm = (km * 100000) / scale; return Number.isInteger(cm * 10) && cm < 80 && cm > 2 ? { a, b, km, scale, cm } : null; },
     make: ({ a, b, km, scale, cm }) => ({
       question: `On a 1 : ${commas(scale)} map of Kenya, a ruler laid from ${a} to ${b} reads ${cm} cm.`,
       parts: [
-        { prompt: 'How many cm of real distance does 1 cm on the map stand for?', answer: scale, hint: 'In a ratio scale, both numbers are in the same unit.', wrong: [[1, 'Read the second number of the scale.']] },
-        { prompt: `How many cm is ${cm} cm on the map in real life?`, answer: cm * scale, hint: `${cm} × ${commas(scale)}`, wrong: [[cm + scale, 'Each map centimetre stands for the whole amount: multiply.']] },
-        { prompt: 'How many km is that?', answer: km, unit: 'km', hint: 'There are 100,000 cm in 1 km.', wrong: [[cm * scale / 1000, 'That divides by 1,000. From cm to km you divide by 100,000.']] },
+        { prompt: 'How many cm of real distance does 1 cm on the map stand for?', answer: scale, hint: 'In a ratio scale, both numbers are in the same unit.', wrong: [[1, 'Read the second number of the scale.', 'M_RATIO_FIRST_NUMBER_READ']] },
+        { prompt: `How many cm is ${cm} cm on the map in real life?`, answer: cm * scale, hint: `${cm} × ${commas(scale)}`, wrong: [[cm + scale, 'Each map centimetre stands for the whole amount: multiply.', 'M_SCALE_ADDED']] },
+        { prompt: 'How many km is that?', answer: km, unit: 'km', hint: 'There are 100,000 cm in 1 km.', wrong: [[cm * scale / 1000, 'That divides by 1,000. From cm to km you divide by 100,000.', 'M_DIVIDED_BY_1000']] },
       ],
       steps: [`1 cm on the map is ${commas(scale)} cm in real life.`, `${cm} × ${commas(scale)} = ${commas(cm * scale)} cm.`, `${commas(cm * scale)} ÷ 100,000 = ${km} km.`],
     }),
@@ -408,19 +408,19 @@ export const CORE_FAMILIES = [
     check: ({ vals }, a) => vals[0] + a === vals[2] }),
 
   // ---- G8_LINEAR_GRAPHS: tables of values and meeting points, with a graph
-  fx({ id: 'g8.graphs.table-complete', skill: 'G8_LINEAR_GRAPHS', outcome: 'G8.GRAPHS.d', rung: 1, form: 'table',
+  fx({ id: 'g8.graphs.table-complete', skill: 'G8_LINEAR_GRAPHS', outcome: 'MATH.G8.GEOMET.COORDINATES_AND_GRAPHS.d', cskill: 'MATH.G8.GEOMET.COORDINATES_AND_GRAPHS.TABLE_OF_VALUES', rung: 1, form: 'table',
     draw: () => { const m = randInt(2, 4), c = randInt(-3, 5); const x = pick([2, 3, 4]), v = [m + x + c, m * x, m * (x - 1) + c]; return c === 0 || new Set(v).size < 3 || v.includes(m * x + c) ? null : { m, c, x }; },
     make: ({ m, c, x }) => {
       const y = (t) => m * t + c, eq = `y = ${m}x ${c < 0 ? '−' : '+'} ${Math.abs(c)}`;
       return { question: `Here is part of a table for ${eq}. What goes in the empty box, where x = ${x}?`, story: false,
         model: { type: 'table', data: { head: ['x', 'y'], rows: [{ label: '0', value: String(y(0)) }, { label: '1', value: String(y(1)) }, { label: String(x), value: '?' }] } },
         answer: y(x),
-        wrong: [[m + x + c, `${m}x means ${m} times x. Multiply before adding.`], [m * x, `You have not yet done the ${c < 0 ? '−' : '+'} ${Math.abs(c)}.`], [y(x - 1), 'That is the value for the x before it.']],
+        wrong: [[m + x + c, `${m}x means ${m} times x. Multiply before adding.`, 'M_COEFF_ADDED_TO_X'], [m * x, `You have not yet done the ${c < 0 ? '−' : '+'} ${Math.abs(c)}.`, 'M_CONSTANT_LEFT_OUT'], [y(x - 1), 'That is the value for the x before it.', 'M_WRONG_COLUMN_READ']],
         hints: [`Put x = ${x} into the equation.`, `${m} × ${x} first.`], allowNegative: true,
         steps: [`y = ${m} × ${x} ${c < 0 ? '−' : '+'} ${Math.abs(c)}`, `y = ${m * x} ${c < 0 ? '−' : '+'} ${Math.abs(c)} = ${y(x)}.`] };
     },
     check: ({ m, c, x }, a) => (a - c) / m === x }),
-  fx({ id: 'g8.graphs.fare-graph', skill: 'G8_LINEAR_GRAPHS', outcome: 'G8.GRAPHS.b', rung: 2, form: 'graph',
+  fx({ id: 'g8.graphs.fare-graph', skill: 'G8_LINEAR_GRAPHS', outcome: 'MATH.G8.GEOMET.COORDINATES_AND_GRAPHS.b', cskill: 'MATH.G8.GEOMET.COORDINATES_AND_GRAPHS.READ_COORDINATES', rung: 2, form: 'graph',
     draw: () => ({ rate: pick([20, 30, 40, 50]), fix: pick([50, 100]) , km: pick([2, 4, 6]) }),
     make: ({ rate, fix, km }) => {
       const y = (x) => fix + rate * x;
@@ -429,12 +429,12 @@ export const CORE_FAMILIES = [
       return { question: `The graph shows a boda boda fare in shillings for each distance in km. Read the point at ${km} km. What is the fare?`,
         model: { type: 'line-graph', data: { points: ticks.map(x => ({ x, y: y(x) })), xTicks: ticks, yTicks, xLabel: 'Distance (km)', yLabel: 'Fare (sh)' } },
         answer: y(km),
-        wrong: [[rate * km, 'The line does not start at 0. Read the height of the point, which includes the fixed charge.'], [y(km + 2), 'That is the next point along. Go up from the distance asked for.'], [fix, 'That is the fare before any distance. Read at the distance asked for.']],
+        wrong: [[rate * km, 'The line does not start at 0. Read the height of the point, which includes the fixed charge.', 'M_FIXED_CHARGE_LEFT_OUT'], [y(km + 2), 'That is the next point along. Go up from the distance asked for.', 'M_NEXT_POINT_READ'], [fix, 'That is the fare before any distance. Read at the distance asked for.', 'M_INTERCEPT_READ']],
         hints: [`Find ${km} on the distance axis.`, 'Go straight up to the line, then across to the fare axis.'],
         steps: [`At ${km} km, go up to the line.`, `Read across: the fare is sh ${y(km)}.`] };
     },
     check: ({ rate, fix, km }, a) => (a - fix) / rate === km }),
-  fx({ id: 'g8.graphs.meet', skill: 'G8_LINEAR_GRAPHS', outcome: 'G8.GRAPHS.g', rung: 3, form: 'graph',
+  fx({ id: 'g8.graphs.meet', skill: 'G8_LINEAR_GRAPHS', outcome: 'MATH.G8.GEOMET.COORDINATES_AND_GRAPHS.g', cskill: 'MATH.G8.GEOMET.COORDINATES_AND_GRAPHS.SOLVE_GRAPHICALLY', rung: 3, form: 'graph',
     draw: () => { const x0 = randInt(1, 4), y0 = randInt(2, 8), m1 = pick([1, 2]), m2 = pick([-1, -2]); const c1 = y0 - m1 * x0, c2 = y0 - m2 * x0; return x0 === y0 ? null : { x0, y0, m1, m2, c1, c2 }; },
     make: ({ x0, y0, m1, m2, c1, c2 }) => {
       const eq = (m, c) => `y = ${m === 1 ? '' : m === -1 ? '−' : m < 0 ? `−${-m}` : m}x${c === 0 ? '' : c < 0 ? ` − ${-c}` : ` + ${c}`}`;
@@ -446,32 +446,32 @@ export const CORE_FAMILIES = [
       const pt = (x, y) => `(${x}, ${y})`;
       return { question: `The lines ${eq(m1, c1)} and ${eq(m2, c2)} are drawn on the graph. At which point do they meet?`, story: false,
         model: { type: 'line-graph', data: { lines: [ys(m1, c1), ys(m2, c2)], xTicks: xs, yTicks, xLabel: 'x', yLabel: 'y' } },
-        options: [{ text: pt(x0, y0), right: true }, { text: pt(y0, x0), right: false, why: 'That swaps x and y. x is read along, y is read up.' }, { text: pt(x0 + 1, m1 * (x0 + 1) + c1), right: false, why: 'That point is on only one of the lines.' }, { text: pt(x0, m2 * x0 + c2 + 1), right: false, why: 'Check that the point fits both equations.' }],
+        options: [{ text: pt(x0, y0), right: true }, { text: pt(y0, x0), right: false, why: 'That swaps x and y. x is read along, y is read up.', mis: 'M_X_Y_SWAPPED' }, { text: pt(x0 + 1, m1 * (x0 + 1) + c1), right: false, why: 'That point is on only one of the lines.', mis: 'M_POINT_ON_ONE_LINE' }, { text: pt(x0, m2 * x0 + c2 + 1), right: false, why: 'Check that the point fits both equations.', mis: 'SLIP' }],
         hints: ['The meeting point lies on both lines.', 'Try each point in both equations.'],
         steps: [`At x = ${x0}, ${eq(m1, c1)} gives y = ${y0}.`, `At x = ${x0}, ${eq(m2, c2)} gives y = ${y0}.`, `Both agree, so they meet at ${pt(x0, y0)}.`] };
     } }),
 
   // ---- G8_SURFACE_AREA: cylinders as well as cuboids
-  fx({ id: 'g8.surface.cylinder-tin', skill: 'G8_SURFACE_AREA', outcome: 'G8.AREA.d', rung: 2, form: 'word',
+  fx({ id: 'g8.surface.cylinder-tin', skill: 'G8_SURFACE_AREA', outcome: 'MATH.G8.MEASUR.AREA.d', cskill: 'MATH.G8.MEASUR.AREA.SA_CYLINDER', rung: 2, form: 'word',
     draw: () => { const r = pick([7, 14, 3.5]), h = pick([10, 15, 20, 30]); return { r, h, what: pick(['A closed tin of cooking fat', 'A closed cylindrical drum', 'A closed paint tin']) }; },
     make: ({ r, h, what }) => {
       const pi = 22 / 7, sa = round(2 * pi * r * (r + h), 1);
       return { question: `${what} has a circular top and bottom of radius ${r} cm, and stands ${h} cm tall. How much metal covers the whole outside, in cm²? (Use π = 22/7)`,
         answer: sa,
-        wrong: [[round(2 * pi * r * h, 1), 'That is the curved side only. A closed tin has a top and a bottom too.'], [round(2 * pi * r * h + pi * r * r, 1), 'That has one circle. A closed tin has two.'], [round(pi * r * r * h, 1), 'That is the volume. Surface area is what covers the outside.']],
+        wrong: [[round(2 * pi * r * h, 1), 'That is the curved side only. A closed tin has a top and a bottom too.', 'M_ENDS_LEFT_OUT'], [round(2 * pi * r * h + pi * r * r, 1), 'That has one circle. A closed tin has two.', 'M_ONE_END_ONLY'], [round(pi * r * r * h, 1), 'That is the volume. Surface area is what covers the outside.', 'M_VOLUME_FOR_SA_CYL']],
         hints: ['A closed cylinder opens out into a rectangle and two circles.', 'Curved part = 2πrh. Each circle = πr².'],
         steps: [`Curved part: 2 × 22/7 × ${r} × ${h} = ${round(2 * pi * r * h, 1)} cm².`, `Two circles: 2 × 22/7 × ${r} × ${r} = ${round(2 * pi * r * r, 1)} cm².`, `Total: ${sa} cm².`] };
     },
     check: ({ r, h }, a) => Math.abs(a - 2 * (22 / 7) * r * r - 2 * (22 / 7) * r * h) < 0.11 }),
 
   // ---- G8_PROBABILITY_COMBINED: a tree diagram at last
-  fx({ id: 'g8.prob.tree-two-stage', skill: 'G8_PROBABILITY_COMBINED', outcome: 'G8.PROB.d', rung: 2, form: 'table',
+  fx({ id: 'g8.prob.tree-two-stage', skill: 'G8_PROBABILITY_COMBINED', outcome: 'MATH.G8.DATA_H.PROBABILITY.d', cskill: 'MATH.G8.DATA_H.PROBABILITY.COMBINED_TWO_STAGE', rung: 2, form: 'table',
     draw: () => { const pr = pick([0.2, 0.3, 0.4, 0.6]), ps = pick([0.25, 0.75, 0.2, 0.1]); return { pr, ps }; },
     make: ({ pr, ps }) => {
       const a = round(pr * ps, 4);
       return { question: `A tree diagram has two sets of branches. On the first set, the chance that it rains is ${pr}. On the second set, the chance that the matatu is late is ${ps}, rain or not. Multiply along the branches: what is the probability that it rains and the matatu is late?`,
         answer: a,
-        wrong: [[round(pr + ps, 4), 'Along a branch you multiply. Adding is for choosing between different paths.'], [round(1 - pr * ps, 4), 'That is the chance of everything except this path.'], [round(pr * (1 - ps), 4), 'That is rain and the matatu on time.']],
+        wrong: [[round(pr + ps, 4), 'Along a branch you multiply. Adding is for choosing between different paths.', 'M_BRANCHES_ADDED'], [round(1 - pr * ps, 4), 'That is the chance of everything except this path.', 'M_ALL_BUT_PATH'], [round(pr * (1 - ps), 4), 'That is rain and the matatu on time.', 'M_WRONG_PATH_FOLLOWED']],
         hints: ['Follow one branch for rain, then one for late.', 'Multiply the probabilities along the path.'],
         steps: [`Path: rain (${pr}) then late (${ps}).`, `${pr} × ${ps} = ${a}.`] };
     },
@@ -583,20 +583,20 @@ export const CORE_FAMILIES = [
         hints: ['Compasses give 60° and 90° directly. Bisecting halves what you have.', `Which of those leads to ${a}°?`],
         steps: [`To make ${a}°: ${how.toLowerCase()}.`, 'Try it with your ruler and compasses on paper.'] };
     } }),
-  fx({ id: 'g9.construct.polygon-angle', skill: 'G9_CONSTRUCTION', outcome: 'G8.CONSTRUCT.c', rung: 2, form: 'direct',
+  fx({ id: 'g9.construct.polygon-angle', skill: 'G9_CONSTRUCTION', outcome: 'MATH.G8.GEOMET.GEOMETRICAL_CONSTRUCTION.c', cskill: 'MATH.G8.GEOMET.GEOMETRICAL_CONSTRUCTION.POLYGON_ANGLE_PROPERTIES', rung: 2, form: 'direct',
     draw: () => ({ n: pick([5, 6, 8, 9, 10, 12]) }),
     make: ({ n }) => ({
       question: `To construct a regular polygon with ${n} sides you need its interior angle. What is it, in degrees?`, story: false,
       answer: ((n - 2) * 180) / n,
-      wrong: [[360 / n, 'That is the exterior angle. The interior angle is 180° minus it.'], [(n - 2) * 180, 'That is the sum of all the interior angles. Share it among the angles.'], [(n * 180) / n, 'The angle sum is (n − 2) × 180°, not n × 180°.']],
+      wrong: [[360 / n, 'That is the exterior angle. The interior angle is 180° minus it.', 'M_EXTERIOR_FOR_INTERIOR'], [(n - 2) * 180, 'That is the sum of all the interior angles. Share it among the angles.', 'M_SUM_FOR_ONE_ANGLE'], [(n * 180) / n, 'The angle sum is (n − 2) × 180°, not n × 180°.', 'M_SUM_AS_N_TIMES_180']],
       hints: ['Each exterior angle is 360° ÷ the number of sides.', 'Interior angle = 180° − exterior angle.'],
       steps: [`Exterior angle: 360 ÷ ${n} = ${360 / n}°.`, `Interior angle: 180 − ${360 / n} = ${180 - 360 / n}°.`],
     }),
     check: ({ n }, a) => Math.abs(a * n - (n - 2) * 180) < 1e-9 }),
-  fx({ id: 'g9.construct.circum-centre', skill: 'G9_CONSTRUCTION', outcome: 'G8.CONSTRUCT.f', rung: 3, form: 'why',
+  fx({ id: 'g9.construct.circum-centre', skill: 'G9_CONSTRUCTION', outcome: 'MATH.G8.GEOMET.GEOMETRICAL_CONSTRUCTION.f', cskill: 'MATH.G8.GEOMET.GEOMETRICAL_CONSTRUCTION.CIRCUMCIRCLE', rung: 3, form: 'why',
     draw: () => ({ k: randInt(0, 3), a: randInt(6, 12), b: randInt(5, 11) }),
     make: ({ k, a, b }) => {
-      const opts = [{ text: 'Any point on the bisector is equally far from both ends', right: true }, { text: 'Perpendicular bisectors always pass through a corner', right: false, why: 'A perpendicular bisector passes through the middle of a side.' }, { text: 'They make every angle of the triangle equal', right: false, why: 'Drawing lines does not change the angles of the triangle.' }, { text: 'They are used to give the area of the triangle', right: false, why: 'Area comes from base and height.' }];
+      const opts = [{ text: 'Any point on the bisector is equally far from both ends', right: true }, { text: 'Perpendicular bisectors always pass through a corner', right: false, why: 'A perpendicular bisector passes through the middle of a side.', mis: 'M_BISECTOR_THROUGH_CORNER' }, { text: 'They make every angle of the triangle equal', right: false, why: 'Drawing lines does not change the angles of the triangle.', mis: 'M_BISECTORS_MAKE_ANGLES_EQUAL' }, { text: 'They are used to give the area of the triangle', right: false, why: 'Area comes from base and height.', mis: 'M_CONSTRUCTION_FOR_AREA' }];
       return { question: `To draw a circle through all three corners of a triangle with sides ${a} cm and ${b} cm and a third side, you bisect two sides at right angles and use the point where those lines meet as the centre. Why does this work?`, story: false, options: [...opts.slice(k), ...opts.slice(0, k)],
         hints: ['What is special about a point on a perpendicular bisector?', 'The centre must be the same distance from all three corners.'],
         steps: ['A point on a perpendicular bisector is equally far from the two ends of the side.', 'The meeting point of two such lines is equally far from all three corners, so a circle fits through them.'] };

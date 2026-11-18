@@ -3,8 +3,8 @@
  "draws": 40,
  "counts": {
   "shared": 227,
-  "nearmiss": 64,
-  "reason": 114
+  "nearmiss": 82,
+  "reason": 118
  },
  "families": {
   "shared": [
@@ -300,7 +300,25 @@
    "g7.ineq.which-in-shade",
    "g7.length.fence-posts-line",
    "g7.perim.fence-posts-round",
-   "g7.vol.box-carton"
+   "g7.vol.box-carton",
+   "g8.construct.circle-right-triangle",
+   "g8.construct.ray-parts",
+   "g8.data.new-mean",
+   "g8.data.table-bar-squares",
+   "g8.data.table-mean",
+   "g8.data.table-median",
+   "g8.eq.coins",
+   "g8.fact.fully-outside",
+   "g8.frac.shamba-share",
+   "g8.graphs.table-complete",
+   "g8.graphs.table-pattern",
+   "g8.int.lift-floors",
+   "g8.int.mountain-rate",
+   "g8.pct.fare-change",
+   "g8.prob.expected-times",
+   "g8.ratio.rope-units",
+   "g8.solids.ant-two-faces",
+   "g8.solids.edges-euler"
   ],
   "reason": [
    "g5c.add.chk.compare",
@@ -416,7 +434,11 @@
    "g5c.whole.d510.packs",
    "g5c.whole.dp.pack",
    "g5c.whole.hcf.truefalse",
-   "g5c.whole.lcm.truefalse"
+   "g5c.whole.lcm.truefalse",
+   "g8.graphs.cross-why",
+   "g8.graphs.meet",
+   "g8.sector.find-angle",
+   "g8.solids.edges-euler"
   ]
  }
 }

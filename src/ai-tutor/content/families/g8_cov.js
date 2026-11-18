@@ -12,7 +12,7 @@ const sgn = (n) => (n < 0 ? `−${-n}` : `${n}`);
 
 export const FAMILIES = [
   // ================================================================ INTEGERS
-  cov({ id: 'g8c.int.number-line-lift', skill: 'G6_INTEGERS_ADD_SUB', outcome: 'G8.INTEGERS.c', form: 'word', rung: 2, allowNegative: true,
+  cov({ id: 'g8c.int.number-line-lift', skill: 'G6_INTEGERS_ADD_SUB', outcome: 'MATH.G8.NUMBER.INTEGERS.b', cskill: 'MATH.G8.NUMBER.INTEGERS.INT_NUMBER_LINE', misMapped: false, reveals: ['M_SIGN_DROPPED_BELOW_ZERO', 'M_DOWN_AS_ADD', 'M_WRONG_SIDE_OF_ZERO', 'M_START_COUNTED_AS_STEP'], form: 'word', rung: 2, allowNegative: true,
     gen: () => {
       const s = -randInt(1, 4), n = randInt(2, 7), up = Math.random() < 0.6, d = up ? n : -n, r = s + d;
       if (r === 0 || Math.abs(r) === Math.abs(s)) return null;
@@ -23,7 +23,7 @@ export const FAMILIES = [
     } }),
 
   // ================================================================ DECIMALS
-  cov({ id: 'g8c.dec.recurring-to-fraction', skill: 'G8_RECURRING_DECIMALS', outcome: 'G8.DEC.c', form: 'direct', rung: 3,
+  cov({ id: 'g8c.dec.recurring-to-fraction', skill: 'G8_RECURRING_DECIMALS', outcome: 'MATH.G8.NUMBER.DECIMALS.c', cskill: 'MATH.G8.NUMBER.DECIMALS.RECURRING_TO_FRACTION', misMapped: false, reveals: ['M_NO_REPEAT_FRACTION', 'M_NINES_COUNT_WRONG'], form: 'direct', rung: 3,
     gen: () => {
       const two = Math.random() < 0.6, rep = two ? randInt(10, 98) : randInt(1, 8), den = two ? 99 : 9;
       if (two && rep % 11 === 0) return null;
@@ -34,7 +34,7 @@ export const FAMILIES = [
         steps: [`Let x = ${dec}. Then ${two ? 100 : 10}x = ${shown}.${shown.repeat(3)}...`, `Subtract: ${two ? 99 : 9}x = ${rep}, so x = ${rep}/${den} = ${right}.`] };
     } }),
 
-  cov({ id: 'g8c.dec.significant-figures', skill: 'G8_STANDARD_FORM', outcome: 'G8.DEC.e', form: 'word', rung: 2,
+  cov({ id: 'g8c.dec.significant-figures', skill: 'G8_STANDARD_FORM', outcome: 'MATH.G8.NUMBER.DECIMALS.e', cskill: 'MATH.G8.NUMBER.DECIMALS.SIGNIFICANT_FIGURES', misMapped: false, reveals: ['M_SF_TRUNCATED', 'M_SF_COUNT_WRONG', 'M_SF_PLACE_ZEROS_DROPPED', 'M_SF_AS_DP'], form: 'word', rung: 2,
     gen: () => {
       const big = Math.random() < 0.5, sf = randInt(2, 3), p = person();
       let x, w, txt, unit;
@@ -50,7 +50,7 @@ export const FAMILIES = [
         steps: [`The first ${sf} significant figures are ${String(x).replace('.', '').slice(0, sf)}.`, `Rounding gives ${big ? commas(right) : right}.`], chk: (a) => Math.abs(a - x) <= (big ? 10 ** (String(x).length - sf) : 10 ** (Math.floor(Math.log10(x)) - sf + 1)) / 2 + 1e-9 };
     } }),
 
-  cov({ id: 'g8c.dec.to-standard-form', skill: 'G8_STANDARD_FORM', outcome: 'G8.DEC.f', form: 'direct', rung: 2,
+  cov({ id: 'g8c.dec.to-standard-form', skill: 'G8_STANDARD_FORM', outcome: 'MATH.G8.NUMBER.DECIMALS.f', cskill: 'MATH.G8.NUMBER.DECIMALS.STANDARD_FORM', misMapped: false, reveals: ['M_FRONT_NOT_BETWEEN_1_10', 'M_POWER_MISCOUNTED', 'M_POWER_SIGN_WRONG'], form: 'direct', rung: 2,
     gen: () => {
       const small = Math.random() < 0.4, m = randInt(11, 99) / 10, e = small ? -randInt(2, 6) : randInt(3, 8);
       if (m % 1 === 0) return null;
@@ -64,7 +64,7 @@ export const FAMILIES = [
         steps: [`Write ${m} as the first number, so that it is between 1 and 10.`, `The point moves ${Math.abs(e)} places, so the power is ${e}: ${right}.`] };
     } }),
 
-  cov({ id: 'g8c.dec.combined-operations', skill: 'G8_DECIMALS_COMBINED', outcome: 'G8.DEC.g', form: 'direct', rung: 3,
+  cov({ id: 'g8c.dec.combined-operations', skill: 'G8_DECIMALS_COMBINED', outcome: 'MATH.G8.NUMBER.DECIMALS.g', cskill: 'MATH.G8.NUMBER.DECIMALS.DEC_COMBINED_OPERATIONS', misMapped: false, reveals: ['M_DEC_LEFT_TO_RIGHT', 'M_DEC_ALL_ADDED', 'M_POINT_PLACES_PRODUCT'], form: 'direct', rung: 3,
     gen: () => {
       const a = randInt(11, 99) / 10, b = randInt(11, 59) / 10, c = randInt(2, 9) / 2, kind = pick(['add-mul', 'bracket']);
       if (a % 1 === 0 || b % 1 === 0) return null;
@@ -78,7 +78,7 @@ export const FAMILIES = [
         steps: kind === 'add-mul' ? [`${b} × ${c} = ${round(b * c, 3)}.`, `${a} + ${round(b * c, 3)} = ${right}.`] : [`${a} − ${b} = ${round(a - b, 3)}.`, `${round(a - b, 3)} × ${c} = ${right}.`], chk: (r) => (kind === 'add-mul' ? Math.abs(r - a - b * c) < 1e-6 : Math.abs(r - (a - b) * c) < 1e-6) };
     } }),
 
-  cov({ id: 'g8c.dec.shopping-change', skill: 'G8_DECIMALS_COMBINED', outcome: 'G8.DEC.h', form: 'word', rung: 2,
+  cov({ id: 'g8c.dec.shopping-change', skill: 'G8_DECIMALS_COMBINED', outcome: 'MATH.G8.NUMBER.DECIMALS.h', cskill: 'MATH.G8.NUMBER.DECIMALS.DEC_REAL_LIFE', misMapped: false, reveals: ['M_ONE_ITEM_ONLY', 'M_COST_FOR_CHANGE', 'M_CHANGE_ADDED'], form: 'word', rung: 2,
     gen: () => {
       const item = pick([['kg of rice', 142.5], ['kg of sugar', 167.5], ['litres of milk', 62.5], ['kg of beans', 187.5], ['kg of maize flour', 112.5]]), n = randInt(2, 6), per = item[1] + pick([-10, 0, 10, 12.5]), pay = Math.ceil(n * per / 500) * 500 + (Math.random() < 0.5 ? 0 : 500), cost = round(n * per, 2), ch = round(pay - cost, 2), p = person();
       const w = [[round(pay - per, 2), `You took the price of one from the money paid. Find the cost of all ${n} first.`], [cost, 'This is the total cost. The question asks for the change, so take it from the money paid.'], [round(pay + cost, 2), 'You added. Change is the money paid minus the cost.'], [round(pay - n * Math.floor(per), 2), 'The shillings and cents were not both used. Multiply the full price.']];
@@ -88,7 +88,7 @@ export const FAMILIES = [
     } }),
 
   // ================================================================ SQUARES
-  cov({ id: 'g8c.sq.root-plot', skill: 'G8_SQUARES_TABLES', outcome: 'G8.SQUARES.c', form: 'word', rung: 2,
+  cov({ id: 'g8c.sq.root-plot', skill: 'G8_SQUARES_TABLES', outcome: 'MATH.G8.NUMBER.SQUARES_AND_SQUARE_ROOTS.c', cskill: 'MATH.G8.NUMBER.SQUARES_AND_SQUARE_ROOTS.ROOT_BY_CALCULATOR', misMapped: false, reveals: ['M_CALC_ROOT_HALVED', 'M_CALC_SQUARED_INSTEAD', 'M_CALC_AREA_OVER_FOUR', 'M_CALC_ROOT_TRUNCATED'], form: 'word', rung: 2,
     gen: () => {
       const perfect = Math.random() < 0.5, p = person();
       let A, side, wrong;
@@ -99,19 +99,19 @@ export const FAMILIES = [
         steps: [`The side is the square root of ${commas(A)}.`, `√${commas(A)} = ${side}${perfect ? '' : ' (to 1 decimal place)'}.`], chk: (a) => Math.abs(a * a - A) <= (perfect ? 0 : 0.2 * a + 0.01) };
     } }),
 
-  cov({ id: 'g8c.sq.square-decimal', skill: 'G8_SQUARES_TABLES', outcome: 'G8.SQUARES.c', form: 'direct', rung: 2,
+  cov({ id: 'g8c.sq.square-decimal', skill: 'G8_SQUARES_TABLES', outcome: 'MATH.G8.NUMBER.SQUARES_AND_SQUARE_ROOTS.c', cskill: 'MATH.G8.NUMBER.SQUARES_AND_SQUARE_ROOTS.SQUARE_BY_CALCULATOR', form: 'direct', rung: 2,
     gen: () => {
       const x = randInt(12, 98) / 10;
       if (x % 1 === 0) return null;
       const sq = round(x * x, 2), p = person();
       return { question: `${p.name} uses a calculator to find the area of a square tile with a side of ${x} cm. Work out ${x}² in square centimetres.`, answer: sq,
-        wrong: [[round(x * 2, 2), 'You multiplied by 2. Squaring means multiplying the number by itself.'], [round(sq / 10, 3), 'The decimal point is in the wrong place. Count the decimal places in both numbers.'], [round(sq * 10, 1), 'The decimal point is in the wrong place. Count the decimal places in both numbers.'], [Math.round(sq), 'The answer was rounded to a whole number. Give the full answer from the calculator.']],
+        wrong: [[round(x * 2, 2), 'You multiplied by 2. Squaring means multiplying the number by itself.', 'M_CALC_TIMES_TWO'], [round(sq / 10, 3), 'The decimal point is in the wrong place. Count the decimal places in both numbers.', 'M_CALC_POINT_PLACE'], [round(sq * 10, 1), 'The decimal point is in the wrong place. Count the decimal places in both numbers.', 'SLIP'], [Math.round(sq), 'The answer was rounded to a whole number. Give the full answer from the calculator.', 'M_CALC_ROUNDED_ANSWER']],
         hints: ['Squaring a number means multiplying it by itself.', 'Use the x² key on your calculator.'],
         steps: [`${x}² = ${x} × ${x}.`, `${x} × ${x} = ${sq}.`], chk: (a) => Math.abs(Math.sqrt(a) - x) < 1e-6 };
     } }),
 
   // ================================================================ RATES, RATIO, PROPORTION
-  cov({ id: 'g8c.rate.per-unit', skill: 'G8_RATIO_PROPORTION', outcome: 'G8.RATES.b', form: 'word', rung: 2,
+  cov({ id: 'g8c.rate.per-unit', skill: 'G8_RATIO_PROPORTION', outcome: 'MATH.G8.NUMBER.RATES_RATIO_PROPORTIONS_.b', cskill: 'MATH.G8.NUMBER.RATES_RATIO_PROPORTIONS_.RATE_PER_UNIT', misMapped: false, reveals: ['M_RATE_MULTIPLIED', 'M_RATE_INVERTED', 'M_RATE_ADDED'], form: 'word', rung: 2,
     gen: () => {
       const kind = pick([['A cyclist rides from Thika to Nairobi, 45 km, in 3 hours. What is the average rate in kilometres per hour?', 'km', 'hours'], ['A tank fills with 240 litres of water in 8 minutes. What is the rate in litres per minute?', 'litres', 'minutes'], ['A trader paid for sacks of potatoes and a fixed mass of potatoes. What was the price per kilogram, in shillings?', 'sh', 'kg'], ['A typist types words in a fixed time. What is her rate in words per minute?', 'words', 'minutes']]);
       const unit = randInt(4, 15), t = randInt(3, 9), tot = unit * t, p = person();
@@ -128,7 +128,7 @@ export const FAMILIES = [
         steps: [`Rate = amount ÷ number of units.`, `${amount} ÷ ${t} = ${right}.`], chk: (a) => a * t === amount };
     } }),
 
-  cov({ id: 'g8c.ratio.compare-two', skill: 'G6_RATIOS', outcome: 'G8.RATES.d', form: 'why', rung: 3,
+  cov({ id: 'g8c.ratio.compare-two', skill: 'G6_RATIOS', outcome: 'MATH.G8.NUMBER.RATES_RATIO_PROPORTIONS_.d', cskill: 'MATH.G8.NUMBER.RATES_RATIO_PROPORTIONS_.RATIO_COMPARE', misMapped: false, reveals: ['M_SHARE_BY_PART_NOT_WHOLE', 'M_SAME_ORDER_SAME_RATIO'], form: 'why', rung: 3,
     gen: () => {
       const a = randInt(1, 5), b = randInt(a + 1, 9), equal = Math.random() < 0.25, k = randInt(2, 3);
       let c, d;
@@ -142,7 +142,7 @@ export const FAMILIES = [
         steps: [`Class 8A: ${a} out of ${a + b} are girls. Class 8B: ${c} out of ${c + d} are girls.`, `${a}/${a + b} and ${c}/${c + d}: ${equal ? 'they are equal' : s1 > s2 ? 'the first is bigger' : 'the second is bigger'}. The answer is ${right}.`] };
     } }),
 
-  cov({ id: 'g8c.pct.change-amount', skill: 'G8_PERCENTAGE_CHANGE', outcome: 'G8.RATES.h', form: 'word', rung: 2,
+  cov({ id: 'g8c.pct.change-amount', skill: 'G8_PERCENTAGE_CHANGE', outcome: 'MATH.G8.NUMBER.RATES_RATIO_PROPORTIONS_.h', cskill: 'MATH.G8.NUMBER.RATES_RATIO_PROPORTIONS_.PERCENT_CHANGE', misMapped: false, reveals: ['M_CHANGE_NOT_PERCENT', 'M_PCT_OF_NEW', 'M_NEW_AS_PERCENT', 'M_DECIMAL_NOT_PERCENT'], form: 'word', rung: 2,
     gen: () => {
       const up = Math.random() < 0.55, pct = pick([10, 20, 25, 30, 40, 50]), base = pick([2000, 2500, 3000, 3500, 4000, 5000, 8000, 12000]);
       const ch = (base * pct) / 100, nw = up ? base + ch : base - ch;
@@ -154,7 +154,7 @@ export const FAMILIES = [
         steps: [`Change = ${commas(Math.max(base, nw))} − ${commas(Math.min(base, nw))} = ${commas(ch)}.`, `${commas(ch)} ÷ ${commas(base)} × 100 = ${pct}%.`], chk: (a) => Math.abs(base * (1 + (up ? 1 : -1) * a / 100) - nw) < 1e-6 };
     } }),
 
-  cov({ id: 'g8c.pct.which-method', skill: 'G8_PERCENTAGE_CHANGE', outcome: 'G8.RATES.h', form: 'why', rung: 3,
+  cov({ id: 'g8c.pct.which-method', skill: 'G8_PERCENTAGE_CHANGE', outcome: 'MATH.G8.NUMBER.RATES_RATIO_PROPORTIONS_.h', cskill: 'MATH.G8.NUMBER.RATES_RATIO_PROPORTIONS_.PERCENT_CHANGE', misMapped: false, reveals: ['M_PCT_OF_NEW', 'M_NEW_AS_PERCENT'], form: 'why', rung: 3,
     gen: () => {
       const base = pick([2400, 3000, 4500, 6000]), nw = base + pick([300, 600, 900, 1200]), p = person();
       const right = `(${commas(nw)} − ${commas(base)}) ÷ ${commas(base)} × 100`;
@@ -164,7 +164,7 @@ export const FAMILIES = [
         steps: ['Find the increase by taking the old amount from the new amount.', `Divide by the original and multiply by 100: ${right}.`] };
     } }),
 
-  cov({ id: 'g8c.prop.direct-or-inverse', skill: 'G8_RATIO_PROPORTION', outcome: 'G8.RATES.i', form: 'direct', rung: 2,
+  cov({ id: 'g8c.prop.direct-or-inverse', skill: 'G8_RATIO_PROPORTION', outcome: 'MATH.G8.NUMBER.RATES_RATIO_PROPORTIONS_.i', cskill: 'MATH.G8.NUMBER.RATES_RATIO_PROPORTIONS_.PROPORTION_IDENTIFY', misMapped: false, reveals: ['M_DIRECT_AS_INVERSE', 'M_UNLINKED_AS_PROPORTION'], form: 'direct', rung: 2,
     gen: () => {
       const direct = ['The number of exercise books bought and the total cost, when each book costs the same', 'The litres of petrol bought and the cost, at a fixed price per litre', 'The kilograms of sugar bought and the cost of the sugar', 'The distance a bus travels and the time taken, at a steady speed', 'The number of mandazi bought and the money paid'];
       const inverse = ['The number of workers building a wall and the days they need', 'The speed of a matatu and the time it takes to go from Nakuru to Eldoret', 'The number of taps filling a tank and the time to fill it', 'The number of learners sharing 60 sweets and the number each learner gets', 'The number of machines ploughing a shamba and the hours they need'];
@@ -179,7 +179,7 @@ export const FAMILIES = [
     } }),
 
   // ================================================================ LINEAR EQUATIONS
-  cov({ id: 'g8c.eq.eliminate-subtract', skill: 'G8_SIMULTANEOUS_INTRO', outcome: 'G8.EQUATIONS.c', form: 'steps', rung: 3,
+  cov({ id: 'g8c.eq.eliminate-subtract', skill: 'G8_SIMULTANEOUS_INTRO', outcome: 'MATH.G8.ALGEBR.LINEAR_EQUATIONS.c', cskill: 'MATH.G8.ALGEBR.LINEAR_EQUATIONS.SOLVE_BY_ELIMINATION', misMapped: false, reveals: ['M_NOT_DIVIDED_BY_COEFFICIENT', 'M_ADDED_INSTEAD_OF_SUBTRACTED'], form: 'steps', rung: 3,
     gen: () => {
       const c = pick([40, 50, 60, 70, 80]), t = pick([20, 30, 40, 50]), a = randInt(2, 4), b1 = randInt(1, 3), b2 = randInt(b1 + 1, 6), P1 = a * c + b1 * t, P2 = a * c + b2 * t;
       const w1 = [[P2 - P1, 'You subtracted the totals but did not divide by the difference in the number of packets of salt.'], [round((P1 + P2) / (b1 + b2), 2), 'The bars of soap are the same in both orders, so subtract the equations. Adding does not remove them.']];
@@ -191,7 +191,7 @@ export const FAMILIES = [
         steps: [`Subtract: ${b2 - b1} packets of salt cost ${sh(P2 - P1)}, so one packet is ${sh(t)}.`, `${a} bars of soap cost ${sh(P1)} − ${sh(b1 * t)} = ${sh(a * c)}, so one bar is ${sh(c)}.`], chk: (v) => a * v[1] + b1 * v[0] === P1 && a * v[1] + b2 * v[0] === P2 };
     } }),
 
-  cov({ id: 'g8c.eq.eliminate-add', skill: 'G8_SIMULTANEOUS_INTRO', outcome: 'G8.EQUATIONS.c', form: 'steps', rung: 3,
+  cov({ id: 'g8c.eq.eliminate-add', skill: 'G8_SIMULTANEOUS_INTRO', outcome: 'MATH.G8.ALGEBR.LINEAR_EQUATIONS.c', cskill: 'MATH.G8.ALGEBR.LINEAR_EQUATIONS.SOLVE_BY_ELIMINATION', misMapped: false, reveals: ['M_EQUAL_SPLIT_ASSUMED', 'M_NOT_DIVIDED_BY_COEFFICIENT'], form: 'steps', rung: 3,
     gen: () => {
       const small = randInt(20, 60), diff = randInt(4, 30), big = small + diff, S = big + small, p = person();
       const goods = pick(['maize', 'beans', 'rice', 'sugar']), other = pick(['flour', 'salt']);
@@ -204,7 +204,7 @@ export const FAMILIES = [
     } }),
 
   // ================================================================ DATA
-  cov({ id: 'g8c.data.line-difference', skill: 'G8_DATA_GRAPHS', outcome: 'G8.DATA.d', form: 'graph', rung: 2,
+  cov({ id: 'g8c.data.line-difference', skill: 'G8_DATA_GRAPHS', outcome: 'MATH.G8.DATA_H.DATA_PRESENTATION_AND_IN.d', cskill: 'MATH.G8.DATA_H.DATA_PRESENTATION_AND_IN.LINE_GRAPH_INTERPRET', form: 'graph', rung: 2,
     gen: () => {
       const ys = Array.from({ length: 6 }, () => randInt(5, 14) * 10), i = randInt(0, 2), j = randInt(i + 2, 5);
       if (ys[i] === ys[j]) return null;
@@ -212,12 +212,12 @@ export const FAMILIES = [
       const top = Math.max(...ys);
       return { question: `The line graph shows the price of a kilogram of onions at a market in six weeks. By how many shillings did the price ${up ? 'rise' : 'fall'} between week ${i + 1} and week ${j + 1}?`, answer: diff,
         model: { type: 'line-graph', data: { points: ys.map((y, k) => ({ x: k + 1, y })), xTicks: [1, 2, 3, 4, 5, 6], yTicks: Array.from({ length: Math.ceil(top / 20) + 1 }, (_, k) => k * 20), xLabel: 'Week', yLabel: 'Price (sh per kg)' } },
-        wrong: [[ys[j], `This is the price in week ${j + 1}. Take the price in week ${i + 1} from it.`], [ys[i] + ys[j], 'You added the two prices. The question asks for the change.'], [j - i, 'This is the number of weeks. Read the price on the vertical axis.'], [diff + 20, 'You read one tick too far on the axis. Check which marks the two points sit on.']],
+        wrong: [[ys[j], `This is the price in week ${j + 1}. Take the price in week ${i + 1} from it.`, 'M_ONE_READING_FOR_CHANGE'], [ys[i] + ys[j], 'You added the two prices. The question asks for the change.', 'M_READINGS_ADDED'], [j - i, 'This is the number of weeks. Read the price on the vertical axis.', 'M_WEEKS_FOR_PRICE'], [diff + 20, 'You read one tick too far on the axis. Check which marks the two points sit on.', 'SLIP']],
         hints: ['Read each price from the vertical axis. Use a ruler across from the point.', 'Take the smaller price from the bigger one.'],
         steps: [`Week ${i + 1}: ${ys[i]}. Week ${j + 1}: ${ys[j]}.`, `${Math.max(ys[i], ys[j])} − ${Math.min(ys[i], ys[j])} = ${diff} shillings.`], chk: (a) => a === Math.abs(ys[j] - ys[i]) };
     } }),
 
-  cov({ id: 'g8c.data.line-fall', skill: 'G8_DATA_GRAPHS', outcome: 'G8.DATA.d', form: 'graph', rung: 3,
+  cov({ id: 'g8c.data.line-fall', skill: 'G8_DATA_GRAPHS', outcome: 'MATH.G8.DATA_H.DATA_PRESENTATION_AND_IN.d', cskill: 'MATH.G8.DATA_H.DATA_PRESENTATION_AND_IN.LINE_GRAPH_INTERPRET', misMapped: false, reveals: ['M_RISE_READ_AS_FALL'], form: 'graph', rung: 3,
     gen: () => {
       const ys = [randInt(6, 12) * 10]; for (let k = 1; k < 6; k++) ys.push(ys[k - 1] + 10 * randInt(1, 3));
       const f = randInt(1, 4); ys[f] = ys[f - 1] - 10 * randInt(1, 3); for (let k = f + 1; k < 6; k++) ys[k] = ys[k - 1] + 10 * randInt(1, 3);
@@ -235,7 +235,7 @@ export const FAMILIES = [
         steps: ys.slice(1).map((y, k) => `Week ${k + 1} to ${k + 2}: ${ys[k]} to ${y}, ${y < ys[k] ? 'a fall' : 'a rise'}.`) };
     } }),
 
-  cov({ id: 'g8c.data.mean-of-scores', skill: 'G6_MEAN', outcome: 'G8.DATA.f', form: 'word', rung: 2,
+  cov({ id: 'g8c.data.mean-of-scores', skill: 'G6_MEAN', outcome: 'MATH.G8.DATA_H.DATA_PRESENTATION_AND_IN.f', cskill: 'MATH.G8.DATA_H.DATA_PRESENTATION_AND_IN.MEAN', misMapped: false, reveals: ['M_TOTAL_FOR_MEAN', 'M_DIVIDED_BY_ONE_LESS', 'M_MEDIAN_FOR_MEAN'], form: 'word', rung: 2,
     gen: () => {
       const n = randInt(4, 6), mean = randInt(8, 30), vals = Array.from({ length: n }, () => mean + randInt(-6, 6));
       const adj = n * mean - vals.reduce((a, b) => a + b, 0); vals[0] += adj;
@@ -248,7 +248,7 @@ export const FAMILIES = [
         steps: [`Total: ${vals.join(' + ')} = ${sum}.`, `Mean = ${sum} ÷ ${n} = ${mean}.`], chk: (a) => a * n === vals.reduce((s, v) => s + v, 0) };
     } }),
 
-  cov({ id: 'g8c.data.mean-missing-value', skill: 'G6_MEAN', outcome: 'G8.DATA.f', form: 'word', rung: 3,
+  cov({ id: 'g8c.data.mean-missing-value', skill: 'G6_MEAN', outcome: 'MATH.G8.DATA_H.DATA_PRESENTATION_AND_IN.f', cskill: 'MATH.G8.DATA_H.DATA_PRESENTATION_AND_IN.MEAN_PROBLEMS', misMapped: false, reveals: ['M_MEAN_FOR_MISSING', 'M_KNOWN_MEAN_FOR_MISSING', 'M_TOTAL_ADDED_FOR_MISSING'], form: 'word', rung: 3,
     gen: () => {
       const n = randInt(4, 5), mean = randInt(12, 40), known = Array.from({ length: n - 1 }, () => mean + randInt(-8, 8)), last = n * mean - known.reduce((a, b) => a + b, 0);
       if (last < 1 || last === mean) return null;
@@ -259,7 +259,7 @@ export const FAMILIES = [
         steps: [`Total needed = ${mean} × ${n} = ${n * mean}.`, `${n * mean} − ${sumK} = ${last}.`], chk: (a) => (a + sumK) / n === mean };
     } }),
 
-  cov({ id: 'g8c.data.median-of-list', skill: 'G8_DATA_GRAPHS', outcome: 'G8.DATA.g', form: 'word', rung: 2,
+  cov({ id: 'g8c.data.median-of-list', skill: 'G8_DATA_GRAPHS', outcome: 'MATH.G8.DATA_H.DATA_PRESENTATION_AND_IN.g', cskill: 'MATH.G8.DATA_H.DATA_PRESENTATION_AND_IN.MEDIAN', misMapped: false, reveals: ['M_MEDIAN_UNSORTED', 'M_MEAN_FOR_MEDIAN', 'M_EVEN_COUNT_MIDDLE'], form: 'word', rung: 2,
     gen: () => {
       const n = pick([5, 6, 7, 8]), vals = Array.from({ length: n }, () => randInt(3, 40)), sorted = [...vals].sort((a, b) => a - b);
       const median = n % 2 ? sorted[(n - 1) / 2] : (sorted[n / 2 - 1] + sorted[n / 2]) / 2;
@@ -272,7 +272,7 @@ export const FAMILIES = [
         steps: [`In order: ${sorted.join(', ')}.`, n % 2 ? `The middle number is ${median}.` : `The two middle numbers are ${sorted[n / 2 - 1]} and ${sorted[n / 2]}, so the median is ${median}.`], chk: (a) => sorted.filter(v => v < a).length <= n / 2 && sorted.filter(v => v > a).length <= n / 2 };
     } }),
 
-  cov({ id: 'g8c.data.median-spot-reason', skill: 'G8_DATA_GRAPHS', outcome: 'G8.DATA.g', form: 'why', rung: 3,
+  cov({ id: 'g8c.data.median-spot-reason', skill: 'G8_DATA_GRAPHS', outcome: 'MATH.G8.DATA_H.DATA_PRESENTATION_AND_IN.g', cskill: 'MATH.G8.DATA_H.DATA_PRESENTATION_AND_IN.MEDIAN', misMapped: false, reveals: ['M_MEDIAN_UNSORTED', 'M_MEAN_FOR_MEDIAN', 'M_MODE_FOR_MEDIAN'], form: 'why', rung: 3,
     gen: () => {
       const vals = Array.from({ length: 5 }, () => randInt(2, 30));
       const sorted = [...vals].sort((a, b) => a - b);
@@ -285,7 +285,7 @@ export const FAMILIES = [
     } }),
 
   // ================================================================ PROBABILITY
-  cov({ id: 'g8c.prob.experimental', skill: 'G8_PROBABILITY_INTRO', outcome: 'G8.PROB.c', form: 'word', rung: 2,
+  cov({ id: 'g8c.prob.experimental', skill: 'G8_PROBABILITY_INTRO', outcome: 'MATH.G8.DATA_H.PROBABILITY.c', cskill: 'MATH.G8.DATA_H.PROBABILITY.EXPERIMENTAL_PROBABILITY', misMapped: false, reveals: ['M_COMPLEMENT_GIVEN', 'M_PART_TO_PART_PROB', 'M_PROBABILITY_INVERTED', 'M_THEORY_FOR_EXPERIMENT'], form: 'word', rung: 2,
     gen: () => {
       const n = pick([20, 40, 50, 60, 80, 100]), k = randInt(3, n - 3);
       if (k * 2 === n) return null;
@@ -297,7 +297,7 @@ export const FAMILIES = [
         steps: [`It happened ${k} times out of ${n}.`, `Probability = ${k}/${n} = ${right}.`], chk: (a) => { const [x, y] = a.split('/').map(Number); return x * n === k * y; } };
     } }),
 
-  cov({ id: 'g8c.prob.fraction-to-decimal', skill: 'G8_PROBABILITY_INTRO', outcome: 'G8.PROB.e', form: 'direct', rung: 2,
+  cov({ id: 'g8c.prob.fraction-to-decimal', skill: 'G8_PROBABILITY_INTRO', outcome: 'MATH.G8.DATA_H.PROBABILITY.e', cskill: 'MATH.G8.DATA_H.PROBABILITY.PROBABILITY_DECIMAL_PERCENT', misMapped: false, reveals: ['M_DIVIDED_BY_TEN_PROB', 'M_DIVIDED_WRONG_WAY_PROB', 'M_DIGITS_AROUND_POINT'], form: 'direct', rung: 2,
     gen: () => {
       const d = pick([4, 5, 8, 10, 20, 25, 50]), n = randInt(1, d - 1);
       if (gcd(n, d) !== 1) return null;
@@ -308,7 +308,7 @@ export const FAMILIES = [
         steps: [`${n}/${d} = ${n} ÷ ${d}.`, `${n} ÷ ${d} = ${dec}.`], chk: (a) => Math.abs(a * d - n) < 1e-6 };
     } }),
 
-  cov({ id: 'g8c.prob.as-percentage', skill: 'G8_PROBABILITY_INTRO', outcome: 'G8.PROB.e', form: 'word', rung: 2,
+  cov({ id: 'g8c.prob.as-percentage', skill: 'G8_PROBABILITY_INTRO', outcome: 'MATH.G8.DATA_H.PROBABILITY.e', cskill: 'MATH.G8.DATA_H.PROBABILITY.PROBABILITY_DECIMAL_PERCENT', misMapped: false, reveals: ['M_DECIMAL_FOR_PERCENT', 'M_NUMERATOR_FOR_PERCENT', 'M_TIMES_TEN_PERCENT'], form: 'word', rung: 2,
     gen: () => {
       const d = pick([20, 25, 50, 10, 4, 5]), n = randInt(1, d - 1);
       if (gcd(n, d) !== 1) return null;
@@ -321,7 +321,7 @@ export const FAMILIES = [
         steps: [`${n}/${d} × 100.`, `${n} ÷ ${d} × 100 = ${pct}%.`], chk: (a) => a * d === n * 100 };
     } }),
 
-  cov({ id: 'g8c.prob.by-chance', skill: 'G8_PROBABILITY_INTRO', outcome: 'G8.PROB.g', form: 'direct', rung: 1,
+  cov({ id: 'g8c.prob.by-chance', skill: 'G8_PROBABILITY_INTRO', outcome: 'MATH.G8.DATA_H.PROBABILITY.g', cskill: 'MATH.G8.DATA_H.PROBABILITY.CHANCE_EVENTS', misMapped: false, reveals: ['M_SURE_EVENT_AS_CHANCE'], form: 'direct', rung: 1,
     gen: () => {
       const chance = ['A fair coin is tossed and lands on heads', 'A die is rolled and shows a six', 'The first customer at a kiosk buys a mandazi', 'A learner picked from the class by lots is left-handed', 'The next car to pass the school gate is white', 'A raffle ticket drawn at a harambee wins the prize'];
       const sure = ['The sun rises tomorrow morning', 'Saturday comes after Friday', 'A full 5-litre jerrican holds 5 litres of water', 'A learner who is 12 years old will be 13 on her next birthday', 'Water in a closed bottle stays in the bottle until it is poured out'];
@@ -333,7 +333,7 @@ export const FAMILIES = [
     } }),
 
   // ================================================================ COORDINATES AND GRAPHS
-  cov({ id: 'g8c.graph.point-description', skill: 'G8_COORDINATES', outcome: 'G8.GRAPHS.c', form: 'direct', rung: 2,
+  cov({ id: 'g8c.graph.point-description', skill: 'G8_COORDINATES', outcome: 'MATH.G8.GEOMET.COORDINATES_AND_GRAPHS.c', cskill: 'MATH.G8.GEOMET.COORDINATES_AND_GRAPHS.PLOT_POINTS', misMapped: false, reveals: ['M_X_Y_SWAPPED_PLOT', 'M_X_SIGN_DIRECTION', 'M_Y_SIGN_DIRECTION'], form: 'direct', rung: 2,
     gen: () => {
       const x = pick([-6, -5, -4, -3, -2, 2, 3, 4, 5, 6]), y = pick([-5, -4, -3, -2, 2, 3, 4, 5]);
       if (Math.abs(x) === Math.abs(y)) return null;
@@ -346,7 +346,7 @@ export const FAMILIES = [
         steps: [`The first number is ${x}: move ${Math.abs(x)} ${x > 0 ? 'right' : 'left'}.`, `The second number is ${y}: move ${Math.abs(y)} ${y > 0 ? 'up' : 'down'}.`] };
     } }),
 
-  cov({ id: 'g8c.graph.point-after-moves', skill: 'G8_COORDINATES', outcome: 'G8.GRAPHS.c', form: 'word', rung: 3,
+  cov({ id: 'g8c.graph.point-after-moves', skill: 'G8_COORDINATES', outcome: 'MATH.G8.GEOMET.COORDINATES_AND_GRAPHS.c', cskill: 'MATH.G8.GEOMET.COORDINATES_AND_GRAPHS.PLOT_POINTS', misMapped: false, reveals: ['M_X_Y_SWAPPED_PLOT', 'M_X_SIGN_DIRECTION', 'M_Y_SIGN_DIRECTION'], form: 'word', rung: 3,
     gen: () => {
       const a = randInt(2, 7), b = randInt(1, 6), dx = Math.random() < 0.5 ? -a : a, dy = Math.random() < 0.5 ? -b : b;
       if (a === b) return null;
@@ -357,7 +357,7 @@ export const FAMILIES = [
         steps: [`Across: ${dx < 0 ? 'left' : 'right'} ${a} gives x = ${sgn(dx)}.`, `Up or down: ${dy < 0 ? 'down' : 'up'} ${b} gives y = ${sgn(dy)}. The point is ${f(dx, dy)}.`] };
     } }),
 
-  cov({ id: 'g8c.graph.boda-meet', skill: 'G8_LINEAR_GRAPHS', outcome: 'G8.GRAPHS.h', form: 'steps', rung: 3,
+  cov({ id: 'g8c.graph.boda-meet', skill: 'G8_LINEAR_GRAPHS', outcome: 'MATH.G8.GEOMET.COORDINATES_AND_GRAPHS.h', cskill: 'MATH.G8.GEOMET.COORDINATES_AND_GRAPHS.SIMULTANEOUS_GRAPH_CONTEXT', misMapped: false, reveals: ['M_DIFFERENCE_NOT_DIVIDED_GRAPH', 'M_RATES_ADDED', 'M_FIXED_ADDED'], form: 'steps', rung: 3,
     gen: () => {
       const r1 = randInt(10, 20), r2 = r1 + randInt(5, 10), x = randInt(2, 8), f2 = 10 * randInt(2, 8), f1 = f2 + (r2 - r1) * x;
       if (f1 % 10 !== 0 && f1 % 5 !== 0) return null;
@@ -371,7 +371,7 @@ export const FAMILIES = [
     } }),
 
   // ================================================================ SCALE DRAWING
-  cov({ id: 'g8c.scale.represent-length', skill: 'G8_SCALE_DRAWING', outcome: 'G8.SCALE.a', form: 'table', rung: 2,
+  cov({ id: 'g8c.scale.represent-length', skill: 'G8_SCALE_DRAWING', outcome: 'MATH.G8.GEOMET.SCALE_DRAWING.a', cskill: 'MATH.G8.GEOMET.SCALE_DRAWING.REPRESENT_TO_SCALE', misMapped: false, reveals: ['M_MULTIPLIED_TO_MAP', 'M_REAL_FOR_MAP', 'M_LENGTHS_MISMATCHED'], form: 'table', rung: 2,
     gen: () => {
       const s = pick([2, 4, 5, 10]), ks = [randInt(2, 9), randInt(2, 9), randInt(2, 9)];
       if (new Set(ks).size < 3) return null;
@@ -384,17 +384,17 @@ export const FAMILIES = [
         steps: names.map((n, i) => `${n}: ${reals[i]} ÷ ${s} = ${ks[i]} cm.`) };
     } }),
 
-  cov({ id: 'g8c.scale.map-to-actual', skill: 'G8_SCALE_DRAWING', outcome: 'G8.SCALE.c', form: 'word', rung: 2,
+  cov({ id: 'g8c.scale.map-to-actual', skill: 'G8_SCALE_DRAWING', outcome: 'MATH.G8.GEOMET.SCALE_DRAWING.c', cskill: 'MATH.G8.GEOMET.SCALE_DRAWING.SCALE_TO_ACTUAL', form: 'word', rung: 2,
     gen: () => {
       const s = pick([2, 5, 10, 20, 25]), L = randInt(11, 79) / 2, real = L * s, [a, b] = shuffle(['Nakuru', 'Naivasha', 'Gilgil', 'Nyahururu', 'Eldoret', 'Kitale', 'Kisumu', 'Kericho']).slice(0, 2);
       if (real % 0.5 !== 0) return null;
       return { question: `${a} and ${b} are ${L} cm apart on ${person().name}'s map. The key says that 1 cm stands for ${s} km. How far apart are the two towns in real life, in kilometres?`, answer: real,
-        wrong: [[round(L / s, 2), 'You divided. To go from the map to the real distance, multiply by what one centimetre stands for.'], [round(L + s, 2), 'You added. Each centimetre on the map stands for several kilometres, so multiply.'], [round(real * 100, 0), 'You changed the answer to centimetres. The question asks for kilometres.'], [round(real / 2, 2), 'Check the multiplication again. Multiply the map distance by the number of kilometres for 1 cm.']],
+        wrong: [[round(L / s, 2), 'You divided. To go from the map to the real distance, multiply by what one centimetre stands for.', 'M_SCALE_DIVIDED'], [round(L + s, 2), 'You added. Each centimetre on the map stands for several kilometres, so multiply.', 'M_SCALE_ADDED'], [round(real * 100, 0), 'You changed the answer to centimetres. The question asks for kilometres.', 'M_UNIT_CHANGED_NEEDLESSLY'], [round(real / 2, 2), 'Check the multiplication again. Multiply the map distance by the number of kilometres for 1 cm.', 'SLIP']],
         hints: ['Each centimetre on the map is one lot of the scale distance.', 'Multiply the map distance by the kilometres for 1 cm.'],
         steps: [`Real distance = ${L} × ${s}.`, `${L} × ${s} = ${real} km.`], chk: (a) => a / s === L };
     } }),
 
-  cov({ id: 'g8c.scale.write-statement', skill: 'G8_SCALE_FORMS', outcome: 'G8.SCALE.e', form: 'direct', rung: 2,
+  cov({ id: 'g8c.scale.write-statement', skill: 'G8_SCALE_FORMS', outcome: 'MATH.G8.GEOMET.SCALE_DRAWING.e', cskill: 'MATH.G8.GEOMET.SCALE_DRAWING.STATEMENT_SCALE', misMapped: false, reveals: ['M_WHOLE_REAL_FOR_ONE_CM', 'M_STATEMENT_NOT_FOR_ONE_CM', 'M_MAP_FOR_REAL'], form: 'direct', rung: 2,
     gen: () => {
       const s = pick([2, 5, 10, 20, 25, 50]), k = randInt(3, 9), real = s * k;
       const right = `1 cm represents ${s} km`;
@@ -405,7 +405,7 @@ export const FAMILIES = [
         steps: [`${real} km ÷ ${k} = ${s} km.`, `So ${right}.`] };
     } }),
 
-  cov({ id: 'g8c.scale.ratio-to-ground', skill: 'G8_SCALE_FORMS', outcome: 'G8.SCALE.f', form: 'word', rung: 3,
+  cov({ id: 'g8c.scale.ratio-to-ground', skill: 'G8_SCALE_FORMS', outcome: 'MATH.G8.GEOMET.SCALE_DRAWING.f', cskill: 'MATH.G8.GEOMET.SCALE_DRAWING.RATIO_SCALE', misMapped: false, reveals: ['M_RATIO_CM_NOT_CONVERTED', 'M_METRES_FOR_KM', 'M_DIVIDED_BY_1000'], form: 'word', rung: 3,
     gen: () => {
       const r = pick([[10000, 0.1], [20000, 0.2], [50000, 0.5], [100000, 1], [250000, 2.5]]), p = person();
       const w = [[r[0], 'This is the real length in centimetres. The question asks for kilometres.'], [r[0] / 100, 'This is in metres. The question asks for kilometres.'], [r[0] / 1000, 'This is not kilometres. 1 km is 100,000 cm.'], [round(r[1] * 10, 2), 'Check the change from centimetres to kilometres. Divide by 100 and then by 1,000.']];
@@ -414,7 +414,7 @@ export const FAMILIES = [
         steps: [`1 cm stands for ${commas(r[0])} cm.`, `${commas(r[0])} cm ÷ 100 000 = ${r[1]} km.`], chk: (a) => Math.round(a * 100000) === r[0] };
     } }),
 
-  cov({ id: 'g8c.scale.write-ratio', skill: 'G8_SCALE_FORMS', outcome: 'G8.SCALE.g', form: 'direct', rung: 3,
+  cov({ id: 'g8c.scale.write-ratio', skill: 'G8_SCALE_FORMS', outcome: 'MATH.G8.GEOMET.SCALE_DRAWING.g', cskill: 'MATH.G8.GEOMET.SCALE_DRAWING.RATIO_SCALE', misMapped: false, reveals: ['M_RATIO_SCALE_REVERSED', 'M_METRES_LEFT_IN_RATIO'], form: 'direct', rung: 3,
     gen: () => {
       const c = pick([2, 4, 5, 10]), m = c * randInt(2, 9) * 5 / 5, n = (m * 100) / c;
       if (n % 1 !== 0 || n < 20) return null;
@@ -425,7 +425,7 @@ export const FAMILIES = [
         steps: [`${m} m = ${m * 100} cm. The ratio is ${c} : ${m * 100}.`, `Divide both by ${c}: 1 : ${commas(n)}.`] };
     } }),
 
-  cov({ id: 'g8c.scale.statement-to-ratio', skill: 'G8_SCALE_FORMS', outcome: 'G8.SCALE.h', form: 'direct', rung: 3,
+  cov({ id: 'g8c.scale.statement-to-ratio', skill: 'G8_SCALE_FORMS', outcome: 'MATH.G8.GEOMET.SCALE_DRAWING.h', cskill: 'MATH.G8.GEOMET.SCALE_DRAWING.CONVERT_SCALE_FORMS', misMapped: false, reveals: ['M_KM_NOT_TO_CM', 'M_KM_TO_M_ONLY', 'M_CM_IN_KM_WRONG'], form: 'direct', rung: 3,
     gen: () => {
       const k = pick([1, 2, 5, 10, 25]), n = k * 100000, right = `1 : ${commas(n)}`;
       const options = mc(right, [[`1 : ${commas(k)}`, 'The kilometres must be changed to centimetres to compare with 1 cm.'], [`1 : ${commas(k * 1000)}`, 'You changed kilometres to metres only. Both lengths must be in centimetres.'], [`1 : ${commas(k * 10000)}`, '1 km is 100,000 cm, not 10,000 cm.']]);
@@ -434,7 +434,7 @@ export const FAMILIES = [
         steps: [`${k} km = ${commas(k * 100000)} cm.`, `The ratio is 1 : ${commas(n)}.`] };
     } }),
 
-  cov({ id: 'g8c.scale.ratio-to-statement', skill: 'G8_SCALE_FORMS', outcome: 'G8.SCALE.h', form: 'word', rung: 3,
+  cov({ id: 'g8c.scale.ratio-to-statement', skill: 'G8_SCALE_FORMS', outcome: 'MATH.G8.GEOMET.SCALE_DRAWING.h', cskill: 'MATH.G8.GEOMET.SCALE_DRAWING.CONVERT_SCALE_FORMS', misMapped: false, reveals: ['M_DIVIDED_BY_TEN', 'M_DIVIDED_TWICE_SCALE', 'M_MULTIPLIED_TO_CONVERT'], form: 'word', rung: 3,
     gen: () => {
       const m = pick([5, 10, 20, 25, 50, 100]), n = m * 100, p = person();
       const w = [[n, 'This is in centimetres. The question asks for metres.'], [n / 10, 'You divided by ten only. A metre is much longer than ten centimetres.'], [round(m / 100, 3), 'You divided twice. Divide only once, to change centimetres to metres.'], [n * 100, 'You multiplied. To change centimetres to metres, divide.']];

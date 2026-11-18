@@ -1,0 +1,1171 @@
+{
+ "outcomes": {
+  "MATH.G8.NUMBER.INTEGERS.a": "identify integers in different situations",
+  "MATH.G8.NUMBER.INTEGERS.b": "represent integers on a number line in different situations",
+  "MATH.G8.NUMBER.INTEGERS.c": "carry out operations of addition and subtraction integers on the number line in real life situations",
+  "MATH.G8.NUMBER.INTEGERS.d": "use IT or print resources for learning more on integers and for skills development",
+  "MATH.G8.NUMBER.INTEGERS.e": "reflect on use of integers in real life situations",
+  "MATH.G8.NUMBER.FRACTIONS.a": "carry out combined operations on fractions in different situations",
+  "MATH.G8.NUMBER.FRACTIONS.b": "Work out operations on fractions in real life Situations",
+  "MATH.G8.NUMBER.FRACTIONS.c": "use IT devices for learning more on fractions and for enjoyment",
+  "MATH.G8.NUMBER.FRACTIONS.d": "promote use of fractions in real life situations",
+  "MATH.G8.NUMBER.DECIMALS.a": "convert fractions to decimals in different situations",
+  "MATH.G8.NUMBER.DECIMALS.b": "identify recurring decimals in different situations",
+  "MATH.G8.NUMBER.DECIMALS.c": "convert recurring decimals into fractions in different situations",
+  "MATH.G8.NUMBER.DECIMALS.d": "round off a decimal number to a required number of decimal places in different situations",
+  "MATH.G8.NUMBER.DECIMALS.e": "express numbers to a required significant figure in real life situations",
+  "MATH.G8.NUMBER.DECIMALS.f": "express numbers in standard form in different situations",
+  "MATH.G8.NUMBER.DECIMALS.g": "carry out combined operations on decimals in different situations",
+  "MATH.G8.NUMBER.DECIMALS.h": "apply decimals to real life situations",
+  "MATH.G8.NUMBER.DECIMALS.i": "use IT or other resources for learning more on decimals and for enjoyment",
+  "MATH.G8.NUMBER.DECIMALS.j": "promote use of decimals in real life situations",
+  "MATH.G8.NUMBER.SQUARES_AND_SQUARE_ROOTS.a": "work out the squares of numbers from tables in different situations",
+  "MATH.G8.NUMBER.SQUARES_AND_SQUARE_ROOTS.b": "work out the square roots of numbers from tables in different situations",
+  "MATH.G8.NUMBER.SQUARES_AND_SQUARE_ROOTS.c": "work out squares and square roots of numbers using a calculator in different situations",
+  "MATH.G8.NUMBER.SQUARES_AND_SQUARE_ROOTS.d": "use IT or other materials to learn more on squares and square roots of numbers and for fun",
+  "MATH.G8.NUMBER.SQUARES_AND_SQUARE_ROOTS.e": "enjoy using squares and square roots in real life situations",
+  "MATH.G8.NUMBER.RATES_RATIO_PROPORTIONS_.a": "identify rates in different situations",
+  "MATH.G8.NUMBER.RATES_RATIO_PROPORTIONS_.b": "work out rates in real life situations",
+  "MATH.G8.NUMBER.RATES_RATIO_PROPORTIONS_.c": "express fractions as ratios in real life situations",
+  "MATH.G8.NUMBER.RATES_RATIO_PROPORTIONS_.d": "compare two or more ratios in different situations",
+  "MATH.G8.NUMBER.RATES_RATIO_PROPORTIONS_.e": "divide quantities in given ratios in real life situations",
+  "MATH.G8.NUMBER.RATES_RATIO_PROPORTIONS_.f": "work out ratios in different situations",
+  "MATH.G8.NUMBER.RATES_RATIO_PROPORTIONS_.g": "work out increase and decrease of quantities using ratios in real life situations",
+  "MATH.G8.NUMBER.RATES_RATIO_PROPORTIONS_.h": "work out percentage change of given quantities in real life situations",
+  "MATH.G8.NUMBER.RATES_RATIO_PROPORTIONS_.i": "identify direct and indirect proportions in real life situations",
+  "MATH.G8.NUMBER.RATES_RATIO_PROPORTIONS_.j": "work out direct and indirect proportions in real life situations",
+  "MATH.G8.NUMBER.RATES_RATIO_PROPORTIONS_.k": "use IT devices or other resources for more learning on ratios and proportions",
+  "MATH.G8.NUMBER.RATES_RATIO_PROPORTIONS_.l": "promote use of ratios and proportions in real life",
+  "MATH.G8.ALGEBR.ALGEBRAIC_EXPRESSIONS.a": "factorize algebraic expressions in different situations",
+  "MATH.G8.ALGEBR.ALGEBRAIC_EXPRESSIONS.b": "simplify algebraic fractions in different situations",
+  "MATH.G8.ALGEBR.ALGEBRAIC_EXPRESSIONS.c": "evaluate algebraic expressions by substituting numerical values in different situations",
+  "MATH.G8.ALGEBR.ALGEBRAIC_EXPRESSIONS.d": "use IT or other materials to learn more on algebraic expressions",
+  "MATH.G8.ALGEBR.ALGEBRAIC_EXPRESSIONS.e": "enjoy using algebraic expressions in real life situations",
+  "MATH.G8.ALGEBR.LINEAR_EQUATIONS.a": "form linear equations in two unknowns in real life situations",
+  "MATH.G8.ALGEBR.LINEAR_EQUATIONS.b": "solve linear equations in two unknowns by Substitution method in real life situations",
+  "MATH.G8.ALGEBR.LINEAR_EQUATIONS.c": "solve linear equations in two unknowns by elimination method in real life situations",
+  "MATH.G8.ALGEBR.LINEAR_EQUATIONS.d": "apply linear equations in two unknowns in real life situations",
+  "MATH.G8.ALGEBR.LINEAR_EQUATIONS.e": "use IT devices to work out linear learning and for enjoyment",
+  "MATH.G8.ALGEBR.LINEAR_EQUATIONS.f": "recognize use of linear equations in real life",
+  "MATH.G8.MEASUR.CIRCLES.a": "work out the circumference of a circle in real life situations",
+  "MATH.G8.MEASUR.CIRCLES.b": "work out the length of an Arc of a circle in different situations",
+  "MATH.G8.MEASUR.CIRCLES.c": "calculate the Perimeter of a sector of a circle in different situations",
+  "MATH.G8.MEASUR.CIRCLES.d": "use IT or other resources for more learning on circles",
+  "MATH.G8.MEASUR.CIRCLES.e": "promote use of circles in real life situations",
+  "MATH.G8.MEASUR.AREA.a": "calculate the Area of circle in different situations",
+  "MATH.G8.MEASUR.AREA.b": "work out the Area of a sector of a circle in different situations",
+  "MATH.G8.MEASUR.AREA.c": "work out the Surface Area of Cubes and Cuboids in real life situations",
+  "MATH.G8.MEASUR.AREA.d": "work out the Surface area of a cylinders in real life situations",
+  "MATH.G8.MEASUR.AREA.e": "determine the surface Area of a triangular Prism in different situations",
+  "MATH.G8.MEASUR.AREA.f": "work out the area of irregular shapes using square grids in real life situations",
+  "MATH.G8.MEASUR.AREA.g": "use IT and other materials for learning more on area and for enjoyment",
+  "MATH.G8.MEASUR.AREA.h": "recognise use of in real length life situations",
+  "MATH.G8.MEASUR.MONEY.a": "identify interest and principal in real life situations",
+  "MATH.G8.MEASUR.MONEY.b": "calculate simple interest in real life situations",
+  "MATH.G8.MEASUR.MONEY.c": "calculate compound interest per annum step by step up to three years in real life situations",
+  "MATH.G8.MEASUR.MONEY.d": "work out appreciation and depreciation per annum step by step up to three years in different situations",
+  "MATH.G8.MEASUR.MONEY.e": "work out hire purchase in real life situations",
+  "MATH.G8.MEASUR.MONEY.f": "use IT and other resources to carry out operations related to money",
+  "MATH.G8.MEASUR.MONEY.g": "spend money responsibly on needs and leisure",
+  "MATH.G8.GEOMET.GEOMETRICAL_CONSTRUCTION.a": "construct parallel and perpendicular lines in different situations",
+  "MATH.G8.GEOMET.GEOMETRICAL_CONSTRUCTION.b": "divide a line proportionally in different situations",
+  "MATH.G8.GEOMET.GEOMETRICAL_CONSTRUCTION.c": "identify angle properties of polygons in different situations",
+  "MATH.G8.GEOMET.GEOMETRICAL_CONSTRUCTION.d": "construct regular polygons up to a hexagon in different situations",
+  "MATH.G8.GEOMET.GEOMETRICAL_CONSTRUCTION.e": "construct irregular polygons up to a hexagon in different situations",
+  "MATH.G8.GEOMET.GEOMETRICAL_CONSTRUCTION.f": "construct circles passing through the vertices of a triangle in different situations",
+  "MATH.G8.GEOMET.GEOMETRICAL_CONSTRUCTION.g": "construct circles touching the sides of the triangle in different situations",
+  "MATH.G8.GEOMET.GEOMETRICAL_CONSTRUCTION.h": "use IT as well as other materials to learn more about geometric constructions and for skills development",
+  "MATH.G8.GEOMET.GEOMETRICAL_CONSTRUCTION.i": "admire geometric patterns in objects and substances in real life",
+  "MATH.G8.GEOMET.COORDINATES_AND_GRAPHS.a": "draw a labelled Cartesian plane on different learning materials",
+  "MATH.G8.GEOMET.COORDINATES_AND_GRAPHS.b": "identify points on the Cartesian plane in different situations",
+  "MATH.G8.GEOMET.COORDINATES_AND_GRAPHS.c": "plot points on the Cartesian plane in different situations",
+  "MATH.G8.GEOMET.COORDINATES_AND_GRAPHS.d": "generate table of values for a linear equation in different situations",
+  "MATH.G8.GEOMET.COORDINATES_AND_GRAPHS.e": "determine an appropriate scale for a linear equation on the Cartesian plane in different situations",
+  "MATH.G8.GEOMET.COORDINATES_AND_GRAPHS.f": "draw a linear graph from table of values on Cartesian plane in different situations",
+  "MATH.G8.GEOMET.COORDINATES_AND_GRAPHS.g": "solve simultaneous linear equations graphically in different situations",
+  "MATH.G8.GEOMET.COORDINATES_AND_GRAPHS.h": "apply simultaneous equations in real life situations",
+  "MATH.G8.GEOMET.COORDINATES_AND_GRAPHS.i": "use IT or other resources to learn more on coordinates and graphs and for fun",
+  "MATH.G8.GEOMET.COORDINATES_AND_GRAPHS.j": "reflect on the use of graphs in real life",
+  "MATH.G8.GEOMET.SCALE_DRAWING.a": "represent length to a given scale in different situations",
+  "MATH.G8.GEOMET.SCALE_DRAWING.b": "convert actual length to scale length in real life situations",
+  "MATH.G8.GEOMET.SCALE_DRAWING.c": "convert scale length to actual length in real life situations",
+  "MATH.G8.GEOMET.SCALE_DRAWING.d": "interpret linear scales in statement form in different situations",
+  "MATH.G8.GEOMET.SCALE_DRAWING.e": "write linear scales in statement form in different situations",
+  "MATH.G8.GEOMET.SCALE_DRAWING.f": "interpret linear scales in ratio form in different situations",
+  "MATH.G8.GEOMET.SCALE_DRAWING.g": "write linear scales in ratio form in different situations",
+  "MATH.G8.GEOMET.SCALE_DRAWING.h": "convert linear scale from statement form to ratio form and ratio form to statement form in different situations",
+  "MATH.G8.GEOMET.SCALE_DRAWING.i": "make scale drawings in different situations",
+  "MATH.G8.GEOMET.SCALE_DRAWING.j": "apply scale drawing in real life situations",
+  "MATH.G8.GEOMET.SCALE_DRAWING.k": "use IT or other resources to learn more on scale drawing",
+  "MATH.G8.GEOMET.SCALE_DRAWING.l": "recognise the use of scale drawing in maps",
+  "MATH.G8.GEOMET.COMMON_SOLIDS.a": "identify common solids from the environment",
+  "MATH.G8.GEOMET.COMMON_SOLIDS.b": "sketch nets of cubes, cuboids, cylinders, pyramids and cones in different situations",
+  "MATH.G8.GEOMET.COMMON_SOLIDS.c": "work out surface area of the solids from nets of solids in different situations",
+  "MATH.G8.GEOMET.COMMON_SOLIDS.d": "determine the distance between two points on the surface of a solid in different situations",
+  "MATH.G8.GEOMET.COMMON_SOLIDS.e": "make models of hollow and compact solids for skills development",
+  "MATH.G8.GEOMET.COMMON_SOLIDS.f": "use IT devices or other materials to draw models and nets of solids in different situations",
+  "MATH.G8.GEOMET.COMMON_SOLIDS.g": "promote the use of common solids in real life situations",
+  "MATH.G8.DATA_H.DATA_PRESENTATION_AND_IN.a": "draw bar graphs of data from real life situations",
+  "MATH.G8.DATA_H.DATA_PRESENTATION_AND_IN.b": "interpret bar graphs of data from real life situations",
+  "MATH.G8.DATA_H.DATA_PRESENTATION_AND_IN.c": "draw line graphs of given data from real life situations",
+  "MATH.G8.DATA_H.DATA_PRESENTATION_AND_IN.d": "interpret line graphs of data from real life situations",
+  "MATH.G8.DATA_H.DATA_PRESENTATION_AND_IN.e": "identify the mode of a set of discrete data from real life situations",
+  "MATH.G8.DATA_H.DATA_PRESENTATION_AND_IN.f": "calculate the mean of a set of discrete data from real life situations",
+  "MATH.G8.DATA_H.DATA_PRESENTATION_AND_IN.g": "determine the median of a set of discrete data from real life situations",
+  "MATH.G8.DATA_H.DATA_PRESENTATION_AND_IN.h": "use IT or other materials to determine the mean, mode and median of discrete data in different situations",
+  "MATH.G8.DATA_H.DATA_PRESENTATION_AND_IN.i": "promote use of data representation and interpretation in real life situations",
+  "MATH.G8.DATA_H.PROBABILITY.a": "identify events involving chance in real life situations",
+  "MATH.G8.DATA_H.PROBABILITY.b": "perform chance experiments in different situations",
+  "MATH.G8.DATA_H.PROBABILITY.c": "write the experimental probability outcomes in different situations",
+  "MATH.G8.DATA_H.PROBABILITY.d": "express the probability outcomes in fractions in different situations",
+  "MATH.G8.DATA_H.PROBABILITY.e": "express the probability outcomes in decimals or percentages in different situations",
+  "MATH.G8.DATA_H.PROBABILITY.f": "use IT and other materials to play games involving probability",
+  "MATH.G8.DATA_H.PROBABILITY.g": "recognise events that happen by chance in real life situations"
+ },
+ "skills": {
+  "MATH.G8.NUMBER.INTEGERS.INT_IDENTIFY": {
+   "forms": [
+    "which are integers",
+    "write the situation as an integer",
+    "the opposite of",
+    "zero is which"
+   ],
+   "mastery": "The child sorts numbers into integers and non-integers (fractions and decimals are not integers), and writes a real situation as a signed integer: 3 floors below the ground as -3, a loss of 200 shillings as -200, 5 degrees above zero as +5."
+  },
+  "MATH.G8.NUMBER.INTEGERS.INT_ORDER_COMPARE": {
+   "forms": [
+    "which is smaller",
+    "order from smallest",
+    "put < or >",
+    "why is this wrong"
+   ],
+   "mastery": "The child puts integers in order from smallest to largest and uses < and > between them, knowing that below zero the number further from zero is the smaller one (-9 < -2), and every negative number is smaller than every positive number and zero."
+  },
+  "MATH.G8.NUMBER.INTEGERS.INT_NUMBER_LINE": {
+   "forms": [
+    "mark the integers",
+    "which number is at the arrow",
+    "complete the number line",
+    "a vertical number line"
+   ],
+   "mastery": "The child draws a number line with zero, equal steps and negative numbers to the left, marks given integers on it, and reads the integer at a marked point, including on a vertical line (floors, depths, heights above sea level)."
+  },
+  "MATH.G8.NUMBER.INTEGERS.INT_ADD_SUB_LINE": {
+   "forms": [
+    "the lift goes down",
+    "start at, move",
+    "sum on the number line",
+    "what is -3 + 5"
+   ],
+   "mastery": "The child starts at the first integer and moves right to add a positive number and left to subtract one, crossing zero without missing a step, and gives the integer reached: 3 - 7 = -4, -2 + 6 = 4, -5 - 3 = -8."
+  },
+  "MATH.G8.NUMBER.INTEGERS.INT_DIFFERENCE": {
+   "forms": [
+    "how many degrees warmer",
+    "height from the bottom to the top",
+    "how far apart",
+    "find the mistake"
+   ],
+   "mastery": "The child finds how far apart two integers are (a rise in temperature from -4 to 9, a height above sea level and a depth below it) by counting up to zero and then on, or by subtracting the smaller from the larger with signs: 9 - (-4) = 13."
+  },
+  "MATH.G8.NUMBER.INTEGERS.INT_COMBINED_CONTEXT": {
+   "forms": [
+    "balance on Friday",
+    "change each hour",
+    "level after some months",
+    "how many months until"
+   ],
+   "mastery": "The child keeps a running total of money in and out (a minus sign means money out), starting from the opening balance, and handles a change repeated over several steps: a fall of 3 m a month for 4 months is a change of -12 m, and a total change of -18 degrees over 6 hours is -3 degrees an hour."
+  },
+  "MATH.G8.NUMBER.FRACTIONS.FRAC_ORDER_OF_OPERATIONS": {
+   "forms": [
+    "work out",
+    "which step has the mistake",
+    "which is done first",
+    "simplest form"
+   ],
+   "mastery": "The child works out a combined question such as 3/4 - 1/2 ÷ 2/3 by dividing or multiplying before adding or subtracting, turns the divisor upside down to divide, and simplifies the answer."
+  },
+  "MATH.G8.NUMBER.FRACTIONS.FRAC_BRACKETS_AND_OF": {
+   "forms": [
+    "work out the bracket",
+    "of means",
+    "which step first",
+    "simplify"
+   ],
+   "mastery": "The child works out the bracket first, treats \"of\" as multiplication done before adding or subtracting, and finishes in the right order: (1/2 + 1/3) × 3/5 = 1/2, and 2/3 of 3/4 + 1/4 = 3/4."
+  },
+  "MATH.G8.NUMBER.FRACTIONS.FRAC_MIXED_COMBINED": {
+   "forms": [
+    "mixed numbers in a combined question",
+    "change to improper fractions",
+    "answer as a mixed number",
+    "find the mistake"
+   ],
+   "mastery": "The child changes each mixed number to an improper fraction before multiplying or dividing, keeps whole parts and fractions together when adding, and writes the final answer as a mixed number in its simplest form: 1 1/2 × 2/3 + 1/4 = 1 1/4."
+  },
+  "MATH.G8.NUMBER.FRACTIONS.FRAC_REST_OF_WHOLE": {
+   "forms": [
+    "how many acres are left",
+    "minutes for clubs",
+    "what fraction is left",
+    "the rest is"
+   ],
+   "mastery": "The child adds the fractions used of one whole (a shamba, a school day), takes the sum from 1, and finds that fraction of the whole quantity in the unit asked: a day of 8 hours with 1/4, 1/3 and 1/6 used leaves 1/4 of 480 minutes = 120 minutes."
+  },
+  "MATH.G8.NUMBER.FRACTIONS.FRAC_OF_REMAINDER": {
+   "forms": [
+    "what is left after",
+    "a fraction of the rest",
+    "how much was used",
+    "water left in the tank"
+   ],
+   "mastery": "The child finds what is left after the first fraction, then takes the second fraction of that remainder (not of the whole): a tank of 6,000 litres is 3/4 full, a school uses 1/3 of the water, so 4,500 - 1,500 = 3,000 litres remain."
+  },
+  "MATH.G8.NUMBER.FRACTIONS.FRAC_SHOPPING_CONTEXT": {
+   "forms": [
+    "cost of a fraction of a kg",
+    "how many pieces",
+    "packets of",
+    "what each gets"
+   ],
+   "mastery": "The child works out the cost of a fraction of a kilogram or metre, how many fractional pieces or packets can be cut or filled, and shares an amount by fractions, choosing to multiply or divide from the story: 3/4 kg at 120 shillings a kg costs 90 shillings; 6 m cut into 3/4 m pieces gives 8 pieces."
+  },
+  "MATH.G8.NUMBER.DECIMALS.FRACTION_TO_DECIMAL": {
+   "forms": [
+    "fraction to decimal",
+    "by long division",
+    "make the denominator 100",
+    "mixed number to decimal"
+   ],
+   "mastery": "The child divides the numerator by the denominator (adding zeros after the point as needed) or makes the denominator a power of 10, and writes the decimal with each digit in its place: 3/8 = 0.375, 1/20 = 0.05, 7/4 = 1.75."
+  },
+  "MATH.G8.NUMBER.DECIMALS.RECURRING_IDENTIFY": {
+   "forms": [
+    "recurring or not",
+    "which digits repeat",
+    "why does it never stop",
+    "will this fraction stop"
+   ],
+   "mastery": "The child sorts decimals into terminating and recurring, marks the repeating block (0.272727... has 27 repeating), and explains that a fraction in its simplest form recurs when its denominator has a prime factor other than 2 and 5: 5/12 recurs, 3/40 stops."
+  },
+  "MATH.G8.NUMBER.DECIMALS.RECURRING_TO_FRACTION": {
+   "forms": [
+    "let x =",
+    "multiply by 10 or 100",
+    "write as a fraction in simplest form",
+    "which fraction equals"
+   ],
+   "mastery": "The child lets x be the decimal, multiplies by 10 for one repeating digit or by 100 for two, subtracts x so the repeats cancel, divides and simplifies: 0.2727... gives 99x = 27, so x = 27/99 = 3/11."
+  },
+  "MATH.G8.NUMBER.DECIMALS.ROUND_DECIMAL_PLACES": {
+   "forms": [
+    "round to 1, 2 or 3 decimal places",
+    "a price to the nearest cent",
+    "a measurement",
+    "which is correct"
+   ],
+   "mastery": "The child counts the decimal places from the point, looks at the next digit, rounds up when it is 5 or more (carrying through a 9), and keeps the zeros the question asks for: 2.9765 to 2 d.p. is 2.98, 3.997 to 2 d.p. is 4.00."
+  },
+  "MATH.G8.NUMBER.DECIMALS.SIGNIFICANT_FIGURES": {
+   "forms": [
+    "correct to 2 or 3 significant figures",
+    "how many significant figures",
+    "a population or a mass",
+    "find the mistake"
+   ],
+   "mastery": "The child counts significant figures from the first non-zero digit, rounds at the last one kept, and keeps zeros that hold the place in a whole number: 48,273 to 2 s.f. is 48,000; 0.004567 to 2 s.f. is 0.0046."
+  },
+  "MATH.G8.NUMBER.DECIMALS.STANDARD_FORM": {
+   "forms": [
+    "write in standard form",
+    "write as an ordinary number",
+    "which step has the mistake",
+    "multiply in standard form"
+   ],
+   "mastery": "The child writes a number as A × 10 to a power with A from 1 up to but not including 10, the power counting the places the point moves (positive for large numbers, negative for small): 45,000 = 4.5 × 10⁴, 0.0032 = 3.2 × 10⁻³; when multiplying, multiplies the front numbers, adds the powers and adjusts so A stays below 10."
+  },
+  "MATH.G8.NUMBER.DECIMALS.DEC_COMBINED_OPERATIONS": {
+   "forms": [
+    "work out",
+    "brackets first",
+    "where does the point go",
+    "which step has the mistake"
+   ],
+   "mastery": "The child works brackets, then multiplication and division, then addition and subtraction, places the point in a product by counting decimal places, and lines up points when adding: 2.5 + 0.4 × 1.3 = 3.02."
+  },
+  "MATH.G8.NUMBER.DECIMALS.DEC_REAL_LIFE": {
+   "forms": [
+    "profit altogether",
+    "change from a note",
+    "cost of the cloth",
+    "how much each"
+   ],
+   "mastery": "The child sets up a real problem with decimals (cloth at shillings a metre, items at shillings and cents, change from a note), works the cost of one, the cost of all, and the profit or change in the right order."
+  },
+  "MATH.G8.NUMBER.SQUARES_AND_SQUARE_ROOTS.SQUARE_FROM_TABLE": {
+   "forms": [
+    "read from the table",
+    "a number 10 times bigger",
+    "a number smaller than 1",
+    "which is the square"
+   ],
+   "mastery": "The child reads the square of a number from 1 to 10 from the table (row for the first two figures, column for the third), and for a number outside the table writes it as a table number times 10, 100 or 0.1 and multiplies the table value by the square of that factor: 43.6² = 4.36² × 100 = 1,901."
+  },
+  "MATH.G8.NUMBER.SQUARES_AND_SQUARE_ROOTS.SQUARE_AREA_COST": {
+   "forms": [
+    "cost of tiling a square room",
+    "area of a square plot",
+    "how many square metres",
+    "cost per square metre"
+   ],
+   "mastery": "The child squares the side (not doubles it, not multiplies by 4) to get the area of a square floor, plot or tile, keeps the units in square metres, and multiplies by the price per square metre."
+  },
+  "MATH.G8.NUMBER.SQUARES_AND_SQUARE_ROOTS.ROOT_FROM_TABLE": {
+   "forms": [
+    "read the root from the table",
+    "a number 100 times bigger",
+    "which table to use",
+    "to 2 decimal places"
+   ],
+   "mastery": "The child pairs the digits from the decimal point to choose the right table (from 1 to 10 or from 10 to 100), reads the root, and moves the point one place for every pair: √4,500 = √45 × 10 = 67.08, √0.45 = √45 ÷ 10 = 0.6708."
+  },
+  "MATH.G8.NUMBER.SQUARES_AND_SQUARE_ROOTS.ROOT_BETWEEN_SQUARES": {
+   "forms": [
+    "between which two whole numbers",
+    "why is that correct",
+    "is the table value sensible",
+    "nearer to which"
+   ],
+   "mastery": "The child finds the perfect squares on either side (49 < 55 < 64, so √55 is between 7 and 8), says which end it is nearer, and uses this to check that a value read from the table is sensible."
+  },
+  "MATH.G8.NUMBER.SQUARES_AND_SQUARE_ROOTS.SQUARE_BY_CALCULATOR": {
+   "forms": [
+    "use a calculator",
+    "area of a square tile",
+    "estimate first",
+    "square of a negative number"
+   ],
+   "mastery": "The child keys the number and the x² key (or the number times itself), reads the full display, writes the answer with its units, and checks the size by estimating: 3.45² = 11.9025, about 3.5 × 3.5 = 12."
+  },
+  "MATH.G8.NUMBER.SQUARES_AND_SQUARE_ROOTS.ROOT_BY_CALCULATOR": {
+   "forms": [
+    "side of a square plot",
+    "use the square root key",
+    "to 1 decimal place",
+    "check by squaring"
+   ],
+   "mastery": "The child uses the square root key, rounds the display to the decimal places asked, and uses a root to find the side of a square from its area: a plot of 200 m² has a side of 14.1 m to 1 d.p."
+  },
+  "MATH.G8.NUMBER.RATES_RATIO_PROPORTIONS_.RATE_PER_UNIT": {
+   "forms": [
+    "rate in km per hour",
+    "price per kg",
+    "which shop is cheapest per kg",
+    "words per minute"
+   ],
+   "mastery": "The child names a rate in words with its two units (km per hour, litres per minute, shillings per kg), works it out by dividing the amount by the number of units, and compares rates (best buy) by finding each one per single unit."
+  },
+  "MATH.G8.NUMBER.RATES_RATIO_PROPORTIONS_.RATE_USE": {
+   "forms": [
+    "at the same rate",
+    "how long to fill",
+    "how far in",
+    "litres still needed"
+   ],
+   "mastery": "The child finds the rate for one unit and multiplies to get the amount for several units, or divides what is still needed by the rate to get the time: 120 km in 3 hours is 40 km an hour, so 5 hours gives 200 km; a tank needing 600 more litres at 40 litres a minute takes 15 minutes."
+  },
+  "MATH.G8.NUMBER.RATES_RATIO_PROPORTIONS_.FRACTION_AS_RATIO": {
+   "forms": [
+    "fraction to ratio",
+    "boys to girls",
+    "which class has the ratio",
+    "simplest form"
+   ],
+   "mastery": "The child writes a part-part ratio from a fraction of a whole (2/5 of a class are girls gives girls : boys = 2 : 3), writes a ratio in the order the question gives, and simplifies it by the HCF."
+  },
+  "MATH.G8.NUMBER.RATES_RATIO_PROPORTIONS_.RATIO_COMPARE": {
+   "forms": [
+    "which mix has more",
+    "which class has the bigger share",
+    "are the ratios equal",
+    "why"
+   ],
+   "mastery": "The child compares ratios by making one term the same (the same amount of sand) or by changing each to a fraction of its whole, never by comparing one term alone: cement : sand 2 : 5 has less cement per bag of sand than 3 : 7."
+  },
+  "MATH.G8.NUMBER.RATES_RATIO_PROPORTIONS_.RATIO_SHARE": {
+   "forms": [
+    "share in the ratio",
+    "how much more than",
+    "one share is known",
+    "how many altogether"
+   ],
+   "mastery": "The child adds the parts, finds the value of one part, and multiplies by each share; when one share is known instead of the total, finds one part from it first: 9,000 shillings in 2 : 3 : 4 gives 1,000 a part, so 2,000, 3,000 and 4,000."
+  },
+  "MATH.G8.NUMBER.RATES_RATIO_PROPORTIONS_.RATIO_WORK_OUT": {
+   "forms": [
+    "ratio of the short to the long piece",
+    "in the form 1 : n",
+    "missing term",
+    "change units first"
+   ],
+   "mastery": "The child changes both quantities to the same unit, writes them in the order asked and simplifies, including to the form 1 : n, and finds a missing term of equal ratios: 25 cm to 3 m is 25 : 300 = 1 : 12."
+  },
+  "MATH.G8.NUMBER.RATES_RATIO_PROPORTIONS_.RATIO_INCREASE_DECREASE": {
+   "forms": [
+    "increase in the ratio",
+    "decrease the rent",
+    "new fare",
+    "why is that wrong"
+   ],
+   "mastery": "The child reads the ratio as new : old, divides the quantity by the old number and multiplies by the new, and checks that an increase gives more and a decrease less: 600 g increased in the ratio 5 : 3 is 1,000 g."
+  },
+  "MATH.G8.NUMBER.RATES_RATIO_PROPORTIONS_.PERCENT_CHANGE": {
+   "forms": [
+    "percentage increase",
+    "percentage decrease",
+    "which calculation",
+    "which year had the greatest increase"
+   ],
+   "mastery": "The child finds the change, divides it by the original amount (not the new one) and multiplies by 100: a fare going from 80 to 100 shillings is a 25% increase."
+  },
+  "MATH.G8.NUMBER.RATES_RATIO_PROPORTIONS_.PERCENT_CHANGE_REVERSE": {
+   "forms": [
+    "price before the rise",
+    "salary before the cut",
+    "which is the original",
+    "find the old price"
+   ],
+   "mastery": "The child writes the new amount as a percentage of the original (after a 20% increase it is 120%), finds 1% and then 100%: a price of 960 shillings after a 20% rise was 800 shillings, not 960 minus 20% of 960."
+  },
+  "MATH.G8.NUMBER.RATES_RATIO_PROPORTIONS_.PROPORTION_IDENTIFY": {
+   "forms": [
+    "direct, inverse or neither",
+    "which pair is inverse",
+    "what happens when it doubles",
+    "give an example"
+   ],
+   "mastery": "The child imagines the first quantity doubling: if the second doubles it is direct proportion, if it halves it is inverse, and if there is no such rule it is neither."
+  },
+  "MATH.G8.NUMBER.RATES_RATIO_PROPORTIONS_.PROPORTION_SOLVE": {
+   "forms": [
+    "how many days for",
+    "cost of",
+    "which row is wrong",
+    "more workers"
+   ],
+   "mastery": "The child uses the unitary method: for direct proportion finds one unit and multiplies; for inverse proportion finds the total (workers × days) and shares it: 6 workers take 10 days, so 4 workers take 60 ÷ 4 = 15 days."
+  },
+  "MATH.G8.ALGEBR.ALGEBRAIC_EXPRESSIONS.FACTORISE_HCF": {
+   "forms": [
+    "factorise fully",
+    "the number outside the bracket",
+    "which step has the mistake",
+    "length and width from the area"
+   ],
+   "mastery": "The child finds the HCF of the coefficients and the number, writes it outside a bracket and what is left of each term inside, and checks by expanding: 12x + 18 = 6(2x + 3), not 3(4x + 6)."
+  },
+  "MATH.G8.ALGEBR.ALGEBRAIC_EXPRESSIONS.FACTORISE_LETTERS": {
+   "forms": [
+    "common factor with a letter",
+    "collect like terms first",
+    "factorise fully",
+    "check by expanding"
+   ],
+   "mastery": "The child collects like terms first, then takes out the common letter with the common number, reducing the power inside the bracket: 3x² + 6x = 3x(x + 2), 4ab - 6a = 2a(2b - 3)."
+  },
+  "MATH.G8.ALGEBR.ALGEBRAIC_EXPRESSIONS.ALG_FRACTION_SIMPLIFY": {
+   "forms": [
+    "simplify",
+    "which step has the mistake",
+    "can this be cancelled",
+    "factorise and cancel"
+   ],
+   "mastery": "The child divides every term of the top by the bottom, or factorises the top and cancels a common factor, never cancelling a number or letter that is only part of a sum: (6x + 9)/3 = 2x + 3, (4x + 8)/(x + 2) = 4."
+  },
+  "MATH.G8.ALGEBR.ALGEBRAIC_EXPRESSIONS.ALG_FRACTION_ADD_SUB": {
+   "forms": [
+    "add the fractions",
+    "why is this wrong",
+    "find x",
+    "subtract"
+   ],
+   "mastery": "The child writes each fraction over a common denominator (the LCM of the bottoms), changes each top to match, then adds or subtracts the tops, putting a bracket round a top that is subtracted; to solve, multiplies both sides by the common denominator and divides by what is left: x/3 + x/4 = 7 gives 7x/12 = 7, so x = 12."
+  },
+  "MATH.G8.ALGEBR.ALGEBRAIC_EXPRESSIONS.SUBSTITUTE_POSITIVE": {
+   "forms": [
+    "find F when",
+    "the fare for a distance",
+    "evaluate",
+    "the width from the length"
+   ],
+   "mastery": "The child replaces each letter with its value as a multiplication (3d with d = 4 is 3 × 4), keeps the fixed part, and works in the order of operations: F = 50 + 30d with d = 6 gives 230."
+  },
+  "MATH.G8.ALGEBR.ALGEBRAIC_EXPRESSIONS.SUBSTITUTE_NEGATIVE": {
+   "forms": [
+    "evaluate with a negative value",
+    "which working is right",
+    "square a negative",
+    "take away a negative"
+   ],
+   "mastery": "The child puts a negative value in brackets, squares the value (not the coefficient), knows a negative squared is positive and that taking away a negative adds: 3m² - 2n with m = -2, n = 5 gives 12 - 10 = 2."
+  },
+  "MATH.G8.ALGEBR.LINEAR_EQUATIONS.FORM_SIMULTANEOUS": {
+   "forms": [
+    "form two equations",
+    "which pair is right",
+    "which step has the mistake",
+    "more than, less than"
+   ],
+   "mastery": "The child names the two unknowns with letters and units, writes one equation for each fact in the story (each with its own total), and matches every number to the right letter: 3 mandazi and 2 chapati for 70 shillings is 3m + 2c = 70."
+  },
+  "MATH.G8.ALGEBR.LINEAR_EQUATIONS.SOLVE_BY_SUBSTITUTION": {
+   "forms": [
+    "solve by substitution",
+    "which step has the mistake",
+    "y is given in terms of x",
+    "check the answer"
+   ],
+   "mastery": "The child makes one unknown the subject of one equation (or uses one already given as y = ...), substitutes the whole expression in a bracket into the other equation, solves for the first unknown, then substitutes back to find the second and checks both equations."
+  },
+  "MATH.G8.ALGEBR.LINEAR_EQUATIONS.SOLVE_BY_ELIMINATION": {
+   "forms": [
+    "solve by elimination",
+    "add or subtract",
+    "why does subtracting help",
+    "find x and y"
+   ],
+   "mastery": "The child sees that one unknown has the same number in front in both equations, subtracts the equations (or adds them when the terms are opposites) so that unknown cancels, divides by the coefficient that is left, and substitutes back for the other unknown."
+  },
+  "MATH.G8.ALGEBR.LINEAR_EQUATIONS.ELIMINATION_MAKE_EQUAL": {
+   "forms": [
+    "make the coefficients equal",
+    "multiply the second equation by",
+    "solve by elimination",
+    "which multiplier"
+   ],
+   "mastery": "The child multiplies every term of one (or both) equations, the right side too, by the number that makes the coefficients of one unknown equal, then eliminates as before: 2x + 3y = 12 and x + y = 5 becomes 2x + 2y = 10, so y = 2 and x = 3."
+  },
+  "MATH.G8.ALGEBR.LINEAR_EQUATIONS.SIMULTANEOUS_IN_CONTEXT": {
+   "forms": [
+    "price of one adult ticket",
+    "how many sh 10 coins",
+    "how many goats",
+    "cost of one item"
+   ],
+   "mastery": "The child forms two equations from a story (tickets, coins, animals and legs, prices), solves them by any method, and answers the question that was asked, with units, checking that the answer makes sense in the story."
+  },
+  "MATH.G8.MEASUR.CIRCLES.CIRCUMFERENCE_RADIUS_DIAMETER": {
+   "forms": [
+    "circumference from the radius",
+    "why is this wrong",
+    "round a running track",
+    "with π = 22/7"
+   ],
+   "mastery": "The child uses C = πd or C = 2πr, doubling a radius first, multiplying (never adding or dividing) by π, and gives the answer in the units of the length: a radius of 14 cm gives 2 × 22/7 × 14 = 88 cm."
+  },
+  "MATH.G8.MEASUR.CIRCLES.CIRCUMFERENCE_DISTANCE": {
+   "forms": [
+    "how far does the wheel travel",
+    "how many laps",
+    "distance in metres",
+    "how many turns"
+   ],
+   "mastery": "The child finds the distance for one turn or lap (the circumference), multiplies by the number of turns, divides a total distance by one lap to count laps, and changes cm to m when asked."
+  },
+  "MATH.G8.MEASUR.CIRCLES.ARC_LENGTH": {
+   "forms": [
+    "length of the arc",
+    "complete the table",
+    "which step has the mistake",
+    "the curved edge"
+   ],
+   "mastery": "The child writes the angle at the centre as a fraction of 360, finds the full circumference, and takes that fraction of it: an arc of 60° on a circle of radius 21 cm is 60/360 × 132 = 22 cm."
+  },
+  "MATH.G8.MEASUR.CIRCLES.ARC_IN_CONTEXT": {
+   "forms": [
+    "how far does the tip of the hand move",
+    "a swing seat",
+    "a curved road",
+    "a windscreen wiper"
+   ],
+   "mastery": "The child works out the angle turned from the story (a minute hand turns 6° a minute, so 20 minutes is 120°), then finds that fraction of the circumference."
+  },
+  "MATH.G8.MEASUR.CIRCLES.SECTOR_PERIMETER": {
+   "forms": [
+    "perimeter of the sector",
+    "fence round a garden bed",
+    "perimeter of a half circle",
+    "a slice of cake"
+   ],
+   "mastery": "The child adds the arc and the two straight edges, each a radius: a sector of radius 7 m and angle 90° has a perimeter of 11 + 7 + 7 = 25 m; for a half circle the straight edge is the diameter."
+  },
+  "MATH.G8.MEASUR.CIRCLES.SECTOR_WORK_BACK": {
+   "forms": [
+    "find the radius",
+    "perimeter is given",
+    "how wide is the plot",
+    "work back"
+   ],
+   "mastery": "The child writes the perimeter in terms of r (a half circle has πr + 2r), collects the r terms and divides: a perimeter of 72 m gives (22/7 + 2)r = 72, so r = 14 m."
+  },
+  "MATH.G8.MEASUR.AREA.AREA_CIRCLE_RADIUS": {
+   "forms": [
+    "area of a circle",
+    "how many times as much",
+    "from the diameter",
+    "why"
+   ],
+   "mastery": "The child uses A = πr² with the radius (halving a diameter first), and explains that doubling the radius makes the area four times as big because the radius is used twice: a radius of 7 m gives 154 m², a radius of 14 m gives 616 m²."
+  },
+  "MATH.G8.MEASUR.AREA.AREA_CIRCLE_COMPOSITE": {
+   "forms": [
+    "area of the path",
+    "an arched window",
+    "a ring",
+    "area of glass"
+   ],
+   "mastery": "The child splits a shape into circles, half circles and rectangles, finds each part with the right radius, and adds or subtracts: a path 7 m wide round a garden of radius 7 m has area π × 14² - π × 7² = 462 m²."
+  },
+  "MATH.G8.MEASUR.AREA.SECTOR_AREA": {
+   "forms": [
+    "area watered",
+    "area of a slice",
+    "why is that right",
+    "fraction of the circle"
+   ],
+   "mastery": "The child takes θ/360 of the area of the whole circle (not of the circumference), and explains that the area is shared in the same fraction as the angle: a sprinkler reaching 14 m through 90° waters 1/4 of 616 = 154 m²."
+  },
+  "MATH.G8.MEASUR.AREA.SECTOR_FIND_ANGLE": {
+   "forms": [
+    "through what angle",
+    "from the area lit",
+    "fraction to degrees",
+    "check"
+   ],
+   "mastery": "The child divides the area of the sector by the area of the whole circle to get the fraction, then multiplies by 360: a light reaching 14 m and lighting 154 m² spreads through 154/616 × 360 = 90°."
+  },
+  "MATH.G8.MEASUR.AREA.SA_CUBOID": {
+   "forms": [
+    "paper to cover a box",
+    "which carton needs the most card",
+    "which step has the mistake",
+    "a cube"
+   ],
+   "mastery": "The child finds the three different faces (l × w, l × h, w × h), doubles each because there is one on each side, and adds: a box 5 cm by 4 cm by 3 cm has 2(20 + 15 + 12) = 94 cm²; a cube has six equal faces."
+  },
+  "MATH.G8.MEASUR.AREA.SA_CUBOID_IN_CONTEXT": {
+   "forms": [
+    "painting a classroom",
+    "an open box",
+    "litres of paint",
+    "take away the windows"
+   ],
+   "mastery": "The child decides which faces are covered (four walls and a ceiling, a box with no lid), takes away doors and windows, and divides by what one litre or one sheet covers."
+  },
+  "MATH.G8.MEASUR.AREA.SA_CYLINDER": {
+   "forms": [
+    "metal for a tank with no lid",
+    "area of a label",
+    "a closed tin",
+    "from the diameter"
+   ],
+   "mastery": "The child finds the curved side as the circumference times the height (2πrh), adds one circle for an open tank and two for a closed tin, and uses the radius (half the diameter): a closed tin of radius 7 cm and height 10 cm needs 440 + 308 = 748 cm²."
+  },
+  "MATH.G8.MEASUR.AREA.SA_TRIANGULAR_PRISM": {
+   "forms": [
+    "cloth for a tent",
+    "total surface area from a table",
+    "which step has the mistake",
+    "card for a prism"
+   ],
+   "mastery": "The child adds the two triangular ends (each half base times the straight-up height) and the three rectangles (each side of the triangle times the length): ends of 3, 4 and 5 cm with length 10 cm give 12 + 120 = 132 cm²."
+  },
+  "MATH.G8.MEASUR.AREA.AREA_IRREGULAR_GRID": {
+   "forms": [
+    "area of a leaf",
+    "a plot on a scaled grid",
+    "which field is largest",
+    "part squares"
+   ],
+   "mastery": "The child counts whole squares, counts part squares as half each, adds, and multiplies by the area of one square when the grid is to scale: 20 whole and 10 part squares of 5 m by 5 m give 25 × 25 = 625 m²."
+  },
+  "MATH.G8.MEASUR.MONEY.INTEREST_TERMS": {
+   "forms": [
+    "which is the principal",
+    "what is the interest",
+    "the amount at the end",
+    "who pays"
+   ],
+   "mastery": "The child names the principal (the money saved or borrowed), the interest (the extra paid for it), the rate (per cent a year), the time and the amount (principal plus interest) in a story about a bank, SACCO or loan, and says who pays the interest."
+  },
+  "MATH.G8.MEASUR.MONEY.SIMPLE_INTEREST": {
+   "forms": [
+    "simple interest for",
+    "the amount after",
+    "time in months",
+    "a loan"
+   ],
+   "mastery": "The child uses I = P × R × T / 100 with the time in years (months divided by 12), and adds the interest to the principal for the amount: 20,000 shillings at 8% for 3 years earns 4,800 shillings, an amount of 24,800 shillings."
+  },
+  "MATH.G8.MEASUR.MONEY.SIMPLE_INTEREST_WORK_BACK": {
+   "forms": [
+    "find the rate",
+    "how many years",
+    "how much was borrowed",
+    "interest for one year"
+   ],
+   "mastery": "The child rearranges I = PRT/100 (or uses the interest for one year) to find the missing quantity: interest of 3,000 shillings on 15,000 shillings over 2 years is 1,500 a year, which is 10% a year."
+  },
+  "MATH.G8.MEASUR.MONEY.COMPOUND_INTEREST": {
+   "forms": [
+    "amount after 2 years",
+    "complete the table",
+    "compound interest earned",
+    "why does she end with more"
+   ],
+   "mastery": "The child works out each year's interest on the amount at the start of that year, adds it on, and repeats, then gives the amount or the interest as asked: 10,000 shillings at 10% compound becomes 11,000 then 12,100 after 2 years, interest 2,100; and explains why this beats simple interest at the same rate."
+  },
+  "MATH.G8.MEASUR.MONEY.DEPRECIATION": {
+   "forms": [
+    "value after 2 years",
+    "complete the table",
+    "how much value is lost",
+    "why is the total not 40%"
+   ],
+   "mastery": "The child takes the percentage off the value at the start of each year (not off the new price), so the fall gets smaller each year: a motorcycle of 120,000 shillings losing 20% a year is worth 96,000 then 76,800 after 2 years."
+  },
+  "MATH.G8.MEASUR.MONEY.APPRECIATION": {
+   "forms": [
+    "value of land after",
+    "appreciate or depreciate",
+    "which is worth buying",
+    "complete the table"
+   ],
+   "mastery": "The child adds the percentage of the value at the start of each year, and sorts goods into ones that usually gain value (land, a plot in a growing town) and ones that lose it (phones, vehicles, furniture): land of 500,000 shillings appreciating 10% a year is worth 605,000 after 2 years."
+  },
+  "MATH.G8.MEASUR.MONEY.HIRE_PURCHASE": {
+   "forms": [
+    "how much more than the cash price",
+    "which plan costs least",
+    "total hire purchase price",
+    "the balance after the deposit"
+   ],
+   "mastery": "The child adds the deposit to all the instalments (number times each instalment) for the hire purchase price, subtracts the cash price for the extra paid, and compares plans by their totals: a deposit of 5,000 and 10 instalments of 2,000 cost 25,000 against a cash price of 21,000, so 4,000 more."
+  },
+  "MATH.G8.GEOMET.GEOMETRICAL_CONSTRUCTION.CONSTRUCT_PARALLEL_PERPENDICULAR": {
+   "forms": [
+    "steps to draw a perpendicular",
+    "a line through P parallel to AB",
+    "which step is first",
+    "why the arcs must be equal"
+   ],
+   "mastery": "The child constructs a perpendicular from a point to a line and at a point on a line (arcs of the same radius, then joining the crossing), and a parallel line through a point (by copying an angle or by two perpendiculars), keeping the compass radius fixed where the method needs it."
+  },
+  "MATH.G8.GEOMET.GEOMETRICAL_CONSTRUCTION.DIVIDE_LINE_METHOD": {
+   "forms": [
+    "how many equal parts",
+    "why must the lines be parallel",
+    "order of the steps",
+    "which mark is joined"
+   ],
+   "mastery": "The child draws a ray from one end, marks as many equal parts as the ratio numbers added (2 : 3 needs 5), joins the last mark to the other end, and draws parallel lines through the other marks, explaining that parallel lines cut the line in the same ratio as the ray."
+  },
+  "MATH.G8.GEOMET.GEOMETRICAL_CONSTRUCTION.DIVIDE_LINE_LENGTHS": {
+   "forms": [
+    "length of the part next to A",
+    "length of each equal part",
+    "a boundary shared between plots",
+    "how many parts"
+   ],
+   "mastery": "The child adds the ratio numbers, divides the length by the total to find one part, and gives each piece in order from the named end: a line of 15 cm divided in the ratio 2 : 3 from A gives 6 cm and 9 cm."
+  },
+  "MATH.G8.GEOMET.GEOMETRICAL_CONSTRUCTION.POLYGON_ANGLE_PROPERTIES": {
+   "forms": [
+    "interior angle of a regular polygon",
+    "sum of the angles",
+    "right angles and sides",
+    "exterior angle"
+   ],
+   "mastery": "The child finds the angle sum as (n - 2) × 180° (or (2n - 4) right angles), the exterior angle of a regular polygon as 360° ÷ n and the interior angle as 180° minus that, and knows the exterior angles always add to 360°: a regular pentagon has interior angles of 108°."
+  },
+  "MATH.G8.GEOMET.GEOMETRICAL_CONSTRUCTION.CONSTRUCT_REGULAR_POLYGON": {
+   "forms": [
+    "angle at each corner",
+    "angle at the centre",
+    "a hexagon with compasses",
+    "is this polygon regular"
+   ],
+   "mastery": "The child uses equal sides and the interior angle at each corner (108° for a pentagon, 120° for a hexagon), or equal angles at the centre (360° ÷ n), and knows a regular hexagon's side equals the radius of its circle, so it can be stepped round with compasses."
+  },
+  "MATH.G8.GEOMET.GEOMETRICAL_CONSTRUCTION.CONSTRUCT_IRREGULAR_POLYGON": {
+   "forms": [
+    "order of construction",
+    "which angle is at B",
+    "sketch first",
+    "does the shape close"
+   ],
+   "mastery": "The child sketches and labels the polygon first, draws one side, constructs or measures each angle at the right corner, marks each side length in order, and checks the last side closes the shape."
+  },
+  "MATH.G8.GEOMET.GEOMETRICAL_CONSTRUCTION.CIRCUMCIRCLE": {
+   "forms": [
+    "radius of the circle through the corners",
+    "which construction finds the centre",
+    "why does it work",
+    "right-angled triangle"
+   ],
+   "mastery": "The child bisects two sides at right angles, takes the meeting point as the centre and the distance to a corner as the radius, explains that every point on a perpendicular bisector is the same distance from both ends of the side, and knows that for a right-angled triangle the centre is the midpoint of the longest side."
+  },
+  "MATH.G8.GEOMET.GEOMETRICAL_CONSTRUCTION.INCIRCLE": {
+   "forms": [
+    "which construction finds the centre",
+    "how to find the radius",
+    "why bisect the angles",
+    "the biggest circle that fits"
+   ],
+   "mastery": "The child bisects two angles, takes the meeting point as the centre, draws a perpendicular from it to one side to get the radius, and explains that every point on an angle bisector is the same distance from the two sides of the angle."
+  },
+  "MATH.G8.GEOMET.COORDINATES_AND_GRAPHS.CARTESIAN_PLANE": {
+   "forms": [
+    "label the axes",
+    "where is the origin",
+    "which quadrant",
+    "equal steps"
+   ],
+   "mastery": "The child draws the x-axis across and the y-axis up, crossing at the origin (0, 0), numbers both with equal steps including negative numbers to the left and below, and labels the axes x and y."
+  },
+  "MATH.G8.GEOMET.COORDINATES_AND_GRAPHS.READ_COORDINATES": {
+   "forms": [
+    "coordinates of the point",
+    "the fourth corner",
+    "read the fare at",
+    "which point shows the shop"
+   ],
+   "mastery": "The child reads a point as (across, up) from the origin, finds a point from another by moving across then up, gives the missing corner of a shape from its sides, and reads the height of a point on a graph at a given value across."
+  },
+  "MATH.G8.GEOMET.COORDINATES_AND_GRAPHS.PLOT_POINTS": {
+   "forms": [
+    "plot the point",
+    "how do you reach",
+    "start at the origin and move",
+    "which point is"
+   ],
+   "mastery": "The child starts at the origin, moves along the x-axis first (right for positive, left for negative) and then parallel to the y-axis (up for positive, down for negative), and marks the point where the grid lines cross."
+  },
+  "MATH.G8.GEOMET.COORDINATES_AND_GRAPHS.TABLE_OF_VALUES": {
+   "forms": [
+    "complete the table",
+    "which step has the mistake",
+    "use the pattern",
+    "y when x is"
+   ],
+   "mastery": "The child substitutes each x, negative ones included, into y = mx + c, multiplying before adding, and checks that the y values go up (or down) by the same step: y = 2x - 3 gives -7, -5, -3, -1, 1 for x = -2 to 2."
+  },
+  "MATH.G8.GEOMET.COORDINATES_AND_GRAPHS.CHOOSE_SCALE": {
+   "forms": [
+    "what scale",
+    "why is this scale not suitable",
+    "the smallest scale that fits",
+    "units for each centimetre"
+   ],
+   "mastery": "The child divides the largest value by the number of squares (or centimetres) on the axis and picks the smallest convenient scale that fits (1, 2, 5, 10 or 20 units a square), so the graph uses most of the paper."
+  },
+  "MATH.G8.GEOMET.COORDINATES_AND_GRAPHS.DRAW_LINEAR_GRAPH": {
+   "forms": [
+    "draw the line",
+    "which point is wrong",
+    "is it a straight line",
+    "extend the line"
+   ],
+   "mastery": "The child plots every point from the table, checks they lie in a straight line (a point off the line means a mistake in the table), and draws one straight line with a ruler through them across the whole range."
+  },
+  "MATH.G8.GEOMET.COORDINATES_AND_GRAPHS.SOLVE_GRAPHICALLY": {
+   "forms": [
+    "where do the lines meet",
+    "for how many hours is the cost the same",
+    "why is the crossing the solution",
+    "read the solution"
+   ],
+   "mastery": "The child draws both lines on one set of axes, reads the crossing point as (x, y), gives both values as the solution, explains that the crossing is the only point on both lines, and checks it in both equations."
+  },
+  "MATH.G8.GEOMET.COORDINATES_AND_GRAPHS.SIMULTANEOUS_GRAPH_CONTEXT": {
+   "forms": [
+    "where the costs are equal",
+    "which company is cheaper",
+    "the distance where the lines meet",
+    "compare two plans"
+   ],
+   "mastery": "The child forms a cost line for each choice (a fixed charge plus a rate), finds where they meet (by the graph or by setting the costs equal), and says which choice is cheaper before and after that point: 200 + 30d and 100 + 50d meet at d = 5 km."
+  },
+  "MATH.G8.GEOMET.SCALE_DRAWING.REPRESENT_TO_SCALE": {
+   "forms": [
+    "lengths to draw",
+    "which list fits the scale",
+    "draw to scale",
+    "match each length"
+   ],
+   "mastery": "The child divides each real length by what 1 cm stands for to get the length to draw, keeps each drawn length matched to its own real length, and checks the drawn lengths are shorter than the real ones: with 1 cm to 5 m, 20 m, 35 m and 12.5 m are drawn as 4 cm, 7 cm and 2.5 cm."
+  },
+  "MATH.G8.GEOMET.SCALE_DRAWING.ACTUAL_TO_SCALE": {
+   "forms": [
+    "how long on the map",
+    "length to draw",
+    "real to plan",
+    "in cm"
+   ],
+   "mastery": "The child divides the real length by what 1 cm stands for (changing units first if needed) to find the length on the plan: a wall of 24 m with 1 cm to 4 m is 6 cm on the plan."
+  },
+  "MATH.G8.GEOMET.SCALE_DRAWING.SCALE_TO_ACTUAL": {
+   "forms": [
+    "real length",
+    "how much longer in real life",
+    "how far apart",
+    "from the plan"
+   ],
+   "mastery": "The child multiplies the length on the plan or map by what 1 cm stands for, keeps the unit the scale gives, and finds real differences by subtracting real lengths (or scaling the difference): 7.5 cm on a plan of 1 cm to 2 m is 15 m."
+  },
+  "MATH.G8.GEOMET.SCALE_DRAWING.STATEMENT_SCALE": {
+   "forms": [
+    "what does 1 cm stand for",
+    "write the scale as a statement",
+    "which sentence gives the scale",
+    "interpret the scale"
+   ],
+   "mastery": "The child reads \"1 cm represents 5 km\" as each centimetre on the map standing for 5 km on the ground, and writes a statement from a map and real distance by dividing the real distance by the map distance: 6 cm for 30 km gives \"1 cm represents 5 km\"."
+  },
+  "MATH.G8.GEOMET.SCALE_DRAWING.RATIO_SCALE": {
+   "forms": [
+    "what does 1 cm stand for in km",
+    "write the scale as a ratio",
+    "which map shows more detail",
+    "find n"
+   ],
+   "mastery": "The child reads 1 : 500,000 as 1 cm standing for 500,000 cm (5 km), writes a ratio scale with both lengths in cm and the drawing as 1, and knows a smaller second number shows more detail: a 2 cm line for 50 m is 1 : 2,500."
+  },
+  "MATH.G8.GEOMET.SCALE_DRAWING.CONVERT_SCALE_FORMS": {
+   "forms": [
+    "statement to ratio",
+    "ratio to statement",
+    "which step has the mistake",
+    "each centimetre stands for"
+   ],
+   "mastery": "The child changes the real length in a statement to centimetres to write the ratio (\"1 cm represents 2 km\" is 1 : 200,000), and divides the ratio number by 100 for metres or by 100,000 for kilometres to write the statement."
+  },
+  "MATH.G8.GEOMET.SCALE_DRAWING.MAKE_SCALE_DRAWING": {
+   "forms": [
+    "choose a scale",
+    "lengths to draw",
+    "what goes on the drawing",
+    "check a length"
+   ],
+   "mastery": "The child chooses a scale that fits the paper, works out every length to draw, draws the shape with a ruler (and protractor or compasses for angles), writes the scale on the drawing, and checks one length back."
+  },
+  "MATH.G8.GEOMET.SCALE_DRAWING.SCALE_IN_CONTEXT": {
+   "forms": [
+    "length of the whole journey",
+    "find the scale of the map",
+    "real area of the shamba",
+    "distance between towns"
+   ],
+   "mastery": "The child finds the scale from a map and a real distance, adds the legs of a journey before or after scaling, changes cm to km by dividing by 100,000, and scales both lengths of a plot before finding its area: a plan 5 cm by 3 cm at 1 cm to 20 m is a plot of 100 m by 60 m, 6,000 m²."
+  },
+  "MATH.G8.GEOMET.COMMON_SOLIDS.IDENTIFY_SOLIDS": {
+   "forms": [
+    "name the solid",
+    "how many edges",
+    "faces, vertices and edges",
+    "which objects are cylinders"
+   ],
+   "mastery": "The child names cubes, cuboids, cylinders, pyramids and cones from objects around them, counts their faces, edges and vertices, and uses faces + vertices - edges = 2 to find a missing count: a cube has 6 faces, 8 vertices and 12 edges."
+  },
+  "MATH.G8.GEOMET.COMMON_SOLIDS.SKETCH_NETS": {
+   "forms": [
+    "does this net fold into a cube",
+    "length of the rectangle in a cylinder net",
+    "sketch the net",
+    "which faces meet"
+   ],
+   "mastery": "The child sketches a net with each face the right shape and size, edges that will meet the same length (the rectangle of a cylinder is as long as the circumference), and decides whether a net folds into the solid: four squares in a row with one square above and one below makes a cube."
+  },
+  "MATH.G8.GEOMET.COMMON_SOLIDS.SA_FROM_NET": {
+   "forms": [
+    "surface area from the net",
+    "find the radius from the rectangle",
+    "a bigger cube",
+    "what happens to the area and the volume"
+   ],
+   "mastery": "The child finds the area of each shape in the net and adds them (two circles and a rectangle for a closed cylinder), finds a radius from the rectangle's length when needed, and knows that when edges are k times as long the surface area is k² times and the volume k³ times as big."
+  },
+  "MATH.G8.GEOMET.COMMON_SOLIDS.FOLD_NET_MEASURES": {
+   "forms": [
+    "volume of the tray",
+    "size of the base",
+    "height after folding",
+    "which sheet gives the bigger box"
+   ],
+   "mastery": "The child works out the length, width and height of the solid a flat sheet folds into (cutting a square of side x from each corner takes 2x off each side and leaves a height of x), and uses them for its volume: a 30 cm by 20 cm sheet with 5 cm squares cut gives a tray of 20 × 10 × 5 = 1,000 cm³."
+  },
+  "MATH.G8.GEOMET.COMMON_SOLIDS.SURFACE_DISTANCE": {
+   "forms": [
+    "shortest distance for the ant",
+    "the beetle on the tin",
+    "unfold the faces",
+    "stay on the surface"
+   ],
+   "mastery": "The child unfolds the faces the path crosses into one flat shape, joins the two points with a straight line, and finds its length with Pythagoras (two faces of a box) or as a fraction of the circumference (round a tin): from one side of a tin of radius 7 cm to the opposite point is 22 cm along the rim."
+  },
+  "MATH.G8.GEOMET.COMMON_SOLIDS.HOLLOW_COMPACT_MODELS": {
+   "forms": [
+    "hollow or compact",
+    "where do the flaps go",
+    "will the edges meet",
+    "an open box net"
+   ],
+   "mastery": "The child tells a hollow solid (a container, a tin, a box) from a compact one (a brick, a log), and plans a hollow model from a net with flaps for gluing, faces of matching sizes, and the right faces left open or closed."
+  },
+  "MATH.G8.DATA_H.DATA_PRESENTATION_AND_IN.BAR_GRAPH_DRAW": {
+   "forms": [
+    "how many squares tall",
+    "choose a scale",
+    "draw the bars",
+    "label the axes"
+   ],
+   "mastery": "The child chooses a scale from zero, works out each bar's height in squares by dividing the value by what one square stands for, and draws bars of equal width with equal gaps, labelling both axes: 45 eggs at 1 square to 5 eggs is 9 squares tall."
+  },
+  "MATH.G8.DATA_H.DATA_PRESENTATION_AND_IN.BAR_GRAPH_INTERPRET": {
+   "forms": [
+    "how many more",
+    "the two biggest together",
+    "which is the most",
+    "total"
+   ],
+   "mastery": "The child reads each bar against the scale, combines bars as the question asks, and answers \"how many more\" with a difference: the two biggest classes (45 + 42) have 25 more learners than the two smallest (32 + 30)."
+  },
+  "MATH.G8.DATA_H.DATA_PRESENTATION_AND_IN.LINE_GRAPH_DRAW": {
+   "forms": [
+    "which graph is best and why",
+    "plot the readings",
+    "join the points",
+    "what goes on each axis"
+   ],
+   "mastery": "The child puts time along the bottom, plots each reading against its time, joins the points in order with straight lines, and chooses a line graph only for values that follow each other in time (a bar graph for separate groups)."
+  },
+  "MATH.G8.DATA_H.DATA_PRESENTATION_AND_IN.LINE_GRAPH_INTERPRET": {
+   "forms": [
+    "by how much did it rise",
+    "the biggest rise",
+    "between which weeks did it fall",
+    "read the value"
+   ],
+   "mastery": "The child reads values at given times, finds the change between two readings by subtracting, finds the biggest rise or fall between readings next to each other, and says where the line goes up or down."
+  },
+  "MATH.G8.DATA_H.DATA_PRESENTATION_AND_IN.MODE": {
+   "forms": [
+    "the mode",
+    "from a frequency table",
+    "which shoe size is most common",
+    "two modes"
+   ],
+   "mastery": "The child finds the value that appears most often (from a list or a frequency table), gives the value and not its frequency, and knows a set can have two modes: in 12, 9, 15, 20, 15 the mode is 15."
+  },
+  "MATH.G8.DATA_H.DATA_PRESENTATION_AND_IN.MEAN": {
+   "forms": [
+    "the mean",
+    "mean from a table",
+    "mean mark",
+    "average"
+   ],
+   "mastery": "The child adds all the values (multiplying each value by its frequency in a table) and divides by the number of values: goals of 0, 1, 2 and 3 in 2, 3, 4 and 1 matches give 14 ÷ 10 = 1.4 goals a match."
+  },
+  "MATH.G8.DATA_H.DATA_PRESENTATION_AND_IN.MEAN_PROBLEMS": {
+   "forms": [
+    "the missing value",
+    "the new mean",
+    "what must the last one be",
+    "mean after adding"
+   ],
+   "mastery": "The child turns a mean into a total (mean × number of values), takes away the known values for a missing one, and for a new mean adds the new value to the old total before dividing by the new count: 4 sacks with mean 50 kg and a fifth of 60 kg give 260 ÷ 5 = 52 kg."
+  },
+  "MATH.G8.DATA_H.DATA_PRESENTATION_AND_IN.MEDIAN": {
+   "forms": [
+    "the median",
+    "median from a table",
+    "what did he do wrong",
+    "even number of values"
+   ],
+   "mastery": "The child puts all the values in order (counting each value as often as its frequency), finds the middle one, and for an even number of values takes halfway between the two middle ones: 5, 9, 3, 7, 4 in order is 3, 4, 5, 7, 9, so the median is 5."
+  },
+  "MATH.G8.DATA_H.DATA_PRESENTATION_AND_IN.AVERAGES_COMPARE": {
+   "forms": [
+    "mode, median and mean of the same data",
+    "which average should be used",
+    "why",
+    "which is the odd one"
+   ],
+   "mastery": "The child finds all three averages of one set of data without mixing them up, and chooses the median when one very large or small value would pull the mean, the mode for the most common item, and the mean for sharing a total equally."
+  },
+  "MATH.G8.DATA_H.PROBABILITY.CHANCE_EVENTS": {
+   "forms": [
+    "which event happens by chance",
+    "likely or unlikely",
+    "certain or impossible",
+    "give an example"
+   ],
+   "mastery": "The child sorts everyday events into ones that happen by chance (a coin landing heads, the next car being white) and ones whose result is known (Saturday after Friday), and describes chance events as impossible, unlikely, even, likely or certain."
+  },
+  "MATH.G8.DATA_H.PROBABILITY.CHANCE_EXPERIMENT": {
+   "forms": [
+    "whose result is closer to the true probability",
+    "why more tosses",
+    "record the results",
+    "what changes with more trials"
+   ],
+   "mastery": "The child carries out and records a chance experiment (tossing, rolling, drawing balls one at a time), and explains that more trials give a result closer to the true probability, whatever the result of a short run."
+  },
+  "MATH.G8.DATA_H.PROBABILITY.EXPECTED_FROM_EXPERIMENT": {
+   "forms": [
+    "about how many times",
+    "in 200 tosses",
+    "expected number of greens",
+    "how many spins altogether"
+   ],
+   "mastery": "The child finds the experimental probability and multiplies it by the new number of trials (or scales the results in proportion): 12 sides in 40 tosses is 0.3, so in 200 tosses about 60 sides."
+  },
+  "MATH.G8.DATA_H.PROBABILITY.EXPERIMENTAL_PROBABILITY": {
+   "forms": [
+    "experimental probability that",
+    "from the table of results",
+    "out of all the tosses",
+    "in its simplest form"
+   ],
+   "mastery": "The child writes the number of times the outcome happened over the total number of trials (not over the other outcomes), in its simplest form: a bottle top landing on its side 12 times in 40 tosses has an experimental probability of 12/40 = 3/10."
+  },
+  "MATH.G8.DATA_H.PROBABILITY.PROBABILITY_FRACTION": {
+   "forms": [
+    "as a fraction",
+    "simplest form",
+    "probability it does not happen",
+    "do they add to 1"
+   ],
+   "mastery": "The child writes each outcome's probability as a fraction in its simplest form, knows the probabilities of all the outcomes add to 1, and finds the probability of an outcome not happening as 1 minus the probability: 3/10 on its side gives 7/10 not on its side."
+  },
+  "MATH.G8.DATA_H.PROBABILITY.COMBINED_TWO_STAGE": {
+   "forms": [
+    "rains and the matatu is late",
+    "along the branches",
+    "which path",
+    "multiply or add"
+   ],
+   "mastery": "The child follows one path of a tree diagram and multiplies the probabilities along it (rain 0.3 and late 0.2 gives 0.06), and adds only when choosing between different paths. Goes beyond the Grade 8 design (teacher to confirm)."
+  },
+  "MATH.G8.DATA_H.PROBABILITY.PROBABILITY_DECIMAL_PERCENT": {
+   "forms": [
+    "as a decimal",
+    "as a percentage",
+    "which is more likely",
+    "between 0 and 1"
+   ],
+   "mastery": "The child divides the numerator by the denominator for the decimal and multiplies the decimal by 100 for the percentage, and knows a probability is between 0 and 1 (0% and 100%): 3/8 = 0.375 = 37.5%."
+  }
+ }
+}

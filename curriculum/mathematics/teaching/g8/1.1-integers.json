@@ -1,0 +1,611 @@
+{
+ "sub_strand": "MATH.G8.NUMBER.INTEGERS",
+ "title": "Integers",
+ "status": "draft: written 18 Nov 2026 offline for Grade 8; not yet checked by a Kenyan maths teacher; not loaded by the live tutor",
+ "sources": [],
+ "notes": "Official outcomes a to c are tested; d (use IT) and e (reflect) are not questions. KICD names addition and subtraction on the number line (c); its learning experiences add combined operations, so the last skill takes repeated changes (a change times a number of steps, a total change shared over steps) in real situations. Grades 6 and 7 have no Integers sub-strand: the floor is Grade 7 temperature below zero and whole-number operations. The lift family's feedback for the one-short answer says floor 0 was not counted, but the number it gives is the one a child gets by counting the starting floor as a step; tagged M_START_COUNTED_AS_STEP, feedback wording for a teacher to confirm. The coverage family g8c.int.number-line-lift is a near duplicate of g8.int.lift-floors and is filed under the number line (b); a teacher should merge or retire one. Teacher to confirm: whether multiplying and dividing integers belongs in Grade 8 or waits for Grade 9 (two existing families use it).",
+ "skills": [
+  {
+   "skill": "MATH.G8.NUMBER.INTEGERS.INT_IDENTIFY",
+   "key_step": "The child decides the direction first (above or below zero, in or out) and only then writes the size with a sign.",
+   "floor": {
+    "prerequisite": "Reads a temperature below zero.",
+    "question": "A thermometer reads 3 below zero. Write it.",
+    "answer": "-3 degrees"
+   },
+   "representations": [
+    "a staircase with a landing at zero",
+    "a vertical number line",
+    "signed numbers"
+   ],
+   "steps": [
+    "Find the zero point of the situation.",
+    "Decide above or below, in or out.",
+    "Write the size.",
+    "Put the sign in front."
+   ],
+   "contexts": [
+    "floors and basements in a Nairobi office block",
+    "a trader gaining and losing shillings",
+    "Mount Kenya at dawn"
+   ],
+   "board": [
+    {
+     "beat": "draw",
+     "do": "Draw a staircase with the landing marked 0."
+    },
+    {
+     "beat": "point",
+     "do": "Point three steps below the landing.",
+     "say": "Which number names this step?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for the child to say."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "MATH.G8.NUMBER.INTEGERS.INT_IDENTIFY.M_FRACTION_AS_INTEGER",
+     "listen_for": [
+      "2.5 is an integer"
+     ],
+     "ask": "Is 2.5 a whole step on the stairs?",
+     "repair": "Integers are whole steps only."
+    },
+    {
+     "code": "MATH.G8.NUMBER.INTEGERS.INT_IDENTIFY.M_ZERO_NOT_INTEGER",
+     "listen_for": [
+      "zero is not an integer",
+      "zero is negative"
+     ],
+     "ask": "Which step is the landing?",
+     "repair": "Zero is the landing and is an integer."
+    },
+    {
+     "code": "MATH.G8.NUMBER.INTEGERS.INT_IDENTIFY.M_LOSS_WRITTEN_POSITIVE",
+     "listen_for": [
+      "200"
+     ],
+     "ask": "Did the money come in or go out?",
+     "repair": "Out gets a minus sign."
+    },
+    {
+     "code": "MATH.G8.NUMBER.INTEGERS.INT_IDENTIFY.M_OPPOSITE_SAME_SIGN",
+     "listen_for": [
+      "-6 again"
+     ],
+     "ask": "How far from zero is -6, and on which side?",
+     "repair": "Same distance, other side: 6."
+    }
+   ],
+   "checks": [
+    {
+     "question": "A diver is 8 m below the water surface. Write the depth as an integer.",
+     "answer": "-8",
+     "shows": "sign for below"
+    },
+    {
+     "question": "Which of 4, -1.5, 0 and -9 are integers?",
+     "answer": "4, 0 and -9",
+     "shows": "whole numbers only"
+    }
+   ]
+  },
+  {
+   "skill": "MATH.G8.NUMBER.INTEGERS.INT_ORDER_COMPARE",
+   "key_step": "The child places each number on the number line and reads the order from left to right.",
+   "floor": {
+    "prerequisite": "Orders whole numbers.",
+    "question": "Order 12, 3, 8",
+    "answer": "3, 8, 12"
+   },
+   "representations": [
+    "a thermometer",
+    "a horizontal number line",
+    "the < and > signs"
+   ],
+   "steps": [
+    "Mark each number on the line.",
+    "The one furthest left is smallest.",
+    "Read the order left to right.",
+    "Write the sign pointing to the smaller."
+   ],
+   "contexts": [
+    "night temperatures in Limuru and Nyahururu",
+    "floors in a building",
+    "scores in a quiz with minus marks"
+   ],
+   "board": [
+    {
+     "beat": "draw",
+     "do": "Draw a number line from -10 to 5 and mark -9 and -2."
+    },
+    {
+     "beat": "point",
+     "do": "Point at -9, then at -2.",
+     "say": "Which one is further left?"
+    },
+    {
+     "beat": "predict",
+     "do": "Ask the child to say which is smaller before you say anything."
+    },
+    {
+     "beat": "reveal",
+     "do": "Write -9 < -2."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "MATH.G8.NUMBER.INTEGERS.INT_ORDER_COMPARE.M_DIGIT_SIZE_BELOW_ZERO",
+     "listen_for": [
+      "-2 is smaller",
+      "2 is less than 9"
+     ],
+     "ask": "Which is colder, -9 degrees or -2 degrees?",
+     "repair": "Further below zero is smaller."
+    },
+    {
+     "code": "MATH.G8.NUMBER.INTEGERS.INT_ORDER_COMPARE.M_NEGATIVES_NOT_COMPARABLE",
+     "listen_for": [
+      "cannot compare"
+     ],
+     "ask": "Where are -4 and -7 on the line?",
+     "repair": "Every integer has a place; compare the places."
+    },
+    {
+     "code": "MATH.G8.NUMBER.INTEGERS.INT_ORDER_COMPARE.M_SAME_SIGN_EQUAL",
+     "listen_for": [
+      "they are equal"
+     ],
+     "ask": "Are -3 and -8 at the same mark?",
+     "repair": "Different marks, different numbers."
+    },
+    {
+     "code": "MATH.G8.NUMBER.INTEGERS.INT_ORDER_COMPARE.M_ORDER_IGNORES_SIGN",
+     "listen_for": [
+      "0, -1, 3, -5"
+     ],
+     "ask": "Where does -5 go on the line?",
+     "repair": "Place first, then read."
+    }
+   ],
+   "checks": [
+    {
+     "question": "Order -6, 4, -1, 0 from smallest to largest.",
+     "answer": "-6, -1, 0, 4",
+     "shows": "negatives first"
+    },
+    {
+     "question": "Put < or > between -12 and -5.",
+     "answer": "-12 < -5",
+     "shows": "further from zero is smaller"
+    }
+   ]
+  },
+  {
+   "skill": "MATH.G8.NUMBER.INTEGERS.INT_NUMBER_LINE",
+   "key_step": "The child counts out from zero in equal steps in both directions before marking any number.",
+   "floor": {
+    "prerequisite": "Uses a scale with equal steps.",
+    "question": "Marks go 0, 2, 4. What comes next?",
+    "answer": "6"
+   },
+   "representations": [
+    "a stairway",
+    "a vertical line",
+    "a horizontal number line"
+   ],
+   "steps": [
+    "Draw the line and mark zero.",
+    "Mark equal steps both ways.",
+    "Number the right side 1, 2, 3 and the left side -1, -2, -3 from zero.",
+    "Mark the given integers."
+   ],
+   "contexts": [
+    "a borehole below ground",
+    "floors in a building",
+    "temperatures on a weather chart"
+   ],
+   "board": [
+    {
+     "beat": "draw",
+     "do": "Draw a line with zero in the middle and five equal marks each side."
+    },
+    {
+     "beat": "child_draws",
+     "do": "The child writes the numbers on the left side."
+    },
+    {
+     "beat": "point",
+     "do": "Point at the third mark left of zero.",
+     "say": "Which integer is this?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for the child to say."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "MATH.G8.NUMBER.INTEGERS.INT_NUMBER_LINE.M_NEGATIVES_ON_RIGHT",
+     "listen_for": [
+      "on the right"
+     ],
+     "ask": "Which side of zero are numbers below zero?",
+     "repair": "Left (or down)."
+    },
+    {
+     "code": "MATH.G8.NUMBER.INTEGERS.INT_NUMBER_LINE.M_NEGATIVE_LINE_ORDER_REVERSED",
+     "listen_for": [
+      "-4"
+     ],
+     "ask": "Which number is next to zero on the left?",
+     "repair": "-1, then -2."
+    },
+    {
+     "code": "MATH.G8.NUMBER.INTEGERS.INT_NUMBER_LINE.M_UNEQUAL_STEPS",
+     "listen_for": [
+      "-3"
+     ],
+     "ask": "What is each step worth?",
+     "repair": "Steps of 2: three steps is -6."
+    },
+    {
+     "code": "MATH.G8.NUMBER.INTEGERS.INT_NUMBER_LINE.M_ZERO_LEFT_OUT",
+     "listen_for": [
+      "no zero",
+      "1"
+     ],
+     "ask": "What is between -1 and 1?",
+     "repair": "Zero has its own mark."
+    }
+   ],
+   "checks": [
+    {
+     "question": "On a line where each mark is 5, the arrow is 2 marks left of zero. Which integer?",
+     "answer": "-10",
+     "shows": "step size"
+    },
+    {
+     "question": "Fill the gaps: -3, __, -1, __, 1",
+     "answer": "-2 and 0",
+     "shows": "count from zero"
+    }
+   ]
+  },
+  {
+   "skill": "MATH.G8.NUMBER.INTEGERS.INT_ADD_SUB_LINE",
+   "key_step": "The child puts a finger on the start, decides right or left from the operation, and counts each step, zero included.",
+   "floor": {
+    "prerequisite": "Counts on and back.",
+    "question": "Start at 8 and count back 3",
+    "answer": "5"
+   },
+   "representations": [
+    "a lift in a building",
+    "a number line with jumps",
+    "the number sentence"
+   ],
+   "steps": [
+    "Mark the start.",
+    "Add moves right, subtract moves left.",
+    "Count each step, zero too.",
+    "Read where you land."
+   ],
+   "contexts": [
+    "a lift in a Nairobi office block",
+    "a matatu tout counting passengers on and off",
+    "temperature at night"
+   ],
+   "board": [
+    {
+     "beat": "draw",
+     "do": "Draw a number line from -6 to 6 and mark 3."
+    },
+    {
+     "beat": "point",
+     "do": "Point at 3.",
+     "say": "The lift goes down 7. Which way do we move?"
+    },
+    {
+     "beat": "count",
+     "do": "Count the 7 steps left with the child, saying zero aloud."
+    },
+    {
+     "beat": "reveal",
+     "do": "Write 3 - 7 = -4."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "MATH.G8.NUMBER.INTEGERS.INT_ADD_SUB_LINE.M_SIGN_DROPPED_BELOW_ZERO",
+     "listen_for": [
+      "4"
+     ],
+     "ask": "Did you pass zero?",
+     "repair": "Past zero, the answer is negative."
+    },
+    {
+     "code": "MATH.G8.NUMBER.INTEGERS.INT_ADD_SUB_LINE.M_DOWN_AS_ADD",
+     "listen_for": [
+      "-7"
+     ],
+     "ask": "Does up move right or left?",
+     "repair": "Up moves right."
+    },
+    {
+     "code": "MATH.G8.NUMBER.INTEGERS.INT_ADD_SUB_LINE.M_START_IGNORED",
+     "listen_for": [
+      "-6"
+     ],
+     "ask": "Where did the lift start?",
+     "repair": "Start from the first number."
+    },
+    {
+     "code": "MATH.G8.NUMBER.INTEGERS.INT_ADD_SUB_LINE.M_START_COUNTED_AS_STEP",
+     "listen_for": [
+      "-2 when it should be -3",
+      "one short"
+     ],
+     "ask": "Where does the first jump land?",
+     "repair": "Count jumps, not marks."
+    },
+    {
+     "code": "MATH.G8.NUMBER.INTEGERS.INT_ADD_SUB_LINE.M_WRONG_SIDE_OF_ZERO",
+     "listen_for": [
+      "2"
+     ],
+     "ask": "Where did you land, left or right of zero?",
+     "repair": "Check the side."
+    }
+   ],
+   "checks": [
+    {
+     "question": "A lift is at floor 2 and goes down 6 floors. Which floor?",
+     "answer": "-4",
+     "shows": "crossing zero"
+    },
+    {
+     "question": "Work out -5 + 8.",
+     "answer": "3",
+     "shows": "moving right"
+    }
+   ]
+  },
+  {
+   "skill": "MATH.G8.NUMBER.INTEGERS.INT_DIFFERENCE",
+   "key_step": "The child counts from the lower number up to zero, then from zero to the higher number, and adds the two parts.",
+   "floor": {
+    "prerequisite": "Finds a difference of whole numbers.",
+    "question": "15 - 6",
+    "answer": "9"
+   },
+   "representations": [
+    "a thermometer",
+    "a vertical line with sea level",
+    "the subtraction with signs"
+   ],
+   "steps": [
+    "Mark both numbers.",
+    "Count from the lower up to zero.",
+    "Count from zero up to the higher.",
+    "Add the two parts."
+   ],
+   "contexts": [
+    "Mount Kenya at dawn and at noon",
+    "a hill and a well near sea level at the coast",
+    "a freezer and a room"
+   ],
+   "board": [
+    {
+     "beat": "draw",
+     "do": "Draw a thermometer from -10 to 15 and mark -4 and 9."
+    },
+    {
+     "beat": "point",
+     "do": "Point at -4.",
+     "say": "How many degrees up to zero?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for the child to say 4."
+    },
+    {
+     "beat": "point",
+     "do": "Point at zero.",
+     "say": "And from zero up to 9?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for 9."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "MATH.G8.NUMBER.INTEGERS.INT_DIFFERENCE.M_SUBTRACT_ACROSS_ZERO",
+     "listen_for": [
+      "5",
+      "9 minus 4"
+     ],
+     "ask": "Are -4 and 9 on the same side of zero?",
+     "repair": "Opposite sides: add the two parts."
+    },
+    {
+     "code": "MATH.G8.NUMBER.INTEGERS.INT_DIFFERENCE.M_ONLY_ONE_SIDE_COUNTED",
+     "listen_for": [
+      "9"
+     ],
+     "ask": "Where does the temperature start?",
+     "repair": "Start at -4, not at zero."
+    },
+    {
+     "code": "MATH.G8.NUMBER.INTEGERS.INT_DIFFERENCE.M_DIFFERENCE_NEGATIVE",
+     "listen_for": [
+      "-8"
+     ],
+     "ask": "Can a distance be negative?",
+     "repair": "Larger minus smaller."
+    },
+    {
+     "code": "MATH.G8.NUMBER.INTEGERS.INT_DIFFERENCE.M_SEA_LEVEL_DEPTH_ADDED_WRONG",
+     "listen_for": [
+      "90"
+     ],
+     "ask": "Is the well above or below sea level?",
+     "repair": "Below: the two parts add."
+    }
+   ],
+   "checks": [
+    {
+     "question": "At dawn it is -3 degrees and at noon 11 degrees. How much warmer at noon?",
+     "answer": "14 degrees",
+     "shows": "through zero"
+    },
+    {
+     "question": "A plane at 250 m and a submarine at -40 m. How far apart?",
+     "answer": "290 m",
+     "shows": "above and below"
+    }
+   ]
+  },
+  {
+   "skill": "MATH.G8.NUMBER.INTEGERS.INT_COMBINED_CONTEXT",
+   "key_step": "The child writes the starting value first, then each change with its sign, and decides whether a repeated change is built up (multiply) or shared out (divide).",
+   "floor": {
+    "prerequisite": "Adds and subtracts integers.",
+    "question": "-4 - 6",
+    "answer": "-10"
+   },
+   "representations": [
+    "a bank statement table",
+    "a vertical line with arrows",
+    "a number sentence with signs"
+   ],
+   "steps": [
+    "Write the start.",
+    "Write each change with its sign.",
+    "For a repeated change, multiply or divide.",
+    "Give the answer with its sign and unit."
+   ],
+   "contexts": [
+    "a duka account over a week",
+    "a borehole water level in the dry season",
+    "temperature falling on Mount Kenya"
+   ],
+   "board": [
+    {
+     "beat": "draw",
+     "do": "Draw a table: start 500, then +200, -150, -100."
+    },
+    {
+     "beat": "point",
+     "do": "Point at -150.",
+     "say": "Did this money come in or go out?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for the child to say."
+    },
+    {
+     "beat": "child_draws",
+     "do": "The child writes the running balance under each day."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "MATH.G8.NUMBER.INTEGERS.INT_COMBINED_CONTEXT.M_OPENING_BALANCE_LEFT_OUT",
+     "listen_for": [
+      "-50"
+     ],
+     "ask": "How much was in the account on Monday morning?",
+     "repair": "Start from it."
+    },
+    {
+     "code": "MATH.G8.NUMBER.INTEGERS.INT_COMBINED_CONTEXT.M_MINUS_ADDED",
+     "listen_for": [
+      "950"
+     ],
+     "ask": "What does the minus sign mean here?",
+     "repair": "Money out: take it away."
+    },
+    {
+     "code": "MATH.G8.NUMBER.INTEGERS.INT_COMBINED_CONTEXT.M_ONLY_GAINS_COUNTED",
+     "listen_for": [
+      "700"
+     ],
+     "ask": "What happened on the days with a minus?",
+     "repair": "Those count too."
+    },
+    {
+     "code": "MATH.G8.NUMBER.INTEGERS.INT_COMBINED_CONTEXT.M_SIGN_OF_CHANGE_DROPPED",
+     "listen_for": [
+      "3 degrees"
+     ],
+     "ask": "Did the temperature rise or fall?",
+     "repair": "A fall is negative."
+    },
+    {
+     "code": "MATH.G8.NUMBER.INTEGERS.INT_COMBINED_CONTEXT.M_FINAL_FOR_CHANGE",
+     "listen_for": [
+      "-2.5"
+     ],
+     "ask": "Is -10 the change or the reading?",
+     "repair": "Change = end minus start."
+    },
+    {
+     "code": "MATH.G8.NUMBER.INTEGERS.INT_COMBINED_CONTEXT.M_TOTAL_NOT_SHARED",
+     "listen_for": [
+      "-16"
+     ],
+     "ask": "Is that for one hour or all of them?",
+     "repair": "Share it over the hours."
+    },
+    {
+     "code": "MATH.G8.NUMBER.INTEGERS.INT_COMBINED_CONTEXT.M_STEPS_ADDED_NOT_MULTIPLIED",
+     "listen_for": [
+      "-8"
+     ],
+     "ask": "How many lots of -3?",
+     "repair": "Multiply."
+    },
+    {
+     "code": "MATH.G8.NUMBER.INTEGERS.INT_COMBINED_CONTEXT.M_DEEPER_AS_LESS_NEGATIVE",
+     "listen_for": [
+      "2"
+     ],
+     "ask": "Going down: left or right on the line?",
+     "repair": "Left: -10."
+    },
+    {
+     "code": "MATH.G8.NUMBER.INTEGERS.INT_COMBINED_CONTEXT.M_START_NOT_REMOVED",
+     "listen_for": [
+      "7.5"
+     ],
+     "ask": "How much deeper must it go?",
+     "repair": "Take the start away first."
+    },
+    {
+     "code": "MATH.G8.NUMBER.INTEGERS.INT_COMBINED_CONTEXT.M_RATE_OPERATION_WRONG",
+     "listen_for": [
+      "-8 for each hour"
+     ],
+     "ask": "Is the total shared out or built up?",
+     "repair": "Shared out: divide."
+    }
+   ],
+   "checks": [
+    {
+     "question": "An account has 800 shillings. Then +250, -400, -150. Balance?",
+     "answer": "500 shillings",
+     "shows": "running total"
+    },
+    {
+     "question": "The temperature falls 20 degrees in 5 hours at a steady rate. Change each hour?",
+     "answer": "-4 degrees",
+     "shows": "shared change"
+    }
+   ]
+  }
+ ]
+}

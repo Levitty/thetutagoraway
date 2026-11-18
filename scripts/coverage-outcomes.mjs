@@ -27,6 +27,7 @@ const { SKILLS_G5 } = await import(resolve(root, 'src/ai-tutor/content/curriculu
 const { SKILLS_G4 } = await import(resolve(root, 'src/ai-tutor/content/curriculumMap.g4.js'));
 const { SKILLS_G6 } = await import(resolve(root, 'src/ai-tutor/content/curriculumMap.g6.js'));
 const { SKILLS_G7 } = await import(resolve(root, 'src/ai-tutor/content/curriculumMap.g7.js'));
+const { SKILLS_G8 } = await import(resolve(root, 'src/ai-tutor/content/curriculumMap.g8.js'));
 const { SUBJECT_ORDER, entriesOf } = await import(resolve(root, 'src/ai-tutor/content/subjects/registry.js'));   // subjects beyond Maths: one section each
 
 const JSON_ONLY = process.argv.includes('--json');
@@ -94,7 +95,7 @@ for (const [id, tag] of Object.entries(SKILL_TAGS)) {
 }
 console.warn = quiet; setFamilyMode('reviewed');
 // Grades 5, 6 and 7: the curriculum maps' skills name their outcomes directly, and carry a misconception library.
-for (const [cs, k] of [...Object.entries(SKILLS_G5), ...Object.entries(SKILLS_G6), ...Object.entries(SKILLS_G7)]) for (const code of k.outcomes || []) {
+for (const [cs, k] of [...Object.entries(SKILLS_G5), ...Object.entries(SKILLS_G6), ...Object.entries(SKILLS_G7), ...Object.entries(SKILLS_G8)]) for (const code of k.outcomes || []) {
   const t = find(code); if (!t) continue;
   if ((k.mis || []).length) t.lib++;
   for (const hid of k.horeb || []) if (SKILLS[hid]) { t.s += t.ids.has(hid) ? 0 : 1; t.ids.add(hid); const info = skillInfo(hid); if (info.mis) t.m++; if (info.worked) t.w++; }

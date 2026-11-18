@@ -155,14 +155,14 @@ export const FAMILIES = [
         steps: [`${words} thousand = ${commas(t * 1000)}.`, `${ones[h]} hundred = ${h * 100}.`, `Together: ${commas(n)}.`] };
     },
     check: ({ t, h }, a) => a % 100 === 0 && Math.floor(a / 1000) === t && (a % 1000) / 100 === h }),
-  fam({ id: 'g8.money.interest-table', skill: 'G9_COMPOUND_INTEREST', outcome: 'G8.MONEY.c', rung: 2, form: 'table',
+  fam({ id: 'g8.money.interest-table', skill: 'G9_COMPOUND_INTEREST', outcome: 'MATH.G8.MEASUR.MONEY.c', cskill: 'MATH.G8.MEASUR.MONEY.COMPOUND_INTEREST', rung: 2, form: 'table',
     draw: () => { const P = pick([10000, 20000, 40000, 50000]), R = pick([5, 10, 20]); return { P, R }; },
     make: ({ P, R }) => {
       const A1 = P * (1 + R / 100), A2 = A1 * (1 + R / 100);
       return { question: `Read this SACCO table. Each year adds ${R}% to what is there at the start: compound interest. What goes in the empty box, in shillings?`,
         model: { type: 'table', data: { head: ['Year', 'Start (sh)', 'End (sh)'], rows: [{ cells: ['1', commas(P), commas(A1)] }, { cells: ['2', commas(A1), '?'] }] } },
         answer: A2,
-        wrong: [[P + 2 * (P * R) / 100, `That is simple interest. Year 2's interest is worked on the new amount.`], [A2 - P, 'That is only the interest. The table asks for the whole amount at the end of the year.'], [(A1 * R) / 100, 'That is the interest in year 2. Add it to the amount at the start of the year.']],
+        wrong: [[P + 2 * (P * R) / 100, `That is simple interest. Year 2's interest is worked on the new amount.`, 'M_COMPOUND_AS_SIMPLE'], [A2 - P, 'That is only the interest. The table asks for the whole amount at the end of the year.', 'M_INTEREST_FOR_AMOUNT'], [(A1 * R) / 100, 'That is the interest in year 2. Add it to the amount at the start of the year.', 'M_YEAR_INTEREST_NOT_ADDED']],
         hints: ['Read the amount at the start of year 2.', `Add ${R}% of that amount.`],
         steps: [`Start of year 2: ${sh(A1)}.`, `Interest: ${R}% of ${commas(A1)} = ${sh((A1 * R) / 100)}.`, `End of year 2: ${sh(A2)}.`] };
     },

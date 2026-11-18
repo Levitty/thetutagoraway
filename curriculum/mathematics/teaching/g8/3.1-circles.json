@@ -1,0 +1,582 @@
+{
+ "sub_strand": "MATH.G8.MEASUR.CIRCLES",
+ "title": "Circles",
+ "status": "draft: written 18 Nov 2026 offline for Grade 8; not yet checked by a Kenyan maths teacher; not loaded by the live tutor",
+ "sources": [],
+ "notes": "Official outcomes a to c are tested; d (use IT) and e (promote use) are not questions. π is taken as 22/7 (or 3.14 when the question says so), as in the families. Grade 7 already found the circumference; Grade 8 adds the arc as a fraction θ/360 of it and the perimeter of a sector (the arc and two radii). The families tag these with the HOREB skill G9_ARC_LENGTH, which is kept so the practice engine still finds them. Working back from a perimeter to the radius (one family) goes a little beyond the outcome: teacher to confirm.",
+ "skills": [
+  {
+   "skill": "MATH.G8.MEASUR.CIRCLES.CIRCUMFERENCE_RADIUS_DIAMETER",
+   "key_step": "The child says whether the given length is a radius or a diameter and writes the formula that fits before putting in numbers.",
+   "floor": {
+    "prerequisite": "Knows diameter is twice the radius.",
+    "question": "Radius 7 cm: diameter?",
+    "answer": "14 cm"
+   },
+   "representations": [
+    "a string round a tin",
+    "a circle with radius and diameter marked",
+    "C = 2πr"
+   ],
+   "steps": [
+    "Is it a radius or a diameter?",
+    "Choose C = 2πr or C = πd.",
+    "Multiply by π (22/7).",
+    "Give the unit."
+   ],
+   "contexts": [
+    "a school running track",
+    "a boda boda wheel",
+    "a round water tank"
+   ],
+   "board": [
+    {
+     "beat": "draw",
+     "do": "Draw a circle and mark a radius of 14 cm."
+    },
+    {
+     "beat": "point",
+     "do": "Point at the radius.",
+     "say": "How long is the line right across?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for 28 cm."
+    },
+    {
+     "beat": "write",
+     "do": "Write C = 22/7 × 28."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "MATH.G8.MEASUR.CIRCLES.CIRCUMFERENCE_RADIUS_DIAMETER.M_RADIUS_FOR_DIAMETER",
+     "listen_for": [
+      "44"
+     ],
+     "ask": "Is 14 the radius or the diameter?",
+     "repair": "Double it first."
+    },
+    {
+     "code": "MATH.G8.MEASUR.CIRCLES.CIRCUMFERENCE_RADIUS_DIAMETER.M_AREA_FOR_CIRCUMFERENCE",
+     "listen_for": [
+      "154"
+     ],
+     "ask": "Do we want the space inside or the distance round?",
+     "repair": "Round: 2πr."
+    },
+    {
+     "code": "MATH.G8.MEASUR.CIRCLES.CIRCUMFERENCE_RADIUS_DIAMETER.M_PI_ADDED",
+     "listen_for": [
+      "17.14"
+     ],
+     "ask": "Does π add or multiply?",
+     "repair": "Multiply."
+    },
+    {
+     "code": "MATH.G8.MEASUR.CIRCLES.CIRCUMFERENCE_RADIUS_DIAMETER.M_DIVIDED_BY_PI",
+     "listen_for": [
+      "4.45"
+     ],
+     "ask": "Is round longer or shorter than across?",
+     "repair": "Longer: multiply."
+    },
+    {
+     "code": "MATH.G8.MEASUR.CIRCLES.CIRCUMFERENCE_RADIUS_DIAMETER.M_TWO_LEFT_OUT",
+     "listen_for": [
+      "110"
+     ],
+     "ask": "C = 2πr: where is the 2?",
+     "repair": "Put it in."
+    }
+   ],
+   "checks": [
+    {
+     "question": "Circumference of a circle of radius 21 cm (π = 22/7)?",
+     "answer": "132 cm",
+     "shows": "radius"
+    },
+    {
+     "question": "Circumference of a tin of diameter 7 cm?",
+     "answer": "22 cm",
+     "shows": "diameter"
+    }
+   ]
+  },
+  {
+   "skill": "MATH.G8.MEASUR.CIRCLES.CIRCUMFERENCE_DISTANCE",
+   "key_step": "The child says one turn of a wheel (or one lap) is one circumference, then multiplies or divides by the number of turns.",
+   "floor": {
+    "prerequisite": "Finds a circumference.",
+    "question": "Diameter 70 cm",
+    "answer": "220 cm"
+   },
+   "representations": [
+    "a wheel rolled along a line",
+    "one turn marked",
+    "the total distance"
+   ],
+   "steps": [
+    "Find one turn (the circumference).",
+    "Multiply by the turns, or divide the distance by one lap.",
+    "Change units if asked.",
+    "Check the size is sensible."
+   ],
+   "contexts": [
+    "a boda boda wheel on the road to Kitengela",
+    "laps of the school field",
+    "a bicycle wheel"
+   ],
+   "board": [
+    {
+     "beat": "draw",
+     "do": "Draw a wheel on a road and mark where a spot on the rim touches the road."
+    },
+    {
+     "beat": "point",
+     "do": "Point at the mark after one turn.",
+     "say": "How far has the wheel moved?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for the child to say one circumference."
+    },
+    {
+     "beat": "child_draws",
+     "do": "The child marks two and three turns."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "MATH.G8.MEASUR.CIRCLES.CIRCUMFERENCE_DISTANCE.M_UNITS_NOT_CONVERTED_CM_M",
+     "listen_for": [
+      "22,000"
+     ],
+     "ask": "Metres or centimetres?",
+     "repair": "Divide by 100."
+    },
+    {
+     "code": "MATH.G8.MEASUR.CIRCLES.CIRCUMFERENCE_DISTANCE.M_ONE_TURN_ONLY",
+     "listen_for": [
+      "2.2"
+     ],
+     "ask": "How many turns?",
+     "repair": "Multiply."
+    },
+    {
+     "code": "MATH.G8.MEASUR.CIRCLES.CIRCUMFERENCE_DISTANCE.M_LAPS_ADDED",
+     "listen_for": [
+      "225"
+     ],
+     "ask": "Do laps add one at a time or repeat?",
+     "repair": "Multiply."
+    },
+    {
+     "code": "MATH.G8.MEASUR.CIRCLES.CIRCUMFERENCE_DISTANCE.M_LAPS_MULTIPLIED_NOT_DIVIDED",
+     "listen_for": [
+      "242,000"
+     ],
+     "ask": "How many 220s fit in 1,100?",
+     "repair": "Divide."
+    },
+    {
+     "code": "MATH.G8.MEASUR.CIRCLES.CIRCUMFERENCE_DISTANCE.M_RADIUS_AS_DIAMETER_WHEEL",
+     "listen_for": [
+      "440"
+     ],
+     "ask": "Is 70 cm across the whole wheel?",
+     "repair": "Do not double it."
+    }
+   ],
+   "checks": [
+    {
+     "question": "A wheel of diameter 56 cm turns 50 times. Distance in metres?",
+     "answer": "88 m",
+     "shows": "turns and units"
+    },
+    {
+     "question": "A track of radius 35 m. Laps to run 2,200 m?",
+     "answer": "10 laps",
+     "shows": "divide"
+    }
+   ]
+  },
+  {
+   "skill": "MATH.G8.MEASUR.CIRCLES.ARC_LENGTH",
+   "key_step": "The child writes the fraction θ/360 and checks it is less than one before multiplying by the circumference.",
+   "floor": {
+    "prerequisite": "Finds a fraction of a number.",
+    "question": "60/360 of 132",
+    "answer": "22"
+   },
+   "representations": [
+    "a paper circle folded into sectors",
+    "the angle as a fraction of 360",
+    "the arc"
+   ],
+   "steps": [
+    "Find the circumference.",
+    "Write θ/360.",
+    "Multiply.",
+    "Check: shorter than the whole circle."
+   ],
+   "contexts": [
+    "a hedge along a curved shamba edge",
+    "a metal rim for a gate",
+    "the crust of a cake slice"
+   ],
+   "board": [
+    {
+     "beat": "draw",
+     "do": "Draw a circle of radius 21 cm with a 60° sector shaded."
+    },
+    {
+     "beat": "point",
+     "do": "Point at the 60°.",
+     "say": "What fraction of the whole turn is this?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for 1/6."
+    },
+    {
+     "beat": "child_draws",
+     "do": "The child finds 1/6 of 132."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "MATH.G8.MEASUR.CIRCLES.ARC_LENGTH.M_WHOLE_CIRCLE_FOR_ARC",
+     "listen_for": [
+      "132"
+     ],
+     "ask": "Is the arc the whole way round?",
+     "repair": "Take 60/360."
+    },
+    {
+     "code": "MATH.G8.MEASUR.CIRCLES.ARC_LENGTH.M_ARC_PI_R_ONLY",
+     "listen_for": [
+      "11"
+     ],
+     "ask": "Is the full circle πr or 2πr?",
+     "repair": "2πr."
+    },
+    {
+     "code": "MATH.G8.MEASUR.CIRCLES.ARC_LENGTH.M_SECTOR_AREA_FOR_ARC",
+     "listen_for": [
+      "154"
+     ],
+     "ask": "Is an arc a length or an area?",
+     "repair": "A length."
+    },
+    {
+     "code": "MATH.G8.MEASUR.CIRCLES.ARC_LENGTH.M_ARC_FRACTION_INVERTED",
+     "listen_for": [
+      "792"
+     ],
+     "ask": "Can an arc be longer than the circle?",
+     "repair": "Use 60/360."
+    },
+    {
+     "code": "MATH.G8.MEASUR.CIRCLES.ARC_LENGTH.M_ANGLE_FOR_LENGTH",
+     "listen_for": [
+      "60"
+     ],
+     "ask": "Degrees or centimetres?",
+     "repair": "Work out the arc."
+    },
+    {
+     "code": "MATH.G8.MEASUR.CIRCLES.ARC_LENGTH.M_TABLE_VALUE_COPIED",
+     "listen_for": [
+      "33"
+     ],
+     "ask": "Is 60 degrees the same as 90?",
+     "repair": "Smaller angle, shorter arc."
+    }
+   ],
+   "checks": [
+    {
+     "question": "Arc of 45° on a circle of radius 28 cm?",
+     "answer": "22 cm",
+     "shows": "fraction of circumference"
+    },
+    {
+     "question": "Arc of 120° on a circle of radius 21 cm?",
+     "answer": "44 cm",
+     "shows": "fraction of circumference"
+    }
+   ]
+  },
+  {
+   "skill": "MATH.G8.MEASUR.CIRCLES.ARC_IN_CONTEXT",
+   "key_step": "The child turns the story into an angle at the centre (6 degrees a minute for a minute hand) before finding the arc.",
+   "floor": {
+    "prerequisite": "Knows a minute hand turns once an hour.",
+    "question": "Degrees in a full turn of the minute hand",
+    "answer": "360"
+   },
+   "representations": [
+    "a wall clock",
+    "the angle swept",
+    "the arc"
+   ],
+   "steps": [
+    "Find the angle from the story.",
+    "Write it over 360.",
+    "Find the circumference.",
+    "Multiply."
+   ],
+   "contexts": [
+    "a classroom wall clock",
+    "a swing in a park",
+    "a matatu windscreen wiper"
+   ],
+   "board": [
+    {
+     "beat": "draw",
+     "do": "Draw a clock face with the minute hand at 12 and at 4."
+    },
+    {
+     "beat": "point",
+     "do": "Point at the space swept.",
+     "say": "How many minutes, and how many degrees?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for 20 minutes, 120 degrees."
+    },
+    {
+     "beat": "write",
+     "do": "Write 120/360 × 2 × 22/7 × 21."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "MATH.G8.MEASUR.CIRCLES.ARC_IN_CONTEXT.M_WHOLE_TURN_FOR_TIME",
+     "listen_for": [
+      "132"
+     ],
+     "ask": "Did the hand go all the way round?",
+     "repair": "20 of 60 minutes."
+    },
+    {
+     "code": "MATH.G8.MEASUR.CIRCLES.ARC_IN_CONTEXT.M_MINUTES_AS_DEGREES",
+     "listen_for": [
+      "20 degrees"
+     ],
+     "ask": "How many degrees in one minute?",
+     "repair": "6."
+    },
+    {
+     "code": "MATH.G8.MEASUR.CIRCLES.ARC_IN_CONTEXT.M_TWELVE_MINUTE_TURN",
+     "listen_for": [
+      "220"
+     ],
+     "ask": "How long for a full turn of the minute hand?",
+     "repair": "60 minutes."
+    },
+    {
+     "code": "MATH.G8.MEASUR.CIRCLES.ARC_IN_CONTEXT.M_HOUR_HAND_RATE",
+     "listen_for": [
+      "30 degrees"
+     ],
+     "ask": "Which hand turns 30 degrees an hour?",
+     "repair": "The hour hand."
+    }
+   ],
+   "checks": [
+    {
+     "question": "A minute hand of 14 cm. How far does its tip move in 15 minutes?",
+     "answer": "22 cm",
+     "shows": "quarter turn"
+    },
+    {
+     "question": "How many degrees does a minute hand turn in 25 minutes?",
+     "answer": "150 degrees",
+     "shows": "angle"
+    }
+   ]
+  },
+  {
+   "skill": "MATH.G8.MEASUR.CIRCLES.SECTOR_PERIMETER",
+   "key_step": "The child traces the edge of the sector with a finger, naming the arc and both radii, before adding.",
+   "floor": {
+    "prerequisite": "Finds an arc.",
+    "question": "Arc of 90° on radius 7 m",
+    "answer": "11 m"
+   },
+   "representations": [
+    "a cardboard sector",
+    "the edges coloured",
+    "arc + r + r"
+   ],
+   "steps": [
+    "Find the arc.",
+    "Add a radius for each straight edge.",
+    "For a half circle, the straight edge is the diameter.",
+    "Give the unit."
+   ],
+   "contexts": [
+    "fencing a garden bed",
+    "a slice of a round cake",
+    "a hand fan"
+   ],
+   "board": [
+    {
+     "beat": "draw",
+     "do": "Draw a sector of radius 7 m and angle 90°."
+    },
+    {
+     "beat": "child_draws",
+     "do": "The child traces all the way round the edge."
+    },
+    {
+     "beat": "point",
+     "do": "Point at each straight edge.",
+     "say": "How long is each one?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for 7 m each."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "MATH.G8.MEASUR.CIRCLES.SECTOR_PERIMETER.M_STRAIGHT_EDGES_LEFT_OUT",
+     "listen_for": [
+      "11"
+     ],
+     "ask": "Does the fence go along the straight edges too?",
+     "repair": "Add them."
+    },
+    {
+     "code": "MATH.G8.MEASUR.CIRCLES.SECTOR_PERIMETER.M_ONE_RADIUS_ONLY",
+     "listen_for": [
+      "18"
+     ],
+     "ask": "How many straight edges?",
+     "repair": "Two."
+    },
+    {
+     "code": "MATH.G8.MEASUR.CIRCLES.SECTOR_PERIMETER.M_WHOLE_CIRCLE_IN_PERIMETER",
+     "listen_for": [
+      "58"
+     ],
+     "ask": "Is the curved edge the whole circle?",
+     "repair": "Only 90/360."
+    },
+    {
+     "code": "MATH.G8.MEASUR.CIRCLES.SECTOR_PERIMETER.M_SEMICIRCLE_NO_DIAMETER",
+     "listen_for": [
+      "44"
+     ],
+     "ask": "Is the straight edge part of the perimeter?",
+     "repair": "Add the diameter."
+    }
+   ],
+   "checks": [
+    {
+     "question": "A sector of radius 14 m and angle 45°. Perimeter?",
+     "answer": "39 m",
+     "shows": "arc and two radii"
+    },
+    {
+     "question": "A half circle of radius 7 m. Perimeter?",
+     "answer": "36 m",
+     "shows": "arc and diameter"
+    }
+   ]
+  },
+  {
+   "skill": "MATH.G8.MEASUR.CIRCLES.SECTOR_WORK_BACK",
+   "key_step": "The child writes the perimeter as r terms (πr + 2r) and collects them into one before dividing.",
+   "floor": {
+    "prerequisite": "Solves an equation with a fraction coefficient.",
+    "question": "(36/7)r = 72",
+    "answer": "r = 14"
+   },
+   "representations": [
+    "a half circle plot",
+    "the perimeter in terms of r",
+    "the equation"
+   ],
+   "steps": [
+    "Write the curved edge in r.",
+    "Write the straight edge in r.",
+    "Add the r terms.",
+    "Divide."
+   ],
+   "contexts": [
+    "a half circle shamba",
+    "a semicircular stage",
+    "a garden at a church"
+   ],
+   "board": [
+    {
+     "beat": "draw",
+     "do": "Draw a half circle with the radius marked r."
+    },
+    {
+     "beat": "point",
+     "do": "Point at the curved edge.",
+     "say": "How long is it in terms of r?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for πr."
+    },
+    {
+     "beat": "point",
+     "do": "Point at the straight edge.",
+     "say": "And this one?"
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "MATH.G8.MEASUR.CIRCLES.SECTOR_WORK_BACK.M_DIAMETER_LEFT_OUT",
+     "listen_for": [
+      "22.9"
+     ],
+     "ask": "Is the straight edge in the perimeter?",
+     "repair": "Add 2r."
+    },
+    {
+     "code": "MATH.G8.MEASUR.CIRCLES.SECTOR_WORK_BACK.M_DIAMETER_AS_RADIUS",
+     "listen_for": [
+      "17.4"
+     ],
+     "ask": "How many radii make the straight edge?",
+     "repair": "Two."
+    },
+    {
+     "code": "MATH.G8.MEASUR.CIRCLES.SECTOR_WORK_BACK.M_FULL_CIRCLE_FOR_HALF",
+     "listen_for": [
+      "8.7"
+     ],
+     "ask": "Is the curved edge the full circle?",
+     "repair": "Half: πr."
+    },
+    {
+     "code": "MATH.G8.MEASUR.CIRCLES.SECTOR_WORK_BACK.M_R_TERMS_NOT_COLLECTED",
+     "listen_for": [
+      "22.9 then take away 2"
+     ],
+     "ask": "How many r altogether?",
+     "repair": "22/7 + 2 = 36/7."
+    }
+   ],
+   "checks": [
+    {
+     "question": "A half circle has a perimeter of 36 m. Radius (π = 22/7)?",
+     "answer": "7 m",
+     "shows": "work back"
+    },
+    {
+     "question": "A half circle has a perimeter of 108 m. Radius?",
+     "answer": "21 m",
+     "shows": "work back"
+    }
+   ]
+  }
+ ]
+}

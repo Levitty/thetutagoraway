@@ -1,0 +1,507 @@
+{
+ "sub_strand": "MATH.G8.ALGEBR.LINEAR_EQUATIONS",
+ "title": "Linear Equations",
+ "status": "draft: written 18 Nov 2026 offline for Grade 8; not yet checked by a Kenyan maths teacher; not loaded by the live tutor",
+ "sources": [],
+ "notes": "Official outcomes a to d are tested; e (use IT) and f (recognise use) are not questions. Every skill is about two linear equations in two unknowns (simultaneous equations): forming them (a), solving by substitution (b) and by elimination (c), and applying them (d). Elimination is split in two: when one unknown already has the same number in front, and when an equation must first be multiplied to make them the same. The existing elimination families carried the old letter b; they are refiled under c. Solving graphically is in Coordinates and Graphs.",
+ "skills": [
+  {
+   "skill": "MATH.G8.ALGEBR.LINEAR_EQUATIONS.FORM_SIMULTANEOUS",
+   "key_step": "The child writes \"let m = ... shillings\" for each unknown, then one equation per sentence, number next to its own letter.",
+   "floor": {
+    "prerequisite": "Forms one equation.",
+    "question": "3 mandazi at m shillings each cost 60",
+    "answer": "3m = 60"
+   },
+   "representations": [
+    "two receipts",
+    "a table of items and totals",
+    "the pair of equations"
+   ],
+   "steps": [
+    "Name each unknown with a letter and unit.",
+    "Write one equation for each fact.",
+    "Match every number to its letter.",
+    "Check with a guess that works."
+   ],
+   "contexts": [
+    "mandazi and chapati at a kiosk",
+    "two bags of maize",
+    "exercise books and pens"
+   ],
+   "board": [
+    {
+     "beat": "draw",
+     "do": "Draw two receipts: 3 mandazi, 2 chapati, 70; 1 mandazi, 4 chapati, 90."
+    },
+    {
+     "beat": "point",
+     "do": "Point at the first receipt.",
+     "say": "Which number goes with m, which with c?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for the child to say."
+    },
+    {
+     "beat": "child_draws",
+     "do": "The child writes both equations."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "MATH.G8.ALGEBR.LINEAR_EQUATIONS.FORM_SIMULTANEOUS.M_COEFFICIENTS_SWAPPED",
+     "listen_for": [
+      "2m + 3c"
+     ],
+     "ask": "How many mandazi were bought?",
+     "repair": "Match numbers to items."
+    },
+    {
+     "code": "MATH.G8.ALGEBR.LINEAR_EQUATIONS.FORM_SIMULTANEOUS.M_COUNTS_LEFT_OUT",
+     "listen_for": [
+      "m + c = 70"
+     ],
+     "ask": "Did she buy one of each?",
+     "repair": "Write how many."
+    },
+    {
+     "code": "MATH.G8.ALGEBR.LINEAR_EQUATIONS.FORM_SIMULTANEOUS.M_TOTALS_ADDED",
+     "listen_for": [
+      "180"
+     ],
+     "ask": "Did the second person pay for both orders?",
+     "repair": "Their own total."
+    },
+    {
+     "code": "MATH.G8.ALGEBR.LINEAR_EQUATIONS.FORM_SIMULTANEOUS.M_MORE_THAN_SIGN_REVERSED",
+     "listen_for": [
+      "y = x + 5"
+     ],
+     "ask": "Which bag is heavier?",
+     "repair": "Add 5 to the lighter one."
+    },
+    {
+     "code": "MATH.G8.ALGEBR.LINEAR_EQUATIONS.FORM_SIMULTANEOUS.M_ONE_LETTER_FOR_BOTH",
+     "listen_for": [
+      "5x"
+     ],
+     "ask": "Do mandazi and chapati cost the same?",
+     "repair": "Two letters."
+    }
+   ],
+   "checks": [
+    {
+     "question": "2 pens and 3 books cost 190; 4 pens and 1 book cost 130. Form two equations (p for a pen, b for a book).",
+     "answer": "2p + 3b = 190 and 4p + b = 130",
+     "shows": "two facts"
+    },
+    {
+     "question": "Two numbers add to 40 and one is 6 more than the other (x the bigger). Equations?",
+     "answer": "x + y = 40 and x = y + 6",
+     "shows": "more than"
+    }
+   ]
+  },
+  {
+   "skill": "MATH.G8.ALGEBR.LINEAR_EQUATIONS.SOLVE_BY_SUBSTITUTION",
+   "key_step": "The child replaces the unknown with its whole expression in a bracket in the other equation.",
+   "floor": {
+    "prerequisite": "Solves a two-step equation.",
+    "question": "3x - 3 = 9",
+    "answer": "x = 4"
+   },
+   "representations": [
+    "the two equations one above the other",
+    "the expression in a bracket",
+    "the check in both equations"
+   ],
+   "steps": [
+    "Use the equation that says y = ...",
+    "Put (that expression) for y in the other.",
+    "Solve for x.",
+    "Put x back to find y; check both."
+   ],
+   "contexts": [
+    "a taxi fare and a distance",
+    "the ages of two sisters",
+    "prices of two fruits"
+   ],
+   "board": [
+    {
+     "beat": "write",
+     "do": "Write y = 2x - 3 and x + y = 9."
+    },
+    {
+     "beat": "point",
+     "do": "Point at the y in x + y = 9.",
+     "say": "What can we write in its place?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for the child to say 2x - 3."
+    },
+    {
+     "beat": "child_draws",
+     "do": "The child writes x + (2x - 3) = 9."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "MATH.G8.ALGEBR.LINEAR_EQUATIONS.SOLVE_BY_SUBSTITUTION.M_SIGN_CHANGED_ON_SUBSTITUTING",
+     "listen_for": [
+      "plus 3"
+     ],
+     "ask": "What does the first equation say about the 3?",
+     "repair": "Copy it in a bracket."
+    },
+    {
+     "code": "MATH.G8.ALGEBR.LINEAR_EQUATIONS.SOLVE_BY_SUBSTITUTION.M_SUBSTITUTED_INTO_SAME",
+     "listen_for": [
+      "0 = 0"
+     ],
+     "ask": "Which equation did y = 2x - 3 come from?",
+     "repair": "Use the other one."
+    },
+    {
+     "code": "MATH.G8.ALGEBR.LINEAR_EQUATIONS.SOLVE_BY_SUBSTITUTION.M_BRACKET_NOT_EXPANDED",
+     "listen_for": [
+      "3x - 1"
+     ],
+     "ask": "What is 3 times -1?",
+     "repair": "-3."
+    },
+    {
+     "code": "MATH.G8.ALGEBR.LINEAR_EQUATIONS.SOLVE_BY_SUBSTITUTION.M_ONLY_ONE_FOUND",
+     "listen_for": [
+      "x = 4 only"
+     ],
+     "ask": "What is y?",
+     "repair": "Substitute back."
+    }
+   ],
+   "checks": [
+    {
+     "question": "Solve y = x + 2 and 2x + y = 11.",
+     "answer": "x = 3, y = 5",
+     "shows": "substitute"
+    },
+    {
+     "question": "Solve y = 3x - 1 and x + y = 7.",
+     "answer": "x = 2, y = 5",
+     "shows": "with a minus"
+    }
+   ]
+  },
+  {
+   "skill": "MATH.G8.ALGEBR.LINEAR_EQUATIONS.SOLVE_BY_ELIMINATION",
+   "key_step": "The child points at the unknown with the same number in front, decides add or subtract from the signs, and writes the new equation with one unknown.",
+   "floor": {
+    "prerequisite": "Uses the balance idea.",
+    "question": "If 2x + y = 7, what is 2x + y + 3?",
+    "answer": "10"
+   },
+   "representations": [
+    "two balance scales",
+    "the equations lined up",
+    "one equation left"
+   ],
+   "steps": [
+    "Find the unknown with the same coefficient.",
+    "Same sign: subtract. Opposite signs: add.",
+    "Solve the one-unknown equation.",
+    "Substitute back for the other."
+   ],
+   "contexts": [
+    "soap and salt at a duka",
+    "two sacks of maize and beans",
+    "tickets to a show"
+   ],
+   "board": [
+    {
+     "beat": "write",
+     "do": "Write 2x + y = 7 above 2x + 3y = 13."
+    },
+    {
+     "beat": "point",
+     "do": "Point at the two 2x terms.",
+     "say": "What happens to them if we subtract?"
+    },
+    {
+     "beat": "predict",
+     "do": "Wait for the child to predict."
+    },
+    {
+     "beat": "child_draws",
+     "do": "The child subtracts to get 2y = 6."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "MATH.G8.ALGEBR.LINEAR_EQUATIONS.SOLVE_BY_ELIMINATION.M_ADDED_INSTEAD_OF_SUBTRACTED",
+     "listen_for": [
+      "4x + 4y"
+     ],
+     "ask": "Did the x terms cancel?",
+     "repair": "Same sign: subtract."
+    },
+    {
+     "code": "MATH.G8.ALGEBR.LINEAR_EQUATIONS.SOLVE_BY_ELIMINATION.M_NOT_DIVIDED_BY_COEFFICIENT",
+     "listen_for": [
+      "y = 6"
+     ],
+     "ask": "Is that y or 2y?",
+     "repair": "Divide by 2."
+    },
+    {
+     "code": "MATH.G8.ALGEBR.LINEAR_EQUATIONS.SOLVE_BY_ELIMINATION.M_TERM_FOR_UNKNOWN",
+     "listen_for": [
+      "x = 4"
+     ],
+     "ask": "Is 4 equal to x or to 2x?",
+     "repair": "Divide."
+    },
+    {
+     "code": "MATH.G8.ALGEBR.LINEAR_EQUATIONS.SOLVE_BY_ELIMINATION.M_ELIMINATION_TO_SHRINK",
+     "listen_for": [
+      "smaller numbers"
+     ],
+     "ask": "What is the aim?",
+     "repair": "Remove one unknown."
+    },
+    {
+     "code": "MATH.G8.ALGEBR.LINEAR_EQUATIONS.SOLVE_BY_ELIMINATION.M_ONE_STEP_BOTH",
+     "listen_for": [
+      "both at once"
+     ],
+     "ask": "After subtracting, which letter is left?",
+     "repair": "Find it first."
+    },
+    {
+     "code": "MATH.G8.ALGEBR.LINEAR_EQUATIONS.SOLVE_BY_ELIMINATION.M_ALWAYS_SUBTRACT",
+     "listen_for": [
+      "subtract"
+     ],
+     "ask": "Are the signs the same or opposite?",
+     "repair": "Opposite: add."
+    },
+    {
+     "code": "MATH.G8.ALGEBR.LINEAR_EQUATIONS.SOLVE_BY_ELIMINATION.M_EQUAL_SPLIT_ASSUMED",
+     "listen_for": [
+      "25"
+     ],
+     "ask": "Are the two sacks equal?",
+     "repair": "Use the difference too."
+    }
+   ],
+   "checks": [
+    {
+     "question": "Solve 3x + 2y = 16 and 3x + y = 11.",
+     "answer": "x = 2, y = 5",
+     "shows": "subtract"
+    },
+    {
+     "question": "Solve x + y = 12 and x - y = 4.",
+     "answer": "x = 8, y = 4",
+     "shows": "add"
+    }
+   ]
+  },
+  {
+   "skill": "MATH.G8.ALGEBR.LINEAR_EQUATIONS.ELIMINATION_MAKE_EQUAL",
+   "key_step": "The child chooses a multiplier that makes one pair of coefficients equal and multiplies every term, the total included.",
+   "floor": {
+    "prerequisite": "Eliminates when the coefficients match.",
+    "question": "2x + 3y = 12 and 2x + 2y = 10: y?",
+    "answer": "y = 2"
+   },
+   "representations": [
+    "the equations with the multiplier written beside",
+    "the new equation",
+    "the solution"
+   ],
+   "steps": [
+    "Pick the unknown to eliminate.",
+    "Find the multiplier (or the LCM).",
+    "Multiply every term of that equation.",
+    "Eliminate and solve."
+   ],
+   "contexts": [
+    "buying exercise books and pens",
+    "goats and sheep at a market",
+    "two kinds of seedlings"
+   ],
+   "board": [
+    {
+     "beat": "write",
+     "do": "Write 2x + 3y = 12 and x + y = 5."
+    },
+    {
+     "beat": "point",
+     "do": "Point at x in the second equation.",
+     "say": "What do we multiply this equation by to get 2x?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for 2."
+    },
+    {
+     "beat": "child_draws",
+     "do": "The child writes 2x + 2y = 10."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "MATH.G8.ALGEBR.LINEAR_EQUATIONS.ELIMINATION_MAKE_EQUAL.M_ONLY_ONE_TERM_MULTIPLIED",
+     "listen_for": [
+      "2x + y = 5"
+     ],
+     "ask": "Is the equation still balanced?",
+     "repair": "Every term."
+    },
+    {
+     "code": "MATH.G8.ALGEBR.LINEAR_EQUATIONS.ELIMINATION_MAKE_EQUAL.M_RIGHT_SIDE_NOT_MULTIPLIED",
+     "listen_for": [
+      "= 5"
+     ],
+     "ask": "What happens to the 5?",
+     "repair": "It doubles too."
+    },
+    {
+     "code": "MATH.G8.ALGEBR.LINEAR_EQUATIONS.ELIMINATION_MAKE_EQUAL.M_WRONG_MULTIPLIER",
+     "listen_for": [
+      "times 2 for 3x"
+     ],
+     "ask": "Does that make 3x?",
+     "repair": "Times 3."
+    },
+    {
+     "code": "MATH.G8.ALGEBR.LINEAR_EQUATIONS.ELIMINATION_MAKE_EQUAL.M_SIGNS_IN_SUBTRACTION",
+     "listen_for": [
+      "-2y"
+     ],
+     "ask": "What is 2y take away -4y?",
+     "repair": "6y."
+    }
+   ],
+   "checks": [
+    {
+     "question": "Solve 2x + 3y = 12 and x + y = 5.",
+     "answer": "x = 3, y = 2",
+     "shows": "multiply one"
+    },
+    {
+     "question": "Solve 3x + 2y = 13 and 2x + 3y = 12.",
+     "answer": "x = 3, y = 2",
+     "shows": "multiply both"
+    }
+   ]
+  },
+  {
+   "skill": "MATH.G8.ALGEBR.LINEAR_EQUATIONS.SIMULTANEOUS_IN_CONTEXT",
+   "key_step": "The child writes the two equations from the story before calculating, then reads the question again before giving the answer.",
+   "floor": {
+    "prerequisite": "Forms two equations.",
+    "question": "Hens and goats: 30 animals",
+    "answer": "h + g = 30"
+   },
+   "representations": [
+    "the story as a table",
+    "two equations",
+    "the answer in words"
+   ],
+   "steps": [
+    "Name the unknowns.",
+    "Write two equations.",
+    "Solve by elimination or substitution.",
+    "Answer what was asked, with units."
+   ],
+   "contexts": [
+    "a museum in Nairobi",
+    "a purse of sh 5 and sh 10 coins",
+    "hens and goats on a farm in Kiambu"
+   ],
+   "board": [
+    {
+     "beat": "draw",
+     "do": "Draw a table: animals 30, legs 80; hens 2 legs, goats 4 legs."
+    },
+    {
+     "beat": "point",
+     "do": "Point at the legs.",
+     "say": "What is the second equation?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for the child to say 2h + 4g = 80."
+    },
+    {
+     "beat": "child_draws",
+     "do": "The child doubles the first equation and subtracts."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "MATH.G8.ALGEBR.LINEAR_EQUATIONS.SIMULTANEOUS_IN_CONTEXT.M_DIFFERENCE_NOT_SHARED",
+     "listen_for": [
+      "600"
+     ],
+     "ask": "How many extra adults is that for?",
+     "repair": "Share between them."
+    },
+    {
+     "code": "MATH.G8.ALGEBR.LINEAR_EQUATIONS.SIMULTANEOUS_IN_CONTEXT.M_TOTAL_SHARED_EQUALLY",
+     "listen_for": [
+      "140"
+     ],
+     "ask": "Do adults and children pay the same?",
+     "repair": "No."
+    },
+    {
+     "code": "MATH.G8.ALGEBR.LINEAR_EQUATIONS.SIMULTANEOUS_IN_CONTEXT.M_OTHER_UNKNOWN_GIVEN",
+     "listen_for": [
+      "the child price"
+     ],
+     "ask": "Which price does the question ask for?",
+     "repair": "Read it again."
+    },
+    {
+     "code": "MATH.G8.ALGEBR.LINEAR_EQUATIONS.SIMULTANEOUS_IN_CONTEXT.M_OTHER_GROUP_IGNORED",
+     "listen_for": [
+      "700"
+     ],
+     "ask": "Who else is in the group?",
+     "repair": "Take the children away."
+    },
+    {
+     "code": "MATH.G8.ALGEBR.LINEAR_EQUATIONS.SIMULTANEOUS_IN_CONTEXT.M_ALL_ONE_KIND",
+     "listen_for": [
+      "15"
+     ],
+     "ask": "Are all the coins sh 10?",
+     "repair": "Use both equations."
+    },
+    {
+     "code": "MATH.G8.ALGEBR.LINEAR_EQUATIONS.SIMULTANEOUS_IN_CONTEXT.M_DOUBLED_AS_ADD_TWO",
+     "listen_for": [
+      "h + g + 2"
+     ],
+     "ask": "Is doubling adding 2?",
+     "repair": "Multiply every term."
+    }
+   ],
+   "checks": [
+    {
+     "question": "A farmer has 30 hens and goats with 80 legs. How many goats?",
+     "answer": "10 goats",
+     "shows": "animals and legs"
+    },
+    {
+     "question": "20 coins of sh 5 and sh 10 are worth sh 150. How many sh 10 coins?",
+     "answer": "10",
+     "shows": "coins"
+    }
+   ]
+  }
+ ]
+}
