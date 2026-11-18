@@ -1,0 +1,99 @@
+{
+ "sub_strand": "KISW.G6.SARUFI.T6_NGELI_YA_I_I",
+ "title": "Ngeli ya I-I (Theme 6: Usawa wa kijinsia)",
+ "status": "draft: written 18 Nov 2026 offline for Grade 6 Kiswahili; not yet checked by a native Kiswahili teacher; not loaded by the live tutor",
+ "sources": [],
+ "notes": "",
+ "skills": [
+  {
+   "skill": "KISW.G6.SARUFI.T6_NGELI_YA_I_I.I_I",
+   "key_step": "The child knows mass and abstract nouns like sukari, chai, afya, amani are I-I and take i- with no plural.",
+   "floor": {
+    "prerequisite": "Uses U-U agreement.",
+    "question": "Umoja ___ (dumu).",
+    "answer": "umedumu"
+   },
+   "representations": [
+    "I-I and I-ZI cards",
+    "a packet of sugar",
+    "prefix card i-"
+   ],
+   "steps": [
+    "Find the noun.",
+    "Can it be counted?",
+    "If not, I-I: i-.",
+    "Read the sentence."
+   ],
+   "contexts": [
+    "gender equality (usawa wa kijinsia): amani nyumbani",
+    "the kitchen",
+    "the clinic"
+   ],
+   "board": [
+    {
+     "beat": "write",
+     "do": "Amani ___ (rudi)."
+    },
+    {
+     "beat": "point",
+     "do": "Point at \"Amani\".",
+     "say": "Ina wingi?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for the child to answer before saying anything."
+    },
+    {
+     "beat": "child_draws",
+     "do": "The child writes \"Amani imerudi\"."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "KISW.G6.SARUFI.T6_NGELI_YA_I_I.I_I.M_II_PLURAL",
+     "listen_for": [
+      "zi"
+     ],
+     "ask": "Soma tena: \"Afya ___meimarika baada ya matibabu.\" Kwa nini \"zi\" si jibu sahihi?",
+     "repair": "Nomino za I-I hazihesabiki, kwa hiyo hupatana na i-: afya imeimarika."
+    },
+    {
+     "code": "KISW.G6.SARUFI.T6_NGELI_YA_I_I.I_I.M_II_OTHER",
+     "listen_for": [
+      "u"
+     ],
+     "ask": "Soma tena: \"Njaa ___nauma tumboni.\" Kwa nini \"u\" si jibu sahihi?",
+     "repair": "Nomino za I-I hupatana na i-: njaa inauma."
+    },
+    {
+     "code": "KISW.G6.SARUFI.T6_NGELI_YA_I_I.I_I.M_II_NOUN",
+     "listen_for": [
+      "kitabu"
+     ],
+     "ask": "Soma tena: \"Ni nomino ipi ni ya ngeli ya I-I?\" Kwa nini \"kitabu\" si jibu sahihi?",
+     "repair": "Nomino za I-I ni hali au mawazo yasiyohesabika, kama afya na njaa."
+    },
+    {
+     "code": "KISW.G6.SARUFI.T6_NGELI_YA_I_I.I_I.M6_II_IZI",
+     "listen_for": [
+      "zimeisha"
+     ],
+     "ask": "Unaweza kuhesabu sukari moja moja?",
+     "repair": "Nomino za I-I hazina wingi: sukari imeisha."
+    }
+   ],
+   "checks": [
+    {
+     "question": "Jaza: Chai ___ (poa).",
+     "answer": "imepoa",
+     "shows": "agreement"
+    },
+    {
+     "question": "Ni nomino ipi ya I-I: meza, afya?",
+     "answer": "afya",
+     "shows": "identify"
+    }
+   ]
+  }
+ ]
+}

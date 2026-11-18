@@ -1,0 +1,99 @@
+{
+ "sub_strand": "KISW.G6.KUSIKI.T2_MAAMKUZI_NA_MAAGANO",
+ "title": "Maamkuzi na Maagano (Theme 2: Michezo)",
+ "status": "draft: written 18 Nov 2026 offline for Grade 6 Kiswahili; not yet checked by a native Kiswahili teacher; not loaded by the live tutor",
+ "sources": [],
+ "notes": "",
+ "skills": [
+  {
+   "skill": "KISW.G6.KUSIKI.T2_MAAMKUZI_NA_MAAGANO.MAAMKUZI",
+   "key_step": "The child greets one or many, at the right time, with the right reply, and knows why greetings matter in a game or a meeting.",
+   "floor": {
+    "prerequisite": "Greets an elder.",
+    "question": "Mtoto anamsalimuje mzee?",
+    "answer": "Shikamoo"
+   },
+   "representations": [
+    "a chart of greetings for one and many",
+    "a clock face",
+    "role cards"
+   ],
+   "steps": [
+    "One or many?",
+    "What time?",
+    "Arriving or leaving?",
+    "Greeting and reply."
+   ],
+   "contexts": [
+    "games (michezo): greeting the other team",
+    "a visit",
+    "a class meeting"
+   ],
+   "board": [
+    {
+     "beat": "write",
+     "do": "Hamjambo wachezaji! - ___"
+    },
+    {
+     "beat": "point",
+     "do": "Point at \"Hamjambo\".",
+     "say": "Wachezaji wanajibu nini?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for the child to answer before saying anything."
+    },
+    {
+     "beat": "child_draws",
+     "do": "The child acts greeting a team and the team replies \"Hatujambo\"."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "KISW.G6.KUSIKI.T2_MAAMKUZI_NA_MAAGANO.MAAMKUZI.M_MAA_NUMBER",
+     "listen_for": [
+      "Hujambo"
+     ],
+     "ask": "Soma tena: \"Unawasalimia wanafunzi wengi darasani: \"___!\"\" Kwa nini \"Hujambo\" si jibu sahihi?",
+     "repair": "Kwa mtu mmoja tunasema Hujambo na Kwaheri. Kwa watu wengi tunasema Hamjambo na Kwa herini."
+    },
+    {
+     "code": "KISW.G6.KUSIKI.T2_MAAMKUZI_NA_MAAGANO.MAAMKUZI.M_MAA_TIME",
+     "listen_for": [
+      "Lala salama"
+     ],
+     "ask": "Soma tena: \"Asubuhi unamwamkia mwalimu: \"___, mwalimu.\"\" Kwa nini \"Lala salama\" si jibu sahihi?",
+     "repair": "Asubuhi tunasema Habari za asubuhi. Usiku tunasema Lala salama au Usiku mwema."
+    },
+    {
+     "code": "KISW.G6.KUSIKI.T2_MAAMKUZI_NA_MAAGANO.MAAMKUZI.M_MAA_FAREWELL",
+     "listen_for": [
+      "Hujambo"
+     ],
+     "ask": "Soma tena: \"Unaondoka na kumwaga mtu mmoja: \"___!\"\" Kwa nini \"Hujambo\" si jibu sahihi?",
+     "repair": "Tunasalimia tunapokutana (Hujambo) na tunaaga tunapoondoka (Kwaheri)."
+    },
+    {
+     "code": "KISW.G6.KUSIKI.T2_MAAMKUZI_NA_MAAGANO.MAAMKUZI.M_MAA_REPLY",
+     "listen_for": [
+      "Shikamoo"
+     ],
+     "ask": "Soma tena: \"Mdogo anamwambia mzee \"Shikamoo\". Mzee anajibu: \"___.\"\" Kwa nini \"Shikamoo\" si jibu sahihi?",
+     "repair": "Mdogo husema Shikamoo kwa heshima, na mzee hujibu Marahaba."
+    }
+   ],
+   "checks": [
+    {
+     "question": "Salamu ya \"Hujambo\" kwa watu wengi ni?",
+     "answer": "Hamjambo",
+     "shows": "number"
+    },
+    {
+     "question": "Jibu la \"Hamjambo\" ni?",
+     "answer": "Hatujambo",
+     "shows": "reply"
+    }
+   ]
+  }
+ ]
+}

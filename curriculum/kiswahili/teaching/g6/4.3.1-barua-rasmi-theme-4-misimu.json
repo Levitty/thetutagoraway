@@ -1,0 +1,189 @@
+{
+ "sub_strand": "KISW.G6.KUANDI.T4_BARUA_RASMI",
+ "title": "Barua Rasmi (Theme 4: Misimu)",
+ "status": "draft: written 18 Nov 2026 offline for Grade 6 Kiswahili; not yet checked by a native Kiswahili teacher; not loaded by the live tutor",
+ "sources": [],
+ "notes": "",
+ "skills": [
+  {
+   "skill": "KISW.G6.KUANDI.T4_BARUA_RASMI.BARUA_RASMI",
+   "key_step": "The child places the parts of an official letter: the writer's address on the right, the date, the receiver's address on the left, the formal greeting, KUH:, the message, Wako mtiifu, the signature and full name.",
+   "floor": {
+    "prerequisite": "Knows the parts of a friendly letter.",
+    "question": "Barua ya kirafiki ina anwani ngapi?",
+    "answer": "moja"
+   },
+   "representations": [
+    "a model official letter labelled",
+    "part cards for a blank page",
+    "a friendly letter beside it"
+   ],
+   "steps": [
+    "Write the writer's address and date.",
+    "Write the receiver's address.",
+    "Greeting and KUH:",
+    "Message, closing, signature, name."
+   ],
+   "contexts": [
+    "seasons (misimu): a letter to the county about rain damage",
+    "a letter to the head teacher",
+    "a letter to the chief"
+   ],
+   "board": [
+    {
+     "beat": "write",
+     "do": "KUH: OMBI LA KUPANDA MITI"
+    },
+    {
+     "beat": "point",
+     "do": "Point at \"KUH:\".",
+     "say": "Sehemu hii inaitwaje na inafanya kazi gani?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for the child to answer before saying anything."
+    },
+    {
+     "beat": "child_draws",
+     "do": "The child orders the part cards on a blank page."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "KISW.G6.KUANDI.T4_BARUA_RASMI.BARUA_RASMI.M_BAR6_PART",
+     "listen_for": [
+      "mwili"
+     ],
+     "ask": "Soma tena: \"Mada ya barua rasmi huandikwa katika ___ cha barua.\" Kwa nini \"mwili\" si jibu sahihi?",
+     "repair": "Kichwa hutaja mada, salamu humwamkia mwandikiwa, mwili una ujumbe, na mwisho una sahihi na jina."
+    },
+    {
+     "code": "KISW.G6.KUANDI.T4_BARUA_RASMI.BARUA_RASMI.M_BAR6_POSITION",
+     "listen_for": [
+      "kushoto"
+     ],
+     "ask": "Soma tena: \"Anwani ya mwandikaji wa barua rasmi huandikwa upande wa ___ juu ya karatasi.\" Kwa nini \"kushoto\" si jibu sahihi?",
+     "repair": "Anwani ya mwandikaji iko juu kulia. Anwani ya mwandikiwa iko kushoto, chini ya tarehe."
+    },
+    {
+     "code": "KISW.G6.KUANDI.T4_BARUA_RASMI.BARUA_RASMI.M_BAR6_FRIENDLY",
+     "listen_for": [
+      "mpenzi"
+     ],
+     "ask": "Soma tena: \"Mwisho wa barua rasmi huwa \"Wako ___,\".\" Kwa nini \"mpenzi\" si jibu sahihi?",
+     "repair": "Barua rasmi hutumia lugha na maneno ya heshima, kama \"Wako mwaminifu,\"."
+    },
+    {
+     "code": "KISW.G6.KUANDI.T4_BARUA_RASMI.BARUA_RASMI.M_BAR6_ORDER",
+     "listen_for": [
+      "Salamu, mwili, anwani, kichwa, tarehe, mwisho"
+     ],
+     "ask": "Soma tena: \"Ni mpangilio upi sahihi wa sehemu za barua rasmi?\" Kwa nini \"Salamu, mwili, anwani, kichwa, tarehe, mwisho\" si jibu sahihi?",
+     "repair": "Barua huanza na anwani na tarehe juu, kisha salamu, kichwa, mwili na mwisho chini."
+    }
+   ],
+   "checks": [
+    {
+     "question": "Barua rasmi ina anwani ngapi?",
+     "answer": "mbili",
+     "shows": "addresses"
+    },
+    {
+     "question": "Barua rasmi humalizika kwa?",
+     "answer": "Wako mtiifu, sahihi na jina kamili",
+     "shows": "closing"
+    }
+   ]
+  },
+  {
+   "skill": "KISW.G6.KUANDI.T4_BARUA_RASMI.KUANDIKA_BARUA_RASMI",
+   "key_step": "The child plans barua rasmi before writing: the parts in order, then one idea at a time, then checks it against the type.",
+   "floor": {
+    "prerequisite": "Writes a correct sentence with a capital letter and a kikomo.",
+    "question": "Andika sentensi moja kuhusu shule yako.",
+    "answer": "Shule yetu ina madarasa kumi."
+   },
+   "representations": [
+    "a model text with its parts labelled",
+    "a three-box plan (mwanzo, kiini, mwisho)",
+    "a checklist for the type"
+   ],
+   "steps": [
+    "Read the title and say the type.",
+    "Plan the parts.",
+    "Write one idea per paragraph.",
+    "Check against the checklist and correct."
+   ],
+   "contexts": [
+    "ombi la kupanda miti shuleni",
+    "the class magazine",
+    "a letter or story for a family member"
+   ],
+   "board": [
+    {
+     "beat": "write",
+     "do": "Ombi la Kupanda Miti Shuleni"
+    },
+    {
+     "beat": "point",
+     "do": "Point at the title.",
+     "say": "Insha hii ni ya aina gani, na itakuwa na sehemu zipi?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for the child to answer before saying anything."
+    },
+    {
+     "beat": "child_draws",
+     "do": "The child fills the three-box plan for \"Ombi la Kupanda Miti Shuleni\"."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "KISW.G6.KUANDI.T4_BARUA_RASMI.KUANDIKA_BARUA_RASMI.M6_INS_ONEADDR_T4",
+     "listen_for": [
+      "moja, ya mwandishi"
+     ],
+     "ask": "Barua hii itamfikia nani? Anwani yake iko wapi?",
+     "repair": "Barua rasmi ina anwani mbili: ya mwandishi kulia juu, ya mpokeaji kushoto chini yake."
+    },
+    {
+     "code": "KISW.G6.KUANDI.T4_BARUA_RASMI.KUANDIKA_BARUA_RASMI.M6_INS_NOREF_T4",
+     "listen_for": [
+      "Nimeandika barua hii kwa sababu ninataka kukueleza mambo mengi."
+     ],
+     "ask": "Msomaji atajuaje barua inahusu nini bila kuisoma yote?",
+     "repair": "Kichwa cha barua rasmi huanza KUH: au YAH: na huandikwa kwa herufi kubwa, kwa ufupi."
+    },
+    {
+     "code": "KISW.G6.KUANDI.T4_BARUA_RASMI.KUANDIKA_BARUA_RASMI.M6_INS_CASUAL_T4",
+     "listen_for": [
+      "Hujambo mwalimu wangu mpendwa!"
+     ],
+     "ask": "Ungemsalimu Mwalimu Mkuu hivi katika mkutano rasmi?",
+     "repair": "Barua rasmi hutumia lugha rasmi: Kwa Mwalimu Mkuu, Wako mtiifu."
+    },
+    {
+     "code": "KISW.G6.KUANDI.T4_BARUA_RASMI.KUANDIKA_BARUA_RASMI.M6_INS_SIGNOFF_T4",
+     "listen_for": [
+      "Ni mimi rafiki yako, Wanjiku"
+     ],
+     "ask": "Mpokeaji atajuaje ni nani hasa aliyeandika?",
+     "repair": "Barua rasmi humalizika kwa \"Wako mtiifu,\" sahihi na jina kamili."
+    }
+   ],
+   "checks": [
+    {
+     "question": "Ni sentensi ipi inafaa katika barua rasmi kuhusu \"Ombi la Kupanda Miti Shuleni\"?",
+     "answer": "Kwa Mwalimu Mkuu,",
+     "shows": "type"
+    },
+    {
+     "question": "Barua rasmi ina sehemu zipi?",
+     "answer": "anwani au kichwa, salamu, ujumbe, hitimisho",
+     "shows": "parts"
+    }
+   ]
+  }
+ ]
+}

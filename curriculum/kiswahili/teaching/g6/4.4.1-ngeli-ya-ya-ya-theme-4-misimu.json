@@ -1,0 +1,99 @@
+{
+ "sub_strand": "KISW.G6.SARUFI.T4_NGELI_YA_YA_YA",
+ "title": "Ngeli ya YA-YA (Theme 4: Misimu)",
+ "status": "draft: written 18 Nov 2026 offline for Grade 6 Kiswahili; not yet checked by a native Kiswahili teacher; not loaded by the live tutor",
+ "sources": [],
+ "notes": "",
+ "skills": [
+  {
+   "skill": "KISW.G6.SARUFI.T4_NGELI_YA_YA_YA.YA_YA",
+   "key_step": "The child knows ma- nouns with no singular (maji, maziwa, mafuta, mate) are YA-YA and take ya- in both.",
+   "floor": {
+    "prerequisite": "Knows nouns of wingi.",
+    "question": "Ni nomino ipi ya wingi: maji, jiwe?",
+    "answer": "maji"
+   },
+   "representations": [
+    "a jug of water and a jar of oil",
+    "YA-YA and LI-YA cards to sort",
+    "prefix card ya-"
+   ],
+   "steps": [
+    "Find the noun.",
+    "Does it have a singular?",
+    "If not, YA-YA: ya-.",
+    "Read the sentence."
+   ],
+   "contexts": [
+    "seasons (misimu): rain water",
+    "the kitchen",
+    "a farm"
+   ],
+   "board": [
+    {
+     "beat": "write",
+     "do": "Maji ___ (chafuka)."
+    },
+    {
+     "beat": "point",
+     "do": "Point at \"Maji\".",
+     "say": "Lina umoja?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for the child to answer before saying anything."
+    },
+    {
+     "beat": "child_draws",
+     "do": "The child writes \"Maji yamechafuka\" and one more with maziwa."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "KISW.G6.SARUFI.T4_NGELI_YA_YA_YA.YA_YA.M_YAYA_LI",
+     "listen_for": [
+      "li"
+     ],
+     "ask": "Soma tena: \"Maji ___meisha kisimani.\" Kwa nini \"li\" si jibu sahihi?",
+     "repair": "Maji ni ya ngeli ya YA-YA. Hupatana na ya-: maji yameisha."
+    },
+    {
+     "code": "KISW.G6.SARUFI.T4_NGELI_YA_YA_YA.YA_YA.M_YAYA_OTHER",
+     "listen_for": [
+      "i"
+     ],
+     "ask": "Soma tena: \"Maziwa ___meichacha jikoni.\" Kwa nini \"i\" si jibu sahihi?",
+     "repair": "Nomino za YA-YA hupatana na ya- tu."
+    },
+    {
+     "code": "KISW.G6.SARUFI.T4_NGELI_YA_YA_YA.YA_YA.M_YAYA_A",
+     "listen_for": [
+      "a"
+     ],
+     "ask": "Soma tena: \"Maziwa ___meichacha jikoni.\" Kwa nini \"a\" si jibu sahihi?",
+     "repair": "A- ni ya watu na wanyama. Maziwa ni kitu, na hupatana na ya-."
+    },
+    {
+     "code": "KISW.G6.SARUFI.T4_NGELI_YA_YA_YA.YA_YA.M_YAYA_NOUN",
+     "listen_for": [
+      "kitabu"
+     ],
+     "ask": "Soma tena: \"Ni nomino ipi ni ya ngeli ya YA-YA?\" Kwa nini \"kitabu\" si jibu sahihi?",
+     "repair": "Nomino za YA-YA hupatana na ya- na hazina umoja, kama maji."
+    }
+   ],
+   "checks": [
+    {
+     "question": "Jaza: Mafuta ___ (mwagika).",
+     "answer": "yamemwagika",
+     "shows": "agreement"
+    },
+    {
+     "question": "Ni nomino ipi ya YA-YA: majani, maziwa?",
+     "answer": "maziwa",
+     "shows": "identify"
+    }
+   ]
+  }
+ ]
+}

@@ -108,3 +108,7 @@ test('no Islamic or English-only checks leak into the child-facing Kiswahili: no
     assert.ok(!/[\u{1F300}-\u{1FAFF}\u{2600}-\u{27BF}]/u.test(all), `${f.id}: emoji`);
   }
 });
+
+// The Grade 5 Maths standard for this grade (18 Nov 2026): tests/lib/kiswahili-depth.mjs
+import { depthTests } from './lib/kiswahili-depth.mjs';
+depthTests(6);

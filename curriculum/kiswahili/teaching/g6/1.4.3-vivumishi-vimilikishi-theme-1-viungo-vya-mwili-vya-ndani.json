@@ -1,0 +1,99 @@
+{
+ "sub_strand": "KISW.G6.SARUFI.T1_VIVUMISHI_VIMILIKISH",
+ "title": "Vivumishi Vimilikishi (Theme 1: Viungo vya mwili vya ndani)",
+ "status": "draft: written 18 Nov 2026 offline for Grade 6 Kiswahili; not yet checked by a native Kiswahili teacher; not loaded by the live tutor",
+ "sources": [],
+ "notes": "",
+ "skills": [
+  {
+   "skill": "KISW.G6.SARUFI.T1_VIVUMISHI_VIMILIKISH.VIMILIKISHI",
+   "key_step": "The child gives the possessive the prefix of the thing owned (not of the owner) and the stem of the owner (-angu, -ako, -ake, -etu, -enu, -ao).",
+   "floor": {
+    "prerequisite": "Uses personal pronouns.",
+    "question": "Mimi, wewe, yeye; sisi, ___, wao",
+    "answer": "nyinyi"
+   },
+   "representations": [
+    "a class table of possessives",
+    "owner cards",
+    "objects to own"
+   ],
+   "steps": [
+    "Find the thing owned and its class.",
+    "Find the owner.",
+    "Join class prefix and owner stem.",
+    "Read it."
+   ],
+   "contexts": [
+    "internal organs: moyo wangu",
+    "school things",
+    "a family photo"
+   ],
+   "board": [
+    {
+     "beat": "write",
+     "do": "figo ___ (mimi)"
+    },
+    {
+     "beat": "point",
+     "do": "Point at \"figo\".",
+     "say": "Figo iko katika ngeli ipi?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for the child to answer before saying anything."
+    },
+    {
+     "beat": "child_draws",
+     "do": "The child writes \"figo yangu\" and \"figo zetu\"."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "KISW.G6.SARUFI.T1_VIVUMISHI_VIMILIKISH.VIMILIKISHI.M_VIMIL_CLASS",
+     "listen_for": [
+      "wangu"
+     ],
+     "ask": "Soma tena: \"Kitabu ___ kimepotea.\" Kwa nini \"wangu\" si jibu sahihi?",
+     "repair": "Kivumishi kimilikishi hufuata ngeli ya kitu kinachomilikiwa, si ya mwenye kitu."
+    },
+    {
+     "code": "KISW.G6.SARUFI.T1_VIVUMISHI_VIMILIKISH.VIMILIKISHI.M_VIMIL_NUMBER",
+     "listen_for": [
+      "chenu"
+     ],
+     "ask": "Soma tena: \"Vitabu ___ viko mezani.\" Kwa nini \"chenu\" si jibu sahihi?",
+     "repair": "Kitu kikiwa wengi, kivumishi hubadilika: kitabu changu, vitabu vyangu."
+    },
+    {
+     "code": "KISW.G6.SARUFI.T1_VIVUMISHI_VIMILIKISH.VIMILIKISHI.M_VIMIL_PERSON",
+     "listen_for": [
+      "yangu"
+     ],
+     "ask": "Soma tena: \"Sisi tunapenda shule ___.\" Kwa nini \"yangu\" si jibu sahihi?",
+     "repair": "Mwenye kitu anaonyeshwa na mwisho: -angu (mimi), -ako (wewe), -ake (yeye), -etu (sisi), -enu (ninyi), -ao (wao)."
+    },
+    {
+     "code": "KISW.G6.SARUFI.T1_VIVUMISHI_VIMILIKISH.VIMILIKISHI.M6_VIMIL_WA_ONLY",
+     "listen_for": [
+      "wangu"
+     ],
+     "ask": "Kitabu kiko katika ngeli ipi?",
+     "repair": "Kimilikishi hupatana na kitu kinachomilikiwa: kitabu changu."
+    }
+   ],
+   "checks": [
+    {
+     "question": "Jaza: Vitabu ___ (sisi).",
+     "answer": "vyetu",
+     "shows": "class and owner"
+    },
+    {
+     "question": "Jaza: Moyo ___ (yeye).",
+     "answer": "wake",
+     "shows": "owner"
+    }
+   ]
+  }
+ ]
+}

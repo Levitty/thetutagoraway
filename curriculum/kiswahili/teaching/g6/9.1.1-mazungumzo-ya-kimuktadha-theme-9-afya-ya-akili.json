@@ -1,0 +1,99 @@
+{
+ "sub_strand": "KISW.G6.KUSIKI.T9_MAZUNGUMZO_YA_KIMUKT",
+ "title": "Mazungumzo ya Kimuktadha (Theme 9: Afya ya akili)",
+ "status": "draft: written 18 Nov 2026 offline for Grade 6 Kiswahili; not yet checked by a native Kiswahili teacher; not loaded by the live tutor",
+ "sources": [],
+ "notes": "",
+ "skills": [
+  {
+   "skill": "KISW.G6.KUSIKI.T9_MAZUNGUMZO_YA_KIMUKT.MUKTADHA",
+   "key_step": "The child names the setting as formal or informal by place, purpose and listener, then chooses language to fit, including on the phone.",
+   "floor": {
+    "prerequisite": "Uses official language at the clinic.",
+    "question": "Unamwelezaje daktari?",
+    "answer": "Ninaumwa na kichwa."
+   },
+   "representations": [
+    "setting cards",
+    "a toy phone",
+    "sentence cards to sort"
+   ],
+   "steps": [
+    "Where and with whom?",
+    "Formal or informal?",
+    "Choose the words.",
+    "Greet, speak, take leave."
+   ],
+   "contexts": [
+    "mental health (afya ya akili): talking to a counsellor",
+    "a phone call to school",
+    "a chat at home"
+   ],
+   "board": [
+    {
+     "beat": "write",
+     "do": "Hujambo mwalimu? Ni mimi..."
+    },
+    {
+     "beat": "point",
+     "do": "Point at \"Ni mimi\".",
+     "say": "Kwa nini tunajitambulisha?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for the child to answer before saying anything."
+    },
+    {
+     "beat": "child_draws",
+     "do": "The child acts a formal phone call."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "KISW.G6.KUSIKI.T9_MAZUNGUMZO_YA_KIMUKT.MUKTADHA.M_MUK_MIX",
+     "listen_for": [
+      "rasmi"
+     ],
+     "ask": "Soma tena: \"\"Niaje, msee?\" ni lugha ___.\" Kwa nini \"rasmi\" si jibu sahihi?",
+     "repair": "Lugha rasmi ni ya heshima na ya viongozi. Lugha isiyo rasmi ni ya marafiki na nyumbani."
+    },
+    {
+     "code": "KISW.G6.KUSIKI.T9_MAZUNGUMZO_YA_KIMUKT.MUKTADHA.M_MUK_INFORMAL",
+     "listen_for": [
+      "Nipe ruhusa tu."
+     ],
+     "ask": "Soma tena: \"Chagua sentensi inayofaa unapozungumza na mwalimu mkuu.\" Kwa nini \"Nipe ruhusa tu.\" si jibu sahihi?",
+     "repair": "Kwa mwalimu, kiongozi au mkutano rasmi tunatumia maneno ya heshima."
+    },
+    {
+     "code": "KISW.G6.KUSIKI.T9_MAZUNGUMZO_YA_KIMUKT.MUKTADHA.M_MUK_FORMAL_FRIEND",
+     "listen_for": [
+      "Naomba kibali cha kuanza mchezo."
+     ],
+     "ask": "Soma tena: \"Chagua sentensi inayofaa unapozungumza na rafiki uwanjani.\" Kwa nini \"Naomba kibali cha kuanza mchezo.\" si jibu sahihi?",
+     "repair": "Kwa rafiki au ndugu nyumbani, lugha ya kawaida inafaa. Lugha rasmi kupita kiasi inasikika ya ajabu."
+    },
+    {
+     "code": "KISW.G6.KUSIKI.T9_MAZUNGUMZO_YA_KIMUKT.MUKTADHA.M6_MUK_PHONE",
+     "listen_for": [
+      "Sema! Uko wapi?"
+     ],
+     "ask": "Mwalimu atajuaje ni nani anayepiga?",
+     "repair": "Kwa simu rasmi: salimu, jitambulishe, eleza sababu, shukuru."
+    }
+   ],
+   "checks": [
+    {
+     "question": "Lugha rasmi au isiyo rasmi: \"Mambo vipi bro?\"",
+     "answer": "isiyo rasmi",
+     "shows": "register"
+    },
+    {
+     "question": "Unampigia daktari simu. Unaanza vipi?",
+     "answer": "kwa salamu na kujitambulisha",
+     "shows": "phone"
+    }
+   ]
+  }
+ ]
+}

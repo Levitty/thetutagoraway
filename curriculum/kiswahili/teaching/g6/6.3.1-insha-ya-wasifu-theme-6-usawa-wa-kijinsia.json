@@ -1,0 +1,197 @@
+{
+ "sub_strand": "KISW.G6.KUANDI.T6_INSHA_YA_WASIFU",
+ "title": "Insha ya Wasifu (Theme 6: Usawa wa kijinsia)",
+ "status": "draft: written 18 Nov 2026 offline for Grade 6 Kiswahili; not yet checked by a native Kiswahili teacher; not loaded by the live tutor",
+ "sources": [],
+ "notes": "",
+ "skills": [
+  {
+   "skill": "KISW.G6.KUANDI.T6_INSHA_YA_WASIFU.MUUNDO_WASIFU",
+   "key_step": "The child plans a wasifu in three parts: a short introduction, a body with features grouped (appearance, character, work), and a closing on why it matters.",
+   "floor": {
+    "prerequisite": "Writes a wasifu with describing words.",
+    "question": "Eleza rafiki yako kwa sentensi moja.",
+    "answer": "Rafiki yangu ni mfupi na mcheshi."
+   },
+   "representations": [
+    "a model wasifu with parts labelled",
+    "a feature grouping chart",
+    "a three-box plan"
+   ],
+   "steps": [
+    "Introduce briefly.",
+    "Group the features.",
+    "One paragraph per group.",
+    "Close with why it matters."
+   ],
+   "contexts": [
+    "gender equality: a woman engineer",
+    "a teacher",
+    "the national flag"
+   ],
+   "board": [
+    {
+     "beat": "write",
+     "do": "Utangulizi | Kiini (sura, tabia, kazi) | Hitimisho"
+    },
+    {
+     "beat": "point",
+     "do": "Point at \"Kiini\".",
+     "say": "Kiini kina makundi gani ya sifa?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for the child to answer before saying anything."
+    },
+    {
+     "beat": "child_draws",
+     "do": "The child fills the plan for a person he admires."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "KISW.G6.KUANDI.T6_INSHA_YA_WASIFU.MUUNDO_WASIFU.M_INS6_PART",
+     "listen_for": [
+      "utangulizi"
+     ],
+     "ask": "Soma tena: \"Sehemu ya mwisho ya insha huitwa ___.\" Kwa nini \"utangulizi\" si jibu sahihi?",
+     "repair": "Insha ina kichwa juu, kisha utangulizi (mwanzo), mwili (katikati) na hitimisho (mwisho)."
+    },
+    {
+     "code": "KISW.G6.KUANDI.T6_INSHA_YA_WASIFU.MUUNDO_WASIFU.M6_MW_INTRO_DETAIL",
+     "listen_for": [
+      "hueleza sifa zote za mtu"
+     ],
+     "ask": "Aya yako ya kwanza ina mambo mangapi?",
+     "repair": "Utangulizi hutambulisha kwa ufupi; kiini hueleza sifa kwa kina."
+    },
+    {
+     "code": "KISW.G6.KUANDI.T6_INSHA_YA_WASIFU.MUUNDO_WASIFU.M6_MW_ORDER_FEATURES",
+     "listen_for": [
+      "macho, kazi, nywele, nyumbani, uso"
+     ],
+     "ask": "Ni sifa zipi zinahusu sura?",
+     "repair": "Panga sifa kwa makundi: sura, tabia, kazi."
+    },
+    {
+     "code": "KISW.G6.KUANDI.T6_INSHA_YA_WASIFU.MUUNDO_WASIFU.M6_MW_NO_CLOSE",
+     "listen_for": [
+      "Mwisho."
+     ],
+     "ask": "Unataka msomaji akumbuke nini?",
+     "repair": "Hitimisho hufunga kwa kueleza umuhimu wa mtu au kitu."
+    }
+   ],
+   "checks": [
+    {
+     "question": "Utangulizi wa wasifu hufanya nini?",
+     "answer": "humtambulisha mtu kwa ufupi",
+     "shows": "part"
+    },
+    {
+     "question": "Sifa za sura, tabia na kazi ziwekwe wapi?",
+     "answer": "katika kiini, kila kundi aya yake",
+     "shows": "body"
+    }
+   ]
+  },
+  {
+   "skill": "KISW.G6.KUANDI.T6_INSHA_YA_WASIFU.INSHA_WASIFU",
+   "key_step": "The child plans insha ya wasifu before writing: the parts in order, then one idea at a time, then checks it against the type.",
+   "floor": {
+    "prerequisite": "Writes a correct sentence with a capital letter and a kikomo.",
+    "question": "Andika sentensi moja kuhusu shule yako.",
+    "answer": "Shule yetu ina madarasa kumi."
+   },
+   "representations": [
+    "a model text with its parts labelled",
+    "a three-box plan (mwanzo, kiini, mwisho)",
+    "a checklist for the type"
+   ],
+   "steps": [
+    "Read the title and say the type.",
+    "Plan the parts.",
+    "Write one idea per paragraph.",
+    "Check against the checklist and correct."
+   ],
+   "contexts": [
+    "dada yangu mhandisi",
+    "the class magazine",
+    "a letter or story for a family member"
+   ],
+   "board": [
+    {
+     "beat": "write",
+     "do": "Dada Yangu Mhandisi"
+    },
+    {
+     "beat": "point",
+     "do": "Point at the title.",
+     "say": "Insha hii ni ya aina gani, na itakuwa na sehemu zipi?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for the child to answer before saying anything."
+    },
+    {
+     "beat": "child_draws",
+     "do": "The child fills the three-box plan for \"Dada Yangu Mhandisi\"."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "KISW.G6.KUANDI.T6_INSHA_YA_WASIFU.INSHA_WASIFU.M6_INS_STORY_T6",
+     "listen_for": [
+      "Siku moja tulienda sokoni tukapotea."
+     ],
+     "ask": "Sentensi hii inaeleza au inasimulia?",
+     "repair": "Insha ya wasifu hueleza jinsi kitu au mtu alivyo, si matukio ya siku moja."
+    },
+    {
+     "code": "KISW.G6.KUANDI.T6_INSHA_YA_WASIFU.INSHA_WASIFU.M6_INS_DETAIL_T6",
+     "listen_for": [
+      "Dada yangu ni mzuri."
+     ],
+     "ask": "Msomaji anaona nini akisoma sentensi hii?",
+     "repair": "Tumia vivumishi na maelezo ya rangi, umbo, ukubwa na sauti ili msomaji aone picha."
+    },
+    {
+     "code": "KISW.G6.KUANDI.T6_INSHA_YA_WASIFU.INSHA_WASIFU.M6_INS_AGREE_T6",
+     "listen_for": [
+      "Ana mikono mrefu."
+     ],
+     "ask": "Nomino hii iko katika ngeli gani?",
+     "repair": "Kivumishi hupatana na nomino yake: bendera nzuri, miti mirefu, mtoto mzuri."
+    },
+    {
+     "code": "KISW.G6.KUANDI.T6_INSHA_YA_WASIFU.INSHA_WASIFU.M6_INS_OFFTOPIC_T6",
+     "listen_for": [
+      "Rafiki yangu ana baiskeli mpya ya rangi ya bluu."
+     ],
+     "ask": "Sentensi hii inahusiana vipi na anwani?",
+     "repair": "Kila sentensi ya insha inapaswa kuhusu anwani."
+    },
+    {
+     "code": "KISW.G6.KUANDI.T6_INSHA_YA_WASIFU.INSHA_WASIFU.M6_INS_PARAS_T6",
+     "listen_for": [
+      "aya moja ndefu"
+     ],
+     "ask": "Aya yako ya kwanza inafanya kazi gani?",
+     "repair": "Insha ina utangulizi, kiini chenye aya kadhaa, na hitimisho."
+    }
+   ],
+   "checks": [
+    {
+     "question": "Ni sentensi ipi inafaa katika insha ya wasifu kuhusu \"Dada Yangu Mhandisi\"?",
+     "answer": "Dada yangu ni mrefu, mchangamfu, na huvaa kofia ngumu ya njano kazini.",
+     "shows": "type"
+    },
+    {
+     "question": "Insha ya wasifu ina sehemu zipi?",
+     "answer": "utangulizi, kiini, hitimisho",
+     "shows": "parts"
+    }
+   ]
+  }
+ ]
+}

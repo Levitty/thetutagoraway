@@ -1,0 +1,99 @@
+{
+ "sub_strand": "KISW.G6.SARUFI.T3_UAKIFISHI",
+ "title": "Uakifishi (Theme 3: Mahusiano)",
+ "status": "draft: written 18 Nov 2026 offline for Grade 6 Kiswahili; not yet checked by a native Kiswahili teacher; not loaded by the live tutor",
+ "sources": [],
+ "notes": "",
+ "skills": [
+  {
+   "skill": "KISW.G6.SARUFI.T3_UAKIFISHI.ALAMA",
+   "key_step": "The child uses ! for a feeling or a command, the ritifaa right after ng for the sound ng', and the koloni before a list or an explanation.",
+   "floor": {
+    "prerequisite": "Uses commas in lists.",
+    "question": "Andika: shati kaptula na soksi",
+    "answer": "shati, kaptula na soksi"
+   },
+   "representations": [
+    "a mark chart ! ' :",
+    "ng' words on cards",
+    "a list sentence"
+   ],
+   "steps": [
+    "Read the sentence.",
+    "Feeling? Use !",
+    "ng' sound? Use the ritifaa.",
+    "A list coming? Use the koloni."
+   ],
+   "contexts": [
+    "relationships: a letter to a cousin",
+    "a shopping list",
+    "a story"
+   ],
+   "board": [
+    {
+     "beat": "write",
+     "do": "Nilinunua vitu vitatu ___ sukari, chumvi na chai."
+    },
+    {
+     "beat": "point",
+     "do": "Point at the gap.",
+     "say": "Tunahitaji alama gani kabla ya orodha?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for the child to answer before saying anything."
+    },
+    {
+     "beat": "child_draws",
+     "do": "The child adds the koloni and writes \"ng'ombe\" and an exclamation."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "KISW.G6.SARUFI.T3_UAKIFISHI.ALAMA.M_UAK6_HISI",
+     "listen_for": [
+      "Lo. Umefika mapema leo."
+     ],
+     "ask": "Soma tena: \"Lo! Umefika mapema leo!\" Kwa nini \"Lo. Umefika mapema leo.\" si jibu sahihi?",
+     "repair": "Mshangao, furaha na amri kali huisha kwa alama ya hisi (!)."
+    },
+    {
+     "code": "KISW.G6.SARUFI.T3_UAKIFISHI.ALAMA.M_UAK6_RITIFAA",
+     "listen_for": [
+      "Mkulima ana ngombe watano."
+     ],
+     "ask": "Soma tena: \"Mkulima ana ng'ombe watano.\" Kwa nini \"Mkulima ana ngombe watano.\" si jibu sahihi?",
+     "repair": "Ritifaa (') huandikwa baada ya ng katika ng'ombe, ng'ambo, ng'ang'ana."
+    },
+    {
+     "code": "KISW.G6.SARUFI.T3_UAKIFISHI.ALAMA.M_UAK6_KOLONI",
+     "listen_for": [
+      "Mama alinunua vitu hivi, mchele, sukari na chumvi."
+     ],
+     "ask": "Soma tena: \"Mama alinunua vitu hivi: mchele, sukari na chumvi.\" Kwa nini \"Mama alinunua vitu hivi, mchele, sukari na chumvi.\" si jibu sahihi?",
+     "repair": "Koloni (:) huja kabla ya orodha au maelezo yanayofuata."
+    },
+    {
+     "code": "KISW.G6.SARUFI.T3_UAKIFISHI.ALAMA.M6_UAK6_RITIFAA_PLACE",
+     "listen_for": [
+      "n'gombe"
+     ],
+     "ask": "Sauti ng' iko wapi katika neno hili?",
+     "repair": "Ritifaa hukaa baada ya ng: ng'ombe, ng'ambo."
+    }
+   ],
+   "checks": [
+    {
+     "question": "Andika vizuri: ngambo",
+     "answer": "ng'ambo",
+     "shows": "ritifaa"
+    },
+    {
+     "question": "Ni alama ipi huja kabla ya orodha?",
+     "answer": "koloni (:)",
+     "shows": "koloni"
+    }
+   ]
+  }
+ ]
+}

@@ -1,0 +1,99 @@
+{
+ "sub_strand": "KISW.G6.SARUFI.T3_VIWAKILISHI_VIASHIRI",
+ "title": "Viwakilishi Viashiria (Theme 3: Mahusiano)",
+ "status": "draft: written 18 Nov 2026 offline for Grade 6 Kiswahili; not yet checked by a native Kiswahili teacher; not loaded by the live tutor",
+ "sources": [],
+ "notes": "",
+ "skills": [
+  {
+   "skill": "KISW.G6.SARUFI.T3_VIWAKILISHI_VIASHIRI.VIWAKILISHI_VIASHIRIA",
+   "key_step": "The child uses the demonstrative alone in the place of the noun, choosing it by the noun's class, number and distance.",
+   "floor": {
+    "prerequisite": "Uses demonstratives after a noun.",
+    "question": "kitabu ___ (karibu)",
+    "answer": "hiki"
+   },
+   "representations": [
+    "objects near and far",
+    "a class table",
+    "sentence strips with the noun removed"
+   ],
+   "steps": [
+    "Find the noun being replaced.",
+    "Find its class and number.",
+    "Near or far?",
+    "Use the demonstrative alone."
+   ],
+   "contexts": [
+    "relationships: pointing at family members",
+    "the classroom",
+    "a market"
+   ],
+   "board": [
+    {
+     "beat": "write",
+     "do": "Kitabu hiki ni changu -> ___ ni changu."
+    },
+    {
+     "beat": "point",
+     "do": "Point at \"Kitabu hiki\".",
+     "say": "Tukiondoa \"kitabu\", tunasema nini?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for the child to answer before saying anything."
+    },
+    {
+     "beat": "child_draws",
+     "do": "The child writes \"Hiki ni changu\" and two more."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "KISW.G6.SARUFI.T3_VIWAKILISHI_VIASHIRI.VIWAKILISHI_VIASHIRIA.M_VWASH_CLASS",
+     "listen_for": [
+      "Hii"
+     ],
+     "ask": "Soma tena: \"___ ni mti wa mwembe.\" Kwa nini \"Hii\" si jibu sahihi?",
+     "repair": "Kiwakilishi kiashiria hufuata ngeli ya kitu kinachoonyeshwa: mti, huu."
+    },
+    {
+     "code": "KISW.G6.SARUFI.T3_VIWAKILISHI_VIASHIRI.VIWAKILISHI_VIASHIRIA.M_VWASH_NUMBER",
+     "listen_for": [
+      "Hiki"
+     ],
+     "ask": "Soma tena: \"___ ni vitabu vya shule.\" Kwa nini \"Hiki\" si jibu sahihi?",
+     "repair": "Kitu kimoja: hiki. Vitu vingi: hivi."
+    },
+    {
+     "code": "KISW.G6.SARUFI.T3_VIWAKILISHI_VIASHIRI.VIWAKILISHI_VIASHIRIA.M_VWASH_ADJ",
+     "listen_for": [
+      "Kitabu hiki ni kizuri."
+     ],
+     "ask": "Soma tena: \"Chagua sentensi yenye kiwakilishi kiashiria (kinasimama peke yake).\" Kwa nini \"Kitabu hiki ni kizuri.\" si jibu sahihi?",
+     "repair": "Kiwakilishi husimama mahali pa nomino. Kikifuata nomino, ni kivumishi."
+    },
+    {
+     "code": "KISW.G6.SARUFI.T3_VIWAKILISHI_VIASHIRI.VIWAKILISHI_VIASHIRIA.M6_VWASH_DIST",
+     "listen_for": [
+      "Huu ni mrefu."
+     ],
+     "ask": "Mti uko karibu au mbali?",
+     "repair": "Kitu kilicho mbali huonyeshwa kwa yule, ule, kile."
+    }
+   ],
+   "checks": [
+    {
+     "question": "Jaza: (vitabu, mbali) ___ ni vya mwalimu.",
+     "answer": "Vile",
+     "shows": "class and distance"
+    },
+    {
+     "question": "Jaza: (mtoto, karibu) ___ ni mdogo wangu.",
+     "answer": "Huyu",
+     "shows": "person"
+    }
+   ]
+  }
+ ]
+}

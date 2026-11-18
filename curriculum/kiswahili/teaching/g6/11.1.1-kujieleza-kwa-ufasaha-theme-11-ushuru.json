@@ -1,0 +1,107 @@
+{
+ "sub_strand": "KISW.G6.KUSIKI.T11_KUJIELEZA_KWA_UFASAH",
+ "title": "Kujieleza kwa Ufasaha (Theme 11: Ushuru)",
+ "status": "draft: written 18 Nov 2026 offline for Grade 6 Kiswahili; not yet checked by a native Kiswahili teacher; not loaded by the live tutor",
+ "sources": [],
+ "notes": "",
+ "skills": [
+  {
+   "skill": "KISW.G6.KUSIKI.T11_KUJIELEZA_KWA_UFASAH.KUJIELEZA",
+   "key_step": "The child listens for what the narration teaches, then tells his own in order with gestures that fit.",
+   "floor": {
+    "prerequisite": "Answers who and what after hearing a short story.",
+    "question": "Hadithi ilimhusu nani?",
+    "answer": "mhusika mkuu"
+   },
+   "representations": [
+    "a short narration read aloud",
+    "three picture cards to order",
+    "a mirror or a partner for gestures"
+   ],
+   "steps": [
+    "Listen to the end.",
+    "Say the message in one sentence.",
+    "Plan your story in three parts.",
+    "Tell it with matching gestures."
+   ],
+   "contexts": [
+    "ushuru (taxes)",
+    "telling a story at the evening fire",
+    "the class sharing time"
+   ],
+   "board": [
+    {
+     "beat": "write",
+     "do": "wanakijiji waliojenga barabara kwa pesa za ushuru"
+    },
+    {
+     "beat": "point",
+     "do": "Point at the three picture cards.",
+     "say": "Ni kipi kilitokea kwanza?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for the child to answer before saying anything."
+    },
+    {
+     "beat": "child_draws",
+     "do": "The child orders the cards and retells the story with one gesture for each part."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "KISW.G6.KUSIKI.T11_KUJIELEZA_KWA_UFASAH.KUJIELEZA.M6_MSM_DETAIL_T11",
+     "listen_for": [
+      "Barabara mpya ilikuwa ya lami."
+     ],
+     "ask": "Msimulizi alitaka tujifunze nini?",
+     "repair": "Ujumbe ni funzo la masimulizi yote; jambo moja ni maelezo tu."
+    },
+    {
+     "code": "KISW.G6.KUSIKI.T11_KUJIELEZA_KWA_UFASAH.KUJIELEZA.M6_MSM_ORDER_T11",
+     "listen_for": [
+      "sehemu ya kusisimua zaidi"
+     ],
+     "ask": "Ni jambo lipi lilitokea kwanza?",
+     "repair": "Simulia kwa mpangilio: mwanzo, kati, mwisho."
+    },
+    {
+     "code": "KISW.G6.KUSIKI.T11_KUJIELEZA_KWA_UFASAH.KUJIELEZA.M6_MSM_GESTURE_T11",
+     "listen_for": [
+      "kukunja mikono kifuani"
+     ],
+     "ask": "Uso wako unaonyesha hisia gani hapa?",
+     "repair": "Ishara na sura yako ziendane na unachosema."
+    },
+    {
+     "code": "KISW.G6.KUSIKI.T11_KUJIELEZA_KWA_UFASAH.KUJIELEZA.M6_MSM_MIX_T11",
+     "listen_for": [
+      "Then tukaenda home, ilikuwa poa sana."
+     ],
+     "ask": "Ni neno lipi si la Kiswahili?",
+     "repair": "Simulia kwa Kiswahili sanifu: kisha, nyumbani, nzuri."
+    },
+    {
+     "code": "KISW.G6.KUSIKI.T11_KUJIELEZA_KWA_UFASAH.KUJIELEZA.M6_MSM_OFFTOPIC_T11",
+     "listen_for": [
+      "Siku nilipotazama mechi ya mpira"
+     ],
+     "ask": "Hadithi yako inahusianaje na mada?",
+     "repair": "Masimulizi yako yahusu mada uliyopewa."
+    }
+   ],
+   "checks": [
+    {
+     "question": "Ujumbe wa masimulizi kuhusu wanakijiji waliojenga barabara kwa pesa za ushuru ni upi?",
+     "answer": "Tukilipa ushuru, serikali hutujengea huduma kama barabara na shule.",
+     "shows": "message"
+    },
+    {
+     "question": "Unaposimulia, unaanza na nini?",
+     "answer": "mwanzo: nani, wapi, lini",
+     "shows": "order"
+    }
+   ]
+  }
+ ]
+}

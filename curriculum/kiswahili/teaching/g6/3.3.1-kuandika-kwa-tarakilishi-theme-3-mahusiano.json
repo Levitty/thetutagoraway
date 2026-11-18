@@ -1,0 +1,189 @@
+{
+ "sub_strand": "KISW.G6.KUANDI.T3_KUANDIKA_KWA_TARAKIL",
+ "title": "Kuandika kwa Tarakilishi (Theme 3: Mahusiano)",
+ "status": "draft: written 18 Nov 2026 offline for Grade 6 Kiswahili; not yet checked by a native Kiswahili teacher; not loaded by the live tutor",
+ "sources": [],
+ "notes": "",
+ "skills": [
+  {
+   "skill": "KISW.G6.KUANDI.T3_KUANDIKA_KWA_TARAKIL.MAANDISHI_TARAKILISHI",
+   "key_step": "The child names the text styles and typing symbols (herufi nzito, mlazo, kupigiwa mstari, saizi, @, %) and what each is for.",
+   "floor": {
+    "prerequisite": "Types and saves a text.",
+    "question": "Kitufe kipi huanzisha mstari mpya?",
+    "answer": "Enter"
+   },
+   "representations": [
+    "a style chart",
+    "a symbol chart",
+    "a model page"
+   ],
+   "steps": [
+    "Look at the text.",
+    "Name its style.",
+    "Name the symbol.",
+    "Say what it is for."
+   ],
+   "contexts": [
+    "relationships: a class newsletter",
+    "the computer lab",
+    "an email"
+   ],
+   "board": [
+    {
+     "beat": "write",
+     "do": "B  I  U  @  %"
+    },
+    {
+     "beat": "point",
+     "do": "Point at \"I\".",
+     "say": "Mtindo huu unaitwaje?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for the child to answer before saying anything."
+    },
+    {
+     "beat": "child_draws",
+     "do": "The child labels each style and symbol."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "KISW.G6.KUANDI.T3_KUANDIKA_KWA_TARAKIL.MAANDISHI_TARAKILISHI.M_TAR6_MIX",
+     "listen_for": [
+      "nzito"
+     ],
+     "ask": "Soma tena: \"Herufi zinazoegemea upande huitwa herufi ___.\" Kwa nini \"nzito\" si jibu sahihi?",
+     "repair": "Herufi nzito zimenenepeshwa, herufi mlazo huegemea upande, saizi ni ukubwa wa herufi."
+    },
+    {
+     "code": "KISW.G6.KUANDI.T3_KUANDIKA_KWA_TARAKIL.MAANDISHI_TARAKILISHI.M_TAR6_CAPS",
+     "listen_for": [
+      "kubwa"
+     ],
+     "ask": "Soma tena: \"Herufi zilizonenepeshwa huitwa herufi ___.\" Kwa nini \"kubwa\" si jibu sahihi?",
+     "repair": "Herufi kubwa ni za mwanzo wa sentensi na majina. Herufi nzito ni zilizonenepeshwa, zinaweza kuwa ndogo au kubwa."
+    },
+    {
+     "code": "KISW.G6.KUANDI.T3_KUANDIKA_KWA_TARAKIL.MAANDISHI_TARAKILISHI.M_TAR6_ICON",
+     "listen_for": [
+      "kuchapisha"
+     ],
+     "ask": "Soma tena: \"Kuweka kazi yako salama katika tarakilishi huitwa ___.\" Kwa nini \"kuchapisha\" si jibu sahihi?",
+     "repair": "Kuhifadhi ni kuweka kazi salama. Kuchapisha ni kutoa karatasi. Kufuta huondoa kazi."
+    },
+    {
+     "code": "KISW.G6.KUANDI.T3_KUANDIKA_KWA_TARAKIL.MAANDISHI_TARAKILISHI.M6_TAR6_SYMBOL",
+     "listen_for": [
+      "mwishoni mwa sentensi"
+     ],
+     "ask": "Umeiona alama hii wapi?",
+     "repair": "Alama @ hutumika katika anwani ya baruapepe."
+    }
+   ],
+   "checks": [
+    {
+     "question": "Kitufe \"I\" hufanya nini?",
+     "answer": "huandika kwa mlazo",
+     "shows": "style"
+    },
+    {
+     "question": "Alama \"%\" ina maana gani?",
+     "answer": "asilimia",
+     "shows": "symbol"
+    }
+   ]
+  },
+  {
+   "skill": "KISW.G6.KUANDI.T3_KUANDIKA_KWA_TARAKIL.CHAPA_MITINDO",
+   "key_step": "The child selects the text first and chooses the style by its purpose (title bold, book title italic, key word underlined), then saves.",
+   "floor": {
+    "prerequisite": "Names the text styles.",
+    "question": "Herufi nzito ni zipi?",
+    "answer": "herufi zilizokolezwa (B)"
+   },
+   "representations": [
+    "a model page with styles labelled",
+    "a purpose chart",
+    "a real computer"
+   ],
+   "steps": [
+    "Type the paragraph.",
+    "Select the text to style.",
+    "Choose the style by its purpose.",
+    "Save the changes."
+   ],
+   "contexts": [
+    "relationships (mahusiano)",
+    "the computer lab",
+    "a class newsletter"
+   ],
+   "board": [
+    {
+     "beat": "write",
+     "do": "URAFIKI WA KWELI"
+    },
+    {
+     "beat": "point",
+     "do": "Point at the title.",
+     "say": "Anwani hii ipewe mtindo gani?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for the child to answer before saying anything."
+    },
+    {
+     "beat": "child_draws",
+     "do": "The child types the paragraph, makes the title bold and one word italic, and saves."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "KISW.G6.KUANDI.T3_KUANDIKA_KWA_TARAKIL.CHAPA_MITINDO.M6_CHM_ALL_BOLD",
+     "listen_for": [
+      "kifungu chote"
+     ],
+     "ask": "Msomaji ataona anwani kwa urahisi?",
+     "repair": "Tumia herufi nzito kwa anwani au neno muhimu tu."
+    },
+    {
+     "code": "KISW.G6.KUANDI.T3_KUANDIKA_KWA_TARAKIL.CHAPA_MITINDO.M6_CHM_NO_SELECT",
+     "listen_for": [
+      "bonyeza I"
+     ],
+     "ask": "Umechagua neno lipi?",
+     "repair": "Chagua maandishi kwanza, kisha chagua mtindo."
+    },
+    {
+     "code": "KISW.G6.KUANDI.T3_KUANDIKA_KWA_TARAKIL.CHAPA_MITINDO.M6_CHM_WRONG_STYLE",
+     "listen_for": [
+      "kwa rangi nyekundu"
+     ],
+     "ask": "Mtindo huu una kazi gani?",
+     "repair": "Majina ya vitabu huandikwa kwa mlazo."
+    },
+    {
+     "code": "KISW.G6.KUANDI.T3_KUANDIKA_KWA_TARAKIL.CHAPA_MITINDO.M6_CHM_UNSAVED_CHANGES",
+     "listen_for": [
+      "funga tu"
+     ],
+     "ask": "Mabadiliko yako yatabaki ukifunga bila kuhifadhi?",
+     "repair": "Hifadhi kila unapobadilisha kazi."
+    }
+   ],
+   "checks": [
+    {
+     "question": "Jina la kitabu huandikwa kwa mtindo gani?",
+     "answer": "mlazo",
+     "shows": "purpose"
+    },
+    {
+     "question": "Kabla ya kubonyeza B, unafanya nini?",
+     "answer": "kuchagua maandishi",
+     "shows": "order"
+    }
+   ]
+  }
+ ]
+}

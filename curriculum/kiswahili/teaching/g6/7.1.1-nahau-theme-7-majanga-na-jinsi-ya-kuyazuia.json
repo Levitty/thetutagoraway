@@ -1,0 +1,99 @@
+{
+ "sub_strand": "KISW.G6.KUSIKI.T7_NAHAU",
+ "title": "Nahau (Theme 7: Majanga na jinsi ya kuyazuia)",
+ "status": "draft: written 18 Nov 2026 offline for Grade 6 Kiswahili; not yet checked by a native Kiswahili teacher; not loaded by the live tutor",
+ "sources": [],
+ "notes": "",
+ "skills": [
+  {
+   "skill": "KISW.G6.KUSIKI.T7_NAHAU.NAHAU",
+   "key_step": "The child gives the meaning of a nahau on work and cooperation and uses it where it fits.",
+   "floor": {
+    "prerequisite": "Explains a nahau.",
+    "question": "Kupiga deki?",
+    "answer": "kusafisha sakafu kwa maji"
+   },
+   "representations": [
+    "nahau cards",
+    "pictures of work",
+    "sentence frames"
+   ],
+   "steps": [
+    "Read the nahau.",
+    "Say the meaning.",
+    "Picture the situation.",
+    "Write a sentence."
+   ],
+   "contexts": [
+    "disasters: villagers working together after floods",
+    "a school clean-up",
+    "a farm"
+   ],
+   "board": [
+    {
+     "beat": "write",
+     "do": "kujifunga kibwebwe"
+    },
+    {
+     "beat": "point",
+     "do": "Point at the picture of a woman tying her waist.",
+     "say": "Ina maana gani?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for the child to answer before saying anything."
+    },
+    {
+     "beat": "child_draws",
+     "do": "The child writes a sentence with it and one with \"kushika usukani\"."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "KISW.G6.KUSIKI.T7_NAHAU.NAHAU.M_NAH_LITERAL",
+     "listen_for": [
+      "kukata kamba ya tamaa"
+     ],
+     "ask": "Soma tena: \"\"Kukata tamaa\" maana yake ni nini?\" Kwa nini \"kukata kamba ya tamaa\" si jibu sahihi?",
+     "repair": "Nahau ina maana tofauti na maneno yake. \"Kukata tamaa\" ni kuacha kuwa na matumaini."
+    },
+    {
+     "code": "KISW.G6.KUSIKI.T7_NAHAU.NAHAU.M_NAH_WRONG_MEANING",
+     "listen_for": [
+      "kuwa na hamu ya kula"
+     ],
+     "ask": "Soma tena: \"\"Kula chumvi\" maana yake ni nini?\" Kwa nini \"kuwa na hamu ya kula\" si jibu sahihi?",
+     "repair": "Kila nahau ina maana yake. \"Kula chumvi\" ni kuwa na uzoefu wa miaka mingi."
+    },
+    {
+     "code": "KISW.G6.KUSIKI.T7_NAHAU.NAHAU.M_NAH_WRONG_WORD",
+     "listen_for": [
+      "kamba"
+     ],
+     "ask": "Soma tena: \"Usikate ___ ukishindwa mara moja.\" Kwa nini \"kamba\" si jibu sahihi?",
+     "repair": "Nahau hazibadiliki: kukata tamaa, kupiga moyo konde. Neno moja likibadilika, maana hupotea."
+    },
+    {
+     "code": "KISW.G6.KUSIKI.T7_NAHAU.NAHAU.M6_NAH_USE",
+     "listen_for": [
+      "Alijifunga kibwebwe akalala."
+     ],
+     "ask": "Mtu anajiandaa kufanya nini?",
+     "repair": "Kujifunga kibwebwe ni kujiandaa kufanya kazi kwa bidii."
+    }
+   ],
+   "checks": [
+    {
+     "question": "Maana ya \"kufa moyo\" ni?",
+     "answer": "kukata tamaa",
+     "shows": "meaning"
+    },
+    {
+     "question": "Tumia \"kujifunga kibwebwe\" katika sentensi.",
+     "answer": "Wanakijiji walijifunga kibwebwe kujenga daraja.",
+     "shows": "use"
+    }
+   ]
+  }
+ ]
+}

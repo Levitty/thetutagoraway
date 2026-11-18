@@ -1,0 +1,99 @@
+{
+ "sub_strand": "KISW.G6.KUSIKI.T6_MATAMSHI_BORA",
+ "title": "Matamshi Bora (Theme 6: Usawa wa kijinsia)",
+ "status": "draft: written 18 Nov 2026 offline for Grade 6 Kiswahili; not yet checked by a native Kiswahili teacher; not loaded by the live tutor",
+ "sources": [],
+ "notes": "",
+ "skills": [
+  {
+   "skill": "KISW.G6.KUSIKI.T6_MATAMSHI_BORA.SHAIRI_USAWA",
+   "key_step": "The child recites with the beat and the target sounds clear, and finds every meaning and answer in the lines of the poem.",
+   "floor": {
+    "prerequisite": "Recites a short poem.",
+    "question": "Kariri ubeti mmoja kwa mahadhi.",
+    "answer": "the child recites"
+   },
+   "representations": [
+    "the poem on a chart",
+    "claps for the beat",
+    "a two-meaning card for one phrase"
+   ],
+   "steps": [
+    "Read the poem twice.",
+    "Mark the target sounds.",
+    "Recite with the beat.",
+    "Answer from the lines."
+   ],
+   "contexts": [
+    "gender equality (usawa wa kijinsia)",
+    "a music festival",
+    "a school assembly"
+   ],
+   "board": [
+    {
+     "beat": "write",
+     "do": "Tushikane bega kwa bega"
+    },
+    {
+     "beat": "point",
+     "do": "Point at \"bega kwa bega\".",
+     "say": "Ina maana gani katika shairi?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for the child to answer before saying anything."
+    },
+    {
+     "beat": "child_draws",
+     "do": "The child recites the ubeti and explains the phrase."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "KISW.G6.KUSIKI.T6_MATAMSHI_BORA.SHAIRI_USAWA.M6_SHU_SOUND",
+     "listen_for": [
+      "jia"
+     ],
+     "ask": "Unasikia sauti ya n mwanzoni mwa neno hili?",
+     "repair": "Tamka sauti ya pua wazi: njia, si jia."
+    },
+    {
+     "code": "KISW.G6.KUSIKI.T6_MATAMSHI_BORA.SHAIRI_USAWA.M6_SHU_GENDER_LITERAL",
+     "listen_for": [
+      "mama asifanye kazi ya nyumba"
+     ],
+     "ask": "Mshairi anataka nani afanye kazi ya nyumba?",
+     "repair": "Shairi linafunza kwamba kazi ni ya wote."
+    },
+    {
+     "code": "KISW.G6.KUSIKI.T6_MATAMSHI_BORA.SHAIRI_USAWA.M6_SHU_WORD",
+     "listen_for": [
+      "kugusa mabega"
+     ],
+     "ask": "Watu wanashikana mabega kweli?",
+     "repair": "Bega kwa bega hapa ni kushirikiana pamoja kwa usawa."
+    },
+    {
+     "code": "KISW.G6.KUSIKI.T6_MATAMSHI_BORA.SHAIRI_USAWA.M6_SHU_OUTSIDE",
+     "listen_for": [
+      "kwa sababu wazazi wanataka"
+     ],
+     "ask": "Ni mshororo upi unaotoa jibu hilo?",
+     "repair": "Jibu kutokana na maneno ya shairi."
+    }
+   ],
+   "checks": [
+    {
+     "question": "\"Bega kwa bega\" katika shairi ni nini?",
+     "answer": "kushirikiana kwa usawa",
+     "shows": "figurative"
+    },
+    {
+     "question": "Ujumbe wa shairi ni?",
+     "answer": "wavulana na wasichana wana haki sawa",
+     "shows": "message"
+    }
+   ]
+  }
+ ]
+}

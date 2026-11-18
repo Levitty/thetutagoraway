@@ -1,0 +1,99 @@
+{
+ "sub_strand": "KISW.G6.KUSOMA.T2_KUSOMA_KWA_KINA",
+ "title": "Kusoma kwa Kina (Theme 2: Michezo)",
+ "status": "draft: written 18 Nov 2026 offline for Grade 6 Kiswahili; not yet checked by a native Kiswahili teacher; not loaded by the live tutor",
+ "sources": [],
+ "notes": "",
+ "skills": [
+  {
+   "skill": "KISW.G6.KUSOMA.T2_KUSOMA_KWA_KINA.KAMUSI",
+   "key_step": "The child reads a dictionary entry for its spelling, word class, noun class and meaning.",
+   "floor": {
+    "prerequisite": "Finds a word by its root.",
+    "question": "Utatafuta neno lipi kwa \"walicheza\"?",
+    "answer": "cheza"
+   },
+   "representations": [
+    "a real dictionary entry",
+    "labels for each part",
+    "a list of short forms (nm, kt, kv)"
+   ],
+   "steps": [
+    "Find the word.",
+    "Read the spelling.",
+    "Read the word class and noun class.",
+    "Read the meaning that fits."
+   ],
+   "contexts": [
+    "games (michezo) words",
+    "the library",
+    "homework"
+   ],
+   "board": [
+    {
+     "beat": "write",
+     "do": "mpira nm (u-i) mi-"
+    },
+    {
+     "beat": "point",
+     "do": "Point at \"(u-i)\".",
+     "say": "Hii inaonyesha nini?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for the child to answer before saying anything."
+    },
+    {
+     "beat": "child_draws",
+     "do": "The child labels the entry and finds another word's ngeli."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "KISW.G6.KUSOMA.T2_KUSOMA_KWA_KINA.KAMUSI.M_KAM_LENGTH",
+     "listen_for": [
+      "mti"
+     ],
+     "ask": "Soma tena: \"Neno gani huja kwanza kwenye kamusi?\" Kwa nini \"mti\" si jibu sahihi?",
+     "repair": "Kamusi hupanga maneno kwa herufi za alfabeti, si kwa urefu wa neno."
+    },
+    {
+     "code": "KISW.G6.KUSOMA.T2_KUSOMA_KWA_KINA.KAMUSI.M_KAM_FIRST_ONLY",
+     "listen_for": [
+      "samaki"
+     ],
+     "ask": "Soma tena: \"Neno gani huja kwanza kwenye kamusi?\" Kwa nini \"samaki\" si jibu sahihi?",
+     "repair": "Maneno yanapoanza kwa herufi moja, tazama herufi ya pili, kisha ya tatu: sahani huja kabla ya samaki."
+    },
+    {
+     "code": "KISW.G6.KUSOMA.T2_KUSOMA_KWA_KINA.KAMUSI.M_KAM_REVERSE",
+     "listen_for": [
+      "ndizi"
+     ],
+     "ask": "Soma tena: \"Neno gani huja mwisho kwenye kamusi?\" Kwa nini \"ndizi\" si jibu sahihi?",
+     "repair": "Alfabeti huanza na A na kuishia na Z. Neno la mwisho kwenye kamusi huanza na herufi ya mwisho zaidi."
+    },
+    {
+     "code": "KISW.G6.KUSOMA.T2_KUSOMA_KWA_KINA.KAMUSI.M6_KAM_INFO",
+     "listen_for": [
+      "maana ya neno"
+     ],
+     "ask": "Kifupisho hiki kinamaanisha nini?",
+     "repair": "Kamusi huonyesha aina ya neno, ngeli na wingi pia."
+    }
+   ],
+   "checks": [
+    {
+     "question": "\"kt\" katika kamusi ni?",
+     "answer": "kitenzi",
+     "shows": "abbreviation"
+    },
+    {
+     "question": "Kamusi inakuambia ngeli ya \"kiatu\" ni?",
+     "answer": "KI-VI",
+     "shows": "noun class"
+    }
+   ]
+  }
+ ]
+}

@@ -1,0 +1,197 @@
+{
+ "sub_strand": "KISW.G6.KUSOMA.T3_KUSOMA_KWA_UFASAHA",
+ "title": "Kusoma kwa Ufasaha (Theme 3: Mahusiano)",
+ "status": "draft: written 18 Nov 2026 offline for Grade 6 Kiswahili; not yet checked by a native Kiswahili teacher; not loaded by the live tutor",
+ "sources": [],
+ "notes": "",
+ "skills": [
+  {
+   "skill": "KISW.G6.KUSOMA.T3_KUSOMA_KWA_UFASAHA.UFASAHA_VIPENGELE",
+   "key_step": "The child names the features of fluent reading, including a voice that fits the feeling, and judges a reading by them.",
+   "floor": {
+    "prerequisite": "Names features of fluent reading.",
+    "question": "Taja kipengele kimoja.",
+    "answer": "kasi ifaayo"
+   },
+   "representations": [
+    "a checklist",
+    "two recordings",
+    "a passage with feelings marked"
+   ],
+   "steps": [
+    "Listen.",
+    "Tick each feature.",
+    "Name what is missing.",
+    "Say how to improve."
+   ],
+   "contexts": [
+    "relationships (mahusiano)",
+    "a reading competition",
+    "radio drama"
+   ],
+   "board": [
+    {
+     "beat": "write",
+     "do": "matamshi, kasi, sauti, hisia, ishara"
+    },
+    {
+     "beat": "point",
+     "do": "Point at \"hisia\".",
+     "say": "Msomaji alionyesha hisia?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for the child to answer before saying anything."
+    },
+    {
+     "beat": "child_draws",
+     "do": "The child scores two readings."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "KISW.G6.KUSOMA.T3_KUSOMA_KWA_UFASAHA.UFASAHA_VIPENGELE.M_UFS_SPEED",
+     "listen_for": [
+      "Haraka iwezekanavyo"
+     ],
+     "ask": "Soma tena: \"Kasi ifaayo ya kusoma ni ipi?\" Kwa nini \"Haraka iwezekanavyo\" si jibu sahihi?",
+     "repair": "Kusoma kwa ufasaha si kusoma haraka sana. Kasi ifaayo ni ya wastani, ili msikilizaji aelewe kila neno."
+    },
+    {
+     "code": "KISW.G6.KUSOMA.T3_KUSOMA_KWA_UFASAHA.UFASAHA_VIPENGELE.M_UFS_LOUD",
+     "listen_for": [
+      "Kupiga kelele"
+     ],
+     "ask": "Soma tena: \"Sauti ipasavyo wakati wa kusoma ni ipi?\" Kwa nini \"Kupiga kelele\" si jibu sahihi?",
+     "repair": "Sauti ipasavyo ni ile inayosikika wazi bila kupiga kelele wala kunong'ona."
+    },
+    {
+     "code": "KISW.G6.KUSOMA.T3_KUSOMA_KWA_UFASAHA.UFASAHA_VIPENGELE.M_UFS_IGNORE_MARKS",
+     "listen_for": [
+      "Niendelee bila kupumzika"
+     ],
+     "ask": "Soma tena: \"Ukifika kwenye koma wakati wa kusoma, ufanye nini?\" Kwa nini \"Niendelee bila kupumzika\" si jibu sahihi?",
+     "repair": "Alama za uakifishi zinatuonyesha mahali pa kupumzika: kidogo kwenye koma na kwa muda mrefu zaidi kwenye kikomo."
+    },
+    {
+     "code": "KISW.G6.KUSOMA.T3_KUSOMA_KWA_UFASAHA.UFASAHA_VIPENGELE.M6_UFS_FEELING",
+     "listen_for": [
+      "sawa na sehemu ya furaha"
+     ],
+     "ask": "Sehemu hii ina hisia gani?",
+     "repair": "Sauti hubadilika kulingana na hisia za matini."
+    }
+   ],
+   "checks": [
+    {
+     "question": "Sauti ya sehemu ya huzuni iweje?",
+     "answer": "ya chini na polepole",
+     "shows": "feeling"
+    },
+    {
+     "question": "Msomaji mzuri huwaangalia wasikilizaji?",
+     "answer": "ndiyo, mara kwa mara",
+     "shows": "eye contact"
+    }
+   ]
+  },
+  {
+   "skill": "KISW.G6.KUSOMA.T3_KUSOMA_KWA_UFASAHA.KUSOMA_KWA_SAUTI",
+   "key_step": "The child reads a phrase as one breath, lets the marks set the pauses and the voice, and checks the listener understood.",
+   "floor": {
+    "prerequisite": "Reads short words with every sound clear.",
+    "question": "Soma: \"Mama anapika.\"",
+    "answer": "Mama anapika."
+   },
+   "representations": [
+    "the passage with phrase slashes",
+    "the marks . , ? ! circled in colour",
+    "a recording of the child played back"
+   ],
+   "steps": [
+    "Read the sentence silently first.",
+    "Find the marks.",
+    "Read phrase by phrase aloud.",
+    "Ask a listener one question about it."
+   ],
+   "contexts": [
+    "mahusiano (relationships)",
+    "reading at the school assembly",
+    "reading a story to a younger sibling"
+   ],
+   "board": [
+    {
+     "beat": "write",
+     "do": "Je, umewahi kumsamehe rafiki aliyekukosea?"
+    },
+    {
+     "beat": "point",
+     "do": "Point at the kiulizi.",
+     "say": "Sauti yako inafanya nini hapa?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for the child to answer before saying anything."
+    },
+    {
+     "beat": "child_draws",
+     "do": "The child reads the sentence aloud twice: once as a statement, once as the question."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "KISW.G6.KUSOMA.T3_KUSOMA_KWA_UFASAHA.KUSOMA_KWA_SAUTI.M6_UFS_WORDBYWORD_T3",
+     "listen_for": [
+      "Ndugu ... wawili ... walipatana ... na ... kuishi ... kwa ... amani ... tena."
+     ],
+     "ask": "Ukisoma neno moja moja, msikilizaji anaelewa sentensi?",
+     "repair": "Usomaji wa ufasaha husoma kundi la maneno kwa pamoja, kama tunavyozungumza."
+    },
+    {
+     "code": "KISW.G6.KUSOMA.T3_KUSOMA_KWA_UFASAHA.KUSOMA_KWA_SAUTI.M6_UFS_RACE_T3",
+     "listen_for": [
+      "haraka iwezekanavyo"
+     ],
+     "ask": "Wasikilizaji waliweza kuelewa uliposoma haraka hivyo?",
+     "repair": "Kasi ifaayo ni ile ya kuzungumza: si haraka mno, si polepole mno."
+    },
+    {
+     "code": "KISW.G6.KUSOMA.T3_KUSOMA_KWA_UFASAHA.KUSOMA_KWA_SAUTI.M6_UFS_FLAT_T3",
+     "listen_for": [
+      "kwa sauti ileile ya sentensi ya kawaida"
+     ],
+     "ask": "Alama iliyo mwishoni mwa sentensi hii ni ipi?",
+     "repair": "Kiulizi (?) hupandisha sauti mwishoni; alama ya hisi (!) huonyesha hisia."
+    },
+    {
+     "code": "KISW.G6.KUSOMA.T3_KUSOMA_KWA_UFASAHA.KUSOMA_KWA_SAUTI.M6_UFS_NOPAUSE_T3",
+     "listen_for": [
+      "hapana mahali, unasoma moja kwa moja"
+     ],
+     "ask": "Koma inakuambia ufanye nini unaposoma?",
+     "repair": "Simama kidogo kwenye koma, na zaidi kwenye kikomo."
+    },
+    {
+     "code": "KISW.G6.KUSOMA.T3_KUSOMA_KWA_UFASAHA.KUSOMA_KWA_SAUTI.M6_UFS_SOUND_T3",
+     "listen_for": [
+      "ulafiki"
+     ],
+     "ask": "Sikiliza tofauti kati ya maneno haya mawili. Yanatofautiana wapi?",
+     "repair": "Tamka \"urafiki\" kama lilivyoandikwa; \"ulafiki\" ni neno jingine au si neno."
+    }
+   ],
+   "checks": [
+    {
+     "question": "Sentensi \"Ala, kumbe ninyi ni ndugu!\" inasomwa kwa hisia kwa sababu ya alama ipi?",
+     "answer": "alama ya hisi",
+     "shows": "marks"
+    },
+    {
+     "question": "Kasi ifaayo ya kusoma ni ipi?",
+     "answer": "kasi ya kuzungumza",
+     "shows": "pace"
+    }
+   ]
+  }
+ ]
+}

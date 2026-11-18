@@ -1,0 +1,99 @@
+{
+ "sub_strand": "KISW.G6.SARUFI.T11_UKUBWA_NA_UDOGO_WA_N",
+ "title": "Ukubwa na Udogo wa Nomino (Theme 11: Ushuru)",
+ "status": "draft: written 18 Nov 2026 offline for Grade 6 Kiswahili; not yet checked by a native Kiswahili teacher; not loaded by the live tutor",
+ "sources": [],
+ "notes": "",
+ "skills": [
+  {
+   "skill": "KISW.G6.SARUFI.T11_UKUBWA_NA_UDOGO_WA_N.UKUBWA_KI",
+   "key_step": "The child drops ki- and adds ji- for the big form (kitabu -> jitabu) or kiji- for the small form (kijitabu), with LI-YA or KI-VI agreement.",
+   "floor": {
+    "prerequisite": "Makes big and small forms of m- nouns.",
+    "question": "Ukubwa wa \"mtoto\" ni?",
+    "answer": "jitoto"
+   },
+   "representations": [
+    "books of three sizes",
+    "ki- noun cards",
+    "prefix cards ji-, kiji-"
+   ],
+   "steps": [
+    "Drop ki-.",
+    "Big: ji-; small: kiji-.",
+    "Change the agreement.",
+    "Make the plural (ma- / vi-)."
+   ],
+   "contexts": [
+    "taxes: a big ledger book",
+    "a giant chair in a story",
+    "a tiny cup"
+   ],
+   "board": [
+    {
+     "beat": "write",
+     "do": "kikombe -> ___ (ukubwa)"
+    },
+    {
+     "beat": "point",
+     "do": "Point at \"ki-\".",
+     "say": "Tunaongeza nini kwa ukubwa?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for the child to answer before saying anything."
+    },
+    {
+     "beat": "child_draws",
+     "do": "The child writes \"jikombe\" and \"kijikombe\"."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "KISW.G6.SARUFI.T11_UKUBWA_NA_UDOGO_WA_N.UKUBWA_KI.M_UKUB_SWAP",
+     "listen_for": [
+      "kijitabu"
+     ],
+     "ask": "Soma tena: \"Kitabu kikubwa sana huitwa ___.\" Kwa nini \"kijitabu\" si jibu sahihi?",
+     "repair": "Ukubwa hupata ji-, udogo hupata kiji-. Kijitabu ni kitabu kidogo."
+    },
+    {
+     "code": "KISW.G6.SARUFI.T11_UKUBWA_NA_UDOGO_WA_N.UKUBWA_KI.M_UKUB_PLURAL",
+     "listen_for": [
+      "vitabu"
+     ],
+     "ask": "Soma tena: \"Kitabu kikubwa sana huitwa ___.\" Kwa nini \"vitabu\" si jibu sahihi?",
+     "repair": "Vitabu ni wingi wa kitabu. Kitabu kikubwa sana ni jitabu."
+    },
+    {
+     "code": "KISW.G6.SARUFI.T11_UKUBWA_NA_UDOGO_WA_N.UKUBWA_KI.M_UKUB_NO_CHANGE",
+     "listen_for": [
+      "kisu"
+     ],
+     "ask": "Soma tena: \"Kisu kidogo huitwa ___.\" Kwa nini \"kisu\" si jibu sahihi?",
+     "repair": "Ukubwa na udogo hubadilisha mwanzo wa nomino: kisu, kijisu."
+    },
+    {
+     "code": "KISW.G6.SARUFI.T11_UKUBWA_NA_UDOGO_WA_N.UKUBWA_KI.M_UKUB_SINGULAR",
+     "listen_for": [
+      "jitabu"
+     ],
+     "ask": "Soma tena: \"Wingi wa \"jitabu\" ni ___.\" Kwa nini \"jitabu\" si jibu sahihi?",
+     "repair": "Wingi wa jitabu ni majitabu."
+    }
+   ],
+   "checks": [
+    {
+     "question": "Ukubwa wa \"kisu\" ni?",
+     "answer": "jisu",
+     "shows": "big"
+    },
+    {
+     "question": "Udogo wa \"kiti\" ni?",
+     "answer": "kijiti",
+     "shows": "small"
+    }
+   ]
+  }
+ ]
+}

@@ -1,0 +1,99 @@
+{
+ "sub_strand": "KISW.G6.KUSOMA.T6_KUSOMA_KWA_KINA",
+ "title": "Kusoma kwa Kina (Theme 6: Usawa wa kijinsia)",
+ "status": "draft: written 18 Nov 2026 offline for Grade 6 Kiswahili; not yet checked by a native Kiswahili teacher; not loaded by the live tutor",
+ "sources": [],
+ "notes": "",
+ "skills": [
+  {
+   "skill": "KISW.G6.KUSOMA.T6_KUSOMA_KWA_KINA.MAKALA_MAKTABA",
+   "key_step": "The child chooses an article by topic, level and date, reads it fully, and separates its main point from examples and opinion.",
+   "floor": {
+    "prerequisite": "Finds an article on the right shelf.",
+    "question": "Makala hupatikana wapi?",
+    "answer": "kwenye magazeti na majarida"
+   },
+   "representations": [
+    "three real articles",
+    "a criteria checklist",
+    "fact/opinion cards"
+   ],
+   "steps": [
+    "Check topic, level and date.",
+    "Read every paragraph.",
+    "Underline the main point.",
+    "Mark facts and opinions."
+   ],
+   "contexts": [
+    "gender equality (usawa wa kijinsia)",
+    "the school library",
+    "a children's magazine"
+   ],
+   "board": [
+    {
+     "beat": "write",
+     "do": "Wasichana Katika Sayansi (2026)"
+    },
+    {
+     "beat": "point",
+     "do": "Point at the date and title.",
+     "say": "Kwa nini tuangalie tarehe?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for the child to answer before saying anything."
+    },
+    {
+     "beat": "child_draws",
+     "do": "The child chooses one of three articles with the checklist and writes its main point."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "KISW.G6.KUSOMA.T6_KUSOMA_KWA_KINA.MAKALA_MAKTABA.M6_MAK_CRITERIA",
+     "listen_for": [
+      "makala marefu zaidi"
+     ],
+     "ask": "Makala haya yanahusu mada gani?",
+     "repair": "Chagua makala kwa mada yake na kiwango cha lugha."
+    },
+    {
+     "code": "KISW.G6.KUSOMA.T6_KUSOMA_KWA_KINA.MAKALA_MAKTABA.M6_MAK_OLD",
+     "listen_for": [
+      "picha ya jalada"
+     ],
+     "ask": "Makala haya yaliandikwa lini?",
+     "repair": "Kwa habari mpya, angalia tarehe ya makala."
+    },
+    {
+     "code": "KISW.G6.KUSOMA.T6_KUSOMA_KWA_KINA.MAKALA_MAKTABA.M6_MAK_EXAMPLE",
+     "listen_for": [
+      "Akinyi alishinda tuzo ya sayansi."
+     ],
+     "ask": "Sentensi hii ni wazo kuu au mfano?",
+     "repair": "Mfano huonyesha wazo kuu; si wazo kuu lenyewe."
+    },
+    {
+     "code": "KISW.G6.KUSOMA.T6_KUSOMA_KWA_KINA.MAKALA_MAKTABA.M6_MAK_OPINION",
+     "listen_for": [
+      "Shule yetu ina wanafunzi mia tano."
+     ],
+     "ask": "Tunaweza kuthibitisha jambo hili?",
+     "repair": "Maoni ni kile mtu anachofikiri; ukweli unaweza kuthibitishwa."
+    }
+   ],
+   "checks": [
+    {
+     "question": "Ni kigezo kipi si muhimu: mada, rangi ya jalada, kiwango cha lugha?",
+     "answer": "rangi ya jalada",
+     "shows": "criteria"
+    },
+    {
+     "question": "\"Sayansi ni somo zuri kuliko yote\" ni ukweli au maoni?",
+     "answer": "maoni",
+     "shows": "fact and opinion"
+    }
+   ]
+  }
+ ]
+}

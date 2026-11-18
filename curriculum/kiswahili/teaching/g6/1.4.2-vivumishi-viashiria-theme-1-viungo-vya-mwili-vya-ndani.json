@@ -1,0 +1,99 @@
+{
+ "sub_strand": "KISW.G6.SARUFI.T1_VIVUMISHI_VIASHIRIA",
+ "title": "Vivumishi Viashiria (Theme 1: Viungo vya mwili vya ndani)",
+ "status": "draft: written 18 Nov 2026 offline for Grade 6 Kiswahili; not yet checked by a native Kiswahili teacher; not loaded by the live tutor",
+ "sources": [],
+ "notes": "",
+ "skills": [
+  {
+   "skill": "KISW.G6.SARUFI.T1_VIVUMISHI_VIASHIRIA.VIASHIRIA",
+   "key_step": "The child chooses the demonstrative by the noun's class, number and distance (huyu/yule, hiki/kile, haya/yale).",
+   "floor": {
+    "prerequisite": "Uses the adjective of quality.",
+    "question": "kitabu ___ (-zuri)",
+    "answer": "kizuri"
+   },
+   "representations": [
+    "objects near and far",
+    "a table of demonstratives by class",
+    "pointing gestures"
+   ],
+   "steps": [
+    "Find the noun and its class.",
+    "One or many?",
+    "Near or far?",
+    "Choose the demonstrative."
+   ],
+   "contexts": [
+    "internal organs on a chart",
+    "the classroom",
+    "the playground"
+   ],
+   "board": [
+    {
+     "beat": "write",
+     "do": "moyo ___ (karibu)"
+    },
+    {
+     "beat": "point",
+     "do": "Point at the heart picture close by.",
+     "say": "Kiashiria cha U-I karibu ni kipi?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for the child to answer before saying anything."
+    },
+    {
+     "beat": "child_draws",
+     "do": "The child writes \"moyo huu\" and \"mioyo hii\"."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "KISW.G6.SARUFI.T1_VIVUMISHI_VIASHIRIA.VIASHIRIA.M_VIASH_NUMBER",
+     "listen_for": [
+      "hiki"
+     ],
+     "ask": "Soma tena: \"Vitabu ___ ni vya maktaba.\" Kwa nini \"hiki\" si jibu sahihi?",
+     "repair": "Kivumishi kiashiria hubadilika kulingana na idadi: kitabu hiki, vitabu hivi."
+    },
+    {
+     "code": "KISW.G6.SARUFI.T1_VIVUMISHI_VIASHIRIA.VIASHIRIA.M_VIASH_CLASS",
+     "listen_for": [
+      "hivi"
+     ],
+     "ask": "Soma tena: \"Mawe ___ ni mazito.\" Kwa nini \"hivi\" si jibu sahihi?",
+     "repair": "Kivumishi kiashiria huchukua ngeli ya nomino. Mawe ni ya LI-YA, kwa hiyo haya."
+    },
+    {
+     "code": "KISW.G6.SARUFI.T1_VIVUMISHI_VIASHIRIA.VIASHIRIA.M_VIASH_FAR",
+     "listen_for": [
+      "huyu"
+     ],
+     "ask": "Soma tena: \"Mtoto ___ aliye mbali na sisi ni mdogo wangu.\" Kwa nini \"huyu\" si jibu sahihi?",
+     "repair": "Kilicho karibu huonyeshwa kwa huyu, hiki; kilicho mbali kwa yule, kile."
+    },
+    {
+     "code": "KISW.G6.SARUFI.T1_VIVUMISHI_VIASHIRIA.VIASHIRIA.M6_VIASH_BEFORE",
+     "listen_for": [
+      "hiki kitabu tu"
+     ],
+     "ask": "Kiswahili huweka kiashiria kabla au baada ya nomino kwa kawaida?",
+     "repair": "Kwa kawaida kiashiria hufuata nomino: kitabu hiki."
+    }
+   ],
+   "checks": [
+    {
+     "question": "Jaza: figo ___ (mbali, nyingi).",
+     "answer": "zile",
+     "shows": "distance and number"
+    },
+    {
+     "question": "Jaza: mapafu ___ (karibu).",
+     "answer": "haya",
+     "shows": "class"
+    }
+   ]
+  }
+ ]
+}

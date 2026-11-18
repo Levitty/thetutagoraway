@@ -1,0 +1,99 @@
+{
+ "sub_strand": "KISW.G6.SARUFI.T5_NGELI_YA_U_U",
+ "title": "Ngeli ya U-U (Theme 5: Mshikamano wa kitaifa)",
+ "status": "draft: written 18 Nov 2026 offline for Grade 6 Kiswahili; not yet checked by a native Kiswahili teacher; not loaded by the live tutor",
+ "sources": [],
+ "notes": "",
+ "skills": [
+  {
+   "skill": "KISW.G6.SARUFI.T5_NGELI_YA_U_U.U_U",
+   "key_step": "The child knows abstract and mass nouns in u- (umoja, upendo, uji, ugali) are U-U and take u- with no plural.",
+   "floor": {
+    "prerequisite": "Uses U-YA agreement.",
+    "question": "Ugonjwa ___ (enea).",
+    "answer": "umeenea"
+   },
+   "representations": [
+    "U-U and U-YA cards to sort",
+    "a bowl of uji",
+    "prefix card u-"
+   ],
+   "steps": [
+    "Find the noun.",
+    "Can it be counted?",
+    "If not, U-U: u-.",
+    "Read the sentence."
+   ],
+   "contexts": [
+    "national unity (mshikamano wa kitaifa)",
+    "breakfast",
+    "a community meeting"
+   ],
+   "board": [
+    {
+     "beat": "write",
+     "do": "Umoja ___ (dumu)."
+    },
+    {
+     "beat": "point",
+     "do": "Point at \"Umoja\".",
+     "say": "Una wingi?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for the child to answer before saying anything."
+    },
+    {
+     "beat": "child_draws",
+     "do": "The child writes \"Umoja wetu umedumu\"."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "KISW.G6.SARUFI.T5_NGELI_YA_U_U.U_U.M_UU_PLURAL",
+     "listen_for": [
+      "ya"
+     ],
+     "ask": "Soma tena: \"Uji ___metiwa sukari.\" Kwa nini \"ya\" si jibu sahihi?",
+     "repair": "Nomino za U-U hazina wingi, kwa hiyo hupatana na u- tu: uji umetiwa sukari."
+    },
+    {
+     "code": "KISW.G6.SARUFI.T5_NGELI_YA_U_U.U_U.M_UU_OTHER",
+     "listen_for": [
+      "i"
+     ],
+     "ask": "Soma tena: \"Ugali ___meiva sasa.\" Kwa nini \"i\" si jibu sahihi?",
+     "repair": "Nomino za U-U hupatana na u-: ugali umeiva."
+    },
+    {
+     "code": "KISW.G6.SARUFI.T5_NGELI_YA_U_U.U_U.M_UU_NOUN",
+     "listen_for": [
+      "kitabu"
+     ],
+     "ask": "Soma tena: \"Ni nomino ipi ni ya ngeli ya U-U?\" Kwa nini \"kitabu\" si jibu sahihi?",
+     "repair": "Nomino za U-U hupatana na u- na hazina wingi, kama uji."
+    },
+    {
+     "code": "KISW.G6.SARUFI.T5_NGELI_YA_U_U.U_U.M6_UU_UYA",
+     "listen_for": [
+      "maumoja"
+     ],
+     "ask": "Unaweza kuhesabu umoja?",
+     "repair": "Nomino za U-U hazina wingi: umoja wetu, uji umepikwa."
+    }
+   ],
+   "checks": [
+    {
+     "question": "Jaza: Uji ___ (pikwa).",
+     "answer": "umepikwa",
+     "shows": "agreement"
+    },
+    {
+     "question": "Wingi wa \"upendo\" ni?",
+     "answer": "upendo",
+     "shows": "no plural"
+    }
+   ]
+  }
+ ]
+}

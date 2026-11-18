@@ -1,0 +1,99 @@
+{
+ "sub_strand": "KISW.G6.SARUFI.T3_VIWAKILISHI_VYA_IDAD",
+ "title": "Viwakilishi vya Idadi (Theme 3: Mahusiano)",
+ "status": "draft: written 18 Nov 2026 offline for Grade 6 Kiswahili; not yet checked by a native Kiswahili teacher; not loaded by the live tutor",
+ "sources": [],
+ "notes": "",
+ "skills": [
+  {
+   "skill": "KISW.G6.SARUFI.T3_VIWAKILISHI_VYA_IDAD.VIWAKILISHI_IDADI",
+   "key_step": "The child uses the number alone in place of the noun with the noun's prefix (Wawili walifika, Vitatu vimepotea) and agrees the verb with it.",
+   "floor": {
+    "prerequisite": "Uses number adjectives.",
+    "question": "wachezaji ___ (2)",
+    "answer": "wawili"
+   },
+   "representations": [
+    "counters",
+    "number pronoun cards",
+    "sentence strips"
+   ],
+   "steps": [
+    "Find the noun replaced.",
+    "Find its class.",
+    "Number 1-5 or 8: add the prefix.",
+    "Agree the verb."
+   ],
+   "contexts": [
+    "relationships: siblings",
+    "a class count",
+    "a market stall"
+   ],
+   "board": [
+    {
+     "beat": "write",
+     "do": "Wanafunzi watatu walifika -> ___ walifika."
+    },
+    {
+     "beat": "point",
+     "do": "Point at \"Wanafunzi watatu\".",
+     "say": "Tukiondoa \"wanafunzi\", tunasema?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for the child to answer before saying anything."
+    },
+    {
+     "beat": "child_draws",
+     "do": "The child writes \"Watatu walifika\" and one with vitu."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "KISW.G6.SARUFI.T3_VIWAKILISHI_VYA_IDAD.VIWAKILISHI_IDADI.M_VWID_CLASS",
+     "listen_for": [
+      "Viwili"
+     ],
+     "ask": "Soma tena: \"Wanafunzi kumi walifika. ___ walichelewa. (wawili kati yao)\" Kwa nini \"Viwili\" si jibu sahihi?",
+     "repair": "Kiwakilishi cha idadi huchukua kiambishi cha nomino iliyoachwa: watu, wawili."
+    },
+    {
+     "code": "KISW.G6.SARUFI.T3_VIWAKILISHI_VYA_IDAD.VIWAKILISHI_IDADI.M_VWID_NO_PREFIX",
+     "listen_for": [
+      "Tatu"
+     ],
+     "ask": "Soma tena: \"Nilinunua vitabu vitano. ___ nilimpa Wanjiru. (vitatu kati yake)\" Kwa nini \"Tatu\" si jibu sahihi?",
+     "repair": "Nambari moja hadi tano huchukua kiambishi cha nomino, hata ikisimama peke yake."
+    },
+    {
+     "code": "KISW.G6.SARUFI.T3_VIWAKILISHI_VYA_IDAD.VIWAKILISHI_IDADI.M6_VWID_SIX",
+     "listen_for": [
+      "Wasita"
+     ],
+     "ask": "Namba hii inachukua kiambishi?",
+     "repair": "Sita, saba, tisa na kumi hazichukui kiambishi."
+    },
+    {
+     "code": "KISW.G6.SARUFI.T3_VIWAKILISHI_VYA_IDAD.VIWAKILISHI_IDADI.M6_VWID_AGREE_VERB",
+     "listen_for": [
+      "wamepotea"
+     ],
+     "ask": "Vitatu vinawakilisha nini?",
+     "repair": "Kitenzi hupatana na nomino inayowakilishwa: vitatu vimepotea."
+    }
+   ],
+   "checks": [
+    {
+     "question": "Jaza: (miti 2) ___ imeanguka.",
+     "answer": "Miwili",
+     "shows": "class"
+    },
+    {
+     "question": "Jaza: (ng'ombe 7) ___ wamepotea.",
+     "answer": "Saba",
+     "shows": "no prefix"
+    }
+   ]
+  }
+ ]
+}
